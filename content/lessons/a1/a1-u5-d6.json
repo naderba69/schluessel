@@ -1,0 +1,282 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d6",
+  "level": "A1",
+  "unit": 5,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Die Einheit 5 zusammenfassen und die Wochen-Meisterschaft bestehen.",
+    "ar": "تلخيص الوحدة 5 واجتياز معركة الأسبوع"
+  },
+  "canDoDaily": [
+    "يجتاز معركة الوحدة 5 بعتبة 0.75"
+  ],
+  "warmup": {
+    "cardIds": [
+      "brot",
+      "tee",
+      "bestellen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أنا جوعان، أريد أن آكل» — الصيغة الصحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Ich habe Hunger und möchte essen.",
+          "Ich bin Hunger und möchte zu essen.",
+          "Ich habe Hunger und will essen zu."
+        ],
+        "answer": "Ich habe Hunger und möchte essen.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "hunger",
+      "zahlen"
+    ],
+    "grammarArsenalIds": [
+      "ars-moechte-wollen",
+      "ars-kein-nicht"
+    ],
+    "storySentenceIds": [
+      "story-a5-u5-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أنا جوعان وأريد خبزاً»؟",
+            "a": "Ich habe Hunger und möchte Brot."
+          },
+          {
+            "q": "«لا آخذ نقانق»؟",
+            "a": "Ich nehme keine Wurst."
+          }
+        ],
+        "interleavedWith": [
+          "hunger",
+          "brot"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«شاي من فضلك» (der Tee — طلب)؟",
+            "a": "Einen Tee, bitte!"
+          },
+          {
+            "q": "«أنا شبعان ولا أدفع اليوم»؟",
+            "a": "Ich bin satt und zahle heute nicht."
+          }
+        ],
+        "interleavedWith": [
+          "tee",
+          "satt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«المعكرونة» — مفرد أم جمع؟",
+            "a": "die Nudeln (جمع فقط)"
+          },
+          {
+            "q": "«آيس كريم أم بيضة» — Eis وEi؟",
+            "a": "das Eis (آيس كريم) ↔ das Ei (بيضة)"
+          }
+        ],
+        "interleavedWith": [
+          "nudeln",
+          "ei"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wochen-Meisterschaft: Essen & Trinken",
+        "ar": "معركة الأسبوع: الطعام والشراب"
+      },
+      "situation": {
+        "de": "Abschlussprüfung der Einheit 5",
+        "ar": "اختبار ختام الوحدة 5"
+      },
+      "successCriteria": [
+        "اجتياز المعركة بـ ≥ 0.75 مع صيغ الطلب والنفي الصحيحة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أنا جوعان»؟",
+            "a": "Ich habe Hunger."
+          },
+          {
+            "q": "«أريد قهوة» (طلب مهب)؟",
+            "a": "Einen Kaffee, bitte!"
+          },
+          {
+            "q": "«لا آخذ حليباً»؟",
+            "a": "Ich nehme keine Milch."
+          },
+          {
+            "q": "«أريد أن آكل»؟",
+            "a": "Ich möchte essen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الخبز والجبن»؟",
+            "a": "das Brot und der Käse"
+          },
+          {
+            "q": "«الحساء ليس حاراً»؟",
+            "a": "Die Suppe ist nicht scharf."
+          },
+          {
+            "q": "«أنا شبعان»؟",
+            "a": "Ich bin satt."
+          },
+          {
+            "q": "«قائمة الطعام»؟",
+            "a": "die Speisekarte"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أدفع عند الصندوق»؟",
+            "a": "Ich zahle an der Kasse."
+          },
+          {
+            "q": "«البيض» — الجمع؟",
+            "a": "die Eier"
+          },
+          {
+            "q": "«دجاجة بالبطاطا»؟",
+            "a": "Hähnchen mit Kartoffeln, bitte."
+          },
+          {
+            "q": "«أريد آيس كريم»؟",
+            "a": "Ich möchte ein Eis, bitte."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheit 5 gemeistert: Du kannst bestellen (möchte), verneinen (kein/nicht), zahlen — und weißt: Hunger/Durst mit haben, satt mit sein!",
+      "ar": "الوحدة 5 متقنة: تطلب بـ möchte، وتنفي بـ kein/nicht، وتدفع — وتعرف: الجوع/العطش مع haben، والشبع مع sein!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich möchte zu essen.~~",
+          "ar": "möchte + مصدر بلا zu"
+        },
+        "whyArabicSpeakerFails": "«أريد أن آكل» بـ«أن»؛ الألماني möchte ينصب الفعل في النهاية بلا zu — مصيدة الوحدة الأولى (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich möchte essen.",
+          "ar": "أريد أن آكل."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich möchte zu trinken.~~",
+          "a": "Ich möchte trinken."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich bin Hunger.~~ / ~~Ich habe satt.~~",
+          "ar": "Hunger/Durst = haben · satt = sein"
+        },
+        "whyArabicSpeakerFails": "الحالات الثلاث تُخبر بالـ«أنا» بالعربية؛ الألماني يمتلك الجوع/العطش ويخبر عن الشبع — انعكاس زوجي (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe Hunger/Durst. Ich bin satt.",
+          "ar": "عندي جوع/عطش. أنا شبعان."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ Hunger. Ich ___ satt.",
+          "a": "habe / bin"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich nehme nicht Kuchen.~~",
+          "ar": "kein↔nicht: الاسم أم الباقي"
+        },
+        "whyArabicSpeakerFails": "«لا» العربية تصلح للجميع؛ الألماني: kein قبل الاسم وnicht قبل الفعل/الصفة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich nehme keinen Kuchen. Das ist nicht scharf.",
+          "ar": "kein + اسم · nicht + فعل/صفة."
+        },
+        "exercise": {
+          "q": "أكمل: Ich nehme ___ Kuchen. Das ist ___ scharf.",
+          "a": "keinen / nicht"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "hunger",
+      "zahlen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Hunger",
+      "https://www.duden.de/rechtschreibung/kein",
+      "https://www.duden.de/rechtschreibung/moechten"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/m%C3%B6gen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-moechte-wollen",
+    "ars-kein-nicht"
+  ],
+  "audioManifestRefs": [
+    "word-hunger",
+    "word-zahlen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Wiederholung & Test",
+    "goetheWordListOverlap": [
+      "hunger",
+      "zahlen"
+    ]
+  }
+}

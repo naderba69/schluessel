@@ -1,0 +1,327 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d5",
+  "level": "A1",
+  "unit": 5,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst eine Bestellung im Café abschließen und zwei Sachen höflich verneinen.",
+    "ar": "تكمل طلباً في مقهى وتنفي صنفين بلباقة"
+  },
+  "canDoDaily": [
+    "يكمل طلب مقهى كاملاً وينفي صنفين بلباقة (kein/nicht)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bestellen",
+      "tee",
+      "kuchen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«لا شكراً، آخذ لا كعكة» — kein أم nicht مع Kuchen? (تخمين فقط)"
+        },
+        "choices": [
+          "Ich nehme keinen Kuchen. (kein + اسم)",
+          "Ich nehme nicht Kuchen.",
+          "Ich nehme kein Kuchen."
+        ],
+        "answer": "Ich nehme keinen Kuchen. (kein + اسم)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "durst",
+      "salz",
+      "pfeffer",
+      "zucker",
+      "sahne",
+      "limonade",
+      "haehnchen",
+      "nachtisch",
+      "vorspeise",
+      "kasse",
+      "reservieren",
+      "probieren",
+      "kochen",
+      "backen",
+      "kueche",
+      "gesund",
+      "mahlzeit"
+    ],
+    "grammarArsenalIds": [
+      "ars-kein-nicht",
+      "ars-moechte-wollen"
+    ],
+    "storySentenceIds": [
+      "story-a5-u5-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أنا عطشان»؟",
+            "a": "Ich habe Durst!"
+          },
+          {
+            "q": "«قهوة بالسكر والقشدة»؟",
+            "a": "Kaffee mit Zucker und Sahne."
+          }
+        ],
+        "interleavedWith": [
+          "hunger",
+          "milch"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«كمقبلات حساء»؟",
+            "a": "Als Vorspeise eine Suppe, bitte."
+          },
+          {
+            "q": "«الحلوى الختامية آيس كريم»؟",
+            "a": "Als Nachtisch nehme ich Eis."
+          }
+        ],
+        "interleavedWith": [
+          "suppe",
+          "eis"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أريد أن أحجز طاولة»؟",
+            "a": "Ich möchte einen Tisch reservieren."
+          },
+          {
+            "q": "«لا شكراً، لا آخذ حاراً»؟",
+            "a": "Nein, danke, ich nehme nichts Scharfes."
+          }
+        ],
+        "interleavedWith": [
+          "scharf",
+          "zahlen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Bestellung im Café abschließen",
+        "ar": "إكمال طلب في مقهى"
+      },
+      "situation": {
+        "de": "Im Café: bestellen, verneinen, zahlen",
+        "ar": "في المقهى: الطلب والنفي والدفع"
+      },
+      "successCriteria": [
+        "طلب كامل (مشروب + طعام) + نفيان مهذبان (kein + اسم) + جملة zahlen عند Kasse"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أنا عطشان»؟",
+            "a": "Ich habe Durst."
+          },
+          {
+            "q": "«المطبخ»؟",
+            "a": "die Küche"
+          },
+          {
+            "q": "«كمقبلات سلطة»؟",
+            "a": "Als Vorspeise einen Salat, bitte."
+          },
+          {
+            "q": "«أدفع عند الصندوق»؟",
+            "a": "Ich zahle an der Kasse."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«دجاجة بالبطاطا»؟",
+            "a": "Hähnchen mit Kartoffeln, bitte."
+          },
+          {
+            "q": "«الفلفل والملح»؟",
+            "a": "der Pfeffer und das Salz"
+          },
+          {
+            "q": "«أريد أن أحجز طاولة»؟",
+            "a": "Ich möchte einen Tisch reservieren."
+          },
+          {
+            "q": "«لا آخذ كعكة» (نفي اسم)؟",
+            "a": "Ich nehme keinen Kuchen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«ليموناضة من فضلك»؟",
+            "a": "Eine Limonade, bitte!"
+          },
+          {
+            "q": "«الفواكه صحّية»؟",
+            "a": "Obst ist gesund."
+          },
+          {
+            "q": "«جرّب هذا!»؟",
+            "a": "Probieren Sie das!"
+          },
+          {
+            "q": "Hähnchen — der أم das?",
+            "a": "das (قاعدة -chen = دائماً das)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Deine Café-Bestellung: Tee mit Zucker, als Vorspeise Suppe, Hähnchen mit Kartoffeln, kein Nachtisch — und an der Kasse zahlen!",
+      "ar": "طلبك في المقهى: شاي بالسكر، مقبلات حساء، دجاجة بالبطاطا، بلا حلوى ختامية — والدفع عند الصندوق!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich bin Durst.~~ / ~~Ich habe satt.~~",
+          "ar": "Durst/Hunger = haben · satt = sein"
+        },
+        "whyArabicSpeakerFails": "العطش والجوع «حالات» بالعربية تُخبر بـ«أنا»؛ الألماني يمتلكهما (habe) لكن الشبع صفة مع ist — ثلاث كلمات ثلاثة أفعال (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe Durst / Hunger. Ich bin satt.",
+          "ar": "عندي عطش/جوع. أنا شبعان."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ Durst. Ich ___ Hunger. Ich ___ satt.",
+          "a": "habe / habe / bin"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~der Hähnchen~~ / ~~das Hähnchen~~?",
+          "ar": "-chen = دائماً das"
+        },
+        "whyArabicSpeakerFails": "«دجاجة» مؤنث بالعربية؛ الألماني يصغّر كل شيء بـ‑chen والتصغير دائماً محايد — القاعدة تعمّ حتى الأشخاص (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das Hähnchen (−chen = das)",
+          "ar": "كل تصغير = das"
+        },
+        "exercise": {
+          "q": "حدّд: Hähnchen (der/die/das)?",
+          "a": "das"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich nehme nicht Kuchen.~~ / ~~Ich nehme kein scharf.~~",
+          "ar": "kein↔nicht: الاسم أم الباقي"
+        },
+        "whyArabicSpeakerFails": "«لا آخذ كعكة» و«هذا ليس حاراً» يبدآن بـ«لا/ليس» معاً؛ الألماني: kein قبل الاسم وnicht قبل الفعل/الصفة — التمييز الختامي للوحدة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich nehme keinen Kuchen. / Das ist nicht scharf.",
+          "ar": "kein + اسم · nicht + فعل/صفة."
+        },
+        "exercise": {
+          "q": "أكمل: Ich nehme ___ Kuchen. Das ist ___ scharf.",
+          "a": "keinen / nicht"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "durst",
+      "salz",
+      "pfeffer",
+      "zucker",
+      "sahne",
+      "limonade",
+      "haehnchen",
+      "nachtisch",
+      "vorspeise",
+      "kasse",
+      "reservieren",
+      "probieren",
+      "kochen",
+      "backen",
+      "kueche",
+      "gesund",
+      "mahlzeit"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Durst",
+      "https://www.duden.de/rechtschreibung/Haehnchen",
+      "https://www.duden.de/rechtschreibung/Kasse"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/reservieren"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-kein-nicht",
+    "ars-moechte-wollen"
+  ],
+  "audioManifestRefs": [
+    "word-durst",
+    "word-salz",
+    "word-pfeffer",
+    "word-zucker",
+    "word-sahne",
+    "word-limonade",
+    "word-haehnchen",
+    "word-nachtisch",
+    "word-vorspeise",
+    "word-kasse",
+    "word-reservieren",
+    "word-probieren",
+    "word-kochen",
+    "word-backen",
+    "word-kueche",
+    "word-gesund",
+    "word-mahlzeit"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Im Café (Bestellung abschließen)",
+    "goetheWordListOverlap": [
+      "durst",
+      "kochen"
+    ]
+  }
+}

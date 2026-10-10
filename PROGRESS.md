@@ -165,3 +165,9 @@
 - **u5-d4** (Tisch + kein/nicht — 12 كلمة): scharf/salzig/frisch/Portion/Teller/Löffel/Gabel/Messer/Gast/Bestellung/Trinkgeld/Getränk — مصائد: kein للنفي الاسم · nicht للفعل/الصفة · نهاية kein الثلاث.
 - الصوت: 24 مقطعاً — المانيفست **288 مساراً** · الكلمات **287** · الدروس **28** (الوحدات 1–4 + الوحدة 5: 4 أيام).
 - النتيجة: **243/243 أخضر** + tsc + validator (319/0/0) + build ✓. (D57) التالي: u5-d5 (17 كلمة + مهمة المقهى) وu5-d6 (المعركة).
+
+## حملة المحتوى — الدفعة 14 (2026-10-10) — إتمام الوحدة 5 (D58)
+- **u5-d5** (17 كلمة — كلمات 49–65): Durst/Salz/Pfeffer/Zucker/Sahne/Limonade/Hähnchen/Nachtisch/Vorspeise/Kasse/reservieren/probieren/kochen/backen/Küche/gesund/Mahlzeit — مصائد: habe Durst ↔ bin satt · -chen = das · تمييز kein↔nicht + **مهمة «طلب في مقهى»**.
+- **u5-d6** (المعركة — بلا كلمات): توليف + معركة 0.75 · 3 بطاقات تحذير ختامية.
+- الصوت: 17 مقطعاً — المانيفست **305 مسارات** · الكلمات **304** · الدروس **30** — **الوحدات 1–5 مكتملة (30 يوماً)**.
+- النتيجة: **243/243 أخضر** + tsc + validator (338/0/0) + build ✓. (D58) التالي: الوحدة 6 (السكن والمفروشات — 65 كلمة).

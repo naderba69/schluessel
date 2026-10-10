@@ -364,6 +364,23 @@ def build_all() -> None:
         ("word-bestellung", "Bestellung.", "bestellung", ["a1-u5-d4"]),
         ("word-trinkgeld", "Trinkgeld.", "trinkgeld", ["a1-u5-d4"]),
         ("word-getraenk", "Getränk.", "getraenk", ["a1-u5-d4"]),
+        ("word-durst", "Durst.", "durst", ["a1-u5-d5"]),
+        ("word-salz", "Salz.", "salz", ["a1-u5-d5"]),
+        ("word-pfeffer", "Pfeffer.", "pfeffer", ["a1-u5-d5"]),
+        ("word-zucker", "Zucker.", "zucker", ["a1-u5-d5"]),
+        ("word-sahne", "Sahne.", "sahne", ["a1-u5-d5"]),
+        ("word-limonade", "Limonade.", "limonade", ["a1-u5-d5"]),
+        ("word-haehnchen", "Hähnchen.", "haehnchen", ["a1-u5-d5"]),
+        ("word-nachtisch", "Nachtisch.", "nachtisch", ["a1-u5-d5"]),
+        ("word-vorspeise", "Vorspeise.", "vorspeise", ["a1-u5-d5"]),
+        ("word-kasse", "Kasse.", "kasse", ["a1-u5-d5"]),
+        ("word-reservieren", "reservieren.", "reservieren", ["a1-u5-d5"]),
+        ("word-probieren", "probieren.", "probieren", ["a1-u5-d5"]),
+        ("word-kochen", "kochen.", "kochen", ["a1-u5-d5"]),
+        ("word-backen", "backen.", "backen", ["a1-u5-d5"]),
+        ("word-kueche", "Küche.", "kueche", ["a1-u5-d5"]),
+        ("word-gesund", "gesund.", "gesund", ["a1-u5-d5"]),
+        ("word-mahlzeit", "Mahlzeit.", "mahlzeit", ["a1-u5-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

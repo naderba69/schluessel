@@ -35,6 +35,8 @@ import lessonU5D1 from "../content/lessons/a1/a1-u5-d1.json";
 import lessonU5D2 from "../content/lessons/a1/a1-u5-d2.json";
 import lessonU5D3 from "../content/lessons/a1/a1-u5-d3.json";
 import lessonU5D4 from "../content/lessons/a1/a1-u5-d4.json";
+import lessonU5D5 from "../content/lessons/a1/a1-u5-d5.json";
+import lessonU5D6 from "../content/lessons/a1/a1-u5-d6.json";
 
 import wordAbend from "../content/words/abend.json";
 import wordAbendessen from "../content/words/abendessen.json";
@@ -58,6 +60,7 @@ import wordAuch from "../content/words/auch.json";
 import wordAufWiedersehen from "../content/words/auf-wiedersehen.json";
 import wordAufnehmen from "../content/words/aufnehmen.json";
 import wordAuto from "../content/words/auto.json";
+import wordBacken from "../content/words/backen.json";
 import wordBeruf from "../content/words/beruf.json";
 import wordBeschreiben from "../content/words/beschreiben.json";
 import wordBestellen from "../content/words/bestellen.json";
@@ -82,6 +85,7 @@ import wordDeutsch from "../content/words/deutsch.json";
 import wordDeutschland from "../content/words/deutschland.json";
 import wordDort from "../content/words/dort.json";
 import wordDreissig from "../content/words/dreissig.json";
+import wordDurst from "../content/words/durst.json";
 import wordEi from "../content/words/ei.json";
 import wordEis from "../content/words/eis.json";
 import wordEltern from "../content/words/eltern.json";
@@ -126,6 +130,7 @@ import wordGern from "../content/words/gern.json";
 import wordGeschwister from "../content/words/geschwister.json";
 import wordGesicht from "../content/words/gesicht.json";
 import wordGespraech from "../content/words/gespraech.json";
+import wordGesund from "../content/words/gesund.json";
 import wordGesundheit from "../content/words/gesundheit.json";
 import wordGetraenk from "../content/words/getraenk.json";
 import wordGlas from "../content/words/glas.json";
@@ -137,6 +142,7 @@ import wordGutenAbend from "../content/words/guten-abend.json";
 import wordGutenMorgen from "../content/words/guten-morgen.json";
 import wordGutenTag from "../content/words/guten-tag.json";
 import wordHaar from "../content/words/haar.json";
+import wordHaehnchen from "../content/words/haehnchen.json";
 import wordHalb from "../content/words/halb.json";
 import wordHallo from "../content/words/hallo.json";
 import wordHandy from "../content/words/handy.json";
@@ -159,6 +165,7 @@ import wordKaese from "../content/words/kaese.json";
 import wordKaffee from "../content/words/kaffee.json";
 import wordKarte from "../content/words/karte.json";
 import wordKartoffel from "../content/words/kartoffel.json";
+import wordKasse from "../content/words/kasse.json";
 import wordKatze from "../content/words/katze.json";
 import wordKaufen from "../content/words/kaufen.json";
 import wordKellner from "../content/words/kellner.json";
@@ -167,9 +174,11 @@ import wordKennenlernen from "../content/words/kennenlernen.json";
 import wordKind from "../content/words/kind.json";
 import wordKlar from "../content/words/klar.json";
 import wordKlein from "../content/words/klein.json";
+import wordKochen from "../content/words/kochen.json";
 import wordKommen from "../content/words/kommen.json";
 import wordKosten from "../content/words/kosten.json";
 import wordKuchen from "../content/words/kuchen.json";
+import wordKueche from "../content/words/kueche.json";
 import wordKurz from "../content/words/kurz.json";
 import wordLaecheln from "../content/words/laecheln.json";
 import wordLaeffel from "../content/words/laeffel.json";
@@ -181,10 +190,12 @@ import wordLehrer from "../content/words/lehrer.json";
 import wordLeise from "../content/words/leise.json";
 import wordLesen from "../content/words/lesen.json";
 import wordLeute from "../content/words/leute.json";
+import wordLimonade from "../content/words/limonade.json";
 import wordLinks from "../content/words/links.json";
 import wordLustig from "../content/words/lustig.json";
 import wordMaedchen from "../content/words/maedchen.json";
 import wordMaerz from "../content/words/maerz.json";
+import wordMahlzeit from "../content/words/mahlzeit.json";
 import wordMai from "../content/words/mai.json";
 import wordMal from "../content/words/mal.json";
 import wordMann from "../content/words/mann.json";
@@ -206,6 +217,7 @@ import wordMutter from "../content/words/mutter.json";
 import wordMuttersprache from "../content/words/muttersprache.json";
 import wordNachricht from "../content/words/nachricht.json";
 import wordNacht from "../content/words/nacht.json";
+import wordNachtisch from "../content/words/nachtisch.json";
 import wordName from "../content/words/name.json";
 import wordNatuerlich from "../content/words/natuerlich.json";
 import wordNeben from "../content/words/neben.json";
@@ -222,17 +234,22 @@ import wordOesterreich from "../content/words/oesterreich.json";
 import wordOhr from "../content/words/ohr.json";
 import wordOkay from "../content/words/okay.json";
 import wordOnkel from "../content/words/onkel.json";
+import wordPfeffer from "../content/words/pfeffer.json";
 import wordPolen from "../content/words/polen.json";
 import wordPortion from "../content/words/portion.json";
 import wordPortugal from "../content/words/portugal.json";
 import wordPreis from "../content/words/preis.json";
 import wordPrima from "../content/words/prima.json";
+import wordProbieren from "../content/words/probieren.json";
 import wordRechnung from "../content/words/rechnung.json";
 import wordRechts from "../content/words/rechts.json";
 import wordReis from "../content/words/reis.json";
+import wordReservieren from "../content/words/reservieren.json";
 import wordRussland from "../content/words/russland.json";
 import wordSaft from "../content/words/saft.json";
+import wordSahne from "../content/words/sahne.json";
 import wordSalat from "../content/words/salat.json";
+import wordSalz from "../content/words/salz.json";
 import wordSalzig from "../content/words/salzig.json";
 import wordSatt from "../content/words/satt.json";
 import wordScharf from "../content/words/scharf.json";
@@ -297,6 +314,7 @@ import wordViel from "../content/words/viel.json";
 import wordViertel from "../content/words/viertel.json";
 import wordVierzig from "../content/words/vierzig.json";
 import wordVorname from "../content/words/vorname.json";
+import wordVorspeise from "../content/words/vorspeise.json";
 import wordVorstellen from "../content/words/vorstellen.json";
 import wordWasser from "../content/words/wasser.json";
 import wordWein from "../content/words/wein.json";
@@ -319,6 +337,7 @@ import wordZeit from "../content/words/zeit.json";
 import wordZeitung from "../content/words/zeitung.json";
 import wordZentrum from "../content/words/zentrum.json";
 import wordZiffer from "../content/words/ziffer.json";
+import wordZucker from "../content/words/zucker.json";
 import wordZusammen from "../content/words/zusammen.json";
 import wordZwanzig from "../content/words/zwanzig.json";
 import wordZwilling from "../content/words/zwilling.json";
@@ -347,6 +366,7 @@ const WORD_JSONS = [
   wordAufWiedersehen,
   wordAufnehmen,
   wordAuto,
+  wordBacken,
   wordBeruf,
   wordBeschreiben,
   wordBestellen,
@@ -371,6 +391,7 @@ const WORD_JSONS = [
   wordDeutschland,
   wordDort,
   wordDreissig,
+  wordDurst,
   wordEi,
   wordEis,
   wordEltern,
@@ -415,6 +436,7 @@ const WORD_JSONS = [
   wordGeschwister,
   wordGesicht,
   wordGespraech,
+  wordGesund,
   wordGesundheit,
   wordGetraenk,
   wordGlas,
@@ -426,6 +448,7 @@ const WORD_JSONS = [
   wordGutenMorgen,
   wordGutenTag,
   wordHaar,
+  wordHaehnchen,
   wordHalb,
   wordHallo,
   wordHandy,
@@ -448,6 +471,7 @@ const WORD_JSONS = [
   wordKaffee,
   wordKarte,
   wordKartoffel,
+  wordKasse,
   wordKatze,
   wordKaufen,
   wordKellner,
@@ -456,9 +480,11 @@ const WORD_JSONS = [
   wordKind,
   wordKlar,
   wordKlein,
+  wordKochen,
   wordKommen,
   wordKosten,
   wordKuchen,
+  wordKueche,
   wordKurz,
   wordLaecheln,
   wordLaeffel,
@@ -470,10 +496,12 @@ const WORD_JSONS = [
   wordLeise,
   wordLesen,
   wordLeute,
+  wordLimonade,
   wordLinks,
   wordLustig,
   wordMaedchen,
   wordMaerz,
+  wordMahlzeit,
   wordMai,
   wordMal,
   wordMann,
@@ -495,6 +523,7 @@ const WORD_JSONS = [
   wordMuttersprache,
   wordNachricht,
   wordNacht,
+  wordNachtisch,
   wordName,
   wordNatuerlich,
   wordNeben,
@@ -511,17 +540,22 @@ const WORD_JSONS = [
   wordOhr,
   wordOkay,
   wordOnkel,
+  wordPfeffer,
   wordPolen,
   wordPortion,
   wordPortugal,
   wordPreis,
   wordPrima,
+  wordProbieren,
   wordRechnung,
   wordRechts,
   wordReis,
+  wordReservieren,
   wordRussland,
   wordSaft,
+  wordSahne,
   wordSalat,
+  wordSalz,
   wordSalzig,
   wordSatt,
   wordScharf,
@@ -586,6 +620,7 @@ const WORD_JSONS = [
   wordViertel,
   wordVierzig,
   wordVorname,
+  wordVorspeise,
   wordVorstellen,
   wordWasser,
   wordWein,
@@ -608,13 +643,14 @@ const WORD_JSONS = [
   wordZeitung,
   wordZentrum,
   wordZiffer,
+  wordZucker,
   wordZusammen,
   wordZwanzig,
   wordZwilling,
   wordZwischen,
 ];
 
-const LESSON_JSONS = [lessonD1, lessonD2, lessonD3, lessonD4, lessonD5, lessonD6, lessonU2D1, lessonU2D2, lessonU2D3, lessonU2D4, lessonU2D5, lessonU2D6, lessonU3D1, lessonU3D2, lessonU3D3, lessonU3D4, lessonU3D5, lessonU3D6, lessonU4D1, lessonU4D2, lessonU4D3, lessonU4D4, lessonU4D5, lessonU4D6, lessonU5D1, lessonU5D2, lessonU5D3, lessonU5D4];
+const LESSON_JSONS = [lessonD1, lessonD2, lessonD3, lessonD4, lessonD5, lessonD6, lessonU2D1, lessonU2D2, lessonU2D3, lessonU2D4, lessonU2D5, lessonU2D6, lessonU3D1, lessonU3D2, lessonU3D3, lessonU3D4, lessonU3D5, lessonU3D6, lessonU4D1, lessonU4D2, lessonU4D3, lessonU4D4, lessonU4D5, lessonU4D6, lessonU5D1, lessonU5D2, lessonU5D3, lessonU5D4, lessonU5D5, lessonU5D6];
 
 /** كل الكلمات المُتحقَّق منها — بلا استثناءات */
 export const ALL_WORDS: Word[] = WORD_JSONS.map((j) => WordSchema.parse(j));

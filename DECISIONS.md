@@ -232,3 +232,10 @@
 - **u5-d4** (12 كلمة): scharf/salzig/frisch/Portion/Teller/Löffel/Gabel/Messer/Gast/Bestellung/Trinkgeld/Getränk. مصائد: **نفي الاسم = kein (keinen Kaffee)** · **نفي الفعل/الصفة = nicht** · **نهايات kein الثلاث** (keinen/keine/kein).
 - **معركة تقنية (مُوثَّقة للدرس):** مخطط الكلمة يستخدم **enums** لا نصوصاً: phoneticRisks ∈ [ch-ich-laut, ch-ach-laut, umlaut-u, umlaut-o, umlaut-a, vowel-long-short, auslaut-d/b/g, r-uvular, sp-st-initial, ig-ending, double-consonant, z, v-f] · grammarRisks ∈ [needs-ein, needs-ist, v2-order, gender-vs-natural, needs-es-dummy, kein-vs-nicht, trennbar, feste-praep, dative-verb, reflexive, zu-infinitiv, plural-irregular, adjective-decl, n-deklination] · goetheList ∈ [A1,A2,B1,B2] · **schemaVersion إلزامي**. + قاعدة validator: كل اسم ذي جنس يحتاج بطاقة gender في srsCardTypes.
 - البوابة: **243/243 + tsc + validator (319 ملفاً/0/0) + build** ✓.
+
+## D58 (2026-10-10): إتمام الوحدة 5 — u5-d5 (17 كلمة) + u5-d6 (المعركة)
+
+- **u5-d5** (49–65): Durst/Salz/Pfeffer/Zucker/Sahne/Limonade/Hähnchen/Nachtisch/Vorspeise/Kasse/reservieren/probieren/kochen/backen/Küche/gesund/Mahlzeit. مصائد: **Durst/Hunger = haben ↔ satt = sein** · **-chen = دائماً das** (Hähnchen) · **تمييز kein↔nicht الختامي**. مهمة: **طلب كامل في مقهى** (طلب + نفيان + zahlen عند Kasse).
+- **u5-d6** (integration — بلا كلمات جديدة): توليف + معركة بعتبة 0.75 — مراجعة hunger/zahlen كمرسات، و3 بطاقات تحذير ختامية (zu · haben/sein · kein↔nicht).
+- ملاحظة إنتاج: كل يوم دراسي ≥3 يجب أن يحمل **3 بطاقات تحذير بالضبط** (اختبار الكشف) + كل اسم ذي جنس يشترط بطاقة gender في srsCardTypes.
+- البوابة: **243/243 + tsc + validator (338 ملفاً/0/0) + build** ✓. **الوحدات 1–5 مكتملة = 304 كلمة · 30 درساً · 305 مساراً.**
