@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u3-d1",
+  "level": "A1",
+  "unit": 3,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst bis 100 zählen und Zahlen 20–100 nennen.",
+    "ar": "تعدّ حتى 100 وتذكر أرقام 20–100"
+  },
+  "canDoDaily": [
+    "يعدّ ويذكر أرقاماً حتى 100 (20–100 بالعشرات)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "zahl",
+      "nummer",
+      "jahr"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«21» بالألمانية: einundzwanzig أم zwanzigeins? (تخمين فقط)"
+        },
+        "choices": [
+          "einundzwanzig (الوحدة أولاً ثم العشرات)",
+          "zwanzigeins",
+          "twenty-one"
+        ],
+        "answer": "einundzwanzig (الوحدة أولاً ثم العشرات)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "zwanzig",
+      "dreissig",
+      "vierzig",
+      "fuenfzig",
+      "sechzig",
+      "siebzig",
+      "achtzig",
+      "neunzig",
+      "hundert",
+      "zaehlen",
+      "ziffer",
+      "mal"
+    ],
+    "grammarArsenalIds": [
+      "ars-zahlen-100"
+    ],
+    "storySentenceIds": [
+      "story-a3-u3-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«عشرون»؟",
+            "a": "zwanzig"
+          },
+          {
+            "q": "«خمس وعشرون» (كلمة واحدة)؟",
+            "a": "fünfundzwanzig"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«ثلاثون» — ß أم ss؟",
+            "a": "dreißig (ß — الحركة الطويلة!)"
+          },
+          {
+            "q": "«ستون»؟ لماذا لا sechszig?",
+            "a": "sechzig — الـs تُحذف (sechs ← sech)"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«سبعون»؟ siebenzig أم siebzig?",
+            "a": "siebzig (en تُحذف)"
+          },
+          {
+            "q": "«أعدّ حتى مئة»؟",
+            "a": "Ich zähle bis hundert."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Zahlen 1–100 zählen und nennen",
+        "ar": "العد وذكر الأرقام حتى 100"
+      },
+      "situation": {
+        "de": "Im Kurs: Zahlen-Lotto",
+        "ar": "في الدورة: يانصيب الأرقام"
+      },
+      "successCriteria": [
+        "يعدّ من 1 إلى 30 بلا خطأ ويذكر 8 أرقام عشوائية من 20–100"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«سبعة وثلاثون»؟",
+            "a": "siebenunddreißig"
+          },
+          {
+            "q": "«ستون»؟",
+            "a": "sechzig"
+          },
+          {
+            "q": "«مرتان قهوة من فضلك»؟",
+            "a": "Zweimal Kaffee, bitte!"
+          },
+          {
+            "q": "«عمري عشرون سنة»؟",
+            "a": "Ich bin zwanzig Jahre alt."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«تسعون»؟",
+            "a": "neunzig"
+          },
+          {
+            "q": "أي كتابة صحيحة؟",
+            "choices": [
+              "dreissig",
+              "dreißig"
+            ],
+            "a": "dreißig"
+          },
+          {
+            "q": "«أعدّ حتى مئة»؟",
+            "a": "Ich zähle bis hundert."
+          },
+          {
+            "q": "الرقم فيه إحدى عشرة خانة — «الخانة»؟",
+            "a": "die Ziffer"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«ثمانون»؟",
+            "a": "achtzig"
+          },
+          {
+            "q": "«مئة»؟",
+            "a": "(ein)hundert"
+          },
+          {
+            "q": "«أربعون دقيقة»؟",
+            "a": "Vierzig Minuten."
+          },
+          {
+            "q": "21 تُكتب؟",
+            "choices": [
+              "einundzwanzig",
+              "zwanzigeins"
+            ],
+            "a": "einundzwanzig"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Das Zählsystem: Einheit zuerst, dann -zig (fünfundzwanzig) — und sechzig/siebzig verkürzen sich. Du zählst bis 100!",
+      "ar": "نظام العد: الوحدة أولاً ثم -zig (fünfundzwanzig) — وsechzig/siebzig يختصران. أنت تعدّ حتى 100!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~zwanzigeins~~ / ~~twenty-one~~",
+          "ar": "الوحدة أولاً ثم العشرات (عكس الترتيب الإنجليزي)"
+        },
+        "whyArabicSpeakerFails": "العربية «واحد وعشرون» مألوفة — لكن الألماني يدمجها كلمة واحدة: fünfundzwanzig، والإنجليزية twenty-one تُربك أحياناً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "fünfundzwanzig",
+          "ar": "خمسة وعشرون (كلمة واحدة)"
+        },
+        "exercise": {
+          "q": "اكتب 35 بالألمانية",
+          "a": "fünfunddreißig"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~sechszig~~ / ~~siebenzig~~",
+          "ar": "sechs←sech وsieben←sieb عند الربط"
+        },
+        "whyArabicSpeakerFails": "يُبقي على الكلمة كاملة عند الربط — الألماني يحذف: sechzig وsiebzig (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "sechzig / siebzig",
+          "ar": "ستون / سبعون"
+        },
+        "exercise": {
+          "q": "صحّح: ~~siebenzig~~ (70)",
+          "a": "siebzig"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~dreissig~~",
+          "ar": "ß بعد الحركة الطويلة — تكرار من الوحدة 2!"
+        },
+        "whyArabicSpeakerFails": "قاعدة ß/ss من الأسبوع الماضي تتكرر هنا: drei + zig = dreißig (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "dreißig",
+          "ar": "ثلاثون (ß)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~dreissig Euro~~",
+          "a": "dreißig Euro"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "zwanzig",
+      "dreissig",
+      "vierzig",
+      "fuenfzig",
+      "sechzig",
+      "siebzig",
+      "achtzig",
+      "neunzig",
+      "hundert",
+      "zaehlen",
+      "ziffer",
+      "mal"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/zwanzig",
+      "https://www.duden.de/rechtschreibung/drei%C3%9Fig",
+      "https://www.duden.de/rechtschreibung/sechzig"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/-zig"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-zahlen-100"
+  ],
+  "audioManifestRefs": [
+    "word-zwanzig",
+    "word-dreissig",
+    "word-vierzig",
+    "word-fuenfzig",
+    "word-sechzig",
+    "word-siebzig",
+    "word-achtzig",
+    "word-neunzig",
+    "word-hundert",
+    "word-zaehlen",
+    "word-ziffer",
+    "word-mal"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen & Uhrzeit) — Zählen bis 100",
+    "goetheWordListOverlap": [
+      "hundert",
+      "mal"
+    ]
+  }
+}

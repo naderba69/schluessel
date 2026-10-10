@@ -9,91 +9,297 @@
     "de": "Du kannst Zahlen bis 1000 sagen und einen Preis nennen.",
     "ar": "تستطيع ذكر الأرقام حتى 1000 وتسمية سعر."
   },
-  "canDoDaily": ["يذكر السعر والرقم الكبير"],
-  "warmup": { "cardIds": ["wohnung", "tisch"] },
+  "canDoDaily": [
+    "يذكر رقماً كبيراً حتى 1000 ويسأل عن السعر ويجيب عنه"
+  ],
+  "warmup": {
+    "cardIds": [
+      "zwanzig",
+      "hundert",
+      "zaehlen"
+    ]
+  },
   "einstieg": {
     "pretestItems": [
       {
-        "prompt": { "de": "Wie sagt man 21?" },
-        "choices": ["einundzwanzig", "zweieins", "zwanzigeins"],
-        "answer": "einundzwanzig",
+        "prompt": {
+          "de": "«بكم هذا؟» بالألمانية؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Wie viel kostet das?",
+          "Was kostet wie viel?",
+          "Wie Geld ist das?"
+        ],
+        "answer": "Wie viel kostet das?",
         "revealNextSession": true
       }
     ],
-    "guidedRetrieval": ["Zahlen 1–20"]
+    "guidedRetrieval": []
   },
   "praesentation": {
-    "wordIds": ["wohnung"],
-    "grammarArsenalIds": ["ars-zahlen"],
-    "storySentenceIds": ["story-a1-u3-s2"],
+    "wordIds": [
+      "tausend",
+      "euro",
+      "preis",
+      "kosten",
+      "billig",
+      "teuer",
+      "geld",
+      "bezahlen",
+      "karte",
+      "kaufen",
+      "nur",
+      "viel"
+    ],
+    "grammarArsenalIds": [
+      "ars-preis-1000"
+    ],
+    "storySentenceIds": [
+      "story-a3-u3-s2"
+    ],
     "dualCodingRequired": true,
-    "riskFlagsShown": ["vowel-long-short"]
+    "riskFlagsShown": []
   },
   "uebung": {
     "stations": [
       {
         "type": "choice",
-        "items": [{ "q": "Wie viel kostet das?", "a": "21 Euro" }],
+        "items": [
+          {
+            "q": "«ألف»؟",
+            "a": "tausend"
+          },
+          {
+            "q": "«هذا يكلف خمسة يورو»؟",
+            "a": "Das kostet fünf Euro."
+          }
+        ],
         "interleavedWith": [],
         "explanationRequired": true
       },
       {
-        "type": "gap-fill",
-        "items": [{ "q": "Ich habe ___ Euro.", "a": "einundzwanzig" }],
-        "interleavedWith": ["a1-u2-d3"],
+        "type": "choice",
+        "items": [
+          {
+            "q": "«بكم هذا؟»؟",
+            "a": "Wie viel kostet das?"
+          },
+          {
+            "q": "«رخيص» و«غالٍ»؟",
+            "a": "billig / teuer"
+          }
+        ],
+        "interleavedWith": [],
         "explanationRequired": true
       },
       {
-        "type": "build-sentence",
-        "items": [{ "q": "kostet / Das / 21 / Euro", "a": "Das kostet 21 Euro." }],
-        "interleavedWith": ["a1-u1-d5"],
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أدفع الحساب»؟",
+            "a": "Ich bezahle die Rechnung."
+          },
+          {
+            "q": "«بالبطاقة من فضلك»؟",
+            "a": "Mit Karte, bitte."
+          }
+        ],
+        "interleavedWith": [],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
-      "goal": { "de": "Ein Ticket kaufen", "ar": "شراء تذكرة" },
-      "situation": { "de": "Am Bahnhof", "ar": "في المحطة" },
-      "successCriteria": ["يستخدم رقماً صحيحاً في جملة كاملة", "يستخدم صيغة طلب مهذبة"]
+      "goal": {
+        "de": "Preise fragen und nennen (bis 1000)",
+        "ar": "السؤال عن السعر وذكره (حتى 1000)"
+      },
+      "situation": {
+        "de": "Im Geschäft: Brot und Kaffee kaufen",
+        "ar": "في المتجر: شراء خبز وقهوة"
+      },
+      "successCriteria": [
+        "يسأل عن سعرين ويجيب بجملة سعر صحيحة ويختار bezahlen/Karte"
+      ]
     }
   },
   "slider": {
     "questionDe": "Wie viel Prozent wirst du schaffen?",
-    "questionAr": "كم نسبة ما تتوقع إنجازه؟",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
     "min": 0,
     "max": 100
   },
   "quiz": {
     "variants": [
-      { "items": [{ "q": 1 }, { "q": 2 }, { "q": 3 }], "passingScore": 0.75 },
-      { "items": [{ "q": 4 }, { "q": 5 }, { "q": 6 }], "passingScore": 0.75 },
-      { "items": [{ "q": 7 }, { "q": 8 }, { "q": 9 }], "passingScore": 0.75 }
+      {
+        "items": [
+          {
+            "q": "«ألف شكر»؟",
+            "a": "Tausend Dank!"
+          },
+          {
+            "q": "«بكم هذا؟»؟",
+            "a": "Wie viel kostet das?"
+          },
+          {
+            "q": "«هذا يكلف ثلاثة يورو فقط»؟",
+            "a": "Das kostet nur drei Euro."
+          },
+          {
+            "q": "«المال»؟",
+            "a": "das Geld"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«السعر»؟",
+            "a": "der Preis"
+          },
+          {
+            "q": "أي جملة صحيحة؟",
+            "choices": [
+              "Ich bezahle für die Rechnung.",
+              "Ich bezahle die Rechnung."
+            ],
+            "a": "Ich bezahle die Rechnung."
+          },
+          {
+            "q": "«رخيص»؟",
+            "a": "billig"
+          },
+          {
+            "q": "«أشتري خبزة»؟",
+            "a": "Ich kaufe ein Brötchen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«اليورو» — der أم das?",
+            "a": "der Euro"
+          },
+          {
+            "q": "«بالبطاقة من فضلك»؟",
+            "a": "Mit Karte, bitte."
+          },
+          {
+            "q": "«المطعم غالٍ»؟",
+            "a": "Das Restaurant ist teuer."
+          },
+          {
+            "q": "300 + 400 = ?",
+            "a": "siebenhundert"
+          }
+        ],
+        "passingScore": 0.75
+      }
     ]
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Heute hast du Zahlen bis 1000 und Preise gelernt.",
-      "ar": "اليوم تعلمت الأرقام حتى 1000 والأسعار."
+      "de": "Du kennst die Preise: Wie viel kostet das? — kostet + Zahl + Euro, und bezahlen ohne für. Einkaufen wird leicht!",
+      "ar": "تعرف الأسعار: بكم هذا؟ — kostet + رقم + Euro، وbezahlen بلا جار. التسوّق يصبح سهلاً!"
     },
     "warningCards": [
       {
-        "commonError": { "de": "einundzwanzig → ~~zweieins~~", "ar": "قلب ترتيب الجزأين" },
-        "whyArabicSpeakerFails": "العربية تضع الأصغر قبل الأكبر (واحد وعشرون) لكن بترتيب معكوس عن الألمانية في الصياغة الكاملة",
-        "correct": { "de": "einundzwanzig", "ar": "واحد وعشرون (الأصغر أولاً دائماً)" },
-        "exercise": { "q": "31؟", "a": "einunddreißig" }
+        "commonError": {
+          "de": "~~Wie viel kostet für das?~~ / ~~Was kostet wie viel?~~",
+          "ar": "kosten + سعر مباشرة (بلا für)"
+        },
+        "whyArabicSpeakerFails": "«كم يكلف هذا؟» بالعربية حار؛ الألماني: Wie viel kostet das? والسعر مفعول مباشر بلا حرف جر (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wie viel kostet das? — Das kostet fünf Euro.",
+          "ar": "بكم هذا؟ — هذا يكلف خمسة يورو."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Das kostet für fünf Euro.~~",
+          "a": "Das kostet fünf Euro."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich bezahle für die Rechnung.~~",
+          "ar": "bezahlen + مفعول مباشر (بلا für)"
+        },
+        "whyArabicSpeakerFails": "«أدفع عن الحساب» يجرّب العربي الجار — الألماني يضع المفعول مباشرة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bezahle die Rechnung.",
+          "ar": "أدفع الحساب."
+        },
+        "exercise": {
+          "q": "صحّح: ~~bezahlen für das Brot~~",
+          "a": "das Brot bezahlen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~das Euro~~ / ~~nur kostet~~",
+          "ar": "der Euro · nur بين الفعل والمفعول"
+        },
+        "whyArabicSpeakerFails": "اليورو مذكر (der) — و«فقط» تدخل وسط الجملة الألمانية بعد الفعل مباشرة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das kostet nur drei Euro (der Euro)",
+          "ar": "ثلاثة يورو فقط (der Euro)"
+        },
+        "exercise": {
+          "q": "أعد الترتيب: Euro / kostet / drei / nur / Das",
+          "a": "Das kostet nur drei Euro."
+        }
       }
     ],
-    "srsBundleWordIds": ["wohnung"]
+    "srsBundleWordIds": [
+      "tausend",
+      "euro",
+      "preis",
+      "kosten",
+      "billig",
+      "teuer",
+      "geld",
+      "bezahlen",
+      "karte",
+      "kaufen",
+      "nur",
+      "viel"
+    ]
   },
   "gReferences": {
-    "duden": ["https://www.duden.de/rechtschreibung/Wohnung"],
-    "wiktionary": ["https://de.wiktionary.org/wiki/Wohnung"],
+    "duden": [
+      "https://www.duden.de/rechtschreibung/tausend",
+      "https://www.duden.de/rechtschreibung/Euro",
+      "https://www.duden.de/rechtschreibung/kosten"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/kosten"
+    ],
     "goethe": []
   },
-  "usedArsenalIds": ["ars-zahlen"],
-  "audioManifestRefs": ["word-wohnung"],
+  "usedArsenalIds": [
+    "ars-preis-1000"
+  ],
+  "audioManifestRefs": [
+    "word-tausend",
+    "word-euro",
+    "word-preis",
+    "word-kosten",
+    "word-billig",
+    "word-teuer",
+    "word-geld",
+    "word-bezahlen",
+    "word-karte",
+    "word-kaufen",
+    "word-nur",
+    "word-viel"
+  ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen/Uhrzeit)",
-    "goetheWordListOverlap": ["wohnung"]
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen & Uhrzeit) — Zahlen bis 1000 & Preise",
+    "goetheWordListOverlap": [
+      "kosten",
+      "kaufen"
+    ]
   }
 }
