@@ -1,0 +1,282 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u3-d6",
+  "level": "A1",
+  "unit": 3,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Die Einheit 3 zusammenfassen und die Wochen-Meisterschaft bestehen (≥75%).",
+    "ar": "تجميع مادة الوحدة 3 واجتياز معركتها (75% فأكثر)."
+  },
+  "canDoDaily": [
+    "يجتاز معركة الوحدة 3 (أرقام + وقت + مواعيد منطوقة) بنسبة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "zwanzig",
+      "uhr",
+      "januar"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«الساعة الرابعة والنصف» بالألمانية؟ (التوليف — بلا جديد)"
+        },
+        "choices": [
+          "halb fünf",
+          "halb vier",
+          "viertel vier"
+        ],
+        "answer": "halb fünf",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "toll",
+      "klar"
+    ],
+    "grammarArsenalIds": [
+      "ars-unit3-review"
+    ],
+    "storySentenceIds": [
+      "story-a3-u3-battle"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "خطأ الأسبوع 1: halb drei = ?",
+            "a": "2:30 (نصف الثالث — العدّاد للتالي)"
+          },
+          {
+            "q": "«الآن التاسعة»؟",
+            "a": "Es ist neun Uhr. (بلا um)"
+          }
+        ],
+        "interleavedWith": [
+          "halb",
+          "uhr"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "خطأ الأسبوع 2: «في فبراير»؟",
+            "a": "im Februar (im للشهور)"
+          },
+          {
+            "q": "«يوم الجمعة في الثامنة»؟",
+            "a": "Am Freitag um acht Uhr."
+          }
+        ],
+        "interleavedWith": [
+          "februar",
+          "termin"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "خطأ الأسبوع 3: 35 بالألمانية؟",
+            "a": "fünfunddreißig (الوحدة أولاً + ß)"
+          },
+          {
+            "q": "«مرة أخرى من فضلك»؟",
+            "a": "Noch einmal, bitte!"
+          }
+        ],
+        "interleavedWith": [
+          "dreissig",
+          "noch"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Meisterschaft: Uhrzeit + Termin + Zahlen am Telefon",
+        "ar": "المعركة: وقت + موعد + أرقام بالهاتف"
+      },
+      "situation": {
+        "de": "Das Abschlussgespräch: Termin am Telefon",
+        "ar": "الحوار الختامي: موعد بالهاتف"
+      },
+      "successCriteria": [
+        "يجتاز 3 مجموعات بـ75% فأكثر ويصحّح أخطاء الوحدة الثلاثة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "المعركة (1): «كم الساعة؟» — الجواب (3:30)؟",
+            "a": "Es ist halb vier."
+          },
+          {
+            "q": "المعركة (2): «الرقم 70»؟",
+            "a": "siebzig"
+          },
+          {
+            "q": "المعركة (3): «نلتقي يوم الاثنين»؟",
+            "a": "Wir treffen uns am Montag."
+          },
+          {
+            "q": "«رائع، أنت تستطيع»؟",
+            "a": "Toll, das kannst du!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "المعركة (4): «في مارس»؟",
+            "a": "im März"
+          },
+          {
+            "q": "المعركة (5): «عندي مكالمة»؟",
+            "a": "Ich habe einen Anruf."
+          },
+          {
+            "q": "«أجيبك لاحقاً»؟",
+            "a": "Ich antworte dir später."
+          },
+          {
+            "q": "«بالتأكيد، إلى الغد»؟",
+            "a": "Klar, bis morgen!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "المعركة (6): «الموعد في الثالثة»؟",
+            "a": "Der Termin ist um drei Uhr."
+          },
+          {
+            "q": "«25» كلمة واحدة؟",
+            "a": "fünfundzwanzig"
+          },
+          {
+            "q": "«مرة أخرى من فضلك»؟",
+            "a": "Noch einmal, bitte!"
+          },
+          {
+            "q": "halb sechs = ?",
+            "choices": [
+              "5:30",
+              "6:30"
+            ],
+            "a": "5:30"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheit 3 geschafft: Zahlen bis 1000, Uhrzeiten und Termine — du kannst telefonieren und verabreden!",
+      "ar": "اكتملت الوحدة 3: الأرقام حتى 1000 والأوقات والمواعيد — تستطيع التелефن وحجز المواعيد!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~halb drei = 3:30~~",
+          "ar": "halb للساعة التالية"
+        },
+        "whyArabicSpeakerFails": "«الثالثة والنصف» تبدأ من الثالثة بالعربية — halb drei = 2:30 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "halb drei = 2:30",
+          "ar": "نصف الثالث = الثانية والنصف"
+        },
+        "exercise": {
+          "q": "«الساعة السابعة والنصف»؟",
+          "a": "halb acht (7:30)"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~am Februar~~ / ~~um Montag~~",
+          "ar": "um/am/im"
+        },
+        "whyArabicSpeakerFails": "«في» واحدة بالعربية — الألماني يفرّق الثلاثة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "um drei Uhr / am Montag / im Februar",
+          "ar": "الساعة / اليوم / الشهر"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Sonntag ___ April ___ halb neun",
+          "a": "am · im · um"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~dreissig~~ / ~~zwanzigeins~~",
+          "ar": "ß + ترتيب الوحدة أولاً"
+        },
+        "whyArabicSpeakerFails": "قاعدة ß من الوحدة 2 + ترتيب الأرقام المركّبة — كلاهما يعود (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "dreißig / einundzwanzig",
+          "ar": "ثلاثون / واحد وعشرون"
+        },
+        "exercise": {
+          "q": "اكتب 42: ~~zweiundfünfzig~~?",
+          "a": "zweiundvierzig"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "toll",
+      "klar"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/halb"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/halb"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-unit3-review"
+  ],
+  "audioManifestRefs": [
+    "word-toll",
+    "word-klar"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 — توليف الوحدة 3 (معركة 70/30)",
+    "goetheWordListOverlap": [
+      "toll",
+      "klar"
+    ]
+  }
+}

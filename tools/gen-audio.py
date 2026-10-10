@@ -240,6 +240,20 @@ def build_all() -> None:
         ("word-montag", "Montag.", "montag", ["a1-u3-d4"]),
         ("word-sonntag", "Sonntag.", "sonntag", ["a1-u3-d4"]),
         ("word-am", "am.", "am", ["a1-u3-d4"]),
+        ("word-hoeren", "hören.", "hoeren", ["a1-u3-d5"]),
+        ("word-verstehen", "verstehen.", "verstehen", ["a1-u3-d5"]),
+        ("word-schnell", "schnell.", "schnell", ["a1-u3-d5"]),
+        ("word-laut", "laut.", "laut", ["a1-u3-d5"]),
+        ("word-leise", "leise.", "leise", ["a1-u3-d5"]),
+        ("word-stimme", "Stimme.", "stimme", ["a1-u3-d5"]),
+        ("word-ohr", "Ohr.", "ohr", ["a1-u3-d5"]),
+        ("word-nachricht", "Nachricht.", "nachricht", ["a1-u3-d5"]),
+        ("word-anruf", "Anruf.", "anruf", ["a1-u3-d5"]),
+        ("word-antworten", "antworten.", "antworten", ["a1-u3-d5"]),
+        ("word-noch", "noch.", "noch", ["a1-u3-d5"]),
+        ("word-mit", "mit.", "mit", ["a1-u3-d5"]),
+        ("word-toll", "Toll.", "toll", ["a1-u3-d6"]),
+        ("word-klar", "Klar.", "klar", ["a1-u3-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

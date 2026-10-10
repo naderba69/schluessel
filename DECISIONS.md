@@ -193,3 +193,10 @@
 - **u3-d3** (12 كلمة): Uhr/Zeit/Stunde/Minute/halb/viertel/früh/spät/Morgen/Abend/Nacht/Mittag. مصائد: **halb drei = 2:30** (العدّاد للساعة التالية) · **Es ist drei Uhr بلا um** (um للمواعيد) · **der Morgen (صباح) vs morgen (غداً)**.
 - **u3-d4** (12 كلمة): Januar..Juni + Termin/treffen/Verabredung/Montag/Sonntag/am. مصائد: **um/am/im** (ثلاث أدوات لـ«في» العربية) · الشهور مذكرة كلها · **sich treffen** (wir treffen uns). الخلط (§3) مفعّل في اليومين.
 - البوابة: **243/243 + tsc + validator (183 ملفاً/0/0) + build** ✓.
+
+## D52 (2026-10-10): إتمام الوحدة 3 — u3-d5 (Hören: Zahlen/Uhrzeit) + u3-d6 (المعركة)
+
+- **u3-d5** (12 كلمة): hören/verstehen/schnell/laut/leise/Stimme/Ohr/Nachricht/Anruf/antworten/noch/mit. مصائد: **verstehen غير منفصلة** (ver- ملتصقة) · **antworten + Dativ** (dir لا dich) · **mit + Dativ دائماً** (mit dem Handy). عبارة الإصلاح: «Noch einmal, bitte!».
+- **u3-d6** (integration): toll/klar + معركة الوحدة 3 (أرقام/وقت/مواعيد منطوقة) بعتبة **0.75** — تفريغ halb · um/am/im · fünfunddreißig.
+- **درس مستفاد:** حقول slugs (goetheWordListOverlap) لا تحتمل الحروف غير ASCII — «hören» → `hoeren` (الدرس رُفض zod بسببها ثم أُصلح).
+- البوابة: **243/243 + tsc + validator (199 ملفاً/0/0) + build** ✓. **الوحدات 1–3 مكتملة (18 يوماً).**

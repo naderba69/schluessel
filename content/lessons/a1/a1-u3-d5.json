@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u3-d5",
+  "level": "A1",
+  "unit": 3,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst Zahlen und Uhrzeiten verstehen, die man dir sagt.",
+    "ar": "تفهم الأرقام والأوقات المنطوقة"
+  },
+  "canDoDaily": [
+    "يفهم رقماً هاتفياً ووقتاً منطوقين ويطلب التكرار عند الحاجة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "uhr",
+      "zwanzig",
+      "telefonnummer"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«مرة أخرى من فضلك» — ما العبارة الإصلاحية؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Noch einmal, bitte!",
+          "Noch mal Uhr!",
+          "Wieder Uhr!"
+        ],
+        "answer": "Noch einmal, bitte!",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "hoeren",
+      "verstehen",
+      "schnell",
+      "laut",
+      "leise",
+      "stimme",
+      "ohr",
+      "nachricht",
+      "anruf",
+      "antworten",
+      "noch",
+      "mit"
+    ],
+    "grammarArsenalIds": [
+      "ars-hoeren-zahlen"
+    ],
+    "storySentenceIds": [
+      "story-a3-u3-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أفهم هذا»؟",
+            "a": "Ich verstehe das."
+          },
+          {
+            "q": "«سريع جداً! أبطأ من فضلك»؟",
+            "a": "Zu schnell! Langsamer, bitte."
+          }
+        ],
+        "interleavedWith": [
+          "langsam",
+          "wiederholen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«مرة أخرى من فضلك»؟",
+            "a": "Noch einmal, bitte!"
+          },
+          {
+            "q": "«الراديو مرتفع جداً»؟",
+            "a": "Das Radio ist zu laut."
+          }
+        ],
+        "interleavedWith": [
+          "frueh",
+          "spaet"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أجيبك لاحقاً» — مَن نجيب؟",
+            "a": "Ich antworte dir. (Dativ: dir)"
+          },
+          {
+            "q": "«عندي مكالمة»؟",
+            "a": "Ich habe einen Anruf."
+          }
+        ],
+        "interleavedWith": [
+          "minute",
+          "telefon"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Telefonnummer und Uhrzeit verstehen und nachfragen",
+        "ar": "فهم رقم هاتف ووقت منطوقين والسؤال عنهما"
+      },
+      "situation": {
+        "de": "Am Telefon: Nummer und Termin aufschreiben",
+        "ar": "بالهاتف: كتابة رقم وموعد"
+      },
+      "successCriteria": [
+        "يفهم رقم هاتف منطوقاً بطلب إعادة عند الحاجة ويكتب وقتاً منطوقاً صحيحاً"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«لا أفهم هذا»؟",
+            "a": "Ich verstehe das nicht."
+          },
+          {
+            "q": "«مرة أخرى من فضلك»؟",
+            "a": "Noch einmal, bitte!"
+          },
+          {
+            "q": "«الصوت» (البشري)؟",
+            "a": "die Stimme"
+          },
+          {
+            "q": "«أستمع إلى الأخبار»؟",
+            "a": "Ich höre die Nachrichten."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أجيبك لاحقاً»؟",
+            "a": "Ich antworte dir später."
+          },
+          {
+            "q": "«مرتفع» و«هادئ»؟",
+            "a": "laut / leise"
+          },
+          {
+            "q": "«عندي مكالمة»؟",
+            "a": "Ich habe einen Anruf."
+          },
+          {
+            "q": "«بالهاتف من فضلك» — mit مع أي حالة؟",
+            "a": "Dativ: mit dem Handy"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الأذن»؟",
+            "a": "das Ohr"
+          },
+          {
+            "q": "«سريع»؟",
+            "a": "schnell"
+          },
+          {
+            "q": "verstehen — منفصل أم ملتصق؟",
+            "a": "ملتصق (ver- لا تنفصل): Ich verstehe."
+          },
+          {
+            "q": "«تحدثوا بهدوء»؟",
+            "a": "Bitte leise sprechen!"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Du kannst jetzt zuhören und nachfragen: „Noch einmal, bitte!“ — und verstehen, was man dir sagt. Die Ohren sind trainiert!",
+      "ar": "الآن تستطيع الإنصات والسؤال: «مرة أخرى من فضلك!» — وتفهم ما يُقال لك. أذناك مدرّبتان!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich stehe das nicht verstehen.~~ / ~~verstehe auf~~",
+          "ar": "ver- ملتصقة (غير منفصلة)"
+        },
+        "whyArabicSpeakerFails": "الألمانية المنفصلة (aufstehen) اعتادها المتعلّم فيظن ver- كذلك — لكن ver-/be-/ent- ملتصقة دائماً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich verstehe das nicht.",
+          "ar": "لا أفهم هذا."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich verstehe auf das nicht.~~",
+          "a": "Ich verstehe das nicht."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich antworte dich.~~",
+          "ar": "antworten + Dativ (dir/mir)"
+        },
+        "whyArabicSpeakerFails": "«أجيبك» مفعول به مباشر بالعربية؛ الألماني antworten يأخذ Dativ: antworte dir/dem Arzt (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich antworte dir.",
+          "ar": "أجيبك (لك)."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Antworte mich!~~",
+          "a": "Antworte mir!"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~mit das Handy~~ / ~~mit den Handy~~",
+          "ar": "mit + Dativ دائماً"
+        },
+        "whyArabicSpeakerFails": "«مع» بلا تغيير في العربية؛ الألماني mit يجرّ دائماً: mit dem Handy / mit der Karte (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "mit dem Handy",
+          "ar": "بالهاتف (mit + Dativ)"
+        },
+        "exercise": {
+          "q": "أكمل: mit ___ Karte (die Karte)",
+          "a": "mit der Karte"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "hoeren",
+      "verstehen",
+      "schnell",
+      "laut",
+      "leise",
+      "stimme",
+      "ohr",
+      "nachricht",
+      "anruf",
+      "antworten",
+      "noch",
+      "mit"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/verstehen",
+      "https://www.duden.de/rechtschreibung/antworten",
+      "https://www.duden.de/rechtschreibung/h%C3%B6ren"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/verstehen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-hoeren-zahlen"
+  ],
+  "audioManifestRefs": [
+    "word-hoeren",
+    "word-verstehen",
+    "word-schnell",
+    "word-laut",
+    "word-leise",
+    "word-stimme",
+    "word-ohr",
+    "word-nachricht",
+    "word-anruf",
+    "word-antworten",
+    "word-noch",
+    "word-mit"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen & Uhrzeit) — Hören: Zahlen & Uhrzeit",
+    "goetheWordListOverlap": [
+      "hoeren",
+      "verstehen"
+    ]
+  }
+}
