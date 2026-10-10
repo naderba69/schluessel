@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d1",
+  "level": "A1",
+  "unit": 6,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst 10 Möbel nennen.",
+    "ar": "تسمي 10 قطع أثاث"
+  },
+  "canDoDaily": [
+    "يسمي 10 قطع أثاث بجنسها الصحيح"
+  ],
+  "warmup": {
+    "cardIds": [
+      "tasse",
+      "kueche",
+      "gross"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«الخزانة» — der أم die أم das Schrank? (تخمين فقط)"
+        },
+        "choices": [
+          "der Schrank",
+          "die Schrank",
+          "das Schrank"
+        ],
+        "answer": "der Schrank",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "tisch",
+      "stuhl",
+      "sofa",
+      "bett",
+      "schrank",
+      "lampe",
+      "teppich",
+      "sessel",
+      "regal",
+      "spiegel",
+      "vorhang",
+      "kissen"
+    ],
+    "grammarArsenalIds": [
+      "ars-plural-umlaut"
+    ],
+    "storySentenceIds": [
+      "story-a6-u6-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الطاولة والكرسي»؟",
+            "a": "der Tisch und der Stuhl"
+          },
+          {
+            "q": "«الأريكة كبيرة»؟",
+            "a": "Das Sofa ist groß."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«السرير جديد»؟",
+            "a": "Das Bett ist neu."
+          },
+          {
+            "q": "«الخزانة والمرآة»؟",
+            "a": "der Schrank und der Spiegel"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الكرسيان» — Stuhl جمع؟",
+            "a": "die Stühle (umlaut + e)"
+          },
+          {
+            "q": "«الوسادة والستارة»؟",
+            "a": "das Kissen und der Vorhang"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "10 Möbel nennen",
+        "ar": "تسمية 10 قطع أثاث"
+      },
+      "situation": {
+        "de": "Im Schlafzimmer: Möbel zeigen",
+        "ar": "في غرفة النوم: عرض الأثاث"
+      },
+      "successCriteria": [
+        "يسمي 10 قطع أثاث مع الأداة الصحيحة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الطاولة»؟",
+            "a": "der Tisch"
+          },
+          {
+            "q": "«الكرسي»؟",
+            "a": "der Stuhl"
+          },
+          {
+            "q": "«الخزانة كبيرة»؟",
+            "a": "Der Schrank ist groß."
+          },
+          {
+            "q": "«السرير والوسادة»؟",
+            "a": "das Bett und das Kissen"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المصباح»؟",
+            "a": "die Lampe"
+          },
+          {
+            "q": "«السجادة»؟",
+            "a": "der Teppich"
+          },
+          {
+            "q": "«الرفّ ممتلئ»؟",
+            "a": "Das Regal ist voll."
+          },
+          {
+            "q": "«الأريكة»؟",
+            "a": "das Sofa"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المرآة»؟",
+            "a": "der Spiegel"
+          },
+          {
+            "q": "«الستارة»؟",
+            "a": "der Vorhang"
+          },
+          {
+            "q": "«الكرسي بذراعين»؟",
+            "a": "der Sessel"
+          },
+          {
+            "q": "Stuhl — الجمع؟",
+            "a": "die Stühle"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Dein Zimmer: Tisch, Stuhl, Sofa, Bett, Schrank, Lampe, Teppich, Sessel, Regal, Spiegel, Vorhang, Kissen — fertig eingerichtet!",
+      "ar": "غرفتك: طاولة وكرسي وأريكة وسرير وخزانة ومصباح وسجادة وكرسي بذراعين ورفّ ومرآة وستارة ووسادة — مجهّزة بالكامل!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~die Schrank~~ / ~~das Schrank~~",
+          "ar": "der Schrank"
+        },
+        "whyArabicSpeakerFails": "«الخزانة» مؤنث بالعربية؛ الألماني يذكرها (der) — جنس الأثاث عشوائي وليس طبيعياً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Schrank",
+          "ar": "الخزانة مذكرة"
+        },
+        "exercise": {
+          "q": "حدّد: Schrank — der/die/das?",
+          "a": "der"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Stuhls~~ / ~~die Stuhle~~",
+          "ar": "Stühle (umlaut + e)"
+        },
+        "whyArabicSpeakerFails": "جمع umlaut (ü) يكسر نمط «جمع بلا تغيير» المتعلَّم؛ العائلة تكبر: Gäste/Nächte/Schränke/Stühle/Vorhänge/Gärten (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Stuhl ← die Stühle",
+          "ar": "الكرسي ← الكراسي (بوملaut)"
+        },
+        "exercise": {
+          "q": "اكتب الجمع: zwei ___ (Stuhl)",
+          "a": "zwei Stühle"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~der Bett~~ / ~~die Kissen~~",
+          "ar": "das Bett / das Kissen"
+        },
+        "whyArabicSpeakerFails": "«السرير» و«الوسادة» تُذكر أحياناً بالعربية أحياناً مؤنثة؛ الألماني: das لكليهما (-en/‑er كثيراً neuter) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das Bett / das Kissen",
+          "ar": "محايدان"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Bett und ___ Kissen.",
+          "a": "das / das"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "tisch",
+      "stuhl",
+      "sofa",
+      "bett",
+      "schrank",
+      "lampe",
+      "teppich",
+      "sessel",
+      "regal",
+      "spiegel",
+      "vorhang",
+      "kissen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Schrank",
+      "https://www.duden.de/rechtschreibung/Stuhl",
+      "https://www.duden.de/rechtschreibung/Bett"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Stuhl"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-plural-umlaut"
+  ],
+  "audioManifestRefs": [
+    "word-tisch",
+    "word-stuhl",
+    "word-sofa",
+    "word-bett",
+    "word-schrank",
+    "word-lampe",
+    "word-teppich",
+    "word-sessel",
+    "word-regal",
+    "word-spiegel",
+    "word-vorhang",
+    "word-kissen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 6 (Wohnen) — Möbel",
+    "goetheWordListOverlap": [
+      "tisch",
+      "bett"
+    ]
+  }
+}

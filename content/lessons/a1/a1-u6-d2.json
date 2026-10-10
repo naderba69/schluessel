@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d2",
+  "level": "A1",
+  "unit": 6,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst Zimmer nennen und ihre Größe beschreiben.",
+    "ar": "تسمي الغرف وتوصف حجمها"
+  },
+  "canDoDaily": [
+    "يسمي غرف الشقة ويصف حجمها وجوّها"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bett",
+      "lampe",
+      "kueche"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«غرفة النوم» — das أم die Schlafzimmer? (تخمين فقط)"
+        },
+        "choices": [
+          "das Schlafzimmer (Zimmer = das)",
+          "die Schlafzimmer",
+          "der Schlafzimmer"
+        ],
+        "answer": "das Schlafzimmer (Zimmer = das)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "zimmer",
+      "schlafzimmer",
+      "wohnzimmer",
+      "badezimmer",
+      "flur",
+      "balkon",
+      "treppe",
+      "keller",
+      "garten",
+      "hell",
+      "ruhig",
+      "gemuetlich"
+    ],
+    "grammarArsenalIds": [
+      "ars-komposita-genus"
+    ],
+    "storySentenceIds": [
+      "story-a6-u6-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«غرفة النوم والحمّام»؟",
+            "a": "das Schlafzimmer und das Badezimmer"
+          },
+          {
+            "q": "«غرفة المعيشة كبيرة»؟",
+            "a": "Das Wohnzimmer ist groß."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الممر مضيء»؟",
+            "a": "Der Flur ist hell."
+          },
+          {
+            "q": "«الشرفة والدرج»؟",
+            "a": "der Balkon und die Treppe"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الحديقة جميلة»؟",
+            "a": "Der Garten ist schön."
+          },
+          {
+            "q": "«الغرفة هادئة ومريحة»؟",
+            "a": "Das Zimmer ist ruhig und gemütlich."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Zimmer nennen und Größe beschreiben",
+        "ar": "تسمية الغرف ووصف الحجم"
+      },
+      "situation": {
+        "de": "Wohnung besichtigen",
+        "ar": "جولة في الشقة"
+      },
+      "successCriteria": [
+        "يسمي 6 غرف + 3 جمل وصف (groß/klein/hell/ruhig/gemütlich)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الغرفة»؟",
+            "a": "das Zimmer"
+          },
+          {
+            "q": "«غرفة المعيشة»؟",
+            "a": "das Wohnzimmer"
+          },
+          {
+            "q": "«القبو قديم»؟",
+            "a": "Der Keller ist alt."
+          },
+          {
+            "q": "«الممر مضيء»؟",
+            "a": "Der Flur ist hell."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«غرفة النوم»؟",
+            "a": "das Schlafzimmer"
+          },
+          {
+            "q": "«الشرفة»؟",
+            "a": "der Balkon"
+          },
+          {
+            "q": "«الحديقة جميلة»؟",
+            "a": "Der Garten ist schön."
+          },
+          {
+            "q": "«الشقة هادئة»؟",
+            "a": "Die Wohnung ist ruhig."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الحمّام»؟",
+            "a": "das Badezimmer"
+          },
+          {
+            "q": "«الدرج»؟",
+            "a": "die Treppe"
+          },
+          {
+            "q": "«غرفة المعيشة مريحة»؟",
+            "a": "Das Wohnzimmer ist gemütlich."
+          },
+          {
+            "q": "Schlafzimmer — der أم das?",
+            "a": "das (Zimmer تفرض das دائماً)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Deine Wohnung: Schlafzimmer, Wohnzimmer, Badezimmer, Flur, Balkon, Keller, Garten — alle Zimmer-Komposita sind „das“!",
+      "ar": "شقتك: غرفة النوم والمعيشة والحمّام والممر والشرفة والقبو والحديقة — وكل مركّبات Zimmer محايدة!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~die Schlafzimmer~~ / ~~der Wohnzimmer~~",
+          "ar": "مركّبات Zimmer = das"
+        },
+        "whyArabicSpeakerFails": "«غرفة النوم» كلمتان؛ الألماني مركّب واحد والجنس من آخر جزء (Zimmer = das) — قاعدة Muttersprache/Speisekarte للمرة الرابعة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das Schlafzimmer / das Wohnzimmer / das Badezimmer",
+          "ar": "كل ما ينتهي بـZimmer = das"
+        },
+        "exercise": {
+          "q": "حدّد: Badezimmer — der/die/das?",
+          "a": "das"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Gärten~~؟ لا: ~~Garten~~ بلا umlaut",
+          "ar": "die Gärten (umlaut)"
+        },
+        "whyArabicSpeakerFails": "الجمع بالـ«ات/ون» العربي منتظم؛ الألماني يغيّر الحرف كما Gäste — العائلة كبرت اليوم (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Garten ← die Gärten",
+          "ar": "الحديقة ← الحدائق (بوملaut)"
+        },
+        "exercise": {
+          "q": "اكتب الجمع: zwei ___ (Garten)",
+          "a": "zwei Gärten"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~gemuetlich~~ (بالكتابة) / ~~der Balkon~~? لا: der Balkon لكن die Treppe",
+          "ar": "أصوات وحروف جديدة"
+        },
+        "whyArabicSpeakerFails": "الـü تُكتب ue في slugs والأصل؛ والأثاث/الغرف مزيج جنسيات — الحفظ ببطاقات جنس (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "gemütlich · der Balkon / die Treppe",
+          "ar": "ü تُكتب ue · احفظ الأداة"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Balkon und ___ Treppe.",
+          "a": "der / die"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "zimmer",
+      "schlafzimmer",
+      "wohnzimmer",
+      "badezimmer",
+      "flur",
+      "balkon",
+      "treppe",
+      "keller",
+      "garten",
+      "hell",
+      "ruhig",
+      "gemuetlich"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Schlafzimmer",
+      "https://www.duden.de/rechtschreibung/Wohnzimmer",
+      "https://www.duden.de/rechtschreibung/gemuetlich"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Zimmer"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-komposita-genus"
+  ],
+  "audioManifestRefs": [
+    "word-zimmer",
+    "word-schlafzimmer",
+    "word-wohnzimmer",
+    "word-badezimmer",
+    "word-flur",
+    "word-balkon",
+    "word-treppe",
+    "word-keller",
+    "word-garten",
+    "word-hell",
+    "word-ruhig",
+    "word-gemuetlich"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 6 (Wohnen) — Zimmer & Beschreibung",
+    "goetheWordListOverlap": [
+      "zimmer",
+      "garten"
+    ]
+  }
+}

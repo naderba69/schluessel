@@ -239,3 +239,10 @@
 - **u5-d6** (integration — بلا كلمات جديدة): توليف + معركة بعتبة 0.75 — مراجعة hunger/zahlen كمرسات، و3 بطاقات تحذير ختامية (zu · haben/sein · kein↔nicht).
 - ملاحظة إنتاج: كل يوم دراسي ≥3 يجب أن يحمل **3 بطاقات تحذير بالضبط** (اختبار الكشف) + كل اسم ذي جنس يشترط بطاقة gender في srsCardTypes.
 - البوابة: **243/243 + tsc + validator (338 ملفاً/0/0) + build** ✓. **الوحدات 1–5 مكتملة = 304 كلمة · 30 درساً · 305 مساراً.**
+
+## D59 (2026-10-10): بداية الوحدة 6 — u6-d1 (Möbel) + u6-d2 (Zimmer)
+
+- **u6-d1** (12 كلمة): Tisch/Stuhl/Sofa/Bett/Schrank/Lampe/Teppich/Sessel/Regal/Spiegel/Vorhang/Kissen. مصائد: **der Schrank** (الخزانة مذكرة) · **Stühle/Schränke/Vorhänge** (عائلة umlaut تكبر) · **das Bett/das Kissen** (محايدان).
+- **u6-d2** (12 كلمة): Zimmer/Schlafzimmer/Wohnzimmer/Badezimmer/Flur/Balkon/Treppe/Keller/Garten/hell/ruhig/gemütlich. مصائد: **مركّبات Zimmer = das** (الم rule للمرة الرابعة) · **die Gärten** (umlaut جديد) · **gemütlich** (ü تُكتب ue) + der Balkon/die Treppe.
+- ملاحظة إنتاج: **كل بطاقة تحذير يجب أن تحمل «10»** (خريطة التداخل 10‑ي) حتى لو كان سبب العائق من قواعد أخرى — اكتُشف باختبار المصائد.
+- البوابة: **243/243 + tsc + validator (364 ملفاً/0/0) + build** ✓.
