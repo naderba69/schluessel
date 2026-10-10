@@ -1,0 +1,314 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u3-d3",
+  "level": "A1",
+  "unit": 3,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst die Uhrzeit sagen und einen Termin nennen.",
+    "ar": "تقول كم الساعة وتحدد موعداً"
+  },
+  "canDoDaily": [
+    "يقول الوقت بالألمانية (halb/viertel) ويذكر موعداً"
+  ],
+  "warmup": {
+    "cardIds": [
+      "zwanzig",
+      "tausend",
+      "kosten"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«الساعة الثانية والنصف» — halb zwei أم halb drei? (تخمين فقط)"
+        },
+        "choices": [
+          "halb drei (نصف الثالث = 2:30)",
+          "halb zwei",
+          "halb halb"
+        ],
+        "answer": "halb drei (نصف الثالث = 2:30)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "uhr",
+      "zeit",
+      "stunde",
+      "minute",
+      "halb",
+      "viertel",
+      "frueh",
+      "spaet",
+      "morgen",
+      "abend",
+      "nacht",
+      "mittag"
+    ],
+    "grammarArsenalIds": [
+      "ars-uhrzeit"
+    ],
+    "storySentenceIds": [
+      "story-a3-u3-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«كم الساعة؟»؟",
+            "a": "Wie viel Uhr ist es?"
+          },
+          {
+            "q": "«الساعة الثانية والنصف»؟",
+            "a": "Es ist halb drei."
+          }
+        ],
+        "interleavedWith": [
+          "zwanzig",
+          "hundert"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الثالثة والربع»؟",
+            "a": "Es ist Viertel nach drei."
+          },
+          {
+            "q": "«خمس دقائق من فضلك»؟",
+            "a": "Fünf Minuten, bitte!"
+          }
+        ],
+        "interleavedWith": [
+          "fuenfzig",
+          "sechzig"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«غداً عندي وقت»؟",
+            "a": "Morgen habe ich Zeit."
+          },
+          {
+            "q": "«الوقت متأخر»؟",
+            "a": "Es ist schon spät."
+          }
+        ],
+        "interleavedWith": [
+          "viel",
+          "nur"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Uhrzeit sagen und Termin vereinbaren",
+        "ar": "قول الوقت وتحديد موعد"
+      },
+      "situation": {
+        "de": "Am Telefon: Termin mit dem Arzt",
+        "ar": "بالهاتف: موعد مع الطبيب"
+      },
+      "successCriteria": [
+        "يقول 4 أوقات صحيحة (uhr/halb/viertel) ويقترح موعدين بجملة كاملة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«كم الساعة؟»؟",
+            "a": "Wie viel Uhr ist es?"
+          },
+          {
+            "q": "«الساعة التاسعة والنصف»؟",
+            "a": "Es ist halb zehn."
+          },
+          {
+            "q": "«في المساء أقرأ»؟",
+            "a": "Am Abend lese ich."
+          },
+          {
+            "q": "«تصبح على خير»؟",
+            "a": "Gute Nacht!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الوقت»؟",
+            "a": "die Zeit"
+          },
+          {
+            "q": "halb drei = ?",
+            "choices": [
+              "2:30",
+              "3:30"
+            ],
+            "a": "2:30"
+          },
+          {
+            "q": "«أستيقظ مبكراً»؟",
+            "a": "Ich stehe früh auf."
+          },
+          {
+            "q": "«الدقيقة»؟",
+            "a": "die Minute"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«غداً عندي وقت» — morgen بحرف كبير أم صغير؟",
+            "a": "صغير: morgen = غداً (der Morgen = الصباح)"
+          },
+          {
+            "q": "«الساعة فيها ستون دقيقة»؟",
+            "a": "Die Stunde hat sechzig Minuten."
+          },
+          {
+            "q": "«الربع»؟",
+            "a": "das Viertel"
+          },
+          {
+            "q": "«الظهيرة»؟",
+            "a": "der Mittag"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Du kennst die Uhr: Es ist drei Uhr / halb vier / Viertel nach zwei — und halb zählt zur NÄCHSTEN Stunde!",
+      "ar": "تعرف الساعة: الثالثة / الرابعة والنصف / الثانية والربع — وhalb يعدّ للساعة التالية!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~halb drei = 3:30~~",
+          "ar": "halb + الساعة التالية = نصفها"
+        },
+        "whyArabicSpeakerFails": "«الثالثة والنصف» بالعربية تبدأ من الثالثة؛ الألماني يعدّ نصف الثالث = 2:30 — عدّاد يبدأ من التالي (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "halb drei = 2:30",
+          "ar": "نصف الثالث = الثانية والنصف"
+        },
+        "exercise": {
+          "q": "«الساعة الرابعة والنصف» بالألمانية؟",
+          "a": "halb fünf (4:30)"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Es ist um drei Uhr.~~ (للتوقيت الآن)",
+          "ar": "Es ist drei Uhr — بلا um · um للtermine"
+        },
+        "whyArabicSpeakerFails": "«الساعة الثالثة» بحرف الجر أحياناً بالعربية؛ الألماني: للتوقيت الآن بلا جار، وum للمواعيد (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Es ist drei Uhr. — Der Termin ist um drei Uhr.",
+          "ar": "الآن الثالثة. — الموعد في الثالثة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Es ist um acht Uhr jetzt.~~",
+          "a": "Es ist jetzt acht Uhr."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~der morgen~~ (للصباح) / ~~Morgen~~ (لغداً)",
+          "ar": "الكبير يغيّر المعنى!"
+        },
+        "whyArabicSpeakerFails": "«صباح» و«غداً» كلمتان بالعربية — الألماني كلمة واحدة يفصلها حرف كبير: der Morgen (صباح) vs morgen (غداً) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Morgen (صباح) / morgen (غداً)",
+          "ar": "حسب الحرف الأول!"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich habe Morgen Zeit~~ (غداً)",
+          "a": "Ich habe morgen Zeit."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "uhr",
+      "zeit",
+      "stunde",
+      "minute",
+      "halb",
+      "viertel",
+      "frueh",
+      "spaet",
+      "morgen",
+      "abend",
+      "nacht",
+      "mittag"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/halb",
+      "https://www.duden.de/rechtschreibung/Uhr",
+      "https://www.duden.de/rechtschreibung/Morgen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/halb"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-uhrzeit"
+  ],
+  "audioManifestRefs": [
+    "word-uhr",
+    "word-zeit",
+    "word-stunde",
+    "word-minute",
+    "word-halb",
+    "word-viertel",
+    "word-frueh",
+    "word-spaet",
+    "word-morgen",
+    "word-abend",
+    "word-nacht",
+    "word-mittag"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen & Uhrzeit) — Uhrzeit & Termine",
+    "goetheWordListOverlap": [
+      "zeit",
+      "uhr"
+    ]
+  }
+}

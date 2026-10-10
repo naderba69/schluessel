@@ -187,3 +187,9 @@
 - **u3-d2** (12 كلمة): tausend/Euro/Preis/kosten/billig/teuer/Geld/bezahlen/Karte/kaufen/nur/viel. مصائد: **Wie viel kostet das?** (بلا für) · **bezahlen + مفعول مباشر** · der Euro · nur وسط الجملة.
 - **استبدال بذرة**: `a1-u3-d2` القديمة (كلمة واحدة — من أول commit) استُبدلت بالمحتوى الحقيقي (كان هدفها مطابقاً: «أرقام حتى 1000 وسعر»). الفهرس العكسي لـwohnung نُظّف.
 - البوابة: **243/243 + tsc + validator (157 ملفاً/0 أخطاء/0 تحذيرات) + build** ✓.
+
+## D51 (2026-10-10): الوحدة 3 — u3-d3 (Uhrzeit) + u3-d4 (um/am/im + Monate)
+
+- **u3-d3** (12 كلمة): Uhr/Zeit/Stunde/Minute/halb/viertel/früh/spät/Morgen/Abend/Nacht/Mittag. مصائد: **halb drei = 2:30** (العدّاد للساعة التالية) · **Es ist drei Uhr بلا um** (um للمواعيد) · **der Morgen (صباح) vs morgen (غداً)**.
+- **u3-d4** (12 كلمة): Januar..Juni + Termin/treffen/Verabredung/Montag/Sonntag/am. مصائد: **um/am/im** (ثلاث أدوات لـ«في» العربية) · الشهور مذكرة كلها · **sich treffen** (wir treffen uns). الخلط (§3) مفعّل في اليومين.
+- البوابة: **243/243 + tsc + validator (183 ملفاً/0/0) + build** ✓.

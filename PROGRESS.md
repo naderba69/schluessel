@@ -123,3 +123,9 @@
 - **u3-d2** (حتى 1000 + الأسعار — 12 كلمة): tausend/Euro/Preis/kosten/billig/teuer/Geld/bezahlen/Karte/kaufen/nur/viel — مصائد: Wie viel kostet das? · bezahlen بلا für · der Euro.
 - الصوت: 24 مقطعاً — المانيفست **140 مساراً** · الكلمات **139** · الدروس **14** (الوحدتان 1+2 كاملتان + الوحدة 3: يومان).
 - النتيجة: **243/243 أخضر** + tsc + validator (157/0 — صفر تحذيرات) + build ✓. **استُبدلت بذرة a1-u3-d2 القديمة بالمحتوى الحقيقي.** التالي: u3-d3 (Uhrzeit: halb/viertel) ثم u3-d4..u3-d6.
+
+## حملة المحتوى — الدفعة 7 (2026-10-10) — الوحدة 3: u3-d3 + u3-d4 (D51)
+- **u3-d3** (كم الساعة — 12 كلمة): Uhr/Zeit/Stunde/Minute + halb/viertel + أوقات اليوم — مصائد: halb drei=2:30 · بلا um للتوقيت · Morgen/morgen.
+- **u3-d4** (المواعيد — 12 كلمة): الشهور الستة الأولى + Termin/treffen/Verabredung/Montag/Sonntag/am — مصائد: um/am/im · الشهور der كلها · sich treffen.
+- الصوت: 24 مقطعاً — المانيفست **164 مساراً** · الكلمات **163** · الدروس **16** (الوحدتان 1+2 + الوحدة 3: 4 أيام).
+- النتيجة: **243/243 أخضر** + tsc + validator (183/0/0) + build ✓. التالي: u3-d5 (Hören: Zahlen/Uhrzeit) وu3-d6 (معركة الوحدة 3).

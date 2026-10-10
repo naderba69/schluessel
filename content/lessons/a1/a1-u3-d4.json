@@ -1,0 +1,314 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u3-d4",
+  "level": "A1",
+  "unit": 3,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst einen Termin mit Monat und Tag vereinbaren (um/am/im).",
+    "ar": "تحجز موعداً بجملة كاملة (الشهر واليوم والساعة)"
+  },
+  "canDoDaily": [
+    "يحجز موعداً بجملة: am + اليوم · im + الشهر · um + الساعة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "uhr",
+      "halb",
+      "morgen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«في يناير» — am Januar أم im Januar? (تخمين فقط)"
+        },
+        "choices": [
+          "im Januar",
+          "am Januar",
+          "in Januar"
+        ],
+        "answer": "im Januar",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "januar",
+      "februar",
+      "maerz",
+      "april",
+      "mai",
+      "juni",
+      "termin",
+      "treffen",
+      "verabredung",
+      "montag",
+      "sonntag",
+      "am"
+    ],
+    "grammarArsenalIds": [
+      "ars-um-am-im"
+    ],
+    "storySentenceIds": [
+      "story-a3-u3-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«في يناير»؟",
+            "a": "im Januar"
+          },
+          {
+            "q": "«يوم الاثنين»؟",
+            "a": "am Montag"
+          }
+        ],
+        "interleavedWith": [
+          "uhr",
+          "zeit"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«نلتقي في الثالثة»؟",
+            "a": "Wir treffen uns um drei Uhr."
+          },
+          {
+            "q": "«عندي موعد»؟",
+            "a": "Ich habe einen Termin."
+          }
+        ],
+        "interleavedWith": [
+          "halb",
+          "viertel"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الأحد يوم راحة»؟",
+            "a": "Sonntag ist Ruhetag."
+          },
+          {
+            "q": "«في يونيو عيد ميلادي»؟",
+            "a": "Im Juni habe ich Geburtstag."
+          }
+        ],
+        "interleavedWith": [
+          "montag",
+          "am"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Termin vereinbaren: Tag + Monat + Uhrzeit",
+        "ar": "حجز موعد: اليوم + الشهر + الساعة"
+      },
+      "situation": {
+        "de": "Beim Zahnarzt: Termin vereinbaren",
+        "ar": "عند طبيب الأسنان: حجز موعد"
+      },
+      "successCriteria": [
+        "جملة موعد كاملة صحيحة (am/im/um) + سؤال وردّ على مواعيد"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«في مارس»؟",
+            "a": "im März"
+          },
+          {
+            "q": "«يوم الاثنين في الثالثة»؟",
+            "a": "Am Montag um drei Uhr."
+          },
+          {
+            "q": "«الموعد»؟",
+            "a": "der Termin"
+          },
+          {
+            "q": "«نلتقي في الثالثة»؟",
+            "a": "Wir treffen uns um drei Uhr."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«فبراير»؟",
+            "a": "der Februar"
+          },
+          {
+            "q": "«في مايو» — am أم im?",
+            "choices": [
+              "im Mai",
+              "am Mai"
+            ],
+            "a": "im Mai"
+          },
+          {
+            "q": "«عندي موعد (اتفاق)»؟",
+            "a": "Ich habe eine Verabredung."
+          },
+          {
+            "q": "«الأحد يوم راحة»؟",
+            "a": "Sonntag ist Ruhetag."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يناير»؟",
+            "a": "der Januar"
+          },
+          {
+            "q": "«في أبريل كثيراً ما يمطر»؟",
+            "a": "Im April regnet es oft."
+          },
+          {
+            "q": "الشهور مذكرة أم مؤنثة؟",
+            "a": "مذكرة كلها: der Januar, der März …"
+          },
+          {
+            "q": "«نلتقي» — أي انعكاس؟",
+            "a": "Wir treffen uns. (sich treffen)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Termin-Satz: am + Tag, im + Monat, um + Uhrzeit — „Am Montag im Januar um drei Uhr“ — fertig!",
+      "ar": "جملة الموعد: am + اليوم، im + الشهر، um + الساعة — «Am Montag im Januar um drei Uhr» — اكتملت!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~am Januar~~ / ~~in Montag~~ / ~~an drei Uhr~~",
+          "ar": "um/am/im — ثلاث أدوات لثلاثة مقاييس"
+        },
+        "whyArabicSpeakerFails": "العربية «في» واحدة للكل؛ الألماني يفرّق: um (ساعة) · am (يوم) · im (شهر = in dem) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "um drei Uhr · am Montag · im Januar",
+          "ar": "في الثالثة · يوم الاثنين · في يناير"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Februar ___ Freitag ___ zehn Uhr",
+          "a": "im · am · um"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Januar~~ / ~~das März~~",
+          "ar": "كل الشهور مذكرة (der)"
+        },
+        "whyArabicSpeakerFails": "الشهور بالعربية محايدة أحياناً في التمييز؛ الألماني: der + شهر + حرف كبير (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Januar / der März",
+          "ar": "مذكرة كلها (der)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~die April ist schön~~",
+          "a": "Der April ist schön."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wir treffen wir uns.~~ / ~~Ich treffe mich dich.~~",
+          "ar": "sich treffen: treffen uns/euch/sich"
+        },
+        "whyArabicSpeakerFails": "«نلتقي» بلا ضمير انعكاس بالعربية؛ الألماني: uns/euch/sich إلزامي (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wir treffen uns.",
+          "ar": "نلتقي."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wir treffen am Montag.~~",
+          "a": "Wir treffen uns am Montag."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "januar",
+      "februar",
+      "maerz",
+      "april",
+      "mai",
+      "juni",
+      "termin",
+      "treffen",
+      "verabredung",
+      "montag",
+      "sonntag",
+      "am"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Januar",
+      "https://www.duden.de/rechtschreibung/Termin",
+      "https://www.duden.de/rechtschreibung/treffen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Juli"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-um-am-im"
+  ],
+  "audioManifestRefs": [
+    "word-januar",
+    "word-februar",
+    "word-maerz",
+    "word-april",
+    "word-mai",
+    "word-juni",
+    "word-termin",
+    "word-treffen",
+    "word-verabredung",
+    "word-montag",
+    "word-sonntag",
+    "word-am"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen & Uhrzeit) — Termine & Monate",
+    "goetheWordListOverlap": [
+      "termin",
+      "treffen"
+    ]
+  }
+}
