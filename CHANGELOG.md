@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## 2026-10-10 — D37: تثبيت صوت Piper في المستودع
+- إضافة: `tools/piper-voices/de_DE-thorsten-medium.onnx` (+ `.onnx.json`) ملتزمان في git (قرار المالك — بلا LFS) + `termux-upload-voice.sh` (سكربت الرفع) + بصمة مثبّتة في التوثيق (`7e64762d…bb7819`).
+- توثيق: D37 + تحديث `tools/README-downloads.md` + وصفة الاستعادة (برومت v1.4 — بلا تنزيل) + STATE.
+- النتيجة: **106/106 خضراء كلها** في كل بيئة.
+
 ## 2026-10-10 — دفعة M1-ب (E03 + E04)
 - إضافة: `src/lib/review-engine.ts` (E03 — SRS في محطة الاسترجاع: تحويل ts-fsrs v5 + جدولة §2.5 + طابور بلا جديد + حراس F121) + `src/lib/errors-engine.ts` (E04 — الدفتر الذهبي + التصنيف الثلاثي §4 + المعالجة حسب النوع + الجولة الإلزامية + قاعدة الدقائق الثلاث F038) + 30 اختباراً (tests/review-engine.test.ts + tests/errors-engine.test.ts).
 - تغيير: `content/schemas/card.ts` — حقل اختياري `learning_steps` في SrsCardState (وفاء مع ts-fsrs v5 — بلا ترحيل، البيانات القديمة سليمة).

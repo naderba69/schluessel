@@ -1,5 +1,5 @@
 # برومت الاستمرارية الاحترافي — مشروع «مفتاح — Schlüssel»
-### الإصدار 1.3 — 2026-10-10 — يُرفع ويُحدَّث مع كل إضافة/تعديل (أمر المالك)
+### الإصدار 1.4 — 2026-10-10 — يُرفع ويُحدَّث مع كل إضافة/تعديل (أمر المالك)
 > **الغرض:** أي جلسة/نموذج يستلم هذا الملف يستطيع مواصلة الإنتاج فوراً بلا سؤال وبلا انحراف.
 > **المصدر الحي:** المستودع `/home/user/reise-yusuf` (git) — وهذا الملف ملزمه التنفيذي.
 
@@ -44,13 +44,10 @@
 ```bash
 cd reise-yusuf && npm install
 pip3 install piper-tts soundfile numpy
-mkdir -p tools/piper-voices && cd tools/piper-voices
-curl -sL -O https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/medium/de_DE-thorsten-medium.onnx
-curl -sL -O https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/medium/de_DE-thorsten-medium.onnx.json
-cd ../.. && npx vitest run   # يجب: 106/106
+npx vitest run   # يجب: 106/106 — الصوت مُثبَّت في git (لا تنزيل)
 ```
-بدون هذه الاستعادة تفشل 3 اختبارات صوتية (voice-stability — بيئة فقط، لا خلل كود).
-- **تبعيات Python للصوت:** `pip3 install piper-tts soundfile numpy` + تنزيل الصوت والنموذج (URLs في `tools/README-downloads.md`) — **كلها gitignored، تُستعاد كل جلسة**.
+- **الصوت مُثبَّت في المستودع** (قرار المالك 2026-10-10 — D37): `tools/piper-voices/de_DE-thorsten-medium.onnx` ملتزم في git — البصمة المثبّتة `sha256 = 7e64762d…bb7819` (63,201,294 بايت، CC0). **لا تنزيل إطلاقاً.** نموذج Vosk (اختبار D16 فقط) يبقى غير ملتزم — روابطه في `tools/README-downloads.md`.
+- **تبعيات Python للصوت:** `pip3 install piper-tts soundfile numpy` فقط.
 
 ## 6. فخاخ معروفة (لا تكرر)
 - VITS غير حتمي — لا اختبارات مساواة بايتات؛ المدة ت漂移 ±28% (نطاق 0.6–1.7 فقط).
@@ -83,4 +80,4 @@ cd ../.. && npx vitest run   # يجب: 106/106
 - **الجلسة الجديدة = نفس الخطة حرفياً:** فك الضغط ← `docs/PROFESSIONAL_CONTINUATION_PROMPT_AR.md` ← وصفة الاستعادة ← §7 خريطة الطريق (التالي: دفعة M1-ج = E05+E07+E08+واجهة الحصة).
 
 ---
-**الإصدار الحالي:** 1.3 (2026-10-10 — بعد دفعة M1-ب: E03+E04+الجولة الإلزامية+الدقائق الثلاث · 106 اختباراً · D36) · 1.2 (2026-10-10 — D35 الاسم النهائي Schlüssel + حزمة GitHub/Vercel) · 1.1 (2026-10-10 — بعد تثبيت التتبع الكامل: سجل D1–D34 + نسخ كل وثائق المرحلة داخل المستودع `docs/prompt-phase/` + `docs/plans/` — لا شيء حيوي خارج git) · 1.0 — 2026-10-10 — بعد دفعة M1-أ: 76/76 أخضر · commit `ff58c76` (rebrand + E01 + E02 + E06) · البرومت مرفوع في `66a9c35`.
+**الإصدار الحالي:** 1.4 (2026-10-10 — الصوت مُثبَّت في git بقرار المالك: D37 + بصمة مغلقة — **106/106 كلها خضراء**) · 1.3 (2026-10-10 — بعد دفعة M1-ب: E03+E04+الجولة الإلزامية+الدقائق الثلاث · 106 اختباراً · D36) · 1.2 (2026-10-10 — D35 الاسم النهائي Schlüssel + حزمة GitHub/Vercel) · 1.1 (2026-10-10 — بعد تثبيت التتبع الكامل: سجل D1–D34 + نسخ كل وثائق المرحلة داخل المستودع `docs/prompt-phase/` + `docs/plans/` — لا شيء حيوي خارج git) · 1.0 — 2026-10-10 — بعد دفعة M1-أ: 76/76 أخضر · commit `ff58c76` (rebrand + E01 + E02 + E06) · البرومت مرفوع في `66a9c35`.

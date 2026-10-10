@@ -11,7 +11,7 @@
 - **D28:** الاستقرار الصوتي = هوية مثبّتة + طيف corr ≥0.93 (VITS عشوائي بالبذرة — مقيس).
 - التقرير الكامل: `docs/reports/m0-report.md` | التنزيلات: `tools/README-downloads.md`.
 
-## البيئة (مُتحقق 2026-10-09 · مُحدَّث 2026-10-10)
-- Node 20.20 / zod 4.6.5 / ts-fsrs 5.4.2 / Dexie + fake-indexeddb / React + Vite / vitest (106 اختبارات: 103 أخضر + 3 صوتية تحتاج نموذج Piper — موثّق كبيئة).
-- Python 3.13 + piper-tts + vosk + soundfile + numpy. نماذج كبيرة غير ملتزمة (روابط موثقة): Piper voice CC0 + Vosk small de (Apache 2.0).
-- أوامر الحسم: `npm test && npm run typecheck && npm run validate:content && npm run build` — كلها خضراء الآن (سوى 3 اختبارات صوتية بلا نموذج الصوت).
+## البيئة (مُتحقق 2026-10-09 · مُحدَّث 2026-10-10 — بعد D37)
+- Node 20.20 / zod 4.6.5 / ts-fsrs 5.4.2 / Dexie + fake-indexeddb / React + Vite / vitest (**106/106 كلها خضراء** — الصوت مُثبَّت في git).
+- Python 3.13 + piper-tts + soundfile + numpy. **صوت Piper ملتزم في git** (D37 — بصمة `7e64762d…bb7819`). نموذج Vosk (اختبار D16 فقط) غير ملتزم (روابطه في tools/README-downloads.md).
+- أوامر الحسم: `npm test && npm run typecheck && npm run validate:content && npm run build` — **كلها خضراء بلا استثناء**.
