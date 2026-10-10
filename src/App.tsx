@@ -17,6 +17,7 @@ import { cardsForEvent, loadUnit0Deck } from "./lib/unit0.js";
 import { eveningReport, tomorrowPreview, muellerMessage } from "./lib/warmth-engine.js";
 import { firstLesson, firstLessonWords } from "./lesson-packs.js";
 import { SkillsLab } from "./components/SkillsLab.js";
+import { SystemLab } from "./components/SystemLab.js";
 
 const plan = planLessonStations(firstLesson, firstLessonWords);
 
@@ -30,6 +31,7 @@ export function App() {
   const [state, setState] = useState<LearnerState | null>(null);
   const [sessionOpen, setSessionOpen] = useState(false);
   const [labOpen, setLabOpen] = useState(false);
+  const [systemOpen, setSystemOpen] = useState(false);
   const [jitCard, setJitCard] = useState<Unit0Card | null>(null);
 
   if (!state) {
@@ -103,6 +105,15 @@ export function App() {
       ) : (
         <button data-testid="open-skills-lab" onClick={() => setLabOpen(true)}>
           🧪 افتح مختبر المهارات
+        </button>
+      )}
+
+      <h2>لوحة النظام (M3)</h2>
+      {systemOpen ? (
+        <SystemLab />
+      ) : (
+        <button data-testid="open-system-lab" onClick={() => setSystemOpen(true)}>
+          🛠️ افتح لوحة النظام
         </button>
       )}
 
