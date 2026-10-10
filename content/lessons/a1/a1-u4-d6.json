@@ -1,0 +1,278 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u4-d6",
+  "level": "A1",
+  "unit": 4,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Die Einheit 4 zusammenfassen und die Wochen-Meisterschaft bestehen (≥75%).",
+    "ar": "تجميع مادة الوحدة 4 واجتياز معركتها (75% فأكثر)."
+  },
+  "canDoDaily": [
+    "يجتاز معركة الوحدة 4 (أسرة + ملكية + مفعول به) بنسبة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "familie",
+      "bruder",
+      "foto"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أرى أبي» — Ich sehe mein Vater أم meinen Vater? (التوليف — بلا جديد)"
+        },
+        "choices": [
+          "meinen Vater",
+          "mein Vater",
+          "meinem Vater"
+        ],
+        "answer": "meinen Vater",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "wunderbar",
+      "prima"
+    ],
+    "grammarArsenalIds": [
+      "ars-unit4-review"
+    ],
+    "storySentenceIds": [
+      "story-a4-u4-battle"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "خطأ الأسبوع 1: «عندي أخاً»؟",
+            "a": "Ich habe einen Bruder. (einen لا ein)"
+          },
+          {
+            "q": "«مَن ترى؟»؟",
+            "a": "Wen siehst du? (wen لا wer)"
+          }
+        ],
+        "interleavedWith": [
+          "bruder",
+          "wen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "خطأ الأسبوع 2: «زوجتي»؟",
+            "a": "meine Frau (الملكية تتبع المُملوك)"
+          },
+          {
+            "q": "«السيارة لي»؟",
+            "a": "Das Auto gehört mir. (Dativ)"
+          }
+        ],
+        "interleavedWith": [
+          "frau",
+          "auto"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "خطأ الأسبوع 3: «على اليسار يقف أبي»؟",
+            "a": "Links steht mein Vater. (الفعل ثانياً)"
+          },
+          {
+            "q": "«إخوتي»؟",
+            "a": "meine Geschwister (جمع فقط)"
+          }
+        ],
+        "interleavedWith": [
+          "links",
+          "geschwister"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Meisterschaft: Familienfoto + Aufnahme + Akkusativ",
+        "ar": "المعركة: صورة أسرية + تسجيل + مفعول به"
+      },
+      "situation": {
+        "de": "Das Abschlussgespräch: die Familie vorstellen",
+        "ar": "الحوار الختامي: تعريف الأسرة"
+      },
+      "successCriteria": [
+        "يجتاز 3 مجموعات بـ75% فأكثر ويصحّح أخطاء الوحدة الثلاثة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "المعركة (1): «عندي أختاً»؟",
+            "a": "Ich habe eine Schwester."
+          },
+          {
+            "q": "المعركة (2): «أرى إخوتي»؟",
+            "a": "Ich sehe meine Geschwister."
+          },
+          {
+            "q": "المعركة (3): «مهنة أبي معلّم»؟",
+            "a": "Der Beruf meines Vaters ist Lehrer."
+          },
+          {
+            "q": "«رائع، شكراً»؟",
+            "a": "Wunderbar, danke!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "المعركة (4): «مَن ترى؟»؟",
+            "a": "Wen siehst du?"
+          },
+          {
+            "q": "المعركة (5): «الجميع يبتسمون»؟",
+            "a": "Alle lächeln."
+          },
+          {
+            "q": "«أنا فخور بعائلتي»؟",
+            "a": "Ich bin stolz auf meine Familie."
+          },
+          {
+            "q": "«ممتاز، إلى الغد»؟",
+            "a": "Prima, bis morgen!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "المعركة (6): «زوجتي اسمها لينا»؟",
+            "a": "Meine Frau heißt Lina."
+          },
+          {
+            "q": "«أسجّل تسجيلاً قصيراً»؟",
+            "a": "Ich nehme eine kurze Aufnahme auf."
+          },
+          {
+            "q": "«تونس وطني»؟",
+            "a": "Tunesien ist meine Heimat."
+          },
+          {
+            "q": "Ich sehe ___ Bruder und ___ Eltern?",
+            "a": "meinen Bruder · meine Eltern"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheit 4 geschafft: Du stellst deine Familie vor — mit Akkusativ, Besitz und einem Foto, das alles erzählt!",
+      "ar": "اكتملت الوحدة 4: تعرّف بعائلتك — بالمفعول به والملكية وصورة تحكي كل شيء!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich habe ein Bruder.~~",
+          "ar": "einen عند المفعول (der فقط)"
+        },
+        "whyArabicSpeakerFails": "قاعدة الأسبوع: der ← einen عند المفعول — die/das تبقى (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe einen Bruder.",
+          "ar": "عندي أخاً."
+        },
+        "exercise": {
+          "q": "أكمل: Ich habe ___ alten Vater",
+          "a": "einen alten Vater"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~mein Frau~~",
+          "ar": "الملكية تتبع المُملوك"
+        },
+        "whyArabicSpeakerFails": "«زوجتي» بالياء فقط؛ الألماني يصرّف حسب الشيء: meine Frau / mein Mann (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "meine Frau",
+          "ar": "زوجتي"
+        },
+        "exercise": {
+          "q": "أكمل: mein___ Katze · mein___ Auto",
+          "a": "meine Katze · mein Auto"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Links mein Vater steht.~~",
+          "ar": "الفعل ثانياً دائماً"
+        },
+        "whyArabicSpeakerFails": "الترتيب الحر بالعربية يكسر القاعدة الألمانية الذهبية (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Links steht mein Vater.",
+          "ar": "على اليسار يقف أبي."
+        },
+        "exercise": {
+          "q": "أعد الترتيب: Oma / Rechts / sitzt",
+          "a": "Rechts sitzt Oma."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "wunderbar",
+      "prima"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Geschwister"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Heimat"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-unit4-review"
+  ],
+  "audioManifestRefs": [
+    "word-wunderbar",
+    "word-prima"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 — توليف الوحدة 4 (معركة 70/30)",
+    "goetheWordListOverlap": [
+      "wunderbar",
+      "prima"
+    ]
+  }
+}

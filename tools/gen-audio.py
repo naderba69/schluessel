@@ -302,6 +302,20 @@ def build_all() -> None:
         ("word-gemeinsam", "gemeinsam.", "gemeinsam", ["a1-u4-d4"]),
         ("word-tragen", "tragen.", "tragen", ["a1-u4-d4"]),
         ("word-brille", "Brille.", "brille", ["a1-u4-d4"]),
+        ("word-geschwister", "Geschwister.", "geschwister", ["a1-u4-d5"]),
+        ("word-zwilling", "Zwilling.", "zwilling", ["a1-u4-d5"]),
+        ("word-verheiratet", "verheiratet.", "verheiratet", ["a1-u4-d5"]),
+        ("word-beruf", "Beruf.", "beruf", ["a1-u4-d5"]),
+        ("word-arbeiten", "arbeiten.", "arbeiten", ["a1-u4-d5"]),
+        ("word-studieren", "studieren.", "studieren", ["a1-u4-d5"]),
+        ("word-arbeit", "Arbeit.", "arbeit", ["a1-u4-d5"]),
+        ("word-aufnehmen", "aufnehmen.", "aufnehmen", ["a1-u4-d5"]),
+        ("word-kurz", "kurz.", "kurz", ["a1-u4-d5"]),
+        ("word-erzaehlen", "erzählen.", "erzaehlen", ["a1-u4-d5"]),
+        ("word-stolz", "stolz.", "stolz", ["a1-u4-d5"]),
+        ("word-heimat", "Heimat.", "heimat", ["a1-u4-d5"]),
+        ("word-wunderbar", "Wunderbar.", "wunderbar", ["a1-u4-d6"]),
+        ("word-prima", "Prima.", "prima", ["a1-u4-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

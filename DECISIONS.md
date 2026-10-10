@@ -213,3 +213,9 @@
 - **u4-d3** (12 كلمة): jung/klein/schön/freundlich/lustig/schlau/Haar/Gesicht/Foto/Bild/beschreiben/wen. مصائد: **einen Bruder** (der ← einen عند المفعول — لا شيء غيرها يغيّر) · **wer للفاعل / wen للمفعول** · **meinen Bruder** (الملكية + Akkusativ معاً).
 - **u4-d4** (12 كلمة): sehen/zeigen/sitzen/stehen/lächeln/links/rechts/neben/zwischen/gemeinsam/tragen/Brille. مصائد: **tragen للملابس والنظارة** · **الظرف أولاً ثم الفعل ثانياً** (Links steht mein Vater) · meinen (تكرار موعود).
 - البوابة: **243/243 + tsc + validator (251 ملفاً/0/0) + build** ✓.
+
+## D55 (2026-10-10): إتمام الوحدة 4 — u4-d5 (خلط الملكية/المفعول + تسجيل) + u4-d6 (المعركة)
+
+- **u4-d5** (12 كلمة): Geschwister/Zwilling/verheiratet/Beruf/arbeiten/studieren/Arbeit/aufnehmen/kurz/erzählen/stolz/Heimat. مصائد: **die Geschwister جمع فقط** · **aufnehmen منفصل** (nehme ... auf) · **الجمع لا يتغير عند المفعول** (meine Geschwister مقابل meinen Bruder).
+- **u4-d6** (integration): wunderbar/prima + معركة الوحدة 4 (أسرة + ملكية + مفعول) بعتبة **0.75**.
+- البوابة: **243/243 + tsc + validator (267 ملفاً/0/0) + build** ✓. **الوحدات 1–4 مكتملة (24 يوماً).**

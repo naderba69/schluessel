@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u4-d5",
+  "level": "A1",
+  "unit": 4,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst deine Familie in einer kurzen Aufnahme vorstellen (Akkusativ + Besitz gemischt).",
+    "ar": "تعرّف بأسرتك في تسجيل قصير (خلط الملكية والمفعول به)"
+  },
+  "canDoDaily": [
+    "يعرّف بأسرته في تسجيل قصير (4 جمل) بملكية ومفعول به صحيحين"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bruder",
+      "mutter",
+      "sehen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«إخوتي» — mein Geschwister أم meine Geschwister? (تخمين فقط)"
+        },
+        "choices": [
+          "meine Geschwister (جمع فقط)",
+          "mein Geschwister",
+          "meinen Geschwister"
+        ],
+        "answer": "meine Geschwister (جمع فقط)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "geschwister",
+      "zwilling",
+      "verheiratet",
+      "beruf",
+      "arbeiten",
+      "studieren",
+      "arbeit",
+      "aufnehmen",
+      "kurz",
+      "erzaehlen",
+      "stolz",
+      "heimat"
+    ],
+    "grammarArsenalIds": [
+      "ars-familie-mix"
+    ],
+    "storySentenceIds": [
+      "story-a4-u4-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«إخوتي يسكنون في صفاقس»؟",
+            "a": "Meine Geschwister wohnen in Sfax."
+          },
+          {
+            "q": "«أخي هو توأمي»؟",
+            "a": "Mein Bruder ist mein Zwilling."
+          }
+        ],
+        "interleavedWith": [
+          "eltern",
+          "kind"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أمي تعمل في المدرسة»؟",
+            "a": "Meine Mutter arbeitet in der Schule."
+          },
+          {
+            "q": "«أخي يدرس (جامعاً)»؟",
+            "a": "Mein Bruder studiert."
+          }
+        ],
+        "interleavedWith": [
+          "schule",
+          "mutter"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أسجّل تسجيلاً قصيراً»؟",
+            "a": "Ich nehme eine kurze Aufnahme auf."
+          },
+          {
+            "q": "«أنا فخور بعائلتي»؟",
+            "a": "Ich bin stolz auf meine Familie."
+          }
+        ],
+        "interleavedWith": [
+          "familie",
+          "kurz"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Familie in einer kurzen Aufnahme vorstellen",
+        "ar": "تعريف الأسرة في تسجيل قصير"
+      },
+      "situation": {
+        "de": "Zu Hause: Sprachnachricht an den Lehrer",
+        "ar": "في البيت: رسالة صوتية للمعلّم"
+      },
+      "successCriteria": [
+        "تسجيل 30 ثانية: 4 جمل — اسم + مهنة + ملكية + مفعول به صحيحان"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«إخوتي»؟",
+            "a": "meine Geschwister (جمع فقط)"
+          },
+          {
+            "q": "«أختي متزوجة»؟",
+            "a": "Meine Schwester ist verheiratet."
+          },
+          {
+            "q": "«المهنة»؟",
+            "a": "der Beruf"
+          },
+          {
+            "q": "«أرى إخوتي»؟",
+            "a": "Ich sehe meine Geschwister. (الجمع لا يتغير عند المفعول)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أسجّل تسجيلاً قصيراً»؟",
+            "a": "Ich nehme eine kurze Aufnahme auf."
+          },
+          {
+            "q": "aufnehmen — منفصل؟",
+            "a": "نعم: nimmt auf / nehme ... auf"
+          },
+          {
+            "q": "«الوطن»؟",
+            "a": "die Heimat"
+          },
+          {
+            "q": "«أحكي عن عائلتي»؟",
+            "a": "Ich erzähle von meiner Familie."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أنا فخور بعائلتي»؟",
+            "a": "Ich bin stolz auf meine Familie."
+          },
+          {
+            "q": "«يعمل» و«يدرس جامعاً»؟",
+            "a": "arbeiten / studieren"
+          },
+          {
+            "q": "«أخي هو توأمي»؟",
+            "a": "Mein Bruder ist mein Zwilling."
+          },
+          {
+            "q": "المقارنة: Ich sehe ___ Bruder (sg) vs ___ Geschwister (pl)?",
+            "a": "meinen Bruder · meine Geschwister"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Deine Sprachnachricht: „Ich heiße …, meine Familie …, ich sehe meinen Bruder und meine Geschwister.“ — Besitz und Akkusativ gemischt, aber sicher!",
+      "ar": "رسالتك الصوتية: «اسمي…، عائلتي…، أرى أخي وإخوتي» — الملكية والمفعول مختلطان لكن بأمان!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~mein Geschwister~~ / ~~ein Geschwister~~",
+          "ar": "die Geschwister جمع فقط"
+        },
+        "whyArabicSpeakerFails": "«إخوتي» مفرد في التفكير العربي أحياناً؛ الألماني Geschwister جمع دائماً مثل Eltern (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "meine Geschwister",
+          "ar": "إخوتي (جمع)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich habe ein Geschwister.~~",
+          "a": "Ich habe Geschwister. / Meine Geschwister …"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich nehme auf eine Aufnahme.~~",
+          "ar": "aufnehmen منفصل: nehme ... auf"
+        },
+        "whyArabicSpeakerFails": "الفعل المنفصل يعود هنا (مثل aufstehen): auf في النهاية والمفعول في الوسط (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich nehme eine Aufnahme auf.",
+          "ar": "أسجّل تسجيلاً."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich nehme auf eine kurze Aufnahme.~~",
+          "a": "Ich nehme eine kurze Aufnahme auf."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich sehe mein Geschwister.~~ / ~~meinen Geschwister~~",
+          "ar": "الجمع لا يتغير عند المفعول"
+        },
+        "whyArabicSpeakerFails": "تُخلط قاعدتا الأمس: الجمع (meine) لا يقبل einen ولا يتغير عند المفعول — التمييز: meinen Bruder (مفرد) vs meine Geschwister (جمع) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich sehe meine Geschwister.",
+          "ar": "أرى إخوتي (الجمع كما هو)."
+        },
+        "exercise": {
+          "q": "أكمل: Ich sehe ___ Eltern (جمع) und ___ Vater (مفرد)",
+          "a": "meine Eltern · meinen Vater"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "geschwister",
+      "zwilling",
+      "verheiratet",
+      "beruf",
+      "arbeiten",
+      "studieren",
+      "arbeit",
+      "aufnehmen",
+      "kurz",
+      "erzaehlen",
+      "stolz",
+      "heimat"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Geschwister",
+      "https://www.duden.de/rechtschreibung/aufnehmen",
+      "https://www.duden.de/rechtschreibung/Heimat"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Geschwister"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-familie-mix"
+  ],
+  "audioManifestRefs": [
+    "word-geschwister",
+    "word-zwilling",
+    "word-verheiratet",
+    "word-beruf",
+    "word-arbeiten",
+    "word-studieren",
+    "word-arbeit",
+    "word-aufnehmen",
+    "word-kurz",
+    "word-erzaehlen",
+    "word-stolz",
+    "word-heimat"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 (Meine Familie) — Familienaufnahme",
+    "goetheWordListOverlap": [
+      "arbeiten",
+      "beruf"
+    ]
+  }
+}
