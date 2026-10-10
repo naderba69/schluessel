@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d1",
+  "level": "A1",
+  "unit": 5,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst 10 Lebensmittel nennen und wählen, was du willst.",
+    "ar": "تسمي 10 أطعمة وتختار ما تريد"
+  },
+  "canDoDaily": [
+    "يسمي 10 أطعمة ويختار ما يريده بجملة قصيرة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "kaese",
+      "essen",
+      "tasse"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أنا جوعان» — Ich bin Hunger أم Ich habe Hunger? (تخمين فقط)"
+        },
+        "choices": [
+          "Ich habe Hunger.",
+          "Ich bin Hunger.",
+          "Ich esse Hunger."
+        ],
+        "answer": "Ich habe Hunger.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "brot",
+      "wurst",
+      "fleisch",
+      "fisch",
+      "salat",
+      "suppe",
+      "ei",
+      "reis",
+      "nudeln",
+      "obst",
+      "gemuese",
+      "hunger"
+    ],
+    "grammarArsenalIds": [
+      "ars-essen"
+    ],
+    "storySentenceIds": [
+      "story-a5-u5-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الخبز» و«الجبن»؟",
+            "a": "das Brot / der Käse"
+          },
+          {
+            "q": "«أنا جوعان!»؟",
+            "a": "Ich habe Hunger!"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«السمك طازج»؟",
+            "a": "Der Fisch ist frisch."
+          },
+          {
+            "q": "«آكل سلطة»؟",
+            "a": "Ich esse einen Salat."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«المعكرونة» — مفرداً؟",
+            "a": "لا: die Nudeln جمع فقط"
+          },
+          {
+            "q": "«البيضة» — الجمع؟",
+            "a": "das Ei ← die Eier (شاذ مثل Kinder)"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "10 Lebensmittel nennen und wählen",
+        "ar": "تسمية 10 أطعمة والاختيار"
+      },
+      "situation": {
+        "de": "Im Supermarkt: einkaufen",
+        "ar": "في المتجر: التسوّق"
+      },
+      "successCriteria": [
+        "يسمي 10 أطعمة ويختار 3 منها بجملة: Ich esse/gern …"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الحساء»؟",
+            "a": "die Suppe"
+          },
+          {
+            "q": "«أنا جوعان!»؟",
+            "a": "Ich habe Hunger!"
+          },
+          {
+            "q": "«اللحم»؟",
+            "a": "das Fleisch"
+          },
+          {
+            "q": "«أرز بالخضار من فضلك»؟",
+            "a": "Reis mit Gemüse, bitte."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«النقانق»؟",
+            "a": "die Wurst"
+          },
+          {
+            "q": "«الفواكه صحية»؟",
+            "a": "Obst ist gesund."
+          },
+          {
+            "q": "«البيضة» — الجمع؟",
+            "a": "die Eier"
+          },
+          {
+            "q": "«آكل المعكرونة بمحبة»؟",
+            "a": "Ich esse gern Nudeln."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«السلطة»؟",
+            "a": "der Salat"
+          },
+          {
+            "q": "«الأرز»؟",
+            "a": "der Reis"
+          },
+          {
+            "q": "«الخضار طازجة»؟",
+            "a": "Das Gemüse ist frisch."
+          },
+          {
+            "q": "Nudeln — مفرد أم جمع؟",
+            "a": "جمع فقط (Pluralia tantum)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Dein Einkauf: Brot, Käse, Wurst, Fisch, Salat, Suppe, Eier, Reis, Nudeln, Obst, Gemüse — und Hunger hast du auch (mit haben)!",
+      "ar": "تسوّقك: الخبز والجبن والنقانق والسمك والسلطة والحساء والبيض والأرز والمعكرونة والفواكه والخضار — والجوع أيضاً «يُملَك» (mit haben)!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich bin Hunger.~~",
+          "ar": "Hunger/Durst مع haben لا sein"
+        },
+        "whyArabicSpeakerFails": "«أنا جوعان» خبر بالعربية (اسم/صفة)؛ الألماني يمتلك الجوع: Ich habe Hunger (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe Hunger!",
+          "ar": "أنا جوعان! (عندي جوع)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich bin Durst.~~",
+          "a": "Ich habe Durst."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~ein Nudel~~ / ~~die Nudels~~",
+          "ar": "die Nudeln جمع فقط"
+        },
+        "whyArabicSpeakerFails": "«معكرونة» مفرد بالعربية؛ الألماني Nudeln جمع دائماً — مثل Eltern وGeschwister (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Nudeln",
+          "ar": "المعكرونة (جمع)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich esse ein Nudel.~~",
+          "a": "Ich esse Nudeln."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~das Ei~~ ← ~~die Eies~~ (الجمع)",
+          "ar": "Ei ← Eier (شاذ)"
+        },
+        "whyArabicSpeakerFails": "جمع -er مع تغيير الجذر يعود (Kinder/Häuser): Eier بلا umlaut لكن بالقطع (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das Ei ← die Eier",
+          "ar": "البيضة ← البيض"
+        },
+        "exercise": {
+          "q": "اكتب الجمع: drei ___ (Ei)",
+          "a": "drei Eier"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "brot",
+      "wurst",
+      "fleisch",
+      "fisch",
+      "salat",
+      "suppe",
+      "ei",
+      "reis",
+      "nudeln",
+      "obst",
+      "gemuese",
+      "hunger"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Hunger",
+      "https://www.duden.de/rechtschreibung/Nudeln",
+      "https://www.duden.de/rechtschreibung/Ei"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Nudeln"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-essen"
+  ],
+  "audioManifestRefs": [
+    "word-brot",
+    "word-wurst",
+    "word-fleisch",
+    "word-fisch",
+    "word-salat",
+    "word-suppe",
+    "word-ei",
+    "word-reis",
+    "word-nudeln",
+    "word-obst",
+    "word-gemuese",
+    "word-hunger"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Lebensmittel",
+    "goetheWordListOverlap": [
+      "brot",
+      "hunger"
+    ]
+  }
+}

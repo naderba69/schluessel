@@ -219,3 +219,9 @@
 - **u4-d5** (12 كلمة): Geschwister/Zwilling/verheiratet/Beruf/arbeiten/studieren/Arbeit/aufnehmen/kurz/erzählen/stolz/Heimat. مصائد: **die Geschwister جمع فقط** · **aufnehmen منفصل** (nehme ... auf) · **الجمع لا يتغير عند المفعول** (meine Geschwister مقابل meinen Bruder).
 - **u4-d6** (integration): wunderbar/prima + معركة الوحدة 4 (أسرة + ملكية + مفعول) بعتبة **0.75**.
 - البوابة: **243/243 + tsc + validator (267 ملفاً/0/0) + build** ✓. **الوحدات 1–4 مكتملة (24 يوماً).**
+
+## D56 (2026-10-10): بداية الوحدة 5 — u5-d1 (Essen) + u5-d2 (Trinken/Restaurant)
+
+- **u5-d1** (12 كلمة): Brot/Wurst/Fleisch/Fisch/Salat/Suppe/Ei/Reis/Nudeln/Obst/Gemüse/Hunger. مصائد: **Ich habe Hunger** (لا bin) · **die Nudeln جمع فقط** (المرة الثالثة للنمط) · **die Eier** (شاذ).
+- **u5-d2** (12 كلمة): Wasser/Milch/Saft/Bier/Wein/Tee/trinken/Speisekarte/bestellen/Glas/Flasche/zahlen. مصائد: **Einen Tee, bitte!** (الطلب مفعول به) · جنس السوائل بلا نظام (die Milch رغم السوائل) · **die Speisekarte** (مركّب — للمرة الثالثة).
+- البوابة: **243/243 + tsc + validator (293 ملفاً/0/0) + build** ✓.

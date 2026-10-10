@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d2",
+  "level": "A1",
+  "unit": 5,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst ein Getränk höflich bestellen.",
+    "ar": "تطلب مشروباً بصيغة مهذبة"
+  },
+  "canDoDaily": [
+    "يطلب مشروباً بجملة مهذبة (مفعول به + bitte) ويسأل عن قائمة الطعام"
+  ],
+  "warmup": {
+    "cardIds": [
+      "kaffee",
+      "tasse",
+      "essen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«شاي من فضلك» — Tee, bitte أم Einen Tee, bitte? (تخمين فقط)"
+        },
+        "choices": [
+          "Einen Tee, bitte! (المفعول به: der ← einen)",
+          "Tee, bitte.",
+          "Der Tee, bitte."
+        ],
+        "answer": "Einen Tee, bitte! (المفعول به: der ← einen)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "wasser",
+      "milch",
+      "saft",
+      "bier",
+      "wein",
+      "tee",
+      "trinken",
+      "speisekarte",
+      "bestellen",
+      "glas",
+      "flasche",
+      "zahlen"
+    ],
+    "grammarArsenalIds": [
+      "ars-trinken"
+    ],
+    "storySentenceIds": [
+      "story-a5-u5-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«ماء من فضلك»؟",
+            "a": "Ein Wasser, bitte!"
+          },
+          {
+            "q": "«شاي من فضلك» (der Tee)؟",
+            "a": "Einen Tee, bitte!"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«قهوة بالحليب»؟",
+            "a": "Kaffee mit Milch."
+          },
+          {
+            "q": "«قائمة الطعام من فضلك»؟",
+            "a": "Die Speisekarte, bitte!"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أشرب قهوة»؟",
+            "a": "Ich trinke einen Kaffee."
+          },
+          {
+            "q": "«أودّ أن أدفع»؟",
+            "a": "Ich möchte zahlen, bitte."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Ein Getränk höflich bestellen",
+        "ar": "طلب مشروب بلباقة"
+      },
+      "situation": {
+        "de": "Im Café: bestellen",
+        "ar": "في المقهى: الطلب"
+      },
+      "successCriteria": [
+        "طلبان مهذبان (مفعول به + bitte) + سؤال Speisekarte + جملة zahlen"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الماء»؟",
+            "a": "das Wasser"
+          },
+          {
+            "q": "«عصير برتقال من فضلك»؟",
+            "a": "Einen Orangensaft, bitte!"
+          },
+          {
+            "q": "«كأس ماء من فضلك»؟",
+            "a": "Ein Glas Wasser, bitte."
+          },
+          {
+            "q": "«الشاي»؟",
+            "a": "der Tee"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أشرب قهوة»؟",
+            "a": "Ich trinke einen Kaffee."
+          },
+          {
+            "q": "«قائمة الطعام»؟",
+            "a": "die Speisekarte (مركّب: Speise + Karte = die)"
+          },
+          {
+            "q": "«زجاجة ماء من فضلك»؟",
+            "a": "Eine Flasche Wasser, bitte."
+          },
+          {
+            "q": "«أودّ أن أطلب»؟",
+            "a": "Ich möchte bestellen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«بيرة» — das أم der?",
+            "a": "das Bier"
+          },
+          {
+            "q": "«الحليب»؟",
+            "a": "die Milch (die — رغم أنها سائل!)"
+          },
+          {
+            "q": "«أودّ أن أدفع من فضلك»؟",
+            "a": "Ich möchte zahlen, bitte."
+          },
+          {
+            "q": "«كأس نبيذ من فضلك»؟",
+            "a": "Ein Glas Wein, bitte."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Höflich bestellen: „Einen Tee, bitte!“ — der Akkusativ macht den Wunsch klar, und bitte macht ihn freundlich!",
+      "ar": "الطلب المهذب: «Einen Tee, bitte!» — المفعول به يوضّح الودّ وbitte يجعله لطيفاً!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Tee, bitte!~~ / ~~Der Tee, bitte!~~",
+          "ar": "الطلب = مفعول به (einen)"
+        },
+        "whyArabicSpeakerFails": "«شاي من فضلك» بلا أداة بالعربية؛ الألماني يطلب بالمفعول: Einen Tee (der ← einen) — تكرار موعود من الوحدة 4 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Einen Tee, bitte!",
+          "ar": "شاي من فضلك!"
+        },
+        "exercise": {
+          "q": "اطلب قهوة (der Kaffee) بلباقة",
+          "a": "Einen Kaffee, bitte!"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Wasser~~ / ~~das Milch~~",
+          "ar": "جنس السوائل بلا نظام"
+        },
+        "whyArabicSpeakerFails": "السوائل محايدة في التخيل العربي أحياناً؛ الألماني: das Wasser/das Bier لكن die Milch وder Wein/der Saft — حفظ وبطاقات جنس (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das Wasser / die Milch / der Wein",
+          "ar": "جنس كل سائل يُحفظ"
+        },
+        "exercise": {
+          "q": "حدّد: Milch (die/das) · Bier (das/der)",
+          "a": "die Milch · das Bier"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Speise~~ karte / ~~das Speisekarte~~",
+          "ar": "المركّب يأخذ جنس آخر جزء"
+        },
+        "whyArabicSpeakerFails": "«قائمة الطعام» كلمتان بالعربية؛ الألماني مركّب واحد والجنس من Karte (die) — قاعدة Muttersprache للمرة الثالثة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Speisekarte",
+          "ar": "قائمة الطعام (die)"
+        },
+        "exercise": {
+          "q": "حدّد: Speisekarte — der/die/das?",
+          "a": "die (من die Karte)"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "wasser",
+      "milch",
+      "saft",
+      "bier",
+      "wein",
+      "tee",
+      "trinken",
+      "speisekarte",
+      "bestellen",
+      "glas",
+      "flasche",
+      "zahlen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Speisekarte",
+      "https://www.duden.de/rechtschreibung/Wasser",
+      "https://www.duden.de/rechtschreibung/bestellen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/bestellen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-trinken"
+  ],
+  "audioManifestRefs": [
+    "word-wasser",
+    "word-milch",
+    "word-saft",
+    "word-bier",
+    "word-wein",
+    "word-tee",
+    "word-trinken",
+    "word-speisekarte",
+    "word-bestellen",
+    "word-glas",
+    "word-flasche",
+    "word-zahlen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Getränke & Café",
+    "goetheWordListOverlap": [
+      "wasser",
+      "trinken"
+    ]
+  }
+}
