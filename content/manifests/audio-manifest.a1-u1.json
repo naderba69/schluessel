@@ -18,11 +18,11 @@
       "lessonRefs": [
         "a1-u1-d1"
       ],
-      "durationMs": 792,
-      "sizeBytes": 3857,
-      "hash": "sha256:a90154c2f6eb068a351da44002bbfe51e64d94aaf9759851047f6fcdb4db5a70",
-      "pcmSha256": "a2fa14e71bf58b7b798ec581a86280c778fe0aca43f361b6e4b47b87255a1e8c",
-      "rmsDb": -17.0
+      "durationMs": 897,
+      "sizeBytes": 4180,
+      "hash": "sha256:7be2c25bc2f25295551a3902a104836f7463c6eed70e068d02255f61d75e6f2a",
+      "pcmSha256": "379be5570495acd4460d1b12ca880b56e95a8c47f08676951d412aee421a5b6d",
+      "rmsDb": -17.04
     },
     {
       "id": "word-heissen",
@@ -38,11 +38,11 @@
       "lessonRefs": [
         "a1-u1-d1"
       ],
-      "durationMs": 1001,
-      "sizeBytes": 4625,
-      "hash": "sha256:10f9cb0294bdff785e61847ec3a437d2b6c09189f84bb87cdd122be183043663",
-      "pcmSha256": "d52f15a4a7d59b68281511e56257e2a5b03bc8775151bf7747ecd536ef4c7e40",
-      "rmsDb": -17.19
+      "durationMs": 873,
+      "sizeBytes": 4182,
+      "hash": "sha256:cfe7d1615ab40bb4eeed5abb17de76f468fc9cadcdc08f54327ba3e63bede8bc",
+      "pcmSha256": "ed00a39fd208cd9eb8f744f4935c251ae0e52ca87741278c727b9b8c5a9709ed",
+      "rmsDb": -17.2
     },
     {
       "id": "word-guten-tag",
@@ -58,11 +58,251 @@
       "lessonRefs": [
         "a1-u1-d1"
       ],
-      "durationMs": 862,
-      "sizeBytes": 4260,
-      "hash": "sha256:ed0c9c29468ffea2dea11f6b2b0b3e16b60c62ce66a41e081b415e7d8cf263a6",
-      "pcmSha256": "9b35f10b885e443e54df580ba7ec9573a4edb9da0c1cf20a39a377c416f0d997",
+      "durationMs": 873,
+      "sizeBytes": 4315,
+      "hash": "sha256:c1d01b69773240f9bc677d398f2a5c2a4b68630ddabff4eda3746f3e9b70ee3f",
+      "pcmSha256": "e7737b2627eeff92bc1464e81f6cd249e88b1654bc2d246a40bf3684a143ece7",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "word-guten-morgen",
+      "file": "words/audio/de-DE/word-guten-morgen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Guten Morgen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 943,
+      "sizeBytes": 4546,
+      "hash": "sha256:497b0686ff784abebdf70741a4d80e0d810256e4931d9827b2f92bc3627259b1",
+      "pcmSha256": "fc2da381500146d8b495e645e8bb1951643dc2f8b7937733eac8ae39a2028c9f",
+      "rmsDb": -17.0
+    },
+    {
+      "id": "word-guten-abend",
+      "file": "words/audio/de-DE/word-guten-abend.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Guten Abend.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 1222,
+      "sizeBytes": 5491,
+      "hash": "sha256:6b8e0dcb8f3007b922c5fcaed4940e48031c69731176787bd13e4c02e7f8ad9a",
+      "pcmSha256": "88b9714be79471c7ee86d54548c577ab0e5b9a908601ad43bf14bc7408df93b7",
+      "rmsDb": -17.0
+    },
+    {
+      "id": "word-tschuess",
+      "file": "words/audio/de-DE/word-tschuess.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Tschüss.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 676,
+      "sizeBytes": 3299,
+      "hash": "sha256:a53b126c0dad72f5fc879cdb91b5b6f27fdc0ac5ea5e174d179947b1929e62b2",
+      "pcmSha256": "b4170986f8f4d7b759cc10caf7d2562f7639a86141926b47e46a0fbdccc67d05",
+      "rmsDb": -17.43
+    },
+    {
+      "id": "word-auf-wiedersehen",
+      "file": "words/audio/de-DE/word-auf-wiedersehen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Auf Wiedersehen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 1094,
+      "sizeBytes": 5205,
+      "hash": "sha256:eba894b5ad065e90a5f8004e5eba405714bbfa8c053e2ce4d4aeccb27ca564c2",
+      "pcmSha256": "0b4477af2d59b5e63b2c6a40b4aed357d8068e917e59dab0600ca65a796797f0",
       "rmsDb": -16.99
+    },
+    {
+      "id": "word-wie-gehts",
+      "file": "words/audio/de-DE/word-wie-gehts.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Wie geht's?",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 839,
+      "sizeBytes": 4100,
+      "hash": "sha256:3c7c5b848fc0bf206cf4b0d304818df28809181bb7bafe73fde60ad10462131f",
+      "pcmSha256": "f247737c92e3f868726f9e5391d70e54bee4f3c7d6e3094a3b1e232988ff9f80",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-danke",
+      "file": "words/audio/de-DE/word-danke.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Danke.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 780,
+      "sizeBytes": 4223,
+      "hash": "sha256:c36884ffab188d65d34b644bcfffd579a82e85f7fe4fe465ddfa31a65d4a3535",
+      "pcmSha256": "b9e2c0a5319da366ca8dacc978c8f45208c41c2b4844e260082b7c46e9703e5e",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "word-bitte",
+      "file": "words/audio/de-DE/word-bitte.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Bitte.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 734,
+      "sizeBytes": 3583,
+      "hash": "sha256:103a40e7f2a6206357389882daf331fb94decccd26b3ff746954fe4e1b974a7f",
+      "pcmSha256": "e7c0a2d2a3fb5bc87fb2cb391e5ccc2a5f760609b8a78d48a2d32de6d1f512f4",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "word-kommen",
+      "file": "words/audio/de-DE/word-kommen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "kommen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4330,
+      "hash": "sha256:dd2e91d87503fc3ae64235bdb19674ac1831821a640fda707b6fe4278621a64a",
+      "pcmSha256": "fd0b1213c27319759b06a9fcfe7ed868734f18a1e2195a6a921784893d38334e",
+      "rmsDb": -16.98
+    },
+    {
+      "id": "word-wohnen",
+      "file": "words/audio/de-DE/word-wohnen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "wohnen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 815,
+      "sizeBytes": 3986,
+      "hash": "sha256:3fb33cf751edc63903f6d3bace82f99111a9e4ce818fb36c4246aeebad70fd2e",
+      "pcmSha256": "1bfcee781f14bc7946b89c6fc20eaf1369927de305abf64103166b01421eceb9",
+      "rmsDb": -16.98
+    },
+    {
+      "id": "word-deutsch",
+      "file": "words/audio/de-DE/word-deutsch.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Deutsch.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 699,
+      "sizeBytes": 3512,
+      "hash": "sha256:31d56f5d57724f270c5f0438c5a4aae821a7e03b255e62c0c97ef182fc9bbd28",
+      "pcmSha256": "dfe2c28c787fbd51920c3b5c4935fe789be365f1dc9cdec9ce16d66ffa34124d",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "word-tunesien",
+      "file": "words/audio/de-DE/word-tunesien.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Tunesien.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 989,
+      "sizeBytes": 4708,
+      "hash": "sha256:b1f0e5691cf7b9cdb74782c58875ceac5b3335f347217d4eb057d00811f165e3",
+      "pcmSha256": "176f32a8bf71c8eae6a42f8b8cfbcec4e3b6c230520f1720610141b6a801684d",
+      "rmsDb": -16.96
+    },
+    {
+      "id": "word-deutschland",
+      "file": "words/audio/de-DE/word-deutschland.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Deutschland.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 943,
+      "sizeBytes": 4634,
+      "hash": "sha256:9b903ec84911fc220c88d201490dfb4e4bfc1bf65afda735bbe26fb73f114111",
+      "pcmSha256": "fbc226a54ad70e0eea5fdf6568b42ed2d8929bed4add8b4f1fc7bd837e9b7ba7",
+      "rmsDb": -17.15
     },
     {
       "id": "word-wohnung",
@@ -76,10 +316,10 @@
       "textDe": "Wohnung.",
       "priority": "P2",
       "lessonRefs": [],
-      "durationMs": 827,
-      "sizeBytes": 3990,
-      "hash": "sha256:35a86ede1de98a83953c0b50601078b77d94992898aa8941173ffddfc1f5f35d",
-      "pcmSha256": "a6219fb19ad98da1b132b7278c649f881c3ea9de1592eeddac1fec7aa12855f3",
+      "durationMs": 862,
+      "sizeBytes": 4101,
+      "hash": "sha256:7e4a9dbb82f7785e184d1cd8aea74633e9b81d85258ee354f3ec69108cb274c5",
+      "pcmSha256": "9b678443b95000b9898aa0f140cd1e18865b3deb51b1c8305c8a76301bc513c0",
       "rmsDb": -16.97
     },
     {
@@ -92,14 +332,14 @@
         "speaker": "de_DE-thorsten-medium",
         "speedWpm": 130
       },
-      "textDe": "Hallo! Ich bin Mueller. Willkommen bei Reise Yusuf.",
+      "textDe": "Hallo! Ich bin Mueller. Willkommen bei Schlüssel.",
       "priority": "P0",
       "lessonRefs": [],
-      "durationMs": 3195,
-      "sizeBytes": 14807,
-      "hash": "sha256:f23a5321bd765ad77ab08365f06a7373847bc526cdaada39ab28944b090279f0",
-      "pcmSha256": "8925e96f2afff987c9e9621a82162dcb2c30c96321592dc1636c3c7181e8dbab",
-      "rmsDb": -17.01
+      "durationMs": 3010,
+      "sizeBytes": 13711,
+      "hash": "sha256:feb7c025f8482cafbb7bb31a0ecbac1ec5538a6e75c27e7efc7133fa80ba27cd",
+      "pcmSha256": "118193066f4b71eea0d1f8e4c93608ce3908ab06990dfa1478728ff7dd7cbf5e",
+      "rmsDb": -17.04
     }
   ],
   "characterVoices": {

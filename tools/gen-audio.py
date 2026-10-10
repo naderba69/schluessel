@@ -74,10 +74,23 @@ def build_all() -> None:
         ("word-hallo", "Hallo.", "hallo", ["a1-u1-d1"]),
         ("word-heissen", "heißen.", "heissen", ["a1-u1-d1"]),
         ("word-guten-tag", "Guten Tag.", "guten-tag", ["a1-u1-d1"]),
+        ("word-guten-morgen", "Guten Morgen.", "guten-morgen", ["a1-u1-d1"]),
+        ("word-guten-abend", "Guten Abend.", "guten-abend", ["a1-u1-d1"]),
+        ("word-tschuess", "Tschüss.", "tschuess", ["a1-u1-d1"]),
+        ("word-auf-wiedersehen", "Auf Wiedersehen.", "auf-wiedersehen", ["a1-u1-d1"]),
+        ("word-wie-gehts", "Wie geht's?", "wie-gehts", ["a1-u1-d1"]),
+        ("word-danke", "Danke.", "danke", ["a1-u1-d1"]),
+        ("word-bitte", "Bitte.", "bitte", ["a1-u1-d1"]),
+        ("word-kommen", "kommen.", "kommen", ["a1-u1-d1"]),
+        ("word-wohnen", "wohnen.", "wohnen", ["a1-u1-d1"]),
+        ("word-deutsch", "Deutsch.", "deutsch", ["a1-u1-d1"]),
+        ("word-tunesien", "Tunesien.", "tunesien", ["a1-u1-d1"]),
+        ("word-deutschland", "Deutschland.", "deutschland", ["a1-u1-d1"]),
         ("word-wohnung", "Wohnung.", "wohnung", []),
     ]
     char_tracks = [
-        ("mueller-announce-01", "Hallo! Ich bin Mueller. Willkommen bei Reise Yusuf.", "mueller", []),
+        # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
+        ("mueller-announce-01", "Hallo! Ich bin Mueller. Willkommen bei Schlüssel.", "mueller", []),
     ]
 
     tracks = []

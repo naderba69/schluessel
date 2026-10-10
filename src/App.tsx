@@ -1,19 +1,23 @@
-// src/App.tsx — القشرة: أول تشغيل → مسار الواجهة + الترميز المزدوج (S0.6/S0.7/S0.8)
+// src/App.tsx — القشرة: أول تشغيل → مسار الواجهة + حصة حقيقية (S0.6/S0.7/S0.8 + M1)
 import { useState } from "react";
-import type { LearnerState, Lesson, Word } from "./../content/schemas/index.js";
+import type { LearnerState, Unit0Card } from "./../content/schemas/index.js";
 import { GenderBadge } from "./components/GenderBadge.js";
 import { FirstRun } from "./components/FirstRun.js";
 import { LessonSession } from "./components/LessonSession.js";
+import {
+  RecallStation,
+  LearnStation,
+  PracticeStation,
+  CloseStation,
+  JitCardOverlay,
+} from "./components/LessonContent.js";
 import { lessonStatus } from "./lib/routes.js";
+import { planLessonStations } from "./lib/lesson-runner.js";
+import { cardsForEvent, loadUnit0Deck } from "./lib/unit0.js";
+import { eveningReport, tomorrowPreview, muellerMessage } from "./lib/warmth-engine.js";
+import { firstLesson, firstLessonWords } from "./lesson-packs.js";
 
-import firstLessonJson from "../content/lessons/a1/a1-u1-d1.json";
-import wordHallo from "../content/words/hallo.json";
-import wordHeissen from "../content/words/heissen.json";
-import wordGutenTag from "../content/words/guten-tag.json";
-import { Lesson as LessonSchema, Word as WordSchema } from "../content/schemas/index.js";
-
-const firstLesson = LessonSchema.parse(firstLessonJson);
-const firstLessonWords = [wordHallo, wordHeissen, wordGutenTag].map((w) => WordSchema.parse(w));
+const plan = planLessonStations(firstLesson, firstLessonWords);
 
 const STATUS_LABEL: Record<string, string> = {
   completed: "✓ مكتمل",
@@ -24,6 +28,7 @@ const STATUS_LABEL: Record<string, string> = {
 export function App() {
   const [state, setState] = useState<LearnerState | null>(null);
   const [sessionOpen, setSessionOpen] = useState(false);
+  const [jitCard, setJitCard] = useState<Unit0Card | null>(null);
 
   if (!state) {
     return (
@@ -37,16 +42,55 @@ export function App() {
     );
   }
 
+  // الوحدة صفر JIT (§9): بطاقة عند أول استخدام فعلي — لا دفعة واحدة (قانون 23)
+  const startSession = () => {
+    const due = cardsForEvent(loadUnit0Deck(), state.profile.unit0Shown, "first-uebung");
+    if (due.length > 0) setJitCard(due[0]);
+    else setSessionOpen(true);
+  };
+
+  const dismissJit = () => {
+    if (jitCard) {
+      setState({
+        ...state,
+        profile: { ...state.profile, unit0Shown: [...state.profile.unit0Shown, jitCard.id] },
+      });
+    }
+    setJitCard(null);
+    setSessionOpen(true);
+  };
+
   return (
     <main style={{ fontFamily: "sans-serif", padding: 24, maxWidth: 720, margin: "0 auto" }}>
       <h1>أهلاً {state.profile.name} — رحلتك بدأت</h1>
       <p data-testid="post-first-run">الوحدة صفر (اليوم الأول) مكتملة — موعدك القادم: الاسترجاع قصيراً ثم الجديد.</p>
 
       <h2>حصة اليوم (120 دقيقة متصلة — D29)</h2>
+      {jitCard && <JitCardOverlay card={jitCard} onDismiss={dismissJit} />}
       {sessionOpen ? (
-        <LessonSession />
+        <LessonSession
+          content={{
+            recall: <RecallStation cards={plan.recall} />,
+            learn: <LearnStation cards={plan.learn} />,
+            practice: <PracticeStation data={plan.practice} />,
+            close: (
+              <CloseStation
+                data={plan.close}
+                report={eveningReport({
+                  cardsReviewed: plan.recall.length,
+                  trapsNoticed: plan.close.warningCards.length,
+                })}
+                preview={tomorrowPreview({
+                  hasNewContent: false,
+                  dueCount: plan.close.srsBundleWordIds.length,
+                })}
+                muellerLine={muellerMessage(0)}
+              />
+            ),
+          }}
+        />
       ) : (
-        <button data-testid="start-session" onClick={() => setSessionOpen(true)}>
+        <button data-testid="start-session" onClick={startSession}>
           ▶ ابدأ الحصة
         </button>
       )}

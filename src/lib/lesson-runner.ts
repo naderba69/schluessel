@@ -1,0 +1,101 @@
+// src/lib/lesson-runner.ts — مُشغِّل الدرس: يحوّل محتوى الدرس (D3: بيانات في git) إلى شاشات الحصة الأربع
+// الربط: E01 (المحطات) · §2.5 (الاسترجاع) · F121 (محاولة قبل كشف) · D29 (حصة واحدة متصلة)
+import type { Lesson, Word } from "../../content/schemas/index.js";
+
+/** بطاقة المصيدة — من مخطط الدرس مباشرة (لا نكرر التعريف) */
+export type WarningCardData = Lesson["zusammenfassung"]["warningCards"][number];
+
+export type RecallCardData = {
+  id: string;
+  front: string;
+  back: string;
+};
+
+export type LearnCardData = {
+  wordId: string;
+  /** النص الألماني (كلمة/جملة) — يُعرض أولاً */
+  promptDe: string;
+  /** المعنى/السياق العربي — يُحاول المتعلم أولاً */
+  promptAr: string;
+  /** الشرح بعد المحاولة: التحديد الكامل + الجنس + مصيدة متوقعة */
+  explanation: string;
+};
+
+export type PracticeData = {
+  stations: Lesson["uebung"]["stations"];
+  communicativeTask: Lesson["uebung"]["communicativeTask"];
+};
+
+export type CloseData = {
+  summaryDe: string;
+  summaryAr: string;
+  warningCards: WarningCardData[];
+  srsBundleWordIds: string[];
+};
+
+export type LessonStationPlan = {
+  lessonId: string;
+  /** محطة 1 — الاسترجاع: بطاقات الدفء أولاً (لا جديد أبداً هنا) */
+  recall: RecallCardData[];
+  /** محطة 2 — الجديد: محاولة قبل الكشف (F121) */
+  learn: LearnCardData[];
+  /** محطة 3 — التدريب */
+  practice: PracticeData;
+  /** محطة 4 — الخلاصة */
+  close: CloseData;
+};
+
+function wordById(words: Word[], id: string): Word {
+  const w = words.find((x) => x.id === id);
+  if (!w) throw new Error(`كلمة مفقودة من المحتوى: ${id}`);
+  return w;
+}
+
+function explainWord(w: Word): string {
+  const article = w.article ? `${w.article} ` : "";
+  const gender = w.gender !== "none" ? ` (${w.gender})` : "";
+  const family = w.wordFamily.length ? ` — عائلة: ${w.wordFamily.join("، ")}` : "";
+  const sentence = w.sampleSentence ? ` مثال: «${w.sampleSentence.de}» = ${w.sampleSentence.ar}` : "";
+  return `${article}${w.de}${gender} = ${w.ar.join("، ")}${family}.${sentence}`;
+}
+
+/**
+ * بناء خطة شاشات الحصة من الدرس وكلماته:
+ * الاسترجاع (الدفء) ← الجديد (العرض) ← التدريب (المحطات + المهمة التواصلية) ← الخلاصة (المصائد + حزمة SRS).
+ * أي كلمة مفقودة = خطأ فوري (لا شاشات ناقصة أبداً).
+ */
+export function planLessonStations(lesson: Lesson, words: Word[]): LessonStationPlan {
+  const recall: RecallCardData[] = lesson.warmup.cardIds.map((id) => {
+    const w = wordById(words, id);
+    return { id, front: w.article ? `${w.article} ${w.de}` : w.de, back: w.ar.join(" · ") };
+  });
+  if (recall.length === 0) throw new Error("لا جلسة بلا استرجاع (F121): بطاقات الدفء مطلوبة");
+
+  const learn: LearnCardData[] = lesson.praesentation.wordIds.map((id) => {
+    const w = wordById(words, id);
+    return {
+      wordId: id,
+      promptDe: w.sampleSentence?.de ?? (w.article ? `${w.article} ${w.de}` : w.de),
+      promptAr: w.sampleSentence?.ar ?? w.ar[0],
+      explanation: explainWord(w),
+    };
+  });
+
+  for (const id of lesson.zusammenfassung.srsBundleWordIds) wordById(words, id); // حزمة SRS مكتملة
+
+  return {
+    lessonId: lesson.id,
+    recall,
+    learn,
+    practice: {
+      stations: lesson.uebung.stations,
+      communicativeTask: lesson.uebung.communicativeTask,
+    },
+    close: {
+      summaryDe: lesson.zusammenfassung.summary.de,
+      summaryAr: lesson.zusammenfassung.summary.ar,
+      warningCards: lesson.zusammenfassung.warningCards,
+      srsBundleWordIds: lesson.zusammenfassung.srsBundleWordIds,
+    },
+  };
+}
