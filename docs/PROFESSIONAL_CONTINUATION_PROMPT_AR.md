@@ -1,5 +1,5 @@
 # برومت الاستمرارية الاحترافي — مشروع «مفتاح — Schlüssel»
-### الإصدار 1.0 — 2026-10-10 — يُرفع ويُحدَّث مع كل إضافة/تعديل (أمر المالك)
+### الإصدار 1.3 — 2026-10-10 — يُرفع ويُحدَّث مع كل إضافة/تعديل (أمر المالك)
 > **الغرض:** أي جلسة/نموذج يستلم هذا الملف يستطيع مواصلة الإنتاج فوراً بلا سؤال وبلا انحراف.
 > **المصدر الحي:** المستودع `/home/user/reise-yusuf` (git) — وهذا الملف ملزمه التنفيذي.
 
@@ -23,7 +23,7 @@
 10. **الملكية:** المالك (يوسف) هو صاحب القرار الوحيد؛ أنا المنفذ الخبير.
 
 ## 3. المرجعيات (بالترتيب)
-`constitution-v6.0-final.md` (v6.1 + §34) ← `product-experience-plan-v1.md` (v1.3 المعتمدة) ← `study-plan-daily-v6.1.md` ← `ideas-inventory-v1.md` (270 فكرة F) ← `engines-inventory-v1.md` (29 محركاً E) ← `video-and-ai-conversation.md` ← `DECISIONS.md` (**السجل الكامل D1–D34** — أُعيد بناؤه كاملاً 2026-10-10: دستور §18 + نتائج M0 + قرارات المالك) ← `defect-inventory-v6.md` · `learning-method-audit.md`.
+`constitution-v6.0-final.md` (v6.1 + §34) ← `product-experience-plan-v1.md` (v1.3 المعتمدة) ← `study-plan-daily-v6.1.md` ← `ideas-inventory-v1.md` (270 فكرة F) ← `engines-inventory-v1.md` (29 محركاً E) ← `video-and-ai-conversation.md` ← `DECISIONS.md` (**السجل الكامل D1–D36** — أُعيد بناؤه كاملاً 2026-10-10: دستور §18 + نتائج M0 + قرارات المالك + تنفيذ M1) ← `defect-inventory-v6.md` · `learning-method-audit.md`.
 
 ## 4. القرارات الحاسمة المختصرة (D-numbers)
 - **D16:** Vosk-small-de يفشل 44% في الكلمات القصيرة المعزولة (FA 0%) → **الاستماع يحسم لا النسخ**؛ ASR استشاري فقط (fallback-listening-ladder).
@@ -37,7 +37,7 @@
 
 ## 5. البنية التقنية (كما هي الآن)
 - **Stack:** TypeScript + React 19 + Vite + zod 4 + Dexie (IndexedDB) + ts-fsrs 5 · PWA (manifest + sw) · الاختبار: vitest + renderToStaticMarkup + fake-indexeddb.
-- **المسارات:** `src/lib/` (المحركات: brand, first-run, unit0, routes, state-factory, audio, asr-gate, **lesson-engine E01, coach-engine E02, day-engine E06**) · `src/stores/db.ts` (Dexie) · `content/` (schemas zod + words + lessons + unit0 + manifests) · `tools/` (gen-audio.py, audio_probe.py, pcm_compare.py, asr_test.py, validate-content.ts) · `tests/` (13 ملفاً).
+- **المسارات:** `src/lib/` (المحركات: brand, first-run, unit0, routes, state-factory, audio, asr-gate, **lesson-engine E01, coach-engine E02, day-engine E06, review-engine E03, errors-engine E04**) · `src/stores/db.ts` (Dexie) · `content/` (schemas zod + words + lessons + unit0 + manifests) · `tools/` (gen-audio.py, audio_probe.py, pcm_compare.py, asr_test.py, validate-content.ts) · `tests/` (15 ملفاً).
 - **الصوت:** Piper محلي (CC0) — 24kHz OGG/Opus، RMS −17dB (−20..−14)، مقطع الكلمة ≤1.5s.
 - **أوامر:** `npm i` (بعد كل جلسة جديدة!) → `npx vitest run` → `npx tsc --noEmit` → `npx tsx tools/validate-content.ts` → `npx vite build`.
 - **⚠️ استعادة بداية كل جلسة (إلزامي — البيئة تُمحى):**
@@ -47,9 +47,9 @@ pip3 install piper-tts soundfile numpy
 mkdir -p tools/piper-voices && cd tools/piper-voices
 curl -sL -O https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/medium/de_DE-thorsten-medium.onnx
 curl -sL -O https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/medium/de_DE-thorsten-medium.onnx.json
-cd ../.. && npx vitest run   # يجب: 76/76
+cd ../.. && npx vitest run   # يجب: 106/106
 ```
-بدون هذه الاستعادة تفشل 3 اختبارات صوتية (بيئة فقط — لا خلل كود).
+بدون هذه الاستعادة تفشل 3 اختبارات صوتية (voice-stability — بيئة فقط، لا خلل كود).
 - **تبعيات Python للصوت:** `pip3 install piper-tts soundfile numpy` + تنزيل الصوت والنموذج (URLs في `tools/README-downloads.md`) — **كلها gitignored، تُستعاد كل جلسة**.
 
 ## 6. فخاخ معروفة (لا تكرر)
@@ -63,7 +63,7 @@ cd ../.. && npx vitest run   # يجب: 76/76
 - **M0 ✅ مغلق** (commit 208766a): الأساسات + 64 اختباراً + تقرير `docs/reports/m0-report.md`.
 - **M1 🔄 جاري:** المعلم 1 = طقس البداية + محرك الحصة + طبقة المدرب + الوحدة صفر كاملة (محركات M1 الثمانية: E01,E02,E03,E04,E05,E06,E07,E08).
   - ✅ **دفعة M1-أ:** rebrand (manifest/شاشة الترحيب/index.html) + E01 + E02 + E06 + 12 اختباراً (76/76 أخضر).
-  - ⏭️ **دفعة M1-ب:** E03 محرك المراجعة (ربط SRS بمحطة الاسترجاع) + E04 دفتر الأخطاء الذهبية + جولة الأخطاء الإلزامية + قاعدة الدقائق الثلاث.
+  - ✅ **دفعة M1-ب:** E03 محرك المراجعة (ربط SRS بمحطة الاسترجاع — تحويل ts-fsrs بلا فقد + جدولة §2.5 + حراس F121) + E04 دفتر الأخطاء الذهبية (التصنيف الثلاثي §4 + المعالجة حسب النوع) + جولة الأخطاء الإلزامية (حارس يقفلها) + قاعدة الدقائق الثلاث (F038) + 30 اختباراً (106/106) — D36.
   - ⏭️ **دفعة M1-ج:** E05 الصوت التفاعلي + E07 Dictation + E08 الدفء (تقرير المساء/معاينة الغد) + واجهة الحصة الكاملة.
 - **M2–M6:** بقية المحركات (خريطة §11 في الخطة).
 
@@ -80,7 +80,7 @@ cd ../.. && npx vitest run   # يجب: 76/76
 - **GitHub:** `github.com/naderba69/schluessel` — الرفع بأمر Termux المرفق `termux-push-github.sh` (PAT + تحقق بصمة sha256 + فحوص بنية + push -f main).
 - **Vercel:** `vercel.json` مرفق (framework=vite · build=npm run build · output=dist).
 - **حزمة التسليم:** `schluessel-full.zip` (+ ملف `.sha256` مرافق) — جذر مسطّح، تتضمن git نظيفاً بلا تاريخ النماذج الثقيلة.
-- **الجلسة الجديدة = نفس الخطة حرفياً:** فك الضغط ← `docs/PROFESSIONAL_CONTINUATION_PROMPT_AR.md` ← وصفة الاستعادة ← §7 خريطة الطريق (التالي: دفعة M1-ب = E03+E04).
+- **الجلسة الجديدة = نفس الخطة حرفياً:** فك الضغط ← `docs/PROFESSIONAL_CONTINUATION_PROMPT_AR.md` ← وصفة الاستعادة ← §7 خريطة الطريق (التالي: دفعة M1-ج = E05+E07+E08+واجهة الحصة).
 
 ---
-**الإصدار الحالي:** 1.2 (2026-10-10 — D35 الاسم النهائي Schlüssel + حزمة GitHub/Vercel) · 1.1 (2026-10-10 — بعد تثبيت التتبع الكامل: سجل D1–D34 + نسخ كل وثائق المرحلة داخل المستودع `docs/prompt-phase/` + `docs/plans/` — لا شيء حيوي خارج git) · 1.0 — 2026-10-10 — بعد دفعة M1-أ: 76/76 أخضر · commit `ff58c76` (rebrand + E01 + E02 + E06) · البرومت مرفوع في `66a9c35`.
+**الإصدار الحالي:** 1.3 (2026-10-10 — بعد دفعة M1-ب: E03+E04+الجولة الإلزامية+الدقائق الثلاث · 106 اختباراً · D36) · 1.2 (2026-10-10 — D35 الاسم النهائي Schlüssel + حزمة GitHub/Vercel) · 1.1 (2026-10-10 — بعد تثبيت التتبع الكامل: سجل D1–D34 + نسخ كل وثائق المرحلة داخل المستودع `docs/prompt-phase/` + `docs/plans/` — لا شيء حيوي خارج git) · 1.0 — 2026-10-10 — بعد دفعة M1-أ: 76/76 أخضر · commit `ff58c76` (rebrand + E01 + E02 + E06) · البرومت مرفوع في `66a9c35`.

@@ -60,6 +60,8 @@ export const SrsCardState = z.object({
   scheduled_days: z.number().nonnegative(),
   reps: z.number().nonnegative().default(0),
   lapses: z.number().nonnegative().default(0),
+  /** خطوات التعلّم داخل ts-fsrs v5 (فهرس الخطوة الحالية) — للتحويل الكامل forth/back (اختياري — البيانات القديمة سليمة) */
+  learning_steps: z.number().nonnegative().optional(),
   state: z.enum(["New", "Learning", "Review", "Relearning"]),
   last_review: z.string().optional(),
   /** L0–L4 (سلم الإتقان) */

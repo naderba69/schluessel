@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## 2026-10-10 — دفعة M1-ب (E03 + E04)
+- إضافة: `src/lib/review-engine.ts` (E03 — SRS في محطة الاسترجاع: تحويل ts-fsrs v5 + جدولة §2.5 + طابور بلا جديد + حراس F121) + `src/lib/errors-engine.ts` (E04 — الدفتر الذهبي + التصنيف الثلاثي §4 + المعالجة حسب النوع + الجولة الإلزامية + قاعدة الدقائق الثلاث F038) + 30 اختباراً (tests/review-engine.test.ts + tests/errors-engine.test.ts).
+- تغيير: `content/schemas/card.ts` — حقل اختياري `learning_steps` في SrsCardState (وفاء مع ts-fsrs v5 — بلا ترحيل، البيانات القديمة سليمة).
+- توثيق: D36 (توفيق «كل خطأ → بطاقة» مع §4 + حد التصلّب + حارس الدقائق الثلاث) + تحديث PROGRESS/STATE/برومت الاستمرارية v1.3.
+
 ## 2026-10-09 — المعلم 0 مُغلَق (الدفعة 5)
 - إضافة: توليد صوت Piper فعلي (5 Opus + مانيفست ببصمات) + `tools/{gen-audio,audio_probe,pcm_compare,asr_test}.py` + اختبار D16 (`docs/dos/d16-asr-report.json`) + `src/lib/asr-gate.ts` + `src/lib/audio.ts` + 15 اختباراً جديدة (audio-complete/voice-stability/asr-gate) + تقرير الإغلاق.
 - إزالة: مانيفست العينة القديم (استُبدل بالمانيفست الحقيقي المولَّد).
