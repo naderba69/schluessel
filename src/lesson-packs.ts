@@ -12,6 +12,8 @@ import lessonD2 from "../content/lessons/a1/a1-u1-d2.json";
 import lessonD3 from "../content/lessons/a1/a1-u1-d3.json";
 import lessonD4 from "../content/lessons/a1/a1-u1-d4.json";
 import lessonD5 from "../content/lessons/a1/a1-u1-d5.json";
+import lessonD6 from "../content/lessons/a1/a1-u1-d6.json";
+import lessonU2D1 from "../content/lessons/a1/a1-u2-d1.json";
 
 import wordHallo from "../content/words/hallo.json";
 import wordHeissen from "../content/words/heissen.json";
@@ -72,6 +74,20 @@ import wordFreund from "../content/words/freund.json";
 import wordFreundin from "../content/words/freundin.json";
 import wordLeute from "../content/words/leute.json";
 import wordZusammen from "../content/words/zusammen.json";
+import wordAllesKlar from "../content/words/alles-klar.json";
+import wordBisMorgen from "../content/words/bis-morgen.json";
+import wordOesterreich from "../content/words/oesterreich.json";
+import wordNiederlande from "../content/words/niederlande.json";
+import wordGriechenland from "../content/words/griechenland.json";
+import wordPolen from "../content/words/polen.json";
+import wordRussland from "../content/words/russland.json";
+import wordPortugal from "../content/words/portugal.json";
+import wordEuropa from "../content/words/europa.json";
+import wordWelt from "../content/words/welt.json";
+import wordWo from "../content/words/wo.json";
+import wordWoher from "../content/words/woher.json";
+import wordHier from "../content/words/hier.json";
+import wordDort from "../content/words/dort.json";
 
 const WORD_JSONS = [
   wordHallo, wordHeissen, wordGutenTag, wordGutenMorgen, wordGutenAbend,
@@ -84,9 +100,12 @@ const WORD_JSONS = [
   wordZahl, wordNummer, wordTelefon, wordHandy, wordAlt, wordJahr,
   wordGeburtstag, wordSchreiben, wordMonat, wordWoche, wordTag, wordStrasse,
   wordFrage, wordAntwort, wordKennen, wordFreund, wordFreundin, wordLeute, wordZusammen,
+  wordAllesKlar, wordBisMorgen,
+  wordOesterreich, wordNiederlande, wordGriechenland, wordPolen, wordRussland, wordPortugal,
+  wordEuropa, wordWelt, wordWo, wordWoher, wordHier, wordDort,
 ];
 
-const LESSON_JSONS = [lessonD1, lessonD2, lessonD3, lessonD4, lessonD5];
+const LESSON_JSONS = [lessonD1, lessonD2, lessonD3, lessonD4, lessonD5, lessonD6, lessonU2D1];
 
 /** كل الكلمات المُتحقَّق منها — بلا استثناءات */
 export const ALL_WORDS: Word[] = WORD_JSONS.map((j) => WordSchema.parse(j));

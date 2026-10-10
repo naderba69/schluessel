@@ -1,0 +1,300 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u2-d1",
+  "level": "A1",
+  "unit": 2,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst sechs Länder nennen und fragen: Woher kommst du? Wo wohnst du?",
+    "ar": "تستطيع تسمية ستة بلدان والسؤال: من أين أنت؟ أين تسكن؟"
+  },
+  "canDoDaily": [
+    "يسمّي 6 بلدان ويسأل «من أين؟»"
+  ],
+  "warmup": {
+    "cardIds": [
+      "frankreich",
+      "tuerkei",
+      "wohnen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أين تسكن؟» — wo أم woher? (تخمين فقط)"
+        },
+        "choices": [
+          "Wo",
+          "Woher",
+          "Was"
+        ],
+        "answer": "Wo",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "oesterreich",
+      "niederlande",
+      "griechenland",
+      "polen",
+      "russland",
+      "portugal",
+      "europa",
+      "welt",
+      "wo",
+      "woher",
+      "hier",
+      "dort"
+    ],
+    "grammarArsenalIds": [
+      "ars-wo-woher"
+    ],
+    "storySentenceIds": [
+      "story-a2-u2-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«من أين أنت؟» بأداة السؤال؟",
+            "a": "Woher kommst du?"
+          },
+          {
+            "q": "«أين تسكن؟»؟",
+            "a": "Wo wohnst du?"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«النمسا»؟",
+            "a": "Österreich"
+          },
+          {
+            "q": "«هنا» و«هناك»؟",
+            "a": "hier / dort"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "أكمل: Ich komme aus ___ Niederlanden.",
+            "a": "den"
+          },
+          {
+            "q": "«أوروبا قارة»؟",
+            "a": "Europa ist ein Kontinent."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Herkunft und Wohnort befragen und nennen",
+        "ar": "السؤال عن الأصل والسكن وذكرهما"
+      },
+      "situation": {
+        "de": "Im Sprachkurs: neue Leute aus Europa",
+        "ar": "في الدورة: أشخاص جدد من أوروبا"
+      },
+      "successCriteria": [
+        "يسأل woher/wo ويجيب بجملتين صحيحتين عن 6 بلدان مختلفة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«من أين أنت؟»؟",
+            "choices": [
+              "Wo kommst du?",
+              "Woher kommst du?"
+            ],
+            "a": "Woher kommst du?"
+          },
+          {
+            "q": "«بولندا»؟",
+            "a": "Polen"
+          },
+          {
+            "q": "ترتيب؟ wohnst / Wo / du",
+            "a": "Wo wohnst du?"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«العالم»؟",
+            "a": "die Welt"
+          },
+          {
+            "q": "أي جملة صحيحة؟",
+            "choices": [
+              "Ich komme aus die Türkei.",
+              "Ich komme aus der Türkei."
+            ],
+            "a": "Ich komme aus der Türkei."
+          },
+          {
+            "q": "«هناك الهاتف»؟",
+            "a": "Dort ist das Telefon."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«اليونان»؟",
+            "a": "Griechenland"
+          },
+          {
+            "q": "die Niederlande — فعل مفرد أم جمع؟",
+            "choices": [
+              "جمع: kommen",
+              "مفرد: kommt"
+            ],
+            "a": "جمع: kommen"
+          },
+          {
+            "q": "«أنا أسكن هنا»؟",
+            "a": "Ich wohne hier."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute hast du sechs neue Länder genannt und mit wo/woher gefragt — Europa wird kleiner!",
+      "ar": "اليوم ذكرت ستة بلدان جديدة وسألت بـwo/woher — أوروبا تصغر!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Wo kommen Sie?~~ (للأصل)",
+          "ar": "wo للمكان وwoher للمنشأ"
+        },
+        "whyArabicSpeakerFails": "العربية «وين» تُستخدم أحياناً للمنشأ في العامية؛ الألمانية تفرّق: wo للمكان وwoher للأصل (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Woher kommen Sie?",
+          "ar": "من أين أنتم؟"
+        },
+        "exercise": {
+          "q": "صحّح (للأصل): ~~Wo kommen Sie?~~",
+          "a": "Woher kommen Sie?"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~aus die Niederlande~~",
+          "ar": "aus + Dativ لا Akkusativ"
+        },
+        "whyArabicSpeakerFails": "العربية «من هولندا» بلا تغيير أدوات؛ الألمانية: aus يجرّ — die Niederlande تصبح den Niederlanden (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "aus den Niederlanden",
+          "ar": "من هولندا"
+        },
+        "exercise": {
+          "q": "صحّح: ~~aus die Türkei~~",
+          "a": "aus der Türkei"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Die Niederlande kommt~~",
+          "ar": "الأسماء الجمعية والفعل"
+        },
+        "whyArabicSpeakerFails": "«هولندا» بالعربية مفرد؛ الألمانية Niederlande جمع والفعل جمع (مثل Leute) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Die Niederlande sind in Europa.",
+          "ar": "هولندا في أوروبا."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Die Niederlande ist groß~~",
+          "a": "Die Niederlande sind in Europa."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "oesterreich",
+      "niederlande",
+      "griechenland",
+      "polen",
+      "russland",
+      "portugal",
+      "europa",
+      "welt",
+      "wo",
+      "woher",
+      "hier",
+      "dort"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Niederlande",
+      "https://www.duden.de/rechtschreibung/Oesterreich"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/woher"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-wo-woher"
+  ],
+  "audioManifestRefs": [
+    "word-oesterreich",
+    "word-niederlande",
+    "word-griechenland",
+    "word-polen",
+    "word-russland",
+    "word-portugal",
+    "word-europa",
+    "word-welt",
+    "word-wo",
+    "word-woher",
+    "word-hier",
+    "word-dort"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?) — Vertiefung: Länder & Sprachen",
+    "goetheWordListOverlap": [
+      "woher",
+      "niederlande"
+    ]
+  }
+}

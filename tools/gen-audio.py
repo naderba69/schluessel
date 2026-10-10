@@ -134,6 +134,22 @@ def build_all() -> None:
         ("word-freundin", "Freundin.", "freundin", ["a1-u1-d5"]),
         ("word-leute", "Leute.", "leute", ["a1-u1-d5"]),
         ("word-zusammen", "zusammen.", "zusammen", ["a1-u1-d5"]),
+        # ═══ a1-u1-d6 — Integration (D47) ═══
+        ("word-alles-klar", "Alles klar.", "alles-klar", ["a1-u1-d6"]),
+        ("word-bis-morgen", "Bis morgen.", "bis-morgen", ["a1-u1-d6"]),
+        # ═══ a1-u2-d1 — Länder & wo/woher (D47) ═══
+        ("word-oesterreich", "Österreich.", "oesterreich", ["a1-u2-d1"]),
+        ("word-niederlande", "Niederlande.", "niederlande", ["a1-u2-d1"]),
+        ("word-griechenland", "Griechenland.", "griechenland", ["a1-u2-d1"]),
+        ("word-polen", "Polen.", "polen", ["a1-u2-d1"]),
+        ("word-russland", "Russland.", "russland", ["a1-u2-d1"]),
+        ("word-portugal", "Portugal.", "portugal", ["a1-u2-d1"]),
+        ("word-europa", "Europa.", "europa", ["a1-u2-d1"]),
+        ("word-welt", "Welt.", "welt", ["a1-u2-d1"]),
+        ("word-wo", "wo.", "wo", ["a1-u2-d1"]),
+        ("word-woher", "woher.", "woher", ["a1-u2-d1"]),
+        ("word-hier", "hier.", "hier", ["a1-u2-d1"]),
+        ("word-dort", "dort.", "dort", ["a1-u2-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

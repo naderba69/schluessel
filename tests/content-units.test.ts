@@ -3,17 +3,28 @@ import { describe, it, expect } from "vitest";
 import { ALL_LESSONS, ALL_WORDS, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
 
-describe("سجل المحتوى — دروس الوحدة 1 (d1–d5)", () => {
+describe("سجل المحتوى — الوحدة 1 كاملة + بداية الوحدة 2", () => {
   it("الدروس مرتّبة والسجل مطابق للملفات", () => {
-    expect(ALL_LESSONS.map((l) => l.id)).toEqual(["a1-u1-d1", "a1-u1-d2", "a1-u1-d3", "a1-u1-d4", "a1-u1-d5"]);
-    expect(ALL_LESSONS.map((l) => l.day)).toEqual([1, 2, 3, 4, 5]);
-    expect(ALL_WORDS.length).toBe(59);
+    expect(ALL_LESSONS.map((l) => l.id)).toEqual([
+      "a1-u1-d1", "a1-u1-d2", "a1-u1-d3", "a1-u1-d4", "a1-u1-d5", "a1-u1-d6", "a1-u2-d1",
+    ]);
+    expect(ALL_LESSONS.map((l) => [l.unit, l.day])).toEqual([
+      [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 1],
+    ]);
+    expect(ALL_WORDS.length).toBe(73);
+  });
+
+  it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
+    const d6 = ALL_LESSONS.find((l) => l.id === "a1-u1-d6")!;
+    expect(d6.kind).toBe("integration");
+    expect(d6.praesentation.wordIds).toEqual(["alles-klar", "bis-morgen"]);
+    for (const v of d6.quiz.variants) expect(v.passingScore).toBe(0.75);
   });
 
   it("كل درس: كلماته مكتملة + مصائده الثلاثة + حزمة SRS + مراجع صوت مطابقة", () => {
     for (const l of ALL_LESSONS) {
       const words = wordsForLesson(l);
-      expect(words.length).toBeGreaterThanOrEqual(7);
+      expect(words.length).toBeGreaterThanOrEqual(2); // d6 توليف: جسيمان فقط (بلا جديد تقريباً)
       expect(l.zusammenfassung.warningCards).toHaveLength(3);
       expect(l.zusammenfassung.srsBundleWordIds).toEqual(l.praesentation.wordIds);
       expect(l.audioManifestRefs).toHaveLength(l.praesentation.wordIds.length);

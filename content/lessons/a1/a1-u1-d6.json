@@ -1,0 +1,283 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u1-d6",
+  "level": "A1",
+  "unit": 1,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Die Einheit zusammenfassen und die Wochen-Meisterschaft bestehen (≥75%).",
+    "ar": "تجميع مادة الأسبوع واجتياز معركة الوحدة (75% فأكثر)."
+  },
+  "canDoDaily": [
+    "يجتاز معركة الوحدة 1 بنتيجة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hallo",
+      "heissen",
+      "kommen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«إلى الغد» بالألمانية؟ (التوليف — بلا جديد)"
+        },
+        "choices": [
+          "bis morgen",
+          "bis Tag",
+          "bis gestern"
+        ],
+        "answer": "bis morgen",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "alles-klar",
+      "bis-morgen"
+    ],
+    "grammarArsenalIds": [
+      "ars-unit1-review"
+    ],
+    "storySentenceIds": [
+      "story-a1-u1-battle"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "توليف: قدّم نفسك في جملة واحدة كاملة.",
+            "a": "Ich heiße Yusuf und ich bin aus Tunesien."
+          },
+          {
+            "q": "«تمام!» بألمانية؟",
+            "a": "Alles klar!"
+          }
+        ],
+        "interleavedWith": [
+          "heissen",
+          "kommen",
+          "sein"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "توليف: عمر + هاتف في جملتين.",
+            "a": "Ich bin 15 Jahre alt. Meine Telefonnummer ist ..."
+          },
+          {
+            "q": "«إلى الغد»؟",
+            "a": "bis morgen"
+          }
+        ],
+        "interleavedWith": [
+          "zahl",
+          "alt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "توليف: سؤال + جواب كاملان.",
+            "a": "Woher kommen Sie? — Ich komme aus Tunesien."
+          },
+          {
+            "q": "من أين؟ + من؟ (أي أداة)؟",
+            "a": "woher + wer"
+          }
+        ],
+        "interleavedWith": [
+          "woher",
+          "wer"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Woche in einem Dialog anwenden",
+        "ar": "تطبيق مادة الأسبوع في حوار"
+      },
+      "situation": {
+        "de": "Das Abschlussgespräch der ersten Woche",
+        "ar": "الحوار الختامي للأسبوع الأول"
+      },
+      "successCriteria": [
+        "يستخدم 4 هياكل مختلفة من الأسبوع في حوار واحد (توليف — لا تكرار آلي)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "المعركة (قصة): يوسف قدم نفسه — ما قاله؟",
+            "choices": [
+              "Ich heiße Yusuf und bin aus Tunesien.",
+              "Ich bin Yusuf von Tunesien."
+            ],
+            "a": "Ich heiße Yusuf und bin aus Tunesien."
+          },
+          {
+            "q": "المعركة (قصة): كم عمر يوسف في القصة؟ (15)",
+            "a": "Ich bin 15 Jahre alt."
+          },
+          {
+            "q": "توليف: سؤال عن الأصل؟",
+            "a": "Woher kommen Sie?"
+          },
+          {
+            "q": "«إلى الغد»؟",
+            "a": "bis morgen"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "المعركة (قصة): أي لغة يتحدث يوسف؟",
+            "a": "Ich spreche Arabisch."
+          },
+          {
+            "q": "المعركة (قصة): أين يسكن؟",
+            "a": "Ich wohne in Tunesien."
+          },
+          {
+            "q": "توليف: الملكية مع die Nummer؟",
+            "a": "Meine Nummer"
+          },
+          {
+            "q": "«تمام، أفهم»؟",
+            "a": "Alles klar!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "المعركة (قصة): كيف يتهجى يوسف اسمه؟",
+            "a": "Ich buchstabiere: Y-U-S-U-F."
+          },
+          {
+            "q": "توليف: wer أم was لشخص؟",
+            "a": "Wer"
+          },
+          {
+            "q": "توليف: kennen أم wissen لصديق؟",
+            "a": "kennen"
+          },
+          {
+            "q": "الترتيب: alt / 15 / Jahre / bin / Ich",
+            "a": "Ich bin 15 Jahre alt."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die erste Einheit ist geschafft: 55 Wörter, sechs Tage — und du kannst dich vorstellen!",
+      "ar": "الوحدة الأولى اكتملت: 55 كلمة وستة أيام — وتستطيع تعريف نفسك كاملاً!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich bin von Tunesien~~",
+          "ar": "von لا aus للمنشأ"
+        },
+        "whyArabicSpeakerFails": "«من» العربية واحدة؛ الانتماء للبلد aus دائماً — حتى في التوليف لا تعود لـvon (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bin aus Tunesien.",
+          "ar": "أنا من تونس."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Er ist von Polen~~",
+          "a": "Er ist aus Polen."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe 15 Jahre~~",
+          "ar": "haben لا يُستخدم للعمر"
+        },
+        "whyArabicSpeakerFails": "«عندي 15» بالعربية؛ الألمانية: sein + Jahre alt (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bin 15 Jahre alt.",
+          "ar": "عمري 15 سنة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Sie hat 20 Jahre~~",
+          "a": "Sie ist 20 Jahre alt."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wo kommen Sie?~~ (للأصل)",
+          "ar": "woher للمنشأ وwo للمكان"
+        },
+        "whyArabicSpeakerFails": "العربية تفكّك «من أين تأتي»؛ الألمانية woher مدمجة — الأداة أولاً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Woher kommen Sie?",
+          "ar": "من أين أنتم؟"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wo kommen Sie?~~ (للأصل)",
+          "a": "Woher kommen Sie?"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "alles-klar",
+      "bis-morgen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/bis"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/klar"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-unit1-review"
+  ],
+  "audioManifestRefs": [
+    "word-alles-klar",
+    "word-bis-morgen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?) — توليف الوحدة",
+    "goetheWordListOverlap": [
+      "alles-klar",
+      "bis-morgen"
+    ]
+  }
+}

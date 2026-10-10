@@ -159,3 +159,9 @@
 2. **d5 (wer/woher + تعريف — 7 كلمات):** Frage/Antwort (الجواب **auf** السؤال) + kennen (للأشخاص) + Freund/Freundin (جنس طبيعي مخالف) + Leute (جمع فقط) + zusammen — مصائد: **wer للأشخاص وwas للأشياء** · kennen لا wissen للأشخاص · Leute فعل جمع.
 3. **d5 تعريف النفس في 4 جمل** (heiße + bin aus + spreche + wohne) + خلط (Interleaving) في اليومين ≥3 كما تفرض §3.
 4. **الصوت:** 19 مقطعاً جديداً — المانيفست **60 مساراً** · الكلمات 59 · الدروس 5.
+
+## D47 (2026-06-19): d6 توليف الوحدة 1 (معركة 0.75) + u2-d1 بداية الوحدة 2
+
+- **d6** `kind:"integration"`: جسيمان فقط (alles-klar، bis-morgen) — تثبيت بلا تحميل جديد. العبر الثلاث (قوالب زمان غير sinnvoll · von/aus · woher للمنشأ) + معركة أسطورة 3 أسئلة **passingScore: 0.75** (مثل معركة د5 — تقصير مقصود). 2 مساراً فقط.
+- **u2-d1** (الوحدةة 2): Länder جديدة (Österreich, Niederlande, Griechenland, Polen, Russland, Portugal) + نطاق (Europa, Welt) + wo/woher/hier/dort. المصائد: wo مكان/woher منشأ (خطأ العربي «أين أنت من؟») · **Niederlande جمع** (die/den Niederlanden) · aus+Dativ. **لا مقدمة للوحدة 2** (الدرس يبدأ كالمعتاد).
+- البوابة: **243/243 + tsc + validator (85 ملفاً/0) + build** ✓.
