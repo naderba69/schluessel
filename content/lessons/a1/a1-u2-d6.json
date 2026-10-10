@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u2-d6",
+  "level": "A1",
+  "unit": 2,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Die Einheit 2 zusammenfassen und die Wochen-Meisterschaft bestehen (≥75%).",
+    "ar": "تجميع مادة الوحدة 2 واجتياز معركتها (75% فأكثر)."
+  },
+  "canDoDaily": [
+    "يجتاز معركة الوحدة 2 (حوار تعارف + أخطاء الأسبوع) بنسبة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "oesterreich",
+      "woher",
+      "sprache"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«من أين أنت؟» wo أم woher? (التوليف — بلا جديد)"
+        },
+        "choices": [
+          "Woher kommst du?",
+          "Wo kommst du?",
+          "Was kommst du?"
+        ],
+        "answer": "Woher kommst du?",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "okay",
+      "super"
+    ],
+    "grammarArsenalIds": [
+      "ars-unit2-review"
+    ],
+    "storySentenceIds": [
+      "story-a2-u2-battle"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "خطأ الأسبوع 1: sprachen مع اللغة؟",
+            "a": "sprechen + لغة مباشرة (لا von/über)"
+          },
+          {
+            "q": "«أنا أيضاً من تونس»؟",
+            "a": "Ich komme auch aus Tunesien."
+          }
+        ],
+        "interleavedWith": [
+          "sprache",
+          "deutsch"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "خطأ الأسبوع 2: das Mädchen — لماذا das?",
+            "a": "التصغير -chen دائماً das"
+          },
+          {
+            "q": "«الفتاة تتعلم الألمانية»؟",
+            "a": "Das Mädchen lernt Deutsch."
+          }
+        ],
+        "interleavedWith": [
+          "maedchen",
+          "zeitung"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "خطأ الأسبوع 3: العنوان؟",
+            "a": "in + Dativ (in der Mainzer Straße 5)"
+          },
+          {
+            "q": "«أُعرّف بنفسي»؟",
+            "a": "Ich stelle mich vor."
+          }
+        ],
+        "interleavedWith": [
+          "wohnen",
+          "vorstellen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Meisterschaft: Kennenlern-Dialog + Genuscode + Schreibung",
+        "ar": "المعركة: حوار تعارف + شفرة الجنس + الكتابة"
+      },
+      "situation": {
+        "de": "Das Abschlussgespräch der Einheit",
+        "ar": "الحوار الختامي للوحدة"
+      },
+      "successCriteria": [
+        "يجتاز 3 مجموعات بـ75% فأكثر ويصحّح أخطاء الوحدة الثلاثة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "الحوار (1): «أُعرّف بنفسي: اسمي ماري»؟",
+            "a": "Ich stelle mich vor: Ich heiße Marie."
+          },
+          {
+            "q": "الحوار (2): «من أين أنت؟» — الجواب؟",
+            "a": "Ich komme aus Tunesien."
+          },
+          {
+            "q": "«يسعدني التعارف»؟",
+            "a": "Ich freue mich, dich kennenzulernen."
+          },
+          {
+            "q": "أي كتابة صحيحة؟",
+            "choices": [
+              "die heisse Suppe",
+              "die heiße Suppe"
+            ],
+            "a": "die heiße Suppe"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "الحوار (3): «أين تسكن؟»؟",
+            "a": "Wo wohnst du?"
+          },
+          {
+            "q": "الحوار (4): «هوايتي القراءة»؟",
+            "a": "Mein Hobby ist Lesen."
+          },
+          {
+            "q": "das Mädchen — ما القاعدة؟",
+            "a": "-chen = das دائماً (تصغير)"
+          },
+          {
+            "q": "«أنا أيضاً»؟",
+            "a": "Ich auch. / Ich komme auch …"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "الحوار (5): «لغتك الأم»؟",
+            "a": "Meine Muttersprache ist Arabisch."
+          },
+          {
+            "q": "الحوار (6): «إلى اللقاء»؟",
+            "a": "Bis morgen! / Tschüss!"
+          },
+          {
+            "q": "العنوان: in ___ Mainzer Straße?",
+            "choices": [
+              "die",
+              "der"
+            ],
+            "a": "der (Dativ)"
+          },
+          {
+            "q": "«ممتاز، شكراً»؟",
+            "a": "Super, danke!"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheit 2 geschafft: Länder, Sprachen, Wohnort, Genuscode und Rechtschreibung — dein Deutsch wird präzise!",
+      "ar": "اكتملت الوحدة 2: البلدان واللغات والسكن وشفرة الجنس والكتابة — ألمانيتك تصبح أدقّ!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Wo kommen Sie?~~ (للأصل)",
+          "ar": "wo للمكان وwoher للمنشأ"
+        },
+        "whyArabicSpeakerFails": "العربية العامية «وين» للاثنين معاً؛ الألمانية تفرّق — تكرار مقصود بعد أسبوع كامل (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Woher kommen Sie?",
+          "ar": "من أين أنتم؟"
+        },
+        "exercise": {
+          "q": "صحّح (للأصل): ~~Wo kommst du her?~~ أم Woher kommst du?",
+          "a": "Woher kommst du?"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich spreche über Deutsch.~~",
+          "ar": "sprechen + لغة بلا حرف جر"
+        },
+        "whyArabicSpeakerFails": "«أتحدث عن» و«أتحدث» تتشابهان بالعربية — الألمانية تفصل بين sprechen + Akkusativ وsprechen über (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich spreche Deutsch.",
+          "ar": "أتحدث الألمانية."
+        },
+        "exercise": {
+          "q": "صحّح: ~~sprechen von Arabisch~~",
+          "a": "sprechen Arabisch"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Mädchen~~",
+          "ar": "-chen = das دائماً"
+        },
+        "whyArabicSpeakerFails": "الفتاة مؤنثة في العربية؛ النهاية -chen تحسم الجنس عند الألماني — القاعدة تنتصر على المعنى (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das Mädchen",
+          "ar": "الفتاة (das)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~die Mädchen lernt Deutsch.~~",
+          "a": "Das Mädchen lernt Deutsch."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "okay",
+      "super"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/M%C3%A4dchen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/-chen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-unit2-review"
+  ],
+  "audioManifestRefs": [
+    "word-okay",
+    "word-super"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 2 — توليف الوحدة 2 (معركة 70/30)",
+    "goetheWordListOverlap": [
+      "okay",
+      "super"
+    ]
+  }
+}

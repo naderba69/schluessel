@@ -172,3 +172,11 @@
 - **u2-d3**: 12 كلمة جديدة كلها تجسّد شفرة الجنس (Genuscode): -ung/-heit/-keit/-schaft=die · -chen=das · -er/-ling=der · -um=das. مصائد: das Mädchen (تصغير) · die Lehrerin (المؤنث -in) · النهايات الأربعة die.
 - **اكتشاف**: درس بذرة قديم `a1-u3-d2` (كلمة واحدة) من أول commit — يبقى خارج السجل (ALL_LESSONS=9) لكن الفهرس العكسي يطالبه (wohnung usedInLessons تضم a1-u3-d2). والخلط (§3) إلزامي من يوم 3: interleavedWith مفعّل في u2-d3.
 - البوابة: **243/243 + tsc + validator (104 ملفاً/0) + build** ✓.
+
+## D49 (2026-10-10): إتمام الوحدة 2 — u2-d4 (Vokalquantität/ß-ss) + u2-d5 (حوار التعارف) + u2-d6 (المعركة)
+
+- **u2-d4** (12 كلمة): ß/ss + الكمية الصوتية — groß/heiß/Fuß/süß (ß بعد الطويل) · Tasse/essen (ss بعد القصير) · Kaffee/Boot/Käse/Schule/gehen (ee/oo/ä/h للطول) + strasse (معاد استخدامها — ß). مصائد: heiss→heiß · Tasße→Tasse · Kafee→Kaffee.
+- **u2-d5** (12 كلمة): حوار التعارف — vorstellen (trennbar+reflexive) · kennenlernen (trennbar) · freuen (reflexive) · gern/nett/Gespräch/auch/oder/natürlich/Hobby/lesen/Musik. مصائد: stelle mich vor · Ich lese gern (آخر الجملة) · lerne dich kennen.
+- **u2-d6** (integration): جسيمان (okay/super) + معركة الوحدة 2 (حوار 6 تبادلات + أخطاء الأسبوع الثلاثة) بعتبة **0.75** — تفريغ wo/woher · sprechen بلا حرف جر · das Mädchen.
+- **ملاحظة بناء**: الحزمة تجاوزت 500KB (تحذير حجم فقط — البناء ناجح ✓).
+- البوابة: **243/243 + tsc + validator (132 ملفاً/0) + build** ✓. **الوحدتان 1+2 مكتملتان (12 يوماً).**

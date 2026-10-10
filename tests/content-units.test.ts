@@ -6,12 +6,12 @@ import { planLessonStations } from "../src/lib/lesson-runner.js";
 describe("سجل المحتوى — الوحدة 1 كاملة + بداية الوحدة 2", () => {
   it("الدروس مرتّبة والسجل مطابق للملفات", () => {
     expect(ALL_LESSONS.map((l) => l.id)).toEqual([
-      "a1-u1-d1", "a1-u1-d2", "a1-u1-d3", "a1-u1-d4", "a1-u1-d5", "a1-u1-d6", "a1-u2-d1", "a1-u2-d2", "a1-u2-d3",
+      "a1-u1-d1", "a1-u1-d2", "a1-u1-d3", "a1-u1-d4", "a1-u1-d5", "a1-u1-d6", "a1-u2-d1", "a1-u2-d2", "a1-u2-d3", "a1-u2-d4", "a1-u2-d5", "a1-u2-d6",
     ]);
     expect(ALL_LESSONS.map((l) => [l.unit, l.day])).toEqual([
-      [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 1], [2, 2], [2, 3],
+      [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6],
     ]);
-    expect(ALL_WORDS.length).toBe(90);
+    expect(ALL_WORDS.length).toBe(115);
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {

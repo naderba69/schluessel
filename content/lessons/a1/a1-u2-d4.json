@@ -1,0 +1,326 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u2-d4",
+  "level": "A1",
+  "unit": 2,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst lange und kurze Vokale richtig schreiben (ß nach langem, ss nach kurzem).",
+    "ar": "تكتب الحركات الطويلة والقصيرة كتابةً صحيحة (ß بعد الطويل، ss بعد القصير)"
+  },
+  "canDoDaily": [
+    "يكتب كلمات اليوم بحركاتها الصحيحة ويميّز ß عن ss"
+  ],
+  "warmup": {
+    "cardIds": [
+      "stadt",
+      "zeitung",
+      "wohnen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«حارّ» بالألمانية: heiss أم heiß؟ ولماذا؟ (تخمين فقط)"
+        },
+        "choices": [
+          "heiß — ß بعد الحركة الطويلة",
+          "heiss — ss دائماً",
+          "كلاهما خطأ"
+        ],
+        "answer": "heiß — ß بعد الحركة الطويلة",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "gross",
+      "heiss",
+      "fuss",
+      "suess",
+      "tasse",
+      "essen",
+      "kaffee",
+      "boot",
+      "gehen",
+      "kaese",
+      "schule",
+      "strasse"
+    ],
+    "grammarArsenalIds": [
+      "ars-vokalquantitaet"
+    ],
+    "storySentenceIds": [
+      "story-a2-u2-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«حارّ» تُكتب؟",
+            "a": "heiß (ß بعد ai الطويل)"
+          },
+          {
+            "q": "«كوب» تُكتب؟",
+            "a": "die Tasse (ss بعد a القصير)"
+          }
+        ],
+        "interleavedWith": [
+          "maedchen",
+          "zeitung"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«كبير»؟",
+            "a": "groß"
+          },
+          {
+            "q": "«القدم»؟",
+            "a": "der Fuß"
+          }
+        ],
+        "interleavedWith": [
+          "schule",
+          "kaffee"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "أي كتابة صحيحة؟",
+            "choices": [
+              "der Kafee",
+              "der Kaffee"
+            ],
+            "a": "der Kaffee"
+          },
+          {
+            "q": "«يأكل» المضارع (هو)؟",
+            "a": "isst (الحرف القصير + ss)"
+          }
+        ],
+        "interleavedWith": [
+          "gehen",
+          "boot"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wörter mit langen und kurzen Vokalen richtig schreiben",
+        "ar": "كتابة الكلمات بحركاتها الطويلة والقصيرة صحيحة"
+      },
+      "situation": {
+        "de": "Im Kurs: Diktat von 10 Wörtern",
+        "ar": "في الدورة: إملاء 10 كلمات"
+      },
+      "successCriteria": [
+        "يكتب 8 من 10 كلمات كتابة صحيحة (ß/ss و ee/oo/ä/h)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«حلو» (المذاق)؟",
+            "a": "süß"
+          },
+          {
+            "q": "أي كتابة صحيحة؟",
+            "choices": [
+              "heisst",
+              "heiß"
+            ],
+            "a": "heiß"
+          },
+          {
+            "q": "«القهوة حارّة»؟",
+            "a": "Der Kaffee ist heiß."
+          },
+          {
+            "q": "«يقرأ» — هل نكتب leesen?",
+            "choices": [
+              "لا: lesen (h للإطالة شفهياً فقط)",
+              "نعم: leesen"
+            ],
+            "a": "لا: lesen (h للإطالة شفهياً فقط)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الكوب»؟",
+            "a": "die Tasse"
+          },
+          {
+            "q": "«القارب»؟",
+            "a": "das Boot"
+          },
+          {
+            "q": "التاء في Tasse قصيرة أم طويلة؟ كيف نعرف؟",
+            "a": "قصيرة — لأن ss بعدها (ss = الحركة قصيرة)"
+          },
+          {
+            "q": "«المدرسة»؟",
+            "a": "die Schule"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الجبن»؟",
+            "a": "der Käse"
+          },
+          {
+            "q": "أي كتابة صحيحة؟",
+            "choices": [
+              "Fuss",
+              "Fuß"
+            ],
+            "a": "Fuß"
+          },
+          {
+            "q": "«نحن نذهب إلى المدينة»؟",
+            "a": "Wir gehen in die Stadt."
+          },
+          {
+            "q": "groß — ما أصل ß هنا؟",
+            "a": "بعد o الطويل في au (diphthong)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Regel: ß nur nach langen Vokalen (heiß, groß, Fuß, süß), ss nach kurzen (Tasse, essen) — und ee/oo/ä/h zeigen Länge (Kaffee, Boot, Käse, gehen)!",
+      "ar": "القاعدة: ß بعد الحركات الطويلة فقط (heiß, groß, Fuß, süß)، وss بعد القصيرة (Tasse, essen) — وee/oo/ä/h تدل على الطول (Kaffee, Boot, Käse, gehen)!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~heisst~~ / ~~gross~~ (بالرسم الألماني الحديث)",
+          "ar": "ß بعد الحركة الطويلة"
+        },
+        "whyArabicSpeakerFails": "العربية بلا مقابل لـß فيجرّب ss كلها — القاعدة حاسمة: طويلة (ai/au/u/o) ← ß، قصيرة ← ss (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "heiß / groß",
+          "ar": "حارّ / كبير (ß)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~die heisse Suppe~~",
+          "a": "die heiße Suppe"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Tasße~~ / ~~Eßen~~",
+          "ar": "ss بعد الحركة القصيرة"
+        },
+        "whyArabicSpeakerFails": "العكس: يبالغ في ß بعد القصيرة — الحرف المضاعف يقصّر الحركة قبله (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Tasse / essen",
+          "ar": "الكوب / يأكل (ss)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~eine Taße Kaffee~~",
+          "a": "eine Tasse Kaffee"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Kafee~~ / ~~Bood~~ / ~~gehn~~",
+          "ar": "الإطالة تُكتب ee/oo أو h أو ä"
+        },
+        "whyArabicSpeakerFails": "«القهوة» بالعربية حركة واحدة؛ الألماني يكتب الطول صراحةً: Kaffee (ee) · Boot (oo) · gehen (h) · Käse (ä) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Kaffee / das Boot / gehen",
+          "ar": "القهوة / القارب / يذهب (طول مكتوب)"
+        },
+        "exercise": {
+          "q": "أكمل الكتابة: Kaf__ · B__t · g__en",
+          "a": "Kaffee · Boot · gehen"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "gross",
+      "heiss",
+      "fuss",
+      "suess",
+      "tasse",
+      "essen",
+      "kaffee",
+      "boot",
+      "gehen",
+      "kaese",
+      "schule",
+      "strasse"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/heis%C3%9F",
+      "https://www.duden.de/rechtschreibung/gross",
+      "https://www.duden.de/rechtschreibung/Tasse"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/%C3%9F"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-vokalquantitaet"
+  ],
+  "audioManifestRefs": [
+    "word-gross",
+    "word-heiss",
+    "word-fuss",
+    "word-suess",
+    "word-tasse",
+    "word-essen",
+    "word-kaffee",
+    "word-boot",
+    "word-gehen",
+    "word-kaese",
+    "word-schule",
+    "word-strasse"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 2 — Rechtschreibung (Vokalquantität & ß/ss)",
+    "goetheWordListOverlap": [
+      "essen",
+      "gehen"
+    ]
+  }
+}

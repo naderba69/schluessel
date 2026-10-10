@@ -1,0 +1,318 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u2-d5",
+  "level": "A1",
+  "unit": 2,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst ein kurzes Kennenlern-Gespräch führen (6 Wechsel).",
+    "ar": "تجري حوار تعارف قصيراً من 6 تبادلات"
+  },
+  "canDoDaily": [
+    "يجري حوار تعارف من 6 تبادلات: يعرّف نفسه ويعرّف الطرف الآخر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "vorname",
+      "kennen",
+      "freund"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«يسعدني التعارف» — freue mich أم freue ich mich? (تخمين فقط)"
+        },
+        "choices": [
+          "Ich freue mich.",
+          "Ich freue ich mich.",
+          "Ich mich freue."
+        ],
+        "answer": "Ich freue mich.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "vorstellen",
+      "kennenlernen",
+      "freuen",
+      "gern",
+      "nett",
+      "gespraech",
+      "auch",
+      "oder",
+      "natuerlich",
+      "hobby",
+      "lesen",
+      "musik"
+    ],
+    "grammarArsenalIds": [
+      "ars-kennenlernen"
+    ],
+    "storySentenceIds": [
+      "story-a2-u2-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أُعرّف بنفسي»؟",
+            "a": "Ich stelle mich vor."
+          },
+          {
+            "q": "«يسعدني التعارف»؟",
+            "a": "Ich freue mich, dich kennenzulernen."
+          }
+        ],
+        "interleavedWith": [
+          "kennen",
+          "heissen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أقرأ بمحبة»؟",
+            "a": "Ich lese gern."
+          },
+          {
+            "q": "«أو» للخيار؟ «قهوة أم شاي»؟",
+            "a": "Kaffee oder Tee?"
+          }
+        ],
+        "interleavedWith": [
+          "frage",
+          "antwort"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هوايتي القراءة»؟",
+            "a": "Mein Hobby ist Lesen."
+          },
+          {
+            "q": "«أنا أيضاً من تونس»؟",
+            "a": "Ich komme auch aus Tunesien."
+          }
+        ],
+        "interleavedWith": [
+          "tunesien",
+          "zusammen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Kennenlern-Gespräch mit 6 Wechseln führen",
+        "ar": "إجراء حوار تعارف من 6 تبادلات"
+      },
+      "situation": {
+        "de": "Erster Kurstag: Partnerarbeit",
+        "ar": "اليوم الأول في الدورة: عمل ثنائي"
+      },
+      "successCriteria": [
+        "6 تبادلات كاملة: تعريف + سؤال + هواية + رد + وداع — بلا صمت"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أُعرّف بنفسي»؟",
+            "a": "Ich stelle mich vor."
+          },
+          {
+            "q": "أي جملة صحيحة؟",
+            "choices": [
+              "Ich mich freue.",
+              "Ich freue mich."
+            ],
+            "a": "Ich freue mich."
+          },
+          {
+            "q": "«يسعدني التعارف عليك»؟",
+            "a": "Ich freue mich, dich kennenzulernen."
+          },
+          {
+            "q": "«حديث قصير»؟",
+            "a": "ein kurzes Gespräch"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أقرأ بمحبة»؟",
+            "a": "Ich lese gern."
+          },
+          {
+            "q": "gern أين في الجملة؟",
+            "choices": [
+              "آخر الجملة بعد الفعل",
+              "قبل الفعل"
+            ],
+            "a": "آخر الجملة بعد الفعل"
+          },
+          {
+            "q": "«بالطبع أساعدك»؟",
+            "a": "Natürlich helfe ich dir!"
+          },
+          {
+            "q": "«لطيف منك»؟",
+            "a": "Das ist nett von dir."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الموسيقى»؟",
+            "a": "die Musik"
+          },
+          {
+            "q": "«أستمع إلى الموسيقى»؟",
+            "a": "Ich höre Musik."
+          },
+          {
+            "q": "«أتعرّف عليها» (الفعل)؟",
+            "a": "kennenlernen (ich lerne sie kennen)"
+          },
+          {
+            "q": "«أنا أيضاً»؟",
+            "a": "auch (Ich auch. / Ich komme auch …)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Jetzt kannst du dich vorstellen, Fragen stellen und antworten — 6 Wechsel ohne Pause. Das ist ein echtes Gespräch!",
+      "ar": "الآن تستطيع تعريف نفسك والسؤال والرد — 6 تبادلات بلا صمت. هذا حوار حقيقي!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich vorstelle mich.~~ / ~~Ich stelle vor mich.~~",
+          "ar": "الفعل المنفصل + الانعكاسي: stelle mich vor"
+        },
+        "whyArabicSpeakerFails": "العربية بلا أفعال منفصلة ولا انعكاسية بنفس الشكل — stelle ... vor يفصل، وmich يتوسط (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich stelle mich vor.",
+          "ar": "أُعرّف بنفسي."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich vorstelle mich: Ich heiße Yusuf.~~",
+          "a": "Ich stelle mich vor: Ich heiße Yusuf."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich gern lese.~~ / ~~gern ich lese~~",
+          "ar": "gern في آخر الجملة"
+        },
+        "whyArabicSpeakerFails": "العربية «أقرأ بمحبة» يضع الظرف أحياناً في الوسط؛ الألماني: gern أخيراً (أو ثانياً بعد الفعل في الأسئلة) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich lese gern.",
+          "ar": "أقرأ بمحبة."
+        },
+        "exercise": {
+          "q": "أعد الترتيب: gern / Ich / lese",
+          "a": "Ich lese gern."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich lerne kennen dich.~~",
+          "ar": "kennenlernen منفصل: lerne dich kennen"
+        },
+        "whyArabicSpeakerFails": "الفعل المنفصل يعود: kennenlernen ← lerne ... kennen والمفعول بينهما — كما في aufstehen تماماً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich lerne dich kennen.",
+          "ar": "أتعرّف عليك."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich lerne kennen dich.~~",
+          "a": "Ich lerne dich kennen."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "vorstellen",
+      "kennenlernen",
+      "freuen",
+      "gern",
+      "nett",
+      "gespraech",
+      "auch",
+      "oder",
+      "natuerlich",
+      "hobby",
+      "lesen",
+      "musik"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/vorstellen",
+      "https://www.duden.de/rechtschreibung/kennenlernen",
+      "https://www.duden.de/rechtschreibung/Gespr%C3%A4ch"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/kennenlernen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-kennenlernen"
+  ],
+  "audioManifestRefs": [
+    "word-vorstellen",
+    "word-kennenlernen",
+    "word-freuen",
+    "word-gern",
+    "word-nett",
+    "word-gespraech",
+    "word-auch",
+    "word-oder",
+    "word-natuerlich",
+    "word-hobby",
+    "word-lesen",
+    "word-musik"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 2 — Kennenlern-Gespräch",
+    "goetheWordListOverlap": [
+      "lesen",
+      "hobby"
+    ]
+  }
+}

@@ -110,3 +110,10 @@
 - **u2-d3** (شفرة الجنس الاشتقاقية — أول ظهور — 12 كلمة): Zeitung/Rechnung (-ung=die) · Mädchen/Brötchen (-chen=das) · Kellner/Lehrer (-er=der) · Freiheit/Gesundheit (-heit) · Möglichkeit (-keit) · Freundschaft (-schaft) · Schmetterling (-ling) · Zentrum (-um) — مصائد: das Mädchen · die Lehrerin · die vier Endungen.
 - الصوت: 17 مقطعاً — المانيفست **91 مساراً** · الكلمات **90** · الدروس **9** (d1–d6 + u2-d1..d3).
 - النتيجة: **243/243 أخضر** + tsc + validator (104/0) + build. **الوحدتان 1 و2: 9 من 12 يوماً مؤلفة.** التالي: u2-d4 (Vokalquantität + ß/ss) ثم u2-d5 (محادثة) وu2-d6 (معركة الوحدة 2).
+
+## حملة المحتوى — الدفعة 5 (2026-10-10) — إتمام الوحدة 2: u2-d4 + u2-d5 + u2-d6 (D49)
+- **u2-d4** (الكتابة — 12 كلمة): ß بعد الحركة الطويلة (groß/heiß/Fuß/süß) وss بعد القصيرة (Tasse/essen) + الطول المكتوب (Kaffee ee · Boot oo · Käse ä · gehen h) + strasse (معاد استخدامها).
+- **u2-d5** (حوار التعارف — 12 كلمة): vorstellen/kennenlernen/freuen/gern/nett/Gespräch/auch/oder/natürlich/Hobby/lesen/Musik — 6 تبادلات كاملة + مصائد الأفعال الانعكاسية والمنفصلة وgern.
+- **u2-d6** (توليف + معركة الوحدة 2 — okay/super): حوار 6 تبادلات + تفريغ أخطاء الأسبوع (wo/woher · sprechen · das Mädchen) بعتبة 0.75.
+- الصوت: 25 مقطعاً — المانيفست **116 مساراً** · الكلمات **115** · الدروس **12** (الوحدتان 1+2 كاملتان).
+- النتيجة: **243/243 أخضر** + tsc + validator (132/0) + build ✓ (تحذير حجم حزمة >500KB — مقبول). التالي: **الوحدة 3 (الأرقام والوقت — 60 كلمة)**.
