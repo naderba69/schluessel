@@ -150,6 +150,23 @@ def build_all() -> None:
         ("word-woher", "woher.", "woher", ["a1-u2-d1"]),
         ("word-hier", "hier.", "hier", ["a1-u2-d1"]),
         ("word-dort", "dort.", "dort", ["a1-u2-d1"]),
+        ("word-leben", "leben.", "leben", ["a1-u2-d2"]),
+        ("word-stadt", "Stadt.", "stadt", ["a1-u2-d2"]),
+        ("word-haus", "Haus.", "haus", ["a1-u2-d2"]),
+        ("word-muttersprache", "Muttersprache.", "muttersprache", ["a1-u2-d2"]),
+        ("word-fremdsprache", "Fremdsprache.", "fremdsprache", ["a1-u2-d2"]),
+        ("word-zeitung", "Zeitung.", "zeitung", ["a1-u2-d3"]),
+        ("word-rechnung", "Rechnung.", "rechnung", ["a1-u2-d3"]),
+        ("word-maedchen", "Maedchen.", "maedchen", ["a1-u2-d3"]),
+        ("word-broetchen", "Broetchen.", "broetchen", ["a1-u2-d3"]),
+        ("word-kellner", "Kellner.", "kellner", ["a1-u2-d3"]),
+        ("word-lehrer", "Lehrer.", "lehrer", ["a1-u2-d3"]),
+        ("word-freiheit", "Freiheit.", "freiheit", ["a1-u2-d3"]),
+        ("word-moeglichkeit", "Moeglichkeit.", "moeglichkeit", ["a1-u2-d3"]),
+        ("word-gesundheit", "Gesundheit.", "gesundheit", ["a1-u2-d3"]),
+        ("word-freundschaft", "Freundschaft.", "freundschaft", ["a1-u2-d3"]),
+        ("word-schmetterling", "Schmetterling.", "schmetterling", ["a1-u2-d3"]),
+        ("word-zentrum", "Zentrum.", "zentrum", ["a1-u2-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

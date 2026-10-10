@@ -165,3 +165,10 @@
 - **d6** `kind:"integration"`: جسيمان فقط (alles-klar، bis-morgen) — تثبيت بلا تحميل جديد. العبر الثلاث (قوالب زمان غير sinnvoll · von/aus · woher للمنشأ) + معركة أسطورة 3 أسئلة **passingScore: 0.75** (مثل معركة د5 — تقصير مقصود). 2 مساراً فقط.
 - **u2-d1** (الوحدةة 2): Länder جديدة (Österreich, Niederlande, Griechenland, Polen, Russland, Portugal) + نطاق (Europa, Welt) + wo/woher/hier/dort. المصائد: wo مكان/woher منشأ (خطأ العربي «أين أنت من؟») · **Niederlande جمع** (die/den Niederlanden) · aus+Dativ. **لا مقدمة للوحدة 2** (الدرس يبدأ كالمعتاد).
 - البوابة: **243/243 + tsc + validator (85 ملفاً/0) + build** ✓.
+
+## D48 (2026-10-10): u2-d2 (اللغات والسكن) + u2-d3 (شفرة الجنس — أول ظهور)
+
+- **u2-d2**: 12 كلمة (6 معاد استخدامها من وحدة 1: sprache/deutsch/englisch/arabisch/wohnen/langsam + 6 جديدة: leben/stadt/haus/muttersprache/fremdsprache/wohnung). مصائد: sprechen+لغة بلا حرف جر · العنوان in+Dativ · المركّب يأخذ جنس آخر كلمة (die Muttersprache).
+- **u2-d3**: 12 كلمة جديدة كلها تجسّد شفرة الجنس (Genuscode): -ung/-heit/-keit/-schaft=die · -chen=das · -er/-ling=der · -um=das. مصائد: das Mädchen (تصغير) · die Lehrerin (المؤنث -in) · النهايات الأربعة die.
+- **اكتشاف**: درس بذرة قديم `a1-u3-d2` (كلمة واحدة) من أول commit — يبقى خارج السجل (ALL_LESSONS=9) لكن الفهرس العكسي يطالبه (wohnung usedInLessons تضم a1-u3-d2). والخلط (§3) إلزامي من يوم 3: interleavedWith مفعّل في u2-d3.
+- البوابة: **243/243 + tsc + validator (104 ملفاً/0) + build** ✓.

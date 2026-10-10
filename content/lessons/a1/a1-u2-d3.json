@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u2-d3",
+  "level": "A1",
+  "unit": 2,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst das Genus (der/die/das) aus der Wortendung bestimmen.",
+    "ar": "تستطيع تحديد التعريف der/die/das من نهاية الاسم"
+  },
+  "canDoDaily": [
+    "يُنتج التحديد الكامل der/die/das لأسماء اليوم من نهاياتها (شفرة الجنس الاشتقاقية)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "sprache",
+      "wohnung",
+      "freund"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "das Mädchen — لماذا das وليس die? (تخمين فقط)"
+        },
+        "choices": [
+          "لأن التصغير -chen دائماً das",
+          "لأن الفتيات محايدات!",
+          "صدفة"
+        ],
+        "answer": "لأن التصغير -chen دائماً das",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "zeitung",
+      "rechnung",
+      "maedchen",
+      "broetchen",
+      "kellner",
+      "lehrer",
+      "freiheit",
+      "moeglichkeit",
+      "gesundheit",
+      "freundschaft",
+      "schmetterling",
+      "zentrum"
+    ],
+    "grammarArsenalIds": [
+      "ars-genuscode"
+    ],
+    "storySentenceIds": [
+      "story-a2-u2-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "نهاية -ung تعني؟",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "die"
+          },
+          {
+            "q": "«الحساب من فضلك»؟",
+            "a": "Die Rechnung, bitte!"
+          }
+        ],
+        "interleavedWith": [
+          "wohnen",
+          "sprache"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "das Mädchen — ما التعريف؟ ولماذا؟",
+            "a": "das — لأن التصغير -chen دائماً das"
+          },
+          {
+            "q": "«النادل يحضر الحساب»؟",
+            "a": "Der Kellner bringt die Rechnung."
+          }
+        ],
+        "interleavedWith": [
+          "stadt",
+          "leben"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "نهاية -er (الفاعل) تعني؟",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der"
+          },
+          {
+            "q": "المعلّمة (مؤنث)؟",
+            "a": "die Lehrerin"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Das Genus neuer Wörter aus der Endung bestimmen",
+        "ar": "تحديد الجنس من نهاية الكلمة"
+      },
+      "situation": {
+        "de": "Im Kurs: neue Wörter auf der Tafel",
+        "ar": "في الدورة: كلمات جديدة على السبورة"
+      },
+      "successCriteria": [
+        "يحدد der/die/das لـ8 كلمات من نهاياتها ويشرح القاعدة بجملة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "die ___ (Zeitung) — ما التعريف؟",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "die"
+          },
+          {
+            "q": "«الفتاة تتعلم الألمانية»؟",
+            "a": "Das Mädchen lernt Deutsch."
+          },
+          {
+            "q": "نهاية -chen تعني؟",
+            "a": "das دائماً"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الصداقة»؟",
+            "a": "die Freundschaft"
+          },
+          {
+            "q": "نهاية -keit/-heit/-schaft تعني؟",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "die"
+          },
+          {
+            "q": "«المعلّمة»؟",
+            "a": "die Lehrerin"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الفراشة»؟",
+            "a": "der Schmetterling"
+          },
+          {
+            "q": "«المركز» — das أم der؟",
+            "choices": [
+              "das Zentrum",
+              "der Zentrum"
+            ],
+            "a": "das Zentrum"
+          },
+          {
+            "q": "«الخبزة الصغيرة»؟",
+            "a": "das Brötchen"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Endung verrät das Genus: -ung/-heit/-keit/-schaft = die, -chen/-lein = das, -er/-ling = der — dein erster Genuscode!",
+      "ar": "النهاية تكشف الجنس: -ung/-heit/-keit/-schaft = die، -chen/-lein = das، -er/-ling = der — أول شفرة جنس لديك!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~die Mädchen~~ (لأنها فتاة)",
+          "ar": "التصغير -chen = das دائماً"
+        },
+        "whyArabicSpeakerFails": "«الفتاة» مؤنثة في العربية فيُخمَّن die — لكن النهاية -chen تجبر الجنس على das مهما كان المعنى (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das Mädchen",
+          "ar": "الفتاة (das — لأن -chen)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~die Mädchen heißt Anna.~~",
+          "a": "Das Mädchen heißt Anna."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~das Zeitung~~ / ~~der Freundschaft~~",
+          "ar": "-ung/-heit/-keit/-schaft = die"
+        },
+        "whyArabicSpeakerFails": "العربية بلا أدوات جنس؛ العربي يخمّن عشوائياً — الشفرة تحسم: النهايات الأربعة die بلا استثناء تقريباً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Zeitung / die Freundschaft",
+          "ar": "الجريدة / الصداقة (die)"
+        },
+        "exercise": {
+          "q": "حدّد: Zeitung — der/die/das?",
+          "a": "die (لأن -ung)"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Lehrer~~ (للمعلّمة)",
+          "ar": "المؤنث يضيف -in"
+        },
+        "whyArabicSpeakerFails": "«المعلّمة» بالعربية بالتأنيث فقط؛ الألماني يغيّر الكلمة نفسها: der Lehrer ← die Lehrerin — وsex الحكم يبقى der للمذكر (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Lehrerin",
+          "ar": "المعلّمة (-in)"
+        },
+        "exercise": {
+          "q": "صحّح (المعلّمة): ~~die Lehrer~~",
+          "a": "die Lehrerin"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "zeitung",
+      "rechnung",
+      "maedchen",
+      "broetchen",
+      "kellner",
+      "lehrer",
+      "freiheit",
+      "moeglichkeit",
+      "gesundheit",
+      "freundschaft",
+      "schmetterling",
+      "zentrum"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Mädchen",
+      "https://www.duden.de/rechtschreibung/Zeitung",
+      "https://www.duden.de/rechtschreibung/Schmetterling"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/-chen",
+      "https://de.wiktionary.org/wiki/-ung"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-genuscode"
+  ],
+  "audioManifestRefs": [
+    "word-zeitung",
+    "word-rechnung",
+    "word-maedchen",
+    "word-broetchen",
+    "word-kellner",
+    "word-lehrer",
+    "word-freiheit",
+    "word-moeglichkeit",
+    "word-gesundheit",
+    "word-freundschaft",
+    "word-schmetterling",
+    "word-zentrum"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 2 — Genuscode (Derivation)",
+    "goetheWordListOverlap": [
+      "zeitung"
+    ]
+  }
+}

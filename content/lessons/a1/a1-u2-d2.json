@@ -1,0 +1,302 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u2-d2",
+  "level": "A1",
+  "unit": 2,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst sagen, wo du wohnst, und über deine Sprachen sprechen.",
+    "ar": "تستطيع أن تقول أين تسكن وتتحدث عن لغاتك"
+  },
+  "canDoDaily": [
+    "يقول أين يسكن (wohnen + في) وعن لغاته (sprechen + لغة مباشرة)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "tunesien",
+      "kommen",
+      "wo"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أتحدث العربية» — هل نقول sprechen über Arabisch? (تخمين فقط)"
+        },
+        "choices": [
+          "نعم: über Arabisch",
+          "لا: sprechen Arabisch مباشرة",
+          "لا أعرف"
+        ],
+        "answer": "لا: sprechen Arabisch مباشرة",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "sprache",
+      "deutsch",
+      "englisch",
+      "arabisch",
+      "wohnen",
+      "langsam",
+      "leben",
+      "stadt",
+      "haus",
+      "muttersprache",
+      "fremdsprache",
+      "wohnung"
+    ],
+    "grammarArsenalIds": [
+      "ars-sprachen-wohnen"
+    ],
+    "storySentenceIds": [
+      "story-a2-u2-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«اللغة»؟",
+            "a": "die Sprache"
+          },
+          {
+            "q": "«أتحدث ثلاث لغات»؟",
+            "a": "Ich spreche drei Sprachen."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "أي جملة صحيحة؟",
+            "choices": [
+              "Ich spreche über Deutsch.",
+              "Ich spreche Deutsch."
+            ],
+            "a": "Ich spreche Deutsch."
+          },
+          {
+            "q": "«أسكن في شارع ماينتس»؟",
+            "a": "Ich wohne in der Mainzer Straße."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«لغتي الأم»؟",
+            "a": "meine Muttersprache"
+          },
+          {
+            "q": "wohnen أم leben للعنوان؟ «أسكن في شقة»؟",
+            "a": "Ich wohne in einer Wohnung."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Über Sprachen und Wohnort sprechen",
+        "ar": "التحدث عن اللغات ومكان السكن"
+      },
+      "situation": {
+        "de": "Im Sprachkurs: Vorstellungsrunde",
+        "ar": "في الدورة: جولة تعريف"
+      },
+      "successCriteria": [
+        "يقول جملتين عن لغاته وجملة عن سكنه بلا خطأ sprechen/wohnen"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«اللغة»؟",
+            "a": "die Sprache"
+          },
+          {
+            "q": "أي جملة صحيحة؟",
+            "choices": [
+              "Ich spreche von Deutsch.",
+              "Ich spreche Deutsch."
+            ],
+            "a": "Ich spreche Deutsch."
+          },
+          {
+            "q": "ترتيب؟ wohnst / Ich / in Tunis",
+            "a": "Ich wohne in Tunis."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«البيت»؟",
+            "a": "das Haus"
+          },
+          {
+            "q": "«لغتي الأم العربية»؟",
+            "a": "Meine Muttersprache ist Arabisch."
+          },
+          {
+            "q": "wohnen أم leben؟ «أعيش بسعادة في برلين»؟",
+            "a": "Ich lebe gern in Berlin."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المدينة»؟",
+            "a": "die Stadt"
+          },
+          {
+            "q": "أي جملة صحيحة؟",
+            "choices": [
+              "Ich wohne in der Mainzer Straße 5.",
+              "Ich wohne in die Mainzer Straße 5."
+            ],
+            "a": "Ich wohne in der Mainzer Straße 5."
+          },
+          {
+            "q": "«اللغة الأجنبية»؟",
+            "a": "die Fremdsprache"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute sprichst du über deine Sprachen und deinen Wohnort — zwei Sätze, die dich überall begleiten!",
+      "ar": "اليوم تتحدث عن لغاتك ومكان سكنك — جملتان يرافقانك في كل مكان!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich spreche über Deutsch.~~ (أتحدث الألمانية)",
+          "ar": "sprechen + لغة = بلا حرف جر"
+        },
+        "whyArabicSpeakerFails": "«أتحدث العربية» قد تُفهم «أتحدث عن العربية»؛ الألمانية تفرّق: sprechen + لغة مباشرة، وsprechen über = يتكلم عن موضوع (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich spreche Arabisch.",
+          "ar": "أتحدث العربية."
+        },
+        "exercise": {
+          "q": "صحّح (للغة): ~~Ich spreche über Arabisch.~~",
+          "a": "Ich spreche Arabisch."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich wohne in die Mainzer Straße 5.~~",
+          "ar": "العنوان: in + Dativ (der)"
+        },
+        "whyArabicSpeakerFails": "«أسكن في شارع…» بلا تغيير أدوات؛ الألمانية: في العنوان in der Straße — نفس منطق aus den Niederlanden تماماً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich wohne in der Mainzer Straße 5.",
+          "ar": "أسكن في شارع ماينتس 5."
+        },
+        "exercise": {
+          "q": "صحّح: ~~in die Wohnung wohnen~~",
+          "a": "in der Wohnung wohnen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~das Muttersprache~~ (لأن das?)",
+          "ar": "المركّب يأخذ جنس آخر كلمة"
+        },
+        "whyArabicSpeakerFails": "«اللغة الأم» مركّب؛ العربي يخمّن الجنس من الكلمة الأولى — الألماني يأخذه من آخر جزء: Mutter+Sprache → die Muttersprache (لأن die Sprache) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Muttersprache",
+          "ar": "اللغة الأم (die — من die Sprache)"
+        },
+        "exercise": {
+          "q": "حدّد: ~~das Muttersprache~~ أم die Muttersprache?",
+          "a": "die Muttersprache"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "sprache",
+      "deutsch",
+      "englisch",
+      "arabisch",
+      "wohnen",
+      "langsam",
+      "leben",
+      "stadt",
+      "haus",
+      "muttersprache",
+      "fremdsprache",
+      "wohnung"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Sprache",
+      "https://www.duden.de/rechtschreibung/wohnen",
+      "https://www.duden.de/rechtschreibung/Muttersprache"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/sprechen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-sprachen-wohnen"
+  ],
+  "audioManifestRefs": [
+    "word-sprache",
+    "word-deutsch",
+    "word-englisch",
+    "word-arabisch",
+    "word-wohnen",
+    "word-langsam",
+    "word-leben",
+    "word-stadt",
+    "word-haus",
+    "word-muttersprache",
+    "word-fremdsprache",
+    "word-wohnung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 2 (Ich komme aus …) — Sprachen & Wohnort",
+    "goetheWordListOverlap": [
+      "wohnen",
+      "sprechen",
+      "sprache"
+    ]
+  }
+}

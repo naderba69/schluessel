@@ -104,3 +104,9 @@
 - **u2-d1** (الوحدةة 2 — 12 كلمة): Länder جديدة (Österreich/Niederlande/Griechenland/Polen/Russland/Portugal + Europa/Welt) + wo/woher/hier/dort — مصائد: wo مكان/woher منشأ · Niederlande جمع · aus+Dativ.
 - الصوت: 14 مقطعاً — المانيفست **74 مساراً** · الكلمات **73** · الدروس **7** (d1–d6 + u2-d1).
 - النتيجة: **243/243 أخضر** + tsc + validator (85/0) + build — **الوحدةة 1 مكتملة** ✅. التالي: u2-d2..u2-d6 ثم الوحدات 3–12.
+
+## حملة المحتوى — الدفعة 4 (2026-10-10) — الوحدة 2: u2-d2 + u2-d3 (D48)
+- **u2-d2** (اللغات والسكن — 12 كلمة): إعادة تدريب مقصودة لـ6 كلمات (sprache/deutsch/englisch/arabisch/wohnen/langsam) + 6 جديدة (leben/stadt/haus/muttersprache/fremdsprache/wohnung) — مصائد: sprechen بلا von · العنوان in+Dativ · جنس المركّب.
+- **u2-d3** (شفرة الجنس الاشتقاقية — أول ظهور — 12 كلمة): Zeitung/Rechnung (-ung=die) · Mädchen/Brötchen (-chen=das) · Kellner/Lehrer (-er=der) · Freiheit/Gesundheit (-heit) · Möglichkeit (-keit) · Freundschaft (-schaft) · Schmetterling (-ling) · Zentrum (-um) — مصائد: das Mädchen · die Lehrerin · die vier Endungen.
+- الصوت: 17 مقطعاً — المانيفست **91 مساراً** · الكلمات **90** · الدروس **9** (d1–d6 + u2-d1..d3).
+- النتيجة: **243/243 أخضر** + tsc + validator (104/0) + build. **الوحدتان 1 و2: 9 من 12 يوماً مؤلفة.** التالي: u2-d4 (Vokalquantität + ß/ss) ثم u2-d5 (محادثة) وu2-d6 (معركة الوحدة 2).
