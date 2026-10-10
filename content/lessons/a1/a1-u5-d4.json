@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d4",
+  "level": "A1",
+  "unit": 5,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst eine Bestellung verneinen (kein/nicht).",
+    "ar": "تنفي طلباً بـ kein/nicht"
+  },
+  "canDoDaily": [
+    "ينفي طلباً بـ kein (للأسماء) وnicht (للأفعال والصفات)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "salat",
+      "milch",
+      "tasse"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«لا أريد قهوة» — Ich möchte nicht Kaffee أم keinen Kaffee? (تخمين فقط)"
+        },
+        "choices": [
+          "Ich möchte keinen Kaffee. (kein للنكرة/الاسم)",
+          "Ich möchte nicht Kaffee.",
+          "Ich möchte kein Kaffee."
+        ],
+        "answer": "Ich möchte keinen Kaffee. (kein للنكرة/الاسم)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "scharf",
+      "salzig",
+      "frisch",
+      "portion",
+      "teller",
+      "laeffel",
+      "gabel",
+      "messer",
+      "gast",
+      "bestellung",
+      "trinkgeld",
+      "getraenk"
+    ],
+    "grammarArsenalIds": [
+      "ars-kein-nicht"
+    ],
+    "storySentenceIds": [
+      "story-a5-u5-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«لا أريد قهوة»؟",
+            "a": "Ich möchte keinen Kaffee."
+          },
+          {
+            "q": "«لا أريد حليباً»؟",
+            "a": "Ich möchte keine Milch."
+          }
+        ],
+        "interleavedWith": [
+          "kaffee",
+          "milch"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الحساء ليس حاراً»؟",
+            "a": "Die Suppe ist nicht scharf."
+          },
+          {
+            "q": "«لا شكر»؟",
+            "a": "Nein, danke."
+          }
+        ],
+        "interleavedWith": [
+          "suppe",
+          "gemuese"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الزبون يطلب طبقاً»؟",
+            "a": "Der Gast bestellt einen Teller."
+          },
+          {
+            "q": "«أنا لا أدفع اليوم»؟",
+            "a": "Ich zahle heute nicht."
+          }
+        ],
+        "interleavedWith": [
+          "bestellen",
+          "zahlen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Eine Bestellung verneinen",
+        "ar": "نفي طلب"
+      },
+      "situation": {
+        "de": "Im Restaurant: bestellen und verneinen",
+        "ar": "في المطعم: الطلب والنفي"
+      },
+      "successCriteria": [
+        "نفيان: kein + اسم، وnicht + فعل/صفة + جملة مهذبة Nein, danke"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«لا أريد قهوة»؟",
+            "a": "Ich möchte keinen Kaffee."
+          },
+          {
+            "q": "«الطبق»؟",
+            "a": "der Teller"
+          },
+          {
+            "q": "«الحساء ليس حاراً»؟",
+            "a": "Die Suppe ist nicht scharf."
+          },
+          {
+            "q": "«حصة صغيرة من فضلك»؟",
+            "a": "Eine kleine Portion, bitte."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الشوكة والسكين»؟",
+            "a": "die Gabel und das Messer"
+          },
+          {
+            "q": "«لا أريد حليباً»؟",
+            "a": "Ich möchte keine Milch."
+          },
+          {
+            "q": "«البقشيش»؟",
+            "a": "das Trinkgeld"
+          },
+          {
+            "q": "«أدفع اليوم لا» (نفي)؟",
+            "a": "Ich zahle heute nicht."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المشروبات»؟",
+            "a": "die Getränke"
+          },
+          {
+            "q": "«الملعقة»؟",
+            "a": "der Löffel"
+          },
+          {
+            "q": "«الزبون»؟",
+            "a": "der Gast (الجمع: die Gäste)"
+          },
+          {
+            "q": "kein أم nicht: «لا أريد طبقاً»؟",
+            "a": "keinen Teller (kein + اسم)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Verneinen im Restaurant: keinen Kaffee, keine Milch (kein + اسم) — und nicht für die Verben und Adjektive!",
+      "ar": "النفي في المطعم: keinen Kaffee وkeine Milch (kein + اسم) — أما الأفعال والصفات فمع nicht!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich möchte nicht Kaffee.~~",
+          "ar": "نفي الاسم = kein لا nicht"
+        },
+        "whyArabicSpeakerFails": "«لا أريد قهوة» تُبنى بـ «لا» قبل الاسم؛ الألماني ينفي الاسم بـ kein (مشتقة من kein‑) لا nicht (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich möchte keinen Kaffee.",
+          "ar": "لا أريد قهوة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich möchte nicht Bier.~~",
+          "a": "Ich möchte kein Bier."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~kein scharf~~ / ~~kein zahle~~",
+          "ar": "نفي الفعل/الصفة = nicht"
+        },
+        "whyArabicSpeakerFails": "«الحساء ليس حاراً» بالنفي قبل الخبر؛ الألماني: ist nicht scharf — nicht قبل الصفة/الفعل (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "nicht + فعل/صفة · kein + اسم",
+          "ar": "قاعدة الجرس: الاسم؟ kein. الباقي؟ nicht."
+        },
+        "exercise": {
+          "q": "أكمل: Die Suppe ist ___ scharf. Und ich nehme ___ Salat.",
+          "a": "nicht / keinen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~keinen Milch~~ / ~~kein Kaffee~~ (Akk)",
+          "ar": "نهايات kein الثلاث"
+        },
+        "whyArabicSpeakerFails": "der Akk = einen/keinen (مثل einen Kaffee الموعود) · die = kein · das/plural = kein — ثلاث نهايات لكلمة واحدة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "keinen Kaffee (der) / keine Milch (die) / kein Bier (das)",
+          "ar": "انتبه للجنس والنصب"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Milch und ___ Bier, bitte. (Negation)",
+          "a": "keine / kein"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "scharf",
+      "salzig",
+      "frisch",
+      "portion",
+      "teller",
+      "laeffel",
+      "gabel",
+      "messer",
+      "gast",
+      "bestellung",
+      "trinkgeld",
+      "getraenk"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/kein",
+      "https://www.duden.de/rechtschreibung/Teller",
+      "https://www.duden.de/rechtschreibung/Bestellung"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/kein"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-kein-nicht"
+  ],
+  "audioManifestRefs": [
+    "word-scharf",
+    "word-salzig",
+    "word-frisch",
+    "word-portion",
+    "word-teller",
+    "word-laeffel",
+    "word-gabel",
+    "word-messer",
+    "word-gast",
+    "word-bestellung",
+    "word-trinkgeld",
+    "word-getraenk"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Verneinung im Restaurant",
+    "goetheWordListOverlap": [
+      "teller"
+    ]
+  }
+}

@@ -159,3 +159,9 @@
 - **u5-d2** (المشروبات والمقهى — 12 كلمة): Wasser/Milch/Saft/Bier/Wein/Tee/trinken/Speisekarte/bestellen/Glas/Flasche/zahlen — مصائد: Einen Tee, bitte (مفعول الطلب) · جنس السوائل · Speisekarte مركّبة.
 - الصوت: 24 مقطعاً — المانيفست **264 مساراً** · الكلمات **263** · الدروس **26** (الوحدات 1–4 + الوحدة 5: يومان).
 - النتيجة: **243/243 أخضر** + tsc + validator (293/0/0) + build ✓. التالي: u5-d3 (möchte/wollen) وu5-d4 (kein/nicht) وu5-d5 (مهمة المقهى) وu5-d6 (المعركة).
+
+## حملة المحتوى — الدفعة 13 (2026-10-10) — u5-d3 + u5-d4 (D57)
+- **u5-d3** (Mahlzeiten + möchte/wollen — 12 كلمة): Frühstück/Mittagessen/Abendessen/Butter/Marmelade/Kuchen/Eis/Appetit/schmecken/satt/Kartoffel/Tomate — مصائد: möchte بلا zu · bin satt ↔ habe Hunger · Eis↔Ei.
+- **u5-d4** (Tisch + kein/nicht — 12 كلمة): scharf/salzig/frisch/Portion/Teller/Löffel/Gabel/Messer/Gast/Bestellung/Trinkgeld/Getränk — مصائد: kein للنفي الاسم · nicht للفعل/الصفة · نهاية kein الثلاث.
+- الصوت: 24 مقطعاً — المانيفست **288 مساراً** · الكلمات **287** · الدروس **28** (الوحدات 1–4 + الوحدة 5: 4 أيام).
+- النتيجة: **243/243 أخضر** + tsc + validator (319/0/0) + build ✓. (D57) التالي: u5-d5 (17 كلمة + مهمة المقهى) وu5-d6 (المعركة).

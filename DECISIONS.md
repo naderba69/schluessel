@@ -225,3 +225,10 @@
 - **u5-d1** (12 كلمة): Brot/Wurst/Fleisch/Fisch/Salat/Suppe/Ei/Reis/Nudeln/Obst/Gemüse/Hunger. مصائد: **Ich habe Hunger** (لا bin) · **die Nudeln جمع فقط** (المرة الثالثة للنمط) · **die Eier** (شاذ).
 - **u5-d2** (12 كلمة): Wasser/Milch/Saft/Bier/Wein/Tee/trinken/Speisekarte/bestellen/Glas/Flasche/zahlen. مصائد: **Einen Tee, bitte!** (الطلب مفعول به) · جنس السوائل بلا نظام (die Milch رغم السوائل) · **die Speisekarte** (مركّب — للمرة الثالثة).
 - البوابة: **243/243 + tsc + validator (293 ملفاً/0/0) + build** ✓.
+
+## D57 (2026-10-10): u5-d3 (möchte/wollen) + u5-d4 (kein/nicht) — ومصيدة enums
+
+- **u5-d3** (12 كلمة): Frühstück/Mittagessen/Abendessen/Butter/Marmelade/Kuchen/Eis/Appetit/schmecken/satt/Kartoffel/Tomate. مصائد: **möchte + Infinitiv بلا zu** (النهاية) · **Ich bin satt ↔ Ich habe Hunger** (انعكاس زوجي) · **Eis ↔ Ei** (زوج أدنى).
+- **u5-d4** (12 كلمة): scharf/salzig/frisch/Portion/Teller/Löffel/Gabel/Messer/Gast/Bestellung/Trinkgeld/Getränk. مصائد: **نفي الاسم = kein (keinen Kaffee)** · **نفي الفعل/الصفة = nicht** · **نهايات kein الثلاث** (keinen/keine/kein).
+- **معركة تقنية (مُوثَّقة للدرس):** مخطط الكلمة يستخدم **enums** لا نصوصاً: phoneticRisks ∈ [ch-ich-laut, ch-ach-laut, umlaut-u, umlaut-o, umlaut-a, vowel-long-short, auslaut-d/b/g, r-uvular, sp-st-initial, ig-ending, double-consonant, z, v-f] · grammarRisks ∈ [needs-ein, needs-ist, v2-order, gender-vs-natural, needs-es-dummy, kein-vs-nicht, trennbar, feste-praep, dative-verb, reflexive, zu-infinitiv, plural-irregular, adjective-decl, n-deklination] · goetheList ∈ [A1,A2,B1,B2] · **schemaVersion إلزامي**. + قاعدة validator: كل اسم ذي جنس يحتاج بطاقة gender في srsCardTypes.
+- البوابة: **243/243 + tsc + validator (319 ملفاً/0/0) + build** ✓.

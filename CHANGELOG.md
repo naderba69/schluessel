@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## 2026-10-10 — حملة المحتوى — الدفعة 13
+- إضافة: u5-d3 (Mahlzeiten + möchte/wollen — 12 كلمة) + u5-d4 (Tisch + kein/nicht — 12 كلمة) + 24 مقطعاً (288 مساراً).
+- إصلاح مخطط: enums الصحيحة (phoneticRisks/grammarRisks/goetheList) + schemaVersion + بطاقة gender. (D57)
+- النتيجة: **243/243 أخضر** · validator 319 ملفاً/0/0.
+
 ## 2026-10-10 — حملة المحتوى — الدفعة 12
 - إضافة: u5-d1 (Essen — 12 كلمة) + u5-d2 (Trinken/Restaurant — 12 كلمة) + 24 مقطعاً صوتياً (264 مساراً).
 - النتيجة: **243/243 أخضر** · validator 293 ملفاً/0/0. (D56)

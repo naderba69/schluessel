@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d3",
+  "level": "A1",
+  "unit": 5,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst essen bestellen mit möchte/wollen.",
+    "ar": "تطلب طعامك بـ möchte وwollen"
+  },
+  "canDoDaily": [
+    "يطلب طعاماً بـ möchte/wollen مع الفعل في النهاية"
+  ],
+  "warmup": {
+    "cardIds": [
+      "essen",
+      "brot",
+      "hunger"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أريد أن آكل» — Ich möchte zu essen أم Ich möchte essen? (تخمين فقط)"
+        },
+        "choices": [
+          "Ich möchte essen. (الفعل في النهاية)",
+          "Ich möchte zu essen.",
+          "Ich möchte essen zu."
+        ],
+        "answer": "Ich möchte essen. (الفعل في النهاية)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "fruehstueck",
+      "mittagessen",
+      "abendessen",
+      "butter",
+      "marmelade",
+      "kuchen",
+      "eis",
+      "appetit",
+      "schmecken",
+      "satt",
+      "kartoffel",
+      "tomate"
+    ],
+    "grammarArsenalIds": [
+      "ars-moechte-wollen"
+    ],
+    "storySentenceIds": [
+      "story-a5-u5-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أريد خبزاً بالزبدة»؟",
+            "a": "Ich möchte Brot mit Butter."
+          },
+          {
+            "q": "«ماذا يوجد للغداء»؟",
+            "a": "Was gibt es zum Mittagessen?"
+          }
+        ],
+        "interleavedWith": [
+          "kaese",
+          "milch"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الكعكة لذيذة»؟",
+            "a": "Der Kuchen schmeckt gut."
+          },
+          {
+            "q": "«أريد آيس كريم» (das)؟",
+            "a": "Ich möchte ein Eis, bitte."
+          }
+        ],
+        "interleavedWith": [
+          "ei",
+          "suppe"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أنا شبعان»؟",
+            "a": "Ich bin satt."
+          },
+          {
+            "q": "«سأطلب سلطة» (تقرير للهوية)؟",
+            "a": "Ich will einen Salat bestellen."
+          }
+        ],
+        "interleavedWith": [
+          "hunger",
+          "bestellen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Essen mit möchte bestellen",
+        "ar": "طلب طعام بـ möchte"
+      },
+      "situation": {
+        "de": "Im Restaurant: Mittagessen",
+        "ar": "في المطعم: الغداء"
+      },
+      "successCriteria": [
+        "طلبان بـ möchte مع الفعل في النهاية + جملة schmecken واحدة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الفطور»؟",
+            "a": "das Frühstück"
+          },
+          {
+            "q": "«أريد كعكة»؟",
+            "a": "Ich möchte einen Kuchen."
+          },
+          {
+            "q": "«أنا شبعان»؟",
+            "a": "Ich bin satt."
+          },
+          {
+            "q": "«بالهناء»؟",
+            "a": "Guten Appetit!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الغداء»؟",
+            "a": "das Mittagessen"
+          },
+          {
+            "q": "«أريد آيس كريم»؟",
+            "a": "Ich möchte ein Eis, bitte."
+          },
+          {
+            "q": "«الكعكة لذيذة»؟",
+            "a": "Der Kuchen schmeckt gut."
+          },
+          {
+            "q": "«أريد أن آكل»؟",
+            "a": "Ich möchte essen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«العشاء»؟",
+            "a": "das Abendessen"
+          },
+          {
+            "q": "«البطاطا والطماطم»؟",
+            "a": "die Kartoffeln und die Tomaten"
+          },
+          {
+            "q": "«الزبدة والمربّى»؟",
+            "a": "die Butter und die Marmelade"
+          },
+          {
+            "q": "satt — مع haben أم sein?",
+            "a": "Ich bin satt (sein) ↔ Ich habe Hunger (haben)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Dein Mittagessen: Brot mit Butter und Marmelade, dazu ein Eis — und am Ende: „Ich bin satt!“",
+      "ar": "غدائك: خبز بالزبدة والمربّى، وبعده آيس كريم — وفي النهاية: «أنا شبعان!»"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich möchte zu essen.~~",
+          "ar": "möchte + مصدر بلا zu"
+        },
+        "whyArabicSpeakerFails": "«أريد أن آكل» لها «أن»؛ الألماني möchte ينصب الفعل مباشرةً وفي النهاية — zu حذف إلزامي (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich möchte essen.",
+          "ar": "أريد أن آكل."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich möchte zu trinken.~~",
+          "a": "Ich möchte trinken."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich bin Hunger.~~ / ~~Ich habe satt.~~",
+          "ar": "Hunger = haben · satt = sein"
+        },
+        "whyArabicSpeakerFails": "الفعلان يتبادلان بالعربية (جوعان/شبعان)؛ الألماني: Hunger مع haben وsatt مع sein — انعكاس زوجي (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe Hunger. / Ich bin satt.",
+          "ar": "أنا جوعان. / أنا شبعان."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ Hunger. Ich ___ satt.",
+          "a": "habe / bin"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~das Ei~~ (آيس كريم) / ~~ein Eis~~ (بيضة)",
+          "ar": "Eis ↔ Ei زوج أدنى"
+        },
+        "whyArabicSpeakerFails": "الصورتان متقاربتان جداً صوتياً (آيس/آي)؛ الحفظ بالجنس والجمع: Eier ↔ Eis (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das Eis (آيس كريم) / das Ei (بيضة)",
+          "ar": "زوج أدنى: انتبه للحرف"
+        },
+        "exercise": {
+          "q": "اختر: «آيس كريم من فضلك» = Ein ___ , bitte.",
+          "a": "Eis"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "fruehstueck",
+      "mittagessen",
+      "abendessen",
+      "butter",
+      "marmelade",
+      "kuchen",
+      "eis",
+      "appetit",
+      "schmecken",
+      "satt",
+      "kartoffel",
+      "tomate"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Fruehstueck",
+      "https://www.duden.de/rechtschreibung/Marmelade",
+      "https://www.duden.de/rechtschreibung/Eis"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/schmecken"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-moechte-wollen"
+  ],
+  "audioManifestRefs": [
+    "word-fruehstueck",
+    "word-mittagessen",
+    "word-abendessen",
+    "word-butter",
+    "word-marmelade",
+    "word-kuchen",
+    "word-eis",
+    "word-appetit",
+    "word-schmecken",
+    "word-satt",
+    "word-kartoffel",
+    "word-tomate"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Mahlzeiten bestellen",
+    "goetheWordListOverlap": [
+      "fruehstueck"
+    ]
+  }
+}
