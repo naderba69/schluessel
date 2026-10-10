@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "primaryCourse": "Netzwerk neu (Klett)",
+  "secondaryCourse": "Schritte international neu",
+  "vocabularyAuthority": "Goethe-Institut word lists",
+  "levels": {
+    "A1": {
+      "chapters": [
+        {
+          "id": "k1",
+          "title": "Hallo! Wie geht's?",
+          "grammarPoints": ["sein/haben", "Artikel Nominativ", "Fragepronomen"],
+          "vocabTopics": ["Begrüßung", "Länder", "Sprachen"],
+          "requiresPrevious": []
+        },
+        {
+          "id": "k3",
+          "title": "Zahlen und Uhrzeit",
+          "grammarPoints": ["Zahlen 20–1000", "Uhrzeit", "um/in"],
+          "vocabTopics": ["Zahlen", "Uhrzeit", "Preise"],
+          "requiresPrevious": ["k1"]
+        }
+      ],
+      "targetWordCount": 700
+    },
+    "A2": { "chapters": [], "targetWordCount": 750 },
+    "B1": { "chapters": [], "targetWordCount": 1000 },
+    "B2": { "chapters": [], "targetWordCount": 1100 }
+  }
+}

@@ -1,0 +1,9 @@
+// index.ts — نقطة التصدير الوحيدة لمخططات البيانات (مصدر واحد للحقيقة — القانون 30)
+export * from "./common.js";
+export * from "./word.js";
+export * from "./card.js";
+export * from "./lesson.js";
+export * from "./learner-state.js";
+export * from "./manifest.js";
+export * from "./arsenal.js";
+export * from "./unit0.js";

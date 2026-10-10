@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u1-d1",
+  "level": "A1",
+  "unit": 1,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst dich vorstellen: Name, Herkunft, Begrüßung.",
+    "ar": "تستطيع تقديم نفسك: الاسم، الأصل، التحية."
+  },
+  "canDoDaily": ["يُحيّي ويقول اسمه من أين هو في 3 جمل"],
+  "warmup": { "cardIds": ["hallo", "heissen"] },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": { "de": "Wie begrüßt man auf Deutsch am Tag? (تخمين فقط)" },
+        "choices": ["Guten Tag", "Gute Nacht", "Auf Wiedersehen"],
+        "answer": "Guten Tag",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": ["hallo", "heissen", "guten-tag"],
+    "grammarArsenalIds": ["ars-sein-haben"],
+    "storySentenceIds": ["story-a1-u1-s1"],
+    "dualCodingRequired": true,
+    "riskFlagsShown": ["auslaut-g"]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          { "q": "«مرحبا، اسمي يوسف» بالألمانية؟", "a": "Hallo, ich heiße Yusuf." },
+          { "q": "«طاب يومك»؟", "a": "Guten Tag" }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          { "q": "heiße / Ich / Yusuf", "a": "Ich heiße Yusuf." },
+          { "q": "aus / Ich / Tunesien / bin", "a": "Ich bin aus Tunesien." }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "speaking",
+        "items": [{ "q": "عرّف بنفسك في جملة واحدة (تسجيل صوتي)", "a": "Hallo, ich heiße ... und ich bin aus ..." }],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": { "de": "Sich vorstellen", "ar": "تقديم النفس" },
+      "situation": { "de": "Am ersten Arbeitstag", "ar": "في أول يوم عمل" },
+      "successCriteria": ["يستخدم تحية + heiße + bin aus في جمل صحيحة"]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          { "q": "Hallo = ?", "choices": ["مرحبا", "وداعا"], "a": "مرحبا" },
+          { "q": "Ich ___ Yusuf.", "a": "heiße" },
+          { "q": "ترتيب؟ Ich / bin / aus / Tunesien", "a": "Ich bin aus Tunesien." }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          { "q": "Guten Tag = ?", "choices": ["تحية نهارية", "تصبح على خير"], "a": "تحية نهارية" },
+          { "q": "Ich ___ neu.", "a": "bin" },
+          { "q": "ترجم: اسمي يوسف", "a": "Ich heiße Yusuf." }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          { "q": "heißen = ?", "a": "يسمى" },
+          { "q": "أكمل: Hallo! Ich ___ Yusuf.", "a": "heiße" },
+          { "q": "أي جملة صحيحة؟", "choices": ["Ich bin aus Tunesien", "Ich aus Tunesien bin"], "a": "Ich bin aus Tunesien" }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute hast du dich vorgestellt: Begrüßung, Name, Herkunft.",
+      "ar": "اليوم قدمت نفسك: تحية، اسم، أصل."
+    },
+    "warningCards": [
+      {
+        "commonError": { "de": "~~Ich Yusuf~~", "ar": "حذف فعل الكينونة" },
+        "whyArabicSpeakerFails": "الجملة الاسمية العربية لا تحتاج رابطاً (أنا يوسف) — الألمانية تحتاج ist/heiße دائماً (خريطة التداخل 10‑ي)",
+        "correct": { "de": "Ich heiße Yusuf. / Ich bin aus Tunesien.", "ar": "اسمي يوسف. / أنا من تونس." },
+        "exercise": { "q": "صحّح: ~~Er neu hier~~", "a": "Er ist neu hier." }
+      }
+    ],
+    "srsBundleWordIds": ["hallo", "heissen", "guten-tag"]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/hallo",
+      "https://www.duden.de/rechtschreibung/heissen"
+    ],
+    "wiktionary": ["https://de.wiktionary.org/wiki/hei%C3%9Fen"],
+    "goethe": []
+  },
+  "usedArsenalIds": ["ars-sein-haben"],
+  "audioManifestRefs": [],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?)",
+    "goetheWordListOverlap": ["hallo", "heissen"]
+  }
+}

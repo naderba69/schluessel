@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u3-d2",
+  "level": "A1",
+  "unit": 3,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst Zahlen bis 1000 sagen und einen Preis nennen.",
+    "ar": "تستطيع ذكر الأرقام حتى 1000 وتسمية سعر."
+  },
+  "canDoDaily": ["يذكر السعر والرقم الكبير"],
+  "warmup": { "cardIds": ["wohnung", "tisch"] },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": { "de": "Wie sagt man 21?" },
+        "choices": ["einundzwanzig", "zweieins", "zwanzigeins"],
+        "answer": "einundzwanzig",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": ["Zahlen 1–20"]
+  },
+  "praesentation": {
+    "wordIds": ["wohnung"],
+    "grammarArsenalIds": ["ars-zahlen"],
+    "storySentenceIds": ["story-a1-u3-s2"],
+    "dualCodingRequired": true,
+    "riskFlagsShown": ["vowel-long-short"]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [{ "q": "Wie viel kostet das?", "a": "21 Euro" }],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "gap-fill",
+        "items": [{ "q": "Ich habe ___ Euro.", "a": "einundzwanzig" }],
+        "interleavedWith": ["a1-u2-d3"],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [{ "q": "kostet / Das / 21 / Euro", "a": "Das kostet 21 Euro." }],
+        "interleavedWith": ["a1-u1-d5"],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": { "de": "Ein Ticket kaufen", "ar": "شراء تذكرة" },
+      "situation": { "de": "Am Bahnhof", "ar": "في المحطة" },
+      "successCriteria": ["يستخدم رقماً صحيحاً في جملة كاملة", "يستخدم صيغة طلب مهذبة"]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      { "items": [{ "q": 1 }, { "q": 2 }, { "q": 3 }], "passingScore": 0.75 },
+      { "items": [{ "q": 4 }, { "q": 5 }, { "q": 6 }], "passingScore": 0.75 },
+      { "items": [{ "q": 7 }, { "q": 8 }, { "q": 9 }], "passingScore": 0.75 }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute hast du Zahlen bis 1000 und Preise gelernt.",
+      "ar": "اليوم تعلمت الأرقام حتى 1000 والأسعار."
+    },
+    "warningCards": [
+      {
+        "commonError": { "de": "einundzwanzig → ~~zweieins~~", "ar": "قلب ترتيب الجزأين" },
+        "whyArabicSpeakerFails": "العربية تضع الأصغر قبل الأكبر (واحد وعشرون) لكن بترتيب معكوس عن الألمانية في الصياغة الكاملة",
+        "correct": { "de": "einundzwanzig", "ar": "واحد وعشرون (الأصغر أولاً دائماً)" },
+        "exercise": { "q": "31؟", "a": "einunddreißig" }
+      }
+    ],
+    "srsBundleWordIds": ["wohnung"]
+  },
+  "gReferences": {
+    "duden": ["https://www.duden.de/rechtschreibung/Wohnung"],
+    "wiktionary": ["https://de.wiktionary.org/wiki/Wohnung"],
+    "goethe": []
+  },
+  "usedArsenalIds": ["ars-zahlen"],
+  "audioManifestRefs": ["word-wohnung"],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen/Uhrzeit)",
+    "goetheWordListOverlap": ["wohnung"]
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+.env
+# نماذج كبيرة — تُنزَّل بأمر موثّق (S0.9/S0.10) ولا تُلتزم في git
+tools/models/
+tools/piper-voices/
+*.tmp.wav

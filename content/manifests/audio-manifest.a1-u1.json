@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "audio-manifest-a1-u1",
+  "generator": "piper-tts-local",
+  "voiceLicense": "CC0 (Thorsten-Voice)",
+  "tracks": [
+    {
+      "id": "word-hallo",
+      "file": "words/audio/de-DE/word-hallo.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Hallo.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 792,
+      "sizeBytes": 3857,
+      "hash": "sha256:a90154c2f6eb068a351da44002bbfe51e64d94aaf9759851047f6fcdb4db5a70",
+      "pcmSha256": "a2fa14e71bf58b7b798ec581a86280c778fe0aca43f361b6e4b47b87255a1e8c",
+      "rmsDb": -17.0
+    },
+    {
+      "id": "word-heissen",
+      "file": "words/audio/de-DE/word-heissen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "heißen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 1001,
+      "sizeBytes": 4625,
+      "hash": "sha256:10f9cb0294bdff785e61847ec3a437d2b6c09189f84bb87cdd122be183043663",
+      "pcmSha256": "d52f15a4a7d59b68281511e56257e2a5b03bc8775151bf7747ecd536ef4c7e40",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "word-guten-tag",
+      "file": "words/audio/de-DE/word-guten-tag.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Guten Tag.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 862,
+      "sizeBytes": 4260,
+      "hash": "sha256:ed0c9c29468ffea2dea11f6b2b0b3e16b60c62ce66a41e081b415e7d8cf263a6",
+      "pcmSha256": "9b35f10b885e443e54df580ba7ec9573a4edb9da0c1cf20a39a377c416f0d997",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-wohnung",
+      "file": "words/audio/de-DE/word-wohnung.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Wohnung.",
+      "priority": "P2",
+      "lessonRefs": [],
+      "durationMs": 827,
+      "sizeBytes": 3990,
+      "hash": "sha256:35a86ede1de98a83953c0b50601078b77d94992898aa8941173ffddfc1f5f35d",
+      "pcmSha256": "a6219fb19ad98da1b132b7278c649f881c3ea9de1592eeddac1fec7aa12855f3",
+      "rmsDb": -16.97
+    },
+    {
+      "id": "mueller-announce-01",
+      "file": "audio/characters/mueller-announce-01.opus",
+      "role": "announcement",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130
+      },
+      "textDe": "Hallo! Ich bin Mueller. Willkommen bei Reise Yusuf.",
+      "priority": "P0",
+      "lessonRefs": [],
+      "durationMs": 3195,
+      "sizeBytes": 14807,
+      "hash": "sha256:f23a5321bd765ad77ab08365f06a7373847bc526cdaada39ab28944b090279f0",
+      "pcmSha256": "8925e96f2afff987c9e9621a82162dcb2c30c96321592dc1636c3c7181e8dbab",
+      "rmsDb": -17.01
+    }
+  ],
+  "characterVoices": {
+    "yusuf": "de_DE-thorsten-medium",
+    "mueller": "de_DE-thorsten-medium",
+    "lena": "de_DE-thorsten-medium",
+    "ayse": "de_DE-thorsten-medium",
+    "frau-berg": "de_DE-thorsten-medium",
+    "thomas": "de_DE-thorsten-medium",
+    "frau-schmidt": "de_DE-thorsten-medium",
+    "dr-weber": "de_DE-thorsten-medium"
+  }
+}
