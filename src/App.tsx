@@ -3,6 +3,7 @@ import { useState } from "react";
 import type { LearnerState, Lesson, Word } from "./../content/schemas/index.js";
 import { GenderBadge } from "./components/GenderBadge.js";
 import { FirstRun } from "./components/FirstRun.js";
+import { LessonSession } from "./components/LessonSession.js";
 import { lessonStatus } from "./lib/routes.js";
 
 import firstLessonJson from "../content/lessons/a1/a1-u1-d1.json";
@@ -22,6 +23,7 @@ const STATUS_LABEL: Record<string, string> = {
 
 export function App() {
   const [state, setState] = useState<LearnerState | null>(null);
+  const [sessionOpen, setSessionOpen] = useState(false);
 
   if (!state) {
     return (
@@ -39,6 +41,15 @@ export function App() {
     <main style={{ fontFamily: "sans-serif", padding: 24, maxWidth: 720, margin: "0 auto" }}>
       <h1>أهلاً {state.profile.name} — رحلتك بدأت</h1>
       <p data-testid="post-first-run">الوحدة صفر (اليوم الأول) مكتملة — موعدك القادم: الاسترجاع قصيراً ثم الجديد.</p>
+
+      <h2>حصة اليوم (120 دقيقة متصلة — D29)</h2>
+      {sessionOpen ? (
+        <LessonSession />
+      ) : (
+        <button data-testid="start-session" onClick={() => setSessionOpen(true)}>
+          ▶ ابدأ الحصة
+        </button>
+      )}
 
       <h2>مسارك</h2>
       <ul>

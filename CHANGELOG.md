@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## 2026-10-10 — دفعة M1-ج (E05 + E07 + E08 + واجهة الحصة)
+- إضافة: `src/lib/audio-engine.ts` (E05 — سرعات/سلم سمعي/shadowing + حارس D16) + `src/lib/dictation-engine.ts` (E07 — تدفق النسخ + تصحيح لطيف F077) + `src/lib/warmth-engine.ts` (E08 — تقرير مسائي/معاينة غد/رسائل مولر + حارس D23) + `src/components/LessonSession.tsx` (واجهة الحصة الكاملة: 4 محطات + 3 استراحات + قفل اتجاه + شاشة §2.5) + ربط App بزر «ابدأ الحصة» + 30 اختباراً (7/6/6/11).
+- النتيجة: **اكتملت محركات M1 الثمانية (E01–E08)** — 136/136 أخضر + tsc + validator + build. (D38)
+
 ## 2026-10-10 — D37: تثبيت صوت Piper في المستودع
 - إضافة: `tools/piper-voices/de_DE-thorsten-medium.onnx` (+ `.onnx.json`) ملتزمان في git (قرار المالك — بلا LFS) + `termux-upload-voice.sh` (سكربت الرفع) + بصمة مثبّتة في التوثيق (`7e64762d…bb7819`).
 - توثيق: D37 + تحديث `tools/README-downloads.md` + وصفة الاستعادة (برومت v1.4 — بلا تنزيل) + STATE.
