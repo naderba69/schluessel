@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u4-d1",
+  "level": "A1",
+  "unit": 4,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst deine Familie nennen.",
+    "ar": "تسمي أفراد أسرتك"
+  },
+  "canDoDaily": [
+    "يسمي أفراد أسرته الستة على الأقل ويعرّف بهم"
+  ],
+  "warmup": {
+    "cardIds": [
+      "name",
+      "kommen",
+      "wohnen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«جدتي» — Großmutter أم Großfrau? (تخمين فقط)"
+        },
+        "choices": [
+          "die Großmutter",
+          "die Großfrau",
+          "das Großmutter"
+        ],
+        "answer": "die Großmutter",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "mutter",
+      "vater",
+      "sohn",
+      "tochter",
+      "bruder",
+      "schwester",
+      "eltern",
+      "kind",
+      "grossvater",
+      "grossmutter",
+      "frau",
+      "mann"
+    ],
+    "grammarArsenalIds": [
+      "ars-familie"
+    ],
+    "storySentenceIds": [
+      "story-a4-u4-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الأم» و«الأب»؟",
+            "a": "die Mutter / der Vater"
+          },
+          {
+            "q": "«اسم أمي سارة»؟",
+            "a": "Meine Mutter heißt Sara."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الأخ» و«الأخت»؟",
+            "a": "der Bruder / die Schwester"
+          },
+          {
+            "q": "«الوالدان» — مفرداً أم جمعاً؟",
+            "a": "جمع فقط: die Eltern"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الجد» و«الجدة»؟",
+            "a": "der Großvater / die Großmutter"
+          },
+          {
+            "q": "«الطفل» — الجمع؟",
+            "a": "das Kind ← die Kinder"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die eigene Familie vorstellen",
+        "ar": "تعريف الأسرة"
+      },
+      "situation": {
+        "de": "Im Kurs: Familienfotos zeigen",
+        "ar": "في الدورة: عرض صور العائلة"
+      },
+      "successCriteria": [
+        "يسمي 6 أفراد ويعرّف بجملة عن كل واحد"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الأخت»؟",
+            "a": "die Schwester"
+          },
+          {
+            "q": "«أبي يسكن في تونس»؟",
+            "a": "Mein Vater wohnt in Tunis."
+          },
+          {
+            "q": "«الوالدان»؟",
+            "a": "die Eltern"
+          },
+          {
+            "q": "«الابنة»؟",
+            "a": "die Tochter"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الجدة»؟",
+            "a": "die Großmutter"
+          },
+          {
+            "q": "«زوجتي اسمها لينا»؟",
+            "a": "Meine Frau heißt Lina."
+          },
+          {
+            "q": "«الأخ» — الجمع؟",
+            "a": "die Brüder (u→ü + er)"
+          },
+          {
+            "q": "«الرجل»؟",
+            "a": "der Mann"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الطفل»؟",
+            "a": "das Kind"
+          },
+          {
+            "q": "«الابن»؟",
+            "a": "der Sohn"
+          },
+          {
+            "q": "«جمعي عمره ثمانون»؟",
+            "a": "Mein Großvater ist achtzig."
+          },
+          {
+            "q": "«المرأة» و«الزوجة» — كلمة واحدة؟",
+            "a": "نعم: die Frau (السياق يحدد)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Deine Familie hat jetzt deutsche Namen: Mutter, Vater, Bruder, Schwester, Kind, Großeltern — und die Plurale sind besonders (Mütter, Väter, Kinder)!",
+      "ar": "لأسرتك الآن أسماء ألمانية: الأم والأب والأخ والأخت والطفل والجدان — والجمع مميّز (Mütter, Väter, Kinder)!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~ein Eltern~~ / ~~mein Eltern~~",
+          "ar": "die Eltern جمع فقط"
+        },
+        "whyArabicSpeakerFails": "«والداي» مثنى بالعربية فيُجرَّب المفرد؛ الألماني Eltern جمع دائماً (Pluralia tantum) — بلا ein Eltern (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "meine Eltern (جمع)",
+          "ar": "والداي (die Eltern)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich habe ein Eltern.~~",
+          "a": "Ich habe Eltern. / Meine Eltern …"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Großfrau~~ / ~~das Großmutter~~",
+          "ar": "المركّب يأخذ جنس آخر جزء"
+        },
+        "whyArabicSpeakerFails": "«الجدة» كلمة واحدة بالعربية؛ الألماني مركّب Groß+Mutter والجنس من Mutter (die) — نفس قاعدة Muttersprache (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Großmutter (die — من die Mutter)",
+          "ar": "الجدة"
+        },
+        "exercise": {
+          "q": "حدّد: Großvater — der/die/das?",
+          "a": "der (من der Vater)"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Kinder~~ ← ~~das Kind~~ (الجمع خاطئ: ~~Kinds~~)",
+          "ar": "Kind ← Kinder (er شاذ)"
+        },
+        "whyArabicSpeakerFails": "جمع -er مع تغيير الجذر غريب عن العربي — Kinder مثل Häuser (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das Kind ← die Kinder",
+          "ar": "الطفل ← الأطفال"
+        },
+        "exercise": {
+          "q": "اكتب الجمع: zwei ___ (Kind)",
+          "a": "zwei Kinder"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "mutter",
+      "vater",
+      "sohn",
+      "tochter",
+      "bruder",
+      "schwester",
+      "eltern",
+      "kind",
+      "grossvater",
+      "grossmutter",
+      "frau",
+      "mann"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Mutter",
+      "https://www.duden.de/rechtschreibung/Eltern",
+      "https://www.duden.de/rechtschreibung/Kind"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Eltern"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-familie"
+  ],
+  "audioManifestRefs": [
+    "word-mutter",
+    "word-vater",
+    "word-sohn",
+    "word-tochter",
+    "word-bruder",
+    "word-schwester",
+    "word-eltern",
+    "word-kind",
+    "word-grossvater",
+    "word-grossmutter",
+    "word-frau",
+    "word-mann"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 (Meine Familie) — Familienmitglieder",
+    "goetheWordListOverlap": [
+      "mutter",
+      "vater"
+    ]
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u4-d2",
+  "level": "A1",
+  "unit": 4,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst nach Besitz fragen und antworten (mein/dein/sein).",
+    "ar": "تسأل وتجيب عن الملكيات بسيطة (mein/dein/sein)"
+  },
+  "canDoDaily": [
+    "يسأل عن ملكية ويجيب عليها بـmein/dein/sein مع جنس المُملوك"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bruder",
+      "mutter",
+      "kind"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«زوجتي» — mein Frau أم meine Frau? (تخمين فقط)"
+        },
+        "choices": [
+          "meine Frau (الملكية تتبع المُملوك)",
+          "mein Frau",
+          "mein die Frau"
+        ],
+        "answer": "meine Frau (الملكية تتبع المُملوك)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "familie",
+      "tante",
+      "onkel",
+      "hund",
+      "katze",
+      "schluessel",
+      "tasche",
+      "auto",
+      "gehoeren",
+      "mein",
+      "dein",
+      "sein"
+    ],
+    "grammarArsenalIds": [
+      "ars-possessiv"
+    ],
+    "storySentenceIds": [
+      "story-a4-u4-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هذا أخي»؟",
+            "a": "Das ist mein Bruder."
+          },
+          {
+            "q": "«هل هذا كلبك؟»؟",
+            "a": "Ist das dein Hund?"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أبوه يسكن هنا»؟",
+            "a": "Sein Vater wohnt hier."
+          },
+          {
+            "q": "«السيارة لي»؟",
+            "a": "Das Auto gehört mir. (Dativ: mir)"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هذا مفتاحي»؟",
+            "a": "Das ist mein Schlüssel."
+          },
+          {
+            "q": "«عائلتي كبيرة»؟",
+            "a": "Meine Familie ist groß."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Nach Besitz fragen und antworten",
+        "ar": "السؤال عن الملكيات والجواب"
+      },
+      "situation": {
+        "de": "Zu Hause: Wer gehört was?",
+        "ar": "في البيت: لمن ماذا؟"
+      },
+      "successCriteria": [
+        "3 أسئلة ملكية وإجاباتها بجنس صحيح للمُملوك"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«العائلة»؟",
+            "a": "die Familie"
+          },
+          {
+            "q": "«هذا أخي»؟",
+            "a": "Das ist mein Bruder."
+          },
+          {
+            "q": "«زوجتي»؟",
+            "a": "meine Frau (لا ~~mein Frau~~)"
+          },
+          {
+            "q": "«العم/الخال»؟",
+            "a": "der Onkel"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«السيارة لي»؟",
+            "a": "Das Auto gehört mir."
+          },
+          {
+            "q": "gehören مع أي حالة؟",
+            "a": "Dativ (mir/dir/ihm)"
+          },
+          {
+            "q": "«القطة»؟",
+            "a": "die Katze"
+          },
+          {
+            "q": "«هذا مفتاحي»؟",
+            "a": "Das ist mein Schlüssel."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«هل هذا كلبك؟»؟",
+            "a": "Ist das dein Hund?"
+          },
+          {
+            "q": "«الحقيبة»؟",
+            "a": "die Tasche"
+          },
+          {
+            "q": "«أبوه يسكن هنا»؟",
+            "a": "Sein Vater wohnt hier."
+          },
+          {
+            "q": "«عمتي» — أي ملكية؟",
+            "a": "meine Tante"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Mein/dein/sein folgen dem BESITZ (meine Frau, mein Hund) — und gehören braucht Dativ (Das gehört mir). Deine Familie hat Eigentum!",
+      "ar": "mein/dein/sein تتبع المُملوك (meine Frau, mein Hund) — وgehören يجرّ (Das gehört mir). لأسرتك ممتلكات!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~mein Frau~~ / ~~dein Hund~~ (للكلبة?)",
+          "ar": "الملكية تُصرَّف حسب جنس المُملوك"
+        },
+        "whyArabicSpeakerFails": "«زوجتي» بالياء فقط بالعربية؛ الألماني يغيّر النهاية حسب الشيء: meine Frau (مؤنث) لكن mein Mann (مذكر) — جنس المالك لا يهم (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "meine Frau / mein Mann",
+          "ar": "زوجتي / زوجي (حسب المُملوك)"
+        },
+        "exercise": {
+          "q": "أكمل: mein___ Katze (مؤنث) · mein___ Auto (محايد)",
+          "a": "meine Katze · mein Auto"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Das Auto gehört mich.~~",
+          "ar": "gehören + Dativ"
+        },
+        "whyArabicSpeakerFails": "«السيارة لي» بالعربية مجرور تقريباً؛ الألماني gehört يجرّ: mir/dir/ihm — كما antworten تماماً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Das Auto gehört mir.",
+          "ar": "السيارة لي."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Das gehört dich.~~",
+          "a": "Das gehört dir."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~der mein Bruder~~ / ~~die meine Tasche~~",
+          "ar": "الملكية بلا أداة تعريف"
+        },
+        "whyArabicSpeakerFails": "«أخي» بلا أداة بالعربية — والألمانية كذلك: mein Bruder يكفي، وmein تحل محل der/die/das (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "mein Bruder (لا der mein Bruder)",
+          "ar": "أخي"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Das ist der mein Schlüssel.~~",
+          "a": "Das ist mein Schlüssel."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "familie",
+      "tante",
+      "onkel",
+      "hund",
+      "katze",
+      "schluessel",
+      "tasche",
+      "auto",
+      "gehoeren",
+      "mein",
+      "dein",
+      "sein"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/mein",
+      "https://www.duden.de/rechtschreibung/geh%C3%B6ren",
+      "https://www.duden.de/rechtschreibung/Familie"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/mein"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-possessiv"
+  ],
+  "audioManifestRefs": [
+    "word-familie",
+    "word-tante",
+    "word-onkel",
+    "word-hund",
+    "word-katze",
+    "word-schluessel",
+    "word-tasche",
+    "word-auto",
+    "word-gehoeren",
+    "word-mein",
+    "word-dein",
+    "word-sein"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 (Meine Familie) — Besitz: mein/dein/sein",
+    "goetheWordListOverlap": [
+      "mein",
+      "familie"
+    ]
+  }
+}

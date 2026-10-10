@@ -200,3 +200,10 @@
 - **u3-d6** (integration): toll/klar + معركة الوحدة 3 (أرقام/وقت/مواعيد منطوقة) بعتبة **0.75** — تفريغ halb · um/am/im · fünfunddreißig.
 - **درس مستفاد:** حقول slugs (goetheWordListOverlap) لا تحتمل الحروف غير ASCII — «hören» → `hoeren` (الدرس رُفض zod بسببها ثم أُصلح).
 - البوابة: **243/243 + tsc + validator (199 ملفاً/0/0) + build** ✓. **الوحدات 1–3 مكتملة (18 يوماً).**
+
+## D53 (2026-10-10): بداية الوحدة 4 — u4-d1 (Familie) + u4-d2 (الملكية mein/dein/sein)
+
+- **u4-d1** (12 كلمة): Mutter/Vater/Sohn/Tochter/Bruder/Schwester/Eltern/Kind/Großvater/Großmutter/Frau/Mann. مصائد: **die Eltern جمع فقط** · المركّب (Großmutter) · **die Kinder** (er شاذ).
+- **u4-d2** (12 كلمة): Familie/Tante/Onkel/Hund/Katze/Schlüssel/Tasche/Auto/gehören/mein/dein/sein. مصائد: **الملكية تتبع المُملوك** (meine Frau لا mein Frau) · **gehören + Dativ** · الملكية بلا أداة تعريف.
+- **بيئية:** البيئة فقدت numpy/piper/node_modules فجأة (reset بين الجلسات) — استُعيدت: `pip3 install --break-system-packages numpy scipy soundfile piper-tts` + `npm ci` (من package-lock). موثّقة هنا للاستعادة السريعة.
+- البوابة: **243/243 + tsc + validator (225 ملفاً/0/0) + build** ✓.
