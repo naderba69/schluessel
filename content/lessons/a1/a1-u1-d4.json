@@ -1,0 +1,305 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u1-d4",
+  "level": "A1",
+  "unit": 1,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst Zahlen 1–20 schreiben und sagen, wie alt du bist und deine Telefonnummer nennen.",
+    "ar": "تستطيع كتابة الأرقام 1–20 وقول عمرك ورقم هاتفك مكتوباً ومنطوقاً."
+  },
+  "canDoDaily": [
+    "يذكر عمره ورقم هاتفه مكتوباً ومنطوقاً"
+  ],
+  "warmup": {
+    "cardIds": [
+      "zahl",
+      "alt",
+      "telefon"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«Wie alt bist du?» — Antwort mit Zahl? (تخمين فقط)"
+        },
+        "choices": [
+          "Ich bin 15 Jahre alt.",
+          "Ich bin alt 15.",
+          "Ich habe 15 Jahre."
+        ],
+        "answer": "Ich bin 15 Jahre alt.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "zahl",
+      "nummer",
+      "telefon",
+      "handy",
+      "alt",
+      "jahr",
+      "geburtstag",
+      "schreiben",
+      "monat",
+      "woche",
+      "tag",
+      "strasse"
+    ],
+    "grammarArsenalIds": [
+      "ars-zahlen-1-20"
+    ],
+    "storySentenceIds": [
+      "story-a1-u1-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v-f"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«كم عمرك؟» بالألمانية؟",
+            "a": "Wie alt bist du?"
+          },
+          {
+            "q": "«عمري 15 سنة»؟",
+            "a": "Ich bin 15 Jahre alt."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هذا هاتفي المحمول»؟",
+            "a": "Das ist mein Handy."
+          },
+          {
+            "q": "أي جنس: das Handy؟",
+            "a": "das — لا يُنقل من الإنجليزية"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "أكمل: Meine ___ ist ... (die Nummer)",
+            "a": "Nummer"
+          },
+          {
+            "q": "«الأسبوع فيه سبعة أيام»؟",
+            "a": "Eine Woche hat sieben Tage."
+          }
+        ],
+        "interleavedWith": [
+          "heissen",
+          "kommen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Alter und Telefonnummer nennen",
+        "ar": "أن يذكر عمره ورقم هاتفه"
+      },
+      "situation": {
+        "de": "Bei der Anmeldung im Kurs",
+        "ar": "عند التسجيل في الدورة"
+      },
+      "successCriteria": [
+        "يذكر عمره بجملة صحيحة (15 Jahre alt) + يتهجى رقم هاتفه بالأرقام الألمانية"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "Ich bin 15 Jahre ___.",
+            "choices": [
+              "alt",
+              "Jahre"
+            ],
+            "a": "alt"
+          },
+          {
+            "q": "«الهاتف المحمول»؟",
+            "a": "das Handy"
+          },
+          {
+            "q": "ترتيب؟ alt / bin / Ich / 15 / Jahre",
+            "a": "Ich bin 15 Jahre alt."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Woche = ?",
+            "choices": [
+              "الأسبوع",
+              "اليوم"
+            ],
+            "a": "الأسبوع"
+          },
+          {
+            "q": "«أكتب اسمي»؟",
+            "a": "Ich schreibe meinen Namen."
+          },
+          {
+            "q": "أي جملة صحيحة للعمر؟",
+            "choices": [
+              "Ich bin alt 15.",
+              "Ich bin 15 Jahre alt."
+            ],
+            "a": "Ich bin 15 Jahre alt."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«عيد الميلاد»؟",
+            "a": "der Geburtstag"
+          },
+          {
+            "q": "1–20: ما بعد neunzehn؟",
+            "a": "zwanzig"
+          },
+          {
+            "q": "«هذا رقمي»؟",
+            "a": "Das ist meine Nummer."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute hast du Zahlen geschrieben und Alter/Telefonnummer genannt: 15 Jahre alt + Nummer.",
+      "ar": "اليوم كتبت أرقاماً وذكرت عمرك وهاتفك: 15 Jahre alt + Nummer."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich bin alt 15 Jahre~~",
+          "ar": "ترتيب العمر"
+        },
+        "whyArabicSpeakerFails": "«عمري 15» بالعربية يبدأ بالعمر؛ الألمانية تضع alt في آخر الجملة بعد العدد والوحدة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bin 15 Jahre alt.",
+          "ar": "عمري 15 سنة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Er ist alt 20~~",
+          "a": "Er ist 20 Jahre alt."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Handy~~",
+          "ar": "جنس الكلمة المستعارة"
+        },
+        "whyArabicSpeakerFails": "كلمة Handy مستعارة من الإنجليزية لكن الجنس يُمنح بالألمانية: das Handy — لا يُنقل من لغتك (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das Handy",
+          "ar": "الهاتف المحمول"
+        },
+        "exercise": {
+          "q": "صحّح: ~~die Handy ist neu~~",
+          "a": "Das Handy ist neu."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Mein Telefonnummer~~",
+          "ar": "الملكية لا تتبع الجنس الطبيعي"
+        },
+        "whyArabicSpeakerFails": "العربية: «هاتفي» ملكية واحدة؛ الألمانية: الملكية تتبع جنس الكلمة (die Nummer → Meine) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Meine Telefonnummer",
+          "ar": "رقم هاتفي"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Mein Nummer~~",
+          "a": "Meine Nummer"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "zahl",
+      "nummer",
+      "telefon",
+      "handy",
+      "alt",
+      "jahr",
+      "geburtstag",
+      "schreiben",
+      "monat",
+      "woche",
+      "tag",
+      "strasse"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Zahl",
+      "https://www.duden.de/rechtschreibung/Handy"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Zahl"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-zahlen-1-20"
+  ],
+  "audioManifestRefs": [
+    "word-zahl",
+    "word-nummer",
+    "word-telefon",
+    "word-handy",
+    "word-alt",
+    "word-jahr",
+    "word-geburtstag",
+    "word-schreiben",
+    "word-monat",
+    "word-woche",
+    "word-tag",
+    "word-strasse"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?)",
+    "goetheWordListOverlap": [
+      "zahl",
+      "handy"
+    ]
+  }
+}

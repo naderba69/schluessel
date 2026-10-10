@@ -10,6 +10,8 @@ import {
 import lessonD1 from "../content/lessons/a1/a1-u1-d1.json";
 import lessonD2 from "../content/lessons/a1/a1-u1-d2.json";
 import lessonD3 from "../content/lessons/a1/a1-u1-d3.json";
+import lessonD4 from "../content/lessons/a1/a1-u1-d4.json";
+import lessonD5 from "../content/lessons/a1/a1-u1-d5.json";
 
 import wordHallo from "../content/words/hallo.json";
 import wordHeissen from "../content/words/heissen.json";
@@ -51,6 +53,25 @@ import wordWiederholen from "../content/words/wiederholen.json";
 import wordGenau from "../content/words/genau.json";
 import wordAchso from "../content/words/achso.json";
 import wordAlphabet from "../content/words/alphabet.json";
+import wordZahl from "../content/words/zahl.json";
+import wordNummer from "../content/words/nummer.json";
+import wordTelefon from "../content/words/telefon.json";
+import wordHandy from "../content/words/handy.json";
+import wordAlt from "../content/words/alt.json";
+import wordJahr from "../content/words/jahr.json";
+import wordGeburtstag from "../content/words/geburtstag.json";
+import wordSchreiben from "../content/words/schreiben.json";
+import wordMonat from "../content/words/monat.json";
+import wordWoche from "../content/words/woche.json";
+import wordTag from "../content/words/tag.json";
+import wordStrasse from "../content/words/strasse.json";
+import wordFrage from "../content/words/frage.json";
+import wordAntwort from "../content/words/antwort.json";
+import wordKennen from "../content/words/kennen.json";
+import wordFreund from "../content/words/freund.json";
+import wordFreundin from "../content/words/freundin.json";
+import wordLeute from "../content/words/leute.json";
+import wordZusammen from "../content/words/zusammen.json";
 
 const WORD_JSONS = [
   wordHallo, wordHeissen, wordGutenTag, wordGutenMorgen, wordGutenAbend,
@@ -60,9 +81,12 @@ const WORD_JSONS = [
   wordSchweiz, wordEnglisch, wordFranzoesisch, wordArabisch, wordSprache, wordLand,
   wordBuchstabe, wordName, wordVorname, wordFamilienname, wordAdresse, wordTelefonnummer,
   wordBuchstabieren, wordLangsam, wordWiederholen, wordGenau, wordAchso, wordAlphabet,
+  wordZahl, wordNummer, wordTelefon, wordHandy, wordAlt, wordJahr,
+  wordGeburtstag, wordSchreiben, wordMonat, wordWoche, wordTag, wordStrasse,
+  wordFrage, wordAntwort, wordKennen, wordFreund, wordFreundin, wordLeute, wordZusammen,
 ];
 
-const LESSON_JSONS = [lessonD1, lessonD2, lessonD3];
+const LESSON_JSONS = [lessonD1, lessonD2, lessonD3, lessonD4, lessonD5];
 
 /** كل الكلمات المُتحقَّق منها — بلا استثناءات */
 export const ALL_WORDS: Word[] = WORD_JSONS.map((j) => WordSchema.parse(j));

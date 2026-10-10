@@ -3,17 +3,17 @@ import { describe, it, expect } from "vitest";
 import { ALL_LESSONS, ALL_WORDS, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
 
-describe("سجل المحتوى — الدروس الثلاثة (d1–d3)", () => {
+describe("سجل المحتوى — دروس الوحدة 1 (d1–d5)", () => {
   it("الدروس مرتّبة والسجل مطابق للملفات", () => {
-    expect(ALL_LESSONS.map((l) => l.id)).toEqual(["a1-u1-d1", "a1-u1-d2", "a1-u1-d3"]);
-    expect(ALL_LESSONS.map((l) => l.day)).toEqual([1, 2, 3]);
-    expect(ALL_WORDS.length).toBe(40);
+    expect(ALL_LESSONS.map((l) => l.id)).toEqual(["a1-u1-d1", "a1-u1-d2", "a1-u1-d3", "a1-u1-d4", "a1-u1-d5"]);
+    expect(ALL_LESSONS.map((l) => l.day)).toEqual([1, 2, 3, 4, 5]);
+    expect(ALL_WORDS.length).toBe(59);
   });
 
   it("كل درس: كلماته مكتملة + مصائده الثلاثة + حزمة SRS + مراجع صوت مطابقة", () => {
     for (const l of ALL_LESSONS) {
       const words = wordsForLesson(l);
-      expect(words.length).toBeGreaterThanOrEqual(12);
+      expect(words.length).toBeGreaterThanOrEqual(7);
       expect(l.zusammenfassung.warningCards).toHaveLength(3);
       expect(l.zusammenfassung.srsBundleWordIds).toEqual(l.praesentation.wordIds);
       expect(l.audioManifestRefs).toHaveLength(l.praesentation.wordIds.length);

@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u1-d5",
+  "level": "A1",
+  "unit": 1,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst dich in vier Sätzen vorstellen und mit wer/woher fragen.",
+    "ar": "تستطيع تعريف نفسك في أربع جمل والسؤال بـwer وwoher."
+  },
+  "canDoDaily": [
+    "يعرّف بنفسه في 4 جمل كاملة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "name",
+      "frankreich",
+      "zusammen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«من هذا؟» عن شخص — wer أو was? (تخمين فقط)"
+        },
+        "choices": [
+          "Wer",
+          "Was",
+          "Wie"
+        ],
+        "answer": "Wer",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "frage",
+      "antwort",
+      "kennen",
+      "freund",
+      "freundin",
+      "leute",
+      "zusammen"
+    ],
+    "grammarArsenalIds": [
+      "ars-wer-woher"
+    ],
+    "storySentenceIds": [
+      "story-a1-u1-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«من أين أنت؟» بـwoher؟",
+            "a": "Woher kommen Sie?"
+          },
+          {
+            "q": "«من هذا؟» (شخص)؟",
+            "a": "Wer ist das?"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "أكمل: Ich ___ Yusuf. (يعرف شخصاً)",
+            "a": "kenne"
+          },
+          {
+            "q": "«الناس هنا»؟",
+            "a": "Die Leute sind hier."
+          }
+        ],
+        "interleavedWith": [
+          "zahl",
+          "alt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«صديقتي» — أي ملكية؟",
+            "a": "meine Freundin"
+          },
+          {
+            "q": "4 جمل تعريف: الاسم + الأصل + اللغة + السكن؟",
+            "a": "Ich heiße ... / bin aus ... / spreche ... / wohne in ..."
+          }
+        ],
+        "interleavedWith": [
+          "heissen",
+          "kommen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Sich in vier Sätzen vorstellen",
+        "ar": "أن يعرّف بنفسه في أربع جمل"
+      },
+      "situation": {
+        "de": "Am Ende der ersten Kurswoche",
+        "ar": "في نهاية الأسبوع الأول من الدورة"
+      },
+      "successCriteria": [
+        "يقول: heiße + bin aus + spreche + wohne في جمل صحيحة مرتبة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«من هذا؟» عن صديق؟",
+            "choices": [
+              "Wer ist das?",
+              "Was ist das?"
+            ],
+            "a": "Wer ist das?"
+          },
+          {
+            "q": "Ich ___ meinen Freund.",
+            "choices": [
+              "kenne",
+              "kennst"
+            ],
+            "a": "kenne"
+          },
+          {
+            "q": "ترتيب؟ kommen / Woher / Sie",
+            "a": "Woher kommen Sie?"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "السؤال = ?",
+            "a": "die Frage"
+          },
+          {
+            "q": "«الناس» بالألمانية — فعل مفرد أم جمع؟",
+            "choices": [
+              "جمع: Die Leute sind",
+              "مفرد: Die Leute ist"
+            ],
+            "a": "جمع: Die Leute sind"
+          },
+          {
+            "q": "«هذه صديقتي»؟",
+            "a": "Das ist meine Freundin."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "الجواب عن السؤال؟",
+            "a": "die Antwort auf die Frage"
+          },
+          {
+            "q": "«نحن معاً»؟",
+            "a": "Wir sind zusammen."
+          },
+          {
+            "q": "جملة التعريف الرابعة (السكن)؟",
+            "a": "Ich wohne in ..."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute hast du dich in vier Sätzen vorgestellt und mit wer/woher gefragt — die Einheit ist fast geschafft!",
+      "ar": "اليوم عرّفت بنفسك في أربع جمل وسألت بـwer وwoher — الوحدة قاربت على الاكتمال!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Was ist das?~~ (عن شخص)",
+          "ar": "was للأشياء وwer للأشخاص"
+        },
+        "whyArabicSpeakerFails": "العربية «ماذا/ما» تُستخدم بسياق أوسع؛ الألمانية تفرّق: was للأشياء وwer للأشخاص (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wer ist das?",
+          "ar": "من هذا؟"
+        },
+        "exercise": {
+          "q": "صحّح (عن صديق): ~~Was ist das?~~",
+          "a": "Wer ist das?"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich weiß Yusuf~~",
+          "ar": "wissen للمعلومات وkennen للأشخاص"
+        },
+        "whyArabicSpeakerFails": "«أعرف» بالعربية كلمة واحدة؛ الألمانية: أعرف شخصاً = kennen (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich kenne Yusuf.",
+          "ar": "أنا أعرف يوسف."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich weiß meine Freundin~~",
+          "a": "Ich kenne meine Freundin."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Die Leute ist hier~~",
+          "ar": "Leute جمع دائماً"
+        },
+        "whyArabicSpeakerFails": "العربية «الناس» اسم جمع يعامل أحياناً بالمفرد؛ الألمانية Leute جمع دائماً والفعل جمع (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Die Leute sind hier.",
+          "ar": "الناس هنا."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Die Leute ist nett~~",
+          "a": "Die Leute sind nett."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "frage",
+      "antwort",
+      "kennen",
+      "freund",
+      "freundin",
+      "leute",
+      "zusammen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Frage",
+      "https://www.duden.de/rechtschreibung/kennen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/kennen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-wer-woher"
+  ],
+  "audioManifestRefs": [
+    "word-frage",
+    "word-antwort",
+    "word-kennen",
+    "word-freund",
+    "word-freundin",
+    "word-leute",
+    "word-zusammen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?)",
+    "goetheWordListOverlap": [
+      "frage",
+      "kennen"
+    ]
+  }
+}

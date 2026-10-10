@@ -113,6 +113,27 @@ def build_all() -> None:
         ("word-genau", "genau.", "genau", ["a1-u1-d3"]),
         ("word-achso", "Achso.", "achso", ["a1-u1-d3"]),
         ("word-alphabet", "Alphabet.", "alphabet", ["a1-u1-d3"]),
+        # ═══ a1-u1-d4 — Zahlen/Alter/Telefon (D46) ═══
+        ("word-zahl", "Zahl.", "zahl", ["a1-u1-d4"]),
+        ("word-nummer", "Nummer.", "nummer", ["a1-u1-d4"]),
+        ("word-telefon", "Telefon.", "telefon", ["a1-u1-d4"]),
+        ("word-handy", "Handy.", "handy", ["a1-u1-d4"]),
+        ("word-alt", "alt.", "alt", ["a1-u1-d4"]),
+        ("word-jahr", "Jahr.", "jahr", ["a1-u1-d4"]),
+        ("word-geburtstag", "Geburtstag.", "geburtstag", ["a1-u1-d4"]),
+        ("word-schreiben", "schreiben.", "schreiben", ["a1-u1-d4"]),
+        ("word-monat", "Monat.", "monat", ["a1-u1-d4"]),
+        ("word-woche", "Woche.", "woche", ["a1-u1-d4"]),
+        ("word-tag", "Tag.", "tag", ["a1-u1-d4"]),
+        ("word-strasse", "Straße.", "strasse", ["a1-u1-d4"]),
+        # ═══ a1-u1-d5 — wer/woher + Kennenlernen (D46) ═══
+        ("word-frage", "Frage.", "frage", ["a1-u1-d5"]),
+        ("word-antwort", "Antwort.", "antwort", ["a1-u1-d5"]),
+        ("word-kennen", "kennen.", "kennen", ["a1-u1-d5"]),
+        ("word-freund", "Freund.", "freund", ["a1-u1-d5"]),
+        ("word-freundin", "Freundin.", "freundin", ["a1-u1-d5"]),
+        ("word-leute", "Leute.", "leute", ["a1-u1-d5"]),
+        ("word-zusammen", "zusammen.", "zusammen", ["a1-u1-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
