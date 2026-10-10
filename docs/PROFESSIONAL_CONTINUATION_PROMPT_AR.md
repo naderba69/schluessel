@@ -1,5 +1,5 @@
 # برومت الاستمرارية الاحترافي — مشروع «مفتاح — Schlüssel»
-### الإصدار 1.8 — 2026-10-10 — يُرفع ويُحدَّث مع كل إضافة/تعديل (أمر المالك)
+### الإصدار 1.9 — 2026-10-10 — يُرفع ويُحدَّث مع كل إضافة/تعديل (أمر المالك)
 > **الغرض:** أي جلسة/نموذج يستلم هذا الملف يستطيع مواصلة الإنتاج فوراً بلا سؤال وبلا انحراف.
 > **المصدر الحي:** المستودع `/home/user/reise-yusuf` (git) — وهذا الملف ملزمه التنفيذي.
 
@@ -37,14 +37,14 @@
 
 ## 5. البنية التقنية (كما هي الآن)
 - **Stack:** TypeScript + React 19 + Vite + zod 4 + Dexie (IndexedDB) + ts-fsrs 5 · PWA (manifest + sw) · الاختبار: vitest + renderToStaticMarkup + fake-indexeddb.
-- **المسارات:** `src/lib/` (المحركات: brand, first-run, unit0, routes, state-factory, audio, asr-gate, **lesson-engine E01, coach-engine E02, day-engine E06, review-engine E03, errors-engine E04, audio-engine E05, dictation-engine E07, warmth-engine E08 — M1 مكتملة** + **lesson-runner** + **advanced-listening E09, pronunciation E10, reading E11, writing E12 — M2-أ** + **grammar-discovery E13, vocab-network E14, real-tasks E15, culture E16 — M2-ب — M2 مكتملة**) · `src/components/` (FirstRun, GenderBadge, **LessonSession + LessonContent — الحصة تعمل**) · `src/lesson-packs.ts` (حزم المحتوى) · `src/stores/db.ts` (Dexie) · `content/` (schemas zod + words [16 كلمة A1 بروابطها] + lessons + unit0 + manifests [17 مساراً صوتياً]) · `tools/` (gen-audio.py, audio_probe.py, pcm_compare.py, asr_test.py, validate-content.ts) · `tests/` (29 ملفاً).
+- **المسارات:** `src/lib/` (المحركات: brand, first-run, unit0, routes, state-factory, audio, asr-gate, **lesson-engine E01, coach-engine E02, day-engine E06, review-engine E03, errors-engine E04, audio-engine E05, dictation-engine E07, warmth-engine E08 — M1 مكتملة** + **lesson-runner** + **advanced-listening E09, pronunciation E10, reading E11, writing E12 — M2-أ** + **grammar-discovery E13, vocab-network E14, real-tasks E15, culture E16 — M2-ب — M2 مكتملة**) · `src/components/` (FirstRun, GenderBadge, **LessonSession + LessonContent — الحصة تعمل** + **SkillsLab — مختبر المهارات E09–E16**) · `src/lesson-packs.ts` (حزم المحتوى) · `src/stores/db.ts` (Dexie) · `content/` (schemas zod + words [16 كلمة A1 بروابطها] + lessons + unit0 + manifests [17 مساراً صوتياً]) · `tools/` (gen-audio.py, audio_probe.py, pcm_compare.py, asr_test.py, validate-content.ts) · `tests/` (30 ملفاً).
 - **الصوت:** Piper محلي (CC0) — 24kHz OGG/Opus، RMS −17dB (−20..−14)، مقطع الكلمة ≤1.5s.
 - **أوامر:** `npm i` (بعد كل جلسة جديدة!) → `npx vitest run` → `npx tsc --noEmit` → `npx tsx tools/validate-content.ts` → `npx vite build`.
 - **⚠️ استعادة بداية كل جلسة (إلزامي — البيئة تُمحى):**
 ```bash
 cd reise-yusuf && npm install
 pip3 install piper-tts soundfile numpy
-npx vitest run   # يجب: 192/192 — الصوت مُثبَّت في git (لا تنزيل) · تذبذب VITS نادر يُحل بإعادة التشغيل (لا تعديل عتبات)
+npx vitest run   # يجب: 201/201 — الصوت مُثبَّت في git (لا تنزيل) · تذبذب VITS نادر يُحل بإعادة التشغيل (لا تعديل عتبات)
 ```
 - **الصوت مُثبَّت في المستودع** (قرار المالك 2026-10-10 — D37): `tools/piper-voices/de_DE-thorsten-medium.onnx` ملتزم في git — البصمة المثبّتة `sha256 = 7e64762d…bb7819` (63,201,294 بايت، CC0). **لا تنزيل إطلاقاً.** نموذج Vosk (اختبار D16 فقط) يبقى غير ملتزم — روابطه في `tools/README-downloads.md`.
 - **تبعيات Python للصوت:** `pip3 install piper-tts soundfile numpy` فقط.
@@ -65,8 +65,8 @@ npx vitest run   # يجب: 192/192 — الصوت مُثبَّت في git (لا 
   - ✅ **M1 مكتملة:** المحركات الثمانية E01–E08 كلها مبنية ومُختبرة + الصوت مُثبَّت (D37).
   - ✅ **دفعة M1-د (اكتمال المعلم 1):** محتوى A1 حقيقي (Netzwerk K1 — D15): 15 كلمة + 3 مصائد + 17 مساراً صوتياً + مُشغِّل الدرس + **الحصة تُدرَّس فعلياً على الواجهة** + JIT الوحدة صفر — 148/148 — D39.
   - ✅ **M2-أ (E09–E12):** الاستماع المتقدم (أزواج D16 + ضجيج تدريجي) + النطق (مخارج D18 — بلا درجات) + القراءة (قفل المفردات) + الكتابة (تصحيح يشرح «لماذا») — 171/171 — D40.
-  - ✅ **M2 كاملة (E09–E16):** M2-أ (E09–E12 مهارات الأربع — D40) + M2-ب (E13 القواعد · E14 الشبكة · E15 المهام · E16 الثقافة — D41) — 192/192.
-  - ⏭️ **التالي — بقرار المالك:** (أ) واجهات M2 (شاشات E09–E16 كما رُبطت M1) أو (ب) M3: E17 البوابات (نماذج Goethe — تفاصيلها تُتحقق ويبياً عند البناء) + E18–E22 أو (ج) توسيع محتوى الوحدة 1 (d2–d8).
+  - ✅ **M2 كاملة (E09–E16 + واجهاتها):** M2-أ (E09–E12 — D40) + M2-ب (E13–E16 — D41) + **مختبر المهارات SkillsLab** (D42) — 201/201.
+  - ⏭️ **التالي — بقرار المالك:** (أ) M3: E17 البوابات (نماذج Goethe — تفاصيلها تُتحقق ويبياً عند البناء) + E18–E22 أو (ب) توسيع محتوى الوحدة 1 (d2–d8 بنفس النسق).
 - **M2–M6:** بقية المحركات (خريطة §11 في الخطة).
 
 ## 8. بروتوكول كل دفعة إنتاج (إلزامي)
@@ -82,7 +82,7 @@ npx vitest run   # يجب: 192/192 — الصوت مُثبَّت في git (لا 
 - **GitHub:** `github.com/naderba69/schluessel` — الرفع بأمر Termux المرفق `termux-push-github.sh` (PAT + تحقق بصمة sha256 + فحوص بنية + push -f main).
 - **Vercel:** `vercel.json` مرفق (framework=vite · build=npm run build · output=dist).
 - **حزمة التسليم:** `schluessel-full.zip` (+ ملف `.sha256` مرافق) — جذر مسطّح، تتضمن git نظيفاً بلا تاريخ النماذج الثقيلة.
-- **الجلسة الجديدة = نفس الخطة حرفياً:** فك الضغط ← `docs/PROFESSIONAL_CONTINUATION_PROMPT_AR.md` ← وصفة الاستعادة ← §7 خريطة الطريق (التالي: واجهات M2 أو M3 — بقرار المالك).
+- **الجلسة الجديدة = نفس الخطة حرفياً:** فك الضغط ← `docs/PROFESSIONAL_CONTINUATION_PROMPT_AR.md` ← وصفة الاستعادة ← §7 خريطة الطريق (التالي: M3 أو محتوى d2–d8 — بقرار المالك).
 
 ---
-**الإصدار الحالي:** 1.8 (2026-10-10 — بعد دفعة M2-ب: E13–E16 · **M2 مكتملة** · 192 اختباراً · D41) · 1.7 (2026-10-10 — بعد دفعة M2-أ: E09–E12 مهارات الأربع · 171 اختباراً · D40) · 1.6 (2026-10-10 — بعد دفعة M1-د: محتوى A1 حقيقي + الحصة تعمل + JIT · **المعلم 1 مكتمل** · 148 اختباراً · D39) · 1.5 (2026-10-10 — بعد دفعة M1-ج: E05+E07+E08+واجهة الحصة · **M1 مكتملة** · 136 اختباراً · D38) · 1.4 (2026-10-10 — الصوت مُثبَّت في git بقرار المالك: D37 + بصمة مغلقة — **106/106 كلها خضراء**) · 1.3 (2026-10-10 — بعد دفعة M1-ب: E03+E04+الجولة الإلزامية+الدقائق الثلاث · 106 اختباراً · D36) · 1.2 (2026-10-10 — D35 الاسم النهائي Schlüssel + حزمة GitHub/Vercel) · 1.1 (2026-10-10 — بعد تثبيت التتبع الكامل: سجل D1–D34 + نسخ كل وثائق المرحلة داخل المستودع `docs/prompt-phase/` + `docs/plans/` — لا شيء حيوي خارج git) · 1.0 — 2026-10-10 — بعد دفعة M1-أ: 76/76 أخضر · commit `ff58c76` (rebrand + E01 + E02 + E06) · البرومت مرفوع في `66a9c35`.
+**الإصدار الحالي:** 1.9 (2026-10-10 — بعد دفعة واجهات M2: مختبر المهارات E09–E16 على الشاشة · 201 اختباراً · D42) · 1.8 (2026-10-10 — بعد دفعة M2-ب: E13–E16 · **M2 مكتملة** · 192 اختباراً · D41) · 1.7 (2026-10-10 — بعد دفعة M2-أ: E09–E12 مهارات الأربع · 171 اختباراً · D40) · 1.6 (2026-10-10 — بعد دفعة M1-د: محتوى A1 حقيقي + الحصة تعمل + JIT · **المعلم 1 مكتمل** · 148 اختباراً · D39) · 1.5 (2026-10-10 — بعد دفعة M1-ج: E05+E07+E08+واجهة الحصة · **M1 مكتملة** · 136 اختباراً · D38) · 1.4 (2026-10-10 — الصوت مُثبَّت في git بقرار المالك: D37 + بصمة مغلقة — **106/106 كلها خضراء**) · 1.3 (2026-10-10 — بعد دفعة M1-ب: E03+E04+الجولة الإلزامية+الدقائق الثلاث · 106 اختباراً · D36) · 1.2 (2026-10-10 — D35 الاسم النهائي Schlüssel + حزمة GitHub/Vercel) · 1.1 (2026-10-10 — بعد تثبيت التتبع الكامل: سجل D1–D34 + نسخ كل وثائق المرحلة داخل المستودع `docs/prompt-phase/` + `docs/plans/` — لا شيء حيوي خارج git) · 1.0 — 2026-10-10 — بعد دفعة M1-أ: 76/76 أخضر · commit `ff58c76` (rebrand + E01 + E02 + E06) · البرومت مرفوع في `66a9c35`.

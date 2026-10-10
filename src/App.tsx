@@ -16,6 +16,7 @@ import { planLessonStations } from "./lib/lesson-runner.js";
 import { cardsForEvent, loadUnit0Deck } from "./lib/unit0.js";
 import { eveningReport, tomorrowPreview, muellerMessage } from "./lib/warmth-engine.js";
 import { firstLesson, firstLessonWords } from "./lesson-packs.js";
+import { SkillsLab } from "./components/SkillsLab.js";
 
 const plan = planLessonStations(firstLesson, firstLessonWords);
 
@@ -28,6 +29,7 @@ const STATUS_LABEL: Record<string, string> = {
 export function App() {
   const [state, setState] = useState<LearnerState | null>(null);
   const [sessionOpen, setSessionOpen] = useState(false);
+  const [labOpen, setLabOpen] = useState(false);
   const [jitCard, setJitCard] = useState<Unit0Card | null>(null);
 
   if (!state) {
@@ -92,6 +94,15 @@ export function App() {
       ) : (
         <button data-testid="start-session" onClick={startSession}>
           ▶ ابدأ الحصة
+        </button>
+      )}
+
+      <h2>مختبر المهارات (M2 — E09–E16)</h2>
+      {labOpen ? (
+        <SkillsLab />
+      ) : (
+        <button data-testid="open-skills-lab" onClick={() => setLabOpen(true)}>
+          🧪 افتح مختبر المهارات
         </button>
       )}
 
