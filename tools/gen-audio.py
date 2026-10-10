@@ -87,6 +87,32 @@ def build_all() -> None:
         ("word-tunesien", "Tunesien.", "tunesien", ["a1-u1-d1"]),
         ("word-deutschland", "Deutschland.", "deutschland", ["a1-u1-d1"]),
         ("word-wohnung", "Wohnung.", "wohnung", []),
+        # ═══ a1-u1-d2 — Länder & Sprachen (D45) ═══
+        ("word-frankreich", "Frankreich.", "frankreich", ["a1-u1-d2"]),
+        ("word-spanien", "Spanien.", "spanien", ["a1-u1-d2"]),
+        ("word-italien", "Italien.", "italien", ["a1-u1-d2"]),
+        ("word-tuerkei", "Türkei.", "tuerkei", ["a1-u1-d2"]),
+        ("word-marokko", "Marokko.", "marokko", ["a1-u1-d2"]),
+        ("word-aegypten", "Ägypten.", "aegypten", ["a1-u1-d2"]),
+        ("word-schweiz", "Schweiz.", "schweiz", ["a1-u1-d2"]),
+        ("word-englisch", "Englisch.", "englisch", ["a1-u1-d2"]),
+        ("word-franzoesisch", "Französisch.", "franzoesisch", ["a1-u1-d2"]),
+        ("word-arabisch", "Arabisch.", "arabisch", ["a1-u1-d2"]),
+        ("word-sprache", "Sprache.", "sprache", ["a1-u1-d2"]),
+        ("word-land", "Land.", "land", ["a1-u1-d2"]),
+        # ═══ a1-u1-d3 — Schreiben & Alphabet (D45) ═══
+        ("word-buchstabe", "Buchstabe.", "buchstabe", ["a1-u1-d3"]),
+        ("word-name", "Name.", "name", ["a1-u1-d3"]),
+        ("word-vorname", "Vorname.", "vorname", ["a1-u1-d3"]),
+        ("word-familienname", "Familienname.", "familienname", ["a1-u1-d3"]),
+        ("word-adresse", "Adresse.", "adresse", ["a1-u1-d3"]),
+        ("word-telefonnummer", "Telefonnummer.", "telefonnummer", ["a1-u1-d3"]),
+        ("word-buchstabieren", "buchstabieren.", "buchstabieren", ["a1-u1-d3"]),
+        ("word-langsam", "langsam.", "langsam", ["a1-u1-d3"]),
+        ("word-wiederholen", "wiederholen.", "wiederholen", ["a1-u1-d3"]),
+        ("word-genau", "genau.", "genau", ["a1-u1-d3"]),
+        ("word-achso", "Achso.", "achso", ["a1-u1-d3"]),
+        ("word-alphabet", "Alphabet.", "alphabet", ["a1-u1-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

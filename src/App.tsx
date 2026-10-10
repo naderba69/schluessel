@@ -15,7 +15,7 @@ import { lessonStatus } from "./lib/routes.js";
 import { planLessonStations } from "./lib/lesson-runner.js";
 import { cardsForEvent, loadUnit0Deck } from "./lib/unit0.js";
 import { eveningReport, tomorrowPreview, muellerMessage } from "./lib/warmth-engine.js";
-import { firstLesson, firstLessonWords } from "./lesson-packs.js";
+import { firstLesson, firstLessonWords, ALL_LESSONS } from "./lesson-packs.js";
 import { SkillsLab } from "./components/SkillsLab.js";
 import { SystemLab } from "./components/SystemLab.js";
 
@@ -119,11 +119,11 @@ export function App() {
 
       <h2>مسارك</h2>
       <ul>
-        {["a1-u1-d1", "a1-u1-d2", "a1-u1-d3"].map((id) => {
-          const status = lessonStatus(id, state.progress);
+        {ALL_LESSONS.map((l) => {
+          const status = lessonStatus(l.id, state.progress);
           return (
-            <li key={id} data-status={status} dir="ltr">
-              {id} — {STATUS_LABEL[status]}
+            <li key={l.id} data-status={status} dir="ltr">
+              {l.id} — {STATUS_LABEL[status]}
             </li>
           );
         })}

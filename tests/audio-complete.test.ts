@@ -42,7 +42,7 @@ describe("اكتمال الصوت (test-audio-complete)", () => {
       expect(p.rmsDb, `RMS خارج النافذة: ${t.file}`).toBeGreaterThanOrEqual(RMS_WINDOW_DB[0]);
       expect(p.rmsDb, `RMS خارج النافذة: ${t.file}`).toBeLessThanOrEqual(RMS_WINDOW_DB[1]);
     }
-  });
+  }, 120_000);
 
   it("كل مسار كلمات يشير إلى ملف كلمة موجود في content/words", () => {
     for (const t of manifest.tracks.filter((x) => x.role === "word")) {
@@ -56,5 +56,5 @@ describe("اكتمال الصوت (test-audio-complete)", () => {
       const p = probe(join(CONTENT, t.file));
       expect(Math.abs(p.durationSec * 1000 - (t.durationMs ?? 0)), `قياس غير مطابق: ${t.file}`).toBeLessThan(20);
     }
-  });
+  }, 120_000);
 });

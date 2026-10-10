@@ -1,0 +1,308 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u1-d2",
+  "level": "A1",
+  "unit": 1,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst sagen, woher du kommst und welche Sprache du sprichst.",
+    "ar": "تستطيع أن تقول من أين أنت وأي لغة تتحدث."
+  },
+  "canDoDaily": [
+    "يقول من أين هو ويذكر لغته"
+  ],
+  "warmup": {
+    "cardIds": [
+      "heissen",
+      "kommen",
+      "tunesien"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«Ich ___ aus Tunesien.» — sein oder kommen? (تخمين فقط)"
+        },
+        "choices": [
+          "bin",
+          "habe",
+          "ist"
+        ],
+        "answer": "bin",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "frankreich",
+      "spanien",
+      "italien",
+      "tuerkei",
+      "marokko",
+      "aegypten",
+      "schweiz",
+      "englisch",
+      "franzoesisch",
+      "arabisch",
+      "sprache",
+      "land"
+    ],
+    "grammarArsenalIds": [
+      "ars-sein-haben"
+    ],
+    "storySentenceIds": [
+      "story-a1-u1-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-a",
+      "umlaut-o",
+      "umlaut-u"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أنا من تونس» بالألمانية؟",
+            "a": "Ich bin aus Tunesien."
+          },
+          {
+            "q": "«هي من إيطاليا»؟",
+            "a": "Sie kommt aus Italien."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أتحدث العربية»؟",
+            "a": "Ich spreche Arabisch."
+          },
+          {
+            "q": "«اللغة» بالألمانية؟",
+            "a": "die Sprache"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "أكمل: Ich bin ___ der Türkei.",
+            "a": "aus"
+          },
+          {
+            "q": "«سويسرا» — أي جنس؟",
+            "a": "die Schweiz"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Herkunft und Sprache nennen",
+        "ar": "أن يذكر أصله ولغته"
+      },
+      "situation": {
+        "de": "Im Sprachkurs am zweiten Tag",
+        "ar": "في دورة اللغة اليوم الثاني"
+      },
+      "successCriteria": [
+        "يستخدم bin aus + spreche + اسم لغة في 3 جمل صحيحة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "Ich ___ aus Tunesien.",
+            "choices": [
+              "bin",
+              "habe"
+            ],
+            "a": "bin"
+          },
+          {
+            "q": "«أتحدث الإنجليزية»؟",
+            "a": "Ich spreche Englisch."
+          },
+          {
+            "q": "ترتيب؟ bin / Ich / aus / Ägypten",
+            "a": "Ich bin aus Ägypten."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "die Sprache = ?",
+            "choices": [
+              "اللغة",
+              "البلد"
+            ],
+            "a": "اللغة"
+          },
+          {
+            "q": "«هي تسكن في سويسرا»؟",
+            "a": "Sie wohnt in der Schweiz."
+          },
+          {
+            "q": "أي جملة صحيحة؟",
+            "choices": [
+              "Ich bin Tunesien.",
+              "Ich bin aus Tunesien."
+            ],
+            "a": "Ich bin aus Tunesien."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Türkei = ?",
+            "choices": [
+              "تركيا",
+              "سويسرا"
+            ],
+            "a": "تركيا"
+          },
+          {
+            "q": "«الجمع: das Land»؟",
+            "a": "die Länder"
+          },
+          {
+            "q": "ترتيب؟ spreche / Ich / Arabisch",
+            "a": "Ich spreche Arabisch."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute hast du Herkunft und Sprache benannt: bin aus + spreche + Länder.",
+      "ar": "اليوم ذكرت أصلك ولغتك: bin aus + spreche + أسماء البلدان."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich bin Tunesien~~",
+          "ar": "حذف aus مع اسم البلد"
+        },
+        "whyArabicSpeakerFails": "«أنا تونس» بالعربية تعتمد السياق؛ الألمانية تطلب حرف الانتماء aus دائماً (خريطة 10‑ي).",
+        "correct": {
+          "de": "Ich bin aus Tunesien.",
+          "ar": "أنا من تونس."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich bin Marokko~~",
+          "a": "Ich bin aus Marokko."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich spreche Arabic~~",
+          "ar": "استعارة اسم الإنجليزية"
+        },
+        "whyArabicSpeakerFails": "أسماء اللغات في الألمانية صيغ ألمانية (Arabisch/Englisch) — لا تُنقل كما هي من الإنجليزية. (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich spreche Arabisch.",
+          "ar": "أنا أتحدث العربية."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Sie spricht French~~",
+          "a": "Sie spricht Französisch."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Sie sind aus Deutschland?~~",
+          "ar": "ترتيب الجملة الخبرية في السؤال"
+        },
+        "whyArabicSpeakerFails": "العربية تكوّن السؤال بنبرة الصوت؛ الألمانية تقدّم الفعل أولاً (Sind Sie...? — خريطة 10‑ي).",
+        "correct": {
+          "de": "Sind Sie aus Deutschland?",
+          "ar": "هل أنت من ألمانيا؟"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wohnen Sie in der Schweiz?~~ (السؤال صحيح؟)",
+          "a": "نعم، هذا الترتيب صحيح."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "frankreich",
+      "spanien",
+      "italien",
+      "tuerkei",
+      "marokko",
+      "aegypten",
+      "schweiz",
+      "englisch",
+      "franzoesisch",
+      "arabisch",
+      "sprache",
+      "land"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Sprache",
+      "https://www.duden.de/rechtschreibung/Land"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Sprache"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-sein-haben"
+  ],
+  "audioManifestRefs": [
+    "word-frankreich",
+    "word-spanien",
+    "word-italien",
+    "word-tuerkei",
+    "word-marokko",
+    "word-aegypten",
+    "word-schweiz",
+    "word-englisch",
+    "word-franzoesisch",
+    "word-arabisch",
+    "word-sprache",
+    "word-land"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?)",
+    "goetheWordListOverlap": [
+      "sprache",
+      "land"
+    ]
+  }
+}

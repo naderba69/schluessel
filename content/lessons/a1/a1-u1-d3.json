@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u1-d3",
+  "level": "A1",
+  "unit": 1,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst deinen Namen buchstabieren und nach dem Namen deines Partners fragen.",
+    "ar": "تستطيع تهجئة اسمك والسؤال عن اسم زميلك."
+  },
+  "canDoDaily": [
+    "يتهجى اسمه ويسأل زميله عن اسمه"
+  ],
+  "warmup": {
+    "cardIds": [
+      "heissen",
+      "danke",
+      "bitte"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«Ich ___ meinen Namen.» — buchstabieren: wie mit ich? (تخمين فقط)"
+        },
+        "choices": [
+          "buchstabiere",
+          "buchstabieren",
+          "buchstabierst"
+        ],
+        "answer": "buchstabiere",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "buchstabe",
+      "name",
+      "vorname",
+      "familienname",
+      "adresse",
+      "telefonnummer",
+      "buchstabieren",
+      "langsam",
+      "wiederholen",
+      "genau",
+      "achso",
+      "alphabet"
+    ],
+    "grammarArsenalIds": [
+      "ars-alphabet-spelling"
+    ],
+    "storySentenceIds": [
+      "story-a1-u1-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-u"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«يتهجى» بالألمانية؟",
+            "a": "buchstabieren"
+          },
+          {
+            "q": "«اسم العائلة»؟",
+            "a": "der Familienname"
+          }
+        ],
+        "interleavedWith": [
+          "heissen",
+          "kommen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "أكمل: Ich ___ meinen Namen. (ich)",
+            "a": "buchstabiere"
+          },
+          {
+            "q": "«من فضلك كرّر»؟",
+            "a": "Bitte wiederholen Sie das."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«بالضبط!»؟",
+            "a": "Genau!"
+          },
+          {
+            "q": "السؤال الرسمي عن الاسم؟",
+            "a": "Wie ist Ihr Name?"
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Namen buchstabieren",
+        "ar": "تهجئة الاسم"
+      },
+      "situation": {
+        "de": "Am Telefon bei der Anmeldung",
+        "ar": "هاتفياً عند التسجيل"
+      },
+      "successCriteria": [
+        "يهجئ اسمه بحروفه ويستخدم Wiederholen Sie عند الحاجة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "Ich ___ meinen Namen.",
+            "choices": [
+              "buchstabiere",
+              "buchstabieren"
+            ],
+            "a": "buchstabiere"
+          },
+          {
+            "q": "«الحرف» بالألمانية؟",
+            "a": "der Buchstabe"
+          },
+          {
+            "q": "ترتيب؟ buchstabiere / Ich / Name / meinen",
+            "a": "Ich buchstabiere meinen Namen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Name = ?",
+            "choices": [
+              "الاسم",
+              "العنوان"
+            ],
+            "a": "الاسم"
+          },
+          {
+            "q": "«تحدث ببطء»؟",
+            "a": "Sprechen Sie langsam, bitte."
+          },
+          {
+            "q": "أي سؤال أدق للاسم؟",
+            "choices": [
+              "Wie heißt dein Name?",
+              "Wie ist Ihr Name?"
+            ],
+            "a": "Wie ist Ihr Name?"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الألفباء»؟",
+            "a": "das Alphabet"
+          },
+          {
+            "q": "«رقم الهاتف»؟",
+            "a": "die Telefonnummer"
+          },
+          {
+            "q": "أي كتابة صحيحة؟",
+            "choices": [
+              "der name",
+              "der Name"
+            ],
+            "a": "der Name"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute hast du geschrieben und gebuchstabiert: Name, Vorname, Familienname — und du kannst nachfragen.",
+      "ar": "اليوم كتبت وتهجأت: الاسم الأول واسم العائلة — وتستطيع طلب التكرار بأدب."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich buchstabieren meinen Namen~~",
+          "ar": "عدم تصريف الفعل"
+        },
+        "whyArabicSpeakerFails": "العربية لا تصّرف الفعل مع الضمائر (أنا أكتب/كتب)؛ الألمانية تصرّف دائماً: ich buchstabiere (خريطة 10‑ي).",
+        "correct": {
+          "de": "Ich buchstabiere meinen Namen.",
+          "ar": "أتهجى اسمي."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Er wiederholen das~~",
+          "a": "Er wiederholt das."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wie heißt dein Name?~~",
+          "ar": "حشو: Name + heißen"
+        },
+        "whyArabicSpeakerFails": "«ما اسم اسمك؟» حشو مقبول في العربية أحياناً؛ الألمانية تختار: Wie heißt du? أو Wie ist Ihr Name? (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wie ist Ihr Name?",
+          "ar": "ما اسمك؟ (رسمي)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wie heißt Ihr Name?~~",
+          "a": "Wie ist Ihr Name?"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~der name~~",
+          "ar": "حرف صغير في الاسم"
+        },
+        "whyArabicSpeakerFails": "العربية بلا حروف كبيرة/صغيرة؛ الألمانية تكتب كل الأسماء بحرف كبير (خريطة 10‑ي).",
+        "correct": {
+          "de": "der Name",
+          "ar": "الاسم"
+        },
+        "exercise": {
+          "q": "صحّح: ~~die adresse~~",
+          "a": "die Adresse"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "buchstabe",
+      "name",
+      "vorname",
+      "familienname",
+      "adresse",
+      "telefonnummer",
+      "buchstabieren",
+      "langsam",
+      "wiederholen",
+      "genau",
+      "achso",
+      "alphabet"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Name",
+      "https://www.duden.de/rechtschreibung/Alphabet"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/buchstabieren"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-alphabet-spelling"
+  ],
+  "audioManifestRefs": [
+    "word-buchstabe",
+    "word-name",
+    "word-vorname",
+    "word-familienname",
+    "word-adresse",
+    "word-telefonnummer",
+    "word-buchstabieren",
+    "word-langsam",
+    "word-wiederholen",
+    "word-genau",
+    "word-achso",
+    "word-alphabet"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?)",
+    "goetheWordListOverlap": [
+      "name",
+      "alphabet"
+    ]
+  }
+}
