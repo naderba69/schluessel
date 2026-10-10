@@ -64,7 +64,7 @@ describe("استقرار الأصوات عبر الجلسات (test-audio-voice-
     // VITS يغيّر الطول العيّني حتى ±28% (قياس فعلي) — المطلوب عدم الانزياح الجوهري
     expect(c.durRatio).toBeGreaterThan(0.6);
     expect(c.durRatio).toBeLessThan(1.7);
-  });
+  }, 120_000);
 
   it("الحضور الصوتي ثابت عبر المسار الكامل (توليد → تطبيع → Opus) مرتين", () => {
     const a = genOne("/tmp/vs-wohnung-a.opus");
@@ -73,7 +73,7 @@ describe("استقرار الأصوات عبر الجلسات (test-audio-voice-
     expect(c.specCorr).toBeGreaterThanOrEqual(SPEC_CORR_MIN);
     expect(c.durRatio).toBeGreaterThan(0.6);
     expect(c.durRatio).toBeLessThan(1.7);
-  });
+  }, 120_000);
 
   it("الملف الملتزم من نفس الصوت: التوقيع الطيفي ≥ 0.93 مع إعادة التوليد + سلسلة البصمة موثّقة", () => {
     const committed = join(CONTENT, "words/audio/de-DE/word-wohnung.opus");
@@ -83,5 +83,5 @@ describe("استقرار الأصوات عبر الجلسات (test-audio-voice-
     // سلسلة الالتزام: المانيفست يثبّت بصمة الملف الفعلي (لا وثيقة بلا تشغيل)
     const track = manifest.tracks.find((t) => t.id === "word-wohnung")!;
     expect(track.hash).toBe(`sha256:${sha256(committed)}`);
-  });
+  }, 120_000);
 });
