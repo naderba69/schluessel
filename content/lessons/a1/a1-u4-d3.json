@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u4-d3",
+  "level": "A1",
+  "unit": 4,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst einen Bruder/eine Schwester mit Akkusativ beschreiben (einen Bruder).",
+    "ar": "تصف أخاً/أختاً بمفعول به واضح (أول Akkusativ)"
+  },
+  "canDoDaily": [
+    "يصف شخصاً بجملة بها مفعول به (einen/eine) ويصف مظهره"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bruder",
+      "schwester",
+      "mutter"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«عندي أخاً» — Ich habe ein Bruder أم einen Bruder? (تخمين فقط)"
+        },
+        "choices": [
+          "einen Bruder (der ← einen عند المفعول)",
+          "ein Bruder",
+          "dem Bruder"
+        ],
+        "answer": "einen Bruder (der ← einen عند المفعول)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "jung",
+      "klein",
+      "schoen",
+      "freundlich",
+      "lustig",
+      "schlau",
+      "haar",
+      "gesicht",
+      "foto",
+      "bild",
+      "beschreiben",
+      "wen"
+    ],
+    "grammarArsenalIds": [
+      "ars-akkusativ-1"
+    ],
+    "storySentenceIds": [
+      "story-a4-u4-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«عندي أخاً»؟",
+            "a": "Ich habe einen Bruder."
+          },
+          {
+            "q": "«مَن ترى؟»؟",
+            "a": "Wen siehst du?"
+          }
+        ],
+        "interleavedWith": [
+          "bruder",
+          "tochter"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أخي شاب»؟",
+            "a": "Mein Bruder ist jung."
+          },
+          {
+            "q": "«أصف أخي»؟",
+            "a": "Ich beschreibe meinen Bruder."
+          }
+        ],
+        "interleavedWith": [
+          "mutter",
+          "kind"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«لديها شعر طويل»؟",
+            "a": "Sie hat lange Haare."
+          },
+          {
+            "q": "«هذه صورة جميلة»؟",
+            "a": "Das ist ein schönes Foto."
+          }
+        ],
+        "interleavedWith": [
+          "foto",
+          "haar"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Ein Familienmitglied mit Akkusativ beschreiben",
+        "ar": "وصف فرد من الأسرة بمفعول به"
+      },
+      "situation": {
+        "de": "Im Kurs: über das eigene Foto sprechen",
+        "ar": "في الدورة: التحدث عن الصورة الشخصية"
+      },
+      "successCriteria": [
+        "3 جمل وصف بها eines/eine/einen صحيحة + سؤال wen واحد"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«عندي أختاً»؟",
+            "a": "Ich habe eine Schwester."
+          },
+          {
+            "q": "«عندي أخاً»؟",
+            "a": "Ich habe einen Bruder."
+          },
+          {
+            "q": "«الوجه»؟",
+            "a": "das Gesicht"
+          },
+          {
+            "q": "«الطفل ذكي»؟",
+            "a": "Das Kind ist schlau."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«مَن ترى؟»؟",
+            "a": "Wen siehst du?"
+          },
+          {
+            "q": "wen أم wer للمفعول به؟",
+            "a": "wen (wer للفاعل فقط)"
+          },
+          {
+            "q": "«عمتي ودودة»؟",
+            "a": "Meine Tante ist freundlich."
+          },
+          {
+            "q": "«أصف أخي»؟",
+            "a": "Ich beschreibe meinen Bruder."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الصورة»؟",
+            "a": "das Foto / das Bild"
+          },
+          {
+            "q": "«أخي شاب»؟",
+            "a": "Mein Bruder ist jung."
+          },
+          {
+            "q": "«خالي مضحك»؟",
+            "a": "Mein Onkel ist lustig."
+          },
+          {
+            "q": "«لديها شعر طويل»؟",
+            "a": "Sie hat lange Haare."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der erste Akkusativ: nur der ändert sich (der Bruder → einen Bruder) — und die Frage heißt „Wen?“ (nicht „Wer?“).",
+      "ar": "أول Akkusativ: der وحدها تتغير (der Bruder ← einen Bruder) — والسؤال «Wen?» (لا «Wer?»)."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich habe ein Bruder.~~",
+          "ar": "المفعول به: ein ← einen (der فقط)"
+        },
+        "whyArabicSpeakerFails": "«عندي أخاً» بالعربية نصب بلا تغيير أداة؛ الألماني: der تصبح einen عند المفعول — die/das تبقى (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe einen Bruder.",
+          "ar": "عندي أخاً (einen)."
+        },
+        "exercise": {
+          "q": "أكمل: Ich habe ___ alten Vater. (der Vater)",
+          "a": "einen alten Vater"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wer siehst du?~~ (مَن ترى؟)",
+          "ar": "wer للفاعل · wen للمفعول"
+        },
+        "whyArabicSpeakerFails": "«مَن» واحدة بالعربية للحالتين؛ الألماني يفرّق: Wer kommt? (فاعل) vs Wen siehst du? (مفعول) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wen siehst du?",
+          "ar": "مَن ترى؟ (wen)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wer beschreibst du?~~",
+          "a": "Wen beschreibst du?"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich sehe mein Bruder.~~",
+          "ar": "الملكية + Akkusativ: mein ← meinen"
+        },
+        "whyArabicSpeakerFails": "تُجمع القاعدتان: الملكية تتبع المُملوك + المفعول يغيّر der — الناتج: meinen Bruder (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich sehe meinen Bruder.",
+          "ar": "أرى أخي (meinen)."
+        },
+        "exercise": {
+          "q": "أكمل: Ich sehe ___ Hund. (mein Hund)",
+          "a": "meinen Hund"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "jung",
+      "klein",
+      "schoen",
+      "freundlich",
+      "lustig",
+      "schlau",
+      "haar",
+      "gesicht",
+      "foto",
+      "bild",
+      "beschreiben",
+      "wen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/beschreiben",
+      "https://www.duden.de/rechtschreibung/wen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/wen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-akkusativ-1"
+  ],
+  "audioManifestRefs": [
+    "word-jung",
+    "word-klein",
+    "word-schoen",
+    "word-freundlich",
+    "word-lustig",
+    "word-schlau",
+    "word-haar",
+    "word-gesicht",
+    "word-foto",
+    "word-bild",
+    "word-beschreiben",
+    "word-wen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 (Meine Familie) — erster Akkusativ",
+    "goetheWordListOverlap": [
+      "sehen",
+      "klein"
+    ]
+  }
+}

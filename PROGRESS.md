@@ -141,3 +141,9 @@
 - **u4-d2** (الملكية — 12 كلمة): Familie/Tante/Onkel/Hund/Katze/Schlüssel/Tasche/Auto + gehören/mein/dein/sein — مصائد: meine Frau (حسب المُملوك) · gehören يجرّ · بلا أداة مع الملكية.
 - الصوت: 24 مقطعاً — المانيفست **202 مسارات** · الكلمات **201** · الدروس **20** (الوحدات 1–3 + الوحدة 4: يومان).
 - النتيجة: **243/243 أخضر** + tsc + validator (225/0/0) + build ✓. (استعادة بيئية: numpy/piper/npm — D53). التالي: u4-d3 (أول Akkusativ) وu4-d4..u4-d6.
+
+## حملة المحتوى — الدفعة 10 (2026-10-10) — الوحدة 4: u4-d3 + u4-d4 (D54)
+- **u4-d3** (أول Akkusativ — 12 كلمة): وصف الأشخاص + Foto/Bild/beschreiben/wen — مصائد: einen (der فقط تتغير) · wer/wen · meinen.
+- **u4-d4** (الصورة الأسرية — 12 كلمة): sehen/zeigen/sitzen/stehen/lächeln + links/rechts/neben/zwischen + tragen/Brille — مصائد: tragen · الفعل ثانياً · meinen+Akk.
+- الصوت: 24 مقطعاً — المانيفست **226 مساراً** · الكلمات **225** · الدروس **22** (الوحدات 1–3 + الوحدة 4: 4 أيام).
+- النتيجة: **243/243 أخضر** + tsc + validator (251/0/0) + build ✓. التالي: u4-d5 (خلط + تسجيل) وu4-d6 (معركة الوحدة 4).

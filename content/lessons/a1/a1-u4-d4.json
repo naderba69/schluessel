@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u4-d4",
+  "level": "A1",
+  "unit": 4,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst ein Familienfoto in 4 Sätzen beschreiben (Akkusativ + Fragen).",
+    "ar": "تصف صورة أسرية بـ4 جمل (Akkusativ + أسئلة)"
+  },
+  "canDoDaily": [
+    "يصف صورة أسرية بـ4 جمل: مواقع + مظهر + فعل برؤية"
+  ],
+  "warmup": {
+    "cardIds": [
+      "foto",
+      "bruder",
+      "alt"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«على اليسار يقف أبي» — Links steht mein Vater أم Links mein Vater steht? (تخمين فقط)"
+        },
+        "choices": [
+          "Links steht mein Vater. (الفعل ثانياً)",
+          "Links mein Vater steht.",
+          "Mein Vater links steht."
+        ],
+        "answer": "Links steht mein Vater. (الفعل ثانياً)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "sehen",
+      "zeigen",
+      "sitzen",
+      "stehen",
+      "laecheln",
+      "links",
+      "rechts",
+      "neben",
+      "zwischen",
+      "gemeinsam",
+      "tragen",
+      "brille"
+    ],
+    "grammarArsenalIds": [
+      "ars-akkusativ-2"
+    ],
+    "storySentenceIds": [
+      "story-a4-u4-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أرى أبي»؟",
+            "a": "Ich sehe meinen Vater. (meinen — Akkusativ)"
+          },
+          {
+            "q": "«أرِني الصورة!»؟",
+            "a": "Zeig mir das Foto!"
+          }
+        ],
+        "interleavedWith": [
+          "sehen",
+          "bruder"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«على اليسار يقف أبي»؟",
+            "a": "Links steht mein Vater."
+          },
+          {
+            "q": "«يرتدي نظارة»؟",
+            "a": "Er trägt eine Brille."
+          }
+        ],
+        "interleavedWith": [
+          "vater",
+          "mutter"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«بين الأب والأم يقف الطفل»؟",
+            "a": "Zwischen Vater und Mutter steht das Kind."
+          },
+          {
+            "q": "«الجميع يبتسمون»؟",
+            "a": "Alle lächeln."
+          }
+        ],
+        "interleavedWith": [
+          "kind",
+          "zwischen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Familienfoto in 4 Sätzen beschreiben",
+        "ar": "وصف صورة أسرية بـ4 جمل"
+      },
+      "situation": {
+        "de": "Im Kurs: das Familienfoto an der Wand",
+        "ar": "في الدورة: الصورة الأسرية على الجدار"
+      },
+      "successCriteria": [
+        "4 جمل: موقعان (links/rechts/neben/zwischen) + مظهر + فعل sehen/tragen — كل جملة فعلها ثانياً"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أرى أخي»؟",
+            "a": "Ich sehe meinen Bruder."
+          },
+          {
+            "q": "«على اليمين»؟",
+            "a": "rechts"
+          },
+          {
+            "q": "«يرتدي نظارة»؟",
+            "a": "Er trägt eine Brille."
+          },
+          {
+            "q": "«الجميع يبتسمون في الصورة»؟",
+            "a": "Alle lächeln auf dem Foto."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«على اليسار أمي»؟",
+            "a": "Links ist meine Mutter."
+          },
+          {
+            "q": "«يجلس» و«يقف»؟",
+            "a": "sitzen / stehen"
+          },
+          {
+            "q": "«بجانب أمي تجلس الجدة»؟",
+            "a": "Neben meiner Mutter sitzt Oma."
+          },
+          {
+            "q": "«أرِني الصورة!»؟",
+            "a": "Zeig mir das Foto!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«بين»؟",
+            "a": "zwischen"
+          },
+          {
+            "q": "«الصورة معلّقة على الجدار»؟",
+            "a": "Das Bild hängt an der Wand."
+          },
+          {
+            "q": "«معاً»؟",
+            "a": "gemeinsam"
+          },
+          {
+            "q": "tragen — للمعنى؟",
+            "a": "يرتدي (ملابس/نظارة) أو يحمل"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Dein Familienfoto erzählt: Links steht …, rechts sitzt …, neben …, zwischen … — und alle lächeln gemeinsam!",
+      "ar": "صورتك الأسرية تحكي: على اليسار يقف…، على اليمين يجلس…، بجانب…، بين… — والجميع يبتسمون معاً!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Er ist eine Brille.~~ / ~~Er hat Brille an.~~",
+          "ar": "tragen للملابس والنظارة"
+        },
+        "whyArabicSpeakerFails": "«يلبس» و«يحمل» فعلان بالعربية؛ الألماني tragen لكليهما — وللنظارة: eine Brille tragen (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Er trägt eine Brille.",
+          "ar": "يرتدي نظارة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Mein Vater ist eine Brille.~~",
+          "a": "Mein Vater trägt eine Brille."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Links mein Vater steht.~~",
+          "ar": "الفعل في الجملة الألمانية ثانياً دائماً"
+        },
+        "whyArabicSpeakerFails": "«على اليسار أبي يقف» ترتيب عربي حر؛ الألماني: الظرف أولاً ثم الفعل مباشرة ثم الفاعل (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Links steht mein Vater.",
+          "ar": "على اليسار يقف أبي."
+        },
+        "exercise": {
+          "q": "أعد الترتيب: mein Vater / Rechts / sitzt",
+          "a": "Rechts sitzt mein Vater."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich sehe mein Bruder.~~",
+          "ar": "mein ← meinen عند المفعول"
+        },
+        "whyArabicSpeakerFails": "قاعدة الأمس تتضاعف: الملكية تتبع المُملوك + المفعول يغيّر der — الناتج meinen (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich sehe meinen Bruder.",
+          "ar": "أرى أخي."
+        },
+        "exercise": {
+          "q": "أكمل: Ich sehe ___ Schwester. (mein)",
+          "a": "meine Schwester"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "sehen",
+      "zeigen",
+      "sitzen",
+      "stehen",
+      "laecheln",
+      "links",
+      "rechts",
+      "neben",
+      "zwischen",
+      "gemeinsam",
+      "tragen",
+      "brille"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/tragen",
+      "https://www.duden.de/rechtschreibung/Brille",
+      "https://www.duden.de/rechtschreibung/l%C3%A4cheln"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/tragen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-akkusativ-2"
+  ],
+  "audioManifestRefs": [
+    "word-sehen",
+    "word-zeigen",
+    "word-sitzen",
+    "word-stehen",
+    "word-laecheln",
+    "word-links",
+    "word-rechts",
+    "word-neben",
+    "word-zwischen",
+    "word-gemeinsam",
+    "word-tragen",
+    "word-brille"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 (Meine Familie) — Foto beschreiben",
+    "goetheWordListOverlap": [
+      "sehen",
+      "tragen"
+    ]
+  }
+}

@@ -207,3 +207,9 @@
 - **u4-d2** (12 كلمة): Familie/Tante/Onkel/Hund/Katze/Schlüssel/Tasche/Auto/gehören/mein/dein/sein. مصائد: **الملكية تتبع المُملوك** (meine Frau لا mein Frau) · **gehören + Dativ** · الملكية بلا أداة تعريف.
 - **بيئية:** البيئة فقدت numpy/piper/node_modules فجأة (reset بين الجلسات) — استُعيدت: `pip3 install --break-system-packages numpy scipy soundfile piper-tts` + `npm ci` (من package-lock). موثّقة هنا للاستعادة السريعة.
 - البوابة: **243/243 + tsc + validator (225 ملفاً/0/0) + build** ✓.
+
+## D54 (2026-10-10): الوحدة 4 — u4-d3 (أول Akkusativ) + u4-d4 (وصف الصورة الأسرية)
+
+- **u4-d3** (12 كلمة): jung/klein/schön/freundlich/lustig/schlau/Haar/Gesicht/Foto/Bild/beschreiben/wen. مصائد: **einen Bruder** (der ← einen عند المفعول — لا شيء غيرها يغيّر) · **wer للفاعل / wen للمفعول** · **meinen Bruder** (الملكية + Akkusativ معاً).
+- **u4-d4** (12 كلمة): sehen/zeigen/sitzen/stehen/lächeln/links/rechts/neben/zwischen/gemeinsam/tragen/Brille. مصائد: **tragen للملابس والنظارة** · **الظرف أولاً ثم الفعل ثانياً** (Links steht mein Vater) · meinen (تكرار موعود).
+- البوابة: **243/243 + tsc + validator (251 ملفاً/0/0) + build** ✓.
