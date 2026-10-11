@@ -253,3 +253,10 @@
 - **u6-d4** (12 كلمة): Ecke/Mitte/oben/unten/über/unter/hinter/auf/stellen/legen/hängen/wohin. مصائد: **Wo?=Dativ ↔ Wohin?=Akkusativ** (an der Wand ↔ an die Wand) · **stellen/legen/hängen** الثلاثة · **Wo (u2) ↔ wohin** الزوج.
 - ملاحظة إنتاج: البيئة فقدت مجدداً numpy/piper **و**node_modules — الاستعادة: `pip3 install --break-system-packages numpy scipy soundfile piper-tts` + `npm ci`. + مصيدة مطبعية: مفتاح JSON خاطئ (whyAramicSpeakerFails) لا يكسر zod لكنه يكسر اختبارات المصائد — تحقق دائم من المفاتيح.
 - البوابة: **243/243 + tsc + validator (390 ملفاً/0/0) + build** ✓.
+
+## D61 (2026-10-10): إتمام الوحدة 6 — u6-d5 (da + وصف شقة) + u6-d6 (المعركة)
+
+- **u6-d5** (17 كلمة — 49–65): Möbel/Einrichtung/Gerät/Schublade/Rahmen/Handtuch/Seife/Dusche/Toilette/Pflanze/Vase/Hof/Etage/Stockwerk/Miete/Nachbar/dunkel. مصائد: **die Möbel جمع فقط** (النمط الرابع) · **die Nachbarn** (n-Deklination — يضيف -n) · **da-Türchen** (darauf/dahinter = فوقها/خلفها كلمة واحدة). مهمة: **وصف الشقة في 5 جمل**.
+- **u6-d6** (integration — بلا كلمات): معركة 0.75 + 3 بطاقات ختامية (es gibt+Wo/Wohin · Möbel/Nachbarn · da-Türchen).
+- موازنة SRS (§4/R10b): أُضيفت بطاقة comprehension إلى 191 كلمة تفتقر إليها — النسبة 41/20/6 → 34/35/5 (المستهدف A1 = 40/50/10 · off 0.355→0.266) — التحذير w-srs-ratio انطفأ.
+- البوابة: **243/243 + tsc + validator (409 ملفات/0/0) + build** ✓. **الوحدات 1–6 مكتملة = 369 كلمة · 36 درساً · 370 مساراً.**

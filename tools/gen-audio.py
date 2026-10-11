@@ -429,6 +429,23 @@ def build_all() -> None:
         ("word-legen", "legen.", "legen", ["a1-u6-d4"]),
         ("word-haengen", "hängen.", "haengen", ["a1-u6-d4"]),
         ("word-wohin", "wohin.", "wohin", ["a1-u6-d4"]),
+        ("word-moebel", "Möbel.", "moebel", ["a1-u6-d5"]),
+        ("word-einrichtung", "Einrichtung.", "einrichtung", ["a1-u6-d5"]),
+        ("word-geraet", "Gerät.", "geraet", ["a1-u6-d5"]),
+        ("word-schublade", "Schublade.", "schublade", ["a1-u6-d5"]),
+        ("word-rahmen", "Rahmen.", "rahmen", ["a1-u6-d5"]),
+        ("word-handtuch", "Handtuch.", "handtuch", ["a1-u6-d5"]),
+        ("word-seife", "Seife.", "seife", ["a1-u6-d5"]),
+        ("word-dusche", "Dusche.", "dusche", ["a1-u6-d5"]),
+        ("word-toilette", "Toilette.", "toilette", ["a1-u6-d5"]),
+        ("word-pflanze", "Pflanze.", "pflanze", ["a1-u6-d5"]),
+        ("word-vase", "Vase.", "vase", ["a1-u6-d5"]),
+        ("word-hof", "Hof.", "hof", ["a1-u6-d5"]),
+        ("word-etage", "Etage.", "etage", ["a1-u6-d5"]),
+        ("word-stockwerk", "Stockwerk.", "stockwerk", ["a1-u6-d5"]),
+        ("word-miete", "Miete.", "miete", ["a1-u6-d5"]),
+        ("word-nachbar", "Nachbar.", "nachbar", ["a1-u6-d5"]),
+        ("word-dunkel", "dunkel.", "dunkel", ["a1-u6-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

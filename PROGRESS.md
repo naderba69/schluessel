@@ -183,3 +183,10 @@
 - **u6-d4** (Wo/Wohin — 12 كلمة): Ecke/Mitte/oben/unten/über/unter/hinter/auf/stellen/legen/hängen/wohin — مصائد: Wo=Dativ ↔ Wohin=Akk · الثلاثة stellen/legen/hängen · Wo↔wohin.
 - الصوت: 24 مقطعاً — المانيفست **353 مساراً** · الكلمات **352** · الدروس **34** (الوحدات 1–5 + الوحدة 6: 4 أيام).
 - النتيجة: **243/243 أخضر** + tsc + validator (390/0/0) + build ✓. (D60) التالي: u6-d5 (da + وصف شقة — 17 كلمة) وu6-d6 (المعركة).
+
+## حملة المحتوى — الدفعة 17 (2026-10-10) — إتمام الوحدة 6 (D61)
+- **u6-d5** (17 كلمة + da + وصف شقة): Möbel/Einrichtung/Gerät/Schublade/Rahmen/Handtuch/Seife/Dusche/Toilette/Pflanze/Vase/Hof/Etage/Stockwerk/Miete/Nachbar/dunkel — مصائد: Möbel جمع فقط · Nachbarn (n-Deklination) · da-Türchen.
+- **u6-d6** (المعركة — بلا كلمات): توليف + معركة 0.75.
+- موازنة بطاقات SRS: +comprehension لـ191 كلمة (41/20/6 → 34/35/5 · التحذير انطفأ).
+- الصوت: 17 مقطعاً — المانيفست **370 مساراً** · الكلمات **369** · الدروس **36** — **الوحدات 1–6 مكتملة (36 يوماً)**.
+- النتيجة: **243/243 أخضر** + tsc + validator (409/0/0) + build ✓. (D61) التالي: الوحدة 7 (اليوميات والهواء — 65 كلمة).

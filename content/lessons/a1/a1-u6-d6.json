@@ -1,0 +1,284 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d6",
+  "level": "A1",
+  "unit": 6,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Die Einheit 6 zusammenfassen und die Wochen-Meisterschaft bestehen.",
+    "ar": "تلخيص الوحدة 6 واجتياز معركة الأسبوع"
+  },
+  "canDoDaily": [
+    "يجتاز معركة الوحدة 6 بعتبة 0.75"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bett",
+      "fenster",
+      "wohnzimmer"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«في الشقة طاولة وخلفها خزانة» — الصيغة الصحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Es gibt einen Tisch, und dahinter ist ein Schrank.",
+          "Es gibt der Tisch, und hinter das ist ein Schrank.",
+          "Es gibt einen Tisch, und dahinter es gibt Schrank."
+        ],
+        "answer": "Es gibt einen Tisch, und dahinter ist ein Schrank.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "zimmer",
+      "stellen"
+    ],
+    "grammarArsenalIds": [
+      "ars-es-gibt",
+      "ars-wo-wohin",
+      "ars-da-komposita"
+    ],
+    "storySentenceIds": [
+      "story-a6-u6-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«في غرفة النوم سرير»؟",
+            "a": "Im Schlafzimmer gibt es ein Bett."
+          },
+          {
+            "q": "«خلف الباب خزانة»؟",
+            "a": "Hinter der Tür ist ein Schrank."
+          }
+        ],
+        "interleavedWith": [
+          "bett",
+          "schrank"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أضع (واقفاً) الطاولة في الوسط»؟",
+            "a": "Ich stelle den Tisch in die Mitte."
+          },
+          {
+            "q": "«الأثاث جديد»؟",
+            "a": "Die Möbel sind neu."
+          }
+        ],
+        "interleavedWith": [
+          "moebel",
+          "mitte"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الشقة هادئة ومريحة»؟",
+            "a": "Die Wohnung ist ruhig und gemütlich."
+          },
+          {
+            "q": "«أين؟ وإلى أين؟»؟",
+            "a": "Wo? (Dativ) ↔ Wohin? (Akkusativ)"
+          }
+        ],
+        "interleavedWith": [
+          "ruhig",
+          "gemuetlich"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wochen-Meisterschaft: Wohnen",
+        "ar": "معركة الأسبوع: السكن"
+      },
+      "situation": {
+        "de": "Abschlussprüfung der Einheit 6",
+        "ar": "اختبار ختام الوحدة 6"
+      },
+      "successCriteria": [
+        "اجتياز المعركة بـ ≥ 0.75 مع es gibt وWo/Wohin وda صحيحة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«في الشقة نافذة»؟",
+            "a": "Es gibt ein Fenster."
+          },
+          {
+            "q": "«أضع الصورة على الجدار»؟",
+            "a": "Ich hänge das Bild an die Wand."
+          },
+          {
+            "q": "«الثلاجة»؟",
+            "a": "der Kühlschrank"
+          },
+          {
+            "q": "«الأثاث جديد»؟",
+            "a": "Die Möbel sind neu."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«غرفة المعيشة»؟",
+            "a": "das Wohnzimmer"
+          },
+          {
+            "q": "«الطاولة في الوسط»؟",
+            "a": "Der Tisch ist in der Mitte."
+          },
+          {
+            "q": "«فوقها مصباح»؟",
+            "a": "Darauf steht eine Lampe."
+          },
+          {
+            "q": "«الجار»؟",
+            "a": "der Nachbar (الجمع: die Nachbarn)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أين المصباح؟»؟",
+            "a": "Wo ist die Lampe?"
+          },
+          {
+            "q": "«إلى أين تضعها؟»؟",
+            "a": "Wohin stellst du sie?"
+          },
+          {
+            "q": "«السرير والوسادة»؟",
+            "a": "das Bett und das Kissen"
+          },
+          {
+            "q": "«الشقة هادئة»؟",
+            "a": "Die Wohnung ist ruhig."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheit 6 gemeistert: Du beschreibst deine Wohnung — es gibt, wo/wohin, da-Komposita — und kennst jedes Möbelstück mit seinem Genus!",
+      "ar": "الوحدة 6 متقنة: تصف شقتك — es gibt وwo/wohin وتراكيب da — وتعرف كل قطعة أثاث بجنسها!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Es gibt der Tisch.~~ / ~~Wo stellst du es?~~ (Wohin?)",
+          "ar": "es gibt + Akk · Wo↔Wohin"
+        },
+        "whyArabicSpeakerFails": "«توجد» بالجرّ و«أين» للسؤالين؛ الألماني: es gibt ينصب وWohin ينصب أيضاً — النصب يتكرر بقوانين مختلفة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Es gibt einen Tisch. — Wo? (Dativ) / Wohin? (Akkusativ)",
+          "ar": "النصب عند «يوجد» وعند الاتجاه"
+        },
+        "exercise": {
+          "q": "أكمل: Es gibt ___ Tisch. Wo ist er? — Wohin stellst du ___?",
+          "a": "einen / ihn"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Möbel ist neu.~~ / ~~der Nachbars~~",
+          "ar": "Möbel جمع فقط · Nachbarn -n"
+        },
+        "whyArabicSpeakerFails": "الأثاث جامد مفرد والجار جمعه بالزيادة؛ الألماني معكوس: Möbel جمع دائماً وNachbar جمعه -n فقط (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Die Möbel sind neu. / die Nachbarn",
+          "ar": "الاثنان معاً بنمط غير منتظم"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Das Möbel ist neu und der Nachbars ist nett.~~",
+          "a": "Die Möbel sind neu und der Nachbar ist nett."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Auf das steht eine Lampe.~~",
+          "ar": "da + حرف الجر كلمة واحدة"
+        },
+        "whyArabicSpeakerFails": "«فوقها» مركّبة لكنها تُكتب منفصلة أحياناً؛ الألماني darauf كلمة واحدة في موقع النكرة المجرورة — الوحدة كلها مهدت لهذا التركيب (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Darauf steht eine Lampe. / Dahinter ist ein Schrank.",
+          "ar": "فوقها مصباح. / خلفها خزانة."
+        },
+        "exercise": {
+          "q": "أعد الصياغة: Hinter der Tür ist ein Schrank. → ___ ist ein Schrank.",
+          "a": "Dahinter"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "zimmer",
+      "stellen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/gibt",
+      "https://www.duden.de/rechtschreibung/darauf",
+      "https://www.duden.de/rechtschreibung/Moebel"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/da-Komposita"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-es-gibt",
+    "ars-wo-wohin",
+    "ars-da-komposita"
+  ],
+  "audioManifestRefs": [
+    "word-zimmer",
+    "word-stellen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 6 (Wohnen) — Wiederholung & Test",
+    "goetheWordListOverlap": [
+      "zimmer",
+      "stellen"
+    ]
+  }
+}
