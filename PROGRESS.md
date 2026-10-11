@@ -177,3 +177,9 @@
 - **u6-d2** (Zimmer — 12 كلمة): Zimmer + مركّباتها + Flur/Balkon/Treppe/Keller/Garten/hell/ruhig/gemütlich — مصائد: مركّبات Zimmer=das · Gärten · gemütlich.
 - الصوت: 24 مقطعاً — المانيفست **329 مساراً** · الكلمات **328** · الدروس **32** (الوحدات 1–5 + الوحدة 6: يومان).
 - النتيجة: **243/243 أخضر** + tsc + validator (364/0/0) + build ✓. (D59) التالي: u6-d3 (es gibt) وu6-d4 (Wo/Wohin) وu6-d5 (da + وصف شقة) وu6-d6 (المعركة).
+
+## حملة المحتوى — الدفعة 16 (2026-10-10) — u6-d3 + u6-d4 (D60)
+- **u6-d3** (es gibt — 12 كلمة): Fenster/Tür/Wand/Boden/Decke/Heizung/Kühlschrank/Waschmaschine/Fernseher/Computer/Schreibtisch/Dach — مصائد: es gibt+Akk · جنس الآلات · مركّبات der/die.
+- **u6-d4** (Wo/Wohin — 12 كلمة): Ecke/Mitte/oben/unten/über/unter/hinter/auf/stellen/legen/hängen/wohin — مصائد: Wo=Dativ ↔ Wohin=Akk · الثلاثة stellen/legen/hängen · Wo↔wohin.
+- الصوت: 24 مقطعاً — المانيفست **353 مساراً** · الكلمات **352** · الدروس **34** (الوحدات 1–5 + الوحدة 6: 4 أيام).
+- النتيجة: **243/243 أخضر** + tsc + validator (390/0/0) + build ✓. (D60) التالي: u6-d5 (da + وصف شقة — 17 كلمة) وu6-d6 (المعركة).

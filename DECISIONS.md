@@ -246,3 +246,10 @@
 - **u6-d2** (12 كلمة): Zimmer/Schlafzimmer/Wohnzimmer/Badezimmer/Flur/Balkon/Treppe/Keller/Garten/hell/ruhig/gemütlich. مصائد: **مركّبات Zimmer = das** (الم rule للمرة الرابعة) · **die Gärten** (umlaut جديد) · **gemütlich** (ü تُكتب ue) + der Balkon/die Treppe.
 - ملاحظة إنتاج: **كل بطاقة تحذير يجب أن تحمل «10»** (خريطة التداخل 10‑ي) حتى لو كان سبب العائق من قواعد أخرى — اكتُشف باختبار المصائد.
 - البوابة: **243/243 + tsc + validator (364 ملفاً/0/0) + build** ✓.
+
+## D60 (2026-10-10): u6-d3 (es gibt) + u6-d4 (Wo/Wohin)
+
+- **u6-d3** (12 كلمة): Fenster/Tür/Wand/Boden/Decke/Heizung/Kühlschrank/Waschmaschine/Fernseher/Computer/Schreibtisch/Dach. مصائد: **es gibt + Akkusativ** (لا Dativ) · جنس الآلات (die Heizung ↔ der Fernseher) · **المركّبات: الجنس من آخر جزء** (Kühlschrank/Schreibtisch — الم rule للمرة الخامسة) · Dächer (شاذ).
+- **u6-d4** (12 كلمة): Ecke/Mitte/oben/unten/über/unter/hinter/auf/stellen/legen/hängen/wohin. مصائد: **Wo?=Dativ ↔ Wohin?=Akkusativ** (an der Wand ↔ an die Wand) · **stellen/legen/hängen** الثلاثة · **Wo (u2) ↔ wohin** الزوج.
+- ملاحظة إنتاج: البيئة فقدت مجدداً numpy/piper **و**node_modules — الاستعادة: `pip3 install --break-system-packages numpy scipy soundfile piper-tts` + `npm ci`. + مصيدة مطبعية: مفتاح JSON خاطئ (whyAramicSpeakerFails) لا يكسر zod لكنه يكسر اختبارات المصائد — تحقق دائم من المفاتيح.
+- البوابة: **243/243 + tsc + validator (390 ملفاً/0/0) + build** ✓.

@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d4",
+  "level": "A1",
+  "unit": 6,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst sagen, wo etwas ist und wohin du es stellst.",
+    "ar": "تقول أين الشيء وإلى أين تضعه"
+  },
+  "canDoDaily": [
+    "يحدد مكان الشيء (Wo? + Dativ) واتجاه وضعه (Wohin? + Akkusativ)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "tisch",
+      "lampe",
+      "schrank"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أضع الطاولة عند الجدار» — an die Wand أم an der Wand? (تخمين فقط)"
+        },
+        "choices": [
+          "an die Wand (Wohin? = Akkusativ)",
+          "an der Wand (هذه للـWo?)",
+          "an dem Wand"
+        ],
+        "answer": "an die Wand (Wohin? = Akkusativ)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "ecke",
+      "mitte",
+      "oben",
+      "unten",
+      "ueber",
+      "unter",
+      "hinter",
+      "auf",
+      "stellen",
+      "legen",
+      "haengen",
+      "wohin"
+    ],
+    "grammarArsenalIds": [
+      "ars-wo-wohin"
+    ],
+    "storySentenceIds": [
+      "story-a6-u6-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أين المصباح؟» (Wo?)",
+            "a": "Wo ist die Lampe? — In der Ecke."
+          },
+          {
+            "q": "«الصورة فوق الأريكة»؟",
+            "a": "Das Bild ist über dem Sofa."
+          }
+        ],
+        "interleavedWith": [
+          "lampe",
+          "sofa"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أضع الطاولة عند الجدار» (Wohin?)؟",
+            "a": "Ich stelle den Tisch an die Wand."
+          },
+          {
+            "q": "«أعلّق الصورة على الجدار»؟",
+            "a": "Ich hänge das Bild an die Wand."
+          }
+        ],
+        "interleavedWith": [
+          "wand",
+          "bild"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الوسادة تحت السرير»؟",
+            "a": "Das Kissen ist unter dem Bett."
+          },
+          {
+            "q": "«أضع الوسادة على السرير» (Wohin?)؟",
+            "a": "Ich lege das Kissen auf das Bett."
+          }
+        ],
+        "interleavedWith": [
+          "bett",
+          "kissen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wo? und Wohin? unterscheiden",
+        "ar": "التمييز بين الأين والأين-الاتجاهية"
+      },
+      "situation": {
+        "de": "Zimmer einrichten",
+        "ar": "ترتيب الغرفة"
+      },
+      "successCriteria": [
+        "جملتان Wo?+Dativ + جملتان Wohin?+Akkusativ + فعل وضع صحيح (stellen/legen/hängen)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أين؟» (اتجاه)؟",
+            "a": "wohin"
+          },
+          {
+            "q": "«الخزانة خلف الباب»؟",
+            "a": "Der Schrank ist hinter der Tür."
+          },
+          {
+            "q": "«أضع (واقفاً)»؟",
+            "a": "stellen"
+          },
+          {
+            "q": "«أعلّق الصورة على الجدار»؟",
+            "a": "Ich hänge das Bild an die Wand."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الطاولة في الوسط»؟",
+            "a": "Der Tisch ist in der Mitte."
+          },
+          {
+            "q": "«أضع (مستلقياً)»؟",
+            "a": "legen"
+          },
+          {
+            "q": "«المصباح على الطاولة»؟",
+            "a": "Die Lampe ist auf dem Tisch."
+          },
+          {
+            "q": "«أعلى/أسفل»؟",
+            "a": "oben / unten"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الركن»؟",
+            "a": "die Ecke"
+          },
+          {
+            "q": "«الصورة فوق الأريكة»؟",
+            "a": "Das Bild ist über dem Sofa."
+          },
+          {
+            "q": "«أضع الطاولة عند الجدار»؟",
+            "a": "Ich stelle den Tisch an die Wand."
+          },
+          {
+            "q": "Wo? — Dativ أم Akkusativ?",
+            "a": "Dativ (Wo ist das Bild? — An der Wand)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Wo? = Dativ (an der Wand), Wohin? = Akkusativ (an die Wand) — und stellen/legen/hängen je nach Form!",
+      "ar": "أين؟ = جرّ (an der Wand)، وإلى أين؟ = نصب (an die Wand) — وstellen/legen/hängen حسب شكل الشيء!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich stelle den Tisch an der Wand.~~ (Wohin?)",
+          "ar": "Wohin? = Akkusativ"
+        },
+        "whyArabicSpeakerFails": "«عند الجدار» تجرّ بالعربية مهما كان السؤال؛ الألماني يفرق: أين؟ → an der (جرّ) · إلى أين؟ → an die (نصب) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich stelle den Tisch an die Wand. (Wohin?)",
+          "ar": "الاتجاه = نصب"
+        },
+        "exercise": {
+          "q": "أكمل: Ich stelle die Lampe auf ___ Tisch. Sie ist auf ___ Tisch.",
+          "a": "den / dem"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich lege den Tisch.~~ / ~~Ich stelle das Bild.~~",
+          "ar": "stellen (واقفاً) · legen (مستلقياً) · hängen (معلّقاً)"
+        },
+        "whyArabicSpeakerFails": "«أضع» فعل واحد بالعربية للكل؛ الألماني يصف شكل الوضع بثلاثة أفعال — المعنى يتغير بالفعل لا بالظرف (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "stellen (تِلْ) / legen (مستلقٍ) / hängen (معلّق)",
+          "ar": "ثلاثة أفعال للوضع"
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ das Kissen auf das Bett. Ich ___ das Bild an die Wand.",
+          "a": "lege / hänge"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wo stellst du den Tisch?~~ (للاتجاه)",
+          "ar": "Wo? ↔ Wohin?"
+        },
+        "whyArabicSpeakerFails": "«أين» واحدة بالعربية للسؤالين؛ الألماني Wo للمكان وWohin للاتجاه — وwo مأخوذة من u2 واليوم wohin شقيقتها (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wo ist das Bild? — Wohin stellst du es?",
+          "ar": "أين هو؟ ↔ إلى أين تضعه؟"
+        },
+        "exercise": {
+          "q": "اختر: ___ ist der Tisch? — ___ stellst du ihn?",
+          "a": "Wo / Wohin"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "ecke",
+      "mitte",
+      "oben",
+      "unten",
+      "ueber",
+      "unter",
+      "hinter",
+      "auf",
+      "stellen",
+      "legen",
+      "haengen",
+      "wohin"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/stellen",
+      "https://www.duden.de/rechtschreibung/legen",
+      "https://www.duden.de/rechtschreibung/hinter"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Wechselpr%C3%A4position"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-wo-wohin"
+  ],
+  "audioManifestRefs": [
+    "word-ecke",
+    "word-mitte",
+    "word-oben",
+    "word-unten",
+    "word-ueber",
+    "word-unter",
+    "word-hinter",
+    "word-auf",
+    "word-stellen",
+    "word-legen",
+    "word-haengen",
+    "word-wohin"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 6 (Wohnen) — Wo? / Wohin?",
+    "goetheWordListOverlap": [
+      "auf",
+      "stellen"
+    ]
+  }
+}

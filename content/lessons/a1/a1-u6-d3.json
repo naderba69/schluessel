@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d3",
+  "level": "A1",
+  "unit": 6,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst sagen, was es in der Wohnung gibt (es gibt).",
+    "ar": "تقول ما يوجد في الشقة بـ es gibt"
+  },
+  "canDoDaily": [
+    "يقول ما يوجد في الشقة بـ es gibt + Akkusativ"
+  ],
+  "warmup": {
+    "cardIds": [
+      "schrank",
+      "lampe",
+      "tisch"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«في الشقة طاولة» — Es gibt der Tisch أم Es gibt einen Tisch? (تخمين فقط)"
+        },
+        "choices": [
+          "Es gibt einen Tisch. (es gibt + Akkusativ)",
+          "Es gibt der Tisch.",
+          "Es gibt einen Tisch in."
+        ],
+        "answer": "Es gibt einen Tisch. (es gibt + Akkusativ)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "fenster",
+      "tuer",
+      "wand",
+      "boden",
+      "decke",
+      "heizung",
+      "kuehlschrank",
+      "waschmaschine",
+      "fernseher",
+      "computer",
+      "schreibtisch",
+      "dach"
+    ],
+    "grammarArsenalIds": [
+      "ars-es-gibt"
+    ],
+    "storySentenceIds": [
+      "story-a6-u6-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«في الشقة نافذة كبيرة»؟",
+            "a": "Es gibt ein großes Fenster."
+          },
+          {
+            "q": "«الباب جديد»؟",
+            "a": "Die Tür ist neu."
+          }
+        ],
+        "interleavedWith": [
+          "fenster",
+          "tuer"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«في المطبخ ثلاجة»؟",
+            "a": "Es gibt einen Kühlschrank in der Küche."
+          },
+          {
+            "q": "«الغسالة والتدفئة»؟",
+            "a": "die Waschmaschine und die Heizung"
+          }
+        ],
+        "interleavedWith": [
+          "kuehlschrank",
+          "kueche"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«المكتب كبير»؟",
+            "a": "Der Schreibtisch ist groß."
+          },
+          {
+            "q": "«في الغرفة تلفاز وحاسوب»؟",
+            "a": "Es gibt einen Fernseher und einen Computer."
+          }
+        ],
+        "interleavedWith": [
+          "fernseher",
+          "computer"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Sagen, was es in der Wohnung gibt",
+        "ar": "الإعراب عمّا في الشقة"
+      },
+      "situation": {
+        "de": "Die Wohnung beschreiben",
+        "ar": "وصف الشقة"
+      },
+      "successCriteria": [
+        "3 جمل es gibt + Akkusativ + جملتا وصف (ist)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«النافذة»؟",
+            "a": "das Fenster"
+          },
+          {
+            "q": "«في الشقة طاولة»؟",
+            "a": "Es gibt einen Tisch."
+          },
+          {
+            "q": "«الجدار والأرضية»؟",
+            "a": "die Wand und der Boden"
+          },
+          {
+            "q": "«التدفئة»؟",
+            "a": "die Heizung"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الثلاجة»؟",
+            "a": "der Kühlschrank"
+          },
+          {
+            "q": "«في المطبخ غسالة»؟",
+            "a": "Es gibt eine Waschmaschine in der Küche."
+          },
+          {
+            "q": "«السقف»؟",
+            "a": "die Decke"
+          },
+          {
+            "q": "«الباب جديد»؟",
+            "a": "Die Tür ist neu."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«التلفاز»؟",
+            "a": "der Fernseher"
+          },
+          {
+            "q": "«المكتب»؟",
+            "a": "der Schreibtisch"
+          },
+          {
+            "q": "«في الغرفة حاسوب»؟",
+            "a": "Es gibt einen Computer."
+          },
+          {
+            "q": "«السطح»؟",
+            "a": "das Dach (الجمع: die Dächer)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Was gibt es in deiner Wohnung? Fenster, Türen, Wände, Heizung, Kühlschrank, Waschmaschine, Fernseher, Computer, Schreibtisch — und alles hat ein Dach!",
+      "ar": "ماذا في شقتك؟ نوافذ وأبواب وجدران وتدفئة وثلاجة وغسالة وتلفاز وحاسوب ومكتب — وكل شيء تحت سقف!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Es gibt der Tisch.~~",
+          "ar": "es gibt + Akkusativ (لا Dativ)"
+        },
+        "whyArabicSpeakerFails": "«في الشقة طاولة» بالجرّ أو المبتدأ؛ الألماني es gibt ينصب المفعول دائماً: einen Tisch (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Es gibt einen Tisch.",
+          "ar": "توجد طاولة. (فيه طاولة)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Es gibt der Schrank.~~",
+          "a": "Es gibt einen Schrank."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~der Heizung~~ / ~~die Fernseher~~",
+          "ar": "-ung/-e = die · -er = der"
+        },
+        "whyArabicSpeakerFails": "الآلات مؤنثة غالباً بالعربية («الغسالة»)؛ الألماني: die Waschmaschine لكن der Fernseher/der Kühlschrank — الوحدة تكسر الحدس (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Heizung / die Waschmaschine · der Fernseher / der Kühlschrank",
+          "ar": "احفظ جنس كل آلة"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Heizung und ___ Fernseher.",
+          "a": "die / der"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~das Kühlschrank~~ / ~~die Schreibtisch~~",
+          "ar": "المركّب: الجنس من آخر جزء"
+        },
+        "whyArabicSpeakerFails": "«الثلاجة» كلمة واحدة؛ الألماني Kühlschrank = Kühle+Schrank والجنس من Schrank (der) — قاعدة Muttersprache للمرة الخامسة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Kühlschrank / der Schreibtisch",
+          "ar": "الجنس من نهاية المركّب"
+        },
+        "exercise": {
+          "q": "حدّد: Schreibtisch — der/die/das?",
+          "a": "der (من der Tisch)"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "fenster",
+      "tuer",
+      "wand",
+      "boden",
+      "decke",
+      "heizung",
+      "kuehlschrank",
+      "waschmaschine",
+      "fernseher",
+      "computer",
+      "schreibtisch",
+      "dach"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Kuehlschrank",
+      "https://www.duden.de/rechtschreibung/Waschmaschine",
+      "https://www.duden.de/rechtschreibung/gibt"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/es_gibt"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-es-gibt"
+  ],
+  "audioManifestRefs": [
+    "word-fenster",
+    "word-tuer",
+    "word-wand",
+    "word-boden",
+    "word-decke",
+    "word-heizung",
+    "word-kuehlschrank",
+    "word-waschmaschine",
+    "word-fernseher",
+    "word-computer",
+    "word-schreibtisch",
+    "word-dach"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 6 (Wohnen) — Es gibt",
+    "goetheWordListOverlap": [
+      "fenster",
+      "dach"
+    ]
+  }
+}
