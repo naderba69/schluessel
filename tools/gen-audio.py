@@ -494,6 +494,23 @@ def build_all() -> None:
         ("word-zug", "Zug.", "zug", ["a1-u7-d4"]),
         ("word-bus", "Bus.", "bus", ["a1-u7-d4"]),
         ("word-fahrrad", "Fahrrad.", "fahrrad", ["a1-u7-d4"]),
+        ("word-aufstehen", "aufstehen.", "aufstehen", ["a1-u7-d5"]),
+        ("word-anrufen", "anrufen.", "anrufen", ["a1-u7-d5"]),
+        ("word-fernsehen", "fernsehen.", "fernsehen", ["a1-u7-d5"]),
+        ("word-einkaufen", "einkaufen.", "einkaufen", ["a1-u7-d5"]),
+        ("word-aufraeumen", "aufräumen.", "aufraeumen", ["a1-u7-d5"]),
+        ("word-fruehstuecken", "frühstücken.", "fruehstuecken", ["a1-u7-d5"]),
+        ("word-abwaschen", "abwaschen.", "abwaschen", ["a1-u7-d5"]),
+        ("word-haushalt", "Haushalt.", "haushalt", ["a1-u7-d5"]),
+        ("word-waesche", "Wäsche.", "waesche", ["a1-u7-d5"]),
+        ("word-muell", "Müll.", "muell", ["a1-u7-d5"]),
+        ("word-buch", "Buch.", "buch", ["a1-u7-d5"]),
+        ("word-besuch", "Besuch.", "besuch", ["a1-u7-d5"]),
+        ("word-urlaub", "Urlaub.", "urlaub", ["a1-u7-d5"]),
+        ("word-koffer", "Koffer.", "koffer", ["a1-u7-d5"]),
+        ("word-reise", "Reise.", "reise", ["a1-u7-d5"]),
+        ("word-huebsch", "hübsch.", "huebsch", ["a1-u7-d5"]),
+        ("word-feiern", "feiern.", "feiern", ["a1-u7-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

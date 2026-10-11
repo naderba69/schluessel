@@ -1,0 +1,284 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u7-d6",
+  "level": "A1",
+  "unit": 7,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Die Einheit 7 zusammenfassen und die Wochen-Meisterschaft bestehen.",
+    "ar": "تلخيص الوحدة 7 واجتياز معركة الأسبوع"
+  },
+  "canDoDaily": [
+    "يجتاز معركة الوحدة 7 بعتبة 0.75"
+  ],
+  "warmup": {
+    "cardIds": [
+      "aufstehen",
+      "kochen",
+      "buch"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«هو ينهض متأخراً ويقود كثيراً» — الصيغة الصحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Er steht spät auf und fährt viel.",
+          "Er aufsteht spät und er fahrt viel.",
+          "Er steht spät und er fährt viel auf."
+        ],
+        "answer": "Er steht spät auf und fährt viel.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "aufwachen",
+      "machen"
+    ],
+    "grammarArsenalIds": [
+      "ars-trennbare",
+      "ars-praesens-unregelm",
+      "ars-praesens-regelm"
+    ],
+    "storySentenceIds": [
+      "story-a7-u7-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أنا أنهض وأتناول الفطور»؟",
+            "a": "Ich stehe auf und frühstücke."
+          },
+          {
+            "q": "«أنا أفعل واجبي»؟",
+            "a": "Ich mache meine Hausaufgaben."
+          }
+        ],
+        "interleavedWith": [
+          "aufstehen",
+          "machen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هو يقود إلى برلين»؟",
+            "a": "Er fährt nach Berlin."
+          },
+          {
+            "q": "«هي تأخذ وتتحدث»؟",
+            "a": "Sie nimmt und spricht."
+          }
+        ],
+        "interleavedWith": [
+          "fahren",
+          "nehmen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أتصل وأشاهد التلفاز»؟",
+            "a": "Ich rufe an und sehe fern."
+          },
+          {
+            "q": "«أنت تفعل ↔ هو يفعل»؟",
+            "a": "du machst ↔ er macht"
+          }
+        ],
+        "interleavedWith": [
+          "anrufen",
+          "fernsehen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wochen-Meisterschaft: Alltag",
+        "ar": "معركة الأسبوع: اليوميات"
+      },
+      "situation": {
+        "de": "Abschlussprüfung der Einheit 7",
+        "ar": "اختبار ختام الوحدة 7"
+      },
+      "successCriteria": [
+        "اجتياز المعركة بـ ≥ 0.75 مع الأفعال المنتظمة والشاذة والمنفصلة صحيحة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أنا أنهض في السابعة»؟",
+            "a": "Ich stehe um sieben auf."
+          },
+          {
+            "q": "«هو يقود»؟",
+            "a": "er fährt"
+          },
+          {
+            "q": "«أنت تفعل»؟",
+            "a": "du machst"
+          },
+          {
+            "q": "«هي تتحدث»؟",
+            "a": "sie spricht"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أنا أرتب غرفتي»؟",
+            "a": "Ich räume mein Zimmer auf."
+          },
+          {
+            "q": "«هو يأكل ↔ هو يكون»؟",
+            "a": "er isst ↔ er ist"
+          },
+          {
+            "q": "«أنا أتصل بأمي»؟",
+            "a": "Ich rufe meine Mutter an."
+          },
+          {
+            "q": "«أنا متعب»؟",
+            "a": "Ich bin müde."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«قطار وتذكرة»؟",
+            "a": "der Zug und die Fahrkarte"
+          },
+          {
+            "q": "«أنا أتسوّق»؟",
+            "a": "Ich kaufe ein."
+          },
+          {
+            "q": "«هو يأخذ»؟",
+            "a": "er nimmt"
+          },
+          {
+            "q": "«العطلة»؟",
+            "a": "der Urlaub"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheit 7 gemeistert: Du konjugierst regelmäßig und unregelmäßig, trennst die Verben richtig — und dein Tag läuft perfekt!",
+      "ar": "الوحدة 7 متقنة: تصرّف المنتظم والشاذ وتفصل الأفعال بمكانها الصحيح — ويومك يسير مثالياً!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich aufstehe.~~ / ~~er fahrt~~ / ~~du macht~~",
+          "ar": "الوحدة 7 في ثلاث جمل"
+        },
+        "whyArabicSpeakerFails": "ثلاثة أنماط: انفصال البادئة، وumlaut في du/er، ونهايات -st/-t — كلها تغييرات داخل الكلمة لا تُنطق بالعربية (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "stehe auf · fährt · machst",
+          "ar": "النهاية · الـumlaut · النهايات"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich aufstehe und du macht und er fahrt.~~",
+          "a": "Ich stehe auf, und du machst, und er fährt."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Er isst müde.~~ / ~~Er ist Brot.~~",
+          "ar": "isst ↔ ist متشابهان"
+        },
+        "whyArabicSpeakerFails": "«يأكل» و«يكون» متماثلان صوتياً بالألماني؛ العربي يخلط بالسياق — اقرأ المعنى لا الصوت (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Er isst Brot. / Er ist müde.",
+          "ar": "يأكل خبزاً. / هو متعب."
+        },
+        "exercise": {
+          "q": "أكمل: Er ___ Kuchen und ___ satt.",
+          "a": "isst / ist"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich möchte stehen auf.~~",
+          "ar": "möchte + infinitive مركّب في النهاية"
+        },
+        "whyArabicSpeakerFails": "«أريد أن أنهض» بـ«أن»؛ الألماني يجمع الفعل المنفصل في النهاية مع möchten — الوحدة 5 والوحدة 7 تلتقيان هنا (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich möchte aufstehen.",
+          "ar": "أريد أن أنهض."
+        },
+        "exercise": {
+          "q": "أكمل: Ich möchte am Samstag ___ (einkaufen).",
+          "a": "einkaufen"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "aufwachen",
+      "machen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/aufstehen",
+      "https://www.duden.de/rechtschreibung/fahren",
+      "https://www.duden.de/rechtschreibung/machen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Trennbares_Verb"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-trennbare",
+    "ars-praesens-unregelm",
+    "ars-praesens-regelm"
+  ],
+  "audioManifestRefs": [
+    "word-aufwachen",
+    "word-machen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Wiederholung & Test",
+    "goetheWordListOverlap": [
+      "aufwachen",
+      "machen"
+    ]
+  }
+}

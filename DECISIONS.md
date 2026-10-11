@@ -272,3 +272,9 @@
 - **u7-d3** (12 فعلاً منتظماً): machen/suchen/putzen/öffnen/schließen/brauchen/rufen/besuchen/benutzen/telefonieren/schicken/warten. مصائد: **du -st ↔ er -t** · **-ieren بلا ge-** (hat telefoniert) · **warten auf + Akkusativ**.
 - **u7-d4** (12 كلمة — شاذ + سفر): fahren/waschen/geben/nehmen/sprechen/laufen/ankommen + Fahrkarte/Bahnhof/Zug/Bus/Fahrrad. مصائد: **a→ä في du/er** (fährst/fährt) · **isst ↔ ist** (متشابهان!) · **nimmt/spricht/gibt** (تبدّل الحرف).
 - البوابة: **243/243 + tsc + validator (461 ملفاً/0/0) + build** ✓.
+
+## D64 (2026-10-10): إتمام الوحدة 7 — u7-d5 (Trennbare) + u7-d6 (المعركة)
+
+- **u7-d5** (17 كلمة — 49–65): aufstehen/anrufen/fernsehen/einkaufen/aufräumen/frühstücken/abwaschen/Haushalt/Wäsche/Müll/Buch/Besuch/Urlaub/Koffer/Reise/hübsch/feiern. مصائد: **البادئة في النهاية** (stehe ... auf) · **möchte + infinitive مركّب** (möchte aufstehen) · **فعل ↔ اسم** (fernsehen ↔ Fernsehen). مهمة: **وصف اليوم بأفعال منفصلة**.
+- **u7-d6** (integration — بلا كلمات): معركة 0.75 + 3 بطاقات ختامية (انفصال/umlaut/نهايات · isst↔ist · möchte+Infinitiv).
+- البوابة: **243/243 + tsc + validator (480 ملفاً/0/0) + build** ✓. **الوحدات 1–7 مكتملة = 434 كلمة · 42 درساً · 435 مساراً.**

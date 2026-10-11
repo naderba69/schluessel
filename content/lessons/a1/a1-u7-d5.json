@@ -1,0 +1,325 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u7-d5",
+  "level": "A1",
+  "unit": 7,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst deinen Tag mit trennbaren Verben beschreiben.",
+    "ar": "تصف يومك بأفعال منفصلة صحيحة"
+  },
+  "canDoDaily": [
+    "يصف يومه بأفعال منفصلة (steht ... auf) وجمل مخلوطة صحيحة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "aufwachen",
+      "anfangen",
+      "kochen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أنهض في السابعة» — Ich aufstehe أم Ich stehe auf? (تخمين فقط)"
+        },
+        "choices": [
+          "Ich stehe um sieben auf. (البادئة في النهاية)",
+          "Ich aufstehe um sieben.",
+          "Ich stehe um sieben."
+        ],
+        "answer": "Ich stehe um sieben auf. (البادئة في النهاية)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "aufstehen",
+      "anrufen",
+      "fernsehen",
+      "einkaufen",
+      "aufraeumen",
+      "fruehstuecken",
+      "abwaschen",
+      "haushalt",
+      "waesche",
+      "muell",
+      "buch",
+      "besuch",
+      "urlaub",
+      "koffer",
+      "reise",
+      "huebsch",
+      "feiern"
+    ],
+    "grammarArsenalIds": [
+      "ars-trennbare"
+    ],
+    "storySentenceIds": [
+      "story-a7-u7-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أنهض في السابعة»؟",
+            "a": "Ich stehe um sieben auf."
+          },
+          {
+            "q": "«أنا أتناول الفطور في الثامنة»؟",
+            "a": "Ich frühstücke um acht."
+          }
+        ],
+        "interleavedWith": [
+          "aufstehen",
+          "fruehstuecken"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أرتّب غرفتي»؟",
+            "a": "Ich räume mein Zimmer auf."
+          },
+          {
+            "q": "«أتسوّق يوم السبت»؟",
+            "a": "Ich kaufe am Samstag ein."
+          }
+        ],
+        "interleavedWith": [
+          "aufraeumen",
+          "einkaufen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«في المساء أشاهد التلفاز»؟",
+            "a": "Abends sehe ich fern."
+          },
+          {
+            "q": "«أتصل بأمي وأغسل الأطباق»؟",
+            "a": "Ich rufe meine Mutter an und wasche das Geschirr ab."
+          }
+        ],
+        "interleavedWith": [
+          "anrufen",
+          "abwaschen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Tag mit trennbaren Verben beschreiben",
+        "ar": "وصف اليوم بأفعال منفصلة"
+      },
+      "situation": {
+        "de": "Mein Tag",
+        "ar": "يومي"
+      },
+      "successCriteria": [
+        "5 جمل يومية بأفعال منفصلة صحيحة (steht auf · räumt auf · kauft ein · sieht fern · ruft an)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«ينهض»؟",
+            "a": "aufstehen → er steht auf."
+          },
+          {
+            "q": "«يرتّب»؟",
+            "a": "aufräumen → ich räume auf."
+          },
+          {
+            "q": "«غسيل»؟",
+            "a": "die Wäsche"
+          },
+          {
+            "q": "«أنا أتناول الفطور في الثامنة»؟",
+            "a": "Ich frühstücke um acht."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يتصل»؟",
+            "a": "anrufen → er ruft an."
+          },
+          {
+            "q": "«يتسوّق»؟",
+            "a": "einkaufen → ich kaufe ein."
+          },
+          {
+            "q": "«كتاب»؟",
+            "a": "das Buch (الجمع: die Bücher)"
+          },
+          {
+            "q": "«يغسل الأطباق»؟",
+            "a": "abwaschen → er wäscht ab."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يشاهد التلفاز»؟",
+            "a": "fernsehen → er sieht fern."
+          },
+          {
+            "q": "«عطلة»؟",
+            "a": "der Urlaub"
+          },
+          {
+            "q": "«حقيبة السفر»؟",
+            "a": "der Koffer"
+          },
+          {
+            "q": "«نحتفل بعيد ميلاد»؟",
+            "a": "Wir feiern Geburtstag."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Dein Tag: Du stehst auf, frühstückst, räumst auf, kaufst ein, rufst an, siehst fern — die trennbaren Verben machen alles möglich!",
+      "ar": "يومك: تنهض وتتناول الفطور وترتّب وتتسوّق وتتصل وتتفرّج — الأفعال المنفصلة تُدير كل شيء!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich aufstehe um sieben.~~",
+          "ar": "البادئة المنفصلة في النهاية"
+        },
+        "whyArabicSpeakerFails": "«أنهض» كلمة واحدة؛ الألماني aufstehen ينفصل: auf يذهب للنهاية — القاعدة الكبيرة للوحدة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich stehe um sieben auf.",
+          "ar": "أنهض في السابعة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich anrufe meine Mutter.~~",
+          "a": "Ich rufe meine Mutter an."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich möchte stehen auf.~~ / ~~Ich möchte aufstehe~~",
+          "ar": "möchte + infinitive مركّب في النهاية"
+        },
+        "whyArabicSpeakerFails": "مع möchten يبقى الفعل متصلاً في النهاية: möchte aufstehen — تكرار موعود من الوحدة 5 (möchte + Infinitiv) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich möchte um sieben aufstehen.",
+          "ar": "أريد أن أنهض في السابعة."
+        },
+        "exercise": {
+          "q": "أكمل: Ich möchte im Urlaub ___ (einkaufen).",
+          "a": "einkaufen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich sehe das Fernsehen.~~ / ~~Ich kaufe ein Einkauf.~~",
+          "ar": "فعل ↔ اسم: fernsehen ↔ Fernsehen"
+        },
+        "whyArabicSpeakerFails": "«أتفرّج/التلفاز» وزن واحد بالعربية؛ الألماني يفصل بين الفعل المنفصل والاسم المركّب — الحفظ بالأزواج (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich sehe fern. / das Fernsehen · ich kaufe ein. / der Einkauf",
+          "ar": "الفعل منفصل والاسم مستقل."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ fern. Das ___ ist langweilig.",
+          "a": "sehe / Fernsehen"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "aufstehen",
+      "anrufen",
+      "fernsehen",
+      "einkaufen",
+      "aufraeumen",
+      "fruehstuecken",
+      "abwaschen",
+      "haushalt",
+      "waesche",
+      "muell",
+      "buch",
+      "besuch",
+      "urlaub",
+      "koffer",
+      "reise",
+      "huebsch",
+      "feiern"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/aufstehen",
+      "https://www.duden.de/rechtschreibung/Fernsehen",
+      "https://www.duden.de/rechtschreibung/Urlaub"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/aufstehen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-trennbare"
+  ],
+  "audioManifestRefs": [
+    "word-aufstehen",
+    "word-anrufen",
+    "word-fernsehen",
+    "word-einkaufen",
+    "word-aufraeumen",
+    "word-fruehstuecken",
+    "word-abwaschen",
+    "word-haushalt",
+    "word-waesche",
+    "word-muell",
+    "word-buch",
+    "word-besuch",
+    "word-urlaub",
+    "word-koffer",
+    "word-reise",
+    "word-huebsch",
+    "word-feiern"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Trennbare Verben",
+    "goetheWordListOverlap": [
+      "aufstehen",
+      "buch"
+    ]
+  }
+}

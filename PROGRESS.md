@@ -202,3 +202,9 @@
 - **u7-d4** (شاذ + سفر — 12 كلمة): fahren/waschen/geben/nehmen/sprechen/laufen/ankommen/Fahrkarte/Bahnhof/Zug/Bus/Fahrrad — مصائد: fährt (a→ä) · isst↔ist · nimmt/spricht/gibt.
 - الصوت: 24 مقطعاً — المانيفست **418 مساراً** · الكلمات **417** · الدروس **40** (الوحدات 1–6 + الوحدة 7: 4 أيام).
 - النتيجة: **243/243 أخضر** + tsc + validator (461/0/0) + build ✓. (D63) التالي: u7-d5 (Trennbare + خلط — 17 كلمة) وu7-d6 (المعركة).
+
+## حملة المحتوى — الدفعة 20 (2026-10-10) — إتمام الوحدة 7 (D64)
+- **u7-d5** (17 كلمة + Trennbare): aufstehen/anrufen/fernsehen/einkaufen/aufräumen/frühstücken/abwaschen/Haushalt/Wäsche/Müll/Buch/Besuch/Urlaub/Koffer/Reise/hübsch/feiern — مصائد: البادئة في النهاية · möchte+Infinitiv مركّب · فعل↔اسم.
+- **u7-d6** (المعركة — بلا كلمات): توليف + معركة 0.75.
+- الصوت: 17 مقطعاً — المانيفست **435 مساراً** · الكلمات **434** · الدروس **42** — **الوحدات 1–7 مكتملة (42 يوماً)**.
+- النتيجة: **243/243 أخضر** + tsc + validator (480/0/0) + build ✓. (D64) التالي: الوحدة 8 (التسوق والأسعار — 65 كلمة).
