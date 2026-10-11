@@ -278,3 +278,9 @@
 - **u7-d5** (17 كلمة — 49–65): aufstehen/anrufen/fernsehen/einkaufen/aufräumen/frühstücken/abwaschen/Haushalt/Wäsche/Müll/Buch/Besuch/Urlaub/Koffer/Reise/hübsch/feiern. مصائد: **البادئة في النهاية** (stehe ... auf) · **möchte + infinitive مركّب** (möchte aufstehen) · **فعل ↔ اسم** (fernsehen ↔ Fernsehen). مهمة: **وصف اليوم بأفعال منفصلة**.
 - **u7-d6** (integration — بلا كلمات): معركة 0.75 + 3 بطاقات ختامية (انفصال/umlaut/نهايات · isst↔ist · möchte+Infinitiv).
 - البوابة: **243/243 + tsc + validator (480 ملفاً/0/0) + build** ✓. **الوحدات 1–7 مكتملة = 434 كلمة · 42 درساً · 435 مساراً.**
+
+## D65 (2026-10-10): بداية الوحدة 8 — u8-d1 (Kleidung) + u8-d2 (Preise)
+
+- **u8-d1** (12 كلمة): Hose/Hemd/Schuhe/Jacke/Mantel/Kleid/Rock/Socke/Hut/Pullover/Größe/Farbe. مصائد: **das Hemd** (محايد رغم «القميص») · **موجة umlaut في الملابس** (Mäntel/Röcke/Kleider/Hüte) · **die + e = مؤنث** (Hose/Jacke/Socke).
+- **u8-d2** (12 كلمة): Cent/Rabatt/Angebot/günstig/Wechselgeld/verkaufen/Verkäufer/Kunde/Supermarkt/Geschäft/Markt/anprobieren. مصائد: **Was kostet das?** (ترتيب السؤال) · **die Kunden** (n-Deklination الثاني) · **ver- تقلب المعنى** (kaufen↔verkaufen).
+- البوابة: **243/243 + tsc + validator (506 ملفات/0/0) + build** ✓.

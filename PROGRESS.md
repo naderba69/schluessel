@@ -208,3 +208,9 @@
 - **u7-d6** (المعركة — بلا كلمات): توليف + معركة 0.75.
 - الصوت: 17 مقطعاً — المانيفست **435 مساراً** · الكلمات **434** · الدروس **42** — **الوحدات 1–7 مكتملة (42 يوماً)**.
 - النتيجة: **243/243 أخضر** + tsc + validator (480/0/0) + build ✓. (D64) التالي: الوحدة 8 (التسوق والأسعار — 65 كلمة).
+
+## حملة المحتوى — الدفعة 21 (2026-10-10) — بداية الوحدة 8 (D65)
+- **u8-d1** (Kleidung — 12 كلمة): Hose/Hemd/Schuhe/Jacke/Mantel/Kleid/Rock/Socke/Hut/Pullover/Größe/Farbe — مصائد: das Hemd · umlaut الملابس · die+e.
+- **u8-d2** (Preise — 12 كلمة): Cent/Rabatt/Angebot/günstig/Wechselgeld/verkaufen/Verkäufer/Kunde/Supermarkt/Geschäft/Markt/anprobieren — مصائد: Was kostet das? · Kunden (-n) · ver- تقلب المعنى.
+- الصوت: 24 مقطعاً — المانيفست **459 مساراً** · الكلمات **458** · الدروس **44** (الوحدات 1–7 + الوحدة 8: يومان).
+- النتيجة: **243/243 أخضر** + tsc + validator (506/0/0) + build ✓. (D65) التالي: u8-d3 (können/müssen) وu8-d4 (الداتيف الثابت) وu8-d5 (von/seit/bei + مهمة المتجر) وu8-d6 (المعركة).

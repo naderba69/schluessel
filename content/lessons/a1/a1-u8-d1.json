@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d1",
+  "level": "A1",
+  "unit": 8,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst Kleidung und Sachen nennen.",
+    "ar": "تسمي الملابس والأغراضاً"
+  },
+  "canDoDaily": [
+    "يسمي 10 قطع ملابس وأغراض بجنسها"
+  ],
+  "warmup": {
+    "cardIds": [
+      "tasche",
+      "schuh",
+      "kaufen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«قميص» — der أم die أم das Hemd? (تخمين فقط)"
+        },
+        "choices": [
+          "das Hemd (محايد!)",
+          "der Hemd",
+          "die Hemd"
+        ],
+        "answer": "das Hemd (محايد!)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "hose",
+      "hemd",
+      "schuh",
+      "jacke",
+      "mantel",
+      "kleid",
+      "rock",
+      "socke",
+      "hut",
+      "pullover",
+      "groesse",
+      "farbe"
+    ],
+    "grammarArsenalIds": [
+      "ars-kleidung-genus"
+    ],
+    "storySentenceIds": [
+      "story-a8-u8-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«البنطال والقميص»؟",
+            "a": "die Hose und das Hemd"
+          },
+          {
+            "q": "«الحذاء جديد»؟",
+            "a": "Die Schuhe sind neu."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«السترة والمعطف»؟",
+            "a": "die Jacke und der Mantel"
+          },
+          {
+            "q": "«الفستان جميل»؟",
+            "a": "Das Kleid ist hübsch."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«القبعة والجوارب»؟",
+            "a": "der Hut und die Socken"
+          },
+          {
+            "q": "«المقاس جيد»؟",
+            "a": "Die Größe ist gut."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Kleidung nennen",
+        "ar": "تسمية الملابس"
+      },
+      "situation": {
+        "de": "Im Geschäft: Kleidung",
+        "ar": "في المتجر: الملابس"
+      },
+      "successCriteria": [
+        "يسمي 10 قطع ملابس مع الأداة الصحيحة + جملتا لون/مقاس"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«بنطال»؟",
+            "a": "die Hose"
+          },
+          {
+            "q": "«قميص»؟",
+            "a": "das Hemd"
+          },
+          {
+            "q": "«الفستان جميل»؟",
+            "a": "Das Kleid ist hübsch."
+          },
+          {
+            "q": "«القبعة»؟",
+            "a": "der Hut"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«سترة»؟",
+            "a": "die Jacke"
+          },
+          {
+            "q": "«معطف»؟",
+            "a": "der Mantel (الجمع: die Mäntel)"
+          },
+          {
+            "q": "«اللون جميل»؟",
+            "a": "Die Farbe ist schön."
+          },
+          {
+            "q": "«جورب»؟",
+            "a": "die Socke"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«تنورة»؟",
+            "a": "der Rock (الجمع: die Röcke)"
+          },
+          {
+            "q": "«كنزة»؟",
+            "a": "der Pullover"
+          },
+          {
+            "q": "«المقاس»؟",
+            "a": "die Größe"
+          },
+          {
+            "q": "«حذاء»؟",
+            "a": "der Schuh (يُستعمل جمعاً: die Schuhe)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Deine Kleidung: Hose, Hemd, Schuhe, Jacke, Mantel, Kleid, Rock, Socken, Hut, Pullover — mit Farbe und Größe perfekt!",
+      "ar": "ملابسك: بنطال وقميص وحذاء وسترة ومعطف وفستان وتنورة وجوارب وقبعة وكنزة — باللون والمقاس المثاليين!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~der Hemd~~ / ~~die Hemd~~",
+          "ar": "das Hemd (محايد)"
+        },
+        "whyArabicSpeakerFails": "«القميص» مذكر بالعربية؛ الألماني محايد (das Hemd) — الأصل الطبيعي يخدع (خريطة التداخل 2‑ي → 10‑ي)",
+        "correct": {
+          "de": "das Hemd",
+          "ar": "القميص محايد"
+        },
+        "exercise": {
+          "q": "حدّد: Hemd — der/die/das?",
+          "a": "das"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Mantels~~ / ~~die Rocks~~ / ~~die Kleids~~",
+          "ar": "الجمع: Mäntel/Röcke/Kleider (umlaut)"
+        },
+        "whyArabicSpeakerFails": "جمع الملابس الألماني يكسر النمط: umlaut + er/e — عائلة Gäste تكبر إلى ملابس (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Mäntel · die Röcke · die Kleider",
+          "ar": "ملابس موجَّهة بالـumlaut"
+        },
+        "exercise": {
+          "q": "اكتب الجمع: drei ___ (Rock)",
+          "a": "drei Röcke"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Hose~~؟ نعم، لكن ~~das Jacke~~ / ~~der Socke~~",
+          "ar": "die + e = مؤنث (Hose/Jacke/Socke/Farbe/Größe)"
+        },
+        "whyArabicSpeakerFails": "الملابس مزيج أجناس؛ الألماني له قاعدة die+e تجمع البنطال والسترة والجورب — استعملها عند الشك (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Hose / die Jacke / die Socke (die + e)",
+          "ar": "ما ينتهي بـe غالباً مؤنث"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Jacke und ___ Socke.",
+          "a": "die / die"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "hose",
+      "hemd",
+      "schuh",
+      "jacke",
+      "mantel",
+      "kleid",
+      "rock",
+      "socke",
+      "hut",
+      "pullover",
+      "groesse",
+      "farbe"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Hemd",
+      "https://www.duden.de/rechtschreibung/Kleid",
+      "https://www.duden.de/rechtschreibung/Gr%C3%B6%C3%9Fe"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Hemd"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-kleidung-genus"
+  ],
+  "audioManifestRefs": [
+    "word-hose",
+    "word-hemd",
+    "word-schuh",
+    "word-jacke",
+    "word-mantel",
+    "word-kleid",
+    "word-rock",
+    "word-socke",
+    "word-hut",
+    "word-pullover",
+    "word-groesse",
+    "word-farbe"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Kleidung",
+    "goetheWordListOverlap": [
+      "hose",
+      "schuh"
+    ]
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d2",
+  "level": "A1",
+  "unit": 8,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst nach dem Preis fragen und antworten.",
+    "ar": "تسأل عن السعر وتجيب"
+  },
+  "canDoDaily": [
+    "يسأل عن السعر بأرقام كبيرة ويجيب"
+  ],
+  "warmup": {
+    "cardIds": [
+      "cent",
+      "euro",
+      "kosten"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«كم يكلف هذا؟» — Was kostet das أم Wie viel kostet das? (كلاهما مقبول، أيهما أبسط؟)"
+        },
+        "choices": [
+          "Was kostet das?",
+          "Wie kostet das?",
+          "Was das kostet?"
+        ],
+        "answer": "Was kostet das?",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "cent",
+      "rabatt",
+      "angebot",
+      "guenstig",
+      "wechselgeld",
+      "verkaufen",
+      "verkaeufer",
+      "kunde",
+      "supermarkt",
+      "geschaeft",
+      "markt",
+      "anprobieren"
+    ],
+    "grammarArsenalIds": [
+      "ars-preise"
+    ],
+    "storySentenceIds": [
+      "story-a8-u8-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«كم يكلف هذا؟»؟",
+            "a": "Was kostet das?"
+          },
+          {
+            "q": "«هذا يكلف خمسين سنتاً»؟",
+            "a": "Das kostet fünfzig Cent."
+          }
+        ],
+        "interleavedWith": [
+          "euro",
+          "kosten"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الخصم كبير»؟",
+            "a": "Der Rabatt ist groß."
+          },
+          {
+            "q": "«هذا مناسب!»؟",
+            "a": "Das ist günstig!"
+          }
+        ],
+        "interleavedWith": [
+          "preis",
+          "billig"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أريد أن أقيس السترة»؟",
+            "a": "Ich möchte die Jacke anprobieren."
+          },
+          {
+            "q": "«البائع والزبون»؟",
+            "a": "der Verkäufer und der Kunde"
+          }
+        ],
+        "interleavedWith": [
+          "anprobieren",
+          "kunde"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Nach dem Preis fragen und antworten",
+        "ar": "السؤال عن السعر والإجابة"
+      },
+      "situation": {
+        "de": "Im Geschäft: Preise",
+        "ar": "في المتجر: الأسعار"
+      },
+      "successCriteria": [
+        "سؤال سعر + إجابة برقم كبير (Euro/Cent) + جملة günstig/teuer واحدة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«خصم»؟",
+            "a": "der Rabatt"
+          },
+          {
+            "q": "«كم يكلف هذا؟»؟",
+            "a": "Was kostet das?"
+          },
+          {
+            "q": "«أين الباقي؟»؟",
+            "a": "Wo ist mein Wechselgeld?"
+          },
+          {
+            "q": "«يبيع»؟",
+            "a": "verkaufen → er verkauft."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«عرض»؟",
+            "a": "das Angebot"
+          },
+          {
+            "q": "«هذا مناسب السعر»؟",
+            "a": "Das ist günstig."
+          },
+          {
+            "q": "«السوبرماركت»؟",
+            "a": "der Supermarkt"
+          },
+          {
+            "q": "«زبون»؟",
+            "a": "der Kunde (الجمع: die Kunden)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«متجر»؟",
+            "a": "das Geschäft"
+          },
+          {
+            "q": "«سوق»؟",
+            "a": "der Markt (الجمع: die Märkte)"
+          },
+          {
+            "q": "«أريد أن أقيس البنطال»؟",
+            "a": "Ich möchte die Hose anprobieren."
+          },
+          {
+            "q": "«بائع»؟",
+            "a": "der Verkäufer"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Im Geschäft: „Was kostet das?“ — „Das kostet zwanzig Euro.“ Der Rabatt ist groß, das Angebot günstig — und wo ist das Wechselgeld?",
+      "ar": "في المتجر: «كم يكلف؟» — «عشرون يورو.» الخصم كبير والعرض مناسب — وأين الباقي؟"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Wie kostet das?~~ / ~~Was das kostet?~~",
+          "ar": "السؤال: Was kostet das? (كلمة الاستفهام + فعل)"
+        },
+        "whyArabicSpeakerFails": "«كم يكلف هذا؟» ترتيب عربي؛ الألماني Was أولاً ثم الفعل ثم المفعول — مثل أسئلة u2 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Was kostet das?",
+          "ar": "كم يكلف هذا؟"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wie kostet die Jacke?~~",
+          "a": "Was kostet die Jacke?"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~der Kunde~~ → ~~die Kundes~~",
+          "ar": "die Kunden (n-Deklination)"
+        },
+        "whyArabicSpeakerFails": "جمع «الزبائن» بالزيادة؛ الألماني -n فقط — النمط الثاني بعد Nachbarn (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Kunde ← die Kunden",
+          "ar": "الزبون ← الزبائن (-n)"
+        },
+        "exercise": {
+          "q": "اكتب الجمع: zwei ___ (Kunde)",
+          "a": "zwei Kunden"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~kaufen~~ = ~~verkaufen~~",
+          "ar": "ver- تقلب المعنى: يشتري ↔ يبيع"
+        },
+        "whyArabicSpeakerFails": "«يشتري/يبيع» متضادان؛ الألماني يضيف ver- فقط لتقلب المعنى — سهل الخلط حتى بصرياً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "kaufen (يشتري) / verkaufen (يبيع)",
+          "ar": "ver- = البيع"
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ ein. Der Verkäufer ___ .",
+          "a": "kaufe / verkauft"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "cent",
+      "rabatt",
+      "angebot",
+      "guenstig",
+      "wechselgeld",
+      "verkaufen",
+      "verkaeufer",
+      "kunde",
+      "supermarkt",
+      "geschaeft",
+      "markt",
+      "anprobieren"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Verkaeufer",
+      "https://www.duden.de/rechtschreibung/Wechselgeld",
+      "https://www.duden.de/rechtschreibung/Kunde"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/verkaufen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-preise"
+  ],
+  "audioManifestRefs": [
+    "word-cent",
+    "word-rabatt",
+    "word-angebot",
+    "word-guenstig",
+    "word-wechselgeld",
+    "word-verkaufen",
+    "word-verkaeufer",
+    "word-kunde",
+    "word-supermarkt",
+    "word-geschaeft",
+    "word-markt",
+    "word-anprobieren"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Preise",
+    "goetheWordListOverlap": [
+      "cent",
+      "markt"
+    ]
+  }
+}
