@@ -266,3 +266,9 @@
 - **u7-d1** (12 كلمة): aufwachen/schlafen/duschen/anziehen/müde/Pause/Wecker/Alltag/baden/anfangen/wecken/Weg. مصائد: **الفعل المنفصل أول لقاء** (Ich wache auf — البادئة في النهاية) · **bin müde ↔ habe Hunger** (الزوج يتكرر) · **aufwachen ↔ wecken** (intransitiv/transitiv).
 - **u7-d2** (12 كلمة): Fußball/schwimmen/tanzen/reisen/zeichnen/spazieren/Kino/Spiel/spielen/lieber/Spaß/langweilig. مصائد: **lieber = مقارن gern بلا mehr** · **الرياضة بلا أداة** (Fußball spielen) · **Das macht Spaß** (مصدر شائع).
 - البوابة: **243/243 + tsc + validator (435 ملفاً/0/0) + build** ✓.
+
+## D63 (2026-10-10): u7-d3 (Präsens منتظم) + u7-d4 (شاذ fährt/isst)
+
+- **u7-d3** (12 فعلاً منتظماً): machen/suchen/putzen/öffnen/schließen/brauchen/rufen/besuchen/benutzen/telefonieren/schicken/warten. مصائد: **du -st ↔ er -t** · **-ieren بلا ge-** (hat telefoniert) · **warten auf + Akkusativ**.
+- **u7-d4** (12 كلمة — شاذ + سفر): fahren/waschen/geben/nehmen/sprechen/laufen/ankommen + Fahrkarte/Bahnhof/Zug/Bus/Fahrrad. مصائد: **a→ä في du/er** (fährst/fährt) · **isst ↔ ist** (متشابهان!) · **nimmt/spricht/gibt** (تبدّل الحرف).
+- البوابة: **243/243 + tsc + validator (461 ملفاً/0/0) + build** ✓.

@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u7-d3",
+  "level": "A1",
+  "unit": 7,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst 10 regelmäßige Verben im Präsens konjugieren.",
+    "ar": "تصرّف 10 أفعال منتظمة في المضارع"
+  },
+  "canDoDaily": [
+    "يصرّف 10 أفعال منتظمة (Präsens) في الجمل"
+  ],
+  "warmup": {
+    "cardIds": [
+      "machen",
+      "schlafen",
+      "arbeiten"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أنت تفعل» — du machst أم du macht? (تخمين فقط)"
+        },
+        "choices": [
+          "du machst (أنت = -st)",
+          "du macht",
+          "du mache"
+        ],
+        "answer": "du machst (أنت = -st)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "machen",
+      "suchen",
+      "putzen",
+      "oeffnen",
+      "schliessen",
+      "brauchen",
+      "rufen",
+      "besuchen",
+      "benutzen",
+      "telefonieren",
+      "schicken",
+      "warten"
+    ],
+    "grammarArsenalIds": [
+      "ars-praesens-regelm"
+    ],
+    "storySentenceIds": [
+      "story-a7-u7-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أنا أفعل واجبي»؟",
+            "a": "Ich mache meine Hausaufgaben."
+          },
+          {
+            "q": "«أنت تبحث»؟",
+            "a": "du suchst"
+          }
+        ],
+        "interleavedWith": [
+          "machen",
+          "suchen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أفتح النافذة وأغلق الباب»؟",
+            "a": "Ich öffne das Fenster und schließe die Tür."
+          },
+          {
+            "q": "«هو يستخدم الحاسوب»؟",
+            "a": "Er benutzt den Computer."
+          }
+        ],
+        "interleavedWith": [
+          "fenster",
+          "computer"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أنا أتحدث هاتفيًا»؟",
+            "a": "Ich telefoniere."
+          },
+          {
+            "q": "«أنا أنتظر الحافلة»؟",
+            "a": "Ich warte auf den Bus."
+          }
+        ],
+        "interleavedWith": [
+          "telefonieren",
+          "bus"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Regelmäßige Verben konjugieren",
+        "ar": "إصراف الأفعال المنتظمة"
+      },
+      "situation": {
+        "de": "Mein Tag: 10 Verben",
+        "ar": "يومي: 10 أفعال"
+      },
+      "successCriteria": [
+        "10 أفعال منتظمة مُصرَّفة في جمل (ich/du/er)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يفعل» — er?",
+            "a": "macht"
+          },
+          {
+            "q": "«أنت تنتظر»؟",
+            "a": "du wartest"
+          },
+          {
+            "q": "«أنا أزور أصدقائي»؟",
+            "a": "Ich besuche meine Freunde."
+          },
+          {
+            "q": "«يحتاج»؟",
+            "a": "brauchen → er braucht"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يفتح»؟",
+            "a": "öffnen → ich öffne."
+          },
+          {
+            "q": "«يغلق»؟",
+            "a": "schließen → er schließt."
+          },
+          {
+            "q": "«أنا أرسل رسالة»؟",
+            "a": "Ich schicke eine E-Mail."
+          },
+          {
+            "q": "«ينظّف المطبخ»؟",
+            "a": "Er putzt die Küche."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يبحث عن»؟",
+            "a": "suchen → er sucht."
+          },
+          {
+            "q": "«ينادي/يتصل»؟",
+            "a": "rufen → er ruft an."
+          },
+          {
+            "q": "«أتحدث هاتفياً مع عائلتي»؟",
+            "a": "Ich telefoniere mit meiner Familie."
+          },
+          {
+            "q": "«أنت تفعل»؟",
+            "a": "du machst (-st لا -t)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Deine Verben: machen, suchen, putzen, öffnen, schließen, brauchen, rufen, besuchen, benutzen, telefonieren, schicken, warten — alle regelmäßig!",
+      "ar": "أفعالك: تفعل وتبحث وتنظّف وتفتح وتغلق وتحتاج وتنادي وتزور وتستخدم وتتحدث وتُرسل وتنتظر — كلها منتظمة!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~du macht~~ / ~~du suchst~~? لا: ~~er suchst~~",
+          "ar": "النهايات: du = -st · er = -t"
+        },
+        "whyArabicSpeakerFails": "العربية لا تُصرّف باللواحق هذا الشكل؛ الألماني يخلط: أنت -st وهو -t — نقطتان تتشابهان (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "du machst · er macht",
+          "ar": "أنتَ تفعل · هو يفعل"
+        },
+        "exercise": {
+          "q": "أكمل: du ___ (suchen) · er ___ (suchen)",
+          "a": "suchst / sucht"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich ge-telefoniert.~~ / ~~hat foniert~~",
+          "ar": "-ieren بلا ge- في الماضي"
+        },
+        "whyArabicSpeakerFails": "كل الأفعال تأخذ ge- في التعلَّم الأول؛ أفعال -ieren تستثنى: hat telefoniert (وليس ~~gefoniert~~) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "hat telefoniert / hat benutzt",
+          "ar": "-ieren: بلا ge-"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Er hat ge-telefoniert.~~",
+          "a": "Er hat telefoniert."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich warte den Bus.~~",
+          "ar": "warten auf + Akkusativ"
+        },
+        "whyArabicSpeakerFails": "«أنتظر الحافلة» مفعول به مباشر بالعربية؛ الألماني يحشر auf بينهما (warten auf + نصب) — مثل Wo/Wohin مع auf (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich warte auf den Bus.",
+          "ar": "أنتظر الحافلة."
+        },
+        "exercise": {
+          "q": "أكمل: Ich warte auf ___ Bus.",
+          "a": "den"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "machen",
+      "suchen",
+      "putzen",
+      "oeffnen",
+      "schliessen",
+      "brauchen",
+      "rufen",
+      "besuchen",
+      "benutzen",
+      "telefonieren",
+      "schicken",
+      "warten"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/telefonieren",
+      "https://www.duden.de/rechtschreibung/warten",
+      "https://www.duden.de/rechtschreibung/oeffnen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/telefonieren"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-praesens-regelm"
+  ],
+  "audioManifestRefs": [
+    "word-machen",
+    "word-suchen",
+    "word-putzen",
+    "word-oeffnen",
+    "word-schliessen",
+    "word-brauchen",
+    "word-rufen",
+    "word-besuchen",
+    "word-benutzen",
+    "word-telefonieren",
+    "word-schicken",
+    "word-warten"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Regelmäßige Verben",
+    "goetheWordListOverlap": [
+      "machen",
+      "warten"
+    ]
+  }
+}

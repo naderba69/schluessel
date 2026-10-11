@@ -196,3 +196,9 @@
 - **u7-d2** (Hobbys — 12 كلمة): Fußball/schwimmen/tanzen/reisen/zeichnen/spazieren/Kino/Spiel/spielen/lieber/Spaß/langweilig — مصائد: lieber بلا mehr · رياضة بلا أداة · macht Spaß.
 - الصوت: 24 مقطعاً — المانيفست **394 مساراً** · الكلمات **393** · الدروس **38** (الوحدات 1–6 + الوحدة 7: يومان).
 - النتيجة: **243/243 أخضر** + tsc + validator (435/0/0) + build ✓. (D62) التالي: u7-d3 (Präsens منتظم) وu7-d4 (شاذ fährt/isst) وu7-d5 (Trennbare) وu7-d6 (المعركة).
+
+## حملة المحتوى — الدفعة 19 (2026-10-10) — u7-d3 + u7-d4 (D63)
+- **u7-d3** (12 فعلاً منتظماً): machen/suchen/putzen/öffnen/schließen/brauchen/rufen/besuchen/benutzen/telefonieren/schicken/warten — مصائد: du -st/er -t · -ieren بلا ge- · warten auf.
+- **u7-d4** (شاذ + سفر — 12 كلمة): fahren/waschen/geben/nehmen/sprechen/laufen/ankommen/Fahrkarte/Bahnhof/Zug/Bus/Fahrrad — مصائد: fährt (a→ä) · isst↔ist · nimmt/spricht/gibt.
+- الصوت: 24 مقطعاً — المانيفست **418 مساراً** · الكلمات **417** · الدروس **40** (الوحدات 1–6 + الوحدة 7: 4 أيام).
+- النتيجة: **243/243 أخضر** + tsc + validator (461/0/0) + build ✓. (D63) التالي: u7-d5 (Trennbare + خلط — 17 كلمة) وu7-d6 (المعركة).

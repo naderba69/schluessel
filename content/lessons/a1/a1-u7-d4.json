@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u7-d4",
+  "level": "A1",
+  "unit": 7,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst unregelmäßige Verben im Präsens konjugieren (fährt/isst).",
+    "ar": "تصرّف الأفعال الشاذة في المضارع"
+  },
+  "canDoDaily": [
+    "يصرّف الأفعال الشاذة الشائعة (fährt/isst/nimmt/spricht)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "fahren",
+      "essen",
+      "zug"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«هو يقود» — er fahrt أم er fährt? (تخمين فقط)"
+        },
+        "choices": [
+          "er fährt (a → ä)",
+          "er fahrt",
+          "er fahrt."
+        ],
+        "answer": "er fährt (a → ä)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "fahren",
+      "waschen",
+      "geben",
+      "nehmen",
+      "sprechen",
+      "laufen",
+      "ankommen",
+      "fahrkarte",
+      "bahnhof",
+      "zug",
+      "bus",
+      "fahrrad"
+    ],
+    "grammarArsenalIds": [
+      "ars-praesens-unregelm"
+    ],
+    "storySentenceIds": [
+      "story-a7-u7-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هو يقود»؟",
+            "a": "er fährt (a→ä)"
+          },
+          {
+            "q": "«هي تغسل»؟",
+            "a": "sie wäscht (a→ä)"
+          }
+        ],
+        "interleavedWith": [
+          "fahren",
+          "waschen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هو يأخذ قهوة»؟",
+            "a": "Er nimmt einen Kaffee."
+          },
+          {
+            "q": "«هو يأكل ↔ هو يكون»؟",
+            "a": "Er isst. ↔ Er ist."
+          }
+        ],
+        "interleavedWith": [
+          "nehmen",
+          "essen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«القطار يصل في الثامنة»؟",
+            "a": "Der Zug kommt um acht an."
+          },
+          {
+            "q": "«التذكرة والمحطة»؟",
+            "a": "die Fahrkarte und der Bahnhof"
+          }
+        ],
+        "interleavedWith": [
+          "ankommen",
+          "fahrkarte"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Unregelmäßige Verben konjugieren",
+        "ar": "إصراف الأفعال الشاذة"
+      },
+      "situation": {
+        "de": "Reise planen",
+        "ar": "تخطيط رحلة"
+      },
+      "successCriteria": [
+        "6 أفعال شاذة مُصرَّفة + جملتا سفر (fährt/ankommt)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يسافر بالمركبة»؟",
+            "a": "fahren → er fährt."
+          },
+          {
+            "q": "«تذكرة»؟",
+            "a": "die Fahrkarte"
+          },
+          {
+            "q": "«هو يأخذ»؟",
+            "a": "er nimmt"
+          },
+          {
+            "q": "«يصل»؟",
+            "a": "ankommen → er kommt an."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«قطار»؟",
+            "a": "der Zug (الجمع: die Züge)"
+          },
+          {
+            "q": "«هي تغسل»؟",
+            "a": "sie wäscht"
+          },
+          {
+            "q": "«هو يعطي»؟",
+            "a": "er gibt"
+          },
+          {
+            "q": "«محطة القطار»؟",
+            "a": "der Bahnhof"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«دراجة»؟",
+            "a": "das Fahrrad"
+          },
+          {
+            "q": "«هو يتحدث»؟",
+            "a": "er spricht"
+          },
+          {
+            "q": "«حافلة»؟",
+            "a": "der Bus (الجمع: die Busse)"
+          },
+          {
+            "q": "isst ↔ ist?",
+            "a": "er isst (يأكل) ↔ er ist (هو يكون) — متشابهان صوتياً!"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Reise-Wortschatz und starke Verben: fahren→fährt, waschen→wäscht, geben→gibt, nehmen→nimmt, sprechen→spricht, laufen→läuft — und der Zug kommt an!",
+      "ar": "مفردات السفر والأفعال الشاذة: fährt وwäscht وgibt وnimmt وspricht وläuft — والقطار يصل!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~er fahrt~~ / ~~du fahrst~~",
+          "ar": "a→ä في du/er (fährt)"
+        },
+        "whyArabicSpeakerFails": "الحرف يبقى كما هو بالعربية؛ الألماني يبدّل a إلى ä في المخاطبة والغائب فقط — التغيير صوتي لا نحوي ظاهر (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "du fährst · er fährt",
+          "ar": "أنت تقود · هو يقود (بوملaut)"
+        },
+        "exercise": {
+          "q": "أكمل: du ___ (fahren) · er ___ (fahren)",
+          "a": "fährst / fährt"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Er ist Brot.~~ (يأكل) / ~~Er isst müde.~~ (يكون)",
+          "ar": "isst ↔ ist متشابهان"
+        },
+        "whyArabicSpeakerFails": "«يأكل» و«يكون» مختلفتان تماماً بالعربية؛ الألماني يلفظهما متماثلين (isst/ist) — الفرق بالسياق والكتابة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Er isst Brot. / Er ist müde.",
+          "ar": "هو يأكل خبزاً. / هو متعب."
+        },
+        "exercise": {
+          "q": "أكمل: Er ___ Brot. Er ___ müde.",
+          "a": "isst / ist"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~er nehmt~~ / ~~er sprecht~~ / ~~er gebt~~",
+          "ar": "تبدّل الحرف الأخير: nimmt/spricht/gibt"
+        },
+        "whyArabicSpeakerFails": "لا تبدّل أحرف داخل الجذر بالعربية؛ الألماني يقلب e→i (spricht) وeh→ie (sieht) وeh→i (nimmt) في du/er — عائلة واحدة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "er nimmt · er spricht · er gibt",
+          "ar": "يأخذ · يتحدث · يعطي"
+        },
+        "exercise": {
+          "q": "أكمل: er ___ (nehmen) · er ___ (sprechen)",
+          "a": "nimmt / spricht"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "fahren",
+      "waschen",
+      "geben",
+      "nehmen",
+      "sprechen",
+      "laufen",
+      "ankommen",
+      "fahrkarte",
+      "bahnhof",
+      "zug",
+      "bus",
+      "fahrrad"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/fahren",
+      "https://www.duden.de/rechtschreibung/nehmen",
+      "https://www.duden.de/rechtschreibung/Bahnhof"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/fahren"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-praesens-unregelm"
+  ],
+  "audioManifestRefs": [
+    "word-fahren",
+    "word-waschen",
+    "word-geben",
+    "word-nehmen",
+    "word-sprechen",
+    "word-laufen",
+    "word-ankommen",
+    "word-fahrkarte",
+    "word-bahnhof",
+    "word-zug",
+    "word-bus",
+    "word-fahrrad"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Unregelmäßige Verben & Reise",
+    "goetheWordListOverlap": [
+      "fahren",
+      "zug"
+    ]
+  }
+}
