@@ -1,0 +1,325 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d5",
+  "level": "A1",
+  "unit": 8,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst im Geschäft einkaufen und über den Preis verhandeln (von/seit/bei).",
+    "ar": "تشتري وتتفاوض على السعر بجمل الداتيف"
+  },
+  "canDoDaily": [
+    "يشتري ويتفاوض بجمل von/seit/bei + Dativ صحيحة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "preis",
+      "zahlen",
+      "verkaeufer"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«عند الخبّاز» — beim Bäcker أم bei dem Bäcker? (أيهما صيغة الاندماج؟)"
+        },
+        "choices": [
+          "beim Bäcker (bei + dem = beim)",
+          "bei dem Bäcker فقط (لا اندماج)",
+          "beim Bäckers"
+        ],
+        "answer": "beim Bäcker (bei + dem = beim)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "von",
+      "seit",
+      "bei",
+      "verhandeln",
+      "quittung",
+      "umtausch",
+      "schmuck",
+      "ring",
+      "kette",
+      "stiefel",
+      "mode",
+      "tuete",
+      "geschenk",
+      "sparen",
+      "sonnenbrille",
+      "baeckerei",
+      "schalter"
+    ],
+    "grammarArsenalIds": [
+      "ars-von-seit-bei"
+    ],
+    "storySentenceIds": [
+      "story-a8-u8-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أشتري الخبز عند الخبّاز»؟",
+            "a": "Ich kaufe beim Bäcker Brot."
+          },
+          {
+            "q": "«الهدية من عائلتي»؟",
+            "a": "Das Geschenk ist von meiner Familie."
+          }
+        ],
+        "interleavedWith": [
+          "baeckerei",
+          "geschenk"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أسكن هنا منذ ثلاث سنوات»؟",
+            "a": "Ich wohne seit drei Jahren hier."
+          },
+          {
+            "q": "«نتفاوض على السعر»؟",
+            "a": "Wir verhandeln über den Preis."
+          }
+        ],
+        "interleavedWith": [
+          "seit",
+          "verhandeln"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هذا غالٍ جداً!»؟",
+            "a": "Das ist zu teuer!"
+          },
+          {
+            "q": "«الإيصال والاستبدال»؟",
+            "a": "die Quittung und der Umtausch"
+          }
+        ],
+        "interleavedWith": [
+          "quittung",
+          "umtausch"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Im Geschäft kaufen und verhandeln",
+        "ar": "الشراء والتفاوض في المتجر"
+      },
+      "situation": {
+        "de": "Im Geschäft: Preis verhandeln",
+        "ar": "في المتجر: التفاوض على السعر"
+      },
+      "successCriteria": [
+        "جملتان bei/von + جملة seit + جملتا تفاوض (zu teuer / Rabatt) + الدفع"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«إيصال»؟",
+            "a": "die Quittung"
+          },
+          {
+            "q": "«عند الخبّاز»؟",
+            "a": "beim Bäcker"
+          },
+          {
+            "q": "«قلادة وخاتم»؟",
+            "a": "die Kette und der Ring"
+          },
+          {
+            "q": "«أستدير المال»؟",
+            "a": "Ich spare Geld."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«استبدال»؟",
+            "a": "der Umtausch"
+          },
+          {
+            "q": "«منذ أسبوعين»؟",
+            "a": "seit zwei Wochen"
+          },
+          {
+            "q": "«كيس من فضلك»؟",
+            "a": "Die Tüte, bitte."
+          },
+          {
+            "q": "«الهدية من عائلتي»؟",
+            "a": "Das Geschenk ist von meiner Familie."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«مجوهرات»؟",
+            "a": "der Schmuck (بلا جمع)"
+          },
+          {
+            "q": "«نظارة شمسية»؟",
+            "a": "die Sonnenbrille"
+          },
+          {
+            "q": "«أتفاوض على السعر»؟",
+            "a": "Ich verhandele über den Preis."
+          },
+          {
+            "q": "«هذا غالٍ جداً!»؟",
+            "a": "Das ist zu teuer!"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Im Geschäft: beim Bäcker, von der Familie, seit zwei Wochen — und dann: „Das ist zu teuer!“ und verhandeln!",
+      "ar": "في المتجر: عند الخبّاز ومن العائلة ومنذ أسبوعين — ثم: «هذا غالٍ جداً!» والتفاوض!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~von Tunesien~~ (للمنشأ) / ~~aus der Familie~~",
+          "ar": "von (شخص/شيء) ↔ aus (منشأ/مكان)"
+        },
+        "whyArabicSpeakerFails": "«من» واحدة بالعربية للمنشأ وللأشخاص؛ الألماني يفصل: aus Tunesien (المنشأ) ↔ von meiner Familie (الانتماء) — تكميل بطاقة d4 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "aus Tunesien · von meiner Familie",
+          "ar": "aus للمنشأ · von للانتماء"
+        },
+        "exercise": {
+          "q": "أكمل: Ich komme ___ Tunesien. Das ist ___ meiner Familie.",
+          "a": "aus / von"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~seit zwei Wochen~~؟ نعم، لكن ~~seit die zwei Wochen~~ / ~~für zwei Wochen~~ (للماضي)",
+          "ar": "seit + Dativ (منذ — للحاضر)"
+        },
+        "whyArabicSpeakerFails": "«منذ» تجرّ بالعربية؛ الألماني seit يفرض الداتيف ويختص بالزمن المستمر حتى الآن — سؤال u3 عن المدة يتكرر (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich wohne seit drei Jahren hier.",
+          "ar": "أسكن هنا منذ ثلاث سنوات."
+        },
+        "exercise": {
+          "q": "أكمل: Ich lerne Deutsch ___ einem Jahr.",
+          "a": "seit"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~bei dem Bäcker~~ دائماً / ~~beim Bäckers~~",
+          "ar": "bei + dem = beim (اندماج)"
+        },
+        "whyArabicSpeakerFails": "الاندماج beim/zum/vom اختصار ألماني خالص؛ العربي يسمع «عند» واحدة — الحفظ بالصيغة المندمجة أسرع (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "beim Bäcker (bei + dem) · zum Arzt (zu + dem) · vom Verkäufer (von + dem)",
+          "ar": "اندماجات الثلاثة الكبيرة"
+        },
+        "exercise": {
+          "q": "أعد الصياغة: bei dem Verkäufer → ___",
+          "a": "beim Verkäufer"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "von",
+      "seit",
+      "bei",
+      "verhandeln",
+      "quittung",
+      "umtausch",
+      "schmuck",
+      "ring",
+      "kette",
+      "stiefel",
+      "mode",
+      "tuete",
+      "geschenk",
+      "sparen",
+      "sonnenbrille",
+      "baeckerei",
+      "schalter"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/bei",
+      "https://www.duden.de/rechtschreibung/seit",
+      "https://www.duden.de/rechtschreibung/Quittung"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/bei"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-von-seit-bei"
+  ],
+  "audioManifestRefs": [
+    "word-von",
+    "word-seit",
+    "word-bei",
+    "word-verhandeln",
+    "word-quittung",
+    "word-umtausch",
+    "word-schmuck",
+    "word-ring",
+    "word-kette",
+    "word-stiefel",
+    "word-mode",
+    "word-tuete",
+    "word-geschenk",
+    "word-sparen",
+    "word-sonnenbrille",
+    "word-baeckerei",
+    "word-schalter"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Im Geschäft verhandeln",
+    "goetheWordListOverlap": [
+      "von",
+      "bei"
+    ]
+  }
+}

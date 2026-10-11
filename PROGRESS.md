@@ -220,3 +220,9 @@
 - **u8-d4** (الداتيف الثابت — 12 كلمة): nach/aus/zu/Taxi/fliegen/Flug/Flughafen/parken/Rad/Bahn/abholen/Gepäck — مصائد: mit+Dativ · nach↔zu · aus للمنشأ.
 - الصوت: 24 مقطعاً — المانيفست **483 مساراً** · الكلمات **482** · الدروس **46** (الوحدات 1–7 + الوحدة 8: 4 أيام).
 - النتيجة: **243/243 أخضر** + tsc + validator (532/0/0) + build ✓. (D66) التالي: u8-d5 (von/seit/bei + مهمة المتجر — 17 كلمة) وu8-d6 (المعركة).
+
+## حملة المحتوى — الدفعة 23 (2026-10-10) — إتمام الوحدة 8 (D67)
+- **u8-d5** (17 كلمة + von/seit/bei + مهمة المتجر): von/seit/bei/verhandeln/Quittung/Umtausch/Schmuck/Ring/Kette/Stiefel/Mode/Tüte/Geschenk/sparen/Sonnenbrille/Bäckerei/Schalter — مصائد: von↔aus · seit+Dativ · beim/zum/vom.
+- **u8-d6** (المعركة — بلا كلمات): توليف + معركة 0.75.
+- الصوت: 17 مقطعاً — المانيفست **500 مساراً** · الكلمات **499** · الدروس **48** — **الوحدات 1–8 مكتملة (48 يوماً)**.
+- النتيجة: **243/243 أخضر** + tsc + validator (551/0/0) + build ✓. (D67) التالي: الوحدة 9 (المدينة والاتجاهات — 65 كلمة).

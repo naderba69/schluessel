@@ -290,3 +290,9 @@
 - **u8-d3** (12 كلمة): passen/Stück/Korb/Wagen/Kleidung/Kreditkarte/Regenschirm/Rucksack/Gürtel/Abteilung/finden/möglich. مصائد: **können/müssen + مصدر في النهاية** (مثل möchte) · **die Kleidung جامد** · **العدّاد Stück/Stücke**.
 - **u8-d4** (12 كلمة): nach/aus/zu/Taxi/fliegen/Flug/Flughafen/parken/Rad/Bahn/abholen/Gepäck. مصائد: **mit + Dativ دائماً** (mit dem Bus) · **nach (بلا أداة) ↔ zu (zum/zur)** · **aus للمنشأ** (von في d5).
 - البوابة: **243/243 + tsc + validator (532 ملفاً/0/0) + build** ✓.
+
+## D67 (2026-10-10): إتمام الوحدة 8 — u8-d5 (von/seit/bei + التفاوض) + u8-d6 (المعركة)
+
+- **u8-d5** (17 كلمة — 49–65): von/seit/bei/verhandeln/Quittung/Umtausch/Schmuck/Ring/Kette/Stiefel/Mode/Tüte/Geschenk/sparen/Sonnenbrille/Bäckerei/Schalter. مصائد: **von ↔ aus** (انتماء ↔ منشأ) · **seit + Dativ** (منذ — للحاضر) · **beim/zum/vom** (اندماجات). مهمة: **شراء وتفاوض في المتجر**.
+- **u8-d6** (integration — بلا كلمات): معركة 0.75 + 3 بطاقات ختامية (الداتيف والاندماجات · الأفعال الناقمة · Was kostet + ver-/kaufen).
+- البوابة: **243/243 + tsc + validator (551 ملفاً/0/0) + build** ✓. **الوحدات 1–8 مكتملة = 499 كلمة · 48 درساً · 500 مساراً.**

@@ -1,0 +1,284 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d6",
+  "level": "A1",
+  "unit": 8,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Die Einheit 8 zusammenfassen und die Wochen-Meisterschaft bestehen.",
+    "ar": "تلخيص الوحدة 8 واجتياز معركة الأسبوع"
+  },
+  "canDoDaily": [
+    "يجتاز معركة الوحدة 8 بعتبة 0.75"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hose",
+      "passen",
+      "preis"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أستطيع أن أقيس البنطال عند البائع» — الصيغة الصحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Ich kann die Hose beim Verkäufer anprobieren.",
+          "Ich kann anprobieren die Hose bei dem Verkäufer.",
+          "Ich kann die Hose anprobieren beim Verkäufer."
+        ],
+        "answer": "Ich kann die Hose beim Verkäufer anprobieren.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "passen",
+      "kunde"
+    ],
+    "grammarArsenalIds": [
+      "ars-von-seit-bei",
+      "ars-dativ-fix",
+      "ars-koennen-muessen"
+    ],
+    "storySentenceIds": [
+      "story-a8-u8-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«البنطال مقاسه جيد»؟",
+            "a": "Die Hose passt gut."
+          },
+          {
+            "q": "«الزبون يدفع عند الشباك»؟",
+            "a": "Der Kunde zahlt am Schalter."
+          }
+        ],
+        "interleavedWith": [
+          "passen",
+          "kunde"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«بالقطار إلى برلين»؟",
+            "a": "Mit der Bahn nach Berlin."
+          },
+          {
+            "q": "«يجب أن أتسوّق»؟",
+            "a": "Ich muss einkaufen."
+          }
+        ],
+        "interleavedWith": [
+          "bahn",
+          "einkaufen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هذا غالٍ — أين الباقي؟»؟",
+            "a": "Das ist zu teuer! Wo ist mein Wechselgeld?"
+          },
+          {
+            "q": "«أشتري عند الخبّاز»؟",
+            "a": "Ich kaufe beim Bäcker ein."
+          }
+        ],
+        "interleavedWith": [
+          "wechselgeld",
+          "baeckerei"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wochen-Meisterschaft: Einkaufen",
+        "ar": "معركة الأسبوع: التسوق"
+      },
+      "situation": {
+        "de": "Abschlussprüfung der Einheit 8",
+        "ar": "اختبار ختام الوحدة 8"
+      },
+      "successCriteria": [
+        "اجتياز المعركة بـ ≥ 0.75 مع الداتيف والأسعار والأفعال الناقمة صحيحة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«عند الخبّاز»؟",
+            "a": "beim Bäcker"
+          },
+          {
+            "q": "«يجب أن أدفع»؟",
+            "a": "Ich muss zahlen."
+          },
+          {
+            "q": "«تذكرة»؟",
+            "a": "die Fahrkarte"
+          },
+          {
+            "q": "«هذا مناسب!»؟",
+            "a": "Das ist günstig!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«بالحافلة»؟",
+            "a": "mit dem Bus"
+          },
+          {
+            "q": "«أستطيع أن أجده»؟",
+            "a": "Ich kann das finden."
+          },
+          {
+            "q": "«الزبون»؟",
+            "a": "der Kunde (die Kunden)"
+          },
+          {
+            "q": "«منذ أسبوعين»؟",
+            "a": "seit zwei Wochen"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«كم يكلف هذا؟»؟",
+            "a": "Was kostet das?"
+          },
+          {
+            "q": "«إلى برلين»؟",
+            "a": "nach Berlin"
+          },
+          {
+            "q": "«الباقي»؟",
+            "a": "das Wechselgeld"
+          },
+          {
+            "q": "«المقاس جيد»؟",
+            "a": "Die Hose passt gut."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheit 8 gemeistert: Du kaufst ein, verhandelst, zahlst — mit dem Bus, beim Bäcker, von der Familie, seit Jahren!",
+      "ar": "الوحدة 8 متقنة: تتسوّق وتتفاوض وتدفع — بالحافلة وعند الخبّاز ومن العائلة وسنوات!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~mit den Bus~~ / ~~beim Bäckers~~ / ~~von die Familie~~",
+          "ar": "الداتيف الثابت + الاندماجات"
+        },
+        "whyArabicSpeakerFails": "حروف الجر الألمانية تفرض الداتيف وتندمج (beim/zum/vom)؛ العربي يجرّ دائماً لكن بلا اندماجات (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "mit dem Bus · beim Bäcker · von der Familie",
+          "ar": "dem/der بعد الحروف + اندماجات"
+        },
+        "exercise": {
+          "q": "أكمل: mit ___ Bus · bei ___ Bäcker · von ___ Familie.",
+          "a": "dem / dem / der"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich muss zu einkaufen.~~ / ~~Ich kann anprobieren die Hose.~~",
+          "ar": "الأفعال الناقمة: الفعل في النهاية"
+        },
+        "whyArabicSpeakerFails": "«يجب أن» و«أستطيع أن» بـ«أن»؛ الألماني يضع الفعل الآخر في نهاية الجملة — نفس نمط möchte (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich muss einkaufen. / Ich kann die Hose anprobieren.",
+          "ar": "الفعل غير المصرَّف في النهاية."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich will anprobieren die Jacke.~~",
+          "a": "Ich will die Jacke anprobieren."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wie kostet das?~~ / ~~Ich verkaufe~~ (حين أشتري)",
+          "ar": "Was kostet + ver-/kaufen"
+        },
+        "whyArabicSpeakerFails": "ترتيب السؤال وقلب ver- يورّثان من الوحدتين 2 و8 — الخلاصة الختامية للوحدة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Was kostet das? / Ich kaufe ein, der Verkäufer verkauft.",
+          "ar": "السؤال بالترتيب الصحيح والفعل الصحيح."
+        },
+        "exercise": {
+          "q": "أكمل: ___ kostet das? Ich ___ ein.",
+          "a": "Was / kaufe"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "passen",
+      "kunde"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/bei",
+      "https://www.duden.de/rechtschreibung/muessen",
+      "https://www.duden.de/rechtschreibung/kosten"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/bei"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-von-seit-bei",
+    "ars-dativ-fix",
+    "ars-koennen-muessen"
+  ],
+  "audioManifestRefs": [
+    "word-passen",
+    "word-kunde"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Wiederholung & Test",
+    "goetheWordListOverlap": [
+      "passen",
+      "kunde"
+    ]
+  }
+}

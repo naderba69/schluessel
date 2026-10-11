@@ -559,6 +559,23 @@ def build_all() -> None:
         ("word-bahn", "Bahn.", "bahn", ["a1-u8-d4"]),
         ("word-abholen", "abholen.", "abholen", ["a1-u8-d4"]),
         ("word-gepaeck", "Gepäck.", "gepaeck", ["a1-u8-d4"]),
+        ("word-von", "von.", "von", ["a1-u8-d5"]),
+        ("word-seit", "seit.", "seit", ["a1-u8-d5"]),
+        ("word-bei", "bei.", "bei", ["a1-u8-d5"]),
+        ("word-verhandeln", "verhandeln.", "verhandeln", ["a1-u8-d5"]),
+        ("word-quittung", "Quittung.", "quittung", ["a1-u8-d5"]),
+        ("word-umtausch", "Umtausch.", "umtausch", ["a1-u8-d5"]),
+        ("word-schmuck", "Schmuck.", "schmuck", ["a1-u8-d5"]),
+        ("word-ring", "Ring.", "ring", ["a1-u8-d5"]),
+        ("word-kette", "Kette.", "kette", ["a1-u8-d5"]),
+        ("word-stiefel", "Stiefel.", "stiefel", ["a1-u8-d5"]),
+        ("word-mode", "Mode.", "mode", ["a1-u8-d5"]),
+        ("word-tuete", "Tüte.", "tuete", ["a1-u8-d5"]),
+        ("word-geschenk", "Geschenk.", "geschenk", ["a1-u8-d5"]),
+        ("word-sparen", "sparen.", "sparen", ["a1-u8-d5"]),
+        ("word-sonnenbrille", "Sonnenbrille.", "sonnenbrille", ["a1-u8-d5"]),
+        ("word-baeckerei", "Bäckerei.", "baeckerei", ["a1-u8-d5"]),
+        ("word-schalter", "Schalter.", "schalter", ["a1-u8-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
