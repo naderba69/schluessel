@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d3",
+  "level": "A1",
+  "unit": 8,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst sagen, was du kannst und was du musst (können/müssen).",
+    "ar": "تقول ما تستطيع وما يجب عليك"
+  },
+  "canDoDaily": [
+    "يقول ما يستطيع (können) وما يجب (müssen) مع الفعل في النهاية"
+  ],
+  "warmup": {
+    "cardIds": [
+      "passen",
+      "moeglich",
+      "kaufen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«يجب أن أتسوّق» — Ich muss einkaufen أم Ich muss zu einkaufen? (تخمين فقط)"
+        },
+        "choices": [
+          "Ich muss einkaufen. (الفعل في النهاية)",
+          "Ich muss zu einkaufen.",
+          "Ich muss einkaufen zu."
+        ],
+        "answer": "Ich muss einkaufen. (الفعل في النهاية)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "passen",
+      "stueck",
+      "korb",
+      "wagen",
+      "kleidung",
+      "kreditkarte",
+      "regenschirm",
+      "rucksack",
+      "guertel",
+      "abteilung",
+      "finden",
+      "moeglich"
+    ],
+    "grammarArsenalIds": [
+      "ars-koennen-muessen"
+    ],
+    "storySentenceIds": [
+      "story-a8-u8-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أستطيع أن أجده»؟",
+            "a": "Ich kann das finden."
+          },
+          {
+            "q": "«يجب أن أدفع»؟",
+            "a": "Ich muss zahlen."
+          }
+        ],
+        "interleavedWith": [
+          "finden",
+          "zahlen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«البنطال مقاسه جيد»؟",
+            "a": "Die Hose passt gut."
+          },
+          {
+            "q": "«قطعة كعكة من فضلك»؟",
+            "a": "Ein Stück Kuchen, bitte."
+          }
+        ],
+        "interleavedWith": [
+          "hose",
+          "kuchen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«السلة ممتلئة»؟",
+            "a": "Der Korb ist voll."
+          },
+          {
+            "q": "«أدفع بالبطاقة»؟",
+            "a": "Ich zahle mit der Kreditkarte."
+          }
+        ],
+        "interleavedWith": [
+          "korb",
+          "kreditkarte"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "können/müssen im Einkaufen",
+        "ar": "الاستطاعة والوجوب في التسوق"
+      },
+      "situation": {
+        "de": "Im Geschäft: können und müssen",
+        "ar": "في المتجر: الاستطاعة والوجوب"
+      },
+      "successCriteria": [
+        "3 جمل können + 3 جمل müssen مع الفعل في النهاية"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يناسب»؟",
+            "a": "passen → das passt."
+          },
+          {
+            "q": "«يجب أن أتسوّق»؟",
+            "a": "Ich muss einkaufen."
+          },
+          {
+            "q": "«قطعة»؟",
+            "a": "das Stück"
+          },
+          {
+            "q": "«أجد هذا جيداً»؟",
+            "a": "Ich finde das gut."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«ملابس (كلمة جمع)»؟",
+            "a": "die Kleidung (بلا جمع)"
+          },
+          {
+            "q": "«أستطيع أن أقيس»؟",
+            "a": "Ich kann anprobieren."
+          },
+          {
+            "q": "«حقيبة الظهر»؟",
+            "a": "der Rucksack (الجمع: die Rucksäcke)"
+          },
+          {
+            "q": "«ممكن»؟",
+            "a": "möglich"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«مظلة»؟",
+            "a": "der Regenschirm"
+          },
+          {
+            "q": "«بطاقة ائتمان»؟",
+            "a": "die Kreditkarte"
+          },
+          {
+            "q": "«القسم»؟",
+            "a": "die Abteilung"
+          },
+          {
+            "q": "«أدفع بالبطاقة»؟",
+            "a": "Ich zahle mit der Kreditkarte."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Korb ist voll, die Kreditkarte passt — und du kannst alles finden und musst nur zahlen!",
+      "ar": "تستطيع الدفع والقياس والإيجاد — وعليك التسوّق! بقطعة الكعكة والبطاقة كل شيء ممكن."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich muss zu einkaufen.~~ / ~~Ich kann das finden zu.~~",
+          "ar": "können/müssen + مصدر في النهاية"
+        },
+        "whyArabicSpeakerFails": "«يجب أن أتسوّق» بـ«أن»؛ الألماني يحذف zu مع الأفعال الناقصة ويضع الفعل في النهاية — مثل möchte في الوحدة 5 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich muss einkaufen. / Ich kann das finden.",
+          "ar": "يجب أن أتسوّق. / أستطيع أن أجده."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich muss zu zahlen.~~",
+          "a": "Ich muss zahlen."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Das Kleidungen sind schön.~~ / ~~ein Kleidung~~",
+          "ar": "die Kleidung جمع/جامد"
+        },
+        "whyArabicSpeakerFails": "«الملابس» جمع بالعربية؛ الألماني Kleidung مفرد جامد يغطي الجميع — مثل Gemüse (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Die Kleidung ist schön.",
+          "ar": "الملابس جميلة. (مفرد ألماني)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Die Kleidungen sind neu.~~",
+          "a": "Die Kleidung ist neu."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~das Stück Kuchen~~? نعم، لكن ~~zwei Stücks~~",
+          "ar": "العدّاد Stück: الجمع Stücke"
+        },
+        "whyArabicSpeakerFails": "«قطعة/قطع» بالتصغير؛ الألماني Stück عدّاد متحرك الجمع -e مع umlaut محتمل (Stücke) — يُحفظ مع الكعكة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "ein Stück / drei Stücke",
+          "ar": "قطعة / قطع (Stücke)"
+        },
+        "exercise": {
+          "q": "أكمل: drei ___ (Stück)",
+          "a": "drei Stücke"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "passen",
+      "stueck",
+      "korb",
+      "wagen",
+      "kleidung",
+      "kreditkarte",
+      "regenschirm",
+      "rucksack",
+      "guertel",
+      "abteilung",
+      "finden",
+      "moeglich"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/koennen",
+      "https://www.duden.de/rechtschreibung/muessen",
+      "https://www.duden.de/rechtschreibung/St%C3%BCck"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/m%C3%BCssen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-koennen-muessen"
+  ],
+  "audioManifestRefs": [
+    "word-passen",
+    "word-stueck",
+    "word-korb",
+    "word-wagen",
+    "word-kleidung",
+    "word-kreditkarte",
+    "word-regenschirm",
+    "word-rucksack",
+    "word-guertel",
+    "word-abteilung",
+    "word-finden",
+    "word-moeglich"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — können & müssen",
+    "goetheWordListOverlap": [
+      "finden",
+      "passen"
+    ]
+  }
+}

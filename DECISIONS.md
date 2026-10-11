@@ -284,3 +284,9 @@
 - **u8-d1** (12 كلمة): Hose/Hemd/Schuhe/Jacke/Mantel/Kleid/Rock/Socke/Hut/Pullover/Größe/Farbe. مصائد: **das Hemd** (محايد رغم «القميص») · **موجة umlaut في الملابس** (Mäntel/Röcke/Kleider/Hüte) · **die + e = مؤنث** (Hose/Jacke/Socke).
 - **u8-d2** (12 كلمة): Cent/Rabatt/Angebot/günstig/Wechselgeld/verkaufen/Verkäufer/Kunde/Supermarkt/Geschäft/Markt/anprobieren. مصائد: **Was kostet das?** (ترتيب السؤال) · **die Kunden** (n-Deklination الثاني) · **ver- تقلب المعنى** (kaufen↔verkaufen).
 - البوابة: **243/243 + tsc + validator (506 ملفات/0/0) + build** ✓.
+
+## D66 (2026-10-10): u8-d3 (können/müssen) + u8-d4 (الداتيف الثابت)
+
+- **u8-d3** (12 كلمة): passen/Stück/Korb/Wagen/Kleidung/Kreditkarte/Regenschirm/Rucksack/Gürtel/Abteilung/finden/möglich. مصائد: **können/müssen + مصدر في النهاية** (مثل möchte) · **die Kleidung جامد** · **العدّاد Stück/Stücke**.
+- **u8-d4** (12 كلمة): nach/aus/zu/Taxi/fliegen/Flug/Flughafen/parken/Rad/Bahn/abholen/Gepäck. مصائد: **mit + Dativ دائماً** (mit dem Bus) · **nach (بلا أداة) ↔ zu (zum/zur)** · **aus للمنشأ** (von في d5).
+- البوابة: **243/243 + tsc + validator (532 ملفاً/0/0) + build** ✓.

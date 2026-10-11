@@ -214,3 +214,9 @@
 - **u8-d2** (Preise — 12 كلمة): Cent/Rabatt/Angebot/günstig/Wechselgeld/verkaufen/Verkäufer/Kunde/Supermarkt/Geschäft/Markt/anprobieren — مصائد: Was kostet das? · Kunden (-n) · ver- تقلب المعنى.
 - الصوت: 24 مقطعاً — المانيفست **459 مساراً** · الكلمات **458** · الدروس **44** (الوحدات 1–7 + الوحدة 8: يومان).
 - النتيجة: **243/243 أخضر** + tsc + validator (506/0/0) + build ✓. (D65) التالي: u8-d3 (können/müssen) وu8-d4 (الداتيف الثابت) وu8-d5 (von/seit/bei + مهمة المتجر) وu8-d6 (المعركة).
+
+## حملة المحتوى — الدفعة 22 (2026-10-10) — u8-d3 + u8-d4 (D66)
+- **u8-d3** (können/müssen — 12 كلمة): passen/Stück/Korb/Wagen/Kleidung/Kreditkarte/Regenschirm/Rucksack/Gürtel/Abteilung/finden/möglich — مصائد: مصدر في النهاية · Kleidung جامد · Stück عدّاد.
+- **u8-d4** (الداتيف الثابت — 12 كلمة): nach/aus/zu/Taxi/fliegen/Flug/Flughafen/parken/Rad/Bahn/abholen/Gepäck — مصائد: mit+Dativ · nach↔zu · aus للمنشأ.
+- الصوت: 24 مقطعاً — المانيفست **483 مساراً** · الكلمات **482** · الدروس **46** (الوحدات 1–7 + الوحدة 8: 4 أيام).
+- النتيجة: **243/243 أخضر** + tsc + validator (532/0/0) + build ✓. (D66) التالي: u8-d5 (von/seit/bei + مهمة المتجر — 17 كلمة) وu8-d6 (المعركة).

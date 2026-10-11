@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d4",
+  "level": "A1",
+  "unit": 8,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst sagen, wie du fährst (mit/nach/aus/zu + Dativ).",
+    "ar": "تقول كيف تذهب بحروف الداتيف الثابتة"
+  },
+  "canDoDaily": [
+    "يصف طريقه بـ mit/nach/aus/zu + Dativ (mit dem Bus)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bus",
+      "zug",
+      "fahren"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«بالحافلة» — mit dem Bus أم mit den Bus? (تخمين فقط)"
+        },
+        "choices": [
+          "mit dem Bus (Dativ دائماً بعد mit)",
+          "mit den Bus",
+          "mit der Bus"
+        ],
+        "answer": "mit dem Bus (Dativ دائماً بعد mit)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "nach",
+      "aus",
+      "zu",
+      "taxi",
+      "fliegen",
+      "flug",
+      "flughafen",
+      "parken",
+      "rad",
+      "bahn",
+      "abholen",
+      "gepaeck"
+    ],
+    "grammarArsenalIds": [
+      "ars-dativ-fix"
+    ],
+    "storySentenceIds": [
+      "story-a8-u8-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«بالحافلة»؟",
+            "a": "mit dem Bus"
+          },
+          {
+            "q": "«بالقطار من فضلك»؟",
+            "a": "Mit der Bahn, bitte."
+          }
+        ],
+        "interleavedWith": [
+          "bus",
+          "bahn"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«نسافر إلى برلين»؟",
+            "a": "Wir fahren nach Berlin."
+          },
+          {
+            "q": "«أنا من تونس»؟",
+            "a": "Ich komme aus Tunesien."
+          }
+        ],
+        "interleavedWith": [
+          "fahrkarte",
+          "reise"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أذهب إلى الطبيب»؟",
+            "a": "Ich gehe zum Arzt."
+          },
+          {
+            "q": "«نطير إلى ألمانيا»؟",
+            "a": "Wir fliegen nach Deutschland."
+          }
+        ],
+        "interleavedWith": [
+          "fliegen",
+          "arzt"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Weg mit Dativ-Präpositionen sagen",
+        "ar": "قول الطريق بحروف الداتيف"
+      },
+      "situation": {
+        "de": "Reise: wie fährst du?",
+        "ar": "الرحلة: كيف تذهب؟"
+      },
+      "successCriteria": [
+        "4 جمل mit/nach/aus/zu صحيحة + جملتا وسيلة نقل (mit dem Taxi / mit der Bahn)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«سيارة أجرة»؟",
+            "a": "das Taxi"
+          },
+          {
+            "q": "«بالسيارة (التاكسي)»؟",
+            "a": "mit dem Taxi"
+          },
+          {
+            "q": "«مطار»؟",
+            "a": "der Flughafen"
+          },
+          {
+            "q": "«أنا من تونس»؟",
+            "a": "Ich komme aus Tunesien."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يطير»؟",
+            "a": "fliegen → er fliegt (ist geflogen)."
+          },
+          {
+            "q": "«إلى برلين»؟",
+            "a": "nach Berlin (بلا أداة)"
+          },
+          {
+            "q": "«عجلة/دراجة»؟",
+            "a": "das Rad (الجمع: die Räder)"
+          },
+          {
+            "q": "«أذهب إلى الطبيب»؟",
+            "a": "Ich gehe zum Arzt."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«رحلة جوية»؟",
+            "a": "der Flug"
+          },
+          {
+            "q": "«أمتعة»؟",
+            "a": "das Gepäck (بلا جمع)"
+          },
+          {
+            "q": "«أُحضر أمي»؟",
+            "a": "Ich hole meine Mutter ab."
+          },
+          {
+            "q": "«يركّز سيارته»؟",
+            "a": "parken → er parkt."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "So fährst du: mit dem Taxi, mit der Bahn, nach Berlin, aus Tunesien, zum Arzt — Dativ überall!",
+      "ar": "هكذا تذهب: بالتاكسي وبالقطار وإلى برلين ومن تونس وإلى الطبيب — الداتيف في كل مكان!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~mit den Bus~~ / ~~mit der Bus~~",
+          "ar": "mit + Dativ دائماً"
+        },
+        "whyArabicSpeakerFails": "«بالحافلة» تُجرّ بالعربية؛ الألماني mit يفرض الداتيف حتى مع الاتجاه: mit dem Bus (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "mit dem Bus / mit der Bahn / mit dem Taxi",
+          "ar": "mit + dem/der (داتيف)"
+        },
+        "exercise": {
+          "q": "أكمل: mit ___ Bus und mit ___ Bahn.",
+          "a": "dem / der"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~nach dem Berlin~~ / ~~zu Berlin~~",
+          "ar": "nach (بلا أداة) ↔ zu (مع أداة: zum/zur)"
+        },
+        "whyArabicSpeakerFails": "«إلى» واحدة بالعربية للمدينه وللشخص؛ الألماني يفصل: nach Berlin (بلا أداة) لكن zum Arzt (zu + dem) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "nach Berlin · zum Arzt / zur Schule",
+          "ar": "nach للمدن · zu للأشخاص والأماكن بالأداة"
+        },
+        "exercise": {
+          "q": "أكمل: Wir fahren ___ Berlin. Ich gehe ___ Arzt.",
+          "a": "nach / zum"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~aus dem Tunesien~~ / ~~von Tunesien~~؟ (aus = من مكان المنشأ)",
+          "ar": "aus + Dativ (من أين أنت)"
+        },
+        "whyArabicSpeakerFails": "«من» بالعربية للمنشأ وللتحرك؛ الألماني aus للمنشأ (Ich komme aus) — von يأتي في d5 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich komme aus Tunesien.",
+          "ar": "أنا من تونس."
+        },
+        "exercise": {
+          "q": "أكمل: Ich komme ___ Tunesien.",
+          "a": "aus"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "nach",
+      "aus",
+      "zu",
+      "taxi",
+      "fliegen",
+      "flug",
+      "flughafen",
+      "parken",
+      "rad",
+      "bahn",
+      "abholen",
+      "gepaeck"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/mit",
+      "https://www.duden.de/rechtschreibung/nach",
+      "https://www.duden.de/rechtschreibung/Flughafen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/aus"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-dativ-fix"
+  ],
+  "audioManifestRefs": [
+    "word-nach",
+    "word-aus",
+    "word-zu",
+    "word-taxi",
+    "word-fliegen",
+    "word-flug",
+    "word-flughafen",
+    "word-parken",
+    "word-rad",
+    "word-bahn",
+    "word-abholen",
+    "word-gepaeck"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Dativ-Präpositionen & Reise",
+    "goetheWordListOverlap": [
+      "nach",
+      "fliegen"
+    ]
+  }
+}
