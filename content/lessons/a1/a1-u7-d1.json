@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u7-d1",
+  "level": "A1",
+  "unit": 7,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst deinen Morgen in 3 Sätzen beschreiben.",
+    "ar": "تصف صباحك في 3 جمل"
+  },
+  "canDoDaily": [
+    "يصف صباحه في 3 جمل (يستيقظ · يستحمّ · يرتدي)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "fruehstueck",
+      "kaffee",
+      "uhr"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أستيقظ في السابعة» — Ich aufwache أم Ich wache auf? (تخمين فقط)"
+        },
+        "choices": [
+          "Ich wache um sieben auf. (الفعل المنفصل)",
+          "Ich aufwache um sieben.",
+          "Ich wache um sieben."
+        ],
+        "answer": "Ich wache um sieben auf. (الفعل المنفصل)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "aufwachen",
+      "schlafen",
+      "duschen",
+      "anziehen",
+      "muede",
+      "pause",
+      "wecker",
+      "alltag",
+      "baden",
+      "anfangen",
+      "wecken",
+      "weg"
+    ],
+    "grammarArsenalIds": [
+      "ars-tagesablauf"
+    ],
+    "storySentenceIds": [
+      "story-a7-u7-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أستيقظ في السابعة»؟",
+            "a": "Ich wache um sieben auf."
+          },
+          {
+            "q": "«ساعة اليقظة ترنّ»؟",
+            "a": "Der Wecker klingelt."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أستحمّ وأرتدي ملابسي»؟",
+            "a": "Ich dusche und ziehe mich an."
+          },
+          {
+            "q": "«أنا متعب»؟",
+            "a": "Ich bin müde."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«اليوم يبدأ»؟",
+            "a": "Der Tag fängt an."
+          },
+          {
+            "q": "«آخذ استراحة»؟",
+            "a": "Ich mache eine Pause."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Morgen in 3 Sätzen beschreiben",
+        "ar": "وصف الصباح في 3 جمل"
+      },
+      "situation": {
+        "de": "Mein Morgen",
+        "ar": "صباحي"
+      },
+      "successCriteria": [
+        "3 جمل: aufwachen + duschen/anziehen + Frühstück/Arbeit مع أفعال صحيحة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أستيقظ»؟",
+            "a": "aufwachen → Ich wache auf."
+          },
+          {
+            "q": "«ساعة اليقظة»؟",
+            "a": "der Wecker"
+          },
+          {
+            "q": "«أنا متعب»؟",
+            "a": "Ich bin müde."
+          },
+          {
+            "q": "«ينام»؟",
+            "a": "schlafen → er schläft"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يرتدي»؟",
+            "a": "anziehen → er zieht sich an."
+          },
+          {
+            "q": "«استراحة»؟",
+            "a": "die Pause"
+          },
+          {
+            "q": "«الطريق»؟",
+            "a": "der Weg"
+          },
+          {
+            "q": "«يبدأ»؟",
+            "a": "anfangen → es fängt an."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يوقظ»؟",
+            "a": "wecken → der Wecker weckt mich."
+          },
+          {
+            "q": "«يومي»؟",
+            "a": "der Alltag"
+          },
+          {
+            "q": "«أستحمّ»؟",
+            "a": "duschen → ich dusche."
+          },
+          {
+            "q": "«أنا جوعان ومتعب»؟",
+            "a": "Ich habe Hunger und bin müde."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Dein Morgen: Der Wecker weckt dich, du wachst auf, duschst, ziehst dich an — und der Alltag fängt an!",
+      "ar": "صباحك: ساعة اليقظة توقظك، تستيقظ، تستحمّ، ترتدي — واليوم يبدأ!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich aufwache um sieben.~~",
+          "ar": "الفعل المنفصل: البادئة في النهاية"
+        },
+        "whyArabicSpeakerFails": "«أستيقظ» كلمة واحدة؛ الألماني aufwachen ينفصل: البادئة auf تذهب لنهاية الجملة — أول لقاء عملي (الدرس الخامس يشرحها) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich wache um sieben auf.",
+          "ar": "أستيقظ في السابعة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich anfange um acht.~~",
+          "a": "Ich fange um acht an."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich bin müde~~ ↔ ~~Ich habe müde~~",
+          "ar": "müde = sein (مثل satt)"
+        },
+        "whyArabicSpeakerFails": "«متعب» خبر بالعربية؛ الألماني müde مع ist تماماً مثل satt — الزوج يتكرر (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bin müde.",
+          "ar": "أنا متعب."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ müde. Ich ___ Hunger.",
+          "a": "bin / habe"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~aufwachen~~ = ~~wecken~~",
+          "ar": "يستيقظ (intransitiv) ↔ يوقظ (transitiv)"
+        },
+        "whyArabicSpeakerFails": "«استيقظ/أوقظ» فعلان متقاربان؛ الألماني يفصل: aufwachen بلا مفعول وwecken بمفعول — المعنى ينقلب بالبادئة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich wache auf. / Der Wecker weckt mich.",
+          "ar": "أستيقظ. / الساعة توقظني."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ um sieben ___. Der Wecker ___ mich.",
+          "a": "wache … auf / weckt"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "aufwachen",
+      "schlafen",
+      "duschen",
+      "anziehen",
+      "muede",
+      "pause",
+      "wecker",
+      "alltag",
+      "baden",
+      "anfangen",
+      "wecken",
+      "weg"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/aufwachen",
+      "https://www.duden.de/rechtschreibung/Wecker",
+      "https://www.duden.de/rechtschreibung/muede"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/aufwachen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-tagesablauf"
+  ],
+  "audioManifestRefs": [
+    "word-aufwachen",
+    "word-schlafen",
+    "word-duschen",
+    "word-anziehen",
+    "word-muede",
+    "word-pause",
+    "word-wecker",
+    "word-alltag",
+    "word-baden",
+    "word-anfangen",
+    "word-wecken",
+    "word-weg"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Tagesablauf",
+    "goetheWordListOverlap": [
+      "schlafen",
+      "weg"
+    ]
+  }
+}

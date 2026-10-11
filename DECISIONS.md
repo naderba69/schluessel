@@ -260,3 +260,9 @@
 - **u6-d6** (integration — بلا كلمات): معركة 0.75 + 3 بطاقات ختامية (es gibt+Wo/Wohin · Möbel/Nachbarn · da-Türchen).
 - موازنة SRS (§4/R10b): أُضيفت بطاقة comprehension إلى 191 كلمة تفتقر إليها — النسبة 41/20/6 → 34/35/5 (المستهدف A1 = 40/50/10 · off 0.355→0.266) — التحذير w-srs-ratio انطفأ.
 - البوابة: **243/243 + tsc + validator (409 ملفات/0/0) + build** ✓. **الوحدات 1–6 مكتملة = 369 كلمة · 36 درساً · 370 مساراً.**
+
+## D62 (2026-10-10): بداية الوحدة 7 — u7-d1 (Tagesablauf) + u7-d2 (Hobbys + gern/lieber)
+
+- **u7-d1** (12 كلمة): aufwachen/schlafen/duschen/anziehen/müde/Pause/Wecker/Alltag/baden/anfangen/wecken/Weg. مصائد: **الفعل المنفصل أول لقاء** (Ich wache auf — البادئة في النهاية) · **bin müde ↔ habe Hunger** (الزوج يتكرر) · **aufwachen ↔ wecken** (intransitiv/transitiv).
+- **u7-d2** (12 كلمة): Fußball/schwimmen/tanzen/reisen/zeichnen/spazieren/Kino/Spiel/spielen/lieber/Spaß/langweilig. مصائد: **lieber = مقارن gern بلا mehr** · **الرياضة بلا أداة** (Fußball spielen) · **Das macht Spaß** (مصدر شائع).
+- البوابة: **243/243 + tsc + validator (435 ملفاً/0/0) + build** ✓.

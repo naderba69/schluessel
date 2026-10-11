@@ -190,3 +190,9 @@
 - موازنة بطاقات SRS: +comprehension لـ191 كلمة (41/20/6 → 34/35/5 · التحذير انطفأ).
 - الصوت: 17 مقطعاً — المانيفست **370 مساراً** · الكلمات **369** · الدروس **36** — **الوحدات 1–6 مكتملة (36 يوماً)**.
 - النتيجة: **243/243 أخضر** + tsc + validator (409/0/0) + build ✓. (D61) التالي: الوحدة 7 (اليوميات والهواء — 65 كلمة).
+
+## حملة المحتوى — الدفعة 18 (2026-10-10) — بداية الوحدة 7 (D62)
+- **u7-d1** (Tagesablauf — 12 كلمة): aufwachen/schlafen/duschen/anziehen/müde/Pause/Wecker/Alltag/baden/anfangen/wecken/Weg — مصائد: فعل منفصل · bin müde · aufwachen↔wecken.
+- **u7-d2** (Hobbys — 12 كلمة): Fußball/schwimmen/tanzen/reisen/zeichnen/spazieren/Kino/Spiel/spielen/lieber/Spaß/langweilig — مصائد: lieber بلا mehr · رياضة بلا أداة · macht Spaß.
+- الصوت: 24 مقطعاً — المانيفست **394 مساراً** · الكلمات **393** · الدروس **38** (الوحدات 1–6 + الوحدة 7: يومان).
+- النتيجة: **243/243 أخضر** + tsc + validator (435/0/0) + build ✓. (D62) التالي: u7-d3 (Präsens منتظم) وu7-d4 (شاذ fährt/isst) وu7-d5 (Trennbare) وu7-d6 (المعركة).

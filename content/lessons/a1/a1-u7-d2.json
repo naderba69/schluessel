@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u7-d2",
+  "level": "A1",
+  "unit": 7,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst sagen, was du gern machst und was du lieber machst.",
+    "ar": "تقول ما تستمتع به وما تفضّله"
+  },
+  "canDoDaily": [
+    "يقول هواياته بـ gern ويفضّل بـ lieber"
+  ],
+  "warmup": {
+    "cardIds": [
+      "spielen",
+      "musik",
+      "kochen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أقرأ بمحبة أكثر» — Ich lese mehr gern أم Ich lese lieber? (تخمين فقط)"
+        },
+        "choices": [
+          "Ich lese lieber.",
+          "Ich lese mehr gern.",
+          "Ich lese am gern."
+        ],
+        "answer": "Ich lese lieber.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "fussball",
+      "schwimmen",
+      "tanzen",
+      "reisen",
+      "zeichnen",
+      "spazieren",
+      "kino",
+      "spiel",
+      "spielen",
+      "lieber",
+      "spass",
+      "langweilig"
+    ],
+    "grammarArsenalIds": [
+      "ars-gern-lieber"
+    ],
+    "storySentenceIds": [
+      "story-a7-u7-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«ألعب كرة القدم»؟",
+            "a": "Ich spiele Fußball."
+          },
+          {
+            "q": "«أسبح بمحبة»؟",
+            "a": "Ich schwimme gern."
+          }
+        ],
+        "interleavedWith": [
+          "spielen",
+          "schwimmen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أرسم بمحبة أكثر»؟",
+            "a": "Ich zeichne lieber."
+          },
+          {
+            "q": "«هذا ممتع!»؟",
+            "a": "Das macht Spaß!"
+          }
+        ],
+        "interleavedWith": [
+          "zeichnen",
+          "spass"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«نسافر إلى برلين»؟",
+            "a": "Wir reisen nach Berlin."
+          },
+          {
+            "q": "«الفيلم ممل»؟",
+            "a": "Der Film ist langweilig."
+          }
+        ],
+        "interleavedWith": [
+          "reisen",
+          "kino"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Hobbys mit gern/lieber sagen",
+        "ar": "قول الهوايات بـ gern/lieber"
+      },
+      "situation": {
+        "de": "Freizeit planen",
+        "ar": "تخطيط وقت الفراغ"
+      },
+      "successCriteria": [
+        "3 جمل gern + جملتان lieber + جملة Spaß واحدة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«كرة القدم»؟",
+            "a": "der Fußball"
+          },
+          {
+            "q": "«أسبح بمحبة»؟",
+            "a": "Ich schwimme gern."
+          },
+          {
+            "q": "«يرقص»؟",
+            "a": "tanzen → sie tanzt."
+          },
+          {
+            "q": "«أقرأ بمحبة أكثر»؟",
+            "a": "Ich lese lieber."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«السينما»؟",
+            "a": "das Kino"
+          },
+          {
+            "q": "«هذا ممتع!»؟",
+            "a": "Das macht Spaß!"
+          },
+          {
+            "q": "«يرسم»؟",
+            "a": "zeichnen → er zeichnet."
+          },
+          {
+            "q": "«الفيلم ممل»؟",
+            "a": "Der Film ist langweilig."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«لعبة»؟",
+            "a": "das Spiel"
+          },
+          {
+            "q": "«أتمشّى»؟",
+            "a": "Ich gehe spazieren."
+          },
+          {
+            "q": "«يسافر»؟",
+            "a": "reisen → wir reisen (ist gereist)"
+          },
+          {
+            "q": "gern ↔ lieber?",
+            "a": "gern = بمحبة · lieber = بمحبة أكثر (المفضّل)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Deine Hobbys: Fußball spielen, schwimmen, tanzen, reisen, zeichnen, spazieren — und was du lieber machst, sagt „lieber“!",
+      "ar": "هواياتك: كرة القدم والسباحة والرقص والسفر والرسم والتمشّى — وما تفضّله يقوله «lieber»!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich lese mehr gern.~~ / ~~am gern~~",
+          "ar": "lieber = مقارن gern (بلا mehr)"
+        },
+        "whyArabicSpeakerFails": "«أحب أكثر» تُبنى بـ«أكثر»؛ الألماني له كلمة واحدة lieber تغني عن «mehr gern» — مقارن شاذ لكلمة واحدة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich lese lieber.",
+          "ar": "أقرأ بمحبة أكثر."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich spiele mehr gern Fußball.~~",
+          "a": "Ich spiele lieber Fußball."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich spiele den Fußball.~~",
+          "ar": "الرياضة بلا أداة (Zero Article)"
+        },
+        "whyArabicSpeakerFails": "«ألعب كرة القدم» بالـ«ال»؛ الألماني يحذف الأداة مع الألعاب والرياضات: Fußball spielen (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich spiele Fußball.",
+          "ar": "ألعب كرة القدم."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich spiele das Tennis.~~",
+          "a": "Ich spiele Tennis."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Das macht Spass.~~ (بالكتابة) / ~~Das Spass macht~~",
+          "ar": "ß تُكتب ss أحياناً + التركيب: macht Spaß"
+        },
+        "whyArabicSpeakerFails": "«هذا ممتع» بالوصف؛ الألماني بفعل: Das macht Spaß (Spaß بالـß) — مصدر شائع يُحفظ كجملة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Das macht Spaß!",
+          "ar": "هذا ممتع!"
+        },
+        "exercise": {
+          "q": "أكمل: Das ___ Spaß!",
+          "a": "macht"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "fussball",
+      "schwimmen",
+      "tanzen",
+      "reisen",
+      "zeichnen",
+      "spazieren",
+      "kino",
+      "spiel",
+      "spielen",
+      "lieber",
+      "spass",
+      "langweilig"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/lieber",
+      "https://www.duden.de/rechtschreibung/Spass",
+      "https://www.duden.de/rechtschreibung/Fussball"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/lieber"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-gern-lieber"
+  ],
+  "audioManifestRefs": [
+    "word-fussball",
+    "word-schwimmen",
+    "word-tanzen",
+    "word-reisen",
+    "word-zeichnen",
+    "word-spazieren",
+    "word-kino",
+    "word-spiel",
+    "word-spielen",
+    "word-lieber",
+    "word-spass",
+    "word-langweilig"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Freizeit & Hobbys",
+    "goetheWordListOverlap": [
+      "fussball",
+      "spielen"
+    ]
+  }
+}
