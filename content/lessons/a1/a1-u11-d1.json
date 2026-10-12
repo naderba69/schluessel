@@ -1,0 +1,307 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u11-d1",
+  "level": "A1",
+  "unit": 11,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst Teile deines Körpers nennen und sagen, wo es weh tut: Mein Kopf tut weh.",
+    "ar": "تسمي أجزاء جسمك وتخبر أين الألم"
+  },
+  "canDoDaily": [
+    "يسمي 6 أجزاء جسم ويخبر عن ألم جزئين (… tut weh)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "fuss",
+      "haar",
+      "ohr"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«يد» — أي جنس؟ ولماذا هذه الكلمة مصيدة؟"
+        },
+        "choices": [
+          "die Hand (أنثى رغم أنها ليست إنساناً)",
+          "der Hand",
+          "das Hand"
+        ],
+        "answer": "die Hand (أنثى رغم أنها ليست إنساناً)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "kopf",
+      "hand",
+      "arm",
+      "bein",
+      "ruecken",
+      "bauch",
+      "hals",
+      "auge",
+      "nase",
+      "mund",
+      "zahn",
+      "finger"
+    ],
+    "grammarArsenalIds": [
+      "ars-koerper"
+    ],
+    "storySentenceIds": [
+      "story-a11-u11-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«رأسي يؤلمني»؟",
+            "a": "Mein Kopf tut weh."
+          },
+          {
+            "q": "«الظهر»؟",
+            "a": "der Rücken"
+          }
+        ],
+        "interleavedWith": [
+          "kopf",
+          "ruecken"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«اليد» والجمع؟",
+            "a": "die Hand → die Hände"
+          },
+          {
+            "q": "«الإصبع في اليد»؟",
+            "a": "Der Finger ist an der Hand."
+          }
+        ],
+        "interleavedWith": [
+          "hand",
+          "finger"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«حلقي يؤلمني»؟",
+            "a": "Mein Hals tut weh."
+          },
+          {
+            "q": "«الفم تحت الأنف»؟",
+            "a": "Der Mund ist unter der Nase."
+          }
+        ],
+        "interleavedWith": [
+          "hals",
+          "mund"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Körperteile benennen und sagen, wo es weh tut",
+        "ar": "تسمية أجزاء الجسم وإظهار موضع الألم"
+      },
+      "situation": {
+        "de": "Beim Arzt: Wo tut es weh?",
+        "ar": "عند الطبيب: أين الألم؟"
+      },
+      "successCriteria": [
+        "تسمية 4 أجزاء + جملتا (… tut weh) + جملة موقع بحرف جر (an der Hand / unter der Nase)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الرأس»؟",
+            "a": "der Kopf"
+          },
+          {
+            "q": "«رأسي يؤلمني»؟",
+            "a": "Mein Kopf tut weh."
+          },
+          {
+            "q": "«اليد» والجمع؟",
+            "a": "die Hand → die Hände"
+          },
+          {
+            "q": "«الذراع»؟",
+            "a": "der Arm"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«البطن» والجمع؟",
+            "a": "der Bauch → die Bäuche"
+          },
+          {
+            "q": "«العين»؟",
+            "a": "das Auge (die Augen)"
+          },
+          {
+            "q": "«الأنف»؟",
+            "a": "die Nase"
+          },
+          {
+            "q": "«سني يؤلمني»؟",
+            "a": "Mein Zahn tut weh."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الساق»؟",
+            "a": "das Bein"
+          },
+          {
+            "q": "«الرقبة/الحلق»؟",
+            "a": "der Hals"
+          },
+          {
+            "q": "«الفم تحت الأنف»؟",
+            "a": "Der Mund ist unter der Nase."
+          },
+          {
+            "q": "«الإصبع»؟",
+            "a": "der Finger"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Kopf, Hand, Arm, Bein, Rücken, Bauch — und wo tut es weh? Mein Kopf tut weh, mein Rücken auch. Achtung: die Hand, das Bein, das Auge!",
+      "ar": "الرأس واليد والذراع والساق والظهر والبطن — وأين الألم؟ رأسي يؤلمني وظهري أيضاً. انتبه: die Hand وdas Bein وdas Auge!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~der Hand~~ / ~~das Auge~~ (بالخطأ) / ~~die Bein~~",
+          "ar": "جنس أجزاء الجسم عشوائي: الحفظ بالبطاقة (die Hand · das Bein · das Auge)"
+        },
+        "whyArabicSpeakerFails": "العربية بلا جنس نحوي لكل اسم؛ الألماني يفرض جنساً عشوائياً على كل جزء — die Hand أنثى وdas Bein محايد بلا سبب منطقي — الحفظ بصرياً بالبطاقة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Hand · das Bein · das Auge · der Kopf",
+          "ar": "اليد · الساق · العين · الرأس (بأجنستها)"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Hand (die/der) · ___ Bein (das/die)",
+          "a": "die / das"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Hands~~ / ~~die Kopfs~~ / ~~die Zahns~~",
+          "ar": "الجمع يُوملَأ كثيراً: Hände · Köpfe · Zähne (لا s للكلمات الألمانية الأصلية)"
+        },
+        "whyArabicSpeakerFails": "جمع التكسير العربي له مقابل ألماني منتظم: Umlaut (a→ä/u→ü) + e — «اليد» جمعها Hände وليس Hands — أصوات الوملاوت لا تُنطق بالعربية (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Hände · die Köpfe · die Zähne · die Bäuche",
+          "ar": "الأيدي · الرؤوس · الأسنان · البطون"
+        },
+        "exercise": {
+          "q": "كوّن الجمع: der Kopf → ___ · der Zahn → ___",
+          "a": "die Köpfe / die Zähne"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Mein Kopf weh tut~~ / ~~Es tut mein Kopf weh~~",
+          "ar": "التركيب الثابت: X + tut + weh (الفعل الثاني weh في النهاية!)"
+        },
+        "whyArabicSpeakerFails": "«رأسي يؤلمني» فعل واحد؛ الألماني يشطر المعنى: **tut** (مؤلم) + **weh** (ألم) مع الفاعل بينهما — weh يُقال آخر الجملة كتصريف منفصل — مصيدة القلنسوة تعود بشكل جديد (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Mein Kopf tut weh.",
+          "ar": "رأسي يؤلمني."
+        },
+        "exercise": {
+          "q": "أكمل: Mein Bauch ___ weh ___ (tut — الترتيب).",
+          "a": "Mein Bauch tut weh."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "kopf",
+      "hand",
+      "arm",
+      "bein",
+      "ruecken",
+      "bauch",
+      "hals",
+      "auge",
+      "nase",
+      "mund",
+      "zahn",
+      "finger"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Hand",
+      "https://www.duden.de/rechtschreibung/Kopf",
+      "https://www.duden.de/rechtschreibung/Auge"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Hand"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-koerper"
+  ],
+  "audioManifestRefs": [
+    "word-kopf",
+    "word-hand",
+    "word-arm",
+    "word-bein",
+    "word-ruecken",
+    "word-bauch",
+    "word-hals",
+    "word-auge",
+    "word-nase",
+    "word-mund",
+    "word-zahn",
+    "word-finger"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 11 (Gesundheit) — Körperteile benennen",
+    "goetheWordListOverlap": []
+  }
+}
