@@ -1,0 +1,284 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u10-d6",
+  "level": "A1",
+  "unit": 10,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Die Einheit 10 zusammenfassen und die Wochen-Meisterschaft bestehen (≥75%): Wetter, Termine, Perfekt, Zeitangaben, weil.",
+    "ar": "توليف الوحدة 10 واجتياز المعركة (75%+): الطقس والمواعيد والماضي والظروف وجملة السبب"
+  },
+  "canDoDaily": [
+    "يجتاز معركة الوحدة 10 بعتبة 0.75"
+  ],
+  "warmup": {
+    "cardIds": [
+      "wetter",
+      "termin",
+      "gestern"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "المعركة: «أمس اتصلت لأنني كنت مريضاً» — أين الفعلان في النهاية؟"
+        },
+        "choices": [
+          "…, weil ich krank war (war آخرها)",
+          "…, weil ich war krank",
+          "…, weil war ich krank"
+        ],
+        "answer": "…, weil ich krank war (war آخرها)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "weil",
+      "gestern"
+    ],
+    "grammarArsenalIds": [
+      "ars-wetter-es",
+      "ars-termin-datum",
+      "ars-perfekt-haben",
+      "ars-zeitangaben",
+      "ars-weil-satz"
+    ],
+    "storySentenceIds": [
+      "story-a10-u10-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«اليوم الجو بارد»؟",
+            "a": "Es ist kalt."
+          },
+          {
+            "q": "«الموعد يوم الأربعاء»؟",
+            "a": "Der Termin ist am Mittwoch."
+          }
+        ],
+        "interleavedWith": [
+          "wetter",
+          "termin"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أمس كتبت رسالة»؟",
+            "a": "Gestern habe ich einen Brief geschrieben."
+          },
+          {
+            "q": "«مؤخراً اتصلت»؟",
+            "a": "Neulich habe ich angerufen."
+          }
+        ],
+        "interleavedWith": [
+          "gestern",
+          "neulich"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أحتاج موعداً لأنني مريض»؟",
+            "a": "Ich brauche einen Termin, weil ich krank bin."
+          },
+          {
+            "q": "«فجأة أمطرت»؟",
+            "a": "Plötzlich hat es geregnet."
+          }
+        ],
+        "interleavedWith": [
+          "weil",
+          "ploetzlich"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Wochen-Meisterschaft: Wetter + Termin + Gestern + Warum",
+        "ar": "معركة الأسبوع: الطقس + الموعد + الأمس + السبب"
+      },
+      "situation": {
+        "de": "Am Telefon: Termin vereinbaren — mit Grund und Rückblick auf gestern",
+        "ar": "بالهاتف: طلب موعد — بسبب مع رجوع لماضٍ"
+      },
+      "successCriteria": [
+        "جملتا طقس (Es) + جملتا ماضٍ (Perfekt) + جملة موعد (am+Tag) + جملة weil + نسبة ≥ 75%"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«اليوم يمطر»؟",
+            "a": "Es regnet heute."
+          },
+          {
+            "q": "«يوم الثلاثاء»؟",
+            "a": "am Dienstag"
+          },
+          {
+            "q": "«أمس اتصلت»؟",
+            "a": "Gestern habe ich angerufen."
+          },
+          {
+            "q": "«لأنني مريض»؟",
+            "a": "weil ich krank bin"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الحرارة 20 درجة»؟",
+            "a": "Es sind 20 Grad."
+          },
+          {
+            "q": "«هل لديكم وقت يوم الجمعة؟»؟",
+            "a": "Haben Sie am Freitag Zeit?"
+          },
+          {
+            "q": "«كتبتُ الموعد لنفسي» (المنفصل!)؟",
+            "a": "Ich habe mir den Termin aufgeschrieben."
+          },
+          {
+            "q": "«لهذا أحتاج موعداً»؟",
+            "a": "Deshalb brauche ich einen Termin."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الجو مشمس»؟",
+            "a": "Es ist sonnig."
+          },
+          {
+            "q": "«التاريخ: 3 يونيو»؟",
+            "a": "der dritte Juni"
+          },
+          {
+            "q": "«في ذلك الحين سكنت في تونس»؟",
+            "a": "Damals habe ich in Tunesien gewohnt."
+          },
+          {
+            "q": "«الأمر عاجل»؟",
+            "a": "Es ist dringend."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheit 10: Es regnet, der Termin ist am Mittwoch, gestern habe ich angerufen — und heute brauche ich einen Termin, weil ich krank bin.",
+      "ar": "الوحدة 10: يمطر، الموعد يوم الأربعاء، أمس اتصلت — واليوم أحتاج موعداً لأنني مريض."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Regnet heute~~ / ~~Heute kalt~~",
+          "ar": "خريطة الوحدة: Es الفاعل الصوري + الفعل إجباري"
+        },
+        "whyArabicSpeakerFails": "جملتا الطقس العربيتان بلا فاعل صوري وبلا فعل أحياناً؛ الألماني يفرض **Es** + فعل مُصرَّف: Es regnet · Es ist kalt — أساس d1 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Es regnet. · Heute ist es kalt.",
+          "ar": "يمطر. · اليوم الجو بارد."
+        },
+        "exercise": {
+          "q": "أكمل: ___ sind 20 Grad. Heute ___ es warm.",
+          "a": "Es / ist"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe angerufen gestern~~ / ~~Ich habe aufgeschreiben~~",
+          "ar": "Perfekt: الظرف داخل القلنسوة + التصريف المنفصل auf-geschrieben"
+        },
+        "whyArabicSpeakerFails": "الماضي المركب ثلاث طبقات: haben ثانٍ · الظرف بينه وبين التصريف · التصريف المنفصل يُدمج بالـge الصحيحة (auf-ge-schrieben) — قمة d3/d4 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Gestern habe ich angerufen. · Ich habe aufgeschrieben.",
+          "ar": "أمس اتصلت. · كتبتُ (لديه)."
+        },
+        "exercise": {
+          "q": "أكمل: Ich habe ___ (neulich) einen Brief ___ (aufschreiben).",
+          "a": "neulich / aufgeschrieben"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~weil ich bin krank~~ / ~~Weil ich krank bin, ich brauche…~~",
+          "ar": "weil: الفعل آخرها · والبدء بها يقلب الجملة الرئيسية"
+        },
+        "whyArabicSpeakerFails": "جملة السبب الألمانية تُغلق بفعلها (… krank **bin**) وإذا فُتحت بها الجملة يقلب ما بعدها (**brauche** ich) — تتويج القلنسوة بالوحدة 10 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "…, weil ich krank bin. · Weil ich krank bin, brauche ich einen Termin.",
+          "ar": "… لأنني مريض. · لأنني مريض، أحتاج موعداً."
+        },
+        "exercise": {
+          "q": "رتّب: weil ich krank bin · brauche · ich · einen Termin",
+          "a": "Weil ich krank bin, brauche ich einen Termin."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "weil",
+      "gestern"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/weil",
+      "https://www.duden.de/rechtschreibung/gestern"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/weil"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-wetter-es",
+    "ars-termin-datum",
+    "ars-perfekt-haben",
+    "ars-zeitangaben",
+    "ars-weil-satz"
+  ],
+  "audioManifestRefs": [
+    "word-weil",
+    "word-gestern"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Wochen-Meisterschaft",
+    "goetheWordListOverlap": []
+  }
+}
