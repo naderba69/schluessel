@@ -351,3 +351,9 @@
 - **u10-d1** (12 كلمة Wetter — ميزان الوحدة 60 = 12×5): Wetter · Sonne · Regen · Schnee · Wind · Wolke · Himmel · Grad · warm · kalt · nass · sonnig (-ig). مراجعة: heiss/morgen.
 - **القاعدة**: **Es الفاعل الصوري** — Es regnet · Es ist kalt · Es sind 20 Grad. مصائد: حذف Es («Regnet heute») · حذف الفعل («Heute kalt») · «Es ist regnet» (خلط التركيبين).
 - البوابة: **243/243 + tsc + validator (633/0/0) + build** ✓. **574 كلمة · 55 درساً · 575 مساراً.**
+
+## D75 (2026-10-12): u10-d2 (المواعيد والتواريخ)
+
+- **u10-d2** (12 كلمة — Termine/Monate): Kalender (Gleich_plural) · Datum (**Daten**) · Dienstag/Mittwoch/Donnerstag/Freitag/Samstag (أيام der — **am** = an+dem) · Einladung · Absage · frei · besetzt · Wochenende (**Wochenenden**). مراجعة: termin/reservieren/monat.
+- **القواعد**: **am + Wochentag** (دائماً Dativ مندمج) · **التاريخ: der zwölfte Mai** (المقال + ordinal + الشهر) · القلنسوة تتكرر: Am Montag **habe ich** Zeit.
+- البوابة: **243/243 + tsc + validator (646/0/0) + build** ✓. **586 كلمة · 56 درساً · 587 مساراً.**

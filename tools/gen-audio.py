@@ -651,6 +651,18 @@ def build_all() -> None:
     ("word-kalt", "kalt.", "kalt", ["a1-u10-d1"]),
     ("word-nass", "nass.", "nass", ["a1-u10-d1"]),
     ("word-sonnig", "sonnig.", "sonnig", ["a1-u10-d1"]),
+    ("word-kalender", "der Kalender.", "kalender", ["a1-u10-d2"]),
+    ("word-datum", "das Datum.", "datum", ["a1-u10-d2"]),
+    ("word-dienstag", "der Dienstag.", "dienstag", ["a1-u10-d2"]),
+    ("word-mittwoch", "der Mittwoch.", "mittwoch", ["a1-u10-d2"]),
+    ("word-donnerstag", "der Donnerstag.", "donnerstag", ["a1-u10-d2"]),
+    ("word-freitag", "der Freitag.", "freitag", ["a1-u10-d2"]),
+    ("word-samstag", "der Samstag.", "samstag", ["a1-u10-d2"]),
+    ("word-einladung", "die Einladung.", "einladung", ["a1-u10-d2"]),
+    ("word-absage", "die Absage.", "absage", ["a1-u10-d2"]),
+    ("word-frei", "frei.", "frei", ["a1-u10-d2"]),
+    ("word-besetzt", "besetzt.", "besetzt", ["a1-u10-d2"]),
+    ("word-wochenende", "das Wochenende.", "wochenende", ["a1-u10-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

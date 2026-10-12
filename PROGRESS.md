@@ -256,3 +256,7 @@
 - **u10-d1** (12 كلمة Wetter): Wetter/Sonne/Regen/Schnee/Wind/Wolke/Himmel/Grad + warm/kalt/nass/sonnig. القاعدة: **Es الفاعل الصوري** (Es regnet · Es ist kalt).
 - **تصحيح مسار**: الوحدة 10 = **المواعيد والطقس** (60 كلمة) — الصحة هي الوحدة 11.
 - **574 كلمة · 55 درساً · 575 مساراً** · **243/243 أخضر** + tsc + validator (633/0/0) + build ✓. (D74) التالي: u10-d2 (Termine/Monate).
+
+## حملة المحتوى — الدفعة 31 (2026-10-12) — u10-d2 المواعيد (D75)
+- **u10-d2** (12 كلمة): Kalender/Datum + أيام (Dienstag…Samstag) + Einladung/Absage/frei/besetzt/Wochenende. القواعد: **am+Tag** · **der zwölfte Mai** · القلنسوة.
+- **586 كلمة · 56 درساً · 587 مساراً** · **243/243 أخضر** + tsc + validator (646/0/0) + build ✓. (D75) التالي: u10-d3 (**Perfekt haben — أول الماضي!**).

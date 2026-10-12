@@ -1,0 +1,307 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u10-d2",
+  "level": "A1",
+  "unit": 10,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst ein Datum nennen und einen Termin vereinbaren: Am Dienstag, den zwölften Mai — Haben Sie Zeit?",
+    "ar": "تذكر التاريخ وتطلب موعداً: يوم الثلاثاء 12 مايو — هل لديكم وقت؟"
+  },
+  "canDoDaily": [
+    "يذكر يوماً وتاريخاً ويعرض أو يطلب موعداً بجملتين صحيحتين"
+  ],
+  "warmup": {
+    "cardIds": [
+      "termin",
+      "reservieren",
+      "montag"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«يوم الثلاثاء» — أي صيغة صحيحة؟"
+        },
+        "choices": [
+          "am Dienstag",
+          "an Dienstag",
+          "in Dienstag"
+        ],
+        "answer": "am Dienstag",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "kalender",
+      "datum",
+      "dienstag",
+      "mittwoch",
+      "donnerstag",
+      "freitag",
+      "samstag",
+      "einladung",
+      "absage",
+      "frei",
+      "besetzt",
+      "wochenende"
+    ],
+    "grammarArsenalIds": [
+      "ars-termin-datum"
+    ],
+    "storySentenceIds": [
+      "story-a10-u10-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«يوم الثلاثاء عندي وقت»؟",
+            "a": "Am Dienstag habe ich Zeit."
+          },
+          {
+            "q": "«الموعد يوم الأربعاء»؟",
+            "a": "Der Termin ist am Mittwoch."
+          }
+        ],
+        "interleavedWith": [
+          "dienstag",
+          "mittwoch"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هل لديكم وقت يوم الجمعة؟»؟",
+            "a": "Haben Sie am Freitag Zeit?"
+          },
+          {
+            "q": "«الموعد مشغول»؟",
+            "a": "Der Termin ist besetzt."
+          }
+        ],
+        "interleavedWith": [
+          "freitag",
+          "besetzt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«شكراً على الدعوة!»؟",
+            "a": "Danke für die Einladung!"
+          },
+          {
+            "q": "«في عطلة نهاية الأسبوع أنا متفرغ»؟",
+            "a": "Am Wochenende bin ich frei."
+          }
+        ],
+        "interleavedWith": [
+          "einladung",
+          "wochenende"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Einen Termin vereinbaren: Tag + Datum + Zeit",
+        "ar": "ترتيب موعد: يوم + تاريخ + وقت"
+      },
+      "situation": {
+        "de": "Am Telefon: einen Termin für nächste Woche vereinbaren",
+        "ar": "بالهاتف: ترتيب موعد للأسبوع القادم"
+      },
+      "successCriteria": [
+        "عرض موعد (am + Tag) + سؤال Haben Sie Zeit? + رد بالإيجاب أو الإلغاء (frei/besetzt/Absage)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يوم الثلاثاء»؟",
+            "a": "am Dienstag"
+          },
+          {
+            "q": "«التاريخ»؟",
+            "a": "das Datum"
+          },
+          {
+            "q": "«هل لديكم وقت يوم الجمعة؟»؟",
+            "a": "Haben Sie am Freitag Zeit?"
+          },
+          {
+            "q": "«متفرغ» و«مشغول»؟",
+            "a": "frei / besetzt"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الأربعاء» و«الخميس»؟",
+            "a": "der Mittwoch / der Donnerstag"
+          },
+          {
+            "q": "«تقويم»؟",
+            "a": "der Kalender"
+          },
+          {
+            "q": "«شكراً على الدعوة!»؟",
+            "a": "Danke für die Einladung!"
+          },
+          {
+            "q": "«عطلة نهاية الأسبوع»؟",
+            "a": "das Wochenende"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الموعد يوم الأربعاء»؟",
+            "a": "Der Termin ist am Mittwoch."
+          },
+          {
+            "q": "«السبت»؟",
+            "a": "der Samstag"
+          },
+          {
+            "q": "«إلغاء»؟",
+            "a": "die Absage"
+          },
+          {
+            "q": "«يوم الجمعة أنا حر»؟",
+            "a": "Am Freitag bin ich frei."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Am Dienstag, den zwölften Mai: Haben Sie Zeit? — Der Termin ist frei oder besetzt, und am Wochenende bin ich frei.",
+      "ar": "يوم الثلاثاء 12 مايو: هل لديكم وقت؟ — الموعد متفرغ أو مشغول، وفي عطلة نهاية الأسبوع أنا حر."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~an Dienstag~~ / ~~in Dienstag~~ / ~~an dem Dienstag~~ (دائماً)",
+          "ar": "am = an + dem — أيام الأسبوع دائماً am (Dativ)"
+        },
+        "whyArabicSpeakerFails": "«يوم الثلاثاء» بلا حرف جر عند العربي؛ الألماني يندمج: **am** Dienstag (an+dem) — لا يُقال an Dienstag ولا in Dienstag إطلاقاً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "am Dienstag · am Montag · am Wochenende",
+          "ar": "يوم الثلاثاء · يوم الاثنين · في العطلة"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Freitag habe ich Zeit.",
+          "a": "Am"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~zwölf Mai~~ / ~~der Mai zwölf~~",
+          "ar": "التاريخ: der + الترتيب + اسم الشهر (der zwölfte Mai)"
+        },
+        "whyArabicSpeakerFails": "«12 مايو» بالمفرد وبالعكس؛ الألماني يرتّب: **der zwölfte Mai** (المقال + ordinal + الشهر) — والتاء في «der zwölfte» ضرورية (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der zwölfte Mai",
+          "ar": "الثاني عشر من مايو"
+        },
+        "exercise": {
+          "q": "أعرب: 3 يونيو =",
+          "a": "der dritte Juni"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Am Montag ich habe Zeit~~",
+          "ar": "القلنسوة تتكرر: بعد am Montag يقلب الترتيب (habe ich)"
+        },
+        "whyArabicSpeakerFails": "مصيدة u9-d5 تتكرر مع المواعيد: كل مقدمة زمنية (am Montag · morgen · um 8) تدفع الفعل للموضع الثاني والفاعل يعود بعده — تثبيت القلنسوة بالسياق الجديد (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Am Montag habe ich Zeit.",
+          "ar": "يوم الاثنين عندي وقت."
+        },
+        "exercise": {
+          "q": "رتّب: am Freitag · bin · ich · frei",
+          "a": "Am Freitag bin ich frei."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "kalender",
+      "datum",
+      "dienstag",
+      "mittwoch",
+      "donnerstag",
+      "freitag",
+      "samstag",
+      "einladung",
+      "absage",
+      "frei",
+      "besetzt",
+      "wochenende"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Dienstag",
+      "https://www.duden.de/rechtschreibung/Termin",
+      "https://www.duden.de/rechtschreibung/Wochenende"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Dienstag"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-termin-datum"
+  ],
+  "audioManifestRefs": [
+    "word-kalender",
+    "word-datum",
+    "word-dienstag",
+    "word-mittwoch",
+    "word-donnerstag",
+    "word-freitag",
+    "word-samstag",
+    "word-einladung",
+    "word-absage",
+    "word-frei",
+    "word-besetzt",
+    "word-wochenende"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Einen Termin vereinbaren",
+    "goetheWordListOverlap": []
+  }
+}
