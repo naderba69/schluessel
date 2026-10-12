@@ -1,0 +1,307 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u10-d1",
+  "level": "A1",
+  "unit": 10,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst das Wetter beschreiben: Es regnet, Es ist kalt, Die Sonne scheint — und die Temperatur sagen.",
+    "ar": "تصف الطقس بجمل Es الصحيحة وتخبر عن الحرارة"
+  },
+  "canDoDaily": [
+    "يصف طقس اليوم بجملتين Es + درجة حرارة واحدة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "heiss",
+      "morgen",
+      "uhr"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«اليوم يمطر» — أين الفعل والفاعل الحقيقي؟"
+        },
+        "choices": [
+          "Es regnet heute (Es = فاعل صوري)",
+          "Heute regnet (بلا فاعل)",
+          "Heute es regnet"
+        ],
+        "answer": "Es regnet heute (Es = فاعل صوري)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "wetter",
+      "sonne",
+      "regen",
+      "schnee",
+      "wind",
+      "wolke",
+      "himmel",
+      "grad",
+      "warm",
+      "kalt",
+      "nass",
+      "sonnig"
+    ],
+    "grammarArsenalIds": [
+      "ars-wetter-es"
+    ],
+    "storySentenceIds": [
+      "story-a10-u10-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«اليوم يمطر»؟",
+            "a": "Es regnet heute."
+          },
+          {
+            "q": "«الشمس مشرقة»؟",
+            "a": "Die Sonne scheint."
+          }
+        ],
+        "interleavedWith": [
+          "regen",
+          "sonne"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الجو دافئ» و«الجو بارد»؟",
+            "a": "Es ist warm. / Es ist kalt."
+          },
+          {
+            "q": "«الحرارة 20 درجة»؟",
+            "a": "Es sind 20 Grad."
+          }
+        ],
+        "interleavedWith": [
+          "warm",
+          "grad"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«السماء زرقاء وهناك سحب»؟",
+            "a": "Der Himmel ist blau. Dort sind Wolken."
+          },
+          {
+            "q": "«الشارع مبلل»؟",
+            "a": "Die Straße ist nass."
+          }
+        ],
+        "interleavedWith": [
+          "himmel",
+          "nass"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Das Wetter heute und morgen beschreiben",
+        "ar": "وصف طقس اليوم والغد"
+      },
+      "situation": {
+        "de": "Am Morgen: Wie ist das Wetter heute?",
+        "ar": "صباحاً: كيف الطقس اليوم؟"
+      },
+      "successCriteria": [
+        "جملتان Es (فعل أو sein+صفة) + درجة حرارة + كلمة وقت واحدة (heute/morgen)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الطقس»؟",
+            "a": "das Wetter"
+          },
+          {
+            "q": "«اليوم يمطر»؟",
+            "a": "Es regnet heute."
+          },
+          {
+            "q": "«الجو مشمس»؟",
+            "a": "Es ist sonnig."
+          },
+          {
+            "q": "«الحرارة 20 درجة»؟",
+            "a": "Es sind 20 Grad."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الشمس» و«السماء»؟",
+            "a": "die Sonne / der Himmel"
+          },
+          {
+            "q": "«في الشتاء يثلج»؟",
+            "a": "Im Winter schneit es."
+          },
+          {
+            "q": "«الرياح قوية»؟",
+            "a": "Der Wind ist stark."
+          },
+          {
+            "q": "«الشارع مبلل»؟",
+            "a": "Die Straße ist nass."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المطر» و«الثلج»؟",
+            "a": "der Regen / der Schnee"
+          },
+          {
+            "q": "«الجو دافئ اليوم»؟",
+            "a": "Heute ist es warm."
+          },
+          {
+            "q": "«الجو بارد»؟",
+            "a": "Es ist kalt."
+          },
+          {
+            "q": "«سحابة/سحب»؟",
+            "a": "die Wolke / die Wolken"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Wie ist das Wetter? — Es regnet, Es ist kalt, Die Sonne scheint, und es sind 20 Grad. Immer mit Es an der Spitze!",
+      "ar": "كيف الطقس؟ — يمطر، الجو بارد، الشمس مشرقة، والحرارة 20 درجة. دائماً بـ Es في المقدمة!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Regnet heute~~ / ~~Wetter ist kalt~~",
+          "ar": "Es الفاعل الصوري: لا جملة طقس بلا Es"
+        },
+        "whyArabicSpeakerFails": "العربية تكتفي بـ«تمطر» أو «الجو بارد» بلا فاعل صوري؛ الألماني يفرض Es دائماً مع طقس وبلا معنى: **Es** regnet · **Es** ist kalt — الفاعل الصوري غير قابل للحذف (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Es regnet. · Es ist kalt.",
+          "ar": "يمطر. · الجو بارد."
+        },
+        "exercise": {
+          "q": "أكمل: ___ regnet. ___ ist warm.",
+          "a": "Es / Es"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Heute kalt~~ / ~~Warme Tag~~",
+          "ar": "الجملة الألمانية تحتاج فعلاً: ist/scheint/regnet"
+        },
+        "whyArabicSpeakerFails": "«اليوم بارد» جملة اسمية بلا فعل؛ الألماني يكمل بـ ist/سند: Heute **ist es** kalt — كل جملة ألمانية لها فعل مُصرَّف في موضعه (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Heute ist es kalt.",
+          "ar": "اليوم الجو بارد."
+        },
+        "exercise": {
+          "q": "أكمل: Heute ___ es sonnig.",
+          "a": "ist"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Es ist regnet~~ / ~~Es scheint die Sonne ist~~",
+          "ar": "الطقس: إما فعل (regnet) أو sein+صفة (ist kalt) — لا معاً"
+        },
+        "whyArabicSpeakerFails": "الخلط بين التركيبين: «تمطر» فعل خالص و«الجو بارد» وصف؛ الألماني يمنع الجمع: Es **regnet** (بلا ist) · Es **ist** kalt (بلا regnet) — سبب الخطأ ترجمة «الجو ممطر» حرفياً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Es regnet. · Es ist nass.",
+          "ar": "يمطر. · الجو مبلل."
+        },
+        "exercise": {
+          "q": "صحّح: Es ist regnet heute.",
+          "a": "Es regnet heute."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "wetter",
+      "sonne",
+      "regen",
+      "schnee",
+      "wind",
+      "wolke",
+      "himmel",
+      "grad",
+      "warm",
+      "kalt",
+      "nass",
+      "sonnig"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Wetter",
+      "https://www.duden.de/rechtschreibung/regnen",
+      "https://www.duden.de/rechtschreibung/Sonne"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/regnen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-wetter-es"
+  ],
+  "audioManifestRefs": [
+    "word-wetter",
+    "word-sonne",
+    "word-regen",
+    "word-schnee",
+    "word-wind",
+    "word-wolke",
+    "word-himmel",
+    "word-grad",
+    "word-warm",
+    "word-kalt",
+    "word-nass",
+    "word-sonnig"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Das Wetter heute",
+    "goetheWordListOverlap": []
+  }
+}
