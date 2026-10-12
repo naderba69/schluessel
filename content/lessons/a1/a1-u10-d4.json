@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u10-d4",
+  "level": "A1",
+  "unit": 10,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst eine nahe Vergangenheit mit Zeitangaben erzählen: Neulich habe ich angerufen und den Termin vereinbart.",
+    "ar": "تحكي ماضياً قريباً بزمن محدد: مؤخراً اتصلتُ واتفقتُ على الموعد"
+  },
+  "canDoDaily": [
+    "يحكي ماضياً بظرف زمني في المقدمة + Perfekt (الظروف داخل القلنسوة أو في مقدمتها)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "anrufen",
+      "telefonieren",
+      "termin"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«اتصلت مؤخراً» — أين يذهب neulich داخل جملة Perfekt؟"
+        },
+        "choices": [
+          "Ich habe neulich angerufen (بين haben والتصريف)",
+          "Ich habe angerufen neulich (بعد التصريف)",
+          "Neulich angerufen habe ich"
+        ],
+        "answer": "Ich habe neulich angerufen (بين haben والتصريف)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "neulich",
+      "damals",
+      "vorher",
+      "nachher",
+      "endlich",
+      "ploetzlich",
+      "vereinbaren",
+      "aufschreiben",
+      "erinnerung",
+      "notiz",
+      "richtig",
+      "falsch"
+    ],
+    "grammarArsenalIds": [
+      "ars-perfekt-haben",
+      "ars-zeitangaben"
+    ],
+    "storySentenceIds": [
+      "story-a10-u10-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«قبل ذلك اتصلت»؟",
+            "a": "Vorher habe ich angerufen."
+          },
+          {
+            "q": "«بعد ذلك شربت قهوة»؟",
+            "a": "Nachher habe ich einen Kaffee getrunken."
+          }
+        ],
+        "interleavedWith": [
+          "vorher",
+          "nachher"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«اتفقتُ على موعد»؟",
+            "a": "Ich habe einen Termin vereinbart."
+          },
+          {
+            "q": "«كتبتُ الموعد لنفسي» (المنفصل!)؟",
+            "a": "Ich habe mir den Termin aufgeschrieben."
+          }
+        ],
+        "interleavedWith": [
+          "vereinbaren",
+          "aufschreiben"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«فجأة أمطرت»؟",
+            "a": "Plötzlich hat es geregnet."
+          },
+          {
+            "q": "«هذا صحيح وهذا خاطئ»؟",
+            "a": "Das ist richtig. Das ist falsch."
+          }
+        ],
+        "interleavedWith": [
+          "ploetzlich",
+          "richtig"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die letzten Tage erzählen: Zeit + Perfekt",
+        "ar": "حكي الأيام الماضية: زمن + ماضٍ مركب"
+      },
+      "situation": {
+        "de": "Am Telefon: den Termin für nächste Woche vereinbaren",
+        "ar": "بالهاتف: الاتفاق على موعد للأسبوع القادم"
+      },
+      "successCriteria": [
+        "3 جمل Perfekt بظروف مختلفة (neulich/vorher/nachher/damals) + جملة اتفاق موعد + إشعار صحيح/خاطئ"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«مؤخراً» و«في ذلك الحين»؟",
+            "a": "neulich / damals"
+          },
+          {
+            "q": "«قبل ذلك اتصلت»؟",
+            "a": "Vorher habe ich angerufen."
+          },
+          {
+            "q": "«اتفقتُ على موعد»؟",
+            "a": "Ich habe einen Termin vereinbart."
+          },
+          {
+            "q": "«صحيح» و«خاطئ»؟",
+            "a": "richtig / falsch"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أخيراً عندي وقت!»؟",
+            "a": "Endlich habe ich Zeit!"
+          },
+          {
+            "q": "«فجأة أمطرت»؟",
+            "a": "Plötzlich hat es geregnet."
+          },
+          {
+            "q": "«تذكير»؟",
+            "a": "die Erinnerung"
+          },
+          {
+            "q": "«كتبتُ ملاحظة»؟",
+            "a": "Ich habe eine Notiz gemacht."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«كتبتُ الموعد لنفسي» (المنفصل — ge في الوسط!)؟",
+            "a": "Ich habe mir den Termin aufgeschrieben."
+          },
+          {
+            "q": "«بعد ذلك»؟",
+            "a": "nachher"
+          },
+          {
+            "q": "«في ذلك الحين سكنت في تونس»؟",
+            "a": "Damals habe ich in Tunesien gewohnt."
+          },
+          {
+            "q": "«ملاحظة»؟",
+            "a": "die Notiz"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Neulich, vorher, nachher, damals — und dann: Ich habe angerufen, den Termin vereinbart und mir eine Notiz aufgeschrieben. Plötzlich war alles richtig!",
+      "ar": "مؤخراً، قبل ذلك، بعد ذلك، في ذلك الحين — ثم: اتصلت، واتفقت على الموعد، وكتبت ملاحظة لنفسي. فجأة كان كل شيء صحيحاً!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich habe angerufen neulich~~",
+          "ar": "ظرف الزمن داخل القلنسوة: بين haben والتصريف — أو في مقدمة الجملة"
+        },
+        "whyArabicSpeakerFails": "العربية تُلحق الظرف آخر الجملة عادةً؛ الألماني يحبسه داخل القلنسوة: habe **neulich** angerufen — أو يرفعه للمقدمة مع القلب (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe neulich angerufen. · Neulich habe ich angerufen.",
+          "ar": "اتصلت مؤخراً. · مؤخراً اتصلت."
+        },
+        "exercise": {
+          "q": "أكمل: Ich habe ___ (damals) in Tunesien gewohnt.",
+          "a": "damals"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe aufgeschreiben~~ / ~~Ich habe geschriebenauf~~",
+          "ar": "المنفصل في الماضي: البادئة + ge + الجذر + t/en (auf-geschrieben)"
+        },
+        "whyArabicSpeakerFails": "التصريف المنفصل يُدمج لكن ge يدخل بين البادئة والجذر: **auf-geschrieben** — لا على يسار البادئة ولا ملتصقاً بالجذر — مصيدة d2/d3 تتعمق (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "aufgeschrieben · angerufen · aufgeräumt",
+          "ar": "كتب (لديه) · اتصل · رتّب (تصريفات منفصلة)"
+        },
+        "exercise": {
+          "q": "كوّن التصريف: aufschreiben → ___ · anrufen → ___",
+          "a": "aufgeschrieben / angerufen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Das ist richtig Buch~~ / ~~eine falsch Antwort~~",
+          "ar": "الصفة قبل الاسم: اقتران (der/die/das أو ein/eine) + النهاية الصحيحة"
+        },
+        "whyArabicSpeakerFails": "العربية تُطلق الصفة غالباً؛ الألماني يربطها: das **richtige** Buch · eine **falsche** Antwort — نهاية الصفة تتغير مع المقال (خريطة التداخل 10‑ي) — مقدمة adjective-decl للمستوى التالي",
+        "correct": {
+          "de": "das ist richtig · die richtige Antwort",
+          "ar": "هذا صحيح · الإجابة الصحيحة"
+        },
+        "exercise": {
+          "q": "أكمل: Das ist ein ___ (richtig) Termin.",
+          "a": "richtiger"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "neulich",
+      "damals",
+      "vorher",
+      "nachher",
+      "endlich",
+      "ploetzlich",
+      "vereinbaren",
+      "aufschreiben",
+      "erinnerung",
+      "notiz",
+      "richtig",
+      "falsch"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/vereinbaren",
+      "https://www.duden.de/rechtschreibung/aufschreiben",
+      "https://www.duden.de/rechtschreibung/pl%C3%B6tzlich"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/vereinbaren"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-perfekt-haben",
+    "ars-zeitangaben"
+  ],
+  "audioManifestRefs": [
+    "word-neulich",
+    "word-damals",
+    "word-vorher",
+    "word-nachher",
+    "word-endlich",
+    "word-ploetzlich",
+    "word-vereinbaren",
+    "word-aufschreiben",
+    "word-erinnerung",
+    "word-notiz",
+    "word-richtig",
+    "word-falsch"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Erzähl die letzten Tage (Perfekt + Zeitangaben)",
+    "goetheWordListOverlap": []
+  }
+}

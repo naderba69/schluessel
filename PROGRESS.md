@@ -264,3 +264,7 @@
 ## حملة المحتوى — الدفعة 32 (2026-10-12) — u10-d3 الماضي Perfekt (D76)
 - **u10-d3** (12 كلمة): gestern/vorgestern/letzt + bringen/holen/lernen/sagen/fragen/denken (haben-Perfekt) + Brief/Paket/Spaziergang. القاعدة: **habe … geschrieben** (التصريف آخر الجملة).
 - **598 كلمة · 57 درساً · 599 مساراً** · **243/243 أخضر** + tsc + validator (659/0/0) + build ✓. (D76) التالي: u10-d4 (Perfekt + Zeitangaben).
+
+## حملة المحتوى — الدفعة 33 (2026-10-12) — u10-d4 الماضي بالزمن (D77)
+- **u10-d4** (12 كلمة): neulich/damals/vorher/nachher/endlich/plötzlich + vereinbaren/aufschreiben (auf-geschrieben!) + Erinnerung/Notiz/richtig/falsch.
+- **610 كلمة · 58 درساً · 611 مساراً** · **243/243 أخضر** + tsc + validator (672/0/0) + build ✓. (D77) التالي: u10-d5 (**أول weil — تفسير السبب**).

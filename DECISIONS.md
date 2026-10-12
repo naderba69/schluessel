@@ -364,3 +364,10 @@
 - **القاعدة**: **Perfekt = haben (موضع 2) + التصريف الثالث آخر الجملة** — قلنسوة u9 تتضخم: Gestern **habe** ich einen Brief **geschrieben**. التصريف: ge-+جذر+t (gemacht) أو جذور قوية تُحفظ (gebracht/gedacht).
 - مصائد d3: مكان التصريف (Endstellung) · بناء التصريف · القلب بعد gestern.
 - البوابة: **243/243 + tsc + validator (659/0/0) + build** ✓. **598 كلمة · 57 درساً · 599 مساراً.**
+
+## D77 (2026-10-12): u10-d4 (الماضي بزمن محدد — Zeitangaben + التصريف المنفصل)
+
+- **u10-d4** (12 كلمة): neulich · damals · vorher · nachher · endlich · plötzlich (Umlaut) + **vereinbaren** · **aufschreiben (منفصل: hat auf-geschrieben!)** + Erinnerung · Notiz · richtig · falsch. مراجعة: anrufen/telefonieren/termin.
+- **قواعد**: الظرف داخل القلنسوة (habe **neulich** angerufen) أو مقدَّماً مع القلب · **التصريف المنفصل: auf-geschrieben** (ge بين البادئة والجذر!) · مقدمة adjective-decl (das richtige Buch).
+- مصائد d4: مكان الظرف بعد التصريف · بناء التصريف المنفصل · اقتران الصفة.
+- البوابة: **243/243 + tsc + validator (672/0/0) + build** ✓. **610 كلمة · 58 درساً · 611 مساراً.**
