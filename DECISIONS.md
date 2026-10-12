@@ -296,3 +296,15 @@
 - **u8-d5** (17 كلمة — 49–65): von/seit/bei/verhandeln/Quittung/Umtausch/Schmuck/Ring/Kette/Stiefel/Mode/Tüte/Geschenk/sparen/Sonnenbrille/Bäckerei/Schalter. مصائد: **von ↔ aus** (انتماء ↔ منشأ) · **seit + Dativ** (منذ — للحاضر) · **beim/zum/vom** (اندماجات). مهمة: **شراء وتفاوض في المتجر**.
 - **u8-d6** (integration — بلا كلمات): معركة 0.75 + 3 بطاقات ختامية (الداتيف والاندماجات · الأفعال الناقمة · Was kostet + ver-/kaufen).
 - البوابة: **243/243 + tsc + validator (551 ملفاً/0/0) + build** ✓. **الوحدات 1–8 مكتملة = 499 كلمة · 48 درساً · 500 مساراً.**
+
+## D68 (2026-10-12): u9-d1 (أماكن المدينة والاتجاهات) — ودروس قاسية في المخططات والبيئة
+
+- **u9-d1** (18 كلمة: 16 جديدة + hier/dort مكررتان من u2-d1 بإعادة بناء مقصودة): Kirche · Krankenhaus (جمع **Krankenhäuser**) · Apotheke · Universität · Bank · Post (بلا جمع) · Park · Museum (Museen) · Platz (Plätze) · Norden/Süden/Osten/Westen · **gegenüber + Dativ** (المصيدة) · hier/dort · geradeaus · zurück. المهمة: السؤال عن الأماكن ووصف الطريق.
+- **الدروس الحرجة (دروس جلسة صعبة — مرجع دائم)**:
+  1. مخطط الكلمة الحقيقي في `content/schemas/word.ts`: `wordClass` (enum مغلق) + `gender` ∈ [der/die/das/none] + `thema` + `level` + `unit` + `ar` **مصفوفة** + `plural` بالمقال + `sampleSentence` + `srsCardTypes`. لا `pos` ولا `gloss` ولا `lemma`.
+  2. مخطط الدرس في `content/schemas/`: ziel/canDoDaily/warmup.cardIds/einstieg/praesentation(wordIds)/uebung.stations+communicativeTask/slider/**quiz.variants ≥ 3**/zusammenfassung.warningCards **3**/gReferences/curriculumRef/audioManifestRefs. الدرس = 120 دقيقة.
+  3. `gen-audio.py` يعيد بناء **كل** الصوت في كل تشغيل (**16 دقيقة**) — للإضافات المفردة استخدم `one` ثم حدِّث المانيفست يدوياً. تحقّق من **تكرار** tuples (hier/dort كرّرت مرتين).
+  4. **فحص التصادمات يشمل الكلمات القصيرة الشائعة** (hier/dort) — استعلامي لم يشملها فأُعيدت كتابتهما ثم استُعيدتا من git.
+  5. الـgit reset يتكرر و**refs الريموت تختفي أحياناً**: `git fetch origin arena/...` يعيد خلقها ← `reset --soft` ← commit+push.
+  6. `pkill -f` يقتل أمر الـbash نفسه — استخدم `pkill -f "gen-audi[o].py"`.
+- البوابة: **243/243 + tsc + validator (568/0/0) + build** ✓. **الوحدات 1–9 قيد الإتمام: 515 كلمة · 49 درساً · 516 مساراً.**

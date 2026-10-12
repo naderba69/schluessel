@@ -1,0 +1,327 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d1",
+  "level": "A1",
+  "unit": 9,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst nach Orten in der Stadt fragen und den Weg beschreiben (gegenüber + Dativ, im Norden / nach Norden).",
+    "ar": "تسأل عن الأماكن في المدينة وتصف الطريق بجمل موقع صحيحة"
+  },
+  "canDoDaily": [
+    "يسأل عن مكان ويجيب بجملة موقع واحدة صحيحة (Wo ist …? — … ist gegenüber/an/neben …)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "stadt",
+      "strasse",
+      "wo"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«المتحف مقابل الكنيسة» — gegenüber مع أي إعراب؟"
+        },
+        "choices": [
+          "gegenüber der Kirche (Dativ)",
+          "gegenüber die Kirche (Akkusativ)",
+          "gegenüber den Kirche"
+        ],
+        "answer": "gegenüber der Kirche (Dativ)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "kirche",
+      "krankenhaus",
+      "apotheke",
+      "universitaet",
+      "bank",
+      "post",
+      "park",
+      "museum",
+      "platz",
+      "nord",
+      "sued",
+      "ost",
+      "west",
+      "gegenueber",
+      "hier",
+      "dort",
+      "geradeaus",
+      "zurueck"
+    ],
+    "grammarArsenalIds": [
+      "ars-stadt-ort",
+      "ars-dativ-fix"
+    ],
+    "storySentenceIds": [
+      "story-a9-u9-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أين الصيدلية؟»؟",
+            "a": "Wo ist die Apotheke?"
+          },
+          {
+            "q": "«المتحف مقابل الكنيسة»؟",
+            "a": "Das Museum ist gegenüber der Kirche."
+          }
+        ],
+        "interleavedWith": [
+          "apotheke",
+          "gegenueber"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«في الشمال» و«إلى الشمال»؟",
+            "a": "im Norden / nach Norden"
+          },
+          {
+            "q": "«المستشفى في الشرق»؟",
+            "a": "Das Krankenhaus ist im Osten."
+          }
+        ],
+        "interleavedWith": [
+          "nord",
+          "ost"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«إلى الأمام مباشرة ثم يميناً!»؟",
+            "a": "Geradeaus, dann rechts!"
+          },
+          {
+            "q": "«عُد إلى الكنيسة!»؟",
+            "a": "Gehen Sie zurück zur Kirche!"
+          }
+        ],
+        "interleavedWith": [
+          "geradeaus",
+          "zurueck"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Nach dem Weg fragen und ihn beschreiben",
+        "ar": "السؤال عن الطريق ووصفه"
+      },
+      "situation": {
+        "de": "In der Stadt: nach der Apotheke fragen",
+        "ar": "في المدينة: السؤال عن الصيدلية"
+      },
+      "successCriteria": [
+        "سؤالان Wo ist …? + ثلاث جمل موقع (gegenüber/an/im) + اتجاه واحد (im/nach)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«كنيسة»؟",
+            "a": "die Kirche"
+          },
+          {
+            "q": "«مقابل المتحف»؟",
+            "a": "gegenüber dem Museum"
+          },
+          {
+            "q": "«صيدلية»؟",
+            "a": "die Apotheke"
+          },
+          {
+            "q": "«في الجنوب»؟",
+            "a": "im Süden"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«مستشفى»؟",
+            "a": "das Krankenhaus"
+          },
+          {
+            "q": "«إلى الغرب»؟",
+            "a": "nach Westen"
+          },
+          {
+            "q": "«الساحة أمام الكنيسة»؟",
+            "a": "Der Platz ist vor der Kirche."
+          },
+          {
+            "q": "«هنا» و«هناك»؟",
+            "a": "hier / dort"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«جامعة»؟",
+            "a": "die Universität"
+          },
+          {
+            "q": "«البنك عند الزاوية»؟",
+            "a": "Die Bank ist an der Ecke."
+          },
+          {
+            "q": "«البريد»؟",
+            "a": "die Post"
+          },
+          {
+            "q": "«أين المتحف؟»؟",
+            "a": "Wo ist das Museum?"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Wo ist die Kirche? — Gegenüber der Bank! Und dann: geradeaus, im Norden, zurück — der Weg durch die Stadt.",
+      "ar": "أين الكنيسة؟ — مقابل البنك! ثم: إلى الأمام، في الشمال، رجوعاً — الطريق عبر المدينة."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~gegenüber die Kirche~~ / ~~gegenüber das Museum~~",
+          "ar": "gegenüber يجرّ الداتيف دائماً"
+        },
+        "whyArabicSpeakerFails": "«مقابل» بالعربية لا تغيّر ما بعدها؛ الألماني gegenüber تجرّ الداتيف إجبارياً — تكميل مصيدة الداتيف الثابتة من الوحدة 8 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "gegenüber der Kirche · gegenüber dem Museum",
+          "ar": "مقابل الكنيسة (Dativ) · مقابل المتحف (Dativ)"
+        },
+        "exercise": {
+          "q": "أكمل: Die Apotheke ist gegenüber ___ (die Bank).",
+          "a": "der Bank"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~im Norden~~ = ~~nach Norden~~ (واحد عند العربي)",
+          "ar": "im Norden (في) ↔ nach Norden (إلى)"
+        },
+        "whyArabicSpeakerFails": "«شمالاً» تحتمل «في» و«إلى» بالعربية؛ الألماني يفصل: im Norden (موقع) ↔ nach Norden (اتجاه حركة) — التداخل مع حرف الجر منذ d4 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Die Apotheke ist im Norden. · Wir fahren nach Norden.",
+          "ar": "الصيدلية في الشمال. · نسافر إلى الشمال."
+        },
+        "exercise": {
+          "q": "أكمل: Das Museum ist ___ Osten. Wir fahren ___ Süden.",
+          "a": "im / nach"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Der Park ist in der Mitte~~؟ صحيح، لكن ~~in die Mitte~~ (للحركة)",
+          "ar": "الموقع (in + Dativ) ≠ الاتجاه (in + Akkusativ)"
+        },
+        "whyArabicSpeakerFails": "العربية تجرّ الوجهة والموقع معاً؛ الألماني يفصل: ist in der Mitte (Dativ — موقع) ↔ gehe in die Mitte (Akkusativ — وجهة) — مصيدة الحالتين منذ الوحدات 2–3 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Der Park ist in der Mitte. · Ich gehe in die Stadt.",
+          "ar": "الحديقة في الوسط (موقع). · أذهب إلى المدينة (وجهة)."
+        },
+        "exercise": {
+          "q": "أكمل: Das Krankenhaus ist an ___ Straße (die) — Wir gehen in ___ Stadt (die).",
+          "a": "der / die"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "kirche",
+      "krankenhaus",
+      "apotheke",
+      "universitaet",
+      "bank",
+      "post",
+      "park",
+      "museum",
+      "platz",
+      "nord",
+      "sued",
+      "ost",
+      "west",
+      "gegenueber",
+      "hier",
+      "dort",
+      "geradeaus",
+      "zurueck"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/gegenueber",
+      "https://www.duden.de/rechtschreibung/Norden",
+      "https://www.duden.de/rechtschreibung/Apotheke"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/gegenüber"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-stadt-ort",
+    "ars-dativ-fix"
+  ],
+  "audioManifestRefs": [
+    "word-kirche",
+    "word-krankenhaus",
+    "word-apotheke",
+    "word-universitaet",
+    "word-bank",
+    "word-post",
+    "word-park",
+    "word-museum",
+    "word-platz",
+    "word-nord",
+    "word-sued",
+    "word-ost",
+    "word-west",
+    "word-gegenueber",
+    "word-hier",
+    "word-dort",
+    "word-geradeaus",
+    "word-zurueck"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Nach dem Weg fragen",
+    "goetheWordListOverlap": []
+  }
+}
