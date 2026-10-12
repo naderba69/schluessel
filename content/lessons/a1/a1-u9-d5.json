@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d5",
+  "level": "A1",
+  "unit": 9,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst einen vollständigen Weg als Satzklammer sagen und TEKAMOLO anwenden: Zeit → Art → Ort.",
+    "ar": "تقول الطريق كاملاً بقلنسوة الجملة (الفعل ثانياً والباقي في النهاية) وترتيب TEKAMOLO"
+  },
+  "canDoDaily": [
+    "يبني جملة طريق كاملة: الفعل في الموضع الثاني + وقت ثم أسلوب ثم وجهة (TEKAMOLO)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "morgen",
+      "abfahrt",
+      "umsteigen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«غداً أسافر إلى المحطة» — أي ترتيب صحيح بعد كلمة morgen؟"
+        },
+        "choices": [
+          "Morgen fahre ich zum Bahnhof.",
+          "Morgen ich fahre zum Bahnhof.",
+          "Ich morgen fahre zum Bahnhof."
+        ],
+        "answer": "Morgen fahre ich zum Bahnhof.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "bald",
+      "puenktlich",
+      "stau",
+      "grund",
+      "verbindung",
+      "fahrplan"
+    ],
+    "grammarArsenalIds": [
+      "ars-satzklammer",
+      "ars-tekamolo"
+    ],
+    "storySentenceIds": [
+      "story-a9-u9-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«القطار يأتي قريباً»؟",
+            "a": "Der Zug kommt bald."
+          },
+          {
+            "q": "«القطار يغادر بالموعد»؟",
+            "a": "Der Zug fährt pünktlich ab."
+          }
+        ],
+        "interleavedWith": [
+          "bald",
+          "puenktlich"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«اليوم ازدحام — لهذا السبب نحن متأخرون»؟",
+            "a": "Heute ist Stau — das ist der Grund."
+          },
+          {
+            "q": "«الرحلة إلى المطار جيدة»؟",
+            "a": "Die Verbindung zum Flughafen ist gut."
+          }
+        ],
+        "interleavedWith": [
+          "stau",
+          "grund"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الجدول على الجدار»؟",
+            "a": "Der Fahrplan ist an der Wand."
+          },
+          {
+            "q": "«غداً أسافر بالحافلة إلى المحطة المركزية» (TEKAMOLO)؟",
+            "a": "Morgen fahre ich mit dem Bus zum Hauptbahnhof."
+          }
+        ],
+        "interleavedWith": [
+          "fahrplan",
+          "verbindung"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Den ganzen Weg in einem Satzklammer-Satz erklären",
+        "ar": "شرح الطريق كله في جملة قلنسوة واحدة"
+      },
+      "situation": {
+        "de": "Am Fahrplan: morgen um 8 mit dem Bus zum Hauptbahnhof — pünktlich!",
+        "ar": "عند الجدول: غداً الساعة 8 بالحافلة إلى المحطة المركزية — بالموعد!"
+      },
+      "successCriteria": [
+        "جملة واحدة: فعل ثانٍ + وقت (T) + أسلوب (M) + وجهة (L) + البادئة/التكملة في النهاية"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«قريباً»؟",
+            "a": "bald"
+          },
+          {
+            "q": "«بالموعد»؟",
+            "a": "pünktlich"
+          },
+          {
+            "q": "«السبب»؟",
+            "a": "der Grund"
+          },
+          {
+            "q": "«غداً أسافر بالحافلة إلى المحطة» (TEKAMOLO)؟",
+            "a": "Morgen fahre ich mit dem Bus zum Hauptbahnhof."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الازدحام»؟",
+            "a": "der Stau"
+          },
+          {
+            "q": "«الجدول»؟",
+            "a": "der Fahrplan"
+          },
+          {
+            "q": "«القطار يغادر بالموعد» (قلنسوة)؟",
+            "a": "Der Zug fährt pünktlich ab."
+          },
+          {
+            "q": "«الرحلة إلى المطار»؟",
+            "a": "die Verbindung zum Flughafen"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "رتّب TEKAMOLO: (zum Bahnhof) (morgen) (mit dem Bus) + fahre ich →",
+            "a": "Morgen fahre ich mit dem Bus zum Bahnhof."
+          },
+          {
+            "q": "«اليوم ازدحام»؟",
+            "a": "Heute ist Stau."
+          },
+          {
+            "q": "«هذا هو السبب»؟",
+            "a": "Das ist der Grund."
+          },
+          {
+            "q": "«القطار يأتي قريباً»؟",
+            "a": "Der Zug kommt bald."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Satzklammer: das Verb an Position 2 — alles andere am Ende. Und TEKAMOLO: zuerst die Zeit (morgen), dann die Art (mit dem Bus), dann den Ort (zum Hauptbahnhof).",
+      "ar": "قلنسوة الجملة: الفعل في الموضع 2 — وكل شيء آخر في النهاية. وTEKAMOLO: الوقت أولاً (غداً)، ثم الأسلوب (بالحافلة)، ثم الوجهة (إلى المحطة)."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Morgen ich fahre zum Bahnhof~~ / ~~Morgen fahre zum Bahnhof~~",
+          "ar": "بعد الظرف في البداية: الفعل يبقى ثانياً والفاعل يعود بعد الفعل (قلب)"
+        },
+        "whyArabicSpeakerFails": "العربية تبدأ بالظرف ثم تُبقي الفاعل قبل الفعل؛ الألماني يقلب: Morgen **fahre ich** — الفعل «حاجب» لا يتحرك عن موضعه الثاني مهما بدأنا بشيء آخر (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Morgen fahre ich zum Bahnhof.",
+          "ar": "غداً أسافر إلى المحطة."
+        },
+        "exercise": {
+          "q": "رتّب: morgen · fahre · ich · zum Bahnhof",
+          "a": "Morgen fahre ich zum Bahnhof."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich fahre zum Bahnhof mit dem Bus morgen~~",
+          "ar": "TEKAMOLO: Zeit → Art → Ort (الترتيب الألماني)"
+        },
+        "whyArabicSpeakerFails": "العربية مرنة في ترتيب الظروف؛ الألماني يرتّب: Zeit (morgen) → Art (mit dem Bus) → Ort (zum Bahnhof) — مقدمة TEKAMOLO اليوم تُثبَّت بالجمل الجاهزة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich fahre morgen mit dem Bus zum Bahnhof.",
+          "ar": "أسافر غداً بالحافلة إلى المحطة."
+        },
+        "exercise": {
+          "q": "رتّب: (zum Flughafen) (heute) (mit dem Taxi) →",
+          "a": "Heute fahre ich mit dem Taxi zum Flughafen."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Der Zug fährt ab um 8 Uhr~~ / ~~Der Zug abfährt um 8 Uhr~~",
+          "ar": "الفعل المنفصل = قلنسوة: البادئة تُغلق الجملة من اليمين"
+        },
+        "whyArabicSpeakerFails": "البادئة المنفصلة هي الحافة اليمنى للقلنسوة: fährt um 8 Uhr **ab** — تُقال آخر الجملة لا مع الفعل — تتويج لمصيدة d2 وd3 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Der Zug fährt um 8 Uhr ab.",
+          "ar": "القطار يغادر الساعة 8."
+        },
+        "exercise": {
+          "q": "أكمل: Der Zug ___ um 8 Uhr ___ (abfahren).",
+          "a": "fährt / ab"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "bald",
+      "puenktlich",
+      "stau",
+      "grund",
+      "verbindung",
+      "fahrplan"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/puenktlich",
+      "https://www.duden.de/rechtschreibung/Stau",
+      "https://www.duden.de/rechtschreibung/Fahrplan"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/TEKAMOLO"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-satzklammer",
+    "ars-tekamolo"
+  ],
+  "audioManifestRefs": [
+    "word-bald",
+    "word-puenktlich",
+    "word-stau",
+    "word-grund",
+    "word-verbindung",
+    "word-fahrplan"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Der ganze Weg im Satz (Satzklammer + TEKAMOLO)",
+    "goetheWordListOverlap": []
+  }
+}

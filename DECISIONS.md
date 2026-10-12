@@ -329,3 +329,11 @@
 - **القاعدة الذهبية**: **Wo? → Dativ (an der Wand) ↔ Wohin? → Akkusativ (an die Wand)** · gegen = Akk دائماً · am/im (مكان) ↔ an den/in den (حركة).
 - **تذكير ذاتي**: خطأ `ar` string بدل list عاد مجدداً (لأول مرة منذ D68) — **دالة W يجب أن تقبل القوائم دائماً أو تحوّل آلياً**: `if isinstance(ar,str): ar=[ar]`. مُضاف لقائمة الفحص قبل البوابة.
 - البوابة: **243/243 + tsc + validator (612/0/0) + build** ✓. **556 كلمة · 52 درساً · 557 مساراً.**
+
+## D72 (2026-10-12): u9-d5 (Satzklammer + TEKAMOLO) — جوهرة الوحدة 9
+
+- **u9-d5** (6 كلمات فقط — ميزان 65): bald · pünktlich (Umlaut+ich-Laut) · Stau · Grund (**Gründe**) · Verbindung · Fahrplan (**Fahrpläne**). مراجعة: morgen/abfahrt/umsteigen.
+- **القواعد**: **Satzklammer** — الفعل في الموضع 2 مهما بدأنا بشيء آخر (Morgen **fahre ich**!) والبادئة/التكملة في النهاية (fährt um 8 Uhr **ab**) · **TEKAMOLO** مقدمة: **Zeit → Art → Ort** (morgen → mit dem Bus → zum Hauptbahnhof).
+- مصائد d5: القلب بعد الظرف · ترتيب TEKAMOLO · البادئة حافة يمنى للقلنسوة.
+- **بيئة**: numpy + node_modules فقدا مجدداً في نفس الجلسة — `pip3 install --break-system-packages …` + `npm ci` قبل البوابة.
+- البوابة: **243/243 + tsc + validator (619/0/0) + build** ✓. **562 كلمة · 53 درساً · 563 مساراً.**

@@ -59,6 +59,7 @@ import lessonU9D1 from "../content/lessons/a1/a1-u9-d1.json";
 import lessonU9D2 from "../content/lessons/a1/a1-u9-d2.json";
 import lessonU9D3 from "../content/lessons/a1/a1-u9-d3.json";
 import lessonU9D4 from "../content/lessons/a1/a1-u9-d4.json";
+import lessonU9D5 from "../content/lessons/a1/a1-u9-d5.json";
 
 import wordAbbiegen from "../content/words/abbiegen.json";
 import wordAbend from "../content/words/abend.json";
@@ -113,6 +114,7 @@ import wordBaeckerei from "../content/words/baeckerei.json";
 import wordBahn from "../content/words/bahn.json";
 import wordBahnhof from "../content/words/bahnhof.json";
 import wordBahnsteig from "../content/words/bahnsteig.json";
+import wordBald from "../content/words/bald.json";
 import wordBalkon from "../content/words/balkon.json";
 import wordBank from "../content/words/bank.json";
 import wordBei from "../content/words/bei.json";
@@ -175,6 +177,7 @@ import wordEuro from "../content/words/euro.json";
 import wordEuropa from "../content/words/europa.json";
 import wordFahren from "../content/words/fahren.json";
 import wordFahrkarte from "../content/words/fahrkarte.json";
+import wordFahrplan from "../content/words/fahrplan.json";
 import wordFahrrad from "../content/words/fahrrad.json";
 import wordFamilie from "../content/words/familie.json";
 import wordFamilienname from "../content/words/familienname.json";
@@ -244,6 +247,7 @@ import wordGroesse from "../content/words/groesse.json";
 import wordGross from "../content/words/gross.json";
 import wordGrossmutter from "../content/words/grossmutter.json";
 import wordGrossvater from "../content/words/grossvater.json";
+import wordGrund from "../content/words/grund.json";
 import wordGuenstig from "../content/words/guenstig.json";
 import wordGuertel from "../content/words/guertel.json";
 import wordGutenAbend from "../content/words/guten-abend.json";
@@ -416,6 +420,7 @@ import wordPreis from "../content/words/preis.json";
 import wordPrima from "../content/words/prima.json";
 import wordProbieren from "../content/words/probieren.json";
 import wordProblem from "../content/words/problem.json";
+import wordPuenktlich from "../content/words/puenktlich.json";
 import wordPullover from "../content/words/pullover.json";
 import wordPutzen from "../content/words/putzen.json";
 import wordQuittung from "../content/words/quittung.json";
@@ -493,6 +498,7 @@ import wordSprache from "../content/words/sprache.json";
 import wordSprechen from "../content/words/sprechen.json";
 import wordStadt from "../content/words/stadt.json";
 import wordStadtplan from "../content/words/stadtplan.json";
+import wordStau from "../content/words/stau.json";
 import wordStehen from "../content/words/stehen.json";
 import wordStellen from "../content/words/stellen.json";
 import wordStiefel from "../content/words/stiefel.json";
@@ -554,6 +560,7 @@ import wordUrlaub from "../content/words/urlaub.json";
 import wordVase from "../content/words/vase.json";
 import wordVater from "../content/words/vater.json";
 import wordVerabredung from "../content/words/verabredung.json";
+import wordVerbindung from "../content/words/verbindung.json";
 import wordVerhandeln from "../content/words/verhandeln.json";
 import wordVerheiratet from "../content/words/verheiratet.json";
 import wordVerkaeufer from "../content/words/verkaeufer.json";
@@ -671,6 +678,7 @@ const WORD_JSONS = [
   wordBahn,
   wordBahnhof,
   wordBahnsteig,
+  wordBald,
   wordBalkon,
   wordBank,
   wordBei,
@@ -733,6 +741,7 @@ const WORD_JSONS = [
   wordEuropa,
   wordFahren,
   wordFahrkarte,
+  wordFahrplan,
   wordFahrrad,
   wordFamilie,
   wordFamilienname,
@@ -802,6 +811,7 @@ const WORD_JSONS = [
   wordGross,
   wordGrossmutter,
   wordGrossvater,
+  wordGrund,
   wordGuenstig,
   wordGuertel,
   wordGutenAbend,
@@ -974,6 +984,7 @@ const WORD_JSONS = [
   wordPrima,
   wordProbieren,
   wordProblem,
+  wordPuenktlich,
   wordPullover,
   wordPutzen,
   wordQuittung,
@@ -1051,6 +1062,7 @@ const WORD_JSONS = [
   wordSprechen,
   wordStadt,
   wordStadtplan,
+  wordStau,
   wordStehen,
   wordStellen,
   wordStiefel,
@@ -1112,6 +1124,7 @@ const WORD_JSONS = [
   wordVase,
   wordVater,
   wordVerabredung,
+  wordVerbindung,
   wordVerhandeln,
   wordVerheiratet,
   wordVerkaeufer,
@@ -1176,7 +1189,7 @@ const WORD_JSONS = [
   wordZwischen,
 ];
 
-const LESSON_JSONS = [lessonD1, lessonD2, lessonD3, lessonD4, lessonD5, lessonD6, lessonU2D1, lessonU2D2, lessonU2D3, lessonU2D4, lessonU2D5, lessonU2D6, lessonU3D1, lessonU3D2, lessonU3D3, lessonU3D4, lessonU3D5, lessonU3D6, lessonU4D1, lessonU4D2, lessonU4D3, lessonU4D4, lessonU4D5, lessonU4D6, lessonU5D1, lessonU5D2, lessonU5D3, lessonU5D4, lessonU5D5, lessonU5D6, lessonU6D1, lessonU6D2, lessonU6D3, lessonU6D4, lessonU6D5, lessonU6D6, lessonU7D1, lessonU7D2, lessonU7D3, lessonU7D4, lessonU7D5, lessonU7D6, lessonU8D1, lessonU8D2, lessonU8D3, lessonU8D4, lessonU8D5, lessonU8D6, lessonU9D1, lessonU9D2, lessonU9D3, lessonU9D4];
+const LESSON_JSONS = [lessonD1, lessonD2, lessonD3, lessonD4, lessonD5, lessonD6, lessonU2D1, lessonU2D2, lessonU2D3, lessonU2D4, lessonU2D5, lessonU2D6, lessonU3D1, lessonU3D2, lessonU3D3, lessonU3D4, lessonU3D5, lessonU3D6, lessonU4D1, lessonU4D2, lessonU4D3, lessonU4D4, lessonU4D5, lessonU4D6, lessonU5D1, lessonU5D2, lessonU5D3, lessonU5D4, lessonU5D5, lessonU5D6, lessonU6D1, lessonU6D2, lessonU6D3, lessonU6D4, lessonU6D5, lessonU6D6, lessonU7D1, lessonU7D2, lessonU7D3, lessonU7D4, lessonU7D5, lessonU7D6, lessonU8D1, lessonU8D2, lessonU8D3, lessonU8D4, lessonU8D5, lessonU8D6, lessonU9D1, lessonU9D2, lessonU9D3, lessonU9D4, lessonU9D5];
 
 /** كل الكلمات المُتحقَّق منها — بلا استثناءات */
 export const ALL_WORDS: Word[] = WORD_JSONS.map((j) => WordSchema.parse(j));
