@@ -56,9 +56,11 @@ import lessonU8D4 from "../content/lessons/a1/a1-u8-d4.json";
 import lessonU8D5 from "../content/lessons/a1/a1-u8-d5.json";
 import lessonU8D6 from "../content/lessons/a1/a1-u8-d6.json";
 import lessonU9D1 from "../content/lessons/a1/a1-u9-d1.json";
+import lessonU9D2 from "../content/lessons/a1/a1-u9-d2.json";
 
 import wordAbend from "../content/words/abend.json";
 import wordAbendessen from "../content/words/abendessen.json";
+import wordAbfahrt from "../content/words/abfahrt.json";
 import wordAbholen from "../content/words/abholen.json";
 import wordAbteilung from "../content/words/abteilung.json";
 import wordAbwaschen from "../content/words/abwaschen.json";
@@ -74,6 +76,7 @@ import wordAm from "../content/words/am.json";
 import wordAnfangen from "../content/words/anfangen.json";
 import wordAngebot from "../content/words/angebot.json";
 import wordAnkommen from "../content/words/ankommen.json";
+import wordAnkunft from "../content/words/ankunft.json";
 import wordAnprobieren from "../content/words/anprobieren.json";
 import wordAnruf from "../content/words/anruf.json";
 import wordAnrufen from "../content/words/anrufen.json";
@@ -94,6 +97,7 @@ import wordAufraeumen from "../content/words/aufraeumen.json";
 import wordAufstehen from "../content/words/aufstehen.json";
 import wordAufwachen from "../content/words/aufwachen.json";
 import wordAus from "../content/words/aus.json";
+import wordAussteigen from "../content/words/aussteigen.json";
 import wordAuto from "../content/words/auto.json";
 import wordBacken from "../content/words/backen.json";
 import wordBaden from "../content/words/baden.json";
@@ -101,6 +105,7 @@ import wordBadezimmer from "../content/words/badezimmer.json";
 import wordBaeckerei from "../content/words/baeckerei.json";
 import wordBahn from "../content/words/bahn.json";
 import wordBahnhof from "../content/words/bahnhof.json";
+import wordBahnsteig from "../content/words/bahnsteig.json";
 import wordBalkon from "../content/words/balkon.json";
 import wordBank from "../content/words/bank.json";
 import wordBei from "../content/words/bei.json";
@@ -148,6 +153,7 @@ import wordEcke from "../content/words/ecke.json";
 import wordEi from "../content/words/ei.json";
 import wordEinkaufen from "../content/words/einkaufen.json";
 import wordEinrichtung from "../content/words/einrichtung.json";
+import wordEinsteigen from "../content/words/einsteigen.json";
 import wordEis from "../content/words/eis.json";
 import wordEltern from "../content/words/eltern.json";
 import wordEnglisch from "../content/words/englisch.json";
@@ -235,8 +241,10 @@ import wordHaehnchen from "../content/words/haehnchen.json";
 import wordHaengen from "../content/words/haengen.json";
 import wordHalb from "../content/words/halb.json";
 import wordHallo from "../content/words/hallo.json";
+import wordHaltestelle from "../content/words/haltestelle.json";
 import wordHandtuch from "../content/words/handtuch.json";
 import wordHandy from "../content/words/handy.json";
+import wordHauptbahnhof from "../content/words/hauptbahnhof.json";
 import wordHaus from "../content/words/haus.json";
 import wordHaushalt from "../content/words/haushalt.json";
 import wordHeimat from "../content/words/heimat.json";
@@ -246,6 +254,7 @@ import wordHeizung from "../content/words/heizung.json";
 import wordHell from "../content/words/hell.json";
 import wordHemd from "../content/words/hemd.json";
 import wordHier from "../content/words/hier.json";
+import wordHin from "../content/words/hin.json";
 import wordHinter from "../content/words/hinter.json";
 import wordHobby from "../content/words/hobby.json";
 import wordHoeren from "../content/words/hoeren.json";
@@ -289,6 +298,7 @@ import wordKorb from "../content/words/korb.json";
 import wordKosten from "../content/words/kosten.json";
 import wordKrankenhaus from "../content/words/krankenhaus.json";
 import wordKreditkarte from "../content/words/kreditkarte.json";
+import wordKreuzung from "../content/words/kreuzung.json";
 import wordKuchen from "../content/words/kuchen.json";
 import wordKueche from "../content/words/kueche.json";
 import wordKuehlschrank from "../content/words/kuehlschrank.json";
@@ -310,6 +320,7 @@ import wordLesen from "../content/words/lesen.json";
 import wordLeute from "../content/words/leute.json";
 import wordLieber from "../content/words/lieber.json";
 import wordLimonade from "../content/words/limonade.json";
+import wordLinie from "../content/words/linie.json";
 import wordLinks from "../content/words/links.json";
 import wordLustig from "../content/words/lustig.json";
 import wordMachen from "../content/words/machen.json";
@@ -350,6 +361,7 @@ import wordNachbar from "../content/words/nachbar.json";
 import wordNachricht from "../content/words/nachricht.json";
 import wordNacht from "../content/words/nacht.json";
 import wordNachtisch from "../content/words/nachtisch.json";
+import wordNah from "../content/words/nah.json";
 import wordName from "../content/words/name.json";
 import wordNatuerlich from "../content/words/natuerlich.json";
 import wordNeben from "../content/words/neben.json";
@@ -399,6 +411,7 @@ import wordReis from "../content/words/reis.json";
 import wordReise from "../content/words/reise.json";
 import wordReisen from "../content/words/reisen.json";
 import wordReservieren from "../content/words/reservieren.json";
+import wordRichtung from "../content/words/richtung.json";
 import wordRing from "../content/words/ring.json";
 import wordRock from "../content/words/rock.json";
 import wordRucksack from "../content/words/rucksack.json";
@@ -506,7 +519,9 @@ import wordTuerkei from "../content/words/tuerkei.json";
 import wordTuete from "../content/words/tuete.json";
 import wordTunesien from "../content/words/tunesien.json";
 import wordUeber from "../content/words/ueber.json";
+import wordUeberall from "../content/words/ueberall.json";
 import wordUhr from "../content/words/uhr.json";
+import wordUmsteigen from "../content/words/umsteigen.json";
 import wordUmtausch from "../content/words/umtausch.json";
 import wordUniversitaet from "../content/words/universitaet.json";
 import wordUnten from "../content/words/unten.json";
@@ -519,11 +534,13 @@ import wordVerhandeln from "../content/words/verhandeln.json";
 import wordVerheiratet from "../content/words/verheiratet.json";
 import wordVerkaeufer from "../content/words/verkaeufer.json";
 import wordVerkaufen from "../content/words/verkaufen.json";
+import wordVerkehr from "../content/words/verkehr.json";
 import wordVerstehen from "../content/words/verstehen.json";
 import wordViel from "../content/words/viel.json";
 import wordViertel from "../content/words/viertel.json";
 import wordVierzig from "../content/words/vierzig.json";
 import wordVon from "../content/words/von.json";
+import wordVorbei from "../content/words/vorbei.json";
 import wordVorhang from "../content/words/vorhang.json";
 import wordVorname from "../content/words/vorname.json";
 import wordVorspeise from "../content/words/vorspeise.json";
@@ -540,6 +557,7 @@ import wordWecken from "../content/words/wecken.json";
 import wordWecker from "../content/words/wecker.json";
 import wordWeg from "../content/words/weg.json";
 import wordWein from "../content/words/wein.json";
+import wordWeit from "../content/words/weit.json";
 import wordWelt from "../content/words/welt.json";
 import wordWen from "../content/words/wen.json";
 import wordWest from "../content/words/west.json";
@@ -576,6 +594,7 @@ import wordZwischen from "../content/words/zwischen.json";
 const WORD_JSONS = [
   wordAbend,
   wordAbendessen,
+  wordAbfahrt,
   wordAbholen,
   wordAbteilung,
   wordAbwaschen,
@@ -591,6 +610,7 @@ const WORD_JSONS = [
   wordAnfangen,
   wordAngebot,
   wordAnkommen,
+  wordAnkunft,
   wordAnprobieren,
   wordAnruf,
   wordAnrufen,
@@ -611,6 +631,7 @@ const WORD_JSONS = [
   wordAufstehen,
   wordAufwachen,
   wordAus,
+  wordAussteigen,
   wordAuto,
   wordBacken,
   wordBaden,
@@ -618,6 +639,7 @@ const WORD_JSONS = [
   wordBaeckerei,
   wordBahn,
   wordBahnhof,
+  wordBahnsteig,
   wordBalkon,
   wordBank,
   wordBei,
@@ -665,6 +687,7 @@ const WORD_JSONS = [
   wordEi,
   wordEinkaufen,
   wordEinrichtung,
+  wordEinsteigen,
   wordEis,
   wordEltern,
   wordEnglisch,
@@ -752,8 +775,10 @@ const WORD_JSONS = [
   wordHaengen,
   wordHalb,
   wordHallo,
+  wordHaltestelle,
   wordHandtuch,
   wordHandy,
+  wordHauptbahnhof,
   wordHaus,
   wordHaushalt,
   wordHeimat,
@@ -763,6 +788,7 @@ const WORD_JSONS = [
   wordHell,
   wordHemd,
   wordHier,
+  wordHin,
   wordHinter,
   wordHobby,
   wordHoeren,
@@ -806,6 +832,7 @@ const WORD_JSONS = [
   wordKosten,
   wordKrankenhaus,
   wordKreditkarte,
+  wordKreuzung,
   wordKuchen,
   wordKueche,
   wordKuehlschrank,
@@ -827,6 +854,7 @@ const WORD_JSONS = [
   wordLeute,
   wordLieber,
   wordLimonade,
+  wordLinie,
   wordLinks,
   wordLustig,
   wordMachen,
@@ -867,6 +895,7 @@ const WORD_JSONS = [
   wordNachricht,
   wordNacht,
   wordNachtisch,
+  wordNah,
   wordName,
   wordNatuerlich,
   wordNeben,
@@ -916,6 +945,7 @@ const WORD_JSONS = [
   wordReise,
   wordReisen,
   wordReservieren,
+  wordRichtung,
   wordRing,
   wordRock,
   wordRucksack,
@@ -1023,7 +1053,9 @@ const WORD_JSONS = [
   wordTuete,
   wordTunesien,
   wordUeber,
+  wordUeberall,
   wordUhr,
+  wordUmsteigen,
   wordUmtausch,
   wordUniversitaet,
   wordUnten,
@@ -1036,11 +1068,13 @@ const WORD_JSONS = [
   wordVerheiratet,
   wordVerkaeufer,
   wordVerkaufen,
+  wordVerkehr,
   wordVerstehen,
   wordViel,
   wordViertel,
   wordVierzig,
   wordVon,
+  wordVorbei,
   wordVorhang,
   wordVorname,
   wordVorspeise,
@@ -1057,6 +1091,7 @@ const WORD_JSONS = [
   wordWecker,
   wordWeg,
   wordWein,
+  wordWeit,
   wordWelt,
   wordWen,
   wordWest,
@@ -1091,7 +1126,7 @@ const WORD_JSONS = [
   wordZwischen,
 ];
 
-const LESSON_JSONS = [lessonD1, lessonD2, lessonD3, lessonD4, lessonD5, lessonD6, lessonU2D1, lessonU2D2, lessonU2D3, lessonU2D4, lessonU2D5, lessonU2D6, lessonU3D1, lessonU3D2, lessonU3D3, lessonU3D4, lessonU3D5, lessonU3D6, lessonU4D1, lessonU4D2, lessonU4D3, lessonU4D4, lessonU4D5, lessonU4D6, lessonU5D1, lessonU5D2, lessonU5D3, lessonU5D4, lessonU5D5, lessonU5D6, lessonU6D1, lessonU6D2, lessonU6D3, lessonU6D4, lessonU6D5, lessonU6D6, lessonU7D1, lessonU7D2, lessonU7D3, lessonU7D4, lessonU7D5, lessonU7D6, lessonU8D1, lessonU8D2, lessonU8D3, lessonU8D4, lessonU8D5, lessonU8D6, lessonU9D1];
+const LESSON_JSONS = [lessonD1, lessonD2, lessonD3, lessonD4, lessonD5, lessonD6, lessonU2D1, lessonU2D2, lessonU2D3, lessonU2D4, lessonU2D5, lessonU2D6, lessonU3D1, lessonU3D2, lessonU3D3, lessonU3D4, lessonU3D5, lessonU3D6, lessonU4D1, lessonU4D2, lessonU4D3, lessonU4D4, lessonU4D5, lessonU4D6, lessonU5D1, lessonU5D2, lessonU5D3, lessonU5D4, lessonU5D5, lessonU5D6, lessonU6D1, lessonU6D2, lessonU6D3, lessonU6D4, lessonU6D5, lessonU6D6, lessonU7D1, lessonU7D2, lessonU7D3, lessonU7D4, lessonU7D5, lessonU7D6, lessonU8D1, lessonU8D2, lessonU8D3, lessonU8D4, lessonU8D5, lessonU8D6, lessonU9D1, lessonU9D2];
 
 /** كل الكلمات المُتحقَّق منها — بلا استثناءات */
 export const ALL_WORDS: Word[] = WORD_JSONS.map((j) => WordSchema.parse(j));

@@ -592,6 +592,23 @@ def build_all() -> None:
     ("word-dort", "dort.", "dort", ["a1-u2-d1", "a1-u9-d1"]),
     ("word-geradeaus", "geradeaus.", "geradeaus", ["a1-u9-d1"]),
     ("word-zurueck", "zurück.", "zurueck", ["a1-u9-d1"]),
+    ("word-haltestelle", "die Haltestelle.", "haltestelle", ["a1-u9-d2"]),
+    ("word-hauptbahnhof", "der Hauptbahnhof.", "hauptbahnhof", ["a1-u9-d2"]),
+    ("word-bahnsteig", "der Bahnsteig.", "bahnsteig", ["a1-u9-d2"]),
+    ("word-abfahrt", "die Abfahrt.", "abfahrt", ["a1-u9-d2"]),
+    ("word-ankunft", "die Ankunft.", "ankunft", ["a1-u9-d2"]),
+    ("word-verkehr", "der Verkehr.", "verkehr", ["a1-u9-d2"]),
+    ("word-linie", "die Linie.", "linie", ["a1-u9-d2"]),
+    ("word-kreuzung", "die Kreuzung.", "kreuzung", ["a1-u9-d2"]),
+    ("word-richtung", "die Richtung.", "richtung", ["a1-u9-d2"]),
+    ("word-umsteigen", "umsteigen.", "umsteigen", ["a1-u9-d2"]),
+    ("word-einsteigen", "einsteigen.", "einsteigen", ["a1-u9-d2"]),
+    ("word-aussteigen", "aussteigen.", "aussteigen", ["a1-u9-d2"]),
+    ("word-weit", "weit.", "weit", ["a1-u9-d2"]),
+    ("word-nah", "nah.", "nah", ["a1-u9-d2"]),
+    ("word-ueberall", "überall.", "ueberall", ["a1-u9-d2"]),
+    ("word-vorbei", "vorbei.", "vorbei", ["a1-u9-d2"]),
+    ("word-hin", "hin.", "hin", ["a1-u9-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

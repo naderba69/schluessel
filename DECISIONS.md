@@ -308,3 +308,10 @@
   5. الـgit reset يتكرر و**refs الريموت تختفي أحياناً**: `git fetch origin arena/...` يعيد خلقها ← `reset --soft` ← commit+push.
   6. `pkill -f` يقتل أمر الـbash نفسه — استخدم `pkill -f "gen-audi[o].py"`.
 - البوابة: **243/243 + tsc + validator (568/0/0) + build** ✓. **الوحدات 1–9 قيد الإتمام: 515 كلمة · 49 درساً · 516 مساراً.**
+
+## D69 (2026-10-12): u9-d2 (المواصلات والطريق) — الإنتاج السريع بالقالب الصحيح
+
+- **u9-d2** (17 كلمة: 15 جديدة + مراجعة fahrkarte/fahrrad/minute من u7/u3): Haltestelle · Hauptbahnhof (جمع **Hauptbahnhöfe**) · Bahnsteig · Abfahrt · Ankunft (جمع **Ankünfte**) · Verkehr (بلا جمع) · Linie · Kreuzung · Richtung + **الأفعال المنفصلة الثلاثة: umsteigen / einsteigen / aussteigen** (البادئة في نهاية الجملة) + weit/nah · überall · vorbei · hin (hin und zurück).
+- مصائد d2 الثلاث: **الفعل المنفصل** (~~Ich umsteige~~ → Ich steige … um) · **in + Akk (إلى داخل) ↔ in + Dativ (داخل)** · **wo ↔ wohin** و hin ↔ zurück.
+- **الإنتاج السريع الموثوق**: كلمات بالمقالب الصحيح ← tuples ← توليد `one` (17 مقطعاً بـ36 ثانية) ← إدراج مسارات المانيفست آلياً قبل char-track مع metrics من `one` — البوابة الصوتية (hash/duration/RMS) تتحقق من كل شيء. **لم نعد نعيد بناء الصوت كاملاً (16 دقيقة)** إلا عند تغيّر الصياغة.
+- البوابة: **243/243 + tsc + validator (586/0/0) + build** ✓ من المحاولة الأولى. **532 كلمة · 50 درساً · 533 مساراً.**

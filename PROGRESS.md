@@ -231,3 +231,7 @@
 - **u9-d1** (18 كلمة): Kirche/Krankenhaus/Apotheke/Universität/Bank/Post/Park/Museum/Platz + Norden/Süden/Osten/Westen + gegenüber **+Dativ** + hier/dort + geradeaus/zurück. المهمة: السؤال عن الأماكن ووصف الطريق (Wo ist …? / im Norden ↔ nach Norden).
 - الصوت: 18 مقطعاً جديداً (word-krankenhaus أُعيد بتقصير) — **516 مساراً** · الكلمات **515** · الدروس **49**.
 - النتيجة: **243/243 أخضر** + tsc + validator (568/0/0) + build ✓. (D68) — دروس المخططات المدوّنة في D68 مرجع دائم.
+
+## حملة المحتوى — الدفعة 25 (2026-10-12) — u9-d2 المواصلات (D69)
+- **u9-d2** (17 كلمة): Haltestelle/Hauptbahnhof/Bahnsteig/Abfahrt/Ankunft/Verkehr/Linie/Kreuzung/Richtung + **umsteigen/einsteigen/aussteigen** (منفصلة) + weit/nah/überall/vorbei/hin. مراجعة: fahrkarte/fahrrad/minute. مصائد: المنفصلة · in+Akk↔in+Dativ · wo↔wohin.
+- **532 كلمة · 50 درساً · 533 مساراً** · **243/243 أخضر** + tsc + validator (586/0/0) + build ✓. (D69) التالي: u9-d3.

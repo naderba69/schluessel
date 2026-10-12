@@ -1,0 +1,322 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d2",
+  "level": "A1",
+  "unit": 9,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst mit Bus und Bahn fahren: einsteigen, umsteigen, aussteigen — und den Weg zum Hauptbahnhof beschreiben.",
+    "ar": "تستقل الحافلة والقطار (ركوب/تغيير/نزول) وتوصّل الطريق إلى المحطة المركزية"
+  },
+  "canDoDaily": [
+    "يصف رحلة مواصلات واحدة بجمل صحيحة (steige ein/um/aus + mit + Dativ + hin und zurück)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bus",
+      "bahn",
+      "fahrkarte"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أغيّر الحافلة عند المحطة» — كيف تقولها مع الفعل المنفصل umsteigen?"
+        },
+        "choices": [
+          "Am Bahnhof steige ich in den Bus um.",
+          "Am Bahnhof ich umsteige in den Bus.",
+          "Am Bahnhof umsteige ich in den Bus."
+        ],
+        "answer": "Am Bahnhof steige ich in den Bus um.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "haltestelle",
+      "hauptbahnhof",
+      "bahnsteig",
+      "abfahrt",
+      "ankunft",
+      "verkehr",
+      "linie",
+      "kreuzung",
+      "richtung",
+      "umsteigen",
+      "einsteigen",
+      "aussteigen",
+      "weit",
+      "nah",
+      "ueberall",
+      "vorbei",
+      "hin"
+    ],
+    "grammarArsenalIds": [
+      "ars-weg-verkehr"
+    ],
+    "storySentenceIds": [
+      "story-a9-u9-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«من فضلك اركب!»؟",
+            "a": "Bitte steigen Sie ein!"
+          },
+          {
+            "q": "«هنا أنزل»؟",
+            "a": "Hier steige ich aus."
+          }
+        ],
+        "interleavedWith": [
+          "einsteigen",
+          "aussteigen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«المغادرة الساعة 8 والوصول الساعة 10»؟",
+            "a": "Die Abfahrt ist um 8 Uhr, die Ankunft um 10 Uhr."
+          },
+          {
+            "q": "«القطار يغادر من الرصيف 3»؟",
+            "a": "Der Zug fährt von Bahnsteig 3 ab."
+          }
+        ],
+        "interleavedWith": [
+          "abfahrt",
+          "bahnsteig"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هل هو بعيد؟»؟",
+            "a": "Ist es weit?"
+          },
+          {
+            "q": "«عند التقاطع يميناً»؟",
+            "a": "An der Kreuzung rechts."
+          }
+        ],
+        "interleavedWith": [
+          "weit",
+          "kreuzung"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Fahrt zum Hauptbahnhof planen und beschreiben",
+        "ar": "تخطيط ووصف رحلة إلى المحطة المركزية"
+      },
+      "situation": {
+        "de": "An der Haltestelle: mit dem Bus zum Hauptbahnhof, dort umsteigen",
+        "ar": "عند الموقف: بالحافلة إلى المحطة المركزية ثم تغيير الوسيلة"
+      },
+      "successCriteria": [
+        "جملتا ركوب/نزول + جملة umsteigen (البادئة في النهاية) + mit + Dativ + hin und zurück"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«موقف الحافلة»؟",
+            "a": "die Haltestelle"
+          },
+          {
+            "q": "«أغيّر (وسيلة النقل)»؟",
+            "a": "umsteigen"
+          },
+          {
+            "q": "«الوصول»؟",
+            "a": "die Ankunft"
+          },
+          {
+            "q": "«قريب» و«بعيد»؟",
+            "a": "nah / weit"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المحطة المركزية»؟",
+            "a": "der Hauptbahnhof"
+          },
+          {
+            "q": "«يركب» و«ينزل»؟",
+            "a": "einsteigen / aussteigen"
+          },
+          {
+            "q": "«الانطلاق»؟",
+            "a": "die Abfahrt"
+          },
+          {
+            "q": "«ذهاباً وإياباً»؟",
+            "a": "hin und zurück"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«تقاطع الطرق»؟",
+            "a": "die Kreuzung"
+          },
+          {
+            "q": "«في اتجاه الشمال»؟",
+            "a": "in Richtung Norden"
+          },
+          {
+            "q": "«في كل مكان»؟",
+            "a": "überall"
+          },
+          {
+            "q": "«الخط 5 يذهب إلى المحطة المركزية»؟",
+            "a": "Die Linie 5 fährt zum Hauptbahnhof."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einsteigen, umsteigen, aussteigen — und dann: „An der Kreuzung rechts, geradeaus bis zum Hauptbahnhof!“ Hin und zurück.",
+      "ar": "اركب، غيّر، انزل — ثم: «عند التقاطع يميناً، إلى الأمام حتى المحطة المركزية!» ذهاباً وإياباً."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich umsteige am Bahnhof~~ / ~~Am Bahnhof umsteige ich in den Bus~~",
+          "ar": "الفعل المنفصل: البادئة تذهب إلى نهاية الجملة"
+        },
+        "whyArabicSpeakerFails": "العربية لا تفصل البادئة عن الفعل؛ الألماني umsteigen منفصل — في الجملة الرئيسية يصعد الفعل للموضع الثاني وتنتهي البادئة بالجملة: steige … um (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Am Bahnhof steige ich in den Bus um.",
+          "ar": "عند المحطة أستقل الحافلة (أغيّر الوسيلة)."
+        },
+        "exercise": {
+          "q": "أعد الصياغة: umsteigen + Am Bahnhof + ich → الجملة الصحيحة.",
+          "a": "Am Bahnhof steige ich um."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~in den Bus fahren~~ (للركوب نفسه) / ~~im Bus steigen~~",
+          "ar": "in + Akkusatif (حركة إلى داخل) ↔ in + Dativ (داخل أثناء السير)"
+        },
+        "whyArabicSpeakerFails": "«في الحافلة» و«إلى الحافلة» تتشابهان بالعربية؛ الألماني يفصل: ich steige in den Bus (Akk — إلى داخل) ↔ ich sitze im Bus (Dativ — داخل) — مصيدة الحالتين منذ الوحدة 2 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich steige in den Bus. · Ich fahre im Bus.",
+          "ar": "أركب الحافلة (إلى داخل). · أسافر داخل الحافلة."
+        },
+        "exercise": {
+          "q": "أكمل: Ich steige in ___ Bus (der). Ich fahre in___ Bus (der).",
+          "a": "den / im"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wo fährst du?~~ (حين السؤال عن الوجهة)",
+          "ar": "wo (موقع) ↔ wohin (وجهة) — و hin ↔ zurück"
+        },
+        "whyArabicSpeakerFails": "«أين تذهب؟» بالعربية تحتمل الموقع والوجهة؛ الألماني يفصل: Wo bist du? ↔ Wohin fährst du? — و hin (ذهاب) ≠ zurück (إياب) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wohin fährst du? — Zum Hauptbahnhof. Hin und zurück.",
+          "ar": "إلى أين تسافر؟ — إلى المحطة المركزية. ذهاباً وإياباً."
+        },
+        "exercise": {
+          "q": "أكمل: ___ ist die Haltestelle? (الموقع) — ___ fährst du? (الوجهة)",
+          "a": "Wo / Wohin"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "haltestelle",
+      "hauptbahnhof",
+      "bahnsteig",
+      "abfahrt",
+      "ankunft",
+      "verkehr",
+      "linie",
+      "kreuzung",
+      "richtung",
+      "umsteigen",
+      "einsteigen",
+      "aussteigen",
+      "weit",
+      "nah",
+      "ueberall",
+      "vorbei",
+      "hin"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/umsteigen",
+      "https://www.duden.de/rechtschreibung/Hauptbahnhof",
+      "https://www.duden.de/rechtschreibung/Abfahrt"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/umsteigen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-weg-verkehr"
+  ],
+  "audioManifestRefs": [
+    "word-haltestelle",
+    "word-hauptbahnhof",
+    "word-bahnsteig",
+    "word-abfahrt",
+    "word-ankunft",
+    "word-verkehr",
+    "word-linie",
+    "word-kreuzung",
+    "word-richtung",
+    "word-umsteigen",
+    "word-einsteigen",
+    "word-aussteigen",
+    "word-weit",
+    "word-nah",
+    "word-ueberall",
+    "word-vorbei",
+    "word-hin"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Unterwegs mit Bus und Bahn",
+    "goetheWordListOverlap": []
+  }
+}
