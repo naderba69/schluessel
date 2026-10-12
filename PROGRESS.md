@@ -247,3 +247,7 @@
 ## حملة المحتوى — الدفعة 28 (2026-10-12) — u9-d5 Satzklammer+TEKAMOLO (D72)
 - **u9-d5** (6 كلمات — ميزان الوحدة): bald/pünktlich/Stau/Grund/Verbindung/Fahrplan. القواعد: **Satzklammer** (Morgen **fahre ich**! · fährt um 8 **ab**) + **TEKAMOLO** (Zeit→Art→Ort).
 - **562 كلمة · 53 درساً · 563 مساراً** · **243/243 أخضر** + tsc + validator (619/0/0) + build ✓. (D72) التالي: **u9-d6 (المعركة — إتمام الوحدة 9)**.
+
+## حملة المحتوى — الدفعة 29 (2026-10-12) — u9-d6 المعركة · **الوحدة 9 مكتملة** (D73)
+- **u9-d6** (توليف — 0 كلمات): معركة 0.75 + خلاصات الوحدة (gegenüber+Dativ · Imperativ+Satzklammer · TEKAMOLO). مراجعة: gegenueber/umsteigen.
+- **الوحدات 1–9 مكتملة**: **562 كلمة · 54 يوماً · 563 مساراً** · **243/243 أخضر** + tsc + validator (620/0/0) + build ✓. (D73) التالي: **الوحدة 10 (الصحة)**.

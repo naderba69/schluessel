@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d6",
+  "level": "A1",
+  "unit": 9,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Die Einheit 9 zusammenfassen und die Wochen-Meisterschaft bestehen (≥75%): Stadt, Weg, Verkehr, Imperativ, Wechselpräpositionen, Satzklammer.",
+    "ar": "توليف الوحدة 9 واجتياز المعركة (75%+): المدينة والطريق والمواصلات والأمر وحروف الجر والقلنسوة"
+  },
+  "canDoDaily": [
+    "يجتاز معركة الوحدة 9 بعتبة 0.75"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hauptbahnhof",
+      "gegenueber",
+      "abbiegen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "المعركة الأخيرة: «المتحف مقابل الكنيسة» — أكمل: gegenüber ___ (die Kirche)"
+        },
+        "choices": [
+          "der Kirche",
+          "die Kirche",
+          "den Kirche"
+        ],
+        "answer": "der Kirche",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "gegenueber",
+      "umsteigen"
+    ],
+    "grammarArsenalIds": [
+      "ars-stadt-ort",
+      "ars-weg-verkehr",
+      "ars-imperativ-sie",
+      "ars-wechselpraep",
+      "ars-satzklammer",
+      "ars-tekamolo"
+    ],
+    "storySentenceIds": [
+      "story-a9-u9-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«المتحف مقابل الكنيسة» (المصيدة!)؟",
+            "a": "Das Museum ist gegenüber der Kirche."
+          },
+          {
+            "q": "«عند المحطة أغيّر الحافلة» (القلنسوة!)؟",
+            "a": "Am Bahnhof steige ich in den Bus um."
+          }
+        ],
+        "interleavedWith": [
+          "gegenueber",
+          "umsteigen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«انعطفوا يساراً من فضلكم!»؟",
+            "a": "Biegen Sie links ab, bitte!"
+          },
+          {
+            "q": "«الصورة على الجدار» ↔ «أعلّق الصورة على الجدار»؟",
+            "a": "an der Wand ↔ an die Wand"
+          }
+        ],
+        "interleavedWith": [
+          "abbiegen",
+          "an"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«غداً أسافر بالحافلة إلى المحطة» (TEKAMOLO)؟",
+            "a": "Morgen fahre ich mit dem Bus zum Hauptbahnhof."
+          },
+          {
+            "q": "«أين المخرج؟ — هناك»؟",
+            "a": "Wo ist der Ausgang? — Dort."
+          }
+        ],
+        "interleavedWith": [
+          "ausgang",
+          "zuerst"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Wochen-Meisterschaft: Weg + Verkehr + Höflichkeit + Kasus",
+        "ar": "معركة الأسبوع: الطريق + المواصلات + الأدب + الإعراب"
+      },
+      "situation": {
+        "de": "Am Hauptbahnhof: nach der Auskunft fragen, den Weg bekommen, losfahren",
+        "ar": "عند المحطة المركزية: اسأل الاستعلامات، خذ الطريق، وانطلق"
+      },
+      "successCriteria": [
+        "3 جمل طريق صحيحة (قلنسوة + TEKAMOLO) + أمران مؤدَّبان + جملتا مكان/حركة + نسبة ≥ 75%"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أين الصيدلية؟ — مقابل الكنيسة»؟",
+            "a": "Wo ist die Apotheke? — Gegenüber der Kirche."
+          },
+          {
+            "q": "«إلى النفق» ↔ «في النفق»؟",
+            "a": "in den Tunnel ↔ im Tunnel"
+          },
+          {
+            "q": "«خذوا الشارع الثاني!»؟",
+            "a": "Nehmen Sie die zweite Straße!"
+          },
+          {
+            "q": "«المحطة المركزية»؟",
+            "a": "der Hauptbahnhof"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«غيّر الحافلة عند المحطة» (القلنسوة)؟",
+            "a": "Am Bahnhof steige ich in den Bus um."
+          },
+          {
+            "q": "«ساعدوني!» (helfen + Dativ)؟",
+            "a": "Helfen Sie mir!"
+          },
+          {
+            "q": "«ذهاباً وإياباً»؟",
+            "a": "hin und zurück"
+          },
+          {
+            "q": "«غداً بالحافلة إلى المحطة» (TEKAMOLO)؟",
+            "a": "Morgen fahre ich mit dem Bus zum Bahnhof."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الصورة على الجدار» (مكان) ↔ «أعلّقها على الجدار» (حركة)؟",
+            "a": "an der Wand ↔ an die Wand"
+          },
+          {
+            "q": "«انعطفوا يساراً!» (أمر + منفصل)؟",
+            "a": "Biegen Sie links ab!"
+          },
+          {
+            "q": "«في القرب» و«موقف السيارات»؟",
+            "a": "in der Nähe / der Parkplatz"
+          },
+          {
+            "q": "«القطار يغادر الساعة 8 بالموعد»؟",
+            "a": "Der Zug fährt um 8 Uhr pünktlich ab."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheit 9: Wo ist das Museum? — Gegenüber der Kirche! Biegen Sie links ab, steigen Sie um, und fahren Sie morgen mit dem Bus zum Hauptbahnhof — pünktlich!",
+      "ar": "الوحدة 9: أين المتحف؟ — مقابل الكنيسة! انعطفوا يساراً، غيّروا الحافلة، وسافروا غداً بالحافلة إلى المحطة المركزية — بالموعد!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~gegenüber die Kirche~~ / ~~an die Wand hängt das Bild~~ (لمكان)",
+          "ar": "خريطة الوحدة: gegenüber+Dativ · Wo?→Dativ ↔ Wohin?→Akk"
+        },
+        "whyArabicSpeakerFails": "«مقابل» و«على» لا تغيّران ما بعدهما بالعربية؛ الألماني يجرّ ويركّب: gegenüber **der** Kirche · hängt an **der** Wand ↔ an **die** Wand — مصيدتا الوحدة الأكبر (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "gegenüber der Kirche · an der Wand (Wo) · an die Wand (Wohin)",
+          "ar": "مقابل الكنيسة · على الجدار (مكان) · إلى الجدار (حركة)"
+        },
+        "exercise": {
+          "q": "أكمل: Das Museum ist gegenüber ___ (die) Kirche — Ich hänge das Bild an ___ (die) Wand.",
+          "a": "der / die"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Biegen links Sie ab!~~ / ~~Helfen Sie mich!~~",
+          "ar": "Imperativ Sie + المنفصل + helfen (Dativ)"
+        },
+        "whyArabicSpeakerFails": "الأمر بالعربية بلا ضمير ظاهر؛ الألماني: **Biegen Sie** links **ab**! (فعل + Sie + بادئة آخر الجملة) و **Helfen Sie mir**! (داتيف) — ثلاث طبقات من الوحدة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Biegen Sie links ab! · Helfen Sie mir, bitte!",
+          "ar": "انعطفوا يساراً! · ساعدوني من فضلكم!"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Sie links ___ (abbiegen) und ___ Sie ___ (helfen, ich)!",
+          "a": "Biegen / ab / Helfen / mir"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Morgen ich fahre mit dem Bus zum Bahnhof~~",
+          "ar": "Satzklammer + TEKAMOLO: فعل ثانٍ · Zeit→Art→Ort"
+        },
+        "whyArabicSpeakerFails": "الجملة الكاملة تجمع كل القواعد: بعد morgen يقلب الترتيب (**fahre ich**) وتُرتَّب الظروف (Zeit→Art→Ort) والبادئة آخر شيء (fährt … ab) — قمة الوحدة 9 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Morgen fahre ich mit dem Bus zum Bahnhof.",
+          "ar": "غداً أسافر بالحافلة إلى المحطة."
+        },
+        "exercise": {
+          "q": "رتّب: (zum Hauptbahnhof) (morgen) (mit dem Bus) (fahre ich) →",
+          "a": "Morgen fahre ich mit dem Bus zum Hauptbahnhof."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "gegenueber",
+      "umsteigen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/gegenueber",
+      "https://www.duden.de/rechtschreibung/umsteigen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Wechselpr%C3%A4position"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-stadt-ort",
+    "ars-weg-verkehr",
+    "ars-imperativ-sie",
+    "ars-wechselpraep",
+    "ars-satzklammer",
+    "ars-tekamolo"
+  ],
+  "audioManifestRefs": [
+    "word-gegenueber",
+    "word-umsteigen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Wochen-Meisterschaft",
+    "goetheWordListOverlap": []
+  }
+}
