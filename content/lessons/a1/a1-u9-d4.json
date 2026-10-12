@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d4",
+  "level": "A1",
+  "unit": 9,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst Wechselpräpositionen richtig benutzen: Wo? → Dativ (an der Wand) · Wohin? → Akkusativ (an die Wand).",
+    "ar": "تفرّق بين أين؟ (Dativ) وإلى أين؟ (Akkusativ) مع حروف الجر المتأرجحة"
+  },
+  "canDoDaily": [
+    "يصف مكاناً بـWo? + Dativ ويصف حركة بـWohin? + Akkusativ بنفس حرف الجر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "wand",
+      "regal",
+      "tisch"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«الصورة على الجدار» (مكان) و«أعلّق الصورة على الجدار» (حركة) — أين يختلف الإعراب؟"
+        },
+        "choices": [
+          "Wo? → an der Wand (Dativ) · Wohin? → an die Wand (Akkusativ)",
+          "كلاهما an der Wand",
+          "كلاهما an die Wand"
+        ],
+        "answer": "Wo? → an der Wand (Dativ) · Wohin? → an die Wand (Akkusativ)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "an",
+      "in",
+      "vor",
+      "gegen",
+      "bruecke",
+      "tunnel",
+      "ufer",
+      "seite",
+      "parkplatz",
+      "aufzug",
+      "naehe",
+      "meter"
+    ],
+    "grammarArsenalIds": [
+      "ars-wechselpraep",
+      "ars-imperativ-sie"
+    ],
+    "storySentenceIds": [
+      "story-a9-u9-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الصورة معلّقة على الجدار» (مكان)؟",
+            "a": "Das Bild hängt an der Wand."
+          },
+          {
+            "q": "«أعلّق الصورة على الجدار» (حركة)؟",
+            "a": "Ich hänge das Bild an die Wand."
+          }
+        ],
+        "interleavedWith": [
+          "an",
+          "in"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«المصعد في المنزل» (مكان)؟",
+            "a": "Der Aufzug ist im Haus."
+          },
+          {
+            "q": "«أذهب إلى النفق» (حركة)؟",
+            "a": "Ich gehe in den Tunnel."
+          }
+        ],
+        "interleavedWith": [
+          "aufzug",
+          "tunnel"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«نجلس عند الضفة»؟",
+            "a": "Wir sitzen am Ufer."
+          },
+          {
+            "q": "«ضعوا المفتاح على الطاولة!» (أمر + حركة)؟",
+            "a": "Stellen Sie den Schlüssel auf den Tisch!"
+          }
+        ],
+        "interleavedWith": [
+          "ufer",
+          "seite"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Einen Ort beschreiben und eine Bewegung dorthin angeben",
+        "ar": "وصف مكان وإظهار الحركة إليه بنفس حرف الجر"
+      },
+      "situation": {
+        "de": "Vor dem Haus: wo ist der Parkplatz? — und wohin mit dem Gepäck?",
+        "ar": "أمام المنزل: أين موقف السيارات؟ — وإلى أين مع الأمتعة؟"
+      },
+      "successCriteria": [
+        "جملتا مكان (Wo? + Dativ) + جملتا حركة (Wohin? + Akk) بحرف الجر نفسه + أمر واحد (Imperativ Sie)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أمام الكنيسة» (مكان)؟",
+            "a": "vor der Kirche"
+          },
+          {
+            "q": "«إلى الجسر» (حركة)؟",
+            "a": "auf die Brücke"
+          },
+          {
+            "q": "«على الجانب الأيسر»؟",
+            "a": "auf der linken Seite"
+          },
+          {
+            "q": "«ضد الجدار»؟",
+            "a": "gegen die Wand"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«في القرب»؟",
+            "a": "in der Nähe"
+          },
+          {
+            "q": "«موقف السيارات خلف المنزل»؟",
+            "a": "Der Parkplatz ist hinter dem Haus."
+          },
+          {
+            "q": "«امشوا 100 متر إلى الأمام!»؟",
+            "a": "Gehen Sie 100 Meter geradeaus!"
+          },
+          {
+            "q": "«المصعد»؟",
+            "a": "der Aufzug"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الجسر» و«النفق»؟",
+            "a": "die Brücke / der Tunnel"
+          },
+          {
+            "q": "«الضفة»؟",
+            "a": "das Ufer (am Ufer)"
+          },
+          {
+            "q": "«أعلّق الصورة على الجدار» (حركة)؟",
+            "a": "Ich hänge das Bild an die Wand."
+          },
+          {
+            "q": "«الصورة على الجدار» (مكان)؟",
+            "a": "Das Bild hängt an der Wand."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Wo? → Dativ: an der Wand, im Haus, am Ufer. Wohin? → Akkusativ: an die Wand, in den Tunnel, auf die Brücke. Gegen immer Akkusativ!",
+      "ar": "أين؟ → داتيف: على الجدار، في المنزل، عند الضفة. إلى أين؟ → أكوزاتيف: إلى الجدار، إلى النفق، إلى الجسر. gegen أكوزاتيف دائماً!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Das Bild hängt an die Wand~~ / ~~Ich hänge das Bild an der Wand~~",
+          "ar": "Wo? → Dativ ↔ Wohin? → Akkusativ (نفس حرف الجر)"
+        },
+        "whyArabicSpeakerFails": "«على» واحدة بالعربية للحركة والمكان؛ الألماني يغيّر الإعراب: hängt an **der** Wand (مكان) ↔ hängt … an **die** Wand (حركة) — أعظم مصيدة إعرابية في المستوى A1 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Das Bild hängt an der Wand. · Ich hänge das Bild an die Wand.",
+          "ar": "الصورة على الجدار (مكان). · أعلّق الصورة على الجدار (حركة)."
+        },
+        "exercise": {
+          "q": "أكمل: Der Tunnel ist in ___ Tunnel (der) — Ich gehe in ___ Tunnel (der).",
+          "a": "dem / den"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~gegen der Wand~~ / ~~gegen dem Auto~~",
+          "ar": "gegen تجرّ الأكوزاتيف دائماً (بلا استثناء)"
+        },
+        "whyArabicSpeakerFails": "«ضد/نحو» بالعربية تجرّ؛ الألماني gegen أكوزاتيف خالص حتى مع السكون — لاحظ أنها ليست متأرجحة أصلاً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "gegen die Wand · gegen den Tisch",
+          "ar": "ضد الجدار · ضد الطاولة"
+        },
+        "exercise": {
+          "q": "أكمل: Das Fahrrad fährt gegen ___ (die) Wand.",
+          "a": "die"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~am Bahnhof~~ للحركة و~~an den Bahnhof~~ للمكان (معكوسة)",
+          "ar": "am/im (Dativ — مكان) ↔ an den/in den (Akk — حركة)"
+        },
+        "whyArabicSpeakerFails": "الاندماجات am/im تُسمع ككلمة واحدة فيُنسى أنها داتيف مكان فقط؛ الحركة تحتاج an den/in den المنفصلتين — تكملة مصيدة الاندماجات من الوحدة 8 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bin am Bahnhof. · Ich gehe an den Bahnhof.",
+          "ar": "أنا عند المحطة (مكان). · أذهب إلى المحطة (حركة)."
+        },
+        "exercise": {
+          "q": "أكمل: Wir warten am ___ (der) Ufer — Wir gehen an ___ (das) Ufer.",
+          "a": "Ufer (am) / das Ufer"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "an",
+      "in",
+      "vor",
+      "gegen",
+      "bruecke",
+      "tunnel",
+      "ufer",
+      "seite",
+      "parkplatz",
+      "aufzug",
+      "naehe",
+      "meter"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/gegen",
+      "https://www.duden.de/rechtschreibung/an",
+      "https://www.duden.de/rechtschreibung/Bruecke"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/gegen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-wechselpraep",
+    "ars-imperativ-sie"
+  ],
+  "audioManifestRefs": [
+    "word-an",
+    "word-in",
+    "word-vor",
+    "word-gegen",
+    "word-bruecke",
+    "word-tunnel",
+    "word-ufer",
+    "word-seite",
+    "word-parkplatz",
+    "word-aufzug",
+    "word-naehe",
+    "word-meter"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Wo? und Wohin? (Wechselpräpositionen)",
+    "goetheWordListOverlap": []
+  }
+}

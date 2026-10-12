@@ -322,3 +322,10 @@
 - **القواعد**: Imperativ (Sie) = **الفعل + Sie** (Biegen Sie links ab!) — البادئة تبقى في النهاية حتى في الأمر. مصائد d3: ترتيب الأمر · helfen+**mir** (Dativ) · abbiegen في الأمر.
 - **درس أثمن من الكلمات**: النموذج المثالي «Nehmen Sie die zweite Straße!» من الخطة الأصلية — يُدرَّس بالكلمات المأخوذة مسبقاً (nehmen/suchen) مُراجَعة.
 - البوابة: **243/243 + tsc + validator (599/0/0) + build** ✓. **544 كلمة · 51 درساً · 545 مساراً.**
+
+## D71 (2026-10-12): u9-d4 (Wechselpräpositionen — قلب الوحدة)
+
+- **u9-d4** (12 كلمة: 9 جديدة + مراجعة wand/regal/tisch): **an/in/vor (متأرجحة) + gegen (أكوزاتيف خالص)** · Brücke (Brücken) · Tunnel · Ufer (am Ufer!) · Seite · Parkplatz (Plätze) · Aufzug (Aufzüge) · Nähe · Meter. أسماء d4 قليلة لأن وحدة الأثاث أخذت معظم أسماء المكان (d4 مليء بالمراجعات المتداخلة).
+- **القاعدة الذهبية**: **Wo? → Dativ (an der Wand) ↔ Wohin? → Akkusativ (an die Wand)** · gegen = Akk دائماً · am/im (مكان) ↔ an den/in den (حركة).
+- **تذكير ذاتي**: خطأ `ar` string بدل list عاد مجدداً (لأول مرة منذ D68) — **دالة W يجب أن تقبل القوائم دائماً أو تحوّل آلياً**: `if isinstance(ar,str): ar=[ar]`. مُضاف لقائمة الفحص قبل البوابة.
+- البوابة: **243/243 + tsc + validator (612/0/0) + build** ✓. **556 كلمة · 52 درساً · 557 مساراً.**

@@ -239,3 +239,7 @@
 ## حملة المحتوى — الدفعة 26 (2026-10-12) — u9-d3 Imperativ Sie (D70)
 - **u9-d3** (12 كلمة): Entschuldigung/Stadtplan/Auskunft/Eingang/Ausgang/Problem + helfen (Dativ!) + abbiegen (منفصل) + zuerst/danach/sofort/gerne. القاعدة: **Imperativ Sie** (Biegen Sie links ab!) — أمر بأدب.
 - **544 كلمة · 51 درساً · 545 مساراً** · **243/243 أخضر** + tsc + validator (599/0/0) + build ✓. (D70) التالي: u9-d4 (Wechselpräpositionen).
+
+## حملة المحتوى — الدفعة 27 (2026-10-12) — u9-d4 Wechselpräpositionen (D71)
+- **u9-d4** (12 كلمة): an/in/vor/gegen + Brücke/Tunnel/Ufer/Seite/Parkplatz/Aufzug/Nähe/Meter. القاعدة: **Wo?→Dativ ↔ Wohin?→Akk** (an der Wand ↔ an die Wand) · gegen Akk دائماً.
+- **556 كلمة · 52 درساً · 557 مساراً** · **243/243 أخضر** + tsc + validator (612/0/0) + build ✓. (D71) التالي: u9-d5 (Satzklammer + TEKAMOLO).
