@@ -357,3 +357,10 @@
 - **u10-d2** (12 كلمة — Termine/Monate): Kalender (Gleich_plural) · Datum (**Daten**) · Dienstag/Mittwoch/Donnerstag/Freitag/Samstag (أيام der — **am** = an+dem) · Einladung · Absage · frei · besetzt · Wochenende (**Wochenenden**). مراجعة: termin/reservieren/monat.
 - **القواعد**: **am + Wochentag** (دائماً Dativ مندمج) · **التاريخ: der zwölfte Mai** (المقال + ordinal + الشهر) · القلنسوة تتكرر: Am Montag **habe ich** Zeit.
 - البوابة: **243/243 + tsc + validator (646/0/0) + build** ✓. **586 كلمة · 56 درساً · 587 مساراً.**
+
+## D76 (2026-10-12): u10-d3 (أول الماضي — Perfekt + haben)
+
+- **u10-d3** (12 كلمة): gestern · vorgestern · letzt (adjective-decl) + أفعال haben الستة: **bringen (hat gebracht) · holen · lernen · sagen · fragen · denken (hat gedacht)** + Brief · Paket · Spaziergang (Spaziergänge). مراجعة: machen/essen/kaufen (تصريفاتها تُدرَّس).
+- **القاعدة**: **Perfekt = haben (موضع 2) + التصريف الثالث آخر الجملة** — قلنسوة u9 تتضخم: Gestern **habe** ich einen Brief **geschrieben**. التصريف: ge-+جذر+t (gemacht) أو جذور قوية تُحفظ (gebracht/gedacht).
+- مصائد d3: مكان التصريف (Endstellung) · بناء التصريف · القلب بعد gestern.
+- البوابة: **243/243 + tsc + validator (659/0/0) + build** ✓. **598 كلمة · 57 درساً · 599 مساراً.**

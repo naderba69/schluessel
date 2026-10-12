@@ -260,3 +260,7 @@
 ## حملة المحتوى — الدفعة 31 (2026-10-12) — u10-d2 المواعيد (D75)
 - **u10-d2** (12 كلمة): Kalender/Datum + أيام (Dienstag…Samstag) + Einladung/Absage/frei/besetzt/Wochenende. القواعد: **am+Tag** · **der zwölfte Mai** · القلنسوة.
 - **586 كلمة · 56 درساً · 587 مساراً** · **243/243 أخضر** + tsc + validator (646/0/0) + build ✓. (D75) التالي: u10-d3 (**Perfekt haben — أول الماضي!**).
+
+## حملة المحتوى — الدفعة 32 (2026-10-12) — u10-d3 الماضي Perfekt (D76)
+- **u10-d3** (12 كلمة): gestern/vorgestern/letzt + bringen/holen/lernen/sagen/fragen/denken (haben-Perfekt) + Brief/Paket/Spaziergang. القاعدة: **habe … geschrieben** (التصريف آخر الجملة).
+- **598 كلمة · 57 درساً · 599 مساراً** · **243/243 أخضر** + tsc + validator (659/0/0) + build ✓. (D76) التالي: u10-d4 (Perfekt + Zeitangaben).

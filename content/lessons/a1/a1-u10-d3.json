@@ -1,0 +1,307 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u10-d3",
+  "level": "A1",
+  "unit": 10,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst über gestern erzählen (Perfekt mit haben): Gestern habe ich einen Brief geschrieben.",
+    "ar": "تحكي ماذا فعلت أمس بالماضي المركب (haben + التصريف الثالث)"
+  },
+  "canDoDaily": [
+    "يحكي 3 أفعال أمس بصيغة Perfekt (habe + التصريف في النهاية)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "machen",
+      "essen",
+      "kaufen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أمس كتبت رسالة» — أين يذهب geschrieben؟"
+        },
+        "choices": [
+          "Gestern habe ich einen Brief geschrieben (آخر الجملة)",
+          "Gestern habe ich geschrieben einen Brief",
+          "Gestern geschrieben habe ich einen Brief"
+        ],
+        "answer": "Gestern habe ich einen Brief geschrieben (آخر الجملة)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "gestern",
+      "vorgestern",
+      "letzt",
+      "bringen",
+      "holen",
+      "lernen",
+      "sagen",
+      "fragen",
+      "denken",
+      "brief",
+      "paket",
+      "spaziergang"
+    ],
+    "grammarArsenalIds": [
+      "ars-perfekt-haben"
+    ],
+    "storySentenceIds": [
+      "story-a10-u10-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أمس تعلمت الألمانية»؟",
+            "a": "Gestern habe ich Deutsch gelernt."
+          },
+          {
+            "q": "«أول أمس كنت في البيت»؟",
+            "a": "Vorgestern war ich zu Hause."
+          }
+        ],
+        "interleavedWith": [
+          "gestern",
+          "lernen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«سألت الطبيب»؟",
+            "a": "Ich habe den Arzt gefragt."
+          },
+          {
+            "q": "«هذا قلته»؟",
+            "a": "Das habe ich gesagt."
+          }
+        ],
+        "interleavedWith": [
+          "fragen",
+          "sagen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«جلبت الطرد»؟",
+            "a": "Ich habe das Paket gebracht."
+          },
+          {
+            "q": "«خرجت في نزهة»؟",
+            "a": "Ich habe einen Spaziergang gemacht."
+          }
+        ],
+        "interleavedWith": [
+          "paket",
+          "spaziergang"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Erzählen, was du gestern gemacht hast",
+        "ar": "الحكي: ماذا فعلت أمس؟"
+      },
+      "situation": {
+        "de": "Am Abend: Was hast du gestern gemacht?",
+        "ar": "مساءً: ماذا فعلت أمس؟"
+      },
+      "successCriteria": [
+        "3 جمل Perfekt (habe + مفعول + التصريف في النهاية) + ظرف واحد (gestern/vorgestern/letzte Woche)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أمس» و«أول أمس»؟",
+            "a": "gestern / vorgestern"
+          },
+          {
+            "q": "«أمس أكلت بيتزا»؟",
+            "a": "Gestern habe ich Pizza gegessen."
+          },
+          {
+            "q": "«يجلب» — والماضي؟",
+            "a": "bringen — hat gebracht"
+          },
+          {
+            "q": "«رسالة بريدية»؟",
+            "a": "der Brief"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«سألت الطبيب»؟",
+            "a": "Ich habe den Arzt gefragt."
+          },
+          {
+            "q": "«يفكر» — والماضي؟",
+            "a": "denken — hat gedacht"
+          },
+          {
+            "q": "«طرد»؟",
+            "a": "das Paket"
+          },
+          {
+            "q": "«الأسبوع الماضي»؟",
+            "a": "letzte Woche"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«ذهبت وجلبت الرسالة»؟",
+            "a": "Ich habe den Brief geholt."
+          },
+          {
+            "q": "«يتعلم» — والماضي؟",
+            "a": "lernen — hat gelernt"
+          },
+          {
+            "q": "«نزهة»؟",
+            "a": "der Spaziergang"
+          },
+          {
+            "q": "«في ذلك فكّرت كثيراً»؟",
+            "a": "Darüber habe ich viel gedacht."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Gestern habe ich einen Brief geschrieben, das Paket geholt und viel gelernt. Das Perfekt: haben in Position 2 — das Partizip am Ende!",
+      "ar": "أمس كتبت رسالة، وجلبت الطرد، وتعلمت كثيراً. الماضي المركب: haben في الموضع الثاني — والتصريف في النهاية!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Gestern habe ich gegessen Pizza~~ / ~~Gestern habe ich Pizza gemacht~~ (أي فعل)",
+          "ar": "التصريف الثالث يُغلق القلنسوة: آخر الجملة دائماً"
+        },
+        "whyArabicSpeakerFails": "العربية تضع الفعل الماضي قريباً من مكانه الأصلي؛ الألماني يرسل التصريف (geschrieben/gegessen) إلى أقصى اليمين — قلنسوة u9 تتضخم بالماضي (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Gestern habe ich Pizza gegessen.",
+          "ar": "أمس أكلت بيتزا."
+        },
+        "exercise": {
+          "q": "أكمل: Ich habe einen Brief ___ (schreiben).",
+          "a": "geschrieben"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe gemachet~~ / ~~Ich habe machte~~ / ~~Ich habe gegeessen~~",
+          "ar": "التصريف: ge- + الجذر + t (أو الجذور القوية تُحفظ)"
+        },
+        "whyArabicSpeakerFails": "لا ge- ولا t في العربية؛ القاعدة المنتظمة gemacht/gelernt/gewünscht والجذور القوية gebracht/gedacht/geschrieben تُحفظ كبطاقات — لا تركيب حر (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "gemacht · gelernt · gebracht · geschrieben",
+          "ar": "عمل · تعلّم · جلب · كتب (تصريفات)"
+        },
+        "exercise": {
+          "q": "كوّن التصريف: machen → ___ · bringen → ___",
+          "a": "gemacht / gebracht"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Gestern ich habe Zeit gehabt~~",
+          "ar": "القلنسوة بالماضي: بعد gestern يقلب (habe ich) والتصريف آخر شيء"
+        },
+        "whyArabicSpeakerFails": "مصيدة u9-d5/u10-d2 تكتمل هنا: كل مقدمة (gestern · letzte Woche) تدفع haben للموضع الثاني — والتذكير: hab**e** وليس hab**t** للمتكلم (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Gestern habe ich Zeit gehabt.",
+          "ar": "أمس كان عندي وقت."
+        },
+        "exercise": {
+          "q": "رتّب: gestern · habe · ich · gelernt",
+          "a": "Gestern habe ich gelernt."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "gestern",
+      "vorgestern",
+      "letzt",
+      "bringen",
+      "holen",
+      "lernen",
+      "sagen",
+      "fragen",
+      "denken",
+      "brief",
+      "paket",
+      "spaziergang"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/bringen",
+      "https://www.duden.de/rechtschreibung/denken",
+      "https://www.duden.de/rechtschreibung/gestern"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/bringen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-perfekt-haben"
+  ],
+  "audioManifestRefs": [
+    "word-gestern",
+    "word-vorgestern",
+    "word-letzt",
+    "word-bringen",
+    "word-holen",
+    "word-lernen",
+    "word-sagen",
+    "word-fragen",
+    "word-denken",
+    "word-brief",
+    "word-paket",
+    "word-spaziergang"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Was hast du gestern gemacht? (Perfekt)",
+    "goetheWordListOverlap": []
+  }
+}
