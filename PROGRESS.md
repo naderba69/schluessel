@@ -268,3 +268,7 @@
 ## حملة المحتوى — الدفعة 33 (2026-10-12) — u10-d4 الماضي بالزمن (D77)
 - **u10-d4** (12 كلمة): neulich/damals/vorher/nachher/endlich/plötzlich + vereinbaren/aufschreiben (auf-geschrieben!) + Erinnerung/Notiz/richtig/falsch.
 - **610 كلمة · 58 درساً · 611 مساراً** · **243/243 أخضر** + tsc + validator (672/0/0) + build ✓. (D77) التالي: u10-d5 (**أول weil — تفسير السبب**).
+
+## حملة المحتوى — الدفعة 34 (2026-10-12) — u10-d5 جملة weil (D78)
+- **u10-d5** (12 كلمة): weil/warum/deshalb/darum + wichtig/dringend/krank/unwohl/Ruhe/Stress/Notfall/ausruhen. القاعدة: **weil → الفعل آخر الجملة** · القلب عند البدء بجملة السبب.
+- **622 كلمة · 59 درساً · 623 مساراً** · **243/243 أخضر** + tsc + validator (685/0/0) + build ✓. (D78) التالي: **u10-d6 (المعركة — إتمام الوحدة 10)**.

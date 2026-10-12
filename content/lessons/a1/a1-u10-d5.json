@@ -1,0 +1,307 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u10-d5",
+  "level": "A1",
+  "unit": 10,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst einen Grund nennen: Ich brauche einen Termin, weil ich krank bin — und weil-Sätze richtig bilden (Verb am Ende!).",
+    "ar": "تفسّر السبب بجملة weil (الفعل في نهاية جملة السبب!)"
+  },
+  "canDoDaily": [
+    "يشرح سبب طلبه بجملة weil واحدة صحيحة (الفعل آخر جملة السبب)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "brauchen",
+      "muede",
+      "schlafen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أحتاج موعداً لأنني مريض» — أين يذهب bin في جملة weil؟"
+        },
+        "choices": [
+          "weil ich krank bin (آخر الجملة)",
+          "weil ich bin krank",
+          "weil bin ich krank"
+        ],
+        "answer": "weil ich krank bin (آخر الجملة)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "weil",
+      "warum",
+      "deshalb",
+      "darum",
+      "wichtig",
+      "dringend",
+      "krank",
+      "unwohl",
+      "ruhe",
+      "stress",
+      "notfall",
+      "ausruhen"
+    ],
+    "grammarArsenalIds": [
+      "ars-weil-satz"
+    ],
+    "storySentenceIds": [
+      "story-a10-u10-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أحتاج موعداً لأنني مريض»؟",
+            "a": "Ich brauche einen Termin, weil ich krank bin."
+          },
+          {
+            "q": "«لماذا تحتاجون موعداً؟»؟",
+            "a": "Warum brauchen Sie einen Termin?"
+          }
+        ],
+        "interleavedWith": [
+          "weil",
+          "warum"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أنا مريض، لهذا أحتاج موعداً»؟",
+            "a": "Ich bin krank, deshalb brauche ich einen Termin."
+          },
+          {
+            "q": "«الأمر عاجل»؟",
+            "a": "Es ist dringend."
+          }
+        ],
+        "interleavedWith": [
+          "deshalb",
+          "dringend"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«يجب أن أستريح»؟",
+            "a": "Ich muss mich ausruhen."
+          },
+          {
+            "q": "«هذه حالة طوارئ»؟",
+            "a": "Das ist ein Notfall."
+          }
+        ],
+        "interleavedWith": [
+          "ausruhen",
+          "notfall"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Einen Termin mit Grund vereinbaren",
+        "ar": "طلب موعد مع ذكر السبب"
+      },
+      "situation": {
+        "de": "Am Telefon: einen Termin vereinbaren — warum? weil…",
+        "ar": "بالهاتف: طلب موعد — لماذا؟ لأن…"
+      },
+      "successCriteria": [
+        "جملة طلب + جملة weil (الفعل آخرها) + سبب واحد من الكلمات (krank/Unwohl/Stress/Notfall)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«لأن»؟",
+            "a": "weil"
+          },
+          {
+            "q": "«أحتاج موعداً لأنني مريض»؟",
+            "a": "Ich brauche einen Termin, weil ich krank bin."
+          },
+          {
+            "q": "«لماذا؟»؟",
+            "a": "warum?"
+          },
+          {
+            "q": "«مهم» و«عاجل»؟",
+            "a": "wichtig / dringend"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«لهذا اتصلت»؟",
+            "a": "Darum habe ich angerufen."
+          },
+          {
+            "q": "«أنا لا أشعر براحة»؟",
+            "a": "Ich fühle mich unwohl."
+          },
+          {
+            "q": "«الراحة»؟",
+            "a": "die Ruhe"
+          },
+          {
+            "q": "«يجب أن أستريح»؟",
+            "a": "Ich muss mich ausruhen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«هذه حالة طوارئ»؟",
+            "a": "Das ist ein Notfall."
+          },
+          {
+            "q": "«عندي ضغط في العمل»؟",
+            "a": "Ich habe Stress in der Arbeit."
+          },
+          {
+            "q": "«أنا مريض، لهذا أحتاج موعداً»؟",
+            "a": "Ich bin krank, deshalb brauche ich einen Termin."
+          },
+          {
+            "q": "«مريض»؟",
+            "a": "krank"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Warum? — Weil ich krank bin! Das Verb wandert in weil-Sätzen ans Ende. Und deshalb: Verb an Position 2 — ganz normal.",
+      "ar": "لماذا؟ — لأنني مريض! الفعل يهاجر إلى النهاية في جمل weil. أما deshalb: الفعل في الموضع الثاني كالعادة."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~weil ich bin krank~~ / ~~weil ich krank bin~~ معاً مقبولان؟ لا!",
+          "ar": "weil ترسل الفعل إلى النهاية — دائماً"
+        },
+        "whyArabicSpeakerFails": "«لأنني مريض» بالعربية تحافظ على ترتيب «أنا مريض»؛ الألماني يغيّر: weil ich krank **bin** — الفعل الأخير يُقال آخر شيء قبل الفاصلة — عكس القلنسوة تماماً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich brauche einen Termin, weil ich krank bin.",
+          "ar": "أحتاج موعداً لأنني مريض."
+        },
+        "exercise": {
+          "q": "أكمل: …, weil ich Zeit ___ (haben).",
+          "a": "habe"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Weil ich krank bin, ich brauche einen Termin~~",
+          "ar": "إذا بدأت بجملة weil: الجملة الرئيسية تقلب (brauche ich)"
+        },
+        "whyArabicSpeakerFails": "الجملة الاسمية بعد «لأن» تبقى كما هي بالعربية؛ الألماني يعامل بداية الجملة السببية كمقدمة زمنية: Weil ich krank bin, **brauche** ich … — القلب إجباري (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Weil ich krank bin, brauche ich einen Termin.",
+          "ar": "لأنني مريض، أحتاج موعداً."
+        },
+        "exercise": {
+          "q": "رتّب: weil ich müde bin · habe · ich · deshalb",
+          "a": "Weil ich müde bin, habe ich deshalb…؟ (الصواب: …, deshalb habe ich Zeit)"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Deshalb ich brauche~~ / ~~darum brauche ich~~ دائماً بالعكس",
+          "ar": "deshalb/darum = ظروف: الفعل يبقى في الموضع الثاني بعدهما"
+        },
+        "whyArabicSpeakerFails": "«لهذا أحتاج» بالعربية بلا قلب؛ الألماني يقلب بعد deshalb/darum تماماً مثل morgen/gestern: deshalb **brauche** ich — القلنسوة لا تتخلى عن قواعدها (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Deshalb brauche ich einen Termin.",
+          "ar": "لهذا أحتاج موعداً."
+        },
+        "exercise": {
+          "q": "أكمل: Darum ___ (haben) ich angerufen.",
+          "a": "habe"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "weil",
+      "warum",
+      "deshalb",
+      "darum",
+      "wichtig",
+      "dringend",
+      "krank",
+      "unwohl",
+      "ruhe",
+      "stress",
+      "notfall",
+      "ausruhen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/weil",
+      "https://www.duden.de/rechtschreibung/deshalb",
+      "https://www.duden.de/rechtschreibung/Notfall"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/weil"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-weil-satz"
+  ],
+  "audioManifestRefs": [
+    "word-weil",
+    "word-warum",
+    "word-deshalb",
+    "word-darum",
+    "word-wichtig",
+    "word-dringend",
+    "word-krank",
+    "word-unwohl",
+    "word-ruhe",
+    "word-stress",
+    "word-notfall",
+    "word-ausruhen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Warum? Weil… (erster weil-Satz)",
+    "goetheWordListOverlap": []
+  }
+}

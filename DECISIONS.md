@@ -371,3 +371,10 @@
 - **قواعد**: الظرف داخل القلنسوة (habe **neulich** angerufen) أو مقدَّماً مع القلب · **التصريف المنفصل: auf-geschrieben** (ge بين البادئة والجذر!) · مقدمة adjective-decl (das richtige Buch).
 - مصائد d4: مكان الظرف بعد التصريف · بناء التصريف المنفصل · اقتران الصفة.
 - البوابة: **243/243 + tsc + validator (672/0/0) + build** ✓. **610 كلمة · 58 درساً · 611 مساراً.**
+
+## D78 (2026-10-12): u10-d5 (أول جملة weil — تفسير السبب)
+
+- **u10-d5** (12 كلمة): **weil** · warum · **deshalb** · darum · wichtig · dringend · krank · unwohl · Ruhe · Stress · Notfall (**Notfälle**) · ausruhen (reflexive+trennbar: hat **aus-geruht**). مراجعة: brauchen/muede/schlafen.
+- **القاعدة**: **weil ترسل الفعل إلى النهاية** (…, weil ich krank **bin**) — عكس القلنسوة تماماً · إذا بدأت بجملة weil: الجملة الرئيسية تقلب (Weil ich krank bin, **brauche** ich …) · **deshalb/darum ظروف**: الفعل ثانٍ بعدهما.
+- **ملاحظة منهجية**: كلمات العَرَض الطبي (kopfschmerz/schwindel/krankmeldung) تُترك للوحدة 11 (الصحة) — لا سرقة مادة.
+- البوابة: **243/243 + tsc + validator (685/0/0) + build** ✓. **622 كلمة · 59 درساً · 623 مساراً.**
