@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d3",
+  "level": "A1",
+  "unit": 9,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst höflich um Hilfe bitten und den Weg mit Imperativ (Sie) erklären: Nehmen Sie …, Biegen Sie … ab, Helfen Sie mir!",
+    "ar": "تطلب المساعدة بأدب وتوجّه الأمر بلطف (Imperativ مع Sie + helfen + Dativ)"
+  },
+  "canDoDaily": [
+    "يوجّه أمرين بأدب بصيغة Sie + يطلب المساعدة بجملة helfen + Dativ صحيحة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "nehmen",
+      "suchen",
+      "wohin"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«انعطفوا يساراً من فضلكم» — أي ترتيب هو الصحيح للـImperativ (Sie)?"
+        },
+        "choices": [
+          "Biegen Sie links ab, bitte!",
+          "Sie biegen links ab, bitte!",
+          "Biegen links Sie ab, bitte!"
+        ],
+        "answer": "Biegen Sie links ab, bitte!",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "entschuldigung",
+      "stadtplan",
+      "auskunft",
+      "eingang",
+      "ausgang",
+      "problem",
+      "helfen",
+      "abbiegen",
+      "zuerst",
+      "danach",
+      "sofort",
+      "gerne"
+    ],
+    "grammarArsenalIds": [
+      "ars-imperativ-sie",
+      "ars-weg-verkehr"
+    ],
+    "storySentenceIds": [
+      "story-a9-u9-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هل يمكنكم مساعدتي؟»؟",
+            "a": "Können Sie mir helfen?"
+          },
+          {
+            "q": "«خذوا الشارع الثاني بعد ذلك»؟",
+            "a": "Danach nehmen Sie die zweite Straße."
+          }
+        ],
+        "interleavedWith": [
+          "helfen",
+          "danach"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«عفواً، أين المدخل؟»؟",
+            "a": "Entschuldigung, wo ist der Eingang?"
+          },
+          {
+            "q": "«المخرج هناك»؟",
+            "a": "Der Ausgang ist dort."
+          }
+        ],
+        "interleavedWith": [
+          "entschuldigung",
+          "eingang"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أولاً إلى الأمام، ثم يميناً!»؟",
+            "a": "Zuerst geradeaus, dann rechts!"
+          },
+          {
+            "q": "«بكل سرور!»؟",
+            "a": "Gern! / Sehr gerne!"
+          }
+        ],
+        "interleavedWith": [
+          "zuerst",
+          "gerne"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Nach dem Weg fragen und ihn mit Imperativ (Sie) höflich erklären",
+        "ar": "السؤال عن الطريق وتوجيهه بأدب بصيغة الأمر"
+      },
+      "situation": {
+        "de": "Am Eingang des Hauptbahnhofs: nach der Auskunft fragen",
+        "ar": "عند مدخل المحطة المركزية: السؤال عن الاستعلامات"
+      },
+      "successCriteria": [
+        "أمرين بصيغة Sie (Biegen Sie …! / Nehmen Sie …!) + جملة helfen (mir) + عبارة أدب واحدة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«عفواً»؟",
+            "a": "Entschuldigung"
+          },
+          {
+            "q": "«يساعد» (والمصدر)؟",
+            "a": "helfen (er hilft)"
+          },
+          {
+            "q": "«انعطفوا يساراً!»؟",
+            "a": "Biegen Sie links ab!"
+          },
+          {
+            "q": "«أولاً ثم بعد ذلك»؟",
+            "a": "zuerst / danach"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«خريطة المدينة»؟",
+            "a": "der Stadtplan"
+          },
+          {
+            "q": "«المدخل والمخرج»؟",
+            "a": "der Eingang / der Ausgang"
+          },
+          {
+            "q": "«لا مشكلة!»؟",
+            "a": "Kein Problem!"
+          },
+          {
+            "q": "«فوراً»؟",
+            "a": "sofort"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الاستعلامات»؟",
+            "a": "die Auskunft"
+          },
+          {
+            "q": "«بكل سرور»؟",
+            "a": "gern / gerne"
+          },
+          {
+            "q": "«هل يمكنكم مساعدتي؟»؟",
+            "a": "Können Sie mir helfen?"
+          },
+          {
+            "q": "«خذوا الشارع الثاني!»؟",
+            "a": "Nehmen Sie die zweite Straße!"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Entschuldigung! Helfen Sie mir, bitte! — Zuerst geradeaus, danach rechts, und dann: Biegen Sie links ab! Kein Problem.",
+      "ar": "عفواً! ساعدوني من فضلكم! — أولاً إلى الأمام، ثم يميناً، ثم: انعطفوا يساراً! لا مشكلة."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Sie biegen links ab, bitte!~~ / ~~Biegen links Sie ab!~~",
+          "ar": "Imperativ (Sie): الفعل أولاً ثم Sie مباشرة"
+        },
+        "whyArabicSpeakerFails": "الأمر العربي «انعطفوا» بلا ضمير مرئي أو بترتيب مختلف؛ الألماني يبدأ بالفعل ثم يضمير Sie: Biegen Sie …! — ترتيب غير موجود بالعربية إطلاقاً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Biegen Sie links ab, bitte!",
+          "ar": "انعطفوا يساراً من فضلكم!"
+        },
+        "exercise": {
+          "q": "رتّب: (abbiegen) (Sie) (links) (bitte) — بصيغة الأمر.",
+          "a": "Abbiegen? → Biegen Sie links ab, bitte!"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Helfen Sie mich!~~ / ~~Ich helfe dich~~",
+          "ar": "helfen فعل داتيفي — يجرّ المفعول بالداتيف"
+        },
+        "whyArabicSpeakerFails": "«ساعدني» بالمفعول المضمر واحد؛ الألماني helfen يفرض الداتيف: helfen Sie **mir** (وليس mich) — تثبيت مصيدة الأفعال الناقمة من الوحدة 8 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Helfen Sie mir, bitte!",
+          "ar": "ساعدوني من فضلكم!"
+        },
+        "exercise": {
+          "q": "أكمل: Helfen Sie ___ (ich)!",
+          "a": "mir"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Biegen Sie ab links!~~ / ~~Abbiegen Sie links!~~",
+          "ar": "الفعل المنفصل في الأمر: البادئة تبقى في النهاية"
+        },
+        "whyArabicSpeakerFails": "البادئة لا تنفصل بالعربية؛ في الأمر الألماني يبقى الفعل المنفصل مقصوصاً: Biegen Sie links **ab**! — مصيدة d2 تتكرر هنا بالصيغة الأمر (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Biegen Sie links ab!",
+          "ar": "انعطفوا يساراً!"
+        },
+        "exercise": {
+          "q": "أكمل: Nehmen Sie die zweite Straße und ___ Sie links ___ (abbiegen)!",
+          "a": "biegen / ab"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "entschuldigung",
+      "stadtplan",
+      "auskunft",
+      "eingang",
+      "ausgang",
+      "problem",
+      "helfen",
+      "abbiegen",
+      "zuerst",
+      "danach",
+      "sofort",
+      "gerne"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/helfen",
+      "https://www.duden.de/rechtschreibung/Entschuldigung",
+      "https://www.duden.de/rechtschreibung/abbiegen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/helfen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-imperativ-sie",
+    "ars-weg-verkehr"
+  ],
+  "audioManifestRefs": [
+    "word-entschuldigung",
+    "word-stadtplan",
+    "word-auskunft",
+    "word-eingang",
+    "word-ausgang",
+    "word-problem",
+    "word-helfen",
+    "word-abbiegen",
+    "word-zuerst",
+    "word-danach",
+    "word-sofort",
+    "word-gerne"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Höflich nach dem Weg fragen (Imperativ Sie)",
+    "goetheWordListOverlap": []
+  }
+}

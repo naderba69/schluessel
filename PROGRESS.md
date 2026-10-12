@@ -235,3 +235,7 @@
 ## حملة المحتوى — الدفعة 25 (2026-10-12) — u9-d2 المواصلات (D69)
 - **u9-d2** (17 كلمة): Haltestelle/Hauptbahnhof/Bahnsteig/Abfahrt/Ankunft/Verkehr/Linie/Kreuzung/Richtung + **umsteigen/einsteigen/aussteigen** (منفصلة) + weit/nah/überall/vorbei/hin. مراجعة: fahrkarte/fahrrad/minute. مصائد: المنفصلة · in+Akk↔in+Dativ · wo↔wohin.
 - **532 كلمة · 50 درساً · 533 مساراً** · **243/243 أخضر** + tsc + validator (586/0/0) + build ✓. (D69) التالي: u9-d3.
+
+## حملة المحتوى — الدفعة 26 (2026-10-12) — u9-d3 Imperativ Sie (D70)
+- **u9-d3** (12 كلمة): Entschuldigung/Stadtplan/Auskunft/Eingang/Ausgang/Problem + helfen (Dativ!) + abbiegen (منفصل) + zuerst/danach/sofort/gerne. القاعدة: **Imperativ Sie** (Biegen Sie links ab!) — أمر بأدب.
+- **544 كلمة · 51 درساً · 545 مساراً** · **243/243 أخضر** + tsc + validator (599/0/0) + build ✓. (D70) التالي: u9-d4 (Wechselpräpositionen).

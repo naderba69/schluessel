@@ -315,3 +315,10 @@
 - مصائد d2 الثلاث: **الفعل المنفصل** (~~Ich umsteige~~ → Ich steige … um) · **in + Akk (إلى داخل) ↔ in + Dativ (داخل)** · **wo ↔ wohin** و hin ↔ zurück.
 - **الإنتاج السريع الموثوق**: كلمات بالمقالب الصحيح ← tuples ← توليد `one` (17 مقطعاً بـ36 ثانية) ← إدراج مسارات المانيفست آلياً قبل char-track مع metrics من `one` — البوابة الصوتية (hash/duration/RMS) تتحقق من كل شيء. **لم نعد نعيد بناء الصوت كاملاً (16 دقيقة)** إلا عند تغيّر الصياغة.
 - البوابة: **243/243 + tsc + validator (586/0/0) + build** ✓ من المحاولة الأولى. **532 كلمة · 50 درساً · 533 مساراً.**
+
+## D70 (2026-10-12): u9-d3 (الأدب والأمر — Imperativ Sie)
+
+- **u9-d3** (12 كلمة: 10 جديدة + مراجعة nehmen/suchen): Entschuldigung (-igung) · Stadtplan (**Stadtpläne**) · Auskunft (**Auskünfte**) · Eingang (**Eingänge**) · Ausgang (**Ausgänge**) · Problem (Kein Problem!) · **helfen (فعل داتيفي!)** · **abbiegen (منفصل)** · zuerst · danach · sofort · gerne.
+- **القواعد**: Imperativ (Sie) = **الفعل + Sie** (Biegen Sie links ab!) — البادئة تبقى في النهاية حتى في الأمر. مصائد d3: ترتيب الأمر · helfen+**mir** (Dativ) · abbiegen في الأمر.
+- **درس أثمن من الكلمات**: النموذج المثالي «Nehmen Sie die zweite Straße!» من الخطة الأصلية — يُدرَّس بالكلمات المأخوذة مسبقاً (nehmen/suchen) مُراجَعة.
+- البوابة: **243/243 + tsc + validator (599/0/0) + build** ✓. **544 كلمة · 51 درساً · 545 مساراً.**
