@@ -7,7 +7,7 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
-  Unit0Deck, CultureCard, CyclicTest, Modelltest, SCHEMA_VERSION,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, SCHEMA_VERSION,
 } from "../content/schemas/index.js";
 import { VOICE_ID, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
 
@@ -39,7 +39,7 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
 
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "lese" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -51,6 +51,7 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("landeskunde/")) return "landeskunde";
   if (p.startsWith("pruefungen/")) return "pruefungen";
   if (p.startsWith("modelltest/")) return "modelltest";
+  if (p.startsWith("lese/")) return "lese";
   return "unknown";
 }
 
@@ -158,6 +159,12 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
             if (!skills.includes(need))
               push("error", "e-modelltest-skill", entry.path, `مهارة مفقودة من الامتحان: ${need}`);
           }
+          break;
+        }
+        case "lese": {
+          const r = ReadingText.parse(entry.data); // D97: نصوص القراءة
+          if (r.questions.length < 2)
+            push("error", "e-lese-questions", entry.path, "نص قراءة بلا أسئلة كافية (≥2)");
           break;
         }
         case "pruefungen": {

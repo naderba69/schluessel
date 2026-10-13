@@ -892,6 +892,35 @@ export const ALL_MODELLTESTS = [
 /** مانيفست الصور — الترميز المزدوج (D96) */
 export const ALL_IMAGES = imageManifest.assets;
 
+import leseLeseU1 from "../content/lese/a1-lese-u1.json";
+import leseLeseU10 from "../content/lese/a1-lese-u10.json";
+import leseLeseU11 from "../content/lese/a1-lese-u11.json";
+import leseLeseU12 from "../content/lese/a1-lese-u12.json";
+import leseLeseU2 from "../content/lese/a1-lese-u2.json";
+import leseLeseU3 from "../content/lese/a1-lese-u3.json";
+import leseLeseU4 from "../content/lese/a1-lese-u4.json";
+import leseLeseU5 from "../content/lese/a1-lese-u5.json";
+import leseLeseU6 from "../content/lese/a1-lese-u6.json";
+import leseLeseU7 from "../content/lese/a1-lese-u7.json";
+import leseLeseU8 from "../content/lese/a1-lese-u8.json";
+import leseLeseU9 from "../content/lese/a1-lese-u9.json";
+
+/** نصوص القراءة (D97) */
+export const ALL_LESETEXTS = [
+  leseLeseU1,
+  leseLeseU10,
+  leseLeseU11,
+  leseLeseU12,
+  leseLeseU2,
+  leseLeseU3,
+  leseLeseU4,
+  leseLeseU5,
+  leseLeseU6,
+  leseLeseU7,
+  leseLeseU8,
+  leseLeseU9,
+];
+
 const WORD_JSONS = [
   wordAbbiegen,
   wordAbend,

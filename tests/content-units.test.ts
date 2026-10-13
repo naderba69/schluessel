@@ -1,6 +1,6 @@
 // content-units.test.ts — المحتوى حيّ: كل درس وكلماته تعمل على المُشغِّل (D45)
 import { describe, it, expect } from "vitest";
-import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
 
 describe("سجل المحتوى — الوحدة 1 كاملة + بداية الوحدة 2", () => {
@@ -130,6 +130,18 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
       expect(a.usedInLessons.length).toBeGreaterThan(0);
       expect(a.file.length).toBeGreaterThan(0);
       expect(a.license.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("نصوص القراءة: نص لكل وحدة + أسئلة + مسرد + حدود الصدق", () => {
+    expect(ALL_LESETEXTS.length).toBe(12);
+    const units = ALL_LESETEXTS.map((t) => t.unit).sort((a, b) => a - b);
+    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    for (const t of ALL_LESETEXTS) {
+      expect(t.text.de.length).toBeGreaterThanOrEqual(40);
+      expect(t.glossary.length).toBeGreaterThanOrEqual(1);
+      expect(t.questions.length).toBeGreaterThanOrEqual(2);
+      expect(t.sourceNote.length).toBeGreaterThan(0);
     }
   });
 });
