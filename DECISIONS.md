@@ -430,3 +430,9 @@
 - **u12-d1** (12 كلمة Reise): Ziel · Hotel (**Hotels** -s مستعار) · Reservierung · Fahrt · **abfahren (trennbar — fährt ab)** · besichtigen · **Sehenswürdigkeit (Sehenswürdigkeiten)** · Ausland (ins Ausland) · **Pass (Pässe)** · **Visum (Visa)** · Ausflug (Ausflüge) · Tourist (Touristen n-dekl). مراجعة: reisen/zug/urlaub.
 - **قواعد d1**: **الفعل المنفصل: البادئة ab آخر الجملة** (fährt um 8 ab) — القلنسوة الثالثة · الوجهة **ins** ↔ المكان **im** (Wechselpräp يعود) · ثلاثة أنماط جمع في ثلاث وثائق (Pässe/Visa/Hotels).
 - البوابة: **243/243 + tsc + validator (765/0/0) + build** ✓. **694 كلمة · 67 درساً · 695 مساراً.**
+
+## D87 (2026-10-12): u12-d2 (المحطة والفندق — الأسئلة)
+
+- **u12-d2** (12 كلمة): Gleis · Rezeption · **Doppelzimmer/Einzelzimmer** (مركّبان) · Aussicht · **Bad (Bäder)** · buchen · **Empfang (Empfänge)** · Halle · **Verspätung (hat Verspätung!)** · verpassen · **zurückgeben (trennbar — Geben Sie … zurück!)**. مراجعة: suchen/zeigen/ankommen.
+- **قواعد d2**: التأخير «شيء تملكه»: **hat Verspätung** (لا ist) · الأمر بالفعل المنفصل: Verb+Sie+…+**zurück** · **von welchem** (von+Dativ في السؤال).
+- البوابة: **243/243 + tsc + validator (778/0/0) + build** ✓. **706 كلمة · 68 درساً · 707 مساراً.**

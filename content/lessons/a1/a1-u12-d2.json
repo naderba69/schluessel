@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u12-d2",
+  "level": "A1",
+  "unit": 12,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst nach dem Zug und dem Hotel fragen: Von welchem Gleis fährt der Zug? Ich möchte ein Doppelzimmer buchen — der Zug hat Verspätung.",
+    "ar": "تسأل عن القطار والفندق (رصيف · حجز · تأخير)"
+  },
+  "canDoDaily": [
+    "يسأل عن الرصيف والحجز ويخبر عن التأخير بجملتين + جملة أمر بفعل منفصل"
+  ],
+  "warmup": {
+    "cardIds": [
+      "suchen",
+      "zeigen",
+      "ankommen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«القطار متأخر» — أي فعل؟"
+        },
+        "choices": [
+          "Der Zug hat Verspätung (hat)",
+          "Der Zug ist Verspätung",
+          "Der Zug hat verspätet"
+        ],
+        "answer": "Der Zug hat Verspätung (hat)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "gleis",
+      "rezeption",
+      "doppelzimmer",
+      "einzelzimmer",
+      "aussicht",
+      "bad",
+      "buchen",
+      "empfang",
+      "halle",
+      "verspaetung",
+      "verpassen",
+      "zurueckgeben"
+    ],
+    "grammarArsenalIds": [
+      "ars-trennbar",
+      "ars-modal-fix"
+    ],
+    "storySentenceIds": [
+      "story-a12-u12-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«من أي رصيف يغادر القطار؟»؟",
+            "a": "Von welchem Gleis fährt der Zug?"
+          },
+          {
+            "q": "«القطار متأخر»؟",
+            "a": "Der Zug hat Verspätung."
+          }
+        ],
+        "interleavedWith": [
+          "gleis",
+          "verspaetung"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أريد حجز غرفة مزدوجة»؟",
+            "a": "Ich möchte ein Doppelzimmer buchen."
+          },
+          {
+            "q": "«الاستقبال على اليسار»؟",
+            "a": "Der Empfang ist links."
+          }
+        ],
+        "interleavedWith": [
+          "doppelzimmer",
+          "empfang"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«فاتني القطار»؟",
+            "a": "Ich habe den Zug verpasst."
+          },
+          {
+            "q": "«أعيدوا المفتاح!»؟",
+            "a": "Geben Sie den Schlüssel zurück!"
+          }
+        ],
+        "interleavedWith": [
+          "verpassen",
+          "zurueckgeben"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Nach Zug und Hotel fragen",
+        "a": "x",
+        "ar": "السؤال عن القطار والفندق"
+      },
+      "situation": {
+        "de": "Am Bahnhof und im Hotel: Gleis? Verspätung? Zimmer?",
+        "a": "x",
+        "ar": "في المحطة والفندق: الرصيف؟ التأخير؟ الغرفة؟"
+      },
+      "successCriteria": [
+        "سؤال رصيف (von welchem …) + جملة تأخير (hat Verspätung) + جملة حجز (möchte … buchen) + جملة أمر بفعل منفصل"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«رصيف (القطار)»؟",
+            "a": "das Gleis"
+          },
+          {
+            "q": "«الاستقبال (الفندق)»؟",
+            "a": "die Rezeption"
+          },
+          {
+            "q": "«غرفة مزدوجة» و«مفردة»؟",
+            "a": "das Doppelzimmer / das Einzelzimmer"
+          },
+          {
+            "q": "«الإطلالة»؟",
+            "a": "die Aussicht"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«حمّام» والجمع؟",
+            "a": "das Bad → die Bäder"
+          },
+          {
+            "q": "«يحجز»؟",
+            "a": "buchen (ich möchte buchen)"
+          },
+          {
+            "q": "«صالة»؟",
+            "a": "die Halle"
+          },
+          {
+            "q": "«القطار متأخر»؟",
+            "a": "Der Zug hat Verspätung."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«فاتني القطار»؟",
+            "a": "Ich habe den Zug verpasst."
+          },
+          {
+            "q": "«أعيدوا المفتاح!»؟",
+            "a": "Geben Sie den Schlüssel zurück!"
+          },
+          {
+            "q": "«مكتب الاستقبال على اليسار»؟",
+            "a": "Der Empfang ist links."
+          },
+          {
+            "q": "«من أي رصيف؟»؟",
+            "a": "Von welchem Gleis?"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Am Bahnhof: Von welchem Gleis fährt der Zug? Der Zug hat Verspätung — ich habe ihn verpasst! Im Hotel: Ich möchte ein Doppelzimmer buchen, die Aussicht ist schön, und: Geben Sie den Schlüssel zurück!",
+      "ar": "في المحطة: من أي رصيف يغادر القطار؟ القطار متأخر — فاتني! في الفندق: أريد حجز غرفة مزدوجة، الإطلالة جميلة، وأعيدوا المفتاح!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Der Zug ist Verspätung~~ / ~~Der Zug hat verspätet~~",
+          "ar": "التأخير «شيء تملكه»: **hat Verspätung** (اسم بعده — ليس صفة ولا ist)"
+        },
+        "correct": {
+          "de": "Der Zug hat Verspätung.",
+          "ar": "القطار متأخر."
+        },
+        "exercise": {
+          "q": "حوّل: Der Bus ist spät → Der Bus hat ___",
+          "a": "Verspätung"
+        },
+        "whyArabicSpeakerFails": "«القطار متأخر» صفة بالعربية؛ الألماني يملك التأخير: **hat Verspätung** (اسم مفعولاً به = التأخير شيئاً تملكه) — مثل «عندي صداع» لكن بالقطار — مصيدة haben تتكرر بالاسم (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "de": "~~Geben zurück Sie den Schlüssel!~~ / ~~Zurückgeben Sie den Schlüssel!~~ (الأمر)",
+          "ar": "الأمر بالفعل المنفصل: **البادئة آخر** — Verb + Sie + … + **zurück** (القلنسوة كاملة في الأمر!)"
+        },
+        "whyArabicSpeakerFails": "«أعيدوا المفتاح» فعل واحد قبل النداء؛ الألماني: **Geben** (أول) + Sie + den Schlüssel + **zurück** (آخر) — الفعل المنفصل في الأمر يفرّق النداء عن البادئة — نفس القلنسوة في شكل جديد (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Geben Sie den Schlüssel zurück!",
+          "ar": "أعيدوا المفتاح!"
+        },
+        "exercise": {
+          "q": "حوّل: anfangen → الأمر: ___ Sie die Arbeit ___!",
+          "a": "Fangen Sie die Arbeit an!"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Von was Gleis fährt der Zug?~~ / ~~Welches Gleis von fährt der Zug?~~",
+          "ar": "سؤال الرصيف: **Von welchem Gleis** …؟ (von + Dativ = von welchem — مراجعة u8-d5)"
+        },
+        "whyArabicSpeakerFails": "«من أي رصيف» أيها وأيها معاً بالعربية؛ الألماني يدمجهما: von + **welchem** (Dativ محايد) — مصيدة von+Dativ في السؤال — القاعدة القديمة في أداة استفهام (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Von welchem Gleis fährt der Zug?",
+          "ar": "من أي رصيف يغادر القطار؟"
+        },
+        "exercise": {
+          "q": "أكمل: Von ___ (welcher/welchem/welchen) Gleis?",
+          "a": "welchem"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "gleis",
+      "rezeption",
+      "doppelzimmer",
+      "einzelzimmer",
+      "aussicht",
+      "bad",
+      "buchen",
+      "empfang",
+      "halle",
+      "verspaetung",
+      "verpassen",
+      "zurueckgeben"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Verspaetung",
+      "https://www.duden.de/rechtschreibung/verpassen",
+      "https://www.duden.de/rechtschreibung/zur%C3%BCckgeben"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Versp%C3%A4tung"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-trennbar",
+    "ars-modal-fix"
+  ],
+  "audioManifestRefs": [
+    "word-gleis",
+    "word-rezeption",
+    "word-doppelzimmer",
+    "word-einzelzimmer",
+    "word-aussicht",
+    "word-bad",
+    "word-buchen",
+    "word-empfang",
+    "word-halle",
+    "word-verspaetung",
+    "word-verpassen",
+    "word-zurueckgeben"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 12 (Reise) — Am Bahnhof und im Hotel",
+    "goetheWordListOverlap": []
+  }
+}

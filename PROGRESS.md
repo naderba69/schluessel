@@ -304,3 +304,7 @@
 ## حملة المحتوى — الدفعة 42 (2026-10-12) — u12-d1 الوجهة (D86)
 - **u12-d1** (12 كلمة): Ziel/Hotel/Reservierung/Fahrt/abfahren/besichtigen/Sehenswürdigkeit/Ausland/Pass/Visum/Ausflug/Tourist. مصائد: الفعل المنفصل · ins↔im · جمع الوثائق.
 - **694 كلمة · 67 درساً · 695 مساراً** · **243/243 أخضر** + tsc + validator (765/0/0) + build ✓. (D86) التالي: u12-d2 (Bahnhof/Hotel — أسئلة القطار والفندق).
+
+## حملة المحتوى — الدفعة 43 (2026-10-12) — u12-d2 المحطة والفندق (D87)
+- **u12-d2** (12 كلمة): Gleis/Rezeption/Doppelzimmer/Einzelzimmer/Aussicht/Bad/buchen/Empfang/Halle/Verspätung/verpassen/zurückgeben. مصائد: hat Verspätung · أمر بالفعل المنفصل · von welchem.
+- **706 كلمة · 68 درساً · 707 مساراً** · **243/243 أخضر** + tsc + validator (778/0/0) + build ✓. (D87) التالي: u12-d3 (Perfekt + Trennbare معاً).
