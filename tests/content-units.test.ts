@@ -1,6 +1,6 @@
 // content-units.test.ts — المحتوى حيّ: كل درس وكلماته تعمل على المُشغِّل (D45)
 import { describe, it, expect } from "vitest";
-import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
 
 describe("سجل المحتوى — الوحدة 1 كاملة + بداية الوحدة 2", () => {
@@ -83,6 +83,24 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
       expect(card.title.de.length).toBeGreaterThan(0);
       expect(card.title.ar.length).toBeGreaterThan(0);
       expect(card.sourceNote.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("الاختبارات الدورية: 6 Kurztest + 3 Monatsprüfung — تراكمية وبحدود الحجم", () => {
+    const kurz = ALL_PRUEFUNGEN.filter((t) => t.kind === "kurztest");
+    const monat = ALL_PRUEFUNGEN.filter((t) => t.kind === "monatspruefung");
+    expect(kurz.length).toBe(6);
+    expect(monat.length).toBe(3);
+    for (const t of kurz) {
+      expect(t.items.length).toBeLessThanOrEqual(12);
+      expect(t.timeBudgetMin).toBe(15);
+    }
+    for (const t of monat) {
+      expect(t.items.length).toBeGreaterThanOrEqual(10);
+    }
+    for (const t of ALL_PRUEFUNGEN) {
+      expect(t.passingScore).toBe(0.75);
+      expect(t.coversUnits.length).toBeGreaterThan(0);
     }
   });
 });

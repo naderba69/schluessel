@@ -7,7 +7,7 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
-  Unit0Deck, CultureCard, SCHEMA_VERSION,
+  Unit0Deck, CultureCard, CyclicTest, SCHEMA_VERSION,
 } from "../content/schemas/index.js";
 import { VOICE_ID, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
 
@@ -39,7 +39,7 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
 
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -49,6 +49,7 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("lessons/")) return "lesson";
   if (p.startsWith("unit0/")) return "unit0";
   if (p.startsWith("landeskunde/")) return "landeskunde";
+  if (p.startsWith("pruefungen/")) return "pruefungen";
   return "unknown";
 }
 
@@ -147,6 +148,14 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
           const card = CultureCard.parse(entry.data); // D93: بطاقات الثقافة الأسبوعية
           if (card.facts.length < 2)
             push("error", "e-culture-facts", entry.path, "بطاقة ثقافة بلا حقائق كافية (≥2)");
+          break;
+        }
+        case "pruefungen": {
+          const t = CyclicTest.parse(entry.data); // D94: الاختبارات الدورية التراكمية
+          if (t.kind === "kurztest" && t.items.length > 12)
+            push("error", "e-kurztest-size", entry.path, "Kurztest أطول من 12 عنصراً (15 دقيقة فقط)");
+          if (t.kind === "monatspruefung" && t.items.length < 10)
+            push("error", "e-monats-size", entry.path, "Monatsprüfung أقصر من 10 عناصر");
           break;
         }
         default:

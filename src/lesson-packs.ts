@@ -858,6 +858,29 @@ export const ALL_LANDESKUNDE = [
   cultureLandeskundeU9,
 ];
 
+import pruefungKurztestW10 from "../content/pruefungen/a1-kurztest-w10.json";
+import pruefungKurztestW12 from "../content/pruefungen/a1-kurztest-w12.json";
+import pruefungKurztestW2 from "../content/pruefungen/a1-kurztest-w2.json";
+import pruefungKurztestW4 from "../content/pruefungen/a1-kurztest-w4.json";
+import pruefungKurztestW6 from "../content/pruefungen/a1-kurztest-w6.json";
+import pruefungKurztestW8 from "../content/pruefungen/a1-kurztest-w8.json";
+import pruefungMonatspruefungW12 from "../content/pruefungen/a1-monatspruefung-w12.json";
+import pruefungMonatspruefungW4 from "../content/pruefungen/a1-monatspruefung-w4.json";
+import pruefungMonatspruefungW8 from "../content/pruefungen/a1-monatspruefung-w8.json";
+
+/** الاختبارات الدورية التراكمية (D94) */
+export const ALL_PRUEFUNGEN = [
+  pruefungKurztestW10,
+  pruefungKurztestW12,
+  pruefungKurztestW2,
+  pruefungKurztestW4,
+  pruefungKurztestW6,
+  pruefungKurztestW8,
+  pruefungMonatspruefungW12,
+  pruefungMonatspruefungW4,
+  pruefungMonatspruefungW8,
+];
+
 const WORD_JSONS = [
   wordAbbiegen,
   wordAbend,
