@@ -312,3 +312,7 @@
 ## حملة المحتوى — الدفعة 44 (2026-10-12) — u12-d3 الماضي + المنفصلة (D88)
 - **u12-d3** (12 كلمة): losfahren/zurückkommen/mitbringen/ansehen/mitnehmen/ausgeben/einpacken/auspacken/anmelden/aufpassen/mieten/planen. مصائد: ge-المنتصف · ist↔hat · sich anmelden.
 - **718 كلمة · 69 درساً · 719 مساراً** · **243/243 أخضر** + tsc + validator (791/0/0) + build ✓. (D88) التالي: u12-d4 (Konnektoren — und/aber/oder/denn).
+
+## حملة المحتوى — الدفعة 45 (2026-10-12) — u12-d4 الروابط (D89)
+- **u12-d4** (12 كلمة): denn/sondern/deswegen/leider/vielleicht/dann/zuletzt/Beispiel/Meinung/Vorschlag/Idee/Plan. مصائد: denn≠weil · sondern بعد النفي · Meiner Meinung nach.
+- **730 كلمة · 70 درساً · 731 مساراً** · **243/243 أخضر** + tsc + validator (804/0/0) + build ✓. (D89) التالي: u12-d5 (توليف مصغر + سرد رحلة — 6 جمل).

@@ -442,3 +442,9 @@
 - **u12-d3** (12 كلمة): **losfahren (ist losgefahren)** · **zurückkommen (ist)** · **mitbringen (hat mitgebracht)** · ansehen · mitnehmen · ausgeben · einpacken · auspacken · **anmelden (sich — reflexive+trennbar!)** · aufpassen · mieten · planen. مراجعة: reisen/abfahren/koffer.
 - **قواعد d3**: الماضي المنفصل: البادئة+**ge**+الجذر (**ein-ge-packt** — ge في المنتصف!) · قاعدة القرار مع البادئات (losgefahren=ist ↔ eingepackt=hat) · sich anmelden: habe + **mich** + angemeldet (ثلاثة أجزاء).
 - البوابة: **243/243 + tsc + validator (791/0/0) + build** ✓. **718 كلمة · 69 درساً · 719 مساراً.**
+
+## D89 (2026-10-12): u12-d4 (الروابط — denn ≠ weil!)
+
+- **u12-d4** (12 كلمة): **denn (V2!)** · **sondern (بعد النفي فقط)** · **deswegen (V2!)** · leider · vielleicht · dann · zuletzt · Beispiel (zum Beispiel) · Meinung (Meiner Meinung nach) · Vorschlag (**Vorschläge**) · Idee · Plan (**Pläne**). مراجعة: oder/deshalb/weil. (und/aber = قواعد مجردة بلا ملفات — كما haben.)
+- **قواعد d4**: **الثلاثية الذهبية**: weil (الفعل آخر) · **denn (الفعل ثانٍ V2)** · **deswegen (يبدأ الجملة — الفعل يقفز)** · sondern فقط بعد nicht/kein · **Meiner Meinung nach** + V2 (nach آخر التعبير).
+- البوابة: **243/243 + tsc + validator (804/0/0) + build** ✓. **730 كلمة · 70 درساً · 731 مساراً.**

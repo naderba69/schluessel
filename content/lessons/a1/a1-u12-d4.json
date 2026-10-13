@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u12-d4",
+  "level": "A1",
+  "unit": 12,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst deine Sätze verbinden: und, aber, oder, denn — und den Unterschied zwischen denn und weil verstehen.",
+    "ar": "تربط جملك بالروابط (denn ≠ weil!) وتعبر عن رأيك"
+  },
+  "canDoDaily": [
+    "يربط جملتين بـ3 روابط مختلفة (denn/sondern/deswegen) + جملة رأي"
+  ],
+  "warmup": {
+    "cardIds": [
+      "oder",
+      "deshalb",
+      "weil"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«بقيتُ في البيت لأنني متعب» — denn أم weil؟ وأين الفعل؟"
+        },
+        "choices": [
+          "Ich bleibe hier, denn ich bin müde (denn + فعل ثانٍ!)",
+          "Ich bleibe hier, denn ich müde bin",
+          "Ich bleibe hier, weil ich bin müde"
+        ],
+        "answer": "Ich bleibe hier, denn ich bin müde (denn + فعل ثانٍ!)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "denn",
+      "sondern",
+      "deswegen",
+      "leider",
+      "vielleicht",
+      "dann",
+      "zuletzt",
+      "beispiel",
+      "meinung",
+      "vorschlag",
+      "idee",
+      "plan"
+    ],
+    "grammarArsenalIds": [
+      "ars-weil-satz",
+      "ars-satzklammer"
+    ],
+    "storySentenceIds": [
+      "story-a12-u12-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أبقى هنا لأنني متعب» (denn)؟",
+            "a": "Ich bleibe hier, denn ich bin müde."
+          },
+          {
+            "q": "«ليس القطار بل الحافلة»؟",
+            "a": "Nicht der Zug, sondern der Bus fährt ab."
+          }
+        ],
+        "interleavedWith": [
+          "denn",
+          "sondern"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«القطار متأخر، لذلك أنا متأخر»؟",
+            "a": "Der Zug hat Verspätung, deswegen bin ich spät."
+          },
+          {
+            "q": "«للأسف الغرفة مشغولة»؟",
+            "a": "Leider ist das Zimmer besetzt."
+          }
+        ],
+        "interleavedWith": [
+          "deswegen",
+          "leider"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«برأيي الفندق جيد»؟",
+            "a": "Meiner Meinung nach ist das Hotel gut."
+          },
+          {
+            "q": "«هذه فكرة جيدة»؟",
+            "a": "Das ist eine gute Idee."
+          }
+        ],
+        "interleavedWith": [
+          "meinung",
+          "idee"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Sätze verbinden und Meinung sagen",
+        "a": "x",
+        "ar": "ربط الجمل وإبداء الرأي"
+      },
+      "situation": {
+        "de": "Verbinde deine Reise-Sätze: erst … dann …, denn …, aber …, deswegen …",
+        "a": "x",
+        "ar": "اربط جمل رحلتك: أولاً … ثم …، لأن …، لكن …، لذلك …"
+      },
+      "successCriteria": [
+        "جملة denn (V2!) + جملة sondern + جملة deswegen/leider (V2!) + جملة رأي (Meiner Meinung nach)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«لأنّ» — والفرق عن weil؟",
+            "a": "denn + فعل ثانٍ (weil ترسله للنهاية)"
+          },
+          {
+            "q": "«بل (لكن بعد النفي)»؟",
+            "a": "sondern"
+          },
+          {
+            "q": "«لذلك»؟",
+            "a": "deswegen"
+          },
+          {
+            "q": "«للأسف»؟",
+            "a": "leider"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«ربما»؟",
+            "a": "vielleicht"
+          },
+          {
+            "q": "«ثم»؟",
+            "a": "dann"
+          },
+          {
+            "q": "«أخيراً»؟",
+            "a": "zuletzt"
+          },
+          {
+            "q": "«مثال» — «مثلاً»؟",
+            "a": "das Beispiel — zum Beispiel"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«رأي»؟",
+            "a": "die Meinung (Meiner Meinung nach)"
+          },
+          {
+            "q": "«اقتراح» والجمع؟",
+            "a": "der Vorschlag → die Vorschläge"
+          },
+          {
+            "q": "«فكرة»؟",
+            "a": "die Idee"
+          },
+          {
+            "q": "«خطة» والجمع؟",
+            "a": "der Plan → die Pläne"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Meine Meinung: Nicht der Zug, sondern der Bus war besser, denn er war pünktlich. Deswegen bin ich froh. Leider war das Hotel voll — zum Beispiel das in Berlin. Aber das ist nur meine Meinung!",
+      "ar": "رأيي: ليس القطار بل الحافلة كانت أفضل، لأنها كانت في موعدها. لذلك أنا سعيد. للأسف كان الفندق ممتلئاً — مثلاً الذي في برلين. لكن هذا رأيي فقط!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich bleibe hier, denn ich müde bin~~ / ~~denn ich bin müde~~ (صحيح!) / الخلط: denn = weil",
+          "ar": "الفروق الثلاثة: **weil** يرسل الفعل للنهاية · **denn** يتركه ثانياً (V2) · **deswegen** يبدأ الجملة ويقفز الفعل!"
+        },
+        "whyArabicSpeakerFails": "العربية «لأن» واحدة؛ الألماني ثلاث: weil (الفعل آخر) · denn (الفعل ثانٍ — مثل und) · deswegen (ظرف يقفز به الفعل) — اختيار الرابط يحدد ترتيب الفعل (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "…, weil ich müde bin. · …, denn ich bin müde. · …, deswegen bin ich müde.",
+          "ar": "… لأنني متعب. (ثلاث صيغ)"
+        },
+        "exercise": {
+          "q": "أكمل بالترتيب: Ich bleibe hier, denn ich ___ müde ___ (bin — الترتيب).",
+          "a": "Ich bleibe hier, denn ich bin müde."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Nicht der Zug, aber der Bus~~ / ~~sondern der Zug~~",
+          "ar": "**sondern** فقط بعد النفي (nicht/kein) — «ليس X بل Y» · أما **aber** فللتناقض الحر (X، لكن Y)"
+        },
+        "whyArabicSpeakerFails": "«لكن» و«بل» كلمة واحدة غالباً بالعربية؛ الألماني يفرّق: **aber** تناقض حر · **sondern** تصحيح بعد النفي — «ليس X بل Y» = nicht X, sondern Y (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Nicht der Zug, sondern der Bus. · Der Zug ist spät, aber der Bus nicht.",
+          "ar": "ليس القطار بل الحافلة. · القطار متأخر لكن الحافلة لا."
+        },
+        "exercise": {
+          "q": "أكمل: Nicht Berlin, ___ München.",
+          "a": "sondern"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Meiner Meinung der Hotel ist gut~~ / ~~Meinung nach ist…~~",
+          "ar": "التعبير الثابت: **Meiner Meinung nach** + **الفعل ثانٍ** (nach آخر التعبير — لا يُترك)"
+        },
+        "whyArabicSpeakerFails": "«برأيي» كلمة واحدة تسبق الجملة؛ الألماني يشطرها: Meiner Meinung + **nach** (آخر التعبير) + فعل ثانٍ — مصيدة الظرف-آخر (nach) + القلنسوة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Meiner Meinung nach ist das Hotel gut.",
+          "ar": "برأيي الفندق جيد."
+        },
+        "exercise": {
+          "q": "أكمل: Meiner Meinung ___ ist das Hotel gut.",
+          "a": "nach"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "denn",
+      "sondern",
+      "deswegen",
+      "leider",
+      "vielleicht",
+      "dann",
+      "zuletzt",
+      "beispiel",
+      "meinung",
+      "vorschlag",
+      "idee",
+      "plan"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/denn",
+      "https://www.duden.de/rechtschreibung/sondern",
+      "https://www.duden.de/rechtschreibung/Meinung"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/sondern"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-weil-satz",
+    "ars-satzklammer"
+  ],
+  "audioManifestRefs": [
+    "word-denn",
+    "word-sondern",
+    "word-deswegen",
+    "word-leider",
+    "word-vielleicht",
+    "word-dann",
+    "word-zuletzt",
+    "word-beispiel",
+    "word-meinung",
+    "word-vorschlag",
+    "word-idee",
+    "word-plan"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 12 (Reise) — Sätze verbinden (Konnektoren)",
+    "goetheWordListOverlap": []
+  }
+}
