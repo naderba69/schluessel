@@ -1,6 +1,6 @@
 // content-units.test.ts — المحتوى حيّ: كل درس وكلماته تعمل على المُشغِّل (D45)
 import { describe, it, expect } from "vitest";
-import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
 
 describe("سجل المحتوى — الوحدة 1 كاملة + بداية الوحدة 2", () => {
@@ -118,6 +118,18 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
           expect(part.items.length).toBeGreaterThan(0);
         }
       }
+    }
+  });
+
+  it("الصور التوضيحية (D96): alt مطلوب + هوية بصرية واحدة + ربط بالدروس", () => {
+    expect(ALL_IMAGES.length).toBeGreaterThanOrEqual(10);
+    const guides = new Set(ALL_IMAGES.map((a) => a.styleGuide));
+    expect(guides.size).toBe(1); // دليل واحد — الهوية البصرية
+    for (const a of ALL_IMAGES) {
+      expect(a.alt.length).toBeGreaterThan(0);
+      expect(a.usedInLessons.length).toBeGreaterThan(0);
+      expect(a.file.length).toBeGreaterThan(0);
+      expect(a.license.length).toBeGreaterThan(0);
     }
   });
 });

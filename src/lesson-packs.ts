@@ -882,11 +882,15 @@ export const ALL_PRUEFUNGEN = [
 ];
 
 import modelltest0 from "../content/modelltest/a1-modelltest-1.json";
+import imageManifest from "../content/manifests/image-manifest.json";
 
 /** الامتحانات التجريبية الكاملة (D95) */
 export const ALL_MODELLTESTS = [
   modelltest0,
 ];
+
+/** مانيفست الصور — الترميز المزدوج (D96) */
+export const ALL_IMAGES = imageManifest.assets;
 
 const WORD_JSONS = [
   wordAbbiegen,
