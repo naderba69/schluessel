@@ -1,6 +1,12 @@
 // src/lib/audio.ts — هوية الصوت المثبتة (D20 — استقرار الأصوات عبر الجلسات)
 /** صوت Piper الوحيد المثبّت — كل المسارات (الشخصيات الثمانية + الكلمات) تشير إليه دائماً */
 export const VOICE_ID = "de_DE-thorsten-medium";
+/** D98: الصوت الأنثوي المثبَّت للحوارات/الضيوف (kerstin — MIT) — لا تذبذب: دوران محددة فقط */
+export const VOICE_ID_FEMALE = "de_DE-kerstin-low";
+/** D20+D98: الأصوات المسموحة حصراً (مثبَّتان عبر الجلسات) */
+export const PINNED_VOICES = [VOICE_ID, VOICE_ID_FEMALE] as const;
+/** D98: الأدوار المسموحة للصوت الأنثوي (بقية الأدوار = الصوت الرئيسي) */
+export const FEMALE_ROLES = ["character", "guest", "dialogue"] as const;
 /** محرك التوليد المحلي — لا API، لا اشتراك (D20) */
 export const AUDIO_ENGINE = "piper-tts-local" as const;
 /** رخصة صوت Thorsten الموثقة من MODEL_CARD */

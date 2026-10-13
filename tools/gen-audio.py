@@ -15,6 +15,11 @@ ROOT = Path(__file__).resolve().parent.parent
 VOICE_ONNX = ROOT / "tools/piper-voices/de_DE-thorsten-medium.onnx"
 VOICE_ID = "de_DE-thorsten-medium"          # مثبت — استقرار الأصوات عبر الجلسات
 VOICE_LICENSE = "CC0 (Thorsten-Voice)"      # موثقة من MODEL_CARD
+VOICE_ONNX_FEMALE = ROOT / "tools/piper-voices/de_DE-kerstin-low.onnx"   # D98: kerstin (MIT)
+VOICE_ID_FEMALE = "de_DE-kerstin-low"
+VOICE_LICENSE_FEMALE = "MIT (rhasspy/piper-voices — kerstin)"            # موثقة من spec OpenMandriva
+# D98: الشخصيات الإناث → kerstin (عند توفر الملف) — وإلا الرئيسي (fallback آمن)
+FEMALE_CHARACTERS = {"nina", "aisha", "lena", "ayse", "frau-berg", "frau-schmidt"}
 TARGET_RMS_DB = -17.0                       # داخل نافذة G1 [-20..-14]
 PAD_MS = 100                                # صمت 100ms قبل/بعد (مواصفات الصوت)
 OUT_SR = 24000                              # Opus standard rate (22.05k غير مسموح للترميز)

@@ -429,6 +429,8 @@
 
 - **u12-d1** (12 كلمة Reise): Ziel · Hotel (**Hotels** -s مستعار) · Reservierung · Fahrt · **abfahren (trennbar — fährt ab)** · besichtigen · **Sehenswürdigkeit (Sehenswürdigkeiten)** · Ausland (ins Ausland) · **Pass (Pässe)** · **Visum (Visa)** · Ausflug (Ausflüge) · Tourist (Touristen n-dekl). مراجعة: reisen/zug/urlaub.
 - **قواعد d1**: **الفعل المنفصل: البادئة ab آخر الجملة** (fährt um 8 ab) — القلنسوة الثالثة · الوجهة **ins** ↔ المكان **im** (Wechselpräp يعود) · ثلاثة أنماط جمع في ثلاث وثائق (Pässe/Visa/Hotels).
+### D98 — صوت امرأة (kerstin): البنية جاهزة، الملف يُنزَّل مالكياً
+**القرار**: صوتان للحوار: `de_DE-thorsten-medium` (الراوي والدروس) + `de_DE-kerstin-low` (المرأة: nina/ayse/frau-berg/frau-schmidt/aisha/lena + أدوار character/guest/dialogue). الترخيص **MIT** (موثّق من spec باكيج OpenMandriva لـ rhasspy piper-voices). **البنية كلها مبنية ومجربة**: `PINNED_VOICES` + `VOICE_ID_FEMALE` في audio.ts · قاعدتا validator (e-audio-voice-drift/e-audio-voice-role) · gen-audio.py يوجّه الأصوات تلقائياً بلفّة fallback آمنة للصوت الرئيسي إن غاب ملف kerstin. **ملف kerstin غير قابل للتنزيل من الـsandbox** (huggingface محجوب — النسخة على GitHub مجرد مؤشر LFS): الملفان (onnx ~16.8MB + json) يُنزَّلان عبر Termux بنمط thorsten إلى `tools/piper-voices/de_DE-kerstin-low.onnx` + `.json` — **ويعمل فوراً بلا أي كود إضافي**. 2026-10-12. #A2
 - البوابة: **243/243 + tsc + validator (765/0/0) + build** ✓. **694 كلمة · 67 درساً · 695 مساراً.**
 
 ## D87 (2026-10-12): u12-d2 (المحطة والفندق — الأسئلة)

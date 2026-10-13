@@ -9,7 +9,7 @@ import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
   Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, SCHEMA_VERSION,
 } from "../content/schemas/index.js";
-import { VOICE_ID, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
+import { VOICE_ID, VOICE_ID_FEMALE, PINNED_VOICES, FEMALE_ROLES, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
 
 export interface Issue {
   level: "error" | "warning";
