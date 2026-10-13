@@ -1,0 +1,277 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u13-d1",
+  "level": "A1",
+  "unit": 13,
+  "day": 1,
+  "kind": "integration",
+  "ziel": {
+    "de": "Wiederholung Einheiten 1–2: Begrüßung, Familie und Wegbeschreibung — die Grundlagen sitzen.",
+    "ar": "مراجعة الوحدتين 1–2: التحية والأسرة والاتجاهات"
+  },
+  "canDoDaily": [
+    "يعرّف بنفسه ويصف اتجاهاً ويفوّق wohin/wo"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hallo",
+      "danke",
+      "familie"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "المراجعة التراكمية: أصلح الخطأ في الجملة"
+        },
+        "choices": [
+          "التصحيح بالقلنسوة/القاعدة الصحيحة",
+          "تصحيح آخر خاطئ",
+          "تصحيح ثالث خاطئ"
+        ],
+        "answer": "التصحيح بالقلنسوة/القاعدة الصحيحة",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "hallo",
+      "danke"
+    ],
+    "grammarArsenalIds": [
+      "ars-satzklammer",
+      "ars-perfekt"
+    ],
+    "storySentenceIds": [
+      "story-a13-u13-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«اسمي يوسف وأنا من تونس»؟",
+            "a": "Ich heiße Yusuf und ich komme aus Tunesien."
+          },
+          {
+            "q": "«البيت يميناً»؟",
+            "a": "Das Haus ist rechts."
+          }
+        ],
+        "interleavedWith": [
+          "name",
+          "rechts"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«هذا زميلي»؟",
+            "a": "Das ist mein Kollege."
+          },
+          {
+            "q": "«الوجهة؟» — سؤال الاتجاه؟",
+            "a": "Wohin?"
+          }
+        ],
+        "interleavedWith": [
+          "freund",
+          "wohin"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«شمال/جنوب»؟",
+            "a": "Norden / Süden."
+          },
+          {
+            "q": "«أنا طالب»؟",
+            "a": "Ich bin Student."
+          }
+        ],
+        "interleavedWith": [
+          "strasse",
+          "lehrer"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die kumulative Wiederholung meistern",
+        "a": "x",
+        "ar": "إتقان المراجعة التراكمية"
+      },
+      "situation": {
+        "de": "Mischung aus den Einheiten der Woche",
+        "a": "x",
+        "ar": "خليط من وحدات الأسبوع"
+      },
+      "successCriteria": [
+        "جملة تعريف + جملة اتجاه + تصحيح خطأ wohin/wo"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«مرحباً» و«إلى اللقاء»؟",
+            "a": "hallo / tschüss"
+          },
+          {
+            "q": "«الأسرة» و«الجدة»؟",
+            "a": "familie / grossmutter"
+          },
+          {
+            "q": "«البيت يميناً»؟",
+            "a": "Das Haus ist rechts."
+          },
+          {
+            "q": "«اسمي…»؟",
+            "a": "Ich heiße …"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«شمال/جنوب/شرق/غرب»؟",
+            "a": "Norden / Süden / Osten / Westen"
+          },
+          {
+            "q": "«أين؟» و«إلى أين؟»؟",
+            "a": "wo? / wohin?"
+          },
+          {
+            "q": "«زميل»؟",
+            "a": "der Kollege"
+          },
+          {
+            "q": "«أنا من تونس»؟",
+            "a": "Ich komme aus Tunesien."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الاتجاهات الأربعة»؟",
+            "a": "rechts, links, geradeaus, zurück"
+          },
+          {
+            "q": "«هذا/هذه؟»؟",
+            "a": "Das ist … / Das sind …"
+          },
+          {
+            "q": "«التحية الرسمية»؟",
+            "a": "Guten Tag / Grüß Gott"
+          },
+          {
+            "q": "«أنا لا أشرب القهوة»؟",
+            "a": "Ich trinke keinen Kaffee."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheiten 1–2: heißen, kommen aus, die Wegbeschreibung (rechts/links/geradeaus), wohin vs wo. Die Basis sitzt!",
+      "ar": "الوحدتان 1–2: الاسم والجنسية والاتجاهات وwo↔wohin — الأساس متين!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich heiße von Yusuf~~ / ~~Das Haus ist die rechte Seite~~",
+          "ar": "أخطاء التحية والاتجاه"
+        },
+        "whyArabicSpeakerFails": "«اسمي» فعل heißen بالألمانية (لا «لدي اسم») · والاتجاه خبر بحرف جر لا مضاف — بداية الخطة تعود (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich heiße Yusuf. · Das Haus ist rechts.",
+          "ar": "اسمي يوسف. · البيت يميناً."
+        },
+        "exercise": {
+          "q": "حوّل: اسمي أحمد → …",
+          "a": "Ich heiße Ahmad."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~wo?~~ (للحركة) / ~~wohin?~~ (للمكان)",
+          "ar": "الفرق القاتل: wohin للحركة (إلى أين) · wo للمكان (أين)"
+        },
+        "whyArabicSpeakerFails": "العربية «أين» واحدة للحالتين؛ الألماني يفرّق منذ الدرس الأول — مصيدة الاتجاه الأصلية (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wo bist du? · Wohin gehst du?",
+          "ar": "أين أنت؟ · إلى أين تذهب؟"
+        },
+        "exercise": {
+          "q": "أكمل: ___ bist du? (أين)",
+          "a": "wo"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Das sind mein Kollege~~ / ~~Das ist meine Kollege~~",
+          "ar": "هذا/هذه + الجنس"
+        },
+        "whyArabicSpeakerFails": "مطابقة ist مع المضاف إليه: mein Kollege (der) · meine Kollegin (die) — التذكير بالوحدة 2 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Das ist mein Kollege. · Das ist meine Kollegin.",
+          "ar": "هذا زميلي. · هذه زميلتي."
+        },
+        "exercise": {
+          "q": "أكمل: Das ist meine ___ (der Kollege)",
+          "a": "Kollegin"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "hallo",
+      "danke"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/ueben"
+    ],
+    "wiktionary": [],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-satzklammer",
+    "ars-perfekt"
+  ],
+  "audioManifestRefs": [
+    "word-hallo",
+    "word-danke"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung)",
+    "goetheWordListOverlap": []
+  }
+}

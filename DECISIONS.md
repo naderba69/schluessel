@@ -463,3 +463,10 @@
 - **تصحيح**: zuhoren غير موجود (كما haben/und/aber) → hoeren (الموجود).
 - البوابة: **243/243 + tsc + validator (818/0/0) + build** ✓. **742 كلمة · 72 يوماً · 743 مساراً.**
 - **🏁 اكتمال خطة A1 بالكامل: الوحدات 1–12 · 72 يوماً · 742 كلمة.** التخطيط المسطّر في study-plan-daily-v6.1 منفَّذ كاملاً. الخطوة التالية (عند المالك): أسبوع التثبيت والامتحان أو محتوى إضافي.
+
+## D92 (2026-10-12): أسبوع التثبيت والامتحان = الوحدة 13 (تمديد schema)
+
+- **القرار**: خطة A1 = 12 أسبوع تدريس + **1 أسبوع تثبيت/امتحان** + 1 احتياطي (study-plan-daily-v6.1 §1). أسبوع التثبيت = **الوحدة 13** بأيامها الستة → تمديد `unit: max(12) → max(13)` في `content/schemas/lesson.ts`.
+- **6 دروس تثبيت (integration · 0 كلمات جديدة)**: d1 (u1+u2: التحية/الاتجاهات + wohin↔wo) · d2 (u3+u4: الطعام/المدينة + ohne+Dativ) · d3 (u5+u6: التسوق + المساعدات + halb drei) · d4 (u7+u8: Es الصوري + seit+Dativ) · d5 (u9+u10: المهن + Perfekt + weil/deshalb) · **d6 (u11+u12 + Modelltest — 4 مهارات: Hören/Lesen/Schreiben/Sprechen)**.
+- **تصحيحات**: 7 كلمات مفقودة من المراجع (kollege/norden/student/empfehlen/restaurant/regnen/ingenieur) → مستبدلة بموجودة (freund/strasse/lehrer/bestellen/apotheke/warm/krank) — قاعدة «warmup cardIds = كلمات موجودة» تعمل ✓.
+- البوابة: **243/243 + tsc + validator (824/0/0) + build** ✓. **742 كلمة · 78 يوماً · 743 مساراً.**

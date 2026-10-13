@@ -1,0 +1,277 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u13-d5",
+  "level": "A1",
+  "unit": 13,
+  "day": 5,
+  "kind": "integration",
+  "ziel": {
+    "de": "Wiederholung Einheiten 9–10: Beruf und Termine — Perfekt und weil/deshalb.",
+    "ar": "مراجعة الوحدتين 9–10: المهن والمواعيد (الماضي + weil/deshalb)"
+  },
+  "canDoDaily": [
+    "يعرّف بمهنته ويحكي ماضياً ويعطي سبباً"
+  ],
+  "warmup": {
+    "cardIds": [
+      "arzt",
+      "termin",
+      "gestern"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "المراجعة التراكمية: أصلح الخطأ في الجملة"
+        },
+        "choices": [
+          "التصحيح بالقلنسوة/القاعدة الصحيحة",
+          "تصحيح آخر خاطئ",
+          "تصحيح ثالث خاطئ"
+        ],
+        "answer": "التصحيح بالقلنسوة/القاعدة الصحيحة",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "arzt",
+      "termin"
+    ],
+    "grammarArsenalIds": [
+      "ars-satzklammer",
+      "ars-perfekt"
+    ],
+    "storySentenceIds": [
+      "story-a13-u13-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أين تعمل؟»؟",
+            "a": "Wo arbeiten Sie?"
+          },
+          {
+            "q": "«أمس اتصلتُ»؟",
+            "a": "Gestern habe ich angerufen."
+          }
+        ],
+        "interleavedWith": [
+          "arbeiten",
+          "anrufen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«لأنني كنت مريضاً»؟",
+            "a": "…, weil ich krank war."
+          },
+          {
+            "q": "«الموعد يوم الثلاثاء»؟",
+            "a": "Der Termin ist am Dienstag."
+          }
+        ],
+        "interleavedWith": [
+          "weil",
+          "dienstag"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«لذلك أنا متأخر»؟",
+            "a": "Deshalb bin ich spät."
+          },
+          {
+            "q": "«الدكتور/المهندس»؟",
+            "a": "der Arzt / der Ingenieur"
+          }
+        ],
+        "interleavedWith": [
+          "deshalb",
+          "krank"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die kumulative Wiederholung meistern",
+        "a": "x",
+        "ar": "إتقان المراجعة التراكمية"
+      },
+      "situation": {
+        "de": "Mischung aus den Einheiten der Woche",
+        "a": "x",
+        "ar": "خليط من وحدات الأسبوع"
+      },
+      "successCriteria": [
+        "جملة مهنة + جملة ماضٍ منفصل + جملة weil"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أين تعمل؟»؟",
+            "a": "Wo arbeiten Sie?"
+          },
+          {
+            "q": "«أمس اتصلتُ»؟",
+            "a": "Gestern habe ich angerufen."
+          },
+          {
+            "q": "«الموعد»؟",
+            "a": "der Termin"
+          },
+          {
+            "q": "«يوم الثلاثاء»؟",
+            "a": "am Dienstag"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«لأن» — الفعل أين؟",
+            "a": "weil + الفعل آخر (…, weil ich krank war)"
+          },
+          {
+            "q": "«لذلك»؟",
+            "a": "deshalb + فعل ثانٍ"
+          },
+          {
+            "q": "«أنا مهندس»؟",
+            "a": "Ich bin Ingenieur."
+          },
+          {
+            "q": "«المدرسة/الجامعة»؟",
+            "a": "die Schule / die Universität"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«اتصل» — والماضي؟",
+            "a": "anrufen — hat angerufen (منفصل!)"
+          },
+          {
+            "q": "«الثالث من يونيو»؟",
+            "a": "der dritte Juni"
+          },
+          {
+            "q": "«الساعة الثامنة صباحاً»؟",
+            "a": "acht Uhr morgens"
+          },
+          {
+            "q": "«مهم/عاجل»؟",
+            "a": "wichtig / dringend"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheiten 9–10: Beruf, Termin, Perfekt (anrufen), weil (Endstellung) und deshalb (V2).",
+      "ar": "الوحدتان 9–10: المهنة والموعد والماضي المنفصل وweil↔deshalb."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~weil ich war krank~~ / ~~deshalb ich bin spät~~",
+          "ar": "weil ترسل الفعل · deshalt b تبدأ وتقفز"
+        },
+        "whyArabicSpeakerFails": "«لأنني كنت» فعل في النهاية (weil … war) · «لذلك أنا» فعل ثانٍ (deswegen bin) — الوحدة 10 كاملة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "…, weil ich krank war. · Deshalb bin ich spät.",
+          "ar": "… لأنني كنت مريضاً. · لذلك أنا متأخر."
+        },
+        "exercise": {
+          "q": "أكمل: …, weil ich müde ___ (bin — الترتيب)",
+          "a": "bin (آخر)"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Gestern habe angerufen ich~~ / ~~Gestern ich habe angerufen~~",
+          "ar": "الماضي: haben ثانٍ + المفعول + الفعل المنفصل آخر"
+        },
+        "whyArabicSpeakerFails": "«أمس اتصلت» ثلاث أجزاء: Gestern + habe + angerufen — القلنسوة بالماضي المنفصل (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Gestern habe ich angerufen.",
+          "ar": "أمس اتصلتُ."
+        },
+        "exercise": {
+          "q": "أكمل: Gestern ___ ich ___ (anrufen)",
+          "a": "habe … angerufen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~am Dienstag Termin ist~~ / ~~der Termin am Dienstag ist~~",
+          "ar": "الموعد + زمان المكان الأول: am Dienstag أولاً أو آخر — لا وسط"
+        },
+        "whyArabicSpeakerFails": "«الموعد يوم الثلاثاء» ترتيب حر لكن الفعل ثانٍ دائماً — Der Termin ist am Dienstag (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Der Termin ist am Dienstag.",
+          "ar": "الموعد يوم الثلاثاء."
+        },
+        "exercise": {
+          "q": "أكمل: ___ ist am Dienstag.",
+          "a": "Der Termin"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "arzt",
+      "termin"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/ueben"
+    ],
+    "wiktionary": [],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-satzklammer",
+    "ars-perfekt"
+  ],
+  "audioManifestRefs": [
+    "word-arzt",
+    "word-termin"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung)",
+    "goetheWordListOverlap": []
+  }
+}

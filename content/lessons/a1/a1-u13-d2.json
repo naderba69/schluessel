@@ -1,0 +1,277 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u13-d2",
+  "level": "A1",
+  "unit": 13,
+  "day": 2,
+  "kind": "integration",
+  "ziel": {
+    "de": "Wiederholung Einheiten 3–4: in der Stadt und beim Essen — Akkusativ und Empfehlung.",
+    "ar": "مراجعة الوحدتين 3–4: المدينة والطعام (Akkusativ + التوصية)"
+  },
+  "canDoDaily": [
+    "يطلب في مطعم ويوصي ويشتكي"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bahn",
+      "apotheke",
+      "broetchen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "المراجعة التراكمية: أصلح الخطأ في الجملة"
+        },
+        "choices": [
+          "التصحيح بالقلنسوة/القاعدة الصحيحة",
+          "تصحيح آخر خاطئ",
+          "تصحيح ثالث خاطئ"
+        ],
+        "answer": "التصحيح بالقلنسوة/القاعدة الصحيحة",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "bahn",
+      "apotheke"
+    ],
+    "grammarArsenalIds": [
+      "ars-satzklammer",
+      "ars-perfekt"
+    ],
+    "storySentenceIds": [
+      "story-a13-u13-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«إلى المحطة من فضلك»؟",
+            "a": "Zum Bahnhof, bitte."
+          },
+          {
+            "q": "«ماذا توصي؟»؟",
+            "a": "Was empfehlen Sie?"
+          }
+        ],
+        "interleavedWith": [
+          "bahn",
+          "bestellen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أنا آخذ اليخنة»؟",
+            "a": "Ich nehme die Suppe."
+          },
+          {
+            "q": "«بلا لحم من فضلك»؟",
+            "a": "Ohne Fleisch, bitte."
+          }
+        ],
+        "interleavedWith": [
+          "suppe",
+          "fleisch"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الزبون يطلب فاتورة»؟",
+            "a": "Der Kunde bestellt die Rechnung."
+          },
+          {
+            "q": "«الصيدلية مقابل البنك»؟",
+            "a": "Die Apotheke ist gegenüber der Bank."
+          }
+        ],
+        "interleavedWith": [
+          "kunde",
+          "apotheke"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die kumulative Wiederholung meistern",
+        "a": "x",
+        "ar": "إتقان المراجعة التراكمية"
+      },
+      "situation": {
+        "de": "Mischung aus den Einheiten der Woche",
+        "a": "x",
+        "ar": "خليط من وحدات الأسبوع"
+      },
+      "successCriteria": [
+        "جملة طلب + جملة توصية + تصحيح ohne"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«صيدلية» و«مقابل»؟",
+            "a": "die Apotheke / gegenüber"
+          },
+          {
+            "q": "«فاتورة»؟",
+            "a": "die Rechnung"
+          },
+          {
+            "q": "«بلا لحم»؟",
+            "a": "ohne Fleisch"
+          },
+          {
+            "q": "«ماذا توصي؟»؟",
+            "a": "Was empfehlen Sie?"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الزبون»؟",
+            "a": "der Kunde"
+          },
+          {
+            "q": "«آخذ»؟",
+            "a": "nehmen (ich nehme)"
+          },
+          {
+            "q": "«خبز/لحم/جبن»؟",
+            "a": "Brot / Fleisch / Käse"
+          },
+          {
+            "q": "«إلى المحطة؟»؟",
+            "a": "Zum Bahnhof?"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الطلب = فعلين متجاورين»؟",
+            "a": "Ich möchte … haben (الفعلان آخر)"
+          },
+          {
+            "q": "«مقابل البنك»؟",
+            "a": "gegenüber der Bank (Dativ!)"
+          },
+          {
+            "q": "«الحليب/البيض»؟",
+            "a": "die Milch / die Eier"
+          },
+          {
+            "q": "«الشكوى: طلبي بارد»؟",
+            "a": "Mein Essen ist kalt."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheiten 3–4: Empfehlung (empfehlen), Bestellung (möchte … haben), Akkusativ (ohne), gegenüber + Dativ.",
+      "ar": "الوحدتان 3–4: التوصية والطلب وAkkusativ ومقابل+Dativ."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich nehme Suppe~~ / ~~ohne der Fleisch~~",
+          "ar": "المفعول المعيّن يحتاج المقال · ohne بلا مقال"
+        },
+        "whyArabicSpeakerFails": "«آخذ اليخنة» بأل في الألمانية (die Suppe) · وبدون «بلا» لا تحمل مقالاً أبداً (ohne Fleisch) — مصيدة الأداة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich nehme die Suppe. · ohne Fleisch",
+          "ar": "آخذ اليخنة. · بلا لحم."
+        },
+        "exercise": {
+          "q": "أكمل: ohne ___ (die Milch)",
+          "a": "Milch"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe Hunger auf Brot~~ / ~~Ich möchte haben die Suppe~~",
+          "ar": "الجوع والعطش + الترتيب"
+        },
+        "whyArabicSpeakerFails": "«جائع» = habe Hunger (بلا auf) · و«أريد أن أحصل» = möchte … haben (الفعلان آخر) — القلنسوة في الطعام (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe Hunger. · Ich möchte die Suppe haben.",
+          "ar": "أنا جائع. · أريد اليخنة."
+        },
+        "exercise": {
+          "q": "أكمل: Ich möchte Kaffee ___ (haben — الترتيب)",
+          "a": "… haben (آخر)"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~gegenüber dem Bank~~ / ~~gegenüber die Bank~~",
+          "ar": "gegenüber + Dativ دائماً"
+        },
+        "whyArabicSpeakerFails": "«مقابل» تتبعها Dativ (der/dem Bank) — حرف الجر الثابت للمكان — مراجعة u3 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "gegenüber der Bank",
+          "ar": "مقابل البنك"
+        },
+        "exercise": {
+          "q": "أكمل: gegenüber ___ (das Hotel)",
+          "a": "dem Hotel"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "bahn",
+      "apotheke"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/ueben"
+    ],
+    "wiktionary": [],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-satzklammer",
+    "ars-perfekt"
+  ],
+  "audioManifestRefs": [
+    "word-bahn",
+    "word-apotheke"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung)",
+    "goetheWordListOverlap": []
+  }
+}

@@ -51,7 +51,7 @@ export const WarningCard = z.object({
 export const Lesson = SchemaVersioned.extend({
   id: Slug, // مثال: a1-u3-d2
   level: Level,
-  unit: z.number().int().min(1).max(12),
+  unit: z.number().int().min(1).max(13), // D92: الوحدة 13 = أسبوع التثبيت والامتحان
   day: z.number().int().min(1).max(8), // D1..D7 (+D8 للأسبوع المرن)
   kind: z.enum(["content", "integration"]).default("content"), // D6 = integration (درس التوليف)
   /** 1. Ziel — هدف سلوكي قابل للقياس بصوت المعلم */

@@ -1,0 +1,277 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u13-d3",
+  "level": "A1",
+  "unit": 13,
+  "day": 3,
+  "kind": "integration",
+  "ziel": {
+    "de": "Wiederholung Einheiten 5–6: Verkehr und Einkauf — Modalverben und Zahlen.",
+    "ar": "مراجعة الوحدتين 5–6: المواصلات والتسوق (المساعدات والأرقام)"
+  },
+  "canDoDaily": [
+    "يشتري تذكرة ويستفسر عن الثمن ويساعده المساعد"
+  ],
+  "warmup": {
+    "cardIds": [
+      "fahrkarte",
+      "supermarkt",
+      "preis"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "المراجعة التراكمية: أصلح الخطأ في الجملة"
+        },
+        "choices": [
+          "التصحيح بالقلنسوة/القاعدة الصحيحة",
+          "تصحيح آخر خاطئ",
+          "تصحيح ثالث خاطئ"
+        ],
+        "answer": "التصحيح بالقلنسوة/القاعدة الصحيحة",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "fahrkarte",
+      "supermarkt"
+    ],
+    "grammarArsenalIds": [
+      "ars-satzklammer",
+      "ars-perfekt"
+    ],
+    "storySentenceIds": [
+      "story-a13-u13-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أريد تذكرة إلى برلين»؟",
+            "a": "Ich möchte eine Fahrkarte nach Berlin."
+          },
+          {
+            "q": "«هذا غالي جداً»؟",
+            "a": "Das ist zu teuer."
+          }
+        ],
+        "interleavedWith": [
+          "fahrkarte",
+          "teuer"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«كم الثمن؟»؟",
+            "a": "Was kostet das?"
+          },
+          {
+            "q": "«لا أستطيع الدفع»؟",
+            "a": "Ich kann nicht bezahlen."
+          }
+        ],
+        "interleavedWith": [
+          "kosten",
+          "bezahlen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أين المحطة؟»؟",
+            "a": "Wo ist der Bahnhof?"
+          },
+          {
+            "q": "«بكم؟» — بالساعة؟",
+            "a": "pro Stunde"
+          }
+        ],
+        "interleavedWith": [
+          "bahnhof",
+          "stunde"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die kumulative Wiederholung meistern",
+        "a": "x",
+        "ar": "إتقان المراجعة التراكمية"
+      },
+      "situation": {
+        "de": "Mischung aus den Einheiten der Woche",
+        "a": "x",
+        "ar": "خليط من وحدات الأسبوع"
+      },
+      "successCriteria": [
+        "جملة تذكرة + سؤال ثمن + جملة مساعد"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«تذكرة»؟",
+            "a": "die Fahrkarte"
+          },
+          {
+            "q": "«غالي/رخيص»؟",
+            "a": "teuer / billig"
+          },
+          {
+            "q": "«كم الثمن؟»؟",
+            "a": "Was kostet das?"
+          },
+          {
+            "q": "«بلا مقابل»؟",
+            "a": "kostenlos"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أستطيع»؟",
+            "a": "können (ich kann)"
+          },
+          {
+            "q": "«يجب»؟",
+            "a": "müssen (ich muss)"
+          },
+          {
+            "q": "«11/12»؟",
+            "a": "elf / zwölf"
+          },
+          {
+            "q": "«100 يورو»؟",
+            "a": "100 Euro"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المساعد يقعد والفعل آخر»؟",
+            "a": "Ich muss bezahlen. (الفعل آخر)"
+          },
+          {
+            "q": "«الساعة الواحدة»؟",
+            "a": "ein Uhr"
+          },
+          {
+            "q": "«أيام الأسبوع»؟",
+            "a": "Montag bis Sonntag"
+          },
+          {
+            "q": "«نصف/ربع»؟",
+            "a": "halb / Viertel"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheiten 5–6: Fahrkarte, Preis, Modalverben (muss/kann), Zahlen und Uhrzeit (halb drei).",
+      "ar": "الوحدتان 5–6: التذكرة والثمن والمساعدات والأرقام والوقت."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich muss bezahlen die Rechnung~~ / ~~Ich kann nicht finden der Koffer~~",
+          "ar": "المساعد في المركز والفعل الآخر — القلنسوة!"
+        },
+        "whyArabicSpeakerFails": "«يجب أن أدفع» فعلان متجاوران بالعربية؛ الألماني: muss … bezahlen — نفس القاعدة من u5 في التسوق (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich muss die Rechnung bezahlen.",
+          "ar": "يجب أن أدفع الفاتورة."
+        },
+        "exercise": {
+          "q": "أكمل: Ich muss ___ (finden) den Koffer.",
+          "a": "… finden (آخر)"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Was ist der Preis?~~ / ~~Wie viel kostet?~~",
+          "ar": "السؤال عن الثمن: Was kostet das?"
+        },
+        "whyArabicSpeakerFails": "«كم الثمن» بأي فعل بالعربية؛ الألماني فعل واحد: kostet + المضاف إليه — التمرين الملايين (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Was kostet das?",
+          "ar": "كم الثمن؟"
+        },
+        "exercise": {
+          "q": "حوّل: كم هذه الحقيبة؟",
+          "a": "Was kostet der Koffer?"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~zwölf Uhr halb~~ / ~~halb Uhr~~",
+          "ar": "نصف/ربع الوقت: halb drei = 2:30 (بلا «halb Uhr»)"
+        },
+        "whyArabicSpeakerFails": "«الثانية والنصف» = halb drei (النصف يسبقه!) — نظام ألماني عكسي — مصيدة u8 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "halb drei (2:30)",
+          "ar": "الثانية والنصف"
+        },
+        "exercise": {
+          "q": "أكمل: 2:30 بالألمانية",
+          "a": "halb drei"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "fahrkarte",
+      "supermarkt"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/ueben"
+    ],
+    "wiktionary": [],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-satzklammer",
+    "ars-perfekt"
+  ],
+  "audioManifestRefs": [
+    "word-fahrkarte",
+    "word-supermarkt"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung)",
+    "goetheWordListOverlap": []
+  }
+}

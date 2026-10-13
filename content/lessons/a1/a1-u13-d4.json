@@ -1,0 +1,277 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u13-d4",
+  "level": "A1",
+  "unit": 13,
+  "day": 4,
+  "kind": "integration",
+  "ziel": {
+    "de": "Wiederholung Einheiten 7–8: Wetter und Zeit — Es-Fake und seit/Dativ.",
+    "ar": "مراجعة الوحدتين 7–8: الطقس والوقت (Es الصوري + seit+Dativ)"
+  },
+  "canDoDaily": [
+    "يصف الطقس ويحدد المدة ويسأل عن الوقت"
+  ],
+  "warmup": {
+    "cardIds": [
+      "wetter",
+      "uhr",
+      "kalt"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "المراجعة التراكمية: أصلح الخطأ في الجملة"
+        },
+        "choices": [
+          "التصحيح بالقلنسوة/القاعدة الصحيحة",
+          "تصحيح آخر خاطئ",
+          "تصحيح ثالث خاطئ"
+        ],
+        "answer": "التصحيح بالقلنسوة/القاعدة الصحيحة",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "wetter",
+      "uhr"
+    ],
+    "grammarArsenalIds": [
+      "ars-satzklammer",
+      "ars-perfekt"
+    ],
+    "storySentenceIds": [
+      "story-a13-u13-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الجو ممطر»؟",
+            "a": "Es regnet."
+          },
+          {
+            "q": "«أنا أنتظر منذ ساعة»؟",
+            "a": "Ich warte seit einer Stunde."
+          }
+        ],
+        "interleavedWith": [
+          "warm",
+          "warten"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«كيف الجو؟»؟",
+            "a": "Wie ist das Wetter?"
+          },
+          {
+            "q": "«الساعة الخامسة»؟",
+            "a": "Es ist fünf Uhr."
+          }
+        ],
+        "interleavedWith": [
+          "wetter",
+          "uhr"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الشمس تشرق»؟",
+            "a": "Die Sonne scheint."
+          },
+          {
+            "q": "«يومين»؟",
+            "a": "zwei Tage"
+          }
+        ],
+        "interleavedWith": [
+          "sonne",
+          "tag"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die kumulative Wiederholung meistern",
+        "a": "x",
+        "ar": "إتقان المراجعة التراكمية"
+      },
+      "situation": {
+        "de": "Mischung aus den Einheiten der Woche",
+        "a": "x",
+        "ar": "خليط من وحدات الأسبوع"
+      },
+      "successCriteria": [
+        "جملة طقس + جملة منذ-مدة + سؤال wann"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«ممطر/ممطرة»؟",
+            "a": "Es regnet / Es schneit"
+          },
+          {
+            "q": "«الشمس تشرق»؟",
+            "a": "Die Sonne scheint."
+          },
+          {
+            "q": "«كيف الجو؟»؟",
+            "a": "Wie ist das Wetter?"
+          },
+          {
+            "q": "«الساعة 8:30»؟",
+            "a": "halb neun"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«منذ» + أي حالة؟",
+            "a": "seit + Dativ"
+          },
+          {
+            "q": "«منذ ساعتين»؟",
+            "a": "seit zwei Stunden"
+          },
+          {
+            "q": "«صباح/مساء»؟",
+            "a": "der Morgen / der Abend"
+          },
+          {
+            "q": "«اليوم/غداً/أمس»؟",
+            "a": "heute / morgen / gestern"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«Es الفاعل الصوري»؟",
+            "a": "Es regnet (لا فاعل حقيقي)"
+          },
+          {
+            "q": "«الطقس البارد»؟",
+            "a": "Es ist kalt."
+          },
+          {
+            "q": "«أمس/غداً»؟",
+            "a": "gestern / morgen"
+          },
+          {
+            "q": "«متى؟»؟",
+            "a": "wann?"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einheiten 7–8: Es-Fake (regnet/schneit), seit + Dativ, Uhrzeit und wann-Fragen.",
+      "ar": "الوحدتان 7–8: Es الصوري وseit+Dativ والوقت وwann."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Es regnet es~~ / ~~Der Wetter ist schön~~",
+          "ar": "Es الفاعل الصوري + das Wetter"
+        },
+        "whyArabicSpeakerFails": "«الجو ممطر» بلا فاعل بالعربية؛ الألماني يفرض Es دائماً — و«الجو» محايد: das Wetter — الوحدة 7 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Es regnet. · Das Wetter ist schön.",
+          "ar": "الجو ممطر. · الجو جميل."
+        },
+        "exercise": {
+          "q": "أكمل: ___ schneit.",
+          "a": "Es"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~seit zwei Stunde~~ / ~~seit den zwei Stunden~~",
+          "ar": "seit + Dativ (الوحدات الزمنية جمع بلا مقال)"
+        },
+        "whyArabicSpeakerFails": "«منذ ساعتين» جمع بالعربية؛ الألماني seit zwei Stunden (Dativ جمع بلا مقال) — مصيدة u8 الأصلية (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "seit zwei Stunden",
+          "ar": "منذ ساعتين"
+        },
+        "exercise": {
+          "q": "أكمل: seit ___ Tag (واحد → Dativ)",
+          "a": "einem Tag"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wann es ist fünf Uhr?~~ / ~~Es ist wann fünf~~",
+          "ar": "سؤال «متى» + القلنسوة"
+        },
+        "whyArabicSpeakerFails": "«متى الساعة الخامسة» ترتيب خاطئ: wann يبدأ والفعل يقفز — Wann fährst du? — مصيدة الاستفهام (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wann fährst du?",
+          "ar": "متى تسافر؟"
+        },
+        "exercise": {
+          "q": "أكمل: Wann ___ (fahren) du?",
+          "a": "fährst"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "wetter",
+      "uhr"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/ueben"
+    ],
+    "wiktionary": [],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-satzklammer",
+    "ars-perfekt"
+  ],
+  "audioManifestRefs": [
+    "word-wetter",
+    "word-uhr"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung)",
+    "goetheWordListOverlap": []
+  }
+}
