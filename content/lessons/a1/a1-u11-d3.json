@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u11-d3",
+  "level": "A1",
+  "unit": 11,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst über die Vergangenheit mit sein erzählen: Ich bin zu Hause geblieben, ich war krank, und jetzt bin ich wieder fit.",
+    "ar": "تحكي الماضي بـ sein (بقيتُ/كنتُ) وتتحدث عن تعافيك"
+  },
+  "canDoDaily": [
+    "يحكي يومه المريض بـ3 جمل ماضٍ (bin/war) وينتهي بجملة تعافٍ (wieder fit)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "gehen",
+      "sein",
+      "kommen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«بقيتُ في البيت» — haben أم sein؟"
+        },
+        "choices": [
+          "Ich bin zu Hause geblieben (sein)",
+          "Ich habe zu Hause geblieben",
+          "Ich habe zu Hause gebliebt"
+        ],
+        "answer": "Ich bin zu Hause geblieben (sein)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "bleiben",
+      "liegen",
+      "wieder",
+      "schwach",
+      "besser",
+      "fit",
+      "husten",
+      "niesen",
+      "jucken",
+      "brennen",
+      "verschwinden",
+      "dauern"
+    ],
+    "grammarArsenalIds": [
+      "ars-perfekt",
+      "ars-praeteritum"
+    ],
+    "storySentenceIds": [
+      "story-a11-u11-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«بقيتُ في البيت»؟",
+            "a": "Ich bin zu Hause geblieben."
+          },
+          {
+            "q": "«كنتُ أمس ضعيفاً»؟",
+            "a": "Ich war gestern schwach."
+          }
+        ],
+        "interleavedWith": [
+          "bleiben",
+          "schwach"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«سعلتُ طوال الليل»؟",
+            "a": "Ich habe die ganze Nacht gehustet."
+          },
+          {
+            "q": "«اختفى الألم»؟",
+            "a": "Der Schmerz ist verschwunden."
+          }
+        ],
+        "interleavedWith": [
+          "husten",
+          "verschwinden"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«اليوم أنا أفضل»؟",
+            "a": "Heute bin ich besser."
+          },
+          {
+            "q": "«يستغرق ثلاثة أيام»؟",
+            "a": "Es dauert drei Tage."
+          }
+        ],
+        "interleavedWith": [
+          "besser",
+          "dauern"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Den kranken Tag erzählen — Vergangenheit mit bin/war",
+        "a": "x",
+        "ar": "إحكي يومك المريض بالماضي"
+      },
+      "situation": {
+        "de": "Was hast du gestern gemacht? Was ist passiert?",
+        "a": "x",
+        "ar": "ماذا فعلتَ أمس؟ ماذا حدث؟"
+      },
+      "successCriteria": [
+        "جملتا ماضٍ بـ sein (bin/war) + جملة ماضٍ بـ haben (أعراض) + جملة تعافٍ (wieder fit)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«بقيتُ في البيت»؟",
+            "a": "Ich bin zu Hause geblieben."
+          },
+          {
+            "q": "«كنتُ أمس ضعيفاً»؟",
+            "a": "Ich war gestern schwach."
+          },
+          {
+            "q": "«مجداً»؟",
+            "a": "wieder"
+          },
+          {
+            "q": "«سعلتُ»؟",
+            "a": "Ich habe gehustet."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«عطستُ»؟",
+            "a": "Ich habe geniest."
+          },
+          {
+            "q": "«يحكّ»؟",
+            "a": "Es juckt."
+          },
+          {
+            "q": "«حلقي يلتهب»؟",
+            "a": "Mein Hals brennt."
+          },
+          {
+            "q": "«اختفى الألم»؟",
+            "a": "Der Schmerz ist verschwunden."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«اليوم أنا أفضل»؟",
+            "a": "Heute bin ich besser."
+          },
+          {
+            "q": "«أنا مجدداً بخير»؟",
+            "a": "Ich bin wieder fit."
+          },
+          {
+            "q": "«استلقيتُ في السرير»؟",
+            "a": "Ich habe im Bett gelegen."
+          },
+          {
+            "q": "«يستغرق ثلاثة أيام»؟",
+            "a": "Es dauert drei Tage."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Gestern: Ich war krank, bin zu Hause geblieben, habe gehustet und geniest. Mein Hals hat gebrannt. Heute: Der Schmerz ist verschwunden, ich bin wieder fit!",
+      "ar": "أمس: كنتُ مريضاً وبقيتُ في البيت وسعلتُ وعطستُ. حلقي التهب. اليوم: اختفى الألم وأنا مجدداً بخير!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich habe zu Hause geblieben~~ / ~~Der Schmerz hat verschwunden~~",
+          "ar": "الحركة والتغيّر: **sein** (bin geblieben · ist verschwunden) — الأعراض: **haben** (habe gehustet)"
+        },
+        "whyArabicSpeakerFails": "العربية فعل واحد بلا مساعدين؛ الألماني يفرّق: الحركة/التغيّر (بقي · اختفى · ذهب · جاء) = **ist** — الفعل في مكانه (سعل · عطس · استلقى) = **hat** — «القلنسوة» = الأحداث والانتقالات (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bin geblieben. · Der Schmerz ist verschwunden. · Ich habe gehustet.",
+          "ar": "بقيتُ · اختفى الألم · سعلتُ."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ geblieben (sein/haben) · Ich ___ gehustet.",
+          "a": "bin / habe"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe krank gewesen~~ / ~~Ich bin krank gewesen~~ (بدل war)",
+          "ar": "كان (الماضي) = **war** مباشرة (Präsens ist → Präteritum war) — لا حاجة للمساعد"
+        },
+        "whyArabicSpeakerFails": "«كنتُ» فعل مساعد واحد بالعربية؛ الألماني يبني الماضي مباشرة: ist→**war** (مثل Umlaut يوم الاستعادة) — البناء المباشر أسهل: لا haben ولا participle (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich war krank. · Er war zu Hause.",
+          "ar": "كنتُ مريضاً. · كان في البيت."
+        },
+        "exercise": {
+          "q": "حوّل: Ich bin schwach → gestern: Ich ___ schwach.",
+          "a": "war"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Mein Haut juckt~~ / ~~Ich jucke~~",
+          "ar": "الحكّ والحكة: **Es juckt** (Es الفاعل الصوري — يعود من الوحدة 10!)"
+        },
+        "whyArabicSpeakerFails": "«يحكّ» فعل بلا فاعل محسوس بالعربية؛ الألماني يفرض **Es** الفاعل الصوري (مثل Es regnet في الوحدة 10) — والحكّ بنفسه: Es juckt (لا «أنا أحكّ») — مصيدة Es تعود في سياق الجسم (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Es juckt. · Es brennt.",
+          "ar": "يحكّ. · يلتهب."
+        },
+        "exercise": {
+          "q": "ترجم: «يحكّ» (بـ Es).",
+          "a": "Es juckt."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "bleiben",
+      "liegen",
+      "wieder",
+      "schwach",
+      "besser",
+      "fit",
+      "husten",
+      "niesen",
+      "jucken",
+      "brennen",
+      "verschwinden",
+      "dauern"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/bleiben",
+      "https://www.duden.de/rechtschreibung/verschwinden",
+      "https://www.duden.de/rechtschreibung/husten"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/bleiben"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-perfekt",
+    "ars-praeteritum"
+  ],
+  "audioManifestRefs": [
+    "word-bleiben",
+    "word-liegen",
+    "word-wieder",
+    "word-schwach",
+    "word-besser",
+    "word-fit",
+    "word-husten",
+    "word-niesen",
+    "word-jucken",
+    "word-brennen",
+    "word-verschwinden",
+    "word-dauern"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 11 (Gesundheit) — im Perfekt erzählen (sein)",
+    "goetheWordListOverlap": []
+  }
+}

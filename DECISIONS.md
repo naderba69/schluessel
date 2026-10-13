@@ -398,3 +398,10 @@
 - **u11-d2** (12 كلمة — Arzt/Gesundheit): Arzt (**Ärzte**) · **Ärztin (-in للأنثى)** · Schmerz (Schmerzen) · **Kopfschmerzen (جمع دائم!)** · Fieber (بلا جمع) · Erkältung (**Erkältungen**) · Grippe · Schwindel · Medikament · Tablette · Rezept · untersuchen (hat untersucht). مراجعة: nehmen/seit/krank.
 - **قواعد d2**: الألم بالأسماء: habe + **جمع** (Kopfschmerzen) أو اسم جماعي (Fieber/Schwindel) · **seit + Dativ** (seit zwei Tagen — مراجعة u8-d5 في سياق الطبيب) · لاحقة **-in** للأنثى (Ärztin).
 - البوابة: **243/243 + tsc + validator (712/0/0) + build** ✓. **646 كلمة · 62 درساً · 647 مساراً.**
+
+## D82 (2026-10-12): u11-d3 (الماضي مع sein — bin/war)
+
+- **u11-d3** (12 كلمة): bleiben (**ist geblieben**) · liegen (hat gelegen) · wieder · schwach · besser · fit · husten (hat) · niesen (hat) · jucken (**Es juckt**) · brennen (hat) · verschwinden (**ist verschwunden**) · dauern (hat). مراجعة: gehen/sein/kommen.
+- **قواعد d3**: **bin/war** — الحركة/التغيّر = **sein** (blieben · verschwunden) · الأعراض في مكانها = **haben** (gehustet · geniest) · **war** المباشر (لا habe gewesen) · **Es juckt** (Es الفاعل الصوري يعود).
+- حادث مخطط: `whyArabicSpeakerFails: 10` رقم بدل نص — Zod فشل بمعلومة مفيدة = **قواعد قديمة (D77) تعمل** — أُصلح فوراً.
+- البوابة: **243/243 + tsc + validator (725/0/0) + build** ✓. **658 كلمة · 63 درساً · 659 مساراً.**

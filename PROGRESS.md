@@ -284,3 +284,7 @@
 ## حملة المحتوى — الدفعة 37 (2026-10-12) — u11-d2 وصف الألم (D81)
 - **u11-d2** (12 كلمة): Arzt/Ärztin/Schmerz/Kopfschmerzen/Fieber/Erkältung/Grippe/Schwindel/Medikament/Tablette/Rezept/untersuchen. مصائد: جمع الألم · seit+Dativ · لاحقة -in.
 - **646 كلمة · 62 درساً · 647 مساراً** · **243/243 أخضر** + tsc + validator (712/0/0) + build ✓. (D81) التالي: u11-d3 (**Perfekt مع sein — ذهبت/كنت**).
+
+## حملة المحتوى — الدفعة 38 (2026-10-12) — u11-d3 الماضي مع sein (D82)
+- **u11-d3** (12 كلمة): bleiben/liegen/wieder/schwach/besser/fit/husten/niesen/jucken/brennen/verschwinden/dauern. مصائد: bin-vs-haben · war المباشر · Es juckt.
+- **658 كلمة · 63 درساً · 659 مساراً** · **243/243 أخضر** + tsc + validator (725/0/0) + build ✓. (D82) التالي: u11-d4 (اختيار haben↔sein).
