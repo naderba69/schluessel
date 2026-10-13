@@ -9,3 +9,4 @@ export * from "./arsenal.js";
 export * from "./unit0.js";
 export * from "./landeskunde.js";
 export * from "./pruefungen.js";
+export * from "./modelltest.js";

@@ -7,7 +7,7 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
-  Unit0Deck, CultureCard, CyclicTest, SCHEMA_VERSION,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, SCHEMA_VERSION,
 } from "../content/schemas/index.js";
 import { VOICE_ID, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
 
@@ -39,7 +39,7 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
 
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -50,6 +50,7 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("unit0/")) return "unit0";
   if (p.startsWith("landeskunde/")) return "landeskunde";
   if (p.startsWith("pruefungen/")) return "pruefungen";
+  if (p.startsWith("modelltest/")) return "modelltest";
   return "unknown";
 }
 
@@ -148,6 +149,15 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
           const card = CultureCard.parse(entry.data); // D93: بطاقات الثقافة الأسبوعية
           if (card.facts.length < 2)
             push("error", "e-culture-facts", entry.path, "بطاقة ثقافة بلا حقائق كافية (≥2)");
+          break;
+        }
+        case "modelltest": {
+          const t = Modelltest.parse(entry.data); // D95: الامتحان التجريبي الكامل
+          const skills = t.sections.map((s) => s.skill);
+          for (const need of ["hoeren", "lesen", "schreiben", "sprechen"] as const) {
+            if (!skills.includes(need))
+              push("error", "e-modelltest-skill", entry.path, `مهارة مفقودة من الامتحان: ${need}`);
+          }
           break;
         }
         case "pruefungen": {

@@ -1,0 +1,386 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-modelltest-1",
+  "level": "A1",
+  "title": {
+    "de": "Goethe-Zertifikat A1: Modelltest 1 (Übung)",
+    "ar": "امتحان A1 التجريبي 1 (تدريب)"
+  },
+  "passingScore": 0.6,
+  "sections": [
+    {
+      "skill": "hoeren",
+      "timeBudgetMin": 20,
+      "instructions": {
+        "de": "Hören Sie die Audio-Texte und beantworten Sie die Fragen. Jeder Text wird zweimal gespielt.",
+        "ar": "استمع إلى النصوص الصوتية وأجب عن الأسئلة. كل نص يُشغَّل مرتين."
+      },
+      "parts": [
+        {
+          "id": "hoeren-teil1",
+          "prompt": {
+            "de": "Teil 1: Hören Sie die Wörter. Was passt zusammen?",
+            "ar": "القسم 1: استمع إلى الكلمات. ماذا يناسب؟"
+          },
+          "items": [
+            {
+              "q": "Das Wort für «الجمعة»؟",
+              "a": "Freitag",
+              "choices": [
+                "Montag",
+                "Freitag",
+                "Sonntag"
+              ]
+            },
+            {
+              "q": "Das Wort für «الوصفة (طبية)»؟",
+              "a": "Rezept",
+              "choices": [
+                "Rezept",
+                "Reservierung",
+                "Rechnung"
+              ]
+            },
+            {
+              "q": "Das Wort für «الرصيف»؟",
+              "a": "Gleis",
+              "choices": [
+                "Gleis",
+                "Größe",
+                "Grüß"
+              ]
+            },
+            {
+              "q": "Das Wort للتأخير؟",
+              "a": "Verspätung",
+              "choices": [
+                "Versprechen",
+                "Verspätung",
+                "Verbindung"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hoeren-teil2",
+          "prompt": {
+            "de": "Teil 2: Hören Sie den Dialog. Antworten Sie.",
+            "ar": "القسم 2: استمع إلى الحوار وأجب."
+          },
+          "items": [
+            {
+              "q": "Im Restaurant: Was möchte die Person trinken?",
+              "a": "Wasser",
+              "choices": [
+                "Kaffee",
+                "Wasser",
+                "Milch"
+              ]
+            },
+            {
+              "q": "Am Bahnhof: Wann fährt der Zug ab?",
+              "a": "um 8 Uhr",
+              "choices": [
+                "um 7 Uhr",
+                "um 8 Uhr",
+                "um 9 Uhr"
+              ]
+            },
+            {
+              "q": "Beim Arzt: Was tut weh?",
+              "a": "der Kopf",
+              "choices": [
+                "der Kopf",
+                "das Bein",
+                "die Hand"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hoeren-teil3",
+          "prompt": {
+            "de": "Teil 3: Hören Sie die Ansage. Was ist richtig?",
+            "ar": "القسم 3: استمع إلى الإعلان. ما الصحيح؟"
+          },
+          "items": [
+            {
+              "q": "Der Zug nach Berlin fährt von welchem Gleis?",
+              "a": "Gleis 3",
+              "choices": [
+                "Gleis 1",
+                "Gleis 3",
+                "Gleis 5"
+              ]
+            },
+            {
+              "q": "Das Hotel: Wann ist Frühstück?",
+              "a": "von 7 bis 10 Uhr",
+              "choices": [
+                "von 6 bis 9 Uhr",
+                "von 7 bis 10 Uhr",
+                "von 8 bis 11 Uhr"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "skill": "lesen",
+      "timeBudgetMin": 25,
+      "instructions": {
+        "de": "Lesen Sie die Texte und beantworten Sie die Fragen.",
+        "ar": "اقرأ النصوص وأجب عن الأسئلة."
+      },
+      "parts": [
+        {
+          "id": "lesen-teil1",
+          "prompt": {
+            "de": "Teil 1: Lesen Sie die Schilder. Was bedeuten sie?",
+            "ar": "القسم 1: اقرأ اللوحات. ماذا تعني؟"
+          },
+          "items": [
+            {
+              "q": "«Ausgang»؟",
+              "a": "المخرج",
+              "choices": [
+                "المدخل",
+                "المخرج",
+                "الرصيف"
+              ]
+            },
+            {
+              "q": "«Eingang»؟",
+              "a": "المدخل",
+              "choices": [
+                "المدخل",
+                "المخرج",
+                "الحقيبة"
+              ]
+            },
+            {
+              "q": "«Verboten»؟",
+              "a": "ممنوع",
+              "choices": [
+                "مسموح",
+                "ممنوع",
+                "مفتوح"
+              ]
+            },
+            {
+              "q": "«Notausgang»؟",
+              "a": "مخرج الطوارئ",
+              "choices": [
+                "مكتب الاستقبال",
+                "مخرج الطوارئ",
+                "غرفة النوم"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lesen-teil2",
+          "prompt": {
+            "de": "Teil 2: Lesen Sie die kurzen Texte.",
+            "ar": "القسم 2: اقرأ النصوص القصيرة."
+          },
+          "items": [
+            {
+              "q": "«Supermarkt: Am Sonntag geschlossen.» Wann kann man einkaufen?",
+              "a": "Montag bis Samstag",
+              "choices": [
+                "nur Sonntag",
+                "Montag bis Samstag",
+                "jeden Tag"
+              ]
+            },
+            {
+              "q": "«Zimmer frei! 2 Nächte, mit Frühstück.» Was ist inklusive?",
+              "a": "Frühstück",
+              "choices": [
+                "Abendessen",
+                "Frühstück",
+                "Taxi"
+              ]
+            },
+            {
+              "q": "«Achtung: Fahrkarte bitte hier stempeln!» Was macht man?",
+              "a": "Fahrkarte stempeln",
+              "choices": [
+                "Fahrkarte kaufen",
+                "Fahrkarte stempeln",
+                "Fahrkarte schicken"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lesen-teil3",
+          "prompt": {
+            "de": "Teil 3: Lesen Sie die E-Mail.",
+            "ar": "القسم 3: اقرأ الرسالة."
+          },
+          "items": [
+            {
+              "q": "E-Mail: «Hallo! Ich komme Freitag um 14 Uhr an. Kannst du mich abholen?» — Was will die Person?",
+              "a": "abgeholt werden",
+              "choices": [
+                "abgeholt werden",
+                "einkaufen",
+                "schlafen"
+              ]
+            },
+            {
+              "q": "«Das Essen war super, aber das Zimmer war zu laut.» Was war nicht gut?",
+              "a": "das Zimmer",
+              "choices": [
+                "das Essen",
+                "das Zimmer",
+                "der Weg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "skill": "schreiben",
+      "timeBudgetMin": 20,
+      "instructions": {
+        "de": "Teil 1: Füllen Sie das Formular aus. Teil 2: Schreiben Sie eine kurze Nachricht (30 Wörter).",
+        "ar": "القسم 1: املأ الاستمارة. القسم 2: اكتب رسالة قصيرة (30 كلمة)."
+      },
+      "parts": [
+        {
+          "id": "schreiben-teil1",
+          "prompt": {
+            "de": "Teil 1: Formular — schreiben Sie Ihre Daten.",
+            "ar": "القسم 1: استمارة — اكتب بياناتك."
+          },
+          "items": [
+            {
+              "q": "Name:",
+              "a": "الاسم الكامل (مثال: Amira Ben Salah)"
+            },
+            {
+              "q": "Vorname:",
+              "a": "الاسم الشخصي"
+            },
+            {
+              "q": "Adresse / Straße:",
+              "a": "العنوان والشارع"
+            },
+            {
+              "q": "Telefonnummer:",
+              "a": "رقم الهاتف"
+            },
+            {
+              "q": "Geburtsdatum (TT.MM.JJJJ):",
+              "a": "تاريخ الميلاد (يوم.شهر.سنة)"
+            }
+          ]
+        },
+        {
+          "id": "schreiben-teil2",
+          "prompt": {
+            "de": "Teil 2: Schreiben Sie eine Nachricht an Ihren Freund (30 Wörter): Termin, Uhrzeit, Ort.",
+            "ar": "القسم 2: اكتب رسالة لصديقك (30 كلمة): موعد ووقت ومكان."
+          },
+          "items": [
+            {
+              "q": "Schreiben Sie: Wann? Wo? Was machen Sie zusammen?",
+              "a": "رسالة من 30 كلمة تحتوي: موعد (زمان) + مكان + نشاط (مثال: Hallo Markus! Am Samstag treffen wir uns um 10 Uhr am Bahnhof. Wir fahren zum See. Bis Samstag! Viele Grüße)"
+            },
+            {
+              "q": "Nennen Sie die richtige Zeitform (heute/gestern/morgen).",
+              "a": "استخدام صحيح للزمن (مثال: morgen / am Samstag)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "skill": "sprechen",
+      "timeBudgetMin": 15,
+      "instructions": {
+        "de": "Teil 1: Sprechen Sie über sich. Teil 2: Bitten Sie um etwas im Geschäft. Teil 3: Fragen Sie nach dem Weg.",
+        "ar": "القسم 1: تحدّث عن نفسك. القسم 2: اطلب شيئاً في المتجر. القسم 3: اسأل عن الطريق."
+      },
+      "parts": [
+        {
+          "id": "sprechen-teil1",
+          "prompt": {
+            "de": "Teil 1: Sprechen Sie über sich — 5 Sätze.",
+            "ar": "القسم 1: تحدّث عن نفسك — 5 جمل."
+          },
+          "items": [
+            {
+              "q": "Wie heißen Sie?",
+              "a": "Ich heiße …"
+            },
+            {
+              "q": "Woher kommen Sie?",
+              "a": "Ich komme aus …"
+            },
+            {
+              "q": "Wo wohnen Sie?",
+              "a": "Ich wohne in …"
+            },
+            {
+              "q": "Was machen Sie — arbeiten oder studieren?",
+              "a": "Ich arbeite / studiere …"
+            },
+            {
+              "q": "Was sind Ihre Hobbys?",
+              "a": "Meine Hobbys sind …"
+            }
+          ]
+        },
+        {
+          "id": "sprechen-teil2",
+          "prompt": {
+            "de": "Teil 2: Im Geschäft — Sie brauchen etwas. Bitten Sie darum.",
+            "ar": "القسم 2: في المتجر — تحتاج شيئاً. اطلبه."
+          },
+          "items": [
+            {
+              "q": "Bitten Sie um ein Kilo Äpfel.",
+              "a": "Ich möchte ein Kilo Äpfel, bitte."
+            },
+            {
+              "q": "Fragen Sie: Was kostet das?",
+              "a": "Was kostet das, bitte?"
+            },
+            {
+              "q": "Sagen Sie: Das ist zu teuer.",
+              "a": "Das ist zu teuer."
+            }
+          ]
+        },
+        {
+          "id": "sprechen-teil3",
+          "prompt": {
+            "de": "Teil 3: Fragen Sie nach dem Weg zum Bahnhof.",
+            "ar": "القسم 3: اسأل عن الطريق إلى المحطة."
+          },
+          "items": [
+            {
+              "q": "Fragen Sie: Entschuldigung, wo ist der Bahnhof?",
+              "a": "Entschuldigung, wo ist der Bahnhof?"
+            },
+            {
+              "q": "Der Weg: geradeaus, dann rechts. Bestätigen Sie.",
+              "a": "Geradeaus, dann rechts. Danke!"
+            },
+            {
+              "q": "Bedanken Sie sich.",
+              "a": "Vielen Dank! / Danke schön!"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceNote": "بنية الامتحان مبنية على نموذج Goethe-Zertifikat A1 المعتاد (Hören/Lesen/Schreiben/Sprechen) — التفاصيل الرسمية الدقيقة (التوقيتات وعدد العناصر) needs-web-verify من goethe.de قبل أي استخدام رسمي. الأسئلة هنا من مفردات الخطة (742 كلمة) — تدريب داخلي لا نسخة رسمية."
+}

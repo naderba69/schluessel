@@ -881,6 +881,13 @@ export const ALL_PRUEFUNGEN = [
   pruefungMonatspruefungW8,
 ];
 
+import modelltest0 from "../content/modelltest/a1-modelltest-1.json";
+
+/** الامتحانات التجريبية الكاملة (D95) */
+export const ALL_MODELLTESTS = [
+  modelltest0,
+];
+
 const WORD_JSONS = [
   wordAbbiegen,
   wordAbend,

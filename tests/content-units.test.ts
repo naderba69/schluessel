@@ -1,6 +1,6 @@
 // content-units.test.ts — المحتوى حيّ: كل درس وكلماته تعمل على المُشغِّل (D45)
 import { describe, it, expect } from "vitest";
-import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
 
 describe("سجل المحتوى — الوحدة 1 كاملة + بداية الوحدة 2", () => {
@@ -101,6 +101,23 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     for (const t of ALL_PRUEFUNGEN) {
       expect(t.passingScore).toBe(0.75);
       expect(t.coversUnits.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("الامتحان التجريبي: 4 مهارات كاملة + حدود الصدق", () => {
+    expect(ALL_MODELLTESTS.length).toBeGreaterThanOrEqual(1);
+    for (const t of ALL_MODELLTESTS) {
+      const skills = t.sections.map((s) => s.skill).sort();
+      expect(skills).toEqual(["hoeren", "lesen", "schreiben", "sprechen"]);
+      expect(t.passingScore).toBeGreaterThan(0);
+      expect(t.passingScore).toBeLessThanOrEqual(1);
+      expect(t.sourceNote.length).toBeGreaterThan(0);
+      for (const s of t.sections) {
+        expect(s.timeBudgetMin).toBeGreaterThan(0);
+        for (const part of s.parts) {
+          expect(part.items.length).toBeGreaterThan(0);
+        }
+      }
     }
   });
 });
