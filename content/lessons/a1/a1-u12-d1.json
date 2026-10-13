@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u12-d1",
+  "level": "A1",
+  "unit": 12,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst über dein Reiseziel sprechen: Mein Ziel ist Berlin, das Hotel ist im Zentrum, und der Zug fährt um 8 Uhr ab.",
+    "ar": "تتحدث عن وجهتك ورحلتك (مع أول فعل منفصل!)"
+  },
+  "canDoDaily": [
+    "يخبر عن وجهته وفندقه ووقت مغادرة القطار بجملة فعل منفصل"
+  ],
+  "warmup": {
+    "cardIds": [
+      "reisen",
+      "zug",
+      "urlaub"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«القطار يغادر الساعة الثامنة» — أين يذهب ab؟"
+        },
+        "choices": [
+          "Der Zug fährt um 8 Uhr ab (ab آخر الجملة)",
+          "Der Zug ab fährt um 8 Uhr",
+          "Der Zug fährt ab um 8 Uhr"
+        ],
+        "answer": "Der Zug fährt um 8 Uhr ab (ab آخر الجملة)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "ziel",
+      "hotel",
+      "reservierung",
+      "fahrt",
+      "abfahren",
+      "besichtigen",
+      "sehenswuerdigkeit",
+      "ausland",
+      "pass",
+      "visum",
+      "ausflug",
+      "tourist"
+    ],
+    "grammarArsenalIds": [
+      "ars-trennbar",
+      "ars-wechselprae-dat"
+    ],
+    "storySentenceIds": [
+      "story-a12-u12-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«وجهتي برلين»؟",
+            "a": "Mein Ziel ist Berlin."
+          },
+          {
+            "q": "«الفندق في الوسط»؟",
+            "a": "Das Hotel ist im Zentrum."
+          }
+        ],
+        "interleavedWith": [
+          "ziel",
+          "hotel"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«القطار يغادر الساعة الثامنة»؟",
+            "a": "Der Zug fährt um 8 Uhr ab."
+          },
+          {
+            "q": "«الرحلة تستغرق ساعتين»؟",
+            "a": "Die Fahrt dauert zwei Stunden."
+          }
+        ],
+        "interleavedWith": [
+          "abfahren",
+          "fahrt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أحتاج جواز سفري»؟",
+            "a": "Ich brauche meinen Pass."
+          },
+          {
+            "q": "«أسافر إلى الخارج»؟",
+            "a": "Ich reise ins Ausland."
+          }
+        ],
+        "interleavedWith": [
+          "pass",
+          "ausland"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Über das Reiseziel sprechen",
+        "a": "x",
+        "ar": "الحديث عن الوجهة"
+      },
+      "situation": {
+        "de": "Wohin fährst du? Wo wohnst du? Wann fährt der Zug?",
+        "a": "x",
+        "ar": "إلى أين تسافر؟ أين تسكن؟ متى يغادر القطار؟"
+      },
+      "successCriteria": [
+        "جملة وجهة (Ziel ist …) + جملة فندق (im Hotel) + جملة مغادرة بفعل منفصل (fährt … ab) + جملة وثائق (Pass/Visum)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«وجهة»؟",
+            "a": "das Ziel"
+          },
+          {
+            "q": "«فندق» والجمع؟",
+            "a": "das Hotel → die Hotels"
+          },
+          {
+            "q": "«حجز»؟",
+            "a": "die Reservierung"
+          },
+          {
+            "q": "«رحلة (بالمركبة)»؟",
+            "a": "die Fahrt"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يغادر» — والآن؟",
+            "a": "abfahren — der Zug fährt ab"
+          },
+          {
+            "q": "«يزور المعالم»؟",
+            "a": "besichtigen (wir besichtigen die Stadt)"
+          },
+          {
+            "q": "«معلم سياحي»؟",
+            "a": "die Sehenswürdigkeit"
+          },
+          {
+            "q": "«الخارج»؟",
+            "a": "das Ausland (ins Ausland)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«جواز سفر» والجمع؟",
+            "a": "der Pass → die Pässe"
+          },
+          {
+            "q": "«تأشيرة» والجمع؟",
+            "a": "das Visum → die Visa"
+          },
+          {
+            "q": "«نزهة»؟",
+            "a": "der Ausflug"
+          },
+          {
+            "q": "«سائح» والجمع؟",
+            "a": "der Tourist → die Touristen"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Mein Ziel ist Berlin. Das Hotel ist im Zentrum, ich habe eine Reservierung. Der Zug fährt um 8 Uhr ab — die Fahrt dauert zwei Stunden. Ich brauche meinen Pass und das Visum, und besichtige die Sehenswürdigkeiten!",
+      "ar": "وجهتي برلين. الفندق في الوسط وعندي حجز. القطار يغادر الساعة الثامنة — الرحلة تستغرق ساعتين. أحتاج جواز السفر والتأشيرة وسأزور المعالم!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Der Zug fährt ab um 8 Uhr~~ / ~~Der Zug ab fährt um 8 Uhr~~",
+          "ar": "الفعل المنفصل (trennbar): البادئة **ab** تُقال **آخر** الجملة — القلنسوة الثالثة!"
+        },
+        "whyArabicSpeakerFails": "«يغادر» فعل واحد بالعربية؛ الألماني يشطره: **fährt** (ثاني الكلمة) + **ab** (آخرها) — مثل القلنسوة بالفعلين لكن ببادئة واحدة — مصيدة جديدة لنفس القاعدة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Der Zug fährt um 8 Uhr ab.",
+          "ar": "القطار يغادر الساعة الثامنة."
+        },
+        "exercise": {
+          "q": "أكمل: Das Hotel ___ um 12 Uhr ___ (aufstehen مركّب؟ لا — anfangen: fängt … an)",
+          "a": "Das Hotel fängt um 12 Uhr an? لا — التمرين: Der Tag fängt früh an."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich reise in das Ausland~~ (مقبول لكن الأخف) / ~~Ich reise im Ausland~~ (للوجهة خطأ)",
+          "ar": "الوجهة: **ins** Ausland (in + das = ins) · المكان: **im** Zentrum — مراجعة Wechselpräp في السياق!"
+        },
+        "correct": {
+          "de": "Ich reise ins Ausland. · Das Hotel ist im Zentrum.",
+          "ar": "أسافر إلى الخارج. · الفندق في الوسط."
+        },
+        "exercise": {
+          "q": "أكمل: Ich fahre ___ (in+das) Hotel? لا — Ich wohne ___ (in+das) Hotel.",
+          "a": "im Hotel"
+        },
+        "whyArabicSpeakerFails": "«أسافر إلى الخارج» و«الفندق في الوسط» نفس حرف الجر بالعربية (في)؛ الألماني يفرّق: الوجهة = **ins** (accusative) · المكان = **im** (dative) — القاعدة القديمة (الميناء) تعود في أهم سياق سياحي (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "de": "~~die Pass~~ / ~~der Visum~~ / ~~die Hotel~~",
+          "ar": "أجناس الوثائق: der **Pass** (Pässe) · das **Visum** (Visa) · das **Hotel** (Hotels -s)"
+        },
+        "whyArabicSpeakerFails": "كلمات مستعارة (Hotel/Visum) تخلط القاعدة: Hotel = das (محايد) لكن جمعها -s — Pass جمعه بالوملاوت — ثلاثة أنماط جمع في ثلاثة أسماء فقط (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Pass · das Visum · das Hotel",
+          "ar": "الجواز · التأشيرة · الفندق (بأجنستها)"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Pass (der/die/das) ___ Visum ___ Hotel.",
+          "a": "der / das / das"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "ziel",
+      "hotel",
+      "reservierung",
+      "fahrt",
+      "abfahren",
+      "besichtigen",
+      "sehenswuerdigkeit",
+      "ausland",
+      "pass",
+      "visum",
+      "ausflug",
+      "tourist"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/abfahren",
+      "https://www.duden.de/rechtschreibung/Pass",
+      "https://www.duden.de/rechtschreibung/Sehenswuerdigkeit"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/abfahren"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-trennbar",
+    "ars-wechselprae-dat"
+  ],
+  "audioManifestRefs": [
+    "word-ziel",
+    "word-hotel",
+    "word-reservierung",
+    "word-fahrt",
+    "word-abfahren",
+    "word-besichtigen",
+    "word-sehenswuerdigkeit",
+    "word-ausland",
+    "word-pass",
+    "word-visum",
+    "word-ausflug",
+    "word-tourist"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 12 (Reise) — Das Reiseziel",
+    "goetheWordListOverlap": []
+  }
+}

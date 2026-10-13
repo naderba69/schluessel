@@ -424,3 +424,9 @@
 - **تصحيحات مخطط خلال الدفعة**: kind=integration (لا review) · pretestItems ≥ 1 · dualCodingRequired=true · wordIds/srs/audioRefs بمراجع المراجعة (كما u10-d6).
 - البوابة: **243/243 + tsc + validator (752/0/0) + build** ✓. **682 كلمة · 66 يوماً · 683 مساراً.**
 - **اكتمال الوحدة 11 (الصحة والجسم) ✅** — d1 الجسم · d2 الألم · d3 bin/war · d4 haben↔sein · d5 الطبيب · d6 المعركة.
+
+## D86 (2026-10-12): u12-d1 (الوجهة — افتتاح الوحدة 12 الأخيرة)
+
+- **u12-d1** (12 كلمة Reise): Ziel · Hotel (**Hotels** -s مستعار) · Reservierung · Fahrt · **abfahren (trennbar — fährt ab)** · besichtigen · **Sehenswürdigkeit (Sehenswürdigkeiten)** · Ausland (ins Ausland) · **Pass (Pässe)** · **Visum (Visa)** · Ausflug (Ausflüge) · Tourist (Touristen n-dekl). مراجعة: reisen/zug/urlaub.
+- **قواعد d1**: **الفعل المنفصل: البادئة ab آخر الجملة** (fährt um 8 ab) — القلنسوة الثالثة · الوجهة **ins** ↔ المكان **im** (Wechselpräp يعود) · ثلاثة أنماط جمع في ثلاث وثائق (Pässe/Visa/Hotels).
+- البوابة: **243/243 + tsc + validator (765/0/0) + build** ✓. **694 كلمة · 67 درساً · 695 مساراً.**
