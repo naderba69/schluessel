@@ -280,3 +280,7 @@
 ## حملة المحتوى — الدفعة 36 (2026-10-12) — u11-d1 الجسم (D80)
 - **u11-d1** (12 كلمة): Kopf/Hand/Arm/Bein/Rücken/Bauch/Hals/Auge/Nase/Mund/Zahn/Finger. مصائد: الأجناس العشوائية · جمع الوملاوت · **tut weh**.
 - **634 كلمة · 61 درساً · 635 مساراً** · **243/243 أخضر** + tsc + validator (699/0/0) + build ✓. (D80) التالي: u11-d2 (الألم والوصف).
+
+## حملة المحتوى — الدفعة 37 (2026-10-12) — u11-d2 وصف الألم (D81)
+- **u11-d2** (12 كلمة): Arzt/Ärztin/Schmerz/Kopfschmerzen/Fieber/Erkältung/Grippe/Schwindel/Medikament/Tablette/Rezept/untersuchen. مصائد: جمع الألم · seit+Dativ · لاحقة -in.
+- **646 كلمة · 62 درساً · 647 مساراً** · **243/243 أخضر** + tsc + validator (712/0/0) + build ✓. (D81) التالي: u11-d3 (**Perfekt مع sein — ذهبت/كنت**).

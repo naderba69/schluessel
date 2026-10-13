@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u11-d2",
+  "level": "A1",
+  "unit": 11,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst deinen Schmerz beschreiben: Ich habe seit zwei Tagen Kopfschmerzen — und zum Arzt gehen.",
+    "ar": "تصف ألمك بجملة كاملة (seit + منذ) وتذهب إلى الطبيب"
+  },
+  "canDoDaily": [
+    "يصف شكواه بجملتين (habe + seit-مدة) ويسأل الطبيب بجملة واحدة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "nehmen",
+      "seit",
+      "krank"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«عندي صداع» — أين يذهب الجمع في الألم؟"
+        },
+        "choices": [
+          "Ich habe Kopfschmerzen (جمع -en دائماً)",
+          "Ich habe Kopfschmerz",
+          "Ich habe der Kopfschmerz"
+        ],
+        "answer": "Ich habe Kopfschmerzen (جمع -en دائماً)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "arzt",
+      "aerztin",
+      "schmerz",
+      "kopfschmerz",
+      "fieber",
+      "erkaltung",
+      "grippe",
+      "schwindel",
+      "medikament",
+      "tablette",
+      "rezept",
+      "untersuchen"
+    ],
+    "grammarArsenalIds": [
+      "ars-gesundheit",
+      "ars-dativ-fix"
+    ],
+    "storySentenceIds": [
+      "story-a11-u11-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«عندي صداع»؟",
+            "a": "Ich habe Kopfschmerzen."
+          },
+          {
+            "q": "«عندي حمّى»؟",
+            "a": "Ich habe Fieber."
+          }
+        ],
+        "interleavedWith": [
+          "kopfschmerz",
+          "fieber"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«يجب أن أذهب إلى الطبيب»؟",
+            "a": "Ich muss zum Arzt."
+          },
+          {
+            "q": "«الطبيبة تفحصني»؟",
+            "a": "Die Ärztin untersucht mich."
+          }
+        ],
+        "interleavedWith": [
+          "arzt",
+          "untersuchen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الدواء للألم»؟",
+            "a": "Das Medikament ist für den Schmerz."
+          },
+          {
+            "q": "«تناولوا حبة دواء!»؟",
+            "a": "Nehmen Sie eine Tablette!"
+          }
+        ],
+        "interleavedWith": [
+          "medikament",
+          "tablette"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Dem Arzt die Beschwerden erklären",
+        "a": "x",
+        "ar": "شرح الشكوى للطبيب"
+      },
+      "situation": {
+        "de": "Beim Arzt: seit wann? was tut weh?",
+        "ar": "عند الطبيب: منذ متى؟ وما المؤلم؟"
+      },
+      "successCriteria": [
+        "جملتا شكوا (habe + منذ-mدة + ألم) + سؤال للطبيب + جملة دواء/وصفة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الطبيب» والجمع؟",
+            "a": "der Arzt → die Ärzte"
+          },
+          {
+            "q": "«عندي صداع»؟",
+            "a": "Ich habe Kopfschmerzen."
+          },
+          {
+            "q": "«الطبيبة»؟",
+            "a": "die Ärztin"
+          },
+          {
+            "q": "«حمّى»؟",
+            "a": "das Fieber"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«نزلة برد» و«الإنفلونزا»؟",
+            "a": "die Erkältung / die Grippe"
+          },
+          {
+            "q": "«دوخة»؟",
+            "a": "der Schwindel"
+          },
+          {
+            "q": "«وصفة (طبية)»؟",
+            "a": "das Rezept"
+          },
+          {
+            "q": "«يفحص» — والماضي؟",
+            "a": "untersuchen — hat untersucht"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«عندي منذ يومين صداع»؟",
+            "a": "Ich habe seit zwei Tagen Kopfschmerzen."
+          },
+          {
+            "q": "«الدواء» و«الحبة»؟",
+            "a": "das Medikament / die Tablette"
+          },
+          {
+            "q": "«الألم شديد»؟",
+            "a": "Der Schmerz ist stark."
+          },
+          {
+            "q": "«يجب أن أذهب إلى الطبيب»؟",
+            "a": "Ich muss zum Arzt."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Beim Arzt: Ich habe seit zwei Tagen Kopfschmerzen, Fieber und Schwindel. Die Ärztin untersucht mich und gibt mir ein Rezept: Nehmen Sie eine Tablette!",
+      "ar": "عند الطبيب: عندي منذ يومين صداع وحمّى ودوخة. الطبيبة تفحصني وتعطيني وصفة: تناولوا حبة دواء!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich habe Kopfschmerz~~ / ~~Ich habe der Schmerz~~",
+          "ar": "الألم بالأسماء: habe + جمع (Kopfschmerzen/Schmerzen) أو اسم جماعي (Fieber/Schwindel)"
+        },
+        "whyArabicSpeakerFails": "«عندي صداع» مفرد بالعربية؛ الألماني يجمع الألم: Kopfschmerz**en** دائماً — أما Fieber/Schwindel فبلا جمع — التمييز بالحفظ (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe Kopfschmerzen. · Ich habe Fieber.",
+          "ar": "عندي صداع. · عندي حمّى."
+        },
+        "exercise": {
+          "q": "أكمل: Ich habe ___ (der Kopfschmerz) und ___ (das Fieber).",
+          "a": "Kopfschmerzen / Fieber"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~seit zwei Tag~~ / ~~seit den zwei Tagen~~",
+          "ar": "seit + Dativ (منذ) — مراجعة u8-d5 في سياق الطبيب"
+        },
+        "whyArabicSpeakerFails": "«منذ يومين» بالجمع وبلا حرف جر ظاهر؛ الألماني: seit **zwei Tagen** (Dativ جمع بلا مقال) — مصيدة seit تتكرر في أهم سياق عملي (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "seit zwei Tagen · seit drei Wochen",
+          "ar": "منذ يومين · منذ ثلاثة أسابيع"
+        },
+        "exercise": {
+          "q": "أكمل: seit ___ Tag (eins → Dativ جمع)",
+          "a": "einem Tag / Tagen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Arztin~~ / ~~der Ärztin~~ (العكس) / ~~die Arzt~~",
+          "ar": "الأنثى بلاحقة -in: der Arzt → die Ärztin (والجمع Ärztinnen)"
+        },
+        "whyArabicSpeakerFails": "«الطبيبة» كلمة مستقلة بالعربية؛ الألماني يشتقها: Arzt + **in** = Ärztin (أنثى die) — اللاحقة تكسر الجذر أحياناً (Ärz-tin بالوملاوت) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Arzt · die Ärztin",
+          "ar": "الطبيب · الطبيبة"
+        },
+        "exercise": {
+          "q": "حوّل: der Lehrer → die ___",
+          "a": "Lehrerin"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "arzt",
+      "aerztin",
+      "schmerz",
+      "kopfschmerz",
+      "fieber",
+      "erkaltung",
+      "grippe",
+      "schwindel",
+      "medikament",
+      "tablette",
+      "rezept",
+      "untersuchen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Arzt",
+      "https://www.duden.de/rechtschreibung/Kopfschmerz",
+      "https://www.duden.de/rechtschreibung/untersuchen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Arzt"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-gesundheit",
+    "ars-dativ-fix"
+  ],
+  "audioManifestRefs": [
+    "word-arzt",
+    "word-aerztin",
+    "word-schmerz",
+    "word-kopfschmerz",
+    "word-fieber",
+    "word-erkaltung",
+    "word-grippe",
+    "word-schwindel",
+    "word-medikament",
+    "word-tablette",
+    "word-rezept",
+    "word-untersuchen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 11 (Gesundheit) — Beim Arzt: die Beschwerden erklären",
+    "goetheWordListOverlap": []
+  }
+}

@@ -392,3 +392,9 @@
 - **u11-d1** (12 كلمة Körper): Kopf (**Köpfe**) · Hand (**Hände**) · Arm · Bein · Rücken · Bauch (**Bäuche**) · Hals (**Hälse**) · Auge · Nase · Mund (**Münder**) · Zahn (**Zähne**) · Finger. مراجعة: fuss/haar/ohr.
 - **قواعد d1**: أجناس الجسم عشوائية (die Hand · das Bein · das Auge) · جمع الوملاوت (Hände/Köpfe/Zähne) · **X + tut + weh** (weh آخر الجملة — القلنسوة بشكل جديد).
 - البوابة: **243/243 + tsc + validator (699/0/0) + build** ✓. **634 كلمة · 61 درساً · 635 مساراً.**
+
+## D81 (2026-10-12): u11-d2 (وصف الألم — الطبيب والدواء)
+
+- **u11-d2** (12 كلمة — Arzt/Gesundheit): Arzt (**Ärzte**) · **Ärztin (-in للأنثى)** · Schmerz (Schmerzen) · **Kopfschmerzen (جمع دائم!)** · Fieber (بلا جمع) · Erkältung (**Erkältungen**) · Grippe · Schwindel · Medikament · Tablette · Rezept · untersuchen (hat untersucht). مراجعة: nehmen/seit/krank.
+- **قواعد d2**: الألم بالأسماء: habe + **جمع** (Kopfschmerzen) أو اسم جماعي (Fieber/Schwindel) · **seit + Dativ** (seit zwei Tagen — مراجعة u8-d5 في سياق الطبيب) · لاحقة **-in** للأنثى (Ärztin).
+- البوابة: **243/243 + tsc + validator (712/0/0) + build** ✓. **646 كلمة · 62 درساً · 647 مساراً.**
