@@ -308,3 +308,7 @@
 ## حملة المحتوى — الدفعة 43 (2026-10-12) — u12-d2 المحطة والفندق (D87)
 - **u12-d2** (12 كلمة): Gleis/Rezeption/Doppelzimmer/Einzelzimmer/Aussicht/Bad/buchen/Empfang/Halle/Verspätung/verpassen/zurückgeben. مصائد: hat Verspätung · أمر بالفعل المنفصل · von welchem.
 - **706 كلمة · 68 درساً · 707 مساراً** · **243/243 أخضر** + tsc + validator (778/0/0) + build ✓. (D87) التالي: u12-d3 (Perfekt + Trennbare معاً).
+
+## حملة المحتوى — الدفعة 44 (2026-10-12) — u12-d3 الماضي + المنفصلة (D88)
+- **u12-d3** (12 كلمة): losfahren/zurückkommen/mitbringen/ansehen/mitnehmen/ausgeben/einpacken/auspacken/anmelden/aufpassen/mieten/planen. مصائد: ge-المنتصف · ist↔hat · sich anmelden.
+- **718 كلمة · 69 درساً · 719 مساراً** · **243/243 أخضر** + tsc + validator (791/0/0) + build ✓. (D88) التالي: u12-d4 (Konnektoren — und/aber/oder/denn).

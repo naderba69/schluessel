@@ -436,3 +436,9 @@
 - **u12-d2** (12 كلمة): Gleis · Rezeption · **Doppelzimmer/Einzelzimmer** (مركّبان) · Aussicht · **Bad (Bäder)** · buchen · **Empfang (Empfänge)** · Halle · **Verspätung (hat Verspätung!)** · verpassen · **zurückgeben (trennbar — Geben Sie … zurück!)**. مراجعة: suchen/zeigen/ankommen.
 - **قواعد d2**: التأخير «شيء تملكه»: **hat Verspätung** (لا ist) · الأمر بالفعل المنفصل: Verb+Sie+…+**zurück** · **von welchem** (von+Dativ في السؤال).
 - البوابة: **243/243 + tsc + validator (778/0/0) + build** ✓. **706 كلمة · 68 درساً · 707 مساراً.**
+
+## D88 (2026-10-12): u12-d3 (الماضي + الأفعال المنفصلة معاً)
+
+- **u12-d3** (12 كلمة): **losfahren (ist losgefahren)** · **zurückkommen (ist)** · **mitbringen (hat mitgebracht)** · ansehen · mitnehmen · ausgeben · einpacken · auspacken · **anmelden (sich — reflexive+trennbar!)** · aufpassen · mieten · planen. مراجعة: reisen/abfahren/koffer.
+- **قواعد d3**: الماضي المنفصل: البادئة+**ge**+الجذر (**ein-ge-packt** — ge في المنتصف!) · قاعدة القرار مع البادئات (losgefahren=ist ↔ eingepackt=hat) · sich anmelden: habe + **mich** + angemeldet (ثلاثة أجزاء).
+- البوابة: **243/243 + tsc + validator (791/0/0) + build** ✓. **718 كلمة · 69 درساً · 719 مساراً.**

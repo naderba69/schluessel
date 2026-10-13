@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u12-d3",
+  "level": "A1",
+  "unit": 12,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst deine Reise im Perfekt mit trennbaren Verben erzählen: Ich habe den Koffer eingepackt, wir sind losgefahren, und ich habe mich angemeldet.",
+    "ar": "تروي رحلتك بالماضي والأفعال المنفصلة (ge في المنتصف!)"
+  },
+  "canDoDaily": [
+    "يروي رحلته بـ3 جمل ماضٍ بأفعال منفصلة (ge في المنتصف) + جملة bin-حركة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "reisen",
+      "abfahren",
+      "koffer"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«حزمتُ الحقيبة» — أين ge في الفعل المنفصل؟"
+        },
+        "choices": [
+          "Ich habe den Koffer eingepackt (ein-ge-packt)",
+          "Ich habe den Koffer geeinpackt",
+          "Ich habe den Koffer gepacktein"
+        ],
+        "answer": "Ich habe den Koffer eingepackt (ein-ge-packt)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "losfahren",
+      "zurueckkommen",
+      "mitbringen",
+      "ansehen",
+      "mitnehmen",
+      "ausgeben",
+      "einpacken",
+      "auspacken",
+      "anmelden",
+      "aufpassen",
+      "mieten",
+      "planen"
+    ],
+    "grammarArsenalIds": [
+      "ars-trennbar",
+      "ars-perfekt"
+    ],
+    "storySentenceIds": [
+      "story-a12-u12-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«حزمتُ الحقيبة»؟",
+            "a": "Ich habe den Koffer eingepackt."
+          },
+          {
+            "q": "«انطلقنا الساعة الثامنة»؟",
+            "a": "Wir sind um 8 Uhr losgefahren."
+          }
+        ],
+        "interleavedWith": [
+          "einpacken",
+          "losfahren"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«سجّلتُ نفسي (في الفندق)»؟",
+            "a": "Ich habe mich angemeldet."
+          },
+          {
+            "q": "«عدتُ يوم الأحد»؟",
+            "a": "Ich bin am Sonntag zurückgekommen."
+          }
+        ],
+        "interleavedWith": [
+          "anmelden",
+          "zurueckkommen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أنفقتُ 200 يورو»؟",
+            "a": "Ich habe 200 Euro ausgegeben."
+          },
+          {
+            "q": "«انتبهوا!»؟",
+            "a": "Passen Sie auf!"
+          }
+        ],
+        "interleavedWith": [
+          "ausgeben",
+          "aufpassen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Reise im Perfekt erzählen",
+        "a": "x",
+        "ar": "رواية الرحلة بالماضي"
+      },
+      "situation": {
+        "de": "Erzähle deine letzte Reise: Was hast du gemacht? Wohin bist du gefahren?",
+        "a": "x",
+        "ar": "إحكي رحلتك الأخيرة: ماذا فعلت؟ إلى أين ذهبت؟"
+      },
+      "successCriteria": [
+        "جملتان بأفعال منفصلة (ge في المنتصف) + جملة bin-حركة + جملة sich anmelden"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«ينطلق» — والماضي؟",
+            "a": "losfahren — ist losgefahren"
+          },
+          {
+            "q": "«يعود» — والماضي؟",
+            "a": "zurückkommen — ist zurückgekommen"
+          },
+          {
+            "q": "«يجلب (معه)»؟",
+            "a": "mitbringen (hat mitgebracht)"
+          },
+          {
+            "q": "«يشاهد المعالم»؟",
+            "a": "ansehen (hat angesehen)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يأخذ (معه)»؟",
+            "a": "mitnehmen (hat mitgenommen)"
+          },
+          {
+            "q": "«ينفق»؟",
+            "a": "ausgeben (hat ausgegeben)"
+          },
+          {
+            "q": "«يحزم الحقيبة»؟",
+            "a": "einpacken (hat eingepackt)"
+          },
+          {
+            "q": "«يفتح الحقيبة»؟",
+            "a": "auspacken (hat ausgepackt)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«سجّلتُ نفسي»؟",
+            "a": "Ich habe mich angemeldet."
+          },
+          {
+            "q": "«ينتبه»؟",
+            "a": "aufpassen (Passen Sie auf!)"
+          },
+          {
+            "q": "«يستأجر»؟",
+            "a": "mieten (hat gemietet)"
+          },
+          {
+            "q": "«يخطّط»؟",
+            "a": "planen (hat geplant)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Meine Reise: Ich habe den Koffer eingepackt und die Reise geplant. Wir sind um 8 Uhr losgefahren. Im Hotel: ich habe mich angemeldet. Am Sonntag bin ich zurückgekommen — und ich habe 200 Euro ausgegeben!",
+      "ar": "رحلتي: حزمتُ الحقيبة وخطّطتُ الرحلة. انطلقنا الساعة الثامنة. في الفندق: سجّلتُ نفسي. يوم الأحد عدتُ — وأنفقتُ 200 يورو!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich habe den Koffer geeinpackt~~ / ~~gepacktein~~ / ~~Ich habe eingepackt den Koffer~~",
+          "ar": "الفعل المنفصل في الماضي: البادئة + **ge** + الجذر: **ein-ge-packt** (ge في المنتصف!) — والمفعول بين المساعدين"
+        },
+        "whyArabicSpeakerFails": "«حزمتُ» فعل واحد؛ الألماني ثلاثة أجزاء: habe + den Koffer + **eingepackt** (ein-ge-packt) — ge يدخل بين البادئة والجذر — لا «geeinpackt» أبداً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe den Koffer eingepackt.",
+          "ar": "حزمتُ الحقيبة."
+        },
+        "exercise": {
+          "q": "كوّن الماضي: mitnehmen → mit-___-nommen",
+          "a": "mitgenommen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe losgefahren~~ / ~~Ich bin eingepackt~~",
+          "ar": "قاعدة القرار مع البادئات: **losgefahren/zurückgekommen = ist** (حركة) · **eingepackt/mitgebracht = hat** (فعل في مكانه)"
+        },
+        "whyArabicSpeakerFails": "البادئة (los/zurück/mit) توحي بالحركة كلها؛ الألماني يفرّق: هل تغيّر المَكان فعلاً؟ = ist · هل فعلتُ شيئاً بيدي؟ = hat — البادئة لا تغيّر القاعدة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wir sind losgefahren. · Ich habe eingepackt.",
+          "ar": "انطلقنا. · حزمتُ."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ zurückgekommen · Ich ___ mitgenommen.",
+          "a": "bin / habe"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe angemeldet~~ / ~~Ich habe mich angemeldet~~ (صحيح!) / ~~Ich habe mich anmeldet~~",
+          "ar": "sich anmelden = **انعكاسي + منفصل**: mich في المنتصف + angemeldet (an-ge-meldet)"
+        },
+        "whyArabicSpeakerFails": "«سجّلتُ نفسي» فعلان بالعربية؛ الألماني ثلاثة أجزاء: habe + **mich** + **angemeldet** — الانعكاسي (mich) يقعد بين المساعد والمفعول — الترتيب: habe … mich … angemeldet (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe mich angemeldet.",
+          "ar": "سجّلتُ نفسي."
+        },
+        "exercise": {
+          "q": "أكمل: Er hat ___ (sich) angemeldet.",
+          "a": "sich"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "losfahren",
+      "zurueckkommen",
+      "mitbringen",
+      "ansehen",
+      "mitnehmen",
+      "ausgeben",
+      "einpacken",
+      "auspacken",
+      "anmelden",
+      "aufpassen",
+      "mieten",
+      "planen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/einpacken",
+      "https://www.duden.de/rechtschreibung/anmelden",
+      "https://www.duden.de/rechtschreibung/losfahren"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/einpacken"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-trennbar",
+    "ars-perfekt"
+  ],
+  "audioManifestRefs": [
+    "word-losfahren",
+    "word-zurueckkommen",
+    "word-mitbringen",
+    "word-ansehen",
+    "word-mitnehmen",
+    "word-ausgeben",
+    "word-einpacken",
+    "word-auspacken",
+    "word-anmelden",
+    "word-aufpassen",
+    "word-mieten",
+    "word-planen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 12 (Reise) — Im Perfekt erzählen (trennbare Verben)",
+    "goetheWordListOverlap": []
+  }
+}
