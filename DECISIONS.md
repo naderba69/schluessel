@@ -448,3 +448,11 @@
 - **u12-d4** (12 كلمة): **denn (V2!)** · **sondern (بعد النفي فقط)** · **deswegen (V2!)** · leider · vielleicht · dann · zuletzt · Beispiel (zum Beispiel) · Meinung (Meiner Meinung nach) · Vorschlag (**Vorschläge**) · Idee · Plan (**Pläne**). مراجعة: oder/deshalb/weil. (und/aber = قواعد مجردة بلا ملفات — كما haben.)
 - **قواعد d4**: **الثلاثية الذهبية**: weil (الفعل آخر) · **denn (الفعل ثانٍ V2)** · **deswegen (يبدأ الجملة — الفعل يقفز)** · sondern فقط بعد nicht/kein · **Meiner Meinung nach** + V2 (nach آخر التعبير).
 - البوابة: **243/243 + tsc + validator (804/0/0) + build** ✓. **730 كلمة · 70 درساً · 731 مساراً.**
+
+## D90 (2026-10-12): u12-d5 (سرد الرحلة — آخر 12 كلمة في الخطة!)
+
+- **u12-d5** (12 كلمة — طبيعة وتذكار): Landschaft · Natur · **See (der=بحيرة · die=بحر!)** · Berg (Berge) · Meer · **Strand (Strände)** · Insel · **Fluss (Flüsse)** · **Wald (Wälder)** · Andenken · **fotografieren (hat fotografiert — لا ge!)** · Postkarte. مراجعة: foto/reise/ausflug.
+- **قواعد d5**: **أفعال -ieren بلا ge** (fotografiert · studiert) — انهيار قاعدة ge الأول · **جبل الوملاوت**: Berge/Strände/Wälder/Flüsse · **der See ↔ die See** (الجنس يغيّر المعنى!).
+- حادث مخطط: `no-ge-perfekt` ليست في enum grammarRisks (D68) — أُزيلت (القاعدة تبقى في warningCards).
+- البوابة: **243/243 + tsc + validator (817/0/0) + build** ✓. **742 كلمة · 71 درساً · 743 مساراً.**
+- **آخر كلمات الخطة!** تبقّى u12-d6 (المعركة الكبرى — 0 كلمات).

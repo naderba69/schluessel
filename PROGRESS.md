@@ -316,3 +316,7 @@
 ## حملة المحتوى — الدفعة 45 (2026-10-12) — u12-d4 الروابط (D89)
 - **u12-d4** (12 كلمة): denn/sondern/deswegen/leider/vielleicht/dann/zuletzt/Beispiel/Meinung/Vorschlag/Idee/Plan. مصائد: denn≠weil · sondern بعد النفي · Meiner Meinung nach.
 - **730 كلمة · 70 درساً · 731 مساراً** · **243/243 أخضر** + tsc + validator (804/0/0) + build ✓. (D89) التالي: u12-d5 (توليف مصغر + سرد رحلة — 6 جمل).
+
+## حملة المحتوى — الدفعة 46 (2026-10-12) — u12-d5 سرد الرحلة (D90)
+- **u12-d5** (12 كلمة — الأخيرة في الخطة!): Landschaft/Natur/See/Berg/Meer/Strand/Insel/Fluss/Wald/Andenken/fotografieren/Postkarte. مصائد: -ieren بلا ge · جبل الوملاوت · der See↔die See.
+- **742 كلمة · 71 درساً · 743 مساراً** · **243/243 أخضر** + tsc + validator (817/0/0) + build ✓. (D90) التالي: **u12-d6 المعركة الكبرى** (آخر درس في خطة A1!).
