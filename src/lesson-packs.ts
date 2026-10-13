@@ -829,6 +829,35 @@ import wordZwanzig from "../content/words/zwanzig.json";
 import wordZwilling from "../content/words/zwilling.json";
 import wordZwischen from "../content/words/zwischen.json";
 
+import cultureLandeskundeU1 from "../content/landeskunde/a1-landeskunde-u1.json";
+import cultureLandeskundeU10 from "../content/landeskunde/a1-landeskunde-u10.json";
+import cultureLandeskundeU11 from "../content/landeskunde/a1-landeskunde-u11.json";
+import cultureLandeskundeU12 from "../content/landeskunde/a1-landeskunde-u12.json";
+import cultureLandeskundeU2 from "../content/landeskunde/a1-landeskunde-u2.json";
+import cultureLandeskundeU3 from "../content/landeskunde/a1-landeskunde-u3.json";
+import cultureLandeskundeU4 from "../content/landeskunde/a1-landeskunde-u4.json";
+import cultureLandeskundeU5 from "../content/landeskunde/a1-landeskunde-u5.json";
+import cultureLandeskundeU6 from "../content/landeskunde/a1-landeskunde-u6.json";
+import cultureLandeskundeU7 from "../content/landeskunde/a1-landeskunde-u7.json";
+import cultureLandeskundeU8 from "../content/landeskunde/a1-landeskunde-u8.json";
+import cultureLandeskundeU9 from "../content/landeskunde/a1-landeskunde-u9.json";
+
+/** بطاقات الثقافة الأسبوعية (D93) */
+export const ALL_LANDESKUNDE = [
+  cultureLandeskundeU1,
+  cultureLandeskundeU10,
+  cultureLandeskundeU11,
+  cultureLandeskundeU12,
+  cultureLandeskundeU2,
+  cultureLandeskundeU3,
+  cultureLandeskundeU4,
+  cultureLandeskundeU5,
+  cultureLandeskundeU6,
+  cultureLandeskundeU7,
+  cultureLandeskundeU8,
+  cultureLandeskundeU9,
+];
+
 const WORD_JSONS = [
   wordAbbiegen,
   wordAbend,

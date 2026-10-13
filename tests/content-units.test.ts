@@ -1,6 +1,6 @@
 // content-units.test.ts — المحتوى حيّ: كل درس وكلماته تعمل على المُشغِّل (D45)
 import { describe, it, expect } from "vitest";
-import { ALL_LESSONS, ALL_WORDS, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
 
 describe("سجل المحتوى — الوحدة 1 كاملة + بداية الوحدة 2", () => {
@@ -72,5 +72,17 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(d2.zusammenfassung.warningCards[1]!.correct.de).toContain("Arabisch");
     expect(d3.zusammenfassung.warningCards[0]!.correct.de).toContain("buchstabiere");
     expect(d3.zusammenfassung.warningCards[2]!.correct.de).toBe("der Name");
+  });
+
+  it("بطاقات الثقافة (Landeskunde): 12 بطاقة — كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {
+    expect(ALL_LANDESKUNDE.length).toBe(12);
+    const units = ALL_LANDESKUNDE.map((c) => c.unit).sort((a, b) => a - b);
+    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    for (const card of ALL_LANDESKUNDE) {
+      expect(card.facts.length).toBeGreaterThanOrEqual(2);
+      expect(card.title.de.length).toBeGreaterThan(0);
+      expect(card.title.ar.length).toBeGreaterThan(0);
+      expect(card.sourceNote.length).toBeGreaterThan(0);
+    }
   });
 });

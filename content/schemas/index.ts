@@ -7,3 +7,4 @@ export * from "./learner-state.js";
 export * from "./manifest.js";
 export * from "./arsenal.js";
 export * from "./unit0.js";
+export * from "./landeskunde.js";

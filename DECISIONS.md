@@ -470,3 +470,11 @@
 - **6 دروس تثبيت (integration · 0 كلمات جديدة)**: d1 (u1+u2: التحية/الاتجاهات + wohin↔wo) · d2 (u3+u4: الطعام/المدينة + ohne+Dativ) · d3 (u5+u6: التسوق + المساعدات + halb drei) · d4 (u7+u8: Es الصوري + seit+Dativ) · d5 (u9+u10: المهن + Perfekt + weil/deshalb) · **d6 (u11+u12 + Modelltest — 4 مهارات: Hören/Lesen/Schreiben/Sprechen)**.
 - **تصحيحات**: 7 كلمات مفقودة من المراجع (kollege/norden/student/empfehlen/restaurant/regnen/ingenieur) → مستبدلة بموجودة (freund/strasse/lehrer/bestellen/apotheke/warm/krank) — قاعدة «warmup cardIds = كلمات موجودة» تعمل ✓.
 - البوابة: **243/243 + tsc + validator (824/0/0) + build** ✓. **742 كلمة · 78 يوماً · 743 مساراً.**
+
+## D93 (2026-10-12): بطاقات الثقافة (Landeskunde) — الإضافة 1 من خطة «الكل»
+
+- **القرار**: بطاقة ثقافة أسبوعية لكل وحدة (الخطة §2: «كل جمعة بطاقة Landeskunde») — نوع محتوى جديد `content/landeskunde/` + مخطط `CultureCard` + تسجيل في المدقِّق (classify + facts ≥2) + تصدير `ALL_LANDESKUNDE` من lesson-packs.
+- **12 بطاقة** (u1..u12): التحية (Sie/du · Grüß Gott) · الأسرة والمسكن · المدينة (الدراجات · الأحد مغلق) · الطعام (300 نوع خبز · ماء الصنبور) · المواصلات (Deutschlandticket بلا سعر!) · التسوق (Bargeld) · الطقس · الوقت (Pünktlichkeit) · العمل (Ausbildung · Ich bin Arzt) · الأعياد · الصحة (112/110) · السفر (شنغن needs-web-verify).
+- **حدود الصدق**: بلا أسعار/تواريخ متغيّرة · `sourceNote` في كل بطاقة · Schengen/Brot-Sorten موسومة needs-web-verify.
+- البوابة: **244/244 + tsc + validator (836/0/0) + build** ✓. (اختبار جديد للبطاقات.)
+- **قائمة الانتظار (أمر المالك «الكل»)**: 2) Kurztest + Monatsprüfung · 3) Modelltest كامل · 4) الصور التوضيحية · 5) نصوص القراءة · 6) صوت امرأة · 7) تقرير التقدم · 8) A2.
