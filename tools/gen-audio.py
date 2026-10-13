@@ -747,6 +747,18 @@ def build_all() -> None:
     ("word-erlauben", "erlauben.", "erlauben", ["a1-u11-d4"]),
     ("word-thermometer", "das Thermometer.", "thermometer", ["a1-u11-d4"]),
     ("word-pflaster", "das Pflaster.", "pflaster", ["a1-u11-d4"]),
+    ("word-patient", "der Patient.", "patient", ["a1-u11-d5"]),
+    ("word-hausarzt", "der Hausarzt.", "hausarzt", ["a1-u11-d5"]),
+    ("word-spezialist", "der Spezialist.", "spezialist", ["a1-u11-d5"]),
+    ("word-notaufnahme", "die Notaufnahme.", "notaufnahme", ["a1-u11-d5"]),
+    ("word-krankenwagen", "der Krankenwagen.", "krankenwagen", ["a1-u11-d5"]),
+    ("word-unfall", "der Unfall.", "unfall", ["a1-u11-d5"]),
+    ("word-schnupfen", "der Schnupfen.", "schnupfen", ["a1-u11-d5"]),
+    ("word-zahnschmerz", "der Zahnschmerz.", "zahnschmerz", ["a1-u11-d5"]),
+    ("word-bauchschmerz", "der Bauchschmerz.", "bauchschmerz", ["a1-u11-d5"]),
+    ("word-schmerzen", "schmerzen.", "schmerzen", ["a1-u11-d5"]),
+    ("word-tropfen", "die Tropfen.", "tropfen", ["a1-u11-d5"]),
+    ("word-salbe", "die Salbe.", "salbe", ["a1-u11-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

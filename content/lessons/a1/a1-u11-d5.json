@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u11-d5",
+  "level": "A1",
+  "unit": 11,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst deine Beschwerden erklären und den Rat des Arztes verstehen: Ich habe seit gestern Zahnschmerzen — Sie müssen zum Spezialisten.",
+    "ar": "تصف شكواه وتسمع نصيحة الطبيب (muss/darf) — المهمة الكبرى للوحدة"
+  },
+  "canDoDaily": [
+    "يصف شكواه (seit + الألم) ويستمع لنصيحة واحدة (muss/darf + verb am Ende)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "helfen",
+      "wichtig",
+      "notfall"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«يجب أن أذهب إلى الطبيب» — أين يذهب الفعل الرئيسي؟"
+        },
+        "choices": [
+          "Ich muss zum Arzt gehen (الفعل آخر الجملة)",
+          "Ich muss gehen zum Arzt",
+          "Ich geh muss zum Arzt"
+        ],
+        "answer": "Ich muss zum Arzt gehen (الفعل آخر الجملة)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "patient",
+      "hausarzt",
+      "spezialist",
+      "notaufnahme",
+      "krankenwagen",
+      "unfall",
+      "schnupfen",
+      "zahnschmerz",
+      "bauchschmerz",
+      "schmerzen",
+      "tropfen",
+      "salbe"
+    ],
+    "grammarArsenalIds": [
+      "ars-modal-fix",
+      "ars-dativ-fix"
+    ],
+    "storySentenceIds": [
+      "story-a11-u11-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«عندي ألم في السن»؟",
+            "a": "Ich habe Zahnschmerzen."
+          },
+          {
+            "q": "«الإسعاف يأتي فوراً»؟",
+            "a": "Der Krankenwagen kommt sofort."
+          }
+        ],
+        "interleavedWith": [
+          "zahnschmerz",
+          "krankenwagen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الطبيب يرسلني إلى الأخصائي»؟",
+            "a": "Der Arzt schickt mich zum Spezialisten."
+          },
+          {
+            "q": "«القطرات للسعال»؟",
+            "a": "Die Tropfen sind für den Husten."
+          }
+        ],
+        "interleavedWith": [
+          "spezialist",
+          "tropfen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«يؤلم»؟",
+            "a": "Es schmerzt."
+          },
+          {
+            "q": "«غرفة الطوارئ»؟",
+            "a": "die Notaufnahme"
+          }
+        ],
+        "interleavedWith": [
+          "schmerzen",
+          "notaufnahme"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Beim Arzt: Beschwerden erklären und den Rat verstehen",
+        "a": "x",
+        "ar": "المهمة الكبرى: عند الطبيب"
+      },
+      "situation": {
+        "de": "Du bist Patient. Erkläre dem Arzt deine Beschwerden — und verstehe seinen Rat!",
+        "a": "x",
+        "ar": "أنت المريض. اشرح شكواك للطبيب — وافهم نصيحته!"
+      },
+      "successCriteria": [
+        "جملتا شكوا (seit + الألم) + سؤال للطبيب + فهم نصيحتين (muss/darf + verb am Ende) + جملة شكر"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«مريض»؟",
+            "a": "der Patient"
+          },
+          {
+            "q": "«طبيب الأسرة»؟",
+            "a": "der Hausarzt"
+          },
+          {
+            "q": "«عندي ألم في السن»؟",
+            "a": "Ich habe Zahnschmerzen."
+          },
+          {
+            "q": "«عندي زكام»؟",
+            "a": "Ich habe Schnupfen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«سيارة الإسعاف»؟",
+            "a": "der Krankenwagen"
+          },
+          {
+            "q": "«غرفة الطوارئ»؟",
+            "a": "die Notaufnahme"
+          },
+          {
+            "q": "«حادث» والجمع؟",
+            "a": "der Unfall → die Unfälle"
+          },
+          {
+            "q": "«يجب أن أذهب إلى الطبيب»؟",
+            "a": "Ich muss zum Arzt gehen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أخصائي»؟",
+            "a": "der Spezialist"
+          },
+          {
+            "q": "«المرهم للجرح»؟",
+            "a": "Die Salbe ist für die Wunde."
+          },
+          {
+            "q": "«يؤلم»؟",
+            "a": "Es schmerzt."
+          },
+          {
+            "q": "«ذلك يساعدني» — أي حالة؟",
+            "a": "Das hilft mir (Dativ)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Beim Arzt: Ich habe seit gestern Zahn- und Bauchschmerzen, Schnupfen, und es schmerzt. Der Rat: Sie müssen zum Spezialisten, Sie dürfen nicht rauchen, nehmen Sie Tropfen und Salbe. Das hilft!",
+      "ar": "عند الطبيب: عندي منذ أمس ألم سن وبطن وزكام ويؤلم. النصيحة: يجب أن تذهب للأخصائي، لا يجوز أن تدخّن، تناول القطرات والمرهم. ذلك يساعد!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich muss gehen zum Arzt~~ / ~~Sie dürfen rauchen nicht~~",
+          "ar": "المساعد يقعد في **المركز** والفعل الأخير يُقال **آخر** الجملة (Sandwich/Glocke كاملة!)"
+        },
+        "whyArabicSpeakerFails": "«يجب أن أذهب» فعلان متجاوران بالعربية؛ الألماني يفرّقهما: **muss** (ثاني الكلمة) + … + **gehen** (آخر الكلمة) — المساعد والفعل يصنعان قلنسوة تضم الجملة كلها (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich muss zum Arzt gehen. · Sie dürfen nicht rauchen.",
+          "ar": "يجب أن أذهب إلى الطبيب. · لا يجوز أن تدخّن."
+        },
+        "exercise": {
+          "q": "أكمل: Ich muss die Tablette ___ (nehmen) — الترتيب.",
+          "a": "Ich muss die Tablette nehmen."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Das hilft mich~~ / ~~Das hilft der Patient~~",
+          "ar": "helfen + **Dativ** (يساعد + لمن؟) — مراجعة u5-d2 في سياق الطبيب"
+        },
+        "whyArabicSpeakerFails": "«يساعدني» مفعول به مرفوع بالعربية؛ الألماني يضع المفيد في حالة Dativ: hilft **mir** (nicht mich) — «للأقوى عند الميناء» تتكرر بالفعل العابر helfen (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Das hilft mir. · Das hilft dem Patienten.",
+          "ar": "ذلك يساعدني. · ذلك يساعد المريض."
+        },
+        "exercise": {
+          "q": "أكمل: Das hilft ___ (ich)",
+          "a": "mir"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Krankenwagen~~ / ~~der Notaufnahme~~ / ~~das Zahnschmerz~~",
+          "ar": "جنس الكلمة المركّبة = جنس **آخر** كلمة: Wagen=der → der Krankenwagen · Aufnahme=die → die Notaufnahme · Schmerz=der → der Zahnschmerz"
+        },
+        "whyArabicSpeakerFails": "المركّب كلمة واحدة بالعربية بلا جنس ظاهر؛ الألماني يرث الجنس من **آخر** مكوّن: سيارة+إسعاف = Wagen (der) — القاعدة الذهبية للمركّبات تحل مصيدة جنس بلا حفظ (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Krankenwagen · die Notaufnahme · der Zahnschmerz",
+          "ar": "الإسعاف · الطوارئ · ألم السن (بأجنستها)"
+        },
+        "exercise": {
+          "q": "أكمل: der Tisch + die Lampe → ___ Tischlampe (der/die/das)?",
+          "a": "die Tischlampe (Lampe = die)"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "patient",
+      "hausarzt",
+      "spezialist",
+      "notaufnahme",
+      "krankenwagen",
+      "unfall",
+      "schnupfen",
+      "zahnschmerz",
+      "bauchschmerz",
+      "schmerzen",
+      "tropfen",
+      "salbe"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Krankenwagen",
+      "https://www.duden.de/rechtschreibung/Notaufnahme",
+      "https://www.duden.de/rechtschreibung/Zahnschmerz"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Krankenwagen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-modal-fix",
+    "ars-dativ-fix"
+  ],
+  "audioManifestRefs": [
+    "word-patient",
+    "word-hausarzt",
+    "word-spezialist",
+    "word-notaufnahme",
+    "word-krankenwagen",
+    "word-unfall",
+    "word-schnupfen",
+    "word-zahnschmerz",
+    "word-bauchschmerz",
+    "word-schmerzen",
+    "word-tropfen",
+    "word-salbe"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 11 (Gesundheit) — Beim Arzt: Beschwerden und Rat",
+    "goetheWordListOverlap": []
+  }
+}

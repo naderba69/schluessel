@@ -411,3 +411,9 @@
 - **u11-d4** (12 كلمة): **sich fühlen (reflexive)** · verbinden · Wunde · Blut · bluten · Spritze · Impfung · schlucken · rauchen · erlauben · Thermometer · Pflaster. مراجعة: bringen/bleiben/gehen (bringen = hat رغم أنه «حركة»!).
 - **قواعد d4**: **قاعدة القرار الذهبية**: عَرَض/مرض = **haben** (38 Grad Fieber) · حركة/تغيّر = **sein** (geblieben) — **sich fühlen** بضمير انعكاس (Ich fühle **mich**) — **Rauchen Sie nicht!** (Verb+Sie+nicht).
 - البوابة: **243/243 + tsc + validator (738/0/0) + build** ✓. **670 كلمة · 64 درساً · 671 مساراً.**
+
+## D84 (2026-10-12): u11-d5 (المهمة الكبرى: عند الطبيب)
+
+- **u11-d5** (12 كلمة): Patient (Patienten) · **Hausarzt (Hausärzte)** · Spezialist · **Notaufnahme** · **Krankenwagen** · **Unfall (Unfälle)** · Schnupfen · Zahnschmerzen · Bauchschmerzen · schmerzen (Es schmerzt) · Tropfen · Salbe. مراجعة: helfen/wichtig/notfall.
+- **قواعد d5**: المساعد في المركز والفعل **آخر** (muss … gehen · dürfen … rauchen) · **helfen + Dativ** (Das hilft **mir**) · **جنس المركّب = آخر كلمة** (der Krankenwagen · die Notaufnahme · der Zahnschmerz) — القاعدة الذهبية للمركّبات.
+- البوابة: **243/243 + tsc + validator (751/0/0) + build** ✓. **682 كلمة · 65 درساً · 683 مساراً.**

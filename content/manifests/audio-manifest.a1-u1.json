@@ -13405,6 +13405,246 @@
       "rmsDb": -17.28
     },
     {
+      "id": "word-patient",
+      "file": "words/audio/de-DE/word-patient.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Patient.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 1059,
+      "sizeBytes": 5114,
+      "hash": "sha256:3efcca0b3b21cfdede699df57cc23682c1de868e931840d4173c91670fc079d1",
+      "pcmSha256": "728be1ad99e2ecaf854ec306a804850473b36fe920d6a7871b00d0dc2456c378",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "word-hausarzt",
+      "file": "words/audio/de-DE/word-hausarzt.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Hausarzt.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 1164,
+      "sizeBytes": 5517,
+      "hash": "sha256:8c78fd9fa68ca1d1bdd3144a6b80e7205c354e837cc00f4f0cf95c2c7d38d52a",
+      "pcmSha256": "a2e822f76549716b53d48e46f0198f098a135e7adf3f10529c56140f8b124a8f",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "word-spezialist",
+      "file": "words/audio/de-DE/word-spezialist.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Spezialist.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 1280,
+      "sizeBytes": 5834,
+      "hash": "sha256:c2b29ea526637e5ee006f9b2eaca143224149e75cc7140e2a612dff1058bd0fb",
+      "pcmSha256": "05b2b794a2a797d4b19e41682ff6a4eb53788d8c5dc08e6854f38e804834d0fc",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "word-notaufnahme",
+      "file": "words/audio/de-DE/word-notaufnahme.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Notaufnahme.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 1384,
+      "sizeBytes": 6474,
+      "hash": "sha256:c2859f3fdfb426f03f43008ef67e2e445a641c2c6d94bb26efbd133ab8612361",
+      "pcmSha256": "2985f7ab320bc709206ccf88410d81a6968b318b6bedb90d2503c846b37b224f",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-krankenwagen",
+      "file": "words/audio/de-DE/word-krankenwagen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Krankenwagen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 1187,
+      "sizeBytes": 5753,
+      "hash": "sha256:4db575b898c98e8bddf9e950a24066c034c86ce7d8656ececf96074130731492",
+      "pcmSha256": "180d88da7366bf40f18ea7a82f252a0429b18b030e4f8f31952504b904db87a8",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "word-unfall",
+      "file": "words/audio/de-DE/word-unfall.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Unfall.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 1117,
+      "sizeBytes": 5323,
+      "hash": "sha256:6690325d5e547bf9c3106a059c97895ad3d214bf3002b91b998858dab7c38deb",
+      "pcmSha256": "ea0b398163fad41958a499726623646df537d65e11b1289f34d727f4857bade2",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "word-schnupfen",
+      "file": "words/audio/de-DE/word-schnupfen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Schnupfen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 1187,
+      "sizeBytes": 5213,
+      "hash": "sha256:a8f1549d494133be92e966107689a95d75ccb331e949ffe918f3aded4b038ec1",
+      "pcmSha256": "cf3c76a00d90ca5905d01c72c3825ecf0b79672d8f6391f911e135bb8f8e8241",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "word-zahnschmerz",
+      "file": "words/audio/de-DE/word-zahnschmerz.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Zahnschmerz.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 1187,
+      "sizeBytes": 5698,
+      "hash": "sha256:116869e9ffb519404d5b47bce678b8cf66d369f2ab92cb669894ab472f648c31",
+      "pcmSha256": "15e3e398b194d8f8116749d13741c6fdbdee794c4323e9a2ca42dc832dff3174",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "word-bauchschmerz",
+      "file": "words/audio/de-DE/word-bauchschmerz.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Bauchschmerz.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 1187,
+      "sizeBytes": 5710,
+      "hash": "sha256:21f9431c7d25ee2bf4b777f14bdfa130807892cdb76e8f50252f0d1305aa3405",
+      "pcmSha256": "7128723de9cad8e5a5dd401a738d133205dca9c24930eb943308cac90acf12ba",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "word-schmerzen",
+      "file": "words/audio/de-DE/word-schmerzen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "schmerzen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4602,
+      "hash": "sha256:8b96d8a858eaead870653bd17ab4b04d0bc8a15353eaa22d4166f1e7c1da6b45",
+      "pcmSha256": "770914f7895e3c5143103105b3f8b6a7a1c11df96e121824c080ce26a518ff4e",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-tropfen",
+      "file": "words/audio/de-DE/word-tropfen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Tropfen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 1071,
+      "sizeBytes": 5088,
+      "hash": "sha256:223a473a71da57eacbf2d2d66dae61ab0d977a50e2d6b05677261783128baa10",
+      "pcmSha256": "5869daa6469db6c9e1b651f47b47a6ece355903b254f51fb73adb4f2410cfd2f",
+      "rmsDb": -17.47
+    },
+    {
+      "id": "word-salbe",
+      "file": "words/audio/de-DE/word-salbe.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Salbe.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 989,
+      "sizeBytes": 4778,
+      "hash": "sha256:d2b0a964ca90763430170e34b7b740611c96e59a493bc90e15e35b8e385f0483",
+      "pcmSha256": "b73dbac6799e82cae8cc6c4adf25948ce0ed1481658cae75c69ba1fba5cd7813",
+      "rmsDb": -17.05
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",

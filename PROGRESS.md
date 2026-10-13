@@ -292,3 +292,7 @@
 ## حملة المحتوى — الدفعة 39 (2026-10-12) — u11-d4 اختيار haben↔sein (D83)
 - **u11-d4** (12 كلمة): sich fühlen/verbinden/Wunde/Blut/bluten/Spritze/Impfung/schlucken/rauchen/erlauben/Thermometer/Pflaster. مصائد: قاعدة القرار · sich · أمر بالنفي.
 - **670 كلمة · 64 درساً · 671 مساراً** · **243/243 أخضر** + tsc + validator (738/0/0) + build ✓. (D83) التالي: u11-d5 (مهمة: عند الطبيب — helfen/tut weh + muss/darf).
+
+## حملة المحتوى — الدفعة 40 (2026-10-12) — u11-d5 مهمة: عند الطبيب (D84)
+- **u11-d5** (12 كلمة): Patient/Hausarzt/Spezialist/Notaufnahme/Krankenwagen/Unfall/Schnupfen/Zahnschmerzen/Bauchschmerzen/schmerzen/Tropfen/Salbe. مصائد: الفعل آخر · helfen+Dativ · جنس المركّب.
+- **682 كلمة · 65 درساً · 683 مساراً** · **243/243 أخضر** + tsc + validator (751/0/0) + build ✓. (D84) التالي: u11-d6 (معركة الوحدة 11).
