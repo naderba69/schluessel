@@ -405,3 +405,9 @@
 - **قواعد d3**: **bin/war** — الحركة/التغيّر = **sein** (blieben · verschwunden) · الأعراض في مكانها = **haben** (gehustet · geniest) · **war** المباشر (لا habe gewesen) · **Es juckt** (Es الفاعل الصوري يعود).
 - حادث مخطط: `whyArabicSpeakerFails: 10` رقم بدل نص — Zod فشل بمعلومة مفيدة = **قواعد قديمة (D77) تعمل** — أُصلح فوراً.
 - البوابة: **243/243 + tsc + validator (725/0/0) + build** ✓. **658 كلمة · 63 درساً · 659 مساراً.**
+
+## D83 (2026-10-12): u11-d4 (اختيار haben↔sein — قاعدة القرار)
+
+- **u11-d4** (12 كلمة): **sich fühlen (reflexive)** · verbinden · Wunde · Blut · bluten · Spritze · Impfung · schlucken · rauchen · erlauben · Thermometer · Pflaster. مراجعة: bringen/bleiben/gehen (bringen = hat رغم أنه «حركة»!).
+- **قواعد d4**: **قاعدة القرار الذهبية**: عَرَض/مرض = **haben** (38 Grad Fieber) · حركة/تغيّر = **sein** (geblieben) — **sich fühlen** بضمير انعكاس (Ich fühle **mich**) — **Rauchen Sie nicht!** (Verb+Sie+nicht).
+- البوابة: **243/243 + tsc + validator (738/0/0) + build** ✓. **670 كلمة · 64 درساً · 671 مساراً.**

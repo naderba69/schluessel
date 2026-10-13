@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u11-d4",
+  "level": "A1",
+  "unit": 11,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst den richtigen Helfer wählen: Krankheit/Symptom = haben (Ich habe 38 Grad Fieber), Bewegung/Veränderung = sein (Ich bin geblieben) — und dich fühlen.",
+    "ar": "تفرّق بين haben وsein في الماضي: عَرَض = haben · حركة/تغيّر = sein"
+  },
+  "canDoDaily": [
+    "يختار المساعد الصحيح في 3 جمل ماضٍ ويصف إحساسه بجملة sich fühlen"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bringen",
+      "bleiben",
+      "gehen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«عندي 38 درجة حمّى» — haben أم sein؟"
+        },
+        "choices": [
+          "Ich habe 38 Grad Fieber (العَرَض = haben)",
+          "Ich bin 38 Grad Fieber",
+          "Ich habe 38 Grad Fieber gehabt"
+        ],
+        "answer": "Ich habe 38 Grad Fieber (العَرَض = haben)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "fuehlen",
+      "verbinden",
+      "wunde",
+      "blut",
+      "bluten",
+      "spritze",
+      "impfung",
+      "schlucken",
+      "rauchen",
+      "erlauben",
+      "thermometer",
+      "pflaster"
+    ],
+    "grammarArsenalIds": [
+      "ars-perfekt",
+      "ars-satzklammer"
+    ],
+    "storySentenceIds": [
+      "story-a11-u11-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أشعر بتحسن»؟",
+            "a": "Ich fühle mich besser."
+          },
+          {
+            "q": "«الجرح ينزف»؟",
+            "a": "Die Wunde blutet."
+          }
+        ],
+        "interleavedWith": [
+          "fuehlen",
+          "bluten"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«الطبيب يضمّد الجرح»؟",
+            "a": "Der Arzt verbindet die Wunde."
+          },
+          {
+            "q": "«ابلعوا الحبة!»؟",
+            "a": "Schlucken Sie die Tablette!"
+          }
+        ],
+        "interleavedWith": [
+          "verbinden",
+          "schlucken"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«لا تدخّنوا!»؟",
+            "a": "Rauchen Sie nicht!"
+          },
+          {
+            "q": "«الميزان يُظهر 38 درجة»؟",
+            "a": "Das Thermometer zeigt 38 Grad."
+          }
+        ],
+        "interleavedWith": [
+          "rauchen",
+          "thermometer"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Helfer wählen (haben/sein) und den Zustand beschreiben",
+        "a": "x",
+        "ar": "اختيار المساعد ووصف الحالة"
+      },
+      "situation": {
+        "de": "Erzähle deinen Tag: Was war gestern? Wie fühlst du dich heute?",
+        "a": "x",
+        "ar": "إحكي يومك: ماذا كان أمس؟ كيف تشعر اليوم؟"
+      },
+      "successCriteria": [
+        "جملتان بالماضي (واحدة haben وأخرى sein — الاختيار مبرَّر) + جملة sich fühlen + جملة نصيحة (Imperativ)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أشعر بتحسن»؟",
+            "a": "Ich fühle mich besser."
+          },
+          {
+            "q": "«الجرح»؟",
+            "a": "die Wunde"
+          },
+          {
+            "q": "«الدم»؟",
+            "a": "das Blut"
+          },
+          {
+            "q": "«ينزف»؟",
+            "a": "bluten (die Wunde blutet)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«حقنة» و«تطعيم»؟",
+            "a": "die Spritze / die Impfung"
+          },
+          {
+            "q": "«يبلع»؟",
+            "a": "schlucken"
+          },
+          {
+            "q": "«لا تدخّنوا!»؟",
+            "a": "Rauchen Sie nicht!"
+          },
+          {
+            "q": "«الطبيب لا يسمح»؟",
+            "a": "Der Arzt erlaubt es nicht."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«عندي 38 درجة»؟",
+            "a": "Ich habe 38 Grad (Fieber)."
+          },
+          {
+            "q": "«ميزان الحرارة»؟",
+            "a": "das Thermometer"
+          },
+          {
+            "q": "«لاصقة»؟",
+            "a": "das Pflaster"
+          },
+          {
+            "q": "«بقيتُ في البيت» — أي مساعد؟ ولماذا؟",
+            "a": "bin geblieben — تغيّر حالة (sein)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die goldene Regel: Symptom/Krankheit = haben (38 Grad Fieber), Bewegung/Veränderung = sein (geblieben, verschwunden). Ich fühle mich besser — und: Rauchen Sie nicht!",
+      "ar": "القاعدة الذهبية: عَرَض/مرض = haben (38 درجة) · حركة/تغيّر = sein (بقيتُ · اختفى). أشعر بتحسن — ولا تدخّنوا!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich bin 38 Grad Fieber~~ / ~~Ich habe zu Hause geblieben~~",
+          "ar": "قاعدة القرار: **العَرَض = haben** · **الحركة/التغيّر = sein** — القلنسوة للـ«كيف» والثانية للـ«أين»"
+        },
+        "whyArabicSpeakerFails": "«عندي 38» ملكية بالعربية (لها = haben) — لكن «بقيتُ» حركة بالعربية والالماني يعاملها تغيّر حالة = sein — القاعدة أولاً: هل تغيّر شيء (مَكان/حالة)؟ = bin · هل كان عَرَضاً أو فعلاً في مكانه؟ = habe (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe 38 Grad Fieber. · Ich bin zu Hause geblieben.",
+          "ar": "عندي 38 درجة. · بقيتُ في البيت."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ gehustet (haben/sein) · Ich ___ verschwunden.",
+          "a": "habe / bin"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich fühle besser~~ / ~~Ich fühle gut~~",
+          "ar": "sich fühlen = يشعر **بنفسه** — ضمير الانعكاس إجباري (mich/dich/sich)"
+        },
+        "correct": {
+          "de": "Ich fühle mich besser.",
+          "ar": "أشعر بتحسن."
+        },
+        "exercise": {
+          "q": "أكمل: Er fühlt ___ (sich) gut.",
+          "a": "sich"
+        },
+        "whyArabicSpeakerFails": "«أشعر بتحسن» للاسم بدل الضمير بالعربية؛ الألماني يشطر الإحساس: **sich** fühlen (أنا = mich) — بدون mich الجملة ناقصة — ضمير الانعكاس إجباري (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "de": "~~Rauchen nicht Sie!~~ / ~~Rauchen Sie kein!~~",
+          "ar": "النفي في الأمر: Verb + **Sie** + **nicht** (nicht آخر — لا kein ولا قبل Sie)"
+        },
+        "whyArabicSpeakerFails": "«لا تدخّنوا» نفي قبل الفعل بالعربية؛ الألماني ينفي آخر الجملة: Rauchen Sie **nicht** — الترتيب: فعل + أنتم + نفي — مصيدة النفي-آخر تتكرر في شكل الأمر (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Rauchen Sie nicht!",
+          "ar": "لا تدخّنوا!"
+        },
+        "exercise": {
+          "q": "حوّل: Nehmen Sie die Tablette! → النفي",
+          "a": "Nehmen Sie die Tablette nicht!"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "fuehlen",
+      "verbinden",
+      "wunde",
+      "blut",
+      "bluten",
+      "spritze",
+      "impfung",
+      "schlucken",
+      "rauchen",
+      "erlauben",
+      "thermometer",
+      "pflaster"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/f%C3%BChlen",
+      "https://www.duden.de/rechtschreibung/verbinden",
+      "https://www.duden.de/rechtschreibung/rauchen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/f%C3%BChlen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-perfekt",
+    "ars-satzklammer"
+  ],
+  "audioManifestRefs": [
+    "word-fuehlen",
+    "word-verbinden",
+    "word-wunde",
+    "word-blut",
+    "word-bluten",
+    "word-spritze",
+    "word-impfung",
+    "word-schlucken",
+    "word-rauchen",
+    "word-erlauben",
+    "word-thermometer",
+    "word-pflaster"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 11 (Gesundheit) — haben oder sein im Perfekt?",
+    "goetheWordListOverlap": []
+  }
+}

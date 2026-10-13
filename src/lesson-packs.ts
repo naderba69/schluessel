@@ -22,6 +22,7 @@ import lessonU10D6 from "../content/lessons/a1/a1-u10-d6.json";
 import lessonU11D1 from "../content/lessons/a1/a1-u11-d1.json";
 import lessonU11D2 from "../content/lessons/a1/a1-u11-d2.json";
 import lessonU11D3 from "../content/lessons/a1/a1-u11-d3.json";
+import lessonU11D4 from "../content/lessons/a1/a1-u11-d4.json";
 import lessonU2D1 from "../content/lessons/a1/a1-u2-d1.json";
 import lessonU2D2 from "../content/lessons/a1/a1-u2-d2.json";
 import lessonU2D3 from "../content/lessons/a1/a1-u2-d3.json";
@@ -154,6 +155,8 @@ import wordBillig from "../content/words/billig.json";
 import wordBisMorgen from "../content/words/bis-morgen.json";
 import wordBitte from "../content/words/bitte.json";
 import wordBleiben from "../content/words/bleiben.json";
+import wordBlut from "../content/words/blut.json";
+import wordBluten from "../content/words/bluten.json";
 import wordBoden from "../content/words/boden.json";
 import wordBoot from "../content/words/boot.json";
 import wordBrauchen from "../content/words/brauchen.json";
@@ -208,6 +211,7 @@ import wordEnglisch from "../content/words/englisch.json";
 import wordEntschuldigung from "../content/words/entschuldigung.json";
 import wordErinnerung from "../content/words/erinnerung.json";
 import wordErkaltung from "../content/words/erkaltung.json";
+import wordErlauben from "../content/words/erlauben.json";
 import wordErzaehlen from "../content/words/erzaehlen.json";
 import wordEssen from "../content/words/essen.json";
 import wordEtage from "../content/words/etage.json";
@@ -256,6 +260,7 @@ import wordFrisch from "../content/words/frisch.json";
 import wordFrueh from "../content/words/frueh.json";
 import wordFruehstueck from "../content/words/fruehstueck.json";
 import wordFruehstuecken from "../content/words/fruehstuecken.json";
+import wordFuehlen from "../content/words/fuehlen.json";
 import wordFuenfzig from "../content/words/fuenfzig.json";
 import wordFuss from "../content/words/fuss.json";
 import wordFussball from "../content/words/fussball.json";
@@ -336,6 +341,7 @@ import wordHundert from "../content/words/hundert.json";
 import wordHunger from "../content/words/hunger.json";
 import wordHusten from "../content/words/husten.json";
 import wordHut from "../content/words/hut.json";
+import wordImpfung from "../content/words/impfung.json";
 import wordIn from "../content/words/in.json";
 import wordItalien from "../content/words/italien.json";
 import wordJacke from "../content/words/jacke.json";
@@ -484,6 +490,7 @@ import wordPassen from "../content/words/passen.json";
 import wordPause from "../content/words/pause.json";
 import wordPfeffer from "../content/words/pfeffer.json";
 import wordPflanze from "../content/words/pflanze.json";
+import wordPflaster from "../content/words/pflaster.json";
 import wordPlatz from "../content/words/platz.json";
 import wordPloetzlich from "../content/words/ploetzlich.json";
 import wordPolen from "../content/words/polen.json";
@@ -501,6 +508,7 @@ import wordQuittung from "../content/words/quittung.json";
 import wordRabatt from "../content/words/rabatt.json";
 import wordRad from "../content/words/rad.json";
 import wordRahmen from "../content/words/rahmen.json";
+import wordRauchen from "../content/words/rauchen.json";
 import wordRechnung from "../content/words/rechnung.json";
 import wordRechts from "../content/words/rechts.json";
 import wordRegal from "../content/words/regal.json";
@@ -536,6 +544,7 @@ import wordSchlafen from "../content/words/schlafen.json";
 import wordSchlafzimmer from "../content/words/schlafzimmer.json";
 import wordSchlau from "../content/words/schlau.json";
 import wordSchliessen from "../content/words/schliessen.json";
+import wordSchlucken from "../content/words/schlucken.json";
 import wordSchluessel from "../content/words/schluessel.json";
 import wordSchmecken from "../content/words/schmecken.json";
 import wordSchmerz from "../content/words/schmerz.json";
@@ -584,6 +593,7 @@ import wordSpiel from "../content/words/spiel.json";
 import wordSpielen from "../content/words/spielen.json";
 import wordSprache from "../content/words/sprache.json";
 import wordSprechen from "../content/words/sprechen.json";
+import wordSpritze from "../content/words/spritze.json";
 import wordStadt from "../content/words/stadt.json";
 import wordStadtplan from "../content/words/stadtplan.json";
 import wordStau from "../content/words/stau.json";
@@ -621,6 +631,7 @@ import wordTeller from "../content/words/teller.json";
 import wordTeppich from "../content/words/teppich.json";
 import wordTermin from "../content/words/termin.json";
 import wordTeuer from "../content/words/teuer.json";
+import wordThermometer from "../content/words/thermometer.json";
 import wordTisch from "../content/words/tisch.json";
 import wordTochter from "../content/words/tochter.json";
 import wordToilette from "../content/words/toilette.json";
@@ -652,6 +663,7 @@ import wordUrlaub from "../content/words/urlaub.json";
 import wordVase from "../content/words/vase.json";
 import wordVater from "../content/words/vater.json";
 import wordVerabredung from "../content/words/verabredung.json";
+import wordVerbinden from "../content/words/verbinden.json";
 import wordVerbindung from "../content/words/verbindung.json";
 import wordVereinbaren from "../content/words/vereinbaren.json";
 import wordVerhandeln from "../content/words/verhandeln.json";
@@ -707,6 +719,7 @@ import wordWohnen from "../content/words/wohnen.json";
 import wordWohnung from "../content/words/wohnung.json";
 import wordWohnzimmer from "../content/words/wohnzimmer.json";
 import wordWolke from "../content/words/wolke.json";
+import wordWunde from "../content/words/wunde.json";
 import wordWunderbar from "../content/words/wunderbar.json";
 import wordWurst from "../content/words/wurst.json";
 import wordZaehlen from "../content/words/zaehlen.json";
@@ -814,6 +827,8 @@ const WORD_JSONS = [
   wordBisMorgen,
   wordBitte,
   wordBleiben,
+  wordBlut,
+  wordBluten,
   wordBoden,
   wordBoot,
   wordBrauchen,
@@ -868,6 +883,7 @@ const WORD_JSONS = [
   wordEntschuldigung,
   wordErinnerung,
   wordErkaltung,
+  wordErlauben,
   wordErzaehlen,
   wordEssen,
   wordEtage,
@@ -916,6 +932,7 @@ const WORD_JSONS = [
   wordFrueh,
   wordFruehstueck,
   wordFruehstuecken,
+  wordFuehlen,
   wordFuenfzig,
   wordFuss,
   wordFussball,
@@ -996,6 +1013,7 @@ const WORD_JSONS = [
   wordHunger,
   wordHusten,
   wordHut,
+  wordImpfung,
   wordIn,
   wordItalien,
   wordJacke,
@@ -1144,6 +1162,7 @@ const WORD_JSONS = [
   wordPause,
   wordPfeffer,
   wordPflanze,
+  wordPflaster,
   wordPlatz,
   wordPloetzlich,
   wordPolen,
@@ -1161,6 +1180,7 @@ const WORD_JSONS = [
   wordRabatt,
   wordRad,
   wordRahmen,
+  wordRauchen,
   wordRechnung,
   wordRechts,
   wordRegal,
@@ -1196,6 +1216,7 @@ const WORD_JSONS = [
   wordSchlafzimmer,
   wordSchlau,
   wordSchliessen,
+  wordSchlucken,
   wordSchluessel,
   wordSchmecken,
   wordSchmerz,
@@ -1244,6 +1265,7 @@ const WORD_JSONS = [
   wordSpielen,
   wordSprache,
   wordSprechen,
+  wordSpritze,
   wordStadt,
   wordStadtplan,
   wordStau,
@@ -1281,6 +1303,7 @@ const WORD_JSONS = [
   wordTeppich,
   wordTermin,
   wordTeuer,
+  wordThermometer,
   wordTisch,
   wordTochter,
   wordToilette,
@@ -1312,6 +1335,7 @@ const WORD_JSONS = [
   wordVase,
   wordVater,
   wordVerabredung,
+  wordVerbinden,
   wordVerbindung,
   wordVereinbaren,
   wordVerhandeln,
@@ -1367,6 +1391,7 @@ const WORD_JSONS = [
   wordWohnung,
   wordWohnzimmer,
   wordWolke,
+  wordWunde,
   wordWunderbar,
   wordWurst,
   wordZaehlen,
@@ -1391,7 +1416,7 @@ const WORD_JSONS = [
   wordZwischen,
 ];
 
-const LESSON_JSONS = [lessonD1, lessonD2, lessonD3, lessonD4, lessonD5, lessonD6, lessonU10D1, lessonU10D2, lessonU10D3, lessonU10D4, lessonU10D5, lessonU10D6, lessonU11D1, lessonU11D2, lessonU11D3, lessonU2D1, lessonU2D2, lessonU2D3, lessonU2D4, lessonU2D5, lessonU2D6, lessonU3D1, lessonU3D2, lessonU3D3, lessonU3D4, lessonU3D5, lessonU3D6, lessonU4D1, lessonU4D2, lessonU4D3, lessonU4D4, lessonU4D5, lessonU4D6, lessonU5D1, lessonU5D2, lessonU5D3, lessonU5D4, lessonU5D5, lessonU5D6, lessonU6D1, lessonU6D2, lessonU6D3, lessonU6D4, lessonU6D5, lessonU6D6, lessonU7D1, lessonU7D2, lessonU7D3, lessonU7D4, lessonU7D5, lessonU7D6, lessonU8D1, lessonU8D2, lessonU8D3, lessonU8D4, lessonU8D5, lessonU8D6, lessonU9D1, lessonU9D2, lessonU9D3, lessonU9D4, lessonU9D5, lessonU9D6];
+const LESSON_JSONS = [lessonD1, lessonD2, lessonD3, lessonD4, lessonD5, lessonD6, lessonU10D1, lessonU10D2, lessonU10D3, lessonU10D4, lessonU10D5, lessonU10D6, lessonU11D1, lessonU11D2, lessonU11D3, lessonU11D4, lessonU2D1, lessonU2D2, lessonU2D3, lessonU2D4, lessonU2D5, lessonU2D6, lessonU3D1, lessonU3D2, lessonU3D3, lessonU3D4, lessonU3D5, lessonU3D6, lessonU4D1, lessonU4D2, lessonU4D3, lessonU4D4, lessonU4D5, lessonU4D6, lessonU5D1, lessonU5D2, lessonU5D3, lessonU5D4, lessonU5D5, lessonU5D6, lessonU6D1, lessonU6D2, lessonU6D3, lessonU6D4, lessonU6D5, lessonU6D6, lessonU7D1, lessonU7D2, lessonU7D3, lessonU7D4, lessonU7D5, lessonU7D6, lessonU8D1, lessonU8D2, lessonU8D3, lessonU8D4, lessonU8D5, lessonU8D6, lessonU9D1, lessonU9D2, lessonU9D3, lessonU9D4, lessonU9D5, lessonU9D6];
 
 /** كل الكلمات المُتحقَّق منها — بلا استثناءات */
 export const ALL_WORDS: Word[] = WORD_JSONS.map((j) => WordSchema.parse(j));
