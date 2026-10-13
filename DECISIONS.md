@@ -417,3 +417,10 @@
 - **u11-d5** (12 كلمة): Patient (Patienten) · **Hausarzt (Hausärzte)** · Spezialist · **Notaufnahme** · **Krankenwagen** · **Unfall (Unfälle)** · Schnupfen · Zahnschmerzen · Bauchschmerzen · schmerzen (Es schmerzt) · Tropfen · Salbe. مراجعة: helfen/wichtig/notfall.
 - **قواعد d5**: المساعد في المركز والفعل **آخر** (muss … gehen · dürfen … rauchen) · **helfen + Dativ** (Das hilft **mir**) · **جنس المركّب = آخر كلمة** (der Krankenwagen · die Notaufnahme · der Zahnschmerz) — القاعدة الذهبية للمركّبات.
 - البوابة: **243/243 + tsc + validator (751/0/0) + build** ✓. **682 كلمة · 65 درساً · 683 مساراً.**
+
+## D85 (2026-10-12): u11-d6 (معركة الوحدة 11 — اكتمال الوحدة)
+
+- **u11-d6** (integration · 0 كلمات): مراجعة kopfschmerz/fieber · warmup hand/arzt/bleiben · quiz 3×0.75 · **3 خلاصات**: الألم بطريقتين (tut weh ↔ habe Schmerzen) · قاعدة القرار (habe العَرَض ↔ bin التغيّر + war) · العيادة (الفعل آخر · helfen+Dativ · جنس المركّب) · usedArsenalIds 5.
+- **تصحيحات مخطط خلال الدفعة**: kind=integration (لا review) · pretestItems ≥ 1 · dualCodingRequired=true · wordIds/srs/audioRefs بمراجع المراجعة (كما u10-d6).
+- البوابة: **243/243 + tsc + validator (752/0/0) + build** ✓. **682 كلمة · 66 يوماً · 683 مساراً.**
+- **اكتمال الوحدة 11 (الصحة والجسم) ✅** — d1 الجسم · d2 الألم · d3 bin/war · d4 haben↔sein · d5 الطبيب · d6 المعركة.

@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u11-d6",
+  "level": "A1",
+  "unit": 11,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Du kannst alle Gesundheits-Fallen gemeinsam meistern: tut weh ↔ habe Schmerzen, bin/war ↔ habe, und beim Arzt den Rat verstehen.",
+    "ar": "تجمع كل مصائد الوحدة 11 في معركة واحدة (تركيب الألم · bin/war · نصيحة الطبيب)"
+  },
+  "canDoDaily": [
+    "يجتاز معركة الوحدة 11 (عتبة 75%) في أشكال مختلطة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hand",
+      "arzt",
+      "bleiben"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "المعركة: «بطني يؤلمني منذ يومين» — بالطريقتين + أي مساعد؟"
+        },
+        "choices": [
+          "Mein Bauch tut weh. / Ich habe seit zwei Tagen Bauchschmerzen (habe)",
+          "Mein Bauch tut weh. / Ich habe seit zwei Tagen Bauchschmerzen (bin)",
+          "Mein Bauch weh tut. / Ich bin Bauchschmerzen"
+        ],
+        "answer": "Mein Bauch tut weh. / Ich habe seit zwei Tagen Bauchschmerzen (habe)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "kopfschmerz",
+      "fieber"
+    ],
+    "grammarArsenalIds": [
+      "ars-koerper",
+      "ars-gesundheit",
+      "ars-perfekt",
+      "ars-dativ-fix",
+      "ars-modal-fix"
+    ],
+    "storySentenceIds": [
+      "story-a11-u11-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«أين الألم؟» — صيغتان؟",
+            "a": "Mein Kopf tut weh. / Ich habe Kopfschmerzen."
+          },
+          {
+            "q": "«بقيتُ في البيت / كنتُ ضعيفاً»؟",
+            "a": "Ich bin zu Hause geblieben. / Ich war schwach."
+          }
+        ],
+        "interleavedWith": [
+          "kopfschmerz",
+          "bleiben"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«عندي 38 درجة» — أي مساعد؟",
+            "a": "Ich habe 38 Grad (العَرَض = haben)."
+          },
+          {
+            "q": "«يجب أن أذهب إلى الأخصائي»؟",
+            "a": "Ich muss zum Spezialisten gehen."
+          }
+        ],
+        "interleavedWith": [
+          "fieber",
+          "spezialist"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«ذلك يساعدني»؟",
+            "a": "Das hilft mir (Dativ)."
+          },
+          {
+            "q": "«الإسعاف» والجنس؟",
+            "a": "der Krankenwagen (جنس آخر كلمة: Wagen = der)."
+          }
+        ],
+        "interleavedWith": [
+          "krankenwagen",
+          "salbe"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Gesundheits-Fallen gemeinsam meistern",
+        "a": "x",
+        "ar": "إتقان كل مصائد الصحة"
+      },
+      "situation": {
+        "de": "Mischung aus allen Fallen der Einheit 11",
+        "a": "x",
+        "ar": "خليط من كل مصائد الوحدة 11"
+      },
+      "successCriteria": [
+        "تركيب الألم + قاعدة bin/war + نصيحة الطبيب (Modal + Dativ + Mitlexikon)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«حلقي يؤلمني / عندي ألم في الحلق»؟",
+            "a": "Mein Hals tut weh. / Ich habe Halsschmerzen."
+          },
+          {
+            "q": "«الأسنان» — جمع der Zahn؟",
+            "a": "die Zähne"
+          },
+          {
+            "q": "«اختفى الألم»؟",
+            "a": "Der Schmerz ist verschwunden."
+          },
+          {
+            "q": "«سعلتُ»؟",
+            "a": "Ich habe gehustet."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أنا مجدداً بخير»؟",
+            "a": "Ich bin wieder fit."
+          },
+          {
+            "q": "«أشعر بتحسن»؟",
+            "a": "Ich fühle mich besser."
+          },
+          {
+            "q": "«الطبيبة» واللاحقة؟",
+            "a": "die Ärztin (-in للأنثى)"
+          },
+          {
+            "q": "«عندي زكام»؟",
+            "a": "Ich habe Schnupfen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«لا يجوز أن تدخّن»؟",
+            "a": "Sie dürfen nicht rauchen."
+          },
+          {
+            "q": "«غرفة الطوارئ»؟",
+            "a": "die Notaufnahme"
+          },
+          {
+            "q": "«الحقنة تؤلم»؟",
+            "a": "Die Spritze tut weh."
+          },
+          {
+            "q": "«ذلك يساعدني»؟",
+            "a": "Das hilft mir."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die drei Gesundheits-Regeln: (1) Mein Kopf tut weh ↔ Ich habe Kopfschmerzen (weh am Ende, Schmerzen plural). (2) Symptom = habe, Bewegung/Veränderung = bin (war krank, bin geblieben). (3) Beim Arzt: muss … gehen (Verb am Ende), Das hilft mir (Dativ), der Krankenwagen (Geschlecht vom letzten Wort).",
+      "ar": "الثلاث قواعد الصحية: (1) رأسي يؤلمني ↔ عندي صداع (weh آخر · Schmerzen جمع). (2) العَرَض = habe · حركة/تغيّر = bin (كنتُ مريضاً · بقيتُ). (3) عند الطبيب: يجب أن أذهب (الفعل آخر) · ذلك يساعدني (Dativ) · الإسعاف (جنس آخر كلمة)."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Mein Kopf weh tut~~ / ~~Ich habe Kopfschmerz~~",
+          "ar": "الألم بطريقتين: **X + tut + weh** (weh آخر) ↔ **habe + Schmerzen (جمع)**"
+        },
+        "whyArabicSpeakerFails": "«رأسي يؤلمني» فعل واحد؛ الألماني يشطرها tut…weh — و«عندي صداع» جمع دائم (Kopfschmerzen) — الطريقتان للتعبير عن الألم معاً = إتقان الوحدة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Mein Kopf tut weh. · Ich habe Kopfschmerzen.",
+          "ar": "رأسي يؤلمني. · عندي صداع."
+        },
+        "exercise": {
+          "q": "«بطني يؤلمني / عندي ألم بطن» — بالطريقتين.",
+          "a": "Mein Bauch tut weh. / Ich habe Bauchschmerzen."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe 38 Grad Fieber bin~~ / ~~Ich bin gehustet~~",
+          "ar": "قاعدة القرار: العَرَض/المرض = **habe** · الحركة/التغيّر = **bin** — و**war** المباشر لـ«كنتُ»"
+        },
+        "whyArabicSpeakerFails": "المساعدان بلا مقابل بالعربية؛ القاعدة: هل تغيّر شيء (مَكان/حالة)؟ = bin · هل كان عَرَضاً أو فعلاً في مكانه؟ = habe — و«كنتُ» = war مباشرة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe Fieber. · Ich bin geblieben. · Ich war krank.",
+          "ar": "عندي حمّى. · بقيتُ. · كنتُ مريضاً."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ gehustet · Der Schmerz ___ verschwunden · Ich ___ schwach.",
+          "a": "habe / ist / war"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich muss gehen zum Arzt~~ / ~~Das hilft mich~~ / ~~die Krankenwagen~~",
+          "ar": "عند الطبيب: الفعل **آخر** (muss … gehen) · helfen = **Dativ** (mir) · جنس المركّب = **آخر** كلمة"
+        },
+        "whyArabicSpeakerFails": "ثلاث مصائد العيادة في جملة واحدة: ترتيب القلنسوة · حالة المفيد · جنس المركّب — إتقانها = جاهزية كاملة للوحدة 11 (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich muss zum Arzt gehen. · Das hilft mir. · der Krankenwagen",
+          "ar": "يجب أن أذهب للطبيب. · ذلك يساعدني. · الإسعاف (der)"
+        },
+        "exercise": {
+          "q": "أكمل: Sie muss zum Hausarzt ___ (gehen) · Das hilft ___ (sie → Dativ) · ___ (die) Notaufnahme.",
+          "a": "gehen / ihr / die"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "kopfschmerz",
+      "fieber"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Krankenwagen",
+      "https://www.duden.de/rechtschreibung/helfen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/helfen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-koerper",
+    "ars-gesundheit",
+    "ars-perfekt",
+    "ars-dativ-fix",
+    "ars-modal-fix"
+  ],
+  "audioManifestRefs": [
+    "word-kopfschmerz",
+    "word-fieber"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 11 (Gesundheit) — Wiederholung und Test",
+    "goetheWordListOverlap": []
+  }
+}

@@ -296,3 +296,7 @@
 ## حملة المحتوى — الدفعة 40 (2026-10-12) — u11-d5 مهمة: عند الطبيب (D84)
 - **u11-d5** (12 كلمة): Patient/Hausarzt/Spezialist/Notaufnahme/Krankenwagen/Unfall/Schnupfen/Zahnschmerzen/Bauchschmerzen/schmerzen/Tropfen/Salbe. مصائد: الفعل آخر · helfen+Dativ · جنس المركّب.
 - **682 كلمة · 65 درساً · 683 مساراً** · **243/243 أخضر** + tsc + validator (751/0/0) + build ✓. (D84) التالي: u11-d6 (معركة الوحدة 11).
+
+## حملة المحتوى — الدفعة 41 (2026-10-12) — u11-d6 معركة الوحدة 11 (D85)
+- **u11-d6** (0 كلمات): توليف كل مصائد الصحة (tut weh ↔ Schmerzen · habe↔bin/war · العيادة). **الوحدة 11 مكتملة ✅**.
+- **682 كلمة · 66 درساً · 683 مساراً** · **243/243 أخضر** + tsc + validator (752/0/0) + build ✓. (D85) التالي: u12-d1 (الوحدة 12: السفر والتخطيط).
