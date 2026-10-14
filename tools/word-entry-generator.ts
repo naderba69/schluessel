@@ -14,7 +14,7 @@ import { VOICE_ID, WORD_CLIP_MAX_SEC } from "../src/lib/audio.js";
 import { SRS_TARGETS } from "./validate-content.js";
 import {
   slugify, nounGender, lemmaOf, detectPhoneticRisks, detectGrammarRisks, cardTypesFor,
-  isFunctionWord, clipText, srsDistance,
+  isFunctionWord, clipText, srsDistance, reannotate, citationForm,
 } from "./lib/word-entry.js";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -173,8 +173,50 @@ export function runGenerator(opts: {
   return { planned, written: true, srsDistanceByLevel };
 }
 
+export type AuditRow = { id: string; de: string; ipa: string; old: string[]; risks: string[]; added: string[]; removed: string[] };
+
+/** D106: تدقيق أعلام الخطر لكل الكلمات الموجودة (وإعادة وسمها عند apply) — كل شيء يُحسب ثم يُكتب */
+export function auditRisks(opts: { contentRoot?: string; apply?: boolean; phonemize?: (t: string[]) => string[] } = {}): AuditRow[] {
+  const dir = join(opts.contentRoot ?? join(ROOT, "content"), "words");
+  const files = readdirSync(dir).filter((f) => f.endsWith(".json")).sort();
+  const raws = files.map((f) => readFileSync(join(dir, f), "utf8"));
+  const words = raws.map((r) => Word.parse(JSON.parse(r)));
+  const ipas = (opts.phonemize ?? phonemizeAll)(words.map((w) => lemmaOf(citationForm(w.de))));
+  const rows = words.map((w, i) => {
+    const de = citationForm(w.de);
+    const { risks, added, removed } = reannotate(w.phoneticRisks, detectPhoneticRisks(de, ipas[i]!), de, ipas[i]!);
+    return { id: w.id, de: w.de, ipa: ipas[i]!, old: w.phoneticRisks, risks, added, removed };
+  });
+  if (opts.apply) {
+    const updates = rows.map((r, i) => {
+      if (r.added.length === 0 && r.removed.length === 0) return null;
+      const obj = JSON.parse(raws[i]!) as Record<string, unknown>;
+      obj.phoneticRisks = r.risks;
+      Word.parse(obj); // لا ملف غير صالح
+      return { file: join(dir, files[i]!), text: JSON.stringify(obj, null, 2) + (raws[i]!.endsWith("\n") ? "\n" : "") };
+    });
+    for (const u of updates) if (u) writeFileSync(u.file, u.text, "utf8");
+  }
+  return rows;
+}
+
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2);
+  if (args.includes("--audit") || args.includes("--reannotate")) {
+    const rows = auditRisks({ apply: args.includes("--reannotate") });
+    const changed = rows.filter((r) => r.added.length || r.removed.length);
+    const tally = (k: "added" | "removed") => {
+      const t: Record<string, number> = {};
+      for (const r of rows) for (const x of r[k]) t[x] = (t[x] ?? 0) + 1;
+      return Object.entries(t).sort((a, b) => b[1] - a[1]).map(([x, n]) => `${x}:${n}`).join(" ");
+    };
+    console.log(`كلمات: ${rows.length} | تتغير: ${changed.length}`);
+    console.log(`أُضيف (مكتشَف بالقياس): ${tally("added") || "—"}`);
+    console.log(`أُسقط (مستحيل رسماً/نطقاً): ${tally("removed") || "—"}`);
+    for (const r of changed.slice(0, 12)) console.log(`  ${r.de} [${r.ipa}]  −${r.removed.join(",") || "∅"}  +${r.added.join(",") || "∅"}`);
+    console.log(args.includes("--reannotate") ? "✓ كُتبت التعديلات" : "(تدقيق فقط — لم يُكتب شيء)");
+    process.exit(0);
+  }
   const file = args.find((a) => !a.startsWith("--"));
   if (!file) {
     console.error("الاستخدام: npx tsx tools/word-entry-generator.ts <specs.json> [--dry-run] [--no-audio]");

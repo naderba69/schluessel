@@ -160,3 +160,46 @@ export function srsDistance(
   if (total === 0) return 0;
   return Math.abs(p / total - target.production) + Math.abs(c / total - target.comprehension) + Math.abs(a / total - target.audio);
 }
+
+/**
+ * D106: هل العلَم ممكن أصلاً لهذه الكلمة؟ (رسماً ونطقاً) — يُبقي الحكم اليدوي المعقول ويُسقط المستحيل
+ * (sp-st على Berg · v-f على Straße · ich-Laut على Brücke). الوملاوت من الكلمة نفسها فقط (سياسة D105).
+ */
+export function plausibleRisk(risk: PhoneticRisk, de: string, rawIpa: string): boolean {
+  const ipa = rawIpa.normalize("NFC");
+  const lemma = lemmaOf(de).toLowerCase();
+  const tokens = lemma.split(/[\s-]+/).filter(Boolean);
+  const isIgSuffix = (t: string) => t.endsWith("ig") && !t.endsWith("eig");
+  switch (risk) {
+    case "umlaut-u": return lemma.includes("ü");
+    case "umlaut-o": return lemma.includes("ö");
+    case "umlaut-a": return /ä(?!u)/.test(lemma);
+    case "ch-ich-laut": return /ch(?!s)/.test(lemma) && ipa.includes("ç");
+    case "ch-ach-laut": return /ch(?!s)/.test(lemma) && /[xχ]/.test(ipa);
+    case "ig-ending": return tokens.some(isIgSuffix);
+    case "auslaut-d": return lemma.includes("d") && (tokens.some((t) => t.endsWith("d")) || !ipa.includes("d"));
+    case "auslaut-b": return lemma.includes("b") && (tokens.some((t) => t.endsWith("b")) || !ipa.includes("b"));
+    case "auslaut-g": return lemma.includes("g") && (tokens.some((t) => t.endsWith("g")) || !/[ɡg]/.test(ipa));
+    case "sp-st-initial": return /s[pt]/.test(lemma) && /ʃ[pt]/.test(ipa);
+    case "z": return lemma.includes("z");
+    case "v-f": return lemma.includes("v") && !ipa.includes("v");
+    case "double-consonant": return /(bb|dd|ff|gg|kk|ll|mm|nn|pp|rr|ss|tt|ck)/.test(lemma);
+    case "vowel-long-short": return ipa.includes("ː");
+    case "r-uvular": return lemma.includes("r");
+    default: return true;
+  }
+}
+
+/** إعادة الوسم: المكتشَف ∪ (القديم الممكن) — مع ما أُضيف وما أُسقط للتقرير */
+export function reannotate(old: readonly PhoneticRisk[], detected: readonly PhoneticRisk[], de: string, ipa: string): {
+  risks: PhoneticRisk[]; added: PhoneticRisk[]; removed: PhoneticRisk[];
+} {
+  const keep = old.filter((r) => plausibleRisk(r, de, ipa));
+  const risks = [...new Set([...detected, ...keep])].sort();
+  return { risks, added: risks.filter((r) => !old.includes(r)), removed: old.filter((r) => !risks.includes(r)) };
+}
+
+/** الشكل الذي يُفحص صوتياً من حقل de (أول بديل «/» · بلا الشرح بين القوسين) */
+export function citationForm(de: string): string {
+  return de.split(" / ")[0]!.replace(/\s*\(.*?\)\s*/g, " ").trim();
+}

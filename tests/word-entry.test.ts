@@ -6,8 +6,9 @@ import { join } from "node:path";
 import { Word, AudioManifest } from "../content/schemas/index.js";
 import {
   slugify, nounGender, detectPhoneticRisks, detectGrammarRisks, cardTypesFor, clipText, srsDistance,
+  plausibleRisk, reannotate, citationForm, lemmaOf,
 } from "../tools/lib/word-entry.js";
-import { planWord, runGenerator, phonemizeAll, type WordSpec } from "../tools/word-entry-generator.js";
+import { planWord, runGenerator, phonemizeAll, auditRisks, type WordSpec } from "../tools/word-entry-generator.js";
 import { ALL_WORDS, ALL_LESSONS } from "../src/lesson-packs.js";
 
 // espeak يُخرج ç مفككة — الاختبار يستعمل الشكل نفسه
@@ -201,4 +202,33 @@ describe("D105 — تكامل حقيقي + السجل التلقائي", () => {
     });
     expect(ALL_LESSONS.length).toBe(lessonFiles.length);
   });
+});
+
+describe("D106 — إعادة وسم أعلام الخطر: المكتشَف ∪ القديم الممكن + حارس دائم", () => {
+  it("الإمكان: sp-st على Berg مستحيل · v-f على Straße مستحيل · طول على schon ممكن (حكم يدوي معقول)", () => {
+    expect(plausibleRisk("sp-st-initial", "der Berg", "bˈɛɾk")).toBe(false);
+    expect(plausibleRisk("v-f", "die Straße", "ʃtrˈɑːsə")).toBe(false);
+    expect(plausibleRisk("ch-ich-laut", "die Brücke", "brˈʏkə")).toBe(false);
+    expect(plausibleRisk("vowel-long-short", "schon", "ʃˈoːn")).toBe(true);
+    expect(plausibleRisk("umlaut-u", "die Ankunft", "ˈankʊnft")).toBe(false); // ü في الجمع فقط
+  });
+
+  it("reannotate: يُسقط المستحيل ويضيف المقيس ويُبقي الممكن", () => {
+    expect(reannotate(["sp-st-initial"], ["auslaut-g"], "der Berg", "bˈɛɾk")).toEqual({ risks: ["auslaut-g"], added: ["auslaut-g"], removed: ["sp-st-initial"] });
+    expect(reannotate(["vowel-long-short"], [], "schon", "ʃˈoːn")).toEqual({ risks: ["vowel-long-short"], added: [], removed: [] });
+    expect(citationForm("der Morgen / morgen")).toBe("der Morgen");
+    expect(citationForm("am (an + dem)")).toBe("am");
+  });
+
+  it("الحارس على كل كلمات المحتوى: كل علَم مقيس موجود + لا علَم مستحيل (لا تدقيق يبقى معلّقاً)", () => {
+    const rows = auditRisks();
+    expect(rows.length).toBe(ALL_WORDS.length);
+    const pending = rows.filter((r) => r.added.length || r.removed.length).map((r) => `${r.de}: −${r.removed} +${r.added}`);
+    expect(pending).toEqual([]);
+    for (const w of ALL_WORDS) {
+      const row = rows.find((r) => r.id === w.id)!;
+      for (const risk of w.phoneticRisks) expect(plausibleRisk(risk, citationForm(w.de), row.ipa), `${w.id}: ${risk}`).toBe(true);
+      expect(lemmaOf(citationForm(w.de)).length).toBeGreaterThan(0);
+    }
+  }, 60_000);
 });
