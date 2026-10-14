@@ -7,3 +7,7 @@ dist/
 tools/models/
 # صوت Piper (D28 — الهوية المثبّتة): يُلتزم في git بقرار المالك (2026-10-10) — بلا LFS
 *.tmp.wav
+
+# Python bytecode (أدوات الصوت — لا تُلتزم أبداً)
+__pycache__/
+*.pyc
