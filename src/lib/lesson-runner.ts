@@ -9,6 +9,9 @@ export type RecallCardData = {
   id: string;
   front: string;
   back: string;
+  /** D104: مسار الكلمة في المانيفست (word-<id>) + نصها المنطوق للاحتياطي (Web Speech) */
+  audioId: string;
+  speakText: string;
 };
 
 export type LearnCardData = {
@@ -19,6 +22,9 @@ export type LearnCardData = {
   promptAr: string;
   /** الشرح بعد المحاولة: التحديد الكامل + الجنس + مصيدة متوقعة */
   explanation: string;
+  /** D104: «الصوت يُشغَّل لحظة ظهور الكلمة» (§3 Präsentation) — مسار الكلمة + نصها المنطوق */
+  audioId: string;
+  speakText: string;
 };
 
 export type PracticeData = {
@@ -75,7 +81,7 @@ function explainWord(w: Word): string {
 export function planLessonStations(lesson: Lesson, words: Word[]): LessonStationPlan {
   const recall: RecallCardData[] = lesson.warmup.cardIds.map((id) => {
     const w = wordById(words, id);
-    return { id, front: fullForm(w), back: w.ar.join(" · ") };
+    return { id, front: fullForm(w), back: w.ar.join(" · "), audioId: `word-${w.id}`, speakText: fullForm(w) };
   });
   if (recall.length === 0) throw new Error("لا جلسة بلا استرجاع (F121): بطاقات الدفء مطلوبة");
 
@@ -86,6 +92,8 @@ export function planLessonStations(lesson: Lesson, words: Word[]): LessonStation
       promptDe: w.sampleSentence?.de ?? fullForm(w),
       promptAr: w.sampleSentence?.ar ?? w.ar[0],
       explanation: explainWord(w),
+      audioId: `word-${w.id}`,
+      speakText: fullForm(w),
     };
   });
 

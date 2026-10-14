@@ -1,6 +1,7 @@
 // src/components/LessonContent.tsx — مشغّل محتوى المحطات: الحصة تمشي بخطواتها الحقيقية
 // F121: محاولة قبل كشف · §2.5: تقييم بعد الكشف · E08: الخلاصة الهادئة · الوحدة صفر JIT (§9)
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { audioPlayer } from "../lib/audio-player.js";
 import type { Unit0Card } from "../../content/schemas/index.js";
 import type { LearnCardData, RecallCardData, PracticeData, CloseData } from "../lib/lesson-runner.js";
 import { RecallCardView, LearnCardView, CloseView } from "./LessonSession.js";
@@ -20,6 +21,8 @@ export function RecallStation({ cards }: { cards: RecallCardData[] }) {
       <RecallCardView
         front={card.front}
         back={card.back}
+        audioId={card.audioId}
+        speakText={card.speakText}
         revealed={revealed}
         onReveal={() => setRevealed(true)}
         onRate={(_r: RecallRating) => {
@@ -37,6 +40,10 @@ export function LearnStation({ cards }: { cards: LearnCardData[] }) {
   const [attempted, setAttempted] = useState(false);
   const [revealed, setRevealed] = useState(false);
   const card = cards[index];
+  // §3 Präsentation (D104): «الصوت يُشغَّل لحظة ظهور الكلمة» — مرة عند الظهور، والإعادة بزر 🔊
+  useEffect(() => {
+    if (card) void audioPlayer().play({ trackId: card.audioId, text: card.speakText });
+  }, [card]);
   if (!card) return <p data-testid="learn-done">اكتمل الجديد — إلى التدريب! 🎯</p>;
   return (
     <div data-testid="learn-station">
@@ -49,6 +56,8 @@ export function LearnStation({ cards }: { cards: LearnCardData[] }) {
         attempted={attempted}
         revealed={revealed}
         explanation={card.explanation}
+        audioId={card.audioId}
+        speakText={card.speakText}
         onAttempt={() => setAttempted(true)}
         onReveal={() => setRevealed(true)}
       />

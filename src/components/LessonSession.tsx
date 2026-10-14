@@ -6,6 +6,7 @@ import type { Station } from "../lib/lesson-engine.js";
 import { STATIONS, STATION_MINUTES, BREAKS_AFTER, canMove } from "../lib/lesson-engine.js";
 import { RATING_LABELS_AR, type RecallRating } from "../lib/review-engine.js";
 import { PLAYBACK_SPEEDS, RECORDING_DISCLAIMER_AR } from "../lib/audio-engine.js";
+import { audioPlayer } from "../lib/audio-player.js";
 import type { DictationComparison } from "../lib/dictation-engine.js";
 
 export const STATION_LABELS_AR: Record<Station, string> = {
@@ -43,6 +44,24 @@ export function BreakPrompt({ after, onContinue }: { after: Station; onContinue:
   );
 }
 
+/**
+ * زر الاستماع (D104 — القانون 11: كل كلمة قابلة للسماع دائماً): المقطع الملتزم أولاً ← Web Speech احتياطاً.
+ * الإعادة بلا سقف ولا عقوبة (D23).
+ */
+export function PlayButton({ audioId, speakText }: { audioId?: string; speakText: string }) {
+  return (
+    <button
+      type="button"
+      data-testid="play-audio"
+      data-audio-id={audioId ?? ""}
+      aria-label={`استمع: ${speakText}`}
+      onClick={() => void audioPlayer().play({ trackId: audioId, text: speakText })}
+    >
+      🔊
+    </button>
+  );
+}
+
 /** شاشة الاسترجاع §2.5: حاول أولاً ← أظهر الإجابة ← قيّم (نسخت|صعب|جيد|سهل) */
 export function RecallCardView({
   front,
@@ -50,16 +69,22 @@ export function RecallCardView({
   revealed,
   onReveal,
   onRate,
+  audioId,
+  speakText,
 }: {
   front: string;
   back: string;
   revealed: boolean;
   onReveal: () => void;
   onRate: (rating: RecallRating) => void;
+  audioId?: string;
+  speakText?: string;
 }) {
   return (
     <article data-testid="recall-card" data-revealed={revealed ? "yes" : "no"}>
-      <p dir="ltr">{front}</p>
+      <p dir="ltr">
+        {front} <PlayButton audioId={audioId} speakText={speakText ?? front} />
+      </p>
       {!revealed ? (
         <>
           <p>أولاً: حاول تذكر! 💭</p>
@@ -95,6 +120,8 @@ export function LearnCardView({
   explanation,
   onAttempt,
   onReveal,
+  audioId,
+  speakText,
 }: {
   promptDe: string;
   promptAr: string;
@@ -103,10 +130,14 @@ export function LearnCardView({
   explanation: string;
   onAttempt: () => void;
   onReveal: () => void;
+  audioId?: string;
+  speakText?: string;
 }) {
   return (
     <article data-testid="learn-card" data-revealed={revealed ? "yes" : "no"}>
-      <p dir="ltr">{promptDe}</p>
+      <p dir="ltr">
+        {promptDe} <PlayButton audioId={audioId} speakText={speakText ?? promptDe} />
+      </p>
       <p>{promptAr}</p>
       {!revealed ? (
         <>
