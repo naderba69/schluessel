@@ -67,15 +67,36 @@ export function wordsForLesson(lesson: Lesson): Word[] {
   });
 }
 
-/** كلمات التشغيل: الجديد + بطاقات الدفء (استرجاع من دروس سابقة) */
+/** موضع كل درس في المسار، وأول درس يعلّم كل كلمة — أساس «ما دُرس حتى الآن» (D118) */
+const LESSON_INDEX: ReadonlyMap<string, number> = new Map(ALL_LESSONS.map((l, i) => [l.id, i]));
+const FIRST_TAUGHT: ReadonlyMap<string, number> = (() => {
+  const m = new Map<string, number>();
+  ALL_LESSONS.forEach((l, i) => {
+    for (const id of l.praesentation.wordIds) if (!m.has(id)) m.set(id, i);
+  });
+  return m;
+})();
+
+/** كلمات التشغيل: الجديد + بطاقات الدفء (استرجاع من دروس سابقة) + أعضاء عائلتها المدروسون حتى الدرس (D118) */
 export function runtimeWordsForLesson(lesson: Lesson): Word[] {
   const byId = new Map(ALL_WORDS.map((w) => [w.id, w]));
-  const ids = [...lesson.praesentation.wordIds, ...lesson.warmup.cardIds];
-  return [...new Set(ids)].map((id) => {
+  const ids = [...new Set([...lesson.praesentation.wordIds, ...lesson.warmup.cardIds])];
+  const base = ids.map((id) => {
     const w = byId.get(id);
     if (!w) throw new Error(`كلمة مفقودة من المحتوى: ${id}`);
     return w;
   });
+  // D118: أعضاء عائلة كلمات الدرس الذين دُرسوا حتى هذا الدرس (ضمناً) — لتُعرض العائلة بصيغتها الألمانية؛
+  // ما لم يُدرَّس بعد لا يُمرَّر فلا يظهر (قانون الجبهة 13). درس خارج المسار (اختبار) ⇒ لا إضافات.
+  const at = LESSON_INDEX.get(lesson.id);
+  const extra = new Set<string>();
+  if (at !== undefined)
+    for (const w of base)
+      for (const f of w.wordFamily) {
+        const first = FIRST_TAUGHT.get(f);
+        if (first !== undefined && first <= at && !ids.includes(f)) extra.add(f);
+      }
+  return [...base, ...[...extra].map((id) => byId.get(id)!)];
 }
 
 /** توافق مع الاستخدام القديم */

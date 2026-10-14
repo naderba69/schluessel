@@ -69,9 +69,22 @@ export function fullForm(w: Pick<Word, "de" | "article">): string {
   return w.de.startsWith(`${w.article} `) ? w.de : `${w.article} ${w.de}`;
 }
 
-function explainWord(w: Word): string {
+/**
+ * عائلة الكلمة كما يراها المتعلم (D118): الصيغة الألمانية الكاملة لا المعرّف — كان يُعرض «tuerkei» و«wie-gehts»
+ * (159 من 205 مرجعاً عائلياً في A1: رسم خاطئ أمام المتعلم) — ومن الكلمات المعروفة الممرَّرة وحدها: المُمرِّر يقرر
+ * ما دُرس (قانون الجبهة 13)، فالعضو غير الممرَّر لا يظهر (كان 4 أعضاء غير مدروسين يظهرون، 3 منها في أول درس).
+ */
+export function familyForms(w: { readonly wordFamily: readonly string[] }, known: ReadonlyMap<string, Pick<Word, "de" | "article">>): string[] {
+  return w.wordFamily.flatMap((id) => {
+    const f = known.get(id);
+    return f ? [fullForm(f)] : [];
+  });
+}
+
+function explainWord(w: Word, known: ReadonlyMap<string, Word>): string {
   const gender = w.gender !== "none" ? ` (${w.gender})` : "";
-  const family = w.wordFamily.length ? ` — عائلة: ${w.wordFamily.join("، ")}` : "";
+  const members = familyForms(w, known);
+  const family = members.length ? ` — عائلة: ${members.join("، ")}` : "";
   const sentence = w.sampleSentence ? ` مثال: «${w.sampleSentence.de}» = ${w.sampleSentence.ar}` : "";
   return `${fullForm(w)}${gender} = ${w.ar.join("، ")}${family}.${sentence}`;
 }
@@ -82,6 +95,7 @@ function explainWord(w: Word): string {
  * أي كلمة مفقودة = خطأ فوري (لا شاشات ناقصة أبداً).
  */
 export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: readonly GrammarRule[] = []): LessonStationPlan {
+  const known: ReadonlyMap<string, Word> = new Map(words.map((w) => [w.id, w]));
   const recall: RecallCardData[] = lesson.warmup.cardIds.map((id) => {
     const w = wordById(words, id);
     return { id, front: fullForm(w), back: w.ar.join(" · "), audioId: `word-${w.id}`, speakText: fullForm(w) };
@@ -94,7 +108,7 @@ export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: 
       wordId: id,
       promptDe: w.sampleSentence?.de ?? fullForm(w),
       promptAr: w.sampleSentence?.ar ?? w.ar[0],
-      explanation: explainWord(w),
+      explanation: explainWord(w, known),
       audioId: `word-${w.id}`,
       speakText: fullForm(w),
     };

@@ -12,6 +12,7 @@ import { correctSentence, gentleWrap, sentenceOfTheDay, diaryPrompt } from "../l
 import { A1_RULES } from "../lib/grammar-discovery.js";
 import { RuleDiscoveryView } from "./LessonContent.js";
 import { buildNetwork, memoryPalace, networkReviewFlow } from "../lib/vocab-network.js";
+import { familyForms } from "../lib/lesson-runner.js";
 import { A1_TASKS, taskFlow, type RealTask } from "../lib/real-tasks.js";
 import { CULTURE_FACTS, songOfTheWeek, factsNeedingWebVerify } from "../lib/culture.js";
 import { firstLessonWords } from "../lesson-packs.js";
@@ -164,6 +165,7 @@ export function GrammarLab({ ruleId = A1_RULES[0]!.id }: { ruleId?: string }) {
 /* ══════════ E14 — المفردات الشبكية ══════════ */
 export function NetworkLab() {
   const { nodes } = buildNetwork(firstLessonWords);
+  const knownFirst = new Map(firstLessonWords.map((w) => [w.id, w])); // D118: العائلة بصيغتها ومن المدروس وحده
   const { stations } = memoryPalace(nodes, ["المدخل", "المطبخ", "الغرفة", "الشرفة"]);
   return (
     <section data-testid="network-lab">
@@ -171,7 +173,7 @@ export function NetworkLab() {
       <ul data-testid="network-nodes">
         {nodes.map((n) => (
           <li key={n.wordId} data-node={n.wordId} dir="ltr">
-            {n.de} <span dir="rtl">— عائلة: {n.family.join("، ") || "—"}</span>
+            {n.de} <span dir="rtl">— عائلة: {familyForms({ wordFamily: n.family }, knownFirst).join("، ") || "—"}</span>
             {n.kollocation && (
               <span data-testid={`kol-${n.wordId}`} dir="rtl"> · ركب: {n.kollocation.de}</span>
             )}
