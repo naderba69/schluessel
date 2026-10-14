@@ -1,6 +1,6 @@
 // src/components/LessonContent.tsx — مشغّل محتوى المحطات: الحصة تمشي بخطواتها الحقيقية
 // F121: محاولة قبل كشف · §2.5: تقييم بعد الكشف · E08: الخلاصة الهادئة · الوحدة صفر JIT (§9)
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { audioPlayer } from "../lib/audio-player.js";
 import { FUNCTION_LABELS_AR, type Phrase } from "../lib/phrase-bank.js";
 import { PlayButton } from "./LessonSession.js";
@@ -13,11 +13,34 @@ import {
   type DiscoverySession, type GrammarRule,
 } from "../lib/grammar-discovery.js";
 import {
-  initialPractice, nextItem, submitAttempt, toTypedItem, type Attempt, type PracticeState, type TypedItem, type Verdict,
+  displayOrder, initialPractice, nextItem, submitAttempt, toTypedItem, type Attempt, type PracticeState, type TypedItem, type Verdict,
 } from "../lib/practice-session.js";
 
+/** أحرف ألمانية خاصة (D117): لوحة مفاتيح عربية/إنجليزية لا تملك ä ö ü ß — بلا هذه الأزرار يُعاقَب المتعلم على لوحته لا على معرفته */
+export const GERMAN_KEYS = ["ä", "ö", "ü", "ß", "Ä", "Ö", "Ü"] as const;
+
+export function UmlautKeys({ onInsert, disabled }: { onInsert: (ch: string) => void; disabled?: boolean }) {
+  return (
+    <span data-testid="umlaut-keys" dir="ltr">
+      {GERMAN_KEYS.map((ch) => (
+        <button key={ch} type="button" disabled={disabled} aria-label={`أدخل ${ch}`} onClick={() => onInsert(ch)}>
+          {ch}
+        </button>
+      ))}
+    </span>
+  );
+}
+
+/** إدراج عند موضع المؤشر (لا في الآخر فقط) ثم إعادة المؤشر بعد الحرف */
+export function insertAtCursor(el: HTMLInputElement | null, text: string, ch: string, set: (v: string) => void): void {
+  const start = el?.selectionStart ?? text.length;
+  const end = el?.selectionEnd ?? text.length;
+  set(text.slice(0, start) + ch + text.slice(end));
+  if (el) requestAnimationFrame(() => { el.focus(); el.setSelectionRange(start + 1, start + 1); });
+}
+
 /** محطة 1 — الاسترجاع: بطاقة بعد بطاقة، والتقييم يمرّر للتالية */
-export function RecallStation({ cards }: { cards: RecallCardData[] }) {
+export function RecallStation({ cards, onDone }: { cards: RecallCardData[]; onDone?: () => void }) {
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const card = cards[index];
@@ -37,6 +60,7 @@ export function RecallStation({ cards }: { cards: RecallCardData[] }) {
         onRate={(_r: RecallRating) => {
           setRevealed(false);
           setIndex(index + 1);
+          if (index + 1 >= cards.length) onDone?.(); // D117: اكتملت المحطة ← يُفتح «التالي»
         }}
       />
     </div>
@@ -44,7 +68,15 @@ export function RecallStation({ cards }: { cards: RecallCardData[] }) {
 }
 
 /** محطة 2 — الجديد: محاولة ← كشف ← التالي (F121) — ثم قاعدة اليوم بالاكتشاف الموجَّه (D115) */
-export function LearnStation({ cards, rules = [] }: { cards: LearnCardData[]; rules?: readonly GrammarRule[] }) {
+export function LearnStation({
+  cards,
+  rules = [],
+  onDone,
+}: {
+  cards: LearnCardData[];
+  rules?: readonly GrammarRule[];
+  onDone?: () => void;
+}) {
   const [index, setIndex] = useState(0);
   const [ruleIndex, setRuleIndex] = useState(0);
   const [attempted, setAttempted] = useState(false);
@@ -56,7 +88,17 @@ export function LearnStation({ cards, rules = [] }: { cards: LearnCardData[]; ru
   }, [card]);
   if (!card) {
     const rule = rules[ruleIndex];
-    if (rule) return <RuleDiscoveryView key={rule.id} rule={rule} onDone={() => setRuleIndex(ruleIndex + 1)} />;
+    if (rule)
+      return (
+        <RuleDiscoveryView
+          key={rule.id}
+          rule={rule}
+          onDone={() => {
+            setRuleIndex(ruleIndex + 1);
+            if (ruleIndex + 1 >= rules.length) onDone?.(); // D117: آخر قاعدة ← اكتملت المحطة
+          }}
+        />
+      );
     return <p data-testid="learn-done">اكتمل الجديد — إلى التدريب! 🎯</p>;
   }
   return (
@@ -83,6 +125,7 @@ export function LearnStation({ cards, rules = [] }: { cards: LearnCardData[]; ru
             setRevealed(false);
             setAttempted(false);
             setIndex(index + 1);
+            if (index + 1 >= cards.length && rules.length === 0) onDone?.(); // D117: بلا قاعدة ← آخر بطاقة تُكمل المحطة
           }}
         >
           التالي ←
@@ -233,6 +276,7 @@ function FeedbackView({ verdict, onNext }: { verdict: Verdict; onNext: () => voi
 /** بند مُنمَّط واحد: طريقة التفاعل حسب نوعه — حالته المحلية تُصفَّر مع كل بند (key) */
 function TypedItemView({ item, verdict, onAttempt }: { item: TypedItem; verdict: Verdict | null; onAttempt: (a: Attempt) => void }) {
   const [text, setText] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
   const [pool, setPool] = useState<string[]>(() => (item.kind === "order" ? item.tokens : []));
   const [line, setLine] = useState<string[]>([]);
   const [matches, setMatches] = useState<Record<string, string>>({});
@@ -260,14 +304,15 @@ function TypedItemView({ item, verdict, onAttempt }: { item: TypedItem; verdict:
         item.prompt && <p dir="auto">{item.prompt}</p>
       )}
       {item.kind === "choice" &&
-        item.choices.map((c, i) => (
+        displayOrder(item.choices, `${item.prompt}|${item.choices.join("|")}`).map((c, i) => (
           <button key={c} data-testid={`choice-${i}`} dir="auto" disabled={locked} onClick={() => onAttempt(c)}>
             {c}
           </button>
         ))}
       {item.kind === "input" && (
         <>
-          <input data-testid="practice-input" dir="ltr" value={text} disabled={locked} onChange={(e) => setText(e.target.value)} />
+          <input ref={inputRef} data-testid="practice-input" dir="ltr" value={text} disabled={locked} onChange={(e) => setText(e.target.value)} />
+          <UmlautKeys disabled={locked} onInsert={(ch) => insertAtCursor(inputRef.current, text, ch, setText)} />
           <button data-testid="practice-check" disabled={locked || !text.trim()} onClick={() => onAttempt(text)}>
             تحقّق
           </button>
@@ -351,7 +396,15 @@ function TypedItemView({ item, verdict, onAttempt }: { item: TypedItem; verdict:
 }
 
 /** محطة 3 — التدريب: محطات Übung بالترتيب + المهمة التواصلية (CLT) */
-export function PracticeStation({ data, redemittel = [] }: { data: PracticeData; redemittel?: Phrase[] }) {
+export function PracticeStation({
+  data,
+  redemittel = [],
+  onDone,
+}: {
+  data: PracticeData;
+  redemittel?: Phrase[];
+  onDone?: () => void;
+}) {
   const [state, setState] = useState<PracticeState>(initialPractice);
   const station = data.stations[state.station];
   const item = station?.items[state.item] as { q?: string; a?: string } | undefined;
@@ -384,7 +437,11 @@ export function PracticeStation({ data, redemittel = [] }: { data: PracticeData;
   }
 
   const typed = toTypedItem(station.type, item);
-  const next = () => setState(nextItem(state, data.stations));
+  const next = () => {
+    const after = nextItem(state, data.stations);
+    setState(after);
+    if (!data.stations[after.station]) onDone?.(); // D117: آخر بند ← اكتملت المحطة (ثم المهمة التواصلية)
+  };
   const counter = (
     <p data-testid="practice-counter">
       تمرين {state.item + 1} من {station.items.length} — محطة {state.station + 1} من {data.stations.length}

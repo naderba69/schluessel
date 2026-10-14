@@ -40,9 +40,9 @@ const sampleLesson = JSON.parse(
     slider: { questionDe: "?", questionAr: "؟", min: 0, max: 100 },
     quiz: {
       variants: [
-        { items: [{ q: 1 }, { q: 2 }, { q: 3 }], passingScore: 0.75 },
-        { items: [{ q: 1 }, { q: 2 }, { q: 3 }], passingScore: 0.75 },
-        { items: [{ q: 1 }, { q: 2 }, { q: 3 }], passingScore: 0.75 },
+        { items: [{ q: "«شكراً»؟", a: "Danke" }, { q: "Ich ___ Yusuf.", a: "heiße" }, { q: "«مرحباً»؟", a: "Hallo", choices: ["Hallo", "Tschüss"] }], passingScore: 0.75 },
+        { items: [{ q: "«شكراً»؟", a: "Danke" }, { q: "Ich ___ Yusuf.", a: "heiße" }, { q: "«مرحباً»؟", a: "Hallo", choices: ["Hallo", "Tschüss"] }], passingScore: 0.75 },
+        { items: [{ q: "«شكراً»؟", a: "Danke" }, { q: "Ich ___ Yusuf.", a: "heiße" }, { q: "«مرحباً»؟", a: "Hallo", choices: ["Hallo", "Tschüss"] }], passingScore: 0.75 },
       ],
     },
     zusammenfassung: { summary: { de: "s", ar: "ص" }, warningCards: [], srsBundleWordIds: ["wohnung"] },

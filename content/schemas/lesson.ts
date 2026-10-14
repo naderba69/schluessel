@@ -36,8 +36,36 @@ export const PretestItem = z.object({
   revealNextSession: z.literal(true),
 });
 
+/** شرح «لماذا» بالعربية بعد المحاولة (§3: تصحيح فوري تفسيري — لا «خطأ» فقط) */
+export const WhyAr = z
+  .string()
+  .min(12, { message: "شرح why أقصر من أن يشرح (≥12 حرفاً)" })
+  .regex(/[\u0600-\u06FF]/, { message: "شرح why يُكتب بالعربية" });
+const ItemText = z.string().min(1);
+const distinct = (xs: readonly string[]) => new Set(xs).size === xs.length;
+
+/**
+ * بند Quiz مُنمَّط: سؤال + إجابة (+ خيارات تضم الإجابة) + why اختياري يُعرض بعد التصحيح.
+ * D117: صار شكل **كل** بنود الـQuiz في **كل** درس (لا الدروس المُرقّاة فقط) — فالـQuiz بوابة تقفل المسار (≥75%)
+ * وبند لا يُصحَّح (إجابة خارج خياراتها) يُسقط متعلماً أجاب صواباً. accept = صيغ صحيحة أخرى للإجابة المفتوحة.
+ */
+export const QuizItem = z
+  .object({
+    q: ItemText,
+    a: ItemText,
+    choices: z.array(ItemText).min(2).max(5).optional(),
+    accept: z.array(ItemText).min(1).optional(),
+    why: WhyAr.optional(),
+  })
+  .strict()
+  .refine((i) => !i.choices || i.choices.includes(i.a), { message: "الإجابة ليست بين الخيارات" })
+  .refine((i) => !i.choices || distinct(i.choices), { message: "خيارات مكررة" })
+  .refine((i) => !(i.choices && i.accept), { message: "accept للإجابة المفتوحة فقط — مع الخيارات الإجابة واحدة" })
+  .refine((i) => !i.accept || distinct([i.a, ...i.accept]), { message: "accept يكرر الإجابة أو يكرر نفسه" });
+export type QuizItem = z.infer<typeof QuizItem>;
+
 export const QuizVariant = z.object({
-  items: z.array(z.record(z.string(), z.unknown())).min(3),
+  items: z.array(QuizItem).min(3),
   passingScore: z.number().min(0.75).max(1).default(0.75),
 });
 
@@ -121,12 +149,6 @@ export type Lesson = z.infer<typeof Lesson>;
 // مخطط الدرس العام يبقى مرناً (المحتوى القديم صالح كما هو)؛ هذه الأشكال يفرضها حارس الترقية
 // (tools/lib/lesson-upgrade.ts) على كل درس عُلِّم تدريبه done في خطة الترقية — ويقرؤها المُشغِّل للتصحيح التفسيري.
 
-/** شرح «لماذا» بالعربية بعد المحاولة (§3: تصحيح فوري تفسيري — لا «خطأ» فقط) */
-export const WhyAr = z
-  .string()
-  .min(12, { message: "شرح why أقصر من أن يشرح (≥12 حرفاً)" })
-  .regex(/[\u0600-\u06FF]/, { message: "شرح why يُكتب بالعربية" });
-const ItemText = z.string().min(1);
 const AudioId = z.string().regex(/^[a-z0-9-]+$/, { message: "معرّف مسار صوتي من المانيفست" });
 
 /** كلمات الجملة كما تُعرض بطاقاتٍ للترتيب — علامة الترقيم تبقى ملتصقة بكلمتها */
@@ -135,7 +157,6 @@ export const sentenceTokens = (s: string): string[] => s.trim().split(/\s+/).fil
 export const dictationForm = (s: string): string => s.trim().replace(/\s+/g, " ").replace(/[.!?]+$/, "");
 const sameMultiset = (a: readonly string[], b: readonly string[]) =>
   a.length === b.length && [...a].sort().join("\u0000") === [...b].sort().join("\u0000");
-const distinct = (xs: readonly string[]) => new Set(xs).size === xs.length;
 
 /** اختيار: الإجابة من الخيارات · بلا تكرار (choice · gender-drill · case-drill) */
 export const ChoiceItem = z
@@ -211,10 +232,3 @@ export const PRACTICE_ITEM_SHAPES = {
 /** محطات الصوت: تشير إلى مسار موجود في المانيفست (D114: «الاستماع بالصوت الموجود والإملاء») */
 export const AUDIO_STATION_TYPES = ["listening", "mini-pronunciation", "dictation"] as const;
 
-/** بند Quiz مُنمَّط: سؤال + إجابة (+ خيارات تضم الإجابة) + why اختياري يُعرض بعد التصحيح */
-export const QuizItem = z
-  .object({ q: ItemText, a: ItemText, choices: z.array(ItemText).min(2).max(5).optional(), why: WhyAr.optional() })
-  .strict()
-  .refine((i) => !i.choices || i.choices.includes(i.a), { message: "الإجابة ليست بين الخيارات" })
-  .refine((i) => !i.choices || distinct(i.choices), { message: "خيارات مكررة" });
-export type QuizItem = z.infer<typeof QuizItem>;

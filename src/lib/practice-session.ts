@@ -78,6 +78,29 @@ export function toTypedItem(type: StationType, raw: unknown): TypedItem | null {
 /** correct · close (قريب: حرف كبير/تهجئة) · retry (ليس بعد) · self (إنتاج حر: تقارن أنت بالنموذج) */
 export type Verdict = { status: "correct" | "close" | "retry" | "self"; expected: string; why: string; noteAr: string };
 
+/**
+ * ترتيب عرض الخيارات (D117): المحتوى يكتب الإجابة الصحيحة أولاً في العادة (a1-u1-d1: 18 من 18 بنداً) —
+ * عرضُها بترتيب التأليف يجعل «الزر الأول» دليلاً على الإجابة فيسقط صدق التدريب والبوابة معاً.
+ * الخلط حتمي بالبذرة (FNV-1a ← mulberry32 ← Fisher–Yates): ثابت بين إعادات الرسم وقابل للاختبار، ومختلف بين البنود.
+ */
+export function displayOrder<T>(xs: readonly T[], seed: string): T[] {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < seed.length; i++) h = Math.imul(h ^ seed.charCodeAt(i), 0x01000193);
+  let t = h >>> 0;
+  const rand = () => {
+    t = (t + 0x6d2b79f5) >>> 0;
+    let r = Math.imul(t ^ (t >>> 15), 1 | t);
+    r = (r + Math.imul(r ^ (r >>> 7), 61 | r)) ^ r;
+    return ((r ^ (r >>> 14)) >>> 0) / 4294967296;
+  };
+  const out = [...xs];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [out[i], out[j]] = [out[j]!, out[i]!];
+  }
+  return out;
+}
+
 /** مقارنة لطيفة: فراغات زائدة · علامة الترقيم الأخيرة · شكل الفاصلة العليا — لا تُحسب أخطاء */
 export const normalizeAnswer = (s: string): string =>
   s.trim().replace(/\s+/g, " ").replace(/[’`´]/g, "'").replace(/[.!?]+$/, "");

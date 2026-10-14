@@ -219,16 +219,34 @@ export type StationContent = {
   close?: React.ReactNode;
 };
 
-/** صدفة الحصة: محطة واحدة في كل شاشة + استراحة بين المحطات + قفل اتجاه (E01) */
-export function LessonSession({ content }: { content?: StationContent }) {
+/**
+ * صدفة الحصة: محطة واحدة في كل شاشة + استراحة بين المحطات + قفل اتجاه (E01).
+ * D117: `done` = ما اكتمل من المحطات — «التالي» مقفل حتى تكتمل المحطة (لا قفز داخل الحصة — قانون 3)؛
+ * غيابه = بلا قفل (عرض/اختبار الصدفة وحدها). `onFinish` = «أنهِ الحصة» في المحطة الأخيرة.
+ */
+export function LessonSession({
+  content,
+  done,
+  onFinish,
+}: {
+  content?: StationContent;
+  done?: Partial<Record<Station, boolean>>;
+  onFinish?: () => void;
+}) {
   const [index, setIndex] = useState(0);
   const [onBreak, setOnBreak] = useState(false);
   const station = STATIONS[index];
+  const ready = done === undefined || done[station] === true;
 
   const advance = () => {
-    // قفل الاتجاه (E01): التقدم فقط — لا ارتجاع ولا قفز
+    // قفل الاتجاه (E01): التقدم فقط — لا ارتجاع ولا قفز — ولا قبل اكتمال المحطة (D117)
+    if (!ready) return;
     const next = STATIONS[index + 1];
-    if (next && canMove(station, next)) {
+    if (!next) {
+      onFinish?.();
+      return;
+    }
+    if (canMove(station, next)) {
       if (BREAKS_AFTER.includes(station)) setOnBreak(true);
       else setIndex(index + 1);
     }
@@ -259,9 +277,20 @@ export function LessonSession({ content }: { content?: StationContent }) {
         <button data-testid="back-btn" disabled title="لا ارتجاع — قانون 3">
           السابق
         </button>
-        <button data-testid="next-btn" onClick={advance}>
+        <button
+          data-testid="next-btn"
+          onClick={advance}
+          disabled={!ready}
+          title={ready ? undefined : "أكمل المحطة أولاً — لا قفز (قانون 3)"}
+        >
           {station === "close" ? "أنهِ الحصة" : "التالي"}
         </button>
+        {!ready && (
+          <small data-testid="station-lock">
+            {" "}
+            {station === "close" ? "أكمل اختبار الدرس أولاً" : "أكمل المحطة لتنتقل"}
+          </small>
+        )}
       </p>
     </section>
   );

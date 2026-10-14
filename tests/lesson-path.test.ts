@@ -1,0 +1,118 @@
+// tests/lesson-path.test.ts — مسار الدروس (D117): الدرس الحالي · الفتح بالنجاح وحده · قفل المسار · المصالحة · المسار المنشور كله
+import { describe, it, expect } from "vitest";
+import { LearnerState as LearnerStateSchema, type LearnerState } from "../content/schemas/index.js";
+import { createInitialState } from "../src/lib/state-factory.js";
+import { lessonStatus } from "../src/lib/routes.js";
+import {
+  currentLessonId, lessonAfter, quizAttempts, reconcileProgress, reconcileState, recordQuizAttempt, type PathLesson,
+} from "../src/lib/lesson-path.js";
+import {
+  advanceQuiz, answerQuizItem, predictScore, quizOutcome, startQuizAttempt, type QuizOutcome,
+} from "../src/lib/quiz-session.js";
+import { planLessonStations } from "../src/lib/lesson-runner.js";
+import { ALL_GRAMMAR_RULES, ALL_LESSONS, LESSON_ORDER, runtimeWordsForLesson } from "../src/lesson-packs.js";
+
+const PATH: PathLesson[] = [
+  { id: "a1-u1-d1", level: "A1", unit: 1 },
+  { id: "a1-u1-d2", level: "A1", unit: 1 },
+  { id: "a1-u2-d1", level: "A1", unit: 2 },
+  { id: "a2-u1-d1", level: "A2", unit: 1 },
+];
+const DAY = "2026-10-14";
+const fresh = (): LearnerState => reconcileState(createInitialState("يوسف", new Date(DAY)), PATH);
+
+function outcome(lessonId: string, score: number, extra: Partial<QuizOutcome> = {}): QuizOutcome {
+  return {
+    lessonId, variantIndex: 0, total: 4, credit: score * 4, score, percent: Math.round(score * 100),
+    passed: score >= 0.75, passingScore: 0.75, correct: 0, close: 0, wrong: 0, selfCorrect: 0, selfWrong: 0,
+    predicted: 70, weakItems: score < 1 ? ["«المال»؟"] : [], ...extra,
+  };
+}
+
+describe("الدرس الحالي والمصالحة", () => {
+  it("أول تشغيل: a1-u1-d1 وحده متاح · الباقي مقفل", () => {
+    const s = fresh();
+    expect(currentLessonId(s.progress, PATH)).toBe("a1-u1-d1");
+    expect(PATH.map((l) => lessonStatus(l.id, s.progress))).toEqual(["available", "locked", "locked", "locked"]);
+  });
+
+  it("المصالحة تُسقط معرّفاً اختفى من المحتوى (نقل وحدة) وتصحّح الوحدة الحالية — والتاريخ لا يُمحى", () => {
+    const s = fresh();
+    const stale = { ...s.progress, completedLessons: ["a1-u1-d1", "a1-u17-d1"], availableLessons: ["a1-u17-d2"] };
+    const r = reconcileProgress(stale, PATH);
+    expect(r.availableLessons).toEqual(["a1-u1-d2"]);
+    expect(r.completedLessons).toEqual(["a1-u1-d1", "a1-u17-d1"]);
+    expect(r.currentUnit).toEqual({ level: "A1", unit: 1 });
+  });
+
+  it("lessonAfter: التالي في الترتيب · null بعد الأخير أو لمعرّف مجهول", () => {
+    expect(lessonAfter("a1-u1-d2", PATH)).toBe("a1-u2-d1");
+    expect(lessonAfter("a2-u1-d1", PATH)).toBeNull();
+    expect(lessonAfter("zz", PATH)).toBeNull();
+  });
+});
+
+describe("recordQuizAttempt — الفتح بالنجاح وحده (≥75%)", () => {
+  it("النجاح: يكتمل الدرس · يُفتح التالي · نتيجة البوابة + سطر المعايرة · والحالة صالحة بالمخطط", () => {
+    const s = recordQuizAttempt(fresh(), outcome("a1-u1-d1", 1, { selfCorrect: 1 }), PATH, DAY);
+    expect(s.progress.completedLessons).toEqual(["a1-u1-d1"]);
+    expect(s.progress.availableLessons).toEqual(["a1-u1-d2"]);
+    expect(s.progress.gateResults).toEqual([
+      { gateId: "a1-u1-d1", kind: "lesson-quiz", score: 1, passed: true, attempts: 1, weakSections: [], selfJudged: 1, date: DAY },
+    ]);
+    expect(s.profile.calibration).toEqual([{ date: DAY, predicted: 70, actual: 100, lessonId: "a1-u1-d1" }]);
+    expect(() => LearnerStateSchema.parse(s)).not.toThrow();
+  });
+
+  it("«ليس بعد»: لا إكمال ولا فتح · تُعدّ المحاولة (فتتغير النسخة التالية) · والنقاط الضعيفة تُسجَّل", () => {
+    const s1 = recordQuizAttempt(fresh(), outcome("a1-u1-d1", 0.5), PATH, DAY);
+    expect(s1.progress.completedLessons).toEqual([]);
+    expect(s1.progress.availableLessons).toEqual(["a1-u1-d1"]);
+    expect(quizAttempts(s1.progress, "a1-u1-d1")).toBe(1);
+    expect(s1.progress.gateResults[0]).toMatchObject({ passed: false, attempts: 1, weakSections: ["«المال»؟"] });
+    expect(s1.progress.gateResults[0]).not.toHaveProperty("selfJudged");
+    const s2 = recordQuizAttempt(s1, outcome("a1-u1-d1", 0.75), PATH, DAY);
+    expect(s2.progress.gateResults[1]).toMatchObject({ passed: true, attempts: 2 });
+    expect(currentLessonId(s2.progress, PATH)).toBe("a1-u1-d2");
+  });
+
+  it("قفل المسار: محاولة لدرس قادم (قفز) أو مكتمل (ارتجاع) تُرمى — ولا يتغير شيء", () => {
+    const s = recordQuizAttempt(fresh(), outcome("a1-u1-d1", 1), PATH, DAY);
+    expect(() => recordQuizAttempt(s, outcome("a1-u2-d1", 1), PATH, DAY)).toThrow(/قفل المسار/);
+    expect(() => recordQuizAttempt(s, outcome("a1-u1-d1", 1), PATH, DAY)).toThrow(/قفل المسار/);
+    expect(s.progress.completedLessons).toEqual(["a1-u1-d1"]);
+  });
+
+  it("عبور المستوى: بعد آخر درس A1 تصير الوحدة الحالية A2/1 · وبعد الأخير لا متاح", () => {
+    let s = fresh();
+    for (const id of ["a1-u1-d1", "a1-u1-d2", "a1-u2-d1"]) s = recordQuizAttempt(s, outcome(id, 1), PATH, DAY);
+    expect(s.progress.currentUnit).toEqual({ level: "A2", unit: 1 });
+    s = recordQuizAttempt(s, outcome("a2-u1-d1", 1), PATH, DAY);
+    expect(currentLessonId(s.progress, PATH)).toBeNull();
+    expect(s.progress.availableLessons).toEqual([]);
+    expect(() => recordQuizAttempt(s, outcome("a2-u1-d1", 1), PATH, DAY)).toThrow(/اكتمل المسار/);
+  });
+});
+
+describe("المسار المنشور كله — من a1-u1-d1 إلى آخر درس عبر الواجهة الخالصة نفسها", () => {
+  it(`كل درس يُبنى للحصة، وQuiz كل درس يُجتاز بإجابات النموذج، فيُفتح الذي يليه — حتى آخر درس (${ALL_LESSONS.length})`, () => {
+    let s = reconcileState(createInitialState("يوسف", new Date(DAY)), ALL_LESSONS);
+    const visited: string[] = [];
+    for (let guard = 0; guard < ALL_LESSONS.length + 1; guard++) {
+      const id = currentLessonId(s.progress, ALL_LESSONS);
+      if (!id) break;
+      const lesson = ALL_LESSONS.find((l) => l.id === id)!;
+      const plan = planLessonStations(lesson, runtimeWordsForLesson(lesson), ALL_GRAMMAR_RULES);
+      expect(plan.lessonId).toBe(id);
+      let a = predictScore(startQuizAttempt(lesson, quizAttempts(s.progress, id)), 80);
+      for (const it of a.items) a = advanceQuiz(answerQuizItem(a, it.a));
+      const o = quizOutcome(a);
+      expect(o.percent, id).toBe(100);
+      s = recordQuizAttempt(s, o, ALL_LESSONS, DAY);
+      visited.push(id);
+    }
+    expect(visited).toEqual(LESSON_ORDER);
+    expect(currentLessonId(s.progress, ALL_LESSONS)).toBeNull();
+    expect(() => LearnerStateSchema.parse(s)).not.toThrow();
+  });
+});

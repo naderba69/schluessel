@@ -89,9 +89,9 @@ const validLesson = {
   slider: { questionDe: "Wie viel Prozent?", questionAr: "كم تتوقع؟", min: 0, max: 100 },
   quiz: {
     variants: [
-      { items: [{ q: 1 }, { q: 2 }, { q: 3 }], passingScore: 0.75 },
-      { items: [{ q: 1 }, { q: 2 }, { q: 3 }], passingScore: 0.75 },
-      { items: [{ q: 1 }, { q: 2 }, { q: 3 }], passingScore: 0.75 },
+      { items: [{ q: "«شكراً»؟", a: "Danke" }, { q: "Ich ___ Yusuf.", a: "heiße" }, { q: "«مرحباً»؟", a: "Hallo", choices: ["Hallo", "Tschüss"] }], passingScore: 0.75 },
+      { items: [{ q: "«شكراً»؟", a: "Danke" }, { q: "Ich ___ Yusuf.", a: "heiße" }, { q: "«مرحباً»؟", a: "Hallo", choices: ["Hallo", "Tschüss"] }], passingScore: 0.75 },
+      { items: [{ q: "«شكراً»؟", a: "Danke" }, { q: "Ich ___ Yusuf.", a: "heiße" }, { q: "«مرحباً»؟", a: "Hallo", choices: ["Hallo", "Tschüss"] }], passingScore: 0.75 },
     ],
   },
   zusammenfassung: {
@@ -125,6 +125,22 @@ describe("مخطط الدرس (test-schema-lesson)", () => {
     const bad = JSON.parse(JSON.stringify(validLesson));
     bad.quiz.variants = [bad.quiz.variants[0]];
     expect(() => Lesson.parse(bad)).toThrow();
+  });
+
+  it("D117: بند Quiz لا يُصحَّح يُرفض في أي درس — إجابة خارج خياراتها (عيب a1-u2-d6) · بلا إجابة · مفتاح غريب", () => {
+    const withItem = (item: unknown) => {
+      const l = JSON.parse(JSON.stringify(validLesson));
+      l.quiz.variants[2].items[2] = item;
+      return l;
+    };
+    expect(() => Lesson.parse(withItem({ q: "in ___ Mainzer Straße?", choices: ["die", "der"], a: "der (Dativ)" }))).toThrow(
+      /الإجابة ليست بين الخيارات/,
+    );
+    expect(() => Lesson.parse(withItem({ q: "«شكراً»؟" }))).toThrow();
+    expect(() => Lesson.parse(withItem({ q: "«شكراً»؟", a: "Danke", hint: "D…" }))).toThrow();
+    expect(() => Lesson.parse(withItem({ q: "?", a: "der", choices: ["die", "der"], accept: ["dem"] }))).toThrow(/للإجابة المفتوحة فقط/);
+    expect(() => Lesson.parse(withItem({ q: "?", a: "Danke", accept: ["Danke"] }))).toThrow(/يكرر/);
+    expect(() => Lesson.parse(withItem({ q: "ترجم: اسمي يوسف", a: "Ich heiße Yusuf.", accept: ["Mein Name ist Yusuf."] }))).not.toThrow();
   });
 });
 

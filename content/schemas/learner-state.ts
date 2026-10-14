@@ -65,6 +65,8 @@ export const GateResult = z.object({
   passed: z.boolean(),
   attempts: z.number().int().min(1),
   weakSections: z.array(z.string()).default([]),
+  /** D117: بنود مفتوحة حكم المتعلم بصحتها بعد رؤية النموذج (صيغة صحيحة أخرى) — تُحتسب وتُعلَن في السجل، لا تُخفى */
+  selfJudged: z.number().int().nonnegative().optional(),
   date: z.string(),
   /** المعركة المؤجلة: 20% سياقات جديدة (Transfer) */
   transferShare: z.number().min(0).max(1).optional(),
