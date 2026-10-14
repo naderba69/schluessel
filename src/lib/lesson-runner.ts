@@ -51,12 +51,20 @@ function wordById(words: Word[], id: string): Word {
   return w;
 }
 
+/**
+ * الشكل الكامل للكلمة مع أداة التعريف — مرة واحدة فقط (D101).
+ * 273 اسماً من A1 تحمل الأداة داخل `de` نفسه ("die Landschaft") — كانت تُعرض «die die Landschaft».
+ */
+export function fullForm(w: Pick<Word, "de" | "article">): string {
+  if (!w.article) return w.de;
+  return w.de.startsWith(`${w.article} `) ? w.de : `${w.article} ${w.de}`;
+}
+
 function explainWord(w: Word): string {
-  const article = w.article ? `${w.article} ` : "";
   const gender = w.gender !== "none" ? ` (${w.gender})` : "";
   const family = w.wordFamily.length ? ` — عائلة: ${w.wordFamily.join("، ")}` : "";
   const sentence = w.sampleSentence ? ` مثال: «${w.sampleSentence.de}» = ${w.sampleSentence.ar}` : "";
-  return `${article}${w.de}${gender} = ${w.ar.join("، ")}${family}.${sentence}`;
+  return `${fullForm(w)}${gender} = ${w.ar.join("، ")}${family}.${sentence}`;
 }
 
 /**
@@ -67,7 +75,7 @@ function explainWord(w: Word): string {
 export function planLessonStations(lesson: Lesson, words: Word[]): LessonStationPlan {
   const recall: RecallCardData[] = lesson.warmup.cardIds.map((id) => {
     const w = wordById(words, id);
-    return { id, front: w.article ? `${w.article} ${w.de}` : w.de, back: w.ar.join(" · ") };
+    return { id, front: fullForm(w), back: w.ar.join(" · ") };
   });
   if (recall.length === 0) throw new Error("لا جلسة بلا استرجاع (F121): بطاقات الدفء مطلوبة");
 
@@ -75,7 +83,7 @@ export function planLessonStations(lesson: Lesson, words: Word[]): LessonStation
     const w = wordById(words, id);
     return {
       wordId: id,
-      promptDe: w.sampleSentence?.de ?? (w.article ? `${w.article} ${w.de}` : w.de),
+      promptDe: w.sampleSentence?.de ?? fullForm(w),
       promptAr: w.sampleSentence?.ar ?? w.ar[0],
       explanation: explainWord(w),
     };

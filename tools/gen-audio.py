@@ -838,6 +838,20 @@ def build_all() -> None:
     ("word-andenken", "das Andenken.", "andenken", ["a1-u12-d5"]),
     ("word-fotografieren", "fotografieren.", "fotografieren", ["a1-u12-d5"]),
     ("word-postkarte", "die Postkarte.", "postkarte", ["a1-u12-d5"]),
+    # A2 — الوحدة 1 «العودة والماضي» (D101)
+    ("word-licht", "das Licht.", "licht", ["a2-u1-d1"]),
+    ("word-vergessen", "vergessen.", "vergessen", ["a2-u1-d1"]),
+    ("word-lachen", "lachen.", "lachen", ["a2-u1-d1"]),
+    ("word-schon", "schon.", "schon", ["a2-u1-d1"]),
+    ("word-ausgehen", "ausgehen.", "ausgehen", ["a2-u1-d1"]),
+    ("word-beeilen", "sich beeilen.", "beeilen", ["a2-u1-d1"]),
+    ("word-fallen", "fallen.", "fallen", ["a2-u1-d1"]),
+    ("word-gerade", "gerade.", "gerade", ["a2-u1-d1"]),
+    ("word-anmachen", "anmachen.", "anmachen", ["a2-u1-d1"]),
+    ("word-verlieren", "verlieren.", "verlieren", ["a2-u1-d1"]),
+    ("word-passieren", "passieren.", "passieren", ["a2-u1-d1"]),
+    ("word-ausmachen", "ausmachen.", "ausmachen", ["a2-u1-d1"]),
+    ("word-beginnen", "beginnen.", "beginnen", ["a2-u1-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

@@ -527,3 +527,18 @@
 - **الاختبار:** `tests/voice-female.test.ts` (11 اختباراً) + تحديث اختبار الهوية في voice-stability (الصوتان المثبَّتان + الأدوار). **التحقق العكسي:** الاختبارات الجديدة تفشل 7/11 على الكود القديم وتنجح كلها على الجديد.
 - **البيئة (للأمانة):** huggingface.co و release-assets.githubusercontent.com محجوبان من الـsandbox (مُختبَر) — التنزيل يبقى عند المالك.
 - البوابة: **276/276 + tsc + validator (858/0/0) + build** ✓.
+
+## D101 (2026-10-14): A2 يبدأ — الإضافة 8 · الدفعة 1: a2-u1-d1 «Perfekt منهجي — يروي صباح أمس» + بنية A2
+
+- **المصدر (§34):** `study-plan-daily-v6.1 §7` — الوحدة 1 «العودة والماضي»: d1 = كلمات 1–13 + Perfekt منهجي · Can-do «يروي صباح أمس» · §5: 12–13 كلمة/يوم (8–10 مفردات + 2–3 وظيفية) + تباعد دلالي.
+- **عضوية Goethe — بصدق:** goethe.de محجوب من الـsandbox. المصدر الثانوي: مرآة `langfield/A2_Wortliste_Goethe` (1,214 مدخلاً مستخرجاً من قائمة Goethe-Zertifikat A2 الرسمية — أمثلتها تطابق الأصل، مثل «Es ist so dunkel. Mach bitte das Licht an!»). **الكلمات الـ13 كلها موجودة فيها** → `goetheList: ["A2"]` + `goetheWordListOverlap`. كلمات مرشّحة **غائبة** عن المرآة استُبعدت (klingeln · einschlafen · rasieren · erleben · verschlafen) — غيابها غير حاسم لكن لا وسم بلا دليل. عنوان فصل Netzwerk neu A2 الدقيق: **needs-web-verify**.
+- **المحتوى:** 13 كلمة A2 (الوحدة 1): das Licht · vergessen · lachen · schon · ausgehen · sich beeilen · fallen · gerade · anmachen · verlieren · passieren · ausmachen · beginnen — تغطي **قوالب Partizip II الخمسة** (gelacht · gefallen · angemacht/ausgegangen · vergessen/verloren/begonnen/beeilt · passiert) + haben/sein. جمل الأمثلة من مفردات A1 فقط.
+  - **الزوج المحوري:** Ich **habe** das Licht ausgemacht ↔ Das Licht **ist** ausgegangen — مع جسر عربي: «أطفأتُ» (متعدٍّ = haben) ↔ «انطفأ» (مطاوع لازم = sein).
+  - **المصائد الثلاث (D58/D59 — 10‑ي):** لا ge مع be-/ver-/-ieren · sein مع passieren/fallen/ausgehen · نفي schon = noch nicht.
+  - **المحطات:** 4 أنواع (verb-bank · gap-fill · error-hunt · speaking) — بدل نمط A1 (232 من 234 محطة كانت `choice`) · كل محطة تخلط بنى A1 حقيقية (قاعدة المدقِّق لـA2+) · بطاقات الدفء: aufstehen · gestern · frühstücken.
+  - **الصوت:** 13 مقطعاً بالصوت المثبَّت (0.78–1.09s · RMS −16.96…−17.20 dB) — أُلحقت بالمانيفست (756 مساراً) وبقائمة gen-audio.
+  - **SRS (w-srs-ratio لـA2):** 42/42/13 — المسافة 0.129 (الحد 0.35) ✓.
+- **بنية:** `ALL_LESSONS` يُرتَّب بـ(مستوى، وحدة، يوم) عبر `LEVEL_ORDER` — بدونه كان a2-u1-d1 سيقع بين a1-u1-d1 وa1-u1-d2 (كسر قفل المسار).
+- **عيب عرض مُكتشَف ومُصلَح:** 273 من 440 اسماً تحمل الأداة داخل `de` — المتعلم كان يرى «die die Landschaft (die)» في بطاقات الجديد والدفء. `fullForm()` يعرضها مرة واحدة + اختبار انحدار على كل الدروس (يفشل على السلوك القديم — مُتحقَّق).
+- **الاختبار:** +5 (ترتيب المستويات · كلمات A2 · interleaving + تنوع المحطات · Perfekt/needs-ist · fullForm) → البوابة **281/281 + tsc + validator (872/0/0) + build** ✓.
+- **التالي:** a2-u1-d2 (كلمات 14–26 · haben/sein · «يروي يومه»).

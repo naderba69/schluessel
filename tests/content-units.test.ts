@@ -1,19 +1,21 @@
 // content-units.test.ts — المحتوى حيّ: كل درس وكلماته تعمل على المُشغِّل (D45)
 import { describe, it, expect } from "vitest";
-import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
-import { planLessonStations } from "../src/lib/lesson-runner.js";
+import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, LEVEL_ORDER, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { planLessonStations, fullForm } from "../src/lib/lesson-runner.js";
 
 describe("سجل المحتوى — الوحدة 1 كاملة + بداية الوحدة 2", () => {
   it("الدروس مرتّبة والسجل مطابق للملفات", () => {
     expect(ALL_LESSONS.map((l) => l.id)).toEqual([
       "a1-u1-d1", "a1-u1-d2", "a1-u1-d3", "a1-u1-d4", "a1-u1-d5", "a1-u1-d6", "a1-u2-d1", "a1-u2-d2", "a1-u2-d3", "a1-u2-d4", "a1-u2-d5", "a1-u2-d6", "a1-u3-d1", "a1-u3-d2", "a1-u3-d3", "a1-u3-d4", "a1-u3-d5", "a1-u3-d6", "a1-u4-d1", "a1-u4-d2", "a1-u4-d3", "a1-u4-d4", "a1-u4-d5", "a1-u4-d6", "a1-u5-d1", "a1-u5-d2", "a1-u5-d3", "a1-u5-d4", "a1-u5-d5", "a1-u5-d6", "a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4", "a1-u6-d5", "a1-u6-d6", "a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4", "a1-u7-d5", "a1-u7-d6", "a1-u8-d1", "a1-u8-d2", "a1-u8-d3", "a1-u8-d4", "a1-u8-d5", "a1-u8-d6", "a1-u9-d1", "a1-u9-d2", "a1-u9-d3", "a1-u9-d4", "a1-u9-d5", "a1-u9-d6", "a1-u10-d1", "a1-u10-d2", "a1-u10-d3", "a1-u10-d4", "a1-u10-d5", "a1-u10-d6", "a1-u11-d1", "a1-u11-d2", "a1-u11-d3", "a1-u11-d4", "a1-u11-d5", "a1-u11-d6", "a1-u12-d1", "a1-u12-d2", "a1-u12-d3", "a1-u12-d4", "a1-u12-d5", "a1-u12-d6",
       "a1-u13-d1", "a1-u13-d2", "a1-u13-d3", "a1-u13-d4", "a1-u13-d5", "a1-u13-d6",
+      "a2-u1-d1",
     ]);
     expect(ALL_LESSONS.map((l) => [l.unit, l.day])).toEqual([
       [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [3, 6], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [4, 6], [5, 1], [5, 2], [5, 3], [5, 4], [5, 5], [5, 6], [6, 1], [6, 2], [6, 3], [6, 4], [6, 5], [6, 6], [7, 1], [7, 2], [7, 3], [7, 4], [7, 5], [7, 6], [8, 1], [8, 2], [8, 3], [8, 4], [8, 5], [8, 6], [9, 1], [9, 2], [9, 3], [9, 4], [9, 5], [9, 6], [10, 1], [10, 2], [10, 3], [10, 4], [10, 5], [10, 6], [11, 1], [11, 2], [11, 3], [11, 4], [11, 5], [11, 6], [12, 1], [12, 2], [12, 3], [12, 4], [12, 5], [12, 6],
       [13, 1], [13, 2], [13, 3], [13, 4], [13, 5], [13, 6],
+      [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(742);
+    expect(ALL_WORDS.length).toBe(755);
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -142,6 +144,67 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
       expect(t.glossary.length).toBeGreaterThanOrEqual(1);
       expect(t.questions.length).toBeGreaterThanOrEqual(2);
       expect(t.sourceNote.length).toBeGreaterThan(0);
+    }
+  });
+});
+
+describe("A2 يبدأ (D101) — الترتيب بالمستوى + قواعد A2 + عرض الأداة مرة واحدة", () => {
+  const a2 = ALL_LESSONS.filter((l) => l.level === "A2");
+  const a1Ids = new Set(ALL_WORDS.filter((w) => w.level === "A1").map((w) => w.id));
+
+  it("قفل المسار: كل دروس A1 قبل أي درس A2 (لا تداخل بين المستويات)", () => {
+    const levels = ALL_LESSONS.map((l) => LEVEL_ORDER[l.level]);
+    expect(levels).toEqual([...levels].sort((a, b) => a - b));
+    expect(ALL_LESSONS.findIndex((l) => l.level === "A2")).toBe(ALL_LESSONS.filter((l) => l.level === "A1").length);
+    expect(ALL_LESSONS[1]!.id).toBe("a1-u1-d2"); // a2-u1-d1 لا يقع بين a1-u1-d1 وa1-u1-d2
+  });
+
+  it("a2-u1-d1: Perfekt منهجي — 13 كلمة A2 جديدة (لا تكرار لـA1) + أصوات مطابقة", () => {
+    const l = a2.find((x) => x.id === "a2-u1-d1")!;
+    expect(l.ziel.ar).toContain("Perfekt");
+    const words = wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(1);
+      expect(w.goetheList).toContain("A2");
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u1-d1");
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("A2: كل محطة تخلط بنى A1 سابقة (interleaving) + تنوع المحطات ≥3 أنواع + المصائد على خريطة التداخل", () => {
+    expect(a2.length).toBeGreaterThan(0);
+    for (const l of a2) {
+      for (const s of l.uebung.stations) {
+        expect(s.interleavedWith.length).toBeGreaterThan(0);
+        for (const ref of s.interleavedWith) expect(a1Ids.has(ref), `مرجع خلط غير موجود: ${ref}`).toBe(true);
+      }
+      expect(new Set(l.uebung.stations.map((s) => s.type)).size).toBeGreaterThanOrEqual(3);
+      expect(l.zusammenfassung.warningCards).toHaveLength(3);
+      for (const t of l.zusammenfassung.warningCards) expect(t.whyArabicSpeakerFails).toContain("10‑ي");
+    }
+  });
+
+  it("الأفعال: Perfekt مسجّل لكل فعل — وأفعال sein موسومة needs-ist", () => {
+    for (const w of wordsForLesson(a2.find((x) => x.id === "a2-u1-d1")!)) {
+      if (w.wordClass !== "verb") continue;
+      expect(w.forms?.perfekt, w.id).toMatch(/^(hat|ist) /);
+      expect(w.forms!.perfekt!.startsWith("ist ")).toBe(w.grammarRisks.includes("needs-ist"));
+    }
+  });
+
+  it("fullForm: الأداة تُعرض مرة واحدة — لا «die die Landschaft» في أي بطاقة من كل الدروس", () => {
+    expect(fullForm({ de: "die Landschaft", article: "die" })).toBe("die Landschaft");
+    expect(fullForm({ de: "Wohnung", article: "die" })).toBe("die Wohnung");
+    expect(fullForm({ de: "lachen" })).toBe("lachen");
+    const doubled = /\b(der|die|das) \1\b/;
+    for (const l of ALL_LESSONS) {
+      const plan = planLessonStations(l, runtimeWordsForLesson(l));
+      for (const c of plan.learn) expect(c.explanation, `${l.id}/${c.wordId}`).not.toMatch(doubled);
+      for (const c of plan.recall) expect(c.front, `${l.id}/${c.id}`).not.toMatch(doubled);
     }
   });
 });

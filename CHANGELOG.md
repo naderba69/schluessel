@@ -1,3 +1,9 @@
+## 2026-10-14 — الدفعة 57: A2 يبدأ — a2-u1-d1 (D101)
+- **محتوى**: أول درس A2 «يروي صباح أمس» — Perfekt منهجي (5 قوالب + haben/sein) · 13 كلمة A2 جديدة بأصواتها · محطات verb-bank / gap-fill / error-hunt / speaking.
+- **بنية**: `LEVEL_ORDER` — A1 كله قبل A2 في المسار.
+- **إصلاح**: `fullForm()` — لا أداة مكررة في البطاقات («die die Landschaft» → «die Landschaft»).
+- **281/281 أخضر** · validator 872/0/0.
+
 ## 2026-10-14 — الدفعة 56: صوت المرأة — D98 صار حقيقياً (D100)
 - **إصلاح**: سكربت `termux-upload-voice-kerstin.sh` كان سيرفض الملف الأصلي (بوابة 15–18MB والحقيقي 63,104,526 بايت) — الآن الحجم الدقيق + md5 الرسمي للملفات الثلاثة (onnx/json/MODEL_CARD) من فهرس rhasspy/piper.
 - **إضافة فعلية**: قاعدتا المدقِّق `e-audio-voice-drift` (الصوتان المثبَّتان) و`e-audio-voice-role` (الأنثوي للحوار فقط) + توجيه gen-audio `voice_for()` بـfallback معلن + أمرا `voice-for`/`one-as`.
