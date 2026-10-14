@@ -81,7 +81,7 @@ export function detectPhoneticRisks(de: string, rawIpa: string, _forms: string[]
   if (gLetters.includes("g") && !/[ɡg]/.test(ipa) && ipa.includes("k")) out.add("auslaut-g");
   if (/s[pt]/.test(lemma) && /ʃ[pt]/.test(ipa)) out.add("sp-st-initial");
   if (lemma.includes("z")) out.add("z");
-  if (lemma.includes("v") && !ipa.includes("v")) out.add("v-f");
+  if (vSpokenAsF(lemma, ipa)) out.add("v-f");
   if (/(bb|dd|ff|gg|kk|ll|mm|nn|pp|rr|ss|tt|ck)/.test(lemma)) out.add("double-consonant");
   const silentH = /[aeiouäöü]h[aeiouäöü]/.test(lemma) && !ipa.includes("h");
   const lengthMark = silentH || /(aa|ee|oo|ie|[aeiouäöü]h(?![aeiouäöü])|(?<![ei]|[ae]u)ß)/.test(lemma);
@@ -162,6 +162,17 @@ export function srsDistance(
 }
 
 /**
+ * v-f (D115): «v» مكتوبة ومنطوقة [f]. كان الشرط «لا [v] في النطق» فتُخفيه [v] الآتية من «w» أو «qu»
+ * (wie viel [viː fˈiːl] · verschwinden [fɛɾʃvˈɪndən]). الآن: عدد [v] المنطوقة أقل من المتوقع لو نُطقت كل
+ * «v» [v] (v + w + qu) — Vase ([v] دخيلة) لا · Auf Wiedersehen (لا v مكتوبة) لا.
+ */
+export function vSpokenAsF(lemma: string, ipa: string): boolean {
+  if (!lemma.includes("v")) return false;
+  const count = (s: string, re: RegExp) => (s.match(re) ?? []).length;
+  return count(ipa, /v/g) < count(lemma, /v/g) + count(lemma, /w/g) + count(lemma, /qu/g);
+}
+
+/**
  * D106: هل العلَم ممكن أصلاً لهذه الكلمة؟ (رسماً ونطقاً) — يُبقي الحكم اليدوي المعقول ويُسقط المستحيل
  * (sp-st على Berg · v-f على Straße · ich-Laut على Brücke). الوملاوت من الكلمة نفسها فقط (سياسة D105).
  */
@@ -182,7 +193,7 @@ export function plausibleRisk(risk: PhoneticRisk, de: string, rawIpa: string): b
     case "auslaut-g": return lemma.includes("g") && (tokens.some((t) => t.endsWith("g")) || !/[ɡg]/.test(ipa));
     case "sp-st-initial": return /s[pt]/.test(lemma) && /ʃ[pt]/.test(ipa);
     case "z": return lemma.includes("z");
-    case "v-f": return lemma.includes("v") && !ipa.includes("v");
+    case "v-f": return vSpokenAsF(lemma, ipa);
     case "double-consonant": return /(bb|dd|ff|gg|kk|ll|mm|nn|pp|rr|ss|tt|ck)/.test(lemma);
     case "vowel-long-short": return ipa.includes("ː");
     case "r-uvular": return lemma.includes("r");

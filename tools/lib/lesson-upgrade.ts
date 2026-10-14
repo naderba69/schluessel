@@ -7,6 +7,8 @@
 //   e-upgrade-complete       درس محتوى داخل النطاق غائب عن الخطة (لا درس يُنسى)
 //   e-upgrade-rule           rule=done: الدرس بلا معرّف قاعدة · أو المعرّف بلا ملف قاعدة صالح
 //   e-upgrade-rule-index     rule=done: القاعدة لا تضم الدرس في usedInLessons · أو usedArsenalIds لا يضمها
+//   e-upgrade-sample         rule=done (محطة «الجديد» كلها): كلمة جديدة بلا جملة مثال · أو مثالها فيه غير مدروس
+//                            (البطاقة أول لقاء بالكلمة — قياس D115: 217/743 مثالاً في A1 فيها كلمة لم تُدرَّس بعد)
 //   e-upgrade-item           practice=done: بند لا يطابق شكل نوع محطته (why عربي إلزامي في كل بند)
 //   e-upgrade-item-dup       بندان متطابقان في تدريب الدرس
 //   e-upgrade-practice       explanationRequired=false في درس مُرقّى
@@ -108,7 +110,7 @@ const firstIssue = (e: { issues: { message: string; path: PropertyKey[] }[] }) =
 
 type PartResult = { issues: UpgradeIssue[]; texts: string[] };
 
-function checkRulePart(lesson: Lesson, ctx: UpgradeContext): PartResult {
+function checkRulePart(lesson: Lesson, ctx: UpgradeContext, stems: ReadonlySet<string>, allow: ReadonlySet<string>): PartResult {
   const issues: UpgradeIssue[] = [];
   const err = (code: string, message: string) => issues.push({ level: "error", code, message, lessonId: lesson.id });
   const ids = lesson.praesentation.grammarArsenalIds;
@@ -124,7 +126,21 @@ function checkRulePart(lesson: Lesson, ctx: UpgradeContext): PartResult {
     if (!lesson.usedArsenalIds.includes(id))
       err("e-upgrade-rule-index", `${lesson.id}: usedArsenalIds لا يضم ${id}`);
   }
-  return { issues, texts: [] };
+  // بطاقات الكلمات في المحطة نفسها: الجملة المثال أول ما يقرؤه المتعلم من الكلمة (promptDe في المُشغِّل)
+  const texts: string[] = [];
+  const byId = new Map(ctx.words.map((w) => [w.id, w]));
+  for (const id of lesson.praesentation.wordIds) {
+    const w = byId.get(id);
+    if (!w) continue; // كلمة مفقودة: المدقِّق يخطئها (e-word-missing)
+    if (!w.sampleSentence) {
+      err("e-upgrade-sample", `${lesson.id}: الكلمة ${id} بلا جملة مثال (البطاقة تعرض الكلمة وحدها)`);
+      continue;
+    }
+    texts.push(w.sampleSentence.de);
+    const unknown = frontViolations([w.sampleSentence.de], stems, allow);
+    if (unknown.length) err("e-upgrade-sample", `${lesson.id}: مثال ${id} «${w.sampleSentence.de}» — غير مدروسة حتى الدرس: ${unknown.join("، ")}`);
+  }
+  return { issues, texts };
 }
 
 function checkPracticePart(lesson: Lesson, ctx: UpgradeContext, stems: ReadonlySet<string>, allow: ReadonlySet<string>): PartResult {
@@ -193,13 +209,17 @@ function checkQuizPart(lesson: Lesson, stems: ReadonlySet<string>, allow: Readon
   return { issues, texts };
 }
 
-export type LessonPartsReport = Record<UpgradePart, UpgradeIssue[]> & { coverage: UpgradeIssue[]; practiceItems: number; practiceTypes: string[]; quizMin: number };
+export type LessonPartsReport = Record<UpgradePart, UpgradeIssue[]> & {
+  coverage: UpgradeIssue[]; practiceItems: number; practiceTypes: string[]; quizMin: number;
+  /** نصوص كل جزء (لفحص استعمال أسماء العلم المعلنة) */
+  texts: Record<UpgradePart, string[]>;
+};
 
 /** كل فحوص الدرس كأن أجزاءه كلها done — أساس الحارس وأداة الحالة (ما الذي ينقص بالضبط) */
 export function inspectLesson(lesson: Lesson, entry: Pick<LessonUpgradeEntry, "properNouns">, ctx: UpgradeContext): LessonPartsReport {
   const stems = knownStems(taughtUpTo(lesson, ctx.lessons, ctx.words));
   const allow = allowSet(entry.properNouns);
-  const rule = checkRulePart(lesson, ctx);
+  const rule = checkRulePart(lesson, ctx, stems, allow);
   const practice = checkPracticePart(lesson, ctx, stems, allow);
   const quiz = checkQuizPart(lesson, stems, allow);
   const tokens = tokenSet([...practice.texts, ...quiz.texts]);
@@ -219,6 +239,7 @@ export function inspectLesson(lesson: Lesson, entry: Pick<LessonUpgradeEntry, "p
     practiceItems: lesson.uebung.stations.reduce((n, s) => n + s.items.length, 0),
     practiceTypes: [...new Set(lesson.uebung.stations.map((s) => s.type))],
     quizMin: Math.min(...lesson.quiz.variants.map((v) => v.items.length)),
+    texts: { rule: rule.texts, practice: practice.texts, quiz: quiz.texts },
   };
 }
 
@@ -266,18 +287,14 @@ export function checkUpgrade(plan: LessonUpgradePlan, ctx: UpgradeContext): Upgr
         issues.push({ level: "warning", code: "w-upgrade-mark-done", lessonId: s.lessonId, message: `${s.lessonId}: ${part} (pending) يستوفي معايير done — علِّمه done` });
     }
     if (s.practice === "done" && s.quiz === "done") issues.push(...r.coverage);
-    // أسماء العلم المعلنة يجب أن تُستعمل فعلاً في نصوص الدرس المُرقّاة
-    if (s.practice === "done" || s.quiz === "done") {
-      const lesson = byId.get(s.lessonId)!;
+    // أسماء العلم المعلنة يجب أن تُستعمل فعلاً في نصوص الدرس المُرقّاة (أمثلة البطاقات · التدريب والمصائد · Quiz)
+    if (s.rule === "done" || s.practice === "done" || s.quiz === "done") {
       const entry = plan.lessons.find((e) => e.lessonId === s.lessonId)!;
-      const texts = [
-        ...(s.practice === "done" ? lesson.uebung.stations.flatMap((st) => st.items.flatMap(itemTexts)) : []),
-        ...(s.quiz === "done" ? lesson.quiz.variants.flatMap((v) => v.items.flatMap(itemTexts)) : []),
-      ];
+      const texts = (["rule", "practice", "quiz"] as const).flatMap((p) => (s[p] === "done" ? r.texts[p] : []));
       const seen = new Set(contentTokens(germanOnly(texts.join("\n"))));
       for (const n of entry.properNouns)
         if (!contentTokens(n).every((t) => seen.has(t)))
-          issues.push({ level: "warning", code: "w-upgrade-proper-noun", lessonId: s.lessonId, message: `${s.lessonId}: اسم علم معلن لا يظهر في التدريب/Quiz: ${n}` });
+          issues.push({ level: "warning", code: "w-upgrade-proper-noun", lessonId: s.lessonId, message: `${s.lessonId}: اسم علم معلن لا يظهر في نصوص الدرس المُرقّاة: ${n}` });
     }
   }
   return issues;

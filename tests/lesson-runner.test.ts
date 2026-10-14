@@ -9,7 +9,7 @@ describe("مُشغِّل الدرس — الدرس الحقيقي a1-u1-d1", () 
     const plan = planLessonStations(firstLesson, firstLessonWords);
     expect(plan.lessonId).toBe("a1-u1-d1");
     expect(plan.recall.length).toBeGreaterThan(0);
-    expect(plan.learn.length).toBe(15);
+    expect(plan.learn.length).toBe(17);
     expect(plan.practice.stations.length).toBeGreaterThanOrEqual(3);
     expect(plan.close.summaryAr).toContain("قدمت نفسك");
   });
@@ -32,7 +32,7 @@ describe("مُشغِّل الدرس — الدرس الحقيقي a1-u1-d1", () 
   it("الخلاصة: 3 مصائد ذهبية + حزمة SRS كاملة (15 كلمة)", () => {
     const plan = planLessonStations(firstLesson, firstLessonWords);
     expect(plan.close.warningCards.length).toBe(3);
-    expect(plan.close.srsBundleWordIds.length).toBe(15);
+    expect(plan.close.srsBundleWordIds.length).toBe(17);
     expect(plan.practice.communicativeTask.goal.de).toBe("Sich vorstellen");
   });
 

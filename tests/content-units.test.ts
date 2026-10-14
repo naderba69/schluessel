@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(755);
+    expect(ALL_WORDS.length).toBe(757); // + neu · wie viel (نواة D113 في a1-u1-d1 — D116)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -47,9 +47,10 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
     }
   });
 
-  it("التوافق مع الاستخدام القديم: firstLesson هو d1 بكل كلماته الـ15", () => {
+  it("التوافق مع الاستخدام القديم: firstLesson هو d1 بكل كلماته الـ17 (15 + نواة D113)", () => {
     expect(firstLesson.id).toBe("a1-u1-d1");
-    expect(firstLessonWords).toHaveLength(15);
+    expect(firstLessonWords).toHaveLength(17);
+    expect(firstLessonWords.slice(-2).map((w) => w.id)).toEqual(["neu", "wie-viel"]);
     expect(() => wordsForLesson({ ...firstLesson, praesentation: { ...firstLesson.praesentation, wordIds: ["xx"] } })).toThrow(/مفقودة/);
   });
 });

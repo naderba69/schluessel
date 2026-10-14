@@ -49,6 +49,10 @@ describe("D105 — الكشف الصوتي: كل قاعدة بحالة موجب�
     expect(risks("der Vater", "fˈaːtɐ")).toEqual(["r-uvular", "v-f"]);
     expect(risks("die Vase", "vˈaːzə")).not.toContain("v-f");
     expect(risks("Auf Wiedersehen", "aʊf vˈiːdɐzeːən")).not.toContain("v-f");
+    // D115: [v] الآتية من «w» لا تُخفي «v» المنطوقة [f]
+    expect(risks("wie viel", "viː fˈiːl")).toContain("v-f");
+    expect(risks("verschwinden", "fɛɾʃvˈɪndən")).toContain("v-f");
+    expect(plausibleRisk("v-f", "wie viel", "viː fˈiːl")).toBe(true);
   });
 
   it("الإطالة المكتوبة + «ː»: groß نعم · heiß (ثنائية) لا · gehen (h صامتة) نعم · behalten (h منطوقة) لا", () => {

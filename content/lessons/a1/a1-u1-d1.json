@@ -52,31 +52,103 @@
       "wohnen",
       "deutsch",
       "tunesien",
-      "deutschland"
+      "deutschland",
+      "neu",
+      "wie-viel"
     ],
     "grammarArsenalIds": [
-      "ars-sein-haben"
+      "ars-sein"
     ],
     "storySentenceIds": [
       "story-a1-u1-s1"
     ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
-      "auslaut-g"
+      "auslaut-g",
+      "v-f"
     ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«مرحبا، اسمي يوسف» بالألمانية؟",
-            "a": "Hallo, ich heiße Yusuf."
+            "q": "Ich ___ Yusuf.",
+            "a": "bin",
+            "accept": [
+              "heiße"
+            ],
+            "why": "مع ich نقول bin (وللاسم يصح heiße أيضاً). العربية تقول «أنا يوسف» بلا فعل، أما الألمانية فلا تقبل جملة بلا فعل."
           },
           {
-            "q": "«طاب يومك»؟",
-            "a": "Guten Tag"
+            "q": "Du ___ auch neu.",
+            "a": "bist",
+            "why": "مع du يصبح sein ← bist. وأغلب الأفعال مع du تنتهي بـ ‑st: du kommst · du wohnst."
+          },
+          {
+            "q": "Lena ___ aus Deutschland.",
+            "a": "ist",
+            "why": "Lena = sie (هي)، ومع er/sie (هو/هي) فعل sein هو ist."
+          },
+          {
+            "q": "Sie ___ aus Tunesien. (حضرتك)",
+            "a": "sind",
+            "why": "Sie بحرف كبير = حضرتك (احترام) وفعلها sind. لا تخلطها بـ sie الصغيرة (هي) التي فعلها ist."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "word-guten-morgen",
+            "speakText": "Guten Morgen.",
+            "q": "استمع: أي تحية سمعت؟",
+            "choices": [
+              "Guten Morgen",
+              "Guten Abend",
+              "Guten Tag"
+            ],
+            "a": "Guten Morgen",
+            "why": "Morgen = الصباح، فهي تحية الصباح؛ Guten Tag للنهار وGuten Abend للمساء. الكلمة الأولى Guten واحدة، فركّز على الثانية."
+          },
+          {
+            "audioId": "word-guten-abend",
+            "speakText": "Guten Abend.",
+            "q": "استمع: متى تقول هذه التحية؟",
+            "choices": [
+              "في المساء",
+              "في الصباح",
+              "عند النوم"
+            ],
+            "a": "في المساء",
+            "why": "Abend = المساء. واسمع آخرها: d في آخر الكلمة تُنطق [t] — «آبِنت» لا «آبِند»."
+          },
+          {
+            "audioId": "word-auf-wiedersehen",
+            "speakText": "Auf Wiedersehen.",
+            "q": "استمع: لمن يناسب هذا الوداع؟",
+            "choices": [
+              "لموظفة في مكتب رسمي",
+              "لصديقك فقط"
+            ],
+            "a": "لموظفة في مكتب رسمي",
+            "why": "Auf Wiedersehen وداع رسمي يصلح مع الجميع؛ أما Tschüss فللأصدقاء والعائلة. وw في أولها تُنطق [v]."
+          },
+          {
+            "audioId": "word-wie-viel",
+            "speakText": "wie viel.",
+            "q": "استمع: أي سؤال سمعت؟",
+            "choices": [
+              "Wie viel?",
+              "Wie geht's?",
+              "Wie heißt du?"
+            ],
+            "a": "Wie viel?",
+            "why": "wie viel = كم/بكم. الأسئلة الثلاثة تبدأ بـ wie، فالفرق في الكلمة الثانية. وانتبه: w تُنطق [v] وv تُنطق [f] — «في فيل»."
           }
         ],
         "interleavedWith": [],
@@ -86,23 +158,58 @@
         "type": "build-sentence",
         "items": [
           {
-            "q": "heiße / Ich / Yusuf",
-            "a": "Ich heiße Yusuf."
+            "tokens": [
+              "aus",
+              "Ich",
+              "Tunesien.",
+              "komme"
+            ],
+            "a": "Ich komme aus Tunesien.",
+            "why": "الفعل komme في الموضع الثاني بعد ich، ثم aus والبلد. «من» للأصل = aus لا von."
           },
           {
-            "q": "aus / Ich / Tunesien / bin",
-            "a": "Ich bin aus Tunesien."
+            "tokens": [
+              "in",
+              "wohne",
+              "Deutschland.",
+              "Ich"
+            ],
+            "a": "Ich wohne in Deutschland.",
+            "why": "wohnen + in + المكان = أسكن في… والفعل في الموضع الثاني دائماً."
+          },
+          {
+            "tokens": [
+              "du?",
+              "heißt",
+              "Wie"
+            ],
+            "a": "Wie heißt du?",
+            "why": "السؤال يبدأ بكلمة السؤال wie، ثم الفعل، ثم du. ومع du: heiß + t = heißt (لا heiße)."
           }
         ],
         "interleavedWith": [],
         "explanationRequired": true
       },
       {
-        "type": "speaking",
+        "type": "dictation",
         "items": [
           {
-            "q": "عرّف بنفسك في جملة واحدة (تسجيل صوتي)",
-            "a": "Hallo, ich heiße ... und ich bin aus ..."
+            "audioId": "word-hallo",
+            "speakText": "Hallo.",
+            "a": "Hallo",
+            "why": "Hallo بحرفَي l: الحرف المضاعف يجعل الحركة قبله قصيرة — «هَلو» لا «هالو»."
+          },
+          {
+            "audioId": "word-tschuess",
+            "speakText": "Tschüss.",
+            "a": "Tschüss",
+            "why": "tsch أربعة أحرف لصوت واحد «تش»، وü بشفتين مضمومتين ولسان على «ي»، وفي آخرها ss."
+          },
+          {
+            "audioId": "word-deutschland",
+            "speakText": "Deutschland.",
+            "a": "Deutschland",
+            "why": "eu تُنطق «أوي» وtsch «تش»، وd في آخرها تُنطق [t]. وكل اسم يبدأ بحرف كبير — والبلدان أسماء."
           }
         ],
         "interleavedWith": [],
@@ -134,20 +241,56 @@
       {
         "items": [
           {
-            "q": "Hallo = ?",
+            "q": "«شكراً» بالألمانية؟",
+            "a": "Danke",
             "choices": [
-              "مرحبا",
-              "وداعا"
+              "Danke",
+              "Bitte",
+              "Hallo"
+            ]
+          },
+          {
+            "q": "Ich ___ aus Tunesien.",
+            "a": "bin",
+            "choices": [
+              "bin",
+              "bist",
+              "ist"
             ],
-            "a": "مرحبا"
+            "why": "مع ich فعل sein هو bin."
           },
           {
-            "q": "Ich ___ Yusuf.",
-            "a": "heiße"
+            "q": "صديقك يقول: Danke! — بماذا تردّ؟",
+            "a": "Bitte!",
+            "choices": [
+              "Bitte!",
+              "Tschüss!",
+              "Guten Abend!"
+            ],
+            "why": "Bitte هنا = عفواً ردّاً على الشكر، وتعني أيضاً «من فضلك» عند الطلب."
           },
           {
-            "q": "ترتيب؟ Ich / bin / aus / Tunesien",
-            "a": "Ich bin aus Tunesien."
+            "q": "Deutsch = ?",
+            "a": "اللغة الألمانية",
+            "choices": [
+              "اللغة الألمانية",
+              "ألمانيا",
+              "تونس"
+            ],
+            "why": "Deutsch = اللغة، وDeutschland = البلد."
+          },
+          {
+            "q": "رتّب: neu / bist / Du",
+            "a": "Du bist neu."
+          },
+          {
+            "q": "«بكم؟» بالألمانية؟",
+            "a": "Wie viel?",
+            "choices": [
+              "Wie viel?",
+              "Wie geht's?",
+              "Wie heißt du?"
+            ]
           }
         ],
         "passingScore": 0.75
@@ -155,20 +298,55 @@
       {
         "items": [
           {
-            "q": "Guten Tag = ?",
+            "q": "«من فضلك» بالألمانية؟",
+            "a": "Bitte",
             "choices": [
-              "تحية نهارية",
-              "تصبح على خير"
+              "Bitte",
+              "Danke",
+              "Tschüss"
+            ]
+          },
+          {
+            "q": "Du ___ aus Deutschland.",
+            "a": "bist",
+            "choices": [
+              "bist",
+              "bin",
+              "sind"
             ],
-            "a": "تحية نهارية"
+            "why": "مع du فعل sein هو bist."
           },
           {
-            "q": "Ich ___ neu.",
-            "a": "bin"
+            "q": "تخرج من مكتب رسمي. ماذا تقول؟",
+            "a": "Auf Wiedersehen!",
+            "choices": [
+              "Auf Wiedersehen!",
+              "Tschüss!",
+              "Hallo!"
+            ],
+            "why": "Auf Wiedersehen رسمية؛ Tschüss للأصدقاء."
           },
           {
-            "q": "ترجم: اسمي يوسف",
-            "a": "Ich heiße Yusuf."
+            "q": "Deutschland = ?",
+            "a": "ألمانيا",
+            "choices": [
+              "ألمانيا",
+              "اللغة الألمانية",
+              "تونس"
+            ]
+          },
+          {
+            "q": "رتّب: Tunesien / aus / komme / Ich",
+            "a": "Ich komme aus Tunesien."
+          },
+          {
+            "q": "«كيف الحال؟» بالألمانية؟",
+            "a": "Wie geht's?",
+            "choices": [
+              "Wie geht's?",
+              "Wie viel?",
+              "Wie heißt du?"
+            ]
           }
         ],
         "passingScore": 0.75
@@ -176,20 +354,50 @@
       {
         "items": [
           {
-            "q": "heißen = ?",
-            "a": "يسمى"
-          },
-          {
-            "q": "أكمل: Hallo! Ich ___ Yusuf.",
-            "a": "heiße"
-          },
-          {
-            "q": "أي جملة صحيحة؟",
+            "q": "Danke = ?",
+            "a": "شكراً",
             "choices": [
-              "Ich bin aus Tunesien",
-              "Ich aus Tunesien bin"
+              "شكراً",
+              "عفواً",
+              "مرحباً"
+            ]
+          },
+          {
+            "q": "Lena ___ aus Deutschland.",
+            "a": "ist",
+            "choices": [
+              "ist",
+              "bin",
+              "bist"
             ],
-            "a": "Ich bin aus Tunesien"
+            "why": "Lena = هي، ومع er/sie فعل sein هو ist."
+          },
+          {
+            "q": "الساعة الثامنة صباحاً. ماذا تقول لجارك؟",
+            "a": "Guten Morgen!",
+            "choices": [
+              "Guten Morgen!",
+              "Guten Abend!",
+              "Tschüss!"
+            ]
+          },
+          {
+            "q": "أكمل: Ich wohne in ___. (ألمانيا)",
+            "a": "Deutschland"
+          },
+          {
+            "q": "رتّب: du / heißt / Wie",
+            "a": "Wie heißt du?"
+          },
+          {
+            "q": "Sie ___ neu? (حضرتك)",
+            "a": "sind",
+            "choices": [
+              "sind",
+              "ist",
+              "bist"
+            ],
+            "why": "Sie (حضرتك) فعلها sind."
           }
         ],
         "passingScore": 0.75
@@ -198,8 +406,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Heute hast du dich vorgestellt: Begrüßung, Name, Herkunft.",
-      "ar": "اليوم قدمت نفسك: تحية، اسم، أصل."
+      "de": "Du hast dich vorgestellt: Begrüßung, Name, Herkunft.",
+      "ar": "قدمت نفسك: تحية، اسم، أصل."
     },
     "warningCards": [
       {
@@ -213,8 +421,8 @@
           "ar": "اسمي يوسف. / أنا من تونس."
         },
         "exercise": {
-          "q": "صحّح: ~~Er neu hier~~",
-          "a": "Er ist neu hier."
+          "q": "صحّح: ~~Er neu~~",
+          "a": "Er ist neu."
         }
       },
       {
@@ -263,7 +471,9 @@
       "wohnen",
       "deutsch",
       "tunesien",
-      "deutschland"
+      "deutschland",
+      "neu",
+      "wie-viel"
     ]
   },
   "gReferences": {
@@ -277,7 +487,7 @@
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-sein-haben"
+    "ars-sein"
   ],
   "audioManifestRefs": [
     "word-hallo",
@@ -294,14 +504,18 @@
     "word-wohnen",
     "word-deutsch",
     "word-tunesien",
-    "word-deutschland"
+    "word-deutschland",
+    "word-neu",
+    "word-wie-viel"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?)",
     "goetheWordListOverlap": [
       "hallo",
-      "heissen"
+      "heissen",
+      "neu",
+      "wie-viel"
     ]
   }
 }

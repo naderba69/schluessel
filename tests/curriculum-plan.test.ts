@@ -112,8 +112,10 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(LearnerProgress.safeParse({ ...st, currentUnit: { level: "A1", unit: 16 } }).success).toBe(false);
   });
 
-  it("التالي: نواة a1-u1-d1 (neu · wie viel) · تكملة a1-u13-d1 «Menschen und Feste» (15 كلمة)", () => {
-    expect(coreStatus(plan, ctx).find((c) => c.status === "pending")!.headwords).toEqual(["neu", "wie viel"]);
+  it("النواة: a1-u1-d1 done (neu · wie viel مُعلَّمتان — D116) · التالي a1-u1-d2 · تكملة a1-u13-d1 (15 كلمة)", () => {
+    const cs = coreStatus(plan, ctx);
+    expect(cs.find((c) => c.lessonId === "a1-u1-d1")).toMatchObject({ status: "done", missing: [] });
+    expect(cs.find((c) => c.status === "pending")).toMatchObject({ lessonId: "a1-u1-d2", headwords: ["heute", "jetzt", "schwer"] });
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
     expect(next.lessonId).toBe("a1-u13-d1");
     expect(next.headwords).toHaveLength(15);
@@ -180,20 +182,21 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
     const mark = checkPlan(plan, { ...ctx, words: [...words, ...taught], lessons: [...lessons.filter((x) => x.id !== l.id), upgraded] });
     expect(codes(mark)).toEqual(["w-plan-mark-done"]);
     expect(mark[0]!.level).toBe("warning");
-    const neu = syn("neu", "adjective");
+    // إسناد ما زال pending (u1-d1 صار done — D116): jetzt من a1-u1-d2 يعلّمها درس آخر
+    const jetzt = syn("jetzt", "adverb");
     const other = realLesson("a1-u2-d1");
-    const elsewhere = { ...other, praesentation: { ...other.praesentation, wordIds: [...other.praesentation.wordIds, neu.id] } };
-    const w = checkPlan(plan, { ...ctx, words: [...words, neu], lessons: [...lessons.filter((x) => x.id !== other.id), elsewhere] });
+    const elsewhere = { ...other, praesentation: { ...other.praesentation, wordIds: [...other.praesentation.wordIds, jetzt.id] } };
+    const w = checkPlan(plan, { ...ctx, words: [...words, jetzt], lessons: [...lessons.filter((x) => x.id !== other.id), elsewhere] });
     expect(codes(w)).toEqual(["w-plan-elsewhere"]);
-    expect(w[0]!.message).toMatch(/a1-u1-d1.*«neu»/);
+    expect(w[0]!.message).toMatch(/a1-u1-d2.*«jetzt»/);
   });
 
   it("e-plan-core-lesson (توليف · غير موجود) · e-plan-core-load (> 18) · e-plan-text-fix", () => {
     const integ = clonePlan();
-    integ.core!.lessons.find((c) => c.lessonId === "a1-u1-d1")!.lessonId = "a1-u1-d6";
+    integ.core!.lessons.find((c) => c.lessonId === "a1-u1-d3")!.lessonId = "a1-u1-d6"; // إسناد pending (u1-d1 صار done)
     expect(codes(checkPlan(integ, ctx))).toEqual(["e-plan-core-lesson"]);
     const ghost = clonePlan();
-    ghost.core!.lessons.find((c) => c.lessonId === "a1-u1-d1")!.lessonId = "a1-u12-d7";
+    ghost.core!.lessons.find((c) => c.lessonId === "a1-u1-d3")!.lessonId = "a1-u12-d7";
     expect(codes(checkPlan(ghost, ctx))).toEqual(["e-plan-core-lesson"]);
     const heavy = clonePlan(); // a1-u9-d1 فيه 18 كلمة — أي إسناد يتجاوز السقف
     const u9d5 = heavy.core!.lessons.find((c) => c.lessonId === "a1-u9-d5")!;
@@ -230,18 +233,25 @@ describe("D115 — «done» في إصلاح النص يُثبت ولا يُصد�
   const withStatus = (status: "pending" | "done") =>
     CurriculumPlan.parse({ ...plan, core: { ...plan.core!, textFixes: plan.core!.textFixes.map((t) => (t === fix ? { ...t, status } : t)) } });
   const realStrings = proseStrings(JSON.parse(readFileSync(join(CONTENT, source), "utf8")));
+  /** نص الملخص قبل إصلاحه (D116) — الضابط السلبي يبقى ثابتاً بعد أن أُصلح الملف الحقيقي */
+  const preFix = [...realStrings, "Heute hast du dich vorgestellt: Begrüßung, Name, Herkunft."];
   const fixIssues = (p: typeof plan, strings: string[]) =>
     checkPlan(p, { ...ctx, texts: new Map([[source, strings]]) }).filter((i) => i.code === "e-plan-text-fix");
 
   it("الإصلاح الحقيقي (heute في ملخص u1-d1): done والملف ما زال يحملها → e-plan-text-fix بالنص نفسه", () => {
     expect(fix.headword).toBe("heute");
-    const issues = fixIssues(withStatus("done"), realStrings);
+    const issues = fixIssues(withStatus("done"), preFix);
     expect(issues).toHaveLength(1);
     expect(issues[0]!.message).toContain("Heute hast du");
   });
   it("done والكلمة غابت → لا خطأ · pending والكلمة موجودة → لا خطأ (دَين معلن)", () => {
-    expect(fixIssues(withStatus("done"), realStrings.filter((s) => !/heute/i.test(s)))).toEqual([]);
-    expect(fixIssues(withStatus("pending"), realStrings)).toEqual([]);
+    expect(fixIssues(withStatus("done"), preFix.filter((s) => !/heute/i.test(s)))).toEqual([]);
+    expect(fixIssues(withStatus("pending"), preFix)).toEqual([]);
+  });
+  it("الملف الحقيقي بعد الإصلاح (D116): الخطة تقول done والإثبات يمر — بلا heute في أي نص", () => {
+    expect(fix.status).toBe("done");
+    expect(realStrings.some((s) => /\bheute\b/i.test(s))).toBe(false);
+    expect(fixIssues(plan, realStrings)).toEqual([]);
   });
   it("رمز البحث وكلمته الكاملة: weh tun → weh · die X → X · heutige ليست heute", () => {
     expect(textFixToken("weh tun")).toBe("weh");

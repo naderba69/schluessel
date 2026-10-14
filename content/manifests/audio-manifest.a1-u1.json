@@ -15105,6 +15105,46 @@
       "rmsDb": -16.96
     },
     {
+      "id": "word-neu",
+      "file": "words/audio/de-DE/word-neu.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "neu.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 804,
+      "sizeBytes": 3851,
+      "hash": "sha256:846e5e71bb64f6013da2f5f4d42675e633dc2389d998a969c7167f23a65cd93f",
+      "pcmSha256": "2a0db412e06df1dbc87bd19d6450c2ce8879a004709a883f9e0b7bf2b75fb1e7",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "word-wie-viel",
+      "file": "words/audio/de-DE/word-wie-viel.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "wie viel.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d1"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4636,
+      "hash": "sha256:4f78d0aee57597f035e4171ea3d3d8d50c5c13722bdbdb473e6b42b77886c778",
+      "pcmSha256": "dc0e83e15a362fdbb811f3a1eb5583954090637e13cd14431423070036eb5ad0",
+      "rmsDb": -16.99
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",

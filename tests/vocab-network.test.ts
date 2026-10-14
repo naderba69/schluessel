@@ -11,9 +11,9 @@ import { firstLessonWords } from "../src/lesson-packs.js";
 import { loadUnit0Deck } from "../src/lib/unit0.js";
 
 describe("E14 — الشبكة الدلالية: كل كلمة بروابطها", () => {
-  it("كل كلمات الدرس الـ15 لها روابط (عائلة أو كولوكيشن) — validator أخضر", () => {
+  it("كل كلمات الدرس الـ17 لها روابط (عائلة أو كولوكيشن) — validator أخضر", () => {
     const { nodes, edges } = buildNetwork(firstLessonWords);
-    expect(nodes.length).toBe(15);
+    expect(nodes.length).toBe(17);
     expect(missingLinks(nodes)).toEqual([]);
     expect(edges.length).toBeGreaterThan(10);
   });

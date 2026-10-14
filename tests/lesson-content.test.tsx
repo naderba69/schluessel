@@ -24,16 +24,18 @@ describe("تشغيل الدرس الحقيقي على الواجهة", () => {
     expect(html).toContain("حاول تذكر");
   });
 
-  it("محطة الجديد: أول عنصر من 15 — بجملة الدرس الحقيقية", () => {
+  it("محطة الجديد: أول عنصر من 17 — بجملة الدرس الحقيقية · ثم قاعدة اليوم (D116)", () => {
     const html = renderToStaticMarkup(<LearnStation cards={plan.learn} />);
-    expect(html).toContain("عنصر 1 من 15");
+    expect(html).toContain("عنصر 1 من 17");
     expect(html).toContain("Hallo! Ich heiße Yusuf.");
   });
 
-  it("محطة التدريب: أول تمرين + زر الكشف (محاولة قبل كشف)", () => {
+  it("محطة التدريب (الدرس المُرقّى — D116): أول بند فراغ قاعدة اليوم · لا إجابة ولا «لماذا» قبل المحاولة", () => {
     const html = renderToStaticMarkup(<PracticeStation data={plan.practice} />);
-    expect(html).toContain('data-testid="practice-reveal"');
-    expect(html).toContain("مرحبا، اسمي يوسف");
+    expect(html).toContain('data-testid="practice-input"');
+    expect(html).toContain("Ich ___ Yusuf.");
+    expect(html).not.toContain("practice-why");
+    expect(html).not.toContain(">bin<");
   });
 
   it("الخلاصة: التلخيص + المصائد الثلاث + تقرير مولر — بلا لوم", () => {
