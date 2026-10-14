@@ -1,5 +1,8 @@
 # CHANGELOG.md
 
+## 2026-10-14 — الدفعة 64: المراجع الرسمية (D108)
+- **إضافة**: `content/exam-formats/` (Start Deutsch 1 + Goethe A2) + مخطط ExamFormat + قاعدة `w-modelltest-format` · 12 فصلاً لـ Netzwerk neu A2 في المرجع المنهجي · **359/359 أخضر**.
+
 ## 2026-10-14 — الدفعة 63: بنك Redemittel (D107)
 - **إضافة**: `src/lib/phrase-bank.ts` + `tools/phrase-harvester.ts` + `tools/lib/content-disk.ts` + عرض العبارات في المهمة التواصلية · **352/352 أخضر**.
 

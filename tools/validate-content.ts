@@ -7,7 +7,7 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
-  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, SCHEMA_VERSION,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, ExamFormat, SCHEMA_VERSION,
 } from "../content/schemas/index.js";
 import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
 import { VOICE_ID, VOICE_ID_FEMALE, PINNED_VOICES, FEMALE_ROLES, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
@@ -40,7 +40,7 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
 
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "lese" | "audio-script" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "lese" | "audio-script" | "exam-format" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -54,6 +54,7 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("modelltest/")) return "modelltest";
   if (p.startsWith("lese/")) return "lese";
   if (p.startsWith("audio-scripts/")) return "audio-script";
+  if (p.startsWith("exam-formats/")) return "exam-format";
   return "unknown";
 }
 
@@ -73,6 +74,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
   let characterVoices: Record<string, string> = {};
   const scripts = new Map<string, { path: string; script: AudioScript }>();
   const modelltests: { path: string; test: Modelltest }[] = [];
+  const examFormats = new Map<string, ExamFormat>(); // D108: الصيغة الرسمية لكل مستوى
   let curriculum: CurriculumReference | null = null;
 
   for (const entry of entries) {
@@ -207,6 +209,12 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
             push("error", "e-monats-size", entry.path, "Monatsprüfung أقصر من 10 عناصر");
           break;
         }
+        case "exam-format": {
+          const f = ExamFormat.parse(entry.data); // D108: الصيغة الرسمية (وثائق Goethe المجانية)
+          if (examFormats.has(f.level)) push("error", "e-exam-format-dup", entry.path, `صيغتان رسميتان للمستوى ${f.level}`);
+          examFormats.set(f.level, f);
+          break;
+        }
         case "audio-script": {
           const sc = AudioScript.parse(entry.data); // D103: السكربت الصوتي الموجَّه
           if (scripts.has(sc.id)) push("error", "e-audio-script-dup", entry.path, `معرّف سكربت مكرر: ${sc.id}`);
@@ -235,6 +243,26 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
     for (const t of manifestTracks.values())
       if (t.file.startsWith("audio/scripts/") && !scriptLineIds.has(t.id))
         push("error", "e-audio-script-orphan", manifestPath, `مسار سكربت يتيم بلا سطر في أي سكربت: ${t.id}`);
+  }
+
+  // ——— D108: الامتحان التجريبي مقابل الصيغة الرسمية لمستواه (المدة · الأجزاء · البنود) ———
+  for (const { path, test } of modelltests) {
+    const f = examFormats.get(test.level);
+    if (!f) continue;
+    for (const official of f.skills) {
+      const ours = test.sections.find((x) => x.skill === official.skill);
+      if (!ours) continue; // غياب المهارة يرفضه e-modelltest-skill
+      const diffs: string[] = [];
+      if (ours.timeBudgetMin !== official.minutes) diffs.push(`المدة ${ours.timeBudgetMin} والرسمية ${official.minutes} د`);
+      if (ours.parts.length !== official.parts.length) diffs.push(`الأجزاء ${ours.parts.length} والرسمية ${official.parts.length}`);
+      else
+        official.parts.forEach((op, i) => {
+          if (op.items && ours.parts[i]!.items.length !== op.items)
+            diffs.push(`الجزء ${op.part}: ${ours.parts[i]!.items.length} بنود والرسمي ${op.items}`);
+        });
+      if (diffs.length)
+        push("warning", "w-modelltest-format", path, `${official.skill} لا يطابق «${f.exam}»: ${diffs.join(" · ")}`);
+    }
   }
 
   // ——— D103: لا سؤال استماع بلا صوت حقيقي يحمل جوابه ———

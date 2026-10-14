@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "goethe-a2",
+  "level": "A2",
+  "exam": "Goethe-Zertifikat A2",
+  "sources": [
+    {
+      "title": "Goethe-Institut — Goethe-Zertifikat A2 Modellsatz Erwachsene (Prüfungsteile im Überblick + Bestehensregel)",
+      "url": "https://www.goethe.de/pro/relaunch/prf/materialien/A2/A2_Modellsatz_Erwachsene.pdf"
+    },
+    {
+      "title": "Goethe-Institut — Goethe-Zertifikat A2 Übungssatz 01 Erwachsene",
+      "url": "https://www.goethe.de/pro/relaunch/prf/materialien/A2/A2_Uebungssatz_Erwachsene.pdf"
+    }
+  ],
+  "passRule": {
+    "totalPoints": 100,
+    "passAt": 60,
+    "writtenMin": 45,
+    "oralMin": 15,
+    "note": "عتبتان معاً: الكتابي (قراءة+استماع+كتابة) ≥45/75 والشفهي ≥15/25 — وإلا الامتحان كله غير ناجح"
+  },
+  "skills": [
+    {
+      "skill": "lesen",
+      "minutes": 30,
+      "points": 25,
+      "parts": [
+        {
+          "part": 1,
+          "goal": "Informationen und Argumentationen in Medientexten verstehen",
+          "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "items": 5
+        },
+        {
+          "part": 2,
+          "goal": "Informationstafeln, Veranstaltungsprogramme etc. verstehen",
+          "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "items": 5
+        },
+        {
+          "part": 3,
+          "goal": "Korrespondenz verstehen",
+          "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "items": 5
+        },
+        {
+          "part": 4,
+          "goal": "Anzeigen verstehen",
+          "taskType": "Zuordnen",
+          "items": 5
+        }
+      ]
+    },
+    {
+      "skill": "hoeren",
+      "minutes": 30,
+      "points": 25,
+      "parts": [
+        {
+          "part": 1,
+          "goal": "Informationen im Radio, auf dem Anrufbeantworter, bei Durchsagen verstehen",
+          "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "items": 5,
+          "playCount": 2
+        },
+        {
+          "part": 2,
+          "goal": "ein zusammenhängendes Gespräch verstehen",
+          "taskType": "Zuordnen Bild/Text",
+          "items": 5,
+          "playCount": 1
+        },
+        {
+          "part": 3,
+          "goal": "Einzelgespräche verstehen",
+          "taskType": "Mehrfachauswahl, 3-gliedrig, Bild/Text",
+          "items": 5,
+          "playCount": 1
+        },
+        {
+          "part": 4,
+          "goal": "ein Radiointerview verstehen",
+          "taskType": "Richtig/Falsch",
+          "items": 5,
+          "playCount": 2
+        }
+      ]
+    },
+    {
+      "skill": "schreiben",
+      "minutes": 30,
+      "points": 25,
+      "parts": [
+        {
+          "part": 1,
+          "goal": "persönliche Mitteilung zur Kontaktpflege (SMS, 20–30 Wörter, 3 Leitpunkte)",
+          "taskType": "Freies Schreiben"
+        },
+        {
+          "part": 2,
+          "goal": "halb offizielle Mitteilung zur Handlungsregulierung (E-Mail, 30–40 Wörter, 3 Leitpunkte)",
+          "taskType": "Freies Schreiben"
+        }
+      ]
+    },
+    {
+      "skill": "sprechen",
+      "minutes": 15,
+      "points": 25,
+      "parts": [
+        {
+          "part": 1,
+          "goal": "Informationen zur Person mit einem Partner austauschen",
+          "taskType": "Freies Sprechen (Paarprüfung, ohne Vorbereitung)"
+        },
+        {
+          "part": 2,
+          "goal": "ausführlich Informationen zum eigenen Leben geben",
+          "taskType": "Freies Sprechen"
+        },
+        {
+          "part": 3,
+          "goal": "mit einem Partner eine Unternehmung planen und aushandeln",
+          "taskType": "Freies Sprechen"
+        }
+      ]
+    }
+  ]
+}

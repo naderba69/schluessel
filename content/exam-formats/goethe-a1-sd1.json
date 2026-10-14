@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "goethe-a1-sd1",
+  "level": "A1",
+  "exam": "Goethe-Zertifikat A1: Start Deutsch 1",
+  "sources": [
+    {
+      "title": "Goethe-Institut — Start Deutsch 1 Modellsatz (Antwortbogen: Hören 1–6/7–10/11–15 · Lesen 1–5/6–10/11–15)",
+      "url": "https://www.goethe.de/pro/relaunch/prf/materialien/A1_sd1/sd_1_modellsatz.pdf"
+    },
+    {
+      "title": "Goethe-Institut — Prüfungsziele, Testbeschreibung A1 Start Deutsch 1 (Dauer und Punkte je Teil)",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/Pruefungsziele_Testbeschreibung_A1_SD1.pdf"
+    }
+  ],
+  "passRule": {
+    "totalPoints": 100,
+    "passAt": 60,
+    "note": "غير مُجزّأ: كل الأجزاء معاً — النجاح من 60/100 (الكتابي 75 + الشفهي 25)"
+  },
+  "skills": [
+    {
+      "skill": "hoeren",
+      "minutes": 20,
+      "points": 25,
+      "parts": [
+        {
+          "part": 1,
+          "goal": "kurze Alltagsgespräche verstehen",
+          "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "items": 6,
+          "playCount": 2
+        },
+        {
+          "part": 2,
+          "goal": "Ansagen (z. B. Bahnhof, Kaufhaus) verstehen",
+          "taskType": "Richtig/Falsch",
+          "items": 4,
+          "playCount": 1
+        },
+        {
+          "part": 3,
+          "goal": "Nachrichten am Telefon/Anrufbeantworter verstehen",
+          "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "items": 5,
+          "playCount": 2
+        }
+      ]
+    },
+    {
+      "skill": "lesen",
+      "minutes": 25,
+      "points": 25,
+      "parts": [
+        {
+          "part": 1,
+          "goal": "kurze Mitteilungen (Briefe/E-Mails) verstehen",
+          "taskType": "Richtig/Falsch",
+          "items": 5
+        },
+        {
+          "part": 2,
+          "goal": "Anzeigen/Internetseiten — die passende Information finden",
+          "taskType": "Auswahl zwischen zwei Texten (a/b)",
+          "items": 5
+        },
+        {
+          "part": 3,
+          "goal": "Schilder und Aushänge verstehen",
+          "taskType": "Richtig/Falsch",
+          "items": 5
+        }
+      ]
+    },
+    {
+      "skill": "schreiben",
+      "minutes": 20,
+      "points": 25,
+      "parts": [
+        {
+          "part": 1,
+          "goal": "ein Formular an fünf Stellen ergänzen",
+          "taskType": "Formular",
+          "items": 5
+        },
+        {
+          "part": 2,
+          "goal": "eine Kurzmitteilung schreiben (ca. 30 Wörter, 3 Inhaltspunkte)",
+          "taskType": "Freies Schreiben"
+        }
+      ]
+    },
+    {
+      "skill": "sprechen",
+      "minutes": 15,
+      "points": 25,
+      "parts": [
+        {
+          "part": 1,
+          "goal": "sich vorstellen",
+          "taskType": "Freies Sprechen (Gruppe ≤4, ohne Vorbereitung)"
+        },
+        {
+          "part": 2,
+          "goal": "Informationen erfragen und geben (Themenkarten)",
+          "taskType": "Freies Sprechen"
+        },
+        {
+          "part": 3,
+          "goal": "Bitten formulieren und darauf reagieren (Bildkarten)",
+          "taskType": "Freies Sprechen"
+        }
+      ]
+    }
+  ]
+}

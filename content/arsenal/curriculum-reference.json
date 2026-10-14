@@ -9,22 +9,170 @@
         {
           "id": "k1",
           "title": "Hallo! Wie geht's?",
-          "grammarPoints": ["sein/haben", "Artikel Nominativ", "Fragepronomen"],
-          "vocabTopics": ["Begrüßung", "Länder", "Sprachen"],
+          "grammarPoints": [
+            "sein/haben",
+            "Artikel Nominativ",
+            "Fragepronomen"
+          ],
+          "vocabTopics": [
+            "Begrüßung",
+            "Länder",
+            "Sprachen"
+          ],
           "requiresPrevious": []
         },
         {
           "id": "k3",
           "title": "Zahlen und Uhrzeit",
-          "grammarPoints": ["Zahlen 20–1000", "Uhrzeit", "um/in"],
-          "vocabTopics": ["Zahlen", "Uhrzeit", "Preise"],
-          "requiresPrevious": ["k1"]
+          "grammarPoints": [
+            "Zahlen 20–1000",
+            "Uhrzeit",
+            "um/in"
+          ],
+          "vocabTopics": [
+            "Zahlen",
+            "Uhrzeit",
+            "Preise"
+          ],
+          "requiresPrevious": [
+            "k1"
+          ]
         }
       ],
       "targetWordCount": 700
     },
-    "A2": { "chapters": [], "targetWordCount": 750 },
-    "B1": { "chapters": [], "targetWordCount": 1000 },
-    "B2": { "chapters": [], "targetWordCount": 1100 }
+    "A2": {
+      "chapters": [
+        {
+          "id": "k1",
+          "title": "Und was machst du?",
+          "grammarPoints": [],
+          "vocabTopics": [
+            "über Vergangenes berichten",
+            "sich verabreden",
+            "etwas begründen"
+          ],
+          "requiresPrevious": []
+        },
+        {
+          "id": "k2",
+          "title": "Nach der Schulzeit",
+          "grammarPoints": [],
+          "vocabTopics": [],
+          "requiresPrevious": [
+            "k1"
+          ]
+        },
+        {
+          "id": "k3",
+          "title": "Immer online?",
+          "grammarPoints": [],
+          "vocabTopics": [],
+          "requiresPrevious": [
+            "k2"
+          ]
+        },
+        {
+          "id": "k4",
+          "title": "Große und kleine Gefühle",
+          "grammarPoints": [],
+          "vocabTopics": [],
+          "requiresPrevious": [
+            "k3"
+          ]
+        },
+        {
+          "id": "k5",
+          "title": "Leben in der Stadt",
+          "grammarPoints": [],
+          "vocabTopics": [],
+          "requiresPrevious": [
+            "k4"
+          ]
+        },
+        {
+          "id": "k6",
+          "title": "Arbeitswelten",
+          "grammarPoints": [],
+          "vocabTopics": [
+            "über Arbeit und Freizeit sprechen",
+            "Situationen am Bahnhof beschreiben"
+          ],
+          "requiresPrevious": [
+            "k5"
+          ]
+        },
+        {
+          "id": "k7",
+          "title": "Ganz schön mobil",
+          "grammarPoints": [],
+          "vocabTopics": [
+            "Informationen erfragen",
+            "nachfragen",
+            "über Musik sprechen",
+            "Zeitungsmeldungen verstehen",
+            "gemeinsam etwas planen"
+          ],
+          "requiresPrevious": [
+            "k6"
+          ]
+        },
+        {
+          "id": "k8",
+          "title": "Gelernt ist gelernt!",
+          "grammarPoints": [],
+          "vocabTopics": [],
+          "requiresPrevious": [
+            "k7"
+          ]
+        },
+        {
+          "id": "k9",
+          "title": "Sportlich, sportlich",
+          "grammarPoints": [],
+          "vocabTopics": [],
+          "requiresPrevious": [
+            "k8"
+          ]
+        },
+        {
+          "id": "k10",
+          "title": "Zusammen leben",
+          "grammarPoints": [],
+          "vocabTopics": [],
+          "requiresPrevious": [
+            "k9"
+          ]
+        },
+        {
+          "id": "k11",
+          "title": "Wie die Zeit vergeht!",
+          "grammarPoints": [],
+          "vocabTopics": [],
+          "requiresPrevious": [
+            "k10"
+          ]
+        },
+        {
+          "id": "k12",
+          "title": "Gute Unterhaltung!",
+          "grammarPoints": [],
+          "vocabTopics": [],
+          "requiresPrevious": [
+            "k11"
+          ]
+        }
+      ],
+      "targetWordCount": 750,
+      "source": "D108 — عناوين الفصول من فهرس Klett الرسمي للكتاب الرقمي (BlinkLearning/BlinkShop: Netzwerk neu A2.1 ISBN NP00860716201 · A2.2 ISBN NP00860716301) ومسرد Klett المجاني (© Ernst Klett Sprachen 2020: Kapitel 1 «Und was machst du?» · Kapitel 12 «Gute Unterhaltung!»). vocabTopics = الأهداف التواصلية كما ظهرت حرفياً في الفهرس الرسمي فقط · grammarPoints فارغة: لم تُتحقق بعد (لا تخمين). لا يُنسخ أي محتوى من الكتاب."
+    },
+    "B1": {
+      "chapters": [],
+      "targetWordCount": 1000
+    },
+    "B2": {
+      "chapters": [],
+      "targetWordCount": 1100
+    }
   }
 }

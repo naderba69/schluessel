@@ -70,6 +70,8 @@ export const CurriculumReference = SchemaVersioned.extend({
         }),
       ),
       targetWordCount: z.number().int().positive(), // A1≈700 | A2≈750 | B1≈1000 | B2≈1100
+      /** D108: من أين جاءت عناوين الفصول (مصدر رسمي متحقَّق منه) — غيابه = غير متحقَّق */
+      source: z.string().min(1).optional(),
     }),
   ),
 });
