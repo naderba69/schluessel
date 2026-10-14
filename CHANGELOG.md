@@ -1,5 +1,13 @@
 # CHANGELOG.md
 
+## 2026-10-14 — الدفعة 76: a1-u1-d4 مُرقّى + الأعداد بالصوت + معجم النطق (D121)
+- **إضافة**: `content/arsenal/grammar/ars-zahlen-1-20.json` (رابع قاعدة يوم) · سكربت `a1-zahlen` (22 مساراً: 0–20 + رقم يوسف) · كلمات النواة `alter` · `kurs` · `klasse` (+ 3 مقاطع · 868 مساراً · 767 كلمة).
+- **إضافة أداة**: `tools/pronunciation-lexicon.json` + `apply_lexicon`/`synth_phonemes` في `tools/gen-audio.py` (مصدر واحد للصوت وللـIPA في `phonemize.py` · `--raw` لـespeak الخام) · `tools/regen-track.ts` (إعادة توليد مقطع كلمة منشور + تعديل قياساته نصياً ببرهان).
+- **إضافة حارس**: `e-upgrade-warmup` — بطاقة الدفء مدروسة قبل الدرس (أول درس مستثنى).
+- **تغيير معلن**: `CLOSED` يضم الأعداد 0–20 كاملة (13–19 وnull كانت ناقصة).
+- **تغيير معلن (القانون 7)**: a1-u1-d4 — 20 بنداً بـ«لماذا» بدل 6 · Quiz 3×6 · الدفء من دروس سابقة · بطاقتا تحذير جديدتان · الملخص ومعايير المهمة · goetheWordListOverlap من goetheList · مثالا geburtstag وmonat · 4 مقاطع منشورة أُعيد توليدها بالمعجم (Durst · Wurst · Telefonnummer · Vorname — قياساتها فقط في المانيفست).
+- الترقية 4/60 · نواة D113 4/48 (11/123 كلمة) · **565/565 أخضر** · validator 901/0/0 · الطفرة 17/17.
+
 ## 2026-10-14 — الدفعة 75: a1-u1-d3 مُرقّى + الألفباء بالصوت + إملاء الحروف (D120)
 - **إضافة**: `content/arsenal/grammar/ars-alphabet-spelling.json` (ثالث قاعدة يوم) · سكربتا `a1-alphabet` و`a1-u1-d3-anmeldung` (43 مساراً: 30 حرفاً + 3 أسماء متهجّاة + حوار تسجيل) · كلمات النواة `anmeldung` · `partner` · `partnerin` · `herr` (843 مساراً · 764 كلمة).
 - **إضافة مخطط**: `DictationItem.spelled` (إملاء الحروف بقاعدة قابلة للتحقق) + `spelledLetters` · تعليمة خاصة في المُشغِّل.
