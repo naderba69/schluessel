@@ -48,13 +48,14 @@ export function BreakPrompt({ after, onContinue }: { after: Station; onContinue:
  * زر الاستماع (D104 — القانون 11: كل كلمة قابلة للسماع دائماً): المقطع الملتزم أولاً ← Web Speech احتياطاً.
  * الإعادة بلا سقف ولا عقوبة (D23).
  */
-export function PlayButton({ audioId, speakText }: { audioId?: string; speakText: string }) {
+export function PlayButton({ audioId, speakText, label }: { audioId?: string; speakText: string; label?: string }) {
   return (
     <button
       type="button"
       data-testid="play-audio"
       data-audio-id={audioId ?? ""}
-      aria-label={`استمع: ${speakText}`}
+      // D115: بنود الاستماع/الإملاء تمرّر وسماً محايداً — النص المنطوق فيها هو الإجابة (قارئ الشاشة يتهجّاه)
+      aria-label={label ?? `استمع: ${speakText}`}
       onClick={() => void audioPlayer().play({ trackId: audioId, text: speakText })}
     >
       🔊

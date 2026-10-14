@@ -15,12 +15,12 @@ import { lessonStatus } from "./lib/routes.js";
 import { planLessonStations } from "./lib/lesson-runner.js";
 import { cardsForEvent, loadUnit0Deck } from "./lib/unit0.js";
 import { eveningReport, tomorrowPreview, muellerMessage } from "./lib/warmth-engine.js";
-import { firstLesson, firstLessonWords, ALL_LESSONS, PHRASE_BANK, LESSON_ORDER } from "./lesson-packs.js";
+import { firstLesson, firstLessonWords, ALL_LESSONS, ALL_GRAMMAR_RULES, PHRASE_BANK, LESSON_ORDER } from "./lesson-packs.js";
 import { phrasesAvailable } from "./lib/phrase-bank.js";
 import { SkillsLab } from "./components/SkillsLab.js";
 import { SystemLab } from "./components/SystemLab.js";
 
-const plan = planLessonStations(firstLesson, firstLessonWords);
+const plan = planLessonStations(firstLesson, firstLessonWords, ALL_GRAMMAR_RULES);
 /** §6 + قانون الجبهة: Redemittel ضمن سياق الدرس — مما ظهر حتى درس الحصة فقط */
 const redemittel = phrasesAvailable(PHRASE_BANK, LESSON_ORDER, plan.lessonId).slice(0, 6);
 
@@ -78,7 +78,7 @@ export function App() {
         <LessonSession
           content={{
             recall: <RecallStation cards={plan.recall} />,
-            learn: <LearnStation cards={plan.learn} />,
+            learn: <LearnStation cards={plan.learn} rules={plan.rules} />,
             practice: <PracticeStation data={plan.practice} redemittel={redemittel} />,
             close: (
               <CloseStation

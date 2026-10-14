@@ -14,11 +14,15 @@ wer wo wann warum welche welcher welches eins zwei drei vier fünf sechs sieben 
 
 export const deumlaut = (s: string) => s.replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u");
 
-/** الصيغ المعروفة من كلمة مدروسة: الجذع + صيغ الفعل + الجمع — مع جذوع تصريف بسيطة */
+/**
+ * الصيغ المعروفة من كلمة مدروسة: الجذع + صيغ الفعل + الجمع — مع جذوع تصريف بسيطة.
+ * D115: تُقطَّع بـcontentTokens نفسها التي تقطّع النص المفحوص — كان التقطيع على [\s/!.,] فقط فيُنتج
+ * «geht's?» و«(sie)» و«koste(n» التي لا تطابق أي نص (11 مدخلاً: Wie geht's? · Stell (dich) vor! · …).
+ */
 export function knownForms(w: Word): string[] {
   const base = w.de.replace(/^(der|die|das) /, "").replace(/^sich /, "").toLowerCase();
   const parts = [base, w.plural?.replace(/^die /, ""), w.forms?.praesens3s, w.forms?.perfekt, w.forms?.praeteritum, w.forms?.imperative]
-    .filter((x): x is string => !!x).flatMap((x) => x.toLowerCase().split(/[\s/!.,]+/)).filter(Boolean);
+    .filter((x): x is string => !!x).flatMap((x) => contentTokens(x));
   return parts;
 }
 

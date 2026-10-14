@@ -8,12 +8,14 @@ import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
   Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
+  GrammarRuleFile, LessonUpgradePlan,
 } from "../content/schemas/index.js";
 import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
 import { evidenceIn } from "../content/schemas/answer-key.js";
 import { contentTokens, knownStems, unknownTokens } from "./lib/vocab-forms.js";
 import { deriveGoetheList, describeEvidence, evidenceFor, indexWordlists, sameLevels } from "./lib/goethe-lists.js";
-import { checkPlan } from "./lib/curriculum-plan.js";
+import { checkPlan, proseStrings } from "./lib/curriculum-plan.js";
+import { checkGrammarRules, checkUpgrade } from "./lib/lesson-upgrade.js";
 import { VOICE_ID, VOICE_ID_FEMALE, PINNED_VOICES, FEMALE_ROLES, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
 
 export interface Issue {
@@ -44,7 +46,7 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
 
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "lese" | "audio-script" | "exam-format" | "wordlist" | "plan" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "audio-script" | "exam-format" | "wordlist" | "plan" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -61,6 +63,7 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("exam-formats/")) return "exam-format";
   if (p.startsWith("wordlists/")) return "wordlist";
   if (p.startsWith("plans/")) return "plan";
+  if (p.startsWith("upgrades/")) return "upgrade";
   return "unknown";
 }
 
@@ -83,6 +86,8 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
   const examFormats = new Map<string, ExamFormat>(); // D108: الصيغة الرسمية لكل مستوى
   const wordlists = new Map<string, OfficialWordlist>(); // D110: فهارس قوائم Goethe الرسمية
   const plans: { path: string; plan: CurriculumPlan }[] = []; // D112: خطط التوزيع المنهجية المُلزِمة
+  const grammarRules = new Map<string, { path: string; rule: GrammarRuleFile }>(); // D115: قواعد اليوم (الشفرات)
+  const upgradePlans: { path: string; plan: LessonUpgradePlan }[] = []; // D115: خطط ترقية الدروس (D114)
   let curriculum: CurriculumReference | null = null;
 
   for (const entry of entries) {
@@ -179,6 +184,13 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         }
         case "arsenal": {
           const a = ArsenalFile.parse(entry.data);
+          if (a.kind === "shufra") {
+            const r = GrammarRuleFile.parse(entry.data); // D115: صيغة الاكتشاف الموجَّه كاملة (E13)
+            if (entry.path !== `arsenal/grammar/${r.id}.json`)
+              push("error", "e-arsenal-path", entry.path, `ملف القاعدة مكانه arsenal/grammar/${r.id}.json`);
+            if (grammarRules.has(r.id)) push("error", "e-arsenal-dup", entry.path, `قاعدة مكررة: ${r.id}`);
+            grammarRules.set(r.id, { path: entry.path, rule: r });
+          }
           if (a.usedInLessons.length === 0)
             push("warning", "w-arsenal-unused", entry.path, "ملف خزانة بلا usedInLessons بعد (§10‑ح)");
           break;
@@ -228,6 +240,12 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
           const pl = CurriculumPlan.parse(entry.data); // D112: البنية (المعرّفات · التتابع · الأحجام · لا تكرار)
           if (plans.some((x) => x.plan.id === pl.id)) push("error", "e-plan-dup", entry.path, `خطة مكررة: ${pl.id}`);
           plans.push({ path: entry.path, plan: pl });
+          break;
+        }
+        case "upgrade": {
+          const up = LessonUpgradePlan.parse(entry.data); // D115: قاعدة · تدريب · Quiz لكل درس (D114)
+          if (upgradePlans.some((x) => x.plan.id === up.id)) push("error", "e-upgrade-dup", entry.path, `خطة ترقية مكررة: ${up.id}`);
+          upgradePlans.push({ path: entry.path, plan: up });
           break;
         }
         case "audio-script": {
@@ -460,9 +478,28 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
       lessons: [...lessons.values()].map((l) => l.lesson),
       lists: [...wordlists.values()],
       paths: new Set(entries.map((e) => e.path)), // D113: ملفات textFixes موجودة
+      texts: (() => { // D115: «done» في إصلاح النص يُثبت — الكلمة غابت فعلاً من نصوص الملف
+        const sources = new Set(plans.flatMap((p) => (p.plan.core?.textFixes ?? []).map((t) => t.source)));
+        return new Map(entries.filter((e) => sources.has(e.path)).map((e) => [e.path, proseStrings(e.data)] as const));
+      })(),
     };
     for (const { path, plan } of plans)
       for (const i of checkPlan(plan, ctx)) push(i.level, i.code, path, i.message);
+  }
+
+  // ——— D115: قواعد اليوم + حارس ترقية الدروس (D114) — «done» يُتحقق منه، «pending» دَين معلن ———
+  if (words.size > 0 && lessons.size > 0) {
+    const uctx = {
+      lessons: [...lessons.values()].map((l) => l.lesson),
+      words: [...words.values()].map((w) => w.word),
+      rules: new Map([...grammarRules].map(([id, r]) => [id, r.rule] as const)),
+      tracks: manifestTracks,
+    };
+    const where = (i: { lessonId?: string; ruleId?: string }, fallback: string) =>
+      (i.ruleId && grammarRules.get(i.ruleId)?.path) || (i.lessonId && lessons.get(i.lessonId)?.path) || fallback;
+    for (const i of checkGrammarRules(uctx)) push(i.level, i.code, where(i, "arsenal/grammar"), i.message);
+    for (const { path, plan } of upgradePlans)
+      for (const i of checkUpgrade(plan, uctx)) push(i.level, i.code, where(i, path), i.message);
   }
 
   for (const [level, b] of Object.entries(perLevelCards)) {

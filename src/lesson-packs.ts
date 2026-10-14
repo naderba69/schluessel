@@ -9,11 +9,13 @@ import {
   Modelltest,
   ReadingText,
   ImageManifest,
+  GrammarRuleFile,
   type Lesson,
   type Word,
 } from "../content/schemas/index.js";
 import imageManifest from "../content/manifests/image-manifest.json";
 import { harvestPhrases, type Phrase } from "./lib/phrase-bank.js";
+import { ruleFromShufra, type GrammarRule } from "./lib/grammar-discovery.js";
 
 type JsonModules = Record<string, unknown>;
 const json = (mods: JsonModules) => Object.keys(mods).sort().map((k) => mods[k]);
@@ -39,6 +41,10 @@ export const ALL_IMAGES = ImageManifest.parse(imageManifest).assets;
 /** نصوص القراءة (D97) */
 export const ALL_LESETEXTS = json(import.meta.glob("../content/lese/*.json", { eager: true, import: "default" }))
   .map((j) => ReadingText.parse(j));
+
+/** قواعد اليوم (D115): content/arsenal/grammar/*.json بصيغة الاكتشاف الموجَّه — يعرضها المُشغِّل بعد الكلمات */
+export const ALL_GRAMMAR_RULES: GrammarRule[] = json(import.meta.glob("../content/arsenal/grammar/*.json", { eager: true, import: "default" }))
+  .map((j) => ruleFromShufra(GrammarRuleFile.parse(j)));
 
 /** كل الكلمات المُتحقَّق منها — بلا استثناءات (مرتبة بالمعرّف) */
 export const ALL_WORDS: Word[] = WORD_JSONS.map((j) => WordSchema.parse(j));

@@ -4,12 +4,12 @@ import { describe, it, expect } from "vitest";
 import { join } from "node:path";
 import { CurriculumPlan, LearnerProgress, UNIT_MAX, plannedHeadwords, type Word } from "../content/schemas/index.js";
 import { loadLessons, loadWordlists, loadWords } from "../tools/lib/content-disk.js";
-import { CORE_LOAD_MAX, checkPlan, coreStatus, planStatus, type PlanLessonLike } from "../tools/lib/curriculum-plan.js";
+import { CORE_LOAD_MAX, checkPlan, coreStatus, planStatus, proseStrings, textFixToken, wholeWordRegex, type PlanLessonLike } from "../tools/lib/curriculum-plan.js";
 import { coveredHeadwords, indexWordlists } from "../tools/lib/goethe-lists.js";
 import { auditGoethe } from "../tools/goethe-audit.js";
 import { loadPlans } from "../tools/plan-status.js";
 import { ALL_LESSONS, LESSON_ORDER } from "../src/lesson-packs.js";
-import { readdirSync, statSync } from "node:fs";
+import { readFileSync, readdirSync, statSync } from "node:fs";
 
 const CONTENT = join(__dirname, "..", "content");
 const words = loadWords(CONTENT);
@@ -221,5 +221,37 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
     expect(run([lessonLike("a1-u16-d1", 16, 1, "integration", ["gestern"])])).toEqual(["e-plan-exam-week"]);
     expect(run([lessonLike("a1-u15-d7", 15, 7, "content", ["gestern"])])).toEqual(["e-plan-exam-week"]);
     expect(run([], (l) => l.unit === 15)).toEqual(["e-plan-exam-week"]);
+  });
+});
+
+describe("D115 — «done» في إصلاح النص يُثبت ولا يُصدَّق", () => {
+  const source = "lessons/a1/a1-u1-d1.json";
+  const fix = plan.core!.textFixes.find((t) => t.source === source)!;
+  const withStatus = (status: "pending" | "done") =>
+    CurriculumPlan.parse({ ...plan, core: { ...plan.core!, textFixes: plan.core!.textFixes.map((t) => (t === fix ? { ...t, status } : t)) } });
+  const realStrings = proseStrings(JSON.parse(readFileSync(join(CONTENT, source), "utf8")));
+  const fixIssues = (p: typeof plan, strings: string[]) =>
+    checkPlan(p, { ...ctx, texts: new Map([[source, strings]]) }).filter((i) => i.code === "e-plan-text-fix");
+
+  it("الإصلاح الحقيقي (heute في ملخص u1-d1): done والملف ما زال يحملها → e-plan-text-fix بالنص نفسه", () => {
+    expect(fix.headword).toBe("heute");
+    const issues = fixIssues(withStatus("done"), realStrings);
+    expect(issues).toHaveLength(1);
+    expect(issues[0]!.message).toContain("Heute hast du");
+  });
+  it("done والكلمة غابت → لا خطأ · pending والكلمة موجودة → لا خطأ (دَين معلن)", () => {
+    expect(fixIssues(withStatus("done"), realStrings.filter((s) => !/heute/i.test(s)))).toEqual([]);
+    expect(fixIssues(withStatus("pending"), realStrings)).toEqual([]);
+  });
+  it("رمز البحث وكلمته الكاملة: weh tun → weh · die X → X · heutige ليست heute", () => {
+    expect(textFixToken("weh tun")).toBe("weh");
+    expect(textFixToken("die Straßenbahn")).toBe("Straßenbahn");
+    expect(textFixToken("nächst-")).toBe("nächst");
+    expect(wholeWordRegex("heute").test("Bis heute.")).toBe(true);
+    expect(wholeWordRegex("heute").test("die heutige Zeit")).toBe(false);
+    expect(wholeWordRegex("weh").test("Mein Fuß tut weh.")).toBe(true);
+  });
+  it("proseStrings: نصوص القارئ فقط — المعرّفات والروابط تسقط", () => {
+    expect(proseStrings({ id: "heute", wordIds: ["heute"], url: "https://x.de/heute", t: { de: "Heute ist gut." } })).toEqual(["Heute ist gut."]);
   });
 });

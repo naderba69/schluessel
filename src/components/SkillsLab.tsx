@@ -9,16 +9,8 @@ import {
 import { SOUND_CARDS, drillCycle, selfCompare, type SoundCard } from "../lib/pronunciation.js";
 import { tapTranslate, readingFlow, type ReadingText } from "../lib/reading.js";
 import { correctSentence, gentleWrap, sentenceOfTheDay, diaryPrompt } from "../lib/writing.js";
-import {
-  A1_RULES,
-  startDiscovery,
-  viewExamples,
-  submitInference,
-  revealRule,
-  shuffledBeads,
-  checkBeads,
-  type DiscoverySession,
-} from "../lib/grammar-discovery.js";
+import { A1_RULES } from "../lib/grammar-discovery.js";
+import { RuleDiscoveryView } from "./LessonContent.js";
 import { buildNetwork, memoryPalace, networkReviewFlow } from "../lib/vocab-network.js";
 import { A1_TASKS, taskFlow, type RealTask } from "../lib/real-tasks.js";
 import { CULTURE_FACTS, songOfTheWeek, factsNeedingWebVerify } from "../lib/culture.js";
@@ -156,85 +148,15 @@ export function WritingLab({ initialText = "" }: { initialText?: string }) {
 }
 
 /* ══════════ E13 — القواعد ══════════ */
+/**
+ * مختبر القواعد (خارج المسار): القواعد الثلاث المكتوبة في الكود — بالمكوّن نفسه الذي تعرض به محطة «الجديد»
+ * قواعد المحتوى (D115). كانت نسخة مستقلة لا تستدعي viewExamples فيرمي «سجّل استنتاجي» خطأ عند الضغط.
+ */
 export function GrammarLab({ ruleId = A1_RULES[0]!.id }: { ruleId?: string }) {
   const rule = A1_RULES.find((r) => r.id === ruleId)!;
-  const [session, setSession] = useState<DiscoverySession>(() => startDiscovery(ruleId));
-  const [inference, setInference] = useState("");
-  const [beads, setBeads] = useState<string[]>(() => shuffledBeads(rule, 2));
-  const [beadOk, setBeadOk] = useState<boolean | null>(null);
-  const shown = session.revealed ? revealRuleView() : null;
-
-  function revealRuleView() {
-    try {
-      return revealRule(session, rule);
-    } catch {
-      return null;
-    }
-  }
-
   return (
     <section data-testid="grammar-lab">
-      <h3>🧩 القواعد — {rule.topicAr}</h3>
-      <ul data-testid="grammar-examples">
-        {rule.examples.map((ex, i) => (
-          <li key={i} dir="ltr">{ex.de} <span dir="rtl">— {ex.ar}</span></li>
-        ))}
-      </ul>
-      <p data-testid="inference-prompt">{rule.inferencePromptAr}</p>
-      <input
-        data-testid="inference-input"
-        value={inference}
-        onChange={(e) => setInference(e.target.value)}
-        placeholder="استنتج القاعدة بكلماتك…"
-      />
-      <button
-        data-testid="submit-inference"
-        onClick={() => {
-          submitInference(session, inference);
-          setSession({ ...session });
-        }}
-      >
-        سجّل استنتاجي
-      </button>
-      <button
-        data-testid="reveal-rule"
-        data-locked={session.inference === null ? "true" : "false"}
-        disabled={session.inference === null}
-        onClick={() => {
-          revealRule(session, rule);
-          setSession({ ...session });
-        }}
-      >
-        🔓 اكشف القاعدة
-      </button>
-      {shown && (
-        <div data-testid="rule-view">
-          <p dir="ltr">{shown.ruleDe}</p>
-          <p>{shown.ruleAr}</p>
-          <p data-testid="rule-contrast">{shown.contrastAr}</p>
-        </div>
-      )}
-      <div data-testid="beads">
-        {beads.map((b, i) => (
-          <button
-            key={`${b}-${i}`}
-            data-testid={`bead-${i}`}
-            onClick={() => {
-              const next = [...beads];
-              const j = (i + 1) % next.length;
-              [next[i], next[j]] = [next[j]!, next[i]!];
-              setBeads(next);
-              setBeadOk(null);
-            }}
-          >
-            {b}
-          </button>
-        ))}
-      </div>
-      <button data-testid="check-beads" onClick={() => setBeadOk(checkBeads(rule, beads))}>
-        تحقّق من الترتيب
-      </button>
-      {beadOk !== null && <p data-testid="bead-result">{beadOk ? "ترتيب ممتاز!" : "الترتيب ليس بعد — جرّب تبديلاً."}</p>}
+      <RuleDiscoveryView rule={rule} />
     </section>
   );
 }

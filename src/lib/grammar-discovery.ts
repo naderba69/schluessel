@@ -1,6 +1,9 @@
 // grammar-discovery.ts — E13 محرك القواعد (اكتشاف موجّه) | M2-ب
 // المصادر: guided discovery (اكتشاف موجّه) · §2.5 (المحاولة قبل الكشف) · F121 (الاسترجاع قبل الشرح)
 // القاعدة الحديدية: **القاعدة لا تظهر قبل المثال والمحاولة** — قفل صارم في الكود.
+// D115: القواعد صارت محتوى (content/arsenal/grammar/*.json — kind=shufra) يعرضها المُشغِّل في محطة «الجديد»؛
+// A1_RULES الثلاث تبقى لمختبر المهارات فقط (خارج المسار) حتى تنتقل إلى المحتوى مع ترقية دروسها.
+import type { GrammarRuleFile } from "../../content/schemas/index.js";
 
 export type GrammarRule = {
   id: string;
@@ -14,7 +17,20 @@ export type GrammarRule = {
   contrastAr: string;
   /** حبّات الجملة — الترتيب الصحيح هو محتوى المصفوفة */
   beads: readonly string[];
+  /** D115: المشهد الذي تأتي منه الأمثلة (قصة الشفرة) */
+  sceneAr?: string;
+  /** D115: ما لا تغطيه القاعدة اليوم — يُكشف مع القاعدة */
+  limitsAr?: readonly string[];
 };
+
+/** ملف القاعدة (بعد تحقق zod) ← قاعدة المحرك — بلا إعادة صياغة: المحتوى يُعرض كما كُتب */
+export function ruleFromShufra(file: GrammarRuleFile): GrammarRule {
+  const p = file.payload;
+  return {
+    id: file.id, topicAr: p.topicAr, sceneAr: p.sceneAr, examples: p.examples, inferencePromptAr: p.inferencePromptAr,
+    ruleDe: p.ruleDe, ruleAr: p.ruleAr, contrastAr: p.contrastAr, limitsAr: p.limitsAr, beads: p.beads,
+  };
+}
 
 /** قواعد الوحدة الأولى — نفس مصائد الدرس a1-u1-d1 (D39) */
 export const A1_RULES: readonly GrammarRule[] = Object.freeze([
@@ -69,10 +85,11 @@ export type DiscoverySession = {
   revealed: boolean;
 };
 
-export function startDiscovery(ruleId: string): DiscoverySession {
-  const rule = A1_RULES.find((r) => r.id === ruleId);
-  if (!rule) throw new Error(`قاعدة غير معروفة: ${ruleId}`);
-  return { ruleId, examplesViewed: false, inference: null, revealed: false };
+/** بدء الاكتشاف: بقاعدة محتوى (كائن) أو بمعرّف من A1_RULES (مختبر المهارات) */
+export function startDiscovery(rule: string | GrammarRule): DiscoverySession {
+  if (typeof rule !== "string") return { ruleId: rule.id, examplesViewed: false, inference: null, revealed: false };
+  if (!A1_RULES.some((r) => r.id === rule)) throw new Error(`قاعدة غير معروفة: ${rule}`);
+  return { ruleId: rule, examplesViewed: false, inference: null, revealed: false };
 }
 
 /** الخطوة 1: الأمثلة — لا يُطلب من المتعلّم استنتاج قبل رؤيتها */
@@ -90,11 +107,14 @@ export function submitInference(s: DiscoverySession, text: string): { ok: boolea
 }
 
 /** الخطوة 3: كشف القاعدة — **مغلقة** قبل رؤية الأمثلة والمحاولة معاً */
-export function revealRule(s: DiscoverySession, rule: GrammarRule = requireRule(s)): { ruleDe: string; ruleAr: string; contrastAr: string } {
+export function revealRule(
+  s: DiscoverySession,
+  rule: GrammarRule = requireRule(s),
+): { ruleDe: string; ruleAr: string; contrastAr: string; limitsAr: readonly string[] } {
   if (!s.examplesViewed) throw new Error("القاعدة لا تظهر قبل المثال (قفل)");
   if (s.inference === null) throw new Error("القاعدة لا تظهر قبل محاولتك (§2.5)");
   s.revealed = true;
-  return { ruleDe: rule.ruleDe, ruleAr: rule.ruleAr, contrastAr: rule.contrastAr };
+  return { ruleDe: rule.ruleDe, ruleAr: rule.ruleAr, contrastAr: rule.contrastAr, limitsAr: rule.limitsAr ?? [] };
 }
 
 export function grammarFlow(): { order: number; kind: "examples" | "inference" | "reveal" | "beads"; labelAr: string }[] {

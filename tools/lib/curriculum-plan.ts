@@ -26,6 +26,33 @@ export interface PlanContext {
   lists: OfficialWordlist[];
   /** مسارات ملفات المحتوى (نسبية عن content/) — لفحص textFixes؛ غيابها يتخطى الفحص */
   paths?: Set<string>;
+  /** D115: نصوص ملفات textFixes (proseStrings) — لإثبات «done»؛ غيابها يتخطى الإثبات */
+  texts?: ReadonlyMap<string, readonly string[]>;
+}
+
+/** كل نصوص ملف محتوى للقارئ: القيم النصية عدا المعرّفات (slug) والروابط */
+export function proseStrings(data: unknown): string[] {
+  const out: string[] = [];
+  const walk = (v: unknown) => {
+    if (typeof v === "string") {
+      if (!/^[a-z0-9-]+$/.test(v) && !/^https?:\/\//.test(v)) out.push(v);
+    } else if (Array.isArray(v)) v.forEach(walk);
+    else if (v && typeof v === "object") Object.values(v).forEach(walk);
+  };
+  walk(data);
+  return out;
+}
+
+/** رمز البحث لإصلاح نص: أول كلمة من الكلمة الرئيسية بعد الأداة (weh tun → weh · die Straßenbahn → Straßenbahn) */
+export function textFixToken(headword: string): string {
+  const parts = headword.replace(/^(der|die|das|sich) /, "").trim().split(/\s+/);
+  return (parts[0] ?? headword).replace(/[-,.]+$/, "");
+}
+
+/** كلمة كاملة لا جزء كلمة، بلا حساسية لحالة الحرف (Heute = heute · heutige ≠ heute) */
+export function wholeWordRegex(token: string): RegExp {
+  const escaped = token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`(^|[^\\p{L}])${escaped}(?=$|[^\\p{L}])`, "iu");
 }
 
 /** أعلى حِمل كلمات قائم في درس محتوى (a1-u9-d1) — سقف الإسناد */
@@ -153,8 +180,19 @@ export function checkPlan(plan: CurriculumPlan, ctx: PlanContext): PlanIssue[] {
       for (const h of c.missing) if (everywhere.has(h)) warn("w-plan-elsewhere", `${c.lessonId}: «${h}» (pending) علّمها درس آخر — حدّث الخطة (${plan.decision})`);
     }
   }
-  if (ctx.paths) for (const t of plan.core?.textFixes ?? [])
-    if (!ctx.paths.has(t.source)) err("e-plan-text-fix", `إصلاح نص «${t.headword}»: الملف ${t.source} غير موجود`);
+  for (const t of plan.core?.textFixes ?? []) {
+    if (ctx.paths && !ctx.paths.has(t.source)) {
+      err("e-plan-text-fix", `إصلاح نص «${t.headword}»: الملف ${t.source} غير موجود`);
+      continue;
+    }
+    // D115: «done» يُثبت ولا يُصدَّق — الكلمة لم تعد في نصوص الملف
+    const strings = t.status === "done" ? ctx.texts?.get(t.source) : undefined;
+    if (!strings) continue;
+    const token = textFixToken(t.headword);
+    const re = wholeWordRegex(token);
+    const hit = strings.find((x) => re.test(x));
+    if (hit) err("e-plan-text-fix", `إصلاح «${t.headword}» مُعلَّم done والملف ${t.source} ما زال يحمل «${token}»: «${hit.slice(0, 70)}»`);
+  }
 
   // ——— دروس التكملة المنتَجة: تعلّم كلماتها بكلماتها هي · ونمطها ———
   const kinds = plannedLessonKinds(plan);

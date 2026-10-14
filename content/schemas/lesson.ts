@@ -8,6 +8,7 @@ export const StationType = z.enum([
   "gender-drill", "case-drill", "verb-bank", "error-hunt", "mini-pronunciation",
   "listening", "reading", "writing", "speaking",
 ]);
+export type StationType = z.infer<typeof StationType>;
 
 export const CommunicativeTask = z.object({
   /** مهمة تواصلية حقيقية بإنجاز غرض (CLT — د‑01) */
@@ -115,3 +116,105 @@ export const Lesson = SchemaVersioned.extend({
   }),
 });
 export type Lesson = z.infer<typeof Lesson>;
+
+// ——— D115: بنود التدريب المُنمَّطة (حارس الترقية — D114) ———
+// مخطط الدرس العام يبقى مرناً (المحتوى القديم صالح كما هو)؛ هذه الأشكال يفرضها حارس الترقية
+// (tools/lib/lesson-upgrade.ts) على كل درس عُلِّم تدريبه done في خطة الترقية — ويقرؤها المُشغِّل للتصحيح التفسيري.
+
+/** شرح «لماذا» بالعربية بعد المحاولة (§3: تصحيح فوري تفسيري — لا «خطأ» فقط) */
+export const WhyAr = z
+  .string()
+  .min(12, { message: "شرح why أقصر من أن يشرح (≥12 حرفاً)" })
+  .regex(/[\u0600-\u06FF]/, { message: "شرح why يُكتب بالعربية" });
+const ItemText = z.string().min(1);
+const AudioId = z.string().regex(/^[a-z0-9-]+$/, { message: "معرّف مسار صوتي من المانيفست" });
+
+/** كلمات الجملة كما تُعرض بطاقاتٍ للترتيب — علامة الترقيم تبقى ملتصقة بكلمتها */
+export const sentenceTokens = (s: string): string[] => s.trim().split(/\s+/).filter(Boolean);
+/** صيغة المقارنة في الإملاء: بلا علامة ترقيم نهائية ولا فراغات زائدة — الحرف الكبير جزء من التهجئة */
+export const dictationForm = (s: string): string => s.trim().replace(/\s+/g, " ").replace(/[.!?]+$/, "");
+const sameMultiset = (a: readonly string[], b: readonly string[]) =>
+  a.length === b.length && [...a].sort().join("\u0000") === [...b].sort().join("\u0000");
+const distinct = (xs: readonly string[]) => new Set(xs).size === xs.length;
+
+/** اختيار: الإجابة من الخيارات · بلا تكرار (choice · gender-drill · case-drill) */
+export const ChoiceItem = z
+  .object({ q: ItemText, choices: z.array(ItemText).min(2).max(5), a: ItemText, why: WhyAr })
+  .strict()
+  .refine((i) => i.choices.includes(i.a), { message: "الإجابة ليست بين الخيارات" })
+  .refine((i) => distinct(i.choices), { message: "خيارات مكررة" });
+
+/** ملء الفراغ: السؤال يحمل ___ · accept صيغ صحيحة بديلة (gap-fill · verb-bank) */
+export const GapFillItem = z
+  .object({ q: ItemText.refine((s) => s.includes("___"), { message: "بند فراغ بلا ___" }), a: ItemText, accept: z.array(ItemText).optional(), why: WhyAr })
+  .strict();
+
+/** ترتيب الجملة: البطاقات هي كلمات الإجابة نفسها وليست مرتبة سلفاً */
+export const BuildSentenceItem = z
+  .object({ q: ItemText.optional(), tokens: z.array(ItemText).min(3).max(10), a: ItemText, why: WhyAr })
+  .strict()
+  .refine((i) => sameMultiset(i.tokens, sentenceTokens(i.a)), { message: "بطاقات الترتيب ليست كلمات الإجابة نفسها" })
+  .refine((i) => i.tokens.join(" ") !== sentenceTokens(i.a).join(" "), { message: "البطاقات مرتبة سلفاً — لا تمرين" });
+
+/** صيد الخطأ: جملة خاطئة ← تصحيحها (q ≠ a) */
+export const ErrorHuntItem = z
+  .object({ q: ItemText, a: ItemText, accept: z.array(ItemText).optional(), why: WhyAr })
+  .strict()
+  .refine((i) => i.q.trim() !== i.a.trim(), { message: "الجملة الخاطئة هي الصحيحة نفسها" });
+
+/** إنتاج حر (speaking · writing): مهمة + نموذج إجابة — تقييم ذاتي، فالتعرّف الآلي لا يحكم (قانون ASR) */
+export const ProductionItem = z.object({ q: ItemText, a: ItemText, why: WhyAr }).strict();
+
+/** استماع: مسار صوتي موجود + نصه المنطوق (للاحتياطي) ← اختيار (listening · mini-pronunciation) */
+export const ListeningItem = z
+  .object({ audioId: AudioId, speakText: DeText, q: ItemText, choices: z.array(ItemText).min(2).max(5), a: ItemText, why: WhyAr })
+  .strict()
+  .refine((i) => i.choices.includes(i.a), { message: "الإجابة ليست بين الخيارات" })
+  .refine((i) => distinct(i.choices), { message: "خيارات مكررة" });
+
+/** إملاء: ما يُكتب هو ما يُسمع حرفياً (عدا علامة الترقيم الأخيرة) */
+export const DictationItem = z
+  .object({ audioId: AudioId, speakText: DeText, a: ItemText, why: WhyAr })
+  .strict()
+  .refine((i) => dictationForm(i.a) === dictationForm(i.speakText), { message: "إجابة الإملاء ليست النص المسموع" });
+
+/** توصيل: أزواج ألماني↔عربي بلا تكرار في أي طرف */
+export const MatchItem = z
+  .object({ q: ItemText.optional(), pairs: z.array(z.object({ de: DeText, ar: ArText }).strict()).min(3).max(6), why: WhyAr })
+  .strict()
+  .refine((i) => distinct(i.pairs.map((p) => p.de)) && distinct(i.pairs.map((p) => p.ar)), { message: "أزواج توصيل مكررة" });
+
+/** قراءة: نص قصير ← سؤال (اختيار أو إجابة قصيرة) */
+export const ReadingItem = z
+  .object({ text: DeText, q: ItemText, choices: z.array(ItemText).min(2).max(5).optional(), a: ItemText, why: WhyAr })
+  .strict()
+  .refine((i) => !i.choices || i.choices.includes(i.a), { message: "الإجابة ليست بين الخيارات" });
+
+/** شكل البند لكل نوع محطة — كل الأنواع الأربعة عشر مغطاة (لا نوع بلا شكل) */
+export const PRACTICE_ITEM_SHAPES = {
+  choice: ChoiceItem,
+  "gender-drill": ChoiceItem,
+  "case-drill": ChoiceItem,
+  "gap-fill": GapFillItem,
+  "verb-bank": GapFillItem,
+  "build-sentence": BuildSentenceItem,
+  "error-hunt": ErrorHuntItem,
+  speaking: ProductionItem,
+  writing: ProductionItem,
+  listening: ListeningItem,
+  "mini-pronunciation": ListeningItem,
+  dictation: DictationItem,
+  match: MatchItem,
+  reading: ReadingItem,
+} as const satisfies Record<StationType, z.ZodType>;
+
+/** محطات الصوت: تشير إلى مسار موجود في المانيفست (D114: «الاستماع بالصوت الموجود والإملاء») */
+export const AUDIO_STATION_TYPES = ["listening", "mini-pronunciation", "dictation"] as const;
+
+/** بند Quiz مُنمَّط: سؤال + إجابة (+ خيارات تضم الإجابة) + why اختياري يُعرض بعد التصحيح */
+export const QuizItem = z
+  .object({ q: ItemText, a: ItemText, choices: z.array(ItemText).min(2).max(5).optional(), why: WhyAr.optional() })
+  .strict()
+  .refine((i) => !i.choices || i.choices.includes(i.a), { message: "الإجابة ليست بين الخيارات" })
+  .refine((i) => !i.choices || distinct(i.choices), { message: "خيارات مكررة" });
+export type QuizItem = z.infer<typeof QuizItem>;

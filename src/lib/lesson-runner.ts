@@ -1,6 +1,7 @@
 // src/lib/lesson-runner.ts — مُشغِّل الدرس: يحوّل محتوى الدرس (D3: بيانات في git) إلى شاشات الحصة الأربع
 // الربط: E01 (المحطات) · §2.5 (الاسترجاع) · F121 (محاولة قبل كشف) · D29 (حصة واحدة متصلة)
 import type { Lesson, Word } from "../../content/schemas/index.js";
+import type { GrammarRule } from "./grammar-discovery.js";
 
 /** بطاقة المصيدة — من مخطط الدرس مباشرة (لا نكرر التعريف) */
 export type WarningCardData = Lesson["zusammenfassung"]["warningCards"][number];
@@ -45,6 +46,8 @@ export type LessonStationPlan = {
   recall: RecallCardData[];
   /** محطة 2 — الجديد: محاولة قبل الكشف (F121) */
   learn: LearnCardData[];
+  /** محطة 2 بعد الكلمات — قاعدة اليوم بالاكتشاف الموجَّه (D115): المعرّفات التي لها ملف قاعدة فقط */
+  rules: GrammarRule[];
   /** محطة 3 — التدريب */
   practice: PracticeData;
   /** محطة 4 — الخلاصة */
@@ -78,7 +81,7 @@ function explainWord(w: Word): string {
  * الاسترجاع (الدفء) ← الجديد (العرض) ← التدريب (المحطات + المهمة التواصلية) ← الخلاصة (المصائد + حزمة SRS).
  * أي كلمة مفقودة = خطأ فوري (لا شاشات ناقصة أبداً).
  */
-export function planLessonStations(lesson: Lesson, words: Word[]): LessonStationPlan {
+export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: readonly GrammarRule[] = []): LessonStationPlan {
   const recall: RecallCardData[] = lesson.warmup.cardIds.map((id) => {
     const w = wordById(words, id);
     return { id, front: fullForm(w), back: w.ar.join(" · "), audioId: `word-${w.id}`, speakText: fullForm(w) };
@@ -99,10 +102,16 @@ export function planLessonStations(lesson: Lesson, words: Word[]): LessonStation
 
   for (const id of lesson.zusammenfassung.srsBundleWordIds) wordById(words, id); // حزمة SRS مكتملة
 
+  // معرّف بلا ملف = قاعدة لم تُكتب بعد (دَين معلن في خطة الترقية؛ الحارس يمنع done بلا ملف) — لا شاشة فارغة
+  const rules = lesson.praesentation.grammarArsenalIds
+    .map((id) => grammarRules.find((r) => r.id === id))
+    .filter((r): r is GrammarRule => !!r);
+
   return {
     lessonId: lesson.id,
     recall,
     learn,
+    rules,
     practice: {
       stations: lesson.uebung.stations,
       communicativeTask: lesson.uebung.communicativeTask,
