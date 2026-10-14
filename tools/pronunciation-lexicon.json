@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0.0",
+  "decision": "D121",
+  "about": "كلمات يخطئ espeak-ng (محرك الفونيمات تحت Piper) طول حركتها المنبورة — مقيسة مقابل مرجع حر. تُصحَّح على مستوى الفونيمات قبل النموذج (tools/gen-audio.py: synth_phonemes ← apply_lexicon) وفي الـIPA المقيس (tools/phonemize.py)، فيتطابق ما يُقاس وما يُنطق دائماً. الرمز الصحيح يُكتب بأعراف espeak نفسها (analogy) ليصل النموذجَ تسلسلٌ رآه في تدريبه.",
+  "reference": {
+    "name": "open-dict-data/ipa-dict — data/de.txt (مشتق من Wiktionary)",
+    "license": "MIT",
+    "gitBlob": "9a6b0c95c713d1a82cc173b25cc221bc55b278d0",
+    "url": "https://github.com/open-dict-data/ipa-dict/blob/master/data/de.txt"
+  },
+  "entries": [
+    {
+      "word": "Kurs",
+      "espeak": "kˈuːɾs",
+      "ipa": "kˈʊɐs",
+      "referenceIpa": "/kʊʁs/",
+      "analogy": "Wurm [vˈʊɐm] · Gurt [ɡˈʊɐt] — u قصيرة قبل r+ساكن",
+      "contexts": [
+        "Kurs.",
+        "Ich bin neu im Kurs."
+      ],
+      "regeneratedTracks": [
+        "word-kurs"
+      ]
+    },
+    {
+      "word": "Durst",
+      "espeak": "dˈuːɾst",
+      "ipa": "dˈʊɐst",
+      "referenceIpa": "/dʊʁst/",
+      "analogy": "Wurm [vˈʊɐm] · Gurt [ɡˈʊɐt] — u قصيرة قبل r+ساكن",
+      "contexts": [
+        "Durst.",
+        "Ich habe Durst!"
+      ],
+      "regeneratedTracks": [
+        "word-durst"
+      ]
+    },
+    {
+      "word": "Wurst",
+      "espeak": "vˈuːɾst",
+      "ipa": "vˈʊɐst",
+      "referenceIpa": "/vʊʁst/",
+      "analogy": "Wurm [vˈʊɐm] · Gurt [ɡˈʊɐt] — u قصيرة قبل r+ساكن",
+      "contexts": [
+        "Wurst.",
+        "Die Wurst ist lecker."
+      ],
+      "regeneratedTracks": [
+        "word-wurst"
+      ]
+    },
+    {
+      "word": "vierzehn",
+      "espeak": "fˈiːɾtseːn",
+      "ipa": "fˈɪɾtseːn",
+      "referenceIpa": "/ˈfɪʁt͡seːn/",
+      "analogy": "Wirt [vˈɪɾt] · Hirsch [hˈɪɾʃ] — i قصيرة قبل r+ساكن (vier وحدها طويلة [fˈiːɾ])",
+      "contexts": [
+        "vierzehn.",
+        "Lena ist vierzehn."
+      ],
+      "regeneratedTracks": [
+        "num-14"
+      ]
+    },
+    {
+      "word": "Telefonnummer",
+      "espeak": "tˌeːleːfˈɔnʊmɜ",
+      "ipa": "tˌeːleːfˈoːnnˌʊmɜ",
+      "referenceIpa": "/teləˈfoːnˌnʊmɐ/",
+      "analogy": "Telefon [tˌeːleːfˈoːn] + Nummer [nˈʊmɜ] — espeak يقرأ المركّب «fonn» مقطعاً مغلقاً فيقصّر o",
+      "contexts": [
+        "Telefonnummer.",
+        "Meine Telefonnummer ist null, eins, sieben."
+      ],
+      "regeneratedTracks": [
+        "word-telefonnummer",
+        "num-tel-yusuf"
+      ]
+    },
+    {
+      "word": "Vorname",
+      "espeak": "fˈɔɾnɑːmə",
+      "ipa": "fˈoːɾnɑːmə",
+      "referenceIpa": "/ˈfoːɐ̯ˌnaːmə/",
+      "analogy": "Vorort [fˈoːɾˌɔɾt] · Tor [tˈoːɾ] — o طويلة في vor",
+      "contexts": [
+        "Vorname.",
+        "Mein Vorname ist Yusuf."
+      ],
+      "regeneratedTracks": [
+        "word-vorname"
+      ]
+    }
+  ]
+}

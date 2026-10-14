@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-zahlen-1-20",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Die Zahlen bis zwanzig: Wie alt sind Sie?",
+    "ar": "الأعداد حتى 20 — والعمر بـsein لا بـhaben"
+  },
+  "payload": {
+    "topicAr": "الأعداد من 0 إلى 20: من 13 إلى 19 الآحاد أولاً ثم zehn، واستثناءان (sechzehn · siebzehn)، والعمر بفعل الكينونة، ورقم الهاتف رقماً رقماً",
+    "sceneAr": "في مكتب التسجيل (die Anmeldung) تملأ الموظفة استمارة يوسف للدورة: تسأله عن عمره فيقول neunzehn، ثم عن رقم هاتفه فيقرؤه رقماً رقماً — ويبدأ بـnull.",
+    "examples": [
+      {
+        "de": "Wie alt sind Sie? — Ich bin neunzehn Jahre alt.",
+        "ar": "كم عمرك؟ — عمري تسعة عشر عاماً (19)."
+      },
+      {
+        "de": "drei → dreizehn · vier → vierzehn · neun → neunzehn",
+        "ar": "3 ← 13 · 4 ← 14 · 9 ← 19: الآحاد أولاً ثم zehn — كلمة واحدة."
+      },
+      {
+        "de": "sechs → sechzehn · sieben → siebzehn",
+        "ar": "6 ← 16: يسقط s · 7 ← 17: يسقط en — الاستثناءان الوحيدان."
+      },
+      {
+        "de": "elf · zwölf · zwanzig",
+        "ar": "11 و12 و20 كلمات خاصة تُحفظ كما هي — لا تُبنى من zehn."
+      },
+      {
+        "de": "Meine Telefonnummer ist null, eins, sieben, sechs …",
+        "ar": "رقم هاتفي 0176… — يُقرأ رقماً رقماً، والصفر null."
+      }
+    ],
+    "inferencePromptAr": "انظر إلى الأمثلة: (1) كيف تُبنى 13 و14 و19 من 3 و4 و9 — أي جزء يأتي أولاً؟ (2) ماذا سقط من sechs في 16 ومن sieben في 17؟ (3) بأي فعل يقول يوسف عمره: Ich habe أم Ich bin؟",
+    "ruleDe": "dreizehn · vierzehn · fünfzehn · sechzehn · siebzehn · achtzehn · neunzehn — Ich bin zwanzig Jahre alt.",
+    "ruleAr": "من 13 إلى 19: الآحاد أولاً ثم zehn في كلمة واحدة — drei + zehn = dreizehn. استثناءان فقط: sechzehn (يسقط s من sechs) وsiebzehn (يسقط en من sieben). أما elf (11) وzwölf (12) وzwanzig (20) فكلمات خاصة تُحفظ. والعمر بفعل الكينونة: Ich bin + العدد + Jahre alt (أو Ich bin neunzehn وحدها). ورقم الهاتف يُقرأ رقماً رقماً، و0 = null.",
+    "contrastAr": "بناء 13–19 سهل على العربي: «ثلاثة عشر» تبدأ بالآحاد مثل dreizehn تماماً. الصعب هو العمر: العربية تقول «عمري 19 سنة» والفرنسية j'ai 19 ans (عندي)، فيقول المتعلم Ich habe 19 Jahre ✗ أو Mein Alter ist 19 — والألمانية تقول العمر بالكينونة: Ich bin 19 Jahre alt ✓، وdas Alter كلمة الاستمارات (Alter: 19) لا الكلام (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "بعد 20 تأتي الآحاد أولاً مع «و»: einundzwanzig = واحد وعشرون — كالعربية أيضاً؛ نتعلمها في الوحدة 3.",
+      "على الهاتف يقول كثيرون zwo بدل zwei حتى لا تختلط بـdrei — كلاهما صحيح.",
+      "Jahre لا تأتي وحدها في جملة العمر: إما Ich bin neunzehn أو Ich bin neunzehn Jahre alt."
+    ],
+    "beads": [
+      "Ich",
+      "bin",
+      "neunzehn",
+      "Jahre",
+      "alt."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u1-d4"
+  ]
+}

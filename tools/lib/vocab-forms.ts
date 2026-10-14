@@ -3,14 +3,17 @@
 // لكنه لا يرفض كلمة مدروسة بصيغها المسجلة (الجمع/المضارع/Perfekt/Präteritum/الأمر).
 import type { Word } from "../../content/schemas/index.js";
 
-/** الكلمات الوظيفية المغلقة (أدوات/ضمائر/مساعدة/جر/ربط/أعداد) — تُعرف دون درس */
+/** الكلمات الوظيفية المغلقة (أدوات/ضمائر/مساعدة/جر/ربط/أعداد) — تُعرف دون درس.
+ * D121: الأعداد صنف مغلق كاملاً حتى 20 — كانت 13–19 وnull ناقصة فعُدّت «neunzehn» غير مدروسة
+ * في درس الأعداد نفسه (a1-u1-d4)، وnull لا غنى عنها لرقم الهاتف. */
 export const CLOSED: ReadonlySet<string> = new Set(`der die das den dem des ein eine einen einem einer eines kein keine keinen keinem keiner
 ich du er sie es wir ihr mich dich ihn uns euch mir dir ihm ihnen sich man mein meine meinen meinem meiner dein deine deinen deinem
 sein seine seinen seinem ihre ihren ihrem unser unsere euer eure bin bist ist sind seid war waren habe hast hat haben habt hatte
 werde wirst wird werden kann kannst können könnt muss musst müssen will willst wollen möchte möchtest möchten darf darfst dürfen
 soll sollst sollen in im ins an am ans auf aus bei mit nach von vom zu zum zur für um ohne gegen durch bis seit über unter vor
 hinter neben zwischen beim und oder aber denn sondern weil dass wenn als ob nicht auch noch schon nur sehr ja nein doch mal so wie was
-wer wo wann warum welche welcher welches eins zwei drei vier fünf sechs sieben acht neun zehn elf zwölf zwanzig hundert es gibt`.split(/\s+/));
+wer wo wann warum welche welcher welches null eins zwei drei vier fünf sechs sieben acht neun zehn elf zwölf
+dreizehn vierzehn fünfzehn sechzehn siebzehn achtzehn neunzehn zwanzig hundert es gibt`.split(/\s+/));
 
 export const deumlaut = (s: string) => s.replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u");
 

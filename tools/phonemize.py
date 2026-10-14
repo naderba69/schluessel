@@ -3,6 +3,7 @@
 # الاستخدام:
 #   python3 tools/phonemize.py "Fuß." "groß."            → [{"text": "Fuß.", "ipa": "fˈuːs."}, ...]  (thorsten)
 #   python3 tools/phonemize.py --voice de_DE-kerstin-low "nicht"
+#   python3 tools/phonemize.py --raw "Kurs."              → espeak الخام بلا معجم النطق (D121)
 #   python3 tools/phonemize.py --coverage                 → تغطية كل نص ألماني في content/ لكل صوت مثبَّت
 # الغرض: قياس لا افتراض — (1) كشف مقاطع وُلّدت من رسم خاطئ (Fuss = [fʊs]) · (2) كشف فونيمات لا تعرفها خريطة
 # الصوت فيُسقطها Piper صامتاً (kerstin بلا U+0327 كان يقول «nict») — بعد طبقة fit_phonemes يجب أن يكون الغائب صفراً.
@@ -49,6 +50,7 @@ def coverage() -> dict:
             for sent in voice.phonemize(t):
                 missing_raw.update(p for p in sent if p not in id_map)
                 fitted, n = ga.fit_phonemes(sent, id_map)
+                fitted = ga.apply_lexicon(fitted)[0]  # D121: رموز معجم النطق تُفحص تغطيتها أيضاً
                 fixed += n
                 missing_fitted.update(p for p in fitted if p not in id_map)
         report["voices"][voice_id] = {
@@ -65,6 +67,8 @@ def main() -> None:
     if args[:1] == ["--coverage"]:
         print(json.dumps(coverage(), ensure_ascii=False))
         return
+    raw = "--raw" in args  # D121: espeak الخام بلا معجم النطق — لقياس هل ما زال الخطأ قائماً
+    args = [a for a in args if a != "--raw"]
     voice_id = ga.VOICE_ID
     if args[:1] == ["--voice"]:
         voice_id, args = args[1], args[2:]
@@ -72,7 +76,7 @@ def main() -> None:
     id_map = voice.config.phoneme_id_map
     out = []
     for t in args:
-        sents = [ga.fit_phonemes(s, id_map)[0] for s in voice.phonemize(t)]
+        sents = [ga.fit_phonemes(s, id_map)[0] for s in voice.phonemize(t)] if raw else ga.synth_phonemes(voice, t)
         out.append({"text": t, "ipa": "".join("".join(s) for s in sents)})
     print(json.dumps(out, ensure_ascii=False))
 

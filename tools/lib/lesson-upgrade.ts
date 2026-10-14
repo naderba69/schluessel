@@ -18,6 +18,8 @@
 //   e-upgrade-quiz-size      نسخة Quiz بأقل من 6 بنود · e-upgrade-quiz-item شكل البند · e-upgrade-quiz-dup تكرار سؤال
 //   e-upgrade-quiz-variants  نسختان متطابقتان (القانون 21: 3 نسخ تتبادل)
 //   e-upgrade-front          كلمة ألمانية غير مدروسة حتى الدرس في تدريبه/مصائده/Quiz (قانون الجبهة 13)
+//   e-upgrade-warmup         practice=done: بطاقة استدعاء (warmup) لم تُدرَّس قبل الدرس — الاستدعاء لما سبق تعلمه (F121)؛
+//                            أول درس في المسار مستثنى (لا شيء قبله). قياس D121: 12 بطاقة في 8 دروس A1 تستدعي كلمة اليوم نفسه
 //   e-upgrade-word-unpracticed  practice+quiz=done وكلمة جديدة من الدرس لا تظهر في أي بند (لا كلمة بلا استرجاع)
 //   w-upgrade-mark-done      جزء pending يستوفي معايير done فعلاً — علِّمه done
 //   w-upgrade-proper-noun    اسم علم معلن لا يظهر في نصوص الدرس المُرقّاة (باب خلفي)
@@ -180,6 +182,13 @@ function checkPracticePart(lesson: Lesson, ctx: UpgradeContext, stems: ReadonlyS
   for (const c of lesson.zusammenfassung.warningCards) texts.push(c.commonError.de, c.correct.de, ...itemTexts(c.exercise));
   const unknown = frontViolations(texts, stems, allow);
   if (unknown.length) err("e-upgrade-front", `${lesson.id} (تدريب/مصائد): غير مدروسة حتى الدرس: ${unknown.join("، ")}`);
+  // D121: الاستدعاء لما سبق تعلمه — بطاقة أول تدريسها اليوم (أو لاحقاً) ليست استدعاءً بل عرضٌ قبل الشرح
+  const earlier = ctx.lessons.filter((l) => pathOrder(l) < pathOrder(lesson));
+  if (earlier.length > 0) {
+    const before = new Set(earlier.flatMap((l) => l.praesentation.wordIds));
+    const notYet = lesson.warmup.cardIds.filter((id) => !before.has(id));
+    if (notYet.length) err("e-upgrade-warmup", `${lesson.id}: بطاقات الاستدعاء لم تُدرَّس قبل هذا الدرس: ${notYet.join("، ")} — الاستدعاء لما سبق (F121)`);
+  }
   return { issues, texts };
 }
 

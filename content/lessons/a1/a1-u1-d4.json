@@ -14,9 +14,9 @@
   ],
   "warmup": {
     "cardIds": [
-      "zahl",
-      "alt",
-      "telefon"
+      "telefonnummer",
+      "wie-viel",
+      "heute"
     ]
   },
   "einstieg": {
@@ -49,7 +49,10 @@
       "monat",
       "woche",
       "tag",
-      "strasse"
+      "strasse",
+      "alter",
+      "kurs",
+      "klasse"
     ],
     "grammarArsenalIds": [
       "ars-zahlen-1-20"
@@ -65,51 +68,191 @@
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«كم عمرك؟» بالألمانية؟",
-            "a": "Wie alt bist du?"
+            "q": "Ich ___ neunzehn Jahre alt.",
+            "a": "bin",
+            "why": "العمر بفعل الكينونة: Ich bin … Jahre alt — لا Ich habe … Jahre (نقلاً عن الفرنسية j'ai 19 ans)."
           },
           {
-            "q": "«عمري 15 سنة»؟",
-            "a": "Ich bin 15 Jahre alt."
-          }
-        ],
-        "interleavedWith": [],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "«هذا هاتفي المحمول»؟",
-            "a": "Das ist mein Handy."
+            "q": "Wie ___ bist du? — Ich bin zwanzig.",
+            "a": "alt",
+            "why": "Wie alt …؟ = كم العمر؟ — حرفياً «كم كبيرٌ أنت؟»، وalt تأتي في آخر جملة العمر."
           },
           {
-            "q": "أي جنس: das Handy؟",
-            "a": "das — لا يُنقل من الإنجليزية"
-          }
-        ],
-        "interleavedWith": [],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "أكمل: Meine ___ ist ... (die Nummer)",
-            "a": "Nummer"
+            "q": "drei + zehn = ___",
+            "a": "dreizehn",
+            "why": "من 13 إلى 19: الآحاد أولاً ثم zehn في كلمة واحدة — كالعربية «ثلاثة عشر»."
           },
           {
-            "q": "«الأسبوع فيه سبعة أيام»؟",
-            "a": "Eine Woche hat sieben Tage."
+            "q": "sechs + zehn = ___",
+            "a": "sechzehn",
+            "why": "استثناء: يسقط s من sechs ← sechzehn، والنطق «زِخ‑تسين» بلا «كس»."
+          },
+          {
+            "q": "sieben + zehn = ___",
+            "a": "siebzehn",
+            "why": "الاستثناء الثاني: يسقط en من sieben ← siebzehn — ولا استثناء غيرهما."
+          },
+          {
+            "q": "Das ist die ___ dreizehn: 13.",
+            "a": "Zahl",
+            "why": "die Zahl = العدد نفسه (13)، وdie Nummer = رقم يميّز شيئاً (رقم الهاتف أو الغرفة)."
+          },
+          {
+            "q": "Wie ist Ihre ___? — Null, eins, sieben, sechs …",
+            "a": "Telefonnummer",
+            "why": "die Telefonnummer (تعلّمتها أمس) تُقرأ رقماً رقماً، والصفر null."
+          },
+          {
+            "q": "Ich bin neu im ___. (الدورة)",
+            "a": "Kurs",
+            "why": "der Kurs = الدورة، وim = in dem («في الـ»): Ich bin neu im Kurs."
+          },
+          {
+            "q": "Ein Jahr hat zwölf ___.",
+            "a": "Monate",
+            "why": "der Monat ← الجمع die Monate (‑e)، كما das Jahr ← die Jahre."
           }
         ],
         "interleavedWith": [
-          "heissen",
-          "kommen"
+          "telefonnummer",
+          "neu"
         ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "num-13",
+            "speakText": "dreizehn.",
+            "q": "استمع: أي عدد سمعت؟",
+            "choices": [
+              "13",
+              "30",
+              "3"
+            ],
+            "a": "13",
+            "why": "‑zehn في الآخر = ‑عشر، فالعدد بين 13 و19: dreizehn = 13. أما 30 فلها نهاية أخرى تتعلمها في الوحدة 3."
+          },
+          {
+            "audioId": "num-17",
+            "speakText": "siebzehn.",
+            "q": "استمع: أي عدد سمعت؟",
+            "choices": [
+              "17",
+              "70",
+              "7"
+            ],
+            "a": "17",
+            "why": "siebzehn = 17: سقط en من sieben وبقي ‑zehn في الآخر."
+          },
+          {
+            "audioId": "num-12",
+            "speakText": "zwölf.",
+            "q": "استمع: أي عدد سمعت؟",
+            "choices": [
+              "12",
+              "20",
+              "2"
+            ],
+            "a": "12",
+            "why": "zwölf (12) كلمة خاصة مثل elf (11) — لا تُبنى من zwei؛ وzwanzig (20) تنتهي بـ‑zig."
+          },
+          {
+            "audioId": "num-15",
+            "speakText": "fünfzehn.",
+            "q": "استمع: أي عدد سمعت؟",
+            "choices": [
+              "15",
+              "50",
+              "5"
+            ],
+            "a": "15",
+            "why": "fünf + zehn = fünfzehn: الآحاد أولاً ثم ‑zehn، وü بشفتين مدوّرتين."
+          },
+          {
+            "audioId": "num-tel-yusuf",
+            "speakText": "Meine Telefonnummer ist null, eins, sieben, sechs, drei, vier, zwei, acht, neun.",
+            "q": "استمع: ما رقم هاتف يوسف؟",
+            "choices": [
+              "0176 34289",
+              "0167 34289",
+              "0176 43289"
+            ],
+            "a": "0176 34289",
+            "why": "الرقم يُقرأ رقماً رقماً: null · eins · sieben · sechs … — انتبه للترتيب: sieben ثم sechs (7 ثم 6)، وdrei ثم vier."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "alt.",
+              "Jahre",
+              "Ich",
+              "neunzehn",
+              "bin"
+            ],
+            "a": "Ich bin neunzehn Jahre alt.",
+            "why": "Ich bin + العدد + Jahre alt — وalt في آخر الجملة دائماً."
+          },
+          {
+            "tokens": [
+              "Telefonnummer?",
+              "ist",
+              "Ihre",
+              "Wie"
+            ],
+            "a": "Wie ist Ihre Telefonnummer?",
+            "why": "wie لا was (كما في السؤال عن الاسم)، ثم ist، ثم Ihre لأن die Nummer مؤنثة."
+          },
+          {
+            "tokens": [
+              "neu.",
+              "ist",
+              "Handy",
+              "Das"
+            ],
+            "a": "Das Handy ist neu.",
+            "why": "das Handy محايد — جنسه لا يتبع «الهاتف» المذكّر بالعربية."
+          }
+        ],
+        "interleavedWith": [
+          "telefonnummer",
+          "neu"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "num-14",
+            "speakText": "vierzehn.",
+            "a": "vierzehn",
+            "why": "vier + zehn كلمة واحدة بحرف صغير، لكن i فيها قصيرة («فِر‑تسين») بخلاف vier الطويلة."
+          },
+          {
+            "audioId": "num-16",
+            "speakText": "sechzehn.",
+            "a": "sechzehn",
+            "why": "sechzehn بلا s بعد sech — الكتابة تتبع النطق «زِخ‑تسين»."
+          },
+          {
+            "audioId": "num-19",
+            "speakText": "neunzehn.",
+            "a": "neunzehn",
+            "why": "neun + zehn = neunzehn، وeu تُنطق «أوي» كما في neu."
+          }
+        ],
+        "interleavedWith": [],
         "explanationRequired": true
       }
     ],
@@ -123,7 +266,9 @@
         "ar": "عند التسجيل في الدورة"
       },
       "successCriteria": [
-        "يذكر عمره بجملة صحيحة (15 Jahre alt) + يتهجى رقم هاتفه بالأرقام الألمانية"
+        "يقول عمره بجملة صحيحة: Ich bin … Jahre alt (لا Ich habe … Jahre)",
+        "يقرأ رقم هاتفه رقماً رقماً — والصفر null",
+        "يكتب أي عدد من 13 إلى 19 بالحروف (sechzehn وsiebzehn بلا حرف زائد)"
       ]
     }
   },
@@ -138,62 +283,161 @@
       {
         "items": [
           {
-            "q": "Ich bin 15 Jahre ___.",
+            "q": "Ich ___ neunzehn Jahre alt.",
+            "a": "bin",
             "choices": [
-              "alt",
+              "bin",
+              "habe",
+              "ist"
+            ],
+            "why": "العمر بـsein: Ich bin … Jahre alt — لا habe."
+          },
+          {
+            "q": "«عيد الميلاد» بالألمانية؟",
+            "a": "der Geburtstag",
+            "why": "der Geburtstag (مذكّر) — وجمعه die Geburtstage."
+          },
+          {
+            "q": "sechzehn = ?",
+            "a": "16",
+            "choices": [
+              "16",
+              "60",
+              "6"
+            ],
+            "why": "‑zehn = ‑عشر: sechzehn = 16 (وسقط s من sechs)."
+          },
+          {
+            "q": "«هذا رقمي» بالألمانية؟",
+            "a": "Das ist meine Nummer.",
+            "why": "die Nummer مؤنثة ← meine Nummer."
+          },
+          {
+            "q": "Lena und Yusuf sind in einer ___.",
+            "a": "Klasse",
+            "choices": [
+              "Klasse",
+              "Woche",
+              "Straße"
+            ],
+            "why": "die Klasse = الصف — مجموعة الدرس أو غرفته."
+          },
+          {
+            "q": "رتّب: ist / Wie / Telefonnummer? / Ihre",
+            "a": "Wie ist Ihre Telefonnummer?",
+            "why": "كلمة السؤال ثم الفعل ثم الباقي."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "siebzehn = ?",
+            "a": "17",
+            "choices": [
+              "17",
+              "70",
+              "7"
+            ],
+            "why": "siebzehn = 17 — سقط en من sieben."
+          },
+          {
+            "q": "«كم عمرك؟» بالألمانية؟",
+            "a": "Wie alt bist du?",
+            "accept": [
+              "Wie alt sind Sie?"
+            ],
+            "why": "Wie alt …؟ مع du أو مع Sie المهذبة."
+          },
+          {
+            "q": "Ein Jahr hat zwölf ___.",
+            "a": "Monate",
+            "choices": [
+              "Monate",
+              "Wochen",
+              "Tage"
+            ],
+            "why": "السنة 12 شهراً: die Monate."
+          },
+          {
+            "q": "«أكتب اسمي» بالألمانية؟",
+            "a": "Ich schreibe meinen Namen.",
+            "why": "schreiben ← ich schreibe (‑e مع ich)."
+          },
+          {
+            "q": "Name: Yusuf Haddad · ___: 19",
+            "a": "Alter",
+            "choices": [
+              "Alter",
+              "Klasse",
+              "Kurs"
+            ],
+            "why": "das Alter = العمر — كلمة الاستمارات: Alter: 19."
+          },
+          {
+            "q": "أي جملة صحيحة؟",
+            "a": "Das Handy ist neu.",
+            "choices": [
+              "Das Handy ist neu.",
+              "Der Handy ist neu.",
+              "Die Handy ist neu."
+            ],
+            "why": "das Handy — احفظ الأداة مع الكلمة."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "vier + zehn = ?",
+            "a": "vierzehn",
+            "why": "الآحاد أولاً ثم zehn — كلمة واحدة بحرف صغير."
+          },
+          {
+            "q": "Eine Woche hat sieben ___.",
+            "a": "Tage",
+            "choices": [
+              "Tage",
+              "Monate",
               "Jahre"
             ],
-            "a": "alt"
+            "why": "der Tag ← die Tage: الأسبوع سبعة أيام."
           },
           {
-            "q": "«الهاتف المحمول»؟",
-            "a": "das Handy"
+            "q": "«الشارع» بالألمانية؟",
+            "a": "die Straße",
+            "why": "die Straße — ß بعد حركة طويلة، والجمع die Straßen."
           },
           {
-            "q": "ترتيب؟ alt / bin / Ich / 15 / Jahre",
-            "a": "Ich bin 15 Jahre alt."
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "Woche = ?",
+            "q": "Ich bin neu im ___.",
+            "a": "Kurs",
             "choices": [
-              "الأسبوع",
-              "اليوم"
+              "Kurs",
+              "Handy",
+              "Telefon"
             ],
-            "a": "الأسبوع"
+            "why": "der Kurs = الدورة: Ich bin neu im Kurs."
           },
           {
-            "q": "«أكتب اسمي»؟",
-            "a": "Ich schreibe meinen Namen."
+            "q": "«عمري عشرون سنة» بالألمانية؟",
+            "a": "Ich bin zwanzig Jahre alt.",
+            "accept": [
+              "Ich bin 20 Jahre alt.",
+              "Ich bin zwanzig."
+            ],
+            "why": "Ich bin + العدد + Jahre alt — أو Ich bin zwanzig وحدها."
           },
           {
-            "q": "أي جملة صحيحة للعمر؟",
+            "q": "das Telefon = ?",
+            "a": "الهاتف",
             "choices": [
-              "Ich bin alt 15.",
-              "Ich bin 15 Jahre alt."
+              "الهاتف",
+              "الرقم",
+              "الشارع"
             ],
-            "a": "Ich bin 15 Jahre alt."
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "«عيد الميلاد»؟",
-            "a": "der Geburtstag"
-          },
-          {
-            "q": "1–20: ما بعد neunzehn؟",
-            "a": "zwanzig"
-          },
-          {
-            "q": "«هذا رقمي»؟",
-            "a": "Das ist meine Nummer."
+            "why": "das Telefon = الهاتف، وdie Nummer = الرقم."
           }
         ],
         "passingScore": 0.75
@@ -202,38 +446,38 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Heute hast du Zahlen geschrieben und Alter/Telefonnummer genannt: 15 Jahre alt + Nummer.",
-      "ar": "اليوم كتبت أرقاماً وذكرت عمرك وهاتفك: 15 Jahre alt + Nummer."
+      "de": "Heute: dreizehn bis neunzehn (sechzehn, siebzehn!) · Ich bin neunzehn Jahre alt. · Meine Telefonnummer ist null, eins …",
+      "ar": "اليوم: من 13 إلى 19 الآحاد أولاً ثم zehn (والاستثناءان sechzehn وsiebzehn) · العمر بـsein لا haben · رقم الهاتف رقماً رقماً والصفر null."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich bin alt 15 Jahre~~",
-          "ar": "ترتيب العمر"
+          "de": "~~Ich habe neunzehn Jahre.~~",
+          "ar": "العمر بـhaben — نقلاً عن الفرنسية j'ai"
         },
-        "whyArabicSpeakerFails": "«عمري 15» بالعربية يبدأ بالعمر؛ الألمانية تضع alt في آخر الجملة بعد العدد والوحدة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "بالعربية «عمري 19 سنة» وبالفرنسية j'ai 19 ans (عندي)، فيقول المتعلم Ich habe 19 Jahre؛ والألمانية تقول العمر بالكينونة: Ich bin 19 Jahre alt (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich bin 15 Jahre alt.",
-          "ar": "عمري 15 سنة."
+          "de": "Ich bin neunzehn Jahre alt.",
+          "ar": "عمري 19 سنة."
         },
         "exercise": {
-          "q": "صحّح: ~~Er ist alt 20~~",
-          "a": "Er ist 20 Jahre alt."
+          "q": "صحّح: ~~Lena hat sechzehn Jahre.~~",
+          "a": "Lena ist sechzehn Jahre alt."
         }
       },
       {
         "commonError": {
-          "de": "~~die Handy~~",
-          "ar": "جنس الكلمة المستعارة"
+          "de": "~~Der Handy ist neu.~~",
+          "ar": "جنس الترجمة العربية"
         },
-        "whyArabicSpeakerFails": "كلمة Handy مستعارة من الإنجليزية لكن الجنس يُمنح بالألمانية: das Handy — لا يُنقل من لغتك (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«الهاتف المحمول» مذكّر في العربية فيُنقل التذكير: der Handy؛ والألمانية das Handy — جنس الكلمة الألمانية لا يتبع جنس ترجمتها، فاحفظ الأداة مع الكلمة (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "das Handy",
-          "ar": "الهاتف المحمول"
+          "de": "Das Handy ist neu.",
+          "ar": "الهاتف المحمول جديد."
         },
         "exercise": {
-          "q": "صحّح: ~~die Handy ist neu~~",
-          "a": "Das Handy ist neu."
+          "q": "صحّح: ~~Der Telefon ist alt.~~",
+          "a": "Das Telefon ist alt."
         }
       },
       {
@@ -264,13 +508,19 @@
       "monat",
       "woche",
       "tag",
-      "strasse"
+      "strasse",
+      "alter",
+      "kurs",
+      "klasse"
     ]
   },
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/Zahl",
-      "https://www.duden.de/rechtschreibung/Handy"
+      "https://www.duden.de/rechtschreibung/Handy",
+      "https://www.duden.de/rechtschreibung/Alter",
+      "https://www.duden.de/rechtschreibung/Kurs",
+      "https://www.duden.de/rechtschreibung/Klasse"
     ],
     "wiktionary": [
       "https://de.wiktionary.org/wiki/Zahl"
@@ -292,14 +542,29 @@
     "word-monat",
     "word-woche",
     "word-tag",
-    "word-strasse"
+    "word-strasse",
+    "word-alter",
+    "word-kurs",
+    "word-klasse"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?)",
     "goetheWordListOverlap": [
-      "zahl",
-      "handy"
+      "nummer",
+      "telefon",
+      "handy",
+      "alt",
+      "jahr",
+      "geburtstag",
+      "schreiben",
+      "monat",
+      "woche",
+      "tag",
+      "strasse",
+      "alter",
+      "kurs",
+      "klasse"
     ]
   }
 }

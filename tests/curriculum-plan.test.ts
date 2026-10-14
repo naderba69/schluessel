@@ -112,12 +112,16 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(LearnerProgress.safeParse({ ...st, currentUnit: { level: "A1", unit: 16 } }).success).toBe(false);
   });
 
-  it("النواة: u1-d1 (D116) · u1-d2 (D119) · u1-d3 (D120) done · التالي a1-u1-d4 · تكملة a1-u13-d1 (15 كلمة)", () => {
+  it("النواة: u1-d1 (D116) · u1-d2 (D119) · u1-d3 (D120) · u1-d4 (D121) done · التالي a1-u1-d5 · تكملة a1-u13-d1 (15 كلمة)", () => {
     const cs = coreStatus(plan, ctx);
     expect(cs.find((c) => c.lessonId === "a1-u1-d1")).toMatchObject({ status: "done", missing: [] });
     expect(cs.find((c) => c.lessonId === "a1-u1-d2")).toMatchObject({ status: "done", missing: [] });
     expect(cs.find((c) => c.lessonId === "a1-u1-d3")).toMatchObject({ status: "done", missing: [] });
-    expect(cs.find((c) => c.status === "pending")).toMatchObject({ lessonId: "a1-u1-d4", headwords: ["das Alter", "der Kurs, -e", "die Klasse"] });
+    expect(cs.find((c) => c.lessonId === "a1-u1-d4")).toMatchObject({ status: "done", missing: [] });
+    expect(cs.find((c) => c.status === "pending")).toMatchObject({
+      lessonId: "a1-u1-d5",
+      headwords: ["das Ende", "wissen", "das Wort, -ö, er/-e", "oft", "bisschen", "der Schüler, -", "der Student, -en"],
+    });
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
     expect(next.lessonId).toBe("a1-u13-d1");
     expect(next.headwords).toHaveLength(15);
@@ -157,12 +161,12 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
 
   it("e-plan-source · e-plan-headword · e-plan-complete", () => {
     expect(codes(checkPlan({ ...plan, sourceList: "goethe-xx" }, ctx))).toEqual(["e-plan-source"]);
-    // إسناد ما زال pending وكلمته لم يعلّمها المنهج بعد (heute ثم Anmeldung صارتا مُعلَّمتين — D119 · D120)
+    // إسناد ما زال pending وكلمته لم يعلّمها المنهج بعد (heute ثم Anmeldung ثم das Alter صارت مُعلَّمة — D119 · D120 · D121)
     const typo = clonePlan();
-    typo.core!.lessons.find((c) => c.lessonId === "a1-u1-d4")!.headwords[0] = "das Alter!";
+    typo.core!.lessons.find((c) => c.lessonId === "a1-u1-d5")!.headwords[0] = "das Ende!";
     const issues = checkPlan(typo, ctx);
     expect(codes(issues)).toEqual(["e-plan-complete", "e-plan-headword"]);
-    expect(issues.find((i) => i.code === "e-plan-complete")!.message).toMatch(/Alter/);
+    expect(issues.find((i) => i.code === "e-plan-complete")!.message).toMatch(/Ende/);
   });
 
   it("e-plan-taught: إسناد done ولم يُعلَّم ⇒ خطأ لكل كلمة · done ومُعلَّم بدليل حقيقي (a1-u1-d2 بعد ترقيته — D119) ⇒ صفر", () => {
@@ -185,7 +189,7 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
     const mark = checkPlan(p, ctx);
     expect(codes(mark)).toEqual(["w-plan-mark-done"]);
     expect(mark[0]!.level).toBe("warning");
-    // إسناد ما زال pending (u1-d1 وu1-d2 صارا done): oft من a1-u1-d5 يعلّمها درس آخر
+    // إسناد ما زال pending (u1-d1..d4 صارت done): oft من a1-u1-d5 يعلّمها درس آخر
     const oft = syn("oft", "adverb");
     const other = realLesson("a1-u2-d1");
     const elsewhere = { ...other, praesentation: { ...other.praesentation, wordIds: [...other.praesentation.wordIds, oft.id] } };
@@ -196,10 +200,10 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
 
   it("e-plan-core-lesson (توليف · غير موجود) · e-plan-core-load (> 18) · e-plan-text-fix", () => {
     const integ = clonePlan();
-    integ.core!.lessons.find((c) => c.lessonId === "a1-u1-d4")!.lessonId = "a1-u1-d6"; // إسناد pending (u1-d1..d3 صارت done)
+    integ.core!.lessons.find((c) => c.lessonId === "a1-u1-d5")!.lessonId = "a1-u1-d6"; // إسناد pending (u1-d1..d4 صارت done)
     expect(codes(checkPlan(integ, ctx))).toEqual(["e-plan-core-lesson"]);
     const ghost = clonePlan();
-    ghost.core!.lessons.find((c) => c.lessonId === "a1-u1-d4")!.lessonId = "a1-u12-d7";
+    ghost.core!.lessons.find((c) => c.lessonId === "a1-u1-d5")!.lessonId = "a1-u12-d7";
     expect(codes(checkPlan(ghost, ctx))).toEqual(["e-plan-core-lesson"]);
     const heavy = clonePlan(); // a1-u9-d1 فيه 18 كلمة — أي إسناد يتجاوز السقف
     const u9d5 = heavy.core!.lessons.find((c) => c.lessonId === "a1-u9-d5")!;

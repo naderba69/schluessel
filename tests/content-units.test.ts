@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(764); // + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120)
+    expect(ALL_WORDS.length).toBe(767); // + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -80,6 +80,19 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(d3.zusammenfassung.warningCards[1]!.commonError.de).toContain("Was ist Ihr Name");
     expect(d3.zusammenfassung.warningCards[1]!.correct.de).toBe("Wie ist Ihr Name?");
     expect(d3.zusammenfassung.warningCards[2]!.correct.de).toBe("der Name");
+  });
+
+  it("د4 (D121): العمر بـsein لا haben · جنس Handy لا يتبع ترجمته · الملكية تتبع جنس الكلمة — والاستدعاء من دروس سابقة", () => {
+    const d4 = ALL_LESSONS.find((l) => l.id === "a1-u1-d4")!;
+    const [age, gender, poss] = d4.zusammenfassung.warningCards;
+    expect(age!.commonError.de).toContain("Ich habe neunzehn Jahre");
+    expect(age!.correct.de).toBe("Ich bin neunzehn Jahre alt.");
+    expect(age!.whyArabicSpeakerFails).toContain("j'ai");
+    expect(gender!.commonError.de).toContain("Der Handy");
+    expect(gender!.correct.de).toBe("Das Handy ist neu.");
+    expect(poss!.correct.de).toBe("Meine Telefonnummer");
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 && l.day < 4).flatMap((l) => l.praesentation.wordIds));
+    expect(d4.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
   it("بطاقات الثقافة (Landeskunde): 12 بطاقة — كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {

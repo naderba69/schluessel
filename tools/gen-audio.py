@@ -7,6 +7,7 @@
 #          python3 tools/gen-audio.py one-voice de_DE-kerstin-low "نص" out.opus → صوت صريح (dialogue-splitter — D103)
 import hashlib
 import json
+import re
 import sys
 import unicodedata
 import wave
@@ -29,6 +30,8 @@ MANIFEST = ROOT / "content/manifests/audio-manifest.a1-u1.json"
 TARGET_RMS_DB = -17.0                       # داخل نافذة G1 [-20..-14]
 PAD_MS = 100                                # صمت 100ms قبل/بعد (مواصفات الصوت)
 OUT_SR = 24000                              # Opus standard rate (22.05k غير مسموح للترميز)
+PRON_LEXICON = ROOT / "tools/pronunciation-lexicon.json"   # D121: أخطاء espeak المقيسة ← الفونيمات الصحيحة
+_IPA_EDGE = " .,!?;:…—–\"„“”()-"            # حدود الكلمة في سلسلة الفونيمات (espeak لا يُخرج غيرها بين الكلمات)
 
 
 def character_voices() -> dict:
@@ -89,13 +92,47 @@ def fit_phonemes(phonemes: list[str], id_map: dict) -> tuple[list[str], int]:
     return out, fixed
 
 
+_LEXICON: list[dict] | None = None
+
+
+def pronunciation_lexicon() -> list[dict]:
+    """D121: معجم النطق — كلمات يخطئ espeak-ng نطقها، مقيسة مقابل مرجع حر (ipa-dict · Wiktionary · MIT).
+    يُحمَّل مرة لكل عملية؛ الملف الغائب = معجم فارغ."""
+    global _LEXICON
+    if _LEXICON is None:
+        _LEXICON = json.loads(PRON_LEXICON.read_text(encoding="utf-8"))["entries"] if PRON_LEXICON.exists() else []
+    return _LEXICON
+
+
+def apply_lexicon(phonemes: list[str], entries: list[dict] | None = None) -> tuple[list[str], int]:
+    """D121: فونيمات espeak الخاطئة لكلمة كاملة ← الصحيحة (Kurs: kˈuːɾs ← kˈʊɐs).
+    حد الكلمة = بداية/نهاية/مسافة/ترقيم — فلا مطابقة داخل كلمة أخرى (Kurse وUrlaub لا تُمسّان).
+    عناصر Piper رموز مفردة (مقيس: كل عنصر وكل مفتاح في خريطتي الصوتين بطول 1)، فإعادة التقطيع بـlist() دقيقة.
+    بلا مطابقة تعود القائمة نفسها دون مساس — لا يتغير أي مقطع لا يحوي كلمة من المعجم."""
+    entries = pronunciation_lexicon() if entries is None else entries
+    joined = "".join(phonemes)
+    edge = re.escape(_IPA_EDGE)
+    fixed = 0
+    for e in entries:
+        joined, n = re.subn(rf"(?<![^{edge}]){re.escape(e['espeak'])}(?![^{edge}])", e["ipa"], joined)
+        fixed += n
+    return (list(joined), fixed) if fixed else (phonemes, 0)
+
+
+def synth_phonemes(voice: PiperVoice, text: str, phonemize=None) -> list[list[str]]:
+    """الفونيمات التي تصل النموذج فعلاً: espeak (عبر Piper) → fit_phonemes → apply_lexicon.
+    مصدر واحد للصوت (tts) وللـIPA المقيس (phonemize.py) — فلا يختلف ما يُقاس عما يُنطق أبداً."""
+    id_map = voice.config.phoneme_id_map
+    raw = (phonemize or PiperVoice.phonemize)(voice, text)
+    return [apply_lexicon(fit_phonemes(sent, id_map)[0])[0] for sent in raw]
+
+
 def tts(text: str, out_wav: Path, onnx: Path = VOICE_ONNX, length_scale: float | None = None) -> None:
     """مسار Piper نفسه الذي يسلكه سطر الأوامر (synthesize لكل جملة · تطبيع الذروة · صمت 0 بين الجمل)
-    + طبقة fit_phonemes قبل التحويل إلى معرّفات. length_scale > 1 = نطق أبطأ (مواد A1)."""
+    + طبقتا fit_phonemes ومعجم النطق (D121) قبل التحويل إلى معرّفات. length_scale > 1 = نطق أبطأ (مواد A1)."""
     voice = load_voice(onnx)
-    id_map = voice.config.phoneme_id_map
     original = PiperVoice.phonemize
-    voice.phonemize = lambda t: [fit_phonemes(sent, id_map)[0] for sent in original(voice, t)]  # type: ignore[method-assign]
+    voice.phonemize = lambda t: synth_phonemes(voice, t, original)  # type: ignore[method-assign]
     try:
         with wave.open(str(out_wav), "wb") as wav:
             params_set = False
@@ -926,6 +963,9 @@ def build_all() -> None:
     ("word-partner", "der Partner.", "partner", ["a1-u1-d3"]),
     ("word-partnerin", "die Partnerin.", "partnerin", ["a1-u1-d3"]),
     ("word-herr", "der Herr.", "herr", ["a1-u1-d3"]),
+    ("word-alter", "das Alter.", "alter", ["a1-u1-d4"]),
+    ("word-kurs", "der Kurs.", "kurs", ["a1-u1-d4"]),
+    ("word-klasse", "die Klasse.", "klasse", ["a1-u1-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
