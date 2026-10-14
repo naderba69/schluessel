@@ -8154,6 +8154,7 @@
       "textDe": "sprechen.",
       "priority": "P2",
       "lessonRefs": [
+        "a1-u1-d2",
         "a1-u7-d4"
       ],
       "durationMs": 1036,
@@ -15143,6 +15144,66 @@
       "hash": "sha256:4f78d0aee57597f035e4171ea3d3d8d50c5c13722bdbdb473e6b42b77886c778",
       "pcmSha256": "dc0e83e15a362fdbb811f3a1eb5583954090637e13cd14431423070036eb5ad0",
       "rmsDb": -16.99
+    },
+    {
+      "id": "word-heute",
+      "file": "words/audio/de-DE/word-heute.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "heute.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d2"
+      ],
+      "durationMs": 734,
+      "sizeBytes": 3627,
+      "hash": "sha256:4edad2964838450ebf4716c709a169e0d0cd6104aab4709b8f597a2a23207b9a",
+      "pcmSha256": "700d58a5836d0a6a19920ab9d121f1a20ca5c8a1aa89d6d3c8a01d552f5788aa",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "word-jetzt",
+      "file": "words/audio/de-DE/word-jetzt.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "jetzt.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d2"
+      ],
+      "durationMs": 630,
+      "sizeBytes": 3184,
+      "hash": "sha256:031549d32feff57eb7461ebed265f8e9e5520b4ce11f898c6f8c228dd12678e2",
+      "pcmSha256": "fa806478cf32601f1417ca2b1b5d9130fb847b0d1e1e020a52baae460ffb239f",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "word-schwer",
+      "file": "words/audio/de-DE/word-schwer.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "schwer.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d2"
+      ],
+      "durationMs": 862,
+      "sizeBytes": 4154,
+      "hash": "sha256:d6cff9b3a4d700e4ac50559c48dd8b71892a794a8dcf7ba093b6803d2684e041",
+      "pcmSha256": "7a78918bf091139090e6599cd44ef53a28582f863df2d06e6b9a3a86bee3c206",
+      "rmsDb": -16.97
     },
     {
       "id": "mueller-announce-01",

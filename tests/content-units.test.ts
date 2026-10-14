@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(757); // + neu · wie viel (نواة D113 في a1-u1-d1 — D116)
+    expect(ALL_WORDS.length).toBe(760); // + neu · wie viel (D116) + heute · jetzt · schwer (نواة D113 في a1-u1-d2 — D119)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -68,11 +68,14 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     }
   });
 
-  it("د2: ألمانيا aus لا von · أسماء لغات ألمانية · سؤال بالفعل أولاً — ود3: تصريف + حشو + حروف كبيرة", () => {
+  it("د2 (D119): أداة البلد بعد aus · اللغة بلا أداة · سؤال بالفعل أولاً — ود3: تصريف + حشو + حروف كبيرة", () => {
     const d2 = ALL_LESSONS.find((l) => l.id === "a1-u1-d2")!;
     const d3 = ALL_LESSONS.find((l) => l.id === "a1-u1-d3")!;
-    expect(d2.zusammenfassung.warningCards[0]!.commonError.de).toContain("Ich bin Tunesien");
-    expect(d2.zusammenfassung.warningCards[1]!.correct.de).toContain("Arabisch");
+    expect(d2.zusammenfassung.warningCards[0]!.commonError.de).toContain("aus Türkei");
+    expect(d2.zusammenfassung.warningCards[0]!.correct.de).toBe("Ich komme aus der Türkei.");
+    expect(d2.zusammenfassung.warningCards[1]!.commonError.de).toContain("das Arabisch");
+    expect(d2.zusammenfassung.warningCards[1]!.correct.de).toBe("Ich spreche Arabisch.");
+    expect(d2.zusammenfassung.warningCards[2]!.correct.de).toBe("Sind Sie aus Deutschland?");
     expect(d3.zusammenfassung.warningCards[0]!.correct.de).toContain("buchstabiere");
     expect(d3.zusammenfassung.warningCards[2]!.correct.de).toBe("der Name");
   });

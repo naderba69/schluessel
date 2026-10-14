@@ -10,7 +10,8 @@
     "ar": "تستطيع أن تقول من أين أنت وأي لغة تتحدث."
   },
   "canDoDaily": [
-    "يقول من أين هو ويذكر لغته"
+    "يقول من أين هو ويذكر لغته",
+    "يقدّم زميلاً: من أين هو وأي لغة يتحدث"
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«Ich ___ aus Tunesien.» — sein oder kommen? (تخمين فقط)"
+          "de": "«Ich komme aus ___ Türkei.» — ماذا يأتي مكان الفراغ؟ (تخمين فقط)"
         },
         "choices": [
-          "bin",
-          "habe",
-          "ist"
+          "der",
+          "die",
+          "(لا شيء)"
         ],
-        "answer": "bin",
+        "answer": "der",
         "revealNextSession": true
       }
     ],
@@ -49,10 +50,14 @@
       "franzoesisch",
       "arabisch",
       "sprache",
-      "land"
+      "land",
+      "sprechen",
+      "heute",
+      "jetzt",
+      "schwer"
     ],
     "grammarArsenalIds": [
-      "ars-sein-haben"
+      "ars-laender-sprachen"
     ],
     "storySentenceIds": [
       "story-a1-u1-s2"
@@ -61,51 +66,167 @@
     "riskFlagsShown": [
       "umlaut-a",
       "umlaut-o",
-      "umlaut-u"
+      "umlaut-u",
+      "sp-st-initial"
     ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أنا من تونس» بالألمانية؟",
-            "a": "Ich bin aus Tunesien."
+            "q": "Ich komme aus ___ Türkei.",
+            "a": "der",
+            "why": "die Türkei من البلدان القليلة التي تأتي بأداتها، وبعد aus تصير die ← der: aus der Türkei. أما Tunesien وMarokko فبلا أداة."
           },
           {
-            "q": "«هي من إيطاليا»؟",
-            "a": "Sie kommt aus Italien."
+            "q": "Lena wohnt jetzt in ___ Schweiz.",
+            "a": "der",
+            "why": "بعد in أيضاً تصير die ← der: in der Schweiz. قارن: in Deutschland · in Frankreich بلا أداة."
+          },
+          {
+            "q": "Ich spreche ___. (العربية)",
+            "a": "Arabisch",
+            "why": "اسم اللغة بعد sprechen بلا أداة — لا «das Arabisch» كما توحي «العربية» بـ«ال». ويبدأ بحرف كبير لأنه اسم."
+          },
+          {
+            "q": "Lena ___ Deutsch und Französisch. (sprechen)",
+            "a": "spricht",
+            "why": "مع er/sie (وهنا Lena) يتغيّر حرف sprechen: e ← i، فتصير spricht. ومع ich: spreche."
+          },
+          {
+            "q": "Du ___ Englisch. (sprechen)",
+            "a": "sprichst",
+            "why": "مع du يتغيّر e ← i وتأتي النهاية ‑st: du sprichst — مثل du kommst لكن بحرف i."
           }
         ],
         "interleavedWith": [],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«أتحدث العربية»؟",
-            "a": "Ich spreche Arabisch."
+            "audioId": "word-schweiz",
+            "speakText": "Schweiz.",
+            "q": "استمع: أي بلد سمعت؟",
+            "choices": [
+              "die Schweiz",
+              "die Türkei",
+              "Spanien"
+            ],
+            "a": "die Schweiz",
+            "why": "Schweiz تبدأ بـsch «ش» ثم w تُنطق «ڤ»: «شڤايتس»، وz في آخرها «تس». وهي بأداتها: die Schweiz."
           },
           {
-            "q": "«اللغة» بالألمانية؟",
-            "a": "die Sprache"
+            "audioId": "word-aegypten",
+            "speakText": "Ägypten.",
+            "q": "استمع: أي بلد سمعت؟",
+            "choices": [
+              "Ägypten",
+              "Italien",
+              "Spanien"
+            ],
+            "a": "Ägypten",
+            "why": "Ägypten تبدأ بـÄ (قريبة من «إ»)، وy في وسطها تُنطق مثل ü، والنبر على المقطع الثاني: Ä‑GYP‑ten."
+          },
+          {
+            "audioId": "word-franzoesisch",
+            "speakText": "Französisch.",
+            "q": "استمع: أي لغة سمعت؟",
+            "choices": [
+              "Französisch",
+              "Englisch",
+              "Arabisch"
+            ],
+            "a": "Französisch",
+            "why": "ö بشفتين مدوّرتين ولسان على «إ»، وsch في آخرها «ش» — وأسماء هذه اللغات الثلاث كلها تنتهي بـ‑isch."
+          },
+          {
+            "audioId": "word-heute",
+            "speakText": "heute.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "اليوم",
+              "الآن",
+              "صعب"
+            ],
+            "a": "اليوم",
+            "why": "heute = اليوم. eu تُنطق «أوي»: «هُويْتِه»، وe الأخيرة خفيفة لكنها لا تُحذف. أما «الآن» فهي jetzt."
           }
         ],
         "interleavedWith": [],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "أكمل: Ich bin ___ der Türkei.",
-            "a": "aus"
+            "tokens": [
+              "der",
+              "Ich",
+              "Türkei.",
+              "aus",
+              "komme"
+            ],
+            "a": "Ich komme aus der Türkei.",
+            "why": "الفعل komme في الموضع الثاني بعد ich، ثم aus، ثم der Türkei: die صارت der بعد aus."
           },
           {
-            "q": "«سويسرا» — أي جنس؟",
-            "a": "die Schweiz"
+            "tokens": [
+              "Marokko.",
+              "kommt",
+              "aus",
+              "Er"
+            ],
+            "a": "Er kommt aus Marokko.",
+            "why": "مع er ينتهي الفعل بـ‑t: kommt. وMarokko بلا أداة رغم «ال» في «المغرب»."
+          },
+          {
+            "tokens": [
+              "schwer.",
+              "Die",
+              "ist",
+              "Sprache"
+            ],
+            "a": "Die Sprache ist schwer.",
+            "why": "die Sprache = اللغة، ثم الفعل ist في الموضع الثاني، ثم schwer = صعبة — والصفة بعد ist لا تتغيّر."
+          },
+          {
+            "tokens": [
+              "Sie",
+              "Spanien?",
+              "aus",
+              "Kommen"
+            ],
+            "a": "Kommen Sie aus Spanien?",
+            "why": "سؤال نعم/لا: الفعل أولاً ثم الفاعل — Kommen Sie…؟ العربية تكتفي بنبرة الصوت، والألمانية تقدّم الفعل."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "word-tuerkei",
+            "speakText": "Türkei.",
+            "a": "Türkei",
+            "why": "ü في Türkei: شفتان مضمومتان ولسان على «ي»، وei تُنطق «اي»: «تُوركاي». وتذكّر أنها تأتي بأداتها: die Türkei."
+          },
+          {
+            "audioId": "word-jetzt",
+            "speakText": "jetzt.",
+            "a": "jetzt",
+            "why": "j الألمانية تُنطق «ي»، وفي آخرها tzt «تست»: «يِتست» — اكتب الحروف كلها ولو بدت كثيرة."
+          },
+          {
+            "audioId": "word-schwer",
+            "speakText": "schwer.",
+            "a": "schwer",
+            "why": "sch «ش» ثم w تُنطق «ڤ» لا «و»: «شڤير»، وe طويلة. لا تكتبها schwehr: e وحدها تكفي هنا."
           }
         ],
         "interleavedWith": [],
@@ -122,7 +243,9 @@
         "ar": "في دورة اللغة اليوم الثاني"
       },
       "successCriteria": [
-        "يستخدم bin aus + spreche + اسم لغة في 3 جمل صحيحة"
+        "يقول من أين هو: Ich komme aus … (وaus der Türkei/der Schweiz إن احتاج)",
+        "يذكر لغته بلا أداة: Ich spreche Arabisch und …",
+        "يقدّم زميلاً في جملتين: Er/Sie kommt aus … Er/Sie spricht …"
       ]
     }
   },
@@ -137,20 +260,48 @@
       {
         "items": [
           {
-            "q": "Ich ___ aus Tunesien.",
+            "q": "Er wohnt in ___ Türkei.",
+            "a": "der",
             "choices": [
-              "bin",
-              "habe"
+              "der",
+              "die",
+              "das"
             ],
-            "a": "bin"
+            "why": "die Türkei بأداتها، وبعد in تصير der: in der Türkei."
           },
           {
-            "q": "«أتحدث الإنجليزية»؟",
-            "a": "Ich spreche Englisch."
+            "q": "«أتحدث العربية» بالألمانية؟",
+            "a": "Ich spreche Arabisch.",
+            "why": "اسم اللغة بلا أداة بعد sprechen — لا «das Arabisch»."
           },
           {
-            "q": "ترتيب؟ bin / Ich / aus / Ägypten",
-            "a": "Ich bin aus Ägypten."
+            "q": "Ägypten = ?",
+            "a": "مصر",
+            "choices": [
+              "مصر",
+              "إيطاليا",
+              "تركيا"
+            ]
+          },
+          {
+            "q": "رتّب: kommt / Lena / Deutschland / aus",
+            "a": "Lena kommt aus Deutschland.",
+            "why": "الفعل kommt في الموضع الثاني، وDeutschland بلا أداة."
+          },
+          {
+            "q": "«الآن» بالألمانية؟",
+            "a": "jetzt",
+            "choices": [
+              "jetzt",
+              "heute",
+              "schwer"
+            ],
+            "why": "jetzt = الآن، وheute = اليوم."
+          },
+          {
+            "q": "Er ___ Arabisch und Französisch. (sprechen)",
+            "a": "spricht",
+            "why": "مع er: sprechen ← spricht (e ← i)."
           }
         ],
         "passingScore": 0.75
@@ -158,24 +309,51 @@
       {
         "items": [
           {
-            "q": "die Sprache = ?",
+            "q": "Sie kommt aus ___ Schweiz.",
+            "a": "der",
             "choices": [
-              "اللغة",
-              "البلد"
+              "der",
+              "die",
+              "das"
             ],
-            "a": "اللغة"
+            "why": "die Schweiz بأداتها، وبعد aus تصير der: aus der Schweiz."
           },
           {
-            "q": "«هي تسكن في سويسرا»؟",
-            "a": "Sie wohnt in der Schweiz."
+            "q": "«أنا من المغرب» بالألمانية؟",
+            "a": "Ich komme aus Marokko.",
+            "accept": [
+              "Ich bin aus Marokko."
+            ],
+            "why": "Marokko بلا أداة رغم «ال» في «المغرب»: aus Marokko."
+          },
+          {
+            "q": "die Sprache = ?",
+            "a": "اللغة",
+            "choices": [
+              "اللغة",
+              "البلد",
+              "اليوم"
+            ]
+          },
+          {
+            "q": "Du ___ Deutsch. (sprechen)",
+            "a": "sprichst",
+            "why": "مع du: sprichst — e ← i ثم ‑st."
+          },
+          {
+            "q": "«اليوم» بالألمانية؟",
+            "a": "heute",
+            "why": "heute = اليوم، وjetzt = الآن."
           },
           {
             "q": "أي جملة صحيحة؟",
+            "a": "Ich spreche Arabisch.",
             "choices": [
-              "Ich bin Tunesien.",
-              "Ich bin aus Tunesien."
+              "Ich spreche Arabisch.",
+              "Ich spreche das Arabisch.",
+              "Ich spreche die Arabisch."
             ],
-            "a": "Ich bin aus Tunesien."
+            "why": "اسم اللغة بلا أداة بعد sprechen."
           }
         ],
         "passingScore": 0.75
@@ -183,20 +361,49 @@
       {
         "items": [
           {
-            "q": "Türkei = ?",
+            "q": "In Frankreich spricht man ___.",
+            "a": "Französisch",
             "choices": [
-              "تركيا",
-              "سويسرا"
+              "Französisch",
+              "Englisch",
+              "Arabisch"
             ],
-            "a": "تركيا"
+            "why": "Frankreich هو البلد، وFranzösisch هي اللغة."
           },
           {
-            "q": "«الجمع: das Land»؟",
-            "a": "die Länder"
+            "q": "«هو من سويسرا» بالألمانية؟",
+            "a": "Er kommt aus der Schweiz.",
+            "accept": [
+              "Er ist aus der Schweiz."
+            ],
+            "why": "die Schweiz بأداتها، وبعد aus تصير der: aus der Schweiz."
           },
           {
-            "q": "ترتيب؟ spreche / Ich / Arabisch",
-            "a": "Ich spreche Arabisch."
+            "q": "das Land — الجمع؟",
+            "a": "die Länder",
+            "accept": [
+              "Länder"
+            ],
+            "why": "a ← ä والنهاية ‑er: das Land ← die Länder."
+          },
+          {
+            "q": "«العربية صعبة» بالألمانية؟",
+            "a": "Arabisch ist schwer.",
+            "why": "اسم اللغة بلا أداة حتى في أول الجملة، وschwer بعد ist لا تتغيّر."
+          },
+          {
+            "q": "رتّب: Sie / aus / Kommen / Italien?",
+            "a": "Kommen Sie aus Italien?",
+            "why": "سؤال نعم/لا: الفعل أولاً ثم Sie."
+          },
+          {
+            "q": "Englisch = ?",
+            "a": "الإنجليزية",
+            "choices": [
+              "الإنجليزية",
+              "الفرنسية",
+              "ألمانيا"
+            ]
           }
         ],
         "passingScore": 0.75
@@ -205,38 +412,38 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Heute hast du Herkunft und Sprache benannt: bin aus + spreche + Länder.",
-      "ar": "اليوم ذكرت أصلك ولغتك: bin aus + spreche + أسماء البلدان."
+      "de": "Heute: aus Tunesien · aus der Türkei · Ich spreche Arabisch.",
+      "ar": "اليوم: من أين أنت (aus + البلد، وaus der مع die Türkei وdie Schweiz) وأي لغة تتحدث (sprechen + اللغة بلا أداة)."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich bin Tunesien~~",
-          "ar": "حذف aus مع اسم البلد"
+          "de": "~~Ich komme aus Türkei.~~",
+          "ar": "حذف أداة البلد بعد aus"
         },
-        "whyArabicSpeakerFails": "«أنا تونس» بالعربية تعتمد السياق؛ الألمانية تطلب حرف الانتماء aus دائماً (خريطة 10‑ي).",
+        "whyArabicSpeakerFails": "«من تركيا» بلا أداة في العربية، فيُحذف der؛ لكن die Türkei من البلدان التي تأتي بأداتها، وبعد aus تصير der (خريطة التداخل 10‑ي).",
         "correct": {
-          "de": "Ich bin aus Tunesien.",
-          "ar": "أنا من تونس."
+          "de": "Ich komme aus der Türkei.",
+          "ar": "أنا من تركيا."
         },
         "exercise": {
-          "q": "صحّح: ~~Ich bin Marokko~~",
-          "a": "Ich bin aus Marokko."
+          "q": "صحّح: ~~Lena wohnt in Schweiz.~~",
+          "a": "Lena wohnt in der Schweiz."
         }
       },
       {
         "commonError": {
-          "de": "~~Ich spreche Arabic~~",
-          "ar": "استعارة اسم الإنجليزية"
+          "de": "~~Ich spreche das Arabisch.~~",
+          "ar": "أداة قبل اسم اللغة"
         },
-        "whyArabicSpeakerFails": "أسماء اللغات في الألمانية صيغ ألمانية (Arabisch/Englisch) — لا تُنقل كما هي من الإنجليزية. (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«العربية» بـ«ال» التعريف، فتنتقل أداة إلى الألمانية؛ لكن اسم اللغة بعد sprechen بلا أداة (خريطة التداخل 10‑ي).",
         "correct": {
           "de": "Ich spreche Arabisch.",
-          "ar": "أنا أتحدث العربية."
+          "ar": "أتحدث العربية."
         },
         "exercise": {
-          "q": "صحّح: ~~Sie spricht French~~",
-          "a": "Sie spricht Französisch."
+          "q": "صحّح: ~~Er spricht das Französisch.~~",
+          "a": "Er spricht Französisch."
         }
       },
       {
@@ -250,8 +457,8 @@
           "ar": "هل أنت من ألمانيا؟"
         },
         "exercise": {
-          "q": "صحّح: ~~Wohnen Sie in der Schweiz?~~ (السؤال صحيح؟)",
-          "a": "نعم، هذا الترتيب صحيح."
+          "q": "صحّح: ~~Du kommst aus Italien?~~",
+          "a": "Kommst du aus Italien?"
         }
       }
     ],
@@ -267,13 +474,21 @@
       "franzoesisch",
       "arabisch",
       "sprache",
-      "land"
+      "land",
+      "sprechen",
+      "heute",
+      "jetzt",
+      "schwer"
     ]
   },
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/Sprache",
-      "https://www.duden.de/rechtschreibung/Land"
+      "https://www.duden.de/rechtschreibung/Land",
+      "https://www.duden.de/rechtschreibung/sprechen",
+      "https://www.duden.de/rechtschreibung/heute",
+      "https://www.duden.de/rechtschreibung/jetzt",
+      "https://www.duden.de/rechtschreibung/schwer"
     ],
     "wiktionary": [
       "https://de.wiktionary.org/wiki/Sprache"
@@ -281,7 +496,7 @@
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-sein-haben"
+    "ars-laender-sprachen"
   ],
   "audioManifestRefs": [
     "word-frankreich",
@@ -295,14 +510,31 @@
     "word-franzoesisch",
     "word-arabisch",
     "word-sprache",
-    "word-land"
+    "word-land",
+    "word-sprechen",
+    "word-heute",
+    "word-jetzt",
+    "word-schwer"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?)",
     "goetheWordListOverlap": [
+      "frankreich",
+      "spanien",
+      "italien",
+      "tuerkei",
+      "marokko",
+      "aegypten",
+      "schweiz",
+      "englisch",
+      "arabisch",
       "sprache",
-      "land"
+      "land",
+      "sprechen",
+      "heute",
+      "jetzt",
+      "schwer"
     ]
   }
 }

@@ -112,10 +112,11 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(LearnerProgress.safeParse({ ...st, currentUnit: { level: "A1", unit: 16 } }).success).toBe(false);
   });
 
-  it("النواة: a1-u1-d1 done (neu · wie viel مُعلَّمتان — D116) · التالي a1-u1-d2 · تكملة a1-u13-d1 (15 كلمة)", () => {
+  it("النواة: a1-u1-d1 done (neu · wie viel — D116) · a1-u1-d2 done (heute · jetzt · schwer — D119) · التالي a1-u1-d3 · تكملة a1-u13-d1 (15 كلمة)", () => {
     const cs = coreStatus(plan, ctx);
     expect(cs.find((c) => c.lessonId === "a1-u1-d1")).toMatchObject({ status: "done", missing: [] });
-    expect(cs.find((c) => c.status === "pending")).toMatchObject({ lessonId: "a1-u1-d2", headwords: ["heute", "jetzt", "schwer"] });
+    expect(cs.find((c) => c.lessonId === "a1-u1-d2")).toMatchObject({ status: "done", missing: [] });
+    expect(cs.find((c) => c.status === "pending")).toMatchObject({ lessonId: "a1-u1-d3", headwords: ["die Anmeldung", "der Partner, -/ die Partnerin, -nen", "der Herr, -en"] });
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
     expect(next.lessonId).toBe("a1-u13-d1");
     expect(next.headwords).toHaveLength(15);
@@ -155,40 +156,41 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
 
   it("e-plan-source · e-plan-headword · e-plan-complete", () => {
     expect(codes(checkPlan({ ...plan, sourceList: "goethe-xx" }, ctx))).toEqual(["e-plan-source"]);
+    // إسناد ما زال pending وكلمته لم يعلّمها المنهج بعد (heute صارت مُعلَّمة — D119)
     const typo = clonePlan();
-    typo.core!.lessons.find((c) => c.lessonId === "a1-u1-d2")!.headwords[0] = "heute!";
-    typo.core!.textFixes = typo.core!.textFixes.filter((f) => f.headword !== "heute");
+    typo.core!.lessons.find((c) => c.lessonId === "a1-u1-d3")!.headwords[0] = "die Anmeldung!";
     const issues = checkPlan(typo, ctx);
     expect(codes(issues)).toEqual(["e-plan-complete", "e-plan-headword"]);
-    expect(issues.find((i) => i.code === "e-plan-complete")!.message).toMatch(/heute/);
+    expect(issues.find((i) => i.code === "e-plan-complete")!.message).toMatch(/Anmeldung/);
   });
 
-  it("e-plan-taught: إسناد done ولم يُعلَّم ⇒ خطأ لكل كلمة · done ومُعلَّم بدليل حقيقي ⇒ صفر", () => {
-    const p = clonePlan();
-    p.core!.lessons.find((c) => c.lessonId === "a1-u1-d2")!.status = "done";
-    const bad = checkPlan(p, ctx).filter((i) => i.code === "e-plan-taught");
-    expect(bad.map((i) => i.message.match(/«(.+?)»/)![1]).sort()).toEqual(["heute", "jetzt", "schwer"]);
-    const taught = [syn("heute", "adverb"), syn("jetzt", "adverb"), syn("schwer", "adjective")];
+  it("e-plan-taught: إسناد done ولم يُعلَّم ⇒ خطأ لكل كلمة · done ومُعلَّم بدليل حقيقي (a1-u1-d2 بعد ترقيته — D119) ⇒ صفر", () => {
+    const core = ["heute", "jetzt", "schwer"];
     const l = realLesson("a1-u1-d2");
-    const upgraded = { ...l, praesentation: { ...l.praesentation, wordIds: [...l.praesentation.wordIds, ...taught.map((w) => w.id)] } };
-    const ok = checkPlan(p, { ...ctx, words: [...words, ...taught], lessons: [...lessons.filter((x) => x.id !== l.id), upgraded] });
-    expect(ok).toEqual([]);
+    expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(core)); // الدليل الحقيقي
+    expect(checkPlan(plan, ctx)).toEqual([]);
+    const stripped = { ...l, praesentation: { ...l.praesentation, wordIds: l.praesentation.wordIds.filter((id) => !core.includes(id)) } };
+    const lessonsWithout = [...lessons.filter((x) => x.id !== l.id), stripped];
+    // لا مدخل لها في أي مكان ⇒ e-plan-taught لكل كلمة
+    const bad = checkPlan(plan, { ...ctx, words: words.filter((w) => !core.includes(w.id)), lessons: lessonsWithout }).filter((i) => i.code === "e-plan-taught");
+    expect(bad.map((i) => i.message.match(/«(.+?)»/)![1]).sort()).toEqual(core);
+    // مدخلها موجود لكن الدرس المُسنَد لا يعلّمها ⇒ تحذير w-plan-elsewhere (لا خطأ)
+    expect(codes(checkPlan(plan, { ...ctx, lessons: lessonsWithout }))).toEqual(["w-plan-elsewhere"]);
   });
 
   it("w-plan-mark-done: pending وكل كلماته مُعلَّمة في درسه · w-plan-elsewhere: كلمة نواة علّمها درس آخر", () => {
-    const taught = [syn("heute", "adverb"), syn("jetzt", "adverb"), syn("schwer", "adjective")];
-    const l = realLesson("a1-u1-d2");
-    const upgraded = { ...l, praesentation: { ...l.praesentation, wordIds: [...l.praesentation.wordIds, ...taught.map((w) => w.id)] } };
-    const mark = checkPlan(plan, { ...ctx, words: [...words, ...taught], lessons: [...lessons.filter((x) => x.id !== l.id), upgraded] });
+    const p = clonePlan();
+    p.core!.lessons.find((c) => c.lessonId === "a1-u1-d2")!.status = "pending"; // كلماته مُعلَّمة فعلاً (D119)
+    const mark = checkPlan(p, ctx);
     expect(codes(mark)).toEqual(["w-plan-mark-done"]);
     expect(mark[0]!.level).toBe("warning");
-    // إسناد ما زال pending (u1-d1 صار done — D116): jetzt من a1-u1-d2 يعلّمها درس آخر
-    const jetzt = syn("jetzt", "adverb");
+    // إسناد ما زال pending (u1-d1 وu1-d2 صارا done): oft من a1-u1-d5 يعلّمها درس آخر
+    const oft = syn("oft", "adverb");
     const other = realLesson("a1-u2-d1");
-    const elsewhere = { ...other, praesentation: { ...other.praesentation, wordIds: [...other.praesentation.wordIds, jetzt.id] } };
-    const w = checkPlan(plan, { ...ctx, words: [...words, jetzt], lessons: [...lessons.filter((x) => x.id !== other.id), elsewhere] });
+    const elsewhere = { ...other, praesentation: { ...other.praesentation, wordIds: [...other.praesentation.wordIds, oft.id] } };
+    const w = checkPlan(plan, { ...ctx, words: [...words, oft], lessons: [...lessons.filter((x) => x.id !== other.id), elsewhere] });
     expect(codes(w)).toEqual(["w-plan-elsewhere"]);
-    expect(w[0]!.message).toMatch(/a1-u1-d2.*«jetzt»/);
+    expect(w[0]!.message).toMatch(/a1-u1-d5.*«oft»/);
   });
 
   it("e-plan-core-lesson (توليف · غير موجود) · e-plan-core-load (> 18) · e-plan-text-fix", () => {
