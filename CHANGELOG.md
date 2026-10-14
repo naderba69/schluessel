@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-14 — الدفعة 74: a1-u1-d2 مُرقّى (D119)
+- **إضافة**: `content/arsenal/grammar/ars-laender-sprachen.json` (ثاني قاعدة يوم) · كلمات النواة `heute` · `jetzt` · `schwer` (+ 3 مقاطع · 796 مساراً · 760 كلمة).
+- **تغيير معلن (القانون 7)**: a1-u1-d2 — 16 بند تطبيق بـ«لماذا» بدل 6 · Quiz 3×6 بدل 3×3 · ars-sein-haben ← ars-laender-sprachen · بطاقتا تحذير جديدتان + تمرين الثالثة · الاختبار القبلي · الملخص · goetheWordListOverlap.
+- **تغيير معلن**: `sprechen` تُدرَّس في a1-u1-d2 (كانت a1-u7-d4) — unit/thema/sourceLesson/usedInLessons + lessonRefs.
+- الترقية 2/60 · نواة D113 2/48 (5/123 كلمة) · **542/542 أخضر** · validator 889/0/0 · طفرة المحتوى 11/11.
+
 ## 2026-10-14 — الدفعة 73: عائلة الكلمة بصيغتها الألمانية ومن المدروس وحده (D118)
 - **إصلاح**: بطاقة «الجديد» ومختبر المفردات الشبكية كانا يعرضان معرّفات العائلة خاماً (159/205: tuerkei · wie-gehts) و4 أعضاء لم يُدرَّسوا بعد (3 في أول درس) ⇒ `familyForms` (lesson-runner) + `runtimeWordsForLesson` يمرّر المدروس حتى الدرس وحده.
 - **إضافة**: `tests/word-family-display.test.ts` (4 اختبارات).
