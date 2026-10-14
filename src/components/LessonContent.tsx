@@ -2,6 +2,8 @@
 // F121: محاولة قبل كشف · §2.5: تقييم بعد الكشف · E08: الخلاصة الهادئة · الوحدة صفر JIT (§9)
 import { useEffect, useState } from "react";
 import { audioPlayer } from "../lib/audio-player.js";
+import { FUNCTION_LABELS_AR, type Phrase } from "../lib/phrase-bank.js";
+import { PlayButton } from "./LessonSession.js";
 import type { Unit0Card } from "../../content/schemas/index.js";
 import type { LearnCardData, RecallCardData, PracticeData, CloseData } from "../lib/lesson-runner.js";
 import { RecallCardView, LearnCardView, CloseView } from "./LessonSession.js";
@@ -78,7 +80,7 @@ export function LearnStation({ cards }: { cards: LearnCardData[] }) {
 }
 
 /** محطة 3 — التدريب: محطات Übung بالترتيب + المهمة التواصلية (CLT) */
-export function PracticeStation({ data }: { data: PracticeData }) {
+export function PracticeStation({ data, redemittel = [] }: { data: PracticeData; redemittel?: Phrase[] }) {
   const [stationIndex, setStationIndex] = useState(0);
   const [itemIndex, setItemIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
@@ -95,6 +97,19 @@ export function PracticeStation({ data }: { data: PracticeData }) {
             <li key={i}>{c}</li>
           ))}
         </ul>
+        {redemittel.length > 0 && (
+          <aside data-testid="redemittel">
+            <h4>عبارات تساعدك (Redemittel) — مما تعلّمته حتى الآن فقط</h4>
+            <ul>
+              {redemittel.map((p) => (
+                <li key={p.de} data-first-lesson={p.firstLesson}>
+                  <span dir="ltr">{p.de}</span> <PlayButton speakText={p.de} />
+                  {p.ar ? ` — ${p.ar}` : ""} <small>({p.functions.map((f) => FUNCTION_LABELS_AR[f]).join("، ")} · ظهرت في {p.firstLesson})</small>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
       </section>
     );
   }

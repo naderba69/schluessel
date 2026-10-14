@@ -13,6 +13,7 @@ import {
   type Word,
 } from "../content/schemas/index.js";
 import imageManifest from "../content/manifests/image-manifest.json";
+import { harvestPhrases, type Phrase } from "./lib/phrase-bank.js";
 
 type JsonModules = Record<string, unknown>;
 const json = (mods: JsonModules) => Object.keys(mods).sort().map((k) => mods[k]);
@@ -74,3 +75,9 @@ export function runtimeWordsForLesson(lesson: Lesson): Word[] {
 /** توافق مع الاستخدام القديم */
 export const firstLesson: Lesson = ALL_LESSONS.find((l) => l.id === "a1-u1-d1")!;
 export const firstLessonWords: Word[] = wordsForLesson(firstLesson);
+
+/** ترتيب المسار (معرّفات الدروس) — أساس قانون الجبهة */
+export const LESSON_ORDER: string[] = ALL_LESSONS.map((l) => l.id);
+
+/** بنك Redemittel المحصود من المحتوى الحي (D107) — كل عبارة بوسم «ظهرت في درس…» */
+export const PHRASE_BANK: Phrase[] = harvestPhrases(ALL_LESSONS, ALL_WORDS);
