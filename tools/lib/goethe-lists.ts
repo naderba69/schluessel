@@ -74,6 +74,12 @@ const CONTRACTIONS: Readonly<Record<string, string>> = {
 
 /** سوابق فعلية تذكرها القائمة جذعاً منتجاً (A2: her-/hin-/weg-/zurück-) */
 const VERB_PREFIX_STEMS: ReadonlySet<string> = new Set(["her", "hin", "weg", "zurück"]);
+/**
+ * D111: جذع صغير الحرف يُركَّب مع الأسماء (كـLieblings-) لا لاحقة تصريف فقط — قائمة صريحة بدليلها:
+ * A2 ص13 «einzel-» وأمثلتها الرسمية مركّبات (Einzelkind · Einzelzimmer). بقية الجذوع الصغيرة (all- · dies- ·
+ * jed- …) أدوات تُصرَّف فلا تُركَّب: «Einkauf» ليس ein- + Kauf.
+ */
+const COMPOUND_STEMS: ReadonlySet<string> = new Set(["einzel"]);
 const STEM_ENDINGS: readonly string[] = ["", "e", "er", "es", "en", "em", "s"];
 
 export function normKey(s: string): string {
@@ -225,6 +231,10 @@ function stemEvidence(ix: ListIndex, lemma: string): Evidence | null {
     if (!low.startsWith(s.lemma)) continue;
     const rest = low.slice(s.lemma.length);
     if (STEM_ENDINGS.includes(rest)) return ev(ix, "stem", s.entry, `${s.lemma}-${rest}`);
+    if (COMPOUND_STEMS.has(s.lemma) && isCap(lemma) && rest.length > 2) {
+      const r = lookup(ix, rest[0]!.toUpperCase() + rest.slice(1), true);
+      if (r.length) return ev(ix, "stem", s.entry, `${s.lemma}- + ${r[0]!.entry.headword}`);
+    }
     if (VERB_PREFIX_STEMS.has(s.lemma) && rest.length > 2) {
       const r = lookup(ix, rest, false).filter((h) => !isCap(h.lemma));
       if (r.length) return ev(ix, "stem", s.entry, `${s.lemma}- + ${r[0]!.entry.headword}`);

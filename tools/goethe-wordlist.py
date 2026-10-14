@@ -476,10 +476,16 @@ def page_lines(page, xmin: float, xmax: float, hx: float):
     for r in rows:
         r["head"].sort(key=lambda w: w["x0"])
         r["ex"].sort(key=lambda w: w["x0"])
+        # D111: علامة جمع على حدّ العمود تماماً تتبع كلمتها الرئيسية المنتهية بفاصلة — لا مثال يبدأ بعلامة جمع.
+        # (A2 ص12: «das Doppelzimmer,» ثم «-» عند x0=374.1 والحدّ 374.1 ← كانت العلامة تسقط في عمود الأمثلة)
+        if (r["head"] and len(r["ex"]) > 1 and r["head"][-1]["text"].endswith(",")
+                and PLURAL_MARK.fullmatch(r["ex"][0]["text"]) and abs(r["ex"][0]["x0"] - ex_col) < 2.0):
+            r["head"].append(r["ex"].pop(0))
     return rows
 
 
 LETTER = re.compile(r"^[A-Za-zÄÖÜäöü]$")
+PLURAL_MARK = re.compile(r"[-¨=]{1,2}[a-zäöü]{0,4}")
 HEADING = re.compile(r"^(ALPHABETISCHER|WORTSCHATZ|ALPHABETISCHER WORTSCHATZ)$")
 
 

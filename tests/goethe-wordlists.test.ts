@@ -55,6 +55,11 @@ describe("D110 — الفهارس الثلاثة: مصدر موثَّق وكلم
       }
   });
 
+  it("D111: لا كلمة رئيسية تنتهي بفاصلة معلّقة (علامة جمع سقطت في عمود الأمثلة) — «das Doppelzimmer, -» كاملة", () => {
+    for (const l of LISTS) for (const e of l.entries) expect(e.headword.trimEnd().endsWith(","), `${l.id}: ${e.headword}`).toBe(false);
+    expect(byId["goethe-a2"]!.entries.find((e) => e.lemmas.includes("Doppelzimmer"))!.headword).toBe("das Doppelzimmer, -");
+  });
+
   it("المخطط يرفض جملة مثال وعدّاً لا يطابق المداخل واستخراجاً بلا بصمة", () => {
     const base = structuredClone(byId["goethe-a1-sd1"]!) as unknown as Record<string, unknown> & { entries: WordlistEntry[]; counts: { main: number }; source: Record<string, unknown> };
     const withSentence = structuredClone(base);
@@ -104,6 +109,10 @@ describe("D110 — المطابقة: كل نوع دليل", () => {
     { headword: "an", lemmas: ["an"] },
     { headword: "all-", lemmas: ["all-"] },
     { headword: "Lieblings-", lemmas: ["Lieblings-"] },
+    { headword: "einzel-", lemmas: ["einzel-"] },
+    { headword: "ein-", lemmas: ["ein-"] },
+    { headword: "das Zimmer, -", lemmas: ["Zimmer"], article: "das" },
+    { headword: "der Kauf, ¨-e", lemmas: ["Kauf"], article: "der" },
     { headword: "die Farbe, -n", lemmas: ["Farbe"], article: "die" },
     { headword: "gut", lemmas: ["gut"] },
     { headword: "der Tag, -e", lemmas: ["Tag"], article: "der" },
@@ -144,6 +153,12 @@ describe("D110 — المطابقة: كل نوع دليل", () => {
     expect(kind(W("allein", "adverb"))).toBeNull(); // all + ein ليست لاحقة تصريف
     expect(kind(W("die Lieblingsfarbe", "noun", "die"))).toBe("stem");
     expect(kind(W("spazieren", "verb"))).toBe("stem");
+  });
+
+  it("D111: einzel- يُركَّب مع اسم مُدرج (Einzelzimmer) — والجذوع الصغيرة الأخرى لا تُركَّب (Einkauf ≠ ein- + Kauf)", () => {
+    expect(evidenceIn(W("das Einzelzimmer", "noun", "das"), ix)).toMatchObject({ kind: "stem", via: "einzel- + das Zimmer, -" });
+    expect(kind(W("der Einkauf", "noun", "der"))).toBeNull();
+    expect(kind(W("die Einzelheit", "noun", "die"))).toBeNull(); // الجزء الثاني غير مُدرج
   });
 
   it("القطعة: كل كلماتها مُدرجة (Guten Tag) — والقطعة «Bitte» تطابق bitte لا الاسم", () => {
@@ -212,6 +227,7 @@ describe("D110 — الحارس الدائم على المحتوى الحقيق�
     expect(g("tschuess")).toEqual(["A1", "A2"]);
     expect(g("arabisch")).toEqual(["A1"]);
     expect(g("mal")).toEqual(["A2"]); // A2 «mal / das Mal» — Fit1 «s Mal» اسمٌ لا يُثبت الأداة
+    expect(g("einzelzimmer")).toEqual(["A1", "A2"]); // D111: SD1 مدخل · A2 «einzel-» (أمثلته الرسمية مركّبات)
     expect(evidenceFor(words.find((w) => w.id === "aerztin")!, IXS).map((e) => e.kind)).toContain("feminine");
   });
 });
