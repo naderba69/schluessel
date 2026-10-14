@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-10-14 — الدفعة 70: حارس ترقية الدروس + قاعدة اليوم في المُشغِّل + تصحيح تفسيري (D115)
+- **إضافة**: `GrammarRuleFile`/`ShufraPayload` (قاعدة اليوم بصيغة الاكتشاف) · أشكال بنود التدريب للأنواع الأربعة عشر بـ`why` عربي · `QuizItem` · `LessonUpgradePlan` + `content/upgrades/a1-lesson-upgrade.json` (60 درساً pending).
+- **إضافة**: `tools/lib/lesson-upgrade.ts` (24 رمزاً e-upgrade/e-rule/w-… + 3 في المدقِّق: e-arsenal-path · e-arsenal-dup · e-upgrade-dup) · `tools/upgrade-status.ts` (أقل من ثانية: الملخص والتالي وما ينقص بالضبط).
+- **إضافة**: `src/lib/practice-session.ts` + `RuleDiscoveryView` + بنود مُنمَّطة في محطة التدريب (محاولة ← حكم + «لماذا»).
+- **إصلاح**: تقطيع `knownForms` (859 → 862 عبارة) · `GrammarLab` (viewExamples) · تسرّب الإجابة في aria-label · «done» في إصلاح النص يُثبت.
+- **488/488 أخضر** · validator 882/0/0 · الطفرة 16/16.
+
 ## 2026-10-14 — الدفعة 69: الخيار (ج) — النواة مبكراً والباقي للفهم + تدقيق الشروحات (D113 · D114)
 - **تغيير معلن (القانون 7)**: خطة `a1-sd1-supplement` أُعيد توزيعها (D113): نواة 123 على 48 درساً قائماً (pending) + 4 إصلاحات نص + 153 للفهم في الوحدتين 13–14 · أسبوع الامتحان a1-u17-* → **a1-u15-*** · `UNIT_MAX = 15`.
 - **إضافة**: `CoreLesson`/`TextFix`/`supplementMode` · 7 قواعد جديدة (e-plan-core-lesson · e-plan-core-load · w-plan-mark-done · e-plan-text-fix · e-plan-receptive …) · `coreStatus` · plan-status للنواة.
