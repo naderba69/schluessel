@@ -299,7 +299,7 @@ function TypedItemView({ item, verdict, onAttempt }: { item: TypedItem; verdict:
         </blockquote>
       )}
       {item.kind === "input" && item.mode === "dictation" ? (
-        <p>استمع واكتب ما تسمعه بالضبط (الحرف الكبير جزء من التهجئة).</p>
+        <p data-testid="dictation-instruction">{item.prompt || "استمع واكتب ما تسمعه بالضبط (الحرف الكبير جزء من التهجئة)."}</p>
       ) : (
         item.prompt && <p dir="auto">{item.prompt}</p>
       )}

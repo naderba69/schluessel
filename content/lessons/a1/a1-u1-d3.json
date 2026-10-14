@@ -10,12 +10,13 @@
     "ar": "تستطيع تهجئة اسمك والسؤال عن اسم زميلك."
   },
   "canDoDaily": [
-    "يتهجى اسمه ويسأل زميله عن اسمه"
+    "يتهجى اسمه الأول واسم عائلته حرفاً حرفاً",
+    "يسأل زميله عن اسمه ويكتبه صحيحاً حين يتهجاه"
   ],
   "warmup": {
     "cardIds": [
       "heissen",
-      "danke",
+      "sprechen",
       "bitte"
     ]
   },
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«Ich ___ meinen Namen.» — buchstabieren: wie mit ich? (تخمين فقط)"
+          "de": "J = ? (تخمين فقط: كيف يُنطق اسم الحرف J بالألمانية؟)"
         },
         "choices": [
-          "buchstabiere",
-          "buchstabieren",
-          "buchstabierst"
+          "«يوت»",
+          "«جي»",
+          "«جاي»"
         ],
-        "answer": "buchstabiere",
+        "answer": "«يوت»",
         "revealNextSession": true
       }
     ],
@@ -49,7 +50,11 @@
       "wiederholen",
       "genau",
       "achso",
-      "alphabet"
+      "alphabet",
+      "anmeldung",
+      "partner",
+      "partnerin",
+      "herr"
     ],
     "grammarArsenalIds": [
       "ars-alphabet-spelling"
@@ -59,54 +64,202 @@
     ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
-      "umlaut-u"
+      "umlaut-u",
+      "double-consonant"
     ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«يتهجى» بالألمانية؟",
-            "a": "buchstabieren"
+            "q": "Ich ___ meinen Namen. (buchstabieren)",
+            "a": "buchstabiere",
+            "why": "مع ich ينتهي الفعل بـ‑e: ich buchstabiere — صيغة المعجم buchstabieren لا تأتي مع ich."
           },
           {
-            "q": "«اسم العائلة»؟",
-            "a": "der Familienname"
+            "q": "___ ist Ihr Name?",
+            "a": "Wie",
+            "why": "عن الاسم تسأل الألمانية بـwie (كيف) لا was: Wie ist Ihr Name? — «ما» العربية تغري بـwas."
+          },
+          {
+            "q": "Mein ___ ist Yusuf, mein Familienname ist Haddad.",
+            "a": "Vorname",
+            "why": "der Vorname = الاسم الأول (Yusuf)، وder Familienname = اسم العائلة (Haddad)، وder Name يشملهما."
+          },
+          {
+            "q": "Wiederholen Sie das bitte! Sprechen Sie bitte ___!",
+            "a": "langsam",
+            "why": "langsam = ببطء — تطلبه حين لا تفهم، ومعه Wiederholen Sie das bitte (كرّر ذلك من فضلك): عبارتان تنقذانك في كل مكالمة."
+          },
+          {
+            "q": "Guten Tag, ___ Müller!",
+            "a": "Herr",
+            "why": "Herr + اسم العائلة = السيد…: Herr Müller. ومع Herr نستعمل Sie لا du."
+          },
+          {
+            "q": "Yusuf ist mein ___. (زميل التمرين)",
+            "a": "Partner",
+            "why": "der Partner للذكر وdie Partnerin للأنثى: Yusuf ist mein Partner · Lena ist meine Partnerin."
           }
         ],
         "interleavedWith": [
-          "heissen",
-          "kommen"
+          "sprechen",
+          "guten-tag"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "أكمل: Ich ___ meinen Namen. (ich)",
-            "a": "buchstabiere"
+            "audioId": "abc-e",
+            "speakText": "E.",
+            "q": "استمع: أي حرف سمعت؟",
+            "choices": [
+              "E",
+              "I",
+              "Ä"
+            ],
+            "a": "E",
+            "why": "E «إيه» بفم نصف مفتوح، وI «إي» بشفتين مشدودتين — في العربية كسرة واحدة فيختلطان، وفي التهجئة يتغيّر الاسم."
           },
           {
-            "q": "«من فضلك كرّر»؟",
-            "a": "Bitte wiederholen Sie das."
+            "audioId": "abc-i",
+            "speakText": "I.",
+            "q": "استمع: أي حرف سمعت؟",
+            "choices": [
+              "I",
+              "E",
+              "Ü"
+            ],
+            "a": "I",
+            "why": "I «إي» ممدودة كالكسرة الطويلة، وE «إيه» أوسع منها، وÜ «إي» بشفتين مضمومتين."
+          },
+          {
+            "audioId": "abc-u",
+            "speakText": "U.",
+            "q": "استمع: أي حرف سمعت؟",
+            "choices": [
+              "U",
+              "O",
+              "Ü"
+            ],
+            "a": "U",
+            "why": "U «أُو» بشفتين مضمومتين جداً، وO «أوه» أوسع منها، وÜ صوت U مع لسان على «ي»."
+          },
+          {
+            "audioId": "abc-j",
+            "speakText": "J.",
+            "q": "استمع: أي حرف سمعت؟",
+            "choices": [
+              "J",
+              "G",
+              "Y"
+            ],
+            "a": "J",
+            "why": "J اسمها «يوت» لا «جي» كالفرنسية، وG «غيه»، وY «إپسيلون»."
+          },
+          {
+            "audioId": "abc-v",
+            "speakText": "V.",
+            "q": "استمع: أي حرف سمعت؟",
+            "choices": [
+              "V",
+              "W",
+              "F"
+            ],
+            "a": "V",
+            "why": "V اسمها «فاو» وصوتها غالباً f، وW اسمها «ڤيه» وصوتها v — كأنهما تبادلا الصوتين."
+          },
+          {
+            "audioId": "anm-4",
+            "speakText": "Haddad: H, A, D, D, A, D.",
+            "q": "استمع: كيف يكتب يوسف اسم عائلته؟",
+            "choices": [
+              "H – A – D – D – A – D",
+              "H – A – D – A – D",
+              "H – A – T – T – A – T"
+            ],
+            "a": "H – A – D – D – A – D",
+            "why": "سمعت «ديه» مرتين متتاليتين ← D مضاعفة. وD «ديه» غير T «تيه»: الأولى مجهورة."
           }
         ],
         "interleavedWith": [],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«بالضبط!»؟",
-            "a": "Genau!"
+            "tokens": [
+              "Name?",
+              "ist",
+              "Wie",
+              "Ihr"
+            ],
+            "a": "Wie ist Ihr Name?",
+            "why": "كلمة السؤال wie أولاً ثم الفعل ist ثم Ihr Name — وIhr بحرف كبير = حضرتك."
           },
           {
-            "q": "السؤال الرسمي عن الاسم؟",
-            "a": "Wie ist Ihr Name?"
+            "tokens": [
+              "Sie",
+              "bitte!",
+              "Buchstabieren"
+            ],
+            "a": "Buchstabieren Sie bitte!",
+            "why": "عبارة طلب جاهزة: الفعل أولاً ثم Sie ثم bitte — احفظها كما هي؛ قاعدة الطلب كاملة في الوحدة 9."
+          },
+          {
+            "tokens": [
+              "ist",
+              "Mein",
+              "Haddad.",
+              "Familienname"
+            ],
+            "a": "Mein Familienname ist Haddad.",
+            "why": "mein Familienname = اسم عائلتي، ثم الفعل ist في الموضع الثاني، ثم الاسم."
+          },
+          {
+            "tokens": [
+              "Partnerin",
+              "heißt",
+              "Meine",
+              "Lena."
+            ],
+            "a": "Meine Partnerin heißt Lena.",
+            "why": "die Partnerin مؤنثة فنقول meine لا mein، وPartner + ‑in = الصيغة المؤنثة."
+          }
+        ],
+        "interleavedWith": [
+          "heissen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "abc-spell-lena",
+            "speakText": "L, E, N, A.",
+            "a": "Lena",
+            "spelled": true,
+            "why": "«إل · إيه · إن · آ» = Lena — E لا I: Lina اسم آخر."
+          },
+          {
+            "audioId": "abc-spell-mueller",
+            "speakText": "M, Ü, L, L, E, R.",
+            "a": "Müller",
+            "spelled": true,
+            "why": "Ü «يوه» بشفتين مضمومتين، والحرف المضاعف يُتهجى مرتين: L, L ← ll."
+          },
+          {
+            "audioId": "abc-spell-haddad",
+            "speakText": "H, A, D, D, A, D.",
+            "a": "Haddad",
+            "spelled": true,
+            "why": "H اسمها «ها» وD «ديه»، وD مضاعفة في الوسط."
           }
         ],
         "interleavedWith": [],
@@ -123,7 +276,9 @@
         "ar": "هاتفياً عند التسجيل"
       },
       "successCriteria": [
-        "يهجئ اسمه بحروفه ويستخدم Wiederholen Sie عند الحاجة"
+        "يتهجى اسمه الأول واسم عائلته حرفاً حرفاً (E غير I · O غير U)",
+        "يسأل: Wie ist Ihr Name? ويطلب: Buchstabieren Sie bitte! · Wiederholen Sie das bitte!",
+        "يكتب اسم زميله صحيحاً حين يتهجاه له"
       ]
     }
   },
@@ -139,19 +294,52 @@
         "items": [
           {
             "q": "Ich ___ meinen Namen.",
+            "a": "buchstabiere",
             "choices": [
               "buchstabiere",
-              "buchstabieren"
+              "buchstabieren",
+              "buchstabiert"
             ],
-            "a": "buchstabiere"
+            "why": "مع ich: ‑e — أما buchstabiert فمع er/sie."
           },
           {
             "q": "«الحرف» بالألمانية؟",
-            "a": "der Buchstabe"
+            "a": "der Buchstabe",
+            "why": "der Buchstabe = الحرف، وdas Alphabet = الألفباء كلها."
           },
           {
-            "q": "ترتيب؟ buchstabiere / Ich / Name / meinen",
-            "a": "Ich buchstabiere meinen Namen."
+            "q": "أي سؤال صحيح عن الاسم؟",
+            "a": "Wie ist Ihr Name?",
+            "choices": [
+              "Wie ist Ihr Name?",
+              "Was ist Ihr Name?",
+              "Wie heißt Ihr Name?"
+            ],
+            "why": "wie لا was، وheißen لا يجتمع مع Name."
+          },
+          {
+            "q": "J = ?",
+            "a": "«يوت»",
+            "choices": [
+              "«يوت»",
+              "«جي»",
+              "«جاي»"
+            ],
+            "why": "J اسمها «يوت» بالألمانية."
+          },
+          {
+            "q": "«اسم العائلة» بالألمانية؟",
+            "a": "der Familienname",
+            "why": "der Familienname = اسم العائلة، وder Vorname = الاسم الأول."
+          },
+          {
+            "q": "«كرّر ذلك من فضلك» بالألمانية؟",
+            "a": "Wiederholen Sie das bitte.",
+            "accept": [
+              "Bitte wiederholen Sie das.",
+              "Wiederholen Sie bitte."
+            ],
+            "why": "wiederholen = يكرّر، وفي الطلب المهذب يأتي الفعل أولاً ثم Sie."
           }
         ],
         "passingScore": 0.75
@@ -160,23 +348,57 @@
         "items": [
           {
             "q": "Name = ?",
+            "a": "الاسم",
             "choices": [
               "الاسم",
-              "العنوان"
+              "العنوان",
+              "الحرف"
+            ]
+          },
+          {
+            "q": "«تكلّم ببطء من فضلك» بالألمانية؟",
+            "a": "Sprechen Sie bitte langsam.",
+            "accept": [
+              "Sprechen Sie langsam, bitte.",
+              "Bitte sprechen Sie langsam.",
+              "Sprechen Sie langsam."
             ],
-            "a": "الاسم"
+            "why": "langsam = ببطء، وsprechen تعلمتها أمس."
           },
           {
-            "q": "«تحدث ببطء»؟",
-            "a": "Sprechen Sie langsam, bitte."
-          },
-          {
-            "q": "أي سؤال أدق للاسم؟",
+            "q": "Meine ___ heißt Lena.",
+            "a": "Partnerin",
             "choices": [
-              "Wie heißt dein Name?",
-              "Wie ist Ihr Name?"
+              "Partnerin",
+              "Partner",
+              "Anmeldung"
             ],
-            "a": "Wie ist Ihr Name?"
+            "why": "Lena مؤنثة ← die Partnerin (Partner + ‑in)، ولذلك meine."
+          },
+          {
+            "q": "V = ?",
+            "a": "«فاو»",
+            "choices": [
+              "«فاو»",
+              "«ڤيه»",
+              "«إف»"
+            ],
+            "why": "V «فاو»، وW «ڤيه»، وF «إف»."
+          },
+          {
+            "q": "«رقم الهاتف» بالألمانية؟",
+            "a": "die Telefonnummer",
+            "why": "das Telefon + die Nummer = die Telefonnummer — والأداة من آخر كلمة في المركّب."
+          },
+          {
+            "q": "زميلك يتهجى اسمك صحيحاً — ماذا تقول؟",
+            "a": "Genau!",
+            "choices": [
+              "Genau!",
+              "Ach so!",
+              "Tschüss!"
+            ],
+            "why": "Genau! = بالضبط! — أما Ach so! فتعني «آه، فهمت»."
           }
         ],
         "passingScore": 0.75
@@ -184,20 +406,49 @@
       {
         "items": [
           {
-            "q": "«الألفباء»؟",
-            "a": "das Alphabet"
+            "q": "«الألفباء» بالألمانية؟",
+            "a": "das Alphabet",
+            "why": "das Alphabet بأداة das، وحروفه die Buchstaben."
           },
           {
-            "q": "«رقم الهاتف»؟",
-            "a": "die Telefonnummer"
+            "q": "Guten Tag, ___ Müller!",
+            "a": "Herr",
+            "choices": [
+              "Herr",
+              "Partner",
+              "Name"
+            ],
+            "why": "Herr + اسم العائلة = السيد…"
           },
           {
             "q": "أي كتابة صحيحة؟",
+            "a": "die Adresse",
             "choices": [
-              "der name",
-              "der Name"
+              "die Adresse",
+              "die adresse",
+              "Die adresse"
             ],
-            "a": "der Name"
+            "why": "كل اسم يبدأ بحرف كبير، والأداة بحرف صغير وسط الجملة."
+          },
+          {
+            "q": "فهمت فجأة ما لم تفهمه — ماذا تقول؟",
+            "a": "Ach so!",
+            "choices": [
+              "Ach so!",
+              "Genau!",
+              "Wie bitte?"
+            ],
+            "why": "Ach so! = آه، فهمت — وWie bitte? حين لم تفهم بعد."
+          },
+          {
+            "q": "رتّب: ist / Wie / Familienname / Ihr",
+            "a": "Wie ist Ihr Familienname?",
+            "why": "wie أولاً ثم الفعل ist ثم Ihr Familienname."
+          },
+          {
+            "q": "«التسجيل» (مكتب التسجيل) بالألمانية؟",
+            "a": "die Anmeldung",
+            "why": "die Anmeldung = التسجيل، ومكانه في المدرسة أو المكتب."
           }
         ],
         "passingScore": 0.75
@@ -206,38 +457,38 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Heute hast du geschrieben und gebuchstabiert: Name, Vorname, Familienname — und du kannst nachfragen.",
-      "ar": "اليوم كتبت وتهجأت: الاسم الأول واسم العائلة — وتستطيع طلب التكرار بأدب."
+      "de": "Heute: Buchstabieren Sie bitte! — L, E, N, A. Wie ist Ihr Name?",
+      "ar": "اليوم: أسماء الحروف للتهجئة (E غير I، وO غير U، وJ «يوت»، وV «فاو») — والسؤال عن الاسم بـwie لا was."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich buchstabieren meinen Namen~~",
-          "ar": "عدم تصريف الفعل"
+          "de": "~~Ich buchstabieren meinen Namen.~~",
+          "ar": "الفعل بصيغة المعجم بلا تصريف"
         },
-        "whyArabicSpeakerFails": "العربية لا تصّرف الفعل مع الضمائر (أنا أكتب/كتب)؛ الألمانية تصرّف دائماً: ich buchstabiere (خريطة 10‑ي).",
+        "whyArabicSpeakerFails": "العربية تصرّف الفعل دائماً (أتهجّى · تتهجّى)، لكن الكلمة الألمانية تُحفظ بصيغة المعجم buchstabieren فتُستعمل كما هي؛ ومع ich ينتهي الفعل بـ‑e: ich buchstabiere — كما تقول «أتهجّى» لا «التهجئة» (خريطة التداخل 10‑ي).",
         "correct": {
           "de": "Ich buchstabiere meinen Namen.",
           "ar": "أتهجى اسمي."
         },
         "exercise": {
-          "q": "صحّح: ~~Er wiederholen das~~",
-          "a": "Er wiederholt das."
+          "q": "صحّح: ~~Ich wiederholen das.~~",
+          "a": "Ich wiederhole das."
         }
       },
       {
         "commonError": {
-          "de": "~~Wie heißt dein Name?~~",
-          "ar": "حشو: Name + heißen"
+          "de": "~~Was ist Ihr Name?~~",
+          "ar": "«ما» العربية ← was"
         },
-        "whyArabicSpeakerFails": "«ما اسم اسمك؟» حشو مقبول في العربية أحياناً؛ الألمانية تختار: Wie heißt du? أو Wie ist Ihr Name? (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "بالعربية نسأل عن الاسم بـ«ما»: «ما اسمك؟»، فينقلها العربي حرفياً: Was ist Ihr Name? — والألمانية تسأل عن الاسم بـwie (كيف): Wie ist Ihr Name? · Wie heißen Sie? (خريطة التداخل 10‑ي).",
         "correct": {
           "de": "Wie ist Ihr Name?",
           "ar": "ما اسمك؟ (رسمي)"
         },
         "exercise": {
-          "q": "صحّح: ~~Wie heißt Ihr Name?~~",
-          "a": "Wie ist Ihr Name?"
+          "q": "صحّح: ~~Was ist dein Familienname?~~",
+          "a": "Wie ist dein Familienname?"
         }
       },
       {
@@ -268,13 +519,20 @@
       "wiederholen",
       "genau",
       "achso",
-      "alphabet"
+      "alphabet",
+      "anmeldung",
+      "partner",
+      "partnerin",
+      "herr"
     ]
   },
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/Name",
-      "https://www.duden.de/rechtschreibung/Alphabet"
+      "https://www.duden.de/rechtschreibung/Alphabet",
+      "https://www.duden.de/rechtschreibung/Anmeldung",
+      "https://www.duden.de/rechtschreibung/Partner",
+      "https://www.duden.de/rechtschreibung/Herr"
     ],
     "wiktionary": [
       "https://de.wiktionary.org/wiki/buchstabieren"
@@ -296,14 +554,28 @@
     "word-wiederholen",
     "word-genau",
     "word-achso",
-    "word-alphabet"
+    "word-alphabet",
+    "word-anmeldung",
+    "word-partner",
+    "word-partnerin",
+    "word-herr"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?)",
     "goetheWordListOverlap": [
+      "buchstabe",
       "name",
-      "alphabet"
+      "vorname",
+      "familienname",
+      "adresse",
+      "buchstabieren",
+      "langsam",
+      "wiederholen",
+      "anmeldung",
+      "partner",
+      "partnerin",
+      "herr"
     ]
   }
 }

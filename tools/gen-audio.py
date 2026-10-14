@@ -195,7 +195,7 @@ def build_all() -> None:
         ("word-langsam", "langsam.", "langsam", ["a1-u1-d3"]),
         ("word-wiederholen", "wiederholen.", "wiederholen", ["a1-u1-d3"]),
         ("word-genau", "genau.", "genau", ["a1-u1-d3"]),
-        ("word-achso", "Achso.", "achso", ["a1-u1-d3"]),
+        ("word-achso", "Ach so.", "achso", ["a1-u1-d3"]),
         ("word-alphabet", "Alphabet.", "alphabet", ["a1-u1-d3"]),
         # ═══ a1-u1-d4 — Zahlen/Alter/Telefon (D46) ═══
         ("word-zahl", "Zahl.", "zahl", ["a1-u1-d4"]),
@@ -922,6 +922,10 @@ def build_all() -> None:
     ("word-heute", "heute.", "heute", ["a1-u1-d2"]),
     ("word-jetzt", "jetzt.", "jetzt", ["a1-u1-d2"]),
     ("word-schwer", "schwer.", "schwer", ["a1-u1-d2"]),
+    ("word-anmeldung", "die Anmeldung.", "anmeldung", ["a1-u1-d3"]),
+    ("word-partner", "der Partner.", "partner", ["a1-u1-d3"]),
+    ("word-partnerin", "die Partnerin.", "partnerin", ["a1-u1-d3"]),
+    ("word-herr", "der Herr.", "herr", ["a1-u1-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

@@ -155,6 +155,16 @@ const AudioId = z.string().regex(/^[a-z0-9-]+$/, { message: "معرّف مسار
 export const sentenceTokens = (s: string): string[] => s.trim().split(/\s+/).filter(Boolean);
 /** صيغة المقارنة في الإملاء: بلا علامة ترقيم نهائية ولا فراغات زائدة — الحرف الكبير جزء من التهجئة */
 export const dictationForm = (s: string): string => s.trim().replace(/\s+/g, " ").replace(/[.!?]+$/, "");
+/** حرف كبير يحفظ ß (‎"ß".toUpperCase() = "SS" في JS ← كانت «Strasse» ستطابق «Straße» المتهجّاة) */
+const upperKeepSz = (s: string): string => [...s].map((c) => (c === "ß" ? c : c.toUpperCase())).join("");
+/**
+ * حروف التهجئة المسموعة مجموعةً (D120): «M, Ü, L, L, E, R.» ← «MÜLLER» · null إن لم يكن النص حرفين مفردين فأكثر
+ * بفواصل أو شرطات (لا كلمة ولا اسم قبل الحروف).
+ */
+export const spelledLetters = (s: string): string | null => {
+  const parts = s.trim().replace(/[.!?]+$/, "").split(/\s*[,–-]\s*/).filter(Boolean);
+  return parts.length >= 2 && parts.every((p) => /^\p{L}$/u.test(p)) ? upperKeepSz(parts.join("")) : null;
+};
 const sameMultiset = (a: readonly string[], b: readonly string[]) =>
   a.length === b.length && [...a].sort().join("\u0000") === [...b].sort().join("\u0000");
 
@@ -193,11 +203,21 @@ export const ListeningItem = z
   .refine((i) => i.choices.includes(i.a), { message: "الإجابة ليست بين الخيارات" })
   .refine((i) => distinct(i.choices), { message: "خيارات مكررة" });
 
-/** إملاء: ما يُكتب هو ما يُسمع حرفياً (عدا علامة الترقيم الأخيرة) */
+/**
+ * إملاء: ما يُكتب هو ما يُسمع حرفياً (عدا علامة الترقيم الأخيرة).
+ * spelled (D120 — إملاء الحروف): المسموع حروف متهجّاة والإجابة الكلمة نفسها مجموعةً («L, E, N, A.» ← Lena)
+ * — مهارة A1 (تهجئة الاسم عند التسجيل)؛ والقاعدة قابلة للتحقق: الحروف المجموعة = الإجابة (بلا اعتبار لحالة الحرف).
+ */
 export const DictationItem = z
-  .object({ audioId: AudioId, speakText: DeText, a: ItemText, why: WhyAr })
+  .object({ audioId: AudioId, speakText: DeText, a: ItemText, spelled: z.literal(true).optional(), why: WhyAr })
   .strict()
-  .refine((i) => dictationForm(i.a) === dictationForm(i.speakText), { message: "إجابة الإملاء ليست النص المسموع" });
+  .refine(
+    (i) =>
+      i.spelled
+        ? spelledLetters(i.speakText) !== null && spelledLetters(i.speakText) === upperKeepSz(dictationForm(i.a))
+        : dictationForm(i.a) === dictationForm(i.speakText),
+    { message: "إجابة الإملاء ليست النص المسموع (ولا حروفه المتهجّاة مجموعةً مع spelled)" },
+  );
 
 /** توصيل: أزواج ألماني↔عربي بلا تكرار في أي طرف */
 export const MatchItem = z

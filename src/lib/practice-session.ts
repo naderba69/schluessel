@@ -21,6 +21,9 @@ export type TypedItem =
  * بند المحتوى ← بند مُنمَّط، أو null للبند القديم (يبقى بسلوكه القديم: «أظهر الإجابة»).
  * التحقق بالمخططات نفسها التي يفرضها حارس الترقية — لا تعريف ثانٍ للشكل.
  */
+/** تعليمة إملاء الحروف (D120): المسموع حروف — المطلوب الكلمة كاملة */
+export const SPELLED_DICTATION_AR = "استمع إلى الحروف واكتب الكلمة التي تتهجّاها كاملة (الأسماء تبدأ بحرف كبير).";
+
 export function toTypedItem(type: StationType, raw: unknown): TypedItem | null {
   switch (type) {
     case "choice":
@@ -56,7 +59,7 @@ export function toTypedItem(type: StationType, raw: unknown): TypedItem | null {
     case "dictation": {
       const r = DictationItem.safeParse(raw);
       return r.success
-        ? { kind: "input", mode: "dictation", prompt: "", answer: r.data.a, accept: [], why: r.data.why, audio: { audioId: r.data.audioId, speakText: r.data.speakText } }
+        ? { kind: "input", mode: "dictation", prompt: r.data.spelled ? SPELLED_DICTATION_AR : "", answer: r.data.a, accept: [], why: r.data.why, audio: { audioId: r.data.audioId, speakText: r.data.speakText } }
         : null;
     }
     case "build-sentence": {

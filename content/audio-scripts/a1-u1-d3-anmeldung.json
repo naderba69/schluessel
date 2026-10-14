@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u1-d3-anmeldung",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Am Telefon: die Anmeldung",
+    "ar": "على الهاتف: التسجيل في مدرسة اللغة"
+  },
+  "usedIn": [
+    "a1-u1-d3"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "anm-1",
+      "speaker": "frau-berg",
+      "text": "Anmeldung, guten Tag!",
+      "direction": "موظفة التسجيل — ودودة ومهنية"
+    },
+    {
+      "id": "anm-2",
+      "speaker": "yusuf",
+      "text": "Guten Tag! Mein Name ist Yusuf Haddad.",
+      "direction": "يوسف — مهذب ومتوتر قليلاً"
+    },
+    {
+      "id": "anm-3",
+      "speaker": "frau-berg",
+      "text": "Wie bitte? Buchstabieren Sie bitte langsam.",
+      "direction": "لم تسمع جيداً — تطلب بلطف"
+    },
+    {
+      "id": "anm-4",
+      "speaker": "yusuf",
+      "text": "Haddad: H, A, D, D, A, D.",
+      "direction": "يتهجى ببطء ووضوح"
+    },
+    {
+      "id": "anm-5",
+      "speaker": "frau-berg",
+      "text": "Danke, Herr Haddad. Und Ihre Partnerin?",
+      "direction": "تكتب ثم تسأل عن الزميلة"
+    },
+    {
+      "id": "anm-6",
+      "speaker": "yusuf",
+      "text": "Meine Partnerin heißt Lena. L, E, N, A.",
+      "direction": "يتهجى اسم زميلته"
+    },
+    {
+      "id": "anm-7",
+      "speaker": "frau-berg",
+      "text": "L, I, N, A?",
+      "direction": "تتحقق — وتخطئ في حرف واحد"
+    },
+    {
+      "id": "anm-8",
+      "speaker": "yusuf",
+      "text": "Nein, nicht I — E! L, E, N, A.",
+      "direction": "يصحّح بلطف ويشدد على E"
+    },
+    {
+      "id": "anm-9",
+      "speaker": "frau-berg",
+      "text": "Ach so! L, E, N, A?",
+      "direction": "فهمت الآن — تعيد للتأكد"
+    },
+    {
+      "id": "anm-10",
+      "speaker": "yusuf",
+      "text": "Genau! Danke!",
+      "direction": "مرتاح — يؤكد"
+    }
+  ]
+}

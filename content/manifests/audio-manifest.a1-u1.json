@@ -771,16 +771,16 @@
         "speaker": "de_DE-thorsten-medium",
         "speedWpm": 110
       },
-      "textDe": "Achso.",
+      "textDe": "Ach so.",
       "priority": "P2",
       "lessonRefs": [
         "a1-u1-d3"
       ],
-      "durationMs": 931,
-      "sizeBytes": 4405,
-      "hash": "sha256:a41c4898e1a80480ad37a09e1ffe83a50bb57e62759c4d33ccea62923877629b",
-      "pcmSha256": "3fed411e821c801f937259b891e51698dffe10f0deef36289d40ac35f084aec7",
-      "rmsDb": -17.13
+      "durationMs": 885,
+      "sizeBytes": 4258,
+      "hash": "sha256:efda8222ea7464d63f22452980f58675252a29c1d139f92c2a280a99db5ec8ba",
+      "pcmSha256": "bade14c76a1b5ac1542034de84209451b3471c9791dccbef9238feee95e1e87a",
+      "rmsDb": -17.02
     },
     {
       "id": "word-alphabet",
@@ -15206,6 +15206,86 @@
       "rmsDb": -16.97
     },
     {
+      "id": "word-anmeldung",
+      "file": "words/audio/de-DE/word-anmeldung.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Anmeldung.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 1013,
+      "sizeBytes": 4928,
+      "hash": "sha256:ba3b1bc8a251346c8644c58417e12d0f1938be709fbb4bfd59fd74b93dda87ea",
+      "pcmSha256": "528c9cb2b9318a039c9a377c98a6b6dd868f5594d17680c90e9694c0b77213c5",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-partner",
+      "file": "words/audio/de-DE/word-partner.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Partner.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 1117,
+      "sizeBytes": 5381,
+      "hash": "sha256:c67c85faa777687cc9dad70a13b7f2ed6bada39ed8b0176608828be23dbeb29f",
+      "pcmSha256": "6c5f727b49fe397450b3e7c1ec3364f07bc9d3ee1b65716975f2cbee0bb1a18e",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "word-partnerin",
+      "file": "words/audio/de-DE/word-partnerin.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Partnerin.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 1175,
+      "sizeBytes": 5585,
+      "hash": "sha256:164946278d31f39674e5ff26bb3887d42257cb2fce7feaeb5ae1a06e5297bd02",
+      "pcmSha256": "57d6caddf0ee464bc91517d637a86b54b802e6eb2297ff01802ee053bbccf336",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "word-herr",
+      "file": "words/audio/de-DE/word-herr.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Herr.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 757,
+      "sizeBytes": 3746,
+      "hash": "sha256:7dd6a0fe0dca9dc9b8fd45c18c2f1f34d57e7f6109c37d0e7d898d5efa4e2073",
+      "pcmSha256": "4a8c4a3c6e3b3569c61ca8bbee243683e2a5cc3dfa613e0c5379aa0d09c7ed8c",
+      "rmsDb": -17.05
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -15919,6 +15999,952 @@
       "hash": "sha256:ff043c3fad1a5d64bb8cc3d2f99b6c76410f6047ad171008169fec3f69fadd7f",
       "pcmSha256": "55d9efe4644f2edaa73aae557b56f58fc6d6c509f91ea3972b486a7731ea1756",
       "rmsDb": -17.36
+    },
+    {
+      "id": "abc-a",
+      "file": "audio/scripts/a1-alphabet/abc-a.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 74,
+        "lengthScale": 1.32
+      },
+      "textDe": "A.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 815,
+      "sizeBytes": 4236,
+      "hash": "sha256:8c3c235e8cb312edefe559c7ccc050f8af9ab678531237a5f15a016db14b0f4c",
+      "pcmSha256": "410ce2a23618b36781e8a62d0cc79055e5c44aa55dfb25512e21e72bea37f50a",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "abc-b",
+      "file": "audio/scripts/a1-alphabet/abc-b.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 80,
+        "lengthScale": 1.32
+      },
+      "textDe": "B.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 746,
+      "sizeBytes": 3484,
+      "hash": "sha256:e344e22666289280d77f1b39c91b566abf7df8ab7c01a7b140d803b60c24c2c4",
+      "pcmSha256": "5cdf0ff54c6c2a94d9ea3450c52c88084fb3a59f3b07c6c93b1c57033482357b",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "abc-c",
+      "file": "audio/scripts/a1-alphabet/abc-c.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 84,
+        "lengthScale": 1.32
+      },
+      "textDe": "C.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 711,
+      "sizeBytes": 3566,
+      "hash": "sha256:617437bb72c462986969fbb88062bf60cae02cfb323aa429c033ed9a91bc0453",
+      "pcmSha256": "8abcd417a5f546d80fe10072d15d6da541b5d74c9859acd94a10a57541411aa4",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "abc-d",
+      "file": "audio/scripts/a1-alphabet/abc-d.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 79,
+        "lengthScale": 1.32
+      },
+      "textDe": "D.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 757,
+      "sizeBytes": 3591,
+      "hash": "sha256:9c3dae93cfc97265fd238b8aaacfcf50736e2f6fc6e938505aec67b4d109aecc",
+      "pcmSha256": "79833e49a902658bf2ea7e3458b7aba946b6df52f7ea34606ed8bb048e9899dc",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "abc-e",
+      "file": "audio/scripts/a1-alphabet/abc-e.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 51,
+        "lengthScale": 1.32
+      },
+      "textDe": "E.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 1187,
+      "sizeBytes": 5110,
+      "hash": "sha256:2c11fecfe3c28e4f69524c59f9b9e18168c58f5577cd3a393d8c275ed2582958",
+      "pcmSha256": "dc38ed92efaf627b932ab7e06c460b390a8220bbfd77c10eee60cf79a2e13497",
+      "rmsDb": -17
+    },
+    {
+      "id": "abc-f",
+      "file": "audio/scripts/a1-alphabet/abc-f.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 76,
+        "lengthScale": 1.32
+      },
+      "textDe": "F.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 792,
+      "sizeBytes": 3654,
+      "hash": "sha256:4673092fe5dac5bdf291eb3a835900810582f15ed85df829b0c965711abf10a8",
+      "pcmSha256": "ff23ec406aff991b8a25ab179407ab139740b48da6a7d3012a963043fe2c0960",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "abc-g",
+      "file": "audio/scripts/a1-alphabet/abc-g.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 89,
+        "lengthScale": 1.32
+      },
+      "textDe": "G.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 676,
+      "sizeBytes": 3265,
+      "hash": "sha256:9880560879022107bab015567decd3bf08925f40eb747d7084b49f157c150f8b",
+      "pcmSha256": "43b40cfb53d77134833db6ac49ea6be3e4624e95348434ab52b6a53fe1fc92d2",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "abc-h",
+      "file": "audio/scripts/a1-alphabet/abc-h.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 67,
+        "lengthScale": 1.32
+      },
+      "textDe": "H.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 897,
+      "sizeBytes": 4615,
+      "hash": "sha256:e7642706d52aefc54d87c7e52f91ab87e34373847fb28aef6f94cdcf9e8c3c1f",
+      "pcmSha256": "d20ea935695d95b94c4a408311df29e501011633211d0b1ecd85c9db162e0de5",
+      "rmsDb": -17.13
+    },
+    {
+      "id": "abc-i",
+      "file": "audio/scripts/a1-alphabet/abc-i.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 97,
+        "lengthScale": 1.32
+      },
+      "textDe": "I.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 618,
+      "sizeBytes": 3078,
+      "hash": "sha256:040c4baac76061b4ff986111a19cdc4aa0394de0c8c64b7e7c307f151e6f0289",
+      "pcmSha256": "960d88be5d0d2a34eb1e8bdf238161a6e73aab11d9e14a0b204bd6ca040ea812",
+      "rmsDb": -16.96
+    },
+    {
+      "id": "abc-j",
+      "file": "audio/scripts/a1-alphabet/abc-j.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 78,
+        "lengthScale": 1.32
+      },
+      "textDe": "J.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 769,
+      "sizeBytes": 3670,
+      "hash": "sha256:8ac6afc32bc4a155a1c7fe2faeafebec0a4c71f044a2237cb6819388cf094bd9",
+      "pcmSha256": "5256c7926056881f59a55ae5f6c766afaec4497fb8e813a520c4b0d7adf998c8",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "abc-k",
+      "file": "audio/scripts/a1-alphabet/abc-k.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 76,
+        "lengthScale": 1.32
+      },
+      "textDe": "K.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 792,
+      "sizeBytes": 3749,
+      "hash": "sha256:8457fd3899fe122dde023eb5fb3feac8d930a520b453c9eb7fa0b5a2b173d650",
+      "pcmSha256": "f08061e5e45a085a6e79da90762d1440bcc1913b24f45d3cd78fcf47a479e35d",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "abc-l",
+      "file": "audio/scripts/a1-alphabet/abc-l.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 52,
+        "lengthScale": 1.32
+      },
+      "textDe": "L.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 1152,
+      "sizeBytes": 4925,
+      "hash": "sha256:1a8b0b1730e3e10d0f2d38cc71f2957b21b1d0214044d686ba2c39cb5fd454c6",
+      "pcmSha256": "808a02157700ec2ea6bc71c4d7ca06eece27688f3a3e35654cb3f34bf9989f21",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "abc-m",
+      "file": "audio/scripts/a1-alphabet/abc-m.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 64,
+        "lengthScale": 1.32
+      },
+      "textDe": "M.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 943,
+      "sizeBytes": 4295,
+      "hash": "sha256:0590b0f317a489e722bf86e69bbb2b0e2be15d100d31718da76b5202ee2e11c4",
+      "pcmSha256": "e638deba92572e14e3ba99d8503475dfe5b20af6f6d891e13a8309dfe303e180",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "abc-n",
+      "file": "audio/scripts/a1-alphabet/abc-n.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 78,
+        "lengthScale": 1.32
+      },
+      "textDe": "N.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 769,
+      "sizeBytes": 3656,
+      "hash": "sha256:b370289ff35e294d27add10b1f9472da5473e3c1383a55e5b5d0334add48f196",
+      "pcmSha256": "dc21634767db75af9bcb6686a01efac8112f1ed2b03cbb0ad36a231d652e6f44",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "abc-o",
+      "file": "audio/scripts/a1-alphabet/abc-o.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 87,
+        "lengthScale": 1.32
+      },
+      "textDe": "O.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 688,
+      "sizeBytes": 3317,
+      "hash": "sha256:cb812c63247917ddb7dc07824197ae276f4dcc28d48c036fd0aa6f20fee6f273",
+      "pcmSha256": "931f52d5039e74e786a2dc7297e9d00b875eb46f417f9efccfd5335c2d315082",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "abc-p",
+      "file": "audio/scripts/a1-alphabet/abc-p.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 67,
+        "lengthScale": 1.32
+      },
+      "textDe": "P.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 897,
+      "sizeBytes": 4195,
+      "hash": "sha256:1c324f2aa9cc2283fe2138cb8b773f8a77f13644735b16e7c7a894a70219485f",
+      "pcmSha256": "c52b9b409f35933daf9c85b3785d22591efe85984176c86e2e4a305669b3925c",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "abc-q",
+      "file": "audio/scripts/a1-alphabet/abc-q.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 74,
+        "lengthScale": 1.32
+      },
+      "textDe": "Q.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 815,
+      "sizeBytes": 3785,
+      "hash": "sha256:544a6e89af77ef0c0a3259a63488d06ee6adbab524d4a85029b300402abc2d41",
+      "pcmSha256": "8a97a9e44db2b71b871c3bc4543f1fbbf64278f0e6da616a40aff1288300a529",
+      "rmsDb": -16.95
+    },
+    {
+      "id": "abc-r",
+      "file": "audio/scripts/a1-alphabet/abc-r.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 66,
+        "lengthScale": 1.32
+      },
+      "textDe": "R.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 908,
+      "sizeBytes": 3953,
+      "hash": "sha256:ef729b66d39d82779997cd04ac3869d611c3c9322c380693d5800569e45f5de3",
+      "pcmSha256": "808d235734ee4022c1716c80b22cd6e7ee45d8b3770c1ded73e5ec72b07507f4",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "abc-s",
+      "file": "audio/scripts/a1-alphabet/abc-s.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 70,
+        "lengthScale": 1.32
+      },
+      "textDe": "S.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 862,
+      "sizeBytes": 4059,
+      "hash": "sha256:b12f061bab22eaa09ed133ff03d4bc030243eac4cb21fee36ded29a185934d7d",
+      "pcmSha256": "57611f561f69beac70823a471e106615f522452840ec775169c85ce6decd8fc8",
+      "rmsDb": -17.47
+    },
+    {
+      "id": "abc-t",
+      "file": "audio/scripts/a1-alphabet/abc-t.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 79,
+        "lengthScale": 1.32
+      },
+      "textDe": "T.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 757,
+      "sizeBytes": 3573,
+      "hash": "sha256:9e45e0959865693c33c1e81cfb7e489a0c274208ffda1c7d4362c438f9ab785b",
+      "pcmSha256": "d169fc419b855513f6fcc748811aba57c3b01c3388bdc87c35baf3db22936b75",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "abc-u",
+      "file": "audio/scripts/a1-alphabet/abc-u.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 86,
+        "lengthScale": 1.32
+      },
+      "textDe": "U.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 699,
+      "sizeBytes": 3369,
+      "hash": "sha256:dfb226e3eab3b462d279edce775d496c834e5ecb59638be7c765ff8fbfa2d99b",
+      "pcmSha256": "003bbe61e95e0215900c5f99f815f5461b089915b4286dbd0984350ebeb6f302",
+      "rmsDb": -16.95
+    },
+    {
+      "id": "abc-v",
+      "file": "audio/scripts/a1-alphabet/abc-v.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 83,
+        "lengthScale": 1.32
+      },
+      "textDe": "V.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 722,
+      "sizeBytes": 3503,
+      "hash": "sha256:39d3ce96a34cad41d79f246e6db35c932d97d293d36afa63a0c20ad391790a8b",
+      "pcmSha256": "568f1559861233530fb9eb4bd84513373acd6447ccc971670147e611981cb134",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "abc-w",
+      "file": "audio/scripts/a1-alphabet/abc-w.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 70,
+        "lengthScale": 1.32
+      },
+      "textDe": "W.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 862,
+      "sizeBytes": 4139,
+      "hash": "sha256:745b5dfee4b1f10a2bb545272481abbf75a9636493f17e35ab830674bb87e8f1",
+      "pcmSha256": "21bfe1cc1c54ff696a78c68708e4c957bee2384bac2fcbcf822bfb86f1a6a36c",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "abc-x",
+      "file": "audio/scripts/a1-alphabet/abc-x.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 79,
+        "lengthScale": 1.32
+      },
+      "textDe": "X.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 757,
+      "sizeBytes": 3775,
+      "hash": "sha256:f0b7deb8bbcb8a1ab227bd46e1e0ef1476381d02876f2d537d881684b58db16c",
+      "pcmSha256": "6619cef0f0285a1c6239932ab926a5861cada7a6bf011173a57cde01368942db",
+      "rmsDb": -17.55
+    },
+    {
+      "id": "abc-y",
+      "file": "audio/scripts/a1-alphabet/abc-y.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 49,
+        "lengthScale": 1.32
+      },
+      "textDe": "Y.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 1222,
+      "sizeBytes": 5608,
+      "hash": "sha256:50382e2045ad297ab2716c14836466e252a2075b32548d675d36e306b356a46f",
+      "pcmSha256": "6bcd47cc9bd98608157efe7c487267e6384a3752f09baf36a868be88c561fca4",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "abc-z",
+      "file": "audio/scripts/a1-alphabet/abc-z.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 69,
+        "lengthScale": 1.32
+      },
+      "textDe": "Z.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 873,
+      "sizeBytes": 3920,
+      "hash": "sha256:ce90d1544420355bab542559082e3b4c0eee01bc46e9aea529fe6219de2f25d6",
+      "pcmSha256": "01189ad68f4cc2887db16dba86717555236f8f7114ea160f8c587028757c85c7",
+      "rmsDb": -17.53
+    },
+    {
+      "id": "abc-ae",
+      "file": "audio/scripts/a1-alphabet/abc-ae.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 67,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ä.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 897,
+      "sizeBytes": 3911,
+      "hash": "sha256:85fe9629f2d219a54fbb3d774ec6e7fbb8e564fe91acd07a9e39c7979e697f8c",
+      "pcmSha256": "11202b56cd7cc147521aff418c89b63f08abd97f916eafdb802f90c031d3b66c",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "abc-oe",
+      "file": "audio/scripts/a1-alphabet/abc-oe.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 75,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ö.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 804,
+      "sizeBytes": 3837,
+      "hash": "sha256:23340bb9d0a815ef7965fc4abd8793edbe92b9e0fe27faca99541c3b6464b910",
+      "pcmSha256": "76dee1d8d366e2a690506730e23a81394c541acda14b61a3fee52aaf86ba68a8",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "abc-ue",
+      "file": "audio/scripts/a1-alphabet/abc-ue.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 82,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ü.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 734,
+      "sizeBytes": 3476,
+      "hash": "sha256:3564f6fae9a9aab9de38abafe4fcbb9f356ed290bb4274dd6d8a6cb1052be720",
+      "pcmSha256": "d1ed908c5d1fb818d987c06622a8f707b0b5a27f9228cecca4659d78821db010",
+      "rmsDb": -16.97
+    },
+    {
+      "id": "abc-sz",
+      "file": "audio/scripts/a1-alphabet/abc-sz.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 54,
+        "lengthScale": 1.32
+      },
+      "textDe": "ß.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 1106,
+      "sizeBytes": 5046,
+      "hash": "sha256:873cb47c2adf099f62debd8630b967f57ea6175e861ea1d5f7ed7c7d011bd435",
+      "pcmSha256": "813d2be603b9b4d77f68e6bb7818ea32cf843f13f99f7b937ccd2bb9ee7bf250",
+      "rmsDb": -17.9
+    },
+    {
+      "id": "abc-spell-lena",
+      "file": "audio/scripts/a1-alphabet/abc-spell-lena.opus",
+      "role": "character",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 240,
+        "lengthScale": 1.32
+      },
+      "textDe": "L, E, N, A.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 1000,
+      "sizeBytes": 4991,
+      "hash": "sha256:9934851f063361f29e766a659f651f831b8900b3cf5c5e31409e2b5bab2ce622",
+      "pcmSha256": "888bad6580af08b13148a7279232d1c5087ed7deec7dfd88604c66be9a3746b0",
+      "rmsDb": -17.21
+    },
+    {
+      "id": "abc-spell-mueller",
+      "file": "audio/scripts/a1-alphabet/abc-spell-mueller.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 97,
+        "lengthScale": 1.32
+      },
+      "textDe": "M, Ü, L, L, E, R.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 3729,
+      "sizeBytes": 16429,
+      "hash": "sha256:b64541479f947308fc1f30e7936785001f3778f970d2761da04567d2e8e249d7",
+      "pcmSha256": "f06d5f0e4767eaa253606f5447a3ea85ec74f550e530758315fe88f5bd5c9867",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "abc-spell-haddad",
+      "file": "audio/scripts/a1-alphabet/abc-spell-haddad.opus",
+      "role": "character",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 89,
+        "lengthScale": 1.32
+      },
+      "textDe": "H, A, D, D, A, D.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 4043,
+      "sizeBytes": 18173,
+      "hash": "sha256:c86cda761b53c48ac3ae735bc1a93dd97d20d45192995fb3b257d1191cae40b8",
+      "pcmSha256": "88112bb0af9be4798c1059b568b7ef16db32a29f1ee401430d52dc7b07b152c5",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "anm-1",
+      "file": "audio/scripts/a1-u1-d3-anmeldung/anm-1.opus",
+      "role": "dialogue",
+      "characterId": "frau-berg",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 72,
+        "lengthScale": 1.32
+      },
+      "textDe": "Anmeldung, guten Tag!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 2504,
+      "sizeBytes": 11792,
+      "hash": "sha256:95acf8a2a36e0d4717f7022820cd17faedd5927d6e91dc1d5ce7606731467498",
+      "pcmSha256": "9d1ad3b02421c10fbfd3751e40f6c67dcccb6f9493ff7f2d1b1bf59eadcac63f",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "anm-2",
+      "file": "audio/scripts/a1-u1-d3-anmeldung/anm-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 135,
+        "lengthScale": 1.32
+      },
+      "textDe": "Guten Tag! Mein Name ist Yusuf Haddad.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 3102,
+      "sizeBytes": 13626,
+      "hash": "sha256:61de598cc5693b005c8650f709eb77de9c94d108fb3477ceec51c0b7cf393680",
+      "pcmSha256": "17df3ea105bc108ca8224355187739e0758362b23e9aabc5969589e2b7c18e30",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "anm-3",
+      "file": "audio/scripts/a1-u1-d3-anmeldung/anm-3.opus",
+      "role": "dialogue",
+      "characterId": "frau-berg",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 105,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wie bitte? Buchstabieren Sie bitte langsam.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 3432,
+      "sizeBytes": 15965,
+      "hash": "sha256:6cd2978e5461448e14fb42d306cea41af22726f3e59d3089fec06d9471498d7b",
+      "pcmSha256": "4a2fb232e105538856bea82e8fe952bad1b0990060e1a876fbc81be69a29c145",
+      "rmsDb": -17.3
+    },
+    {
+      "id": "anm-4",
+      "file": "audio/scripts/a1-u1-d3-anmeldung/anm-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 89,
+        "lengthScale": 1.32
+      },
+      "textDe": "Haddad: H, A, D, D, A, D.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 4740,
+      "sizeBytes": 20279,
+      "hash": "sha256:5b0c5028eb09a72e994d4b65a868a10eed8df9f2fdc4f6f60a87f10bca260c17",
+      "pcmSha256": "460ea96d336d542fbed51b1f69e6c5dcacfd16bf0e7f408dd3fb0b14a8d2a475",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "anm-5",
+      "file": "audio/scripts/a1-u1-d3-anmeldung/anm-5.opus",
+      "role": "dialogue",
+      "characterId": "frau-berg",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 95,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke, Herr Haddad. Und Ihre Partnerin?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 3800,
+      "sizeBytes": 17571,
+      "hash": "sha256:f5f13c34acb99b8d8f7bdde5a9b5543c1e7ec3e25926b91dcdf55540d188ff50",
+      "pcmSha256": "aaa0b85f53cd8e6c1b1264a0d3561101be9777ee94ef615eee37f18a6832297e",
+      "rmsDb": -17.21
+    },
+    {
+      "id": "anm-6",
+      "file": "audio/scripts/a1-u1-d3-anmeldung/anm-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 108,
+        "lengthScale": 1.32
+      },
+      "textDe": "Meine Partnerin heißt Lena. L, E, N, A.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 4461,
+      "sizeBytes": 19999,
+      "hash": "sha256:74ce45b98297b07e60893e2718c873d0c7b85c77fe27e1ba9c4a829289951365",
+      "pcmSha256": "a71e8f1a6816ded5e9a309b5215e7b6acdcc9509040ac94050996a2d5bdf0ad0",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "anm-7",
+      "file": "audio/scripts/a1-u1-d3-anmeldung/anm-7.opus",
+      "role": "dialogue",
+      "characterId": "frau-berg",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 236,
+        "lengthScale": 1.32
+      },
+      "textDe": "L, I, N, A?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 1016,
+      "sizeBytes": 5103,
+      "hash": "sha256:96c728a959f569fe3f90b9a426d5221fd60d3fb5ac10333f012d779efb84fdfd",
+      "pcmSha256": "27b85d68552f5bf4d5ab7ce48ea6a903e3caf711c7fc97d3e9cb73d1576f280b",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "anm-8",
+      "file": "audio/scripts/a1-u1-d3-anmeldung/anm-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 97,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, nicht I — E! L, E, N, A.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 4960,
+      "sizeBytes": 22179,
+      "hash": "sha256:76d707480a14802ad16cfd1ad6ea2e5813171209ff39865c0afe7b93762ad7f8",
+      "pcmSha256": "6966d5c1436c91c97304dd050f9b51e3665c69ee15f563fd32beb4065f6350b6",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "anm-9",
+      "file": "audio/scripts/a1-u1-d3-anmeldung/anm-9.opus",
+      "role": "dialogue",
+      "characterId": "frau-berg",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 179,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ach so! L, E, N, A?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 2008,
+      "sizeBytes": 9614,
+      "hash": "sha256:91b3d058dad8385187b186a96a111f13786c9843a8da335cb16432887d7dd69e",
+      "pcmSha256": "873137672a961d754edf9bed2cc98aace2a23e870ad03d4675b57485dc78070a",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "anm-10",
+      "file": "audio/scripts/a1-u1-d3-anmeldung/anm-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 64,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Danke!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d3"
+      ],
+      "durationMs": 1872,
+      "sizeBytes": 8189,
+      "hash": "sha256:a0a1b4c70d8b875d34fe615803b22c76b167634fbf3bc1a3a89bc60c9117245b",
+      "pcmSha256": "c69df8aaf03cfd2b7c66d05a6570c5cc9e0e96959b59207a5953b03b6ca7f43d",
+      "rmsDb": -17.04
     }
   ],
   "characterVoices": {
