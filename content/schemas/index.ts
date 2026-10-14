@@ -11,3 +11,4 @@ export * from "./landeskunde.js";
 export * from "./pruefungen.js";
 export * from "./modelltest.js";
 export * from "./lese.js";
+export * from "./audio-script.js";

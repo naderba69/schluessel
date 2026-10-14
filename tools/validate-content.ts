@@ -7,8 +7,9 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
-  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, SCHEMA_VERSION,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, SCHEMA_VERSION,
 } from "../content/schemas/index.js";
+import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
 import { VOICE_ID, VOICE_ID_FEMALE, PINNED_VOICES, FEMALE_ROLES, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
 
 export interface Issue {
@@ -39,7 +40,7 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
 
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "lese" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "lese" | "audio-script" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -52,6 +53,7 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("pruefungen/")) return "pruefungen";
   if (p.startsWith("modelltest/")) return "modelltest";
   if (p.startsWith("lese/")) return "lese";
+  if (p.startsWith("audio-scripts/")) return "audio-script";
   return "unknown";
 }
 
@@ -65,6 +67,12 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
   const lessons = new Map<string, { path: string; lesson: Lesson }>();
   const entryPaths = new Set(entries.map((e) => e.path)); // فحص الإشارات مستقل عن ترتيب الملفات
   let audioIds: Set<string> | null = null;
+  // D103: للفحص المتقاطع بعد قراءة كل الملفات (ترتيب الملفات لا يهم)
+  let manifestPath = "";
+  let manifestTracks = new Map<string, TrackLike & { file: string }>();
+  let characterVoices: Record<string, string> = {};
+  const scripts = new Map<string, { path: string; script: AudioScript }>();
+  const modelltests: { path: string; test: Modelltest }[] = [];
   let curriculum: CurriculumReference | null = null;
 
   for (const entry of entries) {
@@ -84,6 +92,17 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         case "audio-manifest": {
           const m = AudioManifest.parse(entry.data);
           audioIds = new Set(m.tracks.map((t) => t.id));
+          manifestPath = entry.path;
+          manifestTracks = new Map(m.tracks.map((t) => [t.id, t] as const));
+          characterVoices = m.characterVoices;
+          // القانون 11 + D103: صوت ثابت لكل شخصية — مسار بشخصية صوته = characterVoices[الشخصية] حرفياً
+          for (const t of m.tracks) {
+            if (!t.characterId) continue;
+            const want = m.characterVoices[t.characterId];
+            if (want && t.voiceParams.speaker !== want)
+              push("error", "e-audio-character-voice", entry.path,
+                `صوت ${t.id} = ${t.voiceParams.speaker} والصوت الثابت لـ${t.characterId} = ${want} (القانون 11)`);
+          }
           if (m.tracks.some((t) => t.isGuest && t.priority === "P0"))
             push("warning", "w-audio-guest-p0", entry.path, "ضيوف P0 — الضيوف مخصصون لتمارين Hören لا للحوارات السردية (§5‑هـ)");
           // استقرار الصوت (D20 + D98 — مُنفَّذ فعلياً في D100): الصوتان المثبَّتان حصراً — لا تذبذب أبداً
@@ -166,6 +185,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         }
         case "modelltest": {
           const t = Modelltest.parse(entry.data); // D95: الامتحان التجريبي الكامل
+          modelltests.push({ path: entry.path, test: t });
           const skills = t.sections.map((s) => s.skill);
           for (const need of ["hoeren", "lesen", "schreiben", "sprechen"] as const) {
             if (!skills.includes(need))
@@ -187,6 +207,12 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
             push("error", "e-monats-size", entry.path, "Monatsprüfung أقصر من 10 عناصر");
           break;
         }
+        case "audio-script": {
+          const sc = AudioScript.parse(entry.data); // D103: السكربت الصوتي الموجَّه
+          if (scripts.has(sc.id)) push("error", "e-audio-script-dup", entry.path, `معرّف سكربت مكرر: ${sc.id}`);
+          scripts.set(sc.id, { path: entry.path, script: sc });
+          break;
+        }
         default:
           push("warning", "w-unknown-file", entry.path, "ملف غير معروف في شجرة المحتوى");
       }
@@ -197,6 +223,49 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
 
   if (!curriculum)
     push("warning", "w-no-curriculum", "arsenal/curriculum-reference.json", "المرجع المنهجي مفقود (D15/§10‑ط)");
+
+  // ——— D103: السكربتات الصوتية ↔ المانيفست ———
+  if (audioIds) {
+    const scriptLineIds = new Set<string>();
+    for (const { path, script } of scripts.values()) {
+      for (const l of script.lines) scriptLineIds.add(l.id);
+      for (const issue of checkScriptAgainstManifest(script, manifestTracks, characterVoices))
+        push("error", issue.code, path, issue.message);
+    }
+    for (const t of manifestTracks.values())
+      if (t.file.startsWith("audio/scripts/") && !scriptLineIds.has(t.id))
+        push("error", "e-audio-script-orphan", manifestPath, `مسار سكربت يتيم بلا سطر في أي سكربت: ${t.id}`);
+  }
+
+  // ——— D103: لا سؤال استماع بلا صوت حقيقي يحمل جوابه ———
+  for (const { path, test } of modelltests) {
+    for (const section of test.sections.filter((s) => s.skill === "hoeren")) {
+      for (const part of section.parts) {
+        const ref = part.audioScriptRef;
+        const entry = ref ? scripts.get(ref) : undefined;
+        if (!entry) {
+          if (ref) push("error", "e-hoeren-audio", path, `سكربت الاستماع غير موجود: ${ref} (${part.id})`);
+          continue; // غياب المرجع نفسه يرفضه zod
+        }
+        if (!entry.script.usedIn.includes(`${test.id}#${part.id}`))
+          push("error", "e-hoeren-audio", path, `السكربت ${ref} لا يعلن استخدامه في ${test.id}#${part.id} (usedIn)`);
+        const lines = new Map(entry.script.lines.map((l) => [l.id, l] as const));
+        for (const [i, item] of part.items.entries()) {
+          const heard: string[] = [];
+          for (const a of item.audioRefs ?? []) {
+            const l = lines.get(a);
+            if (!l) push("error", "e-hoeren-audio", path, `${part.id}#${i + 1}: المقطع ${a} ليس من أسطر ${ref}`);
+            else heard.push(l.text);
+          }
+          const sup = answerSupported(item.a, heard.join(" "));
+          if (heard.length > 0 && !sup.ok)
+            push("error", "e-hoeren-answer", path, `${part.id}#${i + 1}: الجواب «${item.a}» غير مسموع في المقاطع (ينقص: ${sup.missing.join("، ")})`);
+          if (item.choices && !item.choices.includes(item.a))
+            push("error", "e-hoeren-answer", path, `${part.id}#${i + 1}: الجواب «${item.a}» ليس بين الخيارات`);
+        }
+      }
+    }
+  }
 
   // ——— قوانين الدرس ———
   for (const [id, { path, lesson }] of lessons) {

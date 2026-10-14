@@ -19,47 +19,60 @@
         {
           "id": "hoeren-teil1",
           "prompt": {
-            "de": "Teil 1: Hören Sie die Wörter. Was passt zusammen?",
-            "ar": "القسم 1: استمع إلى الكلمات. ماذا يناسب؟"
+            "de": "Teil 1: Hören Sie die Wörter. Welches Wort hören Sie?",
+            "ar": "القسم 1: استمع إلى الكلمات. أي كلمة تسمع؟"
           },
           "items": [
             {
-              "q": "Das Wort für «الجمعة»؟",
+              "q": "Nummer eins: Welches Wort hören Sie?",
               "a": "Freitag",
               "choices": [
                 "Montag",
                 "Freitag",
                 "Sonntag"
+              ],
+              "audioRefs": [
+                "mt1-h1-l1"
               ]
             },
             {
-              "q": "Das Wort für «الوصفة (طبية)»؟",
+              "q": "Nummer zwei: Welches Wort hören Sie?",
               "a": "Rezept",
               "choices": [
                 "Rezept",
                 "Reservierung",
                 "Rechnung"
+              ],
+              "audioRefs": [
+                "mt1-h1-l2"
               ]
             },
             {
-              "q": "Das Wort für «الرصيف»؟",
+              "q": "Nummer drei: Welches Wort hören Sie?",
               "a": "Gleis",
               "choices": [
                 "Gleis",
                 "Größe",
-                "Grüß"
+                "Gruß"
+              ],
+              "audioRefs": [
+                "mt1-h1-l3"
               ]
             },
             {
-              "q": "Das Wort للتأخير؟",
+              "q": "Nummer vier: Welches Wort hören Sie?",
               "a": "Verspätung",
               "choices": [
                 "Versprechen",
                 "Verspätung",
                 "Verbindung"
+              ],
+              "audioRefs": [
+                "mt1-h1-l4"
               ]
             }
-          ]
+          ],
+          "audioScriptRef": "a1-mt1-hoeren-teil1"
         },
         {
           "id": "hoeren-teil2",
@@ -75,6 +88,11 @@
                 "Kaffee",
                 "Wasser",
                 "Milch"
+              ],
+              "audioRefs": [
+                "mt1-h2-d1-l1",
+                "mt1-h2-d1-l2",
+                "mt1-h2-d1-l3"
               ]
             },
             {
@@ -84,6 +102,11 @@
                 "um 7 Uhr",
                 "um 8 Uhr",
                 "um 9 Uhr"
+              ],
+              "audioRefs": [
+                "mt1-h2-d2-l1",
+                "mt1-h2-d2-l2",
+                "mt1-h2-d2-l3"
               ]
             },
             {
@@ -93,9 +116,16 @@
                 "der Kopf",
                 "das Bein",
                 "die Hand"
+              ],
+              "audioRefs": [
+                "mt1-h2-d3-l1",
+                "mt1-h2-d3-l2",
+                "mt1-h2-d3-l3",
+                "mt1-h2-d3-l4"
               ]
             }
-          ]
+          ],
+          "audioScriptRef": "a1-mt1-hoeren-teil2"
         },
         {
           "id": "hoeren-teil3",
@@ -111,6 +141,9 @@
                 "Gleis 1",
                 "Gleis 3",
                 "Gleis 5"
+              ],
+              "audioRefs": [
+                "mt1-h3-a1-l1"
               ]
             },
             {
@@ -120,9 +153,13 @@
                 "von 6 bis 9 Uhr",
                 "von 7 bis 10 Uhr",
                 "von 8 bis 11 Uhr"
+              ],
+              "audioRefs": [
+                "mt1-h3-a2-l1"
               ]
             }
-          ]
+          ],
+          "audioScriptRef": "a1-mt1-hoeren-teil3"
         }
       ]
     },

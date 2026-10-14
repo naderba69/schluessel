@@ -4,45 +4,110 @@
 #          python3 tools/gen-audio.py one "نص" out.opus → مقطع واحد (لاختبار استقرار الصوت)
 #          python3 tools/gen-audio.py voice-for lena     → أي صوت سيُستخدم فعلاً (D100: kerstin أو fallback صريح)
 #          python3 tools/gen-audio.py one-as lena "نص" out.opus → مقطع حوار بصوت الشخصية + الصوت الفعلي
+#          python3 tools/gen-audio.py one-voice de_DE-kerstin-low "نص" out.opus → صوت صريح (dialogue-splitter — D103)
 import hashlib
 import json
-import subprocess
 import sys
+import unicodedata
+import wave
 from pathlib import Path
 
 import numpy as np
 import soundfile as sf
+from piper import PiperVoice, SynthesisConfig
 
 ROOT = Path(__file__).resolve().parent.parent
 VOICE_ONNX = ROOT / "tools/piper-voices/de_DE-thorsten-medium.onnx"
 VOICE_ID = "de_DE-thorsten-medium"          # مثبت — استقرار الأصوات عبر الجلسات
 VOICE_LICENSE = "CC0 (Thorsten-Voice)"      # موثقة من MODEL_CARD
-VOICE_ONNX_FEMALE = ROOT / "tools/piper-voices/de_DE-kerstin-low.onnx"   # D98: kerstin (MIT)
+VOICE_ONNX_FEMALE = ROOT / "tools/piper-voices/de_DE-kerstin-low.onnx"   # D98/D103: kerstin — مُثبَّت في git
 VOICE_ID_FEMALE = "de_DE-kerstin-low"
-VOICE_LICENSE_FEMALE = "MIT (rhasspy/piper-voices — kerstin)"            # موثقة من spec OpenMandriva
-# D98: الشخصيات الإناث → kerstin (عند توفر الملف) — وإلا الرئيسي (fallback آمن)
-FEMALE_CHARACTERS = {"nina", "aisha", "lena", "ayse", "frau-berg", "frau-schmidt"}
+VOICE_LICENSE_FEMALE = "CC0 (dataset rhasspy/dataset-voice-kerstin)"     # موثقة من MODEL_CARD (D103)
+# D103: الأصوات المثبَّتة حصراً — أي صوت آخر مرفوض (لا تذبذب)
+VOICES = {VOICE_ID: VOICE_ONNX, VOICE_ID_FEMALE: VOICE_ONNX_FEMALE}
+MANIFEST = ROOT / "content/manifests/audio-manifest.a1-u1.json"
 TARGET_RMS_DB = -17.0                       # داخل نافذة G1 [-20..-14]
 PAD_MS = 100                                # صمت 100ms قبل/بعد (مواصفات الصوت)
 OUT_SR = 24000                              # Opus standard rate (22.05k غير مسموح للترميز)
 
 
+def character_voices() -> dict:
+    """D103: مصدر الحقيقة الوحيد لصوت كل شخصية = characterVoices في المانيفست (القانون 11: المانيفست قبل التوليد)."""
+    if MANIFEST.exists():
+        return json.loads(MANIFEST.read_text(encoding="utf-8")).get("characterVoices", {})
+    return {}
+
+
+def voice_available(voice_id: str) -> bool:
+    onnx = VOICES.get(voice_id)
+    return onnx is not None and onnx.exists() and onnx.with_suffix(".onnx.json").exists()
+
+
 def voice_for(character: str | None) -> dict:
-    """D98 (مُنفَّذ فعلياً في D100): توجيه الصوت حسب الشخصية — بصدق.
-    الشخصيات الإناث → kerstin إن وُجد ملفاه (onnx + json) في المستودع؛ وإلا الصوت الرئيسي مع fallback=True.
-    المانيفست يسجّل الصوت المُستخدَم فعلاً — لا الصوت المقصود — فلا ادعاء kerstin بلا ملفه أبداً."""
-    if character in FEMALE_CHARACTERS:
-        if VOICE_ONNX_FEMALE.exists() and VOICE_ONNX_FEMALE.with_suffix(".onnx.json").exists():
-            return {"speaker": VOICE_ID_FEMALE, "onnx": str(VOICE_ONNX_FEMALE), "fallback": False}
-        return {"speaker": VOICE_ID, "onnx": str(VOICE_ONNX), "fallback": True}
-    return {"speaker": VOICE_ID, "onnx": str(VOICE_ONNX), "fallback": False}
+    """D98/D100/D103: صوت الشخصية الثابت من المانيفست — بصدق.
+    إن غاب ملف الصوت المطلوب: الصوت الرئيسي مع fallback=True معلن (والمدقِّق يرفض المسار لاحقاً
+    لأن صوته ≠ characterVoices — e-audio-character-voice) — فلا ادعاء صوت بلا ملفه أبداً."""
+    wanted = character_voices().get(character or "", VOICE_ID)
+    if wanted not in VOICES:
+        raise SystemExit(f"صوت غير مثبَّت في المانيفست للشخصية {character}: {wanted}")
+    if voice_available(wanted):
+        return {"speaker": wanted, "onnx": str(VOICES[wanted]), "fallback": False}
+    return {"speaker": VOICE_ID, "onnx": str(VOICE_ONNX), "fallback": True}
 
 
-def tts(text: str, out_wav: Path, onnx: Path = VOICE_ONNX) -> None:
-    subprocess.run(
-        [sys.executable, "-m", "piper", "-m", str(onnx), "-f", str(out_wav)],
-        input=text.encode("utf-8"), check=True, capture_output=True,
-    )
+_VOICE_CACHE: dict[str, PiperVoice] = {}
+
+
+def load_voice(onnx: Path) -> PiperVoice:
+    key = str(onnx)
+    if key not in _VOICE_CACHE:
+        _VOICE_CACHE[key] = PiperVoice.load(key)
+    return _VOICE_CACHE[key]
+
+
+def fit_phonemes(phonemes: list[str], id_map: dict) -> tuple[list[str], int]:
+    """D103: ملاءمة فونيمات espeak لخريطة الصوت — بلا فقد صامت.
+    espeak الحالي يُخرج ç مفككة (c + U+0327)؛ خريطة kerstin (صيغة 0.2.0 · 130 رمزاً) تعرف «ç» المركبة فقط،
+    فكان Piper يُسقط العلامة ويقول [c] انفجارياً بدل [ç] الاحتكاكي («nicht» → nict) — 555 موضعاً مقيساً.
+    القاعدة: علامة مركِّبة غائبة ← تُركَّب مع ما قبلها (NFC) إن كان المركَّب في الخريطة؛ والأنفية U+0303
+    (Restaurant) ← ŋ (النطق الألماني الدارج [ʁɛstoˈʁaŋ]). الخريطة الكاملة (thorsten) لا يتغير فيها شيء."""
+    out: list[str] = []
+    fixed = 0
+    for ph in phonemes:
+        if ph in id_map or not out or not unicodedata.combining(ph):
+            out.append(ph)
+            continue
+        composed = unicodedata.normalize("NFC", out[-1] + ph)
+        if len(composed) == 1 and composed in id_map:
+            out[-1] = composed
+            fixed += 1
+        elif ph == "\u0303" and "ŋ" in id_map:
+            out.append("ŋ")
+            fixed += 1
+        else:
+            out.append(ph)  # يبقى غائباً — يكشفه فحص التغطية (phonemize.py --coverage) لا يُخفى
+    return out, fixed
+
+
+def tts(text: str, out_wav: Path, onnx: Path = VOICE_ONNX, length_scale: float | None = None) -> None:
+    """مسار Piper نفسه الذي يسلكه سطر الأوامر (synthesize لكل جملة · تطبيع الذروة · صمت 0 بين الجمل)
+    + طبقة fit_phonemes قبل التحويل إلى معرّفات. length_scale > 1 = نطق أبطأ (مواد A1)."""
+    voice = load_voice(onnx)
+    id_map = voice.config.phoneme_id_map
+    original = PiperVoice.phonemize
+    voice.phonemize = lambda t: [fit_phonemes(sent, id_map)[0] for sent in original(voice, t)]  # type: ignore[method-assign]
+    try:
+        with wave.open(str(out_wav), "wb") as wav:
+            params_set = False
+            for chunk in voice.synthesize(text, SynthesisConfig(length_scale=length_scale)):
+                if not params_set:
+                    wav.setframerate(chunk.sample_rate)
+                    wav.setsampwidth(chunk.sample_width)
+                    wav.setnchannels(chunk.sample_channels)
+                    params_set = True
+                wav.writeframes(chunk.audio_int16_bytes)
+    finally:
+        del voice.phonemize  # يعود السلوك الأصلي للكائن المخبَّأ
 
 
 def normalize(data: np.ndarray, sr: int) -> np.ndarray:
@@ -60,12 +125,12 @@ def resample_linear(data: np.ndarray, sr: int, new_sr: int) -> np.ndarray:
     return np.interp(x_new, x_old, data).astype(np.float32)
 
 
-def make_clip(text: str, out_opus: Path, onnx: Path = VOICE_ONNX) -> dict:
+def make_clip(text: str, out_opus: Path, onnx: Path = VOICE_ONNX, length_scale: float | None = None) -> dict:
     """Piper wav → تطبيع RMS → 100ms صمت → Opus 24k → قياسات حقيقية من الملف النهائي.
     (kerstin-low يُخرج 16kHz — resample_linear يحوّل أي معدل إلى 24k بلا فرق في المسار)"""
     tmp = out_opus.with_suffix(".tmp.wav")
     out_opus.parent.mkdir(parents=True, exist_ok=True)  # المجلد قبل Piper — لا ينشئ المجلدات بنفسه
-    tts(text, tmp, onnx)
+    tts(text, tmp, onnx, length_scale)
     data, sr = sf.read(tmp, dtype="float32")
     data = normalize(data, sr)
     data24 = resample_linear(data, sr, OUT_SR)
@@ -878,16 +943,19 @@ def build_all() -> None:
             "textDe": text, "priority": "P0", "lessonRefs": lessons, **m,
         })
 
+    # D103: مسارات السكربتات (حوار/إعلان/كلمات — dialogue-splitter) تُحفظ كما هي: إعادة بناء الكلمات لا تمحوها
+    previous = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {}
+    rebuilt = {t["id"] for t in tracks}
+    tracks += [t for t in previous.get("tracks", []) if t["file"].startswith("audio/scripts/") and t["id"] not in rebuilt]
     manifest = {
         "schemaVersion": "1.0.0",
         "id": "audio-manifest-a1-u1",
         "generator": "piper-tts-local",
-        "voiceLicense": VOICE_LICENSE,
+        "voiceLicense": previous.get("voiceLicense", VOICE_LICENSE),
         "tracks": tracks,
-        # D100: صوت كل شخصية = الصوت الفعلي المتاح (kerstin للإناث عند وجود ملفه — وإلا الرئيسي بصدق)
-        "characterVoices": {
-            c: voice_for(c)["speaker"]
-            for c in ("yusuf", "mueller", "lena", "ayse", "frau-berg", "thomas", "frau-schmidt", "dr-weber")
+        # D103: أصوات الشخصيات بيانات في المانيفست (مصدر الحقيقة) — لا تُشتق من الكود
+        "characterVoices": previous.get("characterVoices") or {
+            c: VOICE_ID for c in ("yusuf", "mueller", "lena", "ayse", "frau-berg", "thomas", "frau-schmidt", "dr-weber")
         },
     }
     # characterId: null غير صالح في zod (optional = غياب الحقل) — نحذفه من مسارات الكلمات
@@ -937,6 +1005,15 @@ if __name__ == "__main__":
         character, text, out = sys.argv[2], sys.argv[3], Path(sys.argv[4])
         v = voice_for(character)
         print(json.dumps({**make_clip(text, out, Path(v["onnx"])), "speaker": v["speaker"], "fallback": v["fallback"]}, ensure_ascii=False))
+    elif len(sys.argv) >= 2 and sys.argv[1] == "one-voice":
+        # D103: صوت صريح مطلوب بالاسم — لا fallback صامت: صوت مجهول أو ملف غائب = خروج بخطأ
+        voice, text, out = sys.argv[2], sys.argv[3], Path(sys.argv[4])
+        ls = float(sys.argv[sys.argv.index("--length-scale") + 1]) if "--length-scale" in sys.argv else None
+        if voice not in VOICES:
+            sys.exit(f"صوت غير مثبَّت: {voice} (المسموح: {', '.join(VOICES)})")
+        if not voice_available(voice):
+            sys.exit(f"ملف الصوت غائب: {VOICES[voice]}")
+        print(json.dumps({**make_clip(text, out, VOICES[voice], ls), "speaker": voice}, ensure_ascii=False))
     elif len(sys.argv) >= 2 and sys.argv[1] == "one-wav":
         # خام Piper فقط (لا تحويل) — لاختبار حتمية المحرك نفسه
         text, out = sys.argv[2], Path(sys.argv[3])

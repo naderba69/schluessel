@@ -1,0 +1,119 @@
+// tools/dialogue-splitter.ts — مقسِّم الحوار (D103): سكربت صوتي ← مسار لكل سطر بصوت متحدثه الثابت
+// التشغيل:  npx tsx tools/dialogue-splitter.ts --all              (كل content/audio-scripts/)
+//           npx tsx tools/dialogue-splitter.ts <script.json>...  [--force] [--dry-run]
+// المبادئ: (1) المانيفست مصدر الحقيقة لصوت كل شخصية (القانون 11) · (2) لا إعادة توليد لسطر لم يتغير
+// (VITS عشوائي — فخ موثَّق) · (3) أسطر محذوفة من السكربت ← مساراتها وملفاتها تُزال · (4) المانيفست
+// يُتحقق منه بـzod قبل الكتابة — لا يُكتب مانيفست مكسور أبداً · (5) القياسات كلها من الملف الفعلي.
+import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { dirname, join, resolve } from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
+import { AudioManifest, AudioScript } from "../content/schemas/index.js";
+import {
+  buildTrack, expectedVoice, planScript, scriptTrackFile,
+  type ClipMeasurement, type TrackLike,
+} from "./lib/script-audio.js";
+
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+export const MANIFEST_REL = "manifests/audio-manifest.a1-u1.json";
+
+export type Generate = (voice: string, text: string, outAbs: string, lengthScale: number) => ClipMeasurement;
+
+/** المولِّد الحقيقي: gen-audio.py one-voice (Piper محلي → RMS −17dB → Opus 24k → قياسات من الملف) */
+export const piperGenerate: Generate = (voice, text, outAbs, lengthScale) => {
+  const args = [join(ROOT, "tools/gen-audio.py"), "one-voice", voice, text, outAbs, "--length-scale", String(lengthScale)];
+  const out = execFileSync("python3", args, {
+    encoding: "utf8", timeout: 180_000,
+  });
+  const m = JSON.parse(out.trim().split("\n").at(-1)!) as ClipMeasurement & { speaker: string };
+  if (m.speaker !== voice) throw new Error(`المولِّد استخدم ${m.speaker} بدل ${voice} — رفض`);
+  const { speaker: _speaker, ...measured } = m;
+  return measured;
+};
+
+export type SplitReport = { generated: string[]; kept: string[]; pruned: string[]; written: boolean };
+
+function sha256File(f: string): string {
+  return `sha256:${createHash("sha256").update(readFileSync(f)).digest("hex")}`;
+}
+
+/** كل ملفات السكربتات في content/audio-scripts/ */
+export function allScriptFiles(contentRoot: string): string[] {
+  const dir = join(contentRoot, "audio-scripts");
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir).filter((f) => f.endsWith(".json")).sort().map((f) => join(dir, f));
+}
+
+export function runSplitter(opts: {
+  scriptFiles: string[];
+  contentRoot?: string;
+  force?: boolean;
+  dryRun?: boolean;
+  generate?: Generate;
+}): SplitReport {
+  const contentRoot = opts.contentRoot ?? join(ROOT, "content");
+  const generate = opts.generate ?? piperGenerate;
+  const manifestPath = join(contentRoot, MANIFEST_REL);
+  const rawText = readFileSync(manifestPath, "utf8");
+  // نكتب الكائن الخام (يحفظ pcmSha256/rmsDb وغيرها) — zod للتحقق فقط
+  const raw = JSON.parse(rawText) as { tracks: (TrackLike & Record<string, unknown>)[]; characterVoices: Record<string, string> };
+  AudioManifest.parse(raw);
+
+  const report: SplitReport = { generated: [], kept: [], pruned: [], written: false };
+  const tracksById = () => new Map(raw.tracks.map((t) => [t.id, t] as const));
+  const fileHashOk = (t: TrackLike) => {
+    const f = join(contentRoot, t.file);
+    return existsSync(f) && (!t.hash || t.hash === sha256File(f));
+  };
+
+  for (const file of opts.scriptFiles) {
+    const script = AudioScript.parse(JSON.parse(readFileSync(file, "utf8")));
+    const plan = opts.force
+      ? { generate: script.lines, keep: [] }
+      : planScript(script, tracksById(), raw.characterVoices, fileHashOk);
+    report.kept.push(...plan.keep.map((l) => l.id));
+
+    for (const line of plan.generate) {
+      const voice = expectedVoice(line.speaker, raw.characterVoices);
+      report.generated.push(line.id);
+      if (opts.dryRun) continue;
+      const m = generate(voice, line.text, join(contentRoot, scriptTrackFile(script.id, line.id)), script.lengthScale);
+      const track = buildTrack(script, line, voice, m);
+      const i = raw.tracks.findIndex((t) => t.id === line.id);
+      if (i >= 0) raw.tracks[i] = track;
+      else raw.tracks.push(track);
+    }
+
+    // أسطر حُذفت من السكربت: مساراتها وملفاتها تُزال (لا مسارات يتيمة)
+    const prefix = `audio/scripts/${script.id}/`;
+    const live = new Set(script.lines.map((l) => l.id));
+    for (const t of raw.tracks.filter((x) => x.file.startsWith(prefix) && !live.has(x.id))) {
+      report.pruned.push(t.id);
+      if (opts.dryRun) continue;
+      rmSync(join(contentRoot, t.file), { force: true });
+    }
+    if (!opts.dryRun) raw.tracks = raw.tracks.filter((x) => !(x.file.startsWith(prefix) && !live.has(x.id)));
+  }
+
+  if (!opts.dryRun && (report.generated.length > 0 || report.pruned.length > 0)) {
+    AudioManifest.parse(raw); // لا يُكتب مانيفست مكسور أبداً
+    writeFileSync(manifestPath, JSON.stringify(raw, null, 2) + (rawText.endsWith("\n") ? "\n" : ""), "utf8");
+    report.written = true;
+  }
+  return report;
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  const args = process.argv.slice(2);
+  const contentRoot = join(ROOT, "content");
+  const files = args.includes("--all") ? allScriptFiles(contentRoot) : args.filter((a) => !a.startsWith("--")).map((a) => resolve(a));
+  if (files.length === 0) {
+    console.error("الاستخدام: npx tsx tools/dialogue-splitter.ts --all | <script.json>... [--force] [--dry-run]");
+    process.exit(2);
+  }
+  const r = runSplitter({ scriptFiles: files, contentRoot, force: args.includes("--force"), dryRun: args.includes("--dry-run") });
+  console.log(`سكربتات: ${files.length} | وُلّد: ${r.generated.length} | بقي كما هو: ${r.kept.length} | أُزيل: ${r.pruned.length}${r.written ? " | المانيفست حُدِّث" : ""}`);
+  for (const id of r.generated) console.log(`  + ${id}`);
+  for (const id of r.pruned) console.log(`  − ${id}`);
+}

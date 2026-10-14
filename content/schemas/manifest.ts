@@ -21,6 +21,8 @@ export const AudioTrack = z.object({
     speaker: z.string(), // اسم صوت Piper
     speedWpm: z.number().positive(),
     pitch: z.number().optional(),
+    /** D103: طول الفونيم المستخدم في التوليد (مسارات السكربت) — >1 أبطأ */
+    lengthScale: z.number().positive().optional(),
   }),
   textDe: z.string(),
   /** P0 حوارات | P1 جمل نموذجية | P2 أزواج نطق (القانون 11) */
