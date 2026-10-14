@@ -112,7 +112,13 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     console.error("الاستخدام: npx tsx tools/dialogue-splitter.ts --all | <script.json>... [--force] [--dry-run]");
     process.exit(2);
   }
-  const r = runSplitter({ scriptFiles: files, contentRoot, force: args.includes("--force"), dryRun: args.includes("--dry-run") });
+  let r: SplitReport;
+  try {
+    r = runSplitter({ scriptFiles: files, contentRoot, force: args.includes("--force"), dryRun: args.includes("--dry-run") });
+  } catch (e) {
+    console.error(`✗ ${(e as Error).message}`); // المانيفست لا يُكتب قبل نجاح كل شيء
+    process.exit(1);
+  }
   console.log(`سكربتات: ${files.length} | وُلّد: ${r.generated.length} | بقي كما هو: ${r.kept.length} | أُزيل: ${r.pruned.length}${r.written ? " | المانيفست حُدِّث" : ""}`);
   for (const id of r.generated) console.log(`  + ${id}`);
   for (const id of r.pruned) console.log(`  − ${id}`);
