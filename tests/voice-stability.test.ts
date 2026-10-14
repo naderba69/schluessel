@@ -7,7 +7,7 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { AudioManifest } from "../content/schemas/index.js";
-import { VOICE_ID, AUDIO_ENGINE, VOICE_LICENSE } from "../src/lib/audio.js";
+import { VOICE_ID, VOICE_ID_FEMALE, PINNED_VOICES, FEMALE_ROLES, AUDIO_ENGINE, VOICE_LICENSE } from "../src/lib/audio.js";
 
 const CONTENT = join(process.cwd(), "content");
 const manifest = AudioManifest.parse(
@@ -42,11 +42,17 @@ function compare(a: string, b: string): { specCorr: number; durRatio: number; en
 const SPEC_CORR_MIN = 0.93;
 
 describe("استقرار الأصوات عبر الجلسات (test-audio-voice-stability)", () => {
-  it("كل المسارات (الشخصيات الثمانية + الكلمات) بالمصوّت المثبّت الواحد — لا تذبذب", () => {
-    for (const t of manifest.tracks) expect(t.voiceParams.speaker).toBe(VOICE_ID);
+  it("كل المسارات بالصوتين المثبَّتين حصراً (D20+D98/D100): الكلمات والإعلانات بالرئيسي — والأنثوي للحوار فقط", () => {
+    const pinned: readonly string[] = PINNED_VOICES;
+    const femaleRoles: readonly string[] = FEMALE_ROLES;
+    for (const t of manifest.tracks) {
+      expect(pinned).toContain(t.voiceParams.speaker);
+      if (t.role === "word" || t.role === "announcement") expect(t.voiceParams.speaker).toBe(VOICE_ID);
+      if (t.voiceParams.speaker === VOICE_ID_FEMALE) expect(femaleRoles).toContain(t.role);
+    }
     const voices = Object.values(manifest.characterVoices);
     expect(voices).toHaveLength(8);
-    for (const v of voices) expect(v).toBe(VOICE_ID);
+    for (const v of voices) expect(pinned).toContain(v);
   });
 
   it("الهوية الصوتية المعلنة متطابقة: المحرك المحلي والرخصة CC0", () => {

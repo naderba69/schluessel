@@ -86,11 +86,23 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
           audioIds = new Set(m.tracks.map((t) => t.id));
           if (m.tracks.some((t) => t.isGuest && t.priority === "P0"))
             push("warning", "w-audio-guest-p0", entry.path, "ضيوف P0 — الضيوف مخصصون لتمارين Hören لا للحوارات السردية (§5‑هـ)");
-          // استقرار الصوت (D20): كل المسارات بالمصوّت المثبّت عبر الجلسات — لا تذبذب أبداً
+          // استقرار الصوت (D20 + D98 — مُنفَّذ فعلياً في D100): الصوتان المثبَّتان حصراً — لا تذبذب أبداً
+          const pinned: readonly string[] = PINNED_VOICES;
+          const femaleRoles: readonly string[] = FEMALE_ROLES;
           for (const t of m.tracks) {
-            if (t.voiceParams.speaker !== VOICE_ID)
+            const speaker = t.voiceParams.speaker;
+            if (!pinned.includes(speaker))
               push("error", "e-audio-voice-drift", entry.path,
-                `تذبذب صوت في ${t.id}: ${t.voiceParams.speaker} ≠ المثبت ${VOICE_ID}`);
+                `تذبذب صوت في ${t.id}: ${speaker} ليس من الصوتين المثبَّتين (${PINNED_VOICES.join(" / ")})`);
+            // D98: الصوت الأنثوي للحوار فقط (character/guest/dialogue) — الكلمات والإعلانات بالصوت الرئيسي (thorsten) دائماً
+            else if (speaker === VOICE_ID_FEMALE && !femaleRoles.includes(t.role))
+              push("error", "e-audio-voice-role", entry.path,
+                `الصوت الأنثوي في دور غير مسموح: ${t.id} (role=${t.role}) — المسموح: ${FEMALE_ROLES.join("/")}`);
+          }
+          for (const [character, voice] of Object.entries(m.characterVoices)) {
+            if (!pinned.includes(voice))
+              push("error", "e-audio-voice-drift", entry.path,
+                `صوت الشخصية ${character} غير مثبَّت: ${voice} (المسموح: ${PINNED_VOICES.join(" / ")})`);
           }
           // تحليل فعلي للملفات (القانون 6) — يُفعَّل عند تمرير contentRoot (CLI)
           if (opts.contentRoot) {

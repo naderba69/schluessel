@@ -2,6 +2,8 @@
 # tools/gen-audio.py — توليد الصوت محلياً بـPiper (D20: لا API، لا اشتراك) + قياسات حقيقية
 # يستعمل: python3 tools/gen-audio.py all            → كل ملفات المحتوى + المانيفست + محفّزات ASR
 #          python3 tools/gen-audio.py one "نص" out.opus → مقطع واحد (لاختبار استقرار الصوت)
+#          python3 tools/gen-audio.py voice-for lena     → أي صوت سيُستخدم فعلاً (D100: kerstin أو fallback صريح)
+#          python3 tools/gen-audio.py one-as lena "نص" out.opus → مقطع حوار بصوت الشخصية + الصوت الفعلي
 import hashlib
 import json
 import subprocess
@@ -25,9 +27,20 @@ PAD_MS = 100                                # صمت 100ms قبل/بعد (موا
 OUT_SR = 24000                              # Opus standard rate (22.05k غير مسموح للترميز)
 
 
-def tts(text: str, out_wav: Path) -> None:
+def voice_for(character: str | None) -> dict:
+    """D98 (مُنفَّذ فعلياً في D100): توجيه الصوت حسب الشخصية — بصدق.
+    الشخصيات الإناث → kerstin إن وُجد ملفاه (onnx + json) في المستودع؛ وإلا الصوت الرئيسي مع fallback=True.
+    المانيفست يسجّل الصوت المُستخدَم فعلاً — لا الصوت المقصود — فلا ادعاء kerstin بلا ملفه أبداً."""
+    if character in FEMALE_CHARACTERS:
+        if VOICE_ONNX_FEMALE.exists() and VOICE_ONNX_FEMALE.with_suffix(".onnx.json").exists():
+            return {"speaker": VOICE_ID_FEMALE, "onnx": str(VOICE_ONNX_FEMALE), "fallback": False}
+        return {"speaker": VOICE_ID, "onnx": str(VOICE_ONNX), "fallback": True}
+    return {"speaker": VOICE_ID, "onnx": str(VOICE_ONNX), "fallback": False}
+
+
+def tts(text: str, out_wav: Path, onnx: Path = VOICE_ONNX) -> None:
     subprocess.run(
-        [sys.executable, "-m", "piper", "-m", str(VOICE_ONNX), "-f", str(out_wav)],
+        [sys.executable, "-m", "piper", "-m", str(onnx), "-f", str(out_wav)],
         input=text.encode("utf-8"), check=True, capture_output=True,
     )
 
@@ -47,11 +60,12 @@ def resample_linear(data: np.ndarray, sr: int, new_sr: int) -> np.ndarray:
     return np.interp(x_new, x_old, data).astype(np.float32)
 
 
-def make_clip(text: str, out_opus: Path) -> dict:
-    """Piper wav → تطبيع RMS → 100ms صمت → Opus 24k → قياسات حقيقية من الملف النهائي."""
+def make_clip(text: str, out_opus: Path, onnx: Path = VOICE_ONNX) -> dict:
+    """Piper wav → تطبيع RMS → 100ms صمت → Opus 24k → قياسات حقيقية من الملف النهائي.
+    (kerstin-low يُخرج 16kHz — resample_linear يحوّل أي معدل إلى 24k بلا فرق في المسار)"""
     tmp = out_opus.with_suffix(".tmp.wav")
     out_opus.parent.mkdir(parents=True, exist_ok=True)  # المجلد قبل Piper — لا ينشئ المجلدات بنفسه
-    tts(text, tmp)
+    tts(text, tmp, onnx)
     data, sr = sf.read(tmp, dtype="float32")
     data = normalize(data, sr)
     data24 = resample_linear(data, sr, OUT_SR)
@@ -842,6 +856,7 @@ def build_all() -> None:
         })
     for tid, text, char, lessons in char_tracks:
         rel = f"audio/characters/{tid}.opus"
+        # الإعلانات بالصوت الرئيسي دائماً (FEMALE_ROLES لا تضم announcement — e-audio-voice-role)
         m = make_clip(text, content / rel)
         tracks.append({
             "id": tid, "file": rel, "role": "announcement", "characterId": char, "isGuest": False,
@@ -855,9 +870,10 @@ def build_all() -> None:
         "generator": "piper-tts-local",
         "voiceLicense": VOICE_LICENSE,
         "tracks": tracks,
+        # D100: صوت كل شخصية = الصوت الفعلي المتاح (kerstin للإناث عند وجود ملفه — وإلا الرئيسي بصدق)
         "characterVoices": {
-            "yusuf": VOICE_ID, "mueller": VOICE_ID, "lena": VOICE_ID, "ayse": VOICE_ID,
-            "frau-berg": VOICE_ID, "thomas": VOICE_ID, "frau-schmidt": VOICE_ID, "dr-weber": VOICE_ID,
+            c: voice_for(c)["speaker"]
+            for c in ("yusuf", "mueller", "lena", "ayse", "frau-berg", "thomas", "frau-schmidt", "dr-weber")
         },
     }
     # characterId: null غير صالح في zod (optional = غياب الحقل) — نحذفه من مسارات الكلمات
@@ -899,6 +915,14 @@ if __name__ == "__main__":
     if len(sys.argv) >= 2 and sys.argv[1] == "one":
         text, out = sys.argv[2], Path(sys.argv[3])
         print(json.dumps(make_clip(text, out), ensure_ascii=False))
+    elif len(sys.argv) >= 2 and sys.argv[1] == "voice-for":
+        # D100: أي صوت سيُستخدم فعلاً لهذه الشخصية؟ (kerstin أو fallback صريح)
+        print(json.dumps(voice_for(sys.argv[2] if len(sys.argv) >= 3 else None), ensure_ascii=False))
+    elif len(sys.argv) >= 2 and sys.argv[1] == "one-as":
+        # D100: مقطع حوار بصوت الشخصية — يُرجع الصوت المُستخدَم فعلاً ليُسجَّل في المانيفست كما هو
+        character, text, out = sys.argv[2], sys.argv[3], Path(sys.argv[4])
+        v = voice_for(character)
+        print(json.dumps({**make_clip(text, out, Path(v["onnx"])), "speaker": v["speaker"], "fallback": v["fallback"]}, ensure_ascii=False))
     elif len(sys.argv) >= 2 and sys.argv[1] == "one-wav":
         # خام Piper فقط (لا تحويل) — لاختبار حتمية المحرك نفسه
         text, out = sys.argv[2], Path(sys.argv[3])
