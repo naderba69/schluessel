@@ -13,3 +13,4 @@ export * from "./modelltest.js";
 export * from "./lese.js";
 export * from "./audio-script.js";
 export * from "./exam-format.js";
+export * from "./answer-key.js";

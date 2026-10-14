@@ -28,6 +28,7 @@
           "part": 1,
           "goal": "kurze Alltagsgespräche verstehen",
           "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "kind": "mc3",
           "items": 6,
           "playCount": 2
         },
@@ -35,6 +36,7 @@
           "part": 2,
           "goal": "Ansagen (z. B. Bahnhof, Kaufhaus) verstehen",
           "taskType": "Richtig/Falsch",
+          "kind": "richtig-falsch",
           "items": 4,
           "playCount": 1
         },
@@ -42,6 +44,7 @@
           "part": 3,
           "goal": "Nachrichten am Telefon/Anrufbeantworter verstehen",
           "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "kind": "mc3",
           "items": 5,
           "playCount": 2
         }
@@ -56,18 +59,21 @@
           "part": 1,
           "goal": "kurze Mitteilungen (Briefe/E-Mails) verstehen",
           "taskType": "Richtig/Falsch",
+          "kind": "richtig-falsch",
           "items": 5
         },
         {
           "part": 2,
           "goal": "Anzeigen/Internetseiten — die passende Information finden",
           "taskType": "Auswahl zwischen zwei Texten (a/b)",
+          "kind": "a-b",
           "items": 5
         },
         {
           "part": 3,
           "goal": "Schilder und Aushänge verstehen",
           "taskType": "Richtig/Falsch",
+          "kind": "richtig-falsch",
           "items": 5
         }
       ]
@@ -81,12 +87,14 @@
           "part": 1,
           "goal": "ein Formular an fünf Stellen ergänzen",
           "taskType": "Formular",
+          "kind": "formular",
           "items": 5
         },
         {
           "part": 2,
           "goal": "eine Kurzmitteilung schreiben (ca. 30 Wörter, 3 Inhaltspunkte)",
-          "taskType": "Freies Schreiben"
+          "taskType": "Freies Schreiben",
+          "kind": "freies-schreiben"
         }
       ]
     },
@@ -98,17 +106,20 @@
         {
           "part": 1,
           "goal": "sich vorstellen",
-          "taskType": "Freies Sprechen (Gruppe ≤4, ohne Vorbereitung)"
+          "taskType": "Freies Sprechen (Gruppe ≤4, ohne Vorbereitung)",
+          "kind": "freies-sprechen"
         },
         {
           "part": 2,
           "goal": "Informationen erfragen und geben (Themenkarten)",
-          "taskType": "Freies Sprechen"
+          "taskType": "Freies Sprechen",
+          "kind": "freies-sprechen"
         },
         {
           "part": 3,
           "goal": "Bitten formulieren und darauf reagieren (Bildkarten)",
-          "taskType": "Freies Sprechen"
+          "taskType": "Freies Sprechen",
+          "kind": "freies-sprechen"
         }
       ]
     }

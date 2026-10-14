@@ -3,8 +3,8 @@
   "id": "a1-modelltest-1",
   "level": "A1",
   "title": {
-    "de": "Goethe-Zertifikat A1: Modelltest 1 (Übung)",
-    "ar": "امتحان A1 التجريبي 1 (تدريب)"
+    "de": "Goethe-Zertifikat A1 (Start Deutsch 1): Modelltest 1 — Übung",
+    "ar": "امتحان A1 التجريبي 1 — بصيغة Start Deutsch 1 الرسمية (تدريب)"
   },
   "passingScore": 0.6,
   "sections": [
@@ -12,154 +12,256 @@
       "skill": "hoeren",
       "timeBudgetMin": 20,
       "instructions": {
-        "de": "Hören Sie die Audio-Texte und beantworten Sie die Fragen. Jeder Text wird zweimal gespielt.",
-        "ar": "استمع إلى النصوص الصوتية وأجب عن الأسئلة. كل نص يُشغَّل مرتين."
+        "de": "Der Test Hören hat drei Teile. Lesen Sie zuerst die Aufgabe, dann hören Sie den Text. Wählen Sie die richtige Lösung.",
+        "ar": "اختبار الاستماع ثلاثة أقسام. اقرأ السؤال أولاً ثم استمع إلى النص واختر الحل الصحيح."
       },
       "parts": [
         {
           "id": "hoeren-teil1",
           "prompt": {
-            "de": "Teil 1: Hören Sie die Wörter. Welches Wort hören Sie?",
-            "ar": "القسم 1: استمع إلى الكلمات. أي كلمة تسمع؟"
+            "de": "Teil 1: Was ist richtig? Kreuzen Sie an: a, b oder c. Sie hören jeden Text zweimal.",
+            "ar": "القسم 1: ما الصحيح؟ اختر a أو b أو c. تسمع كل نص مرتين."
           },
+          "taskType": "mc3",
+          "playCount": 2,
+          "audioScriptRef": "a1-mt1-hoeren-teil1",
           "items": [
             {
-              "q": "Nummer eins: Welches Wort hören Sie?",
-              "a": "Freitag",
+              "q": "Was kostet der Kuchen?",
+              "a": "3 Euro",
               "choices": [
-                "Montag",
-                "Freitag",
-                "Sonntag"
+                "2 Euro",
+                "3 Euro",
+                "5 Euro"
               ],
               "audioRefs": [
-                "mt1-h1-l1"
-              ]
+                "mt1-h1-d1-l1",
+                "mt1-h1-d1-l2",
+                "mt1-h1-d1-l3",
+                "mt1-h1-d1-l4"
+              ],
+              "evidence": "der Kuchen kostet drei Euro"
             },
             {
-              "q": "Nummer zwei: Welches Wort hören Sie?",
-              "a": "Rezept",
+              "q": "Wann hat die Frau einen Termin?",
+              "a": "am Mittwoch",
               "choices": [
-                "Rezept",
-                "Reservierung",
-                "Rechnung"
+                "am Montag",
+                "am Dienstag",
+                "am Mittwoch"
               ],
               "audioRefs": [
-                "mt1-h1-l2"
-              ]
+                "mt1-h1-d2-l1",
+                "mt1-h1-d2-l2",
+                "mt1-h1-d2-l3",
+                "mt1-h1-d2-l4",
+                "mt1-h1-d2-l5"
+              ],
+              "evidence": "dann komme ich am Mittwoch"
             },
             {
-              "q": "Nummer drei: Welches Wort hören Sie?",
-              "a": "Gleis",
+              "q": "Wo ist die Apotheke?",
+              "a": "neben der Bank",
               "choices": [
-                "Gleis",
-                "Größe",
-                "Gruß"
+                "neben der Bank",
+                "neben der Post",
+                "am Bahnhof"
               ],
               "audioRefs": [
-                "mt1-h1-l3"
-              ]
+                "mt1-h1-d3-l1",
+                "mt1-h1-d3-l2",
+                "mt1-h1-d3-l3",
+                "mt1-h1-d3-l4",
+                "mt1-h1-d3-l5"
+              ],
+              "evidence": "Sie ist gegenüber, neben der Bank"
             },
             {
-              "q": "Nummer vier: Welches Wort hören Sie?",
-              "a": "Verspätung",
+              "q": "Wohin gehen Lena und Thomas am Samstag?",
+              "a": "in den Park",
               "choices": [
-                "Versprechen",
-                "Verspätung",
-                "Verbindung"
+                "in den Park",
+                "ins Kino",
+                "ins Museum"
               ],
               "audioRefs": [
-                "mt1-h1-l4"
-              ]
+                "mt1-h1-d4-l1",
+                "mt1-h1-d4-l2",
+                "mt1-h1-d4-l3",
+                "mt1-h1-d4-l4"
+              ],
+              "evidence": "am Samstag in den Park"
+            },
+            {
+              "q": "Was kauft die Frau?",
+              "a": "ein Kleid",
+              "choices": [
+                "eine Hose",
+                "ein Kleid",
+                "einen Rock"
+              ],
+              "audioRefs": [
+                "mt1-h1-d5-l1",
+                "mt1-h1-d5-l2",
+                "mt1-h1-d5-l3",
+                "mt1-h1-d5-l4"
+              ],
+              "evidence": "Ich nehme das Kleid"
+            },
+            {
+              "q": "Welcher Bus fährt zum Flughafen?",
+              "a": "Bus 7",
+              "choices": [
+                "Bus 5",
+                "Bus 9",
+                "Bus 7"
+              ],
+              "audioRefs": [
+                "mt1-h1-d6-l1",
+                "mt1-h1-d6-l2",
+                "mt1-h1-d6-l3",
+                "mt1-h1-d6-l4"
+              ],
+              "evidence": "Zum Flughafen fährt die Sieben"
             }
-          ],
-          "audioScriptRef": "a1-mt1-hoeren-teil1"
+          ]
         },
         {
           "id": "hoeren-teil2",
           "prompt": {
-            "de": "Teil 2: Hören Sie den Dialog. Antworten Sie.",
-            "ar": "القسم 2: استمع إلى الحوار وأجب."
+            "de": "Teil 2: Kreuzen Sie an: Richtig oder Falsch. Sie hören jeden Text einmal.",
+            "ar": "القسم 2: اختر صحيح (Richtig) أو خطأ (Falsch). تسمع كل نص مرة واحدة فقط."
           },
+          "taskType": "richtig-falsch",
+          "playCount": 1,
+          "audioScriptRef": "a1-mt1-hoeren-teil2",
           "items": [
             {
-              "q": "Im Restaurant: Was möchte die Person trinken?",
-              "a": "Wasser",
+              "q": "Der Zug nach München fährt pünktlich.",
+              "a": "Falsch",
               "choices": [
-                "Kaffee",
-                "Wasser",
-                "Milch"
+                "Richtig",
+                "Falsch"
               ],
               "audioRefs": [
-                "mt1-h2-d1-l1",
-                "mt1-h2-d1-l2",
-                "mt1-h2-d1-l3"
-              ]
+                "mt1-h2-a1"
+              ],
+              "evidence": "hat zwanzig Minuten Verspätung"
             },
             {
-              "q": "Am Bahnhof: Wann fährt der Zug ab?",
-              "a": "um 8 Uhr",
+              "q": "Die Schuhe sind im Keller.",
+              "a": "Richtig",
               "choices": [
-                "um 7 Uhr",
-                "um 8 Uhr",
-                "um 9 Uhr"
+                "Richtig",
+                "Falsch"
               ],
               "audioRefs": [
-                "mt1-h2-d2-l1",
-                "mt1-h2-d2-l2",
-                "mt1-h2-d2-l3"
-              ]
+                "mt1-h2-a2"
+              ],
+              "evidence": "Die Schuhe finden Sie unten im Keller"
             },
             {
-              "q": "Beim Arzt: Was tut weh?",
-              "a": "der Kopf",
+              "q": "Der Flug nach Tunis fliegt um zehn Uhr.",
+              "a": "Falsch",
               "choices": [
-                "der Kopf",
-                "das Bein",
-                "die Hand"
+                "Richtig",
+                "Falsch"
               ],
               "audioRefs": [
-                "mt1-h2-d3-l1",
-                "mt1-h2-d3-l2",
-                "mt1-h2-d3-l3",
-                "mt1-h2-d3-l4"
-              ]
+                "mt1-h2-a3"
+              ],
+              "evidence": "um elf Uhr, nicht um zehn Uhr"
+            },
+            {
+              "q": "Das Museum öffnet morgen um neun Uhr.",
+              "a": "Richtig",
+              "choices": [
+                "Richtig",
+                "Falsch"
+              ],
+              "audioRefs": [
+                "mt1-h2-a4"
+              ],
+              "evidence": "Morgen öffnen wir um neun Uhr"
             }
-          ],
-          "audioScriptRef": "a1-mt1-hoeren-teil2"
+          ]
         },
         {
           "id": "hoeren-teil3",
           "prompt": {
-            "de": "Teil 3: Hören Sie die Ansage. Was ist richtig?",
-            "ar": "القسم 3: استمع إلى الإعلان. ما الصحيح؟"
+            "de": "Teil 3: Was ist richtig? Kreuzen Sie an: a, b oder c. Sie hören jeden Text zweimal.",
+            "ar": "القسم 3: رسائل على الهاتف — ما الصحيح؟ اختر a أو b أو c. تسمع كل نص مرتين."
           },
+          "taskType": "mc3",
+          "playCount": 2,
+          "audioScriptRef": "a1-mt1-hoeren-teil3",
           "items": [
             {
-              "q": "Der Zug nach Berlin fährt von welchem Gleis?",
-              "a": "Gleis 3",
+              "q": "Wann treffen sich Lena und Yusuf?",
+              "a": "um 7 Uhr",
               "choices": [
-                "Gleis 1",
-                "Gleis 3",
-                "Gleis 5"
+                "um 6 Uhr",
+                "um 7 Uhr",
+                "um 8 Uhr"
               ],
               "audioRefs": [
-                "mt1-h3-a1-l1"
-              ]
+                "mt1-h3-m1"
+              ],
+              "evidence": "sondern um sieben Uhr"
             },
             {
-              "q": "Das Hotel: Wann ist Frühstück?",
-              "a": "von 7 bis 10 Uhr",
+              "q": "Was soll man mitbringen?",
+              "a": "das Rezept",
               "choices": [
-                "von 6 bis 9 Uhr",
-                "von 7 bis 10 Uhr",
-                "von 8 bis 11 Uhr"
+                "das Rezept",
+                "das Medikament",
+                "Geld"
               ],
               "audioRefs": [
-                "mt1-h3-a2-l1"
-              ]
+                "mt1-h3-m2"
+              ],
+              "evidence": "Bitte bringen Sie das Rezept mit"
+            },
+            {
+              "q": "Wo ist Frau Berg nach drei Uhr?",
+              "a": "im Garten",
+              "choices": [
+                "zu Hause",
+                "bei der Post",
+                "im Garten"
+              ],
+              "audioRefs": [
+                "mt1-h3-m3"
+              ],
+              "evidence": "Danach bin ich im Garten"
+            },
+            {
+              "q": "Was möchte Thomas essen?",
+              "a": "Salat",
+              "choices": [
+                "Fisch",
+                "Salat",
+                "Suppe"
+              ],
+              "audioRefs": [
+                "mt1-h3-m4"
+              ],
+              "evidence": "nur einen Salat"
+            },
+            {
+              "q": "Wann gibt es ein Zimmer?",
+              "a": "am Samstag",
+              "choices": [
+                "am Samstag",
+                "am Freitag",
+                "am Sonntag"
+              ],
+              "audioRefs": [
+                "mt1-h3-m5"
+              ],
+              "evidence": "Am Samstag haben wir ein Doppelzimmer für Sie"
             }
-          ],
-          "audioScriptRef": "a1-mt1-hoeren-teil3"
+          ]
         }
       ]
     },
@@ -167,115 +269,327 @@
       "skill": "lesen",
       "timeBudgetMin": 25,
       "instructions": {
-        "de": "Lesen Sie die Texte und beantworten Sie die Fragen.",
-        "ar": "اقرأ النصوص وأجب عن الأسئلة."
+        "de": "Der Test Lesen hat drei Teile. Lesen Sie die Texte und lösen Sie die Aufgaben.",
+        "ar": "اختبار القراءة ثلاثة أقسام. اقرأ النصوص وحُلّ المهام."
       },
       "parts": [
         {
           "id": "lesen-teil1",
           "prompt": {
-            "de": "Teil 1: Lesen Sie die Schilder. Was bedeuten sie?",
-            "ar": "القسم 1: اقرأ اللوحات. ماذا تعني؟"
+            "de": "Teil 1: Lesen Sie die zwei Texte und die Aufgaben 1 bis 5. Kreuzen Sie an: Richtig oder Falsch.",
+            "ar": "القسم 1: اقرأ الرسالتين والعبارات 1 إلى 5. اختر صحيح أو خطأ."
           },
+          "taskType": "richtig-falsch",
+          "texts": [
+            {
+              "id": "l1-t1",
+              "kind": "email",
+              "de": "Liebe Ayse,\nam Samstag habe ich Geburtstag. Ich feiere mit meiner Familie im Garten. Kommst du auch? Wir essen um sieben Uhr. Bitte bring keinen Kuchen mit, meine Mutter backt einen Kuchen. Aber du kannst Saft mitbringen.\nBis Samstag!\nLena"
+            },
+            {
+              "id": "l1-t2",
+              "kind": "email",
+              "de": "Hallo Thomas,\nich bin seit Montag in Hamburg. Die Stadt ist toll, aber das Wetter ist nicht so gut: Es gibt viel Regen. Mein Hotel ist klein, aber sehr gemütlich, und es ist nah am Bahnhof. Am Freitag fahre ich mit dem Zug zurück. Holst du mich am Bahnhof ab? Mein Zug kommt um drei Uhr an.\nBis Freitag!\nYusuf"
+            }
+          ],
           "items": [
             {
-              "q": "«Ausgang»؟",
-              "a": "المخرج",
+              "q": "Lena feiert am Samstag Geburtstag.",
+              "a": "Richtig",
               "choices": [
-                "المدخل",
-                "المخرج",
-                "الرصيف"
-              ]
+                "Richtig",
+                "Falsch"
+              ],
+              "textRefs": [
+                "l1-t1"
+              ],
+              "evidence": "am Samstag habe ich Geburtstag"
             },
             {
-              "q": "«Eingang»؟",
-              "a": "المدخل",
+              "q": "Ayse soll einen Kuchen mitbringen.",
+              "a": "Falsch",
               "choices": [
-                "المدخل",
-                "المخرج",
-                "الحقيبة"
-              ]
+                "Richtig",
+                "Falsch"
+              ],
+              "textRefs": [
+                "l1-t1"
+              ],
+              "evidence": "Bitte bring keinen Kuchen mit"
             },
             {
-              "q": "«Verboten»؟",
-              "a": "ممنوع",
+              "q": "Yusuf ist seit Montag in Hamburg.",
+              "a": "Richtig",
               "choices": [
-                "مسموح",
-                "ممنوع",
-                "مفتوح"
-              ]
+                "Richtig",
+                "Falsch"
+              ],
+              "textRefs": [
+                "l1-t2"
+              ],
+              "evidence": "ich bin seit Montag in Hamburg"
             },
             {
-              "q": "«Notausgang»؟",
-              "a": "مخرج الطوارئ",
+              "q": "In Hamburg ist das Wetter sehr schön.",
+              "a": "Falsch",
               "choices": [
-                "مكتب الاستقبال",
-                "مخرج الطوارئ",
-                "غرفة النوم"
-              ]
+                "Richtig",
+                "Falsch"
+              ],
+              "textRefs": [
+                "l1-t2"
+              ],
+              "evidence": "das Wetter ist nicht so gut"
+            },
+            {
+              "q": "Thomas soll Yusuf am Bahnhof abholen.",
+              "a": "Richtig",
+              "choices": [
+                "Richtig",
+                "Falsch"
+              ],
+              "textRefs": [
+                "l1-t2"
+              ],
+              "evidence": "Holst du mich am Bahnhof ab?"
             }
           ]
         },
         {
           "id": "lesen-teil2",
           "prompt": {
-            "de": "Teil 2: Lesen Sie die kurzen Texte.",
-            "ar": "القسم 2: اقرأ النصوص القصيرة."
+            "de": "Teil 2: Lesen Sie die Texte und die Aufgaben 6 bis 10. Wo finden Sie Informationen? Kreuzen Sie an: a oder b.",
+            "ar": "القسم 2: اقرأ الإعلانات والمواقف 6 إلى 10. أين تجد المعلومة؟ اختر a أو b."
           },
+          "taskType": "a-b",
+          "texts": [
+            {
+              "id": "l2-6a",
+              "kind": "anzeige",
+              "title": "Bäckerei Becker",
+              "de": "Brot, Brötchen und Kuchen – frisch für Sie! Montag bis Samstag 6–18 Uhr. Sonntag geschlossen."
+            },
+            {
+              "id": "l2-6b",
+              "kind": "anzeige",
+              "title": "Bäckerei am Markt",
+              "de": "Frisches Brot und Brötchen. Auch am Sonntag von 8 bis 11 Uhr geöffnet!"
+            },
+            {
+              "id": "l2-7a",
+              "kind": "anzeige",
+              "title": "Rad am Bahnhof",
+              "de": "Fahrrad mieten am Hauptbahnhof: ein Tag 10 Euro, eine Woche 40 Euro."
+            },
+            {
+              "id": "l2-7b",
+              "kind": "anzeige",
+              "title": "Krause – Fahrräder",
+              "de": "Wir verkaufen Fahrräder: billig und gut! Montag bis Freitag 9–18 Uhr."
+            },
+            {
+              "id": "l2-8a",
+              "kind": "anzeige",
+              "title": "Hausarzt Weber",
+              "de": "Montag bis Freitag 8–12 Uhr und 15–18 Uhr. Termine bitte mit Anruf."
+            },
+            {
+              "id": "l2-8b",
+              "kind": "anzeige",
+              "title": "Krankenhaus am Park – Notaufnahme",
+              "de": "Im Notfall: Tag und Nacht, auch am Samstag und Sonntag. Eingang B."
+            },
+            {
+              "id": "l2-9a",
+              "kind": "anzeige",
+              "title": "Deutsch lernen – Schule Krämer",
+              "de": "Montag bis Freitag von 9 bis 12 Uhr. Wir sprechen nur Deutsch!"
+            },
+            {
+              "id": "l2-9b",
+              "kind": "anzeige",
+              "title": "Deutsch lernen – Schule Hofmann",
+              "de": "Montag und Mittwoch von 18 bis 20 Uhr. Für Leute mit Arbeit!"
+            },
+            {
+              "id": "l2-10a",
+              "kind": "anzeige",
+              "title": "Mit dem Boot auf den See",
+              "de": "Samstag und Sonntag um 10 und um 14 Uhr. Kinder bezahlen nur 5 Euro."
+            },
+            {
+              "id": "l2-10b",
+              "kind": "anzeige",
+              "title": "Die Stadt sehen",
+              "de": "Mit dem Bus durch das Zentrum: Montag bis Freitag um 11 Uhr."
+            }
+          ],
           "items": [
             {
-              "q": "«Supermarkt: Am Sonntag geschlossen.» Wann kann man einkaufen?",
-              "a": "Montag bis Samstag",
+              "q": "Sie möchten am Sonntag Brot kaufen.",
+              "a": "b",
               "choices": [
-                "nur Sonntag",
-                "Montag bis Samstag",
-                "jeden Tag"
-              ]
+                "a",
+                "b"
+              ],
+              "textRefs": [
+                "l2-6a",
+                "l2-6b"
+              ],
+              "evidence": "Auch am Sonntag von 8 bis 11 Uhr geöffnet"
             },
             {
-              "q": "«Zimmer frei! 2 Nächte, mit Frühstück.» Was ist inklusive?",
-              "a": "Frühstück",
+              "q": "Sie möchten für eine Woche ein Fahrrad mieten.",
+              "a": "a",
               "choices": [
-                "Abendessen",
-                "Frühstück",
-                "Taxi"
-              ]
+                "a",
+                "b"
+              ],
+              "textRefs": [
+                "l2-7a",
+                "l2-7b"
+              ],
+              "evidence": "Fahrrad mieten am Hauptbahnhof: ein Tag 10 Euro, eine Woche 40 Euro"
             },
             {
-              "q": "«Achtung: Fahrkarte bitte hier stempeln!» Was macht man?",
-              "a": "Fahrkarte stempeln",
+              "q": "Sie sind krank. Es ist Samstag, und Sie brauchen einen Arzt.",
+              "a": "b",
               "choices": [
-                "Fahrkarte kaufen",
-                "Fahrkarte stempeln",
-                "Fahrkarte schicken"
-              ]
+                "a",
+                "b"
+              ],
+              "textRefs": [
+                "l2-8a",
+                "l2-8b"
+              ],
+              "evidence": "auch am Samstag und Sonntag"
+            },
+            {
+              "q": "Sie möchten Deutsch lernen. Sie haben nur am Abend Zeit.",
+              "a": "b",
+              "choices": [
+                "a",
+                "b"
+              ],
+              "textRefs": [
+                "l2-9a",
+                "l2-9b"
+              ],
+              "evidence": "Montag und Mittwoch von 18 bis 20 Uhr"
+            },
+            {
+              "q": "Sie möchten am Wochenende mit Ihren Kindern einen Ausflug machen.",
+              "a": "a",
+              "choices": [
+                "a",
+                "b"
+              ],
+              "textRefs": [
+                "l2-10a",
+                "l2-10b"
+              ],
+              "evidence": "Samstag und Sonntag um 10 und um 14 Uhr"
             }
           ]
         },
         {
           "id": "lesen-teil3",
           "prompt": {
-            "de": "Teil 3: Lesen Sie die E-Mail.",
-            "ar": "القسم 3: اقرأ الرسالة."
+            "de": "Teil 3: Lesen Sie die Texte und die Aufgaben 11 bis 15. Kreuzen Sie an: Richtig oder Falsch.",
+            "ar": "القسم 3: اقرأ اللافتات والعبارات 11 إلى 15. اختر صحيح أو خطأ."
           },
-          "items": [
+          "taskType": "richtig-falsch",
+          "texts": [
             {
-              "q": "E-Mail: «Hallo! Ich komme Freitag um 14 Uhr an. Kannst du mich abholen?» — Was will die Person?",
-              "a": "abgeholt werden",
-              "choices": [
-                "abgeholt werden",
-                "einkaufen",
-                "schlafen"
-              ]
+              "id": "l3-11",
+              "kind": "aushang",
+              "title": "Bäckerei Becker",
+              "de": "Liebe Kunden, vom 2. bis 16. Mai haben wir Urlaub. Am 17. Mai sind wir wieder für Sie hier."
             },
             {
-              "q": "«Das Essen war super, aber das Zimmer war zu laut.» Was war nicht gut?",
-              "a": "das Zimmer",
+              "id": "l3-12",
+              "kind": "aushang",
+              "de": "Der Aufzug geht nicht. Bitte nehmen Sie die Treppe. Wir bitten um Entschuldigung."
+            },
+            {
+              "id": "l3-13",
+              "kind": "schild",
+              "title": "Hausarzt Weber",
+              "de": "Termine nur mit Anruf: 030 2245 1180"
+            },
+            {
+              "id": "l3-14",
+              "kind": "schild",
+              "title": "Kasse 3",
+              "de": "Hier können Sie nur mit Karte zahlen."
+            },
+            {
+              "id": "l3-15",
+              "kind": "schild",
+              "title": "Museum am See",
+              "de": "Sonntag: Besuch frei! Montag geschlossen."
+            }
+          ],
+          "items": [
+            {
+              "q": "Die Bäckerei ist am 10. Mai geschlossen.",
+              "a": "Richtig",
               "choices": [
-                "das Essen",
-                "das Zimmer",
-                "der Weg"
-              ]
+                "Richtig",
+                "Falsch"
+              ],
+              "textRefs": [
+                "l3-11"
+              ],
+              "evidence": "vom 2. bis 16. Mai haben wir Urlaub"
+            },
+            {
+              "q": "Man kann mit dem Aufzug fahren.",
+              "a": "Falsch",
+              "choices": [
+                "Richtig",
+                "Falsch"
+              ],
+              "textRefs": [
+                "l3-12"
+              ],
+              "evidence": "Der Aufzug geht nicht"
+            },
+            {
+              "q": "Für einen Termin muss man vorher anrufen.",
+              "a": "Richtig",
+              "choices": [
+                "Richtig",
+                "Falsch"
+              ],
+              "textRefs": [
+                "l3-13"
+              ],
+              "evidence": "Termine nur mit Anruf"
+            },
+            {
+              "q": "An Kasse 3 kann man nicht mit Karte zahlen.",
+              "a": "Falsch",
+              "choices": [
+                "Richtig",
+                "Falsch"
+              ],
+              "textRefs": [
+                "l3-14"
+              ],
+              "evidence": "Hier können Sie nur mit Karte zahlen"
+            },
+            {
+              "q": "Am Montag kann man das Museum besuchen.",
+              "a": "Falsch",
+              "choices": [
+                "Richtig",
+                "Falsch"
+              ],
+              "textRefs": [
+                "l3-15"
+              ],
+              "evidence": "Montag geschlossen"
             }
           ]
         }
@@ -285,53 +599,86 @@
       "skill": "schreiben",
       "timeBudgetMin": 20,
       "instructions": {
-        "de": "Teil 1: Füllen Sie das Formular aus. Teil 2: Schreiben Sie eine kurze Nachricht (30 Wörter).",
-        "ar": "القسم 1: املأ الاستمارة. القسم 2: اكتب رسالة قصيرة (30 كلمة)."
+        "de": "Der Test Schreiben hat zwei Teile: ein Formular und eine kurze Nachricht.",
+        "ar": "اختبار الكتابة قسمان: استمارة ورسالة قصيرة."
       },
       "parts": [
         {
           "id": "schreiben-teil1",
           "prompt": {
-            "de": "Teil 1: Formular — schreiben Sie Ihre Daten.",
-            "ar": "القسم 1: استمارة — اكتب بياناتك."
+            "de": "Teil 1: Ihr Freund Karim Haddad reserviert ein Zimmer im Hotel Sonne. Im Formular fehlen fünf Informationen. Lesen Sie den Text und schreiben Sie die fünf Informationen in das Formular. (Familienname: Haddad)",
+            "ar": "القسم 1: صديقك كريم حداد يحجز غرفة في فندق Sonne. تنقص الاستمارة خمس معلومات — اقرأ النص واكتبها (اسم العائلة مكتوب: Haddad)."
           },
+          "taskType": "formular",
+          "texts": [
+            {
+              "id": "s1-situation",
+              "kind": "situation",
+              "de": "Ihr Freund Karim Haddad möchte im Juni mit seiner Frau eine Reise nach Wien machen. Sie möchten drei Nächte im Hotel Sonne bleiben, in einem Doppelzimmer. Sie kommen am 6. Juni mit dem Zug an. Karim möchte mit Kreditkarte bezahlen."
+            }
+          ],
           "items": [
             {
-              "q": "Name:",
-              "a": "الاسم الكامل (مثال: Amira Ben Salah)"
-            },
-            {
               "q": "Vorname:",
-              "a": "الاسم الشخصي"
+              "a": "Karim",
+              "textRefs": [
+                "s1-situation"
+              ],
+              "evidence": "Karim Haddad"
             },
             {
-              "q": "Adresse / Straße:",
-              "a": "العنوان والشارع"
+              "q": "Zimmer (Einzelzimmer / Doppelzimmer):",
+              "a": "Doppelzimmer",
+              "textRefs": [
+                "s1-situation"
+              ],
+              "evidence": "in einem Doppelzimmer"
             },
             {
-              "q": "Telefonnummer:",
-              "a": "رقم الهاتف"
+              "q": "Wie viele Nächte?",
+              "a": "3",
+              "textRefs": [
+                "s1-situation"
+              ],
+              "evidence": "drei Nächte"
             },
             {
-              "q": "Geburtsdatum (TT.MM.JJJJ):",
-              "a": "تاريخ الميلاد (يوم.شهر.سنة)"
+              "q": "Ankunft (Datum):",
+              "a": "6. Juni",
+              "textRefs": [
+                "s1-situation"
+              ],
+              "evidence": "am 6. Juni"
+            },
+            {
+              "q": "Zahlen mit:",
+              "a": "Kreditkarte",
+              "textRefs": [
+                "s1-situation"
+              ],
+              "evidence": "mit Kreditkarte bezahlen"
             }
           ]
         },
         {
           "id": "schreiben-teil2",
           "prompt": {
-            "de": "Teil 2: Schreiben Sie eine Nachricht an Ihren Freund (30 Wörter): Termin, Uhrzeit, Ort.",
-            "ar": "القسم 2: اكتب رسالة لصديقك (30 كلمة): موعد ووقت ومكان."
+            "de": "Teil 2: Ihr Freund Thomas feiert am Freitag Geburtstag. Sie können nicht kommen. Schreiben Sie Thomas eine Nachricht (circa 30 Wörter). Schreiben Sie zu jedem Punkt ein bis zwei Sätze.",
+            "ar": "القسم 2: صديقك توماس يحتفل بعيد ميلاده يوم الجمعة ولا تستطيع الحضور. اكتب له رسالة (نحو 30 كلمة)، جملة أو جملتين لكل نقطة."
           },
+          "taskType": "freies-schreiben",
           "items": [
             {
-              "q": "Schreiben Sie: Wann? Wo? Was machen Sie zusammen?",
-              "a": "رسالة من 30 كلمة تحتوي: موعد (زمان) + مكان + نشاط (مثال: Hallo Markus! Am Samstag treffen wir uns um 10 Uhr am Bahnhof. Wir fahren zum See. Bis Samstag! Viele Grüße)"
+              "q": "Warum können Sie nicht kommen?",
+              "a": "Lieber Thomas, leider kann ich am Freitag nicht kommen. Ich bin krank und habe Fieber."
             },
             {
-              "q": "Nennen Sie die richtige Zeitform (heute/gestern/morgen).",
-              "a": "استخدام صحيح للزمن (مثال: morgen / am Samstag)"
+              "q": "Was schicken Sie Thomas?",
+              "a": "Ich schicke dir ein Geschenk mit der Post."
+            },
+            {
+              "q": "Machen Sie einen Vorschlag: Wann treffen Sie sich?",
+              "a": "Können wir am Sonntag zusammen Kaffee trinken? Bis bald!"
             }
           ]
         }
@@ -341,83 +688,145 @@
       "skill": "sprechen",
       "timeBudgetMin": 15,
       "instructions": {
-        "de": "Teil 1: Sprechen Sie über sich. Teil 2: Bitten Sie um etwas im Geschäft. Teil 3: Fragen Sie nach dem Weg.",
-        "ar": "القسم 1: تحدّث عن نفسك. القسم 2: اطلب شيئاً في المتجر. القسم 3: اسأل عن الطريق."
+        "de": "Der Test Sprechen hat drei Teile: sich vorstellen, Fragen stellen und beantworten, um etwas bitten.",
+        "ar": "اختبار المحادثة ثلاثة أقسام: التعريف بنفسك، طرح الأسئلة والإجابة عنها، طلب شيء."
       },
       "parts": [
         {
           "id": "sprechen-teil1",
           "prompt": {
-            "de": "Teil 1: Sprechen Sie über sich — 5 Sätze.",
-            "ar": "القسم 1: تحدّث عن نفسك — 5 جمل."
+            "de": "Teil 1: Stellen Sie sich vor. Buchstabieren Sie Ihren Namen und sagen Sie eine Telefonnummer.",
+            "ar": "القسم 1: عرّف بنفسك، ثم تهجَّ اسمك وقل رقم هاتف."
           },
+          "taskType": "freies-sprechen",
           "items": [
             {
-              "q": "Wie heißen Sie?",
+              "q": "Name?",
               "a": "Ich heiße …"
             },
             {
-              "q": "Woher kommen Sie?",
-              "a": "Ich komme aus …"
+              "q": "Wie alt sind Sie?",
+              "a": "Ich bin … Jahre alt."
+            },
+            {
+              "q": "Land?",
+              "a": "Ich komme aus Tunesien."
             },
             {
               "q": "Wo wohnen Sie?",
-              "a": "Ich wohne in …"
+              "a": "Ich wohne in Tunis."
             },
             {
-              "q": "Was machen Sie — arbeiten oder studieren?",
-              "a": "Ich arbeite / studiere …"
+              "q": "Sprachen?",
+              "a": "Ich spreche Arabisch, Französisch und Deutsch."
             },
             {
-              "q": "Was sind Ihre Hobbys?",
-              "a": "Meine Hobbys sind …"
+              "q": "Beruf?",
+              "a": "Ich bin … von Beruf."
+            },
+            {
+              "q": "Hobby?",
+              "a": "Mein Hobby ist Fußball."
+            },
+            {
+              "q": "Buchstabieren Sie Ihren Namen.",
+              "a": "K – A – R – I – M."
+            },
+            {
+              "q": "Wie ist Ihre Telefonnummer?",
+              "a": "Meine Telefonnummer ist 0176 …"
             }
           ]
         },
         {
           "id": "sprechen-teil2",
           "prompt": {
-            "de": "Teil 2: Im Geschäft — Sie brauchen etwas. Bitten Sie darum.",
-            "ar": "القسم 2: في المتجر — تحتاج شيئاً. اطلبه."
+            "de": "Teil 2: Thema „Essen und Trinken“. Ziehen Sie eine Karte, stellen Sie eine Frage und antworten Sie.",
+            "ar": "القسم 2: الموضوع «الطعام والشراب». اسحب بطاقة، اطرح سؤالاً بكلمتها ثم أجب."
           },
+          "taskType": "freies-sprechen",
           "items": [
             {
-              "q": "Bitten Sie um ein Kilo Äpfel.",
-              "a": "Ich möchte ein Kilo Äpfel, bitte."
+              "q": "Karte: Frühstück",
+              "a": "Was essen Sie zum Frühstück? — Ich esse Brot mit Butter und trinke Tee."
             },
             {
-              "q": "Fragen Sie: Was kostet das?",
-              "a": "Was kostet das, bitte?"
+              "q": "Karte: Obst",
+              "a": "Essen Sie gern Obst? — Ja, ich esse sehr gern Obst."
             },
             {
-              "q": "Sagen Sie: Das ist zu teuer.",
-              "a": "Das ist zu teuer."
+              "q": "Karte: Getränk",
+              "a": "Welches Getränk trinken Sie gern? — Ich trinke gern Saft."
+            },
+            {
+              "q": "Karte: Abendessen",
+              "a": "Wann essen Sie zu Abend? — Um sieben Uhr, mit meiner Familie."
+            },
+            {
+              "q": "Karte: Fisch",
+              "a": "Essen Sie gern Fisch? — Nein, ich esse lieber Fleisch."
+            },
+            {
+              "q": "Karte: Markt",
+              "a": "Wo kaufen Sie Obst und Gemüse? — Auf dem Markt."
             }
           ]
         },
         {
           "id": "sprechen-teil3",
           "prompt": {
-            "de": "Teil 3: Fragen Sie nach dem Weg zum Bahnhof.",
-            "ar": "القسم 3: اسأل عن الطريق إلى المحطة."
+            "de": "Teil 3: Bitten Sie um etwas (Karte) und reagieren Sie auf eine Bitte.",
+            "ar": "القسم 3: اطلب شيئاً بحسب البطاقة، ثم ردّ على طلب."
           },
+          "taskType": "freies-sprechen",
           "items": [
             {
-              "q": "Fragen Sie: Entschuldigung, wo ist der Bahnhof?",
-              "a": "Entschuldigung, wo ist der Bahnhof?"
+              "q": "Karte: Fenster",
+              "a": "Können Sie bitte das Fenster öffnen? — Ja, gern."
             },
             {
-              "q": "Der Weg: geradeaus, dann rechts. Bestätigen Sie.",
-              "a": "Geradeaus, dann rechts. Danke!"
+              "q": "Karte: ein Glas Wasser",
+              "a": "Ein Glas Wasser, bitte! — Hier, bitte."
             },
             {
-              "q": "Bedanken Sie sich.",
-              "a": "Vielen Dank! / Danke schön!"
+              "q": "Karte: Salz",
+              "a": "Können Sie mir bitte das Salz geben? — Natürlich, hier, bitte."
+            },
+            {
+              "q": "Karte: Taxi",
+              "a": "Können Sie mir bitte ein Taxi rufen? — Ja, sofort."
+            },
+            {
+              "q": "Karte: Handy",
+              "a": "Kann ich bitte Ihr Handy benutzen? — Ja, natürlich."
+            },
+            {
+              "q": "Karte: Fahrkarte",
+              "a": "Eine Fahrkarte nach Hamburg, bitte. — Das kostet zwanzig Euro."
             }
           ]
         }
       ]
     }
   ],
-  "sourceNote": "بنية الامتحان مبنية على نموذج Goethe-Zertifikat A1 المعتاد (Hören/Lesen/Schreiben/Sprechen) — التفاصيل الرسمية الدقيقة (التوقيتات وعدد العناصر) needs-web-verify من goethe.de قبل أي استخدام رسمي. الأسئلة هنا من مفردات الخطة (742 كلمة) — تدريب داخلي لا نسخة رسمية."
+  "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Ayse",
+    "Thomas",
+    "Berg",
+    "Schmidt",
+    "Weber",
+    "München",
+    "Hamburg",
+    "Tunis",
+    "Wien",
+    "Karim",
+    "Haddad",
+    "Becker",
+    "Krause",
+    "Krämer",
+    "Hofmann"
+  ],
+  "sourceNote": "D109: البنية = صيغة «Goethe-Zertifikat A1: Start Deutsch 1» الرسمية بنداً بنداً (exam-formats/goethe-a1-sd1.json، من وثيقتي goethe.de المجانيتين Modellsatz وTestbeschreibung — D108): Hören 6/4/5 بنود (سماع 2/1/2) · Lesen 5/5/5 (Richtig/Falsch · a/b · Richtig/Falsch) · Schreiben استمارة بخمس معلومات + رسالة نحو 30 كلمة · Sprechen 3 أجزاء · 20/25/20/15 دقيقة · النجاح 60%. المحتوى كله أصلي مكتوب لهذا المشروع — لا نص ولا تمرين منسوخ من Modellsatz أو من أي كتاب — ومن مفردات A1 المدروسة فقط (قانون الجبهة 13، يتحقق منه المدقِّق آلياً: e-modelltest-vocab). كل جواب استماع/قراءة/استمارة بدليل حرفي يتحقق المخطط والمدقِّق من وجوده في الصوت أو النص. تدريب داخلي: ليس امتحاناً رسمياً ولا يمنح شهادة، والتقييم بالنقاط الرسمية (100) مسؤولية شاشة الامتحان القادمة."
 }

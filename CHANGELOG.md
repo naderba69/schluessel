@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-14 — الدفعة 65: امتحان A1 التجريبي بالصيغة الرسمية (D109)
+- **تغيير معلن (القانون 7)**: `a1-modelltest-1` أُعيد بناؤه كاملاً بمحتوى أصلي: الاستماع 6/4/5 (كان 4/3/2) · القراءة 5/5/5 (كان 4/3/2) · استمارة موضوعية · 30 بنداً بدل 18.
+- **إضافة**: `content/schemas/answer-key.ts` (دليل حرفي لكل جواب) · `tools/lib/vocab-forms.ts` · نوع سكربت `message` · `ExamTaskType` + `kind` في الصيغتين الرسميتين · 35 مقطعاً صوتياً (حُذف 16).
+- **قواعد**: `e-modelltest-format` (كان تحذيراً) · `e-hoeren-evidence` · `e-modelltest-vocab` · `w-modelltest-balance` · `w-modelltest-proper-noun`.
+- **383/383 أخضر** · validator 877/0/0.
+
 ## 2026-10-14 — الدفعة 64: المراجع الرسمية (D108)
 - **إضافة**: `content/exam-formats/` (Start Deutsch 1 + Goethe A2) + مخطط ExamFormat + قاعدة `w-modelltest-format` · 12 فصلاً لـ Netzwerk neu A2 في المرجع المنهجي · **359/359 أخضر**.
 

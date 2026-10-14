@@ -30,24 +30,28 @@
           "part": 1,
           "goal": "Informationen und Argumentationen in Medientexten verstehen",
           "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "kind": "mc3",
           "items": 5
         },
         {
           "part": 2,
           "goal": "Informationstafeln, Veranstaltungsprogramme etc. verstehen",
           "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "kind": "mc3",
           "items": 5
         },
         {
           "part": 3,
           "goal": "Korrespondenz verstehen",
           "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "kind": "mc3",
           "items": 5
         },
         {
           "part": 4,
           "goal": "Anzeigen verstehen",
           "taskType": "Zuordnen",
+          "kind": "zuordnung",
           "items": 5
         }
       ]
@@ -61,6 +65,7 @@
           "part": 1,
           "goal": "Informationen im Radio, auf dem Anrufbeantworter, bei Durchsagen verstehen",
           "taskType": "Mehrfachauswahl, 3-gliedrig",
+          "kind": "mc3",
           "items": 5,
           "playCount": 2
         },
@@ -68,6 +73,7 @@
           "part": 2,
           "goal": "ein zusammenhängendes Gespräch verstehen",
           "taskType": "Zuordnen Bild/Text",
+          "kind": "zuordnung",
           "items": 5,
           "playCount": 1
         },
@@ -75,6 +81,7 @@
           "part": 3,
           "goal": "Einzelgespräche verstehen",
           "taskType": "Mehrfachauswahl, 3-gliedrig, Bild/Text",
+          "kind": "mc3",
           "items": 5,
           "playCount": 1
         },
@@ -82,6 +89,7 @@
           "part": 4,
           "goal": "ein Radiointerview verstehen",
           "taskType": "Richtig/Falsch",
+          "kind": "richtig-falsch",
           "items": 5,
           "playCount": 2
         }
@@ -95,12 +103,14 @@
         {
           "part": 1,
           "goal": "persönliche Mitteilung zur Kontaktpflege (SMS, 20–30 Wörter, 3 Leitpunkte)",
-          "taskType": "Freies Schreiben"
+          "taskType": "Freies Schreiben",
+          "kind": "freies-schreiben"
         },
         {
           "part": 2,
           "goal": "halb offizielle Mitteilung zur Handlungsregulierung (E-Mail, 30–40 Wörter, 3 Leitpunkte)",
-          "taskType": "Freies Schreiben"
+          "taskType": "Freies Schreiben",
+          "kind": "freies-schreiben"
         }
       ]
     },
@@ -112,17 +122,20 @@
         {
           "part": 1,
           "goal": "Informationen zur Person mit einem Partner austauschen",
-          "taskType": "Freies Sprechen (Paarprüfung, ohne Vorbereitung)"
+          "taskType": "Freies Sprechen (Paarprüfung, ohne Vorbereitung)",
+          "kind": "freies-sprechen"
         },
         {
           "part": 2,
           "goal": "ausführlich Informationen zum eigenen Leben geben",
-          "taskType": "Freies Sprechen"
+          "taskType": "Freies Sprechen",
+          "kind": "freies-sprechen"
         },
         {
           "part": 3,
           "goal": "mit einem Partner eine Unternehmung planen und aushandeln",
-          "taskType": "Freies Sprechen"
+          "taskType": "Freies Sprechen",
+          "kind": "freies-sprechen"
         }
       ]
     }

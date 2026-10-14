@@ -9,7 +9,7 @@ const CLIP_URLS = import.meta.glob("../../content/**/*.opus", {
 
 const PREFIX = "../../content/";
 
-/** معرّف المسار = اسم الملف بلا امتداد (word-licht · mt1-h2-d1-l2 · mueller-announce-01) */
+/** معرّف المسار = اسم الملف بلا امتداد (word-licht · mt1-h1-d1-l2 · mueller-announce-01) */
 const BY_ID: ReadonlyMap<string, string> = new Map(
   Object.entries(CLIP_URLS).map(([path, url]) => [path.slice(path.lastIndexOf("/") + 1).replace(/\.opus$/, ""), url]),
 );

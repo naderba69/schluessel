@@ -8,6 +8,7 @@ export const ROLE_FOR_KIND: Readonly<Record<ScriptKind, "dialogue" | "announceme
   dialogue: "dialogue",
   announcement: "announcement",
   words: "character",
+  message: "character", // D109: رسالة هاتفية = شخصية تتكلم وحدها (صوتها الثابت)
 };
 
 /** القانون 11: P0 حوارات (ونصوص الاستماع) | P2 تمييز أصوات متقاربة (Gleis/Gruß/Größe) */
@@ -15,6 +16,7 @@ export const PRIORITY_FOR_KIND: Readonly<Record<ScriptKind, "P0" | "P2">> = {
   dialogue: "P0",
   announcement: "P0",
   words: "P2",
+  message: "P0",
 };
 
 export type CharacterVoices = Readonly<Record<string, string>>;
@@ -125,25 +127,5 @@ export function checkScriptAgainstManifest(
   return issues;
 }
 
-/** الأعداد المكتوبة ↔ الأرقام (الصوت يقول «acht» والجواب «8») */
-const NUMBER_WORDS: Readonly<Record<string, string>> = {
-  "0": "null", "1": "eins", "2": "zwei", "3": "drei", "4": "vier", "5": "fünf", "6": "sechs", "7": "sieben",
-  "8": "acht", "9": "neun", "10": "zehn", "11": "elf", "12": "zwölf", "20": "zwanzig", "30": "dreißig",
-};
-const STOP = new Set(["der", "die", "das", "den", "dem", "des", "ein", "eine", "einen", "um", "von", "bis", "am", "im", "in", "zu", "und"]);
-
-function tokens(s: string): string[] {
-  return s.toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/).filter(Boolean);
-}
-
-/**
- * هل الجواب مسموع فعلاً في النص المنطوق؟ كل كلمة محتوى في الجواب يجب أن تُنطق
- * (الرقم 8 يقبل «acht» أو «8»). يمنع سؤال استماع جوابه غير موجود في الصوت.
- */
-export function answerSupported(answer: string, transcript: string): { ok: boolean; missing: string[] } {
-  const heard = new Set(tokens(transcript));
-  const missing = tokens(answer)
-    .filter((t) => !STOP.has(t))
-    .filter((t) => !(heard.has(t) || (NUMBER_WORDS[t] !== undefined && heard.has(NUMBER_WORDS[t]!))));
-  return { ok: missing.length === 0, missing };
-}
+/** D109: انتقل إلى content/schemas/answer-key.ts (يستخدمه المخطط والمدقِّق معاً) — إعادة تصدير للتوافق */
+export { answerSupported } from "../../content/schemas/answer-key.js";

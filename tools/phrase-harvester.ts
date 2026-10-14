@@ -10,34 +10,11 @@ import {
   harvestPhrases, functionCoverage, PHRASE_FUNCTIONS, FUNCTION_LABELS_AR, SURVIVAL_FUNCTIONS, type Phrase,
 } from "../src/lib/phrase-bank.js";
 import { loadLessons, loadWords } from "./lib/content-disk.js";
+import { CLOSED, deumlaut, knownForms, stem } from "./lib/vocab-forms.js";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
-/** الكلمات الوظيفية المغلقة (أدوات/ضمائر/مساعدة/جر/ربط/أعداد) — تُعرف دون درس */
-const CLOSED = new Set(`der die das den dem des ein eine einen einem einer eines kein keine keinen keinem keiner
-ich du er sie es wir ihr mich dich ihn uns euch mir dir ihm ihnen sich man mein meine meinen meinem meiner dein deine deinen deinem
-sein seine seinen seinem ihre ihren ihrem unser unsere euer eure bin bist ist sind seid war waren habe hast hat haben habt hatte
-werde wirst wird werden kann kannst können könnt muss musst müssen will willst wollen möchte möchtest möchten darf darfst dürfen
-soll sollst sollen in im ins an am ans auf aus bei mit nach von vom zu zum zur für um ohne gegen durch bis seit über unter vor
-hinter neben zwischen beim und oder aber denn sondern weil dass wenn als ob nicht auch noch schon nur sehr ja nein doch mal so wie was
-wer wo wann warum welche welcher welches eins zwei drei vier fünf sechs sieben acht neun zehn elf zwölf zwanzig hundert es gibt`.split(/\s+/));
 const NAMES = new Set(["yusuf", "lena", "ayse", "thomas", "mueller", "müller", "berg", "schmidt", "weber", "berlin", "hamburg", "münchen", "frau", "herr"]);
-
-const deumlaut = (s: string) => s.replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u");
-
-/** الصيغ المعروفة من كلمة مدروسة: الجذع + صيغ الفعل + الجمع — مع جذوع تصريف بسيطة */
-function knownForms(w: Word): string[] {
-  const base = w.de.replace(/^(der|die|das) /, "").replace(/^sich /, "").toLowerCase();
-  const parts = [base, w.plural?.replace(/^die /, ""), w.forms?.praesens3s, w.forms?.perfekt, w.forms?.praeteritum, w.forms?.imperative]
-    .filter((x): x is string => !!x).flatMap((x) => x.toLowerCase().split(/[\s/!.,]+/)).filter(Boolean);
-  return parts;
-}
-
-function stem(t: string): string[] {
-  const out = [t];
-  for (const suf of ["en", "st", "et", "te", "ten", "e", "t", "n", "s", "er", "es"]) if (t.length > suf.length + 2 && t.endsWith(suf)) out.push(t.slice(0, -suf.length));
-  return out;
-}
 
 export function vocabularyReport(phrases: Phrase[], lessonOrder: string[], words: Word[]) {
   const learnedAt = new Map<string, number>(); // form → أول درس يُعرف فيه

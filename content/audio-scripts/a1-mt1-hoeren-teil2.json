@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0",
   "id": "a1-mt1-hoeren-teil2",
-  "kind": "dialogue",
+  "kind": "announcement",
   "level": "A1",
   "title": {
-    "de": "Hören Teil 2 — Drei kurze Gespräche",
-    "ar": "الاستماع — القسم 2: ثلاثة حوارات قصيرة"
+    "de": "Hören Teil 2 — Vier Ansagen",
+    "ar": "الاستماع — القسم 2: أربعة إعلانات"
   },
   "usedIn": [
     "a1-modelltest-1#hoeren-teil2"
@@ -13,64 +13,28 @@
   "lengthScale": 1.32,
   "lines": [
     {
-      "id": "mt1-h2-d1-l1",
-      "speaker": "thomas",
-      "text": "Guten Tag! Was möchten Sie trinken? Einen Kaffee?",
-      "direction": "النادل — ودود ومهني"
+      "id": "mt1-h2-a1",
+      "speaker": "announcer",
+      "text": "Der Zug nach München am Gleis vier hat zwanzig Minuten Verspätung. Er fährt um zehn Uhr dreißig. Wir bitten um Entschuldigung.",
+      "direction": "إعلان محطة — هادئ ورسمي"
     },
     {
-      "id": "mt1-h2-d1-l2",
-      "speaker": "lena",
-      "text": "Nein, danke, keinen Kaffee. Ich nehme ein Wasser, bitte.",
-      "direction": "الزبونة — مشتِّت مقصود: Kaffee يُذكر ثم يُرفض"
+      "id": "mt1-h2-a2",
+      "speaker": "announcer",
+      "text": "Liebe Kunden! Schuhe und Stiefel sind im Angebot: zehn Euro Rabatt. Die Schuhe finden Sie unten im Keller.",
+      "direction": "إعلان متجر — مرح"
     },
     {
-      "id": "mt1-h2-d1-l3",
-      "speaker": "thomas",
-      "text": "Gern. Ein Wasser.",
-      "direction": "النادل — تأكيد قصير"
+      "id": "mt1-h2-a3",
+      "speaker": "announcer",
+      "text": "Liebe Gäste! Der Flug nach Tunis fliegt um elf Uhr, nicht um zehn Uhr. Bitte warten Sie in Halle B.",
+      "direction": "إعلان مطار — مشتِّت: zehn Uhr يُذكر منفياً"
     },
     {
-      "id": "mt1-h2-d2-l1",
-      "speaker": "yusuf",
-      "text": "Entschuldigung, wann fährt der Zug nach Hamburg?",
-      "direction": "يوسف — سؤال مهذب في المحطة"
-    },
-    {
-      "id": "mt1-h2-d2-l2",
-      "speaker": "frau-schmidt",
-      "text": "Der Zug um sieben Uhr fährt heute nicht. Der nächste Zug fährt um acht Uhr.",
-      "direction": "موظفة الاستعلامات — مشتِّت: sieben يُذكر ثم يُلغى"
-    },
-    {
-      "id": "mt1-h2-d2-l3",
-      "speaker": "yusuf",
-      "text": "Um acht Uhr. Vielen Dank!",
-      "direction": "يوسف — يكرر الجواب"
-    },
-    {
-      "id": "mt1-h2-d3-l1",
-      "speaker": "dr-weber",
-      "text": "Guten Morgen! Was tut Ihnen weh?",
-      "direction": "الطبيب — هادئ"
-    },
-    {
-      "id": "mt1-h2-d3-l2",
-      "speaker": "ayse",
-      "text": "Mein Kopf tut weh, seit gestern.",
-      "direction": "المريضة — متعبة"
-    },
-    {
-      "id": "mt1-h2-d3-l3",
-      "speaker": "dr-weber",
-      "text": "Und das Bein? Der Bauch?",
-      "direction": "الطبيب — مشتِّت: Bein يُذكر"
-    },
-    {
-      "id": "mt1-h2-d3-l4",
-      "speaker": "ayse",
-      "text": "Nein, nur der Kopf.",
-      "direction": "المريضة — حاسمة"
+      "id": "mt1-h2-a4",
+      "speaker": "announcer",
+      "text": "Liebe Gäste! Das Museum schließt in zehn Minuten. Bitte gehen Sie zum Ausgang. Morgen öffnen wir um neun Uhr. Vielen Dank für Ihren Besuch!",
+      "direction": "إعلان متحف — ودود"
     }
   ]
 }

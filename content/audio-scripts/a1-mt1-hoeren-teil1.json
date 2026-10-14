@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0",
   "id": "a1-mt1-hoeren-teil1",
-  "kind": "words",
+  "kind": "dialogue",
   "level": "A1",
   "title": {
-    "de": "Hören Teil 1 — Wörter",
-    "ar": "الاستماع — القسم 1: كلمات"
+    "de": "Hören Teil 1 — Sechs kurze Gespräche",
+    "ar": "الاستماع — القسم 1: ستة حوارات قصيرة"
   },
   "usedIn": [
     "a1-modelltest-1#hoeren-teil1"
@@ -13,28 +13,160 @@
   "lengthScale": 1.32,
   "lines": [
     {
-      "id": "mt1-h1-l1",
-      "speaker": "frau-berg",
-      "text": "Nummer eins: Freitag.",
-      "direction": "بطء واضح — الممتحِنة تقرأ الرقم ثم الكلمة"
+      "id": "mt1-h1-d1-l1",
+      "speaker": "yusuf",
+      "text": "Guten Morgen! Ich möchte vier Brötchen, bitte.",
+      "direction": "الزبون في المخبز — مهذب"
     },
     {
-      "id": "mt1-h1-l2",
+      "id": "mt1-h1-d1-l2",
       "speaker": "frau-berg",
-      "text": "Nummer zwei: das Rezept.",
-      "direction": "بطء واضح — نبر على -zept"
+      "text": "Gern. Möchten Sie auch ein Stück Kuchen?",
+      "direction": "البائعة — ودودة"
     },
     {
-      "id": "mt1-h1-l3",
-      "speaker": "frau-berg",
-      "text": "Nummer drei: das Gleis.",
-      "direction": "بطء واضح — ei طويلة واضحة (تمييز عن Gruß/Größe)"
+      "id": "mt1-h1-d1-l3",
+      "speaker": "yusuf",
+      "text": "Ja, gern. Was kostet das zusammen?",
+      "direction": "الزبون — سؤال السعر"
     },
     {
-      "id": "mt1-h1-l4",
+      "id": "mt1-h1-d1-l4",
       "speaker": "frau-berg",
-      "text": "Nummer vier: die Verspätung.",
-      "direction": "بطء واضح — v تُنطق f"
+      "text": "Die Brötchen kosten zwei Euro, der Kuchen kostet drei Euro. Das sind fünf Euro.",
+      "direction": "البائعة — ثلاثة أرقام تُسمع (مشتِّتان: zwei للخبز وfünf للمجموع)"
+    },
+    {
+      "id": "mt1-h1-d2-l1",
+      "speaker": "ayse",
+      "text": "Guten Tag! Ich brauche bitte einen Termin. Ich habe Fieber.",
+      "direction": "المريضة — متعبة"
+    },
+    {
+      "id": "mt1-h1-d2-l2",
+      "speaker": "mueller",
+      "text": "Leider geht es nicht sofort. Können Sie am Montag um zehn Uhr kommen?",
+      "direction": "موظف الاستقبال — مشتِّت 1: Montag"
+    },
+    {
+      "id": "mt1-h1-d2-l3",
+      "speaker": "ayse",
+      "text": "Am Montag arbeite ich. Geht es am Dienstag?",
+      "direction": "المريضة — ترفض الاثنين"
+    },
+    {
+      "id": "mt1-h1-d2-l4",
+      "speaker": "mueller",
+      "text": "Am Dienstag ist kein Termin frei. Aber am Mittwoch um neun Uhr ist noch frei.",
+      "direction": "مشتِّت 2: Dienstag محجوز"
+    },
+    {
+      "id": "mt1-h1-d2-l5",
+      "speaker": "ayse",
+      "text": "Gut, dann komme ich am Mittwoch.",
+      "direction": "المريضة — الحسم"
+    },
+    {
+      "id": "mt1-h1-d3-l1",
+      "speaker": "frau-schmidt",
+      "text": "Entschuldigung, gibt es hier eine Apotheke?",
+      "direction": "سيدة تسأل عن الطريق"
+    },
+    {
+      "id": "mt1-h1-d3-l2",
+      "speaker": "dr-weber",
+      "text": "Ja. Gehen Sie hier geradeaus bis zur Post.",
+      "direction": "مارّ — يشرح بهدوء"
+    },
+    {
+      "id": "mt1-h1-d3-l3",
+      "speaker": "frau-schmidt",
+      "text": "Ist die Apotheke neben der Post?",
+      "direction": "تتحقق — مشتِّت: neben der Post"
+    },
+    {
+      "id": "mt1-h1-d3-l4",
+      "speaker": "dr-weber",
+      "text": "Nein, nicht neben der Post. Sie ist gegenüber, neben der Bank.",
+      "direction": "التصحيح الحاسم"
+    },
+    {
+      "id": "mt1-h1-d3-l5",
+      "speaker": "frau-schmidt",
+      "text": "Neben der Bank. Vielen Dank!",
+      "direction": "تكرر الجواب وتشكر"
+    },
+    {
+      "id": "mt1-h1-d4-l1",
+      "speaker": "thomas",
+      "text": "Lena, was machst du am Samstag? Gehen wir ins Kino?",
+      "direction": "توماس — اقتراح (مشتِّت: Kino)"
+    },
+    {
+      "id": "mt1-h1-d4-l2",
+      "speaker": "lena",
+      "text": "Ins Kino? Nein, das Wetter ist so schön! Gehen wir lieber in den Park.",
+      "direction": "لينا — ترفض وتقترح البديل"
+    },
+    {
+      "id": "mt1-h1-d4-l3",
+      "speaker": "thomas",
+      "text": "Gut, am Samstag in den Park. Und am Sonntag ins Museum?",
+      "direction": "توماس — يوافق (مشتِّت: Museum يوم الأحد)"
+    },
+    {
+      "id": "mt1-h1-d4-l4",
+      "speaker": "lena",
+      "text": "Ja, gern!",
+      "direction": "لينا — موافقة"
+    },
+    {
+      "id": "mt1-h1-d5-l1",
+      "speaker": "thomas",
+      "text": "Guten Tag! Kann ich Ihnen helfen?",
+      "direction": "البائع — مهني"
+    },
+    {
+      "id": "mt1-h1-d5-l2",
+      "speaker": "ayse",
+      "text": "Ja, bitte. Ich suche eine Hose oder einen Rock. Wir feiern am Samstag einen Geburtstag.",
+      "direction": "الزبونة — مشتِّتان: Hose وRock"
+    },
+    {
+      "id": "mt1-h1-d5-l3",
+      "speaker": "thomas",
+      "text": "Für einen Geburtstag? Dann vielleicht ein Kleid? Das Kleid hier ist sehr schön.",
+      "direction": "البائع — اقتراح"
+    },
+    {
+      "id": "mt1-h1-d5-l4",
+      "speaker": "ayse",
+      "text": "Ja, das Kleid ist schön, und es passt. Ich nehme das Kleid!",
+      "direction": "الزبونة — القرار"
+    },
+    {
+      "id": "mt1-h1-d6-l1",
+      "speaker": "yusuf",
+      "text": "Entschuldigung, fährt der Bus Nummer fünf zum Flughafen?",
+      "direction": "يوسف — عند الموقف"
+    },
+    {
+      "id": "mt1-h1-d6-l2",
+      "speaker": "frau-schmidt",
+      "text": "Nein, die Fünf fährt zum Hauptbahnhof, und die Neun fährt ins Zentrum. Zum Flughafen fährt die Sieben.",
+      "direction": "ثلاثة خطوط تُسمع — واحد فقط إلى المطار"
+    },
+    {
+      "id": "mt1-h1-d6-l3",
+      "speaker": "yusuf",
+      "text": "Die Sieben. Und wo ist die Haltestelle?",
+      "direction": "يوسف — يكرر"
+    },
+    {
+      "id": "mt1-h1-d6-l4",
+      "speaker": "frau-schmidt",
+      "text": "Dort, gegenüber vom Hotel.",
+      "direction": "إشارة إلى المكان"
     }
   ]
 }

@@ -3,7 +3,7 @@ import { describe, it, expect, beforeEach } from "vitest";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { AudioScript, AudioManifest, Modelltest, A1_LENGTH_SCALE } from "../content/schemas/index.js";
+import { AudioScript, AudioManifest, Modelltest, A1_LENGTH_SCALE, evidenceIn } from "../content/schemas/index.js";
 import {
   ROLE_FOR_KIND, PRIORITY_FOR_KIND, expectedVoice, measuredWpm, buildTrack, planScript,
   checkScriptAgainstManifest, answerSupported, scriptTrackFile, type TrackLike,
@@ -24,9 +24,9 @@ const dialog = (lines: { id: string; speaker: string; text: string }[], extra: R
 const M = { durationMs: 2000, sizeBytes: 9000, hash: "sha256:x", pcmSha256: "y", rmsDb: -17 };
 
 describe("D103 — المنطق المشترك (دوال نقية)", () => {
-  it("الأدوار والأولويات: حوار/إعلان = P0 · كلمات = شخصية P2", () => {
-    expect(ROLE_FOR_KIND).toEqual({ dialogue: "dialogue", announcement: "announcement", words: "character" });
-    expect(PRIORITY_FOR_KIND).toEqual({ dialogue: "P0", announcement: "P0", words: "P2" });
+  it("الأدوار والأولويات: حوار/إعلان/رسالة هاتفية = P0 · كلمات = شخصية P2 · الرسالة = شخصية وحدها (D109)", () => {
+    expect(ROLE_FOR_KIND).toEqual({ dialogue: "dialogue", announcement: "announcement", words: "character", message: "character" });
+    expect(PRIORITY_FOR_KIND).toEqual({ dialogue: "P0", announcement: "P0", words: "P2", message: "P0" });
   });
 
   it("الصوت الثابت: المذيع = الرئيسي · lena = kerstin · شخصية بلا صوت أو بصوت غير مثبَّت = خطأ", () => {
@@ -80,6 +80,9 @@ describe("D103 — قواعد مخطط السكربت", () => {
   const base = { schemaVersion: "1.0.0", id: "x", level: "A2", title: { de: "T", ar: "ت" }, usedIn: ["a2-u1-d1"] };
   it("الإعلان بصوت المذيع فقط · الحوار بمتحدثَين · لا معرّف مكرر · A1 لا يتجاوز 0.85×", () => {
     expect(() => AudioScript.parse({ ...base, kind: "announcement", lines: [{ id: "a", speaker: "lena", text: "Achtung!" }] })).toThrow();
+    // D109: الرسالة الهاتفية بصوت شخصية (سطر واحد يكفي) — لا بصوت المذيع
+    expect(AudioScript.parse({ ...base, kind: "message", lines: [{ id: "a", speaker: "lena", text: "Hallo, hier ist Lena." }] }).lines).toHaveLength(1);
+    expect(() => AudioScript.parse({ ...base, kind: "message", lines: [{ id: "a", speaker: "announcer", text: "Hallo!" }] })).toThrow();
     expect(() => AudioScript.parse({ ...base, kind: "dialogue", lines: [{ id: "a", speaker: "lena", text: "Hallo!" }, { id: "b", speaker: "lena", text: "Tschüss!" }] })).toThrow();
     expect(() => AudioScript.parse({ ...base, kind: "words", lines: [{ id: "a", speaker: "lena", text: "eins" }, { id: "a", speaker: "lena", text: "zwei" }] })).toThrow();
     expect(() => AudioScript.parse({ ...base, kind: "words", level: "A1", lines: [{ id: "a", speaker: "lena", text: "eins" }] })).toThrow();
@@ -186,22 +189,35 @@ describe("D103 — قواعد المدقِّق الجديدة تلتقط الأ�
     expect(codes([manifest([...good, track("t-l9", VOICE_ID, "thomas", "x")]), script])).toContain("e-audio-script-orphan");
   });
 
-  const mt = (items: unknown[], audioScriptRef = "t-dialog") => ({
+  const rest = [
+    { skill: "lesen", timeBudgetMin: 25, instructions: { de: "x", ar: "س" }, parts: [{ id: "lesen-1", prompt: { de: "x", ar: "س" }, taskType: "richtig-falsch",
+      texts: [{ id: "t1", kind: "schild", de: "Montag geschlossen." }],
+      items: [{ q: "Am Montag ist offen.", a: "Falsch", choices: ["Richtig", "Falsch"], textRefs: ["t1"], evidence: "Montag geschlossen" }] }] },
+    { skill: "schreiben", timeBudgetMin: 20, instructions: { de: "x", ar: "س" }, parts: [{ id: "schreiben-1", prompt: { de: "x", ar: "س" }, taskType: "freies-schreiben", items: [{ q: "q", a: "a" }] }] },
+    { skill: "sprechen", timeBudgetMin: 15, instructions: { de: "x", ar: "س" }, parts: [{ id: "sprechen-1", prompt: { de: "x", ar: "س" }, taskType: "freies-sprechen", items: [{ q: "q", a: "a" }] }] },
+  ];
+  const mt = (items: unknown[], audioScriptRef = "t-dialog", taskType = "mc3") => ({
     path: "modelltest/mt-x.json",
     data: {
       schemaVersion: "1.0.0", id: "mt-x", level: "A1", title: { de: "T", ar: "ت" }, passingScore: 0.6, sourceNote: "s",
       sections: [
-        { skill: "hoeren", timeBudgetMin: 20, instructions: { de: "x", ar: "س" }, parts: [{ id: "hoeren-teil1", prompt: { de: "x", ar: "س" }, audioScriptRef, items }] },
-        ...["lesen", "schreiben", "sprechen"].map((skill) => ({ skill, timeBudgetMin: 20, instructions: { de: "x", ar: "س" }, parts: [{ id: `${skill}-1`, prompt: { de: "x", ar: "س" }, items: [{ q: "q", a: "a" }] }] })),
+        { skill: "hoeren", timeBudgetMin: 20, instructions: { de: "x", ar: "س" }, parts: [{ id: "hoeren-teil1", prompt: { de: "x", ar: "س" }, taskType, playCount: 2, audioScriptRef, items }] },
+        ...rest,
       ],
     },
   });
-  it("الاستماع: جواب مسموع = مقبول · جواب غير مسموع أو خارج الخيارات = e-hoeren-answer · سكربت مجهول = e-hoeren-audio", () => {
-    const ok = { q: "Was trinkt sie?", a: "Wasser", choices: ["Kaffee", "Wasser"], audioRefs: ["t-l1", "t-l2"] };
+  const ok = { q: "Was trinkt sie?", a: "Wasser", choices: ["Kaffee", "Wasser", "Milch"], audioRefs: ["t-l1", "t-l2"], evidence: "Ich nehme ein Wasser" };
+  it("الاستماع: جواب مسموع = مقبول · جواب غير مسموع = e-hoeren-answer · خارج الخيارات = رفض المخطط · سكربت مجهول = e-hoeren-audio", () => {
     expect(codes([manifest(good), script, mt([ok])])).toEqual([]);
-    expect(codes([manifest(good), script, mt([{ ...ok, a: "Milch", choices: ["Milch", "Wasser"] }])])).toContain("e-hoeren-answer");
-    expect(codes([manifest(good), script, mt([{ ...ok, choices: ["Kaffee", "Milch"] }])])).toContain("e-hoeren-answer");
+    expect(codes([manifest(good), script, mt([{ ...ok, a: "Milch" }])])).toContain("e-hoeren-answer");
+    expect(codes([manifest(good), script, mt([{ ...ok, choices: ["Kaffee", "Milch", "Tee"] }])])).toContain("e-schema"); // D109: المخطط نفسه
     expect(codes([manifest(good), script, mt([ok], "ghost-script")])).toContain("e-hoeren-audio");
+  });
+  it("D109: الدليل منطوق حرفياً في مقاطع البند وإلا e-hoeren-evidence · Richtig/Falsch يُحسم بالدليل لا بسماع «Richtig»", () => {
+    expect(codes([manifest(good), script, mt([{ ...ok, evidence: "Ich nehme einen Tee" }])])).toContain("e-hoeren-evidence");
+    expect(codes([manifest(good), script, mt([{ ...ok, audioRefs: ["t-l2"] }])])).toContain("e-hoeren-evidence"); // الدليل في سطر آخر
+    const rf = { q: "Sie trinkt Wasser.", a: "Richtig", choices: ["Richtig", "Falsch"], audioRefs: ["t-l1"], evidence: "ein Wasser" };
+    expect(codes([manifest(good), script, mt([rf], "t-dialog", "richtig-falsch")])).toEqual([]);
   });
   it("سؤال استماع بلا مقطع = مرفوض في المخطط نفسه", () => {
     expect(() => Modelltest.parse(mt([{ q: "Was?", a: "Wasser" }]).data)).toThrow(/بلا مقطع صوتي/);
@@ -234,7 +250,7 @@ describe("D103 — المحتوى الحقيقي: Hören الامتحان الت
     expect(mixed.length).toBeGreaterThanOrEqual(1);
   });
 
-  it("كل سؤال Hören: مقاطعه موجودة وجوابه مسموع فيها — والمدقِّق على الشجرة الحقيقية صفر أخطاء", () => {
+  it("كل سؤال Hören: مقاطعه موجودة ودليله منطوق فيها وجوابه مسموع (عدا Richtig/Falsch) — والمدقِّق على الشجرة الحقيقية صفر أخطاء", () => {
     const t = Modelltest.parse(JSON.parse(readFileSync(join(content, "modelltest/a1-modelltest-1.json"), "utf8")));
     const hoeren = t.sections.find((s) => s.skill === "hoeren")!;
     let items = 0;
@@ -242,9 +258,10 @@ describe("D103 — المحتوى الحقيقي: Hören الامتحان الت
       for (const it of p.items) {
         items++;
         const text = it.audioRefs!.map((id) => byId.get(id)!.textDe).join(" ");
-        expect(answerSupported(it.a, text).ok, `${p.id}: ${it.a}`).toBe(true);
+        expect(evidenceIn(it.evidence!, text), `${p.id}: ${it.evidence}`).toBe(true);
+        if (p.taskType !== "richtig-falsch") expect(answerSupported(it.a, text).ok, `${p.id}: ${it.a}`).toBe(true);
       }
-    expect(items).toBe(9);
+    expect(items).toBe(15); // D109: 6 + 4 + 5 كالصيغة الرسمية (كانت 9)
     const errs = validateContentTree(loadContentDir(content)).errors.filter((e) => /audio|hoeren/.test(e.code));
     expect(errs).toEqual([]);
   });

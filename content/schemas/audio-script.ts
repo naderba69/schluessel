@@ -12,8 +12,12 @@ import { CharacterId } from "./manifest.js";
  */
 export const A1_LENGTH_SCALE = 1.32;
 
-/** نوع السكربت ← دور المسار في المانيفست (ROLE_FOR_KIND) */
-export const ScriptKind = z.enum(["dialogue", "announcement", "words"]);
+/**
+ * نوع السكربت ← دور المسار في المانيفست (ROLE_FOR_KIND).
+ * message (D109): رسالة هاتفية/على المجيب الآلي — شخصية واحدة تتكلم في كل سطر (Hören Teil 3 في A1)؛
+ * ليست حواراً (لا طرف ثانٍ) ولا إعلاناً (ليست بصوت المذيع المحايد).
+ */
+export const ScriptKind = z.enum(["dialogue", "announcement", "words", "message"]);
 export type ScriptKind = z.infer<typeof ScriptKind>;
 
 /** المتحدث: إحدى الشخصيات الثمانية (صوتها ثابت) أو «المذيع» المحايد للإعلانات (الصوت الرئيسي) */

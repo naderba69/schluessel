@@ -2,7 +2,7 @@
 import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { ExamFormat, CurriculumReference, Lesson } from "../content/schemas/index.js";
+import { ExamFormat, CurriculumReference, Lesson, taskTypeKind } from "../content/schemas/index.js";
 import { validateContentTree } from "../tools/validate-content.js";
 
 const C = join(process.cwd(), "content");
@@ -33,32 +33,85 @@ describe("D108 — الصيغة الرسمية: أرقام وثائق Goethe ح�
   });
 });
 
-describe("D108 — المدقِّق يقيس كل امتحان تجريبي على صيغة مستواه", () => {
-  const section = (skill: string, minutes: number, counts: number[]) => ({
-    skill, timeBudgetMin: minutes, instructions: { de: "x", ar: "س" },
-    parts: counts.map((n, i) => ({
-      id: `${skill}-${i + 1}`, prompt: { de: "x", ar: "س" },
-      ...(skill === "hoeren" ? { audioScriptRef: "s" } : {}),
-      items: Array.from({ length: n }, () => ({ q: "q", a: "a", ...(skill === "hoeren" ? { audioRefs: ["l"] } : {}) })),
-    })),
-  });
-  const mt = (hoeren: number[], lesen: number[]) => ({
+describe("D108 + D109 — المدقِّق يقيس كل امتحان تجريبي على صيغة مستواه (خطأ لا تحذير منذ D109)", () => {
+  // بنود صالحة للمخطط لكل نوع مهمة — فلا يقيس الاختبار إلا الصيغة (البنود · المهمة · السماع · المدة)
+  const RF = ["Richtig", "Falsch"];
+  const HOEREN_ITEM: Record<string, unknown> = {
+    mc3: { q: "Was trinkt sie?", a: "Wasser", choices: ["Kaffee", "Wasser", "Milch"], audioRefs: ["l"], evidence: "x" },
+    "richtig-falsch": { q: "Sie trinkt Wasser.", a: "Falsch", choices: RF, audioRefs: ["l"], evidence: "x" },
+  };
+  const LESEN: Record<string, { texts: unknown[]; item: unknown }> = {
+    "richtig-falsch": {
+      texts: [{ id: "t", kind: "schild", de: "Montag geschlossen." }],
+      item: { q: "Am Montag ist offen.", a: "Falsch", choices: RF, textRefs: ["t"], evidence: "Montag geschlossen" },
+    },
+    "a-b": {
+      texts: [{ id: "a1", kind: "anzeige", de: "Sonntag offen." }, { id: "b1", kind: "anzeige", de: "Sonntag geschlossen." }],
+      item: { q: "Sie möchten am Sonntag einkaufen.", a: "a", choices: ["a", "b"], textRefs: ["a1", "b1"], evidence: "Sonntag offen" },
+    },
+  };
+  type Spec = { task: string; n: number; plays?: number };
+  const SD1_HOEREN: Spec[] = [{ task: "mc3", n: 6, plays: 2 }, { task: "richtig-falsch", n: 4, plays: 1 }, { task: "mc3", n: 5, plays: 2 }];
+  const SD1_LESEN: Spec[] = [{ task: "richtig-falsch", n: 5 }, { task: "a-b", n: 5 }, { task: "richtig-falsch", n: 5 }];
+  const patch = (specs: Spec[], i: number, p: Partial<Spec>) => specs.map((s, j) => (j === i ? { ...s, ...p } : s));
+  const prompt = { de: "x", ar: "س" };
+  const exam = (hoeren = SD1_HOEREN, lesen = SD1_LESEN, hoerenMinutes = 20) => ({
     path: "modelltest/mt-x.json",
     data: {
       schemaVersion: "1.0.0", id: "mt-x", level: "A1", title: { de: "T", ar: "ت" }, passingScore: 0.6, sourceNote: "s",
-      sections: [section("hoeren", 20, hoeren), section("lesen", 25, lesen), section("schreiben", 20, [5, 1]), section("sprechen", 15, [1, 1, 1])],
+      sections: [
+        { skill: "hoeren", timeBudgetMin: hoerenMinutes, instructions: prompt, parts: hoeren.map((p, i) => ({
+          id: `hoeren-${i + 1}`, prompt, taskType: p.task, playCount: p.plays, audioScriptRef: "s",
+          items: Array.from({ length: p.n }, () => HOEREN_ITEM[p.task]),
+        })) },
+        { skill: "lesen", timeBudgetMin: 25, instructions: prompt, parts: lesen.map((p, i) => ({
+          id: `lesen-${i + 1}`, prompt, taskType: p.task, texts: LESEN[p.task]!.texts,
+          items: Array.from({ length: p.n }, () => LESEN[p.task]!.item),
+        })) },
+        { skill: "schreiben", timeBudgetMin: 20, instructions: prompt, parts: [
+          { id: "schreiben-1", prompt, taskType: "formular", texts: [{ id: "s", kind: "situation", de: "Er heißt Karim." }],
+            items: Array.from({ length: 5 }, () => ({ q: "Vorname:", a: "Karim", textRefs: ["s"], evidence: "Er heißt Karim" })) },
+          { id: "schreiben-2", prompt, taskType: "freies-schreiben", items: [{ q: "q", a: "a" }] },
+        ] },
+        { skill: "sprechen", timeBudgetMin: 15, instructions: prompt, parts: [1, 2, 3].map((i) => ({
+          id: `sprechen-${i}`, prompt, taskType: "freies-sprechen", items: [{ q: "q", a: "a" }],
+        })) },
+      ],
     },
   });
   const fmt = { path: "exam-formats/goethe-a1-sd1.json", data: read("exam-formats/goethe-a1-sd1.json") };
-  const warn = (e: { path: string; data: unknown }[]) => validateContentTree(e).warnings.filter((w) => w.code === "w-modelltest-format");
+  const errs = (e: { path: string; data: unknown }[], code: string) => validateContentTree(e).errors.filter((w) => w.code === code);
+  const formatMsg = (m: ReturnType<typeof exam>) => errs([fmt, m], "e-modelltest-format").map((e) => e.message).join(" | ");
 
-  it("امتحان مطابق للصيغة = لا تحذير", () => {
-    expect(warn([fmt, mt([6, 4, 5], [5, 5, 5])])).toEqual([]);
+  it("امتحان مطابق للصيغة (البنود · المهام · مرات السماع · المدة) = صالح للمخطط ولا خطأ صيغة", () => {
+    expect(errs([fmt, exam()], "e-schema")).toEqual([]);
+    expect(errs([fmt, exam()], "e-modelltest-format")).toEqual([]);
   });
-  it("بنود ناقصة = تحذير يسمّي الجزء والعددين", () => {
-    const w = warn([fmt, mt([4, 3, 2], [5, 5, 5])]);
-    expect(w).toHaveLength(1);
-    expect(w[0]!.message).toContain("الجزء 1: 4 بنود والرسمي 6");
+  it("بنود ناقصة = خطأ واحد يسمّي الجزء والعددين", () => {
+    const e = errs([fmt, exam(patch(SD1_HOEREN, 0, { n: 4 }))], "e-modelltest-format");
+    expect(e).toHaveLength(1);
+    expect(e[0]!.message).toContain("الجزء 1: 4 بنود والرسمي 6");
+  });
+  it("D109: نوع مهمة مخالف · مرات سماع مخالفة · مدة مخالفة = خطأ يسمّي الفرق", () => {
+    expect(formatMsg(exam(patch(SD1_HOEREN, 1, { task: "mc3" })))).toContain("الجزء 2: المهمة mc3 والرسمية richtig-falsch");
+    expect(formatMsg(exam(patch(SD1_HOEREN, 1, { plays: 2 })))).toContain("الجزء 2: السماع 2× والرسمي 1×");
+    expect(formatMsg(exam(SD1_HOEREN, patch(SD1_LESEN, 1, { task: "richtig-falsch" })))).toContain("الجزء 2: المهمة richtig-falsch والرسمية a-b");
+    expect(formatMsg(exam(SD1_HOEREN, SD1_LESEN, 30))).toContain("المدة 30 والرسمية 20 د");
+  });
+});
+
+describe("D109 — نوع المهمة في الصيغة الرسمية = تصنيف عبارتها الألمانية حرفياً", () => {
+  it("كل جزء في الصيغتين: kind يطابق taskTypeKind(taskType)", () => {
+    for (const f of [A1, A2]) for (const s of f.skills) for (const p of s.parts) expect(taskTypeKind(p.taskType), `${f.id}/${s.skill}/${p.part}`).toBe(p.kind);
+    expect(A1.skills.map((s) => s.parts.map((p) => p.kind))).toEqual([
+      ["mc3", "richtig-falsch", "mc3"], ["richtig-falsch", "a-b", "richtig-falsch"], ["formular", "freies-schreiben"],
+      ["freies-sprechen", "freies-sprechen", "freies-sprechen"],
+    ]);
+  });
+  it("kind يناقض العبارة = رفض المخطط", () => {
+    const bad = read("exam-formats/goethe-a1-sd1.json");
+    bad.skills[0].parts[1].kind = "mc3"; // العبارة «Richtig/Falsch»
+    expect(() => ExamFormat.parse(bad)).toThrow(/يناقض عبارة الوثيقة/);
   });
 });
 

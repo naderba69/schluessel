@@ -10,6 +10,8 @@ import {
   Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, ExamFormat, SCHEMA_VERSION,
 } from "../content/schemas/index.js";
 import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
+import { evidenceIn } from "../content/schemas/answer-key.js";
+import { contentTokens, knownStems, unknownTokens } from "./lib/vocab-forms.js";
 import { VOICE_ID, VOICE_ID_FEMALE, PINNED_VOICES, FEMALE_ROLES, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
 
 export interface Issue {
@@ -186,13 +188,8 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
           break;
         }
         case "modelltest": {
-          const t = Modelltest.parse(entry.data); // D95: الامتحان التجريبي الكامل
-          modelltests.push({ path: entry.path, test: t });
-          const skills = t.sections.map((s) => s.skill);
-          for (const need of ["hoeren", "lesen", "schreiben", "sprechen"] as const) {
-            if (!skills.includes(need))
-              push("error", "e-modelltest-skill", entry.path, `مهارة مفقودة من الامتحان: ${need}`);
-          }
+          // D95: الامتحان التجريبي الكامل — المخطط يفرض المهارات الأربع مرة واحدة لكلٍّ (D109)
+          modelltests.push({ path: entry.path, test: Modelltest.parse(entry.data) });
           break;
         }
         case "lese": {
@@ -245,27 +242,31 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         push("error", "e-audio-script-orphan", manifestPath, `مسار سكربت يتيم بلا سطر في أي سكربت: ${t.id}`);
   }
 
-  // ——— D108: الامتحان التجريبي مقابل الصيغة الرسمية لمستواه (المدة · الأجزاء · البنود) ———
+  // ——— D108 + D109: الامتحان التجريبي مقابل الصيغة الرسمية لمستواه ———
+  // المدة · عدد الأجزاء · البنود · نوع المهمة · مرات السماع. كان تحذيراً (D108) لأن امتحاننا خالفها
+  // معلناً؛ صار مطابقاً بنداً بنداً (D109) فأي انحراف لاحق خطأ يمنع الدمج — لا تراجع صامت.
   for (const { path, test } of modelltests) {
     const f = examFormats.get(test.level);
     if (!f) continue;
     for (const official of f.skills) {
       const ours = test.sections.find((x) => x.skill === official.skill);
-      if (!ours) continue; // غياب المهارة يرفضه e-modelltest-skill
+      if (!ours) continue; // غياب المهارة يرفضه المخطط
       const diffs: string[] = [];
       if (ours.timeBudgetMin !== official.minutes) diffs.push(`المدة ${ours.timeBudgetMin} والرسمية ${official.minutes} د`);
       if (ours.parts.length !== official.parts.length) diffs.push(`الأجزاء ${ours.parts.length} والرسمية ${official.parts.length}`);
       else
         official.parts.forEach((op, i) => {
-          if (op.items && ours.parts[i]!.items.length !== op.items)
-            diffs.push(`الجزء ${op.part}: ${ours.parts[i]!.items.length} بنود والرسمي ${op.items}`);
+          const p = ours.parts[i]!;
+          if (op.items && p.items.length !== op.items) diffs.push(`الجزء ${op.part}: ${p.items.length} بنود والرسمي ${op.items}`);
+          if (p.taskType !== op.kind) diffs.push(`الجزء ${op.part}: المهمة ${p.taskType} والرسمية ${op.kind}`);
+          if (op.playCount && p.playCount !== op.playCount) diffs.push(`الجزء ${op.part}: السماع ${p.playCount ?? "—"}× والرسمي ${op.playCount}×`);
         });
       if (diffs.length)
-        push("warning", "w-modelltest-format", path, `${official.skill} لا يطابق «${f.exam}»: ${diffs.join(" · ")}`);
+        push("error", "e-modelltest-format", path, `${official.skill} لا يطابق «${f.exam}»: ${diffs.join(" · ")}`);
     }
   }
 
-  // ——— D103: لا سؤال استماع بلا صوت حقيقي يحمل جوابه ———
+  // ——— D103 + D109: لا سؤال استماع بلا صوت حقيقي يحمل جوابه ودليله ———
   for (const { path, test } of modelltests) {
     for (const section of test.sections.filter((s) => s.skill === "hoeren")) {
       for (const part of section.parts) {
@@ -285,13 +286,62 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
             if (!l) push("error", "e-hoeren-audio", path, `${part.id}#${i + 1}: المقطع ${a} ليس من أسطر ${ref}`);
             else heard.push(l.text);
           }
-          const sup = answerSupported(item.a, heard.join(" "));
-          if (heard.length > 0 && !sup.ok)
+          if (heard.length === 0) continue;
+          const transcript = heard.join(" ");
+          // D109: الدليل منطوق حرفياً في مقاطع البند نفسه (لا في مقطع آخر)
+          if (item.evidence && !evidenceIn(item.evidence, transcript))
+            push("error", "e-hoeren-evidence", path, `${part.id}#${i + 1}: الدليل «${item.evidence}» غير منطوق في مقاطعه`);
+          // Richtig/Falsch: الجواب حكم على عبارة لا كلمة تُسمع — الدليل وحده يحسمه
+          if (part.taskType === "richtig-falsch") continue;
+          const sup = answerSupported(item.a, transcript);
+          if (!sup.ok)
             push("error", "e-hoeren-answer", path, `${part.id}#${i + 1}: الجواب «${item.a}» غير مسموع في المقاطع (ينقص: ${sup.missing.join("، ")})`);
-          if (item.choices && !item.choices.includes(item.a))
-            push("error", "e-hoeren-answer", path, `${part.id}#${i + 1}: الجواب «${item.a}» ليس بين الخيارات`);
         }
       }
+    }
+  }
+
+  // ——— D109: توازن مفتاح الإجابة — جزء كل أجوبته «Richtig» أو كلها الخيار نفسه يُحل بالتخمين ———
+  for (const { path, test } of modelltests) {
+    for (const section of test.sections) {
+      for (const part of section.parts) {
+        if (!["mc3", "richtig-falsch", "a-b"].includes(part.taskType) || part.items.length < 3) continue;
+        const keys = part.items.map((it) => (part.taskType === "mc3" ? String(it.choices?.indexOf(it.a)) : it.a));
+        if (new Set(keys).size === 1)
+          push("warning", "w-modelltest-balance", path, `${part.id}: كل الأجوبة ${part.taskType === "mc3" ? `في الموضع ${Number(keys[0]) + 1}` : `«${keys[0]}»`} — مفتاح يُخمَّن`);
+      }
+    }
+  }
+
+  // ——— D109: قفل المفردات في الامتحان (قانون الجبهة 13) ———
+  // كل نص يراه/يسمعه المتعلم (النصوص · الصوت · الأسئلة · الخيارات · نماذج الإجابة) من مفردات مستواه وما قبله
+  // فقط؛ التعليمات خارج القفل لأنها ثنائية اللغة. أسماء العلم تُستثنى بإعلانها في properNouns فقط.
+  if (words.size > 0) {
+    const order: Record<string, number> = { A1: 0, A2: 1, B1: 2, B2: 3 };
+    for (const { path, test } of modelltests) {
+      const stems = knownStems([...words.values()].map((w) => w.word).filter((w) => order[w.level]! <= order[test.level]!));
+      const allow = new Set(test.properNouns.flatMap((n) => contentTokens(n)));
+      const seen = new Set<string>();
+      for (const section of test.sections) {
+        for (const part of section.parts) {
+          const shown: string[] = [];
+          if (part.audioScriptRef) for (const l of scripts.get(part.audioScriptRef)?.script.lines ?? []) shown.push(l.text);
+          for (const t of part.texts ?? []) shown.push(t.title ?? "", t.de);
+          for (const it of part.items) {
+            shown.push(it.q, ...(it.choices ?? []));
+            if (section.skill === "schreiben" || section.skill === "sprechen") shown.push(it.a);
+          }
+          const text = shown.join("\n");
+          for (const t of contentTokens(text)) seen.add(t);
+          const unknown = unknownTokens(text, stems, allow);
+          if (unknown.length)
+            push("error", "e-modelltest-vocab", path, `${part.id}: مفردات غير مدروسة حتى ${test.level} (قانون الجبهة 13): ${unknown.join("، ")}`);
+        }
+      }
+      // اسم علم مُعلن ولا يظهر في الامتحان = استثناء بلا سبب (باب خلفي لتمرير كلمة غير مدروسة)
+      for (const n of test.properNouns)
+        if (!contentTokens(n).every((t) => seen.has(t)))
+          push("warning", "w-modelltest-proper-noun", path, `اسم علم مُعلن لا يظهر في نصوص الامتحان: ${n}`);
     }
   }
 
