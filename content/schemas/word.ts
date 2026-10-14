@@ -73,7 +73,7 @@ export const Word = SchemaVersioned.extend({
     })
     .optional(),
   level: Level,
-  unit: UnitNumber, // وحدة أول تقديم (A1: 13–16 = تكملة SD1 — D112)
+  unit: UnitNumber, // وحدة أول تقديم (A1: 13–14 = تكملة SD1 للفهم — D113)
   /** وسم قائمة Goethe الرسمية */
   goetheList: z.array(Level).default([]),
   thema: z.string(),

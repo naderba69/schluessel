@@ -1,5 +1,6 @@
-// content/schemas/curriculum-plan.ts — خطة توزيع منهجية مُلزِمة (D112)
-// قرار المالك (D112): الكلمات الرسمية التي لم يعلّمها المنهج تُعلَّم كلها في وحدات تكميلية قبل أسبوع الامتحان.
+// content/schemas/curriculum-plan.ts — خطة توزيع منهجية مُلزِمة (D112 → D113)
+// قرار المالك (D113 — الخيار ج): النواة (شائعة جداً أو يعرضها المنهج قبل تعليمها) تُعلَّم مبكراً داخل دروس قائمة (core)،
+// والباقي فهماً سلبياً في وحدات تكميلية قصيرة قبل أسبوع الامتحان (supplementMode: receptive).
 // الخطة تربط كل كلمة رئيسية رسمية (كما طُبعت في الفهرس حرفياً) بدرس بعينه — فلا تُنسى كلمة ولا تتكرر،
 // والمدقِّق يفرض أن الدرس حين يُنتَج يعلّم كلماته المخططة فعلاً (tools/lib/curriculum-plan.ts).
 // هنا الثوابت البنيوية وحدها (لا تحتاج محتوى): معرّفات الدروس · تتابع الوحدات · مكان أسبوع الامتحان · الأحجام · لا تكرار.
@@ -26,6 +27,23 @@ export const PlanUnit = z.object({
 });
 export type PlanUnit = z.infer<typeof PlanUnit>;
 
+/** إسناد كلمات نواة إلى درس محتوى قائم (D113) — pending حتى يُنتَج، done حين يعلّمها الدرس فعلاً (المدقِّق يتحقق) */
+export const CoreLesson = z.object({
+  lessonId: Slug,
+  headwords: z.array(z.string().min(1)).min(1),
+  status: z.enum(["pending", "done"]),
+});
+export type CoreLesson = z.infer<typeof CoreLesson>;
+
+/** ظهور كلمة قبل تعليمها يُعالَج بإعادة صياغة النص لا بتقديم الكلمة (D113) — المسار نسبي عن content/ */
+export const TextFix = z.object({
+  headword: z.string().min(1),
+  source: z.string().regex(/^[a-z0-9-]+\/[a-z0-9/-]+\.json$/),
+  reason: z.string().min(1),
+  status: z.enum(["pending", "done"]),
+});
+export type TextFix = z.infer<typeof TextFix>;
+
 export const CurriculumPlan = SchemaVersioned.extend({
   id: Slug,
   level: Level,
@@ -34,6 +52,12 @@ export const CurriculumPlan = SchemaVersioned.extend({
   title: Theme,
   /** معرّف الفهرس الرسمي (content/wordlists/<id>.json) */
   sourceList: Slug,
+  /** أساس القرار موثَّقاً (التقرير + المعايير) — نصوص للقارئ لا تُنفَّذ */
+  method: z.record(z.string(), z.string()).optional(),
+  /** النواة داخل الدروس القائمة (D113) */
+  core: z.object({ lessons: z.array(CoreLesson).min(1), textFixes: z.array(TextFix).default([]) }).optional(),
+  /** نمط الوحدات التكميلية: productive (تعليم كامل — D112) أو receptive (فهم سلبي — D113) */
+  supplementMode: z.enum(["productive", "receptive"]).default("productive"),
   headwordsPerLesson: z.object({ min: z.number().int().min(1), max: z.number().int().min(1) }),
   placement: z.object({
     /** آخر وحدة قبل التكملة */
@@ -64,17 +88,31 @@ export const CurriculumPlan = SchemaVersioned.extend({
   if (last && p.placement.examWeekUnit !== last.unit + 1)
     issue(`أسبوع الامتحان يلي آخر وحدة تكميلية: المتوقع ${last.unit + 1} لا ${p.placement.examWeekUnit}`, ["placement", "examWeekUnit"]);
   const seen = new Map<string, string>();
-  for (const u of p.units) for (const l of u.contentLessons) for (const h of l.headwords) {
+  const note = (h: string, where: string) => {
     const prev = seen.get(h);
-    if (prev) issue(`«${h}» مخططة مرتين (${prev} و${l.lessonId})`, ["units"]);
-    else seen.set(h, l.lessonId);
-  }
+    if (prev) issue(`«${h}» مخططة مرتين (${prev} و${where})`, ["units"]);
+    else seen.set(h, where);
+  };
+  const coreIds = new Set<string>();
+  p.core?.lessons.forEach((c, i) => {
+    const m = c.lessonId.match(new RegExp(`^${lv}-u(\\d+)-d(\\d+)$`));
+    if (!m) issue(`معرّف درس النواة ${c.lessonId} لا يتبع ${lv}-u{n}-d{i}`, ["core", "lessons", i, "lessonId"]);
+    else if (Number(m[1]) > p.placement.afterUnit) issue(`النواة تُسنَد إلى دروس قائمة حتى الوحدة ${p.placement.afterUnit}: ${c.lessonId}`, ["core", "lessons", i, "lessonId"]);
+    if (coreIds.has(c.lessonId)) issue(`درس نواة مكرر: ${c.lessonId}`, ["core", "lessons", i]);
+    coreIds.add(c.lessonId);
+    for (const h of c.headwords) note(h, c.lessonId);
+  });
+  for (const u of p.units) for (const l of u.contentLessons) for (const h of l.headwords) note(h, l.lessonId);
+  p.core?.textFixes.forEach((t, i) => {
+    if (!seen.has(t.headword)) issue(`إصلاح نص لكلمة غير مخططة: «${t.headword}»`, ["core", "textFixes", i, "headword"]);
+  });
 });
 export type CurriculumPlan = z.infer<typeof CurriculumPlan>;
 
-/** كل الكلمات المخططة ← درسها */
+/** كل الكلمات المخططة (النواة + التكملة) ← درسها */
 export function plannedHeadwords(p: CurriculumPlan): Map<string, string> {
   const m = new Map<string, string>();
+  for (const c of p.core?.lessons ?? []) for (const h of c.headwords) m.set(h, c.lessonId);
   for (const u of p.units) for (const l of u.contentLessons) for (const h of l.headwords) m.set(h, l.lessonId);
   return m;
 }

@@ -459,6 +459,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
       words: [...words.values()].map((w) => w.word),
       lessons: [...lessons.values()].map((l) => l.lesson),
       lists: [...wordlists.values()],
+      paths: new Set(entries.map((e) => e.path)), // D113: ملفات textFixes موجودة
     };
     for (const { path, plan } of plans)
       for (const i of checkPlan(plan, ctx)) push(i.level, i.code, path, i.message);

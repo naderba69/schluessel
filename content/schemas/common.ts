@@ -15,10 +15,11 @@ export type Level = z.infer<typeof Level>;
 
 /**
  * أعلى رقم وحدة في أي مستوى — مصدر واحد للحقيقة (القانون 30) بدل أرقام مبعثرة في المخططات (D112).
- * A1: الوحدات 1–12 خطة study-plan v6.1 · 13–16 تكملة Start Deutsch 1 (D112 — content/plans/a1-sd1-supplement.json)
- * · 17 أسبوع التثبيت والامتحان (D92، كان 13 قبل D112). اختبارٌ يربطه بـplacement.examWeekUnit في الخطة فلا ينحرفان.
+ * A1: الوحدات 1–12 خطة study-plan v6.1 (+ نواة SD1 داخلها — D113) · 13–14 تكملة Start Deutsch 1 للفهم
+ * (D113 — content/plans/a1-sd1-supplement.json) · 15 أسبوع التثبيت والامتحان (D92: 13 ← D112: 17 ← D113: 15).
+ * اختبارٌ يربطه بـplacement.examWeekUnit في الخطة فلا ينحرفان.
  */
-export const UNIT_MAX = 17;
+export const UNIT_MAX = 15;
 export const UnitNumber = z.number().int().min(1).max(UNIT_MAX);
 
 /** مرجع مستوى/وحدة */
