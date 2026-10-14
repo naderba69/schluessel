@@ -429,10 +429,6 @@
 
 - **u12-d1** (12 كلمة Reise): Ziel · Hotel (**Hotels** -s مستعار) · Reservierung · Fahrt · **abfahren (trennbar — fährt ab)** · besichtigen · **Sehenswürdigkeit (Sehenswürdigkeiten)** · Ausland (ins Ausland) · **Pass (Pässe)** · **Visum (Visa)** · Ausflug (Ausflüge) · Tourist (Touristen n-dekl). مراجعة: reisen/zug/urlaub.
 - **قواعد d1**: **الفعل المنفصل: البادئة ab آخر الجملة** (fährt um 8 ab) — القلنسوة الثالثة · الوجهة **ins** ↔ المكان **im** (Wechselpräp يعود) · ثلاثة أنماط جمع في ثلاث وثائق (Pässe/Visa/Hotels).
-### D98 — صوت امرأة (kerstin): البنية جاهزة، الملف يُنزَّل مالكياً
-### D99 — تقارير التقدم (E18/F159/F160): طبقة التقارير فوق progress-engine
-**القرار**: `src/lib/progress-report.ts` — تقرير أسبوعي («أيامك مع مولر» لا «سلسلة» — F157) + تقرير شهري بمعايرة تقدير الذات (F160: تقديرك مقابل نتيجتك الحقيقية — فروق ≤5% «دقيق» / ≤15% «قريب» / أكبر «طبيعي والمعايرة تُضبط» — بلا لوم) + سطر الخريطة (§2.8: أين أنت + خطوتك التالية). **الحديد**: أرقام حقيقية فقط (E18 — تقرير العدم بلا رقم واحد) · كل نص يمر على BLAME_WORDS قبل الخروج (حارس D23 يخترق الخطأ إن تسرب لوم) · بلا بيانات = بصراحة لا اختراع. 17 اختباراً جديداً (265 كلها). 2026-10-12. #A2
-**القرار**: صوتان للحوار: `de_DE-thorsten-medium` (الراوي والدروس) + `de_DE-kerstin-low` (المرأة: nina/ayse/frau-berg/frau-schmidt/aisha/lena + أدوار character/guest/dialogue). الترخيص **MIT** (موثّق من spec باكيج OpenMandriva لـ rhasspy piper-voices). **البنية كلها مبنية ومجربة**: `PINNED_VOICES` + `VOICE_ID_FEMALE` في audio.ts · قاعدتا validator (e-audio-voice-drift/e-audio-voice-role) · gen-audio.py يوجّه الأصوات تلقائياً بلفّة fallback آمنة للصوت الرئيسي إن غاب ملف kerstin. **ملف kerstin غير قابل للتنزيل من الـsandbox** (huggingface محجوب — النسخة على GitHub مجرد مؤشر LFS): الملفان (onnx ~16.8MB + json) يُنزَّلان عبر Termux بنمط thorsten إلى `tools/piper-voices/de_DE-kerstin-low.onnx` + `.json` — **ويعمل فوراً بلا أي كود إضافي**. 2026-10-12. #A2
 - البوابة: **243/243 + tsc + validator (765/0/0) + build** ✓. **694 كلمة · 67 درساً · 695 مساراً.**
 
 ## D87 (2026-10-12): u12-d2 (المحطة والفندق — الأسئلة)
@@ -513,6 +509,15 @@
 - **حدود الصدق**: النصوص أصلية مكتوبة للخطة (لا اقتباسات خارجية) · sourceNote في كل نص.
 - البوابة: **248/248 + tsc + validator (858/0/0) + build** ✓.
 - **قائمة «الكل»**: ✅1 ثقافة ✅2 اختبارات ✅3 Modelltest ✅4 صور (12/12) ✅5 قراءة (12 نصاً) · 6) صوت امرأة · 7) تقرير التقدم · 8) A2.
+
+## D98 (2026-10-12): صوت امرأة (kerstin): البنية جاهزة، الملف يُنزَّل مالكياً
+
+**القرار**: صوتان للحوار: `de_DE-thorsten-medium` (الراوي والدروس) + `de_DE-kerstin-low` (المرأة: nina/ayse/frau-berg/frau-schmidt/aisha/lena + أدوار character/guest/dialogue). الترخيص **MIT** (موثّق من spec باكيج OpenMandriva لـ rhasspy piper-voices). **البنية كلها مبنية ومجربة**: `PINNED_VOICES` + `VOICE_ID_FEMALE` في audio.ts · قاعدتا validator (e-audio-voice-drift/e-audio-voice-role) · gen-audio.py يوجّه الأصوات تلقائياً بلفّة fallback آمنة للصوت الرئيسي إن غاب ملف kerstin. **ملف kerstin غير قابل للتنزيل من الـsandbox** (huggingface محجوب — النسخة على GitHub مجرد مؤشر LFS): الملفان (onnx ~16.8MB + json) يُنزَّلان عبر Termux بنمط thorsten إلى `tools/piper-voices/de_DE-kerstin-low.onnx` + `.json` — **ويعمل فوراً بلا أي كود إضافي**. 2026-10-12. #A2
+- **تصحيح لاحق (D100):** قاعدتا المدقِّق وتوجيه gen-audio لم تكونا منفَّذتين في هذه الدفعة، وحجم الملف الحقيقي 63,104,526 بايت لا ~16.8MB — انظر D100.
+
+## D99 (2026-10-12): تقارير التقدم (E18/F159/F160): طبقة التقارير فوق progress-engine
+
+**القرار**: `src/lib/progress-report.ts` — تقرير أسبوعي («أيامك مع مولر» لا «سلسلة» — F157) + تقرير شهري بمعايرة تقدير الذات (F160: تقديرك مقابل نتيجتك الحقيقية — فروق ≤5% «دقيق» / ≤15% «قريب» / أكبر «طبيعي والمعايرة تُضبط» — بلا لوم) + سطر الخريطة (§2.8: أين أنت + خطوتك التالية). **الحديد**: أرقام حقيقية فقط (E18 — تقرير العدم بلا رقم واحد) · كل نص يمر على BLAME_WORDS قبل الخروج (حارس D23 يخترق الخطأ إن تسرب لوم) · بلا بيانات = بصراحة لا اختراع. 17 اختباراً جديداً (265 كلها). 2026-10-12. #A2
 
 ## D100 (2026-10-14): صوت المرأة — تصحيح صادق لـD98 (ما ادُّعي صار حقيقياً) + إصلاح سكربت المالك
 
