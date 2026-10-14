@@ -7,11 +7,12 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
-  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, ExamFormat, SCHEMA_VERSION,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, ExamFormat, OfficialWordlist, SCHEMA_VERSION,
 } from "../content/schemas/index.js";
 import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
 import { evidenceIn } from "../content/schemas/answer-key.js";
 import { contentTokens, knownStems, unknownTokens } from "./lib/vocab-forms.js";
+import { deriveGoetheList, describeEvidence, evidenceFor, indexWordlists, sameLevels } from "./lib/goethe-lists.js";
 import { VOICE_ID, VOICE_ID_FEMALE, PINNED_VOICES, FEMALE_ROLES, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
 
 export interface Issue {
@@ -42,7 +43,7 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
 
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "lese" | "audio-script" | "exam-format" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "lese" | "audio-script" | "exam-format" | "wordlist" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -57,6 +58,7 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("lese/")) return "lese";
   if (p.startsWith("audio-scripts/")) return "audio-script";
   if (p.startsWith("exam-formats/")) return "exam-format";
+  if (p.startsWith("wordlists/")) return "wordlist";
   return "unknown";
 }
 
@@ -77,6 +79,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
   const scripts = new Map<string, { path: string; script: AudioScript }>();
   const modelltests: { path: string; test: Modelltest }[] = [];
   const examFormats = new Map<string, ExamFormat>(); // D108: الصيغة الرسمية لكل مستوى
+  const wordlists = new Map<string, OfficialWordlist>(); // D110: فهارس قوائم Goethe الرسمية
   let curriculum: CurriculumReference | null = null;
 
   for (const entry of entries) {
@@ -210,6 +213,12 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
           const f = ExamFormat.parse(entry.data); // D108: الصيغة الرسمية (وثائق Goethe المجانية)
           if (examFormats.has(f.level)) push("error", "e-exam-format-dup", entry.path, `صيغتان رسميتان للمستوى ${f.level}`);
           examFormats.set(f.level, f);
+          break;
+        }
+        case "wordlist": {
+          const l = OfficialWordlist.parse(entry.data); // D110: الكلمات الرئيسية فقط — لا جمل أمثلة
+          if (wordlists.has(l.id)) push("error", "e-wordlist-dup", entry.path, `فهرس مكرر: ${l.id}`);
+          wordlists.set(l.id, l);
           break;
         }
         case "audio-script": {
@@ -421,6 +430,19 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
     }
     bucket.total += Math.max(1, word.srsCardTypes.length);
   }
+  // ——— D110: goetheList دليلٌ لا رأي — تساوي بالضبط ما تثبته القوائم الرسمية ———
+  // (مُعطَّل فقط حين لا فهارس في الشجرة — أشجار الاختبار الجزئية؛ المحتوى الحقيقي يحمل الثلاثة
+  // ويفرض اختبارٌ وجودها). وسمٌ بلا دليل خطأ، ودليلٌ بلا وسم خطأ: المولِّد يملؤها آلياً.
+  if (wordlists.size > 0) {
+    const ixs = indexWordlists([...wordlists.values()]);
+    for (const [wordId, { path, word }] of words) {
+      const derived = deriveGoetheList(word, ixs);
+      if (!sameLevels(word.goetheList, derived))
+        push("error", "e-goethe-list", path,
+          `goetheList لـ${wordId} = ${JSON.stringify(word.goetheList)} والدليل = ${JSON.stringify(derived)} — ${describeEvidence(evidenceFor(word, ixs))} (أصلحها: npx tsx tools/goethe-audit.ts --apply)`);
+    }
+  }
+
   for (const [level, b] of Object.entries(perLevelCards)) {
     const target = SRS_TARGETS[level];
     if (!target || b.total === 0) continue;

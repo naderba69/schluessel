@@ -16,6 +16,8 @@ import {
   slugify, nounGender, lemmaOf, detectPhoneticRisks, detectGrammarRisks, cardTypesFor,
   isFunctionWord, clipText, srsDistance, reannotate, citationForm,
 } from "./lib/word-entry.js";
+import { loadWordlists } from "./lib/content-disk.js";
+import { deriveGoetheList, describeEvidence, evidenceFor, indexWordlists, sameLevels } from "./lib/goethe-lists.js";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -35,7 +37,8 @@ export const WordSpec = z.object({
   plural: z.string().optional(),
   pluralRuleNote: z.string().optional(),
   forms: Word.shape.forms,
-  goetheList: z.array(Level).default([]),
+  /** D110: يُشتق آلياً من فهارس Goethe الرسمية (content/wordlists) — إن كُتب فيجب أن يطابق الدليل */
+  goetheList: z.array(Level).optional(),
   /** إضافات يدوية تحتاج معنى (feste-praep, dative-verb, needs-es-dummy…) — تُدمج مع المستنتج */
   grammarRisks: RiskList.optional(),
   phoneticRisks: PhonList.optional(),
@@ -80,7 +83,7 @@ export function planWord(spec: WordSpec, ipa: string): Planned {
     sampleSentence: { de: spec.sample.de, ar: spec.sample.ar, sourceLesson: spec.lesson },
     level: spec.level,
     unit: spec.unit,
-    goetheList: spec.goetheList,
+    goetheList: spec.goetheList ?? [],
     thema: spec.thema,
     isFunctionWord: isFunctionWord(spec.wordClass, spec.functionWord),
     usedInLessons: [spec.lesson],
@@ -108,6 +111,19 @@ export function runGenerator(opts: {
   });
   const ipas = (opts.phonemize ?? phonemizeAll)(specs.map((s) => lemmaOf(s.de)));
   const planned = specs.map((s, i) => planWord(s, ipas[i]!));
+
+  // D110: goetheList من الدليل لا من الإنسان — المواصفة التي تكتبها تُقارَن بالدليل وتُرفض إن خالفته
+  const lists = loadWordlists(content);
+  if (lists.length > 0) {
+    const ixs = indexWordlists(lists);
+    for (const [i, p] of planned.entries()) {
+      const derived = deriveGoetheList(p.word, ixs);
+      const given = specs[i]!.goetheList;
+      if (given && !sameLevels(given, derived))
+        throw new Error(`goetheList للمواصفة ${i + 1} («${specs[i]!.de}») = ${JSON.stringify(given)} والدليل = ${JSON.stringify(derived)} — ${describeEvidence(evidenceFor(p.word, ixs))}. احذف الحقل: يُشتق آلياً (D110)`);
+      p.word = Word.parse({ ...p.word, goetheList: derived });
+    }
+  }
 
   // لا تكرار داخل الدفعة ولا كتابة فوق كلمة موجودة
   const seen = new Set<string>();
