@@ -15,3 +15,4 @@ export * from "./audio-script.js";
 export * from "./exam-format.js";
 export * from "./answer-key.js";
 export * from "./wordlist.js";
+export * from "./curriculum-plan.js";

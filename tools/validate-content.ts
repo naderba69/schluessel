@@ -7,12 +7,13 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
-  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, ExamFormat, OfficialWordlist, SCHEMA_VERSION,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
 } from "../content/schemas/index.js";
 import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
 import { evidenceIn } from "../content/schemas/answer-key.js";
 import { contentTokens, knownStems, unknownTokens } from "./lib/vocab-forms.js";
 import { deriveGoetheList, describeEvidence, evidenceFor, indexWordlists, sameLevels } from "./lib/goethe-lists.js";
+import { checkPlan } from "./lib/curriculum-plan.js";
 import { VOICE_ID, VOICE_ID_FEMALE, PINNED_VOICES, FEMALE_ROLES, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
 
 export interface Issue {
@@ -43,7 +44,7 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
 
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "lese" | "audio-script" | "exam-format" | "wordlist" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "lese" | "audio-script" | "exam-format" | "wordlist" | "plan" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -59,6 +60,7 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("audio-scripts/")) return "audio-script";
   if (p.startsWith("exam-formats/")) return "exam-format";
   if (p.startsWith("wordlists/")) return "wordlist";
+  if (p.startsWith("plans/")) return "plan";
   return "unknown";
 }
 
@@ -80,6 +82,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
   const modelltests: { path: string; test: Modelltest }[] = [];
   const examFormats = new Map<string, ExamFormat>(); // D108: الصيغة الرسمية لكل مستوى
   const wordlists = new Map<string, OfficialWordlist>(); // D110: فهارس قوائم Goethe الرسمية
+  const plans: { path: string; plan: CurriculumPlan }[] = []; // D112: خطط التوزيع المنهجية المُلزِمة
   let curriculum: CurriculumReference | null = null;
 
   for (const entry of entries) {
@@ -219,6 +222,12 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
           const l = OfficialWordlist.parse(entry.data); // D110: الكلمات الرئيسية فقط — لا جمل أمثلة
           if (wordlists.has(l.id)) push("error", "e-wordlist-dup", entry.path, `فهرس مكرر: ${l.id}`);
           wordlists.set(l.id, l);
+          break;
+        }
+        case "plan": {
+          const pl = CurriculumPlan.parse(entry.data); // D112: البنية (المعرّفات · التتابع · الأحجام · لا تكرار)
+          if (plans.some((x) => x.plan.id === pl.id)) push("error", "e-plan-dup", entry.path, `خطة مكررة: ${pl.id}`);
+          plans.push({ path: entry.path, plan: pl });
           break;
         }
         case "audio-script": {
@@ -441,6 +450,18 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         push("error", "e-goethe-list", path,
           `goetheList لـ${wordId} = ${JSON.stringify(word.goetheList)} والدليل = ${JSON.stringify(derived)} — ${describeEvidence(evidenceFor(word, ixs))} (أصلحها: npx tsx tools/goethe-audit.ts --apply)`);
     }
+  }
+
+  // ——— D112: خطة التوزيع المُلزِمة — كل كلمة رسمية غير مُعلَّمة مخططة · الدرس المنتَج يعلّم كلماته ———
+  // (تحتاج الفهارس — أشجار الاختبار الجزئية بلا فهارس ولا خطط)
+  if (wordlists.size > 0) {
+    const ctx = {
+      words: [...words.values()].map((w) => w.word),
+      lessons: [...lessons.values()].map((l) => l.lesson),
+      lists: [...wordlists.values()],
+    };
+    for (const { path, plan } of plans)
+      for (const i of checkPlan(plan, ctx)) push(i.level, i.code, path, i.message);
   }
 
   for (const [level, b] of Object.entries(perLevelCards)) {

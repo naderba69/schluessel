@@ -330,6 +330,22 @@ export function evidenceFor(w: WordLike, ixs: ListIndex[]): Evidence[] {
   return ixs.map((ix) => evidenceIn(w, ix)).filter((e): e is Evidence => e !== null);
 }
 
+/**
+ * D112: الكلمات الرئيسية (بنصها المطبوع) التي تثبتها مجموعة كلمات في فهرس واحد — بمنطق التدقيق نفسه
+ * (Herkunft فئة مفتوحة لا كلمة رئيسية · القطعة تثبت كل أجزائها). المفتاح النص لا الصفحة: «an sein» مطبوعة
+ * مرتين في SD1 (ص10 تحت an · ص23 تحت sein) وevidenceIn يعيد مدخلاً واحداً — والكلمة الواحدة تغطي الاثنين.
+ */
+export function coveredHeadwords(words: WordLike[], ix: ListIndex): Set<string> {
+  const out = new Set<string>();
+  for (const w of words) {
+    const e = evidenceIn(w, ix);
+    if (!e || e.kind === "herkunft") continue;
+    out.add(e.headword);
+    if (e.kind === "composed" && e.via) for (const h of e.via.split(" + ")) out.add(h);
+  }
+  return out;
+}
+
 export function levelsOf(evs: Evidence[]): Level[] {
   const s = new Set(evs.map((e) => e.level));
   return LEVEL_ORDER.filter((l) => s.has(l));

@@ -1,6 +1,6 @@
 // learner-state.ts — حالة المتعلم (Dexie/IndexedDB) | قانون 32 + §14 + التيليمتري (§17)
 import { z } from "zod";
-import { Level, SchemaVersioned, Slug } from "./common.js";
+import { Level, SchemaVersioned, Slug, UnitNumber } from "./common.js";
 import { SrsCardState } from "./card.js";
 
 /** جرعة اليوم (study-plan §3‑ب) */
@@ -92,7 +92,8 @@ export const LearnerProgress = SchemaVersioned.extend({
   availableLessons: z.array(z.string()).default([]),
   lockedLessons: z.array(z.string()).default([]),
   gateResults: z.array(GateResult).default([]),
-  currentUnit: z.object({ level: Level, unit: z.number().int().min(1).max(12) }),
+  /** D112: كان max(12) فلم يكن ممكناً تمثيل متعلم في أسبوع الامتحان (الوحدة 13 آنذاك) — عيب كامن أُصلح */
+  currentUnit: z.object({ level: Level, unit: UnitNumber }),
   /** نتيجة Niveauprüfung لكل مستوى */
   levelExams: z.record(z.string(), z.array(GateResult)).default({}),
 });

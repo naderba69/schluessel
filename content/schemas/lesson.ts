@@ -1,6 +1,6 @@
 // lesson.ts — مخطط الدرس | تشريح الدرس الثابت (§3) + الأهداف اليومية (study-plan v6.1)
 import { z } from "zod";
-import { ArText, DeText, Level, SchemaVersioned, Slug } from "./common.js";
+import { ArText, DeText, Level, SchemaVersioned, Slug, UnitNumber } from "./common.js";
 
 /** أنواع محطات Übung (§3 — 3–4 محطات + مهمة تواصلية ختامية) */
 export const StationType = z.enum([
@@ -51,7 +51,7 @@ export const WarningCard = z.object({
 export const Lesson = SchemaVersioned.extend({
   id: Slug, // مثال: a1-u3-d2
   level: Level,
-  unit: z.number().int().min(1).max(13), // D92: الوحدة 13 = أسبوع التثبيت والامتحان
+  unit: UnitNumber, // A1: 1–12 الخطة · 13–16 تكملة SD1 (D112) · 17 أسبوع التثبيت والامتحان (D92 → D112)
   day: z.number().int().min(1).max(8), // D1..D7 (+D8 للأسبوع المرن)
   kind: z.enum(["content", "integration"]).default("content"), // D6 = integration (درس التوليف)
   /** 1. Ziel — هدف سلوكي قابل للقياس بصوت المعلم */

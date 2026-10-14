@@ -1,6 +1,6 @@
 // card.ts — مخطط البطاقة (قالب المحتوى) | §4 — أنواع البطاقات ونسبها v6.1
 import { z } from "zod";
-import { ArText, DeText, Level, SchemaVersioned, Slug } from "./common.js";
+import { ArText, DeText, Level, SchemaVersioned, Slug, UnitNumber } from "./common.js";
 
 /**
  * أنواع البطاقات (§4):
@@ -37,7 +37,7 @@ export const CardTemplate = SchemaVersioned.extend({
   sourceWordIds: z.array(Slug).default([]),
   sourceArsenalIds: z.array(z.string()).default([]),
   level: Level,
-  unit: z.number().int().min(1).max(12),
+  unit: UnitNumber,
   lessonId: z.string().optional(),
   hints: ThreeHints.optional(),
   /** تفسير الخطأ الشائع المتوقع (من 10‑ي) — يُعرض في التصحيح الفوري */

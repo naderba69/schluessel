@@ -1,7 +1,7 @@
 // word.ts — مخطط الكلمة | §10.7 + إضافات v6.1 (Kollokationen/Chunks/أعلام الخطر 10‑ي و10.1)
 import { z } from "zod";
 import {
-  ArText, CefrTag, DeText, Gender, Level, SchemaVersioned, Slug, UsedInLessons,
+  ArText, CefrTag, DeText, Gender, Level, SchemaVersioned, Slug, UnitNumber, UsedInLessons,
 } from "./common.js";
 
 /** أعلام الخطر الصوتي (مقابل خريطة 10.1) */
@@ -73,7 +73,7 @@ export const Word = SchemaVersioned.extend({
     })
     .optional(),
   level: Level,
-  unit: z.number().int().min(1).max(12),
+  unit: UnitNumber, // وحدة أول تقديم (A1: 13–16 = تكملة SD1 — D112)
   /** وسم قائمة Goethe الرسمية */
   goetheList: z.array(Level).default([]),
   thema: z.string(),
