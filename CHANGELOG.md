@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-10-14 — الدفعة 71: a1-u1-d1 مُرقّى نموذجاً مرجعياً (D116)
+- **إضافة**: `content/arsenal/grammar/ars-sein.json` (أول قاعدة يوم في المحتوى) · كلمتا النواة `neu` و`wie-viel` (+ مقطعان صوتيان · 793 مساراً · 757 كلمة).
+- **تغيير معلن (القانون 7)**: a1-u1-d1 — 14 بند تطبيق بـ«لماذا» (فراغ · استماع · ترتيب · إملاء) بدل 5 · Quiz 3×6 بدل 3×3 · ars-sein-haben ← ars-sein · الملخص بلا heute · تمرين مصيدة بلا hier · أمثلة 4 بطاقات (guten-tag · danke · bitte · deutsch).
+- **إضافة للحارس**: `e-upgrade-sample` — أمثلة بطاقات الدرس المُرقّى بلا كلمة غير مدروسة (قياس: 217/743 مثالاً في A1).
+- **إصلاح**: كاشف v-f (w/qu كانت تُخفي v=[f]) — verschwinden +v-f.
+- الترقية 1/60 · نواة D113 1/48 · **493/493 أخضر** · validator 885/0/0 · الطفرة 11/11.
+
 ## 2026-10-14 — الدفعة 70: حارس ترقية الدروس + قاعدة اليوم في المُشغِّل + تصحيح تفسيري (D115)
 - **إضافة**: `GrammarRuleFile`/`ShufraPayload` (قاعدة اليوم بصيغة الاكتشاف) · أشكال بنود التدريب للأنواع الأربعة عشر بـ`why` عربي · `QuizItem` · `LessonUpgradePlan` + `content/upgrades/a1-lesson-upgrade.json` (60 درساً pending).
 - **إضافة**: `tools/lib/lesson-upgrade.ts` (24 رمزاً e-upgrade/e-rule/w-… + 3 في المدقِّق: e-arsenal-path · e-arsenal-dup · e-upgrade-dup) · `tools/upgrade-status.ts` (أقل من ثانية: الملخص والتالي وما ينقص بالضبط).
