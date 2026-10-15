@@ -92,16 +92,46 @@ export function compoundNumberKnown(t: string, stems: ReadonlySet<string>): bool
   return m !== null && stems.has(deumlaut(m[2]!));
 }
 
+const TENS = "zwanzig|dreißig|vierzig|fünfzig|sechzig|siebzig|achtzig|neunzig";
+/**
+ * D132: من 100 إلى 1000 كلمة واحدة — المئات (الآحاد اختيارياً + hundert) ثم الباقي كما تعلّمناه: آحاد أو 10–19
+ * أو عشرات أو مركّب (zweihundert · hunderteins · hundertzwanzig · dreihundertfünfundsechzig) — أو (ein)tausend.
+ * eins في آخر العدد تبقى بـs (hunderteins لا hundertein) · ولا und بعد المئات (hundertundeins صيغة قديمة أقل شيوعاً —
+ * لا تُقبل حتى يُقرَّر تدريسها) · وما فوق الألف (zweitausend) خارج النطاق حتى يُدرَّس.
+ */
+export const HUNDREDS_NUMBER = new RegExp(
+  `^(?:(?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)?hundert((?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)und(?:${TENS})|${TENS}|` +
+    "eins|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|dreizehn|vierzehn|fünfzehn|sechzehn|siebzehn|achtzehn|neunzehn)?|(?:ein)?tausend)$",
+  "u",
+);
+const TENS_ONLY = new RegExp(`^(?:${TENS})$`, "u");
+
+/**
+ * عدد من كلمة واحدة معروف حتى الدرس: المركّب 21–99 بعشراته المدروسة (D131) · وما بين 100 و1000 من الدرس الذي يُدرِّس
+ * tausend (a1-u3-d2 — «Zahlen 100–1000» في الخطة اليومية) لا قبله ولو كانت hundert مغلقة منذ D121 — وباقيه بعد المئات
+ * يتبع القاعدة نفسها (hundertzwanzig يحتاج zwanzig مدروسة · dreihundertfünfundsechzig يحتاج sechzig).
+ */
+export function numberWordKnown(t: string, stems: ReadonlySet<string>): boolean {
+  if (compoundNumberKnown(t, stems)) return true;
+  const m = HUNDREDS_NUMBER.exec(t);
+  if (m === null || !stems.has("tausend")) return false;
+  const rest = m[1];
+  if (!rest) return true;
+  if (COMPOUND_NUMBER.test(rest)) return compoundNumberKnown(rest, stems);
+  if (TENS_ONLY.test(rest)) return stems.has(deumlaut(rest));
+  return true; // آحاد و10–19: مغلقة
+}
+
 /**
  * الكلمات غير المدروسة في نص (مرتبة، بلا تكرار): ليست مغلقة · ليست اسم علم مُعلناً · ولا جذع لها
- * يطابق جذع صيغة مدروسة · ولا هي عدد مركّب عشراته مدروسة (D131).
+ * يطابق جذع صيغة مدروسة · ولا هي عدد من كلمة واحدة أجزاؤه مدروسة (D131 · D132).
  */
 export function unknownTokens(text: string, stems: ReadonlySet<string>, allow: ReadonlySet<string> = new Set()): string[] {
   const out = new Set<string>();
   for (const t of contentTokens(text)) {
     if (CLOSED.has(t) || allow.has(t)) continue;
     if (stem(deumlaut(t)).some((s) => stems.has(s))) continue;
-    if (compoundNumberKnown(t, stems)) continue;
+    if (numberWordKnown(t, stems)) continue;
     out.add(t);
   }
   return [...out].sort();

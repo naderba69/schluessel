@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(791); // + die Oma · das Essen (نواة a1-u3-d1 — D131؛ das Essen بمعرّف das-essen بجانب الفعل essen) + schlecht · also · die Gruppe (نواة a1-u2-d5 — D130) + lang · lange (نواة a1-u2-d4 — D128) + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
+    expect(ALL_WORDS.length).toBe(794); // + der Dank · leicht · das Restaurant (نواة a1-u3-d2 — D132) + die Oma · das Essen (نواة a1-u3-d1 — D131؛ das Essen بمعرّف das-essen بجانب الفعل essen) + schlecht · also · die Gruppe (نواة a1-u2-d5 — D130) + lang · lange (نواة a1-u2-d4 — D128) + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -232,6 +232,27 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 2).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u3-d2 (D132): nur بعد الكمية (كـ«فقط») · حرف جر بعد kosten (كالباء) · Euros بالجمع (الفرنسية لا العربية) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u3-d2")!;
+    const [nur, kosten, euros] = u.zusammenfassung.warningCards;
+    expect(nur!.commonError.de).toContain("~~Das kostet zweihundert Euro nur.~~");
+    expect(nur!.correct.de).toBe("Das kostet nur zweihundert Euro.");
+    expect(nur!.whyArabicSpeakerFails).toContain("«فقط»");
+    expect(kosten!.commonError.de).toContain("~~Das kostet für fünf Euro.~~");
+    expect(kosten!.whyArabicSpeakerFails).toContain("kaufen + für صحيحة"); // لا يُعمَّم المنع على كل für قبل السعر
+    expect(euros!.commonError.de).toContain("~~zweihundert Euros~~");
+    expect(euros!.whyArabicSpeakerFails).toContain("العربية في صفّك");
+    // كانت «~~Ich bezahle für die Rechnung.~~» وتمرينها «~~bezahlen für das Brot~~ ← das Brot bezahlen» — وfür etwas bezahlen صحيحة
+    // (Ich habe für das Brot zwei Euro bezahlt) · و«~~das Euro~~ — اليورو مذكر» بلا تداخل عربي («اليورو» مذكر في العربية أيضاً)
+    const all = u.zusammenfassung.warningCards.map((c) => `${c.commonError.de} ${JSON.stringify(c.exercise)}`).join("\n");
+    expect(all).not.toMatch(/bezahle für|bezahlen für|das Euro/);
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 2 || l.id === "a1-u3-d1").flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });

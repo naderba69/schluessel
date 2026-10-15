@@ -11,7 +11,7 @@ import {
   MISSPELLING_DISTANCE_MAX, checkGrammarRules, checkUpgrade, editDistance, fillInWordGap, frontViolations, germanOnly, inspectLesson,
   itemTexts, taughtUpTo, wordAppears, type UpgradeContext,
 } from "../tools/lib/lesson-upgrade.js";
-import { CLOSED, COMPOUND_NUMBER, GRAPHEMES, compoundNumberKnown, contentTokens, deumlaut, knownForms, knownStems } from "../tools/lib/vocab-forms.js";
+import { CLOSED, COMPOUND_NUMBER, GRAPHEMES, HUNDREDS_NUMBER, compoundNumberKnown, contentTokens, deumlaut, knownForms, knownStems, numberWordKnown } from "../tools/lib/vocab-forms.js";
 
 const CONTENT = join(__dirname, "..", "content");
 const words = loadWords(CONTENT);
@@ -120,7 +120,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u3-d2")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d5 + u3-d1 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128 · D130 · D131)
+const legacy = realLessons.find((l) => l.id === "a1-u3-d3")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d5 + u3-d1..d2 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128 · D130 · D131 · D132)
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -237,6 +237,40 @@ describe("D131 — العدد المركّب 21–99 (قانون الجبهة)",
   });
 });
 
+describe("D132 — الأعداد من 100 إلى 1000 (قانون الجبهة)", () => {
+  const none = new Set<string>();
+  const at = (id: string) => knownStems(taughtUpTo(realLessons.find((l) => l.id === id)!, realLessons, words));
+  it("المئات وما بعدها معروفة من الدرس الذي يُدرِّس tausend (a1-u3-d2) — لا قبله ولو كانت hundert مغلقة منذ D121", () => {
+    const u3d2 = at("a1-u3-d2");
+    expect(frontViolations(["zweihundert · einhundert · hunderteins · hundertzwanzig · dreihundertfünfundsechzig · Neunhundertneunundneunzig · eintausend"], u3d2, none)).toEqual([]);
+    expect(numberWordKnown("hunderteinundzwanzig", u3d2)).toBe(true);
+    const u3d1 = at("a1-u3-d1");
+    expect(CLOSED.has("hundert")).toBe(true);
+    expect(frontViolations(["zweihundert · hunderteins"], u3d1, none)).toEqual(["hunderteins", "zweihundert"]);
+  });
+  it("الباقي بعد المئات يتبع قاعدته: عشراته مدروسة — ولا باب خلفياً (hundertein · hundertundeins · zweitausend · neunzehnhundert · eins قبل und)", () => {
+    const u3d2 = at("a1-u3-d2");
+    expect(frontViolations(["hundertein · hundertundeins · zweitausend · neunzehnhundert · hunderteinsundzwanzig · einsundzwanzighundert · hundertzwanzigeins"], u3d2, none))
+      .toEqual(["einsundzwanzighundert", "hundertein", "hunderteinsundzwanzig", "hundertundeins", "hundertzwanzigeins", "neunzehnhundert", "zweitausend"]);
+    // العشرات بعد المئات تحتاج درسها: بجذوع درس بلا sechzig لا تُعرف «dreihundertsechzig»
+    const noSechzig = new Set([...u3d2].filter((x) => !x.startsWith("sechzig")));
+    expect(numberWordKnown("dreihundertsechzig", noSechzig)).toBe(false);
+    expect(numberWordKnown("dreihundertsechzig", u3d2)).toBe(true);
+  });
+  it("الصيغ كلها من 100 إلى 999 (ألف صيغة: hundert… وeinhundert… · بلا und بعد المئات) تطابق — ولا تطابق أيٌّ منها صيغة كلمة في المقرر", () => {
+    const units = ["", "ein", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun"];
+    const below20 = ["", "eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn", "elf", "zwölf", "dreizehn", "vierzehn", "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"];
+    const tens = ["zwanzig", "dreißig", "vierzig", "fünfzig", "sechzig", "siebzig", "achtzig", "neunzig"];
+    const rests = [...below20, ...tens, ...tens.flatMap((t) => units.slice(1).map((u) => `${u}und${t}`))];
+    expect(rests).toHaveLength(100);
+    const all = units.slice(1).flatMap((h) => rests.map((r) => `${h}hundert${r}`)).concat(rests.map((r) => `hundert${r}`));
+    expect(all).toHaveLength(1000);
+    expect(all.every((w) => HUNDREDS_NUMBER.test(w))).toBe(true);
+    const forms = new Set(words.flatMap((w) => knownForms(w)));
+    expect(all.filter((w) => w !== "hundert" && forms.has(w))).toEqual([]);
+  });
+});
+
 describe("D115 — التدريب: كل معيار يُكسر وحده", () => {
   const mutate = (fn: (l: Lesson) => void) => { const l = upgraded(); fn(l); return codes(l); };
   const item = (l: Lesson, s: number, i: number) => l.uebung.stations[s]!.items[i]! as Record<string, unknown>;
@@ -316,7 +350,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u3-d2", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u3-d3", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -400,17 +434,17 @@ describe("D115 — أدوات القياس", () => {
     expect(wordAppears(w("guten-tag"), toks("Guten Tag!"))).toBe(true);
     expect(wordAppears(w("wie-gehts"), toks("Hallo, wie geht's?"))).toBe(true);
   });
-  it("درس حقيقي لم يُرقَّ (a1-u3-d2): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين وQuiz فيها غير المدروس)", () => {
+  it("درس حقيقي لم يُرقَّ (a1-u3-d3): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين وQuiz فيها غير المدروس)", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBeLessThan(12);
     expect(r.rule.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-rule", "e-upgrade-sample"]));
-    // D131: فجواته مقيسة قبل نقل المثال إليه — مثال billig «Das Brot ist billig.» وتمارينه فيها Brot (الوحدة 5) ·
-    // ومثال teuer فيه Restaurant (نواة الدرس نفسه — يُعلَّم فيه) · وفي الـQuiz «siebenhundert»: مضاعفات المئة لا يعرفها الحارس بعد
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/brot/);
+    // D132: فجواته مقيسة قبل نقل المثال إليه — مثال frueh «Ich stehe früh auf.» فيه stehe (aufstehen منفصل — الوحدة 7) ·
+    // ومثال mittag فيه Mensa · وتمارينه فيها Termin (a1-u3-d4) · وQuiz فيه stehe
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/termin/);
     const samples = r.rule.map((i) => i.message).join("\n");
-    expect(samples).toMatch(/restaurant/);
-    expect(samples).toMatch(/brot/);
-    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/siebenhundert/);
+    expect(samples).toMatch(/stehe/);
+    expect(samples).toMatch(/mensa/);
+    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/stehe/);
     expect(r.coverage).toEqual([]);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
@@ -621,6 +655,37 @@ describe("D115 — أدوات القياس", () => {
     // ما خرج من الأصل في النصوص المعروضة: twenty · zwanzigeins · dreissig (dreissig معرّف الكلمة يبقى — لا يُعرض) · Euro · Minuten · Zweimal
     const shown = [l.uebung.stations.map((s) => s.items), l.quiz, l.zusammenfassung.summary, l.zusammenfassung.warningCards, l.einstieg];
     expect(JSON.stringify(shown)).not.toMatch(/twenty|zwanzigeins|dreissig|Euro|Minuten|Zweimal/);
+  });
+  it("a1-u3-d2 مُرقّى (D132): صفر نقص — 35 بنداً · 4 أنواع (حوار جديد + أعداد وأسعار مسموعة) · Quiz 6 · 15 كلمة · المئات والأسعار", () => {
+    const l = realLessons.find((x) => x.id === "a1-u3-d2")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u3-d2")!;
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([35, 4, 6, 15]);
+    // القاعدة المخططة نفسها (ars-preis-1000) كُتب ملفها أخيراً: المئات أولاً ثم الباقي · kosten بلا حرف جر · nur قبل العدد
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-preis-1000"]);
+    const rule = loadGrammarRules(CONTENT).get("ars-preis-1000")!;
+    expect(rule.payload.ruleDe).toMatch(/dreihundert \+ fünfundsechzig = dreihundertfünfundsechzig .*nur zweihundert Euro/);
+    expect(rule.payload.limitsAr.join("\n")).toContain("kaufen + für");
+    expect(e.properNouns).toEqual(["Lena", "Yusuf"]);
+    // النواة D113 (der Dank · leicht · das Restaurant)
+    expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["dank", "leicht", "restaurant"]));
+    const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(sample("geld")).toBe("Wie viel Geld hast du?"); // كان «Ich habe kein Geld.» — kein قاعدة a1-u5-d4
+    expect(["billig", "preis", "kosten", "euro", "nur", "viel"].map(sample).join(" ")).not.toMatch(/Brot|gut|kein|Wie viel kostet das/);
+    expect(l.warmup.cardIds).toEqual(["zwanzig", "hundert", "zaehlen"]);
+    // الحوار الجديد (hd-1..14) والأعداد والأسعار المرجعية (7) كلها في الاستماع والإملاء
+    const audioIds = l.uebung.stations.filter((s) => s.type === "listening" || s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.audioId)));
+    expect(audioIds.filter((id) => id.startsWith("hd-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3)))).toEqual(Array.from({ length: 14 }, (_, i) => `hd-${i + 1}`));
+    expect(audioIds.filter((id) => !id.startsWith("hd-")).sort()).toEqual(["eur-19-99", "eur-2-50", "num-102", "num-200", "num-600", "num-700", "num-900"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    // الاستماع يميّز ‑hundert من ‑zig و‑zehn (700/70/17) — والإجابة بين خياراتها مع شبيهاتها
+    const lis = l.uebung.stations.find((s) => s.type === "listening")!.items as { audioId: string; choices: string[] }[];
+    expect(lis.find((i) => i.audioId === "num-700")!.choices).toEqual(["700", "70", "17"]);
+    // ما خرج من الأصل في النصوص المعروضة: bezahlen für · das Euro · Wie Geld · Brot · siebenhundert بلا أساس
+    const shown = [l.uebung.stations.map((s) => s.items), l.quiz, l.zusammenfassung.summary, l.zusammenfassung.warningCards, l.einstieg];
+    expect(JSON.stringify(shown)).not.toMatch(/bezahlen für|bezahle für|das Euro|Wie Geld|Brot/);
   });
   it("D121 e-upgrade-warmup: بطاقة استدعاء من كلمات اليوم أو لاحقة ⇒ خطأ · أول درس في المسار مستثنى", () => {
     const d4 = realLessons.find((x) => x.id === "a1-u1-d4")!;

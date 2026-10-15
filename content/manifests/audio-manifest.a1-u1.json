@@ -15828,6 +15828,66 @@
       "rmsDb": -17.22
     },
     {
+      "id": "word-dank",
+      "file": "words/audio/de-DE/word-dank.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Dank.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 908,
+      "sizeBytes": 4367,
+      "hash": "sha256:f41a2f612cfab33431118ac0e4cc669ea5eb513898bfa3b89fcaa2a23db58587",
+      "pcmSha256": "7463ff4a0157621480e19e045b666468390955ab2b809657c82da986d5aa8776",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "word-leicht",
+      "file": "words/audio/de-DE/word-leicht.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "leicht.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 931,
+      "sizeBytes": 4117,
+      "hash": "sha256:cfabc1cf38f9c820aa1443b6e637d66c06a94ac68db7d60f9f668b6300cbbaf7",
+      "pcmSha256": "d31de9543e7ee35889510698a1ef4952d8dfef3a8006ede7940221eb1b6d9b12",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "word-restaurant",
+      "file": "words/audio/de-DE/word-restaurant.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Restaurant.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 1280,
+      "sizeBytes": 5847,
+      "hash": "sha256:eb3e8b30e1c813ce93402a717620e7e8d0a1354b900e238973ce35555f7d562f",
+      "pcmSha256": "2676e42f6777b0dbe18ca875822cabe53d53fc1de0b14f70602d63a77e1c445e",
+      "rmsDb": -17.15
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -20127,6 +20187,468 @@
       "hash": "sha256:26924f169a50e76d5dccb69e7895671b787d1ff9ce910692b86e556732dda6bd",
       "pcmSha256": "dd04cb19f92940de3eee6147b7114e20391d1d9ac85a5e89c0707d109ec08dbb",
       "rmsDb": -17.01
+    },
+    {
+      "id": "hd-1",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Lena, ich kaufe heute ein Handy.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 2824,
+      "sizeBytes": 12943,
+      "hash": "sha256:91213ccb02d7a73ae6b3464078cd45e5cf23a7e3b4e5895f6c72ca87e1ab6343",
+      "pcmSha256": "9fe86e49c6007ea0136ea3525f1f2440b8f39b302582e09881f63463ef81f120",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "hd-2",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Handy? Was kostet es?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 1992,
+      "sizeBytes": 9394,
+      "hash": "sha256:bb922a8aa44526f9f8d3aa3980f943c4b187977e133a502fb6833e0e8177575e",
+      "pcmSha256": "ae5f20377017d527d01783475aa552e3cedd9d306dfcf6c1f7e1edb973b8ef25",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "hd-3",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 77,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das hier kostet neunhundertneunundneunzig Euro.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 3880,
+      "sizeBytes": 17499,
+      "hash": "sha256:aa1b991d6d0bc3f6ac441f5e3ecbc067e8e3299531eabde34a86f6e2c11cc4c3",
+      "pcmSha256": "7f30a825f2daf7214d9dbc511177e187425740ab2b15dc72cf9fd41ac36937ae",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "hd-4",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 86,
+        "lengthScale": 1.32
+      },
+      "textDe": "Neunhundertneunundneunzig? Das ist zu teuer!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 3496,
+      "sizeBytes": 16820,
+      "hash": "sha256:979ae8a2d973ca11a590a2bede0fe06730129bdea1244bfbf990d7344a4a532b",
+      "pcmSha256": "ea075a31e52d26df314013b0e58a97dbc409f34b2829d912f5f62a560a865724",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "hd-5",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 103,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Und das hier kostet nur zweihundertneunundsiebzig Euro.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 4658,
+      "sizeBytes": 21522,
+      "hash": "sha256:999d0bf853406057a727d1861ce93c01c649e65fe8baf07ce76f2e9165e64222",
+      "pcmSha256": "7a8539e6ad9a45451236ae47424b7d671ebc54b7d9356459c0d5ff2863c794e3",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "hd-6",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das ist billig! Wie viel Geld hast du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 3144,
+      "sizeBytes": 14688,
+      "hash": "sha256:e231efe49519120d6492ab999a55b19012e9cd51dab3ca639b620dfd0d135356",
+      "pcmSha256": "c1f7c340812f2d991eb14ed8474f1854481e953ab5200a9b3ce6565d3905a636",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "hd-7",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 116,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich habe vierhundert Euro.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 2069,
+      "sizeBytes": 9578,
+      "hash": "sha256:fbee48be70a76785290768c10866a84b33d4ab03e421ffcb044483f28ce6e600",
+      "pcmSha256": "8ed1d2db32b61743861d7779aea2a0b2165480fc8a205d737abbc2c4cc9c5eae",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "hd-8",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 100,
+        "lengthScale": 1.32
+      },
+      "textDe": "Also hast du noch hunderteinundzwanzig Euro!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 3592,
+      "sizeBytes": 17189,
+      "hash": "sha256:20e1886dd58f22a55423ae64264e81c63e1656fde650c58f5968ee13d293d177",
+      "pcmSha256": "1c3ff389fa8127640d9a834e26a3a135895fc0b2d6cd37946ed9ea36b0015bdc",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "hd-9",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Für ein Essen im Restaurant.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 2952,
+      "sizeBytes": 13723,
+      "hash": "sha256:764e55e414eb45e462db231dfcb88a57ffc1e4c51ab3a2aae02756d2691c2527",
+      "pcmSha256": "27a282aa4ba24dca740792222ed0d777f44163c84fdbc94abcf14f75e6d10161",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "hd-10",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wie bezahlst du das Handy?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 2696,
+      "sizeBytes": 12811,
+      "hash": "sha256:e224871730264eddd1b3cf63d0e2cdf8c6c19139f3ba73586a00a09c00667e88",
+      "pcmSha256": "c8fb639fda14e1e5fcd9e2fb4c333d3db8ae00e3c34c317cb98b42751e297d21",
+      "rmsDb": -17.35
+    },
+    {
+      "id": "hd-11",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 116,
+        "lengthScale": 1.32
+      },
+      "textDe": "Mit Karte. Das ist leicht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 2592,
+      "sizeBytes": 11824,
+      "hash": "sha256:3a5eb4be4828bf21a8159d871be6b3b4a9c60a75f3669fe1bfa8d051357d46a2",
+      "pcmSha256": "fa41f58bf7cb0d3eae66b7bafe282b74f3beb5025d440569c4a4111f3f6cc2dd",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "hd-12",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Preis ist super!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 1912,
+      "sizeBytes": 8938,
+      "hash": "sha256:45df5b100cc96519915b2da7a1a1fabb6a990d3f30a75c416c6b8266d8816a58",
+      "pcmSha256": "9a3a0222d2efccfb5b73b42f126b462450ba2ffd4ca8c6282171122db17acbe7",
+      "rmsDb": -17.41
+    },
+    {
+      "id": "hd-13",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 90,
+        "lengthScale": 1.32
+      },
+      "textDe": "Tausend Dank, Lena!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 2011,
+      "sizeBytes": 9348,
+      "hash": "sha256:656d04e69afa8dea448dc60ccb5b1a418bccc19169d956e1e3e63fe2f2d68ca7",
+      "pcmSha256": "c1765d5b161828c0cd0a01cc1bdb28767804a23d264c16f17ff9e485c6dab598",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "hd-14",
+      "file": "audio/scripts/a1-u3-d2-ein-handy/hd-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 64,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gern, Yusuf!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 1864,
+      "sizeBytes": 8563,
+      "hash": "sha256:3f3958b4945b3d11ae217f7ba9a964410e1ec67e31b55d126d0aa118bc654f21",
+      "pcmSha256": "efce985257203aea231d605b665363e043c486fdf0ca2f68457b98cd926564d9",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "num-102",
+      "file": "audio/scripts/a1-zahlen-bis-1000/num-102.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 41,
+        "lengthScale": 1.32
+      },
+      "textDe": "hundertzwei.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 1454,
+      "sizeBytes": 6566,
+      "hash": "sha256:726d3f5ac7617fffc7727bf2469baf4c5c26712b49689de45fa3f7c0ac426c32",
+      "pcmSha256": "67f75fdc01725d89495c9b8b4eee45ac1688ca31c968db549b3159e5e8de7737",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "num-200",
+      "file": "audio/scripts/a1-zahlen-bis-1000/num-200.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 52,
+        "lengthScale": 1.32
+      },
+      "textDe": "zweihundert.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 1152,
+      "sizeBytes": 5567,
+      "hash": "sha256:3f50857405c4c9ae4c105b2e82726ce852eae295c5238b5db620a43e900cfafa",
+      "pcmSha256": "341bfc904a6b65eab2a33c093d74172bef5e1083b93b3a1bab53f39df91d7a79",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "num-600",
+      "file": "audio/scripts/a1-zahlen-bis-1000/num-600.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 49,
+        "lengthScale": 1.32
+      },
+      "textDe": "sechshundert.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 1233,
+      "sizeBytes": 5771,
+      "hash": "sha256:aa61a607ddd69d43d6e477612b903b1fd2b464352ed4b68e453af61036600060",
+      "pcmSha256": "ea63d059901beaa3ce1962741d89f0640c02440855ee76a9f96632772763ea6e",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "num-700",
+      "file": "audio/scripts/a1-zahlen-bis-1000/num-700.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 46,
+        "lengthScale": 1.32
+      },
+      "textDe": "siebenhundert.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 1291,
+      "sizeBytes": 6011,
+      "hash": "sha256:67e2ef61d5e9c676ea3c81790aa19ff078cbe62e16c21c5e4c47f5ea3c8faa8f",
+      "pcmSha256": "d22aab422c69cb893ecb17ea3b0a2fa3a70e8d0169dab2fc49b417a226829f3e",
+      "rmsDb": -16.98
+    },
+    {
+      "id": "num-900",
+      "file": "audio/scripts/a1-zahlen-bis-1000/num-900.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 48,
+        "lengthScale": 1.32
+      },
+      "textDe": "neunhundert.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 1256,
+      "sizeBytes": 5994,
+      "hash": "sha256:ded688a65edf53604784b977706b9490c477294909290c00b3e7bcd8bcdcb3dd",
+      "pcmSha256": "aeac3d5fa8e4b89ee32e9c73ac9411aabbbf704a6858474b7af7b9e0265d661a",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "eur-2-50",
+      "file": "audio/scripts/a1-zahlen-bis-1000/eur-2-50.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 104,
+        "lengthScale": 1.32
+      },
+      "textDe": "zwei Euro fünfzig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 1732,
+      "sizeBytes": 8163,
+      "hash": "sha256:b6bce4eb94c08fda44e74a916e328f0e9d691fd05d671b7580d0db285369023d",
+      "pcmSha256": "8f3b3e9b3999ea845c669e1eacf0033c189635391dac4047bf0c57a2539c12ba",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "eur-19-99",
+      "file": "audio/scripts/a1-zahlen-bis-1000/eur-19-99.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 73,
+        "lengthScale": 1.32
+      },
+      "textDe": "neunzehn Euro neunundneunzig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d2"
+      ],
+      "durationMs": 2452,
+      "sizeBytes": 11424,
+      "hash": "sha256:2d59f619dc835ae6fcca7617adfa200cb2a3076e3f7fb89206fa31d70ddce714",
+      "pcmSha256": "9ed3453ea850b08ada5a6876974760b4079cb826d86d8827010e63a3cb91a648",
+      "rmsDb": -17.02
     }
   ],
   "characterVoices": {
