@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-akkusativ-1",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Ich habe einen Bruder. — Wen beschreibst du?",
+    "ar": "أول Akkusativ: المفعول به المذكر وحده يأخذ ‑n — der ← den · ein ← einen · mein ← meinen — والسؤال عن الشخص المفعول Wen?"
+  },
+  "payload": {
+    "topicAr": "المفعول به (Akkusativ): الاسم الذي يقع عليه الفعل بعد haben · beschreiben · kennen · lieben. يتغيّر فيه المذكر المفرد وحده بحرف ‑n: der ← den · ein ← einen · mein/dein/sein ← meinen/deinen/seinen؛ والمؤنث والمحايد والجمع تبقى كما هي. وبعد ist لا مفعول: Das ist mein Bruder. والسؤال عن الشخص المفعول Wen? لا Wer? — والصفات اليوم بعد ist وحدها: Er ist jung und lustig.",
+    "sceneAr": "في الدورة عبر الإنترنت تعطي المعلمة كل ثنائي لعبة «مَن أصف؟» (Wen beschreibe ich?): واحد يصف شخصاً أو حيواناً بصفتين أو ثلاث، والآخر يقول الحل (die Lösung). تصف لينا صديقَ يوسف Nabil — التلميذ الشاب المرح في تونس — ويصف يوسف Bruno كلبَ عمّها، ثم ترفع لينا صورة جدتها أمام الكاميرا.",
+    "examples": [
+      {
+        "de": "Der Hund ist alt. — Ich beschreibe den Hund.",
+        "ar": "الكلب كبير السن. — أصف الكلبَ. (der Hund)"
+      },
+      {
+        "de": "Nabil ist ein Freund. — Ich beschreibe einen Freund.",
+        "ar": "Nabil صديق. — أصف صديقاً. (der Freund)"
+      },
+      {
+        "de": "Das ist mein Onkel. — Bruno liebt meinen Onkel.",
+        "ar": "هذا عمّي. — Bruno يحب عمّي. (der Onkel)"
+      },
+      {
+        "de": "Das ist eine Frau. — Ich beschreibe eine Frau.",
+        "ar": "هذه امرأة. — أصف امرأةً. (die Frau)"
+      },
+      {
+        "de": "Das ist ein Foto. — Ich beschreibe ein Foto.",
+        "ar": "هذه صورة. — أصف صورةً. (das Foto)"
+      },
+      {
+        "de": "Wer kennt Nabil? — Wen kennst du?",
+        "ar": "مَن يعرف Nabil؟ (فاعل) — مَن تعرف؟ (مفعول)"
+      }
+    ],
+    "inferencePromptAr": "قارن نصفي كل مثال: النصف الأول بعد ist، والثاني بعد فعل آخر (beschreibe · liebt). (1) في الأمثلة 1–3: ماذا حدث لـder وein وmein حين صار الاسم بعد beschreibe أو liebt؟ أي حرف أضيف؟ (2) في المثالين 4–5: هل تغيّرت eine أو ein؟ ما أداة Frau وما أداة Foto؟ (3) إذن أي جنس وحده يتغيّر؟ (4) في المثال 6: الفعل نفسه kennen — فلماذا Wer مرة وWen مرة؟ مَن يعرف ومَن يُعرَف؟ وبماذا تنتهي Wen وden وeinen وmeinen؟ (5) قل بالعربية «عندي أخٌ»: هل الأخ في جملتك العربية فاعل مرفوع أم مفعول به؟ وفي Ich habe einen Bruder؟",
+    "ruleDe": "der Hund → den Hund · ein Freund → einen Freund · mein Onkel → meinen Onkel · eine Frau → eine Frau · ein Foto → ein Foto · meine Eltern → meine Eltern · Wer kennt Nabil? → Wen kennst du? · Das ist mein Bruder. → Ich habe einen Bruder.",
+    "ruleAr": "المفعول به (Akkusativ) هو الاسم الذي يقع عليه الفعل: بعد haben · beschreiben · kennen · lieben · kaufen · lesen. وفيه يتغيّر المذكر المفرد وحده بحرف ‑n: der ← den · ein ← einen · mein ← meinen (وكذلك dein ← deinen · sein ← seinen): Ich habe einen Bruder · Ich beschreibe den Hund · Bruno liebt meinen Onkel. أما المؤنث والمحايد والجمع فلا تتغير: eine Frau · ein Foto · meine Eltern. وبعد ist لا مفعول، فلا ‑n: Das ist mein Bruder · Der Hund ist alt. والسؤال عن الشخص: Wer? للفاعل وWen? للمفعول — بالـ‑n نفسها: Wer kennt Nabil? · Wen kennst du? — وللأشياء Was? في الحالتين. وأنت تعرف القاعدة من قبل دون أن تسمّيها: Ich buchstabiere meinen Namen (من درس التهجئة).",
+    "contrastAr": "العربية الفصحى تعرف الفكرة: الفاعل مرفوع والمفعول به منصوب — Nominativ يقابل الرفع وAkkusativ يقابل النصب، فالمفهوم مألوف لك من النحو العربي وهذا عون حقيقي. لكن ثلاثة فروق تُوقع المتعلم: (1) العربية تعلّم النصب في آخر الاسم («أصف صديقاً»)، والألمانية في الكلمة التي قبله: einen Freund — والاسم نفسه لا يتغير. والعامية لا تنطق علامة النصب أصلاً، فيترك المتعلم ‑en: ~~Ich habe ein Bruder~~. (2) «عندي أخٌ»: الملكية في العربية بحرف الجر «عند»، والأخ مبتدأ مرفوع لا مفعول — والألمانية تعبّر بالفعل haben فيصير الأخ مفعولاً: Ich habe einen Bruder. (3) العربية تنصب المذكر والمؤنث معاً («أخاً» · «أختاً» · «صورةً»)، والألمانية تغيّر المذكر وحده: einen Bruder · eine Schwester · ein Foto — فمن تعلّم einen قد يعمّمها: ~~einen Schwester~~. و«مَن» العربية واحدة للفاعل والمفعول («مَن جاء؟» · «مَن رأيت؟»)، والألمانية تفرّق: Wer? · Wen? — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "الصفة قبل الاسم تأخذ نهايات خاصة (ein schönes Foto · einen jungen Bruder) — وهذه قاعدة المستوى A2. نقول الصفة الآن بعد ist وحدها، بلا نهاية: Das Foto ist schön · Mein Bruder ist jung.",
+      "قلة من الأسماء المذكرة تأخذ ‑n في آخرها أيضاً: der Junge ← einen Jungen · der Name ← meinen Namen · der Student ← einen Studenten — نحفظها مع الاسم. وأغلب المذكر لا يتغير آخره: einen Bruder · einen Hund · den Vater.",
+      "الضمير المذكر يتغير كذلك: er ← ihn (Kennst du Nabil? — Ja, ich kenne ihn.) — نتدرب عليه لاحقاً. وmich وdich تعرفهما قطعتين: Freut mich! · für dich.",
+      "Was? للأشياء في الحالتين (Was ist neu? · Was liest du?)، وbeide جمع فلا يتغير مفعولاً: Ich kenne beide."
+    ],
+    "beads": [
+      "Ich",
+      "beschreibe",
+      "einen",
+      "Freund."
+    ],
+    "properNouns": [
+      "Bruno",
+      "Nabil"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u4-d3"
+  ]
+}

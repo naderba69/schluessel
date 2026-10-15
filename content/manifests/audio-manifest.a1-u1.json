@@ -16149,6 +16149,46 @@
       "rmsDb": -16.98
     },
     {
+      "id": "word-beide",
+      "file": "words/audio/de-DE/word-beide.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "beide.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 688,
+      "sizeBytes": 3489,
+      "hash": "sha256:5c85d0bc1c177499d8d3e5cd2329340178679591fe074375c4c0dbae8c95bc74",
+      "pcmSha256": "c8219489b63d0e103380831e5bdd635fc6e0433e619501aaf55f54200027fa24",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "word-loesung",
+      "file": "words/audio/de-DE/word-loesung.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Lösung.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 989,
+      "sizeBytes": 4725,
+      "hash": "sha256:1a690a8206408d96664bb571b165c4224043ab46e2fc468cc25274a54fe21661",
+      "pcmSha256": "c513ee27cbc44cc5d00d45c034716c75e3bb075bfe99710c52ba5fd74804e6c2",
+      "rmsDb": -17.01
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -23088,6 +23128,402 @@
       "hash": "sha256:528ab617f0346d2fd8dd056e886c470f3f5f509a4e08e696827100777446b6e4",
       "pcmSha256": "4e2ec1f2b50e7c17feaf6fd776e2f471d108a0c8805219ea6bc994c58893fa77",
       "rmsDb": -17.05
+    },
+    {
+      "id": "wb-1",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 107,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, die Aufgabe heute: Wen beschreibe ich?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 3928,
+      "sizeBytes": 18215,
+      "hash": "sha256:962bea6ac641ccc14c057b5a6ad97fe38a1d8c6afc2370be78b31c3d91fa4438",
+      "pcmSha256": "650c03b170d38bb6a76b928860ddf6dcba8d34de8d6a83138cbb8c06b65884a0",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "wb-2",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 93,
+        "lengthScale": 1.32
+      },
+      "textDe": "Okay, ich höre.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 1930,
+      "sizeBytes": 8334,
+      "hash": "sha256:07d7a3f3bdc02a9d9cbf661017abec3453cb6fa1b3243bf034c554eb07a2b656",
+      "pcmSha256": "d53054cfbb54535a36c9d278bc836ad30dad0bd0e1cf21d209297ae5817d4caa",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "wb-3",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich beschreibe einen Freund. Er ist jung und lustig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 4296,
+      "sizeBytes": 19767,
+      "hash": "sha256:76aea1cf0133159649ae54dbe81c8a72b93ece723de13d711eff725f2af95592",
+      "pcmSha256": "f5b4ba3ec661a58ffc362134ac2021d582392277b9c27aafcd86ebb4b39cf32c",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "wb-4",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ist er klein?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 1315,
+      "sizeBytes": 6208,
+      "hash": "sha256:eefd86216b520c4d35d48a28001097839e1f16360523362f984157d9b6a55338",
+      "pcmSha256": "79fc95f72410f25318a0eac28dad42bccc31968dba2bbd188b91304e0cc8c72e",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "wb-5",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, er ist groß. Er ist Schüler und wohnt in Tunesien.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 4632,
+      "sizeBytes": 21534,
+      "hash": "sha256:675f825b0cd74261f44574225acb0ed6fefe1076c3085187fd2348f0797b910a",
+      "pcmSha256": "55d2479768a515818ddfc34e981e6eee536de0ebf1e7c402497288004dc0fe80",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "wb-6",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 121,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich weiß die Lösung: Nabil!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 2476,
+      "sizeBytes": 10663,
+      "hash": "sha256:96a1be59d4b0e2253d2554a5b63bb8ff9b7424f76b35889b3f5361649287be1f",
+      "pcmSha256": "ab33b2dc63fa5aab7592b6bdd8bc42c72c010f957ceae5c7efd12aef59a00afb",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "wb-7",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 99,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Du kennst deinen Freund.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 3016,
+      "sizeBytes": 13948,
+      "hash": "sha256:c3cfdb68f97bebae02218c12452516bcb8491e466b6ba275b0f2afc50b036f9d",
+      "pcmSha256": "5c7df13a8218b3ebe70eea9051d730800b48e506b52dbc11572f28346d5fd396",
+      "rmsDb": -17.61
+    },
+    {
+      "id": "wb-8",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Jetzt ich: Ich beschreibe einen Hund.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 2534,
+      "sizeBytes": 11649,
+      "hash": "sha256:a08b7e964654053fd28cadd11689b6a665f3704110c7d7f3b1999ca809b228d2",
+      "pcmSha256": "b4e295cfaecc19170d4ad6408954b6a999f55e7b0467f8579c524b97cb28c910",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "wb-9",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 211,
+        "lengthScale": 1.32
+      },
+      "textDe": "Einen Hund? Wie ist er denn?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 1704,
+      "sizeBytes": 8135,
+      "hash": "sha256:8a443d64a353f6300d00ad5d9ab88bbe334af4a5d14bc611c54ad6260011bb64",
+      "pcmSha256": "b795db80fdb86213aa9735904df4c3644e94253256be5a60b387f0ed40eca69a",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "wb-10",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Er ist alt, aber freundlich. Er liebt deinen Onkel.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 4171,
+      "sizeBytes": 18437,
+      "hash": "sha256:0bd60f87fa1985bc01caa7c6bc9c90a5f9cfc25a8ac0cb4fd13d6f7a613c308e",
+      "pcmSha256": "fec763000b84d7be905826ba249cdac1b1ceb172d14685b5a79145bb62d92d24",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "wb-11",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die Lösung ist leicht: Bruno!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 2312,
+      "sizeBytes": 10792,
+      "hash": "sha256:f8923a60d418630bbe900fa34a76a39ac78f56fc882b7f042421263f0b29daee",
+      "pcmSha256": "d49511c28e25793b487f3e960de6f38bd3b27be976bc17a4029e6f1aae4c952a",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "wb-12",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Nabil und Bruno sind beide lustig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 3428,
+      "sizeBytes": 15756,
+      "hash": "sha256:e326eb8aa42b479fa28bc0783432788e1cffd4738100a5c85c1efd534552c880",
+      "pcmSha256": "6d3570509c40263897d47cd73fa25417e864d0fb0edc527eb73eb73cb0ac3e37",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "wb-13",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 117,
+        "lengthScale": 1.32
+      },
+      "textDe": "Jetzt ein Foto. Wen beschreibe ich?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 3064,
+      "sizeBytes": 14334,
+      "hash": "sha256:0ca061580990b79313b901d61fec359304aa8633bf18723878e0f3c6d5b04f86",
+      "pcmSha256": "aa99b48171a491a233786796521825ca020a3d34f95ddab8d2af64b7e423b7be",
+      "rmsDb": -17.3
+    },
+    {
+      "id": "wb-14",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ist das eine Frau?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 1570,
+      "sizeBytes": 7263,
+      "hash": "sha256:cc5ca032c5b7e60d8b20b8eb761662a7ce7d5586be4d102f9a6e80a159a19b6d",
+      "pcmSha256": "e850f9075c4a1c9e7d3baa124475b32a973544e4a057121674b0e4421dcb3566",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "wb-15",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 154,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Sie ist alt, aber sehr schlau. Die Haare sind kurz.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 4280,
+      "sizeBytes": 19763,
+      "hash": "sha256:caffe9f0f1e2b06a05efafc9aa7ad7db3ea67def0bee9770c17bd5e34f9d2687",
+      "pcmSha256": "a868269619329007fb0f3a8f56e54a1cf5b0b0274c273bbe50eed19659a84208",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "wb-16",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 204,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ist das deine Oma?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 1175,
+      "sizeBytes": 5701,
+      "hash": "sha256:0edf28fcaddd400899d4a0dbca68eb49d9f0dbd8a04707150a4657c3d5bbe37f",
+      "pcmSha256": "10b696ed1efb110505686739e254b82c518c21e521cea93edaa8dc72d996bf78",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "wb-17",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Ich liebe meine Oma.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 2008,
+      "sizeBytes": 9461,
+      "hash": "sha256:bfdfb2d365c22de85e5b2873201b2e69aa753629fff1231a0d0f7863951ccc16",
+      "pcmSha256": "9633edc52fb62b0f2a7a2cc37cc357fe19140984202ee11400d9d1e9ca824803",
+      "rmsDb": -17.13
+    },
+    {
+      "id": "wb-18",
+      "file": "audio/scripts/a1-u4-d3-wen-beschreibe-ich/wb-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das Gesicht ist freundlich. Das Foto ist schön!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d3"
+      ],
+      "durationMs": 3637,
+      "sizeBytes": 16123,
+      "hash": "sha256:69bd51a46391453dc158508fb68a44243274b32bc8042c26f2c587da6d071ce5",
+      "pcmSha256": "593a3149bd0e654bab7fd8184a77404e234e3c7fcadcbd5d0513c3d6ba5f5f70",
+      "rmsDb": -17.14
     }
   ],
   "characterVoices": {

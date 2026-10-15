@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(807); // + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(809); // + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -345,6 +345,41 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 3 || l.id === "a1-u4-d1").flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u4-d3 (D138): «عندي أخٌ» مرفوع (لا مفعول) · «مَن» الثابتة · النصب العربي لكل الأسماء — بمبررات نحوية صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u4-d3")!;
+    const [haben, wen, alle] = u.zusammenfassung.warningCards;
+    expect(haben!.commonError.de).toBe("~~Ich habe ein Bruder.~~");
+    expect(haben!.correct.de).toBe("Ich habe einen Bruder.");
+    // «عندي أخٌ»: الأخ مبتدأ مؤخر مرفوع والملكية بحرف الجر — لا «عندي أخاً» (نصب خاطئ في العربية كان في البطاقة القديمة)
+    expect(haben!.whyArabicSpeakerFails).toContain("«عندي أخٌ»");
+    expect(haben!.whyArabicSpeakerFails).toContain("مبتدأ مرفوع لا مفعول");
+    expect(haben!.exercise.a).toBe("einen Sohn und eine Tochter");
+    expect(wen!.commonError.de).toBe("~~Wer beschreibst du?~~");
+    expect(wen!.correct.de).toBe("Wen beschreibst du?");
+    expect(wen!.whyArabicSpeakerFails).toContain("«مَن جاء؟» و«مَن رأيت؟»");
+    expect(alle!.commonError.de).toContain("~~Ich habe einen Schwester.~~");
+    expect(alle!.correct.de).toBe("Ich habe eine Schwester. · Ich beschreibe ein Foto.");
+    expect(alle!.whyArabicSpeakerFails).toContain("«أخاً» و«أختاً» و«صورةً»");
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: «عندي أخاً» (نصب لا تقوله العربية) · sehen قبل درسها (a1-u4-d4) · صفة منعوتة قبل قاعدتها (einen alten Vater — A2)
+    const all = JSON.stringify(u);
+    expect(all).not.toMatch(/عندي أخاً|siehst|sehe |alten Vater|lange Haare|schönes Foto/);
+    // الصفات بعد ist وحدها: لا نهاية صفة منعوتة في أي نص ألماني (التدريب · Quiz · البطاقات)
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(["haar", "schoen", "foto", "bild", "wen"].map(sample)).toEqual([
+      "Meine Haare sind lang.", "Das Foto ist sehr schön.", "Ich liebe das Foto.", "Ich beschreibe ein Bild.", "Wen beschreibst du?",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة: لا «Ich habe den Hund.» ولا «Wen liebt Bruno?» (صحيحتان بمعنى آخر)
+    const choiceTexts = [...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (Array.isArray((i as { choices?: unknown }).choices) ? ((i as { choices: string[] }).choices) : []));
+    expect(choiceTexts.filter((c) => /^(Ich habe den Hund\.|Wen liebt Bruno\?|Ich kenne die Lösung\.)$/.test(c))).toEqual([]);
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 3 || l.id === "a1-u4-d1" || l.id === "a1-u4-d2").flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["hund", "katze", "auto"]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
