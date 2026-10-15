@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(800); // + fertig · regnen · scheinen (نواة a1-u3-d4 — D134) + nächste · geschlossen · geöffnet (نواة a1-u3-d3 — D133) + der Dank · leicht · das Restaurant (نواة a1-u3-d2 — D132) + die Oma · das Essen (نواة a1-u3-d1 — D131؛ das Essen بمعرّف das-essen بجانب الفعل essen) + schlecht · also · die Gruppe (نواة a1-u2-d5 — D130) + lang · lange (نواة a1-u2-d4 — D128) + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
+    expect(ALL_WORDS.length).toBe(803); // + einmal · später · die Aufgabe (نواة a1-u3-d5 — D135) + fertig · regnen · scheinen (نواة a1-u3-d4 — D134) + nächste · geschlossen · geöffnet (نواة a1-u3-d3 — D133) + der Dank · leicht · das Restaurant (نواة a1-u3-d2 — D132) + die Oma · das Essen (نواة a1-u3-d1 — D131؛ das Essen بمعرّف das-essen بجانب الفعل essen) + schlecht · also · die Gruppe (نواة a1-u2-d5 — D130) + lang · lange (نواة a1-u2-d4 — D128) + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -299,6 +299,25 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 2 || ["a1-u3-d1", "a1-u3-d2", "a1-u3-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u3-d5 (D135): أرقام الهاتف والوقت — حوار كامل في البنود، الكلمات الثلاث في النواة، ومصائد جنس حقيقية", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u3-d5")!;
+    expect(u.praesentation.wordIds).toHaveLength(15);
+    expect(u.praesentation.wordIds).toEqual(expect.arrayContaining(["einmal", "spaeter", "aufgabe"]));
+    expect(u.praesentation.grammarArsenalIds).toEqual(["ars-hoeren-zahlen"]);
+    expect(u.warmup.cardIds).toEqual(["uhr", "zwanzig", "telefonnummer"]);
+    expect(u.zusammenfassung.warningCards).toHaveLength(3);
+    for (const card of u.zusammenfassung.warningCards) expect(card.whyArabicSpeakerFails).toContain("10‑ي");
+    const audioIds = u.uebung.stations.filter((s) => s.type === "listening" || s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.audioId)));
+    expect(audioIds.filter((id) => id.startsWith("h5-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 14 }, (_, i) => `h5-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("n5-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 7 }, (_, i) => `n5-${i + 1}`));
+    const practiceQuestions = new Set(u.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(u.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => practiceQuestions.has(q))).toBe(false);
+    // N-053: collocation المعروضة في NetworkLab لا تُسرّب فعل bekommen غير المدروس حتى اليوم.
+    expect(ALL_WORDS.find((w) => w.id === "anruf")!.kollocation).toMatchObject({ de: "Der Anruf kommt.", verb: "kommen" });
   });
 
   it("بطاقات الثقافة (Landeskunde): 12 بطاقة — كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {

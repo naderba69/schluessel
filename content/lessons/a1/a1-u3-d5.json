@@ -6,11 +6,12 @@
   "day": 5,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst Zahlen und Uhrzeiten verstehen, die man dir sagt.",
-    "ar": "تفهم الأرقام والأوقات المنطوقة"
+    "de": "Du verstehst eine Nummer und die Zeit. Du fragst: „Noch einmal, bitte!“",
+    "ar": "تفهم رقماً ووقتاً مسموعين، وتطلب الإعادة أو التمهّل عند الحاجة"
   },
   "canDoDaily": [
-    "يفهم رقماً هاتفياً ووقتاً منطوقين ويطلب التكرار عند الحاجة"
+    "يتعرّف على رقم هاتف مسموع، ويعيد الخانات بالترتيب ويطلب تكرارها عند الحاجة",
+    "يفهم وقتاً منطوقاً ويطلب الإعادة أو التمهّل بعبارة مهذبة"
   ],
   "warmup": {
     "cardIds": [
@@ -23,12 +24,12 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«مرة أخرى من فضلك» — ما العبارة الإصلاحية؟ (تخمين فقط)"
+          "de": "«مرة أخرى، من فضلك!» — أي عبارة تختار؟ (تخمين فقط)"
         },
         "choices": [
           "Noch einmal, bitte!",
-          "Noch mal Uhr!",
-          "Wieder Uhr!"
+          "Bis später!",
+          "Bitte leise sprechen!"
         ],
         "answer": "Noch einmal, bitte!",
         "revealNextSession": true
@@ -49,7 +50,10 @@
       "anruf",
       "antworten",
       "noch",
-      "mit"
+      "mit",
+      "einmal",
+      "spaeter",
+      "aufgabe"
     ],
     "grammarArsenalIds": [
       "ars-hoeren-zahlen"
@@ -58,76 +62,384 @@
       "story-a3-u3-s5"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "sp-st-initial",
+      "r-uvular",
+      "umlaut-o",
+      "ch-ach-laut"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أفهم هذا»؟",
-            "a": "Ich verstehe das."
+            "q": "«أسمع الرسالة» — Ich ___ die Nachricht.",
+            "a": "höre",
+            "why": "hören = يسمع/ينصت؛ Ich höre die Nachricht — ألتقط الصوت أولاً."
           },
           {
-            "q": "«سريع جداً! أبطأ من فضلك»؟",
-            "a": "Zu schnell! Langsamer, bitte."
+            "q": "«لا أفهم الرقم» — Ich ___ die Nummer nicht.",
+            "a": "verstehe",
+            "why": "verstehen = يفهم؛ هنا المشكلة في المعنى، لا في وصول الصوت إلى الأذن."
+          },
+          {
+            "q": "«المكالمة الهاتفية» مع الأداة: der ___.",
+            "a": "Anruf",
+            "why": "der Anruf مذكر؛ لا ننقل تأنيث كلمة «المكالمة» العربية إلى الاسم الألماني."
+          },
+          {
+            "q": "«الأذن» — das ___.",
+            "a": "Ohr",
+            "why": "das Ohr محايد في الألمانية، مع أن كلمة «أذن» مؤنثة بالعربية."
+          },
+          {
+            "q": "«مرة أخرى» — Noch ___, bitte!",
+            "a": "einmal",
+            "why": "noch einmal قطعة لطلب الإعادة: مرةً أخرى — وeinmal كلمة واحدة."
+          },
+          {
+            "q": "«هذه هي المهمة» — Das ist die ___.",
+            "a": "Aufgabe",
+            "why": "die Aufgabe = المهمة/التمرين؛ اسم مؤنث مثل «مهمة» بالعربية."
+          },
+          {
+            "q": "«أجيب لاحقاً» — Ich antworte ___.",
+            "a": "später",
+            "why": "später يحدد أن الإجابة ستكون في وقت لاحق؛ antworte صيغة Ich من antworten."
+          },
+          {
+            "q": "«مع Ayşe» — ___ Ayşe.",
+            "a": "mit",
+            "why": "mit تعني «مع»؛ هنا تأتي مباشرةً قبل اسم Ayşe."
+          },
+          {
+            "q": "«الصوت مرتفع» — Die Stimme ist ___.",
+            "a": "laut",
+            "why": "laut = مرتفع الصوت؛ وهي عكس leise «منخفض/هادئ الصوت»."
           }
         ],
         "interleavedWith": [
-          "langsam",
-          "wiederholen"
+          "uhr",
+          "zwanzig",
+          "telefonnummer"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«مرة أخرى من فضلك»؟",
-            "a": "Noch einmal, bitte!"
+            "audioId": "h5-1",
+            "speakText": "Yusuf, hast du die Aufgabe?",
+            "q": "استمع: ماذا تسأل Ayşe يوسف؟",
+            "choices": [
+              "هل عندك المهمة؟",
+              "هل تسمع الرقم؟",
+              "هل حان موعد الساعة؟"
+            ],
+            "a": "هل عندك المهمة؟",
+            "why": "hast du die Aufgabe? = هل عندك المهمة؟ — تسأل Ayşe عن تمرين الدورة."
           },
           {
-            "q": "«الراديو مرتفع جداً»؟",
-            "a": "Das Radio ist zu laut."
+            "audioId": "h5-3",
+            "speakText": "Die Stimme ist leise.",
+            "q": "استمع: كيف تصف Ayşe الصوت؟",
+            "choices": [
+              "منخفض/هادئ",
+              "مرتفع",
+              "سريع"
+            ],
+            "a": "منخفض/هادئ",
+            "why": "leise تعني أن مستوى الصوت منخفض، وليست وصفاً لسرعة الكلام."
+          },
+          {
+            "audioId": "h5-4",
+            "speakText": "Ich verstehe die Nummer nicht.",
+            "q": "استمع: ما الذي لا يفهمه يوسف؟",
+            "choices": [
+              "الرقم",
+              "الوقت",
+              "المهمة"
+            ],
+            "a": "الرقم",
+            "why": "يقول die Nummer nicht — لم يفهم الرقم في الرسالة."
+          },
+          {
+            "audioId": "h5-5",
+            "speakText": "Noch einmal, bitte!",
+            "q": "استمع: ما العبارة التي يطلب بها يوسف الإعادة؟",
+            "choices": [
+              "Noch einmal, bitte!",
+              "Bis später!",
+              "Bitte leise sprechen!"
+            ],
+            "a": "Noch einmal, bitte!",
+            "why": "Noch einmal, bitte! طلب مهذب لإعادة ما قيل، لا وداع ولا طلب خفض الصوت."
+          },
+          {
+            "audioId": "h5-6",
+            "speakText": "Null, fünf, zwei, drei, neun.",
+            "q": "استمع إلى تسلسل تدريبي: ما الخانات بالترتيب؟",
+            "choices": [
+              "05239",
+              "05293",
+              "05234"
+            ],
+            "a": "05239",
+            "why": "null · fünf · zwei · drei · neun = 0 · 5 · 2 · 3 · 9؛ نحافظ على ترتيب كل خانة."
+          },
+          {
+            "audioId": "h5-7",
+            "speakText": "Bitte nicht so schnell!",
+            "q": "استمع: ماذا يطلب يوسف؟",
+            "choices": [
+              "ألا يكون الكلام بهذه السرعة",
+              "أن يُقال الرقم مرة واحدة فقط",
+              "أن يكون الصوت أعلى"
+            ],
+            "a": "ألا يكون الكلام بهذه السرعة",
+            "why": "nicht so schnell = ليس بهذه السرعة؛ يطلب تمهّلاً من دون لوم."
+          },
+          {
+            "audioId": "h5-10",
+            "speakText": "Ja, genau!",
+            "q": "استمع: كيف تؤكد Ayşe أن الرقم صحيح؟",
+            "choices": [
+              "Ja, genau!",
+              "Noch einmal!",
+              "Ich verstehe nicht."
+            ],
+            "a": "Ja, genau!",
+            "why": "Ja, genau! = نعم، صحيح تماماً — تأكيد قصير بعد إعادة الرقم."
+          },
+          {
+            "audioId": "h5-11",
+            "speakText": "Und die Zeit? Um halb acht?",
+            "q": "استمع: أي وقت يقترح يوسف؟",
+            "choices": [
+              "7:30",
+              "8:30",
+              "7:15"
+            ],
+            "a": "7:30",
+            "why": "halb acht تعني 7:30، لأن halb تتجه إلى الساعة التالية — تذكير بدرس الساعة."
+          },
+          {
+            "audioId": "n5-1",
+            "speakText": "Null, vier, eins, sieben, zwei.",
+            "q": "ما تسلسل الخانات الذي تسمعه؟",
+            "choices": [
+              "04172",
+              "04712",
+              "04127"
+            ],
+            "a": "04172",
+            "why": "نحوّل كل كلمة عددية إلى خانة ونحافظ على ترتيبها: 0 · 4 · 1 · 7 · 2."
+          },
+          {
+            "audioId": "n5-2",
+            "speakText": "Null, vier, eins, sieben, acht.",
+            "q": "ما الخانة الأخيرة في هذا التسلسل؟",
+            "choices": [
+              "8",
+              "2",
+              "7"
+            ],
+            "a": "8",
+            "why": "آخر كلمة هي acht، أي الخانة 8؛ لا نخلطها بنهاية التسلسل السابق."
+          },
+          {
+            "audioId": "n5-3",
+            "speakText": "Zwei, acht, null, fünf, eins.",
+            "q": "أي تسلسل رقمي يطابق ما سمعته؟",
+            "choices": [
+              "28051",
+              "28501",
+              "20851"
+            ],
+            "a": "28051",
+            "why": "zwei · acht · null · fünf · eins تقابل 2 · 8 · 0 · 5 · 1 بالترتيب."
+          },
+          {
+            "audioId": "n5-4",
+            "speakText": "Neun, drei, null, sechs, vier.",
+            "q": "ما الرقم الذي تسمعه؟",
+            "choices": [
+              "93064",
+              "93604",
+              "90364"
+            ],
+            "a": "93064",
+            "why": "نحوّل الكلمات إلى خانات بالترتيب: neun · drei · null · sechs · vier = 9 · 3 · 0 · 6 · 4."
+          },
+          {
+            "audioId": "n5-5",
+            "speakText": "Um Viertel nach sieben.",
+            "q": "كم الوقت؟",
+            "choices": [
+              "7:15",
+              "7:45",
+              "6:15"
+            ],
+            "a": "7:15",
+            "why": "Viertel nach sieben = السابعة والربع، أي 7:15."
+          },
+          {
+            "audioId": "n5-6",
+            "speakText": "Um halb neun.",
+            "q": "كم الوقت؟",
+            "choices": [
+              "8:30",
+              "9:30",
+              "8:15"
+            ],
+            "a": "8:30",
+            "why": "halb neun = الثامنة والنصف، لا التاسعة والنصف."
+          },
+          {
+            "audioId": "n5-7",
+            "speakText": "Neunzehn Uhr fünfzehn.",
+            "q": "ما الوقت الرسمي الذي تسمعه؟",
+            "choices": [
+              "19:15",
+              "19:50",
+              "15:19"
+            ],
+            "a": "19:15",
+            "why": "neunzehn Uhr fünfzehn = 19:15 بنظام الأربع والعشرين ساعة."
           }
         ],
         "interleavedWith": [
-          "frueh",
-          "spaet"
+          "halb",
+          "uhr",
+          "telefonnummer"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«أجيبك لاحقاً» — مَن نجيب؟",
-            "a": "Ich antworte dir. (Dativ: dir)"
+            "tokens": [
+              "Ayşe",
+              "mit",
+              "hier.",
+              "Ich",
+              "bin"
+            ],
+            "a": "Ich bin mit Ayşe hier.",
+            "why": "Ich bin هي بداية الجملة؛ mit Ayşe يضيف معنى «مع Ayşe»، ثم hier."
           },
           {
-            "q": "«عندي مكالمة»؟",
-            "a": "Ich habe einen Anruf."
+            "tokens": [
+              "jetzt.",
+              "kommt",
+              "Der",
+              "Anruf"
+            ],
+            "a": "Der Anruf kommt jetzt.",
+            "why": "Der Anruf هو الفاعل، ثم يأتي الفعل kommt، وبعده jetzt."
+          },
+          {
+            "tokens": [
+              "hier.",
+              "ist",
+              "Die",
+              "Aufgabe"
+            ],
+            "a": "Die Aufgabe ist hier.",
+            "why": "Die Aufgabe هي الفاعل؛ يأتي فعل sein ist بعدها، ثم hier."
+          },
+          {
+            "tokens": [
+              "die",
+              "hört",
+              "Das",
+              "Stimme.",
+              "Ohr"
+            ],
+            "a": "Das Ohr hört die Stimme.",
+            "why": "Das Ohr هو الفاعل؛ hört هو الفعل، وdie Stimme ما نسمعه."
+          },
+          {
+            "tokens": [
+              "später.",
+              "antworte",
+              "Ich"
+            ],
+            "a": "Ich antworte später.",
+            "why": "Ich يأتي أولاً ثم antworte؛ ويحدد später أن الرد سيكون لاحقاً."
           }
         ],
         "interleavedWith": [
-          "minute",
-          "telefon"
+          "hier",
+          "sein",
+          "uhr"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "h5-2",
+            "speakText": "Ja. Ich höre die Nachricht.",
+            "a": "Ja. Ich höre die Nachricht.",
+            "why": "اكتب ما تسمع حرفياً؛ Nachricht اسم يبدأ بحرف كبير."
+          },
+          {
+            "audioId": "h5-8",
+            "speakText": "Langsam: null, fünf, zwei, drei, neun.",
+            "a": "Langsam: null, fünf, zwei, drei, neun.",
+            "why": "بعد النقطتين تأتي الخانات كما نُطقت وبالترتيب؛ Langsam تبدأ بحرف كبير."
+          },
+          {
+            "audioId": "h5-9",
+            "speakText": "Null, fünf, zwei, drei, neun?",
+            "a": "Null, fünf, zwei, drei, neun?",
+            "why": "أعد كتابة الخانات بالترتيب نفسه، مع علامة السؤال في النهاية."
+          },
+          {
+            "audioId": "h5-12",
+            "speakText": "Ja, sieben Uhr dreißig.",
+            "a": "Ja, sieben Uhr dreißig.",
+            "why": "Uhr اسم فيُكتب بحرف كبير؛ dreißig تحتفظ بـß."
+          },
+          {
+            "audioId": "h5-13",
+            "speakText": "Jetzt verstehe ich die Aufgabe.",
+            "a": "Jetzt verstehe ich die Aufgabe.",
+            "why": "Jetzt تبدأ بحرف كبير، وAufgabe اسم فيبدأ بحرف كبير أيضاً."
+          },
+          {
+            "audioId": "h5-14",
+            "speakText": "Bis später, Yusuf!",
+            "a": "Bis später, Yusuf!",
+            "why": "später ظرف بحرف صغير؛ وYusuf اسم علم يبدأ بحرف كبير."
+          }
+        ],
+        "interleavedWith": [
+          "zwanzig",
+          "halb",
+          "nummer"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Telefonnummer und Uhrzeit verstehen und nachfragen",
-        "ar": "فهم رقم هاتف ووقت منطوقين والسؤال عنهما"
+        "de": "Verstehst du die Nummer? — Noch einmal, bitte!",
+        "ar": "يفهم رقماً منطوقاً، ويطلب إعادته عند الحاجة بعبارة مهذبة"
       },
       "situation": {
-        "de": "Am Telefon: Nummer und Termin aufschreiben",
-        "ar": "بالهاتف: كتابة رقم وموعد"
+        "de": "Am Telefon: eine Nummer und die Zeit verstehen",
+        "ar": "تمرين ثنائي على سماع رقم ووقت عبر مكالمة تدريبية"
       },
       "successCriteria": [
-        "يفهم رقم هاتف منطوقاً بطلب إعادة عند الحاجة ويكتب وقتاً منطوقاً صحيحاً"
+        "يحدد رقم الهاتف التدريبي الذي سمعه بالترتيب الصحيح، ويعيده شفهياً للتأكد",
+        "يتعرف على الوقت المسموع ويطلب الإعادة أو التمهّل بلطف"
       ]
     }
   },
@@ -142,20 +454,64 @@
       {
         "items": [
           {
-            "q": "«لا أفهم هذا»؟",
-            "a": "Ich verstehe das nicht."
+            "q": "„Anruf“ bedeutet …",
+            "a": "مكالمة هاتفية",
+            "choices": [
+              "رسالة",
+              "مكالمة هاتفية",
+              "مهمة"
+            ],
+            "why": "der Anruf هو المكالمة الهاتفية، لا الرسالة ولا المهمة."
           },
           {
-            "q": "«مرة أخرى من فضلك»؟",
-            "a": "Noch einmal, bitte!"
+            "q": "später = ؟",
+            "a": "لاحقاً",
+            "choices": [
+              "الآن",
+              "لاحقاً",
+              "مرة أخرى"
+            ],
+            "why": "später تعني لاحقاً؛ «الآن» هي jetzt."
           },
           {
-            "q": "«الصوت» (البشري)؟",
-            "a": "die Stimme"
+            "q": "„die Aufgabe“ في درس الدورة تعني …",
+            "a": "المهمة/التمرين",
+            "choices": [
+              "المهمة/التمرين",
+              "المكالمة",
+              "الأذن"
+            ],
+            "why": "die Aufgabe هي المهمة أو التمرين الذي يعملان عليه."
           },
           {
-            "q": "«أستمع إلى الأخبار»؟",
-            "a": "Ich höre die Nachrichten."
+            "q": "„das Ohr“ يعني …",
+            "a": "الأذن",
+            "choices": [
+              "الصوت البشري",
+              "الرسالة",
+              "الأذن"
+            ],
+            "why": "das Ohr هو عضو السمع: الأذن."
+          },
+          {
+            "q": "„leise“ يصف صوتاً …",
+            "a": "منخفضاً/هادئاً",
+            "choices": [
+              "سريعاً",
+              "منخفضاً/هادئاً",
+              "مرتفعاً"
+            ],
+            "why": "leise = منخفض/هادئ الصوت؛ لا تصف سرعة الكلام."
+          },
+          {
+            "q": "„einmal“ تعني …",
+            "a": "مرة",
+            "choices": [
+              "مكالمة",
+              "مرة",
+              "وقتاً"
+            ],
+            "why": "einmal = مرة؛ وفي العبارة noch einmal تعني «مرة أخرى»."
           }
         ],
         "passingScore": 0.75
@@ -163,20 +519,64 @@
       {
         "items": [
           {
-            "q": "«أجيبك لاحقاً»؟",
-            "a": "Ich antworte dir später."
+            "q": "„die Nachricht“ تعني …",
+            "a": "رسالة/خبر",
+            "choices": [
+              "رسالة/خبر",
+              "مهمة",
+              "أذن"
+            ],
+            "why": "die Nachricht قد تعني رسالة أو خبراً، وهنا رسالة صوتية."
           },
           {
-            "q": "«مرتفع» و«هادئ»؟",
-            "a": "laut / leise"
+            "q": "„die Stimme“ هي …",
+            "a": "الصوت البشري",
+            "choices": [
+              "الرقم",
+              "الصوت البشري",
+              "الأذن"
+            ],
+            "why": "die Stimme هي الصوت البشري، وليست الأذن نفسها."
           },
           {
-            "q": "«عندي مكالمة»؟",
-            "a": "Ich habe einen Anruf."
+            "q": "„antworten“ تعني …",
+            "a": "يجيب/يردّ",
+            "choices": [
+              "يسمع",
+              "يجيب/يردّ",
+              "يطلب الإعادة"
+            ],
+            "why": "antworten = يجيب أو يردّ؛ أما يسمع فهي hören."
           },
           {
-            "q": "«بالهاتف من فضلك» — mit مع أي حالة؟",
-            "a": "Dativ: mit dem Handy"
+            "q": "„schnell“ يعني …",
+            "a": "سريع",
+            "choices": [
+              "سريع",
+              "هادئ الصوت",
+              "لاحقاً"
+            ],
+            "why": "schnell يصف السرعة: سريع؛ leise يصف انخفاض الصوت."
+          },
+          {
+            "q": "„laut“ يصف صوتاً …",
+            "a": "مرتفعاً",
+            "choices": [
+              "منخفضاً",
+              "مرتفعاً",
+              "لاحقاً"
+            ],
+            "why": "laut = مرتفع الصوت، وهو عكس leise."
+          },
+          {
+            "q": "„mit Ayşe“ تعني …",
+            "a": "مع Ayşe",
+            "choices": [
+              "بعد Ayşe",
+              "مع Ayşe",
+              "من Ayşe"
+            ],
+            "why": "mit تعني «مع»؛ وAyşe اسم الشخص الذي يشارك يوسف التمرين."
           }
         ],
         "passingScore": 0.75
@@ -184,20 +584,64 @@
       {
         "items": [
           {
-            "q": "«الأذن»؟",
-            "a": "das Ohr"
+            "q": "hören = …",
+            "a": "يسمع/ينصت",
+            "choices": [
+              "يفهم",
+              "يسمع/ينصت",
+              "يردّ"
+            ],
+            "why": "hören يعني يسمع/ينصت؛ فهم المعنى هو verstehen."
           },
           {
-            "q": "«سريع»؟",
-            "a": "schnell"
+            "q": "verstehen = …",
+            "a": "يفهم",
+            "choices": [
+              "يجيب",
+              "يفهم",
+              "يسمع فقط"
+            ],
+            "why": "verstehen يعني يفهم ما يسمعه، لا مجرد وصول الصوت."
           },
           {
-            "q": "verstehen — منفصل أم ملتصق؟",
-            "a": "ملتصق (ver- لا تنفصل): Ich verstehe."
+            "q": "أي عبارة تعني «مرة أخرى، من فضلك»؟",
+            "a": "Noch einmal, bitte!",
+            "choices": [
+              "Noch einmal, bitte!",
+              "Bis später!",
+              "Die Stimme ist leise."
+            ],
+            "why": "Noch einmal, bitte! طلب الإعادة؛ Bis später وداع، وDie Stimme ist leise وصف للصوت."
           },
           {
-            "q": "«تحدثوا بهدوء»؟",
-            "a": "Bitte leise sprechen!"
+            "q": "„halb acht“ تساوي …",
+            "a": "7:30",
+            "choices": [
+              "8:30",
+              "7:30",
+              "7:15"
+            ],
+            "why": "halb acht = 7:30، أي نصف باتجاه الثامنة."
+          },
+          {
+            "q": "ما عكس laut؟",
+            "a": "leise",
+            "choices": [
+              "schnell",
+              "leise",
+              "später"
+            ],
+            "why": "leise هو عكس laut؛ أما schnell فيتعلق بالسرعة وspäter بالوقت."
+          },
+          {
+            "q": "„später“ مقابل „jetzt“: أيهما يعني «في وقت لاحق»؟",
+            "a": "später",
+            "choices": [
+              "jetzt",
+              "später",
+              "einmal"
+            ],
+            "why": "später تعني لاحقاً، أما jetzt فتعني الآن."
           }
         ],
         "passingScore": 0.75
@@ -206,53 +650,63 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Du kannst jetzt zuhören und nachfragen: „Noch einmal, bitte!“ — und verstehen, was man dir sagt. Die Ohren sind trainiert!",
-      "ar": "الآن تستطيع الإنصات والسؤال: «مرة أخرى من فضلك!» — وتفهم ما يُقال لك. أذناك مدرّبتان!"
+      "de": "Noch einmal, bitte! · Bitte nicht so schnell! · Null, fünf, zwei, drei, neun. · Um halb acht? — Sieben Uhr dreißig.",
+      "ar": "اسمع الخانات بالترتيب؛ اطلب الإعادة أو التمهّل بأدب؛ وميّز بين سماع الرسالة وفهمها. رقم الهاتف في هذه الحصة خيالي للتدريب فقط."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich stehe das nicht verstehen.~~ / ~~verstehe auf~~",
-          "ar": "ver- ملتصقة (غير منفصلة)"
+          "de": "~~die Anruf~~",
+          "ar": "«مكالمة» مؤنثة بالعربية"
         },
-        "whyArabicSpeakerFails": "الألمانية المنفصلة (aufstehen) اعتادها المتعلّم فيظن ver- كذلك — لكن ver-/be-/ent- ملتصقة دائماً (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "لأن «المكالمة» مؤنثة بالعربية قد ينقل المتعلم die إلى الاسم الألماني؛ لكن Anruf مذكر لا يتبع جنس ترجمته: der Anruf (خريطة التداخل 10‑ي).",
         "correct": {
-          "de": "Ich verstehe das nicht.",
-          "ar": "لا أفهم هذا."
+          "de": "der Anruf",
+          "ar": "مكالمة هاتفية"
         },
         "exercise": {
-          "q": "صحّح: ~~Ich verstehe auf das nicht.~~",
-          "a": "Ich verstehe das nicht."
+          "q": "اختر الأداة: ___ Anruf",
+          "choices": [
+            "der",
+            "die",
+            "das"
+          ],
+          "a": "der"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich antworte dich.~~",
-          "ar": "antworten + Dativ (dir/mir)"
+          "de": "~~die Ohr~~",
+          "ar": "«أذن» مؤنثة بالعربية"
         },
-        "whyArabicSpeakerFails": "«أجيبك» مفعول به مباشر بالعربية؛ الألماني antworten يأخذ Dativ: antworte dir/dem Arzt (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أذن» مؤنثة في العربية، لكن das Ohr محايد في الألمانية؛ جنس الاسم لا يُترجم معناه (خريطة التداخل 10‑ي).",
         "correct": {
-          "de": "Ich antworte dir.",
-          "ar": "أجيبك (لك)."
+          "de": "das Ohr",
+          "ar": "الأذن"
         },
         "exercise": {
-          "q": "صحّح: ~~Antworte mich!~~",
-          "a": "Antworte mir!"
+          "q": "أكمل الأداة: ___ Ohr",
+          "choices": [
+            "das",
+            "die",
+            "der"
+          ],
+          "a": "das"
         }
       },
       {
         "commonError": {
-          "de": "~~mit das Handy~~ / ~~mit den Handy~~",
-          "ar": "mit + Dativ دائماً"
+          "de": "~~Der Stimme ist leise.~~",
+          "ar": "«الصوت» مذكر بالعربية"
         },
-        "whyArabicSpeakerFails": "«مع» بلا تغيير في العربية؛ الألماني mit يجرّ دائماً: mit dem Handy / mit der Karte (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«الصوت» مذكر بالعربية، لكن الاسم الألماني للصوت البشري die Stimme مؤنث؛ وفي هذه الجملة هي الفاعل، فنقول Die Stimme ist leise (خريطة التداخل 10‑ي).",
         "correct": {
-          "de": "mit dem Handy",
-          "ar": "بالهاتف (mit + Dativ)"
+          "de": "Die Stimme ist leise.",
+          "ar": "الصوت هادئ."
         },
         "exercise": {
-          "q": "أكمل: mit ___ Karte (die Karte)",
-          "a": "mit der Karte"
+          "q": "اختر الجملة الصحيحة: Der Stimme ist leise. أم Die Stimme ist leise?",
+          "a": "Die Stimme ist leise."
         }
       }
     ],
@@ -268,19 +722,18 @@
       "anruf",
       "antworten",
       "noch",
-      "mit"
+      "mit",
+      "einmal",
+      "spaeter",
+      "aufgabe"
     ]
   },
   "gReferences": {
-    "duden": [
-      "https://www.duden.de/rechtschreibung/verstehen",
-      "https://www.duden.de/rechtschreibung/antworten",
-      "https://www.duden.de/rechtschreibung/h%C3%B6ren"
-    ],
-    "wiktionary": [
-      "https://de.wiktionary.org/wiki/verstehen"
-    ],
-    "goethe": []
+    "duden": [],
+    "wiktionary": [],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-hoeren-zahlen"
@@ -297,14 +750,29 @@
     "word-anruf",
     "word-antworten",
     "word-noch",
-    "word-mit"
+    "word-mit",
+    "word-einmal",
+    "word-spaeter",
+    "word-aufgabe"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen & Uhrzeit) — Hören: Zahlen & Uhrzeit",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen & Uhrzeit) — Hören: Zahlen und Uhrzeiten",
     "goetheWordListOverlap": [
       "hoeren",
-      "verstehen"
+      "verstehen",
+      "schnell",
+      "laut",
+      "leise",
+      "ohr",
+      "nachricht",
+      "anruf",
+      "antworten",
+      "noch",
+      "mit",
+      "einmal",
+      "spaeter",
+      "aufgabe"
     ]
   }
 }

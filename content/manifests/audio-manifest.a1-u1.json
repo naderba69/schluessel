@@ -16009,6 +16009,66 @@
       "rmsDb": -17.06
     },
     {
+      "id": "word-einmal",
+      "file": "words/audio/de-DE/word-einmal.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "einmal.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 1129,
+      "sizeBytes": 5096,
+      "hash": "sha256:bfce77d869a246cd8d8600360c918c2be838606aa706467b8d1eba12a7aca204",
+      "pcmSha256": "528920aab12bfca2a777763a9c67f510ba55228380ebf42fde4660a523886930",
+      "rmsDb": -17
+    },
+    {
+      "id": "word-spaeter",
+      "file": "words/audio/de-DE/word-spaeter.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "später.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 897,
+      "sizeBytes": 4281,
+      "hash": "sha256:2cb6d70fca67ea306f861b588321993cafd811ff1fdc2aca44828b86697bc0d8",
+      "pcmSha256": "8f4013f1ee135a7ea50a37ac179c05e7509e8f38717a569db98eae0a90ccd52e",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "word-aufgabe",
+      "file": "words/audio/de-DE/word-aufgabe.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Aufgabe.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 1280,
+      "sizeBytes": 5672,
+      "hash": "sha256:61d5ef0c481fb0a67e67eb83287c09f5294cc6395baa548ae437b0145a4e862d",
+      "pcmSha256": "0a62a45de28255bb15430374289accbf0d1be80b8637e5fe915f3650040f666f",
+      "rmsDb": -17.08
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -21671,6 +21731,468 @@
       "sizeBytes": 8653,
       "hash": "sha256:b4e54dce13b43efc7587b93f5a71787d3c2464ed3474f77719c46cc0ae5750a7",
       "pcmSha256": "7665ee839d40126f42d1344d5263a233ab11f87b766bf949f481eec791800da8",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "h5-1",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-1.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 104,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, hast du die Aufgabe?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 2872,
+      "sizeBytes": 13552,
+      "hash": "sha256:38cb9680980c07eb2f764770e26ac256cb6feab64ec84a767b75fe8fa8d6ec0f",
+      "pcmSha256": "651616b17dc46f70043da57a968752d39eecf386adc2ccf5499dd131486756db",
+      "rmsDb": -17.42
+    },
+    {
+      "id": "h5-2",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Ich höre die Nachricht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 2232,
+      "sizeBytes": 10242,
+      "hash": "sha256:b2e64857597aec5f32199bdbd73a13e5559b8a2ca9480c40ab86c61ce5338feb",
+      "pcmSha256": "79554843d4ed3f6bb2a2b15b1e1f197a17d76a614976fce12b11cb4985b29eca",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "h5-3",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-3.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die Stimme ist leise.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 1704,
+      "sizeBytes": 8089,
+      "hash": "sha256:a7dd0eeaf052fc66ea03624094009e3764b3f83eb494e57f121b9662b3c7b03a",
+      "pcmSha256": "045ea179ef6b8c6b6e7ab770dd500acc7f0c2701433e9660307557340aeab573",
+      "rmsDb": -17.43
+    },
+    {
+      "id": "h5-4",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 180,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich verstehe die Nummer nicht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 1663,
+      "sizeBytes": 7773,
+      "hash": "sha256:53afa86a97c8108d332e14d3ecae57a8a80cd261b1d9ad561cf440d5bba2ef60",
+      "pcmSha256": "568eb895f6f88a689c74b0d6374c66c3755a177eca27dac93648ef3885a18eb0",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "h5-5",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 113,
+        "lengthScale": 1.32
+      },
+      "textDe": "Noch einmal, bitte!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 1593,
+      "sizeBytes": 7478,
+      "hash": "sha256:6e9145875a2e4393749ae819f9cf10445e9dba3b7c43ed403503fca277e53581",
+      "pcmSha256": "af927f90752a5a387c7330579592426063f1d00f1116f2133ae3f66a5ae482dc",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "h5-6",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-6.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 99,
+        "lengthScale": 1.32
+      },
+      "textDe": "Null, fünf, zwei, drei, neun.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 3016,
+      "sizeBytes": 14144,
+      "hash": "sha256:64abfa6e6e5da3424f168a2c2ee370e233a6cb30e8a5167cb78f16985112e25f",
+      "pcmSha256": "70402d30ee97ced21b59b480466451298233a611de72598d628169b8f995541a",
+      "rmsDb": -17.46
+    },
+    {
+      "id": "h5-7",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 173,
+        "lengthScale": 1.32
+      },
+      "textDe": "Bitte nicht so schnell!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 1384,
+      "sizeBytes": 6756,
+      "hash": "sha256:777f0e2785299e513af841124fb711f5c6521aa6e0c5004ca114fc3b5506dad7",
+      "pcmSha256": "637688e914d75173911c86481e86e75f88e206ca3591d0728785e622335b4d0d",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "h5-8",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-8.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 113,
+        "lengthScale": 1.32
+      },
+      "textDe": "Langsam: null, fünf, zwei, drei, neun.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 3176,
+      "sizeBytes": 14899,
+      "hash": "sha256:fb7ee9cd428479f0922baf4a03eae416847ff5821c719dc2934cdf2622b67ade",
+      "pcmSha256": "d3825c72b1e051c4f413389a8be7b90675652c3f7a801c04fb48993a40c1d515",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "h5-9",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 74,
+        "lengthScale": 1.32
+      },
+      "textDe": "Null, fünf, zwei, drei, neun?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 4054,
+      "sizeBytes": 17855,
+      "hash": "sha256:0401e18393813883235258c358ba44f8e310485b760de8d6f0156a2d5284d975",
+      "pcmSha256": "ea9849a53f7094ee10204e3f0778cb5e34b0b80f5ad4c76f8080ba540a47d7d6",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "h5-10",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-10.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 93,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, genau!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 1288,
+      "sizeBytes": 6452,
+      "hash": "sha256:16cc5e0850db7aa4b823723cbb2276022df70b6f0f935ddc11a1c8f0d99a000d",
+      "pcmSha256": "2f80eba0b568fb1a7e4cf7cedf2091095d842649b775fb69cf3c4fd945eeb718",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "h5-11",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Zeit? Um halb acht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 2835,
+      "sizeBytes": 12725,
+      "hash": "sha256:3d360e321a0e2842f828974ec74e86b1c858da3b7edd47f0c68478d59edbccf2",
+      "pcmSha256": "7551351f35732abd401f023161dae5fd5bfea33a6fcf8d65f2c4b51074cd02de",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "h5-12",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-12.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 86,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, sieben Uhr dreißig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 2776,
+      "sizeBytes": 13125,
+      "hash": "sha256:591fb20f69f29a8294f29291dc513be4489f078a774273ba5e430df35bff314a",
+      "pcmSha256": "796d3c9ac379c14406cd660359510edd204a31efa41361c888ddb65551be61f6",
+      "rmsDb": -17.44
+    },
+    {
+      "id": "h5-13",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 146,
+        "lengthScale": 1.32
+      },
+      "textDe": "Jetzt verstehe ich die Aufgabe.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 2058,
+      "sizeBytes": 9614,
+      "hash": "sha256:e9d0bf57915d41804516f9c1603a262ce7ee1cb8d47c63a69ee46aafc4ba6068",
+      "pcmSha256": "0ae95efcfa7c17fdd24123ff11dbf35cdb10f7212f4e5bb4d0fc22193a45f020",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "h5-14",
+      "file": "audio/scripts/a1-u3-d5-am-telefon/h5-14.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 94,
+        "lengthScale": 1.32
+      },
+      "textDe": "Bis später, Yusuf!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 1912,
+      "sizeBytes": 9137,
+      "hash": "sha256:c062ddcd9ca6766f1384ae9f11484730e58b0bd2928a652b84c36aad0c314798",
+      "pcmSha256": "a57145ab97d23fe3ec0ee9141768010a6cc8a612f6856dd5b50b5a1d13899ae2",
+      "rmsDb": -17.54
+    },
+    {
+      "id": "n5-1",
+      "file": "audio/scripts/a1-u3-d5-zahlen-und-zeiten/n5-1.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 77,
+        "lengthScale": 1.32
+      },
+      "textDe": "Null, vier, eins, sieben, zwei.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 3904,
+      "sizeBytes": 17456,
+      "hash": "sha256:5b6bb62494d7c9b58eaa205bb395dad02adfe09ce3c94997735be2cf4c637f9a",
+      "pcmSha256": "bc77dd3976b1445770d295b284fa92a68d0731d5b9cb6e3b06013f801d859434",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "n5-2",
+      "file": "audio/scripts/a1-u3-d5-zahlen-und-zeiten/n5-2.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 83,
+        "lengthScale": 1.32
+      },
+      "textDe": "Null, vier, eins, sieben, acht.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 3613,
+      "sizeBytes": 16164,
+      "hash": "sha256:67b90a1f0585e0fd0612ea4efd0181603f614d394e054708b94df02848487bb8",
+      "pcmSha256": "3839b75fadb653da35cc8a98d19e0c6bfb80a8e009a301181978b282c027f530",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "n5-3",
+      "file": "audio/scripts/a1-u3-d5-zahlen-und-zeiten/n5-3.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 73,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zwei, acht, null, fünf, eins.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 4113,
+      "sizeBytes": 17776,
+      "hash": "sha256:9a14e0e9ee01116260f54bfcdcb77890039932abded2bcee6b5588a7999bdc56",
+      "pcmSha256": "f90127b936746a4ccf33dea08f238a074b3b54eccbdcc90a67fbac51ada1e706",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "n5-4",
+      "file": "audio/scripts/a1-u3-d5-zahlen-und-zeiten/n5-4.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 73,
+        "lengthScale": 1.32
+      },
+      "textDe": "Neun, drei, null, sechs, vier.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 4124,
+      "sizeBytes": 18067,
+      "hash": "sha256:c5745748e710a65e9e439b10da9e649759599425c0fecf9b1b485cf499608738",
+      "pcmSha256": "bf058a229e20671cbbd98a2ade74694998791edd48a52eeb3d6803a2d5a6a5c5",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "n5-5",
+      "file": "audio/scripts/a1-u3-d5-zahlen-und-zeiten/n5-5.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Um Viertel nach sieben.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 1837,
+      "sizeBytes": 7998,
+      "hash": "sha256:5a6236aaf4b6cb713dfccf990d7509989ea7a37fe574f7f8ced0387121a47442",
+      "pcmSha256": "795a6e2d79843e6d983661f59d96f71acb564baeeeff09e281ba0b290258acdf",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "n5-6",
+      "file": "audio/scripts/a1-u3-d5-zahlen-und-zeiten/n5-6.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Um halb neun.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 1210,
+      "sizeBytes": 5849,
+      "hash": "sha256:aabc2369ccd1b93c8e815236ce36df0f04217f4df1fd060676cb786387ce6f16",
+      "pcmSha256": "5764bef966f1bdfaf5e7378387273f0488aaa902e579a288ea85e817824ef9d2",
+      "rmsDb": -16.97
+    },
+    {
+      "id": "n5-7",
+      "file": "audio/scripts/a1-u3-d5-zahlen-und-zeiten/n5-7.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 103,
+        "lengthScale": 1.32
+      },
+      "textDe": "Neunzehn Uhr fünfzehn.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d5"
+      ],
+      "durationMs": 1744,
+      "sizeBytes": 8091,
+      "hash": "sha256:84162cd35c32b9c82ad6c55909562ece9aa603fdb14366da75aab6252fb88893",
+      "pcmSha256": "ab60525d9839484b3bebcc24d554b4a46fc0d446e9f261b05e176034237a70dd",
       "rmsDb": -17.02
     }
   ],

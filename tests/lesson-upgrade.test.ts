@@ -121,7 +121,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u3-d5")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d5 + u3-d1..d4 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128 · D130 · D131 · D132 · D133 · D134)
+const legacy = realLessons.find((l) => l.id === "a1-u4-d1")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D135 صار u1-d1..d5 + u2-d1..d5 + u3-d1..d5 مُرقّى
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -435,19 +435,18 @@ describe("D115 — أدوات القياس", () => {
     expect(wordAppears(w("guten-tag"), toks("Guten Tag!"))).toBe(true);
     expect(wordAppears(w("wie-gehts"), toks("Hallo, wie geht's?"))).toBe(true);
   });
-  it("درس حقيقي لم يُرقَّ (a1-u3-d5): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين وQuiz فيها غير المدروس)", () => {
+  it("الدرس التالي غير المُرقّى (a1-u4-d1): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
-    expect(r.practiceItems).toBeLessThan(12);
+    expect(r.practiceItems).toBe(6);
     expect(r.rule.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-rule", "e-upgrade-sample"]));
-    // D134: فجواته مقيسة قبل نقل المثال إليه — مثال laut فيه Radio · مثال stimme فيه ruhig · مثال noch فيه einmal (نواة الدرس) ·
-    // وتمارينه فيها Dativ وRadio وstehe (aufstehen — الوحدة 7) · وفي الـQuiz Dativ
+    // بعد D135 صار d5 مكتملاً؛ الفجوات الفعلية لـu4-d1: Sara/Amina/Sfax/Lina أسماء غير معلنة، spielt/kocht غير مدروستين، وgroßfrau في المصائد.
     const front = r.practice.find((i) => i.code === "e-upgrade-front")?.message;
-    expect(front).toMatch(/radio/);
-    expect(front).toMatch(/stehe/);
+    expect(front).toMatch(/sara/);
+    expect(front).toMatch(/großfrau/);
     const samples = r.rule.map((i) => i.message).join("\n");
-    expect(samples).toMatch(/radio/);
-    expect(samples).toMatch(/ruhig/);
-    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/dativ/);
+    expect(samples).toMatch(/spielt/);
+    expect(samples).toMatch(/kocht/);
+    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/lina/);
     expect(r.coverage).toEqual([]);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
@@ -752,6 +751,35 @@ describe("D115 — أدوات القياس", () => {
     // الاستماع يراجع فخ halb (2:30 لا 3:30) داخل جملة موعد
     const lis = l.uebung.stations.find((s) => s.type === "listening")!.items as { audioId: string; choices: string[]; a: string }[];
     expect(lis.find((i) => i.audioId === "tr-2")).toMatchObject({ a: "الأحد 2:30", choices: expect.arrayContaining(["الأحد 3:30"]) });
+  });
+  it("a1-u3-d5 مُرقّى (D135): صفر نقص — 35 بنداً · 4 أنواع (حوار وأرقام/أوقات مسموعة) · Quiz 6 · 15 كلمة · طلب الإعادة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u3-d5")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u3-d5")!;
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([35, 4, 6, 15]);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-hoeren-zahlen"]);
+    expect(e.properNouns).toEqual(["Yusuf", "Ayşe"]);
+    expect(l.warmup.cardIds).toEqual(["uhr", "zwanzig", "telefonnummer"]);
+    const audioIds = l.uebung.stations.filter((s) => s.type === "listening" || s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.audioId)));
+    expect(audioIds.filter((id) => id.startsWith("h5-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 14 }, (_, i) => `h5-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("n5-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 7 }, (_, i) => `n5-${i + 1}`));
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!.items as { audioId: string; choices: string[]; a: string }[];
+    expect(listening.find((i) => i.audioId === "n5-1")).toMatchObject({ a: "04172", choices: expect.arrayContaining(["04712"]) });
+    expect(listening.find((i) => i.audioId === "n5-6")).toMatchObject({ a: "8:30", choices: expect.arrayContaining(["9:30"]) });
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    const quizQuestions = l.quiz.variants.flatMap((v) => v.items.map((i) => i.q));
+    expect(quizQuestions.some((q) => trainingQuestions.has(q))).toBe(false);
+    // D135: هدف الدرس والمهمة والخلاصة ألمانيها من المدروس حتى اليوم — حارس خاص لهذه الحقول الوصفية (N-022).
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    expect(meta.flatMap((text) => frontViolations([text], taught, new Set(e.properNouns)))).toEqual([]);
+    // N-053: NetworkLab يعرض Kollokation الكلمة؛ لا نسرّب bekommen غير المدروسة في درسها الأول.
+    expect(words.find((w) => w.id === "anruf")!.kollocation).toEqual({ de: "Der Anruf kommt.", ar: "تأتي المكالمة.", verb: "kommen" });
   });
   it("D121 e-upgrade-warmup: بطاقة استدعاء من كلمات اليوم أو لاحقة ⇒ خطأ · أول درس في المسار مستثنى", () => {
     const d4 = realLessons.find((x) => x.id === "a1-u1-d4")!;
