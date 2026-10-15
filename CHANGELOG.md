@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-10-15 — الدفعة 83: a1-u2-d4 مُرقّى — طول الحركة (ß/ss) + رمز الحرف والفجوة والخطأ المعلن في حارس الجبهة + الشطب في المُشغِّل (D128)
+- **إضافة**: `content/arsenal/grammar/ars-vokalquantitaet.json` (تاسع قاعدة يوم — قاعدة الدرس المخططة نفسها) · سكربت `a1-u2-d4-lang-oder-kurz` (15 سطراً بصوتين) · كلمتا `lang` · `lange` (صوت + مانيفست + gen-audio) — 17 مساراً جديداً (947) · `GRAPHEMES` و`stripGraphemeNotation` · `fillInWordGap` · `misspellings` في `LessonUpgradeEntry` مع `e-upgrade-misspelling`/`w-upgrade-misspelling` · `StruckText` (`src/components/StruckText.tsx` + `src/lib/struck-text.ts`).
+- **تعديل معلن**: حارس الجبهة (`frontViolations`) يُسقط رمز الحرف من قائمة مغلقة ويملأ الفجوة داخل الكلمة بإجابتها ويقبل الخطأ المعلن داخل ~~ وحدها · المُشغِّل يرسم ~~الخطأ~~ شطباً (كان خاماً في 79 درساً) · درس a1-u2-d4 (29 بنداً بأربعة أنواع · Quiz 3×6 · 3 مصائد جديدة · الهدف والمهمة بالمدروس · strasse مراجعةٌ لا جديد) · kurz منقولة من a1-u4-d5 · أمثلة fuss وsuess وtasse وkaffee وboot وkaese وschule · إصلاح نص «weh tun» done · مقتطف المرجع 1012 كلمة.
+- **اختبارات**: الحارس D128 (7) · صفر نقص u2-d4 · مصائده · الشطب في المُشغِّل (4) · أمثلة غير المُرقّى ← a1-u2-d5 · مثبّتات النواة ← a1-u2-d5.
+- **السجل**: أُضيفت N-046..N-048 · حُدّثت N-001 وN-002 وN-010 وN-022 وN-045.
+- **604/604 أخضر** · validator 930/0/0 · build ✓ · الطفرة 20/20.
+
 ## 2026-10-15 — الدفعة 82: a1-u2-d3 مُرقّى — شفرة الجنس + رمز اللاحقة في حارس الجبهة + حوار صوتي جديد (D127)
 - **إضافة**: `content/arsenal/grammar/ars-genuscode.json` (ثامن قاعدة يوم — قاعدة الدرس المخططة نفسها) · سكربت `a1-u2-d3-drei-fehler` (11 سطراً بصوتين) · كلمات `text` · `fehler` · `bedeuten` · `lehrerin` (صوت + مانيفست + gen-audio) — 15 مساراً جديداً (930) · `MORPHEMES` و`stripMorphemeNotation` في `tools/lib/vocab-forms.ts`.
 - **تعديل معلن**: حارس الجبهة (`frontViolations`) يُسقط رمز اللاحقة بشرطة أولها من قائمة مغلقة · درس a1-u2-d3 (25 بنداً بأربعة أنواع · Quiz 3×6 · 3 مصائد — خرجت بطاقة die Lehrer بمبررها الخاطئ · مشهد المهمة «in einem Text») · أمثلة zeitung وmaedchen وbroetchen وkellner وfreiheit وgesundheit وschmetterling · مقتطف المرجع 998 كلمة.
