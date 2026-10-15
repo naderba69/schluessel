@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-um-am-im",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Wann? — Am Montag um halb fünf.",
+    "ar": "um للساعة · am لليوم · im للشهر — والعربية «في» للكل تقريباً"
+  },
+  "payload": {
+    "topicAr": "جملة الموعد: um + الساعة · am + اليوم (وأوقات اليوم) · im + الشهر — واليوم قبل الساعة (am Montag um halb fünf)؛ الشهور والأيام مذكرة؛ وes فاعل شكلي مع الطقس (Es regnet)؛ وsich treffen = نلتقي (Wir treffen uns)",
+    "sceneAr": "لينا ويوسف يحددان موعد مكالمتهما القادمة: في سويسرا تُشرق الشمس وفي برلين تمطر؛ يوم الاثنين عند لينا مدرسة حتى الرابعة، فيتفقان على الاثنين في الرابعة والنصف؛ ويوم الأحد عند يوسف موعد مع مجموعة الدورة في الحادية عشرة؛ وفي يونيو عيد ميلاد لينا — تصبح في السابعة عشرة.",
+    "examples": [
+      {
+        "de": "Wann ist der nächste Termin? — Am Montag um halb fünf.",
+        "ar": "متى الموعد القادم؟ — يوم الاثنين في الرابعة والنصف"
+      },
+      {
+        "de": "um drei Uhr · am Montag · im Juni",
+        "ar": "في الثالثة · يوم الاثنين · في يونيو — ثلاثة حروف لـ«في» العربية"
+      },
+      {
+        "de": "am Sonntag · am Abend · im Januar · im Mai",
+        "ar": "الأيام وأوقات اليوم بـam · الشهور بـim"
+      },
+      {
+        "de": "Hier scheint die Sonne. · In Berlin regnet es.",
+        "ar": "هنا تُشرق الشمس · في برلين تمطر — es فاعل شكلي"
+      },
+      {
+        "de": "Wann treffen wir uns? — Wir treffen uns am Montag.",
+        "ar": "متى نلتقي؟ — نلتقي يوم الاثنين — uns لا تسقط"
+      },
+      {
+        "de": "der Januar · der Juni · der Montag · der Sonntag",
+        "ar": "الشهور والأيام كلها مذكرة (der)"
+      }
+    ],
+    "inferencePromptAr": "انظر إلى الأمثلة: (1) أي حرف مع الساعة، وأي حرف مع اليوم، وأي حرف مع الشهر؟ وكم حرفاً يقابلها في العربية؟ (2) في المثال الأول: أيهما أولاً، اليوم أم الساعة؟ (3) في «In Berlin regnet es»: ما فاعل regnet؟ وكيف تقولها بالعربية؟ (4) ما الكلمة الصغيرة التي تأتي مع treffen في «Wir treffen uns»؟ (5) أي أداة للشهور والأيام؟",
+    "ruleDe": "um drei Uhr · am Montag · am Abend · im Juni — Am Montag um halb fünf. · Es regnet. · Wir treffen uns.",
+    "ruleAr": "لكل مقياس من الوقت حرفه: um للساعة (um drei Uhr · um halb fünf) · am لليوم وأوقاته (am Montag · am Sonntag · am Abend — am = an dem) · im للشهر (im Januar · im Juni — im = in dem). وفي جملة الموعد يأتي اليوم قبل الساعة: am Montag um halb fünf، والسؤال عنها كلها Wann?. الشهور والأيام أسماء مذكرة بحرف كبير: der Januar · der Montag. ومع الطقس فاعلٌ شكلي es لا معنى له: Es regnet · Im April regnet es oft — أما Die Sonne scheint ففاعلها die Sonne. وsich treffen = يلتقي (بعضهم ببعض): Wir treffen uns — وuns لا تسقط.",
+    "contrastAr": "العربية تقول «في» للساعة والشهر و«يوم» أو «في يوم» لليوم — حرف واحد تقريباً للكل، والألمانية ثلاثة: um · am · im — فيقول المتعلم ~~am Januar~~ و~~im Montag~~ (خريطة التداخل 10‑ي). وفعل المطر في العربية يكفي وحده («تمطر»)، والألمانية لا تترك الفاعل فارغاً: ~~Regnet.~~ ✗ — Es regnet ✓ (حذف es الوهمي). و«نلتقي» صيغة تفاعل بلا ضمير، والألمانية تحتاج uns: ~~Wir treffen am Montag.~~ ✗ — Wir treffen uns am Montag ✓. أما أسماء الشهور فقريبة لمن يعرفها في المغرب العربي: جانفي/Januar · أفريل/April · ماي/Mai · جوان/Juni — لاتينية الأصل كالفرنسية.",
+    "limitsAr": [
+      "التاريخ بالأعداد الترتيبية (am ersten Juni = في الأول من يونيو) نتعلمه لاحقاً — الآن: im Juni · am Montag.",
+      "بلا حرف أيضاً: heute · morgen · heute Abend · nächste Woche — وفي الكلام قد يسقط am قبل اليوم: Montag um halb fünf.",
+      "in der Nacht لا am Nacht (من درس الساعة) — والفصول im Sommer · im Winter لاحقاً.",
+      "treffen بلا uns صحيحة مع مفعول: Ich treffe Lena (ألقى لينا) — وتغيّر der إلى den مع المفعول نتعلمه في الوحدة 4."
+    ],
+    "beads": [
+      "Am",
+      "Montag",
+      "um",
+      "halb",
+      "fünf."
+    ],
+    "properNouns": [
+      "Berlin"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u3-d4"
+  ]
+}

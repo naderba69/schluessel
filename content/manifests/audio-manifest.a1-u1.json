@@ -11279,6 +11279,7 @@
       "textDe": "die Sonne.",
       "priority": "P2",
       "lessonRefs": [
+        "a1-u3-d4",
         "a1-u10-d1"
       ],
       "durationMs": 1048,
@@ -15946,6 +15947,66 @@
       "hash": "sha256:c10f4421eb0e4b39f01f83270b8bc86813fb63c3550cf848a20319e929beeeb5",
       "pcmSha256": "d0973545e03bca1d205b73935b823b64c1f2bd402fda4cff2ca1ab745fa47bfd",
       "rmsDb": -16.97
+    },
+    {
+      "id": "word-fertig",
+      "file": "words/audio/de-DE/word-fertig.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "fertig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 862,
+      "sizeBytes": 4316,
+      "hash": "sha256:bfa36aab233d65e5771e9f698e4c0f0f8c51a698555e6c3a132f21249be00599",
+      "pcmSha256": "2b0101a283f057544495846698acd9126c60c009ea7f09c5278f0aa9d175b04f",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "word-regnen",
+      "file": "words/audio/de-DE/word-regnen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "regnen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 908,
+      "sizeBytes": 4481,
+      "hash": "sha256:62ba07f39be9d4839185e627a9c2a4be28b1738506d4ba37711ce7f092547f10",
+      "pcmSha256": "164da3e1849f4d3f0ea8e24d151e65cff745ae31e0f79c5b56ff0b6e4a4f1292",
+      "rmsDb": -17
+    },
+    {
+      "id": "word-scheinen",
+      "file": "words/audio/de-DE/word-scheinen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "scheinen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 862,
+      "sizeBytes": 4197,
+      "hash": "sha256:0fffd73e1831cae3234a85993e9241968858b29fd903bcb622529eea2f3bbd8d",
+      "pcmSha256": "5b130e8a779b7a816160afb9ef657a05c9b46eb57764fd44546f0f7b6a269ed1",
+      "rmsDb": -17.06
     },
     {
       "id": "mueller-announce-01",
@@ -21171,6 +21232,446 @@
       "hash": "sha256:92f998328a74d8f7cecb3cae7d9fcb0efba13bc0832583eddfd11901bd64b2a1",
       "pcmSha256": "af206ac94b400f3af09d04665e4733888262123af9e79b550a0fbf21e21df096",
       "rmsDb": -17.1
+    },
+    {
+      "id": "tm-1",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, wie ist es in Berlin? Hier scheint die Sonne!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 4392,
+      "sizeBytes": 20368,
+      "hash": "sha256:559007977a399e4138f57a2fb0e13673090e9d396d145390da0f59f426c929d6",
+      "pcmSha256": "65c7e92fa12fe1f7bc2bb2743d56b9d0fb369dcbd085e5200acfa78a3660c84b",
+      "rmsDb": -17.39
+    },
+    {
+      "id": "tm-2",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "In Berlin regnet es. Hier regnet es oft.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 3648,
+      "sizeBytes": 15853,
+      "hash": "sha256:e1713bff7bfd2df86379ad270b02103487cdfe4164d672134f15522c560f4351",
+      "pcmSha256": "1ad519ae3efed9dc903a87625fccc941e9a1fb16dd205f6f0c124381ecf58a5b",
+      "rmsDb": -17
+    },
+    {
+      "id": "tm-3",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wann ist der nächste Termin?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 2200,
+      "sizeBytes": 10294,
+      "hash": "sha256:af583111175f629e181242749c1cb02d5b9c01a7622a22d5a10089832f84dbc9",
+      "pcmSha256": "7eed94d93264940b8fa7fc82581efcbcf6ec89ac394e0d0e5f49d0dff5ed817c",
+      "rmsDb": -17.31
+    },
+    {
+      "id": "tm-4",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 158,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Montag um drei Uhr?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 1895,
+      "sizeBytes": 8903,
+      "hash": "sha256:ee523353eeb650d275b58179451b1ca1137b17ef0a4a8a971c9a0852b8e7eeba",
+      "pcmSha256": "102545a16586eb42fe671bdec91da210aa3fa3f71d259b99e9cddbf5bbf9d36c",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "tm-5",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 146,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Montag habe ich Schule. Um vier bin ich fertig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 4104,
+      "sizeBytes": 19124,
+      "hash": "sha256:a2903a5c84556189c4b5495abd5d1029256838d4e520b7933c10d4970eadc99a",
+      "pcmSha256": "eb8c95846cb43f96235e8184253906e61ff602af4244eb5d1e3b4ec37fcbd00e",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "tm-6",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Also am Montag um halb fünf?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 2255,
+      "sizeBytes": 10588,
+      "hash": "sha256:87e765a6e5f70a8f6acbd42df656041db425336160378256a5bed0ef91cad423",
+      "pcmSha256": "c13ffc289db77f430ad34718786030bbbb7eed783c15060dea2a6903880f100f",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "tm-7",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gern! Und am Sonntag? Treffen wir uns auch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 3496,
+      "sizeBytes": 16233,
+      "hash": "sha256:b013608840d16a8ca1a776606f7aaa1951d011ab96a37956eab66620926eb141",
+      "pcmSha256": "c6b577e90aacf130eb4c954196fce1d097838817b55bd2c8710e7b7fd2e93d74",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "tm-8",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 180,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Sonntag habe ich eine Verabredung mit der Gruppe.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 2998,
+      "sizeBytes": 14045,
+      "hash": "sha256:5c47b31b8f03496ecf0ecc1686adeeba82dc05f3874c0e2643cc61d8a8883814",
+      "pcmSha256": "565de7bad15941fee0838d00570c1cf5323d21e9fa534b43a759cda07dd77f90",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "tm-9",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 164,
+        "lengthScale": 1.32
+      },
+      "textDe": "Mit der Gruppe? Wann denn?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 1832,
+      "sizeBytes": 8695,
+      "hash": "sha256:81f7e3f80f924f4ec08a016a55836caedb54cdf9d9418fe324d019b27f70e61f",
+      "pcmSha256": "2a408bfb386229febd4ab97a25071558c177617e87fa073269d53a1718ae2ae6",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "tm-10",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Sonntag um elf Uhr.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 1872,
+      "sizeBytes": 8925,
+      "hash": "sha256:acf76adf99e3d740bf3097f4880054c95ceedaae2076c92cd3d7f55fcd831389",
+      "pcmSha256": "fee9a6c7c18e0e73f3215944267315bcd42d1da53f441590c20e6c2e7346d01e",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "tm-11",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 125,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und im Juni habe ich Geburtstag!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 2872,
+      "sizeBytes": 13424,
+      "hash": "sha256:52f92ac37d4de150ab7fa15be7fcf3841c984a115000a526e8e35b39f8962dcf",
+      "pcmSha256": "fe0330985a77104a30fd3fd0d5c12fc2f0a086e35e126fe891dc93d5a782f7b9",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "tm-12",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 156,
+        "lengthScale": 1.32
+      },
+      "textDe": "Im Juni bist du siebzehn!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 1918,
+      "sizeBytes": 8838,
+      "hash": "sha256:1cb908f6d701008252584bbd04f9758bf1bccefcdffb4b4276fd6fe1fc5e673a",
+      "pcmSha256": "a399fd5b36f436e4288bc036fa07b1cbcc520191b748d3f1f79274e9c38dfe7e",
+      "rmsDb": -17
+    },
+    {
+      "id": "tm-13",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 89,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Also: Montag um halb fünf.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 4040,
+      "sizeBytes": 18720,
+      "hash": "sha256:07080685ab22494ed71ee72a36b98eff9f8dcc03b664065ed9d88b46deffdfc0",
+      "pcmSha256": "cb983df80e18ddaae08b7304b0b7580a16a0ab2455f4e2709357414b19753623",
+      "rmsDb": -17.48
+    },
+    {
+      "id": "tm-14",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, der Termin ist am Montag um halb fünf. Tschüss, Lena!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 4832,
+      "sizeBytes": 21870,
+      "hash": "sha256:b3a54a28b0425357f9e5fa7d638b00fbc603d079c551fed0b8098d021f014fd0",
+      "pcmSha256": "9226f26551313ad650bf56a5992ee869894f699847cf9fe09b984b787088c875",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "tm-15",
+      "file": "audio/scripts/a1-u3-d4-der-naechste-termin/tm-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Tschüss! Und viel Sonne in Berlin!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 2536,
+      "sizeBytes": 11853,
+      "hash": "sha256:8e5994ead2df5c2134717f03e8e63aa2a6e32021d7c901f8725a91e3c013a1b9",
+      "pcmSha256": "9a5447b0017b496b8e45fd7702b8e878369402bb3aa13c45d5d1963081ac6b1c",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "tr-1",
+      "file": "audio/scripts/a1-termine/tr-1.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 187,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Termin ist am Montag um zehn Uhr.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 2568,
+      "sizeBytes": 12104,
+      "hash": "sha256:6bae7b53c38cd6308df70dee0552e7a416be9ce62a6e42bdb8639fef64728d8d",
+      "pcmSha256": "18357c6f6a485bb0d1e585431d5007487ca00fa6c154514d2e71eaacf0aaf6c5",
+      "rmsDb": -17
+    },
+    {
+      "id": "tr-2",
+      "file": "audio/scripts/a1-termine/tr-2.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 171,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wir treffen uns am Sonntag um halb drei.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 2801,
+      "sizeBytes": 13117,
+      "hash": "sha256:e3b893a02b445be319c03ccacf201bcb4652e140fdb9d8934b5da2b3a2b07932",
+      "pcmSha256": "dcd8264fdc5ba4fce96980044b93550cd1f37744e0d5d123ebc8931fe77287a1",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "tr-3",
+      "file": "audio/scripts/a1-termine/tr-3.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Im Januar und im Februar regnet es oft.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 3393,
+      "sizeBytes": 15820,
+      "hash": "sha256:4cf6126b0dd0aab81a5a3950ec7f1890019da91151e7d971044f90fd6c445451",
+      "pcmSha256": "3ca1ae9d49a5c85e29d8592972c8b9a8bbdba0c37a0ce36793b3954e01d3b09e",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "tr-4",
+      "file": "audio/scripts/a1-termine/tr-4.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 167,
+        "lengthScale": 1.32
+      },
+      "textDe": "Im Mai scheint oft die Sonne.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 2150,
+      "sizeBytes": 9922,
+      "hash": "sha256:8fd0533d6fe010884e4dfff69d1250e04fdbcdf4e540477ee759991d692e3aea",
+      "pcmSha256": "00a58ccef032c5dff5f181a73ed974a5d20c5800e2e24582e3bb48470498ef32",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "tr-5",
+      "file": "audio/scripts/a1-termine/tr-5.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 194,
+        "lengthScale": 1.32
+      },
+      "textDe": "Um vier Uhr bin ich fertig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d4"
+      ],
+      "durationMs": 1860,
+      "sizeBytes": 8653,
+      "hash": "sha256:b4e54dce13b43efc7587b93f5a71787d3c2464ed3474f77719c46cc0ae5750a7",
+      "pcmSha256": "7665ee839d40126f42d1344d5263a233ab11f87b766bf949f481eec791800da8",
+      "rmsDb": -17.02
     }
   ],
   "characterVoices": {

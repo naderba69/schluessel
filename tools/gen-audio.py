@@ -778,7 +778,7 @@ def build_all() -> None:
     ("word-verbindung", "die Verbindung.", "verbindung", ["a1-u9-d5"]),
     ("word-fahrplan", "der Fahrplan.", "fahrplan", ["a1-u9-d5"]),
     ("word-wetter", "das Wetter.", "wetter", ["a1-u10-d1"]),
-    ("word-sonne", "die Sonne.", "sonne", ["a1-u10-d1"]),
+    ("word-sonne", "die Sonne.", "sonne", ["a1-u3-d4", "a1-u10-d1"]),
     ("word-regen", "der Regen.", "regen", ["a1-u10-d1"]),
     ("word-schnee", "der Schnee.", "schnee", ["a1-u10-d1"]),
     ("word-wind", "der Wind.", "wind", ["a1-u10-d1"]),
@@ -1013,6 +1013,9 @@ def build_all() -> None:
     ("word-naechste", "nächste.", "naechste", ["a1-u3-d3"]),
     ("word-geschlossen", "geschlossen.", "geschlossen", ["a1-u3-d3"]),
     ("word-geoeffnet", "geöffnet.", "geoeffnet", ["a1-u3-d3"]),
+    ("word-fertig", "fertig.", "fertig", ["a1-u3-d4"]),
+    ("word-regnen", "regnen.", "regnen", ["a1-u3-d4"]),
+    ("word-scheinen", "scheinen.", "scheinen", ["a1-u3-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

@@ -6,11 +6,12 @@
   "day": 4,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst einen Termin mit Monat und Tag vereinbaren (um/am/im).",
-    "ar": "تحجز موعداً بجملة كاملة (الشهر واليوم والساعة)"
+    "de": "Wann ist der nächste Termin? — Am Montag um halb fünf.",
+    "ar": "تحدد موعداً بجملة كاملة: um للساعة · am لليوم · im للشهر — وتتكلم عن الطقس (Es regnet · Die Sonne scheint)"
   },
   "canDoDaily": [
-    "يحجز موعداً بجملة: am + اليوم · im + الشهر · um + الساعة"
+    "يحدد موعداً بجملة كاملة: am + اليوم ثم um + الساعة (Am Montag um halb fünf) · im + الشهر (im Juni)",
+    "يقول الطقس بـes الشكلي: Es regnet. · Die Sonne scheint. — ويقول «نلتقي»: Wir treffen uns."
   ],
   "warmup": {
     "cardIds": [
@@ -49,7 +50,11 @@
       "verabredung",
       "montag",
       "sonntag",
-      "am"
+      "am",
+      "fertig",
+      "regnen",
+      "scheinen",
+      "sonne"
     ],
     "grammarArsenalIds": [
       "ars-um-am-im"
@@ -58,76 +63,373 @@
       "story-a3-u3-s4"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "umlaut-a",
+      "double-consonant",
+      "r-uvular"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«في يناير»؟",
-            "a": "im Januar"
+            "q": "«في يناير»: ___ Januar",
+            "a": "im",
+            "why": "الشهر بـim (= in dem): im Januar — والعربية «في» للشهر والساعة معاً."
           },
           {
-            "q": "«يوم الاثنين»؟",
-            "a": "am Montag"
+            "q": "«يوم الاثنين»: ___ Montag",
+            "a": "am",
+            "why": "اليوم بـam (= an dem): am Montag · am Sonntag — وكذلك أوقات اليوم: am Abend."
+          },
+          {
+            "q": "«في الثالثة»: ___ drei Uhr",
+            "a": "um",
+            "why": "الساعة بـum: um drei Uhr · um halb fünf."
+          },
+          {
+            "q": "«الموعد يوم الأحد في الحادية عشرة»: Der Termin ist am Sonntag ___ elf Uhr.",
+            "a": "um",
+            "why": "اليوم ثم الساعة: am Sonntag um elf Uhr — لكلٍّ حرفه."
+          },
+          {
+            "q": "«تمطر»: ___ regnet.",
+            "a": "Es",
+            "why": "es فاعل شكلي بلا معنى: Es regnet — والعربية «تمطر» بلا فاعل ظاهر، والألمانية لا تترك مكانه فارغاً."
+          },
+          {
+            "q": "«الشمس مشرقة»: Die Sonne ___.",
+            "a": "scheint",
+            "why": "scheinen = تُشرق: die Sonne scheint — والفاعل هنا die Sonne فلا es."
+          },
+          {
+            "q": "«نلتقي يوم الاثنين»: Wir treffen ___ am Montag.",
+            "a": "uns",
+            "why": "sich treffen = يلتقي بعضنا ببعض: Wir treffen uns — وuns لا تسقط كما تكفي صيغة «نلتقي» بالعربية."
+          },
+          {
+            "q": "«في الرابعة أنتهي»: Um vier bin ich ___.",
+            "a": "fertig",
+            "why": "fertig = منتهٍ/جاهز: Ich bin fertig — بالكينونة sein."
+          },
+          {
+            "q": "«الشهر السادس»: der ___",
+            "a": "Juni",
+            "why": "Januar · Februar · März · April · Mai · Juni — der Juni السادس، والشهور كلها مذكرة بحرف كبير."
           }
         ],
         "interleavedWith": [
           "uhr",
-          "zeit"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "«نلتقي في الثالثة»؟",
-            "a": "Wir treffen uns um drei Uhr."
-          },
-          {
-            "q": "«عندي موعد»؟",
-            "a": "Ich habe einen Termin."
-          }
-        ],
-        "interleavedWith": [
           "halb",
-          "viertel"
+          "abend"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«الأحد يوم راحة»؟",
-            "a": "Sonntag ist Ruhetag."
+            "audioId": "tm-1",
+            "speakText": "Yusuf, wie ist es in Berlin? Hier scheint die Sonne!",
+            "q": "استمع: كيف الطقس عند لينا؟",
+            "choices": [
+              "مشمس",
+              "ماطر",
+              "بارد"
+            ],
+            "a": "مشمس",
+            "why": "Hier scheint die Sonne = هنا تُشرق الشمس — hier عند لينا في سويسرا."
           },
           {
-            "q": "«في يونيو عيد ميلادي»؟",
-            "a": "Im Juni habe ich Geburtstag."
+            "audioId": "tm-2",
+            "speakText": "In Berlin regnet es. Hier regnet es oft.",
+            "q": "استمع: كيف الطقس في برلين؟",
+            "choices": [
+              "ماطر — وكثيراً ما تمطر",
+              "مشمس",
+              "ماطر اليوم فقط"
+            ],
+            "a": "ماطر — وكثيراً ما تمطر",
+            "why": "In Berlin regnet es = في برلين تمطر · oft = كثيراً — وes الفاعل الشكلي بعد الفعل لأن In Berlin أولاً."
+          },
+          {
+            "audioId": "tm-4",
+            "speakText": "Am Montag um drei Uhr?",
+            "q": "استمع: متى يقترح يوسف؟",
+            "choices": [
+              "الاثنين في الثالثة",
+              "الأحد في الثالثة",
+              "الاثنين في الثانية والنصف"
+            ],
+            "a": "الاثنين في الثالثة",
+            "why": "am Montag = يوم الاثنين · um drei Uhr = في الثالثة — اليوم ثم الساعة."
+          },
+          {
+            "audioId": "tm-6",
+            "speakText": "Also am Montag um halb fünf?",
+            "q": "استمع: ما الموعد الجديد؟",
+            "choices": [
+              "الاثنين 4:30",
+              "الاثنين 5:30",
+              "الاثنين 5:00"
+            ],
+            "a": "الاثنين 4:30",
+            "why": "um halb fünf = 4:30 (halb للساعة التالية — درس الساعة)."
+          },
+          {
+            "audioId": "tm-7",
+            "speakText": "Gern! Und am Sonntag? Treffen wir uns auch?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل يلتقيان يوم الأحد أيضاً",
+              "متى عيد ميلادها",
+              "كيف الطقس يوم الأحد"
+            ],
+            "a": "هل يلتقيان يوم الأحد أيضاً",
+            "why": "Treffen wir uns auch? = هل نلتقي أيضاً؟ — سؤال نعم/لا بالفعل أولاً، وuns معه."
+          },
+          {
+            "audioId": "tm-8",
+            "speakText": "Am Sonntag habe ich eine Verabredung mit der Gruppe.",
+            "q": "استمع: لماذا لا يستطيع يوسف يوم الأحد؟",
+            "choices": [
+              "عنده موعد مع المجموعة",
+              "عنده درس",
+              "سيعمل"
+            ],
+            "a": "عنده موعد مع المجموعة",
+            "why": "eine Verabredung = موعد متفق عليه · mit der Gruppe = مع المجموعة (مجموعة الدورة)."
+          },
+          {
+            "audioId": "tm-9",
+            "speakText": "Mit der Gruppe? Wann denn?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "متى",
+              "أين",
+              "مع من"
+            ],
+            "a": "متى",
+            "why": "Wann denn? = متى إذن؟ — wann للوقت، وdenn تليّن السؤال."
+          },
+          {
+            "audioId": "tm-10",
+            "speakText": "Am Sonntag um elf Uhr.",
+            "q": "استمع: متى موعد المجموعة؟",
+            "choices": [
+              "الأحد في الحادية عشرة",
+              "الاثنين في الحادية عشرة",
+              "الأحد في العاشرة"
+            ],
+            "a": "الأحد في الحادية عشرة",
+            "why": "am Sonntag um elf Uhr = يوم الأحد في الحادية عشرة."
+          },
+          {
+            "audioId": "tm-12",
+            "speakText": "Im Juni bist du siebzehn!",
+            "q": "استمع: كم ستصبح لينا في يونيو؟",
+            "choices": [
+              "17",
+              "16",
+              "70"
+            ],
+            "a": "17",
+            "why": "siebzehn = 17 (لا siebzig = 70) — لينا في السادسة عشرة، وفي يونيو عيد ميلادها."
+          },
+          {
+            "audioId": "tm-13",
+            "speakText": "Genau! Also: Montag um halb fünf.",
+            "q": "استمع: ما الموعد في النهاية؟",
+            "choices": [
+              "الاثنين 4:30",
+              "الأحد 11:00",
+              "الاثنين 3:00"
+            ],
+            "a": "الاثنين 4:30",
+            "why": "Montag um halb fünf = الاثنين 4:30 — وفي الكلام قد يسقط am قبل اليوم."
+          },
+          {
+            "audioId": "tr-1",
+            "speakText": "Der Termin ist am Montag um zehn Uhr.",
+            "q": "استمع: متى الموعد؟",
+            "choices": [
+              "الاثنين 10:00",
+              "الأحد 10:00",
+              "الاثنين 9:30"
+            ],
+            "a": "الاثنين 10:00",
+            "why": "am Montag um zehn Uhr = يوم الاثنين في العاشرة."
+          },
+          {
+            "audioId": "tr-2",
+            "speakText": "Wir treffen uns am Sonntag um halb drei.",
+            "q": "استمع: متى يلتقون؟",
+            "choices": [
+              "الأحد 2:30",
+              "الأحد 3:30",
+              "الاثنين 2:30"
+            ],
+            "a": "الأحد 2:30",
+            "why": "um halb drei = 2:30 (لا 3:30) · am Sonntag = يوم الأحد · wir treffen uns = نلتقي."
+          },
+          {
+            "audioId": "tr-4",
+            "speakText": "Im Mai scheint oft die Sonne.",
+            "q": "استمع: كيف الطقس في مايو؟",
+            "choices": [
+              "مشمس كثيراً",
+              "ماطر كثيراً",
+              "مشمس قليلاً"
+            ],
+            "a": "مشمس كثيراً",
+            "why": "im Mai = في مايو · scheint oft die Sonne = كثيراً ما تُشرق الشمس."
+          },
+          {
+            "audioId": "tr-5",
+            "speakText": "Um vier Uhr bin ich fertig.",
+            "q": "استمع: متى ينتهي؟",
+            "choices": [
+              "في الرابعة",
+              "في الرابعة والنصف",
+              "في الثالثة"
+            ],
+            "a": "في الرابعة",
+            "why": "um vier Uhr = في الرابعة · fertig = منتهٍ."
           }
         ],
         "interleavedWith": [
-          "montag",
-          "am"
+          "schule",
+          "gruppe",
+          "geburtstag"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Montag",
+              "Am",
+              "drei",
+              "um",
+              "Uhr."
+            ],
+            "a": "Am Montag um drei Uhr.",
+            "why": "جملة الموعد: اليوم (am Montag) ثم الساعة (um drei Uhr)."
+          },
+          {
+            "tokens": [
+              "es.",
+              "regnet",
+              "Berlin",
+              "In"
+            ],
+            "a": "In Berlin regnet es.",
+            "why": "In Berlin أولاً ⇐ الفعل regnet ثانياً ثم الفاعل الشكلي es."
+          },
+          {
+            "tokens": [
+              "uns",
+              "Montag.",
+              "am",
+              "treffen",
+              "Wir"
+            ],
+            "a": "Wir treffen uns am Montag.",
+            "why": "treffen + uns = نلتقي · ثم am Montag."
+          },
+          {
+            "tokens": [
+              "Sonne.",
+              "die",
+              "scheint",
+              "Hier"
+            ],
+            "a": "Hier scheint die Sonne.",
+            "why": "Hier أولاً ⇐ scheint ثانياً ثم الفاعل die Sonne (الشمس فاعل حقيقي فلا es)."
+          },
+          {
+            "tokens": [
+              "Geburtstag.",
+              "habe",
+              "ich",
+              "Juni",
+              "Im"
+            ],
+            "a": "Im Juni habe ich Geburtstag.",
+            "why": "Im Juni أولاً ⇐ habe ثانياً ثم ich — والشهر بـim."
+          }
+        ],
+        "interleavedWith": [
+          "hier",
+          "naechste",
+          "geschlossen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "tm-3",
+            "speakText": "Wann ist der nächste Termin?",
+            "a": "Wann ist der nächste Termin?",
+            "why": "der Termin (مذكر) والنبر على min · der nächste من درس الساعة."
+          },
+          {
+            "audioId": "tm-5",
+            "speakText": "Am Montag habe ich Schule. Um vier bin ich fertig.",
+            "a": "Am Montag habe ich Schule. Um vier bin ich fertig.",
+            "why": "Montag بحرف كبير (اسم يوم) · fertig بـg في آخرها تُنطق [ç] بعد i."
+          },
+          {
+            "audioId": "tm-11",
+            "speakText": "Und im Juni habe ich Geburtstag!",
+            "a": "Und im Juni habe ich Geburtstag!",
+            "why": "im Juni (الشهر بـim) · Geburtstag بحرف كبير — كلمة واحدة."
+          },
+          {
+            "audioId": "tm-14",
+            "speakText": "Ja, der Termin ist am Montag um halb fünf. Tschüss, Lena!",
+            "a": "Ja, der Termin ist am Montag um halb fünf. Tschüss, Lena!",
+            "why": "جملة الموعد كاملة: am Montag um halb fünf — اليوم ثم الساعة."
+          },
+          {
+            "audioId": "tm-15",
+            "speakText": "Tschüss! Und viel Sonne in Berlin!",
+            "a": "Tschüss! Und viel Sonne in Berlin!",
+            "why": "die Sonne بـnn بعد o القصيرة · viel Sonne = شمس كثيرة."
+          },
+          {
+            "audioId": "tr-3",
+            "speakText": "Im Januar und im Februar regnet es oft.",
+            "a": "Im Januar und im Februar regnet es oft.",
+            "why": "im Januar · im Februar — والفاعل الشكلي es بعد الفعل regnet."
+          }
+        ],
+        "interleavedWith": [
+          "woche",
+          "oft",
+          "zeit"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Termin vereinbaren: Tag + Monat + Uhrzeit",
-        "ar": "حجز موعد: اليوم + الشهر + الساعة"
+        "de": "Wann ist der Termin? — Am Montag um halb fünf.",
+        "ar": "تحديد موعد بجملة كاملة: اليوم والساعة (والشهر)"
       },
       "situation": {
-        "de": "Beim Zahnarzt: Termin vereinbaren",
-        "ar": "عند طبيب الأسنان: حجز موعد"
+        "de": "Lena und Yusuf: der nächste Termin",
+        "ar": "لينا ويوسف يحددان موعد مكالمتهما القادمة"
       },
       "successCriteria": [
-        "جملة موعد كاملة صحيحة (am/im/um) + سؤال وردّ على مواعيد"
+        "يقترح موعداً ويعدّله بجملة كاملة صحيحة الحروف: am Montag um halb fünf · im Juni",
+        "يقول الطقس بجملتين: Es regnet. · Die Sonne scheint. — ويسأل «نلتقي؟»: Treffen wir uns?"
       ]
     }
   },
@@ -142,45 +444,63 @@
       {
         "items": [
           {
-            "q": "«في مارس»؟",
-            "a": "im März"
-          },
-          {
-            "q": "«يوم الاثنين في الثالثة»؟",
-            "a": "Am Montag um drei Uhr."
-          },
-          {
-            "q": "«الموعد»؟",
-            "a": "der Termin"
-          },
-          {
-            "q": "«نلتقي في الثالثة»؟",
-            "a": "Wir treffen uns um drei Uhr."
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "«فبراير»؟",
-            "a": "der Februar"
-          },
-          {
-            "q": "«في مايو» — am أم im?",
+            "q": "___ März (في مارس)",
+            "a": "im",
             "choices": [
-              "im Mai",
-              "am Mai"
+              "im",
+              "am",
+              "um"
             ],
-            "a": "im Mai"
+            "why": "الشهر بـim: im März."
           },
           {
-            "q": "«عندي موعد (اتفاق)»؟",
-            "a": "Ich habe eine Verabredung."
+            "q": "الشهور والأيام — أي أداة؟",
+            "a": "der",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "why": "كلها مذكرة: der Januar · der Montag."
           },
           {
-            "q": "«الأحد يوم راحة»؟",
-            "a": "Sonntag ist Ruhetag."
+            "q": "«تمطر» — أي جملة صحيحة؟",
+            "a": "Es regnet.",
+            "choices": [
+              "Es regnet.",
+              "Regnet."
+            ],
+            "why": "es الشكلي لا يسقط: Es regnet."
+          },
+          {
+            "q": "«الموعد» بالألمانية مع أداته؟",
+            "a": "der Termin",
+            "why": "der Termin (مذكر) والجمع die Termine."
+          },
+          {
+            "q": "fertig = ؟",
+            "a": "جاهز / منتهٍ",
+            "choices": [
+              "جاهز / منتهٍ",
+              "مغلق",
+              "مبكر"
+            ],
+            "why": "fertig = جاهز/منتهٍ: Um vier bin ich fertig."
+          },
+          {
+            "q": "«الأحد» بالألمانية مع أداته؟",
+            "a": "der Sonntag",
+            "why": "der Sonntag — وam Sonntag = يوم الأحد."
+          },
+          {
+            "q": "am = ؟",
+            "a": "an dem",
+            "choices": [
+              "an dem",
+              "in dem",
+              "um"
+            ],
+            "why": "am = an dem (لليوم: am Montag) · im = in dem (للشهر: im Juni) — اختصاران."
           }
         ],
         "passingScore": 0.75
@@ -188,20 +508,105 @@
       {
         "items": [
           {
-            "q": "«يناير»؟",
-            "a": "der Januar"
+            "q": "___ Sonntag (يوم الأحد)",
+            "a": "am",
+            "choices": [
+              "am",
+              "im",
+              "um"
+            ],
+            "why": "اليوم بـam: am Sonntag."
           },
           {
-            "q": "«في أبريل كثيراً ما يمطر»؟",
-            "a": "Im April regnet es oft."
+            "q": "«نلتقي يوم الأحد؟» — أي سؤال صحيح؟",
+            "a": "Treffen wir uns am Sonntag?",
+            "choices": [
+              "Treffen wir uns am Sonntag?",
+              "Treffen wir am Sonntag?"
+            ],
+            "why": "sich treffen: uns لا تسقط — Treffen wir uns?"
           },
           {
-            "q": "الشهور مذكرة أم مؤنثة؟",
-            "a": "مذكرة كلها: der Januar, der März …"
+            "q": "«فبراير» بالألمانية مع أداته؟",
+            "a": "der Februar",
+            "why": "der Februar — مذكر كسائر الشهور."
           },
           {
-            "q": "«نلتقي» — أي انعكاس؟",
-            "a": "Wir treffen uns. (sich treffen)"
+            "q": "Die Sonne ___ (تُشرق)",
+            "a": "scheint",
+            "choices": [
+              "scheint",
+              "regnet"
+            ],
+            "why": "die Sonne scheint = الشمس تُشرق · es regnet = تمطر."
+          },
+          {
+            "q": "Mai = الشهر رقم؟",
+            "a": "5",
+            "choices": [
+              "5",
+              "3",
+              "6"
+            ],
+            "why": "Mai الشهر الخامس: Januar 1 · Februar 2 · März 3 · April 4 · Mai 5 · Juni 6."
+          },
+          {
+            "q": "«يوم الأحد في الحادية عشرة» بالألمانية؟",
+            "a": "Am Sonntag um elf Uhr.",
+            "why": "اليوم بـam ثم الساعة بـum."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "___ halb fünf (في الرابعة والنصف)",
+            "a": "um",
+            "choices": [
+              "um",
+              "am",
+              "im"
+            ],
+            "why": "الساعة بـum: um halb fünf."
+          },
+          {
+            "q": "April = الشهر رقم؟",
+            "a": "4",
+            "choices": [
+              "4",
+              "8",
+              "6"
+            ],
+            "why": "April الشهر الرابع — Januar · Februar · März · April."
+          },
+          {
+            "q": "«الاثنين» بالألمانية مع أداته؟",
+            "a": "der Montag",
+            "why": "der Montag — وam Montag = يوم الاثنين."
+          },
+          {
+            "q": "«في مارس عيد ميلادي» — أي جملة صحيحة؟",
+            "a": "Im März habe ich Geburtstag.",
+            "choices": [
+              "Im März habe ich Geburtstag.",
+              "Am März habe ich Geburtstag."
+            ],
+            "why": "الشهر بـim لا am: im März."
+          },
+          {
+            "q": "«الموعد/الاتفاق» (Verabredung) بأداته؟",
+            "a": "die Verabredung",
+            "why": "die Verabredung (مؤنث — ‑ung ← die من شفرة الجنس)."
+          },
+          {
+            "q": "Im Januar ___ es oft. (تمطر)",
+            "a": "regnet",
+            "choices": [
+              "regnet",
+              "scheint"
+            ],
+            "why": "es regnet = تمطر — وmit Sonne: die Sonne scheint."
           }
         ],
         "passingScore": 0.75
@@ -210,53 +615,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Termin-Satz: am + Tag, im + Monat, um + Uhrzeit — „Am Montag im Januar um drei Uhr“ — fertig!",
-      "ar": "جملة الموعد: am + اليوم، im + الشهر، um + الساعة — «Am Montag im Januar um drei Uhr» — اكتملت!"
+      "de": "Heute: um drei Uhr · am Montag · im Juni — Am Montag um halb fünf. · Es regnet. · Die Sonne scheint. · Wir treffen uns.",
+      "ar": "اليوم: um للساعة · am لليوم · im للشهر — واليوم قبل الساعة في جملة الموعد · es الشكلي مع الطقس · Wir treffen uns (uns لا تسقط) · الشهور والأيام مذكرة."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~am Januar~~ / ~~in Montag~~ / ~~an drei Uhr~~",
-          "ar": "um/am/im — ثلاث أدوات لثلاثة مقاييس"
+          "de": "~~am Januar~~ / ~~im Montag~~ / ~~am drei Uhr~~",
+          "ar": "حرف واحد لكل وقت"
         },
-        "whyArabicSpeakerFails": "العربية «في» واحدة للكل؛ الألماني يفرّق: um (ساعة) · am (يوم) · im (شهر = in dem) (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تقول «في» للشهر والساعة («في يناير» · «في الساعة الثالثة») و«يوم» أو «في يوم» لليوم — حرف واحد تقريباً للكل، فيختار المتعلم حرفاً واحداً. والألمانية تفرّق بالمقياس: um للساعة · am لليوم وأوقاته · im للشهر (خريطة التداخل 10‑ي)",
         "correct": {
           "de": "um drei Uhr · am Montag · im Januar",
           "ar": "في الثالثة · يوم الاثنين · في يناير"
         },
         "exercise": {
-          "q": "أكمل: ___ Februar ___ Freitag ___ zehn Uhr",
+          "q": "أكمل: ___ Juni · ___ Sonntag · ___ halb fünf",
           "a": "im · am · um"
         }
       },
       {
         "commonError": {
-          "de": "~~die Januar~~ / ~~das März~~",
-          "ar": "كل الشهور مذكرة (der)"
+          "de": "~~Regnet.~~ / ~~Im April regnet oft.~~",
+          "ar": "بلا es"
         },
-        "whyArabicSpeakerFails": "الشهور بالعربية محايدة أحياناً في التمييز؛ الألماني: der + شهر + حرف كبير (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تقول «تمطر» بلا فاعل ظاهر — الفعل يكفي وحده. والألمانية لا تترك مكان الفاعل فارغاً: es فاعلٌ شكلي بلا معنى — Es regnet. · Im April regnet es oft. (حذف es الوهمي — خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "der Januar / der März",
-          "ar": "مذكرة كلها (der)"
+          "de": "Es regnet. · Im April regnet es oft.",
+          "ar": "تمطر. · في أبريل كثيراً ما تمطر."
         },
         "exercise": {
-          "q": "صحّح: ~~die April ist schön~~",
-          "a": "Der April ist schön."
+          "q": "صحّح: ~~Am Montag regnet.~~",
+          "a": "Am Montag regnet es."
         }
       },
       {
         "commonError": {
-          "de": "~~Wir treffen wir uns.~~ / ~~Ich treffe mich dich.~~",
-          "ar": "sich treffen: treffen uns/euch/sich"
+          "de": "~~Wir treffen am Montag.~~",
+          "ar": "بلا uns"
         },
-        "whyArabicSpeakerFails": "«نلتقي» بلا ضمير انعكاس بالعربية؛ الألماني: uns/euch/sich إلزامي (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تقول «نلتقي» — صيغة التفاعل تكفي بلا ضمير. والألمانية تحتاج uns: sich treffen = «يلتقي بعضنا ببعض» — وبلا uns تحتاج treffen مفعولاً («نلقى مَن؟») (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Wir treffen uns.",
-          "ar": "نلتقي."
+          "de": "Wir treffen uns am Montag.",
+          "ar": "نلتقي يوم الاثنين."
         },
         "exercise": {
-          "q": "صحّح: ~~Wir treffen am Montag.~~",
-          "a": "Wir treffen uns am Montag."
+          "q": "صحّح: ~~Treffen wir am Sonntag?~~",
+          "a": "Treffen wir uns am Sonntag?"
         }
       }
     ],
@@ -272,7 +677,11 @@
       "verabredung",
       "montag",
       "sonntag",
-      "am"
+      "am",
+      "fertig",
+      "regnen",
+      "scheinen",
+      "sonne"
     ]
   },
   "gReferences": {
@@ -301,14 +710,31 @@
     "word-verabredung",
     "word-montag",
     "word-sonntag",
-    "word-am"
+    "word-am",
+    "word-fertig",
+    "word-regnen",
+    "word-scheinen",
+    "word-sonne"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen & Uhrzeit) — Termine & Monate",
     "goetheWordListOverlap": [
+      "januar",
+      "februar",
+      "maerz",
+      "april",
+      "mai",
+      "juni",
       "termin",
-      "treffen"
+      "treffen",
+      "montag",
+      "sonntag",
+      "am",
+      "fertig",
+      "regnen",
+      "scheinen",
+      "sonne"
     ]
   }
 }
