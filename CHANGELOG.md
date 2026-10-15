@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-10-15 — الدفعة 78: a1-u1-d5 مُرقّى — wer/woher + حوار صوتي جديد (D123)
+- **إضافة**: `content/arsenal/grammar/ars-wer-woher.json` (خامس قاعدة يوم) · سكربت `a1-u1-d5-wer-ist-das` (13 سطراً بصوتين) · كلمات النواة `ende` · `wissen` · `wort` · `oft` · `ein-bisschen` · `schueler` · `student` + `schuelerin` · `studentin` (+ 9 مقاطع · 890 مساراً · 776 كلمة).
+- **معجم النطق**: مدخل Studentin (نبر ‑entin) · مراجعة Nabil · Tunesien يمسّ wer-4 — 44 مدخلاً + 18 مراجعة · التدقيق 968 كلمة صفر مخالفة.
+- **تغيير معلن (القانون 7)**: woher من a1-u2-d1 إلى a1-u1-d5 · تطبيق d5 (6 ← 22 بنداً) وQuiz (3×3 ← 3×6) · مصيدتان استُبدلتا وواحدة أُعيدت كتابتها · مثال leute.json · الدفء · lessonRefs في gen-audio.py (woher · sprechen).
+- **اختبارات**: صفر نقص d5 · مثال غير المُرقّى ومثبّتات الخطة ← a1-u2-d1 · «الدرس الخفيف» للإسناد pending.
+- **576/576 أخضر** · validator 912/0/0 · الطفرة 16/16.
+
 ## 2026-10-15 — الدفعة 77: النطق — 37 خطأً مقيساً مُصحَّحاً + بوابة تدقيق دائمة (D122)
 - **إضافة أداة**: `tools/pronunciation-audit.py` (كل كلمة منطوقة مقابل المرجع: الطول والنبر · flagged/stale/reviewedStale/reviewedDrift · `--refresh-reference` بتحقق بصمة git) + `tools/pronunciation-reference.de.json` (مقتطف CC-BY-SA بإسناده) · `phonemize.py --lexicon-hits` · `dialogue-splitter --lines` · `regen-track` لإعلانات الشخصيات.
 - **تغيير مخطط**: `tools/pronunciation-lexicon.json` 2.0.0 — `forms` (صيغ السياق) · `referenceNote` · `reviewed` (17) · `reference.license` = CC-BY-SA (+licenseNote · attribution).
