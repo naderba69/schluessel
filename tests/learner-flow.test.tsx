@@ -13,6 +13,7 @@ import { setAudioPlayer } from "../src/lib/audio-player.js";
 import { createInitialState } from "../src/lib/state-factory.js";
 import { reconcileState } from "../src/lib/lesson-path.js";
 import { ALL_GRAMMAR_RULES, ALL_LESSONS, LESSON_ORDER } from "../src/lesson-packs.js";
+import { visibleText } from "../src/lib/struck-text.js";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
 
@@ -131,7 +132,7 @@ async function doPractice() {
 async function doQuiz(items: readonly QuizItem[], answer: (it: QuizItem) => string, prediction = true) {
   if (prediction) await click(q("quiz-start"), "ابدأ الاختبار");
   for (const it of items) {
-    expect(q("quiz-question")!.textContent).toBe(it.q);
+    expect(q("quiz-question")!.textContent).toBe(visibleText(it.q)); // D128: ~~الخطأ~~ يُرسم شطباً بلا علامتيه
     const given = answer(it);
     if (it.choices) {
       const btn = [...container.querySelectorAll('[data-testid^="quiz-choice-"]')].find((b) => b.textContent === given) ?? null;

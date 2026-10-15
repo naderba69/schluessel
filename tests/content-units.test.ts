@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(784); // + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
+    expect(ALL_WORDS.length).toBe(786); // + lang · lange (نواة a1-u2-d4 — D128) + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -161,6 +161,29 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.zusammenfassung.warningCards.some((c) => /Lehrer/.test(c.commonError.de) || /sex/.test(c.whyArabicSpeakerFails))).toBe(false);
     // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 || l.id === "a1-u2-d1" || l.id === "a1-u2-d2").flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u2-d4 (D128): ss بعد الطويلة (Strasse) · حرف واحد بعد القصيرة (Tase) · ie/ei مقلوبتان (Wei) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u2-d4")!;
+    const [sz, double, ieei] = u.zusammenfassung.warningCards;
+    expect(sz!.commonError.de).toContain("~~Strasse~~");
+    expect(sz!.commonError.de).toContain("في ألمانيا والنمسا"); // سويسرا تكتب ss دائماً — الخطأ خطأ في ألمانيا والنمسا فقط
+    expect(sz!.correct.de).toBe("die Straße / groß");
+    expect(double!.commonError.de).toContain("~~Tase~~");
+    expect(double!.whyArabicSpeakerFails).toContain("الشدّة");
+    expect(double!.exercise.a).toBe("Wir kommen zusammen.");
+    expect(ieei!.commonError.de).toContain("~~Wei geht's?~~");
+    expect(ieei!.whyArabicSpeakerFails).toContain("«بَيْت»");
+    // كانت ثلاث بطاقات بتعليلات لا تصح: «طويلة (ai/au/u/o)» — heiß فيها ei لا ai · «groß ← o الطويل في au (diphthong)» ·
+    // «القهوة بالعربية حركة واحدة» مبرراً لـee — وKaffee تُنطق في ألمانيا غالباً بـe قصيرة في آخرها
+    const why = u.zusammenfassung.warningCards.map((c) => c.whyArabicSpeakerFails).join("\n");
+    expect(why).not.toMatch(/ai\/au|القهوة/);
+    // كل بطاقة تحمل خريطة التداخل · والخطأ المقصود لا يظهر إلا مشطوباً
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018 — strasse من u1-d4 مراجعةٌ لا جديد)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 || ["a1-u2-d1", "a1-u2-d2", "a1-u2-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });

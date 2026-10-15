@@ -30,7 +30,7 @@ function main() {
       const r = s.report;
       if (!r) { console.log("  الدرس غير موجود"); process.exit(1); }
       console.log(`  التطبيق الآن: ${r.practiceItems} بنداً (≥${PRACTICE_ITEMS_MIN}) · الأنواع: ${r.practiceTypes.join("، ")} (≥${PRACTICE_TYPES_MIN}، منها ${REQUIRED_STATION_TYPES.join(" و")}) · أقل نسخة Quiz: ${r.quizMin} (≥${QUIZ_ITEMS_MIN})`);
-      for (const part of ["rule", "practice", "quiz", "coverage"] as const) {
+      for (const part of ["rule", "practice", "quiz", "coverage", "misspellings"] as const) {
         const issues = r[part];
         console.log(`  ${part}: ${issues.length === 0 ? "يستوفي معايير done ✓" : `${issues.length} نقص`}`);
         for (const i of issues.slice(0, 12)) console.log(`    - [${i.code}] ${i.message}`);

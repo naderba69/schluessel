@@ -14,6 +14,22 @@ export const LessonUpgradeEntry = z
     quiz: UpgradeStatus,
     /** أسماء العلم المسموحة في تدريب الدرس وQuiz (تُعلن ولا تُستنتج — D109) */
     properNouns: z.array(z.string().regex(/^\p{Lu}\p{Ll}+$/u, { message: "اسم علم: حرف كبير ثم صغيرة" })).default([]),
+    /**
+     * D128: الأخطاء المقصودة التي يعرضها الدرس مشطوبة (~~Strasse~~) — كل خطأ يُعلن بتصحيحه ولا يُستنتج
+     * (المطابقة الآلية بأقرب كلمة مدروسة تقبل كلمات حقيقية غير مدروسة: Brot ← Boot). يُقبل داخل ~~…~~ وحده،
+     * والحارس يفحص الإعلان نفسه (tools/lib/lesson-upgrade.ts: e-upgrade-misspelling).
+     */
+    misspellings: z
+      .array(
+        z
+          .object({
+            wrong: z.string().regex(/^\p{L}{2,}$/u, { message: "الصيغة الخاطئة: كلمة واحدة من حرفين فأكثر" }),
+            right: z.string().regex(/^\p{L}{2,}$/u, { message: "التصحيح: كلمة واحدة من حرفين فأكثر" }),
+          })
+          .strict()
+          .refine((m) => m.wrong.toLowerCase() !== m.right.toLowerCase(), { message: "الخطأ يساوي تصحيحه" }),
+      )
+      .default([]),
   })
   .strict();
 export type LessonUpgradeEntry = z.infer<typeof LessonUpgradeEntry>;

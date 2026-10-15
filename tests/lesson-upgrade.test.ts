@@ -1,16 +1,17 @@
-// tests/lesson-upgrade.test.ts — حارس ترقية الدروس (D114 → D115)
+// tests/lesson-upgrade.test.ts — حارس ترقية الدروس (D114 → D115 · رمز اللاحقة D127 · رمز الحرف والفجوة والخطأ المعلن D128)
 // ضابط إيجابي: درس مُرقّى كامل (من كلمات a1-u1-d1 الحقيقية) = صفر مشكلة.
 // ضوابط سلبية: كل معيار يُكسر وحده فيظهر رمزه بالضبط — «done» لا يمر بالكلام.
 import { describe, it, expect } from "vitest";
 import { join } from "node:path";
 import {
-  GrammarRuleFile, LessonUpgradePlan, ShufraPayload, type Lesson, type LessonUpgradeEntry,
+  GrammarRuleFile, LessonUpgradeEntry, LessonUpgradePlan, ShufraPayload, type Lesson,
 } from "../content/schemas/index.js";
 import { loadAudioTracks, loadGrammarRules, loadLessons, loadUpgradePlans, loadWords } from "../tools/lib/content-disk.js";
 import {
-  checkGrammarRules, checkUpgrade, frontViolations, germanOnly, inspectLesson, taughtUpTo, wordAppears, type UpgradeContext,
+  MISSPELLING_DISTANCE_MAX, checkGrammarRules, checkUpgrade, editDistance, fillInWordGap, frontViolations, germanOnly, inspectLesson,
+  itemTexts, taughtUpTo, wordAppears, type UpgradeContext,
 } from "../tools/lib/lesson-upgrade.js";
-import { CLOSED, contentTokens, deumlaut } from "../tools/lib/vocab-forms.js";
+import { CLOSED, GRAPHEMES, contentTokens, deumlaut, knownForms, knownStems } from "../tools/lib/vocab-forms.js";
 
 const CONTENT = join(__dirname, "..", "content");
 const words = loadWords(CONTENT);
@@ -107,7 +108,7 @@ function ctxWith(lesson: Lesson, rules: GrammarRuleFile[] = [rule()], ws = words
 }
 
 const entry = (over: Partial<LessonUpgradeEntry> = {}): LessonUpgradeEntry => ({
-  lessonId: "a1-u1-d1", rule: "done", practice: "done", quiz: "done", properNouns: ["Yusuf", "Lena", "Tunis"], ...over,
+  lessonId: "a1-u1-d1", rule: "done", practice: "done", quiz: "done", properNouns: ["Yusuf", "Lena", "Tunis"], misspellings: [], ...over,
 });
 /** خطة بدرس واحد — النطاق يحصرها في درس u1-d1 (بقية دروس الوحدة 1 خارج الاكتمال بنطاق اليوم الأول) */
 const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) =>
@@ -119,7 +120,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u2-d4")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d3 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126 · D127)
+const legacy = realLessons.find((l) => l.id === "a1-u2-d5")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d4 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128)
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -143,6 +144,68 @@ describe("D127 — رمز اللاحقة ليس كلمة (قانون الجبه�
     expect(frontViolations(["E-Mail"], none, none)).toEqual(["mail"]);
     expect(frontViolations(["Zeit‑ung"], none, none)).toEqual(["ung", "zeit"]);
     expect(frontViolations(["‑Mail · ‑battle · ‑Ung"], none, none)).toEqual(["battle", "mail", "ung"]);
+  });
+});
+
+describe("D128 — رمز الحرف · الفجوة داخل الكلمة · الخطأ المقصود المعلن (قانون الجبهة)", () => {
+  const none = new Set<string>();
+  const u2d4 = realLessons.find((l) => l.id === "a1-u2-d4")!;
+  const stems = knownStems(taughtUpTo(u2d4, realLessons, words));
+  it("رمز الحرف من القائمة المغلقة يسقط — حرفان صغيران منفصلان، ولو التصقا بالعربية", () => {
+    expect(frontViolations(["ß أم ss؟ · ff · mm · ll · ck · tz · oo · ee · aa · ie", "بعد ss · وبـss · (oo)"], none, none)).toEqual([]);
+  });
+  it("لا باب خلفياً: الرمز داخل كلمة · بحرف كبير · أطول · أو خارج القائمة (ei · au · ah · oh · uu) يبقى مخالفة", () => {
+    expect(frontViolations(["Kasse"], none, none)).toEqual(["kasse"]);
+    expect(frontViolations(["SS · Ss · sss · ei · au · ah · oh · uu"], none, none)).toEqual(["ah", "au", "ei", "oh", "ss", "sss", "uu"]);
+    // القائمة لا تطابق صيغة أي كلمة في المقرر ولا كلمة مغلقة — وei خارجها عمداً لأنها كلمة (das Ei في a1-u5-d1)
+    const forms = new Set(words.flatMap((w) => knownForms(w)));
+    expect([...GRAPHEMES].filter((g) => forms.has(g) || CLOSED.has(g))).toEqual([]);
+    expect(forms.has("ei")).toBe(true);
+  });
+  it("الفجوة داخل الكلمة تُملأ بإجابتها: تُفحص الكلمة كاملة لا شظاياها — ولا إعفاء لها", () => {
+    expect(fillInWordGap("الشارع: die Stra___e (ß أم ss؟)", "ß")).toBe("الشارع: die Straße (ß أم ss؟)");
+    expect(fillInWordGap("Ich ___ Yusuf.", "heiße")).toBe("Ich ___ Yusuf."); // فجوة كلمة كاملة: لا تغيير
+    expect(fillInWordGap("Kaf__ · B__t", "ff")).toBe("Kaf__ · B__t"); // فجوتان: لا ملء — بند لكل فجوة
+    expect(itemTexts({ q: "Stra___e", a: "ß", why: "شرح" })).toEqual(["Straße", "ß"]);
+    expect(frontViolations(itemTexts({ q: "die Stra___e", a: "ß" }), stems, none)).toEqual([]);
+    expect(frontViolations(itemTexts({ q: "die Su___e", a: "pp" }), stems, none)).toEqual(["suppe"]);
+    expect(frontViolations(["أكمل الكتابة: Kaf__ · B__t · g__en"], stems, none)).toEqual(["en", "kaf"]); // تمرين البطاقة الأصلي
+  });
+  it("الخطأ المعلن يسقط داخل ~~ وحدها — وما سواه داخل الشطب يُفحص، وخارجه يبقى مخالفة", () => {
+    const wrong = new Set(["strasse", "heisse"]);
+    expect(frontViolations(["صحّح: ~~die Strasse~~"], stems, none, wrong)).toEqual([]);
+    expect(frontViolations(["صحّح: ~~die heisse Suppe~~"], stems, none, wrong)).toEqual(["suppe"]); // تمرين البطاقة الأصلي
+    expect(frontViolations(["die Strasse"], stems, none, wrong)).toEqual(["strasse"]);
+    expect(frontViolations(["~~die Strasse~~"], stems, none)).toEqual(["strasse"]); // بلا إعلان
+  });
+  it("قياس D128: الأقرب آلياً يقبل كلمات حقيقية (Brot ← Boot = 1) ⇒ الإعلان صريح ومفحوص — المسافة وحدها لا تكفي", () => {
+    expect(editDistance("strasse", "straße")).toBe(2);
+    expect(editDistance("wei", "wie")).toBe(1); // تبديل حرفين متجاورين
+    expect(editDistance("brot", "boot")).toBe(1);
+    expect(MISSPELLING_DISTANCE_MAX).toBe(2);
+  });
+  it("الإعلان نفسه يُفحص → e-upgrade-misspelling (تصحيح غير مدروس · كلمة حقيقية · يعرفها الحارس · بعيد · مكرر) · وغير المستعمل → w-upgrade-misspelling", () => {
+    const fixture = upgraded();
+    fixture.zusammenfassung.warningCards[0]!.exercise = { q: "صحّح: ~~Halo~~", a: "Hallo" };
+    const halo = { wrong: "Halo", right: "Hallo" };
+    expect(codes(fixture, entry({ misspellings: [halo] }))).toEqual([]);
+    expect(codes(fixture)).toContain("e-upgrade-front"); // بلا إعلان: halo غير مدروسة
+    const errs = (extra: { wrong: string; right: string }[]) =>
+      lessonIssues(fixture, entry({ misspellings: [halo, ...extra] })).filter((i) => i.code === "e-upgrade-misspelling").map((i) => i.message);
+    const brot = errs([{ wrong: "Brot", right: "Boot" }]);
+    expect(brot.join("\n")).toMatch(/التصحيح غير مدروس/); // Boot لا تُدرَّس قبل u2-d4
+    expect(brot.join("\n")).toMatch(/«Brot» كلمة حقيقية/);
+    expect(errs([{ wrong: "Hallos", right: "Hallo" }]).join("\n")).toMatch(/الحارس يعرف «Hallos»/);
+    expect(errs([{ wrong: "Hollay", right: "Hallo" }]).join("\n")).toMatch(/مسافة التحرير 3 > 2/);
+    expect(errs([halo]).join("\n")).toMatch(/معلن مرتين/);
+    expect(codes(upgraded(), entry({ misspellings: [halo] }))).toEqual(["w-upgrade-misspelling"]); // معلن ولا يظهر مشطوباً
+  });
+  it("المخطط: الخطأ كلمة واحدة من حرفين فأكثر · لا يساوي تصحيحه · لا مفتاح غريب", () => {
+    const base = { lessonId: "a1-u1-d1", rule: "done", practice: "done", quiz: "done" };
+    expect(LessonUpgradeEntry.safeParse({ ...base, misspellings: [{ wrong: "Strasse", right: "Straße" }] }).success).toBe(true);
+    expect(LessonUpgradeEntry.parse(base).misspellings).toEqual([]);
+    for (const bad of [{ wrong: "Hallo", right: "hallo" }, { wrong: "die Strasse", right: "Straße" }, { wrong: "x", right: "Straße" }, { wrong: "Strasse", right: "Straße", note: "x" }])
+      expect(LessonUpgradeEntry.safeParse({ ...base, misspellings: [bad] }).success, JSON.stringify(bad)).toBe(false);
   });
 });
 
@@ -225,7 +288,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u2-d4", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u2-d5", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -309,16 +372,18 @@ describe("D115 — أدوات القياس", () => {
     expect(wordAppears(w("guten-tag"), toks("Guten Tag!"))).toBe(true);
     expect(wordAppears(w("wie-gehts"), toks("Hallo, wie geht's?"))).toBe(true);
   });
-  it("درس حقيقي لم يُرقَّ (a1-u2-d4): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين فيها غير المدروس)", () => {
+  it("درس حقيقي لم يُرقَّ (a1-u2-d5): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين فيها غير المدروس)", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBeLessThan(12);
     expect(r.rule.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-rule", "e-upgrade-sample"]));
-    // D127: فجواته مقيسة قبل نقل المثال إليه — تمارينه تكتب أخطاء الإملاء المقصودة كأنها كلمات («kafee» · «taße»)
-    // فيراها الحارس غير مدروسة · ومثال kaffee «Ich trinke einen Kaffee.» فيه trinke غير المدروسة
+    // D128: فجواته مقيسة قبل نقل المثال إليه — مثال oder «Kaffee oder Tee?» وتمارينه فيها Tee (الوحدة 5) ·
+    // ومثال natuerlich «Natürlich helfe ich dir!» فيه helfe · ومثال gespraech «… ein kurzes Gespräch.» لم يعد مخالفة (kurz نُقلت إلى u2-d4)
     const front = r.practice.find((i) => i.code === "e-upgrade-front")?.message;
-    expect(front).toMatch(/kafee/);
-    expect(r.rule.map((i) => i.message).join("\n")).toMatch(/trinke/);
-    expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);
+    expect(front).toMatch(/tee/);
+    const samples = r.rule.map((i) => i.message).join("\n");
+    expect(samples).toMatch(/helfe/);
+    expect(samples).not.toMatch(/kurzes/);
+    expect(r.coverage).toEqual([]);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
     const entryReal = loadUpgradePlans(CONTENT)[0]!.lessons.find((e) => e.lessonId === "a1-u1-d1")!;
@@ -435,6 +500,35 @@ describe("D115 — أدوات القياس", () => {
     // الإملاء بلا أسطر فيها خطأ مقصود (das Zeitung · die Mädchen · die Schmetterling لا تُملى أبداً)
     const dictated = l.uebung.stations.filter((s) => s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.a)));
     expect(dictated.join("\n")).not.toMatch(/das Zeitung|die Mädchen|die Schmetterling/);
+  });
+  it("a1-u2-d4 مُرقّى (D128): صفر نقص — 29 بنداً · 4 أنواع (استماع وإملاء من حوار جديد) · Quiz 6 · 14 كلمة · طول الحركة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u2-d4")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u2-d4")!;
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([29, 4, 6, 14]);
+    // القاعدة المخططة نفسها (ars-vokalquantitaet) كُتب ملفها أخيراً — وقاعدتها تسمّي الحروف (ss · ff · oo · ie) فيمرّرها الحارس (D128)
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-vokalquantitaet"]);
+    expect(loadGrammarRules(CONTENT).get("ars-vokalquantitaet")?.payload.ruleDe).toMatch(/lang → ß .*kurz → ss .*oo · h · ie/);
+    expect(e.properNouns).toEqual(["Yusuf", "Lena", "Berlin"]);
+    // الأخطاء المقصودة الثمانية معلنة بتصحيحها — وتظهر مشطوبة وحدها (بطاقات المصائد وتمارينها)
+    expect(e.misspellings.map((m) => m.wrong)).toEqual(["Strasse", "gross", "Fuss", "Tase", "Kafee", "komen", "Wei", "drie"]);
+    // النواة D113 (lang · lange) + kurz منقولة من u4-d5 (هدف الدرس: طويلة أم قصيرة) · وstrasse من u1-d4 لم تعد «جديدة» (N-018)
+    expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["lang", "lange", "kurz"]));
+    expect(l.praesentation.wordIds).not.toContain("strasse");
+    const kurz = words.find((w) => w.id === "kurz")!;
+    expect([kurz.unit, kurz.usedInLessons, kurz.sampleSentence?.sourceLesson]).toEqual([2, ["a1-u2-d4", "a1-u4-d5"], "a1-u2-d4"]);
+    expect(l.warmup.cardIds).toEqual(["stadt", "zeitung", "wohnen"]);
+    // الحوار الجديد a1-u2-d4-lang-oder-kurz: أسطره الخمسة عشر كلها في الاستماع والإملاء (لا مسار بلا بند)
+    const audioIds = l.uebung.stations.filter((s) => s.type === "listening" || s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.audioId)));
+    expect([...audioIds].sort((a, b) => Number(a.slice(3)) - Number(b.slice(3)))).toEqual(Array.from({ length: 15 }, (_, i) => `lk-${i + 1}`));
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    // الإملاء بلا حرف منفرد يُنطق باسمه (mit ß · zwei s · das a) ولا علامة داخلية تُكتب بالضبط (— :)
+    const dictated = l.uebung.stations.filter((s) => s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.a)));
+    expect(dictated.join("\n")).not.toMatch(/mit ß|zwei s|das a |[—:]/);
+    // ما خرج من الأصل: «ai الطويل» في heiß · «au (diphthong)» في groß · leesen · Suppe · heisst
+    expect(JSON.stringify(l)).not.toMatch(/ai الطويل|diphthong|leesen|Suppe|heisst/);
   });
   it("D121 e-upgrade-warmup: بطاقة استدعاء من كلمات اليوم أو لاحقة ⇒ خطأ · أول درس في المسار مستثنى", () => {
     const d4 = realLessons.find((x) => x.id === "a1-u1-d4")!;

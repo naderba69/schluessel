@@ -56,6 +56,20 @@ const MORPHEME_NOTATION = /(?<![\p{L}\p{N}])[-\u2010\u2011\u2013](\p{Ll}+)(?![\p
 export const stripMorphemeNotation = (text: string): string =>
   text.replace(MORPHEME_NOTATION, (m: string, suffix: string) => (MORPHEMES.has(suffix) ? " " : m));
 
+/**
+ * D128: رمز الحرف المكتوب (ss · ff · oo · ie) ليس كلمة — قاعدة طول الحركة تسمّي الحروف نفسها («ß أم ss؟»)
+ * وكان المقطِّع يجعل «ss» كلمةً غير مدروسة. القائمة مغلقة ومن القاعدة نفسها: الحروف المضاعفة التي تُقصّر الحركة
+ * قبلها (ومنها ck وtz بدل kk وzz) وحروف الإطالة aa · ee · oo · ie — ولا يطابق أيٌّ منها صيغة كلمة في المقرر (اختبار).
+ * تسقط بشرطين معاً: (1) حرفان صغيران بالضبط (2) منفصلان لا داخل كلمة — فلا يصير الرمز باباً خلفياً لكلمة.
+ * خارج القائمة عمداً: ei (das Ei كلمة في المقرر و‑ei لاحقة) · au · ah · oh · eh (تعجّبات) — تُكتب في why أو بالعربية.
+ * والحرف الواحد (ß · h · s) يُهمَل أصلاً في contentTokens.
+ */
+export const GRAPHEMES: ReadonlySet<string> = new Set("ss ck tz ff ll mm nn pp rr tt bb dd gg aa ee oo ie".split(" "));
+const GRAPHEME_NOTATION = /(?<![\p{L}\p{N}])(\p{Ll}{2})(?![\p{L}\p{N}])/gu;
+/** يمحو رموز الحروف من القائمة المغلقة (حرفان صغيران منفصلان) ويترك ما سواها كما هو */
+export const stripGraphemeNotation = (text: string): string =>
+  text.replace(GRAPHEME_NOTATION, (m: string, g: string) => (GRAPHEMES.has(g) ? " " : m));
+
 /** رموز المحتوى في نص ألماني: حروف فقط (الأرقام والرموز تسقط) · حرف واحد يُهمل (a/b في الخيارات) */
 export function contentTokens(text: string): string[] {
   return text.toLowerCase().replace(/'s\b/g, "").replace(/[^\p{L}\s]/gu, " ").split(/\s+/).filter((t) => t.length > 1);

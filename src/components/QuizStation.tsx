@@ -10,6 +10,7 @@ import {
   type QuizAttempt, type QuizOutcome,
 } from "../lib/quiz-session.js";
 import { UmlautKeys, insertAtCursor } from "./LessonContent.js";
+import { StruckText } from "./StruckText.js";
 
 export type QuizLesson = Pick<Lesson, "id" | "quiz" | "slider">;
 
@@ -83,9 +84,19 @@ export function QuizStation({
             <ul data-testid="quiz-review">
               {review.map(({ it, ans }, i) => (
                 <li key={i}>
-                  <span dir="auto">{it.q}</span> — كتبت: <span dir="auto">{ans.given.trim() || "—"}</span> ← الصحيح:{" "}
-                  <span dir="auto">{it.a}</span>
-                  {it.why ? ` · ${it.why}` : ""}
+                  <span dir="auto">
+                    <StruckText text={it.q} />
+                  </span>{" "}
+                  — كتبت: <span dir="auto">{ans.given.trim() || "—"}</span> ← الصحيح:{" "}
+                  <span dir="auto">
+                    <StruckText text={it.a} />
+                  </span>
+                  {it.why ? (
+                    <>
+                      {" · "}
+                      <StruckText text={it.why} />
+                    </>
+                  ) : null}
                 </li>
               ))}
             </ul>
@@ -135,7 +146,7 @@ export function QuizStation({
         سؤال {attempt.cursor + 1} من {attempt.items.length}
       </p>
       <p dir="auto" data-testid="quiz-question">
-        {item.q}
+        <StruckText text={item.q} />
       </p>
       {item.choices ? (
         <p>
@@ -174,7 +185,11 @@ export function QuizStation({
       {answer && (
         <div data-testid="quiz-feedback" data-verdict={answer.verdict}>
           <p dir="auto">{verdictNoteAr(item, answer)}</p>
-          {item.why && answer.verdict !== "judge" && <p data-testid="quiz-why">{item.why}</p>}
+          {item.why && answer.verdict !== "judge" && (
+            <p data-testid="quiz-why">
+              <StruckText text={item.why} />
+            </p>
+          )}
           {needsJudgment(attempt) ? (
             <p>
               <button data-testid="quiz-judge-yes" onClick={() => setAttempt(judgeQuizItem(attempt, true))}>

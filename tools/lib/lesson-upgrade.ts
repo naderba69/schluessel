@@ -23,6 +23,9 @@
 //   e-upgrade-word-unpracticed  practice+quiz=done وكلمة جديدة من الدرس لا تظهر في أي بند (لا كلمة بلا استرجاع)
 //   w-upgrade-mark-done      جزء pending يستوفي معايير done فعلاً — علِّمه done
 //   w-upgrade-proper-noun    اسم علم معلن لا يظهر في نصوص الدرس المُرقّاة (باب خلفي)
+//   e-upgrade-misspelling    D128: خطأ مقصود معلن غير صالح — تصحيحه غير مدروس · أو هو كلمة حقيقية في المقرر · أو يعرفه
+//                            الحارس أصلاً · أو بعيد عن تصحيحه (> MISSPELLING_DISTANCE_MAX) · أو معلن مرتين
+//   w-upgrade-misspelling    خطأ مقصود معلن لا يظهر مشطوباً (~~…~~) في نصوص الدرس المُرقّاة
 //   e-rule-index · e-rule-level · e-rule-front · w-rule-proper-noun   فحوص ملفات القواعد نفسها (checkGrammarRules)
 import {
   AUDIO_STATION_TYPES,
@@ -35,11 +38,15 @@ import {
   type LessonUpgradePlan,
   type Word,
 } from "../../content/schemas/index.js";
-import { CLOSED, contentTokens, deumlaut, knownStems, stem, stripMorphemeNotation, unknownTokens } from "./vocab-forms.js";
+import {
+  CLOSED, contentTokens, deumlaut, knownForms, knownStems, stem, stripGraphemeNotation, stripMorphemeNotation, unknownTokens,
+} from "./vocab-forms.js";
 
 export const PRACTICE_ITEMS_MIN = 12;
 export const PRACTICE_TYPES_MIN = 3;
 export const QUIZ_ITEMS_MIN = 6;
+/** D128: أقصى مسافة تحرير بين الخطأ المقصود المعلن وتصحيحه — الخطأ الإملائي قريب من صوابه (Strasse ← Straße = 2) */
+export const MISSPELLING_DISTANCE_MAX = 2;
 /** D114 §3: «≥ 12 بنداً في ≥ 3 أنواع محطات (منها الاستماع بالصوت الموجود والإملاء)» */
 export const REQUIRED_STATION_TYPES = ["listening", "dictation"] as const;
 
@@ -72,7 +79,28 @@ const ARABIC = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFE
 /** الألماني فقط: التعليمات العربية خارج القفل (الاتفاقية نفسها في قفل الامتحان D109) */
 export const germanOnly = (s: string): string => s.replace(ARABIC, " ");
 
-/** نصوص بند (كل القيم النصية عدا why ومعرّف المسار الصوتي) */
+const GAP = /_{2,}/g;
+/**
+ * D128: فجوة داخل كلمة («Stra___e» والإجابة ß): النص المفحوص هو الكلمة بعد ملء الفجوة بالإجابة — لا شظاياها
+ * («stra» كلمة غير مدروسة) ولا إعفاءً لها: «Su___e» والإجابة pp تصير «Suppe» فتُفحص. بشروط معاً: فجوة واحدة فقط
+ * في السؤال · ملتصقة بحرف من جهة على الأقل. فجوة الكلمة الكاملة («Ich ___ Yusuf.») لا تتغير، والإجابة تُفحص وحدها دائماً.
+ */
+export function fillInWordGap(q: string, a: string): string {
+  const gaps = [...q.matchAll(GAP)];
+  if (gaps.length !== 1) return q;
+  const start = gaps[0]!.index ?? 0;
+  const end = start + gaps[0]![0].length;
+  const touches = /\p{L}/u.test(q[start - 1] ?? "") || /\p{L}/u.test(q[end] ?? "");
+  return touches ? q.slice(0, start) + a + q.slice(end) : q;
+}
+
+const withFilledGap = (item: unknown): unknown => {
+  if (!item || typeof item !== "object" || Array.isArray(item)) return item;
+  const o = item as Record<string, unknown>;
+  return typeof o.q === "string" && typeof o.a === "string" ? { ...o, q: fillInWordGap(o.q, o.a) } : item;
+};
+
+/** نصوص بند (كل القيم النصية عدا why ومعرّف المسار الصوتي) — والفجوة داخل الكلمة مملوءة بإجابتها (D128) */
 export function itemTexts(item: unknown): string[] {
   const out: string[] = [];
   const walk = (v: unknown, key?: string) => {
@@ -81,16 +109,48 @@ export function itemTexts(item: unknown): string[] {
     else if (Array.isArray(v)) for (const x of v) walk(x);
     else if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) walk(x, k);
   };
-  walk(item);
+  walk(withFilledGap(item));
   return out;
 }
 
+const STRUCK = /~~([\s\S]+?)~~/g;
 /**
- * الكلمات غير المدروسة في نصوص (مرتبة بلا تكرار). العربية تُمحى أولاً ثم رموز اللواحق (D127) — بهذا الترتيب:
- * «بـ‑chen» تلتصق فيها الشرطة بحرف عربي (الكشيدة حرف) فلا تُعرف رمزاً إلا بعد محو العربية.
+ * D128: الصيغ الخاطئة المعلنة تسقط داخل ~~…~~ وحده — خارجه تبقى كلمات غير مدروسة فيمسكها الحارس
+ * (الخطأ المقصود لا يُرى إلا مشطوباً). وما سواها داخل الشطب يُفحص كالعادة: ~~die heisse Suppe~~ تبقى «suppe» مخالفة.
  */
-export function frontViolations(texts: readonly string[], stems: ReadonlySet<string>, allow: ReadonlySet<string>): string[] {
-  return unknownTokens(stripMorphemeNotation(germanOnly(texts.join("\n"))), stems, allow);
+export const stripDeclaredMisspellings = (text: string, wrong: ReadonlySet<string>): string =>
+  wrong.size === 0
+    ? text
+    : text.replace(STRUCK, (_m: string, inner: string) => inner.replace(/\p{L}+/gu, (t) => (wrong.has(t.toLowerCase()) ? " " : t)));
+
+/** الرموز داخل ~~…~~ في نصوص (لفحص استعمال الأخطاء المعلنة) */
+const struckTokens = (texts: readonly string[]) =>
+  new Set(texts.flatMap((t) => [...t.matchAll(STRUCK)].flatMap((m) => contentTokens(m[1]!))));
+
+/** مسافة التحرير (Damerau–Levenshtein بالمحاذاة المثلى): إدراج · حذف · استبدال · تبديل حرفين متجاورين */
+export function editDistance(a: string, b: string): number {
+  const A = [...a], B = [...b];
+  const d: number[][] = Array.from({ length: A.length + 1 }, (_, i) => Array.from({ length: B.length + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0)));
+  for (let i = 1; i <= A.length; i++)
+    for (let j = 1; j <= B.length; j++) {
+      const cost = A[i - 1] === B[j - 1] ? 0 : 1;
+      let v = Math.min(d[i - 1]![j]! + 1, d[i]![j - 1]! + 1, d[i - 1]![j - 1]! + cost);
+      if (i > 1 && j > 1 && A[i - 1] === B[j - 2] && A[i - 2] === B[j - 1]) v = Math.min(v, d[i - 2]![j - 2]! + 1);
+      d[i]![j] = v;
+    }
+  return d[A.length]![B.length]!;
+}
+
+/**
+ * الكلمات غير المدروسة في نصوص (مرتبة بلا تكرار). العربية تُمحى أولاً ثم رموز اللواحق (D127) ورموز الحروف (D128)
+ * — بهذا الترتيب: «بـ‑chen» و«بـss» تلتصق فيهما الرموز بحرف عربي (الكشيدة حرف) فلا تُعرف رموزاً إلا بعد محو العربية.
+ * misspelled: الصيغ الخاطئة المعلنة للدرس (D128) — تسقط داخل ~~…~~ وحده.
+ */
+export function frontViolations(
+  texts: readonly string[], stems: ReadonlySet<string>, allow: ReadonlySet<string>, misspelled: ReadonlySet<string> = new Set(),
+): string[] {
+  const text = stripDeclaredMisspellings(texts.join("\n"), misspelled);
+  return unknownTokens(stripGraphemeNotation(stripMorphemeNotation(germanOnly(text))), stems, allow);
 }
 
 const allowSet = (names: readonly string[]) => new Set(names.flatMap((n) => contentTokens(n)));
@@ -148,7 +208,9 @@ function checkRulePart(lesson: Lesson, ctx: UpgradeContext, stems: ReadonlySet<s
   return { issues, texts };
 }
 
-function checkPracticePart(lesson: Lesson, ctx: UpgradeContext, stems: ReadonlySet<string>, allow: ReadonlySet<string>): PartResult {
+function checkPracticePart(
+  lesson: Lesson, ctx: UpgradeContext, stems: ReadonlySet<string>, allow: ReadonlySet<string>, wrong: ReadonlySet<string>,
+): PartResult {
   const issues: UpgradeIssue[] = [];
   const err = (code: string, message: string) => issues.push({ level: "error", code, message, lessonId: lesson.id });
   const texts: string[] = [];
@@ -183,7 +245,7 @@ function checkPracticePart(lesson: Lesson, ctx: UpgradeContext, stems: ReadonlyS
     if (!types.has(t)) err("e-upgrade-practice-audio", `${lesson.id}: لا محطة ${t} (D114: الاستماع بالصوت الموجود والإملاء)`);
   // المصائد جزء من التدريب المعروض (تمرين لكل بطاقة) — قانون الجبهة عليها أيضاً
   for (const c of lesson.zusammenfassung.warningCards) texts.push(c.commonError.de, c.correct.de, ...itemTexts(c.exercise));
-  const unknown = frontViolations(texts, stems, allow);
+  const unknown = frontViolations(texts, stems, allow, wrong);
   if (unknown.length) err("e-upgrade-front", `${lesson.id} (تدريب/مصائد): غير مدروسة حتى الدرس: ${unknown.join("، ")}`);
   // D121: الاستدعاء لما سبق تعلمه — بطاقة أول تدريسها اليوم (أو لاحقاً) ليست استدعاءً بل عرضٌ قبل الشرح
   const earlier = ctx.lessons.filter((l) => pathOrder(l) < pathOrder(lesson));
@@ -195,7 +257,7 @@ function checkPracticePart(lesson: Lesson, ctx: UpgradeContext, stems: ReadonlyS
   return { issues, texts };
 }
 
-function checkQuizPart(lesson: Lesson, stems: ReadonlySet<string>, allow: ReadonlySet<string>): PartResult {
+function checkQuizPart(lesson: Lesson, stems: ReadonlySet<string>, allow: ReadonlySet<string>, wrong: ReadonlySet<string>): PartResult {
   const issues: UpgradeIssue[] = [];
   const err = (code: string, message: string) => issues.push({ level: "error", code, message, lessonId: lesson.id });
   const texts: string[] = [];
@@ -216,24 +278,59 @@ function checkQuizPart(lesson: Lesson, stems: ReadonlySet<string>, allow: Readon
   for (let i = 0; i < signatures.length; i++)
     for (let j = i + 1; j < signatures.length; j++)
       if (signatures[i] === signatures[j]) err("e-upgrade-quiz-variants", `${lesson.id}: النسختان ${i + 1} و${j + 1} متطابقتان`);
-  const unknown = frontViolations(texts, stems, allow);
+  const unknown = frontViolations(texts, stems, allow, wrong);
   if (unknown.length) err("e-upgrade-front", `${lesson.id} (Quiz): غير مدروسة حتى الدرس: ${unknown.join("، ")}`);
   return { issues, texts };
 }
 
 export type LessonPartsReport = Record<UpgradePart, UpgradeIssue[]> & {
   coverage: UpgradeIssue[]; practiceItems: number; practiceTypes: string[]; quizMin: number;
+  /** D128: صلاحية الأخطاء المقصودة المعلنة (تُحتسب حين يكون التدريب أو Quiz done) */
+  misspellings: UpgradeIssue[];
   /** نصوص كل جزء (لفحص استعمال أسماء العلم المعلنة) */
   texts: Record<UpgradePart, string[]>;
 };
 
+/**
+ * D128: الخطأ المقصود المعلن (~~Strasse~~ ← Straße) يُقبل بشروط تُفحص هنا كلها: تصحيحه مدروس حتى الدرس (الخطأ يُعرض
+ * مقابل صواب يعرفه المتعلم) · ليس صيغة أي كلمة في المقرر كله ولا كلمة مغلقة (Brot · Bus · weh لا تُعلن أخطاءً — قياس
+ * D128: المطابقة الآلية بأقرب كلمة مدروسة كانت ستقبلها) · لا يعرفه الحارس أصلاً · قريب من تصحيحه · غير مكرر.
+ */
+function checkMisspellings(
+  lesson: Lesson, declared: readonly { wrong: string; right: string }[], ctx: UpgradeContext,
+  stems: ReadonlySet<string>, allow: ReadonlySet<string>,
+): UpgradeIssue[] {
+  const issues: UpgradeIssue[] = [];
+  if (declared.length === 0) return issues;
+  const err = (message: string) => issues.push({ level: "error", code: "e-upgrade-misspelling", lessonId: lesson.id, message: `${lesson.id}: ${message}` });
+  const courseForms = new Set(ctx.words.flatMap((w) => knownForms(w)));
+  const seen = new Set<string>();
+  for (const { wrong, right } of declared) {
+    const w = wrong.toLowerCase();
+    const label = `الخطأ المعلن ~~${wrong}~~ ← ${right}`;
+    if (seen.has(w)) err(`${label}: معلن مرتين`);
+    seen.add(w);
+    const rightUnknown = unknownTokens(right, stems, allow);
+    if (rightUnknown.length) err(`${label}: التصحيح غير مدروس حتى الدرس (${rightUnknown.join("، ")}) — الخطأ يُعرض مقابل صواب يعرفه المتعلم`);
+    if (CLOSED.has(w) || courseForms.has(w)) err(`${label}: «${wrong}» كلمة حقيقية في المقرر — لا تُعلن خطأً`);
+    else if (unknownTokens(wrong, stems, allow).length === 0) err(`${label}: الحارس يعرف «${wrong}» أصلاً — الإعلان بلا معنى وقد تظهر بلا شطب`);
+    const d = editDistance(w, right.toLowerCase());
+    if (d > MISSPELLING_DISTANCE_MAX) err(`${label}: مسافة التحرير ${d} > ${MISSPELLING_DISTANCE_MAX} — الخطأ الإملائي قريب من صوابه`);
+  }
+  return issues;
+}
+
 /** كل فحوص الدرس كأن أجزاءه كلها done — أساس الحارس وأداة الحالة (ما الذي ينقص بالضبط) */
-export function inspectLesson(lesson: Lesson, entry: Pick<LessonUpgradeEntry, "properNouns">, ctx: UpgradeContext): LessonPartsReport {
+export function inspectLesson(
+  lesson: Lesson, entry: Pick<LessonUpgradeEntry, "properNouns"> & Partial<Pick<LessonUpgradeEntry, "misspellings">>, ctx: UpgradeContext,
+): LessonPartsReport {
   const stems = knownStems(taughtUpTo(lesson, ctx.lessons, ctx.words));
   const allow = allowSet(entry.properNouns);
+  const declared = entry.misspellings ?? [];
+  const wrong = new Set(declared.map((m) => m.wrong.toLowerCase()));
   const rule = checkRulePart(lesson, ctx, stems, allow);
-  const practice = checkPracticePart(lesson, ctx, stems, allow);
-  const quiz = checkQuizPart(lesson, stems, allow);
+  const practice = checkPracticePart(lesson, ctx, stems, allow, wrong);
+  const quiz = checkQuizPart(lesson, stems, allow, wrong);
   const tokens = tokenSet([...practice.texts, ...quiz.texts]);
   const byId = new Map(ctx.words.map((w) => [w.id, w]));
   const unpracticed = lesson.praesentation.wordIds.filter((id) => {
@@ -248,6 +345,7 @@ export function inspectLesson(lesson: Lesson, entry: Pick<LessonUpgradeEntry, "p
     practice: practice.issues,
     quiz: quiz.issues,
     coverage,
+    misspellings: checkMisspellings(lesson, declared, ctx, stems, allow),
     practiceItems: lesson.uebung.stations.reduce((n, s) => n + s.items.length, 0),
     practiceTypes: [...new Set(lesson.uebung.stations.map((s) => s.type))],
     quizMin: Math.min(...lesson.quiz.variants.map((v) => v.items.length)),
@@ -307,6 +405,15 @@ export function checkUpgrade(plan: LessonUpgradePlan, ctx: UpgradeContext): Upgr
       for (const n of entry.properNouns)
         if (!contentTokens(n).every((t) => seen.has(t)))
           issues.push({ level: "warning", code: "w-upgrade-proper-noun", lessonId: s.lessonId, message: `${s.lessonId}: اسم علم معلن لا يظهر في نصوص الدرس المُرقّاة: ${n}` });
+    }
+    // D128: الأخطاء المقصودة المعلنة — صلاحيتها حين يُعرض التدريب أو Quiz · وكل خطأ معلن يجب أن يظهر مشطوباً فعلاً
+    if (s.practice === "done" || s.quiz === "done") {
+      issues.push(...r.misspellings);
+      const entry = plan.lessons.find((e) => e.lessonId === s.lessonId)!;
+      const struck = struckTokens((["practice", "quiz"] as const).flatMap((p) => (s[p] === "done" ? r.texts[p] : [])));
+      for (const m of entry.misspellings)
+        if (!struck.has(m.wrong.toLowerCase()))
+          issues.push({ level: "warning", code: "w-upgrade-misspelling", lessonId: s.lessonId, message: `${s.lessonId}: خطأ مقصود معلن لا يظهر مشطوباً (~~…~~): ${m.wrong}` });
     }
   }
   return issues;

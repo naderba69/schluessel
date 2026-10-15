@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { audioPlayer } from "../lib/audio-player.js";
 import { FUNCTION_LABELS_AR, type Phrase } from "../lib/phrase-bank.js";
 import { PlayButton } from "./LessonSession.js";
+import { StruckText } from "./StruckText.js";
 import type { Unit0Card } from "../../content/schemas/index.js";
 import type { LearnCardData, RecallCardData, PracticeData, CloseData } from "../lib/lesson-runner.js";
 import { RecallCardView, LearnCardView, CloseView } from "./LessonSession.js";
@@ -196,12 +197,18 @@ export function RuleDiscoveryView({ rule, onDone }: { rule: GrammarRule; onDone?
         <>
           <div data-testid="rule-view">
             <p dir="ltr">{shown.ruleDe}</p>
-            <p>{shown.ruleAr}</p>
-            <p data-testid="rule-contrast">{shown.contrastAr}</p>
+            <p>
+              <StruckText text={shown.ruleAr} />
+            </p>
+            <p data-testid="rule-contrast">
+              <StruckText text={shown.contrastAr} />
+            </p>
             {shown.limitsAr.length > 0 && (
               <ul data-testid="rule-limits">
                 {shown.limitsAr.map((x, i) => (
-                  <li key={i}>{x}</li>
+                  <li key={i}>
+                    <StruckText text={x} />
+                  </li>
                 ))}
               </ul>
             )}
@@ -259,13 +266,19 @@ export function RuleDiscoveryView({ rule, onDone }: { rule: GrammarRule; onDone?
 function FeedbackView({ verdict, onNext }: { verdict: Verdict; onNext: () => void }) {
   return (
     <div data-testid="practice-feedback" data-status={verdict.status}>
-      <p>{verdict.noteAr}</p>
+      <p>
+        <StruckText text={verdict.noteAr} />
+      </p>
       {verdict.status !== "correct" && (
         <p data-testid="practice-answer" dir="ltr">
-          {verdict.expected}
+          <StruckText text={verdict.expected} />
         </p>
       )}
-      {verdict.why && <p data-testid="practice-why">💡 {verdict.why}</p>}
+      {verdict.why && (
+        <p data-testid="practice-why">
+          💡 <StruckText text={verdict.why} />
+        </p>
+      )}
       <button data-testid="practice-next" onClick={onNext}>
         التالي ←
       </button>
@@ -295,13 +308,17 @@ function TypedItemView({ item, verdict, onAttempt }: { item: TypedItem; verdict:
       {audio && <PlayButton audioId={audio.audioId} speakText={audio.speakText} label="استمع إلى المقطع" />}
       {(item.kind === "choice" || item.kind === "input") && item.text && (
         <blockquote dir="ltr" data-testid="practice-text">
-          {item.text}
+          <StruckText text={item.text} />
         </blockquote>
       )}
       {item.kind === "input" && item.mode === "dictation" ? (
         <p data-testid="dictation-instruction">{item.prompt || "استمع واكتب ما تسمعه بالضبط (الحرف الكبير جزء من التهجئة)."}</p>
       ) : (
-        item.prompt && <p dir="auto">{item.prompt}</p>
+        item.prompt && (
+          <p dir="auto">
+            <StruckText text={item.prompt} />
+          </p>
+        )
       )}
       {item.kind === "choice" &&
         displayOrder(item.choices, `${item.prompt}|${item.choices.join("|")}`).map((c, i) => (
@@ -468,7 +485,9 @@ export function PracticeStation({
   return (
     <section data-testid="practice-station" data-type={station.type}>
       {counter}
-      <p dir="ltr">{item.q}</p>
+      <p dir="ltr">
+        <StruckText text={item.q ?? ""} />
+      </p>
       {!state.verdict ? (
         <button data-testid="practice-reveal" onClick={() => setState(submitAttempt(state, legacy, ""))}>
           أظهر الإجابة
@@ -476,7 +495,7 @@ export function PracticeStation({
       ) : (
         <>
           <p data-testid="practice-answer" dir="ltr">
-            {item.a}
+            <StruckText text={item.a ?? ""} />
           </p>
           <button data-testid="practice-next" onClick={next}>
             التالي ←
@@ -509,8 +528,13 @@ export function CloseStation({
       <ul data-testid="warning-cards">
         {data.warningCards.map((card, i) => (
           <li key={i}>
-            <span dir="ltr">{card.commonError.de}</span> — {card.whyArabicSpeakerFails} ← الصحيح:{" "}
-            <span dir="ltr">{card.correct.de}</span>
+            <span dir="ltr">
+              <StruckText text={card.commonError.de} />
+            </span>{" "}
+            — <StruckText text={card.whyArabicSpeakerFails} /> ← الصحيح:{" "}
+            <span dir="ltr">
+              <StruckText text={card.correct.de} />
+            </span>
           </li>
         ))}
       </ul>

@@ -4635,6 +4635,7 @@
       "textDe": "kurz.",
       "priority": "P2",
       "lessonRefs": [
+        "a1-u2-d4",
         "a1-u4-d5"
       ],
       "durationMs": 734,
@@ -15687,6 +15688,46 @@
       "rmsDb": -17
     },
     {
+      "id": "word-lang",
+      "file": "words/audio/de-DE/word-lang.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "lang.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 757,
+      "sizeBytes": 3650,
+      "hash": "sha256:8406b3cd779e51266d88a26a9d3dfa2d8449b1f633f8d6cb40be5e6e295f09e8",
+      "pcmSha256": "f18e01d7e02fd1deefd8e15606e667e916194820a005a81f71c44ec622a62f54",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "word-lange",
+      "file": "words/audio/de-DE/word-lange.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "lange.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 943,
+      "sizeBytes": 4336,
+      "hash": "sha256:12c20b5e0efc6363624b0a8e1abe22e6a7f792ee7da7d38faf865d845e23bdcb",
+      "pcmSha256": "d5ecacbf6093867d14145b7d97a41285ec57621d09b1184d4877878f001bfc8f",
+      "rmsDb": -17.03
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -18820,6 +18861,336 @@
       "hash": "sha256:22a21ace5f44284f63cd2d74921189668a0ea9477e2967381f72771619292579",
       "pcmSha256": "dd5769748771adc8d488e36a561777805b96c09637a9b8626c2aa7ccf3370fea",
       "rmsDb": -17.35
+    },
+    {
+      "id": "lk-1",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, was ist das? Eine Tasse Kaffee?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 3416,
+      "sizeBytes": 15839,
+      "hash": "sha256:fe7b242ed081c1f9c15d0a6606561d9f7667b3070d6d355868bd9fedbdf54618",
+      "pcmSha256": "0c750275d385eca4d0e32cd6369f05c97592c7061b0cd3542ed792bad9b26637",
+      "rmsDb": -17.63
+    },
+    {
+      "id": "lk-2",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Der Kaffee ist heiß.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 2325,
+      "sizeBytes": 10891,
+      "hash": "sha256:106ae31ea7ee2531ed30139e487cf84da62c8e3e0d8d2ba8482b966af10f7da8",
+      "pcmSha256": "6ba4ab60e77bf8f12c3a5cbe98233f6f3d4f5ce3da36ae549ad011cddd7d866a",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "lk-3",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Heiß — ein Wort für heute! Wir schreiben jetzt zehn Wörter.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 4776,
+      "sizeBytes": 22134,
+      "hash": "sha256:ea66f34c6d14b924085676570da44bafcd767d8f8b0ae535aa0b256ca3b91ce5",
+      "pcmSha256": "61be9dd111a7d47d444ae0bd0c9ab0d4c7770caa3d9b0355772da4e2ae8b0bd6",
+      "rmsDb": -17.44
+    },
+    {
+      "id": "lk-4",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 104,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja — aber bitte langsam!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 2313,
+      "sizeBytes": 10328,
+      "hash": "sha256:23ee743cf66ccf035051c0bdc6b54385ea2324729dbfe82d58c49af9f68c8c8a",
+      "pcmSha256": "26d37302e72cbf13c2eebfdf91f9267e543cb1bcac58bb0b47774feb91e52044",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "lk-5",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 116,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wort Nummer eins: die Straße.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 2584,
+      "sizeBytes": 12061,
+      "hash": "sha256:e54d6140084c4eb4eda07d0948eab5ba57f49ed3a7f3daff36b17bf7cfd08bcf",
+      "pcmSha256": "4e481f30c1874a9f45989693531fb3fc990be2798c50e7a28a0261f8be4efe2d",
+      "rmsDb": -17.38
+    },
+    {
+      "id": "lk-6",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Straße — mit zwei s oder mit ß?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 3381,
+      "sizeBytes": 15278,
+      "hash": "sha256:6c84c646710536b670de0779bb5c028d359373b00d4d8cee8f4665383c8ab435",
+      "pcmSha256": "5da2dfcfc9b7f380deab1cf1eac2068be1dee7cfa9a8bd14e1c392691b46154a",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "lk-7",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Mit ß. Das a in Straße ist lang.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 3192,
+      "sizeBytes": 14906,
+      "hash": "sha256:17dcfe8aa04e3bbb9ce2cf230f07dfb0a34e76df101d5d53cfff5af0ac007465",
+      "pcmSha256": "eb5ca5a7d6773fc1f21a5d56d92e727aeb750257c320b14060990000dbbf4bbf",
+      "rmsDb": -17.38
+    },
+    {
+      "id": "lk-8",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und in Tasse ist das a kurz — zwei s!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 3602,
+      "sizeBytes": 15743,
+      "hash": "sha256:c1506d3c4a8419103738b4dc21ad19a00be5e605ed475ffdea42c68b2cd7d673",
+      "pcmSha256": "35f208e89deccdec58791bf69a6df4e44db45f344aff67b62f736c82e70ad6d0",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "lk-9",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 105,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Wort Nummer zwei: heiß.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 2856,
+      "sizeBytes": 13244,
+      "hash": "sha256:2511cec41af60db62e75709a1e81e731f245cc4d4c6e98934c3488d673e7ec5f",
+      "pcmSha256": "aa05365ef40de31feb5de11f368b1b52b5f819f4039cd7329b3e52be952d13b3",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "lk-10",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Heiß mit ß — wie ich heiße!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 2499,
+      "sizeBytes": 11342,
+      "hash": "sha256:a92b9ac2b77777f86a6bd0a73bf790bc31d02738cda16b6a68722da524796944",
+      "pcmSha256": "9db5de5e666174fc9d37319f29273b4bcffab820f6d585b1c2d0b485a31dfdb5",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "lk-11",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Und jetzt groß, der Fuß und süß.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 3304,
+      "sizeBytes": 15485,
+      "hash": "sha256:d18ea68fcc2cd3e1bd41af2349d555514bc486cdd0e1efacfc201fafdc8be0f6",
+      "pcmSha256": "5a1e1f726578f4851a092251dd9be1796146985bdf23d283f63cddab51582371",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "lk-12",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 173,
+        "lengthScale": 1.32
+      },
+      "textDe": "Alle mit ß! Das o, das u und das ü sind lang.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 4159,
+      "sizeBytes": 18863,
+      "hash": "sha256:d32e26a789428cc9aa49446442582db373986adbad5206241de8ea1e5f858eb9",
+      "pcmSha256": "5735c6f890a89ecc70c5af716a28b47db6b315c34f0a81cc9ab1198d19c91b1e",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "lk-13",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 100,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du schreibst aber lange!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 2392,
+      "sizeBytes": 11451,
+      "hash": "sha256:420ea5f1c20e3622879c685641a003ce5cf3730c3d2832f392678dff2aa4b4d5",
+      "pcmSha256": "9b0ce5fca6ebe46558c96f3fb9526f28c2ebab0d833b1b31b48de99e9c3cf0a5",
+      "rmsDb": -17.45
+    },
+    {
+      "id": "lk-14",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, Deutsch ist schwer! Und jetzt du: der Schmetterling!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 4101,
+      "sizeBytes": 18544,
+      "hash": "sha256:7233a16929cf8d2d64fb5f6339f7c09e1d0ea05049b33d593035c8658624e4a9",
+      "pcmSha256": "7b46107c690f40f3c6a50a0a45502021101d8287f17d5089c1cf53240327efa5",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "lk-15",
+      "file": "audio/scripts/a1-u2-d4-lang-oder-kurz/lk-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ach nein, das Wort ist so lang!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d4"
+      ],
+      "durationMs": 3064,
+      "sizeBytes": 14274,
+      "hash": "sha256:0a8803d7435016ce1bde620d956ef3cbe85414555c58532473dc86244b074447",
+      "pcmSha256": "c0cc8ede27125d2f2431e7799082eecae92d066dfc0028a4332e0c16374e1253",
+      "rmsDb": -17.24
     }
   ],
   "characterVoices": {
