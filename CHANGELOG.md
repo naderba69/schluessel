@@ -1,5 +1,13 @@
 # CHANGELOG.md
 
+## 2026-10-15 — الدفعة 77: النطق — 37 خطأً مقيساً مُصحَّحاً + بوابة تدقيق دائمة (D122)
+- **إضافة أداة**: `tools/pronunciation-audit.py` (كل كلمة منطوقة مقابل المرجع: الطول والنبر · flagged/stale/reviewedStale/reviewedDrift · `--refresh-reference` بتحقق بصمة git) + `tools/pronunciation-reference.de.json` (مقتطف CC-BY-SA بإسناده) · `phonemize.py --lexicon-hits` · `dialogue-splitter --lines` · `regen-track` لإعلانات الشخصيات.
+- **تغيير مخطط**: `tools/pronunciation-lexicon.json` 2.0.0 — `forms` (صيغ السياق) · `referenceNote` · `reviewed` (17) · `reference.license` = CC-BY-SA (+licenseNote · attribution).
+- **إصلاح**: المعجم قبل `fit_phonemes` (كان بعدها فلا يطابق الصوتين في كلمات ç) · مقياس الطول لا يعدّ نصف الحركة i̯ نواةً.
+- **تغيير معلن (القانون 7)**: 37 مدخل نطق جديداً (43 مجموعاً) · 44 مساراً منشوراً أُعيد توليدها (القياسات وحدها تغيّرت — مُبرهن) · نص mueller-announce-01: Mueller ← Müller · phoneticRisks: schublade +auslaut-b · fussball +vowel-long-short · vierzig −vowel-long-short.
+- **تصحيح سجل**: بيانات المرجع الألمانية CC-BY-SA (D121 قال MIT).
+- **574/574 أخضر** · validator 901/0/0 · الطفرة 20/20.
+
 ## 2026-10-14 — الدفعة 76: a1-u1-d4 مُرقّى + الأعداد بالصوت + معجم النطق (D121)
 - **إضافة**: `content/arsenal/grammar/ars-zahlen-1-20.json` (رابع قاعدة يوم) · سكربت `a1-zahlen` (22 مساراً: 0–20 + رقم يوسف) · كلمات النواة `alter` · `kurs` · `klasse` (+ 3 مقاطع · 868 مساراً · 767 كلمة).
 - **إضافة أداة**: `tools/pronunciation-lexicon.json` + `apply_lexicon`/`synth_phonemes` في `tools/gen-audio.py` (مصدر واحد للصوت وللـIPA في `phonemize.py` · `--raw` لـespeak الخام) · `tools/regen-track.ts` (إعادة توليد مقطع كلمة منشور + تعديل قياساته نصياً ببرهان).
