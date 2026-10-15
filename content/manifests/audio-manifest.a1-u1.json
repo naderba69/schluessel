@@ -16069,6 +16069,66 @@
       "rmsDb": -17.08
     },
     {
+      "id": "word-grosseltern",
+      "file": "words/audio/de-DE/word-grosseltern.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Großeltern.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1396,
+      "sizeBytes": 6547,
+      "hash": "sha256:03f10c7716c33868157524335e6024391045751d2b2de87c41c2c313664b62cd",
+      "pcmSha256": "aa30be96a8f2de66df9e6ff8bea95a9b24f446107a83cf0940728a9fb73e7ecb",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "word-junge",
+      "file": "words/audio/de-DE/word-junge.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Junge.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 815,
+      "sizeBytes": 3987,
+      "hash": "sha256:7d659b8a7b57caf69d1ebcc5cbed4527ecbbd77930e771f8bdd4bcbd76864ede",
+      "pcmSha256": "6680a10edf619bcb586bdb34ec7acddd46a4bdb7d6ce7cb25e928c3f3614abf8",
+      "rmsDb": -17
+    },
+    {
+      "id": "word-opa",
+      "file": "words/audio/de-DE/word-opa.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Opa.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 780,
+      "sizeBytes": 3989,
+      "hash": "sha256:878872e465b9a2cb662d84a8047599c010d53d557663751ca25820fb22c85edc",
+      "pcmSha256": "afcbd116a1288513501872e50a393204293340935c0687cffb96f50080089d22",
+      "rmsDb": -17.15
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -22194,6 +22254,446 @@
       "hash": "sha256:84162cd35c32b9c82ad6c55909562ece9aa603fdb14366da75aab6252fb88893",
       "pcmSha256": "ab60525d9839484b3bebcc24d554b4a46fc0d446e9f261b05e176034237a70dd",
       "rmsDb": -17.02
+    },
+    {
+      "id": "f4-1",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-1.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 175,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wer ist die Frau?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1368,
+      "sizeBytes": 6603,
+      "hash": "sha256:bcdc7884e5c1e792c587696a45ed1c3519929d5817d21576220c63c3bbdc1cb8",
+      "pcmSha256": "5cb24c1abe9e96aaaf6eb384c73792fd681ee3f82276eb74f20caeb6f26747d8",
+      "rmsDb": -17.3
+    },
+    {
+      "id": "f4-2",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 179,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die Frau ist die Mutter.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1674,
+      "sizeBytes": 7845,
+      "hash": "sha256:1da6ee381a1ff214f5b9abee0e95c3ab7b5b9aae8e4ec2ae9fa4ff368245769e",
+      "pcmSha256": "e71618d98db961b0a524ddbec8d82aa80ed8fbce77e5c3b29f5c82299b4a311b",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "f4-3",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-3.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 177,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und der Mann?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1016,
+      "sizeBytes": 4963,
+      "hash": "sha256:1920e7615d85b036a941a369678cfd491d85e70219629d034503153eb3c6c630",
+      "pcmSha256": "4a5dab6ac0b63bbddc17e6e64540556c220c280d358f335bc852177b8e8d7aae",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "f4-4",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 208,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Mann ist der Vater.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1442,
+      "sizeBytes": 6912,
+      "hash": "sha256:7b0cd4546bd77ee1cf13f56d4d125063050b65159b40782c8cee9a2d769c36c7",
+      "pcmSha256": "b20a76b37d39a1e58fbfa7de58032e79f2882a256f0cb843fb01758c69d68557",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "f4-5",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-5.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 184,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wer ist der Junge?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1304,
+      "sizeBytes": 6492,
+      "hash": "sha256:dc5f71c46c77d081eaec7f3925f4a14a737f0c927fda2bf4cbbd67eda8386973",
+      "pcmSha256": "8b55f21502cd26c6e6fba61e6d270b2dfe8d9f1212201eb0935bb8046e281213",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "f4-6",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 191,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Junge ist der Sohn.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1570,
+      "sizeBytes": 7527,
+      "hash": "sha256:3f114531a4969fe13352b9ff89d2de4b47d342b0c439cb7a25d9cca49ae4c336",
+      "pcmSha256": "f249d5ed5b09b7afa14bda2eb64c6fa0af80f358b35a867d71e7ca9d680d7a16",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "f4-7",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-7.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Tochter?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1240,
+      "sizeBytes": 5949,
+      "hash": "sha256:a43606272f04c195612b2264e24742cb03287c3450319ba3758d23c6a619368e",
+      "pcmSha256": "be626f2c1d1ef69d992e6b2f3e194076c37c7a8bd7fc9b147ce91832cb7563cd",
+      "rmsDb": -17.79
+    },
+    {
+      "id": "f4-8",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 169,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das ist die Tochter.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1419,
+      "sizeBytes": 6770,
+      "hash": "sha256:9907a702d949c359c96101f599786bb05194a7beb19765f5158cc773f04396b1",
+      "pcmSha256": "c616ca932b2108c49436dd9ba657767e09c38a98bd00bf2887339c8bbf9f5d9f",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "f4-9",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-9.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 135,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und der Bruder?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1336,
+      "sizeBytes": 6418,
+      "hash": "sha256:9a86306d244c05dcbafe37e050c9d7db31d6cd7b93956de00544921ed40d4174",
+      "pcmSha256": "4e8ccb8694766c089987a17d9172cdfa21cef460d5aca6b6df9bacf7ce2930cc",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "f4-10",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 172,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das ist der Bruder.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1396,
+      "sizeBytes": 6638,
+      "hash": "sha256:5cd56158875869b2962cbf59006b77769883ea913b13be604cd1f2ba4765ec97",
+      "pcmSha256": "6bca483cfb95292388bd1eef2a7abc639e0553cef62dd8116338f07ccf4b8c4d",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "f4-11",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-11.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Schwester?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1368,
+      "sizeBytes": 6447,
+      "hash": "sha256:f7e22e40366e6a2faab5ce66b4d9ad59492c6dabc1a2c2765820f910e5f8dfa0",
+      "pcmSha256": "1a554b2ea79ad08885069437c68a3bbb27400dcd2e2f61b2dff45e1dd1882e5e",
+      "rmsDb": -17.72
+    },
+    {
+      "id": "f4-12",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das ist die Schwester.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1895,
+      "sizeBytes": 8280,
+      "hash": "sha256:af148e4a2ffeda4c03f3dfda4d77aa8d30415d8f4f6c76d18c646e44a85ac04f",
+      "pcmSha256": "4c5f2e392af2fea925129d7cf4d857104c1e8d43a3d7417a6706a29e2ef2dc87",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "f4-13",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-13.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sind das die Eltern?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1720,
+      "sizeBytes": 8114,
+      "hash": "sha256:a4ad4e3a105c9c77f3f2de336e6b90f875ba7eb17a09ab5f1e17cd346666ec07",
+      "pcmSha256": "d821635bdafa95bb0cf8bdfceed5fe99ab9d078f389ab79bdddbd5b84958cbb0",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "f4-14",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 154,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, das sind die Eltern.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1953,
+      "sizeBytes": 9180,
+      "hash": "sha256:fe1b593d5c2c186247f3ede0e225cd915f043ef9d16a35ca7d9cf1cb81c291c1",
+      "pcmSha256": "95f8597c3998c910a27c45eb722daa9387a1394387b10b55d2b293d1b813c173",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "f4-15",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-15.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Kinder?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1128,
+      "sizeBytes": 5465,
+      "hash": "sha256:5e576e5ec82d755a742bdd63cc7b2886ee55595a572e927eaf056cbd8333442c",
+      "pcmSha256": "8d99d5ec355e365c05f01fcba9d793ff09c08205e5585e8b07640e8c47cc101d",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "f4-16",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 188,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das sind der Sohn und die Tochter.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 2232,
+      "sizeBytes": 10469,
+      "hash": "sha256:bb96caec3b27101129f0a976c6b7c0a85868447cab9451ce79abddd8a59efe28",
+      "pcmSha256": "f30864f992f5075bb73c374c3fa0b4044e502ea74e60da8df8d0786883d92fb9",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "f4-17",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-17.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 112,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Großeltern?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1608,
+      "sizeBytes": 7551,
+      "hash": "sha256:7e73df6747e0da8b2ed702503c7f18ceb4baf4787c738fb2a1d0664e419b5d93",
+      "pcmSha256": "f7c2c01481bc4ff5c54339bd4947ed43ec5a6beb856398490123959f3b9ccc3b",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "f4-18",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 152,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Opa ist der Großvater. Die Oma ist die Großmutter.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 3938,
+      "sizeBytes": 18191,
+      "hash": "sha256:fa094b6bc19032da8d3d3c6445bf04e20343a938538a00a7931eec7973f3ff2b",
+      "pcmSha256": "7fffaf2b9e54fbd58729b5cb5cb47747309f38a69c5772ab59b17cf65862b342",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "f4-19",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-19.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 195,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das Kind?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 616,
+      "sizeBytes": 3275,
+      "hash": "sha256:17a4e227b3424d1be2aab207ee0241f3f68dbd70ad9d2ef589d821d8d846f3ef",
+      "pcmSha256": "1597591da7d965d2d94a6cb73936f921ab86a3b448eef31fd777e1faccea73a9",
+      "rmsDb": -17.13
+    },
+    {
+      "id": "f4-20",
+      "file": "audio/scripts/a1-u4-d1-familienwoerter/f4-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 169,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das ist das Kind.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d1"
+      ],
+      "durationMs": 1419,
+      "sizeBytes": 6741,
+      "hash": "sha256:a17810ad0ed435497066eed1050c63d261c5cdb9a2b2066510dbe9492ed5c68b",
+      "pcmSha256": "88f8f95ff65104ce25cbe39a384fd81750e18b95fc0ebc74d428e38b8791e22e",
+      "rmsDb": -17.19
     }
   ],
   "characterVoices": {

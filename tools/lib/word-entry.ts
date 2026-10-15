@@ -100,7 +100,7 @@ export function detectPhoneticRisks(de: string, rawIpa: string, _forms: string[]
  * gender-vs-natural: Mädchen/Fräulein (أنثى طبيعياً، محايد نحوياً)
  */
 export function detectGrammarRisks(spec: {
-  de: string; wordClass: string; plural?: string; forms?: { praesens3s?: string; perfekt?: string };
+  de: string; wordClass: string; plural?: string; pluralOnly?: boolean; forms?: { praesens3s?: string; perfekt?: string };
 }): GrammarRisk[] {
   const out = new Set<GrammarRisk>();
   const g = nounGender(spec.de);
@@ -113,7 +113,8 @@ export function detectGrammarRisks(spec: {
   if (spec.wordClass === "adverb") out.add("v2-order");
   if (spec.wordClass === "noun" && g) {
     const pl = (spec.plural ?? "").replace(/^die /, "");
-    if (pl && pl !== "—") out.add("needs-ein");
+    // D136: Pluralia tantum (مثل die Eltern/die Großeltern) لا تُسند إليها بطاقة «ein» للمفرد.
+    if (pl && pl !== "—" && !spec.pluralOnly) out.add("needs-ein");
     const sing = g.lemma;
     // حالة الحرف لا تهم: «Ärzte» تبدأ بـÄ كبيرة (كان الكشف يفوتها — اختبار D105)
     const umlautInPluralOnly = /[äöü]/i.test(pl) && !/[äöü]/i.test(sing);

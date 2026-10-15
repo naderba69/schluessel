@@ -13,67 +13,489 @@
     "toUnit": 12
   },
   "lessons": [
-    {"lessonId": "a1-u1-d1", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Lena", "Tunis"]},
-    {"lessonId": "a1-u1-d2", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Lena"]},
-    {"lessonId": "a1-u1-d3", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Haddad", "Lena", "Müller"]},
-    {"lessonId": "a1-u1-d4", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Haddad", "Lena", "Gartenstraße"]},
-    {"lessonId": "a1-u1-d5", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Lena", "Nabil"]},
-    {"lessonId": "a1-u2-d1", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Lena", "Nabil", "Berlin"]},
-    {"lessonId": "a1-u2-d2", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Lena", "Berlin"]},
-    {"lessonId": "a1-u2-d3", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Lena", "Berlin"]},
-    {"lessonId": "a1-u2-d4", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Lena", "Berlin"],
-     "misspellings": [{"wrong": "Strasse", "right": "Straße"}, {"wrong": "gross", "right": "groß"}, {"wrong": "Fuss", "right": "Fuß"}, {"wrong": "Tase", "right": "Tasse"}, {"wrong": "Kafee", "right": "Kaffee"}, {"wrong": "komen", "right": "kommen"}, {"wrong": "Wei", "right": "Wie"}, {"wrong": "drie", "right": "drei"}]},
-    {"lessonId": "a1-u2-d5", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Ayşe", "Berlin"]},
-    {"lessonId": "a1-u3-d1", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Lena"],
-     "misspellings": [{"wrong": "einsundzwanzig", "right": "einundzwanzig"}, {"wrong": "dreizig", "right": "dreißig"}, {"wrong": "sechszig", "right": "sechzig"}, {"wrong": "siebenzig", "right": "siebzig"}]},
-    {"lessonId": "a1-u3-d2", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Lena", "Yusuf"]},
-    {"lessonId": "a1-u3-d3", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Ayşe"]},
-    {"lessonId": "a1-u3-d4", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Lena", "Berlin"]},
-    {"lessonId": "a1-u3-d5", "rule": "done", "practice": "done", "quiz": "done", "properNouns": ["Yusuf", "Ayşe"]},
-    {"lessonId": "a1-u4-d1", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u4-d2", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u4-d3", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u4-d4", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u4-d5", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u5-d1", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u5-d2", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u5-d3", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u5-d4", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u5-d5", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u6-d1", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u6-d2", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u6-d3", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u6-d4", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u6-d5", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u7-d1", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u7-d2", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u7-d3", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u7-d4", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u7-d5", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u8-d1", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u8-d2", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u8-d3", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u8-d4", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u8-d5", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u9-d1", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u9-d2", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u9-d3", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u9-d4", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u9-d5", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u10-d1", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u10-d2", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u10-d3", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u10-d4", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u10-d5", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u11-d1", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u11-d2", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u11-d3", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u11-d4", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u11-d5", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u12-d1", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u12-d2", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u12-d3", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u12-d4", "rule": "pending", "practice": "pending", "quiz": "pending"},
-    {"lessonId": "a1-u12-d5", "rule": "pending", "practice": "pending", "quiz": "pending"}
+    {
+      "lessonId": "a1-u1-d1",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Lena",
+        "Tunis"
+      ]
+    },
+    {
+      "lessonId": "a1-u1-d2",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Lena"
+      ]
+    },
+    {
+      "lessonId": "a1-u1-d3",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Haddad",
+        "Lena",
+        "Müller"
+      ]
+    },
+    {
+      "lessonId": "a1-u1-d4",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Haddad",
+        "Lena",
+        "Gartenstraße"
+      ]
+    },
+    {
+      "lessonId": "a1-u1-d5",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Lena",
+        "Nabil"
+      ]
+    },
+    {
+      "lessonId": "a1-u2-d1",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Lena",
+        "Nabil",
+        "Berlin"
+      ]
+    },
+    {
+      "lessonId": "a1-u2-d2",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Lena",
+        "Berlin"
+      ]
+    },
+    {
+      "lessonId": "a1-u2-d3",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Lena",
+        "Berlin"
+      ]
+    },
+    {
+      "lessonId": "a1-u2-d4",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Lena",
+        "Berlin"
+      ],
+      "misspellings": [
+        {
+          "wrong": "Strasse",
+          "right": "Straße"
+        },
+        {
+          "wrong": "gross",
+          "right": "groß"
+        },
+        {
+          "wrong": "Fuss",
+          "right": "Fuß"
+        },
+        {
+          "wrong": "Tase",
+          "right": "Tasse"
+        },
+        {
+          "wrong": "Kafee",
+          "right": "Kaffee"
+        },
+        {
+          "wrong": "komen",
+          "right": "kommen"
+        },
+        {
+          "wrong": "Wei",
+          "right": "Wie"
+        },
+        {
+          "wrong": "drie",
+          "right": "drei"
+        }
+      ]
+    },
+    {
+      "lessonId": "a1-u2-d5",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Ayşe",
+        "Berlin"
+      ]
+    },
+    {
+      "lessonId": "a1-u3-d1",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Lena"
+      ],
+      "misspellings": [
+        {
+          "wrong": "einsundzwanzig",
+          "right": "einundzwanzig"
+        },
+        {
+          "wrong": "dreizig",
+          "right": "dreißig"
+        },
+        {
+          "wrong": "sechszig",
+          "right": "sechzig"
+        },
+        {
+          "wrong": "siebenzig",
+          "right": "siebzig"
+        }
+      ]
+    },
+    {
+      "lessonId": "a1-u3-d2",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Lena",
+        "Yusuf"
+      ]
+    },
+    {
+      "lessonId": "a1-u3-d3",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Ayşe"
+      ]
+    },
+    {
+      "lessonId": "a1-u3-d4",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Lena",
+        "Berlin"
+      ]
+    },
+    {
+      "lessonId": "a1-u3-d5",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": [
+        "Yusuf",
+        "Ayşe"
+      ]
+    },
+    {
+      "lessonId": "a1-u4-d1",
+      "rule": "done",
+      "practice": "done",
+      "quiz": "done",
+      "properNouns": []
+    },
+    {
+      "lessonId": "a1-u4-d2",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u4-d3",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u4-d4",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u4-d5",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u5-d1",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u5-d2",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u5-d3",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u5-d4",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u5-d5",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u6-d1",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u6-d2",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u6-d3",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u6-d4",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u6-d5",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u7-d1",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u7-d2",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u7-d3",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u7-d4",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u7-d5",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u8-d1",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u8-d2",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u8-d3",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u8-d4",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u8-d5",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u9-d1",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u9-d2",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u9-d3",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u9-d4",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u9-d5",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u10-d1",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u10-d2",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u10-d3",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u10-d4",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u10-d5",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u11-d1",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u11-d2",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u11-d3",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u11-d4",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u11-d5",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u12-d1",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u12-d2",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u12-d3",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u12-d4",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    },
+    {
+      "lessonId": "a1-u12-d5",
+      "rule": "pending",
+      "practice": "pending",
+      "quiz": "pending"
+    }
   ]
 }

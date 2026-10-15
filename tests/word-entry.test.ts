@@ -91,6 +91,7 @@ describe("D105 — الكشف النحوي + المعرّف + البطاقات",
     expect(detectGrammarRisks({ de: "der Kunde", wordClass: "noun", plural: "die Kunden" })).toContain("n-deklination");
     expect(detectGrammarRisks({ de: "der Student", wordClass: "noun", plural: "die Studenten" })).toContain("n-deklination");
     expect(detectGrammarRisks({ de: "das Mädchen", wordClass: "noun", plural: "die Mädchen" })).toContain("gender-vs-natural");
+    expect(detectGrammarRisks({ de: "die Großeltern", wordClass: "noun", plural: "die Großeltern", pluralOnly: true })).toEqual([]);
     expect(detectGrammarRisks({ de: "die Milch", wordClass: "noun" })).toEqual([]);
   });
 
@@ -133,6 +134,18 @@ describe("D105 — planWord: مواصفة ← كلمة كاملة صالحة", (
   it("الإضافات اليدوية تُدمج مع المستنتج", () => {
     const p = planWord({ ...base, grammarRisks: ["feste-praep"] }, "ɛɾlˈeːpnɪs");
     expect(p.word.grammarRisks).toEqual(["feste-praep", "needs-ein"]);
+  });
+  it("D136: الجمع فقط لا يولّد needs-ein ولا بطاقة جنس مفرد، وتبقى الأداة والجمع", () => {
+    const p = planWord({
+      ...base,
+      de: "die Großeltern", ar: ["الأجداد"], level: "A1", unit: 4, lesson: "a1-u4-d1", thema: "Familie",
+      sample: { de: "Die Großeltern sind hier.", ar: "الأجداد هنا." },
+      plural: "die Großeltern", pluralRuleNote: "جمع فقط؛ لا مفرد لهذه الصيغة.", pluralOnly: true,
+      grammarRisks: ["plural-irregular"],
+    }, "ɡʁˈoːsʔɛltɐn");
+    expect(p.word.grammarRisks).toEqual(["plural-irregular"]);
+    expect(p.word).toMatchObject({ article: "die", gender: "none", plural: "die Großeltern" });
+    expect(p.word.srsCardTypes).not.toContain("gender");
   });
 });
 

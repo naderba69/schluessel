@@ -6,11 +6,12 @@
   "day": 1,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst deine Familie nennen.",
-    "ar": "تسمي أفراد أسرتك"
+    "de": "Wer sind das? — Das sind die Großeltern.",
+    "ar": "تسمّي أفراد الأسرة، وتربط الأداة الصحيحة بالاسم، وتفرّق بين المفرد والجمع."
   },
   "canDoDaily": [
-    "يسمي أفراد أسرته الستة على الأقل ويعرّف بهم"
+    "يسمي ستة أفراد على الأقل في مخطط تدريبي، حقيقي أو خيالي باختياره، مستعملاً الاسم مع أداته.",
+    "يميّز das Kind/die Kinder، وأداة Großvater/Großmutter، وصيغ الجمع الدائمة Eltern/Großeltern."
   ],
   "warmup": {
     "cardIds": [
@@ -23,12 +24,12 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«جدتي» — Großmutter أم Großfrau? (تخمين فقط)"
+          "de": "«الجدة» بالألمانية: die Großmutter أم der Großvater أم die Großeltern؟ (تخمين فقط)"
         },
         "choices": [
           "die Großmutter",
-          "die Großfrau",
-          "das Großmutter"
+          "der Großvater",
+          "die Großeltern"
         ],
         "answer": "die Großmutter",
         "revealNextSession": true
@@ -48,6 +49,9 @@
       "kind",
       "grossvater",
       "grossmutter",
+      "grosseltern",
+      "opa",
+      "junge",
       "frau",
       "mann"
     ],
@@ -58,7 +62,9 @@
       "story-a4-u4-s1"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "vowel-long-short"
+    ]
   },
   "uebung": {
     "stations": [
@@ -66,59 +72,424 @@
         "type": "choice",
         "items": [
           {
-            "q": "«الأم» و«الأب»؟",
-            "a": "die Mutter / der Vater"
+            "q": "ما الاسم بالأداة لـ«الطفل»؟",
+            "choices": [
+              "das Kind",
+              "der Kind",
+              "die Kinder"
+            ],
+            "a": "das Kind",
+            "why": "الأداة جزء من صيغة الاسم الألماني؛ احفظها معه ولا تستنتجها من الترجمة العربية."
           },
           {
-            "q": "«اسم أمي سارة»؟",
-            "a": "Meine Mutter heißt Sara."
+            "q": "ما الألماني لكلمة «الولد»؟",
+            "choices": [
+              "der Junge",
+              "der Opa",
+              "der Sohn"
+            ],
+            "a": "der Junge",
+            "why": "Junge تعني الولد، وOpa الجد، وSohn الابن؛ انتبه إلى الأداة أيضاً."
+          },
+          {
+            "q": "أي كلمة تعني «الجد» بلفظ مألوف؟",
+            "choices": [
+              "der Opa",
+              "die Großeltern",
+              "der Junge"
+            ],
+            "a": "der Opa",
+            "why": "Opa لفظ مألوف للجد، أما Großeltern فهي صيغة جمع للأجداد."
+          },
+          {
+            "q": "في السياق، ماذا قد تعني die Frau؟",
+            "choices": [
+              "المرأة أو الزوجة بحسب السياق",
+              "الزوجة دائماً",
+              "الأخت فقط"
+            ],
+            "a": "المرأة أو الزوجة بحسب السياق",
+            "why": "Frau قد تعني امرأة أو زوجة؛ الجملة والسياق يحددان المقصود."
+          },
+          {
+            "q": "ما جمع das Kind؟",
+            "choices": [
+              "die Kinder",
+              "die Jungen",
+              "die Eltern"
+            ],
+            "a": "die Kinder",
+            "why": "صيغة الجمع تُحفظ مع الاسم؛ الجمع هنا غير منتظم ولا يكتفى بإضافة نهاية واحدة."
+          },
+          {
+            "q": "ما أداة Großmutter؟",
+            "choices": [
+              "die Großmutter",
+              "der Großvater",
+              "das Kind"
+            ],
+            "a": "die Großmutter",
+            "why": "Großmutter مركب ينتهي بـMutter، وأداتها die."
+          },
+          {
+            "q": "أي صيغة تدل على الوالدين بصيغة الجمع؟",
+            "choices": [
+              "die Eltern",
+              "der Vater",
+              "das Kind"
+            ],
+            "a": "die Eltern",
+            "why": "Eltern جمع دائم؛ لا مفرد لها بهذه الصيغة."
+          },
+          {
+            "q": "ما جمع der Junge؟",
+            "choices": [
+              "die Jungen",
+              "die Opas",
+              "die Großeltern"
+            ],
+            "a": "die Jungen",
+            "why": "جمع Junge هو Jungen؛ لا تعمم صيغة جمع كلمة على كلمة أخرى."
           }
         ],
         "interleavedWith": [],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«الأخ» و«الأخت»؟",
-            "a": "der Bruder / die Schwester"
+            "q": "«الأم» مع أداة التعريف: ___ Mutter",
+            "a": "die",
+            "why": "Mutter مؤنث نحوي في الألمانية، وتُحفظ معه الأداة die."
           },
           {
-            "q": "«الوالدان» — مفرداً أم جمعاً؟",
-            "a": "جمع فقط: die Eltern"
+            "q": "«الأب» مع أداة التعريف: ___ Vater",
+            "a": "der",
+            "why": "Vater مذكر نحوي في الألمانية، وأداته der."
+          },
+          {
+            "q": "«الطفل» مع أداة التعريف: ___ Kind",
+            "a": "das",
+            "why": "Kind محايد نحوياً في الألمانية؛ لا ننقل تذكير العربية إلى الأداة."
+          },
+          {
+            "q": "جمع Vater: die ___",
+            "a": "Väter",
+            "why": "في هذا الجمع تتغير الحركة a إلى ä ويضاف er."
+          },
+          {
+            "q": "جمع Mutter: die ___",
+            "a": "Mütter",
+            "why": "في هذا الجمع تتغير الحركة u إلى ü ويضاف er."
+          },
+          {
+            "q": "جمع Kind: die ___",
+            "a": "Kinder",
+            "why": "جمع Kind هو Kinder، وليس صيغة المفرد نفسها."
+          },
+          {
+            "q": "«الأجداد» بصيغة الجمع: ___ Großeltern",
+            "a": "die",
+            "why": "Großeltern جمع دائم، وأداة الجمع هنا die."
+          },
+          {
+            "q": "«الوالدان» بصيغة الجمع: ___ Eltern",
+            "a": "die",
+            "why": "Eltern جمع دائم، ولا مفرد لها بهذه الصيغة."
           }
         ],
         "interleavedWith": [],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«الجد» و«الجدة»؟",
-            "a": "der Großvater / die Großmutter"
+            "audioId": "f4-1",
+            "speakText": "Wer ist die Frau?",
+            "q": "عن أي فرد تسأل المتحدثة؟",
+            "choices": [
+              "المرأة",
+              "الرجل",
+              "الولد"
+            ],
+            "a": "المرأة",
+            "why": "استمع إلى الكلمة أو الجملة كاملة، ثم اختر المعنى المطابق لما سمعته."
           },
           {
-            "q": "«الطفل» — الجمع؟",
-            "a": "das Kind ← die Kinder"
+            "audioId": "f4-2",
+            "speakText": "Die Frau ist die Mutter.",
+            "q": "في الحوار العائلي، من هي المرأة؟",
+            "choices": [
+              "الأم",
+              "الأخت",
+              "الجدّة"
+            ],
+            "a": "الأم",
+            "why": "يقول الحوار: Die Frau ist die Mutter."
+          },
+          {
+            "audioId": "f4-3",
+            "speakText": "Und der Mann?",
+            "q": "أي شخص تذكره المتحدثة بعد ذلك؟",
+            "choices": [
+              "الرجل",
+              "الأخ",
+              "الجد"
+            ],
+            "a": "الرجل",
+            "why": "استمع إلى الكلمة أو الجملة كاملة، ثم اختر المعنى المطابق لما سمعته."
+          },
+          {
+            "audioId": "f4-4",
+            "speakText": "Der Mann ist der Vater.",
+            "q": "ما صلة الرجل في الحوار؟",
+            "choices": [
+              "الأب",
+              "الابن",
+              "الأخ"
+            ],
+            "a": "الأب",
+            "why": "يقول الحوار: Der Mann ist der Vater."
+          },
+          {
+            "audioId": "f4-5",
+            "speakText": "Wer ist der Junge?",
+            "q": "عن مَن تسأل المتحدثة؟",
+            "choices": [
+              "الولد",
+              "الأب",
+              "الأخت"
+            ],
+            "a": "الولد",
+            "why": "استمع إلى الكلمة أو الجملة كاملة، ثم اختر المعنى المطابق لما سمعته."
+          },
+          {
+            "audioId": "f4-6",
+            "speakText": "Der Junge ist der Sohn.",
+            "q": "ما الصلة التي يذكرها الحوار للولد؟",
+            "choices": [
+              "الابن",
+              "الأب",
+              "الجد"
+            ],
+            "a": "الابن",
+            "why": "يقول الحوار: Der Junge ist der Sohn."
+          },
+          {
+            "audioId": "f4-7",
+            "speakText": "Und die Tochter?",
+            "q": "أي فرد تسأل عنه؟",
+            "choices": [
+              "الابنة",
+              "الأم",
+              "الجدة"
+            ],
+            "a": "الابنة",
+            "why": "استمع إلى الكلمة أو الجملة كاملة، ثم اختر المعنى المطابق لما سمعته."
+          },
+          {
+            "audioId": "f4-8",
+            "speakText": "Das ist die Tochter.",
+            "q": "أي كلمة قرابة سُمعت؟",
+            "choices": [
+              "الابنة",
+              "الأخت",
+              "الأم"
+            ],
+            "a": "الابنة",
+            "why": "يقول الحوار: Das ist die Tochter."
+          },
+          {
+            "audioId": "f4-9",
+            "speakText": "Und der Bruder?",
+            "q": "ما صلة القرابة التي تسمعها؟",
+            "choices": [
+              "الأخ",
+              "الابن",
+              "الأب"
+            ],
+            "a": "الأخ",
+            "why": "استمع إلى الكلمة أو الجملة كاملة، ثم اختر المعنى المطابق لما سمعته."
+          },
+          {
+            "audioId": "f4-10",
+            "speakText": "Das ist der Bruder.",
+            "q": "أي كلمة قرابة سُمعت؟",
+            "choices": [
+              "الأخ",
+              "الأب",
+              "الولد"
+            ],
+            "a": "الأخ",
+            "why": "يقول الحوار: Das ist der Bruder."
+          },
+          {
+            "audioId": "f4-11",
+            "speakText": "Und die Schwester?",
+            "q": "ما صلة القرابة التي تسمعها؟",
+            "choices": [
+              "الأخت",
+              "الابنة",
+              "الأم"
+            ],
+            "a": "الأخت",
+            "why": "استمع إلى الكلمة أو الجملة كاملة، ثم اختر المعنى المطابق لما سمعته."
+          },
+          {
+            "audioId": "f4-13",
+            "speakText": "Sind das die Eltern?",
+            "q": "هل السؤال عن مفرد أم جمع؟",
+            "choices": [
+              "جمع: الوالدان",
+              "مفرد: الأم",
+              "مفرد: الطفل"
+            ],
+            "a": "جمع: الوالدان",
+            "why": "استمع إلى الكلمة أو الجملة كاملة، ثم اختر المعنى المطابق لما سمعته."
+          },
+          {
+            "audioId": "f4-14",
+            "speakText": "Ja, das sind die Eltern.",
+            "q": "ما العلاقة التي يؤكدها الرد؟",
+            "choices": [
+              "الوالدان",
+              "الأجداد",
+              "الأبناء"
+            ],
+            "a": "الوالدان",
+            "why": "يقول الرد: Ja, das sind die Eltern."
+          },
+          {
+            "audioId": "f4-15",
+            "speakText": "Und die Kinder?",
+            "q": "ما عدد الأفراد المشار إليهم لغوياً؟",
+            "choices": [
+              "جمع",
+              "مفرد",
+              "اسم شخص"
+            ],
+            "a": "جمع",
+            "why": "استمع إلى الكلمة أو الجملة كاملة، ثم اختر المعنى المطابق لما سمعته."
+          },
+          {
+            "audioId": "f4-16",
+            "speakText": "Das sind der Sohn und die Tochter.",
+            "q": "من الشخصان المذكوران في الجملة؟",
+            "choices": [
+              "الابن والابنة",
+              "الأم والأب",
+              "الأخ والأخت"
+            ],
+            "a": "الابن والابنة",
+            "why": "يسرد الصوت der Sohn und die Tochter."
+          },
+          {
+            "audioId": "f4-18",
+            "speakText": "Der Opa ist der Großvater. Die Oma ist die Großmutter.",
+            "q": "أي عبارة تلخص ما تسمعه؟",
+            "choices": [
+              "Opa = Großvater، وOma = Großmutter",
+              "Opa = Junge، وOma = Schwester",
+              "Opa وOma صيغتا جمع"
+            ],
+            "a": "Opa = Großvater، وOma = Großmutter",
+            "why": "يساوي الحوار بين اللفظ المألوف والاسم الآخر للجد والجدة."
+          },
+          {
+            "audioId": "f4-19",
+            "speakText": "Das Kind?",
+            "q": "هل تستعيد المتحدثة صيغة مفرد أم جمع؟",
+            "choices": [
+              "مفرد",
+              "جمع"
+            ],
+            "a": "مفرد",
+            "why": "استمع إلى الكلمة أو الجملة كاملة، ثم اختر المعنى المطابق لما سمعته."
+          },
+          {
+            "audioId": "f4-20",
+            "speakText": "Das ist das Kind.",
+            "q": "ما كلمة القرابة التي تسمعها؟",
+            "choices": [
+              "الطفل",
+              "الأب",
+              "الأخت"
+            ],
+            "a": "الطفل",
+            "why": "تقول الجملة: Das ist das Kind."
+          },
+          {
+            "audioId": "word-junge",
+            "speakText": "der Junge.",
+            "q": "أي معنى للكلمة المسموعة؟",
+            "choices": [
+              "الولد",
+              "الجد",
+              "الأب"
+            ],
+            "a": "الولد",
+            "why": "Junge تعني الولد؛ أما Opa فيعني الجد."
+          },
+          {
+            "audioId": "word-opa",
+            "speakText": "der Opa.",
+            "q": "أي فرد سُمّي في المقطع القصير؟",
+            "choices": [
+              "الجد",
+              "الولد",
+              "الأخ"
+            ],
+            "a": "الجد",
+            "why": "Opa لفظ مألوف للجد، ويقابله Großvater."
           }
         ],
-        "interleavedWith": [],
+      "interleavedWith": [
+        "sein"
+      ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+    {
+      "audioId": "f4-12",
+      "speakText": "Das ist die Schwester.",
+      "a": "Das ist die Schwester.",
+      "why": "تمييز صوتيّ وكتابيّ للجملة، مع Großschreibung للاسم."
+    },
+    {
+      "audioId": "f4-17",
+      "speakText": "Und die Großeltern?",
+      "a": "Und die Großeltern?",
+      "why": "حافظ على الحرف الكبير في الاسم والجمع."
+    },
+    {
+      "audioId": "word-grosseltern",
+      "speakText": "die Großeltern.",
+      "a": "die Großeltern",
+      "why": "اسم جمع فقط؛ لا تُضف أداة المفرد ein."
+    }
+        ],
+        "interleavedWith": [
+          "sein"
+        ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die eigene Familie vorstellen",
-        "ar": "تعريف الأسرة"
+        "de": "Wer ist das? — Das ist die Mutter.",
+        "ar": "تسمية ستة أفراد على الأقل في مخطط أسري تدريبي."
       },
       "situation": {
-        "de": "Im Kurs: Familienfotos zeigen",
-        "ar": "في الدورة: عرض صور العائلة"
+        "de": "Im Kurs: „Wer ist das?“",
+        "ar": "في الدورة: مخطط خيالي اختياري؛ لا حاجة إلى كشف معلومات عائلية شخصية."
       },
       "successCriteria": [
-        "يسمي 6 أفراد ويعرّف بجملة عن كل واحد"
+        "يسمي ستة أفراد على الأقل مع أداة الاسم الصحيحة.",
+        "يميّز مثالاً واحداً على الأقل للمفرد والجمع، ويمكنه استعمال أسرة خيالية."
       ]
     }
   },
@@ -133,20 +504,64 @@
       {
         "items": [
           {
-            "q": "«الأخت»؟",
-            "a": "die Schwester"
+            "q": "اختر الاسم الذي يعني «الأخت».",
+            "choices": [
+              "die Schwester",
+              "der Bruder",
+              "die Tochter"
+            ],
+            "a": "die Schwester",
+            "why": "Schwester هي الأخت؛ Bruder الأخ وTochter الابنة."
           },
           {
-            "q": "«أبي يسكن في تونس»؟",
-            "a": "Mein Vater wohnt in Tunis."
+            "q": "أي أداة ترافق Mann في صيغة الاسم؟",
+            "choices": [
+              "der Mann",
+              "die Mann",
+              "das Mann"
+            ],
+            "a": "der Mann",
+            "why": "الاسم هو der Mann؛ احفظ الأداة مع اللفظ."
           },
           {
-            "q": "«الوالدان»؟",
-            "a": "die Eltern"
+            "q": "أي كلمة تعني «الولد» لا «الجد»؟",
+            "choices": [
+              "der Junge",
+              "der Opa",
+              "der Großvater"
+            ],
+            "a": "der Junge",
+            "why": "Junge هو الولد؛ Opa وGroßvater يعنيان الجد."
           },
           {
-            "q": "«الابنة»؟",
-            "a": "die Tochter"
+            "q": "أي زوج يذكر مفردَي الأجداد؟",
+            "choices": [
+              "der Großvater und die Großmutter",
+              "der Vater und die Mutter",
+              "der Junge und die Tochter"
+            ],
+            "a": "der Großvater und die Großmutter",
+            "why": "لـGroßeltern مفردان هنا: Großvater وGroßmutter."
+          },
+          {
+            "q": "ما صيغة الجمع المناسبة لـder Vater؟",
+            "choices": [
+              "die Väter",
+              "die Mütter",
+              "die Jungen"
+            ],
+            "a": "die Väter",
+            "why": "Vater يجمع إلى Väter مع تغير a إلى ä."
+          },
+          {
+            "q": "متى قد تعني die Frau «الزوجة»؟",
+            "choices": [
+              "بحسب السياق",
+              "في كل سياق",
+              "لا تعنيها أبداً"
+            ],
+            "a": "بحسب السياق",
+            "why": "Frau لها المعنيان؛ السياق هو الذي يحدد."
           }
         ],
         "passingScore": 0.75
@@ -154,20 +569,64 @@
       {
         "items": [
           {
-            "q": "«الجدة»؟",
-            "a": "die Großmutter"
+            "q": "اختر الاسم الألماني للأبنة مع الأداة.",
+            "choices": [
+              "die Tochter",
+              "der Sohn",
+              "das Kind"
+            ],
+            "a": "die Tochter",
+            "why": "Tochter هي الابنة؛ Sohn الابن وKind الطفل."
           },
           {
-            "q": "«زوجتي اسمها لينا»؟",
-            "a": "Meine Frau heißt Lina."
+            "q": "أي أداة تسبق Kind في المفرد؟",
+            "choices": [
+              "das Kind",
+              "die Kinder",
+              "der Junge"
+            ],
+            "a": "das Kind",
+            "why": "Kind محايد نحوياً، وأداته das."
           },
           {
-            "q": "«الأخ» — الجمع؟",
-            "a": "die Brüder (u→ü + er)"
+            "q": "كيف يجمع der Junge؟",
+            "choices": [
+              "die Jungen",
+              "die Opas",
+              "die Kinder"
+            ],
+            "a": "die Jungen",
+            "why": "Junge يأخذ n في الجمع: die Jungen."
           },
           {
-            "q": "«الرجل»؟",
-            "a": "der Mann"
+            "q": "أي لفظ يدل على الأجداد بوصفهم جمعاً؟",
+            "choices": [
+              "die Großeltern",
+              "die Eltern",
+              "die Großmutter"
+            ],
+            "a": "die Großeltern",
+            "why": "Großeltern تعني الأجداد؛ Großmutter مفردة."
+          },
+          {
+            "q": "هل تحسم كلمة Frau وحدها إن كان المقصود امرأة أم زوجة؟",
+            "choices": [
+              "لا، السياق يحدد",
+              "نعم، تعني زوجة دائماً",
+              "نعم، تعني امرأة فقط"
+            ],
+            "a": "لا، السياق يحدد",
+            "why": "المعنيان ممكنان؛ ننظر إلى سياق الجملة."
+          },
+          {
+            "q": "اختر الجملة الصحيحة لتعريف الأخ.",
+            "choices": [
+              "Das ist der Bruder.",
+              "Das sind der Bruder.",
+              "Das ist die Schwester."
+            ],
+            "a": "Das ist der Bruder.",
+            "why": "Bruder مفرد، لذلك الجملة تقول Das ist der Bruder."
           }
         ],
         "passingScore": 0.75
@@ -175,20 +634,64 @@
       {
         "items": [
           {
-            "q": "«الطفل»؟",
-            "a": "das Kind"
+            "q": "ما جمع Mutter؟",
+            "choices": [
+              "die Mütter",
+              "die Väter",
+              "die Schwestern"
+            ],
+            "a": "die Mütter",
+            "why": "Mutter تجمع إلى Mütter مع تغير u إلى ü."
           },
           {
-            "q": "«الابن»؟",
-            "a": "der Sohn"
+            "q": "أي اسم يعني «الوالدان»؟",
+            "choices": [
+              "die Eltern",
+              "der Vater",
+              "die Kinder"
+            ],
+            "a": "die Eltern",
+            "why": "Eltern تعني الوالدين، وهي صيغة جمع."
           },
           {
-            "q": "«جمعي عمره ثمانون»؟",
-            "a": "Mein Großvater ist achtzig."
+            "q": "أي اسم محايد في المفرد؟",
+            "choices": [
+              "das Kind",
+              "der Sohn",
+              "die Tochter"
+            ],
+            "a": "das Kind",
+            "why": "Kind محايد نحوياً رغم أن ترجمته العربية «الطفل» مذكرة."
           },
           {
-            "q": "«المرأة» و«الزوجة» — كلمة واحدة؟",
-            "a": "نعم: die Frau (السياق يحدد)"
+            "q": "ما معنى Opa في هذا الدرس؟",
+            "choices": [
+              "الجد",
+              "الولد",
+              "الأخ"
+            ],
+            "a": "الجد",
+            "why": "Opa لفظ مألوف للجد ويقابله Großvater."
+          },
+          {
+            "q": "أي تركيب يحافظ على أداة الاسم الأخير؟",
+            "choices": [
+              "die Mutter → die Großmutter",
+              "der Vater → die Großmutter",
+              "das Kind → der Großvater"
+            ],
+            "a": "die Mutter → die Großmutter",
+            "why": "أداة Mutter هي die، وتبقى في Großmutter."
+          },
+          {
+            "q": "ما إجابة مناسبة لسؤال Und die Kinder؟",
+            "choices": [
+              "Das sind der Sohn und die Tochter.",
+              "Das ist die Mutter.",
+              "Das ist das Kind."
+            ],
+            "a": "Das sind der Sohn und die Tochter.",
+            "why": "Kinder جمع، والإجابة تسمي الابن والابنة معاً."
           }
         ],
         "passingScore": 0.75
@@ -197,53 +700,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Deine Familie hat jetzt deutsche Namen: Mutter, Vater, Bruder, Schwester, Kind, Großeltern — und die Plurale sind besonders (Mütter, Väter, Kinder)!",
-      "ar": "لأسرتك الآن أسماء ألمانية: الأم والأب والأخ والأخت والطفل والجدان — والجمع مميّز (Mütter, Väter, Kinder)!"
+      "de": "Die Mutter · der Vater · das Kind → die Kinder · die Eltern → die Großeltern.",
+      "ar": "تعرّفت إلى أفراد الأسرة مع أدواتهم، وإلى جمع Kind، وإلى Groß- الذي يحتفظ بأداة Vater أو Mutter. Eltern وGroßeltern صيغتا جمع دائم."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~ein Eltern~~ / ~~mein Eltern~~",
-          "ar": "die Eltern جمع فقط"
+          "de": "~~der Kind~~",
+          "ar": "أداة الطفل لا تُترجم حرفياً من العربية"
         },
-        "whyArabicSpeakerFails": "«والداي» مثنى بالعربية فيُجرَّب المفرد؛ الألماني Eltern جمع دائماً (Pluralia tantum) — بلا ein Eltern (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«الطفل» مذكر في العربية، لكن الألمانية تحفظ das مع Kind؛ ثم يتغير العدد إلى Kinder. لا ننقل جنس الترجمة إلى الأداة — خريطة التداخل 10‑ي.",
         "correct": {
-          "de": "meine Eltern (جمع)",
-          "ar": "والداي (die Eltern)"
+          "de": "das Kind → die Kinder",
+          "ar": "الطفل → الأطفال"
         },
         "exercise": {
-          "q": "صحّح: ~~Ich habe ein Eltern.~~",
-          "a": "Ich habe Eltern. / Meine Eltern …"
+          "q": "صحّح الأداة ثم اكتب الجمع: «der Kind»",
+          "a": "das Kind → die Kinder"
         }
       },
       {
         "commonError": {
-          "de": "~~die Großfrau~~ / ~~das Großmutter~~",
-          "ar": "المركّب يأخذ جنس آخر جزء"
+          "de": "~~die Großvater~~ / ~~der Großmutter~~",
+          "ar": "أداة المركب من الاسم الأخير، لا من Groß-"
         },
-        "whyArabicSpeakerFails": "«الجدة» كلمة واحدة بالعربية؛ الألماني مركّب Groß+Mutter والجنس من Mutter (die) — نفس قاعدة Muttersprache (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الكلمة العربية «الجد/الجدة» لا تُظهر تركيب Groß + Vater/Mutter؛ فيُحفظ المركب كله بأداة آخره: der Vater → der Großvater، وdie Mutter → die Großmutter — خريطة التداخل 10‑ي.",
         "correct": {
-          "de": "die Großmutter (die — من die Mutter)",
-          "ar": "الجدة"
+          "de": "der Vater → der Großvater · die Mutter → die Großmutter",
+          "ar": "الأب → الجد · الأم → الجدة"
         },
         "exercise": {
-          "q": "حدّد: Großvater — der/die/das?",
-          "a": "der (من der Vater)"
+          "q": "اختر الأداة من الاسم الأخير: der Vater → ___ Großvater · die Mutter → ___ Großmutter.",
+          "a": "der Großvater · die Großmutter"
         }
       },
       {
         "commonError": {
-          "de": "~~die Kinder~~ ← ~~das Kind~~ (الجمع خاطئ: ~~Kinds~~)",
-          "ar": "Kind ← Kinder (er شاذ)"
+          "de": "~~ein Eltern~~ / ~~ein Großeltern~~",
+          "ar": "Eltern وGroßeltern جمعان دائمان"
         },
-        "whyArabicSpeakerFails": "جمع -er مع تغيير الجذر غريب عن العربي — Kinder مثل Häuser (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تستعمل المثنى «الوالدان/الجدان»، أما Eltern وGroßeltern فصيغتا جمع دائمتان؛ لذلك لا نكوّن لهما مفرداً بإضافة ein — خريطة التداخل 10‑ي.",
         "correct": {
-          "de": "das Kind ← die Kinder",
-          "ar": "الطفل ← الأطفال"
+          "de": "die Eltern · die Großeltern",
+          "ar": "الوالدان · الأجداد (جمع)"
         },
         "exercise": {
-          "q": "اكتب الجمع: zwei ___ (Kind)",
-          "a": "zwei Kinder"
+          "q": "أكمل بالأداة المناسبة: ___ Eltern · ___ Großeltern",
+          "a": "die Eltern · die Großeltern"
         }
       }
     ],
@@ -258,6 +761,9 @@
       "kind",
       "grossvater",
       "grossmutter",
+      "grosseltern",
+      "opa",
+      "junge",
       "frau",
       "mann"
     ]
@@ -271,7 +777,9 @@
     "wiktionary": [
       "https://de.wiktionary.org/wiki/Eltern"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-familie"
@@ -287,17 +795,33 @@
     "word-kind",
     "word-grossvater",
     "word-grossmutter",
+    "word-grosseltern",
+    "word-opa",
+    "word-junge",
     "word-frau",
     "word-mann"
   ],
   "imageManifestRefs": [
-    "img-apfel"
+    "img-familie"
   ],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 (Meine Familie) — Familienmitglieder",
     "goetheWordListOverlap": [
       "mutter",
-      "vater"
+      "vater",
+      "sohn",
+      "tochter",
+      "bruder",
+      "schwester",
+      "eltern",
+      "kind",
+      "grossvater",
+      "grossmutter",
+      "grosseltern",
+      "opa",
+      "junge",
+      "frau",
+      "mann"
     ]
   }
 }

@@ -36,6 +36,8 @@ export const WordSpec = z.object({
   sample: z.object({ de: z.string().min(1), ar: z.string().min(1) }),
   plural: z.string().optional(),
   pluralRuleNote: z.string().optional(),
+  /** D136: كلمة جمع فقط (Eltern/Großeltern) — تُحفظ الصيغة من دون «needs-ein» المفردة. */
+  pluralOnly: z.boolean().optional(),
   forms: Word.shape.forms,
   /** D110: يُشتق آلياً من فهارس Goethe الرسمية (content/wordlists) — إن كُتب فيجب أن يطابق الدليل */
   goetheList: z.array(Level).optional(),
@@ -69,7 +71,8 @@ export function planWord(spec: WordSpec, ipa: string): Planned {
   const forms = [spec.forms?.praesens3s, spec.forms?.perfekt, spec.forms?.praeteritum, spec.plural].filter((x): x is string => !!x);
   const phoneticRisks = [...new Set([...detectPhoneticRisks(spec.de, ipa, forms), ...(spec.phoneticRisks ?? [])])].sort();
   const grammarRisks = [...new Set([...detectGrammarRisks(spec), ...(spec.grammarRisks ?? [])])].sort();
-  const gender = g?.gender ?? "none";
+  // D136: pluralia tantum keep their article (article: die) but have no singular gender label or gender-only SRS card.
+  const gender = spec.pluralOnly ? "none" : g?.gender ?? "none";
   const draft = {
     schemaVersion: "1.0.0",
     id: spec.id ?? slugify(spec.de),
