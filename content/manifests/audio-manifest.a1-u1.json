@@ -15888,6 +15888,66 @@
       "rmsDb": -17.15
     },
     {
+      "id": "word-naechste",
+      "file": "words/audio/de-DE/word-naechste.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "nächste.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 885,
+      "sizeBytes": 4199,
+      "hash": "sha256:0591646308c39b2a657dd1703ff2c0ea9e0fee74bb577ca688d258844808aff2",
+      "pcmSha256": "ccb5988a80f8bcda89fb98922dad258e8b27d3309047bb1ac323470ff7616f84",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "word-geschlossen",
+      "file": "words/audio/de-DE/word-geschlossen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "geschlossen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4743,
+      "hash": "sha256:2eedda8130ba2212a289297001c9cc7fe642d86c9d93042883bdccaee5ffbe07",
+      "pcmSha256": "5aa1966db1cdc915eae0bdd45f19a434ca20bf8acfabb8e7558710960e584387",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "word-geoeffnet",
+      "file": "words/audio/de-DE/word-geoeffnet.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "geöffnet.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 908,
+      "sizeBytes": 4379,
+      "hash": "sha256:c10f4421eb0e4b39f01f83270b8bc86813fb63c3550cf848a20319e929beeeb5",
+      "pcmSha256": "d0973545e03bca1d205b73935b823b64c1f2bd402fda4cff2ca1ab745fa47bfd",
+      "rmsDb": -16.97
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -20649,6 +20709,468 @@
       "hash": "sha256:2d59f619dc835ae6fcca7617adfa200cb2a3076e3f7fb89206fa31d70ddce714",
       "pcmSha256": "9ed3453ea850b08ada5a6876974760b4079cb826d86d8827010e63a3cb91a648",
       "rmsDb": -17.02
+    },
+    {
+      "id": "ab-1",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-1.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, wann ist das Essen im Restaurant?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 3432,
+      "sizeBytes": 16115,
+      "hash": "sha256:298bba024801047e0ba556390ca64673843cee02ca856395235b9c3fa47bf81f",
+      "pcmSha256": "dbdb1e14b2e9f99f33ac3ddb245718f6f74bd12e624a16b9be768170c6522099",
+      "rmsDb": -17.21
+    },
+    {
+      "id": "ab-2",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Heute Abend um halb acht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 1988,
+      "sizeBytes": 9338,
+      "hash": "sha256:0865069bc4bf64611c01c7d32ad79251a1d5eeb744f936ecc3500e314f074b34",
+      "pcmSha256": "697a62a474d8d03290c6e7e8adf40e3fa4f9e2a2ff7d0c3c7538012dba8b587b",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "ab-3",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-3.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 109,
+        "lengthScale": 1.32
+      },
+      "textDe": "Halb acht? Also sieben Uhr dreißig?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 3304,
+      "sizeBytes": 15402,
+      "hash": "sha256:d977848133347972a45adca43f05a9d9cb95da8fe8c8acfb71e8881d52c27255",
+      "pcmSha256": "d1568cb91da80b29ed3868118c5ab18ee3059c5c185550ae60a13aa99f3647d9",
+      "rmsDb": -17.31
+    },
+    {
+      "id": "ab-4",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 156,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Und jetzt ist es halb sieben.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 2684,
+      "sizeBytes": 12417,
+      "hash": "sha256:c3d4fad2d69a883b90aba927df281e83d5cfc44d8679164c53d297f46f4c866d",
+      "pcmSha256": "9fab7b86939c839bbbbc815be2c90ab2bcf719888da508cb0e43b6f533463001",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "ab-5",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-5.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 146,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wir haben also noch eine Stunde.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 2472,
+      "sizeBytes": 11560,
+      "hash": "sha256:9f367623ed5b669550622e9e81c96363843c782ca5918be6949cc0d64fdf60ae",
+      "pcmSha256": "ba986e2d21d2c8c03f370ad6f834e784e38e5190a77578167248883ad3e2cdc4",
+      "rmsDb": -17.38
+    },
+    {
+      "id": "ab-6",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Das Restaurant ist von sechs bis elf Uhr geöffnet.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 4171,
+      "sizeBytes": 19433,
+      "hash": "sha256:02593b5b74a2368337450429e3eda002a4c0a135bfc684911db9db8369ccba35",
+      "pcmSha256": "8856b43594a53acb284f5b584237d12ca839d12babda057630a77ad4e1f85bc1",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "ab-7",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-7.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ist es morgen auch geöffnet?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 2552,
+      "sizeBytes": 12086,
+      "hash": "sha256:9f9695af39fa45f9716fcbc4aabc7018f6d5589e55bef224e6b89c43fe18d531",
+      "pcmSha256": "c43603abb20368a87fdffa533aef9c248d6b6fdf1f1bb378ced519d7425f90f7",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "ab-8",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, morgen ist es geschlossen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 2359,
+      "sizeBytes": 10938,
+      "hash": "sha256:bff83af92099df40e946a8de2fc17925c1b8c2a20b36e5c97e7dc082d8057bd6",
+      "pcmSha256": "4ad98e9761c0cdd807b2eecf5a73cbdde8c64eef09a50ef1d7445cc9ba71e139",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "ab-9",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-9.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 179,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und der nächste Kurs? Wann ist er?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 2344,
+      "sizeBytes": 11020,
+      "hash": "sha256:366a39dee9e1009656ba0fef2b9f0a9ab411a7f9e297fb846dbf5808ceb21936",
+      "pcmSha256": "3ed865fe066e7d1d5b2d2f6fb808883ea76e42188083f8e0074339348d86ae62",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "ab-10",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 161,
+        "lengthScale": 1.32
+      },
+      "textDe": "Morgen früh um neun Uhr.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 1860,
+      "sizeBytes": 9021,
+      "hash": "sha256:a76ebea074447fba37755c1c1532a1953e23f6b7d7f02b228cd4e48c8bfd3386",
+      "pcmSha256": "b098551f7ac154ab00384ab3353c6ff0b5284e123c062f4bc2183111eb140cfb",
+      "rmsDb": -16.98
+    },
+    {
+      "id": "ab-11",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-11.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 188,
+        "lengthScale": 1.32
+      },
+      "textDe": "Um neun? Das ist früh!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 1592,
+      "sizeBytes": 7589,
+      "hash": "sha256:62210e8ce73792e31c9ce1b5850ba29c2f2633e199ace0eb91d6f3c6df44cee2",
+      "pcmSha256": "6d80362a2fe1a7e9fea8cb6b03cc20b5350dd2f496f0a3034f940f355b91a0ee",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "ab-12",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 182,
+        "lengthScale": 1.32
+      },
+      "textDe": "Für mich ist das spät!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 1651,
+      "sizeBytes": 7707,
+      "hash": "sha256:ea696b53b831f370541c829bd669a2fe4b657f3c5e040f767733ae8fffab9186",
+      "pcmSha256": "e448ffe95c60f3fd575d407af139af6dcd4dd7d78b05b13c7f219106fe98719d",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "ab-13",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-13.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Also bis halb acht im Restaurant!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 2904,
+      "sizeBytes": 13830,
+      "hash": "sha256:0605971c7e7dc4f6bcc9fc680f5f048a738d8922703e5b08a636200acd9bd92a",
+      "pcmSha256": "c67957567faf6b1c9ede70612f5b2e6510ba38572c6cfdf82d7b0bf6d25a79da",
+      "rmsDb": -17.59
+    },
+    {
+      "id": "ab-14",
+      "file": "audio/scripts/a1-u3-d3-um-halb-acht/ab-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 92,
+        "lengthScale": 1.32
+      },
+      "textDe": "Bis später, Ayşe!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 1965,
+      "sizeBytes": 8987,
+      "hash": "sha256:d495d62719771bf44cf1e56c30092071d9e5e297fe1980330b94de87c3ceba6c",
+      "pcmSha256": "eed60c0d5d01738678616188282e85506aa806a7c1289a3c024dc1d7971b31fd",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "uz-1",
+      "file": "audio/scripts/a1-uhrzeit/uz-1.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 173,
+        "lengthScale": 1.32
+      },
+      "textDe": "Es ist drei Uhr.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 1384,
+      "sizeBytes": 6582,
+      "hash": "sha256:93359314cf93a59939f3e8a007d729cefa28ad666730ec1700895a122694b50d",
+      "pcmSha256": "8b34256518e268fe0244138e4680af920a9c9f9e44f9de321bf68847495e2dd1",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "uz-2",
+      "file": "audio/scripts/a1-uhrzeit/uz-2.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Es ist halb drei.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 1570,
+      "sizeBytes": 7382,
+      "hash": "sha256:d6ea8a3bf8164c7f052158e3300e9c7f32be48a5ac91d1cf139a9e63af92020c",
+      "pcmSha256": "9f39a35138996abb6d79ea7362818ba83f23929c50a2e2d7e8650edf3d9d18a8",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "uz-3",
+      "file": "audio/scripts/a1-uhrzeit/uz-3.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 162,
+        "lengthScale": 1.32
+      },
+      "textDe": "Es ist Viertel nach drei.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 1849,
+      "sizeBytes": 8729,
+      "hash": "sha256:7f498d39073bee5b385821593846a7cf90d0516ba9a70b32b0a716e343d3345f",
+      "pcmSha256": "eafd2ebd9a45cc3c59c516ada634c1e5274d6182f8fc22064585d9bc37250dce",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "uz-4",
+      "file": "audio/scripts/a1-uhrzeit/uz-4.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Es ist Viertel vor drei.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 1930,
+      "sizeBytes": 9085,
+      "hash": "sha256:e71684699bdcdcf10f719e360ebfd945948fe27e5085131edd5a37121850c1d2",
+      "pcmSha256": "8880db7dabb33ce295c30b7e22bf94627d38a3cd91c6a83f19c095ce8500479a",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "uz-5",
+      "file": "audio/scripts/a1-uhrzeit/uz-5.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 177,
+        "lengthScale": 1.32
+      },
+      "textDe": "Es ist zehn nach acht.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 1698,
+      "sizeBytes": 7959,
+      "hash": "sha256:6587f7047ecec2f6d24e66e562987f4102c368197d6bf881af69565c421098e2",
+      "pcmSha256": "b52d3f21f2007781084960f62bfb13fe17026779409f70ee617e5d1438fceb42",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "uz-6",
+      "file": "audio/scripts/a1-uhrzeit/uz-6.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Es ist zwanzig vor neun.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 2139,
+      "sizeBytes": 9566,
+      "hash": "sha256:2ba34c2322b6674f673c9f20d198212c6fe3a0a1b957f85f2af9c53889f04893",
+      "pcmSha256": "8a6176a1dcff98b51cafb628149d38112c69b78846874d76270aa4996c01b049",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "uz-7",
+      "file": "audio/scripts/a1-uhrzeit/uz-7.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Es ist vierzehn Uhr dreißig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d3"
+      ],
+      "durationMs": 2162,
+      "sizeBytes": 9976,
+      "hash": "sha256:92f998328a74d8f7cecb3cae7d9fcb0efba13bc0832583eddfd11901bd64b2a1",
+      "pcmSha256": "af206ac94b400f3af09d04665e4733888262123af9e79b550a0fbf21e21df096",
+      "rmsDb": -17.1
     }
   ],
   "characterVoices": {

@@ -6,11 +6,12 @@
   "day": 3,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst die Uhrzeit sagen und einen Termin nennen.",
-    "ar": "تقول كم الساعة وتحدد موعداً"
+    "de": "Wie spät ist es? — Es ist halb acht. · Das Restaurant ist von sechs bis elf Uhr geöffnet.",
+    "ar": "تقول كم الساعة بالطريقتين — اليومية (halb · Viertel · nach · vor) والرسمية (vierzehn Uhr dreißig) — وتحدد موعداً ومواعيد الفتح"
   },
   "canDoDaily": [
-    "يقول الوقت بالألمانية (halb/viertel) ويذكر موعداً"
+    "يقول الوقت بالطريقة اليومية: halb acht = 7:30 (للساعة التالية) · Viertel nach/vor · zehn nach acht — وبالرسمية: vierzehn Uhr dreißig",
+    "يحدد موعداً ومواعيد الفتح: um halb acht · von sechs bis elf Uhr geöffnet · morgen geschlossen — ويفرّق Uhr (الوقت) عن Stunde (المدة)"
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,13 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«الساعة الثانية والنصف» — halb zwei أم halb drei? (تخمين فقط)"
+          "de": "«الساعة السابعة والنصف» (7:30) بالألمانية — halb sieben أم halb acht؟ (تخمين فقط)"
         },
         "choices": [
-          "halb drei (نصف الثالث = 2:30)",
-          "halb zwei",
-          "halb halb"
+          "halb acht — نصفٌ نحو الثامنة",
+          "halb sieben — كالعربية «السابعة والنصف»"
         ],
-        "answer": "halb drei (نصف الثالث = 2:30)",
+        "answer": "halb acht — نصفٌ نحو الثامنة",
         "revealNextSession": true
       }
     ],
@@ -49,7 +49,10 @@
       "morgen",
       "abend",
       "nacht",
-      "mittag"
+      "mittag",
+      "naechste",
+      "geschlossen",
+      "geoeffnet"
     ],
     "grammarArsenalIds": [
       "ars-uhrzeit"
@@ -58,76 +61,380 @@
       "story-a3-u3-s3"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "auslaut-b",
+      "sp-st-initial",
+      "umlaut-o"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«كم الساعة؟»؟",
-            "a": "Wie viel Uhr ist es?"
+            "q": "7:30 — Es ist halb ___.",
+            "a": "acht",
+            "why": "halb + الساعة التالية: halb acht = نصفٌ نحو الثامنة = 7:30 — والعربية «السابعة والنصف» تبدأ من السابعة."
           },
           {
-            "q": "«الساعة الثانية والنصف»؟",
-            "a": "Es ist halb drei."
+            "q": "2:30 — Es ist halb ___.",
+            "a": "drei",
+            "why": "halb drei = 2:30 (نصف الطريق إلى الثالثة) — لا 3:30."
+          },
+          {
+            "q": "3:15 — Es ist Viertel ___ drei.",
+            "a": "nach",
+            "why": "Viertel nach drei = الثالثة والربع — هنا كالعربية تماماً: من الساعة الحالية."
+          },
+          {
+            "q": "2:45 — Es ist Viertel ___ drei.",
+            "a": "vor",
+            "why": "Viertel vor drei = الثالثة إلا ربعاً — كالعربية أيضاً: نحو الساعة التالية."
+          },
+          {
+            "q": "8:10 — Es ist zehn ___ acht.",
+            "a": "nach",
+            "why": "zehn nach acht = الثامنة وعشر دقائق: الدقائق ثم nach ثم الساعة."
+          },
+          {
+            "q": "14:30 (رسمي) — Es ist vierzehn ___ dreißig.",
+            "a": "Uhr",
+            "why": "الوقت الرسمي (القطارات والإعلانات): الساعة + Uhr + الدقائق — vierzehn Uhr dreißig = halb drei."
+          },
+          {
+            "q": "«الساعة فيها ستون دقيقة»: Eine ___ hat sechzig Minuten.",
+            "a": "Stunde",
+            "why": "die Stunde = الساعة مدةً (60 دقيقة) · die Uhr = الساعة آلةً ووقتاً (drei Uhr) — العربية «ساعة» للاثنين."
+          },
+          {
+            "q": "«المطعم مفتوح من السادسة حتى الحادية عشرة»: Das Restaurant ist von sechs bis elf Uhr ___.",
+            "a": "geöffnet",
+            "why": "geöffnet = مفتوح وgeschlossen = مغلق — وvon … bis = من … إلى."
+          },
+          {
+            "q": "«تصبح على خير!»: Gute ___!",
+            "a": "Nacht",
+            "why": "die Nacht = الليل: Gute Nacht! تحية النوم — وفي الليل = in der Nacht (لا am)."
           }
         ],
         "interleavedWith": [
           "zwanzig",
-          "hundert"
+          "dreissig",
+          "neunzig"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«الثالثة والربع»؟",
-            "a": "Es ist Viertel nach drei."
+            "audioId": "ab-1",
+            "speakText": "Yusuf, wann ist das Essen im Restaurant?",
+            "q": "استمع: عمّ تسأل Ayşe؟",
+            "choices": [
+              "عن موعد العشاء في المطعم",
+              "عن سعر الطعام",
+              "عن مكان المطعم"
+            ],
+            "a": "عن موعد العشاء في المطعم",
+            "why": "wann = متى · das Essen im Restaurant = الطعام في المطعم — سؤال عن الوقت."
           },
           {
-            "q": "«خمس دقائق من فضلك»؟",
-            "a": "Fünf Minuten, bitte!"
+            "audioId": "ab-2",
+            "speakText": "Heute Abend um halb acht.",
+            "q": "استمع: متى العشاء؟",
+            "choices": [
+              "7:30 مساءً",
+              "8:30 مساءً",
+              "6:30 مساءً"
+            ],
+            "a": "7:30 مساءً",
+            "why": "um halb acht = في 7:30 (halb + الساعة التالية) · heute Abend = هذا المساء — وum للموعد."
+          },
+          {
+            "audioId": "ab-4",
+            "speakText": "Genau! Und jetzt ist es halb sieben.",
+            "q": "استمع: كم الساعة الآن؟",
+            "choices": [
+              "6:30",
+              "7:30",
+              "7:00"
+            ],
+            "a": "6:30",
+            "why": "jetzt ist es halb sieben = الآن 6:30 — بلا um: الوقت الآن «Es ist …»، والموعد «um …»."
+          },
+          {
+            "audioId": "ab-6",
+            "speakText": "Ja. Das Restaurant ist von sechs bis elf Uhr geöffnet.",
+            "q": "استمع: متى يفتح المطعم؟",
+            "choices": [
+              "من 6 إلى 11",
+              "من 6:30 إلى 7:30",
+              "من 7 إلى 11"
+            ],
+            "a": "من 6 إلى 11",
+            "why": "von sechs bis elf Uhr geöffnet = مفتوح من السادسة حتى الحادية عشرة (مساءً — 18 إلى 23)."
+          },
+          {
+            "audioId": "ab-9",
+            "speakText": "Und der nächste Kurs? Wann ist er?",
+            "q": "استمع: عمّ تسأل Ayşe الآن؟",
+            "choices": [
+              "عن الدرس التالي",
+              "عن المطعم غداً",
+              "عن الساعة الآن"
+            ],
+            "a": "عن الدرس التالي",
+            "why": "der nächste Kurs = الدرس التالي — nächste من nah (قريب)، وer تعود على der Kurs."
+          },
+          {
+            "audioId": "ab-10",
+            "speakText": "Morgen früh um neun Uhr.",
+            "q": "استمع: متى الدرس التالي؟",
+            "choices": [
+              "غداً في التاسعة صباحاً",
+              "اليوم في التاسعة مساءً",
+              "غداً في التاسعة والنصف"
+            ],
+            "a": "غداً في التاسعة صباحاً",
+            "why": "morgen früh = صباح الغد (morgen بحرف صغير = غداً) · um neun Uhr = في التاسعة."
+          },
+          {
+            "audioId": "ab-11",
+            "speakText": "Um neun? Das ist früh!",
+            "q": "استمع: ماذا تقول Ayşe عن التاسعة؟",
+            "choices": [
+              "إنها مبكرة",
+              "إنها متأخرة",
+              "إنها مناسبة"
+            ],
+            "a": "إنها مبكرة",
+            "why": "früh = مبكر · وضده spät = متأخر."
+          },
+          {
+            "audioId": "ab-12",
+            "speakText": "Für mich ist das spät!",
+            "q": "استمع: ماذا يقول يوسف؟",
+            "choices": [
+              "التاسعة متأخرة بالنسبة إليه",
+              "التاسعة مبكرة جداً",
+              "لا يعرف الموعد"
+            ],
+            "a": "التاسعة متأخرة بالنسبة إليه",
+            "why": "für mich = بالنسبة لي · spät = متأخر — يوسف يستيقظ باكراً."
+          },
+          {
+            "audioId": "ab-14",
+            "speakText": "Bis später, Ayşe!",
+            "q": "استمع: بماذا يودّعها يوسف؟",
+            "choices": [
+              "إلى اللقاء لاحقاً",
+              "تصبحين على خير",
+              "إلى الغد"
+            ],
+            "a": "إلى اللقاء لاحقاً",
+            "why": "Bis später = إلى اللقاء لاحقاً (später من spät) · Bis morgen = إلى الغد · Gute Nacht = تصبح على خير."
+          },
+          {
+            "audioId": "uz-1",
+            "speakText": "Es ist drei Uhr.",
+            "q": "استمع: كم الساعة؟",
+            "choices": [
+              "3:00",
+              "2:30",
+              "3:30"
+            ],
+            "a": "3:00",
+            "why": "Es ist drei Uhr = الساعة الثالثة تماماً — Uhr مع الساعة الكاملة."
+          },
+          {
+            "audioId": "uz-2",
+            "speakText": "Es ist halb drei.",
+            "q": "استمع: كم الساعة؟",
+            "choices": [
+              "2:30",
+              "3:30",
+              "3:00"
+            ],
+            "a": "2:30",
+            "why": "halb drei = 2:30 — نصف الطريق إلى الثالثة."
+          },
+          {
+            "audioId": "uz-3",
+            "speakText": "Es ist Viertel nach drei.",
+            "q": "استمع: كم الساعة؟",
+            "choices": [
+              "3:15",
+              "2:45",
+              "3:45"
+            ],
+            "a": "3:15",
+            "why": "Viertel nach drei = 3:15 — nach = بعد."
+          },
+          {
+            "audioId": "uz-4",
+            "speakText": "Es ist Viertel vor drei.",
+            "q": "استمع: كم الساعة؟",
+            "choices": [
+              "2:45",
+              "3:15",
+              "3:45"
+            ],
+            "a": "2:45",
+            "why": "Viertel vor drei = 2:45 — vor = قبل: ربع قبل الثالثة."
+          },
+          {
+            "audioId": "uz-5",
+            "speakText": "Es ist zehn nach acht.",
+            "q": "استمع: كم الساعة؟",
+            "choices": [
+              "8:10",
+              "7:50",
+              "8:20"
+            ],
+            "a": "8:10",
+            "why": "zehn nach acht = 8:10 — الدقائق ثم nach ثم الساعة."
           }
         ],
         "interleavedWith": [
-          "fuenfzig",
-          "sechzig"
+          "restaurant",
+          "das-essen",
+          "heute"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«غداً عندي وقت»؟",
-            "a": "Morgen habe ich Zeit."
+            "tokens": [
+              "acht.",
+              "halb",
+              "ist",
+              "Es"
+            ],
+            "a": "Es ist halb acht.",
+            "why": "Es ist + الوقت: halb acht = 7:30 — بلا um للوقت الآن."
           },
           {
-            "q": "«الوقت متأخر»؟",
-            "a": "Es ist schon spät."
+            "tokens": [
+              "drei.",
+              "nach",
+              "Viertel",
+              "ist",
+              "Es"
+            ],
+            "a": "Es ist Viertel nach drei.",
+            "why": "Viertel nach + الساعة = الربع بعدها: 3:15."
+          },
+          {
+            "tokens": [
+              "geschlossen.",
+              "ist",
+              "Restaurant",
+              "Das",
+              "morgen"
+            ],
+            "a": "Das Restaurant ist morgen geschlossen.",
+            "why": "الفاعل ثم ist ثانياً ثم morgen ثم geschlossen في الآخر — morgen بحرف صغير = غداً."
+          },
+          {
+            "tokens": [
+              "Stunde.",
+              "noch",
+              "eine",
+              "haben",
+              "Wir"
+            ],
+            "a": "Wir haben noch eine Stunde.",
+            "why": "eine Stunde = ساعة مدةً (لا Uhr) · noch = ما زال/بعد."
+          },
+          {
+            "tokens": [
+              "Abend",
+              "Heute",
+              "um",
+              "acht.",
+              "halb"
+            ],
+            "a": "Heute Abend um halb acht.",
+            "why": "heute Abend = هذا المساء · um + الوقت للموعد: um halb acht."
           }
         ],
         "interleavedWith": [
-          "viel",
-          "nur"
+          "jetzt",
+          "also",
+          "kurs"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "ab-3",
+            "speakText": "Halb acht? Also sieben Uhr dreißig?",
+            "a": "Halb acht? Also sieben Uhr dreißig?",
+            "why": "Halb acht = sieben Uhr dreißig: الطريقتان للوقت نفسه (اليومية والرسمية) — Uhr بحرف كبير (اسم)."
+          },
+          {
+            "audioId": "ab-5",
+            "speakText": "Wir haben also noch eine Stunde.",
+            "a": "Wir haben also noch eine Stunde.",
+            "why": "eine Stunde (مدة) بحرف كبير — وalso بعد الفعل haben."
+          },
+          {
+            "audioId": "ab-7",
+            "speakText": "Ist es morgen auch geöffnet?",
+            "a": "Ist es morgen auch geöffnet?",
+            "why": "سؤال نعم/لا يبدأ بالفعل Ist · morgen بحرف صغير (غداً) · geöffnet بـö وff."
+          },
+          {
+            "audioId": "ab-8",
+            "speakText": "Nein, morgen ist es geschlossen.",
+            "a": "Nein, morgen ist es geschlossen.",
+            "why": "geschlossen بـsch في أولها وss بعد o القصيرة — وmorgen بحرف صغير."
+          },
+          {
+            "audioId": "ab-13",
+            "speakText": "Also bis halb acht im Restaurant!",
+            "a": "Also bis halb acht im Restaurant!",
+            "why": "bis halb acht = حتى 7:30 · im Restaurant بحرف كبير (اسم)."
+          },
+          {
+            "audioId": "uz-6",
+            "speakText": "Es ist zwanzig vor neun.",
+            "a": "Es ist zwanzig vor neun.",
+            "why": "zwanzig vor neun = 8:40 — الدقائق ثم vor ثم الساعة التالية."
+          },
+          {
+            "audioId": "uz-7",
+            "speakText": "Es ist vierzehn Uhr dreißig.",
+            "a": "Es ist vierzehn Uhr dreißig.",
+            "why": "الوقت الرسمي: vierzehn Uhr dreißig = 14:30 — Uhr بحرف كبير بين الساعة والدقائق."
+          }
+        ],
+        "interleavedWith": [
+          "tausend",
+          "leicht",
+          "bis-morgen"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Uhrzeit sagen und Termin vereinbaren",
-        "ar": "قول الوقت وتحديد موعد"
+        "de": "Uhrzeit sagen und eine Zeit für das Essen nennen",
+        "ar": "قول الوقت وتحديد موعد ومواعيد فتح"
       },
       "situation": {
-        "de": "Am Telefon: Termin mit dem Arzt",
-        "ar": "بالهاتف: موعد مع الطبيب"
+        "de": "Ayşe und Yusuf: das Essen im Restaurant heute Abend",
+        "ar": "بعد الدرس: Ayşe ويوسف يحددان موعد العشاء في المطعم"
       },
       "successCriteria": [
-        "يقول 4 أوقات صحيحة (uhr/halb/viertel) ويقترح موعدين بجملة كاملة"
+        "يقول 5 أوقات صحيحة بالطريقة اليومية (halb · Viertel nach/vor · zehn nach) و2 بالرسمية — وhalb للساعة التالية",
+        "يحدد موعداً بجملة كاملة بـum ويذكر مواعيد الفتح: Um halb acht. · Von sechs bis elf Uhr geöffnet."
       ]
     }
   },
@@ -142,45 +449,53 @@
       {
         "items": [
           {
-            "q": "«كم الساعة؟»؟",
-            "a": "Wie viel Uhr ist es?"
-          },
-          {
-            "q": "«الساعة التاسعة والنصف»؟",
-            "a": "Es ist halb zehn."
-          },
-          {
-            "q": "«في المساء أقرأ»؟",
-            "a": "Am Abend lese ich."
-          },
-          {
-            "q": "«تصبح على خير»؟",
-            "a": "Gute Nacht!"
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "«الوقت»؟",
-            "a": "die Zeit"
-          },
-          {
-            "q": "halb drei = ?",
+            "q": "halb neun = ؟",
+            "a": "8:30",
             "choices": [
-              "2:30",
-              "3:30"
+              "8:30",
+              "9:30",
+              "9:00"
             ],
-            "a": "2:30"
+            "why": "halb neun = 8:30 — نصف الطريق إلى التاسعة."
           },
           {
-            "q": "«أستيقظ مبكراً»؟",
-            "a": "Ich stehe früh auf."
+            "q": "4:45 = ؟",
+            "a": "Viertel vor fünf",
+            "choices": [
+              "Viertel vor fünf",
+              "Viertel nach vier",
+              "halb fünf"
+            ],
+            "why": "4:45 = ربع قبل الخامسة: Viertel vor fünf — كـ«الخامسة إلا ربعاً»."
           },
           {
-            "q": "«الدقيقة»؟",
-            "a": "die Minute"
+            "q": "«ساعتان» (مدة): zwei ___",
+            "a": "Stunden",
+            "choices": [
+              "Stunden",
+              "Uhr"
+            ],
+            "why": "المدة بـStunde: zwei Stunden — وUhr للوقت: zwei Uhr = الثانية."
+          },
+          {
+            "q": "«الوقت» بالألمانية مع أداته؟",
+            "a": "die Zeit",
+            "why": "die Zeit (مؤنث): Ich habe Zeit."
+          },
+          {
+            "q": "geschlossen = ؟",
+            "a": "مغلق",
+            "choices": [
+              "مغلق",
+              "مفتوح",
+              "التالي"
+            ],
+            "why": "geschlossen = مغلق · geöffnet = مفتوح."
+          },
+          {
+            "q": "«في المساء» (am …)؟",
+            "a": "am Abend",
+            "why": "am Abend · am Morgen · am Mittag — وفي الليل: in der Nacht."
           }
         ],
         "passingScore": 0.75
@@ -188,20 +503,109 @@
       {
         "items": [
           {
-            "q": "«غداً عندي وقت» — morgen بحرف كبير أم صغير؟",
-            "a": "صغير: morgen = غداً (der Morgen = الصباح)"
+            "q": "12:30 = ؟",
+            "a": "halb eins",
+            "choices": [
+              "halb eins",
+              "halb zwölf",
+              "zwölf Uhr"
+            ],
+            "why": "12:30 = نصف الطريق إلى الواحدة: halb eins."
           },
           {
-            "q": "«الساعة فيها ستون دقيقة»؟",
-            "a": "Die Stunde hat sechzig Minuten."
+            "q": "الوقت الآن «الساعة الثالثة» — أي جملة صحيحة؟",
+            "a": "Es ist drei Uhr.",
+            "choices": [
+              "Es ist drei Uhr.",
+              "Es ist um drei Uhr."
+            ],
+            "why": "الوقت الآن بلا um: Es ist drei Uhr — وum للموعد: Der Kurs ist um drei Uhr."
           },
           {
-            "q": "«الربع»؟",
-            "a": "das Viertel"
+            "q": "«الدقيقة» بالألمانية مع أداتها؟",
+            "a": "die Minute",
+            "why": "die Minute والجمع die Minuten: Eine Stunde hat sechzig Minuten."
           },
           {
-            "q": "«الظهيرة»؟",
-            "a": "der Mittag"
+            "q": "«غداً عندي وقت» — أي كتابة صحيحة؟",
+            "a": "Ich habe morgen Zeit.",
+            "choices": [
+              "Ich habe morgen Zeit.",
+              "Ich habe Morgen Zeit."
+            ],
+            "why": "morgen بحرف صغير = غداً · der Morgen بحرف كبير = الصباح."
+          },
+          {
+            "q": "geöffnet = ؟",
+            "a": "مفتوح",
+            "choices": [
+              "مفتوح",
+              "مغلق",
+              "مبكراً"
+            ],
+            "why": "geöffnet = مفتوح: Das Restaurant ist geöffnet."
+          },
+          {
+            "q": "«في الليل» (in der …)؟",
+            "a": "in der Nacht",
+            "why": "in der Nacht (لا am Nacht) — قطعة نحفظها."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "halb sieben = ؟",
+            "a": "6:30",
+            "choices": [
+              "6:30",
+              "7:30",
+              "7:00"
+            ],
+            "why": "halb sieben = 6:30 — لا 7:30 كما في «السابعة والنصف»."
+          },
+          {
+            "q": "20:40 بالطريقة اليومية؟",
+            "a": "zwanzig vor neun",
+            "choices": [
+              "zwanzig vor neun",
+              "zwanzig nach acht",
+              "halb neun"
+            ],
+            "why": "20:40 = عشرون دقيقة قبل التاسعة: zwanzig vor neun."
+          },
+          {
+            "q": "«الظهيرة» بالألمانية مع أداتها؟",
+            "a": "der Mittag",
+            "why": "der Mittag (مذكر): am Mittag = في الظهيرة."
+          },
+          {
+            "q": "«الدرس التالي»: der ___ Kurs",
+            "a": "nächste",
+            "choices": [
+              "nächste",
+              "frühe"
+            ],
+            "why": "nächste = التالي: der nächste Kurs — وfrüh = مبكر."
+          },
+          {
+            "q": "früh ↔ ؟",
+            "a": "spät",
+            "choices": [
+              "spät",
+              "halb",
+              "nach"
+            ],
+            "why": "früh = مبكراً · spät = متأخراً."
+          },
+          {
+            "q": "«كم الساعة؟» بالألمانية؟",
+            "a": "Wie spät ist es?",
+            "why": "Wie spät ist es? أو Wie viel Uhr ist es? — والجواب: Es ist …",
+            "accept": [
+              "Wie viel Uhr ist es?"
+            ]
           }
         ],
         "passingScore": 0.75
@@ -210,53 +614,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Du kennst die Uhr: Es ist drei Uhr / halb vier / Viertel nach zwei — und halb zählt zur NÄCHSTEN Stunde!",
-      "ar": "تعرف الساعة: الثالثة / الرابعة والنصف / الثانية والربع — وhalb يعدّ للساعة التالية!"
+      "de": "Heute: Wie spät ist es? — Es ist halb acht. · Viertel nach drei · zwanzig vor neun · vierzehn Uhr dreißig — Das Restaurant ist von sechs bis elf Uhr geöffnet.",
+      "ar": "اليوم: halb للساعة التالية (halb acht = 7:30) · Viertel nach/vor كالعربية («والربع» · «إلا ربعاً») · الوقت الرسمي vierzehn Uhr dreißig · Uhr للوقت وStunde للمدة · um للموعد وEs ist للوقت الآن."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~halb drei = 3:30~~",
-          "ar": "halb + الساعة التالية = نصفها"
+          "de": "~~Es ist halb sieben.~~ (7:30)",
+          "ar": "halb + الساعة الحالية"
         },
-        "whyArabicSpeakerFails": "«الثالثة والنصف» بالعربية تبدأ من الثالثة؛ الألماني يعدّ نصف الثالث = 2:30 — عدّاد يبدأ من التالي (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تعدّ النصف من الساعة الحالية: «السابعة والنصف» = 7:30، فيقول المتعلم halb sieben. والألمانية تعدّه نحو الساعة التالية: halb acht = «نصفٌ نحو الثامنة» = 7:30 — وhalb sieben = 6:30 (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "halb drei = 2:30",
-          "ar": "نصف الثالث = الثانية والنصف"
+          "de": "Es ist halb acht. (7:30)",
+          "ar": "الساعة السابعة والنصف."
         },
         "exercise": {
-          "q": "«الساعة الرابعة والنصف» بالألمانية؟",
-          "a": "halb fünf (4:30)"
+          "q": "صحّح: ~~Es ist halb drei.~~ (3:30)",
+          "a": "Es ist halb vier."
         }
       },
       {
         "commonError": {
-          "de": "~~Es ist um drei Uhr.~~ (للتوقيت الآن)",
-          "ar": "Es ist drei Uhr — بلا um · um للtermine"
+          "de": "~~Der Kurs ist zwei Uhr lang.~~",
+          "ar": "Uhr للمدة"
         },
-        "whyArabicSpeakerFails": "«الساعة الثالثة» بحرف الجر أحياناً بالعربية؛ الألماني: للتوقيت الآن بلا جار، وum للمواعيد (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تقول «ساعة» للوقت («الساعة الثانية») وللمدة («ساعتان») — فيستعمل المتعلم Uhr للمدة أيضاً. والألمانية تفرّق: Uhr للوقت (zwei Uhr = الثانية) وStunde للمدة (zwei Stunden = ساعتان) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Es ist drei Uhr. — Der Termin ist um drei Uhr.",
-          "ar": "الآن الثالثة. — الموعد في الثالثة."
+          "de": "Der Kurs ist zwei Stunden lang.",
+          "ar": "الدرس مدته ساعتان."
         },
         "exercise": {
-          "q": "صحّح: ~~Es ist um acht Uhr jetzt.~~",
-          "a": "Es ist jetzt acht Uhr."
+          "q": "صحّح: ~~Wir haben noch eine Uhr.~~",
+          "a": "Wir haben noch eine Stunde."
         }
       },
       {
         "commonError": {
-          "de": "~~der morgen~~ (للصباح) / ~~Morgen~~ (لغداً)",
-          "ar": "الكبير يغيّر المعنى!"
+          "de": "~~Ich habe Morgen Zeit.~~ (غداً)",
+          "ar": "الحرف الكبير يغيّر المعنى"
         },
-        "whyArabicSpeakerFails": "«صباح» و«غداً» كلمتان بالعربية — الألماني كلمة واحدة يفصلها حرف كبير: der Morgen (صباح) vs morgen (غداً) (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الكتابة العربية بلا حروف كبيرة، و«غداً» و«الصباح» كلمتان مختلفتان فيها — فلا يعتاد المتعلم أن حرفاً كبيراً وحده يفرّق كلمتين: der Morgen (الصباح — اسم بحرف كبير) · morgen (غداً — بحرف صغير) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "der Morgen (صباح) / morgen (غداً)",
-          "ar": "حسب الحرف الأول!"
+          "de": "Ich habe morgen Zeit. · am Morgen",
+          "ar": "عندي وقت غداً · في الصباح"
         },
         "exercise": {
-          "q": "صحّح: ~~Ich habe Morgen Zeit~~ (غداً)",
-          "a": "Ich habe morgen Zeit."
+          "q": "صحّح: ~~Der Kurs ist Morgen früh.~~ (صباح الغد)",
+          "a": "Der Kurs ist morgen früh."
         }
       }
     ],
@@ -272,7 +676,10 @@
       "morgen",
       "abend",
       "nacht",
-      "mittag"
+      "mittag",
+      "naechste",
+      "geschlossen",
+      "geoeffnet"
     ]
   },
   "gReferences": {
@@ -301,7 +708,10 @@
     "word-morgen",
     "word-abend",
     "word-nacht",
-    "word-mittag"
+    "word-mittag",
+    "word-naechste",
+    "word-geschlossen",
+    "word-geoeffnet"
   ],
   "imageManifestRefs": [
     "img-uhr"
@@ -309,8 +719,21 @@
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen & Uhrzeit) — Uhrzeit & Termine",
     "goetheWordListOverlap": [
+      "uhr",
       "zeit",
-      "uhr"
+      "stunde",
+      "minute",
+      "halb",
+      "viertel",
+      "frueh",
+      "spaet",
+      "morgen",
+      "abend",
+      "nacht",
+      "mittag",
+      "naechste",
+      "geschlossen",
+      "geoeffnet"
     ]
   }
 }

@@ -67,6 +67,30 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   return "unknown";
 }
 
+/**
+ * D133: قياس الملفات الصوتية بعملية Python واحدة (كان المدقِّق يشغّل عملية لكل مسار — أكثر من ألف عملية) ·
+ * إن فشلت الدفعة (ملف معطوب) يعود إلى القياس ملفاً ملفاً فيُنسب الخطأ إلى ملفه بالضبط.
+ */
+export function probeAudioFiles(files: readonly string[]): Map<string, { durationSec: number; rmsDb: number }> {
+  const tool = join(process.cwd(), "tools/audio_probe.py");
+  const out = new Map<string, { durationSec: number; rmsDb: number }>();
+  if (files.length === 0) return out;
+  try {
+    const raw = JSON.parse(execFileSync("python3", [tool, ...files], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024, stdio: ["ignore", "pipe", "ignore"] })) as unknown;
+    const list = (files.length === 1 ? [raw] : raw) as { durationSec: number; rmsDb: number }[];
+    files.forEach((f, i) => out.set(f, list[i]!));
+  } catch {
+    for (const f of files) {
+      try {
+        out.set(f, JSON.parse(execFileSync("python3", [tool, f], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] })) as { durationSec: number; rmsDb: number });
+      } catch {
+        /* يبقى بلا قياس ← e-audio-missing «تعذّر تحليل الملف الصوتي» */
+      }
+    }
+  }
+  return out;
+}
+
 export function validateContentTree(entries: ContentEntry[], opts: { contentRoot?: string } = {}): ValidationReport {
   const errors: Issue[] = [];
   const warnings: Issue[] = [];
@@ -140,8 +164,10 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
           }
           // تحليل فعلي للملفات (القانون 6) — يُفعَّل عند تمرير contentRoot (CLI)
           if (opts.contentRoot) {
+            const root = opts.contentRoot;
+            const probes = probeAudioFiles(m.tracks.map((t) => resolvePath(root, t.file)).filter((f) => existsSync(f)));
             for (const t of m.tracks) {
-              const f = resolvePath(opts.contentRoot, t.file);
+              const f = resolvePath(root, t.file);
               if (!existsSync(f)) {
                 push("error", "e-audio-missing", entry.path, `ملف صوتي مفقود فعلياً: ${t.file}`);
                 continue;
@@ -150,9 +176,8 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
               if (t.hash && t.hash !== sha)
                 push("error", "e-audio-hash", entry.path, `بصمة الملف لا تطابق المانيفست: ${t.file}`);
               try {
-                const probe = JSON.parse(
-                  execFileSync("python3", [join(process.cwd(), "tools/audio_probe.py"), f], { encoding: "utf8" }),
-                ) as { durationSec: number; rmsDb: number };
+                const probe = probes.get(f);
+                if (!probe) throw new Error("probe");
                 if (t.role === "word" && probe.durationSec > WORD_CLIP_MAX_SEC)
                   push("error", "e-audio-duration", entry.path,
                     `مقطع كلمة أطول من ${WORD_CLIP_MAX_SEC}s: ${t.file} = ${probe.durationSec.toFixed(2)}s`);

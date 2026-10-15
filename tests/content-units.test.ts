@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(794); // + der Dank · leicht · das Restaurant (نواة a1-u3-d2 — D132) + die Oma · das Essen (نواة a1-u3-d1 — D131؛ das Essen بمعرّف das-essen بجانب الفعل essen) + schlecht · also · die Gruppe (نواة a1-u2-d5 — D130) + lang · lange (نواة a1-u2-d4 — D128) + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
+    expect(ALL_WORDS.length).toBe(797); // + nächste · geschlossen · geöffnet (نواة a1-u3-d3 — D133) + der Dank · leicht · das Restaurant (نواة a1-u3-d2 — D132) + die Oma · das Essen (نواة a1-u3-d1 — D131؛ das Essen بمعرّف das-essen بجانب الفعل essen) + schlecht · also · die Gruppe (نواة a1-u2-d5 — D130) + lang · lange (نواة a1-u2-d4 — D128) + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -253,6 +253,29 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 2 || l.id === "a1-u3-d1").flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u3-d3 (D133): halb من الساعة الحالية (كـ«السابعة والنصف») · Uhr للمدة (كـ«ساعة») · الحرف الكبير يفرّق Morgen/morgen — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u3-d3")!;
+    const [halb, stunde, morgen] = u.zusammenfassung.warningCards;
+    expect(halb!.commonError.de).toContain("~~Es ist halb sieben.~~ (7:30)");
+    expect(halb!.correct.de).toBe("Es ist halb acht. (7:30)");
+    expect(halb!.whyArabicSpeakerFails).toContain("«السابعة والنصف»");
+    expect(stunde!.commonError.de).toContain("~~Der Kurs ist zwei Uhr lang.~~");
+    expect(stunde!.correct.de).toBe("Der Kurs ist zwei Stunden lang.");
+    expect(stunde!.whyArabicSpeakerFails).toContain("«ساعة»");
+    expect(morgen!.whyArabicSpeakerFails).toContain("بلا حروف كبيرة");
+    expect(morgen!.exercise.a).toBe("Der Kurs ist morgen früh.");
+    // كانت «~~Es ist um drei Uhr.~~» بتعليل «الساعة الثالثة بحرف الجر أحياناً بالعربية» — والعربية نفسها تفرّق «الساعة الثالثة» (الآن)
+    // و«في الثالثة» (الموعد) كالألمانية · وفي تصحيحها Termin (درس a1-u3-d4) · وكان في الـQuiz «Ich stehe früh auf.» (aufstehen — الوحدة 7)
+    const all = JSON.stringify(u.zusammenfassung.warningCards);
+    expect(all).not.toMatch(/Termin|بحرف الجر أحياناً/);
+    expect(JSON.stringify(u.quiz)).not.toMatch(/stehe/);
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 2 || ["a1-u3-d1", "a1-u3-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });

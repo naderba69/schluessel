@@ -120,7 +120,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u3-d3")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d5 + u3-d1..d2 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128 · D130 · D131 · D132)
+const legacy = realLessons.find((l) => l.id === "a1-u3-d4")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d5 + u3-d1..d3 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128 · D130 · D131 · D132 · D133)
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -350,7 +350,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u3-d3", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u3-d4", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -434,18 +434,21 @@ describe("D115 — أدوات القياس", () => {
     expect(wordAppears(w("guten-tag"), toks("Guten Tag!"))).toBe(true);
     expect(wordAppears(w("wie-gehts"), toks("Hallo, wie geht's?"))).toBe(true);
   });
-  it("درس حقيقي لم يُرقَّ (a1-u3-d3): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين وQuiz فيها غير المدروس)", () => {
+  it("درس حقيقي لم يُرقَّ (a1-u3-d4): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين وQuiz فيها غير المدروس · am بلا بند)", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBeLessThan(12);
     expect(r.rule.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-rule", "e-upgrade-sample"]));
-    // D132: فجواته مقيسة قبل نقل المثال إليه — مثال frueh «Ich stehe früh auf.» فيه stehe (aufstehen منفصل — الوحدة 7) ·
-    // ومثال mittag فيه Mensa · وتمارينه فيها Termin (a1-u3-d4) · وQuiz فيه stehe
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/termin/);
+    // D133: فجواته مقيسة قبل نقل المثال إليه — أمثلة الشهور فيها kalt · Frühling · beginnt · schön · Ruhetag · وregnet
+    // (regnen نواة الدرس نفسه) · وتمارينه فيها Freitag · Ruhetag · schön · وكلمة am بلا أي بند
+    const front = r.practice.find((i) => i.code === "e-upgrade-front")?.message;
+    expect(front).toMatch(/ruhetag/);
+    expect(front).toMatch(/schön/);
     const samples = r.rule.map((i) => i.message).join("\n");
-    expect(samples).toMatch(/stehe/);
-    expect(samples).toMatch(/mensa/);
-    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/stehe/);
-    expect(r.coverage).toEqual([]);
+    expect(samples).toMatch(/kalt/);
+    expect(samples).toMatch(/frühling/);
+    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/ruhetag/);
+    expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);
+    expect(r.coverage[0]!.message).toMatch(/: am$/);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
     const entryReal = loadUpgradePlans(CONTENT)[0]!.lessons.find((e) => e.lessonId === "a1-u1-d1")!;
@@ -686,6 +689,36 @@ describe("D115 — أدوات القياس", () => {
     // ما خرج من الأصل في النصوص المعروضة: bezahlen für · das Euro · Wie Geld · Brot · siebenhundert بلا أساس
     const shown = [l.uebung.stations.map((s) => s.items), l.quiz, l.zusammenfassung.summary, l.zusammenfassung.warningCards, l.einstieg];
     expect(JSON.stringify(shown)).not.toMatch(/bezahlen für|bezahle für|das Euro|Wie Geld|Brot/);
+  });
+  it("a1-u3-d3 مُرقّى (D133): صفر نقص — 35 بنداً · 4 أنواع (حوار جديد + أوقات مسموعة) · Quiz 6 · 15 كلمة · الساعة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u3-d3")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u3-d3")!;
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([35, 4, 6, 15]);
+    // القاعدة المخططة نفسها (ars-uhrzeit) كُتب ملفها أخيراً: halb للساعة التالية · Viertel nach/vor كالعربية · Uhr/Stunde · um للموعد
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-uhrzeit"]);
+    const rule = loadGrammarRules(CONTENT).get("ars-uhrzeit")!;
+    expect(rule.payload.ruleDe).toMatch(/halb drei = 2:30 .*vierzehn Uhr dreißig · eine Stunde · um halb acht/);
+    expect(rule.payload.contrastAr).toMatch(/«السابعة والنصف»/);
+    expect(e.properNouns).toEqual(["Yusuf", "Ayşe"]);
+    // النواة D113 (nächst- بالكلمة nächste · geschlossen · geöffnet)
+    expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["naechste", "geschlossen", "geoeffnet"]));
+    const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(["frueh", "spaet", "mittag", "halb"].map(sample).join(" ")).not.toMatch(/stehe|Mensa|schon spät|halb drei/);
+    expect(l.warmup.cardIds).toEqual(["zwanzig", "tausend", "kosten"]);
+    // الحوار الجديد (ab-1..14) والأوقات المرجعية (uz-1..7) كلها في الاستماع والإملاء
+    const audioIds = l.uebung.stations.filter((s) => s.type === "listening" || s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.audioId)));
+    expect(audioIds.filter((id) => id.startsWith("ab-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3)))).toEqual(Array.from({ length: 14 }, (_, i) => `ab-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("uz-")).sort()).toEqual(Array.from({ length: 7 }, (_, i) => `uz-${i + 1}`));
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    // الاستماع يميّز halb drei (2:30) من 3:30 — الفخ نفسه بين خياراته
+    const lis = l.uebung.stations.find((s) => s.type === "listening")!.items as { audioId: string; choices: string[]; a: string }[];
+    expect(lis.find((i) => i.audioId === "uz-2")).toMatchObject({ a: "2:30", choices: expect.arrayContaining(["3:30"]) });
+    // الإملاء بلا اسم لا يُكتب بلوحة عادية (Ayşe) — ومدخل نطق nächste ([ɛː] الطويلة) يمسّ مسار السطر الذي يذكرها
+    const dictated = l.uebung.stations.filter((s) => s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.a)));
+    expect(dictated.join("\n")).not.toMatch(/ş/);
   });
   it("D121 e-upgrade-warmup: بطاقة استدعاء من كلمات اليوم أو لاحقة ⇒ خطأ · أول درس في المسار مستثنى", () => {
     const d4 = realLessons.find((x) => x.id === "a1-u1-d4")!;
