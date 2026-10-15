@@ -9,6 +9,7 @@ import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { z } from "zod";
+import { COMPOUND_NUMBER } from "../tools/lib/vocab-forms.js";
 
 const ROOT = join(__dirname, "..");
 
@@ -175,6 +176,20 @@ describe("D121/D122 — معجم النطق", () => {
     }
   });
 
+  it("D131: كل عدد مركّب في مسار منشور يُنطق صحيحاً — v في ‑vierzig [f] وie قصيرة · ولا نبر ثانوي على ‑zig (sieben‑)", () => {
+    // قياس D131 على الصيغ الاثنتين والسبعين: espeak يقرأ ‑undvierzig بـ[v] وiː طويلة (9/9) ويضع نبر sieben‑ الثانوي على ‑zig (8/8)
+    // — والتدقيق (D122) لا يفحص الصوامت ولا النبر الثانوي (N-013) — فكل مركّب يدخل مساراً منشوراً يُفحص هنا بعد المعجم.
+    const manifest = JSON.parse(readFileSync(join(ROOT, "content/manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { textDe: string }[] };
+    const compounds = [...new Set(manifest.tracks.flatMap((t) => (t.textDe.toLowerCase().match(/\p{L}+/gu) ?? []).filter((w) => COMPOUND_NUMBER.test(w))))].sort();
+    expect(compounds).toEqual(expect.arrayContaining(["zweiundvierzig", "siebenundzwanzig", "zweiunddreißig"]));
+    const ipa = phonemize(compounds.map((w) => `${w}.`)).map((x) => x.normalize("NFC"));
+    const bad = compounds.filter((w, i) => (w.endsWith("vierzig") && !/f[ˌˈ]?ɪɾtsɪç/u.test(ipa[i]!)) || /tsˌɪç\.?$/u.test(ipa[i]!));
+    expect(bad, "مركّب يُنطق خطأً — أضف مدخل معجم بمرجعه").toEqual([]);
+    // والكاشف نفسه يلتقط الخطأ الخام (لا فحص أعمى)
+    const raw = phonemize(["dreiundvierzig.", "siebenundsechzig."], true).map((x) => x.normalize("NFC"));
+    expect(/f[ˌˈ]?ɪɾtsɪç/u.test(raw[0]!)).toBe(false);
+    expect(/tsˌɪç\.?$/u.test(raw[1]!)).toBe(true);
+  });
   it("(5) يلتقط الصيغة غير المعروفة: vor بصيغتها المعزولة وحدها ← «…warte vor dem Kino» (نبر ثانوي) يُكشف", () => {
     const tracks = [
       { id: "iso", textDe: "vor." },
