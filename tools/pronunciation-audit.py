@@ -26,7 +26,9 @@ _spec = importlib.util.spec_from_file_location("gen_audio", ROOT / "tools" / "ge
 ga = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(ga)  # type: ignore[union-attr]
 
-TOKEN = re.compile(r"[A-Za-zÄÖÜäöüß]+")
+# D130: حروف لاتينية كاملة (Latin‑1 + Latin Extended‑A) لا الألمانية وحدها — اسم العلم Ayşe كلمة واحدة
+# (كانت تُقطع «Ay» + «e» فتُدقَّق شظايا لا وجود لها)؛ والعربية (sein (ملكيته)) تبقى خارج التدقيق.
+TOKEN = re.compile(r"[A-Za-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u017F]+")
 VOWELS = "aeiouyøœɛɪʊɔəɐæɑʏɜ"
 _NON_SYLLABIC = ("ɐ̯", "ɪ̯", "ʊ̯", "i̯", "u̯", "y̯", "o̯")
 

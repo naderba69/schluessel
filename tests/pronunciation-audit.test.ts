@@ -99,6 +99,15 @@ describe("D122 — بوابة تدقيق النطق", () => {
     expect(r.stale).toEqual(["Hotel"]);
   });
 
+  it("D130: الكلمة حروف لاتينية كاملة — Ayşe كلمة واحدة لا «Ay» + «e» · والعربية في حقل de (sein (ملكيته)) خارج التدقيق", () => {
+    const r = py("print(json.dumps(pa.TOKEN.findall('Tschüss, Ayşe! sein (ملكيته) — Straße · Österreich × Café ÷ 2')))") as string[];
+    expect(r).toEqual(["Tschüss", "Ayşe", "sein", "Straße", "Österreich", "Café"]);
+    // المحتوى الحقيقي: الاسم غائب عن المرجع الألماني فيُدقَّق بمدخل المعجم (referenceNote) — لا مراجعة صامتة
+    const ref = JSON.parse(readFileSync(join(ROOT, "tools/pronunciation-reference.de.json"), "utf8")) as { words: Record<string, { key: string | null }> };
+    expect(ref.words["Ayşe"]).toEqual({ key: null, ipa: [] });
+    expect(Object.keys(ref.words).filter((w) => w === "Ay" || w === "e")).toEqual([]);
+  });
+
   it("المقتطف: الترخيص والإسناد ونسخة المرجع المثبَّتة · refresh يرفض نسخة ببصمة أخرى · بصمة git كما يحسبها git", () => {
     const ref = JSON.parse(readFileSync(join(ROOT, "tools/pronunciation-reference.de.json"), "utf8")) as {
       license: string; attribution: string; source: { gitBlob: string }; words: Record<string, { key: string | null; ipa: string[] }>;

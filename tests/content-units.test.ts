@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(786); // + lang · lange (نواة a1-u2-d4 — D128) + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
+    expect(ALL_WORDS.length).toBe(789); // + schlecht · also · die Gruppe (نواة a1-u2-d5 — D130) + lang · lange (نواة a1-u2-d4 — D128) + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -184,6 +184,30 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018 — strasse من u1-d4 مراجعةٌ لا جديد)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 || ["a1-u2-d1", "a1-u2-d2", "a1-u2-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u2-d5 (D130): auch/gern بين الفاعل والفعل · الفاعل قبل الفعل بعد Natürlich · vorstellen كاملة — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u2-d5")!;
+    const [mittel, vorfeld, trennbar] = u.zusammenfassung.warningCards;
+    expect(mittel!.commonError.de).toContain("~~Ich auch lese gern.~~");
+    expect(mittel!.correct.de).toBe("Ich lese auch gern.");
+    expect(mittel!.whyArabicSpeakerFails).toContain("«أنا أيضاً أقرأ»");
+    expect(vorfeld!.commonError.de).toContain("~~Natürlich ich lese gern.~~");
+    expect(vorfeld!.correct.de).toBe("Natürlich lese ich gern.");
+    expect(vorfeld!.whyArabicSpeakerFails).toContain("Hier wohne ich");
+    expect(trennbar!.commonError.de).toContain("~~Ich vorstelle mich.~~");
+    expect(trennbar!.whyArabicSpeakerFails).toContain("الوحدة السابعة"); // قطعة الآن — قاعدة الأفعال المنفصلة في a1-u7-d5
+    expect(trennbar!.exercise.a).toBe("Wir lernen uns kennen.");
+    // كانت «~~Ich lerne kennen dich.~~» بتعليل يستعير aufstehen (الوحدة 7) ويعلّم موضع المفعول في الفعل المنفصل قبل وقته ·
+    // و«gern أخيراً (أو ثانياً بعد الفعل في الأسئلة)» — وgern لا تقع آخراً دائماً (Ich lese gern Texte)
+    const why = u.zusammenfassung.warningCards.map((c) => c.whyArabicSpeakerFails).join("\n");
+    expect(why).not.toMatch(/aufstehen|gern أخيراً/);
+    expect(u.zusammenfassung.warningCards.some((c) => c.commonError.de.includes("kennen dich"))).toBe(false);
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 || ["a1-u2-d1", "a1-u2-d2", "a1-u2-d3", "a1-u2-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });

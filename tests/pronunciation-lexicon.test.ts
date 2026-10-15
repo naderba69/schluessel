@@ -119,6 +119,7 @@ describe("D121/D122 — معجم النطق", () => {
     const near = [
       "Kurse.", "kurz.", "Kur.", "vier.", "Telefon.", "Nummer.", "Urlaub.", "Name.", "Geburtstag.", "Wurm.", "Vorort.",
       "Not.", "nach.", "Nacht.", "Fuß.", "Ball.", "Stadt.", "Plan.", "Kredit.", "wieder.", "hin.", "los.", "vorher.", "Hotels.",
+      "leise.", "Reise.", // D130: Ayşe [ˈaɪzə] كلمة كاملة — lˈaɪzə وrˈaɪzə لا تُمسّان
     ];
     expect(phonemize(near)).toEqual(phonemize(near, true));
   });

@@ -120,7 +120,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u2-d5")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d4 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128)
+const legacy = realLessons.find((l) => l.id === "a1-u3-d1")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d5 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128 · D130)
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -288,7 +288,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u2-d5", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u3-d1", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -372,18 +372,20 @@ describe("D115 — أدوات القياس", () => {
     expect(wordAppears(w("guten-tag"), toks("Guten Tag!"))).toBe(true);
     expect(wordAppears(w("wie-gehts"), toks("Hallo, wie geht's?"))).toBe(true);
   });
-  it("درس حقيقي لم يُرقَّ (a1-u2-d5): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين فيها غير المدروس)", () => {
+  it("درس حقيقي لم يُرقَّ (a1-u3-d1): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين فيها غير المدروس · كلمتان بلا بند)", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBeLessThan(12);
     expect(r.rule.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-rule", "e-upgrade-sample"]));
-    // D128: فجواته مقيسة قبل نقل المثال إليه — مثال oder «Kaffee oder Tee?» وتمارينه فيها Tee (الوحدة 5) ·
-    // ومثال natuerlich «Natürlich helfe ich dir!» فيه helfe · ومثال gespraech «… ein kurzes Gespräch.» لم يعد مخالفة (kurz نُقلت إلى u2-d4)
+    // D130: فجواته مقيسة قبل نقل المثال إليه — أمثلة الأعداد فيها ما لم يُدرَّس (Euro · Minuten · kostet) ·
+    // وتمارينه فيها Euro وصيغ خاطئة غير معلنة (sechszig · zwanzigeins) · وfünfzig وmal بلا أي بند
     const front = r.practice.find((i) => i.code === "e-upgrade-front")?.message;
-    expect(front).toMatch(/tee/);
+    expect(front).toMatch(/euro/);
+    expect(front).toMatch(/sechszig/);
     const samples = r.rule.map((i) => i.message).join("\n");
-    expect(samples).toMatch(/helfe/);
-    expect(samples).not.toMatch(/kurzes/);
-    expect(r.coverage).toEqual([]);
+    expect(samples).toMatch(/minuten/);
+    expect(samples).toMatch(/kostet/);
+    expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);
+    expect(r.coverage[0]!.message).toMatch(/fuenfzig، mal/);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
     const entryReal = loadUpgradePlans(CONTENT)[0]!.lessons.find((e) => e.lessonId === "a1-u1-d1")!;
@@ -529,6 +531,37 @@ describe("D115 — أدوات القياس", () => {
     expect(dictated.join("\n")).not.toMatch(/mit ß|zwei s|das a |[—:]/);
     // ما خرج من الأصل: «ai الطويل» في heiß · «au (diphthong)» في groß · leesen · Suppe · heisst
     expect(JSON.stringify(l)).not.toMatch(/ai الطويل|diphthong|leesen|Suppe|heisst/);
+  });
+  it("a1-u2-d5 مُرقّى (D130): صفر نقص — 31 بنداً · 4 أنواع (استماع وإملاء من حوار جديد) · Quiz 6 · 15 كلمة · الفعل ثانياً مع الظروف", () => {
+    const l = realLessons.find((x) => x.id === "a1-u2-d5")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u2-d5")!;
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([31, 4, 6, 15]);
+    // القاعدة المخططة نفسها (ars-kennenlernen) كُتب ملفها أخيراً: حرية الظرف مقابل V2 — auch · gern · also بعد الفعل،
+    // وNatürlich · Also أولاً ⇒ الفعل ثم الفاعل (توسيع Hier wohne ich من u2-d1) · وvorstellen/kennenlernen قطعتان لا قاعدة الوحدة 7
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-kennenlernen"]);
+    const rule = loadGrammarRules(CONTENT).get("ars-kennenlernen")!;
+    expect(rule.payload.ruleDe).toMatch(/Ich lese auch gern\. .*Natürlich sprechen wir Deutsch! .*Hast du ein Hobby\?/);
+    expect(rule.payload.contrastAr).toContain("حرية الظرف مقابل V2");
+    expect(rule.payload.limitsAr.join("\n")).toMatch(/الوحدة السابعة/);
+    expect(e.properNouns).toEqual(["Yusuf", "Ayşe", "Berlin"]);
+    // النواة D113 (schlecht · also · die Gruppe) — وkennenzulernen (صيغة zu التي لا يعرفها الحارس) خرجت من المثال
+    expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["schlecht", "also", "gruppe"]));
+    const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(sample("kennenlernen")).toBe("Wir lernen uns kennen.");
+    expect([sample("oder"), sample("natuerlich"), sample("lesen"), sample("musik")].join(" ")).not.toMatch(/Tee|helfe|Bücher|höre/);
+    expect(l.warmup.cardIds).toEqual(["vorname", "kennen", "freund"]);
+    // الحوار الجديد a1-u2-d5-wir-sind-eine-gruppe: أسطره الستة عشر كلها في الاستماع والإملاء (لا مسار بلا بند)
+    const audioIds = l.uebung.stations.filter((s) => s.type === "listening" || s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.audioId)));
+    expect([...audioIds].sort((a, b) => Number(a.slice(3)) - Number(b.slice(3)))).toEqual(Array.from({ length: 16 }, (_, i) => `gr-${i + 1}`));
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    // الإملاء بلا اسم لا يُكتب بلوحة عادية (Ayşe — ş) ولا علامة داخلية تُكتب بالضبط (— :)
+    const dictated = l.uebung.stations.filter((s) => s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.a)));
+    expect(dictated.join("\n")).not.toMatch(/ş|[—:]/);
+    // ما خرج من الأصل: kennenzulernen (صيغة zu) · Tee (الوحدة 5) · helfe (الوحدة 9) · höre (الوحدة 3)
+    expect(JSON.stringify(l)).not.toMatch(/kennenzulernen|Tee\b|helfe|höre/);
   });
   it("D121 e-upgrade-warmup: بطاقة استدعاء من كلمات اليوم أو لاحقة ⇒ خطأ · أول درس في المسار مستثنى", () => {
     const d4 = realLessons.find((x) => x.id === "a1-u1-d4")!;

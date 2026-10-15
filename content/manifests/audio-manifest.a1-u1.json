@@ -15728,6 +15728,66 @@
       "rmsDb": -17.03
     },
     {
+      "id": "word-schlecht",
+      "file": "words/audio/de-DE/word-schlecht.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "schlecht.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 839,
+      "sizeBytes": 3944,
+      "hash": "sha256:b3e8efc5d86b5d5bdc6b97251dcbdd39d10034d44c4a9181f2e1d64fd03b19bc",
+      "pcmSha256": "2427cc4673fb3e3de48590acdf25e9eba5cd38ae32d306bd5df34f0e181d796e",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "word-also",
+      "file": "words/audio/de-DE/word-also.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "also.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 711,
+      "sizeBytes": 3529,
+      "hash": "sha256:7e7f0b870cc337b07243ff14508ac8a23170ff226ef20f972f4d4b61f071f22c",
+      "pcmSha256": "9a470fe3fd8d93ff05f583a7f6055d3ef8eba016c5b409a640d7ead220c6805d",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "word-gruppe",
+      "file": "words/audio/de-DE/word-gruppe.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Gruppe.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 920,
+      "sizeBytes": 4456,
+      "hash": "sha256:8e815834cd4a7e1fd3f800ad253c081515031a706039f2de8f1ec1051a856f0c",
+      "pcmSha256": "13b1ef28a528941764861aaf5cafd523cffd313067dff77c8539ad0461785192",
+      "rmsDb": -17.03
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -19191,6 +19251,358 @@
       "hash": "sha256:0a8803d7435016ce1bde620d956ef3cbe85414555c58532473dc86244b074447",
       "pcmSha256": "c0cc8ede27125d2f2431e7799082eecae92d066dfc0028a4332e0c16374e1253",
       "rmsDb": -17.24
+    },
+    {
+      "id": "gr-1",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo! Wir sind eine Gruppe.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 2232,
+      "sizeBytes": 10130,
+      "hash": "sha256:8659838c62a4fc33c0bc4e4f2f4ac9f7191d57d4b9da74d8d14527112d9fad52",
+      "pcmSha256": "82822676c98c6468d2753964063cf5ae70970d18026a45dd5156997f207d200d",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "gr-2",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-2.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Wir lernen uns kennen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 2552,
+      "sizeBytes": 11905,
+      "hash": "sha256:bd840c77e7deb9bd7541cd47d5c1e2225b3fc1c7b6e876932b7c90e333ae67d7",
+      "pcmSha256": "aaa8d96119dd3c2203dbcff85a4a3436221dfd54e22ce51661a4d5fbfeca2b81",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "gr-3",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich stelle mich vor: Ich heiße Yusuf.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 2626,
+      "sizeBytes": 11918,
+      "hash": "sha256:2b97fa9d1e9c96c15273824e705c617c043f8f8b99a325bceff2e0c1f79ec979",
+      "pcmSha256": "2d4bb04f38dd0395680bfa5a3cf14ce35d8ec194c0ef6d571635acc51cb8db2a",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "gr-4",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-4.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Freut mich! Ich bin Ayşe. Ich komme aus der Türkei.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 4424,
+      "sizeBytes": 20465,
+      "hash": "sha256:187982cbec307efc28464e1b883786e6b81d329cc6ab94612848f1a4118b1377",
+      "pcmSha256": "d45ef4dc360225d7dd30ae2c1d218163cebaa1a20c3cfe318e9f66a50f0474d3",
+      "rmsDb": -17.47
+    },
+    {
+      "id": "gr-5",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich komme aus Tunesien. Ich wohne in Berlin.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 3172,
+      "sizeBytes": 14552,
+      "hash": "sha256:b0e942db2ae8b86c4027a7c45310c78e53f0641dbdf85aa4d5655e4942fe5303",
+      "pcmSha256": "9710341e13f49fb2117db5c5688b92be7a9927cbfeabf8a5cc7e203ce225ab64",
+      "rmsDb": -17
+    },
+    {
+      "id": "gr-6",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-6.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 176,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich wohne auch in Berlin!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 1704,
+      "sizeBytes": 8088,
+      "hash": "sha256:3959b7fc0711fd575e0444a0360d6eb17f5289de7a8a9b5937d71f4f393576f0",
+      "pcmSha256": "692a47a3bd06913060df6c348072ddcb4dc3d6f0b9384f7906987fc30823c80c",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "gr-7",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du wohnst also auch hier!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 2046,
+      "sizeBytes": 9088,
+      "hash": "sha256:5be67216934c38b52013321ad749bc28489527661569fc9fcfe59711e75a5b6f",
+      "pcmSha256": "d678f7ae64b21e38a5d2b44442a184cca900ab236da055f600908db3db22098f",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "gr-8",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-8.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Sprechen wir Deutsch oder Englisch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 2856,
+      "sizeBytes": 13501,
+      "hash": "sha256:3c6336c2a657b626ea42bbba7bffe28427a5389654574a94594653ce0a0dbc5a",
+      "pcmSha256": "50fda4ee57f1f8b375672e3a2906d86d96bf170d4ac21bbbf7aa62894ff6cf74",
+      "rmsDb": -17.45
+    },
+    {
+      "id": "gr-9",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Natürlich sprechen wir Deutsch!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 2000,
+      "sizeBytes": 8994,
+      "hash": "sha256:025118ae284850784b1a5e71a573784dc07bb1090b26adff76d619c6f44f2a42",
+      "pcmSha256": "cec6e6f49eb5f6e148363afc7236a52860fb3564f0169d5fa19e588762af98be",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "gr-10",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-10.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Mein Deutsch ist noch schlecht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 2136,
+      "sizeBytes": 10142,
+      "hash": "sha256:9e3b52029dad85b9a945e61558c231eb7f0ad1d8c00668ff8f5fe08fcd6d95c7",
+      "pcmSha256": "4c21417392cd9ff95068853474aaf0c10ad4099ae1ada0429dfdb9e6f2726dca",
+      "rmsDb": -17.4
+    },
+    {
+      "id": "gr-11",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Also sprechen wir langsam.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 1941,
+      "sizeBytes": 8800,
+      "hash": "sha256:09e51edbf9c9d6717d470403c0c489ef8a938f8edf66e669008174ff76f55325",
+      "pcmSha256": "bbe052c50c60b57f7561f069afd8b439e38ae3c9d61711b1f79248299579793f",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "gr-12",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-12.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 115,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke, das ist nett!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 2088,
+      "sizeBytes": 10201,
+      "hash": "sha256:ff12c2a9b4822b2cc56b941046f21c5b140203dbc41f67f130b5f75c65f55b7c",
+      "pcmSha256": "3e57565ec0bb354f7c7ce1275b53a8cfee0c896446007723bd1dd5a083760a88",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "gr-13",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hast du ein Hobby? Ich lese gern.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 2499,
+      "sizeBytes": 11592,
+      "hash": "sha256:ed79fdc0606015cc7a600e288ca45ee79f180de97e3841674ade2c1d244cb1aa",
+      "pcmSha256": "5ff77f45a92f54f6ad7969da9f8be4f5037e115971ba62e34266299f2c3823f5",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "gr-14",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-14.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich lese auch gern! Und Musik.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 2408,
+      "sizeBytes": 11569,
+      "hash": "sha256:a58d3d876a7da03951936ca3c83c43ea309c0adc51fd5fc76ddfff27ab3b8465",
+      "pcmSha256": "0bf80a364f6adeff3dbbd441d5b6f3ac917675ada6868e9f0d533157b8a61a3d",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "gr-15",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 108,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das Gespräch ist kurz, aber nett. Tschüss, Ayşe!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 4461,
+      "sizeBytes": 19957,
+      "hash": "sha256:e896cf8a75f7df5124bbd8d4e8ce56654e25a355a6f9129b828c57e6c94b2940",
+      "pcmSha256": "9ac8cfd88fededfbf0bd695ad9d083046b463af79d7a0ca76ecd4370c18cef53",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "gr-16",
+      "file": "audio/scripts/a1-u2-d5-wir-sind-eine-gruppe/gr-16.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 110,
+        "lengthScale": 1.32
+      },
+      "textDe": "Bis morgen, Yusuf! Ich freue mich.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d5"
+      ],
+      "durationMs": 3272,
+      "sizeBytes": 15119,
+      "hash": "sha256:e691d8242f94cf72a24a99b6736c2366f9e2bc301e34680dedfafed3d2226659",
+      "pcmSha256": "858357c954fa6ed30eea2ff7a73a3a6a0018d946a829ec7410776c1009017358",
+      "rmsDb": -17.25
     }
   ],
   "characterVoices": {
