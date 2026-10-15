@@ -6,31 +6,32 @@
   "day": 4,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst ein Familienfoto in 4 Sätzen beschreiben (Akkusativ + Fragen).",
-    "ar": "تصف صورة أسرية بـ4 جمل (Akkusativ + أسئلة)"
+    "de": "Ich beschreibe ein Foto: Links steht mein Vater. — Siehst du ihn?",
+    "ar": "تصف صورة أسرية بأربع جمل (مَن يقف أو يجلس وأين · ماذا يرتدي)، وتسأل عنها بـWen? وWas? وبسؤال نعم/لا، وتجيب بضمير المفعول: ihn للمذكر وحده، وsie وes كما هما."
   },
   "canDoDaily": [
-    "يصف صورة أسرية بـ4 جمل: مواقع + مظهر + فعل برؤية"
+    "يصف صورة أسرية بأربع جمل والفعل ثانياً: الموقع بـlinks · rechts · neben · zwischen مع stehen أو sitzen (Links steht mein Vater.) والمظهر بـtragen (Er trägt eine Brille.).",
+    "يسأل عن المفعول بـWen? وWas? وبسؤال نعم/لا (Siehst du den Hund?)، ويجيب بالضمير: ihn للمذكر وحده، وsie وes كما هما (Ja, ich sehe ihn.)."
   ],
   "warmup": {
     "cardIds": [
-      "foto",
-      "bruder",
-      "alt"
+      "opa",
+      "loesung",
+      "foto"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«على اليسار يقف أبي» — Links steht mein Vater أم Links mein Vater steht? (تخمين فقط)"
+          "de": "Siehst du den Hund? — «نعم، أراه» بالألمانية: أي جواب صحيح؟ (تخمين فقط)"
         },
         "choices": [
-          "Links steht mein Vater. (الفعل ثانياً)",
-          "Links mein Vater steht.",
-          "Mein Vater links steht."
+          "Ja, ich sehe ihn.",
+          "Ja, ich sehe er.",
+          "Ja, ich ihn sehe."
         ],
-        "answer": "Links steht mein Vater. (الفعل ثانياً)",
+        "answer": "Ja, ich sehe ihn.",
         "revealNextSession": true
       }
     ],
@@ -49,7 +50,10 @@
       "zwischen",
       "gemeinsam",
       "tragen",
-      "brille"
+      "brille",
+      "bekannt",
+      "bekannte",
+      "tot"
     ],
     "grammarArsenalIds": [
       "ars-akkusativ-2"
@@ -58,76 +62,418 @@
       "story-a4-u4-s4"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "umlaut-a",
+      "ch-ich-laut",
+      "z",
+      "double-consonant"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أرى أبي»؟",
-            "a": "Ich sehe meinen Vater. (meinen — Akkusativ)"
+            "q": "der Hund → Siehst du den Hund? — Ja, ich sehe ___.",
+            "a": "ihn",
+            "why": "Hund مذكر (der Hund ← er)، وفي الجواب صار مفعولاً به: er ← ihn — بالـ‑n نفسها التي في den. كما تقول العربية «أراه»: ضمير المفعول غير ضمير الفاعل."
           },
           {
-            "q": "«أرِني الصورة!»؟",
-            "a": "Zeig mir das Foto!"
+            "q": "die Katze → Siehst du die Katze? — Ja, ich sehe ___.",
+            "a": "sie",
+            "why": "Katze مؤنثة (die Katze ← sie)، وضمير المؤنث لا يتغير مفعولاً: sie تبقى sie — أما العربية فتغيّر «هي» إلى «ـها» («أراها»)."
+          },
+          {
+            "q": "das Wort → Kennst du das Wort? — Ja, ich kenne ___.",
+            "a": "es",
+            "why": "Wort محايد (das Wort ← es)، والضمير يتبع أداة الكلمة الألمانية — مع أن «الكلمة» مؤنثة بالعربية («أعرفها»)، فلا تقل sie."
+          },
+          {
+            "q": "___ trägt der Vater? — Er trägt das Kind.",
+            "a": "Wen",
+            "why": "الأب يحمل الطفل: الطفل مفعول به وهو شخص ← Wen، والأب فاعل بعد الفعل؛ وtragen هنا بمعنى «يحمل»."
+          },
+          {
+            "q": "___ steht rechts? — Rechts steht eine Bekannte.",
+            "a": "Wer",
+            "why": "stehen لا مفعول له: الواقف فاعل ← Wer لا Wen · eine Bekannte = إحدى المعارف (امرأة)."
+          },
+          {
+            "q": "___ trägt dein Vater? — Eine Brille.",
+            "a": "Was",
+            "why": "السؤال عن شيء ← Was (للفاعل والمفعول معاً) · trägt من tragen (يرتدي) · Brille مؤنثة ← eine Brille."
+          },
+          {
+            "q": "Links steht ___ Opa. (mein)",
+            "a": "mein",
+            "why": "stehen لا مفعول له، وOpa فاعل جاء بعد الفعل — فلا ‑en: mein Opa. والعربية تعينك هنا: في «يقفُ جدي» الفاعل بعد الفعل مرفوع."
+          },
+          {
+            "q": "Ich sehe ___ Opa. (mein)",
+            "a": "meinen",
+            "why": "sehen له مفعول: Opa مذكر (der Opa) ومفعول به ← mein ← meinen."
+          },
+          {
+            "q": "Du ___ ein Foto. (sehen)",
+            "a": "siehst",
+            "why": "sehen يتغيّر حرفه مع du وer/sie/es: e ← ie — du siehst · er sieht (لا sehst)."
+          },
+          {
+            "q": "Mein Vater ___ eine Brille. (tragen)",
+            "a": "trägt",
+            "why": "tragen يتغيّر حرفه مع du وer/sie/es: a ← ä — er trägt · du trägst (لا tragt)."
+          },
+          {
+            "q": "Oma sitzt ___ Opa und Lena. (بين)",
+            "a": "zwischen",
+            "why": "zwischen = بين، وتُذكر مرة واحدة قبل الاسمين معاً — لا تُكرَّر قبل Lena كما تتكرر «بين» في العربية."
+          },
+          {
+            "q": "Das ist eine ___ von Oma. (إحدى المعارف)",
+            "a": "Bekannte",
+            "why": "die Bekannte = إحدى المعارف (امرأة) — من bekannt (معروف)؛ اسم بحرف كبير · وللرجل der Bekannte."
           }
         ],
         "interleavedWith": [
-          "sehen",
-          "bruder"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "«على اليسار يقف أبي»؟",
-            "a": "Links steht mein Vater."
-          },
-          {
-            "q": "«يرتدي نظارة»؟",
-            "a": "Er trägt eine Brille."
-          }
-        ],
-        "interleavedWith": [
+          "hund",
+          "katze",
+          "wort",
           "vater",
-          "mutter"
+          "opa"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«بين الأب والأم يقف الطفل»؟",
-            "a": "Zwischen Vater und Mutter steht das Kind."
+            "audioId": "fo-2",
+            "speakText": "Okay. Ich zeige ein Foto. Siehst du es?",
+            "q": "استمع: ماذا يفعل يوسف، وبماذا يسأل؟",
+            "choices": [
+              "يُري صورة ويسأل: هل تراها؟",
+              "يصف صورة ويسأل: مَن هذا؟",
+              "يشتري صورة ويسأل: هل تحبها؟"
+            ],
+            "a": "يُري صورة ويسأل: هل تراها؟",
+            "why": "zeige من zeigen (يُري) · Siehst du es? = هل تراها؟ — es مكان das Foto لأن Foto محايد، مع أن «الصورة» مؤنثة بالعربية («أراها»)."
           },
           {
-            "q": "«الجميع يبتسمون»؟",
-            "a": "Alle lächeln."
+            "audioId": "fo-3",
+            "speakText": "Ja, ich sehe es. Wen zeigt das Foto?",
+            "q": "استمع: بماذا تسأل لينا عن الصورة؟",
+            "choices": [
+              "مَن تُظهر الصورة؟",
+              "أين الصورة؟",
+              "هل الصورة جميلة؟"
+            ],
+            "a": "مَن تُظهر الصورة؟",
+            "why": "Wen zeigt das Foto? = مَن تُظهر الصورة؟ — Wen لأن الأشخاص مفعول (الصورة تُظهرهم) وdas Foto فاعل · وich sehe es: es للصورة."
+          },
+          {
+            "audioId": "fo-4",
+            "speakText": "Es zeigt meine Familie in Tunesien. Das Foto ist alt.",
+            "q": "استمع: ماذا تُظهر الصورة؟",
+            "choices": [
+              "عائلة يوسف في تونس — والصورة قديمة",
+              "عائلة لينا في سويسرا — والصورة جديدة",
+              "أصدقاء يوسف في برلين — والصورة قديمة"
+            ],
+            "a": "عائلة يوسف في تونس — والصورة قديمة",
+            "why": "Es zeigt meine Familie = تُظهر عائلتي — Familie مؤنثة فبقيت meine مفعولاً · alt = قديم للأشياء، وكبير السن للأشخاص."
+          },
+          {
+            "audioId": "fo-5",
+            "speakText": "Siehst du den Mann links?",
+            "q": "استمع: عمّن يسأل يوسف؟",
+            "choices": [
+              "عن الرجل على اليسار",
+              "عن الرجل على اليمين",
+              "عن المرأة على اليسار"
+            ],
+            "a": "عن الرجل على اليسار",
+            "why": "den Mann: der ← den لأن الرجل مفعول به بعد siehst · links = على اليسار، وrechts = على اليمين."
+          },
+          {
+            "audioId": "fo-6",
+            "speakText": "Ja, ich sehe ihn. Ist das dein Vater?",
+            "q": "استمع: بماذا تجيب لينا؟",
+            "choices": [
+              "نعم، أراه. هل هذا أبوك؟",
+              "نعم، أعرفه. هل هذا أخوك؟",
+              "لا، لا أراه. هل هذا جدك؟"
+            ],
+            "a": "نعم، أراه. هل هذا أبوك؟",
+            "why": "ihn = ـه في «أراه»: der Mann مذكر ومفعول ← er ← ihn، كما der ← den · Ist das dein Vater? = هل هذا أبوك؟"
+          },
+          {
+            "audioId": "fo-7",
+            "speakText": "Ja. Links steht mein Vater. Er trägt eine Brille.",
+            "q": "استمع: ماذا نعرف عن الأب؟",
+            "choices": [
+              "يقف على اليسار ويرتدي نظارة",
+              "يجلس على اليمين ويرتدي نظارة",
+              "يقف على اليسار ويحمل طفلاً"
+            ],
+            "a": "يقف على اليسار ويرتدي نظارة",
+            "why": "steht من stehen (يقف) · trägt من tragen (يرتدي) والحرف يتغيّر مع er · Links steht mein Vater: الفعل ثانياً، وmein Vater فاعل بلا ‑en."
+          },
+          {
+            "audioId": "fo-10",
+            "speakText": "Und zwischen Oma und Opa sitzt ein Kind. Bist du das?",
+            "q": "استمع: أين يجلس الطفل؟",
+            "choices": [
+              "بين الجدة والجد",
+              "بجانب الأب",
+              "على اليمين"
+            ],
+            "a": "بين الجدة والجد",
+            "why": "zwischen Oma und Opa = بين الجدة والجد — zwischen مرة واحدة قبل الاسمين · sitzt من sitzen (يجلس) · Bist du das? = هل هذا أنت؟"
+          },
+          {
+            "audioId": "fo-11",
+            "speakText": "Ja, das bin ich. Hier bin ich fünf.",
+            "q": "استمع: كم عمر يوسف في الصورة؟",
+            "choices": [
+              "خمس سنوات",
+              "خمس عشرة سنة",
+              "خمسون سنة"
+            ],
+            "a": "خمس سنوات",
+            "why": "fünf = خمسة (fünfzehn = 15 · fünfzig = 50) · das bin ich = هذا أنا · Hier = هنا، أي في الصورة."
+          },
+          {
+            "audioId": "fo-13",
+            "speakText": "Nein. Mein Opa ist tot.",
+            "q": "استمع: ماذا يقول يوسف عن جده؟",
+            "choices": [
+              "جده متوفّى",
+              "جده في برلين",
+              "جده كبير السن ولطيف"
+            ],
+            "a": "جده متوفّى",
+            "why": "tot = ميّت أو متوفّى — صفة بعد ist: Mein Opa ist tot؛ وist لا تُحذف كما تُحذف في «جدي متوفّى»."
+          },
+          {
+            "audioId": "fo-14",
+            "speakText": "Ach, Yusuf. Aber hier lächelt er. Und du lächelst auch.",
+            "q": "استمع: ماذا تقول لينا بلطف؟",
+            "choices": [
+              "لكنه هنا يبتسم، وأنت تبتسم أيضاً",
+              "لكنه هنا يقف، وأنت تجلس أيضاً",
+              "لكنه هنا يرتدي نظارة، وأنت أيضاً"
+            ],
+            "a": "لكنه هنا يبتسم، وأنت تبتسم أيضاً",
+            "why": "lächelt وlächelst من lächeln (يبتسم): er lächelt · du lächelst · auch = أيضاً · Ach = تنهيدة تعاطف."
+          },
+          {
+            "audioId": "fo-16",
+            "speakText": "Und wer steht rechts? Ist das deine Mutter?",
+            "q": "استمع: عمّن تسأل لينا الآن؟",
+            "choices": [
+              "مَن يقف على اليمين — هل هي أمه؟",
+              "مَن يجلس على اليسار — هل هي أخته؟",
+              "مَن يقف على اليمين — هل هي جدته؟"
+            ],
+            "a": "مَن يقف على اليمين — هل هي أمه؟",
+            "why": "wer steht rechts? — Wer لأن الواقف فاعل (stehen بلا مفعول) · rechts = على اليمين · die Mutter ← deine Mutter."
+          },
+          {
+            "audioId": "fo-17",
+            "speakText": "Nein, das ist eine Bekannte von Oma. Oma ist dort sehr bekannt.",
+            "q": "استمع: مَن المرأة على اليمين؟",
+            "choices": [
+              "إحدى معارف الجدة — والجدة معروفة جداً هناك",
+              "أم يوسف — والجدة معروفة جداً هناك",
+              "صديقة لينا — والجدة جديدة هناك"
+            ],
+            "a": "إحدى معارف الجدة — والجدة معروفة جداً هناك",
+            "why": "eine Bekannte = إحدى المعارف (امرأة)، من bekannt = معروف · von Oma = من معارف الجدة · dort = هناك، أي في تونس."
+          },
+          {
+            "audioId": "fo-19",
+            "speakText": "Ja, viele Leute kennen sie — und das Essen von Oma!",
+            "q": "استمع: ماذا يقول يوسف عن جدته؟",
+            "choices": [
+              "ناس كثيرون يعرفونها ويعرفون طعامها",
+              "ناس كثيرون يعرفونه ويعرفون أباه",
+              "ناس قليلون يعرفونها ويعرفون صورتها"
+            ],
+            "a": "ناس كثيرون يعرفونها ويعرفون طعامها",
+            "why": "kennen sie: sie = الجدة — die Oma مؤنثة فبقي ضميرها sie مفعولاً · das Essen von Oma = طعام الجدة (طعامها يكفي مئة!)."
+          },
+          {
+            "audioId": "fo-20",
+            "speakText": "Toll! Und jetzt mein Foto.",
+            "q": "استمع: ماذا تقول لينا في الآخر؟",
+            "choices": [
+              "رائع! والآن صورتي",
+              "رائع! والآن صورتك",
+              "شكراً! والآن الحل"
+            ],
+            "a": "رائع! والآن صورتي",
+            "why": "Toll! = رائع · jetzt = الآن · mein Foto = صورتي — جاء دورها في المهمة."
           }
         ],
         "interleavedWith": [
-          "kind",
-          "zwischen"
+          "familie",
+          "mann",
+          "vater",
+          "oma",
+          "opa",
+          "mutter",
+          "das-essen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "sie.",
+              "kenne",
+              "Ja,",
+              "ich"
+            ],
+            "a": "Ja, ich kenne sie.",
+            "why": "Ja، ثم الفاعل ich ثم الفعل kenne ثانياً ثم الضمير المفعول sie في الآخر — sie للمؤنث والجمع لا تتغير مفعولاً."
+          },
+          {
+            "tokens": [
+              "meinen",
+              "du",
+              "Bruder?",
+              "Siehst"
+            ],
+            "a": "Siehst du meinen Bruder?",
+            "why": "سؤال نعم/لا: الفعل Siehst أولاً ثم الفاعل du ثم المفعول meinen Bruder — Bruder مذكر ومفعول ← meinen."
+          },
+          {
+            "tokens": [
+              "Opa.",
+              "sitzt",
+              "Rechts",
+              "mein"
+            ],
+            "a": "Rechts sitzt mein Opa.",
+            "why": "Rechts أولاً ثم الفعل sitzt ثانياً ثم الفاعل mein Opa — sitzen بلا مفعول فلا ‑en."
+          },
+          {
+            "tokens": [
+              "rechts?",
+              "du",
+              "Wen",
+              "siehst"
+            ],
+            "a": "Wen siehst du rechts?",
+            "why": "كلمة السؤال Wen أولاً (الشخص مفعول: أنت تراه) ثم الفعل siehst ثانياً ثم الفاعل du."
+          },
+          {
+            "tokens": [
+              "eine",
+              "trägt",
+              "Brille.",
+              "Oma"
+            ],
+            "a": "Oma trägt eine Brille.",
+            "why": "Oma فاعل ثم trägt ثانياً (a ← ä مع er/sie) ثم المفعول eine Brille — Brille مؤنثة فبقيت eine."
+          },
+          {
+            "tokens": [
+              "sitze",
+              "Opa.",
+              "Ich",
+              "zwischen",
+              "und",
+              "Oma"
+            ],
+            "a": "Ich sitze zwischen Oma und Opa.",
+            "why": "Ich ثم sitze ثانياً ثم zwischen مرة واحدة قبل الاسمين: zwischen Oma und Opa."
+          }
+        ],
+        "interleavedWith": [
+          "kennen",
+          "bruder",
+          "opa",
+          "oma"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "fo-1",
+            "speakText": "Yusuf, die Aufgabe heute: Wir beschreiben gemeinsam ein Foto.",
+            "a": "Yusuf, die Aufgabe heute: Wir beschreiben gemeinsam ein Foto",
+            "why": "Yusuf اسم علم بحرف كبير · Aufgabe وFoto اسمان بحرف كبير · beschreiben بـsch وei · gemeinsam (معاً) بـei."
+          },
+          {
+            "audioId": "fo-8",
+            "speakText": "Und hier sitzen zwei Leute. Sind das deine Großeltern?",
+            "a": "Und hier sitzen zwei Leute. Sind das deine Großeltern?",
+            "why": "sitzen بـtz بعد حركة قصيرة · Leute بـeu · Großeltern كلمة واحدة بـß بعد حركة طويلة · deine لأن Großeltern جمع."
+          },
+          {
+            "audioId": "fo-9",
+            "speakText": "Ja, genau. Neben Oma sitzt mein Opa.",
+            "a": "Ja, genau. Neben Oma sitzt mein Opa",
+            "why": "neben بـe طويلة بلا علامة · sitzt آخرها tzt · Oma وOpa بحرف كبير · mein Opa فاعل بعد الفعل فلا ‑en."
+          },
+          {
+            "audioId": "fo-12",
+            "speakText": "Wie schön! Siehst du deinen Opa oft?",
+            "a": "Wie schön! Siehst du deinen Opa oft?",
+            "why": "Siehst بـie (حركة sehen تتغير مع du) وh صامتة · deinen بـ‑en: Opa مذكر ومفعول به · schön بـö."
+          },
+          {
+            "audioId": "fo-15",
+            "speakText": "Ja. Hier sind wir zusammen.",
+            "a": "Ja. Hier sind wir zusammen",
+            "why": "Hier بـie · zusammen بـmm بعد حركة قصيرة، وs في أولها تُنطق ز."
+          },
+          {
+            "audioId": "fo-18",
+            "speakText": "Kennen viele Leute deine Oma?",
+            "a": "Kennen viele Leute deine Oma?",
+            "why": "Kennen بـnn · viele بـie وv تُنطق f · Leute بـeu · Oma مؤنثة فبقيت deine مفعولاً."
+          },
+          {
+            "audioId": "word-zwischen",
+            "speakText": "zwischen.",
+            "a": "zwischen",
+            "why": "zwischen = بين: z تُنطق «تس» · w تُنطق v · sch = «ش»."
+          },
+          {
+            "audioId": "word-laecheln",
+            "speakText": "lächeln.",
+            "a": "lächeln",
+            "why": "lächeln = يبتسم: ä · ch بعد ä تُنطق «ش» الخفيفة · آخرها ‑eln."
+          }
+        ],
+        "interleavedWith": [
+          "aufgabe",
+          "grosseltern",
+          "leute",
+          "zusammen"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Familienfoto in 4 Sätzen beschreiben",
-        "ar": "وصف صورة أسرية بـ4 جمل"
+        "de": "Ich beschreibe ein Foto: Links steht mein Vater. Er trägt eine Brille. — Siehst du ihn?",
+        "ar": "تصف صورة أسرية بأربع جمل، ويسألك زميلك عنها فتجيب بضمير المفعول"
       },
       "situation": {
-        "de": "Im Kurs: das Familienfoto an der Wand",
-        "ar": "في الدورة: الصورة الأسرية على الجدار"
+        "de": "Im Kurs: Lena, Yusuf und ein Foto",
+        "ar": "في الدورة: تُري زميلك صورة — من عائلتك أو صورة تختارها أو ترسمها، حقيقية أو خيالية، بلا حاجة إلى معلومات عائلية حقيقية — فتصفها بأربع جمل ويسألك عنها، ثم تتبادلان."
       },
       "successCriteria": [
-        "4 جمل: موقعان (links/rechts/neben/zwischen) + مظهر + فعل sehen/tragen — كل جملة فعلها ثانياً"
+        "يصف الصورة بأربع جمل والفعل ثانياً في كل جملة: موقعان بـlinks · rechts · neben · zwischen مع stehen أو sitzen (Links steht mein Vater.) وجملة بـtragen (Er trägt eine Brille.) وجملة بمفعول (Ich sehe meinen Opa.).",
+        "يجيب عن ثلاثة أسئلة زميله بضمير صحيح — Siehst du den Mann? — Ja, ich sehe ihn. · die Frau ← sie · das Kind ← es — ويسأل هو بـWen? أو Was? مرة واحدة على الأقل."
       ]
     }
   },
@@ -142,20 +488,54 @@
       {
         "items": [
           {
-            "q": "«أرى أخي»؟",
-            "a": "Ich sehe meinen Bruder."
+            "q": "«هل تعرف الرجل؟ — نعم، أعرفه.»",
+            "choices": [
+              "Kennst du den Mann? — Ja, ich kenne ihn.",
+              "Kennst du den Mann? — Ja, ich kenne er.",
+              "Kennst du der Mann? — Ja, ich kenne ihn."
+            ],
+            "a": "Kennst du den Mann? — Ja, ich kenne ihn.",
+            "why": "der Mann مفعول به بعد kennst ← den، وضميره مفعولاً ihn (er ← ihn) — المذكر وحده يتغيّر."
           },
           {
-            "q": "«على اليمين»؟",
-            "a": "rechts"
+            "q": "Siehst du das Kind? — Ja, ich sehe ___. (das Kind)",
+            "a": "es",
+            "why": "Kind محايد (das Kind ← es)، والضمير يتبع الأداة الألمانية: es — لا ihn مع أن «الطفل» مذكر بالعربية («أراه»)."
           },
           {
-            "q": "«يرتدي نظارة»؟",
-            "a": "Er trägt eine Brille."
+            "q": "«على اليمين تجلس أمي»؟",
+            "choices": [
+              "Rechts sitzt meine Mutter.",
+              "Rechts meine Mutter sitzt.",
+              "Rechts sitzt meinen Mutter."
+            ],
+            "a": "Rechts sitzt meine Mutter.",
+            "why": "الفعل ثانياً بعد Rechts، وmeine Mutter فاعل (sitzen بلا مفعول) — والمؤنث لا يأخذ ‑en أصلاً."
           },
           {
-            "q": "«الجميع يبتسمون في الصورة»؟",
-            "a": "Alle lächeln auf dem Foto."
+            "q": "«ماذا ترتدي جدتك؟»",
+            "choices": [
+              "Was trägt deine Oma?",
+              "Was tragt deine Oma?",
+              "Was trägt deinen Oma?"
+            ],
+            "a": "Was trägt deine Oma?",
+            "why": "السؤال عن شيء ← Was · tragen مع er/sie ← trägt (a ← ä) · Oma مؤنثة ← deine."
+          },
+          {
+            "q": "tot = ؟",
+            "choices": [
+              "ميّت / متوفّى",
+              "معروف",
+              "معاً"
+            ],
+            "a": "ميّت / متوفّى",
+            "why": "tot = ميّت أو متوفّى · bekannt = معروف · gemeinsam = معاً."
+          },
+          {
+            "q": "«إحدى المعارف (امرأة)» بالألمانية مع أداتها؟",
+            "a": "die Bekannte",
+            "why": "die Bekannte — من bekannt (معروف)؛ وللرجل der Bekannte · والجمع die Bekannten."
           }
         ],
         "passingScore": 0.75
@@ -163,20 +543,54 @@
       {
         "items": [
           {
-            "q": "«على اليسار أمي»؟",
-            "a": "Links ist meine Mutter."
+            "q": "«هل ترى أمي؟ — نعم، أراها.»",
+            "choices": [
+              "Siehst du meine Mutter? — Ja, ich sehe sie.",
+              "Siehst du meinen Mutter? — Ja, ich sehe sie.",
+              "Siehst du meine Mutter? — Ja, ich sehe er."
+            ],
+            "a": "Siehst du meine Mutter? — Ja, ich sehe sie.",
+            "why": "Mutter مؤنثة ← meine تبقى مفعولاً، وضميرها sie لا يتغيّر — العربية تغيّر «هي» إلى «ـها»، والألمانية لا."
           },
           {
-            "q": "«يجلس» و«يقف»؟",
-            "a": "sitzen / stehen"
+            "q": "Kennst du den Lehrer? — Ja, ich kenne ___. (der Lehrer)",
+            "a": "ihn",
+            "why": "Lehrer مذكر (der Lehrer ← er) ومفعول به ← ihn: المذكر وحده يتغيّر بـ‑n كما den."
           },
           {
-            "q": "«بجانب أمي تجلس الجدة»؟",
-            "a": "Neben meiner Mutter sitzt Oma."
+            "q": "«بجانب لينا يجلس يوسف»؟",
+            "choices": [
+              "Neben Lena sitzt Yusuf.",
+              "Neben Lena Yusuf sitzt.",
+              "Neben Lena sitzen Yusuf."
+            ],
+            "a": "Neben Lena sitzt Yusuf.",
+            "why": "Neben Lena أولاً ثم الفعل sitzt ثانياً ثم الفاعل Yusuf — وفاعل مفرد فالفعل sitzt لا sitzen."
           },
           {
-            "q": "«أرِني الصورة!»؟",
-            "a": "Zeig mir das Foto!"
+            "q": "«مَن يجلس بجانب الجدة؟»",
+            "choices": [
+              "Wer sitzt neben Oma?",
+              "Wen sitzt neben Oma?",
+              "Wer sitzen neben Oma?"
+            ],
+            "a": "Wer sitzt neben Oma?",
+            "why": "الجالس فاعل (sitzen بلا مفعول) ← Wer لا Wen · والفعل مع wer كما مع er: sitzt · وneben Oma: اسم بلا أداة بعد neben."
+          },
+          {
+            "q": "bekannt = ؟",
+            "choices": [
+              "معروف / مشهور",
+              "ميّت",
+              "بجانب"
+            ],
+            "a": "معروف / مشهور",
+            "why": "bekannt = معروف أو مشهور (Oma ist dort sehr bekannt.) · tot = ميّت · neben = بجانب."
+          },
+          {
+            "q": "«النظارة» بالألمانية مع أداتها؟",
+            "a": "die Brille",
+            "why": "die Brille مؤنثة بـll ومفردة: نظارة واحدة = eine Brille."
           }
         ],
         "passingScore": 0.75
@@ -184,20 +598,54 @@
       {
         "items": [
           {
-            "q": "«بين»؟",
-            "a": "zwischen"
+            "q": "«هل تعرف الصورة؟ — نعم، أعرفها.»",
+            "choices": [
+              "Kennst du das Foto? — Ja, ich kenne es.",
+              "Kennst du das Foto? — Ja, ich kenne er.",
+              "Kennst du den Foto? — Ja, ich kenne es."
+            ],
+            "a": "Kennst du das Foto? — Ja, ich kenne es.",
+            "why": "Foto محايد ← das يبقى مفعولاً، وضميره es — لا sie مع أن «الصورة» مؤنثة بالعربية («أعرفها»)."
           },
           {
-            "q": "«الصورة معلّقة على الجدار»؟",
-            "a": "Das Bild hängt an der Wand."
+            "q": "Siehst du die Großeltern? — Ja, ich sehe ___. (die Großeltern)",
+            "a": "sie",
+            "why": "Großeltern جمع (die Großeltern ← sie)، وضمير الجمع لا يتغيّر مفعولاً."
           },
           {
-            "q": "«معاً»؟",
-            "a": "gemeinsam"
+            "q": "«جدي يحمل طفلاً»؟",
+            "choices": [
+              "Opa trägt ein Kind.",
+              "Opa tragt ein Kind.",
+              "Opa trägt einen Kind."
+            ],
+            "a": "Opa trägt ein Kind.",
+            "why": "tragen = يحمل أيضاً · مع er ← trägt (a ← ä) · Kind محايد ← ein يبقى مفعولاً."
           },
           {
-            "q": "tragen — للمعنى؟",
-            "a": "يرتدي (ملابس/نظارة) أو يحمل"
+            "q": "«بين لينا ويوسف»؟",
+            "choices": [
+              "zwischen Lena und Yusuf",
+              "zwischen Lena und zwischen Yusuf",
+              "zwischen Lena zwischen Yusuf"
+            ],
+            "a": "zwischen Lena und Yusuf",
+            "why": "zwischen تُذكر مرة واحدة قبل الاسمين — لا تُكرَّر كما تتكرر «بين» في «بيني وبينك»."
+          },
+          {
+            "q": "gemeinsam = ؟",
+            "choices": [
+              "معاً",
+              "على اليمين",
+              "يبتسم"
+            ],
+            "a": "معاً",
+            "why": "gemeinsam = معاً · rechts = على اليمين · lächeln = يبتسم."
+          },
+          {
+            "q": "«على اليمين» بالألمانية؟",
+            "a": "rechts",
+            "why": "rechts = على اليمين · links = على اليسار — وبعدهما الفعل ثانياً: Rechts steht …"
           }
         ],
         "passingScore": 0.75
@@ -206,53 +654,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Dein Familienfoto erzählt: Links steht …, rechts sitzt …, neben …, zwischen … — und alle lächeln gemeinsam!",
-      "ar": "صورتك الأسرية تحكي: على اليسار يقف…، على اليمين يجلس…، بجانب…، بين… — والجميع يبتسمون معاً!"
+      "de": "Siehst du den Hund? — Ja, ich sehe ihn. · die Katze → sie · das Foto → es · Wen siehst du? · Was trägt Opa? · Links steht mein Vater. · Neben Oma sitzt Opa.",
+      "ar": "في السؤال يبقى المفعول بأداته (Siehst du den Hund?)، وWen? للشخص وWas? للشيء في أول السؤال. وفي الجواب ضمير المفعول: المذكر وحده يتغيّر (er ← ihn)، وsie وes تبقيان — والضمير يتبع أداة الكلمة الألمانية لا جنس ترجمتها (das Foto ← es). وstehen · sitzen · lächeln بلا مفعول: Links steht mein Vater. وzwischen مرة واحدة: zwischen Oma und Opa. وsehen وtragen يتغيّر حرفهما: du siehst · er trägt."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Er ist eine Brille.~~ / ~~Er hat Brille an.~~",
-          "ar": "tragen للملابس والنظارة"
+          "de": "~~Ja, ich sehe sie.~~ (das Foto)",
+          "ar": "ضمير الشيء بجنس كلمته العربية: «الصورة» مؤنثة ← sie"
         },
-        "whyArabicSpeakerFails": "«يلبس» و«يحمل» فعلان بالعربية؛ الألماني tragen لكليهما — وللنظارة: eine Brille tragen (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "في العربية يتبع ضمير الشيء جنسَ كلمته العربية: «الصورة» مؤنثة فنقول «أراها»، و«البيت» مذكر فنقول «أراه» — ولا محايد في العربية أصلاً، فلا يخطر للمتعلم es. والألمانية يتبع ضميرها أداة الكلمة الألمانية: das Foto ← es · das Haus ← es · der Hund ← ihn · die Katze ← sie (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Er trägt eine Brille.",
-          "ar": "يرتدي نظارة."
+          "de": "Siehst du das Foto? — Ja, ich sehe es.",
+          "ar": "هل ترى الصورة؟ — نعم، أراها."
         },
         "exercise": {
-          "q": "صحّح: ~~Mein Vater ist eine Brille.~~",
-          "a": "Mein Vater trägt eine Brille."
+          "q": "أكمل: Siehst du das Auto? — Ja, ich sehe ___.",
+          "a": "es"
         }
       },
       {
         "commonError": {
-          "de": "~~Links mein Vater steht.~~",
-          "ar": "الفعل في الجملة الألمانية ثانياً دائماً"
+          "de": "~~zwischen Oma und zwischen Opa~~",
+          "ar": "تكرار «بين» كما في «بين جدتي وبين جدي»"
         },
-        "whyArabicSpeakerFails": "«على اليسار أبي يقف» ترتيب عربي حر؛ الألماني: الظرف أولاً ثم الفعل مباشرة ثم الفاعل (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "في العربية تتكرر «بين» مع الضمير وجوباً («بيني وبينك») وكثيراً مع الأسماء («بين يوسف وبين لينا»)، فيكرر المتعلم zwischen قبل كل اسم. والألمانية تذكرها مرة واحدة قبل الاسمين معاً: zwischen Oma und Opa (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Links steht mein Vater.",
-          "ar": "على اليسار يقف أبي."
+          "de": "Das Kind sitzt zwischen Oma und Opa.",
+          "ar": "الطفل يجلس بين الجدة والجد."
         },
         "exercise": {
-          "q": "أعد الترتيب: mein Vater / Rechts / sitzt",
-          "a": "Rechts sitzt mein Vater."
+          "q": "صحّح: ~~Ich sitze zwischen Lena und zwischen Yusuf.~~",
+          "a": "Ich sitze zwischen Lena und Yusuf."
         }
       },
       {
         "commonError": {
-          "de": "~~Ich sehe mein Bruder.~~",
-          "ar": "mein ← meinen عند المفعول"
+          "de": "~~Sehst du den Hund?~~ / ~~Er tragt eine Brille.~~",
+          "ar": "حركة الجذع ثابتة مع كل ضمير كما في المضارع العربي («أرى · ترى · يرى»)"
         },
-        "whyArabicSpeakerFails": "قاعدة الأمس تتضاعف: الملكية تتبع المُملوك + المفعول يغيّر der — الناتج meinen (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "في المضارع العربي تتغير حروف المضارعة وحدها وتبقى حركة الجذع: «أرى · ترى · يرى» و«أحمل · تحمل · يحمل» — فيتوقع المتعلم seh‑ وtrag‑ مع كل ضمير. والألمانية تغيّر حركة هذين الفعلين مع du وer/sie/es: du siehst · er sieht · du trägst · er trägt — كما liest من lesen (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich sehe meinen Bruder.",
-          "ar": "أرى أخي."
+          "de": "Siehst du den Hund? · Er trägt eine Brille.",
+          "ar": "هل ترى الكلب؟ · يرتدي نظارة."
         },
         "exercise": {
-          "q": "أكمل: Ich sehe ___ Schwester. (mein)",
-          "a": "meine Schwester"
+          "q": "أكمل: Was ___ du? (sehen) · Oma ___ das Kind. (tragen)",
+          "a": "siehst · trägt"
         }
       }
     ],
@@ -268,19 +716,28 @@
       "zwischen",
       "gemeinsam",
       "tragen",
-      "brille"
+      "brille",
+      "bekannt",
+      "bekannte",
+      "tot"
     ]
   },
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/tragen",
       "https://www.duden.de/rechtschreibung/Brille",
-      "https://www.duden.de/rechtschreibung/l%C3%A4cheln"
+      "https://www.duden.de/rechtschreibung/l%C3%A4cheln",
+      "https://www.duden.de/rechtschreibung/bekannt",
+      "https://www.duden.de/rechtschreibung/Bekannte",
+      "https://www.duden.de/rechtschreibung/tot"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/tragen"
+      "https://de.wiktionary.org/wiki/tragen",
+      "https://de.wiktionary.org/wiki/ihn"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-akkusativ-2"
@@ -297,14 +754,28 @@
     "word-zwischen",
     "word-gemeinsam",
     "word-tragen",
-    "word-brille"
+    "word-brille",
+    "word-bekannt",
+    "word-bekannte",
+    "word-tot"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 (Meine Familie) — Foto beschreiben",
     "goetheWordListOverlap": [
       "sehen",
-      "tragen"
+      "zeigen",
+      "sitzen",
+      "stehen",
+      "links",
+      "rechts",
+      "neben",
+      "zwischen",
+      "tragen",
+      "brille",
+      "bekannt",
+      "bekannte",
+      "tot"
     ]
   }
 }

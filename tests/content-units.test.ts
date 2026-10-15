@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(809); // + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(812); // + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -380,6 +380,48 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 3 || l.id === "a1-u4-d1" || l.id === "a1-u4-d2").flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(u.warmup.cardIds).toEqual(["hund", "katze", "auto"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u4-d4 (D139): ضمير الشيء بجنس كلمته العربية (الصورة ← sie) · تكرار «بين» · جذع المضارع الثابت — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u4-d4")!;
+    const [pronoun, zwischen, stem] = u.zusammenfassung.warningCards;
+    expect(pronoun!.commonError.de).toBe("~~Ja, ich sehe sie.~~ (das Foto)");
+    expect(pronoun!.correct.de).toBe("Siehst du das Foto? — Ja, ich sehe es.");
+    // العربية بلا محايد والضمير فيها يتبع جنس الكلمة العربية («الصورة» مؤنثة ← «أراها»)
+    expect(pronoun!.whyArabicSpeakerFails).toContain("«الصورة» مؤنثة فنقول «أراها»");
+    expect(pronoun!.whyArabicSpeakerFails).toContain("ولا محايد في العربية");
+    expect(pronoun!.exercise.a).toBe("es");
+    expect(zwischen!.commonError.de).toBe("~~zwischen Oma und zwischen Opa~~");
+    expect(zwischen!.correct.de).toBe("Das Kind sitzt zwischen Oma und Opa.");
+    // «بيني وبينك» تكرار واجب مع الضمير في العربية — وzwischen تُذكر مرة واحدة
+    expect(zwischen!.whyArabicSpeakerFails).toContain("«بيني وبينك»");
+    expect(stem!.commonError.de).toBe("~~Sehst du den Hund?~~ / ~~Er tragt eine Brille.~~");
+    expect(stem!.correct.de).toBe("Siehst du den Hund? · Er trägt eine Brille.");
+    expect(stem!.whyArabicSpeakerFails).toContain("«أرى · ترى · يرى»");
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: «~~Er ist eine Brille.~~» (ليس نقلاً عربياً) · مصيدة V2 بعد الظرف (مكررة من u2-d1 وu2-d5) · ~~Ich sehe mein Bruder.~~ (مصيدة d3)
+    const cards = JSON.stringify(u.zusammenfassung.warningCards);
+    expect(cards).not.toMatch(/Er ist eine Brille|Links mein Vater steht|Ich sehe mein Bruder/);
+    // لا Dativ بعد neben/zwischen ولا أمر ولا قطعة «auf dem Foto» ولا hängt/Wand في أي نص ألماني للدرس (Dativ قاعدة الوحدتين 8 و9)
+    const de = JSON.stringify({ e: u.einstieg, s: u.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "" }))), q: u.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "" }))), z: u.zusammenfassung.summary.de, w: u.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise]) });
+    expect(de).not.toMatch(/(neben|zwischen) (dem|der|den|meinem|meiner|deinem|deiner|einem|einer)\b|auf dem Foto|Zeig mir|hängt|Wand|Akkusativ/i);
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(["zeigen", "sitzen", "laecheln", "neben", "gemeinsam", "bekannt", "bekannte", "tot"].map(sample)).toEqual([
+      "Das Foto zeigt meine Familie.", "Neben Oma sitzt Opa.", "Das Kind lächelt.", "Ich sitze neben Oma.", "Wir essen gemeinsam.",
+      "Oma ist dort sehr bekannt.", "Das ist eine Bekannte von Oma.", "Opa ist tot, aber hier lächelt er.",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا «Ja, ich sehe es.» لمذكر ولا «Wen trägt deine Oma?» ولا «Ja, ich kenne sie.» في خيارات المذكر
+    const choiceTexts = [...u.einstieg.pretestItems.flatMap((p) => p.choices), ...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (typeof i === "string" ? [i] : Array.isArray((i as { choices?: unknown }).choices) ? ((i as { choices: string[] }).choices) : []));
+    expect(choiceTexts.filter((c) => /^(Ja, ich sehe es\.|Ja, ich sehe den\.|Wen trägt deine Oma\?|Kennst du den Mann\? — Ja, ich kenne sie\.|Siehst du meine Mutter\? — Ja, ich sehe ihn\.)$/.test(c))).toEqual([]);
+    // tot موضوع حساس: لا مهمة تطلب من المتعلم ذكر متوفّى من عائلته — والموقف يقول صراحة «بلا حاجة إلى معلومات عائلية حقيقية»
+    expect(u.uebung.communicativeTask.successCriteria.join(" ")).not.toMatch(/tot|متوفّ/);
+    expect(u.uebung.communicativeTask.situation.ar).toContain("بلا حاجة إلى معلومات عائلية حقيقية");
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 3 || ["a1-u4-d1", "a1-u4-d2", "a1-u4-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["opa", "loesung", "foto"]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 

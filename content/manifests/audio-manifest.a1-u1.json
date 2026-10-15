@@ -16189,6 +16189,66 @@
       "rmsDb": -17.01
     },
     {
+      "id": "word-bekannt",
+      "file": "words/audio/de-DE/word-bekannt.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "bekannt.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 827,
+      "sizeBytes": 4354,
+      "hash": "sha256:47e053c0cdc03fed67c2bd9d745273a796540bac1311e0f9a8a77f51847df6aa",
+      "pcmSha256": "806c4b77cf47f1f067df6aa5de28598b17de01e528c1b3ff0ae96dea99a48ef5",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "word-bekannte",
+      "file": "words/audio/de-DE/word-bekannte.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Bekannte.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 1291,
+      "sizeBytes": 5742,
+      "hash": "sha256:bbc6b4829239feeed7bb3ad9140177d3321041e714db985518636c7643410f24",
+      "pcmSha256": "8f8e612d81e5a97824e2f025fe102e7dcb0494be64479e53505c4332c41895bc",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "word-tot",
+      "file": "words/audio/de-DE/word-tot.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "tot.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 873,
+      "sizeBytes": 3987,
+      "hash": "sha256:d51a29ee9eccb63137fc3dc28699d08bb192afb3b505309cac3821573b1f1180",
+      "pcmSha256": "286e9d6bf9f9aa85bd045c5405a8b49320690294eacbac32b0c84e91d15d2fcd",
+      "rmsDb": -16.98
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -23524,6 +23584,446 @@
       "hash": "sha256:69bd51a46391453dc158508fb68a44243274b32bc8042c26f2c587da6d071ce5",
       "pcmSha256": "593a3149bd0e654bab7fd8184a77404e234e3c7fcadcbd5d0513c3d6ba5f5f70",
       "rmsDb": -17.14
+    },
+    {
+      "id": "fo-1",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 117,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, die Aufgabe heute: Wir beschreiben gemeinsam ein Foto.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 4616,
+      "sizeBytes": 21525,
+      "hash": "sha256:ed161bbaa3add42d8e9e126675f1b035070ebac40a1f9926a495d49ce25ccf87",
+      "pcmSha256": "6be5c21f58f5d1383042b2f0b910c781bccd5d63a672443bdca0725c9ed0617d",
+      "rmsDb": -17.3
+    },
+    {
+      "id": "fo-2",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Okay. Ich zeige ein Foto. Siehst du es?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 3358,
+      "sizeBytes": 15099,
+      "hash": "sha256:07ee6ca37b316e68e5763c9c4fd172d46a22a5801189c4e956d7c694ee8532ef",
+      "pcmSha256": "79151cfa98097cf87fa28289261032a31b325edbe994f8a31d22165ab795f09c",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "fo-3",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 172,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich sehe es. Wen zeigt das Foto?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 2792,
+      "sizeBytes": 13042,
+      "hash": "sha256:ebc5bd4fb92923fea1e568497688a6a997a6da2d16b7f643e759f7e6e0873752",
+      "pcmSha256": "03a0c7b409350ade513d165f2d8d3aca3386a1ea9d0902179b8f48a6110c3d12",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "fo-4",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 146,
+        "lengthScale": 1.32
+      },
+      "textDe": "Es zeigt meine Familie in Tunesien. Das Foto ist alt.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 4113,
+      "sizeBytes": 18877,
+      "hash": "sha256:cb1dbe0b7836d26216a5db0f40e83aef41da71f66d953cbca759539c7a4d2bbc",
+      "pcmSha256": "1722115339aa72bbc80716418b2f31501979c2e41fa06583a99eb4c896f2ffde",
+      "rmsDb": -17
+    },
+    {
+      "id": "fo-5",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 193,
+        "lengthScale": 1.32
+      },
+      "textDe": "Siehst du den Mann links?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 1558,
+      "sizeBytes": 7311,
+      "hash": "sha256:26633919f7010fda7859a2c21c501a5198faf524ece4230006c6e58eaedb01e1",
+      "pcmSha256": "d1c90e0e5eb68c202f9f35bc9f55d31ae8bd732c7ced7b2d1229221ba6251fa0",
+      "rmsDb": -16.98
+    },
+    {
+      "id": "fo-6",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 202,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich sehe ihn. Ist das dein Vater?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 2376,
+      "sizeBytes": 11217,
+      "hash": "sha256:155b103fe867dd9053e3f912768bf9e5daeb36c2059f6291cb8db6751b8ce289",
+      "pcmSha256": "5201243fa2d542e2d5779064892b54d8d0262f065b49641b506639f248c40799",
+      "rmsDb": -17.44
+    },
+    {
+      "id": "fo-7",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Links steht mein Vater. Er trägt eine Brille.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 3602,
+      "sizeBytes": 16557,
+      "hash": "sha256:58b4f21158b9e8fda8ddbb8dc9005a754fe23bd8c42a426f2d7397e8283bb8b2",
+      "pcmSha256": "71b76d9c7ecb1787223c16277be294511d543701627323d8ab716b60d7b53d8f",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "fo-8",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und hier sitzen zwei Leute. Sind das deine Großeltern?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 4376,
+      "sizeBytes": 20267,
+      "hash": "sha256:d45778df241f6ab738eadf6f4bd245db8d360c7104cf75ae6ac66c726da94849",
+      "pcmSha256": "ce9aea2ac796b68c2a1de06a9bb3293005569e7e2c02939d5e714e6939832dd8",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "fo-9",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, genau. Neben Oma sitzt mein Opa.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 3242,
+      "sizeBytes": 14442,
+      "hash": "sha256:f1039f6bd53b20ea215018995b6ff182b8c00a16b35819da2d75866d87e612c8",
+      "pcmSha256": "2423a1ab20843e9d872f0962f400a88cfa72fb4346a67dd86d22491820e1e1f6",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "fo-10",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 157,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und zwischen Oma und Opa sitzt ein Kind. Bist du das?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 4200,
+      "sizeBytes": 19818,
+      "hash": "sha256:86a2c96e06038ca0d7e329767723e0b067593bddc45a47ea0fa683b27af080b4",
+      "pcmSha256": "9debfd76f050a8ba3d4d4be87fed3f1281c5438dab6d02a425519dea1bcc6270",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "fo-11",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 164,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, das bin ich. Hier bin ich fünf.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 2928,
+      "sizeBytes": 13253,
+      "hash": "sha256:2bb7f3f327503744864c43e050b89ab6521fce8ed23f11934dd6c8bd26199a31",
+      "pcmSha256": "f882ff913517ed0068dfe8e36d25404b1fd5df220624349c6054454d1e1937cb",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "fo-12",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wie schön! Siehst du deinen Opa oft?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 3336,
+      "sizeBytes": 15450,
+      "hash": "sha256:5ae86b41481b9a013643fcd691420524b34be96c692e59083664b4a2f2b817cb",
+      "pcmSha256": "b2811ca4305ce31f06a5364baaf14cee50f3fe872c0fd4e214b49a782cee393f",
+      "rmsDb": -17.41
+    },
+    {
+      "id": "fo-13",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 105,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein. Mein Opa ist tot.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 2847,
+      "sizeBytes": 12227,
+      "hash": "sha256:79cd570ce429095e99d237de61258ec7a59027c0e0459239fb228c3a5b3783eb",
+      "pcmSha256": "21c92ac1984aa5748cd90bfef109ceff29ceac7127c1607816c7097dc8234666",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "fo-14",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ach, Yusuf. Aber hier lächelt er. Und du lächelst auch.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 4248,
+      "sizeBytes": 19658,
+      "hash": "sha256:9cca81a3732598b4f5763a621449009a6e49e5cee4c131d2b31abca247b691b6",
+      "pcmSha256": "3f3f2d27a63a2a232ed204e6ea1f8074e769ab330a3b4f6f1085c76f95ecd9f6",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "fo-15",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 121,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Hier sind wir zusammen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 2476,
+      "sizeBytes": 10820,
+      "hash": "sha256:c96aa0e89ddcc8dc6eb95fb467cd8d0ec31b3435a61b39fad79160ad0be3fac6",
+      "pcmSha256": "74aa04469ed68b1c23faae4442824d55b7a571d6ecbd1ce783a3b2ce8ec934c2",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "fo-16",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 170,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wer steht rechts? Ist das deine Mutter?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 2824,
+      "sizeBytes": 13127,
+      "hash": "sha256:a5e55731257416b6d7f4d6316a8251bc83dab256038560fa3889d96917cb5d05",
+      "pcmSha256": "42bf4535c22bc6a938678383e2b504f4a0a78d6226b1c7050db98286726fa99a",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "fo-17",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, das ist eine Bekannte von Oma. Oma ist dort sehr bekannt.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 4275,
+      "sizeBytes": 19840,
+      "hash": "sha256:67560b1da6b01270fde6a0f517de72dbd3b93d32b8399b578d6b2de84d2bfd29",
+      "pcmSha256": "81b42451bebf90fa6bb2747ca499a1bd1e8091030c42dda861e834b6029211c5",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "fo-18",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Kennen viele Leute deine Oma?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 2440,
+      "sizeBytes": 11481,
+      "hash": "sha256:6c0f2e54ccc1b9371a7296fa4acde0027ff7808b1ef4006327b0456ffcc2a5b9",
+      "pcmSha256": "c5cde0fd5b04ddca776ca9fa8738460bf660764723a25c1548e4039cf59aa77b",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "fo-19",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, viele Leute kennen sie — und das Essen von Oma!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 4171,
+      "sizeBytes": 19137,
+      "hash": "sha256:d1ca6eda2fba2402ffd182e017a08ba45c8a6a632534dba089300ff64c9889b1",
+      "pcmSha256": "adac568efffe1fc31b7f20f5977212a583285f7ab39ffc8135e2d739abe57312",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "fo-20",
+      "file": "audio/scripts/a1-u4-d4-siehst-du-ihn/fo-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Toll! Und jetzt mein Foto.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d4"
+      ],
+      "durationMs": 2232,
+      "sizeBytes": 10429,
+      "hash": "sha256:c18ea4e6a509cd125ea32810d5d4c3e71e3b947a6224b81a5ebf689597e6a481",
+      "pcmSha256": "9c853c55e466e801009ce6e9e80d71e771d793ba742e9f50bc121fe3ac0e6726",
+      "rmsDb": -17.31
     }
   ],
   "characterVoices": {
