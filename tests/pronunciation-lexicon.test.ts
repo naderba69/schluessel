@@ -1,8 +1,9 @@
-// tests/pronunciation-lexicon.test.ts — معجم النطق (D121): أخطاء espeak-ng المقيسة تُصحَّح قبل النموذج
-// الضمانات: (1) كل مدخل ما زال لازماً (espeak الخام ما زال يخطئ — وإلا يُحذف المدخل لا يبقى رقعة ميتة)
+// tests/pronunciation-lexicon.test.ts — معجم النطق (D121 · D122): أخطاء espeak-ng المقيسة تُصحَّح قبل النموذج
+// الضمانات: (1) كل صيغة ما زالت لازمة (espeak الخام ما زال يخطئ — وإلا تُحذف لا تبقى رقعة ميتة) ومُختبَرة بسياق
 // (2) يُطبَّق في كل سياق معلن ولا يتغير في الجملة شيء غيره (3) لا يمس كلمة قريبة (حد الكلمة)
-// (4) كل مسار منشور فيه كلمة من المعجم أُعيد توليده بعد إضافتها (لا صوت قديم خاطئ يبقى صامتاً)
-// (5) رموز التصحيح معروفة لخريطتي الصوتين المثبَّتين (لا يُسقطها Piper صامتاً).
+// (4) المسارات المنشورة التي يمسّها المعجم فعلاً (بمطابقة التوليد نفسها لا ببحث نصي) = المعاد توليدها تماماً
+// (5) كلمة من المعجم تُنطق في مسار بصيغة لا يعرفها المعجم = فشل (صيغة سياق جديدة لم تُصحَّح)
+// (6) المعجم قبل ملاءمة الخريطة: التصحيح يصل الصوتين كليهما حتى في كلمات ç (vierzig) — وبرموز تعرفها خريطتاهما.
 import { describe, it, expect } from "vitest";
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
@@ -11,36 +12,55 @@ import { z } from "zod";
 
 const ROOT = join(__dirname, "..");
 
+const Form = z
+  .object({ espeak: z.string().min(2), ipa: z.string().min(2) })
+  .strict()
+  .refine((f) => f.ipa !== f.espeak, "ipa = espeak — صيغة بلا تصحيح");
 const Entry = z
   .object({
     word: z.string().regex(/^\p{L}+$/u),
-    espeak: z.string().min(2),
-    ipa: z.string().min(2),
+    forms: z.array(Form).min(1),
     referenceIpa: z.string().regex(/^\/.+\/$/),
+    referenceNote: z.string().min(10).optional(),
     analogy: z.string().min(10),
     contexts: z.array(z.string().min(1)).min(2),
     regeneratedTracks: z.array(z.string().min(1)).min(1),
   })
-  .strict()
-  .refine((e) => e.ipa !== e.espeak, "ipa = espeak — مدخل بلا تصحيح");
+  .strict();
+const Reviewed = z
+  .object({
+    word: z.string().regex(/^\p{L}+$/u),
+    verdict: z.enum(["variant", "weak-form", "artifact", "ambiguous", "no-reference"]),
+    espeak: z.string().min(1),
+    note: z.string().min(20),
+  })
+  .strict();
 const Lexicon = z
   .object({
-    schemaVersion: z.literal("1.0.0"),
+    schemaVersion: z.literal("2.0.0"),
     decision: z.string().regex(/^D\d+$/),
     about: z.string().min(20),
-    reference: z.object({ name: z.string(), license: z.string(), gitBlob: z.string().regex(/^[0-9a-f]{40}$/), url: z.string().url() }).strict(),
+    reference: z
+      .object({
+        name: z.string(),
+        license: z.string(),
+        licenseNote: z.string().min(20),
+        gitBlob: z.string().regex(/^[0-9a-f]{40}$/),
+        url: z.string().url(),
+        attribution: z.string().url(),
+      })
+      .strict(),
     entries: z.array(Entry).min(1),
+    reviewed: z.array(Reviewed),
   })
   .strict();
 
 const lex = Lexicon.parse(JSON.parse(readFileSync(join(ROOT, "tools/pronunciation-lexicon.json"), "utf8")));
+const nfd = (s: string) => s.normalize("NFD"); // espeak الخام يُخرج العلامات مفككة (ç = c + U+0327)
 
-const phonemize = (texts: string[], raw = false): string[] =>
-  (
-    JSON.parse(
-      execFileSync("python3", [join(ROOT, "tools/phonemize.py"), ...(raw ? ["--raw"] : []), ...texts], { encoding: "utf8", timeout: 120_000 }),
-    ) as { ipa: string }[]
-  ).map((r) => r.ipa);
+const run = (args: string[]): unknown =>
+  JSON.parse(execFileSync("python3", [join(ROOT, "tools/phonemize.py"), ...args], { encoding: "utf8", timeout: 120_000, maxBuffer: 64 * 1024 * 1024 }));
+const phonemize = (texts: string[], raw = false): string[] => (run([...(raw ? ["--raw"] : []), ...texts]) as { ipa: string }[]).map((r) => r.ipa);
 
 /** يحمّل tools/gen-audio.py وحدةً ويشغّل شيفرة Python عليها — الناتج JSON */
 const py = (body: string): unknown =>
@@ -60,66 +80,131 @@ const py = (body: string): unknown =>
     ),
   );
 
-const wholeWord = (word: string) => new RegExp(`(?<![\\p{L}])${word}(?![\\p{L}])`, "u");
+const wholeWordCI = (word: string) => new RegExp(`(?<![\\p{L}])${word}(?![\\p{L}])`, "iu");
+/** (5) مسارات تذكر الكلمة نصاً ولا يمسّها المعجم = الكلمة تُنطق فيها بصيغة لا يعرفها المعجم (تبقى خاطئة بصمت) */
+const unknownForm = (word: string, tracks: { id: string; textDe: string }[], touched: readonly string[]) =>
+  tracks.filter((t) => wholeWordCI(word).test(t.textDe) && !touched.includes(t.id)).map((t) => t.id).sort();
 
-describe("D121 — معجم النطق", () => {
-  it("المخطط: كلمات فريدة · كل سياق يحوي كلمته كاملة · المرجع حر بإصدار مثبَّت", () => {
-    const ws = lex.entries.map((e) => e.word);
+describe("D121/D122 — معجم النطق", () => {
+  it("المخطط: كلمات فريدة لا تجمع تصحيحاً ومراجعة · كل سياق يحوي كلمته · الترخيص الصحيح للمرجع الألماني", () => {
+    const ws = lex.entries.map((e) => e.word.toLowerCase());
     expect(new Set(ws).size).toBe(ws.length);
-    for (const e of lex.entries) for (const c of e.contexts) expect(c, `${e.word} ∉ «${c}»`).toMatch(wholeWord(e.word));
-    expect(lex.reference.license).toBe("MIT");
+    const rv = lex.reviewed.map((r) => r.word.toLowerCase());
+    expect(new Set(rv).size).toBe(rv.length);
+    expect(ws.filter((w) => rv.includes(w))).toEqual([]);
+    for (const e of lex.entries) for (const c of e.contexts) expect(c, `${e.word} ∉ «${c}»`).toMatch(wholeWordCI(e.word));
+    // D122: بيانات ipa-dict الألمانية من german-ipa-dict ← Wiktionary ⇒ CC-BY-SA (سجل D121 قال MIT خطأً)
+    expect(lex.reference.license).toBe("CC-BY-SA");
+    expect(lex.reference.attribution).toContain("german-ipa-dict");
   });
 
-  it("كل مدخل ما زال لازماً ويُطبَّق في كل سياق — ولا يتغير في الجملة إلا الكلمة نفسها", () => {
+  it("كل صيغة ما زالت لازمة ومُختبَرة بسياق — والتصحيح لا يغيّر في الجملة إلا الكلمة نفسها", () => {
     const ctx = lex.entries.flatMap((e) => e.contexts.map((c) => ({ e, c })));
     const raw = phonemize(ctx.map((x) => x.c), true);
     const fixed = phonemize(ctx.map((x) => x.c));
+    const exercised = new Set<string>();
     ctx.forEach(({ e, c }, i) => {
-      expect(raw[i], `espeak لم يعد يخطئ في «${c}» — احذف مدخل ${e.word}`).toContain(e.espeak);
-      expect(fixed[i]).toBe(raw[i]!.replaceAll(e.espeak, e.ipa));
-      expect(fixed[i]).not.toContain(e.espeak);
+      const present = e.forms.filter((f) => raw[i]!.includes(nfd(f.espeak)));
+      expect(present.length, `espeak لم يعد يخطئ في «${c}» — احذف الصيغة أو المدخل ${e.word}`).toBeGreaterThan(0);
+      present.forEach((f) => exercised.add(`${e.word}|${f.espeak}`));
+      let expected = raw[i]!;
+      for (const f of e.forms) expected = expected.replaceAll(nfd(f.espeak), nfd(f.ipa));
+      expect(fixed[i], c).toBe(expected);
+      for (const f of e.forms) expect(fixed[i]).not.toContain(nfd(f.espeak));
     });
+    for (const e of lex.entries) for (const f of e.forms) expect(exercised.has(`${e.word}|${f.espeak}`), `صيغة ميتة: ${e.word} ${f.espeak}`).toBe(true);
   });
 
-  it("حد الكلمة: الكلمات القريبة لا تُمس (Kurse · kurz · Kur · vier · Telefon · Urlaub …)", () => {
-    const near = ["Kurse.", "kurz.", "Kur.", "vier.", "Telefon.", "Nummer.", "Urlaub.", "Name.", "Geburtstag.", "Wurm.", "Vorort."];
+  it("حد الكلمة: الكلمات القريبة لا تُمس (Kurse · vier · Not · nach · Fuß · Stadt · Kredit · wieder …)", () => {
+    const near = [
+      "Kurse.", "kurz.", "Kur.", "vier.", "Telefon.", "Nummer.", "Urlaub.", "Name.", "Geburtstag.", "Wurm.", "Vorort.",
+      "Not.", "nach.", "Nacht.", "Fuß.", "Ball.", "Stadt.", "Plan.", "Kredit.", "wieder.", "hin.", "los.", "vorher.", "Hotels.",
+    ];
     expect(phonemize(near)).toEqual(phonemize(near, true));
   });
 
-  it("apply_lexicon: كلمة كاملة فقط · القائمة نفسها حين لا مطابقة · عدد التصحيحات صحيح", () => {
+  it("apply_lexicon: كلمة كاملة فقط · كل صيغ الكلمة · القائمة نفسها حين لا مطابقة · عدد التصحيحات صحيح", () => {
     const r = py(
       [
-        'E = [{"espeak": "kˈuːɾs", "ipa": "kˈʊɐs"}]',
+        'E = [{"word": "vor", "forms": [{"espeak": "fˈɔɾ", "ipa": "fˈoːɾ"}, {"espeak": "fˌɔɾ", "ipa": "fˌoːɾ"}]}]',
         "def run(s):",
         "    ph = list(s); out, n = ga.apply_lexicon(ph, E)",
-        '    return {"out": "".join(out), "n": n, "same": out is ph}',
-        'print(json.dumps({k: run(v) for k, v in {"alone": "kˈuːɾs.", "mid": "ɪm kˈuːɾs, ja", "twice": "kˈuːɾs kˈuːɾs", "prefix": "akˈuːɾs", "suffix": "kˈuːɾsə", "none": "nˈʊl"}.items()}, ensure_ascii=False))',
+        '    return {"out": "".join(out), "n": n, "same": out is ph, "hits": ga.lexicon_hits(ph, E)}',
+        'print(json.dumps({k: run(v) for k, v in {"alone": "fˈɔɾ.", "ctx": "vˈaɾtə fˌɔɾ deːm", "both": "fˈɔɾ fˌɔɾ", "prefix": "afˈɔɾ", "suffix": "fˈɔɾə", "none": "nˈʊl"}.items()}, ensure_ascii=False))',
       ].join("\n"),
-    ) as Record<string, { out: string; n: number; same: boolean }>;
-    expect(r.alone).toEqual({ out: "kˈʊɐs.", n: 1, same: false });
-    expect(r.mid).toEqual({ out: "ɪm kˈʊɐs, ja", n: 1, same: false });
-    expect(r.twice).toEqual({ out: "kˈʊɐs kˈʊɐs", n: 2, same: false });
-    expect(r.prefix).toEqual({ out: "akˈuːɾs", n: 0, same: true });
-    expect(r.suffix).toEqual({ out: "kˈuːɾsə", n: 0, same: true });
-    expect(r.none).toEqual({ out: "nˈʊl", n: 0, same: true });
+    ) as Record<string, { out: string; n: number; same: boolean; hits: string[] }>;
+    expect(r.alone).toEqual({ out: "fˈoːɾ.", n: 1, same: false, hits: ["vor"] });
+    expect(r.ctx).toEqual({ out: "vˈaɾtə fˌoːɾ deːm", n: 1, same: false, hits: ["vor"] });
+    expect(r.both).toEqual({ out: "fˈoːɾ fˌoːɾ", n: 2, same: false, hits: ["vor"] });
+    expect(r.prefix).toEqual({ out: "afˈɔɾ", n: 0, same: true, hits: [] });
+    expect(r.suffix).toEqual({ out: "fˈɔɾə", n: 0, same: true, hits: [] });
+    expect(r.none).toEqual({ out: "nˈʊl", n: 0, same: true, hits: [] });
   });
 
-  it("كل مسار منشور فيه كلمة من المعجم أُعيد توليده بعد إضافتها — والقائمة لا تذكر مساراً غائباً", () => {
+  it("D122: المعجم قبل الملاءمة — vierzig (فيها ç) تُصحَّح في الصوتين وكلٌّ برمز ç الذي تعرفه خريطته", () => {
+    const r = py(
+      [
+        "out = {}",
+        "for vid, onnx in ga.VOICES.items():",
+        "    v = ga.load_voice(onnx); m = v.config.phoneme_id_map",
+        "    s = ''.join(''.join(x) for x in ga.synth_phonemes(v, 'Er ist vierzig.'))",
+        "    out[vid] = {'ipa': s, 'missing': sorted({c for c in s if c not in m})}",
+        "print(json.dumps(out, ensure_ascii=False))",
+      ].join("\n"),
+    ) as Record<string, { ipa: string; missing: string[] }>;
+    expect(Object.keys(r)).toHaveLength(2);
+    for (const [voice, { ipa, missing }] of Object.entries(r)) {
+      expect(ipa.normalize("NFC"), voice).toContain("fˈɪɾtsɪç");
+      expect(ipa.normalize("NFC"), voice).not.toContain("fˈiːɾtsɪç");
+      expect(missing, voice).toEqual([]);
+    }
+    // الصوتان يختلفان في ترميز ç نفسه — ولهذا يعمل المعجم قبل الملاءمة لا بعدها
+    expect(new Set(Object.values(r).map((x) => x.ipa)).size).toBe(2);
+  });
+
+  it("المسارات التي يمسّها المعجم فعلاً (مطابقة التوليد نفسها) = المعاد توليدها لكل كلمة — لا أقل ولا أكثر", () => {
     const manifest = JSON.parse(readFileSync(join(ROOT, "content/manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; textDe: string }[] };
+    const texts = [...new Set(manifest.tracks.map((t) => t.textDe))];
+    const hits = new Map((run(["--lexicon-hits", ...texts]) as { text: string; hits: string[] }[]).map((h) => [h.text, h.hits] as const));
     for (const e of lex.entries) {
-      const containing = manifest.tracks.filter((t) => wholeWord(e.word).test(t.textDe)).map((t) => t.id).sort();
-      expect(containing, `مسارات «${e.word}»`).toEqual([...e.regeneratedTracks].sort());
+      const touched = manifest.tracks.filter((t) => hits.get(t.textDe)!.includes(e.word)).map((t) => t.id).sort();
+      expect(touched, `مسارات «${e.word}»`).toEqual([...e.regeneratedTracks].sort());
+      // (5) كل مسار يذكر الكلمة نصاً يحويها بصيغة يعرفها المعجم — وإلا فصيغة سياق جديدة تُنطق خطأً بصمت
+      expect(unknownForm(e.word, manifest.tracks, touched), `«${e.word}» بصيغة غير معروفة`).toEqual([]);
     }
   });
 
-  it("رموز التصحيح معروفة لخريطتي الصوتين المثبَّتين (لا رمز يُسقطه Piper صامتاً)", () => {
+  it("(5) يلتقط الصيغة غير المعروفة: vor بصيغتها المعزولة وحدها ← «…warte vor dem Kino» (نبر ثانوي) يُكشف", () => {
+    const tracks = [
+      { id: "iso", textDe: "vor." },
+      { id: "ctx", textDe: "Ich warte vor dem Kino auf dich." },
+    ];
+    const hits = py(
+      [
+        "import tempfile, pathlib",
+        "lex = json.loads(ga.PRON_LEXICON.read_text(encoding='utf-8'))",
+        "for e in lex['entries']:",
+        "    if e['word'] == 'vor': e['forms'] = e['forms'][:1]",
+        "p = pathlib.Path(tempfile.mkdtemp()) / 'lex.json'; p.write_text(json.dumps(lex, ensure_ascii=False), encoding='utf-8')",
+        "ga.PRON_LEXICON = p; ga._LEXICON = None",
+        "v = ga.load_voice(ga.VOICE_ONNX)",
+        `print(json.dumps({t: sorted({w for s in v.phonemize(t) for w in ga.lexicon_hits(s)}) for t in ${JSON.stringify(tracks.map((t) => t.textDe))}}))`,
+      ].join("\n"),
+    ) as Record<string, string[]>;
+    const touched = tracks.filter((t) => hits[t.textDe]!.includes("vor")).map((t) => t.id);
+    expect(touched).toEqual(["iso"]);
+    expect(unknownForm("vor", tracks, touched)).toEqual(["ctx"]);
+  });
+
+  it("رموز التصحيح بعد الملاءمة معروفة لخريطتي الصوتين المثبَّتين (لا رمز يُسقطه Piper صامتاً)", () => {
     const missing = py(
       [
+        "import unicodedata",
         "lex = json.load(open(ga.PRON_LEXICON, encoding='utf-8'))['entries']",
         "out = {}",
         "for vid, onnx in ga.VOICES.items():",
         "    m = ga.load_voice(onnx).config.phoneme_id_map",
-        "    out[vid] = sorted({ch for e in lex for ch in e['ipa'] if ch not in m})",
+        "    out[vid] = sorted({ch for e in lex for f in ga.lexicon_forms(e) for ch in ga.fit_phonemes(list(f['ipa']), m)[0] if ch not in m})",
         "print(json.dumps(out, ensure_ascii=False))",
       ].join("\n"),
     ) as Record<string, string[]>;

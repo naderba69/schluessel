@@ -1,9 +1,10 @@
-// tools/regen-track.ts — إعادة توليد مقطع كلمة منشور بالنص والصوت نفسيهما + تحديث قياساته في المانيفست (D121)
+// tools/regen-track.ts — إعادة توليد مقطع منشور بالنص والصوت نفسيهما + تحديث قياساته في المانيفست (D121 · D122)
 // الاستخدام: npx tsx tools/regen-track.ts <trackId>... [--dry-run]
 // متى: حين يتغيّر مسار التوليد لا النص — معجم النطق (D121) صحّح فونيمات كلمة فصار مقطعها القديم خاطئاً.
 // المانيفست ليس JSON قانونياً (تنسيقه يدوي جزئياً) ⇒ تعديل نصي داخل كائن المسار وحده، ثم برهان بالتحليل والمقارنة:
 // لا يتغير إلا الحقول الخمسة المقيسة لهذا المسار (القانون 7: والإعلان في DECISIONS).
-// حدود معلنة: مسارات role=word بالصوت الرئيسي فقط — أسطر السكربتات تُعاد بـ dialogue-splitter --force.
+// حدود معلنة: مسارات الصوت الرئيسي بسرعته الافتراضية خارج السكربتات — الكلمات (role=word، بسقف مدة المقطع)
+// وإعلانات الشخصيات (audio/characters/ · role=announcement · D122). أسطر السكربتات تُعاد بـ dialogue-splitter --lines.
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -71,7 +72,10 @@ export function patchTrackMeasures(text: string, trackId: string, m: Measures): 
 
 export type RegenRow = { id: string; textDe: string; before: Measures; after: Measures; attempts: number };
 
-/** يعيد توليد مسارات الكلمات المطلوبة ويُرجع النص الجديد للمانيفست (لا يكتب شيئاً بنفسه) */
+/** الأدوار المسموحة خارج السكربتات وسقف مدة كلٍّ منها (المقطع الأطول من سقفه يُعاد حتى 3 محاولات) */
+const ROLE_CAP_MS: Readonly<Record<string, number>> = { word: WORD_CLIP_MAX_SEC * 1000, announcement: Infinity };
+
+/** يعيد توليد المسارات المطلوبة ويُرجع النص الجديد للمانيفست (لا يكتب شيئاً بنفسه) */
 export function regenTracks(opts: { ids: string[]; manifestText: string; contentRoot: string; clip?: GenerateClip; dryRun?: boolean }): { text: string; rows: RegenRow[] } {
   const clip = opts.clip ?? piperClip;
   const tracks = (JSON.parse(opts.manifestText) as { tracks: Track[] }).tracks;
@@ -80,7 +84,9 @@ export function regenTracks(opts: { ids: string[]; manifestText: string; content
   for (const id of opts.ids) {
     const t = tracks.find((x) => x.id === id);
     if (!t) throw new Error(`المسار ${id} غير موجود في المانيفست`);
-    if (t.role !== "word") throw new Error(`المسار ${id} دوره ${t.role} — أسطر السكربتات تُعاد بـ dialogue-splitter --force`);
+    if (t.file.startsWith("audio/scripts/")) throw new Error(`المسار ${id} سطر سكربت — يُعاد بـ dialogue-splitter <script.json> --lines ${id}`);
+    const cap = ROLE_CAP_MS[t.role];
+    if (cap === undefined) throw new Error(`المسار ${id} دوره ${t.role} — خارج حدود هذه الأداة (word · announcement)`);
     if (t.voiceParams.speaker !== VOICE_ID || t.voiceParams.lengthScale !== undefined)
       throw new Error(`المسار ${id} ليس بالصوت الرئيسي وسرعته الافتراضية — خارج حدود هذه الأداة`);
     const before = Object.fromEntries(FIELDS.map((f) => [f, t[f]])) as Measures;
@@ -91,8 +97,8 @@ export function regenTracks(opts: { ids: string[]; manifestText: string; content
     const abs = join(opts.contentRoot, t.file);
     let m = clip(t.textDe, abs);
     let attempts = 1;
-    for (; attempts < 3 && m.durationMs > WORD_CLIP_MAX_SEC * 1000; attempts++) m = clip(t.textDe, abs);
-    if (m.durationMs > WORD_CLIP_MAX_SEC * 1000) throw new Error(`مقطع ${id} أطول من ${WORD_CLIP_MAX_SEC}s بعد 3 محاولات`);
+    for (; attempts < 3 && m.durationMs > cap; attempts++) m = clip(t.textDe, abs);
+    if (m.durationMs > cap) throw new Error(`مقطع ${id} أطول من ${WORD_CLIP_MAX_SEC}s بعد 3 محاولات`);
     const after: Measures = { durationMs: m.durationMs, sizeBytes: m.sizeBytes, hash: m.hash, pcmSha256: m.pcmSha256, rmsDb: m.rmsDb };
     text = patchTrackMeasures(text, id, after);
     rows.push({ id, textDe: t.textDe, before, after, attempts });

@@ -4,6 +4,7 @@
 #   python3 tools/phonemize.py "Fuß." "groß."            → [{"text": "Fuß.", "ipa": "fˈuːs."}, ...]  (thorsten)
 #   python3 tools/phonemize.py --voice de_DE-kerstin-low "nicht"
 #   python3 tools/phonemize.py --raw "Kurs."              → espeak الخام بلا معجم النطق (D121)
+#   python3 tools/phonemize.py --lexicon-hits "Ich warte vor dem Kino."  → [{"text": …, "hits": ["vor"]}] (D122)
 #   python3 tools/phonemize.py --coverage                 → تغطية كل نص ألماني في content/ لكل صوت مثبَّت
 # الغرض: قياس لا افتراض — (1) كشف مقاطع وُلّدت من رسم خاطئ (Fuss = [fʊs]) · (2) كشف فونيمات لا تعرفها خريطة
 # الصوت فيُسقطها Piper صامتاً (kerstin بلا U+0327 كان يقول «nict») — بعد طبقة fit_phonemes يجب أن يكون الغائب صفراً.
@@ -49,8 +50,8 @@ def coverage() -> dict:
         for t in texts:
             for sent in voice.phonemize(t):
                 missing_raw.update(p for p in sent if p not in id_map)
-                fitted, n = ga.fit_phonemes(sent, id_map)
-                fitted = ga.apply_lexicon(fitted)[0]  # D121: رموز معجم النطق تُفحص تغطيتها أيضاً
+                # D121/D122: المعجم قبل الملاءمة كما في synth_phonemes — فرموز التصحيح تُفحص تغطيتها بعد ملاءمتها
+                fitted, n = ga.fit_phonemes(ga.apply_lexicon(sent)[0], id_map)
                 fixed += n
                 missing_fitted.update(p for p in fitted if p not in id_map)
         report["voices"][voice_id] = {
@@ -68,7 +69,8 @@ def main() -> None:
         print(json.dumps(coverage(), ensure_ascii=False))
         return
     raw = "--raw" in args  # D121: espeak الخام بلا معجم النطق — لقياس هل ما زال الخطأ قائماً
-    args = [a for a in args if a != "--raw"]
+    hits = "--lexicon-hits" in args  # D122: أي كلمات المعجم يمسّها كل نص (من فونيمات espeak الخام نفسها)
+    args = [a for a in args if a not in ("--raw", "--lexicon-hits")]
     voice_id = ga.VOICE_ID
     if args[:1] == ["--voice"]:
         voice_id, args = args[1], args[2:]
@@ -76,6 +78,9 @@ def main() -> None:
     id_map = voice.config.phoneme_id_map
     out = []
     for t in args:
+        if hits:  # على خرج espeak الخام — حيث يعمل المعجم فعلاً (synth_phonemes)
+            out.append({"text": t, "hits": sorted({w for s in voice.phonemize(t) for w in ga.lexicon_hits(s)})})
+            continue
         sents = [ga.fit_phonemes(s, id_map)[0] for s in voice.phonemize(t)] if raw else ga.synth_phonemes(voice, t)
         out.append({"text": t, "ipa": "".join("".join(s) for s in sents)})
     print(json.dumps(out, ensure_ascii=False))

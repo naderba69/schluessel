@@ -1,6 +1,7 @@
 // tools/dialogue-splitter.ts — مقسِّم الحوار (D103): سكربت صوتي ← مسار لكل سطر بصوت متحدثه الثابت
 // التشغيل:  npx tsx tools/dialogue-splitter.ts --all              (كل content/audio-scripts/)
 //           npx tsx tools/dialogue-splitter.ts <script.json>...  [--force] [--dry-run]
+//           npx tsx tools/dialogue-splitter.ts <script.json>... --lines <lineId,...>   (D122: أسطر بعينها فقط)
 // المبادئ: (1) المانيفست مصدر الحقيقة لصوت كل شخصية (القانون 11) · (2) لا إعادة توليد لسطر لم يتغير
 // (VITS عشوائي — فخ موثَّق) · (3) أسطر محذوفة من السكربت ← مساراتها وملفاتها تُزال · (4) المانيفست
 // يُتحقق منه بـzod قبل الكتابة — لا يُكتب مانيفست مكسور أبداً · (5) القياسات كلها من الملف الفعلي.
@@ -49,6 +50,8 @@ export function runSplitter(opts: {
   scriptFiles: string[];
   contentRoot?: string;
   force?: boolean;
+  /** D122: أسطر بعينها تُعاد قسراً (معجم النطق صحّح كلمة فيها) — وبقية السكربت على خطته العادية، فلا يتغير مقطع منشور بلا سبب */
+  lines?: string[];
   dryRun?: boolean;
   generate?: Generate;
 }): SplitReport {
@@ -67,11 +70,20 @@ export function runSplitter(opts: {
     return existsSync(f) && (!t.hash || t.hash === sha256File(f));
   };
 
-  for (const file of opts.scriptFiles) {
-    const script = AudioScript.parse(JSON.parse(readFileSync(file, "utf8")));
-    const plan = opts.force
+  const scripts = opts.scriptFiles.map((file) => AudioScript.parse(JSON.parse(readFileSync(file, "utf8"))));
+  const wanted = new Set(opts.lines ?? []);
+  const known = new Set(scripts.flatMap((s) => s.lines.map((l) => l.id)));
+  const unknown = [...wanted].filter((id) => !known.has(id));
+  if (unknown.length > 0) throw new Error(`أسطر غير موجودة في السكربتات المعطاة: ${unknown.join(", ")} — لا تجاهل صامت`);
+
+  for (const script of scripts) {
+    const base = opts.force
       ? { generate: script.lines, keep: [] }
       : planScript(script, tracksById(), raw.characterVoices, fileHashOk);
+    const plan = {
+      generate: script.lines.filter((l) => base.generate.includes(l) || wanted.has(l.id)),
+      keep: base.keep.filter((l) => !wanted.has(l.id)),
+    };
     report.kept.push(...plan.keep.map((l) => l.id));
 
     for (const line of plan.generate) {
@@ -107,14 +119,17 @@ export function runSplitter(opts: {
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2);
   const contentRoot = join(ROOT, "content");
-  const files = args.includes("--all") ? allScriptFiles(contentRoot) : args.filter((a) => !a.startsWith("--")).map((a) => resolve(a));
-  if (files.length === 0) {
-    console.error("الاستخدام: npx tsx tools/dialogue-splitter.ts --all | <script.json>... [--force] [--dry-run]");
+  const li = args.indexOf("--lines");
+  const lines = li >= 0 ? (args[li + 1] ?? "").split(",").filter(Boolean) : undefined;
+  const positional = args.filter((a, i) => !a.startsWith("--") && !(li >= 0 && i === li + 1));
+  const files = args.includes("--all") ? allScriptFiles(contentRoot) : positional.map((a) => resolve(a));
+  if (files.length === 0 || (li >= 0 && (lines ?? []).length === 0)) {
+    console.error("الاستخدام: npx tsx tools/dialogue-splitter.ts --all | <script.json>... [--force] [--dry-run] [--lines <lineId,...>]");
     process.exit(2);
   }
   let r: SplitReport;
   try {
-    r = runSplitter({ scriptFiles: files, contentRoot, force: args.includes("--force"), dryRun: args.includes("--dry-run") });
+    r = runSplitter({ scriptFiles: files, contentRoot, force: args.includes("--force"), lines, dryRun: args.includes("--dry-run") });
   } catch (e) {
     console.error(`✗ ${(e as Error).message}`); // المانيفست لا يُكتب قبل نجاح كل شيء
     process.exit(1);

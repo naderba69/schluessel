@@ -1,18 +1,24 @@
 {
-  "schemaVersion": "1.0.0",
-  "decision": "D121",
-  "about": "كلمات يخطئ espeak-ng (محرك الفونيمات تحت Piper) طول حركتها المنبورة — مقيسة مقابل مرجع حر. تُصحَّح على مستوى الفونيمات قبل النموذج (tools/gen-audio.py: synth_phonemes ← apply_lexicon) وفي الـIPA المقيس (tools/phonemize.py)، فيتطابق ما يُقاس وما يُنطق دائماً. الرمز الصحيح يُكتب بأعراف espeak نفسها (analogy) ليصل النموذجَ تسلسلٌ رآه في تدريبه.",
+  "schemaVersion": "2.0.0",
+  "decision": "D122",
+  "about": "كلمات يخطئ espeak-ng (محرك الفونيمات تحت Piper) طول حركتها المنبورة أو موضع نبرها — مقيسة مقابل مرجع حر (D121 · D122). تُصحَّح على مستوى الفونيمات قبل النموذج (tools/gen-audio.py: synth_phonemes ← apply_lexicon) وفي الـIPA المقيس (tools/phonemize.py)، فيتطابق ما يُقاس وما يُنطق دائماً. لكل كلمة صيغ espeak كما تظهر فعلاً (معزولة بنبر أولي ˈ · في الجملة بنبر ثانوي ˌ) ولكل صيغة تصحيحها. الرمز الصحيح يُكتب بأعراف espeak نفسها (analogy) ليصل النموذجَ تسلسلٌ رآه في تدريبه. ما فحصه التدقيق وقُبل كما هو مسجَّل في reviewed بسببه.",
   "reference": {
-    "name": "open-dict-data/ipa-dict — data/de.txt (مشتق من Wiktionary)",
-    "license": "MIT",
+    "name": "open-dict-data/ipa-dict — data/de.txt ← devio-at/german-ipa-dict ← Wiktionary",
+    "license": "CC-BY-SA",
+    "licenseNote": "ترخيص ipa-dict العام MIT، لكن بياناته الألمانية من german-ipa-dict المستخرجة من Wiktionary فتبقى بترخيص CC-BY-SA (README ipa-dict: Credits · LICENSE.md في german-ipa-dict). صُحّح في D122 — سجل D121 قال MIT خطأً.",
     "gitBlob": "9a6b0c95c713d1a82cc173b25cc221bc55b278d0",
-    "url": "https://github.com/open-dict-data/ipa-dict/blob/master/data/de.txt"
+    "url": "https://github.com/open-dict-data/ipa-dict/blob/master/data/de.txt",
+    "attribution": "https://github.com/devio-at/german-ipa-dict"
   },
   "entries": [
     {
       "word": "Kurs",
-      "espeak": "kˈuːɾs",
-      "ipa": "kˈʊɐs",
+      "forms": [
+        {
+          "espeak": "kˈuːɾs",
+          "ipa": "kˈʊɐs"
+        }
+      ],
       "referenceIpa": "/kʊʁs/",
       "analogy": "Wurm [vˈʊɐm] · Gurt [ɡˈʊɐt] — u قصيرة قبل r+ساكن",
       "contexts": [
@@ -25,8 +31,12 @@
     },
     {
       "word": "Durst",
-      "espeak": "dˈuːɾst",
-      "ipa": "dˈʊɐst",
+      "forms": [
+        {
+          "espeak": "dˈuːɾst",
+          "ipa": "dˈʊɐst"
+        }
+      ],
       "referenceIpa": "/dʊʁst/",
       "analogy": "Wurm [vˈʊɐm] · Gurt [ɡˈʊɐt] — u قصيرة قبل r+ساكن",
       "contexts": [
@@ -39,8 +49,12 @@
     },
     {
       "word": "Wurst",
-      "espeak": "vˈuːɾst",
-      "ipa": "vˈʊɐst",
+      "forms": [
+        {
+          "espeak": "vˈuːɾst",
+          "ipa": "vˈʊɐst"
+        }
+      ],
       "referenceIpa": "/vʊʁst/",
       "analogy": "Wurm [vˈʊɐm] · Gurt [ɡˈʊɐt] — u قصيرة قبل r+ساكن",
       "contexts": [
@@ -53,8 +67,12 @@
     },
     {
       "word": "vierzehn",
-      "espeak": "fˈiːɾtseːn",
-      "ipa": "fˈɪɾtseːn",
+      "forms": [
+        {
+          "espeak": "fˈiːɾtseːn",
+          "ipa": "fˈɪɾtseːn"
+        }
+      ],
       "referenceIpa": "/ˈfɪʁt͡seːn/",
       "analogy": "Wirt [vˈɪɾt] · Hirsch [hˈɪɾʃ] — i قصيرة قبل r+ساكن (vier وحدها طويلة [fˈiːɾ])",
       "contexts": [
@@ -67,8 +85,12 @@
     },
     {
       "word": "Telefonnummer",
-      "espeak": "tˌeːleːfˈɔnʊmɜ",
-      "ipa": "tˌeːleːfˈoːnnˌʊmɜ",
+      "forms": [
+        {
+          "espeak": "tˌeːleːfˈɔnʊmɜ",
+          "ipa": "tˌeːleːfˈoːnnˌʊmɜ"
+        }
+      ],
       "referenceIpa": "/teləˈfoːnˌnʊmɐ/",
       "analogy": "Telefon [tˌeːleːfˈoːn] + Nummer [nˈʊmɜ] — espeak يقرأ المركّب «fonn» مقطعاً مغلقاً فيقصّر o",
       "contexts": [
@@ -76,14 +98,18 @@
         "Meine Telefonnummer ist null, eins, sieben."
       ],
       "regeneratedTracks": [
-        "word-telefonnummer",
-        "num-tel-yusuf"
+        "num-tel-yusuf",
+        "word-telefonnummer"
       ]
     },
     {
       "word": "Vorname",
-      "espeak": "fˈɔɾnɑːmə",
-      "ipa": "fˈoːɾnɑːmə",
+      "forms": [
+        {
+          "espeak": "fˈɔɾnɑːmə",
+          "ipa": "fˈoːɾnɑːmə"
+        }
+      ],
       "referenceIpa": "/ˈfoːɐ̯ˌnaːmə/",
       "analogy": "Vorort [fˈoːɾˌɔɾt] · Tor [tˈoːɾ] — o طويلة في vor",
       "contexts": [
@@ -93,6 +119,791 @@
       "regeneratedTracks": [
         "word-vorname"
       ]
+    },
+    {
+      "word": "fit",
+      "forms": [
+        {
+          "espeak": "fˈiːt",
+          "ipa": "fˈɪt"
+        }
+      ],
+      "referenceIpa": "/fɪt/",
+      "analogy": "mit [mˈɪt] — i قصيرة في مقطع مغلق",
+      "contexts": [
+        "fit.",
+        "Ich bin fit."
+      ],
+      "regeneratedTracks": [
+        "word-fit"
+      ]
+    },
+    {
+      "word": "wohin",
+      "forms": [
+        {
+          "espeak": "voːhˈiːn",
+          "ipa": "voːhˈɪn"
+        }
+      ],
+      "referenceIpa": "/voˈhɪn/",
+      "analogy": "dahin [dɑːhˈɪn] · hin [hˈɪn] — البنية نفسها",
+      "contexts": [
+        "wohin.",
+        "Wohin gehst du?"
+      ],
+      "regeneratedTracks": [
+        "word-wohin"
+      ]
+    },
+    {
+      "word": "April",
+      "forms": [
+        {
+          "espeak": "aprˈiːl",
+          "ipa": "aprˈɪl"
+        }
+      ],
+      "referenceIpa": "/aˈpʁɪl/",
+      "analogy": "still [ʃtˈɪl] · Brille [brˈɪlə] — i قصيرة قبل l",
+      "contexts": [
+        "April.",
+        "Im April habe ich Geburtstag."
+      ],
+      "regeneratedTracks": [
+        "word-april"
+      ]
+    },
+    {
+      "word": "vor",
+      "forms": [
+        {
+          "espeak": "fˈɔɾ",
+          "ipa": "fˈoːɾ"
+        },
+        {
+          "espeak": "fˌɔɾ",
+          "ipa": "fˌoːɾ"
+        }
+      ],
+      "referenceIpa": "/foːɐ̯/",
+      "analogy": "Tor [tˈoːɾ] · vorher [foːɾhˈeːɾ] · vorbei [foːɾbˈaɪ] — o طويلة؛ espeak يقصّرها في vor وحدها معزولةً (ˈ) وفي الجملة (ˌ)",
+      "contexts": [
+        "vor.",
+        "Ich warte vor dem Kino auf dich."
+      ],
+      "regeneratedTracks": [
+        "mt1-h3-m1",
+        "word-vor"
+      ]
+    },
+    {
+      "word": "vierzig",
+      "forms": [
+        {
+          "espeak": "fˈiːɾtsɪç",
+          "ipa": "fˈɪɾtsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈfiʁt͡sɪk/, /ˈfɪʁt͡sɪç/",
+      "analogy": "vierzehn [fˈɪɾtseːn] (D121) · Wirt [vˈɪɾt] — i قصيرة قبل r+ساكن",
+      "contexts": [
+        "vierzig.",
+        "Er ist vierzig Jahre alt."
+      ],
+      "regeneratedTracks": [
+        "word-vierzig"
+      ]
+    },
+    {
+      "word": "Notfall",
+      "forms": [
+        {
+          "espeak": "nˈɔtfal",
+          "ipa": "nˈoːtfal"
+        }
+      ],
+      "referenceIpa": "/ˈnoːtˌfal/",
+      "analogy": "Not [nˈoːt] · Notarzt [nˈoːtaɾtst] — o طويلة",
+      "contexts": [
+        "der Notfall.",
+        "Das ist ein Notfall!"
+      ],
+      "regeneratedTracks": [
+        "word-notfall"
+      ]
+    },
+    {
+      "word": "Schlafzimmer",
+      "forms": [
+        {
+          "espeak": "ʃlˈaftsɪmɜ",
+          "ipa": "ʃlˈɑːftsɪmɜ"
+        }
+      ],
+      "referenceIpa": "/ˈʃlaːfˌt͡sɪmɐ/",
+      "analogy": "Schlaf [ʃlˈɑːf] · Wohnzimmer [vˈoːntsɪmɜ] — البنية نفسها",
+      "contexts": [
+        "das Schlafzimmer.",
+        "Das Schlafzimmer ist klein."
+      ],
+      "regeneratedTracks": [
+        "word-schlafzimmer"
+      ]
+    },
+    {
+      "word": "Schublade",
+      "forms": [
+        {
+          "espeak": "ʃˈʊblɑːdə",
+          "ipa": "ʃˈuːplɑːdə"
+        }
+      ],
+      "referenceIpa": "/ˈʃuːpˌlaːdə/",
+      "analogy": "Schub [ʃˈuːp] (b آخر المقطع تُنطق p) · Lade [lˈɑːdə]",
+      "contexts": [
+        "die Schublade.",
+        "Der Schlüssel ist in der Schublade."
+      ],
+      "regeneratedTracks": [
+        "word-schublade"
+      ]
+    },
+    {
+      "word": "Nachbar",
+      "forms": [
+        {
+          "espeak": "nˈɑːxbɑːɾ",
+          "ipa": "nˈaxbɑːɾ"
+        },
+        {
+          "espeak": "nˌɑːxbɑːɾ",
+          "ipa": "nˌaxbɑːɾ"
+        }
+      ],
+      "referenceIpa": "/ˈnaxˌbaːɐ̯/",
+      "analogy": "machbar [mˈaxbɑːɾ] · Nacht [nˈaxt] — a قصيرة؛ الصيغة الثانية نبرٌ ثانوي في الجملة",
+      "contexts": [
+        "der Nachbar.",
+        "Mein Nachbar ist nett."
+      ],
+      "regeneratedTracks": [
+        "word-nachbar"
+      ]
+    },
+    {
+      "word": "Nachricht",
+      "forms": [
+        {
+          "espeak": "nˈaxrɪçt",
+          "ipa": "nˈɑːxrɪçt"
+        }
+      ],
+      "referenceIpa": "/ˈnaːxˌʁɪçt/",
+      "analogy": "nach [nˈɑːx] — a طويلة",
+      "contexts": [
+        "die Nachricht.",
+        "Ich schreibe dir eine Nachricht."
+      ],
+      "regeneratedTracks": [
+        "word-nachricht"
+      ]
+    },
+    {
+      "word": "Nachtisch",
+      "forms": [
+        {
+          "espeak": "nˈaxtɪʃ",
+          "ipa": "nˈɑːxtɪʃ"
+        }
+      ],
+      "referenceIpa": "/ˈnaːxˌtɪʃ/",
+      "analogy": "nach [nˈɑːx] · Tisch [tˈɪʃ] — nach + Tisch لا Nacht + isch",
+      "contexts": [
+        "der Nachtisch.",
+        "Zum Nachtisch gibt es Eis."
+      ],
+      "regeneratedTracks": [
+        "word-nachtisch"
+      ]
+    },
+    {
+      "word": "losfahren",
+      "forms": [
+        {
+          "espeak": "lˈɔsfɑːrən",
+          "ipa": "lˈoːsfɑːrən"
+        }
+      ],
+      "referenceIpa": "/ˈloːsˌfaːʁən/",
+      "analogy": "los [lˈoːs] · abfahren [ˈapfˌɑːrən]",
+      "contexts": [
+        "losfahren.",
+        "Wir wollen jetzt losfahren."
+      ],
+      "regeneratedTracks": [
+        "word-losfahren"
+      ]
+    },
+    {
+      "word": "Hals",
+      "forms": [
+        {
+          "espeak": "hˈɑːls",
+          "ipa": "hˈals"
+        }
+      ],
+      "referenceIpa": "/hals/",
+      "analogy": "als [ˈals] · Salz [zˈalts] · Fall [fˈal] — a قصيرة قبل l+ساكن",
+      "contexts": [
+        "der Hals.",
+        "Mein Hals tut weh."
+      ],
+      "regeneratedTracks": [
+        "word-hals"
+      ]
+    },
+    {
+      "word": "Fußball",
+      "forms": [
+        {
+          "espeak": "fˈʊsbal",
+          "ipa": "fˈuːsbal"
+        }
+      ],
+      "referenceIpa": "/ˈfuːsˌbal/",
+      "analogy": "Fuß [fˈuːs] · Ball [bˈal] — ß بعد حركة طويلة",
+      "contexts": [
+        "der Fußball.",
+        "Ich spiele gern Fußball."
+      ],
+      "regeneratedTracks": [
+        "word-fussball"
+      ]
+    },
+    {
+      "word": "Februar",
+      "forms": [
+        {
+          "espeak": "fˈɛbruːˌɑːɾ",
+          "ipa": "fˈeːbruːˌɑːɾ"
+        }
+      ],
+      "referenceIpa": "/ˈfeːbʁuaːɐ̯/",
+      "analogy": "Januar [jˈanuːˌɑːɾ] (البنية نفسها) · Fehler [fˈeːlɜ] — e طويلة",
+      "contexts": [
+        "Februar.",
+        "Im Februar ist es kalt."
+      ],
+      "regeneratedTracks": [
+        "word-februar"
+      ]
+    },
+    {
+      "word": "danach",
+      "forms": [
+        {
+          "espeak": "danˈax",
+          "ipa": "danˈɑːx"
+        }
+      ],
+      "referenceIpa": "/daˈnaːx/, /ˈdaːnaːx/",
+      "analogy": "nach [nˈɑːx] — a طويلة",
+      "contexts": [
+        "danach.",
+        "Danach bin ich im Garten."
+      ],
+      "regeneratedTracks": [
+        "mt1-h3-m3",
+        "word-danach"
+      ]
+    },
+    {
+      "word": "nachher",
+      "forms": [
+        {
+          "espeak": "nˈaxhɜ",
+          "ipa": "nɑːxhˈeːɾ"
+        }
+      ],
+      "referenceIpa": "/naːxˈheːɐ̯/, /ˈnaːxheːɐ̯/",
+      "analogy": "vorher [foːɾhˈeːɾ] (البنية نفسها) · nach [nˈɑːx] — her ليست ذيلاً مخففاً",
+      "contexts": [
+        "nachher.",
+        "Wir sehen uns nachher."
+      ],
+      "regeneratedTracks": [
+        "word-nachher"
+      ]
+    },
+    {
+      "word": "Hotel",
+      "forms": [
+        {
+          "espeak": "hˈoːtəl",
+          "ipa": "hoːtˈɛl"
+        }
+      ],
+      "referenceIpa": "/hoˈtɛl/",
+      "analogy": "Modell [moːdˈɛl] · Kartell [kaɾtˈɛl] — النبر على المقطع الأخير",
+      "contexts": [
+        "das Hotel.",
+        "Dort, gegenüber vom Hotel."
+      ],
+      "regeneratedTracks": [
+        "mt1-h1-d6-l4",
+        "mt1-h3-m5",
+        "word-hotel"
+      ]
+    },
+    {
+      "word": "Marmelade",
+      "forms": [
+        {
+          "espeak": "mˈaɾməlˌɑːdə",
+          "ipa": "mˌaɾməlˈɑːdə"
+        }
+      ],
+      "referenceIpa": "/ˌmaʁməˈlaːdə/",
+      "analogy": "Schokolade [ʃˌoːkoːlˈɑːdə] — النبر على la",
+      "contexts": [
+        "die Marmelade.",
+        "Ich esse Brot mit Marmelade."
+      ],
+      "regeneratedTracks": [
+        "word-marmelade"
+      ]
+    },
+    {
+      "word": "Pullover",
+      "forms": [
+        {
+          "espeak": "pˈʊloːvɜ",
+          "ipa": "pʊlˈoːvɜ"
+        }
+      ],
+      "referenceIpa": "/pʊˈloːvɐ/, /pʊlˈʔoːvɐ/",
+      "analogy": "Hannover [hanˈoːfɜ] — النبر على lo",
+      "contexts": [
+        "der Pullover.",
+        "Der Pullover ist warm."
+      ],
+      "regeneratedTracks": [
+        "word-pullover"
+      ]
+    },
+    {
+      "word": "Ägypten",
+      "forms": [
+        {
+          "espeak": "ˈɛːɡʏptən",
+          "ipa": "ɛːɡˈʏptən"
+        }
+      ],
+      "referenceIpa": "/ˌɛˈɡʏptn̩/",
+      "analogy": "ägyptisch [ɛːɡˈʏptɪʃ] — النبر على gyp",
+      "contexts": [
+        "Ägypten.",
+        "Er kommt aus Ägypten."
+      ],
+      "regeneratedTracks": [
+        "word-aegypten"
+      ]
+    },
+    {
+      "word": "Spaziergang",
+      "forms": [
+        {
+          "espeak": "ʃpˈɑtsiːɾɡˌaŋ",
+          "ipa": "ʃpatsˈiːɾɡˌaŋ"
+        }
+      ],
+      "referenceIpa": "/ʃpaˈt͡siːɐ̯ˌɡaŋ/",
+      "analogy": "spazieren [ʃpatsˈiːrən] — النبر على zier",
+      "contexts": [
+        "der Spaziergang.",
+        "Wir machen einen Spaziergang."
+      ],
+      "regeneratedTracks": [
+        "word-spaziergang"
+      ]
+    },
+    {
+      "word": "Stadtplan",
+      "forms": [
+        {
+          "espeak": "ʃtatplˈɑːn",
+          "ipa": "ʃtˈatplˌɑːn"
+        }
+      ],
+      "referenceIpa": "/ˈʃtatˌplaːn/",
+      "analogy": "Stadt [ʃtˈat] · abfahren [ˈapfˌɑːrən] — نبر المركّب على جزئه الأول وثانويّ على الثاني",
+      "contexts": [
+        "der Stadtplan.",
+        "Hast du einen Stadtplan?"
+      ],
+      "regeneratedTracks": [
+        "word-stadtplan"
+      ]
+    },
+    {
+      "word": "verheiratet",
+      "forms": [
+        {
+          "espeak": "fɛɾhaɪrˈɑːtət",
+          "ipa": "fɛɾhˈaɪrɑːtət"
+        }
+      ],
+      "referenceIpa": "/fɛɐ̯ˈhaɪ̯ʁaːtət/",
+      "analogy": "verkaufen [fɛɾkˈaʊfən] — ver- غير منبورة والنبر على الجذر hei",
+      "contexts": [
+        "verheiratet.",
+        "Ich bin verheiratet."
+      ],
+      "regeneratedTracks": [
+        "word-verheiratet"
+      ]
+    },
+    {
+      "word": "Etage",
+      "forms": [
+        {
+          "espeak": "ˈeːtɑːɡə",
+          "ipa": "eːtˈɑːʒə"
+        }
+      ],
+      "referenceIpa": "/eˈtaːʒə/",
+      "analogy": "Massage [masˈɑːʒə] — النبر على ta وg الفرنسية تُنطق ʒ",
+      "contexts": [
+        "die Etage.",
+        "Das Zimmer ist in der zweiten Etage."
+      ],
+      "regeneratedTracks": [
+        "word-etage"
+      ]
+    },
+    {
+      "word": "Fahrplan",
+      "forms": [
+        {
+          "espeak": "fɑːɾplˈɑːn",
+          "ipa": "fˈɑːɾplˌɑːn"
+        }
+      ],
+      "referenceIpa": "/ˈfaːɐ̯ˌplaːn/",
+      "analogy": "Fahrrad [fˈɑːrɑːt] · abfahren [ˈapfˌɑːrən] — نبر المركّب على جزئه الأول",
+      "contexts": [
+        "der Fahrplan.",
+        "Wo ist der Fahrplan?"
+      ],
+      "regeneratedTracks": [
+        "word-fahrplan"
+      ]
+    },
+    {
+      "word": "geradeaus",
+      "forms": [
+        {
+          "espeak": "ɡərˈɑdeːˌaʊs",
+          "ipa": "ɡərˌɑːdəˈaʊs"
+        }
+      ],
+      "referenceIpa": "/ɡəʁaːdəˈʔaʊ̯s/",
+      "analogy": "gerade [ɡərˈɑːdə] · heraus [hɛrˈaʊs] — النبر على aus",
+      "contexts": [
+        "geradeaus.",
+        "Ja. Gehen Sie hier geradeaus bis zur Post."
+      ],
+      "regeneratedTracks": [
+        "mt1-h1-d3-l2",
+        "word-geradeaus"
+      ]
+    },
+    {
+      "word": "Kreditkarte",
+      "forms": [
+        {
+          "espeak": "krˈeːdɪtkˌaɾtə",
+          "ipa": "kreːdˈɪtkˌaɾtə"
+        }
+      ],
+      "referenceIpa": "/kʁeˈdiːtˌkaʁtə/, /kʁeˈdɪtˌkaʁtə/",
+      "analogy": "Kredit [kreːdˈɪt] (espeak نفسه) · Bandit [bandˈɪt] — النبر على dit",
+      "contexts": [
+        "die Kreditkarte.",
+        "Kann ich mit Kreditkarte bezahlen?"
+      ],
+      "regeneratedTracks": [
+        "word-kreditkarte"
+      ]
+    },
+    {
+      "word": "Limonade",
+      "forms": [
+        {
+          "espeak": "lˈiːmoːnˌɑːdə",
+          "ipa": "lˌiːmoːnˈɑːdə"
+        }
+      ],
+      "referenceIpa": "/limoˈnaːdə/",
+      "analogy": "Schokolade [ʃˌoːkoːlˈɑːdə] (البنية نفسها) — النبر على na",
+      "contexts": [
+        "die Limonade.",
+        "Eine Limonade, bitte."
+      ],
+      "regeneratedTracks": [
+        "word-limonade"
+      ]
+    },
+    {
+      "word": "Notiz",
+      "forms": [
+        {
+          "espeak": "nˈoːtiːts",
+          "ipa": "noːtˈiːts"
+        }
+      ],
+      "referenceIpa": "/noˈtiːt͡s/",
+      "analogy": "Paket [pakˈeːt] · spazieren [ʃpatsˈiːrən] — النبر على المقطع الأخير الطويل",
+      "contexts": [
+        "die Notiz.",
+        "Ich mache eine Notiz."
+      ],
+      "regeneratedTracks": [
+        "word-notiz"
+      ]
+    },
+    {
+      "word": "okay",
+      "forms": [
+        {
+          "espeak": "ˈoːkɛɪ",
+          "ipa": "oːkˈeː"
+        }
+      ],
+      "referenceIpa": "/oˈkeː/",
+      "analogy": "Café [kafˈeː] — النبر على ke وe طويلة مفردة لا ثنائية إنجليزية",
+      "contexts": [
+        "Okay.",
+        "Okay, bis morgen!"
+      ],
+      "regeneratedTracks": [
+        "word-okay"
+      ]
+    },
+    {
+      "word": "Rabatt",
+      "forms": [
+        {
+          "espeak": "rˈɑbat",
+          "ipa": "rabˈat"
+        }
+      ],
+      "referenceIpa": "/ʁaˈbat/",
+      "analogy": "Debatte [deːbˈatə] · Salat [zalˈɑːt] — النبر على batt",
+      "contexts": [
+        "der Rabatt.",
+        "Schuhe und Stiefel sind im Angebot: zehn Euro Rabatt."
+      ],
+      "regeneratedTracks": [
+        "mt1-h2-a2",
+        "word-rabatt"
+      ]
+    },
+    {
+      "word": "Tablette",
+      "forms": [
+        {
+          "espeak": "tˈablɛtə",
+          "ipa": "tablˈɛtə"
+        }
+      ],
+      "referenceIpa": "/taˈblɛtə/",
+      "analogy": "Kartell [kaɾtˈɛl] · Modell [moːdˈɛl] — النبر على let",
+      "contexts": [
+        "die Tablette.",
+        "Nehmen Sie eine Tablette."
+      ],
+      "regeneratedTracks": [
+        "word-tablette"
+      ]
+    },
+    {
+      "word": "Tunesien",
+      "forms": [
+        {
+          "espeak": "tˌuːneːzˈiːən",
+          "ipa": "tuːnˈeːzɪʲən"
+        }
+      ],
+      "referenceIpa": "/tuˈneːzi̯ən/",
+      "analogy": "tunesisch [tuːnˈeːzɪʃ] · Asien [ˈɑːzɪʲən] — النبر على ne و-ien = ɪʲən",
+      "contexts": [
+        "Tunesien.",
+        "Ich komme aus Tunesien."
+      ],
+      "regeneratedTracks": [
+        "word-tunesien"
+      ]
+    },
+    {
+      "word": "Toilette",
+      "forms": [
+        {
+          "espeak": "tˈoːiːlˌɛtə",
+          "ipa": "toːalˈɛtə"
+        }
+      ],
+      "referenceIpa": "/to̯aˈlɛtə/",
+      "referenceNote": "المرجع لا يورد المفرد — الجمع: Toiletten /toˈlɛtn̩/, /to̯aˈlɛtn̩/ (النبر والجذر نفساهما)",
+      "analogy": "Koala [kˈoːalˌɑː] (تتابع oːa) · Kartell [kaɾtˈɛl] — النبر على let و«oi» = oa لا o+i",
+      "contexts": [
+        "die Toilette.",
+        "Wo ist die Toilette?"
+      ],
+      "regeneratedTracks": [
+        "word-toilette"
+      ]
+    },
+    {
+      "word": "Familienname",
+      "forms": [
+        {
+          "espeak": "famˈiːlɪʲənˌɑːmə",
+          "ipa": "famˈiːlɪʲənnˌɑːmə"
+        }
+      ],
+      "referenceIpa": "/faˈmiːli̯ənˌnaːmə/",
+      "analogy": "Telefonnummer [tˌeːleːfˈoːnnˌʊmɜ] (D121) — n الحد بين جزأي المركّب لا تُبتلع: Familien|name",
+      "contexts": [
+        "der Familienname.",
+        "Mein Familienname ist Haddad."
+      ],
+      "regeneratedTracks": [
+        "word-familienname"
+      ]
+    },
+    {
+      "word": "Wiedersehen",
+      "forms": [
+        {
+          "espeak": "viːdɜzˈeːən",
+          "ipa": "vˈiːdɜzˌeːən"
+        }
+      ],
+      "referenceIpa": "/ˈviːdɐˌzeːən/",
+      "analogy": "wieder [vˈiːdɜ] · Badezimmer [bˈɑdeːtsˌɪmɜ] — نبر المركّب على wie وثانويّ على se",
+      "contexts": [
+        "Auf Wiedersehen.",
+        "Auf Wiedersehen, Frau Müller!"
+      ],
+      "regeneratedTracks": [
+        "word-auf-wiedersehen"
+      ]
+    }
+  ],
+  "reviewed": [
+    {
+      "word": "Arabisch",
+      "verdict": "ambiguous",
+      "espeak": "arˈɑbɪʃ",
+      "note": "espeak يكتب الحركة المنبورة ɑ بلا علامة طول في مقطع مفتوح والمرجع aː. النموذج تدرّب على تسجيلات قارئها نطق [aː] مع هذا الرمز نفسه، فطول ما يُنطق فعلاً لا يُحسم من الرمز — يحتاج قياس مدة الحركة في المقطع المولَّد. مفتوح منذ D121."
+    },
+    {
+      "word": "Badezimmer",
+      "verdict": "ambiguous",
+      "espeak": "bˈɑdeːtsˌɪmɜ",
+      "note": "espeak يكتب الحركة المنبورة ɑ بلا علامة طول في مقطع مفتوح والمرجع aː. النموذج تدرّب على تسجيلات قارئها نطق [aː] مع هذا الرمز نفسه، فطول ما يُنطق فعلاً لا يُحسم من الرمز — يحتاج قياس مدة الحركة في المقطع المولَّد. مفتوح منذ D121."
+    },
+    {
+      "word": "damals",
+      "verdict": "ambiguous",
+      "espeak": "dˈɑmɑːls",
+      "note": "espeak يكتب الحركة المنبورة ɑ بلا علامة طول في مقطع مفتوح والمرجع aː. النموذج تدرّب على تسجيلات قارئها نطق [aː] مع هذا الرمز نفسه، فطول ما يُنطق فعلاً لا يُحسم من الرمز — يحتاج قياس مدة الحركة في المقطع المولَّد. مفتوح منذ D121."
+    },
+    {
+      "word": "Datum",
+      "verdict": "ambiguous",
+      "espeak": "dˈɑtuːm",
+      "note": "espeak يكتب الحركة المنبورة ɑ بلا علامة طول في مقطع مفتوح والمرجع aː. النموذج تدرّب على تسجيلات قارئها نطق [aː] مع هذا الرمز نفسه، فطول ما يُنطق فعلاً لا يُحسم من الرمز — يحتاج قياس مدة الحركة في المقطع المولَّد. مفتوح منذ D121."
+    },
+    {
+      "word": "Spanien",
+      "verdict": "ambiguous",
+      "espeak": "ʃpˈɑnɪʲən",
+      "note": "espeak يكتب الحركة المنبورة ɑ بلا علامة طول في مقطع مفتوح والمرجع aː. النموذج تدرّب على تسجيلات قارئها نطق [aː] مع هذا الرمز نفسه، فطول ما يُنطق فعلاً لا يُحسم من الرمز — يحتاج قياس مدة الحركة في المقطع المولَّد. مفتوح منذ D121."
+    },
+    {
+      "word": "der",
+      "verdict": "weak-form",
+      "espeak": "dɛɾ",
+      "note": "أداة التعريف: espeak يعطي صيغتها الضعيفة غير المنبورة [dɛɐ̯] وهي المسموعة في الكلام المتصل؛ المرجع يورد صيغة الاستشهاد [deːɐ̯]."
+    },
+    {
+      "word": "er",
+      "verdict": "weak-form",
+      "espeak": "ɛɾ",
+      "note": "ضمير غير منبور في الجملة: [ɛɐ̯] صيغة ضعيفة معتادة؛ المرجع يورد صيغة الاستشهاد [eːɐ̯]."
+    },
+    {
+      "word": "die",
+      "verdict": "artifact",
+      "espeak": "diː",
+      "note": "Die في أول الجملة تُطابَق في المرجع مدخلاً مستعاراً من الإنجليزية /daɪ/؛ أداة التعريف die في المرجع [diː] — ما ينطقه espeak تماماً."
+    },
+    {
+      "word": "gegenüber",
+      "verdict": "artifact",
+      "espeak": "ɡˌeːɡənˈyːbɜ",
+      "note": "النبر على ü في الصيغتين؛ المرجع يكتب n̩ مقطعية [ɡeːɡn̩ˈʔyːbɐ] فيختلف عدّ النوى قبل النبر لا النطق."
+    },
+    {
+      "word": "Spezialist",
+      "verdict": "artifact",
+      "espeak": "ʃpˌeːtsiːalˈɪst",
+      "note": "النبر على list في الصيغتين؛ espeak يقطّع zia مقطعين [tsiː.a] والمرجع نصف حركة [t͡si̯a] — فرق في العدّ لا في موضع النبر."
+    },
+    {
+      "word": "Hallo",
+      "verdict": "variant",
+      "espeak": "hˈaloː",
+      "note": "صيغتان مستعملتان: [ˈhalo] التحية الدارجة و[haˈloː]؛ espeak يعطي الأولى (الصيغة الثانية من المعرفة اللغوية لا من المرجع الذي يورد إحداهما)."
+    },
+    {
+      "word": "deshalb",
+      "verdict": "variant",
+      "espeak": "dɛshˈalp",
+      "note": "صيغتان مستعملتان: [ˈdɛshalp] و[dɛsˈhalp] — المرجع نفسه يكتب نبرين [ˈdɛsˈhalp]؛ espeak يعطي الثانية."
+    },
+    {
+      "word": "vorher",
+      "verdict": "variant",
+      "espeak": "foːɾhˈeːɾ",
+      "note": "صيغتان مستعملتان: [ˈfoːɐ̯heːɐ̯] و[foːɐ̯ˈheːɐ̯]؛ espeak يعطي الثانية (الصيغة الثانية من المعرفة اللغوية لا من المرجع الذي يورد إحداهما)."
+    },
+    {
+      "word": "Ärztin",
+      "verdict": "variant",
+      "espeak": "ˈɛɾtstɪn",
+      "note": "صيغتان مستعملتان: [ˈɛːɐ̯tstɪn] و[ˈɛʁtstɪn] (كما Arzt [aːɐ̯tst]/[aʁtst])؛ espeak يعطي القصيرة (الصيغة الثانية من المعرفة اللغوية لا من المرجع الذي يورد إحداهما)."
+    },
+    {
+      "word": "darum",
+      "verdict": "no-reference",
+      "espeak": "dɑːrˈʊm",
+      "note": "غائبة عن المرجع — فُحصت يدوياً: espeak [dɑːrˈʊm] = النطق المعتاد [daˈrʊm] بنبر rum."
+    },
+    {
+      "word": "Haddad",
+      "verdict": "no-reference",
+      "espeak": "hˈadɑːt",
+      "note": "اسم علم عربي لا يورده المرجع — فُحص يدوياً: [hˈadɑːt] قراءة ألمانية مقبولة لاسم أجنبي (d الأخيرة تُهمس t بقاعدة الألمانية)."
+    },
+    {
+      "word": "Yusuf",
+      "verdict": "no-reference",
+      "espeak": "jˈuːzuːf",
+      "note": "اسم علم لا يورده المرجع — فُحص يدوياً: النبر والحركة الأولى الطويلة صحيحان وs بين حركتين تُجهر [z] كما يقرؤها الألمان؛ طول الحركة الثانية غير المنبورة فرقٌ طفيف."
     }
   ]
 }

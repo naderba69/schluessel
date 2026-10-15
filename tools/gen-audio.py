@@ -104,8 +104,14 @@ def pronunciation_lexicon() -> list[dict]:
     return _LEXICON
 
 
+def lexicon_forms(entry: dict) -> list[dict]:
+    """D122: صيغ espeak للكلمة الواحدة — نبر أولي معزولة (fˈɔɾ) وثانوي في الجملة (fˌɔɾ) — لكل صيغة تصحيحها.
+    تُطبَّع NFD لأن espeak الخام يُخرج العلامات مفككة (ç = c + U+0327): الملف يُكتب مقروءاً والمطابقة دقيقة."""
+    return [{"espeak": unicodedata.normalize("NFD", f["espeak"]), "ipa": unicodedata.normalize("NFD", f["ipa"])} for f in entry["forms"]]
+
+
 def apply_lexicon(phonemes: list[str], entries: list[dict] | None = None) -> tuple[list[str], int]:
-    """D121: فونيمات espeak الخاطئة لكلمة كاملة ← الصحيحة (Kurs: kˈuːɾs ← kˈʊɐs).
+    """D121/D122: فونيمات espeak الخاطئة لكلمة كاملة ← الصحيحة (Kurs: kˈuːɾs ← kˈʊɐs) — لكل صيغة من صيغ الكلمة.
     حد الكلمة = بداية/نهاية/مسافة/ترقيم — فلا مطابقة داخل كلمة أخرى (Kurse وUrlaub لا تُمسّان).
     عناصر Piper رموز مفردة (مقيس: كل عنصر وكل مفتاح في خريطتي الصوتين بطول 1)، فإعادة التقطيع بـlist() دقيقة.
     بلا مطابقة تعود القائمة نفسها دون مساس — لا يتغير أي مقطع لا يحوي كلمة من المعجم."""
@@ -114,17 +120,28 @@ def apply_lexicon(phonemes: list[str], entries: list[dict] | None = None) -> tup
     edge = re.escape(_IPA_EDGE)
     fixed = 0
     for e in entries:
-        joined, n = re.subn(rf"(?<![^{edge}]){re.escape(e['espeak'])}(?![^{edge}])", e["ipa"], joined)
-        fixed += n
+        for f in lexicon_forms(e):
+            joined, n = re.subn(rf"(?<![^{edge}]){re.escape(f['espeak'])}(?![^{edge}])", f["ipa"], joined)
+            fixed += n
     return (list(joined), fixed) if fixed else (phonemes, 0)
 
 
+def lexicon_hits(phonemes: list[str], entries: list[dict] | None = None) -> list[str]:
+    """D122: كلمات المعجم التي يمسّها هذا المقطع فعلاً (بالمطابقة نفسها التي يصحّح بها apply_lexicon) —
+    منها يُحسب أي المسارات المنشورة تغيّر صوتها بإضافة مدخل، فلا يُعتمد على بحث نصي يخطئ الحالة (Vor/vor)."""
+    entries = pronunciation_lexicon() if entries is None else entries
+    return [e["word"] for e in entries if apply_lexicon(phonemes, [e])[1] > 0]
+
+
 def synth_phonemes(voice: PiperVoice, text: str, phonemize=None) -> list[list[str]]:
-    """الفونيمات التي تصل النموذج فعلاً: espeak (عبر Piper) → fit_phonemes → apply_lexicon.
+    """الفونيمات التي تصل النموذج فعلاً: espeak (عبر Piper) → apply_lexicon → fit_phonemes.
+    المعجم قبل الملاءمة (D122): خرج espeak الخام واحد للصوتين، أما الملاءمة فتختلف بخريطة كل صوت
+    (thorsten يُبقي ç مفككة وkerstin يركّبها) — فلو طُبّق المعجم بعدها لما طابقت صيغةٌ واحدة الصوتين معاً
+    في كل كلمة فيها ç (vierzig · Nachricht). والتصحيح نفسه يمرّ بالملاءمة فيصل كل صوت بما تعرفه خريطته.
     مصدر واحد للصوت (tts) وللـIPA المقيس (phonemize.py) — فلا يختلف ما يُقاس عما يُنطق أبداً."""
     id_map = voice.config.phoneme_id_map
     raw = (phonemize or PiperVoice.phonemize)(voice, text)
-    return [apply_lexicon(fit_phonemes(sent, id_map)[0])[0] for sent in raw]
+    return [fit_phonemes(apply_lexicon(sent)[0], id_map)[0] for sent in raw]
 
 
 def tts(text: str, out_wav: Path, onnx: Path = VOICE_ONNX, length_scale: float | None = None) -> None:
@@ -969,7 +986,8 @@ def build_all() -> None:
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
-        ("mueller-announce-01", "Hallo! Ich bin Mueller. Willkommen bei Schlüssel.", "mueller", []),
+        # D122: «Mueller» كان يُقرأ [muːˈɛlɜ] (mu-EL-ler) — الاسم Müller [ˈmʏlɐ] (المعرّف ASCII يبقى mueller)
+        ("mueller-announce-01", "Hallo! Ich bin Müller. Willkommen bei Schlüssel.", "mueller", []),
     ]
 
     tracks = []

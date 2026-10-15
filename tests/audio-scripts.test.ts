@@ -142,6 +142,31 @@ describe("D103 — مقسِّم الحوار على شجرة مؤقتة (مول�
     expect(ids).toEqual(["t-l1", "t-l3"]);
   });
 
+  it("D122 lines: يُعاد السطر المطلوب وحده — وبقية الأسطر بايتاً بايتاً كما هي", () => {
+    runSplitter({ scriptFiles: [scriptFile()], contentRoot: root, generate: fake });
+    const before = JSON.parse(readFileSync(join(root, MANIFEST_REL), "utf8")).tracks as { id: string }[];
+    calls = [];
+    const r = runSplitter({ scriptFiles: [scriptFile()], contentRoot: root, generate: fake, lines: ["t-l2"] });
+    expect(r).toMatchObject({ generated: ["t-l2"], kept: ["t-l1"], written: true });
+    expect(calls).toEqual([`${VOICE_ID}|Tag!|1`]);
+    const after = JSON.parse(readFileSync(join(root, MANIFEST_REL), "utf8")).tracks as { id: string }[];
+    expect(after.map((t) => t.id)).toEqual(["t-l1", "t-l2"]);
+    expect(after[0]).toEqual(before[0]);
+  });
+
+  it("D122 lines: سطر غير موجود ← رفض قبل أي توليد أو كتابة · والخطة العادية تبقى سارية بجانبه", () => {
+    runSplitter({ scriptFiles: [scriptFile()], contentRoot: root, generate: fake });
+    const before = readFileSync(join(root, MANIFEST_REL), "utf8");
+    calls = [];
+    expect(() => runSplitter({ scriptFiles: [scriptFile()], contentRoot: root, generate: fake, lines: ["t-l2", "t-l9"] })).toThrow(/t-l9/);
+    expect(calls).toEqual([]);
+    expect(readFileSync(join(root, MANIFEST_REL), "utf8")).toBe(before);
+    writeScript([{ id: "t-l1", speaker: "lena", text: "Hallo!" }, { id: "t-l2", speaker: "thomas", text: "Guten Tag!" }]);
+    const r = runSplitter({ scriptFiles: [scriptFile()], contentRoot: root, generate: fake, lines: ["t-l1"] });
+    expect(r.generated).toEqual(["t-l1", "t-l2"]); // t-l2 تغيّر نصه فيُعاد بالخطة العادية — لا يُترك قديماً
+    expect(r.kept).toEqual([]);
+  });
+
   it("--dry-run لا يكتب شيئاً ولا يولّد", () => {
     const before = readFileSync(join(root, MANIFEST_REL), "utf8");
     const r = runSplitter({ scriptFiles: [scriptFile()], contentRoot: root, generate: fake, dryRun: true });

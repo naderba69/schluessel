@@ -22,6 +22,7 @@ const SAMPLE = `{
       "textDe": "A. \\"zitiert\\" {nicht} }"
     },
     { "id": "word-b", "file": "words/audio/de-DE/word-b.opus", "role": "word", "voiceParams": { "speaker": "${VOICE_ID}", "speedWpm": 110 }, "durationMs": 800, "sizeBytes": 3100, "hash": "sha256:ccc", "pcmSha256": "ddd", "rmsDb": -16.9, "textDe": "B." },
+    { "id": "ann-1", "file": "audio/characters/ann-1.opus", "role": "announcement", "characterId": "mueller", "voiceParams": { "speaker": "${VOICE_ID}", "speedWpm": 130 }, "durationMs": 4000, "sizeBytes": 9000, "hash": "sha256:ggg", "pcmSha256": "hhh", "rmsDb": -17.2, "textDe": "Hallo! Ich bin Müller." },
     { "id": "dlg-1", "file": "audio/scripts/x/dlg-1.opus", "role": "character", "characterId": "lena", "voiceParams": { "speaker": "de_DE-kerstin-low", "speedWpm": 90, "lengthScale": 1.32 }, "durationMs": 900, "sizeBytes": 3200, "hash": "sha256:eee", "pcmSha256": "fff", "rmsDb": -17.1, "textDe": "Hallo." }
   ]
 }
@@ -93,9 +94,22 @@ describe("D121 — regenTracks", () => {
     expect(dry.text).toBe(SAMPLE);
   });
 
-  it("يرفض أسطر السكربتات (dialogue-splitter --force) والمسارات الغائبة", () => {
+  it("يرفض أسطر السكربتات (← dialogue-splitter --lines باسم السطر) والمسارات الغائبة", () => {
     const clip = () => M;
-    expect(() => regenTracks({ ids: ["dlg-1"], manifestText: SAMPLE, contentRoot: "/x", clip })).toThrow(/dialogue-splitter/);
+    expect(() => regenTracks({ ids: ["dlg-1"], manifestText: SAMPLE, contentRoot: "/x", clip })).toThrow(/dialogue-splitter .*--lines dlg-1/);
     expect(() => regenTracks({ ids: ["nope"], manifestText: SAMPLE, contentRoot: "/x", clip })).toThrow(/غير موجود/);
+  });
+
+  it("D122: إعلان شخصية بالصوت الرئيسي خارج السكربتات يُعاد — بلا سقف مدة المقطع (الإعلان جملٌ لا كلمة)", () => {
+    const calls: string[] = [];
+    const clip = (text: string) => (calls.push(text), { ...M, durationMs: 4200 });
+    const { text, rows } = regenTracks({ ids: ["ann-1"], manifestText: SAMPLE, contentRoot: "/x", clip });
+    expect(calls).toEqual(["Hallo! Ich bin Müller."]); // محاولة واحدة: 4.2s مقبولة للإعلان
+    expect(rows[0]).toMatchObject({ id: "ann-1", attempts: 1, after: { durationMs: 4200 } });
+    const parsed = JSON.parse(text).tracks;
+    expect(parsed[2]).toMatchObject({ id: "ann-1", durationMs: 4200, voiceParams: { speedWpm: 130 } });
+    expect(parsed.filter((x: { id: string }) => x.id !== "ann-1")).toEqual(JSON.parse(SAMPLE).tracks.filter((x: { id: string }) => x.id !== "ann-1"));
+    const other = SAMPLE.replace('"role": "announcement"', '"role": "narration"');
+    expect(() => regenTracks({ ids: ["ann-1"], manifestText: other, contentRoot: "/x", clip })).toThrow(/narration — خارج حدود/);
   });
 });
