@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-wer-woher",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Wer ist das? Woher kommst du?",
+    "ar": "السؤال بـwer وwoher — كلمة السؤال ثم الفعل، والفعل لا يسقط"
+  },
+  "payload": {
+    "topicAr": "أسئلة W: wer (مَن) · woher (من أين) · wie (كيف) · was (ما) — كلمة السؤال أولاً ثم الفعل ثم الفاعل، والفعل حاضر دائماً؛ والجواب عن woher يبدأ بـaus",
+    "sceneAr": "في نهاية الأسبوع الأول من الدورة ترى لينا صورة على هاتف يوسف فتسأل: Wer ist das? — إنه نبيل، صديقه من تونس. ثم تتوالى أسئلتها: من أين هو؟ هل هو طالب جامعي؟ هل يتكلم الألمانية؟ كم عمره؟ — وسؤال واحد لا يعرف يوسف جوابه.",
+    "examples": [
+      {
+        "de": "Wer ist das? — Das ist Nabil, ein Freund.",
+        "ar": "مَن هذا؟ — هذا نبيل، صديق."
+      },
+      {
+        "de": "Woher kommt er? — Aus Tunesien.",
+        "ar": "من أين هو؟ — من تونس."
+      },
+      {
+        "de": "Woher kommst du? — Ich komme aus Marokko.",
+        "ar": "من أين أنت؟ — أنا من المغرب."
+      },
+      {
+        "de": "Wie alt ist er? — Das weiß ich nicht.",
+        "ar": "كم عمره؟ — لا أعرف."
+      },
+      {
+        "de": "Spricht er Deutsch? — Ja, ein bisschen.",
+        "ar": "هل يتكلم الألمانية؟ — نعم، قليلاً."
+      }
+    ],
+    "inferencePromptAr": "انظر إلى الأمثلة: (1) أين تقف كلمة السؤال (Wer · Woher · Wie)، وما الذي يأتي بعدها مباشرة؟ (2) ما الكلمة الموجودة في «Wer ist das?» والغائبة عن «مَن هذا؟»؟ (3) «من أين» كلمتان بالعربية — كم كلمة في الألمانية؟ وبأي كلمة يبدأ الجواب؟ (4) وفي «Spricht er Deutsch?» لا كلمة سؤال — بماذا تبدأ الجملة؟",
+    "ruleDe": "Wer ist das? · Woher kommst du? — Aus Tunesien. · Wie alt ist er? · Spricht er Deutsch?",
+    "ruleAr": "سؤال W: كلمة السؤال في الموضع الأول، ثم الفعل مباشرة، ثم الفاعل: Woher kommst du? — لا Woher du kommst. والفعل لا يسقط أبداً: Wer ist das? لا Wer das. ‏wer = مَن (عن شخص) · was = ما (عن شيء) · wie = كيف · woher = من أين — كلمة واحدة، والجواب عنها يبدأ بـaus: Aus Tunesien. وسؤال نعم/لا بلا كلمة سؤال يبدأ بالفعل: Spricht er Deutsch?",
+    "contrastAr": "العربية تسأل بجملة اسمية بلا فعل: «مَن هذا؟» · «من أين أنت؟»، فيقول المتعلم Wer das? ✗ — والألمانية لا تسأل بلا فعل: Wer ist das? ✓ (حذف ist — خريطة التداخل 10‑ي). و«من أين» كلمتان، و«من» صارت aus في «أنا من تونس» (Ich komme aus Tunesien)، فيُركَّب Aus wo kommst du? ✗ — والألمانية تسأل عن المصدر بكلمة واحدة: Woher kommst du? ✓، وتبقى aus للجواب. ومن يعرف الفرنسية المحكية (d'où tu viens?) يضع الفاعل قبل الفعل: Woher du kommst? ✗ — والفعل في الألمانية ثانياً دائماً. وانتبه: wer تشبه where الإنجليزية في اللفظ لكنها «مَن»، أما «أين» فـwo.",
+    "limitsAr": [
+      "wo (أين) والفرق بينها وبين woher في الوحدة 2: Wo wohnst du? ← in · Woher kommst du? ← aus.",
+      "في الكلام اليومي تُسمع أحياناً Von wo kommst du? — لكن المعيار Woher، وهو ما نقوله ونكتبه الآن.",
+      "wer تتغير صيغتها حين يكون السؤال عن المفعول به (مَن رأيت؟) — نتعلم ذلك لاحقاً؛ الآن wer فاعلاً فقط: Wer ist das?"
+    ],
+    "beads": [
+      "Woher",
+      "kommst",
+      "du?"
+    ],
+    "properNouns": [
+      "Nabil"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u1-d5"
+  ]
+}

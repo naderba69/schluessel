@@ -285,7 +285,7 @@ def build_all() -> None:
         ("word-europa", "Europa.", "europa", ["a1-u2-d1"]),
         ("word-welt", "Welt.", "welt", ["a1-u2-d1"]),
         ("word-wo", "wo.", "wo", ["a1-u2-d1"]),
-        ("word-woher", "woher.", "woher", ["a1-u2-d1"]),
+        ("word-woher", "woher.", "woher", ["a1-u1-d5", "a1-u2-d1"]),
         ("word-leben", "leben.", "leben", ["a1-u2-d2"]),
         ("word-stadt", "Stadt.", "stadt", ["a1-u2-d2"]),
         ("word-haus", "Haus.", "haus", ["a1-u2-d2"]),
@@ -622,7 +622,7 @@ def build_all() -> None:
         ("word-waschen", "waschen.", "waschen", ["a1-u7-d4"]),
         ("word-geben", "geben.", "geben", ["a1-u7-d4"]),
         ("word-nehmen", "nehmen.", "nehmen", ["a1-u7-d4"]),
-        ("word-sprechen", "sprechen.", "sprechen", ["a1-u7-d4"]),
+        ("word-sprechen", "sprechen.", "sprechen", ["a1-u1-d2", "a1-u7-d4"]),
         ("word-laufen", "laufen.", "laufen", ["a1-u7-d4"]),
         ("word-ankommen", "ankommen.", "ankommen", ["a1-u7-d4"]),
         ("word-fahrkarte", "Fahrkarte.", "fahrkarte", ["a1-u7-d4"]),
@@ -983,6 +983,15 @@ def build_all() -> None:
     ("word-alter", "das Alter.", "alter", ["a1-u1-d4"]),
     ("word-kurs", "der Kurs.", "kurs", ["a1-u1-d4"]),
     ("word-klasse", "die Klasse.", "klasse", ["a1-u1-d4"]),
+    ("word-ende", "das Ende.", "ende", ["a1-u1-d5"]),
+    ("word-wissen", "wissen.", "wissen", ["a1-u1-d5"]),
+    ("word-wort", "das Wort.", "wort", ["a1-u1-d5"]),
+    ("word-oft", "oft.", "oft", ["a1-u1-d5"]),
+    ("word-ein-bisschen", "ein bisschen.", "ein-bisschen", ["a1-u1-d5"]),
+    ("word-schueler", "der Schüler.", "schueler", ["a1-u1-d5"]),
+    ("word-schuelerin", "die Schülerin.", "schuelerin", ["a1-u1-d5"]),
+    ("word-student", "der Student.", "student", ["a1-u1-d5"]),
+    ("word-studentin", "die Studentin.", "studentin", ["a1-u1-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

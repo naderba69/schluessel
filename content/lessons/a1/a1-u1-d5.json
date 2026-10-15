@@ -10,27 +10,28 @@
     "ar": "تستطيع تعريف نفسك في أربع جمل والسؤال بـwer وwoher."
   },
   "canDoDaily": [
-    "يعرّف بنفسه في 4 جمل كاملة"
+    "يعرّف بنفسه في 4 جمل كاملة",
+    "يسأل بـwer وwoher والفعل في الموضع الثاني"
   ],
   "warmup": {
     "cardIds": [
-      "name",
-      "frankreich",
-      "zusammen"
+      "kommen",
+      "sprechen",
+      "alt"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«من هذا؟» عن شخص — wer أو was? (تخمين فقط)"
+          "de": "«من أين أنت؟» بالألمانية؟ (تخمين فقط)"
         },
         "choices": [
-          "Wer",
-          "Was",
-          "Wie"
+          "Woher kommst du?",
+          "Aus wo kommst du?",
+          "Woher du kommst?"
         ],
-        "answer": "Wer",
+        "answer": "Woher kommst du?",
         "revealNextSession": true
       }
     ],
@@ -44,7 +45,17 @@
       "freund",
       "freundin",
       "leute",
-      "zusammen"
+      "zusammen",
+      "woher",
+      "ende",
+      "wissen",
+      "wort",
+      "oft",
+      "ein-bisschen",
+      "schueler",
+      "schuelerin",
+      "student",
+      "studentin"
     ],
     "grammarArsenalIds": [
       "ars-wer-woher"
@@ -53,59 +64,229 @@
       "story-a1-u1-s5"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "sp-st-initial",
+      "umlaut-u",
+      "ch-ich-laut"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«من أين أنت؟» بـwoher؟",
-            "a": "Woher kommen Sie?"
+            "q": "___ ist das? — Das ist Lena.",
+            "a": "Wer",
+            "why": "السؤال عن شخص بـwer = مَن، وwas = ما للأشياء. وكلمة السؤال أولاً ثم الفعل ist مباشرة."
           },
           {
-            "q": "«من هذا؟» (شخص)؟",
-            "a": "Wer ist das?"
+            "q": "___ kommst du? — Aus Marokko.",
+            "a": "Woher",
+            "why": "الجواب يبدأ بـaus ⇐ السؤال woher = من أين، كلمة واحدة — لا Aus wo."
+          },
+          {
+            "q": "Kennst du Nabil? — Ja, ich ___ Nabil.",
+            "a": "kenne",
+            "why": "معرفة شخص = kennen، ومع ich ينتهي الفعل بـ‑e: ich kenne. أما wissen فلمعرفة معلومة."
+          },
+          {
+            "q": "Wie alt ist Nabil? — Das ___ ich nicht. (wissen)",
+            "a": "weiß",
+            "why": "العمر معلومة ⇐ wissen، وهو فعل شاذّ: ich weiß بلا ‑e (du weißt · er weiß). وبعد Das يأتي الفعل ثانياً ثم ich."
+          },
+          {
+            "q": "Ich spreche ein ___ Deutsch.",
+            "a": "bisschen",
+            "why": "ein bisschen = قليلاً، وتأتي قبل اللغة مباشرة: ein bisschen Deutsch — وتُكتب ss ثم ch."
+          },
+          {
+            "q": "Nabil ist ein ___ von Yusuf.",
+            "a": "Freund",
+            "why": "ein Freund von Yusuf = صديق ليوسف. وانتبه: mein Freund / meine Freundin قد تُفهم «حبيبي/حبيبتي» حسب المتكلم والسياق؛ وللصداقة العادية يقال ein Freund / eine Freundin."
+          },
+          {
+            "q": "Die Leute im Kurs ___ aus Tunesien. (kommen)",
+            "a": "kommen",
+            "why": "die Leute جمع دائماً ولا مفرد لها ⇐ الفعل بصيغة الجمع: die Leute kommen — لا kommt."
+          },
+          {
+            "q": "Das ist die ___ auf die Frage.",
+            "a": "Antwort",
+            "why": "die Antwort auf die Frage = الجواب عن السؤال — بالعربية «عن» أو «على»، وبالألمانية auf دائماً."
+          }
+        ],
+        "interleavedWith": [
+          "kommen",
+          "alt",
+          "sprechen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "wer-1",
+            "speakText": "Wer ist das?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "مَن هذا؟",
+              "ما هذا؟",
+              "من أين هو؟"
+            ],
+            "a": "مَن هذا؟",
+            "why": "Wer = مَن (عن شخص)، وWas = ما (عن شيء)، وWoher = من أين. وفي السؤال فعل دائماً: Wer ist das?"
+          },
+          {
+            "audioId": "wer-4",
+            "speakText": "Aus Tunesien, wie ich.",
+            "q": "استمع: من أين نبيل؟",
+            "choices": [
+              "من تونس",
+              "من المغرب",
+              "من مصر"
+            ],
+            "a": "من تونس",
+            "why": "Aus Tunesien = من تونس، وwie ich = مثلي — فيوسف من تونس أيضاً. والجواب عن woher يبدأ بـaus."
+          },
+          {
+            "audioId": "wer-6",
+            "speakText": "Nein, er ist Schüler.",
+            "q": "استمع: هل نبيل طالب جامعي؟",
+            "choices": [
+              "لا، هو تلميذ",
+              "نعم، هو طالب جامعي",
+              "لا، هو معلّم"
+            ],
+            "a": "لا، هو تلميذ",
+            "why": "der Schüler = تلميذ المدرسة، وder Student = طالب الجامعة. وبعد ist بلا أداة: er ist Schüler."
+          },
+          {
+            "audioId": "wer-8",
+            "speakText": "Ja, ein bisschen. Wir sprechen oft zusammen Deutsch.",
+            "q": "استمع: ماذا يفعل يوسف ونبيل كثيراً؟",
+            "choices": [
+              "يتكلمان الألمانية معاً",
+              "يتكلمان العربية معاً",
+              "يكتبان معاً"
+            ],
+            "a": "يتكلمان الألمانية معاً",
+            "why": "oft = كثيراً، وzusammen = معاً: Wir sprechen oft zusammen Deutsch. وein bisschen = قليلاً: نبيل يتكلم الألمانية قليلاً."
+          },
+          {
+            "audioId": "wer-11",
+            "speakText": "Du kennst Nabil, aber du weißt das nicht?",
+            "q": "استمع: لماذا تتعجب لينا؟",
+            "choices": [
+              "يوسف يعرف نبيل ولا يعرف عمره",
+              "يوسف لا يعرف نبيل",
+              "نبيل لا يتكلم الألمانية"
+            ],
+            "a": "يوسف يعرف نبيل ولا يعرف عمره",
+            "why": "kennst من kennen (يعرف شخصاً) وweißt من wissen (يعرف معلومة): بالعربية «تعرف» مرتين، وبالألمانية فعلان مختلفان."
+          },
+          {
+            "audioId": "wer-13",
+            "speakText": "Nein, ich bin Schülerin. Wie Nabil!",
+            "q": "استمع: ماذا تقول لينا عن نفسها؟",
+            "choices": [
+              "هي تلميذة مثل نبيل",
+              "هي طالبة جامعية",
+              "هي من تونس"
+            ],
+            "a": "هي تلميذة مثل نبيل",
+            "why": "Schülerin = Schüler + ‑in للمؤنث (كما Freund ← Freundin)، وwie Nabil = مثل نبيل. ولينا عمرها ستة عشر عاماً."
+          }
+        ],
+        "interleavedWith": [
+          "tunesien",
+          "sprechen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "du?",
+              "Woher",
+              "kommst"
+            ],
+            "a": "Woher kommst du?",
+            "why": "كلمة السؤال أولاً، ثم الفعل، ثم الفاعل — لا Woher du kommst كما في الفرنسية المحكية d'où tu viens."
+          },
+          {
+            "tokens": [
+              "das",
+              "Kennst",
+              "Wort?",
+              "du"
+            ],
+            "a": "Kennst du das Wort?",
+            "why": "سؤال نعم/لا يبدأ بالفعل. وkennen لما تعرفه بالمعاشرة أو الرؤية (شخص · كلمة · مدينة)، وwissen لمعلومة (Das weiß ich nicht)."
+          },
+          {
+            "tokens": [
+              "bisschen",
+              "Deutsch.",
+              "Ich",
+              "ein",
+              "spreche"
+            ],
+            "a": "Ich spreche ein bisschen Deutsch.",
+            "why": "الفعل spreche في الموضع الثاني، وein bisschen قبل اللغة مباشرة — جوابك حين يسألك أحد: Sprichst du Deutsch?"
+          },
+          {
+            "tokens": [
+              "zusammen.",
+              "Wir",
+              "oft",
+              "sind"
+            ],
+            "a": "Wir sind oft zusammen.",
+            "why": "الفعل sind ثانياً بعد Wir، ثم oft ثم zusammen. ويمكن أيضاً Oft sind wir zusammen — والفعل ثانياً كذلك، لا Oft wir sind."
+          },
+          {
+            "tokens": [
+              "Studentin?",
+              "du",
+              "Bist"
+            ],
+            "a": "Bist du Studentin?",
+            "why": "سؤال نعم/لا: الفعل أولاً. وللمؤنث ‑in: Student ← Studentin — بلا أداة بعد sein."
+          }
+        ],
+        "interleavedWith": [
+          "kommen",
+          "sprechen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wer-3",
+            "speakText": "Woher kommt er?",
+            "a": "Woher kommt er?",
+            "why": "Woher كلمة واحدة بحرف كبير في أول الجملة، وkommt مع er بـ‑t، والفعل قبل الفاعل."
+          },
+          {
+            "audioId": "wer-5",
+            "speakText": "Ist er auch Student?",
+            "a": "Ist er auch Student?",
+            "why": "سؤال نعم/لا يبدأ بالفعل Ist. وStudent اسم ⇐ حرف كبير، وst في أوله تُنطق «شت»."
+          },
+          {
+            "audioId": "wer-10",
+            "speakText": "Das weiß ich nicht.",
+            "a": "Das weiß ich nicht.",
+            "why": "weiß بـß بعد ei، وبعد Das يأتي الفعل weiß ثم ich — الفعل ثانياً حتى لو بدأت الجملة بغير الفاعل."
           }
         ],
         "interleavedWith": [],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "أكمل: Ich ___ Yusuf. (يعرف شخصاً)",
-            "a": "kenne"
-          },
-          {
-            "q": "«الناس هنا»؟",
-            "a": "Die Leute sind hier."
-          }
-        ],
-        "interleavedWith": [
-          "zahl",
-          "alt"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "«صديقتي» — أي ملكية؟",
-            "a": "meine Freundin"
-          },
-          {
-            "q": "4 جمل تعريف: الاسم + الأصل + اللغة + السكن؟",
-            "a": "Ich heiße ... / bin aus ... / spreche ... / wohne in ..."
-          }
-        ],
-        "interleavedWith": [
-          "heissen",
-          "kommen"
-        ],
         "explanationRequired": true
       }
     ],
@@ -119,7 +300,9 @@
         "ar": "في نهاية الأسبوع الأول من الدورة"
       },
       "successCriteria": [
-        "يقول: heiße + bin aus + spreche + wohne في جمل صحيحة مرتبة"
+        "يعرّف بنفسه في 4 جمل صحيحة: الاسم (Ich heiße …) · الأصل (Ich komme aus …) · اللغات (Ich spreche … und ein bisschen Deutsch) · الدراسة أو السكن (Ich bin Student/Studentin · Ich wohne in …)",
+        "يسأل زميله بكلمة السؤال ثم الفعل: Wer ist das? · Woher kommst du? — لا Wer das ولا Aus wo",
+        "يفرّق kennen وwissen: Ich kenne Lena · Das weiß ich nicht"
       ]
     }
   },
@@ -134,45 +317,52 @@
       {
         "items": [
           {
-            "q": "«من هذا؟» عن صديق؟",
-            "choices": [
-              "Wer ist das?",
-              "Was ist das?"
-            ],
-            "a": "Wer ist das?"
+            "q": "«مَن هذا؟» بالألمانية؟",
+            "a": "Wer ist das?",
+            "why": "wer للأشخاص، والفعل ist لا يسقط كما يسقط في «مَن هذا؟»."
           },
           {
-            "q": "Ich ___ meinen Freund.",
+            "q": "___ kommst du? — Aus Ägypten.",
+            "a": "Woher",
+            "choices": [
+              "Woher",
+              "Wer",
+              "Wie"
+            ],
+            "why": "الجواب بـaus ⇐ السؤال woher (من أين)."
+          },
+          {
+            "q": "Ich ___ Lena.",
+            "a": "kenne",
             "choices": [
               "kenne",
+              "weiß",
               "kennst"
             ],
-            "a": "kenne"
+            "why": "Lena شخص ⇐ kennen، ومع ich: kenne."
           },
           {
-            "q": "ترتيب؟ kommen / Woher / Sie",
-            "a": "Woher kommen Sie?"
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "السؤال = ?",
-            "a": "die Frage"
-          },
-          {
-            "q": "«الناس» بالألمانية — فعل مفرد أم جمع؟",
+            "q": "die Frage = ?",
+            "a": "السؤال",
             "choices": [
-              "جمع: Die Leute sind",
-              "مفرد: Die Leute ist"
+              "السؤال",
+              "الجواب",
+              "الكلمة"
             ],
-            "a": "جمع: Die Leute sind"
+            "why": "die Frage = السؤال، وجوابه die Antwort."
           },
           {
-            "q": "«هذه صديقتي»؟",
-            "a": "Das ist meine Freundin."
+            "q": "«أنا طالب جامعي» بالألمانية؟",
+            "a": "Ich bin Student.",
+            "accept": [
+              "Ich bin Studentin."
+            ],
+            "why": "بلا أداة بعد sein: Ich bin Student — وللمتعلمة: Ich bin Studentin."
+          },
+          {
+            "q": "«الكلمة» بالألمانية (مع الأداة)؟",
+            "a": "das Wort",
+            "why": "das Wort محايد وإن كانت «الكلمة» مؤنثة بالعربية — والجمع die Wörter."
           }
         ],
         "passingScore": 0.75
@@ -180,16 +370,103 @@
       {
         "items": [
           {
-            "q": "الجواب عن السؤال؟",
-            "a": "die Antwort auf die Frage"
+            "q": "Wie alt ist er? — Das ___ ich nicht.",
+            "a": "weiß",
+            "choices": [
+              "weiß",
+              "kenne",
+              "weiße"
+            ],
+            "why": "العمر معلومة ⇐ wissen، ومع ich: weiß بلا ‑e."
           },
           {
-            "q": "«نحن معاً»؟",
-            "a": "Wir sind zusammen."
+            "q": "«من أين هو؟» بالألمانية؟",
+            "a": "Woher kommt er?",
+            "why": "woher كلمة واحدة، ثم الفعل kommt، ثم er."
           },
           {
-            "q": "جملة التعريف الرابعة (السكن)؟",
-            "a": "Ich wohne in ..."
+            "q": "Die Leute ___ Deutsch.",
+            "a": "sprechen",
+            "choices": [
+              "sprechen",
+              "spricht"
+            ],
+            "why": "die Leute جمع دائماً ⇐ sprechen لا spricht."
+          },
+          {
+            "q": "«الجواب» بالألمانية (مع الأداة)؟",
+            "a": "die Antwort",
+            "why": "die Antwort مؤنثة، ومعها auf: die Antwort auf die Frage."
+          },
+          {
+            "q": "«أتكلم الألمانية قليلاً» بالألمانية؟",
+            "a": "Ich spreche ein bisschen Deutsch.",
+            "why": "ein bisschen قبل اللغة مباشرة، والفعل ثانياً."
+          },
+          {
+            "q": "Lena ist ___. (تلميذة)",
+            "a": "Schülerin",
+            "choices": [
+              "Schülerin",
+              "Schüler",
+              "Studentin"
+            ],
+            "why": "للمؤنث ‑in: Schüler ← Schülerin — ولينا في المدرسة لا الجامعة."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Woher kommen Sie? = ?",
+            "a": "من أين حضرتك؟",
+            "choices": [
+              "من أين حضرتك؟",
+              "أين تسكن حضرتك؟",
+              "مَن حضرتك؟"
+            ],
+            "why": "woher = من أين، وSie بحرف كبير = حضرتك (للاحترام)."
+          },
+          {
+            "q": "صحّح: ~~Aus wo kommst du?~~",
+            "a": "Woher kommst du?",
+            "why": "«من أين» كلمة واحدة في الألمانية: woher — وaus للجواب: Aus Tunesien."
+          },
+          {
+            "q": "Wir sind ___ zusammen. (كثيراً)",
+            "a": "oft",
+            "choices": [
+              "oft",
+              "ein bisschen",
+              "auch"
+            ],
+            "why": "oft = كثيراً أو غالباً — أما ein bisschen فـقليلاً."
+          },
+          {
+            "q": "zusammen = ?",
+            "a": "معاً",
+            "choices": [
+              "معاً",
+              "وحده",
+              "قليلاً"
+            ],
+            "why": "zusammen = معاً: Wir sind zusammen — وz في أولها تُنطق «تس»."
+          },
+          {
+            "q": "«صديقة» بالألمانية (مع الأداة)؟",
+            "a": "die Freundin",
+            "why": "Freund + ‑in = die Freundin، والجمع die Freundinnen."
+          },
+          {
+            "q": "Die Woche ist zu ___.",
+            "a": "Ende",
+            "choices": [
+              "Ende",
+              "Wort",
+              "Frage"
+            ],
+            "why": "zu Ende = انتهى: Die Woche ist zu Ende — وdas Ende = النهاية."
           }
         ],
         "passingScore": 0.75
@@ -198,53 +475,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Heute hast du dich in vier Sätzen vorgestellt und mit wer/woher gefragt — die Einheit ist fast geschafft!",
-      "ar": "اليوم عرّفت بنفسك في أربع جمل وسألت بـwer وwoher — الوحدة قاربت على الاكتمال!"
+      "de": "Heute: Wer ist das? · Woher kommst du? — Aus Tunesien. · Ich kenne Lena, aber das weiß ich nicht. · Ich bin Student. · Ich bin Schülerin.",
+      "ar": "اليوم: كلمة السؤال أولاً ثم الفعل، والفعل لا يسقط (Wer ist das?) · woher كلمة واحدة والجواب بـaus · kennen لشخص وwissen لمعلومة · Ich bin Student/Studentin بلا أداة — والوحدة قاربت على الاكتمال!"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Was ist das?~~ (عن شخص)",
-          "ar": "was للأشياء وwer للأشخاص"
+          "de": "~~Wer das?~~",
+          "ar": "«مَن هذا؟» كلمة بكلمة — بلا فعل"
         },
-        "whyArabicSpeakerFails": "العربية «ماذا/ما» تُستخدم بسياق أوسع؛ الألمانية تفرّق: was للأشياء وwer للأشخاص (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تسأل بجملة اسمية بلا فعل: «مَن هذا؟» · «من أين أنت؟»، فيُسقط المتعلم الفعل: Wer das? — والألمانية لا تبني جملة ولا سؤالاً بلا فعل: Wer ist das? (حذف ist — خريطة التداخل 10‑ي)",
         "correct": {
           "de": "Wer ist das?",
-          "ar": "من هذا؟"
+          "ar": "مَن هذا؟"
         },
         "exercise": {
-          "q": "صحّح (عن صديق): ~~Was ist das?~~",
-          "a": "Wer ist das?"
+          "q": "صحّح: ~~Wer Nabil?~~",
+          "a": "Wer ist Nabil?"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich weiß Yusuf~~",
-          "ar": "wissen للمعلومات وkennen للأشخاص"
+          "de": "~~Aus wo kommst du?~~",
+          "ar": "«من أين» كلمة بكلمة"
         },
-        "whyArabicSpeakerFails": "«أعرف» بالعربية كلمة واحدة؛ الألمانية: أعرف شخصاً = kennen (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«من أين» كلمتان في العربية، و«من» صارت aus في «أنا من تونس» (Ich komme aus Tunesien)، فيركّب المتعلم Aus wo …؟ — والألمانية تسأل عن المصدر بكلمة واحدة: woher، وتبقى aus للجواب: Aus Tunesien (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich kenne Yusuf.",
-          "ar": "أنا أعرف يوسف."
+          "de": "Woher kommst du?",
+          "ar": "من أين أنت؟"
         },
         "exercise": {
-          "q": "صحّح: ~~Ich weiß meine Freundin~~",
-          "a": "Ich kenne meine Freundin."
+          "q": "صحّح: ~~Aus wo kommt Lena?~~",
+          "a": "Woher kommt Lena?"
         }
       },
       {
         "commonError": {
-          "de": "~~Die Leute ist hier~~",
-          "ar": "Leute جمع دائماً"
+          "de": "~~Ich weiß Lena.~~",
+          "ar": "«أعرف لينا» بفعل wissen"
         },
-        "whyArabicSpeakerFails": "العربية «الناس» اسم جمع يعامل أحياناً بالمفرد؛ الألمانية Leute جمع دائماً والفعل جمع (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«عرف» في العربية فعل واحد للشخص وللمعلومة («أعرف لينا» · «لا أعرف عمرها»)، والألمانية تقسمه: kennen لمعرفة شخص أو شيء رأيته (Ich kenne Lena · Ich kenne das Wort)، وwissen لمعرفة معلومة (Das weiß ich nicht) — والفرنسية مثلها: connaître / savoir (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Die Leute sind hier.",
-          "ar": "الناس هنا."
+          "de": "Ich kenne Lena.",
+          "ar": "أعرف لينا."
         },
         "exercise": {
-          "q": "صحّح: ~~Die Leute ist nett~~",
-          "a": "Die Leute sind nett."
+          "q": "صحّح: ~~Weißt du Nabil?~~",
+          "a": "Kennst du Nabil?"
         }
       }
     ],
@@ -255,16 +532,29 @@
       "freund",
       "freundin",
       "leute",
-      "zusammen"
+      "zusammen",
+      "woher",
+      "ende",
+      "wissen",
+      "wort",
+      "oft",
+      "ein-bisschen",
+      "schueler",
+      "schuelerin",
+      "student",
+      "studentin"
     ]
   },
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/Frage",
-      "https://www.duden.de/rechtschreibung/kennen"
+      "https://www.duden.de/rechtschreibung/kennen",
+      "https://www.duden.de/rechtschreibung/wissen",
+      "https://www.duden.de/rechtschreibung/woher"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/kennen"
+      "https://de.wiktionary.org/wiki/kennen",
+      "https://de.wiktionary.org/wiki/wissen"
     ],
     "goethe": []
   },
@@ -278,14 +568,39 @@
     "word-freund",
     "word-freundin",
     "word-leute",
-    "word-zusammen"
+    "word-zusammen",
+    "word-woher",
+    "word-ende",
+    "word-wissen",
+    "word-wort",
+    "word-oft",
+    "word-ein-bisschen",
+    "word-schueler",
+    "word-schuelerin",
+    "word-student",
+    "word-studentin"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?)",
     "goetheWordListOverlap": [
       "frage",
-      "kennen"
+      "antwort",
+      "kennen",
+      "freund",
+      "freundin",
+      "leute",
+      "zusammen",
+      "woher",
+      "ende",
+      "wissen",
+      "wort",
+      "oft",
+      "ein-bisschen",
+      "schueler",
+      "schuelerin",
+      "student",
+      "studentin"
     ]
   }
 }

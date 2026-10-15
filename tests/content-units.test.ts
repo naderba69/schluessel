@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(767); // + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121)
+    expect(ALL_WORDS.length).toBe(776); // + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -93,6 +93,23 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(poss!.correct.de).toBe("Meine Telefonnummer");
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 && l.day < 4).flatMap((l) => l.praesentation.wordIds));
     expect(d4.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("د5 (D123): السؤال بلا فعل («مَن هذا؟») · «من أين» كلمة بكلمة · kennen لا wissen لشخص — والاستدعاء من دروس سابقة", () => {
+    const d5 = ALL_LESSONS.find((l) => l.id === "a1-u1-d5")!;
+    const [verb, woher, kennen] = d5.zusammenfassung.warningCards;
+    expect(verb!.commonError.de).toContain("Wer das?");
+    expect(verb!.correct.de).toBe("Wer ist das?");
+    expect(verb!.whyArabicSpeakerFails).toContain("حذف ist");
+    expect(woher!.commonError.de).toContain("Aus wo");
+    expect(woher!.correct.de).toBe("Woher kommst du?");
+    expect(kennen!.commonError.de).toContain("Ich weiß Lena");
+    expect(kennen!.correct.de).toBe("Ich kenne Lena.");
+    expect(kennen!.whyArabicSpeakerFails).toContain("connaître");
+    // كان «Was ist das?» عن شخص بتعليل لا يصح: العربية نفسها تفرّق «مَن» و«ما» — فلا تداخل يُعلَّل به
+    expect(d5.zusammenfassung.warningCards.some((c) => c.commonError.de.includes("Was ist das"))).toBe(false);
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 && l.day < 5).flatMap((l) => l.praesentation.wordIds));
+    expect(d5.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
   it("بطاقات الثقافة (Landeskunde): 12 بطاقة — كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {

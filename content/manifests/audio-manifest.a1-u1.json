@@ -1414,6 +1414,7 @@
       "textDe": "woher.",
       "priority": "P2",
       "lessonRefs": [
+        "a1-u1-d5",
         "a1-u2-d1"
       ],
       "durationMs": 885,
@@ -15346,6 +15347,186 @@
       "rmsDb": -17.18
     },
     {
+      "id": "word-ende",
+      "file": "words/audio/de-DE/word-ende.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Ende.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 1024,
+      "sizeBytes": 4800,
+      "hash": "sha256:65fb9d6721c864cc1fd8c9a1902fd8501ad0087da25f3688e69b32447d7a62f2",
+      "pcmSha256": "c2f5dff21cc3146957330b4a2341d7679cdf4deab994d19e98b8779b279f37db",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "word-wissen",
+      "file": "words/audio/de-DE/word-wissen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "wissen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 780,
+      "sizeBytes": 3775,
+      "hash": "sha256:8ade59e82fefe123f16abc65012956c4cfc9063f0919e2add8de69eb2e4a6079",
+      "pcmSha256": "8482326366464bc1e24c335ec24753a273d84ca4bce325377e862a78b8bd1141",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "word-wort",
+      "file": "words/audio/de-DE/word-wort.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Wort.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 1152,
+      "sizeBytes": 5195,
+      "hash": "sha256:6afcfcce4639634958b084488d1bea26c01b09610594082f1158fd6eb28c0218",
+      "pcmSha256": "0e43c6939942395399b84cafda7a57aca7c8a3efb87c65ca0529372adfc55faa",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "word-oft",
+      "file": "words/audio/de-DE/word-oft.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "oft.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 688,
+      "sizeBytes": 3344,
+      "hash": "sha256:b5b0f1715c0b829eddcd3f5065bcd2b0ca21bc2935e723fd5df145b55589da9d",
+      "pcmSha256": "3f8841fd87b61bcdbd95c592a1cba1c28529395404c989e1967fa899493eb981",
+      "rmsDb": -17.68
+    },
+    {
+      "id": "word-ein-bisschen",
+      "file": "words/audio/de-DE/word-ein-bisschen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "ein bisschen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 1094,
+      "sizeBytes": 5260,
+      "hash": "sha256:abd51c5fe9d1b241581c22a35a839d38ff3d60a18873ea9291131a7617d68ee5",
+      "pcmSha256": "ffe07df337f89454ccf23c5444949b453eb8fcb0e9754eb3b3329cb5f132f8d5",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "word-schueler",
+      "file": "words/audio/de-DE/word-schueler.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Schüler.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 955,
+      "sizeBytes": 4612,
+      "hash": "sha256:66006e3b9fd8bf2c77c90d2ddc5b6ba1f92c6ae91c1c8da35a448bcf71b6da0d",
+      "pcmSha256": "c5377d8fa6124c0e2f2ca2482168d2525783afb3bebdf3e6029aca6d918b30be",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "word-schuelerin",
+      "file": "words/audio/de-DE/word-schuelerin.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Schülerin.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 1001,
+      "sizeBytes": 4831,
+      "hash": "sha256:7975cc511896440b9f5d889ddd03f4008b1c64360c14ae31e398a98518fd8773",
+      "pcmSha256": "abed10439894319fa6984825324c63140c163eeeccfb136d7949bec2418c8eee",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "word-student",
+      "file": "words/audio/de-DE/word-student.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Student.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 1233,
+      "sizeBytes": 5386,
+      "hash": "sha256:e427a81380edec176e38856f07486bffe6ee6a94a1469d84fe1e36732600a92b",
+      "pcmSha256": "d0b6360dd2bff5c8f121d7e88a7d02de6c9b9d40cb5ccbff1cfe7434497bde5a",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "word-studentin",
+      "file": "words/audio/de-DE/word-studentin.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Studentin.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 1140,
+      "sizeBytes": 5590,
+      "hash": "sha256:3bc08a1d0c218da1b26b7eaa0319eb0bf2a314dda7b7bc07cd308b5659cb966a",
+      "pcmSha256": "16dc330c4fddff6005c45498bdf51edaaa830f17d43b004db3d75885fa246ee4",
+      "rmsDb": -17.04
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -17489,6 +17670,292 @@
       "hash": "sha256:2b9645af9ba343f49cd25447471006bed72e2f70b48de4b617d59f3d40297cf9",
       "pcmSha256": "0e21e0fe2220501b1a3dbe50bf3b979d2950f091df0db120980def12dc4c9d3d",
       "rmsDb": -17.02
+    },
+    {
+      "id": "wer-1",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 183,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wer ist das?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 984,
+      "sizeBytes": 4800,
+      "hash": "sha256:1f7aac3fa85004c86bd7181f416f9a684e2a81ba01fc0651ed40c11cf08aa38a",
+      "pcmSha256": "acac85d76e22bd711771fd23457c194334881ae99427c59db0199dfbcadd8d85",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "wer-2",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 115,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das ist Nabil, ein Freund.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 2615,
+      "sizeBytes": 11706,
+      "hash": "sha256:f6580d34a242f801eada6c6e858936a222ce671d913d9e009007980651b09084",
+      "pcmSha256": "882e9cc44cbe1a28defaa918853fdec58a9167efeeac37b9fb12456097483f2c",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "wer-3",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Woher kommt er?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 1320,
+      "sizeBytes": 6474,
+      "hash": "sha256:3c1c59972924f73f77a444f47c734195c96966b5af0663cc80c65d3d5b17c115",
+      "pcmSha256": "43accfad2aa3e9b8c4007f9e313b884d422d2b02bf4a183e1f4bab0d05b5a99f",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "wer-4",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 111,
+        "lengthScale": 1.32
+      },
+      "textDe": "Aus Tunesien, wie ich.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 2162,
+      "sizeBytes": 9519,
+      "hash": "sha256:1a8fd75677939d6f967cf70c78a520e695085ecd213091eeca91c4913f34d0ad",
+      "pcmSha256": "be35e4ccc480d9b00a0c2aa88452a73d272fb00c91790931e8e307d3b7bf9d4e",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "wer-5",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ist er auch Student?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 1496,
+      "sizeBytes": 7217,
+      "hash": "sha256:049ee56ddf81d6966ad35b2a9227552071c1ad9976f632ed873842cdd999d283",
+      "pcmSha256": "04c1d736e82e21213ed2f979a56d4a05d5cd912727601957c2184a677495a1fb",
+      "rmsDb": -17.42
+    },
+    {
+      "id": "wer-6",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 112,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, er ist Schüler.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 2139,
+      "sizeBytes": 9731,
+      "hash": "sha256:539461cee0bad63c5a16749869e78bcf8c8360ef20cef8736c2c35291323912e",
+      "pcmSha256": "6d7dbf7686c5b274dba973b55dd90a173093255b11c00b8af8ec22db3065daaf",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "wer-7",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Spricht er Deutsch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 1256,
+      "sizeBytes": 6068,
+      "hash": "sha256:783dcdaadc742ca0bad49103aca814cadcf06f2d36d2d6fc4c783d23dccee52d",
+      "pcmSha256": "b92a34a7b9d5d4a81d1d525b944526ff26e227ca11f39e054bc4b3024860c4a7",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "wer-8",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ein bisschen. Wir sprechen oft zusammen Deutsch.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 3625,
+      "sizeBytes": 16677,
+      "hash": "sha256:ea8116dfd5e80803d269102ff254be425d6412f554d7190bd79320e54e1ff232",
+      "pcmSha256": "9310318b304ab59261bcf9456f6419af46b2b2129a64ba30d1fbd17a0054dbe3",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "wer-9",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 230,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wie alt ist er?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 1304,
+      "sizeBytes": 6300,
+      "hash": "sha256:28407e605c7fd56510c79802bb352dd967a80498d49779811f7675d341fc1c75",
+      "pcmSha256": "8e4a915c5e5bb71471bcbaaef4251a08dd4c0e6f9b5a1a7a0a2a5c799c120436",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "wer-10",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 166,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das weiß ich nicht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 1442,
+      "sizeBytes": 6712,
+      "hash": "sha256:6d989c99651cc0feb684485d02ef92e101bc04e458c1a990fc8663a2075b164b",
+      "pcmSha256": "2dc04c7bba9f31f8d8fac40289138d3539d274784f4e425c5a72a53ab3a9ad94",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "wer-11",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 163,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du kennst Nabil, aber du weißt das nicht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 2936,
+      "sizeBytes": 13771,
+      "hash": "sha256:4d1ad85fe0391a4a321982d40d98f0e821296c0eeaf3acf2e83d86f7afa0485d",
+      "pcmSha256": "2cfd62606f0d469869b09a42f5085d3eff07fda4dc53d5c96a2fae571ea000e7",
+      "rmsDb": -17.57
+    },
+    {
+      "id": "wer-12",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 111,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Und du, Lena — bist du Studentin?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 3776,
+      "sizeBytes": 16911,
+      "hash": "sha256:3e0a21ebbce87a7d35348867215bf39d614f00eab570ae5f8a03c75b73cfc3f8",
+      "pcmSha256": "e171b00e4fd73b2c167b9cfac86dc34b67fc35bb8a341ff16472dbf2094f0623",
+      "rmsDb": -16.98
+    },
+    {
+      "id": "wer-13",
+      "file": "audio/scripts/a1-u1-d5-wer-ist-das/wer-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, ich bin Schülerin. Wie Nabil!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u1-d5"
+      ],
+      "durationMs": 3048,
+      "sizeBytes": 14080,
+      "hash": "sha256:b50ee670a185018eca3152c59539b78ee3bc244fdfbffa61692f6f1bbe625235",
+      "pcmSha256": "d6d9e0e52c2af2e80579928219a8b84361411e0a02a8e96109befcd53a651a18",
+      "rmsDb": -17.23
     }
   ],
   "characterVoices": {
