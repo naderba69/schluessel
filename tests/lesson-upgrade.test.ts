@@ -119,7 +119,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u2-d2")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125)
+const legacy = realLessons.find((l) => l.id === "a1-u2-d3")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d2 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126)
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -212,7 +212,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u2-d2", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u2-d3", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -296,15 +296,16 @@ describe("D115 — أدوات القياس", () => {
     expect(wordAppears(w("guten-tag"), toks("Guten Tag!"))).toBe(true);
     expect(wordAppears(w("wie-gehts"), toks("Hallo, wie geht's?"))).toBe(true);
   });
-  it("درس حقيقي لم يُرقَّ (a1-u2-d2): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين فيها غير المدروس)", () => {
+  it("درس حقيقي لم يُرقَّ (a1-u2-d3): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين فيها غير المدروس)", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBeLessThan(12);
     expect(r.rule.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-rule", "e-upgrade-sample"]));
-    // D125: فجواته مقيسة قبل نقل المثال إليه — تمارينه فيها «Mainzer» قبل تدريسها (قانون الجبهة) ·
-    // ومثال leben «Ich lebe gern in Berlin.» فيه gern غير المدروسة (وBerlin اسم علم غير معلن هنا)
+    // D126: فجواته مقيسة قبل نقل المثال إليه — تمارينه فيها «Lehrerin» قبل تدريسها (قانون الجبهة: المدخل lehrer وحده) ·
+    // ومثال zeitung «Ich lese die Zeitung.» فيه lese غير المدروسة
     const front = r.practice.find((i) => i.code === "e-upgrade-front")?.message;
-    expect(front).toMatch(/mainzer/);
-    expect(r.rule.map((i) => i.message).join("\n")).toMatch(/gern/);
+    expect(front).toMatch(/lehrerin/);
+    expect(r.rule.map((i) => i.message).join("\n")).toMatch(/lese/);
+    expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
     const entryReal = loadUpgradePlans(CONTENT)[0]!.lessons.find((e) => e.lessonId === "a1-u1-d1")!;
@@ -376,6 +377,29 @@ describe("D115 — أدوات القياس", () => {
     // الحوار الجديد a1-u2-d1-wo-wohnst-du: أسطره العشرة كلها مستعملة في الاستماع والإملاء (لا مسار بلا بند)
     const audioIds = l.uebung.stations.filter((s) => s.type === "listening" || s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.audioId)));
     expect([...audioIds].sort((a, b) => Number(a.slice(3)) - Number(b.slice(3)))).toEqual(Array.from({ length: 10 }, (_, i) => `wo-${i + 1}`));
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+  });
+  it("a1-u2-d2 مُرقّى (D126): صفر نقص — 25 بنداً · 4 أنواع (استماع وإملاء من حوار جديد) · Quiz 6 · 9 كلمات · قاعدة ein/eine", () => {
+    const l = realLessons.find((x) => x.id === "a1-u2-d2")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u2-d2")!;
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage }).toEqual({ rule: [], practice: [], quiz: [], coverage: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([25, 4, 6, 9]);
+    // القاعدة: أداة النكرة (البند الأول في خريطة 10‑ي «حذف ein») — بدل «ars-sprachen-wohnen» التي لم يُكتب لها ملف قط
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-ein-eine"]);
+    expect(l.usedArsenalIds).toEqual(["ars-ein-eine"]);
+    expect(e.properNouns).toEqual(["Yusuf", "Lena", "Berlin"]);
+    // N-018: كلمات الوحدة الأولى الست لم تعد «جديدة» هنا — sprache وwohnen استدعاءٌ في الدفء · والنواة D113 ثلاث (das Leben بجانب الفعل leben)
+    for (const old of ["sprache", "deutsch", "englisch", "arabisch", "wohnen", "langsam"]) {
+      expect(l.praesentation.wordIds).not.toContain(old);
+      expect(l.zusammenfassung.srsBundleWordIds).not.toContain(old);
+      expect(l.audioManifestRefs).not.toContain(`word-${old}`);
+    }
+    expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["mensch", "ort", "das-leben", "leben"]));
+    expect(l.warmup.cardIds).toEqual(["land", "sprache", "wohnen"]);
+    // الحوار الجديد a1-u2-d2-ein-haus-eine-wohnung: أسطره الأحد عشر كلها مستعملة في الاستماع والإملاء (لا مسار بلا بند)
+    const audioIds = l.uebung.stations.filter((s) => s.type === "listening" || s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.audioId)));
+    expect([...audioIds].sort((a, b) => Number(a.slice(3)) - Number(b.slice(3)))).toEqual(Array.from({ length: 11 }, (_, i) => `ha-${i + 1}`));
     expect(audioIds.every((id) => tracks.has(id))).toBe(true);
   });
   it("D121 e-upgrade-warmup: بطاقة استدعاء من كلمات اليوم أو لاحقة ⇒ خطأ · أول درس في المسار مستثنى", () => {

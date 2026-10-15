@@ -45,6 +45,11 @@ export const WordSpec = z.object({
   chunk: z.boolean().default(false),
   functionWord: z.boolean().default(false),
   wordFamily: z.array(z.string()).default([]),
+  /**
+   * D126: معرّف صريح للمتجانسَين وحدهما (das Leben بجانب الفعل leben — المعرّف الآلي «leben» مأخوذ).
+   * يُرفض إن ساوى الآلي، أو لم يحوِه (يبقى المعرّف قابلاً للبحث)، أو كان الآلي حراً (لا تسمية حرة تكسر الاصطلاح).
+   */
+  id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).optional(),
 }).strict();
 export type WordSpec = z.infer<typeof WordSpec>;
 
@@ -67,7 +72,7 @@ export function planWord(spec: WordSpec, ipa: string): Planned {
   const gender = g?.gender ?? "none";
   const draft = {
     schemaVersion: "1.0.0",
-    id: slugify(spec.de),
+    id: spec.id ?? slugify(spec.de),
     de: spec.de,
     ...(g ? { article: g.article } : {}),
     gender,
@@ -123,6 +128,17 @@ export function runGenerator(opts: {
         throw new Error(`goetheList للمواصفة ${i + 1} («${specs[i]!.de}») = ${JSON.stringify(given)} والدليل = ${JSON.stringify(derived)} — ${describeEvidence(evidenceFor(p.word, ixs))}. احذف الحقل: يُشتق آلياً (D110)`);
       p.word = Word.parse({ ...p.word, goetheList: derived });
     }
+  }
+
+  // D126: المعرّف الصريح للمتجانسات وحدها — بعد التحقق من أن الآلي مأخوذ فعلاً (ملفاً أو داخل الدفعة)
+  for (const [i, s] of specs.entries()) {
+    if (!s.id) continue;
+    const auto = slugify(s.de);
+    const where = `المواصفة ${i + 1} («${s.de}»)`;
+    if (s.id === auto) throw new Error(`${where}: المعرّف الصريح «${s.id}» يساوي الآلي — احذفه`);
+    if (!s.id.includes(auto)) throw new Error(`${where}: المعرّف الصريح «${s.id}» لا يحوي «${auto}» — اجعله مثل «das-${auto}» ليبقى قابلاً للبحث`);
+    const taken = existsSync(join(content, `words/${auto}.json`)) || specs.some((o, j) => j !== i && (o.id ?? slugify(o.de)) === auto);
+    if (!taken) throw new Error(`${where}: معرّف صريح بلا تجانس — «${auto}» حر، فاحذف id (D126)`);
   }
 
   // لا تكرار داخل الدفعة ولا كتابة فوق كلمة موجودة

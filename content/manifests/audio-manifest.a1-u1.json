@@ -15547,6 +15547,66 @@
       "rmsDb": -17.02
     },
     {
+      "id": "word-mensch",
+      "file": "words/audio/de-DE/word-mensch.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Mensch.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 850,
+      "sizeBytes": 4174,
+      "hash": "sha256:c0546847d869f633ac8e1cf3d4d49705fa9c23d1dc859b903bb6a04644996286",
+      "pcmSha256": "369dd4032144c5729695072d5aab2d2e1341f801614f6283f5e6ed84aeca3bc5",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-ort",
+      "file": "words/audio/de-DE/word-ort.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Ort.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4501,
+      "hash": "sha256:0626fa68658525f7e99dd54d8ede430f66581ea5dc5ac8eeda1006fb7e625f9f",
+      "pcmSha256": "49ed803de6dc84511f3093ea64a9ee00156e9e43ae8fcc5a88520c0f44a74b18",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "word-das-leben",
+      "file": "words/audio/de-DE/word-das-leben.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Leben.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 1082,
+      "sizeBytes": 4967,
+      "hash": "sha256:4f4772c957918a5cc561966ce2bbf9a57593ac60564463e1097c47554db72819",
+      "pcmSha256": "7a79ffb0ad7b4e4f92ddce8b471f98c0342e67a40817e8c5ef3e02c53f31cb2b",
+      "rmsDb": -17.06
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -18196,6 +18256,248 @@
       "hash": "sha256:f32e52ad2f8f693f3ba71a48150d02ffdcb85451f2a4dd28e631cf2030b24fcb",
       "pcmSha256": "6dd554ac8df859895c2b9515c95800a97f7bcfb518afecbfda388c0e8c0f16fe",
       "rmsDb": -17.03
+    },
+    {
+      "id": "ha-1",
+      "file": "audio/scripts/a1-u2-d2-ein-haus-eine-wohnung/ha-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 163,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, das ist ein Haus in der Schweiz. Hier wohne ich.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 4040,
+      "sizeBytes": 18724,
+      "hash": "sha256:cd20d7688f0c26d650ed08d4360c669c4bf44d7c63fca078a8bb3cb19c8cbc6a",
+      "pcmSha256": "aa270ea0cb08338a2d8575e198a896da80dc7a8b9e15e482207459dcf6f02c8e",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "ha-2",
+      "file": "audio/scripts/a1-u2-d2-ein-haus-eine-wohnung/ha-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 138,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Haus! Ist das eine Stadt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 2615,
+      "sizeBytes": 11417,
+      "hash": "sha256:5fe945ec3d234361d04ddcc4762eda822d89f906a875046cf3014931e6ae0c83",
+      "pcmSha256": "95e4255d92059354ffa9ccd1f1dc86cc87ec120ca958cbcbbe5eab9de646cf63",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "ha-3",
+      "file": "audio/scripts/a1-u2-d2-ein-haus-eine-wohnung/ha-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 206,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, das ist ein Ort. Er ist neu für mich. Und du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 3496,
+      "sizeBytes": 16488,
+      "hash": "sha256:2cf4ebf7f8fe9cac0601f40f39496d75d31a56e2512399094fd98c30d4c547df",
+      "pcmSha256": "83805568c6dcf471a289a642bde16bb59e852e89d8f699e1de6bb70a4d4501d6",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "ha-4",
+      "file": "audio/scripts/a1-u2-d2-ein-haus-eine-wohnung/ha-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 176,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich wohne in einer Wohnung in Berlin.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 2383,
+      "sizeBytes": 11178,
+      "hash": "sha256:7928d195edfa6693348d8a528e3c45f1d46f4acebbe2eda9da37b507d99ebcd5",
+      "pcmSha256": "968c79e9994982a8fe35610c08fc93e0eebd8805435161d2976e25e7436d6f3f",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "ha-5",
+      "file": "audio/scripts/a1-u2-d2-ein-haus-eine-wohnung/ha-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 195,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wie ist das Leben in Berlin?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 2152,
+      "sizeBytes": 10255,
+      "hash": "sha256:153542358c76631066c515f3303bb600b8c26b6103a5a307ee90f6ce7fda3261",
+      "pcmSha256": "fa1f8f1f69306d99431eb3ab3fd77c452b7b306b0503036093b78e1e178560cb",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "ha-6",
+      "file": "audio/scripts/a1-u2-d2-ein-haus-eine-wohnung/ha-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Neu und ein bisschen schwer. Hier leben viele Menschen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 4113,
+      "sizeBytes": 17954,
+      "hash": "sha256:a19adfb2a2668d627ae804f7b428a368725adf8065cdd92347172ad2bdb309e8",
+      "pcmSha256": "65f53919e385af8806f156522dd19d5125338446b7e8897cf3c35fe09a3c1344",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "ha-7",
+      "file": "audio/scripts/a1-u2-d2-ein-haus-eine-wohnung/ha-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Deine Muttersprache ist Arabisch, und Deutsch ist eine Fremdsprache für dich.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 5368,
+      "sizeBytes": 24942,
+      "hash": "sha256:3edaeb12caac9000529de35a4c3aecd4e73d241526c0ae7709fd51191963cd0f",
+      "pcmSha256": "99105b7858ae7a7f21265577cb70e813f4cb7e53387fe168bd62c1ea84db1a09",
+      "rmsDb": -17.47
+    },
+    {
+      "id": "ha-8",
+      "file": "audio/scripts/a1-u2-d2-ein-haus-eine-wohnung/ha-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau. Und Französisch ist auch eine Fremdsprache für mich.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 4089,
+      "sizeBytes": 18926,
+      "hash": "sha256:e3ccc57fafd0852286c2864b20e3af24659195c714e063b6d36d97920e8c5285",
+      "pcmSha256": "082b229a5b86a88722df74fa02f632134892f62d5eea1b59cf7522302d3e2898",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "ha-9",
+      "file": "audio/scripts/a1-u2-d2-ein-haus-eine-wohnung/ha-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Für mich auch! Meine Muttersprache ist Deutsch.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 3000,
+      "sizeBytes": 13990,
+      "hash": "sha256:7c0a8fbf59b8a22d1e7daf90a4caa1429196eaff005b22325571fef44bbc3eca",
+      "pcmSha256": "a77e73ac903aec431f1a6f92e2cf58b875a5a6449d493092b739cf0f7994a8f9",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "ha-10",
+      "file": "audio/scripts/a1-u2-d2-ein-haus-eine-wohnung/ha-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 119,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich spreche vier Sprachen: Arabisch, Französisch, Englisch und ein bisschen Deutsch.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 5564,
+      "sizeBytes": 25554,
+      "hash": "sha256:f26ee34261a4ccb302aca4c2840cd4dbc1afc595cd0a0c7fa0d9f47b7d50ce6e",
+      "pcmSha256": "5852182ee78aba01824d40b8ab62c2c8f943d171b2d6e692247c4d8f41b6a5b7",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "ha-11",
+      "file": "audio/scripts/a1-u2-d2-ein-haus-eine-wohnung/ha-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 108,
+        "lengthScale": 1.32
+      },
+      "textDe": "Vier Sprachen? Du bist international!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d2"
+      ],
+      "durationMs": 2776,
+      "sizeBytes": 12951,
+      "hash": "sha256:7fd6f08fa4cd39981d08f107e89247ffe525cf8a655dc1e18ae8a278ade88857",
+      "pcmSha256": "cbcefd0a06007b3c965fffb7dbeb871de833d77fc4395df6c34830efc1d5966b",
+      "rmsDb": -17.24
     }
   ],
   "characterVoices": {

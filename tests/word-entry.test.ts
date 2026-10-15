@@ -189,6 +189,24 @@ describe("D105 — runGenerator على شجرة مؤقتة (نطق ومقطع و
     expect(() => runGenerator({ specs: [{ ...spec, ar: [] }], contentRoot: root, phonemize: fakeIpa, clip: okClip, genAudioPy: py })).toThrow(/غير صالحة/);
     expect(() => runGenerator({ specs: [{ ...spec, colour: "blau" }], contentRoot: root, phonemize: fakeIpa, clip: okClip, genAudioPy: py })).toThrow(/غير صالحة/);
   });
+
+  it("D126 المتجانسان: das Leben بجانب الفعل leben — المعرّف الصريح يُكتب ملفاً ومساراً وسطراً · ويُرفض حين لا تجانس أو يساوي الآلي أو لا يحويه", () => {
+    const leben = { ...spec, de: "das Leben", ar: ["الحياة"], unit: 2, lesson: "a1-u2-d2", level: "A1", sample: { de: "Das Leben ist neu.", ar: "الحياة جديدة." }, plural: undefined };
+    const run = (s: object) => runGenerator({ specs: [s], contentRoot: root, phonemize: fakeIpa, clip: okClip, genAudioPy: py });
+    // المعرّف الآلي «leben» حر بعد ⇒ الصريح مرفوض (لا تسمية حرة)
+    expect(() => run({ ...leben, id: "das-leben" })).toThrow(/بلا تجانس/);
+    writeFileSync(join(root, "words/leben.json"), JSON.stringify({ id: "leben", de: "leben", level: "A1", srsCardTypes: ["production", "comprehension"] }) + "\n");
+    expect(() => run(leben)).toThrow(/موجودة: leben/); // بلا id: الآلي يصطدم بالفعل
+    expect(() => run({ ...leben, id: "leben" })).toThrow(/يساوي الآلي/);
+    expect(() => run({ ...leben, id: "das-dasein" })).toThrow(/لا يحوي «leben»/);
+    expect(() => run({ ...leben, id: "Das_Leben" })).toThrow(/غير صالحة/);
+    const r = run({ ...leben, id: "das-leben" });
+    expect(r.planned[0]!.word.id).toBe("das-leben");
+    expect(Word.parse(JSON.parse(readFileSync(join(root, "words/das-leben.json"), "utf8"))).de).toBe("das Leben");
+    const m = AudioManifest.parse(JSON.parse(readFileSync(join(root, "manifests/audio-manifest.a1-u1.json"), "utf8")));
+    expect(m.tracks.find((x) => x.id === "word-das-leben")?.textDe).toBe("das Leben.");
+    expect(readFileSync(py, "utf8")).toContain('("word-das-leben", "das Leben.", "das-leben", ["a1-u2-d2"]),');
+  });
 });
 
 describe("D105 — تكامل حقيقي + السجل التلقائي", () => {

@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(777); // + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
+    expect(ALL_WORDS.length).toBe(780); // + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -125,6 +125,24 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     // كان «وين» تُستعمل للمنشأ في العامية — تعليل لا يصح: العاميات نفسها تفرّق (وين = wo · منين = woher)
     expect(u.zusammenfassung.warningCards.some((c) => c.whyArabicSpeakerFails.includes("وين"))).toBe(false);
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1).flatMap((l) => l.praesentation.wordIds));
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u2-d2 (D126): حذف ein (التنوين وحده) · الجنس العربي ليس دليلاً (die Leben) · in einer Wohnung — والاستدعاء من دروس سابقة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u2-d2")!;
+    const [ein, genus, dativ] = u.zusammenfassung.warningCards;
+    expect(ein!.commonError.de).toContain("Berlin ist Stadt");
+    expect(ein!.correct.de).toBe("Berlin ist eine Stadt.");
+    expect(ein!.whyArabicSpeakerFails).toContain("حذف ein");
+    expect(genus!.commonError.de).toContain("Die Leben");
+    expect(genus!.correct.de).toBe("Das Leben in Berlin ist neu.");
+    expect(dativ!.correct.de).toBe("Ich wohne in einer Wohnung.");
+    // كان «spreche über Deutsch» بتعليل لا يصح: العربية نفسها تفرّق «أتحدث العربية» و«أتحدث عن العربية» ·
+    // و«das Muttersprache» تعليلها جنس المركّبات — قاعدة a1-u6-d2 (لا تُسحب قبل وقتها)
+    expect(u.zusammenfassung.warningCards.some((c) => /über|Muttersprache/.test(c.commonError.de))).toBe(false);
+    // N-018: لا كلمة من دروس سابقة تُعرض «جديدة» هنا
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 || l.id === "a1-u2-d1").flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
