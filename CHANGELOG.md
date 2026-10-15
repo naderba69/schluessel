@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-10-15 — الدفعة 82: a1-u2-d3 مُرقّى — شفرة الجنس + رمز اللاحقة في حارس الجبهة + حوار صوتي جديد (D127)
+- **إضافة**: `content/arsenal/grammar/ars-genuscode.json` (ثامن قاعدة يوم — قاعدة الدرس المخططة نفسها) · سكربت `a1-u2-d3-drei-fehler` (11 سطراً بصوتين) · كلمات `text` · `fehler` · `bedeuten` · `lehrerin` (صوت + مانيفست + gen-audio) — 15 مساراً جديداً (930) · `MORPHEMES` و`stripMorphemeNotation` في `tools/lib/vocab-forms.ts`.
+- **تعديل معلن**: حارس الجبهة (`frontViolations`) يُسقط رمز اللاحقة بشرطة أولها من قائمة مغلقة · درس a1-u2-d3 (25 بنداً بأربعة أنواع · Quiz 3×6 · 3 مصائد — خرجت بطاقة die Lehrer بمبررها الخاطئ · مشهد المهمة «in einem Text») · أمثلة zeitung وmaedchen وbroetchen وkellner وfreiheit وgesundheit وschmetterling · مقتطف المرجع 998 كلمة.
+- **اختبارات**: رمز اللاحقة (2) · صفر نقص u2-d3 · مصائده · أمثلة غير المُرقّى ← a1-u2-d4 · مثبّتات النواة ← a1-u2-d4.
+- **السجل**: أُضيفت N-044 وN-045 · حُدّثت N-010 وN-022.
+- **591/591 أخضر** · validator 926/0/0 · build ✓ · الطفرة 11/11.
+
 ## 2026-10-15 — الدفعة 81: a1-u2-d2 مُرقّى — أداة النكرة ein/eine + حوار صوتي جديد (D126)
 - **إضافة**: `content/arsenal/grammar/ars-ein-eine.json` (سابع قاعدة يوم) · سكربت `a1-u2-d2-ein-haus-eine-wohnung` (11 سطراً بصوتين) · كلمات النواة `mensch` · `ort` · `das-leben` (صوت + مانيفست + gen-audio) — 14 مساراً جديداً (915) · حقل `id` في مولِّد الكلمات للمتجانسين وحدهما.
 - **تعديل معلن**: درس a1-u2-d2 (القاعدة `ars-sprachen-wohnen` ← `ars-ein-eine` · 25 بنداً بأربعة أنواع · Quiz 3×6 · 3 مصائد جديدة · كلمات الوحدة الأولى الست خارج الجديد) · أمثلة leben وstadt وfremdsprache وwohnung · فهرس langsam العكسي · مقتطف المرجع 990 كلمة.
