@@ -1,5 +1,7 @@
 /**
- * D124 — سجل ملاحظاتي للمالك (docs/OWNER_NOTES_AR.md) يُجمع حتى نهاية المشروع.
+ * D124 — سجل ملاحظاتي للمالك يُجمع حتى نهاية المشروع · D129 — صار في البرومت الاحترافي نفسه (§10 بين علامتين)
+ * بأمر المالك «جميع ملاحظاتك احفظها في البرومت الاحترافي لنتناقش فيها عند انتهاء المشروع» — مصدر واحد:
+ * docs/OWNER_NOTES_AR.md مؤشر بلا ملاحظات.
  * الحارس يضمن أن السجل لا يتآكل بصمت: معرّفات ثابتة متتابعة لا تُحذف ·
  * كل ملاحظة لها مصدر موجود في DECISIONS.md · المغلقة تشير إلى قرار إغلاق موجود ·
  * غير المغلقة تقول «المطلوب» · سطر العدد يطابق الملاحظات.
@@ -9,7 +11,12 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
 const ROOT = join(__dirname, "..");
-const LEDGER = readFileSync(join(ROOT, "docs", "OWNER_NOTES_AR.md"), "utf8");
+const PROMPT = readFileSync(join(ROOT, "docs", "PROFESSIONAL_CONTINUATION_PROMPT_AR.md"), "utf8");
+const POINTER = readFileSync(join(ROOT, "docs", "OWNER_NOTES_AR.md"), "utf8");
+const START = "<!-- owner-notes:start -->";
+const END = "<!-- owner-notes:end -->";
+/** باب السجل في البرومت: ما بين العلامتين (فارغ إن غابتا — فتسقط الاختبارات كلها) */
+const LEDGER = PROMPT.includes(START) && PROMPT.includes(END) ? PROMPT.slice(PROMPT.indexOf(START), PROMPT.indexOf(END)) : "";
 const DECISIONS = readFileSync(join(ROOT, "DECISIONS.md"), "utf8");
 
 type Status = "مفتوحة" | "بانتظار المالك" | "مغلقة";
@@ -42,6 +49,18 @@ const DECISION_IDS = new Set([
 
 describe("D124 — سجل ملاحظات المالك", () => {
   const { notes, malformed, counts } = parseLedger(LEDGER);
+
+  it("D129: السجل في البرومت الاحترافي (§10) بين علامتين مرة واحدة · والملف القديم مؤشر بلا ملاحظة (مصدر واحد)", () => {
+    expect(PROMPT.split(START).length - 1).toBe(1);
+    expect(PROMPT.split(END).length - 1).toBe(1);
+    expect(PROMPT.indexOf(START)).toBeLessThan(PROMPT.indexOf(END));
+    expect(PROMPT.slice(0, PROMPT.indexOf(START))).toMatch(/## 10\. سجل ملاحظاتي للمالك[^\n]*\n$/u);
+    // لا ملاحظة خارج الباب (لا نسخة ثانية في البرومت نفسه) ولا في الملف القديم
+    const outside = PROMPT.slice(0, PROMPT.indexOf(START)) + PROMPT.slice(PROMPT.indexOf(END));
+    expect(outside.split("\n").filter((l) => l.startsWith("- **N-"))).toEqual([]);
+    expect(POINTER.split("\n").filter((l) => l.startsWith("- **N-"))).toEqual([]);
+    expect(POINTER).toContain("§10 من `docs/PROFESSIONAL_CONTINUATION_PROMPT_AR.md`");
+  });
 
   it("كل سطر يبدأ بـN- بالصيغة المقررة (لا ملاحظة مشوّهة تفلت من العدّ)", () => {
     expect(malformed).toEqual([]);
