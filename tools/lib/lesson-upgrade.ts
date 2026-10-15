@@ -156,9 +156,16 @@ export function frontViolations(
 const allowSet = (names: readonly string[]) => new Set(names.flatMap((n) => contentTokens(n)));
 const tokenSet = (texts: readonly string[]) => new Set(contentTokens(germanOnly(texts.join("\n"))).map(deumlaut));
 
+/**
+ * D137: الشرح بين القوسين في حقل de ليس جزءاً من الكلمة — «sein (ملكيته)» · «am (an + dem)»؛ الاصطلاح نفسه في
+ * اختبار نص المقطع (D102: «بلا الشرح بين القوسين»). كانت «ملكيته» رمزاً مطلوباً (\p{L} يشمل العربية) والنصوص المفحوصة
+ * ألمانية وحدها، فلا تُعدّ sein مسترجَعةً أبداً مهما تكررت في البنود.
+ */
+export const withoutGloss = (de: string): string => de.replace(/\s*\([^)]*\)\s*/g, " ").trim();
+
 /** هل تظهر الكلمة في النصوص؟ (رموز صيغتها الأساسية غير المغلقة كلها — بجذوع التصريف البسيطة) */
 export function wordAppears(w: Word, tokens: ReadonlySet<string>): boolean {
-  const base = contentTokens(w.de.replace(/^(der|die|das) /, "").replace(/^sich /, "")).map(deumlaut);
+  const base = contentTokens(withoutGloss(w.de).replace(/^(der|die|das) /, "").replace(/^sich /, "")).map(deumlaut);
   const open = base.filter((t) => !CLOSED.has(t));
   const need = open.length ? open : base;
   const stemsOf = [...tokens].map((t) => stem(t));

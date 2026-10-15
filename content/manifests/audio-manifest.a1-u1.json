@@ -3797,11 +3797,11 @@
       "lessonRefs": [
         "a1-u4-d2"
       ],
-      "durationMs": 850,
-      "sizeBytes": 4148,
-      "hash": "sha256:d6999f9e5c7579f495975a4d8872a19e3fc2748f055b691b591e9a72991aa2f6",
-      "pcmSha256": "e1e13893a9acbf057c76031e8f3f775d1cbc4b56695ea0c290fed5838830ea97",
-      "rmsDb": -17.02
+      "durationMs": 780,
+      "sizeBytes": 3833,
+      "hash": "sha256:bc155bf1a1f56cbf6838578043e4dcc77d076d18cf2b61d99561f0fbf8bbdc88",
+      "pcmSha256": "d76ada3cbacb7f06f1a8fabb739cb546a25dc46d2f48b418f877c38a291c516c",
+      "rmsDb": -16.98
     },
     {
       "id": "word-hund",
@@ -16129,6 +16129,26 @@
       "rmsDb": -17.15
     },
     {
+      "id": "word-lieben",
+      "file": "words/audio/de-DE/word-lieben.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "lieben.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 1013,
+      "sizeBytes": 4516,
+      "hash": "sha256:80081cb0463a374f4c839c5fc0781dc912a2bd28f73d8a3f3869e1b8a55d7b12",
+      "pcmSha256": "07c1cc0bad2ca4e1e84aa0bb206386be6580d74690439cc1f04c8de70fc22e8b",
+      "rmsDb": -16.98
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -22694,6 +22714,380 @@
       "hash": "sha256:a17810ad0ed435497066eed1050c63d261c5cdb9a2b2066510dbe9492ed5c68b",
       "pcmSha256": "88f8f95ff65104ce25cbe39a384fd81750e18b95fc0ebc74d428e38b8791e22e",
       "rmsDb": -17.19
+    },
+    {
+      "id": "be-1",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo, Lena! Wer ist das denn?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 3010,
+      "sizeBytes": 13506,
+      "hash": "sha256:ea8a7a58d477720bf2e8e543f1c9c724a6cc715f20b6c8048397d3941b903315",
+      "pcmSha256": "a9d8295ffe3419fa639c4f9c51caef94b132411ce760cc04a9a526d3d94476c6",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "be-2",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das ist meine Katze. Sie heißt Mia.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 2888,
+      "sizeBytes": 13484,
+      "hash": "sha256:a93f5ed7814fe158e625d11bd12f25da5d4631e913affc9491a137f20d0ac5f3",
+      "pcmSha256": "31d2d5fb172c8990b511552047f62bffe32083fa80173327d34bfe79a2f9eaa5",
+      "rmsDb": -17.4
+    },
+    {
+      "id": "be-3",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Deine Katze ist süß! Ich liebe Katzen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 2824,
+      "sizeBytes": 13046,
+      "hash": "sha256:7d3df450b90377995df9035aa99101f34ce911e097971cbdbdeb03bea93eb49a",
+      "pcmSha256": "495b77a61923e929d66e8accdfd6aafe1986f8f1efb94391be8b3388655464a0",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "be-4",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 109,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke! Mia liebt meine Tasche.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 2760,
+      "sizeBytes": 12826,
+      "hash": "sha256:44ae7c15249a1f19bb1b05f471bf3ddd430ae556800c09b23e8ad37340129691",
+      "pcmSha256": "f4ae95d6f280213e4ec360516935567f2f1273a44aa9d96b04004eda38f6e1e7",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "be-5",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und dort? Sind das deine Eltern?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 2719,
+      "sizeBytes": 12496,
+      "hash": "sha256:11ede9a094c93fcd52bb7ee2933e424c0470e05c4bc00eb1d0acf7adf7c7943f",
+      "pcmSha256": "a64ec75319d3414aee0a839c5dc88a9c7d775c2331869e974730f8b3b3cdda23",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "be-6",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, das sind mein Onkel und meine Tante.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 3128,
+      "sizeBytes": 14819,
+      "hash": "sha256:d0ba0bd953f090958a0951ad734be404722797515e5fa01f8a117e13e7e4a1ea",
+      "pcmSha256": "bf49b470884c03bd94e44e33fe987d2a0cedef43085244f51ce66c2a24e2745e",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "be-7",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 186,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und der Hund? Ist das dein Hund?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 2255,
+      "sizeBytes": 10365,
+      "hash": "sha256:7517b5b1ff2b8b3553cb98446672d01bf75151d5627cb376685dfa56d38da45a",
+      "pcmSha256": "15ff0bfe5e1649513d90e17a6c8402da479b0ff070db87a5a3de64100c5e49b6",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "be-8",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, das ist nicht mein Hund. Das ist sein Hund.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 3976,
+      "sizeBytes": 18749,
+      "hash": "sha256:6eb9937a173d6fcdf26604bacd32bf3083d6ceb35d8fc97d58b7355cd37fec14",
+      "pcmSha256": "c2205fc87d16983657fc1290e2a10041a3ac4cdcd767a7f878abf0cd8abf4708",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "be-9",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wie heißt sein Hund?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 1500,
+      "sizeBytes": 6899,
+      "hash": "sha256:91b8dc2f89f8122feb5b25c05c85cdee0d4c1abf3e01a5e936d7900589c9a2e0",
+      "pcmSha256": "be461cc238408d6def6d37ff9daf9f96915f40af47c1eecfc2df91e35923cb4e",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "be-10",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Er heißt Bruno.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 1416,
+      "sizeBytes": 6742,
+      "hash": "sha256:1e56ba135560996c39e7b372e16517a681feeeaa7db14a05889a2d6a9232dd83",
+      "pcmSha256": "51ea7cd178f14c5d84a0d63daa9969a7ed4f5c826c92df64b7a3678e8ecfb794",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "be-11",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und das Auto dort? Gehört es dir?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 3068,
+      "sizeBytes": 13962,
+      "hash": "sha256:d03050e67a90fb9a073f1034818f3e36b25ec93912b347ac5dfff681615c0ae4",
+      "pcmSha256": "8a1c4ddeaef4ffeb81d49fb283ff4ad3f4a183fa814f1cfc6f9030fc53b02e14",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "be-12",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 161,
+        "lengthScale": 1.32
+      },
+      "textDe": "Mir? Nein, ich bin sechzehn! Das ist auch sein Auto.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 3736,
+      "sizeBytes": 17476,
+      "hash": "sha256:8a4654425ad2e7d0ade7a5be9589e9682e8167b723ae820bb83cc4287511f14c",
+      "pcmSha256": "55611c6fa7046b9b4451bf583f076d1849a8dd7cf715d610c3fd5989759df1d9",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "be-13",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ach so! Sein Auto ist neu, oder?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 3265,
+      "sizeBytes": 14845,
+      "hash": "sha256:4419adf39a1ed146281adf6eabfed54aaef71ccd934461bc5f0b718b6f723440",
+      "pcmSha256": "8c7fe8e28cb86dfed96fd54395783d10c2fd00212d324801f76274899663a661",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "be-14",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, es ist neu. Und deine Familie, Yusuf?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 3672,
+      "sizeBytes": 17068,
+      "hash": "sha256:5883816ce413e18a34f759fd740a46ea5f71a0a62e9bfb85b5e7d9f4a316f6d6",
+      "pcmSha256": "d9d0630b80207bb5e887496f9bbb6c62202de90fdadb08fb7e8d5e65d5807947",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "be-15",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Meine Familie ist in Tunesien. Meine Oma auch.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 3706,
+      "sizeBytes": 16964,
+      "hash": "sha256:f302d00569654837adac62cc78e931c779d280a625b986b2ae3b325ee8513a29",
+      "pcmSha256": "028340dac84f1213120bcc863f158b489cf44b8d0fd6a1ab98d215c41ab65756",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "be-16",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 107,
+        "lengthScale": 1.32
+      },
+      "textDe": "Deine Oma ist achtzig, oder?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 2808,
+      "sizeBytes": 13169,
+      "hash": "sha256:6329b4aec0e6d9d941c0b327b6c96336adffe999de351244db5bfdce86342385",
+      "pcmSha256": "8917a16bbfd320c395a827543320ff2e6ce7f09cc27bd8170b99ce77c9a9fe67",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "be-17",
+      "file": "audio/scripts/a1-u4-d2-ist-das-dein-hund/be-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 79,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, genau! Tschüss, Mia!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d2"
+      ],
+      "durationMs": 3033,
+      "sizeBytes": 13714,
+      "hash": "sha256:528ab617f0346d2fd8dd056e886c470f3f5f509a4e08e696827100777446b6e4",
+      "pcmSha256": "4e2ec1f2b50e7c17feaf6fd776e2f471d108a0c8805219ea6bc994c58893fa77",
+      "rmsDb": -17.05
     }
   ],
   "characterVoices": {

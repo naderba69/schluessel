@@ -757,7 +757,8 @@
         "om-5",
         "word-tunesien",
         "wer-4",
-        "wo-10"
+        "wo-10",
+        "be-15"
       ]
     },
     {
@@ -950,6 +951,44 @@
       "regeneratedTracks": [
         "tm-2",
         "tr-3"
+      ]
+    },
+    {
+      "word": "Onkel",
+      "forms": [
+        {
+          "espeak": "ˈɔnkəl",
+          "ipa": "ˈɔŋkəl"
+        }
+      ],
+      "referenceIpa": "/ˈɔŋkl̩/",
+      "referenceNote": "خطأ صامت لا حركة (D137): الحركة المنبورة والنبر صحيحان فلا يراه التدقيق الآلي (N-013)، لكن espeak يقرأ n قبل k نوناً [n] في Onkel وحدها — والمرجع /ˈɔŋkl̩/ بالنون الحلقية [ŋ] كما يقرؤها espeak نفسه في Danke وAnker وtrinken. التصحيح يمسّ n وحدها ويُبقي ə كما ينطقها الصوت (لا l̩ مقطعية).",
+      "analogy": "Danke [dˈaŋkə] · Anker [ˈaŋkɜ] · trinken [trˈɪŋkən] — n قبل k في المقطع نفسه تُنطق [ŋ]",
+      "contexts": [
+        "Onkel.",
+        "Nein, das sind mein Onkel und meine Tante."
+      ],
+      "regeneratedTracks": [
+        "word-onkel",
+        "be-6"
+      ]
+    },
+    {
+      "word": "gehört",
+      "forms": [
+        {
+          "espeak": "ɡəhˈœɾt",
+          "ipa": "ɡəhˈøːɾt"
+        }
+      ],
+      "referenceIpa": "/ɡəˈhøːɐ̯t/",
+      "analogy": "gehören [ɡəhˈøːrən] · Ohr [ˈoːɾ] — ö في gehört طويلة كما في gehören، وespeak يقصّرها قبل rt وحدها",
+      "contexts": [
+        "Gehört es dir?",
+        "Das Auto gehört mir."
+      ],
+      "regeneratedTracks": [
+        "be-11"
       ]
     }
   ],

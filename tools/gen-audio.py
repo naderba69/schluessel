@@ -1022,6 +1022,7 @@ def build_all() -> None:
     ("word-grosseltern", "die Großeltern.", "grosseltern", ["a1-u4-d1"]),
     ("word-junge", "der Junge.", "junge", ["a1-u4-d1"]),
     ("word-opa", "der Opa.", "opa", ["a1-u4-d1"]),
+    ("word-lieben", "lieben.", "lieben", ["a1-u4-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

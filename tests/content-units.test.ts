@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(806); // + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(807); // + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -318,6 +318,34 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => practiceQuestions.has(q))).toBe(false);
     // N-053: collocation المعروضة في NetworkLab لا تُسرّب فعل bekommen غير المدروس حتى اليوم.
     expect(ALL_WORDS.find((w) => w.id === "anruf")!.kollocation).toMatchObject({ de: "Der Anruf kommt.", verb: "kommen" });
+  });
+
+  it("u4-d2 (D137): ‑e من أداة المملوك (كـ«ـي» الثابتة) · für mich للملكية (كـ«لي») · فعلان بعد lieben (كـ«أحب أقرأ») — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u4-d2")!;
+    const [endung, fuerMich, liebe] = u.zusammenfassung.warningCards;
+    expect(endung!.commonError.de).toBe("~~mein Katze~~ / ~~mein Familie~~");
+    expect(endung!.correct.de).toBe("meine Katze · meine Familie · mein Hund");
+    expect(endung!.whyArabicSpeakerFails).toContain("«كلبي» و«قطتي» و«عائلتي» بالياء نفسها");
+    expect(endung!.exercise.a).toBe("meine Tasche · mein Auto · meine Eltern");
+    expect(fuerMich!.commonError.de).toContain("~~Das Auto ist für mich.~~");
+    expect(fuerMich!.correct.de).toBe("Das Auto gehört mir. · Das ist mein Auto.");
+    expect(fuerMich!.whyArabicSpeakerFails).toContain("Für mich ist das spät"); // für mich معروفة منذ u2-d2/u3-d3 بمعنى «بالنسبة لي»
+    expect(liebe!.commonError.de).toBe("~~Ich liebe lese.~~");
+    expect(liebe!.correct.de).toBe("Ich lese gern. · Ich liebe meine Familie.");
+    expect(liebe!.whyArabicSpeakerFails).toContain("«أحب أقرأ»");
+    // كانت «~~der mein Bruder~~» بتعليل «أخي بلا أداة بالعربية — والألمانية كذلك» (نقل إيجابي لا خطأ عربي: «كلبي» بلا «ال») ·
+    // و«gehört يجرّ … كما antworten تماماً» (Dativ قبل وقته — الوحدة 8) · و«~~dein Hund~~ (للكلبة?)» · و«جنس المالك لا يهم» (sein للمالك المذكر)
+    const all = JSON.stringify(u.zusammenfassung.warningCards);
+    expect(all).not.toMatch(/der mein Bruder|antworten|للكلبة|جنس المالك لا يهم|gehört mich/);
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // الخيارات لا تجعل جمعاً صحيحاً خطأً: Onkel وSchlüssel جمعهما بالشكل نفسه (meine Onkel = أعمامي) — فلا يُعرض meine Onkel/deine Schlüssel مشتِّتاً إلا مع ist للمفرد
+    const choiceTexts = [...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (Array.isArray((i as { choices?: unknown }).choices) ? ((i as { choices: string[] }).choices) : []));
+    expect(choiceTexts.filter((c) => /^(meine|deine|seine) (Onkel|Schlüssel)$/.test(c))).toEqual([]);
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 3 || l.id === "a1-u4-d1").flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
   it("بطاقات الثقافة (Landeskunde): 12 بطاقة — كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {
