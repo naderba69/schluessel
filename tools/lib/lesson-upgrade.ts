@@ -35,7 +35,7 @@ import {
   type LessonUpgradePlan,
   type Word,
 } from "../../content/schemas/index.js";
-import { CLOSED, contentTokens, deumlaut, knownStems, stem, unknownTokens } from "./vocab-forms.js";
+import { CLOSED, contentTokens, deumlaut, knownStems, stem, stripMorphemeNotation, unknownTokens } from "./vocab-forms.js";
 
 export const PRACTICE_ITEMS_MIN = 12;
 export const PRACTICE_TYPES_MIN = 3;
@@ -85,9 +85,12 @@ export function itemTexts(item: unknown): string[] {
   return out;
 }
 
-/** الكلمات غير المدروسة في نصوص (مرتبة بلا تكرار) */
+/**
+ * الكلمات غير المدروسة في نصوص (مرتبة بلا تكرار). العربية تُمحى أولاً ثم رموز اللواحق (D127) — بهذا الترتيب:
+ * «بـ‑chen» تلتصق فيها الشرطة بحرف عربي (الكشيدة حرف) فلا تُعرف رمزاً إلا بعد محو العربية.
+ */
 export function frontViolations(texts: readonly string[], stems: ReadonlySet<string>, allow: ReadonlySet<string>): string[] {
-  return unknownTokens(germanOnly(texts.join("\n")), stems, allow);
+  return unknownTokens(stripMorphemeNotation(germanOnly(texts.join("\n"))), stems, allow);
 }
 
 const allowSet = (names: readonly string[]) => new Set(names.flatMap((n) => contentTokens(n)));

@@ -10,7 +10,8 @@
     "ar": "تستطيع تحديد التعريف der/die/das من نهاية الاسم"
   },
   "canDoDaily": [
-    "يُنتج التحديد الكامل der/die/das لأسماء اليوم من نهاياتها (شفرة الجنس الاشتقاقية)"
+    "يحدد der/die/das لاسم جديد من نهايته: ‑ung/‑heit/‑keit/‑schaft/‑in ← die · ‑chen/‑um ← das · ‑ling/‑er (للشخص) ← der",
+    "يجد خطأ أداة في نص قصير ويصححه، ويسأل عن معنى كلمة: Es heißt das Mädchen. · Was bedeutet Freundschaft?"
   ],
   "warmup": {
     "cardIds": [
@@ -44,12 +45,16 @@
       "broetchen",
       "kellner",
       "lehrer",
+      "lehrerin",
       "freiheit",
       "moeglichkeit",
       "gesundheit",
       "freundschaft",
       "schmetterling",
-      "zentrum"
+      "zentrum",
+      "text",
+      "fehler",
+      "bedeuten"
     ],
     "grammarArsenalIds": [
       "ars-genuscode"
@@ -58,66 +63,260 @@
       "story-a2-u2-s3"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "ch-ich-laut",
+      "umlaut-o",
+      "z"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "نهاية -ung تعني؟",
+            "q": "___ Rechnung, bitte!",
+            "a": "Die",
+            "why": "‑ung ← die دائماً: die Rechnung · die Zeitung · die Wohnung. وDie بحرف كبير لأنها أول الجملة."
+          },
+          {
+            "q": "___ Freiheit — der, die oder das?",
+            "a": "die",
+            "why": "‑heit ← die: die Freiheit (الحرية) · die Gesundheit (الصحة) — النهاية تحسم قبل المعنى."
+          },
+          {
+            "q": "Das ist ___ Möglichkeit.",
+            "a": "eine",
+            "why": "‑keit ← die، وdie ← eine (درس الأمس): eine Möglichkeit = إمكانيةٌ."
+          },
+          {
+            "q": "___ Kellner ist neu hier.",
+            "a": "Der",
+            "why": "‑er للشخص الذي يعمل شيئاً ← der: der Kellner (النادل) · der Lehrer (المعلم). وDer بحرف كبير أول الجملة."
+          },
+          {
+            "q": "Hier ist ___ Zentrum von Berlin.",
+            "a": "das",
+            "why": "‑um ← das غالباً: das Zentrum — مع أن «المركز» مذكر بالعربية، والعربية بلا محايد أصلاً."
+          },
+          {
+            "q": "Der Text hat drei ___. (أخطاء)",
+            "a": "Fehler",
+            "why": "der Fehler ← الجمع die Fehler بلا تغيير، كـder Schüler ← die Schüler. وFehler اسم بحرف كبير."
+          },
+          {
+            "q": "Der Lehrer — und die ___? (المعلّمة)",
+            "a": "Lehrerin",
+            "why": "‑in للأنثى ← die: der Lehrer ← die Lehrerin — كالتاء في «معلم ← معلمة». أما die Lehrer وحدها فجمع: «المعلمون»."
+          },
+          {
+            "q": "بعد العطس نقول: ___!",
+            "a": "Gesundheit",
+            "why": "Gesundheit! تقال لمن عطس — كقولنا «يرحمك الله»، وحرفياً «الصحة» (die Gesundheit ← ‑heit). ويرد العاطس: Danke!"
+          },
+          {
+            "q": "Ich habe ___ Brötchen. (أداة النكرة)",
+            "a": "ein",
+            "why": "‑chen ← das دائماً، وdas ← ein (درس الأمس) — وبعد haben تبقى ein كما هي مع المحايد: Ich habe ein Brötchen."
+          }
+        ],
+        "interleavedWith": [
+          "wohnung",
+          "haus",
+          "stadt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "fe-1",
+            "speakText": "Yusuf, hier ist ein Text von der Lehrerin. Er hat drei Fehler.",
+            "q": "استمع: ما الذي في نص المعلمة؟",
+            "choices": [
+              "ثلاثة أخطاء",
+              "ثلاث كلمات جديدة",
+              "خطآن"
+            ],
+            "a": "ثلاثة أخطاء",
+            "why": "ein Text von der Lehrerin = نص من المعلمة (die Lehrerin ← ‑in) · Er hat drei Fehler: er يعود على der Text — الضمير يتبع الأداة."
+          },
+          {
+            "audioId": "fe-3",
+            "speakText": "Hier: das Zeitung. Das ist ein Fehler, oder?",
+            "q": "استمع: لينا تقرأ «das Zeitung» — ما الصواب؟",
+            "choices": [
+              "die Zeitung",
+              "das Zeitung",
+              "der Zeitung"
+            ],
+            "a": "die Zeitung",
+            "why": "Das ist ein Fehler, oder? = هذا خطأ، أليس كذلك؟ — و‑ung تحسم: die Zeitung."
+          },
+          {
+            "audioId": "fe-4",
+            "speakText": "Genau! Es heißt die Zeitung — wie die Wohnung.",
+            "q": "استمع: بأي كلمة يقارن يوسف Zeitung؟",
+            "choices": [
+              "die Wohnung",
+              "die Rechnung",
+              "das Haus"
+            ],
+            "a": "die Wohnung",
+            "why": "Es heißt … = الصواب … · wie die Wohnung = مثل die Wohnung: النهاية نفسها ‑ung ← die — وكلمة الأمس Wohnung من الشفرة نفسها."
+          },
+          {
+            "audioId": "fe-5",
+            "speakText": "Und hier: die Mädchen heißt Lena. Das bin ich!",
+            "q": "استمع: عمّن تتكلم الجملة الثانية في النص؟",
+            "choices": [
+              "Lena",
+              "Yusuf",
+              "die Lehrerin"
+            ],
+            "a": "Lena",
+            "why": "die Mädchen heißt Lena = «الفتاة اسمها لينا» بأداة خاطئة · Das bin ich! = هذه أنا! — لينا هي الفتاة في النص."
+          },
+          {
+            "audioId": "fe-6",
+            "speakText": "Fehler Nummer zwei! Es heißt das Mädchen — wie das Brötchen.",
+            "q": "استمع: بأي كلمة يقارن يوسف Mädchen؟",
+            "choices": [
+              "das Brötchen",
+              "die Zeitung",
+              "der Schmetterling"
+            ],
+            "a": "das Brötchen",
+            "why": "‑chen ← das دائماً: das Mädchen · das Brötchen — مع أن «الفتاة» مؤنثة: النهاية تحسم لا المعنى. وFehler Nummer zwei = الخطأ رقم اثنين."
+          },
+          {
+            "audioId": "fe-8",
+            "speakText": "Hier: die Schmetterling. Es heißt der Schmetterling!",
+            "q": "استمع: ما أداة Schmetterling الصحيحة؟",
             "choices": [
               "der",
               "die",
               "das"
             ],
-            "a": "die"
+            "a": "der",
+            "why": "‑ling ← der دائماً: der Schmetterling — مع أن «الفراشة» مؤنثة بالعربية."
           },
           {
-            "q": "«الحساب من فضلك»؟",
-            "a": "Die Rechnung, bitte!"
-          }
-        ],
-        "interleavedWith": [
-          "wohnen",
-          "sprache"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "das Mädchen — ما التعريف؟ ولماذا؟",
-            "a": "das — لأن التصغير -chen دائماً das"
-          },
-          {
-            "q": "«النادل يحضر الحساب»؟",
-            "a": "Der Kellner bringt die Rechnung."
-          }
-        ],
-        "interleavedWith": [
-          "stadt",
-          "leben"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "نهاية -er (الفاعل) تعني؟",
+            "audioId": "fe-9",
+            "speakText": "Genau! Und das Wort Freundschaft — kennst du das?",
+            "q": "استمع: ماذا تسأل لينا؟",
             "choices": [
-              "der",
-              "die",
-              "das"
+              "هل تعرف كلمة Freundschaft؟",
+              "ما معنى Fehler؟",
+              "أين الخطأ الثالث؟"
             ],
-            "a": "der"
+            "a": "هل تعرف كلمة Freundschaft؟",
+            "why": "kennst du das? = هل تعرفها؟ (kennen ← du kennst) · die Freundschaft ← ‑schaft ← die، ومنها der Freund — والنهاية الأخيرة تحكم."
           },
           {
-            "q": "المعلّمة (مؤنث)؟",
-            "a": "die Lehrerin"
+            "audioId": "fe-11",
+            "speakText": "Du und ich — das ist Freundschaft!",
+            "q": "استمع: كيف تشرح لينا معنى Freundschaft؟",
+            "choices": [
+              "بمثال: أنت وأنا",
+              "بكلمة إنجليزية",
+              "لا تشرحه"
+            ],
+            "a": "بمثال: أنت وأنا",
+            "why": "Du und ich — das ist Freundschaft! = أنت وأنا — هذه صداقة! · die Freundschaft = الصداقة: Freund + ‑schaft."
+          }
+        ],
+        "interleavedWith": [
+          "freund",
+          "freundin",
+          "wort"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Fehler.",
+              "drei",
+              "hat",
+              "Text",
+              "Der"
+            ],
+            "a": "Der Text hat drei Fehler.",
+            "why": "الفعل hat ثانياً بعد الفاعل Der Text · وder Fehler جمعه Fehler بلا تغيير."
+          },
+          {
+            "tokens": [
+              "Lena.",
+              "heißt",
+              "Mädchen",
+              "Das"
+            ],
+            "a": "Das Mädchen heißt Lena.",
+            "why": "das Mädchen (‑chen ← das) ثم الفعل heißt ثانياً — والجملة المصححة من نص المعلمة."
+          },
+          {
+            "tokens": [
+              "Freiheit?",
+              "bedeutet",
+              "Was"
+            ],
+            "a": "Was bedeutet Freiheit?",
+            "why": "السؤال بـWas ثم الفعل bedeutet مباشرة: Was bedeutet …? = ماذا تعني …؟"
+          },
+          {
+            "tokens": [
+              "Lehrerin.",
+              "die",
+              "ist",
+              "Das"
+            ],
+            "a": "Das ist die Lehrerin.",
+            "why": "Das ist … = هذه … · die Lehrerin (‑in ← die) — والفعل ist ثانياً."
+          },
+          {
+            "tokens": [
+              "mich.",
+              "für",
+              "Möglichkeit",
+              "eine",
+              "ist",
+              "Das"
+            ],
+            "a": "Das ist eine Möglichkeit für mich.",
+            "why": "die Möglichkeit (‑keit) ← eine Möglichkeit · für mich = بالنسبة لي — في آخر الجملة."
+          }
+        ],
+        "interleavedWith": [
+          "schuelerin",
+          "studentin",
+          "kurs"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "fe-2",
+            "speakText": "Drei Fehler? Wo?",
+            "a": "Drei Fehler? Wo?",
+            "why": "Fehler اسم ⇐ حرف كبير، وجمعه كمفرده · وبعد ? يبدأ السؤال التالي Wo بحرف كبير."
+          },
+          {
+            "audioId": "fe-7",
+            "speakText": "Und Fehler Nummer drei? Wo ist er?",
+            "a": "Und Fehler Nummer drei? Wo ist er?",
+            "why": "Fehler وNummer اسمان ⇐ حرف كبير · Wo ist er? — er يعود على der Fehler: الضمير يتبع الأداة."
+          },
+          {
+            "audioId": "fe-10",
+            "speakText": "Nein. Was bedeutet Freundschaft?",
+            "a": "Nein. Was bedeutet Freundschaft?",
+            "why": "bedeutet تُكتب eu وتُنطق «أوي» · وFreundschaft اسم ⇐ حرف كبير، وsch ثلاثة أحرف لصوت واحد."
           }
         ],
         "interleavedWith": [],
@@ -130,11 +329,13 @@
         "ar": "تحديد الجنس من نهاية الكلمة"
       },
       "situation": {
-        "de": "Im Kurs: neue Wörter auf der Tafel",
-        "ar": "في الدورة: كلمات جديدة على السبورة"
+        "de": "Im Kurs: neue Wörter in einem Text",
+        "ar": "في الدورة: كلمات جديدة في نص"
       },
       "successCriteria": [
-        "يحدد der/die/das لـ8 كلمات من نهاياتها ويشرح القاعدة بجملة"
+        "يحدد der/die/das لثماني كلمات جديدة من نهاياتها ويذكر النهاية: die Zeitung (‑ung) · das Mädchen (‑chen) · der Schmetterling (‑ling)",
+        "يجد خطأ أداة في نص قصير ويصححه بجملة: Es heißt das Mädchen.",
+        "يسأل عن معنى كلمة: Was bedeutet Freundschaft?"
       ]
     }
   },
@@ -149,21 +350,49 @@
       {
         "items": [
           {
-            "q": "die ___ (Zeitung) — ما التعريف؟",
+            "q": "___ Gesundheit (der/die/das)",
+            "a": "die",
             "choices": [
               "der",
               "die",
               "das"
             ],
-            "a": "die"
+            "why": "‑heit ← die دائماً: die Gesundheit · die Freiheit."
           },
           {
-            "q": "«الفتاة تتعلم الألمانية»؟",
-            "a": "Das Mädchen lernt Deutsch."
+            "q": "«الفتاة» بالألمانية — مع أداة التعريف؟",
+            "a": "das Mädchen",
+            "why": "‑chen ← das دائماً — مع أن «الفتاة» مؤنثة بالعربية: النهاية تحسم لا المعنى."
           },
           {
-            "q": "نهاية -chen تعني؟",
-            "a": "das دائماً"
+            "q": "صحّح: ~~Das Zeitung ist neu.~~",
+            "a": "Die Zeitung ist neu.",
+            "why": "‑ung ← die: die Zeitung — وDie بحرف كبير أول الجملة."
+          },
+          {
+            "q": "der Text = ?",
+            "a": "النص",
+            "choices": [
+              "النص",
+              "الخطأ",
+              "الكلمة"
+            ],
+            "why": "der Text = النص · der Fehler = الخطأ · das Wort = الكلمة."
+          },
+          {
+            "q": "der Lehrer → المؤنث؟",
+            "a": "die Lehrerin",
+            "why": "‑in للأنثى ← die: die Lehrerin — أما die Lehrer فجمع: «المعلمون»."
+          },
+          {
+            "q": "___ Zentrum (der/die/das)",
+            "a": "das",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "why": "‑um ← das غالباً: das Zentrum — مع أن «المركز» مذكر بالعربية."
           }
         ],
         "passingScore": 0.75
@@ -171,21 +400,48 @@
       {
         "items": [
           {
-            "q": "«الصداقة»؟",
-            "a": "die Freundschaft"
-          },
-          {
-            "q": "نهاية -keit/-heit/-schaft تعني؟",
+            "q": "___ Freundschaft (der/die/das)",
+            "a": "die",
             "choices": [
               "der",
               "die",
               "das"
             ],
-            "a": "die"
+            "why": "‑schaft ← die: die Freundschaft — مع أن أصلها der Freund: النهاية الأخيرة تحكم."
           },
           {
-            "q": "«المعلّمة»؟",
-            "a": "die Lehrerin"
+            "q": "«الفراشة» بالألمانية — مع أداة التعريف؟",
+            "a": "der Schmetterling",
+            "why": "‑ling ← der — مع أن «الفراشة» مؤنثة بالتاء في العربية: الشفرة من الكلمة الألمانية لا من ترجمتها."
+          },
+          {
+            "q": "صحّح: ~~Das Wohnung ist neu.~~",
+            "a": "Die Wohnung ist neu.",
+            "why": "‑ung ← die: die Wohnung (كلمة الأمس) — من الشفرة نفسها."
+          },
+          {
+            "q": "bedeuten = ?",
+            "a": "يعني",
+            "choices": [
+              "يعني",
+              "يعرف",
+              "يكتب"
+            ],
+            "why": "bedeuten = يعني: Was bedeutet …? = ماذا تعني …؟ · kennen = يعرف · schreiben = يكتب."
+          },
+          {
+            "q": "Das ist ___ Fehler.",
+            "a": "ein",
+            "choices": [
+              "ein",
+              "eine"
+            ],
+            "why": "der Fehler ← ein Fehler (der ← ein — درس الأمس): ‑er هنا مذكر أيضاً."
+          },
+          {
+            "q": "«المعلّم» بالألمانية — مع أداة التعريف؟",
+            "a": "der Lehrer",
+            "why": "‑er للشخص الذي يعمل شيئاً ← der: der Lehrer · der Kellner · der Schüler."
           }
         ],
         "passingScore": 0.75
@@ -193,20 +449,44 @@
       {
         "items": [
           {
-            "q": "«الفراشة»؟",
-            "a": "der Schmetterling"
-          },
-          {
-            "q": "«المركز» — das أم der؟",
+            "q": "___ Möglichkeit (der/die/das)",
+            "a": "die",
             "choices": [
-              "das Zentrum",
-              "der Zentrum"
+              "der",
+              "die",
+              "das"
             ],
-            "a": "das Zentrum"
+            "why": "‑keit ← die دائماً: die Möglichkeit — كـ‑heit."
           },
           {
-            "q": "«الخبزة الصغيرة»؟",
-            "a": "das Brötchen"
+            "q": "«الخبزة الصغيرة» بالألمانية — مع أداة التعريف؟",
+            "a": "das Brötchen",
+            "why": "‑chen ← das: das Brötchen — نهاية تصغير، والتصغير محايد دائماً."
+          },
+          {
+            "q": "صحّح: ~~Das ist eine Schmetterling.~~",
+            "a": "Das ist ein Schmetterling.",
+            "why": "‑ling ← der، وder ← ein (درس الأمس): ein Schmetterling — لا eine، مع أن «فراشة» مؤنثة بالعربية."
+          },
+          {
+            "q": "der Fehler = ?",
+            "a": "الخطأ",
+            "choices": [
+              "الخطأ",
+              "النص",
+              "السؤال"
+            ],
+            "why": "der Fehler = الخطأ، وجمعه die Fehler بلا تغيير · der Text = النص · die Frage = السؤال."
+          },
+          {
+            "q": "«الفاتورة» بالألمانية — مع أداة التعريف؟",
+            "a": "die Rechnung",
+            "why": "‑ung ← die: die Rechnung — وDie Rechnung, bitte! = الحساب من فضلك."
+          },
+          {
+            "q": "«النادل» بالألمانية — مع أداة التعريف؟",
+            "a": "der Kellner",
+            "why": "‑er للشخص الذي يعمل شيئاً ← der: der Kellner."
           }
         ],
         "passingScore": 0.75
@@ -215,53 +495,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die Endung verrät das Genus: -ung/-heit/-keit/-schaft = die, -chen/-lein = das, -er/-ling = der — dein erster Genuscode!",
-      "ar": "النهاية تكشف الجنس: -ung/-heit/-keit/-schaft = die، -chen/-lein = das، -er/-ling = der — أول شفرة جنس لديك!"
+      "de": "Heute: die Zeitung · die Freiheit · die Lehrerin · das Mädchen · das Zentrum · der Schmetterling · der Lehrer — Der Text hat drei Fehler. · Was bedeutet Freundschaft?",
+      "ar": "اليوم: النهاية تكشف الجنس — ‑ung و‑heit و‑keit و‑schaft و‑in ← die · ‑chen ← das دائماً و‑um غالباً · ‑ling و‑er للشخص ← der. والأداة من الكلمة الألمانية لا من ترجمتها: das Mädchen وder Schmetterling مع أن «الفتاة» و«الفراشة» مؤنثتان. وست عشرة كلمة جديدة، منها النص والخطأ ويعني والمعلّمة!"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~die Mädchen~~ (لأنها فتاة)",
-          "ar": "التصغير -chen = das دائماً"
+          "de": "~~die Mädchen~~ (للفتاة الواحدة)",
+          "ar": "«الفتاة» مؤنثة ⇐ die"
         },
-        "whyArabicSpeakerFails": "«الفتاة» مؤنثة في العربية فيُخمَّن die — لكن النهاية -chen تجبر الجنس على das مهما كان المعنى (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "في العربية يتبع جنسُ الاسم معناه في الأشخاص: «الفتاة» مؤنثة، فيختار المتعلم die (das Mädchen = «هي» — خريطة التداخل 10‑ي). والألمانية تحسم هنا بالنهاية لا بالمعنى: ‑chen نهاية تصغير، والتصغير محايد دائماً ⇐ das Mädchen. أما die Mädchen فصحيحة لكن للجمع: «الفتيات».",
         "correct": {
-          "de": "das Mädchen",
-          "ar": "الفتاة (das — لأن -chen)"
+          "de": "Das Mädchen heißt Lena.",
+          "ar": "الفتاة اسمها لينا."
         },
         "exercise": {
-          "q": "صحّح: ~~die Mädchen heißt Anna.~~",
-          "a": "Das Mädchen heißt Anna."
+          "q": "صحّح: ~~Die Mädchen ist sechzehn.~~",
+          "a": "Das Mädchen ist sechzehn."
         }
       },
       {
         "commonError": {
-          "de": "~~das Zeitung~~ / ~~der Freundschaft~~",
-          "ar": "-ung/-heit/-keit/-schaft = die"
+          "de": "~~die Schmetterling~~",
+          "ar": "«الفراشة» مؤنثة بالتاء ⇐ die"
         },
-        "whyArabicSpeakerFails": "العربية بلا أدوات جنس؛ العربي يخمّن عشوائياً — الشفرة تحسم: النهايات الأربعة die بلا استثناء تقريباً (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "المتعلم يترجم ثم ينقل جنس الكلمة العربية: «فراشة» بالتاء المربوطة مؤنثة ⇐ die. والتاء المربوطة شفرةُ نهايةٍ فعلاً — لكنها شفرة العربية؛ والشفرة الألمانية تُقرأ من الكلمة الألمانية نفسها: ‑ling ⇐ der دائماً. قد يتفق الجنسان (جريدة/die Zeitung) وقد يختلفان (فراشة/der Schmetterling) — الجنس العربي ليس دليلاً (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "die Zeitung / die Freundschaft",
-          "ar": "الجريدة / الصداقة (die)"
+          "de": "der Schmetterling",
+          "ar": "الفراشة (‑ling ← der)"
         },
         "exercise": {
-          "q": "حدّد: Zeitung — der/die/das?",
-          "a": "die (لأن -ung)"
+          "q": "صحّح: ~~Die Schmetterling ist hier.~~",
+          "a": "Der Schmetterling ist hier."
         }
       },
       {
         "commonError": {
-          "de": "~~die Lehrer~~ (للمعلّمة)",
-          "ar": "المؤنث يضيف -in"
+          "de": "~~der Zentrum~~",
+          "ar": "«المركز» مذكر — ولا محايد في العربية"
         },
-        "whyArabicSpeakerFails": "«المعلّمة» بالعربية بالتأنيث فقط؛ الألماني يغيّر الكلمة نفسها: der Lehrer ← die Lehrerin — وsex الحكم يبقى der للمذكر (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تعرف جنسين فقط، مذكراً ومؤنثاً، ولا محايد فيها أصلاً؛ فإذا كانت الترجمة مذكرة («المركز») اختار المتعلم der ولا يخطر له das. والألمانية فيها جنس ثالث بشفراته: ‑um ⇐ das غالباً (das Zentrum)، و‑chen ⇐ das دائماً (das Brötchen). الجنس العربي ليس دليلاً، وdas جنس كامل لا استثناء (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "die Lehrerin",
-          "ar": "المعلّمة (-in)"
+          "de": "das Zentrum",
+          "ar": "المركز (‑um ← das)"
         },
         "exercise": {
-          "q": "صحّح (المعلّمة): ~~die Lehrer~~",
-          "a": "die Lehrerin"
+          "q": "صحّح: ~~Der Zentrum ist dort.~~",
+          "a": "Das Zentrum ist dort."
         }
       }
     ],
@@ -272,12 +552,16 @@
       "broetchen",
       "kellner",
       "lehrer",
+      "lehrerin",
       "freiheit",
       "moeglichkeit",
       "gesundheit",
       "freundschaft",
       "schmetterling",
-      "zentrum"
+      "zentrum",
+      "text",
+      "fehler",
+      "bedeuten"
     ]
   },
   "gReferences": {
@@ -288,7 +572,8 @@
     ],
     "wiktionary": [
       "https://de.wiktionary.org/wiki/-chen",
-      "https://de.wiktionary.org/wiki/-ung"
+      "https://de.wiktionary.org/wiki/-ung",
+      "https://de.wiktionary.org/wiki/-ling"
     ],
     "goethe": []
   },
@@ -302,18 +587,30 @@
     "word-broetchen",
     "word-kellner",
     "word-lehrer",
+    "word-lehrerin",
     "word-freiheit",
     "word-moeglichkeit",
     "word-gesundheit",
     "word-freundschaft",
     "word-schmetterling",
-    "word-zentrum"
+    "word-zentrum",
+    "word-text",
+    "word-fehler",
+    "word-bedeuten"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 2 — Genuscode (Derivation)",
     "goetheWordListOverlap": [
-      "zeitung"
+      "zeitung",
+      "rechnung",
+      "maedchen",
+      "broetchen",
+      "lehrer",
+      "lehrerin",
+      "text",
+      "fehler",
+      "bedeuten"
     ]
   }
 }

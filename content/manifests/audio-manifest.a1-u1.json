@@ -15607,6 +15607,86 @@
       "rmsDb": -17.06
     },
     {
+      "id": "word-text",
+      "file": "words/audio/de-DE/word-text.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Text.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 827,
+      "sizeBytes": 4039,
+      "hash": "sha256:34743c8571763c38acb68c31cc050ab1b68ab9262408ce2c7457cd871df0988c",
+      "pcmSha256": "579e1d27eb29b5ef7ea8ceb6b5257f048382abc57894210879ffb4704f1645c1",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "word-fehler",
+      "file": "words/audio/de-DE/word-fehler.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Fehler.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4691,
+      "hash": "sha256:2b1485eaca459311c805eab00254bb14da8a301d078fb9e0c0b5cc1004ca73fa",
+      "pcmSha256": "608801ca7adbd564d235c65043109e32fcabdcecf0e0c5ba33c7b5389ecbfc11",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-bedeuten",
+      "file": "words/audio/de-DE/word-bedeuten.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "bedeuten.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 1187,
+      "sizeBytes": 5312,
+      "hash": "sha256:3f939110edb39052ec00f322ba1fad7efdc3d6514430d84cbe2bace0503717a9",
+      "pcmSha256": "f1a4afcc91ca26520ea79f586f7fba3dfc29e7fa5155779ffac2714c1ec42042",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "word-lehrerin",
+      "file": "words/audio/de-DE/word-lehrerin.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Lehrerin.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 1013,
+      "sizeBytes": 4990,
+      "hash": "sha256:73e6c8dfbc6752f68f6be2215e83a97fe80717b38b738dd76fe1a471466fd9e0",
+      "pcmSha256": "862d3bd19bdf312c39a77925c09432b4d2d6da1f9dec82cdca9338d3ba349eeb",
+      "rmsDb": -17
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -18498,6 +18578,248 @@
       "hash": "sha256:7fd6f08fa4cd39981d08f107e89247ffe525cf8a655dc1e18ae8a278ade88857",
       "pcmSha256": "cbcefd0a06007b3c965fffb7dbeb871de833d77fc4395df6c34830efc1d5966b",
       "rmsDb": -17.24
+    },
+    {
+      "id": "fe-1",
+      "file": "audio/scripts/a1-u2-d3-drei-fehler/fe-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, hier ist ein Text von der Lehrerin. Er hat drei Fehler.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 4952,
+      "sizeBytes": 22869,
+      "hash": "sha256:120d4cb7234d5df2bcfa21305ebe48e286c3ad1401651645cb1eb14081405088",
+      "pcmSha256": "d8daed169fe10031dac3479c3763aaa741c4f39fb15dc8c8928e5a02ba319c43",
+      "rmsDb": -17.36
+    },
+    {
+      "id": "fe-2",
+      "file": "audio/scripts/a1-u2-d3-drei-fehler/fe-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 91,
+        "lengthScale": 1.32
+      },
+      "textDe": "Drei Fehler? Wo?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 1976,
+      "sizeBytes": 8678,
+      "hash": "sha256:18513aef54ce29bd1628b30cd9de629eec7ba55dc28679a3acea1820b69a9983",
+      "pcmSha256": "1de113e600ca3c31cd5720a7b14a49cdcf1a1d506389bc788ef3c53421dfaccc",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "fe-3",
+      "file": "audio/scripts/a1-u2-d3-drei-fehler/fe-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hier: das Zeitung. Das ist ein Fehler, oder?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 3784,
+      "sizeBytes": 17588,
+      "hash": "sha256:27a5b4c2af6c00efde8266e24bd0fef1922a4400e8bedf112da5f33c6496b829",
+      "pcmSha256": "80a760ad56b5f1d6e0512d523fbf898b7e1b1f6ee4e16966d5d37bb610e3733c",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "fe-4",
+      "file": "audio/scripts/a1-u2-d3-drei-fehler/fe-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Es heißt die Zeitung — wie die Wohnung.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 3207,
+      "sizeBytes": 14608,
+      "hash": "sha256:f7fe4a478d86f146bef4cf027a13937bfe11cfa9635ee590672f66a4022aa1bf",
+      "pcmSha256": "849a7bc5c6f4e178788cbc75989202e7349193e2e2a837efdf7f136a2d7d7742",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "fe-5",
+      "file": "audio/scripts/a1-u2-d3-drei-fehler/fe-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und hier: die Mädchen heißt Lena. Das bin ich!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 3960,
+      "sizeBytes": 18259,
+      "hash": "sha256:de158adb339ba0278c72b067fb729502021e05ee71bf8ba3f9c885f122353150",
+      "pcmSha256": "d2453255d399128e6302ca52d893249a52826836a8f084cf3a943ba07d7bf066",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "fe-6",
+      "file": "audio/scripts/a1-u2-d3-drei-fehler/fe-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Fehler Nummer zwei! Es heißt das Mädchen — wie das Brötchen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 4171,
+      "sizeBytes": 19108,
+      "hash": "sha256:7f3a9b620a8b118355627a0b0cb1129b9ed28c0b13976c240437d51d4cde28a2",
+      "pcmSha256": "0c421e489562ab932599e81a02b08be10772df901483c9e32c495a2bead7a7dc",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "fe-7",
+      "file": "audio/scripts/a1-u2-d3-drei-fehler/fe-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 161,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und Fehler Nummer drei? Wo ist er?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 2616,
+      "sizeBytes": 12246,
+      "hash": "sha256:465be523fb6a4011adba6f3ebaa76580ba9110173ff8c0d47776ad3ed1de39af",
+      "pcmSha256": "c155dd379cc80e5d1eb966322e56494af30e47650c87ad8b7e8f6c76ae4bdefd",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "fe-8",
+      "file": "audio/scripts/a1-u2-d3-drei-fehler/fe-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hier: die Schmetterling. Es heißt der Schmetterling!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 3207,
+      "sizeBytes": 14874,
+      "hash": "sha256:34a6677f6db72132f05890334dbd92f371c843399901afeb6c7f1b77bbb8e9a2",
+      "pcmSha256": "c46578bd0a51325d0d5046905dde5b959f902e1c2022659b6bce8b352d891996",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "fe-9",
+      "file": "audio/scripts/a1-u2-d3-drei-fehler/fe-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 109,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Und das Wort Freundschaft — kennst du das?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 4392,
+      "sizeBytes": 20278,
+      "hash": "sha256:77ed6ae0c36ed808a233ed948ddddb72cd7142984db71fd0b2bfaeb52c59139e",
+      "pcmSha256": "0298c27e9e9cd994188bd9a9f16b551a6f3f133e2f3bc4f6aa588ad8394b1959",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "fe-10",
+      "file": "audio/scripts/a1-u2-d3-drei-fehler/fe-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 79,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein. Was bedeutet Freundschaft?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 3044,
+      "sizeBytes": 13452,
+      "hash": "sha256:f3ffa9219378418bbbe7803f64185476ed1ff503bec96e81bc48d713d7c88a22",
+      "pcmSha256": "5caadb32e6cb666963853913099e7981cb866fe02314159e022ecc59cd243253",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "fe-11",
+      "file": "audio/scripts/a1-u2-d3-drei-fehler/fe-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du und ich — das ist Freundschaft!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d3"
+      ],
+      "durationMs": 2776,
+      "sizeBytes": 12711,
+      "hash": "sha256:22a21ace5f44284f63cd2d74921189668a0ea9477e2967381f72771619292579",
+      "pcmSha256": "dd5769748771adc8d488e36a561777805b96c09637a9b8626c2aa7ccf3370fea",
+      "rmsDb": -17.35
     }
   ],
   "characterVoices": {

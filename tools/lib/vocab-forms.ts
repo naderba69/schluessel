@@ -42,6 +42,20 @@ export function knownStems(words: readonly Word[]): Set<string> {
   return out;
 }
 
+/**
+ * D127: اللاحقة أو النهاية المكتوبة بشرطة في أولها (‑ung · ‑chen · ‑st) رمزٌ صرفي لا كلمة — قواعد الجنس
+ * والتصريف والجمع تكتبها هكذا («‑ung ← die»). كان المقطِّع يجعل «‑chen» كلمةَ «chen» غير المدروسة.
+ * تسقط من الفحص بشرطين معاً: (1) الشرطة أول الرمز لا داخل كلمة (E-Mail تبقى «mail» · Zeit‑ung تبقى «zeit»)
+ * (2) الرمز حروف صغيرة من قائمة مغلقة للواحق الألمانية — فلا تصير الشرطة باباً خلفياً لكلمة غير مدروسة
+ * (‑Mail · ‑battle تبقيان مخالفة). الحرف الواحد (‑e · ‑n · ‑t · ‑s) يُهمَل أصلاً في contentTokens.
+ */
+export const MORPHEMES: ReadonlySet<string> = new Set(`ung heit keit schaft in innen chen lein ling um er ion tät ei ik ur
+ment nis tum ismus ist ent ant or en nen st et est te ten ieren zig isch lich ig`.split(/\s+/));
+const MORPHEME_NOTATION = /(?<![\p{L}\p{N}])[-\u2010\u2011\u2013](\p{Ll}+)(?![\p{L}\p{N}])/gu;
+/** يمحو رموز اللواحق المعروفة (بشرطة أولها) ويترك ما سواها كما هو */
+export const stripMorphemeNotation = (text: string): string =>
+  text.replace(MORPHEME_NOTATION, (m: string, suffix: string) => (MORPHEMES.has(suffix) ? " " : m));
+
 /** رموز المحتوى في نص ألماني: حروف فقط (الأرقام والرموز تسقط) · حرف واحد يُهمل (a/b في الخيارات) */
 export function contentTokens(text: string): string[] {
   return text.toLowerCase().replace(/'s\b/g, "").replace(/[^\p{L}\s]/gu, " ").split(/\s+/).filter((t) => t.length > 1);

@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(780); // + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
+    expect(ALL_WORDS.length).toBe(784); // + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -142,6 +142,25 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.zusammenfassung.warningCards.some((c) => /über|Muttersprache/.test(c.commonError.de))).toBe(false);
     // N-018: لا كلمة من دروس سابقة تُعرض «جديدة» هنا
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 || l.id === "a1-u2-d1").flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u2-d3 (D127): الجنس من النهاية لا من المعنى (das Mädchen) ولا من الترجمة (der Schmetterling) · ولا محايد في العربية (das Zentrum)", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u2-d3")!;
+    const [natural, translated, neuter] = u.zusammenfassung.warningCards;
+    expect(natural!.commonError.de).toContain("die Mädchen");
+    expect(natural!.correct.de).toBe("Das Mädchen heißt Lena.");
+    expect(natural!.whyArabicSpeakerFails).toContain("das Mädchen = «هي»");
+    expect(translated!.commonError.de).toContain("die Schmetterling");
+    expect(translated!.whyArabicSpeakerFails).toContain("التاء المربوطة");
+    expect(neuter!.commonError.de).toContain("der Zentrum");
+    expect(neuter!.exercise.a).toBe("Das Zentrum ist dort.");
+    // كانت بطاقة «die Lehrer (للمعلّمة)» بتعليل لا يصح («المعلّمة بالعربية بالتأنيث فقط؛ الألماني يغيّر الكلمة نفسها» —
+    // والعربية تغيّر الكلمة نفسها بالتاء: معلم ← معلمة) وفيه كلمة دخيلة «sex»
+    expect(u.zusammenfassung.warningCards.some((c) => /Lehrer/.test(c.commonError.de) || /sex/.test(c.whyArabicSpeakerFails))).toBe(false);
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 || l.id === "a1-u2-d1" || l.id === "a1-u2-d2").flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
