@@ -15527,6 +15527,26 @@
       "rmsDb": -17.04
     },
     {
+      "id": "word-international",
+      "file": "words/audio/de-DE/word-international.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "international.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u2-d1"
+      ],
+      "durationMs": 1361,
+      "sizeBytes": 6440,
+      "hash": "sha256:e7b7563453b9e831a9414dda2abea91fc13b7007a29f93d7cfd1a295e12493cc",
+      "pcmSha256": "74cc4860aa861b857de42b909803315c17b5b04b30e8b4a3f9acdf8221a637b5",
+      "rmsDb": -17.02
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -17956,6 +17976,226 @@
       "hash": "sha256:b50ee670a185018eca3152c59539b78ee3bc244fdfbffa61692f6f1bbe625235",
       "pcmSha256": "d6d9e0e52c2af2e80579928219a8b84361411e0a02a8e96109befcd53a651a18",
       "rmsDb": -17.23
+    },
+    {
+      "id": "wo-1",
+      "file": "audio/scripts/a1-u2-d1-wo-wohnst-du/wo-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 92,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, der Kurs ist international!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d1"
+      ],
+      "durationMs": 3272,
+      "sizeBytes": 15437,
+      "hash": "sha256:5479ade9888cd8d05d3c77e8b66025b5599140cb28fc37714abe236a230e1252",
+      "pcmSha256": "65f97206e0fd70cb703d0f6c179e1f31557941455ac95351da30ba47d055f64d",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "wo-2",
+      "file": "audio/scripts/a1-u2-d1-wo-wohnst-du/wo-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Die Leute kommen aus Polen, aus Russland und aus den Niederlanden.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d1"
+      ],
+      "durationMs": 5076,
+      "sizeBytes": 23505,
+      "hash": "sha256:579a547693957c9dea3b1f609814a49fb7390ce02069990cea6281dccf876709",
+      "pcmSha256": "198dd935492d1c415e9e81893e8fba5ac90ed457089514b48936e0f1a678042f",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "wo-3",
+      "file": "audio/scripts/a1-u2-d1-wo-wohnst-du/wo-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 133,
+        "lengthScale": 1.32
+      },
+      "textDe": "Woher kommt der Student hier?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d1"
+      ],
+      "durationMs": 2248,
+      "sizeBytes": 11015,
+      "hash": "sha256:fe3307187985d681abbe2e56becb356b29d3a51d721efd3e3e2851c2f2476029",
+      "pcmSha256": "db2cb57759000328909847fe22bf85488b9712e6f40e1aaf3521c959b2b5ce2c",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "wo-4",
+      "file": "audio/scripts/a1-u2-d1-wo-wohnst-du/wo-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Aus Portugal. Und er wohnt auch dort.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d1"
+      ],
+      "durationMs": 3010,
+      "sizeBytes": 13776,
+      "hash": "sha256:d1a742dbaf48480b04633faef2e86dd08013e7aacc049f80f75b5564ce677cb8",
+      "pcmSha256": "3094a3ad6611db991011184c93cce599db6845caf19e0f249c5d98123f881376",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "wo-5",
+      "file": "audio/scripts/a1-u2-d1-wo-wohnst-du/wo-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die Studentin hier kommt aus Griechenland, aber sie wohnt in Österreich.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d1"
+      ],
+      "durationMs": 5192,
+      "sizeBytes": 24171,
+      "hash": "sha256:ddf3f9b2d505e17722fb0ebed452206884d67b36201b733143c173ca742530eb",
+      "pcmSha256": "85d675b2ca911fc422345d0989f70f775b83580dd69182ae2b5ccc8d12bac510",
+      "rmsDb": -17.36
+    },
+    {
+      "id": "wo-6",
+      "file": "audio/scripts/a1-u2-d1-wo-wohnst-du/wo-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 165,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wie du! Du kommst aus Deutschland, aber du wohnst in der Schweiz.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d1"
+      ],
+      "durationMs": 4368,
+      "sizeBytes": 19473,
+      "hash": "sha256:395fead3a30b884e56eb79f60b5189242bb0d5b9865e1e5c28f017599b35ef55",
+      "pcmSha256": "c8350f260149fd1f442dad9dfa4b21369a182f4cca23cad1ef5b9a9b7cbabac7",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "wo-7",
+      "file": "audio/scripts/a1-u2-d1-wo-wohnst-du/wo-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau. Und wo wohnst du jetzt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d1"
+      ],
+      "durationMs": 2456,
+      "sizeBytes": 11559,
+      "hash": "sha256:85c4dd73ddd621661298257743880614381695c8080fe0f64179ec32be6cff9a",
+      "pcmSha256": "e64b25c51fe0ee14eaf6758951bd342c9ab0e732efed7beae1cc93c54400aa29",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "wo-8",
+      "file": "audio/scripts/a1-u2-d1-wo-wohnst-du/wo-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hier in Berlin.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d1"
+      ],
+      "durationMs": 1245,
+      "sizeBytes": 5929,
+      "hash": "sha256:4f052fb8bcc4cd02b43dce1cae96587fc0a236d0484572afb0bef8887dea4bcb",
+      "pcmSha256": "9b37669df81cadcc3afc95194fd58660d57080d37381a116c5d6829d33fe11d2",
+      "rmsDb": -17
+    },
+    {
+      "id": "wo-9",
+      "file": "audio/scripts/a1-u2-d1-wo-wohnst-du/wo-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 176,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wo ist Nabil? Auch dort in Berlin?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d1"
+      ],
+      "durationMs": 2728,
+      "sizeBytes": 12777,
+      "hash": "sha256:538b3c1973a97835a54155abe7183ebfcefa804bb6882a958ad6c84db17b7b98",
+      "pcmSha256": "b920b9ac698cfb4e91f59abe8c3e750d5c8edb40883a2e34c92cb57eb9f69466",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "wo-10",
+      "file": "audio/scripts/a1-u2-d1-wo-wohnst-du/wo-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, er wohnt in Tunesien. Dort ist er Schüler.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u2-d1"
+      ],
+      "durationMs": 4182,
+      "sizeBytes": 18571,
+      "hash": "sha256:f32e52ad2f8f693f3ba71a48150d02ffdcb85451f2a4dd28e631cf2030b24fcb",
+      "pcmSha256": "6dd554ac8df859895c2b9515c95800a97f7bcfb518afecbfda388c0e8c0f16fe",
+      "rmsDb": -17.03
     }
   ],
   "characterVoices": {

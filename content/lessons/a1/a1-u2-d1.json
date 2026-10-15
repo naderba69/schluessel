@@ -10,13 +10,14 @@
     "ar": "تستطيع تسمية ستة بلدان والسؤال: من أين أنت؟ أين تسكن؟"
   },
   "canDoDaily": [
-    "يسمّي 6 بلدان ويسأل «من أين؟»"
+    "يسأل بـwo عن المكان وبـwoher عن الأصل ويجيب بـin وaus",
+    "يقول أين يسكن هو وغيره بـhier وdort والفعل ثانياً"
   ],
   "warmup": {
     "cardIds": [
-      "frankreich",
-      "tuerkei",
-      "wohnen"
+      "woher",
+      "wohnen",
+      "schweiz"
     ]
   },
   "einstieg": {
@@ -47,9 +48,9 @@
       "europa",
       "welt",
       "wo",
-      "woher",
       "hier",
-      "dort"
+      "dort",
+      "international"
     ],
     "grammarArsenalIds": [
       "ars-wo-woher"
@@ -58,50 +59,244 @@
       "story-a2-u2-s1"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "umlaut-o",
+      "ch-ich-laut",
+      "auslaut-d"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«من أين أنت؟» بأداة السؤال؟",
-            "a": "Woher kommst du?"
+            "q": "___ kommst du? — Aus Polen.",
+            "a": "Woher",
+            "why": "الجواب يبدأ بـaus (من) ⇐ السؤال عن الأصل woher (من أين) — كلمة واحدة."
           },
           {
-            "q": "«أين تسكن؟»؟",
-            "a": "Wo wohnst du?"
+            "q": "___ wohnst du? — In Berlin.",
+            "a": "Wo",
+            "why": "الجواب يبدأ بـin (في) ⇐ السؤال عن المكان wo (أين). wo للمكان الذي أنت فيه، وwoher للمكان الذي جئت منه."
+          },
+          {
+            "q": "Die Studentin kommt ___ Griechenland.",
+            "a": "aus",
+            "why": "kommen + الأصل ⇐ aus: aus Griechenland = من اليونان — وهو جواب Woher?"
+          },
+          {
+            "q": "Lena wohnt ___ der Schweiz.",
+            "a": "in",
+            "why": "wohnen + المكان ⇐ in (جواب Wo?). وdie Schweiz تحمل أداتها: in der Schweiz لا in Schweiz."
+          },
+          {
+            "q": "Er kommt aus ___ Niederlanden.",
+            "a": "den",
+            "why": "die Niederlande جمع لا مفرد لها، وبعد aus تصير الأداة den: aus den Niederlanden — احفظها قطعة واحدة."
+          },
+          {
+            "q": "Die Niederlande ___ in Europa. (sein)",
+            "a": "sind",
+            "why": "die Niederlande جمع ⇐ الفعل جمع: sind — مع أن «هولندا» بالعربية مفرد."
+          },
+          {
+            "q": "Hier ___ ich. (wohnen)",
+            "a": "wohne",
+            "why": "بعد Hier يأتي الفعل مباشرة ثم ich: Hier wohne ich — لا Hier ich wohne. ومع ich ينتهي الفعل بـ‑e."
+          },
+          {
+            "q": "Österreich ist in ___. (أوروبا)",
+            "a": "Europa",
+            "why": "Europa بلا أداة كأغلب البلدان: in Europa. وفي Österreich: Ö بشفتين مستديرتين، وch بعد ei تُنطق «ش» رقيقة."
+          },
+          {
+            "q": "Er kommt aus ___. (روسيا)",
+            "a": "Russland",
+            "why": "Russland = روسيا، بلا أداة: aus Russland. وss تجعل u قبلها قصيرة، وd في آخر الكلمة تُنطق t."
           }
         ],
-        "interleavedWith": [],
+        "interleavedWith": [
+          "kommen",
+          "wohnen",
+          "schweiz"
+        ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«النمسا»؟",
-            "a": "Österreich"
+            "audioId": "wo-1",
+            "speakText": "Yusuf, der Kurs ist international!",
+            "q": "استمع: كيف تصف لينا الدورة؟",
+            "choices": [
+              "دولية: فيها أناس من بلدان كثيرة",
+              "صعبة",
+              "جديدة"
+            ],
+            "a": "دولية: فيها أناس من بلدان كثيرة",
+            "why": "international = دولي — والنبر في آخرها (‑nal)، وti فيها تُنطق «تسي»: إن‑تر‑نا‑تسيو‑نال، لا كالإنجليزية. أما «صعبة» فـschwer و«جديدة» فـneu."
           },
           {
-            "q": "«هنا» و«هناك»؟",
-            "a": "hier / dort"
+            "audioId": "wo-2",
+            "speakText": "Ja! Die Leute kommen aus Polen, aus Russland und aus den Niederlanden.",
+            "q": "استمع: من أين المشاركون الذين يعدّهم يوسف؟",
+            "choices": [
+              "من بولندا وروسيا وهولندا",
+              "من البرتغال واليونان والنمسا",
+              "من ألمانيا وسويسرا وتونس"
+            ],
+            "a": "من بولندا وروسيا وهولندا",
+            "why": "Polen = بولندا · Russland = روسيا · aus den Niederlanden = من هولندا (جمع ⇐ den). وdie Leute جمع ⇐ kommen."
+          },
+          {
+            "audioId": "wo-4",
+            "speakText": "Aus Portugal. Und er wohnt auch dort.",
+            "q": "استمع: الطالب الذي سألت عنه لينا — أين يسكن؟",
+            "choices": [
+              "في البرتغال",
+              "في برلين",
+              "في اليونان"
+            ],
+            "a": "في البرتغال",
+            "why": "dort = هناك، ويعود إلى Portugal: هو من البرتغال ويسكن هناك أيضاً (auch = أيضاً)."
+          },
+          {
+            "audioId": "wo-5",
+            "speakText": "Die Studentin hier kommt aus Griechenland, aber sie wohnt in Österreich.",
+            "q": "استمع: الطالبة التي تشير إليها لينا — من أين هي، وأين تسكن؟",
+            "choices": [
+              "من اليونان، وتسكن في النمسا",
+              "من النمسا، وتسكن في اليونان",
+              "من اليونان، وتسكن في اليونان"
+            ],
+            "a": "من اليونان، وتسكن في النمسا",
+            "why": "aus ⇐ الأصل (Woher?): aus Griechenland · in ⇐ السكن (Wo?): in Österreich — وaber = لكن: الأصل غير السكن."
+          },
+          {
+            "audioId": "wo-6",
+            "speakText": "Wie du! Du kommst aus Deutschland, aber du wohnst in der Schweiz.",
+            "q": "استمع: ماذا يقول يوسف عن لينا؟",
+            "choices": [
+              "هي من ألمانيا وتسكن في سويسرا",
+              "هي من سويسرا وتسكن في ألمانيا",
+              "هي من ألمانيا وتسكن في ألمانيا"
+            ],
+            "a": "هي من ألمانيا وتسكن في سويسرا",
+            "why": "kommst aus = الأصل · wohnst in = السكن. وWie du! = مثلكِ! — الطالبة اليونانية مثل لينا: من بلد وتسكن في بلد آخر."
+          },
+          {
+            "audioId": "wo-8",
+            "speakText": "Hier in Berlin.",
+            "q": "استمع: أين يسكن يوسف الآن؟",
+            "choices": [
+              "هنا في برلين",
+              "في تونس",
+              "في سويسرا"
+            ],
+            "a": "هنا في برلين",
+            "why": "hier = هنا: يوسف في برلين فيقول hier in Berlin — ولينا في سويسرا فتقول عن برلين dort. والجواب القصير بلا فعل مقبول في الحوار؛ أما الجملة الكاملة فبفعلها: Ich wohne hier in Berlin."
+          },
+          {
+            "audioId": "wo-10",
+            "speakText": "Nein, er wohnt in Tunesien. Dort ist er Schüler.",
+            "q": "استمع: أين يسكن نبيل، وماذا يفعل هناك؟",
+            "choices": [
+              "في تونس، وهو تلميذ هناك",
+              "في برلين، وهو طالب جامعي",
+              "في تونس، وهو طالب جامعي"
+            ],
+            "a": "في تونس، وهو تلميذ هناك",
+            "why": "wohnt in Tunesien = يسكن في تونس · Dort = هناك (في تونس)، وبعد Dort الفعل ist ثم er: Dort ist er Schüler — الفعل ثانياً."
           }
         ],
-        "interleavedWith": [],
+        "interleavedWith": [
+          "leute",
+          "partner",
+          "tunesien"
+        ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "أكمل: Ich komme aus ___ Niederlanden.",
-            "a": "den"
+            "tokens": [
+              "du?",
+              "Wo",
+              "wohnst"
+            ],
+            "a": "Wo wohnst du?",
+            "why": "كلمة السؤال wo أولاً، ثم الفعل wohnst، ثم الفاعل du — كما في Woher kommst du?"
           },
           {
-            "q": "«أوروبا قارة»؟",
-            "a": "Europa ist ein Kontinent."
+            "tokens": [
+              "ich.",
+              "Hier",
+              "wohne"
+            ],
+            "a": "Hier wohne ich.",
+            "why": "بعد Hier يأتي الفعل مباشرة ثم ich. العربية تقول «هنا أنا أسكن» بحرية، والألمانية تثبّت الفعل ثانياً."
+          },
+          {
+            "tokens": [
+              "den",
+              "aus",
+              "Er",
+              "Niederlanden.",
+              "kommt"
+            ],
+            "a": "Er kommt aus den Niederlanden.",
+            "why": "الفعل kommt ثانياً، ثم القطعة aus den Niederlanden كاملة — die Niederlande جمع فتصير den بعد aus."
+          },
+          {
+            "tokens": [
+              "Schüler.",
+              "Dort",
+              "er",
+              "ist"
+            ],
+            "a": "Dort ist er Schüler.",
+            "why": "Dort أولاً ثم الفعل ist ثم er — لا Dort er ist. وبعد sein بلا أداة: er ist Schüler."
+          },
+          {
+            "tokens": [
+              "international.",
+              "Kurs",
+              "ist",
+              "Der"
+            ],
+            "a": "Der Kurs ist international.",
+            "why": "الصفة بعد ist لا تتغير: Der Kurs ist international — والفعل ist لا يسقط كما يسقط في «الدورة دولية»."
+          }
+        ],
+        "interleavedWith": [
+          "kurs",
+          "schueler"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wo-3",
+            "speakText": "Woher kommt der Student hier?",
+            "a": "Woher kommt der Student hier?",
+            "why": "Woher كلمة واحدة بحرف كبير في أول الجملة، وStudent اسم ⇐ حرف كبير، وkommt مع er (der Student) بـ‑t — وhier بـie طويلة."
+          },
+          {
+            "audioId": "wo-7",
+            "speakText": "Genau. Und wo wohnst du jetzt?",
+            "a": "Genau. Und wo wohnst du jetzt?",
+            "why": "wo بحرف صغير وسط الجملة، وفي wohnst حرف h صامت يطيل o، وjetzt تنتهي بـtzt."
+          },
+          {
+            "audioId": "wo-9",
+            "speakText": "Und wo ist Nabil? Auch dort in Berlin?",
+            "a": "Und wo ist Nabil? Auch dort in Berlin?",
+            "why": "wo ist — الفعل ist بعد wo مباشرة ولا يسقط (بالعربية «أين نبيل؟» بلا فعل). ولينا في سويسرا، فبرلين عندها dort (هناك) لا hier. وNabil وBerlin اسمان بحرف كبير."
           }
         ],
         "interleavedWith": [],
@@ -118,7 +313,9 @@
         "ar": "في الدورة: أشخاص جدد من أوروبا"
       },
       "successCriteria": [
-        "يسأل woher/wo ويجيب بجملتين صحيحتين عن 6 بلدان مختلفة"
+        "يسأل زميله Woher kommst du? وWo wohnst du? ويجيب بجملتين كاملتين: Ich komme aus … · Ich wohne in …",
+        "يفرّق الأصل والسكن لشخص ثالث: Lena kommt aus Deutschland, aber sie wohnt in der Schweiz.",
+        "يبدأ جملة بـHier أو Dort والفعل بعدها مباشرة: Hier wohne ich. · Dort wohnt Nabil."
       ]
     }
   },
@@ -133,20 +330,48 @@
       {
         "items": [
           {
-            "q": "«من أين أنت؟»؟",
+            "q": "«من أين أنت؟» بالألمانية؟",
+            "a": "Woher kommst du?",
+            "why": "للأصل woher — كلمة واحدة، ثم الفعل kommst، ثم du."
+          },
+          {
+            "q": "___ wohnst du? — In Berlin.",
+            "a": "Wo",
             "choices": [
-              "Wo kommst du?",
-              "Woher kommst du?"
+              "Wo",
+              "Woher",
+              "Wer"
             ],
-            "a": "Woher kommst du?"
+            "why": "الجواب بـin ⇐ السؤال عن المكان wo."
           },
           {
-            "q": "«بولندا»؟",
-            "a": "Polen"
+            "q": "«النمسا» بالألمانية؟",
+            "a": "Österreich",
+            "why": "Österreich بلا أداة: aus Österreich · in Österreich — وÖ بنقطتين."
           },
           {
-            "q": "ترتيب؟ wohnst / Wo / du",
-            "a": "Wo wohnst du?"
+            "q": "Die Niederlande ___ in Europa.",
+            "a": "sind",
+            "choices": [
+              "sind",
+              "ist"
+            ],
+            "why": "die Niederlande جمع ⇐ sind، وإن كانت «هولندا» بالعربية مفرداً."
+          },
+          {
+            "q": "رتّب: wohne / Hier / ich",
+            "a": "Hier wohne ich.",
+            "why": "بعد Hier الفعل مباشرة ثم ich — الفعل ثانياً."
+          },
+          {
+            "q": "die Welt = ?",
+            "a": "العالم",
+            "choices": [
+              "العالم",
+              "أوروبا",
+              "البلد"
+            ],
+            "why": "die Welt = العالم: Wie viele Länder gibt es auf der Welt? — والألمانية تقول غالباً auf der Welt."
           }
         ],
         "passingScore": 0.75
@@ -154,20 +379,44 @@
       {
         "items": [
           {
-            "q": "«العالم»؟",
-            "a": "die Welt"
+            "q": "«أين تسكن؟» بالألمانية؟",
+            "a": "Wo wohnst du?",
+            "why": "للمكان wo، ثم الفعل wohnst، ثم du."
           },
           {
-            "q": "أي جملة صحيحة؟",
+            "q": "___ kommt Lena? — Aus Deutschland.",
+            "a": "Woher",
             "choices": [
-              "Ich komme aus die Türkei.",
-              "Ich komme aus der Türkei."
+              "Woher",
+              "Wo",
+              "Wie"
             ],
-            "a": "Ich komme aus der Türkei."
+            "why": "الجواب بـaus ⇐ السؤال عن الأصل woher."
           },
           {
-            "q": "«هناك الهاتف»؟",
-            "a": "Dort ist das Telefon."
+            "q": "Er kommt aus den ___. (هولندا)",
+            "a": "Niederlanden",
+            "why": "aus den Niederlanden قطعة واحدة: die Niederlande جمع، وبعد aus تصير den Niederlanden."
+          },
+          {
+            "q": "«روسيا» بالألمانية؟",
+            "a": "Russland",
+            "why": "Russland بلا أداة، بـss، وd في آخرها تُنطق t."
+          },
+          {
+            "q": "Wo ist Yusuf? — Er ist ___. (هنا)",
+            "a": "hier",
+            "choices": [
+              "hier",
+              "dort",
+              "aus"
+            ],
+            "why": "hier = هنا · dort = هناك — وكلاهما جواب عن Wo?"
+          },
+          {
+            "q": "Der Kurs ist ___. (دولية)",
+            "a": "international",
+            "why": "international = دولي، ولا تتغير بعد ist — والنبر على آخرها: ‑nal."
           }
         ],
         "passingScore": 0.75
@@ -175,20 +424,43 @@
       {
         "items": [
           {
-            "q": "«اليونان»؟",
-            "a": "Griechenland"
+            "q": "صحّح (للسؤال عن الأصل): ~~Wo kommst du?~~",
+            "a": "Woher kommst du?",
+            "why": "wo للمكان، وللأصل woher — ومن يعرف الإنجليزية Where are you from? ينسى her."
           },
           {
-            "q": "die Niederlande — فعل مفرد أم جمع؟",
+            "q": "Ich wohne ___ Österreich.",
+            "a": "in",
             "choices": [
-              "جمع: kommen",
-              "مفرد: kommt"
+              "in",
+              "aus"
             ],
-            "a": "جمع: kommen"
+            "why": "wohnen + المكان ⇐ in (جواب Wo?) · kommen + الأصل ⇐ aus (جواب Woher?)."
           },
           {
-            "q": "«أنا أسكن هنا»؟",
-            "a": "Ich wohne hier."
+            "q": "«اليونان» بالألمانية؟",
+            "a": "Griechenland",
+            "why": "Griechenland بلا أداة: aus Griechenland — وch بعد ie تُنطق «ش» رقيقة."
+          },
+          {
+            "q": "Wie viele Länder gibt es auf der ___?",
+            "a": "Welt",
+            "choices": [
+              "Welt",
+              "Europa",
+              "Schweiz"
+            ],
+            "why": "die Welt = العالم: «كم بلداً في العالم؟»"
+          },
+          {
+            "q": "«هناك» بالألمانية؟",
+            "a": "dort",
+            "why": "dort = هناك، وhier = هنا: Dort ist er Schüler."
+          },
+          {
+            "q": "«البرتغال» بالألمانية؟",
+            "a": "Portugal",
+            "why": "Portugal بلا أداة: aus Portugal — والنبر على أولها: Por‑tu‑gal."
           }
         ],
         "passingScore": 0.75
@@ -197,53 +469,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Heute hast du sechs neue Länder genannt und mit wo/woher gefragt — Europa wird kleiner!",
-      "ar": "اليوم ذكرت ستة بلدان جديدة وسألت بـwo/woher — أوروبا تصغر!"
+      "de": "Heute: Woher kommst du? — Aus Tunesien. · Wo wohnst du? — In Berlin. · Hier wohne ich. · Der Kurs ist international.",
+      "ar": "اليوم: wo للمكان وجوابه in أو hier/dort · woher للأصل وجوابه aus · بعد Hier وDort الفعل ثانياً · ولا جملة كاملة بلا فعل — وستة بلدان جديدة!"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Wo kommen Sie?~~ (للأصل)",
-          "ar": "wo للمكان وwoher للمنشأ"
+          "de": "~~Wo Yusuf?~~",
+          "ar": "«أين يوسف؟» كلمة بكلمة — بلا فعل"
         },
-        "whyArabicSpeakerFails": "العربية «وين» تُستخدم أحياناً للمنشأ في العامية؛ الألمانية تفرّق: wo للمكان وwoher للأصل (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "جملة المكان في العربية اسمية بلا فعل: «أين يوسف؟» · «يوسف هنا» · «أنا في برلين»، فيقول المتعلم Wo Yusuf? · Yusuf hier. — والألمانية لا تبني جملة كاملة بلا فعل: Wo ist Yusuf? · Yusuf ist hier. · Ich wohne in Berlin. (حذف ist — خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Woher kommen Sie?",
-          "ar": "من أين أنتم؟"
+          "de": "Wo ist Yusuf?",
+          "ar": "أين يوسف؟"
         },
         "exercise": {
-          "q": "صحّح (للأصل): ~~Wo kommen Sie?~~",
-          "a": "Woher kommen Sie?"
+          "q": "صحّح: ~~Lena dort.~~",
+          "a": "Lena ist dort."
         }
       },
       {
         "commonError": {
-          "de": "~~aus die Niederlande~~",
-          "ar": "aus + Dativ لا Akkusativ"
+          "de": "~~Hier ich wohne.~~",
+          "ar": "«هنا أنا أسكن» كلمة بكلمة"
         },
-        "whyArabicSpeakerFails": "العربية «من هولندا» بلا تغيير أدوات؛ الألمانية: aus يجرّ — die Niederlande تصبح den Niederlanden (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية حرة في ترتيب الظرف والفاعل والفعل: «هنا أنا أسكن» = «أنا أسكن هنا»، فيضع المتعلم الفاعل قبل الفعل بعد hier وdort — والألمانية تثبّت الفعل في الموضع الثاني: إن بدأت بـHier أو Dort جاء الفعل بعده مباشرة ثم الفاعل (حرية الظرف مقابل V2 — خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "aus den Niederlanden",
-          "ar": "من هولندا"
+          "de": "Hier wohne ich.",
+          "ar": "هنا أسكن."
         },
         "exercise": {
-          "q": "صحّح: ~~aus die Türkei~~",
-          "a": "aus der Türkei"
+          "q": "صحّح: ~~Dort Nabil wohnt.~~",
+          "a": "Dort wohnt Nabil."
         }
       },
       {
         "commonError": {
-          "de": "~~Die Niederlande kommt~~",
-          "ar": "الأسماء الجمعية والفعل"
+          "de": "~~Die Niederlande ist in Europa.~~",
+          "ar": "«هولندا» مفرد بالعربية"
         },
-        "whyArabicSpeakerFails": "«هولندا» بالعربية مفرد؛ الألمانية Niederlande جمع والفعل جمع (مثل Leute) (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«هولندا» في العربية اسم مفرد مؤنث («هولندا في أوروبا»)، فيصرّف المتعلم الفعل مفرداً — وdie Niederlande في الألمانية جمع لا مفرد له، فالفعل جمع (sind · kommen)، وبعد aus وin تصير den Niederlanden — مثل die Leute: جمع دائماً (خريطة التداخل 10‑ي)",
         "correct": {
           "de": "Die Niederlande sind in Europa.",
           "ar": "هولندا في أوروبا."
         },
         "exercise": {
-          "q": "صحّح: ~~Die Niederlande ist groß~~",
-          "a": "Die Niederlande sind in Europa."
+          "q": "صحّح: ~~Die Niederlande ist ein Land in Europa.~~",
+          "a": "Die Niederlande sind ein Land in Europa."
         }
       }
     ],
@@ -257,9 +529,9 @@
       "europa",
       "welt",
       "wo",
-      "woher",
       "hier",
-      "dort"
+      "dort",
+      "international"
     ]
   },
   "gReferences": {
@@ -268,7 +540,9 @@
       "https://www.duden.de/rechtschreibung/Oesterreich"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/woher"
+      "https://de.wiktionary.org/wiki/woher",
+      "https://de.wiktionary.org/wiki/wo",
+      "https://de.wiktionary.org/wiki/international"
     ],
     "goethe": []
   },
@@ -285,16 +559,26 @@
     "word-europa",
     "word-welt",
     "word-wo",
-    "word-woher",
     "word-hier",
-    "word-dort"
+    "word-dort",
+    "word-international"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?) — Vertiefung: Länder & Sprachen",
     "goetheWordListOverlap": [
-      "woher",
-      "niederlande"
+      "oesterreich",
+      "niederlande",
+      "griechenland",
+      "polen",
+      "russland",
+      "portugal",
+      "europa",
+      "welt",
+      "wo",
+      "hier",
+      "dort",
+      "international"
     ]
   }
 }

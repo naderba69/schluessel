@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(776); // + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
+    expect(ALL_WORDS.length).toBe(777); // + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -110,6 +110,22 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(d5.zusammenfassung.warningCards.some((c) => c.commonError.de.includes("Was ist das"))).toBe(false);
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 && l.day < 5).flatMap((l) => l.praesentation.wordIds));
     expect(d5.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u2-d1 (D125): جملة المكان بلا فعل («أين يوسف؟») · الظرف أولاً ثم الفاعل (V2) · die Niederlande جمع — والاستدعاء من دروس سابقة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u2-d1")!;
+    const [verb, v2, plural] = u.zusammenfassung.warningCards;
+    expect(verb!.commonError.de).toContain("Wo Yusuf?");
+    expect(verb!.correct.de).toBe("Wo ist Yusuf?");
+    expect(verb!.whyArabicSpeakerFails).toContain("حذف ist");
+    expect(v2!.commonError.de).toContain("Hier ich wohne");
+    expect(v2!.correct.de).toBe("Hier wohne ich.");
+    expect(v2!.whyArabicSpeakerFails).toContain("حرية الظرف مقابل V2");
+    expect(plural!.correct.de).toBe("Die Niederlande sind in Europa.");
+    // كان «وين» تُستعمل للمنشأ في العامية — تعليل لا يصح: العاميات نفسها تفرّق (وين = wo · منين = woher)
+    expect(u.zusammenfassung.warningCards.some((c) => c.whyArabicSpeakerFails.includes("وين"))).toBe(false);
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1).flatMap((l) => l.praesentation.wordIds));
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
   it("بطاقات الثقافة (Landeskunde): 12 بطاقة — كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {

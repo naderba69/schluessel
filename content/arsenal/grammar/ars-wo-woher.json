@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-wo-woher",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Wo wohnst du? Woher kommst du?",
+    "ar": "wo للمكان وwoher للأصل — والجواب: in · hier · dort · aus"
+  },
+  "payload": {
+    "topicAr": "السؤال عن المكان والأصل: wo (أين) جوابه in + المكان أو hier (هنا) أو dort (هناك) · woher (من أين) جوابه aus + المكان — والفعل ثانياً بعد hier وdort، ولا جملة كاملة بلا فعل",
+    "sceneAr": "الأسبوع الثاني من الدورة — وهي دورة عبر الإنترنت ودولية: المشاركون من بولندا وروسيا وهولندا والبرتغال. لينا ويوسف ينظران إلى قائمة المشاركين: من أين كل واحد، وأين يسكن الآن — فمن جاء من بلد لا يسكن فيه دائماً: لينا من ألمانيا وتسكن في سويسرا، ويوسف من تونس ويسكن هنا في برلين.",
+    "examples": [
+      {
+        "de": "Woher kommst du? — Aus Tunesien.",
+        "ar": "من أين أنت؟ — من تونس."
+      },
+      {
+        "de": "Wo wohnst du? — In Berlin.",
+        "ar": "أين تسكن؟ — في برلين."
+      },
+      {
+        "de": "Lena kommt aus Deutschland, aber sie wohnt in der Schweiz.",
+        "ar": "لينا من ألمانيا، لكنها تسكن في سويسرا."
+      },
+      {
+        "de": "Wo ist Yusuf? — Er ist hier.",
+        "ar": "أين يوسف؟ — هو هنا."
+      },
+      {
+        "de": "Hier wohne ich, und dort wohnt Nabil.",
+        "ar": "هنا أسكن أنا، وهناك يسكن نبيل."
+      }
+    ],
+    "inferencePromptAr": "انظر إلى الأمثلة: (1) بأي كلمة يبدأ الجواب عن Woher؟ وبأي كلمة يبدأ الجواب عن Wo؟ (2) في المثال الثالث: من أين لينا، وأين تسكن؟ هل هما البلد نفسه؟ (3) في المثال الأخير: ماذا يأتي مباشرة بعد Hier وبعد dort — الفعل أم الفاعل؟ (4) «أين يوسف؟» بالعربية بلا فعل — ما الفعل في الجملة الألمانية؟",
+    "ruleDe": "Wo? — in Berlin · hier · dort · Woher? — aus Tunesien · Hier wohne ich. · Wo ist Yusuf?",
+    "ruleAr": "wo = أين: للمكان الذي أنت فيه (السكن والوجود)، وجوابه in + المكان أو hier (هنا) أو dort (هناك): Wo wohnst du? — In Berlin. woher = من أين: للأصل والمصدر، وجوابه aus + المكان: Woher kommst du? — Aus Tunesien. البلد الذي له أداة يحملها في الجوابين: in der Schweiz · aus der Türkei — وdie Niederlande جمع: in den Niederlanden · aus den Niederlanden (احفظها قطعة واحدة). وhier حيث المتكلم، وdort مكان بعيد عنه: يوسف في برلين يقول hier in Berlin، ولينا في سويسرا تقول dort in Berlin. وhier وdort إن بدأت بهما الجملة جاء الفعل بعدهما مباشرة ثم الفاعل: Hier wohne ich. · Dort ist er Schüler. والجملة الكاملة لا تخلو من فعل: Wo ist Yusuf? · Er ist hier.",
+    "contrastAr": "العربية تطابق الألمانية في السؤالين: «أين» = wo و«من أين» = woher — بل إن «منين» في عاميات كثيرة (التونسية والمصرية) كلمة واحدة مثل woher تماماً، و«وين» = wo. الخطر في موضعين آخرين (خريطة التداخل 10‑ي): (1) جملة المكان في العربية اسمية بلا فعل («أين يوسف؟» · «أنا في برلين»)، فيقول المتعلم Wo Yusuf? ✗ — والألمانية لا تبني جملة كاملة بلا فعل: Wo ist Yusuf? ✓ · Ich wohne in Berlin. ✓ (حذف ist). (2) العربية حرة في ترتيب الظرف والفاعل والفعل («هنا أنا أسكن» = «أنا أسكن هنا»)، فيقول المتعلم Hier ich wohne. ✗ — والألمانية تثبّت الفعل ثانياً: إن بدأت بـHier أو Dort جاء الفعل بعده مباشرة ثم الفاعل: Hier wohne ich. ✓ (حرية الظرف مقابل V2). ومن يعرف الإنجليزية Where are you from? يترجم where إلى wo ويُسقط from: Wo kommst du? ✗ — وللأصل woher دائماً.",
+    "limitsAr": [
+      "في الكلام اليومي تسمع أيضاً Wo kommst du her? — كلمة woher مقسومة: wo في أول الجملة وher في آخرها. هي صحيحة، لكننا نقول ونكتب الآن Woher kommst du?",
+      "الجواب القصير بلا فعل صحيح في الحوار: Wo wohnst du? — In Berlin. · Woher kommst du? — Aus Tunesien. أما الجملة الكاملة فلا تخلو من فعل: Ich wohne in Berlin.",
+      "die Niederlande جمع، وبعد aus وin تصير den Niederlanden — وسبب تغيّر الأداة بعد حروف الجر نتعلمه لاحقاً؛ الآن نحفظ القطعتين aus den Niederlanden · in den Niederlanden، كما حفظنا aus der Türkei · in der Schweiz."
+    ],
+    "beads": [
+      "Hier",
+      "wohne",
+      "ich."
+    ],
+    "properNouns": [
+      "Berlin",
+      "Lena",
+      "Nabil",
+      "Yusuf"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u2-d1"
+  ]
+}

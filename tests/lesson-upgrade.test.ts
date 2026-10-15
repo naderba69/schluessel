@@ -119,7 +119,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u2-d1")!; // لم يُرقَّ بعد (u1-d1..d5 مُرقّاة — D116 · D119 · D120 · D121 · D123)
+const legacy = realLessons.find((l) => l.id === "a1-u2-d2")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125)
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -212,7 +212,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u2-d1", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u2-d2", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -296,15 +296,15 @@ describe("D115 — أدوات القياس", () => {
     expect(wordAppears(w("guten-tag"), toks("Guten Tag!"))).toBe(true);
     expect(wordAppears(w("wie-gehts"), toks("Hallo, wie geht's?"))).toBe(true);
   });
-  it("درس حقيقي لم يُرقَّ (a1-u2-d1): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين فيها غير المدروس)", () => {
+  it("درس حقيقي لم يُرقَّ (a1-u2-d2): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين فيها غير المدروس)", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBeLessThan(12);
     expect(r.rule.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-rule", "e-upgrade-sample"]));
-    // تمارينه القديمة فيها groß/Kontinent قبل تدريسهما (قانون الجبهة) — e-upgrade-word-unpracticed مختبر بضابط مصطنع أعلاه
+    // D125: فجواته مقيسة قبل نقل المثال إليه — تمارينه فيها «Mainzer» قبل تدريسها (قانون الجبهة) ·
+    // ومثال leben «Ich lebe gern in Berlin.» فيه gern غير المدروسة (وBerlin اسم علم غير معلن هنا)
     const front = r.practice.find((i) => i.code === "e-upgrade-front")?.message;
-    expect(front).toMatch(/kontinent/);
-    // D123: woher صارت تُدرَّس في a1-u1-d5 (هدف ذلك الدرس) — فلم تعد مخالفة جبهة هنا
-    expect(front).not.toMatch(/woher/);
+    expect(front).toMatch(/mainzer/);
+    expect(r.rule.map((i) => i.message).join("\n")).toMatch(/gern/);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
     const entryReal = loadUpgradePlans(CONTENT)[0]!.lessons.find((e) => e.lessonId === "a1-u1-d1")!;
@@ -352,7 +352,7 @@ describe("D115 — أدوات القياس", () => {
     expect(e.properNouns).toEqual(["Yusuf", "Lena", "Nabil"]);
     // الاستدعاء من دروس سابقة (كان zusammen — كلمة اليوم نفسه): ما يبني عليه حوار اليوم
     expect(l.warmup.cardIds).toEqual(["kommen", "sprechen", "alt"]);
-    // woher نُقلت إلى هنا (هدف الدرس «mit wer/woher fragen») — تبقى في u2-d1 مراجعةً كما sprechen في u7-d4 (D119)
+    // woher نُقلت إلى هنا (هدف الدرس «mit wer/woher fragen») — وفي u2-d1 صارت استدعاءً في الدفء لا كلمة جديدة (D125)
     const woher = words.find((w) => w.id === "woher")!;
     expect([woher.unit, woher.usedInLessons[0], woher.sampleSentence!.sourceLesson]).toEqual([1, "a1-u1-d5", "a1-u1-d5"]);
     expect(l.praesentation.wordIds).toContain("woher");
@@ -360,6 +360,23 @@ describe("D115 — أدوات القياس", () => {
     const audioIds = l.uebung.stations.filter((s) => s.type === "listening" || s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.audioId)));
     expect(audioIds.length).toBe(9);
     expect(audioIds.every((id) => /^wer-\d+$/.test(id) && tracks.has(id))).toBe(true);
+  });
+  it("a1-u2-d1 مُرقّى (D125): صفر نقص — 24 بنداً · 4 أنواع (استماع وإملاء من حوار جديد) · Quiz 6 · 12 كلمة · قاعدة wo/woher", () => {
+    const l = realLessons.find((x) => x.id === "a1-u2-d1")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u2-d1")!;
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage }).toEqual({ rule: [], practice: [], quiz: [], coverage: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([24, 4, 6, 12]);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-wo-woher"]);
+    expect(e.properNouns).toEqual(["Yusuf", "Lena", "Nabil", "Berlin"]);
+    // woher تُدرَّس في a1-u1-d5 (D123) ⇒ هنا استدعاءٌ لما سبق (الدفء) لا عرضٌ جديد · international نواة D113
+    expect(l.praesentation.wordIds).not.toContain("woher");
+    expect(l.praesentation.wordIds).toContain("international");
+    expect(l.warmup.cardIds).toEqual(["woher", "wohnen", "schweiz"]);
+    // الحوار الجديد a1-u2-d1-wo-wohnst-du: أسطره العشرة كلها مستعملة في الاستماع والإملاء (لا مسار بلا بند)
+    const audioIds = l.uebung.stations.filter((s) => s.type === "listening" || s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.audioId)));
+    expect([...audioIds].sort((a, b) => Number(a.slice(3)) - Number(b.slice(3)))).toEqual(Array.from({ length: 10 }, (_, i) => `wo-${i + 1}`));
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
   });
   it("D121 e-upgrade-warmup: بطاقة استدعاء من كلمات اليوم أو لاحقة ⇒ خطأ · أول درس في المسار مستثنى", () => {
     const d4 = realLessons.find((x) => x.id === "a1-u1-d4")!;
@@ -394,8 +411,11 @@ describe("D115 — الخطة الحقيقية", () => {
     expect(plan.lessons.map((e) => e.lessonId).sort()).toEqual(expected);
     expect(expected).toHaveLength(60);
   });
-  it("الحارس: صفر خطأ على المحتوى الحقيقي (done مُثبت · pending معلن)", () => {
+  it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
     expect(checkGrammarRules(ctx).filter((i) => i.level === "error")).toEqual([]);
+    // D125: التنبيهات كانت تظهر في المدقِّق وحده (اسم علم معلن لا يُستعمل · pending يستوفي المعايير) — الآن يمسكها الاختبار أيضاً
+    expect(checkUpgrade(plan, ctx)).toEqual([]);
+    expect(checkGrammarRules(ctx)).toEqual([]);
   });
 });
