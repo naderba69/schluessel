@@ -204,6 +204,18 @@ describe("D110 — الجمع من علامة القائمة (الأساليب �
     expect(pluralsFor(pair, "Freund")).toEqual(["Freunde"]);
     expect(pluralsFor(pair, "Freundin")).toEqual([]);
   });
+  it("D131: الصيغة في قوسين منفصلين كلمةٌ أخرى لا تُحمَّل علامة الأولى («Großmutter, ¨- (Oma)») — والقوس الملتصق جزء من الكلمة («(Fahr)Rad»)", () => {
+    const oma: WordlistEntry = { headword: "Großmutter, ¨- (Oma)", lemmas: ["Großmutter", "Oma"], article: "die", page: 5, kind: "group" };
+    expect(pluralsFor(oma, "Großmutter")).toEqual(["Großmütter"]);
+    expect(pluralsFor(oma, "Oma")).toEqual([]); // كانت «Omä» — وSD1 نفسها «die Oma, -s»
+    const feier: WordlistEntry = { headword: "die Feier, -n (z. B. Feierabend, Feiertag)", lemmas: ["Feier", "Feierabend", "Feiertag"], article: "die", page: 1, kind: "main" };
+    expect(pluralsFor(feier, "Feier")).toEqual(["Feiern"]);
+    expect(pluralsFor(feier, "Feiertag")).toEqual([]); // كانت «Feiertagen»
+    const rad: WordlistEntry = { headword: "das (Fahr)Rad, ¨-er", lemmas: ["Rad", "Fahrrad"], article: "das", page: 1, kind: "main" };
+    expect(pluralsFor(rad, "Fahrrad")).toEqual(["Fahrräder"]);
+    const mail: WordlistEntry = { headword: "die (E-)Mail, -s", lemmas: ["Mail", "E-Mail"], article: "die", page: 1, kind: "main" };
+    expect(pluralsFor(mail, "E-Mail")).toEqual(["E-Mails"]);
+  });
 });
 
 describe("D110 — الحارس الدائم على المحتوى الحقيقي", () => {

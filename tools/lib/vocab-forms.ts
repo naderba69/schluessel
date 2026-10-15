@@ -76,14 +76,32 @@ export function contentTokens(text: string): string[] {
 }
 
 /**
+ * D131: العدد المركّب من 21 إلى 99 كلمة واحدة: الآحاد + und + العشرات (einundzwanzig · fünfunddreißig) —
+ * 72 صيغة لا تُعدّ في القائمة المغلقة ولا تُكتب مدخلاً لكل منها. eins تصير ein (einsundzwanzig ليست منها) ·
+ * sechs وsieben تبقيان كاملتين في المركّب (sechsundzwanzig · siebenundzwanzig) — الحذف في العشرات وحدها.
+ */
+export const COMPOUND_NUMBER =
+  /^(ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)und(zwanzig|dreißig|vierzig|fünfzig|sechzig|siebzig|achtzig|neunzig)$/u;
+
+/**
+ * المركّب معروف إن كانت عشراته مدروسة حتى الدرس — بجذوع الكلمات المدروسة لا بالقائمة المغلقة: zwanzig مغلقة منذ
+ * D121 (درس 0–20) لكن العشرات كلمات تُدرَّس في a1-u3-d1، فلا يُقبل «einundzwanzig» قبله. والآحاد مغلقة أصلاً.
+ */
+export function compoundNumberKnown(t: string, stems: ReadonlySet<string>): boolean {
+  const m = COMPOUND_NUMBER.exec(t);
+  return m !== null && stems.has(deumlaut(m[2]!));
+}
+
+/**
  * الكلمات غير المدروسة في نص (مرتبة، بلا تكرار): ليست مغلقة · ليست اسم علم مُعلناً · ولا جذع لها
- * يطابق جذع صيغة مدروسة.
+ * يطابق جذع صيغة مدروسة · ولا هي عدد مركّب عشراته مدروسة (D131).
  */
 export function unknownTokens(text: string, stems: ReadonlySet<string>, allow: ReadonlySet<string> = new Set()): string[] {
   const out = new Set<string>();
   for (const t of contentTokens(text)) {
     if (CLOSED.has(t) || allow.has(t)) continue;
     if (stem(deumlaut(t)).some((s) => stems.has(s))) continue;
+    if (compoundNumberKnown(t, stems)) continue;
     out.add(t);
   }
   return [...out].sort();

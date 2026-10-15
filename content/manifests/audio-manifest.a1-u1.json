@@ -15788,6 +15788,46 @@
       "rmsDb": -17.03
     },
     {
+      "id": "word-oma",
+      "file": "words/audio/de-DE/word-oma.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Oma.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 815,
+      "sizeBytes": 4061,
+      "hash": "sha256:e210fcbebd4174dbb15a7bf9d7503daf64752a09176db15994497b50c1622afb",
+      "pcmSha256": "e2b11196080e7a8e4f868165f4485a21dbf58b80ea819c5829bb1e20362047b2",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-das-essen",
+      "file": "words/audio/de-DE/word-das-essen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Essen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1082,
+      "sizeBytes": 4906,
+      "hash": "sha256:dc5bdd8d0e3a87846a366c8abea88043449a471daa2f53fcda5c281dfcdc4e24",
+      "pcmSha256": "273dcee93c7c02c901fa280582a2bd347c9ccc3d79db055f4c4f6b2e234b107c",
+      "rmsDb": -17.22
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -19603,6 +19643,490 @@
       "hash": "sha256:e691d8242f94cf72a24a99b6736c2366f9e2bc301e34680dedfafed3d2226659",
       "pcmSha256": "858357c954fa6ed30eea2ff7a73a3a6a0018d946a829ec7410776c1009017358",
       "rmsDb": -17.25
+    },
+    {
+      "id": "om-1",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 109,
+        "lengthScale": 1.32
+      },
+      "textDe": "Lena, heute hat meine Oma Geburtstag!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 3311,
+      "sizeBytes": 15234,
+      "hash": "sha256:fc73f257df17ab5494391596774e9d7e0b4124b9126a91774a9f1a38f965522f",
+      "pcmSha256": "3e43e4d86442846bd051c8607ace30fc34a98c0a24a1d7392b2285d0dbebdc11",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "om-2",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 227,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wie alt ist sie denn?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1320,
+      "sizeBytes": 6413,
+      "hash": "sha256:b211e75fce1e0f2a3bdcc366d0776fcb7a9be3b93dc6e2965b34e4e3e1e37b1c",
+      "pcmSha256": "f2327ade7f44a14002e048c6c2aee3b5645d7d3d340f6c2c0a13cbd805ed3473",
+      "rmsDb": -17.21
+    },
+    {
+      "id": "om-3",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 135,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sie ist achtzig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1338,
+      "sizeBytes": 6530,
+      "hash": "sha256:097d83dab52f18a9cb00f79c67e8398d2d4e5fdb2f26a07afd2216d968d93122",
+      "pcmSha256": "a5127717e574348c4d78fb1d6bf3b01d6f0625504b1c4907d5ba3260d41acdad",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "om-4",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 80,
+        "lengthScale": 1.32
+      },
+      "textDe": "Achtzig! Meine Oma ist dreiundsiebzig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 3768,
+      "sizeBytes": 17514,
+      "hash": "sha256:4334dc0c93964333f09ad54e86602856493fc830502eb4e355d717ec072483cc",
+      "pcmSha256": "5a320829971550278c6d11de7159de0d7fabe4e55e2dafc8c4399aa00e6a40e2",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "om-5",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Heute ist das Essen bei Oma in Tunesien. Zweiunddreißig Leute kommen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 5006,
+      "sizeBytes": 23263,
+      "hash": "sha256:a07265126af171f2057070835bd5f2db3d2f6da9b4d4fce633f53394990303de",
+      "pcmSha256": "6cfc6b48f0a3d931ad638716983cbe32725d5985c84da552fde103acbcde3134",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "om-6",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 165,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wie bitte? Noch mal, bitte!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1816,
+      "sizeBytes": 8547,
+      "hash": "sha256:d307cfd1208899d6421fe5f8e4f41a0213d69a958a5faeece80692808ed2c385",
+      "pcmSha256": "a412952da4deaa18e94e833fa9355ec2c7e718f78f2a5a6877c1174a5d677fb0",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "om-7",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 41,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zweiunddreißig!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1477,
+      "sizeBytes": 6992,
+      "hash": "sha256:ea45487d8eba5c79dd53082744d5fece6d97a523dd069bd55ecaf67e5b6c100e",
+      "pcmSha256": "c4066d9c8da09922d5618f5fbbb40f63820581bfd03164f3ba346642201731d8",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "om-8",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 30,
+        "lengthScale": 1.32
+      },
+      "textDe": "Dreiundzwanzig?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 2008,
+      "sizeBytes": 9474,
+      "hash": "sha256:a1d332c4221bca320c016123cb99f361ed29b987449787aca1ab5c1ef8738889",
+      "pcmSha256": "cded2b9ab90854a5c5cfcf0eafbe4d265d5ef203ed76dc09c9a02aa4afded21a",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "om-9",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 101,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein! Ich zähle: zehn, zwanzig, dreißig — und zwei.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 4751,
+      "sizeBytes": 21885,
+      "hash": "sha256:b628b706aca9fcd780df17b0e7513c9daf8e5858026ed7e218307fec92cfc739",
+      "pcmSha256": "a927af52cd166efa570133978399019d08e94fb3b7641869e05040d09845cf6d",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "om-10",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ach so! Das ist ja eine Gruppe!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 2712,
+      "sizeBytes": 12620,
+      "hash": "sha256:d8d4a9795d6d26746c7af1efbbadb93e98d7601f45b96794acb8eb729136b65d",
+      "pcmSha256": "abd0c574db2972dc6ef5dd57d8b53a7a3b351ade27c2a150514df3599067478a",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "om-11",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Und das Essen ist von Oma.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 2626,
+      "sizeBytes": 12623,
+      "hash": "sha256:f54f34c9dbea0c0cda8077804adf98de99d8b7ed6f739a65fcf93f75f4892ef3",
+      "pcmSha256": "44fda15c1640c680bfb5184a959db83704a37759cdb07c7bad14a008127df3fa",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "om-12",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 101,
+        "lengthScale": 1.32
+      },
+      "textDe": "Mit achtzig? Für zweiunddreißig Leute?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 2968,
+      "sizeBytes": 13818,
+      "hash": "sha256:59713711cbebf2985d35541831f190d429b90e94817893e7a6a1a9252163c413",
+      "pcmSha256": "543fabeadb293e6466ab3a84762a2ce3bce668384a5bb50a6d78136aed6a7884",
+      "rmsDb": -17.4
+    },
+    {
+      "id": "om-13",
+      "file": "audio/scripts/a1-u3-d1-oma-ist-achtzig/om-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 133,
+        "lengthScale": 1.32
+      },
+      "textDe": "Natürlich! Und das Essen ist für hundert!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 3161,
+      "sizeBytes": 14013,
+      "hash": "sha256:0e9ef5f4e4b29896684d1a9dfabd36b67bd2c32313888623ff6e144fbbf71b1c",
+      "pcmSha256": "118ba2b893fc0d25137ee5f2b5b3db5998f5d4566a349214cfb35178a8c4676c",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "num-21",
+      "file": "audio/scripts/a1-zahlen-bis-100/num-21.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 46,
+        "lengthScale": 1.32
+      },
+      "textDe": "einundzwanzig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1315,
+      "sizeBytes": 6276,
+      "hash": "sha256:b24066cb07417955274b3431ec86bd01da732ef9c241a9aae9622e9b9f1f94dc",
+      "pcmSha256": "4668a63264bf8b57be407351ebda926d807307590c949c33c50ecba6a41d7125",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "num-24",
+      "file": "audio/scripts/a1-zahlen-bis-100/num-24.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 37,
+        "lengthScale": 1.32
+      },
+      "textDe": "vierundzwanzig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1605,
+      "sizeBytes": 7448,
+      "hash": "sha256:84868c26f4c3651896579a5e8580a1f4004dbf9cf91f40bd2532f97078c20795",
+      "pcmSha256": "dacc36bfb3a07aee5fe402b73da5e85844909a85c681821d42a93d0c6a0f0394",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "num-42",
+      "file": "audio/scripts/a1-zahlen-bis-100/num-42.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 34,
+        "lengthScale": 1.32
+      },
+      "textDe": "zweiundvierzig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1779,
+      "sizeBytes": 7814,
+      "hash": "sha256:1d840902cb9bbc5643ce69c135aebca8be12f8a0e998643e76f0e123e976317d",
+      "pcmSha256": "0448786c1bf45b40ea3934d78e4af2b725c36485bf5ffcd9da0b093478071fd3",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "num-27",
+      "file": "audio/scripts/a1-zahlen-bis-100/num-27.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 39,
+        "lengthScale": 1.32
+      },
+      "textDe": "siebenundzwanzig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1535,
+      "sizeBytes": 7138,
+      "hash": "sha256:c72b5d576d6973c55266f190b8ff1a6011b46f6906d7acbd81856e54b969a974",
+      "pcmSha256": "8d47ede79984d6d55462e520ed5f575d044f15b3403fe8b31006c06786cbe41a",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "num-35",
+      "file": "audio/scripts/a1-zahlen-bis-100/num-35.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 36,
+        "lengthScale": 1.32
+      },
+      "textDe": "fünfunddreißig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1674,
+      "sizeBytes": 7478,
+      "hash": "sha256:ed1e8c7c1e5aded44935ada8f8b11d8ebdfa9b30031089a54d7ec6f7f361896b",
+      "pcmSha256": "06a9f005a72c63230a79194c7d2432232b1ecf33f81869b9f7553e11cc2ac486",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "num-53",
+      "file": "audio/scripts/a1-zahlen-bis-100/num-53.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 34,
+        "lengthScale": 1.32
+      },
+      "textDe": "dreiundfünfzig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1779,
+      "sizeBytes": 7729,
+      "hash": "sha256:b8eae546395dae404a5022533c5e79fc813cf204b31be138e8bf2886e4d39a00",
+      "pcmSha256": "1e298fb79b0ee7825d3c25a79a7661e3d154a3e917195fb779fbc2200d37996c",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "num-36",
+      "file": "audio/scripts/a1-zahlen-bis-100/num-36.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 49,
+        "lengthScale": 1.32
+      },
+      "textDe": "sechsunddreißig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1233,
+      "sizeBytes": 6080,
+      "hash": "sha256:342692650a77ee7e2c7fb15342b2619e275ea352a8dbbfe09d10d4b09b544db0",
+      "pcmSha256": "b0bba2278ed2376ae4e8f0d86c5e1ad045d651edc29f89d4d4c44f814782325c",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "num-63",
+      "file": "audio/scripts/a1-zahlen-bis-100/num-63.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 40,
+        "lengthScale": 1.32
+      },
+      "textDe": "dreiundsechzig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1500,
+      "sizeBytes": 6760,
+      "hash": "sha256:88a7909ce33e0c5ff290fb3ff8df0549921169c458dd10a6939bcd85ff863111",
+      "pcmSha256": "28718d0bfded77164d251aa240c65e767281f051b4457c2d5f0d8ec456b131b8",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "num-99",
+      "file": "audio/scripts/a1-zahlen-bis-100/num-99.opus",
+      "role": "character",
+      "characterId": "mueller",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 39,
+        "lengthScale": 1.32
+      },
+      "textDe": "neunundneunzig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u3-d1"
+      ],
+      "durationMs": 1558,
+      "sizeBytes": 7115,
+      "hash": "sha256:26924f169a50e76d5dccb69e7895671b787d1ff9ce910692b86e556732dda6bd",
+      "pcmSha256": "dd04cb19f92940de3eee6147b7114e20391d1d9ac85a5e89c0707d109ec08dbb",
+      "rmsDb": -17.01
     }
   ],
   "characterVoices": {

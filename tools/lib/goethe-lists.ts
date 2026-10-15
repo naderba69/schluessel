@@ -119,6 +119,17 @@ function firstMarker(headword: string): string | null {
 const hasPairs = (headword: string) => /\/|;|,\s*(der|die|das)\s/.test(headword);
 
 /**
+ * D131: صيغة لا تظهر إلا داخل قوسين منفصلين («Großmutter, ¨- (Oma)» · «die Feier, -n (z. B. Feierabend)») كلمةٌ أخرى
+ * لا تُحمَّل علامة جمع الكلمة الأولى — كانت «Oma» تُعطى «Omä» من «¨-» التي لـGroßmutter، وSD1 نفسها «die Oma, -s».
+ * أما القوس الملتصق بالكلمة («(Fahr)Rad» · «(E-)Mail» · «(Kredit)-Karte» · «Chat(room)») فجزءٌ منها والعلامة تشمله.
+ */
+function onlyInDetachedParens(headword: string, lemma: string): boolean {
+  const squash = (x: string) => x.replace(/[()\-]/g, "").toLowerCase();
+  const rest = headword.replace(/(^|\s)\([^()]*\)(?=[\s,;/]|$)/g, "$1");
+  return !squash(rest).includes(squash(lemma));
+}
+
+/**
  * جمع صيغة معيّنة من مدخل، من علامة الجمع المطبوعة — الأساليب الثلاثة:
  *   A2 «die Nudel, -n» · «der Kühlschrank, ¨-e» · «der Koffer, -» · «der Apfel, ¨-»
  *   SD1 «der Arbeitsplatz, -ä, e» · «der Apfel, -Ä» · «das Buch, -ü, er»
@@ -129,6 +140,7 @@ export function pluralsFor(entry: WordlistEntry, lemma: string): string[] {
   if (!entry.article && entry.kind !== "group") return [];
   if (!/^[A-ZÄÖÜ]/.test(lemma) || !entry.lemmas.includes(lemma)) return [];
   if (hasPairs(entry.headword) && lemma !== entry.lemmas[0]) return [];
+  if (onlyInDetachedParens(entry.headword, lemma)) return [];
   const marker = firstMarker(entry.headword);
   if (!marker) return [];
   if (/^[A-ZÄÖÜ][a-zäöüß]+$/.test(marker)) return lemma === entry.lemmas[0] ? [marker] : []; // Themen · Ärzte

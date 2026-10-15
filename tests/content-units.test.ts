@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(789); // + schlecht · also · die Gruppe (نواة a1-u2-d5 — D130) + lang · lange (نواة a1-u2-d4 — D128) + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
+    expect(ALL_WORDS.length).toBe(791); // + die Oma · das Essen (نواة a1-u3-d1 — D131؛ das Essen بمعرّف das-essen بجانب الفعل essen) + schlecht · also · die Gruppe (نواة a1-u2-d5 — D130) + lang · lange (نواة a1-u2-d4 — D128) + Text · Fehler · bedeuten (نواة a1-u2-d3 — D127) + Lehrerin (‑in من شفرة الجنس — D127) + Mensch · Ort · das Leben (نواة a1-u2-d2 — D126؛ das Leben بمعرّف das-leben بجانب الفعل leben) + international (نواة a1-u2-d1 — D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (نواة a1-u1-d3 — D120) + Alter · Kurs · Klasse (نواة a1-u1-d4 — D121) + Ende · wissen · Wort · oft · ein bisschen · Schüler · Schülerin · Student · Studentin (نواة a1-u1-d5 — D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -208,6 +208,30 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit === 1 || ["a1-u2-d1", "a1-u2-d2", "a1-u2-d3", "a1-u2-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u3-d1 (D131): العشرات أولاً (الفرنسية لا العربية) · كلمتان أو eins كاملة · العشرات من الآحاد كاملة — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u3-d1")!;
+    const [order, oneWord, tens] = u.zusammenfassung.warningCards;
+    expect(order!.commonError.de).toContain("~~vierzig und zwei~~");
+    expect(order!.correct.de).toBe("zweiundvierzig");
+    // العربية «اثنان وأربعون» بترتيب الألمانية نفسه — الخطر من الفرنسية والإنجليزية (لا يُنسب إلى العربية ما ليس فيها)
+    expect(order!.whyArabicSpeakerFails).toContain("العربية في صفّك");
+    expect(order!.whyArabicSpeakerFails).toMatch(/الفرنسية.*الإنجليزية/);
+    expect(oneWord!.commonError.de).toContain("~~ein und zwanzig~~");
+    expect(oneWord!.commonError.de).toContain("~~einsundzwanzig~~");
+    expect(oneWord!.exercise.a).toBe("einunddreißig");
+    expect(tens!.commonError.de).toBe("~~dreizig~~ / ~~sechszig~~ / ~~siebenzig~~");
+    expect(tens!.correct.de).toBe("dreißig / sechzig / siebzig");
+    // كانت «~~zwanzigeins~~ / ~~twenty-one~~» بتعليل «العربية «واحد وعشرون» مألوفة … والإنجليزية تُربك» (صيغة خارج حد الإعلان
+    // وإنجليزية غير مدروسة) · و«~~dreissig~~» تكراراً لقاعدة ß/ss بلا خطأ جديد · و«يُبقي على الكلمة كاملة» بلا سبب
+    const all = u.zusammenfassung.warningCards.map((c) => `${c.commonError.de} ${c.whyArabicSpeakerFails}`).join("\n");
+    expect(all).not.toMatch(/zwanzigeins|twenty|dreissig/);
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 2).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });

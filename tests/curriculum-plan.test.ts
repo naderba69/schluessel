@@ -126,7 +126,7 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(LearnerProgress.safeParse({ ...st, currentUnit: { level: "A1", unit: 16 } }).success).toBe(false);
   });
 
-  it("النواة: u1-d1 (D116) · u1-d2 (D119) · u1-d3 (D120) · u1-d4 (D121) · u1-d5 (D123) · u2-d1 (D125) · u2-d2 (D126) · u2-d3 (D127) · u2-d4 (D128) · u2-d5 (D130) done · التالي a1-u3-d1 · تكملة a1-u13-d1 (15 كلمة)", () => {
+  it("النواة: u1-d1 (D116) · u1-d2 (D119) · u1-d3 (D120) · u1-d4 (D121) · u1-d5 (D123) · u2-d1 (D125) · u2-d2 (D126) · u2-d3 (D127) · u2-d4 (D128) · u2-d5 (D130) · u3-d1 (D131) done · التالي a1-u3-d2 · تكملة a1-u13-d1 (15 كلمة)", () => {
     const cs = coreStatus(plan, ctx);
     expect(cs.find((c) => c.lessonId === "a1-u1-d1")).toMatchObject({ status: "done", missing: [] });
     expect(cs.find((c) => c.lessonId === "a1-u1-d2")).toMatchObject({ status: "done", missing: [] });
@@ -143,8 +143,10 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(cs.find((c) => c.lessonId === "a1-u2-d4")).toMatchObject({ status: "done", missing: [], headwords: ["lang", "lange"], size: 14 });
     // D130: schlecht · also · die Gruppe (نواة) فوق كلماته الاثنتي عشرة ⇒ 15 كلمة
     expect(cs.find((c) => c.lessonId === "a1-u2-d5")).toMatchObject({ status: "done", missing: [], headwords: ["schlecht", "also", "die Gruppe, -n"], size: 15 });
+    // D131: die Oma · das Essen (نواة — das Essen بمعرّف das-essen بجانب الفعل essen) فوق كلماته الاثنتي عشرة ⇒ 14 كلمة
+    expect(cs.find((c) => c.lessonId === "a1-u3-d1")).toMatchObject({ status: "done", missing: [], headwords: ["die Oma, -s", "das Essen"], size: 14 });
     expect(cs.find((c) => c.status === "pending")).toMatchObject({
-      lessonId: "a1-u3-d1", headwords: ["die Oma, -s", "das Essen"], missing: ["die Oma, -s", "das Essen"],
+      lessonId: "a1-u3-d2", headwords: ["der Dank", "leicht", "das Restaurant, -s"], missing: ["der Dank", "leicht", "das Restaurant, -s"],
     });
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
     expect(next.lessonId).toBe("a1-u13-d1");
@@ -185,12 +187,12 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
 
   it("e-plan-source · e-plan-headword · e-plan-complete", () => {
     expect(codes(checkPlan({ ...plan, sourceList: "goethe-xx" }, ctx))).toEqual(["e-plan-source"]);
-    // إسناد ما زال pending وكلمته لم يعلّمها المنهج بعد (heute ثم Anmeldung ثم das Alter ثم das Ende ثم international ثم der Mensch ثم der Text ثم lang ثم also صارت مُعلَّمة — D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128 · D130)
+    // إسناد ما زال pending وكلمته لم يعلّمها المنهج بعد (heute ثم Anmeldung ثم das Alter ثم das Ende ثم international ثم der Mensch ثم der Text ثم lang ثم also ثم die Oma صارت مُعلَّمة — D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128 · D130 · D131)
     const typo = clonePlan();
-    typo.core!.lessons.find((c) => c.lessonId === "a1-u3-d1")!.headwords[0] = "die Oma, -s!";
+    typo.core!.lessons.find((c) => c.lessonId === "a1-u3-d2")!.headwords[1] = "leicht!";
     const issues = checkPlan(typo, ctx);
     expect(codes(issues)).toEqual(["e-plan-complete", "e-plan-headword"]);
-    expect(issues.find((i) => i.code === "e-plan-complete")!.message).toMatch(/die Oma, -s/);
+    expect(issues.find((i) => i.code === "e-plan-complete")!.message).toMatch(/leicht/);
   });
 
   it("e-plan-taught: إسناد done ولم يُعلَّم ⇒ خطأ لكل كلمة · done ومُعلَّم بدليل حقيقي (a1-u1-d2 بعد ترقيته — D119) ⇒ صفر", () => {
@@ -213,21 +215,21 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
     const mark = checkPlan(p, ctx);
     expect(codes(mark)).toEqual(["w-plan-mark-done"]);
     expect(mark[0]!.level).toBe("warning");
-    // إسناد ما زال pending (u1-d1..d5 وu2-d1..d5 صارت done): die Oma من a1-u3-d1 يعلّمها درس آخر
-    const oma = syn("die Oma", "noun", "die");
-    const other = realLesson("a1-u3-d2");
-    const elsewhere = { ...other, praesentation: { ...other.praesentation, wordIds: [...other.praesentation.wordIds, oma.id] } };
-    const w = checkPlan(plan, { ...ctx, words: [...words, oma], lessons: [...lessons.filter((x) => x.id !== other.id), elsewhere] });
+    // إسناد ما زال pending (u1-d1..d5 وu2-d1..d5 وu3-d1 صارت done): leicht من a1-u3-d2 يعلّمها درس آخر
+    const leicht = syn("leicht", "adjective");
+    const other = realLesson("a1-u3-d3");
+    const elsewhere = { ...other, praesentation: { ...other.praesentation, wordIds: [...other.praesentation.wordIds, leicht.id] } };
+    const w = checkPlan(plan, { ...ctx, words: [...words, leicht], lessons: [...lessons.filter((x) => x.id !== other.id), elsewhere] });
     expect(codes(w)).toEqual(["w-plan-elsewhere"]);
-    expect(w[0]!.message).toMatch(/a1-u3-d1.*«die Oma, -s»/);
+    expect(w[0]!.message).toMatch(/a1-u3-d2.*«leicht»/);
   });
 
   it("e-plan-core-lesson (توليف · غير موجود) · e-plan-core-load (> 18) · e-plan-text-fix", () => {
     const integ = clonePlan();
-    integ.core!.lessons.find((c) => c.lessonId === "a1-u3-d1")!.lessonId = "a1-u3-d6"; // إسناد pending (u1-d1..d5 وu2-d1..d5 صارت done)
+    integ.core!.lessons.find((c) => c.lessonId === "a1-u3-d2")!.lessonId = "a1-u3-d6"; // إسناد pending (u1-d1..d5 وu2-d1..d5 وu3-d1 صارت done)
     expect(codes(checkPlan(integ, ctx))).toEqual(["e-plan-core-lesson"]);
     const ghost = clonePlan();
-    ghost.core!.lessons.find((c) => c.lessonId === "a1-u3-d1")!.lessonId = "a1-u12-d7";
+    ghost.core!.lessons.find((c) => c.lessonId === "a1-u3-d2")!.lessonId = "a1-u12-d7";
     expect(codes(checkPlan(ghost, ctx))).toEqual(["e-plan-core-lesson"]);
     const heavy = clonePlan(); // a1-u9-d1 فيه 18 كلمة — أي إسناد يتجاوز السقف
     const u9d5 = heavy.core!.lessons.find((c) => c.lessonId === "a1-u9-d5")!;

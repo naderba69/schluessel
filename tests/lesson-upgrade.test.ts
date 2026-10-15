@@ -11,7 +11,7 @@ import {
   MISSPELLING_DISTANCE_MAX, checkGrammarRules, checkUpgrade, editDistance, fillInWordGap, frontViolations, germanOnly, inspectLesson,
   itemTexts, taughtUpTo, wordAppears, type UpgradeContext,
 } from "../tools/lib/lesson-upgrade.js";
-import { CLOSED, GRAPHEMES, contentTokens, deumlaut, knownForms, knownStems } from "../tools/lib/vocab-forms.js";
+import { CLOSED, COMPOUND_NUMBER, GRAPHEMES, compoundNumberKnown, contentTokens, deumlaut, knownForms, knownStems } from "../tools/lib/vocab-forms.js";
 
 const CONTENT = join(__dirname, "..", "content");
 const words = loadWords(CONTENT);
@@ -120,7 +120,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u3-d1")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d5 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128 · D130)
+const legacy = realLessons.find((l) => l.id === "a1-u3-d2")!; // لم يُرقَّ بعد (u1-d1..d5 + u2-d1..d5 + u3-d1 مُرقّاة — D116 · D119 · D120 · D121 · D123 · D125 · D126 · D127 · D128 · D130 · D131)
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -209,6 +209,34 @@ describe("D128 — رمز الحرف · الفجوة داخل الكلمة · ا
   });
 });
 
+describe("D131 — العدد المركّب 21–99 (قانون الجبهة)", () => {
+  const none = new Set<string>();
+  const at = (id: string) => knownStems(taughtUpTo(realLessons.find((l) => l.id === id)!, realLessons, words));
+  it("معروفٌ إن كانت عشراته مدروسة حتى الدرس: في a1-u3-d1 نعم — وقبله لا، ولو كانت zwanzig مغلقة منذ D121", () => {
+    const u3d1 = at("a1-u3-d1");
+    expect(frontViolations(["einundzwanzig · Zweiunddreißig · fünfundvierzig · siebenundsechzig · neunundneunzig"], u3d1, none)).toEqual([]);
+    expect(compoundNumberKnown("sechsunddreißig", u3d1)).toBe(true);
+    const u2d5 = at("a1-u2-d5");
+    expect(CLOSED.has("zwanzig")).toBe(true);
+    expect(frontViolations(["einundzwanzig · fünfunddreißig"], u2d5, none)).toEqual(["einundzwanzig", "fünfunddreißig"]);
+  });
+  it("لا باب خلفياً: eins قبل und · آحاد مقصوصة · ترتيب مقلوب · عشرات ليست من القائمة · مئات — كلها غير معروفة", () => {
+    const u3d1 = at("a1-u3-d1");
+    expect(frontViolations(["einsundzwanzig · sechundzwanzig · siebundzwanzig · zwanzigeins · zwanzigundeins · einundzehn · einundhundert · zweihundert · fooundzwanzig"], u3d1, none))
+      .toEqual(["einsundzwanzig", "einundhundert", "einundzehn", "fooundzwanzig", "sechundzwanzig", "siebundzwanzig", "zwanzigeins", "zwanzigundeins", "zweihundert"]);
+    expect(COMPOUND_NUMBER.test("einsundzwanzig")).toBe(false);
+  });
+  it("الصيغ الاثنتان والسبعون كلها تطابق — ولا تطابق أيٌّ منها صيغة كلمة في المقرر (لا ازدواج مع المدخلات)", () => {
+    const units = ["ein", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun"];
+    const tens = ["zwanzig", "dreißig", "vierzig", "fünfzig", "sechzig", "siebzig", "achtzig", "neunzig"];
+    const all = tens.flatMap((t) => units.map((u) => `${u}und${t}`));
+    expect(all).toHaveLength(72);
+    expect(all.every((w) => COMPOUND_NUMBER.test(w))).toBe(true);
+    const forms = new Set(words.flatMap((w) => knownForms(w)));
+    expect(all.filter((w) => forms.has(w))).toEqual([]);
+  });
+});
+
 describe("D115 — التدريب: كل معيار يُكسر وحده", () => {
   const mutate = (fn: (l: Lesson) => void) => { const l = upgraded(); fn(l); return codes(l); };
   const item = (l: Lesson, s: number, i: number) => l.uebung.stations[s]!.items[i]! as Record<string, unknown>;
@@ -288,7 +316,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u3-d1", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u3-d2", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -372,20 +400,18 @@ describe("D115 — أدوات القياس", () => {
     expect(wordAppears(w("guten-tag"), toks("Guten Tag!"))).toBe(true);
     expect(wordAppears(w("wie-gehts"), toks("Hallo, wie geht's?"))).toBe(true);
   });
-  it("درس حقيقي لم يُرقَّ (a1-u3-d1): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين فيها غير المدروس · كلمتان بلا بند)", () => {
+  it("درس حقيقي لم يُرقَّ (a1-u3-d2): يُشخَّص بدقة (قاعدة بلا ملف · 6 بنود · أمثلة وتمارين وQuiz فيها غير المدروس)", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBeLessThan(12);
     expect(r.rule.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-rule", "e-upgrade-sample"]));
-    // D130: فجواته مقيسة قبل نقل المثال إليه — أمثلة الأعداد فيها ما لم يُدرَّس (Euro · Minuten · kostet) ·
-    // وتمارينه فيها Euro وصيغ خاطئة غير معلنة (sechszig · zwanzigeins) · وfünfzig وmal بلا أي بند
-    const front = r.practice.find((i) => i.code === "e-upgrade-front")?.message;
-    expect(front).toMatch(/euro/);
-    expect(front).toMatch(/sechszig/);
+    // D131: فجواته مقيسة قبل نقل المثال إليه — مثال billig «Das Brot ist billig.» وتمارينه فيها Brot (الوحدة 5) ·
+    // ومثال teuer فيه Restaurant (نواة الدرس نفسه — يُعلَّم فيه) · وفي الـQuiz «siebenhundert»: مضاعفات المئة لا يعرفها الحارس بعد
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/brot/);
     const samples = r.rule.map((i) => i.message).join("\n");
-    expect(samples).toMatch(/minuten/);
-    expect(samples).toMatch(/kostet/);
-    expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);
-    expect(r.coverage[0]!.message).toMatch(/fuenfzig، mal/);
+    expect(samples).toMatch(/restaurant/);
+    expect(samples).toMatch(/brot/);
+    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/siebenhundert/);
+    expect(r.coverage).toEqual([]);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
     const entryReal = loadUpgradePlans(CONTENT)[0]!.lessons.find((e) => e.lessonId === "a1-u1-d1")!;
@@ -562,6 +588,39 @@ describe("D115 — أدوات القياس", () => {
     expect(dictated.join("\n")).not.toMatch(/ş|[—:]/);
     // ما خرج من الأصل: kennenzulernen (صيغة zu) · Tee (الوحدة 5) · helfe (الوحدة 9) · höre (الوحدة 3)
     expect(JSON.stringify(l)).not.toMatch(/kennenzulernen|Tee\b|helfe|höre/);
+  });
+  it("a1-u3-d1 مُرقّى (D131): صفر نقص — 35 بنداً · 4 أنواع (حوار جديد + أعداد مسموعة) · Quiz 6 · 14 كلمة · العشرات والمركّب", () => {
+    const l = realLessons.find((x) => x.id === "a1-u3-d1")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u3-d1")!;
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([35, 4, 6, 14]);
+    // القاعدة المخططة نفسها (ars-zahlen-100) كُتب ملفها أخيراً: العشرات واستثناءاتها الثلاثة + المركّب الآحاد ثم und ثم العشرات
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-zahlen-100"]);
+    const rule = loadGrammarRules(CONTENT).get("ars-zahlen-100")!;
+    expect(rule.payload.ruleDe).toMatch(/dreißig .*sechzig · siebzig .*zwei \+ und \+ dreißig = zweiunddreißig/);
+    expect(rule.payload.contrastAr).toContain("العربية في صفّك");
+    expect(e.properNouns).toEqual(["Lena"]);
+    // الأخطاء المقصودة الأربعة معلنة بتصحيحها (zwanzigeins خارج حد الإعلان — N-048 — فعُرض الخطأ المنطوق كلمتين مدروستين)
+    expect(e.misspellings.map((m) => m.wrong)).toEqual(["einsundzwanzig", "dreizig", "sechszig", "siebenzig"]);
+    // النواة D113 (die Oma · das Essen بمعرّف das-essen بجانب الفعل essen)
+    expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["oma", "das-essen"]));
+    const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(sample("fuenfzig")).toBe("Zwei mal fünfundzwanzig ist fünfzig.");
+    expect(["dreissig", "vierzig", "sechzig", "achtzig", "neunzig", "hundert", "mal"].map(sample).join(" ")).not.toMatch(/Euro|Minuten|Stunde|Bedeutungen|Zweimal/);
+    expect(l.warmup.cardIds).toEqual(["zahl", "nummer", "jahr"]);
+    // الحوار الجديد (om-1..13) وأعداد المرجع الجديدة (9) كلها في الاستماع والإملاء
+    const audioIds = l.uebung.stations.filter((s) => s.type === "listening" || s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.audioId)));
+    expect(audioIds.filter((id) => id.startsWith("om-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3)))).toEqual(Array.from({ length: 13 }, (_, i) => `om-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("num-")).sort()).toEqual(["num-21", "num-24", "num-27", "num-35", "num-36", "num-42", "num-53", "num-63", "num-99"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    // الاستماع يميّز المقلوب (24/42 · 35/53 · 36/63) — والإجابة بين خياراتها مع مقلوبها
+    const lis = l.uebung.stations.find((s) => s.type === "listening")!.items as { audioId: string; choices: string[]; a: string }[];
+    expect(lis.find((i) => i.audioId === "num-42")!.choices).toEqual(expect.arrayContaining(["42", "24"]));
+    // ما خرج من الأصل في النصوص المعروضة: twenty · zwanzigeins · dreissig (dreissig معرّف الكلمة يبقى — لا يُعرض) · Euro · Minuten · Zweimal
+    const shown = [l.uebung.stations.map((s) => s.items), l.quiz, l.zusammenfassung.summary, l.zusammenfassung.warningCards, l.einstieg];
+    expect(JSON.stringify(shown)).not.toMatch(/twenty|zwanzigeins|dreissig|Euro|Minuten|Zweimal/);
   });
   it("D121 e-upgrade-warmup: بطاقة استدعاء من كلمات اليوم أو لاحقة ⇒ خطأ · أول درس في المسار مستثنى", () => {
     const d4 = realLessons.find((x) => x.id === "a1-u1-d4")!;
