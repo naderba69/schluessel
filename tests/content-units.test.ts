@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(818); // + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(821); // + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -520,8 +520,62 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u5-d2 (D142): الأداة للوعاء (~~Ich bekomme einen Glas Saft.~~) · بلا von (~~eine Flasche von Wasser~~) · «شرب الحساء» (~~Ich trinke eine Suppe.~~) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u5-d2")!;
+    const [container, von, soup] = u.zusammenfassung.warningCards;
+    expect(container!.commonError.de).toBe("~~Ich bekomme einen Glas Saft.~~");
+    expect(container!.correct.de).toBe("Ein Glas Saft, bitte!");
+    // الإضافة: التنوين على المضاف إليه (المشروب) لا على الوعاء · وما تعلّمه في u2-d2 (التنوين ≈ ein: ein Haus) يبني الأداة على جنس المشروب
+    expect(container!.whyArabicSpeakerFails).toContain("«كأسُ عصيرٍ»");
+    expect(container!.whyArabicSpeakerFails).toContain("ein Haus");
+    expect(container!.exercise).toMatchObject({ a: "Wir bekommen ein Glas Tee." });
+    expect(von!.commonError.de).toBe("~~eine Flasche von Wasser~~");
+    // «كأسٌ من الماء» بـ«من» + الفرنسية une bouteille d'eau (تأثير معلن) — والإضافة «زجاجةُ ماءٍ» عونٌ مسمّى
+    expect(von!.whyArabicSpeakerFails).toContain("«كأسٌ من الماء»");
+    expect(von!.whyArabicSpeakerFails).toContain("une bouteille d'eau");
+    expect(von!.whyArabicSpeakerFails).toContain("فهنا تساعدك العربية");
+    expect(von!.exercise).toMatchObject({ a: "Ich bekomme ein Glas Milch." });
+    expect(soup!.commonError.de).toBe("~~Ich trinke eine Suppe.~~ (بالملعقة)");
+    expect(soup!.correct.de).toBe("Ich esse eine Suppe.");
+    // الاستعمال العربي والتونسي حجةً (لا اشتقاق مزعوم لاسم الشربة) · والاستثناء الصادق: حساء يُشرب من فنجان
+    expect(soup!.whyArabicSpeakerFails).toContain("«نشربو الشربة»");
+    expect(soup!.whyArabicSpeakerFails).toContain("إلا حساءً يُشرب من فنجان");
+    expect(soup!.whyArabicSpeakerFails).not.toMatch(/اسمها نفسه من/);
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: ~~Tee, bitte!~~ (صحيحة جواباً قصيراً: Kaffee oder Tee? — Tee, bitte.) · «السوائل محايدة» (لا قاعدة كهذه) · Speise وحدها
+    const cards = JSON.stringify(u.zusammenfassung.warningCards);
+    expect(cards).not.toMatch(/Tee, bitte!~~|محايدة|Speise~~/);
+    // لا Dativ بأداة · ولا kein/nicht (الدرس الرابع) · ولا möchte/will (الدرس الثالث) · ولا كلمات لاحقة أو غير مدروسة في أي نص ألماني للدرس
+    const de = JSON.stringify({ e: u.einstieg, s: u.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "" }))), q: u.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "" }))), z: u.zusammenfassung.summary.de, w: u.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise]) });
+    expect(de).not.toMatch(/\b(von|mit|in|zu) (dem|der|meinem|meiner|deinem|deiner|seinem|seiner|ihrem|ihrer|einem|einer)\b|\bzur\b|\bzum\b|\bkein|\bnicht\b|möchte|\bwill\b|Getränk|Gast|Durst|Zucker|Kuchen|schmeckt|Orangensaft|Zitrone/);
+    // N-069: يوسف لا يطلب الكحول — لا جملة ألمانية في الدرس فيها Yusuf أو ich مع Bier/Wein
+    const sentences = de.split(/[.!?"]/);
+    expect(sentences.filter((x) => /\b(Yusuf|Ich|ich)\b/.test(x) && /\b(Bier|Wein)\b/.test(x))).toEqual([]);
+    // N-021: أمثلة البطاقات بلا أسماء علم · وD108: لا نص رسمي حرفي (Ein Glas Wasser, bitte · Die Speisekarte, bitte · Ein Bier, bitte)
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    const ids = ["wasser", "milch", "saft", "bier", "wein", "tee", "trinken", "speisekarte", "bestellen", "glas", "flasche", "zahlen", "bar", "bekommen", "die-bitte"];
+    expect(ids.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin/);
+    expect(ids.map(sample)).toEqual([
+      "Ein Wasser, bitte!", "Kaffee mit Milch, bitte.", "Einen Saft, bitte!", "Der Mann bestellt ein Bier.", "Die Frau bekommt ein Glas Wein.",
+      "In Tunesien trinken wir Tee im Glas.", "Ich trinke einen Kaffee.", "Hier ist die Speisekarte.", "Wir bestellen jetzt.",
+      "Ich bekomme ein Glas Tee.", "Eine Flasche Wasser, bitte.", "Wir zahlen zusammen.", "Ich zahle bar.", "Ich bekomme einen Tee, bitte.",
+      "Ich habe eine Bitte: langsam, bitte!",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا «Ein Tee/Saft/Kaffee/Wein, bitte» (عامية صحيحة في المقهى) · لا «trinkt eine Suppe»
+    // (صحيحة لحساء من فنجان) · لا «bestellt Sie» (تُقرأ «ماذا تطلب هي؟») · لا «Zahle, bitte» (أمر صحيح) · لا «zwei Glas» (صحيحة في الكميات)
+    const choiceTexts = [...u.einstieg.pretestItems.flatMap((p) => p.choices), ...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (typeof i === "string" ? [i] : Array.isArray((i as { choices?: unknown }).choices) ? ((i as { choices: string[] }).choices) : []));
+    expect(choiceTexts.filter((c) => /\bEin (Tee|Saft|Kaffee|Wein)\b|trink\w* eine Suppe|bestellt Sie|Zahle, bitte|zwei Glas\b/.test(c))).toEqual([]);
+    expect(choiceTexts.length).toBeGreaterThan(30);
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || l.id === "a1-u5-d1").flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["tasse", "kellner", "suppe"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || l.id === "a1-u5-d1").flatMap((l) => l.praesentation.wordIds));
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || ["a1-u5-d1", "a1-u5-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute"]);
     for (const w of pluralOnly) expect([w.id, w.gender, w.srsCardTypes.includes("gender")]).toEqual([w.id, "none", false]);

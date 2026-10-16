@@ -121,7 +121,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u5-d2")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D141 صار u1-d1..d5 + u2-d1..d5 + u3-d1..d5 + u4-d1..d5 + u5-d1 مُرقّى
+const legacy = realLessons.find((l) => l.id === "a1-u5-d3")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D142 صار u1-d1..d5 + u2-d1..d5 + u3-d1..d5 + u4-d1..d5 + u5-d1..d2 مُرقّى
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -351,7 +351,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u5-d2", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u5-d3", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -447,21 +447,21 @@ describe("D115 — أدوات القياس", () => {
     const legacyRule = { ...w("sein"), de: "sein ملكيته" };
     expect(wordAppears(legacyRule, toks("Das ist sein Hund."))).toBe(false);
   });
-  it("الدرس التالي غير المُرقّى (a1-u5-d2 بعد D141): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u5-d3 بعد D142): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
     expect(r.rule.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-rule", "e-upgrade-sample"]));
-    expect(r.rule.find((i) => i.code === "e-upgrade-rule")?.message).toMatch(/ars-trinken/);
-    // بعد D141 صار u5-d1 مكتملاً؛ الفجوات الفعلية لـu5-d2 (مقيسة قبل النقل): لا ملف ars-trinken · Orangensaft في مثال saft
-    // وZitrone في مثال tee · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · «Speise» في التدريب
-    // · Quiz 3×4 فيه Orangensaft وSpeise · وsaft بلا أي بند تدريب
+    expect(r.rule.find((i) => i.code === "e-upgrade-rule")?.message).toMatch(/ars-moechte-wollen/);
+    // بعد D142 صار u5-d2 مكتملاً؛ الفجوات الفعلية لـu5-d3 (مقيسة قبل النقل): لا ملف ars-moechte-wollen · gleichfalls في مثال appetit
+    // وfrisch (الدرس الرابع) في مثال tomate · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · Quiz 3×4
+    // · ولا كلمة بلا تدريب ولا مخالفة جبهة في البنود (القياس لا التخمين)
     const samples = r.rule.filter((i) => i.code === "e-upgrade-sample").map((i) => i.message).join("\n");
-    expect(samples).toMatch(/orangensaft/);
-    expect(samples).toMatch(/zitrone/);
-    expect(r.practice.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-practice-audio", "e-upgrade-practice-types"]));
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/speise/);
-    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/orangensaft/);
-    expect(r.coverage.find((i) => i.code === "e-upgrade-word-unpracticed")?.message).toMatch(/saft/);
+    expect(samples).toMatch(/gleichfalls/);
+    expect(samples).toMatch(/frisch/);
+    expect(r.practice.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-practice-audio", "e-upgrade-practice-types", "e-upgrade-practice-size"]));
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")).toBeUndefined();
+    expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size"]);
+    expect(r.coverage).toEqual([]);
     expect(r.quizMin).toBe(4);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
@@ -1160,6 +1160,91 @@ describe("D115 — أدوات القياس", () => {
       ...l.einstieg.pretestItems.flatMap((p) => p.choices ?? []),
     ];
     expect(choices.filter((c) => /den Fisch|ein Brot|einen Salat|eine Suppe|eine Wurst|zwei Eis\b|essen Hunger|isst Hunger/.test(c))).toEqual([]);
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم.
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+  });
+  it("a1-u5-d2 مُرقّى (D142): صفر نقص — 40 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-trinken · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u5-d2")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u5-d2")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([40, 4, 6, 15]);
+    // القاعدة المخططة نفسها (ars-trinken — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط): المطلوب مفعول به · الوعاء ثم المشروب بلا von
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-trinken"]);
+    const rule = rules.get("ars-trinken")!;
+    expect(rule.payload.ruleDe).toMatch(/Einen Saft, bitte! · Ich bekomme einen Tee\. · ein Glas Tee · eine Flasche Wasser — ohne von/);
+    // النقل الإيجابي يُسمّى عوناً: «شاياً من فضلك» منصوب بفعل محذوف ≈ Einen Tee, bitte! · والإضافة «كأسُ شايٍ» بلا حرف ≈ ein Glas Tee
+    // · والفروق بمبررها: التنوين على المضاف إليه (المشروب) ⇒ ~~einen Glas Saft~~ · «من» والفرنسية d'eau ⇒ ~~von~~ · «شرب الحساء»
+    expect(rule.payload.contrastAr).toContain("«شاياً من فضلك» تقديرها «أعطني شاياً»");
+    expect(rule.payload.contrastAr).toContain("«كأسُ شايٍ» بلا حرف");
+    expect(rule.payload.contrastAr).toContain("~~einen Glas Saft~~");
+    expect(rule.payload.contrastAr).toContain("un verre d'eau");
+    expect(rule.payload.contrastAr).toContain("«نشربو الشربة»");
+    expect(rule.payload.contrastAr).not.toMatch(/اسمها نفسه من/); // أصل كلمة الشربة مختلف فيه — الاستعمال وحده حجة
+    // الحدود: الحصة في الطلب (امتداد حد ars-essen) · zwei Glas/Gläser كلاهما صحيح · become تأثير إنجليزي · «أودّ» والنفي لاحقاً
+    const limits = rule.payload.limitsAr.join(" ");
+    expect(limits).toMatch(/einen Salat = طبق سلطة/);
+    expect(limits).toMatch(/zwei Glas Tee.*والصيغتان صحيحتان/);
+    expect(limits).toMatch(/become.*تأثيرٌ إنجليزي/);
+    expect(limits).toMatch(/الدرس القادم.*الدرس الرابع/);
+    expect(e.properNouns).toEqual(["Lena", "Yusuf"]);
+    // النواة D113 (bar · bekommen · die Bitte) بالمولِّد — die Bitte بمعرّف صريح لأن bitte «من فضلك» موجودة (D126)
+    expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["bar", "bekommen", "die-bitte"]));
+    const bitte = words.find((w) => w.id === "die-bitte")!;
+    expect([bitte.de, bitte.gender, bitte.plural, bitte.wordFamily, bitte.goetheList]).toEqual(["die Bitte", "die", "die Bitten", ["bitte"], ["A1", "A2"]]);
+    const bek = words.find((w) => w.id === "bekommen")!;
+    expect([bek.wordClass, bek.forms?.praesens3s, bek.forms?.perfekt, bek.forms?.praeteritum]).toEqual(["verb", "bekommt", "hat bekommen", undefined]);
+    expect(words.find((w) => w.id === "bar")!.sampleSentence?.de).toBe("Ich zahle bar.");
+    expect(tracks.get("word-die-bitte")?.textDe).toBe("die Bitte.");
+    // أمثلة البطاقات القديمة: Orangensaft · Zitrone · möchte (الدرس الثالث) · ونصوص رسمية حرفية (Ein Glas Wasser, bitte · Die Speisekarte, bitte · Ein Bier, bitte)
+    const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Orangensaft|Zitrone|möchte|Ein Glas Wasser, bitte|Die Speisekarte, bitte|Ein Bier, bitte/);
+    // N-069: الكحول في أمثلة البطاقات يطلبه غير يوسف وبلا متكلم (Der Mann · Die Frau)
+    expect([sample("bier"), sample("wein")]).toEqual(["Der Mann bestellt ein Bier.", "Die Frau bekommt ein Glas Wein."]);
+    // milch: لا «قاعدة» سوائل محايدة · glas: الكأس لا «الزجاجة الزجاجية» (die Flasche = الزجاجة)
+    expect(words.find((w) => w.id === "milch")!.pluralRuleNote).not.toMatch(/رغم كونها سائلاً/);
+    expect(words.find((w) => w.id === "glas")!.ar).toEqual(["الكأس (من زجاج)", "الزجاج (المادة)"]);
+    expect(l.warmup.cardIds).toEqual(["tasse", "kellner", "suppe"]);
+    // النطق: e الوصل في Speisekarte شوا لا [eː] (مدخل معجم — خطأ صامت خارج التدقيق الآلي N-013) · word-speisekarte أُعيد وet-2 وُلّد به
+    const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; regeneratedTracks: string[] }[] };
+    expect(lex.entries.find((x) => x.word === "Speisekarte")).toMatchObject({ forms: [{ espeak: "ʃpˈaɪzeːkˌaɾtə", ipa: "ʃpˈaɪzəkˌaɾtə" }], regeneratedTracks: ["word-speisekarte", "et-2"] });
+    // الحوار الجديد (et-1..20) كله في الاستماع والإملاء مرة واحدة · Wasser وdie Bitte إملاءً
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("et-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 20 }, (_, i) => `et-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-die-bitte", "word-wasser"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    // N-015: الإملاء من الأسطر البطيئة وحدها (مقيسة في المانيفست) — الأسرع الثمانية في الاستماع
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; voiceParams: { speedWpm: number } }[] };
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    for (const fast of ["et-3", "et-4", "et-6", "et-11", "et-13", "et-14", "et-16", "et-17"]) expect(listening.items.map((i) => String(i.audioId))).toContain(fast);
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set(l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))));
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    // المقارنة بعد التطبيع (حالة الحرف وعلامات الترقيم): «Ein Wasser, bitte!» داخل «Ich bekomme ein Wasser, bitte.» تُمسك (طفرة D142)
+    const norm = (x: string) => x.toLowerCase().replace(/[^\p{L}\s]/gu, " ").replace(/\s+/g, " ").trim();
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => ` ${f} `.includes(` ${norm(a)} `)))).toEqual([]);
+    expect(quizAnswers.filter((a) => ["Wasser", "die Bitte", "Bitte"].includes(a))).toEqual([]);
+    // المشتتات ليست ألمانية صحيحة بمعنى آخر (انظر اختبار المصائد في content-units)
+    const choices = [
+      ...l.uebung.stations.flatMap((s) => s.items.flatMap((i) => (Array.isArray(i.choices) ? i.choices.map(String) : []))),
+      ...l.quiz.variants.flatMap((v) => v.items.flatMap((i) => (Array.isArray(i.choices) ? i.choices.map(String) : []))),
+      ...l.einstieg.pretestItems.flatMap((p) => p.choices ?? []),
+    ];
+    expect(choices.filter((c) => /\bEin (Tee|Saft|Kaffee|Wein)\b|trink\w* eine Suppe|bestellt Sie|Zahle, bitte|zwei Glas\b/.test(c))).toEqual([]);
     // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم.
     const taught = knownStems(taughtUpTo(l, realLessons, words));
     const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];

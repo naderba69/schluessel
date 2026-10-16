@@ -6,31 +6,32 @@
   "day": 2,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst ein Getränk höflich bestellen.",
-    "ar": "تطلب مشروباً بصيغة مهذبة"
+    "de": "Einen Tee, bitte! — Ich bekomme ein Glas Tee. Zahlen, bitte! Ich zahle bar.",
+    "ar": "تطلب مشروباً وطعاماً بلباقة في المقهى (Einen Tee, bitte! · Ich bekomme …) والمطلوب مفعول به، وتذكر الوعاء بلا von والأداة للوعاء (ein Glas Tee · eine Flasche Wasser)، ثم تطلب الحساب وتدفع (Zahlen, bitte! · Ich zahle bar)."
   },
   "canDoDaily": [
-    "يطلب مشروباً بجملة مهذبة (مفعول به + bitte) ويسأل عن قائمة الطعام"
+    "يطلب مشروباً بلباقة بجملة قصيرة أو كاملة: Einen Saft, bitte! · Ich bekomme einen Tee. — والمذكر einen لأن المطلوب مفعول به.",
+    "يذكر الوعاء والمشروب بلا von والأداة للوعاء (ein Glas Tee · eine Flasche Wasser · eine Tasse Tee)، ويطلب الحساب ويدفع: Zahlen, bitte! · Ich zahle bar."
   ],
   "warmup": {
     "cardIds": [
-      "kaffee",
       "tasse",
-      "essen"
+      "kellner",
+      "suppe"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«شاي من فضلك» — Tee, bitte أم Einen Tee, bitte? (تخمين فقط)"
+          "de": "«كأس شاي من فضلك» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
-          "Einen Tee, bitte! (المفعول به: der ← einen)",
-          "Tee, bitte.",
-          "Der Tee, bitte."
+          "Ein Glas Tee, bitte.",
+          "Ein Glas von Tee, bitte.",
+          "Einen Glas Tee, bitte."
         ],
-        "answer": "Einen Tee, bitte! (المفعول به: der ← einen)",
+        "answer": "Ein Glas Tee, bitte.",
         "revealNextSession": true
       }
     ],
@@ -49,7 +50,10 @@
       "bestellen",
       "glas",
       "flasche",
-      "zahlen"
+      "zahlen",
+      "bar",
+      "bekommen",
+      "die-bitte"
     ],
     "grammarArsenalIds": [
       "ars-trinken"
@@ -58,67 +62,405 @@
       "story-a5-u5-s2"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "sp-st-initial",
+      "ch-ich-laut",
+      "z",
+      "double-consonant"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«ماء من فضلك»؟",
-            "a": "Ein Wasser, bitte!"
+            "q": "___ Tee, bitte! (ein)",
+            "a": "Einen",
+            "why": "Tee مذكر (der Tee) والمطلوب مفعول به لفعل مفهوم (Ich bekomme …) ← einen، بحرف كبير لأنها أول الجملة."
           },
           {
-            "q": "«شاي من فضلك» (der Tee)؟",
-            "a": "Einen Tee, bitte!"
+            "q": "Ich ___ ein Wasser, bitte. (bekommen)",
+            "a": "bekomme",
+            "why": "bekommen مع ich ← bekomme (‑e) · وein Wasser حصة واحدة: das Wasser محايد ← ein."
+          },
+          {
+            "q": "Was ___ du? (bekommen)",
+            "a": "bekommst",
+            "why": "bekommen مع du ← bekommst (‑st) — والسؤال بـWas ثم الفعل ثانياً."
+          },
+          {
+            "q": "Oma ___ einen Kaffee. (bekommen)",
+            "a": "bekommt",
+            "why": "مع er/sie (Oma) ← bekommt (‑t) · وeinen Kaffee: der Kaffee مذكر مفعول به."
+          },
+          {
+            "q": "Ich bekomme ___ Glas Tee. (ein)",
+            "a": "ein",
+            "why": "الأداة للوعاء: das Glas محايد ← ein — وإن كان der Tee مذكراً، فلا einen."
+          },
+          {
+            "q": "Eine Flasche ___, bitte. (الماء)",
+            "a": "Wasser",
+            "why": "المشروب بعد الوعاء مباشرة بلا أداة وبلا von: eine Flasche Wasser — كالإضافة «زجاجةُ ماءٍ»."
+          },
+          {
+            "q": "Ein Glas oder eine ___? (الزجاجة)",
+            "a": "Flasche",
+            "why": "die Flasche مؤنثة ← eine Flasche · وdas Glas محايد ← ein Glas."
+          },
+          {
+            "q": "Lena ___ eine Suppe. (bestellen)",
+            "a": "bestellt",
+            "why": "bestellen منتظم: مع er/sie ← bestellt · وeine Suppe مؤنثة لا تتغير مفعولاً."
+          },
+          {
+            "q": "Ich zahle ___. (نقداً)",
+            "a": "bar",
+            "why": "bar = نقداً، بلا حرف قبلها (لا mit bar) · وبالبطاقة: mit Karte."
+          },
+          {
+            "q": "Meine Freundin hat eine ___. (طلب)",
+            "a": "Bitte",
+            "why": "die Bitte اسم ← حرف كبير · eine لأنها مؤنثة — وهي غير bitte «من فضلك» بحرف صغير."
+          },
+          {
+            "q": "Yusuf ___ Tee ohne Milch. (trinken)",
+            "a": "trinkt",
+            "why": "trinken منتظم: مع er/sie ← trinkt · وTee وMilch بلا أداة: كلام عام عن عادته."
+          },
+          {
+            "q": "Eine ___ Tee? (الفنجان)",
+            "a": "Tasse",
+            "why": "die Tasse (من الوحدة الثانية) مؤنثة ← eine Tasse · وTee بعدها بلا von."
           }
         ],
-        "interleavedWith": [],
+        "interleavedWith": [
+          "oma",
+          "kaffee",
+          "suppe",
+          "tasse",
+          "freundin"
+        ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«قهوة بالحليب»؟",
-            "a": "Kaffee mit Milch."
+            "audioId": "et-1",
+            "speakText": "Yusuf, die Aufgabe heute: Du bist der Kellner, und ich bestelle.",
+            "q": "استمع: ما دور يوسف في مهمة اليوم؟",
+            "choices": [
+              "النادل",
+              "الزبون",
+              "المعلم"
+            ],
+            "a": "النادل",
+            "why": "der Kellner = النادل (من الوحدة الثانية) · und ich bestelle = وأنا أطلب — لينا الزبونة أولاً."
           },
           {
-            "q": "«قائمة الطعام من فضلك»؟",
-            "a": "Die Speisekarte, bitte!"
+            "audioId": "et-3",
+            "speakText": "Danke. Ich bekomme ein Wasser, bitte.",
+            "q": "استمع: ماذا تطلب لينا أولاً؟",
+            "choices": [
+              "ماء",
+              "عصيراً",
+              "شاياً"
+            ],
+            "a": "ماء",
+            "why": "Ich bekomme ein Wasser = آخذ ماءً — ein Wasser حصة واحدة، وdas Wasser محايد ← ein."
+          },
+          {
+            "audioId": "et-4",
+            "speakText": "Ein Glas oder eine Flasche?",
+            "q": "استمع: بماذا يسأل النادل؟",
+            "choices": [
+              "كأس أم زجاجة؟",
+              "كأس أم فنجان؟",
+              "زجاجة أم فنجان؟"
+            ],
+            "a": "كأس أم زجاجة؟",
+            "why": "das Glas = الكأس ← ein Glas · die Flasche = الزجاجة ← eine Flasche."
+          },
+          {
+            "audioId": "et-6",
+            "speakText": "Eine Flasche Wasser und einen Saft. Sehr gut!",
+            "q": "استمع: ما طلب لينا كاملاً؟",
+            "choices": [
+              "زجاجة ماء وعصير",
+              "كأس ماء وعصير",
+              "زجاجة ماء وشاي"
+            ],
+            "a": "زجاجة ماء وعصير",
+            "why": "eine Flasche Wasser = زجاجة ماء (بلا von) · einen Saft = عصيراً (der Saft ← einen) · Sehr gut = ممتاز."
+          },
+          {
+            "audioId": "et-7",
+            "speakText": "Danke, Herr Kellner! Ich habe eine Bitte: Jetzt bestellst du!",
+            "q": "استمع: ما طلب لينا من يوسف؟",
+            "choices": [
+              "أن يطلب هو الآن",
+              "أن يدفع هو الآن",
+              "أن يتكلم ببطء"
+            ],
+            "a": "أن يطلب هو الآن",
+            "why": "eine Bitte = طلب (اسم بحرف كبير) · Jetzt bestellst du = الآن تطلب أنت — تقلب الدورين."
+          },
+          {
+            "audioId": "et-11",
+            "speakText": "Eine Tasse Tee? Mit Milch?",
+            "q": "استمع: بماذا تسأل النادلة؟",
+            "choices": [
+              "فنجان شاي؟ بالحليب؟",
+              "كأس شاي؟ بالحليب؟",
+              "فنجان قهوة؟ بالحليب؟"
+            ],
+            "a": "فنجان شاي؟ بالحليب؟",
+            "why": "eine Tasse Tee = فنجان شاي (die Tasse ← eine) · Mit Milch? = بالحليب؟"
+          },
+          {
+            "audioId": "et-13",
+            "speakText": "Ein Glas Tee?",
+            "q": "استمع: ماذا تكرر لينا مستغربة؟",
+            "choices": [
+              "كأس شاي",
+              "فنجان شاي",
+              "زجاجة شاي"
+            ],
+            "a": "كأس شاي",
+            "why": "Ein Glas Tee = كأس شاي — ein للوعاء (das Glas) لا للشاي (der Tee)."
+          },
+          {
+            "audioId": "et-14",
+            "speakText": "Ja! In Tunesien trinken wir Tee im Glas.",
+            "q": "استمع: لماذا يطلب يوسف الشاي في كأس؟",
+            "choices": [
+              "لأن التونسيين يشربون الشاي في كأس",
+              "لأنه يحب الكؤوس الكبيرة",
+              "لأن جدته تشرب الشاي هكذا"
+            ],
+            "a": "لأن التونسيين يشربون الشاي في كأس",
+            "why": "In Tunesien trinken wir Tee im Glas = في تونس نشرب الشاي في كأس — wir = نحن التونسيين."
+          },
+          {
+            "audioId": "et-16",
+            "speakText": "Ja! Ich bekomme eine Suppe mit Brot.",
+            "q": "استمع: ماذا يطلب يوسف للأكل؟",
+            "choices": [
+              "حساء مع خبز",
+              "سلطة مع خبز",
+              "حساء مع أرز"
+            ],
+            "a": "حساء مع خبز",
+            "why": "eine Suppe = حساءً (die Suppe ← eine) · mit Brot = مع خبز — والحساء يُؤكل في الألمانية: essen لا trinken."
+          },
+          {
+            "audioId": "et-17",
+            "speakText": "Gern. Eine Suppe mit Brot und ein Glas Tee!",
+            "q": "استمع: ماذا تكرر النادلة؟",
+            "choices": [
+              "حساء مع خبز وكأس شاي",
+              "حساء مع خبز وفنجان شاي",
+              "سلطة مع خبز وكأس شاي"
+            ],
+            "a": "حساء مع خبز وكأس شاي",
+            "why": "Gern = بكل سرور · eine Suppe mit Brot und ein Glas Tee — النادل يكرر الطلب ليتأكد."
+          },
+          {
+            "audioId": "et-19",
+            "speakText": "Okay! Zwölf Euro, bitte. Bar oder mit Karte?",
+            "q": "استمع: كم الحساب، وبماذا تسأل لينا؟",
+            "choices": [
+              "12 يورو — نقداً أم بالبطاقة؟",
+              "20 يورو — نقداً أم بالبطاقة؟",
+              "12 يورو — معاً أم كلٌّ وحده؟"
+            ],
+            "a": "12 يورو — نقداً أم بالبطاقة؟",
+            "why": "zwölf = 12 (لا zwanzig = 20) · bar = نقداً · mit Karte = بالبطاقة (من الوحدة الثالثة)."
+          },
+          {
+            "audioId": "et-20",
+            "speakText": "Ich zahle bar. Danke, Lena — die Aufgabe ist fertig!",
+            "q": "استمع: كيف يدفع يوسف؟",
+            "choices": [
+              "نقداً",
+              "بالبطاقة",
+              "لا يدفع"
+            ],
+            "a": "نقداً",
+            "why": "Ich zahle bar = أدفع نقداً · die Aufgabe ist fertig = انتهت المهمة."
           }
         ],
-        "interleavedWith": [],
+        "interleavedWith": [
+          "kellner",
+          "aufgabe",
+          "tasse",
+          "suppe",
+          "brot",
+          "tunesien",
+          "karte"
+        ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«أشرب قهوة»؟",
-            "a": "Ich trinke einen Kaffee."
+            "tokens": [
+              "einen",
+              "Wir",
+              "Saft.",
+              "bekommen"
+            ],
+            "a": "Wir bekommen einen Saft.",
+            "why": "Wir ثم الفعل bekommen ثانياً ثم المفعول einen Saft — der Saft مذكر ← einen."
           },
           {
-            "q": "«أودّ أن أدفع»؟",
-            "a": "Ich möchte zahlen, bitte."
+            "tokens": [
+              "Flasche",
+              "Du",
+              "eine",
+              "bekommst",
+              "Wasser."
+            ],
+            "a": "Du bekommst eine Flasche Wasser.",
+            "why": "Du ثم bekommst ثانياً ثم الوعاء بأداته eine Flasche ثم المشروب Wasser بلا أداة."
+          },
+          {
+            "tokens": [
+              "bar.",
+              "Oma",
+              "zahlt"
+            ],
+            "a": "Oma zahlt bar.",
+            "why": "Oma ثم zahlt ثانياً (مع er/sie ‑t) ثم bar = نقداً بلا حرف."
+          },
+          {
+            "tokens": [
+              "bestellt",
+              "Der",
+              "Bier.",
+              "Mann",
+              "ein"
+            ],
+            "a": "Der Mann bestellt ein Bier.",
+            "why": "Der Mann فاعل ثم bestellt ثانياً ثم ein Bier — das Bier محايد ← ein."
+          },
+          {
+            "tokens": [
+              "Glas",
+              "Lena",
+              "ein",
+              "Saft.",
+              "bekommt"
+            ],
+            "a": "Lena bekommt ein Glas Saft.",
+            "why": "Lena ثم bekommt ثانياً ثم ein Glas (أداة الوعاء das Glas) ثم Saft بلا أداة — لا einen."
+          },
+          {
+            "tokens": [
+              "eine",
+              "Yusuf",
+              "Suppe.",
+              "isst"
+            ],
+            "a": "Yusuf isst eine Suppe.",
+            "why": "الحساء يُؤكل: isst (essen مع er: e ← i) لا trinkt · وeine Suppe مؤنثة."
           }
         ],
-        "interleavedWith": [],
+        "interleavedWith": [
+          "oma",
+          "mann",
+          "suppe"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "et-2",
+            "speakText": "Gut! Guten Tag! Hier ist die Speisekarte.",
+            "a": "Gut! Guten Tag! Hier ist die Speisekarte",
+            "why": "Speisekarte كلمة واحدة: Speise + Karte — sp في أولها تُنطق «شب» وei «آي» · والاسم بحرف كبير."
+          },
+          {
+            "audioId": "et-5",
+            "speakText": "Eine Flasche, bitte. Und einen Saft.",
+            "a": "Eine Flasche, bitte. Und einen Saft",
+            "why": "Flasche بـsch (ش) · Saft بـs في أولها تُنطق «ز» · einen بـei ثم ‑en."
+          },
+          {
+            "audioId": "et-8",
+            "speakText": "Gut, ich bestelle.",
+            "a": "Gut, ich bestelle",
+            "why": "bestelle: be + stelle، وst في أول الجذع تُنطق «شت» · وll بعد e القصيرة."
+          },
+          {
+            "audioId": "et-9",
+            "speakText": "Guten Tag! Was trinken Sie?",
+            "a": "Guten Tag! Was trinken Sie?",
+            "why": "trinken بـnk (نون أنفية ثم k) · Sie بحرف كبير للمخاطَب المهذب · Tag بـg في آخرها تُسمع k."
+          },
+          {
+            "audioId": "et-10",
+            "speakText": "Ich bekomme einen Tee, bitte.",
+            "a": "Ich bekomme einen Tee, bitte",
+            "why": "bekomme بـmm بعد o القصيرة · Tee بـee طويلة · وbitte بحرف صغير."
+          },
+          {
+            "audioId": "et-12",
+            "speakText": "Nein, ein Glas, bitte. Ohne Milch!",
+            "a": "Nein, ein Glas, bitte. Ohne Milch!",
+            "why": "Glas بـa طويلة وs في آخرها «س» · Ohne بـh صامتة تُطيل o · Milch بـch بعد l تُنطق كـich."
+          },
+          {
+            "audioId": "et-15",
+            "speakText": "Toll! Haben Sie Hunger?",
+            "a": "Toll! Haben Sie Hunger?",
+            "why": "Toll بـll بعد o القصيرة · Hunger بـu ثم ng — وSie وHunger بحرف كبير."
+          },
+          {
+            "audioId": "et-18",
+            "speakText": "Danke! Und jetzt zahlen, bitte!",
+            "a": "Danke! Und jetzt zahlen, bitte!",
+            "why": "zahlen بـz في أولها تُنطق «تس» وh صامتة تُطيل a · jetzt بـtzt في آخرها."
+          },
+          {
+            "audioId": "word-wasser",
+            "speakText": "Wasser.",
+            "a": "Wasser",
+            "why": "Wasser بـss بعد a القصيرة، وw تُنطق «ف» مجهورة (v) · و‑er في آخرها حركة خفيفة."
+          },
+          {
+            "audioId": "word-die-bitte",
+            "speakText": "die Bitte.",
+            "a": "die Bitte",
+            "why": "die Bitte اسم بحرف كبير (الطلب) · tt بعد i القصيرة — وbitte «من فضلك» بحرف صغير."
+          }
+        ],
+        "interleavedWith": [
+          "toll",
+          "hunger",
+          "jetzt",
+          "danke"
+        ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Ein Getränk höflich bestellen",
-        "ar": "طلب مشروب بلباقة"
+        "de": "Bestellen: Einen Tee, bitte! · Zahlen, bitte!",
+        "ar": "تلعب مع زميلك دوري النادل والزبون: تطلبان مشروبين وطعاماً بلباقة ثم تدفعان"
       },
       "situation": {
-        "de": "Im Café: bestellen",
-        "ar": "في المقهى: الطلب"
+        "de": "Im Kurs: Du bist der Kellner, und ich bestelle. Jetzt du!",
+        "ar": "في الدورة: أحدكما النادل والآخر الزبون بصيغة Sie، ثم تتبادلان الدورين: يسأل النادل Was trinken Sie? ويطلب الزبون مشروبين (أحدهما بوعاء: ein Glas … · eine Flasche …) وطعاماً، ثم يطلب الحساب ويدفع نقداً أو بالبطاقة."
       },
       "successCriteria": [
-        "طلبان مهذبان (مفعول به + bitte) + سؤال Speisekarte + جملة zahlen"
+        "طلبان مهذبان والمطلوب مفعول به (Einen …, bitte! · Ich bekomme …) — والمذكر einen.",
+        "مشروب بوعاء بلا von والأداة للوعاء (ein Glas Tee · eine Flasche Wasser) + Zahlen, bitte! + Ich zahle bar أو mit Karte."
       ]
     }
   },
@@ -133,20 +475,59 @@
       {
         "items": [
           {
-            "q": "«الماء»؟",
-            "a": "das Wasser"
+            "q": "«عصيراً من فضلك!» (طلب قصير)؟",
+            "choices": [
+              "Einen Saft, bitte!",
+              "Eine Saft, bitte!",
+              "Einem Saft, bitte!"
+            ],
+            "a": "Einen Saft, bitte!",
+            "why": "Saft مذكر (der Saft) والمطلوب مفعول به ← einen · eine للمؤنث · وeinem لا تأتي هنا."
           },
           {
-            "q": "«عصير برتقال من فضلك»؟",
-            "a": "Einen Orangensaft, bitte!"
+            "q": "«آخذ كأس عصير»؟",
+            "choices": [
+              "Ich bekomme ein Glas Saft.",
+              "Ich bekomme einen Glas Saft.",
+              "Ich bekomme ein Glas von Saft."
+            ],
+            "a": "Ich bekomme ein Glas Saft.",
+            "why": "الأداة للوعاء: das Glas ← ein (لا einen من der Saft) · والمشروب بعد الوعاء بلا von."
           },
           {
-            "q": "«كأس ماء من فضلك»؟",
-            "a": "Ein Glas Wasser, bitte."
+            "q": "«يحصل على · يأخذ عند الطلب» (المصدر) بالألمانية؟",
+            "a": "bekommen",
+            "why": "bekommen = يحصل على · ich bekomme · du bekommst · er/sie bekommt — لا become الإنجليزية (يصبح)."
           },
           {
-            "q": "«الشاي»؟",
-            "a": "der Tee"
+            "q": "«تشرب لينا الحليب» (عادةً)؟",
+            "choices": [
+              "Lena trinkt Milch.",
+              "Lena trinken Milch.",
+              "Lena trinkst Milch."
+            ],
+            "a": "Lena trinkt Milch.",
+            "why": "trinken مع er/sie ← trinkt · وMilch بلا أداة: كلام عام."
+          },
+          {
+            "q": "das Glas = ؟",
+            "choices": [
+              "الكأس",
+              "الزجاجة",
+              "الفنجان"
+            ],
+            "a": "الكأس",
+            "why": "das Glas = الكأس · die Flasche = الزجاجة · die Tasse = الفنجان."
+          },
+          {
+            "q": "«هل تدفعين نقداً؟» (للينا)",
+            "choices": [
+              "Zahlst du bar?",
+              "Zahlt du bar?",
+              "Zahlen du bar?"
+            ],
+            "a": "Zahlst du bar?",
+            "why": "سؤال نعم/لا يبدأ بالفعل · zahlen مع du ← zahlst · وbar بلا حرف."
           }
         ],
         "passingScore": 0.75
@@ -154,20 +535,59 @@
       {
         "items": [
           {
-            "q": "«أشرب قهوة»؟",
-            "a": "Ich trinke einen Kaffee."
+            "q": "«حساءً من فضلك!»؟",
+            "choices": [
+              "Eine Suppe, bitte!",
+              "Einen Suppe, bitte!",
+              "Ein Suppe, bitte!"
+            ],
+            "a": "Eine Suppe, bitte!",
+            "why": "Suppe مؤنثة (die Suppe) ← eine حتى مفعولاً — einen للمذكر وحده، وein للمذكر والمحايد."
           },
           {
-            "q": "«قائمة الطعام»؟",
-            "a": "die Speisekarte (مركّب: Speise + Karte = die)"
+            "q": "«آخذ زجاجة عصير»؟",
+            "choices": [
+              "Ich bekomme eine Flasche Saft.",
+              "Ich bekomme einen Flasche Saft.",
+              "Ich bekomme eine Flasche von Saft."
+            ],
+            "a": "Ich bekomme eine Flasche Saft.",
+            "why": "die Flasche مؤنثة ← eine، وجنس Saft (der) لا يغيّرها · وبلا von."
           },
           {
-            "q": "«زجاجة ماء من فضلك»؟",
-            "a": "Eine Flasche Wasser, bitte."
+            "q": "«قائمة الطعام» بالألمانية مع الأداة؟",
+            "a": "die Speisekarte",
+            "why": "die Speisekarte كلمة واحدة (Speise + Karte) وأداتها من الجزء الأخير: die Karte."
           },
           {
-            "q": "«أودّ أن أطلب»؟",
-            "a": "Ich möchte bestellen."
+            "q": "«ماذا تطلب حضرتك؟» (النادل للزبون)",
+            "choices": [
+              "Was bestellen Sie?",
+              "Was bestellst Sie?",
+              "Was bestelle Sie?"
+            ],
+            "a": "Was bestellen Sie?",
+            "why": "Sie المهذبة مع صيغة الجمع ← bestellen · bestellst لـdu · bestelle لـich."
+          },
+          {
+            "q": "die Flasche = ؟",
+            "choices": [
+              "الزجاجة",
+              "الكأس",
+              "قائمة الطعام"
+            ],
+            "a": "الزجاجة",
+            "why": "die Flasche = الزجاجة · das Glas = الكأس · die Speisekarte = قائمة الطعام."
+          },
+          {
+            "q": "«نطلب الآن»؟",
+            "choices": [
+              "Wir bestellen jetzt.",
+              "Wir bestellt jetzt.",
+              "Wir bestellst jetzt."
+            ],
+            "a": "Wir bestellen jetzt.",
+            "why": "bestellen مع wir ← bestellen (كالمصدر) · bestellt لـer/sie/ihr · bestellst لـdu."
           }
         ],
         "passingScore": 0.75
@@ -175,20 +595,59 @@
       {
         "items": [
           {
-            "q": "«بيرة» — das أم der?",
-            "a": "das Bier"
+            "q": "«فنجان شاي من فضلك»؟",
+            "choices": [
+              "Eine Tasse Tee, bitte.",
+              "Einen Tasse Tee, bitte.",
+              "Eine Tasse von Tee, bitte."
+            ],
+            "a": "Eine Tasse Tee, bitte.",
+            "why": "die Tasse مؤنثة ← eine (لا einen من der Tee) · وTee بعدها بلا von."
           },
           {
-            "q": "«الحليب»؟",
-            "a": "die Milch (die — رغم أنها سائل!)"
+            "q": "«المرأة تأخذ كأس نبيذ»؟",
+            "choices": [
+              "Die Frau bekommt ein Glas Wein.",
+              "Die Frau bekommt einen Glas Wein.",
+              "Die Frau bekommt ein Glas von Wein."
+            ],
+            "a": "Die Frau bekommt ein Glas Wein.",
+            "why": "das Glas ← ein، وder Wein لا يغيّر أداة الوعاء · وبلا von."
           },
           {
-            "q": "«أودّ أن أدفع من فضلك»؟",
-            "a": "Ich möchte zahlen, bitte."
+            "q": "«البيرة» بالألمانية مع الأداة؟",
+            "a": "das Bier",
+            "why": "das Bier محايد — وجنس كل مشروب يُحفظ مع كلمته: das Wasser · die Milch · der Wein."
           },
           {
-            "q": "«كأس نبيذ من فضلك»؟",
-            "a": "Ein Glas Wein, bitte."
+            "q": "«أنتَ تحصل على عصير» (لصديق)؟",
+            "choices": [
+              "Du bekommst einen Saft.",
+              "Du bekommt einen Saft.",
+              "Du bekommen einen Saft."
+            ],
+            "a": "Du bekommst einen Saft.",
+            "why": "bekommen مع du ← bekommst (‑st) · وeinen Saft مفعول به مذكر."
+          },
+          {
+            "q": "der Wein = ؟",
+            "choices": [
+              "النبيذ",
+              "العصير",
+              "الحليب"
+            ],
+            "a": "النبيذ",
+            "why": "der Wein = النبيذ · der Saft = العصير · die Milch = الحليب."
+          },
+          {
+            "q": "«ندفع معاً»؟",
+            "choices": [
+              "Wir zahlen zusammen.",
+              "Wir zahlt zusammen.",
+              "Wir zahlst zusammen."
+            ],
+            "a": "Wir zahlen zusammen.",
+            "why": "zahlen مع wir ← zahlen · وzusammen = معاً (من الوحدة الأولى)."
           }
         ],
         "passingScore": 0.75
@@ -197,53 +656,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Höflich bestellen: „Einen Tee, bitte!“ — der Akkusativ macht den Wunsch klar, und bitte macht ihn freundlich!",
-      "ar": "الطلب المهذب: «Einen Tee, bitte!» — المفعول به يوضّح الودّ وbitte يجعله لطيفاً!"
+      "de": "Einen Saft, bitte! · Ich bekomme einen Tee. · ein Glas Tee · eine Flasche Wasser · Zahlen, bitte! · Ich zahle bar.",
+      "ar": "اطلب بلباقة: المطلوب مفعول به (Einen Saft, bitte! · Ich bekomme einen Tee.) فالمذكر einen. والوعاء أولاً بأداته ثم المشروب بلا أداة وبلا von: ein Glas Tee (das Glas) · eine Flasche Wasser (die Flasche) — الأداة للوعاء لا للمشروب. والمشروب عموماً بلا أداة (Ich trinke gern Tee). وللدفع: Zahlen, bitte! · Ich zahle bar · mit Karte. والحساء يُؤكل: Ich esse eine Suppe."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Tee, bitte!~~ / ~~Der Tee, bitte!~~",
-          "ar": "الطلب = مفعول به (einen)"
+          "de": "~~Ich bekomme einen Glas Saft.~~",
+          "ar": "الأداة على جنس المشروب (der Saft) لا الوعاء"
         },
-        "whyArabicSpeakerFails": "«شاي من فضلك» بلا أداة بالعربية؛ الألماني يطلب بالمفعول: Einen Tee (der ← einen) — تكرار موعود من الوحدة 4 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "في الإضافة العربية «كأسُ عصيرٍ» لا تأخذ الكلمة الأولى (الوعاء) تنويناً، ويقع التنوين على الثانية — على المشروب. ومن تعلّم أن التنوين يقابل ein (ein Haus) يميل إلى بناء الأداة على جنس المشروب: der Saft ← einen. والألمانية تضع الأداة للوعاء، والمشروب بعده بلا أداة: das Glas ← ein Glas Saft · die Flasche ← eine Flasche Saft (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Einen Tee, bitte!",
-          "ar": "شاي من فضلك!"
+          "de": "Ein Glas Saft, bitte!",
+          "ar": "كأس عصير من فضلك!"
         },
         "exercise": {
-          "q": "اطلب قهوة (der Kaffee) بلباقة",
-          "a": "Einen Kaffee, bitte!"
+          "q": "صحّح: ~~Wir bekommen einen Glas Tee.~~",
+          "a": "Wir bekommen ein Glas Tee."
         }
       },
       {
         "commonError": {
-          "de": "~~die Wasser~~ / ~~das Milch~~",
-          "ar": "جنس السوائل بلا نظام"
+          "de": "~~eine Flasche von Wasser~~",
+          "ar": "«من» العربية وde الفرنسية تصيران von"
         },
-        "whyArabicSpeakerFails": "السوائل محايدة في التخيل العربي أحياناً؛ الألماني: das Wasser/das Bier لكن die Milch وder Wein/der Saft — حفظ وبطاقات جنس (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تقول «كأسٌ من الماء» بـ«من» إلى جانب الإضافة «كأسُ ماءٍ»، والفرنسية التي يعرفها كثيرون في المغرب العربي تقول une bouteille d'eau بـde — فينقل المتعلم الحرف إلى von. والألمانية تضع المشروب بعد الوعاء مباشرة بلا حرف وبلا أداة: eine Flasche Wasser — كالإضافة العربية «زجاجةُ ماءٍ» تماماً، فهنا تساعدك العربية (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "das Wasser / die Milch / der Wein",
-          "ar": "جنس كل سائل يُحفظ"
+          "de": "Eine Flasche Saft, bitte.",
+          "ar": "زجاجة عصير من فضلك."
         },
         "exercise": {
-          "q": "حدّد: Milch (die/das) · Bier (das/der)",
-          "a": "die Milch · das Bier"
+          "q": "صحّح: ~~Ich bekomme ein Glas von Milch.~~",
+          "a": "Ich bekomme ein Glas Milch."
         }
       },
       {
         "commonError": {
-          "de": "~~die Speise~~ karte / ~~das Speisekarte~~",
-          "ar": "المركّب يأخذ جنس آخر جزء"
+          "de": "~~Ich trinke eine Suppe.~~ (بالملعقة)",
+          "ar": "«شرب الحساء» العربية تصير trinken"
         },
-        "whyArabicSpeakerFails": "«قائمة الطعام» كلمتان بالعربية؛ الألماني مركّب واحد والجنس من Karte (die) — قاعدة Muttersprache للمرة الثالثة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تقول «شربتُ الحساء»، وفي تونس «نشربو الشربة»، فينقل المتعلم الفعل إلى trinken. والألمانية تأكل الحساء من الصحن بالملعقة: Ich esse eine Suppe — إلا حساءً يُشرب من فنجان — وtrinken للمشروبات: Wasser · Tee · Saft · Milch (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "die Speisekarte",
-          "ar": "قائمة الطعام (die)"
+          "de": "Ich esse eine Suppe.",
+          "ar": "آكل حساءً."
         },
         "exercise": {
-          "q": "حدّد: Speisekarte — der/die/das?",
-          "a": "die (من die Karte)"
+          "q": "صحّح: ~~Wir trinken eine Suppe mit Brot.~~",
+          "a": "Wir essen eine Suppe mit Brot."
         }
       }
     ],
@@ -259,19 +718,27 @@
       "bestellen",
       "glas",
       "flasche",
-      "zahlen"
+      "zahlen",
+      "bar",
+      "bekommen",
+      "die-bitte"
     ]
   },
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/Speisekarte",
       "https://www.duden.de/rechtschreibung/Wasser",
-      "https://www.duden.de/rechtschreibung/bestellen"
+      "https://www.duden.de/rechtschreibung/bestellen",
+      "https://www.duden.de/rechtschreibung/Bitte"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/bestellen"
+      "https://de.wiktionary.org/wiki/bestellen",
+      "https://de.wiktionary.org/wiki/bekommen",
+      "https://de.wiktionary.org/wiki/bar"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-trinken"
@@ -288,14 +755,30 @@
     "word-bestellen",
     "word-glas",
     "word-flasche",
-    "word-zahlen"
+    "word-zahlen",
+    "word-bar",
+    "word-bekommen",
+    "word-die-bitte"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Getränke & Café",
     "goetheWordListOverlap": [
       "wasser",
-      "trinken"
+      "milch",
+      "saft",
+      "bier",
+      "wein",
+      "tee",
+      "trinken",
+      "speisekarte",
+      "bestellen",
+      "glas",
+      "flasche",
+      "zahlen",
+      "bar",
+      "bekommen",
+      "die-bitte"
     ]
   }
 }

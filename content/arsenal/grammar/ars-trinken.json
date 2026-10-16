@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-trinken",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Einen Tee, bitte! · Ich bekomme ein Glas Tee.",
+    "ar": "الطلب المهذب: المطلوب مفعول به (einen Tee) · الوعاء ثم المشروب بلا von (ein Glas Tee) — والفعل bekommen"
+  },
+  "payload": {
+    "topicAr": "طلب مشروب أو طعام في المقهى بلباقة: نذكر المطلوب وحده مع bitte (Ein Wasser, bitte. · Einen Saft, bitte!) أو نقوله جملةً كاملة بـbekommen (Ich bekomme einen Tee.) — والمطلوب مفعول به في الحالتين، فالمذكر einen. وحين نذكر الوعاء نضعه قبل المشروب بلا حرف وبلا أداة للمشروب: ein Glas Tee · eine Flasche Wasser · eine Tasse Tee، والأداة للوعاء. ثم ندفع: Zahlen, bitte! · Ich zahle bar.",
+    "sceneAr": "مهمة الدورة عبر الإنترنت اليوم لعب أدوار في مقهى بصيغة Sie المهذبة: يوسف النادل أولاً، فتطلب لينا زجاجة ماء وعصيراً، ثم تقلب الدورين («Ich habe eine Bitte: Jetzt bestellst du!») فيطلب يوسف شاياً — في كأس لا في فنجان، فالشاي في تونس يُشرب في كؤوس صغيرة — وحساءً مع خبز، ثم يدفع اثني عشر يورو نقداً.",
+    "examples": [
+      {
+        "de": "Ein Wasser, bitte. · Einen Saft, bitte!",
+        "ar": "ماءً من فضلك · عصيراً من فضلك — المطلوب وحده مع bitte: ein Wasser (das) · einen Saft (der)"
+      },
+      {
+        "de": "Ich bekomme einen Tee. · Was trinken Sie?",
+        "ar": "آخذ شاياً · ماذا تشرب حضرتك؟ — جملة كاملة: bekommen + مفعول به، وSie بين النادل والزبون"
+      },
+      {
+        "de": "Ein Glas oder eine Flasche? · Eine Flasche Wasser, bitte.",
+        "ar": "كأس أم زجاجة؟ · زجاجة ماء من فضلك — الوعاء أولاً ثم المشروب بلا حرف: die Flasche ← eine"
+      },
+      {
+        "de": "Eine Tasse Tee? · Nein, ein Glas Tee!",
+        "ar": "فنجان شاي؟ · لا، كأس شاي! — der Tee مذكر، لكن الأداة للوعاء: das Glas ← ein"
+      },
+      {
+        "de": "Zahlen, bitte! · Ich zahle bar.",
+        "ar": "الحساب من فضلك! · أدفع نقداً — bar بلا حرف، وبالبطاقة mit Karte"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) Saft وTee مذكران (der Saft · der Tee): لماذا Einen Saft وeinen Tee في الطلب، لا der ولا ein؟ وما الفعل المفهوم قبل «Einen Saft, bitte!»؟ (2) في Ich bekomme einen Tee: ما وظيفة einen Tee في الجملة؟ (3) في eine Flasche Wasser: هل ترى von أو أداة قبل Wasser؟ (4) في ein Glas Tee: Tee مذكر، فلماذا ein لا einen؟ لِمَن الأداة؟ (5) بالعربية «كأسُ شايٍ»: هل تحتاج «من» بين الكلمتين؟ وعلى أيّهما يقع التنوين؟",
+    "ruleDe": "Bestellen: Einen Saft, bitte! · Ich bekomme einen Tee. · ein Glas Tee · eine Flasche Wasser — ohne von · Zahlen, bitte! · Ich zahle bar.",
+    "ruleAr": "اطلب بخطوتين وادفع بثالثة: (1) المطلوب مفعول به. في الطلب القصير نذكره وحده مع bitte وقبله فعلٌ مفهوم (Ich bekomme …): Ein Wasser, bitte. · Eine Suppe, bitte. · Einen Saft, bitte! فالمذكر وحده يتغيّر: der Saft ← einen Saft · der Tee ← einen Tee، والمؤنث والمحايد كما هما: eine Suppe · ein Wasser — كما تعلمت في Akkusativ الوحدة الرابعة. وبجملة كاملة: Ich bekomme einen Tee. وتصريف bekommen منتظم: ich bekomme · du bekommst · er/sie bekommt · wir bekommen · Sie bekommen. ويسأل النادل: Was trinken Sie? (2) المشروب عموماً بلا أداة كالطعام: Ich trinke gern Tee. · In Tunesien trinken wir Tee im Glas. لكننا في الطلب نطلب حصة واحدة، لذلك ein Wasser · einen Tee صحيحتان هنا. (3) الوعاء ثم المشروب: الوعاء أولاً بأداته، والمشروب بعده بلا أداة وبلا von: ein Glas Tee (das Glas) · eine Flasche Wasser (die Flasche) · eine Tasse Tee (die Tasse) — والأداة تتبع الوعاء لا المشروب: der Saft لكن ein Glas Saft. (4) الدفع: Zahlen, bitte! جملة جاهزة لطلب الحساب، ثم Ich zahle bar (نقداً) أو mit Karte (بالبطاقة — من الوحدة الثالثة).",
+    "contrastAr": "ما يساعدك اثنان: (1) العربية الفصيحة تنصب المطلوب بفعل محذوف: «شاياً من فضلك» تقديرها «أعطني شاياً»، كما تُنصب «شكراً» بفعل محذوف — والألمانية تفعل الشيء نفسه: Einen Tee, bitte! مفعول به (Akkusativ) لفعل مفهوم (Ich bekomme). (2) الإضافة «كأسُ شايٍ» بلا حرف بين الكلمتين، كما تقول الألمانية ein Glas Tee بلا von. وما يختلف ثلاثة: (1) في الإضافة لا تأخذ الكلمة الأولى تنويناً، ويقع التنوين على الثانية — على المشروب: «كأسُ عصيرٍ». ومن تعلّم أن التنوين يقابل ein (ein Haus) يميل إلى بناء الأداة على المشروب: ~~einen Glas Saft~~ لأن der Saft مذكر — والألمانية تضع الأداة للوعاء: ein Glas Saft (das Glas) · eine Flasche Saft (die Flasche). (2) العربية تقول أيضاً «كأسٌ من الماء» بـ«من»، والفرنسية التي يعرفها كثيرون في المغرب العربي تقول un verre d'eau بـde — فيظهر ~~ein Glas von Wasser~~؛ والألمانية بلا حرف: eine Flasche Wasser. (3) العربية «تشرب» الحساء — «شربتُ الحساء»، وفي تونس «نشربو الشربة» — والألمانية تأكله بالملعقة: Ich esse eine Suppe، لا ~~Ich trinke eine Suppe~~ — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "ein Wasser · einen Tee في الطلب حصةٌ واحدة (كأس أو زجاجة أو فنجان) — كما في قاعدة الطعام: einen Salat = طبق سلطة. أما في الكلام العام فالمشروب بلا أداة: Ich trinke gern Tee.",
+      "بعد العدد: zwei Flaschen Saft · zwei Tassen Tee بالجمع، وzwei Gläser Tee كذلك — وقد تسمع في المقهى zwei Glas Tee أيضاً (الوعاء المذكر والمحايد قد يبقى مفرداً في الكميات)، والصيغتان صحيحتان.",
+      "bekommen = يحصل على · يتلقّى، وفي الطلب «آخذ» — لا تخلطه بالإنجليزية become (يصبح): تأثيرٌ إنجليزي لمن يعرفها لا عربي. وصيغة الطلب «أودّ …» في الدرس القادم، والنفي في الدرس الرابع من هذه الوحدة.",
+      "die Bitte اسم بحرف كبير (طلب، رجاء): Ich habe eine Bitte — غير bitte «من فضلك» بحرف صغير. وZahlen, bitte! قطعة جاهزة بالمصدر، ومعها bezahlen من الوحدة الثالثة: Ich bezahle mit Karte."
+    ],
+    "beads": [
+      "Ich",
+      "bekomme",
+      "eine",
+      "Flasche",
+      "Wasser."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u5-d2"
+  ]
+}

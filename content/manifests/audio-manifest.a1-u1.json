@@ -5138,11 +5138,11 @@
       "lessonRefs": [
         "a1-u5-d2"
       ],
-      "durationMs": 1187,
-      "sizeBytes": 6171,
-      "hash": "sha256:c6fe48fd76d76778d27bae5303cc73e8b8a8e3d3040ed7ae56a50aadf8e586e9",
-      "pcmSha256": "b17bd0966a9a086492f23a7bae6ff76f8eb4275d896b36ae4d4a46695b3d28f7",
-      "rmsDb": -17.13
+      "durationMs": 1222,
+      "sizeBytes": 5711,
+      "hash": "sha256:9dfa2552ed0f31f99a64ba5296d4626e2fccca4623bed02538227396c62377b0",
+      "pcmSha256": "7e2b9a05af61f475f335df5ab11fa77577cee4d3209790dc7f2b152653deb0f4",
+      "rmsDb": -17.18
     },
     {
       "id": "word-bestellen",
@@ -16369,6 +16369,66 @@
       "rmsDb": -17
     },
     {
+      "id": "word-bar",
+      "file": "words/audio/de-DE/word-bar.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "bar.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 839,
+      "sizeBytes": 3603,
+      "hash": "sha256:adc78dfb1abe537eae4fdfeacd7a34714f6bcd9b3e77bbfe1e2f5084d6b5bef5",
+      "pcmSha256": "387f732cae9c48f0d74354c2e9c0b9dfa502e439d0b6b83363d96f5aa9a1554a",
+      "rmsDb": -17.35
+    },
+    {
+      "id": "word-bekommen",
+      "file": "words/audio/de-DE/word-bekommen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "bekommen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 804,
+      "sizeBytes": 3911,
+      "hash": "sha256:cc83b15880aa2c2265ed4a4f25414fcfb4b09ad9d8693cc8740961c5f50bbdd9",
+      "pcmSha256": "9df81fb13a3cdd5cc028d1a068c4f3643f1c2960e757e74c9c23f0bafe54c9cd",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "word-die-bitte",
+      "file": "words/audio/de-DE/word-die-bitte.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Bitte.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 1140,
+      "sizeBytes": 4991,
+      "hash": "sha256:74b02efd41d5a16e98fce9ab447ba6b0534458860140a9eec20d7b3098f25498",
+      "pcmSha256": "4cb386bb9697d807569813b9aef4ad8e0723f200bc48eec130b4a64d0c39a77e",
+      "rmsDb": -17.03
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -24914,6 +24974,446 @@
       "hash": "sha256:259bd281a529938692366a6c1d6e65d8047856737854ba9b411279cc3a91e5c3",
       "pcmSha256": "868f655eb581b9fd1ba53edd4c1bfc6795e5be5dbec44f973087d9b6049ef181",
       "rmsDb": -17.05
+    },
+    {
+      "id": "et-1",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, die Aufgabe heute: Du bist der Kellner, und ich bestelle.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 5320,
+      "sizeBytes": 24845,
+      "hash": "sha256:1aeea8e71e92fad553c7921fd6beb6444944e029f08841d60ab2026775c44718",
+      "pcmSha256": "6f1897e1e740cb7f392540d1ec6cdbad62d1e5e4426660f873c10e15c655d267",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "et-2",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut! Guten Tag! Hier ist die Speisekarte.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 3323,
+      "sizeBytes": 14991,
+      "hash": "sha256:612e11e72a4fb40b5ed80d8c52273b685af2a6f02d56489dfbdb67ebda809a13",
+      "pcmSha256": "92c168195df1715d73c681174087b565d6b0901c90827193740957576f94e4b1",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "et-3",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke. Ich bekomme ein Wasser, bitte.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 2680,
+      "sizeBytes": 12604,
+      "hash": "sha256:6791e32eecc182beb56589681bf7b7134779eae49b3c5c918a326a99c8347e9f",
+      "pcmSha256": "c9d716cb7db87765caa8cb4ad3a516eed3204acb6d4ed7712523ae18c00456a7",
+      "rmsDb": -17.45
+    },
+    {
+      "id": "et-4",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Glas oder eine Flasche?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 2104,
+      "sizeBytes": 10078,
+      "hash": "sha256:fa45dec40e6e7388f37449c27e845fc8cae374ad6dbea632f0e3eff28822629e",
+      "pcmSha256": "7edf433265b615be27b9b9fd970ebb39005c13fac2060268177449c11e3d28fb",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "et-5",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 105,
+        "lengthScale": 1.32
+      },
+      "textDe": "Eine Flasche, bitte. Und einen Saft.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 3416,
+      "sizeBytes": 15857,
+      "hash": "sha256:6ae93c2ac0a54d25281468213286847784055301150d3d2c40998ddd5de3e8c2",
+      "pcmSha256": "1bced19ed2db5cce7b3149d0c22b0d4402543cca4b45cb6b1ef9397f78314ab4",
+      "rmsDb": -17.35
+    },
+    {
+      "id": "et-6",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Eine Flasche Wasser und einen Saft. Sehr gut!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 3323,
+      "sizeBytes": 15220,
+      "hash": "sha256:edb3fae4284431b3e2a0bcba2796361cad8a14cdb4bacc5bcc36039e6707b37f",
+      "pcmSha256": "bcb83e0de38c182b9fbd2155fc74a6dc29ba8a46874a7230cb38d2e91e45c719",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "et-7",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke, Herr Kellner! Ich habe eine Bitte: Jetzt bestellst du!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 4920,
+      "sizeBytes": 22848,
+      "hash": "sha256:7961cae7bd8f41327180ff5b6016776163051959f45fcc86cb6e95666bc6377c",
+      "pcmSha256": "94b5db5e1031c8a6a35bd7767be81b848dec4ca998f1bed77f5a6897b78c240c",
+      "rmsDb": -17.39
+    },
+    {
+      "id": "et-8",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 78,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut, ich bestelle.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 2301,
+      "sizeBytes": 9802,
+      "hash": "sha256:2efb3de1e584b2bbfd8e2a83f427899186fea7c6f0fa6701f960cb072e92d1b0",
+      "pcmSha256": "e9f3fbf4a3105708184ced0b369a0452b5e3fd4ebaf781ff31b6493077836761",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "et-9",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 111,
+        "lengthScale": 1.32
+      },
+      "textDe": "Guten Tag! Was trinken Sie?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 2712,
+      "sizeBytes": 12873,
+      "hash": "sha256:dd8afa031a1c82ef934709349db7324fc003e971c679202a5ae6640a6916e579",
+      "pcmSha256": "c704cf0bef490dc23ac1c522677b3ec4568112fe70afa1d4e93ef012ee23ec6d",
+      "rmsDb": -17.46
+    },
+    {
+      "id": "et-10",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich bekomme einen Tee, bitte.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 2452,
+      "sizeBytes": 11032,
+      "hash": "sha256:b4547243be82404a1a3f3b023264a2812b9697520911de69774be84c90d0deeb",
+      "pcmSha256": "5255ae3803ebf286a78c35ffda0c732645285f31bc8c13e264015e87f1b4f822",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "et-11",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Eine Tasse Tee? Mit Milch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 1784,
+      "sizeBytes": 8571,
+      "hash": "sha256:45480795ec1b6689a82ef3f4010996dcb57315b96293bbd9d9123746d9a91177",
+      "pcmSha256": "42d761abd2635501b8c7c8cf08dde02028654703ed9941379cc3110a8a42733d",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "et-12",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 100,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, ein Glas, bitte. Ohne Milch!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 3602,
+      "sizeBytes": 15688,
+      "hash": "sha256:049bf58990e83dc82bad92f60f9d151222ecd8bef94328eb48acaf8d35f79023",
+      "pcmSha256": "d2bd212995e27a609fb5dc064b81fb69a4be8ceaea713184ef4006bb9fc830f0",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "et-13",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 183,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Glas Tee?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 984,
+      "sizeBytes": 4790,
+      "hash": "sha256:5bce04a2adb00a498ac02a8b13091a5042e613e088586681744785e20400ec47",
+      "pcmSha256": "9bf63bf67cc5378666b88518da656a3b712f9f19dd77ea9930fe41cb827c6493",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "et-14",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! In Tunesien trinken wir Tee im Glas.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 3381,
+      "sizeBytes": 15612,
+      "hash": "sha256:a3eebb1cb7d63bbc0e9689edf3b1972fb279df279ed6ff1a225fd9d88f3c367b",
+      "pcmSha256": "8af5bf5725b7890e02f0729c1af53c79dc80e9c4928aafd8188e333ffa1dc18a",
+      "rmsDb": -17
+    },
+    {
+      "id": "et-15",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Toll! Haben Sie Hunger?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 1848,
+      "sizeBytes": 8721,
+      "hash": "sha256:b8314d2dc0344d32655aaed5dfd3795dfb182fea9a514323943a9a859769e23f",
+      "pcmSha256": "908ee3d7001dd7d125e8ac4f5cf463fc96e44fba525aad51fd0ebe65a9f3262b",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "et-16",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Ich bekomme eine Suppe mit Brot.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 2859,
+      "sizeBytes": 13605,
+      "hash": "sha256:5e783f026f31de17fe64e655d31b6f3d4737ea938be80041b773d540a698e739",
+      "pcmSha256": "eb7470b5844eeff6a605bb021e3f9b2db8e9095a02e476dfcecd00abf962a9d3",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "et-17",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gern. Eine Suppe mit Brot und ein Glas Tee!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 3384,
+      "sizeBytes": 15804,
+      "hash": "sha256:f7fbf56ddec80514dd6ba7bb39a646d0f89777db0a764be7be85522767e2cc22",
+      "pcmSha256": "1cba5ceec7146dd5fd23a193861c05ea77a5fa16229a8607a7c568be15f7dd21",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "et-18",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 96,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke! Und jetzt zahlen, bitte!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 3114,
+      "sizeBytes": 13922,
+      "hash": "sha256:e11793bd5e188c801bf0cb3e4813eb9a9baf33009b7dec4f29605f90681d418f",
+      "pcmSha256": "b3e1468021e51d849816799c659a4e87006a1c29f7b5a380f44a485e6849a2a3",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "et-19",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 111,
+        "lengthScale": 1.32
+      },
+      "textDe": "Okay! Zwölf Euro, bitte. Bar oder mit Karte?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 4328,
+      "sizeBytes": 19866,
+      "hash": "sha256:577280bff460328066711af40d8739f8b4d251af37fadf27f6f4e34a169b8005",
+      "pcmSha256": "f600491e79f2e9bace6117a271a344a5924455389cb1bc35b1f91cf720349b2f",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "et-20",
+      "file": "audio/scripts/a1-u5-d2-einen-tee-bitte/et-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich zahle bar. Danke, Lena — die Aufgabe ist fertig!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d2"
+      ],
+      "durationMs": 4438,
+      "sizeBytes": 19827,
+      "hash": "sha256:52b7c81958e6dc1bd8ec0cb9d164c37309c483390474e82a16a035d05be5db48",
+      "pcmSha256": "ac614f6e8797c1350449e96908d423a976893d72811f31dc758372b572e5bcc6",
+      "rmsDb": -17.1
     }
   ],
   "characterVoices": {
