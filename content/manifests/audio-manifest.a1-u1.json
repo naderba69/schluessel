@@ -16309,6 +16309,66 @@
       "rmsDb": -16.96
     },
     {
+      "id": "word-lebensmittel",
+      "file": "words/audio/de-DE/word-lebensmittel.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Lebensmittel.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 1106,
+      "sizeBytes": 5236,
+      "hash": "sha256:9bd6a7e3116e2090a1d7741dc58b0d61ba2470fadcc1803e886078acd1db3e4c",
+      "pcmSha256": "6fab32446af322e5addcecf1850333dc96be501fa1060d2e31d85be04aba3c7c",
+      "rmsDb": -16.97
+    },
+    {
+      "id": "word-apfel",
+      "file": "words/audio/de-DE/word-apfel.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Apfel.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 1106,
+      "sizeBytes": 5238,
+      "hash": "sha256:d0aa186897174e60e7fa56377642b8d370136be371fd86102ebc2d64b0aad9d7",
+      "pcmSha256": "a1ec59c10e2b11779c148596ccdec1a38ddaca9a80025bced53bda2715e4c974",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "word-moegen",
+      "file": "words/audio/de-DE/word-moegen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "mögen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 780,
+      "sizeBytes": 3828,
+      "hash": "sha256:6099ed7af3ee8e4501bab899a33f76ff70a56077a5733ced0d2ec9455c7ec6fd",
+      "pcmSha256": "5d9e68f59f0ae63e14977e360dd688e329b0948b418e20b4f15c0a4a5ee4c2da",
+      "rmsDb": -17
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -24458,6 +24518,402 @@
       "hash": "sha256:f109e370acf6ef1eca7bfc2f3347eaf273f7a088980f4098cec6fb0416caa5aa",
       "pcmSha256": "a0e5a0cc41ba95a893e8b4d8ab5f7e3ca22360c0e7cb7c6bfd5d386a45ae0066",
       "rmsDb": -17.09
+    },
+    {
+      "id": "ff-1",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 102,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, die Aufgabe heute: Fisch oder Fleisch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 4136,
+      "sizeBytes": 19250,
+      "hash": "sha256:08dbd4270b164ca68a64a1875c5995572880ebbebce6af79a0bf6e8b4fc2add0",
+      "pcmSha256": "4bb047529fb251fa1706f1c9aa3a64919166ba3059d98214229b76451ea423bb",
+      "rmsDb": -17.45
+    },
+    {
+      "id": "ff-2",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 97,
+        "lengthScale": 1.32
+      },
+      "textDe": "Fisch, bitte! Ich mag Fisch.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 3091,
+      "sizeBytes": 12880,
+      "hash": "sha256:a0936b72c882754326361a30591ccee99c25b29555d2877b98ac2c7e045bc2ca",
+      "pcmSha256": "e777bb940470c811b512c623b1bbb3ec59db40b1f2165eb62feb884ef06b774b",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "ff-3",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und Reis oder Nudeln?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 2008,
+      "sizeBytes": 9337,
+      "hash": "sha256:2347a1f3f6a5acdaa229b639db33837c05e227316fa82cc4ab08d7e5ec0d693e",
+      "pcmSha256": "b85bfb44ad7f3bb7542069808bd979799b3c14d6120464b9db49baeb0ea1782d",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "ff-4",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 113,
+        "lengthScale": 1.32
+      },
+      "textDe": "Reis, bitte. Mit Gemüse! Jetzt du: Brot oder Wurst?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 4786,
+      "sizeBytes": 20822,
+      "hash": "sha256:e9dc1b7a14ac976e3495c9c6d414c1d387d948f495fc322f1aaa41d0f53a513f",
+      "pcmSha256": "3e6387a870acdfe04b2adaf146d469a5f90a35ab041ec77de1bad56e447f36bd",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "ff-5",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 81,
+        "lengthScale": 1.32
+      },
+      "textDe": "Beide, bitte!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 1480,
+      "sizeBytes": 6950,
+      "hash": "sha256:ee22536735f5e1d71cb7258ac6750d36cad25f83476da6c13e32a2cb5acb9d5c",
+      "pcmSha256": "51fcf90ba42b96339593c8972829fd05a2749d57c9a33822c932966434b1c301",
+      "rmsDb": -17.31
+    },
+    {
+      "id": "ff-6",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 97,
+        "lengthScale": 1.32
+      },
+      "textDe": "Beide? Du hast Hunger, oder?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 3079,
+      "sizeBytes": 13282,
+      "hash": "sha256:28c200591c08e594bd579a61e19a19beaf9e312331c27585ace77899efd0321b",
+      "pcmSha256": "cf09125b87788bb9e9439b6e52cab49279d6ab956785f3b6ab4e88c3a0f91b3f",
+      "rmsDb": -17
+    },
+    {
+      "id": "ff-7",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 128,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, sehr! Und du: Salat oder Suppe?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 3272,
+      "sizeBytes": 15126,
+      "hash": "sha256:0e941ae268dba94732425a88da611c0fd06bb8ddbab6a35176296d935e65ba3b",
+      "pcmSha256": "ff57ff60ccf3a2f545f6cc12002f7d73879cc7d0b089d2cc9764f28af144e878",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "ff-8",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110,
+        "lengthScale": 1.32
+      },
+      "textDe": "Salat. Und ein Ei, bitte.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 2731,
+      "sizeBytes": 12436,
+      "hash": "sha256:8857eac5e35ab11ba6bae4f9c829f7464760e6939196bf93552a8eae63c3a6ff",
+      "pcmSha256": "a448f4c4cf2ddeee212f7f8beb922cd0a19b48b218c15d6a1c50dbbb5482dcfa",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "ff-9",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Magst du Eier?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 1416,
+      "sizeBytes": 6925,
+      "hash": "sha256:0c65167d4c3b914e8d62e186fc12cdf39f6165bff2bbea1af381a37dbe515160",
+      "pcmSha256": "fd13065a34a1d6f8451e25a6e7447fc043bdd8fd0603a7445939e1fa80e63f5a",
+      "rmsDb": -17.54
+    },
+    {
+      "id": "ff-10",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Ich esse oft zwei Eier.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 2777,
+      "sizeBytes": 12762,
+      "hash": "sha256:2bf3c2bfca8730319e92208474d6bef5016034944832b1d91ed593c9cba1253f",
+      "pcmSha256": "b431b502ae708adbc3bec0f17070bf4c5564da4dd7620d78a10924fa2a484a1f",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "ff-11",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich mag Obst. Ich esse oft einen Apfel.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 3704,
+      "sizeBytes": 17215,
+      "hash": "sha256:3c543b4177dc164ad97e5a908e2c17de8e3dbaa4ec29d2436df782e8225e7935",
+      "pcmSha256": "79a1d73072afa5cd6e73457e16982dd86b5349634dd5d56f28d3e10aa0acd942",
+      "rmsDb": -17.31
+    },
+    {
+      "id": "ff-12",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich auch. Aber die Lebensmittel hier in Berlin sind teuer.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 4217,
+      "sizeBytes": 18917,
+      "hash": "sha256:c77800810d6cb3a100bcd3d90546bad01f00207514a5f3b1345229275820e31c",
+      "pcmSha256": "7b0969e86078c70af5b856cfd44b32efc879a6fb353a6b0c247e7964a3a61440",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "ff-13",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 164,
+        "lengthScale": 1.32
+      },
+      "textDe": "Teuer? Und in Tunesien?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 1464,
+      "sizeBytes": 7014,
+      "hash": "sha256:02b2e3a7d57447f4e8ae3693c6f62e7a63cf831a91b84badfb78db92446d7776",
+      "pcmSha256": "4340b5113a46472d94a2df56b50f6d6a813d3390ebc121ee5c3d184cb1b1816d",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "ff-14",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "In Tunesien sind sie billig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 2464,
+      "sizeBytes": 11380,
+      "hash": "sha256:2e34c9551582c3319b9b72211da235f4f403cbcccb7a26b342b0860651c03013",
+      "pcmSha256": "961cb2d6308bfdf3bcb94471a15b1a918564db3117182146df61db7cd45c3e30",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "ff-15",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und deine Oma? Ihr Essen ist toll, oder?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 3384,
+      "sizeBytes": 15707,
+      "hash": "sha256:8d7fdda8cc944739de13a8b412b79c6391f5ef0a6e0b096d64f62099c441ec94",
+      "pcmSha256": "2c2ea8af244fee8a37451a680a2bb132c3a5ec91db371ca9bceb0b0187e5ae8c",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "ff-16",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 128,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Ihre Suppe ist super, mit Fleisch und Reis.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 4217,
+      "sizeBytes": 19558,
+      "hash": "sha256:101d04c9fea9163b74e5092944471eb6362b77be40702489d36aa23c04781aa1",
+      "pcmSha256": "a4f3b90ea4a40981f5bc7a8c0698de30eb8b8dbec78c766f260922b4013c6561",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "ff-17",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, ich habe Hunger! Wir essen jetzt, ja?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 3640,
+      "sizeBytes": 17007,
+      "hash": "sha256:e332a976c971e514a6e279ce73ff321ab5fb9f5ffb461062e00b33fd48ea55c1",
+      "pcmSha256": "2a6280a7d1e72ea1a565256c8a9b5bbf370f598bc26f369497ed9b84e538e3b0",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "ff-18",
+      "file": "audio/scripts/a1-u5-d1-fisch-oder-fleisch/ff-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 95,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, wir essen jetzt. Tschüss, Lena!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d1"
+      ],
+      "durationMs": 3776,
+      "sizeBytes": 16648,
+      "hash": "sha256:259bd281a529938692366a6c1d6e65d8047856737854ba9b411279cc3a91e5c3",
+      "pcmSha256": "868f655eb581b9fd1ba53edd4c1bfc6795e5be5dbec44f973087d9b6049ef181",
+      "rmsDb": -17.05
     }
   ],
   "characterVoices": {

@@ -121,7 +121,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u5-d1")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D140 صار u1-d1..d5 + u2-d1..d5 + u3-d1..d5 + u4-d1..d5 مُرقّى
+const legacy = realLessons.find((l) => l.id === "a1-u5-d2")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D141 صار u1-d1..d5 + u2-d1..d5 + u3-d1..d5 + u4-d1..d5 + u5-d1 مُرقّى
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -351,7 +351,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u5-d1", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u5-d2", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -447,21 +447,21 @@ describe("D115 — أدوات القياس", () => {
     const legacyRule = { ...w("sein"), de: "sein ملكيته" };
     expect(wordAppears(legacyRule, toks("Das ist sein Hund."))).toBe(false);
   });
-  it("الدرس التالي غير المُرقّى (a1-u5-d1 بعد D140): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u5-d2 بعد D141): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
     expect(r.rule.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-rule", "e-upgrade-sample"]));
-    expect(r.rule.find((i) => i.code === "e-upgrade-rule")?.message).toMatch(/ars-essen/);
-    // بعد D140 صار u4-d5 مكتملاً (وu4-d6 توليف خارج المرور)؛ الفجوات الفعلية لـu5-d1 (مقيسة قبل النقل): لا ملف ars-essen ·
-    // lecker/frisch/Frühstück/gesund في أمثلة wurst · fisch · ei · obst · gemuese · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء
-    // · Durst وfrisch في التدريب · Quiz 3×4 فيه frisch وgesund ومصطلح «Pluralia tantum»
+    expect(r.rule.find((i) => i.code === "e-upgrade-rule")?.message).toMatch(/ars-trinken/);
+    // بعد D141 صار u5-d1 مكتملاً؛ الفجوات الفعلية لـu5-d2 (مقيسة قبل النقل): لا ملف ars-trinken · Orangensaft في مثال saft
+    // وZitrone في مثال tee · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · «Speise» في التدريب
+    // · Quiz 3×4 فيه Orangensaft وSpeise · وsaft بلا أي بند تدريب
     const samples = r.rule.filter((i) => i.code === "e-upgrade-sample").map((i) => i.message).join("\n");
-    expect(samples).toMatch(/lecker/);
-    expect(samples).toMatch(/frisch/);
-    expect(samples).toMatch(/Frühstück/);
+    expect(samples).toMatch(/orangensaft/);
+    expect(samples).toMatch(/zitrone/);
     expect(r.practice.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-practice-audio", "e-upgrade-practice-types"]));
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/durst/);
-    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/tantum/);
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/speise/);
+    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/orangensaft/);
+    expect(r.coverage.find((i) => i.code === "e-upgrade-word-unpracticed")?.message).toMatch(/saft/);
     expect(r.quizMin).toBe(4);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
@@ -1077,6 +1077,89 @@ describe("D115 — أدوات القياس", () => {
     const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => String(i.q).replace("___", String(i.a)));
     expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(a)))).toEqual([]);
     expect(quizAnswers.filter((a) => ["ihr", "stolz"].includes(a))).toEqual([]);
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم.
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+  });
+  it("a1-u5-d1 مُرقّى (D141): صفر نقص — 38 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-essen · كل 18 سطراً وصوتا كلمتين مستخدمة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u5-d1")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u5-d1")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([38, 4, 6, 15]);
+    // القاعدة المخططة نفسها (ars-essen): ما لا يُعدّ بلا أداة · الواحد المعدود ein/einen · الجمع بلا أداة · المحدد der/die/das
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-essen"]);
+    const rule = rules.get("ars-essen")!;
+    expect(rule.payload.ruleDe).toMatch(/Fisch · Reis · Gemüse → Ø: Ich mag Fisch\. · Apfel · Ei → ein · einen: Ich esse einen Apfel\./);
+    // النقل الإيجابي يُسمّى عوناً (تنوين المعدود ≈ einen Apfel) · والفروق بمبررها: «ال» العامة · تنوين المادة · «أنا جوعان» صفة
+    // · والفرنسية تأثيراً معلناً في الاتجاهين: J'aime le poisson تعزز الخطأ · j'ai faim تعين (سابقة u3-d1)
+    expect(rule.payload.contrastAr).toContain("ما يساعدك: التنوين على اسم يُعدّ «آكلُ تفاحةً» يقابل einen Apfel");
+    expect(rule.payload.contrastAr).toContain("«أحبّ السمكَ»");
+    expect(rule.payload.contrastAr).toContain("«آكلُ لحماً · آكلُ أرزاً»");
+    expect(rule.payload.contrastAr).toContain("J'aime le poisson");
+    expect(rule.payload.contrastAr).toContain("j'ai faim");
+    // لا قاعدة لاحقة بلا إعلان: Dativ بعد mit (الوحدة 8) · صيغة الطلب المهذب في الدرس الثالث · والمعنيان المعدود والمادة
+    const limits = rule.payload.limitsAr.join(" ");
+    expect(limits).toMatch(/mit Gemüse.*Dativ.*الوحدة 8/);
+    expect(limits).toMatch(/الدرس الثالث/);
+    expect(limits).toMatch(/Ich esse einen Salat/);
+    expect(limits).toMatch(/ich mag · du magst · er\/sie mag/);
+    expect(e.properNouns).toEqual(["Lena", "Yusuf", "Berlin"]);
+    // النواة D113 (die Lebensmittel · der Apfel · mögen) بالمولِّد — Lebensmittel جمع بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136)
+    expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["lebensmittel", "apfel", "moegen"]));
+    const lm = words.find((w) => w.id === "lebensmittel")!;
+    expect([lm.de, lm.gender, lm.plural, lm.srsCardTypes.includes("gender"), lm.goetheList]).toEqual(["die Lebensmittel", "none", "die Lebensmittel", false, ["A1", "A2"]]);
+    const apfel = words.find((w) => w.id === "apfel")!;
+    expect([apfel.de, apfel.gender, apfel.plural, apfel.grammarRisks]).toEqual(["der Apfel", "der", "die Äpfel", ["needs-ein", "plural-irregular"]]);
+    const moegen = words.find((w) => w.id === "moegen")!;
+    // بلا praeteritum «mochte»: deumlaut(möchte) = mochte — كانت ستمرّر möchte (الدرس الثالث) صيغةً معروفة (N-060)
+    expect([moegen.de, moegen.wordClass, moegen.forms?.praesens3s, moegen.forms?.praeteritum, moegen.sampleSentence?.de]).toEqual(["mögen", "verb", "mag", undefined, "Magst du Eier?"]);
+    expect(tracks.get("word-lebensmittel")?.textDe).toBe("die Lebensmittel.");
+    // Nudeln: die Nudel موجودة (قائمة Goethe A2 «die Nudel, -n») — لا «جمع فقط» ولا مصيدة جمع ثالثة بعد Eltern وGeschwister
+    const nudeln = words.find((w) => w.id === "nudeln")!;
+    expect(nudeln.pluralRuleNote).toMatch(/جمعاً عادةً.*die Nudel/);
+    expect(nudeln.ar.join(" ")).not.toMatch(/جمع فقط/);
+    expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de).join(" ")).not.toMatch(/Nudel|Eies/);
+    // أمثلة البطاقات القديمة: lecker · frisch · Frühstück (+ zum) · gesund · kein (الدرس الرابع) · «Ich habe Hunger!» (نص رسمي حرفي)
+    const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(["wurst", "fleisch", "fisch", "ei", "reis", "obst", "gemuese", "hunger"].map(sample).join(" "))
+      .not.toMatch(/lecker|frisch|Frühstück|zum|gesund|kein|Ich habe Hunger/);
+    expect(l.warmup.cardIds).toEqual(["kaese", "tasse", "das-essen"]);
+    // الحوار الجديد (ff-1..18) كله في الاستماع والإملاء مرة واحدة · Gemüse وLebensmittel إملاءً
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("ff-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 18 }, (_, i) => `ff-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-gemuese", "word-lebensmittel"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    // N-015: الإملاء من الأسطر البطيئة وحدها (مقيسة في المانيفست) — الأسرع (ff-12 · ff-13 · ff-15) في الاستماع
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; voiceParams: { speedWpm: number } }[] };
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    for (const fast of ["ff-12", "ff-13", "ff-15"]) expect(listening.items.map((i) => String(i.audioId))).toContain(fast);
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set(l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))));
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => String(i.q).replace("___", String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(a)))).toEqual([]);
+    expect(quizAnswers.filter((a) => ["Gemüse", "die Lebensmittel"].includes(a))).toEqual([]);
+    // المشتتات ليست ألمانية صحيحة بمعنى آخر: لا «den Fisch» (صحيحة لسمك بعينه) ولا ein Brot/einen Salat/eine Suppe/eine Wurst
+    // (معدودة صحيحة) ولا «zwei Eis» (بوظتان) ولا «essen Hunger» (تركيب سليم بمعنى عبثي)
+    const choices = [
+      ...l.uebung.stations.flatMap((s) => s.items.flatMap((i) => (Array.isArray(i.choices) ? i.choices.map(String) : []))),
+      ...l.quiz.variants.flatMap((v) => v.items.flatMap((i) => (Array.isArray(i.choices) ? i.choices.map(String) : []))),
+      ...l.einstieg.pretestItems.flatMap((p) => p.choices ?? []),
+    ];
+    expect(choices.filter((c) => /den Fisch|ein Brot|einen Salat|eine Suppe|eine Wurst|zwei Eis\b|essen Hunger|isst Hunger/.test(c))).toEqual([]);
     // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم.
     const taught = knownStems(taughtUpTo(l, realLessons, words));
     const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];

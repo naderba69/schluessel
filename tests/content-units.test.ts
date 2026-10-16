@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(815); // + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(818); // + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -468,6 +468,53 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 3 || ["a1-u4-d1", "a1-u4-d2", "a1-u4-d3", "a1-u4-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(u.warmup.cardIds).toEqual(["mann", "brille", "kind"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u5-d1 (D141): «ال» العامة (~~Ich mag den Fisch.~~) · تنوين المادة (~~Ich esse ein Fleisch.~~) · «أنا جوعان» (~~Ich bin Hunger.~~) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u5-d1")!;
+    const [generic, mass, hunger] = u.zusammenfassung.warningCards;
+    expect(generic!.commonError.de).toBe("~~Ich mag den Fisch.~~ (= السمك عموماً)");
+    expect(generic!.correct.de).toBe("Ich mag Fisch.");
+    // «ال» للعموم في العربية · والفرنسية J'aime le poisson تعزز النقل (تأثير معلن — سابقة u3-d1) · وden Fisch صحيحة لسمك بعينه فلا تُعدّ خطأً مطلقاً
+    expect(generic!.whyArabicSpeakerFails).toContain("«أحبّ السمكَ»");
+    expect(generic!.whyArabicSpeakerFails).toContain("J'aime le poisson");
+    expect(generic!.whyArabicSpeakerFails).toContain("«هذا السمك» بعينه");
+    expect(generic!.exercise).toMatchObject({ a: "Ich mag Obst." });
+    expect(mass!.commonError.de).toBe("~~Ich esse ein Fleisch.~~");
+    expect(mass!.correct.de).toBe("Ich esse Fleisch.");
+    // التنوين ≈ ein (ما تعلّمه في u2-d2: ein Haus) يمتد خطأً إلى اسم المادة «آكلُ لحماً»
+    expect(mass!.whyArabicSpeakerFails).toContain("«آكلُ لحماً · آكلُ أرزاً»");
+    expect(mass!.whyArabicSpeakerFails).toContain("ein Haus");
+    expect(mass!.exercise).toMatchObject({ a: "Yusuf isst Reis." });
+    expect(hunger!.commonError.de).toBe("~~Ich bin Hunger.~~");
+    expect(hunger!.correct.de).toBe("Ich habe jetzt Hunger.");
+    // «جوعان» صفة خبراً · والفرنسية j'ai faim عونٌ مسمّى (الفعل «يملك» مع اسم)
+    expect(hunger!.whyArabicSpeakerFails).toContain("«أنا جوعان»");
+    expect(hunger!.whyArabicSpeakerFails).toContain("j'ai faim");
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: مصيدة الجمع الثالثة (~~ein Nudel~~ — والمفرد die Nudel موجود) · ~~die Eies~~ · Durst (الدرس الخامس)
+    const cards = JSON.stringify(u.zusammenfassung.warningCards);
+    expect(cards).not.toMatch(/Nudel|Eies|Durst/);
+    // لا Dativ بأداة بعد von/mit/in/zu · ولا kein/nicht (الدرس الرابع) · ولا möchte (الدرس الثالث) · ولا كلمات الأمثلة القديمة في أي نص ألماني للدرس
+    const de = JSON.stringify({ e: u.einstieg, s: u.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "" }))), q: u.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "" }))), z: u.zusammenfassung.summary.de, w: u.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise]) });
+    expect(de).not.toMatch(/\b(von|mit|in|zu) (dem|der|meinem|meiner|deinem|deiner|seinem|seiner|ihrem|ihrer|einem|einer)\b|\bzur\b|\bzum\b|\bkein|\bnicht\b|möchte|Frühstück|frisch|lecker|gesund|Durst/);
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(["wurst", "fleisch", "fisch", "ei", "reis", "obst", "gemuese", "hunger", "lebensmittel", "apfel", "moegen"].map(sample)).toEqual([
+      "Lena mag Brot und Wurst.", "Die Suppe ist mit Fleisch und Reis.", "Fisch, bitte! Ich mag Fisch.", "Ein Ei? Nein, zwei Eier, bitte!",
+      "Ich esse Fisch und Reis.", "Lena isst oft Obst.", "Wir essen viel Gemüse.", "Du hast Hunger, oder?",
+      "Die Lebensmittel hier sind teuer.", "Ich esse oft einen Apfel.", "Magst du Eier?",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا أداة تعريف قبل طعام عام (صحيحة لطعام بعينه) · لا معدود صحيح (ein Brot · einen Salat
+    // · eine Suppe · eine Wurst) · لا «zwei Eis» (بوظتان) · ولا تركيب سليم بمعنى عبثي (essen/isst Hunger)
+    const choiceTexts = [...u.einstieg.pretestItems.flatMap((p) => p.choices), ...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (typeof i === "string" ? [i] : Array.isArray((i as { choices?: unknown }).choices) ? ((i as { choices: string[] }).choices) : []));
+    expect(choiceTexts.filter((c) => /\b(den|das|der|die) (Fisch|Obst|Gemüse|Reis|Fleisch|Brot|Wurst|Nudeln)\b|ein Brot|einen Salat|eine Suppe|eine Wurst|zwei Eis\b|(essen|isst|esse) Hunger/.test(c))).toEqual([]);
+    expect(choiceTexts.length).toBeGreaterThan(30);
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 4).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["kaese", "tasse", "das-essen"]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 

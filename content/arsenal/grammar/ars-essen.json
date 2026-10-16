@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-essen",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Ich mag Fisch. · Ich esse einen Apfel.",
+    "ar": "الطعام بأداة أو بلا أداة: ما لا يُعدّ · الواحد المعدود · الجمع — والفعل mögen"
+  },
+  "payload": {
+    "topicAr": "أسماء الطعام في الجملة: ما لا يُعدّ (Fisch · Fleisch · Reis · Obst · Gemüse) يأتي بلا أداة حين نتكلم عنه عموماً، والشيء الواحد المعدود يأخذ ein/einen، وأكثر من واحد جمعٌ بلا أداة، والطعام المحدد المعروف يأخذ der/die/das — ومعها الفعل mögen للتفضيل.",
+    "sceneAr": "في مهمة الدورة عبر الإنترنت تلعب لينا ويوسف لعبة «Fisch oder Fleisch?»: يسأل كل منهما الآخر بين طعامين فيختار واحداً. يحب يوسف السمك ويأكل كثيراً بيضتين، وتأكل لينا كثيراً تفاحة؛ ثم يشكو يوسف من غلاء الطعام في برلين ويتذكر حساء جدته.",
+    "examples": [
+      {
+        "de": "Ich mag Fisch. · Ich esse Reis.",
+        "ar": "أحبّ السمكَ · آكلُ أرزاً — طعام لا يُعدّ وكلام عام: بلا أداة"
+      },
+      {
+        "de": "Wir essen viel Gemüse. · Du hast Hunger.",
+        "ar": "نأكل خضاراً كثيرة · أنت جوعان — Gemüse وHunger بلا أداة أيضاً"
+      },
+      {
+        "de": "Ich esse einen Apfel. · Und ein Ei, bitte.",
+        "ar": "آكلُ تفاحةً · وبيضةً من فضلك — شيء واحد يُعدّ: ein/einen"
+      },
+      {
+        "de": "Ich esse zwei Eier. · Magst du Nudeln?",
+        "ar": "آكلُ بيضتين · هل تحب المعكرونة؟ — أكثر من واحد: الجمع بلا أداة"
+      },
+      {
+        "de": "Die Lebensmittel hier sind teuer.",
+        "ar": "المواد الغذائية هنا غالية — طعام محدد يعرفه الطرفان: die"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) هل ترى أداة قبل Fisch وReis وGemüse وHunger؟ (2) لماذا einen قبل Apfel وein قبل Ei؟ هل تقول «تفاحة، تفاحتان»؟ وهل تقول «أرز واحد، أرزّان»؟ (3) Eier وNudeln جمع: هل قبلهما أداة؟ (4) لماذا Die في Die Lebensmittel hier؟ (5) بالعربية «أحبّ السمكَ» بـ«ال» — فماذا تفعل الألمانية؟",
+    "ruleDe": "Fisch · Reis · Gemüse → Ø: Ich mag Fisch. · Apfel · Ei → ein · einen: Ich esse einen Apfel. · Eier · Nudeln → Ø: Ich esse zwei Eier. · hier → die: Die Lebensmittel hier sind teuer.",
+    "ruleAr": "اسأل عن الطعام سؤالين: هل يُعدّ؟ وهل نقصد شيئاً محدداً؟ (1) ما لا يُعدّ — Fisch · Fleisch · Reis · Obst · Gemüse — حين نتكلم عنه عموماً أو عن كمية غير محددة: بلا أداة: Ich mag Fisch · Ich esse Reis · Wir essen viel Gemüse. وكذلك Hunger: Du hast Hunger. (2) الشيء الواحد الذي يُعدّ: ein/eine/einen كما تعلمت في الوحدة الثانية — وفي المفعول به المذكر einen كما في Akkusativ: Ich esse einen Apfel · ein Ei. (3) أكثر من واحد: الجمع بلا أداة، كما تعلمت أيضاً: zwei Eier · Magst du Nudeln? واحفظ الجمع مع الكلمة: der Apfel → die Äpfel · das Ei → die Eier. (4) طعام محدد يعرفه الطرفان (هذا الطعام، هنا): der/die/das: Die Lebensmittel hier sind teuer · Die Suppe ist heiß. وللتفضيل نستعمل mögen: Ich mag Fisch · Magst du Eier? · Lena mag Wurst — ومثله gern مع الفعل: Ich esse gern Nudeln.",
+    "contrastAr": "ما يساعدك: التنوين على اسم يُعدّ «آكلُ تفاحةً» يقابل einen Apfel — والنصب في «تفاحةً» يذكّرك بـ‑en في Akkusativ. وما يختلف ثلاثة: (1) العربية تُعرّف الاسم العام بـ«ال»: «أحبّ السمكَ» و«اللحمُ غالٍ» تعنيان السمك واللحم عموماً، والألمانية تحذف الأداة هنا: Ich mag Fisch — أما Ich mag den Fisch فتعني «هذا السمك» بعينه. ومن تعلّم الفرنسية في المغرب العربي يسمع J'aime le poisson بأداة كذلك، فيقوى الخطأ نفسه. (2) العربية تنوّن اسم المادة أيضاً: «آكلُ لحماً · آكلُ أرزاً»، وقد تعلمت أن التنوين يقابل ein (ein Haus)؛ لكن ein لا تدخل على ما لا يُعدّ: ~~Ich esse ein Fleisch.~~ ← Ich esse Fleisch. والفرنسية تضع أمام المادة أداةً أيضاً (de la viande) فتدفع إلى وضع أداة قبلها. (3) «أنا جوعان» صفةٌ خبراً، والألمانية تقول الجوع اسماً مع haben: Du hast Hunger — وهنا تساعدك الفرنسية: j'ai faim بالفعل «يملك» مع اسم، تماماً كالألمانية — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "Brot وSalat وSuppe وWurst تُعدّ أيضاً حين نقصد قطعة أو طبقاً واحداً: Ich esse einen Salat (طبق سلطة)؛ المعنى يقرر لا الكلمة. أما Fleisch وReis وObst وGemüse فلا تأخذ ein.",
+      "mögen شاذ في المفرد: ich mag · du magst · er/sie mag — بلا ‑e مع ich وبلا ‑t مع er/sie؛ ومع الجمع: wir mögen · sie mögen.",
+      "mögen للإعجاب والتفضيل (Ich mag Obst = Ich esse gern Obst)، وlieben للحب القوي (Er liebt seine Arbeit). وصيغة الطلب المهذب «أودّ …» تأتي في الدرس الثالث من هذه الوحدة.",
+      "mit Gemüse · mit Fleisch und Reis: بعد mit يأتي هنا اسم بلا أداة فلا يظهر تغيّر؛ mit مع الأداة (Dativ) في الوحدة 8."
+    ],
+    "beads": [
+      "Ich",
+      "esse",
+      "ein",
+      "Ei",
+      "und",
+      "Gemüse."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u5-d1"
+  ]
+}

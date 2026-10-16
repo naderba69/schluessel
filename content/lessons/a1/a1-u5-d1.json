@@ -6,31 +6,32 @@
   "day": 1,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst 10 Lebensmittel nennen und wählen, was du willst.",
-    "ar": "تسمي 10 أطعمة وتختار ما تريد"
+    "de": "Fisch oder Fleisch? — Fisch, bitte! Ich mag Fisch. Ich esse oft einen Apfel.",
+    "ar": "تسمّي 10 أطعمة وتختار ما تريد بسؤال اختيار وجواب قصير (… oder …? — …, bitte!)، وتقول ما تحب بـmögen: بلا أداة للطعام عموماً (Ich mag Fisch) وبـein/einen للشيء الواحد المعدود (einen Apfel)."
   },
   "canDoDaily": [
-    "يسمي 10 أطعمة ويختار ما يريده بجملة قصيرة"
+    "يسمّي 10 أطعمة ويختار ما يريد بسؤال اختيار وجواب قصير: Fisch oder Fleisch? — Fisch, bitte!",
+    "يقول ما يحب بـmögen (Ich mag Fisch. · Magst du Eier? · Lena mag Wurst.) ويضع الأداة أو يحذفها: Reis · Gemüse · Obst بلا أداة · einen Apfel · ein Ei · zwei Eier."
   ],
   "warmup": {
     "cardIds": [
       "kaese",
-      "essen",
-      "tasse"
+      "tasse",
+      "das-essen"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«أنا جوعان» — Ich bin Hunger أم Ich habe Hunger? (تخمين فقط)"
+          "de": "«أحبّ السمك» (عموماً) بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
-          "Ich habe Hunger.",
-          "Ich bin Hunger.",
-          "Ich esse Hunger."
+          "Ich mag Fisch.",
+          "Ich mage Fisch.",
+          "Ich mag ein Fisch."
         ],
-        "answer": "Ich habe Hunger.",
+        "answer": "Ich mag Fisch.",
         "revealNextSession": true
       }
     ],
@@ -49,7 +50,10 @@
       "nudeln",
       "obst",
       "gemuese",
-      "hunger"
+      "hunger",
+      "lebensmittel",
+      "apfel",
+      "moegen"
     ],
     "grammarArsenalIds": [
       "ars-essen"
@@ -58,67 +62,393 @@
       "story-a5-u5-s1"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "umlaut-u",
+      "umlaut-o",
+      "auslaut-b",
+      "double-consonant"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«الخبز» و«الجبن»؟",
-            "a": "das Brot / der Käse"
+            "q": "Ich ___ Fisch. (mögen)",
+            "a": "mag",
+            "why": "mögen شاذ: مع ich ← mag بلا ‑e (لا mage) · وFisch بلا أداة لأن الكلام عن السمك عموماً."
           },
           {
-            "q": "«أنا جوعان!»؟",
-            "a": "Ich habe Hunger!"
+            "q": "___ du Eier? (mögen)",
+            "a": "Magst",
+            "why": "سؤال نعم/لا يبدأ بالفعل · mögen مع du ← magst (mag + ‑st) · وEier جمع Ei بلا أداة."
+          },
+          {
+            "q": "Lena ___ Brot und Wurst. (mögen)",
+            "a": "mag",
+            "why": "مع er/sie ← mag بلا ‑t، مثل ich — ولهذا نسمّي mögen شاذاً · وBrot وWurst بلا أداة (عموماً)."
+          },
+          {
+            "q": "Yusuf isst ___ Apfel. (ein)",
+            "a": "einen",
+            "why": "Apfel مذكر (der Apfel) ويُعدّ، وهو مفعول به بعد isst (essen مع er: e ← i) ← einen كما في Akkusativ الوحدة الرابعة."
+          },
+          {
+            "q": "Wir essen viel ___. (الخضار)",
+            "a": "Gemüse",
+            "why": "das Gemüse لا يُعدّ ← بلا أداة بعد viel · بـü طويلة وe في آخرها."
+          },
+          {
+            "q": "Lena hat ___. (جوع)",
+            "a": "Hunger",
+            "why": "Hunger اسم يأتي مع haben لا sein: Lena hat Hunger — بلا أداة · و«جوعان» بالعربية صفة، أما الألمانية فاسم."
+          },
+          {
+            "q": "Die ___ hier sind teuer. (الأطعمة)",
+            "a": "Lebensmittel",
+            "why": "die Lebensmittel جمع (كـdie Eltern) ← الفعل sind · وDie لأننا نقصد طعاماً محدداً: هنا."
+          },
+          {
+            "q": "Yusuf isst oft zwei ___. (Ei)",
+            "a": "Eier",
+            "why": "das Ei ← die Eier: الجمع بـ‑er، وبعد zwei بلا أداة."
+          },
+          {
+            "q": "Yusuf kauft drei ___. (Apfel)",
+            "a": "Äpfel",
+            "why": "der Apfel ← die Äpfel: الجمع بـä بلا نهاية — احفظه مع الكلمة."
+          },
+          {
+            "q": "Fisch oder ___? (اللحم)",
+            "a": "Fleisch",
+            "why": "das Fleisch لا يُعدّ ← بلا أداة في سؤال الاختيار · وsch في آخرها كما في Fisch."
+          },
+          {
+            "q": "Oma ist toll. ___ Suppe ist super. (ملكيتها)",
+            "a": "Ihre",
+            "why": "المالكة Oma امرأة ← ihr · وSuppe مؤنثة (die Suppe) ← ‑e: Ihre Suppe — مراجعة الدرس الماضي."
+          },
+          {
+            "q": "Lena isst gern ___. (المعكرونة)",
+            "a": "Nudeln",
+            "why": "Nudeln بصيغة الجمع عادةً، وبلا أداة في الكلام العام · gern = بمحبة: isst gern … = mag …."
           }
         ],
-        "interleavedWith": [],
+        "interleavedWith": [
+          "viel",
+          "teuer",
+          "kaufen",
+          "oma",
+          "ihr",
+          "toll",
+          "gern"
+        ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«السمك طازج»؟",
-            "a": "Der Fisch ist frisch."
+            "audioId": "ff-1",
+            "speakText": "Yusuf, die Aufgabe heute: Fisch oder Fleisch?",
+            "q": "استمع: ما مهمة اليوم في الدورة؟",
+            "choices": [
+              "الاختيار بين طعامين",
+              "شراء طعامين",
+              "طبخ طعامين"
+            ],
+            "a": "الاختيار بين طعامين",
+            "why": "die Aufgabe = المهمة · Fisch oder Fleisch? = سمك أم لحم؟ — oder للاختيار، والاسمان بلا أداة لأنهما طعام عموماً."
           },
           {
-            "q": "«آكل سلطة»؟",
-            "a": "Ich esse einen Salat."
+            "audioId": "ff-3",
+            "speakText": "Und Reis oder Nudeln?",
+            "q": "استمع: بماذا تسأل لينا الآن؟",
+            "choices": [
+              "أرز أم معكرونة؟",
+              "أرز أم خبز؟",
+              "معكرونة أم حساء؟"
+            ],
+            "a": "أرز أم معكرونة؟",
+            "why": "Reis = الأرز · Nudeln = المعكرونة (جمعاً عادةً) — والسؤال يبدأ بـUnd: وماذا عن …؟"
+          },
+          {
+            "audioId": "ff-4",
+            "speakText": "Reis, bitte. Mit Gemüse! Jetzt du: Brot oder Wurst?",
+            "q": "استمع: ماذا يختار يوسف، وبماذا يسأل لينا؟",
+            "choices": [
+              "أرزاً بالخضار — خبز أم نقانق؟",
+              "معكرونة بالخضار — خبز أم نقانق؟",
+              "أرزاً باللحم — خبز أم جبن؟"
+            ],
+            "a": "أرزاً بالخضار — خبز أم نقانق؟",
+            "why": "Reis, bitte = أرزاً من فضلك · Mit Gemüse = بالخضار · Jetzt du = الآن دورك · Brot oder Wurst? = خبز أم نقانق؟"
+          },
+          {
+            "audioId": "ff-5",
+            "speakText": "Beide, bitte!",
+            "q": "استمع: ماذا تختار لينا؟",
+            "choices": [
+              "الاثنين معاً",
+              "الخبز وحده",
+              "النقانق وحدها"
+            ],
+            "a": "الاثنين معاً",
+            "why": "beide = الاثنان — من الوحدة الرابعة · وbitte بعد الاختيار للتهذيب."
+          },
+          {
+            "audioId": "ff-7",
+            "speakText": "Ja, sehr! Und du: Salat oder Suppe?",
+            "q": "استمع: بماذا تجيب لينا، وماذا تسأل؟",
+            "choices": [
+              "نعم جداً — سلطة أم حساء؟",
+              "لا أبداً — سلطة أم حساء؟",
+              "نعم جداً — سلطة أم سمك؟"
+            ],
+            "a": "نعم جداً — سلطة أم حساء؟",
+            "why": "Ja, sehr! = نعم، جداً (جوابها عن الجوع) · Salat = السلطة · Suppe = الحساء."
+          },
+          {
+            "audioId": "ff-8",
+            "speakText": "Salat. Und ein Ei, bitte.",
+            "q": "استمع: ماذا يطلب يوسف مع السلطة؟",
+            "choices": [
+              "بيضة واحدة",
+              "بيضتين",
+              "تفاحة"
+            ],
+            "a": "بيضة واحدة",
+            "why": "ein Ei = بيضة واحدة — Ei يُعدّ، وهو محايد (das Ei) ← ein."
+          },
+          {
+            "audioId": "ff-10",
+            "speakText": "Ja! Ich esse oft zwei Eier.",
+            "q": "استمع: كم بيضة يأكل يوسف عادةً؟",
+            "choices": [
+              "اثنتين",
+              "واحدة",
+              "ثلاثاً"
+            ],
+            "a": "اثنتين",
+            "why": "zwei Eier = بيضتان — الجمع بعد zwei بلا أداة · oft = كثيراً/غالباً."
+          },
+          {
+            "audioId": "ff-12",
+            "speakText": "Ich auch. Aber die Lebensmittel hier in Berlin sind teuer.",
+            "q": "استمع: ماذا يقول يوسف عن الطعام في برلين؟",
+            "choices": [
+              "غالٍ",
+              "رخيص",
+              "كثير"
+            ],
+            "a": "غالٍ",
+            "why": "die Lebensmittel = المواد الغذائية (جمع ← sind) · teuer = غالٍ · hier = هنا، في برلين حيث يعيش يوسف."
+          },
+          {
+            "audioId": "ff-13",
+            "speakText": "Teuer? Und in Tunesien?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "عن الأسعار في تونس",
+              "عن الطعام في سويسرا",
+              "عن جدة يوسف"
+            ],
+            "a": "عن الأسعار في تونس",
+            "why": "Teuer? Und in Tunesien? = غالية؟ وفي تونس؟ — السؤال عن الأسعار هناك."
+          },
+          {
+            "audioId": "ff-15",
+            "speakText": "Und deine Oma? Ihr Essen ist toll, oder?",
+            "q": "استمع: عمّ تسأل لينا الآن؟",
+            "choices": [
+              "عن طعام جدة يوسف",
+              "عن عمر جدة يوسف",
+              "عن مهنة جدة يوسف"
+            ],
+            "a": "عن طعام جدة يوسف",
+            "why": "Ihr Essen = طعامُها — ihr لأن المالكة Oma امرأة، وEssen محايد ← بلا نهاية (الدرس الماضي)."
+          },
+          {
+            "audioId": "ff-17",
+            "speakText": "Yusuf, ich habe Hunger! Wir essen jetzt, ja?",
+            "q": "استمع: ماذا تقترح لينا؟",
+            "choices": [
+              "أن يأكلا الآن",
+              "أن يشتريا الطعام الآن",
+              "أن يطبخا الآن"
+            ],
+            "a": "أن يأكلا الآن",
+            "why": "Wir essen jetzt = نأكل الآن · ja? في الآخر = حسناً؟ · وHunger اسم مع haben: الجوع «يُملَك»."
+          },
+          {
+            "audioId": "ff-18",
+            "speakText": "Ja, wir essen jetzt. Tschüss, Lena!",
+            "q": "استمع: كيف تنتهي المكالمة؟",
+            "choices": [
+              "يوسف يوافق ويودّع لينا",
+              "يوسف يرفض ويودّع لينا",
+              "يوسف يوافق ويسأل سؤالاً"
+            ],
+            "a": "يوسف يوافق ويودّع لينا",
+            "why": "Ja, wir essen jetzt = نعم، نأكل الآن · Tschüss = إلى اللقاء (غير رسمي)."
           }
         ],
-        "interleavedWith": [],
+        "interleavedWith": [
+          "aufgabe",
+          "beide",
+          "teuer",
+          "tunesien",
+          "oma"
+        ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«المعكرونة» — مفرداً؟",
-            "a": "لا: die Nudeln جمع فقط"
+            "tokens": [
+              "du",
+              "Nudeln?",
+              "Magst"
+            ],
+            "a": "Magst du Nudeln?",
+            "why": "سؤال نعم/لا: الفعل Magst أولاً ثم du ثم Nudeln — بلا أداة لأن الكلام عموماً."
           },
           {
-            "q": "«البيضة» — الجمع؟",
-            "a": "das Ei ← die Eier (شاذ مثل Kinder)"
+            "tokens": [
+              "einen",
+              "Lena",
+              "Apfel.",
+              "isst"
+            ],
+            "a": "Lena isst einen Apfel.",
+            "why": "Lena ثم الفعل isst ثانياً ثم المفعول einen Apfel — Apfel مذكر معدود ← einen."
+          },
+          {
+            "tokens": [
+              "Reis",
+              "Er",
+              "und",
+              "isst",
+              "Salat."
+            ],
+            "a": "Er isst Reis und Salat.",
+            "why": "Er ثم isst ثانياً ثم الطعامان بلا أداة — كلام عام عن طعامه."
+          },
+          {
+            "tokens": [
+              "Hunger.",
+              "haben",
+              "Wir",
+              "jetzt"
+            ],
+            "a": "Wir haben jetzt Hunger.",
+            "why": "Wir ثم haben ثانياً ثم jetzt ثم Hunger — الجوع اسم مع haben."
+          },
+          {
+            "tokens": [
+              "sind",
+              "Die",
+              "billig.",
+              "Äpfel"
+            ],
+            "a": "Die Äpfel sind billig.",
+            "why": "Die Äpfel (جمع Apfel بـä) فاعل ← sind · وDie لأننا نقصد تفاحاً محدداً نراه."
+          },
+          {
+            "tokens": [
+              "Käse.",
+              "Lena",
+              "Brot",
+              "und",
+              "isst"
+            ],
+            "a": "Lena isst Brot und Käse.",
+            "why": "Lena ثم isst ثانياً ثم Brot und Käse — بلا أداة (طعام عموماً) · وKäse من الوحدة الثانية."
           }
         ],
-        "interleavedWith": [],
+        "interleavedWith": [
+          "kaese",
+          "billig",
+          "jetzt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "ff-2",
+            "speakText": "Fisch, bitte! Ich mag Fisch.",
+            "a": "Fisch, bitte! Ich mag Fisch",
+            "why": "Fisch بـsch في آخرها (صوت «ش» بثلاثة حروف) · mag بـg في آخرها تُسمع k — لا تكتبها mak."
+          },
+          {
+            "audioId": "ff-6",
+            "speakText": "Beide? Du hast Hunger, oder?",
+            "a": "Beide? Du hast Hunger, oder?",
+            "why": "Beide بـei (تُنطق «آي») · Hunger اسم بحرف كبير بـu ثم ng."
+          },
+          {
+            "audioId": "ff-9",
+            "speakText": "Magst du Eier?",
+            "a": "Magst du Eier?",
+            "why": "Magst: mag + st، وg تُسمع k · Eier اسم بحرف كبير بـei ثم er — والسؤال يبدأ بالفعل."
+          },
+          {
+            "audioId": "ff-11",
+            "speakText": "Ich mag Obst. Ich esse oft einen Apfel.",
+            "a": "Ich mag Obst. Ich esse oft einen Apfel",
+            "why": "Obst بـb تُسمع p في آخر المقطع · Apfel بـpf: p ثم f معاً — والعربية بلا p فلا تقلبها b."
+          },
+          {
+            "audioId": "ff-14",
+            "speakText": "In Tunesien sind sie billig.",
+            "a": "In Tunesien sind sie billig",
+            "why": "Tunesien علم بحرف كبير وآخره ‑ien · billig بـll بعد حركة قصيرة، وآخرها ‑ig تُسمع كـich."
+          },
+          {
+            "audioId": "ff-16",
+            "speakText": "Ja! Ihre Suppe ist super, mit Fleisch und Reis.",
+            "a": "Ja! Ihre Suppe ist super, mit Fleisch und Reis",
+            "why": "Suppe بـpp بعد u قصيرة · Fleisch بـei وsch · Reis بـei وs — والأسماء بحرف كبير."
+          },
+          {
+            "audioId": "word-gemuese",
+            "speakText": "Gemüse.",
+            "a": "Gemüse",
+            "why": "Gemüse بـü طويلة، وs بين حركتين تُنطق «ز»، وe في آخرها."
+          },
+          {
+            "audioId": "word-lebensmittel",
+            "speakText": "die Lebensmittel.",
+            "a": "die Lebensmittel",
+            "why": "Lebensmittel كلمة واحدة: Lebens + mittel — e طويلة بلا علامة في Le، وtt بعد i القصيرة · وdie أداة الجمع."
+          }
+        ],
+        "interleavedWith": [
+          "beide",
+          "tunesien",
+          "billig",
+          "super",
+          "ihr"
+        ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "10 Lebensmittel nennen und wählen",
-        "ar": "تسمية 10 أطعمة والاختيار"
+        "de": "Fisch oder Fleisch? — Fisch, bitte! Ich mag Fisch.",
+        "ar": "تلعب مع زميلك «Fisch oder Fleisch?»: تسمّيان 10 أطعمة وتختاران ما تريدان"
       },
       "situation": {
-        "de": "Im Supermarkt: einkaufen",
-        "ar": "في المتجر: التسوّق"
+        "de": "Im Kurs: Die Aufgabe heute — Fisch oder Fleisch?",
+        "ar": "في الدورة: يسأل كل منكما الآخر خمس مرات بين طعامين (Fisch oder Fleisch? · Salat oder Suppe?)، فيختار بـ…, bitte! ويقول ما يحب بـmögen."
       },
       "successCriteria": [
-        "يسمي 10 أطعمة ويختار 3 منها بجملة: Ich esse/gern …"
+        "عشرة أطعمة على الأقل في أسئلة اختيار (… oder …?) وأجوبة بـ…, bitte! — والطعام عموماً بلا أداة.",
+        "جملتان بـmögen (Ich mag … · Magst du …?) وجملة لشيء واحد بـein/einen (Ich esse einen Apfel. · ein Ei) — والجوع مع haben: Du hast Hunger."
       ]
     }
   },
@@ -133,20 +463,59 @@
       {
         "items": [
           {
-            "q": "«الحساء»؟",
-            "a": "die Suppe"
+            "q": "«يحب يوسف السمك»؟",
+            "choices": [
+              "Yusuf mag Fisch.",
+              "Yusuf magt Fisch.",
+              "Yusuf mögen Fisch."
+            ],
+            "a": "Yusuf mag Fisch.",
+            "why": "mögen مع er ← mag بلا ‑t · وFisch بلا أداة (السمك عموماً)."
           },
           {
-            "q": "«أنا جوعان!»؟",
-            "a": "Ich habe Hunger!"
+            "q": "«آكل تفاحة»؟",
+            "choices": [
+              "Ich esse einen Apfel.",
+              "Ich esse ein Apfel.",
+              "Ich esse eine Apfel."
+            ],
+            "a": "Ich esse einen Apfel.",
+            "why": "Apfel مذكر (der Apfel) ومفعول به بعد esse ← einen · ein للمحايد وeine للمؤنث."
           },
           {
-            "q": "«اللحم»؟",
-            "a": "das Fleisch"
+            "q": "«البيض» (جمع Ei) بالألمانية مع الأداة؟",
+            "a": "die Eier",
+            "why": "das Ei ← die Eier: الجمع بـ‑er · وأداة الجمع die."
           },
           {
-            "q": "«أرز بالخضار من فضلك»؟",
-            "a": "Reis mit Gemüse, bitte."
+            "q": "«نحن جوعى»؟",
+            "choices": [
+              "Wir haben Hunger.",
+              "Wir sind Hunger.",
+              "Wir hat Hunger."
+            ],
+            "a": "Wir haben Hunger.",
+            "why": "Hunger اسم مع haben ← wir haben · لا sein كما في «نحن جوعى» · وhat لـer/sie وحدهما."
+          },
+          {
+            "q": "die Lebensmittel = ؟",
+            "choices": [
+              "المواد الغذائية",
+              "المطاعم",
+              "الأسعار"
+            ],
+            "a": "المواد الغذائية",
+            "why": "die Lebensmittel = المواد الغذائية (جمع) · das Restaurant = المطعم · der Preis = السعر."
+          },
+          {
+            "q": "«تحب لينا المعكرونة»؟",
+            "choices": [
+              "Lena mag Nudeln.",
+              "Lena mag Nudel.",
+              "Lena magst Nudeln."
+            ],
+            "a": "Lena mag Nudeln.",
+            "why": "mögen مع sie (Lena) ← mag · وNudeln جمعاً بلا أداة."
           }
         ],
         "passingScore": 0.75
@@ -154,20 +523,59 @@
       {
         "items": [
           {
-            "q": "«النقانق»؟",
-            "a": "die Wurst"
+            "q": "«هل تحب الخضار؟»",
+            "choices": [
+              "Magst du Gemüse?",
+              "Mag du Gemüse?",
+              "Magt du Gemüse?"
+            ],
+            "a": "Magst du Gemüse?",
+            "why": "mögen مع du ← magst (mag + ‑st) · وGemüse بلا أداة."
           },
           {
-            "q": "«الفواكه صحية»؟",
-            "a": "Obst ist gesund."
+            "q": "«آكل بيضة»؟",
+            "choices": [
+              "Ich esse ein Ei.",
+              "Ich esse einen Ei.",
+              "Ich esse eine Ei."
+            ],
+            "a": "Ich esse ein Ei.",
+            "why": "Ei محايد (das Ei) ← ein حتى مفعولاً — ‑en للمذكر وحده."
           },
           {
-            "q": "«البيضة» — الجمع؟",
-            "a": "die Eier"
+            "q": "«التفاح» (جمع Apfel) بالألمانية مع الأداة؟",
+            "a": "die Äpfel",
+            "why": "der Apfel ← die Äpfel: بـä بلا نهاية · وأداة الجمع die."
           },
           {
-            "q": "«آكل المعكرونة بمحبة»؟",
-            "a": "Ich esse gern Nudeln."
+            "q": "«يأكل يوسف سمكاً وأرزاً»؟",
+            "choices": [
+              "Yusuf isst Fisch und Reis.",
+              "Yusuf isst ein Fisch und ein Reis.",
+              "Yusuf esst Fisch und Reis."
+            ],
+            "a": "Yusuf isst Fisch und Reis.",
+            "why": "Fisch وReis هنا طعام لا يُعدّ ← بلا أداة · وessen مع er ← isst (e ← i)."
+          },
+          {
+            "q": "die Wurst = ؟",
+            "choices": [
+              "النقانق",
+              "الجبن",
+              "اللحم"
+            ],
+            "a": "النقانق",
+            "why": "die Wurst = النقانق · der Käse = الجبن · das Fleisch = اللحم."
+          },
+          {
+            "q": "«أنتِ جوعانة» (للينا)؟",
+            "choices": [
+              "Du hast Hunger.",
+              "Du bist Hunger.",
+              "Du hat Hunger."
+            ],
+            "a": "Du hast Hunger.",
+            "why": "الجوع اسم مع haben، ومع du ← hast — كما يقول الفرنسي j'ai faim."
           }
         ],
         "passingScore": 0.75
@@ -175,20 +583,59 @@
       {
         "items": [
           {
-            "q": "«السلطة»؟",
-            "a": "der Salat"
+            "q": "«أبي يحب الفواكه»؟",
+            "choices": [
+              "Mein Vater mag Obst.",
+              "Mein Vater magt Obst.",
+              "Mein Vater mögt Obst."
+            ],
+            "a": "Mein Vater mag Obst.",
+            "why": "mögen مع er (Vater) ← mag بلا ‑t · وObst بلا أداة."
           },
           {
-            "q": "«الأرز»؟",
-            "a": "der Reis"
+            "q": "«نأكل بيضتين»؟",
+            "choices": [
+              "Wir essen zwei Eier.",
+              "Wir essen zwei Ei.",
+              "Wir essen zwei Eiern."
+            ],
+            "a": "Wir essen zwei Eier.",
+            "why": "بعد zwei جمعٌ: das Ei ← die Eier — بلا أداة."
           },
           {
-            "q": "«الخضار طازجة»؟",
-            "a": "Das Gemüse ist frisch."
+            "q": "«يحبّ» (المصدر) بالألمانية؟",
+            "a": "mögen",
+            "why": "mögen = يحبّ · ich mag · du magst · er/sie mag."
           },
           {
-            "q": "Nudeln — مفرد أم جمع؟",
-            "a": "جمع فقط (Pluralia tantum)"
+            "q": "«نأكل خبزاً ولحماً»؟",
+            "choices": [
+              "Wir essen Brot und Fleisch.",
+              "Wir essen Brot und ein Fleisch.",
+              "Wir esst Brot und Fleisch."
+            ],
+            "a": "Wir essen Brot und Fleisch.",
+            "why": "Fleisch لا يُعدّ ← بلا ein · وessen مع wir ← essen."
+          },
+          {
+            "q": "das Obst = ؟",
+            "choices": [
+              "الفواكه",
+              "الخضار",
+              "الخبز"
+            ],
+            "a": "الفواكه",
+            "why": "das Obst = الفواكه · das Gemüse = الخضار · das Brot = الخبز."
+          },
+          {
+            "q": "«المواد الغذائية غالية»؟",
+            "choices": [
+              "Die Lebensmittel sind teuer.",
+              "Die Lebensmittel ist teuer.",
+              "Der Lebensmittel sind teuer."
+            ],
+            "a": "Die Lebensmittel sind teuer.",
+            "why": "die Lebensmittel جمع ← sind · وأداة الجمع die."
           }
         ],
         "passingScore": 0.75
@@ -197,53 +644,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Dein Einkauf: Brot, Käse, Wurst, Fisch, Salat, Suppe, Eier, Reis, Nudeln, Obst, Gemüse — und Hunger hast du auch (mit haben)!",
-      "ar": "تسوّقك: الخبز والجبن والنقانق والسمك والسلطة والحساء والبيض والأرز والمعكرونة والفواكه والخضار — والجوع أيضاً «يُملَك» (mit haben)!"
+      "de": "Ich mag Fisch. · Ich esse Reis und Gemüse. · Ich esse einen Apfel. · Ich esse zwei Eier. · Du hast Hunger. · Die Lebensmittel hier sind teuer.",
+      "ar": "الطعام سؤالان: هل يُعدّ؟ وهل هو محدد؟ ما لا يُعدّ بلا أداة حين نتكلم عموماً (Fisch · Reis · Gemüse · Obst · Fleisch)، والواحد المعدود بـein/einen (einen Apfel · ein Ei)، والجمع بلا أداة (zwei Eier · Nudeln)، والمحدد بـder/die/das (Die Lebensmittel hier …). وmögen شاذ: ich mag · du magst · er/sie mag. والجوع اسم مع haben: Du hast Hunger."
     },
     "warningCards": [
       {
         "commonError": {
+          "de": "~~Ich mag den Fisch.~~ (= السمك عموماً)",
+          "ar": "«ال» العربية للعموم تصير der/die/das"
+        },
+        "whyArabicSpeakerFails": "في العربية «أحبّ السمكَ» بـ«ال» تعني السمك عموماً، فينقل المتعلم «ال» إلى der/die/das. والفرنسية التي يعرفها كثيرون في المغرب العربي تقول J'aime le poisson بأداة كذلك، فيقوى النقل. والألمانية تتكلم عن الطعام عموماً بلا أداة: Ich mag Fisch — أما Ich mag den Fisch فتعني «هذا السمك» بعينه (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich mag Fisch.",
+          "ar": "أحبّ السمك (عموماً)."
+        },
+        "exercise": {
+          "q": "صحّح (الفواكه عموماً): ~~Ich mag das Obst.~~",
+          "a": "Ich mag Obst."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich esse ein Fleisch.~~",
+          "ar": "تنوين «لحماً» يصير ein"
+        },
+        "whyArabicSpeakerFails": "تعلّمت في الوحدة الثانية أن التنوين العربي يقابل ein («بيتٌ» ← ein Haus). لكن العربية تنوّن اسم المادة أيضاً: «آكلُ لحماً · آكلُ أرزاً»، فيضع المتعلم ein قبل ما لا يُعدّ — والفرنسية تضع أمام المادة أداةً أيضاً (de la viande) فتدفع إلى وضع أداة قبلها. والألمانية تضع ein للشيء الذي يُعدّ وحده (ein Ei · einen Apfel)، وتترك ما لا يُعدّ بلا أداة: Ich esse Fleisch · Ich esse Reis (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich esse Fleisch.",
+          "ar": "آكل لحماً."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Yusuf isst einen Reis.~~",
+          "a": "Yusuf isst Reis."
+        }
+      },
+      {
+        "commonError": {
           "de": "~~Ich bin Hunger.~~",
-          "ar": "Hunger/Durst مع haben لا sein"
+          "ar": "«أنا جوعان» تصير bin + Hunger"
         },
-        "whyArabicSpeakerFails": "«أنا جوعان» خبر بالعربية (اسم/صفة)؛ الألماني يمتلك الجوع: Ich habe Hunger (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أنا جوعان» جملة اسمية: ضمير ثم صفة خبراً، فيضع المتعلم bin ثم الاسم Hunger مكان الصفة. والألمانية تقول الجوع اسماً مع haben («عندي جوع»): Hunger haben. ومن يعرف الفرنسية يجد عوناً هنا: j'ai faim بالفعل «يملك» مع اسم، تماماً كالألمانية (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich habe Hunger!",
-          "ar": "أنا جوعان! (عندي جوع)"
+          "de": "Ich habe jetzt Hunger.",
+          "ar": "أنا جوعان الآن."
         },
         "exercise": {
-          "q": "صحّح: ~~Ich bin Durst.~~",
-          "a": "Ich habe Durst."
-        }
-      },
-      {
-        "commonError": {
-          "de": "~~ein Nudel~~ / ~~die Nudels~~",
-          "ar": "die Nudeln جمع فقط"
-        },
-        "whyArabicSpeakerFails": "«معكرونة» مفرد بالعربية؛ الألماني Nudeln جمع دائماً — مثل Eltern وGeschwister (خريطة التداخل 10‑ي)",
-        "correct": {
-          "de": "die Nudeln",
-          "ar": "المعكرونة (جمع)"
-        },
-        "exercise": {
-          "q": "صحّح: ~~Ich esse ein Nudel.~~",
-          "a": "Ich esse Nudeln."
-        }
-      },
-      {
-        "commonError": {
-          "de": "~~das Ei~~ ← ~~die Eies~~ (الجمع)",
-          "ar": "Ei ← Eier (شاذ)"
-        },
-        "whyArabicSpeakerFails": "جمع -er مع تغيير الجذر يعود (Kinder/Häuser): Eier بلا umlaut لكن بالقطع (خريطة التداخل 10‑ي)",
-        "correct": {
-          "de": "das Ei ← die Eier",
-          "ar": "البيضة ← البيض"
-        },
-        "exercise": {
-          "q": "اكتب الجمع: drei ___ (Ei)",
-          "a": "drei Eier"
+          "q": "صحّح: ~~Yusuf ist Hunger.~~",
+          "a": "Yusuf hat Hunger."
         }
       }
     ],
@@ -259,19 +706,28 @@
       "nudeln",
       "obst",
       "gemuese",
-      "hunger"
+      "hunger",
+      "lebensmittel",
+      "apfel",
+      "moegen"
     ]
   },
   "gReferences": {
     "duden": [
+      "https://www.duden.de/rechtschreibung/Lebensmittel",
+      "https://www.duden.de/rechtschreibung/Apfel",
+      "https://www.duden.de/rechtschreibung/moegen",
       "https://www.duden.de/rechtschreibung/Hunger",
-      "https://www.duden.de/rechtschreibung/Nudeln",
-      "https://www.duden.de/rechtschreibung/Ei"
+      "https://www.duden.de/rechtschreibung/Nudel",
+      "https://www.duden.de/rechtschreibung/Gemuese"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/Nudeln"
+      "https://de.wiktionary.org/wiki/mögen",
+      "https://de.wiktionary.org/wiki/Lebensmittel"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-essen"
@@ -288,7 +744,10 @@
     "word-nudeln",
     "word-obst",
     "word-gemuese",
-    "word-hunger"
+    "word-hunger",
+    "word-lebensmittel",
+    "word-apfel",
+    "word-moegen"
   ],
   "imageManifestRefs": [
     "img-brot"
@@ -297,7 +756,20 @@
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Lebensmittel",
     "goetheWordListOverlap": [
       "brot",
-      "hunger"
+      "wurst",
+      "fleisch",
+      "fisch",
+      "salat",
+      "suppe",
+      "ei",
+      "reis",
+      "nudeln",
+      "obst",
+      "gemuese",
+      "hunger",
+      "lebensmittel",
+      "apfel",
+      "moegen"
     ]
   }
 }
