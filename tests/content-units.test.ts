@@ -499,10 +499,12 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     // لا Dativ بأداة بعد von/mit/in/zu · ولا kein/nicht (الدرس الرابع) · ولا möchte (الدرس الثالث) · ولا كلمات الأمثلة القديمة في أي نص ألماني للدرس
     const de = JSON.stringify({ e: u.einstieg, s: u.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "" }))), q: u.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "" }))), z: u.zusammenfassung.summary.de, w: u.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise]) });
     expect(de).not.toMatch(/\b(von|mit|in|zu) (dem|der|meinem|meiner|deinem|deiner|seinem|seiner|ihrem|ihrer|einem|einer)\b|\bzur\b|\bzum\b|\bkein|\bnicht\b|möchte|Frühstück|frisch|lecker|gesund|Durst/);
+    // N-021: أمثلة البطاقات بلا أسماء علم — المقياس يفحصها بلا قائمة سماح فيعدّ «Lena» غير مدروسة
     const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(["wurst", "fleisch", "fisch", "ei", "reis", "obst", "gemuese", "hunger", "lebensmittel", "apfel", "moegen"].map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin/);
     expect(["wurst", "fleisch", "fisch", "ei", "reis", "obst", "gemuese", "hunger", "lebensmittel", "apfel", "moegen"].map(sample)).toEqual([
-      "Lena mag Brot und Wurst.", "Die Suppe ist mit Fleisch und Reis.", "Fisch, bitte! Ich mag Fisch.", "Ein Ei? Nein, zwei Eier, bitte!",
-      "Ich esse Fisch und Reis.", "Lena isst oft Obst.", "Wir essen viel Gemüse.", "Du hast Hunger, oder?",
+      "Brot oder Wurst? — Beide, bitte!", "Die Suppe ist mit Fleisch und Reis.", "Fisch, bitte! Ich mag Fisch.", "Ein Ei? Nein, zwei Eier, bitte!",
+      "Ich esse Fisch und Reis.", "Ich esse oft Obst.", "Wir essen viel Gemüse.", "Du hast Hunger, oder?",
       "Die Lebensmittel hier sind teuer.", "Ich esse oft einen Apfel.", "Magst du Eier?",
     ]);
     // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا أداة تعريف قبل طعام عام (صحيحة لطعام بعينه) · لا معدود صحيح (ein Brot · einen Salat
