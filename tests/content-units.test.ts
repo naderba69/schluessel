@@ -16,7 +16,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(841); // + der Film · mehr · wandern (نواة a1-u7-d2 — D152) + die Firma · immer · die meisten (نواة a1-u7-d1 — D151) + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(844); // + die Hausaufgabe · nie · einfach (نواة a1-u7-d3 — D153) + der Film · mehr · wandern (نواة a1-u7-d2 — D152) + die Firma · immer · die meisten (نواة a1-u7-d1 — D151) + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -1075,8 +1075,50 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u7-d3 (D153): «تـ» واحدة لأنتَ ولهي (~~Lena machst …~~) · مفرد الاحترام اليومي (~~Wartest Sie …?~~) · «أنتظرك» بمفعولٍ مباشر (~~Ich warte dich.~~ — صحيحة نحواً بمعنى آخر) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u7-d3")!;
+    const [ta, sie, warten] = u.zusammenfassung.warningCards;
+    expect(ta!.commonError.de).toBe("~~Lena machst ihre Hausaufgaben.~~");
+    expect(ta!.correct.de).toBe("Lena macht ihre Hausaufgaben.");
+    expect(ta!.whyArabicSpeakerFails).toContain("«تـ» واحدة للمخاطَب وللغائبة");
+    expect(ta!.whyArabicSpeakerFails).toContain("«أنتَ تعمل» و«هي تعمل»");
+    expect(ta!.exercise).toMatchObject({ a: "Meine Mutter sucht den Schlüssel." });
+    expect(sie!.commonError.de).toBe("~~Wartest Sie schon lange?~~");
+    expect(sie!.correct.de).toBe("Warten Sie schon lange?");
+    // الادعاء مقيَّد بالكلام اليومي: الرسائل الرسمية العربية تجمع للاحترام («حضرتكم تتفضّلون») — وهي وvous الفرنسية عونان معلنان
+    expect(sie!.whyArabicSpeakerFails).toContain("في الكلام اليومي");
+    expect(sie!.whyArabicSpeakerFails).toContain("«حضرتكم تتفضّلون»");
+    expect(sie!.whyArabicSpeakerFails).toContain("vous attendez الفرنسية");
+    expect(sie!.exercise).toMatchObject({ a: "Brauchen Sie den Computer?" });
+    expect(warten!.commonError.de).toBe("~~Ich warte dich.~~");
+    expect(warten!.correct.de).toBe("Ich warte auf dich.");
+    // الجملة المشطوبة صحيحة نحواً بمعنى آخر (warten + مفعول مباشر = «يصون آلة») — والبطاقة تقول ذلك صراحة · وj'attends معلنة · وwait for عون
+    expect(warten!.whyArabicSpeakerFails).toContain("صحيحة نحواً بمعنى آخر");
+    expect(warten!.whyArabicSpeakerFails).toContain("«يصون آلةً ويفحصها»");
+    expect(warten!.whyArabicSpeakerFails).toContain("j'attends الفرنسية");
+    expect(warten!.whyArabicSpeakerFails).toContain("wait for بحرف جرٍّ أيضاً");
+    expect(warten!.exercise).toMatchObject({ a: "Lena wartet auf ihren Bruder." });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: ~~du macht~~/~~er suchst~~ (بلا مبرر عربي) · ~~ge-telefoniert~~ (Perfekt — الوحدة 10) · ~~Ich warte den Bus.~~
+    // (صحيحة نحواً: «أصون الحافلة» — بلا قول ذلك · وBus من u7-d4)
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/ge-telefoniert|telefoniert|den Bus|\ber suchst\b|\bdu macht\b/);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا wartst/arbeitst (عامية) · لا ‑est بعد s/ß/z (قديمة) · لا er/sie + ‑e (Konjunktiv I: er mache)
+    // · لا mach وحدها (أمر وعامية ich mach) · لا warten + مفعول مباشر (يصون) · لا für dich · لا auf dir (مكان) · لا «macht/wartet/telefoniert Sie» (تُسمع sie صحيحة)
+    const choiceItems = [...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (Array.isArray((i as { choices?: unknown }).choices) ? [i as unknown as { choices: string[]; a: string }] : []));
+    const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
+    const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
+    expect(german.filter((c) => /wartst|arbeitst|putzest|schließest|benutzest|\b(er|sie|es|Lena|Yusuf|Vater|Mutter|Schwester|Bruder) (mache|suche|putze|öffne|schließe|brauche|rufe|besuche|benutze|telefoniere|schicke|warte|arbeite)\b|\bmach\b|\bwartet? (dich|den|ihn|Lena|ihren)\b|\bfür (dich|mich|Lena)\b|\bauf (dir|mir)\b|(macht|wartet|telefoniert) Sie/iu.test(c))).toEqual([]);
+    expect(german).toHaveLength(20); // التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
+    // الاستدعاء من دروس سابقة (arbeiten: e قبل t · heißen: du heißt · wohnen) — كانت machen من كلمات اليوم نفسه · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["arbeiten", "heissen", "wohnen"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D151: ملاحظات الجمع في الدروس المُرقّاة بلا مصطلح داخلي — كان «Gleich_plural» يظهر للمتعلم في 11 كلمة (Sessel · Spiegel · Kissen · Wecker …) فصار «بلا نهاية: der Sessel ← die Sessel» (نمط D146)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D152: u7-d2
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D152: u7-d2 · D153: u7-d3
     const jargon = ALL_WORDS.filter((w) => done.has(w.id) && /Gleich_plural|[A-Za-z]+_[A-Za-z]+/.test(w.pluralRuleNote ?? "")).map((w) => w.id);
     expect(jargon).toEqual([]);
     const note = (id: string) => ALL_WORDS.find((w) => w.id === id)!.pluralRuleNote;
@@ -1088,7 +1130,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
   });
 
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4", "a1-u6-d5", "a1-u7-d1", "a1-u7-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4 · D150: u6-d5 · D151: u7-d1 · D152: u7-d2
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4", "a1-u6-d5", "a1-u7-d1", "a1-u7-d2", "a1-u7-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4 · D150: u6-d5 · D151: u7-d1 · D152: u7-d2 · D153: u7-d3
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     // D150: Möbel دخلت (N-070 — كانت بجنس die وبطاقة جنس و«جمع فقط … مثل Nudeln» — والمفرد das Möbel موجود نادراً) ⇒ «جمعاً عادةً» بلا جنس مفرد
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute", "moebel"]);

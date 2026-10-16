@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-praesens-regelm",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "ich mache · du machst · er macht · wir machen · ihr macht · sie/Sie machen",
+    "ar": "المضارع المنتظم: جذعٌ ثابت + نهاية الفاعل (‑e · ‑st · ‑t · ‑en · ‑t · ‑en) — وe قبل النهاية بعد t/d (du wartest · er öffnet) · وt وحدها مع du بعد s/ß/z (du putzt) · أفعال ‑ieren منتظمة · وSie بصيغة الجمع"
+  },
+  "payload": {
+    "topicAr": "اليوم تصرّف الفعل المنتظم مع كل فاعل: ich mache · du machst · Lena macht · wir machen · ihr macht · sie machen. ومعه كلمات اليوم: machen · suchen · putzen · öffnen · schließen · brauchen · rufen · besuchen · benutzen · telefonieren · schicken · warten — والنواة die Hausaufgabe · nie · einfach.",
+    "sceneAr": "مهمة الوحدة السابعة على الشاشة: «يومي بعشرة أفعال». يوسف (في برلين) ينتظر لينا عشر دقائق، وهي تبحث عن واجباتها ثم تجدها: سهلة لكنها مملّة. يوسف يقرأ كل مساء نصوصاً بالألمانية — «Das macht Spaß!» — ولينا تمزح: الواجبات لا تمتع أبداً! تستخدم الحاسوب، ومعلّمها يرسل المهام صباحاً. يوم الأحد تزور أسرتها الجدّة التي تصنع الكعك دائماً، ويوسف يتحدّث هاتفياً طويلاً مع جدّته في تونس وينظّف مطبخه وحده؛ أما أخوا لينا فلا ينظّفان أبداً — يلعبان كرة القدم وينادي أحدهما الآخر بصوت عالٍ في الحديقة، فتغلق لينا النافذة، ويوسف يفتح نافذته لأن الجو حار في برلين. ثم تسأله: هل تنتظرني عشر دقائق؟",
+    "examples": [
+      {
+        "de": "Ich suche den Schlüssel.",
+        "ar": "أبحث عن المفتاح — الجذع such ثابت، والنهاية ‑e مع ich"
+      },
+      {
+        "de": "Suchst du die Tasche?",
+        "ar": "هل تبحث عن الحقيبة؟ — such + ‑st مع du"
+      },
+      {
+        "de": "Lena sucht ihr Handy.",
+        "ar": "لينا تبحث عن هاتفها — such + ‑t مع er/sie/es"
+      },
+      {
+        "de": "Wir suchen den Weg. Sucht ihr ihn auch?",
+        "ar": "نحن نبحث عن الطريق. هل تبحثون عنه أنتم أيضاً؟ — ‑en مع wir · ‑t مع ihr"
+      },
+      {
+        "de": "Du wartest, und Lena wartet.",
+        "ar": "أنتَ تنتظر، ولينا تنتظر — e قبل ‑st وقبل ‑t لأن الجذع wart آخره t"
+      },
+      {
+        "de": "Du putzt die Küche.",
+        "ar": "أنتَ تنظّف المطبخ — بعد z تكفي t مع du (لا s ثانية)"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الثلاثة الأولى: ما الجزء الذي لا يتغيّر في suche · suchst · sucht؟ وما الذي يتغيّر في آخره؟ (2) ما النهاية مع ich؟ ومع du؟ ومع Lena (هي)؟ (3) في الرابع: ما نهاية wir — وهل تشبه المصدر suchen؟ وما نهاية ihr — وهل تشبه نهاية Lena؟ (4) في الخامس: جرّب أن تنطق wart + st بلا حركة — صعب؟ ماذا أضافت الألمانية قبل st وقبل t؟ (5) في الأخير: putz + st — هل تسمع s ثانية؟ ماذا بقي من ‑st مع du؟",
+    "ruleDe": "ich mache · du machst · er/sie/es macht · wir machen · ihr macht · sie/Sie machen — du wartest · er wartet · er öffnet — du putzt · du schließt — ich telefoniere · er telefoniert",
+    "ruleAr": "صرّف الفعل المنتظم بأربع خطوات: (1) الجذع = المصدر بلا ‑en: machen ← mach · suchen ← such · telefonieren ← telefonier — ويبقى ثابتاً في كل الصيغ. (2) النهاية بحسب الفاعل: ich ‑e (ich mache) · du ‑st (du machst) · er/sie/es ‑t (Lena macht) · wir ‑en (wir machen) · ihr ‑t (ihr macht) · sie (هم) وSie (حضرتك) ‑en (sie machen · Machen Sie das?) — فالجمع وSie بصيغة المصدر نفسها، وihr مثل er. والفاعل يُذكر دائماً، فالنهاية لا تكفي وحدها: Öffne das Fenster! بلا فاعل أمرٌ («افتح النافذة!»). (3) إذا انتهى الجذع بـt أو d دخلت e قبل ‑st و‑t ليُنطق: du wartest · er wartet · du arbeitest · er badet — وكذلك بعد ساكنٍ ثم n لا يُنطقان معاً بلا حركة: du öffnest · er öffnet · sie zeichnet. (4) إذا انتهى الجذع بـs أو ß أو z فلا s ثانية مع du: du putzt · du schließt · du benutzt — فتتساوى du وer: du putzt = er putzt (كـdu heißt من الدرس الأول). وأفعال ‑ieren منتظمة كلها: ich telefoniere · er telefoniert — والنبر على ie.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) العربية تصرّف الفعل بحسب الفاعل كالألمانية تماماً: أفتح · تفتح · يفتح · نفتح ← ich öffne · du öffnest · er öffnet · wir öffnen — والفرق أن العربية تغيّر أول الفعل (أ · ت · ي · ن) والألمانية آخره (‑e · ‑st · ‑t · ‑en). (2) في الفصحى يُتخلَّص من التقاء الساكنين بحركة («قُمِ الليلَ» بكسر الميم) — والألمانية تفعل مثلها هنا: wart + st ← du wartest. (3) المضارع العربي للحاضر وللعادة معاً: «أنتظرُ الآن» و«أنتظرُ كل يوم» — وكذلك الألمانية: Ich warte jetzt. · Ich warte jeden Tag. — أما الإنجليزية فتفرّق بين الاستمرار والعادة (I am waiting · I wait)، فلا تبحث عن صيغة استمرار: لا شيء يقابلها هنا. وما يختلف ثلاثة: (1) «تـ» في المضارع العربي واحدة للمخاطَب وللغائبة: «أنتَ تفتح» و«هي تفتح» — فإذا ربط المتعلم ‑st بـ«تـ» قال: ~~Lena machst …~~ — والألمانية تفرّق بالنهاية: du machst · sie macht. (2) في الكلام اليومي نخاطب الشخص الواحد بفعل المفرد ولو احترمناه: «هل تنتظر يا أستاذ؟» — فيقول المتعلم: ~~Wartest Sie …?~~ — وSie الألمانية تأخذ صيغة الجمع ‑en دائماً ولو لشخصٍ واحد: Warten Sie? — كصيغة الاحترام في الرسائل الرسمية العربية («حضرتكم تتفضّلون») وvous attendez الفرنسية: هذان يساعدانك. (3) «أنتظرك» و«أنتظر الحافلة» بمفعولٍ مباشر، وكذلك j'attends الفرنسية — فيقول المتعلم: ~~Ich warte dich.~~ — وwarten بمعنى «ينتظر» يحتاج auf + المنصوب: Ich warte auf dich. (والإنجليزية wait for بحرف جرٍّ أيضاً — تساعدك هنا). والمشطوبة صحيحة نحواً بمعنى آخر: warten مع مفعولٍ مباشر = «يصون آلةً ويفحصها» — فكأنك تقول «أصونك»! — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "الأفعال التي تتغيّر حركتها مع du وer (er isst · er sieht · er trägt — رأيتَ بعضها) بابُها في الدرس القادم — اليوم الجذع ثابت في كل الصيغ.",
+      "الماضي (hat gemacht · hat telefoniert) في الوحدة العاشرة — اليوم المضارع وحده، للحاضر وللعادة.",
+      "warten auf + المنصوب قطعةٌ تحفظها اليوم (auf dich · auf mich · auf den Kellner) — وباب الأفعال ذات الحرف الثابت كله في A2 · وtelefonieren اليوم بلا مفعول (Ich telefoniere lange.) — و«أتصل بفلان» في الوحدة الثامنة.",
+      "rufen = ينادي (Wer ruft da?) — و«الاتصال بالهاتف» بفعلٍ آخر في الدرس الخامس · وnie = «لا … أبداً» بكلمةٍ واحدة بلا nicht: Er putzt nie."
+    ],
+    "beads": [
+      "Du",
+      "suchst",
+      "den",
+      "Schlüssel."
+    ],
+    "properNouns": [
+      "Lena"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u7-d3",
+    "a1-u7-d6"
+  ]
+}

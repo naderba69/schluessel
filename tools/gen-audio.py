@@ -1057,6 +1057,9 @@ def build_all() -> None:
     ("word-film", "der Film.", "film", ["a1-u7-d2"]),
     ("word-mehr", "mehr.", "mehr", ["a1-u7-d2"]),
     ("word-wandern", "wandern.", "wandern", ["a1-u7-d2"]),
+    ("word-hausaufgabe", "die Hausaufgabe.", "hausaufgabe", ["a1-u7-d3"]),
+    ("word-nie", "nie.", "nie", ["a1-u7-d3"]),
+    ("word-einfach", "einfach.", "einfach", ["a1-u7-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

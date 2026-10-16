@@ -123,7 +123,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u7-d3")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D152 صارت الوحدات 1–6 (d1..d5) وu7-d1..d2 مُرقّاة
+const legacy = realLessons.find((l) => l.id === "a1-u7-d4")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D153 صارت الوحدات 1–6 (d1..d5) وu7-d1..d3 مُرقّاة
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -379,7 +379,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u7-d3", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u7-d4", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -475,23 +475,22 @@ describe("D115 — أدوات القياس", () => {
     const legacyRule = { ...w("sein"), de: "sein ملكيته" };
     expect(wordAppears(legacyRule, toks("Das ist sein Hund."))).toBe(false);
   });
-  it("الدرس التالي غير المُرقّى (a1-u7-d3 بعد D152): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u7-d4 بعد D153): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
-    // بعد D152 صار u7-d2 مكتملاً؛ الفجوات الفعلية لـu7-d3 (مقيسة قبل النقل): لا ملف ars-praesens-regelm · ثلاثة أمثلة بطاقات بكلمة غير مدروسة
-    // (Hausaufgaben · Mail · Bus) · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · كلمات غير مدروسة في التدريب والـQuiz
-    // · بطاقة استدعاء من كلمات اليوم نفسه (machen) · Quiz 3×4 — القياس لا التخمين
-    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-sample", "e-upgrade-sample", "e-upgrade-sample"]);
-    expect(r.rule[0]?.message).toMatch(/ars-praesens-regelm/);
-    expect(r.rule.slice(1).map((i) => i.message.split(": ").pop())).toEqual(["hausaufgaben", "mail", "bus"]);
+    // بعد D153 صار u7-d3 مكتملاً؛ الفجوات الفعلية لـu7-d4 (مقيسة قبل النقل): لا ملف ars-praesens-unregelm · أربعة أمثلة بطاقات بكلمة غير مدروسة
+    // (Berlin · Buch · Park · gleich) · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · بطاقتا استدعاء من كلمات اليوم نفسه (fahren · Zug)
+    // · Quiz 3×4 · وكلمة بلا أي بند (laufen) — القياس لا التخمين
+    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-sample", "e-upgrade-sample", "e-upgrade-sample", "e-upgrade-sample"]);
+    expect(r.rule[0]?.message).toMatch(/ars-praesens-unregelm/);
+    expect(r.rule.slice(1).map((i) => i.message.split(": ").pop())).toEqual(["berlin", "buch", "park", "gleich"]);
     expect(r.practice.map((i) => i.code).sort()).toEqual([
-      ...Array(6).fill("e-upgrade-item"), "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types", "e-upgrade-front", "e-upgrade-warmup",
+      ...Array(6).fill("e-upgrade-item"), "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types", "e-upgrade-warmup",
     ].sort());
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/bus، foniert، ge، hausaufgaben/);
-    expect(r.practice.find((i) => i.code === "e-upgrade-warmup")?.message).toMatch(/machen/);
-    expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-front"]);
-    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/mail/);
-    expect(r.coverage).toEqual([]);
+    expect(r.practice.find((i) => i.code === "e-upgrade-warmup")?.message).toMatch(/fahren، zug/);
+    expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size"]);
+    expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);
+    expect(r.coverage[0]?.message).toMatch(/laufen/);
     expect(r.quizMin).toBe(4);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
@@ -2163,6 +2162,111 @@ describe("D115 — أدوات القياس", () => {
     expect(entryOf("Fußball").regeneratedTracks).toEqual(expect.arrayContaining(["fz-2", "fz-3", "fz-4"]));
     expect(entryOf("Hobbys").forms).toEqual([{ espeak: "hˈɔbyːs", ipa: "hˈɔbiːs" }]);
     expect(entryOf("Hobbys").regeneratedTracks).toEqual(["fz-1", "fz-20"]);
+  });
+  it("a1-u7-d3 مُرقّى (D153): صفر نقص — 47 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-praesens-regelm · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u7-d3")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u7-d3")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([47, 4, 6, 15]);
+    // القاعدة المخططة نفسها (ars-praesens-regelm — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u7-d6 يشير إليها أيضاً فهي في usedInLessons
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-praesens-regelm"]);
+    const rule = rules.get("ars-praesens-regelm")!;
+    expect(rule.usedInLessons).toEqual(["a1-u7-d3", "a1-u7-d6"]);
+    expect(realLessons.find((x) => x.id === "a1-u7-d6")!.usedArsenalIds).toContain("ars-praesens-regelm");
+    expect(rule.payload.ruleDe).toBe("ich mache · du machst · er/sie/es macht · wir machen · ihr macht · sie/Sie machen — du wartest · er wartet · er öffnet — du putzt · du schließt — ich telefoniere · er telefoniert");
+    // قاعدة اليوم في الخطة اليومية («Präsens regelmäßig»): جذعٌ ثابت + نهاية الفاعل · e بعد t/d وبعد ساكنٍ ثم n · لا s ثانية بعد s/ß/z · ‑ieren منتظمة · الفاعل لا يُحذف
+    for (const x of ["الجذع = المصدر بلا ‑en", "ich ‑e (ich mache)", "du ‑st (du machst)", "ihr مثل er", "والفاعل يُذكر دائماً", "إذا انتهى الجذع بـt أو d", "du öffnest · er öffnet · sie zeichnet", "فلا s ثانية مع du", "كـdu heißt من الدرس الأول", "أفعال ‑ieren منتظمة كلها"])
+      expect(rule.payload.ruleAr).toContain(x);
+    // ثلاثة أعوان مسمّاة (التصريف بالشخص — أوله بالعربية وآخره بالألمانية · التخلّص من التقاء الساكنين · المضارع للحاضر وللعادة؛ والإنجليزية تفرّق — معلنة)
+    // · والفروق — هي المصائد الثلاث: «تـ» واحدة للمخاطَب وللغائبة · مفرد الاحترام اليومي (والرسائل الرسمية وvous عونان) · «أنتظرك» بمفعولٍ مباشر (j'attends معلنة · wait for عون — والمشطوبة صحيحة نحواً بمعنى آخر)
+    const c = rule.payload.contrastAr;
+    for (const x of ["تغيّر أول الفعل (أ · ت · ي · ن) والألمانية آخره", "التقاء الساكنين", "«قُمِ الليلَ»", "I am waiting · I wait", "«تـ» في المضارع العربي واحدة للمخاطَب وللغائبة", "~~Lena machst …~~", "في الكلام اليومي", "«حضرتكم تتفضّلون»", "vous attendez الفرنسية", "~~Wartest Sie …?~~", "j'attends الفرنسية", "wait for", "~~Ich warte dich.~~", "صحيحة نحواً بمعنى آخر", "«يصون آلةً ويفحصها»"])
+      expect(c).toContain(x);
+    const limits = rule.payload.limitsAr.join(" ");
+    expect(rule.payload.limitsAr).toHaveLength(4);
+    expect(limits).toMatch(/تتغيّر حركتها.*في الدرس القادم/);
+    expect(limits).toMatch(/الماضي.*الوحدة العاشرة/);
+    expect(limits).toMatch(/warten auf \+ المنصوب قطعةٌ.*A2/);
+    expect(limits).toMatch(/«أتصل بفلان» في الوحدة الثامنة/);
+    expect(limits).toMatch(/«الاتصال بالهاتف» بفعلٍ آخر في الدرس الخامس/);
+    expect(limits).toMatch(/nie = «لا … أبداً» بكلمةٍ واحدة بلا nicht/);
+    // لا صيغ تغيير الحركة غير المدروسة (fährt · nimmt — u7-d4) ولا anrufen (u7-d5) في نصوص القاعدة
+    expect(JSON.stringify(rule.payload)).not.toMatch(/fährt|nimmt|anruf/);
+    expect(rule.payload.beads).toEqual(["Du", "suchst", "den", "Schlüssel."]);
+    // النطاق في نصوص المتعلم الألمانية: لا تغيير حركة (u7-d4) · لا Perfekt (الوحدة 10 — كانت ~~ge-telefoniert~~ في البطاقة) · لا anrufen (u7-d5)
+    // · لا Mail ولا Bus القديمتين · ولا mit + أداة بعد telefonieren (الوحدة 8)
+    const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.correct.de, c.exercise.a]) });
+    expect(shown).not.toMatch(/\bfährt\b|\bnimmt\b|\bgibt\b|\bläuft\b|\bwäscht\b|\bsprichst?\b|gemacht|gewartet|geschickt|gesucht|geputzt|telefoniert hat|anruf|\bruft\b[^"]*\ban\b|Mail|\bBus\b|telefonier[^"]*\bmit (meiner|meinem|dem|der|einer|einem)\b/i);
+    expect(e.properNouns).toEqual(["Yusuf", "Lena", "Berlin"]);
+    expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
+    // النواة D113 (die Hausaufgabe, -n · nie · einfach) بالمولِّد
+    const w = (id: string) => words.find((x) => x.id === id)!;
+    expect([w("hausaufgabe").de, w("hausaufgabe").plural, w("hausaufgabe").goetheList, w("hausaufgabe").gender]).toEqual(["die Hausaufgabe", "die Hausaufgaben", ["A1", "A2"], "die"]);
+    expect(w("hausaufgabe").pluralRuleNote).toBe("‑n: die Hausaufgabe ← die Hausaufgaben (كـdie Aufgabe ← die Aufgaben)");
+    expect([w("nie").wordClass, w("nie").goetheList]).toEqual(["adverb", ["A1", "A2"]]);
+    expect([w("einfach").wordClass, w("einfach").goetheList]).toEqual(["adjective", ["A1", "A2"]]);
+    expect(["word-hausaufgabe", "word-nie", "word-einfach"].map((id) => tracks.get(id)?.textDe)).toEqual(["die Hausaufgabe.", "nie.", "einfach."]);
+    // أمثلة البطاقات: machen «Hausaufgaben» (قبل النواة) · schicken «Mail» · warten «Bus» (u7-d4) · telefonieren «mit meiner Familie» (الوحدة 8)
+    // · rufen «Das Essen ist fertig» (نصٌّ حرفيّ في A2) — صارت جملاً بالمدروس، وأكثرها بغير ich (du machst · er öffnet · sie schließt · wir putzen)
+    const sample = (id: string) => w(id).sampleSentence!.de;
+    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|Tunesien|Mail|\bBus\b|mit meiner|Das Essen ist fertig/);
+    expect(l.praesentation.wordIds.filter((id) => /^(Der|Die|Das) \p{L}+ ist \p{L}+\.$/u.test(sample(id)))).toEqual([]);
+    expect([sample("machen"), sample("oeffnen"), sample("schliessen"), sample("putzen"), sample("warten")]).toEqual(["Was machst du am Sonntag?", "Er öffnet das Fenster.", "Am Abend schließt sie die Tür.", "Wir putzen die Küche zusammen.", "Wir warten auf den Kellner."]);
+    // معنى rufen صار صادقاً: «ينادي» (كان «يتصل» — معنى anrufen في الدرس الخامس)
+    expect(w("rufen").ar).toEqual(["ينادي", "يستدعي"]);
+    expect(l.warmup.cardIds).toEqual(["arbeiten", "heissen", "wohnen"]);
+    // interleavedWith كلمات خلط حقيقية: كل مرجع كلمةُ درسٍ سابق ويظهر جذعه في ألمانية بنود محطته
+    const before = new Set(realLessons.filter((x) => x.unit <= 6 || ["a1-u7-d1", "a1-u7-d2"].includes(x.id)).flatMap((x) => x.praesentation.wordIds));
+    const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
+    for (const st of l.uebung.stations) {
+      expect(st.interleavedWith.length).toBeGreaterThan(0);
+      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
+      for (const ref of st.interleavedWith) {
+        expect(before.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
+        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+      }
+    }
+    // الحوار الجديد (pr-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الأحد عشر فوق 132 كلها استماعاً (الإملاء ثلاثة أسطر ≤132 + خمسة مقاطع)
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("pr-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 20 }, (_, i) => `pr-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-einfach", "word-hausaufgabe", "word-oeffnen", "word-schliessen", "word-telefonieren"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; voiceParams: { speedWpm: number } }[] };
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    const fast = Array.from({ length: 20 }, (_, i) => `pr-${i + 1}`).filter((id) => wpm.get(id)! > 132);
+    expect(fast).toHaveLength(11);
+    for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set([...l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))), ...l.zusammenfassung.warningCards.flatMap((c) => [c.correct.de, String(c.exercise.a)])]);
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    const norm = (x: string) => x.toLowerCase().replace(/[^\p{L}\s]/gu, " ").replace(/\s+/g, " ").trim();
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => ` ${f} `.includes(` ${norm(a)} `)))).toEqual([]);
+    expect(quizAnswers.filter((a) => ["die Hausaufgabe", "einfach", "öffnen", "schließen", "telefonieren"].includes(a))).toEqual([]);
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم.
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+    // الأسطر التي يمسّها المعجم مسجّلة على مداخلها (Tunesien ← pr-11 · Fußball ← pr-14 · okay ← pr-18) · ومدخل جديد ruft (espeak يقصّر u: [rˈʊft] — وrufst/rufen صحيحتان)
+    const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; regeneratedTracks: string[] }[] };
+    const entryOf = (word: string) => lex.entries.find((x) => x.word === word)!;
+    expect(entryOf("Tunesien").regeneratedTracks).toContain("pr-11");
+    expect(entryOf("Fußball").regeneratedTracks).toContain("pr-14");
+    expect(entryOf("okay").regeneratedTracks).toContain("pr-18");
+    expect(entryOf("ruft").forms).toEqual([{ espeak: "rˈʊft", ipa: "rˈuːft" }]);
+    expect(entryOf("ruft").regeneratedTracks).toEqual(["pr-15"]);
   });
   it("D146 مفتاح الإجابة أولاً: كل بند اختيار في الدروس المُرقّاة يكتب إجابته أول الخيارات (العرض يخلطها displayOrder) — فالمفتاح المقلوب إلى مشتِّت يُمسك آلياً · ثلاثة دروس قديمة مستثناة بالاسم", () => {
     // الطفرة «إجابة استماع = مشتِّت» نجت في D146: الإجابة بين الخيارات فيقبلها المخطط، ومعنى الخيار العربي لا يُفحص آلياً.

@@ -16829,6 +16829,66 @@
       "rmsDb": -17.04
     },
     {
+      "id": "word-hausaufgabe",
+      "file": "words/audio/de-DE/word-hausaufgabe.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Hausaufgabe.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 1326,
+      "sizeBytes": 6484,
+      "hash": "sha256:0924a7aaf341a7fc6338d70366309aad704c5aafe870995cd06057124ac222a6",
+      "pcmSha256": "a5dfad4cc7859d34262d4d7c90ca2682b71e3bdfa9de8765a75fff6b056047b6",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "word-nie",
+      "file": "words/audio/de-DE/word-nie.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "nie.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 746,
+      "sizeBytes": 3544,
+      "hash": "sha256:66b174cf1e32b6b0ae8500e9a9f42985d735f13290aa0a85be6d337f51901c5e",
+      "pcmSha256": "811ccabdb06946d48b7a9ec29641e62c2a8dd3b23ba3349e33483a10ada743fc",
+      "rmsDb": -16.96
+    },
+    {
+      "id": "word-einfach",
+      "file": "words/audio/de-DE/word-einfach.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "einfach.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 1059,
+      "sizeBytes": 4813,
+      "hash": "sha256:50580f3a2d7a0509faf6aa35bfffa56f60902992db1c40913e84cd9b9b2144b4",
+      "pcmSha256": "b2b185c2c6a36cf7034386f8edda25e5834c20d1073eb7555257041118b37f46",
+      "rmsDb": -17.12
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -30214,6 +30274,446 @@
       "hash": "sha256:988434ec38d3ae31fa7772119f8f1223b2b2f794ccfc7c352e91f951a92477e1",
       "pcmSha256": "b8453c2d6da54ffca0b82751169309e02792097fce042ce16262c803cc65d5d8",
       "rmsDb": -17.02
+    },
+    {
+      "id": "pr-1",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Lena! Ich warte schon zehn Minuten.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 2928,
+      "sizeBytes": 13094,
+      "hash": "sha256:2ef2a9da1e339483fc6d61cb3c7b2f2b90cfc390db87da5311bac561095bffcb",
+      "pcmSha256": "a59c52c76b53af06b291ac01400f14cb7076445a94103c460765190f94c2cdfa",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "pr-2",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 113,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo, Yusuf! Ich suche meine Hausaufgaben — ach, hier sind sie!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 5288,
+      "sizeBytes": 24343,
+      "hash": "sha256:cba321d75e1ea44f909bdef46881ec8a76ece836d2b38d28f625ec3148b3bca2",
+      "pcmSha256": "9286b4929ac143345ce801470427671d5c2ac63b1741e92262a414ef0c735805",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "pr-3",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 90,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hausaufgaben? Sind sie schwer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 2673,
+      "sizeBytes": 11861,
+      "hash": "sha256:66f2c4f021f5fa413aeee01b81aca94723342afd74ad0404c82a8fa876a97ba0",
+      "pcmSha256": "7be667065e29c6c74306a1f9ba1e495f2a692fa3d6cbc3493ee43215e04bedaa",
+      "rmsDb": -17.13
+    },
+    {
+      "id": "pr-4",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, sie sind einfach, aber langweilig. Und du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 3704,
+      "sizeBytes": 17572,
+      "hash": "sha256:6f783f12170bb6ebe77f9d6a388add1087d780647eaa909e5052ef3e5c9bd224",
+      "pcmSha256": "88982897e231393eb3bf81ee277a253dc8e5105151602bc7cedb89e83458a49f",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "pr-5",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich lese jeden Abend Texte auf Deutsch. Das macht Spaß!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 4298,
+      "sizeBytes": 18672,
+      "hash": "sha256:22075e102147b6ee29ff7f8f0a7df61e192e734282303e9722c40b9cd7034d03",
+      "pcmSha256": "5d871c0156db35625bd5378021ecfad29a6a0e60e089096f4b342b9447b1d342",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "pr-6",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 99,
+        "lengthScale": 1.32
+      },
+      "textDe": "Spaß? Hausaufgaben machen nie Spaß!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 3016,
+      "sizeBytes": 14063,
+      "hash": "sha256:667d49ada02dba2a3088035e212b82b9193e84d0d906b9d8a87340b1b0077bb5",
+      "pcmSha256": "4e43731137177cd5b639edd9067d22d6474e96276d26ec7283f92ffef02c8bb4",
+      "rmsDb": -17.64
+    },
+    {
+      "id": "pr-7",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 161,
+        "lengthScale": 1.32
+      },
+      "textDe": "Brauchst du den Computer für die Hausaufgaben?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 2615,
+      "sizeBytes": 12440,
+      "hash": "sha256:60b63745de010b67fe7494b1cc6e02e315f4d877f81e0d5882993331435ab7ed",
+      "pcmSha256": "90bf0091014c7b428e26e9cfd53ba16d8ca86a4426819928554584ec53333534",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "pr-8",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich benutze den Computer. Mein Lehrer schickt die Aufgaben am Morgen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 5720,
+      "sizeBytes": 26741,
+      "hash": "sha256:f2012156bd33f38c12e46f7a61d4b48f63caa738a4f8137a97612d904314894d",
+      "pcmSha256": "dd3477c784349f60bd2b12c6defd13c2ee3c467cf887276d3aab2a7853f80fad",
+      "rmsDb": -17.29
+    },
+    {
+      "id": "pr-9",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und was macht ihr am Sonntag?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 2139,
+      "sizeBytes": 10055,
+      "hash": "sha256:38f2186f61b6f28da700f904926c52e018c0f09ac73285e75604488eb73217bc",
+      "pcmSha256": "92488ebd01164188c50ae87a2f65e0438a701c5395a8d450e1cf4e70b1eeaf97",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "pr-10",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 112,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Sonntag besuchen wir Oma. Sie macht immer Kuchen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 4808,
+      "sizeBytes": 22230,
+      "hash": "sha256:792054889877de3726e9a6218cf4b8c4d67f39070353eb23f7fe282e74fcf844",
+      "pcmSha256": "e548773865ffd4d5a98000ea00b6cd2cf230d47c8b205cc747cbcd31b0a1174c",
+      "rmsDb": -17.47
+    },
+    {
+      "id": "pr-11",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Meine Oma wohnt in Tunesien. Ich telefoniere jeden Sonntag lange.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 4229,
+      "sizeBytes": 19780,
+      "hash": "sha256:6fe5c80eb3b10a19151bf5eb8611100e7b9e3d273f0b936fd42c841c93343ac7",
+      "pcmSha256": "bc8797bc87af80edf1269f8e738a0a5d7bb54004a11ec71cbd185d73a5122359",
+      "rmsDb": -17
+    },
+    {
+      "id": "pr-12",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 133,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und putzt du am Sonntag deine Wohnung?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 3160,
+      "sizeBytes": 14945,
+      "hash": "sha256:aa15306d80cab1769565edf428b266e05c7cfee4dd8132ede6571122b19e8cea",
+      "pcmSha256": "866b2d4069b585033991a6a5cc03a2ffd400b972942d792a02119862053dd0b1",
+      "rmsDb": -17.5
+    },
+    {
+      "id": "pr-13",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich putze die Küche — allein, natürlich!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 3822,
+      "sizeBytes": 17836,
+      "hash": "sha256:9f6ba5056b1dd629ef89c10128b9d8c9eef5070694ef61efc60545fae65b0beb",
+      "pcmSha256": "82a65db6877376431866f40f142d702b7d04f28bde9b6f1a58313372c94d5dbd",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "pr-14",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 110,
+        "lengthScale": 1.32
+      },
+      "textDe": "Meine Brüder putzen nie! Sie spielen nur Fußball.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 4376,
+      "sizeBytes": 20330,
+      "hash": "sha256:2b6b9edd1f3c6cc8e35b7547ccae539f068a30dae994cdf96e918120e16580e7",
+      "pcmSha256": "a0f927fa13eaf079fbc8b5240b1ae4f122b0ca8764ef6c79510bdc53c22c8a36",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "pr-15",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hörst du das? Wer ruft da?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 2847,
+      "sizeBytes": 12052,
+      "hash": "sha256:c8d3be66b6e3c6952f444d9ea8d263a442c49db861dca933d77159e6ff27f7c0",
+      "pcmSha256": "75b2954de71ac652db7ef10a9213fe407341f69ae336a04462441e48364f4f7c",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "pr-16",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 158,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das sind meine Brüder im Garten. Sie rufen so laut!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 3800,
+      "sizeBytes": 17756,
+      "hash": "sha256:ab4e61b328bc8e46a5510d796dcdf109d01f5196dbca5b5debcfcf5226bcb51a",
+      "pcmSha256": "f1f30066fa877ce7705d7d39cb2ecb6783eec825a23432aaa279387d5038bb6e",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "pr-17",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Schließ doch das Fenster!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 1674,
+      "sizeBytes": 7954,
+      "hash": "sha256:01381de75fd3aef6a51303338c99b961ec1ef23908b9fd6e55ddac026da97d02",
+      "pcmSha256": "cd13679f94f3cf8ef414af4195f593d5c66f969009f1bc557487b7104ee937a7",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "pr-18",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Okay, ich schließe das Fenster. So, jetzt ist es ruhig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 3784,
+      "sizeBytes": 17646,
+      "hash": "sha256:b010f1c1da5494c3db1882ad4150b16c25f499f6501548adc0a23db8d2b46b12",
+      "pcmSha256": "ae8e457ac944b86f3b6cb9c71ac85dcd8b8f5fd7fb284c06c66603c418aa4ea0",
+      "rmsDb": -17.31
+    },
+    {
+      "id": "pr-19",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 174,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hier in Berlin ist es heiß. Ich öffne mein Fenster.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 3451,
+      "sizeBytes": 15817,
+      "hash": "sha256:52bb43204574024fa212a84d3867163774570e58d2b2c651163dd3f96c3813de",
+      "pcmSha256": "f6540446f49c5ac1fcba4f28b817edcc044687942547697f3cc55ed23a1595fb",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "pr-20",
+      "file": "audio/scripts/a1-u7-d3-hausaufgaben/pr-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und ich mache jetzt meine Hausaufgaben. Wartest du auf mich? Ich brauche nur zehn Minuten!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d3"
+      ],
+      "durationMs": 6488,
+      "sizeBytes": 29836,
+      "hash": "sha256:7980067c175242c16786e259c82bf9acdc98550de7090543a80c342fccaeaf4c",
+      "pcmSha256": "c2f9b9c43d6fd2ee0f51bdcff61c8a1d45a2738e5999eab4b5e1abc7ae47bf51",
+      "rmsDb": -17.21
     }
   ],
   "characterVoices": {
