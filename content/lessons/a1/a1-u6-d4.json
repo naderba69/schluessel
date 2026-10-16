@@ -6,31 +6,32 @@
   "day": 4,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst sagen, wo etwas ist und wohin du es stellst.",
-    "ar": "تقول أين الشيء وإلى أين تضعه"
+    "de": "Wo steht das Bett? — An der Wand. · Wohin stellst du das Sofa? — Ich stelle es in die Ecke.",
+    "ar": "تقول أين الشيء (Wo? — بعد الحرف dem · der · im: unter dem Tisch · an der Wand · im Zimmer) وإلى أين تضعه (Wohin? — den · die · das كالمفعول به: auf das Sofa · unter den Tisch) بالفعل المناسب لشكله (stellen · legen · hängen)، وتشير بـ da وdaneben، وتقول إن الشيء ضاع: Mein Schlüssel ist weg!"
   },
   "canDoDaily": [
-    "يحدد مكان الشيء (Wo? + Dativ) واتجاه وضعه (Wohin? + Akkusativ)"
+    "يقول أين الأشياء في غرفته (Das Bett steht an der Wand. · Der Teppich ist unter dem Tisch. · Das Foto hängt neben der Tür.) ويشير بـ da وdaneben (Da ist er! · Die Stühle stehen daneben.).",
+    "يقول إلى أين يضع الشيء بالفعل المناسب لشكله (Ich stelle das Sofa in die Ecke. · Ich lege die Kissen auf das Sofa. · Ich hänge das Foto über das Bett.) ويسأل Wohin …? — ويقول إن شيئاً ضاع: Mein Schlüssel ist weg!"
   ],
   "warmup": {
     "cardIds": [
-      "tisch",
-      "lampe",
-      "schrank"
+      "wo",
+      "neben",
+      "stehen"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«أضع الطاولة عند الجدار» — an die Wand أم an der Wand? (تخمين فقط)"
+          "de": "«أضع المصباح في الركن» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
-          "an die Wand (Wohin? = Akkusativ)",
-          "an der Wand (هذه للـWo?)",
-          "an dem Wand"
+          "Ich stelle die Lampe in die Ecke.",
+          "Ich stelle die Lampe in der Ecke.",
+          "Ich stelle die Lampe in dem Ecke."
         ],
-        "answer": "an die Wand (Wohin? = Akkusativ)",
+        "answer": "Ich stelle die Lampe in die Ecke.",
         "revealNextSession": true
       }
     ],
@@ -49,7 +50,10 @@
       "stellen",
       "legen",
       "haengen",
-      "wohin"
+      "wohin",
+      "da",
+      "daneben",
+      "weg-sein"
     ],
     "grammarArsenalIds": [
       "ars-wo-wohin"
@@ -58,76 +62,477 @@
       "story-a6-u6-s4"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "umlaut-u",
+      "umlaut-a",
+      "sp-st-initial",
+      "double-consonant",
+      "auslaut-g"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أين المصباح؟» (Wo?)",
-            "a": "Wo ist die Lampe? — In der Ecke."
+            "q": "Das Bett steht an ___ Wand. (Wo?)",
+            "a": "der",
+            "why": "die Wand + Wo? (steht — لا حركة) ⇒ der بعد الحرف: an der Wand."
           },
           {
-            "q": "«الصورة فوق الأريكة»؟",
-            "a": "Das Bild ist über dem Sofa."
-          }
-        ],
-        "interleavedWith": [
-          "lampe",
-          "sofa"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "«أضع الطاولة عند الجدار» (Wohin?)؟",
-            "a": "Ich stelle den Tisch an die Wand."
+            "q": "Ich stelle die Lampe in ___ Ecke. (Wohin?)",
+            "a": "die",
+            "why": "Wohin? (stelle — وضعٌ إلى مكان) ⇒ أداة المفعول به: die كما هي."
           },
           {
-            "q": "«أعلّق الصورة على الجدار»؟",
-            "a": "Ich hänge das Bild an die Wand."
+            "q": "Der Teppich ist unter ___ Tisch. (Wo?)",
+            "a": "dem",
+            "why": "der Tisch + Wo? (ist — لا حركة) ⇒ dem: unter dem Tisch."
+          },
+          {
+            "q": "Ich lege den Schlüssel auf ___ Tisch. (Wohin?)",
+            "a": "den",
+            "why": "der Tisch + Wohin? ⇒ den — كما بعد haben (الوحدة 4)."
+          },
+          {
+            "q": "Das Foto hängt über ___ Bett. (Wo?)",
+            "a": "dem",
+            "why": "das Bett + Wo? (hängt بلا مفعول) ⇒ dem — der وdas كلاهما dem."
+          },
+          {
+            "q": "Ich hänge das Foto über ___ Bett. (Wohin?)",
+            "a": "das",
+            "why": "das Bett + Wohin? (hänge + مفعول به) ⇒ das كما هي."
+          },
+          {
+            "q": "Das Sofa steht ___ Zimmer. (in + dem)",
+            "a": "im",
+            "why": "in + dem = im — كما im Mai في الوقت: das Zimmer ⇒ im Zimmer."
+          },
+          {
+            "q": "Der Stuhl steht ___ Fenster. (an + dem)",
+            "a": "am",
+            "why": "an + dem = am — كما am Montag: das Fenster ⇒ am Fenster."
+          },
+          {
+            "q": "Ich ___ die Kissen auf das Sofa. (مستلقية)",
+            "a": "lege",
+            "why": "الوسائد تستلقي ⇒ legen: ich lege — وdas Sofa كما هي (إلى أين؟)."
+          },
+          {
+            "q": "___ stellst du den Stuhl? — An den Tisch. (إلى أين؟)",
+            "a": "Wohin",
+            "why": "stellen وضعٌ إلى مكان ⇒ Wohin? لا Wo — والجواب بأداة المفعول به: der Tisch ⇒ an den Tisch."
+          },
+          {
+            "q": "Die Katze ist ___! (اختفت)",
+            "a": "weg",
+            "why": "weg sein = ضاع · اختفى · ذهب: Die Katze ist weg!"
+          },
+          {
+            "q": "Das Bett steht hier, und ___ steht ein Stuhl. (بجانبه)",
+            "a": "daneben",
+            "why": "daneben = بجانبه (neben + الشيء المذكور قبله) — وبعده الفعل ثانياً: daneben steht."
           }
         ],
         "interleavedWith": [
           "wand",
-          "bild"
+          "tisch",
+          "bett",
+          "sofa",
+          "zimmer",
+          "fenster"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«الوسادة تحت السرير»؟",
-            "a": "Das Kissen ist unter dem Bett."
+            "audioId": "ww-1",
+            "speakText": "Hallo, Yusuf! Ist das Sofa schon da?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل وصلت الأريكة",
+              "هل الأريكة جديدة",
+              "هل الأريكة كبيرة"
+            ],
+            "a": "هل وصلت الأريكة",
+            "why": "Ist das Sofa schon da? = هل وصلت الأريكة؟ — da = هنا (حاضر) · schon = بالفعل."
           },
           {
-            "q": "«أضع الوسادة على السرير» (Wohin?)؟",
-            "a": "Ich lege das Kissen auf das Bett."
+            "audioId": "ww-2",
+            "speakText": "Ja, es ist da — aber wohin stelle ich es?",
+            "q": "استمع: ما مشكلة يوسف؟",
+            "choices": [
+              "لا يعرف أين يضع الأريكة",
+              "الأريكة لم تصل بعد",
+              "الأريكة صغيرة جداً"
+            ],
+            "a": "لا يعرف أين يضع الأريكة",
+            "why": "es ist da = وصلت (es = das Sofa) · wohin stelle ich es? = إلى أين أضعها؟"
+          },
+          {
+            "audioId": "ww-3",
+            "speakText": "Okay. Wo steht das Bett?",
+            "q": "استمع: عن أيّ شيء تسأل لينا أولاً؟",
+            "choices": [
+              "عن مكان السرير",
+              "عن مكان الطاولة",
+              "عن مكان الخزانة"
+            ],
+            "a": "عن مكان السرير",
+            "why": "Wo steht das Bett? = أين السرير؟ — Wo لأن steht لا حركة فيها · Okay = حسناً."
+          },
+          {
+            "audioId": "ww-4",
+            "speakText": "An der Wand, unter dem Fenster.",
+            "q": "استمع: أين السرير؟",
+            "choices": [
+              "عند الجدار تحت النافذة",
+              "في الوسط تحت النافذة",
+              "عند الباب تحت النافذة"
+            ],
+            "a": "عند الجدار تحت النافذة",
+            "why": "an der Wand (die ← der) · unter dem Fenster (das ← dem) — للمكان."
+          },
+          {
+            "audioId": "ww-5",
+            "speakText": "Und der Tisch? Und die Stühle?",
+            "q": "استمع: عمّ تسأل لينا الآن؟",
+            "choices": [
+              "عن الطاولة والكراسي",
+              "عن الطاولة والمصباح",
+              "عن الكراسي والأريكة"
+            ],
+            "a": "عن الطاولة والكراسي",
+            "why": "der Tisch = الطاولة · die Stühle = الكراسي (جمع der Stuhl)."
+          },
+          {
+            "audioId": "ww-6",
+            "speakText": "Der Tisch steht in der Mitte, und die Stühle stehen daneben.",
+            "q": "استمع: أين الطاولة والكراسي؟",
+            "choices": [
+              "الطاولة في الوسط والكراسي بجانبها",
+              "الطاولة في الركن والكراسي بجانبها",
+              "الطاولة في الوسط والكراسي تحتها"
+            ],
+            "a": "الطاولة في الوسط والكراسي بجانبها",
+            "why": "Der Tisch steht in der Mitte = الطاولة في الوسط · die Stühle stehen daneben = الكراسي بجانبها."
+          },
+          {
+            "audioId": "ww-7",
+            "speakText": "Und dort in der Ecke? Was steht da?",
+            "q": "استمع: عن أيّ مكان تسأل لينا؟",
+            "choices": [
+              "عن الركن",
+              "عن الوسط",
+              "عن الباب"
+            ],
+            "a": "عن الركن",
+            "why": "dort in der Ecke = هناك في الركن (die Ecke ← in der Ecke) · Was steht da? = ماذا هناك؟"
+          },
+          {
+            "audioId": "ww-8",
+            "speakText": "Da steht nur die Lampe.",
+            "q": "استمع: ماذا في الركن؟",
+            "choices": [
+              "المصباح وحده",
+              "المصباح والأريكة",
+              "لا شيء"
+            ],
+            "a": "المصباح وحده",
+            "why": "Da steht nur die Lampe = هناك المصباح فقط — nur = فقط."
+          },
+          {
+            "audioId": "ww-9",
+            "speakText": "Also: Das Sofa stellst du in die Ecke, und die Lampe daneben!",
+            "q": "استمع: ما اقتراح لينا؟",
+            "choices": [
+              "الأريكة في الركن والمصباح بجانبها",
+              "الأريكة في الوسط والمصباح بجانبها",
+              "الأريكة عند الجدار والمصباح فوقها"
+            ],
+            "a": "الأريكة في الركن والمصباح بجانبها",
+            "why": "Das Sofa stellst du in die Ecke = الأريكة تضعها في الركن (Wohin? ⇒ die كما هي) · und die Lampe daneben = والمصباح بجانبها."
+          },
+          {
+            "audioId": "ww-10",
+            "speakText": "Prima! Und die zwei Kissen lege ich auf das Sofa.",
+            "q": "استمع: أين يضع يوسف الوسادتين؟",
+            "choices": [
+              "على الأريكة",
+              "على السرير",
+              "تحت الأريكة"
+            ],
+            "a": "على الأريكة",
+            "why": "lege … auf das Sofa = أضعهما على الأريكة — legen لأنهما مستلقيتان · das Sofa كما هي (إلى أين؟)."
+          },
+          {
+            "audioId": "ww-12",
+            "speakText": "Jetzt hängt es neben der Tür. Aber ich hänge es über das Bett.",
+            "q": "استمع: أين الصورة الآن، وأين سيعلّقها يوسف؟",
+            "choices": [
+              "بجانب الباب — وسيعلّقها فوق السرير",
+              "فوق السرير — وسيعلّقها بجانب الباب",
+              "بجانب النافذة — وسيعلّقها فوق الأريكة"
+            ],
+            "a": "بجانب الباب — وسيعلّقها فوق السرير",
+            "why": "Jetzt hängt es neben der Tür = هي الآن معلّقة بجانب الباب (أين؟ die ← der) · ich hänge es über das Bett = أعلّقها فوق السرير (إلى أين؟ das كما هي)."
+          },
+          {
+            "audioId": "ww-13",
+            "speakText": "Und jetzt hängt es über dem Bett — wie schön!",
+            "q": "استمع: ماذا تقول لينا؟",
+            "choices": [
+              "الصورة الآن فوق السرير، وهذا جميل",
+              "الصورة الآن بجانب الباب، وهذا جميل",
+              "الصورة الآن تحت السرير، وهذا غريب"
+            ],
+            "a": "الصورة الآن فوق السرير، وهذا جميل",
+            "why": "Und jetzt hängt es über dem Bett = والآن هي معلّقة فوق السرير (أين؟ das ← dem) · wie schön! = ما أجمل!"
+          },
+          {
+            "audioId": "ww-14",
+            "speakText": "Ach nein! Wo ist mein Schlüssel? Er ist weg!",
+            "q": "استمع: ماذا حدث؟",
+            "choices": [
+              "ضاع مفتاح يوسف",
+              "انكسر مفتاح يوسف",
+              "وجد يوسف المفتاح"
+            ],
+            "a": "ضاع مفتاح يوسف",
+            "why": "Er ist weg! = ضاع! (weg sein) — er = der Schlüssel."
+          },
+          {
+            "audioId": "ww-15",
+            "speakText": "Ist er auf dem Tisch?",
+            "q": "استمع: أين تبحث لينا أولاً؟",
+            "choices": [
+              "على الطاولة",
+              "تحت الطاولة",
+              "خلف الباب"
+            ],
+            "a": "على الطاولة",
+            "why": "Ist er auf dem Tisch? = هل هو على الطاولة؟ (أين؟ der ← dem)."
+          },
+          {
+            "audioId": "ww-16",
+            "speakText": "Nein. Und unter dem Tisch ist er auch nicht.",
+            "q": "استمع: هل المفتاح تحت الطاولة؟",
+            "choices": [
+              "لا، ليس تحتها أيضاً",
+              "نعم، هو تحتها",
+              "لا، لكنه عليها"
+            ],
+            "a": "لا، ليس تحتها أيضاً",
+            "why": "unter dem Tisch = تحت الطاولة · auch nicht = ولا … أيضاً."
+          },
+          {
+            "audioId": "ww-18",
+            "speakText": "Nein, da ist er nicht. Ach, da ist er! Oben auf dem Schrank!",
+            "q": "استمع: أين وجد يوسف المفتاح؟",
+            "choices": [
+              "فوق الخزانة",
+              "في أسفل الخزانة",
+              "خلف الباب"
+            ],
+            "a": "فوق الخزانة",
+            "why": "Oben auf dem Schrank = في الأعلى على الخزانة · da ist er! = ها هو!"
+          },
+          {
+            "audioId": "ww-19",
+            "speakText": "Oben auf dem Schrank? Warum denn das?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "لماذا المفتاح فوق الخزانة",
+              "متى وُضع المفتاح هناك",
+              "من وضع المفتاح هناك"
+            ],
+            "a": "لماذا المفتاح فوق الخزانة",
+            "why": "Warum denn das? = ولماذا ذلك؟ — warum = لماذا."
+          },
+          {
+            "audioId": "ww-20",
+            "speakText": "Ich weiß es nicht! Aber jetzt ist er da — und das Sofa auch!",
+            "q": "استمع: بماذا يجيب يوسف؟",
+            "choices": [
+              "لا يعرف، لكن المفتاح والأريكة هنا الآن",
+              "يعرف، لأنه وضعه هناك",
+              "لا يعرف، والمفتاح ما زال ضائعاً"
+            ],
+            "a": "لا يعرف، لكن المفتاح والأريكة هنا الآن",
+            "why": "Ich weiß es nicht = لا أعرف · jetzt ist er da = الآن هو هنا (da = موجود) · und das Sofa auch = والأريكة أيضاً."
           }
         ],
         "interleavedWith": [
+          "sofa",
           "bett",
-          "kissen"
+          "stuhl",
+          "lampe",
+          "kissen",
+          "schrank",
+          "jetzt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "steht",
+              "Der",
+              "Flur.",
+              "Schrank",
+              "im"
+            ],
+            "a": "Der Schrank steht im Flur.",
+            "why": "Der Schrank فاعل ثم steht ثانياً ثم المكان: im Flur (in + dem — der Flur ⇒ dem)."
+          },
+          {
+            "tokens": [
+              "lege",
+              "Ich",
+              "Boden.",
+              "den",
+              "Teppich",
+              "auf",
+              "den"
+            ],
+            "a": "Ich lege den Teppich auf den Boden.",
+            "why": "Ich lege ثم المفعول den Teppich ثم إلى أين: der Boden ← auf den Boden — der ← den مرتين."
+          },
+          {
+            "tokens": [
+              "hängt",
+              "Das",
+              "Tür.",
+              "neben",
+              "Foto",
+              "der"
+            ],
+            "a": "Das Foto hängt neben der Tür.",
+            "why": "Das Foto ثم hängt ثانياً ثم المكان: die Tür ← neben der Tür."
+          },
+          {
+            "tokens": [
+              "stellst",
+              "Wohin",
+              "Sofa?",
+              "du",
+              "das"
+            ],
+            "a": "Wohin stellst du das Sofa?",
+            "why": "السؤال يبدأ بـ Wohin ثم الفعل stellst ثم du ثم المفعول das Sofa."
+          },
+          {
+            "tokens": [
+              "ist",
+              "Der",
+              "weg!",
+              "Schlüssel"
+            ],
+            "a": "Der Schlüssel ist weg!",
+            "why": "Der Schlüssel ثم ist ثم weg — weg sein = ضاع."
+          },
+          {
+            "tokens": [
+              "steht",
+              "Die",
+              "Tisch.",
+              "auf",
+              "Lampe",
+              "dem"
+            ],
+            "a": "Die Lampe steht auf dem Tisch.",
+            "why": "Die Lampe ثم steht ثم المكان: auf dem … (der Tisch ⇒ dem) — والمصباح يقف فـsteht."
+          }
+        ],
+        "interleavedWith": [
+          "schrank",
+          "flur",
+          "teppich",
+          "boden",
+          "foto",
+          "lampe"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "ww-11",
+            "speakText": "Und das Foto aus Tunesien? Wo hängt es jetzt?",
+            "a": "Und das Foto aus Tunesien? Wo hängt es jetzt?",
+            "why": "Foto بـf وo طويلة · Tunesien بحرف كبير والنبر على ne · hängt بـä «إ» وng · jetzt بـtzt في آخرها."
+          },
+          {
+            "audioId": "ww-17",
+            "speakText": "Hinter der Tür? Oder unten, im Schrank?",
+            "a": "Hinter der Tür? Oder unten, im Schrank?",
+            "why": "Hinter بحرف كبير أول الجملة · Tür بـü طويلة · unten بلا h · Schrank: Sch «ش» وnk في آخرها."
+          },
+          {
+            "audioId": "word-daneben",
+            "speakText": "daneben.",
+            "a": "daneben",
+            "why": "daneben كلمة واحدة: da + neben — والنبر على ne."
+          },
+          {
+            "audioId": "word-hinter",
+            "speakText": "hinter.",
+            "a": "hinter",
+            "why": "hinter: h تُنطق في أولها · و‑er في آخرها خفيفة."
+          },
+          {
+            "audioId": "word-haengen",
+            "speakText": "hängen.",
+            "a": "hängen",
+            "why": "hängen: ä «إ» ثم ng بلا g مسموعة."
+          },
+          {
+            "audioId": "word-wohin",
+            "speakText": "wohin.",
+            "a": "wohin",
+            "why": "wohin: wo + hin — والنبر على hin بـi قصيرة."
+          },
+          {
+            "audioId": "word-oben",
+            "speakText": "oben.",
+            "a": "oben",
+            "why": "oben: o طويلة ثم b و‑en خفيفة."
+          },
+          {
+            "audioId": "word-weg-sein",
+            "speakText": "weg sein.",
+            "a": "weg sein",
+            "why": "weg sein كلمتان: weg بـe قصيرة وg تُنطق k في آخرها."
+          }
+        ],
+        "interleavedWith": [
+          "foto",
+          "tunesien",
+          "jetzt",
+          "schrank"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Wo? und Wohin? unterscheiden",
-        "ar": "التمييز بين الأين والأين-الاتجاهية"
+        "de": "Das Bett steht an der Wand. Ich stelle das Sofa in die Ecke.",
+        "ar": "ترتّب مع زميلك غرفةً (غرفتك أو رسماً لها): تقول أين كل شيء وإلى أين تضعه"
       },
       "situation": {
-        "de": "Zimmer einrichten",
-        "ar": "ترتيب الغرفة"
+        "de": "Wo steht der Tisch? — Er steht in der Mitte. Wohin stellst du die Lampe?",
+        "ar": "في الدورة: يرسم أحدكما غرفة فيها سرير وطاولة وخزانة ومصباح، ويسأل الآخر: Wo steht …? · Wo hängt …? — ويجيب: Das Bett steht an der Wand. ثم يرتّب الآخر الغرفة من جديد: Ich stelle … · Ich lege … · Ich hänge … — ثم يخبّئ أحدكما مفتاحاً في الرسم فيسأل الآخر: Ist er auf dem Tisch? · Ist er unter dem Bett? — حتى يقول: Da ist er! ثم تتبادلان."
       },
       "successCriteria": [
-        "جملتان Wo?+Dativ + جملتان Wohin?+Akkusativ + فعل وضع صحيح (stellen/legen/hängen)"
+        "ستة أشياء في أماكنها بـ Wo? وأداة المكان (an der Wand · unter dem Tisch · im Zimmer) — منها اثنان بـ steht واثنان بـ hängt أو ist.",
+        "أربع جمل وضع بـ Wohin? بالفعل المناسب (stellen · legen · hängen) وأداة المفعول به (auf das Sofa · über das Bett) — وسؤال بـ Wohin …? وجملة بـ da أو daneben."
       ]
     }
   },
@@ -142,20 +547,54 @@
       {
         "items": [
           {
-            "q": "«أين؟» (اتجاه)؟",
-            "a": "wohin"
+            "q": "«الكرسي ذو الذراعين في الركن»؟",
+            "choices": [
+              "Der Sessel steht in der Ecke.",
+              "Der Sessel steht in die Ecke.",
+              "Der Sessel steht in den Ecke."
+            ],
+            "a": "Der Sessel steht in der Ecke.",
+            "why": "die Ecke + Wo? (steht) ⇒ der: in der Ecke — لا die (للوضع) ولا den (مذكر)."
           },
           {
-            "q": "«الخزانة خلف الباب»؟",
-            "a": "Der Schrank ist hinter der Tür."
+            "q": "«أضع السجادة تحت الطاولة»؟",
+            "choices": [
+              "Ich lege den Teppich unter den Tisch.",
+              "Ich lege den Teppich unter dem Tisch.",
+              "Ich lege den Teppich unter der Tisch."
+            ],
+            "a": "Ich lege den Teppich unter den Tisch.",
+            "why": "وضعٌ (lege + مفعول به) ⇒ Wohin? ⇒ der Tisch ← den: unter den Tisch."
           },
           {
-            "q": "«أضع (واقفاً)»؟",
-            "a": "stellen"
+            "q": "Das Sofa ___ in der Ecke. (في مكانها)",
+            "choices": [
+              "steht",
+              "stellt",
+              "legt"
+            ],
+            "a": "steht",
+            "why": "في مكانها بلا حركة ⇒ stehen: steht — stellt/legt تحتاجان مفعولاً به (مَن يضع ماذا؟)."
           },
           {
-            "q": "«أعلّق الصورة على الجدار»؟",
-            "a": "Ich hänge das Bild an die Wand."
+            "q": "hinter = ؟",
+            "choices": [
+              "خلف",
+              "تحت",
+              "فوق"
+            ],
+            "a": "خلف",
+            "why": "hinter = خلف · unter = تحت · über = فوق."
+          },
+          {
+            "q": "«الأركان» (الجمع مع الأداة)؟",
+            "a": "die Ecken",
+            "why": "die Ecke ← die Ecken: ‑n بعد e."
+          },
+          {
+            "q": "«إلى أين تعلّق الصورة؟» (du · das Bild)",
+            "a": "Wohin hängst du das Bild?",
+            "why": "الوضع حركةٌ إلى مكان ⇒ Wohin? لا Wo — وhängst مع du."
           }
         ],
         "passingScore": 0.75
@@ -163,20 +602,54 @@
       {
         "items": [
           {
-            "q": "«الطاولة في الوسط»؟",
-            "a": "Der Tisch ist in der Mitte."
+            "q": "«الصورة معلّقة بجانب النافذة»؟",
+            "choices": [
+              "Das Bild hängt neben dem Fenster.",
+              "Das Bild hängt neben das Fenster.",
+              "Das Bild hängt neben der Fenster."
+            ],
+            "a": "Das Bild hängt neben dem Fenster.",
+            "why": "das Fenster + Wo? (hängt بلا حركة) ⇒ dem: neben dem Fenster."
           },
           {
-            "q": "«أضع (مستلقياً)»؟",
-            "a": "legen"
+            "q": "«أضع المفتاح على الخزانة»؟",
+            "choices": [
+              "Ich lege den Schlüssel auf den Schrank.",
+              "Ich lege den Schlüssel auf dem Schrank.",
+              "Ich lege den Schlüssel auf der Schrank."
+            ],
+            "a": "Ich lege den Schlüssel auf den Schrank.",
+            "why": "وضعٌ (lege + مفعول به) ⇒ Wohin? ⇒ der Schrank ← den: auf den Schrank."
           },
           {
-            "q": "«المصباح على الطاولة»؟",
-            "a": "Die Lampe ist auf dem Tisch."
+            "q": "Das Foto ___ an der Wand. (في مكانها)",
+            "choices": [
+              "hängt",
+              "stellt",
+              "legt"
+            ],
+            "a": "hängt",
+            "why": "في مكانها بلا حركة ⇒ hängt — stellt/legt تحتاجان مفعولاً به."
           },
           {
-            "q": "«أعلى/أسفل»؟",
-            "a": "oben / unten"
+            "q": "daneben = ؟",
+            "choices": [
+              "بجانبه",
+              "تحته",
+              "خلفه"
+            ],
+            "a": "بجانبه",
+            "why": "daneben = بجانبه (neben + الشيء المذكور قبله)."
+          },
+          {
+            "q": "«في البيت» (in + dem)؟",
+            "a": "im Haus",
+            "why": "in + dem = im — das Haus ⇒ im Haus (أين؟)."
+          },
+          {
+            "q": "«أخي ذهب — ليس هنا!» (mein Bruder)",
+            "a": "Mein Bruder ist weg!",
+            "why": "weg sein للشخص أيضاً = ذهب · غادر: Mein Bruder ist weg!"
           }
         ],
         "passingScore": 0.75
@@ -184,20 +657,54 @@
       {
         "items": [
           {
-            "q": "«الركن»؟",
-            "a": "die Ecke"
+            "q": "«المصباح معلّق فوق الطاولة»؟",
+            "choices": [
+              "Die Lampe hängt über dem Tisch.",
+              "Die Lampe hängt über der Tisch.",
+              "Die Lampe hängt über die Tisch."
+            ],
+            "a": "Die Lampe hängt über dem Tisch.",
+            "why": "der Tisch + Wo? (hängt) ⇒ dem — لا der ولا die."
           },
           {
-            "q": "«الصورة فوق الأريكة»؟",
-            "a": "Das Bild ist über dem Sofa."
+            "q": "«أضع الأريكة عند الجدار»؟",
+            "choices": [
+              "Ich stelle das Sofa an die Wand.",
+              "Ich stelle das Sofa an der Wand.",
+              "Ich stelle das Sofa an den Wand."
+            ],
+            "a": "Ich stelle das Sofa an die Wand.",
+            "why": "وضعٌ (stelle + مفعول به) ⇒ Wohin? ⇒ die Wand كما هي — لا der (للمكان) ولا den (مذكر)."
           },
           {
-            "q": "«أضع الطاولة عند الجدار»؟",
-            "a": "Ich stelle den Tisch an die Wand."
+            "q": "Ich ___ den Stuhl an den Tisch. (أضعه)",
+            "choices": [
+              "stelle",
+              "stehe",
+              "sitze"
+            ],
+            "a": "stelle",
+            "why": "وضعٌ مع مفعولٍ به ⇒ stellen: ich stelle — stehe/sitze بلا مفعول (أنا الواقف أو الجالس)."
           },
           {
-            "q": "Wo? — Dativ أم Akkusativ?",
-            "a": "Dativ (Wo ist das Bild? — An der Wand)"
+            "q": "unten = ؟",
+            "choices": [
+              "في الأسفل",
+              "في الأعلى",
+              "في الوسط"
+            ],
+            "a": "في الأسفل",
+            "why": "unten = في الأسفل · oben = في الأعلى."
+          },
+          {
+            "q": "«الوسط» بالألمانية مع الأداة؟",
+            "a": "die Mitte",
+            "why": "die Mitte — وللمكان: die ← der بعد in."
+          },
+          {
+            "q": "«ها هو المفتاح!» (der Schlüssel)",
+            "a": "Da ist der Schlüssel!",
+            "why": "da للإشارة = ها هو · هناك — والفعل ثانياً بعد Da: Da ist …"
           }
         ],
         "passingScore": 0.75
@@ -206,53 +713,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Wo? = Dativ (an der Wand), Wohin? = Akkusativ (an die Wand) — und stellen/legen/hängen je nach Form!",
-      "ar": "أين؟ = جرّ (an der Wand)، وإلى أين؟ = نصب (an die Wand) — وstellen/legen/hängen حسب شكل الشيء!"
+      "de": "Wo? — Das Bett steht an der Wand. · Der Teppich ist unter dem Tisch. · Das Sofa steht im Zimmer. · Wohin? — Ich stelle das Sofa in die Ecke. · Ich lege den Schlüssel auf den Tisch. · Ich hänge das Foto über das Bett. · oben · unten · Da ist er! · Die Stühle stehen daneben. · Mein Schlüssel ist weg!",
+      "ar": "Wo? (أين؟) للمكان بلا حركة: بعد الحرف der/das ← dem وdie ← der (in + dem = im · an + dem = am). وWohin? (إلى أين؟) لوضع الشيء: أداة المفعول به — der ← den وdie · das كما هما. والحرف نفسه للسؤالين: in · an · auf · über · unter · hinter · neben · zwischen. والفعل بشكل الشيء: stellen (واقفاً) ← في مكانه steht · legen (مستلقياً) · hängen (معلّقاً) ← hängt. وبلا أداة: oben · unten · da (هنا · هناك · موجود) · daneben (بجانبه) — وweg sein = ضاع أو ذهب."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich stelle den Tisch an der Wand.~~ (Wohin?)",
-          "ar": "Wohin? = Akkusativ"
+          "de": "~~Ich stelle die Lampe in der Ecke.~~",
+          "ar": "الوضع (Wohin?) بأداة المكان"
         },
-        "whyArabicSpeakerFails": "«عند الجدار» تجرّ بالعربية مهما كان السؤال؛ الألماني يفرق: أين؟ → an der (جرّ) · إلى أين؟ → an die (نصب) (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "حرف الجر العربي يجرّ دائماً مهما كان السؤال: «المصباحُ في الركنِ» و«وضعتُ المصباحَ في الركنِ» بالحركة نفسها — فيُبقي المتعلم أداة المكان (der · dem) مع أفعال الوضع. لكن الألمانية تفرّق بالسؤال: stellen · legen · hängen + مفعولٌ به ⇒ Wohin? ⇒ أداة المفعول به (die Ecke ← in die Ecke · der Tisch ← auf den Tisch)، وsteht · ist · hängt ⇒ Wo? ⇒ die Ecke ← in der Ecke (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich stelle den Tisch an die Wand. (Wohin?)",
-          "ar": "الاتجاه = نصب"
+          "de": "Ich stelle die Lampe in die Ecke.",
+          "ar": "أضع المصباح في الركن."
         },
         "exercise": {
-          "q": "أكمل: Ich stelle die Lampe auf ___ Tisch. Sie ist auf ___ Tisch.",
-          "a": "den / dem"
+          "q": "صحّح: ~~Ich stelle den Stuhl an dem Tisch.~~",
+          "a": "Ich stelle den Stuhl an den Tisch."
         }
       },
       {
         "commonError": {
-          "de": "~~Ich lege den Tisch.~~ / ~~Ich stelle das Bild.~~",
-          "ar": "stellen (واقفاً) · legen (مستلقياً) · hängen (معلّقاً)"
+          "de": "~~Ich lege die Tasse auf den Tisch.~~",
+          "ar": "الفعل بشكل الشيء — والفنجان يقف"
         },
-        "whyArabicSpeakerFails": "«أضع» فعل واحد بالعربية للكل؛ الألماني يصف شكل الوضع بثلاثة أفعال — المعنى يتغير بالفعل لا بالظرف (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "للوضع فعلٌ واحد بالعربية: «وضع» (وبالعامية «حطّ»)، وكذلك put الإنجليزية وmettre الفرنسية — فيختار المتعلم فعلاً واحداً لكل شيء. لكن الألمانية تختار الفعل بشكل الشيء بعد وضعه: stellen لما يقف (الفنجان · المصباح · الكرسي) · legen لما يستلقي (المفتاح · الهاتف · الوسادة) · hängen لما يُعلَّق (الصورة · المرآة) — فالجملة المشطوبة تقول إن الفنجان مستلقٍ على جنبه! (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "stellen (تِلْ) / legen (مستلقٍ) / hängen (معلّق)",
-          "ar": "ثلاثة أفعال للوضع"
+          "de": "Ich stelle die Tasse auf den Tisch.",
+          "ar": "أضع الفنجان على الطاولة."
         },
         "exercise": {
-          "q": "أكمل: Ich ___ das Kissen auf das Bett. Ich ___ das Bild an die Wand.",
-          "a": "lege / hänge"
+          "q": "صحّح: ~~Ich stelle den Schlüssel auf den Tisch.~~",
+          "a": "Ich lege den Schlüssel auf den Tisch."
         }
       },
       {
         "commonError": {
-          "de": "~~Wo stellst du den Tisch?~~ (للاتجاه)",
-          "ar": "Wo? ↔ Wohin?"
+          "de": "~~Wo stellst du den Tisch?~~",
+          "ar": "الوضع يُسأل عنه بـ Wohin?"
         },
-        "whyArabicSpeakerFails": "«أين» واحدة بالعربية للسؤالين؛ الألماني Wo للمكان وWohin للاتجاه — وwo مأخوذة من u2 واليوم wohin شقيقتها (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "مع «وضع» تسأل العربية بـ«أين» لا «إلى أين» («أين تضع الطاولة؟»)، والعامية بـ«وين» للسؤالين («وين ماشي؟» · «وين تحطّ الطاولة؟») — فيسأل المتعلم بـ Wo. لكن stellen · legen · hängen حركةٌ إلى مكان، فسؤالها Wohin? وجوابها بأداة المفعول به: Wohin stellst du den Tisch? — Ich stelle ihn in die Ecke. أما Wo? فللمكان بلا حركة: Wo steht der Tisch? (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Wo ist das Bild? — Wohin stellst du es?",
-          "ar": "أين هو؟ ↔ إلى أين تضعه؟"
+          "de": "Wohin stellst du den Tisch?",
+          "ar": "إلى أين تضع الطاولة؟"
         },
         "exercise": {
-          "q": "اختر: ___ ist der Tisch? — ___ stellst du ihn?",
-          "a": "Wo / Wohin"
+          "q": "صحّح: ~~Wo legst du das Handy?~~",
+          "a": "Wohin legst du das Handy?"
         }
       }
     ],
@@ -268,19 +775,29 @@
       "stellen",
       "legen",
       "haengen",
-      "wohin"
+      "wohin",
+      "da",
+      "daneben",
+      "weg-sein"
     ]
   },
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/stellen",
       "https://www.duden.de/rechtschreibung/legen",
-      "https://www.duden.de/rechtschreibung/hinter"
+      "https://www.duden.de/rechtschreibung/hinter",
+      "https://www.duden.de/rechtschreibung/daneben",
+      "https://www.duden.de/rechtschreibung/wohin"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/Wechselpr%C3%A4position"
+      "https://de.wiktionary.org/wiki/Wechselpr%C3%A4position",
+      "https://de.wiktionary.org/wiki/h%C3%A4ngen",
+      "https://de.wiktionary.org/wiki/da",
+      "https://de.wiktionary.org/wiki/weg"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-wo-wohin"
@@ -297,14 +814,30 @@
     "word-stellen",
     "word-legen",
     "word-haengen",
-    "word-wohin"
+    "word-wohin",
+    "word-da",
+    "word-daneben",
+    "word-weg-sein"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 6 (Wohnen) — Wo? / Wohin?",
     "goetheWordListOverlap": [
+      "ecke",
+      "mitte",
+      "oben",
+      "unten",
+      "ueber",
+      "unter",
+      "hinter",
       "auf",
-      "stellen"
+      "stellen",
+      "legen",
+      "haengen",
+      "wohin",
+      "da",
+      "daneben",
+      "weg-sein"
     ]
   }
 }

@@ -16629,6 +16629,66 @@
       "rmsDb": -17.25
     },
     {
+      "id": "word-da",
+      "file": "words/audio/de-DE/word-da.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "da.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 711,
+      "sizeBytes": 3588,
+      "hash": "sha256:4cca7ae21b4d9daae440c43328764f378194601a91a9df698111d089eade3afb",
+      "pcmSha256": "7d668c4fc758e04691477a527026303b736a18bcd0e218afa949057be38267f5",
+      "rmsDb": -17.38
+    },
+    {
+      "id": "word-daneben",
+      "file": "words/audio/de-DE/word-daneben.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "daneben.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 1117,
+      "sizeBytes": 4885,
+      "hash": "sha256:39564158edfcb12b381c9b98febabd6b9d9a357903f6952901fe6dd715fc5cf0",
+      "pcmSha256": "beaba192f4139d1de8bcb9d50495cbe7e9ff416c2506557932fc5cb1e4fd1797",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-weg-sein",
+      "file": "words/audio/de-DE/word-weg-sein.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "weg sein.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 920,
+      "sizeBytes": 4415,
+      "hash": "sha256:6617dc60fbd6190c707fab88d2f900dc75da5194ffe0da4dc6a20e28e7028623",
+      "pcmSha256": "27546d1492efaf8359f16fbe311b919d1cbde7c1097b58280bacd51a0c37c9b0",
+      "rmsDb": -17.16
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -28254,6 +28314,446 @@
       "hash": "sha256:9b8141a321c587dcb95022e31c971d2a79ab3c90bc22807671a5c7f8a96db28f",
       "pcmSha256": "55d3c3ad960b0b99c6ab3655722fb1ba9b6f0038f717a6cd60601f2fcc381f3b",
       "rmsDb": -17.46
+    },
+    {
+      "id": "ww-1",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo, Yusuf! Ist das Sofa schon da?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 3144,
+      "sizeBytes": 14615,
+      "hash": "sha256:a8b6f86f03e0af0e47bee44d8c4a56c3efdf5197ee46f9331f3a4492ad9ace8b",
+      "pcmSha256": "ad2cd3f11fb252dce8983e303a5f23e8f772200a1c8470c2e0037a6612958958",
+      "rmsDb": -17.46
+    },
+    {
+      "id": "ww-2",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, es ist da — aber wohin stelle ich es?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 3799,
+      "sizeBytes": 17078,
+      "hash": "sha256:e67bb9397b4df1c7cee13850dc66c9a0a024041025c975bf5f3419b9aaaac5e8",
+      "pcmSha256": "6d07c769da850fb8f3439883281dc7bf69a15f90d177eb545dd658408b1da380",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "ww-3",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 152,
+        "lengthScale": 1.32
+      },
+      "textDe": "Okay. Wo steht das Bett?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 1976,
+      "sizeBytes": 9298,
+      "hash": "sha256:c8a83700e5c5caf1a6b764d69574538fb75c9d7dc6fffb618178ce5eb64862a4",
+      "pcmSha256": "9911f23e6de68400811588d82c63948b86d47b336b065e3e05bd2d7481762443",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "ww-4",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "An der Wand, unter dem Fenster.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 2476,
+      "sizeBytes": 11268,
+      "hash": "sha256:53e3adc2cc75ff57163bcb34c0465d21d88f0b52f8bed4e0a4b1baee73a4be75",
+      "pcmSha256": "c6c2ae940ff0f70db64a406709c298ed004bb90a0ac1abae357e22b7b1e78fbe",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "ww-5",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 162,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und der Tisch? Und die Stühle?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 2216,
+      "sizeBytes": 10439,
+      "hash": "sha256:1a236ad135ec11877bef4a9172a5ac2c37ed41ff020096d2e4dd0f8621b24fa7",
+      "pcmSha256": "98c17e19d7030e3dbe13e42528f199ad4670cbe7e6a33983e678419214d83a14",
+      "rmsDb": -17.43
+    },
+    {
+      "id": "ww-6",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 188,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Tisch steht in der Mitte, und die Stühle stehen daneben.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 3509,
+      "sizeBytes": 16134,
+      "hash": "sha256:f7b7deffead45dc33108dfc20c6b41d716fd5c42617540f9bfd020b770c87988",
+      "pcmSha256": "b2ab8e7950abdf0cc3f1da649589a59e496cb6d43369c469735e0ebf14511d85",
+      "rmsDb": -17
+    },
+    {
+      "id": "ww-7",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 174,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und dort in der Ecke? Was steht da?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 2760,
+      "sizeBytes": 12949,
+      "hash": "sha256:ef5dfd270d0f21b0738e8ff884a2ea527bec5298d4f31b9db9b64aad3dd967b3",
+      "pcmSha256": "bb3e776646b18dff5c0d76727415ef4548ef4d7685a8acdf4b108c230f71beb5",
+      "rmsDb": -17.35
+    },
+    {
+      "id": "ww-8",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Da steht nur die Lampe.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 1791,
+      "sizeBytes": 7761,
+      "hash": "sha256:6dca39f2653c819d933e0558757272d271057cfdc6cdfd6c2c7f8572820ba82b",
+      "pcmSha256": "af42d3171544aaa808a868e213e9131d2010cf6ea8bc27fcbe79b9c3d5a92ff4",
+      "rmsDb": -17
+    },
+    {
+      "id": "ww-9",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Also: Das Sofa stellst du in die Ecke, und die Lampe daneben!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 4712,
+      "sizeBytes": 22038,
+      "hash": "sha256:08778e2d9b3b0daee4d0fdfbd1396c098d5c76ead3ed92d9a4ada24c47a853c1",
+      "pcmSha256": "ac32ad9d5a5e12e7f1bd353158572e8e754a8563a2b8f28880e367ebbfaffa8a",
+      "rmsDb": -17.38
+    },
+    {
+      "id": "ww-10",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 172,
+        "lengthScale": 1.32
+      },
+      "textDe": "Prima! Und die zwei Kissen lege ich auf das Sofa.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 3497,
+      "sizeBytes": 15716,
+      "hash": "sha256:a8b17af9491a3fbb46b554a8352bfdf18b743d19fec9ccc7a5c9e0bcbc37e065",
+      "pcmSha256": "0d1837838d55d5e8abce1abbc46c61b5fa54d8248df5910bd7590da60819af69",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "ww-11",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und das Foto aus Tunesien? Wo hängt es jetzt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 4088,
+      "sizeBytes": 19184,
+      "hash": "sha256:661aec2bf32d3b3787846e5a1b0ad6b944799b5209270c0104d31699e228ef53",
+      "pcmSha256": "a52a7279e415542add531dcb27911bd18b8f591466e4756c2fd7686662762438",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "ww-12",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 227,
+        "lengthScale": 1.32
+      },
+      "textDe": "Jetzt hängt es neben der Tür. Aber ich hänge es über das Bett.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 3439,
+      "sizeBytes": 15824,
+      "hash": "sha256:3f270f304fea51886d3fd329ef06e50e6a9d6490b80b4b2d66d88023ecd09ab0",
+      "pcmSha256": "c725ab147ec0eb7274915a69c861a017d10320aa8a37b23f0cf3332d50eb5022",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "ww-13",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 176,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und jetzt hängt es über dem Bett — wie schön!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 3064,
+      "sizeBytes": 14355,
+      "hash": "sha256:03ca228b5b3166efbd26d2ec47af3cdae2f0efead237e46d70f3b906127180fd",
+      "pcmSha256": "050b17d9ee50ca2c60759351d84724dd379ed223f7fa70d3d698cc6ce9c937a0",
+      "rmsDb": -17.56
+    },
+    {
+      "id": "ww-14",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ach nein! Wo ist mein Schlüssel? Er ist weg!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 3671,
+      "sizeBytes": 15968,
+      "hash": "sha256:ab34839076eca14845d689825ab4d49f2e0e77c0ea3f8d04430e667b4a42d67b",
+      "pcmSha256": "9fe2e4536008535e3313e0ee203fea4b449f51365ee27d1d56ee1300e374225b",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "ww-15",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 207,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ist er auf dem Tisch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 1448,
+      "sizeBytes": 6959,
+      "hash": "sha256:44b3d49a9d52b0c6e1889293860da74e2f557bfcfd4cfa41ad89dc1ad5054aa7",
+      "pcmSha256": "208029ccd81465f67684d4e1123c1d533f53d56f1ec130189d55487a13435b30",
+      "rmsDb": -18.44
+    },
+    {
+      "id": "ww-16",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 182,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein. Und unter dem Tisch ist er auch nicht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 2975,
+      "sizeBytes": 13930,
+      "hash": "sha256:c797da55658a895a585209cc8b1c22e317346f4fc3ba79ef58108d5935c65491",
+      "pcmSha256": "195f085c4681ff03eecb85e433237ca45632302860ec9e55a620b8e092af7796",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "ww-17",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hinter der Tür? Oder unten, im Schrank?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 3176,
+      "sizeBytes": 14927,
+      "hash": "sha256:2811699bb840981293bbae1b0adb7fc237b5e83b0e8acef56cb87a1852f33758",
+      "pcmSha256": "74afb555a1085793656ff2ae1827728086d8a77a30c19153ca690e284234f8b0",
+      "rmsDb": -17.31
+    },
+    {
+      "id": "ww-18",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, da ist er nicht. Ach, da ist er! Oben auf dem Schrank!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 4879,
+      "sizeBytes": 22090,
+      "hash": "sha256:bb40a8c185e26d998762ee29089e8c4b230c1e6df38a328d2443718831c24bba",
+      "pcmSha256": "d677b469befab9a9fafd1809aa79d841c5479df252679ab4fc40eb91bac4d71f",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "ww-19",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Oben auf dem Schrank? Warum denn das?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 3144,
+      "sizeBytes": 14743,
+      "hash": "sha256:826b2803e3f0f531d01521074e1d31d3bc6ab132bb9df0a98d2921babab8685d",
+      "pcmSha256": "b13aaf80e6419b112998e43ed1ffc0cc1307c36405e9554425a7fcfb092cd408",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "ww-20",
+      "file": "audio/scripts/a1-u6-d4-das-sofa-ist-da/ww-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 177,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich weiß es nicht! Aber jetzt ist er da — und das Sofa auch!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d4"
+      ],
+      "durationMs": 4414,
+      "sizeBytes": 19771,
+      "hash": "sha256:1f8bd93a29b5ce9de5011c4d3cbe77621e4cb48f7d8f1f0e79d096d7e5791fb1",
+      "pcmSha256": "ffd8b35b2db477823593311266c62af5eedd713dc1bf06de3f4054416c686cb0",
+      "rmsDb": -17.13
     }
   ],
   "characterVoices": {

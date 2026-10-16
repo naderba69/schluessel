@@ -16,7 +16,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(831); // + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(834); // + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -898,8 +898,60 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u6-d4 (D149): الجرّ العربي دائم (~~Ich stelle die Lampe in der Ecke.~~) · «وضع» فعلٌ واحد (~~Ich lege die Tasse auf den Tisch.~~) · «أين تضع؟» (~~Wo stellst du den Tisch?~~) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u6-d4")!;
+    const [kasus, verb, frage] = u.zusammenfassung.warningCards;
+    expect(kasus!.commonError.de).toBe("~~Ich stelle die Lampe in der Ecke.~~");
+    expect(kasus!.correct.de).toBe("Ich stelle die Lampe in die Ecke.");
+    expect(kasus!.whyArabicSpeakerFails).toContain("حرف الجر العربي يجرّ دائماً مهما كان السؤال");
+    expect(kasus!.whyArabicSpeakerFails).toContain("«وضعتُ المصباحَ في الركنِ»");
+    expect(kasus!.exercise).toMatchObject({ a: "Ich stelle den Stuhl an den Tisch." });
+    expect(verb!.commonError.de).toBe("~~Ich lege die Tasse auf den Tisch.~~");
+    expect(verb!.correct.de).toBe("Ich stelle die Tasse auf den Tisch.");
+    expect(verb!.whyArabicSpeakerFails).toContain("«حطّ»");
+    expect(verb!.whyArabicSpeakerFails).toContain("put الإنجليزية وmettre الفرنسية");
+    // الجملة المشطوبة صحيحة نحواً بمعنى آخر (الفنجان مستلقٍ على جنبه) — والبطاقة تقول ذلك صراحة لا «خطأ نحوي»
+    expect(verb!.whyArabicSpeakerFails).toContain("مستلقٍ على جنبه");
+    expect(verb!.exercise).toMatchObject({ a: "Ich lege den Schlüssel auf den Tisch." });
+    expect(frage!.commonError.de).toBe("~~Wo stellst du den Tisch?~~");
+    expect(frage!.correct.de).toBe("Wohin stellst du den Tisch?");
+    expect(frage!.whyArabicSpeakerFails).toContain("«أين تضع الطاولة؟»");
+    expect(frage!.whyArabicSpeakerFails).toContain("«وين ماشي؟»");
+    expect(frage!.exercise).toMatchObject({ a: "Wohin legst du das Handy?" });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: «stellen (تِلْ)» رمز مشوّه · ««أين» واحدة بالعربية» («إلى أين» موجودة — النقل من «أين» مع «وضع») · ~~Ich lege den Tisch.~~ ناقصة بلا مكان
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/تِلْ|«أين» واحدة|~~Ich lege den Tisch\.~~|Akkusativ|Dativ/);
+    // Quiz القديم: «oben / unten» بشرطة مائلة · «Dativ (Wo ist das Bild? — An der Wand)» مصطلحٌ وشرح داخل الإجابة · والتخمين القبلي يكشف إجابته
+    expect(JSON.stringify(u.quiz)).not.toMatch(/oben \/ unten|Dativ \(/);
+    expect(JSON.stringify(u.einstieg)).not.toMatch(/Akkusativ|Dativ|Wohin\?/);
+    // N-021: أمثلة البطاقات بلا أسماء علم · وD108: لا نص رسمي حرفي (Ich wohne oben · Daneben ist die Bank · Herr Meier ist schon weg · Das Poster hängt über dem Bett)
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    const ids = ["ecke", "mitte", "oben", "unten", "ueber", "unter", "hinter", "auf", "stellen", "legen", "haengen", "wohin", "da", "daneben", "weg-sein"];
+    expect(u.praesentation.wordIds).toEqual(ids);
+    expect(ids.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|Ich wohne oben|Daneben ist die Bank|ist schon weg|Das Poster hängt/);
+    expect(ids.map(sample)).toEqual([
+      "In der Ecke steht ein Regal.", "Der Tisch steht in der Mitte.", "Mein Zimmer ist oben.", "Unten gibt es einen Keller.", "Über dem Sofa hängt ein Spiegel.",
+      "Das Handy ist unter dem Kissen.", "Hinter der Tür steht ein Stuhl.", "Die Tasse steht auf dem Tisch.", "Ich stelle die Lampe auf den Tisch.", "Ich lege das Handy auf das Bett.",
+      "Ich hänge den Spiegel an die Wand.", "Wohin stellst du den Schrank?", "Da ist die Katze!", "Hier ist das Sofa, und daneben steht eine Lampe.", "Mein Schlüssel ist weg!",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا فعل وضعٍ آخر لشيء ممكن الوضع (Ich lege die Tasse … صحيحة لفنجان مقلوب) · لا «hängt über» + مفعولٍ بجنسه الصحيح
+    // (über + مفعول مع hängen اللازم ممكنة: «Die Haare hängen über die Schultern» — أما «über die Tisch» فجنسٌ خاطئ) · لا «Wo … ?» للوضع (العامية الجنوبية قد تقولها) · لا وضع + أداة مكان مع aufhängen المحتملة (hänge … an der Wand)
+    // — فالمشتِّت إما أداة بجنس آخر (in den Ecke · über der Tisch) وإما وضع + أداة مكان مع stellen/legen وحدهما · أو فعلٌ لازم بمفعول (stehe den Stuhl) · أو متعدٍّ بلا مفعول (Das Sofa stellt …)
+    const choiceItems = [...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (Array.isArray((i as { choices?: unknown }).choices) ? [i as unknown as { choices: string[]; a: string }] : []));
+    const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
+    const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
+    expect(german.filter((c) => /\blege (die Tasse|das Glas)|\bstelle (den Teppich|das Bild)|hängt über (den Tisch|das (Bett|Sofa|Fenster)|die (Wand|Tür|Lampe|Ecke))|^Wo (stellst|legst|hängst)|\bhänge .* (an|auf) (der|dem) /u.test(c))).toEqual([]);
+    expect(german).toHaveLength(20); // الاختبار القبلي 2 + ست جمل Quiz × 2 + ثلاثة بنود أفعال Quiz × 2
+    // الاستدعاء من دروس سابقة (Wo wohnst du? · Ich sitze neben Oma. · Links steht mein Vater.) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["wo", "neben", "stehen"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute"]);
     for (const w of pluralOnly) expect([w.id, w.gender, w.srsCardTypes.includes("gender")]).toEqual([w.id, "none", false]);
