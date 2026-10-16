@@ -151,6 +151,9 @@ export function pluralsFor(entry: WordlistEntry, lemma: string): string[] {
     const stem = lemma.slice(0, -2);
     return [stem + (stem.endsWith("e") && suffix.startsWith("e") ? suffix.slice(1) : suffix).replace(/^een$/, "en")];
   }
+  // D151: الدخيلة المنتهية بـ‑a تُسقطها قبل ‑en (A2 «die Firma, -en» ← Firmen · كـThema ← Themen · Villa ← Villen) —
+  // لا جمع ألمانياً بـ‑aen، وكان الإلحاق الحرفي يقرأ «Firmaen» فيخطّئ جمعنا الصحيح
+  if (/a$/.test(lemma) && suffix === "en" && !um) return [lemma.slice(0, -1) + "en"];
   if (lemma.endsWith("e") && suffix === "e") return []; // «die Woche, -e»: مستحيل صرفياً — لا ادعاء
   const suf = lemma.endsWith("e") && suffix.startsWith("e") ? suffix.slice(1) : suffix; // Adresse, -en → Adressen
   const base = um ? umlautLast(lemma) : lemma;

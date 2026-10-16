@@ -194,6 +194,7 @@ describe("D110 — الجمع من علامة القائمة (الأساليب �
     ["s Thema, Themen", "Thema", "Themen"], ["der Baum, ¨-e", "Baum", "Bäume"], ["das Haus, -ä, er", "Haus", "Häuser"],
     ["die Adresse,-en", "Adresse", "Adressen"], ["das Datum, -en", "Datum", "Daten"], ["das Museum, -een", "Museum", "Museen"],
     ["der Vorschlag, ¨-e (haben/machen)", "Vorschlag", "Vorschläge"],
+    ["die Firma, -en", "Firma", "Firmen"], // D151: ‑a تسقط قبل ‑en (كـThema ← Themen) — كان الإلحاق الحرفي «Firmaen»
   ])("%s ⇒ %s", (headword, lemma, plural) => {
     expect(pluralsFor(e(headword, lemma), lemma)).toEqual([plural]);
   });

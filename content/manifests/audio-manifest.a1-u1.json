@@ -16709,6 +16709,66 @@
       "rmsDb": -17.32
     },
     {
+      "id": "word-firma",
+      "file": "words/audio/de-DE/word-firma.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Firma.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 1140,
+      "sizeBytes": 5183,
+      "hash": "sha256:659297022dbd05179d59a6833a26b2361c50a756d5786d9298995c61a3cf0268",
+      "pcmSha256": "438c76a9f2fc43a9c2aa6d13ac769af23ae04904fdcc9c9c2e83f55b9f6fbe21",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "word-immer",
+      "file": "words/audio/de-DE/word-immer.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "immer.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 734,
+      "sizeBytes": 3525,
+      "hash": "sha256:f1d0d0905382a0ed01936d0435d3c7346c70f4d5739a3277834ee90e0fdda16e",
+      "pcmSha256": "893276029201513108abca203f27d28a6af4591f42d13d3333f61642534bdd20",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-meisten",
+      "file": "words/audio/de-DE/word-meisten.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die meisten.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 966,
+      "sizeBytes": 4661,
+      "hash": "sha256:10d973c3bde88a78a7fc993f4e93715761e7991a17e688d5ddd6e3e707f9b54e",
+      "pcmSha256": "3b7eaf4162e3a651f2cb5ba44ab11788ec25cf3755113d62ad7d63a9fc00bceb",
+      "rmsDb": -16.99
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -29214,6 +29274,446 @@
       "hash": "sha256:72b85dbed26e93ce4445ce3a7cb279a99591dbde53418422742f275d99d15424",
       "pcmSha256": "483fb7ecdacc0ff0dfd8c55339b0a70bfd2486cf9342f8671179c1e83e41945f",
       "rmsDb": -17.06
+    },
+    {
+      "id": "mo-1",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 119,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, die Aufgabe heute ist unser Morgen. Also: Wann wachst du auf?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 6040,
+      "sizeBytes": 27945,
+      "hash": "sha256:c9cc1ef4b9ca14fffcbd69ad614fb3c0c2f2d4621a7441073ff058926035a745",
+      "pcmSha256": "dc082dad5e0c881b8afa5b7c8769149af74709e87eef20ae5062df216a62c09f",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "mo-2",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Um sieben. Mein Handy weckt mich.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 2731,
+      "sizeBytes": 11911,
+      "hash": "sha256:5fe79ec856b52945baa46df431068c2921ad62d977f654a7bbcccee71a8dc079",
+      "pcmSha256": "2822efa7b05c76e337142a6826c99ea0e6987faaccec38b254355075bb9b47d5",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "mo-3",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du hast keinen Wecker?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 1992,
+      "sizeBytes": 9326,
+      "hash": "sha256:556ad4e0a8af6eae8f32022a9601a368eb0c0d0642bb4c31f3e489e15409e40f",
+      "pcmSha256": "c913370fe05cd2357b4206c137612af9865a74a206bb3f748144bd72fe29fc0a",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "mo-4",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, das Handy ist mein Wecker. Und du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 3451,
+      "sizeBytes": 15143,
+      "hash": "sha256:901241d7a820e85e01c5edbb96855f4d862dce888df92df3f4596877ccdee35c",
+      "pcmSha256": "acb5e5efd52c5046e1e279b71e084eca2e04e4aab416c8c7cbcdc80703503fdf",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "mo-5",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 166,
+        "lengthScale": 1.32
+      },
+      "textDe": "Um halb sieben — meine Mutter weckt mich. Sie fängt um sieben in der Firma an.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 5416,
+      "sizeBytes": 25106,
+      "hash": "sha256:c53d0c0f9d8f276469239f1bb6f6bf094b3196a50fe0c713c93716d8c47d0523",
+      "pcmSha256": "b8fdbb31719c2edf4282471c8ced2b42150088b9544d495d872cae158d817dd7",
+      "rmsDb": -17.44
+    },
+    {
+      "id": "mo-6",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Um sieben schon? Sie arbeitet viel!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 2847,
+      "sizeBytes": 12996,
+      "hash": "sha256:6a3c5b4410eb6f92e66799c0d3d16a2f59896fc188ce4075fd7826f053896098",
+      "pcmSha256": "0b4b36681c7a0b687ffa74b34179f8d478d227b7b3c682fc78c47c1f530a980b",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "mo-7",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Und meine Brüder? Die schlafen immer lange!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 3528,
+      "sizeBytes": 16371,
+      "hash": "sha256:a5f108667c82f54a0803f40ce9971dbee4d8f42a360f1e35f4de3db2068052ad",
+      "pcmSha256": "3138de56694451c4bd6bc28ef2bafe7892fb2f43ef44394e7735c84c72f7ea1b",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "mo-8",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 167,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die meisten Jungen schlafen gern lange — ich auch!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 2882,
+      "sizeBytes": 13434,
+      "hash": "sha256:8ff1f69ac2973e07e0d097dbd80d83a2e35dae5018dfff81f792aa2058c0a1d5",
+      "pcmSha256": "8134549f1eb7b6f9719025753bb831bbae65245adfb4b62be4ca0afdc568c3aa",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "mo-9",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Duschst du am Morgen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 1944,
+      "sizeBytes": 9144,
+      "hash": "sha256:d4c3b7fb0c01668af7eadccd2838a4d278ccb5686c95c6b1b59f0f306975803d",
+      "pcmSha256": "9bdb624beedf9cf9573acf3487885c8591d596d4365402aad70baa0714a3f4e1",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "mo-10",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich dusche immer am Morgen — und ich trinke Tee.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 3741,
+      "sizeBytes": 17248,
+      "hash": "sha256:f26046af1bcde0fae190d9ea182e42e721968dae701856d217a3d5985492e266",
+      "pcmSha256": "53dad19b1a6e64e5f86ab397e9cfa46fe592bee57ecd12d3c541d2049f2c319f",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "mo-11",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Im Glas, ich weiß!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 1672,
+      "sizeBytes": 7900,
+      "hash": "sha256:c4c749de84e99ba41f7ae81f846290756fc23fe539b22d317e1f595634fb89c4",
+      "pcmSha256": "06b44e14deb4e0915537071411201e3b477a8b29dd7cac7e5a814a1da130aef6",
+      "rmsDb": -17.58
+    },
+    {
+      "id": "mo-12",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Und du? Badest du am Morgen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 2998,
+      "sizeBytes": 13335,
+      "hash": "sha256:22a7f9dad456c9bbab377d7dfd388b78b35213d44c8d14367e95c046249e16ee",
+      "pcmSha256": "92bfc7db9719bbdb4301bed36db088572672a0f1a14a07a69b804d061ac7d415",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "mo-13",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, ich dusche am Abend. Baden? Nur am Sonntag!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 3592,
+      "sizeBytes": 16778,
+      "hash": "sha256:77e202c9c5671486ec68df8dce384fd2459b7ba14c1360b1e55b160e992fb746",
+      "pcmSha256": "36c4996beface23fad521cc9f48adb20ae06ebb3dbdc4a415f29ace46c0019a0",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "mo-14",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 197,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wann ziehst du dich an?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 1825,
+      "sizeBytes": 8511,
+      "hash": "sha256:1b45105e69447010c141c4d61a5795ae7ce2dfc2348f00139c0dbb9d73afed72",
+      "pcmSha256": "98a43d44c3748492cf9cad56eeba9a659227067e0cbb3e68873d3cc324d1e307",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "mo-15",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 187,
+        "lengthScale": 1.32
+      },
+      "textDe": "Um sieben. Um halb acht fängt die Schule an.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 2888,
+      "sizeBytes": 13558,
+      "hash": "sha256:238454ff18bfcb20a591248e347810de97f106a155cb378bd4b42ebbb14b52e2",
+      "pcmSha256": "9f1d69f84ce6644fc92897033c98472c4aac10549332cf97be4453fad11b9873",
+      "rmsDb": -17.49
+    },
+    {
+      "id": "mo-16",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und um zwölf hast du Pause, oder?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 2708,
+      "sizeBytes": 12465,
+      "hash": "sha256:96588a136b346e8fbc37af57e737138ef50017f35dc4ce81e81bc47318b0ff8c",
+      "pcmSha256": "4addae650a7006160c032a92d42aae7a4d5b04e6a7f02524bb66e113a8ff8540",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "mo-17",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 152,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, eine Stunde. Das ist die Zeit für den Kurs!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 3960,
+      "sizeBytes": 18286,
+      "hash": "sha256:ebe9914cbe8f3ce9eb6fd7fcf7ed86a42cc2e34b49b19eb198170ab45ea22c38",
+      "pcmSha256": "4ba5d809eceecc66ed963175e46298d0c07def33ea58f0f107f43734a1e03012",
+      "rmsDb": -17.38
+    },
+    {
+      "id": "mo-18",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 158,
+        "lengthScale": 1.32
+      },
+      "textDe": "Mein Weg ist kurz: Der Computer steht auf dem Schreibtisch!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 3787,
+      "sizeBytes": 17573,
+      "hash": "sha256:f881ac4dfff36f7f8dd46a5cde63ddf0a9b09a038e2992c85047a2793c1be23b",
+      "pcmSha256": "bd98fe34dc3b36ea8c9992ac6d1ebb03e5311b70075ea1072ba3a85c1050a699",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "mo-19",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und am Abend? Wann gehst du schlafen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 2968,
+      "sizeBytes": 13864,
+      "hash": "sha256:653c035ba361623ad62530eac36fe66fddc676c16e6d1892e989f99c3282f49a",
+      "pcmSha256": "19f98d7c0888925e00175ad71e745e7eee92f13edd54a6efdcb66a687e57e794",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "mo-20",
+      "file": "audio/scripts/a1-u7-d1-wann-wachst-du-auf/mo-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 176,
+        "lengthScale": 1.32
+      },
+      "textDe": "Um elf. Am Abend bin ich immer müde — so ist mein Alltag!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d1"
+      ],
+      "durationMs": 4101,
+      "sizeBytes": 18770,
+      "hash": "sha256:37bc10ce5785990ff4bdace86c14acc0b62d171de862f0d64060fe947c26640f",
+      "pcmSha256": "1a53f909601c355366620c46376a87ebf6d74dbfb665dae3685ef396afd6e464",
+      "rmsDb": -17.02
     }
   ],
   "characterVoices": {

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-tagesablauf",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Um sieben wache ich auf. · Mein Wecker weckt mich. · Am Abend bin ich immer müde.",
+    "ar": "يومي: متى؟ (um sieben · am Abend) وكم مرة؟ (immer · oft) — أفعال اليوم قطعٌ (Ich wache auf · Ich ziehe mich an) · aufwachen بلا مفعول وwecken بمفعول · die meisten قبل اسمٍ جمع · gehen + فعلٌ ثانٍ بلا zu"
+  },
+  "payload": {
+    "topicAr": "اليوم تصف صباحك ويومك: متى تستيقظ ومن يوقظك، ومتى تستحمّ وترتدي ملابسك، ومتى يبدأ يومك، ومتى تذهب لتنام: Um sieben wache ich auf. · Mein Wecker weckt mich. · Am Abend bin ich immer müde. ومعها كلمات اليوم: aufwachen · wecken · der Wecker · duschen · baden · anziehen · anfangen · die Pause · müde · schlafen · der Alltag · der Weg — والنواة die Firma · immer · die meisten.",
+    "sceneAr": "أول مهمة في الوحدة السابعة على الشاشة: يصف يوسف (في برلين) ولينا (في سويسرا) صباحهما. هاتف يوسف منبّهه ويوقظه في السابعة؛ ولينا توقظها أمها في السادسة والنصف لأن أمها تبدأ عملها في الشركة في السابعة، وأخواها التوأمان ينامان طويلاً دائماً. يوسف يستحمّ كل صباح ويشرب الشاي (في كأس — تعرف لينا)، ولينا تستحمّ مساءً وفي الحوض يوم الأحد فقط. ترتدي ملابسها في السابعة والمدرسة تبدأ في السابعة والنصف، وفي الثانية عشرة استراحتها: ساعةٌ هي وقت الدورة. وطريق يوسف إلى الدورة قصير — الحاسوب على مكتبه! وفي المساء يذهب لينام في الحادية عشرة، متعباً كل مساء.",
+    "examples": [
+      {
+        "de": "Um sieben wache ich auf.",
+        "ar": "أستيقظ في السابعة — الوقت أولاً فالفعل ثانياً، وauf في آخر الجملة"
+      },
+      {
+        "de": "Mein Wecker weckt mich.",
+        "ar": "منبّهي يوقظني — wecken بمفعول (mich)، وaufwachen بلا مفعول"
+      },
+      {
+        "de": "Am Morgen dusche ich immer.",
+        "ar": "في الصباح أستحمّ دائماً — immer بعد الفعل"
+      },
+      {
+        "de": "Die meisten Leute schlafen in der Nacht.",
+        "ar": "أغلب الناس ينامون في الليل — die قبل meisten، والفعل جمع"
+      },
+      {
+        "de": "Um elf gehe ich schlafen.",
+        "ar": "في الحادية عشرة أذهب لأنام — schlafen في آخر الجملة بلا zu"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في المثالين الأول والأخير: ماذا جاء أولاً؟ وأين الفعل؟ وأين ich؟ (2) wache … auf: أين ذهبت auf؟ (3) قارن Ich wache auf بـ Mein Wecker weckt mich: أيّ الفعلين يأخذ مفعولاً به؟ وبالعربية «استيقظ» و«أيقظ» — أيّهما يأخذ مفعولاً؟ (4) أين جاءت immer في المثال الثالث؟ (5) في «معظم الناس» أين «ال»؟ وفي Die meisten Leute أين die؟ (6) في المثال الأخير gehe … schlafen: أين الفعل الثاني؟ وهل قبله zu؟ وأين رأيت هذا من قبل (Ich möchte ein Eis essen.)؟",
+    "ruleDe": "Um sieben wache ich auf. · Mein Wecker weckt mich. · Am Morgen dusche ich immer. · Die meisten Leute schlafen in der Nacht. · Um elf gehe ich schlafen.",
+    "ruleAr": "صف يومك بأربع خطوات: (1) أفعال يومك قطعٌ تحفظها كما هي: Ich wache auf · Ich dusche · Ich ziehe mich an · Der Kurs fängt an · Ich schlafe — وauf وan في آخر الجملة (والقاعدة كاملةً في الدرس الخامس). aufwachen بلا مفعول (أستيقظ)، أما wecken فبمفعول (أُوقظ): Mein Wecker weckt mich. · Meine Mutter weckt mich. وduschen تحت الدُش، وbaden في حوض الاستحمام (أو في البحر). (2) متى؟ um للساعة (um sieben · um halb acht) · am لأوقات اليوم (am Morgen · am Mittag · am Abend · aber in der Nacht) — وإذا بدأت بالوقت جاء الفعل ثانياً ثم الفاعل: Um sieben wache ich auf. · Am Abend bin ich müde. (3) كم مرة؟ immer (دائماً) وoft (كثيراً) بعد الفعل: Am Morgen dusche ich immer. · Am Abend bin ich oft müde. وdie meisten = أغلب (الناس أو الأشياء) قبل اسمٍ جمع، والفعل جمع: Die meisten Leute schlafen in der Nacht. (4) فعلان معاً: gehen + فعلٌ ثانٍ في آخر الجملة بصيغة المصدر بلا zu — كما بعد möchte وwill (الوحدة 5): Um elf gehe ich schlafen. · Ich möchte jetzt duschen.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «استيقظ» و«أيقظ» فعلان (وبالعامية «فاق» و«فيّق») كما aufwachen وwecken، والمفعول مع الثاني وحده: «يوقظني» = weckt mich. (2) «أنا تعبان» صفةٌ يُخبر بها كما Am Abend bin ich müde (sein + صفة) — لا كـHunger haben (الوحدة 5). (3) العادة بالمضارع في اللغتين: «أستيقظ في السابعة» = Um sieben wache ich auf. وما يختلف ثلاثة: (1) في «معظم الناس» و«أغلب الناس» «ال» على الكلمة الثانية وحدها، وكذلك most people الإنجليزية بلا the — فيكتب المتعلم: ~~Meisten die Leute trinken am Morgen Kaffee.~~ — والألمانية تضع die أولاً للعبارة كلها: Die meisten Leute trinken am Morgen Kaffee. (2) في الفصحى «أستحمّ» للدُش والحوض معاً، والقاموس يترجمها baden — فيقول المتعلم للدُش اليومي: ~~Ich bade jeden Morgen.~~ — وهي صحيحة نحواً بمعنى آخر: حوض الاستحمام كل صباح (أو السباحة!)؛ وللدُش: Ich dusche jeden Morgen. (والعامية «نعمل دوش» والفرنسية se doucher تعينانك هنا) (3) «أذهبُ لأنام» باللام، وكذلك go to sleep الإنجليزية — فيضع المتعلم zu: ~~Ich gehe zu schlafen.~~ — والفعل الثاني بعد gehen بلا zu: Ich gehe jetzt schlafen. — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "aufwachen · anziehen · anfangen تنفصل: auf/an في آخر الجملة — اليوم قطعاً (Ich wache auf · Ich ziehe mich an · Der Kurs fängt an)، والقاعدة كاملةً في الدرس الخامس من هذه الوحدة؛ وبعد möchte/will تبقى معاً في الآخر: Ich möchte früh aufwachen.",
+      "schlafen: ich schlafe · wir schlafen — وdu schläfst · er/sie schläft بـä، وكذلك fängt من anfangen: تُحفظ مع الفعل، وقاعدة تغيّر الحركة في الدرس الرابع من هذه الوحدة.",
+      "sich anziehen: Ich ziehe mich an · Ziehst du dich an? كما mich في «Freut mich!» (الوحدة 2) — وبقية الضمائر مع sich لاحقاً · وmeistens (غالباً) كلمةٌ أخرى لاحقاً؛ اليوم die meisten قبل اسمٍ جمع.",
+      "baden = حوض الاستحمام أو السباحة في البحر، وduschen تحت الدُش · وzum Kurs / zur Arbeit (zu + الأداة) في الوحدة 8 — اليوم: Mein Weg ist kurz. · in der Firma."
+    ],
+    "beads": [
+      "Um",
+      "sieben",
+      "wache",
+      "ich",
+      "auf."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u7-d1"
+  ]
+}
