@@ -121,7 +121,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u5-d5")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D144 صار u1-d1..d5 + u2-d1..d5 + u3-d1..d5 + u4-d1..d5 + u5-d1..d4 مُرقّى
+const legacy = realLessons.find((l) => l.id === "a1-u6-d1")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D145 صار u1..u5 d1..d5 كلها مُرقّاة
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -351,7 +351,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u5-d5", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u6-d1", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -447,23 +447,18 @@ describe("D115 — أدوات القياس", () => {
     const legacyRule = { ...w("sein"), de: "sein ملكيته" };
     expect(wordAppears(legacyRule, toks("Das ist sein Hund."))).toBe(false);
   });
-  it("الدرس التالي غير المُرقّى (a1-u5-d5 بعد D144): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u6-d1 بعد D145): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
-    // بعد D144 صار u5-d4 مكتملاً؛ الفجوات الفعلية لـu5-d5 (مقيسة قبل النقل): قاعدتاه المشار إليهما (ars-kein-nicht · ars-moechte-wollen)
-    // مكتوبتان الآن فلا e-upgrade-rule — والدرس يحتاج قراراً بقاعدة يومه (تمييز kein↔nicht) · أمثلة salz «braucht» وreservieren «Tisch»
-    // · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · «chen» وTisch في البنود وTisch في الـQuiz · Quiz 3×4
-    // · وkochen/backen/Mahlzeit بلا أي بند — القياس لا التخمين
-    expect(legacy.praesentation.grammarArsenalIds).toEqual(["ars-kein-nicht", "ars-moechte-wollen"]);
-    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-sample", "e-upgrade-sample"]);
-    const samples = r.rule.map((i) => i.message).join("\n");
-    expect(samples).toMatch(/braucht/);
-    expect(samples).toMatch(/tisch/);
+    // بعد D145 صارت الوحدة 5 مكتملة (d1..d5)؛ الفجوات الفعلية لـu6-d1 (مقيسة قبل النقل): لا ملف ars-plural-umlaut · مثال regal «voll»
+    // · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · مصطلح «Umlaut» في البنود · voll في الـQuiz · Quiz 3×4 — القياس لا التخمين
+    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-sample"]);
+    expect(r.rule[0]?.message).toMatch(/ars-plural-umlaut/);
+    expect(r.rule[1]?.message).toMatch(/voll/);
     expect(r.practice.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-practice-audio", "e-upgrade-practice-types", "e-upgrade-practice-size", "e-upgrade-front"]));
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/chen.*tisch/);
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/umlaut/);
     expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-front"]);
-    expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);
-    expect(r.coverage[0]?.message).toMatch(/kochen.*backen.*mahlzeit/);
+    expect(r.coverage).toEqual([]);
     expect(r.quizMin).toBe(4);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
@@ -1264,7 +1259,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-moechte-wollen — أشار إليها grammarArsenalIds في d3 وd5 وd6 ولم يُكتب لها ملف قط) فتُفهرس في الثلاثة
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-moechte-wollen"]);
     const rule = rules.get("ars-moechte-wollen")!;
-    expect(rule.usedInLessons).toEqual(["a1-u5-d3", "a1-u5-d5", "a1-u5-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u5-d3", "a1-u5-d6"]); // D145: d5 صار بقاعدة يومه الخاصة ars-kein-nicht-2
     expect(rule.payload.ruleDe).toMatch(/ich möchte · du möchtest · er\/sie möchte · wir\/Sie möchten — ich will · du willst · er\/sie will · wir\/Sie wollen/);
     expect(rule.payload.ruleDe).toMatch(/Was für einen Kuchen\? · Was für eine Suppe\? · Was für ein Eis\?/);
     // möchte من mögen ومعناها غيره (Ich mag Kaffee ≠ Ich möchte einen Kaffee) — وmögen في بطاقات الاستدعاء
@@ -1348,7 +1343,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-kein-nicht — أشار إليها grammarArsenalIds في d4 وd5 وd6 ولم يُكتب لها ملف قط) فتُفهرس في الثلاثة
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-kein-nicht"]);
     const rule = rules.get("ars-kein-nicht")!;
-    expect(rule.usedInLessons).toEqual(["a1-u5-d4", "a1-u5-d5", "a1-u5-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u5-d4", "a1-u5-d6"]); // D145: d5 صار بقاعدة يومه الخاصة ars-kein-nicht-2
     expect(rule.payload.ruleDe).toMatch(/ein Glas → kein Glas · eine Gabel → keine Gabel · einen Löffel → keinen Löffel · Fleisch → kein Fleisch · Eier → keine Eier — Die Suppe ist nicht scharf\./);
     expect(rule.payload.ruleAr).toContain("وهي ein بحرف k في أولها، فتتصرّف مثلها تماماً");
     // النقل الإيجابي يُسمّى عوناً: «لا» النافية للجنس ≈ kein · «لا شيء» = nichts · الفرنسية pas de · والفروق بمبررها: النفي على «عند» والاسم كما هو
@@ -1404,6 +1399,74 @@ describe("D115 — أدوات القياس", () => {
     const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
     expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => ` ${f} `.includes(` ${norm(a)} `)))).toEqual([]);
     expect(quizAnswers.filter((a) => ["nichts", "wenig"].includes(a))).toEqual([]);
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم.
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+  });
+  it("a1-u5-d5 مُرقّى (D145): صفر نقص — 40 بنداً · 4 أنواع · Quiz 6 · 17 كلمة · قاعدة يومه الخاصة ars-kein-nicht-2 · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u5-d5")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u5-d5")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([40, 4, 6, 17]);
+    // كان يشير إلى قاعدتي d3/d4 وحدهما (الحارس راضٍ بلا قاعدة يوم ذات اكتشاف) — صار بقاعدته الخاصة: التمييز بالنظر إلى ما قبل الاسم
+    // (وفاءٌ بحدّ D144 «nicht مع المعرّف والملكية … في الدرس القادم») وخرج d5 من فهرس القاعدتين
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-kein-nicht-2"]);
+    expect(l.usedArsenalIds).toEqual(["ars-kein-nicht-2"]);
+    const rule = rules.get("ars-kein-nicht-2")!;
+    expect(rule.usedInLessons).toEqual(["a1-u5-d5"]);
+    expect(rules.get("ars-kein-nicht")!.payload.limitsAr.join(" ")).toMatch(/nicht مع الاسم المعرّف أو بكلمة ملكية.*في الدرس القادم/);
+    expect(rule.payload.ruleDe).toMatch(/keinen Kaffee ↔ den Kaffee nicht · kein Kaffee ↔ nicht mein Kaffee/);
+    expect(rule.payload.ruleAr).toContain("انظر إلى ما قبل الاسم ثم اختر");
+    // العون المسمّى: «لا» النافية للجنس لا تدخل إلا على النكرة (≈ kein) والمعرفة تُنفى بـ«ليس» أو بنفي الفعل (≈ nicht) · «لا، شكراً» = Nein, danke
+    // · والفروق: «موش قهوة/موش قهوتي» حرف واحد للحالتين ⇒ ~~Das ist kein mein Kaffee.~~ · النفي ملاصق للفعل والفرنسية pas ⇒ ~~Ich trinke nicht den Kaffee.~~
+    const c = rule.payload.contrastAr;
+    for (const x of ["«لا» النافية للجنس لا تدخل إلا على النكرة", "«ليست قهوتي»", "«لا، شكراً» = Nein, danke", "«موش قهوة» و«موش قهوتي»", "~~Das ist kein mein Kaffee.~~", "je ne bois pas le café", "~~Ich trinke nicht den Kaffee.~~"])
+      expect(c).toContain(x);
+    // الحدود: nicht قبل المعرّف للمقابلة فقط (بلا sondern اليوم) · Durst/Hunger/Zeit بـkein · Küche ≠ Kuchen (ü بلا مقابل عربي) · «المقهى» كلمة الوحدة 13
+    const limits = rule.payload.limitsAr.join(" ");
+    expect(limits).toMatch(/nicht den Kaffee.*للمقابلة|حين تقابل بين شيئين/);
+    expect(limits).toMatch(/Ich habe keinen Durst/);
+    expect(limits).toMatch(/die Küche.*der Kuchen.*لا مقابل لها في العربية/);
+    expect(limits).toMatch(/الوحدة 13 \(خطة D113\)/);
+    expect(limits).not.toMatch(/Café|sondern/);
+    expect(e.properNouns).toEqual(["Lena", "Yusuf"]);
+    // d5 بلا إسناد نواة (plan-status: لا درس مخطط) — والكلمات السبع عشرة كما هي
+    expect(l.praesentation.wordIds).toHaveLength(17);
+    // أمثلة البطاقات القديمة: braucht · Tisch (u6-d1) · an der Kasse (Dativ) · nehme (u7-d4) · Als … · أمر Sie (u9-d3) · dir — وبلا أسماء علم
+    const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/braucht|Tisch|an der|nehme|\bAls\b|Probieren Sie|\bdir\b|Lena|Yusuf|Berlin/);
+    expect(l.warmup.cardIds).toEqual(["kuchen", "mein", "hunger"]);
+    // الحوار الجديد (ko-1..20) كله في الاستماع والإملاء مرة واحدة · Hähnchen وMahlzeit إملاءً · وسطرا Durst/Limonade وNachtisch مسجّلان على المعجم
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("ko-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 20 }, (_, i) => `ko-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-haehnchen", "word-mahlzeit"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
+    for (const [w, t] of [["Durst", "ko-2"], ["Limonade", "ko-2"], ["Nachtisch", "ko-11"]] as const) expect(lex.entries.find((x) => x.word === w)!.regeneratedTracks).toContain(t);
+    // N-015: الإملاء من الأسطر البطيئة وحدها (مقيسة في المانيفست) — الأسرع الثمانية (>132) في الاستماع
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; voiceParams: { speedWpm: number } }[] };
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    for (const fast of ["ko-3", "ko-5", "ko-8", "ko-11", "ko-13", "ko-15", "ko-16", "ko-18"]) expect(listening.items.map((i) => String(i.audioId))).toContain(fast);
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set(l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))));
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    const norm = (x: string) => x.toLowerCase().replace(/[^\p{L}\s]/gu, " ").replace(/\s+/g, " ").trim();
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => ` ${f} `.includes(` ${norm(a)} `)))).toEqual([]);
+    expect(quizAnswers.filter((a) => ["Hähnchen", "das Hähnchen", "Mahlzeit", "die Mahlzeit"].includes(a))).toEqual([]);
     // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم.
     const taught = knownStems(taughtUpTo(l, realLessons, words));
     const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];

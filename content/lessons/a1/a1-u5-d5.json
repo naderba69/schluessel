@@ -6,31 +6,32 @@
   "day": 5,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst eine Bestellung im Café abschließen und zwei Sachen höflich verneinen.",
-    "ar": "تكمل طلباً في مقهى وتنفي صنفين بلباقة"
+    "de": "Das ist nicht mein Kaffee. — Nein, danke, keine Sahne. Ich trinke den Kaffee nicht.",
+    "ar": "تفرّق بين kein وnicht بالنظر إلى ما قبل الاسم (ein أو لا شيء ⇒ kein · der/die/das أو mein/dein ⇒ nicht)، وتطلب طلباً كاملاً في مقهى (مشروب وطعام وحلوى) وترفض صنفين بلطف."
   },
   "canDoDaily": [
-    "يكمل طلب مقهى كاملاً وينفي صنفين بلباقة (kein/nicht)"
+    "يختار kein أو nicht بالنظر إلى ما قبل الاسم: Ich möchte keinen Kaffee ↔ Ich trinke den Kaffee nicht · Das ist kein Kaffee ↔ Das ist nicht mein Kaffee.",
+    "يكمل طلباً في مقهى (مشروب + طعام + حلوى) ويرفض صنفين بلطف: Nein, danke, keine Vorspeise. · Nein, danke, keine Sahne."
   ],
   "warmup": {
     "cardIds": [
-      "bestellen",
-      "tee",
-      "kuchen"
+      "kuchen",
+      "mein",
+      "hunger"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«لا شكراً، آخذ لا كعكة» — kein أم nicht مع Kuchen? (تخمين فقط)"
+          "de": "«هذه ليست قهوتي» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
-          "Ich nehme keinen Kuchen. (kein + اسم)",
-          "Ich nehme nicht Kuchen.",
-          "Ich nehme kein Kuchen."
+          "Das ist nicht mein Kaffee.",
+          "Das ist kein mein Kaffee.",
+          "Das ist keinen mein Kaffee."
         ],
-        "answer": "Ich nehme keinen Kuchen. (kein + اسم)",
+        "answer": "Das ist nicht mein Kaffee.",
         "revealNextSession": true
       }
     ],
@@ -57,83 +58,416 @@
       "mahlzeit"
     ],
     "grammarArsenalIds": [
-      "ars-kein-nicht",
-      "ars-moechte-wollen"
+      "ars-kein-nicht-2"
     ],
     "storySentenceIds": [
       "story-a5-u5-s5"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "umlaut-u",
+      "ch-ich-laut",
+      "ch-ach-laut",
+      "z",
+      "vowel-long-short"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أنا عطشان»؟",
-            "a": "Ich habe Durst!"
+            "q": "Das ist ___ Tee. (nicht أم kein؟)",
+            "a": "kein",
+            "why": "قبل Tee لا أداة ⇒ kein: «ليس شاياً أصلاً» — والمذكر بعد ist لا يتغير (لا keinen)."
           },
           {
-            "q": "«قهوة بالسكر والقشدة»؟",
-            "a": "Kaffee mit Zucker und Sahne."
+            "q": "Das ist ___ sein Teller. (nicht أم kein؟)",
+            "a": "nicht",
+            "why": "قبل Teller كلمة ملكية (sein) ⇒ nicht قبلها — لا kein مع sein."
+          },
+          {
+            "q": "Lena isst das Hähnchen ___. (nicht أم kein؟)",
+            "a": "nicht",
+            "why": "das Hähnchen معيّن (das) ⇒ nicht في آخر الجملة بعد المفعول."
+          },
+          {
+            "q": "Wir haben ___ Sahne. (nicht أم kein؟)",
+            "a": "keine",
+            "why": "Sahne بلا أداة ⇒ kein، وdie Sahne مؤنثة ⇒ keine."
+          },
+          {
+            "q": "Die Suppe hat ___ Salz. (nicht أم kein؟)",
+            "a": "kein",
+            "why": "Salz مادة بلا أداة ⇒ kein، وdas Salz محايد ⇒ kein."
+          },
+          {
+            "q": "Yusuf hat ___ Hunger. (nicht أم kein؟)",
+            "a": "keinen",
+            "why": "Hunger بلا أداة مع haben ⇒ kein، والمذكر مفعولاً ⇒ keinen (كـeinen)."
+          },
+          {
+            "q": "Ich mag die Limonade ___. (nicht أم kein؟)",
+            "a": "nicht",
+            "why": "die Limonade معيّنة (die) ⇒ nicht في آخر الجملة."
+          },
+          {
+            "q": "Lena ___ heute Hähnchen. (kochen)",
+            "a": "kocht",
+            "why": "kochen منتظم: مع er/sie ← kocht · وch بعد o «ach»."
+          },
+          {
+            "q": "Wir ___ die Suppe. (probieren)",
+            "a": "probieren",
+            "why": "probieren مع wir ← probieren (كالمصدر) · وie طويلة والنبر على bie."
+          },
+          {
+            "q": "Die ___ ist eine Suppe. (المقبلات)",
+            "a": "Vorspeise",
+            "why": "die Vorspeise = طبق المقبلات (Vor + Speise: الطعام قبل الطعام) — والأداة die من Speise."
+          },
+          {
+            "q": "Die ___ ist rechts. (مكان الدفع)",
+            "a": "Kasse",
+            "why": "die Kasse = صندوق الدفع · ss بعد a القصيرة."
+          },
+          {
+            "q": "Frühstück, Mittagessen, Abendessen: drei ___. (وجبات)",
+            "a": "Mahlzeiten",
+            "why": "die Mahlzeit = الوجبة والجمع die Mahlzeiten (‑en) — والثلاث من الدرس الثالث."
           }
         ],
         "interleavedWith": [
+          "tee",
+          "kaffee",
+          "teller",
+          "sein",
+          "suppe",
           "hunger",
-          "milch"
+          "fruehstueck",
+          "mittagessen",
+          "abendessen"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«كمقبلات حساء»؟",
-            "a": "Als Vorspeise eine Suppe, bitte."
+            "audioId": "ko-1",
+            "speakText": "Yusuf, heute bist du der Gast, und ich koche! Guten Tag!",
+            "q": "استمع: ما الدوران في مهمة اليوم؟",
+            "choices": [
+              "يوسف الزبون ولينا تطبخ",
+              "لينا الزبونة ويوسف يطبخ",
+              "يوسف ولينا زبونان"
+            ],
+            "a": "يوسف الزبون ولينا تطبخ",
+            "why": "der Gast = الزبون · ich koche = أطبخ (kochen مع ich) — لينا صاحبة المقهى."
           },
           {
-            "q": "«الحلوى الختامية آيس كريم»؟",
-            "a": "Als Nachtisch nehme ich Eis."
+            "audioId": "ko-3",
+            "speakText": "Gern. Möchten Sie auch eine Vorspeise?",
+            "q": "استمع: ماذا تعرض لينا مع الليموناضة؟",
+            "choices": [
+              "المقبلات",
+              "الحلوى",
+              "القهوة"
+            ],
+            "a": "المقبلات",
+            "why": "eine Vorspeise = طبق مقبلات (die Vorspeise) · Möchten Sie …? عرضٌ مهذب."
+          },
+          {
+            "audioId": "ko-5",
+            "speakText": "Heute koche ich Hähnchen mit Reis. Das ist gesund!",
+            "q": "استمع: ما طبق اليوم، وكيف تصفه لينا؟",
+            "choices": [
+              "دجاج بالأرز — صحّي",
+              "سمك بالأرز — صحّي",
+              "دجاج بالبطاطا — لذيذ"
+            ],
+            "a": "دجاج بالأرز — صحّي",
+            "why": "Hähnchen mit Reis = دجاج بالأرز · gesund = صحّي · koche ich: الفعل ثانياً بعد heute."
+          },
+          {
+            "audioId": "ko-6",
+            "speakText": "Super! Das Hähnchen, bitte.",
+            "q": "استمع: ماذا يطلب يوسف؟",
+            "choices": [
+              "الدجاج الذي اقترحته",
+              "الأرز وحده",
+              "المقبلات"
+            ],
+            "a": "الدجاج الذي اقترحته",
+            "why": "Das Hähnchen, bitte = الدجاج (المعيّن) من فضلك — das لأن الطبق صار معروفاً، و‑chen ← das دائماً."
+          },
+          {
+            "audioId": "ko-7",
+            "speakText": "Hier ist das Hähnchen. Guten Appetit!",
+            "q": "استمع: ماذا تقول لينا مع الطبق؟",
+            "choices": [
+              "تفضّل الدجاج — بالهناء!",
+              "تفضّل الحساب — شكراً!",
+              "تفضّل الملح — بالهناء!"
+            ],
+            "a": "تفضّل الدجاج — بالهناء!",
+            "why": "Hier ist das Hähnchen = تفضّل الدجاج · Guten Appetit! = بالهناء."
+          },
+          {
+            "audioId": "ko-8",
+            "speakText": "Danke! Aber das Hähnchen hat kein Salz.",
+            "q": "استمع: ما مشكلة الدجاج؟",
+            "choices": [
+              "ليس فيه ملح",
+              "حارّ جداً",
+              "قليل جداً"
+            ],
+            "a": "ليس فيه ملح",
+            "why": "kein Salz = لا ملح — das Salz مادة بلا أداة ⇒ kein."
+          },
+          {
+            "audioId": "ko-10",
+            "speakText": "Danke, jetzt ist es gut!",
+            "q": "استمع: كيف صار الطبق؟",
+            "choices": [
+              "جيداً الآن",
+              "مالحاً جداً",
+              "حارّاً جداً"
+            ],
+            "a": "جيداً الآن",
+            "why": "jetzt ist es gut = الآن هو جيد — es = das Hähnchen."
+          },
+          {
+            "audioId": "ko-11",
+            "speakText": "Möchten Sie einen Nachtisch? Ich backe auch Kuchen!",
+            "q": "استمع: ماذا تعرض لينا بعد الطعام؟",
+            "choices": [
+              "حلوى — وهي تخبز الكعك",
+              "قهوة — وهي تطبخها",
+              "مقبلات — وهي تخبزها"
+            ],
+            "a": "حلوى — وهي تخبز الكعك",
+            "why": "einen Nachtisch = حلوى بعد الطعام (der Nachtisch ← einen) · ich backe = أخبز."
+          },
+          {
+            "audioId": "ko-13",
+            "speakText": "Mit Sahne?",
+            "q": "استمع: بماذا تسأل لينا؟",
+            "choices": [
+              "هل يريد الكعكة بالقشدة؟",
+              "هل يريد القهوة بالحليب؟",
+              "هل يريد الدجاج بالملح؟"
+            ],
+            "a": "هل يريد الكعكة بالقشدة؟",
+            "why": "Mit Sahne? = بالقشدة؟ (die Sahne)."
+          },
+          {
+            "audioId": "ko-15",
+            "speakText": "Hier sind der Kuchen und der Kaffee.",
+            "q": "استمع: ماذا تقدّم لينا؟",
+            "choices": [
+              "الكعكة والقهوة",
+              "الكعكة والليموناضة",
+              "القهوة وحدها"
+            ],
+            "a": "الكعكة والقهوة",
+            "why": "der Kuchen und der Kaffee — الاسمان معيّنان (der) لأنهما ما طلبه."
+          },
+          {
+            "audioId": "ko-16",
+            "speakText": "Danke! Aber der Kaffee ist sehr süß. Ich trinke den Kaffee nicht.",
+            "q": "استمع: لماذا لا يشرب يوسف القهوة؟",
+            "choices": [
+              "لأنها حلوة جداً",
+              "لأنها باردة",
+              "لأنها مُرّة"
+            ],
+            "a": "لأنها حلوة جداً",
+            "why": "sehr süß = حلوة جداً · Ich trinke den Kaffee nicht = لا أشرب هذه القهوة — nicht في الآخر لأن den Kaffee معيّنة."
+          },
+          {
+            "audioId": "ko-18",
+            "speakText": "Danke! Der Kuchen schmeckt sehr gut, und die Küche hier ist super!",
+            "q": "استمع: ماذا يمدح يوسف؟",
+            "choices": [
+              "الكعكة والمطبخ",
+              "القهوة والمطبخ",
+              "الكعكة والقهوة"
+            ],
+            "a": "الكعكة والمطبخ",
+            "why": "der Kuchen = الكعكة (u طويلة وch «ach») · die Küche = المطبخ (ü وch «ich») — كلمتان متقاربتان."
+          }
+        ],
+        "interleavedWith": [
+          "gast",
+          "reis",
+          "kuchen",
+          "kaffee",
+          "suess",
+          "appetit"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "nicht.",
+              "mag",
+              "Ich",
+              "die",
+              "Suppe"
+            ],
+            "a": "Ich mag die Suppe nicht.",
+            "why": "Ich ثم mag ثانياً ثم المفعول المعيّن die Suppe ثم nicht في الآخر."
+          },
+          {
+            "tokens": [
+              "ist",
+              "Das",
+              "Tasse.",
+              "nicht",
+              "meine"
+            ],
+            "a": "Das ist nicht meine Tasse.",
+            "why": "Das ist ثم nicht قبل كلمة الملكية meine (die Tasse ← meine) — لا kein مع meine."
+          },
+          {
+            "tokens": [
+              "keinen",
+              "Er",
+              "Zucker.",
+              "möchte"
+            ],
+            "a": "Er möchte keinen Zucker.",
+            "why": "Zucker بلا أداة ⇒ kein، وder Zucker مفعولاً ⇒ keinen · möchte مع er بلا ‑t."
+          },
+          {
+            "tokens": [
+              "backt",
+              "Oma",
+              "Kuchen.",
+              "heute"
+            ],
+            "a": "Oma backt heute Kuchen.",
+            "why": "Oma ثم backt ثانياً (وتُقال bäckt أيضاً) ثم heute ثم Kuchen بلا أداة (عموماً)."
+          },
+          {
+            "tokens": [
+              "probiere",
+              "Ich",
+              "Hähnchen.",
+              "das"
+            ],
+            "a": "Ich probiere das Hähnchen.",
+            "why": "Ich ثم probiere ثانياً ثم das Hähnchen — ‑chen ← das دائماً."
+          },
+          {
+            "tokens": [
+              "gesund.",
+              "ist",
+              "Gemüse"
+            ],
+            "a": "Gemüse ist gesund.",
+            "why": "Gemüse بلا أداة (عموماً) ثم ist ثم الصفة gesund."
           }
         ],
         "interleavedWith": [
           "suppe",
-          "eis"
+          "tasse",
+          "mein",
+          "oma",
+          "gemuese"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "dictation",
         "items": [
           {
-            "q": "«أريد أن أحجز طاولة»؟",
-            "a": "Ich möchte einen Tisch reservieren."
+            "audioId": "ko-2",
+            "speakText": "Guten Tag! Ich habe Durst. Eine Limonade, bitte.",
+            "a": "Guten Tag! Ich habe Durst. Eine Limonade, bitte",
+            "why": "Durst بـu قصيرة قبل rst · Limonade بـo وa طويلة والنبر على na · والاسمان بحرف كبير."
           },
           {
-            "q": "«لا شكراً، لا آخذ حاراً»؟",
-            "a": "Nein, danke, ich nehme nichts Scharfes."
+            "audioId": "ko-4",
+            "speakText": "Nein, danke, keine Vorspeise. Aber ich habe Hunger!",
+            "a": "Nein, danke, keine Vorspeise. Aber ich habe Hunger!",
+            "why": "keine Vorspeise: die Vorspeise ← keine · Vorspeise = Vor + Speise، وsp فيها «شب»."
+          },
+          {
+            "audioId": "ko-9",
+            "speakText": "Kein Salz? Hier sind Salz und Pfeffer.",
+            "a": "Kein Salz? Hier sind Salz und Pfeffer",
+            "why": "Kein Salz: das Salz ← kein · Salz بـz «تس» في آخرها · Pfeffer بـpf في أولها وff."
+          },
+          {
+            "audioId": "ko-12",
+            "speakText": "Gern! Ich probiere den Kuchen.",
+            "a": "Gern! Ich probiere den Kuchen",
+            "why": "probiere بـie طويلة · den Kuchen: der Kuchen مفعولاً ← den."
+          },
+          {
+            "audioId": "ko-14",
+            "speakText": "Nein, danke, keine Sahne. Und einen Kaffee ohne Zucker, bitte.",
+            "a": "Nein, danke, keine Sahne. Und einen Kaffee ohne Zucker, bitte",
+            "why": "keine Sahne (die) · Sahne بـh صامتة تُطيل a · Zucker بـck بعد u القصيرة وz «تس»."
+          },
+          {
+            "audioId": "ko-17",
+            "speakText": "Ach so, mit Zucker! Hier ist der Kaffee ohne Zucker.",
+            "a": "Ach so, mit Zucker! Hier ist der Kaffee ohne Zucker",
+            "why": "Ach so: ch بعد a «ach» · ohne بـh صامتة · Zucker مرتين."
+          },
+          {
+            "audioId": "ko-19",
+            "speakText": "Danke! Die Kasse ist dort. Elf Euro, bitte.",
+            "a": "Danke! Die Kasse ist dort. Elf Euro, bitte",
+            "why": "Kasse بـss بعد a القصيرة · dort بـt في آخرها · Elf بـf."
+          },
+          {
+            "audioId": "ko-20",
+            "speakText": "Hier, bitte. Und ich möchte für morgen reservieren!",
+            "a": "Hier, bitte. Und ich möchte für morgen reservieren!",
+            "why": "möchte … reservieren: المصدر في الآخر · reservieren بـv تُنطق «ف» مجهورة وie طويلة."
+          },
+          {
+            "audioId": "word-haehnchen",
+            "speakText": "Hähnchen.",
+            "a": "Hähnchen",
+            "why": "das Hähnchen: ä طويلة بعد h الصامتة في الكتابة (ähn) · وchen تصغير ← das دائماً."
+          },
+          {
+            "audioId": "word-mahlzeit",
+            "speakText": "Mahlzeit.",
+            "a": "Mahlzeit",
+            "why": "die Mahlzeit: h صامتة تُطيل a · z «تس» · والجمع die Mahlzeiten — وMahlzeit! وحدها تحية الظهر في أماكن العمل في ألمانيا."
           }
         ],
         "interleavedWith": [
-          "scharf",
-          "zahlen"
+          "hunger",
+          "kaffee",
+          "kuchen",
+          "morgen"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Bestellung im Café abschließen",
-        "ar": "إكمال طلب في مقهى"
+        "de": "Eine Limonade, bitte! — Nein, danke, keine Sahne.",
+        "ar": "تلعب مع زميلك طلباً كاملاً في مقهى: مشروب وطعام وحلوى، وترفض صنفين بلطف"
       },
       "situation": {
-        "de": "Im Café: bestellen, verneinen, zahlen",
-        "ar": "في المقهى: الطلب والنفي والدفع"
+        "de": "Ich bin der Gast, und du kochst. Jetzt du!",
+        "ar": "في الدورة: أحدكما صاحب المقهى الذي يطبخ والآخر الزبون بصيغة Sie: يطلب الزبون مشروباً وطعاماً وحلوى، ويرفض صنفين بلطف (Nein, danke, keine …)، ويرفض شيئاً معيّناً بـnicht (Ich trinke den … nicht. · Das ist nicht mein …)، ثم يدفع عند الصندوق ويحجز للغد — ثم تتبادلان الدورين."
       },
       "successCriteria": [
-        "طلب كامل (مشروب + طعام) + نفيان مهذبان (kein + اسم) + جملة zahlen عند Kasse"
+        "طلب كامل: مشروب + طعام + حلوى (Eine Limonade, bitte. · Das Hähnchen, bitte. · Ich probiere den Kuchen.).",
+        "رفضان مهذبان بـkein (Nein, danke, keine …) + جملة nicht لمعيّن أو ملكية (Ich trinke den Kaffee nicht. · Das ist nicht mein Kaffee.)."
       ]
     }
   },
@@ -148,20 +482,59 @@
       {
         "items": [
           {
-            "q": "«أنا عطشان»؟",
-            "a": "Ich habe Durst."
+            "q": "«هذا ليس كأسي»؟",
+            "choices": [
+              "Das ist nicht mein Glas.",
+              "Das ist kein mein Glas.",
+              "Das ist nicht meinen Glas."
+            ],
+            "a": "Das ist nicht mein Glas.",
+            "why": "كلمة الملكية mein ⇒ nicht قبلها · لا kein مع mein · وdas Glas محايد ⇒ mein بلا نهاية."
           },
           {
-            "q": "«المطبخ»؟",
-            "a": "die Küche"
+            "q": "«لا أشرب الشاي» (هذا الشاي)؟",
+            "choices": [
+              "Ich trinke den Tee nicht.",
+              "Ich trinke den Tee kein.",
+              "Ich nicht trinke den Tee."
+            ],
+            "a": "Ich trinke den Tee nicht.",
+            "why": "den Tee معيّن ⇒ nicht في آخر الجملة · الفعل ثانياً · وkein لا تأتي في الآخر."
           },
           {
-            "q": "«كمقبلات سلطة»؟",
-            "a": "Als Vorspeise einen Salat, bitte."
+            "q": "«الملح» بالألمانية مع الأداة؟",
+            "a": "das Salz",
+            "why": "das Salz محايد (مادة) · ونفيه: kein Salz."
           },
           {
-            "q": "«أدفع عند الصندوق»؟",
-            "a": "Ich zahle an der Kasse."
+            "q": "«لستُ عطشاناً»؟",
+            "choices": [
+              "Ich habe keinen Durst.",
+              "Ich bin nicht Durst.",
+              "Ich habe keine Durst."
+            ],
+            "a": "Ich habe keinen Durst.",
+            "why": "Durst اسم مع haben (كـHunger) والمذكر مفعولاً ⇒ keinen · لا sein كـ«لستُ عطشاناً»."
+          },
+          {
+            "q": "die Sahne = ؟",
+            "choices": [
+              "القشدة",
+              "السكر",
+              "الملح"
+            ],
+            "a": "القشدة",
+            "why": "die Sahne = القشدة · der Zucker = السكر · das Salz = الملح."
+          },
+          {
+            "q": "«يجرّب يوسف الحساء»؟",
+            "choices": [
+              "Yusuf probiert die Suppe.",
+              "Yusuf probieren die Suppe.",
+              "Yusuf probierst die Suppe."
+            ],
+            "a": "Yusuf probiert die Suppe.",
+            "why": "probieren مع er ← probiert (‑t) · probierst لـdu."
           }
         ],
         "passingScore": 0.75
@@ -169,20 +542,59 @@
       {
         "items": [
           {
-            "q": "«دجاجة بالبطاطا»؟",
-            "a": "Hähnchen mit Kartoffeln, bitte."
+            "q": "«هذه ليست قهوة!»؟",
+            "choices": [
+              "Das ist kein Kaffee!",
+              "Das ist keinen Kaffee!",
+              "Das ist keine Kaffee!"
+            ],
+            "a": "Das ist kein Kaffee!",
+            "why": "Kaffee بلا أداة هنا ⇒ kein، والمذكر بعد ist لا يتغير (لا keinen) · keine للمؤنث والجمع."
           },
           {
-            "q": "«الفلفل والملح»؟",
-            "a": "der Pfeffer und das Salz"
+            "q": "«لا أحب الكعكة» (هذه الكعكة)؟",
+            "choices": [
+              "Ich mag den Kuchen nicht.",
+              "Ich mag den Kuchen kein.",
+              "Ich mag keinen den Kuchen."
+            ],
+            "a": "Ich mag den Kuchen nicht.",
+            "why": "den Kuchen معيّن ⇒ nicht في الآخر · ولا kein مع den."
           },
           {
-            "q": "«أريد أن أحجز طاولة»؟",
-            "a": "Ich möchte einen Tisch reservieren."
+            "q": "«المطبخ» بالألمانية مع الأداة؟",
+            "a": "die Küche",
+            "why": "die Küche بـü وch كـich — غير der Kuchen (الكعكة)."
           },
           {
-            "q": "«لا آخذ كعكة» (نفي اسم)؟",
-            "a": "Ich nehme keinen Kuchen."
+            "q": "«ليس عندنا سكر»؟",
+            "choices": [
+              "Wir haben keinen Zucker.",
+              "Wir keinen haben Zucker.",
+              "Wir haben Zucker keinen."
+            ],
+            "a": "Wir haben keinen Zucker.",
+            "why": "Zucker بلا أداة ⇒ kein، والمذكر مفعولاً ⇒ keinen قبل الاسم مباشرة · والفعل ثانياً."
+          },
+          {
+            "q": "der Nachtisch = ؟",
+            "choices": [
+              "الحلوى (بعد الطعام)",
+              "المقبلات",
+              "الطبق الرئيسي"
+            ],
+            "a": "الحلوى (بعد الطعام)",
+            "why": "der Nachtisch = الحلوى بعد الطعام · die Vorspeise = المقبلات."
+          },
+          {
+            "q": "«يخبز يوسف كعكة»؟",
+            "choices": [
+              "Yusuf backt einen Kuchen.",
+              "Yusuf backst einen Kuchen.",
+              "Yusuf backen einen Kuchen."
+            ],
+            "a": "Yusuf backt einen Kuchen.",
+            "why": "backen مع er ← backt (وتُقال bäckt أيضاً) · backst لـdu."
           }
         ],
         "passingScore": 0.75
@@ -190,20 +602,59 @@
       {
         "items": [
           {
-            "q": "«ليموناضة من فضلك»؟",
-            "a": "Eine Limonade, bitte!"
+            "q": "«هذه ليست ملعقتك» (لصديق)؟",
+            "choices": [
+              "Das ist nicht dein Löffel.",
+              "Das ist kein dein Löffel.",
+              "Das ist nicht deinen Löffel."
+            ],
+            "a": "Das ist nicht dein Löffel.",
+            "why": "dein كلمة ملكية ⇒ nicht قبلها · وder Löffel بعد ist ⇒ dein بلا نهاية."
           },
           {
-            "q": "«الفواكه صحّية»؟",
-            "a": "Obst ist gesund."
+            "q": "«لا آكل السلطة» (هذه السلطة)؟",
+            "choices": [
+              "Ich esse den Salat nicht.",
+              "Ich esse den Salat kein.",
+              "Ich nicht esse den Salat."
+            ],
+            "a": "Ich esse den Salat nicht.",
+            "why": "den Salat معيّن ⇒ nicht في الآخر · والفعل ثانياً لا بعد nicht."
           },
           {
-            "q": "«جرّب هذا!»؟",
-            "a": "Probieren Sie das!"
+            "q": "«السكر» بالألمانية مع الأداة؟",
+            "a": "der Zucker",
+            "why": "der Zucker مذكر بلا جمع في العادة · ونفيه: keinen Zucker."
           },
           {
-            "q": "Hähnchen — der أم das?",
-            "a": "das (قاعدة -chen = دائماً das)"
+            "q": "«لسنا جائعين»؟",
+            "choices": [
+              "Wir haben keinen Hunger.",
+              "Wir sind nicht Hunger.",
+              "Wir haben keine Hunger."
+            ],
+            "a": "Wir haben keinen Hunger.",
+            "why": "Hunger اسم مع haben ⇒ keinen (المذكر مفعولاً) · لا sein كالعربية «لسنا جائعين»."
+          },
+          {
+            "q": "die Kasse = ؟",
+            "choices": [
+              "الصندوق (للدفع)",
+              "المطبخ",
+              "الحساب"
+            ],
+            "a": "الصندوق (للدفع)",
+            "why": "die Kasse = صندوق الدفع · die Küche = المطبخ · die Rechnung = الحساب."
+          },
+          {
+            "q": "«أريد أن أحجز للغد»؟",
+            "choices": [
+              "Ich möchte für morgen reservieren.",
+              "Ich möchte für morgen reserviere.",
+              "Ich möchtest für morgen reservieren."
+            ],
+            "a": "Ich möchte für morgen reservieren.",
+            "why": "möchte + المصدر في الآخر (reservieren لا reserviere) · möchtest لـdu."
           }
         ],
         "passingScore": 0.75
@@ -212,53 +663,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Deine Café-Bestellung: Tee mit Zucker, als Vorspeise Suppe, Hähnchen mit Kartoffeln, kein Nachtisch — und an der Kasse zahlen!",
-      "ar": "طلبك في المقهى: شاي بالسكر، مقبلات حساء، دجاجة بالبطاطا، بلا حلوى ختامية — والدفع عند الصندوق!"
+      "de": "Ich möchte keinen Kaffee. · Ich trinke den Kaffee nicht. · Das ist kein Kaffee. · Das ist nicht mein Kaffee. · Nein, danke, keine Sahne. · Ich habe keinen Durst.",
+      "ar": "انظر إلى ما قبل الاسم: ein أو لا شيء ⇒ kein (Ich möchte keinen Kaffee. · Wir haben keine Sahne.)، وder/die/das ⇒ nicht في آخر الجملة (Ich trinke den Kaffee nicht.)، وmein/dein/sein ⇒ nicht قبلها (Das ist nicht mein Kaffee.) — وقارن Das ist kein Kaffee (ليست قهوة أصلاً). والرفض المهذب: Nein, danke, keine Vorspeise. · وDurst/Hunger اسمان مع haben: Ich habe keinen Durst. · وdie Küche (المطبخ) غير der Kuchen (الكعكة)."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich bin Durst.~~ / ~~Ich habe satt.~~",
-          "ar": "Durst/Hunger = haben · satt = sein"
+          "de": "~~Das ist kein mein Kaffee.~~",
+          "ar": "kein قبل كلمة الملكية — ونفيها nicht"
         },
-        "whyArabicSpeakerFails": "العطش والجوع «حالات» بالعربية تُخبر بـ«أنا»؛ الألماني يمتلكهما (habe) لكن الشبع صفة مع ist — ثلاث كلمات ثلاثة أفعال (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "في الكلام اليومي حرفٌ واحد للحالتين: «موش قهوة» و«موش قهوتي» في تونس، و«ليست قهوةً» و«ليست قهوتي» في الفصحى — فيضع المتعلم الكلمة التي تعلّمها أمس للاسم (kein) قبل كلمة الملكية. والألمانية تنظر إلى ما قبل الاسم: mein تعيّن الاسم كما تعيّنه «ال» أو ياء المتكلم، فنفيه nicht قبلها: Das ist nicht mein Kaffee — أما ما بلا أداة فـkein: Das ist kein Kaffee (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich habe Durst / Hunger. Ich bin satt.",
-          "ar": "عندي عطش/جوع. أنا شبعان."
+          "de": "Das ist nicht mein Kaffee.",
+          "ar": "هذه ليست قهوتي."
         },
         "exercise": {
-          "q": "أكمل: Ich ___ Durst. Ich ___ Hunger. Ich ___ satt.",
-          "a": "habe / habe / bin"
+          "q": "صحّح: ~~Das ist kein dein Teller.~~",
+          "a": "Das ist nicht dein Teller."
         }
       },
       {
         "commonError": {
-          "de": "~~der Hähnchen~~ / ~~das Hähnchen~~?",
-          "ar": "-chen = دائماً das"
+          "de": "~~Ich trinke nicht den Kaffee.~~",
+          "ar": "nicht بعد الفعل مباشرة — ومكانها آخر الجملة"
         },
-        "whyArabicSpeakerFails": "«دجاجة» مؤنث بالعربية؛ الألماني يصغّر كل شيء بـ‑chen والتصغير دائماً محايد — القاعدة تعمّ حتى الأشخاص (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "بالعربية «لا أشربُ القهوةَ»: النفي ملاصق للفعل، والفرنسية je ne bois pas le café تضع pas بعد الفعل وقبل المفعول — فيضع المتعلم nicht بعد trinke مباشرة. والألمانية حين تنفي الجملة كلها تؤخّر nicht إلى آخرها، بعد المفعول المعيّن: Ich trinke den Kaffee nicht. — وnicht قبل المعرّف مباشرة للمقابلة بين شيئين فقط («لا القهوةَ بل الشاي»)، وهذا باب لاحق (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "das Hähnchen (−chen = das)",
-          "ar": "كل تصغير = das"
+          "de": "Ich trinke den Kaffee nicht.",
+          "ar": "لا أشرب هذه القهوة."
         },
         "exercise": {
-          "q": "حدّд: Hähnchen (der/die/das)?",
-          "a": "das"
+          "q": "صحّح: ~~Ich esse nicht das Hähnchen.~~",
+          "a": "Ich esse das Hähnchen nicht."
         }
       },
       {
         "commonError": {
-          "de": "~~Ich nehme nicht Kuchen.~~ / ~~Ich nehme kein scharf.~~",
-          "ar": "kein↔nicht: الاسم أم الباقي"
+          "de": "~~Ich bin nicht Durst.~~",
+          "ar": "«لستُ عطشاناً» صفة — وDurst اسم مع haben ونفيه keinen"
         },
-        "whyArabicSpeakerFails": "«لا آخذ كعكة» و«هذا ليس حاراً» يبدآن بـ«لا/ليس» معاً؛ الألماني: kein قبل الاسم وnicht قبل الفعل/الصفة — التمييز الختامي للوحدة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "بالعربية «لستُ عطشاناً» — وفي تونس «ما نيش عطشان»: «عطشان» صفة تُخبر عن «أنا»، فيُنفى بـnicht مع sein. والألمانية تجعل العطش اسماً مع haben (Ich habe Durst — كما Hunger haben)، والاسم بلا أداة نفيه kein، والمذكر مفعولاً keinen: Ich habe keinen Durst. — تغييران معاً (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich nehme keinen Kuchen. / Das ist nicht scharf.",
-          "ar": "kein + اسم · nicht + فعل/صفة."
+          "de": "Ich habe keinen Durst.",
+          "ar": "لستُ عطشاناً."
         },
         "exercise": {
-          "q": "أكمل: Ich nehme ___ Kuchen. Das ist ___ scharf.",
-          "a": "keinen / nicht"
+          "q": "صحّح: ~~Lena ist nicht Hunger.~~",
+          "a": "Lena hat keinen Hunger."
         }
       }
     ],
@@ -284,18 +735,23 @@
   },
   "gReferences": {
     "duden": [
-      "https://www.duden.de/rechtschreibung/Durst",
       "https://www.duden.de/rechtschreibung/Haehnchen",
-      "https://www.duden.de/rechtschreibung/Kasse"
+      "https://www.duden.de/rechtschreibung/Nachtisch",
+      "https://www.duden.de/rechtschreibung/Vorspeise",
+      "https://www.duden.de/rechtschreibung/Mahlzeit"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/reservieren"
+      "https://de.wiktionary.org/wiki/kein",
+      "https://de.wiktionary.org/wiki/nicht",
+      "https://de.wiktionary.org/wiki/K%C3%BCche",
+      "https://de.wiktionary.org/wiki/Kuchen"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
   },
   "usedArsenalIds": [
-    "ars-kein-nicht",
-    "ars-moechte-wollen"
+    "ars-kein-nicht-2"
   ],
   "audioManifestRefs": [
     "word-durst",
@@ -321,7 +777,16 @@
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Im Café (Bestellung abschließen)",
     "goetheWordListOverlap": [
       "durst",
-      "kochen"
+      "salz",
+      "zucker",
+      "haehnchen",
+      "kasse",
+      "reservieren",
+      "probieren",
+      "kochen",
+      "backen",
+      "kueche",
+      "gesund"
     ]
   }
 }

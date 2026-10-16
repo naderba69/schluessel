@@ -686,8 +686,63 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u5-d5 (D145): kein قبل الملكية (~~Das ist kein mein Kaffee.~~) · nicht بعد الفعل مباشرة (~~Ich trinke nicht den Kaffee.~~) · «لستُ عطشاناً» (~~Ich bin nicht Durst.~~) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u5-d5")!;
+    const [poss, pos, durst] = u.zusammenfassung.warningCards;
+    expect(poss!.commonError.de).toBe("~~Das ist kein mein Kaffee.~~");
+    expect(poss!.correct.de).toBe("Das ist nicht mein Kaffee.");
+    // «موش قهوة/موش قهوتي» و«ليست قهوةً/ليست قهوتي»: حرف واحد للحالتين + kein الأمس للاسم — وmein تعيّن الاسم كـ«ال»
+    expect(poss!.whyArabicSpeakerFails).toContain("«موش قهوة» و«موش قهوتي»");
+    expect(poss!.whyArabicSpeakerFails).toContain("كما تعيّنه «ال» أو ياء المتكلم");
+    expect(poss!.exercise).toMatchObject({ a: "Das ist nicht dein Teller." });
+    expect(pos!.commonError.de).toBe("~~Ich trinke nicht den Kaffee.~~");
+    expect(pos!.correct.de).toBe("Ich trinke den Kaffee nicht.");
+    // «لا أشربُ القهوةَ» والفرنسية je ne bois pas le café — والإعلان الصادق: nicht قبل المعرّف للمقابلة فقط (فليست خطأً بكل قراءة)
+    expect(pos!.whyArabicSpeakerFails).toContain("«لا أشربُ القهوةَ»");
+    expect(pos!.whyArabicSpeakerFails).toContain("je ne bois pas le café");
+    expect(pos!.whyArabicSpeakerFails).toContain("للمقابلة بين شيئين فقط");
+    expect(pos!.exercise).toMatchObject({ a: "Ich esse das Hähnchen nicht." });
+    expect(durst!.commonError.de).toBe("~~Ich bin nicht Durst.~~");
+    expect(durst!.correct.de).toBe("Ich habe keinen Durst.");
+    expect(durst!.whyArabicSpeakerFails).toContain("«ما نيش عطشان»");
+    expect(durst!.exercise).toMatchObject({ a: "Lena hat keinen Hunger." });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: ~~Ich bin Durst.~~/~~Ich habe satt.~~ (تكرار D141/D143 بادعاء «حالات») · ~~der Hähnchen~~ (قاعدة ‑chen من u2-d3) · ~~Ich nehme nicht Kuchen.~~ (nehmen u7-d4)
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/~~Ich habe satt|~~der Hähnchen|nehme/);
+    // لا Dativ بأداة (an der Kasse) · لا zum · لا es gibt · لا nehmen (u7-d4) · لا Tisch (u6-d1) · لا als · لا أمر Sie · لا صفة مُسمّاة (nichts Scharfes) · ولا das Café (الوحدة 13 — خطة D113)
+    const de = JSON.stringify({ e: u.einstieg, s: u.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "" }))), q: u.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "" }))), z: u.zusammenfassung.summary.de, w: u.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise]) });
+    expect(de).not.toMatch(/\b(von|mit|in|zu|an) (dem|der|meinem|meiner|deinem|deiner|seinem|seiner|ihrem|ihrer|einem|einer)\b|\bzur\b|\bzum\b|\bgibt\b|\bnehme|\bnimmt\b|\bTisch\b|\bals\b|Probieren Sie|Scharfes|Café|sondern|\bdir\b/i); // \bTisch\b: Nachtisch كلمة اليوم
+    // N-069: يوسف لا يطلب الكحول ولا الخنزير
+    const sentences = de.split(/[.!?"]/);
+    expect(sentences.filter((x) => /\b(Yusuf|Ich|ich)\b/.test(x) && /\b(Bier|Wein|Wurst)\b/.test(x))).toEqual([]);
+    // N-021: أمثلة البطاقات بلا أسماء علم · وD108: لا نص رسمي حرفي (Ich habe großen Durst · Zahlen Sie bitte an der Kasse · Ein Hähnchen mit Pommes)
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    const ids = ["durst", "salz", "pfeffer", "zucker", "sahne", "limonade", "haehnchen", "nachtisch", "vorspeise", "kasse", "reservieren", "probieren", "kochen", "backen", "kueche", "gesund", "mahlzeit"];
+    expect(ids.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin/);
+    expect(ids.map(sample)).toEqual([
+      "Ich habe Durst!", "Salz und Pfeffer, bitte!", "Der Pfeffer ist scharf.", "Kaffee mit Zucker, bitte.", "Kuchen mit Sahne, bitte.", "Eine Limonade, bitte!",
+      "Hähnchen mit Kartoffeln, bitte.", "Möchten Sie einen Nachtisch?", "Nein, danke, keine Vorspeise.", "Die Kasse ist dort.", "Ich möchte für morgen reservieren.",
+      "Ich probiere den Kuchen.", "Ich koche Suppe.", "Die Mutter backt Kuchen.", "Die Küche ist klein.", "Obst ist gesund.", "Wir essen drei Mahlzeiten.",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا nicht + اسم مادة/جمع/معرّف مباشرة (صحيحة في المقابلة) · لا «nicht mein …» مشتِّتاً حين الإجابة kein
+    // (صحيحة بمعنى آخر) · لا «kein Zucker/Hunger» (عامية مسموعة) · لا «reservieren für morgen» (إخراج الجار صحيح في الكلام)
+    const choiceTexts = [...u.einstieg.pretestItems.flatMap((p) => p.choices), ...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (typeof i === "string" ? [i] : Array.isArray((i as { choices?: unknown }).choices) ? ((i as { choices: string[] }).choices) : []));
+    const german = choiceTexts.filter((c) => !/[\u0600-\u06FF]/.test(c));
+    expect(german.filter((c) => /\bnicht (den|die|das|Kaffee|Zucker|Sahne|Salz|Tee|Kuchen)\b|\bkein (Zucker|Hunger|Durst)\b|reservieren für/.test(c))).toEqual([]);
+    for (const it of u.quiz.variants.flatMap((v) => v.items)) {
+      if (Array.isArray(it.choices) && /\bkein\b/.test(String(it.a))) expect(it.choices.filter((c) => /\bnicht (mein|dein|sein)\b/.test(String(c)))).toEqual([]);
+    }
+    expect(choiceTexts.length).toBeGreaterThan(30);
+    // الاستدعاء من دروس سابقة (der Kuchen ↔ die Küche · mein · der Hunger) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || ["a1-u5-d1", "a1-u5-d2", "a1-u5-d3", "a1-u5-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["kuchen", "mein", "hunger"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || ["a1-u5-d1", "a1-u5-d2", "a1-u5-d3", "a1-u5-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة (d6 توليف بلا كلمات جديدة)
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute"]);
     for (const w of pluralOnly) expect([w.id, w.gender, w.srsCardTypes.includes("gender")]).toEqual([w.id, "none", false]);

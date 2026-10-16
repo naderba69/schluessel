@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-kein-nicht-2",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Ich möchte keinen Kaffee. · Ich trinke den Kaffee nicht. · Das ist nicht mein Kaffee.",
+    "ar": "التمييز بين kein وnicht: انظر إلى ما قبل الاسم — ein أو لا شيء ⇒ kein · der/die/das أو mein/dein/sein ⇒ nicht — وموضع nicht"
+  },
+  "payload": {
+    "topicAr": "أمس: kein للاسم الذي يأتي بـein أو بلا أداة، وnicht للصفة والفعل. اليوم تكمل السؤال بالنظر إلى ما قبل الاسم: الاسم المعيّن (der/die/das) والاسم بكلمة ملكية (mein/dein/sein) يُنفيان بـnicht لا بـkein: Ich möchte keinen Kaffee (أيّ قهوة) ↔ Ich trinke den Kaffee nicht (هذه القهوة بعينها) · Das ist kein Kaffee (ليس قهوةً أصلاً) ↔ Das ist nicht mein Kaffee (قهوة، لكن ليست قهوتي). وفي المقهى ترفض بلطف: Nein, danke, keine Sahne.",
+    "sceneAr": "مهمة الوحدة الأخيرة في الدورة عبر الإنترنت: طلب كامل في مقهى بصيغة Sie. لينا صاحبة مقهى صغير تطبخ وتخبز وتخدم، ويوسف الزبون: يطلب ليموناضة لأنه عطشان، ويرفض المقبلات بلطف، ويأكل دجاجاً بالأرز بلا ملح حتى تأتيه بالملح والفلفل، ثم يجرّب كعكتها بلا قشدة مع قهوة بلا سكر — فتأتيه قهوة حلوة فلا يشربها، حتى تبدّلها. يمدح الكعكة والمطبخ، ويدفع عند الصندوق، ويحجز للغد.",
+    "examples": [
+      {
+        "de": "Ich möchte keinen Kaffee. · Ich trinke den Kaffee nicht.",
+        "ar": "لا أريد قهوة (أيّ قهوة) · لا أشرب هذه القهوة — قبل الاسم einen أو لا شيء ⇒ keinen · قبله den ⇒ nicht في آخر الجملة"
+      },
+      {
+        "de": "Das ist kein Kaffee! · Das ist nicht mein Kaffee.",
+        "ar": "هذه ليست قهوة! · هذه ليست قهوتي — kein ينفي «قهوة» نفسها · ومع كلمة الملكية mein ⇒ nicht قبلها"
+      },
+      {
+        "de": "Wir haben keine Sahne. · Die Sahne ist nicht frisch.",
+        "ar": "ليس عندنا قشدة · القشدة ليست طازجة — بلا أداة ⇒ keine · والصفة ⇒ nicht"
+      },
+      {
+        "de": "Nein, danke, keine Vorspeise. · Das Hähnchen hat kein Salz.",
+        "ar": "الرفض المهذب: Nein, danke + kein … · وkein للمادة أيضاً (das Salz)"
+      },
+      {
+        "de": "Ich mag den Kuchen nicht. · Ich backe heute nicht.",
+        "ar": "لا أحبّ هذه الكعكة · لا أخبز اليوم — المعرّف والفعل ⇒ nicht في آخر الجملة"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) Ich möchte keinen Kaffee وIch trinke den Kaffee nicht: ما الكلمة قبل Kaffee في كلٍّ؟ ومتى kein ومتى nicht؟ (2) Das ist kein Kaffee وDas ist nicht mein Kaffee: ماذا ننفي في كلٍّ — أن تكون قهوة، أم أن تكون «لي»؟ (3) أين nicht في Ich trinke den Kaffee nicht؟ وفي Die Sahne ist nicht frisch؟ (4) بالعربية «لا قهوةَ عندنا» (لا النافية للجنس) و«ليست قهوتي»: هل تصلح «لا» النافية للجنس مع «قهوتي» أو «القهوة»؟ (5) في المقهى: كيف ترفض صنفين بلطف؟",
+    "ruleDe": "keinen Kaffee ↔ den Kaffee nicht · kein Kaffee ↔ nicht mein Kaffee · keine Sahne ↔ Die Sahne ist nicht frisch. — Ich trinke den Kaffee nicht. · Das ist nicht mein Kaffee. · Nein, danke, keine Vorspeise.",
+    "ruleAr": "انظر إلى ما قبل الاسم ثم اختر: (1) ein أو لا شيء ⇒ kein (من أمس، وتتصرّف كـein): Ich möchte keinen Kaffee. · Wir haben keine Sahne. · Das Hähnchen hat kein Salz. (2) der/die/das ⇒ الاسم معيّن، فنفيه nicht — وتأتي في آخر الجملة البسيطة بعد المفعول: Ich trinke den Kaffee nicht. · Ich mag den Kuchen nicht. (3) mein/dein/sein (كلمة ملكية) ⇒ nicht قبلها بعد ist: Das ist nicht mein Kaffee. — وقارن: Das ist kein Kaffee (ليست قهوة أصلاً) ↔ Das ist nicht mein Kaffee (قهوة لكنها ليست لي). (4) الصفة والفعل ⇒ nicht كما أمس: Die Sahne ist nicht frisch. · Ich backe heute nicht. (5) الرفض المهذب في المقهى بلا فعل: Nein, danke. · Nein, danke, keine Sahne. · Nein, danke, ich möchte nichts.",
+    "contrastAr": "ما يساعدك اثنان: (1) العربية تفرّق التفريق نفسه في جزء منه: «لا» النافية للجنس لا تدخل إلا على النكرة — «لا قهوةَ عندنا» — كما لا تدخل kein إلا على النكرة أو ما بلا أداة: keinen Kaffee؛ أما المعرفة («القهوة» · «قهوتي») فتُنفى بـ«ليس» أو بنفي الفعل: «ليست قهوتي» · «لا أشربُ القهوةَ» — كما تُنفى بـnicht: nicht mein Kaffee · den Kaffee nicht. (2) «لا، شكراً» = Nein, danke — الرفض المهذب نفسه. وما يختلف اثنان: (1) في الكلام اليومي حرف واحد للحالتين: «موش قهوة» و«موش قهوتي» في تونس، و«ليست قهوةً» و«ليست قهوتي» في الفصحى — فيضع المتعلم الكلمة التي تعلّمها أمس للاسم (kein) قبل كلمة الملكية: ~~Das ist kein mein Kaffee.~~ والألمانية: كلمة الملكية تعيّن الاسم كـ«ال» فنفيه nicht: Das ist nicht mein Kaffee. (2) «لا أشربُ القهوةَ»: النفي ملاصق للفعل — وكذلك الفرنسية je ne bois pas le café (pas بعد الفعل وقبل المفعول) — فيضع المتعلم nicht بعد الفعل مباشرة: ~~Ich trinke nicht den Kaffee.~~ والألمانية تؤخّر nicht إلى آخر الجملة حين تنفي الجملة كلها: Ich trinke den Kaffee nicht — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "nicht قبل الاسم المعرّف مباشرة (nicht den Kaffee) لا تأتي إلا حين تقابل بين شيئين («لا القهوةَ بل الشاي») — بابٌ لاحق؛ واليوم: nicht في آخر الجملة.",
+      "الأسماء التي لا تأتي إلا بلا أداة في العادة (Durst · Hunger · Zeit) تُنفى بـkein: Ich habe keinen Durst. · Wir haben keine Zeit. — و~~Ich bin nicht Durst.~~ خطأ (Durst اسم مع haben، كما Hunger).",
+      "die Küche (المطبخ) غير der Kuchen (الكعكة) وkochen (يطبخ): ü في Küche حركة أمامية مدوّرة لا مقابل لها في العربية، وch بعدها «ich»، أما Kuchen فـu طويلة وch «ach» — والجمع die Küchen (المطابخ) غير die Kuchen (الكعكات).",
+      "كلمة «المقهى» نفسها تأتي في الوحدة 13 (خطة D113) — فالمهمة هنا بلا اسمها: Ich bin der Gast, und du kochst."
+    ],
+    "beads": [
+      "Ich",
+      "trinke",
+      "den",
+      "Kaffee",
+      "nicht."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u5-d5"
+  ]
+}
