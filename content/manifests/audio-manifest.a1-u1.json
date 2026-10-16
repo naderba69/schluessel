@@ -7118,11 +7118,11 @@
       "lessonRefs": [
         "a1-u6-d5"
       ],
-      "durationMs": 1036,
-      "sizeBytes": 4774,
-      "hash": "sha256:06097f32ebbb10c95f523f466968d0518d93f77581834e6db711d046ee84d413",
-      "pcmSha256": "9a5ee0894c24d4b3dbf913768d03175defe17a70f4432907240d4c9c29b75e6c",
-      "rmsDb": -17.06
+      "durationMs": 931,
+      "sizeBytes": 4536,
+      "hash": "sha256:fb7ef55f5abcfdb92d20f675cd9beb3da57c037cb70316aea67e0bb70199d80e",
+      "pcmSha256": "bd28ead474e438e15b1ddba2565d62321c023615d67fe7bff859f4269a46f0cc",
+      "rmsDb": -17.04
     },
     {
       "id": "word-seife",
@@ -7338,11 +7338,11 @@
       "lessonRefs": [
         "a1-u6-d5"
       ],
-      "durationMs": 850,
-      "sizeBytes": 4041,
-      "hash": "sha256:a46ee5f68c53fad8179f2fcd8ab11806435b89b969b3140e57ae19e873fe5d96",
-      "pcmSha256": "ec929edf2afe9fc1aa4526c94a732266d76372aff5dc38aec01ba2afb460c64c",
-      "rmsDb": -16.97
+      "durationMs": 804,
+      "sizeBytes": 3843,
+      "hash": "sha256:db10ccddad2716b3ca78fba7f1e36eb8ed73c9d034e3fd3c419b11e88c20abe4",
+      "pcmSha256": "df23edd19277a1545c29dafbf35d76d94d9fb70caa9bbbe7ca310ea03c7ca617",
+      "rmsDb": -16.99
     },
     {
       "id": "word-aufwachen",
@@ -16687,6 +16687,26 @@
       "hash": "sha256:6617dc60fbd6190c707fab88d2f900dc75da5194ffe0da4dc6a20e28e7028623",
       "pcmSha256": "27546d1492efaf8359f16fbe311b919d1cbde7c1097b58280bacd51a0c37c9b0",
       "rmsDb": -17.16
+    },
+    {
+      "id": "word-darauf",
+      "file": "words/audio/de-DE/word-darauf.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "darauf.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 1036,
+      "sizeBytes": 4736,
+      "hash": "sha256:e308a22e4506e0979a1bf060259e39b90771ef5c15f88c80c70bbc0074cd5fb1",
+      "pcmSha256": "1c7a32bd6b7a2e98e62f36a7af8781f731749455103d04db043e7b2ea23632e9",
+      "rmsDb": -17.32
     },
     {
       "id": "mueller-announce-01",
@@ -28754,6 +28774,446 @@
       "hash": "sha256:1f8bd93a29b5ce9de5011c4d3cbe77621e4cb48f7d8f1f0e79d096d7e5791fb1",
       "pcmSha256": "ffd8b35b2db477823593311266c62af5eedd713dc1bf06de3f4054416c686cb0",
       "rmsDb": -17.13
+    },
+    {
+      "id": "mw-1",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 117,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo, Yusuf! Heute beschreibst du deine Wohnung — das ist die Aufgabe.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 5640,
+      "sizeBytes": 26079,
+      "hash": "sha256:3d9173ffeb08418842b2dd8ef172fd3e326aa676469dab19b1ba77071cbf3a50",
+      "pcmSha256": "de30dd95a4c3fbd2470bccca99ea3ac0ca768c5c003c1c61c4b5a46c82dfdc60",
+      "rmsDb": -17.44
+    },
+    {
+      "id": "mw-2",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Okay! Das Haus hat sechs Stockwerke, und meine Wohnung ist oben.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 4565,
+      "sizeBytes": 20810,
+      "hash": "sha256:8003ad2f6eeb35d342a9fcbbe8bc61f4614d75164d0749e6d012ce8055db97de",
+      "pcmSha256": "33eb2c702433c6b6f6a1ca2394c894c10eac121bd877b91b4a30da6de36214d5",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "mw-3",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sechs Etagen? Und hinter dem Haus — was ist da?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 3848,
+      "sizeBytes": 17874,
+      "hash": "sha256:360e01b27cd5fa550355e8f715ccf2ad6858e071fbcd44f96415c1038c7c6d6b",
+      "pcmSha256": "beb0cfec9fb36ea93be62f7770d1b08904fbc1ccfad5e49ee4552bc9feb1c2a9",
+      "rmsDb": -17.29
+    },
+    {
+      "id": "mw-4",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 172,
+        "lengthScale": 1.32
+      },
+      "textDe": "Dahinter ist ein Hof. Er ist klein und ein bisschen dunkel.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 3834,
+      "sizeBytes": 17444,
+      "hash": "sha256:687f85ce3d30ae2e10d33b1dc3f270c44434c631ea1f6c0232b2e3c736f3de27",
+      "pcmSha256": "0b6a7388adb9c9003d106565cd3857959112d2ef479f53804d996d8ee9c4b99f",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "mw-5",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 205,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Miete? Ist sie hoch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 1752,
+      "sizeBytes": 8401,
+      "hash": "sha256:2e53ae8338d977331e8e6d6f5ef077e6a8121ed378d27cf6e23f277b19527953",
+      "pcmSha256": "d05ab18b14a3081372b573b9cbc753d571175af300fea3072e771eeee2d89f02",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "mw-6",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, sehr hoch — das ist Berlin!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 3010,
+      "sizeBytes": 13990,
+      "hash": "sha256:bfc3f714ed3298eec1ee22fe759684fd68f09bb1e2eb78e2d49e3d388c396795",
+      "pcmSha256": "79713fe4b315fec20a3cab080a2df26c0f783bf99ed04086b1f1fe29b89e945f",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "mw-7",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Nachbarn? Sind sie nett?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 2536,
+      "sizeBytes": 12017,
+      "hash": "sha256:2f214429ea645142ccb6b49f6746bdc63ea64dd917941eeeb58e4d0e1101788f",
+      "pcmSha256": "1aa064ac9a6092344a57e59ddb9ce09e72e3c0bb48c887a8549bc3e9454ecc76",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "mw-8",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 156,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Nachbar links ist nett. Aber rechts ist es oft laut!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 4229,
+      "sizeBytes": 18291,
+      "hash": "sha256:25071f5e1107e544636de31bc196cfe26d01300f3644ca7f16df57c5a9d32fb6",
+      "pcmSha256": "735ba5810f9de76f50a555c1672d28bf0de2d4ad05457d8769aaef32b7d59e1c",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "mw-9",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 164,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und dein Zimmer? Sind die Möbel jetzt da?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 2920,
+      "sizeBytes": 13705,
+      "hash": "sha256:16afa06de12211e6ee82d7ece08b5177925b7b2419c9f958b921efccf4098f10",
+      "pcmSha256": "fe6e07ed00d8b87e748f033899ec3ee5044dac0ad79b45d3f6a5dada6160486a",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "mw-10",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, die Einrichtung ist fertig! Da ist der Tisch, und darauf steht eine Vase.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 5285,
+      "sizeBytes": 23945,
+      "hash": "sha256:d9f307775ccbbfa4c71d77c31dc99ffbd749e84e7127eb898e3a326d851fe528",
+      "pcmSha256": "9c823a02defc68043638ba7d2bc332cb12bd3fbf8fb88f57326d2edd2080a280",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "mw-11",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 157,
+        "lengthScale": 1.32
+      },
+      "textDe": "Eine Vase! Und was ist darin?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 2296,
+      "sizeBytes": 10772,
+      "hash": "sha256:e4c132775df84753780e57b99377319e0fd4bc8cd2e1e8cd121d23091fd22abb",
+      "pcmSha256": "a4ea6291ed4baa81ee5e2c664ea839f3eaeb3c07853398d9b3692cc4222bfdaa",
+      "rmsDb": -17.41
+    },
+    {
+      "id": "mw-12",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nur Wasser — sie ist noch neu!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 2777,
+      "sizeBytes": 12257,
+      "hash": "sha256:44f34bdc11550c51f51511a817b5d1d1ff47c174439f951ca11de6eeba0de7c2",
+      "pcmSha256": "c8f0e0dd03e404e714fdfc4f41a81776cf155728f0e88d46483cde2f5519faac",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "mw-13",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und das Foto aus Tunesien? Hängt es noch über dem Bett?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 4136,
+      "sizeBytes": 19245,
+      "hash": "sha256:19e75d71aab42869dcc353a03c989615c079e340e5801683f664a289458af509",
+      "pcmSha256": "9e0fc3122b0f02dbc09917b62bed9bc1a8111d60cbf2a28ba64813146ed533e4",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "mw-14",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, es hängt darüber — und jetzt hat es einen Rahmen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 3776,
+      "sizeBytes": 17515,
+      "hash": "sha256:7bed179217244c09ed9c49f7a59fcbd01f5d3007befe1c3d88d9cccf1df48220",
+      "pcmSha256": "9ef01b3b25eb02814d7ac80832fb9aa7aae5c3c8c91a17c0d9251076e28c2422",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "mw-15",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 115,
+        "lengthScale": 1.32
+      },
+      "textDe": "Schön! Und wie ist das Badezimmer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 3144,
+      "sizeBytes": 14578,
+      "hash": "sha256:2708f7e37e9e6492a1f72f214640fa803cad00a8e6520ea3e3fea5fe2af5f96d",
+      "pcmSha256": "b4e8dc1a3f10463657976fe0df5d183fc94ebf423e9dd75523060c15fadf1e24",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "mw-16",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Klein. Links ist die Dusche, rechts die Toilette.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 3683,
+      "sizeBytes": 16504,
+      "hash": "sha256:8d4b284d617114729309126c645aaeec545bb9f0218234b167af4a2d61f1f0d4",
+      "pcmSha256": "a66e1c57e2182cd70408092660ab35cd0f76f5556e1e3011fecba5b5520667ca",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "mw-17",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und was ist dazwischen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 1816,
+      "sizeBytes": 8510,
+      "hash": "sha256:258496d6044b41033137a9547266aeca7367859072fe7c6f90a8ec650e9895d6",
+      "pcmSha256": "f1577626347d0a9047cf179b3da99a3ae2fddf044dc4cba38cec6e4cee1dc91e",
+      "rmsDb": -18.17
+    },
+    {
+      "id": "mw-18",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Regal. Darauf sind die Seife und zwei Handtücher.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 4182,
+      "sizeBytes": 18738,
+      "hash": "sha256:7024c14d2284b9a27a188b9f848ef5b9546859b8edcdd3a88e79df059c515ffa",
+      "pcmSha256": "4cbb1ef69b1b0f0c74819f8340c5176ae967ab830e1cd26420bf39e9f3226cbb",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "mw-19",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 156,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! Und dein Schlüssel? Ist er noch oben auf dem Schrank?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 4232,
+      "sizeBytes": 19767,
+      "hash": "sha256:d18372208e86553a814f6469fcfa5ccdd294db0d973f7d9b39f6138388507339",
+      "pcmSha256": "4f3e6d18c3924ca8c7c617e4b6988e34cddce276d52c9e1b15866d05c212f486",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "mw-20",
+      "file": "audio/scripts/a1-u6-d5-was-ist-dazwischen/mw-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein! Jetzt ist er in der Schublade — im Schreibtisch.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d5"
+      ],
+      "durationMs": 3846,
+      "sizeBytes": 18075,
+      "hash": "sha256:72b85dbed26e93ce4445ce3a7cb279a99591dbde53418422742f275d99d15424",
+      "pcmSha256": "483fb7ecdacc0ff0dfd8c55339b0a70bfd2486cf9342f8671179c1e83e41945f",
+      "rmsDb": -17.06
     }
   ],
   "characterVoices": {

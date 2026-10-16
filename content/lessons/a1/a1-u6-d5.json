@@ -6,31 +6,32 @@
   "day": 5,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst deine Wohnung in 5 Sätzen beschreiben (mit da-Komposita).",
-    "ar": "تصف شقتك في 5 جمل مع تراكيب da"
+    "de": "Da ist der Tisch. Darauf steht eine Vase. · Das Haus hat sechs Stockwerke, und die Miete ist hoch.",
+    "ar": "تصف شقتك في خمس جمل على الأقل — البيت وطوابقه والإيجار والجيران والأثاث والحمّام — وتشير إلى شيءٍ ذكرته للتوّ بكلمة da واحدة: darauf (عليه) · darin (فيه) · darunter (تحته) · darüber (فوقه) · dahinter (خلفه) · dazwischen (بينهما) — والفعل بعدها يطابق فاعله: Darauf stehen zwei Vasen."
   },
   "canDoDaily": [
-    "يصف شقته في 5 جمل مستخدماً da-Türchen (darauf/darin/daneben)"
+    "يصف شقته في خمس جمل (Das Haus hat sechs Stockwerke. · Die Miete ist hoch. · Die Nachbarn sind nett. · Die Möbel sind neu.) ويقول ما في الحمّام (eine Dusche · eine Toilette · die Seife · zwei Handtücher).",
+    "يشير إلى شيءٍ ذكره للتوّ بكلمة واحدة (Da ist der Tisch. Darauf steht eine Vase. · Da ist der Schrank. Darin sind zwei Handtücher. · Dahinter ist ein Hof.) — dar- قبل الحركة وda- قبل الساكن — ويطابق الفعلَ فاعلُه بعدها (Darauf stehen zwei Vasen.)."
   ],
   "warmup": {
     "cardIds": [
-      "wohnzimmer",
-      "schrank",
-      "fenster"
+      "daneben",
+      "auf",
+      "badezimmer"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«الطاولة عليها مصباح» — Auf das steht eine Lampe أم Darauf steht eine Lampe? (تخمين فقط)"
+          "de": "«هناك الرفّ، وعليه نبتة» — Da ist das Regal. ___ steht eine Pflanze. أي جملة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
-          "Darauf steht eine Lampe. (da + auf = darauf)",
-          "Auf das steht eine Lampe.",
-          "Auf darauf steht eine Lampe."
+          "Darauf steht eine Pflanze.",
+          "Auf es steht eine Pflanze.",
+          "Da auf steht eine Pflanze."
         ],
-        "answer": "Darauf steht eine Lampe. (da + auf = darauf)",
+        "answer": "Darauf steht eine Pflanze.",
         "revealNextSession": true
       }
     ],
@@ -54,7 +55,8 @@
       "stockwerk",
       "miete",
       "nachbar",
-      "dunkel"
+      "dunkel",
+      "darauf"
     ],
     "grammarArsenalIds": [
       "ars-da-komposita"
@@ -63,76 +65,459 @@
       "story-a6-u6-s5"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "umlaut-o",
+      "umlaut-a",
+      "ch-ich-laut",
+      "ch-ach-laut",
+      "sp-st-initial",
+      "z",
+      "double-consonant",
+      "vowel-long-short",
+      "auslaut-b",
+      "auslaut-d",
+      "r-uvular"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«الأثاث جديد»؟",
-            "a": "Die Möbel sind neu."
+            "q": "Da ist der Tisch. ___ steht eine Lampe. (عليه)",
+            "a": "Darauf",
+            "why": "auf dem Tisch ← darauf = عليه: da + auf كلمة واحدة، وr قبل الحركة."
           },
           {
-            "q": "«في الدرج إطار»؟",
-            "a": "In der Schublade ist ein Rahmen."
+            "q": "Da ist der Schrank. ___ sind drei Handtücher. (فيه)",
+            "a": "Darin",
+            "why": "im Schrank ← darin = فيه: da + in بـr — والفعل sind لأن drei Handtücher جمع."
+          },
+          {
+            "q": "Da ist die Tür. ___ ist das Badezimmer. (خلفه)",
+            "a": "Dahinter",
+            "why": "hinter der Tür ← dahinter = خلفه: hinter تبدأ بساكن فلا r."
+          },
+          {
+            "q": "Links ist das Sofa, rechts das Regal. ___ steht ein Stuhl. (بينهما)",
+            "a": "Dazwischen",
+            "why": "بين الأريكة والرفّ ← dazwischen = بينهما: da + zwischen بلا r."
+          },
+          {
+            "q": "Da ist das Sofa. ___ hängt ein Spiegel. (فوقه)",
+            "a": "Darüber",
+            "why": "فوق الأريكة ← darüber = فوقه: da + über بـr لأن ü حركة."
+          },
+          {
+            "q": "Das Bett ist alt. ___ ist eine Schublade. (تحته)",
+            "a": "Darunter",
+            "why": "تحت السرير ← darunter = تحته: da + unter بـr."
+          },
+          {
+            "q": "Da ist das Sofa. Ich lege die Kissen ___. (عليه)",
+            "a": "darauf",
+            "why": "للوضع أيضاً: Ich lege die Kissen darauf — لا ~~auf es~~: es لا تأتي بعد الحرف للشيء."
+          },
+          {
+            "q": "Daneben ___ zwei Lampen. (steht أم stehen؟)",
+            "a": "stehen",
+            "why": "الفاعل zwei Lampen جمعٌ بعد الفعل ⇒ stehen — الفعل يطابق فاعله ولو جاء بعده."
+          },
+          {
+            "q": "Meine Möbel ___ alt. (ist أم sind؟)",
+            "a": "sind",
+            "why": "die Möbel جمعٌ (قائمة Goethe: pl.) ⇒ sind — لا ist كـ«الأثاث قديم»."
+          },
+          {
+            "q": "Das Haus hat sechs ___. (طوابق — das Stockwerk)",
+            "a": "Stockwerke",
+            "why": "das Stockwerk ← die Stockwerke: ‑e في الجمع."
+          },
+          {
+            "q": "Die ___ oben sind laut. (الجيران — der Nachbar)",
+            "a": "Nachbarn",
+            "why": "der Nachbar ← die Nachbarn: ‑n في الجمع بلا وملاوت."
+          },
+          {
+            "q": "Der Kühlschrank ist ein ___. (جهاز)",
+            "a": "Gerät",
+            "why": "das Gerät = الجهاز: ein Gerät — والجمع die Geräte."
           }
         ],
         "interleavedWith": [
+          "tisch",
           "schrank",
-          "regal"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "«المنشفة والصابون في الحمّام»؟",
-            "a": "Das Handtuch und die Seife sind im Badezimmer."
-          },
-          {
-            "q": "«الدُش والمرحاض»؟",
-            "a": "die Dusche und die Toilette"
-          }
-        ],
-        "interleavedWith": [
-          "badezimmer",
+          "sofa",
+          "regal",
+          "bett",
           "kissen"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«الشقة في الطابق الثاني»؟",
-            "a": "Die Wohnung ist in der zweiten Etage."
+            "audioId": "mw-1",
+            "speakText": "Hallo, Yusuf! Heute beschreibst du deine Wohnung — das ist die Aufgabe.",
+            "q": "استمع: ما مهمة يوسف اليوم؟",
+            "choices": [
+              "أن يصف شقته",
+              "أن يرتّب غرفته",
+              "أن يشتري أثاثاً"
+            ],
+            "a": "أن يصف شقته",
+            "why": "Heute beschreibst du deine Wohnung = اليوم تصف شقتك — die Aufgabe = المهمة."
           },
           {
-            "q": "«النبتة على الطاولة — عليها»؟",
-            "a": "Die Vase ist auf dem Tisch. Darauf ist eine Pflanze."
+            "audioId": "mw-2",
+            "speakText": "Okay! Das Haus hat sechs Stockwerke, und meine Wohnung ist oben.",
+            "q": "استمع: كم طابقاً في البيت، وأين شقة يوسف؟",
+            "choices": [
+              "ستة طوابق — وشقته في الأعلى",
+              "ستة طوابق — وشقته في الأسفل",
+              "سبعة طوابق — وشقته في الأعلى"
+            ],
+            "a": "ستة طوابق — وشقته في الأعلى",
+            "why": "sechs Stockwerke = ستة طوابق (das Stockwerk ← die Stockwerke) · oben = في الأعلى."
+          },
+          {
+            "audioId": "mw-3",
+            "speakText": "Sechs Etagen? Und hinter dem Haus — was ist da?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "عمّا خلف البيت",
+              "عمّا أمام البيت",
+              "عمّا في الطابق السادس"
+            ],
+            "a": "عمّا خلف البيت",
+            "why": "Etagen = طوابق (كـStockwerke) · hinter = خلف — وdas Haus ← dem بعد الحرف للمكان (أين؟)."
+          },
+          {
+            "audioId": "mw-4",
+            "speakText": "Dahinter ist ein Hof. Er ist klein und ein bisschen dunkel.",
+            "q": "استمع: ماذا خلف البيت؟",
+            "choices": [
+              "فناءٌ صغير معتم قليلاً",
+              "حديقةٌ كبيرة مضيئة",
+              "فناءٌ كبير مضيء"
+            ],
+            "a": "فناءٌ صغير معتم قليلاً",
+            "why": "Dahinter = خلفه (خلف البيت) · ein Hof = فناء · klein = صغير · dunkel = معتم."
+          },
+          {
+            "audioId": "mw-5",
+            "speakText": "Und die Miete? Ist sie hoch?",
+            "q": "استمع: عمّ تسأل لينا الآن؟",
+            "choices": [
+              "عن الإيجار: هل هو مرتفع؟",
+              "عن البيت: هل هو عالٍ؟",
+              "عن الجيران: هل هم لطفاء؟"
+            ],
+            "a": "عن الإيجار: هل هو مرتفع؟",
+            "why": "die Miete = الإيجار · Ist sie hoch? = هل هو مرتفع؟ (sie = die Miete)."
+          },
+          {
+            "audioId": "mw-6",
+            "speakText": "Ja, sehr hoch — das ist Berlin!",
+            "q": "استمع: بماذا يجيب يوسف؟",
+            "choices": [
+              "مرتفع جداً — هكذا برلين",
+              "ليس مرتفعاً — هكذا برلين",
+              "مرتفع قليلاً — لكن الشقة رخيصة"
+            ],
+            "a": "مرتفع جداً — هكذا برلين",
+            "why": "sehr hoch = مرتفع جداً · das ist Berlin! = هذه برلين!"
+          },
+          {
+            "audioId": "mw-7",
+            "speakText": "Und die Nachbarn? Sind sie nett?",
+            "q": "استمع: عمّن تسأل لينا؟",
+            "choices": [
+              "عن الجيران",
+              "عن الأصدقاء",
+              "عن الأسرة"
+            ],
+            "a": "عن الجيران",
+            "why": "die Nachbarn = الجيران (جمع der Nachbar بـ‑n) · nett = لطيف."
+          },
+          {
+            "audioId": "mw-8",
+            "speakText": "Der Nachbar links ist nett. Aber rechts ist es oft laut!",
+            "q": "استمع: ماذا يقول يوسف عن جيرانه؟",
+            "choices": [
+              "جار اليسار لطيف، ومن اليمين ضجيجٌ كثيراً",
+              "جار اليمين لطيف، ومن اليسار ضجيجٌ كثيراً",
+              "الجاران لطيفان وهادئان"
+            ],
+            "a": "جار اليسار لطيف، ومن اليمين ضجيجٌ كثيراً",
+            "why": "Der Nachbar links = جار اليسار · rechts ist es oft laut = من اليمين صوتٌ عالٍ كثيراً (oft = كثيراً)."
+          },
+          {
+            "audioId": "mw-9",
+            "speakText": "Und dein Zimmer? Sind die Möbel jetzt da?",
+            "q": "استمع: ماذا تسأل لينا عن الغرفة؟",
+            "choices": [
+              "هل وصل الأثاث",
+              "هل الأثاث جديد",
+              "هل الغرفة كبيرة"
+            ],
+            "a": "هل وصل الأثاث",
+            "why": "die Möbel = الأثاث (جمعاً ⇒ Sind) · jetzt da = موجود الآن (وصل)."
+          },
+          {
+            "audioId": "mw-10",
+            "speakText": "Ja, die Einrichtung ist fertig! Da ist der Tisch, und darauf steht eine Vase.",
+            "q": "استمع: ماذا على الطاولة؟",
+            "choices": [
+              "مزهرية",
+              "نبتة",
+              "مصباح"
+            ],
+            "a": "مزهرية",
+            "why": "die Einrichtung ist fertig = التأثيث اكتمل · darauf = عليها (على الطاولة) · eine Vase = مزهرية."
+          },
+          {
+            "audioId": "mw-11",
+            "speakText": "Eine Vase! Und was ist darin?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "عمّا في المزهرية",
+              "عمّا تحت المزهرية",
+              "عمّا بجانب المزهرية"
+            ],
+            "a": "عمّا في المزهرية",
+            "why": "darin = فيها (في المزهرية): da + in — لا تحتها (darunter) ولا بجانبها (daneben)."
+          },
+          {
+            "audioId": "mw-12",
+            "speakText": "Nur Wasser — sie ist noch neu!",
+            "q": "استمع: ماذا في المزهرية؟",
+            "choices": [
+              "ماءٌ فقط — فهي ما زالت جديدة",
+              "لا شيء — فهي مكسورة",
+              "نبتة — وهي جديدة"
+            ],
+            "a": "ماءٌ فقط — فهي ما زالت جديدة",
+            "why": "Nur Wasser = ماءٌ فقط · sie ist noch neu = ما زالت جديدة (sie = die Vase)."
+          },
+          {
+            "audioId": "mw-13",
+            "speakText": "Und das Foto aus Tunesien? Hängt es noch über dem Bett?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل ما زالت صورة تونس فوق السرير",
+              "هل ما زالت صورة تونس بجانب الباب",
+              "هل صورة تونس جديدة"
+            ],
+            "a": "هل ما زالت صورة تونس فوق السرير",
+            "why": "Hängt es noch über dem Bett? = هل ما زالت معلّقة فوق السرير؟ (es = das Foto · noch = ما زال)."
+          },
+          {
+            "audioId": "mw-14",
+            "speakText": "Ja, es hängt darüber — und jetzt hat es einen Rahmen!",
+            "q": "استمع: ما الجديد في الصورة؟",
+            "choices": [
+              "صار لها إطار",
+              "صارت فوق الأريكة",
+              "صارت كبيرة"
+            ],
+            "a": "صار لها إطار",
+            "why": "es hängt darüber = معلّقة فوقه (فوق السرير: da + über) · einen Rahmen = إطاراً (der Rahmen ← einen)."
+          },
+          {
+            "audioId": "mw-15",
+            "speakText": "Schön! Und wie ist das Badezimmer?",
+            "q": "استمع: عن أيّ غرفة تسأل لينا؟",
+            "choices": [
+              "عن الحمّام",
+              "عن المطبخ",
+              "عن غرفة النوم"
+            ],
+            "a": "عن الحمّام",
+            "why": "das Badezimmer = الحمّام · wie ist …? = كيف هو؟"
+          },
+          {
+            "audioId": "mw-19",
+            "speakText": "Super! Und dein Schlüssel? Ist er noch oben auf dem Schrank?",
+            "q": "استمع: عمّ تسأل لينا في النهاية؟",
+            "choices": [
+              "هل ما زال المفتاح فوق الخزانة",
+              "هل ما زال المفتاح في الدرج",
+              "هل ما زال المفتاح ضائعاً"
+            ],
+            "a": "هل ما زال المفتاح فوق الخزانة",
+            "why": "Ist er noch oben auf dem Schrank? = هل ما زال فوق الخزانة؟ (er = der Schlüssel — حيث وُجد في الدرس الماضي)."
+          },
+          {
+            "audioId": "mw-20",
+            "speakText": "Nein! Jetzt ist er in der Schublade — im Schreibtisch.",
+            "q": "استمع: أين المفتاح الآن؟",
+            "choices": [
+              "في درج المكتب",
+              "فوق الخزانة",
+              "تحت المكتب"
+            ],
+            "a": "في درج المكتب",
+            "why": "in der Schublade = في الدرج (die Schublade ← der) · im Schreibtisch = في المكتب."
           }
         ],
         "interleavedWith": [
-          "stockwerk",
-          "etage"
+          "haus",
+          "wohnung",
+          "zimmer",
+          "badezimmer",
+          "bett",
+          "foto",
+          "schluessel",
+          "schrank"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "steht",
+              "Darauf",
+              "Vase.",
+              "eine"
+            ],
+            "a": "Darauf steht eine Vase.",
+            "why": "Darauf أولاً (= عليه) ثم الفعل steht ثانياً ثم الفاعل eine Vase."
+          },
+          {
+            "tokens": [
+              "sind",
+              "Darin",
+              "Handtücher.",
+              "zwei"
+            ],
+            "a": "Darin sind zwei Handtücher.",
+            "why": "Darin ثم الفعل ثم الفاعل — والفعل sind لأن zwei Handtücher جمع."
+          },
+          {
+            "tokens": [
+              "ist",
+              "Dahinter",
+              "Garten.",
+              "ein"
+            ],
+            "a": "Dahinter ist ein Garten.",
+            "why": "Dahinter (= خلفه) ثم ist ثانياً ثم ein Garten."
+          },
+          {
+            "tokens": [
+              "sind",
+              "Unsere",
+              "neu.",
+              "Möbel"
+            ],
+            "a": "Unsere Möbel sind neu.",
+            "why": "Unsere Möbel فاعلٌ جمع ثم sind ثم الخبر neu — die Möbel جمعٌ دائماً في الاستعمال."
+          },
+          {
+            "tokens": [
+              "hängt",
+              "Darüber",
+              "Foto.",
+              "das"
+            ],
+            "a": "Darüber hängt das Foto.",
+            "why": "Darüber (= فوقه) ثم hängt ثانياً ثم الفاعل das Foto."
+          },
+          {
+            "tokens": [
+              "stehen",
+              "Dazwischen",
+              "Pflanzen.",
+              "zwei"
+            ],
+            "a": "Dazwischen stehen zwei Pflanzen.",
+            "why": "Dazwischen ثم الفعل — stehen لأن zwei Pflanzen جمع (die Pflanze ← die Pflanzen)."
+          }
+        ],
+        "interleavedWith": [
+          "garten",
+          "foto"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "mw-16",
+            "speakText": "Klein. Links ist die Dusche, rechts die Toilette.",
+            "a": "Klein. Links ist die Dusche, rechts die Toilette.",
+            "why": "Klein بحرف كبير أول الجملة · Dusche بـsch «ش» وu طويلة · Toilette: oi تُنطق «وا» وtt مضاعفة."
+          },
+          {
+            "audioId": "mw-17",
+            "speakText": "Und was ist dazwischen?",
+            "a": "Und was ist dazwischen?",
+            "why": "dazwischen كلمة واحدة: da + zwischen — بلا r لأن zwischen تبدأ بساكن · z تُنطق «تس»."
+          },
+          {
+            "audioId": "mw-18",
+            "speakText": "Ein Regal. Darauf sind die Seife und zwei Handtücher.",
+            "a": "Ein Regal. Darauf sind die Seife und zwei Handtücher.",
+            "why": "Darauf كلمة واحدة بحرف كبير أول الجملة · Seife بـei «اي» · Handtücher بـü والجمع ‑er."
+          },
+          {
+            "audioId": "word-darauf",
+            "speakText": "darauf.",
+            "a": "darauf",
+            "why": "darauf كلمة واحدة: da + r + auf — والنبر على auf."
+          },
+          {
+            "audioId": "word-moebel",
+            "speakText": "Möbel.",
+            "a": "Möbel",
+            "why": "Möbel بحرف كبير وö بشفتين مدوّرتين، ثم b و‑el."
+          },
+          {
+            "audioId": "word-geraet",
+            "speakText": "Gerät.",
+            "a": "Gerät",
+            "why": "Gerät: ä «إ» طويلة والنبر عليها، وt في آخرها."
+          },
+          {
+            "audioId": "word-schublade",
+            "speakText": "Schublade.",
+            "a": "Schublade",
+            "why": "Schublade: Sch «ش» ثم u طويلة، وb تُنطق p قبل l."
+          },
+          {
+            "audioId": "word-pflanze",
+            "speakText": "Pflanze.",
+            "a": "Pflanze",
+            "why": "Pflanze: pf في أولها تُنطقان معاً، وz «تس»."
+          }
+        ],
+        "interleavedWith": [
+          "regal",
+          "links",
+          "rechts",
+          "klein"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Wohnung in 5 Sätzen beschreiben",
-        "ar": "وصف الشقة في 5 جمل"
+        "de": "Meine Wohnung: Das Haus hat sechs Stockwerke. Da ist der Tisch. Darauf steht eine Vase.",
+        "ar": "تصف شقتك (أو غرفتك) لزميلك في خمس جمل على الأقل، وتشير بكلمات da إلى ما ذكرته"
       },
       "situation": {
-        "de": "Die Wohnung zeigen",
-        "ar": "عرض الشقة"
+        "de": "Wie viele Stockwerke hat das Haus? Wie ist die Miete? Was ist im Badezimmer?",
+        "ar": "في الدورة: يرسم كلٌّ منكما شقته أو غرفته (أو يُري صورتها) ويسأل الآخر: Wie viele Stockwerke hat das Haus? · Wie ist die Miete? · Sind die Nachbarn nett? — ثم يشير الواصف إلى رسمه: Da ist der Tisch. Darauf steht … · Da ist die Tür. Dahinter ist … — ويسأل السامع عن شيءٍ ذكره: Und was ist darin? · Und dazwischen? — ثم تتبادلان."
       },
       "successCriteria": [
-        "5 جمل: es gibt + ist/liegt + da-تركيب واحد + صفتان (groß/klein/hell/dunkel/gemütlich)"
+        "خمس جمل عن الشقة على الأقل: البيت وطوابقه (Stockwerke · Etagen) · الإيجار أو الجيران · ثلاث قطع من الأثاث أو الحمّام في أماكنها.",
+        "ثلاث كلمات da مختلفة (darauf · darin · darunter · darüber · daneben · dahinter · dazwischen) — لا es بعد الحرف للشيء — وجملة بفاعلٍ جمعٍ بعد الفعل (Darauf stehen zwei Vasen.)."
       ]
     }
   },
@@ -147,20 +532,54 @@
       {
         "items": [
           {
-            "q": "«الأثاث»؟",
-            "a": "die Möbel (جمع فقط)"
+            "q": "«هناك الخزانة، وفيها مناشف»؟",
+            "choices": [
+              "Da ist der Schrank. Darin sind Handtücher.",
+              "Da ist der Schrank. In es sind Handtücher.",
+              "Da ist der Schrank. Darin ist Handtücher."
+            ],
+            "a": "Da ist der Schrank. Darin sind Handtücher.",
+            "why": "im Schrank ← darin — لا in es (es لا تأتي بعد الحرف للشيء) · والفعل sind لأن Handtücher جمع."
           },
           {
-            "q": "«الجهاز»؟",
-            "a": "das Gerät (الجمع: die Geräte)"
+            "q": "Dazwischen ___ zwei Stühle.",
+            "choices": [
+              "stehen",
+              "steht",
+              "stellt"
+            ],
+            "a": "stehen",
+            "why": "zwei Stühle جمعٌ بعد الفعل ⇒ stehen — steht للمفرد · وstellt تحتاج فاعلاً يضع شيئاً."
           },
           {
-            "q": "«المزهرية على الطاولة»؟",
-            "a": "Die Vase ist auf dem Tisch."
+            "q": "«الأثاث في غرفة المعيشة»؟",
+            "choices": [
+              "Die Möbel sind im Wohnzimmer.",
+              "Die Möbel ist im Wohnzimmer.",
+              "Das Möbel sind im Wohnzimmer."
+            ],
+            "a": "Die Möbel sind im Wohnzimmer.",
+            "why": "die Möbel جمعٌ ⇒ sind — لا ist كـ«الأثاث»، ولا das مع sind."
           },
           {
-            "q": "«الإيجار مرتفع»؟",
-            "a": "Die Miete ist hoch."
+            "q": "dahinter = ؟",
+            "choices": [
+              "خلفه",
+              "تحته",
+              "بجانبه"
+            ],
+            "a": "خلفه",
+            "why": "dahinter = da + hinter = خلفه · darunter = تحته · daneben = بجانبه."
+          },
+          {
+            "q": "«المناشف» (الجمع مع الأداة)؟",
+            "a": "die Handtücher",
+            "why": "das Handtuch ← die Handtücher: u ← ü و‑er."
+          },
+          {
+            "q": "«عليه حاسوب» — ابدأ بـ darauf (steht · ein Computer)",
+            "a": "Darauf steht ein Computer.",
+            "why": "Darauf أولاً ثم الفعل steht ثانياً ثم الفاعل ein Computer."
           }
         ],
         "passingScore": 0.75
@@ -168,20 +587,54 @@
       {
         "items": [
           {
-            "q": "«المنشفة»؟",
-            "a": "das Handtuch"
+            "q": "«هناك البيت، وخلفه فناء»؟",
+            "choices": [
+              "Da ist das Haus. Dahinter ist ein Hof.",
+              "Da ist das Haus. Hinter es ist ein Hof.",
+              "Da ist das Haus. Dahinter sind ein Hof."
+            ],
+            "a": "Da ist das Haus. Dahinter ist ein Hof.",
+            "why": "hinter dem Haus ← dahinter — لا hinter es للشيء · والفعل ist لأن ein Hof مفرد."
           },
           {
-            "q": "«المرحاض في الحمّام»؟",
-            "a": "Die Toilette ist im Badezimmer."
+            "q": "Darauf ___ drei Kissen.",
+            "choices": [
+              "sind",
+              "ist",
+              "bin"
+            ],
+            "a": "sind",
+            "why": "drei Kissen جمعٌ بعد الفعل ⇒ sind (Kissen جمعها كمفردها)."
           },
           {
-            "q": "«الجار لطيف»؟",
-            "a": "Der Nachbar ist nett."
+            "q": "«هناك الرفّ — أضع المفتاح عليه»؟",
+            "choices": [
+              "Ich lege den Schlüssel darauf.",
+              "Ich lege den Schlüssel auf es.",
+              "Ich lege der Schlüssel darauf."
+            ],
+            "a": "Ich lege den Schlüssel darauf.",
+            "why": "للوضع أيضاً darauf — لا auf es · والمفعول به der Schlüssel ← den Schlüssel."
           },
           {
-            "q": "«فوقها» (da)؟",
-            "a": "darauf"
+            "q": "darunter = ؟",
+            "choices": [
+              "تحته",
+              "فوقه",
+              "فيه"
+            ],
+            "a": "تحته",
+            "why": "darunter = da + unter = تحته · darüber = فوقه · darin = فيه."
+          },
+          {
+            "q": "«الأجهزة» (الجمع مع الأداة)؟",
+            "a": "die Geräte",
+            "why": "das Gerät ← die Geräte: ‑e في الجمع."
+          },
+          {
+            "q": "«فوق الأريكة صورة» — ابدأ بـ darüber (hängt · ein Bild)",
+            "a": "Darüber hängt ein Bild.",
+            "why": "Darüber أولاً (= فوقها) ثم hängt ثانياً ثم الفاعل ein Bild."
           }
         ],
         "passingScore": 0.75
@@ -189,20 +642,54 @@
       {
         "items": [
           {
-            "q": "«الطابق»؟",
-            "a": "die Etage / das Stockwerk"
+            "q": "«هناك السرير، وبجانبه نبتة»؟",
+            "choices": [
+              "Da ist das Bett. Daneben steht eine Pflanze.",
+              "Da ist das Bett. Neben es steht eine Pflanze.",
+              "Da ist das Bett. Daneben stehen eine Pflanze."
+            ],
+            "a": "Da ist das Bett. Daneben steht eine Pflanze.",
+            "why": "neben dem Bett ← daneben — لا neben es · والفعل steht لأن eine Pflanze مفردة."
           },
           {
-            "q": "«الفناء»؟",
-            "a": "der Hof (الجمع: die Höfe)"
+            "q": "Darunter ___ zwei Schubladen.",
+            "choices": [
+              "sind",
+              "ist",
+              "bin"
+            ],
+            "a": "sind",
+            "why": "zwei Schubladen جمعٌ بعد الفعل ⇒ sind."
           },
           {
-            "q": "«القبو معتم»؟",
-            "a": "Der Keller ist dunkel."
+            "q": "«الأثاث هنا»؟",
+            "choices": [
+              "Die Möbel sind hier.",
+              "Die Möbel ist hier.",
+              "Das Möbel sind hier."
+            ],
+            "a": "Die Möbel sind hier.",
+            "why": "die Möbel جمعٌ ⇒ sind — لا ist ولا das."
           },
           {
-            "q": "Nachbar — الجمع؟",
-            "a": "die Nachbarn (n-Deklination: يضيف -n)"
+            "q": "dazwischen = ؟",
+            "choices": [
+              "بينهما",
+              "خلفه",
+              "عليه"
+            ],
+            "a": "بينهما",
+            "why": "dazwischen = da + zwischen = بينهما · dahinter = خلفه · darauf = عليه."
+          },
+          {
+            "q": "«الأفنية» (der Hof — الجمع مع الأداة)؟",
+            "a": "die Höfe",
+            "why": "der Hof ← die Höfe: o ← ö و‑e (كـder Stuhl ← die Stühle)."
+          },
+          {
+            "q": "«هناك الدرج، وفيه الصابون» — ابدأ بـ darin (ist · die Seife)",
+            "a": "Darin ist die Seife.",
+            "why": "Darin أولاً (= فيه) ثم ist ثانياً ثم الفاعل die Seife."
           }
         ],
         "passingScore": 0.75
@@ -211,53 +698,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Deine Wohnung in 5 Sätzen: Es gibt ein Wohnzimmer, die Möbel sind neu, darauf steht eine Vase, daneben ist eine Pflanze — und der Nachbar ist nett!",
-      "ar": "شقتك في 5 جمل: يوجد غرفة معيشة، الأثاث جديد، وفوقها مزهرية، وبجانبها نبتة — والجار لطيف!"
+      "de": "Da ist der Tisch. Darauf steht eine Vase. · Da ist der Schrank. Darin sind zwei Handtücher. · Da ist die Tür. Dahinter ist das Badezimmer. · darunter · darüber · daneben · dazwischen · Darauf stehen zwei Vasen. · Die Möbel sind neu. · Das Haus hat sechs Stockwerke, und die Miete ist hoch.",
+      "ar": "da + حرف المكان كلمةٌ واحدة تعود على شيءٍ ذكرته للتوّ: darauf (عليه) · darin (فيه) · darunter (تحته) · darüber (فوقه) · daneben (بجانبه) · dahinter (خلفه) · dazwischen (بينهما) — dar- قبل الحركة وda- قبل الساكن، ولا تتغيّر مع جنس الشيء ولا عدده، ولا تأتي es بعد الحرف للشيء. وبعدها الفعل ثانياً يطابق فاعله: Darauf steht eine Vase. · Darauf stehen zwei Vasen. والشقة: die Möbel جمعٌ (sind) · die Einrichtung · das Gerät · die Schublade · der Rahmen · das Handtuch ← die Handtücher · die Seife · die Dusche · die Toilette · die Pflanze · die Vase · der Hof · die Etage = das Stockwerk · die Miete · der Nachbar ← die Nachbarn · dunkel."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~ein Möbel~~ / ~~das Möbel~~",
-          "ar": "die Möbel جمع فقط"
+          "de": "~~Ich lege die Kissen auf es.~~",
+          "ar": "للأريكة (das Sofa): الحرف + es"
         },
-        "whyArabicSpeakerFails": "«الأثاث» مفرد جامد بالعربية؛ الألماني Möbel جمع دائماً — النمط الرابع بعد Nudeln/Eltern/Geschwister (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "في «عليه» · «فيه» · «تحته» الحرف أولاً ثم الضمير المتصل، فيترجم المتعلم حرفاً بحرف: auf + es (وكذلك on it الإنجليزية). لكن الألمانية لا تضع es بعد الحرف للشيء: تقلب الترتيب وتلصق — da أولاً ثم الحرف: darauf · darin · darunter بدل ~~auf es~~ · ~~in es~~ · ~~unter es~~. وdarauf لا تتغيّر مع der أو die أو das أو الجمع كما تتغيّر «عليه/عليها/عليهم» (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "die Möbel (Pluralia tantum)",
-          "ar": "الأثاث (جمع)"
+          "de": "Ich lege die Kissen darauf.",
+          "ar": "أضع الوسائد عليها."
         },
         "exercise": {
-          "q": "صحّح: ~~Das Möbel ist neu.~~",
-          "a": "Die Möbel sind neu."
+          "q": "صحّح: Das Bett ist neu. ~~Ich lege das Handy auf es.~~",
+          "a": "Ich lege das Handy darauf."
         }
       },
       {
         "commonError": {
-          "de": "~~die Nachbarn~~ فقط / ~~die Nachbars~~",
-          "ar": "n-Deklination: Nachbarn"
+          "de": "~~Darauf steht zwei Vasen.~~",
+          "ar": "فعلٌ مفرد مع فاعلٍ جمعٍ بعده"
         },
-        "whyArabicSpeakerFails": "جمع «الجيران» بالعربية بالزيادة؛ الألماني يضيف -n فقط (Nachbarn) بلا umlaut — نمط جديد اسمه n-Deklination (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "بالعربية «عليها مزهريتان» بلا فعل، والفصحى تُفرد الفعل إذا تقدّم على فاعله («تقف عليها مزهريتان» · «جلس الأولاد»)، وes gibt من هذه الوحدة لا تتغيّر مع الجمع (Es gibt zwei Fenster.) — فيُبقي المتعلم الفعل مفرداً بعد darauf. لكن الفعل الألماني يطابق فاعله دائماً ولو جاء بعده: Darauf steht eine Vase. · Darauf stehen zwei Vasen. — وes gibt وحدها لا تتغيّر لأن فاعلها es. والعامية كثيراً ما تجمع الفعل المتقدّم («جاو الصغار») — فهي هنا تعينك (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "der Nachbar ← die Nachbarn",
-          "ar": "الجار ← الجيران (-n فقط)"
+          "de": "Darauf stehen zwei Vasen.",
+          "ar": "عليها مزهريتان."
         },
         "exercise": {
-          "q": "اكتب الجمع: drei ___ (Nachbar)",
-          "a": "drei Nachbarn"
+          "q": "صحّح: ~~Daneben ist zwei Pflanzen.~~",
+          "a": "Daneben sind zwei Pflanzen."
         }
       },
       {
         "commonError": {
-          "de": "~~Auf das steht eine Lampe.~~ / ~~Darauf es steht~~",
-          "ar": "da + حرف جر = كلمة واحدة في مكانها"
+          "de": "~~Die Möbel ist alt.~~",
+          "ar": "die Möbel جمعٌ ⇒ sind"
         },
-        "whyArabicSpeakerFails": "«فوقها/عليه» مركّبة بالعربية أيضاً لكنها تُفصل أحياناً؛ الألماني darauf كلمة واحدة تحلّ محل «حرف الجر + ذلك» وتأخذ مكانها في الجملة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«الأثاث» اسمٌ مفرد اللفظ يدلّ على جمع، ويُخبر عنه بالمفرد («الأثاث قديم» · «هو جديد»)، وكذلك furniture الإنجليزية (furniture is) — فيقول المتعلم ist. لكن die Möbel جمعٌ في الاستعمال (قائمة Goethe: pl.) فالفعل sind والضمير sie: Die Möbel sind alt. · Sie sind neu. — والفرنسية les meubles sont تعينك هنا. والمفرد das Möbel (قطعة أثاث) نادر لا تحتاجه الآن (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Darauf steht eine Lampe.",
-          "ar": "فوقها مصباح."
+          "de": "Die Möbel sind alt.",
+          "ar": "الأثاث قديم."
         },
         "exercise": {
-          "q": "أعد الصياغة: Auf dem Tisch steht eine Lampe. → ___ steht eine Lampe.",
-          "a": "Darauf"
+          "q": "صحّح: ~~Meine Möbel ist neu.~~",
+          "a": "Meine Möbel sind neu."
         }
       }
     ],
@@ -278,19 +765,28 @@
       "stockwerk",
       "miete",
       "nachbar",
-      "dunkel"
+      "dunkel",
+      "darauf"
     ]
   },
   "gReferences": {
     "duden": [
+      "https://www.duden.de/rechtschreibung/darauf",
+      "https://www.duden.de/rechtschreibung/dazwischen",
       "https://www.duden.de/rechtschreibung/Moebel",
       "https://www.duden.de/rechtschreibung/Nachbar",
-      "https://www.duden.de/rechtschreibung/darauf"
+      "https://www.duden.de/rechtschreibung/Etage"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/da-Komposita"
+      "https://de.wiktionary.org/wiki/Pronominaladverb",
+      "https://de.wiktionary.org/wiki/darauf",
+      "https://de.wiktionary.org/wiki/M%C3%B6bel",
+      "https://de.wiktionary.org/wiki/Nachbar"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-da-komposita"
@@ -312,14 +808,25 @@
     "word-stockwerk",
     "word-miete",
     "word-nachbar",
-    "word-dunkel"
+    "word-dunkel",
+    "word-darauf"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 6 (Wohnen) — Wohnung beschreiben",
     "goetheWordListOverlap": [
+      "moebel",
+      "geraet",
+      "handtuch",
+      "seife",
+      "dusche",
+      "toilette",
+      "pflanze",
+      "stockwerk",
+      "miete",
       "nachbar",
-      "miete"
+      "dunkel",
+      "darauf"
     ]
   }
 }

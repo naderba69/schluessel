@@ -277,10 +277,12 @@
       "analogy": "Schub [ʃˈuːp] (b آخر المقطع تُنطق p) · Lade [lˈɑːdə]",
       "contexts": [
         "die Schublade.",
-        "Der Schlüssel ist in der Schublade."
+        "Der Schlüssel ist in der Schublade.",
+        "Nein! Jetzt ist er in der Schublade — im Schreibtisch."
       ],
       "regeneratedTracks": [
-        "word-schublade"
+        "word-schublade",
+        "mw-20"
       ]
     },
     {
@@ -299,10 +301,12 @@
       "analogy": "machbar [mˈaxbɑːɾ] · Nacht [nˈaxt] — a قصيرة؛ الصيغة الثانية نبرٌ ثانوي في الجملة",
       "contexts": [
         "der Nachbar.",
-        "Mein Nachbar ist nett."
+        "Mein Nachbar ist nett.",
+        "Der Nachbar links ist nett. Aber rechts ist es oft laut!"
       ],
       "regeneratedTracks": [
-        "word-nachbar"
+        "word-nachbar",
+        "mw-8"
       ]
     },
     {
@@ -714,7 +718,8 @@
         "Okay, ich höre.",
         "Okay. Ich zeige ein Foto. Siehst du es?",
         "Okay! Zwölf Euro, bitte. Bar oder mit Karte?",
-        "Okay. Wo steht das Bett?"
+        "Okay. Wo steht das Bett?",
+        "Okay! Das Haus hat sechs Stockwerke, und meine Wohnung ist oben."
       ],
       "regeneratedTracks": [
         "word-okay",
@@ -722,7 +727,8 @@
         "fo-2",
         "et-19",
         "me-14",
-        "ww-3"
+        "ww-3",
+        "mw-2"
       ]
     },
     {
@@ -783,7 +789,8 @@
         "Teuer? Und in Tunesien?",
         "In Tunesien sind sie billig.",
         "Ja! In Tunesien trinken wir Tee im Glas.",
-        "Und das Foto aus Tunesien? Wo hängt es jetzt?"
+        "Und das Foto aus Tunesien? Wo hängt es jetzt?",
+        "Und das Foto aus Tunesien? Hängt es noch über dem Bett?"
       ],
       "regeneratedTracks": [
         "gr-5",
@@ -799,7 +806,8 @@
         "ff-13",
         "ff-14",
         "et-14",
-        "ww-11"
+        "ww-11",
+        "mw-13"
       ]
     },
     {
@@ -837,10 +845,12 @@
       "analogy": "Koala [kˈoːalˌɑː] (تتابع oːa) · Kartell [kaɾtˈɛl] — النبر على let و«oi» = oa لا o+i",
       "contexts": [
         "die Toilette.",
-        "Wo ist die Toilette?"
+        "Wo ist die Toilette?",
+        "Klein. Links ist die Dusche, rechts die Toilette."
       ],
       "regeneratedTracks": [
-        "word-toilette"
+        "word-toilette",
+        "mw-16"
       ]
     },
     {
@@ -1107,12 +1117,129 @@
       "analogy": "Bade [bˈɑːdə] · baden [bˈɑːdən] · Schlafzimmer [ʃlˈɑːftsɪmɜ] — الجزء الأول في المركّب يُقرأ كما يُقرأ وحده",
       "contexts": [
         "Badezimmer.",
-        "Und das Badezimmer? Ist es groß?"
+        "Und das Badezimmer? Ist es groß?",
+        "Schön! Und wie ist das Badezimmer?"
       ],
       "regeneratedTracks": [
         "word-badezimmer",
         "zi-8",
-        "zi-16"
+        "zi-16",
+        "mw-15"
+      ]
+    },
+    {
+      "word": "dunkel",
+      "forms": [
+        {
+          "espeak": "dˈʊnkəl",
+          "ipa": "dˈʊŋkəl"
+        }
+      ],
+      "referenceIpa": "/ˈdʊŋkl̩/",
+      "referenceNote": "خطأ صامت لا حركة (فئة Onkel — D137 · D150): الحركة المنبورة والنبر صحيحان فلا يراه التدقيق الآلي (N-013)، لكن espeak يقرأ n قبل k نوناً [n] — والمرجع /ˈdʊŋkl̩/ بالنون الحلقية [ŋ] كما يقرؤها espeak نفسه في Danke وtrinken. التصحيح يمسّ n وحدها ويُبقي ə كما ينطقها الصوت (لا l̩ مقطعية).",
+      "analogy": "Onkel (في المعجم) · Danke [dˈaŋkə] · trinken [trˈɪŋkən] — n قبل k تُنطق [ŋ]",
+      "contexts": [
+        "dunkel.",
+        "Dahinter ist ein Hof. Er ist klein und ein bisschen dunkel."
+      ],
+      "regeneratedTracks": [
+        "word-dunkel",
+        "mw-4"
+      ]
+    },
+    {
+      "word": "Handtuch",
+      "forms": [
+        {
+          "espeak": "hˈanttˌʊx",
+          "ipa": "hˈanttˌuːx"
+        }
+      ],
+      "referenceIpa": "/ˈhantˌtuːx/",
+      "referenceNote": "خطأ صامت لا يمسّ موضع النبر (N-013 · D150): espeak يقرأ u في الجزء الثاني من المركّب Hand + Tuch قصيرة [ʊ] (ويقصّرها في Tuch وحدها أيضاً [tˈʊx]) — والمرجع /ˈhantˌtuːx/ بـuː الطويلة كما يقرأ espeak نفسه Buch [bˈuːx] على وزنها. التصحيح يمسّ هذه الحركة وحدها ويُبقي النبر الثانوي وtt عند حدّ الجزأين.",
+      "analogy": "Buch [bˈuːx] — Tuch على وزنها (المرجع /tuːx/)",
+      "contexts": [
+        "Handtuch.",
+        "Das Handtuch hängt neben der Dusche."
+      ],
+      "regeneratedTracks": [
+        "word-handtuch"
+      ]
+    },
+    {
+      "word": "Handtücher",
+      "forms": [
+        {
+          "espeak": "hˈanttˌʏçɜ",
+          "ipa": "hˈanttˌyːçɜ"
+        }
+      ],
+      "referenceIpa": "/ˈhantˌtyːçɐ/",
+      "referenceNote": "خطأ صامت لا يمسّ موضع النبر (N-013 · D150): جمع Handtuch — espeak يقرأ ü في الجزء الثاني قصيرة [ʏ] (وفي Tücher وحدها [tˈʏçɜ]) — والمرجع /ˈhantˌtyːçɐ/ بـyː الطويلة كما يقرأ espeak نفسه Bücher [bˈyːçɜ] على وزنها. التصحيح يمسّ هذه الحركة وحدها.",
+      "analogy": "Bücher [bˈyːçɜ] — Tücher على وزنها (المرجع /ˈtyːçɐ/)",
+      "contexts": [
+        "die Handtücher.",
+        "Ein Regal. Darauf sind die Seife und zwei Handtücher."
+      ],
+      "regeneratedTracks": [
+        "mw-18"
+      ]
+    },
+    {
+      "word": "dazwischen",
+      "forms": [
+        {
+          "espeak": "dˈatsvɪʃən",
+          "ipa": "dɑːtsvˈɪʃən"
+        }
+      ],
+      "referenceIpa": "/daˈt͡svɪʃn̩/",
+      "referenceNote": "موضع النبر (D150): espeak ينبر da في dazwischen وحدها بحركة قصيرة [ˈdatsvɪʃən] — والمرجع /daˈt͡svɪʃn̩/ بالنبر على zwi كأخواتها التي ينبرها espeak صحيحاً (dahinter [dɑːhˈɪntɜ] · daneben [dɑːnˈeːbən] · darauf [dɑːrˈaʊf]). التصحيح يكتب da غير المنبورة بعُرف espeak في أخواتها [dɑː] ويُبقي zwischen كما يقرؤها وحدها [tsvˈɪʃən].",
+      "analogy": "dahinter [dɑːhˈɪntɜ] · daneben [dɑːnˈeːbən] · zwischen [tsvˈɪʃən] — النبر على الحرف لا على da",
+      "contexts": [
+        "dazwischen.",
+        "Und was ist dazwischen?"
+      ],
+      "regeneratedTracks": [
+        "mw-17"
+      ]
+    },
+    {
+      "word": "Etagen",
+      "forms": [
+        {
+          "espeak": "ˈeːtɑːɡən",
+          "ipa": "eːtˈɑːʒən"
+        }
+      ],
+      "referenceIpa": "/eˈtaːʒn̩/",
+      "referenceNote": "جمع Etage (المدخل قائم): espeak يقرأ الجمع كما قرأ المفرد قبل تصحيحه — النبر على e وg [ɡ] — والمرجع /eˈtaːʒn̩/ بالنبر على ta وg الفرنسية [ʒ]. مدخل مستقل لأن المعجم يطابق الكلمة كاملة (Etage لا تمسّ Etagen).",
+      "analogy": "Etage (في المعجم) [eːtˈɑːʒə] · Massage [masˈɑːʒə] — الجمع بالنبر والصوت نفسيهما + n",
+      "contexts": [
+        "die Etagen.",
+        "Sechs Etagen? Und hinter dem Haus — was ist da?"
+      ],
+      "regeneratedTracks": [
+        "mw-3"
+      ]
+    },
+    {
+      "word": "Nachbarn",
+      "forms": [
+        {
+          "espeak": "nˈaxbaɾn",
+          "ipa": "nˈaxbɑːɾn"
+        }
+      ],
+      "referenceIpa": "/ˈnaxbaːɐ̯n/",
+      "referenceNote": "حركة غير منبورة (N-013 · D150): espeak يقرأ a في bar قصيرة في الجمع وحده [baɾn] ويكتبها طويلة في المفرد [bɑːɾ] (مدخل Nachbar) — والمرجع /ˈnaxbaːɐ̯n/ طويلة كالمفرد. التصحيح يمسّ هذه الحركة وحدها.",
+      "analogy": "Nachbar (في المعجم) [nˈaxbɑːɾ] — الجمع يُبقي حركة المفرد ويزيد n",
+      "contexts": [
+        "die Nachbarn.",
+        "Und die Nachbarn? Sind sie nett?"
+      ],
+      "regeneratedTracks": [
+        "mw-7"
       ]
     }
   ],

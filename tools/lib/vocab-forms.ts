@@ -123,8 +123,21 @@ export function numberWordKnown(t: string, stems: ReadonlySet<string>): boolean 
 }
 
 /**
+ * D150: ظرف المكان المركّب da(r) + حرف مكان كلمةٌ واحدة تُركَّب بالقاعدة (ars-da-komposita — «da أول لقاء» في الخطة
+ * اليومية): dar- قبل الحركة (darauf · darin · daran · darüber · darunter) وda- قبل الساكن (daneben · dahinter · dazwischen)
+ * — صيغٌ لا تُكتب مدخلاً لكلٍّ منها (سابقة الأعداد D131 · D132). تُعرف من الدرس الذي يُدرِّس darauf (a1-u6-d5) لا قبله،
+ * والحروف المكانية التي دُرّست للمكان وحدها: davor خارجها (vor في الوحدة 9) · ومركّبات المعنى المجرّد والزمن (damit · dafür
+ * · dabei · danach · darum · davon · dazu — والنظام كله مع الأفعال وwo-Komposita في A2) كلماتٌ بمداخلها أو لاحقة.
+ */
+export const DA_COMPOUND = /^da(?:r(?:auf|in|an|über|unter)|hinter|neben|zwischen)$/u;
+export const DA_COMPOUND_ANCHOR = "darauf";
+export function daCompoundKnown(t: string, stems: ReadonlySet<string>): boolean {
+  return DA_COMPOUND.test(t) && stems.has(DA_COMPOUND_ANCHOR);
+}
+
+/**
  * الكلمات غير المدروسة في نص (مرتبة، بلا تكرار): ليست مغلقة · ليست اسم علم مُعلناً · ولا جذع لها
- * يطابق جذع صيغة مدروسة · ولا هي عدد من كلمة واحدة أجزاؤه مدروسة (D131 · D132).
+ * يطابق جذع صيغة مدروسة · ولا هي عدد من كلمة واحدة أجزاؤه مدروسة (D131 · D132) · ولا ظرف مكان da(r)+حرف بعد درسه (D150).
  */
 export function unknownTokens(text: string, stems: ReadonlySet<string>, allow: ReadonlySet<string> = new Set()): string[] {
   const out = new Set<string>();
@@ -132,6 +145,7 @@ export function unknownTokens(text: string, stems: ReadonlySet<string>, allow: R
     if (CLOSED.has(t) || allow.has(t)) continue;
     if (stem(deumlaut(t)).some((s) => stems.has(s))) continue;
     if (numberWordKnown(t, stems)) continue;
+    if (daCompoundKnown(t, stems)) continue;
     out.add(t);
   }
   return [...out].sort();

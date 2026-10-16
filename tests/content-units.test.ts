@@ -16,7 +16,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(834); // + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(835); // + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -950,10 +950,52 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u6-d5 (D150): «عليه» حرفٌ ثم ضمير (~~Ich lege die Kissen auf es.~~) · الفعل المتقدّم مفرداً (~~Darauf steht zwei Vasen.~~) · «الأثاث» مفرد اللفظ (~~Die Möbel ist alt.~~) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u6-d5")!;
+    const [prep, verb, moebel] = u.zusammenfassung.warningCards;
+    expect(prep!.commonError.de).toBe("~~Ich lege die Kissen auf es.~~");
+    expect(prep!.correct.de).toBe("Ich lege die Kissen darauf.");
+    expect(prep!.whyArabicSpeakerFails).toContain("الحرف أولاً ثم الضمير المتصل");
+    expect(prep!.whyArabicSpeakerFails).toContain("on it الإنجليزية");
+    expect(prep!.exercise).toMatchObject({ a: "Ich lege das Handy darauf." });
+    expect(verb!.commonError.de).toBe("~~Darauf steht zwei Vasen.~~");
+    expect(verb!.correct.de).toBe("Darauf stehen zwei Vasen.");
+    expect(verb!.whyArabicSpeakerFails).toContain("والفصحى تُفرد الفعل إذا تقدّم على فاعله");
+    // es gibt وحدها لا تتغيّر (فاعلها es) — والعامية تجمع الفعل المتقدّم فتعين (عونٌ مسمّى لا ادعاء)
+    expect(verb!.whyArabicSpeakerFails).toContain("وes gibt وحدها لا تتغيّر لأن فاعلها es");
+    expect(verb!.whyArabicSpeakerFails).toContain("«جاو الصغار»");
+    expect(verb!.exercise).toMatchObject({ a: "Daneben sind zwei Pflanzen." });
+    expect(moebel!.commonError.de).toBe("~~Die Möbel ist alt.~~");
+    expect(moebel!.correct.de).toBe("Die Möbel sind alt.");
+    expect(moebel!.whyArabicSpeakerFails).toContain("furniture الإنجليزية");
+    expect(moebel!.whyArabicSpeakerFails).toContain("les meubles sont");
+    expect(moebel!.exercise).toMatchObject({ a: "Meine Möbel sind neu." });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: ~~ein Möbel~~/~~das Möbel~~ (das Möbel موجودٌ نادراً — ليس خطأً) · «~~die Nachbarn~~ فقط» (die Nachbarn صحيحة) ومصطلح n-Deklination
+    // · ~~Auf das steht eine Lampe.~~ (و«Auf dem steht …» الإشارية صحيحة في الكلام) — والتخمين القديم يكشف إجابته «(da + auf = darauf)»
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/~~ein Möbel~~|~~das Möbel~~|~~die Nachbarn~~|n-Deklination|Auf das steht|Pluralia/);
+    expect(JSON.stringify(u.quiz)).not.toMatch(/Deklination|جمع فقط|die Etage \/ das Stockwerk/);
+    expect(JSON.stringify(u.einstieg)).not.toMatch(/da \+ auf = darauf/);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا «auf dem/der …» الإشارية · لا den Nachbar (صيغة مقبولة — Wiktionary) · لا drauf/drin (عامية صحيحة)
+    // · لا مفرد مع فاعلين متعاطفين (Darauf steht eine Vase und eine Lampe — مقبول) · لا darin للوضع (يحتمل مكان الفعل)
+    const choiceItems = [...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (Array.isArray((i as { choices?: unknown }).choices) ? [i as unknown as { choices: string[]; a: string }] : []));
+    const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
+    const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
+    expect(german.filter((c) => /\b(auf|in|unter|über|neben|hinter) (dem|der)\b|den Nachbar\b|\bdrauf\b|\bdrin\b| und (ein|eine) |\bdarin\.$/iu.test(c))).toEqual([]); // بلا حالة أحرف: «Auf dem steht …» أول الجملة (نجت طفرةٌ بالحرف الكبير في D150)
+    expect(german).toHaveLength(20); // التخمين 2 + جمل Quiz (da · Möbel · الوضع) 6 × 2 + بنود المطابقة 3 × 2
+    // الاستدعاء من الدرسين الماضيين (daneben · auf · Badezimmer) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["daneben", "auf", "badezimmer"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4", "a1-u6-d5"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4 · D150: u6-d5
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
-    expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute"]);
+    // D150: Möbel دخلت (N-070 — كانت بجنس die وبطاقة جنس و«جمع فقط … مثل Nudeln» — والمفرد das Möbel موجود نادراً) ⇒ «جمعاً عادةً» بلا جنس مفرد
+    expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute", "moebel"]);
     for (const w of pluralOnly) expect([w.id, w.gender, w.srsCardTypes.includes("gender")]).toEqual([w.id, "none", false]);
     // Nudeln ليست منها: المفرد die Nudel موجود (قائمة Goethe A2) فجنسها المؤنث صحيح
     expect(ALL_WORDS.find((w) => w.id === "nudeln")!.gender).toBe("die");
