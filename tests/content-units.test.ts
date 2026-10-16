@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(812); // + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(815); // + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -422,6 +422,52 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 3 || ["a1-u4-d1", "a1-u4-d2", "a1-u4-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(u.warmup.cardIds).toEqual(["opa", "loesung", "foto"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("u4-d5 (D140): ‑e علامةً للمالكة كـ«ـها» (~~ihre Mann~~) · الفرنسية sa mère (~~Er liebt ihre Mutter~~) · باء «فخور بـ» — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u4-d5")!;
+    const [ending, french, stolz] = u.zusammenfassung.warningCards;
+    expect(ending!.commonError.de).toBe("~~ihre Mann~~");
+    expect(ending!.correct.de).toBe("Ihr Mann ist Lehrer. · Ihre Tochter ist jung.");
+    // «ـها» علامة المالكة وحدها ولا تتغير مع المملوك — والنهاية الألمانية من أداة المملوك ودوره
+    expect(ending!.whyArabicSpeakerFails).toContain("«زوجُها · عملُها»");
+    expect(ending!.exercise).toMatchObject({ a: "Ihr Vater wohnt in Tunesien." });
+    expect(french!.commonError.de).toBe("~~Er liebt ihre Mutter.~~ (= أمّه)");
+    expect(french!.correct.de).toBe("Er liebt seine Mutter.");
+    // العربية عون هنا («أمُّه/أمُّها») والخطر من الفرنسية — لا يُنسب إلى العربية ما ليس فيها (سابقة u3-d1)
+    expect(french!.whyArabicSpeakerFails).toContain("العربية في صفّك هنا");
+    expect(french!.whyArabicSpeakerFails).toContain("sa mère");
+    expect(stolz!.commonError.de).toBe("~~Ich bin stolz mit Oma.~~");
+    expect(stolz!.correct.de).toBe("Ich bin stolz auf Oma.");
+    expect(stolz!.whyArabicSpeakerFails).toContain("«فخور بـ»");
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: «إخوتي مفرد في التفكير العربي أحياناً» (بلا أساس) · aufnehmen المنفصل كأنه معروف (مثل aufstehen — الوحدة 7) · مصيدة الجمع المكررة
+    const cards = JSON.stringify(u.zusammenfassung.warningCards);
+    expect(cards).not.toMatch(/في التفكير العربي|aufstehen|Ich nehme auf eine|mein Geschwister/);
+    // لا Dativ بعد von/mit/in/zu ولا Genitiv ولا صفة منعوتة ولا اسم مدينة غير معلن في أي نص ألماني للدرس
+    const de = JSON.stringify({ e: u.einstieg, s: u.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "" }))), q: u.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "" }))), z: u.zusammenfassung.summary.de, w: u.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise]) });
+    expect(de).not.toMatch(/\b(von|mit|in|zu) (dem|der|meinem|meiner|deinem|deiner|seinem|seiner|ihrem|ihrer|einem|einer)\b|\bzur\b|\bzum\b|meines|kurze|Sfax|Aufnahme/);
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(["geschwister", "zwilling", "beruf", "arbeiten", "arbeit", "aufnehmen", "erzaehlen", "glueck", "gluecklich", "ihr"].map(sample)).toEqual([
+      "Hast du Geschwister?", "Meine Brüder sind Zwillinge.", "Was ist sein Beruf?", "Meine Mutter arbeitet viel.", "Sie liebt ihre Arbeit.",
+      "Ich nehme eine Nachricht auf.", "Erzählst du von Tunesien?", "Du hast Glück!", "Meine Oma ist glücklich.", "Ihr Mann ist Lehrer.",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا جذع مالك آخر (sein/ihr) مشتِّتاً — «Sie liebt seinen Sohn.» صحيحة بمعنى آخر
+    const choiceTexts = [...u.einstieg.pretestItems.flatMap((p) => p.choices), ...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (typeof i === "string" ? [i] : Array.isArray((i as { choices?: unknown }).choices) ? ((i as { choices: string[] }).choices) : []));
+    const quizChoices = u.quiz.variants.flatMap((v) => v.items.flatMap((i) => i.choices ?? []));
+    for (const item of u.quiz.variants.flatMap((v) => v.items).filter((i) => i.choices)) {
+      const wrong = item.choices!.filter((c) => c !== item.a);
+      const swapOwner = (s: string) => s.replace(/\b([Ss])ein/g, "§$1").replace(/\b([Ii])hr/g, (_m, c: string) => (c === "I" ? "Sein" : "sein")).replace(/§S/g, "Ihr").replace(/§s/g, "ihr");
+      expect(wrong).not.toContain(swapOwner(item.a));
+    }
+    expect(choiceTexts.filter((c) => /^(Sein Mann ist Lehrer\.|Dein Vater arbeitet viel\?|Was ist Ihr Beruf\?)$/.test(c))).toEqual([]);
+    expect(quizChoices.length).toBeGreaterThan(0);
+    // الاستدعاء من دروس سابقة · ولا كلمة من درس سابق تُعرض «جديدة» (N-018) — kurz (u2-d4) خرجت
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 3 || ["a1-u4-d1", "a1-u4-d2", "a1-u4-d3", "a1-u4-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["mann", "brille", "kind"]);
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 

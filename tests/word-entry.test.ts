@@ -8,7 +8,7 @@ import {
   slugify, nounGender, detectPhoneticRisks, detectGrammarRisks, cardTypesFor, clipText, srsDistance,
   plausibleRisk, reannotate, citationForm, lemmaOf,
 } from "../tools/lib/word-entry.js";
-import { planWord, runGenerator, phonemizeAll, auditRisks, type WordSpec } from "../tools/word-entry-generator.js";
+import { planWord, runGenerator, phonemizeAll, auditRisks, spokenForm, type WordSpec } from "../tools/word-entry-generator.js";
 import { ALL_WORDS, ALL_LESSONS } from "../src/lesson-packs.js";
 
 // espeak يُخرج ç مفككة — الاختبار يستعمل الشكل نفسه
@@ -219,6 +219,26 @@ describe("D105 — runGenerator على شجرة مؤقتة (نطق ومقطع و
     const m = AudioManifest.parse(JSON.parse(readFileSync(join(root, "manifests/audio-manifest.a1-u1.json"), "utf8")));
     expect(m.tracks.find((x) => x.id === "word-das-leben")?.textDe).toBe("das Leben.");
     expect(readFileSync(py, "utf8")).toContain('("word-das-leben", "das Leben.", "das-leben", ["a1-u2-d2"]),');
+  });
+
+  it("D140: الشرح بين القوسين («ihr (ملكيتها)» على اصطلاح «sein (ملكيته)») لا يُنطق ولا يدخل المقطع ولا المعرّف — وحقل de يبقى كما هو", () => {
+    const seen: string[] = [];
+    const spy = (texts: string[]) => { seen.push(...texts); return texts.map(() => "ˈiːɾ"); };
+    const ihr = {
+      ...spec, de: "ihr (ملكيتها)", ar: ["ـها (ملكها)"], wordClass: "pronoun", level: "A1", unit: 4, lesson: "a1-u4-d5", thema: "Besitz",
+      sample: { de: "Ihr Mann ist Lehrer.", ar: "زوجها معلّم." }, plural: undefined, functionWord: true, chunk: true,
+    };
+    const r = runGenerator({ specs: [ihr], contentRoot: root, phonemize: spy, clip: okClip, genAudioPy: py });
+    expect(seen).toEqual(["ihr"]); // كان «ihr (ملكيتها)» كاملاً — العربية إلى espeak
+    expect(r.planned[0]!.word).toMatchObject({ id: "ihr", de: "ihr (ملكيتها)", isFunctionWord: true });
+    expect(r.planned[0]!.clipText).toBe("ihr.");
+    const m = AudioManifest.parse(JSON.parse(readFileSync(join(root, "manifests/audio-manifest.a1-u1.json"), "utf8")));
+    expect(m.tracks.find((x) => x.id === "word-ihr")?.textDe).toBe("ihr.");
+    expect(readFileSync(py, "utf8")).toContain('("word-ihr", "ihr.", "ihr", ["a1-u4-d5"]),');
+    // الشرح وحده يسقط: البدائل «/» تبقى كما كانت (المقطع ينطقها كلها) · والمعرّف الآلي لا يأخذ حروف الشرح
+    expect(spokenForm("am (an + dem)")).toBe("am");
+    expect(spokenForm("Entschuldigung / Entschuldigen Sie")).toBe("Entschuldigung / Entschuldigen Sie");
+    expect(planWord({ ...(ihr as WordSpec), de: "am (an + dem)", wordClass: "preposition" }, "ˈam").word.id).toBe("am");
   });
 });
 

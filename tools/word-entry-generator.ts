@@ -64,18 +64,27 @@ export function phonemizeAll(texts: string[]): string[] {
   return (JSON.parse(out) as { ipa: string }[]).map((r) => r.ipa);
 }
 
+/**
+ * D140: الشكل المنطوق من حقل de — بلا الشرح بين القوسين (اصطلاح المتجانسات: «sein (ملكيته)» · «ihr (ملكيتها)»).
+ * منه وحده: النطق المقيس وأعلام الخطر ونص المقطع والمعرّف الآلي — كما يُسقط التدقيق (citationForm) واختبار D102
+ * الشرحَ («بلا الشرح بين القوسين»). البدائل «/» تبقى كما كانت (المقطع ينطقها كلها). قبل D140 كان المولِّد يرسل
+ * «ihr (ملكيتها)» كاملة إلى espeak وإلى نص المقطع.
+ */
+export const spokenForm = (de: string): string => de.replace(/\s*\(.*?\)\s*/g, " ").trim();
+
 /** من المواصفة إلى كلمة كاملة صالحة (بلا قرص — مختبرة) */
 export function planWord(spec: WordSpec, ipa: string): Planned {
   const g = nounGender(spec.de);
   if (spec.wordClass === "noun" && !g) throw new Error(`اسم بلا أداة: «${spec.de}» — اكتب der/die/das (D57)`);
+  const spoken = spokenForm(spec.de);
   const forms = [spec.forms?.praesens3s, spec.forms?.perfekt, spec.forms?.praeteritum, spec.plural].filter((x): x is string => !!x);
-  const phoneticRisks = [...new Set([...detectPhoneticRisks(spec.de, ipa, forms), ...(spec.phoneticRisks ?? [])])].sort();
+  const phoneticRisks = [...new Set([...detectPhoneticRisks(spoken, ipa, forms), ...(spec.phoneticRisks ?? [])])].sort();
   const grammarRisks = [...new Set([...detectGrammarRisks(spec), ...(spec.grammarRisks ?? [])])].sort();
   // D136: pluralia tantum keep their article (article: die) but have no singular gender label or gender-only SRS card.
   const gender = spec.pluralOnly ? "none" : g?.gender ?? "none";
   const draft = {
     schemaVersion: "1.0.0",
-    id: spec.id ?? slugify(spec.de),
+    id: spec.id ?? slugify(spoken),
     de: spec.de,
     ...(g ? { article: g.article } : {}),
     gender,
@@ -97,7 +106,7 @@ export function planWord(spec: WordSpec, ipa: string): Planned {
     usedInLessons: [spec.lesson],
     srsCardTypes: cardTypesFor({ wordClass: spec.wordClass, gender, chunk: spec.chunk }, phoneticRisks),
   };
-  return { word: Word.parse(draft), ipa, clipText: clipText(spec.de) };
+  return { word: Word.parse(draft), ipa, clipText: clipText(spoken) };
 }
 
 export type GenerateClip = (text: string, outAbs: string) => { durationMs: number; sizeBytes: number; hash: string; pcmSha256: string; rmsDb: number };
@@ -117,7 +126,7 @@ export function runGenerator(opts: {
     if (!r.success) throw new Error(`مواصفة ${i + 1} غير صالحة: ${r.error.issues.map((x) => `${x.path.join(".")}: ${x.message}`).join(" · ")}`);
     return r.data;
   });
-  const ipas = (opts.phonemize ?? phonemizeAll)(specs.map((s) => lemmaOf(s.de)));
+  const ipas = (opts.phonemize ?? phonemizeAll)(specs.map((s) => lemmaOf(spokenForm(s.de))));
   const planned = specs.map((s, i) => planWord(s, ipas[i]!));
 
   // D110: goetheList من الدليل لا من الإنسان — المواصفة التي تكتبها تُقارَن بالدليل وتُرفض إن خالفته
@@ -136,11 +145,11 @@ export function runGenerator(opts: {
   // D126: المعرّف الصريح للمتجانسات وحدها — بعد التحقق من أن الآلي مأخوذ فعلاً (ملفاً أو داخل الدفعة)
   for (const [i, s] of specs.entries()) {
     if (!s.id) continue;
-    const auto = slugify(s.de);
+    const auto = slugify(spokenForm(s.de));
     const where = `المواصفة ${i + 1} («${s.de}»)`;
     if (s.id === auto) throw new Error(`${where}: المعرّف الصريح «${s.id}» يساوي الآلي — احذفه`);
     if (!s.id.includes(auto)) throw new Error(`${where}: المعرّف الصريح «${s.id}» لا يحوي «${auto}» — اجعله مثل «das-${auto}» ليبقى قابلاً للبحث`);
-    const taken = existsSync(join(content, `words/${auto}.json`)) || specs.some((o, j) => j !== i && (o.id ?? slugify(o.de)) === auto);
+    const taken = existsSync(join(content, `words/${auto}.json`)) || specs.some((o, j) => j !== i && (o.id ?? slugify(spokenForm(o.de))) === auto);
     if (!taken) throw new Error(`${where}: معرّف صريح بلا تجانس — «${auto}» حر، فاحذف id (D126)`);
   }
 

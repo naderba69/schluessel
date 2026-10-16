@@ -16249,6 +16249,66 @@
       "rmsDb": -16.98
     },
     {
+      "id": "word-glueck",
+      "file": "words/audio/de-DE/word-glueck.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Glück.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 815,
+      "sizeBytes": 3938,
+      "hash": "sha256:c45c8ce65bdedf8c0fed54778d3ca765438516d3abb3e1d45675c30e6887601f",
+      "pcmSha256": "cd954aee6f1b3fdbb0bbae07cbd8065b672815f8eeb262b2dd557c30debf14a5",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "word-gluecklich",
+      "file": "words/audio/de-DE/word-gluecklich.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "glücklich.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 734,
+      "sizeBytes": 3658,
+      "hash": "sha256:2c9a482be70e33e684cc7e659826dcdecef1fb6dbc0af62394a8eb7c3ef16f21",
+      "pcmSha256": "40add9352a74b65c826041b47a65bb59cbe153f1886008e0159f7e671f9456bd",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "word-ihr",
+      "file": "words/audio/de-DE/word-ihr.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "ihr.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 641,
+      "sizeBytes": 3156,
+      "hash": "sha256:278a61143ca74287e2e1e2470336b682e7ac4bdfb097f4e1970490fe0060ccc9",
+      "pcmSha256": "44efc9cfa63e31189ad404e664e4a13c7caf4d1bcdf1737cfc4fd15a93737b3e",
+      "rmsDb": -16.96
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -24024,6 +24084,380 @@
       "hash": "sha256:c18ea4e6a509cd125ea32810d5d4c3e71e3b947a6224b81a5ebf689597e6a481",
       "pcmSha256": "9c853c55e466e801009ce6e9e80d71e771d793ba742e9f50bc121fe3ac0e6726",
       "rmsDb": -17.31
+    },
+    {
+      "id": "na-1",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 105,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, die Aufgabe heute: Wir nehmen eine Nachricht auf.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 5144,
+      "sizeBytes": 23568,
+      "hash": "sha256:cdf22bf8048fd5a165e82721cfedf1cd2607b8b698d5801a2488b12db9843c46",
+      "pcmSha256": "7319d4df44367ca1fc6963164165089b08a9e0d1236166796ff408a785252e19",
+      "rmsDb": -17.29
+    },
+    {
+      "id": "na-2",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 106,
+        "lengthScale": 1.32
+      },
+      "textDe": "Eine Nachricht? Für wen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 2255,
+      "sizeBytes": 10149,
+      "hash": "sha256:b212972a0871f58f59be6ab1cb55e4d499be96c263c4e499aa8e4fa75262a201",
+      "pcmSha256": "60dba1e7fb1f091a8d8f94a20b6380e5285df2553b1713e20256569c7942d175",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "na-3",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Für die Lehrerin. Erzählst du von Tunesien?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 3496,
+      "sizeBytes": 16305,
+      "hash": "sha256:63c13fff10df4b12ced830e0182e395a03b48e9f12f5b0bb6c99ed3946c1f66d",
+      "pcmSha256": "97837c7e18fa2da21ce511c8def2c40be0eadbdc5e6b4364a612c66fc247d89a",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "na-4",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gern! Ich nehme jetzt auf.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 2418,
+      "sizeBytes": 11044,
+      "hash": "sha256:34c986ea4f67a45846a11bc797e6a5e93351b4a64d444553be96336ad5dc9117",
+      "pcmSha256": "2eb0e411dfeb94775176ec3898a152ce0d3ed1f9063993d12a851e9611fe8cf8",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "na-5",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 128,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo, ich bin Yusuf. Tunesien ist meine Heimat.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 3753,
+      "sizeBytes": 16964,
+      "hash": "sha256:95d0d64d3025ad1b440c69c809f32a935a57a016b955d4f464442f5ec8d3bc08",
+      "pcmSha256": "0a79f7c180192d6d5fabc6e8cec047b39cd80c72882967e79c385c04b49672ea",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "na-6",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich habe eine Schwester. Sie ist verheiratet.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 3428,
+      "sizeBytes": 15193,
+      "hash": "sha256:aec2ea4130f8cd80d0ec2b888288c4f30a00941dec39d68a0d48512429bf8617",
+      "pcmSha256": "e9b5ebc085e48ae2a936006a8a89bc9b925f165f7db333389cf308ae6800b227",
+      "rmsDb": -17.13
+    },
+    {
+      "id": "na-7",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 162,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ihr Mann ist Lehrer. Er liebt seinen Beruf.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 2963,
+      "sizeBytes": 13760,
+      "hash": "sha256:f8eaa10dc5c1492a3df0ce10cf3ca2a11492535f2cdf31229580f772fc389293",
+      "pcmSha256": "18570474f76243920201a4b8414d81d0b78e4d3a6dc94dfeebb3bc0e750f5448",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "na-8",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 152,
+        "lengthScale": 1.32
+      },
+      "textDe": "Meine Schwester studiert noch. Ich bin stolz auf sie.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 3544,
+      "sizeBytes": 16318,
+      "hash": "sha256:25147c0eed1db18ab02d1187566c72d16d9088f24a9513208e387565595c0cd9",
+      "pcmSha256": "26607fe3b04b01675055b0959ff336ac0d259543180ea0dfcbde1deea2a4b703",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "na-9",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 98,
+        "lengthScale": 1.32
+      },
+      "textDe": "Fertig! Und du, Lena? Hast du Geschwister?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 4298,
+      "sizeBytes": 18910,
+      "hash": "sha256:8d15aa1c02251ee52134ac78a4526144292e87dc791c6b7f3f32d2428d75aba4",
+      "pcmSha256": "6be9ac154e3d28d7a584dd706938f035fc2daf38c4cc0174be575c39fc40d80e",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "na-10",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 161,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Jetzt nehme ich auf.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 1864,
+      "sizeBytes": 8829,
+      "hash": "sha256:ddecd0008df02b0f745cdf8a685e26c776487c2d77df070e79772414f5074194",
+      "pcmSha256": "f2b96e4d8844e70b4ca5cda24bc4bbb449efe75345a43548b9ed47f62597ddde",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "na-11",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo, hier ist Lena. Ich habe zwei Brüder. Sie sind Zwillinge.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 5096,
+      "sizeBytes": 23720,
+      "hash": "sha256:1d1710e5c95d5d97de4b624537d4abf5336602c5942cdc8234a0f0e9aa9fd991",
+      "pcmSha256": "65a6b3b5b16233c82b9ab2f96d11e2a6ef00784d02a780e728bad11ee79dee46",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "na-12",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Meine Mutter arbeitet viel. Sie liebt ihre Arbeit.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 3800,
+      "sizeBytes": 17781,
+      "hash": "sha256:44d8eeca380bb1322b0e550d43a0b2038a5a9d82bb9eda97fd3498778bc12bb9",
+      "pcmSha256": "b9b4a7b7e26352f8f900c4eb3dc613942f77f2d7156f4ac7c5e9fffbf82cbdec",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "na-13",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 105,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zwillinge? Du hast Glück!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 2278,
+      "sizeBytes": 10075,
+      "hash": "sha256:a03306a30616d25fd019e1e75eab49d546a06d5904a883388c9789c893a128e2",
+      "pcmSha256": "0d2959c6199da62dbf5a085c9be01da0fa5c2df4130b4b4141e700487f9db86f",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "na-14",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 121,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich bin glücklich. Meine Brüder sind sehr lustig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 4472,
+      "sizeBytes": 20605,
+      "hash": "sha256:c924be4b1a92696f718caa6f7e7dcf9194c93fb79aea92db795fe125eadcc6de",
+      "pcmSha256": "19c0917ce39625fbcee39a81fc2a91c4373fd054bfe4c9a9c2f7ec4ed030fa3b",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "na-15",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und dein Vater? Was ist sein Beruf?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 3010,
+      "sizeBytes": 13219,
+      "hash": "sha256:8e600783b476b8b7597d0631c5ddaed6639f471c270c7cbd5c6b78daba26d18d",
+      "pcmSha256": "c13da70579ef0a4e601ad2a0100e9eaaaa0994bb3229a84ac85839021c11bcde",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "na-16",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Er ist auch Lehrer!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 1544,
+      "sizeBytes": 7386,
+      "hash": "sha256:ca9aac4ca44b8c29b0d6821c7930a4788316db23a5d1c566c4a68958a59a740e",
+      "pcmSha256": "017cb9c0c9f6701e52d830c19e18af3123c26ba081d9f1aa2ec830fea090dc37",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "na-17",
+      "file": "audio/scripts/a1-u4-d5-eine-nachricht-fuer-die-lehrerin/na-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 92,
+        "lengthScale": 1.32
+      },
+      "textDe": "Toll! Die Aufgabe ist fertig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u4-d5"
+      ],
+      "durationMs": 3253,
+      "sizeBytes": 13987,
+      "hash": "sha256:f109e370acf6ef1eca7bfc2f3347eaf273f7a088980f4098cec6fb0416caa5aa",
+      "pcmSha256": "a0e5a0cc41ba95a893e8b4d8ab5f7e3ca22360c0e7cb7c6bfd5d386a45ae0066",
+      "rmsDb": -17.09
     }
   ],
   "characterVoices": {

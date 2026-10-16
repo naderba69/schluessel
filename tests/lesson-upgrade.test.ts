@@ -121,7 +121,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u4-d5")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D139 صار u1-d1..d5 + u2-d1..d5 + u3-d1..d5 + u4-d1..d4 مُرقّى
+const legacy = realLessons.find((l) => l.id === "a1-u5-d1")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D140 صار u1-d1..d5 + u2-d1..d5 + u3-d1..d5 + u4-d1..d5 مُرقّى
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -351,7 +351,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u4-d5", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u5-d1", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -447,19 +447,21 @@ describe("D115 — أدوات القياس", () => {
     const legacyRule = { ...w("sein"), de: "sein ملكيته" };
     expect(wordAppears(legacyRule, toks("Das ist sein Hund."))).toBe(false);
   });
-  it("الدرس التالي غير المُرقّى (a1-u4-d5 بعد D139): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u5-d1 بعد D140): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
     expect(r.rule.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-rule", "e-upgrade-sample"]));
-    expect(r.rule.find((i) => i.code === "e-upgrade-rule")?.message).toMatch(/ars-familie-mix/);
-    // بعد D139 صار d4 مكتملاً؛ الفجوات الفعلية لـu4-d5 (مقيسة قبل النقل): لا ملف ars-familie-mix · Sfax في مثال geschwister
-    // وAufnahme في مثال aufnehmen · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · Quiz 3×4 فيه اختصارات Sg./Pl./vs
+    expect(r.rule.find((i) => i.code === "e-upgrade-rule")?.message).toMatch(/ars-essen/);
+    // بعد D140 صار u4-d5 مكتملاً (وu4-d6 توليف خارج المرور)؛ الفجوات الفعلية لـu5-d1 (مقيسة قبل النقل): لا ملف ars-essen ·
+    // lecker/frisch/Frühstück/gesund في أمثلة wurst · fisch · ei · obst · gemuese · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء
+    // · Durst وfrisch في التدريب · Quiz 3×4 فيه frisch وgesund ومصطلح «Pluralia tantum»
     const samples = r.rule.filter((i) => i.code === "e-upgrade-sample").map((i) => i.message).join("\n");
-    expect(samples).toMatch(/Sfax/);
-    expect(samples).toMatch(/Aufnahme/);
+    expect(samples).toMatch(/lecker/);
+    expect(samples).toMatch(/frisch/);
+    expect(samples).toMatch(/Frühstück/);
     expect(r.practice.map((i) => i.code)).toEqual(expect.arrayContaining(["e-upgrade-practice-audio", "e-upgrade-practice-types"]));
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/aufnahme/);
-    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/\bsg\b/);
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/durst/);
+    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/tantum/);
     expect(r.quizMin).toBe(4);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
@@ -1001,6 +1003,80 @@ describe("D115 — أدوات القياس", () => {
     const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
     expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
     expect(quizAnswers.filter((a) => ["zwischen", "lächeln"].includes(a))).toEqual([]);
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم.
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+  });
+  it("a1-u4-d5 مُرقّى (D140): صفر نقص — 37 بنداً · 4 أنواع · Quiz 6 · 14 كلمة · ars-familie-mix · كل 17 سطراً وصوتا كلمتين مستخدمة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u4-d5")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u4-d5")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([37, 4, 6, 14]);
+    // القاعدة المخططة نفسها (ars-familie-mix): الجذع من المالك (sein · ihr) والنهاية من المملوك ودوره (Ø · ‑e · ‑en)
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-familie-mix"]);
+    const rule = rules.get("ars-familie-mix")!;
+    expect(rule.payload.ruleDe).toMatch(/er → sein · sie → ihr — der Mann → ihr Mann · die Arbeit → ihre Arbeit · den Mann → ihren Mann/);
+    // وعدُ ars-possessiv (D137: «كلبها = ihr Hund … نتدرب عليها في درس لاحق») يُوفى هنا — افتراض N-063
+    expect(rules.get("ars-possessiv")!.payload.limitsAr.join(" ")).toMatch(/ihr Hund.*درس لاحق/);
+    // النقل الإيجابي يُسمّى عوناً («زوجُه/زوجُها» ≈ sein/ihr) · والفروق بمبررها: «ـها» لا تتغير مع المملوك · الفرنسية sa mère · باء «فخور بـ»
+    expect(rule.payload.contrastAr).toContain("العربية في صفّك");
+    expect(rule.payload.contrastAr).toContain("«زوجُها · عملُها · رأيتُ زوجَها»");
+    expect(rule.payload.contrastAr).toContain("sa mère");
+    // لا قاعدة لاحقة بلا إعلان: Dativ بعد von/mit (الوحدة 8) · المنفصلة (الوحدة 7) · ihr «أنتم» لاحقاً · Geschwister جمع دائم
+    const limits = rule.payload.limitsAr.join(" ");
+    expect(limits).toMatch(/von meiner Familie.*Dativ/);
+    expect(limits).toMatch(/aufnehmen.*الوحدة 7/);
+    expect(limits).toMatch(/Ihr بحرف كبير/);
+    expect(e.properNouns).toEqual(["Lena", "Yusuf", "Mia", "Berlin"]);
+    // النواة D113 (das Glück · glücklich) + ihr (ملكيتها) بالمولِّد — ونص مقطع ihr بلا الشرح بين القوسين (D140: إصلاح المولِّد)
+    expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["glueck", "gluecklich", "ihr"]));
+    const ihr = words.find((w) => w.id === "ihr")!;
+    expect([ihr.de, ihr.wordClass, ihr.isFunctionWord, ihr.sampleSentence?.de]).toEqual(["ihr (ملكيتها)", "pronoun", true, "Ihr Mann ist Lehrer."]);
+    const glueck = words.find((w) => w.id === "glueck")!;
+    expect([glueck.de, glueck.plural, glueck.goetheList]).toEqual(["das Glück", undefined, ["A1", "A2"]]);
+    expect(tracks.get("word-ihr")?.textDe).toBe("ihr.");
+    // kurz مُدرَّسة في a1-u2-d4 (D128) ⇒ لم تعد «جديدة» هنا (N-018) وتبقى استرجاعاً في التدريب
+    expect(l.praesentation.wordIds).not.toContain("kurz");
+    expect(l.uebung.stations.find((s) => s.type === "gap-fill")!.interleavedWith).toContain("kurz");
+    // Geschwister جمع دائم كـEltern: بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136)
+    const geschwister = words.find((w) => w.id === "geschwister")!;
+    expect([geschwister.gender, geschwister.srsCardTypes.includes("gender")]).toEqual(["none", false]);
+    // أمثلة البطاقات القديمة: Sfax · Genitiv «meines Vaters» · «in der Schule» · «zur Arbeit» · Aufnahme + صفة منعوتة · «von meiner Familie»
+    const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
+    expect(["geschwister", "beruf", "arbeiten", "arbeit", "aufnehmen", "erzaehlen", "zwilling"].map(sample).join(" "))
+      .not.toMatch(/Sfax|meines|in der|zur|Aufnahme|kurze|meiner/);
+    expect(l.warmup.cardIds).toEqual(["mann", "brille", "kind"]);
+    // الحوار الجديد (na-1..17) كله في الاستماع والإملاء مرة واحدة · ihr وstolz إملاءً
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("na-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 17 }, (_, i) => `na-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-ihr", "word-stolz"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    // N-015: الإملاء من الأسطر البطيئة وحدها (مقيسة في المانيفست) — الأسرع (na-7 · na-8 · na-10 · na-15 · na-16) في الاستماع
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; voiceParams: { speedWpm: number } }[] };
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    for (const fast of ["na-7", "na-8", "na-10", "na-15", "na-16"]) expect(listening.items.map((i) => String(i.audioId))).toContain(fast);
+    // الاستماع يحسم ihr/sein في سطر واحد: «Ihr Mann ist Lehrer. Er liebt seinen Beruf.»
+    const lis = listening.items as { audioId: string; choices: string[]; a: string }[];
+    expect(lis.find((i) => i.audioId === "na-7")).toMatchObject({ a: "معلّم ويحب مهنته" });
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set(l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))));
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => String(i.q).replace("___", String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(a)))).toEqual([]);
+    expect(quizAnswers.filter((a) => ["ihr", "stolz"].includes(a))).toEqual([]);
     // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم.
     const taught = knownStems(taughtUpTo(l, realLessons, words));
     const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
