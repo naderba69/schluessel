@@ -520,6 +520,15 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || l.id === "a1-u5-d1").flatMap((l) => l.praesentation.wordIds));
+    const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
+    expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute"]);
+    for (const w of pluralOnly) expect([w.id, w.gender, w.srsCardTypes.includes("gender")]).toEqual([w.id, "none", false]);
+    // Nudeln ليست منها: المفرد die Nudel موجود (قائمة Goethe A2) فجنسها المؤنث صحيح
+    expect(ALL_WORDS.find((w) => w.id === "nudeln")!.gender).toBe("die");
+  });
+
   it("بطاقات الثقافة (Landeskunde): 12 بطاقة — كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {
     expect(ALL_LANDESKUNDE.length).toBe(12);
     const units = ALL_LANDESKUNDE.map((c) => c.unit).sort((a, b) => a - b);
