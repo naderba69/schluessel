@@ -16569,6 +16569,66 @@
       "rmsDb": -17.08
     },
     {
+      "id": "word-jeder",
+      "file": "words/audio/de-DE/word-jeder.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "jeder.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 815,
+      "sizeBytes": 3987,
+      "hash": "sha256:e7b2b819095ee84dfab8384fbfb4ed17ab93db15b8a08c2b922219abab9ea9f8",
+      "pcmSha256": "4083f7ffa64cd2c3d3028e25500c87c2ada2d744597c1e6fe95b5687007c8ecc",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "word-an-sein",
+      "file": "words/audio/de-DE/word-an-sein.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "an sein.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 1256,
+      "sizeBytes": 5534,
+      "hash": "sha256:5667d8c619cc70a637289db7e2fa7f56931d05e6fe9e0206e66fcfb2d1620700",
+      "pcmSha256": "99a5c79aae4f8b7401bc27a1027e66ab5329113782bcca2e2ba60266a5bc9dbe",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "word-aus-sein",
+      "file": "words/audio/de-DE/word-aus-sein.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "aus sein.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 966,
+      "sizeBytes": 4718,
+      "hash": "sha256:ae8aad682a6902e756b7c20a5717ddaf199ffe79dcfd6869de260d1040124170",
+      "pcmSha256": "9bfdc1475dc096f2c0ae7a99f8f5f1e8b0b15a01936f6a4f587b60546fdd20ad",
+      "rmsDb": -17.25
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -27754,6 +27814,446 @@
       "hash": "sha256:1115f82e00cdb4bf00dd44d2eaef55aae015f03a45bc6e227bf8dc8f8e78698d",
       "pcmSha256": "39204bcff7df9ac70ef06de120a25edc1d663d403252663ca9f35eddd842aefc",
       "rmsDb": -17.01
+    },
+    {
+      "id": "eg-1",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, was gibt es dort? Ist das dein Zimmer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 3528,
+      "sizeBytes": 16555,
+      "hash": "sha256:dd48595c81b6c0a183de0bd8d8f23470ea8d60e520b6050805b0abbffe9bc170",
+      "pcmSha256": "fce3f6afcdfd2286bf2802b6fdd3e2b400d0d2f59c56501d8db58e5362e9a310",
+      "rmsDb": -17.3
+    },
+    {
+      "id": "eg-2",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 175,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Hier ist die Tür, und hier gibt es ein Fenster.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 3776,
+      "sizeBytes": 17129,
+      "hash": "sha256:16a3e76711048343caa5f75872078d406614d3ca7f5134f7b86d4ab2451b4da5",
+      "pcmSha256": "dfc4336eeb45f74130158b4437db1c8216617b9a1c9082d3e78521437d819dfe",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "eg-3",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das Fenster ist sehr groß!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 2136,
+      "sizeBytes": 10082,
+      "hash": "sha256:13ccd799ad1473629cb31168f472d7713da990b21e69a98d35ab117089830bfa",
+      "pcmSha256": "355ce323d54e60cbb9606839697eae8f81291ac1c5e2852ebc90079ff7b848f1",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "eg-4",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, und die Decke ist hoch. Die Wände sind hell.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 3776,
+      "sizeBytes": 16857,
+      "hash": "sha256:d431a8690eb269fcf0db6f53671988397e1b9c5a9571fd9a90b92015a2f1550b",
+      "pcmSha256": "3dab0008c9550688c7001f59d47717d0d0bb2dfa315d88ee9776a1025b855181",
+      "rmsDb": -17
+    },
+    {
+      "id": "eg-5",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 188,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und der Boden? Ist er neu?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 1912,
+      "sizeBytes": 9096,
+      "hash": "sha256:4c747efaa34f8eb926d6c5f365616f62c98d6fc16271354a62380ac9270e3cc3",
+      "pcmSha256": "d051eea0d937afd510ab2a614ddaf4dd4682c3d3ecb501d6ba810bfee4d191fd",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "eg-6",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, der Boden ist alt, aber schön.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 3207,
+      "sizeBytes": 14740,
+      "hash": "sha256:ffbdbeb78504632e46416d337c0f72910516da40914675f3002de75eb1359b27",
+      "pcmSha256": "070aa153b525b66633d5828a7811bfe540207409bd3f2bcc20b153418e89519b",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "eg-7",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gibt es einen Schreibtisch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 1768,
+      "sizeBytes": 8330,
+      "hash": "sha256:097a17f93b45dbc5725d55cb98390e274a1315285059d03bb0d6f6078e7528c5",
+      "pcmSha256": "fd253366f300eee54ea42f615f9eadedc46e9ad19b6ad4623ec8161189245a92",
+      "rmsDb": -17.99
+    },
+    {
+      "id": "eg-8",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, es gibt einen Schreibtisch und einen Computer.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 3892,
+      "sizeBytes": 17984,
+      "hash": "sha256:3618108d68559423ca01a0de49b3f63a0b4027489ec574b53c05fc0a84e8ee91",
+      "pcmSha256": "2bfb1cfc068dfa808ad00bbb7df5ec4d266a3c818bd8a1c53be1bde1b8fb8176",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "eg-9",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ist der Computer jetzt an?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 2120,
+      "sizeBytes": 10285,
+      "hash": "sha256:7a8b33a0ea5965d425365c496781f050eaf2ba445e32530b1fb7aa3f144a8b38",
+      "pcmSha256": "ce1fea2ea41142ef06b919f72b943bf714c9fbb96bdf307bfbf7189dc842500f",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "eg-10",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Natürlich ist er an — wir sprechen doch!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 3219,
+      "sizeBytes": 14127,
+      "hash": "sha256:b6712e00b2be72d38d589b70772a3dc0dba95a7f198c2d6c8d21b8ea0e8a9c07",
+      "pcmSha256": "c1ed6ecf541f1ec66c00c91753f6b1b670703243d24ad34be79e6fb998797136",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "eg-11",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ach so! Und gibt es auch einen Fernseher?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 3192,
+      "sizeBytes": 14886,
+      "hash": "sha256:f86686df42bbe9e82ff39c8ca41e277696166de162f47ca855023983ee9758a2",
+      "pcmSha256": "6313cf073b36e45e1518fa151be6073011766fa641ae595049b44519219a1edc",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "eg-12",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 138,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, es gibt keinen Fernseher. Ich habe ja den Computer.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 4345,
+      "sizeBytes": 19536,
+      "hash": "sha256:ad5e24d98d99ee25140c61d6b367395b1539dde30ba4df910595ee9e47270d54",
+      "pcmSha256": "145602901d656970332c2e187019193ba438bf7b6428ea3408b27501ed0765ab",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "eg-13",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Küche? Gibt es einen Kühlschrank?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 3032,
+      "sizeBytes": 14120,
+      "hash": "sha256:0e8e151dd757feeb798c383c29887ce6420a8e0daee2b2644915d51d13e043d5",
+      "pcmSha256": "bc839478dc52a795fb4a0ab994abee86e64a6023a843639b17b6ed5262cb222b",
+      "rmsDb": -17.47
+    },
+    {
+      "id": "eg-14",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, aber es gibt keine Waschmaschine.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 2592,
+      "sizeBytes": 11997,
+      "hash": "sha256:642805c0e5f79db1f237becf4ff0eca7685a6b1f362ec53871b2d7ddd71037a7",
+      "pcmSha256": "ebb0d67a6f74d1090c741f67b06619d7062e50fdc398faedb5edd8cbed140e4d",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "eg-15",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 211,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Heizung? Ist sie an?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 1704,
+      "sizeBytes": 8246,
+      "hash": "sha256:79bfc16b35727d4266e829d4c263c5855615bf53610e28880526f3e50565fb22",
+      "pcmSha256": "74449d11b687f149d8314fbcfcdb492a393ba672a0de4dc23e8f63521feef0af",
+      "rmsDb": -17.21
+    },
+    {
+      "id": "eg-16",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, sie ist aus. Heute scheint die Sonne!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 3172,
+      "sizeBytes": 14975,
+      "hash": "sha256:3a9b63a5f2551b36592b39cfe96db916e76a836dcbcc83f4e5a7a7283c0af3e5",
+      "pcmSha256": "d8938459ecb8b20de8397e062fa4029c21647ed4826e087f4e97e99940927280",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "eg-17",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und dein Haus, Lena? Hat jedes Zimmer einen Fernseher?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 4275,
+      "sizeBytes": 19512,
+      "hash": "sha256:aebf4e9d82f18ef8bcee559fd99c26613bd0f65896d60789aab36fd6b504f08e",
+      "pcmSha256": "c3a17bbd5bbd8459dcadb4a72a4b5c1e5e28b23650858a6f4cb6d67e850f12f3",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "eg-18",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein! Es gibt nur einen Fernseher. Aber jeder Raum hat eine Heizung.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 5288,
+      "sizeBytes": 24638,
+      "hash": "sha256:049809f49deb0404467417b0bd7f5698a734a3d2b02927901d0d4520ecbd74af",
+      "pcmSha256": "d5fddcc6564b2b86bd7858fe0cf7de4285010f6938c4f31315232ee0535d6161",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "eg-19",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 158,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und das Dach? Ist es auch alt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 2650,
+      "sizeBytes": 11605,
+      "hash": "sha256:4ffaf051a5f6a4a2331881f521092a2a8156c3aebdf6675bc5757ffb726a1bcc",
+      "pcmSha256": "83f5fae1e164ea0f751eeda29a40797b085d42f8b2c711e9cfd097d334a48f43",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "eg-20",
+      "file": "audio/scripts/a1-u6-d3-einen-fernseher/eg-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, das Dach ist neu. Und die Waschmaschine ist an — hörst du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d3"
+      ],
+      "durationMs": 4776,
+      "sizeBytes": 22313,
+      "hash": "sha256:9b8141a321c587dcb95022e31c971d2a79ab3c90bc22807671a5c7f8a96db28f",
+      "pcmSha256": "55d3c3ad960b0b99c6ab3655722fb1ba9b6f0038f717a6cd60601f2fcc381f3b",
+      "rmsDb": -17.46
     }
   ],
   "characterVoices": {

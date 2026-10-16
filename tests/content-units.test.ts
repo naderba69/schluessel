@@ -16,7 +16,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(828); // + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(831); // + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -849,8 +849,57 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u6-d3 (D148): الاسم بعد «يوجد» فاعلٌ مرفوع (~~Es gibt ein Tisch.~~) · لا ضمير شكلي (~~Gibt einen Balkon?~~) · «كلّ» لا تتغيّر (~~jeder Zimmer~~) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u6-d3")!;
+    const [akk, es, jed] = u.zusammenfassung.warningCards;
+    expect(akk!.commonError.de).toBe("~~Es gibt ein Tisch.~~");
+    expect(akk!.correct.de).toBe("Es gibt einen Tisch.");
+    expect(akk!.whyArabicSpeakerFails).toContain("«يوجد مكتبٌ»");
+    expect(akk!.whyArabicSpeakerFails).toContain("مبتدأ مؤخر مرفوع");
+    expect(akk!.exercise).toMatchObject({ a: "Es gibt keinen Schreibtisch." });
+    expect(es!.commonError.de).toBe("~~Gibt einen Balkon?~~");
+    expect(es!.correct.de).toBe("Gibt es einen Balkon?");
+    expect(es!.whyArabicSpeakerFails).toContain("العربية بلا ضمير شكلي");
+    expect(es!.whyArabicSpeakerFails).toContain("الفرنسية il y a");
+    expect(es!.exercise).toMatchObject({ a: "Hier gibt es einen Kühlschrank." });
+    expect(jed!.commonError.de).toBe("~~jeder Zimmer~~");
+    expect(jed!.correct.de).toBe("jedes Zimmer");
+    expect(jed!.whyArabicSpeakerFails).toContain("«كلُّ غرفةٍ»");
+    expect(jed!.whyArabicSpeakerFails).toContain("every الإنجليزية");
+    expect(jed!.exercise).toMatchObject({ a: "Jedes Fenster ist groß." });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: «لا Dativ» (والخطأ ~~Es gibt der Tisch.~~ رفعٌ لا جرّ) · «الآلات مؤنثة غالباً» (الحاسوب والتلفاز مذكران) · «Kühle+Schrank» (الصواب kühl) و«للمرة الخامسة»
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/لا Dativ|الآلات مؤنثة|Kühle|للمرة الخامسة|Es gibt der/);
+    // لا Dativ بأداة (in der Küche — أين؟ في u6-d4) · لا كلمات u6-d4 اللاحقة (oben · unten · Ecke · stellen …) ولا Möbel (u6-d5) · ولا مصطلحا Akkusativ/Dativ
+    const de = JSON.stringify({ e: u.einstieg, s: u.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", audioId: "" }))), q: u.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "" }))), z: u.zusammenfassung.summary.de, w: u.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise]) });
+    expect(de).not.toMatch(/\b(von|mit|in|zu|an|auf) (dem|der|meinem|meiner|deinem|deiner|seinem|seiner|ihrem|ihrer|einem|einer)\b|\b(im|am|zum|zur|ins|da)\b|Möbel|\boben\b|\bunten\b|\bEcke\b|\bstellen\b|\blegen\b|Akkusativ|Dativ|\bgeben\b/);
+    // N-021: أمثلة البطاقات بلا أسماء علم · وD108: لا نص رسمي حرفي (Das Licht ist aus · Die Waschmaschine ist günstig · Der Fernseher ist kaputt)
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    const ids = ["fenster", "tuer", "wand", "boden", "decke", "heizung", "kuehlschrank", "waschmaschine", "fernseher", "computer", "schreibtisch", "dach", "jeder", "an-sein", "aus-sein"];
+    expect(u.praesentation.wordIds).toEqual(ids);
+    expect(ids.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|Das Licht ist aus|Die Waschmaschine ist günstig|Der Fernseher ist kaputt/);
+    expect(ids.map(sample)).toEqual([
+      "Das Zimmer hat zwei Fenster.", "Links ist die Tür.", "Die Wände sind hell.", "Der Boden ist alt, aber schön.", "Die Decke ist sehr hoch.",
+      "Gibt es eine Heizung?", "Es gibt einen Kühlschrank.", "Wir haben keine Waschmaschine.", "Es gibt keinen Fernseher.", "Ich habe einen Computer.",
+      "Rechts ist ein Schreibtisch.", "Das Haus ist alt, aber das Dach ist neu.", "Jeder Raum hat ein Fenster.", "Der Computer ist an.", "Die Heizung ist aus.",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا ein/kein + مذكر بعد es gibt (عامية «ein Tisch») · لا «Gibt einen …» بلا es (حذف es العامي)
+    // · لا «Es gibt einen …?» بنبرة سؤال (صحيحة) · لا geben (غير مدروسة) · ولا خيار ألماني لمعنى an/aus (Der Fernseher ist aus صحيحة بمعنى آخر)
+    const choiceItems = [...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (Array.isArray((i as { choices?: unknown }).choices) ? [i as unknown as { choices: string[]; a: string }] : []));
+    const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
+    const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
+    expect(german.filter((c) => /\b(ein|kein) (Tisch|Computer|Schreibtisch|Fernseher|Kühlschrank|Balkon|Boden|Raum)\b|^Gibt (ein|kein)|^Es gibt .*\?$|\bgeben\b|\b(an|aus)\.$/u.test(c))).toEqual([]);
+    expect(german).toHaveLength(18); // الاختبار القبلي 2 + ثماني جمل Quiz × 2
+    // الاستدعاء من دروس سابقة (أمثلتها مفعولٌ به بعد haben: einen Schrank · keinen Balkon · einen Keller) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["schrank", "balkon", "keller"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute"]);
     for (const w of pluralOnly) expect([w.id, w.gender, w.srsCardTypes.includes("gender")]).toEqual([w.id, "none", false]);
