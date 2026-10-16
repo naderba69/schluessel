@@ -16489,6 +16489,26 @@
       "rmsDb": -16.98
     },
     {
+      "id": "word-breit",
+      "file": "words/audio/de-DE/word-breit.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "breit.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4403,
+      "hash": "sha256:180353ed5ecc10547dda5cf12f1bbb882555d23d059c368037337f9418321435",
+      "pcmSha256": "56e1df5fb60bd402a9f092e6678283c71ca3cd9a14cae951aa65507a725966e6",
+      "rmsDb": -17.25
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -26794,6 +26814,446 @@
       "hash": "sha256:a00098e9ce63985778848d73bdb8109af7331e26c90afee22f5624a87b91d377",
       "pcmSha256": "5ea5dd8389dd4a273c0c3c5f4d90fb6c8414bafbb355e47f49f947035e215c5d",
       "rmsDb": -17.01
+    },
+    {
+      "id": "mb-1",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 119,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo, Yusuf! Zeigst du heute deine Wohnung?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 3544,
+      "sizeBytes": 16549,
+      "hash": "sha256:d4d35817ef8f444683c4a88ffd4ce460810c1b7f5278889b888132a691f69aff",
+      "pcmSha256": "b13fa71bcbbee7c0ff127bbda04e81b695247700cfd824312b9ccb593e6fc203",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "mb-2",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 157,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Hier ist mein Tisch, und hier sind zwei Stühle.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 3822,
+      "sizeBytes": 17051,
+      "hash": "sha256:8768b775cff3703f8ddca9759236e921c6a7751417d3cdc6709af5d015a92feb",
+      "pcmSha256": "17e4b783f80ae54ce334b894f5a9a8771c09c0d9735e5f00db5de123256b59f6",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "mb-3",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nur zwei Stühle?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 1320,
+      "sizeBytes": 6396,
+      "hash": "sha256:f6c2fb17f514251f6b8f824f382fe21e75930d378300a111f9db6a953751d1f5",
+      "pcmSha256": "5ff00a469082622e6584bbe587c49b85bd76acdae803bb7964dc3cedf535a5d8",
+      "rmsDb": -17.42
+    },
+    {
+      "id": "mb-4",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Ich habe auch ein Bett, einen Schrank und eine Lampe.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 4658,
+      "sizeBytes": 20599,
+      "hash": "sha256:77c67042296beb132552ee44cb359afefcab95da6057217cc7f12e8253683238",
+      "pcmSha256": "18381d5c302c17235db28622be49a979ac5edf43611b86beddd3dd5dc711002e",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "mb-5",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und ein Sofa?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 1288,
+      "sizeBytes": 6271,
+      "hash": "sha256:ebac2ee55d215457f772cb874e0a6fe5f3259ee33205bb889cf09012953044dc",
+      "pcmSha256": "9ec855fe61f3efc5223d875660d00fd8835ab2910ec09d3222c430cb22070e1c",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "mb-6",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, ich habe kein Sofa. Meine Wohnung ist klein.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 3404,
+      "sizeBytes": 15750,
+      "hash": "sha256:4357a18645138c72f6d0683c237846cff7f10515afb86bea7757d4e70c16cecf",
+      "pcmSha256": "a6d28bac623ff12433227dd93056d00f15abe2069c9b7f6debb0a73b575e8369",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "mb-7",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich zeige mein Sofa. Es ist neu und sehr breit!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 4408,
+      "sizeBytes": 20363,
+      "hash": "sha256:98560c1a4bf319665956ff3a587e8280550a127dded4e236a894deb77f0f9370",
+      "pcmSha256": "0b9004b27783af60f2f42548d526464b8a50361616b09e031c8cee39ba6a93b5",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "mb-8",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Breit, ja! Und das sind sechs Kissen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 2998,
+      "sizeBytes": 13872,
+      "hash": "sha256:f46d8514cfa17c75dae5c34508ede618de513b115db0db635d722fd2c7e12ff8",
+      "pcmSha256": "5d5b812c2ca83ac92e01119f7fc5077910f6484ea2a9704d051881360b6c5a97",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "mb-9",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 110,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, sechs Kissen. Ich liebe Kissen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 3272,
+      "sizeBytes": 15175,
+      "hash": "sha256:43176e0c99c7d872cf124e638369433a19767643da1d29d2c10fce01e458ca53",
+      "pcmSha256": "4b663e12a4fb6cd9a9e373d7c1e4a823fef4eb489e4243b43dbd017bc24dd073",
+      "rmsDb": -17.42
+    },
+    {
+      "id": "mb-10",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 135,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und links? Ist das ein Spiegel?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 2661,
+      "sizeBytes": 12177,
+      "hash": "sha256:72f5217d968b152219e477c6516e9488adecd2a33661c4a7a9ac43e9cbf15d00",
+      "pcmSha256": "6c57ffb8a88c8b9eebbbfa2347d117425abc41dd0c15a6a05759eb0590fc0f76",
+      "rmsDb": -17
+    },
+    {
+      "id": "mb-11",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, das ist ein Spiegel. Und rechts sind zwei Regale.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 4216,
+      "sizeBytes": 19768,
+      "hash": "sha256:7008ed5bd56d97c4e8ba59820199d76c5e68e97a88c31d3efc4a7e971c123655",
+      "pcmSha256": "d564ab6cb6ee5af32cc1bc6b9898a8d562a3de0c73c4a3adb433cc75072b6408",
+      "rmsDb": -17.38
+    },
+    {
+      "id": "mb-12",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 119,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zwei Regale! Ich habe kein Regal.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 3021,
+      "sizeBytes": 13471,
+      "hash": "sha256:b5ea1ee63dd482c9b2c587e66a6f5d0d3144b4ab95c29482804d54028f5d0e66",
+      "pcmSha256": "dec955ae2bf0b33f9ce7b2de6f09948ed3376b27b0075379c355c1d63c4c32de",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "mb-13",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 114,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und deine Vorhänge?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 1576,
+      "sizeBytes": 7473,
+      "hash": "sha256:89dea16a0a4086979223e54aa35fba4c7503042c050d502671c9e760d33f11fd",
+      "pcmSha256": "2463daa68aa2417b4015c4a9ef9ca8994029b2de1267315a9ac0ace53bfd033a",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "mb-14",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 164,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich habe keine Vorhänge. Aber ich habe einen Teppich.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 3300,
+      "sizeBytes": 14722,
+      "hash": "sha256:d3ccc162f0e2ff2937d000a9c5c560c6d8dafedca3abfdb6e82f17b62b23e851",
+      "pcmSha256": "6853eee1f732297a96b68e339269bd57a4185e118fbe0e7d05b1b2083861bce7",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "mb-15",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 188,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und deine Oma? Hat sie auch nur zwei Stühle?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 2872,
+      "sizeBytes": 13476,
+      "hash": "sha256:5808b1f8c36d6e1c37a160881f8100503ea6a81e6616426554753181afb51efd",
+      "pcmSha256": "ff2b9c3bac552d131a0f27728041d58c2f6e43704e2126126caab199d7598a88",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "mb-16",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein! Oma hat zwanzig Stühle — für die Gäste!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 3683,
+      "sizeBytes": 16642,
+      "hash": "sha256:771dc4b9da11ecdb389f27536772406c1fc6fc6d499c6ec007d1955eec8a5de1",
+      "pcmSha256": "8154fa3820ded37aa683a8a0978382638b37cda5e1bd4b9f27e4f621173e9c4c",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "mb-17",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 98,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zwanzig Stühle! Und einen Sessel?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 3064,
+      "sizeBytes": 14266,
+      "hash": "sha256:f0d5366475c837a51f26726236c0a747453a3b66bda498eb5e5faf67dcce003b",
+      "pcmSha256": "8aefd2c3452627762bee81ffc901339b28f68cbf7f506d6163b511119e9e7bb8",
+      "rmsDb": -17.36
+    },
+    {
+      "id": "mb-18",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, einen Sessel. Er ist alt, aber Oma liebt ihn.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 4403,
+      "sizeBytes": 19900,
+      "hash": "sha256:968ad2d86239d5d546e0418ea87cec15e33441af78866490394d372370512dbb",
+      "pcmSha256": "fb253b6da7affff5b16018a79ff715d2021ce58b259f2d9ae2af7a44a2fb9089",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "mb-19",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und du? Was kaufst du jetzt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 2504,
+      "sizeBytes": 11795,
+      "hash": "sha256:8c828db641b4eedafe4f932cce78c641639f35201355bb3c3ca1e177937183b3",
+      "pcmSha256": "8fdd71bf76dcf0acbabf9b480a3c313f032996a437a10781f105eb813c01fbd5",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "mb-20",
+      "file": "audio/scripts/a1-u6-d1-zwanzig-stuehle/mb-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich kaufe Vorhänge, zwei Kissen und ein Sofa!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d1"
+      ],
+      "durationMs": 3695,
+      "sizeBytes": 16516,
+      "hash": "sha256:5a75f9f58f789047bc12b566311f0e025e9e95050cd55b7e47aeaba1a60ec7ac",
+      "pcmSha256": "e61f5c4fbe18102c1643918ab4bb9f9588d0a5222240a62b043b2c8e8a76726f",
+      "rmsDb": -17.04
     }
   ],
   "characterVoices": {

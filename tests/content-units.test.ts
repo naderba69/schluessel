@@ -16,7 +16,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(824); // + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(825); // + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -741,8 +741,60 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u6-d1 (D146): المعدود بعد 11–99 مفرد بالعربية (~~zwanzig Stuhl~~) · ü بلا مقابل عربي (~~die Stuhle~~) · جنس «الخزانة» لا ينتقل (~~die Schrank~~) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u6-d1")!;
+    const [num, uml, gen] = u.zusammenfassung.warningCards;
+    expect(num!.commonError.de).toBe("~~zwanzig Stuhl~~");
+    expect(num!.correct.de).toBe("zwanzig Stühle");
+    // العدد والمعدود: 3–10 جمع (عون) · 11–99 مفرد منصوب · المئة والألف مفرد مجرور — والألمانية جمع بعد كل عدد فوق الواحد
+    expect(num!.whyArabicSpeakerFails).toContain("«ثلاثة كراسٍ»");
+    expect(num!.whyArabicSpeakerFails).toContain("«عشرون كرسياً»");
+    expect(num!.whyArabicSpeakerFails).toContain("«مئة كرسيّ»");
+    expect(num!.exercise).toMatchObject({ a: "Das Restaurant hat dreißig Tische." });
+    expect(uml!.commonError.de).toBe("~~die Stuhle~~");
+    expect(uml!.correct.de).toBe("die Stühle");
+    expect(uml!.whyArabicSpeakerFails).toContain("ü حركة أمامية مدوّرة لا مقابل لها في العربية");
+    expect(uml!.exercise).toMatchObject({ a: "zwei Schränke" });
+    expect(gen!.commonError.de).toBe("~~die Schrank~~");
+    expect(gen!.correct.de).toBe("der Schrank");
+    expect(gen!.whyArabicSpeakerFails).toContain("«الخزانة» و«الطاولة» و«الأريكة» مؤنثة");
+    expect(gen!.exercise).toMatchObject({ a: "Der Tisch ist neu." });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: «‑en/‑er كثيراً neuter» (تعميم بلا أساس) · ~~der Bett~~/~~die Kissen~~ (die Kissen جمع صحيح!) · Gärten (كلمة u6-d2)
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/neuter|~~der Bett~~|~~die Kissen~~|Gärten/);
+    // لا Dativ بأداة (auf dem Tisch · im Schrank — Wechselpräpositionen في الوحدة 9) · لا es gibt (u6-d3) · لا كلمات الغرف والشقة اللاحقة · ولا voll/bequem/hart
+    const de = JSON.stringify({ e: u.einstieg, s: u.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "" }))), q: u.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "" }))), z: u.zusammenfassung.summary.de, w: u.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise]) });
+    expect(de).not.toMatch(/\b(von|mit|in|zu|an|auf) (dem|der|meinem|meiner|deinem|deiner|seinem|seiner|ihrem|ihrer|einem|einer)\b|\b(im|am|zum|zur|ins|da)\b|\bgibt\b|Zimmer|Möbel|Fenster|\bTür|\bWand\b|\bvoll\b|bequem|\bhart\b|Umlaut/);
+    const sentences = de.split(/[.!?"]/);
+    expect(sentences.filter((x) => /\b(Yusuf|Ich|ich)\b/.test(x) && /\b(Bier|Wein|Wurst)\b/.test(x))).toEqual([]);
+    // N-021: أمثلة البطاقات بلا أسماء علم · وD108: لا نص رسمي حرفي (Das Sofa ist neu · Wie breit ist der Schrank)
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    const ids = ["tisch", "stuhl", "sofa", "bett", "schrank", "lampe", "teppich", "sessel", "regal", "spiegel", "vorhang", "kissen", "breit"];
+    expect(ids.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|Das Sofa ist neu|Wie breit/);
+    expect(ids.map(sample)).toEqual([
+      "Der Tisch ist groß, die Stühle sind klein.", "Hier sind zwei Stühle.", "Ich habe kein Sofa.", "Wir kaufen zwei Betten.", "Ich habe einen Schrank.",
+      "Ich kaufe eine Lampe.", "Der Teppich ist schön.", "Der Sessel ist alt, aber schön.", "Rechts sind zwei Regale.", "Links ist ein Spiegel.",
+      "Ich habe keine Vorhänge.", "Das Sofa hat sechs Kissen.", "Das Bett ist sehr breit.",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا صيغة Dativ جمع (Tischen · Stühlen … صحيحة في «mit …») · لا «keine Lampe» (مفرد صحيح)
+    // · لا «die Spiegel/Kissen/Sessel» مع sind مشتِّتاً (جمع صحيح)
+    const choiceTexts = [...u.einstieg.pretestItems.flatMap((p) => p.choices), ...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (typeof i === "string" ? [i] : Array.isArray((i as { choices?: unknown }).choices) ? ((i as { choices: string[] }).choices) : []));
+    const german = choiceTexts.filter((c) => !/[\u0600-\u06FF]/.test(c));
+    expect(german.filter((c) => /\b(Tischen|Stühlen|Schränken|Teppichen|Regalen|Vorhängen|Spiegeln|Sesseln)\b|\bkeine (Lampe|Gabel|Tasse)\b/.test(c))).toEqual([]);
+    for (const it of u.quiz.variants.flatMap((v) => v.items)) {
+      if (Array.isArray(it.choices)) expect(it.choices.filter((c) => c !== it.a && /^Die (Spiegel|Kissen|Sessel) sind\b/.test(String(c)))).toEqual([]);
+    }
+    expect(choiceTexts.length).toBeGreaterThan(30);
+    // الاستدعاء من دروس سابقة (die Wohnung · der Apfel ← die Äpfel · die Mutter ← die Mütter) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 5).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["wohnung", "apfel", "mutter"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة (d6 توليف بلا كلمات جديدة)
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || l.id === "a1-u6-d1").flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute"]);
     for (const w of pluralOnly) expect([w.id, w.gender, w.srsCardTypes.includes("gender")]).toEqual([w.id, "none", false]);
