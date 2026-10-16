@@ -16,7 +16,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(838); // + die Firma · immer · die meisten (نواة a1-u7-d1 — D151) + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(841); // + der Film · mehr · wandern (نواة a1-u7-d2 — D152) + die Firma · immer · die meisten (نواة a1-u7-d1 — D151) + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -1034,8 +1034,49 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u7-d2 (D152): «أحبّ … أكثر» (~~Ich lese mehr gern.~~) · gern ليست فعلاً (~~Ich gern Fußball.~~) · «أنا زهقان» صفة الشخص (~~Ich bin langweilig.~~ — صحيحة نحواً بمعنى آخر) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u7-d2")!;
+    const [mehr, gern, lang] = u.zusammenfassung.warningCards;
+    expect(mehr!.commonError.de).toBe("~~Ich lese mehr gern.~~");
+    expect(mehr!.correct.de).toBe("Ich lese lieber.");
+    expect(mehr!.whyArabicSpeakerFails).toContain("بكلمة «أكثر»");
+    expect(mehr!.whyArabicSpeakerFails).toContain("I like … more الإنجليزية وj'aime plus الفرنسية");
+    expect(mehr!.exercise).toMatchObject({ a: "Wir spielen lieber Fußball." });
+    expect(gern!.commonError.de).toBe("~~Ich gern Fußball.~~");
+    expect(gern!.correct.de).toBe("Ich spiele gern Fußball.");
+    expect(gern!.whyArabicSpeakerFails).toContain("فعلُها «أحبّ»");
+    expect(gern!.whyArabicSpeakerFails).toContain("like الإنجليزية وaimer الفرنسية");
+    expect(gern!.whyArabicSpeakerFails).toContain("mögen (الوحدة 5)");
+    expect(gern!.exercise).toMatchObject({ a: "Lena hört gern Musik." });
+    expect(lang!.commonError.de).toBe("~~Ich bin langweilig.~~");
+    expect(lang!.correct.de).toBe("Mir ist so langweilig!");
+    // الجملة المشطوبة صحيحة نحواً بمعنى آخر («أنا شخصٌ مملّ») — والبطاقة تقول ذلك صراحة · وI'm bored الإنجليزية معلنة
+    expect(lang!.whyArabicSpeakerFails).toContain("صحيحة نحواً بمعنى آخر");
+    expect(lang!.whyArabicSpeakerFails).toContain("«أنا شخصٌ مملّ»");
+    expect(lang!.whyArabicSpeakerFails).toContain("I'm bored الإنجليزية");
+    expect(lang!.exercise).toMatchObject({ a: "Am Sonntag ist mir oft langweilig." });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: ~~Ich spiele den Fußball.~~ (صحيحة نحواً: «أمرّر الكرة» — den Fußball الكرة نفسها) · ~~Das macht Spass.~~ (Spass صحيحة في سويسرا —
+    // ولينا هناك — وmachen قبل درسه u7-d3) · ~~am gern~~ · ~~Ich spiele das Tennis.~~ (Tennis غير مدروسة)
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/den Fußball|Spass|macht|am gern|Tennis/);
+    expect(JSON.stringify(u.quiz)).not.toMatch(/→|Berlin|Tennis/);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا gerne (صحيحة) · لا «bin … langweilig» (أنا مملّ) · لا Ich spaziere (صحيحة وإن قلّت)
+    // · لا den Fußball (تمرير الكرة) · لا Spass (سويسرا)
+    const choiceItems = [...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (Array.isArray((i as { choices?: unknown }).choices) ? [i as unknown as { choices: string[]; a: string }] : []));
+    const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
+    const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
+    expect(german.filter((c) => /\bgerne\b|\bbin\b.*\blangweilig\b|\bspaziere\b|den Fußball|Spass/iu.test(c))).toEqual([]);
+    expect(german).toHaveLength(20); // التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
+    // الاستدعاء من دروس سابقة (gern · das Hobby · lesen — u2-d5) — كانت spielen من كلمات اليوم نفسه · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || l.id === "a1-u7-d1").flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["gern", "hobby", "lesen"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D151: ملاحظات الجمع في الدروس المُرقّاة بلا مصطلح داخلي — كان «Gleich_plural» يظهر للمتعلم في 11 كلمة (Sessel · Spiegel · Kissen · Wecker …) فصار «بلا نهاية: der Sessel ← die Sessel» (نمط D146)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D152: u7-d2
     const jargon = ALL_WORDS.filter((w) => done.has(w.id) && /Gleich_plural|[A-Za-z]+_[A-Za-z]+/.test(w.pluralRuleNote ?? "")).map((w) => w.id);
     expect(jargon).toEqual([]);
     const note = (id: string) => ALL_WORDS.find((w) => w.id === id)!.pluralRuleNote;
@@ -1047,7 +1088,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
   });
 
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4", "a1-u6-d5", "a1-u7-d1"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4 · D150: u6-d5 · D151: u7-d1
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4", "a1-u6-d5", "a1-u7-d1", "a1-u7-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4 · D150: u6-d5 · D151: u7-d1 · D152: u7-d2
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     // D150: Möbel دخلت (N-070 — كانت بجنس die وبطاقة جنس و«جمع فقط … مثل Nudeln» — والمفرد das Möbel موجود نادراً) ⇒ «جمعاً عادةً» بلا جنس مفرد
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute", "moebel"]);

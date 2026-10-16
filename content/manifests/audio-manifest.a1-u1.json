@@ -16769,6 +16769,66 @@
       "rmsDb": -16.99
     },
     {
+      "id": "word-film",
+      "file": "words/audio/de-DE/word-film.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Film.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 1106,
+      "sizeBytes": 5118,
+      "hash": "sha256:3587d297a7954b7ce6f161e93fcb1ea6d67d98f7ba596c4eb3f47a8c1c91a3af",
+      "pcmSha256": "d7458e733b0ca2a68908f0125f80852c222c3c7ad762e4d296f4934134eeb495",
+      "rmsDb": -17
+    },
+    {
+      "id": "word-mehr",
+      "file": "words/audio/de-DE/word-mehr.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "mehr.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 815,
+      "sizeBytes": 3733,
+      "hash": "sha256:643c9f9606d21eea08aba88cc01de2363706f2aa4aad8044ec2dcfe4722a05cc",
+      "pcmSha256": "0a88085df47a2d5ef81e4eaccf96a2217a3185f200db782c00526bd41723310c",
+      "rmsDb": -16.97
+    },
+    {
+      "id": "word-wandern",
+      "file": "words/audio/de-DE/word-wandern.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "wandern.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 1036,
+      "sizeBytes": 4653,
+      "hash": "sha256:a661831e57e6d584e62220ba43ad866816e1baed0d11ac9ea0f55c5e00a2e17b",
+      "pcmSha256": "28cb324665e7ce1d3573935b0ed09d2196627b02a47ec2dd20aefe6d8745408b",
+      "rmsDb": -17.04
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -29713,6 +29773,446 @@
       "sizeBytes": 18770,
       "hash": "sha256:37bc10ce5785990ff4bdace86c14acc0b62d171de862f0d64060fe947c26640f",
       "pcmSha256": "1a53f909601c355366620c46376a87ebf6d74dbfb665dae3685ef396afd6e464",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "fz-1",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 103,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, unsere Aufgabe heute: Hobbys! Was ist dein Hobby?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 5256,
+      "sizeBytes": 24327,
+      "hash": "sha256:e99b73f6f1d257220604eaef1f27829985a3c30b6dec43ae1cfb0e10f93ce727",
+      "pcmSha256": "aeda0f959fef6f3f9720787547572cbb80a8772ea4a83c235b5d5cd4ebd7a8a5",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "fz-2",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 157,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich lese sehr gern. Und Fußball spiele ich auch gern.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 3811,
+      "sizeBytes": 17121,
+      "hash": "sha256:b17131428084a527c5ede6398c47428c4e6cb3bedc8a3476840407298097bc6e",
+      "pcmSha256": "c7f6ccc0848ceb56945c2ff95037e5c275beffd8dfa57a556386f54340800be8",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "fz-3",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 98,
+        "lengthScale": 1.32
+      },
+      "textDe": "Fußball? Meine Brüder spielen jeden Tag Fußball!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 4264,
+      "sizeBytes": 19730,
+      "hash": "sha256:0e245d4925bfc1668004431e108935525aba9dd39ff4aa517e892f7a5c5aace6",
+      "pcmSha256": "80d18b7d7ecf2d5a7d841877c99c44b0b29e3f0362bcae1470d69ebbe158a886",
+      "rmsDb": -17.36
+    },
+    {
+      "id": "fz-4",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und du? Spielst du auch gern Fußball?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 2952,
+      "sizeBytes": 13294,
+      "hash": "sha256:b6940714332d08abe3b6e8943a0046b6aecfd3a30d4b5fe29cc189237e91b440",
+      "pcmSha256": "4aa584f0e1375d89cda5dd893c5e31cb732c4801accdbf38924693a2d7e4ad7f",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "fz-5",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, nicht gern. Ich tanze lieber!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 2952,
+      "sizeBytes": 13668,
+      "hash": "sha256:06a8a4f8355c829dcc23d62a03e5438dd44fb32004a81a6b30e75aa3ff656413",
+      "pcmSha256": "dcd2be2bb3da519096746e2f8aa75eaca0aa53373ec2932f8336b6956f2afdbd",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "fz-6",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du tanzt? Wo denn?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 1965,
+      "sizeBytes": 9052,
+      "hash": "sha256:e66b6bef67e8f55584b9317106c0a3b68e952f4b40baf2a9c4abc72e54332b8f",
+      "pcmSha256": "82e044e2d022c05d2523762bb1e787f05390e3da4a59651fd9c73fd6af7b9464",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "fz-7",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Montag, im Kurs. Wir haben immer viel Spaß!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 4088,
+      "sizeBytes": 19090,
+      "hash": "sha256:8b44678e91d9cac8603491c49bdcc125966cf386991edf84cc5086fb7d5cc463",
+      "pcmSha256": "317254511967cd03603136b1d8cb8d5a03f2a4f70f7422f9bb20663a96477616",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "fz-8",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 184,
+        "lengthScale": 1.32
+      },
+      "textDe": "Tanzen ist nichts für mich. Aber ich schwimme gern.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 2940,
+      "sizeBytes": 13485,
+      "hash": "sha256:05e6f31254b0e2c25f831fc6c7168c0bfd8895e2fcf8630de31053380c136885",
+      "pcmSha256": "154a471b9135880ed0515375aa523ed580823c62c183f9cbbd326b53fbe57635",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "fz-9",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 116,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und am Sonntag? Gehst du gern spazieren?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 3608,
+      "sizeBytes": 16757,
+      "hash": "sha256:ecd546f2dfb3e08cabc97e522f001c29748713e55060424ef8eb25b5f4f20275",
+      "pcmSha256": "9164392b3acab24d49dfa5b49c52a51596bb1d17291d04e841d0ac66d80e1b66",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "fz-10",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, am Sonntag gehe ich oft spazieren.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 3242,
+      "sizeBytes": 15233,
+      "hash": "sha256:1ba9ff26423b01e4e03ddc7af830a1e8f1fe96ca708a45c17f5886a3bff227aa",
+      "pcmSha256": "197e534c35e4a22756dfb7ef4fc2b0143adba39b3be751edd222656703de79e5",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "fz-11",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wir wandern am Sonntag. In der Schweiz wandern die meisten Leute gern.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 4952,
+      "sizeBytes": 23001,
+      "hash": "sha256:4c272795f279dda75ec75ecc594149aeb98a456859e1adcdda41d426eba362ed",
+      "pcmSha256": "491290b22898bfa20c9415868f8211c1a2e3fdc728bf20597e7c3344b950bf1f",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "fz-12",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 106,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wandern? Nein danke — ich gehe lieber spazieren!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 3962,
+      "sizeBytes": 18058,
+      "hash": "sha256:90c5a7fa4a421829280e7aca4fa1431873b797a1c17ff05375297d33849b99f1",
+      "pcmSha256": "1e4d0adea1ea904f71e1e266efcb42c0d0fb7ecdf7dd96170680dc962fb110d7",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "fz-13",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und am Abend? Siehst du gern Filme?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 3128,
+      "sizeBytes": 14447,
+      "hash": "sha256:adc93b208f5009672919829cf17d052c13ec3fb64318bcdf366a7bfda1488ca2",
+      "pcmSha256": "13616c57f5d27a1ea33162fa8d0beb74489fa0955333f13cc47cb0fb23eb9d61",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "fz-14",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, sehr gern — im Kino! Da ist alles groß.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 4356,
+      "sizeBytes": 19270,
+      "hash": "sha256:c232adb24b340fb809a63664dde62b3620da249cf110bd35944a2d51625eb5b2",
+      "pcmSha256": "c0d01fd221f685c9102a272130bf0d2661e5f2079e1f3233190fd83c6f5648ab",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "fz-15",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich sehe Filme lieber auf dem Sofa — mit sechs Kissen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 3768,
+      "sizeBytes": 17457,
+      "hash": "sha256:be41930a2ed1229dedfee8e009c572031e362d95e8fe018d66810a3d5f6f42e0",
+      "pcmSha256": "b2da43ae2588c6d1bebc0d3f8c81df05d57ca7a4edb984be7f9a73ef01c4b073",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "fz-16",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 105,
+        "lengthScale": 1.32
+      },
+      "textDe": "Natürlich! Aber viele Filme sind langweilig, oder?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 4008,
+      "sizeBytes": 17831,
+      "hash": "sha256:637de2a40f1c7f688614b6961f47d5fe5c138fe78da4b271cb8d1cc36556bee1",
+      "pcmSha256": "3c09ee008e8354126da050149a4ca9541f21537e402a7330f2ba6a50c82a2263",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "fz-17",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, und mir ist oft langweilig. Reist du gern?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 4280,
+      "sizeBytes": 19916,
+      "hash": "sha256:eaa250742ce5f9316d0cd8013c345cc1fe341f3a3c3118b8891e3ba459b3b574",
+      "pcmSha256": "64783bf83bbffd4523ff769902b73a464d2d3735db52a70c5608183b3fd3babb",
+      "rmsDb": -17.53
+    },
+    {
+      "id": "fz-18",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sehr gern! Aber Reisen ist teuer.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 2754,
+      "sizeBytes": 12563,
+      "hash": "sha256:9497c04539edfafe4cd36ce5bd752d196004f48a2f0a5e299e49a7c11a49ba1f",
+      "pcmSha256": "1f88f14b088242e14a8bd1f822f32e7be395dfa3523529fdfcc60d30e93b3b5b",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "fz-19",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und zeichnest du gern?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 1944,
+      "sizeBytes": 9323,
+      "hash": "sha256:8e1d14f7f43f7d50acc449422adcf467a72f6ad7560e85773976e97b7eb52fab",
+      "pcmSha256": "17f024b5f2fa6c6737ad342db241e2b64410ca01f5be230ddeda2f7165901d41",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "fz-20",
+      "file": "audio/scripts/a1-u7-d2-ich-tanze-lieber/fz-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, ich zeichne nicht. Aber ich möchte mehr Zeit für meine Hobbys!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d2"
+      ],
+      "durationMs": 4287,
+      "sizeBytes": 19840,
+      "hash": "sha256:988434ec38d3ae31fa7772119f8f1223b2b2f794ccfc7c352e91f951a92477e1",
+      "pcmSha256": "b8453c2d6da54ffca0b82751169309e02792097fce042ce16262c803cc65d5d8",
       "rmsDb": -17.02
     }
   ],

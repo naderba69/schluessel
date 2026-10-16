@@ -6,31 +6,32 @@
   "day": 2,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst sagen, was du gern machst und was du lieber machst.",
-    "ar": "تقول ما تستمتع به وما تفضّله"
+    "de": "Ich schwimme gern, aber ich tanze lieber. Und ich möchte mehr Zeit für Hobbys.",
+    "ar": "تقول ما تحبّ فعله بـgern وما تفضّله بـlieber وما لا تحبّه بـnicht gern — في ثلاث جمل على الأقل — وتسأل زميلك عن هواياته: Was ist dein Hobby? · Spielst du gern Fußball? · Was magst du lieber?"
   },
   "canDoDaily": [
-    "يقول هواياته بـ gern ويفضّل بـ lieber"
+    "يقول هواياته بـgern بعد فعل النشاط (Ich schwimme gern. · Spielst du gern Fußball?) ويفضّل بـlieber (Ich tanze lieber.) ويرفض بـnicht gern — بلا mehr gern وبلا حذف فعل النشاط.",
+    "يتكلّم عن وقت فراغه: Fußball spielen · spazieren gehen · wandern · Filme im Kino — ويطلب mehr Zeit، ويقول Viel Spaß! ويصف الملل صادقاً: langweilig للشيء، وMir ist oft langweilig. للشعور."
   ],
   "warmup": {
     "cardIds": [
-      "spielen",
-      "musik",
-      "kochen"
+      "gern",
+      "hobby",
+      "lesen"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«أقرأ بمحبة أكثر» — Ich lese mehr gern أم Ich lese lieber? (تخمين فقط)"
+          "de": "«هل تحبّ الرقص؟» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
-          "Ich lese lieber.",
-          "Ich lese mehr gern.",
-          "Ich lese am gern."
+          "Tanzt du gern?",
+          "Du gern tanzt?",
+          "Gern du tanzt?"
         ],
-        "answer": "Ich lese lieber.",
+        "answer": "Tanzt du gern?",
         "revealNextSession": true
       }
     ],
@@ -49,7 +50,10 @@
       "spielen",
       "lieber",
       "spass",
-      "langweilig"
+      "langweilig",
+      "film",
+      "mehr",
+      "wandern"
     ],
     "grammarArsenalIds": [
       "ars-gern-lieber"
@@ -58,76 +62,470 @@
       "story-a7-u7-s2"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "sp-st-initial",
+      "z",
+      "ch-ich-laut",
+      "ig-ending",
+      "double-consonant",
+      "vowel-long-short",
+      "r-uvular"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«ألعب كرة القدم»؟",
-            "a": "Ich spiele Fußball."
+            "q": "Am Morgen ___ ich. (أسبح)",
+            "a": "schwimme",
+            "why": "ich schwimme من schwimmen (mm مضاعفة) — والفعل ثانياً بعد الوقت ثم ich."
           },
           {
-            "q": "«أسبح بمحبة»؟",
-            "a": "Ich schwimme gern."
+            "q": "Meine Freundin ___ gern. (ترقص)",
+            "a": "tanzt",
+            "why": "tanzen مع sie (هي): tanzt — وgern بعد الفعل."
+          },
+          {
+            "q": "Wir ___ gern zusammen. (نسافر)",
+            "a": "reisen",
+            "why": "reisen مع wir: wir reisen — وgern بعد الفعل."
+          },
+          {
+            "q": "Mein Bruder ___ gern Bilder. (يرسم)",
+            "a": "zeichnet",
+            "why": "zeichnen مع er: zeichnet (بـe قبل t — تُحفظ، والقاعدة في الدرس القادم) — وBilder بلا أداة."
+          },
+          {
+            "q": "Mein Opa geht jeden Tag ___. (يتمشّى)",
+            "a": "spazieren",
+            "why": "gehen + spazieren في آخر الجملة بلا zu — كـschlafen في الدرس الأول."
+          },
+          {
+            "q": "Im ___ ist es dunkel. (السينما)",
+            "a": "Kino",
+            "why": "das Kino = السينما: im Kino (أين؟ in + dem ← im)."
+          },
+          {
+            "q": "Das ___ ist für Kinder. (اللعبة)",
+            "a": "Spiel",
+            "why": "das Spiel = اللعبة (sp تُنطق «شب») — والجمع die Spiele."
+          },
+          {
+            "q": "Am Sonntag spielen wir ___. (كرة القدم)",
+            "a": "Fußball",
+            "why": "Fußball بلا أداة بعد spielen — وß بعد u الطويلة."
+          },
+          {
+            "q": "Lena spielt nicht gern Fußball. Sie zeichnet ___. (تفضّل)",
+            "a": "lieber",
+            "why": "lieber = تفضّل (gern ← lieber) بعد الفعل في مكان gern — لا mehr gern."
+          },
+          {
+            "q": "Wir tanzen und haben viel ___. (متعة)",
+            "a": "Spaß",
+            "why": "der Spaß = المتعة: viel Spaß — بـß بعد a الطويلة."
+          },
+          {
+            "q": "Der Film heute ist ___. (مملّ)",
+            "a": "langweilig",
+            "why": "langweilig للشيء المملّ — و‑ig في آخرها تُنطق «إش»."
+          },
+          {
+            "q": "Meine Eltern ___ gern. (يتنزّهان مشياً في الطبيعة)",
+            "a": "wandern",
+            "why": "wandern = رحلة مشي في الطبيعة: meine Eltern (هم) ← wandern."
+          },
+          {
+            "q": "Ich möchte ___ Zeit für Musik. (أكثر)",
+            "a": "mehr",
+            "why": "mehr = أكثر قبل الاسم: mehr Zeit — وبالعربية بعده: «وقتاً أكثر»."
+          },
+          {
+            "q": "Am Abend sehen wir einen ___. (فيلماً)",
+            "a": "Film",
+            "why": "der Film ← einen Film (مفعول به مذكر) — والجمع die Filme."
+          },
+          {
+            "q": "Was ___ du lieber: Kino oder Fußball? (تحبّ)",
+            "a": "magst",
+            "why": "mögen مع du: magst (الوحدة 5) — وlieber بعده: ماذا تحبّ أكثر؟"
           }
         ],
         "interleavedWith": [
-          "spielen",
-          "schwimmen"
+          "freundin",
+          "bruder",
+          "bild",
+          "opa",
+          "dunkel",
+          "sonntag",
+          "eltern",
+          "musik",
+          "zeit",
+          "abend"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«أرسم بمحبة أكثر»؟",
-            "a": "Ich zeichne lieber."
+            "audioId": "fz-1",
+            "speakText": "Yusuf, unsere Aufgabe heute: Hobbys! Was ist dein Hobby?",
+            "q": "استمع: ما مهمة اليوم؟",
+            "choices": [
+              "أن يتكلّما عن هواياتهما",
+              "أن يتكلّما عن صباحهما",
+              "أن يتكلّما عن أسرتهما"
+            ],
+            "a": "أن يتكلّما عن هواياتهما",
+            "why": "unsere Aufgabe heute: Hobbys = مهمتنا اليوم: الهوايات · Was ist dein Hobby? = ما هوايتك؟"
           },
           {
-            "q": "«هذا ممتع!»؟",
-            "a": "Das macht Spaß!"
+            "audioId": "fz-2",
+            "speakText": "Ich lese sehr gern. Und Fußball spiele ich auch gern.",
+            "q": "استمع: ماذا يحبّ يوسف؟",
+            "choices": [
+              "القراءة كثيراً، وكرة القدم أيضاً",
+              "كرة القدم فقط",
+              "القراءة، لكنه لا يحبّ كرة القدم"
+            ],
+            "a": "القراءة كثيراً، وكرة القدم أيضاً",
+            "why": "Ich lese sehr gern = أحبّ القراءة كثيراً · Fußball spiele ich auch gern = وكرة القدم أحبّ لعبها أيضاً."
+          },
+          {
+            "audioId": "fz-4",
+            "speakText": "Und du? Spielst du auch gern Fußball?",
+            "q": "استمع: عمّ يسأل يوسف لينا؟",
+            "choices": [
+              "هل تحبّ لعب كرة القدم أيضاً",
+              "هل يلعب أخواها كرة القدم",
+              "هل تشاهد كرة القدم"
+            ],
+            "a": "هل تحبّ لعب كرة القدم أيضاً",
+            "why": "Spielst du auch gern Fußball? = هل تحبّين أنتِ أيضاً لعب كرة القدم؟ — الفعل أولاً في السؤال."
+          },
+          {
+            "audioId": "fz-5",
+            "speakText": "Nein, nicht gern. Ich tanze lieber!",
+            "q": "استمع: ماذا تقول لينا؟",
+            "choices": [
+              "لا تحبّ كرة القدم — تفضّل الرقص",
+              "تحبّ كرة القدم والرقص",
+              "لا تحبّ الرقص — تفضّل كرة القدم"
+            ],
+            "a": "لا تحبّ كرة القدم — تفضّل الرقص",
+            "why": "Nein, nicht gern = لا، لا أحبّها · Ich tanze lieber = أفضّل الرقص (lieber = بمحبة أكثر)."
+          },
+          {
+            "audioId": "fz-6",
+            "speakText": "Du tanzt? Wo denn?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "أين ترقص",
+              "متى ترقص",
+              "مع من ترقص"
+            ],
+            "a": "أين ترقص",
+            "why": "Wo denn? = أين إذن؟ — denn في السؤال للاهتمام."
+          },
+          {
+            "audioId": "fz-7",
+            "speakText": "Am Montag, im Kurs. Wir haben immer viel Spaß!",
+            "q": "استمع: متى ترقص لينا، وكيف هو ذلك؟",
+            "choices": [
+              "يوم الاثنين في دورة — ودائماً ممتع جداً",
+              "يوم الأحد في البيت — ودائماً ممتع",
+              "يوم الاثنين في دورة — لكنه مملّ"
+            ],
+            "a": "يوم الاثنين في دورة — ودائماً ممتع جداً",
+            "why": "Am Montag, im Kurs = يوم الاثنين في الدورة · Wir haben immer viel Spaß = نستمتع كثيراً دائماً."
+          },
+          {
+            "audioId": "fz-8",
+            "speakText": "Tanzen ist nichts für mich. Aber ich schwimme gern.",
+            "q": "استمع: ماذا يقول يوسف عن الرقص؟",
+            "choices": [
+              "ليس له — لكنه يحبّ السباحة",
+              "يحبّه كثيراً — والسباحة أيضاً",
+              "ليس له — ولا السباحة"
+            ],
+            "a": "ليس له — لكنه يحبّ السباحة",
+            "why": "Tanzen ist nichts für mich = الرقص ليس لي · Aber ich schwimme gern = لكني أحبّ السباحة."
+          },
+          {
+            "audioId": "fz-9",
+            "speakText": "Und am Sonntag? Gehst du gern spazieren?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل يحبّ التمشّي يوم الأحد",
+              "هل يحبّ السباحة يوم الأحد",
+              "هل يعمل يوم الأحد"
+            ],
+            "a": "هل يحبّ التمشّي يوم الأحد",
+            "why": "Gehst du gern spazieren? = هل تحبّ التمشّي؟ — gehen + spazieren في الآخر."
+          },
+          {
+            "audioId": "fz-10",
+            "speakText": "Ja, am Sonntag gehe ich oft spazieren.",
+            "q": "استمع: ماذا يفعل يوسف يوم الأحد؟",
+            "choices": [
+              "يتمشّى كثيراً",
+              "يلعب كرة القدم دائماً",
+              "ينام طويلاً"
+            ],
+            "a": "يتمشّى كثيراً",
+            "why": "am Sonntag gehe ich oft spazieren = يوم الأحد أتمشّى كثيراً (oft = كثيراً)."
+          },
+          {
+            "audioId": "fz-11",
+            "speakText": "Wir wandern am Sonntag. In der Schweiz wandern die meisten Leute gern.",
+            "q": "استمع: ماذا تفعل أسرة لينا يوم الأحد، وماذا تقول عن سويسرا؟",
+            "choices": [
+              "يتنزّهون مشياً في الطبيعة — وأغلب الناس في سويسرا يحبّون ذلك",
+              "يسبحون — وأغلب الناس في سويسرا يحبّون ذلك",
+              "يتنزّهون مشياً — لكن قليلاً من الناس في سويسرا يحبّون ذلك"
+            ],
+            "a": "يتنزّهون مشياً في الطبيعة — وأغلب الناس في سويسرا يحبّون ذلك",
+            "why": "Wir wandern am Sonntag = نتنزّه مشياً يوم الأحد · die meisten Leute = أغلب الناس."
+          },
+          {
+            "audioId": "fz-13",
+            "speakText": "Und am Abend? Siehst du gern Filme?",
+            "q": "استمع: عمّ تسأل لينا الآن؟",
+            "choices": [
+              "هل يحبّ مشاهدة الأفلام مساءً",
+              "هل يحبّ القراءة مساءً",
+              "هل يذهب إلى السينما صباحاً"
+            ],
+            "a": "هل يحبّ مشاهدة الأفلام مساءً",
+            "why": "Siehst du gern Filme? = هل تحبّ مشاهدة الأفلام؟ — Filme جمع der Film."
+          },
+          {
+            "audioId": "fz-14",
+            "speakText": "Ja, sehr gern — im Kino! Da ist alles groß.",
+            "q": "استمع: أين يحبّ يوسف مشاهدة الأفلام، ولماذا؟",
+            "choices": [
+              "في السينما — فهناك كل شيء كبير",
+              "في البيت — فهناك كل شيء هادئ",
+              "في السينما — فهي رخيصة"
+            ],
+            "a": "في السينما — فهناك كل شيء كبير",
+            "why": "im Kino = في السينما · Da ist alles groß = هناك كل شيء كبير."
+          },
+          {
+            "audioId": "fz-15",
+            "speakText": "Ich sehe Filme lieber auf dem Sofa — mit sechs Kissen!",
+            "q": "استمع: أين تفضّل لينا مشاهدة الأفلام؟",
+            "choices": [
+              "على الأريكة مع ست وسائد",
+              "في السينما مع أخويها",
+              "على السرير مع وسادتين"
+            ],
+            "a": "على الأريكة مع ست وسائد",
+            "why": "Ich sehe Filme lieber auf dem Sofa = أفضّل مشاهدة الأفلام على الأريكة · mit sechs Kissen = مع ست وسائد."
+          },
+          {
+            "audioId": "fz-17",
+            "speakText": "Ja, und mir ist oft langweilig. Reist du gern?",
+            "q": "استمع: ماذا تقول لينا عن نفسها، وعمّ تسأل؟",
+            "choices": [
+              "كثيراً ما تشعر بالملل — وتسأل هل يحبّ السفر",
+              "هي شخصٌ مملّ — وتسأل هل يحبّ السفر",
+              "لا تشعر بالملل أبداً — وتسأل هل يحبّ الرسم"
+            ],
+            "a": "كثيراً ما تشعر بالملل — وتسأل هل يحبّ السفر",
+            "why": "mir ist oft langweilig = كثيراً ما أشعر بالملل (لا «أنا مملّة») · Reist du gern? = هل تحبّ السفر؟"
+          },
+          {
+            "audioId": "fz-18",
+            "speakText": "Sehr gern! Aber Reisen ist teuer.",
+            "q": "استمع: ماذا يقول يوسف عن السفر؟",
+            "choices": [
+              "يحبّه كثيراً، لكنه غالٍ",
+              "لا يحبّه لأنه غالٍ",
+              "يحبّه كثيراً، وهو رخيص"
+            ],
+            "a": "يحبّه كثيراً، لكنه غالٍ",
+            "why": "Sehr gern! = كثيراً! · Aber Reisen ist teuer = لكن السفر غالٍ."
+          },
+          {
+            "audioId": "fz-19",
+            "speakText": "Und zeichnest du gern?",
+            "q": "استمع: عمّ تسأل لينا في النهاية؟",
+            "choices": [
+              "هل يحبّ الرسم",
+              "هل يحبّ الرقص",
+              "هل يحبّ القراءة"
+            ],
+            "a": "هل يحبّ الرسم",
+            "why": "zeichnest du gern? = هل تحبّ الرسم؟ — zeichnen = يرسم."
+          },
+          {
+            "audioId": "fz-20",
+            "speakText": "Nein, ich zeichne nicht. Aber ich möchte mehr Zeit für meine Hobbys!",
+            "q": "استمع: ماذا يريد يوسف؟",
+            "choices": [
+              "وقتاً أكثر لهواياته",
+              "هوايات أكثر",
+              "أن يتعلّم الرسم"
+            ],
+            "a": "وقتاً أكثر لهواياته",
+            "why": "Ich zeichne nicht = لا أرسم · Aber ich möchte mehr Zeit für meine Hobbys = لكني أريد وقتاً أكثر لهواياتي (mehr قبل الاسم)."
           }
         ],
         "interleavedWith": [
-          "zeichnen",
-          "spass"
+          "hobby",
+          "aufgabe",
+          "montag",
+          "kurs",
+          "sonntag",
+          "sofa",
+          "kissen",
+          "teuer",
+          "zeit"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«نسافر إلى برلين»؟",
-            "a": "Wir reisen nach Berlin."
+            "tokens": [
+              "gern.",
+              "Ich",
+              "zeichne"
+            ],
+            "a": "Ich zeichne gern.",
+            "why": "Ich ثم الفعل zeichne ثم gern بعده — gern ليست فعلاً."
           },
           {
-            "q": "«الفيلم ممل»؟",
-            "a": "Der Film ist langweilig."
+            "tokens": [
+              "lieber.",
+              "Lena",
+              "schwimmt"
+            ],
+            "a": "Lena schwimmt lieber.",
+            "why": "Lena ثم schwimmt ثم lieber في مكان gern."
+          },
+          {
+            "tokens": [
+              "Spiele?",
+              "du",
+              "gern",
+              "Spielst"
+            ],
+            "a": "Spielst du gern Spiele?",
+            "why": "سؤال نعم/لا: الفعل Spielst أولاً ثم du ثم gern — وSpiele (جمع das Spiel) بلا أداة."
+          },
+          {
+            "tokens": [
+              "nicht",
+              "Wir",
+              "gern.",
+              "tanzen"
+            ],
+            "a": "Wir tanzen nicht gern.",
+            "why": "nicht قبل gern: Wir tanzen nicht gern."
+          },
+          {
+            "tokens": [
+              "Sonntag",
+              "Am",
+              "wir.",
+              "wandern"
+            ],
+            "a": "Am Sonntag wandern wir.",
+            "why": "الوقت أولاً (Am Sonntag) ثم wandern ثانياً ثم wir."
+          },
+          {
+            "tokens": [
+              "langweilig.",
+              "ist",
+              "Spiel",
+              "Das"
+            ],
+            "a": "Das Spiel ist langweilig.",
+            "why": "Das Spiel ثم ist ثم الصفة langweilig."
           }
         ],
         "interleavedWith": [
-          "reisen",
-          "kino"
+          "sonntag"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "fz-3",
+            "speakText": "Fußball? Meine Brüder spielen jeden Tag Fußball!",
+            "a": "Fußball? Meine Brüder spielen jeden Tag Fußball!",
+            "why": "Fußball بحرف كبير وß بعد u الطويلة ثم ll · Brüder بـü (جمع Bruder) · spielen بـie · jeden Tag."
+          },
+          {
+            "audioId": "fz-12",
+            "speakText": "Wandern? Nein danke — ich gehe lieber spazieren!",
+            "a": "Wandern? Nein danke — ich gehe lieber spazieren!",
+            "why": "Wandern بحرف كبير أول الجملة (w تُنطق v) · lieber بـie · spazieren: sp ثم z «تس» ثم ie."
+          },
+          {
+            "audioId": "fz-16",
+            "speakText": "Natürlich! Aber viele Filme sind langweilig, oder?",
+            "a": "Natürlich! Aber viele Filme sind langweilig, oder?",
+            "why": "Natürlich بـü · Filme جمع Film · langweilig: ng ثم w ثم ei و‑ig في آخرها."
+          },
+          {
+            "audioId": "word-spass",
+            "speakText": "Spaß.",
+            "a": "Spaß",
+            "why": "Spaß بحرف كبير: sp «شب» وa طويلة ثم ß."
+          },
+          {
+            "audioId": "word-zeichnen",
+            "speakText": "zeichnen.",
+            "a": "zeichnen",
+            "why": "zeichnen: z «تس» ثم ei «اي» ثم ch بعد i («ش» الرقيقة) ثم nen."
+          },
+          {
+            "audioId": "word-schwimmen",
+            "speakText": "schwimmen.",
+            "a": "schwimmen",
+            "why": "schwimmen: sch ثم w «v» ثم mm مضاعفة بعد i قصيرة."
+          },
+          {
+            "audioId": "word-mehr",
+            "speakText": "mehr.",
+            "a": "mehr",
+            "why": "mehr: e طويلة يمدّها h الصامتة ثم r."
+          },
+          {
+            "audioId": "word-spiel",
+            "speakText": "Spiel.",
+            "a": "Spiel",
+            "why": "Spiel بحرف كبير: sp «شب» ثم ie طويلة ثم l."
+          }
+        ],
+        "interleavedWith": [
+          "bruder",
+          "tag"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Hobbys mit gern/lieber sagen",
-        "ar": "قول الهوايات بـ gern/lieber"
+        "de": "Meine Hobbys: Ich schwimme gern, aber ich tanze lieber.",
+        "ar": "تتبادل مع زميلك هواياتكما: ما تحبّه وما تفضّله وما لا تحبّه"
       },
       "situation": {
-        "de": "Freizeit planen",
-        "ar": "تخطيط وقت الفراغ"
+        "de": "Was ist dein Hobby? Spielst du gern Fußball? Was magst du lieber: Kino oder Fußball?",
+        "ar": "في الدورة: يسأل كلٌّ منكما الآخر عن هواياته: Was ist dein Hobby? · Spielst du gern Fußball? · Was magst du lieber: Kino oder Fußball? — ويجيب بجمل كاملة بـgern وlieber وnicht gern، ثم يقول كلٌّ منكما ما يريد أكثر منه (Ich möchte mehr Zeit für …) — ثم تتبادلان."
       },
       "successCriteria": [
-        "3 جمل gern + جملتان lieber + جملة Spaß واحدة"
+        "ثلاث جمل عن هواياتك على الأقل: جملة بـgern بعد الفعل (Ich schwimme gern.)، وجملة بـlieber (Ich tanze lieber.)، وجملة بـnicht gern — وفعل النشاط في كل جملة.",
+        "سؤال لزميلك بـgern (Spielst du gern Fußball?) وجملة بـmehr (Ich möchte mehr Zeit für …) — والملل بـmir إن احتجته (Mir ist oft langweilig.)."
       ]
     }
   },
@@ -142,20 +540,54 @@
       {
         "items": [
           {
-            "q": "«كرة القدم»؟",
-            "a": "der Fußball"
+            "q": "«أفضّل الرقص»؟",
+            "choices": [
+              "Ich tanze lieber.",
+              "Ich tanze mehr gern.",
+              "Ich lieber tanze."
+            ],
+            "a": "Ich tanze lieber.",
+            "why": "lieber بعد الفعل في مكان gern — لا mehr gern · والفعل ثانياً: Ich tanze …"
           },
           {
-            "q": "«أسبح بمحبة»؟",
-            "a": "Ich schwimme gern."
+            "q": "langweilig = ؟",
+            "choices": [
+              "مملّ",
+              "ممتع",
+              "مضحك"
+            ],
+            "a": "مملّ",
+            "why": "langweilig = مملّ · der Spaß = المتعة · lustig = مضحك."
           },
           {
-            "q": "«يرقص»؟",
-            "a": "tanzen → sie tanzt."
+            "q": "سؤال لزميلك: «هل تحبّ السباحة؟»",
+            "choices": [
+              "Schwimmst du gern?",
+              "Du gern schwimmst?",
+              "Schwimmst gern du?"
+            ],
+            "a": "Schwimmst du gern?",
+            "why": "سؤال نعم/لا: الفعل أولاً ثم du ثم gern."
           },
           {
-            "q": "«أقرأ بمحبة أكثر»؟",
-            "a": "Ich lese lieber."
+            "q": "«أخي يحبّ لعب كرة القدم»؟",
+            "choices": [
+              "Mein Bruder spielt gern Fußball.",
+              "Mein Bruder gern Fußball.",
+              "Mein Bruder spielen gern Fußball."
+            ],
+            "a": "Mein Bruder spielt gern Fußball.",
+            "why": "gern ليست فعلاً: spielt فعل النشاط ثم gern — وspielt مع er."
+          },
+          {
+            "q": "«الأفلام» (der Film — الجمع مع الأداة)؟",
+            "a": "die Filme",
+            "why": "der Film ← die Filme: ‑e في الجمع."
+          },
+          {
+            "q": "«أحبّ الرقص، لكني أفضّل السباحة» — ابدأ بـ Ich tanze gern",
+            "a": "Ich tanze gern, aber ich schwimme lieber.",
+            "why": "gern بعد الفعل في الأولى، وlieber بعد الفعل في الثانية — وaber لا تغيّر الترتيب."
           }
         ],
         "passingScore": 0.75
@@ -163,20 +595,54 @@
       {
         "items": [
           {
-            "q": "«السينما»؟",
-            "a": "das Kino"
+            "q": "«أبي لا يحبّ الرقص»؟",
+            "choices": [
+              "Mein Vater tanzt nicht gern.",
+              "Mein Vater nicht tanzt gern.",
+              "Mein Vater tanzt kein gern."
+            ],
+            "a": "Mein Vater tanzt nicht gern.",
+            "why": "nicht قبل gern والفعل ثانياً — وkein للأسماء لا لـgern."
           },
           {
-            "q": "«هذا ممتع!»؟",
-            "a": "Das macht Spaß!"
+            "q": "wandern = ؟",
+            "choices": [
+              "يتنزّه مشياً في الطبيعة",
+              "يسبح",
+              "يرقص"
+            ],
+            "a": "يتنزّه مشياً في الطبيعة",
+            "why": "wandern = رحلة مشي في الطبيعة · schwimmen = يسبح · tanzen = يرقص."
           },
           {
-            "q": "«يرسم»؟",
-            "a": "zeichnen → er zeichnet."
+            "q": "«يوم الأحد نذهب للتمشّي»؟",
+            "choices": [
+              "Am Sonntag gehen wir spazieren.",
+              "Am Sonntag gehen wir zu spazieren.",
+              "Am Sonntag wir gehen spazieren."
+            ],
+            "a": "Am Sonntag gehen wir spazieren.",
+            "why": "gehen + spazieren في الآخر بلا zu · والفعل ثانياً بعد الوقت."
           },
           {
-            "q": "«الفيلم ممل»؟",
-            "a": "Der Film ist langweilig."
+            "q": "«أريد أن أسبح أكثر»؟",
+            "choices": [
+              "Ich möchte mehr schwimmen.",
+              "Ich möchte schwimmen mehr.",
+              "Ich möchte mehr zu schwimmen."
+            ],
+            "a": "Ich möchte mehr schwimmen.",
+            "why": "mehr قبل الفعل الثاني، والفعل الثاني في الآخر بلا zu بعد möchte."
+          },
+          {
+            "q": "«الألعاب» (das Spiel — الجمع مع الأداة)؟",
+            "a": "die Spiele",
+            "why": "das Spiel ← die Spiele: ‑e في الجمع."
+          },
+          {
+            "q": "«يوم الأحد يتنزّه أبي مشياً» — ابدأ بـ Am Sonntag",
+            "a": "Am Sonntag wandert mein Vater.",
+            "why": "الوقت أولاً ثم wandert ثانياً (مع er) ثم الفاعل mein Vater."
           }
         ],
         "passingScore": 0.75
@@ -184,20 +650,54 @@
       {
         "items": [
           {
-            "q": "«لعبة»؟",
-            "a": "das Spiel"
+            "q": "«أختي تفضّل السفر»؟",
+            "choices": [
+              "Meine Schwester reist lieber.",
+              "Meine Schwester reist mehr gern.",
+              "Meine Schwester lieber reist."
+            ],
+            "a": "Meine Schwester reist lieber.",
+            "why": "reist (مع sie) ثم lieber — لا mehr gern، والفعل ثانياً."
           },
           {
-            "q": "«أتمشّى»؟",
-            "a": "Ich gehe spazieren."
+            "q": "der Spaß = ؟",
+            "choices": [
+              "المتعة",
+              "الملل",
+              "اللعبة"
+            ],
+            "a": "المتعة",
+            "why": "der Spaß = المتعة (Viel Spaß! = استمتع!) · langweilig = مملّ · das Spiel = اللعبة."
           },
           {
-            "q": "«يسافر»؟",
-            "a": "reisen → wir reisen (ist gereist)"
+            "q": "«أشعر بالملل في المساء»؟",
+            "choices": [
+              "Am Abend ist mir langweilig.",
+              "Am Abend ist ich langweilig.",
+              "Am Abend habe ich langweilig."
+            ],
+            "a": "Am Abend ist mir langweilig.",
+            "why": "الشعور بالملل بـmir: ist mir langweilig — ich bin langweilig معناها «أنا مملّ»."
           },
           {
-            "q": "gern ↔ lieber?",
-            "a": "gern = بمحبة · lieber = بمحبة أكثر (المفضّل)"
+            "q": "«في السينما أحبّ مشاهدة الأفلام»؟",
+            "choices": [
+              "Im Kino sehe ich gern Filme.",
+              "Im Kino ich sehe gern Filme.",
+              "Im Kino sehen ich gern Filme."
+            ],
+            "a": "Im Kino sehe ich gern Filme.",
+            "why": "Im Kino أولاً ثم sehe ثانياً ثم ich ثم gern · sehen للجمع لا لـich."
+          },
+          {
+            "q": "«دور السينما» (das Kino — الجمع مع الأداة)؟",
+            "a": "die Kinos",
+            "why": "das Kino ← die Kinos: كلمة أجنبية الأصل جمعها ‑s."
+          },
+          {
+            "q": "«لا أحبّ الرسم، لكني أفضّل رحلات المشي» — ابدأ بـ Ich zeichne nicht gern",
+            "a": "Ich zeichne nicht gern, aber ich wandere lieber.",
+            "why": "nicht gern في الأولى، وlieber بعد wandere في الثانية (wandern ← ich wandere)."
           }
         ],
         "passingScore": 0.75
@@ -206,53 +706,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Deine Hobbys: Fußball spielen, schwimmen, tanzen, reisen, zeichnen, spazieren — und was du lieber machst, sagt „lieber“!",
-      "ar": "هواياتك: كرة القدم والسباحة والرقص والسفر والرسم والتمشّى — وما تفضّله يقوله «lieber»!"
+      "de": "Ich schwimme gern. · Lena tanzt lieber. · Ich zeichne nicht gern. · Spielst du gern Fußball? · Wir gehen gern spazieren. · Ich möchte mehr Zeit für Hobbys. · Viel Spaß! · Mir ist oft langweilig.",
+      "ar": "gern = «بمحبة» بعد فعل النشاط (Ich schwimme gern.) — وليست فعلاً: لا تحذف فعل النشاط، وللأشياء mögen (Ich mag Fußball.). nicht gern = لا أحبّ (nicht قبل gern). lieber = أفضّل: gern «أكثر» بكلمة واحدة بلا mehr، في مكان gern. الهواية بلا أداة: Fußball spielen · Musik hören · Filme sehen — وgehen + spazieren في الآخر بلا zu، وwandern = رحلة مشي في الطبيعة. mehr = أكثر قبل الاسم (mehr Zeit). Viel Spaß! = استمتع! · langweilig للشيء المملّ، والشعور بالملل بـmir: Mir ist oft langweilig. ومعها: das Kino · das Spiel · der Film · reisen · zeichnen · tanzen."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich lese mehr gern.~~ / ~~am gern~~",
-          "ar": "lieber = مقارن gern (بلا mehr)"
+          "de": "~~Ich lese mehr gern.~~",
+          "ar": "lieber بدل mehr gern"
         },
-        "whyArabicSpeakerFails": "«أحب أكثر» تُبنى بـ«أكثر»؛ الألماني له كلمة واحدة lieber تغني عن «mehr gern» — مقارن شاذ لكلمة واحدة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أحبّ القراءة أكثر» بكلمة «أكثر»، وكذلك I like … more الإنجليزية وj'aime plus الفرنسية — فيضع المتعلم mehr قبل gern. لكن gern لها صيغة «أكثر» خاصةٌ بها: lieber (gern ← lieber) — كلمةٌ واحدة بلا mehr، في مكان gern نفسه (خريطة التداخل 10‑ي)",
         "correct": {
           "de": "Ich lese lieber.",
-          "ar": "أقرأ بمحبة أكثر."
+          "ar": "أفضّل القراءة."
         },
         "exercise": {
-          "q": "صحّح: ~~Ich spiele mehr gern Fußball.~~",
-          "a": "Ich spiele lieber Fußball."
+          "q": "صحّح: ~~Wir spielen mehr gern Fußball.~~",
+          "a": "Wir spielen lieber Fußball."
         }
       },
       {
         "commonError": {
-          "de": "~~Ich spiele den Fußball.~~",
-          "ar": "الرياضة بلا أداة (Zero Article)"
+          "de": "~~Ich gern Fußball.~~",
+          "ar": "gern ليست فعلاً"
         },
-        "whyArabicSpeakerFails": "«ألعب كرة القدم» بالـ«ال»؛ الألماني يحذف الأداة مع الألعاب والرياضات: Fußball spielen (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أحبّ كرة القدم» فعلُها «أحبّ»، وكذلك like الإنجليزية وaimer الفرنسية — فيظنّ المتعلم gern فعلاً ويحذف فعل النشاط. لكن gern ظرفٌ (= «بمحبة»): الجملة تحتاج فعل النشاط نفسه وgern بعده — وللأشياء بلا نشاط mögen (الوحدة 5): Ich mag Fußball. (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich spiele Fußball.",
-          "ar": "ألعب كرة القدم."
+          "de": "Ich spiele gern Fußball.",
+          "ar": "أحبّ لعب كرة القدم."
         },
         "exercise": {
-          "q": "صحّح: ~~Ich spiele das Tennis.~~",
-          "a": "Ich spiele Tennis."
+          "q": "صحّح: ~~Lena gern Musik.~~",
+          "a": "Lena hört gern Musik."
         }
       },
       {
         "commonError": {
-          "de": "~~Das macht Spass.~~ (بالكتابة) / ~~Das Spass macht~~",
-          "ar": "ß تُكتب ss أحياناً + التركيب: macht Spaß"
+          "de": "~~Ich bin langweilig.~~",
+          "ar": "الشعور بالملل بـmir لا بـich"
         },
-        "whyArabicSpeakerFails": "«هذا ممتع» بالوصف؛ الألماني بفعل: Das macht Spaß (Spaß بالـß) — مصدر شائع يُحفظ كجملة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أنا زهقان» و«أنا ضجِر» صفةٌ للشخص نفسه، وكذلك I'm bored الإنجليزية — والقاموس يعطي langweilig = «مملّ» فيقول المتعلم ~~Ich bin langweilig.~~ والجملة المشطوبة صحيحة نحواً بمعنى آخر: «أنا شخصٌ مملّ»! فالألمانية تقول الشعور بالملل بـmir (= «لي») في أولها — كأنك تقول «مملٌّ لي» — وlangweilig وحدها للشيء المملّ: Der Kurs ist nicht langweilig. (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Das macht Spaß!",
-          "ar": "هذا ممتع!"
+          "de": "Mir ist so langweilig!",
+          "ar": "أشعر بملل شديد!"
         },
         "exercise": {
-          "q": "أكمل: Das ___ Spaß!",
-          "a": "macht"
+          "q": "صحّح (تشعر بالملل): ~~Am Sonntag bin ich oft langweilig.~~",
+          "a": "Am Sonntag ist mir oft langweilig."
         }
       }
     ],
@@ -268,19 +768,31 @@
       "spielen",
       "lieber",
       "spass",
-      "langweilig"
+      "langweilig",
+      "film",
+      "mehr",
+      "wandern"
     ]
   },
   "gReferences": {
     "duden": [
+      "https://www.duden.de/rechtschreibung/gern",
       "https://www.duden.de/rechtschreibung/lieber",
-      "https://www.duden.de/rechtschreibung/Spass",
-      "https://www.duden.de/rechtschreibung/Fussball"
+      "https://www.duden.de/rechtschreibung/mehr",
+      "https://www.duden.de/rechtschreibung/langweilig",
+      "https://www.duden.de/rechtschreibung/wandern",
+      "https://www.duden.de/rechtschreibung/Spass"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/lieber"
+      "https://de.wiktionary.org/wiki/gern",
+      "https://de.wiktionary.org/wiki/lieber",
+      "https://de.wiktionary.org/wiki/langweilig",
+      "https://de.wiktionary.org/wiki/wandern"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-gern-lieber"
@@ -297,14 +809,30 @@
     "word-spielen",
     "word-lieber",
     "word-spass",
-    "word-langweilig"
+    "word-langweilig",
+    "word-film",
+    "word-mehr",
+    "word-wandern"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Freizeit & Hobbys",
     "goetheWordListOverlap": [
       "fussball",
-      "spielen"
+      "schwimmen",
+      "tanzen",
+      "reisen",
+      "zeichnen",
+      "spazieren",
+      "kino",
+      "spiel",
+      "spielen",
+      "lieber",
+      "spass",
+      "langweilig",
+      "film",
+      "mehr",
+      "wandern"
     ]
   }
 }

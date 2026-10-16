@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-gern-lieber",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Ich schwimme gern. · Lena tanzt lieber. · Spielst du gern Fußball?",
+    "ar": "هواياتي: gern (بمحبة) بعد فعل النشاط — وليست فعلاً · lieber (أفضّل) بلا mehr · nicht gern · الهواية بلا أداة (Fußball spielen) · mehr (أكثر) قبل الاسم · Viel Spaß! والملل بـmir"
+  },
+  "payload": {
+    "topicAr": "اليوم تقول ما تحبّ فعله وما تفضّله وما لا تحبّه: Ich schwimme gern. · Lena tanzt lieber. · Ich zeichne nicht gern. ومعها كلمات اليوم: der Fußball · schwimmen · tanzen · reisen · zeichnen · spazieren · das Kino · das Spiel · spielen · lieber · der Spaß · langweilig — والنواة der Film · mehr · wandern.",
+    "sceneAr": "مهمة جديدة في الوحدة السابعة على الشاشة: الهوايات. يوسف (في برلين) يحبّ القراءة كثيراً ويحبّ كرة القدم أيضاً، وأخوا لينا التوأمان يلعبانها كل يوم — أما لينا فلا تحبّها: تفضّل الرقص، في دورة يوم الاثنين، ودائماً ممتع. الرقص ليس ليوسف، لكنه يحبّ السباحة ويتمشّى كثيراً يوم الأحد؛ وأسرة لينا تتنزّه مشياً في الطبيعة يوم الأحد كأغلب الناس في سويسرا — ويوسف يفضّل التمشّي! يحبّ الأفلام في السينما، ولينا تفضّلها على الأريكة مع وسائدها الست؛ لكن أفلاماً كثيرة مملّة، ولينا كثيراً ما تشعر بالملل. يوسف يحبّ السفر كثيراً لكنه غالٍ، ولا يرسم — ويريد وقتاً أكثر لهواياته.",
+    "examples": [
+      {
+        "de": "Ich schwimme gern.",
+        "ar": "أحبّ السباحة — الفعل schwimme يقول النشاط، وgern بعده تقول «بمحبة»"
+      },
+      {
+        "de": "Lena tanzt lieber.",
+        "ar": "لينا تفضّل الرقص — lieber في مكان gern: «بمحبة أكثر»"
+      },
+      {
+        "de": "Spielst du gern Fußball?",
+        "ar": "هل تحبّ لعب كرة القدم؟ — الفعل أولاً في السؤال، وFußball بلا أداة"
+      },
+      {
+        "de": "Ich zeichne nicht gern.",
+        "ar": "لا أحبّ الرسم — nicht قبل gern"
+      },
+      {
+        "de": "Die Kinder möchten mehr Spiele.",
+        "ar": "الأطفال يريدون ألعاباً أكثر — mehr قبل الاسم، و«أكثر» بالعربية بعده"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأول: ما الفعل الذي يقول النشاط؟ وأين جاءت gern — قبله أم بعده؟ (2) في «أحبّ السباحة» الفعل «أحبّ» — فهل gern فعل؟ ماذا يبقى لو حذفت schwimme؟ (3) في الثاني: ماذا حلّ مكان gern؟ وماذا تضيف lieber؟ وهل رأيت mehr معها؟ (4) في الثالث: أين الفعل في السؤال؟ وهل قبل Fußball أداة — وبالعربية «كرة القدم» بـ«ال»؟ (5) في الرابع: أين nicht من gern؟ (6) في الأخير: أين mehr من الاسم Spiele؟ وأين «أكثر» في «ألعاباً أكثر»؟",
+    "ruleDe": "Ich schwimme gern. · Lena tanzt lieber. · Spielst du gern Fußball? · Ich zeichne nicht gern. · Die Kinder möchten mehr Spiele.",
+    "ruleAr": "تكلّم عن هواياتك بأربع خطوات: (1) gern = «بمحبة»، وليست فعلاً: فعل النشاط نفسه يُصرَّف وgern بعده: Ich schwimme gern. · Lena tanzt gern. · Spielst du gern Fußball? — وللرفض nicht gern (nicht قبل gern): Ich zeichne nicht gern. وللأشياء بلا نشاط mögen (الوحدة 5): Ich mag Fußball. (2) lieber = «أفضّل»: هي gern «أكثر» — كلمةٌ واحدة بلا mehr — في مكان gern نفسه: Ich schwimme gern, aber ich tanze lieber. · Kino oder Fußball — was magst du lieber? (3) الهواية بلا أداة: Ich spiele Fußball. · Ich höre gern Musik. · Wir sehen gern Filme. — وgehen + spazieren في آخر الجملة بلا zu كما في الدرس الأول: Wir gehen gern spazieren. أما wandern (رحلة مشي في الطبيعة) ففعلٌ وحده: Wir wandern gern. (4) mehr = «أكثر» قبل الاسم: mehr Zeit · mehr Spiele — أو بعد الفعل: Lena liest mehr. والمتعة والملل: Viel Spaß! (= استمتع!) · Wir haben viel Spaß. — وlangweilig للشيء المملّ (Der Kurs ist nicht langweilig.)، أما الشعور بالملل فبـmir في أوله: Mir ist oft langweilig.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «بكل سرور» ظرفٌ يلحق الفعل كما gern: «أساعدك بكل سرور» — و«Ja, gern!» = «نعم، بكل سرور!» (2) «مملّ» صفةٌ للشيء كما langweilig: «الدرس مملّ» = Der Kurs ist langweilig. (3) «أكثر» للكمية كما mehr: «وقتاً أكثر» = mehr Zeit — والفرق أن mehr قبل الاسم. وما يختلف ثلاثة: (1) «أحبّ … أكثر» بكلمة «أكثر»، وكذلك I like … more الإنجليزية وj'aime plus الفرنسية — فيقول المتعلم: ~~Ich lese mehr gern.~~ — وgern لها صيغة «أكثر» خاصةٌ بها: Ich lese lieber. (2) «أحبّ كرة القدم» فعلُها «أحبّ»، وكذلك like الإنجليزية وaimer الفرنسية — فيظنّ المتعلم gern فعلاً ويحذف فعل النشاط: ~~Ich gern Fußball.~~ — وgern ظرفٌ يحتاج فعله: Ich spiele gern Fußball. (أو Ich mag Fußball.) (3) «أنا زهقان» و«أنا ضجِر» صفةٌ للشخص نفسه، وكذلك I'm bored الإنجليزية — فيقول المتعلم: ~~Ich bin langweilig.~~ — وهي صحيحة نحواً بمعنى آخر: «أنا شخصٌ مملّ»! والشعور بالملل بـmir: Mir ist so langweilig! — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "صيغة «الأكثر محبة» (أحبّ شيء على الإطلاق) والمقارنة بـals (أكثر من …) لاحقاً — اليوم gern ← lieber فقط، وlieber بعد الفعل في مكان gern.",
+      "أشهر تعبير لـ«هذا ممتع» بفعلٍ تتعلّمه في الدرس القادم — اليوم: Viel Spaß! (= استمتع!) · Wir haben viel Spaß. — وفي سويسرا لا تُستعمل ß أبداً: تُكتب ss مكانها، صحيحةً هناك، ونحن نكتب Spaß.",
+      "Mir ist oft langweilig قطعةٌ تحفظها كما هي (mir = «لي») — وmir وأخواتها لاحقاً · وnicht mehr = «لم يعد»: Ich spiele nicht mehr Fußball.",
+      "spazieren gehen: gehen + spazieren في الآخر بلا zu كما في الدرس الأول · والسفر إلى بلد (nach Tunesien) في الوحدة 8 — اليوم: Wir reisen gern. · وReisen بحرف كبير = السفر نفسه اسماً: Reisen ist teuer."
+    ],
+    "beads": [
+      "Ich",
+      "schwimme",
+      "gern."
+    ],
+    "properNouns": [
+      "Lena"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u7-d2"
+  ]
+}
