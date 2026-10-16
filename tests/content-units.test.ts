@@ -16,7 +16,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(825); // + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(828); // + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -793,8 +793,64 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u6-d2 (D147): أداة الجزء الأول لا تنتقل (~~die Familienname~~) · الإضافة كلمتان (~~Wohn Zimmer~~) · الخبر العربي يطابق المبتدأ (~~Die Wohnung ist ruhige.~~) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u6-d2")!;
+    const [head, one, pred] = u.zusammenfassung.warningCards;
+    expect(head!.commonError.de).toBe("~~die Familienname~~");
+    expect(head!.correct.de).toBe("der Familienname");
+    // الأصل أولاً في الإضافة العربية («اسمُ العائلة») فيأخذ المتعلم أداة أول جزء — والألمانية من آخر جزء
+    expect(head!.whyArabicSpeakerFails).toContain("«اسمُ العائلة»");
+    expect(head!.whyArabicSpeakerFails).toContain("der Name ⇒ der Familienname");
+    expect(head!.exercise).toMatchObject({ a: "Das Mittagessen ist gut." });
+    expect(one!.commonError.de).toBe("~~Wohn Zimmer~~");
+    expect(one!.correct.de).toBe("das Wohnzimmer");
+    // الإضافة كلمتان و«ال» على الثانية · والإنجليزية living room كلمتان — التأثير الإنجليزي معلن بأنه إنجليزي
+    expect(one!.whyArabicSpeakerFails).toContain("«غرفة النوم»");
+    expect(one!.whyArabicSpeakerFails).toContain("الإنجليزية living room");
+    expect(one!.exercise).toMatchObject({ a: "Meine Telefonnummer ist neu." });
+    expect(pred!.commonError.de).toBe("~~Die Wohnung ist ruhige.~~");
+    expect(pred!.correct.de).toBe("Die Wohnung ist ruhig.");
+    expect(pred!.whyArabicSpeakerFails).toContain("«الشقةُ هادئةٌ»");
+    expect(pred!.exercise).toMatchObject({ a: "Die Küche ist klein." });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: «للمرة الرابعة» · ~~die Gärten~~ (die Gärten جمع صحيح!) · «ue في slugs» ورسم gemuetlich (معرّف داخلي أمام المتعلم — D118)
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/للمرة الرابعة|~~die Gärten~~|slugs|gemuetlich/);
+    // لا Dativ بأداة (im Schlafzimmer — أين؟ في u6-d4) · لا es gibt (u6-d3) · لا كلمات الغرف اللاحقة (Fenster · Tür · Wand · Möbel · oben) · لا schlafen · ولا مصطلح Umlaut
+    // (audioId معرّف داخلي لا يُعرض — word-gemuetlich فيه مشروع)
+    const de = JSON.stringify({ e: u.einstieg, s: u.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", audioId: "" }))), q: u.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "" }))), z: u.zusammenfassung.summary.de, w: u.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise]) });
+    expect(de).not.toMatch(/\b(von|mit|in|zu|an|auf) (dem|der|meinem|meiner|deinem|deiner|seinem|seiner|ihrem|ihrer|einem|einer)\b|\b(im|am|zum|zur|ins|da)\b|\bgibt\b|Möbel|Fenster|\bTür|\bWand\b|\boben\b|\bschlaf(e|en|t)?\b|Umlaut|gemuetlich/);
+    // N-021: أمثلة البطاقات بلا أسماء علم · وD108: لا نص رسمي حرفي (Mein Zimmer ist sehr hell · Hier ist das Schlafzimmer · Er kommt allein)
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    const ids = ["zimmer", "schlafzimmer", "wohnzimmer", "badezimmer", "flur", "balkon", "treppe", "keller", "garten", "hell", "ruhig", "gemuetlich", "hoch", "allein", "raum"];
+    expect(u.praesentation.wordIds).toEqual(ids);
+    expect(ids.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|Mein Zimmer ist sehr hell|Hier ist das Schlafzimmer|Er kommt allein/);
+    expect(ids.map(sample)).toEqual([
+      "Wie viele Zimmer hat das Haus?", "Das Schlafzimmer hat ein Bett und einen Schrank.", "Das Wohnzimmer ist groß und hell.", "Wir haben nur ein Badezimmer.",
+      "Links ist der Flur, rechts ist das Badezimmer.", "Ich habe keinen Balkon.", "Die Treppe ist lang.", "Das Haus hat einen Keller.", "Die Großeltern haben einen Garten.",
+      "Das Badezimmer ist klein, aber hell.", "Die Wohnung ist ruhig.", "Mein Zimmer ist klein, aber gemütlich.", "Das Haus ist sehr hoch.", "Ich wohne allein.", "Der Raum ist hoch und hell.",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا «Die …zimmer/Keller sind» مشتِّتاً (جمع صحيح — الجمع كالمفرد) · لا kein + مذكر مفعولاً (عامية «kein Garten»)
+    // · لا ‑e على صفة بعد ist إلا مشتِّتاً · ولا «große» (تصادم جذع مع Größe — N-060)
+    const choiceItems = [...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (Array.isArray((i as { choices?: unknown }).choices) ? [i as unknown as { choices: string[]; a: string }] : []));
+    const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
+    const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
+    expect(german.filter((c) => /^Die \p{L}*(zimmer|Zimmer|Keller) sind\b|\bkein (Garten|Balkon|Keller|Flur|Raum)\b|\bgroße\b/u.test(c))).toEqual([]);
+    for (const i of [...choiceItems, ...pre]) expect(/ ist \p{L}+e\.$/u.test(i.a), i.a).toBe(false);
+    // وصواب الفراغ والترتيب كذلك: لا ‑e على صفة الخبر بعد ist/sind (Die Wohnung ist klein und ruhig.)
+    const gapFilled = u.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => String(i.q).replace("___", String(i.a)).split("(")[0]!.trim());
+    const built = u.uebung.stations.find((s) => s.type === "build-sentence")!.items.map((i) => String(i.a));
+    expect([...gapFilled, ...built].filter((x) => /\b(ist|sind) (sehr )?(\p{L}+ und )?\p{L}+e\.$/u.test(x))).toEqual([]);
+    expect(german).toHaveLength(14); // الاختبار القبلي 2 + ست جمل Quiz × 2
+    // الاستدعاء من دروس سابقة (ثلاثة مركّبات: der Familienname · die Telefonnummer · die Speisekarte) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || l.id === "a1-u6-d1").flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["familienname", "telefonnummer", "speisekarte"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || l.id === "a1-u6-d1").flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute"]);
     for (const w of pluralOnly) expect([w.id, w.gender, w.srsCardTypes.includes("gender")]).toEqual([w.id, "none", false]);

@@ -6358,11 +6358,11 @@
       "lessonRefs": [
         "a1-u6-d2"
       ],
-      "durationMs": 966,
-      "sizeBytes": 4772,
-      "hash": "sha256:fc9ca96c074898d41c78ad9226c8cc18937ce77de0f351be2bc77226a1682505",
-      "pcmSha256": "87733baf7257248166b73b9e54d4417de0f992fbae54fc8dd7741b7279f3b336",
-      "rmsDb": -17.16
+      "durationMs": 1082,
+      "sizeBytes": 5058,
+      "hash": "sha256:4ab3c4981b23195a999efc565dd72c8eb88d7e0b03502a798083b66c287f3b5f",
+      "pcmSha256": "3e1154a9042c5d594f966b2f384476703923de8d769076a670ea901ecc888819",
+      "rmsDb": -17.13
     },
     {
       "id": "word-flur",
@@ -16507,6 +16507,66 @@
       "hash": "sha256:180353ed5ecc10547dda5cf12f1bbb882555d23d059c368037337f9418321435",
       "pcmSha256": "56e1df5fb60bd402a9f092e6678283c71ca3cd9a14cae951aa65507a725966e6",
       "rmsDb": -17.25
+    },
+    {
+      "id": "word-hoch",
+      "file": "words/audio/de-DE/word-hoch.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "hoch.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 757,
+      "sizeBytes": 3589,
+      "hash": "sha256:693b0aaa45553fc1014c60235d543e4b4d4df97b19ca90ee681993542566875a",
+      "pcmSha256": "98c2683a5ccbe8e69ea794ee97319af4d88057d7e5625742db3f9d33c733e2bb",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "word-allein",
+      "file": "words/audio/de-DE/word-allein.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "allein.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 897,
+      "sizeBytes": 4423,
+      "hash": "sha256:5a723bb32cecb606883fe2148a88ef8869872cba4682e05235f18c805a10ce1a",
+      "pcmSha256": "b8a713eac7952cb4f5cf3fbbe43a7f5916e616b32afa695120b3c743d2264b0d",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "word-raum",
+      "file": "words/audio/de-DE/word-raum.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Raum.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 1048,
+      "sizeBytes": 4892,
+      "hash": "sha256:dc4c56f7b39a0ab839daec2e8a7d849d364fbc2373830496a46fe99b73bfe7a3",
+      "pcmSha256": "80866ed976b64fc809e41b1124e6196a6ba098615a117e1ad02e0979215c9d8c",
+      "rmsDb": -17.08
     },
     {
       "id": "mueller-announce-01",
@@ -27254,6 +27314,446 @@
       "hash": "sha256:5a75f9f58f789047bc12b566311f0e025e9e95050cd55b7e47aeaba1a60ec7ac",
       "pcmSha256": "e61f5c4fbe18102c1643918ab4bb9f9588d0a5222240a62b043b2c8e8a76726f",
       "rmsDb": -17.04
+    },
+    {
+      "id": "zi-1",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 103,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo, Yusuf! Heute zeige ich unser Haus.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 4088,
+      "sizeBytes": 19144,
+      "hash": "sha256:8d454495f649f2c8e9262039151820de96d7a33021b362d8a68837cf8bf1a732",
+      "pcmSha256": "1dc74206315a350d078618aa1f34d551324307a82e39f44374ea00c0fce860a0",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "zi-2",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Toll! Wie viele Zimmer hat es?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 2859,
+      "sizeBytes": 12652,
+      "hash": "sha256:baca717cebf43c78725d406b62ca7abc11da1788e2c85cd05138e03d4e53f006",
+      "pcmSha256": "50fba61b4c3409f5a119142eb03593203cda2220a87c3151e430d712f2c626b7",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "zi-3",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sechs Zimmer. Hier ist das Wohnzimmer — groß und hell.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 4104,
+      "sizeBytes": 19149,
+      "hash": "sha256:5d4d0d59efa1a2c70be35645eb5273dd9c734f760eee7cec3822ed489751a58e",
+      "pcmSha256": "6cb72c2f411e8571b9ea490d79e7c1351de4f808526d13149d54c69c1ec2df06",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "zi-4",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, sehr hell! Und dort? Ist das die Küche?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 4101,
+      "sizeBytes": 18598,
+      "hash": "sha256:1ad10817b8ad79739eebb4321b7ab0741639614de0987feeab97106bd417d226",
+      "pcmSha256": "3d2aaca89c4a5c85c84c333be3a658c1c0d92996841b3d41f3496e53cac3cc2b",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "zi-5",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 162,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Und hier ist die Treppe. Mein Zimmer ist klein, aber gemütlich.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 4440,
+      "sizeBytes": 20568,
+      "hash": "sha256:7bde4adb7017b21438536c81797a4f831137f717ff8e423057c020daf10b81a3",
+      "pcmSha256": "c2b01792dffe8ecfa4c11f18f0d2de81cb06d0d82a5862ebf40dbf35bf40461d",
+      "rmsDb": -17.38
+    },
+    {
+      "id": "zi-6",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und deine Brüder? Haben sie auch ein Zimmer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 3393,
+      "sizeBytes": 14856,
+      "hash": "sha256:7c3d4a9957ceab014867d0610461c8ac1c7ee3f96289031af6cec874f526316d",
+      "pcmSha256": "e7c95e7e79575a26faeeeccfec328efd1fa92af756984dae29b466944337ec7f",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "zi-7",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 158,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, die Zwillinge haben ein Zimmer zusammen. Es ist sehr laut!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 4184,
+      "sizeBytes": 19473,
+      "hash": "sha256:94f8dc108c7f9b99e8778ee89218ff37c3defef4daae118f6dc378d9548b6475",
+      "pcmSha256": "084b13c7654688cf481c37e58055537294a07d1339f0ae67ed94d968b45c6d16",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "zi-8",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und das Badezimmer? Ist es groß?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 2917,
+      "sizeBytes": 13104,
+      "hash": "sha256:0185d5c4bbb7bb05fc3a4b6d018fed7d2b14c1324f3b3d16cd6c0b90f658ab8f",
+      "pcmSha256": "cd1e16a3b3f117751755579c91b5fd9f39cf258ae608b9ec4a343ffd5c333e55",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "zi-9",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 165,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, es ist klein. Aber wir haben einen Balkon und einen Garten.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 4360,
+      "sizeBytes": 20232,
+      "hash": "sha256:e153255129e31e384a4d16c9487efff9447ec5cb29923e060d9af3f5bd950e22",
+      "pcmSha256": "c13603556353f75a586223d46f8aba38b89de4a2096273a1272fc79bd38fa750",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "zi-10",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Einen Garten! Und einen Keller?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 2534,
+      "sizeBytes": 11137,
+      "hash": "sha256:7ee9047c6470dd488d8cac9ed6e7c5525b33535246f8a2fcf270b8f4a583cfa3",
+      "pcmSha256": "58ec22d6cd270cc0416abb22a0de9607ee46429abe1ca68ff62753fe229f5ace",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "zi-11",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, der Keller ist alt und nicht hell.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 3144,
+      "sizeBytes": 14736,
+      "hash": "sha256:4704e69732484c1f60fb46df921c0213e5cd8a38163004620370afb066106093",
+      "pcmSha256": "fbff4b5df2b84005c2b427cbb251395d5582024f9626954a276f1aeeab1a0cf1",
+      "rmsDb": -17.78
+    },
+    {
+      "id": "zi-12",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich habe keinen Garten und keinen Balkon.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 2626,
+      "sizeBytes": 12270,
+      "hash": "sha256:1922f99dfc6a90bef0508b3f092ff3d0b14990ba3b47df623771e064d9c88693",
+      "pcmSha256": "4259a80ba94087bdeb916b06f3fe75e130cf6449d7ef44e8b52f2146ead91f5b",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "zi-13",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 133,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wie ist deine Wohnung?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 2264,
+      "sizeBytes": 10730,
+      "hash": "sha256:1f3f24cc74ee60e3a13ed51f113b331d5e430e4d9aadf583d2cef200fa0a05a0",
+      "pcmSha256": "caf3fe911755a1dd3215a7cb9785e9dc4577c2a35f7e6c235e399e6358bf6a90",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "zi-14",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 176,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das Haus ist sehr hoch, und meine Wohnung ist klein.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 3416,
+      "sizeBytes": 15675,
+      "hash": "sha256:fbebb426177d4e71c893f206adaa7bb4f7481d8072e1bd2c50f7ad88cce0a108",
+      "pcmSha256": "0bb252be77bcfc76038d2fbb33d39ab652f1e2471f4688eec2024c02ce20fe1e",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "zi-15",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wohnst du allein?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 1160,
+      "sizeBytes": 5631,
+      "hash": "sha256:b68267aae6777b9310b7006c1f5b1140f58b5590ffae8785997c2bc66b992a8d",
+      "pcmSha256": "a9a1c216caf06e52cf34a3523a3b669a2d490e7ab85411b3fde469bcfae875cb",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "zi-16",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich wohne allein. Ich habe ein Zimmer, einen Flur, eine Küche und ein Badezimmer.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 5947,
+      "sizeBytes": 27317,
+      "hash": "sha256:5532dbd04238618dd7fc0a0ba971600d32b6b1a92464a24af42539ac575b2c60",
+      "pcmSha256": "d99697cf7ea7fbe68773dea290dba1876d660c34d103a98c456629d1065917cb",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "zi-17",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 205,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nur ein Zimmer? Und wo ist dein Bett?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 2344,
+      "sizeBytes": 11236,
+      "hash": "sha256:c30baecb7dc881423a1ca4f3aed38a423da66ae242793fcd61db02fd15a2b35d",
+      "pcmSha256": "b4f8ec70d89ae8b143629c17bd987d7f22d354342c025e293bfbab31f9d9bb4a",
+      "rmsDb": -17.21
+    },
+    {
+      "id": "zi-18",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hier! Wohnzimmer und Schlafzimmer — das ist ein Raum.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 3695,
+      "sizeBytes": 16874,
+      "hash": "sha256:d563e4d22afcc75f96236103558bd6b3b7a797ffc0b465b38492c740a8397651",
+      "pcmSha256": "895e18bb5e7ccb08f4ff35722b5d1e180e8c2d7b2f2ece127e97350a667af760",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "zi-19",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 164,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ist das Zimmer ruhig?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 1464,
+      "sizeBytes": 6983,
+      "hash": "sha256:242572a4927f61e78dfef421060bb8567bdb6c4229b17bc5c8c412b380fe00d1",
+      "pcmSha256": "1ba754acf133a375b79c3f439da3bdb5e6e665fd754e1b9531da3e80f5b02672",
+      "rmsDb": -17.42
+    },
+    {
+      "id": "zi-20",
+      "file": "audio/scripts/a1-u6-d2-ein-raum/zi-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ruhig und hell. Klein, aber gemütlich — wie dein Zimmer!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d2"
+      ],
+      "durationMs": 5076,
+      "sizeBytes": 22720,
+      "hash": "sha256:1115f82e00cdb4bf00dd44d2eaef55aae015f03a45bc6e227bf8dc8f8e78698d",
+      "pcmSha256": "39204bcff7df9ac70ef06de120a25edc1d663d403252663ca9f35eddd842aefc",
+      "rmsDb": -17.01
     }
   ],
   "characterVoices": {

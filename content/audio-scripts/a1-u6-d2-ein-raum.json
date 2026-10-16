@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d2-ein-raum",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Ein Raum!",
+    "ar": "حجرة واحدة! — لينا ويوسف في جولة بالكاميرا: غرف البيت أسماء مركّبة آخرها Zimmer (das Wohnzimmer · das Schlafzimmer · das Badezimmer)"
+  },
+  "usedIn": [
+    "a1-u6-d2"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "zi-1",
+      "speaker": "lena",
+      "text": "Hallo, Yusuf! Heute zeige ich unser Haus.",
+      "direction": "مهمة الوحدة السادسة تتواصل في الدورة عبر الإنترنت: جولة بالكاميرا في البيت غرفةً غرفة — لينا تبدأ ببيت أسرتها في سويسرا"
+    },
+    {
+      "id": "zi-2",
+      "speaker": "yusuf",
+      "text": "Toll! Wie viele Zimmer hat es?",
+      "direction": "يسأل عن عدد الغرف — es = das Haus"
+    },
+    {
+      "id": "zi-3",
+      "speaker": "lena",
+      "text": "Sechs Zimmer. Hier ist das Wohnzimmer — groß und hell.",
+      "direction": "تبدأ بغرفة المعيشة: das Wohnzimmer — Zimmer آخراً ⇒ das"
+    },
+    {
+      "id": "zi-4",
+      "speaker": "yusuf",
+      "text": "Ja, sehr hell! Und dort? Ist das die Küche?",
+      "direction": "يرى الضوء ويشير إلى الباب الآخر"
+    },
+    {
+      "id": "zi-5",
+      "speaker": "lena",
+      "text": "Ja. Und hier ist die Treppe. Mein Zimmer ist klein, aber gemütlich.",
+      "direction": "تصعد الدرج إلى غرفتها الصغيرة المريحة"
+    },
+    {
+      "id": "zi-6",
+      "speaker": "yusuf",
+      "text": "Und deine Brüder? Haben sie auch ein Zimmer?",
+      "direction": "يسأل عن أخويها التوأمين (u4-d5)"
+    },
+    {
+      "id": "zi-7",
+      "speaker": "lena",
+      "text": "Ja, die Zwillinge haben ein Zimmer zusammen. Es ist sehr laut!",
+      "direction": "تضحك: التوأمان المرِحان في غرفة واحدة صاخبة"
+    },
+    {
+      "id": "zi-8",
+      "speaker": "yusuf",
+      "text": "Und das Badezimmer? Ist es groß?",
+      "direction": "يسأل عن الحمّام — das Badezimmer: Zimmer آخراً ⇒ das"
+    },
+    {
+      "id": "zi-9",
+      "speaker": "lena",
+      "text": "Nein, es ist klein. Aber wir haben einen Balkon und einen Garten.",
+      "direction": "الحمّام صغير، لكن عندهم شرفة وحديقة"
+    },
+    {
+      "id": "zi-10",
+      "speaker": "yusuf",
+      "text": "Einen Garten! Und einen Keller?",
+      "direction": "يتعجّب من الحديقة ويسأل عن القبو — einen: der Garten · der Keller مفعولاً"
+    },
+    {
+      "id": "zi-11",
+      "speaker": "lena",
+      "text": "Ja, der Keller ist alt und nicht hell.",
+      "direction": "القبو قديم ومعتم — nicht قبل الصفة (u5-d4)"
+    },
+    {
+      "id": "zi-12",
+      "speaker": "yusuf",
+      "text": "Ich habe keinen Garten und keinen Balkon.",
+      "direction": "يقارن بشقته في برلين — keinen للمذكر مفعولاً"
+    },
+    {
+      "id": "zi-13",
+      "speaker": "lena",
+      "text": "Und wie ist deine Wohnung?",
+      "direction": "دوره الآن"
+    },
+    {
+      "id": "zi-14",
+      "speaker": "yusuf",
+      "text": "Das Haus ist sehr hoch, und meine Wohnung ist klein.",
+      "direction": "يدير الكاميرا نحو النافذة: بناية عالية في برلين وشقته صغيرة (u6-d1) — hoch خبراً بلا نهاية"
+    },
+    {
+      "id": "zi-15",
+      "speaker": "lena",
+      "text": "Wohnst du allein?",
+      "direction": "تسأل: هل يسكن وحده؟"
+    },
+    {
+      "id": "zi-16",
+      "speaker": "yusuf",
+      "text": "Ja, ich wohne allein. Ich habe ein Zimmer, einen Flur, eine Küche und ein Badezimmer.",
+      "direction": "يسكن وحده — allein لا تتغير — ويعدّ شقته: غرفة وممر ومطبخ وحمّام"
+    },
+    {
+      "id": "zi-17",
+      "speaker": "lena",
+      "text": "Nur ein Zimmer? Und wo ist dein Bett?",
+      "direction": "تستغرب: غرفة واحدة فقط؟"
+    },
+    {
+      "id": "zi-18",
+      "speaker": "yusuf",
+      "text": "Hier! Wohnzimmer und Schlafzimmer — das ist ein Raum.",
+      "direction": "يضحك ويُريها السرير: غرفة المعيشة وغرفة النوم حجرة واحدة — der Raum"
+    },
+    {
+      "id": "zi-19",
+      "speaker": "lena",
+      "text": "Ist das Zimmer ruhig?",
+      "direction": "تسأل عن الهدوء — ruhig خبراً بلا ‑e"
+    },
+    {
+      "id": "zi-20",
+      "speaker": "yusuf",
+      "text": "Ja, ruhig und hell. Klein, aber gemütlich — wie dein Zimmer!",
+      "direction": "يردّ بكلماتها هي: صغيرة لكن مريحة — مثل غرفتها"
+    }
+  ]
+}
