@@ -5258,11 +5258,11 @@
       "lessonRefs": [
         "a1-u5-d3"
       ],
-      "durationMs": 989,
-      "sizeBytes": 4715,
-      "hash": "sha256:5e17837a8f4ca12c125bd4006fe999235cd2bae5ee6ebed599fe327513908900",
-      "pcmSha256": "b69dc355aaef3fcb782611c250017458f9fc10fd62163998e95edc37f3e92c37",
-      "rmsDb": -17.09
+      "durationMs": 1013,
+      "sizeBytes": 4900,
+      "hash": "sha256:7ed245e12407072a6d1ef84d9f89e985798a56141ceb94913400d369d9e3b111",
+      "pcmSha256": "806e06fd8136c6aff2661f47035f67bf2d1949ea023fa2814f9ae82e8d93adb0",
+      "rmsDb": -17.06
     },
     {
       "id": "word-abendessen",
@@ -5278,11 +5278,11 @@
       "lessonRefs": [
         "a1-u5-d3"
       ],
-      "durationMs": 920,
-      "sizeBytes": 4585,
-      "hash": "sha256:71df5310ea369fa8bd44eb35fe3f3ee1b9745a402f9e1b55d1afc4f5cd18532d",
-      "pcmSha256": "d6c8123919a41a5ef83222b621c9c3ff2d6a0b56ddd3512466a353c3a3afff97",
-      "rmsDb": -17.12
+      "durationMs": 989,
+      "sizeBytes": 4724,
+      "hash": "sha256:1fea1331650f2d42fa0c71d4a57ddb66f8b8ea91660f6f3f075e5645bb2126ef",
+      "pcmSha256": "78cbaa2c17b942a331cbc71ea674d893907b48705f165e18a1af8e7e0ffeb4ad",
+      "rmsDb": -17.17
     },
     {
       "id": "word-butter",
@@ -16429,6 +16429,26 @@
       "rmsDb": -17.03
     },
     {
+      "id": "word-was-fuer-ein",
+      "file": "words/audio/de-DE/word-was-fuer-ein.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "was für ein.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 1036,
+      "sizeBytes": 5055,
+      "hash": "sha256:6c5cf2ff2e496e1e5868ee9e48bc1d4a73d5df68d65df6fe43c565722ba6b14d",
+      "pcmSha256": "c7826202235641c4091740abe4cfaf592d4b3002ca00b2a5f7aa7548331f099a",
+      "rmsDb": -17.12
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -25414,6 +25434,446 @@
       "hash": "sha256:52b7c81958e6dc1bd8ec0cb9d164c37309c483390474e82a16a035d05be5db48",
       "pcmSha256": "ac614f6e8797c1350449e96908d423a976893d72811f31dc758372b572e5bcc6",
       "rmsDb": -17.1
+    },
+    {
+      "id": "me-1",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 117,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo, Yusuf! Wir wollen heute zusammen essen, ja?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 4104,
+      "sizeBytes": 19031,
+      "hash": "sha256:3b0789f6816a54c7f773a74d5bf8f553b1e981cf91403a1bae1ed8e8f08578b1",
+      "pcmSha256": "c226a8bdd312895210211297e151515e6dc36c99e97036003c663ee7447d794b",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "me-2",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Es ist Mittag. Hier ist mein Mittagessen: Fisch mit Reis.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 4681,
+      "sizeBytes": 21400,
+      "hash": "sha256:afa4062e3d428fdef5ace26a61db8ae88b0745763bf3c4c95ce843391985dcee",
+      "pcmSha256": "3e4d67d4b3494d87a1ad2337974300dd78259dbf10ad30d73e081f2490268549",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "me-3",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 107,
+        "lengthScale": 1.32
+      },
+      "textDe": "Toll! Und hier ist meine Suppe. Guten Appetit!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 4488,
+      "sizeBytes": 20712,
+      "hash": "sha256:238cc798bef40c62adf9d61e0d1d69858ae2a60b4121890e71597171fe15c1e7",
+      "pcmSha256": "355394022fee41042ab93ed01fc1c1b35dc063cf2ba1ebcf3d73529b5b1a69bd",
+      "rmsDb": -17.3
+    },
+    {
+      "id": "me-4",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke, guten Appetit! Was für eine Suppe ist das?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 3741,
+      "sizeBytes": 16995,
+      "hash": "sha256:e6c65adee96ae8005815940c49ee9d2fa7b321f2050379d2559c822f17464ffd",
+      "pcmSha256": "6473f90104ab74739af259eba7c91bccd37a3e53c4065c838ede3d32d479f3e6",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "me-5",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Eine Suppe mit Kartoffeln und Tomaten.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 3048,
+      "sizeBytes": 14472,
+      "hash": "sha256:6342509506e430ecbd8dc2445a6a8fa9d4cd8eaeb32274768b18b2e4714e0f4a",
+      "pcmSha256": "26080e5a8ff8aec64c69a515c5a0a5f63cba601a63769980aec738d2ab9c00ef",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "me-6",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 84,
+        "lengthScale": 1.32
+      },
+      "textDe": "Schmeckt sie?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 1431,
+      "sizeBytes": 6530,
+      "hash": "sha256:fe847a189533a0e96bc9a96ad32588d60dfaf8f839520f902a112d53174d6fd4",
+      "pcmSha256": "8d9866ef3cedd19353e2199c6988b053757a58e193f0616a2ce57dee6ad5aeb7",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "me-7",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, sehr gut! Und dein Fisch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 2264,
+      "sizeBytes": 10757,
+      "hash": "sha256:acce16a4b5a91dc42840c95a2a181ae0eac6d743c0d5b4f0a69c99a3cf7656dc",
+      "pcmSha256": "348a0c9e621dd6c6543e99799f30da6e9dd7ea87c9168e93401e128535eacc2a",
+      "rmsDb": -17.55
+    },
+    {
+      "id": "me-8",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 138,
+        "lengthScale": 1.32
+      },
+      "textDe": "Er schmeckt super! Und jetzt? Möchtest du Kuchen oder Eis?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 4356,
+      "sizeBytes": 19627,
+      "hash": "sha256:4a1948c0e31351ccf269d5a907671f8fe9d82df568a30fddb1b4b86ec1dc037d",
+      "pcmSha256": "e3b9bfa98a36020c0b600a36e2f78c37bd9301918fdd9a9738bea05a29a6f15c",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "me-9",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 125,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich möchte einen Kuchen essen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 2408,
+      "sizeBytes": 11299,
+      "hash": "sha256:5f2025353950d090fe5919361bf83f5164bb79209d64a3e1d1c75ccb5e21b232",
+      "pcmSha256": "8e2e6cf31456c54a60662188f3654c38dea3460d9769581e5056aaca0ef3f949",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "me-10",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 162,
+        "lengthScale": 1.32
+      },
+      "textDe": "Was für einen Kuchen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 1477,
+      "sizeBytes": 6981,
+      "hash": "sha256:05f924946d9bfc03ea07f0fdc11bb803e719e25fcb9598ba57d9a4d18944a2af",
+      "pcmSha256": "3d31194c938c9fd46c3032e1c937f1289c747d6a7bad8ff67254fdac1802050a",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "me-11",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 165,
+        "lengthScale": 1.32
+      },
+      "textDe": "Einen Kuchen mit Obst. Und du, Yusuf?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 2552,
+      "sizeBytes": 12180,
+      "hash": "sha256:2f673262e4082c5dd37e7c2ef5936e566714849bc2f818f509ed4466b111a289",
+      "pcmSha256": "554cb3204afaf533b5f0b8bdf33776a408980f4ced58b9a4e7e4afd2ad61300e",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "me-12",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich will ein Eis! Ein Eis, ein Eis!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 3637,
+      "sizeBytes": 16170,
+      "hash": "sha256:34ad5a3e1a200159af16f8a163583f65bbeea5df6e82b429c7ac6dd2a8dc63be",
+      "pcmSha256": "11b09bd4bf3d1e81012d1095d280ad5898b5d71ce1c99722618db4a7119f4b3d",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "me-13",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 113,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, wie ein Kind! Bitte mit «möchte»!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 3704,
+      "sizeBytes": 17379,
+      "hash": "sha256:65ac1696aa9fd65e6d78af55192b650b4020b7678fefc3766712667a6f8aa943",
+      "pcmSha256": "2fb64cd51f0a99e753233c31cf0feb3314a8d6514588d20a56f81d813e53ae14",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "me-14",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Okay, okay: Ich möchte ein Eis, bitte.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 3509,
+      "sizeBytes": 15950,
+      "hash": "sha256:08925d6e0d0a7bf18db6107aed085d6f97ea405ee69bcbacfee525fb7e21d157",
+      "pcmSha256": "ee45fad18abe9c1e55ff2c06515e0807b3369b69f2274b35d45bf4920648859d",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "me-15",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sehr gut! Was für ein Eis?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 2760,
+      "sizeBytes": 12786,
+      "hash": "sha256:20a5a80535c941be61871f1cc763e5b4d189fe13ca6226ee7ac87272e2e21c4a",
+      "pcmSha256": "33b7c692893592c366cdbdbc25950ea0b6ac5906257d7928db8abe6a6e2f94db",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "me-16",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Eis mit Kaffee. Es ist sehr süß!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 2859,
+      "sizeBytes": 13110,
+      "hash": "sha256:849294eb1834f95536358efb0abf7be215166bfb48c15923542851a3fc41c93f",
+      "pcmSha256": "dbd5a493f64a19cd47ba58b0c389b14e277bedccddef556994f4a250ade56c42",
+      "rmsDb": -17.13
+    },
+    {
+      "id": "me-17",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und heute Abend? Was willst du zum Abendessen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 4008,
+      "sizeBytes": 18590,
+      "hash": "sha256:7db602a2f60a5521e9aaef9d29b0651e2932be395ea928c6a77ed62a0b3faa76",
+      "pcmSha256": "f7f9fa52d4e7f5b03a5c8d8c2add155c195b6af14d8fe761ee3d2c468ea2bee6",
+      "rmsDb": -17.42
+    },
+    {
+      "id": "me-18",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nur Brot mit Butter. Ich bin satt!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 2917,
+      "sizeBytes": 12668,
+      "hash": "sha256:fa3233626a9228cb30bfe47b50869a1fcd850bb44c0466939d9b7809582d751e",
+      "pcmSha256": "e297739aa147899b813c30bd696ecea1156cecd3be66ea95749e1fc84c4aaab8",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "me-19",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich auch! Und morgen zum Frühstück?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 2792,
+      "sizeBytes": 13090,
+      "hash": "sha256:10e18d8a27a6d1dd05443330e2ac23124df9233948be9a1805eac554aebdcd63",
+      "pcmSha256": "d648a4f5104628f4ba81b885938a62a2928e2a3427a45bb2c97a5b0b1b6671ae",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "me-20",
+      "file": "audio/scripts/a1-u5-d3-was-fuer-ein-eis/me-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 121,
+        "lengthScale": 1.32
+      },
+      "textDe": "Brot mit Marmelade und einen Tee — im Glas, natürlich!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d3"
+      ],
+      "durationMs": 4449,
+      "sizeBytes": 20133,
+      "hash": "sha256:43d8191acba6740419271a961756149335e1b29717255f7e5bec75548e463581",
+      "pcmSha256": "ce689ebed01849c4209e06e37688fd8be609e46676563c5529426c83b2464dac",
+      "rmsDb": -17.01
     }
   ],
   "characterVoices": {

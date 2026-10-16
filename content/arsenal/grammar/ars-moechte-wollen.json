@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-moechte-wollen",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Ich möchte einen Kuchen essen. · Was für einen Kuchen?",
+    "ar": "الطلب المهذب بـmöchte وwollen الشاذ + الفعل الثاني مصدراً في آخر الجملة · وwas für ein للسؤال عن النوع"
+  },
+  "payload": {
+    "topicAr": "اليوم تقول ما تريد أن تأكله: بلطف بـmöchte (ich möchte · du möchtest) مع اسمٍ مفعولٍ به (Ich möchte einen Kuchen.) أو مع فعل ثانٍ مصدراً في آخر الجملة (Ich möchte ein Eis essen.)، وبـwollen الشاذ (ich will · du willst) للخطط وبين الأصدقاء — لكن Ich will … للنادل حادّة. وتسأل عن النوع بـwas für ein: Was für einen Kuchen? — Einen Kuchen mit Obst. وتتكلم عن الوجبات الثلاث: das Frühstück · das Mittagessen · das Abendessen.",
+    "sceneAr": "بعد الدورة عبر الإنترنت وقت الظهر يتغدّى يوسف ولينا معاً أمام الكاميرا: يوسف في برلين يأكل سمكاً مع أرز، ولينا في سويسرا حساءً بالبطاطا والطماطم — «Guten Appetit!». ثم الحلوى: لينا تودّ كعكة بالفواكه، ويمزح يوسف فيقلّد طفلاً «Ich will ein Eis!» فتضحك: «مثل طفل!» وتطلب الصيغة المهذبة، فيقول «Ich möchte ein Eis, bitte.» — آيس كريم بالقهوة. وللعشاء خبز بالزبدة فقط لأنه شبعان، ولفطور الغد خبز بالمربّى وشاي في كأس.",
+    "examples": [
+      {
+        "de": "Ich möchte einen Kuchen. · Möchtest du ein Eis?",
+        "ar": "أودّ كعكة · هل تودّين آيس كريم؟ — möchte + مفعول به: der Kuchen ← einen · das Eis ← ein"
+      },
+      {
+        "de": "Ich möchte ein Eis essen. · Was möchtest du trinken?",
+        "ar": "أودّ أن آكل آيس كريم · ماذا تودّ أن تشرب؟ — möchte في المكان الثاني، والفعل الثاني مصدرٌ في الآخر بلا تصريف وبلا zu"
+      },
+      {
+        "de": "Ich will ein Eis! · Wir wollen zusammen essen.",
+        "ar": "أريد آيس كريم! (كطفل يُلحّ) · نريد أن نأكل معاً (خطة متفق عليها) — wollen: ich will · du willst · er/sie will · wir wollen"
+      },
+      {
+        "de": "Was für eine Suppe ist das? · Eine Suppe mit Kartoffeln.",
+        "ar": "أيّ نوع من الحساء هذا؟ · حساء بالبطاطا — was für ein تسأل عن النوع، وein فيها كما في الجواب: eine Suppe"
+      },
+      {
+        "de": "Guten Appetit! · Der Kuchen schmeckt gut. · Ich bin satt.",
+        "ar": "بالهناء · الكعكة لذيذة (schmecken فعل: schmeckt) · أنا شبعان (satt صفة مع sein)"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في Ich möchte einen Kuchen: ما وظيفة einen Kuchen؟ ولماذا einen لا ein؟ (2) في Ich möchte ein Eis essen: أين الفعل الثاني essen؟ هل تغيّر مع ich (esse)؟ وهل ترى zu قبله؟ (3) قارن ich möchte وer möchte، وich will وer will: ما الذي لا يتغيّر؟ وأين ‑t المعتادة مع er (er trinkt)؟ (4) لماذا تضحك لينا من «Ich will ein Eis!»؟ وما الصيغة المهذبة؟ (5) في Was für eine Suppe? · Was für einen Kuchen? · Was für ein Eis?: من أين تأتي eine/einen/ein؟ قارن بالجواب. (6) بالعربية «يريد أن يأكلَ»: كم فعلاً مصرّفاً؟ وبالألمانية Er möchte essen؟",
+    "ruleDe": "ich möchte · du möchtest · er/sie möchte · wir/Sie möchten — ich will · du willst · er/sie will · wir/Sie wollen — Ich möchte einen Kuchen. · Ich möchte ein Eis essen. · Was für einen Kuchen? · Was für eine Suppe? · Was für ein Eis? · zum Frühstück",
+    "ruleAr": "قل ما تريد بخمس خطوات: (1) möchte = «أودّ»، صيغة الطلب المهذبة: ich möchte · du möchtest · er/sie möchte · wir möchten · Sie möchten — وich وer/sie سواء بلا ‑t (er möchte كـich möchte). وهي من mögen (الدرس الأول من هذه الوحدة) لكن معناها غير معناه: Ich mag Kaffee = أحبّ القهوة (عادةً) · Ich möchte einen Kaffee = أودّ قهوة (الآن). ومع اسمٍ وحده يكون الاسم مفعولاً به، فالمذكر einen كما تعلمت في Akkusativ: Ich möchte einen Kuchen. · Möchtest du ein Eis? (2) ومع فعل ثانٍ: möchte في المكان الثاني كالعادة، والفعل الثاني في آخر الجملة بصيغة المصدر كما في القاموس (essen · trinken · bestellen) — لا يتصرّف ولا تسبقه zu، والمفعول بينهما: Ich möchte ein Eis essen. · Was möchtest du trinken? · Er möchte jetzt bestellen. (3) wollen = «يريد» بقوة أو «ينوي»، فعلٌ شاذ: ich will · du willst · er/sie will · wir wollen · Sie wollen (وich وer سواء: will). يعمل كـmöchte تماماً: Wir wollen zusammen essen. · Was willst du zum Abendessen? — للخطط وبين الأصدقاء والعائلة. أما Ich will … طلباً من النادل أو من غريب فحادّ كطلب طفل يُلحّ (Ich will ein Eis!)، وللطلب المهذب: Ich möchte … (4) was für ein = «أيّ نوع من …؟»: تسأل عن النوع، وein فيها تأخذ صيغتها من جنس الاسم بعدها ودوره، كما في الجواب: Was für eine Suppe ist das? — Eine Suppe mit Kartoffeln. · Was für einen Kuchen möchtest du? — Einen Kuchen mit Obst. · Was für ein Eis? — Ein Eis mit Kaffee. (5) الوجبات: das Frühstück · das Mittagessen (der Mittag + das Essen) · das Abendessen (der Abend + das Essen) — والأداة من الجزء الأخير das Essen — ومعها قطعة جاهزة: zum Frühstück · zum Mittagessen · zum Abendessen. وحول الأكل: Guten Appetit! · Der Kuchen schmeckt gut. · Ich bin satt.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «أنا شبعان» صفةٌ مع «أنا» تماماً كـIch bin satt (sein + صفة) — فلا تقِس على Du hast Hunger: الجوع اسمٌ مع haben والشبع صفةٌ مع sein. (2) «أيّ» العربية تُعرب بحسب موقعها: «أيُّ كعكةٍ هذه؟» مرفوعة · «أيَّ كعكةٍ تريد؟» منصوبة مفعولاً به — وكذلك ein في was für ein تأخذ صيغتها من دور الاسم: Was für ein Kuchen ist das? · Was für einen Kuchen möchtest du? (3) الفرنسية التي يعرفها كثيرون في المغرب العربي تفرّق التفريق نفسه: je voudrais un café (مهذبة) = Ich möchte einen Kaffee · je veux (مباشرة) = Ich will — وتقول je veux manger بلا حرف قبل الفعل الثاني كالألمانية. وما يختلف ثلاثة: (1) «أريد قهوةً من فضلك» مهذبة بالعربية: الفعل «أريد» محايد، واللطف تحمله «من فضلك» والنبرة — وفي تونس «نحبّ قهوة». والألمانية تحمل اللطف في صيغة الفعل نفسها: Ich möchte einen Kaffee, bitte، أما ~~Ich will einen Kaffee.~~ للنادل فطلبٌ حادّ حتى مع bitte. (2) «يريد أن يأكلَ كعكةً»: الفعل الثاني مصرَّف مع الفاعل (يأكلَ · تأكلَ · آكلَ) ويأتي بعد الأول مباشرة — وفي تونس «يحبّ ياكل» بلا «أن» أيضاً — فيظهر ~~Er möchte isst einen Kuchen.~~ والألمانية تجعل الفعل الثاني مصدراً لا يتصرّف في آخر الجملة: Er möchte einen Kuchen essen. (3) لا zu بعد möchte وwollen، و«أن» العربية لا تُترجم هنا بشيء: ~~Ich möchte zu essen.~~ مصدرها الأقرب الإنجليزية I want to eat (to) لمن يعرفها — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "zum Frühstück · zum Mittagessen · zum Abendessen قطعة جاهزة تُحفظ كما هي مع الوجبات (zum = zu + dem) — وقاعدة zu مع الأداة في الوحدة الثامنة.",
+      "was für مع الجمع وما لا يُعدّ بلا ein: Was für Tee trinkst du? · Was für Kartoffeln? — كما في قاعدة الطعام. وfür هنا ليست «لـ»: was für ein قطعة واحدة معناها «أيّ نوع من». وبنبرة التعجب تعني «يا له من …!»: Was für ein Kuchen!",
+      "das Eis (آيس كريم) يُعدّ بالحصة بلا جمع: ein Eis · zwei Eis — وغيره das Ei (بيضة): ein Ei · zwei Eier. وdas Eis أيضاً «الجليد».",
+      "wollen غير الإنجليزية will (للمستقبل): Ich will … = أريد …، لا «سوف» — تأثيرٌ إنجليزي لمن يعرفها لا عربي. والنفي في الدرس القادم."
+    ],
+    "beads": [
+      "Ich",
+      "möchte",
+      "einen",
+      "Kuchen",
+      "essen."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u5-d3",
+    "a1-u5-d5",
+    "a1-u5-d6"
+  ]
+}

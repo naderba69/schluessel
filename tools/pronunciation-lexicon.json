@@ -486,7 +486,8 @@
         "Ich esse Brot mit Marmelade."
       ],
       "regeneratedTracks": [
-        "word-marmelade"
+        "word-marmelade",
+        "me-20"
       ]
     },
     {
@@ -711,7 +712,8 @@
         "word-okay",
         "wb-2",
         "fo-2",
-        "et-19"
+        "et-19",
+        "me-14"
       ]
     },
     {
@@ -1039,6 +1041,46 @@
       "regeneratedTracks": [
         "word-speisekarte",
         "et-2"
+      ]
+    },
+    {
+      "word": "Mittagessen",
+      "forms": [
+        {
+          "espeak": "mˈɪtaɡˌɛsən",
+          "ipa": "mˈɪtɑːkˌɛsən"
+        }
+      ],
+      "referenceIpa": "/ˈmɪtaːkˌʔɛsn̩/",
+      "referenceNote": "خطأ صامت لا يمسّ النبر ولا طول الحركة المنبورة (D143) فلا يراه التدقيق الآلي (N-013): espeak يقرأ المركّب Mittag + Essen كأن g تبدأ المقطع التالي (mitta-gessen) فيجهرها [ɡ] ويقصّر a قبلها — والمرجع /ˈmɪtaːkˌʔɛsn̩/ بـk مهموسة في آخر الجزء الأول (همس آخر المقطع في الألمانية) وa طويلة، كما يقرأ espeak نفسه Mittag وحدها [mˈɪtɑːk]. التصحيح يمسّ هذين الصوتين وحدهما ويُبقي النبر الثانوي على es؛ وهمزة القطع [ʔ] قبل essen لا يكتبها espeak في الألمانية (beachten [bəˈaxtən]) فلا تُضاف.",
+      "analogy": "Mittag [mˈɪtɑːk] · essen [ˈɛsən] — الجزء الأول في المركّب يُقرأ كما يُقرأ وحده (zu Mittag [tsuː mˈɪtɑːk])",
+      "contexts": [
+        "Mittagessen.",
+        "Hier ist mein Mittagessen: Fisch mit Reis."
+      ],
+      "regeneratedTracks": [
+        "word-mittagessen",
+        "me-2"
+      ]
+    },
+    {
+      "word": "Abendessen",
+      "forms": [
+        {
+          "espeak": "ˈɑːbəndˌɛsən",
+          "ipa": "ˈɑːbəntˌɛsən"
+        }
+      ],
+      "referenceIpa": "/ˈaːbn̩tˌʔɛsn̩/",
+      "referenceNote": "خطأ صامت لا يمسّ النبر ولا طول الحركة المنبورة (D143) فلا يراه التدقيق الآلي (N-013): espeak يجهر d في آخر الجزء الأول من المركّب Abend + Essen كأنها تبدأ المقطع التالي (aben-dessen) — والمرجع /ˈaːbn̩tˌʔɛsn̩/ بـt مهموسة (همس آخر المقطع)، كما يقرأ espeak نفسه Abend وحدها [ˈɑːbənt] وفي «heute Abend». التصحيح يمسّ هذا الصوت وحده ويُبقي ə والنبر الثانوي على es كما ينطقهما الصوت.",
+      "analogy": "Abend [ˈɑːbənt] · essen [ˈɛsən] — d في آخر الجزء الأول تُهمس t كما في Abend وحدها",
+      "contexts": [
+        "Abendessen.",
+        "Und heute Abend? Was willst du zum Abendessen?"
+      ],
+      "regeneratedTracks": [
+        "word-abendessen",
+        "me-17"
       ]
     }
   ],

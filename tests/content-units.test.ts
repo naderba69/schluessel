@@ -15,7 +15,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(821); // + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(822); // + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -574,8 +574,67 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u5-d3 (D143): الطلب الحادّ (~~Ich will einen Kaffee.~~) · الفعل الثاني مصرَّف (~~Er möchte isst einen Kuchen.~~) · القياس (~~Ich habe satt.~~) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u5-d3")!;
+    const [will, isst, satt] = u.zusammenfassung.warningCards;
+    expect(will!.commonError.de).toBe("~~Ich will einen Kaffee.~~ (للنادل)");
+    expect(will!.correct.de).toBe("Ich möchte einen Kaffee, bitte.");
+    // مصيدة تداولية عربية حقيقية: «أريد» محايدة واللطف في «من فضلك» (وفي تونس «نحبّ قهوة») — والألمانية تحمله في صيغة الفعل · والفرنسية عونٌ مسمّى
+    expect(will!.whyArabicSpeakerFails).toContain("«أريد قهوةً من فضلك» مهذبة بالعربية");
+    expect(will!.whyArabicSpeakerFails).toContain("«نحبّ قهوة»");
+    expect(will!.whyArabicSpeakerFails).toContain("je veux وje voudrais");
+    expect(will!.exercise).toMatchObject({ a: "Ich möchte ein Wasser." });
+    expect(isst!.commonError.de).toBe("~~Er möchte isst einen Kuchen.~~");
+    expect(isst!.correct.de).toBe("Er möchte einen Kuchen essen.");
+    // الفعل الثاني مصرَّف مع الفاعل وبعد الأول مباشرة («يريد أن يأكلَ» · «يحبّ ياكل») — بدل مصيدة zu القديمة (مصدرها الإنجليزية to لا العربية)
+    expect(isst!.whyArabicSpeakerFails).toContain("«يريد أن يأكلَ كعكةً»");
+    expect(isst!.whyArabicSpeakerFails).toContain("«يحبّ ياكل»");
+    expect(isst!.exercise).toMatchObject({ a: "Du möchtest einen Tee trinken." });
+    expect(satt!.commonError.de).toBe("~~Ich habe satt.~~");
+    // العربية تساعد هنا («أنا شبعان» صفة) والخطأ قياسٌ على Hunger haben — لا «تداخل عربي» بلا دليل · وIch habe es satt = سئمتُ
+    expect(satt!.whyArabicSpeakerFails).toContain("هنا تساعدك العربية");
+    expect(satt!.whyArabicSpeakerFails).toContain("القياس على Hunger haben");
+    expect(satt!.whyArabicSpeakerFails).toContain("Ich habe es satt (بـes) تعبيرٌ آخر معناه «سئمتُ»");
+    expect(satt!.exercise).toMatchObject({ a: "habe / bist" });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: ~~Ich möchte zu essen.~~ (مصدرها الإنجليزية لا «أن») · «يتبادلان» (Hunger/satt بلا دليل) · ~~das Ei~~/~~ein Eis~~ (زوج أدنى لا تداخل)
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/zu essen\.~~|يتبادلان|~~das Ei~~/);
+    // لا kein/nicht (الدرس الرابع) · لا es gibt (u6-d3) · لا Dativ بأداة · وzum قطعة الوجبات وحدها (قرار D143) · ولا كلمات لاحقة
+    const de = JSON.stringify({ e: u.einstieg, s: u.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "" }))), q: u.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "" }))), z: u.zusammenfassung.summary.de, w: u.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise]) });
+    expect(de).not.toMatch(/\b(von|mit|in|zu) (dem|der|meinem|meiner|deinem|deiner|seinem|seiner|ihrem|ihrer|einem|einer)\b|\bzur\b|\bkein|\bnicht\b|\bgibt\b|frisch|lecker|Getränk|Durst|Zucker|nichts|wenig|gleichfalls/);
+    // zum في الفراغ تظهر بعد ملئه وحده («Was möchtest du ___ Frühstück?» والإجابة zum) — طفرة D143: «___ Mittag» أفلتت من النص الخام
+    const gapFilled = u.uebung.stations.filter((st) => st.type === "gap-fill").flatMap((st) => st.items.map((i) => String(i.q).replace("___", String(i.a))));
+    expect([...`${de} ${gapFilled.join(" ")}`.matchAll(/\bzum (\p{L}+)/gu)].map((m) => m[1]).filter((x) => !["Frühstück", "Mittagessen", "Abendessen"].includes(x!))).toEqual([]);
+    expect(gapFilled.filter((t) => /\bzum Frühstück\b/.test(t))).toHaveLength(1);
+    // N-069: يوسف لا يطلب الكحول ولا الخنزير
+    const sentences = de.split(/[.!?"]/);
+    expect(sentences.filter((x) => /\b(Yusuf|Ich|ich)\b/.test(x) && /\b(Bier|Wein|Wurst)\b/.test(x))).toEqual([]);
+    // N-021: أمثلة البطاقات بلا أسماء علم · وD108: لا نص رسمي حرفي (Der Kuchen schmeckt super · Danke gleichfalls · Was für eine Farbe möchten Sie)
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    const ids = ["fruehstueck", "mittagessen", "abendessen", "butter", "marmelade", "kuchen", "eis", "appetit", "schmecken", "satt", "kartoffel", "tomate", "was-fuer-ein"];
+    expect(ids.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin/);
+    expect(ids.map(sample)).toEqual([
+      "Das Frühstück ist um acht.", "Das Mittagessen ist fertig!", "Was möchtest du zum Abendessen?", "Brot mit Butter, bitte.",
+      "Ich esse Brot mit Marmelade.", "Der Kuchen schmeckt gut!", "Ich möchte ein Eis, bitte.", "Guten Appetit! – Danke, guten Appetit!",
+      "Das schmeckt sehr gut!", "Ich bin satt, danke.", "Ich esse Kartoffeln und Fleisch.", "Einen Salat mit Tomaten, bitte!",
+      "Was für ein Eis isst du gern?",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا «Ich will …» (صحيحة نحواً — المصيدة تداولية) · لا «Was für Kuchen/Eis …» بلا ein (صحيحة للجمع
+    // والمادة) · لا «es satt» (سئمتُ) · لا «zwei Eis» (حصتان) · لا «möchtet/wollt» (صحيحتان مع ihr) · ولا صيغ مخترعة (willt · wollst)
+    const choiceTexts = [...u.einstieg.pretestItems.flatMap((p) => p.choices), ...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (typeof i === "string" ? [i] : Array.isArray((i as { choices?: unknown }).choices) ? ((i as { choices: string[] }).choices) : []));
+    // (الخيارات الألمانية وحدها — خيار الاستماع العربي «لأن «Ich will» تبدو كطلب طفل» يسمّي الجملة ولا يقترحها)
+    expect(choiceTexts.filter((c) => !/[\u0600-\u06FF]/.test(c) && /\b[Ii]ch will\b|Was für (Kuchen|Eis|Salat|Suppe|Tee|Marmelade|Kartoffeln)\b|es satt|zwei Eis\b|möchtet|wollt\b|willt|wollst|willen/.test(c))).toEqual([]);
+    expect(choiceTexts.length).toBeGreaterThan(30);
+    // الاستدعاء من دروس سابقة (Mittag · Abend جزءا المركّبين · mögen أصل möchte) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || ["a1-u5-d1", "a1-u5-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["mittag", "abend", "moegen"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || ["a1-u5-d1", "a1-u5-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || ["a1-u5-d1", "a1-u5-d2", "a1-u5-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute"]);
     for (const w of pluralOnly) expect([w.id, w.gender, w.srsCardTypes.includes("gender")]).toEqual([w.id, "none", false]);

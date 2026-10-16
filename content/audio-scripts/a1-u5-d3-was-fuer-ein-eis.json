@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d3-was-fuer-ein-eis",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Was für ein Eis?",
+    "ar": "أيّ آيس كريم؟ — غداء لينا ويوسف معاً أمام الكاميرا: يطلبان بلطف (Ich möchte …) ويسألان عن النوع (Was für ein …?) — وIch will حادّة كطلب طفل"
+  },
+  "usedIn": [
+    "a1-u5-d3"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "me-1",
+      "speaker": "lena",
+      "text": "Hallo, Yusuf! Wir wollen heute zusammen essen, ja?",
+      "direction": "بعد الدورة عبر الإنترنت وقت الظهر: اتفق الاثنان أن يتغدّيا معاً أمام الكاميرا — يوسف في برلين ولينا في سويسرا. wollen هنا للخطة المتفق عليها"
+    },
+    {
+      "id": "me-2",
+      "speaker": "yusuf",
+      "text": "Ja! Es ist Mittag. Hier ist mein Mittagessen: Fisch mit Reis.",
+      "direction": "يرفع صحنه أمام الكاميرا — Mittag + Essen = Mittagessen"
+    },
+    {
+      "id": "me-3",
+      "speaker": "lena",
+      "text": "Toll! Und hier ist meine Suppe. Guten Appetit!",
+      "direction": "تُري صحن حسائها وتتمنى له طعاماً هنيئاً"
+    },
+    {
+      "id": "me-4",
+      "speaker": "yusuf",
+      "text": "Danke, guten Appetit! Was für eine Suppe ist das?",
+      "direction": "يردّ التحية ويسأل عن نوع الحساء — was für eine: die Suppe مؤنثة"
+    },
+    {
+      "id": "me-5",
+      "speaker": "lena",
+      "text": "Eine Suppe mit Kartoffeln und Tomaten.",
+      "direction": "تجيب بالنوع: حساء بالبطاطا والطماطم — والجواب بالأداة نفسها: eine"
+    },
+    {
+      "id": "me-6",
+      "speaker": "yusuf",
+      "text": "Schmeckt sie?",
+      "direction": "sie = die Suppe — يسأل: هل هو لذيذ؟"
+    },
+    {
+      "id": "me-7",
+      "speaker": "lena",
+      "text": "Ja, sehr gut! Und dein Fisch?",
+      "direction": "تؤكد وتسأله عن سمكه"
+    },
+    {
+      "id": "me-8",
+      "speaker": "yusuf",
+      "text": "Er schmeckt super! Und jetzt? Möchtest du Kuchen oder Eis?",
+      "direction": "er = der Fisch — ثم ينتقل إلى الحلوى ويعرض عليها بلطف: möchtest"
+    },
+    {
+      "id": "me-9",
+      "speaker": "lena",
+      "text": "Ich möchte einen Kuchen essen.",
+      "direction": "تختار الكعك — möchte في المكان الثاني والمصدر essen في الآخر"
+    },
+    {
+      "id": "me-10",
+      "speaker": "yusuf",
+      "text": "Was für einen Kuchen?",
+      "direction": "يسأل عن نوعه — einen لأن der Kuchen مذكر ومفعول به (Ich möchte …)"
+    },
+    {
+      "id": "me-11",
+      "speaker": "lena",
+      "text": "Einen Kuchen mit Obst. Und du, Yusuf?",
+      "direction": "كعكة بالفواكه — وتردّ السؤال"
+    },
+    {
+      "id": "me-12",
+      "speaker": "yusuf",
+      "text": "Ich will ein Eis! Ein Eis, ein Eis!",
+      "direction": "يمزح ويقلّد طفلاً يُلحّ — Ich will طلب مباشر حادّ"
+    },
+    {
+      "id": "me-13",
+      "speaker": "lena",
+      "text": "Yusuf, wie ein Kind! Bitte mit «möchte»!",
+      "direction": "تضحك: «مثل طفل!» وتطلب منه الصيغة المهذبة — والعلامتان «» علامتا التنصيص المعتادتان في سويسرا"
+    },
+    {
+      "id": "me-14",
+      "speaker": "yusuf",
+      "text": "Okay, okay: Ich möchte ein Eis, bitte.",
+      "direction": "يعيد الطلب بأدب مبالغ فيه وهو يبتسم"
+    },
+    {
+      "id": "me-15",
+      "speaker": "lena",
+      "text": "Sehr gut! Was für ein Eis?",
+      "direction": "تمدحه وتسأل عن النوع — ein لأن das Eis محايد"
+    },
+    {
+      "id": "me-16",
+      "speaker": "yusuf",
+      "text": "Ein Eis mit Kaffee. Es ist sehr süß!",
+      "direction": "آيس كريم بالقهوة — es = das Eis"
+    },
+    {
+      "id": "me-17",
+      "speaker": "lena",
+      "text": "Und heute Abend? Was willst du zum Abendessen?",
+      "direction": "تسأله عن العشاء بين صديقين: willst مقبولة بين الأصدقاء — zum Abendessen قطعة الوجبات"
+    },
+    {
+      "id": "me-18",
+      "speaker": "yusuf",
+      "text": "Nur Brot mit Butter. Ich bin satt!",
+      "direction": "يضع يده على بطنه: شبع — satt صفة مع sein كـ«أنا شبعان»"
+    },
+    {
+      "id": "me-19",
+      "speaker": "lena",
+      "text": "Ich auch! Und morgen zum Frühstück?",
+      "direction": "هي شبعت أيضاً، وتسأل عن فطور الغد — zum Frühstück"
+    },
+    {
+      "id": "me-20",
+      "speaker": "yusuf",
+      "text": "Brot mit Marmelade und einen Tee — im Glas, natürlich!",
+      "direction": "يختم بشاي في كأس كعادته (D142): einen Tee مفعول به لـ«Ich möchte …» المفهومة"
+    }
+  ]
+}
