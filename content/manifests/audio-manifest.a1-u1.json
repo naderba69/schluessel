@@ -5565,8 +5565,8 @@
       "rmsDb": -17.1
     },
     {
-      "id": "word-laeffel",
-      "file": "words/audio/de-DE/word-laeffel.opus",
+      "id": "word-loeffel",
+      "file": "words/audio/de-DE/word-loeffel.opus",
       "role": "word",
       "isGuest": false,
       "voiceParams": {
@@ -16449,6 +16449,46 @@
       "rmsDb": -17.12
     },
     {
+      "id": "word-nichts",
+      "file": "words/audio/de-DE/word-nichts.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "nichts.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 897,
+      "sizeBytes": 4158,
+      "hash": "sha256:ce8765b3c16b24804ea9a04bbfb00f5d916358ab1a729aa16afec7aff943193d",
+      "pcmSha256": "b2732983dccb7c8f6dfecb11ec655d53b17b3dea84c6003cc2b0ca7f233feacf",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "word-wenig",
+      "file": "words/audio/de-DE/word-wenig.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "wenig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 966,
+      "sizeBytes": 4177,
+      "hash": "sha256:483da783f03c3b7aecc14a93b5da9e79c20c1be1e063cbd564c9c9c580474a3a",
+      "pcmSha256": "42527c29f8ecb76342ac6dc8c12afa3db7d31ec17c13fb2a8b3411a7aa750d72",
+      "rmsDb": -16.98
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -25874,6 +25914,446 @@
       "hash": "sha256:43d8191acba6740419271a961756149335e1b29717255f7e5bec75548e463581",
       "pcmSha256": "ce689ebed01849c4209e06e37688fd8be609e46676563c5529426c83b2464dac",
       "rmsDb": -17.01
+    },
+    {
+      "id": "kn-1",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 154,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, heute bin ich der Gast im Restaurant, und du bist der Kellner.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 5064,
+      "sizeBytes": 23655,
+      "hash": "sha256:e721e9f79b7b04bf2b0d29f2267d82353ffdc102c521f9af2ab8ea2549ddac29",
+      "pcmSha256": "2a7e854476f56ebd11b824c1c7df23a3868ebc641146611c51df9bca30cefe49",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "kn-2",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 115,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut! Guten Abend! Möchten Sie ein Getränk?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 3637,
+      "sizeBytes": 15428,
+      "hash": "sha256:dc5c3689b387b96845ee10b386d58bdda587877f513ecaf53ee2765827688363",
+      "pcmSha256": "155747cf089348c3f305ec6219d619b028d48a3092ac0b21053130466b1ae9b1",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "kn-3",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 125,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ein Wasser, bitte. Aber hier ist kein Glas!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 4312,
+      "sizeBytes": 19889,
+      "hash": "sha256:58271c41653abf1178ffbcb3eed70219ddd1a8db8bce73cfe757bda9b5c45e8e",
+      "pcmSha256": "79eb3ca577445eaa976fbf82133f8f5c61efec3a3f947074c96aefe5082bdd69",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "kn-4",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Kein Glas? Hier, bitte! Und was möchten Sie essen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 4078,
+      "sizeBytes": 18354,
+      "hash": "sha256:907e3fd1fe9bfa6b4c5caedd4ac6efdb1c5658ea399c2f503208c8876218ab5f",
+      "pcmSha256": "4463defaf57e4f98c9a40d964e2f1e3059a6bb4c4f851b3b15763d31352d3ef2",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "kn-5",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Einen Teller Suppe, bitte. Ist die Suppe scharf?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 3352,
+      "sizeBytes": 15571,
+      "hash": "sha256:32eee034371573a46bf651ad237d673167ce8b3f261cca08026e22a78f494c4f",
+      "pcmSha256": "a5bbd0a56358c17fd5cf8cfe15a7ff6997f23bd6f738e351afa7d4198aa5b118",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "kn-6",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, sie ist nicht scharf.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 2325,
+      "sizeBytes": 10941,
+      "hash": "sha256:edfe9933ec6d29b11fcb6d54f627921837fe0928919662b900d7b22073a95717",
+      "pcmSha256": "e3d2cf6e34da8d2ccc22600171c5b548bcd4b773a34f5722b6b8ba74ee6fb654",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "kn-7",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut. Und haben Sie Fisch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 2136,
+      "sizeBytes": 10042,
+      "hash": "sha256:6d208eb935a7d525636ff065464b49c56a21adf3c64c2150fa54ab8104f5e787",
+      "pcmSha256": "441c8ac6d4641e89a8a5b780669a783c3baf7061ae7bb12db1cb5d995f7df10c",
+      "rmsDb": -17.51
+    },
+    {
+      "id": "kn-8",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 174,
+        "lengthScale": 1.32
+      },
+      "textDe": "Heute haben wir keinen Fisch. Aber das Fleisch ist frisch!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 3451,
+      "sizeBytes": 15944,
+      "hash": "sha256:1a285b6a25259eca891719a2198e7ad76e3c7cde6f523aa489e1c50b077dbd06",
+      "pcmSha256": "b79cf74ce43b778375d1527f0337e15f3e04ec9f27925406cfb803cefec09369",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "kn-9",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 125,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, danke, kein Fleisch. Nur die Suppe.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 3368,
+      "sizeBytes": 15559,
+      "hash": "sha256:616f28d8dc8c3699725ff9c0fa9e4bd2e28ee4d259769b54b188c15160316aed",
+      "pcmSha256": "878cd654d699c06027d6d3c815bd7f5906ca6eb510c94c8395e51d65a69cd421",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "kn-10",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 146,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gern. Die Bestellung ist fertig: eine Suppe und ein Wasser!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 4101,
+      "sizeBytes": 18564,
+      "hash": "sha256:5d3bbc9e07bf65edc28585eaad2243d7756781a15e5e268c473b8581aad380b5",
+      "pcmSha256": "fffe52c9ad9d0435ce03d540932b25ae49f005c07dbe0195e5d9670b42f99af4",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "kn-11",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 116,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke! Aber ich habe keinen Löffel!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 3096,
+      "sizeBytes": 14373,
+      "hash": "sha256:f1eb7d1d58686755921285dfb10fa6e433387b91929e752ab9ef85f2380920b5",
+      "pcmSha256": "52aa9106e47e8cb32835318778919528342c29d9be71d6b3fafed69e6e690b4b",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "kn-12",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Keinen Löffel? Hier, bitte. Und eine Gabel und ein Messer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 5006,
+      "sizeBytes": 22094,
+      "hash": "sha256:c52ed47092923c739e8693869a40537b018fe43248ab5184f62d0474bd90c9b7",
+      "pcmSha256": "f07b42c318901130e9133efd4936c8230a6818e82846334b2ec0ae7b25828e6f",
+      "rmsDb": -17
+    },
+    {
+      "id": "kn-13",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, keine Gabel und kein Messer. Das ist eine Suppe!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 4664,
+      "sizeBytes": 21761,
+      "hash": "sha256:79de6ce4430633e9d0460d93405f25a99b488f805ff8e79396e253c78c236f61",
+      "pcmSha256": "8640d98cd58d9f698f429a5608330fe2e09f2b086fe0f7ea2588ecc434c71219",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "kn-14",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 69,
+        "lengthScale": 1.32
+      },
+      "textDe": "Natürlich! Guten Appetit!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 2626,
+      "sizeBytes": 11662,
+      "hash": "sha256:d0cf1a40da484317566478edb75f6af02711d717406125c2a7ef21d1a1e4666c",
+      "pcmSha256": "7c01247a435942f17f25357f432c21a1939aef957b8241c5101ced5cf4c87b5c",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "kn-15",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die Portion ist groß, und die Suppe ist sehr salzig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 4584,
+      "sizeBytes": 21304,
+      "hash": "sha256:8451230f5888f14f82e8bd899b8cd7fd553ac1b8b186bc4f714c819f49b8f0aa",
+      "pcmSha256": "9711ca40260a90d9ee7c47fcdc4aa55442e2d9a144f6ccd44fe2ce8d3df6d5ad",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "kn-16",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Salzig? Das ist nicht gut! Möchten Sie einen Kuchen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 4287,
+      "sizeBytes": 18406,
+      "hash": "sha256:557f7a5046c836a239238cbd304f5ea78562ca9fce519ad8c758922d2b83f3d9",
+      "pcmSha256": "d98e8d57273a08e0c50bb72742819e72d48a7d3028cbca6ba6eb9be6d5d4c4f6",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "kn-17",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, danke, ich möchte nichts. Ich esse heute nur wenig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 4280,
+      "sizeBytes": 19994,
+      "hash": "sha256:8e73feb77687a68c5f7772a059a0037e44f5b6ffae5b4f2b194d69c204271bdb",
+      "pcmSha256": "14c0b5f038b6700c9520176fafe42b27cf9f1a71c57cc43bb666dbedf80ce824",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "kn-18",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 112,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut. Das sind neun Euro, bitte.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 3219,
+      "sizeBytes": 14013,
+      "hash": "sha256:b993b374f452a0e7154c1f0388c965d02060fd6c811c1556e8d9a6cb5a1a8f0a",
+      "pcmSha256": "339d755e385f30dad23469a9c28ec7ef32f424a73806d90c6852a8fc8d5de2dc",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "kn-19",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hier sind zehn Euro. Das Trinkgeld ist für Sie!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 3608,
+      "sizeBytes": 16835,
+      "hash": "sha256:f161b9ecb0695e0b7569bc7c8b1e82129a5f05b19d47b091773603cfbe650307",
+      "pcmSha256": "66d09ffaeb7d346b77946df634c7a7c1e71006506388cb1dde79811107df715c",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "kn-20",
+      "file": "audio/scripts/a1-u5-d4-kein-glas-kein-loeffel/kn-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke! Lena, du bist ein super Gast!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d4"
+      ],
+      "durationMs": 3207,
+      "sizeBytes": 14541,
+      "hash": "sha256:a1308e59947a6031cc8fcb84109067b7fa93986640fc2d1a68d1fedf47ac7168",
+      "pcmSha256": "66ab97fd802b2c8562df9fa96bca5743d5fe8a5119b4338389b8d736e01cd1b4",
+      "rmsDb": -17.03
     }
   ],
   "characterVoices": {

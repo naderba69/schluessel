@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d4-kein-glas-kein-loeffel",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Kein Glas, kein Löffel!",
+    "ar": "لا كأس ولا ملعقة! — لعب أدوار في مطعم: لينا الزبونة تنفي بـkein (kein Glas · keinen Löffel · keine Gabel) وnicht (nicht scharf) ويوسف النادل"
+  },
+  "usedIn": [
+    "a1-u5-d4"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "kn-1",
+      "speaker": "lena",
+      "text": "Yusuf, heute bin ich der Gast im Restaurant, und du bist der Kellner.",
+      "direction": "في الدورة عبر الإنترنت — لعب أدوار جديد في مطعم بصيغة Sie: لينا الزبونة (der Gast يُقال للمرأة أيضاً) ويوسف النادل"
+    },
+    {
+      "id": "kn-2",
+      "speaker": "yusuf",
+      "text": "Gut! Guten Abend! Möchten Sie ein Getränk?",
+      "direction": "يدخل دور النادل ويعرض مشروباً بلطف (möchten — من الدرس السابق)"
+    },
+    {
+      "id": "kn-3",
+      "speaker": "lena",
+      "text": "Ja, ein Wasser, bitte. Aber hier ist kein Glas!",
+      "direction": "تطلب ماءً ثم تلاحظ أن الكأس غير موجودة — kein Glas: das Glas ← kein"
+    },
+    {
+      "id": "kn-4",
+      "speaker": "yusuf",
+      "text": "Kein Glas? Hier, bitte! Und was möchten Sie essen?",
+      "direction": "يكرر مستغرباً ويقدّم كأساً، ثم يسأل عن الطعام"
+    },
+    {
+      "id": "kn-5",
+      "speaker": "lena",
+      "text": "Einen Teller Suppe, bitte. Ist die Suppe scharf?",
+      "direction": "صحن حساء (الوعاء ثم الطعام بلا أداة كـein Glas Tee) — وتسأل: هل هو حار؟"
+    },
+    {
+      "id": "kn-6",
+      "speaker": "yusuf",
+      "text": "Nein, sie ist nicht scharf.",
+      "direction": "sie = die Suppe — nicht قبل الصفة وist باقية"
+    },
+    {
+      "id": "kn-7",
+      "speaker": "lena",
+      "text": "Gut. Und haben Sie Fisch?",
+      "direction": "تسأل عن السمك"
+    },
+    {
+      "id": "kn-8",
+      "speaker": "yusuf",
+      "text": "Heute haben wir keinen Fisch. Aber das Fleisch ist frisch!",
+      "direction": "لا سمك اليوم — keinen لأن Fisch مذكر مفعول به — ويقترح اللحم الطازج"
+    },
+    {
+      "id": "kn-9",
+      "speaker": "lena",
+      "text": "Nein, danke, kein Fleisch. Nur die Suppe.",
+      "direction": "ترفض بلطف — kein Fleisch: das Fleisch بلا أداة ← kein"
+    },
+    {
+      "id": "kn-10",
+      "speaker": "yusuf",
+      "text": "Gern. Die Bestellung ist fertig: eine Suppe und ein Wasser!",
+      "direction": "يكرر الطلب ويقدّمه"
+    },
+    {
+      "id": "kn-11",
+      "speaker": "lena",
+      "text": "Danke! Aber ich habe keinen Löffel!",
+      "direction": "تكتشف أن الملعقة غير موجودة — der Löffel مفعول به ← keinen"
+    },
+    {
+      "id": "kn-12",
+      "speaker": "yusuf",
+      "text": "Keinen Löffel? Hier, bitte. Und eine Gabel und ein Messer?",
+      "direction": "يقدّم ملعقة ويعرض الشوكة والسكين أيضاً"
+    },
+    {
+      "id": "kn-13",
+      "speaker": "lena",
+      "text": "Nein, keine Gabel und kein Messer. Das ist eine Suppe!",
+      "direction": "تضحك: لا حاجة إلى شوكة وسكين للحساء — die Gabel ← keine · das Messer ← kein"
+    },
+    {
+      "id": "kn-14",
+      "speaker": "yusuf",
+      "text": "Natürlich! Guten Appetit!",
+      "direction": "يوافق ويتمنى لها طعاماً هنيئاً"
+    },
+    {
+      "id": "kn-15",
+      "speaker": "lena",
+      "text": "Die Portion ist groß, und die Suppe ist sehr salzig.",
+      "direction": "بعد أن تذوقت: الحصة كبيرة والحساء مالح جداً"
+    },
+    {
+      "id": "kn-16",
+      "speaker": "yusuf",
+      "text": "Salzig? Das ist nicht gut! Möchten Sie einen Kuchen?",
+      "direction": "يأسف (nicht gut) ويعرض كعكة بدلاً منه"
+    },
+    {
+      "id": "kn-17",
+      "speaker": "lena",
+      "text": "Nein, danke, ich möchte nichts. Ich esse heute nur wenig.",
+      "direction": "ترفض: nichts = لا شيء · wenig = قليل"
+    },
+    {
+      "id": "kn-18",
+      "speaker": "yusuf",
+      "text": "Gut. Das sind neun Euro, bitte.",
+      "direction": "يقدّم الحساب: تسعة يورو"
+    },
+    {
+      "id": "kn-19",
+      "speaker": "lena",
+      "text": "Hier sind zehn Euro. Das Trinkgeld ist für Sie!",
+      "direction": "تدفع عشرة يورو وتترك الباقي بقشيشاً للنادل — والتقريب عادة شائعة في ألمانيا"
+    },
+    {
+      "id": "kn-20",
+      "speaker": "yusuf",
+      "text": "Danke! Lena, du bist ein super Gast!",
+      "direction": "يخرج من الدور ويمدحها بصيغة du من جديد"
+    }
+  ]
+}

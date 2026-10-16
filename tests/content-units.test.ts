@@ -1,6 +1,7 @@
 // content-units.test.ts — المحتوى حيّ: كل درس وكلماته تعمل على المُشغِّل (D45)
 import { describe, it, expect } from "vitest";
 import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, LEVEL_ORDER, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { slugify } from "../tools/lib/word-entry.js";
 import { planLessonStations, fullForm } from "../src/lib/lesson-runner.js";
 
 describe("سجل المحتوى — الوحدة 1 كاملة + بداية الوحدة 2", () => {
@@ -15,7 +16,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(822); // + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(824); // + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -633,13 +634,77 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u5-d4 (D144): النفي على «عند» (~~Ich habe nicht Gabel.~~) · «ليس» تُسقط ist (~~Die Suppe nicht scharf.~~) · «لا» قبل الفعل (~~Ich nicht zahle heute.~~) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u5-d4")!;
+    const [noun, copula, order] = u.zusammenfassung.warningCards;
+    expect(noun!.commonError.de).toBe("~~Ich habe nicht Gabel.~~");
+    expect(noun!.correct.de).toBe("Ich habe keine Gabel.");
+    // «ليس عندي شوكة» / «ما عنديش …»: النفي على «عند» والاسم كما هو — والاسم مفرد معدود بلا أداة (Gabel ← Gabeln) فلا قراءة صحيحة للخطأ
+    // (nicht + اسم مادة أو جمع صحيحة في المقابلة «nicht Kaffee, sondern …» — فلم تُجعل مصيدة ولا مشتِّتاً)
+    expect(noun!.whyArabicSpeakerFails).toContain("«ليس عندي شوكة»");
+    expect(noun!.whyArabicSpeakerFails).toContain("«ما عنديش …»");
+    expect(noun!.whyArabicSpeakerFails).toContain("وهي ein بحرف k");
+    expect(noun!.exercise).toMatchObject({ a: "Lena hat keine Tasse." });
+    expect(copula!.commonError.de).toBe("~~Die Suppe nicht scharf.~~");
+    expect(copula!.correct.de).toBe("Die Suppe ist nicht scharf.");
+    // «ليس» فعلٌ ناقص يحمل النفي والربط معاً · «الشربة موش حارّة» بلا فعل — امتداد needs-ist
+    expect(copula!.whyArabicSpeakerFails).toContain("«ليس» فعلٌ ناقص يحمل النفي والربط معاً");
+    expect(copula!.whyArabicSpeakerFails).toContain("«الشربة موش حارّة»");
+    expect(copula!.exercise).toMatchObject({ a: "Der Fisch ist nicht frisch." });
+    expect(order!.commonError.de).toBe("~~Ich nicht zahle heute.~~");
+    expect(order!.correct.de).toBe("Ich zahle heute nicht.");
+    expect(order!.whyArabicSpeakerFails).toContain("«لا أدفعُ اليوم»");
+    expect(order!.exercise).toMatchObject({ a: "Wir bestellen jetzt nicht." });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: ~~Ich möchte nicht Kaffee.~~ بتعليل «لا قبل الاسم» (وصف خاطئ للعربية) · ~~kein scharf~~ · نهايات kein «(Akk)» بلا دليل عربي
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/«لا» قبل الاسم|~~kein scharf~~|\(Akk\)/);
+    // لا Dativ بأداة · لا zum/zur · لا es gibt · لا صفة منعوتة (kleine Portion — A2) · لا zu بمعنى «أكثر من اللازم» · ولا كلمات لاحقة أو غير مدروسة
+    const de = JSON.stringify({ e: u.einstieg, s: u.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "" }))), q: u.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "" }))), z: u.zusammenfassung.summary.de, w: u.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise]) });
+    expect(de).not.toMatch(/\b(von|mit|in|zu) (dem|der|meinem|meiner|deinem|deiner|seinem|seiner|ihrem|ihrer|einem|einer)\b|\bzur\b|\bzum\b|\bgibt\b|\bvon\b|Tisch|braucht|\bSalz\b|kochen|backen|Mahlzeit|sofort|\bleer\b|Chips|beliebt|\bkalt|kleine|\bzu (scharf|salzig|viel|groß)\b/);
+    // N-069: يوسف لا يطلب الكحول ولا الخنزير
+    const sentences = de.split(/[.!?"]/);
+    expect(sentences.filter((x) => /\b(Yusuf|Ich|ich)\b/.test(x) && /\b(Bier|Wein|Wurst)\b/.test(x))).toEqual([]);
+    // N-021: أمثلة البطاقات بلا أسماء علم · وD108: لا نص رسمي حرفي (Die Suppe ist mir zu scharf · Das Messer ist sehr scharf · eine kleine Portion Eis)
+    const sample = (id: string) => ALL_WORDS.find((w) => w.id === id)!.sampleSentence!.de;
+    const ids = ["scharf", "salzig", "frisch", "portion", "teller", "loeffel", "gabel", "messer", "gast", "bestellung", "trinkgeld", "getraenk", "nichts", "wenig"];
+    expect(ids.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin/);
+    expect(ids.map(sample)).toEqual([
+      "Ist die Suppe scharf?", "Die Suppe ist sehr salzig.", "Das Gemüse ist frisch.", "Eine Portion Reis, bitte.", "Einen Teller Suppe, bitte!",
+      "Hier ist ein Löffel.", "Fleisch mit Messer und Gabel.", "Das Messer ist scharf!", "Der Gast bestellt einen Kaffee.", "Die Bestellung ist fertig!",
+      "Das Trinkgeld ist für Sie!", "Möchten Sie ein Getränk?", "Nein, danke, ich möchte nichts.", "Wir haben heute wenig Zeit.",
+    ]);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا nicht + اسم مادة أو جمع (صحيحة في المقابلة) · لا keine + Messer/Löffel/Teller (جمعها كمفردها)
+    // · لا kein(e)s الضمير · لا «nicht nichts» (نفي النفي صحيح) ولا «kein nichts» (das Nichts اسم) · لا «Ich möchte nicht.» (صحيحة)
+    const choiceTexts = [...u.einstieg.pretestItems.flatMap((p) => p.choices), ...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (typeof i === "string" ? [i] : Array.isArray((i as { choices?: unknown }).choices) ? ((i as { choices: string[] }).choices) : []));
+    expect(choiceTexts.filter((c) => !/[\u0600-\u06FF]/.test(c) && /\bnicht (Kaffee|Fleisch|Brot|Wasser|Fisch|Messer|Löffel|Teller|Eier|Gläser)\b|\bkeine (Messer|Löffel|Teller)\b|\bkeine?s\b|nicht nichts|kein nichts|Ich möchte nicht\.|keinen\.$/.test(c))).toEqual([]);
+    expect(choiceTexts.length).toBeGreaterThan(30);
+    // الاستدعاء من دروس سابقة (das Glas · der Kellner · viel عكس wenig) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || ["a1-u5-d1", "a1-u5-d2", "a1-u5-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["glas", "kellner", "viel"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || ["a1-u5-d1", "a1-u5-d2", "a1-u5-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 4 || ["a1-u5-d1", "a1-u5-d2", "a1-u5-d3", "a1-u5-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute"]);
     for (const w of pluralOnly) expect([w.id, w.gender, w.srsCardTypes.includes("gender")]).toEqual([w.id, "none", false]);
     // Nudeln ليست منها: المفرد die Nudel موجود (قائمة Goethe A2) فجنسها المؤنث صحيح
     expect(ALL_WORDS.find((w) => w.id === "nudeln")!.gender).toBe("die");
+  });
+
+  it("D144: معرّف الكلمة = slugify(de) (ä ← ae · ö ← oe · ü ← ue) — إلا قائمة معلنة بأسبابها · laeffel صُحّح إلى loeffel", () => {
+    const off = ALL_WORDS.filter((w) => slugify(w.de.replace(/\s*\(.*?\)\s*/g, " ").trim()) !== w.id).map((w) => w.id).sort();
+    expect(off).toEqual([
+      "achso", "das-essen", "das-leben", "die-bitte", // die-bitte · das-essen · das-leben: معرّف صريح للمتجانس بجانب bitte/essen/leben (D126) · achso: قطعة «ach so» بلا فاصل
+      "erkaltung", // N-074: رسم خاطئ (ä ← a بدل ae) — يُصحَّح مع مساره في ترقية a1-u11-d2
+      "morgen", // «der Morgen / morgen» مدخل واحد للاسم والظرف
+      "nord", "ost", "sued", "west", // N-074: مختصرة (der Norden …) — قرار التوحيد في ترقية a1-u9-d1
+      "wie-gehts", // «Wie geht's?» بلا الفاصلة العليا
+    ]);
+    expect(ALL_WORDS.find((w) => w.id === "loeffel")?.de).toBe("Löffel");
   });
 
   it("بطاقات الثقافة (Landeskunde): 12 بطاقة — كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {
