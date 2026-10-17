@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d4-wie-kommst-du-zum-flughafen",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Wie kommst du zum Flughafen?",
+    "ar": "كيف تصل إلى المطار؟ — مكالمة الدورة: يوسف يسافر يوم الاثنين إلى تونس (N-092) — بالقطار إلى المطار، وأبوه يستقبله بالسيارة؛ ولينا في سويسرا بالدراجة إلى المدرسة وبالقطار إلى جدّتها — الداتيف الثابت mit/nach/aus/zu"
+  },
+  "usedIn": [
+    "a1-u8-d4"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "fh-1",
+      "speaker": "lena",
+      "text": "Yusuf, wann fliegst du nach Tunesien?",
+      "direction": "مكالمة الدورة عبر الإنترنت — لينا من سويسرا تسأل: متى تطير إلى تونس؟ — nach Tunesien: بلد بلا أداة"
+    },
+    {
+      "id": "fh-2",
+      "speaker": "yusuf",
+      "text": "Am Montag. Der Flug ist um acht Uhr morgens — sehr früh!",
+      "direction": "يوم الاثنين، الرحلة في الثامنة صباحاً — مبكّر جداً! — der Flug · um acht Uhr morgens"
+    },
+    {
+      "id": "fh-3",
+      "speaker": "lena",
+      "text": "Und wie kommst du zum Flughafen? Fährst du mit dem Taxi?",
+      "direction": "كيف تصل إلى المطار؟ بالتاكسي؟ — zum Flughafen = zu dem · mit dem Taxi"
+    },
+    {
+      "id": "fh-4",
+      "speaker": "yusuf",
+      "text": "Nein, ein Taxi ist zu teuer. Ich fahre mit der Bahn.",
+      "direction": "التاكسي غالٍ جداً — يأخذ القطار — zu teuer (أكثر من اللازم) · mit der Bahn (die ← der)"
+    },
+    {
+      "id": "fh-5",
+      "speaker": "lena",
+      "text": "Mit der Bahn — und dein Gepäck? Du hast einen Koffer und einen Rucksack.",
+      "direction": "بالقطار؟ وأمتعتك؟ حقيبة وحقيبة ظهر — das Gepäck · einen Koffer und einen Rucksack (مفعول)"
+    },
+    {
+      "id": "fh-6",
+      "speaker": "yusuf",
+      "text": "Das Gepäck ist nicht schwer. Und die Bahn fährt zum Flughafen — nur vierzig Minuten.",
+      "direction": "الأمتعة ليست ثقيلة، والقطار يذهب إلى المطار في أربعين دقيقة — fährt zum Flughafen"
+    },
+    {
+      "id": "fh-7",
+      "speaker": "lena",
+      "text": "Gut. Und wer holt dich in Tunis ab?",
+      "direction": "ومن يستقبلك في تونس؟ — abholen فعل منفصل: holt … ab · dich"
+    },
+    {
+      "id": "fh-8",
+      "speaker": "yusuf",
+      "text": "Mein Vater holt mich ab — mit dem Auto. Er parkt am Flughafen.",
+      "direction": "أبي يستقبلني بالسيارة ويركن في المطار — holt mich ab · mit dem Auto · parkt am Flughafen"
+    },
+    {
+      "id": "fh-9",
+      "speaker": "lena",
+      "text": "Kommt dein Vater aus Tunis?",
+      "direction": "هل أبوك من تونس العاصمة؟ — aus Tunis: مدينة بلا أداة"
+    },
+    {
+      "id": "fh-10",
+      "speaker": "yusuf",
+      "text": "Ja. Und meine Mutter kommt auch aus Tunis. Meine Familie wohnt dort.",
+      "direction": "نعم، وأمي أيضاً من تونس — عائلته تسكن هناك — aus Tunis · wohnt dort"
+    },
+    {
+      "id": "fh-11",
+      "speaker": "lena",
+      "text": "Und wie fährst du in Tunis? Mit dem Rad?",
+      "direction": "وكيف تتنقّل في تونس؟ بالدراجة؟ — mit dem Rad (das Rad ← dem)"
+    },
+    {
+      "id": "fh-12",
+      "speaker": "yusuf",
+      "text": "Mit dem Rad? Nein! Ich fahre mit dem Bus oder mit dem Taxi. Taxis sind dort günstig.",
+      "direction": "بالدراجة؟ لا! بالحافلة أو بالتاكسي — التاكسيات هناك رخيصة — mit dem Bus · mit dem Taxi · die Taxis"
+    },
+    {
+      "id": "fh-13",
+      "speaker": "lena",
+      "text": "In der Schweiz fahre ich immer mit dem Rad — zur Schule und zum Supermarkt.",
+      "direction": "لينا في سويسرا تذهب دائماً بالدراجة إلى المدرسة والسوبرماركت — zur Schule (die ← zur) · zum Supermarkt (der ← zum)"
+    },
+    {
+      "id": "fh-14",
+      "speaker": "yusuf",
+      "text": "Auch heute? Es regnet in der Schweiz!",
+      "direction": "حتى اليوم؟ إنها تمطر في سويسرا! — in der Schweiz عبارة ثابتة"
+    },
+    {
+      "id": "fh-15",
+      "speaker": "lena",
+      "text": "Heute nicht. Heute fahre ich mit dem Bus zur Schule.",
+      "direction": "اليوم لا — اليوم بالحافلة إلى المدرسة — mit dem Bus zur Schule"
+    },
+    {
+      "id": "fh-16",
+      "speaker": "yusuf",
+      "text": "Und am Sonntag ist der Geburtstag. Wie kommst du zur Oma?",
+      "direction": "ويوم الأحد عيد الميلاد — كيف تصلين إلى الجدّة؟ — zur Oma: zu لشخص"
+    },
+    {
+      "id": "fh-17",
+      "speaker": "lena",
+      "text": "Mit dem Zug, nur eine Stunde. Meine Oma wohnt nicht weit.",
+      "direction": "بالقطار، ساعة واحدة فقط — جدّتها لا تسكن بعيداً — mit dem Zug · nicht weit"
+    },
+    {
+      "id": "fh-18",
+      "speaker": "yusuf",
+      "text": "Fliegst du auch gern?",
+      "direction": "هل تحبين الطيران أيضاً؟ — Fliegst du … gern?"
+    },
+    {
+      "id": "fh-19",
+      "speaker": "lena",
+      "text": "Nein, ich fliege nicht so gern. Im Zug kann ich lesen.",
+      "direction": "لا، لا تحب الطيران كثيراً — في القطار تستطيع أن تقرأ — nicht so gern · Im Zug kann ich lesen"
+    },
+    {
+      "id": "fh-20",
+      "speaker": "yusuf",
+      "text": "Mein Flug ist kurz — nur zwei Stunden. Dort kann ich auch lesen!",
+      "direction": "رحلته قصيرة: ساعتان فقط — وهناك يستطيع أن يقرأ أيضاً! — der Flug · kurz · zwei Stunden"
+    }
+  ]
+}
