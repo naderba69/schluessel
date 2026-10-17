@@ -6,11 +6,12 @@
   "day": 2,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst ein Datum nennen und einen Termin vereinbaren: Am Dienstag, den zwölften Mai — Haben Sie Zeit?",
-    "ar": "تذكر التاريخ وتطلب موعداً: يوم الثلاثاء 12 مايو — هل لديكم وقت؟"
+    "de": "Heute ist Donnerstag, der zweite April. · Der Kurs endet am siebzehnten April. · Hast du am Samstag Zeit? — Ja, am Samstag bin ich frei. · Am Freitag ist alles besetzt. · Vielen Dank für die Einladung!",
+    "ar": "تذكر اليوم والتاريخ وتتفق على موعد: أيام الأسبوع السبعة مع am (am Dienstag · am Wochenende) · التاريخ بالعدد الترتيبي: der zweite April بعد ist (الأصلي + te حتى 19، + ste من 20، والشواذ erste · dritte · siebte) وam zwölften April جواباً عن Wann? · الموعد: Hast du am Samstag Zeit? — Ja, am Samstag bin ich frei. / Nein, am Freitag ist alles besetzt. · die Einladung وجوابها Vielen Dank für die Einladung! أو die Absage — ومعها der Kalender · das Datum · enden (endet) · der Moment · Liebe/Lieber في افتتاح البطاقة."
   },
   "canDoDaily": [
-    "يذكر يوماً وتاريخاً ويعرض أو يطلب موعداً بجملتين صحيحتين"
+    "يسأل عن اليوم والتاريخ ويجيب: Ist heute Mittwoch oder Donnerstag? — Heute ist Donnerstag, der zweite April. · Welches Datum ist heute? — Der zwölfte April. · Wann endet der Kurs? — Am siebzehnten April.",
+    "يتفق على موعد ويجيب على دعوة: Hast du am Samstag Zeit? — Ja, am Samstag bin ich frei. / Nein, am Freitag ist alles besetzt. · Vielen Dank für die Einladung! · Mein Onkel kommt nicht — das ist eine Absage. — ويبدأ بطاقة: Liebe Lena, / Lieber Yusuf,"
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«يوم الثلاثاء» — أي صيغة صحيحة؟"
+          "de": "«الثاني من أبريل» — أي صيغة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
-          "am Dienstag",
-          "an Dienstag",
-          "in Dienstag"
+          "der zweite April",
+          "der zwei April",
+          "der zweite von April"
         ],
-        "answer": "am Dienstag",
+        "answer": "der zweite April",
         "revealNextSession": true
       }
     ],
@@ -49,7 +50,10 @@
       "absage",
       "frei",
       "besetzt",
-      "wochenende"
+      "wochenende",
+      "lieb",
+      "moment",
+      "enden"
     ],
     "grammarArsenalIds": [
       "ars-termin-datum"
@@ -58,76 +62,556 @@
       "story-a10-u10-s2"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "ch-ach-laut",
+      "z",
+      "vowel-long-short",
+      "r-uvular",
+      "double-consonant"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«يوم الثلاثاء عندي وقت»؟",
-            "a": "Am Dienstag habe ich Zeit."
+            "q": "___ Dienstag habe ich Zeit. (اليوم مع حرف الجر)",
+            "a": "Am",
+            "why": "أيام الأسبوع دائماً مع am (an + dem): am Dienstag — لا ~~an Dienstag~~ ولا ~~in Dienstag~~."
           },
           {
-            "q": "«الموعد يوم الأربعاء»؟",
-            "a": "Der Termin ist am Mittwoch."
+            "q": "Heute ist Donnerstag, der ___ April. (2.)",
+            "a": "zweite",
+            "why": "بعد ist: der + الأصلي zwei + te = der zweite — والشهر مباشرة بعده بلا حرف."
+          },
+          {
+            "q": "Der Kurs endet am ___ April. (17.)",
+            "a": "siebzehnten",
+            "why": "بعد am النهاية ‑en: siebzehn + te + n — الجواب عن Wann?"
+          },
+          {
+            "q": "Heute ist der ___ Mai. (1.)",
+            "a": "erste",
+            "why": "شاذ يُحفظ: eins → erste — لا ~~einste~~."
+          },
+          {
+            "q": "Heute ist der ___ März. (3.)",
+            "a": "dritte",
+            "why": "شاذ يُحفظ: drei → dritte — لا ~~dreite~~."
+          },
+          {
+            "q": "Heute ist der ___ Januar. (7.)",
+            "a": "siebte",
+            "why": "sieben → siebte (تسقط en قبل te) — ثالث الشواذ."
+          },
+          {
+            "q": "Heute ist der ___ Februar. (20.)",
+            "a": "zwanzigste",
+            "why": "من 20 فصاعداً: zwanzig + ste = der zwanzigste — ste لا te."
+          },
+          {
+            "q": "Ich fliege am ___ April zurück. (14.)",
+            "a": "vierzehnten",
+            "why": "am + vierzehn + te + n — بعد am دائماً ‑en."
+          },
+          {
+            "q": "Ich habe am ___ April Geburtstag. (18.)",
+            "a": "achtzehnten",
+            "why": "am achtzehnten: achtzehn + te + n — عيد الميلاد جواب عن Wann?"
+          },
+          {
+            "q": "Ich schreibe den ___ April in meinen Kalender. (30.)",
+            "a": "dreißigsten",
+            "why": "بعد الفعل المتعدّي den + ‑en: dreißig + ste + n (من 20 فصاعداً ste)."
+          },
+          {
+            "q": "Am Samstag und am Sonntag ist ___. (نهاية الأسبوع)",
+            "a": "Wochenende",
+            "why": "das Wochenende = السبت والأحد — am Wochenende مع am أيضاً."
+          },
+          {
+            "q": "Hast du am Samstag Zeit? — Ja, am Samstag bin ich ___. (حرّ)",
+            "a": "frei",
+            "why": "frei للشخص: ich bin frei = عندي وقت — وللمكان أيضاً: Der Tisch ist frei."
+          },
+          {
+            "q": "Haben Sie am Freitag einen Tisch? — Nein, am Freitag ist alles ___. (محجوز)",
+            "a": "besetzt",
+            "why": "besetzt للمكان والموعد: alles besetzt = لا طاولة حرّة — لا يُقال للشخص."
+          },
+          {
+            "q": "Vielen Dank für die ___! (الدعوة)",
+            "a": "Einladung",
+            "why": "die Einladung — بعد für الاسم المؤنث يبقى die."
+          },
+          {
+            "q": "Mein Onkel kommt nicht. Das ist die erste ___. (الاعتذار)",
+            "a": "Absage",
+            "why": "die Absage = الاعتذار عن الحضور — ضدّ die Einladung — وerste قبلها قطعةً."
+          },
+          {
+            "q": "Wann ___ der Kurs? — Am siebzehnten April. (enden)",
+            "a": "endet",
+            "why": "enden: الجذع end ينتهي بـd فيأخذ ‑et مع er/sie/es: endet."
+          },
+          {
+            "q": "Einen kleinen ___! (لحظة)",
+            "a": "Moment",
+            "why": "der Moment — Einen kleinen Moment! قطعة الانتظار القصير."
+          },
+          {
+            "q": "___ Lena, ich komme am Samstag! (افتتاح البطاقة لمؤنث)",
+            "a": "Liebe",
+            "why": "lieb- في افتتاح البطاقة: Liebe + مؤنث (Liebe Lena, · Liebe Oma,) — وبعد الاسم فاصلة."
+          },
+          {
+            "q": "___ Yusuf, am achtzehnten April ist mein Geburtstag. (لمذكر)",
+            "a": "Lieber",
+            "why": "Lieber + مذكر (Lieber Yusuf, · Lieber Vater,) — النهاية تتبع المخاطَب."
+          },
+          {
+            "q": "Ist heute Mittwoch oder ___? — Donnerstag. (الخميس)",
+            "a": "Donnerstag",
+            "why": "der Donnerstag = الخميس — الأيام كلها مذكرة وبحرف كبير."
+          },
+          {
+            "q": "Am ___ fahre ich mit meiner Mutter in die Stadt. (السبت)",
+            "a": "Samstag",
+            "why": "am Samstag — وبعده الفعل ثانياً والفاعل بعده (fahre ich)."
+          },
+          {
+            "q": "Das Datum steht im ___. (التقويم)",
+            "a": "Kalender",
+            "why": "der Kalender — im Kalender = في التقويم."
+          },
+          {
+            "q": "Welches ___ ist heute? — Der zweite April. (التاريخ)",
+            "a": "Datum",
+            "why": "das Datum = التاريخ — والجواب der + الترتيبي + الشهر."
+          },
+          {
+            "q": "Am Dienstag ___ ich Zeit. (haben — بعد am Dienstag يأتي الفعل)",
+            "a": "habe",
+            "why": "قوس u9-d5 يتكرر مع الأيام: Am Dienstag ← habe ← ich — لا ~~Am Dienstag ich habe~~."
+          },
+          {
+            "q": "Heute ist Donnerstag. Morgen ist ___. (غداً الجمعة)",
+            "a": "Freitag",
+            "why": "der Freitag = الجمعة — Morgen ist Freitag بلا am (اليوم هنا خبر، لا ظرف)."
+          },
+          {
+            "q": "Am ___ arbeitet mein Onkel. (الأربعاء)",
+            "a": "Mittwoch",
+            "why": "der Mittwoch = الأربعاء (وسط الأسبوع) — am Mittwoch وبعده الفعل ثانياً."
           }
         ],
         "interleavedWith": [
-          "dienstag",
-          "mittwoch"
+          "heute",
+          "morgen",
+          "zeit",
+          "kurs",
+          "geburtstag",
+          "onkel",
+          "mutter",
+          "stadt",
+          "tisch",
+          "mai",
+          "januar",
+          "februar"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«هل لديكم وقت يوم الجمعة؟»؟",
-            "a": "Haben Sie am Freitag Zeit?"
+            "audioId": "za-1",
+            "speakText": "Hallo Lena! Ist heute Mittwoch oder Donnerstag? Hier in Tunis habe ich keinen Kalender.",
+            "q": "استمع: ماذا ينقص يوسف في تونس؟",
+            "choices": [
+              "تقويم — لا يعرف أي يوم اليوم",
+              "ساعة — لا يعرف كم الساعة",
+              "هاتف — لا يستطيع الاتصال"
+            ],
+            "a": "تقويم — لا يعرف أي يوم اليوم",
+            "why": "keinen Kalender = لا تقويم عنده، فيسأل: Ist heute Mittwoch oder Donnerstag?"
           },
           {
-            "q": "«الموعد مشغول»؟",
-            "a": "Der Termin ist besetzt."
+            "audioId": "za-3",
+            "speakText": "Der zweite April schon? Und wann endet der Kurs?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "متى تنتهي الدورة",
+              "متى تبدأ الدورة",
+              "أين الدورة"
+            ],
+            "a": "متى تنتهي الدورة",
+            "why": "Wann endet der Kurs? — endet من enden = ينتهي."
+          },
+          {
+            "audioId": "za-7",
+            "speakText": "Einen kleinen Moment! Ja, am Samstag bin ich frei. Vielen Dank für die Einladung!",
+            "q": "استمع: هل يوسف حرّ يوم السبت؟",
+            "choices": [
+              "نعم — ويشكر على الدعوة",
+              "لا — هو مشغول",
+              "لا يعرف بعد"
+            ],
+            "a": "نعم — ويشكر على الدعوة",
+            "why": "am Samstag bin ich frei · Vielen Dank für die Einladung! — بعد لحظة تفكير: Einen kleinen Moment!"
+          },
+          {
+            "audioId": "za-9",
+            "speakText": "Und wo feiert ihr? Bei dir zu Hause?",
+            "q": "استمع: أين يظنّ يوسف أن الاحتفال سيكون؟",
+            "choices": [
+              "في بيت لينا",
+              "في المطعم",
+              "في المدرسة"
+            ],
+            "a": "في بيت لينا",
+            "why": "Bei dir zu Hause? = عندك في البيت؟ — سؤال عن مكان الاحتفال (wo feiert ihr)."
+          },
+          {
+            "audioId": "za-10",
+            "speakText": "Nein, im Restaurant. Ich reserviere einen Tisch für Samstag — am Freitag ist dort alles besetzt.",
+            "q": "استمع: لماذا السبت لا الجمعة؟",
+            "choices": [
+              "الجمعة كل شيء محجوز في المطعم",
+              "الجمعة لينا تعمل",
+              "الجمعة المطعم بعيد"
+            ],
+            "a": "الجمعة كل شيء محجوز في المطعم",
+            "why": "am Freitag ist dort alles besetzt — فتحجز لينا طاولة للسبت (Ich reserviere einen Tisch für Samstag)."
+          },
+          {
+            "audioId": "za-11",
+            "speakText": "Und wer kommt? Deine Oma?",
+            "q": "استمع: عن مَن يسأل يوسف؟",
+            "choices": [
+              "عن الجدة",
+              "عن العم",
+              "عن الأم"
+            ],
+            "a": "عن الجدة",
+            "why": "Deine Oma? = جدتك؟ — سؤال Und wer kommt? عن الضيوف."
+          },
+          {
+            "audioId": "za-12",
+            "speakText": "Meine Oma kommt mit dem Zug. Mein Onkel kommt nicht — am Samstag arbeitet er. Das ist die erste Absage.",
+            "q": "استمع: من لا يأتي ولماذا؟",
+            "choices": [
+              "العم — يعمل يوم السبت",
+              "الجدة — تأتي بالقطار",
+              "الأم — تشتري فستاناً"
+            ],
+            "a": "العم — يعمل يوم السبت",
+            "why": "Mein Onkel kommt nicht — am Samstag arbeitet er · Das ist die erste Absage = أول اعتذار."
+          },
+          {
+            "audioId": "za-14",
+            "speakText": "Mia ist eine Katze — sie kommt nicht ins Restaurant!",
+            "q": "استمع: لماذا لا تأتي Mia؟",
+            "choices": [
+              "هي قطة — لا تدخل المطعم",
+              "هي مشغولة يوم السبت",
+              "هي تعمل في المطعم"
+            ],
+            "a": "هي قطة — لا تدخل المطعم",
+            "why": "Mia ist eine Katze — sie kommt nicht ins Restaurant! = ميا قطة — لا تدخل المطعم."
+          },
+          {
+            "audioId": "za-15",
+            "speakText": "Und was machst du am Wochenende? Morgen ist Freitag.",
+            "q": "استمع: أي يوم غداً؟",
+            "choices": [
+              "الجمعة",
+              "السبت",
+              "الخميس"
+            ],
+            "a": "الجمعة",
+            "why": "Morgen ist Freitag. — واليوم الخميس، والسؤال عن عطلة نهاية الأسبوع (am Wochenende)."
+          },
+          {
+            "audioId": "za-16",
+            "speakText": "Am Samstag fahre ich mit meiner Mutter in die Stadt. Wir kaufen ein Kleid für den Geburtstag.",
+            "q": "استمع: ماذا تفعل لينا يوم السبت؟",
+            "choices": [
+              "تذهب مع أمها إلى المدينة لشراء فستان",
+              "تقرأ وتنام",
+              "تحجز طاولة في المطعم"
+            ],
+            "a": "تذهب مع أمها إلى المدينة لشراء فستان",
+            "why": "Am Samstag fahre ich mit meiner Mutter in die Stadt · Wir kaufen ein Kleid — للعيد."
+          },
+          {
+            "audioId": "za-18",
+            "speakText": "Am Sonntag bin ich frei — ich lese und schlafe.",
+            "q": "استمع: وماذا تفعل يوم الأحد؟",
+            "choices": [
+              "هي حرّة — تقرأ وتنام",
+              "تشتري فستاناً",
+              "تعمل مع عمّها"
+            ],
+            "a": "هي حرّة — تقرأ وتنام",
+            "why": "Am Sonntag bin ich frei — ich lese und schlafe. — frei = لا موعد."
           }
         ],
         "interleavedWith": [
-          "freitag",
-          "besetzt"
+          "kurs",
+          "onkel",
+          "oma",
+          "katze",
+          "kleid",
+          "mutter",
+          "stadt",
+          "restaurant",
+          "tisch",
+          "morgen"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«شكراً على الدعوة!»؟",
-            "a": "Danke für die Einladung!"
+            "tokens": [
+              "Zeit.",
+              "Dienstag",
+              "habe",
+              "ich",
+              "Am"
+            ],
+            "a": "Am Dienstag habe ich Zeit.",
+            "why": "Am Dienstag أولاً ← habe ثانياً ← ich بعده — القوس من u9-d5."
           },
           {
-            "q": "«في عطلة نهاية الأسبوع أنا متفرغ»؟",
-            "a": "Am Wochenende bin ich frei."
+            "tokens": [
+              "April.",
+              "zweite",
+              "der",
+              "ist",
+              "Heute"
+            ],
+            "a": "Heute ist der zweite April.",
+            "why": "Heute ← ist ← der zweite (بـ‑e بعد ist) ← April مباشرة."
+          },
+          {
+            "tokens": [
+              "April.",
+              "am",
+              "endet",
+              "Kurs",
+              "Der",
+              "siebzehnten"
+            ],
+            "a": "Der Kurs endet am siebzehnten April.",
+            "why": "الفاعل ← endet ← am siebzehnten (‑en بعد am) ← الشهر."
+          },
+          {
+            "tokens": [
+              "frei.",
+              "ich",
+              "bin",
+              "Sonntag",
+              "Am"
+            ],
+            "a": "Am Sonntag bin ich frei.",
+            "why": "Am Sonntag ← bin ← ich ← frei — جواب Hast du Zeit?"
+          },
+          {
+            "tokens": [
+              "besetzt.",
+              "alles",
+              "ist",
+              "Freitag",
+              "Am"
+            ],
+            "a": "Am Freitag ist alles besetzt.",
+            "why": "Am Freitag ← ist ← alles ← besetzt — المكان محجوز."
+          },
+          {
+            "tokens": [
+              "Einladung!",
+              "die",
+              "für",
+              "Dank",
+              "Vielen"
+            ],
+            "a": "Vielen Dank für die Einladung!",
+            "why": "Vielen Dank ← für ← die Einladung — الجواب على الدعوة."
+          },
+          {
+            "tokens": [
+              "Geburtstag.",
+              "achtzehnten",
+              "am",
+              "habe",
+              "Ich",
+              "April"
+            ],
+            "a": "Ich habe am achtzehnten April Geburtstag.",
+            "why": "Ich habe ← am achtzehnten April (‑en بعد am) ← Geburtstag في الآخر."
+          },
+          {
+            "tokens": [
+              "Kalender.",
+              "meinen",
+              "in",
+              "Datum",
+              "das",
+              "schreibe",
+              "Ich"
+            ],
+            "a": "Ich schreibe das Datum in meinen Kalender.",
+            "why": "Ich schreibe ← das Datum ← in meinen Kalender — الاتجاه بـin."
+          },
+          {
+            "tokens": [
+              "Zeit?",
+              "Moment",
+              "einen",
+              "du",
+              "Hast"
+            ],
+            "a": "Hast du einen Moment Zeit?",
+            "why": "Hast ← du ← einen Moment ← Zeit — سؤال اللحظة."
+          },
+          {
+            "tokens": [
+              "Zug.",
+              "dem",
+              "mit",
+              "kommt",
+              "Oma",
+              "Meine"
+            ],
+            "a": "Meine Oma kommt mit dem Zug.",
+            "why": "Meine Oma ← kommt ← mit dem Zug — الوسيلة بـmit dem."
           }
         ],
         "interleavedWith": [
-          "einladung",
-          "wochenende"
+          "zeit",
+          "kurs",
+          "geburtstag",
+          "oma",
+          "zug"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "za-2",
+            "speakText": "Heute ist Donnerstag, der zweite April. Und am Samstag ist Wochenende!",
+            "a": "Heute ist Donnerstag, der zweite April. Und am Samstag ist Wochenende!",
+            "why": "Donnerstag بحرف كبير · der zweite April — zweite بـ‑e بعد ist · Wochenende بحرف كبير وعلامة تعجب."
+          },
+          {
+            "audioId": "za-4",
+            "speakText": "Der Kurs endet am siebzehnten April. Das ist ein Freitag.",
+            "a": "Der Kurs endet am siebzehnten April. Das ist ein Freitag.",
+            "why": "siebzehnten بـ‑en بعد am · April وKurs وFreitag أسماء بحرف كبير · endet بـ‑et."
+          },
+          {
+            "audioId": "za-5",
+            "speakText": "Gut. Ich fliege am Sonntag zurück — am zwölften April.",
+            "a": "Gut. Ich fliege am Sonntag zurück — am zwölften April.",
+            "why": "zwölften بـö و‑en بعد am · zurück بـü في آخر الجملة · شرطة قبل am zwölften."
+          },
+          {
+            "audioId": "za-6",
+            "speakText": "Am zwölften? Super! Ich habe am achtzehnten April Geburtstag. Das ist ein Samstag. Kommst du?",
+            "a": "Am zwölften? Super! Ich habe am achtzehnten April Geburtstag. Das ist ein Samstag. Kommst du?",
+            "why": "achtzehnten كلمة واحدة بـ‑en · Geburtstag وSamstag بحرف كبير · Kommst du? بعلامة استفهام."
+          },
+          {
+            "audioId": "za-8",
+            "speakText": "Schön! Die Einladung kommt noch als Karte: Lieber Yusuf, am achtzehnten April ist mein Geburtstag.",
+            "a": "Schön! Die Einladung kommt noch als Karte: Lieber Yusuf, am achtzehnten April ist mein Geburtstag.",
+            "why": "Lieber Yusuf, بفاصلة بعد الاسم · Einladung وKarte بحرف كبير · achtzehnten بـ‑en بعد am."
+          },
+          {
+            "audioId": "za-13",
+            "speakText": "Eine Absage ist nicht viel. Und Mia?",
+            "a": "Eine Absage ist nicht viel. Und Mia?",
+            "why": "Absage بحرف كبير · nicht viel · Mia اسم علم بعلامة استفهام."
+          },
+          {
+            "audioId": "za-17",
+            "speakText": "Und am Sonntag?",
+            "a": "Und am Sonntag?",
+            "why": "Und am Sonntag? — Sonntag بحرف كبير وعلامة استفهام."
+          },
+          {
+            "audioId": "za-19",
+            "speakText": "Gut. Ich schreibe den achtzehnten April in meinen Kalender: Lena hat Geburtstag!",
+            "a": "Gut. Ich schreibe den achtzehnten April in meinen Kalender: Lena hat Geburtstag!",
+            "why": "achtzehnten بعد den · Kalender بحرف كبير · Lena hat Geburtstag — الاسم بحرف كبير وعلامة تعجب."
+          },
+          {
+            "audioId": "za-20",
+            "speakText": "Und ich schreibe: Sonntag, der zwölfte April — Yusuf kommt zurück! Bis morgen!",
+            "a": "Und ich schreibe: Sonntag, der zwölfte April — Yusuf kommt zurück! Bis morgen!",
+            "why": "Sonntag, der zwölfte April — فاصلة بعد اليوم وzwölfte بـ‑e بعد der · Bis morgen! بحرف صغير لـmorgen."
+          },
+          {
+            "audioId": "word-datum",
+            "speakText": "das Datum.",
+            "a": "das Datum.",
+            "why": "das Datum — D كبيرة وa طويلة · مذكرة بـdas."
+          },
+          {
+            "audioId": "word-kalender",
+            "speakText": "der Kalender.",
+            "a": "der Kalender.",
+            "why": "der Kalender — K كبيرة وr في الآخر."
+          },
+          {
+            "audioId": "word-lieb",
+            "speakText": "lieb.",
+            "a": "lieb.",
+            "why": "lieb — ie طويلة وb في الآخر تُنطق p (Auslautverhärtung)."
+          },
+          {
+            "audioId": "word-moment",
+            "speakText": "der Moment.",
+            "a": "der Moment.",
+            "why": "der Moment — M كبيرة والنبر على ment · t في الآخر."
+          },
+          {
+            "audioId": "word-enden",
+            "speakText": "enden.",
+            "a": "enden.",
+            "why": "enden — فعل بحرف صغير · d في الوسط."
+          }
+        ],
+        "interleavedWith": [
+          "kurs",
+          "geburtstag",
+          "karte",
+          "viel",
+          "sonntag"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Einen Termin vereinbaren: Tag + Datum + Zeit",
-        "ar": "ترتيب موعد: يوم + تاريخ + وقت"
+        "de": "Hast du am Samstag Zeit? — Einen kleinen Moment! Ja, am Samstag bin ich frei. · Nein, am Samstag ist alles besetzt. — Und am Sonntag? — Ja, am Sonntag habe ich Zeit. Das ist der zwölfte April.",
+        "ar": "تدعو زميلك إلى موعد وتتفقان على يوم وتاريخ: تسأل بـHast du am … Zeit? وتجيب بـfrei أو besetzt، وتسمّي التاريخ بالترتيبي (der zwölfte April · am zwölften April) — ثم تتبادلان ويكتب كل واحد الموعد في تقويمه"
       },
       "situation": {
-        "de": "Am Telefon: einen Termin für nächste Woche vereinbaren",
-        "ar": "بالهاتف: ترتيب موعد للأسبوع القادم"
+        "de": "Im Kurs, auf dem Handy: Hast du am Samstag Zeit? Wir essen im Restaurant. — Einen kleinen Moment! Nein, am Samstag ist alles besetzt. Und am Sonntag? — Ja, am Sonntag bin ich frei. Welches Datum ist das? — Der zwölfte April. Ich schreibe den zwölften April in meinen Kalender. — Vielen Dank für die Einladung!",
+        "ar": "في الدورة على الهاتف: زميلك يدعوك إلى مطعم يوم السبت — تعتذر (besetzt) وتقترح الأحد — تسألان عن التاريخ وتكتبانه في التقويم — وتشكر على الدعوة"
       },
       "successCriteria": [
-        "عرض موعد (am + Tag) + سؤال Haben Sie Zeit? + رد بالإيجاب أو الإلغاء (frei/besetzt/Absage)"
+        "سؤال الموعد بـam + اليوم: Hast du am Samstag Zeit? — لا بلا حرف ولا بـin",
+        "جواب بـfrei أو besetzt: Am Sonntag bin ich frei. / Am Samstag ist alles besetzt. — والفعل ثانياً بعد am + اليوم",
+        "التاريخ بالترتيبي الصحيح: Der zwölfte April. (بعد ist) وden zwölften April (بعد schreibe) — لا بالعدد الأصلي",
+        "جملة الدعوة أو الاعتذار: Vielen Dank für die Einladung! / Das ist eine Absage."
       ]
     }
   },
@@ -142,20 +626,64 @@
       {
         "items": [
           {
-            "q": "«يوم الثلاثاء»؟",
-            "a": "am Dienstag"
+            "q": "«يوم الأربعاء عندي وقت» — أي جملة صحيحة؟",
+            "choices": [
+              "Am Mittwoch habe ich Zeit.",
+              "Mittwoch habe ich Zeit.",
+              "In Mittwoch habe ich Zeit."
+            ],
+            "a": "Am Mittwoch habe ich Zeit.",
+            "why": "اليوم مع am دائماً (لا بلا حرف ولا in) — وبعده habe ich."
           },
           {
-            "q": "«التاريخ»؟",
-            "a": "das Datum"
+            "q": "«اليوم الثالث من يونيو» — أي جملة صحيحة؟",
+            "choices": [
+              "Heute ist der dritte Juni.",
+              "Heute ist der drei Juni.",
+              "Heute ist der dritte von Juni."
+            ],
+            "a": "Heute ist der dritte Juni.",
+            "why": "الترتيبي الشاذ dritte (لا الأصلي drei) — والشهر مباشرة بلا von."
           },
           {
-            "q": "«هل لديكم وقت يوم الجمعة؟»؟",
-            "a": "Haben Sie am Freitag Zeit?"
+            "q": "«متى تعود؟ — في الثاني عشر من أبريل» — الجواب الصحيح؟",
+            "choices": [
+              "Am zwölften April.",
+              "Am zwölfte April.",
+              "Am zwölf April."
+            ],
+            "a": "Am zwölften April.",
+            "why": "بعد am النهاية ‑en: zwölften — لا ‑e ولا الأصلي."
           },
           {
-            "q": "«متفرغ» و«مشغول»؟",
-            "a": "frei / besetzt"
+            "q": "«يوم الاثنين كل شيء محجوز» — أي جملة صحيحة؟",
+            "choices": [
+              "Am Montag ist alles besetzt.",
+              "Montag ist alles besetzt.",
+              "Am Montag alles ist besetzt."
+            ],
+            "a": "Am Montag ist alles besetzt.",
+            "why": "am Montag ← ist ثانياً ← alles — besetzt للمكان."
+          },
+          {
+            "q": "البطاقة إلى الجدة تبدأ بـ…",
+            "choices": [
+              "Liebe Oma,",
+              "Lieber Oma,",
+              "Lieb Oma,"
+            ],
+            "a": "Liebe Oma,",
+            "why": "Liebe + مؤنث (Oma) — Lieber للمذكر — والفاصلة بعد الاسم."
+          },
+          {
+            "q": "«الدورة تنتهي يوم الجمعة» — أي جملة صحيحة؟",
+            "choices": [
+              "Der Kurs endet am Freitag.",
+              "Der Kurs enden am Freitag.",
+              "Der Kurs endt am Freitag."
+            ],
+            "a": "Der Kurs endet am Freitag.",
+            "why": "enden مع er/sie/es: endet (‑et بعد d) — لا المصدر ولا ‑t وحدها."
           }
         ],
         "passingScore": 0.75
@@ -163,20 +691,64 @@
       {
         "items": [
           {
-            "q": "«الأربعاء» و«الخميس»؟",
-            "a": "der Mittwoch / der Donnerstag"
+            "q": "«في عطلة نهاية الأسبوع أنا حرّ» — أي جملة صحيحة؟",
+            "choices": [
+              "Am Wochenende bin ich frei.",
+              "Im Wochenende bin ich frei.",
+              "Am Wochenende ich bin frei."
+            ],
+            "a": "Am Wochenende bin ich frei.",
+            "why": "am Wochenende (لا im) — وبعده bin ich."
           },
           {
-            "q": "«تقويم»؟",
-            "a": "der Kalender"
+            "q": "«اليوم السابع من مايو» — أي جملة صحيحة؟",
+            "choices": [
+              "Heute ist der siebte Mai.",
+              "Heute ist der siebten Mai.",
+              "Heute ist der sieben Mai."
+            ],
+            "a": "Heute ist der siebte Mai.",
+            "why": "sieben → siebte (تسقط en) — وبعد ist النهاية ‑e."
           },
           {
-            "q": "«شكراً على الدعوة!»؟",
-            "a": "Danke für die Einladung!"
+            "q": "«عيد ميلادي في العشرين من مارس» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe am zwanzigsten März Geburtstag.",
+              "Ich habe am zwanzigste März Geburtstag.",
+              "Ich habe am zwanzigten März Geburtstag."
+            ],
+            "a": "Ich habe am zwanzigsten März Geburtstag.",
+            "why": "من 20: zwanzig + ste — وبعد am تُضاف n: zwanzigsten."
           },
           {
-            "q": "«عطلة نهاية الأسبوع»؟",
-            "a": "das Wochenende"
+            "q": "«هل عندكم طاولة يوم الخميس؟» — أي جملة صحيحة؟",
+            "choices": [
+              "Haben Sie am Donnerstag einen Tisch?",
+              "Haben Sie an Donnerstag einen Tisch?",
+              "Haben Sie in Donnerstag einen Tisch?"
+            ],
+            "a": "Haben Sie am Donnerstag einen Tisch?",
+            "why": "am Donnerstag — an وحدها أو in خطأ."
+          },
+          {
+            "q": "«هذا اعتذار» (العم لا يأتي) — أي جملة صحيحة؟",
+            "choices": [
+              "Das ist eine Absage.",
+              "Das ist eine Einladung.",
+              "Das ist ein Absage."
+            ],
+            "a": "Das ist eine Absage.",
+            "why": "die Absage مؤنثة ← eine — وEinladung عكس المعنى."
+          },
+          {
+            "q": "«هل عندك لحظة؟» — أي جملة صحيحة؟",
+            "choices": [
+              "Hast du einen Moment?",
+              "Hast du ein Moment?",
+              "Hast du eine Moment?"
+            ],
+            "a": "Hast du einen Moment?",
+            "why": "der Moment مذكر ← بعد haben: einen Moment."
           }
         ],
         "passingScore": 0.75
@@ -184,20 +756,64 @@
       {
         "items": [
           {
-            "q": "«الموعد يوم الأربعاء»؟",
-            "a": "Der Termin ist am Mittwoch."
+            "q": "«غداً السبت» — أي جملة صحيحة؟",
+            "choices": [
+              "Morgen ist Samstag.",
+              "Morgen ist am Samstag.",
+              "Morgen ist der Samstag."
+            ],
+            "a": "Morgen ist Samstag.",
+            "why": "اليوم خبراً بعد ist بلا am وبلا der: Morgen ist Samstag."
           },
           {
-            "q": "«السبت»؟",
-            "a": "der Samstag"
+            "q": "«اليوم الأول من أبريل» — أي جملة صحيحة؟",
+            "choices": [
+              "Heute ist der erste April.",
+              "Heute ist der ersten April.",
+              "Heute ist der eins April."
+            ],
+            "a": "Heute ist der erste April.",
+            "why": "eins → erste (شاذ) — وبعد ist النهاية ‑e لا ‑en، ولا الأصلي eins."
           },
           {
-            "q": "«إلغاء»؟",
-            "a": "die Absage"
+            "q": "«أكتب الثاني عشر من أبريل في تقويمي» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich schreibe den zwölften April in meinen Kalender.",
+              "Ich schreibe den zwölfte April in meinen Kalender.",
+              "Ich schreibe der zwölfte April in meinen Kalender."
+            ],
+            "a": "Ich schreibe den zwölften April in meinen Kalender.",
+            "why": "بعد الفعل المتعدّي den + ‑en: den zwölften — لا der zwölfte."
           },
           {
-            "q": "«يوم الجمعة أنا حر»؟",
-            "a": "Am Freitag bin ich frei."
+            "q": "«يوم السبت تعمل جدتي» — أي جملة صحيحة؟",
+            "choices": [
+              "Am Samstag arbeitet meine Oma.",
+              "Am Samstag meine Oma arbeitet.",
+              "Samstag arbeitet meine Oma."
+            ],
+            "a": "Am Samstag arbeitet meine Oma.",
+            "why": "am Samstag ← arbeitet ثانياً ← meine Oma — القوس يتكرر."
+          },
+          {
+            "q": "«هل عندك وقت يوم الأحد؟» — أي جملة صحيحة؟",
+            "choices": [
+              "Hast du am Sonntag Zeit?",
+              "Hast du in Sonntag Zeit?",
+              "Hast du an Sonntag Zeit?"
+            ],
+            "a": "Hast du am Sonntag Zeit?",
+            "why": "am Sonntag — السؤال الأساسي للموعد: Hast du am … Zeit?"
+          },
+          {
+            "q": "«الموعد في الحادي والعشرين من مايو» — أي جملة صحيحة؟",
+            "choices": [
+              "Der Termin ist am einundzwanzigsten Mai.",
+              "Der Termin ist am einundzwanzigste Mai.",
+              "Der Termin ist am einundzwanzig Mai."
+            ],
+            "a": "Der Termin ist am einundzwanzigsten Mai.",
+            "why": "einundzwanzig + ste (من 20) + n بعد am: einundzwanzigsten."
           }
         ],
         "passingScore": 0.75
@@ -206,53 +822,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Am Dienstag, den zwölften Mai: Haben Sie Zeit? — Der Termin ist frei oder besetzt, und am Wochenende bin ich frei.",
-      "ar": "يوم الثلاثاء 12 مايو: هل لديكم وقت؟ — الموعد متفرغ أو مشغول، وفي عطلة نهاية الأسبوع أنا حر."
+      "de": "Heute ist Donnerstag, der zweite April. · Am Dienstag habe ich Zeit. · Der Kurs endet am siebzehnten April. · Hast du am Samstag Zeit? — Ja, am Samstag bin ich frei. · Am Freitag ist alles besetzt. · Vielen Dank für die Einladung! · Liebe Lena, · Lieber Yusuf,",
+      "ar": "اليوم مع am دائماً (am Dienstag · am Wochenende) وبعده الفعل ثانياً · التاريخ: der + الترتيبي + الشهر — zweite (+te حتى 19) · zwanzigste (+ste من 20) · الشواذ erste · dritte · siebte — وبعد am أو den النهاية ‑en (am zwölften · den achtzehnten) · الموعد: frei للشخص والمكان، besetzt للمكان والموعد · die Einladung ← Vielen Dank! أو die Absage · enden (endet) · der Moment · Liebe + مؤنث / Lieber + مذكر"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~an Dienstag~~ / ~~in Dienstag~~ / ~~an dem Dienstag~~ (دائماً)",
-          "ar": "am = an + dem — أيام الأسبوع دائماً am (Dativ)"
+          "de": "~~an Dienstag~~ · ~~in Dienstag~~ · ~~Dienstag habe ich Zeit.~~",
+          "ar": "أيام الأسبوع دائماً مع am — لا بلا حرف ولا بحرف آخر"
         },
-        "whyArabicSpeakerFails": "«يوم الثلاثاء» بلا حرف جر عند العربي؛ الألماني يندمج: **am** Dienstag (an+dem) — لا يُقال an Dienstag ولا in Dienstag إطلاقاً (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«يوم الثلاثاء عندي وقت» في العربية بلا حرف جر، فيسقط المتعلم الحرف (~~Dienstag habe ich Zeit.~~) أو يترجم «في» بـin (~~in Dienstag~~). والألمانية تلصق اليوم بـam دائماً (an + dem): Am Dienstag habe ich Zeit. · am Wochenende — وبعد am + اليوم في الأول يأتي الفعل ثانياً — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "am Dienstag · am Montag · am Wochenende",
-          "ar": "يوم الثلاثاء · يوم الاثنين · في العطلة"
+          "de": "am Dienstag · am Wochenende · Am Dienstag habe ich Zeit.",
+          "ar": "يوم الثلاثاء · في عطلة نهاية الأسبوع · يوم الثلاثاء عندي وقت"
         },
         "exercise": {
-          "q": "أكمل: ___ Freitag habe ich Zeit.",
+          "q": "أكمل: ___ Freitag bin ich frei.",
           "a": "Am"
         }
       },
       {
         "commonError": {
-          "de": "~~zwölf Mai~~ / ~~der Mai zwölf~~",
-          "ar": "التاريخ: der + الترتيب + اسم الشهر (der zwölfte Mai)"
+          "de": "~~der zwei April~~ · ~~der zweite von April~~",
+          "ar": "التاريخ: der + الترتيبي بنهايته + الشهر مباشرة"
         },
-        "whyArabicSpeakerFails": "«12 مايو» بالمفرد وبالعكس؛ الألماني يرتّب: **der zwölfte Mai** (المقال + ordinal + الشهر) — والتاء في «der zwölfte» ضرورية (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«الثاني من أبريل» بحرف «من» وقد يُقرأ الرقم أصلياً («2 أبريل»)، فيقول المتعلم ~~der zwei April~~ أو ~~der zweite von April~~. والألمانية: الترتيبي يُبنى من الأصلي (zwei → zweite · zwölf → zwölfte · zwanzig → zwanzigste · والشواذ erste · dritte · siebte) ثم الشهر مباشرة بلا von: der zweite April — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "der zwölfte Mai",
-          "ar": "الثاني عشر من مايو"
+          "de": "der zweite April · der zwölfte April · der zwanzigste April",
+          "ar": "الثاني من أبريل · الثاني عشر من أبريل · العشرون من أبريل"
         },
         "exercise": {
-          "q": "أعرب: 3 يونيو =",
-          "a": "der dritte Juni"
+          "q": "«الثالث من مارس» (بعد Heute ist) =",
+          "a": "der dritte März"
         }
       },
       {
         "commonError": {
-          "de": "~~Am Montag ich habe Zeit~~",
-          "ar": "القلنسوة تتكرر: بعد am Montag يقلب الترتيب (habe ich)"
+          "de": "~~am zwölfte April~~ · ~~den achtzehnte April~~",
+          "ar": "بعد am وden النهاية ‑en لا ‑e"
         },
-        "whyArabicSpeakerFails": "مصيدة u9-d5 تتكرر مع المواعيد: كل مقدمة زمنية (am Montag · morgen · um 8) تدفع الفعل للموضع الثاني والفاعل يعود بعده — تثبيت القلنسوة بالسياق الجديد (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«الثاني عشر» لا يتغيّر في العربية مهما كان موضعه، فيثبّت المتعلم النهاية الأولى التي تعلّمها (‑e) في كل موضع: ~~am zwölfte April~~. والألمانية تبدّلها بالسؤال: Welches Datum ist heute? — der zwölfte April (‑e بعد ist) · Wann? — am zwölften April (‑en بعد am) · وبعد الفعل المتعدّي den achtzehnten April (‑en بعد den) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Am Montag habe ich Zeit.",
-          "ar": "يوم الاثنين عندي وقت."
+          "de": "am zwölften April · den achtzehnten April · Heute ist der zwölfte April.",
+          "ar": "في الثاني عشر من أبريل · الثامن عشر من أبريل (مفعولاً) · اليوم الثاني عشر من أبريل"
         },
         "exercise": {
-          "q": "رتّب: am Freitag · bin · ich · frei",
-          "a": "Am Freitag bin ich frei."
+          "q": "أكمل: Ich fliege am ___ April zurück. (12.)",
+          "a": "zwölften"
         }
       }
     ],
@@ -268,17 +884,28 @@
       "absage",
       "frei",
       "besetzt",
-      "wochenende"
+      "wochenende",
+      "lieb",
+      "moment",
+      "enden"
     ]
   },
   "gReferences": {
     "duden": [
-      "https://www.duden.de/rechtschreibung/Dienstag",
-      "https://www.duden.de/rechtschreibung/Termin",
+      "https://www.duden.de/rechtschreibung/Datum",
+      "https://www.duden.de/rechtschreibung/Kalender",
+      "https://www.duden.de/rechtschreibung/Einladung",
+      "https://www.duden.de/rechtschreibung/Absage",
+      "https://www.duden.de/rechtschreibung/Moment_Augenblick_Zeitpunkt",
+      "https://www.duden.de/rechtschreibung/enden",
+      "https://www.duden.de/rechtschreibung/lieb",
       "https://www.duden.de/rechtschreibung/Wochenende"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/Dienstag"
+      "https://de.wiktionary.org/wiki/zweite",
+      "https://de.wiktionary.org/wiki/am",
+      "https://de.wiktionary.org/wiki/besetzt",
+      "https://de.wiktionary.org/wiki/frei"
     ],
     "goethe": []
   },
@@ -297,11 +924,29 @@
     "word-absage",
     "word-frei",
     "word-besetzt",
-    "word-wochenende"
+    "word-wochenende",
+    "word-lieb",
+    "word-moment",
+    "word-enden"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Einen Termin vereinbaren",
-    "goetheWordListOverlap": []
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Datum und Termine · Ordinalzahlen",
+    "goetheWordListOverlap": [
+      "kalender",
+      "datum",
+      "dienstag",
+      "mittwoch",
+      "donnerstag",
+      "freitag",
+      "samstag",
+      "einladung",
+      "frei",
+      "besetzt",
+      "wochenende",
+      "lieb",
+      "moment",
+      "enden"
+    ]
   }
 }

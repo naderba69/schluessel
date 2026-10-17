@@ -13,7 +13,7 @@ import {
   itemTexts, taughtUpTo, wordAppears, type UpgradeContext,
 } from "../tools/lib/lesson-upgrade.js";
 import {
-  CLOSED, COMPOUND_NUMBER, DA_COMPOUND, DA_COMPOUND_ANCHOR, GRAPHEMES, HUNDREDS_NUMBER, compoundNumberKnown, contentTokens, daCompoundKnown, deumlaut, knownForms, knownStems, numberWordKnown,
+  CLOSED, COMPOUND_NUMBER, DA_COMPOUND, DA_COMPOUND_ANCHOR, GRAPHEMES, HUNDREDS_NUMBER, ORDINAL_ANCHOR, ORDINAL_NUMBER, compoundNumberKnown, contentTokens, daCompoundKnown, deumlaut, knownForms, knownStems, numberWordKnown, ordinalKnown,
 } from "../tools/lib/vocab-forms.js";
 
 const CONTENT = join(__dirname, "..", "content");
@@ -123,7 +123,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u10-d2")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D166 صارت الوحدات 1–9 (d1..d5) وu10-d1 مُرقّاة
+const legacy = realLessons.find((l) => l.id === "a1-u10-d3")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D167 صارت الوحدات 1–9 (d1..d5) وu10-d1..d2 مُرقّاة
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -274,6 +274,42 @@ describe("D132 — الأعداد من 100 إلى 1000 (قانون الجبهة)
   });
 });
 
+describe("D167 — العدد الترتيبي بالقاعدة (قانون الجبهة): الأصلي + ‑t/‑st + نهاية الصفة من درس das Datum", () => {
+  const none = new Set<string>();
+  const at = (id: string) => knownStems(taughtUpTo(realLessons.find((l) => l.id === id)!, realLessons, words));
+  const FORMS = ["erste", "zweite", "dritte", "siebte", "achte", "zwölfte", "dreizehnte", "neunzehnte", "zwanzigste", "einunddreißigste", "hundertste", "ersten", "zwölften", "achtzehnten", "dritter", "zweites", "siebtem"];
+  it("معروفةٌ من الدرس الذي يُدرِّس das Datum (a1-u10-d2) — لا قبله ولو كانت الأعداد الأصلية كلها مدروسة", () => {
+    const u10d2 = at("a1-u10-d2");
+    expect(u10d2.has(ORDINAL_ANCHOR)).toBe(true);
+    expect(frontViolations([FORMS.join(" · ")], u10d2, none)).toEqual([]);
+    expect(ordinalKnown("zwölften", u10d2)).toBe(true);
+    const u10d1 = at("a1-u10-d1");
+    expect(u10d1.has("dreißig")).toBe(true);
+    // achte وحدها تمرّ قبله من جذع كلمة مدروسة (تقدير الجذوع المعلن — لا من الترتيبي)
+    expect(frontViolations([FORMS.join(" · ")], u10d1, none)).toEqual(FORMS.filter((f) => f !== "achte").sort());
+  });
+  it("العشرات والمئات داخل الترتيبي تتبع قاعدتها: zwanzigste بلا درس العشرات لا · fünfzigste تحتاج fünfzig · hundertste تحتاج tausend", () => {
+    const base = new Set([ORDINAL_ANCHOR]);
+    expect(ordinalKnown("zwölfte", base)).toBe(true);
+    expect(ordinalKnown("zwanzigste", base)).toBe(false);
+    expect(ordinalKnown("zwanzigste", new Set([ORDINAL_ANCHOR, "zwanzig"]))).toBe(true);
+    expect(ordinalKnown("fünfundzwanzigste", new Set([ORDINAL_ANCHOR, "zwanzig"]))).toBe(true);
+    expect(ordinalKnown("hundertste", new Set([ORDINAL_ANCHOR, "zwanzig"]))).toBe(false);
+    expect(ordinalKnown("hundertste", new Set([ORDINAL_ANCHOR, "tausend"]))).toBe(true);
+  });
+  it("لا باب خلفياً: الأصلي بلا ‑t (zwölfe) · ‑t بلا نهاية (zwölft) · الشواذ بصيغتها الخاطئة (dreite · siebente · einste) · ‑te بعد العشرات (zwanzigte) · كلمات تشبهها (achtung · erstens)", () => {
+    const u10d2 = at("a1-u10-d2");
+    const probe = ["zwölfe", "zwölft", "dreite", "siebente", "einste", "zwanzigte", "zweitens", "ersteklasse", "achtundste", "zehnste"];
+    expect(probe.filter((p) => ORDINAL_NUMBER.test(p))).toEqual([]);
+    expect(frontViolations([probe.join(" · ")], u10d2, none).length).toBeGreaterThan(0);
+  });
+  it("الصيغ بالقاعدة لا بمدخل: لا كلمة ترتيبية في ملفات الكلمات — وzuerst (u9-d3) ليست ترتيبياً", () => {
+    const forms = new Set(words.flatMap((w) => knownForms(w)));
+    expect(FORMS.filter((f) => forms.has(f))).toEqual([]);
+    expect(ORDINAL_NUMBER.test("zuerst")).toBe(false);
+  });
+});
+
 describe("D150 — ظرف المكان المركّب da(r) + حرف (قانون الجبهة)", () => {
   const none = new Set<string>();
   const at = (id: string) => knownStems(taughtUpTo(realLessons.find((l) => l.id === id)!, realLessons, words));
@@ -379,7 +415,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u10-d2", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u10-d3", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -565,20 +601,22 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("الدرس التالي غير المُرقّى (a1-u10-d2 بعد D166): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u10-d3 بعد D167): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
-    // بعد D166 صار u10-d1 مُرقّى؛ الفجوات الفعلية لـu10-d2 (مقيسة قبل النقل): لا ملف ars-termin-datum · مثال datum بكلمة غير مدروسة (wichtig)
-    // · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · الواجهة في التدريب/المصائد تخرقها dritte/zwölfte (الأعداد الترتيبية) · Quiz 3×4 · كل الكلمات مُتدرَّبة — القياس لا التخمين
-    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-sample"]);
-    expect(r.rule[0]?.message).toMatch(/ars-termin-datum/);
-    expect(r.rule[1]?.message).toMatch(/datum .*wichtig/);
+    // بعد D167 صار u10-d2 مُرقّى؛ الفجوات الفعلية لـu10-d3 (مقيسة قبل النقل): لا ملف ars-perfekt-haben · مثالا gestern/fragen بكلمتين غير مدروستين (pizza · arzt)
+    // · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · الواجهة في التدريب/المصائد تخرقها arzt/pizza/gehabt وخطأ إملائي «gegeessen» (N-108) · Quiz 3×4 + واجهة · holen/sagen/fragen بلا تدريب — القياس لا التخمين
+    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-sample", "e-upgrade-sample"]);
+    expect(r.rule[0]?.message).toMatch(/ars-perfekt-haben/);
+    expect(r.rule[1]?.message).toMatch(/gestern .*pizza/);
+    expect(r.rule[2]?.message).toMatch(/fragen .*arzt/);
     expect(r.practice.map((i) => i.code).sort()).toEqual([
       ...Array(6).fill("e-upgrade-item"), "e-upgrade-front", "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
     ].sort());
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/dritte، zwölfte/);
-    expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size"]);
-    expect(r.coverage).toEqual([]);
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/arzt، gegeessen، gehabt، pizza/);
+    expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-front"]);
+    expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);
+    expect(r.coverage[0]?.message).toMatch(/holen، sagen، fragen/);
     expect(r.quizMin).toBe(4);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
@@ -1491,6 +1529,110 @@ describe("D115 — أدوات القياس", () => {
     expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
     // المصائد الثلاث (es لا يسقط · الصفة تحتاج ist · لا فعلان معاً) — كل واحدة بـ10‑ي
     expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de)).toEqual(["~~Heute regnet.~~ · ~~Regnet heute.~~", "~~Es kalt.~~ · ~~Heute kalt.~~", "~~Es ist regnet.~~ · ~~Es ist regnen.~~"]);
+    for (const c of l.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+  });
+  it("a1-u10-d2 مُرقّى (D167): صفر نقص — 61 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-termin-datum (جديدة) · نواة lieb-/der Moment/enden · مثالا datum/einladung صُحّحا · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u10-d2")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u10-d2")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([61, 4, 6, 15]);
+    // الكلمات الخمس عشرة كلها جديدة (لا تكرار من الوحدات 1–9 ولا من u10-d1) — والنواة الثلاث (D113: lieb- · der Moment · enden) في آخر القائمة
+    const earlier = new Set(realLessons.filter((x) => x.unit <= 9 || (x.unit === 10 && x.day <= 1)).flatMap((x) => x.praesentation.wordIds));
+    expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(l.praesentation.wordIds).toEqual(["kalender", "datum", "dienstag", "mittwoch", "donnerstag", "freitag", "samstag", "einladung", "absage", "frei", "besetzt", "wochenende", "lieb", "moment", "enden"]);
+    // قاعدة اليوم جديدة: ars-termin-datum (تشاركها u10-d6)
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-termin-datum"]);
+    const td = rules.get("ars-termin-datum")!;
+    expect(td.usedInLessons).toEqual(["a1-u10-d2", "a1-u10-d6"]);
+    expect(td.payload.ruleDe).toBe("Montag · Dienstag · Mittwoch · Donnerstag · Freitag · Samstag · Sonntag — am Dienstag · am Wochenende · Am Dienstag habe ich Zeit. — Welches Datum ist heute? — Heute ist der zweite April. · Heute ist der erste Mai. · Heute ist der dritte Juni. · Heute ist der siebte Januar. · Heute ist der zwölfte März. · Heute ist der zwanzigste Februar. — Wann? — Am zwölften April. · Am siebzehnten April endet der Kurs. · Ich habe am achtzehnten April Geburtstag. · Ich schreibe den achtzehnten April in meinen Kalender. — Hast du am Samstag Zeit? — Ja, am Samstag bin ich frei. · Nein, am Freitag ist alles besetzt. — Einen kleinen Moment! · Vielen Dank für die Einladung! · Das ist die erste Absage. — Liebe Lena, · Lieber Yusuf,");
+    // التاريخ والموعد بأربع خطوات: الأيام مع am · الترتيبي (‑te حتى 19 · ‑ste من 20 · الشواذ) · النهاية حسب السؤال (der ‑e / am ‑en / den ‑en) · الموعد frei/besetzt + Einladung/Absage + lieb-/Moment/enden
+    for (const x of ["التاريخ والموعد بأربع خطوات", "am Montag · am Dienstag · am Mittwoch · am Donnerstag · am Freitag · am Samstag · am Sonntag · am Wochenende", "Am Dienstag habe ich Zeit. (قوس u9-d5)", "من 1 إلى 19 بـ‑te", "من 20 فصاعداً بـ‑ste", "eins → erste · drei → dritte · sieben → siebte", "der 2. April = der zweite April", "Heute ist der zweite April. (der + ‑e بعد ist)", "am zwölften April (am + ‑en)", "den achtzehnten April in meinen Kalender. (den + ‑en)", "~~der zweite von April~~", "frei للشخص والمكان", "besetzt للمكان والموعد", "die Einladung والجواب: Vielen Dank für die Einladung! أو die Absage", "Der Kurs endet am siebzehnten April. (endet بـ‑et)", "Einen kleinen Moment!", "Liebe + مؤنث (Liebe Lena, · Liebe Oma,) وLieber + مذكر (Lieber Yusuf, · Lieber Vater,)"])
+      expect(td.payload.ruleAr).toContain(x);
+    for (const x of ["~~Dienstag habe ich Zeit.~~", "~~In Dienstag habe ich Zeit.~~", "~~der zweite von April~~", "~~der zwei April~~", "~~am zwölfte April~~", "~~den achtzehnte April~~", "خريطة التداخل 10‑ي"]) expect(td.payload.contrastAr).toContain(x);
+    expect(td.payload.limitsAr).toHaveLength(4);
+    expect(td.payload.limitsAr.join(" ")).toMatch(/Juli إلى Dezember/);
+    expect(td.payload.limitsAr.join(" ")).toMatch(/Perfekt u10-d3/);
+    expect(td.payload.beads).toEqual(["Am", "Samstag", "bin", "ich", "frei."]);
+    expect(td.payload.properNouns).toEqual(["Lena", "Yusuf"]);
+    // الأعداد الترتيبية في نصوص الدرس كلها على القاعدة (D167: الجذع datum مرساة) — ولا شهر غير مدروس (Juli–Dezember) ولا Perfekt ولا «Lenas» (إضافة ملكية غير مدروسة — أُعيدت صياغة za-19)
+    const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.correct.de, c.exercise.a]), g: l.ziel.de, t: [l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de] });
+    expect(shown).not.toMatch(/\b(Juli|August|September|Oktober|November|Dezember|Lenas|gehabt|hatte|war|wichtig|Welcher Tag ist heute)\b/);
+    const taughtAll = knownStems(taughtUpTo(l, realLessons, words));
+    for (const o of ["zweite", "siebzehnten", "erste", "dritte", "siebte", "zwanzigste", "vierzehnten", "achtzehnten", "dreißigsten", "zwölfte", "zwölften", "einundzwanzigsten"]) expect(ordinalKnown(o, taughtAll), o).toBe(true);
+    expect(e.properNouns).toEqual(["Yusuf", "Lena", "Tunis", "Mia"]);
+    expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
+    // مثالا كلمتين صُحّحا (datum كان بـwichtig · einladung كان باسم علم/صياغة قديمة) — بكلمات الدرس نفسه · والنواة الثلاث بأمثلة نظيفة
+    const w = (id: string) => words.find((x) => x.id === id)!;
+    const sample = (id: string) => w(id).sampleSentence!.de;
+    expect([sample("datum"), sample("einladung"), sample("lieb"), sample("moment"), sample("enden")]).toEqual(["Das Datum steht im Kalender.", "Die Einladung ist für Samstag.", "Liebe Oma, ich komme am Sonntag!", "Hast du einen Moment Zeit?", "Der Kurs endet um zwölf."]);
+    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|wichtig/);
+    for (const id of ["datum", "einladung", "lieb", "moment", "enden"]) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u10-d2");
+    for (const id of ["lieb", "moment", "enden"]) expect(w(id).goetheList).toEqual(["A1", "A2"]);
+    expect(w("absage").goetheList).toEqual([]); // ليست في قائمة SD1 — تبقى [] (D110: لا تُكتب يدوياً)
+    // الحوار (za-1..20) مكالمة فيديو في اليوم الرابع بتونس (N-037/N-100): الخميس 2 أبريل · الدورة تنتهي 17 · يوسف يعود 12 · عيد لينا 18 (سبت) في المطعم — لا لقاء في مكان واحد
+    const script = JSON.parse(readFileSync(join(CONTENT, "audio-scripts/a1-u10-d2-der-zweite-april.json"), "utf8")) as { lines: { id: string; speaker: string; text: string }[] };
+    expect(script.lines).toHaveLength(20);
+    expect(script.lines.find((x) => x.id === "za-2")?.text).toBe("Heute ist Donnerstag, der zweite April. Und am Samstag ist Wochenende!");
+    expect(script.lines.find((x) => x.id === "za-19")?.text).toBe("Gut. Ich schreibe den achtzehnten April in meinen Kalender: Lena hat Geburtstag!");
+    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\bwir (sind|gehen|fahren) (hier|zusammen)\b|hole dich|bringe dich|\bdann\b|\bweil\b|\bwarum\b|\bleider\b|\bsagt\b|\bwar\b|\bLenas\b|Welcher Tag ist heute|Einen Moment, bitte|Danke für die Einladung!/i);
+    // N-020 لهذا الدرس: الاستدعاء من دروس سابقة (Termin · reservieren · Montag — u3-d4/u5-d5/u3-d4) كما كان
+    expect(l.warmup.cardIds).toEqual(["termin", "reservieren", "montag"]);
+    expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+    // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102)
+    const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
+    for (const st of l.uebung.stations) {
+      expect(st.interleavedWith.length).toBeGreaterThan(0);
+      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
+      for (const ref of st.interleavedWith) {
+        expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
+        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
+        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+      }
+    }
+    // الحوار الجديد (za-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة التسعة (≤132) مع خمسة مقاطع كلمات (النواة الثلاث + datum + kalender)، والأسرع الأحد عشر كلها استماعاً
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("za-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 20 }, (_, i) => `za-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-datum", "word-enden", "word-kalender", "word-lieb", "word-moment"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; textDe: string; voiceParams: { speedWpm: number } }[] };
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    const fast = Array.from({ length: 20 }, (_, i) => `za-${i + 1}`).filter((id) => wpm.get(id)! > 132);
+    expect(fast).toHaveLength(11);
+    for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
+    const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
+    for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
+    // معجم النطق: لا مدخل جديد — April (8 أسطر) · Kurs (za-3 · za-4) · Onkel (za-12) مدخلات قائمة سُجّلت أسطرها الجديدة (N-099)
+    const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
+    expect(lex.entries).toHaveLength(72);
+    const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("za-"));
+    expect(regen("April")).toEqual(["za-2", "za-3", "za-4", "za-5", "za-6", "za-8", "za-19", "za-20"]);
+    expect(regen("Kurs")).toEqual(["za-3", "za-4"]);
+    expect(regen("Onkel")).toEqual(["za-12"]);
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set([...l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))), ...l.zusammenfassung.warningCards.flatMap((c) => [c.correct.de, String(c.exercise.a)])]);
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    const norm = (x: string) => x.toLowerCase().replace(/[^\p{L}\s]/gu, " ").replace(/\s+/g, " ").trim();
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(norm(a))))).toEqual([]);
+    expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
+    // المصائد الثلاث (am مع اليوم · الترتيبي + الشهر مباشرة · ‑en بعد am/den) — كل واحدة بـ10‑ي
+    expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de)).toEqual(["~~an Dienstag~~ · ~~in Dienstag~~ · ~~Dienstag habe ich Zeit.~~", "~~der zwei April~~ · ~~der zweite von April~~", "~~am zwölfte April~~ · ~~den achtzehnte April~~"]);
     for (const c of l.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
     const taught = knownStems(taughtUpTo(l, realLessons, words));

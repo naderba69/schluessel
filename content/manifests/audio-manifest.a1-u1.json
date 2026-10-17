@@ -17249,6 +17249,66 @@
       "rmsDb": -17.17
     },
     {
+      "id": "word-lieb",
+      "file": "words/audio/de-DE/word-lieb.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "lieb.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 920,
+      "sizeBytes": 3983,
+      "hash": "sha256:4e7bb7ad2d24e995c5e802a923199128f012ed5ef9c33baec7033055ee1a940c",
+      "pcmSha256": "9b71f5f4b40f040d0bc73ffd6314a4b883fc3b55543a4b98661256b370a086e7",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "word-moment",
+      "file": "words/audio/de-DE/word-moment.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Moment.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4732,
+      "hash": "sha256:782eb2761b9da0e4116406951aab1e2b5980d7be67682acf3e0a209097b5c153",
+      "pcmSha256": "ac41507ae39c5416e18c1acdb3a4a4f29c162ba022436ea8eb5be169e8b1d466",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-enden",
+      "file": "words/audio/de-DE/word-enden.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "enden.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 769,
+      "sizeBytes": 4037,
+      "hash": "sha256:7ea5920585ae993c3120aca614b85cb888be8090ebf896fe4c784c42a09450f7",
+      "pcmSha256": "c571053aca6e581294b87c6478296257beaf276dbbcefacf99d00b8b14e9c7f7",
+      "rmsDb": -17.03
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -36794,6 +36854,446 @@
       "hash": "sha256:06c7bd8fb65a9d2d92178e866974d86a184c9a2568b918b553f3149252a46242",
       "pcmSha256": "e2ffb6b89c49f539fc1cb009797e30d621b62d318282d2c8e86ad227a37f6393",
       "rmsDb": -17.01
+    },
+    {
+      "id": "za-1",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 146,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Lena! Ist heute Mittwoch oder Donnerstag? Hier in Tunis habe ich keinen Kalender.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 5750,
+      "sizeBytes": 26303,
+      "hash": "sha256:42be8787e1cd436181dc83ffb9d19b14e67e2b53eb3240d639db172b8744b167",
+      "pcmSha256": "01270cf68ff5af4b7935789252ab163a63e0525912201adcbf4c9ba0b8bcf08c",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "za-2",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 105,
+        "lengthScale": 1.32
+      },
+      "textDe": "Heute ist Donnerstag, der zweite April. Und am Samstag ist Wochenende!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 6296,
+      "sizeBytes": 29362,
+      "hash": "sha256:60a8dc4dd484d687402c3825cf839b93c85ad9c3f20897b68c5fc480b6a64393",
+      "pcmSha256": "131607c162d30fa009c8dd75ac74f0b9715e48f6c58a4acf0a2c07a934105a9d",
+      "rmsDb": -17.6
+    },
+    {
+      "id": "za-3",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 154,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der zweite April schon? Und wann endet der Kurs?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 3509,
+      "sizeBytes": 16236,
+      "hash": "sha256:b551198836a0b9b4cec3a221a3e89404507c4c348e88589f4a66b4c52fb69958",
+      "pcmSha256": "df79517e233254990fa9d68c0d084bcdda87870bfcbe74e2d338a1e858947ef9",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "za-4",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Kurs endet am siebzehnten April. Das ist ein Freitag.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 4840,
+      "sizeBytes": 22491,
+      "hash": "sha256:ad32ec4d1fc8b7ec67600edf901413be85db69074a3a61c7b3aa363b10a8d524",
+      "pcmSha256": "a70f238999afdb9d4505fc4910df208b385cbe1eb0322c5da9d161bab0c9876b",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "za-5",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut. Ich fliege am Sonntag zurück — am zwölften April.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 4426,
+      "sizeBytes": 19553,
+      "hash": "sha256:d26b40400cc736c1d7abd01e09c70ef89d5cd52f111f2c4c6f424759eab692f1",
+      "pcmSha256": "8c817f7561f93a94b8fdb1ee6aec1b203dca73ef5baf874eef1dc65fc361ae31",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "za-6",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am zwölften? Super! Ich habe am achtzehnten April Geburtstag. Das ist ein Samstag. Kommst du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 7656,
+      "sizeBytes": 35412,
+      "hash": "sha256:82a6a8807c79d9bd6079ea065a3b7ad9375785e8953166c570d189ede85e29b4",
+      "pcmSha256": "eb7a6bcf73142291ceff4cf76940e029df5581c9447f78f9416ceeae3654e51c",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "za-7",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Einen kleinen Moment! Ja, am Samstag bin ich frei. Vielen Dank für die Einladung!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 5436,
+      "sizeBytes": 24886,
+      "hash": "sha256:50f38d88582e02393ebca74687761d31aa9ed2cbcb0750f419c62055c6c1b699",
+      "pcmSha256": "eebdbccbe56a7995d5f767e46e76a779d9322ce5e6fbcc7df87ffe48fad47ea3",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "za-8",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 116,
+        "lengthScale": 1.32
+      },
+      "textDe": "Schön! Die Einladung kommt noch als Karte: Lieber Yusuf, am achtzehnten April ist mein Geburtstag.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 7768,
+      "sizeBytes": 35907,
+      "hash": "sha256:7f35144d0514b71380076de31f234ed6b62274789f0d3eaa7ae895c85e0d5954",
+      "pcmSha256": "e7d83023f9781bf82484cd4f65d51a1700d312ab9681b0f179fc48909c63bf4e",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "za-9",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 152,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wo feiert ihr? Bei dir zu Hause?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 3149,
+      "sizeBytes": 14364,
+      "hash": "sha256:61050ec08c728345831de9732ae92326965bcf807daa8817499ab91808a1c1c7",
+      "pcmSha256": "08723a850f84121b6db7287087b4810e5f2a889f509444f041f751d09e508144",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "za-10",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, im Restaurant. Ich reserviere einen Tisch für Samstag — am Freitag ist dort alles besetzt.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 6456,
+      "sizeBytes": 30039,
+      "hash": "sha256:8b90696d426041706f6302b02bb4003a2899aa7d3e34557726b3fe9065956f0b",
+      "pcmSha256": "a2849a2e6b27bc7e1f0777be7ef9918370f0999225fc7e78c625c18780253e6d",
+      "rmsDb": -17.31
+    },
+    {
+      "id": "za-11",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wer kommt? Deine Oma?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 2092,
+      "sizeBytes": 9545,
+      "hash": "sha256:4fb7a8c2ef2053e6f6a8b8ec29a4fe971860cc5b4bbaa681f4870365fdb4277d",
+      "pcmSha256": "ee99c04a78c886caf2fc06bc4d94f48954d3b4b7c50ad3ca48e3ca304dfc0a90",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "za-12",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Meine Oma kommt mit dem Zug. Mein Onkel kommt nicht — am Samstag arbeitet er. Das ist die erste Absage.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 8120,
+      "sizeBytes": 37844,
+      "hash": "sha256:45cea5a09b15e0e77e25e6c40cfb46e3539105705283009b05f09f072353339e",
+      "pcmSha256": "9fa6140f896f3c9eb5768f1e64cebedf5d5b6df4c4cab01dbcfa0da91bf0d3c3",
+      "rmsDb": -17.4
+    },
+    {
+      "id": "za-13",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Eine Absage ist nicht viel. Und Mia?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 3416,
+      "sizeBytes": 15069,
+      "hash": "sha256:1057f9f482074b8a6c5e595835130a0ed25774af37765709adea068d37e46df4",
+      "pcmSha256": "03498371e1d6d7897433b97e89a9e6da1a4393f3271fae62335c46f2fb49195d",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "za-14",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Mia ist eine Katze — sie kommt nicht ins Restaurant!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 3736,
+      "sizeBytes": 17427,
+      "hash": "sha256:ec9a9e8297ddebbd72f4770e7166027a5b12751be2897875f5bf539ee4da0662",
+      "pcmSha256": "9ac6e30f4d4dc96a7fd2564930616d002748414ff34dd126143c80e94e05db8a",
+      "rmsDb": -17.52
+    },
+    {
+      "id": "za-15",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und was machst du am Wochenende? Morgen ist Freitag.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 3578,
+      "sizeBytes": 16617,
+      "hash": "sha256:ad60ea87995e4caee3a35627d5ca8d9abba1a91e4c61d05ee865c7e35fdf69bf",
+      "pcmSha256": "d8aa7009a83db7aaa24479ee72bc43bccff308d920b9f54d4928d0a13a6a0318",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "za-16",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 152,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Samstag fahre ich mit meiner Mutter in die Stadt. Wir kaufen ein Kleid für den Geburtstag.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 6728,
+      "sizeBytes": 31366,
+      "hash": "sha256:07a8dff80bf83f39f8e8bfa6ffe33a8cda01ba37e4f547af59675221558a2f94",
+      "pcmSha256": "194b36b6232d0b6512e650b727136abf7ad10c013bacc9101e8d360decd72bd9",
+      "rmsDb": -17.55
+    },
+    {
+      "id": "za-17",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und am Sonntag?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 1454,
+      "sizeBytes": 6789,
+      "hash": "sha256:a1642eaaf751947ba4255b12ac4cb6ef40b40eb790026efd58a6952fc1ee6b30",
+      "pcmSha256": "be9a1936a2fa6ec20c4dbef50cfde11ecd4a0d65a538f2658b86263f23da1f10",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "za-18",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 154,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Sonntag bin ich frei — ich lese und schlafe.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 3496,
+      "sizeBytes": 16343,
+      "hash": "sha256:4368bada37d688a4fbde2d4d5108850ef8192154dc42f0c12d541224a721b2b2",
+      "pcmSha256": "885e9a9dc6ad505a8c1e9522e4dab8a0fbc8dd9218364b9088a7019a63637d61",
+      "rmsDb": -17.79
+    },
+    {
+      "id": "za-19",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut. Ich schreibe den achtzehnten April in meinen Kalender: Lena hat Geburtstag!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 6109,
+      "sizeBytes": 26606,
+      "hash": "sha256:3055a346e14097e2fe00a48ffe09133fa565f27eb76d6f2cb99a388b59e67dbb",
+      "pcmSha256": "30751b723aa3acceac8e4cd12de7aa98350b0ded13c90fc533595afec999de0d",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "za-20",
+      "file": "audio/scripts/a1-u10-d2-der-zweite-april/za-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 114,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und ich schreibe: Sonntag, der zwölfte April — Yusuf kommt zurück! Bis morgen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d2"
+      ],
+      "durationMs": 6296,
+      "sizeBytes": 29207,
+      "hash": "sha256:b056a07c06ef8a436e4b16f45f20cb155ebfb87925c83d294f0ef81416a2ee9a",
+      "pcmSha256": "db13389ce6ed91b0208371e00246974e14f3b0f4572c21d92d2d8efb3802b8e8",
+      "rmsDb": -17.37
     }
   ],
   "characterVoices": {

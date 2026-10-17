@@ -136,8 +136,29 @@ export function daCompoundKnown(t: string, stems: ReadonlySet<string>): boolean 
 }
 
 /**
+ * D167: العدد الترتيبي كلمةٌ واحدة تُركَّب بالقاعدة (ars-termin-datum — «التاريخ» في الخطة اليومية): الأصلي + ‑t من 1 إلى 19
+ * (مع الشواذ الثلاثة: erst · dritt · siebt — وacht تبقى achte) و+ ‑st من 20 فصاعداً (zwanzigst · einunddreißigst · hundertst)
+ * — ثم نهاية الصفة (der zwölfte · am zwölften · des zwölften · ein zwölfter · das zwölfte). صيغٌ لا تُكتب مدخلاً لكلٍّ منها
+ * (سابقة الأعداد D131 · D132 وda-Komposita D150). تُعرف من الدرس الذي يُدرِّس das Datum (a1-u10-d2) لا قبله — والعشرات
+ * والمئات داخلها تتبع قاعدتها (einundzwanzigste تحتاج zwanzig · dreißigste تحتاج dreißig).
+ */
+const ORDINAL_SMALL = "erst|zweit|dritt|viert|fünft|sechst|siebt|acht|neunt|zehnt|elft|zwölft|(?:drei|vier|fünf|sech|sieb|acht|neun)zehnt";
+export const ORDINAL_NUMBER = new RegExp(`^(?:(${ORDINAL_SMALL})|((?:(?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)und)?(?:${TENS})|(?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)?hundert|(?:ein)?tausend)st)(?:e|en|em|er|es)$`, "u");
+export const ORDINAL_ANCHOR = "datum";
+export function ordinalKnown(t: string, stems: ReadonlySet<string>): boolean {
+  const m = ORDINAL_NUMBER.exec(t);
+  if (m === null || !stems.has(ORDINAL_ANCHOR)) return false;
+  if (m[1] !== undefined) return true; // 1–19: آحاد ومراهقات مغلقة
+  const base = m[2]!;
+  if (TENS_ONLY.test(base)) return stems.has(deumlaut(base));
+  if (COMPOUND_NUMBER.test(base)) return compoundNumberKnown(base, stems);
+  return numberWordKnown(base, stems); // المئات والألف من درس tausend
+}
+
+/**
  * الكلمات غير المدروسة في نص (مرتبة، بلا تكرار): ليست مغلقة · ليست اسم علم مُعلناً · ولا جذع لها
- * يطابق جذع صيغة مدروسة · ولا هي عدد من كلمة واحدة أجزاؤه مدروسة (D131 · D132) · ولا ظرف مكان da(r)+حرف بعد درسه (D150).
+ * يطابق جذع صيغة مدروسة · ولا هي عدد من كلمة واحدة أجزاؤه مدروسة (D131 · D132) · ولا ظرف مكان da(r)+حرف بعد درسه (D150)
+ * · ولا عدد ترتيبي بعد درس التاريخ (D167).
  */
 export function unknownTokens(text: string, stems: ReadonlySet<string>, allow: ReadonlySet<string> = new Set()): string[] {
   const out = new Set<string>();
@@ -146,6 +167,7 @@ export function unknownTokens(text: string, stems: ReadonlySet<string>, allow: R
     if (stem(deumlaut(t)).some((s) => stems.has(s))) continue;
     if (numberWordKnown(t, stems)) continue;
     if (daCompoundKnown(t, stems)) continue;
+    if (ordinalKnown(t, stems)) continue;
     out.add(t);
   }
   return [...out].sort();
