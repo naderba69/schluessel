@@ -17349,6 +17349,46 @@
       "rmsDb": -16.97
     },
     {
+      "id": "word-anfang",
+      "file": "words/audio/de-DE/word-anfang.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Anfang.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 955,
+      "sizeBytes": 4585,
+      "hash": "sha256:490f31a8ad853c1e495a6c7f97e2de54468d90c7be56e70442563da29ad903c2",
+      "pcmSha256": "e5fe52c88ac3d9e72fcf79ab9a65efc8e47d1961204a8964d6a061d3d4a8efe5",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "word-verein",
+      "file": "words/audio/de-DE/word-verein.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Verein.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 1036,
+      "sizeBytes": 5039,
+      "hash": "sha256:923add7179b890b384b38254140533b46f74e9dc2dc94e43f2f0bf69c1cdf793",
+      "pcmSha256": "1a7594ce13071010630d9e608b5c08ca7c00dcbb02a088850cba33210ae7b275",
+      "rmsDb": -17.04
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -37774,6 +37814,446 @@
       "hash": "sha256:84bc38f1afec4144c56eaea7e021bb61ca4e8d47fb9f40b9aa951fef70c0735d",
       "pcmSha256": "25d85b9ace7956bd9e4930244812672f7a268366b9ab7b0cae902a09f59049ac",
       "rmsDb": -17.05
+    },
+    {
+      "id": "ew-1",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Lena! Endlich Wochenende! Was hast du heute gemacht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 4136,
+      "sizeBytes": 18585,
+      "hash": "sha256:25195c5c813fb125e755aba2802b424c5e6851893340e353010d89bd21f4b7c4",
+      "pcmSha256": "48ac1dbeb9232f51153b92d492053faa5050b29b4bd08649406234d6dadab3a2",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "ew-2",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Yusuf! Heute habe ich mit meiner Mutter ein Kleid gekauft — für meinen Geburtstag. Vorher haben wir in der Stadt Kaffee getrunken.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 9832,
+      "sizeBytes": 45275,
+      "hash": "sha256:e1771a6c553b191ca7314c3df8e489c982ed0b0dbc3aee6ae1506b9e8bc9fa4a",
+      "pcmSha256": "490ddba51e9153e9f8d035fed69bb895a62f9d9f7b9d1b456298bacdc3545932",
+      "rmsDb": -17.35
+    },
+    {
+      "id": "ew-3",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 82,
+        "lengthScale": 1.32
+      },
+      "textDe": "Schön! Und nachher?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 2185,
+      "sizeBytes": 9889,
+      "hash": "sha256:e713225434340fb603961e4bd527cd169c1d47822f1ad1032b19487328047bc2",
+      "pcmSha256": "663ab3751dd4cc4f767d9d0ca90b7776a60ddfa86d64b731da97350e74b38376",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "ew-4",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 111,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nachher habe ich aufgeräumt und im Restaurant angerufen. Ich habe den Termin vereinbart: Samstag, der achtzehnte April, neunzehn Uhr.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 10312,
+      "sizeBytes": 47910,
+      "hash": "sha256:4f90e59357ca0f17866b5e373c10220d634c62bc3063d8dc0a235a2d6e797f79",
+      "pcmSha256": "b18b4f09806fd8faeadd0e63a6a12708783f6c99a4569ed9938a26b2923ea468",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "ew-5",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 152,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hast du den Termin aufgeschrieben?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 1976,
+      "sizeBytes": 9226,
+      "hash": "sha256:c3fad4a7765b219e15dc548e357e5d04d7d1b5c80c7927f212341b7460380812",
+      "pcmSha256": "fbba0cc74068981be86d375e5ab8fa145b26ae77ac639bd82e2e4a0bd93316a6",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "ew-6",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich habe eine Notiz geschrieben — und im Handy eine Erinnerung gemacht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 5880,
+      "sizeBytes": 27269,
+      "hash": "sha256:c49a8d135778fc03e5cab5cac98c348f63698093469951eb87b70e7c6de8ef36",
+      "pcmSha256": "c74766560193f7d5bcb9ae5b7b22c9144ca2a0aa9571c64dbb661ae551f86cbd",
+      "rmsDb": -17.91
+    },
+    {
+      "id": "ew-7",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Richtig oder falsch: Dein Geburtstag ist am Freitag?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 3671,
+      "sizeBytes": 17139,
+      "hash": "sha256:60ef3212da08576a2beb9676a8ffeb7b0d8182b4d6ddab64c3efc4758bd539d0",
+      "pcmSha256": "db5305b22d6abe6f06647a45037b57bfca6ec73c95c4315e2f22404b0e678adb",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "ew-8",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Falsch! Am Samstag. Und du? Was hast du heute gemacht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 4632,
+      "sizeBytes": 21363,
+      "hash": "sha256:54831edb4404651014506ad10b3743ed674634ad1824d2eba9d531ca226ff4f7",
+      "pcmSha256": "ef4e717c4356d9a5f324248cb384a10d65c65435c9b9f18ab4a9c638cc24295c",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "ew-9",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 157,
+        "lengthScale": 1.32
+      },
+      "textDe": "Heute habe ich meine Oma besucht. Vorher habe ich eingekauft — Obst und Brot für sie.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 5726,
+      "sizeBytes": 26091,
+      "hash": "sha256:6efdd2dd6bc607f0b8af2230fda52e86c0bea0963f7c15da895f9d51c80291f6",
+      "pcmSha256": "ecd8ba2a6b824797a865bdf3e052e85715f9b87d94c5fef330d10ea9f4bd5229",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "ew-10",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und nachher?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 856,
+      "sizeBytes": 4298,
+      "hash": "sha256:b34b344af5c1b1917cdac8e2b2d777a814e8673e5adf9beaf3f47bfd3e67f8cd",
+      "pcmSha256": "9ee574880d77f2e6f08193f885c77321c7018d1f8c3f10c711263107cea7cf48",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "ew-11",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nachher habe ich eine Stunde telefoniert — mit meinem Freund in Berlin.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 4577,
+      "sizeBytes": 20635,
+      "hash": "sha256:ad98a8ac7247018c592a25fa608f32053ef20565ac1d36c59995e182de79e099",
+      "pcmSha256": "98165a42470b4557318c3907f85e58f3841b2735b69bbff9966db8d20d9057c8",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "ew-12",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 116,
+        "lengthScale": 1.32
+      },
+      "textDe": "Eine Stunde! Und der Kurs? Verstehst du jetzt alles?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 4664,
+      "sizeBytes": 21469,
+      "hash": "sha256:7e8c7eab5f518e8a2d5c7a9452c81716af0fa202492cd739efa95f8116cf02bd",
+      "pcmSha256": "7cae4b0ee1b00b875685c05486539cb1f24d2a9c958e8ce3e3c291bf0943dd8d",
+      "rmsDb": -17.44
+    },
+    {
+      "id": "ew-13",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 148,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Anfang habe ich wenig verstanden. Jetzt verstehe ich viel.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 4054,
+      "sizeBytes": 18362,
+      "hash": "sha256:fe26cba4dbfa39832894d7887ce93a2b3b852b004d34f8c3a8aebbeedeba6ce4",
+      "pcmSha256": "0caff4b7fd05c8639200aa911ef4a39d73ed056fc10a9d6c9a6e4311f04ada12",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "ew-14",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 117,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! Neulich habe ich im Verein angefangen — Fußball. Am Anfang habe ich schlecht gespielt.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 7176,
+      "sizeBytes": 33111,
+      "hash": "sha256:989286e857f5baa4f79697aa71411206de3e291defdf562105e7ce51d0613b61",
+      "pcmSha256": "102907623c6e035a514fbf93b8a04a185b963fdcc16778dbc9326f7271e3b4d8",
+      "rmsDb": -17.42
+    },
+    {
+      "id": "ew-15",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Im Verein? Super! Damals in Tunis habe ich auch im Verein gespielt.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 5262,
+      "sizeBytes": 23699,
+      "hash": "sha256:a036012f9fba69d46f3cee7e34e6233b126749c7013209036fa32459bfba93bf",
+      "pcmSha256": "ceede20afebdaeb406a60734088006a0438c75bf8526d105d820ec8a75638b80",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "ew-16",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gestern haben wir im Verein gespielt — plötzlich hat es geregnet! Aber wir haben weiter gespielt.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 7384,
+      "sizeBytes": 34208,
+      "hash": "sha256:2cf4c2843cb41f06a1ee4211a7ba5a6ce4e91638e241cbd2e509a44b26d45c38",
+      "pcmSha256": "fbe99532bbd87a42606d010ae13bbf1c94e572c98d2c6dc10868874b7b1ef9cc",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "ew-17",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hier hat es nicht geregnet — hier ist es schön. Und noch eine Frage: Der Termin im Restaurant ist um achtzehn Uhr, richtig?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 8838,
+      "sizeBytes": 39982,
+      "hash": "sha256:7e0e94b7a43e24ee48ce91602fbe4195e60ec5be6f17c21fef1590948427763d",
+      "pcmSha256": "5f9e6ec11dd46a855044f0249d4730ebd06efcfa2b4aeca102f5905affc6d348",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "ew-18",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 117,
+        "lengthScale": 1.32
+      },
+      "textDe": "Falsch! Um neunzehn Uhr. Ich habe es richtig aufgeschrieben — hier, die Notiz!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 6168,
+      "sizeBytes": 28485,
+      "hash": "sha256:3360e3b74e5be0a84b709d7f422cb93951d9db66460d7cc5b0f7b6325d9cb68b",
+      "pcmSha256": "a946432a0452d24c8ca1e02f8ac73f89d27e5c78099c8eb68ee522319ee82ca3",
+      "rmsDb": -17.54
+    },
+    {
+      "id": "ew-19",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 119,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut. Ich habe es auch aufgeschrieben: Samstag, der achtzehnte April, neunzehn Uhr. Jetzt ist alles richtig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 8048,
+      "sizeBytes": 35716,
+      "hash": "sha256:6abae75adfb6ecc83353d6bf47636674f46757d4f3ee72460a36aaecd9c3b9b1",
+      "pcmSha256": "abcab8be95d1e76ad7b8accded15db58afbce481f25d32f05d6890a0147872cf",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "ew-20",
+      "file": "audio/scripts/a1-u10-d4-endlich-wochenende/ew-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 98,
+        "lengthScale": 1.32
+      },
+      "textDe": "Endlich! Bis morgen, Yusuf!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d4"
+      ],
+      "durationMs": 2456,
+      "sizeBytes": 11502,
+      "hash": "sha256:28910840e4bff505f783993a26e71f5a9c924934ef4844ad5d0555487d046cfb",
+      "pcmSha256": "e9853c59224c09a53d14a45a6be8bdfc9f9eab3a22bbf57df1bff26c5735053f",
+      "rmsDb": -17.15
     }
   ],
   "characterVoices": {
