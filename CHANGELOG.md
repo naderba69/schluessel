@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 121: a1-u10-d1 مُرقّى — الطقس بـes الشكلي (D166) · ars-wetter-es · أربعة أمثلة كلمات مصحّحة
+- **إضافة:** `content/arsenal/grammar/ars-wetter-es.json` (سبع وأربعون قاعدة يوم) · حوار `a1-u10-d1-wie-ist-das-wetter` (wt-1..20 مكالمة صباحية) · مانيفست 1754 · المرجع 1435.
+- **تحسين المحتوى:** 60 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح («تمطر» بلا فاعل ⇒ ~~Heute regnet.~~ · الجملة الاسمية ⇒ ~~Es kalt.~~ · «الجو ممطر» ⇒ ~~Es ist regnet.~~) · 12 كلمة.
+- **تصحيح بيانات:** أمثلة schnee/wind/himmel/kalt بلا schneit/Winter/stark/blau · خطة الترقية u10-d1 done (properNouns Yusuf/Lena/Berlin/Tunis) · تسجيل wt على regnet (N-099).
+- **اختبارات:** كتلة D166 (+1) · المثال غير المُرقّى ← a1-u10-d2 · 695/695 · validator 1086/0/0.
+
 ## 2026-10-17 — الدفعة 120: a1-u9-d5 مُرقّى — قوس الجملة وترتيب الظروف (D165) · ars-satzklammer + ars-tekamolo · نواة خمس · الوحدة 9 مكتملة
 - **إضافة:** `content/arsenal/grammar/ars-satzklammer.json` و`ars-tekamolo.json` (ست وأربعون قاعدة يوم) · `content/words/{andere,weiter,halten,polizei,stelle}.json` + مقاطعها (المولِّد D105) · حوار `a1-u9-d5-im-stau` (st-1..20 مكالمة من الحافلة) · مانيفست 1734 · المرجع 1429 · مدخل معجم nächsten (72).
 - **تحسين المحتوى:** 58 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح (الجملة الاسمية العربية ⇒ ~~Heute ich fahre~~ · الفعل المتصل ⇒ ~~kommt an um neun~~ · مرونة الظروف ⇒ ~~mit dem Bus heute~~) · 11 كلمة.

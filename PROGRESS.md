@@ -1,5 +1,16 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
+## الدفعة 121 (2026-10-17) — الدرس السادس والأربعون مُرقّى: «الطقس بـes الشكلي» (D166) — قاعدة جديدة وأربعة أمثلة مصحّحة · أول درس في الوحدة 10
+- **قاعدة اليوم** `ars-wetter-es` (u10-d1 وu10-d6): Wie ist das Wetter? · es + فعل الطقس (Es regnet.) / es ist + صفة (Es ist kalt.) · es لا يسقط (Jetzt regnet es. · Hier ist es warm. · Regnet es?) · الدرجات بالجمع (Es sind zwanzig Grad — Grad بلا ‑e) · الفاعل الحقيقي بلا es (Die Sonne scheint. · Der Wind ist heute kalt.) — الحدود: schneien ليس SD1 · الماضي u10-d3 · الفصول لاحقاً · الصفة قبل الاسم لاحقاً.
+- **بلا نواة** (u10-d1 ليس في خطة SD1) — 12 كلمة كما كانت · **أربعة أمثلة صُحّحت** (schneit/Winter · stark · blau · Winter ⇒ بكلمات الدرس) · Winter/Sommer/blau كلمات SD1 بلا درس ⇒ N-107.
+- **حوار جديد** `a1-u10-d1-wie-ist-das-wetter` (wt-1..20) — **مكالمة صباحية في اليوم الثالث بتونس:** شمس وبلا سحب و25° عند يوسف · سحب ومطر وريح باردة و8° وثلج صباحي عند لينا · يوسف يمشي ولينا بالحافلة مع مظلتها (u8-d3) · غداً مشمس بارد عندها و30° عنده · الضفة مع الأخت (u9-d5).
+- **D108:** Heute regnet es. / Der Wind ist kalt. / Es ist sonnig. أُعيدت صياغتها · بقيت الجملتان الدنيا Es ist kalt. وDie Sonne scheint. بحكمي.
+- **النطق:** المرجع 1435 · لا مدخل جديد · regnet +4 مسارات (N-099).
+- **التطبيق:** 60 بنداً (فراغ 23 · استماع 15 · ترتيب 6 · إملاء 16) · Quiz 3×6 · 3 مصائد (10‑ي) · ما أمسكته الفحوص: acht · stadt · schoen (ö) · regnen/scheinen كلمةً كاملة · إجابة Quiz داخل فراغ.
+- **الاختبارات (+1):** u10-d1 كاملاً · المثال القديم ← a1-u10-d2 · 695/695 · validator 1086/0/0 · الطفرة 1/1 · voice-stability سقط مرة تحت الحِمل ونجح (N-106).
+- **الحالة:** ترقية 46/60 (الوحدات 1–9 + u10-d1 · 14 باقياً) · نواة 38/48 (101/123) · 862 كلمة · 1754 مساراً · 47 قاعدة يوم · معجم 72 · التالي a1-u10-d2 (ars-termin-datum بلا ملف · نواة lieb-/der Moment/enden).
+- **السجل:** +2 ملاحظتان N-106 (voice-stability تحت الحِمل) · N-107 (Winter/Sommer/blau بلا درس) · حُدّثت N-099 · N-103.
+
 ## الدفعة 120 (2026-10-17) — الدرس الخامس والأربعون مُرقّى: «قوس الجملة وترتيب الظروف» (D165) — قاعدتان جديدتان ونواة خمس · الوحدة 9 مكتملة
 - **قاعدتا اليوم** `ars-satzklammer` (11 درساً تشير إليها حتى أسبوع الامتحان): الفعل ثانياً والقلب (Heute fahre ich …) · القوس بالجزء المنفصل/المصدر (steige … aus · muss … umsteigen) · السؤال لا يكسره (Hält der Bus …? · Wann kommt der Bus an?) · halten/hält · Polizei مفرد · `ars-tekamolo` (orange): Wann? ← Wie? ← Wohin? · الزمن يتقدّم · القوس يحيط · اليوم قبل الساعة — الحدود: weil u10 · Perfekt u10/11 · abfahren u12 · Ka (wegen) ليس A1.
 - **النواة 5 (D113) بالمولِّد D105:** andere · weiter · halten · die Polizei · die Stelle (goetheList مشتقة · ander- بالجذع · w-srs 0.26) ⇒ 11 كلمة · الخطة u9-d5 done · النواة 38/48 (101/123) · التالي a1-u10-d2 (lieb- · der Moment · enden).
