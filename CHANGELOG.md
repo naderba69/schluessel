@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 127: a1-u11-d2 مُرقّى — عند الطبيب — Was fehlt dir? (D172) · ars-gesundheit · نواة fehlen · ثلاثة أمثلة مصحّحة
+- **إضافة:** `content/arsenal/grammar/ars-gesundheit.json` (ثلاث وخمسون قاعدة يوم) · كلمة `fehlen` بمقطعها · حوار `a1-u11-d2-was-fehlt-dir` (ka-1..20 مكالمة اليوم التاسع) · مانيفست 1889 · المرجع 1529 · معجم النطق 74 (بلا جديد).
+- **تحسين المحتوى:** 68 بنداً/4 أنواع (فراغ 30 · استماع 16 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (الألم جمعاً وبلا أداة ⇒ ~~Ich habe Kopfschmerz~~ · fehlen بالداتيف ⇒ ~~Was fehlst du?~~ / ~~Was fehlt dich?~~ · zum/zur وgibt mir ⇒ ~~zu der Arzt~~ / ~~gibt mich~~) · 13 كلمة · «dativ» الرمزية خرجت من التدريب.
+- **تصحيح بيانات:** ثلاثة أمثلة (schmerz «Der Schmerz ist stark.» ⇒ «Der Schmerz kommt und geht.» · arzt «Ich muss zum Arzt.» ⊂ مثال SD1 ⇒ «Ich gehe heute zum Arzt.» · fieber «Ich habe Fieber.» ⊂ مثال قائمة A2 ⇒ «Ich habe seit gestern Fieber.») · خطة الترقية u11-d2 done (properNouns Yusuf/Lena · بلا misspellings) · خطة SD1 u11-d2 done · تسجيل ka على Hals/Tablette/holt/Kurs (N-099).
+- **اختبارات:** كتلة D172 (+1) · المثال غير المُرقّى ← a1-u11-d3 بفجواته المقيسة · مثبّتات النواة ← a1-u11-d5 (das Ergebnis) · العدّ 876 · 705/705 · validator 1112/0/0.
+
 ## 2026-10-17 — الدفعة 126: a1-u11-d1 مُرقّى — الجسم — weh tun (D171) · ars-koerper · نواة der Teil/tun/weh tun · ثلاثة أمثلة مصحّحة
 - **إضافة:** `content/arsenal/grammar/ars-koerper.json` (اثنتان وخمسون قاعدة يوم) · كلمات `teil` · `tun` · `weh-tun` بمقاطعها · حوار `a1-u11-d1-alles-tut-weh` (kw-1..20 مكالمة اليوم الثامن) · مانيفست 1867 · المرجع 1516 · معجم النطق 74 (بلا جديد).
 - **تحسين المحتوى:** 69 بنداً/4 أنواع (فراغ 30 · استماع 17 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (الجنس بلا منطق ⇒ ~~die Bein~~ · الجمع بـ‑s ⇒ ~~die Hands~~ · weh tun ⇒ ~~Mein Kopf weh tut~~ / ~~Meine Beine tut weh~~ / ~~Mich tut~~) · 15 كلمة.
