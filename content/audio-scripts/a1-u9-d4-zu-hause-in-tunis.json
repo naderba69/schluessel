@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d4-zu-hause-in-tunis",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Zu Hause in Tunis",
+    "ar": "في البيت في تونس — أول مكالمة دورة بعد السفر: لينا تسأل أين كل شيء (البيت في المركز قرب الحديقة · الموقف خلف البيت · الغرفة فوق بلا مصعد · الحقيبة عند الجدار ثم تحت السرير · الصورة على الجدار فوق الطاولة · صيدلية مغلقة وبنك مفتوح حتى الرابعة · فوق الجسر وفي النفق مئتا متر إلى المركز · المطعم عند الضفة على الجانب الأيسر · الأخ بالدراجة يصطدم بالجدار) — Wo? الداتيف ≠ Wohin? الأكوزاتيف بالحرف نفسه · vor جديد · ans/im/am · gegen + الأكوزاتيف · Meter بلا جمع · auf sein/zu sein"
+  },
+  "usedIn": [
+    "a1-u9-d4"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "tn-1",
+      "speaker": "lena",
+      "text": "Hallo Yusuf! Bist du schon in Tunis? Wo bist du jetzt?",
+      "direction": "أول مكالمة بعد السفر (u9-d3: «morgen fliege ich») — لينا تفتح: Bist du schon in Tunis? · Wo bist du jetzt? (Wo للموقع)"
+    },
+    {
+      "id": "tn-2",
+      "speaker": "yusuf",
+      "text": "Ja, seit zwei Stunden! Ich bin jetzt zu Hause, bei der Familie. Das Haus ist im Zentrum, in der Nähe vom Park.",
+      "direction": "seit zwei Stunden (seit + الداتيف من u8-d5) · bei der Familie · im Zentrum (Wo: in dem) · in der Nähe vom Park (العبارة الثابتة + vom)"
+    },
+    {
+      "id": "tn-3",
+      "speaker": "lena",
+      "text": "Schön! Und wo ist der Parkplatz? Vor dem Haus?",
+      "direction": "Wo ist der Parkplatz? — Vor dem Haus? (vor جديد اليوم — Wo: الداتيف dem)"
+    },
+    {
+      "id": "tn-4",
+      "speaker": "yusuf",
+      "text": "Nein, hinter dem Haus. Mein Vater fährt das Auto auf den Parkplatz hinter dem Haus.",
+      "direction": "hinter dem Haus (Wo: الداتيف) ≠ auf den Parkplatz (Wohin: الأكوزاتيف — الحركة بالسيارة)"
+    },
+    {
+      "id": "tn-5",
+      "speaker": "lena",
+      "text": "Und dein Zimmer? Ist es oben oder unten?",
+      "direction": "oben oder unten (من u6-d4) — سؤال عن الغرفة"
+    },
+    {
+      "id": "tn-6",
+      "speaker": "yusuf",
+      "text": "Oben. Es gibt keinen Aufzug, nur die Treppe. Mein Koffer steht noch an der Wand, neben der Tür.",
+      "direction": "Es gibt keinen Aufzug (الأكوزاتيف keinen) · nur die Treppe (u6-d2) · steht an der Wand, neben der Tür (Wo: الداتيف ×2)"
+    },
+    {
+      "id": "tn-7",
+      "speaker": "lena",
+      "text": "Und wohin stellst du den Koffer?",
+      "direction": "Wohin stellst du den Koffer? — السؤال بـWohin + stellen (وضع)"
+    },
+    {
+      "id": "tn-8",
+      "speaker": "yusuf",
+      "text": "Unter das Bett! Und das Foto vom Kurs hänge ich an die Wand, über den Tisch.",
+      "direction": "Unter das Bett! (Wohin: das كما هو) · hänge ich an die Wand, über den Tisch (Wohin: die · den)"
+    },
+    {
+      "id": "tn-9",
+      "speaker": "lena",
+      "text": "Super! Und die Stadt? Was ist in der Nähe?",
+      "direction": "Was ist in der Nähe? — العبارة الثابتة"
+    },
+    {
+      "id": "tn-10",
+      "speaker": "yusuf",
+      "text": "Viel! Gegenüber ist eine Apotheke — sie ist heute zu. Und die Bank an der Ecke ist bis vier Uhr auf.",
+      "direction": "Gegenüber ist eine Apotheke (u9-d1) · sie ist heute zu (النواة zu sein) · die Bank an der Ecke (Wo) ist bis vier Uhr auf (النواة auf sein)"
+    },
+    {
+      "id": "tn-11",
+      "speaker": "lena",
+      "text": "Auf und zu — das heißt geöffnet und geschlossen?",
+      "direction": "لينا تستنتج المعنى: auf/zu = geöffnet/geschlossen (u3-d3) — das heißt"
+    },
+    {
+      "id": "tn-12",
+      "speaker": "yusuf",
+      "text": "Genau! Die Apotheke ist zu, die Bank ist auf. Einfach!",
+      "direction": "Genau! تثبيت النواة: Die Apotheke ist zu, die Bank ist auf."
+    },
+    {
+      "id": "tn-13",
+      "speaker": "lena",
+      "text": "Und wie kommst du in die Stadt? Zu Fuß?",
+      "direction": "Wie kommst du in die Stadt? (Wohin: in die) · Zu Fuß?"
+    },
+    {
+      "id": "tn-14",
+      "speaker": "yusuf",
+      "text": "Ja. Zuerst über die Brücke, danach in den Tunnel — zweihundert Meter geradeaus, und ich bin im Zentrum.",
+      "direction": "zuerst/danach (u9-d3) · über die Brücke (Wohin) · in den Tunnel (Wohin: den) · zweihundert Meter geradeaus (Meter بلا جمع) · im Zentrum (Wo)"
+    },
+    {
+      "id": "tn-15",
+      "speaker": "lena",
+      "text": "Ein Tunnel? Ist es im Tunnel nicht dunkel?",
+      "direction": "Ist es im Tunnel nicht dunkel? (Wo: im · dunkel من u6-d5)"
+    },
+    {
+      "id": "tn-16",
+      "speaker": "yusuf",
+      "text": "Ein bisschen. Aber am Ufer ist es schön: Das Restaurant ist am Ufer, auf der linken Seite.",
+      "direction": "Ein bisschen · am Ufer (Wo) · auf der linken Seite (Wo: الداتيف المؤنث der)"
+    },
+    {
+      "id": "tn-17",
+      "speaker": "lena",
+      "text": "Am Ufer? Sitzt ihr oft am Ufer?",
+      "direction": "Sitzt ihr oft am Ufer? (Wo — sitzen فعل مكان)"
+    },
+    {
+      "id": "tn-18",
+      "speaker": "yusuf",
+      "text": "Ja, am Abend sitzen wir am Ufer. Und mein Bruder fährt mit dem Rad — heute gegen die Wand! Kein Problem, alles okay.",
+      "direction": "am Abend sitzen wir am Ufer · mit dem Rad (u8-d4) · gegen die Wand! (gegen الأكوزاتيف دائماً) · Kein Problem (u9-d3)"
+    },
+    {
+      "id": "tn-19",
+      "speaker": "lena",
+      "text": "Und morgen? Gehst du morgen ans Ufer?",
+      "direction": "Gehst du morgen ans Ufer? (Wohin: ans = an das — جديد اليوم)"
+    },
+    {
+      "id": "tn-20",
+      "speaker": "yusuf",
+      "text": "Ja — und du siehst alles, auf dem Handy! Bis morgen, Lena!",
+      "direction": "الختام: du siehst alles, auf dem Handy! (Wo: dem) — المكالمات تستمر من تونس"
+    }
+  ]
+}

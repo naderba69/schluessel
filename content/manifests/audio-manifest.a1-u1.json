@@ -17109,6 +17109,46 @@
       "rmsDb": -16.99
     },
     {
+      "id": "word-auf-sein",
+      "file": "words/audio/de-DE/word-auf-sein.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "auf sein.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4784,
+      "hash": "sha256:e038598cddf8df57a4755cc822c7c3c2d205ec5a0b7e374a753581df88397e8f",
+      "pcmSha256": "8d7bd42d4c694db582ccc7b07c4d8181ae6f378ea84e0dcc6f21e8f81190fd89",
+      "rmsDb": -17.3
+    },
+    {
+      "id": "word-zu-sein",
+      "file": "words/audio/de-DE/word-zu-sein.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "zu sein.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 931,
+      "sizeBytes": 4418,
+      "hash": "sha256:00c506d828b91fb8ceae7b0f94185d0666bd6dd4e65d3ed5bbcc98685d8a6714",
+      "pcmSha256": "b1c623df059789a5a5aa394a51337e92510ed3484417431d782679c36d796df2",
+      "rmsDb": -17.05
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -35334,6 +35374,446 @@
       "hash": "sha256:2ccd2929d0193cc8f27345386f1446919ae75973c4e884c352995cfce37b2286",
       "pcmSha256": "37b80bc06e7b27856167313c827a47de86caa8010085107436ec2c45d8467843",
       "rmsDb": -17.02
+    },
+    {
+      "id": "tn-1",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Yusuf! Bist du schon in Tunis? Wo bist du jetzt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 4680,
+      "sizeBytes": 21617,
+      "hash": "sha256:456af467f3f8dae4dcca8da266b00681adaff826c8b0d4f3913f9d51697bde9f",
+      "pcmSha256": "a721418147c1bd2a1f34bc7fead92193ce3ad2b6b5980e5dfc2690406bf26a3d",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "tn-2",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 164,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, seit zwei Stunden! Ich bin jetzt zu Hause, bei der Familie. Das Haus ist im Zentrum, in der Nähe vom Park.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 8037,
+      "sizeBytes": 36409,
+      "hash": "sha256:7e0ef4e9cbf9bc541f241a87b80c882681e0e66a921f2bec5ee3045534c5a01e",
+      "pcmSha256": "adc87401c9b127b288d3757057e749e1b7b71c492539aa0ce4625b5dc073f485",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "tn-3",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 148,
+        "lengthScale": 1.32
+      },
+      "textDe": "Schön! Und wo ist der Parkplatz? Vor dem Haus?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 3640,
+      "sizeBytes": 16963,
+      "hash": "sha256:3181e19fc481eaa5b2d6d5d2e49279a018b58f6f239c0fac3df00d3c9c95a7f8",
+      "pcmSha256": "a2b4234a999d38f31e4ef85f7513e71839081b0a89a59d2dcdcf094b4aa0bba5",
+      "rmsDb": -17.29
+    },
+    {
+      "id": "tn-4",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 166,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, hinter dem Haus. Mein Vater fährt das Auto auf den Parkplatz hinter dem Haus.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 5413,
+      "sizeBytes": 24993,
+      "hash": "sha256:9af181e02e1b7a0ba9b0c632244703aff2920685191fd4ad1b0661f9cd31270d",
+      "pcmSha256": "86431ae18323c079d8c59da52c568391104f17ff5ea1f42409e3500d0efae73a",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "tn-5",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 163,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und dein Zimmer? Ist es oben oder unten?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 2936,
+      "sizeBytes": 13718,
+      "hash": "sha256:b3f95238ad21a5a5217ff33e955bd03d5ef15a93d50215f89b5382a86213a329",
+      "pcmSha256": "3bca43a55cd200493b29a8161276b5044a592e50ee3bb32d12875501835b2043",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "tn-6",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 148,
+        "lengthScale": 1.32
+      },
+      "textDe": "Oben. Es gibt keinen Aufzug, nur die Treppe. Mein Koffer steht noch an der Wand, neben der Tür.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 7305,
+      "sizeBytes": 32002,
+      "hash": "sha256:4ce65e55c599baf20da9b64e87335f2e0c971285bb1d52bc8c274591839a1d31",
+      "pcmSha256": "2d2941fc4c5065c8b1f102b5beaf350cae4fa5ab2c44706fa76d4b362cad2364",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "tn-7",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wohin stellst du den Koffer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 2696,
+      "sizeBytes": 12612,
+      "hash": "sha256:7572b405e037c6ba995350cdadc032c348cc16183c1b80b064d5d226772adba3",
+      "pcmSha256": "8fff4bfd21bfaba4000dd2fcf61732898c2352e1ba083957787b6f703f89e7c5",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "tn-8",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 183,
+        "lengthScale": 1.32
+      },
+      "textDe": "Unter das Bett! Und das Foto vom Kurs hänge ich an die Wand, über den Tisch.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 5250,
+      "sizeBytes": 23155,
+      "hash": "sha256:410fb6edefce715ee972c6fc302f222f309f405692b743b9094a7c6b444033f1",
+      "pcmSha256": "5658726805aa0c3b5fec6aa12b9eb8cab9a60db4b139dcbf4d8170530973c232",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "tn-9",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 185,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! Und die Stadt? Was ist in der Nähe?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 2920,
+      "sizeBytes": 13739,
+      "hash": "sha256:2d144b9003c1cdad067ab2180b3c57bd37ffbc6f160612908d7e9438f52e894f",
+      "pcmSha256": "1ec69adb46c705e466e1bd5f335fefa080902f72f2e0584627c131e4b7933729",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "tn-10",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 185,
+        "lengthScale": 1.32
+      },
+      "textDe": "Viel! Gegenüber ist eine Apotheke — sie ist heute zu. Und die Bank an der Ecke ist bis vier Uhr auf.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 6493,
+      "sizeBytes": 29725,
+      "hash": "sha256:aa7942024c1a087dd418a52a3aa2bc56209509424115e15728227ddb70022af3",
+      "pcmSha256": "257d93e710092935f7139a44019a69e513659a13c5c9a18ee69e97c98e205944",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "tn-11",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 135,
+        "lengthScale": 1.32
+      },
+      "textDe": "Auf und zu — das heißt geöffnet und geschlossen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 3560,
+      "sizeBytes": 16497,
+      "hash": "sha256:b6b6d627a0a9f5b3f317a4bf17660232202d2e58c8f53b4c26cfb8bf91f5cc05",
+      "pcmSha256": "40b993b3e329f786940d2c9b193e30b3a9a16f7f718ef9c3c79674693a82d398",
+      "rmsDb": -17.45
+    },
+    {
+      "id": "tn-12",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Die Apotheke ist zu, die Bank ist auf. Einfach!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 4612,
+      "sizeBytes": 20364,
+      "hash": "sha256:4a909c91ca732a9a3a14050d07806f907c5aaaa465f10ee808efcd6fafb819c6",
+      "pcmSha256": "42e285ff74a77807ba0e0e9ce914cee71dafe5558c6075ae5769e8e605bfb8e0",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "tn-13",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 188,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wie kommst du in die Stadt? Zu Fuß?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 2872,
+      "sizeBytes": 13541,
+      "hash": "sha256:51834addc175ae8e4c30c0dfa2f7c3b8a47bf73dd8519831e08e77de575237aa",
+      "pcmSha256": "548621cefd4e29643d7b34fb8ec90ff4974591fa26f919fea2edf34c3cacf60c",
+      "rmsDb": -17.38
+    },
+    {
+      "id": "tn-14",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Zuerst über die Brücke, danach in den Tunnel — zweihundert Meter geradeaus, und ich bin im Zentrum.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 6841,
+      "sizeBytes": 31444,
+      "hash": "sha256:499c3eefe4518f1fad5bb40389b3db85a167a4ae3c1b5c0d541fa485583d78ac",
+      "pcmSha256": "b19eb848d4ae90d76310ff704e01c6339ade8ce37d8cbfd68ed61cb8c08dc92c",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "tn-15",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Tunnel? Ist es im Tunnel nicht dunkel?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 3096,
+      "sizeBytes": 14453,
+      "hash": "sha256:bc05915794ac539dc04c2df4e129734d6d8468d40a441588e8ded44c2e7ff6ae",
+      "pcmSha256": "135fdd6b8940107dbdec54fdff7d9f141ea669913423ad683f032e9809f9cb6c",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "tn-16",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 161,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein bisschen. Aber am Ufer ist es schön: Das Restaurant ist am Ufer, auf der linken Seite.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 6318,
+      "sizeBytes": 28866,
+      "hash": "sha256:aad25b6fcccf19b98580e4e8ec280d2eb0812e0e7e68c4a6dcd144c10593e9ac",
+      "pcmSha256": "4cba0633587cf646491cfd389f7bc005d54c532405437bf895efa13dd10824fa",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "tn-17",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Ufer? Sitzt ihr oft am Ufer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 2856,
+      "sizeBytes": 13336,
+      "hash": "sha256:f79cfcc3c853ec88816549379adafc69ef13364a1d0421c2f6abc1cad166efdb",
+      "pcmSha256": "7cef96788ec750426f06fc4227bc84fcd6ce05ada6b7032702e6013481a322bb",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "tn-18",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 163,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, am Abend sitzen wir am Ufer. Und mein Bruder fährt mit dem Rad — heute gegen die Wand! Kein Problem, alles okay.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 8083,
+      "sizeBytes": 36821,
+      "hash": "sha256:9a46e491482c45db67dc6820d6d103c086fd140ca94ec40222f3192911605a7c",
+      "pcmSha256": "182cc0c1dd4fc9abe4330198f0a1a55383345ff1735fc84592234a6e896023cd",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "tn-19",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und morgen? Gehst du morgen ans Ufer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 2888,
+      "sizeBytes": 13561,
+      "hash": "sha256:0c7bdc8d7a741dcce21420aaabb9472ceeca9285beeea4a6404aba9997dd1f95",
+      "pcmSha256": "3e6ad5b8c6483e65094b49bf2ef778207f6974991931cf361f01ecd64ada1b17",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "tn-20",
+      "file": "audio/scripts/a1-u9-d4-zu-hause-in-tunis/tn-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja — und du siehst alles, auf dem Handy! Bis morgen, Lena!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d4"
+      ],
+      "durationMs": 4983,
+      "sizeBytes": 22228,
+      "hash": "sha256:42f0f7dbab0e5689c0de0f53625e50382ece0d1834dae37bb764da1c208dfeb2",
+      "pcmSha256": "28cb3a1edf07881cf779d21fdbf83064c925f95c9d873125d320efe6981fb139",
+      "rmsDb": -17.04
     }
   ],
   "characterVoices": {

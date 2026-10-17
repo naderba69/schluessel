@@ -6,31 +6,32 @@
   "day": 4,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst Wechselpräpositionen richtig benutzen: Wo? → Dativ (an der Wand) · Wohin? → Akkusativ (an die Wand).",
-    "ar": "تفرّق بين أين؟ (Dativ) وإلى أين؟ (Akkusativ) مع حروف الجر المتأرجحة"
+    "de": "Wo ist die Bank? — Vor der Kirche. · Wohin geht ihr? — Vor die Kirche. · Wir gehen über die Brücke in den Tunnel. · Die Apotheke ist zu, die Bank ist auf.",
+    "ar": "تستعمل حروف الجر المتأرجحة باسمها وكاملةً في المدينة: Wo? (أين — بلا حركة) → الداتيف (vor der Kirche · im Tunnel · am Ufer · auf der linken Seite · hinter dem Haus · in der Nähe) ≠ Wohin? (إلى أين — حركة إلى مكان) → الأكوزاتيف بالحرف نفسه (vor die Kirche · in den Tunnel · ans Ufer · über die Brücke · auf den Parkplatz · in die Stadt) · vor جديد (أمام) · ans كـins · gegen الأكوزاتيف دائماً · Meter بلا جمع بعد الرقم · auf sein (مفتوح) ≠ zu sein (مغلق) — ومعها كلمات المدينة: الجسر والنفق والضفة والجانب وموقف السيارات والمصعد والجوار والمتر."
   },
   "canDoDaily": [
-    "يصف مكاناً بـWo? + Dativ ويصف حركة بـWohin? + Akkusativ بنفس حرف الجر"
+    "يصف مكاناً في المدينة بـWo? + الداتيف ويصف حركة إليه بـWohin? + الأكوزاتيف بالحرف نفسه: Die Bank ist vor der Kirche. · Ich gehe vor die Kirche. · Wir sitzen am Ufer. · Wir gehen ans Ufer. · Im Tunnel ist es dunkel. · Wir gehen in den Tunnel.",
+    "يسأل ويجيب عن الطريق والمحل: Wo ist der Parkplatz? — Hinter dem Haus. · Wohin fährt dein Vater? — Auf den Parkplatz. · Gehen Sie zweihundert Meter geradeaus! · Ist die Bank auf? — Ja, bis vier Uhr. · Die Apotheke ist heute zu. · Mein Bruder fährt gegen die Wand."
   ],
   "warmup": {
     "cardIds": [
       "wand",
-      "regal",
-      "tisch"
+      "tisch",
+      "wohin"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«الصورة على الجدار» (مكان) و«أعلّق الصورة على الجدار» (حركة) — أين يختلف الإعراب؟"
+          "de": "«البنك أمام الكنيسة» (مكان) و«أذهب إلى أمام الكنيسة» (حركة) — أي زوج صحيح؟ (تخمين فقط)"
         },
         "choices": [
-          "Wo? → an der Wand (Dativ) · Wohin? → an die Wand (Akkusativ)",
-          "كلاهما an der Wand",
-          "كلاهما an die Wand"
+          "vor der Kirche (مكان) · vor die Kirche (حركة)",
+          "vor die Kirche (مكان) · vor der Kirche (حركة)",
+          "vor der Kirche في الحالتين"
         ],
-        "answer": "Wo? → an der Wand (Dativ) · Wohin? → an die Wand (Akkusativ)",
+        "answer": "vor der Kirche (مكان) · vor die Kirche (حركة)",
         "revealNextSession": true
       }
     ],
@@ -49,7 +50,9 @@
       "parkplatz",
       "aufzug",
       "naehe",
-      "meter"
+      "meter",
+      "auf-sein",
+      "zu-sein"
     ],
     "grammarArsenalIds": [
       "ars-wechselpraep",
@@ -59,76 +62,572 @@
       "story-a9-u9-s4"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "auslaut-g",
+      "double-consonant",
+      "r-uvular",
+      "umlaut-a",
+      "umlaut-u",
+      "v-f",
+      "vowel-long-short",
+      "z"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«الصورة معلّقة على الجدار» (مكان)؟",
-            "a": "Das Bild hängt an der Wand."
+            "q": "Die Bank ist vor ___ Kirche. (مكان — die)",
+            "a": "der",
+            "why": "Wo? (ist = مكان) → الداتيف: die Kirche ← der Kirche."
           },
           {
-            "q": "«أعلّق الصورة على الجدار» (حركة)؟",
-            "a": "Ich hänge das Bild an die Wand."
+            "q": "Ich gehe vor ___ Kirche. (حركة — die)",
+            "a": "die",
+            "why": "Wohin? (gehen = حركة إلى) → الأكوزاتيف: die كما هي."
+          },
+          {
+            "q": "Wir gehen in ___ Tunnel. (حركة — der)",
+            "a": "den",
+            "why": "Wohin? → الأكوزاتيف: der ← den (كما في الوحدة 4)."
+          },
+          {
+            "q": "___ Tunnel ist es dunkel. (في — مكان)",
+            "a": "Im",
+            "why": "Wo? → الداتيف: in dem = im — كـim Zimmer من الوحدة 6."
+          },
+          {
+            "q": "Wir sitzen ___ Ufer. (عند — مكان)",
+            "a": "am",
+            "why": "sitzen = مكان → الداتيف: an dem = am (das Ufer محايد ← dem)."
+          },
+          {
+            "q": "Wir gehen ___ Ufer. (إلى — حركة)",
+            "a": "ans",
+            "why": "gehen = حركة → الأكوزاتيف: an das = ans (جديد اليوم — كـins)."
+          },
+          {
+            "q": "Das Restaurant ist auf ___ linken Seite. (مكان — die)",
+            "a": "der",
+            "why": "Wo? → الداتيف: die Seite ← der Seite — auf der linken/rechten Seite عبارة ثابتة."
+          },
+          {
+            "q": "Der Parkplatz ist hinter ___ Haus. (مكان — das)",
+            "a": "dem",
+            "why": "Wo? → الداتيف: das Haus ← dem Haus."
+          },
+          {
+            "q": "Mein Vater fährt auf ___ Parkplatz. (حركة — der)",
+            "a": "den",
+            "why": "fahren auf … = حركة إلى → الأكوزاتيف: der ← den."
+          },
+          {
+            "q": "Fahren Sie über ___ Brücke! (حركة — die)",
+            "a": "die",
+            "why": "Wohin? → الأكوزاتيف: die Brücke كما هي — والأمر Sie من أمس."
+          },
+          {
+            "q": "Mein Bruder fährt gegen ___ Wand. (ضد — die)",
+            "a": "die",
+            "why": "gegen + الأكوزاتيف دائماً: die Wand."
+          },
+          {
+            "q": "Das Rad steht gegen ___ Tisch. (مستند إلى — der)",
+            "a": "den",
+            "why": "gegen أكوزاتيف حتى بلا حركة (steht): der ← den."
+          },
+          {
+            "q": "In der ___ ist eine Apotheke. (الجوار)",
+            "a": "Nähe",
+            "why": "in der Nähe عبارة ثابتة (Wo دائماً) — die Nähe مؤنث بلا جمع."
+          },
+          {
+            "q": "Gehen Sie zweihundert ___ geradeaus! (متر)",
+            "a": "Meter",
+            "why": "Meter بعد الرقم بلا نهاية جمع — كـEuro وUhr."
+          },
+          {
+            "q": "Die Apotheke ist heute ___. (مغلقة)",
+            "a": "zu",
+            "why": "zu sein = مغلق — كلمة قصيرة في آخر الجملة بعد ist."
+          },
+          {
+            "q": "Die Bank ist bis vier Uhr ___. (مفتوح)",
+            "a": "auf",
+            "why": "auf sein = مفتوح (= geöffnet) — عكس zu."
+          },
+          {
+            "q": "Die ___ ist dreihundert Meter lang. (الجسر)",
+            "a": "Brücke",
+            "why": "die Brücke = الجسر — مؤنث (‑n: Brücken)."
+          },
+          {
+            "q": "Der ___ ist dunkel. (النفق)",
+            "a": "Tunnel",
+            "why": "der Tunnel = النفق — مذكر (الجمع كالمفرد)."
+          },
+          {
+            "q": "Das ___ ist schön. (الضفة)",
+            "a": "Ufer",
+            "why": "das Ufer = الضفة — محايد (am Ufer · ans Ufer)."
+          },
+          {
+            "q": "Der ___ ist hinter dem Haus. (موقف السيارات)",
+            "a": "Parkplatz",
+            "why": "der Parkplatz = Park + Platz — مذكر كـder Platz."
+          },
+          {
+            "q": "Es gibt keinen ___, nur die Treppe. (مصعد)",
+            "a": "Aufzug",
+            "why": "der Aufzug = المصعد — keinen في الأكوزاتيف بعد es gibt."
+          },
+          {
+            "q": "___ ist der Parkplatz? — Hinter dem Haus. (أين)",
+            "a": "Wo",
+            "why": "الجواب بالداتيف (hinter dem) = مكان ← السؤال Wo?"
+          },
+          {
+            "q": "___ stellst du den Koffer? — Unter das Bett. (إلى أين)",
+            "a": "Wohin",
+            "why": "stellen + الأكوزاتيف (unter das) = وضع/حركة ← السؤال Wohin?"
           }
         ],
         "interleavedWith": [
-          "an",
-          "in"
+          "kirche",
+          "haus",
+          "wand",
+          "tisch",
+          "bett",
+          "koffer",
+          "treppe",
+          "apotheke",
+          "bank",
+          "restaurant",
+          "geradeaus",
+          "dunkel",
+          "uhr",
+          "vater",
+          "bruder",
+          "rad"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«المصعد في المنزل» (مكان)؟",
-            "a": "Der Aufzug ist im Haus."
+            "audioId": "tn-1",
+            "speakText": "Hallo Yusuf! Bist du schon in Tunis? Wo bist du jetzt?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل وصل يوسف إلى تونس، وأين هو الآن",
+              "متى يطير يوسف",
+              "أين المطار"
+            ],
+            "a": "هل وصل يوسف إلى تونس، وأين هو الآن",
+            "why": "Bist du schon in Tunis? · Wo bist du jetzt? = أين أنت الآن؟ (Wo للموقع)"
           },
           {
-            "q": "«أذهب إلى النفق» (حركة)؟",
-            "a": "Ich gehe in den Tunnel."
+            "audioId": "tn-2",
+            "speakText": "Ja, seit zwei Stunden! Ich bin jetzt zu Hause, bei der Familie. Das Haus ist im Zentrum, in der Nähe vom Park.",
+            "q": "استمع: أين البيت؟",
+            "choices": [
+              "في المركز، قرب الحديقة",
+              "قرب المطار",
+              "خلف المحطة"
+            ],
+            "a": "في المركز، قرب الحديقة",
+            "why": "im Zentrum = في المركز · in der Nähe vom Park = قرب الحديقة — seit zwei Stunden = منذ ساعتين."
+          },
+          {
+            "audioId": "tn-3",
+            "speakText": "Schön! Und wo ist der Parkplatz? Vor dem Haus?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "أين موقف السيارات — أمام البيت؟",
+              "أين الحديقة",
+              "كم سعر البيت"
+            ],
+            "a": "أين موقف السيارات — أمام البيت؟",
+            "why": "Wo ist der Parkplatz? Vor dem Haus? = أمام البيت؟ (vor + الداتيف = مكان)"
+          },
+          {
+            "audioId": "tn-4",
+            "speakText": "Nein, hinter dem Haus. Mein Vater fährt das Auto auf den Parkplatz hinter dem Haus.",
+            "q": "استمع: أين الموقف، وماذا يفعل الأب؟",
+            "choices": [
+              "خلف البيت — يدخل بالسيارة إلى الموقف",
+              "أمام البيت — يغسل السيارة",
+              "في المركز — يبيع السيارة"
+            ],
+            "a": "خلف البيت — يدخل بالسيارة إلى الموقف",
+            "why": "hinter dem Haus = خلف البيت (مكان) · fährt auf den Parkplatz = يدخل إلى الموقف (حركة — den)."
+          },
+          {
+            "audioId": "tn-5",
+            "speakText": "Und dein Zimmer? Ist es oben oder unten?",
+            "q": "استمع: ماذا تسأل لينا عن الغرفة؟",
+            "choices": [
+              "هل هي فوق أم تحت",
+              "هل هي كبيرة",
+              "هل فيها نافذة"
+            ],
+            "a": "هل هي فوق أم تحت",
+            "why": "Ist es oben oder unten? = فوق أم تحت؟ (من الوحدة 6)"
+          },
+          {
+            "audioId": "tn-6",
+            "speakText": "Oben. Es gibt keinen Aufzug, nur die Treppe. Mein Koffer steht noch an der Wand, neben der Tür.",
+            "q": "استمع: أين الحقيبة الآن؟",
+            "choices": [
+              "عند الجدار، بجانب الباب",
+              "تحت السرير",
+              "في المصعد"
+            ],
+            "a": "عند الجدار، بجانب الباب",
+            "why": "steht an der Wand, neben der Tür = عند الجدار بجانب الباب (الداتيف = مكان) · kein Aufzug, nur die Treppe."
+          },
+          {
+            "audioId": "tn-7",
+            "speakText": "Und wohin stellst du den Koffer?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "إلى أين يضع الحقيبة",
+              "أين الحقيبة",
+              "كم تزن الحقيبة"
+            ],
+            "a": "إلى أين يضع الحقيبة",
+            "why": "Wohin stellst du den Koffer? = إلى أين تضع الحقيبة؟ (stellen + Wohin)."
+          },
+          {
+            "audioId": "tn-8",
+            "speakText": "Unter das Bett! Und das Foto vom Kurs hänge ich an die Wand, über den Tisch.",
+            "q": "استمع: إلى أين الحقيبة والصورة؟",
+            "choices": [
+              "تحت السرير — وعلى الجدار فوق الطاولة",
+              "على السرير — وعلى الباب",
+              "في الخزانة — وفوق السرير"
+            ],
+            "a": "تحت السرير — وعلى الجدار فوق الطاولة",
+            "why": "Unter das Bett! = تحت السرير (حركة) · an die Wand, über den Tisch = على الجدار فوق الطاولة (الأكوزاتيف)."
+          },
+          {
+            "audioId": "tn-9",
+            "speakText": "Super! Und die Stadt? Was ist in der Nähe?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "ماذا يوجد في الجوار",
+              "أين المدينة",
+              "كم عدد المحلات"
+            ],
+            "a": "ماذا يوجد في الجوار",
+            "why": "Was ist in der Nähe? = ماذا يوجد في الجوار؟"
+          },
+          {
+            "audioId": "tn-10",
+            "speakText": "Viel! Gegenüber ist eine Apotheke — sie ist heute zu. Und die Bank an der Ecke ist bis vier Uhr auf.",
+            "q": "استمع: ما حال الصيدلية والبنك؟",
+            "choices": [
+              "الصيدلية مغلقة اليوم — البنك مفتوح حتى الرابعة",
+              "الصيدلية مفتوحة — البنك مغلق",
+              "كلاهما مغلق"
+            ],
+            "a": "الصيدلية مغلقة اليوم — البنك مفتوح حتى الرابعة",
+            "why": "sie ist heute zu = مغلقة · die Bank an der Ecke ist bis vier Uhr auf = مفتوح حتى الرابعة."
+          },
+          {
+            "audioId": "tn-11",
+            "speakText": "Auf und zu — das heißt geöffnet und geschlossen?",
+            "q": "استمع: كيف تفهم لينا auf وzu؟",
+            "choices": [
+              "مفتوح ومغلق (geöffnet · geschlossen)",
+              "فوق وتحت",
+              "قريب وبعيد"
+            ],
+            "a": "مفتوح ومغلق (geöffnet · geschlossen)",
+            "why": "das heißt geöffnet und geschlossen? = يعني مفتوح ومغلق؟"
+          },
+          {
+            "audioId": "tn-13",
+            "speakText": "Und wie kommst du in die Stadt? Zu Fuß?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "كيف يصل إلى المدينة — مشياً؟",
+              "كيف يصل إلى المطار",
+              "أين الحافلة"
+            ],
+            "a": "كيف يصل إلى المدينة — مشياً؟",
+            "why": "Wie kommst du in die Stadt? = كيف تصل إلى المدينة؟ (in die = حركة) · Zu Fuß?"
+          },
+          {
+            "audioId": "tn-14",
+            "speakText": "Ja. Zuerst über die Brücke, danach in den Tunnel — zweihundert Meter geradeaus, und ich bin im Zentrum.",
+            "q": "استمع: كيف الطريق إلى المركز؟",
+            "choices": [
+              "فوق الجسر، بعد ذلك في النفق، مئتا متر إلى الأمام",
+              "بالحافلة ثم بالقطار",
+              "عند الضفة ثم يساراً"
+            ],
+            "a": "فوق الجسر، بعد ذلك في النفق، مئتا متر إلى الأمام",
+            "why": "über die Brücke (فوق الجسر) · in den Tunnel (في النفق — حركة) · zweihundert Meter geradeaus · im Zentrum (في المركز)."
+          },
+          {
+            "audioId": "tn-15",
+            "speakText": "Ein Tunnel? Ist es im Tunnel nicht dunkel?",
+            "q": "استمع: ماذا تسأل لينا عن النفق؟",
+            "choices": [
+              "هل هو مظلم",
+              "هل هو طويل",
+              "هل هو جديد"
+            ],
+            "a": "هل هو مظلم",
+            "why": "Ist es im Tunnel nicht dunkel? = أليس مظلماً في النفق؟ (im = مكان)"
+          },
+          {
+            "audioId": "tn-16",
+            "speakText": "Ein bisschen. Aber am Ufer ist es schön: Das Restaurant ist am Ufer, auf der linken Seite.",
+            "q": "استمع: أين المطعم؟",
+            "choices": [
+              "عند الضفة، على الجانب الأيسر",
+              "في النفق",
+              "خلف البيت"
+            ],
+            "a": "عند الضفة، على الجانب الأيسر",
+            "why": "am Ufer = عند الضفة · auf der linken Seite = على الجانب الأيسر (الداتيف = مكان)."
+          },
+          {
+            "audioId": "tn-17",
+            "speakText": "Am Ufer? Sitzt ihr oft am Ufer?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل يجلسون كثيراً عند الضفة",
+              "هل الضفة بعيدة",
+              "هل المطعم غالٍ"
+            ],
+            "a": "هل يجلسون كثيراً عند الضفة",
+            "why": "Sitzt ihr oft am Ufer? = هل تجلسون كثيراً عند الضفة؟"
+          },
+          {
+            "audioId": "tn-18",
+            "speakText": "Ja, am Abend sitzen wir am Ufer. Und mein Bruder fährt mit dem Rad — heute gegen die Wand! Kein Problem, alles okay.",
+            "q": "استمع: متى يجلسون عند الضفة، وماذا حدث للأخ؟",
+            "choices": [
+              "في المساء — اصطدم بالدراجة بالجدار",
+              "في الصباح — سقط في الماء",
+              "في الظهر — ضاعت دراجته"
+            ],
+            "a": "في المساء — اصطدم بالدراجة بالجدار",
+            "why": "am Abend sitzen wir am Ufer · fährt mit dem Rad gegen die Wand = يصطدم بالجدار (gegen + الأكوزاتيف)."
+          },
+          {
+            "audioId": "tn-19",
+            "speakText": "Und morgen? Gehst du morgen ans Ufer?",
+            "q": "استمع: ماذا تسأل لينا عن الغد؟",
+            "choices": [
+              "هل يذهب إلى الضفة",
+              "هل يذهب إلى المدرسة",
+              "هل يطير إلى برلين"
+            ],
+            "a": "هل يذهب إلى الضفة",
+            "why": "Gehst du morgen ans Ufer? = هل تذهب غداً إلى الضفة؟ (ans = an das — حركة)"
           }
         ],
         "interleavedWith": [
-          "aufzug",
-          "tunnel"
+          "zentrum",
+          "park",
+          "haus",
+          "wand",
+          "bett",
+          "tisch",
+          "koffer",
+          "foto",
+          "treppe",
+          "apotheke",
+          "bank",
+          "restaurant",
+          "ecke",
+          "uhr",
+          "abend",
+          "vater",
+          "bruder",
+          "rad",
+          "dunkel",
+          "oben",
+          "unten",
+          "zuerst",
+          "danach",
+          "geradeaus"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«نجلس عند الضفة»؟",
-            "a": "Wir sitzen am Ufer."
+            "tokens": [
+              "Kirche.",
+              "vor",
+              "ist",
+              "Die",
+              "Bank",
+              "der"
+            ],
+            "a": "Die Bank ist vor der Kirche.",
+            "why": "Die Bank ← ist (مكان) ← vor der Kirche (الداتيف)."
           },
           {
-            "q": "«ضعوا المفتاح على الطاولة!» (أمر + حركة)؟",
-            "a": "Stellen Sie den Schlüssel auf den Tisch!"
+            "tokens": [
+              "Tunnel.",
+              "den",
+              "gehen",
+              "Wir",
+              "in"
+            ],
+            "a": "Wir gehen in den Tunnel.",
+            "why": "Wir ← gehen (حركة) ← in den Tunnel (الأكوزاتيف)."
+          },
+          {
+            "tokens": [
+              "Ufer.",
+              "am",
+              "Wir",
+              "sitzen"
+            ],
+            "a": "Wir sitzen am Ufer.",
+            "why": "sitzen = مكان ← am Ufer (an dem)."
+          },
+          {
+            "tokens": [
+              "Parkplatz.",
+              "den",
+              "Mein",
+              "fährt",
+              "Vater",
+              "auf"
+            ],
+            "a": "Mein Vater fährt auf den Parkplatz.",
+            "why": "fährt ثانياً ← auf den Parkplatz (حركة — den)."
+          },
+          {
+            "tokens": [
+              "Brücke!",
+              "die",
+              "Sie",
+              "über",
+              "Fahren"
+            ],
+            "a": "Fahren Sie über die Brücke!",
+            "why": "الأمر Sie: Fahren أولاً ← Sie ← über die Brücke (حركة)."
+          },
+          {
+            "tokens": [
+              "zu.",
+              "ist",
+              "Apotheke",
+              "Die",
+              "heute"
+            ],
+            "a": "Die Apotheke ist heute zu.",
+            "why": "Die Apotheke ← ist ← heute ← zu في الآخر (مغلقة)."
           }
         ],
         "interleavedWith": [
-          "ufer",
-          "seite"
+          "kirche",
+          "bank",
+          "vater",
+          "apotheke",
+          "heute"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "tn-12",
+            "speakText": "Genau! Die Apotheke ist zu, die Bank ist auf. Einfach!",
+            "a": "Genau! Die Apotheke ist zu, die Bank ist auf. Einfach!",
+            "why": "Genau بحرف كبير · Apotheke بحرف كبير وth · zu · Bank بحرف كبير · auf · Einfach بحرف كبير أول الجملة."
+          },
+          {
+            "audioId": "tn-20",
+            "speakText": "Ja — und du siehst alles, auf dem Handy! Bis morgen, Lena!",
+            "a": "Ja — und du siehst alles, auf dem Handy! Bis morgen, Lena!",
+            "why": "siehst بـie وhs · alles بـll · Handy بحرف كبير وy · Bis morgen · Lena بحرف كبير."
+          },
+          {
+            "audioId": "word-auf-sein",
+            "speakText": "auf sein.",
+            "a": "auf sein.",
+            "why": "auf sein: كلمتان — مفتوح (المحل/الباب)."
+          },
+          {
+            "audioId": "word-zu-sein",
+            "speakText": "zu sein.",
+            "a": "zu sein.",
+            "why": "zu sein: كلمتان — مغلق (المحل/الباب)."
+          },
+          {
+            "audioId": "word-bruecke",
+            "speakText": "die Brücke.",
+            "a": "die Brücke.",
+            "why": "die Brücke: ü وck — مؤنث."
+          },
+          {
+            "audioId": "word-tunnel",
+            "speakText": "der Tunnel.",
+            "a": "der Tunnel.",
+            "why": "der Tunnel: nn مضاعفة (u قصيرة) — مذكر."
+          },
+          {
+            "audioId": "word-ufer",
+            "speakText": "das Ufer.",
+            "a": "das Ufer.",
+            "why": "das Ufer: U طويلة وf واحدة — محايد."
+          },
+          {
+            "audioId": "word-parkplatz",
+            "speakText": "der Parkplatz.",
+            "a": "der Parkplatz.",
+            "why": "der Parkplatz: Park + Platz — tz في الآخر."
+          },
+          {
+            "audioId": "word-aufzug",
+            "speakText": "der Aufzug.",
+            "a": "der Aufzug.",
+            "why": "der Aufzug: Auf + zug — g في الآخر تُنطق k."
+          },
+          {
+            "audioId": "word-naehe",
+            "speakText": "die Nähe.",
+            "a": "die Nähe.",
+            "why": "die Nähe: ä طويلة وh صامتة — مؤنث بلا جمع."
+          }
+        ],
+        "interleavedWith": [
+          "apotheke",
+          "bank",
+          "einfach",
+          "handy",
+          "morgen"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Einen Ort beschreiben und eine Bewegung dorthin angeben",
-        "ar": "وصف مكان وإظهار الحركة إليه بنفس حرف الجر"
+        "de": "Wo ist der Parkplatz? — Hinter dem Haus. · Wohin fährst du? — Auf den Parkplatz. · Wir gehen über die Brücke in den Tunnel. · Ist die Bank auf? — Ja, bis vier Uhr.",
+        "ar": "تصف لزميلك بيتك وجواره: أين الأشياء (Wo? + الداتيف) وإلى أين تذهب/تضع (Wohin? + الأكوزاتيف) بالحرف نفسه — وتسأله عن محلات جواره (auf/zu) والطريق إلى المركز بالأمتار"
       },
       "situation": {
-        "de": "Vor dem Haus: wo ist der Parkplatz? — und wohin mit dem Gepäck?",
-        "ar": "أمام المنزل: أين موقف السيارات؟ — وإلى أين مع الأمتعة؟"
+        "de": "Im Kurs, zu Hause: Wo ist dein Zimmer? — Oben, neben der Treppe. · Wohin stellst du den Koffer? — Unter das Bett. · Was ist in der Nähe? — Eine Apotheke, sie ist heute zu. · Wie kommst du in die Stadt? — Über die Brücke, zweihundert Meter geradeaus.",
+        "ar": "في الدورة، كلٌّ في بيته على الشاشة: أحدكما يسأل Wo ist dein Zimmer? · Wo ist der Parkplatz? · Wohin stellst du den Koffer? · Was ist in der Nähe? · Ist die Bank auf? · Wie kommst du in die Stadt? والآخر يجيب بجمل كاملة: Oben, neben der Treppe. · Hinter dem Haus. · Unter das Bett. · In der Nähe ist eine Apotheke — sie ist heute zu. · Ja, bis vier Uhr. · Über die Brücke, danach in den Tunnel, zweihundert Meter geradeaus. — ثم تتبادلان."
       },
       "successCriteria": [
-        "جملتا مكان (Wo? + Dativ) + جملتا حركة (Wohin? + Akk) بحرف الجر نفسه + أمر واحد (Imperativ Sie)"
+        "ثلاث جمل مكان بالداتيف (vor der · hinter dem · am/im · auf der linken Seite · in der Nähe) وثلاث جمل حركة بالأكوزاتيف بالحرف نفسه (vor die · in den · ans · über die · auf den) — والفعل يقرّر (ist/steht/sitzt ≠ gehen/fahren/stellen).",
+        "جملة بـgegen + الأكوزاتيف (gegen die Wand) · مسافة بالأمتار بلا جمع (zweihundert Meter) · وحال محلّين بـauf/zu (Die Bank ist auf. · Die Apotheke ist zu.) — وبلا خلط الأداتين (in dem للحركة · der بعد gegen)."
       ]
     }
   },
@@ -143,20 +642,64 @@
       {
         "items": [
           {
-            "q": "«أمام الكنيسة» (مكان)؟",
-            "a": "vor der Kirche"
+            "q": "«الصورة معلّقة على الجدار» (مكان)؟",
+            "choices": [
+              "Das Bild hängt an der Wand.",
+              "Das Bild hängt an die Wand.",
+              "Das Bild hängt an dem Wand."
+            ],
+            "a": "Das Bild hängt an der Wand.",
+            "why": "hängt بلا مفعول = مكان → الداتيف: die Wand ← der Wand (لا dem — مؤنث)."
           },
           {
-            "q": "«إلى الجسر» (حركة)؟",
-            "a": "auf die Brücke"
+            "q": "«ندخل المدينة» (حركة)؟",
+            "choices": [
+              "Wir gehen in die Stadt.",
+              "Wir gehen in der Stadt.",
+              "Wir gehen in das Stadt."
+            ],
+            "a": "Wir gehen in die Stadt.",
+            "why": "gehen = حركة → الأكوزاتيف: die Stadt كما هي — in der = مكان."
           },
           {
-            "q": "«على الجانب الأيسر»؟",
-            "a": "auf der linken Seite"
+            "q": "die Brücke = ؟",
+            "choices": [
+              "الجسر",
+              "النفق",
+              "الضفة"
+            ],
+            "a": "الجسر",
+            "why": "die Brücke = الجسر · der Tunnel = النفق · das Ufer = الضفة."
           },
           {
-            "q": "«ضد الجدار»؟",
-            "a": "gegen die Wand"
+            "q": "«السيارة خلف البيت» (مكان)؟",
+            "choices": [
+              "Das Auto steht hinter dem Haus.",
+              "Das Auto steht hinter das Haus.",
+              "Das Auto steht hinter den Haus."
+            ],
+            "a": "Das Auto steht hinter dem Haus.",
+            "why": "steht = مكان → الداتيف: das Haus ← dem Haus."
+          },
+          {
+            "q": "«ضد الباب»؟",
+            "choices": [
+              "gegen die Tür",
+              "gegen der Tür",
+              "gegen dem Tür"
+            ],
+            "a": "gegen die Tür",
+            "why": "gegen + الأكوزاتيف دائماً: die Tür كما هي."
+          },
+          {
+            "q": "«البنك مفتوح حتى السادسة»؟",
+            "choices": [
+              "Die Bank ist bis sechs Uhr auf.",
+              "Die Bank ist bis sechs Uhr zu.",
+              "Die Bank ist bis sechs Uhr an."
+            ],
+            "a": "Die Bank ist bis sechs Uhr auf.",
+            "why": "auf sein = مفتوح · zu sein = مغلق · an sein = مشتغل (للأجهزة)."
           }
         ],
         "passingScore": 0.75
@@ -164,20 +707,64 @@
       {
         "items": [
           {
-            "q": "«في القرب»؟",
-            "a": "in der Nähe"
+            "q": "«أمام البريد» (مكان)؟",
+            "choices": [
+              "vor der Post",
+              "vor die Post",
+              "vor dem Post"
+            ],
+            "a": "vor der Post",
+            "why": "Wo? → الداتيف: die Post ← der Post (مؤنث — لا dem)."
           },
           {
-            "q": "«موقف السيارات خلف المنزل»؟",
-            "a": "Der Parkplatz ist hinter dem Haus."
+            "q": "«أذهب إلى الضفة» (حركة)؟",
+            "choices": [
+              "Ich gehe ans Ufer.",
+              "Ich gehe am Ufer.",
+              "Ich gehe an der Ufer."
+            ],
+            "a": "Ich gehe ans Ufer.",
+            "why": "gehen = حركة → an das = ans (das Ufer محايد) — am = مكان."
           },
           {
-            "q": "«امشوا 100 متر إلى الأمام!»؟",
-            "a": "Gehen Sie 100 Meter geradeaus!"
+            "q": "der Tunnel = ؟",
+            "choices": [
+              "النفق",
+              "الجسر",
+              "المصعد"
+            ],
+            "a": "النفق",
+            "why": "der Tunnel = النفق · die Brücke = الجسر · der Aufzug = المصعد."
           },
           {
-            "q": "«المصعد»؟",
-            "a": "der Aufzug"
+            "q": "«في الجوار محطة»؟",
+            "choices": [
+              "In der Nähe ist eine Haltestelle.",
+              "In die Nähe ist eine Haltestelle.",
+              "In dem Nähe ist eine Haltestelle."
+            ],
+            "a": "In der Nähe ist eine Haltestelle.",
+            "why": "in der Nähe عبارة ثابتة بالداتيف — die Nähe مؤنث ← der."
+          },
+          {
+            "q": "«ثلاثمئة متر إلى الأمام»؟",
+            "choices": [
+              "dreihundert Meter geradeaus",
+              "dreihundert Meters geradeaus",
+              "dreihundert Metern geradeaus"
+            ],
+            "a": "dreihundert Meter geradeaus",
+            "why": "Meter بعد الرقم بلا نهاية جمع — كـzwanzig Euro."
+          },
+          {
+            "q": "«هل البريد مغلق؟»؟",
+            "choices": [
+              "Ist die Post zu?",
+              "Ist die Post aus?",
+              "Ist die Post weg?"
+            ],
+            "a": "Ist die Post zu?",
+            "why": "zu sein = مغلق (المحل) · aus sein = مطفأ (الجهاز) · weg sein = ضاع/ذهب."
           }
         ],
         "passingScore": 0.75
@@ -185,20 +772,64 @@
       {
         "items": [
           {
-            "q": "«الجسر» و«النفق»؟",
-            "a": "die Brücke / der Tunnel"
+            "q": "«المطعم على الجانب الأيمن» (مكان)؟",
+            "choices": [
+              "Das Restaurant ist auf der rechten Seite.",
+              "Das Restaurant ist auf die rechte Seite.",
+              "Das Restaurant ist auf dem rechten Seite."
+            ],
+            "a": "Das Restaurant ist auf der rechten Seite.",
+            "why": "ist = مكان → الداتيف: die Seite ← der Seite — auf der rechten/linken Seite."
           },
           {
-            "q": "«الضفة»؟",
-            "a": "das Ufer (am Ufer)"
+            "q": "«يضع الحقيبة تحت السرير» (حركة)؟",
+            "choices": [
+              "Er stellt den Koffer unter das Bett.",
+              "Er stellt den Koffer unter dem Bett.",
+              "Er stellt den Koffer unter den Bett."
+            ],
+            "a": "Er stellt den Koffer unter das Bett.",
+            "why": "stellen = وضع/حركة → الأكوزاتيف: das Bett كما هو (محايد — لا den)."
           },
           {
-            "q": "«أعلّق الصورة على الجدار» (حركة)؟",
-            "a": "Ich hänge das Bild an die Wand."
+            "q": "das Ufer = ؟",
+            "choices": [
+              "الضفة",
+              "الجسر",
+              "الجانب"
+            ],
+            "a": "الضفة",
+            "why": "das Ufer = الضفة · die Brücke = الجسر · die Seite = الجانب."
           },
           {
-            "q": "«الصورة على الجدار» (مكان)؟",
-            "a": "Das Bild hängt an der Wand."
+            "q": "«نعبر الجسر» (حركة)؟",
+            "choices": [
+              "Wir gehen über die Brücke.",
+              "Wir gehen über der Brücke.",
+              "Wir gehen über das Brücke."
+            ],
+            "a": "Wir gehen über die Brücke.",
+            "why": "gehen = حركة → الأكوزاتيف: die Brücke كما هي — über der = مكان (فوق الجسر واقفاً)."
+          },
+          {
+            "q": "«أين المصعد؟ — بجانب الدرج»؟",
+            "choices": [
+              "Wo ist der Aufzug? — Neben der Treppe.",
+              "Wohin ist der Aufzug? — Neben der Treppe.",
+              "Wo ist der Aufzug? — Neben die Treppe."
+            ],
+            "a": "Wo ist der Aufzug? — Neben der Treppe.",
+            "why": "الموقع بـWo (لا Wohin) — وneben + الداتيف: die Treppe ← der Treppe."
+          },
+          {
+            "q": "«يصطدم بالدراجة بالطاولة»؟",
+            "choices": [
+              "Er fährt gegen den Tisch.",
+              "Er fährt gegen dem Tisch.",
+              "Er fährt gegen der Tisch."
+            ],
+            "a": "Er fährt gegen den Tisch.",
+            "why": "gegen + الأكوزاتيف دائماً: der Tisch ← den Tisch."
           }
         ],
         "passingScore": 0.75
@@ -207,53 +838,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Wo? → Dativ: an der Wand, im Haus, am Ufer. Wohin? → Akkusativ: an die Wand, in den Tunnel, auf die Brücke. Gegen immer Akkusativ!",
-      "ar": "أين؟ → داتيف: على الجدار، في المنزل، عند الضفة. إلى أين؟ → أكوزاتيف: إلى الجدار، إلى النفق، إلى الجسر. gegen أكوزاتيف دائماً!"
+      "de": "Wo? — Die Bank ist vor der Kirche. · Im Tunnel ist es dunkel. · Wir sitzen am Ufer. · Das Restaurant ist auf der linken Seite. · Der Parkplatz ist hinter dem Haus. · In der Nähe ist eine Apotheke. — Wohin? — Ich gehe vor die Kirche. · Wir gehen in den Tunnel. · Wir gehen ans Ufer. · Fahren Sie über die Brücke! · Mein Vater fährt auf den Parkplatz. · Wir gehen in die Stadt. — Mein Bruder fährt gegen die Wand. · Gehen Sie zweihundert Meter geradeaus! · Die Apotheke ist zu, die Bank ist auf.",
+      "ar": "القاعدة باسمها بأربع خطوات: (1) تسعة حروف متأرجحة (an · in · auf · vor · hinter · über · unter · neben · zwischen) — اسأل: Wo? (مكان: ist · steht · sitzt · hängt) أم Wohin? (حركة إلى: gehen · fahren · stellen · legen · hängen + مفعول)؟ (2) Wo? → الداتيف: dem · der · im · am (vor der Kirche · hinter dem Haus · im Tunnel · am Ufer · auf der linken Seite · in der Nähe). (3) Wohin? → الأكوزاتيف: den · die · das · ins · ans (vor die Kirche · in den Tunnel · ans Ufer · über die Brücke · auf den Parkplatz · in die Stadt) — المؤنث die في الحالتين فالفعل يقرّر. (4) gegen الأكوزاتيف دائماً (gegen die Wand · gegen den Tisch · gegen zehn Uhr) · Meter بلا جمع بعد الرقم · auf sein (مفتوح) ≠ zu sein (مغلق). الكلمات: die Brücke (‑n) · der Tunnel (‑) · das Ufer (‑) · die Seite (‑n) · der Parkplatz (‑plätze) · der Aufzug (‑züge) · die Nähe (بلا جمع) · der Meter (‑)."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Das Bild hängt an die Wand~~ / ~~Ich hänge das Bild an der Wand~~",
-          "ar": "Wo? → Dativ ↔ Wohin? → Akkusativ (نفس حرف الجر)"
+          "de": "~~Ich gehe in dem Tunnel.~~ · ~~Wir sitzen an das Ufer.~~",
+          "ar": "الحرف نفسه — والأداة تقول: Wo? الداتيف ≠ Wohin? الأكوزاتيف"
         },
-        "whyArabicSpeakerFails": "«على» واحدة بالعربية للحركة والمكان؛ الألماني يغيّر الإعراب: hängt an **der** Wand (مكان) ↔ hängt … an **die** Wand (حركة) — أعظم مصيدة إعرابية في المستوى A1 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«في» و«على» و«أمام» حرف واحد في العربية لا يتغيّر ما بعده بين المكان والحركة («أنا في النفق» = «أدخل في النفق»)، فيختار المتعلم أداة واحدة للحالتين (~~in dem Tunnel gehen~~ · ~~an das Ufer sitzen~~). والألمانية: الحرف نفسه والأداة تتغيّر — Wo? im Tunnel · am Ufer (الداتيف: مكان) ≠ Wohin? in den Tunnel · ans Ufer (الأكوزاتيف: حركة إلى) — القاعدة نفسها من البيت (an der Wand ≠ an die Wand) باسمها اليوم — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Das Bild hängt an der Wand. · Ich hänge das Bild an die Wand.",
-          "ar": "الصورة على الجدار (مكان). · أعلّق الصورة على الجدار (حركة)."
+          "de": "Ich gehe in den Tunnel. · Im Tunnel ist es dunkel. · Wir sitzen am Ufer. · Wir gehen ans Ufer.",
+          "ar": "أدخل النفق · في النفق مظلم · نجلس عند الضفة · نذهب إلى الضفة"
         },
         "exercise": {
-          "q": "أكمل: Der Tunnel ist in ___ Tunnel (der) — Ich gehe in ___ Tunnel (der).",
-          "a": "dem / den"
+          "q": "أكمل: Ich gehe in ___ Park. (حركة — der)",
+          "a": "den"
         }
       },
       {
         "commonError": {
-          "de": "~~gegen der Wand~~ / ~~gegen dem Auto~~",
-          "ar": "gegen تجرّ الأكوزاتيف دائماً (بلا استثناء)"
+          "de": "~~gegen der Wand~~ · ~~gegen dem Auto~~",
+          "ar": "gegen أكوزاتيف دائماً — ليس متأرجحاً"
         },
-        "whyArabicSpeakerFails": "«ضد/نحو» بالعربية تجرّ؛ الألماني gegen أكوزاتيف خالص حتى مع السكون — لاحظ أنها ليست متأرجحة أصلاً (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«ضد/نحو» في العربية حرف جر يجرّ ما بعده، وقد تعلّم المتعلم حروفاً تجرّ بالداتيف دائماً (mit · von · zu — الوحدة 8) فيقيس gegen عليها (~~gegen der Wand~~). وgegen أكوزاتيف خالص حتى بلا حركة: gegen die Wand · gegen den Tisch · gegen zehn Uhr — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "gegen die Wand · gegen den Tisch",
-          "ar": "ضد الجدار · ضد الطاولة"
+          "de": "Mein Bruder fährt gegen die Wand. · Das Rad steht gegen den Tisch.",
+          "ar": "أخي يصطدم بالجدار · الدراجة مستندة إلى الطاولة"
         },
         "exercise": {
-          "q": "أكمل: Das Fahrrad fährt gegen ___ (die) Wand.",
+          "q": "أكمل: Das Rad fährt gegen ___ Tür. (die)",
           "a": "die"
         }
       },
       {
         "commonError": {
-          "de": "~~am Bahnhof~~ للحركة و~~an den Bahnhof~~ للمكان (معكوسة)",
-          "ar": "am/im (Dativ — مكان) ↔ an den/in den (Akk — حركة)"
+          "de": "~~vor Kirche~~ · ~~in Nähe~~ · ~~hinter Haus~~",
+          "ar": "بعد الحرف أداة مصرَّفة دائماً: vor der Kirche · in der Nähe · hinter dem Haus"
         },
-        "whyArabicSpeakerFails": "الاندماجات am/im تُسمع ككلمة واحدة فيُنسى أنها داتيف مكان فقط؛ الحركة تحتاج an den/in den المنفصلتين — تكملة مصيدة الاندماجات من الوحدة 8 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أمام الكنيسة» و«قرب الصيدلية» و«خلف البيت» تُصاغ في العربية بالإضافة بلا أداة ظاهرة، فيحذف المتعلم الأداة بعد الحرف الألماني (~~vor Kirche~~ · ~~in Nähe~~). والألمانية تُلزم الأداة المصرَّفة التي تحمل الحالة: vor der Kirche · in der Nähe · hinter dem Haus · auf der linken Seite — بلا أداة فقط مع أسماء المدن والبلدان (in Tunis · nach Berlin) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich bin am Bahnhof. · Ich gehe an den Bahnhof.",
-          "ar": "أنا عند المحطة (مكان). · أذهب إلى المحطة (حركة)."
+          "de": "Die Bank ist vor der Kirche. · In der Nähe ist eine Apotheke. · Der Parkplatz ist hinter dem Haus.",
+          "ar": "البنك أمام الكنيسة · في الجوار صيدلية · الموقف خلف البيت"
         },
         "exercise": {
-          "q": "أكمل: Wir warten am ___ (der) Ufer — Wir gehen an ___ (das) Ufer.",
-          "a": "Ufer (am) / das Ufer"
+          "q": "أكمل: In ___ Nähe ist ein Park. (die)",
+          "a": "der"
         }
       }
     ],
@@ -269,19 +900,32 @@
       "parkplatz",
       "aufzug",
       "naehe",
-      "meter"
+      "meter",
+      "auf-sein",
+      "zu-sein"
     ]
   },
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/gegen",
       "https://www.duden.de/rechtschreibung/an",
-      "https://www.duden.de/rechtschreibung/Bruecke"
+      "https://www.duden.de/rechtschreibung/vor_Praeposition",
+      "https://www.duden.de/rechtschreibung/Bruecke",
+      "https://www.duden.de/rechtschreibung/Tunnel",
+      "https://www.duden.de/rechtschreibung/Ufer",
+      "https://www.duden.de/rechtschreibung/Naehe",
+      "https://www.duden.de/rechtschreibung/Meter"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/gegen"
+      "https://de.wiktionary.org/wiki/gegen",
+      "https://de.wiktionary.org/wiki/vor",
+      "https://de.wiktionary.org/wiki/Br%C3%BCcke",
+      "https://de.wiktionary.org/wiki/Ufer",
+      "https://de.wiktionary.org/wiki/auf_sein"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-wechselpraep",
@@ -299,11 +943,25 @@
     "word-parkplatz",
     "word-aufzug",
     "word-naehe",
-    "word-meter"
+    "word-meter",
+    "word-auf-sein",
+    "word-zu-sein"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Wo? und Wohin? (Wechselpräpositionen)",
-    "goetheWordListOverlap": []
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Wo? und Wohin? (Wechselpräpositionen) · auf/zu",
+    "goetheWordListOverlap": [
+      "an",
+      "in",
+      "vor",
+      "gegen",
+      "bruecke",
+      "seite",
+      "aufzug",
+      "naehe",
+      "meter",
+      "auf-sein",
+      "zu-sein"
+    ]
   }
 }
