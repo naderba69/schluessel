@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-wetter-es",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Wie ist das Wetter? — Es regnet. · Es ist kalt. · Die Sonne scheint. · Es sind zwanzig Grad. — Jetzt regnet es. · Hier ist es warm.",
+    "ar": "جملة الطقس بـes الشكلي: es + فعل الطقس (Es regnet.) · es ist + صفة (Es ist kalt · warm · heiß · nass · sonnig · schön) · es sind + الدرجات (Es sind zwanzig Grad.) — وes لا يسقط أبداً: إن تقدّم الزمن أو المكان جاء es بعد الفعل (Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt.) — وما له فاعل حقيقي فبلا es: Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. · das Wetter · die Sonne · der Regen · der Schnee · der Wind · die Wolke · der Himmel · der Grad"
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u10-d1",
+    "a1-u10-d6"
+  ],
+  "payload": {
+    "topicAr": "«تمطر» و«الجو بارد» و«الحرارة عشرون درجة» — ثلاث جمل عربية بلا فاعل حقيقي. والألمانية تطلب فاعلاً في كل جملة، فتضع es شكلياً بلا معنى: Es regnet. · Es ist kalt. · Es sind zwanzig Grad. — وهذا الـes لا يسقط ولو تقدّم الزمن أو المكان إلى الموضع الأول: Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. — أما ما له فاعل حقيقي (الشمس · الريح · السحب) فيأتي فاعله مكان es: Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. — والسؤال عنها كلها: Wie ist das Wetter? ومع الدرجات: Wie viel Grad sind es?",
+    "sceneAr": "مكالمة صباحية في اليوم الثالث بتونس (u10-d1): لينا تسأل Wie ist das Wetter in Tunis? ويوسف يصف: Hier ist es schön: Die Sonne scheint, und am Himmel sind keine Wolken · Bei uns sind es fünfundzwanzig Grad · Es ist warm, nicht heiß — ولينا تصف طقسها: Ja, es regnet, und es ist kalt · Der Wind ist auch kalt · Nur acht Grad · Am Morgen Schnee und jetzt Regen — die Straße ist nass · وعن الغد: Morgen regnet es nicht. Morgen ist es sonnig, aber kalt.",
+    "examples": [
+      {
+        "de": "Wie ist das Wetter in Tunis? — Es ist schön: Die Sonne scheint. · Wie ist das Wetter bei dir? — Es regnet, und es ist kalt.",
+        "ar": "كيف الطقس في تونس؟ — جميل: الشمس مشرقة · كيف الطقس عندك؟ — تمطر، والجو بارد — السؤال واحد (Wie ist das Wetter?) والجواب بـes: Es ist schön · Es regnet · Es ist kalt — وDie Sonne scheint بفاعلها الحقيقي."
+      },
+      {
+        "de": "Es regnet. · Es ist kalt. · Es ist warm, nicht heiß. · Heute ist es sonnig. · Die Straße ist nass.",
+        "ar": "تمطر · الجو بارد · الجو دافئ لا حار · اليوم الجو مشمس · الشارع مبلل — شكلان: es + فعل الطقس (regnet) وes ist + صفة (kalt · warm · heiß · sonnig) — وnass هنا صفة للشارع ففاعلها die Straße."
+      },
+      {
+        "de": "Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. · Morgen regnet es nicht. · Morgen ist es sonnig, aber kalt.",
+        "ar": "الآن تمطر · هنا الجو دافئ · عندنا الجو بارد · غداً لا تمطر · غداً مشمس لكن بارد — تقدّم الزمن أو المكان فجاء الفعل ثانياً وes بعده مباشرة — لا يسقط أبداً."
+      },
+      {
+        "de": "Wie viel Grad sind es? — Es sind zwanzig Grad. · Bei uns sind es fünfundzwanzig Grad. · Nur acht Grad. — Der Wind ist heute kalt. · Am Himmel sind keine Wolken. · Am Morgen ist hier Schnee.",
+        "ar": "كم درجة؟ — عشرون درجة · عندنا خمس وعشرون درجة · ثماني درجات فقط — مع الدرجات sind (جمع) وGrad بلا ‑e بعد العدد كـEuro · والريح والسحب والثلج فاعلٌ حقيقي بلا es: Der Wind ist heute kalt · Am Himmel sind keine Wolken · hier ist Schnee."
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأول: Es regnet · Es ist kalt — ما معنى es هنا؟ هل يقابله شيء في «تمطر» و«الجو بارد»؟ (2) في الثاني: Es regnet وEs ist kalt — أين الفعل في كل واحدة؟ ولماذا ist في الثانية لا في الأولى؟ (3) في الثالث: Jetzt regnet es · Hier ist es warm — أين ذهب es حين تقدّم jetzt وhier؟ وهل سقط؟ (4) في الرابع: Es sind zwanzig Grad — لماذا sind لا ist؟ وهل Grad فيها ‑e؟ (5) Die Sonne scheint · Der Wind ist heute kalt — لماذا لا es هنا؟ ما الفاعل؟",
+    "ruleDe": "Wie ist das Wetter? — Es regnet. · Es ist kalt. · Es ist warm. · Es ist heiß. · Heute ist es sonnig. · Es ist schön. — Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. · Morgen regnet es nicht. — Wie viel Grad sind es? — Es sind zwanzig Grad. · Nur acht Grad. — Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. · Die Straße ist nass. · Am Morgen ist hier Schnee.",
+    "ruleAr": "جملة الطقس بأربع خطوات: (1) السؤال واحد: Wie ist das Wetter? (heute · in Tunis · bei dir) — والجواب يبدأ بـes الشكلي: فاعل بلا معنى لأن الألمانية لا تعرف جملة بلا فاعل. (2) شكلان للجواب: es + فعل الطقس: Es regnet. (والفعل بصيغة er/sie/es: ‑t) · أو es ist + صفة: Es ist kalt. · Es ist warm. · Es ist heiß. · Es ist sonnig. · Es ist nass. · Es ist schön. — إما الفعل وإما ist + صفة، لا معاً. (3) es لا يسقط: إن تقدّم الزمن أو المكان جاء الفعل ثانياً (قوس الجملة — u9-d5) وes بعده مباشرة: Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. · Morgen regnet es nicht. · Morgen ist es sonnig. — وفي السؤال: Regnet es? · Ist es kalt? (4) الدرجات بالجمع: Wie viel Grad sind es? — Es sind zwanzig Grad. · Bei uns sind es fünfundzwanzig Grad. — Grad لا يأخذ ‑e بعد العدد (كـzwanzig Euro). وما له فاعل حقيقي فبلا es: Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. · Die Straße ist nass. · Am Morgen ist hier Schnee. — الكلمات: das Wetter · die Sonne · der Regen (regnen) · der Schnee · der Wind (‑e) · die Wolke (‑n) · der Himmel · der Grad · warm · kalt · nass · sonnig.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «الجو بارد» — كلمة «الجو» تقوم في العربية مقام الفاعل الفارغ، فاقرأ es كـ«الجو»: Es ist kalt = الجو بارد — عون. (2) «الشمس مشرقة» لها فاعل حقيقي في اللغتين — عون: Die Sonne scheint. (3) الأعداد تعرفها: zwanzig · acht — Es sind zwanzig Grad — عون. وما يختلف ثلاثة: (1) «تمطر» فعل عربي بلا فاعل ظاهر، فيحذف المتعلم es: ~~Regnet heute.~~ · ~~Heute regnet.~~ — والألمانية لا تعرف جملة بلا فاعل: Es regnet heute. · Jetzt regnet es. (2) «الجو بارد» و«اليوم بارد» جملتان اسميتان بلا فعل، فيترجم المتعلم حرفياً: ~~Es kalt.~~ · ~~Heute kalt.~~ — وكل جملة ألمانية لها فعل مصرَّف في موضعه: Es ist kalt. · Heute ist es kalt. (3) «الجو ممطر» وصفٌ في العربية، فيخلط المتعلم الشكلين: ~~Es ist regnet.~~ · ~~Es ist regnen.~~ — والألمانية تختار: فعل الطقس وحده (Es regnet.) أو ist + صفة (Es ist nass.) — لا الاثنين معاً — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "فعل الثلج schneien (Es schneit.) ليس في قائمة SD1 — اليوم الثلج اسمٌ فقط: der Schnee (Am Morgen ist hier Schnee.) · وكذلك الصفات stark وblau ليستا اليوم.",
+      "الطقس في الماضي (Es hat geregnet. · Es war kalt.) — Perfekt في u10-d3 وwar لاحقاً؛ اليوم الحاضر وحده (heute · morgen · jetzt).",
+      "أسماء الفصول (der Winter · der Sommer · der Frühling · der Herbst) كلمات SD1 لكنها ليست في هذا الدرس — فهماً سلبياً لاحقاً؛ اليوم الشهور من u3-d4 إن احتجت (im Januar).",
+      "الصفة قبل الاسم (ein warmer Tag · das schöne Wetter) تصريفٌ لاحق — اليوم الصفة بعد ist فقط: Es ist warm. · Das Wetter ist schön."
+    ],
+    "beads": [
+      "Heute",
+      "regnet",
+      "es",
+      "bei",
+      "uns",
+      "nicht."
+    ],
+    "properNouns": [
+      "Tunis"
+    ]
+  }
+}

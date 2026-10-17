@@ -123,7 +123,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u10-d1")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D165 صارت الوحدات 1–9 (d1..d5) كلها مُرقّاة
+const legacy = realLessons.find((l) => l.id === "a1-u10-d2")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D166 صارت الوحدات 1–9 (d1..d5) وu10-d1 مُرقّاة
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -379,7 +379,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u10-d1", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u10-d2", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -565,20 +565,19 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("الدرس التالي غير المُرقّى (a1-u10-d1 بعد D165): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u10-d2 بعد D166): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
-    // بعد D165 صارت الوحدة 9 كلها مكتملة؛ الفجوات الفعلية لـu10-d1 (مقيسة قبل النقل): لا ملف ars-wetter-es · أربعة أمثلة كلمات بكلمات غير مدروسة (schneit/Winter · stark · blau · Winter)
-    // · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · الواجهة في التدريب/المصائد تخرقها blau وفي الـQuiz schneit/stark/Winter · Quiz 3×4 · كل الكلمات مُتدرَّبة — القياس لا التخمين
-    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-sample", "e-upgrade-sample", "e-upgrade-sample", "e-upgrade-sample"]);
-    expect(r.rule[0]?.message).toMatch(/ars-wetter-es/);
-    expect(r.rule.slice(1).map((i) => i.message).join(" ")).toMatch(/schneit، winter.*stark.*blau.*winter/);
+    // بعد D166 صار u10-d1 مُرقّى؛ الفجوات الفعلية لـu10-d2 (مقيسة قبل النقل): لا ملف ars-termin-datum · مثال datum بكلمة غير مدروسة (wichtig)
+    // · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · الواجهة في التدريب/المصائد تخرقها dritte/zwölfte (الأعداد الترتيبية) · Quiz 3×4 · كل الكلمات مُتدرَّبة — القياس لا التخمين
+    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-sample"]);
+    expect(r.rule[0]?.message).toMatch(/ars-termin-datum/);
+    expect(r.rule[1]?.message).toMatch(/datum .*wichtig/);
     expect(r.practice.map((i) => i.code).sort()).toEqual([
       ...Array(6).fill("e-upgrade-item"), "e-upgrade-front", "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
     ].sort());
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/blau/);
-    expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-front"]);
-    expect(r.quiz[3]?.message).toMatch(/schneit، stark، winter/);
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/dritte، zwölfte/);
+    expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size"]);
     expect(r.coverage).toEqual([]);
     expect(r.quizMin).toBe(4);
   });
@@ -1395,6 +1394,104 @@ describe("D115 — أدوات القياس", () => {
     const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
     expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(norm(a))))).toEqual([]);
     expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+  });
+  it("a1-u10-d1 مُرقّى (D166): صفر نقص — 60 بنداً · 4 أنواع · Quiz 6 · 12 كلمة · ars-wetter-es (جديدة) · أربعة أمثلة كلمات صُحّحت · كل 20 سطراً وأحد عشر مقطع كلمة مستخدمة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u10-d1")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u10-d1")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([60, 4, 6, 12]);
+    // الكلمات الاثنتا عشرة كما في الخطة (بلا إسناد نواة — u10-d1 ليس في خطة SD1) — sonne وحدها تكرار مقصود من u3-d4 (كانت كذلك قبل الترقية)
+    const earlier = new Set(realLessons.filter((x) => x.unit <= 9).flatMap((x) => x.praesentation.wordIds));
+    expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual(["sonne"]);
+    expect(l.praesentation.wordIds).toEqual(["wetter", "sonne", "regen", "schnee", "wind", "wolke", "himmel", "grad", "warm", "kalt", "nass", "sonnig"]);
+    // قاعدة اليوم جديدة: ars-wetter-es (تشاركها u10-d6)
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-wetter-es"]);
+    const we = rules.get("ars-wetter-es")!;
+    expect(we.usedInLessons).toEqual(["a1-u10-d1", "a1-u10-d6"]);
+    expect(we.payload.ruleDe).toBe("Wie ist das Wetter? — Es regnet. · Es ist kalt. · Es ist warm. · Es ist heiß. · Heute ist es sonnig. · Es ist schön. — Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. · Morgen regnet es nicht. — Wie viel Grad sind es? — Es sind zwanzig Grad. · Nur acht Grad. — Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. · Die Straße ist nass. · Am Morgen ist hier Schnee.");
+    // جملة الطقس بأربع خطوات: السؤال · الشكلان (فعل الطقس / ist + صفة) · es لا يسقط بعد الزمن/المكان · الدرجات بالجمع وGrad بلا ‑e — والفاعل الحقيقي بلا es
+    for (const x of ["جملة الطقس بأربع خطوات", "Wie ist das Wetter?", "es + فعل الطقس: Es regnet.", "es ist + صفة: Es ist kalt.", "إما الفعل وإما ist + صفة، لا معاً", "Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt.", "Regnet es? · Ist es kalt?", "Es sind zwanzig Grad.", "Grad لا يأخذ ‑e بعد العدد", "Die Sonne scheint. · Der Wind ist heute kalt."])
+      expect(we.payload.ruleAr).toContain(x);
+    for (const x of ["~~Regnet heute.~~", "~~Heute regnet.~~", "~~Es kalt.~~", "~~Heute kalt.~~", "~~Es ist regnet.~~", "~~Es ist regnen.~~", "خريطة التداخل 10‑ي"]) expect(we.payload.contrastAr).toContain(x);
+    expect(we.payload.limitsAr).toHaveLength(4);
+    expect(we.payload.limitsAr.join(" ")).toMatch(/schneien .*ليس في قائمة SD1/);
+    expect(we.payload.limitsAr.join(" ")).toMatch(/der Winter · der Sommer/);
+    expect(we.payload.beads).toEqual(["Heute", "regnet", "es", "bei", "uns", "nicht."]);
+    expect(we.payload.properNouns).toEqual(["Tunis"]);
+    // النطاق في نصوص المتعلم الألمانية: لا schneit/Winter/Sommer/stark/blau (كانت في الملف القديم) ولا Perfekt/war ولا «Es ist regnet»
+    const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.correct.de, c.exercise.a]), g: l.ziel.de, t: [l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de] });
+    expect(shown).not.toMatch(/\b(schneit|schneien|Winter|Sommer|stark|blau|war|geregnet|Es ist regnet|Grade)\b/i);
+    expect(e.properNouns).toEqual(["Yusuf", "Lena", "Berlin", "Tunis"]);
+    expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
+    // أربعة أمثلة كلمات صُحّحت (كانت بـschneit/Winter · stark · blau · Winter — غير مدروسة) — بكلمات الدرس نفسه
+    const w = (id: string) => words.find((x) => x.id === id)!;
+    const sample = (id: string) => w(id).sampleSentence!.de;
+    expect([sample("schnee"), sample("wind"), sample("himmel"), sample("kalt")]).toEqual(["Am Morgen ist hier Schnee.", "Der Wind ist heute kalt.", "Am Himmel sind keine Wolken.", "Heute ist es kalt."]);
+    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|schneit|Winter|stark|blau/);
+    for (const id of ["schnee", "wind", "himmel", "kalt"]) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u10-d1");
+    expect(w("sonne").sampleSentence?.sourceLesson).toBe("a1-u3-d4");
+    // الحوار (wt-1..20) مكالمة فيديو صباحية في اليوم الثالث بتونس (N-037/N-100): شمس عند يوسف ومطر وثلج عند لينا — لا لقاء في مكان واحد
+    const script = JSON.parse(readFileSync(join(CONTENT, "audio-scripts/a1-u10-d1-wie-ist-das-wetter.json"), "utf8")) as { lines: { id: string; speaker: string; text: string }[] };
+    expect(script.lines).toHaveLength(20);
+    expect(script.lines.find((x) => x.id === "wt-5")?.text).toBe("Ja, es regnet, und es ist kalt. Der Wind ist auch kalt.");
+    expect(script.lines.find((x) => x.id === "wt-15")?.text).toBe("Morgen regnet es nicht. Morgen ist es sonnig, aber kalt.");
+    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\bwir (sind|gehen|fahren) (hier|zusammen)\b|hole dich|bringe dich|\bdann\b|\bweil\b|\bwarum\b|\bleider\b|\bsagt\b|\bwar\b|schneit|Winter|Ich nehme den Bus\./i);
+    // N-020 لهذا الدرس: الاستدعاء من دروس سابقة (heiß · morgen · Uhr — u2-d4/u3-d3/u3-d1) كما كان
+    expect(l.warmup.cardIds).toEqual(["heiss", "morgen", "uhr"]);
+    expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+    // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102)
+    const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
+    for (const st of l.uebung.stations) {
+      expect(st.interleavedWith.length).toBeGreaterThan(0);
+      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
+      for (const ref of st.interleavedWith) {
+        expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
+        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
+        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+      }
+    }
+    // الحوار الجديد (wt-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة الخمسة (≤132) مع أحد عشر مقطع كلمة (بلا sonne المعروفة)، والأسرع الخمسة عشر كلها استماعاً
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("wt-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 20 }, (_, i) => `wt-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-grad", "word-himmel", "word-kalt", "word-nass", "word-regen", "word-schnee", "word-sonnig", "word-warm", "word-wetter", "word-wind", "word-wolke"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; textDe: string; voiceParams: { speedWpm: number } }[] };
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    const fast = Array.from({ length: 20 }, (_, i) => `wt-${i + 1}`).filter((id) => wpm.get(id)! > 132);
+    expect(fast).toHaveLength(15);
+    for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
+    const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
+    for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
+    // معجم النطق: لا مدخل جديد — regnet (المدخل القائم) يمسّ أربعة أسطر جديدة (wt-4 · wt-5 · wt-11 · wt-15) سُجّلت (N-099)
+    const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
+    expect(lex.entries).toHaveLength(72);
+    expect(lex.entries.find((x) => x.word === "regnet")?.regeneratedTracks).toEqual(["tm-2", "tr-3", "km-11", "fh-14", "vb-19", "wt-4", "wt-5", "wt-11", "wt-15"]);
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set([...l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))), ...l.zusammenfassung.warningCards.flatMap((c) => [c.correct.de, String(c.exercise.a)])]);
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    const norm = (x: string) => x.toLowerCase().replace(/[^\p{L}\s]/gu, " ").replace(/\s+/g, " ").trim();
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(norm(a))))).toEqual([]);
+    expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
+    // المصائد الثلاث (es لا يسقط · الصفة تحتاج ist · لا فعلان معاً) — كل واحدة بـ10‑ي
+    expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de)).toEqual(["~~Heute regnet.~~ · ~~Regnet heute.~~", "~~Es kalt.~~ · ~~Heute kalt.~~", "~~Es ist regnet.~~ · ~~Es ist regnen.~~"]);
+    for (const c of l.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
     const taught = knownStems(taughtUpTo(l, realLessons, words));
     const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
