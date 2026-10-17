@@ -17049,6 +17049,66 @@
       "rmsDb": -17.04
     },
     {
+      "id": "word-bitten",
+      "file": "words/audio/de-DE/word-bitten.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "bitten.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 757,
+      "sizeBytes": 3620,
+      "hash": "sha256:3e913053bc2bb1aaadec901fbbb28e67a24ec24a1ac0ea450b8a55e756bc525f",
+      "pcmSha256": "66eaecf0550371e51ce787bb29bd038d3936633c656a96394382bbcd14a38190",
+      "rmsDb": -16.94
+    },
+    {
+      "id": "word-erklaeren",
+      "file": "words/audio/de-DE/word-erklaeren.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "erklären.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4718,
+      "hash": "sha256:b220ebbd5f831a68521366bc61a9c9f045106a23c4591f1e0ae434ddc2f9378b",
+      "pcmSha256": "a4d64e858d9b113fec981a0e51503e7f75a79227160fd26aad8029636db364de",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "word-hilfe",
+      "file": "words/audio/de-DE/word-hilfe.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Hilfe.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 1013,
+      "sizeBytes": 4855,
+      "hash": "sha256:a19c358f2b74f1ce7e9c6eaf80347e13de89e70b287ddeaaa60f90ac1d98a569",
+      "pcmSha256": "c5401092e50458c3cd16f720af827455e619905b4e182e6566af04c6d6090ee8",
+      "rmsDb": -16.99
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -34834,6 +34894,446 @@
       "hash": "sha256:e0f764b69138f5400fc93646e7d8a906c5a477ae3bfb8bf82c11659979d7c082",
       "pcmSha256": "59d15c8af444fbd5618723c5c9dcb424c817938bb911364b93874e43b4b1a15a",
       "rmsDb": -17.04
+    },
+    {
+      "id": "wf-1",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Yusuf! Heute im Kurs: der Weg — mit Sie. Ich bin die Auskunft, und du suchst den Hauptbahnhof.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 8360,
+      "sizeBytes": 38625,
+      "hash": "sha256:4080511c34afb913ebd139a287237c458cdeac26fb9e723aeeffd124e3bd0a18",
+      "pcmSha256": "4995d95722e81149e8c2e84579dc3fb0194eb9a13d8276f2e4cdf5f7de24d782",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "wf-2",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut! Entschuldigung, können Sie mir helfen? Ich suche den Hauptbahnhof.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 4658,
+      "sizeBytes": 21057,
+      "hash": "sha256:c7062fa06bc881d398a21e0973afd21d069c456b90bf0c0d2bd8cc5c4ad9112f",
+      "pcmSha256": "55de950dceb5fc2465ff67ca86cc6bd51b6acd496d4f4d54223030b7aa0c704a",
+      "rmsDb": -17
+    },
+    {
+      "id": "wf-3",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 111,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gerne! Gehen Sie zuerst geradeaus, danach links. Der Hauptbahnhof ist gegenüber der Post.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 7032,
+      "sizeBytes": 32438,
+      "hash": "sha256:b462278d6965fe91384d7bd460c9451debcc42d0613285010696065782f6f233",
+      "pcmSha256": "f4749dd2fa34b5dc45d78b4e02cf529c6288d83961178554ff7114e8d453d05e",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "wf-4",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 116,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zuerst geradeaus, danach links — ist das weit?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 3613,
+      "sizeBytes": 16434,
+      "hash": "sha256:78aa8a73e278702fa43c28ff03724e931baba03010dddbeb92d873230bb8b241",
+      "pcmSha256": "4b3c68272d98e53737f3aab04aafdee9be6bfd36ffc73eb9a09f41c69bf1324c",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "wf-5",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, zehn Minuten zu Fuß. Oder nehmen Sie den Bus, Linie 5, und steigen Sie am Hauptbahnhof aus!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 8184,
+      "sizeBytes": 37544,
+      "hash": "sha256:ef5071fdb7ca0cf1b008607ddb70b5a5268a6590fb56c76272f71016b459fc91",
+      "pcmSha256": "c9db07abaa450e7d3374bfcb27bdcf260c39431286cfa23a717e8f55abacc3df",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "wf-6",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke! Und die Auskunft? Ich habe ein Problem mit der Fahrkarte.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 4832,
+      "sizeBytes": 21457,
+      "hash": "sha256:e95c3599c80c696062dddccdd02f0fad7056e796d2aa861e908b17e58ada7983",
+      "pcmSha256": "3f97510ea5fd99d92730043e827fb45e1ef6f1b59a01a1cfce296d358778c4f5",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "wf-7",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 108,
+        "lengthScale": 1.32
+      },
+      "textDe": "Kein Problem. Die Auskunft ist am Eingang — biegen Sie am Eingang links ab!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 7208,
+      "sizeBytes": 32763,
+      "hash": "sha256:2b30a4fba1eb04bca596eceb75da499fa997f04de65e0090724f6fb8b37c354e",
+      "pcmSha256": "16bf656007f5d46dc0d069c004c280e1b4f423d6f9866b3479ef629f7164eae8",
+      "rmsDb": -17.64
+    },
+    {
+      "id": "wf-8",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 179,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Eingang links. Und wo ist der Ausgang zum Bus?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 3358,
+      "sizeBytes": 15581,
+      "hash": "sha256:1e311cbaf0df54d71d5ff755b905c12eb4e4fae37a2bd88266752b9067c4a51b",
+      "pcmSha256": "f8994417ca505af9d0a77c7ac70dde6219d25f6ea0c8efbac246f086395133d7",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "wf-9",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 116,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Ausgang ist dort, geradeaus. Haben Sie schon einen Stadtplan?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 5160,
+      "sizeBytes": 24011,
+      "hash": "sha256:b6a24b1404097e82c06e1428706f2474766cc908cb9be2d97c16252c7fa166a4",
+      "pcmSha256": "720c356cf9eedfcb8b22efee1351caa25f16e225d86fa1e15217ff653908e87b",
+      "rmsDb": -17.47
+    },
+    {
+      "id": "wf-10",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, noch nicht. Können Sie mir einen Stadtplan geben?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 3834,
+      "sizeBytes": 17425,
+      "hash": "sha256:9221275ce7f2ca1655e5626dbfd213335aa09730461b331f6ff29108503060cb",
+      "pcmSha256": "b53fc32aa863924025621fc0ee06c9664bfe39aa55b12375eaa982386349a0ce",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "wf-11",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sofort! Hier, bitte. — Super, Yusuf! Und jetzt du: Du bist die Auskunft.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 5656,
+      "sizeBytes": 26180,
+      "hash": "sha256:e9fe802bb2523eae511b800e911833a48ceef8dff1a734eba5c97bb1a9e9fd26",
+      "pcmSha256": "279564ae4fe4fb3651ad6be170ace6c958881047f46444b7498037225c779841",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "wf-12",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 119,
+        "lengthScale": 1.32
+      },
+      "textDe": "Okay. Guten Tag! Was suchen Sie?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 3021,
+      "sizeBytes": 13656,
+      "hash": "sha256:da0086b947d31166026f797c262487b39467a59629835ed03b80130c2cb2667e",
+      "pcmSha256": "a85c6e92ca3a177dda2b76421e8b90eb1fa27250c1557f27bb4eb2e73466c38a",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "wf-13",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Entschuldigung, ich suche die Apotheke. Können Sie mir den Weg erklären?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 5256,
+      "sizeBytes": 24403,
+      "hash": "sha256:af7b89b2702562b0e2b651daa21b3985fe7825bd684f73515e2cf45dd1202fbc",
+      "pcmSha256": "3693d74b10d0f30828d42e338d56fe9b6560cb09061a5779d94a62141af829d8",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "wf-14",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gerne. Nehmen Sie den Ausgang dort und biegen Sie rechts ab. Danach gehen Sie geradeaus — die Apotheke ist gegenüber der Kirche.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 8791,
+      "sizeBytes": 40010,
+      "hash": "sha256:2b8412b4f5da3fe57b7f487be8e515f26dd8adca3b9b7e2c0fca3fdf8a7d3970",
+      "pcmSha256": "4250fcb4e8bc15bc237811fafeb83c32563500117e85cfa8f340d0dae089671c",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "wf-15",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke für die Hilfe! Sehr gut erklärt!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 3416,
+      "sizeBytes": 15825,
+      "hash": "sha256:35b8f85fb438db6c3899d72a35df2164863ce034bbf329654d66f1a14ff15f8e",
+      "pcmSha256": "ff576c9d179d9b2bbd07d9f66556affa1b0c6469b8afa3b97df549c4bdfa35b8",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "wf-16",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Bitte, gerne! In Tunis hilft mir mein Vater — er erklärt mir alles.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 5088,
+      "sizeBytes": 22705,
+      "hash": "sha256:3802065a2b9db7e029eb49deb88c0a7e085c7929f56ed71a41ebd579613eea3d",
+      "pcmSha256": "02d1058f4fce1242a19acdc8a32ad228054c82e917cbf1c2b04230e1c5066dfd",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "wf-17",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und ich bitte dich um Hilfe: die Hausaufgabe. Erklärst du mir das noch einmal?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 5576,
+      "sizeBytes": 25828,
+      "hash": "sha256:713f0e1822e6a3f27df6fa8a75934d22657155194cfa9d7d0a61644a17aa267b",
+      "pcmSha256": "cad33bc512108307170baec45f5a035949fa46e426d2fde7464b418fb880576d",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "wf-18",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sofort! Es ist einfach: Gehen Sie! Nehmen Sie! Biegen Sie ab! — und bei helfen: Helfen Sie mir!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 7061,
+      "sizeBytes": 31581,
+      "hash": "sha256:37c3c029c7ee2a6e745b35c082c84f4e5f10974b2017fe643af17f350715dd64",
+      "pcmSha256": "293d54b7c061217b5ed1be2c2d2b39849d6f4d7e4b00410d701d9272bdd624f3",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "wf-19",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 113,
+        "lengthScale": 1.32
+      },
+      "textDe": "Helfen Sie mir — nicht mich. Danke, Yusuf! Kein Problem mehr.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 5288,
+      "sizeBytes": 24368,
+      "hash": "sha256:253dde3c2ca8787135efe97c8c712b7c50725f50b9d74895901ee7b85adce007",
+      "pcmSha256": "da8174c0aedc0c55d45319ad0dfe586595a7bd7dfe8cb4839dfce9c496919932",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "wf-20",
+      "file": "audio/scripts/a1-u9-d3-weg-und-hilfe/wf-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 113,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gerne! Bis morgen, Lena — morgen fliege ich nach Tunesien!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d3"
+      ],
+      "durationMs": 4798,
+      "sizeBytes": 21465,
+      "hash": "sha256:2ccd2929d0193cc8f27345386f1446919ae75973c4e884c352995cfce37b2286",
+      "pcmSha256": "37b80bc06e7b27856167313c827a47de86caa8010085107436ec2c45d8467843",
+      "rmsDb": -17.02
     }
   ],
   "characterVoices": {

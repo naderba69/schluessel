@@ -6,11 +6,12 @@
   "day": 3,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst höflich um Hilfe bitten und den Weg mit Imperativ (Sie) erklären: Nehmen Sie …, Biegen Sie … ab, Helfen Sie mir!",
-    "ar": "تطلب المساعدة بأدب وتوجّه الأمر بلطف (Imperativ مع Sie + helfen + Dativ)"
+    "de": "Entschuldigung, können Sie mir helfen? — Gerne! · Gehen Sie zuerst geradeaus, danach links. · Biegen Sie am Eingang links ab! · Helfen Sie mir, bitte! · Danke für die Hilfe!",
+    "ar": "تطلب المساعدة بأدب وتشرح الطريق بصيغة الأمر المهذبة: الفعل أولاً ثم Sie (Gehen Sie! · Nehmen Sie den Bus!) · الجزء المنفصل في آخر الجملة (Biegen Sie links ab! · Steigen Sie hier aus!) · helfen + الداتيف (Helfen Sie mir! · Ich helfe dir.) · الطلب المهذب بـkönnen (Können Sie mir helfen? · Können Sie mir den Weg erklären?) · zuerst … danach … · um Hilfe bitten · Danke für die Hilfe! — ومعها كلمات المساعدة: المدخل والمخرج والاستعلامات وخريطة المدينة والمشكلة وفوراً وبكل سرور."
   },
   "canDoDaily": [
-    "يوجّه أمرين بأدب بصيغة Sie + يطلب المساعدة بجملة helfen + Dativ صحيحة"
+    "يطلب المساعدة ويشكر: Entschuldigung, können Sie mir helfen? · Können Sie mir den Weg erklären? · Ich bitte um Hilfe. · Danke für die Hilfe! — Gerne! / Kein Problem.",
+    "يشرح الطريق بصيغة الأمر المهذبة: Gehen Sie zuerst geradeaus, danach links. · Nehmen Sie den Bus! · Biegen Sie am Eingang links ab! · Steigen Sie am Hauptbahnhof aus! · Helfen Sie mir, bitte!"
   ],
   "warmup": {
     "cardIds": [
@@ -23,11 +24,11 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«انعطفوا يساراً من فضلكم» — أي ترتيب هو الصحيح للـImperativ (Sie)?"
+          "de": "«انعطفوا يساراً، من فضلكم!» (بصيغة Sie المهذبة) — أي صيغة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
           "Biegen Sie links ab, bitte!",
-          "Sie biegen links ab, bitte!",
+          "Sie biegen links ab, bitte.",
           "Biegen links Sie ab, bitte!"
         ],
         "answer": "Biegen Sie links ab, bitte!",
@@ -49,7 +50,10 @@
       "zuerst",
       "danach",
       "sofort",
-      "gerne"
+      "gerne",
+      "bitten",
+      "erklaeren",
+      "hilfe"
     ],
     "grammarArsenalIds": [
       "ars-imperativ-sie",
@@ -59,76 +63,514 @@
       "story-a9-u9-s3"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "auslaut-d",
+      "auslaut-g",
+      "ch-ach-laut",
+      "double-consonant",
+      "r-uvular",
+      "sp-st-initial",
+      "umlaut-a",
+      "vowel-long-short",
+      "z"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«هل يمكنكم مساعدتي؟»؟",
-            "a": "Können Sie mir helfen?"
+            "q": "___ Sie zur Post! (اذهبوا)",
+            "a": "Gehen",
+            "why": "صيغة الأمر المهذبة: الفعل أولاً كما في المصدر (gehen) ثم Sie — Gehen Sie …!"
           },
           {
-            "q": "«خذوا الشارع الثاني بعد ذلك»؟",
-            "a": "Danach nehmen Sie die zweite Straße."
+            "q": "Nehmen ___ die Linie 5! (أنتم — المهذبة)",
+            "a": "Sie",
+            "why": "بعد فعل الأمر يأتي Sie مباشرة — لا يُحذف كما في العربية."
+          },
+          {
+            "q": "Biegen Sie links ___! (انعطفوا)",
+            "a": "ab",
+            "why": "abbiegen فعل منفصل: Biegen أولاً وab في آخر الجملة — كـIch biege ab."
+          },
+          {
+            "q": "Steigen Sie am Hauptbahnhof ___! (انزلوا)",
+            "a": "aus",
+            "why": "aussteigen منفصل أيضاً: الجزء aus في الآخر حتى في الأمر."
+          },
+          {
+            "q": "Helfen Sie ___, bitte! (لي)",
+            "a": "mir",
+            "why": "helfen يأخذ الداتيف: mir لا mich — كـDas gefällt mir."
+          },
+          {
+            "q": "Entschuldigung, ___ Sie mir den Stadtplan zeigen? (هل يمكنكم)",
+            "a": "können",
+            "why": "الطلب المهذب بـkönnen أولاً (سؤال) + Sie + mir … والفعل الثاني zeigen في الآخر."
+          },
+          {
+            "q": "Wir ___ dir sofort. (نساعد)",
+            "a": "helfen",
+            "why": "wir helfen — وdir الداتيف (لا dich)."
+          },
+          {
+            "q": "Er ___ mir. (يساعد)",
+            "a": "hilft",
+            "why": "helfen غير منتظم: du hilfst · er hilft (e → i) — وmir الداتيف."
+          },
+          {
+            "q": "Gehen Sie ___ geradeaus, danach rechts. (أولاً)",
+            "a": "zuerst",
+            "why": "zuerst = أولاً — الخطوة الأولى في شرح الطريق، ثم danach."
+          },
+          {
+            "q": "Zuerst geradeaus, ___ rechts. (بعد ذلك)",
+            "a": "danach",
+            "why": "danach = بعد ذلك — الخطوة الثانية بعد zuerst."
+          },
+          {
+            "q": "Können Sie mir das ___? (تشرحوا)",
+            "a": "erklären",
+            "why": "erklären في آخر الجملة بعد können — ويشرح لشخص (mir) شيئاً (das)."
+          },
+          {
+            "q": "Sie bittet ___ Hilfe. (حرف الجر)",
+            "a": "um",
+            "why": "bitten um + الأكوزاتيف: um Hilfe بيتن (يطلب المساعدة)."
+          },
+          {
+            "q": "Vielen Dank für die ___! (المساعدة)",
+            "a": "Hilfe",
+            "why": "die Hilfe = المساعدة — مؤنث · Danke/Vielen Dank für + الأكوزاتيف (die Hilfe)."
+          },
+          {
+            "q": "Der ___ ist hier, der Ausgang ist dort. (المدخل)",
+            "a": "Eingang",
+            "why": "der Eingang = المدخل (ein = إلى الداخل) ≠ der Ausgang = المخرج."
+          },
+          {
+            "q": "Wo ist hier der ___? — Dort, geradeaus. (المخرج)",
+            "a": "Ausgang",
+            "why": "der Ausgang = المخرج (aus = إلى الخارج) — مذكر كـder Eingang."
+          },
+          {
+            "q": "Die ___ ist am Eingang. (الاستعلامات)",
+            "a": "Auskunft",
+            "why": "die Auskunft = مكتب الاستعلامات / المعلومة — مؤنث."
+          },
+          {
+            "q": "Haben Sie hier einen ___? (خريطة المدينة)",
+            "a": "Stadtplan",
+            "why": "der Stadtplan = Stadt + Plan — مذكر: einen Stadtplan في الأكوزاتيف بعد haben."
+          },
+          {
+            "q": "Kein ___! (مشكلة)",
+            "a": "Problem",
+            "why": "das Problem = المشكلة — Kein Problem! = لا مشكلة (جواب على الشكر أو الطلب)."
+          },
+          {
+            "q": "___, wo ist hier die Post? (عفواً)",
+            "a": "Entschuldigung",
+            "why": "Entschuldigung تفتح كل سؤال لغريب — بحرف كبير أول الجملة."
+          },
+          {
+            "q": "Kommen Sie ___! (فوراً)",
+            "a": "sofort",
+            "why": "sofort = فوراً — كلمة زمن بعد Sie."
+          },
+          {
+            "q": "Können Sie mir das zeigen? — ___! (بكل سرور)",
+            "a": "Gerne",
+            "why": "Gerne! = بكل سرور — جواب المساعدة (كـGern!)."
+          },
+          {
+            "q": "Ich ___ dich um Hilfe. (أطلب منك)",
+            "a": "bitte",
+            "why": "ich bitte (bitten) + dich (الأكوزاتيف) + um Hilfe — والفعل غير bitte (من فضلك)."
           }
         ],
         "interleavedWith": [
-          "helfen",
-          "danach"
+          "post",
+          "linie",
+          "hauptbahnhof",
+          "links",
+          "rechts",
+          "geradeaus",
+          "zeigen",
+          "kommen",
+          "dort",
+          "hier"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«عفواً، أين المدخل؟»؟",
-            "a": "Entschuldigung, wo ist der Eingang?"
+            "audioId": "wf-1",
+            "speakText": "Hallo Yusuf! Heute im Kurs: der Weg — mit Sie. Ich bin die Auskunft, und du suchst den Hauptbahnhof.",
+            "q": "استمع: ما تمرين اليوم في الدورة؟",
+            "choices": [
+              "الطريق بصيغة Sie — لينا الاستعلامات ويوسف يبحث عن المحطة المركزية",
+              "الأرقام — يوسف يعدّ إلى المئة",
+              "الطقس — لينا تصف الشتاء"
+            ],
+            "a": "الطريق بصيغة Sie — لينا الاستعلامات ويوسف يبحث عن المحطة المركزية",
+            "why": "der Weg — mit Sie = الطريق بصيغة Sie · Ich bin die Auskunft = أنا الاستعلامات · du suchst den Hauptbahnhof."
           },
           {
-            "q": "«المخرج هناك»؟",
-            "a": "Der Ausgang ist dort."
+            "audioId": "wf-2",
+            "speakText": "Gut! Entschuldigung, können Sie mir helfen? Ich suche den Hauptbahnhof.",
+            "q": "استمع: كيف يبدأ يوسف السؤال؟",
+            "choices": [
+              "عفواً، هل يمكنكم مساعدتي؟",
+              "مرحباً، أين أنت؟",
+              "شكراً، إلى اللقاء!"
+            ],
+            "a": "عفواً، هل يمكنكم مساعدتي؟",
+            "why": "Entschuldigung, können Sie mir helfen? = عفواً، هل يمكنكم مساعدتي؟ — helfen + mir."
+          },
+          {
+            "audioId": "wf-3",
+            "speakText": "Gerne! Gehen Sie zuerst geradeaus, danach links. Der Hauptbahnhof ist gegenüber der Post.",
+            "q": "استمع: كيف الطريق إلى المحطة المركزية؟",
+            "choices": [
+              "أولاً إلى الأمام، بعد ذلك يساراً — مقابل البريد",
+              "أولاً يساراً، بعد ذلك يميناً — مقابل البنك",
+              "إلى الأمام فقط — مقابل الكنيسة"
+            ],
+            "a": "أولاً إلى الأمام، بعد ذلك يساراً — مقابل البريد",
+            "why": "Gehen Sie zuerst geradeaus, danach links. · gegenüber der Post = مقابل البريد."
+          },
+          {
+            "audioId": "wf-5",
+            "speakText": "Nein, zehn Minuten zu Fuß. Oder nehmen Sie den Bus, Linie 5, und steigen Sie am Hauptbahnhof aus!",
+            "q": "استمع: ما البديل عن المشي؟",
+            "choices": [
+              "الحافلة الخط 5 والنزول عند المحطة المركزية",
+              "القطار من الرصيف 3",
+              "سيارة أجرة من المطار"
+            ],
+            "a": "الحافلة الخط 5 والنزول عند المحطة المركزية",
+            "why": "nehmen Sie den Bus, Linie 5 · steigen Sie am Hauptbahnhof aus! — الأمر مع فعل منفصل."
+          },
+          {
+            "audioId": "wf-6",
+            "speakText": "Danke! Und die Auskunft? Ich habe ein Problem mit der Fahrkarte.",
+            "q": "استمع: ما مشكلة يوسف؟",
+            "choices": [
+              "مشكلة في التذكرة",
+              "مشكلة في الحقيبة",
+              "مشكلة في الهاتف"
+            ],
+            "a": "مشكلة في التذكرة",
+            "why": "ein Problem mit der Fahrkarte = مشكلة في التذكرة · Und die Auskunft? = وأين الاستعلامات؟"
+          },
+          {
+            "audioId": "wf-7",
+            "speakText": "Kein Problem. Die Auskunft ist am Eingang — biegen Sie am Eingang links ab!",
+            "q": "استمع: أين الاستعلامات؟",
+            "choices": [
+              "عند المدخل — انعطفوا يساراً",
+              "عند المخرج — انعطفوا يميناً",
+              "في الطابق الأول"
+            ],
+            "a": "عند المدخل — انعطفوا يساراً",
+            "why": "Die Auskunft ist am Eingang · biegen Sie am Eingang links ab! — ab في آخر الجملة."
+          },
+          {
+            "audioId": "wf-8",
+            "speakText": "Am Eingang links. Und wo ist der Ausgang zum Bus?",
+            "q": "استمع: عمّ يسأل يوسف الآن؟",
+            "choices": [
+              "أين المخرج إلى الحافلة",
+              "أين المدخل إلى القطار",
+              "كم تكلّف التذكرة"
+            ],
+            "a": "أين المخرج إلى الحافلة",
+            "why": "Und wo ist der Ausgang zum Bus? = وأين المخرج إلى الحافلة؟"
+          },
+          {
+            "audioId": "wf-10",
+            "speakText": "Nein, noch nicht. Können Sie mir einen Stadtplan geben?",
+            "q": "استمع: ماذا يطلب يوسف؟",
+            "choices": [
+              "خريطة للمدينة",
+              "تذكرة جديدة",
+              "قهوة"
+            ],
+            "a": "خريطة للمدينة",
+            "why": "Können Sie mir einen Stadtplan geben? = هل يمكنكم أن تعطوني خريطة للمدينة؟ — mir + einen Stadtplan."
+          },
+          {
+            "audioId": "wf-11",
+            "speakText": "Sofort! Hier, bitte. — Super, Yusuf! Und jetzt du: Du bist die Auskunft.",
+            "q": "استمع: ماذا يحدث بعد الخريطة؟",
+            "choices": [
+              "تبديل الأدوار — يوسف يصير الاستعلامات",
+              "نهاية الدرس",
+              "لينا تطلب تذكرة"
+            ],
+            "a": "تبديل الأدوار — يوسف يصير الاستعلامات",
+            "why": "Sofort! Hier, bitte. · Und jetzt du: Du bist die Auskunft. = الآن أنت الاستعلامات."
+          },
+          {
+            "audioId": "wf-13",
+            "speakText": "Entschuldigung, ich suche die Apotheke. Können Sie mir den Weg erklären?",
+            "q": "استمع: عمّ تبحث لينا، وماذا تطلب؟",
+            "choices": [
+              "الصيدلية — أن يشرح لها الطريق",
+              "البنك — خريطة",
+              "البريد — تذكرة"
+            ],
+            "a": "الصيدلية — أن يشرح لها الطريق",
+            "why": "ich suche die Apotheke · Können Sie mir den Weg erklären? = هل يمكنكم أن تشرحوا لي الطريق؟"
+          },
+          {
+            "audioId": "wf-14",
+            "speakText": "Gerne. Nehmen Sie den Ausgang dort und biegen Sie rechts ab. Danach gehen Sie geradeaus — die Apotheke ist gegenüber der Kirche.",
+            "q": "استمع: كيف الطريق إلى الصيدلية؟",
+            "choices": [
+              "المخرج ثم يميناً، بعد ذلك إلى الأمام — مقابل الكنيسة",
+              "المدخل ثم يساراً — مقابل البريد",
+              "الحافلة الخط 5 — مقابل البنك"
+            ],
+            "a": "المخرج ثم يميناً، بعد ذلك إلى الأمام — مقابل الكنيسة",
+            "why": "Nehmen Sie den Ausgang dort und biegen Sie rechts ab. = خذوا المخرج هناك وانعطفوا يميناً · Danach gehen Sie geradeaus = بعد ذلك إلى الأمام · gegenüber der Kirche = مقابل الكنيسة."
+          },
+          {
+            "audioId": "wf-16",
+            "speakText": "Bitte, gerne! In Tunis hilft mir mein Vater — er erklärt mir alles.",
+            "q": "استمع: من يساعد يوسف في تونس؟",
+            "choices": [
+              "أبوه — يشرح له كل شيء",
+              "أمه — تعطيه خريطة",
+              "لينا — عبر الشاشة"
+            ],
+            "a": "أبوه — يشرح له كل شيء",
+            "why": "In Tunis hilft mir mein Vater — er erklärt mir alles. (hilft غير منتظم · mir الداتيف)"
+          },
+          {
+            "audioId": "wf-17",
+            "speakText": "Und ich bitte dich um Hilfe: die Hausaufgabe. Erklärst du mir das noch einmal?",
+            "q": "استمع: ماذا تطلب لينا من يوسف؟",
+            "choices": [
+              "المساعدة في الواجب — أن يشرح مرة أخرى",
+              "خريطة المدينة",
+              "الطريق إلى المحطة"
+            ],
+            "a": "المساعدة في الواجب — أن يشرح مرة أخرى",
+            "why": "Ich bitte dich um Hilfe: die Hausaufgabe. · Erklärst du mir das noch einmal? — bitten um + الأكوزاتيف."
+          },
+          {
+            "audioId": "wf-18",
+            "speakText": "Sofort! Es ist einfach: Gehen Sie! Nehmen Sie! Biegen Sie ab! — und bei helfen: Helfen Sie mir!",
+            "q": "استمع: كيف يلخّص يوسف القاعدة؟",
+            "choices": [
+              "Gehen Sie! · Nehmen Sie! · Biegen Sie ab! — ومع helfen: Helfen Sie mir!",
+              "Sie gehen. · Sie nehmen. · Sie biegen ab.",
+              "Geh! · Nimm! · Bieg ab!"
+            ],
+            "a": "Gehen Sie! · Nehmen Sie! · Biegen Sie ab! — ومع helfen: Helfen Sie mir!",
+            "why": "الفعل أولاً ثم Sie · الجزء المنفصل في الآخر · helfen + mir (الداتيف)."
+          },
+          {
+            "audioId": "wf-19",
+            "speakText": "Helfen Sie mir — nicht mich. Danke, Yusuf! Kein Problem mehr.",
+            "q": "استمع: ما الفخ الذي تثبّته لينا؟",
+            "choices": [
+              "Helfen Sie mir — لا mich",
+              "Biegen Sie ab — لا aus",
+              "Gehen Sie — لا Geht"
+            ],
+            "a": "Helfen Sie mir — لا mich",
+            "why": "Helfen Sie mir — nicht mich. = الداتيف mir مع helfen · Kein Problem mehr."
           }
         ],
         "interleavedWith": [
-          "entschuldigung",
-          "eingang"
+          "hauptbahnhof",
+          "post",
+          "bus",
+          "linie",
+          "fahrkarte",
+          "apotheke",
+          "kirche",
+          "vater",
+          "hausaufgabe",
+          "geradeaus",
+          "links",
+          "rechts",
+          "suchen",
+          "geben",
+          "kurs"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«أولاً إلى الأمام، ثم يميناً!»؟",
-            "a": "Zuerst geradeaus, dann rechts!"
+            "tokens": [
+              "ab!",
+              "Sie",
+              "links",
+              "Biegen"
+            ],
+            "a": "Biegen Sie links ab!",
+            "why": "Biegen أولاً ← Sie ← links ← الجزء ab في الآخر."
           },
           {
-            "q": "«بكل سرور!»؟",
-            "a": "Gern! / Sehr gerne!"
+            "tokens": [
+              "mir,",
+              "Sie",
+              "bitte!",
+              "Helfen"
+            ],
+            "a": "Helfen Sie mir, bitte!",
+            "why": "Helfen أولاً ← Sie ← mir (الداتيف) ← bitte في الآخر."
+          },
+          {
+            "tokens": [
+              "helfen?",
+              "Sie",
+              "Können",
+              "bitte",
+              "mir"
+            ],
+            "a": "Können Sie mir bitte helfen?",
+            "why": "Können أولاً (سؤال) ← Sie ← mir ← bitte ← helfen كاملاً في الآخر."
+          },
+          {
+            "tokens": [
+              "aus!",
+              "Sie",
+              "am",
+              "Steigen",
+              "Hauptbahnhof"
+            ],
+            "a": "Steigen Sie am Hauptbahnhof aus!",
+            "why": "Steigen أولاً ← Sie ← am Hauptbahnhof ← aus في الآخر."
+          },
+          {
+            "tokens": [
+              "Hilfe.",
+              "um",
+              "Ich",
+              "dich",
+              "bitte"
+            ],
+            "a": "Ich bitte dich um Hilfe.",
+            "why": "Ich ← bitte ثانياً ← dich (الأكوزاتيف) ← um Hilfe."
+          },
+          {
+            "tokens": [
+              "Weg!",
+              "den",
+              "Sie",
+              "mir",
+              "Erklären",
+              "bitte"
+            ],
+            "a": "Erklären Sie mir bitte den Weg!",
+            "why": "Erklären أولاً ← Sie ← mir (لمن) ← bitte ← den Weg (ماذا)."
           }
         ],
         "interleavedWith": [
-          "zuerst",
-          "gerne"
+          "links",
+          "hauptbahnhof",
+          "weg",
+          "bitte"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wf-4",
+            "speakText": "Zuerst geradeaus, danach links — ist das weit?",
+            "a": "Zuerst geradeaus, danach links — ist das weit?",
+            "why": "Zuerst بحرف كبير أول الجملة وz · geradeaus كلمة واحدة · danach كلمة واحدة · weit بـei."
+          },
+          {
+            "audioId": "wf-9",
+            "speakText": "Der Ausgang ist dort, geradeaus. Haben Sie schon einen Stadtplan?",
+            "a": "Der Ausgang ist dort, geradeaus. Haben Sie schon einen Stadtplan?",
+            "why": "Ausgang بحرف كبير · geradeaus · Haben Sie — Sie بحرف كبير (المهذبة) · Stadtplan بحرف كبير وdt."
+          },
+          {
+            "audioId": "wf-12",
+            "speakText": "Okay. Guten Tag! Was suchen Sie?",
+            "a": "Okay. Guten Tag! Was suchen Sie?",
+            "why": "Okay كما هي · Guten Tag بحرفين كبيرين · Was suchen Sie? — Sie بحرف كبير."
+          },
+          {
+            "audioId": "wf-15",
+            "speakText": "Danke für die Hilfe! Sehr gut erklärt!",
+            "a": "Danke für die Hilfe! Sehr gut erklärt!",
+            "why": "Hilfe بحرف كبير (اسم) · für بـü · erklärt بـä وt في الآخر."
+          },
+          {
+            "audioId": "wf-20",
+            "speakText": "Gerne! Bis morgen, Lena — morgen fliege ich nach Tunesien!",
+            "a": "Gerne! Bis morgen, Lena — morgen fliege ich nach Tunesien!",
+            "why": "Gerne بحرف كبير أول الجملة · Bis morgen · fliege بـie · Tunesien بحرف كبير."
+          },
+          {
+            "audioId": "word-hilfe",
+            "speakText": "die Hilfe.",
+            "a": "die Hilfe.",
+            "why": "die Hilfe: i قصيرة ثم lf — مؤنث."
+          },
+          {
+            "audioId": "word-erklaeren",
+            "speakText": "erklären.",
+            "a": "erklären.",
+            "why": "erklären: er + klären — ä طويلة قبل ren."
+          },
+          {
+            "audioId": "word-bitten",
+            "speakText": "bitten.",
+            "a": "bitten.",
+            "why": "bitten: tt مضاعفة (i قصيرة) — غير bieten."
+          },
+          {
+            "audioId": "word-auskunft",
+            "speakText": "die Auskunft.",
+            "a": "die Auskunft.",
+            "why": "die Auskunft: Aus + kunft — مؤنث، وft في الآخر."
+          },
+          {
+            "audioId": "word-entschuldigung",
+            "speakText": "Entschuldigung.",
+            "a": "Entschuldigung.",
+            "why": "Entschuldigung: Ent + schuld + igung — بحرف كبير، و‑ung مؤنث دائماً (die Entschuldigung)."
+          }
+        ],
+        "interleavedWith": [
+          "geradeaus",
+          "weit",
+          "tag",
+          "morgen",
+          "fliegen"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Nach dem Weg fragen und ihn mit Imperativ (Sie) höflich erklären",
-        "ar": "السؤال عن الطريق وتوجيهه بأدب بصيغة الأمر"
+        "de": "Entschuldigung, können Sie mir helfen? Ich suche den Bahnhof. — Gerne! Gehen Sie zuerst geradeaus, danach biegen Sie links ab. — Danke für die Hilfe!",
+        "ar": "تطلب من زميلك المساعدة بأدب (بصيغة Sie) وتسأله عن الطريق إلى مكان في المدينة، وهو يشرح لك الطريق بصيغة الأمر المهذبة بخطوتين (zuerst … danach …) — ثم تتبادلان"
       },
       "situation": {
-        "de": "Am Eingang des Hauptbahnhofs: nach der Auskunft fragen",
-        "ar": "عند مدخل المحطة المركزية: السؤال عن الاستعلامات"
+        "de": "Im Kurs, am Eingang des Hauptbahnhofs: Entschuldigung, wo ist die Auskunft? Können Sie mir helfen? — Gehen Sie zuerst geradeaus, danach rechts. Nehmen Sie den Ausgang dort. Biegen Sie links ab! — Danke! — Kein Problem.",
+        "ar": "في الدورة: أنتما عند مدخل المحطة المركزية على الشاشة — أحدكما يسأل بصيغة Sie: Entschuldigung, wo ist die Auskunft? · Können Sie mir helfen? · Können Sie mir den Weg erklären? · Haben Sie einen Stadtplan? والآخر يجيب بصيغة الأمر المهذبة: Gehen Sie zuerst geradeaus, danach rechts. · Nehmen Sie den Ausgang dort. · Biegen Sie links ab! · Steigen Sie am Hauptbahnhof aus! · Sofort! Hier, bitte. — ثم الشكر والجواب: Danke für die Hilfe! — Gerne! / Kein Problem. — ثم تتبادلان."
       },
       "successCriteria": [
-        "أمرين بصيغة Sie (Biegen Sie …! / Nehmen Sie …!) + جملة helfen (mir) + عبارة أدب واحدة"
+        "ثلاث جمل أمر مهذبة صحيحة: الفعل أولاً ثم Sie (Gehen Sie …! · Nehmen Sie …!) وواحدة بفعل منفصل جزؤه في الآخر (Biegen Sie links ab! — لا Biegen Sie ab links) — وخطوتان بـzuerst … danach ….",
+        "طلب واحد بأدب (Entschuldigung, können Sie mir helfen? أو Können Sie mir den Weg erklären?) مع mir لا mich — وشكر وجواب (Danke für die Hilfe! — Gerne! / Kein Problem.)."
       ]
     }
   },
@@ -143,20 +585,64 @@
       {
         "items": [
           {
-            "q": "«عفواً»؟",
-            "a": "Entschuldigung"
+            "q": "«انعطفوا يميناً!» (بصيغة Sie)؟",
+            "choices": [
+              "Biegen Sie rechts ab!",
+              "Sie biegen rechts ab.",
+              "Biegen Sie ab rechts!"
+            ],
+            "a": "Biegen Sie rechts ab!",
+            "why": "الأمر المهذب: الفعل أولاً ثم Sie، والجزء المنفصل ab في آخر الجملة — Sie biegen … خبر لا أمر."
           },
           {
-            "q": "«يساعد» (والمصدر)؟",
-            "a": "helfen (er hilft)"
+            "q": "«هل تساعدني؟»؟",
+            "choices": [
+              "Hilfst du mir?",
+              "Hilfst du mich?",
+              "Helfst du mir?"
+            ],
+            "a": "Hilfst du mir?",
+            "why": "helfen + الداتيف (mir) — وتصريفه غير منتظم: du hilfst (لا helfst)."
           },
           {
-            "q": "«انعطفوا يساراً!»؟",
-            "a": "Biegen Sie links ab!"
+            "q": "die Hilfe = ؟",
+            "choices": [
+              "المساعدة",
+              "المشكلة",
+              "الاستعلامات"
+            ],
+            "a": "المساعدة",
+            "why": "die Hilfe = المساعدة · das Problem = المشكلة · die Auskunft = الاستعلامات."
           },
           {
-            "q": "«أولاً ثم بعد ذلك»؟",
-            "a": "zuerst / danach"
+            "q": "«خذوا الحافلة!» (بصيغة Sie)؟",
+            "choices": [
+              "Nehmen Sie den Bus!",
+              "Sie nehmen den Bus!",
+              "Nehmen den Bus Sie!"
+            ],
+            "a": "Nehmen Sie den Bus!",
+            "why": "الفعل أولاً (Nehmen) ثم Sie مباشرة ثم المفعول (den Bus)."
+          },
+          {
+            "q": "«أولاً إلى الأمام، بعد ذلك يساراً»؟",
+            "choices": [
+              "Zuerst geradeaus, danach links.",
+              "Danach geradeaus, zuerst links.",
+              "Zuerst geradeaus, sofort links."
+            ],
+            "a": "Zuerst geradeaus, danach links.",
+            "why": "zuerst = أولاً ثم danach = بعد ذلك — وsofort = فوراً."
+          },
+          {
+            "q": "«عفواً، أين المخرج هنا؟»؟",
+            "choices": [
+              "Entschuldigung, wo ist hier der Ausgang?",
+              "Entschuldigung, wo ist hier der Eingang?",
+              "Entschuldigung, wohin ist hier der Ausgang?"
+            ],
+            "a": "Entschuldigung, wo ist hier der Ausgang?",
+            "why": "der Ausgang = المخرج (der Eingang = المدخل) — والموقع بـWo لا Wohin."
           }
         ],
         "passingScore": 0.75
@@ -164,20 +650,64 @@
       {
         "items": [
           {
-            "q": "«خريطة المدينة»؟",
-            "a": "der Stadtplan"
+            "q": "«اذهبوا إلى الأمام!» (بصيغة Sie)؟",
+            "choices": [
+              "Gehen Sie geradeaus!",
+              "Sie gehen geradeaus!",
+              "Gehen geradeaus Sie!"
+            ],
+            "a": "Gehen Sie geradeaus!",
+            "why": "الفعل أولاً ثم Sie مباشرة — Sie gehen … جملة خبرية."
           },
           {
-            "q": "«المدخل والمخرج»؟",
-            "a": "der Eingang / der Ausgang"
+            "q": "«انزلوا هنا!» (بصيغة Sie)؟",
+            "choices": [
+              "Steigen Sie hier aus!",
+              "Steigen Sie aus hier!",
+              "Sie steigen hier aus."
+            ],
+            "a": "Steigen Sie hier aus!",
+            "why": "aussteigen منفصل: الجزء aus في آخر الجملة — وSie بعد الفعل في الأمر."
           },
           {
-            "q": "«لا مشكلة!»؟",
-            "a": "Kein Problem!"
+            "q": "der Eingang = ؟",
+            "choices": [
+              "المدخل",
+              "المخرج",
+              "الاستعلامات"
+            ],
+            "a": "المدخل",
+            "why": "der Eingang = المدخل (ein = إلى الداخل) · der Ausgang = المخرج · die Auskunft = الاستعلامات."
           },
           {
-            "q": "«فوراً»؟",
-            "a": "sofort"
+            "q": "«أطلب المساعدة»؟",
+            "choices": [
+              "Ich bitte um Hilfe.",
+              "Ich bitte für Hilfe.",
+              "Ich bitte Hilfe."
+            ],
+            "a": "Ich bitte um Hilfe.",
+            "why": "bitten um + الأكوزاتيف — um Hilfe (لا für ولا بلا حرف)."
+          },
+          {
+            "q": "«هل يمكنكم أن تساعدوني؟»؟",
+            "choices": [
+              "Können Sie mir helfen?",
+              "Können Sie mich helfen?",
+              "Können Sie helfen mir?"
+            ],
+            "a": "Können Sie mir helfen?",
+            "why": "helfen + mir (الداتيف) — وhelfen كاملاً في آخر الجملة بعد können."
+          },
+          {
+            "q": "sofort = ؟",
+            "choices": [
+              "فوراً",
+              "بعد ذلك",
+              "أولاً"
+            ],
+            "a": "فوراً",
+            "why": "sofort = فوراً · danach = بعد ذلك · zuerst = أولاً."
           }
         ],
         "passingScore": 0.75
@@ -185,20 +715,64 @@
       {
         "items": [
           {
-            "q": "«الاستعلامات»؟",
-            "a": "die Auskunft"
+            "q": "«انعطفوا عند المدخل يساراً!» (بصيغة Sie)؟",
+            "choices": [
+              "Biegen Sie am Eingang links ab!",
+              "Biegen Sie am Eingang ab links!",
+              "Sie biegen am Eingang links ab."
+            ],
+            "a": "Biegen Sie am Eingang links ab!",
+            "why": "الفعل أولاً ثم Sie، وab في آخر الجملة بعد links."
           },
           {
-            "q": "«بكل سرور»؟",
-            "a": "gern / gerne"
+            "q": "«أساعدك»؟",
+            "choices": [
+              "Ich helfe dir.",
+              "Ich helfe dich.",
+              "Ich hilfe dir."
+            ],
+            "a": "Ich helfe dir.",
+            "why": "helfen + الداتيف: dir (لا dich) — وich helfe (لا hilfe؛ e → i مع du/er فقط)."
           },
           {
-            "q": "«هل يمكنكم مساعدتي؟»؟",
-            "a": "Können Sie mir helfen?"
+            "q": "die Auskunft = ؟",
+            "choices": [
+              "الاستعلامات",
+              "المخرج",
+              "خريطة المدينة"
+            ],
+            "a": "الاستعلامات",
+            "why": "die Auskunft = الاستعلامات · der Ausgang = المخرج · der Stadtplan = خريطة المدينة."
           },
           {
-            "q": "«خذوا الشارع الثاني!»؟",
-            "a": "Nehmen Sie die zweite Straße!"
+            "q": "«هل يمكنكم أن تشرحوا لي الطريق؟»؟",
+            "choices": [
+              "Können Sie mir den Weg erklären?",
+              "Können Sie mich den Weg erklären?",
+              "Können Sie mir den Weg erklärt?"
+            ],
+            "a": "Können Sie mir den Weg erklären?",
+            "why": "erklären + mir (لمن) + den Weg (ماذا) — والمصدر erklären في آخر الجملة بعد können."
+          },
+          {
+            "q": "«انتظروا هنا من فضلكم!» (بصيغة Sie)؟",
+            "choices": [
+              "Warten Sie hier, bitte!",
+              "Sie warten hier, bitte!",
+              "Warten hier Sie, bitte!"
+            ],
+            "a": "Warten Sie hier, bitte!",
+            "why": "الفعل أولاً (Warten) ثم Sie مباشرة ثم hier — وbitte في الآخر."
+          },
+          {
+            "q": "«شكراً على المساعدة!»؟",
+            "choices": [
+              "Danke für die Hilfe!",
+              "Danke für der Hilfe!",
+              "Danke für das Hilfe!"
+            ],
+            "a": "Danke für die Hilfe!",
+            "why": "die Hilfe مؤنث — وبعد für الأكوزاتيف: die Hilfe (لا der ولا das)."
           }
         ],
         "passingScore": 0.75
@@ -207,53 +781,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Entschuldigung! Helfen Sie mir, bitte! — Zuerst geradeaus, danach rechts, und dann: Biegen Sie links ab! Kein Problem.",
-      "ar": "عفواً! ساعدوني من فضلكم! — أولاً إلى الأمام، ثم يميناً، ثم: انعطفوا يساراً! لا مشكلة."
+      "de": "Gehen Sie geradeaus! · Nehmen Sie den Bus! · Warten Sie hier, bitte! · Kommen Sie sofort! · Biegen Sie links ab! · Steigen Sie hier aus! · Helfen Sie mir, bitte! · Entschuldigung, können Sie mir helfen? — Gerne! / Kein Problem. · Ich helfe dir. · Gehen Sie zuerst geradeaus, danach biegen Sie links ab. · Können Sie mir den Weg erklären? · Ich bitte um Hilfe. · Danke für die Hilfe! · Entschuldigung, wo ist die Auskunft? — Am Eingang, links. · Der Ausgang ist dort. · Haben Sie einen Stadtplan?",
+      "ar": "صيغة الأمر المهذبة بأربع خطوات: (1) الفعل أولاً كما في المصدر ثم Sie مباشرة — Gehen Sie! · Nehmen Sie den Bus! · Warten Sie hier, bitte! (الخبر Sie gehen … مقلوباً، والفعل لا يتغيّر). (2) الأفعال المنفصلة: الجزء في آخر الجملة — Biegen Sie links ab! · Steigen Sie hier aus! (3) helfen + الداتيف: Helfen Sie mir! · Ich helfe dir. · Er hilft mir. (mir/dir لا mich/dich) — والطلب المهذب بـkönnen: Entschuldigung, können Sie mir helfen? · Können Sie mir den Weg erklären? — والجواب Gerne! · Sofort! · Kein Problem. (4) zuerst … danach … لترتيب الطريق · um Hilfe bitten (Ich bitte um Hilfe.) · Danke für die Hilfe! الكلمات: die Entschuldigung · der Stadtplan (‑pläne) · die Auskunft (Auskünfte) · der Eingang ≠ der Ausgang · das Problem (‑e) · helfen (hilft · hat geholfen) · bitten (bittet · hat gebeten) · erklären (erklärt · hat erklärt) · die Hilfe · abbiegen (biegt ab) · zuerst · danach · sofort · gerne."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Sie biegen links ab, bitte!~~ / ~~Biegen links Sie ab!~~",
-          "ar": "Imperativ (Sie): الفعل أولاً ثم Sie مباشرة"
+          "de": "~~Sie biegen links ab.~~ (كأمر) · ~~Biegen links Sie ab!~~",
+          "ar": "الأمر المهذب: الفعل أولاً ثم Sie مباشرة"
         },
-        "whyArabicSpeakerFails": "الأمر العربي «انعطفوا» بلا ضمير مرئي أو بترتيب مختلف؛ الألماني يبدأ بالفعل ثم يضمير Sie: Biegen Sie …! — ترتيب غير موجود بالعربية إطلاقاً (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الأمر في العربية بلا ضمير ظاهر («انعطفوا يساراً!»)، فيُبقي المتعلم جملة Sie الخبرية كما هي (~~Sie biegen links ab~~ — خبر لا أمر) أو يضع Sie بعيداً عن الفعل (~~Biegen links Sie ab~~). والألمانية المهذبة: الفعل أولاً ثم Sie مباشرة بعده — Biegen Sie links ab! · Gehen Sie geradeaus! · Nehmen Sie den Bus! — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Biegen Sie links ab, bitte!",
-          "ar": "انعطفوا يساراً من فضلكم!"
+          "de": "Biegen Sie links ab! · Gehen Sie geradeaus! · Nehmen Sie den Bus!",
+          "ar": "انعطفوا يساراً! · اذهبوا إلى الأمام! · خذوا الحافلة!"
         },
         "exercise": {
-          "q": "رتّب: (abbiegen) (Sie) (links) (bitte) — بصيغة الأمر.",
-          "a": "Abbiegen? → Biegen Sie links ab, bitte!"
+          "q": "رتّب: Sie / den Zug! / Nehmen",
+          "a": "Nehmen Sie den Zug!"
         }
       },
       {
         "commonError": {
-          "de": "~~Helfen Sie mich!~~ / ~~Ich helfe dich~~",
-          "ar": "helfen فعل داتيفي — يجرّ المفعول بالداتيف"
+          "de": "~~Helfen Sie mich!~~ · ~~Ich helfe dich.~~",
+          "ar": "helfen يأخذ الداتيف: mir / dir / Ihnen"
         },
-        "whyArabicSpeakerFails": "«ساعدني» بالمفعول المضمر واحد؛ الألماني helfen يفرض الداتيف: helfen Sie **mir** (وليس mich) — تثبيت مصيدة الأفعال الناقمة من الوحدة 8 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«ساعدني» في العربية مفعول به مباشر (ـني)، فيستعمل المتعلم الأكوزاتيف (~~Helfen Sie mich~~ · ~~Ich helfe dich~~). وhelfen في الألمانية يأخذ الداتيف دائماً: Helfen Sie mir! · Ich helfe dir. · Hilfst du mir? · Können Sie mir helfen? — كـDas gefällt mir من الوحدة 8 — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Helfen Sie mir, bitte!",
-          "ar": "ساعدوني من فضلكم!"
+          "de": "Helfen Sie mir! · Ich helfe dir. · Können Sie mir helfen?",
+          "ar": "ساعدوني! · أساعدك · هل يمكنكم مساعدتي؟"
         },
         "exercise": {
-          "q": "أكمل: Helfen Sie ___ (ich)!",
+          "q": "أكمل: Hilfst du ___? (لي)",
           "a": "mir"
         }
       },
       {
         "commonError": {
-          "de": "~~Biegen Sie ab links!~~ / ~~Abbiegen Sie links!~~",
-          "ar": "الفعل المنفصل في الأمر: البادئة تبقى في النهاية"
+          "de": "~~Biegen Sie ab links!~~ · ~~Abbiegen Sie links!~~",
+          "ar": "الفعل المنفصل في الأمر: الفعل أولاً والجزء (ab · aus · ein) في آخر الجملة"
         },
-        "whyArabicSpeakerFails": "البادئة لا تنفصل بالعربية؛ في الأمر الألماني يبقى الفعل المنفصل مقصوصاً: Biegen Sie links **ab**! — مصيدة d2 تتكرر هنا بالصيغة الأمر (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«انعطف يساراً» فعلٌ واحد في العربية، فيُبقي المتعلم abbiegen كلمةً واحدة (~~Abbiegen Sie links~~) أو يلصق ab بالفعل (~~Biegen Sie ab links~~). والألمانية: في الأمر كما في الخبر — الفعل أولاً والجزء المنفصل في آخر الجملة: Biegen Sie links ab! · Steigen Sie am Hauptbahnhof aus! · Steigen Sie hier ein! — كـIch biege links ab. وIch steige ein. — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Biegen Sie links ab!",
-          "ar": "انعطفوا يساراً!"
+          "de": "Biegen Sie links ab! · Steigen Sie am Hauptbahnhof aus!",
+          "ar": "انعطفوا يساراً! · انزلوا عند المحطة المركزية!"
         },
         "exercise": {
-          "q": "أكمل: Nehmen Sie die zweite Straße und ___ Sie links ___ (abbiegen)!",
-          "a": "biegen / ab"
+          "q": "رتّب: ab! / Sie / rechts / dort / Biegen",
+          "a": "Biegen Sie dort rechts ab!"
         }
       }
     ],
@@ -269,19 +843,33 @@
       "zuerst",
       "danach",
       "sofort",
-      "gerne"
+      "gerne",
+      "bitten",
+      "erklaeren",
+      "hilfe"
     ]
   },
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/helfen",
       "https://www.duden.de/rechtschreibung/Entschuldigung",
-      "https://www.duden.de/rechtschreibung/abbiegen"
+      "https://www.duden.de/rechtschreibung/abbiegen",
+      "https://www.duden.de/rechtschreibung/bitten",
+      "https://www.duden.de/rechtschreibung/erklaeren",
+      "https://www.duden.de/rechtschreibung/Hilfe",
+      "https://www.duden.de/rechtschreibung/Auskunft",
+      "https://www.duden.de/rechtschreibung/Stadtplan"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/helfen"
+      "https://de.wiktionary.org/wiki/helfen",
+      "https://de.wiktionary.org/wiki/bitten",
+      "https://de.wiktionary.org/wiki/erkl%C3%A4ren",
+      "https://de.wiktionary.org/wiki/Hilfe",
+      "https://de.wiktionary.org/wiki/abbiegen"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-imperativ-sie",
@@ -299,11 +887,28 @@
     "word-zuerst",
     "word-danach",
     "word-sofort",
-    "word-gerne"
+    "word-gerne",
+    "word-bitten",
+    "word-erklaeren",
+    "word-hilfe"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Höflich nach dem Weg fragen (Imperativ Sie)",
-    "goetheWordListOverlap": []
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Um Hilfe bitten · Wegbeschreibung mit Imperativ (Sie)",
+    "goetheWordListOverlap": [
+      "entschuldigung",
+      "stadtplan",
+      "auskunft",
+      "eingang",
+      "ausgang",
+      "problem",
+      "helfen",
+      "zuerst",
+      "sofort",
+      "gerne",
+      "bitten",
+      "erklaeren",
+      "hilfe"
+    ]
   }
 }
