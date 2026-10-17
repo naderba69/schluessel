@@ -16889,6 +16889,66 @@
       "rmsDb": -17.12
     },
     {
+      "id": "word-gleich",
+      "file": "words/audio/de-DE/word-gleich.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "gleich.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 757,
+      "sizeBytes": 3752,
+      "hash": "sha256:30a7e1c0594b272b3a04ab08efa4d5caf16381ca6c3cd9c7f137ce796ea9094f",
+      "pcmSha256": "36324292a2348357cf363d7c97fdd9c2354dce67cf9b65d67429855e5b56136e",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "word-ab",
+      "file": "words/audio/de-DE/word-ab.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "ab.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 618,
+      "sizeBytes": 3006,
+      "hash": "sha256:5cd21582af7560a4c13e39b8728a23d26913bfdd4904fb4e50fcdc910f2a29af",
+      "pcmSha256": "ab3800120931b9e4b9660edef73dc9df49bc90f689cbe85e4bbbe2f038e17f7a",
+      "rmsDb": -17.52
+    },
+    {
+      "id": "word-achtung",
+      "file": "words/audio/de-DE/word-achtung.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "Achtung.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 804,
+      "sizeBytes": 3925,
+      "hash": "sha256:0478d1509de3f1e7f316e3fe1b6ae116e8105c15ed60adb3990bb9f4ae7b0abf",
+      "pcmSha256": "6b30dce36b0b855496446f62aedc3ef9761e7127ca80883fd1165f571ca14291",
+      "rmsDb": -17.01
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -30714,6 +30774,446 @@
       "hash": "sha256:7980067c175242c16786e259c82bf9acdc98550de7090543a80c342fccaeaf4c",
       "pcmSha256": "c2f9b9c43d6fd2ee0f51bdcff61c8a1d45a2738e5999eab4b5e1abc7ae47bf51",
       "rmsDb": -17.21
+    },
+    {
+      "id": "zg-1",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 117,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, am Sonntag besuchen wir Oma. Wir nehmen den Zug!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 5144,
+      "sizeBytes": 23712,
+      "hash": "sha256:4763dc3052e1bf59e2c8227dfe84123983929b62e51ddddbdb7c083ebf1d90b6",
+      "pcmSha256": "82ccefee5ec537877cc452e498975843bebfe1ad989457372169a363066ecc06",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "zg-2",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 157,
+        "lengthScale": 1.32
+      },
+      "textDe": "Den Zug? Fährt dein Vater nicht Auto?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 2673,
+      "sizeBytes": 12339,
+      "hash": "sha256:01b61d0b81df178589ee94b3d4bb16e3a160a7629d65bca2c216d331942589c5",
+      "pcmSha256": "597e9775e6a8934ccb39dc6199eebdab8746d329f7e929c5cf19673af808cd6a",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "zg-3",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Doch, aber nicht gern. Im Zug schläft er lieber!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 4040,
+      "sizeBytes": 18778,
+      "hash": "sha256:ab6455a2d3b3be35a97691c883ceb72516637bd4d67dd69802552a9c012ea5bc",
+      "pcmSha256": "7184503999906cba21da07fdac7d8b54366496128dad934cd5f443bf2aa539fc",
+      "rmsDb": -17.43
+    },
+    {
+      "id": "zg-4",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 178,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wann fährt der Zug?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 1686,
+      "sizeBytes": 7794,
+      "hash": "sha256:78a8f5b5a3fa742a3e1fc245619d3da0103132a4623ea48cc5f990c7c66ec412",
+      "pcmSha256": "1461347ca0e61ba5d917be7339d4298e3f05da335fb479afb4cb03ebac7ead26",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "zg-5",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 171,
+        "lengthScale": 1.32
+      },
+      "textDe": "Um neun. Er kommt um elf an.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 2456,
+      "sizeBytes": 11534,
+      "hash": "sha256:ce3fe3dcca7f434cbdac8bbbd63e7d1abc84d26e3aaef4decca65aa5928b13a6",
+      "pcmSha256": "913c6ed34e16fbd7bc553f02db6f9f077f510e59ee31172b3cd1c64f861f00ce",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "zg-6",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Fahrkarten? Sind sie teuer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 3044,
+      "sizeBytes": 13764,
+      "hash": "sha256:a1b486bd7786247c0e61f3e80bfe18b137d2c502aa512270ac4cbdef5f39b5de",
+      "pcmSha256": "61f9ef53c3279e910a206a7b50c34878bb52297a95a6ba1b2cff3b3ee11d11d1",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "zg-7",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein bisschen. Mein Vater kauft sie am Bahnhof.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 3688,
+      "sizeBytes": 17086,
+      "hash": "sha256:4a0015e7104ff727b678babce9a04f17a9780758e1b5005c25215888717c174d",
+      "pcmSha256": "7252ccba1963ad99ef31315b32abed1a9ff19a44ed48ebab452438c17027e68f",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "zg-8",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und deine Brüder? Sind sie im Zug ruhig?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 3091,
+      "sizeBytes": 13585,
+      "hash": "sha256:84cbd4844be51926821f3e399b23cc2ffd324cb56bdf711d5302b8066713caa2",
+      "pcmSha256": "22b5406ab66e5281a79cd280e1cdea6268cde16b88731678e8dd9436500b65d4",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "zg-9",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ruhig? Nie! Einer läuft, einer ruft: Achtung, der Zug kommt gleich!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 5128,
+      "sizeBytes": 23647,
+      "hash": "sha256:e219050df456bba992b3d455b2854574a40ad9d8defe0288d76add310eb82ba1",
+      "pcmSha256": "1b8eff72efcc52d2a8a48dbd96556c45991ea6fac01461404a09326fba7005a9",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "zg-10",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 115,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und deine Mutter? Was macht sie?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 3137,
+      "sizeBytes": 12994,
+      "hash": "sha256:913bf82d85222c11d822f26d933efe06f8036116d6c3a984617c941ab47b98b9",
+      "pcmSha256": "08e31e9c52fc8967a5e99bfb2958fd8940ecf6ce5f039e758c9c9b4d91fc846b",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "zg-11",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sie liest. Und mein Bruder isst schon Kuchen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 3256,
+      "sizeBytes": 15176,
+      "hash": "sha256:8d32fed86b15d26855b0390394d534bbf463a374f09b12efe57b4786f6f3bac3",
+      "pcmSha256": "9b6f54bf29e4cefa95da6db38c4883ee812671fa0864d203b4077132fb30b993",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "zg-12",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und du? Machst du im Zug Hausaufgaben?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 2801,
+      "sizeBytes": 12714,
+      "hash": "sha256:19ac7b0d405b474b52a07b97499036a7097ecad6905d0d7330c53e11ceab122e",
+      "pcmSha256": "2e44f2d7afdf0aa24b1b103e2a46a60ee84ace7991a4b0fc9471345f081459de",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "zg-13",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein! Mein Lehrer gibt so viele Hausaufgaben — im Zug mache ich nichts!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 5816,
+      "sizeBytes": 27365,
+      "hash": "sha256:fda457351dcf67af6d2676d04926ca0f97fb60f44fb789bdb185d54d02e51cf7",
+      "pcmSha256": "04af4b5cf68337739ba83905c7ae057543bcccb68b031880bbe26060f45d7841",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "zg-14",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 161,
+        "lengthScale": 1.32
+      },
+      "textDe": "In Berlin nehme ich nie den Zug. Ich fahre Fahrrad.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 3718,
+      "sizeBytes": 16664,
+      "hash": "sha256:8e14ccde695e3af424a32d28aecc65f2d4a8f777953fcf518b6b5e6280b72af4",
+      "pcmSha256": "6a0cb0b7d5f309612ce1aaae65c9e20551b360bfb34baabbc6de3493178886d4",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "zg-15",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 171,
+        "lengthScale": 1.32
+      },
+      "textDe": "Jeden Tag? Und nimmst du nie den Bus?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 2808,
+      "sizeBytes": 13149,
+      "hash": "sha256:2a2faad8b1e00b89dcae4dbf2a344168b1d23549b0e2f0344d38de332f41ce79",
+      "pcmSha256": "0b79e5db2ec0f33a3275982c5486449b7eba4c6a20569508543c2a8449881651",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "zg-16",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Doch, am Abend — da ist es dunkel.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 3172,
+      "sizeBytes": 13873,
+      "hash": "sha256:16572de7279c9c6c33cb0b1db3e14b746a3679ef8ae71c3063102979eb853da7",
+      "pcmSha256": "f988d51ab471b2d7c013c817172346b7dec021fe57ce4eb28e1cccf86a32ebf1",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "zg-17",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! Ab Montag fahre ich auch Fahrrad!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 3128,
+      "sizeBytes": 14562,
+      "hash": "sha256:d722d1332a68bfedb715f09d871e83a21fe533e26f28200f2e47ca89f504ba5a",
+      "pcmSha256": "25d44e473d1668efed010a7f9091f522d5264cdc1711248205db0627aeed49e5",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "zg-18",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Toll! Ich wasche mein Fahrrad jeden Sonntag.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 3195,
+      "sizeBytes": 14222,
+      "hash": "sha256:168fa7fb4b4544034ea704741feb1f627423b94b52bb3f25a132f2bd20cda94c",
+      "pcmSha256": "8bbf3765af3a8e25eba858efe060d66f59c78ce8f57fe49ed8305fac8adeb4dd",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "zg-19",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du wäschst dein Fahrrad und putzt die Küche? Super, Yusuf!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 4648,
+      "sizeBytes": 21732,
+      "hash": "sha256:39dd55a4dfe3369ba3feed32581e98a7f8bd0a0069b64c82fd8d69155ed5acd0",
+      "pcmSha256": "7eaa473048c605fa638bdeb0058900fb8f52ca4868cc4e5c8bb866d8f6791d7e",
+      "rmsDb": -17.57
+    },
+    {
+      "id": "zg-20",
+      "file": "audio/scripts/a1-u7-d4-wir-nehmen-den-zug/zg-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke! Viel Spaß am Sonntag — und Achtung im Zug!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u7-d4"
+      ],
+      "durationMs": 3787,
+      "sizeBytes": 17255,
+      "hash": "sha256:456fa801a6a664fa7a715ea1e58b18dc6caf0b8ae1db65f7d20f972c049b60c8",
+      "pcmSha256": "76448cc1ac1e5e6106a6129a61249da17c84a22f4449533205b614628d84c364",
+      "rmsDb": -17.06
     }
   ],
   "characterVoices": {
