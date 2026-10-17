@@ -1,5 +1,15 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 115: a1-u8-d5 مُرقّى — von/seit/bei (D160) · الوحدة 8 كلها مُرقّاة
+- **إضافة:** `content/arsenal/grammar/ars-von-seit-bei.json` (أربعون قاعدة يوم — القاعدة المخططة: von للمصدر والمرسل والملكية ≠ aus · seit + الداتيف والفعل مضارع · bei «عند» · vom/beim — usedInLessons u8-d5 + u8-d6) · حوار `a1-u8-d5-eine-tuete-vom-markt` (20 سطراً vb-1..20 مكالمةً) · لا مدخل معجم جديد.
+- **تحسين المحتوى:** 56 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح («من» واحدة ⇒ ~~von Tunesien~~/~~aus dem Markt~~ · «منذ» لا تغيّر ⇒ ~~seit zwei Monate~~ · «عند» لا تغيّر «الـ» ⇒ ~~bei die Bäckerei~~) · استدعاء markt/verkaeufer/bezahlen.
+- **تصحيح بيانات:** أمثلة von/seit/mode/umtausch (بلا ملكية داتيف ولا نص SD1 حرفي) · Mode «die Moden» · Stiefel/Schalter «بلا نهاية» · تسجيل vb على Tunesien/regnet (N-099) · المرجع 1376.
+- **اختبارات:** كتلة D160 (+1) · المثال غير المُرقّى ← a1-u9-d1 · 689/689 · validator 1063/0/0.
+- **السجل:** N-102 جديدة (فحص الاستدعاء بالبادئة) · N-101 تمدّدت (‑erei).
+
+## 2026-10-17 — الدفعة 114: a1-u8-d4 مُرقّى — الداتيف الثابت (D159) · وتصحيح حوار u8-d3 (N-100)
+- (سُجّلت في PROGRESS.md وDECISIONS.md؛ سقطت من هذا الملف سهواً وتُستدرك هنا.) **إضافة:** `ars-dativ-fix.json` (usedInLessons سبعة دروس) · حوار `a1-u8-d4-wie-kommst-du-zum-flughafen` (fh-1..20) · مدخل معجم holt (68). **تحسين:** 52 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد. **تصحيح:** km-16/17/19/20 بالمفرد (N-100 مغلقة) · parken «يركن». **السجل:** N-101 جديدة. 688/688 · 1061/0/0.
+
 ## 2026-10-17 — الدفعة 113: a1-u8-d3 مُرقّى — ما يجب وما يمكن (D158) · وتسريع النطق بلا ONNX
 - **إضافة:** `content/arsenal/grammar/ars-koennen-muessen.json` (ثامن وثلاثون قاعدة يوم — القاعدة المخططة: الفعل الناقص ثانياً والمصدر آخراً بلا zu · ich = er بلا ‑t · kann/können · muss/müssen · nicht müssen = لا حاجة — usedInLessons u8-d3 + u8-d6) · `content/words/kriegen.json` (النواة) + مقطعه · حوار `a1-u8-d3-was-musst-du-kaufen` (20 سطراً km-1..20) · مدخل معجم Abteilung (نبر ‑teil‑؛ word-abteilung معاد توليده).
 - **تحسين المحتوى:** 50 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد جديدة بتعليل صحيح («أن» ⇒ ~~Ich muss zu bezahlen.~~ · الفعلان يتصرّفان معاً ⇒ ~~Ich muss kaufe einen Gürtel.~~ · «يجب» ثابتة ⇒ ~~Du muss bezahlen.~~) · استدعاء anprobieren/kaufen/bezahlen بدل passen/möglich (N-020 مغلقة).
