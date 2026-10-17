@@ -6,11 +6,12 @@
   "day": 5,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst deinen Tag mit trennbaren Verben beschreiben.",
-    "ar": "تصف يومك بأفعال منفصلة صحيحة"
+    "de": "Ich stehe um sieben auf, ich kaufe am Montag ein, und am Abend sehe ich fern.",
+    "ar": "تحكي يومك وأعمال بيتك بالأفعال المنفصلة: الجزء في آخر الجملة (Ich stehe um sieben auf.) وفي السؤال (Stehst du früh auf?) والمصدر متصلاً بعد möchte (Ich möchte aufräumen.) — وتفرّق بين المنفصل وما لا ينفصل (frühstücken · besuchen) — ومعها: der Haushalt · die Wäsche · der Müll · das Buch · der Besuch · der Urlaub · der Koffer · die Reise · hübsch · feiern."
   },
   "canDoDaily": [
-    "يصف يومه بأفعال منفصلة (steht ... auf) وجمل مخلوطة صحيحة"
+    "يصف يومه بأفعال منفصلة: Ich stehe um sieben auf. · Ich rufe meine Familie an. · Ich kaufe am Montag ein. — ويسأل Stehst du früh auf? ويقول بعد möchte المصدر متصلاً (Ich möchte aufräumen.).",
+    "يتكلّم عن أعمال البيت والعطلة: den Haushalt machen · die Wäsche · der Müll · Ich sehe fern. (بلا مفعول) · Urlaub machen · der Koffer · Gute Reise! · Wir feiern Geburtstag."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«أنهض في السابعة» — Ich aufstehe أم Ich stehe auf? (تخمين فقط)"
+          "de": "«أنهض في السابعة» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
-          "Ich stehe um sieben auf. (البادئة في النهاية)",
+          "Ich stehe um sieben auf.",
           "Ich aufstehe um sieben.",
-          "Ich stehe um sieben."
+          "Ich um sieben aufstehe."
         ],
-        "answer": "Ich stehe um sieben auf. (البادئة في النهاية)",
+        "answer": "Ich stehe um sieben auf.",
         "revealNextSession": true
       }
     ],
@@ -63,76 +64,495 @@
       "story-a7-u7-s5"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "auslaut-b",
+      "ch-ach-laut",
+      "double-consonant",
+      "r-uvular",
+      "sp-st-initial",
+      "umlaut-a",
+      "umlaut-u",
+      "vowel-long-short"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أنهض في السابعة»؟",
-            "a": "Ich stehe um sieben auf."
+            "q": "Mein Vater ___ immer um sechs auf. (ينهض)",
+            "a": "steht",
+            "why": "aufstehen ينفصل: steht ثانياً (مع er) وauf في آخر الجملة."
           },
           {
-            "q": "«أنا أتناول الفطور في الثامنة»؟",
-            "a": "Ich frühstücke um acht."
+            "q": "Am Montag möchte ich früh ___. (أنهض)",
+            "a": "aufstehen",
+            "why": "بعد möchte يبقى المصدر متصلاً في الآخر: aufstehen."
+          },
+          {
+            "q": "Wann rufst du Oma ___? (تتصل)",
+            "a": "an",
+            "why": "anrufen ينفصل: rufst … an — والجزء في آخر السؤال بعد المفعول."
+          },
+          {
+            "q": "Ich möchte meine Schwester ___. (أتصل بـ)",
+            "a": "anrufen",
+            "why": "بعد möchte المصدر متصلاً في الآخر: anrufen — والمفعول قبله بلا حرف جر."
+          },
+          {
+            "q": "Lena ___ am Abend fern. (تشاهد التلفاز)",
+            "a": "sieht",
+            "why": "fernsehen ينفصل، وsieht بتغيير الحركة (e ← ie) مع هي — وfern في الآخر."
+          },
+          {
+            "q": "Möchtest du heute ___? (تشاهد التلفاز)",
+            "a": "fernsehen",
+            "why": "بعد möchte المصدر متصلاً: fernsehen — بلا مفعول."
+          },
+          {
+            "q": "Wir ___ am Montag ein. (نتسوّق)",
+            "a": "kaufen",
+            "why": "einkaufen ينفصل: kaufen ثانياً مع wir وein في الآخر — وein قبل اسمٍ أداةٌ لا جزء (Ich kaufe ein Buch.)."
+          },
+          {
+            "q": "Ich möchte heute noch ___. (أتسوّق)",
+            "a": "einkaufen",
+            "why": "بعد möchte المصدر متصلاً في الآخر: einkaufen."
+          },
+          {
+            "q": "Die Kinder ___ das Wohnzimmer auf. (يرتّبون)",
+            "a": "räumen",
+            "why": "aufräumen ينفصل: räumen ثانياً مع الجمع، والمفعول في الوسط، وauf في الآخر."
+          },
+          {
+            "q": "Heute ___ ich ab. (أغسل الأطباق)",
+            "a": "wasche",
+            "why": "abwaschen: wasche ثانياً (ich بلا تغيير الحركة) وab في الآخر."
+          },
+          {
+            "q": "Am Sonntag ___ wir lange. (نفطر)",
+            "a": "frühstücken",
+            "why": "frühstücken لا ينفصل: الفعل كاملاً ثانياً بعد Am Sonntag — لا جزء في الآخر."
+          },
+          {
+            "q": "Yusuf macht den ___ allein. (أعمال البيت)",
+            "a": "Haushalt",
+            "why": "der Haushalt = أعمال البيت — den Haushalt machen (مفعول به مذكر)."
+          },
+          {
+            "q": "Mein Vater wäscht die ___. (الغسيل)",
+            "a": "Wäsche",
+            "why": "die Wäsche = الغسيل — ä من waschen، وsch — وdie Wäsche waschen = يغسل الغسيل."
+          },
+          {
+            "q": "Der ___ ist in der Küche. (القمامة)",
+            "a": "Müll",
+            "why": "der Müll = القمامة — ü ثم ll — ولا يُجمع."
+          },
+          {
+            "q": "Wir haben heute ___ aus Tunesien. (ضيوف)",
+            "a": "Besuch",
+            "why": "Besuch haben = عندنا ضيوف — der Besuch بلا أداة هنا."
+          },
+          {
+            "q": "Wir machen im Juni ___. (عطلة)",
+            "a": "Urlaub",
+            "why": "Urlaub machen = يأخذ عطلة — der Urlaub بلا أداة هنا."
+          },
+          {
+            "q": "Mein ___ ist schwer. (حقيبة سفري)",
+            "a": "Koffer",
+            "why": "der Koffer = حقيبة السفر — ff بعد o القصيرة · والجمع die Koffer بلا نهاية."
+          },
+          {
+            "q": "Deine Tasche ist ___! (جميلة)",
+            "a": "hübsch",
+            "why": "hübsch = جميل · أنيق — ü ثم bsch، وb في الآخر تُنطق p."
           }
         ],
         "interleavedWith": [
-          "aufstehen",
-          "fruehstuecken"
+          "vater",
+          "oma",
+          "schwester",
+          "kind",
+          "wohnzimmer",
+          "montag",
+          "sonntag",
+          "juni",
+          "tasche",
+          "tunesien",
+          "heute"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«أرتّب غرفتي»؟",
-            "a": "Ich räume mein Zimmer auf."
+            "audioId": "hh-1",
+            "speakText": "Unsere Frage heute: Wer macht den Haushalt? Erzähl, Yusuf!",
+            "q": "استمع: ما سؤال اليوم في الدورة؟",
+            "choices": [
+              "من يقوم بأعمال البيت",
+              "من يطبخ في البيت",
+              "من يتسوّق للأسرة"
+            ],
+            "a": "من يقوم بأعمال البيت",
+            "why": "Unsere Frage heute = سؤالنا اليوم · Wer macht den Haushalt? = من يقوم بأعمال البيت؟ · Erzähl! = احكِ!"
           },
           {
-            "q": "«أتسوّق يوم السبت»؟",
-            "a": "Ich kaufe am Samstag ein."
+            "audioId": "hh-2",
+            "speakText": "Ich! Ich wohne allein. Ich kaufe ein, ich wasche ab, und ich räume auf.",
+            "q": "استمع: ماذا يفعل يوسف في البيت، ولماذا؟",
+            "choices": [
+              "كل شيء — لأنه يسكن وحده",
+              "يتسوّق فقط — لأنه يسكن وحده",
+              "كل شيء — لأن أسرته معه"
+            ],
+            "a": "كل شيء — لأنه يسكن وحده",
+            "why": "Ich wohne allein = أسكن وحدي · kaufe … ein · wasche … ab · räume … auf = أتسوّق وأغسل الأطباق وأرتّب."
+          },
+          {
+            "audioId": "hh-3",
+            "speakText": "Und die Wäsche? Und der Müll?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "عن الغسيل والقمامة",
+              "عن الطبخ والتسوّق",
+              "عن الحاسوب والهاتف"
+            ],
+            "a": "عن الغسيل والقمامة",
+            "why": "die Wäsche = الغسيل · der Müll = القمامة."
+          },
+          {
+            "audioId": "hh-4",
+            "speakText": "Die Waschmaschine wäscht die Wäsche. Und der Müll ist schon weg!",
+            "q": "استمع: من يغسل الغسيل، وأين القمامة؟",
+            "choices": [
+              "الغسّالة تغسله — والقمامة أُخرجت بالفعل",
+              "يوسف يغسله بيده — والقمامة في المطبخ",
+              "الغسّالة تغسله — والقمامة في الممرّ"
+            ],
+            "a": "الغسّالة تغسله — والقمامة أُخرجت بالفعل",
+            "why": "Die Waschmaschine wäscht die Wäsche = الغسّالة تغسل الغسيل · Der Müll ist schon weg = القمامة لم تعد هنا (weg sein)."
+          },
+          {
+            "audioId": "hh-6",
+            "speakText": "Und du, Lena? Was machst du im Haushalt?",
+            "q": "استمع: عمّ يسأل يوسف لينا؟",
+            "choices": [
+              "عن نصيبها من أعمال البيت",
+              "عن أخويها",
+              "عن أمها"
+            ],
+            "a": "عن نصيبها من أعمال البيت",
+            "why": "Was machst du im Haushalt? = ماذا تفعلين في أعمال البيت؟"
+          },
+          {
+            "audioId": "hh-7",
+            "speakText": "Ich wasche am Abend ab. Und am Montag kaufe ich ein.",
+            "q": "استمع: ماذا تفعل لينا، ومتى؟",
+            "choices": [
+              "تغسل الأطباق مساءً وتتسوّق يوم الاثنين",
+              "تغسل الأطباق صباحاً وتتسوّق يوم الأحد",
+              "ترتّب غرفتها مساءً وتتسوّق يوم الاثنين"
+            ],
+            "a": "تغسل الأطباق مساءً وتتسوّق يوم الاثنين",
+            "why": "Ich wasche am Abend ab = أغسل الأطباق مساءً · am Montag kaufe ich ein = يوم الاثنين أتسوّق (الفعل ثانياً بعد الوقت والجزء في الآخر)."
+          },
+          {
+            "audioId": "hh-8",
+            "speakText": "Und am Sonntag? Stehst du spät auf?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل تنهض متأخّرة يوم الأحد",
+              "هل تنام متأخّرة يوم الأحد",
+              "هل تفطر متأخّرة يوم الأحد"
+            ],
+            "a": "هل تنهض متأخّرة يوم الأحد",
+            "why": "Stehst du spät auf? = هل تنهضين متأخّرة؟ — الفعل أولاً وauf في الآخر."
+          },
+          {
+            "audioId": "hh-9",
+            "speakText": "Nein, früh — um sieben! Wir frühstücken, und der Zug fährt um neun.",
+            "q": "استمع: متى تنهض لينا يوم الأحد، ولماذا؟",
+            "choices": [
+              "في السابعة — فالقطار في التاسعة بعد الفطور",
+              "في التاسعة — فالقطار في العاشرة",
+              "في السابعة — فالحافلة في الثامنة"
+            ],
+            "a": "في السابعة — فالقطار في التاسعة بعد الفطور",
+            "why": "früh — um sieben = باكراً في السابعة · Wir frühstücken = نفطر (لا ينفصل) · der Zug fährt um neun = القطار يتحرّك في التاسعة."
+          },
+          {
+            "audioId": "hh-10",
+            "speakText": "Ach ja, ihr besucht Oma!",
+            "q": "استمع: ماذا يتذكّر يوسف؟",
+            "choices": [
+              "أنهم يزورون الجدّة",
+              "أنهم يحتفلون بعيد ميلاده",
+              "أنهم يسافرون إلى تونس"
+            ],
+            "a": "أنهم يزورون الجدّة",
+            "why": "Ach ja, ihr besucht Oma! = آه صحيح، تزورون الجدّة! — besuchen لا ينفصل."
+          },
+          {
+            "audioId": "hh-12",
+            "speakText": "Toll! Und was machst du am Abend? Siehst du fern?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل تشاهد التلفاز مساءً",
+              "هل تقرأ مساءً",
+              "هل تتصل بأحد مساءً"
+            ],
+            "a": "هل تشاهد التلفاز مساءً",
+            "why": "Siehst du fern? = هل تشاهدين التلفاز؟ — siehst بتغيير الحركة وfern في الآخر."
+          },
+          {
+            "audioId": "hh-13",
+            "speakText": "Ja, oder ich lese ein Buch.",
+            "q": "استمع: بماذا تجيب لينا؟",
+            "choices": [
+              "نعم — أو تقرأ كتاباً",
+              "لا — تقرأ كتاباً فقط",
+              "نعم — أو تتصل بجدّتها"
+            ],
+            "a": "نعم — أو تقرأ كتاباً",
+            "why": "Ja, oder ich lese ein Buch = نعم، أو أقرأ كتاباً."
+          },
+          {
+            "audioId": "hh-14",
+            "speakText": "Ich sehe nie fern. Ich habe keinen Fernseher!",
+            "q": "استمع: لماذا لا يشاهد يوسف التلفاز أبداً؟",
+            "choices": [
+              "ليس عنده جهاز تلفاز",
+              "التلفاز مملّ",
+              "ليس عنده وقت"
+            ],
+            "a": "ليس عنده جهاز تلفاز",
+            "why": "Ich sehe nie fern = لا أشاهد التلفاز أبداً · Ich habe keinen Fernseher = ليس عندي جهاز تلفاز (der Fernseher الجهاز)."
+          },
+          {
+            "audioId": "hh-15",
+            "speakText": "Keinen Fernseher? Was machst du denn am Abend?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "ماذا يفعل مساءً إذن",
+              "أين التلفاز",
+              "لماذا لا يحبّ التلفاز"
+            ],
+            "a": "ماذا يفعل مساءً إذن",
+            "why": "Was machst du denn am Abend? = فماذا تفعل مساءً إذن؟ — denn للاهتمام."
+          },
+          {
+            "audioId": "hh-16",
+            "speakText": "Ich rufe meine Familie in Tunesien an.",
+            "q": "استمع: ماذا يفعل يوسف مساءً؟",
+            "choices": [
+              "يتصل بأسرته في تونس",
+              "يزور أسرته في تونس",
+              "يقرأ كتاباً عن تونس"
+            ],
+            "a": "يتصل بأسرته في تونس",
+            "why": "Ich rufe meine Familie in Tunesien an = أتصل بأسرتي في تونس — المفعول في الوسط وan في الآخر."
+          },
+          {
+            "audioId": "hh-17",
+            "speakText": "Und machst du auch mal Urlaub?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل يأخذ عطلةً أحياناً",
+              "هل يحبّ السفر",
+              "متى يزور أسرته"
+            ],
+            "a": "هل يأخذ عطلةً أحياناً",
+            "why": "Machst du auch mal Urlaub? = هل تأخذ عطلةً أحياناً؟ — Urlaub machen."
+          },
+          {
+            "audioId": "hh-18",
+            "speakText": "Ja! Im Urlaub besuche ich meine Familie. Hier, mein Koffer!",
+            "q": "استمع: ماذا سيفعل يوسف في العطلة، وماذا يُري لينا؟",
+            "choices": [
+              "يزور أسرته — ويُريها حقيبة سفره",
+              "يزور لينا — ويُريها حقيبة سفره",
+              "يزور أسرته — ويُريها تذكرته"
+            ],
+            "a": "يزور أسرته — ويُريها حقيبة سفره",
+            "why": "Im Urlaub besuche ich meine Familie = في العطلة أزور أسرتي · Hier, mein Koffer! = ها هي حقيبتي!"
+          },
+          {
+            "audioId": "hh-20",
+            "speakText": "Danke! Und du — steh am Sonntag früh auf! Der Zug wartet nicht.",
+            "q": "استمع: بماذا يمزح يوسف في النهاية؟",
+            "choices": [
+              "أن تنهض باكراً — فالقطار لا ينتظر",
+              "أن تنام طويلاً — فالقطار متأخّر",
+              "أن تتصل به — فالقطار طويل"
+            ],
+            "a": "أن تنهض باكراً — فالقطار لا ينتظر",
+            "why": "steh am Sonntag früh auf! = انهضي باكراً يوم الأحد! (الأمر وauf في الآخر) · Der Zug wartet nicht = القطار لا ينتظر."
           }
         ],
         "interleavedWith": [
-          "aufraeumen",
-          "einkaufen"
+          "frage",
+          "allein",
+          "waschmaschine",
+          "abend",
+          "montag",
+          "zug",
+          "oma",
+          "fernseher",
+          "familie",
+          "tunesien"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«في المساء أشاهد التلفاز»؟",
-            "a": "Abends sehe ich fern."
+            "tokens": [
+              "auf.",
+              "um",
+              "Ich",
+              "sechs",
+              "stehe"
+            ],
+            "a": "Ich stehe um sechs auf.",
+            "why": "Ich ثم stehe ثانياً ثم الوقت ثم auf في الآخر."
           },
           {
-            "q": "«أتصل بأمي وأغسل الأطباق»؟",
-            "a": "Ich rufe meine Mutter an und wasche das Geschirr ab."
+            "tokens": [
+              "an?",
+              "du",
+              "Rufst",
+              "mich"
+            ],
+            "a": "Rufst du mich an?",
+            "why": "سؤال: Rufst أولاً ثم du ثم المفعول mich ثم an في الآخر."
+          },
+          {
+            "tokens": [
+              "fern.",
+              "gern",
+              "sieht",
+              "Oma"
+            ],
+            "a": "Oma sieht gern fern.",
+            "why": "Oma ثم sieht (e ← ie مع هي) ثم gern ثم fern في الآخر."
+          },
+          {
+            "tokens": [
+              "auf.",
+              "Küche",
+              "räumt",
+              "die",
+              "Lena"
+            ],
+            "a": "Lena räumt die Küche auf.",
+            "why": "Lena ثم räumt ثانياً ثم المفعول die Küche في الوسط ثم auf في الآخر."
+          },
+          {
+            "tokens": [
+              "abwaschen.",
+              "möchte",
+              "Ich",
+              "nicht"
+            ],
+            "a": "Ich möchte nicht abwaschen.",
+            "why": "Ich ثم möchte ثانياً ثم nicht ثم المصدر abwaschen متصلاً في الآخر."
+          },
+          {
+            "tokens": [
+              "zusammen.",
+              "frühstücken",
+              "Wir"
+            ],
+            "a": "Wir frühstücken zusammen.",
+            "why": "frühstücken لا ينفصل: Wir ثم frühstücken ثم zusammen."
           }
         ],
         "interleavedWith": [
-          "anrufen",
-          "abwaschen"
+          "oma"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "hh-5",
+            "speakText": "Super! Meine Brüder räumen nie auf. Meine Eltern machen alles.",
+            "a": "Super! Meine Brüder räumen nie auf. Meine Eltern machen alles.",
+            "why": "Brüder بـü (جمع Bruder) · räumen بـäu ثم auf في الآخر · Eltern بحرف كبير · alles بـll."
+          },
+          {
+            "audioId": "hh-11",
+            "speakText": "Genau! Und am Sonntag hat Oma Geburtstag. Wir feiern!",
+            "a": "Genau! Und am Sonntag hat Oma Geburtstag. Wir feiern!",
+            "why": "Genau بحرف كبير أول الجملة · Geburtstag كلمةٌ واحدة بحرف كبير وفي آخرها Tag · feiern بـei ثم ern."
+          },
+          {
+            "audioId": "hh-19",
+            "speakText": "Ach, der ist ja hübsch! Ein Besuch in Tunesien — gute Reise!",
+            "a": "Ach, der ist ja hübsch! Ein Besuch in Tunesien — gute Reise!",
+            "why": "hübsch: ü ثم bsch · Besuch بحرف كبير وch بعد u («خ») · Reise بـei وs بين حركتين."
+          },
+          {
+            "audioId": "word-aufraeumen",
+            "speakText": "aufräumen.",
+            "a": "aufräumen",
+            "why": "auf + räumen: äu «أوي» ثم m ثم en — كلمةٌ واحدة في المصدر."
+          },
+          {
+            "audioId": "word-abwaschen",
+            "speakText": "abwaschen.",
+            "a": "abwaschen",
+            "why": "ab + waschen: b في ab تُنطق p ثم w «v» ثم sch."
+          },
+          {
+            "audioId": "word-buch",
+            "speakText": "Buch.",
+            "a": "Buch",
+            "why": "Buch بحرف كبير: u طويلة ثم ch بعد u («خ»)."
+          },
+          {
+            "audioId": "word-reise",
+            "speakText": "Reise.",
+            "a": "Reise",
+            "why": "Reise بحرف كبير: ei «اي» ثم s بين حركتين (تُنطق z) ثم e."
+          },
+          {
+            "audioId": "word-feiern",
+            "speakText": "feiern.",
+            "a": "feiern",
+            "why": "feiern: ei «اي» ثم ern في الآخر."
+          }
+        ],
+        "interleavedWith": [
+          "bruder",
+          "eltern",
+          "oma",
+          "geburtstag",
+          "genau",
+          "tunesien"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Tag mit trennbaren Verben beschreiben",
-        "ar": "وصف اليوم بأفعال منفصلة"
+        "de": "Mein Tag: Ich stehe um sieben auf, ich kaufe ein …",
+        "ar": "تحكي لزميلك يومك وأعمال بيتك بالأفعال المنفصلة، وتسأله عن يومه"
       },
       "situation": {
-        "de": "Mein Tag",
-        "ar": "يومي"
+        "de": "Wann stehst du auf? Wer räumt auf? Siehst du am Abend fern?",
+        "ar": "في الدورة: يسأل كلٌّ منكما الآخر عن يومه وأعمال بيته: Wann stehst du auf? · Wer räumt auf? · Siehst du am Abend fern? — ويجيب بجمل كاملة بأفعال اليوم، ثم يحكي عن فرد من أسرته (Mein Vater kauft … ein. · Meine Schwester wäscht ab.) — ثم تتبادلان."
       },
       "successCriteria": [
-        "5 جمل يومية بأفعال منفصلة صحيحة (steht auf · räumt auf · kauft ein · sieht fern · ruft an)"
+        "خمس جمل على الأقل عن يومك بأفعالٍ منفصلة: الجزء في آخر الجملة (Ich stehe um … auf. · Ich kaufe am … ein.)، وجملة بمفعولٍ في الوسط (Ich rufe meine … an.)، وجملة بـmöchte والمصدر متصلاً (Ich möchte … aufräumen.).",
+        "سؤالان لزميلك (Wann stehst du auf? · Siehst du fern?) — والمشاهدة بـfernsehen بلا مفعول — وجملة بفعلٍ لا ينفصل (Ich frühstücke um … · Ich besuche …)."
       ]
     }
   },
@@ -147,20 +567,54 @@
       {
         "items": [
           {
-            "q": "«ينهض»؟",
-            "a": "aufstehen → er steht auf."
+            "q": "سؤال لزميلك: «هل تنهض باكراً؟»",
+            "choices": [
+              "Stehst du früh auf?",
+              "Aufstehst du früh?",
+              "Stehst auf du früh?"
+            ],
+            "a": "Stehst du früh auf?",
+            "why": "في السؤال الفعل وحده أولاً (Stehst) وauf في الآخر."
           },
           {
-            "q": "«يرتّب»؟",
-            "a": "aufräumen → ich räume auf."
+            "q": "«أتسوّق يوم الاثنين»؟",
+            "choices": [
+              "Am Montag kaufe ich ein.",
+              "Am Montag einkaufe ich.",
+              "Am Montag ich kaufe ein."
+            ],
+            "a": "Am Montag kaufe ich ein.",
+            "why": "الوقت أولاً ثم kaufe ثانياً ثم ich ثم ein في الآخر."
           },
           {
-            "q": "«غسيل»؟",
-            "a": "die Wäsche"
+            "q": "abwaschen = ؟",
+            "choices": [
+              "يغسل الأطباق",
+              "يغسل الملابس",
+              "يرتّب"
+            ],
+            "a": "يغسل الأطباق",
+            "why": "abwaschen = يغسل الأطباق · die Wäsche waschen = يغسل الملابس · aufräumen = يرتّب."
           },
           {
-            "q": "«أنا أتناول الفطور في الثامنة»؟",
-            "a": "Ich frühstücke um acht."
+            "q": "«أشاهد التلفاز كل مساء»؟",
+            "choices": [
+              "Ich sehe jeden Abend fern.",
+              "Ich fernsehe jeden Abend.",
+              "Ich fern jeden Abend sehe."
+            ],
+            "a": "Ich sehe jeden Abend fern.",
+            "why": "sehe ثانياً ثم الوقت ثم fern في الآخر — fernsehen بلا مفعول."
+          },
+          {
+            "q": "aufräumen مع er؟",
+            "a": "er räumt auf",
+            "why": "aufräumen ينفصل: er räumt … auf — وفي جملة قصيرة: er räumt auf."
+          },
+          {
+            "q": "«أتصل بجدّتي يوم الأحد» — ابدأ بـ Am Sonntag",
+            "a": "Am Sonntag rufe ich Oma an.",
+            "why": "الوقت أولاً ثم rufe ثانياً ثم ich ثم المفعول Oma ثم an في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -168,20 +622,54 @@
       {
         "items": [
           {
-            "q": "«يتصل»؟",
-            "a": "anrufen → er ruft an."
+            "q": "«أبي يغسل الأطباق»؟",
+            "choices": [
+              "Mein Vater wäscht ab.",
+              "Mein Vater abwäscht.",
+              "Mein Vater wäschst ab."
+            ],
+            "a": "Mein Vater wäscht ab.",
+            "why": "abwaschen: wäscht (a ← ä مع er) وab في الآخر."
           },
           {
-            "q": "«يتسوّق»؟",
-            "a": "einkaufen → ich kaufe ein."
+            "q": "لأختك: «هل تتصلين بأمك اليوم؟»",
+            "choices": [
+              "Rufst du heute deine Mutter an?",
+              "Anrufst du heute deine Mutter?",
+              "Rufst an du heute deine Mutter?"
+            ],
+            "a": "Rufst du heute deine Mutter an?",
+            "why": "سؤال: Rufst أولاً ثم du ثم الوقت والمفعول ثم an في الآخر."
           },
           {
-            "q": "«كتاب»؟",
-            "a": "das Buch (الجمع: die Bücher)"
+            "q": "der Koffer = ؟",
+            "choices": [
+              "حقيبة السفر",
+              "الرحلة",
+              "العطلة"
+            ],
+            "a": "حقيبة السفر",
+            "why": "der Koffer = حقيبة السفر · die Reise = الرحلة · der Urlaub = العطلة."
           },
           {
-            "q": "«يغسل الأطباق»؟",
-            "a": "abwaschen → er wäscht ab."
+            "q": "«أريد أن أرتّب غرفتي»؟",
+            "choices": [
+              "Ich möchte mein Zimmer aufräumen.",
+              "Ich möchte mein Zimmer räume auf.",
+              "Ich möchte aufräumen mein Zimmer."
+            ],
+            "a": "Ich möchte mein Zimmer aufräumen.",
+            "why": "بعد möchte المصدر متصلاً في الآخر بعد المفعول: … mein Zimmer aufräumen."
+          },
+          {
+            "q": "fernsehen مع du؟",
+            "a": "du siehst fern",
+            "why": "e ← ie مع du وfern في الآخر: du siehst fern."
+          },
+          {
+            "q": "«يوم الأحد نحتفل بعيد الميلاد» — ابدأ بـ Am Sonntag",
+            "a": "Am Sonntag feiern wir Geburtstag.",
+            "why": "الوقت أولاً ثم feiern ثانياً ثم wir ثم Geburtstag — feiern لا ينفصل."
           }
         ],
         "passingScore": 0.75
@@ -189,20 +677,54 @@
       {
         "items": [
           {
-            "q": "«يشاهد التلفاز»؟",
-            "a": "fernsehen → er sieht fern."
+            "q": "«يرتّب الأطفال المطبخ»؟",
+            "choices": [
+              "Die Kinder räumen die Küche auf.",
+              "Die Kinder aufräumen die Küche.",
+              "Die Kinder räumen auf die Küche."
+            ],
+            "a": "Die Kinder räumen die Küche auf.",
+            "why": "räumen ثانياً ثم المفعول die Küche ثم auf في الآخر — لا قبل المفعول."
           },
           {
-            "q": "«عطلة»؟",
-            "a": "der Urlaub"
+            "q": "«أفطر في الثامنة»؟",
+            "choices": [
+              "Um acht frühstücke ich.",
+              "Um acht frühstückt ich.",
+              "Um acht ich frühstücke."
+            ],
+            "a": "Um acht frühstücke ich.",
+            "why": "frühstücken لا ينفصل: Um acht ثم frühstücke ثانياً ثم ich."
           },
           {
-            "q": "«حقيبة السفر»؟",
-            "a": "der Koffer"
+            "q": "hübsch = ؟",
+            "choices": [
+              "جميل · أنيق",
+              "مملّ",
+              "غالٍ"
+            ],
+            "a": "جميل · أنيق",
+            "why": "hübsch = جميل · أنيق · langweilig = مملّ · teuer = غالٍ."
           },
           {
-            "q": "«نحتفل بعيد ميلاد»؟",
-            "a": "Wir feiern Geburtstag."
+            "q": "«يتصل يوسف بأسرته»؟",
+            "choices": [
+              "Yusuf ruft seine Familie an.",
+              "Yusuf anruft seine Familie.",
+              "Yusuf ruft an seine Familie."
+            ],
+            "a": "Yusuf ruft seine Familie an.",
+            "why": "ruft ثانياً ثم المفعول seine Familie ثم an في الآخر."
+          },
+          {
+            "q": "«الكتب» (das Buch — الجمع مع الأداة)؟",
+            "a": "die Bücher",
+            "why": "الجمع: das Buch ← die Bücher — ü + ‑er (كـdas Dach ← die Dächer)."
+          },
+          {
+            "q": "«أخي لا يرتّب أبداً» — ابدأ بـ Mein Bruder",
+            "a": "Mein Bruder räumt nie auf.",
+            "why": "räumt ثانياً (مع er) ثم nie ثم auf في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -211,53 +733,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Dein Tag: Du stehst auf, frühstückst, räumst auf, kaufst ein, rufst an, siehst fern — die trennbaren Verben machen alles möglich!",
-      "ar": "يومك: تنهض وتتناول الفطور وترتّب وتتسوّق وتتصل وتتفرّج — الأفعال المنفصلة تُدير كل شيء!"
+      "de": "Ich stehe um sieben auf. · Stehst du früh auf? · Ich rufe meine Familie an. · Ich kaufe am Montag ein. · Er sieht fern. · Sie wäscht ab. · Ich möchte aufräumen. · Wir frühstücken. · Wir feiern Geburtstag. · Gute Reise!",
+      "ar": "الفعل المنفصل: جزؤه الأول (auf · an · ein · ab · fern) في آخر الجملة والفعل ثانياً — وكل شيء بينهما (الوقت والمفعول وnie): Ich rufe meine Familie an. · في السؤال الفعل أولاً والجزء في الآخر (Stehst du früh auf?) · بعد möchte المصدر متصلاً (Ich möchte aufräumen.) · النبر على الجزء المنفصل (AUFstehen) · frühstücken وbesuchen لا تنفصلان · Ich sehe fern. بلا مفعول (وder Fernseher الجهاز) · وein قبل اسمٍ أداة: Ich kaufe ein Buch. ومعها: der Haushalt · die Wäsche · der Müll · das Buch ← die Bücher · der Besuch · der Urlaub · der Koffer · die Reise · hübsch · feiern."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich aufstehe um sieben.~~",
-          "ar": "البادئة المنفصلة في النهاية"
+          "de": "~~Ich aufstehe jeden Tag um sieben.~~",
+          "ar": "الجزء المنفصل في آخر الجملة"
         },
-        "whyArabicSpeakerFails": "«أنهض» كلمة واحدة؛ الألماني aufstehen ينفصل: auf يذهب للنهاية — القاعدة الكبيرة للوحدة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الفعل العربي كلمةٌ واحدة لا تتجزأ: «أنهض» — والقاموس يعطي aufstehen كلمةً واحدة — فيصرّفه المتعلم كاملاً في مكان الفعل. لكن aufstehen فعلٌ منفصل: الفعل المصرّف ثانياً، وجزؤه auf في آخر الجملة كقوسٍ يغلقها: Ich stehe … auf — وكذلك anrufen وeinkaufen وfernsehen (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich stehe um sieben auf.",
-          "ar": "أنهض في السابعة."
+          "de": "Ich stehe jeden Tag um sieben auf.",
+          "ar": "أنهض كل يوم في السابعة."
         },
         "exercise": {
-          "q": "صحّح: ~~Ich anrufe meine Mutter.~~",
-          "a": "Ich rufe meine Mutter an."
+          "q": "صحّح: ~~Lena anruft ihre Oma.~~",
+          "a": "Lena ruft ihre Oma an."
         }
       },
       {
         "commonError": {
-          "de": "~~Ich möchte stehen auf.~~ / ~~Ich möchte aufstehe~~",
-          "ar": "möchte + infinitive مركّب في النهاية"
+          "de": "~~Ich räume auf mein Zimmer.~~",
+          "ar": "الجزء بعد المفعول، لا قبله"
         },
-        "whyArabicSpeakerFails": "مع möchten يبقى الفعل متصلاً في النهاية: möchte aufstehen — تكرار موعود من الوحدة 5 (möchte + Infinitiv) (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "المفعول العربي يلي الفعل مباشرة: «أرتّب غرفتي» — والإنجليزية tidy up my room تضع الجزء بعد الفعل وقبل المفعول — فيُبقي المتعلم auf بجانب الفعل ثم يضع المفعول. لكن الجزء المنفصل يذهب إلى آخر الجملة بعد المفعول وكل شيء: Ich räume mein Zimmer auf. (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich möchte um sieben aufstehen.",
-          "ar": "أريد أن أنهض في السابعة."
+          "de": "Ich räume mein Zimmer auf.",
+          "ar": "أرتّب غرفتي."
         },
         "exercise": {
-          "q": "أكمل: Ich möchte im Urlaub ___ (einkaufen).",
-          "a": "einkaufen"
+          "q": "صحّح: ~~Mein Bruder wäscht ab die Teller.~~",
+          "a": "Mein Bruder wäscht die Teller ab."
         }
       },
       {
         "commonError": {
-          "de": "~~Ich sehe das Fernsehen.~~ / ~~Ich kaufe ein Einkauf.~~",
-          "ar": "فعل ↔ اسم: fernsehen ↔ Fernsehen"
+          "de": "~~Ich sehe den Fernseher.~~",
+          "ar": "المشاهدة: fernsehen بلا مفعول"
         },
-        "whyArabicSpeakerFails": "«أتفرّج/التلفاز» وزن واحد بالعربية؛ الألماني يفصل بين الفعل المنفصل والاسم المركّب — الحفظ بالأزواج (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أشاهد التلفاز» فعلٌ ومفعول، وكذلك watch TV الإنجليزية وregarder la télé الفرنسية — فيضع المتعلم sehen ثم der Fernseher مفعولاً. والمشطوبة صحيحة نحواً بمعنى آخر: «أرى جهاز التلفاز» — أنظر إلى الجهاز نفسه! أما المشاهدة فبالفعل المنفصل وحده بلا مفعول: Ich sehe fern. — وder Fernseher هو الجهاز (الوحدة 6) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich sehe fern. / das Fernsehen · ich kaufe ein. / der Einkauf",
-          "ar": "الفعل منفصل والاسم مستقل."
+          "de": "Ich sehe fern.",
+          "ar": "أشاهد التلفاز."
         },
         "exercise": {
-          "q": "أكمل: Ich ___ fern. Das ___ ist langweilig.",
-          "a": "sehe / Fernsehen"
+          "q": "صحّح (يشاهد البرامج): ~~Mein Vater sieht jeden Abend den Fernseher.~~",
+          "a": "Mein Vater sieht jeden Abend fern."
         }
       }
     ],
@@ -284,13 +806,22 @@
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/aufstehen",
-      "https://www.duden.de/rechtschreibung/Fernsehen",
+      "https://www.duden.de/rechtschreibung/anrufen",
+      "https://www.duden.de/rechtschreibung/fernsehen",
+      "https://www.duden.de/rechtschreibung/einkaufen",
+      "https://www.duden.de/rechtschreibung/Haushalt",
       "https://www.duden.de/rechtschreibung/Urlaub"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/aufstehen"
+      "https://de.wiktionary.org/wiki/aufstehen",
+      "https://de.wiktionary.org/wiki/fernsehen",
+      "https://de.wiktionary.org/wiki/einkaufen",
+      "https://de.wiktionary.org/wiki/Koffer"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-trennbare"
@@ -316,10 +847,24 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Trennbare Verben",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Trennbare Verben & Haushalt",
     "goetheWordListOverlap": [
       "aufstehen",
-      "buch"
+      "anrufen",
+      "fernsehen",
+      "einkaufen",
+      "aufraeumen",
+      "fruehstuecken",
+      "haushalt",
+      "waesche",
+      "muell",
+      "buch",
+      "besuch",
+      "urlaub",
+      "koffer",
+      "reise",
+      "huebsch",
+      "feiern"
     ]
   }
 }

@@ -1156,8 +1156,55 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
   });
 
+  it("u7-d5 (D155): الفعل العربي كلمةٌ واحدة (~~Ich aufstehe …~~) · المفعول يلي الفعل وtidy up (~~Ich räume auf mein Zimmer.~~) · «أشاهد التلفاز» بمفعول (~~Ich sehe den Fernseher.~~ — صحيحة نحواً بمعنى «أرى الجهاز») — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u7-d5")!;
+    const [whole, object, tv] = u.zusammenfassung.warningCards;
+    expect(whole!.commonError.de).toBe("~~Ich aufstehe jeden Tag um sieben.~~");
+    expect(whole!.correct.de).toBe("Ich stehe jeden Tag um sieben auf.");
+    expect(whole!.whyArabicSpeakerFails).toContain("الفعل العربي كلمةٌ واحدة لا تتجزأ");
+    expect(whole!.whyArabicSpeakerFails).toContain("والقاموس يعطي aufstehen كلمةً واحدة");
+    expect(whole!.exercise).toMatchObject({ a: "Lena ruft ihre Oma an." });
+    expect(object!.commonError.de).toBe("~~Ich räume auf mein Zimmer.~~");
+    expect(object!.correct.de).toBe("Ich räume mein Zimmer auf.");
+    expect(object!.whyArabicSpeakerFails).toContain("«أرتّب غرفتي»");
+    expect(object!.whyArabicSpeakerFails).toContain("والإنجليزية tidy up my room");
+    expect(object!.exercise).toMatchObject({ a: "Mein Bruder wäscht die Teller ab." });
+    expect(tv!.commonError.de).toBe("~~Ich sehe den Fernseher.~~");
+    expect(tv!.correct.de).toBe("Ich sehe fern.");
+    // الجملة المشطوبة صحيحة نحواً بمعنى آخر («أرى جهاز التلفاز») — والبطاقة تقول ذلك · وwatch TV وregarder la télé معلنتان
+    expect(tv!.whyArabicSpeakerFails).toContain("صحيحة نحواً بمعنى آخر");
+    expect(tv!.whyArabicSpeakerFails).toContain("«أرى جهاز التلفاز»");
+    expect(tv!.whyArabicSpeakerFails).toContain("watch TV الإنجليزية وregarder la télé الفرنسية");
+    expect(tv!.exercise).toMatchObject({ a: "Mein Vater sieht jeden Abend fern." });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: ~~Ich möchte stehen auf.~~ (مكرر من الوحدة 5 بلا مبرر عربي) · ~~Ich sehe das Fernsehen.~~ / ~~Ich kaufe ein Einkauf.~~ (Einkauf غير مدروسة
+    // — و«Fernsehen sehen/schauen» عاميةٌ مسموعة)
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/stehen auf|das Fernsehen|Einkauf/);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا «Ich stehe um sieben.» (أقف في السابعة) · لا إخراج ظرفٍ بعد الجزء («… auf um sieben» — عامية مسموعة)
+    // · لا «… den Fernseher» (أرى الجهاز) · لا Fernseher بلا أداة (جمع: أجهزة) · لا wascht (لهجة) · لا «kaufe ein + اسم» (ein أداة: أشتري …)
+    const choiceItems = [...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (Array.isArray((i as { choices?: unknown }).choices) ? [i as unknown as { choices: string[]; a: string }] : []));
+    const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
+    const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
+    expect(german.filter((c) => /\bstehe um \p{L}+\.$|\b\p{L}+(e|st|t) (auf|an|ein|ab|fern) (um|am|im|jeden)\b|\bFernseher\b|\bwascht\b|\bkaufe ein (Brot|Buch|\p{Lu})/u.test(c))).toEqual([]);
+    expect(german).toHaveLength(20); // التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
+    // الاستدعاء من دروس سابقة (aufwachen · anfangen — قطعتان منفصلتان من u7-d1 · kochen) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["aufwachen", "anfangen", "kochen"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
+  it("D155: معاني الكلمات وجمل أمثلتها بالعربية وحدها — كان معنى Haushalt «家务 · משק منزل» (صينية وعبرية) فصار «أعمال البيت · تدبير المنزل»", () => {
+    const foreign = /[\u0590-\u05FF\u0400-\u04FF\u3040-\u30FF\u4E00-\u9FFF\uAC00-\uD7AF]/u;
+    const arabic = /[\u0600-\u06FF]/u;
+    const bad = ALL_WORDS.filter((w) => w.ar.some((a) => foreign.test(a) || !arabic.test(a)) || (w.sampleSentence && (foreign.test(w.sampleSentence.ar) || !arabic.test(w.sampleSentence.ar)))).map((w) => w.id);
+    expect(bad).toEqual([]);
+    expect(ALL_WORDS.find((w) => w.id === "haushalt")!.ar).toEqual(["أعمال البيت", "تدبير المنزل"]);
+  });
+
   it("D151: ملاحظات الجمع في الدروس المُرقّاة بلا مصطلح داخلي — كان «Gleich_plural» يظهر للمتعلم في 11 كلمة (Sessel · Spiegel · Kissen · Wecker …) فصار «بلا نهاية: der Sessel ← die Sessel» (نمط D146)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D152: u7-d2 · D153: u7-d3 · D154: u7-d4
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4", "a1-u7-d5"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D152: u7-d2 · D153: u7-d3 · D154: u7-d4 · D155: u7-d5
     const jargon = ALL_WORDS.filter((w) => done.has(w.id) && /Gleich_plural|[A-Za-z]+_[A-Za-z]+/.test(w.pluralRuleNote ?? "")).map((w) => w.id);
     expect(jargon).toEqual([]);
     const note = (id: string) => ALL_WORDS.find((w) => w.id === id)!.pluralRuleNote;
@@ -1169,7 +1216,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
   });
 
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4", "a1-u6-d5", "a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4 · D150: u6-d5 · D151: u7-d1 · D152: u7-d2 · D153: u7-d3 · D154: u7-d4
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4", "a1-u6-d5", "a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4", "a1-u7-d5"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4 · D150: u6-d5 · D151: u7-d1 · D152: u7-d2 · D153: u7-d3 · D154: u7-d4 · D155: u7-d5
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     // D150: Möbel دخلت (N-070 — كانت بجنس die وبطاقة جنس و«جمع فقط … مثل Nudeln» — والمفرد das Möbel موجود نادراً) ⇒ «جمعاً عادةً» بلا جنس مفرد
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute", "moebel"]);
