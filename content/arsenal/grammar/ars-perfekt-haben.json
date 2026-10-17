@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-perfekt-haben",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Was hast du gestern gemacht? — Gestern habe ich Deutsch gelernt. · Ich habe einen Brief geschrieben. · Wir haben das Spiel gewonnen.",
+    "ar": "الماضي المركّب (Perfekt) مع haben: haben مصرَّفاً في الموضع الثاني والتصريف الثالث (Partizip II) في آخر الجملة — القوس (u9-d5) بالماضي · التصريف الثالث: المنتظم ge‑ + الجذع + ‑t (gemacht · gelernt · gekocht · gesagt · gefragt · geholt · gespielt — وgearbeitet بـ‑et) · القوي ge‑ + الجذع المتغيّر + ‑en يُحفظ (gegessen · getrunken · gelesen · geschrieben · gesehen · genommen · gefunden · geschlafen · gewonnen) · المختلط gebracht · gedacht · ظروف الزمن: gestern · vorgestern · letzte Woche · früher — والسؤال: Was hast du gestern gemacht?"
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u10-d3",
+    "a1-u10-d4",
+    "a1-u10-d6"
+  ],
+  "payload": {
+    "topicAr": "«أمس تعلّمتُ الألمانية» — في العربية فعل ماضٍ واحد (تعلّمتُ)، وفي الألمانية جزءان: haben مصرَّفاً في الموضع الثاني (habe · hast · hat · haben) والتصريف الثالث في آخر الجملة: Gestern habe ich Deutsch gelernt. هذا هو قوس الجملة (u9-d5) بالماضي — ما بينهما كل شيء (المفعول · الزمان · المكان). والتصريف الثالث يُبنى بـge‑: المنتظم ge‑…‑t (machen → gemacht · lernen → gelernt · sagen → gesagt) والقوي ge‑…‑en بجذع قد يتغيّر فيُحفظ (essen → gegessen · schreiben → geschrieben · nehmen → genommen · gewinnen → gewonnen) — واثنان مختلطان: bringen → gebracht · denken → gedacht.",
+    "sceneAr": "مكالمة مساء الجمعة 3 أبريل (اليوم الخامس بتونس — u10-d3): Was hast du gestern gemacht? — Gestern habe ich Deutsch gelernt، ومع أمه Fisch gekocht · لينا Hausaufgaben gemacht وim Restaurant gefragt — Er hat gesagt: am Samstag ist ein Tisch frei · أول أمس: Da hat es geregnet — den Bus genommen · Fußball gespielt — wir haben gewonnen! · Früher habe ich auch viel Fußball gespielt · يوسف am Ufer Fotos gemacht وan dich gedacht · einen Brief geschrieben · لينا ein Paket geholt — Meine Mutter hat das Paket gebracht · einen Spaziergang gemacht.",
+    "examples": [
+      {
+        "de": "Was hast du gestern gemacht? — Gestern habe ich Deutsch gelernt. · Ich habe Hausaufgaben gemacht. · Wir haben Fisch gekocht. · Er hat gesagt: Ich komme nicht. · Sie hat ein Paket geholt.",
+        "ar": "ماذا فعلتَ أمس؟ — أمس تعلّمتُ الألمانية · عملتُ الواجبات · طبخنا سمكاً · قال: لا آتي · أخذت طرداً — haben مصرَّفاً ثانياً (habe · hast · hat · haben) والتصريف الثالث في الآخر: gelernt · gemacht · gekocht · gesagt · geholt — المنتظم ge‑ + الجذع + ‑t."
+      },
+      {
+        "de": "Ich habe einen Brief geschrieben. · Ich habe den Bus genommen. · Wir haben das Spiel gewonnen. · Mia hat geschlafen. · Hast du das Buch gelesen? · Ich habe meine Schwester gesehen.",
+        "ar": "كتبتُ رسالة · أخذتُ الحافلة · فزنا بالمباراة · ميا نامت · هل قرأتَ الكتاب؟ · رأيتُ أختي — القوي ge‑ + جذع قد يتغيّر + ‑en: geschrieben · genommen · gewonnen · geschlafen · gelesen · gesehen — يُحفظ مع الفعل."
+      },
+      {
+        "de": "Meine Mutter hat das Paket gebracht. · Ich habe an dich gedacht. · Ich habe meine Lehrerin gefragt. · Letzte Woche habe ich viel gearbeitet.",
+        "ar": "أمي جلبت الطرد · فكّرتُ فيك · سألتُ معلّمتي · الأسبوع الماضي عملتُ كثيراً — المختلطان gebracht وgedacht (الجذع يتغيّر والنهاية ‑t) · gefragt منتظم · gearbeitet بـ‑et بعد t."
+      },
+      {
+        "de": "Gestern habe ich Fisch gekocht. · Vorgestern hat es geregnet. · Letzte Woche hast du es gesagt. · Früher habe ich viel Fußball gespielt. · Am Abend habe ich einen Spaziergang gemacht. — Was hast du vorgestern gemacht? · Was hat sie geschickt?",
+        "ar": "أمس طبختُ سمكاً · أول أمس أمطرت · الأسبوع الماضي قلتَه · سابقاً لعبتُ كرة القدم كثيراً · في المساء تنزّهتُ — ماذا فعلتَ أول أمس؟ · ماذا أرسلت؟ — ظرف الزمن أولاً فينقلب الفاعل بعد haben (habe ich · hat es · hast du) والتصريف الثالث يبقى في الآخر — وفي السؤال: Was + hast + du + … + gemacht?"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأول: habe ich … gelernt · haben … gekocht · hat … gesagt — أين الفعل المصرَّف وأين التصريف الثالث؟ وما بينهما؟ (2) gelernt · gemacht · gekocht · gesagt · geholt — ما الذي يبدأ به كل تصريف وما الذي ينتهي به؟ ومن أي مصدر جاء؟ (3) في الثاني: geschrieben · genommen · gewonnen — النهاية غير ‑t؛ ما هي؟ وهل الجذع هو جذع المصدر (schreiben · nehmen · gewinnen)؟ (4) في الرابع: Gestern habe ich … · Vorgestern hat es … — ما الذي حدث للفاعل بعد تقديم الزمن؟ وأين بقي التصريف الثالث؟",
+    "ruleDe": "Was hast du gestern gemacht? — Gestern habe ich Deutsch gelernt. · Ich habe Hausaufgaben gemacht. · Wir haben Fisch gekocht. · Er hat gesagt: Ich komme nicht. · Ich habe meine Lehrerin gefragt. · Sie hat ein Paket geholt. · Ich habe Fußball gespielt. · Letzte Woche habe ich viel gearbeitet. — Ich habe einen Brief geschrieben. · Ich habe den Bus genommen. · Wir haben das Spiel gewonnen. · Mia hat geschlafen. · Hast du das Buch gelesen? · Ich habe meine Schwester gesehen. · Wir haben Fisch gegessen. · Ich habe Tee getrunken. — Meine Mutter hat das Paket gebracht. · Ich habe an dich gedacht. — gestern · vorgestern · letzte Woche · früher · am Abend — Vorgestern hat es geregnet. · Früher habe ich viel Fußball gespielt. · Was hast du vorgestern gemacht?",
+    "ruleAr": "الماضي المركّب مع haben بأربع خطوات: (1) جزءان لا جزء واحد: haben مصرَّفاً في الموضع الثاني (ich habe · du hast · er/sie/es hat · wir/sie haben · ihr habt) والتصريف الثالث (Partizip II) في آخر الجملة — وما بينهما كل شيء: Gestern habe ich Deutsch gelernt. · Ich habe gestern einen Brief geschrieben. — هذا قوس الجملة (u9-d5) بالماضي: haben يفتح والتصريف يغلق. (2) المنتظم: ge‑ + الجذع + ‑t: machen → gemacht · lernen → gelernt · kochen → gekocht · sagen → gesagt · fragen → gefragt · holen → geholt · spielen → gespielt · kaufen → gekauft · schicken → geschickt · wohnen → gewohnt · regnen → geregnet — وبعد t أو d تأتي ‑et: arbeiten → gearbeitet. (3) القوي: ge‑ + الجذع (وقد يتغيّر) + ‑en — يُحفظ مع الفعل كبطاقة: schreiben → geschrieben · essen → gegessen · trinken → getrunken · lesen → gelesen · sehen → gesehen · nehmen → genommen · finden → gefunden · schlafen → geschlafen · treffen → getroffen · gewinnen → gewonnen — والمختلطان: bringen → gebracht · denken → gedacht (الجذع يتغيّر والنهاية ‑t). (4) ظروف الزمن والسؤال: gestern · vorgestern · letzte Woche (letzten Monat · letztes Jahr) · früher · am Abend — إن تقدّم الظرف جاء haben ثانياً والفاعل بعده: Gestern habe ich … · Vorgestern hat es geregnet. · Früher habe ich viel Fußball gespielt. — والسؤال: Was hast du gestern gemacht? · Hast du das Buch gelesen? · Was hat sie geschickt? — الكلمات: gestern · vorgestern · letzt- (letzte Woche) · bringen (hat gebracht) · holen (hat geholt) · lernen (hat gelernt) · sagen (hat gesagt) · fragen (hat gefragt) · denken (hat gedacht) · der Brief (‑e) · das Paket (‑e) · der Spaziergang (einen Spaziergang machen) · früher · gewinnen (hat gewonnen).",
+    "contrastAr": "ما يساعدك ثلاثة: (1) قوس الجملة تعرفه من u9-d5 (steige … aus · muss … umsteigen) — الماضي القوس نفسه: habe … gelernt — عون. (2) «أمس» و«أول أمس» و«الأسبوع الماضي» ظروف في اللغتين وتتقدّم في اللغتين: «أمس تعلّمتُ» = Gestern habe ich gelernt — عون. (3) الفعل المنتظم له قالب واحد يُطبّق على كل فعل جديد (ge‑…‑t) كما تُطبّق أوزان العربية — عون. وما يختلف ثلاثة: (1) الماضي العربي كلمة واحدة (تعلّمتُ · أكلتُ)، فيُسقط المتعلم haben: ~~Gestern ich Deutsch gelernt.~~ أو يكتفي بالحاضر: ~~Gestern lerne ich Deutsch.~~ — والألمانية جزءان دائماً: Gestern habe ich Deutsch gelernt. (2) الفعل العربي يأتي حيث يأتي معناه (أكلتُ بيتزا)، فيضع المتعلم التصريف بعد haben مباشرة: ~~Ich habe gegessen Fisch.~~ · ~~Gestern habe ich gelernt Deutsch.~~ — والألمانية ترسله إلى الآخر: Ich habe Fisch gegessen. (3) القالب الواحد يُغري بتعميمه على القوي: ~~gegesst~~ · ~~geschreibt~~ · ~~genehmt~~ · ~~gebringt~~ — والقوي يُحفظ: gegessen · geschrieben · genommen · gebracht — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "الماضي المركّب مع sein (Ich bin gefahren · Ich bin gegangen · Ich bin geflogen · Ich bin geblieben) — u11-d3 وu11-d4 (اختيار المساعد)؛ اليوم الأفعال التي تأخذ haben وحدها — ولا تقل ~~Ich habe gefahren~~.",
+      "الماضي البسيط war وhatte (Gestern war ich zu Hause. · Ich hatte Zeit.) — u11-d3؛ اليوم Perfekt وحده — ولا «Zeit gehabt» بعد.",
+      "الأفعال المنفصلة في التصريف الثالث (angerufen · eingekauft · aufgeräumt) والأفعال بلا ge‑ (‑ieren: telefoniert · reserviert · وbe‑/ver‑: besucht · bezahlt) — u10-d4 وu12-d3؛ اليوم أفعال بـge‑ وحدها.",
+      "الماضي للمودال (musste · konnte · wollte) والجمل التابعة بأداة سببية — u10-d5 ولاحقاً؛ اليوم الجملة الرئيسة وحدها."
+    ],
+    "beads": [
+      "Gestern",
+      "habe",
+      "ich",
+      "Deutsch",
+      "gelernt."
+    ],
+    "properNouns": [
+      "Mia"
+    ]
+  }
+}

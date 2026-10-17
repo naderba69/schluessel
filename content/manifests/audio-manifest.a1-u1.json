@@ -17309,6 +17309,46 @@
       "rmsDb": -17.03
     },
     {
+      "id": "word-frueher",
+      "file": "words/audio/de-DE/word-frueher.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "früher.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 908,
+      "sizeBytes": 4237,
+      "hash": "sha256:211af3e72d1ddf6f3abc401dd1d9e1558bde70ae10a7a60f213986e9e8e8a3f3",
+      "pcmSha256": "92721dbab1a7a33b839a5972664f91f7a4d9669ae4c0cec830f08eb1d076eb5f",
+      "rmsDb": -16.95
+    },
+    {
+      "id": "word-gewinnen",
+      "file": "words/audio/de-DE/word-gewinnen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "gewinnen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 839,
+      "sizeBytes": 4049,
+      "hash": "sha256:a7c74e0c0a11f7bbfdc69c5d3b25a25aa2eb90630888edd4f1c41f5649573dda",
+      "pcmSha256": "dd774f5dab30bfd74ffc9affd3c28e6abe72f2397e8346d4f107b57b81c512ac",
+      "rmsDb": -16.97
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -37294,6 +37334,446 @@
       "hash": "sha256:b056a07c06ef8a436e4b16f45f20cb155ebfb87925c83d294f0ef81416a2ee9a",
       "pcmSha256": "db13389ce6ed91b0208371e00246974e14f3b0f4572c21d92d2d8efb3802b8e8",
       "rmsDb": -17.37
+    },
+    {
+      "id": "wg-1",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 119,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Yusuf! Was hast du gestern gemacht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 3528,
+      "sizeBytes": 16408,
+      "hash": "sha256:76d2a542dbafed26bfab99edde3c8baf4873a861672799e30fa6824ab1c546c0",
+      "pcmSha256": "fa09eec9283fb577f32f862299af3ce3b67bbd7caa57fd1508a7cf4c68bb0a8c",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "wg-2",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gestern? Am Morgen habe ich Deutsch gelernt — zwei Stunden!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 4356,
+      "sizeBytes": 18998,
+      "hash": "sha256:0111380f629c243d0aaf4d04e98fe444a0419d4d998b90e17ab8f1b6fd184fef",
+      "pcmSha256": "5bafc1a15bccedcb95b4d6009858709dbbd46ab296c89b5dc569d8eeb4d5418d",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "wg-3",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 114,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zwei Stunden! Und am Abend?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 2632,
+      "sizeBytes": 12298,
+      "hash": "sha256:ee9dd675820b2f3cd6c00cd004072c342c5f2ff93cb4eb2e16dd0e273bbef0e1",
+      "pcmSha256": "95d1454e84e194402f14cc0c7b50c350b3599f20c080b1484f3e046b4d266984",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "wg-4",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 180,
+        "lengthScale": 1.32
+      },
+      "textDe": "Am Abend habe ich mit meiner Mutter gekocht. Wir haben Fisch gemacht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 4008,
+      "sizeBytes": 18075,
+      "hash": "sha256:f465f7ed095f005192452dcf0bdd4ce9213629620477b3c03b9c0a9de6709a63",
+      "pcmSha256": "0febcebc5a69eb2b662881538729c59bf599c0baea8da27898f356427b3e0adc",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "wg-5",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut! Ich habe gestern Hausaufgaben gemacht — und ich habe im Restaurant gefragt: Haben Sie am Samstag einen Tisch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 7960,
+      "sizeBytes": 36937,
+      "hash": "sha256:ac3912c58096515806f991baa86b6f49caa92db5977a545656a525e4b2640c5c",
+      "pcmSha256": "fb0bc12a0c2c9a0ea7e39e725f5755a6d82a1cc076e44eacb8df5f95530d960c",
+      "rmsDb": -17.74
+    },
+    {
+      "id": "wg-6",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und? Was hat der Mann gesagt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 2243,
+      "sizeBytes": 9783,
+      "hash": "sha256:70326c860ef5dba6d74213c7ceb65eb5ffc3e77629d7e152c4276508d947df2e",
+      "pcmSha256": "9d05045cf7fd80a8c30c6c957cf2c47b35caba1e801f9cc0b22dd71ed0ac7049",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "wg-7",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Er hat gesagt: Ja, am Samstag ist ein Tisch frei. Und mein Onkel hat gesagt: Ich komme nicht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 7256,
+      "sizeBytes": 33705,
+      "hash": "sha256:ad75943b05b6bc61d4d2013c7a17221f68f4831ffece19525ad05d619b33070b",
+      "pcmSha256": "01d23e1a05a6bb175fc51181e4584223fdc035594dd45438ba5af82874c1d32b",
+      "rmsDb": -17.41
+    },
+    {
+      "id": "wg-8",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die erste Absage — ich weiß. Und was hast du vorgestern gemacht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 4380,
+      "sizeBytes": 20087,
+      "hash": "sha256:a409a58f6f4060f27755b1d9a7e5915d0c2cf93751648eeca7c208a03eedd287",
+      "pcmSha256": "c783800c51003b7bd755dd99699d6a64be0346281ac11e043beec7d0e8982c66",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "wg-9",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Vorgestern? Da hat es geregnet. Ich habe den Bus genommen und in der Schule Fußball gespielt — und wir haben gewonnen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 8424,
+      "sizeBytes": 38864,
+      "hash": "sha256:a7165e3a1976a9fe07887c605f09041545458e659d80d13801d5cb862dbc88e1",
+      "pcmSha256": "db8e04f097a85b9d0b809e4526c261f762a1251307e8ef82ed263cd2b66d8226",
+      "rmsDb": -17.46
+    },
+    {
+      "id": "wg-10",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 121,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gewonnen? Super! Früher habe ich auch viel Fußball gespielt.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 4472,
+      "sizeBytes": 20127,
+      "hash": "sha256:b8ec62e0bd8043c2e1b2805320c06d2d54c933ad0c53fac1f54e1611edc4866e",
+      "pcmSha256": "36b9f6185ca12e22bd0d725ab0977985a85775926b8418b5db265d0128918983",
+      "rmsDb": -17
+    },
+    {
+      "id": "wg-11",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und du? Was hast du vorgestern gemacht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 2808,
+      "sizeBytes": 13135,
+      "hash": "sha256:d9f845ee472d81048259c225804aabce51545f04bcf64ab3d8986ac1f84c2a42",
+      "pcmSha256": "5eb6281f124346af15122b43e113905383af1d096409b63ff8009bba3a18a7b9",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "wg-12",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 165,
+        "lengthScale": 1.32
+      },
+      "textDe": "Vorgestern habe ich mit meiner Schwester am Ufer Fotos gemacht. Ich habe an dich gedacht — bei dir hat es geregnet.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 7259,
+      "sizeBytes": 33198,
+      "hash": "sha256:2ba5aa273df99147653789095c528adc413a12c222db9aeb624ed0ac27fcda28",
+      "pcmSha256": "a0aecd604b13148557d82bc751c1bcadf97b5ede244fbf48383c200bbd6a8fc7",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "wg-13",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 125,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, hier regnet es viel. Hast du einen Brief geschrieben? Du hast es letzte Woche gesagt.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 7672,
+      "sizeBytes": 35221,
+      "hash": "sha256:66056d1f520bf3180de1071767cfe7c632b0d213c86bdeeb9536a180e154fc0d",
+      "pcmSha256": "56e586bc6151f326d5e07872d6dac99edbd3ca04bc601bc898f86dec34f3153c",
+      "rmsDb": -17.5
+    },
+    {
+      "id": "wg-14",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 158,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Ich habe gestern einen Brief geschrieben — an meine Lehrerin in Berlin.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 4554,
+      "sizeBytes": 21114,
+      "hash": "sha256:607599fdfd83d4d7371eddd9e543feb0cf64478ea33cb6d4a41924153808a66e",
+      "pcmSha256": "ef5e32d03514324a808ec83ab5c0250d7eb9d0a829cd3455d0cfe2dc1adab193",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "wg-15",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Schön. Und ich habe heute ein Paket geholt — von meiner Oma.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 4136,
+      "sizeBytes": 19382,
+      "hash": "sha256:bad316e3a58b0f7489aacb184e3ee859051624d81b9ef4c49945d591f36a160b",
+      "pcmSha256": "69ba685b2207ba84d12cd776b122616ba67a05c74fff9d9c1b9a8f37849767e3",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "wg-16",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Paket? Was hat sie geschickt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 2348,
+      "sizeBytes": 10922,
+      "hash": "sha256:06bd4f5071ef5c32ad2b74067721d73b139af91dd7ce6a8163e4ae03cdeb696d",
+      "pcmSha256": "355fba64ff1ac486977733ea24f690f7d2d6c73ec43fa4dffc161f089b5c9d5e",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "wg-17",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 157,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Buch. Meine Mutter hat das Paket von der Post gebracht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 4200,
+      "sizeBytes": 19517,
+      "hash": "sha256:a856c036c3856fc95cb6a2b32491e0ec2347fd5345e832f293e747f244d010e0",
+      "pcmSha256": "c12b5d0c82cda3547b853ad3d9228eb9e51aeface2725732b420e7ce47e02da1",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "wg-18",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 206,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und was hast du heute noch gemacht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 2034,
+      "sizeBytes": 9646,
+      "hash": "sha256:e06deeee88132da8a263cf0dd451081c5771b4983fc6a966e3b79eb38d737558",
+      "pcmSha256": "09bb4935f823cb19fcac87d503526291295c95ebee2d77c3bb3e3fb1b76eb4f1",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "wg-19",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nicht viel. Am Abend habe ich einen Spaziergang gemacht — Mia hat geschlafen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 5496,
+      "sizeBytes": 25570,
+      "hash": "sha256:a62d76552585cf4ef7e522e7915d807caf421992c8611f53ee0a81a3d5c3d68b",
+      "pcmSha256": "b49942249e683419fe704930c5402a1e63700ba15b33da0a7d7dca312c26af6e",
+      "rmsDb": -17.8
+    },
+    {
+      "id": "wg-20",
+      "file": "audio/scripts/a1-u10-d3-was-hast-du-gestern-gemacht/wg-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 152,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und ich habe mit meinem Vater einen Spaziergang gemacht. Bis morgen, Lena!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d3"
+      ],
+      "durationMs": 4751,
+      "sizeBytes": 21837,
+      "hash": "sha256:84bc38f1afec4144c56eaea7e021bb61ca4e8d47fb9f40b9aa951fef70c0735d",
+      "pcmSha256": "25d85b9ace7956bd9e4930244812672f7a268366b9ab7b0cae902a09f59049ac",
+      "rmsDb": -17.05
     }
   ],
   "characterVoices": {
