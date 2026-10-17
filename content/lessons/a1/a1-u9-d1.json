@@ -6,31 +6,32 @@
   "day": 1,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst nach Orten in der Stadt fragen und den Weg beschreiben (gegenüber + Dativ, im Norden / nach Norden).",
-    "ar": "تسأل عن الأماكن في المدينة وتصف الطريق بجمل موقع صحيحة"
+    "de": "Wo ist die Apotheke? — Gegenüber der Kirche. · Mein Kurs ist im Norden von Berlin. · Zu Fuß geradeaus — und zurück zum Bahnhof.",
+    "ar": "تسأل أين الشيء في المدينة وتجيب بجملة موقع واحدة صحيحة: مقابل + الداتيف (gegenüber der Kirche · gegenüber dem Park) · في الشمال/الجنوب/الشرق/الغرب (im Norden) وإلى الشمال (nach Norden) · هنا/هناك · إلى الأمام مباشرة · رجوعاً — ومعها أماكن المدينة: الكنيسة والمستشفى والصيدلية والجامعة والبنك والبريد والحديقة والمتحف والساحة."
   },
   "canDoDaily": [
-    "يسأل عن مكان ويجيب بجملة موقع واحدة صحيحة (Wo ist …? — … ist gegenüber/an/neben …)"
+    "يسأل أين ويجيب بجملة موقع: Wo ist die Apotheke? — Die Apotheke ist gegenüber der Kirche. · Das Museum ist gegenüber dem Park. · Die Bank ist hier, die Post ist dort. · Mein Kurs ist im Norden von Berlin. · Das Krankenhaus ist im Süden, weit weg.",
+    "يصف الطريق بكلمتين: Zu Fuß geradeaus — fünf Minuten. · Geradeaus und links. · Ich gehe jetzt zurück zum Kurs. · Er fährt mit dem Bus zurück. · Wir fahren nach Süden."
   ],
   "warmup": {
     "cardIds": [
       "stadt",
-      "strasse",
-      "wo"
+      "bahnhof",
+      "rechts"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«المتحف مقابل الكنيسة» — gegenüber مع أي إعراب؟"
+          "de": "«المتحف مقابل الكنيسة» — أي صيغة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
-          "gegenüber der Kirche (Dativ)",
-          "gegenüber die Kirche (Akkusativ)",
+          "gegenüber der Kirche",
+          "gegenüber die Kirche",
           "gegenüber den Kirche"
         ],
-        "answer": "gegenüber der Kirche (Dativ)",
+        "answer": "gegenüber der Kirche",
         "revealNextSession": true
       }
     ],
@@ -65,76 +66,561 @@
       "story-a9-u9-s1"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "ch-ich-laut",
+      "double-consonant",
+      "r-uvular",
+      "umlaut-a",
+      "umlaut-u",
+      "vowel-long-short",
+      "z"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أين الصيدلية؟»؟",
-            "a": "Wo ist die Apotheke?"
+            "q": "___ ist die Apotheke? (أين)",
+            "a": "Wo",
+            "why": "السؤال عن المكان: Wo ist …? = أين …؟ — والجواب جملة موقع واحدة."
           },
           {
-            "q": "«المتحف مقابل الكنيسة»؟",
-            "a": "Das Museum ist gegenüber der Kirche."
+            "q": "Die Apotheke ist gegenüber ___ Kirche. (die)",
+            "a": "der",
+            "why": "gegenüber + الداتيف: die Kirche ← der Kirche — كـbei der Bäckerei."
+          },
+          {
+            "q": "Das Museum ist gegenüber ___ Park. (der)",
+            "a": "dem",
+            "why": "gegenüber + الداتيف: der Park ← dem Park — der/das ← dem."
+          },
+          {
+            "q": "Die Schule ist ___ dem Bahnhof. (مقابل)",
+            "a": "gegenüber",
+            "why": "gegenüber = مقابل — وبعدها الداتيف دائماً (dem Bahnhof)."
+          },
+          {
+            "q": "Mein Kurs ist ___ Norden von Berlin. (في الـ — كلمة واحدة)",
+            "a": "im",
+            "why": "in + dem = im — الجهة بالأداة دائماً: der Norden ← im Norden — للموقع (أين؟)."
+          },
+          {
+            "q": "Das Krankenhaus ist im ___. (الجنوب)",
+            "a": "Süden",
+            "why": "der Süden = الجنوب — im Süden = في الجنوب (موقع)."
+          },
+          {
+            "q": "Der Park ist im ___. (الشرق)",
+            "a": "Osten",
+            "why": "der Osten = الشرق — im Osten = في الشرق."
+          },
+          {
+            "q": "In Berlin ist das Krankenhaus im ___. (الغرب)",
+            "a": "Westen",
+            "why": "der Westen = الغرب — im Westen = في الغرب."
+          },
+          {
+            "q": "Wir fahren ___ Süden. (إلى — اتجاه)",
+            "a": "nach",
+            "why": "الاتجاه (إلى أين؟) بـnach بلا أداة: nach Süden — كـnach Berlin."
+          },
+          {
+            "q": "Die Bank ist ___, die Post ist dort. (هنا)",
+            "a": "hier",
+            "why": "hier = هنا — كلمة مكان تقف وحدها بلا أداة."
+          },
+          {
+            "q": "Die Bank ist hier, die Post ist ___. (هناك)",
+            "a": "dort",
+            "why": "dort = هناك — مقابل hier."
+          },
+          {
+            "q": "Zu Fuß ___ — fünf Minuten. (على طول)",
+            "a": "geradeaus",
+            "why": "geradeaus = إلى الأمام مباشرة — كلمة واحدة."
+          },
+          {
+            "q": "Ich gehe jetzt ___ zum Kurs. (رجوعاً)",
+            "a": "zurück",
+            "why": "zurück = رجوعاً — قبل الوجهة (zurück zum Kurs) أو في آخر الجملة."
+          },
+          {
+            "q": "Die ___ ist gegenüber der Kirche. (الصيدلية)",
+            "a": "Apotheke",
+            "why": "die Apotheke = الصيدلية — الجمع die Apotheken بـ‑n."
+          },
+          {
+            "q": "Das ___ ist im Süden, weit weg. (المستشفى)",
+            "a": "Krankenhaus",
+            "why": "das Krankenhaus = المستشفى — مركّب من krank + Haus، والجنس من آخر جزء: das Haus — الجمع Krankenhäuser."
+          },
+          {
+            "q": "Mein Kurs ist gegenüber der ___. (الجامعة)",
+            "a": "Universität",
+            "why": "die Universität = الجامعة — ‑tät دائماً die، والجمع ‑en."
+          },
+          {
+            "q": "Die ___ ist am Platz. (البنك)",
+            "a": "Bank",
+            "why": "die Bank = البنك — الجمع die Banken."
+          },
+          {
+            "q": "Die Familie wohnt im Zentrum, gegenüber der ___. (البريد)",
+            "a": "Post",
+            "why": "die Post = البريد — بلا جمع — gegenüber der Post (die ← der)."
+          },
+          {
+            "q": "Der ___ ist im Osten — sehr groß. (الحديقة)",
+            "a": "Park",
+            "why": "der Park = الحديقة العامة — الجمع die Parks بـ‑s."
+          },
+          {
+            "q": "In Berlin gibt es viele ___. (متاحف)",
+            "a": "Museen",
+            "why": "das Museum ← die Museen: ‑um تسقط ويأتي ‑een — جمع خاص."
+          },
+          {
+            "q": "Die Kirche, die Post und die Bank sind am ___. (الساحة)",
+            "a": "Platz",
+            "why": "der Platz = الساحة — am Platz = في الساحة (an + dem) — الجمع die Plätze."
+          },
+          {
+            "q": "Die ___ ist klein und schön. (الكنيسة)",
+            "a": "Kirche",
+            "why": "die Kirche = الكنيسة — الجمع die Kirchen بـ‑n."
+          },
+          {
+            "q": "Tunis ist im ___. (الشمال)",
+            "a": "Norden",
+            "why": "der Norden = الشمال — im Norden = في الشمال."
+          },
+          {
+            "q": "Das Museum ist in der Stadt — eine ___ mit dem Zug. (ساعة)",
+            "a": "Stunde",
+            "why": "die Stunde = الساعة (المدة) — من دروس سابقة: eine Stunde mit dem Zug."
           }
         ],
         "interleavedWith": [
-          "apotheke",
-          "gegenueber"
+          "stadt",
+          "bahnhof",
+          "schule",
+          "kurs",
+          "zug",
+          "fuss",
+          "minute",
+          "stunde",
+          "zentrum",
+          "fahren",
+          "gehen",
+          "wohnen",
+          "familie",
+          "gross",
+          "klein",
+          "viel",
+          "jetzt",
+          "weg"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«في الشمال» و«إلى الشمال»؟",
-            "a": "im Norden / nach Norden"
+            "audioId": "sk-1",
+            "speakText": "Hallo Yusuf! Heute im Kurs: die Stadt. Wo ist dein Kurs in Berlin?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "أين دورة يوسف في برلين",
+              "أين مدرسة يوسف",
+              "أين بيت يوسف"
+            ],
+            "a": "أين دورة يوسف في برلين",
+            "why": "Wo ist dein Kurs in Berlin? = أين دورتك في برلين؟ — Wo ist …?"
           },
           {
-            "q": "«المستشفى في الشرق»؟",
-            "a": "Das Krankenhaus ist im Osten."
+            "audioId": "sk-2",
+            "speakText": "Hallo Lena! Mein Kurs ist im Norden von Berlin, gegenüber der Universität.",
+            "q": "استمع: أين الدورة؟",
+            "choices": [
+              "في شمال برلين، مقابل الجامعة",
+              "في جنوب برلين، مقابل المحطة",
+              "في وسط برلين، مقابل البنك"
+            ],
+            "a": "في شمال برلين، مقابل الجامعة",
+            "why": "im Norden von Berlin, gegenüber der Universität — im Norden = في الشمال · gegenüber der Universität (die ← der)."
+          },
+          {
+            "audioId": "sk-4",
+            "speakText": "Mit der Bahn zum Bahnhof und zu Fuß geradeaus — fünf Minuten.",
+            "q": "استمع: كيف يصل يوسف إلى الدورة؟",
+            "choices": [
+              "بالقطار إلى المحطة ثم مشياً إلى الأمام — خمس دقائق",
+              "بالحافلة — عشر دقائق",
+              "بالدراجة إلى الجامعة"
+            ],
+            "a": "بالقطار إلى المحطة ثم مشياً إلى الأمام — خمس دقائق",
+            "why": "Mit der Bahn zum Bahnhof und zu Fuß geradeaus — fünf Minuten. — geradeaus = إلى الأمام مباشرة."
+          },
+          {
+            "audioId": "sk-5",
+            "speakText": "Das ist nicht weit. Bei mir ist alles klein: die Kirche, die Post und die Bank sind hier am Platz.",
+            "q": "استمع: ماذا في ساحة بلدة لينا؟",
+            "choices": [
+              "الكنيسة والبريد والبنك",
+              "الكنيسة والمتحف والحديقة",
+              "البريد والمستشفى والجامعة"
+            ],
+            "a": "الكنيسة والبريد والبنك",
+            "why": "die Kirche, die Post und die Bank sind hier am Platz — am Platz = في الساحة."
+          },
+          {
+            "audioId": "sk-6",
+            "speakText": "Und wo ist die Apotheke?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "أين الصيدلية",
+              "أين البنك",
+              "أين المستشفى"
+            ],
+            "a": "أين الصيدلية",
+            "why": "Und wo ist die Apotheke? — die Apotheke = الصيدلية."
+          },
+          {
+            "audioId": "sk-8",
+            "speakText": "In Berlin ist das Krankenhaus im Westen. Gibt es bei dir ein Museum?",
+            "q": "استمع: أين المستشفى في برلين؟ وماذا يسأل؟",
+            "choices": [
+              "في الغرب — وهل عند لينا متحف؟",
+              "في الشرق — وهل عند لينا حديقة؟",
+              "في الشمال — وهل عند لينا بنك؟"
+            ],
+            "a": "في الغرب — وهل عند لينا متحف؟",
+            "why": "im Westen = في الغرب · Gibt es bei dir ein Museum? = هل عندك متحف؟"
+          },
+          {
+            "audioId": "sk-9",
+            "speakText": "Ein Museum? Nein, hier nicht. Das Museum ist in der Stadt — eine Stunde mit dem Zug.",
+            "q": "استمع: أين المتحف عند لينا؟",
+            "choices": [
+              "لا متحف في البلدة — المتحف في المدينة، ساعة بالقطار",
+              "مقابل الكنيسة",
+              "في الساحة، خمس دقائق"
+            ],
+            "a": "لا متحف في البلدة — المتحف في المدينة، ساعة بالقطار",
+            "why": "hier nicht · in der Stadt — eine Stunde mit dem Zug — dort = هناك."
+          },
+          {
+            "audioId": "sk-10",
+            "speakText": "In Berlin gibt es viele Museen. Das Museum gegenüber dem Park ist super.",
+            "q": "استمع: ماذا يقول يوسف عن المتاحف في برلين؟",
+            "choices": [
+              "كثيرة — والمتحف مقابل الحديقة رائع",
+              "قليلة — والمتحف مقابل البنك قديم",
+              "واحد — مقابل الجامعة"
+            ],
+            "a": "كثيرة — والمتحف مقابل الحديقة رائع",
+            "why": "viele Museen (جمع Museum) · das Museum gegenüber dem Park (der ← dem) ist super."
+          },
+          {
+            "audioId": "sk-11",
+            "speakText": "Und der Park? Ist der Park groß?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل الحديقة كبيرة",
+              "هل الحديقة بعيدة",
+              "هل الحديقة جميلة"
+            ],
+            "a": "هل الحديقة كبيرة",
+            "why": "Ist der Park groß? — der Park = الحديقة."
+          },
+          {
+            "audioId": "sk-12",
+            "speakText": "Ja, sehr groß. Der Park ist im Osten. Am Sonntag fahre ich mit dem Rad zum Park.",
+            "q": "استمع: أين الحديقة؟ ومتى يذهب يوسف؟",
+            "choices": [
+              "في الشرق — الأحد بالدراجة",
+              "في الغرب — الاثنين بالحافلة",
+              "في الجنوب — الأحد مشياً"
+            ],
+            "a": "في الشرق — الأحد بالدراجة",
+            "why": "im Osten = في الشرق · Am Sonntag … mit dem Rad zum Park."
+          },
+          {
+            "audioId": "sk-13",
+            "speakText": "Und am Montag fliegst du nach Tunesien. Wo ist Tunis — im Norden oder im Süden?",
+            "q": "استمع: ماذا تسأل لينا عن تونس؟",
+            "choices": [
+              "هل تونس العاصمة في الشمال أم في الجنوب",
+              "هل تونس كبيرة",
+              "هل تونس بعيدة"
+            ],
+            "a": "هل تونس العاصمة في الشمال أم في الجنوب",
+            "why": "Wo ist Tunis — im Norden oder im Süden? — السؤال بالجهتين."
+          },
+          {
+            "audioId": "sk-14",
+            "speakText": "Tunis ist im Norden von Tunesien. Es ist sehr schön dort.",
+            "q": "استمع: أين تونس العاصمة؟",
+            "choices": [
+              "في شمال تونس — وجميلة جداً هناك",
+              "في جنوب تونس",
+              "في غرب تونس"
+            ],
+            "a": "في شمال تونس — وجميلة جداً هناك",
+            "why": "Tunis ist im Norden von Tunesien. Es ist sehr schön dort. — dort = هناك."
+          },
+          {
+            "audioId": "sk-16",
+            "speakText": "Im Zentrum, gegenüber der Post. Mein Vater geht jeden Tag zu Fuß zum Markt: geradeaus und links.",
+            "q": "استمع: أين تسكن أسرة يوسف؟ وكيف يمشي أبوه إلى السوق؟",
+            "choices": [
+              "في المركز مقابل البريد — إلى الأمام ثم يساراً",
+              "في الشمال مقابل البنك — إلى الأمام ثم يميناً",
+              "في الجنوب مقابل الكنيسة — يميناً"
+            ],
+            "a": "في المركز مقابل البريد — إلى الأمام ثم يساراً",
+            "why": "Im Zentrum, gegenüber der Post = في المركز، مقابل البريد · zu Fuß zum Markt: geradeaus und links = مشياً إلى السوق: إلى الأمام ثم يساراً."
+          },
+          {
+            "audioId": "sk-17",
+            "speakText": "Und wie kommt er zurück?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "كيف يعود",
+              "متى يعود",
+              "أين يعود"
+            ],
+            "a": "كيف يعود",
+            "why": "Und wie kommt er zurück? — zurück في آخر السؤال."
+          },
+          {
+            "audioId": "sk-18",
+            "speakText": "Er fährt mit dem Bus zurück. Und du? Wo ist deine Schule?",
+            "q": "استمع: كيف يعود الأب؟ وعمّ يسأل يوسف؟",
+            "choices": [
+              "بالحافلة — وأين مدرسة لينا",
+              "مشياً — وأين بيت لينا",
+              "بالقطار — وأين دورة لينا"
+            ],
+            "a": "بالحافلة — وأين مدرسة لينا",
+            "why": "Er fährt mit dem Bus zurück. = يعود بالحافلة (zurück في الآخر) · Wo ist deine Schule? = أين مدرستك؟"
+          },
+          {
+            "audioId": "sk-19",
+            "speakText": "Die Schule ist hier, gegenüber dem Bahnhof. Ich fahre mit dem Rad — zehn Minuten.",
+            "q": "استمع: أين مدرسة لينا؟ وكيف تصل؟",
+            "choices": [
+              "هنا، مقابل المحطة — بالدراجة، عشر دقائق",
+              "هناك، مقابل الكنيسة — مشياً، خمس دقائق",
+              "في المدينة — بالقطار، ساعة"
+            ],
+            "a": "هنا، مقابل المحطة — بالدراجة، عشر دقائق",
+            "why": "hier, gegenüber dem Bahnhof = هنا، مقابل المحطة (der ← dem) · mit dem Rad — zehn Minuten = بالدراجة — عشر دقائق."
           }
         ],
         "interleavedWith": [
-          "nord",
-          "ost"
+          "stadt",
+          "bahnhof",
+          "schule",
+          "markt",
+          "kurs",
+          "rad",
+          "bahn",
+          "bus",
+          "zug",
+          "fuss",
+          "minute",
+          "stunde",
+          "links",
+          "zentrum",
+          "sonntag",
+          "montag",
+          "fliegen",
+          "fahren",
+          "gehen",
+          "kommen",
+          "vater",
+          "tunesien",
+          "gross",
+          "klein",
+          "viel",
+          "super"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«إلى الأمام مباشرة ثم يميناً!»؟",
-            "a": "Geradeaus, dann rechts!"
+            "tokens": [
+              "Kirche.",
+              "gegenüber",
+              "Die",
+              "ist",
+              "der",
+              "Apotheke"
+            ],
+            "a": "Die Apotheke ist gegenüber der Kirche.",
+            "why": "ist ثانياً — ثم gegenüber + الداتيف: der Kirche (die ← der)."
           },
           {
-            "q": "«عُد إلى الكنيسة!»؟",
-            "a": "Gehen Sie zurück zur Kirche!"
+            "tokens": [
+              "Berlin.",
+              "im",
+              "Mein",
+              "von",
+              "ist",
+              "Norden",
+              "Kurs"
+            ],
+            "a": "Mein Kurs ist im Norden von Berlin.",
+            "why": "ist ثانياً — im Norden (in + dem) ثم von Berlin."
+          },
+          {
+            "tokens": [
+              "Schule?",
+              "deine",
+              "Wo",
+              "ist"
+            ],
+            "a": "Wo ist deine Schule?",
+            "why": "كلمة السؤال Wo أولاً ← الفعل ist ← الفاعل deine Schule."
+          },
+          {
+            "tokens": [
+              "Kurs.",
+              "zurück",
+              "Ich",
+              "zum",
+              "gehe",
+              "jetzt"
+            ],
+            "a": "Ich gehe jetzt zurück zum Kurs.",
+            "why": "gehe ثانياً · jetzt · ثم zurück قبل الوجهة zum Kurs."
+          },
+          {
+            "tokens": [
+              "zurück.",
+              "Bus",
+              "Er",
+              "mit",
+              "fährt",
+              "dem"
+            ],
+            "a": "Er fährt mit dem Bus zurück.",
+            "why": "fährt ثانياً · mit dem Bus · وzurück في آخر الجملة — كأجزاء الأفعال المنفصلة."
+          },
+          {
+            "tokens": [
+              "super.",
+              "Park",
+              "Das",
+              "gegenüber",
+              "ist",
+              "Museum",
+              "dem"
+            ],
+            "a": "Das Museum gegenüber dem Park ist super.",
+            "why": "الفاعل الطويل Das Museum gegenüber dem Park كله في الموضع الأول ← ist ثانياً."
           }
         ],
         "interleavedWith": [
-          "geradeaus",
-          "zurueck"
+          "schule",
+          "kurs",
+          "bus",
+          "fahren",
+          "gehen",
+          "super",
+          "jetzt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "sk-3",
+            "speakText": "Gegenüber der Universität? Und wie kommst du zum Kurs?",
+            "a": "Gegenüber der Universität? Und wie kommst du zum Kurs?",
+            "why": "Gegenüber بحرف كبير أول الجملة وü بنقطتين · Universität بحرف كبير وä وt واحدة · Kurs بحرف كبير."
+          },
+          {
+            "audioId": "sk-7",
+            "speakText": "Die Apotheke ist gegenüber der Kirche. Und das Krankenhaus ist im Süden, weit weg.",
+            "a": "Die Apotheke ist gegenüber der Kirche. Und das Krankenhaus ist im Süden, weit weg.",
+            "why": "Apotheke بحرف كبير وth تُنطق [t] · gegenüber بـü · Kirche بـch · Krankenhaus كلمة واحدة بحرف كبير · Süden بـü · weit weg."
+          },
+          {
+            "audioId": "sk-15",
+            "speakText": "Und deine Familie? Wo wohnt deine Familie in Tunis?",
+            "a": "Und deine Familie? Wo wohnt deine Familie in Tunis?",
+            "why": "Familie بحرف كبير و‑ie · deine بحرف صغير · Tunis بحرف كبير."
+          },
+          {
+            "audioId": "sk-20",
+            "speakText": "Super! Ich gehe jetzt zurück zum Kurs. Bis morgen, Lena!",
+            "a": "Super! Ich gehe jetzt zurück zum Kurs. Bis morgen, Lena!",
+            "why": "zurück بـü وck · Kurs بحرف كبير · Lena بحرف كبير · علامة التعجب."
+          },
+          {
+            "audioId": "word-apotheke",
+            "speakText": "die Apotheke.",
+            "a": "die Apotheke.",
+            "why": "Apotheke: A كبيرة · th تُنطق [t] · ‑e في الآخر — النبر على ‑the‑."
+          },
+          {
+            "audioId": "word-krankenhaus",
+            "speakText": "Krankenhaus.",
+            "a": "Krankenhaus.",
+            "why": "Krankenhaus: كلمة واحدة · k بعد n · ‑en‑ في الوسط · au."
+          },
+          {
+            "audioId": "word-universitaet",
+            "speakText": "die Universität.",
+            "a": "die Universität.",
+            "why": "Universität: U كبيرة · v تُنطق [v] · ä بنقطتين · t واحدة في الآخر."
+          },
+          {
+            "audioId": "word-gegenueber",
+            "speakText": "gegenüber.",
+            "a": "gegenüber.",
+            "why": "gegenüber: حرف صغير · g مرتان · ü بنقطتين · ‑er في الآخر."
+          },
+          {
+            "audioId": "word-geradeaus",
+            "speakText": "geradeaus.",
+            "a": "geradeaus.",
+            "why": "geradeaus: كلمة واحدة بحرف صغير · ‑ade‑ ثم aus."
+          }
+        ],
+        "interleavedWith": [
+          "kurs",
+          "gehen",
+          "wohnen",
+          "kommen",
+          "familie",
+          "super",
+          "jetzt",
+          "morgen",
+          "weg"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Nach dem Weg fragen und ihn beschreiben",
-        "ar": "السؤال عن الطريق ووصفه"
+        "de": "Wo ist die Apotheke? — Gegenüber der Kirche, im Norden. Zu Fuß geradeaus, fünf Minuten.",
+        "ar": "تسأل زميلك عن مكان في مدينته وتجيب عن مكان في مدينتك بجملة موقع واحدة صحيحة"
       },
       "situation": {
-        "de": "In der Stadt: nach der Apotheke fragen",
-        "ar": "في المدينة: السؤال عن الصيدلية"
+        "de": "Im Kurs: Wo ist die Post? Wo ist der Park? Ist das weit? Hier oder dort? Im Norden oder im Süden?",
+        "ar": "في الدورة: كلٌّ منكما يصف مدينته على الشاشة — يسأل الآخر عن ثلاثة أماكن (Wo ist die Apotheke / die Bank / das Museum?) ويجيب بجملة موقع واحدة: مقابل (gegenüber der Kirche · gegenüber dem Bahnhof) أو الجهة (im Norden · im Osten) أو هنا/هناك — ثم يصف الطريق بكلمتين (geradeaus · links · zurück) وبالدقائق — وتتبادلان."
       },
       "successCriteria": [
-        "سؤالان Wo ist …? + ثلاث جمل موقع (gegenüber/an/im) + اتجاه واحد (im/nach)"
+        "ثلاثة أسئلة Wo ist …? وثلاث جمل موقع: واحدة بـgegenüber + الداتيف (der/dem) وواحدة بـim + الجهة وواحدة بـhier/dort — لا die ولا den بعد gegenüber.",
+        "وصف طريق من جملتين: geradeaus/links/rechts + الدقائق (Zu Fuß geradeaus — fünf Minuten.) وجملة بـzurück في آخرها (Ich komme mit dem Bus zurück.)."
       ]
     }
   },
@@ -149,62 +635,194 @@
       {
         "items": [
           {
-            "q": "«كنيسة»؟",
-            "a": "die Kirche"
+            "q": "«الصيدلية مقابل البنك»؟",
+            "choices": [
+              "Die Apotheke ist gegenüber der Bank.",
+              "Die Apotheke ist gegenüber die Bank.",
+              "Die Apotheke ist gegenüber den Bank."
+            ],
+            "a": "Die Apotheke ist gegenüber der Bank.",
+            "why": "die Bank ← gegenüber der Bank — gegenüber + الداتيف دائماً (die ← der)."
           },
           {
-            "q": "«مقابل المتحف»؟",
-            "a": "gegenüber dem Museum"
+            "q": "«إلى الغرب» (اتجاه)؟",
+            "choices": [
+              "nach Westen",
+              "im Westen",
+              "zum Westen"
+            ],
+            "a": "nach Westen",
+            "why": "الاتجاه (إلى أين؟) بـnach بلا أداة: nach Westen — وim Westen للموقع (أين؟)."
           },
           {
-            "q": "«صيدلية»؟",
-            "a": "die Apotheke"
-          },
-          {
-            "q": "«في الجنوب»؟",
-            "a": "im Süden"
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "«مستشفى»؟",
-            "a": "das Krankenhaus"
-          },
-          {
-            "q": "«إلى الغرب»؟",
-            "a": "nach Westen"
-          },
-          {
-            "q": "«الساحة أمام الكنيسة»؟",
-            "a": "Der Platz ist vor der Kirche."
-          },
-          {
-            "q": "«هنا» و«هناك»؟",
-            "a": "hier / dort"
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "«جامعة»؟",
-            "a": "die Universität"
-          },
-          {
-            "q": "«البنك عند الزاوية»؟",
-            "a": "Die Bank ist an der Ecke."
-          },
-          {
-            "q": "«البريد»؟",
-            "a": "die Post"
+            "q": "die Kirche = ؟",
+            "choices": [
+              "الكنيسة",
+              "الصيدلية",
+              "الجامعة"
+            ],
+            "a": "الكنيسة",
+            "why": "die Kirche = الكنيسة · die Apotheke = الصيدلية · die Universität = الجامعة."
           },
           {
             "q": "«أين المتحف؟»؟",
-            "a": "Wo ist das Museum?"
+            "choices": [
+              "Wo ist das Museum?",
+              "Wohin ist das Museum?",
+              "Wo ist der Museum?"
+            ],
+            "a": "Wo ist das Museum?",
+            "why": "السؤال عن الموقع Wo (لا Wohin) — وdas Museum محايد."
+          },
+          {
+            "q": "«البنك في الجنوب»؟",
+            "choices": [
+              "Die Bank ist im Süden.",
+              "Die Bank ist nach Süden.",
+              "Die Bank ist in Süden."
+            ],
+            "a": "Die Bank ist im Süden.",
+            "why": "الموقع (أين؟) بـim + الجهة: im Süden — nach للاتجاه مع فعل حركة، والجهة لا تأتي بلا أداة بعد in."
+          },
+          {
+            "q": "geradeaus = ؟",
+            "choices": [
+              "إلى الأمام مباشرة",
+              "رجوعاً",
+              "مقابل"
+            ],
+            "a": "إلى الأمام مباشرة",
+            "why": "geradeaus = إلى الأمام مباشرة · zurück = رجوعاً · gegenüber = مقابل."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«مقابل المتحف»؟",
+            "choices": [
+              "gegenüber dem Museum",
+              "gegenüber das Museum",
+              "gegenüber den Museum"
+            ],
+            "a": "gegenüber dem Museum",
+            "why": "das Museum ← gegenüber dem Museum — der/das ← dem في الداتيف."
+          },
+          {
+            "q": "«نسافر إلى الشمال»؟",
+            "choices": [
+              "Wir fahren nach Norden.",
+              "Wir fahren im Norden.",
+              "Wir fahren in Norden."
+            ],
+            "a": "Wir fahren nach Norden.",
+            "why": "fahren فعل حركة ← الاتجاه بـnach بلا أداة: nach Norden."
+          },
+          {
+            "q": "das Krankenhaus = ؟",
+            "choices": [
+              "المستشفى",
+              "البريد",
+              "الساحة"
+            ],
+            "a": "المستشفى",
+            "why": "das Krankenhaus = المستشفى · die Post = البريد · der Platz = الساحة."
+          },
+          {
+            "q": "«البنك هناك»؟",
+            "choices": [
+              "Die Bank ist dort.",
+              "Dort die Bank ist.",
+              "Die Bank dort ist."
+            ],
+            "a": "Die Bank ist dort.",
+            "why": "dort = هناك — الفعل ist ثانياً وdort بعده."
+          },
+          {
+            "q": "«أعود غداً»؟",
+            "choices": [
+              "Ich komme morgen zurück.",
+              "Ich komme zurück morgen.",
+              "Ich morgen komme zurück."
+            ],
+            "a": "Ich komme morgen zurück.",
+            "why": "zurück في آخر الجملة (كـab في Ich hole dich ab.) — والزمن morgen قبلها."
+          },
+          {
+            "q": "der Platz = ؟",
+            "choices": [
+              "الساحة",
+              "الحديقة",
+              "المتحف"
+            ],
+            "a": "الساحة",
+            "why": "der Platz = الساحة · der Park = الحديقة · das Museum = المتحف."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الجامعة مقابل الحديقة»؟",
+            "choices": [
+              "Die Universität ist gegenüber dem Park.",
+              "Die Universität ist gegenüber den Park.",
+              "Die Universität ist gegenüber der Park."
+            ],
+            "a": "Die Universität ist gegenüber dem Park.",
+            "why": "der Park ← gegenüber dem Park — der ← dem (لا den الأكوزاتيف ولا der المؤنث)."
+          },
+          {
+            "q": "«في شمال تونس»؟",
+            "choices": [
+              "im Norden von Tunesien",
+              "in Norden von Tunesien",
+              "nach Norden von Tunesien"
+            ],
+            "a": "im Norden von Tunesien",
+            "why": "الموقع بـim + الجهة (in + dem) ثم von + البلد: im Norden von Tunesien."
+          },
+          {
+            "q": "die Post = ؟",
+            "choices": [
+              "البريد",
+              "البنك",
+              "الكنيسة"
+            ],
+            "a": "البريد",
+            "why": "die Post = البريد · die Bank = البنك · die Kirche = الكنيسة."
+          },
+          {
+            "q": "«أين دورتك؟»؟",
+            "choices": [
+              "Wo ist dein Kurs?",
+              "Wo ist deine Kurs?",
+              "Wohin ist dein Kurs?"
+            ],
+            "a": "Wo ist dein Kurs?",
+            "why": "der Kurs مذكر ← dein Kurs — وWo للموقع."
+          },
+          {
+            "q": "«المدرسة هنا»؟",
+            "choices": [
+              "Die Schule ist hier.",
+              "Die Schule ist in hier.",
+              "Hier die Schule ist."
+            ],
+            "a": "Die Schule ist hier.",
+            "why": "hier = هنا — كلمة مكان وحدها بلا حرف جر، والفعل ist ثانياً."
+          },
+          {
+            "q": "zurück = ؟",
+            "choices": [
+              "رجوعاً",
+              "إلى الأمام مباشرة",
+              "هناك"
+            ],
+            "a": "رجوعاً",
+            "why": "zurück = رجوعاً · geradeaus = إلى الأمام مباشرة · dort = هناك."
           }
         ],
         "passingScore": 0.75
@@ -213,53 +831,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Wo ist die Kirche? — Gegenüber der Bank! Und dann: geradeaus, im Norden, zurück — der Weg durch die Stadt.",
-      "ar": "أين الكنيسة؟ — مقابل البنك! ثم: إلى الأمام، في الشمال، رجوعاً — الطريق عبر المدينة."
+      "de": "Wo ist die Apotheke? — Die Apotheke ist gegenüber der Kirche. · Das Museum ist gegenüber dem Park. · Die Schule ist gegenüber dem Bahnhof. · Mein Kurs ist im Norden von Berlin. · Das Krankenhaus ist im Süden, weit weg. · Wir fahren nach Süden. · Die Bank ist hier, die Post ist dort. · Zu Fuß geradeaus — fünf Minuten. · Ich gehe jetzt zurück zum Kurs. · Er fährt mit dem Bus zurück.",
+      "ar": "جملة الموقع: Wo ist …? والجواب hier/dort أو gegenüber + الداتيف (der/das ← dem · die ← der — كـmit/bei) أو الجهة: im Norden/Süden/Osten/Westen للموقع (in + dem = im) وnach Norden بلا أداة للاتجاه (كـnach Berlin). كلمتا الطريق: geradeaus (إلى الأمام مباشرة) · zurück (رجوعاً — في آخر الجملة أو قبل الوجهة: zurück zum Kurs). الأماكن: die Kirche (‑n) · das Krankenhaus (Krankenhäuser) · die Apotheke (‑n) · die Universität (‑en) · die Bank (‑en) · die Post (بلا جمع) · der Park (‑s) · das Museum (Museen) · der Platz (Plätze) · der Norden · der Süden · der Osten · der Westen."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~gegenüber die Kirche~~ / ~~gegenüber das Museum~~",
-          "ar": "gegenüber يجرّ الداتيف دائماً"
+          "de": "~~gegenüber die Kirche~~ · ~~gegenüber das Museum~~",
+          "ar": "gegenüber + الداتيف: gegenüber der Kirche · gegenüber dem Museum"
         },
-        "whyArabicSpeakerFails": "«مقابل» بالعربية لا تغيّر ما بعدها؛ الألماني gegenüber تجرّ الداتيف إجبارياً — تكميل مصيدة الداتيف الثابتة من الوحدة 8 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«مقابل» العربية لا تغيّر «الـ» بعدها («مقابل الكنيسة · مقابل المتحف»)، فيُبقي المتعلم الأداة التي يعرفها (die · das). والألمانية بعد gegenüber الداتيف دائماً — القاعدة نفسها التي تعرفها من mit/bei: die ← der (gegenüber der Kirche) · der/das ← dem (gegenüber dem Museum · gegenüber dem Park) — خريطة التداخل 10‑ي",
         "correct": {
           "de": "gegenüber der Kirche · gegenüber dem Museum",
-          "ar": "مقابل الكنيسة (Dativ) · مقابل المتحف (Dativ)"
+          "ar": "مقابل الكنيسة · مقابل المتحف"
         },
         "exercise": {
-          "q": "أكمل: Die Apotheke ist gegenüber ___ (die Bank).",
+          "q": "أكمل: Die Post ist gegenüber ___ (die Bank).",
           "a": "der Bank"
         }
       },
       {
         "commonError": {
-          "de": "~~im Norden~~ = ~~nach Norden~~ (واحد عند العربي)",
-          "ar": "im Norden (في) ↔ nach Norden (إلى)"
+          "de": "~~Das Krankenhaus ist nach Norden.~~ · ~~Wir fahren im Norden.~~",
+          "ar": "im Norden للموقع (ist) · nach Norden للاتجاه (fahren)"
         },
-        "whyArabicSpeakerFails": "«شمالاً» تحتمل «في» و«إلى» بالعربية؛ الألماني يفصل: im Norden (موقع) ↔ nach Norden (اتجاه حركة) — التداخل مع حرف الجر منذ d4 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«شمالاً» العربية تحتمل «في الشمال» و«إلى الشمال» معاً («المستشفى شمالاً · سافرنا شمالاً»)، فيختار المتعلم صيغة واحدة للحالتين. والألمانية تفصل: الموقع مع ist بـim + الجهة (Das Krankenhaus ist im Norden.) والاتجاه مع فعل الحركة بـnach بلا أداة (Wir fahren nach Norden.) — كـin Berlin ↔ nach Berlin — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Die Apotheke ist im Norden. · Wir fahren nach Norden.",
-          "ar": "الصيدلية في الشمال. · نسافر إلى الشمال."
+          "de": "Das Krankenhaus ist im Norden. · Wir fahren nach Norden.",
+          "ar": "المستشفى في الشمال (موقع) · نسافر إلى الشمال (اتجاه)"
         },
         "exercise": {
-          "q": "أكمل: Das Museum ist ___ Osten. Wir fahren ___ Süden.",
+          "q": "أكمل: Der Park ist ___ Osten. Wir fahren ___ Süden.",
           "a": "im / nach"
         }
       },
       {
         "commonError": {
-          "de": "~~Der Park ist in der Mitte~~؟ صحيح، لكن ~~in die Mitte~~ (للحركة)",
-          "ar": "الموقع (in + Dativ) ≠ الاتجاه (in + Akkusativ)"
+          "de": "~~Ich komme zurück morgen.~~ · ~~Ich morgen komme zurück.~~",
+          "ar": "zurück في آخر الجملة: Ich komme morgen zurück."
         },
-        "whyArabicSpeakerFails": "العربية تجرّ الوجهة والموقع معاً؛ الألماني يفصل: ist in der Mitte (Dativ — موقع) ↔ gehe in die Mitte (Akkusativ — وجهة) — مصيدة الحالتين منذ الوحدات 2–3 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أعود غداً» في العربية فعلٌ واحد يتبعه الزمن، فيضع المتعلم zurück ملتصقةً بالفعل (zurück morgen) أو يقدّم الزمن على الفعل كما في العربية الدارجة. والألمانية تعامل zurück كجزء الفعل المنفصل الذي تعرفه (Ich hole dich ab.): الفعل ثانياً وzurück في آخر الجملة — Ich komme morgen zurück. · Er fährt mit dem Bus zurück. — أو قبل الوجهة: zurück zum Kurs — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Der Park ist in der Mitte. · Ich gehe in die Stadt.",
-          "ar": "الحديقة في الوسط (موقع). · أذهب إلى المدينة (وجهة)."
+          "de": "Ich komme am Montag zurück. · Er fährt mit dem Bus zurück.",
+          "ar": "أعود يوم الاثنين · يعود بالحافلة"
         },
         "exercise": {
-          "q": "أكمل: Das Krankenhaus ist an ___ Straße (die) — Wir gehen in ___ Stadt (die).",
-          "a": "der / die"
+          "q": "صحّح: ~~Er kommt zurück morgen.~~",
+          "a": "Er kommt morgen zurück."
         }
       }
     ],
@@ -286,14 +904,22 @@
   },
   "gReferences": {
     "duden": [
-      "https://www.duden.de/rechtschreibung/gegenueber",
+      "https://www.duden.de/rechtschreibung/gegenueber_Praeposition",
       "https://www.duden.de/rechtschreibung/Norden",
-      "https://www.duden.de/rechtschreibung/Apotheke"
+      "https://www.duden.de/rechtschreibung/geradeaus",
+      "https://www.duden.de/rechtschreibung/zurueck",
+      "https://www.duden.de/rechtschreibung/Museum",
+      "https://www.duden.de/rechtschreibung/Krankenhaus"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/gegenüber"
+      "https://de.wiktionary.org/wiki/gegen%C3%BCber",
+      "https://de.wiktionary.org/wiki/Norden",
+      "https://de.wiktionary.org/wiki/geradeaus",
+      "https://de.wiktionary.org/wiki/zur%C3%BCck"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-stadt-ort",
@@ -321,7 +947,26 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Nach dem Weg fragen",
-    "goetheWordListOverlap": []
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Wo ist …? · gegenüber + Dativ · im/nach Norden",
+    "goetheWordListOverlap": [
+      "kirche",
+      "krankenhaus",
+      "apotheke",
+      "universitaet",
+      "bank",
+      "post",
+      "park",
+      "museum",
+      "platz",
+      "nord",
+      "sued",
+      "ost",
+      "west",
+      "gegenueber",
+      "hier",
+      "dort",
+      "geradeaus",
+      "zurueck"
+    ]
   }
 }

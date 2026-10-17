@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d1-wo-ist-dein-kurs",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Wo ist dein Kurs?",
+    "ar": "أين دورتك؟ — مكالمة الدورة: يوسف يصف برلين (الدورة في الشمال مقابل الجامعة · المتحف مقابل الحديقة · أسرته في تونس مقابل البريد) ولينا تصف بلدتها الصغيرة (الكنيسة والبريد والبنك في الساحة · المستشفى في الجنوب) — gegenüber + الداتيف · im Norden/Süden/Osten/Westen · hier/dort · geradeaus · zurück"
+  },
+  "usedIn": [
+    "a1-u9-d1"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "sk-1",
+      "speaker": "lena",
+      "text": "Hallo Yusuf! Heute im Kurs: die Stadt. Wo ist dein Kurs in Berlin?",
+      "direction": "مكالمة الدورة — مهمة الوحدة التاسعة على الشاشة: «المدينة — أين؟». لينا تسأل عن موقع الدورة: Wo ist …? · in Berlin"
+    },
+    {
+      "id": "sk-2",
+      "speaker": "yusuf",
+      "text": "Hallo Lena! Mein Kurs ist im Norden von Berlin, gegenüber der Universität.",
+      "direction": "im Norden von Berlin (موقع: im = in dem) · gegenüber + الداتيف: gegenüber der Universität (die ← der)"
+    },
+    {
+      "id": "sk-3",
+      "speaker": "lena",
+      "text": "Gegenüber der Universität? Und wie kommst du zum Kurs?",
+      "direction": "تعيد لينا العبارة مستفهمةً · zum Kurs (zu + dem — u8-d4)"
+    },
+    {
+      "id": "sk-4",
+      "speaker": "yusuf",
+      "text": "Mit der Bahn zum Bahnhof und zu Fuß geradeaus — fünf Minuten.",
+      "direction": "الطريق: mit der Bahn · zum Bahnhof · zu Fuß · geradeaus (إلى الأمام مباشرة) · fünf Minuten"
+    },
+    {
+      "id": "sk-5",
+      "speaker": "lena",
+      "text": "Das ist nicht weit. Bei mir ist alles klein: die Kirche, die Post und die Bank sind hier am Platz.",
+      "direction": "nicht weit · Bei mir (u8-d5) · أماكن البلدة الصغيرة: die Kirche · die Post · die Bank · am Platz · hier"
+    },
+    {
+      "id": "sk-6",
+      "speaker": "yusuf",
+      "text": "Und wo ist die Apotheke?",
+      "direction": "سؤال الموقع القصير: Wo ist die Apotheke?"
+    },
+    {
+      "id": "sk-7",
+      "speaker": "lena",
+      "text": "Die Apotheke ist gegenüber der Kirche. Und das Krankenhaus ist im Süden, weit weg.",
+      "direction": "gegenüber der Kirche (die ← der) · im Süden (موقع) · weit weg"
+    },
+    {
+      "id": "sk-8",
+      "speaker": "yusuf",
+      "text": "In Berlin ist das Krankenhaus im Westen. Gibt es bei dir ein Museum?",
+      "direction": "im Westen (موقع) · Gibt es … ein Museum? (es gibt + أكوزاتيف — مدروس) · bei dir"
+    },
+    {
+      "id": "sk-9",
+      "speaker": "lena",
+      "text": "Ein Museum? Nein, hier nicht. Das Museum ist in der Stadt — eine Stunde mit dem Zug.",
+      "direction": "hier nicht · in der Stadt (عبارة ثابتة) · eine Stunde mit dem Zug — بلدة لينا الصغيرة (N-096)"
+    },
+    {
+      "id": "sk-10",
+      "speaker": "yusuf",
+      "text": "In Berlin gibt es viele Museen. Das Museum gegenüber dem Park ist super.",
+      "direction": "viele Museen (جمع Museum) · gegenüber dem Park (der ← dem) · super"
+    },
+    {
+      "id": "sk-11",
+      "speaker": "lena",
+      "text": "Und der Park? Ist der Park groß?",
+      "direction": "سؤال بسيط عن الحديقة: groß?"
+    },
+    {
+      "id": "sk-12",
+      "speaker": "yusuf",
+      "text": "Ja, sehr groß. Der Park ist im Osten. Am Sonntag fahre ich mit dem Rad zum Park.",
+      "direction": "im Osten (موقع) · Am Sonntag (u3) · mit dem Rad zum Park (u8-d4)"
+    },
+    {
+      "id": "sk-13",
+      "speaker": "lena",
+      "text": "Und am Montag fliegst du nach Tunesien. Wo ist Tunis — im Norden oder im Süden?",
+      "direction": "am Montag fliegst du nach Tunesien (u8-d4) · السؤال بالاتجاهين: im Norden oder im Süden?"
+    },
+    {
+      "id": "sk-14",
+      "speaker": "yusuf",
+      "text": "Tunis ist im Norden von Tunesien. Es ist sehr schön dort.",
+      "direction": "im Norden von Tunesien (موقع + von) · dort (هناك)"
+    },
+    {
+      "id": "sk-15",
+      "speaker": "lena",
+      "text": "Und deine Familie? Wo wohnt deine Familie in Tunis?",
+      "direction": "سؤال عن مكان سكن العائلة: Wo wohnt …? in Tunis"
+    },
+    {
+      "id": "sk-16",
+      "speaker": "yusuf",
+      "text": "Im Zentrum, gegenüber der Post. Mein Vater geht jeden Tag zu Fuß zum Markt: geradeaus und links.",
+      "direction": "Im Zentrum · gegenüber der Post (die ← der) · الطريق إلى السوق: zu Fuß zum Markt · geradeaus und links (rechts/links مدروستان)"
+    },
+    {
+      "id": "sk-17",
+      "speaker": "lena",
+      "text": "Und wie kommt er zurück?",
+      "direction": "zurück: كيف يعود؟ — wie kommt er zurück?"
+    },
+    {
+      "id": "sk-18",
+      "speaker": "yusuf",
+      "text": "Er fährt mit dem Bus zurück. Und du? Wo ist deine Schule?",
+      "direction": "zurück في آخر الجملة · Wo ist deine Schule?"
+    },
+    {
+      "id": "sk-19",
+      "speaker": "lena",
+      "text": "Die Schule ist hier, gegenüber dem Bahnhof. Ich fahre mit dem Rad — zehn Minuten.",
+      "direction": "hier · gegenüber dem Bahnhof (der ← dem) · mit dem Rad · zehn Minuten"
+    },
+    {
+      "id": "sk-20",
+      "speaker": "yusuf",
+      "text": "Super! Ich gehe jetzt zurück zum Kurs. Bis morgen, Lena!",
+      "direction": "zurück zum Kurs (zu + dem) · ختام المكالمة"
+    }
+  ]
+}
