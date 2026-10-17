@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 117: a1-u9-d2 مُرقّى — بالحافلة والقطار (D162) · معجم Bahnsteig/Haltestelle · استعادة البيئة (N-104)
+- **إضافة:** `content/arsenal/grammar/ars-weg-verkehr.json` (اثنتان وأربعون قاعدة يوم — القاعدة المخططة: einsteigen/umsteigen/aussteigen · Wo/Wohin · Linie/Bahnsteig بلا أداة · Abfahrt/Ankunft um … Uhr · weit/nah · hin und zurück · vorbei · überall — usedInLessons u9-d2 + u9-d3 + u9-d6) · حوار `a1-u9-d2-mit-bus-und-bahn` (hb-1..20 مكالمةً) · مانيفست 1664 · مدخلا معجم Bahnsteig وHaltestelle (70).
+- **تحسين المحتوى:** 52 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح («أغيّر» فعل واحد ⇒ ~~Ich umsteige~~ · «أين تذهب؟» ⇒ ~~Wo fährst du?~~ · «الساعة الثامنة» ⇒ ~~ist acht Uhr~~) · بلا نواة.
+- **تصحيح بيانات:** سبعة أمثلة كلمات (einsteigen · vorbei · umsteigen · Kreuzung · nah · Richtung · hin) بلا أمر Sie ولا in den/an der ولا ganz · bahnsteig +sp-st-initial · word-bahnsteig/word-haltestelle/mt1-h1-d6-l3 أُعيدت · تسجيل hb على vierzig/geradeaus/holt (N-099) · المرجع 1396.
+- **اختبارات:** كتلة D162 (+1) · المثال غير المُرقّى ← a1-u9-d3 · 691/691 · validator 1067/0/0.
+- **السجل:** N-104 جديدة (أدوات الفحص خارج git تضيع مع الانقطاع) · N-103 مُجرَّبة نموذجاً في check.ts.
+
 ## 2026-10-17 — الدفعة 116: a1-u9-d1 مُرقّى — أماكن المدينة والاتجاهات (D161) · وثغرة الحارس weit/wei (N-103)
 - **إضافة:** `content/arsenal/grammar/ars-stadt-ort.json` (إحدى وأربعون قاعدة يوم — القاعدة المخططة: Wo ist …? + hier/dort · gegenüber + الداتيف · im/nach + الجهة · geradeaus · zurück — usedInLessons u9-d1 + u9-d6) · حوار `a1-u9-d1-wo-ist-dein-kurs` (20 سطراً sk-1..20 مكالمةً) · لا مدخل معجم جديد.
 - **تحسين المحتوى:** 55 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح («مقابل» لا تغيّر «الـ» ⇒ ~~gegenüber die Kirche~~ · «شمالاً» ⇒ ~~ist nach Norden~~/~~fahren im Norden~~ · «أعود غداً» ⇒ ~~komme zurück morgen~~) · استدعاء stadt/bahnhof/rechts.

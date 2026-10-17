@@ -1,5 +1,17 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
+## الدفعة 117 (2026-10-17) — الدرس الثاني والأربعون مُرقّى: «بالحافلة والقطار» (D162) — واستعادة البيئة بعد الانقطاع (N-104)
+- **البيئة:** صندوق جديد أضاع `/home/user/work` و`/tmp` وأعاد HEAD إلى قاعدة الفرع ⇒ `git reset origin/<الفرع>` · استُعيدت نصوص SD1/A2 من الـblob نفسه `0c8162cb…` (SpringNuance) وipa-dict (المرجع 1396) · أُعيد بناء check.ts مع فحص «كلمة درس لاحق» (N-103 نموذجاً — أمسك weit وFahrt).
+- **قاعدة اليوم `ars-weg-verkehr`** (المخططة نفسها؛ تشاركها u9-d3 وu9-d6): einsteigen/umsteigen/aussteigen منفصلة + muss + الفعل كاملاً + nicht قبل الجزء · Wo ≠ Wohin · Linie 5/Bahnsteig 3/in Richtung بلا أداة · Abfahrt/Ankunft um … Uhr · weit/nah · hin und zurück · am Park vorbei · überall — الحدود: in den Bus/an der Haltestelle u9-d4 · أمر Sie u9-d3 · an der Kirche vorbei u9-d4 · abfahren/ankommen u12.
+- **بلا نواة** (الإسناد المعلّق التالي a1-u9-d3) · 17 كلمة كلها جديدة بسبعة أمثلة مصحّحة (أمر Sie · in den/an der · ganz · مصدر مبتور · تكرار).
+- **حوار جديد** `a1-u9-d2-mit-bus-und-bahn` (hb-1..20) — **مكالمة قبل السفر:** طريق يوسف إلى المطار الاثنين (الخط 5 ← المحطة المركزية ← القطار 6:10/6:50 من الرصيف 3) · قطار لينا إلى الجدة (ساعة بلا تغيير · 12 يورو ذهاباً وإياباً) · أبوه يأخذه في تونس (N-096).
+- **النطق:** مدخلا معجم جديدان Bahnsteig [st⇒ʃt] وHaltestelle [ɛ⇒ə] (70) · word-bahnsteig/word-haltestelle وmt1-h1-d6-l3 القديم أُعيدت · bahnsteig +sp-st-initial (حارس D106 من النطق المصحّح) · vierzig/geradeaus/holt على hb يدوياً (N-099) · صفر مخالفة بلا قرار.
+- **التطبيق:** 52 بنداً (فراغ 22 · استماع 15 · ترتيب 6 · إملاء 9) · Quiz 3×6 · ما أمسكته الفحوص: شروح بلا عربية · إجابات Quiz داخل فراغ مملوء · vorbeifährt مشتِّتاً · ~~ في المهمة · ü في interleavedWith.
+- **D108:** صفر جملة مطابقة — «hin und zurück» عبارة معجمية ثابتة في SD1 بقيت موثّقة.
+- **الاختبارات (+1):** u9-d2 كاملاً · المثال القديم ← a1-u9-d3 · الطفرة 1/1 · 691/691 · validator 1067/0/0.
+- **الحالة:** ترقية 42/60 · نواة 35/48 (91/123) · 852 كلمة · 1664 مساراً · 42 قاعدة يوم · معجم 70 · التالي a1-u9-d3 (نواة bitten · erklären · die Hilfe · `ars-imperativ-sie`).
+- **السجل:** أُضيفت N-104؛ حُدّثت N-010 · N-011 · N-013 · N-015 · N-021 · N-022 · N-050 · N-060 · N-096 · N-099 · N-102 · N-103.
+
 ## الدفعة 116 (2026-10-17) — الدرس الحادي والأربعون مُرقّى: «أماكن المدينة والاتجاهات» (D161) — وثغرة الحارس weit/wei (N-103)
 - **قاعدة اليوم `ars-stadt-ort`** (المخططة نفسها — لم يُكتب لها ملف قط؛ تشاركها u9-d6): Wo ist …? + hier/dort · gegenüber + الداتيف (gegenüber der Kirche · gegenüber dem Park) · im Norden موقعاً ≠ nach Norden اتجاهاً · geradeaus · zurück في آخر الجملة — الحدود: Wechselpräpositionen u9-d4 · صيغة الأمر Sie u9-d3.
 - **بلا نواة** (الإسناد المعلّق التالي a1-u9-d3) · 18 كلمة من الملف القائم (hier/dort مكررتان عمداً D68) بثمانية أمثلة مصحّحة (an der/neben der/vor der/in den/Fahren Sie/Gehen Sie ⇒ جمل اليوم).
