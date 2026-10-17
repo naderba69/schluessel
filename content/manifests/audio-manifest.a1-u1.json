@@ -17389,6 +17389,66 @@
       "rmsDb": -17.04
     },
     {
+      "id": "word-normal",
+      "file": "words/audio/de-DE/word-normal.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "normal.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 1013,
+      "sizeBytes": 4966,
+      "hash": "sha256:e0545c7ab6d399c726515107140f54f8d0a2f42089d3d976a722d30dd9470ad7",
+      "pcmSha256": "92f97ff6d2500e234ad68dcfa88b6dbf3c616feb546b6873f62970e78ac9ad0d",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "word-job",
+      "file": "words/audio/de-DE/word-job.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Job.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 897,
+      "sizeBytes": 4164,
+      "hash": "sha256:75122c6e7df49a104ba40879938bc42ccd38b988350abca7bca268ca33e9bb29",
+      "pcmSha256": "22ea8c36725b8c70b5b6609e8aeee9879a49214291f0d98f3a510fa95b5c7c2d",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "word-verdienen",
+      "file": "words/audio/de-DE/word-verdienen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "verdienen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 780,
+      "sizeBytes": 3949,
+      "hash": "sha256:6bbed470f44bb6fd6d5b439fad71768e7ba93d0345b766883816dd353b9c70b5",
+      "pcmSha256": "5db61a40a23995c575a973fd8fee13e90c2554abeec543b5d91ab3681fa384a9",
+      "rmsDb": -16.98
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -38254,6 +38314,446 @@
       "hash": "sha256:28910840e4bff505f783993a26e71f5a9c924934ef4844ad5d0555487d046cfb",
       "pcmSha256": "e9853c59224c09a53d14a45a6be8bdfc9f9eab3a22bbf57df1bff26c5735053f",
       "rmsDb": -17.15
+    },
+    {
+      "id": "wk-1",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Yusuf! Warum rufst du so spät an? Ist das ein Notfall?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 5672,
+      "sizeBytes": 26454,
+      "hash": "sha256:66f424ebdb7fb72132f8c8fa6864a893e0ad7ff8353dae8b462996d66ebbac75",
+      "pcmSha256": "70a725cd51a70abe54bc8552c8b7e208c0fe49a8b6c5f23e038019f2cab69c16",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "wk-2",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, kein Notfall! Alles normal. Wir haben heute bei meiner Oma gegessen — sehr lange.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 5947,
+      "sizeBytes": 27334,
+      "hash": "sha256:ea1eb22acb7626c1d921ffe0601c8197a033bee759b1f56abd1e51232b97568d",
+      "pcmSha256": "c42a45cc185804328b31ebde8f45039ca14127c42cb1ebd834a291a60834a541",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "wk-3",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut. Ich bin heute zu Hause, weil mir unwohl ist.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 3992,
+      "sizeBytes": 18592,
+      "hash": "sha256:08cb2c1ced8aa09f65bb42ad6a7d0aa77f574d8a0528857fb30f216879cda197",
+      "pcmSha256": "a6c4c7caedac0401d9294647cf8d4631cc8a73ec5bf60aba6ec0aa6c9e86c78b",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "wk-4",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Warum? Bist du krank?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 2034,
+      "sizeBytes": 9369,
+      "hash": "sha256:de58c0195bfb9cd484cc3d055086ca218f6724590fd676d963e0965c56a18ff2",
+      "pcmSha256": "8c9a589e974103978f6286f82d5e71c64d18b29af22ca9162099e1a028baf691",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "wk-5",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, nicht krank. Ich bin nur müde, weil ich gestern im Regen Fußball gespielt habe.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 6136,
+      "sizeBytes": 28392,
+      "hash": "sha256:9304581a21b5c508d98e24eb4de7e632001eba31039116609181a7e9d61a13ec",
+      "pcmSha256": "ab200beb9c40ba1ba6e00f2056f8681e244fdd6a153a6af6268fadde4583746e",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "wk-6",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du brauchst Ruhe. Du musst dich heute ausruhen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 3532,
+      "sizeBytes": 15380,
+      "hash": "sha256:8492a897f7e8e4978129b6b0e0a6670d0d3e066b875f1c70729e9b6ddd9e7526",
+      "pcmSha256": "ece32785801abba1758e47c4207fba0f85a55c2bd90f2d202fefbccb90db0011",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "wk-7",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich ruhe mich aus. Ich habe heute keine Hausaufgaben gemacht. Das ist nicht so wichtig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 6424,
+      "sizeBytes": 29730,
+      "hash": "sha256:42a899016222b075a0baea13e1dfc0751cc2f799a9417e016a3d956bdeaf7a78",
+      "pcmSha256": "54c9df669ed1eb956120b16eac571944fb601cc6a8ac7e6f791b8d7388e1ed87",
+      "rmsDb": -17.3
+    },
+    {
+      "id": "wk-8",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Doch, das ist wichtig! Aber nicht dringend. Morgen ist auch ein Tag.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 4983,
+      "sizeBytes": 21611,
+      "hash": "sha256:0753e56d224cc3fde3a25b326bca6228c14155744aaf176579a9a57ed5799e9b",
+      "pcmSha256": "403577724605b094f90d0dd1cfdaac1311657108448108771b1e6bc46004d22b",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "wk-9",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 175,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und du? Hast du heute gelernt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 2056,
+      "sizeBytes": 9744,
+      "hash": "sha256:478be5a50b1148817b028617ed9d197e23c44afd519a60e03a2c4a266c8c35c4",
+      "pcmSha256": "8397f5253b41963be69ef3eb6dfafa67723a66f09867b2b745f7f944dabd0653",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "wk-10",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, viel. Ich habe Stress, weil der Kurs bald endet. Am Freitag habe ich viele Aufgaben.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 6992,
+      "sizeBytes": 30886,
+      "hash": "sha256:92e11917f8a84ce54dc013b169f63274131949162b8b08354159c6bdb6695eb8",
+      "pcmSha256": "0e669837d1caade91d115d24bec4a80ff0ef2b61534b1266efca37e3eaeb82be",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "wk-11",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Kurs ist wichtig, aber Stress ist nicht gut. Warum lernst du so viel?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 5896,
+      "sizeBytes": 27371,
+      "hash": "sha256:dafdb7b53dd301885df0ece497ade7aa1a1ad2bbc2b719bcad23af732f25b4bd",
+      "pcmSha256": "71c31945c95aedc2e8845782786cddfc3f6da0b249f87206f23237348f2fab08",
+      "rmsDb": -17.47
+    },
+    {
+      "id": "wk-12",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 175,
+        "lengthScale": 1.32
+      },
+      "textDe": "Weil ich in Berlin arbeiten möchte. Ich brauche Deutsch für einen Job.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 4124,
+      "sizeBytes": 19112,
+      "hash": "sha256:d3a450fd91babb9053219c9f9c5fb4a3205d60540a4020781d0276359cdfc602",
+      "pcmSha256": "803df032f47acd4ed2017a8ebfd243d7635b242d806f54dc39f6e084dbc8c625",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "wk-13",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Job in Berlin! Was möchtest du machen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 3720,
+      "sizeBytes": 17249,
+      "hash": "sha256:b38f89b6377135c4dd4d4c7884843da2e3363f960927c8ef56bb0a0ace5d4a61",
+      "pcmSha256": "ff0f6aba47f79405fcc5f06958fa730505d2716927178745ebea3692b834511c",
+      "rmsDb": -17.43
+    },
+    {
+      "id": "wk-14",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das weiß ich noch nicht. Meine Schwester hat einen Job im Supermarkt. Sie verdient nicht viel.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 6051,
+      "sizeBytes": 27284,
+      "hash": "sha256:9435be1c81b9836b01884736bdc8ed1f82fd9d57018b408d3eeace7cc20c784e",
+      "pcmSha256": "7267bb2e8920a25e59901ae2c4cfa7245c9d0ef0cbf95abdfae27b8029ea3fbd",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "wk-15",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ist das normal in Tunesien?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 2504,
+      "sizeBytes": 11867,
+      "hash": "sha256:5eb2ebcd16d0701f44cabdb450d56772ee013565d7336043b30cd815d40c9f71",
+      "pcmSha256": "deeabb595df34ae332bef8a7b6a02ff4fba2071ab429c72c3a09d82c3030c765",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "wk-16",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, für Studenten ist das normal. Darum möchte ich in Deutschland arbeiten.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 5134,
+      "sizeBytes": 23209,
+      "hash": "sha256:d5ac82395f5b805425da19817c60221640aa0555cb5d9ab52b1345bcbcd1feed",
+      "pcmSha256": "f30986e51124eab349d07ac57dd464e2dc46d3b3064c64056f1895f5886fc752",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "wk-17",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 177,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich möchte auch einen Job, weil ich Geld für ein Fahrrad brauche.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 4072,
+      "sizeBytes": 18874,
+      "hash": "sha256:9fcfc86f264fec2008028f35bbef65355473b8c973ed0095fbeb8200779ac245",
+      "pcmSha256": "529f48d63023d90b9bcf038195c9f75bb92536b67dc8b0501ed8a3d25ff04e7e",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "wk-18",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du bist sechzehn! Deshalb ist die Schule jetzt wichtig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 3486,
+      "sizeBytes": 15791,
+      "hash": "sha256:01ea5ab8af3fb45433c81b9e15e6a0c1c77bca73a5ec8184fdb2a36d04fcc06f",
+      "pcmSha256": "d96d83af518fac61ee13f29f5bc62e376f9571268c4530e5094468924870d11e",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "wk-19",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du sprichst wie meine Mutter! Okay, ich ruhe mich jetzt aus. Gute Nacht!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 6120,
+      "sizeBytes": 28325,
+      "hash": "sha256:1c1c780f9d08fdcaba5a0c7e77b666581873d0a5523709598df9140a05d45fb1",
+      "pcmSha256": "8dab7e117bdddabc70b3a7bc892add2a55b73f7f9c7808a327b841838dce02f4",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "wk-20",
+      "file": "audio/scripts/a1-u10-d5-warum-weil/wk-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gute Nacht, Lena! Schlaf gut — das ist heute wichtig!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u10-d5"
+      ],
+      "durationMs": 4345,
+      "sizeBytes": 19304,
+      "hash": "sha256:c2fd723e72c0284cc564797698a9e070d9a2ce7be519ee4b8dd2f17ff3e79105",
+      "pcmSha256": "bc455995dc61096f6e03226825ba1ff8ce5e0669cfe01b435d504defd0fa6afe",
+      "rmsDb": -17.02
     }
   ],
   "characterVoices": {

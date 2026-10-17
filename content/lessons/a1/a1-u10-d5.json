@@ -6,11 +6,12 @@
   "day": 5,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst einen Grund nennen: Ich brauche einen Termin, weil ich krank bin — und weil-Sätze richtig bilden (Verb am Ende!).",
-    "ar": "تفسّر السبب بجملة weil (الفعل في نهاية جملة السبب!)"
+    "de": "Warum bist du zu Hause? — Weil mir unwohl ist. · Ich brauche einen Termin, weil ich krank bin. · Ich bin müde, weil ich gestern Fußball gespielt habe. · Yusuf lernt viel, weil er in Berlin arbeiten möchte. · Ich bin krank, deshalb brauche ich Ruhe. · Das ist kein Notfall — alles normal.",
+    "ar": "تسأل عن السبب بـWarum? وتجيب بجملة weil (الفعل المصرَّف في آخرها — ومع المودال والماضي المركّب يكون المودال/haben هو الأخير)، وتقدّم جملة weil فتقلب الرئيسية، وتربط النتيجة بـdeshalb/darum (الفعل ثانياً) — بكلمات اليوم: wichtig · dringend · krank · unwohl · die Ruhe · der Stress · der Notfall · sich ausruhen · normal · der Job · verdienen"
   },
   "canDoDaily": [
-    "يشرح سبب طلبه بجملة weil واحدة صحيحة (الفعل آخر جملة السبب)"
+    "يجيب عن Warum? بثلاث جمل weil صحيحة الفعل آخراً (… weil ich krank bin · … weil ich lernen muss · … weil ich Fußball gespielt habe) ويقدّم جملة weil فيقلب الرئيسية ويميّزها عن deshalb/darum (Ich bin krank, deshalb brauche ich einen Termin.).",
+    "يصف حاله بكلمات اليوم: Mir ist unwohl. · Ich brauche Ruhe. · Ich habe Stress. · Das ist kein Notfall. · Ich ruhe mich aus. · Meine Schwester hat einen Job und verdient nicht viel — das ist normal."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«أحتاج موعداً لأنني مريض» — أين يذهب bin في جملة weil؟"
+          "de": "«أحتاج موعداً لأنني مريض» — أين يذهب bin في جملة weil؟ (تخمين فقط)"
         },
         "choices": [
-          "weil ich krank bin (آخر الجملة)",
-          "weil ich bin krank",
-          "weil bin ich krank"
+          "Ich brauche einen Termin, weil ich krank bin.",
+          "Ich brauche einen Termin, weil ich bin krank.",
+          "Ich brauche einen Termin, weil bin ich krank."
         ],
-        "answer": "weil ich krank bin (آخر الجملة)",
+        "answer": "Ich brauche einen Termin, weil ich krank bin.",
         "revealNextSession": true
       }
     ],
@@ -49,7 +50,10 @@
       "ruhe",
       "stress",
       "notfall",
-      "ausruhen"
+      "ausruhen",
+      "normal",
+      "job",
+      "verdienen"
     ],
     "grammarArsenalIds": [
       "ars-weil-satz"
@@ -58,76 +62,623 @@
       "story-a10-u10-s5"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "r-uvular",
+      "ch-ich-laut",
+      "ig-ending",
+      "sp-st-initial",
+      "v-f"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أحتاج موعداً لأنني مريض»؟",
-            "a": "Ich brauche einen Termin, weil ich krank bin."
+            "q": "Ich brauche heute einen Termin, weil ich krank ___. (sein — ich)",
+            "a": "bin",
+            "why": "weil ترسل الفعل المصرَّف إلى آخر الجملة التابعة: … krank bin."
           },
           {
-            "q": "«لماذا تحتاجون موعداً؟»؟",
-            "a": "Warum brauchen Sie einen Termin?"
+            "q": "Ich bin heute zu Hause, weil mir unwohl ___. (sein)",
+            "a": "ist",
+            "why": "Mir ist unwohl ← في جملة weil يذهب ist إلى الآخر."
+          },
+          {
+            "q": "Ich habe Stress, weil der Kurs am Freitag ___. (enden)",
+            "a": "endet",
+            "why": "الفاعل der Kurs والفعل endet في آخر جملة weil."
+          },
+          {
+            "q": "Ich kann nicht kommen, weil ich keine Zeit ___. (haben — ich)",
+            "a": "habe",
+            "why": "keine Zeit habe — المصرَّف habe آخراً بعد المفعول."
+          },
+          {
+            "q": "Lena möchte einen Job, weil sie Geld für ein Fahrrad ___. (brauchen)",
+            "a": "braucht",
+            "why": "sie braucht ← braucht في الآخر بعد weil."
+          },
+          {
+            "q": "Yusuf lernt viel, weil er in Berlin arbeiten ___. (möchten)",
+            "a": "möchte",
+            "why": "مع المودال: المصدر arbeiten ثم المودال möchte في الآخر."
+          },
+          {
+            "q": "Lena ist müde, weil sie im Regen Fußball gespielt ___. (haben — sie)",
+            "a": "hat",
+            "why": "مع الماضي المركّب: التصريف الثالث gespielt ثم haben (hat) في الآخر."
+          },
+          {
+            "q": "Lena ist zu Hause, weil sie keine Hausaufgaben gemacht ___. (haben — sie)",
+            "a": "hat",
+            "why": "gemacht hat — المصرَّف hat هو الأخير في جملة weil."
+          },
+          {
+            "q": "Yusuf kann nicht kommen, weil er lernen ___. (müssen)",
+            "a": "muss",
+            "why": "lernen muss — المودال بعد المصدر في آخر جملة weil."
+          },
+          {
+            "q": "___ bist du zu Hause? — Weil mir unwohl ist. (لماذا)",
+            "a": "Warum",
+            "why": "Warum سؤال السبب، والجواب بجملة weil وحدها."
+          },
+          {
+            "q": "Der Kurs endet bald, ___ lerne ich viel. (لهذا — d…b)",
+            "a": "deshalb",
+            "why": "deshalb ظرف: في المقدمة فالفعل lerne ثانياً والفاعل بعده."
+          },
+          {
+            "q": "Für Studenten ist das normal. ___ möchte ich in Deutschland arbeiten. (لهذا — D…m)",
+            "a": "Darum",
+            "why": "Darum = deshalb — في المقدمة والقلب: möchte ich."
+          },
+          {
+            "q": "Lena ist sechzehn, deshalb ___ die Schule jetzt wichtig. (sein)",
+            "a": "ist",
+            "why": "بعد deshalb الفعل ثانياً: deshalb ist die Schule …"
+          },
+          {
+            "q": "Weil der Kurs bald endet, ___ Yusuf viel. (lernen)",
+            "a": "lernt",
+            "why": "جملة weil في المقدمة = الموضع الأول ← فعل الرئيسية lernt مباشرة بعد الفاصلة ثم الفاعل."
+          },
+          {
+            "q": "Der Termin ist ___. (مهم)",
+            "a": "wichtig",
+            "why": "wichtig بعد ist بلا نهاية."
+          },
+          {
+            "q": "Das ist nicht ___. (عاجل)",
+            "a": "dringend",
+            "why": "dringend = عاجل — nicht قبل الصفة."
+          },
+          {
+            "q": "Bist du ___? — Nein, nur müde. (مريض)",
+            "a": "krank",
+            "why": "krank = مريض · nur müde = متعب فقط."
+          },
+          {
+            "q": "Mir ist heute ___. (متوعّك)",
+            "a": "unwohl",
+            "why": "Mir ist unwohl — بـmir لا ich: «أشعر بتوعك»."
+          },
+          {
+            "q": "Du brauchst ___. (الراحة — R…)",
+            "a": "Ruhe",
+            "why": "die Ruhe بحرف كبير — اسم بلا أداة بعد brauchen هنا."
+          },
+          {
+            "q": "Ich habe viel ___ im Kurs. (التوتر — S…)",
+            "a": "Stress",
+            "why": "der Stress — St تُنطق [ʃt] في أول الكلمة."
+          },
+          {
+            "q": "Ist das ein ___? — Nein, alles normal. (حالة طوارئ — N…)",
+            "a": "Notfall",
+            "why": "der Notfall = Not + Fall — حالة طوارئ."
+          },
+          {
+            "q": "Du musst dich heute ___. (يستريح — aus…)",
+            "a": "ausruhen",
+            "why": "sich ausruhen: مع المودال يبقى المصدر كاملاً في الآخر — dich للمخاطب."
+          },
+          {
+            "q": "Ich ruhe mich jetzt ___. (ausruhen — الجزء المنفصل)",
+            "a": "aus",
+            "why": "ausruhen منفصل: ruhe … aus — وmich للمتكلم."
+          },
+          {
+            "q": "Für Studenten ist das ___. (عادي)",
+            "a": "normal",
+            "why": "normal = عادي — بعد ist بلا نهاية."
+          },
+          {
+            "q": "Meine Schwester hat einen ___ im Supermarkt. (الوظيفة — J…)",
+            "a": "Job",
+            "why": "der Job (die Jobs) — einen Job مفعولاً بـ‑en للمذكر."
+          },
+          {
+            "q": "Sie ___ nicht viel. (verdienen — sie)",
+            "a": "verdient",
+            "why": "verdienen → sie verdient — نهاية ‑t للغائب."
+          },
+          {
+            "q": "Ich habe am Wochenende Geld ___. (verdienen — الماضي المركّب)",
+            "a": "verdient",
+            "why": "ver‑ بادئة غير منفصلة ⇒ التصريف الثالث بلا ge‑: verdient (u10-d4)."
+          },
+          {
+            "q": "Warum so spät? — ___ wir bei meiner Oma gegessen haben. (لأن)",
+            "a": "Weil",
+            "why": "جواب بجملة weil وحدها: Weil … gegessen haben — haben آخراً."
+          },
+          {
+            "q": "Ich möchte einen Job, weil ich Geld ___. (brauchen — ich)",
+            "a": "brauche",
+            "why": "ich brauche ← في جملة weil آخراً."
+          },
+          {
+            "q": "Ich bin krank. ___ bin ich heute zu Hause. (لهذا — D…b)",
+            "a": "Deshalb",
+            "why": "Deshalb في المقدمة ← bin ثانياً ← ich."
           }
         ],
         "interleavedWith": [
-          "weil",
-          "warum"
+          "termin",
+          "zeit",
+          "geld",
+          "fahrrad",
+          "kurs",
+          "schule",
+          "supermarkt",
+          "schwester",
+          "oma",
+          "fussball",
+          "regen",
+          "hausaufgabe",
+          "lernen",
+          "arbeiten",
+          "kommen",
+          "brauchen",
+          "student",
+          "wochenende",
+          "freitag"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«أنا مريض، لهذا أحتاج موعداً»؟",
-            "a": "Ich bin krank, deshalb brauche ich einen Termin."
+            "audioId": "wk-2",
+            "speakText": "Nein, kein Notfall! Alles normal. Wir haben heute bei meiner Oma gegessen — sehr lange.",
+            "q": "استمع: هل هي حالة طوارئ عند يوسف؟",
+            "choices": [
+              "لا — كل شيء عادي؛ أكلوا طويلاً عند جدّته",
+              "نعم — جدّته مريضة",
+              "نعم — فقد هاتفه"
+            ],
+            "a": "لا — كل شيء عادي؛ أكلوا طويلاً عند جدّته",
+            "why": "Nein, kein Notfall! Alles normal. — normal = عادي · bei meiner Oma gegessen."
           },
           {
-            "q": "«الأمر عاجل»؟",
-            "a": "Es ist dringend."
+            "audioId": "wk-3",
+            "speakText": "Gut. Ich bin heute zu Hause, weil mir unwohl ist.",
+            "q": "استمع: لماذا لينا في البيت اليوم؟",
+            "choices": [
+              "لأنها متوعّكة",
+              "لأنها تتعلّم",
+              "لأن الطقس بارد"
+            ],
+            "a": "لأنها متوعّكة",
+            "why": "weil mir unwohl ist — السبب بـweil والفعل ist في الآخر."
+          },
+          {
+            "audioId": "wk-5",
+            "speakText": "Nein, nicht krank. Ich bin nur müde, weil ich gestern im Regen Fußball gespielt habe.",
+            "q": "استمع: لماذا لينا متعبة؟",
+            "choices": [
+              "لأنها لعبت كرة القدم في المطر أمس",
+              "لأنها مريضة",
+              "لأنها عملت في السوبرماركت"
+            ],
+            "a": "لأنها لعبت كرة القدم في المطر أمس",
+            "why": "nicht krank · weil ich gestern im Regen Fußball gespielt habe — habe في الآخر."
+          },
+          {
+            "audioId": "wk-6",
+            "speakText": "Du brauchst Ruhe. Du musst dich heute ausruhen!",
+            "q": "استمع: ماذا يقول يوسف للينا؟",
+            "choices": [
+              "تحتاجين راحة ويجب أن تستريحي",
+              "يجب أن تتعلّمي",
+              "يجب أن تذهبي إلى المدرسة"
+            ],
+            "a": "تحتاجين راحة ويجب أن تستريحي",
+            "why": "Du brauchst Ruhe. Du musst dich heute ausruhen! — المودال ثانياً والمصدر آخراً."
+          },
+          {
+            "audioId": "wk-7",
+            "speakText": "Ja, ich ruhe mich aus. Ich habe heute keine Hausaufgaben gemacht. Das ist nicht so wichtig.",
+            "q": "استمع: ماذا لم تفعل لينا اليوم؟",
+            "choices": [
+              "الواجبات المدرسية",
+              "الأكل",
+              "الاستراحة"
+            ],
+            "a": "الواجبات المدرسية",
+            "why": "keine Hausaufgaben gemacht · Das ist nicht so wichtig — في رأيها."
+          },
+          {
+            "audioId": "wk-8",
+            "speakText": "Doch, das ist wichtig! Aber nicht dringend. Morgen ist auch ein Tag.",
+            "q": "استمع: رأي يوسف في الواجبات؟",
+            "choices": [
+              "مهمة لكن ليست عاجلة",
+              "ليست مهمة",
+              "عاجلة جداً"
+            ],
+            "a": "مهمة لكن ليست عاجلة",
+            "why": "Doch, das ist wichtig! Aber nicht dringend. — مهم لكن غير عاجل."
+          },
+          {
+            "audioId": "wk-9",
+            "speakText": "Und du? Hast du heute gelernt?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل تعلّم اليوم؟",
+              "هل أكل اليوم؟",
+              "هل لعب اليوم؟"
+            ],
+            "a": "هل تعلّم اليوم؟",
+            "why": "Hast du heute gelernt? — سؤال بالماضي المركّب."
+          },
+          {
+            "audioId": "wk-10",
+            "speakText": "Ja, viel. Ich habe Stress, weil der Kurs bald endet. Am Freitag habe ich viele Aufgaben.",
+            "q": "استمع: لماذا عند يوسف توتر؟",
+            "choices": [
+              "لأن الدورة تنتهي قريباً وعنده مهام كثيرة الجمعة",
+              "لأنه مريض",
+              "لأن أخته بلا عمل"
+            ],
+            "a": "لأن الدورة تنتهي قريباً وعنده مهام كثيرة الجمعة",
+            "why": "weil der Kurs bald endet — endet آخراً · Am Freitag … viele Aufgaben."
+          },
+          {
+            "audioId": "wk-11",
+            "speakText": "Der Kurs ist wichtig, aber Stress ist nicht gut. Warum lernst du so viel?",
+            "q": "استمع: ماذا تسأل لينا يوسف؟",
+            "choices": [
+              "لماذا يتعلّم كثيراً؟",
+              "لماذا لا يتعلّم؟",
+              "متى تنتهي الدورة؟"
+            ],
+            "a": "لماذا يتعلّم كثيراً؟",
+            "why": "Warum lernst du so viel? — Warum سؤال السبب."
+          },
+          {
+            "audioId": "wk-12",
+            "speakText": "Weil ich in Berlin arbeiten möchte. Ich brauche Deutsch für einen Job.",
+            "q": "استمع: لماذا يتعلّم يوسف كثيراً؟",
+            "choices": [
+              "لأنه يريد العمل في برلين ويحتاج الألمانية لوظيفة",
+              "لأنه يحب المدرسة",
+              "لأن أمه تريد ذلك"
+            ],
+            "a": "لأنه يريد العمل في برلين ويحتاج الألمانية لوظيفة",
+            "why": "Weil ich in Berlin arbeiten möchte — جواب بـweil وحدها، möchte في الآخر · Job."
+          },
+          {
+            "audioId": "wk-14",
+            "speakText": "Das weiß ich noch nicht. Meine Schwester hat einen Job im Supermarkt. Sie verdient nicht viel.",
+            "q": "استمع: ماذا نعرف عن أخت يوسف؟",
+            "choices": [
+              "عندها وظيفة في السوبرماركت ولا تكسب كثيراً",
+              "تدرس في برلين",
+              "ليس عندها وظيفة"
+            ],
+            "a": "عندها وظيفة في السوبرماركت ولا تكسب كثيراً",
+            "why": "einen Job im Supermarkt · Sie verdient nicht viel. — تكسب قليلاً."
+          },
+          {
+            "audioId": "wk-16",
+            "speakText": "Ja, für Studenten ist das normal. Darum möchte ich in Deutschland arbeiten.",
+            "q": "استمع: لماذا يريد يوسف العمل في ألمانيا؟",
+            "choices": [
+              "لأن الأجر القليل عادي للطلاب في تونس",
+              "لأن ألمانيا جميلة",
+              "لأن لينا هناك"
+            ],
+            "a": "لأن الأجر القليل عادي للطلاب في تونس",
+            "why": "für Studenten ist das normal. Darum möchte ich … — Darum في المقدمة والقلب."
+          },
+          {
+            "audioId": "wk-17",
+            "speakText": "Ich möchte auch einen Job, weil ich Geld für ein Fahrrad brauche.",
+            "q": "استمع: لماذا تريد لينا وظيفة؟",
+            "choices": [
+              "لأنها تحتاج مالاً لدراجة",
+              "لأنها تريد سيارة",
+              "لأن أمها تريد ذلك"
+            ],
+            "a": "لأنها تحتاج مالاً لدراجة",
+            "why": "weil ich Geld für ein Fahrrad brauche — brauche في الآخر."
+          },
+          {
+            "audioId": "wk-18",
+            "speakText": "Du bist sechzehn! Deshalb ist die Schule jetzt wichtig.",
+            "q": "استمع: ماذا يقول يوسف عن لينا والمدرسة؟",
+            "choices": [
+              "هي في السادسة عشرة، لهذا المدرسة مهمة الآن",
+              "المدرسة ليست مهمة",
+              "يجب أن تعمل"
+            ],
+            "a": "هي في السادسة عشرة، لهذا المدرسة مهمة الآن",
+            "why": "Du bist sechzehn! Deshalb ist die Schule jetzt wichtig. — deshalb ثم الفعل."
           }
         ],
         "interleavedWith": [
-          "deshalb",
-          "dringend"
+          "oma",
+          "regen",
+          "fussball",
+          "hausaufgabe",
+          "kurs",
+          "freitag",
+          "aufgabe",
+          "supermarkt",
+          "schwester",
+          "fahrrad",
+          "schule",
+          "student",
+          "geld"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«يجب أن أستريح»؟",
-            "a": "Ich muss mich ausruhen."
+            "tokens": [
+              "weil",
+              "Ich",
+              "brauche",
+              "müde",
+              "ich",
+              "Ruhe,",
+              "bin."
+            ],
+            "a": "Ich brauche Ruhe, weil ich müde bin.",
+            "why": "الرئيسية أولاً ← فاصلة ← weil ← ich ← müde ← bin في الآخر."
           },
           {
-            "q": "«هذه حالة طوارئ»؟",
-            "a": "Das ist ein Notfall."
+            "tokens": [
+              "Ruhe.",
+              "brauche",
+              "bin,",
+              "Weil",
+              "ich",
+              "müde",
+              "ich"
+            ],
+            "a": "Weil ich müde bin, brauche ich Ruhe.",
+            "why": "جملة weil أولاً (bin آخرها) ← فاصلة ← brauche مباشرة ← ich."
+          },
+          {
+            "tokens": [
+              "ich",
+              "bin",
+              "Ich",
+              "Ruhe.",
+              "müde,",
+              "brauche",
+              "deshalb"
+            ],
+            "a": "Ich bin müde, deshalb brauche ich Ruhe.",
+            "why": "deshalb في المقدمة ← brauche ثانياً ← ich."
+          },
+          {
+            "tokens": [
+              "ich",
+              "Fußball",
+              "gespielt",
+              "müde,",
+              "habe.",
+              "bin",
+              "Ich",
+              "weil"
+            ],
+            "a": "Ich bin müde, weil ich Fußball gespielt habe.",
+            "why": "gespielt ثم habe في الآخر — المصرَّف هو الأخير."
+          },
+          {
+            "tokens": [
+              "er",
+              "lernt",
+              "Berlin",
+              "in",
+              "weil",
+              "Yusuf",
+              "arbeiten",
+              "möchte.",
+              "viel,"
+            ],
+            "a": "Yusuf lernt viel, weil er in Berlin arbeiten möchte.",
+            "why": "arbeiten ثم möchte في الآخر — المودال هو الأخير."
+          },
+          {
+            "tokens": [
+              "ich",
+              "in",
+              "möchte",
+              "Darum",
+              "Deutschland",
+              "arbeiten."
+            ],
+            "a": "Darum möchte ich in Deutschland arbeiten.",
+            "why": "Darum أولاً ← möchte ← ich ← arbeiten يغلق القوس."
+          },
+          {
+            "tokens": [
+              "heute",
+              "du",
+              "Hause?",
+              "Warum",
+              "zu",
+              "bist"
+            ],
+            "a": "Warum bist du heute zu Hause?",
+            "why": "Warum أولاً ← bist ← du — سؤال السبب."
+          },
+          {
+            "tokens": [
+              "der",
+              "habe",
+              "weil",
+              "bald",
+              "Stress,",
+              "endet.",
+              "Ich",
+              "Kurs"
+            ],
+            "a": "Ich habe Stress, weil der Kurs bald endet.",
+            "why": "der Kurs فاعل جملة weil وendet في الآخر."
+          },
+          {
+            "tokens": [
+              "ausruhen!",
+              "heute",
+              "dich",
+              "musst",
+              "Du"
+            ],
+            "a": "Du musst dich heute ausruhen!",
+            "why": "musst ثانياً ← dich ← heute ← ausruhen آخراً."
+          },
+          {
+            "tokens": [
+              "weil",
+              "ich",
+              "Ich",
+              "Geld",
+              "Job,",
+              "brauche.",
+              "möchte",
+              "einen"
+            ],
+            "a": "Ich möchte einen Job, weil ich Geld brauche.",
+            "why": "einen Job مفعول ← weil ← ich ← Geld ← brauche آخراً."
           }
         ],
         "interleavedWith": [
-          "ausruhen",
-          "notfall"
+          "fussball",
+          "kurs",
+          "geld",
+          "arbeiten"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wk-1",
+            "speakText": "Hallo Yusuf! Warum rufst du so spät an? Ist das ein Notfall?",
+            "a": "Hallo Yusuf! Warum rufst du so spät an? Ist das ein Notfall?",
+            "why": "Yusuf اسم علم · Warum بحرف كبير أولاً · an منفصل في الآخر · Notfall بحرف كبير."
+          },
+          {
+            "audioId": "wk-4",
+            "speakText": "Warum? Bist du krank?",
+            "a": "Warum? Bist du krank?",
+            "why": "Warum? سؤال قصير · Bist du krank? — krank بحرف صغير (صفة)."
+          },
+          {
+            "audioId": "wk-13",
+            "speakText": "Ein Job in Berlin! Was möchtest du machen?",
+            "a": "Ein Job in Berlin! Was möchtest du machen?",
+            "why": "Job بحرف كبير (اسم) · Berlin اسم علم · möchtest بـö."
+          },
+          {
+            "audioId": "wk-15",
+            "speakText": "Ist das normal in Tunesien?",
+            "a": "Ist das normal in Tunesien?",
+            "why": "normal بحرف صغير (صفة) · Tunesien اسم علم."
+          },
+          {
+            "audioId": "wk-19",
+            "speakText": "Du sprichst wie meine Mutter! Okay, ich ruhe mich jetzt aus. Gute Nacht!",
+            "a": "Du sprichst wie meine Mutter! Okay, ich ruhe mich jetzt aus. Gute Nacht!",
+            "why": "Okay بفاصلة · ruhe mich … aus — المنفصل آخراً · Gute Nacht بحرفين كبيرين."
+          },
+          {
+            "audioId": "wk-20",
+            "speakText": "Gute Nacht, Lena! Schlaf gut — das ist heute wichtig!",
+            "a": "Gute Nacht, Lena! Schlaf gut — das ist heute wichtig!",
+            "why": "Lena اسم علم · Schlaf gut · wichtig بـch ثم ‑ig."
+          },
+          {
+            "audioId": "word-normal",
+            "speakText": "normal.",
+            "a": "normal.",
+            "why": "normal — صفة بحرف صغير."
+          },
+          {
+            "audioId": "word-job",
+            "speakText": "der Job.",
+            "a": "der Job.",
+            "why": "der Job — J تُنطق كـ«دج»، وb في الآخر تُنطق p."
+          },
+          {
+            "audioId": "word-verdienen",
+            "speakText": "verdienen.",
+            "a": "verdienen.",
+            "why": "verdienen — v تُنطق f · ie طويلة."
+          },
+          {
+            "audioId": "word-weil",
+            "speakText": "weil.",
+            "a": "weil.",
+            "why": "weil — ei تُنطق «آي»."
+          },
+          {
+            "audioId": "word-deshalb",
+            "speakText": "deshalb.",
+            "a": "deshalb.",
+            "why": "deshalb — b في الآخر تُنطق p."
+          },
+          {
+            "audioId": "word-notfall",
+            "speakText": "der Notfall.",
+            "a": "der Notfall.",
+            "why": "der Notfall — ll مضاعفة بعد حركة قصيرة."
+          }
+        ],
+        "interleavedWith": [
+          "nacht",
+          "okay",
+          "tunesien"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Einen Termin mit Grund vereinbaren",
-        "ar": "طلب موعد مع ذكر السبب"
+        "de": "Warum bist du heute zu Hause? — Weil mir unwohl ist. Ich brauche Ruhe. — Warum lernst du so viel? — Weil der Kurs bald endet. Ich habe Stress, deshalb schlafe ich wenig. — Ist das ein Notfall? — Nein, alles normal!",
+        "ar": "تسأل زميلك Warum? ثلاث مرات (لماذا في البيت؟ لماذا تتعلّم كثيراً؟ لماذا تريد وظيفة؟) ويجيب بجمل weil (الفعل آخراً) — ثم تعكسان الأدوار، ويختم كلٌّ بجملة deshalb/darum"
       },
       "situation": {
-        "de": "Am Telefon: einen Termin vereinbaren — warum? weil…",
-        "ar": "بالهاتف: طلب موعد — لماذا؟ لأن…"
+        "de": "Auf dem Handy, am Abend: Warum rufst du so spät an? — Weil wir bei meiner Oma gegessen haben. Und du? Warum bist du zu Hause? — Weil mir unwohl ist. Ich bin müde, weil ich Fußball gespielt habe. — Du brauchst Ruhe! Du musst dich ausruhen. — Ja, und du? Warum lernst du so viel? — Weil ich einen Job in Berlin möchte. Meine Schwester verdient nicht viel — für Studenten ist das normal. Darum möchte ich in Deutschland arbeiten.",
+        "ar": "مكالمة مسائية: زميلك يسألك عن السبب — تجيب بجملة weil بفعل مصرَّف في الآخر (وواحدة بمودال أو ماضٍ مركّب)، وتربط النتيجة بـdeshalb/darum"
       },
       "successCriteria": [
-        "جملة طلب + جملة weil (الفعل آخرها) + سبب واحد من الكلمات (krank/Unwohl/Stress/Notfall)"
+        "ثلاثة أسئلة Warum? وثلاث جمل weil — الفعل المصرَّف في آخر كل واحدة، والفاصلة قبل weil",
+        "جملة weil واحدة على الأقل بمودال أو ماضٍ مركّب: … weil ich lernen muss · … weil ich gespielt habe (المودال/haben هو الأخير)",
+        "جملة واحدة بـdeshalb أو darum في المقدمة والفعل ثانياً: Deshalb brauche ich Ruhe.",
+        "أربع كلمات من اليوم على الأقل: krank · unwohl · Ruhe · Stress · Notfall · wichtig · dringend · normal · Job · verdienen · sich ausruhen"
       ]
     }
   },
@@ -142,62 +693,194 @@
       {
         "items": [
           {
-            "q": "«لأن»؟",
-            "a": "weil"
+            "q": "«أحتاج موعداً لأنني مريض» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich brauche einen Termin, weil ich krank bin.",
+              "Ich brauche einen Termin, weil ich bin krank.",
+              "Ich brauche einen Termin, weil bin ich krank."
+            ],
+            "a": "Ich brauche einen Termin, weil ich krank bin.",
+            "why": "weil ترسل المصرَّف bin إلى الآخر — لا في الموضع الثاني."
           },
           {
-            "q": "«أحتاج موعداً لأنني مريض»؟",
-            "a": "Ich brauche einen Termin, weil ich krank bin."
+            "q": "«لا أستطيع المجيء لأنني يجب أن أتعلّم»؟",
+            "choices": [
+              "Ich kann nicht kommen, weil ich lernen muss.",
+              "Ich kann nicht kommen, weil ich muss lernen.",
+              "Ich kann nicht kommen, weil muss ich lernen."
+            ],
+            "a": "Ich kann nicht kommen, weil ich lernen muss.",
+            "why": "المودال muss في الآخر بعد المصدر lernen."
           },
           {
-            "q": "«لماذا؟»؟",
-            "a": "warum?"
-          },
-          {
-            "q": "«مهم» و«عاجل»؟",
-            "a": "wichtig / dringend"
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "«لهذا اتصلت»؟",
-            "a": "Darum habe ich angerufen."
-          },
-          {
-            "q": "«أنا لا أشعر براحة»؟",
-            "a": "Ich fühle mich unwohl."
-          },
-          {
-            "q": "«الراحة»؟",
-            "a": "die Ruhe"
-          },
-          {
-            "q": "«يجب أن أستريح»؟",
-            "a": "Ich muss mich ausruhen."
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "«هذه حالة طوارئ»؟",
-            "a": "Das ist ein Notfall."
-          },
-          {
-            "q": "«عندي ضغط في العمل»؟",
-            "a": "Ich habe Stress in der Arbeit."
+            "q": "«لماذا أنت متعب؟»؟",
+            "choices": [
+              "Warum bist du müde?",
+              "Warum du bist müde?",
+              "Warum bist du müde bin?"
+            ],
+            "a": "Warum bist du müde?",
+            "why": "Warum في المقدمة ← الفعل bist ثانياً ← du."
           },
           {
             "q": "«أنا مريض، لهذا أحتاج موعداً»؟",
-            "a": "Ich bin krank, deshalb brauche ich einen Termin."
+            "choices": [
+              "Ich bin krank, deshalb brauche ich einen Termin.",
+              "Ich bin krank, deshalb ich brauche einen Termin.",
+              "Ich bin krank, deshalb einen Termin brauche ich."
+            ],
+            "a": "Ich bin krank, deshalb brauche ich einen Termin.",
+            "why": "deshalb ظرف: بعده الفعل brauche مباشرة ثم ich."
           },
           {
-            "q": "«مريض»؟",
-            "a": "krank"
+            "q": "«الموعد عاجل»؟",
+            "choices": [
+              "Der Termin ist dringend.",
+              "Der Termin dringend ist.",
+              "Der Termin ist dringende."
+            ],
+            "a": "Der Termin ist dringend.",
+            "why": "dringend بعد ist بلا نهاية، والفعل ثانياً."
+          },
+          {
+            "q": "«أختي لا تكسب كثيراً»؟",
+            "choices": [
+              "Meine Schwester verdient nicht viel.",
+              "Meine Schwester verdienen nicht viel.",
+              "Meine Schwester hat nicht viel verdienen."
+            ],
+            "a": "Meine Schwester verdient nicht viel.",
+            "why": "verdienen → sie verdient (‑t)؛ لا المصدر بعد hat."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أنا في البيت لأنني متوعّك»؟",
+            "choices": [
+              "Ich bin zu Hause, weil mir unwohl ist.",
+              "Ich bin zu Hause, weil mir ist unwohl.",
+              "Ich bin zu Hause, weil ist mir unwohl."
+            ],
+            "a": "Ich bin zu Hause, weil mir unwohl ist.",
+            "why": "Mir ist unwohl ← في جملة weil يذهب ist إلى الآخر."
+          },
+          {
+            "q": "«لأنني مريض، أحتاج موعداً»؟",
+            "choices": [
+              "Weil ich krank bin, brauche ich einen Termin.",
+              "Weil ich krank bin, ich brauche einen Termin.",
+              "Weil ich bin krank, brauche ich einen Termin."
+            ],
+            "a": "Weil ich krank bin, brauche ich einen Termin.",
+            "why": "جملة weil أولاً (bin آخرها) ثم فعل الرئيسية مباشرة: brauche ich."
+          },
+          {
+            "q": "«يوسف عنده توتر لأن الدورة تنتهي قريباً»؟",
+            "choices": [
+              "Yusuf hat Stress, weil der Kurs bald endet.",
+              "Yusuf hat Stress, weil der Kurs endet bald.",
+              "Yusuf hat Stress, weil endet der Kurs bald."
+            ],
+            "a": "Yusuf hat Stress, weil der Kurs bald endet.",
+            "why": "endet في آخر جملة weil — بعد bald."
+          },
+          {
+            "q": "«لماذا تتعلّم كثيراً؟ — لأنني أريد العمل في برلين»؟",
+            "choices": [
+              "Weil ich in Berlin arbeiten möchte.",
+              "Weil ich möchte in Berlin arbeiten.",
+              "Weil ich in Berlin möchte arbeiten."
+            ],
+            "a": "Weil ich in Berlin arbeiten möchte.",
+            "why": "جواب بـweil وحدها: المصدر arbeiten ثم möchte في الآخر."
+          },
+          {
+            "q": "«هذه ليست حالة طوارئ»؟",
+            "choices": [
+              "Das ist kein Notfall.",
+              "Das ist nicht Notfall.",
+              "Das ist keine Notfall."
+            ],
+            "a": "Das ist kein Notfall.",
+            "why": "اسم مذكر بلا أداة يُنفى بـkein (u5)."
+          },
+          {
+            "q": "«عندي وظيفة في السوبرماركت»؟",
+            "choices": [
+              "Ich habe einen Job im Supermarkt.",
+              "Ich habe ein Job im Supermarkt.",
+              "Ich habe einen Job in Supermarkt."
+            ],
+            "a": "Ich habe einen Job im Supermarkt.",
+            "why": "der Job ← einen Job مفعولاً · im = in dem."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أنا متعب لأنني لعبتُ كرة القدم أمس»؟",
+            "choices": [
+              "Ich bin müde, weil ich gestern Fußball gespielt habe.",
+              "Ich bin müde, weil ich habe gestern Fußball gespielt.",
+              "Ich bin müde, weil ich gestern Fußball habe gespielt."
+            ],
+            "a": "Ich bin müde, weil ich gestern Fußball gespielt habe.",
+            "why": "habe في الآخر بعد gespielt — لا في الموضع الثاني."
+          },
+          {
+            "q": "«لهذا أريد العمل في ألمانيا»؟",
+            "choices": [
+              "Deshalb möchte ich in Deutschland arbeiten.",
+              "Deshalb ich möchte in Deutschland arbeiten.",
+              "Deshalb möchte ich in Deutschland arbeite."
+            ],
+            "a": "Deshalb möchte ich in Deutschland arbeiten.",
+            "why": "Deshalb في المقدمة ← möchte ← ich ← المصدر arbeiten آخراً."
+          },
+          {
+            "q": "«لماذا تتصل متأخراً جداً؟»؟",
+            "choices": [
+              "Warum rufst du so spät an?",
+              "Warum du rufst so spät an?",
+              "Warum rufst du an so spät?"
+            ],
+            "a": "Warum rufst du so spät an?",
+            "why": "Warum ← rufst ثانياً ← du … ← an في الآخر (منفصل)."
+          },
+          {
+            "q": "«يجب أن أستريح اليوم»؟",
+            "choices": [
+              "Ich muss mich heute ausruhen.",
+              "Ich muss mich heute ausruhe.",
+              "Ich muss heute ausruhen mich."
+            ],
+            "a": "Ich muss mich heute ausruhen.",
+            "why": "mich بعد المودال مباشرة والمصدر ausruhen كاملاً في الآخر."
+          },
+          {
+            "q": "«التوتر في الدورة عادي»؟",
+            "choices": [
+              "Stress im Kurs ist normal.",
+              "Stress im Kurs sind normal.",
+              "Stress im Kurs normal ist."
+            ],
+            "a": "Stress im Kurs ist normal.",
+            "why": "Stress مفرد ← ist · normal بعده بلا نهاية."
+          },
+          {
+            "q": "«لينا تريد وظيفة لأنها تحتاج مالاً»؟",
+            "choices": [
+              "Lena möchte einen Job, weil sie Geld braucht.",
+              "Lena möchte einen Job, weil sie braucht Geld.",
+              "Lena möchte einen Job, weil braucht sie Geld."
+            ],
+            "a": "Lena möchte einen Job, weil sie Geld braucht.",
+            "why": "braucht في آخر جملة weil."
           }
         ],
         "passingScore": 0.75
@@ -206,53 +889,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Warum? — Weil ich krank bin! Das Verb wandert in weil-Sätzen ans Ende. Und deshalb: Verb an Position 2 — ganz normal.",
-      "ar": "لماذا؟ — لأنني مريض! الفعل يهاجر إلى النهاية في جمل weil. أما deshalb: الفعل في الموضع الثاني كالعادة."
+      "de": "Warum? — Weil ich krank bin. · Ich brauche einen Termin, weil ich krank bin. · Yusuf kann nicht kommen, weil er lernen muss. · Lena ist müde, weil sie Fußball gespielt hat. · Weil ich krank bin, brauche ich Ruhe. · Ich bin krank, deshalb brauche ich Ruhe. · Darum möchte ich in Deutschland arbeiten. — wichtig · dringend · krank · unwohl · die Ruhe · der Stress · der Notfall · sich ausruhen · normal · der Job · verdienen",
+      "ar": "weil تفتح جملة تابعة والفعل المصرَّف في آخرها (bin · muss · hat) — مع المودال والماضي المركّب يكون المودال/haben هو الأخير — وإذا تقدّمت جملة weil جاء فعل الرئيسية بعد الفاصلة مباشرة · Warum? سؤال السبب · deshalb/darum ظرفان: في المقدمة والفعل ثانياً · wichtig (مهم) · dringend (عاجل) · krank · unwohl (Mir ist unwohl) · die Ruhe · der Stress · der Notfall · sich ausruhen · normal · der Job (‑s) · verdienen"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~weil ich bin krank~~ / ~~weil ich krank bin~~ معاً مقبولان؟ لا!",
-          "ar": "weil ترسل الفعل إلى النهاية — دائماً"
+          "de": "~~Ich brauche einen Termin, weil ich bin krank.~~ · ~~weil ich habe keine Zeit~~",
+          "ar": "weil ترسل الفعل المصرَّف إلى آخر الجملة التابعة — دائماً"
         },
-        "whyArabicSpeakerFails": "«لأنني مريض» بالعربية تحافظ على ترتيب «أنا مريض»؛ الألماني يغيّر: weil ich krank **bin** — الفعل الأخير يُقال آخر شيء قبل الفاصلة — عكس القلنسوة تماماً (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«لأنني مريض» بالعربية تحافظ على ترتيب «أنا مريض»، فينقل المتعلم ترتيب الجملة الرئيسية (الفعل ثانياً) إلى جملة weil. والألمانية تجعل الجملة التابعة بقانون آخر: الفعل المصرَّف هو آخر كلمة قبل النقطة — weil ich krank bin · weil ich keine Zeit habe — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich brauche einen Termin, weil ich krank bin.",
-          "ar": "أحتاج موعداً لأنني مريض."
+          "de": "Ich brauche einen Termin, weil ich krank bin. · Ich kann nicht kommen, weil ich keine Zeit habe.",
+          "ar": "أحتاج موعداً لأنني مريض · لا أستطيع المجيء لأنه ليس عندي وقت"
         },
         "exercise": {
-          "q": "أكمل: …, weil ich Zeit ___ (haben).",
+          "q": "أكمل: Ich bin zu Hause, weil ich müde ___. (sein — ich)",
+          "a": "bin"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~weil ich habe Fußball gespielt~~ · ~~weil ich muss lernen~~",
+          "ar": "مع المودال والماضي المركّب: المصرَّف (muss · habe) هو الأخير — بعد المصدر/التصريف الثالث"
+        },
+        "whyArabicSpeakerFails": "المتعلم تعلّم في u10-d3 أن التصريف الثالث يغلق الجملة، وفي u8 أن المصدر يأتي آخراً، فيتركهما في الآخر حتى مع weil ويبقي habe/muss ثانياً. والألمانية تنقل المصرَّف وحده إلى ما بعدهما: weil ich Fußball gespielt habe · weil ich lernen muss — الأخير هو ما يتغيّر مع الفاعل — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Ich bin müde, weil ich Fußball gespielt habe. · Yusuf kann nicht kommen, weil er lernen muss.",
+          "ar": "أنا متعب لأنني لعبت كرة القدم · يوسف لا يستطيع المجيء لأنه يجب أن يتعلّم"
+        },
+        "exercise": {
+          "q": "أكمل: Ich bin müde, weil ich viel gearbeitet ___. (haben — ich)",
           "a": "habe"
         }
       },
       {
         "commonError": {
-          "de": "~~Weil ich krank bin, ich brauche einen Termin~~",
-          "ar": "إذا بدأت بجملة weil: الجملة الرئيسية تقلب (brauche ich)"
+          "de": "~~Ich bin krank, deshalb ich brauche einen Termin.~~ · ~~Weil ich krank bin, ich brauche einen Termin.~~",
+          "ar": "بعد deshalb/darum — وبعد جملة weil المتقدّمة — الفعل مباشرةً ثم الفاعل"
         },
-        "whyArabicSpeakerFails": "الجملة الاسمية بعد «لأن» تبقى كما هي بالعربية؛ الألماني يعامل بداية الجملة السببية كمقدمة زمنية: Weil ich krank bin, **brauche** ich … — القلب إجباري (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«لهذا أحتاج» و«لأنني مريض، أحتاج» بالعربية بلا قلب، فيبقي المتعلم الفاعل قبل الفعل. والألمانية تعدّ deshalb (وجملة weil كلها) الموضع الأول، فيأتي الفعل ثانياً: deshalb brauche ich · Weil ich krank bin, brauche ich … — كما بعد gestern في u10-d3 — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Weil ich krank bin, brauche ich einen Termin.",
-          "ar": "لأنني مريض، أحتاج موعداً."
+          "de": "Ich bin krank, deshalb brauche ich einen Termin. · Weil ich krank bin, brauche ich einen Termin.",
+          "ar": "أنا مريض، لهذا أحتاج موعداً · لأنني مريض، أحتاج موعداً"
         },
         "exercise": {
-          "q": "رتّب: weil ich müde bin · habe · ich · deshalb",
-          "a": "Weil ich müde bin, habe ich deshalb…؟ (الصواب: …, deshalb habe ich Zeit)"
-        }
-      },
-      {
-        "commonError": {
-          "de": "~~Deshalb ich brauche~~ / ~~darum brauche ich~~ دائماً بالعكس",
-          "ar": "deshalb/darum = ظروف: الفعل يبقى في الموضع الثاني بعدهما"
-        },
-        "whyArabicSpeakerFails": "«لهذا أحتاج» بالعربية بلا قلب؛ الألماني يقلب بعد deshalb/darum تماماً مثل morgen/gestern: deshalb **brauche** ich — القلنسوة لا تتخلى عن قواعدها (خريطة التداخل 10‑ي)",
-        "correct": {
-          "de": "Deshalb brauche ich einen Termin.",
-          "ar": "لهذا أحتاج موعداً."
-        },
-        "exercise": {
-          "q": "أكمل: Darum ___ (haben) ich angerufen.",
-          "a": "habe"
+          "q": "أكمل: Der Kurs endet bald, darum ___ ich viel. (lernen)",
+          "a": "lerne"
         }
       }
     ],
@@ -268,19 +951,25 @@
       "ruhe",
       "stress",
       "notfall",
-      "ausruhen"
+      "ausruhen",
+      "normal",
+      "job",
+      "verdienen"
     ]
   },
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/weil",
       "https://www.duden.de/rechtschreibung/deshalb",
-      "https://www.duden.de/rechtschreibung/Notfall"
-    ],
-    "wiktionary": [
-      "https://de.wiktionary.org/wiki/weil"
-    ],
-    "goethe": []
+      "https://www.duden.de/rechtschreibung/darum",
+      "https://www.duden.de/rechtschreibung/dringend",
+      "https://www.duden.de/rechtschreibung/unwohl",
+      "https://www.duden.de/rechtschreibung/Notfall",
+      "https://www.duden.de/rechtschreibung/ausruhen",
+      "https://www.duden.de/rechtschreibung/normal",
+      "https://www.duden.de/rechtschreibung/Job",
+      "https://www.duden.de/rechtschreibung/verdienen"
+    ]
   },
   "usedArsenalIds": [
     "ars-weil-satz"
@@ -297,11 +986,27 @@
     "word-ruhe",
     "word-stress",
     "word-notfall",
-    "word-ausruhen"
+    "word-ausruhen",
+    "word-normal",
+    "word-job",
+    "word-verdienen"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Warum? Weil… (erster weil-Satz)",
-    "goetheWordListOverlap": []
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Gründe nennen: weil-Satz · Warum? · deshalb/darum",
+    "goetheWordListOverlap": [
+      "weil",
+      "warum",
+      "deshalb",
+      "wichtig",
+      "dringend",
+      "krank",
+      "ruhe",
+      "stress",
+      "ausruhen",
+      "normal",
+      "job",
+      "verdienen"
+    ]
   }
 }

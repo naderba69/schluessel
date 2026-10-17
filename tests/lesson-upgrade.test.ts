@@ -123,7 +123,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u10-d5")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D169 صارت الوحدات 1–9 (d1..d5) وu10-d1..d4 مُرقّاة
+const legacy = realLessons.find((l) => l.id === "a1-u11-d1")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D170 صارت الوحدات 1–10 (d1..d5) مُرقّاة (u10-d6 توليف خارج المرور — N-004)
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -415,7 +415,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u10-d5", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u11-d1", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -601,19 +601,20 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("الدرس التالي غير المُرقّى (a1-u10-d5 بعد D169): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u11-d1 بعد D170): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
-    // بعد D169 صار u10-d4 مُرقّى؛ الفجوات الفعلية لـu10-d5 (مقيسة قبل النقل): لا ملف ars-weil-satz · مثال unwohl بكلمة غير مدروسة (fühle)
-    // · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · لا خرق واجهة في التدريب · Quiz 3×4 + واجهة (fühle) — ولا كلمة بلا تدريب — القياس لا التخمين
-    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-sample"]);
-    expect(r.rule[0]?.message).toMatch(/ars-weil-satz/);
-    expect(r.rule[1]?.message).toMatch(/unwohl .*fühle/);
+    // بعد D170 اكتملت الوحدة 10 (d6 توليف)؛ الفجوات الفعلية لـu11-d1 (مقيسة قبل النقل): لا ملف ars-koerper · سبعة أمثلة بكلمات غير مدروسة (weh ×6 — نواة الدرس نفسه «weh tun» · rot)
+    // · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · الواجهة في التدريب والـQuiz تخرقها weh · Quiz 3×4 — ولا كلمة بلا تدريب — القياس لا التخمين
+    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", ...Array(7).fill("e-upgrade-sample")]);
+    expect(r.rule[0]?.message).toMatch(/ars-koerper/);
+    expect(r.rule.slice(1).map((i) => i.message).join("\n")).toMatch(/kopf .*weh[\s\S]*auge .*rot/);
     expect(r.practice.map((i) => i.code).sort()).toEqual([
-      ...Array(6).fill("e-upgrade-item"), "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
+      ...Array(6).fill("e-upgrade-item"), "e-upgrade-front", "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
     ].sort());
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: weh$/);
     expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-front"]);
-    expect(r.quiz[3]?.message).toMatch(/: fühle$/);
+    expect(r.quiz[3]?.message).toMatch(/: weh$/);
     expect(r.coverage).toEqual([]);
     expect(r.quizMin).toBe(4);
   });
@@ -1741,6 +1742,124 @@ describe("D115 — أدوات القياس", () => {
     expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
     // المصائد الثلاث (haben يسقط/يُستبدل بالحاضر · التصريف قبل المفعول · تعميم ge‑…‑t على القوي) — كل واحدة بـ10‑ي
     expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de)).toEqual(["~~Gestern ich habe Deutsch gelernt.~~ · ~~Gestern lerne ich Deutsch.~~", "~~Ich habe gegessen Fisch.~~ · ~~Gestern habe ich gelernt Deutsch.~~", "~~gegesst~~ · ~~gelest~~ · ~~geschlaft~~"]);
+    for (const c of l.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+  });
+  it("a1-u10-d5 مُرقّى (D170): صفر نقص — 66 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-weil-satz (جديدة) · نواة normal/der Job/verdienen · ثلاثة أمثلة صُحّحت · كل 20 سطراً وستة مقاطع كلمات مستخدمة — الوحدة 10 مكتملة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u10-d5")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u10-d5")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([66, 4, 6, 15]);
+    // الكلمات الخمس عشرة كلها جديدة (لا تكرار من الوحدات 1–9 ولا من u10-d1..d4) — والنواة (D113: normal · der Job · verdienen) في آخر القائمة
+    const earlier = new Set(realLessons.filter((x) => x.unit <= 9 || (x.unit === 10 && x.day <= 4)).flatMap((x) => x.praesentation.wordIds));
+    expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(l.praesentation.wordIds).toEqual(["weil", "warum", "deshalb", "darum", "wichtig", "dringend", "krank", "unwohl", "ruhe", "stress", "notfall", "ausruhen", "normal", "job", "verdienen"]);
+    // قاعدة اليوم جديدة: ars-weil-satz (كانت مُشاراً إليها بلا ملف — تشاركها u10-d6 وu12-d4 وu12-d6)
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-weil-satz"]);
+    const ws = rules.get("ars-weil-satz")!;
+    expect(ws.usedInLessons).toEqual(["a1-u10-d5", "a1-u10-d6", "a1-u12-d4", "a1-u12-d6"]);
+    expect(ws.payload.ruleDe).toContain("Ich brauche einen Termin, weil ich krank bin.");
+    expect(ws.payload.ruleDe).toContain("Yusuf kann nicht kommen, weil er lernen muss.");
+    expect(ws.payload.ruleDe).toContain("Weil ich krank bin, brauche ich einen Termin.");
+    expect(ws.payload.ruleDe).toContain("Ich bin krank, deshalb brauche ich einen Termin.");
+    expect(ws.payload.ruleDe).not.toMatch(/\b(denn|dass|wenn|ob|Arzt|Fieber|bleibe|bleiben|fühle|gehabt|war|hatte)\b/);
+    expect(ws.payload.ruleDe).not.toContain("Ich kann nicht kommen, weil ich arbeiten muss."); // D108: مثال SD1 الرسمي لـweil حرفياً — أُعيد صوغه
+    // weil بأربع خطوات: المصرَّف آخراً · مع المودال/الماضي المركّب المودال/haben هو الأخير · Warum? وجملة weil المتقدّمة تقلب الرئيسية · deshalb/darum ظرفان والفعل ثانياً
+    for (const x of ["weil تفتح جملة تابعة", "الفعل المصرَّف في الآخر", "weil er lernen muss", "weil ich gestern Fußball gespielt habe", "Warum? سؤال السبب", "Weil ich krank bin, brauche ich einen Termin.", "deshalb وdarum = «لهذا»", "Ich bin krank, deshalb brauche ich einen Termin."])
+      expect(ws.payload.ruleAr).toContain(x);
+    for (const x of ["~~Ich brauche einen Termin, weil ich bin krank.~~", "~~weil ich habe Fußball gespielt~~", "~~weil ich muss arbeiten~~", "~~Ich bin krank, deshalb ich brauche einen Termin.~~", "خريطة التداخل 10‑ي"]) expect(ws.payload.contrastAr).toContain(x);
+    expect(ws.payload.limitsAr).toHaveLength(4);
+    expect(ws.payload.limitsAr.join(" ")).toMatch(/denn .*u12-d4/);
+    expect(ws.payload.limitsAr.join(" ")).toMatch(/dass وwenn/);
+    expect(ws.payload.limitsAr.join(" ")).toMatch(/sein .*u11-d3/);
+    expect(ws.payload.limitsAr.join(" ")).not.toMatch(/\b(Teil|tun|weh|Kopf|Hand|Arm|Bein|Bauch|Hals|Fieber|Erkältung)\b/); // N-103: لا كلمة من u11-d1/u11-d2 حتى في الحدود
+    expect(ws.payload.beads).toEqual(["Ich", "brauche", "einen", "Termin,", "weil", "ich", "krank", "bin."]);
+    expect(ws.payload.properNouns).toEqual(["Lena", "Yusuf", "Berlin", "Deutschland"]);
+    // لا denn/dass/wenn ولا bleiben (u11-d3) ولا fühlen (u11-d4) ولا Arzt/Fieber (u11-d2) ولا war/hatte في ما يُعرض — ولا مثال SD1 الرسمي حرفياً
+    const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise.a]), g: l.ziel.de, t: [l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de] });
+    expect(shown).not.toMatch(/\b(denn|dass|wenn|ob|bleibe|bleiben|fühle|fühlst|Arzt|Fieber|gehabt|hatte|war|wollte|Lenas)\b|Ich kann nicht kommen, weil ich arbeiten muss\./);
+    expect(e.properNouns).toEqual(["Yusuf", "Lena", "Berlin", "Deutschland", "Tunesien"]);
+    expect(e.misspellings ?? []).toEqual([]); // المصائد الثلاث أخطاء ترتيب بكلمات حقيقية — لا صيغة مشطوبة تحتاج إعلاناً
+    expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
+    // ثلاثة أمثلة صُحّحت: unwohl (fühlen غير مدروسة حتى u11-d4) · dringend («Es ist dringend.» ⊂ مثال SD1 الرسمي — D108) · stress («in der Arbeit» ⇒ im Kurs) — والنواة بأمثلة نظيفة
+    const w = (id: string) => words.find((x) => x.id === id)!;
+    const sample = (id: string) => w(id).sampleSentence!.de;
+    expect([sample("unwohl"), sample("dringend"), sample("stress"), sample("normal"), sample("job"), sample("verdienen")]).toEqual([
+      "Mir ist heute unwohl.", "Der Termin ist dringend.", "Ich habe viel Stress im Kurs.", "Stress im Kurs ist normal.", "Meine Schwester hat einen Job im Supermarkt.", "Sie verdient nicht viel.",
+    ]);
+    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|fühle|Arzt|Es ist dringend\./);
+    for (const id of l.praesentation.wordIds) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u10-d5");
+    for (const id of ["normal", "job", "verdienen"]) expect(w(id).goetheList).toEqual(["A1", "A2"]);
+    expect([w("job").gender, w("job").plural]).toEqual(["der", "die Jobs"]);
+    expect(w("verdienen").forms).toMatchObject({ praesens3s: "verdient", perfekt: "hat verdient" });
+    // الحوار (wk-1..20) مكالمة فيديو متأخرة في اليوم السابع بتونس (N-037/N-100): الأحد 5 أبريل · «Warum rufst du so spät an? Ist das ein Notfall?» — لا denn/dass/wenn ولا bleiben ولا fühlen ولا war/hatte
+    const script = JSON.parse(readFileSync(join(CONTENT, "audio-scripts/a1-u10-d5-warum-weil.json"), "utf8")) as { lines: { id: string; speaker: string; text: string }[] };
+    expect(script.lines).toHaveLength(20);
+    expect(script.lines.find((x) => x.id === "wk-1")?.text).toBe("Hallo Yusuf! Warum rufst du so spät an? Ist das ein Notfall?");
+    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\b(denn|dass|wenn|bleibe|bleiben|fühle|Arzt|Fieber|gehabt|hatte|war|Lenas|Ah|Oh)\b/);
+    expect(script.lines.filter((x) => /\b[Ww]eil\b/.test(x.text))).toHaveLength(5); // خمسة أسطر فيها weil (wk-3 · wk-5 · wk-10 · wk-12 · wk-17) — وdeshalb/darum في wk-16 وwk-18
+    // N-020 لهذا الدرس: الاستدعاء من دروس سابقة (brauchen · müde · schlafen) كما كان
+    expect(l.warmup.cardIds).toEqual(["brauchen", "muede", "schlafen"]);
+    expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+    // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102 — وN-110: brauche/müde/gespielt لا تُحسب فلم تُعلن)
+    const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
+    for (const st of l.uebung.stations) {
+      expect(st.interleavedWith.length).toBeGreaterThan(0);
+      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
+      for (const ref of st.interleavedWith) {
+        expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
+        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
+        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+      }
+    }
+    // الحوار الجديد (wk-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة الستة (≤132) مع ستة مقاطع كلمات (النواة + weil · deshalb · notfall)، والأسرع الأربعة عشر كلها استماعاً
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("wk-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 20 }, (_, i) => `wk-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-deshalb", "word-job", "word-normal", "word-notfall", "word-verdienen", "word-weil"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; textDe: string; voiceParams: { speedWpm: number } }[] };
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    const fast = Array.from({ length: 20 }, (_, i) => `wk-${i + 1}`).filter((id) => wpm.get(id)! > 132);
+    expect(fast).toHaveLength(14);
+    for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
+    const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
+    for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
+    // معجم النطق: لا مدخل جديد في D170 (74) — خمسة مداخل قائمة سُجّلت أسطرها الجديدة (Notfall · Fußball · Kurs · Tunesien · okay — N-099)
+    const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
+    expect(lex.entries).toHaveLength(74);
+    const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("wk-"));
+    expect(regen("Notfall")).toEqual(["wk-1", "wk-2"]);
+    expect(regen("Fußball")).toEqual(["wk-5"]);
+    expect(regen("Kurs")).toEqual(["wk-10", "wk-11"]);
+    expect(regen("Tunesien")).toEqual(["wk-15"]);
+    expect(regen("okay")).toEqual(["wk-19"]);
+    expect(regen("regnet")).toEqual([]);
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set([...l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))), ...l.zusammenfassung.warningCards.flatMap((c) => [c.correct.de, String(c.exercise.a)])]);
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    const norm = (x: string) => x.toLowerCase().replace(/[^\p{L}\s]/gu, " ").replace(/\s+/g, " ").trim();
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(norm(a))))).toEqual([]);
+    expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
+    // كل إجابة Quiz جملة weil أو Warum أو deshalb أو من كلمات اليوم — والمشتِّتات أخطاء ترتيب بكلمات معروفة (لا صيغ مختلقة)
+    expect(quizAnswers.filter((a) => /\b(weil|Warum|deshalb|Deshalb|dringend|Notfall|Job|normal|verdient|ausruhen)\b/i.test(a))).toHaveLength(18);
+    // المصائد الثلاث (الفعل ثانياً في weil · المصرَّف قبل المصدر/التصريف الثالث · لا قلب بعد deshalb/جملة weil المتقدّمة) — كل واحدة بـ10‑ي
+    expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de)).toEqual(["~~Ich brauche einen Termin, weil ich bin krank.~~ · ~~weil ich habe keine Zeit~~", "~~weil ich habe Fußball gespielt~~ · ~~weil ich muss lernen~~", "~~Ich bin krank, deshalb ich brauche einen Termin.~~ · ~~Weil ich krank bin, ich brauche einen Termin.~~"]);
     for (const c of l.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
     const taught = knownStems(taughtUpTo(l, realLessons, words));
