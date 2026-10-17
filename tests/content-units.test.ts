@@ -1203,6 +1203,35 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(ALL_WORDS.find((w) => w.id === "haushalt")!.ar).toEqual(["أعمال البيت", "تدبير المنزل"]);
   });
 
+  it("D156: ملاحظة الجمع تطابق الجمع نفسه — Umlaut يُدّعى ولا يقع (Kleid «umlaut + er: Kleider» · Gerät/Geschäft/Gespräch «umlaut + e» والـä في المفرد أصلاً) · ونهاية لا تقع (Mantel «+ er: Mäntel») — صُحّحت ويمنعها هذا الاختبار", () => {
+    const deum = (s: string) => s.replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/Ä/g, "A").replace(/Ö/g, "O").replace(/Ü/g, "U");
+    const umlauts = (s: string) => [...s].filter((c) => "äöüÄÖÜ".includes(c)).length;
+    const bad: string[] = [];
+    for (const w of ALL_WORDS) {
+      const note = w.pluralRuleNote ?? "";
+      if (w.wordClass !== "noun" || !note || !w.plural) continue;
+      const sing = w.de.replace(/^(der|die|das) /u, "").trim();
+      const plural = w.plural.replace(/^die /u, "").trim();
+      const newUmlaut = umlauts(plural) > umlauts(sing);
+      // (1) ملاحظة تدّعي Umlaut (umlaut · u→ü · «ä + …» · «ä بلا نهاية») والجمع بلا Umlaut جديد
+      const claimsUmlaut = /umlaut|[aou]→[äöü]|(^|\s)[äöü] (\+|بلا)/iu.test(note) && !/بلا umlaut/iu.test(note);
+      if (claimsUmlaut && !newUmlaut) bad.push(`${w.id}: Umlaut غير واقع`);
+      // (2) الاصطلاح الجديد: «‑e: …» · «ü + ‑er: …» — النهاية المذكورة هي نهاية الجمع فعلاً · و«بلا نهاية» = الجمع كالمفرد (بلا Umlaut)
+      const m = /^(?:[äöü] \+ )?‑(e|n|en|er|se|s|nen):/u.exec(note);
+      if (m && deum(plural) !== deum(sing) + m[1]) bad.push(`${w.id}: النهاية ‑${m[1]} غير واقعة`);
+      if (/^(?:[äöü] )?بلا نهاية/u.test(note) && deum(plural) !== deum(sing)) bad.push(`${w.id}: «بلا نهاية» غير واقع`);
+    }
+    expect(bad).toEqual([]);
+    const note = (id: string) => ALL_WORDS.find((x) => x.id === id)!.pluralRuleNote;
+    expect(note("mantel")).toBe("ä بلا نهاية: der Mantel ← die Mäntel (‑el في الآخر — كـder Vater ← die Väter)");
+    expect(note("kleid")).toBe("‑er: das Kleid ← die Kleider (كـdas Kind ← die Kinder)");
+    expect(note("geraet")).toMatch(/^‑e: das Gerät ← die Geräte/);
+    expect(note("bruder")).toBe("ü بلا نهاية: der Bruder ← die Brüder (‑er في الآخر)");
+    // Groesse رسمٌ بديل للحروف لا كتابةٌ ألمانية — والكتابة السويسرية Grösse (ss بدل ß)
+    expect(note("groesse")).not.toMatch(/Groesse/);
+    expect(note("groesse")).toContain("Grösse");
+  });
+
   it("D151: ملاحظات الجمع في الدروس المُرقّاة بلا مصطلح داخلي — كان «Gleich_plural» يظهر للمتعلم في 11 كلمة (Sessel · Spiegel · Kissen · Wecker …) فصار «بلا نهاية: der Sessel ← die Sessel» (نمط D146)", () => {
     const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4", "a1-u7-d5"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D152: u7-d2 · D153: u7-d3 · D154: u7-d4 · D155: u7-d5
     const jargon = ALL_WORDS.filter((w) => done.has(w.id) && /Gleich_plural|[A-Za-z]+_[A-Za-z]+/.test(w.pluralRuleNote ?? "")).map((w) => w.id);
