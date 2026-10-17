@@ -17449,6 +17449,66 @@
       "rmsDb": -16.98
     },
     {
+      "id": "word-teil",
+      "file": "words/audio/de-DE/word-teil.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Teil.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 920,
+      "sizeBytes": 4435,
+      "hash": "sha256:1ef6a895b6ea11a238bcf91319eafed37fdcf8f4c00113991e4e4a48399266a4",
+      "pcmSha256": "cc5c3f0ad23295491fa23fe88dec76d1d4ad71482cfb440433b2d78a73125250",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "word-tun",
+      "file": "words/audio/de-DE/word-tun.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "tun.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 920,
+      "sizeBytes": 4289,
+      "hash": "sha256:86d76f4cdc6a6f1f7a9afd54da29facd54a7c4339c4a3ff87569448583375577",
+      "pcmSha256": "34753bcd4c4c42d3509652837ded46d4ba60aa7393466009bab6a83ed80d61b1",
+      "rmsDb": -16.96
+    },
+    {
+      "id": "word-weh-tun",
+      "file": "words/audio/de-DE/word-weh-tun.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "weh tun.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 1059,
+      "sizeBytes": 4787,
+      "hash": "sha256:124d710a8b9191fa2c22374beb0dc110a3695ecad72357e410e8002f27958f37",
+      "pcmSha256": "637eecd20ba11bbe996b841825e38c2a9faaed959d95f312cd3ba838b469d8fd",
+      "rmsDb": -16.96
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -38754,6 +38814,446 @@
       "hash": "sha256:c2fd723e72c0284cc564797698a9e070d9a2ce7be519ee4b8dd2f17ff3e79105",
       "pcmSha256": "bc455995dc61096f6e03226825ba1ff8ce5e0669cfe01b435d504defd0fa6afe",
       "rmsDb": -17.02
+    },
+    {
+      "id": "kw-1",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Lena! Geht es dir heute gut? Bist du noch müde?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 4147,
+      "sizeBytes": 18268,
+      "hash": "sha256:d9f89ff30e1446e7a25c5eb452f779d6c062b268d50fd274735bcd9a7e5e084f",
+      "pcmSha256": "0dc283950b55b58b12116ef5cc54a26d5e22e9fa1da49bded2d770b15629b5c6",
+      "rmsDb": -17
+    },
+    {
+      "id": "kw-2",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 204,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nicht gut. Mein Hals tut weh. Und mir tut auch der Kopf weh.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 3816,
+      "sizeBytes": 17676,
+      "hash": "sha256:8f582e1e521303fa37e120ee659b1e37dabe2bf9895033a5d78bdbb8a737ebd5",
+      "pcmSha256": "0b5d4c33eba9b8c595cb0a62b460e814041355b6074c4dea61c639f00128f63b",
+      "rmsDb": -17.21
+    },
+    {
+      "id": "kw-3",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 171,
+        "lengthScale": 1.32
+      },
+      "textDe": "Seit wann tut dein Hals weh?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 2104,
+      "sizeBytes": 9448,
+      "hash": "sha256:553d539ae44ba4fcc7bf3e870a0f9ec7cd4e01b41f7a3c66ea20d7a77ea4d034",
+      "pcmSha256": "f7a6f306d9687cf845ebc9295bc801f758a7c8bfa68b5c4e9fdfeac3a797b722",
+      "rmsDb": -17
+    },
+    {
+      "id": "kw-4",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 138,
+        "lengthScale": 1.32
+      },
+      "textDe": "Seit gestern Abend. Ich habe im Regen Fußball gespielt — das weißt du ja.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 5672,
+      "sizeBytes": 26492,
+      "hash": "sha256:623da32fe5025956199233a3d1e59243dcbb59fc3b0ad8d427654ef2f92dda16",
+      "pcmSha256": "97ac744b85bd6fe56ac35d1b19260706655bbae244fb16c3f90f51ac02e0acbb",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "kw-5",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Tut dein Bauch auch weh?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 2046,
+      "sizeBytes": 9323,
+      "hash": "sha256:89aa3448521563faa6f060a8f084d3bfac1c7b6015965c221650b8da1f782a76",
+      "pcmSha256": "f59aad2c2f6c714eac0abd03d9235589a4ea291569f09b0877a4712b07d7f1df",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "kw-6",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, mein Bauch ist okay. Aber meine Beine tun weh — vom Fußball.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 5272,
+      "sizeBytes": 24477,
+      "hash": "sha256:c1f6f22cfd01ef8c5fb62f6c604189c15aaf4f7f2ca8f33e0ca29cf4308e2956",
+      "pcmSha256": "ff2722580d1b5c8711c8e099019179d207734224c9b289b1d56dffcf6337813b",
+      "rmsDb": -17.4
+    },
+    {
+      "id": "kw-7",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du musst dich ausruhen. Trink viel Tee, das hilft!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 3764,
+      "sizeBytes": 17015,
+      "hash": "sha256:e599eb670593722984df3131e66ecf07d8adab4cc853716f75bc721d96a832c7",
+      "pcmSha256": "046727c469aa698e29f2d55c7cd849cbdcaf7d01dce64d3930f36051890cfdb2",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "kw-8",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, meine Mutter macht Tee. Und du? Was hast du heute im Kurs gelernt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 5000,
+      "sizeBytes": 23568,
+      "hash": "sha256:34f2268de918352750ed49ad2ec85c3a9240975fef56271209b11212384404e4",
+      "pcmSha256": "4b9a1360b41cbc2db6601829a1733228243ed2139047b51ba481876537e4bb7a",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "kw-9",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 113,
+        "lengthScale": 1.32
+      },
+      "textDe": "Heute: Kopf, Hand, Arm, Bein — alle Teile! Die Aufgabe hat zwei Teile.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 6365,
+      "sizeBytes": 28980,
+      "hash": "sha256:44019b127973d2173c44602f9a46d9502c85b47272cee6b6a722100799597a17",
+      "pcmSha256": "239e4eabc7d4455f8ad4b86e72b38575ed1ad88e7264c2f5e717c1fb7ca64ee3",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "kw-10",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 125,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zwei Teile? Was ist Teil eins?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 2872,
+      "sizeBytes": 13465,
+      "hash": "sha256:fa3ea373e13060349f2bd83c9a64e9911925ac9ff5f6c8cce8ac51cbb1ba470b",
+      "pcmSha256": "8d7d0fdc21d5b3ecdbf32bfed6c454d424cd1dd94c1af94459e89a0d9353a293",
+      "rmsDb": -17.62
+    },
+    {
+      "id": "kw-11",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 181,
+        "lengthScale": 1.32
+      },
+      "textDe": "Teil eins: Was ist das? Zeig mir deine Hand! Das ist die Hand, und das sind die Finger.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 5982,
+      "sizeBytes": 27047,
+      "hash": "sha256:11c9f867693569ff084d5b23d0f14043601dde23e46e2be3d5cd8d1f9d9501f1",
+      "pcmSha256": "95989164dae1082ba0f099dad84923252fcf51363c5d8e7f59dbca432505955b",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "kw-12",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 172,
+        "lengthScale": 1.32
+      },
+      "textDe": "Einfach! Die Hand hat fünf Finger. Und das hier ist meine Nase, das ist mein Mund.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 5592,
+      "sizeBytes": 25808,
+      "hash": "sha256:4403438f748b92b2f4b901e63ce2ca3543df3fda965034ee04be26ee5477f7fd",
+      "pcmSha256": "fc60ea2739fca5c225bf85673828e2a8221269b649ffd24763f19a601ed9a0ea",
+      "rmsDb": -17.44
+    },
+    {
+      "id": "kw-13",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut! Und Teil zwei: Was tut weh? Ich sage: Mir tut der Rücken weh.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 5436,
+      "sizeBytes": 24597,
+      "hash": "sha256:a53dea83891ad14741a41cc314103fd3c4a0d451cbf303a904593926e1deb388",
+      "pcmSha256": "6d9269e2578119383c2c2e49cc1a47bee54880c04594b79fbd746d44da239fb3",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "kw-14",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 161,
+        "lengthScale": 1.32
+      },
+      "textDe": "Warum tut dein Rücken weh?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 1864,
+      "sizeBytes": 8931,
+      "hash": "sha256:217801525afef948748e08e00403761e6012191124e71ad786489c489fff4659",
+      "pcmSha256": "d126de8aa2fb42faa28ad12ba4f125b1ecd519dfb697a3247a30ecb92f20c871",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "kw-15",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Weil ich heute drei Stunden am Tisch gelernt habe.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 3578,
+      "sizeBytes": 16054,
+      "hash": "sha256:a17093eab39e353052c36b39ca258a2ac011c155558b629ae4f0ff345dcc8410",
+      "pcmSha256": "702baff36543fc3db2a4cfa8072a897bf8b12d0b96ebea1918e1ea388008d4e6",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "kw-16",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 170,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und ich sage: Mein Hals tut weh, mir tut der Kopf weh, meine Beine tun weh — alles tut weh!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 6696,
+      "sizeBytes": 31193,
+      "hash": "sha256:f3027eb2aaa1f49fb48196d4ac80d1820a2f6af74979b8e038bab880d115e80d",
+      "pcmSha256": "2f90b71955e0c45972de7483895d53d46be7e81073c3824d41b514634a3d57e5",
+      "rmsDb": -17.45
+    },
+    {
+      "id": "kw-17",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 202,
+        "lengthScale": 1.32
+      },
+      "textDe": "Was kann ich für dich tun?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 1779,
+      "sizeBytes": 7808,
+      "hash": "sha256:f06789d45bd5c54b7cbbfd65e2d6a57a1b0bf4ea6947fc2277edb5dd783e758b",
+      "pcmSha256": "a7152767b5ac9d89a95f696f770db73b60145e2f405dac689defe4c31366b8b5",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "kw-18",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 156,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nichts. Ich mache jetzt die Augen zu und schlafe.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 3464,
+      "sizeBytes": 16192,
+      "hash": "sha256:e901e4dc02ab3f18506587e3822d063068842ae9935505a49d4a127157377baf",
+      "pcmSha256": "28420ffd5b28770e6f9e2003c24cc75ed89397e6d8c326624da7dfb9dbc22d94",
+      "rmsDb": -17.54
+    },
+    {
+      "id": "kw-19",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut. Schlaf gut und ruh dich aus!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 3021,
+      "sizeBytes": 13416,
+      "hash": "sha256:08bdd4828b1f9145f7fdf8df37dfd4875744fd495532c98bd2727648116b2a93",
+      "pcmSha256": "8dbfaa50555770957494489ba347e0f4351178206531ee34a97fe8ee0e7ba880",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "kw-20",
+      "file": "audio/scripts/a1-u11-d1-alles-tut-weh/kw-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 116,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke, Yusuf. Bis morgen! Morgen tut nichts mehr weh.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d1"
+      ],
+      "durationMs": 4664,
+      "sizeBytes": 21443,
+      "hash": "sha256:bf8f06ce9b1035b81f99b93d03b8664c77f2df1d196ae96a4d6cb9e96b54bce9",
+      "pcmSha256": "ff0f68c131cdf686ebe3c31d1562e81a95360c0d268567ab29904198de53b19f",
+      "rmsDb": -17.15
     }
   ],
   "characterVoices": {

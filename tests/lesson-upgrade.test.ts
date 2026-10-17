@@ -123,7 +123,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u11-d1")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D170 صارت الوحدات 1–10 (d1..d5) مُرقّاة (u10-d6 توليف خارج المرور — N-004)
+const legacy = realLessons.find((l) => l.id === "a1-u11-d2")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D171 صارت الوحدات 1–10 (d1..d5) وu11-d1 مُرقّاة (d6 توليف خارج المرور — N-004)
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -415,7 +415,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u11-d1", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u11-d2", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -601,20 +601,20 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("الدرس التالي غير المُرقّى (a1-u11-d1 بعد D170): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u11-d2 بعد D171): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
-    // بعد D170 اكتملت الوحدة 10 (d6 توليف)؛ الفجوات الفعلية لـu11-d1 (مقيسة قبل النقل): لا ملف ars-koerper · سبعة أمثلة بكلمات غير مدروسة (weh ×6 — نواة الدرس نفسه «weh tun» · rot)
-    // · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · الواجهة في التدريب والـQuiz تخرقها weh · Quiz 3×4 — ولا كلمة بلا تدريب — القياس لا التخمين
-    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", ...Array(7).fill("e-upgrade-sample")]);
-    expect(r.rule[0]?.message).toMatch(/ars-koerper/);
-    expect(r.rule.slice(1).map((i) => i.message).join("\n")).toMatch(/kopf .*weh[\s\S]*auge .*rot/);
+    // الفجوات الفعلية لـu11-d2 (مقيسة قبل النقل): لا ملف ars-gesundheit · مثال schmerz «Der Schmerz ist stark.» (stark غير مدروسة) · 6 بنود choice بلا خيارات ونوع واحد
+    // بلا استماع ولا إملاء · «dativ» كلمةً في التدريب (رمز نحوي لا كلمة) · stark في الـQuiz · Quiz 3×4 — ولا كلمة بلا تدريب — القياس لا التخمين
+    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-sample"]);
+    expect(r.rule[0]?.message).toMatch(/ars-gesundheit/);
+    expect(r.rule[1]?.message).toMatch(/schmerz .*stark/);
     expect(r.practice.map((i) => i.code).sort()).toEqual([
       ...Array(6).fill("e-upgrade-item"), "e-upgrade-front", "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
     ].sort());
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: weh$/);
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: dativ$/);
     expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-front"]);
-    expect(r.quiz[3]?.message).toMatch(/: weh$/);
+    expect(r.quiz[3]?.message).toMatch(/: stark$/);
     expect(r.coverage).toEqual([]);
     expect(r.quizMin).toBe(4);
   });
@@ -1742,6 +1742,127 @@ describe("D115 — أدوات القياس", () => {
     expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
     // المصائد الثلاث (haben يسقط/يُستبدل بالحاضر · التصريف قبل المفعول · تعميم ge‑…‑t على القوي) — كل واحدة بـ10‑ي
     expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de)).toEqual(["~~Gestern ich habe Deutsch gelernt.~~ · ~~Gestern lerne ich Deutsch.~~", "~~Ich habe gegessen Fisch.~~ · ~~Gestern habe ich gelernt Deutsch.~~", "~~gegesst~~ · ~~gelest~~ · ~~geschlaft~~"]);
+    for (const c of l.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+  });
+  it("a1-u11-d1 مُرقّى (D171): صفر نقص — 69 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-koerper (جديدة) · نواة der Teil/tun/weh tun · ثلاثة أمثلة صُحّحت · كل 20 سطراً وتسعة مقاطع كلمات مستخدمة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u11-d1")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u11-d1")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([69, 4, 6, 15]);
+    // الكلمات الخمس عشرة كلها جديدة (لا تكرار من الوحدات 1–10) — والنواة (D113: der Teil · tun · weh tun) في آخر القائمة
+    const earlier = new Set(realLessons.filter((x) => x.unit <= 10).flatMap((x) => x.praesentation.wordIds));
+    expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(l.praesentation.wordIds).toEqual(["kopf", "hand", "arm", "bein", "ruecken", "bauch", "hals", "auge", "nase", "mund", "zahn", "finger", "teil", "tun", "weh-tun"]);
+    // قاعدة اليوم جديدة: ars-koerper (كانت مُشاراً إليها بلا ملف — تشاركها u11-d6)
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-koerper"]);
+    const ko = rules.get("ars-koerper")!;
+    expect(ko.usedInLessons).toEqual(["a1-u11-d1", "a1-u11-d6"]);
+    expect(ko.payload.ruleDe).toContain("Mir tut der Kopf weh.");
+    expect(ko.payload.ruleDe).toContain("Meine Beine tun weh.");
+    expect(ko.payload.ruleDe).toContain("die Hand → die Hände");
+    expect(ko.payload.ruleDe).toContain("Was kann ich für dich tun?");
+    expect(ko.payload.ruleDe).toContain("Die Aufgabe hat zwei Teile");
+    expect(ko.payload.ruleDe).not.toMatch(/\b(Körper|Arzt|Ärztin|Schmerzen|Fieber|bleibe|bleiben|fühle|rot|blau|tue|tust|war|hatte)\b/);
+    expect(ko.payload.ruleDe).not.toMatch(/Mein Kopf tut weh\.|Mir tut der Hals weh\.|Mein Arm tut weh\.|Mein Bein tut weh\.|Wo tut es weh\?/); // D108: أمثلة SD1 الرسمية لـKopf/Hals/Arm/weh tun حرفياً
+    // الجسم بأربع خطوات: الجنس بلا منطق · أنماط الجمع الأربعة · weh tun (tut/tun · weh آخراً · الداتيف) · tun وder Teil
+    for (const x of ["اثنا عشر جزءاً بجنسها", "die Hand أنثى وdas Bein محايد", "أومالوت + e: die Hände", "بلا نهاية: die Finger", "weh tun = «يؤلم»", "Meine Beine tun weh.", "Mir tut der Kopf weh.", "Seit wann tut dein Hals weh?", "tun = «يفعل»", "der Teil (‑e) = «الجزء»"])
+      expect(ko.payload.ruleAr).toContain(x);
+    for (const x of ["~~die Bein~~", "~~die Auge~~", "~~der Nase~~", "~~die Hands~~", "~~die Zahns~~", "~~Mein Kopf weh tut.~~", "~~Meine Beine tut weh.~~", "خريطة التداخل 10‑ي"]) expect(ko.payload.contrastAr).toContain(x);
+    expect(ko.payload.limitsAr).toHaveLength(4);
+    expect(ko.payload.limitsAr.join(" ")).toMatch(/u11-d2/);
+    expect(ko.payload.limitsAr.join(" ")).toMatch(/sein .*u11-d3/);
+    expect(ko.payload.limitsAr.join(" ")).toMatch(/u11-d4/);
+    expect(ko.payload.limitsAr.join(" ")).toMatch(/N-107/);
+    expect(ko.payload.limitsAr.join(" ")).not.toMatch(/\b(Arzt|Ärztin|Schmerz|Fieber|Erkältung|Tablette|bleiben|liegen|fühlen|Wunde|Blut|rot|blau)\b/); // N-103: لا كلمة من u11-d2..d4 بصيغتها الألمانية حتى في الحدود
+    expect(ko.payload.beads).toEqual(["Mir", "tut", "der", "Kopf", "weh."]);
+    expect(ko.payload.properNouns).toEqual([]);
+    // لا Körper (ليست في SD1 ولا في المقرر) ولا Arzt/Fieber/Schmerzen (u11-d2) ولا bleiben/liegen (u11-d3) ولا fühlen (u11-d4) ولا rot/blau (N-107) ولا tue/tust (N-112) في ما يُعرض — ولا مثال SD1 الرسمي حرفياً
+    const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise.a]), g: l.ziel.de, t: [l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de] });
+    expect(shown).not.toMatch(/\b(Körper|Arzt|Ärztin|Schmerzen|Kopfschmerzen|Fieber|bleibe|bleiben|liege|liegen|fühle|rot|blau|tue|tust|war|hatte|Lenas|Mama)\b|Mein Kopf tut weh\.|Mir tut der Hals weh\.|Mein Arm tut weh\.|Mein Bein tut weh\.|Wo tut es weh\?|Wie geht es dir\?/);
+    expect(e.properNouns).toEqual(["Yusuf", "Lena"]);
+    expect(e.misspellings ?? []).toEqual([]); // المصائد الثلاث جنس وجمع وترتيب بكلمات حقيقية — لا صيغة مشطوبة تحتاج إعلاناً (Hands/Zahns/Kopfs/Fuße تُشطب في النص وتُقرأ كجذوع معروفة)
+    expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
+    // ثلاثة أمثلة صُحّحت: kopf («Mein Kopf tut weh.» = مثال SD1 الرسمي — D108) · auge («Mein Auge ist rot.» — rot بلا درس N-107) — والنواة بأمثلة نظيفة (weh tun «Meine Beine tun weh.» بعد أن كان المقترح «Mir tut der Hals weh.» مثال SD1 لـHals)
+    const w = (id: string) => words.find((x) => x.id === id)!;
+    const sample = (id: string) => w(id).sampleSentence!.de;
+    expect([sample("kopf"), sample("auge"), sample("teil"), sample("tun"), sample("weh-tun")]).toEqual([
+      "Mir tut der Kopf weh.", "Mach die Augen zu!", "Die Aufgabe hat zwei Teile.", "Was kann ich für dich tun?", "Meine Beine tun weh.",
+    ]);
+    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|rot|blau|Arzt|Körper|Mein Kopf tut weh\.|Mir tut der Hals weh\./);
+    for (const id of l.praesentation.wordIds) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u11-d1");
+    for (const id of ["teil", "tun", "weh-tun"]) expect(w(id).goetheList).toEqual(["A1", "A2"]);
+    expect([w("teil").gender, w("teil").plural]).toEqual(["der", "die Teile"]);
+    expect(w("tun").forms).toMatchObject({ praesens3s: "tut", perfekt: "hat getan" });
+    expect(w("weh-tun").forms).toMatchObject({ praesens3s: "tut weh", perfekt: "hat wehgetan" });
+    expect([w("weh-tun").chunk, w("weh-tun").wordFamily, w("tun").wordFamily]).toEqual([true, ["tun"], ["weh-tun"]]);
+    // الحوار (kw-1..20) مكالمة فيديو مساء اليوم الثامن بتونس (N-037/N-100): الاثنين 6 أبريل · «Hallo Lena! Geht es dir heute gut? Bist du noch müde?» — لا Arzt/Fieber/bleiben/fühlen/Körper/Mama ولا war/hatte
+    const script = JSON.parse(readFileSync(join(CONTENT, "audio-scripts/a1-u11-d1-alles-tut-weh.json"), "utf8")) as { lines: { id: string; speaker: string; text: string }[] };
+    expect(script.lines).toHaveLength(20);
+    expect(script.lines.find((x) => x.id === "kw-1")?.text).toBe("Hallo Lena! Geht es dir heute gut? Bist du noch müde?");
+    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\b(Körper|Arzt|Ärztin|Fieber|Schmerzen|bleibe|bleiben|fühle|rot|blau|tue|tust|Mama|gehabt|hatte|war|Lenas|Oh)\b|Mir tut der Hals weh\.|Wo tut es weh\?/);
+    expect(script.lines.filter((x) => /\bweh\b/.test(x.text))).toHaveLength(8);
+    // N-020 لهذا الدرس: الاستدعاء من دروس سابقة (der Fuß · das Haar · das Ohr — أجزاء مدروسة من قبل) كما كان
+    expect(l.warmup.cardIds).toEqual(["fuss", "haar", "ohr"]);
+    expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+    // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102 — وN-110: zeigen/aufgabe/schlafen بتصريفها أو في speakText فقط لم تُعلن)
+    const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
+    for (const st of l.uebung.stations) {
+      expect(st.interleavedWith.length).toBeGreaterThan(0);
+      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
+      for (const ref of st.interleavedWith) {
+        expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
+        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
+        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+      }
+    }
+    // الحوار الجديد (kw-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة الثلاثة (≤132) مع تسعة مقاطع كلمات (النواة الثلاث + hand · zahn · auge · bein · ruecken · bauch)، والأسرع السبعة عشر كلها استماعاً
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("kw-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 20 }, (_, i) => `kw-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-auge", "word-bauch", "word-bein", "word-hand", "word-ruecken", "word-teil", "word-tun", "word-weh-tun", "word-zahn"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; textDe: string; voiceParams: { speedWpm: number } }[] };
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    const fast = Array.from({ length: 20 }, (_, i) => `kw-${i + 1}`).filter((id) => wpm.get(id)! > 132);
+    expect(fast).toHaveLength(17);
+    for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
+    const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
+    for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
+    // معجم النطق: لا مدخل جديد في D171 (74) — أربعة مداخل قائمة سُجّلت أسطرها الجديدة (Hals · Fußball · okay · Kurs — N-099)
+    const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
+    expect(lex.entries).toHaveLength(74);
+    const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("kw-"));
+    expect(regen("Hals")).toEqual(["kw-2", "kw-3", "kw-16"]);
+    expect(regen("Fußball")).toEqual(["kw-4", "kw-6"]);
+    expect(regen("okay")).toEqual(["kw-6"]);
+    expect(regen("Kurs")).toEqual(["kw-8"]);
+    expect(regen("Notfall")).toEqual([]);
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set([...l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))), ...l.zusammenfassung.warningCards.flatMap((c) => [c.correct.de, String(c.exercise.a)])]);
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    const norm = (x: string) => x.toLowerCase().replace(/[^\p{L}\s]/gu, " ").replace(/\s+/g, " ").trim();
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(norm(a))))).toEqual([]);
+    expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
+    // كل إجابة Quiz من weh tun أو tun أو الجنس/الجمع أو der Teil — والمشتِّتات أخطاء جنس/جمع/ترتيب بكلمات معروفة (لا صيغ مختلقة)
+    expect(quizAnswers.filter((a) => /\b(weh|tun|tut|Teil|Teile|Hände|Zähne|Füße|Beine|Ohren|Augen)\b/.test(a))).toHaveLength(18);
+    // المصائد الثلاث (الجنس بلا منطق · الجمع بأومالوت لا ‑s · tut/tun وweh آخراً والداتيف) — كل واحدة بـ10‑ي
+    expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de)).toEqual(["~~der Hand~~ · ~~die Bein~~ · ~~die Auge~~ · ~~der Nase~~", "~~die Hands~~ · ~~die Zahns~~ · ~~die Kopfs~~ · ~~die Fuße~~", "~~Mein Kopf weh tut.~~ · ~~Meine Beine tut weh.~~ · ~~Mich tut der Kopf weh.~~"]);
     for (const c of l.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
     const taught = knownStems(taughtUpTo(l, realLessons, words));

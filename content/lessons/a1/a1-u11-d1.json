@@ -6,11 +6,12 @@
   "day": 1,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst Teile deines Körpers nennen und sagen, wo es weh tut: Mein Kopf tut weh.",
-    "ar": "تسمي أجزاء جسمك وتخبر أين الألم"
+    "de": "Das ist die Hand, und das sind die Finger. · Mir tut der Kopf weh. · Meine Beine tun weh. · Seit wann tut dein Hals weh? — Seit gestern. · Was kann ich für dich tun? · Die Aufgabe hat zwei Teile.",
+    "ar": "تسمّي اثني عشر جزءاً من الجسم بجنسها وجمعها (die Hand → die Hände · das Bein → die Beine · der Finger → die Finger)، وتقول أين الألم بـweh tun (tut للمفرد · tun للجمع · weh في الآخر · صاحب الألم بالداتيف mir/dir)، وتسأل Seit wann? — وتستعمل tun (Was kann ich für dich tun?) وder Teil (Die Aufgabe hat zwei Teile.)"
   },
   "canDoDaily": [
-    "يسمي 6 أجزاء جسم ويخبر عن ألم جزئين (… tut weh)"
+    "يسمّي ثمانية أجزاء بأداتها وجمعها (der Kopf/die Köpfe · die Hand/die Hände · das Bein/die Beine · das Auge/die Augen · der Zahn/die Zähne · der Finger/die Finger · die Nase · der Mund) ويخبر عن ألم جزئين بـweh tun صحيحة العدد والموضع (Mir tut der Kopf weh. · Meine Beine tun weh.).",
+    "يسأل ويجيب: Was tut weh? · Tut dir der Hals weh? · Seit wann? — Seit gestern. · Was kann ich für dich tun? — Nichts. · Die Aufgabe hat zwei Teile."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«يد» — أي جنس؟ ولماذا هذه الكلمة مصيدة؟"
+          "de": "«يد» — أي أداة؟ (تخمين فقط)"
         },
         "choices": [
-          "die Hand (أنثى رغم أنها ليست إنساناً)",
+          "die Hand",
           "der Hand",
           "das Hand"
         ],
-        "answer": "die Hand (أنثى رغم أنها ليست إنساناً)",
+        "answer": "die Hand",
         "revealNextSession": true
       }
     ],
@@ -49,7 +50,10 @@
       "nase",
       "mund",
       "zahn",
-      "finger"
+      "finger",
+      "teil",
+      "tun",
+      "weh-tun"
     ],
     "grammarArsenalIds": [
       "ars-koerper"
@@ -58,76 +62,632 @@
       "story-a11-u11-s1"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "umlaut-a",
+      "umlaut-o",
+      "umlaut-u",
+      "v-f",
+      "ch-ach-laut"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«رأسي يؤلمني»؟",
-            "a": "Mein Kopf tut weh."
+            "q": "Hand: der, die oder das? → ___",
+            "a": "die",
+            "why": "die Hand أنثى — الجنس مع الكلمة لا من المعنى (البطاقة اللونية)."
           },
           {
-            "q": "«الظهر»؟",
-            "a": "der Rücken"
+            "q": "Bein: der, die oder das? → ___",
+            "a": "das",
+            "why": "das Bein محايد — «الساق» مؤنثة بالعربية لكن الألمانية لا تسأل العربية."
+          },
+          {
+            "q": "Auge: der, die oder das? → ___",
+            "a": "das",
+            "why": "das Auge محايد (die Augen في الجمع)."
+          },
+          {
+            "q": "Kopf: der, die oder das? → ___",
+            "a": "der",
+            "why": "der Kopf مذكر — die Köpfe في الجمع."
+          },
+          {
+            "q": "Nase: der, die oder das? → ___",
+            "a": "die",
+            "why": "die Nase أنثى — «الأنف» مذكر بالعربية؛ احفظ die."
+          },
+          {
+            "q": "Mund: der, die oder das? → ___",
+            "a": "der",
+            "why": "der Mund مذكر (الجمع الشاذ die Münder)."
+          },
+          {
+            "q": "eine Hand, zwei ___ (الجمع)",
+            "a": "Hände",
+            "why": "أومالوت + e: Hand → Hände — لا ‑s."
+          },
+          {
+            "q": "ein Zahn, zwei ___ (الجمع)",
+            "a": "Zähne",
+            "why": "أومالوت + e: Zahn → Zähne."
+          },
+          {
+            "q": "ein Fuß, zwei ___ (الجمع)",
+            "a": "Füße",
+            "why": "أومالوت + e: Fuß → Füße — ß تبقى."
+          },
+          {
+            "q": "ein Auge, zwei ___ (الجمع)",
+            "a": "Augen",
+            "why": "‑n: Auge → Augen (كـNase → Nasen)."
+          },
+          {
+            "q": "ein Finger, zehn ___ (الجمع)",
+            "a": "Finger",
+            "why": "بلا نهاية: der Finger → die Finger (كـder Rücken)."
+          },
+          {
+            "q": "ein Arm, zwei ___ (الجمع)",
+            "a": "Arme",
+            "why": "‑e بلا أومالوت: Arm → Arme (كـBein → Beine · Teil → Teile)."
+          },
+          {
+            "q": "ein Kopf, viele ___ (الجمع)",
+            "a": "Köpfe",
+            "why": "أومالوت + e: Kopf → Köpfe — o → ö."
+          },
+          {
+            "q": "Mein Kopf ___ weh. (weh tun — مفرد)",
+            "a": "tut",
+            "why": "weh tun: الفاعل مفرد ← tut في الموضع الثاني وweh في الآخر."
+          },
+          {
+            "q": "Meine Arme ___ weh. (weh tun — جمع)",
+            "a": "tun",
+            "why": "الفاعل جمع (Arme) ← tun لا tut."
+          },
+          {
+            "q": "Mein Hals tut ___. (يؤلم — الجزء الثاني)",
+            "a": "weh",
+            "why": "weh في آخر الجملة — كالجزء المنفصل."
+          },
+          {
+            "q": "___ tut der Rücken weh. (أنا — بالداتيف)",
+            "a": "Mir",
+            "why": "صاحب الألم بالداتيف: Mir tut … weh (كـMir ist unwohl)."
+          },
+          {
+            "q": "Tut ___ der Bauch weh? (أنت — بالداتيف)",
+            "a": "dir",
+            "why": "dir داتيف المخاطب: Tut dir … weh?"
+          },
+          {
+            "q": "Seit ___ tut dein Bauch weh? — Seit gestern. (منذ متى)",
+            "a": "wann",
+            "why": "Seit wann? = منذ متى؟ — والجواب Seit + زمن."
+          },
+          {
+            "q": "Was kann ich für dich ___? (يفعل)",
+            "a": "tun",
+            "why": "tun مصدراً في الآخر بعد المودال kann."
+          },
+          {
+            "q": "Was ___ Yusuf jetzt? — Nichts. (tun — er)",
+            "a": "tut",
+            "why": "tun → er tut — نهاية ‑t."
+          },
+          {
+            "q": "Wir ___ heute nichts. (tun — wir)",
+            "a": "tun",
+            "why": "tun → wir tun — كالمصدر."
+          },
+          {
+            "q": "Das ___ gut! (tun — es)",
+            "a": "tut",
+            "why": "es tut gut = هذا مريح/مفيد — tut للغائب."
+          },
+          {
+            "q": "Die Aufgabe hat zwei ___. (الجزء — جمع)",
+            "a": "Teile",
+            "why": "der Teil → die Teile (‑e بلا أومالوت)."
+          },
+          {
+            "q": "___ eins: Was ist das? (الجزء)",
+            "a": "Teil",
+            "why": "Teil eins = الجزء الأول — بحرف كبير (اسم)."
+          },
+          {
+            "q": "Ich habe zehn ___. (الأصابع)",
+            "a": "Finger",
+            "why": "die Finger جمع بلا نهاية — zehn Finger."
+          },
+          {
+            "q": "Ich putze meine ___. (الأسنان)",
+            "a": "Zähne",
+            "why": "der Zahn → die Zähne — putzen = ينظّف."
+          },
+          {
+            "q": "Ich wasche meine ___. (اليدين)",
+            "a": "Hände",
+            "why": "die Hand → die Hände — waschen = يغسل."
+          },
+          {
+            "q": "Ich mache jetzt die ___ zu. (العينين)",
+            "a": "Augen",
+            "why": "das Auge → die Augen — zumachen منفصل: mache … zu."
+          },
+          {
+            "q": "Zeig mir deine ___! (اليد)",
+            "a": "Hand",
+            "why": "deine Hand — أنثى ← deine · zeigen + mir بالداتيف."
           }
         ],
         "interleavedWith": [
-          "kopf",
-          "ruecken"
+          "fuss",
+          "aufgabe",
+          "gestern",
+          "seit",
+          "nichts",
+          "heute",
+          "jetzt"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«اليد» والجمع؟",
-            "a": "die Hand → die Hände"
+            "audioId": "kw-1",
+            "speakText": "Hallo Lena! Geht es dir heute gut? Bist du noch müde?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل لينا بخير اليوم وهل ما زالت متعبة",
+              "هل لينا في المدرسة",
+              "هل لينا جائعة"
+            ],
+            "a": "هل لينا بخير اليوم وهل ما زالت متعبة",
+            "why": "Geht es dir heute gut? Bist du noch müde? — سؤالان عن الحال."
           },
           {
-            "q": "«الإصبع في اليد»؟",
-            "a": "Der Finger ist an der Hand."
+            "audioId": "kw-2",
+            "speakText": "Nicht gut. Mein Hals tut weh. Und mir tut auch der Kopf weh.",
+            "q": "استمع: ماذا يؤلم لينا؟",
+            "choices": [
+              "حلقها ورأسها",
+              "بطنها",
+              "ساقها"
+            ],
+            "a": "حلقها ورأسها",
+            "why": "Mein Hals tut weh. · mir tut auch der Kopf weh — الحلق والرأس."
+          },
+          {
+            "audioId": "kw-3",
+            "speakText": "Seit wann tut dein Hals weh?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "منذ متى يؤلمها حلقها",
+              "أين تسكن",
+              "متى تنام"
+            ],
+            "a": "منذ متى يؤلمها حلقها",
+            "why": "Seit wann tut dein Hals weh? — Seit wann = منذ متى."
+          },
+          {
+            "audioId": "kw-4",
+            "speakText": "Seit gestern Abend. Ich habe im Regen Fußball gespielt — das weißt du ja.",
+            "q": "استمع: منذ متى؟ ولماذا؟",
+            "choices": [
+              "منذ مساء أمس — لعبت كرة القدم في المطر",
+              "منذ أسبوع — هي مريضة",
+              "منذ اليوم — بسبب المدرسة"
+            ],
+            "a": "منذ مساء أمس — لعبت كرة القدم في المطر",
+            "why": "Seit gestern Abend. · im Regen Fußball gespielt — السبب من حوار u10-d5."
+          },
+          {
+            "audioId": "kw-5",
+            "speakText": "Tut dein Bauch auch weh?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل بطنها يؤلمها أيضاً",
+              "هل رأسها يؤلمها",
+              "هل تريد شاياً"
+            ],
+            "a": "هل بطنها يؤلمها أيضاً",
+            "why": "Tut dein Bauch auch weh? — Bauch = البطن."
+          },
+          {
+            "audioId": "kw-6",
+            "speakText": "Nein, mein Bauch ist okay. Aber meine Beine tun weh — vom Fußball.",
+            "q": "استمع: ماذا تقول لينا عن بطنها وساقيها؟",
+            "choices": [
+              "البطن بخير لكن الساقين تؤلمانها من كرة القدم",
+              "كلاهما يؤلم",
+              "لا شيء يؤلم"
+            ],
+            "a": "البطن بخير لكن الساقين تؤلمانها من كرة القدم",
+            "why": "mein Bauch ist okay · meine Beine tun weh — tun للجمع."
+          },
+          {
+            "audioId": "kw-7",
+            "speakText": "Du musst dich ausruhen. Trink viel Tee, das hilft!",
+            "q": "استمع: نصيحة يوسف؟",
+            "choices": [
+              "أن تستريح وتشرب شاياً كثيراً",
+              "أن تذهب إلى المدرسة",
+              "أن تلعب كرة القدم"
+            ],
+            "a": "أن تستريح وتشرب شاياً كثيراً",
+            "why": "Du musst dich ausruhen. Trink viel Tee — الأمر Trink!"
+          },
+          {
+            "audioId": "kw-8",
+            "speakText": "Ja, meine Mutter macht Tee. Und du? Was hast du heute im Kurs gelernt?",
+            "q": "استمع: من يعدّ الشاي وماذا تسأل لينا؟",
+            "choices": [
+              "أمها — وتسأل ماذا تعلّم يوسف اليوم في الدورة",
+              "أبوها — وتسأل عن الطقس",
+              "هي — وتسأل عن برلين"
+            ],
+            "a": "أمها — وتسأل ماذا تعلّم يوسف اليوم في الدورة",
+            "why": "meine Mutter macht Tee · Was hast du heute im Kurs gelernt? — الماضي المركّب."
+          },
+          {
+            "audioId": "kw-11",
+            "speakText": "Teil eins: Was ist das? Zeig mir deine Hand! Das ist die Hand, und das sind die Finger.",
+            "q": "استمع: ما الجزء الأول من التمرين؟",
+            "choices": [
+              "Was ist das? — تسمية الأجزاء (اليد والأصابع)",
+              "Was tut weh? — الألم",
+              "الجمع"
+            ],
+            "a": "Was ist das? — تسمية الأجزاء (اليد والأصابع)",
+            "why": "Teil eins: Was ist das? · Das ist die Hand, und das sind die Finger. — تسمية."
+          },
+          {
+            "audioId": "kw-12",
+            "speakText": "Einfach! Die Hand hat fünf Finger. Und das hier ist meine Nase, das ist mein Mund.",
+            "q": "استمع: كم إصبعاً في اليد وماذا تسمّي لينا؟",
+            "choices": [
+              "خمسة — أنفها وفمها",
+              "عشرة — عينيها",
+              "أربعة — أذنيها"
+            ],
+            "a": "خمسة — أنفها وفمها",
+            "why": "Die Hand hat fünf Finger · meine Nase · mein Mund — خمسة أصابع."
+          },
+          {
+            "audioId": "kw-13",
+            "speakText": "Gut! Und Teil zwei: Was tut weh? Ich sage: Mir tut der Rücken weh.",
+            "q": "استمع: ما الجزء الثاني وماذا يؤلم يوسف؟",
+            "choices": [
+              "Was tut weh? — ظهره",
+              "Was ist das? — رأسه",
+              "الجمع — بطنه"
+            ],
+            "a": "Was tut weh? — ظهره",
+            "why": "Teil zwei: Was tut weh? · Mir tut der Rücken weh. — الظهر."
+          },
+          {
+            "audioId": "kw-14",
+            "speakText": "Warum tut dein Rücken weh?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "لماذا يؤلمه ظهره",
+              "أين ظهره",
+              "هل ينام"
+            ],
+            "a": "لماذا يؤلمه ظهره",
+            "why": "Warum tut dein Rücken weh? — Warum من u10-d5."
+          },
+          {
+            "audioId": "kw-15",
+            "speakText": "Weil ich heute drei Stunden am Tisch gelernt habe.",
+            "q": "استمع: لماذا يؤلمه ظهره؟",
+            "choices": [
+              "لأنه تعلّم ثلاث ساعات على الطاولة",
+              "لأنه لعب كرة القدم",
+              "لأنه حمل حقيبة"
+            ],
+            "a": "لأنه تعلّم ثلاث ساعات على الطاولة",
+            "why": "Weil ich … drei Stunden am Tisch gelernt habe — habe آخراً."
+          },
+          {
+            "audioId": "kw-16",
+            "speakText": "Und ich sage: Mein Hals tut weh, mir tut der Kopf weh, meine Beine tun weh — alles tut weh!",
+            "q": "استمع: ماذا يؤلم لينا؟",
+            "choices": [
+              "حلقها ورأسها وساقاها — كل شيء",
+              "رأسها فقط",
+              "لا شيء"
+            ],
+            "a": "حلقها ورأسها وساقاها — كل شيء",
+            "why": "Hals · Kopf · Beine — alles tut weh! — كل شيء."
+          },
+          {
+            "audioId": "kw-17",
+            "speakText": "Was kann ich für dich tun?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "ماذا يستطيع أن يفعل لها",
+              "متى تنام",
+              "هل تريد أكلاً"
+            ],
+            "a": "ماذا يستطيع أن يفعل لها",
+            "why": "Was kann ich für dich tun? — tun = يفعل."
+          },
+          {
+            "audioId": "kw-18",
+            "speakText": "Nichts. Ich mache jetzt die Augen zu und schlafe.",
+            "q": "استمع: ماذا تفعل لينا الآن؟",
+            "choices": [
+              "تغمض عينيها وتنام",
+              "تشرب قهوة",
+              "تتعلّم"
+            ],
+            "a": "تغمض عينيها وتنام",
+            "why": "Nichts. Ich mache die Augen zu und schlafe — zumachen منفصل."
+          },
+          {
+            "audioId": "kw-19",
+            "speakText": "Gut. Schlaf gut und ruh dich aus!",
+            "q": "استمع: ماذا يقول يوسف في الختام؟",
+            "choices": [
+              "نامي جيداً واستريحي",
+              "تعلّمي كثيراً",
+              "كُلي شيئاً"
+            ],
+            "a": "نامي جيداً واستريحي",
+            "why": "Schlaf gut und ruh dich aus! — أمران."
           }
         ],
         "interleavedWith": [
-          "hand",
-          "finger"
+          "tee",
+          "regen",
+          "fussball",
+          "kurs",
+          "mutter",
+          "nichts",
+          "tisch",
+          "stunde"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«حلقي يؤلمني»؟",
-            "a": "Mein Hals tut weh."
+            "tokens": [
+              "der",
+              "Mir",
+              "tut",
+              "Kopf",
+              "weh."
+            ],
+            "a": "Mir tut der Kopf weh.",
+            "why": "الداتيف Mir أولاً ← tut ثانياً ← der Kopf ← weh في الآخر."
           },
           {
-            "q": "«الفم تحت الأنف»؟",
-            "a": "Der Mund ist unter der Nase."
+            "tokens": [
+              "Zähne",
+              "Meine",
+              "tun",
+              "weh."
+            ],
+            "a": "Meine Zähne tun weh.",
+            "why": "الفاعل جمع (Zähne) ← tun ← weh آخراً."
+          },
+          {
+            "tokens": [
+              "weh?",
+              "Tut",
+              "dir",
+              "der",
+              "Hals"
+            ],
+            "a": "Tut dir der Hals weh?",
+            "why": "سؤال نعم/لا: الفعل Tut أولاً ← dir ← der Hals ← weh."
+          },
+          {
+            "tokens": [
+              "dein",
+              "tut",
+              "Seit",
+              "Rücken",
+              "weh?",
+              "wann"
+            ],
+            "a": "Seit wann tut dein Rücken weh?",
+            "why": "Seit wann أولاً ← tut ← dein Rücken ← weh."
+          },
+          {
+            "tokens": [
+              "die",
+              "und",
+              "die",
+              "das",
+              "sind",
+              "Das",
+              "ist",
+              "Hand,",
+              "Finger."
+            ],
+            "a": "Das ist die Hand, und das sind die Finger.",
+            "why": "das ist + مفرد · das sind + جمع — die Hand أنثى."
+          },
+          {
+            "tokens": [
+              "fünf",
+              "Finger.",
+              "Hand",
+              "hat",
+              "Die"
+            ],
+            "a": "Die Hand hat fünf Finger.",
+            "why": "Die Hand فاعل ← hat ← fünf Finger (جمع بلا نهاية)."
+          },
+          {
+            "tokens": [
+              "dich",
+              "Was",
+              "ich",
+              "kann",
+              "für",
+              "tun?"
+            ],
+            "a": "Was kann ich für dich tun?",
+            "why": "Was ← kann ثانياً ← ich ← für dich ← المصدر tun آخراً."
+          },
+          {
+            "tokens": [
+              "hat",
+              "zwei",
+              "Aufgabe",
+              "Die",
+              "Teile."
+            ],
+            "a": "Die Aufgabe hat zwei Teile.",
+            "why": "Die Aufgabe ← hat ← zwei Teile (der Teil → die Teile) — الجمع بـ‑e."
+          },
+          {
+            "tokens": [
+              "Rücken",
+              "drei",
+              "weil",
+              "habe.",
+              "tut",
+              "Stunden",
+              "gelernt",
+              "ich",
+              "weh,",
+              "Mein"
+            ],
+            "a": "Mein Rücken tut weh, weil ich drei Stunden gelernt habe.",
+            "why": "الرئيسية tut weh ← فاصلة ← weil ← … gelernt habe (habe آخراً — u10-d5)."
+          },
+          {
+            "tokens": [
+              "und",
+              "mache",
+              "schlafe.",
+              "Augen",
+              "zu",
+              "Ich",
+              "die"
+            ],
+            "a": "Ich mache die Augen zu und schlafe.",
+            "why": "zumachen منفصل: mache … zu ← und schlafe."
           }
         ],
         "interleavedWith": [
-          "hals",
-          "mund"
+          "aufgabe",
+          "stunde",
+          "weil"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "kw-9",
+            "speakText": "Heute: Kopf, Hand, Arm, Bein — alle Teile! Die Aufgabe hat zwei Teile.",
+            "a": "Heute: Kopf, Hand, Arm, Bein — alle Teile! Die Aufgabe hat zwei Teile.",
+            "why": "Kopf · Hand · Arm · Bein بحروف كبيرة (أسماء) · Teile بحرف كبير · Aufgabe بـau."
+          },
+          {
+            "audioId": "kw-10",
+            "speakText": "Zwei Teile? Was ist Teil eins?",
+            "a": "Zwei Teile? Was ist Teil eins?",
+            "why": "Teile؟ · Teil eins — Teil بحرف كبير · ei تُنطق «آي»."
+          },
+          {
+            "audioId": "kw-20",
+            "speakText": "Danke, Yusuf. Bis morgen! Morgen tut nichts mehr weh.",
+            "a": "Danke, Yusuf. Bis morgen! Morgen tut nichts mehr weh.",
+            "why": "Yusuf اسم علم · Bis morgen · nichts بـch · weh في الآخر."
+          },
+          {
+            "audioId": "word-teil",
+            "speakText": "der Teil.",
+            "a": "der Teil.",
+            "why": "der Teil — ei «آي» · t واحدة في الآخر."
+          },
+          {
+            "audioId": "word-tun",
+            "speakText": "tun.",
+            "a": "tun.",
+            "why": "tun — u طويلة · n واحدة."
+          },
+          {
+            "audioId": "word-weh-tun",
+            "speakText": "weh tun.",
+            "a": "weh tun.",
+            "why": "weh tun — w تُنطق v · h تطيل الحركة ولا تُنطق."
+          },
+          {
+            "audioId": "word-hand",
+            "speakText": "die Hand.",
+            "a": "die Hand.",
+            "why": "die Hand — d في الآخر تُنطق t."
+          },
+          {
+            "audioId": "word-zahn",
+            "speakText": "der Zahn.",
+            "a": "der Zahn.",
+            "why": "der Zahn — z تُنطق ts · h تطيل a."
+          },
+          {
+            "audioId": "word-auge",
+            "speakText": "das Auge.",
+            "a": "das Auge.",
+            "why": "das Auge — au «آو» · g قبل e تُنطق g."
+          },
+          {
+            "audioId": "word-bein",
+            "speakText": "das Bein.",
+            "a": "das Bein.",
+            "why": "das Bein — ei «آي»."
+          },
+          {
+            "audioId": "word-ruecken",
+            "speakText": "der Rücken.",
+            "a": "der Rücken.",
+            "why": "der Rücken — ü بنقطتين · ck بعد حركة قصيرة."
+          },
+          {
+            "audioId": "word-bauch",
+            "speakText": "der Bauch.",
+            "a": "der Bauch.",
+            "why": "der Bauch — au ثم ch الحلقية (ach-Laut)."
+          }
+        ],
+        "interleavedWith": [
+          "aufgabe",
+          "morgen",
+          "nichts"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Körperteile benennen und sagen, wo es weh tut",
-        "ar": "تسمية أجزاء الجسم وإظهار موضع الألم"
+        "de": "Was ist das? — Das ist mein Arm, und das ist meine Hand. · Was tut weh? — Mir tut der Kopf weh. Meine Beine tun weh. · Seit wann? — Seit gestern. · Was kann ich für dich tun? — Nichts, danke.",
+        "ar": "زميلك يسأل Was ist das? عن ستة أجزاء وتجيب بأداتها (Das ist der/die/das …) — ثم يسأل Was tut weh? وتجيب بثلاث جمل weh tun (واحدة بالجمع tun وواحدة بـmir) — ثم تعكسان الأدوار"
       },
       "situation": {
-        "de": "Beim Arzt: Wo tut es weh?",
-        "ar": "عند الطبيب: أين الألم؟"
+        "de": "Am Handy, am Abend: Geht es dir gut? — Nicht gut. Mein Hals tut weh, und mir tut der Kopf weh. — Seit wann? — Seit gestern Abend. — Tut dein Bauch auch weh? — Nein, aber meine Beine tun weh. — Was kann ich für dich tun? — Nichts. Ich mache die Augen zu und schlafe.",
+        "ar": "مكالمة مسائية: زميلك متوعّك — تسأله أين الألم ومنذ متى، وتعرض المساعدة بـWas kann ich für dich tun?"
       },
       "successCriteria": [
-        "تسمية 4 أجزاء + جملتا (… tut weh) + جملة موقع بحرف جر (an der Hand / unter der Nase)"
+        "ستة أجزاء بأداتها الصحيحة (die Hand · das Bein · das Auge · der Kopf …) وجمعان على الأقل (Hände · Zähne · Augen · Finger)",
+        "ثلاث جمل weh tun: مفرد بـtut، جمع بـtun، وواحدة بالداتيف Mir/Tut dir … weh? — وweh في الآخر",
+        "سؤال Seit wann? وجواب Seit gestern/Seit … · وعرض المساعدة Was kann ich für dich tun?",
+        "der Teil في جملة واحدة: Die Aufgabe hat zwei Teile. · Teil eins / Teil zwei"
       ]
     }
   },
@@ -142,20 +702,64 @@
       {
         "items": [
           {
-            "q": "«الرأس»؟",
-            "a": "der Kopf"
+            "q": "«ساقاي تؤلمانني»؟",
+            "choices": [
+              "Meine Beine tun weh.",
+              "Meine Beine tut weh.",
+              "Meine Beine weh tun."
+            ],
+            "a": "Meine Beine tun weh.",
+            "why": "الفاعل جمع ← tun، وweh في الآخر."
           },
           {
-            "q": "«رأسي يؤلمني»؟",
-            "a": "Mein Kopf tut weh."
+            "q": "«هل يؤلمك رأسك؟»؟",
+            "choices": [
+              "Tut dir der Kopf weh?",
+              "Tut dich der Kopf weh?",
+              "Tut du der Kopf weh?"
+            ],
+            "a": "Tut dir der Kopf weh?",
+            "why": "صاحب الألم بالداتيف dir — لا dich ولا du."
           },
           {
-            "q": "«اليد» والجمع؟",
-            "a": "die Hand → die Hände"
+            "q": "«اليد» — والجمع؟",
+            "choices": [
+              "die Hand, die Hände",
+              "die Hand, die Hands",
+              "der Hand, die Hände"
+            ],
+            "a": "die Hand, die Hände",
+            "why": "die Hand أنثى · الجمع بأومالوت + e — لا ‑s."
           },
           {
-            "q": "«الذراع»؟",
-            "a": "der Arm"
+            "q": "«ماذا يفعل يوسف اليوم؟»؟",
+            "choices": [
+              "Was tut Yusuf heute?",
+              "Was tun Yusuf heute?",
+              "Was Yusuf tut heute?"
+            ],
+            "a": "Was tut Yusuf heute?",
+            "why": "tun → er tut — والفعل ثانياً في السؤال."
+          },
+          {
+            "q": "«للتمرين ثلاثة أجزاء»؟",
+            "choices": [
+              "Die Aufgabe hat drei Teile.",
+              "Die Aufgabe hat drei Teil.",
+              "Die Aufgabe hat drei Teilen."
+            ],
+            "a": "Die Aufgabe hat drei Teile.",
+            "why": "der Teil → die Teile — ‑e فقط."
+          },
+          {
+            "q": "«بطني يؤلمني»؟",
+            "choices": [
+              "Mir tut der Bauch weh.",
+              "Mich tut der Bauch weh.",
+              "Mir tut der Bauch weh tut."
+            ],
+            "a": "Mir tut der Bauch weh.",
+            "why": "Mir بالداتيف · tut مرة واحدة · weh آخراً."
           }
         ],
         "passingScore": 0.75
@@ -163,20 +767,64 @@
       {
         "items": [
           {
-            "q": "«البطن» والجمع؟",
-            "a": "der Bauch → die Bäuche"
+            "q": "«أنفي يؤلمني»؟",
+            "choices": [
+              "Meine Nase tut weh.",
+              "Meine Nase tun weh.",
+              "Mein Nase tut weh."
+            ],
+            "a": "Meine Nase tut weh.",
+            "why": "die Nase أنثى ← meine · مفرد ← tut."
           },
           {
-            "q": "«العين»؟",
-            "a": "das Auge (die Augen)"
+            "q": "«منذ متى يؤلمك حلقك؟»؟",
+            "choices": [
+              "Seit wann tut dein Hals weh?",
+              "Seit wann dein Hals tut weh?",
+              "Seit wann tut weh dein Hals?"
+            ],
+            "a": "Seit wann tut dein Hals weh?",
+            "why": "Seit wann ← tut ثانياً ← dein Hals ← weh آخراً."
           },
           {
-            "q": "«الأنف»؟",
-            "a": "die Nase"
+            "q": "«السن» — والجمع؟",
+            "choices": [
+              "der Zahn, die Zähne",
+              "der Zahn, die Zahns",
+              "die Zahn, die Zähne"
+            ],
+            "a": "der Zahn, die Zähne",
+            "why": "der Zahn مذكر · أومالوت + e."
           },
           {
-            "q": "«سني يؤلمني»؟",
-            "a": "Mein Zahn tut weh."
+            "q": "«نحن لا نفعل شيئاً»؟",
+            "choices": [
+              "Wir tun nichts.",
+              "Wir tut nichts.",
+              "Wir tun nicht."
+            ],
+            "a": "Wir tun nichts.",
+            "why": "tun → wir tun · nichts (لا شيء) لا nicht."
+          },
+          {
+            "q": "«الجزء الثاني سهل»؟",
+            "choices": [
+              "Teil zwei ist einfach.",
+              "Teil zwei sind einfach.",
+              "Teile zwei ist einfach."
+            ],
+            "a": "Teil zwei ist einfach.",
+            "why": "Teil zwei مفرد ← ist."
+          },
+          {
+            "q": "«الساق» — بأداتها والجمع؟",
+            "choices": [
+              "das Bein, die Beine",
+              "die Bein, die Beine",
+              "das Bein, die Beinen"
+            ],
+            "a": "das Bein, die Beine",
+            "why": "das Bein محايد · ‑e بلا أومالوت."
           }
         ],
         "passingScore": 0.75
@@ -184,20 +832,64 @@
       {
         "items": [
           {
-            "q": "«الساق»؟",
-            "a": "das Bein"
+            "q": "«يداي تؤلمانني»؟",
+            "choices": [
+              "Meine Hände tun weh.",
+              "Meine Hände tut weh.",
+              "Meine Hands tun weh."
+            ],
+            "a": "Meine Hände tun weh.",
+            "why": "Hände جمع بأومالوت ← tun."
           },
           {
-            "q": "«الرقبة/الحلق»؟",
-            "a": "der Hals"
+            "q": "«أغمض عينيك!»؟",
+            "choices": [
+              "Mach die Augen zu!",
+              "Mach zu die Augen!",
+              "Mach die Auge zu!"
+            ],
+            "a": "Mach die Augen zu!",
+            "why": "zumachen منفصل: Mach … zu! · الجمع Augen."
           },
           {
-            "q": "«الفم تحت الأنف»؟",
-            "a": "Der Mund ist unter der Nase."
+            "q": "«القدم» — والجمع؟",
+            "choices": [
+              "der Fuß, die Füße",
+              "der Fuß, die Fuße",
+              "die Fuß, die Füße"
+            ],
+            "a": "der Fuß, die Füße",
+            "why": "der Fuß مذكر · u → ü + e."
           },
           {
-            "q": "«الإصبع»؟",
-            "a": "der Finger"
+            "q": "«هذا يؤلم!»؟",
+            "choices": [
+              "Das tut weh!",
+              "Das weh tut!",
+              "Das tun weh!"
+            ],
+            "a": "Das tut weh!",
+            "why": "Das مفرد ← tut · weh آخراً."
+          },
+          {
+            "q": "«كم جزءاً للتمرين؟»؟",
+            "choices": [
+              "Wie viele Teile hat die Aufgabe?",
+              "Wie viel Teile hat die Aufgabe?",
+              "Wie viele Teil hat die Aufgabe?"
+            ],
+            "a": "Wie viele Teile hat die Aufgabe?",
+            "why": "Wie viele + جمع معدود (Teile)."
+          },
+          {
+            "q": "«الأذن» — بأداتها والجمع؟",
+            "choices": [
+              "das Ohr, die Ohren",
+              "die Ohr, die Ohren",
+              "das Ohr, die Ohre"
+            ],
+            "a": "das Ohr, die Ohren",
+            "why": "das Ohr محايد · ‑en في الجمع."
           }
         ],
         "passingScore": 0.75
@@ -206,53 +898,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Kopf, Hand, Arm, Bein, Rücken, Bauch — und wo tut es weh? Mein Kopf tut weh, mein Rücken auch. Achtung: die Hand, das Bein, das Auge!",
-      "ar": "الرأس واليد والذراع والساق والظهر والبطن — وأين الألم؟ رأسي يؤلمني وظهري أيضاً. انتبه: die Hand وdas Bein وdas Auge!"
+      "de": "der Kopf · die Hand (die Hände) · der Arm · das Bein (die Beine) · der Rücken · der Bauch · der Hals · das Auge (die Augen) · die Nase · der Mund · der Zahn (die Zähne) · der Finger (die Finger) — Mir tut der Kopf weh. · Meine Beine tun weh. · Tut dir der Hals weh? · Seit wann? — Seit gestern. — Was kann ich für dich tun? · Wir tun nichts. — der Teil: Die Aufgabe hat zwei Teile.",
+      "ar": "اثنا عشر جزءاً بجنسها (die Hand · das Bein · das Auge — بلا منطق) وجمعها (أومالوت + e: Hände · Zähne · Köpfe · Füße — ‑e: Arme · Beine · Teile — ‑n: Augen · Nasen · Ohren — بلا نهاية: Finger · Rücken) · weh tun: tut للمفرد وtun للجمع وweh في الآخر، وصاحب الألم بالداتيف mir/dir · Seit wann? — Seit gestern · tun: tut · tun (Was kann ich für dich tun?) · der Teil (‑e)"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~der Hand~~ / ~~das Auge~~ (بالخطأ) / ~~die Bein~~",
-          "ar": "جنس أجزاء الجسم عشوائي: الحفظ بالبطاقة (die Hand · das Bein · das Auge)"
+          "de": "~~der Hand~~ · ~~die Bein~~ · ~~die Auge~~ · ~~der Nase~~",
+          "ar": "جنس أجزاء الجسم لا منطق له — die Hand · das Bein · das Auge · die Nase: البطاقة اللونية لا الحدس"
         },
-        "whyArabicSpeakerFails": "العربية بلا جنس نحوي لكل اسم؛ الألماني يفرض جنساً عشوائياً على كل جزء — die Hand أنثى وdas Bein محايد بلا سبب منطقي — الحفظ بصرياً بالبطاقة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تعطي الأشياء جنساً من اللغة نفسها (اليد مؤنثة · الرأس مذكر · الساق مؤنثة · العين مؤنثة · الأنف مذكر)، فينقله المتعلم إلى الألمانية فيصيب صدفة (die Hand · der Kopf) ويخطئ حيث يختلفان: das Bein · das Auge · die Nase. والألمانية تربط الجنس بالكلمة لا بالمعنى، فلا طريق إلا الحفظ مع الأداة — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "die Hand · das Bein · das Auge · der Kopf",
-          "ar": "اليد · الساق · العين · الرأس (بأجنستها)"
+          "de": "die Hand · das Bein · das Auge · die Nase · der Mund",
+          "ar": "اليد · الساق · العين · الأنف · الفم — بأداتها"
         },
         "exercise": {
-          "q": "أكمل: ___ Hand (die/der) · ___ Bein (das/die)",
-          "a": "die / das"
+          "q": "Nase: der, die oder das?",
+          "a": "die"
         }
       },
       {
         "commonError": {
-          "de": "~~die Hands~~ / ~~die Kopfs~~ / ~~die Zahns~~",
-          "ar": "الجمع يُوملَأ كثيراً: Hände · Köpfe · Zähne (لا s للكلمات الألمانية الأصلية)"
+          "de": "~~die Hands~~ · ~~die Zahns~~ · ~~die Kopfs~~ · ~~die Fuße~~",
+          "ar": "الجمع بـ‑s أو بلا أومالوت — والصحيح أومالوت + e: Hände · Zähne · Köpfe · Füße"
         },
-        "whyArabicSpeakerFails": "جمع التكسير العربي له مقابل ألماني منتظم: Umlaut (a→ä/u→ü) + e — «اليد» جمعها Hände وليس Hands — أصوات الوملاوت لا تُنطق بالعربية (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "المتعلم ينقل جمع الإنجليزية (‑s) أو يضيف ‑e فقط وينسى النقطتين لأن الأومالوت ليس في العربية صوتاً مستقلاً. والألمانية تغيّر داخل الكلمة (a → ä · o → ö · u → ü) ثم تضيف ‑e — كما يغيّر جمع التكسير داخل الكلمة (سنّ/أسنان) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "die Hände · die Köpfe · die Zähne · die Bäuche",
-          "ar": "الأيدي · الرؤوس · الأسنان · البطون"
+          "de": "die Hände · die Zähne · die Köpfe · die Füße — aber: die Arme · die Beine · die Augen · die Finger",
+          "ar": "الأيدي · الأسنان · الرؤوس · الأقدام — لكن: الأذرع · الساقان · العينان · الأصابع"
         },
         "exercise": {
-          "q": "كوّن الجمع: der Kopf → ___ · der Zahn → ___",
-          "a": "die Köpfe / die Zähne"
+          "q": "ein Bauch, zwei ___",
+          "a": "Bäuche"
         }
       },
       {
         "commonError": {
-          "de": "~~Mein Kopf weh tut~~ / ~~Es tut mein Kopf weh~~",
-          "ar": "التركيب الثابت: X + tut + weh (الفعل الثاني weh في النهاية!)"
+          "de": "~~Mein Kopf weh tut.~~ · ~~Meine Beine tut weh.~~ · ~~Mich tut der Kopf weh.~~",
+          "ar": "weh tun: tut ثانياً وweh آخراً · الجمع tun · صاحب الألم بالداتيف mir/dir"
         },
-        "whyArabicSpeakerFails": "«رأسي يؤلمني» فعل واحد؛ الألماني يشطر المعنى: **tut** (مؤلم) + **weh** (ألم) مع الفاعل بينهما — weh يُقال آخر الجملة كتصريف منفصل — مصيدة القلنسوة تعود بشكل جديد (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«رأسي يؤلمني» فعل واحد ومفعول ملتصق، فيجعل المتعلم weh tun كتلة واحدة في موضع واحد، أو ينسى أن الفاعل الجمع يحتاج tun، أو يضع صاحب الألم بالأكوزاتيف (mich) كمفعول عربي. والألمانية تشطر الفعل: tut/tun في الموضع الثاني وweh في الآخر (كالمنفصل)، وصاحب الألم بالداتيف mir/dir كما في Mir ist unwohl — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Mein Kopf tut weh.",
-          "ar": "رأسي يؤلمني."
+          "de": "Mein Hals tut weh. · Meine Arme tun weh. · Mir tut der Kopf weh.",
+          "ar": "حلقي يؤلمني · ذراعاي تؤلمانني · رأسي يؤلمني (بالداتيف)"
         },
         "exercise": {
-          "q": "أكمل: Mein Bauch ___ weh ___ (tut — الترتيب).",
-          "a": "Mein Bauch tut weh."
+          "q": "Meine Füße ___ weh. (tut/tun)",
+          "a": "tun"
         }
       }
     ],
@@ -268,7 +960,10 @@
       "nase",
       "mund",
       "zahn",
-      "finger"
+      "finger",
+      "teil",
+      "tun",
+      "weh-tun"
     ]
   },
   "gReferences": {
@@ -297,7 +992,10 @@
     "word-nase",
     "word-mund",
     "word-zahn",
-    "word-finger"
+    "word-finger",
+    "word-teil",
+    "word-tun",
+    "word-weh-tun"
   ],
   "imageManifestRefs": [
     "img-hand"
