@@ -16,7 +16,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(847); // + gleich · ab · Achtung (نواة a1-u7-d4 — D154) + die Hausaufgabe · nie · einfach (نواة a1-u7-d3 — D153) + der Film · mehr · wandern (نواة a1-u7-d2 — D152) + die Firma · immer · die meisten (نواة a1-u7-d1 — D151) + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(849); // + dieser · gefallen (نواة a1-u8-d1 — D156) + gleich · ab · Achtung (نواة a1-u7-d4 — D154) + die Hausaufgabe · nie · einfach (نواة a1-u7-d3 — D153) + der Film · mehr · wandern (نواة a1-u7-d2 — D152) + die Firma · immer · die meisten (نواة a1-u7-d1 — D151) + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -1232,8 +1232,46 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(note("groesse")).toContain("Grösse");
   });
 
+  it("u8-d1 (D156): «حذائي» مفردٌ للزوج (~~Mein Schuh ist neu.~~ — صحيحة نحواً بمعنى «فردة») · «أحبّ» وI like (~~Ich gefalle das Kleid.~~) · «هذا» بلا محايد (~~Dieser Kleid ist schön.~~) — بمبررات صحيحة", () => {
+    const u = ALL_LESSONS.find((l) => l.id === "a1-u8-d1")!;
+    const [pair, like, neuter] = u.zusammenfassung.warningCards;
+    expect(pair!.commonError.de).toBe("~~Mein Schuh ist neu.~~");
+    expect(pair!.correct.de).toBe("Meine Schuhe sind neu.");
+    // الجملة المشطوبة صحيحة نحواً بمعنى آخر («فردة حذائي») — والبطاقة تقول ذلك
+    expect(pair!.whyArabicSpeakerFails).toContain("صحيحة نحواً بمعنى آخر");
+    expect(pair!.whyArabicSpeakerFails).toContain("«حذائي جديد» بالمفرد للزوج كله");
+    expect(pair!.exercise).toMatchObject({ a: "Wo sind meine Schuhe?" });
+    expect(like!.commonError.de).toBe("~~Ich gefalle das Kleid.~~");
+    expect(like!.correct.de).toBe("Das Kleid gefällt mir.");
+    // «يعجبني الفستان» العربية وla robe me plaît الفرنسية عونان · والخطأ من «أحبّ» وI like the dress (معلنة)
+    expect(like!.whyArabicSpeakerFails).toContain("I like the dress");
+    expect(like!.whyArabicSpeakerFails).toContain("«يعجبني الفستان» العربية وla robe me plaît الفرنسية (عونان)");
+    expect(like!.whyArabicSpeakerFails).toContain("mögen (الوحدة 5)");
+    expect(like!.exercise).toMatchObject({ a: "Dieser Pullover gefällt mir." });
+    expect(neuter!.commonError.de).toBe("~~Dieser Kleid ist schön.~~");
+    expect(neuter!.correct.de).toBe("Dieses Kleid ist schön.");
+    expect(neuter!.whyArabicSpeakerFails).toContain("ولا محايد فيها");
+    expect(neuter!.exercise).toMatchObject({ a: "Dieses Hemd ist zu klein." });
+    for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // البطاقات القديمة: ~~der Hemd~~ (فكرتها بقيت في القاعدة) · ~~die Mantels / die Rocks~~ (‑s إنجليزي بلا مبرر عربي) · «~~die Hose~~؟ نعم» (تشطب الصحيح!)
+    expect(JSON.stringify(u.zusammenfassung.warningCards)).not.toMatch(/Mantels|Rocks|Kleids|~~die Hose~~/);
+    // المشتِّتات ليست ألمانية صحيحة بمعنى آخر: لا «Mein Schuh» (فردة) · لا Konjunktiv I «gefalle» بعد اسم (تحكي الكلام) · لا «ein/kein» قبل مذكر منصوب (عامية الشمال «'n»)
+    // · لا tragt (لهجة الجنوب)
+    const choiceItems = [...u.uebung.stations.flatMap((s) => s.items), ...u.quiz.variants.flatMap((v) => v.items)]
+      .flatMap((i) => (Array.isArray((i as { choices?: unknown }).choices) ? [i as unknown as { choices: string[]; a: string }] : []));
+    const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
+    const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
+    expect(german.filter((c) => /\bMein Schuh\b|\b(Jacke|Kleid|Hemd|Rock|Hut|Farbe) gefalle\b|\b(trägt|nehme|kaufe|möchte) (ein|kein) (Mantel|Rock|Hut|Pullover)\b|\btragt\b/u.test(c))).toEqual([]);
+    expect(german).toHaveLength(20); // التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
+    // الاستدعاء من دروس سابقة (die Tasche · tragen · kaufen) — كانت Schuh من كلمات اليوم نفسه
+    const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 7).flatMap((l) => l.praesentation.wordIds));
+    expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(u.warmup.cardIds).toEqual(["tasche", "tragen", "kaufen"]);
+    expect(u.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+  });
+
   it("D151: ملاحظات الجمع في الدروس المُرقّاة بلا مصطلح داخلي — كان «Gleich_plural» يظهر للمتعلم في 11 كلمة (Sessel · Spiegel · Kissen · Wecker …) فصار «بلا نهاية: der Sessel ← die Sessel» (نمط D146)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4", "a1-u7-d5"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D152: u7-d2 · D153: u7-d3 · D154: u7-d4 · D155: u7-d5
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4", "a1-u7-d5", "a1-u8-d1"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D152: u7-d2 · D153: u7-d3 · D154: u7-d4 · D155: u7-d5 · D156: u8-d1
     const jargon = ALL_WORDS.filter((w) => done.has(w.id) && /Gleich_plural|[A-Za-z]+_[A-Za-z]+/.test(w.pluralRuleNote ?? "")).map((w) => w.id);
     expect(jargon).toEqual([]);
     const note = (id: string) => ALL_WORDS.find((w) => w.id === id)!.pluralRuleNote;
@@ -1245,7 +1283,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
   });
 
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4", "a1-u6-d5", "a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4", "a1-u7-d5"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4 · D150: u6-d5 · D151: u7-d1 · D152: u7-d2 · D153: u7-d3 · D154: u7-d4 · D155: u7-d5
+    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4", "a1-u6-d5", "a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4", "a1-u7-d5", "a1-u8-d1"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4 · D150: u6-d5 · D151: u7-d1 · D152: u7-d2 · D153: u7-d3 · D154: u7-d4 · D155: u7-d5 · D156: u8-d1
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     // D150: Möbel دخلت (N-070 — كانت بجنس die وبطاقة جنس و«جمع فقط … مثل Nudeln» — والمفرد das Möbel موجود نادراً) ⇒ «جمعاً عادةً» بلا جنس مفرد
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute", "moebel"]);

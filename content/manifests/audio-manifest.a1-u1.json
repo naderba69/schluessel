@@ -16949,6 +16949,46 @@
       "rmsDb": -17.01
     },
     {
+      "id": "word-dieser",
+      "file": "words/audio/de-DE/word-dieser.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "dieser.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 641,
+      "sizeBytes": 3256,
+      "hash": "sha256:95c3aae07c59c76caa514cfc1dd1cd063a93d07f60e47ce84c7c593755f9fe10",
+      "pcmSha256": "5cfe2e783521c8142400caa0b3028aeffb229d39f77fa4352d451fd05e243ec1",
+      "rmsDb": -16.97
+    },
+    {
+      "id": "word-gefallen",
+      "file": "words/audio/de-DE/word-gefallen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "gefallen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 804,
+      "sizeBytes": 3998,
+      "hash": "sha256:b2cbb8dcebeefd98d2a32f78493b2c0392a731fb4e83b4811b3da154df96073a",
+      "pcmSha256": "4449a8870187af2f21cc9192b8cda04756e8c2dc518946b3b46370d4c09a7f2a",
+      "rmsDb": -17.2
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -31654,6 +31694,446 @@
       "hash": "sha256:bbdd22d75a9f8eee8d9b06b0b98e15a51983feebd0f22409da323b6938b34a9b",
       "pcmSha256": "c9f5dc33b99314a0aeba893a6581e14ab12a8c6038b713f4fa2266e61e808e69",
       "rmsDb": -17.01
+    },
+    {
+      "id": "kl-1",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, ist dein Koffer schon fertig?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 3000,
+      "sizeBytes": 13972,
+      "hash": "sha256:872289e54d863d95a2e281debcfef98154d820dab7723e4df8b01b9c80d0ab6c",
+      "pcmSha256": "f29dec1e00b9e0e040a55c79d4bc0e81a7a2f91574d363f6fa40260cbffbfcf5",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "kl-2",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Drei Hemden, zwei Hosen und viele Socken.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 3915,
+      "sizeBytes": 18201,
+      "hash": "sha256:6170922a115b3a2cb7f04907f5f6357fe2eb5d6282e0db61f2cdd4527a2f262d",
+      "pcmSha256": "bd4a9d1c16fc3d72676c6d0689c3c55b2178424ded7302bf60e271493d0ce26c",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "kl-3",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 113,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und ein Mantel? Brauchst du keinen Mantel?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 3720,
+      "sizeBytes": 17214,
+      "hash": "sha256:92bf1499df3e7f94d63251824426eeab74261990d61a3e126d14499510b16933",
+      "pcmSha256": "ba44918dc616c468fec0552427bf4baab64cb273355cdaf8b3f533e0dafc4258",
+      "rmsDb": -17.44
+    },
+    {
+      "id": "kl-4",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 169,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, in Tunesien ist es heiß. Aber diese Jacke nehme ich — für den Abend.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 4960,
+      "sizeBytes": 22984,
+      "hash": "sha256:bcc3f8a772ef3fa0ab8e39291311afab8b05dd79584d855bc7eddf83aa896803",
+      "pcmSha256": "c23b6aa3c9dd6d2b9075760471533ec59d1529c7fb8633a6c7c8f9cb667beb5c",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "kl-5",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Diese Jacke gefällt mir. Die Farbe ist so hell!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 3768,
+      "sizeBytes": 17471,
+      "hash": "sha256:1ececce07c25681f5798c92d0fda8b5e4bf2ca508cf94ebd2383481bdc52a5a4",
+      "pcmSha256": "6da7a42ef74989bebb82c5a3f0c2983c7ee2ab2f66fbbc02d7ffe3d4f7d58f68",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "kl-6",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke! Und dieser Pullover ist für meinen Vater.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 3497,
+      "sizeBytes": 16553,
+      "hash": "sha256:e2b7e383932957c060a31f634dfda85475fd50b573e5dcdd8027efef93088b2c",
+      "pcmSha256": "cf3b728d5715783a5636cffedabfe9c67634eced29b2fcbd017e4f21cb116371",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "kl-7",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 138,
+        "lengthScale": 1.32
+      },
+      "textDe": "Toll! Und die Größe? Ist dein Vater groß?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 3480,
+      "sizeBytes": 16269,
+      "hash": "sha256:a91c1b87dcba22a4060b254aaaf495718a513fdd22ddd3931934aea0ad759aba",
+      "pcmSha256": "e6e1eff590ff141ac8867640de1d1848eb841bf3d362c77556c38c268b241cd5",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "kl-8",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 103,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, sehr groß — er hat Größe zweiundfünfzig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 4066,
+      "sizeBytes": 18489,
+      "hash": "sha256:8ab469f20048981d4b8561cf6c5fe1b98dfc6bbb389640ec9db0da6da84bb8d5",
+      "pcmSha256": "3a00361c5d9c5294b8f5f2adb7aa1bf2a654a9d6239a66de73f66ef52da30d9c",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "kl-9",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 138,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und deine Schwester? Bekommt sie ein Kleid oder einen Rock?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 4344,
+      "sizeBytes": 20357,
+      "hash": "sha256:e86dc682f08defe0c717520ca2ad19871aada2a737e9fe664a042c07f13991f2",
+      "pcmSha256": "20f24f9f7238af5069e26528d6a0ac20afc319fedb3c5d6464c8234adec76e4e",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "kl-10",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, sie trägt keine Kleider und keine Röcke. Sie trägt immer Hosen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 4507,
+      "sizeBytes": 21194,
+      "hash": "sha256:0f5bae7dfb68210df9b681787ce80754e85d3c016e566f5e2ae173a9cabdb09e",
+      "pcmSha256": "eb482af7be21bccdaff80c7c25009bd606e364bfe4d72e759628e9f1c854ae0d",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "kl-11",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 148,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und deine Oma? Bekommt sie einen Hut?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 2840,
+      "sizeBytes": 13233,
+      "hash": "sha256:bf695a2016035100178b7ab44da5d4d50c6eb38eae0726381fe7d0012b2a74f9",
+      "pcmSha256": "fd217fa8a51b49795cc5fa07a872f41f5995b41415988d1a6abde4cbcabc94e5",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "kl-12",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, sie trägt nie einen Hut! Sie bekommt Schuhe aus Berlin.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 4623,
+      "sizeBytes": 20968,
+      "hash": "sha256:5872aa48796bed976c680dcb5367cddaab60cb7e985ad95248b84df890980100",
+      "pcmSha256": "99381a01bad493c2925a1ca4e66dbc42090e33ef40888a25e14a7a9f281d73fd",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "kl-13",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Schuhe? Was für Schuhe?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 1592,
+      "sizeBytes": 7594,
+      "hash": "sha256:82b9741955a88f8ed958c27bb91f7022b86e779754de8f0ee4194f9d9ac5c552",
+      "pcmSha256": "591b2663a43906904584f44eb0f9ae43ba7b5eae4c0972f6c6c49da53cccba1d",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "kl-14",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Leichte Schuhe — meine Oma läuft viel.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 2684,
+      "sizeBytes": 12412,
+      "hash": "sha256:02468ae0c44b6c321450d8587927f5b79856f7ca25ee8583a7013310bf6ed581",
+      "pcmSha256": "7f6cd1e6e93fe6ce5bf99f556fa2c47aac9e2dbfd502e420ae7f380ecfb2cc81",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "kl-15",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und ich trage am Sonntag ein Kleid — meine Oma hat Geburtstag!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 4680,
+      "sizeBytes": 21847,
+      "hash": "sha256:ba9e6fc269c92cd856ba569e0a876569b6010bd9067a127d848afab42db83b39",
+      "pcmSha256": "0a3c422e12f9fcb5adeec094e2c745bfaf6ebd33ec48a01f87436a0393f81d39",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "kl-16",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ach ja! Zeig mal — dieses Kleid hier?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 3393,
+      "sizeBytes": 15420,
+      "hash": "sha256:f3e53a8a06536589cb46616f7d75fcd16740da61bec154945f6563c0ec8c69d2",
+      "pcmSha256": "327b91fe305d14ccc2fc021362015b1dab9e801f417a4e2e3ddbc3862d79f4a2",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "kl-17",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 98,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, dieses Kleid. Gefällt es dir?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 3656,
+      "sizeBytes": 16889,
+      "hash": "sha256:9c08d443c61cb208913f88d630748d34750fbdcbb3e397a1eb30293af7177a6e",
+      "pcmSha256": "748cfc220a064c7cd696da54f50c8dcac5dd561f81d6ca28495b7bc780249373",
+      "rmsDb": -17.48
+    },
+    {
+      "id": "kl-18",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, es gefällt mir. Die Farbe ist schön!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 3637,
+      "sizeBytes": 16830,
+      "hash": "sha256:a0cdd33419bb722df14c15bef82525642622fdcc2e3042c7460fdc05b6515705",
+      "pcmSha256": "0459fd1774df7bc9851c69c7dd1ad4e90cbe584b005caf0f546359797256bc10",
+      "rmsDb": -17.13
+    },
+    {
+      "id": "kl-19",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke! Und deine Schuhe? Sind sie auch im Koffer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 3672,
+      "sizeBytes": 16943,
+      "hash": "sha256:058c1db52a073336aeec15a3cc9576241be2ed933cb55eb72a0b43a06387b67b",
+      "pcmSha256": "1221f0224bfaaa5ddc254b0e6fc6d8fd01edd0fe3d8200b124b7bf3316e1a6d0",
+      "rmsDb": -17.3
+    },
+    {
+      "id": "kl-20",
+      "file": "audio/scripts/a1-u8-d1-was-ist-im-koffer/kl-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, meine Schuhe trage ich!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d1"
+      ],
+      "durationMs": 2325,
+      "sizeBytes": 10778,
+      "hash": "sha256:129efef8b62afbedb82bb63b95a19d240274fcd9a49efe3219df8de299deaae1",
+      "pcmSha256": "5519afac95b20994b4e8b29c73e18ec6fb1c1220484044aa6424986796725814",
+      "rmsDb": -17.04
     }
   ],
   "characterVoices": {
