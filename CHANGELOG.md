@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 116: a1-u9-d1 مُرقّى — أماكن المدينة والاتجاهات (D161) · وثغرة الحارس weit/wei (N-103)
+- **إضافة:** `content/arsenal/grammar/ars-stadt-ort.json` (إحدى وأربعون قاعدة يوم — القاعدة المخططة: Wo ist …? + hier/dort · gegenüber + الداتيف · im/nach + الجهة · geradeaus · zurück — usedInLessons u9-d1 + u9-d6) · حوار `a1-u9-d1-wo-ist-dein-kurs` (20 سطراً sk-1..20 مكالمةً) · لا مدخل معجم جديد.
+- **تحسين المحتوى:** 55 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح («مقابل» لا تغيّر «الـ» ⇒ ~~gegenüber die Kirche~~ · «شمالاً» ⇒ ~~ist nach Norden~~/~~fahren im Norden~~ · «أعود غداً» ⇒ ~~komme zurück morgen~~) · استدعاء stadt/bahnhof/rechts.
+- **تصحيح بيانات:** ثمانية أمثلة كلمات (Krankenhaus · Bank · Post · Platz · Norden · Süden · geradeaus · zurück) بلا Wechselpräpositionen ولا صيغة الأمر Sie · تسجيل sk على Kurs/geradeaus/Tunesien (N-099) · المرجع 1378.
+- **اختبارات:** كتلة D161 (+1 — الاستدعاء كلمةً كاملة · نص الإملاء = نص المسار) · المثال غير المُرقّى ← a1-u9-d2 · 690/690 · validator 1065/0/0.
+- **السجل:** N-103 جديدة (weit مرّت من الحارس عبر الجذع wei).
+
 ## 2026-10-17 — الدفعة 115: a1-u8-d5 مُرقّى — von/seit/bei (D160) · الوحدة 8 كلها مُرقّاة
 - **إضافة:** `content/arsenal/grammar/ars-von-seit-bei.json` (أربعون قاعدة يوم — القاعدة المخططة: von للمصدر والمرسل والملكية ≠ aus · seit + الداتيف والفعل مضارع · bei «عند» · vom/beim — usedInLessons u8-d5 + u8-d6) · حوار `a1-u8-d5-eine-tuete-vom-markt` (20 سطراً vb-1..20 مكالمةً) · لا مدخل معجم جديد.
 - **تحسين المحتوى:** 56 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح («من» واحدة ⇒ ~~von Tunesien~~/~~aus dem Markt~~ · «منذ» لا تغيّر ⇒ ~~seit zwei Monate~~ · «عند» لا تغيّر «الـ» ⇒ ~~bei die Bäckerei~~) · استدعاء markt/verkaeufer/bezahlen.
