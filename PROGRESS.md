@@ -1,5 +1,17 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
+## الدفعة 119 (2026-10-17) — الدرس الرابع والأربعون مُرقّى: «Wechselpräpositionen باسمها» (D164) — قاعدة جديدة ونواة auf sein/zu sein
+- **قاعدة اليوم `ars-wechselpraep`** (المخططة — تشاركها u9-d6): التسعة باسمها (vor جديد) · Wo? → الداتيف (vor der Kirche · im Tunnel · am Ufer · auf der linken Seite · hinter dem Haus · in der Nähe) ≠ Wohin? → الأكوزاتيف (vor die Kirche · in den Tunnel · ans Ufer · über die Brücke · auf den Parkplatz · in die Stadt) · gegen أكوزاتيف دائماً · Meter بلا جمع · auf sein/zu sein — الحدود: داتيف الأسماء الكامل u11 · liegen/setzen u11 · gegenüber/umsteigen u9-d6.
+- **النواة 2 (D113) بالمولِّد D105:** auf sein · zu sein (chunk · عائلة an/aus/zu sein · goetheList مشتقة A1+A2 · w-srs 0.26) ⇒ 14 كلمة · الخطة u9-d4 done · النواة 37/48 (96/123) · التالي a1-u9-d5 (ander- · weiter · halten · die Polizei · die Stelle).
+- **ثلاثة أمثلة مصحّحة:** an (Ampel ⇒ an der Ecke) · Brücke (Fluss ⇒ Wir gehen über die Brücke) · Nähe (الجمع «die Nähen» ⇒ بلا جمع).
+- **حوار جديد** `a1-u9-d4-zu-hause-in-tunis` (tn-1..20) — **أول مكالمة بعد السفر:** يوسف في بيت العائلة بتونس (seit zwei Stunden) · الموقف خلف البيت · الغرفة فوق بلا مصعد · الحقيبة تحت السرير · الصورة على الجدار · صيدلية مغلقة/بنك مفتوح · الجسر والنفق ومئتا متر إلى المركز · المطعم عند الضفة · الأخ بالدراجة gegen die Wand.
+- **النطق:** المرجع 1417 · صفر مخالفة · سبعة مداخل قديمة سُجّلت على tn يدوياً (N-099).
+- **التطبيق:** 57 بنداً (فراغ 23 · استماع 18 · ترتيب 6 · إملاء 10) · Quiz 3×6 · 3 مصائد (10‑ي) · ما أمسكته الفحوص: شرح بلا عربية · ~~ في المهمة · إجابة Quiz داخل فراغ مملوء · مشتِّت غير مدروس · interleavedWith (مصرَّف/ü).
+- **D108:** صفر جملة مؤلَّفة مطابقة — «Wohin gehst du?» الرسمية بُدّلت بـ«Wohin geht ihr?» · «Ich bin zu Hause.» ⇒ «Ich bin jetzt zu Hause, bei der Familie.».
+- **الاختبارات (+1):** u9-d4 كاملاً · خطة النواة · المثال القديم ← a1-u9-d5 (قاعدتان بلا ملف · tekamolo تخرق الواجهة) · 693/693 · validator 1076/0/0.
+- **الحالة:** ترقية 44/60 · نواة 37/48 (96/123) · 857 كلمة · 1709 مساراً · 44 قاعدة يوم · معجم 71 · التالي a1-u9-d5 (نواة خمس · `ars-satzklammer` و`ars-tekamolo` بلا ملف).
+- **السجل:** لا ملاحظة جديدة؛ حُدّثت N-099 · N-103.
+
 ## الدفعة 118 (2026-10-17) — الدرس الثالث والأربعون مُرقّى: «طلب المساعدة والأمر Sie» (D163) — قاعدة جديدة ونواة ثلاث
 - **قاعدة اليوم `ars-imperativ-sie`** (المخططة — تشاركها u9-d4 وu9-d6): الفعل أولاً ثم Sie (Gehen Sie! · Nehmen Sie den Bus!) · الجزء المنفصل في الآخر (Biegen Sie links ab!) · helfen + الداتيف (Helfen Sie mir! · Ich helfe dir.) · Können Sie mir helfen/den Weg erklären? · zuerst/danach · um Hilfe bitten · Danke für die Hilfe! — الحدود: الأمر مع du/ihr لاحقاً · in die Straße/an der Ecke u9-d4 · bitten + أن ليس A1 · داتيف الأسماء u11.
 - **النواة 3 (D113) بالمولِّد D105:** bitten · erklären · die Hilfe (goetheList مشتقة A1+A2 · مقاطع ≤1.1s · w-srs 0.26) ⇒ 15 كلمة · الخطة u9-d3 done · النواة 36/48 (94/123) · التالي a1-u9-d4 (auf sein · zu sein).

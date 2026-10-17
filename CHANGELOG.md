@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 119: a1-u9-d4 مُرقّى — Wechselpräpositionen باسمها (D164) · ars-wechselpraep · نواة auf sein/zu sein
+- **إضافة:** `content/arsenal/grammar/ars-wechselpraep.json` (أربع وأربعون قاعدة يوم — usedInLessons u9-d4 + u9-d6) · `content/words/{auf-sein,zu-sein}.json` + مقطعاهما (المولِّد D105) · حوار `a1-u9-d4-zu-hause-in-tunis` (tn-1..20 أول مكالمة من تونس) · مانيفست 1709 · المرجع 1417.
+- **تحسين المحتوى:** 57 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح (حرف واحد لا يتغيّر ما بعده ⇒ ~~in dem Tunnel gehen~~ · «ضد» يجرّ ⇒ ~~gegen der Wand~~ · الإضافة بلا أداة ⇒ ~~vor Kirche~~) · 14 كلمة · الدفء wand/tisch/wohin.
+- **تصحيح بيانات:** أمثلة an/Brücke بلا Ampel/Fluss · Nähe بلا جمع · خطة النواة u9-d4 done · gen-audio.py word_tracks +2 · تسجيل tn على Kurs/wohin/vor/danach/geradeaus/okay/dunkel (N-099).
+- **اختبارات:** كتلة D164 (+1) · خطة النواة (u9-d4 done · المعلّق u9-d5) · المثال غير المُرقّى ← a1-u9-d5 · 857 كلمة · 693/693 · validator 1076/0/0.
+
 ## 2026-10-17 — الدفعة 118: a1-u9-d3 مُرقّى — طلب المساعدة والأمر Sie (D163) · ars-imperativ-sie · نواة bitten/erklären/die Hilfe · معجم erklärt
 - **إضافة:** `content/arsenal/grammar/ars-imperativ-sie.json` (ثلاث وأربعون قاعدة يوم — usedInLessons u9-d3 + u9-d4 + u9-d6) · `content/words/{bitten,erklaeren,hilfe}.json` + مقاطعها (المولِّد D105) · حوار `a1-u9-d3-weg-und-hilfe` (wf-1..20 تمرين أدوار عبر الشاشة) · مانيفست 1687 · مدخل معجم erklärt (71).
 - **تحسين المحتوى:** 53 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح (بلا ضمير بعد الأمر ⇒ ~~Biegen links ab~~ · «ساعدني» مفعول مباشر ⇒ ~~Helfen Sie mich~~ · «انعطف» كلمة واحدة ⇒ ~~Biegen Sie ab links~~) · 15 كلمة.
