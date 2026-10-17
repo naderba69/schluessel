@@ -345,15 +345,15 @@
           },
           {
             "audioId": "km-16",
-            "speakText": "Einen Korb. Wir kaufen nicht viel.",
+            "speakText": "Einen Korb. Ich kaufe nicht viel.",
             "q": "استمع: ماذا يختار يوسف؟ ولماذا؟",
             "choices": [
-              "سلة — لا يشتريان كثيراً",
-              "عربة — يشتريان كثيراً",
+              "سلة — لا يشتري كثيراً",
+              "عربة — يشتري كثيراً",
               "سلة — العربة غالية"
             ],
-            "a": "سلة — لا يشتريان كثيراً",
-            "why": "Einen Korb. Wir kaufen nicht viel. — nicht viel = ليس كثيراً."
+            "a": "سلة — لا يشتري كثيراً",
+            "why": "Einen Korb. Ich kaufe nicht viel. — nicht viel = ليس كثيراً."
           },
           {
             "audioId": "km-18",
@@ -369,27 +369,27 @@
           },
           {
             "audioId": "km-19",
-            "speakText": "Das ist okay — du musst nicht viel bezahlen. Die Kasse ist dort.",
-            "q": "استمع: ماذا تقول لينا؟",
+            "speakText": "Das ist okay — du musst nicht viel bezahlen. Wo ist die Kasse?",
+            "q": "استمع: ماذا تقول لينا؟ وماذا تسأل؟",
             "choices": [
-              "لا داعي لأن يدفع كثيراً — الكاسا هناك",
-              "يجب أن يدفع كثيراً — الكاسا هناك",
-              "ممنوع أن يدفع نقداً"
+              "لا داعي لأن يدفع كثيراً — وأين الكاسا؟",
+              "يجب أن يدفع كثيراً — وأين الكاسا؟",
+              "ممنوع أن يدفع نقداً — والكاسا مغلقة"
             ],
-            "a": "لا داعي لأن يدفع كثيراً — الكاسا هناك",
-            "why": "du musst nicht viel bezahlen = لا حاجة لأن تدفع كثيراً — nicht müssen = لا حاجة، لا «ممنوع»."
+            "a": "لا داعي لأن يدفع كثيراً — وأين الكاسا؟",
+            "why": "du musst nicht viel bezahlen = لا حاجة لأن تدفع كثيراً — nicht müssen = لا حاجة، لا «ممنوع» · Wo ist die Kasse? = أين الكاسا؟"
           },
           {
             "audioId": "km-20",
-            "speakText": "Gut, wir können jetzt bezahlen. Und ich bin fertig für Tunesien!",
-            "q": "استمع: بم يختم يوسف؟",
+            "speakText": "Dort hinten. Ich kann jetzt bezahlen — und ich bin fertig für Tunesien!",
+            "q": "استمع: أين الكاسا؟ وبم يختم يوسف؟",
             "choices": [
-              "يمكنهما أن يدفعا الآن — وهو جاهز لتونس",
-              "يجب أن يدفعا غداً — وهو جاهز لبرلين",
-              "لا يمكنهما أن يدفعا — البطاقة لا تُقبل"
+              "في الخلف — يمكنه أن يدفع الآن وهو جاهز لتونس",
+              "في الأمام — يجب أن يدفع غداً وهو جاهز لبرلين",
+              "لا كاسا — لا يمكنه أن يدفع"
             ],
-            "a": "يمكنهما أن يدفعا الآن — وهو جاهز لتونس",
-            "why": "Wir können jetzt bezahlen. Und ich bin fertig für Tunesien! — können = نستطيع · fertig = جاهز."
+            "a": "في الخلف — يمكنه أن يدفع الآن وهو جاهز لتونس",
+            "why": "Dort hinten. = هناك في الخلف · Ich kann jetzt bezahlen = أستطيع أن أدفع الآن · fertig = جاهز."
           }
         ],
         "interleavedWith": [
@@ -519,9 +519,9 @@
           },
           {
             "audioId": "km-17",
-            "speakText": "Und wie bezahlst du? Geht hier die Kreditkarte?",
-            "a": "Und wie bezahlst du? Geht hier die Kreditkarte?",
-            "why": "bezahlst بـhl ثم st · Kreditkarte بحرف كبير وdt في وسطها · Geht بحرف كبير في أول الجملة الثانية."
+            "speakText": "Und wie bezahlst du? Geht dort die Kreditkarte?",
+            "a": "Und wie bezahlst du? Geht dort die Kreditkarte?",
+            "why": "bezahlst بـhl ثم st · Kreditkarte بحرف كبير وdt في وسطها · Geht بحرف كبير في أول الجملة الثانية · dort بـt في الآخر."
           },
           {
             "audioId": "word-kriegen",
@@ -561,7 +561,7 @@
           "regnen",
           "oft",
           "supermarkt",
-          "hier"
+          "dort"
         ],
         "explanationRequired": true
       }
