@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d3-was-musst-du-kaufen",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Was musst du kaufen?",
+    "ar": "ماذا يجب أن تشتري؟ — مهمة الوحدة الثامنة على الشاشة: يوسف يشتري حقيبة ظهر وحزاماً لرحلة تونس (N-092)، ولينا مظلة وقطعتي كعك — ما يجب وما يمكن: müssen/können"
+  },
+  "usedIn": [
+    "a1-u8-d3"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "km-1",
+      "speaker": "lena",
+      "text": "Yusuf, was musst du noch für Tunesien kaufen?",
+      "direction": "مهمة الوحدة الثامنة على الشاشة: «التسوّق — ما يجب وما يمكن» — لينا تسأل: ماذا يجب أن يشتري يوسف بعد لرحلة تونس؟ — musst في المكان الثاني وkaufen في الآخر"
+    },
+    {
+      "id": "km-2",
+      "speaker": "yusuf",
+      "text": "Ich muss einen Rucksack kaufen. Und einen Gürtel — meine Hose ist zu groß!",
+      "direction": "يجب أن يشتري حقيبة ظهر وحزاماً — بنطاله واسع! — muss + einen Rucksack kaufen · Gürtel"
+    },
+    {
+      "id": "km-3",
+      "speaker": "lena",
+      "text": "Die Rucksäcke sind dort, in der Abteilung für Taschen.",
+      "direction": "حقائب الظهر هناك في قسم الحقائب — die Abteilung (النبر على tei)"
+    },
+    {
+      "id": "km-4",
+      "speaker": "yusuf",
+      "text": "Super. Kann ich den Rucksack anprobieren?",
+      "direction": "هل يمكنني أن أقيس حقيبة الظهر؟ — Kann ich …? سؤالٌ بالفعل الناقص أولاً والمصدر anprobieren في الآخر متصلاً"
+    },
+    {
+      "id": "km-5",
+      "speaker": "lena",
+      "text": "Ja, das ist möglich. Passt er?",
+      "direction": "نعم، هذا ممكن. هل تناسبه؟ — möglich · passen"
+    },
+    {
+      "id": "km-6",
+      "speaker": "yusuf",
+      "text": "Er passt gut! Und er kostet nur fünfundzwanzig Euro.",
+      "direction": "تناسبه جيداً وتكلّف خمسة وعشرين يورو فقط — passt · nur"
+    },
+    {
+      "id": "km-7",
+      "speaker": "lena",
+      "text": "Und der Gürtel? Gürtel findest du in der Abteilung für Kleidung.",
+      "direction": "والحزام؟ تجده في قسم الملابس — finden · Kleidung مفردٌ جامد"
+    },
+    {
+      "id": "km-8",
+      "speaker": "yusuf",
+      "text": "Ich finde keinen Gürtel. Die Gürtel hier sind alle zu lang.",
+      "direction": "لا يجد حزاماً — كلها طويلة جداً — keinen Gürtel · die Gürtel (جمع بلا نهاية) · zu lang"
+    },
+    {
+      "id": "km-9",
+      "speaker": "lena",
+      "text": "Du musst einen Verkäufer fragen. Er findet einen für dich.",
+      "direction": "يجب أن تسأل بائعاً، وهو يجد لك واحداً — du musst + fragen"
+    },
+    {
+      "id": "km-10",
+      "speaker": "yusuf",
+      "text": "Okay. Und du, Lena? Was musst du kaufen?",
+      "direction": "حسناً. وأنتِ يا لينا، ماذا يجب أن تشتري؟ — Was musst du kaufen?"
+    },
+    {
+      "id": "km-11",
+      "speaker": "lena",
+      "text": "Ich muss einen Regenschirm kaufen. In Berlin regnet es oft!",
+      "direction": "يجب أن تشتري مظلة — في برلين تمطر كثيراً! — Regenschirm · regnet es oft"
+    },
+    {
+      "id": "km-12",
+      "speaker": "yusuf",
+      "text": "Einen Regenschirm kriegst du im Supermarkt — für fünf Euro.",
+      "direction": "المظلة تحصل عليها في السوبرماركت بخمسة يورو — kriegen = bekommen (عامية): kriegst du"
+    },
+    {
+      "id": "km-13",
+      "speaker": "lena",
+      "text": "Im Supermarkt? Gut, dort kaufe ich auch ein Stück Kuchen für meine Oma.",
+      "direction": "في السوبرماركت؟ جيد، هناك تشتري أيضاً قطعة كعك لجدّتها — ein Stück Kuchen"
+    },
+    {
+      "id": "km-14",
+      "speaker": "yusuf",
+      "text": "Kuchen? Ich möchte auch ein Stück! Kannst du zwei Stück kaufen?",
+      "direction": "كعك؟ يوسف يريد قطعة أيضاً! هل تستطيعين شراء قطعتين؟ — zwei Stück بلا نهاية بعد العدد (كـEuro) · Kannst du …?"
+    },
+    {
+      "id": "km-15",
+      "speaker": "lena",
+      "text": "Zwei Stück — das ist möglich! Brauchst du einen Korb oder einen Wagen?",
+      "direction": "قطعتان — ممكن! هل تحتاج سلة أم عربة؟ — der Korb · der Wagen"
+    },
+    {
+      "id": "km-16",
+      "speaker": "yusuf",
+      "text": "Einen Korb. Wir kaufen nicht viel.",
+      "direction": "سلة — لا يشتريان الكثير — einen Korb"
+    },
+    {
+      "id": "km-17",
+      "speaker": "lena",
+      "text": "Und wie bezahlst du? Geht hier die Kreditkarte?",
+      "direction": "وكيف تدفع؟ هل تُقبل بطاقة الائتمان هنا؟ — Geht hier die Kreditkarte? (يعمل/مقبول)"
+    },
+    {
+      "id": "km-18",
+      "speaker": "yusuf",
+      "text": "Ja, aber ich habe meine Kreditkarte nicht hier. Ich muss bar bezahlen.",
+      "direction": "نعم، لكن بطاقته ليست معه — يجب أن يدفع نقداً — Ich muss bar bezahlen."
+    },
+    {
+      "id": "km-19",
+      "speaker": "lena",
+      "text": "Das ist okay — du musst nicht viel bezahlen. Die Kasse ist dort.",
+      "direction": "لا بأس — لا يجب أن تدفع كثيراً (nicht müssen = لا حاجة) · الصندوق هناك — die Kasse"
+    },
+    {
+      "id": "km-20",
+      "speaker": "yusuf",
+      "text": "Gut, wir können jetzt bezahlen. Und ich bin fertig für Tunesien!",
+      "direction": "جيد، يمكننا أن ندفع الآن — ويوسف جاهز لتونس! — wir können + bezahlen · fertig"
+    }
+  ]
+}

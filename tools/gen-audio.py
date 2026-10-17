@@ -16,6 +16,7 @@ from pathlib import Path
 import numpy as np
 import soundfile as sf
 from piper import PiperVoice, SynthesisConfig
+from piper.config import PiperConfig
 
 ROOT = Path(__file__).resolve().parent.parent
 VOICE_ONNX = ROOT / "tools/piper-voices/de_DE-thorsten-medium.onnx"
@@ -66,6 +67,20 @@ def load_voice(onnx: Path) -> PiperVoice:
     if key not in _VOICE_CACHE:
         _VOICE_CACHE[key] = PiperVoice.load(key)
     return _VOICE_CACHE[key]
+
+
+_PHONEMIZER_CACHE: dict[str, PiperVoice] = {}
+
+
+def load_phonemizer(onnx: Path) -> PiperVoice:
+    """D158: الصوت للنطق وحده — الإعدادات (espeak_voice · phoneme_id_map) بلا جلسة ONNX.
+    قياس: تهيئة جلسة ONNX للنموذج تأخذ ≈3 ثوانٍ لكل عملية Python، وphonemize/الفحص/المعجم لا يستعملها —
+    فكانت اختبارات المعجم (5 ثوانٍ مهلة) تسقط بالمهلة كلما كبر المعجم. للتوليد الفعلي load_voice كما هي."""
+    key = str(onnx)
+    if key not in _PHONEMIZER_CACHE:
+        cfg = json.loads(Path(f"{key}.json").read_text(encoding="utf-8"))
+        _PHONEMIZER_CACHE[key] = PiperVoice(session=None, config=PiperConfig.from_dict(cfg))  # type: ignore[arg-type]
+    return _PHONEMIZER_CACHE[key]
 
 
 def fit_phonemes(phonemes: list[str], id_map: dict) -> tuple[list[str], int]:
@@ -1067,6 +1082,7 @@ def build_all() -> None:
     ("word-gefallen", "gefallen.", "gefallen", ["a1-u8-d1"]),
     ("word-beste", "beste.", "beste", ["a1-u8-d2"]),
     ("word-circa", "circa.", "circa", ["a1-u8-d2"]),
+    ("word-kriegen", "kriegen.", "kriegen", ["a1-u8-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

@@ -110,7 +110,7 @@ def audit() -> dict:
     reviewed = {r["word"].lower(): r for r in lex.get("reviewed", [])}
     words = content_words()
     stale = [w for w in words if w not in ref_words]
-    voice = ga.load_voice(ga.VOICE_ONNX)
+    voice = ga.load_phonemizer(ga.VOICE_ONNX)
     rows: list[dict] = []
     compared = 0
     for w in words:

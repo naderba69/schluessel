@@ -148,7 +148,7 @@ describe("D121/D122 — معجم النطق", () => {
       [
         "out = {}",
         "for vid, onnx in ga.VOICES.items():",
-        "    v = ga.load_voice(onnx); m = v.config.phoneme_id_map",
+        "    v = ga.load_phonemizer(onnx); m = v.config.phoneme_id_map",
         "    s = ''.join(''.join(x) for x in ga.synth_phonemes(v, 'Er ist vierzig.'))",
         "    out[vid] = {'ipa': s, 'missing': sorted({c for c in s if c not in m})}",
         "print(json.dumps(out, ensure_ascii=False))",
@@ -208,7 +208,7 @@ describe("D121/D122 — معجم النطق", () => {
         "    if e['word'] == 'vor': e['forms'] = e['forms'][:1]",
         "p = pathlib.Path(tempfile.mkdtemp()) / 'lex.json'; p.write_text(json.dumps(lex, ensure_ascii=False), encoding='utf-8')",
         "ga.PRON_LEXICON = p; ga._LEXICON = None",
-        "v = ga.load_voice(ga.VOICE_ONNX)",
+        "v = ga.load_phonemizer(ga.VOICE_ONNX)",
         `print(json.dumps({t: sorted({w for s in v.phonemize(t) for w in ga.lexicon_hits(s)}) for t in ${JSON.stringify(tracks.map((t) => t.textDe))}}))`,
       ].join("\n"),
     ) as Record<string, string[]>;
@@ -224,7 +224,7 @@ describe("D121/D122 — معجم النطق", () => {
         "lex = json.load(open(ga.PRON_LEXICON, encoding='utf-8'))['entries']",
         "out = {}",
         "for vid, onnx in ga.VOICES.items():",
-        "    m = ga.load_voice(onnx).config.phoneme_id_map",
+        "    m = ga.load_phonemizer(onnx).config.phoneme_id_map",
         "    out[vid] = sorted({ch for e in lex for f in ga.lexicon_forms(e) for ch in ga.fit_phonemes(list(f['ipa']), m)[0] if ch not in m})",
         "print(json.dumps(out, ensure_ascii=False))",
       ].join("\n"),

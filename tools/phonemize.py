@@ -42,7 +42,7 @@ def coverage() -> dict:
     texts = content_texts()
     report: dict = {"texts": len(texts), "voices": {}}
     for voice_id, onnx in ga.VOICES.items():
-        voice = ga.load_voice(onnx)
+        voice = ga.load_phonemizer(onnx)
         id_map = voice.config.phoneme_id_map
         missing_raw: Counter = Counter()
         missing_fitted: Counter = Counter()
@@ -74,7 +74,7 @@ def main() -> None:
     voice_id = ga.VOICE_ID
     if args[:1] == ["--voice"]:
         voice_id, args = args[1], args[2:]
-    voice = ga.load_voice(ga.VOICES[voice_id])
+    voice = ga.load_phonemizer(ga.VOICES[voice_id])
     id_map = voice.config.phoneme_id_map
     out = []
     for t in args:

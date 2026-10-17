@@ -9319,11 +9319,11 @@
       "lessonRefs": [
         "a1-u8-d3"
       ],
-      "durationMs": 1106,
-      "sizeBytes": 4988,
-      "hash": "sha256:2af82f6964f36a92b14e218cd354f2612f5db136a0a626eab8350a068275572d",
-      "pcmSha256": "d92d4aa37d2e8de045ba1c532f13d34954c1e64d6207b565cdc3afcbb4f9a42b",
-      "rmsDb": -17.08
+      "durationMs": 1013,
+      "sizeBytes": 4876,
+      "hash": "sha256:a7d7c6de6a18ce9b7cd8eae485e671a625e14f3389c226b12b344fc14a7fa44a",
+      "pcmSha256": "7c204ced4abfa46db1db6d916e6f730d3b38ff18c9994a70598f651d1d0ff702",
+      "rmsDb": -17.07
     },
     {
       "id": "word-finden",
@@ -17027,6 +17027,26 @@
       "hash": "sha256:5ae57a8ce58692fb7d49505558cdf66c2f09854fe8ca36adc490ec9b61d108c7",
       "pcmSha256": "72d611e5b3be6b39a1649f91e7559b918bca21cd477e199cde28fa72b7dc8bb7",
       "rmsDb": -17.09
+    },
+    {
+      "id": "word-kriegen",
+      "file": "words/audio/de-DE/word-kriegen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "kriegen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 734,
+      "sizeBytes": 3695,
+      "hash": "sha256:7e779090ad28301f90d5dbd51eed0db2d722ca2b57fe3b1e594cc6a70ac6537a",
+      "pcmSha256": "59022c4393e54bdbc04bf2ed402edef97b78d3d15516aab0edb3514fa1fe0e80",
+      "rmsDb": -17.04
     },
     {
       "id": "mueller-announce-01",
@@ -32614,6 +32634,446 @@
       "hash": "sha256:4383cfb883f1b1d4d9a8b33668a9104c7f9018571b65db0d398b8feabd2b7100",
       "pcmSha256": "ac6c7c4233263a995e186eedb4a995767625bc5ae9d06a6b16d6ac240487eae6",
       "rmsDb": -17.06
+    },
+    {
+      "id": "km-1",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, was musst du noch für Tunesien kaufen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 3672,
+      "sizeBytes": 17227,
+      "hash": "sha256:4e102a9e1e7e0e8ded9e030496105c50e5db67ef25959d291ee04a17ffa02c34",
+      "pcmSha256": "f19a3e01c459fd68be2358a0367079ed2f59740d81958b713635bc9de2b32d4a",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "km-2",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 163,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich muss einen Rucksack kaufen. Und einen Gürtel — meine Hose ist zu groß!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 4786,
+      "sizeBytes": 22045,
+      "hash": "sha256:b5c260aa6fee24463fc8ea6cee20da7c4109db7d160d42d77ad336eaae0ab4d9",
+      "pcmSha256": "59f4120ec1a905f29539374e4db63e5cf83070225aa0c4c047ff74b880311934",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "km-3",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die Rucksäcke sind dort, in der Abteilung für Taschen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 4168,
+      "sizeBytes": 19311,
+      "hash": "sha256:47e47580c5cf955f6bf14350fee20182a5a5efb63d2823f816e1ad36ab3a0771",
+      "pcmSha256": "d1f9111be829a54b7ff2f3e418295ee9517b5f85765143a23dcd1d9fead66831",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "km-4",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 114,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super. Kann ich den Rucksack anprobieren?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 3149,
+      "sizeBytes": 14541,
+      "hash": "sha256:3dd6cedc0fe20cf5bd86c562880e9b223d392a532db1dee03c3b882ff86fd768",
+      "pcmSha256": "5aba628ef0a302438e7bf81fc1350e5228e9c735ea82de402e8903e8685c912c",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "km-5",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 161,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, das ist möglich. Passt er?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 2232,
+      "sizeBytes": 10628,
+      "hash": "sha256:a77265f326dcd8cbca46f74a4e256be74331561201145c4634f87c0805f734dc",
+      "pcmSha256": "a11f1c77ed543fdb8379024b73e7158ad107dc0b5aea54e9bcf7dd822289b5bd",
+      "rmsDb": -17.39
+    },
+    {
+      "id": "km-6",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Er passt gut! Und er kostet nur fünfundzwanzig Euro.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 3950,
+      "sizeBytes": 18329,
+      "hash": "sha256:3d7275e78c1353ea794183768b3de6c8cffc5cb9c9da2e245ad710105717a724",
+      "pcmSha256": "1a56dac4140249d93912d3dcbc835bc779470d4c2ac8169dd9d710f691270063",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "km-7",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und der Gürtel? Gürtel findest du in der Abteilung für Kleidung.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 4696,
+      "sizeBytes": 21868,
+      "hash": "sha256:bf1b56d77c7a07c18b5a010eaf5150384643f07315c16d67ba49288e6d79576c",
+      "pcmSha256": "469e3d6ad8c120f91b53578f40548dc315a7ef9fd86927c7ad3e642c1a2a8130",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "km-8",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 193,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich finde keinen Gürtel. Die Gürtel hier sind alle zu lang.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 3428,
+      "sizeBytes": 15307,
+      "hash": "sha256:cf64e64ccd3e25405b0b255947dda8f9f48ed5ae30c19b8644da1b1e67b069b9",
+      "pcmSha256": "08bf414a1eebe8f42b129e8eadc73cb3351e3db7f0404b9d2119241b74a94d37",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "km-9",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du musst einen Verkäufer fragen. Er findet einen für dich.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 4200,
+      "sizeBytes": 19675,
+      "hash": "sha256:0caa81962e9b3a2898b2f535d4c1bfa4dd9e339910ed133497ffd7423942fa45",
+      "pcmSha256": "667cc98427f4900e7ad59bc1a64c7db857c0889bf0fe563ce3b24958ce5a7159",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "km-10",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Okay. Und du, Lena? Was musst du kaufen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 3927,
+      "sizeBytes": 17379,
+      "hash": "sha256:b75b5ba1b4edededeb446ccf6369d835035c84e1052c08b4712fd43bb701fecd",
+      "pcmSha256": "44e701fb7ce84cbb069a0b0aa7209c0008556ece5f05722f4c8a06e751082188",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "km-11",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 112,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich muss einen Regenschirm kaufen. In Berlin regnet es oft!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 5368,
+      "sizeBytes": 24881,
+      "hash": "sha256:9620f95c5638020611dcf9cc6059a6374878c9f76cba2acff7b43717387d33eb",
+      "pcmSha256": "82770ee610479452e43ddf9736085af02fd3dfabd675b4bbe01e89f0a5b25038",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "km-12",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Einen Regenschirm kriegst du im Supermarkt — für fünf Euro.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 3822,
+      "sizeBytes": 17761,
+      "hash": "sha256:23c35b9fed17c7f0cbc6c5b5d80879929afe8d630518e38be752bcc10b66efb0",
+      "pcmSha256": "038f57352aec38b1ee86d073618c42ab37f1653cee656cc048701e214823ac1d",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "km-13",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Im Supermarkt? Gut, dort kaufe ich auch ein Stück Kuchen für meine Oma.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 5368,
+      "sizeBytes": 24723,
+      "hash": "sha256:6ed7761038c19d81614ec53c239e46e6aceffec5696b407d394a6915efb646b0",
+      "pcmSha256": "94e73c9f4e9cc6a92253bbb2b2a8f20d1294fb1a299fb62d56c4e4be26f90832",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "km-14",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 162,
+        "lengthScale": 1.32
+      },
+      "textDe": "Kuchen? Ich möchte auch ein Stück! Kannst du zwei Stück kaufen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 4066,
+      "sizeBytes": 18523,
+      "hash": "sha256:94c94bcbaac02b15e17b11b2ce10dd24832eb3e06582bcd7c4ff3df1982d7e97",
+      "pcmSha256": "32f42c821576ac7a0fe67933a74f6dd1721fda6b6581f15b75f807b949c69940",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "km-15",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zwei Stück — das ist möglich! Brauchst du einen Korb oder einen Wagen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 5096,
+      "sizeBytes": 23669,
+      "hash": "sha256:fe17f7c3d22c1e3a702e7fa75767523548091a497b907401919863e392d195c0",
+      "pcmSha256": "787d8ed8084438901b2699624e0b398345904f00c5645980f627ef613f1c72e2",
+      "rmsDb": -17.67
+    },
+    {
+      "id": "km-16",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 121,
+        "lengthScale": 1.32
+      },
+      "textDe": "Einen Korb. Wir kaufen nicht viel.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 2975,
+      "sizeBytes": 13018,
+      "hash": "sha256:44f28590ad8b6e2ba7e93565391c5dcca25662864b53f2ce681d5a05c746741a",
+      "pcmSha256": "7e7066cc8d506e053501db21be8b84280dd9389a77ad7bf4954d92e4cbb66dd2",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "km-17",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wie bezahlst du? Geht hier die Kreditkarte?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 4072,
+      "sizeBytes": 18685,
+      "hash": "sha256:83edbd2545f51a84c6f46df3c05635e865a8de55a94710970846621b75947dae",
+      "pcmSha256": "002a4270feda1bec7c49a4a1f167a63d823f60fc46449c2e830e4416219b3182",
+      "rmsDb": -17.39
+    },
+    {
+      "id": "km-18",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 154,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, aber ich habe meine Kreditkarte nicht hier. Ich muss bar bezahlen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 4681,
+      "sizeBytes": 21578,
+      "hash": "sha256:67064d5dc909821c2c810cb163b86a4fb402a26280707d2fd15280ba9c79083f",
+      "pcmSha256": "c21789b756ab63d79b28c09401d567f95d239242b36956b6776a51413c0a1ef0",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "km-19",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das ist okay — du musst nicht viel bezahlen. Die Kasse ist dort.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 4760,
+      "sizeBytes": 22131,
+      "hash": "sha256:11c14940af149993fc6f906a0b40f7b5365bcfc891c8c4deb3f102d086905293",
+      "pcmSha256": "dfab907f59c4c3bbcfd43932184230d1e52924f8fff8677860ef4faf8dcf72a2",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "km-20",
+      "file": "audio/scripts/a1-u8-d3-was-musst-du-kaufen/km-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut, wir können jetzt bezahlen. Und ich bin fertig für Tunesien!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d3"
+      ],
+      "durationMs": 4589,
+      "sizeBytes": 20433,
+      "hash": "sha256:23aa5091ea3928815e95da52aad45109994c1f26f824a5e1df4f1fc55c43b6fd",
+      "pcmSha256": "0aa333d4cfb998aeb26c2bd6f6a7460b3a5ddfb93e3fedc00243a88b5e35b2b7",
+      "rmsDb": -17
     }
   ],
   "characterVoices": {
