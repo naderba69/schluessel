@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 125: a1-u10-d5 مُرقّى — weil — الجملة التابعة (D170) · ars-weil-satz · نواة normal/der Job/verdienen · ثلاثة أمثلة مصحّحة · الوحدة 10 مكتملة
+- **إضافة:** `content/arsenal/grammar/ars-weil-satz.json` (إحدى وخمسون قاعدة يوم) · كلمات `normal` · `job` · `verdienen` بمقاطعها · حوار `a1-u10-d5-warum-weil` (wk-1..20 مكالمة اليوم السابع) · مانيفست 1844 · المرجع 1504 · معجم النطق 74 (بلا جديد).
+- **تحسين المحتوى:** 66 بنداً/4 أنواع (فراغ 30 · استماع 14 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (المصرَّف ثانياً بعد weil ⇒ ~~weil ich bin krank~~ · المصرَّف قبل التصريف الثالث/المصدر ⇒ ~~weil ich habe Fußball gespielt~~ · لا قلب بعد deshalb/جملة weil المتقدّمة ⇒ ~~deshalb ich brauche~~) · 15 كلمة.
+- **تصحيح بيانات:** ثلاثة أمثلة (unwohl «Ich fühle mich unwohl.» ⇒ «Mir ist heute unwohl.» · dringend «Es ist dringend.» = مثال SD1 الرسمي ⇒ «Der Termin ist dringend.» · stress ⇒ «Ich habe viel Stress im Kurs.») · خطة الترقية u10-d5 done (properNouns Yusuf/Lena/Berlin/Deutschland/Tunesien · بلا misspellings) · خطة SD1 u10-d5 done · تسجيل wk على Notfall/Fußball/Kurs/Tunesien/okay (N-099).
+- **اختبارات:** كتلة D170 (+1) · المثال غير المُرقّى ← a1-u11-d1 (u10-d6 توليف) · مثبّتات النواة ← a1-u11-d1 · العدّ 872 · 703/703 · validator 1104/0/0.
+
 ## 2026-10-17 — الدفعة 124: a1-u10-d4 مُرقّى — ظروف الزمن والمنفصلة وبلا ge‑ في Perfekt (D169) · ars-zeitangaben · نواة der Anfang/der Verein · سبعة أمثلة مصحّحة
 - **إضافة:** `content/arsenal/grammar/ars-zeitangaben.json` (خمسون قاعدة يوم) · كلمات `anfang` · `verein` بمقطعيهما · حوار `a1-u10-d4-endlich-wochenende` (ew-1..20 مكالمة اليوم السادس) · مانيفست 1821 · المرجع 1498 · معجم النطق 74 (بلا جديد).
 - **تحسين المحتوى:** 65 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح (الظرف بعد التصريف ⇒ ~~Ich habe angerufen neulich.~~ · المنفصل مفكوكاً ⇒ ~~Ich habe gerufen an.~~ · ge‑ على be‑/ver‑/‑ieren ⇒ ~~getelefoniert~~) · 14 كلمة.
