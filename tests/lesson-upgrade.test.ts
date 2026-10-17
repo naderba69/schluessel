@@ -1234,21 +1234,21 @@ describe("D115 — أدوات القياس", () => {
     // النطاق في نصوص المتعلم الألمانية: لا Wechselpräpositionen بالموقع (an der · neben der · vor der · in die) ولا صيغة الأمر Sie (Gehen Sie · Fahren Sie) ولا dann/nah/Ecke/Mitte (غير مدروسة أو لاحقة أو خارج اليوم)
     // · ولا الجمل الرسمية الحرفية من SD1 («Wo ist die Post, bitte?» · «Wohin gehst du?» · «Wann kommst du zurück?») (D108)
     const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.correct.de, c.exercise.a]) });
-    expect(shown).not.toMatch(/\b(an der|neben der|vor der|in die|Gehen Sie|Fahren Sie|dann|nah|Ecke|Mitte|dorthin|hierhin)\b|Wo ist die Post, bitte|Wohin gehst du|Wann kommst du zurück/i);
+    expect(shown).not.toMatch(/\b(an der|neben der|vor der|in die|Gehen Sie|Fahren Sie|dann|nah|Ecke|Mitte|dorthin|hierhin|weit)\b|Wo ist die Post|Wohin gehst du|Wann kommst du zurück/i);
     expect(e.properNouns).toEqual(["Yusuf", "Lena", "Berlin", "Tunesien", "Tunis"]);
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
     // بلا نواة (الخطة: الإسناد المعلّق التالي a1-u9-d3) — والكلمات الثماني عشرة من الملف القائم بأمثلة مصحّحة: ثمانية أمثلة كانت بـan der/neben der/vor der/in den (باب u9-d4) أو بالإضافة (im Norden der Stadt) أو بصيغة الأمر Sie (Fahren Sie geradeaus! · Gehen Sie zurück …!) — وبلا أعلام
     const w = (id: string) => words.find((x) => x.id === id)!;
     const sample = (id: string) => w(id).sampleSentence!.de;
     expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|an der|neben der|vor der|in den|Norden der|Sie\b/);
-    expect(["krankenhaus", "bank", "post", "platz", "nord", "sued", "geradeaus", "zurueck"].map(sample)).toEqual(["Das Krankenhaus ist im Süden, weit weg.", "Die Bank ist gegenüber der Post.", "Die Post ist gegenüber der Apotheke.", "Die Kirche und die Bank sind am Platz.", "Mein Kurs ist im Norden.", "Meine Oma wohnt im Süden.", "Zu Fuß geradeaus — fünf Minuten.", "Ich gehe jetzt zurück zum Bahnhof."]);
+    expect(["krankenhaus", "bank", "post", "platz", "nord", "sued", "geradeaus", "zurueck"].map(sample)).toEqual(["Das Krankenhaus ist im Süden.", "Die Bank ist gegenüber der Post.", "Die Post ist gegenüber der Apotheke.", "Die Kirche und die Bank sind am Platz.", "Mein Kurs ist im Norden.", "Meine Oma wohnt im Süden.", "Zu Fuß geradeaus — fünf Minuten.", "Ich gehe jetzt zurück zum Bahnhof."]);
     for (const id of l.praesentation.wordIds) expect(w(id).pluralRuleNote ?? "").not.toContain("Gleich_plural");
     // الحوار (sk-1..20) مكالمةُ الدورة (N-037/N-100): لينا تسأل عن برلين ويوسف عن بلدتها وعن تونس — لا لقاء
     const script = JSON.parse(readFileSync(join(CONTENT, "audio-scripts/a1-u9-d1-wo-ist-dein-kurs.json"), "utf8")) as { lines: { id: string; speaker: string; text: string }[] };
     expect(script.lines).toHaveLength(20);
     expect(script.lines.find((x) => x.id === "sk-2")?.text).toBe("Hallo Lena! Mein Kurs ist im Norden von Berlin, gegenüber der Universität.");
     expect(script.lines.find((x) => x.id === "sk-9")?.text).toBe("Ein Museum? Nein, hier nicht. Das Museum ist in der Stadt — eine Stunde mit dem Zug.");
-    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\bwir (sind|gehen|fahren) (hier|zusammen)\b|hole dich|bringe dich|\bdann\b|\bnah\b/i);
+    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\bwir (sind|gehen|fahren) (hier|zusammen)\b|hole dich|bringe dich|\bdann\b|\bnah\b|\bweit\b/i);
     // N-020 لهذا الدرس: الاستدعاء من دروس سابقة (stadt · bahnhof · rechts) — كانت stadt/strasse/wo
     expect(l.warmup.cardIds).toEqual(["stadt", "bahnhof", "rechts"]);
     expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);

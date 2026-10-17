@@ -10,7 +10,7 @@
     "ar": "تسأل أين الشيء في المدينة وتجيب بجملة موقع واحدة صحيحة: مقابل + الداتيف (gegenüber der Kirche · gegenüber dem Park) · في الشمال/الجنوب/الشرق/الغرب (im Norden) وإلى الشمال (nach Norden) · هنا/هناك · إلى الأمام مباشرة · رجوعاً — ومعها أماكن المدينة: الكنيسة والمستشفى والصيدلية والجامعة والبنك والبريد والحديقة والمتحف والساحة."
   },
   "canDoDaily": [
-    "يسأل أين ويجيب بجملة موقع: Wo ist die Apotheke? — Die Apotheke ist gegenüber der Kirche. · Das Museum ist gegenüber dem Park. · Die Bank ist hier, die Post ist dort. · Mein Kurs ist im Norden von Berlin. · Das Krankenhaus ist im Süden, weit weg.",
+    "يسأل أين ويجيب بجملة موقع: Wo ist die Apotheke? — Die Apotheke ist gegenüber der Kirche. · Das Museum ist gegenüber dem Park. · Die Bank ist hier, die Post ist dort. · Mein Kurs ist im Norden von Berlin. · Das Krankenhaus ist im Süden — zwanzig Minuten mit dem Bus.",
     "يصف الطريق بكلمتين: Zu Fuß geradeaus — fünf Minuten. · Geradeaus und links. · Ich gehe jetzt zurück zum Kurs. · Er fährt mit dem Bus zurück. · Wir fahren nach Süden."
   ],
   "warmup": {
@@ -152,7 +152,7 @@
             "why": "die Apotheke = الصيدلية — الجمع die Apotheken بـ‑n."
           },
           {
-            "q": "Das ___ ist im Süden, weit weg. (المستشفى)",
+            "q": "Das ___ ist im Süden — zwanzig Minuten mit dem Bus. (المستشفى)",
             "a": "Krankenhaus",
             "why": "das Krankenhaus = المستشفى — مركّب من krank + Haus، والجنس من آخر جزء: das Haus — الجمع Krankenhäuser."
           },
@@ -207,6 +207,7 @@
           "bahnhof",
           "schule",
           "kurs",
+          "bus",
           "zug",
           "fuss",
           "minute",
@@ -219,8 +220,7 @@
           "gross",
           "klein",
           "viel",
-          "jetzt",
-          "weg"
+          "jetzt"
         ],
         "explanationRequired": true
       },
@@ -265,7 +265,7 @@
           },
           {
             "audioId": "sk-5",
-            "speakText": "Das ist nicht weit. Bei mir ist alles klein: die Kirche, die Post und die Bank sind hier am Platz.",
+            "speakText": "Fünf Minuten — das ist gut. Bei mir ist alles klein: die Kirche, die Post und die Bank sind hier am Platz.",
             "q": "استمع: ماذا في ساحة بلدة لينا؟",
             "choices": [
               "الكنيسة والبريد والبنك",
@@ -548,9 +548,9 @@
           },
           {
             "audioId": "sk-7",
-            "speakText": "Die Apotheke ist gegenüber der Kirche. Und das Krankenhaus ist im Süden, weit weg.",
-            "a": "Die Apotheke ist gegenüber der Kirche. Und das Krankenhaus ist im Süden, weit weg.",
-            "why": "Apotheke بحرف كبير وth تُنطق [t] · gegenüber بـü · Kirche بـch · Krankenhaus كلمة واحدة بحرف كبير · Süden بـü · weit weg."
+            "speakText": "Die Apotheke ist gegenüber der Kirche. Und das Krankenhaus ist im Süden — zwanzig Minuten mit dem Bus.",
+            "a": "Die Apotheke ist gegenüber der Kirche. Und das Krankenhaus ist im Süden — zwanzig Minuten mit dem Bus.",
+            "why": "Apotheke بحرف كبير وth تُنطق [t] · gegenüber بـü · Kirche بـch · Krankenhaus كلمة واحدة بحرف كبير · Süden بـü · zwanzig بـz وw."
           },
           {
             "audioId": "sk-15",
@@ -597,14 +597,15 @@
         ],
         "interleavedWith": [
           "kurs",
+          "bus",
+          "minute",
           "gehen",
           "wohnen",
           "kommen",
           "familie",
           "super",
           "jetzt",
-          "morgen",
-          "weg"
+          "morgen"
         ],
         "explanationRequired": true
       }
@@ -615,7 +616,7 @@
         "ar": "تسأل زميلك عن مكان في مدينته وتجيب عن مكان في مدينتك بجملة موقع واحدة صحيحة"
       },
       "situation": {
-        "de": "Im Kurs: Wo ist die Post? Wo ist der Park? Ist das weit? Hier oder dort? Im Norden oder im Süden?",
+        "de": "Im Kurs: Wo ist die Bank? Wo ist der Park? Wie viele Minuten? Hier oder dort? Im Norden oder im Süden?",
         "ar": "في الدورة: كلٌّ منكما يصف مدينته على الشاشة — يسأل الآخر عن ثلاثة أماكن (Wo ist die Apotheke / die Bank / das Museum?) ويجيب بجملة موقع واحدة: مقابل (gegenüber der Kirche · gegenüber dem Bahnhof) أو الجهة (im Norden · im Osten) أو هنا/هناك — ثم يصف الطريق بكلمتين (geradeaus · links · zurück) وبالدقائق — وتتبادلان."
       },
       "successCriteria": [
@@ -831,7 +832,7 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Wo ist die Apotheke? — Die Apotheke ist gegenüber der Kirche. · Das Museum ist gegenüber dem Park. · Die Schule ist gegenüber dem Bahnhof. · Mein Kurs ist im Norden von Berlin. · Das Krankenhaus ist im Süden, weit weg. · Wir fahren nach Süden. · Die Bank ist hier, die Post ist dort. · Zu Fuß geradeaus — fünf Minuten. · Ich gehe jetzt zurück zum Kurs. · Er fährt mit dem Bus zurück.",
+      "de": "Wo ist die Apotheke? — Die Apotheke ist gegenüber der Kirche. · Das Museum ist gegenüber dem Park. · Die Schule ist gegenüber dem Bahnhof. · Mein Kurs ist im Norden von Berlin. · Das Krankenhaus ist im Süden — zwanzig Minuten mit dem Bus. · Wir fahren nach Süden. · Die Bank ist hier, die Post ist dort. · Zu Fuß geradeaus — fünf Minuten. · Ich gehe jetzt zurück zum Kurs. · Er fährt mit dem Bus zurück.",
       "ar": "جملة الموقع: Wo ist …? والجواب hier/dort أو gegenüber + الداتيف (der/das ← dem · die ← der — كـmit/bei) أو الجهة: im Norden/Süden/Osten/Westen للموقع (in + dem = im) وnach Norden بلا أداة للاتجاه (كـnach Berlin). كلمتا الطريق: geradeaus (إلى الأمام مباشرة) · zurück (رجوعاً — في آخر الجملة أو قبل الوجهة: zurück zum Kurs). الأماكن: die Kirche (‑n) · das Krankenhaus (Krankenhäuser) · die Apotheke (‑n) · die Universität (‑en) · die Bank (‑en) · die Post (بلا جمع) · der Park (‑s) · das Museum (Museen) · der Platz (Plätze) · der Norden · der Süden · der Osten · der Westen."
     },
     "warningCards": [
