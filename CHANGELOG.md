@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 118: a1-u9-d3 مُرقّى — طلب المساعدة والأمر Sie (D163) · ars-imperativ-sie · نواة bitten/erklären/die Hilfe · معجم erklärt
+- **إضافة:** `content/arsenal/grammar/ars-imperativ-sie.json` (ثلاث وأربعون قاعدة يوم — usedInLessons u9-d3 + u9-d4 + u9-d6) · `content/words/{bitten,erklaeren,hilfe}.json` + مقاطعها (المولِّد D105) · حوار `a1-u9-d3-weg-und-hilfe` (wf-1..20 تمرين أدوار عبر الشاشة) · مانيفست 1687 · مدخل معجم erklärt (71).
+- **تحسين المحتوى:** 53 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح (بلا ضمير بعد الأمر ⇒ ~~Biegen links ab~~ · «ساعدني» مفعول مباشر ⇒ ~~Helfen Sie mich~~ · «انعطف» كلمة واحدة ⇒ ~~Biegen Sie ab links~~) · 15 كلمة.
+- **تصحيح بيانات:** مثالا zuerst/danach بلا dann/zweite · خطة النواة u9-d3 done · gen-audio.py word_tracks +3 · المرجع 1400 · تسجيل wf على Kurs/danach/Stadtplan/geradeaus/okay/Tunesien (N-099).
+- **اختبارات:** كتلة D163 (+1) · خطة النواة (u9-d3 done · المعلّق u9-d4) · المثال غير المُرقّى ← a1-u9-d4 · 855 كلمة · 692/692 · validator 1072/0/0.
+
 ## 2026-10-17 — الدفعة 117: a1-u9-d2 مُرقّى — بالحافلة والقطار (D162) · معجم Bahnsteig/Haltestelle · استعادة البيئة (N-104)
 - **إضافة:** `content/arsenal/grammar/ars-weg-verkehr.json` (اثنتان وأربعون قاعدة يوم — القاعدة المخططة: einsteigen/umsteigen/aussteigen · Wo/Wohin · Linie/Bahnsteig بلا أداة · Abfahrt/Ankunft um … Uhr · weit/nah · hin und zurück · vorbei · überall — usedInLessons u9-d2 + u9-d3 + u9-d6) · حوار `a1-u9-d2-mit-bus-und-bahn` (hb-1..20 مكالمةً) · مانيفست 1664 · مدخلا معجم Bahnsteig وHaltestelle (70).
 - **تحسين المحتوى:** 52 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح («أغيّر» فعل واحد ⇒ ~~Ich umsteige~~ · «أين تذهب؟» ⇒ ~~Wo fährst du?~~ · «الساعة الثامنة» ⇒ ~~ist acht Uhr~~) · بلا نواة.

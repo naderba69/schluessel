@@ -1,5 +1,17 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
+## الدفعة 118 (2026-10-17) — الدرس الثالث والأربعون مُرقّى: «طلب المساعدة والأمر Sie» (D163) — قاعدة جديدة ونواة ثلاث
+- **قاعدة اليوم `ars-imperativ-sie`** (المخططة — تشاركها u9-d4 وu9-d6): الفعل أولاً ثم Sie (Gehen Sie! · Nehmen Sie den Bus!) · الجزء المنفصل في الآخر (Biegen Sie links ab!) · helfen + الداتيف (Helfen Sie mir! · Ich helfe dir.) · Können Sie mir helfen/den Weg erklären? · zuerst/danach · um Hilfe bitten · Danke für die Hilfe! — الحدود: الأمر مع du/ihr لاحقاً · in die Straße/an der Ecke u9-d4 · bitten + أن ليس A1 · داتيف الأسماء u11.
+- **النواة 3 (D113) بالمولِّد D105:** bitten · erklären · die Hilfe (goetheList مشتقة A1+A2 · مقاطع ≤1.1s · w-srs 0.26) ⇒ 15 كلمة · الخطة u9-d3 done · النواة 36/48 (94/123) · التالي a1-u9-d4 (auf sein · zu sein).
+- **مثالان مصحّحان:** zuerst (dann ⇒ danach) · danach (zweite ⇒ biegen Sie rechts ab).
+- **حوار جديد** `a1-u9-d3-weg-und-hilfe` (wf-1..20) — **تمرين أدوار عبر الشاشة:** لينا الاستعلامات ويوسف يسأل (المحطة المركزية · الاستعلامات عند المدخل · المخرج · خريطة) ثم يتبادلان (الصيدلية مقابل الكنيسة · Danke für die Hilfe!) · لينا تطلب المساعدة في الواجب · «morgen fliege ich» (عشية السفر).
+- **النطق:** المرجع 1400 · مدخل معجم جديد erklärt [ɛ⇒ɛː] (71) · wf-15/16 أُعيدا · ستة مداخل قديمة سُجّلت على wf يدوياً (N-099) · صفر مخالفة.
+- **التطبيق:** 53 بنداً (فراغ 22 · استماع 15 · ترتيب 6 · إملاء 10) · Quiz 3×6 · 3 مصائد (10‑ي) · ما أمسكته الفحوص: أربع إجابات Quiz داخل فراغ مملوء · speakText ≠ نص المسار · شرح بلا عربية · interleavedWith (ü/كلمة الدرس).
+- **D108:** صفر جملة مؤلَّفة مطابقة — صيغ الوظيفة الرسمية («Können Sie mir helfen?») هي هدف الدرس وبقيت موثّقة.
+- **الاختبارات (+1):** u9-d3 كاملاً · خطة النواة · المثال القديم ← a1-u9-d4 · الطفرة 1/1 · 692/692 · validator 1072/0/0.
+- **الحالة:** ترقية 43/60 · نواة 36/48 (94/123) · 855 كلمة · 1687 مساراً · 43 قاعدة يوم · معجم 71 · التالي a1-u9-d4 (نواة auf sein · zu sein · `ars-wechselpraep` بلا ملف).
+- **السجل:** لا ملاحظة جديدة؛ حُدّثت N-010 · N-011 · N-096 · N-099 · N-103 · N-104.
+
 ## الدفعة 117 (2026-10-17) — الدرس الثاني والأربعون مُرقّى: «بالحافلة والقطار» (D162) — واستعادة البيئة بعد الانقطاع (N-104)
 - **البيئة:** صندوق جديد أضاع `/home/user/work` و`/tmp` وأعاد HEAD إلى قاعدة الفرع ⇒ `git reset origin/<الفرع>` · استُعيدت نصوص SD1/A2 من الـblob نفسه `0c8162cb…` (SpringNuance) وipa-dict (المرجع 1396) · أُعيد بناء check.ts مع فحص «كلمة درس لاحق» (N-103 نموذجاً — أمسك weit وFahrt).
 - **قاعدة اليوم `ars-weg-verkehr`** (المخططة نفسها؛ تشاركها u9-d3 وu9-d6): einsteigen/umsteigen/aussteigen منفصلة + muss + الفعل كاملاً + nicht قبل الجزء · Wo ≠ Wohin · Linie 5/Bahnsteig 3/in Richtung بلا أداة · Abfahrt/Ankunft um … Uhr · weit/nah · hin und zurück · am Park vorbei · überall — الحدود: in den Bus/an der Haltestelle u9-d4 · أمر Sie u9-d3 · an der Kirche vorbei u9-d4 · abfahren/ankommen u12.
