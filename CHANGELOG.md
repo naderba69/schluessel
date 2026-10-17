@@ -1,5 +1,14 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 113: a1-u8-d3 مُرقّى — ما يجب وما يمكن (D158) · وتسريع النطق بلا ONNX
+- **إضافة:** `content/arsenal/grammar/ars-koennen-muessen.json` (ثامن وثلاثون قاعدة يوم — القاعدة المخططة: الفعل الناقص ثانياً والمصدر آخراً بلا zu · ich = er بلا ‑t · kann/können · muss/müssen · nicht müssen = لا حاجة — usedInLessons u8-d3 + u8-d6) · `content/words/kriegen.json` (النواة) + مقطعه · حوار `a1-u8-d3-was-musst-du-kaufen` (20 سطراً km-1..20) · مدخل معجم Abteilung (نبر ‑teil‑؛ word-abteilung معاد توليده).
+- **تحسين المحتوى:** 50 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد جديدة بتعليل صحيح («أن» ⇒ ~~Ich muss zu bezahlen.~~ · الفعلان يتصرّفان معاً ⇒ ~~Ich muss kaufe einen Gürtel.~~ · «يجب» ثابتة ⇒ ~~Du muss bezahlen.~~) · استدعاء anprobieren/kaufen/bezahlen بدل passen/möglich (N-020 مغلقة).
+- **تصحيح بيانات:** أمثلة korb/wagen بلا «voll» · kreditkarte بلا داتيف · Wagen/Gürtel «Gleich_plural» ⇒ «بلا نهاية» (بقي 22) · Stück/Kleidung ملاحظتان دقيقتان · تسجيل km على Tunesien/okay/Kreditkarte/regnet (N-099) · المرجع 1362.
+- **أداة:** `tools/gen-audio.py` `load_phonemizer()` — النطق بلا جلسة ONNX (3.5 ث ⇒ 0.4 ث لكل عملية Python؛ اختبارات المعجم كانت تسقط بالمهلة) — تستعمله phonemize.py وpronunciation-audit.py والاختبارات.
+- **الاختبارات:** +2 (درس u8-d3 الكامل · مصائده الثلاث) · المثال القديم ← a1-u8-d4 · الخطة: u8-d3 done والتالي a1-u9-d3 · ALL_WORDS 852 · 687/687.
+- **الرفع:** `0fcd1af` (المحتوى والأدوات) ثم الوثائق.
+- **الخطة والسجل:** 35/48 نواة · 91/123 كلمة · 38/60 ترقية · التالي a1-u8-d4. أُغلقت N-020؛ حُدّثت N-010/N-011/N-013/N-015/N-021/N-022/N-050/N-060/N-085/N-096/N-099.
+
 ## 2026-10-17 — الدفعة 112: a1-u8-d2 مُرقّى — الأسعار (D157) · وحادث build_all العرضي وحارسه
 - **إضافة:** `content/arsenal/grammar/ars-preise.json` (سابع وثلاثون قاعدة يوم — القاعدة المخططة: الشيء فاعلٌ والفعل يتبعه kostet/kosten · السنتات بعد Euro بلا كلمة Cent وما دون اليورو بـCent · الحكم günstig/billig/zu teuer · Rabatt بالمبلغ · am besten) · حوار `a1-u8-d2-was-kosten-die-schuhe` (20 سطراً ws-1..20) · كلمتا النواة beste · circa بالمولِّد · مدخل معجم circa (c اللاتينية كافاً ⇒ [ts]) · مراجعة neunundachtzig (variant — المرجع غير متسق في نبر الأعداد المركّبة).
 - **تحسين المحتوى:** 48 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد جديدة بتعليل صحيح («الحذاء» مفردٌ للزوج ~~Was kostet die Schuhe?~~ · «كم» واحدة ~~Wie kostet das Hemd?~~ · علامة المفعول لا تظهر ~~den Kunde~~ — n-Deklination) · 12 مثال بطاقة رتيباً صار جملاً بالمدروس · بطاقات الاستدعاء من دروس سابقة (Preis · kosten · bezahlen) · هدف ومهمة وخلاصة بالمدروس.
