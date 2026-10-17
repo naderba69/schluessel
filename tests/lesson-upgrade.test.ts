@@ -123,7 +123,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u11-d4")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D173 صارت الوحدات 1–10 (d1..d5) وu11-d1..d3 مُرقّاة (d6 توليف خارج المرور — N-004)
+const legacy = realLessons.find((l) => l.id === "a1-u11-d5")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D174 صارت الوحدات 1–10 (d1..d5) وu11-d1..d4 مُرقّاة (d6 توليف خارج المرور — N-004)
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -415,7 +415,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u11-d4", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u11-d5", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -601,18 +601,21 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("الدرس التالي غير المُرقّى (a1-u11-d4 بعد D173): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u11-d5 بعد D174): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
-    // الفجوات الفعلية لـu11-d4 (مقيسة قبل النقل): ملفا ars-perfekt وars-satzklammer موجودان · مثال blut «Das Blut ist rot.» (rot غير مدروسة) · 6 بنود choice بلا خيارات ونوع واحد
-    // بلا استماع ولا إملاء · لا كلمة غريبة في التدريب · Quiz 3×4 · وكل الكلمات لها بند — القياس لا التخمين
-    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-sample"]);
-    expect(r.rule[0]?.message).toMatch(/blut .*rot/);
+    // الفجوات الفعلية لـu11-d5 (مقيسة قبل النقل): ars-modal-fix بلا ملف (وars-dativ-fix موجودة) · 6 بنود choice بلا خيارات ونوع واحد · بلا استماع ولا إملاء
+    // tischlampe في التدريب وdativ في الـQuiz · Quiz 3×4 · وكلمة واحدة بلا أي بند (bauchschmerz) — القياس لا التخمين
+    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule"]);
+    expect(r.rule[0]?.message).toMatch(/ars-modal-fix/);
     expect(r.practice.map((i) => i.code).sort()).toEqual([
-      ...Array(6).fill("e-upgrade-item"), "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
+      ...Array(6).fill("e-upgrade-item"), "e-upgrade-front", "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
     ].sort());
-    expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size"]);
-    expect(r.coverage).toEqual([]);
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: tischlampe$/);
+    expect(r.quiz.map((i) => i.code).sort()).toEqual(["e-upgrade-front", "e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size"]);
+    expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: dativ$/);
+    expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);
+    expect(r.coverage[0]?.message).toMatch(/bauchschmerz$/);
     expect(r.quizMin).toBe(4);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
@@ -1746,6 +1749,108 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
+  it("a1-u11-d4 مُرقّى (D174): صفر نقص — 68 بنداً · 4 أنواع · Quiz 6 · 12 كلمة · بلا قاعدة جديدة (ars-perfekt + ars-satzklammer موجودتان) · بلا نواة · مثال blut صُحّح · كل 20 سطراً وثمانية مقاطع كلمات مستخدمة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u11-d4")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u11-d4")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([68, 4, 6, 12]);
+    // الكلمات الاثنتا عشرة كلها جديدة (لا تكرار من الوحدات 1–10 وu11-d1..d3) — ولا نواة لهذا الدرس في خطة SD1 (التالي a1-u11-d5)
+    const earlier = new Set(realLessons.filter((x) => x.unit <= 10 || (x.unit === 11 && x.day < 4)).flatMap((x) => x.praesentation.wordIds));
+    expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(l.praesentation.wordIds).toEqual(["fuehlen", "verbinden", "wunde", "blut", "bluten", "spritze", "impfung", "schlucken", "rauchen", "erlauben", "thermometer", "pflaster"]);
+    // قاعدتا اليوم موجودتان من قبل: ars-perfekt (D173 — مراجعة haben/sein بأفعال اليوم) وars-satzklammer (u9-d5 — kann/muss والأمر بـSie) — لا ملف جديد؛ sich fühlen يُقدَّم من بطاقة الكلمة والمصيدة الأولى (N-115)
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-perfekt", "ars-satzklammer"]);
+    expect(l.usedArsenalIds).toEqual(["ars-perfekt", "ars-satzklammer"]);
+    expect(rules.get("ars-perfekt")!.usedInLessons).toContain("a1-u11-d4");
+    expect(rules.get("ars-satzklammer")!.usedInLessons).toContain("a1-u11-d4");
+    // لا passiert/Angst/mutig/schneiden/geschnitten/dazu/etwas/Winter/Oh (خارج الجبهة) ولا Schnupfen/schmerzen (u11-d5) ولا denn/leider/dann (u12-d4) ولا gewesen/gehabt في ما يُعرض — ولا مثال SD1 الرسمي «Wie fühlen Sie sich?» مستقلاً (D108 · N-113)
+    const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise.a]), g: l.ziel.de, t: [l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de] });
+    expect(shown).not.toMatch(/\b(passiert|Angst|mutig|schneiden|geschnitten|dazu|etwas|Winter|Oh|Schnupfen|schmerzen|denn|leider|dann|gewesen|gehabt|hattest|Körper|Doktor|Lenas|Mama)\b|Wie fühlen Sie sich\?/);
+    expect(JSON.stringify(l.quiz.variants.map((v) => v.items.map((i) => i.choices)))).not.toMatch(/\b(gebekommen|geverbunden|gewesen|gehabt)\b/); // المشتِّتات أيضاً من صيغ معروفة (لا ge‑ مختلقة)
+    expect(e.properNouns).toEqual(["Lena"]); // Yusuf لا يظهر في نصوص الدرس (الحوار يرويه الصوت فقط)
+    expect(e.misspellings ?? []).toEqual([]);
+    expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
+    // مثال blut صُحّح («Das Blut ist rot.» — rot بلا درس) — والأمثلة كلها من هذا الدرس وبلا أسماء
+    const w = (id: string) => words.find((x) => x.id === id)!;
+    const sample = (id: string) => w(id).sampleSentence!.de;
+    expect(sample("blut")).toBe("Das Blut kommt aus der Wunde.");
+    expect(sample("fuehlen")).toBe("Ich fühle mich besser.");
+    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|\brot\b|Wie fühlen Sie sich\?/);
+    for (const id of l.praesentation.wordIds) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u11-d4");
+    // الحوار (kc-1..20) مكالمة فيديو مساء اليوم الحادي عشر بتونس (N-037/N-100): الخميس 9 أبريل · «Hallo Lena! Wie fühlst du dich heute?» — لا passiert/Angst/mutig/dann/leider/Oh ولا geschnitten
+    const script = JSON.parse(readFileSync(join(CONTENT, "audio-scripts/a1-u11-d4-wie-fuehlst-du-dich.json"), "utf8")) as { lines: { id: string; speaker: string; text: string }[] };
+    expect(script.lines).toHaveLength(20);
+    expect(script.lines.find((x) => x.id === "kc-1")?.text).toBe("Hallo Lena! Wie fühlst du dich heute?");
+    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\b(passiert|Angst|mutig|geschnitten|dazu|etwas|Winter|Oh|Schnupfen|dann|leider|denn|gewesen|gehabt|stark|dabei|Doktor|Mama|Lenas)\b|Wie fühlen Sie sich\?/);
+    expect(script.lines.filter((x) => /\b[Ff]ühl(st|e)\b/.test(x.text)).map((x) => x.id)).toEqual(["kc-1", "kc-2", "kc-10"]); // sich fühlen ثلاث مرات: dich · mich · dich
+    expect(script.lines.filter((x) => /\bhat .*(geblutet|verbunden|bekommen|gesprochen|getan)\b/.test(x.text)).length).toBeGreaterThanOrEqual(4); // haben بأفعال اليوم
+    expect(script.lines.find((x) => x.id === "kc-18")?.text).toContain("Rauchen Sie nicht!");
+    // N-020 لهذا الدرس: الاستدعاء من دروس سابقة (bringen · bleiben · gehen) كما كان
+    expect(l.warmup.cardIds).toEqual(["bringen", "bleiben", "gehen"]);
+    expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+    // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102) — ومنه كلمات الأيام الماضية (finger · arzt · tablette · hals)
+    const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
+    for (const st of l.uebung.stations) {
+      expect(st.interleavedWith.length).toBeGreaterThan(0);
+      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
+      for (const ref of st.interleavedWith) {
+        expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
+        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
+        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+      }
+    }
+    expect(l.uebung.stations.find((s) => s.type === "listening")!.interleavedWith).toEqual(expect.arrayContaining(["finger", "hals", "kurs", "arzt"]));
+    // الحوار الجديد (kc-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من أربعة أسطر بطيئة (≤132) مع ثمانية مقاطع كلمات، والأسرع الستة عشر كلها استماعاً
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("kc-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 20 }, (_, i) => `kc-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-bluten", "word-fuehlen", "word-impfung", "word-pflaster", "word-schlucken", "word-spritze", "word-verbinden", "word-wunde"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; textDe: string; voiceParams: { speedWpm: number } }[] };
+    expect(manifest.tracks).toHaveLength(1928); // 1908 بعد D173 + kc-1..20 — أحدث كتلة تثبّت العدد الكلي
+    expect(manifest.tracks.filter((t) => t.id.startsWith("kc-"))).toHaveLength(20);
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    const fast = Array.from({ length: 20 }, (_, i) => `kc-${i + 1}`).filter((id) => wpm.get(id)! > 132);
+    expect(fast).toHaveLength(16);
+    for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
+    const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
+    for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
+    // معجم النطق: لا مدخل جديد في D174 (75) — مدخلان قائمان سُجّلت أسطرهما الجديدة (Hals · Kurs — N-099)
+    const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
+    expect(lex.entries).toHaveLength(75);
+    const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("kc-"));
+    expect(regen("Hals")).toEqual(["kc-4"]);
+    expect(regen("Kurs")).toEqual(["kc-9"]);
+    expect(regen("gehustet")).toEqual([]);
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set([...l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))), ...l.zusammenfassung.warningCards.flatMap((c) => [c.correct.de, String(c.exercise.a)])]);
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    const norm = (x: string) => x.toLowerCase().replace(/[^\p{L}\s]/gu, " ").replace(/\s+/g, " ").trim();
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(norm(a))))).toEqual([]);
+    expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
+    expect(quizAnswers.filter((a) => a === "Wie fühlen Sie sich?")).toEqual([]); // ولا إجابة = مثال SD1 لـfühlen وحده (D108)
+    // كل إجابة Quiz إلا ثلاثاً (sein بأفعال الأمس: gegangen · geblieben · gehen) تحمل كلمة من اليوم أو صيغتها — والمشتِّتات أخطاء ضمير/مساعد/ترتيب/أداة بصيغ معروفة
+    expect(quizAnswers.filter((a) => /(?<!\p{L})(fühle|fühlt|Fühlen|mich|sich|geblutet|verbunden|bekommen|schlucken|Schlucken|Rauchen|geraucht|erlaubt|Pflaster|Thermometer|Grad|Impfung|Wunde)(?!\p{L})/u.test(a))).toHaveLength(15);
+    // المصائد الثلاث (sich fühlen بلا منعكس/بالداتيف · sein بدل haben لأفعال اليوم · الأمر بـSie والقوس) — كل واحدة بـ10‑ي
+    expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de)).toEqual(["~~Ich fühle besser.~~ · ~~Ich fühle gut.~~ · ~~Ich fühle mir gut.~~ · ~~Wie fühlst du?~~", "~~Der Finger ist geblutet.~~ · ~~Der Arzt ist die Wunde verbunden.~~ · ~~Ich bin eine Spritze bekommen.~~", "~~Sie rauchen nicht!~~ · ~~Nicht rauchen Sie!~~ · ~~Rauchen Sie kein!~~ · ~~Ich kann schlucken nicht gut.~~"]);
+    for (const c of l.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+  });
   it("a1-u11-d3 مُرقّى (D173): صفر نقص — 68 بنداً · 4 أنواع · Quiz 6 · 12 كلمة · ars-perfekt (جديدة: sein + war/hatte في ملف واحد) · بلا نواة · مثال husten صُحّح · كل 20 سطراً وثمانية مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u11-d3")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u11-d3")!;
@@ -1823,7 +1928,7 @@ describe("D115 — أدوات القياس", () => {
     expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-bleiben", "word-dauern", "word-husten", "word-liegen", "word-niesen", "word-schwach", "word-verschwinden", "word-wieder"]);
     expect(audioIds.every((id) => tracks.has(id))).toBe(true);
     const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; textDe: string; voiceParams: { speedWpm: number } }[] };
-    expect(manifest.tracks).toHaveLength(1908); // 1888 بعد D172 (وثائق الدفعة 127 كتبت 1889 خطأً — صُحّحت في الدفعة 128) + kb-1..20
+    expect(manifest.tracks.filter((t) => t.id.startsWith("kb-"))).toHaveLength(20); // المجموع كان 1908 بعد D173 (1888 بعد D172 — وثائق الدفعة 127 كتبت 1889 خطأً) — العدد الكلي تثبّته أحدث كتلة
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `kb-${i + 1}`).filter((id) => wpm.get(id)! > 132);
