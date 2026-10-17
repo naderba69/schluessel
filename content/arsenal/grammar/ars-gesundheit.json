@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-gesundheit",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Was fehlt dir? — Ich habe Fieber und Kopfschmerzen. · Ich muss zur Ärztin. · Der Arzt gibt mir ein Rezept.",
+    "ar": "عند الطبيب: المرض بـhaben (Fieber · Kopfschmerzen جمعاً · eine Erkältung · die Grippe · Schwindel) · fehlen بالداتيف: Was fehlt dir/Ihnen? — وبلا داتيف «يغيب/ينقص» · zum Arzt / zur Ärztin (zu + داتيف) · untersucht mich · gibt mir ein Rezept · Nehmen Sie eine Tablette!"
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u11-d2",
+    "a1-u11-d6"
+  ],
+  "payload": {
+    "topicAr": "«ما بك؟» — بالعربية جملة بلا فعل، وبالألمانية فعلٌ غريب: Was fehlt dir? — حرفياً «ماذا ينقصك؟» — وصاحب الشكوى بالداتيف. اليوم تجيب عنه: Ich habe Fieber. · Ich habe Kopfschmerzen (جمعاً دائماً). · Ich habe eine Erkältung. — وتذهب zum Arzt أو zur Ärztin (zu + داتيف من u8-d4)، فتفحصك: Die Ärztin untersucht mich. — وتعطيك وصفة: Der Arzt gibt mir ein Rezept. — وتأخذ الدواء: Nehmen Sie eine Tablette! — وfehlen نفسها تقول «يغيب»: Der Lehrer fehlt heute.",
+    "sceneAr": "مكالمة مساء الثلاثاء 7 أبريل (اليوم التاسع بتونس — u11-d2): لينا لم تردّ صباحاً — Was fehlt dir? · Ich habe Fieber — und Kopfschmerzen seit gestern Abend · ein bisschen Schwindel · أمها: Du musst zur Ärztin · موعد في الحادية عشرة: Die Ärztin hat mich untersucht: Hals, Ohren, Bauch · keine Grippe, nur eine Erkältung · Sie hat mir ein Rezept gegeben: Tabletten für das Fieber und ein Medikament für den Hals · eine Tablette am Morgen und eine am Abend · أمها تحضر الدواء aus der Apotheke · drei Tage im Bett — morgen fehle ich in der Schule · وفي دورة يوسف: der Lehrer fehlt heute, er ist auch krank · «Du bist meine Ärztin!»",
+    "examples": [
+      {
+        "de": "Ich habe Fieber. · Ich habe Kopfschmerzen seit gestern Abend. · Ich habe eine Erkältung, aber keine Grippe. · Ich habe auch ein bisschen Schwindel.",
+        "ar": "عندي حمّى · عندي صداع منذ مساء أمس · عندي نزلة برد لا إنفلونزا · وعندي قليل من الدوخة أيضاً — المرض بـhaben: Fieber وSchwindel بلا أداة · Kopfschmerzen جمع دائماً · eine Erkältung · die Grippe."
+      },
+      {
+        "de": "Was fehlt dir? — Ich habe Fieber. · Die Ärztin fragt: Was fehlt Ihnen? · Mir fehlt nichts, ich bin gesund. · Der Lehrer fehlt heute, er ist krank. · Hier fehlt ein Wort.",
+        "ar": "ما بك؟ — عندي حمّى · الطبيبة تسأل: ما بكم؟ · لا شيء بي، أنا سليم · المعلّم غائب اليوم، إنه مريض · هنا تنقص كلمة — fehlen بالداتيف (dir · Ihnen · mir) = «ما بك؟» وبلا داتيف = «يغيب/ينقص»."
+      },
+      {
+        "de": "Ich gehe heute zum Arzt. · Du musst zur Ärztin. · Die Ärztin untersucht mich. · Der Arzt gibt mir ein Rezept. · Nehmen Sie eine Tablette am Morgen und eine am Abend! · Das Medikament ist für den Hals.",
+        "ar": "أذهب اليوم إلى الطبيب · يجب أن تذهبي إلى الطبيبة · الطبيبة تفحصني · الطبيب يعطيني وصفة · تناولوا حبة صباحاً وحبة مساءً · الدواء للحلق — zum Arzt / zur Ärztin (zu + داتيف) · untersucht mich (أكوزاتيف) · gibt mir (داتيف) · für den Hals (أكوزاتيف)."
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأول: أي الأمراض جاءت بلا أداة؟ وأيها بـeine وأيها بـdie؟ ولماذا Kopfschmerzen بـ‑en؟ (2) في الثاني: من الفاعل في Was fehlt dir؟ — ما هو dir: فاعل أم داتيف؟ وماذا يعني fehlt مع der Lehrer ومع ein Wort؟ (3) في الثالث: لماذا zum مع Arzt وzur مع Ärztin؟ ولماذا mich بعد untersucht لكن mir بعد gibt؟ ثم اقرأ القاعدة.",
+    "ruleDe": "Ich habe Fieber. · Ich habe Kopfschmerzen. · Ich habe eine Erkältung. · Ich habe die Grippe. · Ich habe Schwindel. · Ich habe seit zwei Tagen Fieber. — Was fehlt dir? · Die Ärztin fragt: Was fehlt Ihnen? · Mir fehlt nichts. · Der Lehrer fehlt heute. · Morgen fehle ich in der Schule. · Hier fehlt ein Wort. — Ich gehe heute zum Arzt. · Du musst zur Ärztin. · Die Ärztin untersucht mich. · Der Arzt gibt mir ein Rezept. · Ich habe ein Rezept bekommen. — Nehmen Sie eine Tablette! · Nimm deine Tabletten! · Eine Tablette am Morgen und eine am Abend. · Das Medikament ist für den Hals. · Meine Mutter holt das Medikament aus der Apotheke.",
+    "ruleAr": "عند الطبيب بأربع خطوات: (1) المرض بـhaben: Ich habe Fieber. · Ich habe Schwindel. (بلا أداة — كـIch habe Zeit) · Ich habe Kopfschmerzen. (الألم في الجمع دائماً: der Kopfschmerz ← die Kopfschmerzen · der Schmerz ← die Schmerzen — ~~Ich habe Kopfschmerz~~) · Ich habe eine Erkältung. (eine) · Ich habe die Grippe. (die) — ومنذ متى بـseit (u8-d5): seit gestern · seit zwei Tagen (داتيف جمع ‑n). (2) fehlen فعل بالداتيف: Was fehlt dir? (للصديق) · Was fehlt Ihnen? (الطبيب للمريض — Ihnen داتيف Sie) — والجواب بالخطوة الأولى: Ich habe Fieber. — وMir fehlt nichts. = لا شيء بي. وبلا داتيف يعني «يغيب»: Der Lehrer fehlt heute. · Morgen fehle ich in der Schule. — أو «ينقص»: Hier fehlt ein Wort. · Es fehlt ein Teil. (der Teil من u11-d1) — التصريف منتظم: ich fehle · du fehlst · er/sie fehlt · wir fehlen · hat gefehlt. (3) إلى الطبيب بـzu + داتيف (ars-dativ-fix من u8-d4): zu dem Arzt = zum Arzt · zu der Ärztin = zur Ärztin — Ich gehe heute zum Arzt. · Du musst zur Ärztin. (musst + zur بلا gehen — كـIch muss zum Kurs) · ومن الصيدلية: aus der Apotheke (u9-d1) — عند الطبيب: Die Ärztin untersucht mich. (مفعول به أكوزاتيف: mich/dich) · Der Arzt gibt mir ein Rezept. (geben: لمن؟ mir داتيف · ماذا؟ ein Rezept أكوزاتيف — كـZeig mir deine Hand! أمس) · Ich habe ein Rezept bekommen. (bekommen من u5-d2). (4) الدواء: das Rezept (الوصفة) ← das Medikament (الدواء) ← die Tablette (الحبة: die Tabletten) — الأمر Sie (u9-d3): Nehmen Sie eine Tablette! · والأمر du: Nimm deine Tabletten! · Trink viel Wasser! — الجرعة بـam: eine Tablette am Morgen und eine am Abend · nach dem Essen — ولمن/لماذا بـfür + أكوزاتيف: für den Hals · für das Fieber. — وكلمات اليوم الثلاث عشرة في جمل: der Arzt (die Ärzte) · die Ärztin (die Ärztinnen) · der Schmerz (die Schmerzen) · der Kopfschmerz (die Kopfschmerzen) · das Fieber · die Erkältung · die Grippe · der Schwindel · das Medikament (die Medikamente) · die Tablette (die Tabletten) · das Rezept (die Rezepte) · untersuchen (untersucht · hat untersucht) · fehlen (fehlt · hat gefehlt).",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «عندي حمّى / عندي صداع» بـ«عند» وفي الألمانية بـhaben: Ich habe Fieber. · Ich habe Kopfschmerzen. — البناء نفسه — عون. (2) «منذ يومين» = seit zwei Tagen (u8-d5) — عون. (3) «الطبيبة تفحصني» — «ني» هي mich: Die Ärztin untersucht mich. — عون. وما يختلف ثلاثة: (1) «صداع» مفرد بالعربية والألمانية تجمع الألم دائماً: ~~Ich habe Kopfschmerz~~ · ~~Ich habe der Schmerz~~ — والصواب: Ich habe Kopfschmerzen. · Ich habe Schmerzen. — بينما Fieber وSchwindel بلا جمع وبلا أداة. (2) «ما بك؟» جملة اسمية بلا فعل، فينقلها المتعلم بـsein أو يصرّف fehlen على المخاطب: ~~Was bist du?~~ · ~~Was fehlst du?~~ · ~~Was fehlt dich?~~ — والألمانية: فعل fehlt ثابت + صاحب الشكوى بالداتيف: Was fehlt dir? · Was fehlt Ihnen? · Mir fehlt nichts. (3) «إلى الطبيب» حرف + اسم بلا أداة، فيقول المتعلم ~~zu Arzt~~ · ~~zu der Arzt~~ · ~~nach dem Arzt~~ · ~~in Arzt~~ — والألمانية: zum Arzt · zur Ärztin (zu + داتيف مدمج) — وكذلك «يعطيني» ← ~~gibt mich~~ — والصواب gibt mir (الداتيف للمُعطى له). خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "«ابقَ في السرير» و«ارقد» و«أحسن/من جديد» والماضي المركّب بـsein وwar/hatte — u11-d3؛ اليوم الحاضر وPerfekt بـhaben: hat mich untersucht · hat mir ein Rezept gegeben.",
+      "«أشعر بـ…» والجراح والضماد والحقنة — u11-d4؛ اليوم الشكوى بـIch habe … وWas fehlt dir?",
+      "الزكام والسعال و«يساعد على» — u11-d3/u11-d5؛ اليوم الأعراض الخمسة: Fieber · Kopfschmerzen · Erkältung · Grippe · Schwindel.",
+      "الإجازة المرضية والتأمين الصحي والصيدلي — A2؛ اليوم الطبيب والوصفة والحبة فقط."
+    ],
+    "beads": [
+      "Die",
+      "Ärztin",
+      "gibt",
+      "mir",
+      "ein",
+      "Rezept."
+    ],
+    "properNouns": []
+  }
+}

@@ -17509,6 +17509,26 @@
       "rmsDb": -16.96
     },
     {
+      "id": "word-fehlen",
+      "file": "words/audio/de-DE/word-fehlen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "fehlen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 920,
+      "sizeBytes": 4410,
+      "hash": "sha256:8c86c8dfa4374c4a6ef09073a6e45bd34b6ddf96ecc2a0fcc3caf5a87842c1f3",
+      "pcmSha256": "c81003ba97bda62769e1c7832861789682b4f99a84f1b242a91579f5b4207e5e",
+      "rmsDb": -16.99
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -39254,6 +39274,446 @@
       "hash": "sha256:bf8f06ce9b1035b81f99b93d03b8664c77f2df1d196ae96a4d6cb9e96b54bce9",
       "pcmSha256": "ff0f68c131cdf686ebe3c31d1562e81a95360c0d268567ab29904198de53b19f",
       "rmsDb": -17.15
+    },
+    {
+      "id": "ka-1",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Lena! Heute Morgen hast du nicht geantwortet. Was fehlt dir?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 4589,
+      "sizeBytes": 20738,
+      "hash": "sha256:c6b1974143a1001ebde3adb656db5777688c6fc34f999207db6290f8e8d98da8",
+      "pcmSha256": "ee43d6711d4439611cf33c708ee8ec96c259851a0d92f08c45885097dfd4284c",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "ka-2",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 115,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich habe Fieber, Yusuf — und Kopfschmerzen seit gestern Abend.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 4680,
+      "sizeBytes": 21811,
+      "hash": "sha256:0f97a98e9873ac274336cc944467f45505c98dc9358ce10600a7ed402f6fadf0",
+      "pcmSha256": "21d9b4d1da59ca3d617f731b4782bcac5a05589a12977400ff90e16e2103490a",
+      "rmsDb": -17.56
+    },
+    {
+      "id": "ka-3",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nicht gut! Hast du auch Schwindel?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 2510,
+      "sizeBytes": 11276,
+      "hash": "sha256:2dbb88541c44ded49dc34068d5f78353787151329d11937f13160f5552a59521",
+      "pcmSha256": "3f14b03662ca894288f50a8e33e48eef7c62abbcf63e2de585ba5983d50252b2",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "ka-4",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ein bisschen. Meine Mutter sagt: Du musst zur Ärztin.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 4712,
+      "sizeBytes": 21717,
+      "hash": "sha256:b071aba2b11ded26b275e9b96ca458c0c806a44e36ca40ce40a55db2275c176b",
+      "pcmSha256": "2dc1a94c77d6d22b0b0ac9e21295027add56580054988ce8a1ea8607477a4398",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "ka-5",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 156,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und? Hast du einen Termin bekommen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 2313,
+      "sizeBytes": 10602,
+      "hash": "sha256:bd5d7f7983a8266ea516603324516e09171d248b2b0a941d7299984d0f2ad01d",
+      "pcmSha256": "dbb8cf354792f5355289fb59d6d89cac0ee32bf6ebac67366cec26fb98787dc2",
+      "rmsDb": -16.97
+    },
+    {
+      "id": "ka-6",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, heute um elf. Die Ärztin hat mich untersucht: Hals, Ohren, Bauch.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 5528,
+      "sizeBytes": 25660,
+      "hash": "sha256:78f9cfc45c5c6f729186ce61a9fade9900ff278986d61d57e02969e451b0c941",
+      "pcmSha256": "db38937ca11a00bfe49c18a521fcab116750c9fabb0cc9ae40a4e5af5357c1ff",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "ka-7",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Was sagt sie? Ist es die Grippe?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 2952,
+      "sizeBytes": 13057,
+      "hash": "sha256:855515e23475397d527260172350130a204fef7bdbf3386a097e7e5830840083",
+      "pcmSha256": "bca25edfc4fb3b20ac5a288c1cfa2d67e3ff0e7d7c36bf44f0181e644dbbcc77",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "ka-8",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, keine Grippe. Nur eine Erkältung — aber mit Fieber.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 4424,
+      "sizeBytes": 20644,
+      "hash": "sha256:1e601c37f58bb509ddd28ed48037c97f1d24937513b9fe5e7f5066885f8046f9",
+      "pcmSha256": "ea9735fac393fbe8724c66edbde887b49374bc5f9aec7e1ef317c2b5a9ad8802",
+      "rmsDb": -17.35
+    },
+    {
+      "id": "ka-9",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 164,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hast du ein Rezept bekommen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 1825,
+      "sizeBytes": 8543,
+      "hash": "sha256:c5be485e0cc2caf481108b8b83a9316f3138d684e71a7c6884ff31f7b65d94a5",
+      "pcmSha256": "01201ee0245a8d9928fd3258e602481ecdf88f2bde7a07f3ca3aebc97c77c834",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "ka-10",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 165,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Sie hat mir ein Rezept gegeben: Tabletten für das Fieber und ein Medikament für den Hals.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 6200,
+      "sizeBytes": 28901,
+      "hash": "sha256:a62d41cf1726ae12f36b250fa2d6ef302e786841315d7f542a9bc8879df626bd",
+      "pcmSha256": "ae3686da8a9249f2709150a9c2cf68702b30b415c37924037b860da6b2443a46",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "ka-11",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nimmst du die Tabletten schon?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 2150,
+      "sizeBytes": 9529,
+      "hash": "sha256:c655d18b4261792802a471fec3949d81eb0d38c065be36b9b6ad1c229e348403",
+      "pcmSha256": "06b939d74b711706aeb6162c711fd7bdf92d209497e4dee967390d3551845587",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "ka-12",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, eine Tablette am Morgen und eine am Abend, nach dem Essen. Meine Mutter holt das Medikament aus der Apotheke.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 8312,
+      "sizeBytes": 38596,
+      "hash": "sha256:349a78cd1e997d18b2e458f3cfc0f843cff61eb3d2048aaeb25373af80543f4a",
+      "pcmSha256": "5f544061dcb1245c2e9f4934c955ff4fad0ccbb7de0c7263a3b545dacf369e20",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "ka-13",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 152,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Schule? Gehst du morgen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 2371,
+      "sizeBytes": 10892,
+      "hash": "sha256:1863f08c542547bea1669790e7cd3b83e0f2838e9050e47170b28ead1cb0acd0",
+      "pcmSha256": "1831bad5973199ed935ae9a2d289e2bb3c99826d481af2207a2a0daa18bed0e3",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "ka-14",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, morgen fehle ich in der Schule. Die Ärztin sagt: drei Tage im Bett.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 6056,
+      "sizeBytes": 27900,
+      "hash": "sha256:0b4550c1241e546e899eedbe6f91a5c5ebf3765668893283bfb01099225e97b3",
+      "pcmSha256": "e93eb33196567442f8d71ce079b3f8a065ddfbd6ea7f843bace4c17ee3571357",
+      "rmsDb": -17.41
+    },
+    {
+      "id": "ka-15",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 179,
+        "lengthScale": 1.32
+      },
+      "textDe": "Bei uns im Kurs fehlt heute der Lehrer. Er ist auch krank.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 4031,
+      "sizeBytes": 18729,
+      "hash": "sha256:e4bf98f7e98bbae23bd30ad7ecf9b9d64b90fb9bc4b275a15ec2d8ca2c1646db",
+      "pcmSha256": "c67ce11eb857ccf8c167ed1b787d40d9fce5fcd4f4e8461126d0dcd6722951e7",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "ka-16",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und was macht ihr jetzt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 1784,
+      "sizeBytes": 8448,
+      "hash": "sha256:6895a9b54c6d963db95c77d1d302e799875486491929bbfc808c7c979f5319a6",
+      "pcmSha256": "a8e3f74a9e1001264c327fefc10a0c68f066c06a81665556cd15e3623ec037f4",
+      "rmsDb": -17.51
+    },
+    {
+      "id": "ka-17",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Eine Lehrerin kommt und wir lernen Wörter: der Arzt, die Ärztin, das Fieber, der Schmerz. Wie bei dir!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 7363,
+      "sizeBytes": 33349,
+      "hash": "sha256:55cb582872c871e6302d19a156118819cfa59c49a30fbe863f2d4e458b1a3a5a",
+      "pcmSha256": "9af2349da82356cdd2667668fd4c0d027240ba1ac5752ce49bf930d79ebd17d6",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "ka-18",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Also kann ich dir helfen: Ich habe alles — Kopfschmerzen, Fieber, Schwindel!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 5608,
+      "sizeBytes": 26038,
+      "hash": "sha256:b95ebd50191217dae07c19401f2d7c368e39cfccb845426a6e660f2e164f5f6c",
+      "pcmSha256": "2832390fae316d01b67dde023152eaea627321eec553d7b31f981cc064d06eb8",
+      "rmsDb": -17.48
+    },
+    {
+      "id": "ka-19",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 146,
+        "lengthScale": 1.32
+      },
+      "textDe": "Du bist meine Ärztin! Trink viel Wasser und nimm deine Tabletten.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 4507,
+      "sizeBytes": 20122,
+      "hash": "sha256:e657b303c8ea9157a3a4b3b5ba4869bc010fb0a053f3fa72acd99ec8929162b0",
+      "pcmSha256": "dc912f04dfc012c284c10f7faeadd6a8fa513cf78ff574110542f08bc99e55b4",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "ka-20",
+      "file": "audio/scripts/a1-u11-d2-was-fehlt-dir/ka-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ja. Danke, Yusuf. Ich rufe dich morgen an!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d2"
+      ],
+      "durationMs": 4168,
+      "sizeBytes": 19384,
+      "hash": "sha256:9f54d3497d59ae716527a161c97666e6d1616d1032c35352d3f8c414f049eba5",
+      "pcmSha256": "4538e8238419aec331a5f10c64275ce47ce777718c5f10d9bc632d9f0f2e6978",
+      "rmsDb": -17.19
     }
   ],
   "characterVoices": {
