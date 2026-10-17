@@ -235,7 +235,8 @@
         "word-vierzig",
         "ws-4",
         "ws-5",
-        "fh-6"
+        "fh-6",
+        "hb-7"
       ]
     },
     {
@@ -667,7 +668,8 @@
         "mt1-h1-d3-l2",
         "word-geradeaus",
         "sk-4",
-        "sk-16"
+        "sk-16",
+        "hb-17"
       ]
     },
     {
@@ -1415,7 +1417,53 @@
       ],
       "regeneratedTracks": [
         "fh-7",
-        "fh-8"
+        "fh-8",
+        "hb-20"
+      ]
+    },
+    {
+      "word": "Bahnsteig",
+      "forms": [
+        {
+          "espeak": "bˈɑːnstaɪk",
+          "ipa": "bˈɑːnʃtˌaɪk"
+        }
+      ],
+      "referenceIpa": "/ˈbaːnˌʃtaɪ̯k/",
+      "referenceNote": "فونيمٌ لا نبر (D162): Bahnsteig مركّب Bahn + Steig، وst في أول الجزء الثاني تُنطق [ʃt] كـSteig/Stelle/steigen (ʃtˈaɪɡə عند espeak نفسه) — espeak يقرؤها [st] كأنها داخل كلمة واحدة (Fenster)، والمرجع يثبت /ˈbaːnˌʃtaɪ̯k/. الخطأ في المفرد وحده هنا؛ الجمع Bahnsteige لم يُستعمل في أي مقطع منشور.",
+      "analogy": "Steig [ʃtˈaɪk] · steigen [ʃtˈaɪɡən] · Haltestelle [ʃt] · Stadtplan [ʃtˈat] (espeak نفسه) — st في أول جزء المركّب = [ʃt] دائماً",
+      "contexts": [
+        "der Bahnsteig.",
+        "Weißt du schon den Bahnsteig?",
+        "Bahnsteig drei, Richtung Flughafen. Am Montag ist überall Verkehr — ich fahre früh."
+      ],
+      "regeneratedTracks": [
+        "word-bahnsteig",
+        "hb-9",
+        "hb-10"
+      ]
+    },
+    {
+      "word": "Haltestelle",
+      "forms": [
+        {
+          "espeak": "hˈaltɛʃtˌɛlə",
+          "ipa": "hˈaltəʃtˌɛlə"
+        }
+      ],
+      "referenceIpa": "/ˈhaltəˌʃtɛlə/",
+      "referenceNote": "حركةٌ لا نبر (D162): Haltestelle = Halte + Stelle، وe الوصل في Halte‑ شوا [ə] كـhalte (hˈaltə عند espeak نفسه في Ich halte) — espeak يفتحها [ɛ] كأنها منبورة ثانوياً، والمرجع يثبت /ˈhaltəˌʃtɛlə/. النبر والفونيمات الأخرى صحيحة؛ الجمع Haltestellen لم يُستعمل في أي مقطع منشور؛ والمسار القديم mt1-h1-d6-l3 (نموذج الامتحان) أُعيد معها.",
+      "analogy": "halte [hˈaltə] · Tasche [tˈaʃə] · Speisekarte [ʃpˈaɪzəkˌaɾtə] (المدخل 53) — e الوصل داخل المركّب شوا لا [ɛ]",
+      "contexts": [
+        "die Haltestelle.",
+        "Ja. Die Haltestelle ist gegenüber der Bäckerei. Dort steige ich ein — Linie 5.",
+        "Und von der Haltestelle zur Oma — ist das weit?"
+      ],
+      "regeneratedTracks": [
+        "word-haltestelle",
+        "mt1-h1-d6-l3",
+        "hb-2",
+        "hb-16"
       ]
     }
   ],

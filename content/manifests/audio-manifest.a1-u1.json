@@ -10321,11 +10321,11 @@
       "lessonRefs": [
         "a1-u9-d2"
       ],
-      "durationMs": 1222,
-      "sizeBytes": 5747,
-      "hash": "sha256:b9a982a7d12084aadfbb2e4a93aaad0a10bb882dce2c8c6b7b814dde02e525c6",
-      "pcmSha256": "daaec7167a0b44dcb7cf2fce1ac2d527cabecc7291b376cca3db9491b8b2a064",
-      "rmsDb": -17.04
+      "durationMs": 1106,
+      "sizeBytes": 5401,
+      "hash": "sha256:a7eb0fa2293aedb3243783b2f3539c73a11be883d5f471360cb1498acbfaabf8",
+      "pcmSha256": "9a91e3669013831d367f599f634a595831e5af030a30a32d97c7cd9ec9617e34",
+      "rmsDb": -17.13
     },
     {
       "id": "word-hauptbahnhof",
@@ -10361,11 +10361,11 @@
       "lessonRefs": [
         "a1-u9-d2"
       ],
-      "durationMs": 1187,
-      "sizeBytes": 5661,
-      "hash": "sha256:bc66fa09fd279d34eaa39d4caee9cb6359b5d0ef8fed02b204ea62cf05e25ba5",
-      "pcmSha256": "bfc8a4ed2da3c3e9431176072f5669d812e2b300e810daf34ca99c0a0bd9bd0a",
-      "rmsDb": -17.09
+      "durationMs": 1129,
+      "sizeBytes": 5477,
+      "hash": "sha256:e1b37a5022a64b6438b0ec99c15cf01c91e4092e2fea401354439e8207535967",
+      "pcmSha256": "e5a0d1bd01a41fa0a829934da65ef0dc9e6324eaa589a176ab14cac71a9adc84",
+      "rmsDb": -17.15
     },
     {
       "id": "word-abfahrt",
@@ -17555,17 +17555,17 @@
       "isGuest": false,
       "voiceParams": {
         "speaker": "de_DE-thorsten-medium",
-        "speedWpm": 151,
+        "speedWpm": 153,
         "lengthScale": 1.32
       },
       "textDe": "Die Sieben. Und wo ist die Haltestelle?",
       "priority": "P0",
       "lessonRefs": [],
-      "durationMs": 2789,
-      "sizeBytes": 12565,
-      "hash": "sha256:0c71418d510259e396908aebe7e379c138bbd3e3ec7e49d1bf388c9e12695054",
-      "pcmSha256": "78fec62bcaea54a7d326b24e9881f50fe33b55b3e92cbea034043de6d1b3b1fd",
-      "rmsDb": -17.01
+      "durationMs": 2743,
+      "sizeBytes": 12519,
+      "hash": "sha256:6150852eb87eac5cd16457a99c00995441f8fc50146f65fb24057d9b8ce0fc5d",
+      "pcmSha256": "63f4103f9fb362826beaf2972d06ea7e7ac5e4f1b15aa38502e9e25df29ae368",
+      "rmsDb": -17.02
     },
     {
       "id": "mt1-h1-d6-l4",
@@ -34394,6 +34394,446 @@
       "hash": "sha256:5d9af01c0d91f29f4cd3d097202178c7f9706c855c95641a16bd8d6bf177421b",
       "pcmSha256": "b1a51be5cb48ae04d726b99bee182de8400deb920cdb4eeaf545f62994326a98",
       "rmsDb": -17.03
+    },
+    {
+      "id": "hb-1",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 120,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Yusuf! Am Montag fliegst du. Wie kommst du zum Flughafen — mit der Bahn?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 7000,
+      "sizeBytes": 32234,
+      "hash": "sha256:b0fb45f1b1bf75637a4d85289e8996bd27ad39a7028eac64b018a2c1bfd30b42",
+      "pcmSha256": "0ecd4a4a7120b2ea377975184d97da970be89a9949a7802222cdeac68f7e06cb",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "hb-2",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja. Die Haltestelle ist gegenüber der Bäckerei. Dort steige ich ein — Linie 5.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 5947,
+      "sizeBytes": 27265,
+      "hash": "sha256:b3d46103c7a65d7cc43fd845026ef4fe9f77e9d8b47ef5b1a696f62b91ff0c9b",
+      "pcmSha256": "9cbd3ac2d1b8ae545165edd4db1583eb9f5ad36c258838a09a8f67c9d1318471",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "hb-3",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 93,
+        "lengthScale": 1.32
+      },
+      "textDe": "Linie 5 fährt zum Flughafen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 3240,
+      "sizeBytes": 15310,
+      "hash": "sha256:9de25fb993f5f438ca7ecd66e2901e1c14f9ba9b3bee6770e1c8a91f96d96710",
+      "pcmSha256": "f1309d78025a1e0c8ac02bf15d8004ef4e9ab43b56411267ae98e0c647015843",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "hb-4",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, zum Hauptbahnhof. Am Hauptbahnhof steige ich um. Die Bahn fährt zum Flughafen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 5924,
+      "sizeBytes": 26579,
+      "hash": "sha256:07861fba650d57857db8833eeea1213ad2635ed836a8bd0364aaec5b6c4ab192",
+      "pcmSha256": "b0787ac57e20fba2d75afa11f3848c5a4a61d33b3b3aa521a2f0b84d76a96b03",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "hb-5",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 128,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wann ist die Abfahrt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 2344,
+      "sizeBytes": 11449,
+      "hash": "sha256:52dff5a2e44b5ff9d0cb412748c96527fe7447420a2b8c4968ddce4a6de45165",
+      "pcmSha256": "0b0c22e1c1b92dbfd9ad53fc184dffaae5735b2d332955c3e195e73316e37572",
+      "rmsDb": -17.48
+    },
+    {
+      "id": "hb-6",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die Abfahrt ist um sechs Uhr zehn, die Ankunft am Flughafen um sechs Uhr fünfzig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 5970,
+      "sizeBytes": 27382,
+      "hash": "sha256:818fb3702971749b8cd2f4db334b6bb5e2d7053a6f27a0e4685698ccbfb08d44",
+      "pcmSha256": "4ec31278d05fa65b2db8fe98c49f61a29e48fa8df4edb02d52a46b46fe6dd573",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "hb-7",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Vierzig Minuten — das ist nicht weit. Und wo steigst du aus?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 4568,
+      "sizeBytes": 21318,
+      "hash": "sha256:5ec890679f4cc11d56789ee75622db9083ebaa4d72fe69d9a68fb3d198d2f41f",
+      "pcmSha256": "9c76ff6331ca9837e3c5a8fe69ca41677a28558d9e099ec7493e6cc2ad13d941",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "hb-8",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 162,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich steige am Flughafen aus. Von dort sind es fünf Minuten zu Fuß.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 4821,
+      "sizeBytes": 22147,
+      "hash": "sha256:69c3175d8dfd9b178250ab5674a059d4c90046215508c295d08c52518e7f63bb",
+      "pcmSha256": "fd72ac2ef68a880b73fcd43e9e569ddb9be8c057d41ff92b9b23e87874e8fa29",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "hb-9",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 116,
+        "lengthScale": 1.32
+      },
+      "textDe": "Weißt du schon den Bahnsteig?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 2584,
+      "sizeBytes": 12149,
+      "hash": "sha256:60936fb629b3cf26b305d0fb21a8fa2962b42919ff7744dad2caab50eb6f8eb5",
+      "pcmSha256": "c0b63931413b4a76b029f6c086d9d7a5bb56952b802d96353071b622208db95e",
+      "rmsDb": -17.69
+    },
+    {
+      "id": "hb-10",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Bahnsteig drei, Richtung Flughafen. Am Montag ist überall Verkehr — ich fahre früh.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 5703,
+      "sizeBytes": 26381,
+      "hash": "sha256:b02c9ef6333683901324f3f235db1515696bc5ff7cebacf85dc7d9f3eecb6acd",
+      "pcmSha256": "295e1b47af074ffaebe0395091aea3f1d8bdcd494d51d3bde9406024fb57ae12",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "hb-11",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 152,
+        "lengthScale": 1.32
+      },
+      "textDe": "Bei mir: Am Sonntag fahre ich mit dem Zug zur Oma — eine Stunde.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 5144,
+      "sizeBytes": 23906,
+      "hash": "sha256:28e479b929272df9d1949497986ab75067f86d236f08a01bdf23ac3889e5c7b3",
+      "pcmSha256": "b3237f1ea7ce3c4ec0c50a590c83fa4487ba3d5563cf4315860266591cc81111",
+      "rmsDb": -17.54
+    },
+    {
+      "id": "hb-12",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Musst du umsteigen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 1431,
+      "sizeBytes": 6783,
+      "hash": "sha256:06688c82053bbf60ea1ee68e947931369fd78ccaf90ff1794c12cd1362f37aa5",
+      "pcmSha256": "59e1d5e82ee868283b49a4a08e3bd99eefca36c38d7e7c2240089ab3bcd62d4b",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "hb-13",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, ich steige nicht um. Der Zug fährt am Park vorbei, am Krankenhaus vorbei — und ich lese.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 7432,
+      "sizeBytes": 34266,
+      "hash": "sha256:539fae3264065f34583ba3d3f7b22c8eefec39e20eeaf3d888533a45d03653c4",
+      "pcmSha256": "ed63b3c6340029be180c65f978935a151fe82ba3829dca51ac1753535d8d178c",
+      "rmsDb": -17.39
+    },
+    {
+      "id": "hb-14",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hin und zurück — wie viel kostet das?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 3137,
+      "sizeBytes": 13983,
+      "hash": "sha256:708c6fed4d74f3db35a658ca483a09af0cfcf92527b351e299512d248d9905bc",
+      "pcmSha256": "fdd518057558cd46efcb3d1bb4a10d76af8d4082f380c52b74ec553a5cc0e5e0",
+      "rmsDb": -17
+    },
+    {
+      "id": "hb-15",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hin und zurück zwölf Euro. Die Fahrkarte kaufe ich am Schalter.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 4616,
+      "sizeBytes": 21501,
+      "hash": "sha256:5c2847017fcb88cb92c3a329d54f8e7fe50cdc9c5533882d70ad9392b2c51d53",
+      "pcmSha256": "519001f59c3a6cf066668684791f8ac3f89c4dd0f0e93057e26c5c0d99d196b0",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "hb-16",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 163,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und von der Haltestelle zur Oma — ist das weit?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 3311,
+      "sizeBytes": 15231,
+      "hash": "sha256:1c0f58284a852954b7a5fac95f30f13e8d102a94841fcefa951e5c7207d57aa1",
+      "pcmSha256": "d2c1ca920dd7d0092f1a9c2343fde36703e558f329240d2402ad425cbd7d1988",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "hb-17",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 113,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, sehr nah: geradeaus zur Kreuzung, dort links — zwei Minuten.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 5288,
+      "sizeBytes": 24304,
+      "hash": "sha256:f9cf6f746734a05098852591acc2b33da0342045a48274696b065b0bed687057",
+      "pcmSha256": "cb6810023552960a26684d51e9979cc36cab6e49da982f3a4e5e773f1c6e7cb9",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "hb-18",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "In Berlin ist überall Verkehr — aber die Bahn ist schnell.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 3915,
+      "sizeBytes": 17991,
+      "hash": "sha256:3dcdfea9c1eabd45fbc868e12702c2f344393c9042b76dc6e8259f1340124fd8",
+      "pcmSha256": "5d275f5d6fff3e9ddb9155bc5f43d13c253759264e33e043375b11ff38a9c2e2",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "hb-19",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 166,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und in Tunis? Steigst du dort auch um?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 2888,
+      "sizeBytes": 13566,
+      "hash": "sha256:062f1e7de6e6ac6eac58f0b7b4e2fc445c21cfaaeb9270a4fd18524950e40c7a",
+      "pcmSha256": "72c549c90a0611b19e27203711d5c75f68e9d8d58f241e9922ac243346dc2921",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "hb-20",
+      "file": "audio/scripts/a1-u9-d2-mit-bus-und-bahn/hb-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein — mein Vater holt mich ab. Hin und zurück mit dem Auto! Bis morgen, Lena!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d2"
+      ],
+      "durationMs": 6237,
+      "sizeBytes": 27810,
+      "hash": "sha256:e0f764b69138f5400fc93646e7d8a906c5a477ae3bfb8bf82c11659979d7c082",
+      "pcmSha256": "59d15c8af444fbd5618723c5c9dcb424c817938bb911364b93874e43b4b1a15a",
+      "rmsDb": -17.04
     }
   ],
   "characterVoices": {
