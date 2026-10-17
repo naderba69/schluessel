@@ -123,7 +123,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u11-d3")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D172 صارت الوحدات 1–10 (d1..d5) وu11-d1/d2 مُرقّاة (d6 توليف خارج المرور — N-004)
+const legacy = realLessons.find((l) => l.id === "a1-u11-d4")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D173 صارت الوحدات 1–10 (d1..d5) وu11-d1..d3 مُرقّاة (d6 توليف خارج المرور — N-004)
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -415,7 +415,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u11-d3", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u11-d4", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -601,22 +601,18 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("الدرس التالي غير المُرقّى (a1-u11-d3 بعد D172): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u11-d4 بعد D173): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
-    // الفجوات الفعلية لـu11-d3 (مقيسة قبل النقل): لا ملف ars-perfekt ولا ars-praeteritum · مثال husten «Ich habe die ganze Nacht gehustet.» (ganze غير مدروسة) · 6 بنود choice بلا خيارات ونوع واحد
-    // بلا استماع ولا إملاء · ganze وgewesen في التدريب · Quiz 3×4 بلا كلمة غريبة · وخمس كلمات بلا أي بند (bleiben · liegen · husten · niesen · verschwinden) — القياس لا التخمين
-    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-rule", "e-upgrade-sample"]);
-    expect(r.rule[0]?.message).toMatch(/ars-perfekt/);
-    expect(r.rule[1]?.message).toMatch(/ars-praeteritum/);
-    expect(r.rule[2]?.message).toMatch(/husten .*ganze/);
+    // الفجوات الفعلية لـu11-d4 (مقيسة قبل النقل): ملفا ars-perfekt وars-satzklammer موجودان · مثال blut «Das Blut ist rot.» (rot غير مدروسة) · 6 بنود choice بلا خيارات ونوع واحد
+    // بلا استماع ولا إملاء · لا كلمة غريبة في التدريب · Quiz 3×4 · وكل الكلمات لها بند — القياس لا التخمين
+    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-sample"]);
+    expect(r.rule[0]?.message).toMatch(/blut .*rot/);
     expect(r.practice.map((i) => i.code).sort()).toEqual([
-      ...Array(6).fill("e-upgrade-item"), "e-upgrade-front", "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
+      ...Array(6).fill("e-upgrade-item"), "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
     ].sort());
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: ganze، gewesen$/);
     expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size"]);
-    expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);
-    expect(r.coverage[0]?.message).toMatch(/bleiben، liegen، husten، niesen، verschwinden$/);
+    expect(r.coverage).toEqual([]);
     expect(r.quizMin).toBe(4);
   });
   it("الدرس المرجعي الحقيقي a1-u1-d1 (D116): صفر نقص في كل جزء — 14 بنداً · 4 أنواع · Quiz 6 · 17 كلمة مُسترجعة", () => {
@@ -1515,7 +1511,7 @@ describe("D115 — أدوات القياس", () => {
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد — regnet (المدخل القائم) يمسّ أربعة أسطر جديدة (wt-4 · wt-5 · wt-11 · wt-15) سُجّلت (N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(74); // 72 في D166 — ثم geregnet · geholt في D168
+    expect(lex.entries).toHaveLength(75); // 72 في D166 — ثم geregnet · geholt في D168 — ثم gehustet في D173
     expect(lex.entries.find((x) => x.word === "regnet")?.regeneratedTracks).toEqual(["tm-2", "tr-3", "km-11", "fh-14", "vb-19", "wt-4", "wt-5", "wt-11", "wt-15", "wg-13"]); // wg-13 من D168
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -1616,7 +1612,7 @@ describe("D115 — أدوات القياس", () => {
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D167 (72 ← 74 بعد D168: geregnet · geholt) — April (8 أسطر) · Kurs (za-3 · za-4) · Onkel (za-12) مدخلات قائمة سُجّلت أسطرها الجديدة (N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(74);
+    expect(lex.entries).toHaveLength(75);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("za-"));
     expect(regen("April")).toEqual(["za-2", "za-3", "za-4", "za-5", "za-6", "za-8", "za-19", "za-20"]);
     expect(regen("Kurs")).toEqual(["za-3", "za-4"]);
@@ -1723,7 +1719,7 @@ describe("D115 — أدوات القياس", () => {
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: مدخلان جديدان (geregnet · geholt) + مدخلات قائمة سُجّلت أسطرها الجديدة (Onkel · Fußball · regnet · Spaziergang — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(74);
+    expect(lex.entries).toHaveLength(75);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("wg-"));
     expect(regen("geregnet")).toEqual(["wg-9", "wg-12"]);
     expect(regen("geholt")).toEqual(["wg-15"]);
@@ -1743,6 +1739,121 @@ describe("D115 — أدوات القياس", () => {
     expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
     // المصائد الثلاث (haben يسقط/يُستبدل بالحاضر · التصريف قبل المفعول · تعميم ge‑…‑t على القوي) — كل واحدة بـ10‑ي
     expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de)).toEqual(["~~Gestern ich habe Deutsch gelernt.~~ · ~~Gestern lerne ich Deutsch.~~", "~~Ich habe gegessen Fisch.~~ · ~~Gestern habe ich gelernt Deutsch.~~", "~~gegesst~~ · ~~gelest~~ · ~~geschlaft~~"]);
+    for (const c of l.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+  });
+  it("a1-u11-d3 مُرقّى (D173): صفر نقص — 68 بنداً · 4 أنواع · Quiz 6 · 12 كلمة · ars-perfekt (جديدة: sein + war/hatte في ملف واحد) · بلا نواة · مثال husten صُحّح · كل 20 سطراً وثمانية مقاطع كلمات مستخدمة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u11-d3")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u11-d3")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([68, 4, 6, 12]);
+    // الكلمات الاثنتا عشرة كلها جديدة (لا تكرار من الوحدات 1–10 وu11-d1/d2) — ولا نواة لهذا الدرس في خطة SD1 (التالي a1-u11-d5)
+    const earlier = new Set(realLessons.filter((x) => x.unit <= 10 || (x.unit === 11 && x.day < 3)).flatMap((x) => x.praesentation.wordIds));
+    expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(l.praesentation.wordIds).toEqual(["bleiben", "liegen", "wieder", "schwach", "besser", "fit", "husten", "niesen", "jucken", "brennen", "verschwinden", "dauern"]);
+    // قاعدة اليوم جديدة: ars-perfekt (كانت مُشاراً إليها بلا ملف من 13 درساً) — تضم sein-Perfekt وwar/hatte في ملف واحد؛ وars-praeteritum أُسقطت من الدرس (قرار D173 — لا ملف ولا درس آخر يشير إليها)
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-perfekt"]);
+    expect(l.usedArsenalIds).toEqual(["ars-perfekt"]);
+    expect(rules.has("ars-praeteritum")).toBe(false);
+    expect(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-praeteritum"))).toEqual([]);
+    const pf = rules.get("ars-perfekt")!;
+    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6", "a2-u1-d1"]);
+    expect(pf.usedInLessons).toEqual(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-perfekt")).map((x) => x.id).sort((a, b) => a.localeCompare(b, "en", { numeric: true })));
+    for (const x of ["Ich bin heute zu Hause geblieben.", "Ich bin nach Hause gefahren.", "Das Fieber ist verschwunden.", "Ich bin um sieben aufgestanden.", "Ich habe im Bett gelegen.", "Ich habe gehustet und geniest.", "Mein Hals hat gebrannt.", "Die Erkältung hat eine Woche gedauert.", "Wie war dein Tag?", "Warst du auch krank?", "Wir waren eine Woche zu Hause.", "Ich hatte Fieber.", "Hatten Sie auch Schwindel?", "Wir hatten keine Zeit.", "Jetzt geht es besser.", "Meine Nase juckt."])
+      expect(pf.payload.ruleDe).toContain(x);
+    expect(pf.payload.ruleDe).not.toMatch(/\b(gewesen|gehabt|hattest|fühle|fühlen|Wunde|Schnupfen|dann|leider|denn|ganz|ganze|Körper|passiert|Winter)\b|Ich bin zu Hause geblieben\.|Gestern war ich krank\./); // N-103 · hattest خارج الجبهة (N-112) · D108
+    for (const x of ["sein", "haben", "war", "hatte", "bleiben", "geblieben", "verschwunden", "التصريف الثالث في الآخر"]) expect(pf.payload.ruleAr).toContain(x);
+    for (const x of ["~~Ich habe zu Hause geblieben~~", "~~Der Schmerz hat verschwunden~~", "خريطة التداخل 10‑ي"]) expect(pf.payload.contrastAr).toContain(x);
+    expect(pf.payload.limitsAr).toHaveLength(4);
+    expect(pf.payload.limitsAr.join(" ")).toMatch(/u11-d4/);
+    expect(pf.payload.limitsAr.join(" ")).toMatch(/u12-d3/);
+    expect(pf.payload.limitsAr.join(" ")).toMatch(/A2/);
+    expect(pf.payload.limitsAr.join(" ")).not.toMatch(/\b(fühlen|Wunde|Schnupfen|Verband|Spritze|dann|leider|denn)\b/); // N-103
+    expect(pf.payload.beads).toEqual(["Ich", "bin", "im", "Bett", "geblieben."]);
+    expect(pf.payload.properNouns).toEqual([]);
+    // لا gewesen/gehabt/hattest (خارج الجبهة) ولا fühlen/Wunde (u11-d4) ولا Schnupfen (u11-d5) ولا dann/leider/denn (u12-d4) ولا ganz/Körper/passiert في ما يُعرض — ولا مثال SD1 الرسمي حرفياً («Ich bin zu Hause» تُعرض داخل «heute … geblieben» فقط — D108)
+    const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise.a]), g: l.ziel.de, t: [l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de] });
+    expect(shown).not.toMatch(/\b(gewesen|gehabt|hattest|geworden|fühle|fühlen|Wunde|Schnupfen|dann|leider|denn|ganz|ganze|Körper|passiert|Winter|Strand|Doktor|Lenas|Mama|Oh|zehnmal|dreimal)\b|Ich bin zu Hause geblieben\.|Gestern war ich krank\.|Ich bleibe heute zu Hause\.|Es geht mir schon besser\.|Wie lange dauert der Film\?/);
+    expect(JSON.stringify(l.quiz.variants.map((v) => v.items.map((i) => i.choices)))).not.toMatch(/\b(gewesen|gehabt|hattest)\b/); // المشتِّتات أيضاً من صيغ معروفة
+    expect(e.properNouns).toEqual(["Yusuf", "Lena"]);
+    expect(e.misspellings ?? []).toEqual([]);
+    expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
+    // مثال husten صُحّح («Ich habe die ganze Nacht gehustet.» — ganze بلا درس) — والأمثلة كلها من هذا الدرس وبلا أسماء
+    const w = (id: string) => words.find((x) => x.id === id)!;
+    const sample = (id: string) => w(id).sampleSentence!.de;
+    expect(sample("husten")).toBe("Ich habe die Nacht viel gehustet.");
+    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|ganz|gewesen|Ich bin zu Hause geblieben\./);
+    for (const id of l.praesentation.wordIds) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u11-d3");
+    // الحوار (kb-1..20) مكالمة فيديو مساء اليوم العاشر بتونس (N-037/N-100): الأربعاء 8 أبريل · «Hallo Lena! Wie war dein Tag? Bist du noch im Bett?» — لا gewesen/gehabt/fühlen/dann/Oh ولا passiert
+    const script = JSON.parse(readFileSync(join(CONTENT, "audio-scripts/a1-u11-d3-ich-bin-im-bett-geblieben.json"), "utf8")) as { lines: { id: string; speaker: string; text: string }[] };
+    expect(script.lines).toHaveLength(20);
+    expect(script.lines.find((x) => x.id === "kb-1")?.text).toBe("Hallo Lena! Wie war dein Tag? Bist du noch im Bett?");
+    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\b(gewesen|gehabt|hattest|fühle|Wunde|Schnupfen|dann|leider|denn|ganz|ganze|Körper|passiert|Winter|Perfekt|Doktor|Mama|Lenas|Oh)\b|Ich bin zu Hause geblieben\./);
+    expect(script.lines.filter((x) => /\bgeblieben\b/.test(x.text))).toHaveLength(3); // kb-2 · kb-13 · kb-14
+    expect(script.lines.filter((x) => /\b(war|Warst|hatte)\b/.test(x.text)).map((x) => x.id)).toEqual(["kb-1", "kb-7", "kb-8", "kb-11", "kb-16"]); // war/warst خمس مرات — hatte لا تظهر في الحوار (القاعدة والتدريب فقط)
+    // N-020 لهذا الدرس: الاستدعاء من دروس سابقة (gehen · sein · kommen — أفعال sein في الماضي)
+    expect(l.warmup.cardIds).toEqual(["gehen", "sein", "kommen"]);
+    expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+    // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102) — ومنه كلمات أمس (fieber · erkaltung · hals)
+    const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
+    for (const st of l.uebung.stations) {
+      expect(st.interleavedWith.length).toBeGreaterThan(0);
+      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
+      for (const ref of st.interleavedWith) {
+        expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
+        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
+        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+      }
+    }
+    expect(l.uebung.stations.find((s) => s.type === "gap-fill")!.interleavedWith).toEqual(expect.arrayContaining(["fieber", "erkaltung", "hals"]));
+    // الحوار الجديد (kb-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من أربعة أسطر بطيئة (≤132) مع ثمانية مقاطع كلمات (الخمس غير المتدرَّبة سابقاً + wieder · schwach · dauern)، والأسرع الأربعة عشر كلها استماعاً
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("kb-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 20 }, (_, i) => `kb-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-bleiben", "word-dauern", "word-husten", "word-liegen", "word-niesen", "word-schwach", "word-verschwinden", "word-wieder"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; textDe: string; voiceParams: { speedWpm: number } }[] };
+    expect(manifest.tracks).toHaveLength(1908); // 1888 بعد D172 (وثائق الدفعة 127 كتبت 1889 خطأً — صُحّحت في الدفعة 128) + kb-1..20
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    const fast = Array.from({ length: 20 }, (_, i) => `kb-${i + 1}`).filter((id) => wpm.get(id)! > 132);
+    expect(fast).toHaveLength(14);
+    for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
+    const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
+    for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
+    // معجم النطق: مدخل جديد واحد في D173 — gehustet (espeak يقصّر u في الصيغة المصرَّفة: ʊ → uː · أُعيد توليد kb-4) — وثلاثة مداخل قائمة سُجّلت أسطرها الجديدة (Hals · Kurs · fit — N-099)
+    const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; ipa: string; regeneratedTracks: string[] }[] };
+    expect(lex.entries).toHaveLength(75);
+    expect(lex.entries.find((x) => x.word === "gehustet")?.regeneratedTracks).toEqual(["kb-4"]);
+    const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("kb-"));
+    expect(regen("Hals")).toEqual(["kb-5", "kb-6"]);
+    expect(regen("Kurs")).toEqual(["kb-15", "kb-18"]);
+    expect(regen("fit")).toEqual(["kb-19", "kb-20"]);
+    expect(regen("Tablette")).toEqual([]);
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set([...l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))), ...l.zusammenfassung.warningCards.flatMap((c) => [c.correct.de, String(c.exercise.a)])]);
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    const norm = (x: string) => x.toLowerCase().replace(/[^\p{L}\s]/gu, " ").replace(/\s+/g, " ").trim();
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(norm(a))))).toEqual([]);
+    expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
+    // كل إجابة Quiz إلا واحدة (Ich habe zehn Stunden geschlafen.) تحمل تصريفاً ثالثاً من اليوم أو war/hatte أو كلمة من اليوم — والمشتِّتات أخطاء مساعد/ترتيب بصيغ معروفة
+    expect(quizAnswers.filter((a) => /(?<!\p{L})(geblieben|gelegen|verschwunden|gehustet|geniest|gebrannt|gedauert|war|warst|waren|hatte|hatten|Hatten|gefahren|wieder|besser|fit|schwach|juckt|brennen)(?!\p{L})/u.test(a))).toHaveLength(17);
+    // المصائد الثلاث (haben بدل sein للحركة/bleiben/تغيّر الحال · الحاضر بدل war/hatte · sein بدل haben لـliegen/schlafen/husten) — كل واحدة بـ10‑ي
+    expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de)).toEqual(["~~Ich habe heute zu Hause geblieben.~~ · ~~Ich habe nach Hause gefahren.~~ · ~~Der Schmerz hat verschwunden.~~", "~~Ich bin gestern krank.~~ · ~~Ich habe gestern Fieber.~~ · ~~Gestern bin ich krank.~~", "~~Ich bin im Bett gelegen.~~ · ~~Ich bin zehn Stunden geschlafen.~~ · ~~Ich bin gehustet.~~"]);
     for (const c of l.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
     const taught = knownStems(taughtUpTo(l, realLessons, words));
@@ -1845,7 +1956,7 @@ describe("D115 — أدوات القياس", () => {
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D172 (74) — أربعة مداخل قائمة سُجّلت أسطرها الجديدة (Hals · Tablette · holt · Kurs — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(74);
+    expect(lex.entries).toHaveLength(75);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("ka-"));
     expect(regen("Hals")).toEqual(["ka-6", "ka-10"]);
     expect(regen("Tablette")).toEqual(["ka-12"]);
@@ -1967,7 +2078,7 @@ describe("D115 — أدوات القياس", () => {
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D171 (74) — أربعة مداخل قائمة سُجّلت أسطرها الجديدة (Hals · Fußball · okay · Kurs — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(74);
+    expect(lex.entries).toHaveLength(75);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("kw-"));
     expect(regen("Hals")).toEqual(["kw-2", "kw-3", "kw-16"]);
     expect(regen("Fußball")).toEqual(["kw-4", "kw-6"]);
@@ -2084,7 +2195,7 @@ describe("D115 — أدوات القياس", () => {
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D170 (74) — خمسة مداخل قائمة سُجّلت أسطرها الجديدة (Notfall · Fußball · Kurs · Tunesien · okay — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(74);
+    expect(lex.entries).toHaveLength(75);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("wk-"));
     expect(regen("Notfall")).toEqual(["wk-1", "wk-2"]);
     expect(regen("Fußball")).toEqual(["wk-5"]);
@@ -2198,7 +2309,7 @@ describe("D115 — أدوات القياس", () => {
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D169 (74 كما في D168) — مدخلات قائمة سُجّلت أسطرها الجديدة (Kurs · April · Fußball · nachher · Notiz · geregnet — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(74);
+    expect(lex.entries).toHaveLength(75);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("ew-"));
     expect(regen("Kurs")).toEqual(["ew-12"]);
     expect(regen("April")).toEqual(["ew-4", "ew-19"]);
