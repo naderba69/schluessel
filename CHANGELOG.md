@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 126: a1-u11-d1 مُرقّى — الجسم — weh tun (D171) · ars-koerper · نواة der Teil/tun/weh tun · ثلاثة أمثلة مصحّحة
+- **إضافة:** `content/arsenal/grammar/ars-koerper.json` (اثنتان وخمسون قاعدة يوم) · كلمات `teil` · `tun` · `weh-tun` بمقاطعها · حوار `a1-u11-d1-alles-tut-weh` (kw-1..20 مكالمة اليوم الثامن) · مانيفست 1867 · المرجع 1516 · معجم النطق 74 (بلا جديد).
+- **تحسين المحتوى:** 69 بنداً/4 أنواع (فراغ 30 · استماع 17 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (الجنس بلا منطق ⇒ ~~die Bein~~ · الجمع بـ‑s ⇒ ~~die Hands~~ · weh tun ⇒ ~~Mein Kopf weh tut~~ / ~~Meine Beine tut weh~~ / ~~Mich tut~~) · 15 كلمة.
+- **تصحيح بيانات:** ثلاثة أمثلة (kopf «Mein Kopf tut weh.» = مثال SD1 الرسمي ⇒ «Mir tut der Kopf weh.» · auge «Mein Auge ist rot.» ⇒ «Mach die Augen zu!» · weh-tun ⇒ «Meine Beine tun weh.») · خطة الترقية u11-d1 done (properNouns Yusuf/Lena · بلا misspellings) · خطة SD1 u11-d1 done · تسجيل kw على Hals/Fußball/okay/Kurs (N-099).
+- **اختبارات:** كتلة D171 (+1) · المثال غير المُرقّى ← a1-u11-d2 · مثبّتات النواة ← a1-u11-d2 (وحِمل u9-d1 بـdas Internet من u12-d2) · العدّ 875 · 704/704 · validator 1109/0/0.
+
 ## 2026-10-17 — الدفعة 125: a1-u10-d5 مُرقّى — weil — الجملة التابعة (D170) · ars-weil-satz · نواة normal/der Job/verdienen · ثلاثة أمثلة مصحّحة · الوحدة 10 مكتملة
 - **إضافة:** `content/arsenal/grammar/ars-weil-satz.json` (إحدى وخمسون قاعدة يوم) · كلمات `normal` · `job` · `verdienen` بمقاطعها · حوار `a1-u10-d5-warum-weil` (wk-1..20 مكالمة اليوم السابع) · مانيفست 1844 · المرجع 1504 · معجم النطق 74 (بلا جديد).
 - **تحسين المحتوى:** 66 بنداً/4 أنواع (فراغ 30 · استماع 14 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (المصرَّف ثانياً بعد weil ⇒ ~~weil ich bin krank~~ · المصرَّف قبل التصريف الثالث/المصدر ⇒ ~~weil ich habe Fußball gespielt~~ · لا قلب بعد deshalb/جملة weil المتقدّمة ⇒ ~~deshalb ich brauche~~) · 15 كلمة.
