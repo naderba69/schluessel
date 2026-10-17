@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 120: a1-u9-d5 مُرقّى — قوس الجملة وترتيب الظروف (D165) · ars-satzklammer + ars-tekamolo · نواة خمس · الوحدة 9 مكتملة
+- **إضافة:** `content/arsenal/grammar/ars-satzklammer.json` و`ars-tekamolo.json` (ست وأربعون قاعدة يوم) · `content/words/{andere,weiter,halten,polizei,stelle}.json` + مقاطعها (المولِّد D105) · حوار `a1-u9-d5-im-stau` (st-1..20 مكالمة من الحافلة) · مانيفست 1734 · المرجع 1429 · مدخل معجم nächsten (72).
+- **تحسين المحتوى:** 58 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح (الجملة الاسمية العربية ⇒ ~~Heute ich fahre~~ · الفعل المتصل ⇒ ~~kommt an um neun~~ · مرونة الظروف ⇒ ~~mit dem Bus heute~~) · 11 كلمة.
+- **تصحيح بيانات:** مثال pünktlich بلا abfahren · خطة النواة u9-d5 done · gen-audio.py word_tracks +5 · تسجيل st على wohin/vor/danach/Fahrplan/Haltestelle (N-099) · كتلة D162 (مسارات Haltestelle + st-9).
+- **اختبارات:** كتلة D165 (+1) · خطة النواة (u9-d5 done · المعلّق u10-d2 · اختبار الحِمل بـenden) · المثال غير المُرقّى ← a1-u10-d1 · 862 كلمة · 694/694 · validator 1084/0/0.
+
 ## 2026-10-17 — الدفعة 119: a1-u9-d4 مُرقّى — Wechselpräpositionen باسمها (D164) · ars-wechselpraep · نواة auf sein/zu sein
 - **إضافة:** `content/arsenal/grammar/ars-wechselpraep.json` (أربع وأربعون قاعدة يوم — usedInLessons u9-d4 + u9-d6) · `content/words/{auf-sein,zu-sein}.json` + مقطعاهما (المولِّد D105) · حوار `a1-u9-d4-zu-hause-in-tunis` (tn-1..20 أول مكالمة من تونس) · مانيفست 1709 · المرجع 1417.
 - **تحسين المحتوى:** 57 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح (حرف واحد لا يتغيّر ما بعده ⇒ ~~in dem Tunnel gehen~~ · «ضد» يجرّ ⇒ ~~gegen der Wand~~ · الإضافة بلا أداة ⇒ ~~vor Kirche~~) · 14 كلمة · الدفء wand/tisch/wohin.

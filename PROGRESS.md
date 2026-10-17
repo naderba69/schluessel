@@ -1,5 +1,17 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
+## الدفعة 120 (2026-10-17) — الدرس الخامس والأربعون مُرقّى: «قوس الجملة وترتيب الظروف» (D165) — قاعدتان جديدتان ونواة خمس · الوحدة 9 مكتملة
+- **قاعدتا اليوم** `ars-satzklammer` (11 درساً تشير إليها حتى أسبوع الامتحان): الفعل ثانياً والقلب (Heute fahre ich …) · القوس بالجزء المنفصل/المصدر (steige … aus · muss … umsteigen) · السؤال لا يكسره (Hält der Bus …? · Wann kommt der Bus an?) · halten/hält · Polizei مفرد · `ars-tekamolo` (orange): Wann? ← Wie? ← Wohin? · الزمن يتقدّم · القوس يحيط · اليوم قبل الساعة — الحدود: weil u10 · Perfekt u10/11 · abfahren u12 · Ka (wegen) ليس A1.
+- **النواة 5 (D113) بالمولِّد D105:** andere · weiter · halten · die Polizei · die Stelle (goetheList مشتقة · ander- بالجذع · w-srs 0.26) ⇒ 11 كلمة · الخطة u9-d5 done · النواة 38/48 (101/123) · التالي a1-u10-d2 (lieb- · der Moment · enden).
+- **مثال مصحّح:** pünktlich (fährt … ab ⇒ kommt … an — abfahren u12).
+- **حوار جديد** `a1-u9-d5-im-stau` (st-1..20) — **مكالمة من الحافلة:** يوسف متأخر (Stau · Polizei عند التقاطع · الحافلة لا تواصل) · Hält der Bus im Zentrum? · الجدول/pünktlich · لينا jeden Tag um sieben mit dem Zug zur Schule · يوسف يستخرج wann? wie? wohin? · العودة مساءً · An der nächsten Stelle steige ich aus.
+- **النطق:** المرجع 1429 · مدخل معجم nächsten [ɛ⇒ɛː] (72) · st-19 أُعيد · خمسة مداخل قديمة سُجّلت يدوياً (N-099).
+- **التطبيق:** 58 بنداً (فراغ 23 · استماع 19 · ترتيب 6 · إملاء 10) · Quiz 3×6 · 3 مصائد (10‑ي) · ما أمسكته الفحوص: شروح بلا عربية · مشتِّت غير مدروس · إجابة Quiz داخل تلميح فراغ · ü في interleavedWith · خرز 9 > 8.
+- **D108:** صفر جملة مؤلَّفة مطابقة («Der Bus fährt nicht weiter.» و«Ich komme bald.» الرسميتان بُدّلتا).
+- **الاختبارات (+1):** u9-d5 كاملاً · خطة النواة · المثال القديم ← a1-u10-d1 · 694/694 · validator 1084/0/0 · الطفرة 1/1.
+- **الحالة:** ترقية 45/60 (الوحدات 1–9 كلها) · نواة 38/48 (101/123) · 862 كلمة · 1734 مساراً · 46 قاعدة يوم · معجم 72 · التالي a1-u10-d1 (ars-wetter-es بلا ملف · بلا نواة).
+- **السجل:** +1 ملاحظة N-105 (زمن u9-d6 القديم) · حُدّثت N-099 · N-103.
+
 ## الدفعة 119 (2026-10-17) — الدرس الرابع والأربعون مُرقّى: «Wechselpräpositionen باسمها» (D164) — قاعدة جديدة ونواة auf sein/zu sein
 - **قاعدة اليوم `ars-wechselpraep`** (المخططة — تشاركها u9-d6): التسعة باسمها (vor جديد) · Wo? → الداتيف (vor der Kirche · im Tunnel · am Ufer · auf der linken Seite · hinter dem Haus · in der Nähe) ≠ Wohin? → الأكوزاتيف (vor die Kirche · in den Tunnel · ans Ufer · über die Brücke · auf den Parkplatz · in die Stadt) · gegen أكوزاتيف دائماً · Meter بلا جمع · auf sein/zu sein — الحدود: داتيف الأسماء الكامل u11 · liegen/setzen u11 · gegenüber/umsteigen u9-d6.
 - **النواة 2 (D113) بالمولِّد D105:** auf sein · zu sein (chunk · عائلة an/aus/zu sein · goetheList مشتقة A1+A2 · w-srs 0.26) ⇒ 14 كلمة · الخطة u9-d4 done · النواة 37/48 (96/123) · التالي a1-u9-d5 (ander- · weiter · halten · die Polizei · die Stelle).
