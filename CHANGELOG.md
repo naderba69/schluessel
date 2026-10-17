@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 123: a1-u10-d3 مُرقّى — الماضي المركّب مع haben (D168) · ars-perfekt-haben · نواة früher/gewinnen · ستة أمثلة مصحّحة
+- **إضافة:** `content/arsenal/grammar/ars-perfekt-haben.json` (تسع وأربعون قاعدة يوم) · كلمات `frueher` · `gewinnen` بمقطعيهما · حوار `a1-u10-d3-was-hast-du-gestern-gemacht` (wg-1..20 مكالمة اليوم الخامس) · مانيفست 1799 · المرجع 1476 · معجم النطق 74 (geregnet · geholt).
+- **تحسين المحتوى:** 63 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح (haben يسقط أو يُستبدل بالحاضر ⇒ ~~Gestern ich habe …~~ · التصريف قبل المفعول ⇒ ~~Ich habe gegessen Fisch.~~ · تعميم ge‑…‑t على القوي ⇒ ~~gegesst~~) · 14 كلمة.
+- **تصحيح بيانات:** ستة أمثلة (gestern · vorgestern · letzt · fragen · paket · denken — N-108) · خطة الترقية u10-d3 done (properNouns Yusuf/Lena/Tunis/Mia/Berlin) · خطة SD1 u10-d3 done · تسجيل wg على Onkel/Fußball/regnet/Spaziergang (N-099).
+- **اختبارات:** كتلة D168 (+1) · المثال غير المُرقّى ← a1-u10-d4 · مثبّتات النواة ← a1-u10-d4 · العدّ 867 · 701/701 · validator 1095/0/0.
+
 ## 2026-10-17 — الدفعة 122: a1-u10-d2 مُرقّى — المواعيد والتاريخ (D167) · ars-termin-datum · نواة lieb-/der Moment/enden · مُعرِّف العدد الترتيبي
 - **إضافة:** `content/arsenal/grammar/ars-termin-datum.json` (ثمان وأربعون قاعدة يوم) · كلمات `lieb` · `moment` · `enden` بمقاطعها · حوار `a1-u10-d2-der-zweite-april` (za-1..20 مكالمة اليوم الرابع) · مانيفست 1777 · المرجع 1453 · `ORDINAL_NUMBER`/`ordinalKnown` في `tools/lib/vocab-forms.ts`.
 - **تحسين المحتوى:** 61 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح («يوم الثلاثاء» بلا حرف ⇒ ~~Dienstag habe ich Zeit.~~ · «الثاني من أبريل» ⇒ ~~der zweite von April~~ · النهاية الثابتة ⇒ ~~am zwölfte April~~) · 15 كلمة.
