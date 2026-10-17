@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 122: a1-u10-d2 مُرقّى — المواعيد والتاريخ (D167) · ars-termin-datum · نواة lieb-/der Moment/enden · مُعرِّف العدد الترتيبي
+- **إضافة:** `content/arsenal/grammar/ars-termin-datum.json` (ثمان وأربعون قاعدة يوم) · كلمات `lieb` · `moment` · `enden` بمقاطعها · حوار `a1-u10-d2-der-zweite-april` (za-1..20 مكالمة اليوم الرابع) · مانيفست 1777 · المرجع 1453 · `ORDINAL_NUMBER`/`ordinalKnown` في `tools/lib/vocab-forms.ts`.
+- **تحسين المحتوى:** 61 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح («يوم الثلاثاء» بلا حرف ⇒ ~~Dienstag habe ich Zeit.~~ · «الثاني من أبريل» ⇒ ~~der zweite von April~~ · النهاية الثابتة ⇒ ~~am zwölfte April~~) · 15 كلمة.
+- **تصحيح بيانات:** مثالا datum/einladung · خطة الترقية u10-d2 done (properNouns Yusuf/Lena/Tunis/Mia) · خطة SD1 u10-d2 done · تسجيل za على April/Kurs/Onkel (N-099).
+- **اختبارات:** كتلة D167 (+1) · كتلة الترتيبي (+4) · المثال غير المُرقّى ← a1-u10-d3 · مثبّتات النواة ← a1-u10-d3 · العدّ 865 · 700/700 · validator 1091/0/0.
+
 ## 2026-10-17 — الدفعة 121: a1-u10-d1 مُرقّى — الطقس بـes الشكلي (D166) · ars-wetter-es · أربعة أمثلة كلمات مصحّحة
 - **إضافة:** `content/arsenal/grammar/ars-wetter-es.json` (سبع وأربعون قاعدة يوم) · حوار `a1-u10-d1-wie-ist-das-wetter` (wt-1..20 مكالمة صباحية) · مانيفست 1754 · المرجع 1435.
 - **تحسين المحتوى:** 60 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح («تمطر» بلا فاعل ⇒ ~~Heute regnet.~~ · الجملة الاسمية ⇒ ~~Es kalt.~~ · «الجو ممطر» ⇒ ~~Es ist regnet.~~) · 12 كلمة.

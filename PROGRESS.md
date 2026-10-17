@@ -1,5 +1,17 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
+## الدفعة 122 (2026-10-17) — الدرس السابع والأربعون مُرقّى: «المواعيد والتاريخ» (D167) — قاعدة جديدة ونواة ثلاث ومُعرِّف العدد الترتيبي
+- **قاعدة اليوم** `ars-termin-datum` (u10-d2 وu10-d6): الأيام مع am (Am Dienstag habe ich Zeit.) · الترتيبي ‑te حتى 19 و‑ste من 20 والشواذ erste/dritte/siebte · der zweite April بعد ist / am zwölften April / den achtzehnten April · frei/besetzt · Einladung/Absage · enden · Moment · Liebe/Lieber — حدودها: السنة وJuli–Dezember · الترتيبي صفةً · الاعتذار الكامل · Perfekt.
+- **قانون الجبهة:** `ORDINAL_NUMBER`/`ordinalKnown` مرساته الجذع datum — لا مدخل كلمة لكل ترتيبي (سابقة D131/D150) · 4 اختبارات وحدة.
+- **النواة** lieb · der Moment · enden بالمولِّد (goetheList آلياً) ⇒ 15 كلمة · النواة 39/48 (104/123) · **مثالان صُحّحا** datum (wichtig) وeinladung.
+- **حوار جديد** `a1-u10-d2-der-zweite-april` (za-1..20) — **مكالمة اليوم الرابع بتونس:** الخميس 2 أبريل · الدورة تنتهي 17 · يوسف يعود الأحد 12 · عيد لينا السبت 18 في مطعم · جدتها بالقطار وعمها يعمل (الاعتذار الأول) · Mia لا تدخل المطعم — za-19 أُعيد (Lenas ⇒ Lena hat Geburtstag).
+- **D108:** Welcher Tag ist heute? / Wann kommst du zurück? / Einen Moment, bitte. أُعيدت صياغتها — صفر مطابقة في 128 مقطعاً.
+- **النطق:** المرجع 1453 · لا مدخل جديد · April/Kurs/Onkel +11 مساراً (N-099).
+- **التطبيق:** 61 بنداً (فراغ 26 · استماع 11 · ترتيب 10 · إملاء 14) · Quiz 3×6 (مشتِّتات مفحوصة بالواجهة) · 3 مصائد (10‑ي) · ما أمسكته الفحوص: why بلا عربية · Lenas · Berlin بلا ظهور · ~~ ~~ في المعايير.
+- **الاختبارات (+1 كتلة +4 وحدة):** u10-d2 كاملاً · المثال القديم ← a1-u10-d3 (وفيه gegeessen — N-108) · مثبّتات النواة ← u10-d3 · 700/700 · validator 1091/0/0.
+- **الحالة:** ترقية 47/60 (الوحدات 1–9 + u10-d1..d2 · 13 باقياً) · نواة 39/48 (104/123) · 865 كلمة · 1777 مساراً · 48 قاعدة يوم · معجم 72 · التالي a1-u10-d3 (ars-perfekt-haben بلا ملف · نواة früher/gewinnen).
+- **السجل:** +1 ملاحظة N-108 (gegeessen في u10-d3 القديم) · حُدّثت N-096 · N-099 · N-103.
+
 ## الدفعة 121 (2026-10-17) — الدرس السادس والأربعون مُرقّى: «الطقس بـes الشكلي» (D166) — قاعدة جديدة وأربعة أمثلة مصحّحة · أول درس في الوحدة 10
 - **قاعدة اليوم** `ars-wetter-es` (u10-d1 وu10-d6): Wie ist das Wetter? · es + فعل الطقس (Es regnet.) / es ist + صفة (Es ist kalt.) · es لا يسقط (Jetzt regnet es. · Hier ist es warm. · Regnet es?) · الدرجات بالجمع (Es sind zwanzig Grad — Grad بلا ‑e) · الفاعل الحقيقي بلا es (Die Sonne scheint. · Der Wind ist heute kalt.) — الحدود: schneien ليس SD1 · الماضي u10-d3 · الفصول لاحقاً · الصفة قبل الاسم لاحقاً.
 - **بلا نواة** (u10-d1 ليس في خطة SD1) — 12 كلمة كما كانت · **أربعة أمثلة صُحّحت** (schneit/Winter · stark · blau · Winter ⇒ بكلمات الدرس) · Winter/Sommer/blau كلمات SD1 بلا درس ⇒ N-107.
