@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-17 — الدفعة 124: a1-u10-d4 مُرقّى — ظروف الزمن والمنفصلة وبلا ge‑ في Perfekt (D169) · ars-zeitangaben · نواة der Anfang/der Verein · سبعة أمثلة مصحّحة
+- **إضافة:** `content/arsenal/grammar/ars-zeitangaben.json` (خمسون قاعدة يوم) · كلمات `anfang` · `verein` بمقطعيهما · حوار `a1-u10-d4-endlich-wochenende` (ew-1..20 مكالمة اليوم السادس) · مانيفست 1821 · المرجع 1498 · معجم النطق 74 (بلا جديد).
+- **تحسين المحتوى:** 65 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح (الظرف بعد التصريف ⇒ ~~Ich habe angerufen neulich.~~ · المنفصل مفكوكاً ⇒ ~~Ich habe gerufen an.~~ · ge‑ على be‑/ver‑/‑ieren ⇒ ~~getelefoniert~~) · 14 كلمة.
+- **تصحيح بيانات:** سبعة أمثلة (neulich · aufschreiben · erinnerung · notiz · damals · richtig · falsch — N-109) · خطة الترقية u10-d4 done (properNouns Yusuf/Lena/Tunis/Berlin · misspellings getelefoniert/gebesucht/gevereinbart) · خطة SD1 u10-d4 done · تسجيل ew على Kurs/April/Fußball/nachher/Notiz/geregnet (N-099).
+- **اختبارات:** كتلة D169 (+1) · المثال غير المُرقّى ← a1-u10-d5 · مثبّتات النواة ← a1-u10-d5 · العدّ 869 · 702/702 · validator 1099/0/0.
+
 ## 2026-10-17 — الدفعة 123: a1-u10-d3 مُرقّى — الماضي المركّب مع haben (D168) · ars-perfekt-haben · نواة früher/gewinnen · ستة أمثلة مصحّحة
 - **إضافة:** `content/arsenal/grammar/ars-perfekt-haben.json` (تسع وأربعون قاعدة يوم) · كلمات `frueher` · `gewinnen` بمقطعيهما · حوار `a1-u10-d3-was-hast-du-gestern-gemacht` (wg-1..20 مكالمة اليوم الخامس) · مانيفست 1799 · المرجع 1476 · معجم النطق 74 (geregnet · geholt).
 - **تحسين المحتوى:** 63 بنداً/4 أنواع · Quiz 3×6 · 3 مصائد بتعليل صحيح (haben يسقط أو يُستبدل بالحاضر ⇒ ~~Gestern ich habe …~~ · التصريف قبل المفعول ⇒ ~~Ich habe gegessen Fisch.~~ · تعميم ge‑…‑t على القوي ⇒ ~~gegesst~~) · 14 كلمة.
