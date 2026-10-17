@@ -16989,6 +16989,46 @@
       "rmsDb": -17.2
     },
     {
+      "id": "word-beste",
+      "file": "words/audio/de-DE/word-beste.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "beste.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 792,
+      "sizeBytes": 3723,
+      "hash": "sha256:0640a0e79d5bae24d9f62bad857d228e3be5401a6808fe67d557477335170f8b",
+      "pcmSha256": "4cd932a8045c8c3b5c49180d6fc19e07130c1eeb9caf98d51f3d6f965e096c10",
+      "rmsDb": -17.21
+    },
+    {
+      "id": "word-circa",
+      "file": "words/audio/de-DE/word-circa.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "circa.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 734,
+      "sizeBytes": 3768,
+      "hash": "sha256:5ae57a8ce58692fb7d49505558cdf66c2f09854fe8ca36adc490ec9b61d108c7",
+      "pcmSha256": "72d611e5b3be6b39a1649f91e7559b918bca21cd477e199cde28fa72b7dc8bb7",
+      "rmsDb": -17.09
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -32134,6 +32174,446 @@
       "hash": "sha256:129efef8b62afbedb82bb63b95a19d240274fcd9a49efe3219df8de299deaae1",
       "pcmSha256": "5519afac95b20994b4e8b29c73e18ec6fb1c1220484044aa6424986796725814",
       "rmsDb": -17.04
+    },
+    {
+      "id": "ws-1",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 146,
+        "lengthScale": 1.32
+      },
+      "textDe": "Yusuf, hast du jetzt die Schuhe für deine Oma?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 3704,
+      "sizeBytes": 17228,
+      "hash": "sha256:2b59323d8460cf3d68ac12e599f5d1931515a3b11652e5ae2730fccd3d907a1f",
+      "pcmSha256": "22bc201c255d7c6d566eef5207044038089ce260f036517e6feb96b315d71b88",
+      "rmsDb": -17.31
+    },
+    {
+      "id": "ws-2",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 122,
+        "lengthScale": 1.32
+      },
+      "textDe": "Noch nicht. Im Geschäft kosten die Schuhe neunundachtzig Euro — zu teuer!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 5424,
+      "sizeBytes": 24296,
+      "hash": "sha256:53e8b043ac1eb69a6f2afe85dba7cc782bd38f3a4b4db3775509dd15785ddd45",
+      "pcmSha256": "09c420a9982ea25b874d86f2055ad0644af22275c4feb218f0bf65a1ce3b49cc",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "ws-3",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 119,
+        "lengthScale": 1.32
+      },
+      "textDe": "Neunundachtzig Euro? Das ist nicht günstig. Und der Markt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 4536,
+      "sizeBytes": 21037,
+      "hash": "sha256:6f6ccf6c3a2e42ba80f21c25da7e7dc904dfe99493d34f722a89414bdbbb64b8",
+      "pcmSha256": "f436dc78939dddadee606589ca39ceca913996788715a97799660b032788a77e",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "ws-4",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 146,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Markt ist am besten. Dort kosten die Schuhe circa vierzig Euro.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 4937,
+      "sizeBytes": 22795,
+      "hash": "sha256:b053a06baa2ab287a8c41c997f02787a3746a4e488bf1b0eebdb6883e647ef33",
+      "pcmSha256": "ebd1037db0b2a20598889d6f8ba67bbd4f1f47d97136ce9dd5648c332497e059",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "ws-5",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 106,
+        "lengthScale": 1.32
+      },
+      "textDe": "Circa vierzig? Und was kosten sie genau?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 3944,
+      "sizeBytes": 18328,
+      "hash": "sha256:4f02c82e5e2e41af0d38d6d0d3e7908d6f5811036ab9300a57cfcd83971e744b",
+      "pcmSha256": "a7fcb63476a12e6e5713e4b1eef8d9d4e536eec2ff8e360d0010fe8fa5646502",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "ws-6",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 109,
+        "lengthScale": 1.32
+      },
+      "textDe": "Neununddreißig Euro neunundneunzig. Und heute gibt es zehn Euro Rabatt!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 5482,
+      "sizeBytes": 25078,
+      "hash": "sha256:4ae428342e4d965d5307e302b0ce5080b4562f7f7e2a1f6ef03ed5d6d2a84777",
+      "pcmSha256": "15acbca8cc25445c8b95eb2c6f73c0f4074695e685d931d7a3229d01910dca40",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "ws-7",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zehn Euro Rabatt? Das Angebot ist gut!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 3416,
+      "sizeBytes": 15721,
+      "hash": "sha256:45f3e883e10484c38a343b01e5115410a3dc1d574adcc9fd279492ad16f481a0",
+      "pcmSha256": "8151f8699bebcb003dad404613ca5e15d5d7d0e3e7c10ec4bd1fb08517891f8e",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "ws-8",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 91,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Das macht neunundzwanzig Euro neunundneunzig.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 3973,
+      "sizeBytes": 18485,
+      "hash": "sha256:23e17849c611ca5ae3863cd61b8b1cb2cf26366d5c0a8ea7cddd2ca13881f7a7",
+      "pcmSha256": "1ba6bf638b6ad91e923660915e6b9638dba52d128de8852b7de0d96808a317be",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "ws-9",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und der Verkäufer? Ist er nett?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 2360,
+      "sizeBytes": 11127,
+      "hash": "sha256:826a9439c35b7a452974deb01be012928c00d3cbbd19295f1bde3d4ad2547aba",
+      "pcmSha256": "f8e34d275475f8cdd0c9fe5d40b6219f40a0641f00228944835835c30d342198",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "ws-10",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 146,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sehr nett. Er verkauft auch Hüte. Ich probiere einen Hut an — für mich!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 5355,
+      "sizeBytes": 24028,
+      "hash": "sha256:0543151a3aee0758fd52bcce50469064bfe3ff869878c0b8f45cd334808a9b5d",
+      "pcmSha256": "1b8238722444ec17aaa912570d5d30beb65e159ba176fd7fd7a0102a0cfca4e8",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "ws-11",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 177,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Hut für dich? Was kostet er?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 2376,
+      "sizeBytes": 11182,
+      "hash": "sha256:1df34e93a5a788e76eaeba953fe6784889472eaff8336564b4dc988cd5a25c57",
+      "pcmSha256": "9f40b5aae990863631f1e66fd107b42135526b3a454196a0621b15ed7231bb3e",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "ws-12",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nur fünf Euro fünfzig. Aber er ist zu groß.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 3613,
+      "sizeBytes": 16158,
+      "hash": "sha256:3aea067f71e814a0a34b5faeace7ef7ae1abcbf91296bb95d7b94b68987fcbad",
+      "pcmSha256": "10a66a59e1bee254faa990212881737eeb8e1f70bdd8c1c20080af5ea11351da",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "ws-13",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zu groß? Und wie bezahlst du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 2824,
+      "sizeBytes": 13191,
+      "hash": "sha256:b4a17f44ff6d22c5bf26f25de8d260574883786d7e20cf3631b50972f1a851fe",
+      "pcmSha256": "0463fc549ac79b5d27d91abb1ecd03c02abbe4833973db1aecced3a08ba67b3e",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "ws-14",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 128,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich habe fünfzig Euro. Das Wechselgeld: zwanzig Euro und ein Cent.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 5157,
+      "sizeBytes": 23443,
+      "hash": "sha256:cb8cbe706633c78c856ac4ebe615b6922cfa7db6353748f2c11b05b375dfaf23",
+      "pcmSha256": "ce088c40596ad0da27318cbe059e1965a8cf120fc8f2a373b3fe21f98314ff2e",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "ws-15",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Cent! Hat der Verkäufer viele Kunden?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 3304,
+      "sizeBytes": 15423,
+      "hash": "sha256:12de886012b714c118abc7c24ee541c31f5faff3159375c7fe92b0fa36ab1fd7",
+      "pcmSha256": "f03bdda5897adeec33613c9ef6a8d53e7cb68fd66adbe8341ab13f0a4351a6fa",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "ws-16",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, heute kaufen viele Kunden Schuhe. Und du, Lena? Was kaufst du für deine Oma?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 6318,
+      "sizeBytes": 28688,
+      "hash": "sha256:28934f0927d24df1123dbc1b59ee2e31b9e5b28b202589cdabbc0e564340e11f",
+      "pcmSha256": "b590bea4c9695cd515d8820067658840a23e19f76b8f12efda007e9178ef6c19",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "ws-17",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ein Buch. Im Supermarkt kostet es circa zwölf Euro.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 4776,
+      "sizeBytes": 22339,
+      "hash": "sha256:294f4047a0bb302e2928b3cc05d6bec34003deefd41274ac61277e7139fb8e60",
+      "pcmSha256": "228e29d4392e92a7f847d28fc8718a0094a885fb5d5bf2bc9bbe74783ec8adab",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "ws-18",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 128,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Buch im Supermarkt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 1872,
+      "sizeBytes": 8709,
+      "hash": "sha256:5c9eee3713d0fffb4af204843062ca4fa75ce4025c5d3516c126dfffae052682",
+      "pcmSha256": "fb462050557c687ac6335587567b2cfaa5daa7aa810af552fc6a5cd02e1b751c",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "ws-19",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, im Supermarkt gibt es auch Bücher — und sie sind günstig!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 4744,
+      "sizeBytes": 22090,
+      "hash": "sha256:f5b7a6758c15bb09bc8662377ffd04485824e51e7d76f9038a1ffaa36061dc74",
+      "pcmSha256": "31806584bfc984692537d519993bf9c8449545c14b1619a452d314bd83eb9675",
+      "rmsDb": -17.64
+    },
+    {
+      "id": "ws-20",
+      "file": "audio/scripts/a1-u8-d2-was-kosten-die-schuhe/ws-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 112,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! Viel Spaß im Supermarkt!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u8-d2"
+      ],
+      "durationMs": 2684,
+      "sizeBytes": 12496,
+      "hash": "sha256:4383cfb883f1b1d4d9a8b33668a9104c7f9018571b65db0d398b8feabd2b7100",
+      "pcmSha256": "ac6c7c4233263a995e186eedb4a995767625bc5ae9d06a6b16d6ac240487eae6",
+      "rmsDb": -17.06
     }
   ],
   "characterVoices": {

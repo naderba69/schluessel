@@ -228,7 +228,9 @@
         "Er ist vierzig Jahre alt."
       ],
       "regeneratedTracks": [
-        "word-vierzig"
+        "word-vierzig",
+        "ws-4",
+        "ws-5"
       ]
     },
     {
@@ -763,7 +765,9 @@
       ],
       "regeneratedTracks": [
         "mt1-h2-a2",
-        "word-rabatt"
+        "word-rabatt",
+        "ws-6",
+        "ws-7"
       ]
     },
     {
@@ -1325,6 +1329,29 @@
       "regeneratedTracks": [
         "zg-3"
       ]
+    },
+    {
+      "word": "circa",
+      "forms": [
+        {
+          "espeak": "kˈɪɾkɑː",
+          "ipa": "tsˈɪɾkɑː"
+        }
+      ],
+      "referenceIpa": "/ˈt͡sɪʁka/",
+      "referenceNote": "خطأ صامت لا حركة (D157): النبر والحركة المنبورة صحيحان، لكن espeak يقرأ c اللاتينية كافاً [k] في circa وحدها — والمرجع /ˈt͡sɪʁka/ بـ[ts] كما يقرأ espeak نفسه الرسم البديل zirka وZirkus. التصحيح يمسّ الصامت الأول وحده.",
+      "analogy": "zirka [tsˈɪɾkɑː] · Zirkus [tsˈɪɾkʊs] · Zitrone [tsɪtrˈoːnə] — c قبل i تُنطق [ts] كما z",
+      "contexts": [
+        "circa.",
+        "Ja, ein Buch. Im Supermarkt kostet es circa zwölf Euro.",
+        "Die Jacke kostet circa zwanzig Euro."
+      ],
+      "regeneratedTracks": [
+        "word-circa",
+        "ws-4",
+        "ws-5",
+        "ws-17"
+      ]
     }
   ],
   "reviewed": [
@@ -1447,6 +1474,12 @@
       "verdict": "no-reference",
       "espeak": "hˈʊndɜtˌaɪnʊnttsvˌantsɪç",
       "note": "عدد مركّب غائب عن المرجع (D132) — فُحص بأجزائه: hundert /ˈhʊndɐt/ + einundzwanzig /ˈaɪ̯nʊntˌt͡svant͡sɪç/؛ espeak يقرأ الجزأين كمرجعيهما (ʊ القصيرة في hundert) والنبر الأول على hun ونبر ثانوي على ein وzwan."
+    },
+    {
+      "word": "neunundachtzig",
+      "verdict": "variant",
+      "espeak": "nˈɔønʊndˌaxtsɪç",
+      "note": "عدد مركّب (D157): المرجع نفسه غير متسق في موضع النبر الأول بين الأعداد المركّبة — achtunddreißig وachtundvierzig وdreiundfünfzig بنبرٍ أول على الآحاد /ˈaxtʔʊntˌdʁaɪ̯sɪç/، وachtundachtzig وachtundneunzig على العشرات، وdreiunddreißig بالصيغتين معاً. espeak ينبر الآحاد أولاً ثم العشرات ثانوياً كما في einundzwanzig /ˈaɪ̯nʊntˌt͡svant͡sɪç/ وكما في كل أعداد المحتوى المركّبة (D131 · D132) — والنبر في العدد المركّب يتنقّل بالمقابلة في الكلام الحي، فالصيغتان مسموعتان."
     }
   ]
 }

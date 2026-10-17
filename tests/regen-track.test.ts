@@ -1,6 +1,7 @@
 // tests/regen-track.test.ts — إعادة توليد مقطع كلمة منشور (D121): التعديل النصي للمانيفست لا يمس إلا قياسات مساره
 import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
+import { spawnSync } from "node:child_process";
 import { join } from "node:path";
 import { VOICE_ID } from "../src/lib/audio.js";
 import { MANIFEST_REL, patchTrackMeasures, regenTracks, type Measures } from "../tools/regen-track.js";
@@ -111,5 +112,15 @@ describe("D121 — regenTracks", () => {
     expect(parsed.filter((x: { id: string }) => x.id !== "ann-1")).toEqual(JSON.parse(SAMPLE).tracks.filter((x: { id: string }) => x.id !== "ann-1"));
     const other = SAMPLE.replace('"role": "announcement"', '"role": "narration"');
     expect(() => regenTracks({ ids: ["ann-1"], manifestText: other, contentRoot: "/x", clip })).toThrow(/narration — خارج حدود/);
+  });
+});
+
+describe("D157 — gen-audio.py لا يعيد بناء كل المقاطع بأمرٍ مجهول (N-098)", () => {
+  it("وسيط غير معروف (--lexicon-hits الخاص بـphonemize.py) → خروج 2 ورسالة بالأوامر — لا build_all", () => {
+    const ROOT = join(import.meta.dirname, "..");
+    const r = spawnSync("python3", [join(ROOT, "tools/gen-audio.py"), "--lexicon-hits", "Hallo."], { encoding: "utf8", timeout: 60_000 });
+    expect(r.status).toBe(2);
+    expect(r.stderr).toMatch(/أمر مجهول «--lexicon-hits».*all · one/u);
+    expect(r.stdout).toBe("");
   });
 });

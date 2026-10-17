@@ -1065,6 +1065,8 @@ def build_all() -> None:
     ("word-achtung", "Achtung.", "achtung", ["a1-u7-d4"]),
     ("word-dieser", "dieser.", "dieser", ["a1-u8-d1"]),
     ("word-gefallen", "gefallen.", "gefallen", ["a1-u8-d1"]),
+    ("word-beste", "beste.", "beste", ["a1-u8-d2"]),
+    ("word-circa", "circa.", "circa", ["a1-u8-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
@@ -1168,5 +1170,10 @@ if __name__ == "__main__":
         text, out = sys.argv[2], Path(sys.argv[3])
         tts(text, out)
         print(json.dumps({"fileSha256": hashlib.sha256(out.read_bytes()).hexdigest()}))
+    elif len(sys.argv) >= 2 and sys.argv[1] != "all":
+        # D157 (N-098): أمرٌ مجهول (مثل --lexicon-hits الخاص بـphonemize.py) كان يسقط في build_all فيعيد توليد
+        # كل المقاطع المنشورة (850 ملفاً بصوت Piper العشوائي) — الآن رفضٌ صريح؛ إعادة البناء الكاملة بـ«all» أو بلا وسائط.
+        sys.stderr.write(f"gen-audio.py: أمر مجهول «{sys.argv[1]}» — الأوامر: all · one · one-as · one-voice · one-wav · voice-for\n")
+        sys.exit(2)
     else:
         build_all()
