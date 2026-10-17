@@ -17149,6 +17149,106 @@
       "rmsDb": -17.05
     },
     {
+      "id": "word-andere",
+      "file": "words/audio/de-DE/word-andere.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "andere.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 769,
+      "sizeBytes": 3893,
+      "hash": "sha256:f56e25b6deb29aec3103070e8c3e3978bb87f9decd5f5fb6591b591f381e4775",
+      "pcmSha256": "35c873cfdd9f4b3d08b65dba850aa6db1b2f27bff8a602956cdb2ccddf7d9d42",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-weiter",
+      "file": "words/audio/de-DE/word-weiter.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "weiter.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 827,
+      "sizeBytes": 4049,
+      "hash": "sha256:3c248efb509e51b0f8a1822fbba3696377a41a9a01d5ca0902064a0b6c027593",
+      "pcmSha256": "93a583924c44f6e51fba1ec1805a1055bcd81fa65117284a71844d34ea6e2337",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "word-halten",
+      "file": "words/audio/de-DE/word-halten.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "halten.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 1001,
+      "sizeBytes": 4545,
+      "hash": "sha256:79dc2bc8f89ebcad791a9c120f4c333b96b873babd849404dae44a76e666ec52",
+      "pcmSha256": "6a64634b50cf18fd9823fc1cca39b9053d9c45a61ab2fe117b3091500488f770",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "word-polizei",
+      "file": "words/audio/de-DE/word-polizei.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Polizei.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 1361,
+      "sizeBytes": 6040,
+      "hash": "sha256:2d4a51239b45c5be4e81f2b657bc024edb0fa9e261622a4c86e60875663a8f15",
+      "pcmSha256": "7c02f56d90b91874eafd7e4cc81b6df9ebca7b5f60352f0a90a554ba94783ea0",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "word-stelle",
+      "file": "words/audio/de-DE/word-stelle.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Stelle.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 1059,
+      "sizeBytes": 4675,
+      "hash": "sha256:797767531722430668c17ef8eb7e2360a41c2fc222a480818ef1fa695012cc79",
+      "pcmSha256": "a8bfaa3856b63892cc2fe4f79fb7094628218afa9b4a7e23c9558d44d4cbce28",
+      "rmsDb": -17.17
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -35814,6 +35914,446 @@
       "hash": "sha256:42f0f7dbab0e5689c0de0f53625e50382ece0d1834dae37bb764da1c208dfeb2",
       "pcmSha256": "28cb3a1edf07881cf779d21fdbf83064c925f95c9d873125d320efe6981fb139",
       "rmsDb": -17.04
+    },
+    {
+      "id": "st-1",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 135,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Lena! Entschuldigung, ich bin spät. Ich bin noch im Bus.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 4890,
+      "sizeBytes": 21174,
+      "hash": "sha256:1881d2ab8fe6997a1590f85c5ae085ff8ee4c50ee90c165daf8e7bf642293148",
+      "pcmSha256": "0eb807919376b7891dd4e90d6ac13f5c2b2d26ba624b67ba3a2ff44b9c34ffbc",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "st-2",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Im Bus? Wohin fährst du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 2040,
+      "sizeBytes": 9625,
+      "hash": "sha256:7301e0ccb298fb5a4dd83b288b9eb6b55470fb81e2dcd33a926405b15c3cce86",
+      "pcmSha256": "c35249ec0fa1704c54d833eb69a440a4bd475d0d28587c51738b8050355f043a",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "st-3",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 193,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich fahre heute mit meinem Vater in die Stadt. Aber der Bus steht — heute ist Stau.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 4972,
+      "sizeBytes": 23057,
+      "hash": "sha256:33f05ce363f5e1f59a734bbc7cee4317086bf3bfff9a255f06c5a7384f734982",
+      "pcmSha256": "d2c9318f8dd27a252351a8bc15b3098d951a6cb1d53f905af540413fcd7ee104",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "st-4",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Stau? Das ist der Grund! Und wo steht der Bus jetzt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 4440,
+      "sizeBytes": 20528,
+      "hash": "sha256:25ed2af66f83a204b23d62c2dfad489010cc60d31669bc4a42d445d9c0f01cfb",
+      "pcmSha256": "0044a30d4c645e4fb95cad0b64eccae86b7fee42adbf4bbe9493e0f5903df265",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "st-5",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 175,
+        "lengthScale": 1.32
+      },
+      "textDe": "An der Kreuzung vor der Brücke. Die Polizei steht da, und der Bus fährt nicht mehr weiter.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 5842,
+      "sizeBytes": 26528,
+      "hash": "sha256:de2101150460984e0af102e14200f2838b2ebeca929999330f2aeeef4c7bfeb9",
+      "pcmSha256": "65fdb339f402874819447b2558258ee2146abdcfc259d3d58aa592c3c485e8aa",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "st-6",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die Polizei? Ist da ein Problem?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 2456,
+      "sizeBytes": 11625,
+      "hash": "sha256:61058b978e48f4f6020182dfd42d1441b1a19759f1ed4c0317dc91420e0184f0",
+      "pcmSha256": "5d050f36de0b49607b22fc286c7fd5b112bb6da2c4542d29684ea98fe87dfa53",
+      "rmsDb": -17.2
+    },
+    {
+      "id": "st-7",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 158,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ein Auto steht auf der Straße. Aber kein Problem — bald fahren wir weiter.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 5320,
+      "sizeBytes": 24837,
+      "hash": "sha256:847fb46b8e9988a41db7ee7cf600a35902cd2d22233a4586430e7788f94c727f",
+      "pcmSha256": "19fa2ededbab95a6400dfda2c18ffddd99507ae56cc67e2b640b35b04899442a",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "st-8",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 157,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hält der Bus im Zentrum?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 1912,
+      "sizeBytes": 9064,
+      "hash": "sha256:7330aa35701e3482f0c0713815c5f7b99d4d5fe7a2e24b9bae1446600c80eee6",
+      "pcmSha256": "b4bcf421de785784a9c31247c7ab10fdc87172fdddb435adc82379575917135d",
+      "rmsDb": -17.68
+    },
+    {
+      "id": "st-9",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, er hält nicht im Zentrum. Ich steige am Bahnhof aus — die Haltestelle ist auf der anderen Seite.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 7143,
+      "sizeBytes": 32034,
+      "hash": "sha256:5321edf3b0fb07d5c6850dba8461a05309279ac0023020dd3efb389d47b6136f",
+      "pcmSha256": "acd171ab61c122dc44b3d7b491c720ad5d5aef332729d7815da9b8654d06a2e9",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "st-10",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und der Fahrplan? Wann kommt der Bus am Bahnhof an?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 4072,
+      "sizeBytes": 19347,
+      "hash": "sha256:60375a3bd03d7f21ff6a42dd56660252d08a80fcc2cbc36eb5638695633c0601",
+      "pcmSha256": "208af00a9c85627ce74917fd0807a043478d51bd462021d0bee6d7011723615f",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "st-11",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 154,
+        "lengthScale": 1.32
+      },
+      "textDe": "Im Fahrplan steht: um neun Uhr. Aber heute kommt er nicht pünktlich an.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 5076,
+      "sizeBytes": 22740,
+      "hash": "sha256:374697f422d6cf9a18c734262c1c1944cfa27696a5ea166e51fef41a9b346b78",
+      "pcmSha256": "c68eb53be598922adea49189b869beafcb2a7c2b2c183ae9c2d36f22b13394c3",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "st-12",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 181,
+        "lengthScale": 1.32
+      },
+      "textDe": "Bei uns ist der Zug immer pünktlich. Ich fahre jeden Tag um sieben mit dem Zug zur Schule.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 5960,
+      "sizeBytes": 27760,
+      "hash": "sha256:add46cdb2037a3484ca574ad4e48b9b31743b5cd8c20fadda317f0c4ecac8aff",
+      "pcmSha256": "a3e36de2458361c5f28dcbc1d4f532a80b4a67329902c2a3e1f00d15f3e73f75",
+      "rmsDb": -17.42
+    },
+    {
+      "id": "st-13",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Jeden Tag um sieben mit dem Zug zur Schule — zuerst: wann? Danach: wie? Am Ende: wohin?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 6527,
+      "sizeBytes": 29164,
+      "hash": "sha256:42269511a4b63b4b584ffe8c830de5bbe3a2a2359e731a03336ed4ceaff191c7",
+      "pcmSha256": "d3ac56a3aa9073e8509ff76fe303bb19d478457a8eb3dd021046fab1f2ba8b49",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "st-14",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 177,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau: Wann? Wie? Wohin? — Und du? Wann fährst du zurück?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 3384,
+      "sizeBytes": 15808,
+      "hash": "sha256:53e634fa452de1500c36833de3771262d29414cb755937e32e74d1b0f502b0c8",
+      "pcmSha256": "42bf90bf3e69e276cc5d4c786c7bc9711be9afc65fa9f1e0c7468c218fb858d3",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "st-15",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich fahre heute Abend um sechs mit dem Bus zurück. Die Verbindung ist gut, ich muss nicht umsteigen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 6435,
+      "sizeBytes": 29487,
+      "hash": "sha256:c9609caf41b3b6b1d0d0d1e32a615ff7946d2055ad90cf8aef63c9658eae18f3",
+      "pcmSha256": "76472351c24883abdbd139d34b4d0aa31c967910feea5f6b7a1bab4fac3ae8dc",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "st-16",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut! Und morgen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 1368,
+      "sizeBytes": 6504,
+      "hash": "sha256:14223dca6a19b799baec6723de0046a835b7b50a60b0882c93f3b00abefa2cd5",
+      "pcmSha256": "d48f02b76de2bafefe03cec4d41140457b5da469993da555e96308fe8d1e5186",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "st-17",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 204,
+        "lengthScale": 1.32
+      },
+      "textDe": "Morgen gehe ich um zehn mit meiner Schwester zu Fuß ans Ufer.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 3532,
+      "sizeBytes": 16381,
+      "hash": "sha256:f5fd35afee51ea63506a0780b8c3b07e397128a5b46a656b8fb04443c598c35a",
+      "pcmSha256": "664f65dc93cfdf550ce2966e312070c4a9f113a1456893de59053ef0bf0cce5e",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "st-18",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! Fährt der Bus jetzt weiter?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 2456,
+      "sizeBytes": 11531,
+      "hash": "sha256:1bbc680e3aed3a5b449cc69b3b9df9cbd1579493e5c2d6c3852bb515572e731d",
+      "pcmSha256": "d7d09b10a876dd5dbaa96ff7abc7310ac62e6cbf977916774fb0302fe13f7871",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "st-19",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 163,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Die Polizei ist weg, und der Bus fährt weiter. An der nächsten Stelle steige ich aus.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 6272,
+      "sizeBytes": 28222,
+      "hash": "sha256:d05fea0120b8bc8d3bc950f6c1af9c5ac4125bc7cdc4d8aa767b15f63aa52a5f",
+      "pcmSha256": "ff28a4de4b1bab38c5f783b762d603fb5c8585535a7db7b89c68e06c3d37d0db",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "st-20",
+      "file": "audio/scripts/a1-u9-d5-im-stau/st-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Bis bald, Yusuf — und viel Spaß in der Stadt!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u9-d5"
+      ],
+      "durationMs": 3736,
+      "sizeBytes": 17352,
+      "hash": "sha256:c80f382f578c61b113b979c62b3d201b5035d44c4d1de65776e1e8f31790975c",
+      "pcmSha256": "e4fe293c63b9c2b4429a3c65b7acbff9e2ac067721428a9492d990961648d2be",
+      "rmsDb": -17.51
     }
   ],
   "characterVoices": {

@@ -1088,6 +1088,11 @@ def build_all() -> None:
     ("word-hilfe", "die Hilfe.", "hilfe", ["a1-u9-d3"]),
     ("word-auf-sein", "auf sein.", "auf-sein", ["a1-u9-d4"]),
     ("word-zu-sein", "zu sein.", "zu-sein", ["a1-u9-d4"]),
+    ("word-andere", "andere.", "andere", ["a1-u9-d5"]),
+    ("word-weiter", "weiter.", "weiter", ["a1-u9-d5"]),
+    ("word-halten", "halten.", "halten", ["a1-u9-d5"]),
+    ("word-polizei", "die Polizei.", "polizei", ["a1-u9-d5"]),
+    ("word-stelle", "die Stelle.", "stelle", ["a1-u9-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

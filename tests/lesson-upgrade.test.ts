@@ -123,7 +123,7 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u9-d5")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D164 صارت الوحدات 1–8 (d1..d5) وu9-d1..d4 مُرقّاة
+const legacy = realLessons.find((l) => l.id === "a1-u10-d1")!; // المثال غير المُرقّى ينتقل كل دفعة؛ بعد D165 صارت الوحدات 1–9 (d1..d5) كلها مُرقّاة
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -379,7 +379,7 @@ describe("D115 — القاعدة والتغطية والحالة pending", () =
     expect(codes(l, entry({ quiz: "pending" }))).not.toContain("e-upgrade-word-unpracticed"); // لا حكم قبل اكتمال الجزأين
   });
   it("pending لا يُفحص (دَين معلن) · وpending يستوفي المعايير → w-upgrade-mark-done", () => {
-    expect(codes(legacy, entry({ lessonId: "a1-u9-d5", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
+    expect(codes(legacy, entry({ lessonId: "a1-u10-d1", rule: "pending", practice: "pending", quiz: "pending" }), [])).toEqual([]);
     const issues = lessonIssues(upgraded(), entry({ quiz: "pending" }));
     expect(issues).toEqual([expect.objectContaining({ level: "warning", code: "w-upgrade-mark-done" })]);
   });
@@ -565,20 +565,20 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("الدرس التالي غير المُرقّى (a1-u9-d5 بعد D164): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
+  it("الدرس التالي غير المُرقّى (a1-u10-d1 بعد D165): يُشخَّص من محتواه الفعلي لا من فجوات الدفعة السابقة", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
-    // بعد D164 صار u9-d4 مكتملاً؛ الفجوات الفعلية لـu9-d5 (مقيسة قبل النقل): لا ملف ars-satzklammer ولا ars-tekamolo · أمثلة الكلمات كلها بألمانية مدروسة
-    // · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · الواجهة في التدريب/المصائد والـQuiz تخرقها «tekamolo» (مصطلح لا كلمة) · Quiz 3×4 · كل الكلمات مُتدرَّبة — القياس لا التخمين
-    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-rule"]);
-    expect(r.rule[0]?.message).toMatch(/ars-satzklammer/);
-    expect(r.rule[1]?.message).toMatch(/ars-tekamolo/);
+    // بعد D165 صارت الوحدة 9 كلها مكتملة؛ الفجوات الفعلية لـu10-d1 (مقيسة قبل النقل): لا ملف ars-wetter-es · أربعة أمثلة كلمات بكلمات غير مدروسة (schneit/Winter · stark · blau · Winter)
+    // · 6 بنود choice بلا خيارات ونوع واحد بلا استماع ولا إملاء · الواجهة في التدريب/المصائد تخرقها blau وفي الـQuiz schneit/stark/Winter · Quiz 3×4 · كل الكلمات مُتدرَّبة — القياس لا التخمين
+    expect(r.rule.map((i) => i.code)).toEqual(["e-upgrade-rule", "e-upgrade-sample", "e-upgrade-sample", "e-upgrade-sample", "e-upgrade-sample"]);
+    expect(r.rule[0]?.message).toMatch(/ars-wetter-es/);
+    expect(r.rule.slice(1).map((i) => i.message).join(" ")).toMatch(/schneit، winter.*stark.*blau.*winter/);
     expect(r.practice.map((i) => i.code).sort()).toEqual([
       ...Array(6).fill("e-upgrade-item"), "e-upgrade-front", "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
     ].sort());
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/tekamolo/);
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/blau/);
     expect(r.quiz.map((i) => i.code)).toEqual(["e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-front"]);
-    expect(r.quiz[3]?.message).toMatch(/tekamolo/);
+    expect(r.quiz[3]?.message).toMatch(/schneit، stark، winter/);
     expect(r.coverage).toEqual([]);
     expect(r.quizMin).toBe(4);
   });
@@ -1384,7 +1384,7 @@ describe("D115 — أدوات القياس", () => {
     // معجم النطق (D162): Bahnsteig [st→ʃt] وHaltestelle [ɛ→ə] — مقطعا الكلمتين وأسطر الحوار ومسار نموذج الامتحان القديم أُعيدت
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; regeneratedTracks: string[] }[] };
     expect(lex.entries.find((x) => x.word === "Bahnsteig")).toMatchObject({ forms: [{ espeak: "bˈɑːnstaɪk", ipa: "bˈɑːnʃtˌaɪk" }], regeneratedTracks: ["word-bahnsteig", "hb-9", "hb-10"] });
-    expect(lex.entries.find((x) => x.word === "Haltestelle")).toMatchObject({ forms: [{ espeak: "hˈaltɛʃtˌɛlə", ipa: "hˈaltəʃtˌɛlə" }], regeneratedTracks: ["word-haltestelle", "mt1-h1-d6-l3", "hb-2", "hb-16"] });
+    expect(lex.entries.find((x) => x.word === "Haltestelle")).toMatchObject({ forms: [{ espeak: "hˈaltɛʃtˌɛlə", ipa: "hˈaltəʃtˌɛlə" }], regeneratedTracks: ["word-haltestelle", "mt1-h1-d6-l3", "hb-2", "hb-16", "st-9"] }); // st-9 (D165) يمسّ المدخل نفسه
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
     expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
@@ -1395,6 +1395,115 @@ describe("D115 — أدوات القياس", () => {
     const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
     expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(norm(a))))).toEqual([]);
     expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
+    // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
+    const taught = knownStems(taughtUpTo(l, realLessons, words));
+    const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+    const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
+    expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
+  });
+  it("a1-u9-d5 مُرقّى (D165): صفر نقص — 58 بنداً · 4 أنواع · Quiz 6 · 11 كلمة · ars-satzklammer + ars-tekamolo (جديدتان) · نواة andere/weiter/halten/die Polizei/die Stelle · كل 20 سطراً وتسعة مقاطع كلمات مستخدمة", () => {
+    const l = realLessons.find((x) => x.id === "a1-u9-d5")!;
+    const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u9-d5")!;
+    const rules = loadGrammarRules(CONTENT);
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([58, 4, 6, 11]);
+    // الكلمات الإحدى عشرة كلها جديدة (لا تكرار من الوحدات 1–8 ولا من u9-d1..d4) — والنواة الخمس (D113) في آخر القائمة
+    const earlier = new Set(realLessons.filter((x) => x.unit <= 8 || (x.unit === 9 && x.day <= 4)).flatMap((x) => x.praesentation.wordIds));
+    expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
+    expect(l.praesentation.wordIds.slice(-5)).toEqual(["andere", "weiter", "halten", "polizei", "stelle"]);
+    // قاعدتا اليوم جديدتان: ars-satzklammer (تشاركها u9-d6 وu11-d4 وu12-d4 وu12-d6 وأسبوع الامتحان) + ars-tekamolo (u9-d6)
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-satzklammer", "ars-tekamolo"]);
+    const sk = rules.get("ars-satzklammer")!;
+    const tk = rules.get("ars-tekamolo")!;
+    expect(sk.usedInLessons).toEqual(["a1-u9-d5", "a1-u9-d6", "a1-u11-d4", "a1-u12-d4", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6"]);
+    expect(tk.usedInLessons).toEqual(["a1-u9-d5", "a1-u9-d6"]);
+    expect(sk.payload.ruleDe).toBe("Ich fahre heute in die Stadt. · Heute fahre ich in die Stadt. · Bei uns ist der Zug immer pünktlich. — Ich steige am Bahnhof aus. · Der Bus kommt um neun an. · Bald fahren wir weiter. · Der Bus fährt heute nicht weiter. — Ich muss am Hauptbahnhof umsteigen. · Du kannst hier aussteigen. · Ich muss nicht umsteigen. — Hält der Bus im Zentrum? · Kommt der Bus pünktlich an? · Wann kommt der Bus an? · Wohin fährst du? — ich halte · du hältst · er hält · wir halten — Heute ist Stau. · Das ist der Grund. · Die Polizei steht an der Kreuzung. · An dieser Stelle hält der Bus nicht. · Die Haltestelle ist auf der anderen Seite. · Die Verbindung ist gut. · Im Fahrplan steht: um neun Uhr.");
+    expect(tk.payload.ruleDe).toBe("Ich fahre heute mit dem Bus in die Stadt. · Ich fahre jeden Tag um sieben mit dem Zug zur Schule. · Ich fahre heute Abend um sechs mit dem Bus zurück. — Heute fahre ich mit dem Bus in die Stadt. · Morgen gehe ich um zehn mit meiner Schwester zu Fuß ans Ufer. · Um neun kommt der Bus am Bahnhof an. — Ich muss heute mit dem Bus in die Stadt fahren. · Mein Vater fährt am Morgen mit dem Auto zur Arbeit. · Wir gehen am Abend zu Fuß ans Ufer. — Wann? Wie? Wohin?");
+    // قوس الجملة بأربع خطوات: الفعل ثانياً والقلب · القوس (جزء منفصل/مصدر) · السؤال لا يكسره · الكلمات (hält · Polizei مفرد · Stelle · andere قطعتان)
+    for (const x of ["قوس الجملة (Satzklammer) بأربع خطوات", "Heute fahre ich — لا ~~Heute ich fahre~~", "Bald fahren wir weiter. (weiter يغلق القوس كجزء منفصل: weiterfahren)", "Ich muss am Hauptbahnhof umsteigen.", "Hält der Bus im Zentrum?", "Wann kommt der Bus an?", "ich halte · du hältst · er/sie/es hält · wir halten", "die Polizei (الشرطة — مفرد دائماً", "die Stelle, -n", "auf der anderen Seite · ein anderer Bus"])
+      expect(sk.payload.ruleAr).toContain(x);
+    // ترتيب الظروف بأربع خطوات: Wann? ← Wie? ← Wohin? · الزمن يتقدّم · القوس يحيط · اليوم قبل الساعة — بلا المصطلح الأجنبي في النصوص الألمانية
+    for (const x of ["Wann? (الزمن", "Wie? (الكيفية", "Wohin?/Wo? (المكان", "Heute fahre ich mit dem Bus in die Stadt.", "Ich fahre heute Abend um sechs mit dem Bus zurück.", "heute Abend um sechs · jeden Tag um sieben", "zuerst: wann? Danach: wie? Am Ende: wohin?"])
+      expect(tk.payload.ruleAr).toContain(x);
+    for (const x of ["~~Heute ich fahre in die Stadt.~~", "~~Der Bus kommt an um neun.~~", "~~Ich muss umsteigen am Hauptbahnhof.~~", "~~Der Bus haltet hier.~~", "خريطة التداخل 10‑ي"]) expect(sk.payload.contrastAr).toContain(x);
+    for (const x of ["~~Ich fahre mit dem Bus heute in die Stadt.~~", "~~Ich fahre in die Stadt mit dem Bus.~~", "~~Morgen ich gehe ans Ufer.~~", "خريطة التداخل 10‑ي"]) expect(tk.payload.contrastAr).toContain(x);
+    expect(sk.payload.limitsAr).toHaveLength(4);
+    expect(tk.payload.limitsAr).toHaveLength(4);
+    expect(sk.payload.limitsAr.join(" ")).toMatch(/abfahren كاملاً .* في الوحدة 12/);
+    expect(tk.payload.limitsAr.join(" ")).toMatch(/Ka \(السبب: wegen/);
+    expect(sk.payload.beads).toEqual(["Heute", "kommt", "der", "Bus", "nicht", "pünktlich", "an."]);
+    expect(tk.payload.beads).toEqual(["Heute", "fahre", "ich", "mit", "dem", "Bus", "zur", "Schule."]);
+    // النطاق في نصوص المتعلم الألمانية: لا abfahren (fährt … ab — u12-d1) ولا weil/warum (u10-d5) ولا dann/leider/denn (u12-d4) ولا Verspätung (u12-d2) ولا المصطلح TEKAMOLO/Satzklammer
+    const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.correct.de, c.exercise.a]), g: l.ziel.de, t: [l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de] });
+    expect(shown).not.toMatch(/\b(ab\.|fährt ab|abfahren|weil|warum|dann|leider|denn|Verspätung|TEKAMOLO|TeKaMoLo|Satzklammer|umsteigen am|kommt an um)\b/i);
+    expect(e.properNouns).toEqual(["Yusuf", "Lena", "Berlin"]);
+    expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
+    // النواة الخمس بملفات جديدة (المولِّد D105 · goetheList مشتقة D110 — ander- بالجذع من andere كـdies-/dieser) وأمثلتها من الدرس · ومثال pünktlich صُحّح (كان بـabfahren)
+    const w = (id: string) => words.find((x) => x.id === id)!;
+    const sample = (id: string) => w(id).sampleSentence!.de;
+    expect([sample("andere"), sample("weiter"), sample("halten"), sample("polizei"), sample("stelle"), sample("puenktlich")]).toEqual(["Die Haltestelle ist auf der anderen Seite.", "Bald fahren wir weiter.", "Der Bus hält hier nicht.", "Die Polizei steht an der Kreuzung.", "An dieser Stelle hält der Bus nicht.", "Der Bus kommt pünktlich an."]);
+    expect(w("halten").forms).toMatchObject({ praesens3s: "hält", perfekt: "hat gehalten" });
+    expect(w("polizei")).toMatchObject({ gender: "die", plural: "die Polizei", goetheList: ["A1", "A2"], usedInLessons: ["a1-u9-d5"] });
+    expect(w("stelle")).toMatchObject({ gender: "die", plural: "die Stellen" });
+    expect(w("andere").grammarRisks).toContain("adjective-decl");
+    expect(w("weiter").grammarRisks).toContain("v2-order");
+    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|\bdann\b|fährt .* ab\b/);
+    for (const id of l.praesentation.wordIds) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u9-d5");
+    // الحوار (st-1..20) مكالمة من الحافلة في تونس (N-037/N-100): يوسف متأخر بسبب الازدحام ولينا في بلدتها — لا لقاء في مكان واحد
+    const script = JSON.parse(readFileSync(join(CONTENT, "audio-scripts/a1-u9-d5-im-stau.json"), "utf8")) as { lines: { id: string; speaker: string; text: string }[] };
+    expect(script.lines).toHaveLength(20);
+    expect(script.lines.find((x) => x.id === "st-3")?.text).toBe("Ich fahre heute mit meinem Vater in die Stadt. Aber der Bus steht — heute ist Stau.");
+    expect(script.lines.find((x) => x.id === "st-12")?.text).toBe("Bei uns ist der Zug immer pünktlich. Ich fahre jeden Tag um sieben mit dem Zug zur Schule.");
+    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\bwir (sind|gehen|fahren) (hier|zusammen)\b|hole dich|bringe dich|\bdann\b|\bweil\b|\bwarum\b|\bleider\b|fährt ab|\bsagt\b|Der Bus fährt nicht weiter\.|TEKAMOLO/i);
+    // N-020 لهذا الدرس: الاستدعاء من دروس سابقة (morgen · Abfahrt · umsteigen — u3-d3/u9-d2/u9-d2) كما كان
+    expect(l.warmup.cardIds).toEqual(["morgen", "abfahrt", "umsteigen"]);
+    expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
+    // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102)
+    const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
+    for (const st of l.uebung.stations) {
+      expect(st.interleavedWith.length).toBeGreaterThan(0);
+      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
+      for (const ref of st.interleavedWith) {
+        expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
+        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s"].some((f) => toks.has(f));
+        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+      }
+    }
+    // الحوار الجديد (st-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من السطر البطيء الوحيد (st-16 ≤132) مع تسعة مقاطع كلمات، والأسرع التسعة عشر كلها استماعاً
+    const listening = l.uebung.stations.find((s) => s.type === "listening")!;
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
+    expect(new Set(audioIds).size).toBe(audioIds.length);
+    expect(audioIds.filter((id) => id.startsWith("st-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
+      .toEqual(Array.from({ length: 20 }, (_, i) => `st-${i + 1}`));
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-andere", "word-fahrplan", "word-grund", "word-halten", "word-polizei", "word-stau", "word-stelle", "word-verbindung", "word-weiter"]);
+    expect(audioIds.every((id) => tracks.has(id))).toBe(true);
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; textDe: string; voiceParams: { speedWpm: number } }[] };
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    const fast = Array.from({ length: 20 }, (_, i) => `st-${i + 1}`).filter((id) => wpm.get(id)! > 132);
+    expect(fast).toHaveLength(19);
+    for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
+    const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
+    for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
+    // معجم النطق (D165): nächsten [ɛ→ɛː] (كمّية الحركة — كـnächste القائم) — السطر st-19 أُعيد
+    const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; regeneratedTracks: string[] }[] };
+    expect(lex.entries.find((x) => x.word === "nächsten")).toMatchObject({ forms: [{ espeak: "nˈɛçstən", ipa: "nˈɛːçstən" }], regeneratedTracks: ["st-19"] });
+    // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
+    const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
+    expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
+    const answers = new Set([...l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.a))), ...l.zusammenfassung.warningCards.flatMap((c) => [c.correct.de, String(c.exercise.a)])]);
+    const quizAnswers = l.quiz.variants.flatMap((v) => v.items.map((i) => String(i.a)));
+    expect(quizAnswers.filter((a) => a.includes(" ") && answers.has(a))).toEqual([]);
+    const norm = (x: string) => x.toLowerCase().replace(/[^\p{L}\s]/gu, " ").replace(/\s+/g, " ").trim();
+    const filled = l.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => norm(String(i.q).replace("___", String(i.a))));
+    expect(quizAnswers.filter((a) => a.includes(" ") && filled.some((f) => f.includes(norm(a))))).toEqual([]);
+    expect(quizAnswers.filter((a) => l.praesentation.wordIds.includes(a.toLowerCase()))).toEqual([]);
+    // المصائد الثلاث (القلب · القوس المغلق · الزمن ← الكيفية ← المكان) — كل واحدة بـ10‑ي
+    expect(l.zusammenfassung.warningCards.map((c) => c.commonError.de)).toEqual(["~~Heute ich fahre in die Stadt.~~ · ~~Morgen ich gehe ans Ufer.~~", "~~Der Bus kommt an um neun.~~ · ~~Ich muss umsteigen am Hauptbahnhof.~~", "~~Ich fahre mit dem Bus heute in die Stadt.~~ · ~~Ich fahre in die Stadt mit dem Bus.~~"]);
+    for (const c of l.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // N-022: هدف الدرس والمهمة والخلاصة بألمانية مدروسة حتى اليوم (مع أعلام الخطة)
     const taught = knownStems(taughtUpTo(l, realLessons, words));
     const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
