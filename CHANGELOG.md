@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-10-18 — الدفعة 129: a1-u11-d4 مُرقّى — Wie fühlst du dich? (D174) · sich fühlen · haben/sein بأفعال اليوم · الأمر بـSie والقوس · مثال blut مصحّح
+- **إضافة:** حوار `a1-u11-d4-wie-fuehlst-du-dich` (kc-1..20 مكالمة اليوم الحادي عشر) · مانيفست 1928 · المرجع 1572 · معجم النطق 75 (بلا جديد — Hals kc-4 · Kurs kc-9).
+- **تحسين المحتوى:** 68 بنداً/4 أنواع (فراغ 30 · استماع 16 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (sich fühlen بلا منعكس/بالداتيف ⇒ ~~Ich fühle besser~~ / ~~Ich fühle mir gut~~ · sein بدل haben ⇒ ~~Der Finger ist geblutet~~ / ~~Ich bin eine Spritze bekommen~~ · الأمر بـSie والقوس ⇒ ~~Sie rauchen nicht!~~ / ~~Ich kann schlucken nicht gut~~) · 12 كلمة · القاعدتان القائمتان ars-perfekt + ars-satzklammer (لا ملف جديد — sich fühlen بلا ملف: N-115).
+- **تصحيح بيانات:** مثال blut («Das Blut ist rot.» — rot بلا درس ⇒ «Das Blut kommt aus der Wunde.») · خطة الترقية u11-d4 done (properNouns Lena — Yusuf لا يظهر في نصوص الدرس · بلا misspellings).
+- **اختبارات:** كتلة D174 (+1 — تثبّت العدد الكلي للمانيفست 1928؛ كتلة D173 صارت تثبّت kb-1..20 فقط) · المثال غير المُرقّى ← a1-u11-d5 بفجواته المقيسة · 707/707 · validator 1115/0/0.
+- **الوثائق:** +N-115 (بانتظار المالك: ars-reflexiv؟) · حُدّثت N-096 · N-099 · N-103 · N-110 · N-113 · الموجّه 3.31.
+
 ## 2026-10-18 — الدفعة 128: a1-u11-d3 مُرقّى — الماضي مع sein — Ich bin im Bett geblieben (D173) · ars-perfekt (ملف واحد) · مثالان مصحّحان · معجم gehustet
 - **إضافة:** `content/arsenal/grammar/ars-perfekt.json` (أربع وخمسون قاعدة يوم — كانت مُشاراً إليها من 13 درساً بلا ملف؛ تجمع sein-Perfekt وwar/hatte — قرار نطاق D173) · حوار `a1-u11-d3-ich-bin-im-bett-geblieben` (kb-1..20 مكالمة اليوم العاشر) · مانيفست **1908** (الدفعة 127 كتبت 1889 والصحيح كان 1888 — N-114) · المرجع 1557 · معجم النطق **75** (+gehustet: ʊ ⇒ uː · kb-4 أُعيد).
 - **تحسين المحتوى:** 68 بنداً/4 أنواع (فراغ 30 · استماع 16 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (haben بدل sein ⇒ ~~Ich habe heute zu Hause geblieben~~ / ~~Der Schmerz hat verschwunden~~ · الحاضر بدل war/hatte ⇒ ~~Ich bin gestern krank~~ / ~~Ich habe gestern Fieber~~ · sein بدل haben ⇒ ~~Ich bin im Bett gelegen~~ / ~~Ich bin gehustet~~) · 12 كلمة — الخمس التي كانت بلا بند (bleiben · liegen · husten · niesen · verschwinden) صار لكلٍّ منها فراغ وإملاء مقطع · `ars-praeteritum` أُزيلت من grammarArsenalIds/usedArsenalIds.
