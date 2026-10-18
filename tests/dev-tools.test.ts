@@ -7,11 +7,11 @@ import { join } from "node:path";
 const ROOT = join(__dirname, "..");
 
 describe("tools/dev — N-104: أدوات الفحص لا تضيع مع الصندوق", () => {
-  it("الملفات الأربعة موجودة ومذكورة في README · .dev-cache في .gitignore", () => {
-    for (const f of ["fetch-official.sh", "check-lesson.ts", "speech-rate.py", "owner-review.py", "README.md"])
-      expect(existsSync(join(ROOT, "tools/dev", f)), f).toBe(true);
+  it("أدوات tools/dev موجودة ومذكورة في README · .dev-cache في .gitignore", () => {
+    const tools = ["fetch-official.sh", "check-lesson.ts", "speech-rate.py", "owner-review.py", "docs-sync.py", "notes.py"];
+    for (const f of [...tools, "README.md"]) expect(existsSync(join(ROOT, "tools/dev", f)), f).toBe(true);
     const readme = readFileSync(join(ROOT, "tools/dev/README.md"), "utf8");
-    for (const f of ["fetch-official.sh", "check-lesson.ts", "speech-rate.py", "owner-review.py"]) expect(readme).toContain(f);
+    for (const f of tools) expect(readme).toContain(f);
     expect(readFileSync(join(ROOT, ".gitignore"), "utf8")).toMatch(/^\.dev-cache\/$/m);
   });
 
