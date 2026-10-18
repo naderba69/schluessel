@@ -1143,6 +1143,21 @@ def build_all() -> None:
     ("word-glueckwunsch", "der Glückwunsch.", "glueckwunsch", ["a1-u13-d1"]),
     ("word-gratulieren", "gratulieren.", "gratulieren", ["a1-u13-d1"]),
     ("word-zufrieden", "zufrieden.", "zufrieden", ["a1-u13-d1"]),
+    ("word-freizeit", "die Freizeit.", "freizeit", ["a1-u13-d2"]),
+    ("word-sport", "der Sport.", "sport", ["a1-u13-d2"]),
+    ("word-mitmachen", "mitmachen.", "mitmachen", ["a1-u13-d2"]),
+    ("word-mitkommen", "mitkommen.", "mitkommen", ["a1-u13-d2"]),
+    ("word-rad-fahren", "Rad fahren.", "rad-fahren", ["a1-u13-d2"]),
+    ("word-schwimmbad", "das Schwimmbad.", "schwimmbad", ["a1-u13-d2"]),
+    ("word-cd", "die CD.", "cd", ["a1-u13-d2"]),
+    ("word-disco", "die Disco.", "disco", ["a1-u13-d2"]),
+    ("word-eintritt", "der Eintritt.", "eintritt", ["a1-u13-d2"]),
+    ("word-lied", "das Lied.", "lied", ["a1-u13-d2"]),
+    ("word-schluss", "der Schluss.", "schluss", ["a1-u13-d2"]),
+    ("word-aufhoeren", "aufhören.", "aufhoeren", ["a1-u13-d2"]),
+    ("word-lieblingslied", "das Lieblingslied.", "lieblingslied", ["a1-u13-d2"]),
+    ("word-zurzeit", "zurzeit.", "zurzeit", ["a1-u13-d2"]),
+    ("word-eilig", "eilig.", "eilig", ["a1-u13-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

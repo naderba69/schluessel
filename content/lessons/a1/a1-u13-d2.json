@@ -1,0 +1,712 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u13-d2",
+  "level": "A1",
+  "unit": 13,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Du verstehst Informationen und Nachrichten über die Freizeit: das Schwimmbad, die Disco, der Sport, die Musik. · Eintritt 4 Euro, Kinder frei. · Kommst du mit? Mach mit! · Um zwölf ist Schluss.",
+    "ar": "تفهم اللافتات والإعلانات والرسائل القصيرة عن وقت الفراغ: مواعيد المسبح ورسم الدخول، إعلان الديسكو ومتى النهاية، دعوة «تعال معنا» و«شارك»، والقرص والأغنية المفضّلة — تقرأ وتسمع وتعرف المطلوب، ولا يُطلب منك إنتاج هذه الكلمات (تكملة SD1 للفهم)."
+  },
+  "canDoDaily": [
+    "يفهم لافتة أو إعلاناً عن المسبح أو الديسكو أو الرياضة (Eintritt · Schluss · frei · ab) ويعرف السعر والوقت.",
+    "يتعرّف على دعوة «Kommst du mit?» و«Mach mit!» وعلى كلمات الموسيقى (CD · Lied · Lieblings-) في رسالة قصيرة."
+  ],
+  "warmup": {
+    "cardIds": [
+      "hobby",
+      "fussball",
+      "schwimmen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«Kommst du mit?» — ماذا يسأل؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Hast du Zeit und kommst du auch?",
+          "Machst du Sport?",
+          "Hörst du Musik?"
+        ],
+        "answer": "Hast du Zeit und kommst du auch?",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "ما هواياتك التي تعرف كلماتها من الوحدة 7؟ (Fußball · schwimmen · Musik hören · tanzen · Kino)",
+      "ما الأفعال المنفصلة التي تتذكرها؟ (aufstehen · anrufen · einkaufen) — اليوم تسمع ثلاثة جديدة للفهم فقط."
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "freizeit",
+      "sport",
+      "mitmachen",
+      "mitkommen",
+      "rad-fahren",
+      "schwimmbad",
+      "cd",
+      "disco",
+      "eintritt",
+      "lied",
+      "schluss",
+      "aufhoeren",
+      "lieblingslied",
+      "zurzeit",
+      "eilig"
+    ],
+    "grammarArsenalIds": [
+      "ars-trennbare"
+    ],
+    "storySentenceIds": [
+      "story-a1-u13-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "sp-st-initial",
+      "umlaut-o",
+      "auslaut-d",
+      "w-v",
+      "ig-ending"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "reading",
+        "items": [
+          {
+            "text": "Schwimmbad am Park — Montag bis Freitag 7 bis 21 Uhr · Samstag und Sonntag 9 bis 18 Uhr · Eintritt: Erwachsene 4 Euro · Jugendliche und Kinder 2 Euro",
+            "q": "Richtig oder falsch? Am Sonntag ist das Schwimmbad bis 21 Uhr auf.",
+            "choices": [
+              "Falsch",
+              "Richtig"
+            ],
+            "a": "Falsch",
+            "why": "السبت والأحد حتى 18 — الحادية والعشرون أيام الاثنين إلى الجمعة فقط. Eintritt = رسم الدخول."
+          },
+          {
+            "text": "Disco Blue — Samstag ab 22 Uhr · Eintritt 5 Euro · Schluss um 3 Uhr · Ab 18 Jahren!",
+            "q": "Wann hört die Musik auf?",
+            "choices": [
+              "um 3 Uhr",
+              "um 22 Uhr",
+              "um 18 Uhr"
+            ],
+            "a": "um 3 Uhr",
+            "why": "Schluss um 3 Uhr = النهاية في الثالثة؛ 22 موعد البداية، و18 هي السنّ الأدنى (ab 18 Jahren)."
+          },
+          {
+            "text": "Hallo Yusuf! Wir gehen am Freitag ins Kino. Kommst du mit? Der Film fängt um acht an. Ayşe",
+            "q": "Was fragt Ayşe?",
+            "choices": [
+              "ob Yusuf mitkommt",
+              "ob Yusuf Sport macht",
+              "ob Yusuf eine CD hat"
+            ],
+            "a": "ob Yusuf mitkommt",
+            "why": "Kommst du mit? = هل تأتي معنا؟ — دعوة إلى السينما يوم الجمعة في الثامنة."
+          },
+          {
+            "text": "Sport im Park! Fußball für Jugendliche — jeden Dienstag um 17 Uhr. Mach mit! Eintritt frei.",
+            "q": "Richtig oder falsch? Fußball im Park kostet Geld.",
+            "choices": [
+              "Falsch",
+              "Richtig"
+            ],
+            "a": "Falsch",
+            "why": "Der Eintritt ist frei = الدخول مجاني؛ Mach mit! = شارك!"
+          },
+          {
+            "text": "Neu! Die CD «Lieder aus Tunesien» — 12 Lieder, nur 9 Euro. Dein Lieblingslied ist auch da!",
+            "q": "Was kostet die CD?",
+            "choices": [
+              "9 Euro",
+              "12 Euro",
+              "2 Euro"
+            ],
+            "a": "9 Euro",
+            "why": "nur 9 Euro هو السعر؛ 12 عدد الأغاني (Lieder). Lieblings- = المفضّل."
+          },
+          {
+            "text": "Liebe Lena, zurzeit habe ich wenig Freizeit: Schule, Hausaufgaben, Fußball. Aber am Sonntag fahre ich mit Nabil Rad. Kommst du mit? Yusuf",
+            "q": "Was macht Yusuf am Sonntag?",
+            "choices": [
+              "Er fährt Rad.",
+              "Er spielt Fußball.",
+              "Er macht Hausaufgaben."
+            ],
+            "a": "Er fährt Rad.",
+            "why": "am Sonntag fahre ich … Rad — ركوب الدراجة يوم الأحد؛ المدرسة والواجبات وكرة القدم هي ما يملأ وقته حالياً (zurzeit)."
+          },
+          {
+            "text": "Park am See: Rad fahren bitte langsam! Musik nur bis 22 Uhr — dann ist Schluss.",
+            "q": "Richtig oder falsch? Nach 22 Uhr gibt es keine Musik im Park.",
+            "choices": [
+              "Richtig",
+              "Falsch"
+            ],
+            "a": "Richtig",
+            "why": "Musik nur bis 22 Uhr — dann ist Schluss: بعد العاشرة لا موسيقى. Rad fahren bitte langsam = اركبوا الدراجة ببطء."
+          }
+        ],
+        "interleavedWith": [
+          "kino",
+          "film",
+          "park",
+          "fussball",
+          "hausaufgabe",
+          "langsam",
+          "sonntag"
+        ],
+        "hints": [
+          "اقرأ السؤال أولاً، ثم ابحث عن الرقم أو الكلمة في اللافتة — لا تترجم كل شيء."
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "fr-2",
+            "speakText": "Zurzeit habe ich wenig Freizeit — aber am Wochenende mache ich Sport.",
+            "q": "استمع: كم وقت فراغ عند يوسف حالياً؟",
+            "choices": [
+              "قليل",
+              "كثير",
+              "لا شيء"
+            ],
+            "a": "قليل",
+            "why": "zurzeit habe ich wenig Freizeit — حالياً وقت فراغه قليل، لكنه يمارس الرياضة في نهاية الأسبوع."
+          },
+          {
+            "audioId": "fr-4",
+            "speakText": "Ja, im Park mit Nabil und Ayşe. Und ich fahre gern Rad.",
+            "q": "استمع: ماذا يفعل يوسف مع نبيل وعائشة؟",
+            "choices": [
+              "يلعب كرة القدم في الحديقة",
+              "يذهب إلى المسبح",
+              "يسمع قرصاً"
+            ],
+            "a": "يلعب كرة القدم في الحديقة",
+            "why": "im Park mit Nabil und Ayşe — كرة القدم في الحديقة؛ والدراجة يركبها وحده (fahre gern Rad)."
+          },
+          {
+            "audioId": "fr-7",
+            "speakText": "Vier Euro. Für Jugendliche nur zwei.",
+            "q": "استمع: كم يدفع الشاب في مسبح لينا؟",
+            "choices": [
+              "يورو اثنان",
+              "أربعة يورو",
+              "ستة يورو"
+            ],
+            "a": "يورو اثنان",
+            "why": "Für Jugendliche nur zwei — للشباب اثنان فقط؛ الأربعة للكبار والستة في برلين."
+          },
+          {
+            "audioId": "fr-10",
+            "speakText": "Am Samstag, ja! Ayşe hat gefragt: Kommst du mit? Und ich komme mit.",
+            "q": "استمع: ماذا سألت عائشة؟",
+            "choices": [
+              "هل تأتي معنا؟",
+              "هل تشارك؟",
+              "هل تتوقف؟"
+            ],
+            "a": "هل تأتي معنا؟",
+            "why": "Kommst du mit? = هل تأتي معنا (إلى الديسكو)؟ — mitkommen."
+          },
+          {
+            "audioId": "fr-12",
+            "speakText": "Ja, ein Lied aus Tunesien. Meine Oma hat mir eine CD geschickt.",
+            "q": "استمع: من أرسل القرص ليوسف؟",
+            "choices": [
+              "جدته",
+              "نبيل",
+              "لينا"
+            ],
+            "a": "جدته",
+            "why": "Meine Oma hat mir eine CD geschickt — الجدة أرسلت القرص من تونس."
+          },
+          {
+            "audioId": "fr-14",
+            "speakText": "Jeden Abend. Nabil sagt immer: Hör auf, Yusuf! Aber ich höre nicht auf.",
+            "q": "استمع: ماذا يقول نبيل كل مساء؟",
+            "choices": [
+              "توقّف!",
+              "شارك!",
+              "تعال معنا!"
+            ],
+            "a": "توقّف!",
+            "why": "Hör auf! = توقّف! (aufhören) — ويوسف لا يتوقف (höre nicht auf)."
+          },
+          {
+            "audioId": "fr-19",
+            "speakText": "Ja, ich mache im Verein mit — wir spielen jeden Dienstag. Ach, mein Bus kommt gleich, ich habe es eilig!",
+            "q": "استمع: لماذا تستعجل لينا؟",
+            "choices": [
+              "حافلتها تأتي حالاً",
+              "الديسكو تنتهي",
+              "المسبح يغلق"
+            ],
+            "a": "حافلتها تأتي حالاً",
+            "why": "ich habe es eilig — mein Bus kommt gleich: مستعجلة لأن الحافلة تأتي حالاً."
+          }
+        ],
+        "interleavedWith": [
+          "park",
+          "oma",
+          "abend",
+          "bus",
+          "wochenende"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "match",
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Freizeit",
+                "ar": "وقت الفراغ"
+              },
+              {
+                "de": "der Sport",
+                "ar": "الرياضة"
+              },
+              {
+                "de": "Rad fahren",
+                "ar": "يركب الدراجة"
+              },
+              {
+                "de": "das Schwimmbad",
+                "ar": "المسبح"
+              },
+              {
+                "de": "der Eintritt",
+                "ar": "رسم الدخول"
+              }
+            ],
+            "why": "أماكن وأفعال الفراغ: Freizeit وقت الفراغ · Sport الرياضة · Rad fahren الدراجة · Schwimmbad المسبح · Eintritt ما تدفعه عند الباب."
+          },
+          {
+            "pairs": [
+              {
+                "de": "mitmachen",
+                "ar": "يشارك"
+              },
+              {
+                "de": "mitkommen",
+                "ar": "يأتي مع"
+              },
+              {
+                "de": "aufhören",
+                "ar": "يتوقف"
+              },
+              {
+                "de": "der Schluss",
+                "ar": "النهاية"
+              },
+              {
+                "de": "eilig",
+                "ar": "مستعجل"
+              }
+            ],
+            "why": "ثلاثة أفعال منفصلة: mit-machen يشارك · mit-kommen يأتي مع · auf-hören يتوقف — وSchluss النهاية، وeilig مستعجل (ich habe es eilig)."
+          },
+          {
+            "pairs": [
+              {
+                "de": "die CD",
+                "ar": "القرص المدمج"
+              },
+              {
+                "de": "die Disco",
+                "ar": "الديسكو"
+              },
+              {
+                "de": "das Lied",
+                "ar": "الأغنية"
+              },
+              {
+                "de": "das Lieblingslied",
+                "ar": "الأغنية المفضّلة"
+              },
+              {
+                "de": "zurzeit",
+                "ar": "حالياً"
+              }
+            ],
+            "why": "الموسيقى: CD القرص · Disco المرقص · Lied الأغنية · Lieblings- المفضّل · zurzeit حالياً (ظرف زمن)."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "fr-5",
+            "speakText": "Ich auch! Und ich gehe oft ins Schwimmbad.",
+            "a": "Ich auch! Und ich gehe oft ins Schwimmbad.",
+            "why": "Schwimmbad كلمة واحدة بـmm مضاعفة وd في الآخر (تُسمع t) · ins = in das."
+          },
+          {
+            "audioId": "fr-13",
+            "speakText": "Eine CD! Hörst du sie oft?",
+            "a": "Eine CD! Hörst du sie oft?",
+            "why": "CD بحرفين كبيرين (تُنطق تسيه-ديه) · Hörst بـö · sie صغيرة (هي = القرص)."
+          },
+          {
+            "audioId": "fr-15",
+            "speakText": "Und wann ist in der Disco Schluss?",
+            "a": "Und wann ist in der Disco Schluss?",
+            "why": "Disco بحرف كبير وc لا k · Schluss بـss (u قصيرة)."
+          },
+          {
+            "audioId": "fr-20",
+            "speakText": "Dann schnell! Bis bald, Lena!",
+            "a": "Dann schnell! Bis bald, Lena!",
+            "why": "Dann بـnn · schnell بـll · Bis bald — كلمتان."
+          }
+        ],
+        "interleavedWith": [
+          "oft",
+          "schnell",
+          "bald"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Lies die Information vom Schwimmbad und die Nachricht von Ayşe und sag: Wann ist das Schwimmbad auf? Was kostet der Eintritt? Wohin geht Ayşe — und kommst du mit? — Montag bis Freitag von 7 bis 21 Uhr. 4 Euro, Jugendliche 2. Ins Kino am Freitag um acht — ja, ich komme mit!",
+        "ar": "اقرأ لافتة المسبح ورسالة عائشة وأجب بالعربية أو بألمانية بسيطة: متى المسبح مفتوح؟ كم الدخول؟ إلى أين تذهب عائشة — وهل تأتي معها؟ — هدفك أن تفهم، لا أن تكتب اللافتة بنفسك."
+      },
+      "situation": {
+        "de": "Du bist neu in der Stadt. Ein Freund fragt: Was kostet das Schwimmbad? Wann ist in der Disco Schluss? Du hast die Informationen gelesen und antwortest kurz.",
+        "ar": "أنت جديد في المدينة. صديق يسأل: كم يكلّف المسبح؟ متى تنتهي الديسكو؟ — قرأت اللافتات وتجيب باختصار مما فهمت."
+      },
+      "successCriteria": [
+        "يحدد الوقت والسعر من اللافتة (bis · ab · Eintritt · frei)",
+        "يميّز Kommst du mit? (دعوة) من Mach mit! (طلب مشاركة)",
+        "يعرف أن Schluss = النهاية وaufhören = يتوقف"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«Zurzeit habe ich wenig Freizeit.» — Was bedeutet das?",
+            "choices": [
+              "حالياً وقت فراغي قليل",
+              "دائماً وقت فراغي كثير",
+              "ليس عندي عمل"
+            ],
+            "a": "حالياً وقت فراغي قليل",
+            "why": "zurzeit = حالياً · wenig Freizeit = وقت فراغ قليل."
+          },
+          {
+            "q": "«Eintritt: Kinder frei» — Was zahlt ein Kind?",
+            "choices": [
+              "لا شيء",
+              "يورو واحد",
+              "نصف السعر"
+            ],
+            "a": "لا شيء",
+            "why": "frei هنا = مجاناً — الطفل لا يدفع رسم الدخول."
+          },
+          {
+            "q": "«Kommst du mit zum Sport?» — Was fragt sie?",
+            "choices": [
+              "هل تأتي معنا إلى المسبح؟",
+              "هل تسبح جيداً؟",
+              "هل المسبح مفتوح؟"
+            ],
+            "a": "هل تأتي معنا إلى المسبح؟",
+            "why": "mitkommen = يأتي مع؛ ins Schwimmbad = إلى المسبح."
+          },
+          {
+            "q": "«Um zwölf ist Schluss.» — Was ist um zwölf?",
+            "choices": [
+              "ينتهي",
+              "يبدأ",
+              "يُفتح"
+            ],
+            "a": "ينتهي",
+            "why": "Schluss = النهاية."
+          },
+          {
+            "q": "«Hör auf!» — Was will er?",
+            "choices": [
+              "أن تتوقف",
+              "أن تسمع",
+              "أن تشارك"
+            ],
+            "a": "أن تتوقف",
+            "why": "aufhören = يتوقف — لا hören يسمع ولا mitmachen يشارك."
+          },
+          {
+            "q": "«Das ist mein Lieblingslied.» — Was ist das?",
+            "choices": [
+              "أغنيتي المفضّلة",
+              "قرصي الجديد",
+              "ديسكو جميل"
+            ],
+            "a": "أغنيتي المفضّلة",
+            "why": "Lieblings- + Lied = الأغنية المفضّلة."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«Machst du beim Fußball mit?» — Was fragt er?",
+            "choices": [
+              "هل تشارك في كرة القدم؟",
+              "هل تشاهد كرة القدم؟",
+              "هل تحب كرة القدم؟"
+            ],
+            "a": "هل تشارك في كرة القدم؟",
+            "why": "mitmachen = يشارك (bei + الشيء)."
+          },
+          {
+            "q": "«Ich fahre jeden Tag Rad.» — Was macht sie?",
+            "choices": [
+              "تركب الدراجة كل يوم",
+              "تقود السيارة كل يوم",
+              "تمشي كل يوم"
+            ],
+            "a": "تركب الدراجة كل يوم",
+            "why": "Rad fahren = يركب الدراجة (Rad = Fahrrad)."
+          },
+          {
+            "q": "«Ich habe es eilig!» — Wie geht es ihr?",
+            "choices": [
+              "مستعجلة",
+              "متعبة",
+              "جائعة"
+            ],
+            "a": "مستعجلة",
+            "why": "es eilig haben = يكون مستعجلاً."
+          },
+          {
+            "q": "«Disco: Eintritt 5 Euro» — Was kostet 5 Euro?",
+            "choices": [
+              "الدخول",
+              "المشروب",
+              "القرص"
+            ],
+            "a": "الدخول",
+            "why": "Eintritt = رسم الدخول."
+          },
+          {
+            "q": "«Meine Oma hat mir eine CD geschickt.» — Was hat Oma geschickt?",
+            "choices": [
+              "قرصاً مدمجاً",
+              "كتاباً",
+              "صورة"
+            ],
+            "a": "قرصاً مدمجاً",
+            "why": "CD = القرص المدمج (تُنطق تسيه-ديه)."
+          },
+          {
+            "q": "«In meiner Freizeit mache ich Sport.» — Wann macht sie Sport?",
+            "choices": [
+              "في وقت الفراغ",
+              "في العمل",
+              "في المدرسة"
+            ],
+            "a": "في وقت الفراغ",
+            "why": "Freizeit = وقت الفراغ."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«Die Musik hört um elf auf.» — Was ist um elf?",
+            "choices": [
+              "تتوقف الموسيقى",
+              "تبدأ الموسيقى",
+              "تصير الموسيقى أعلى"
+            ],
+            "a": "تتوقف الموسيقى",
+            "why": "hört … auf = تتوقف (aufhören)."
+          },
+          {
+            "q": "«Das Lied ist schön.» — Was ist schön?",
+            "choices": [
+              "الأغنية",
+              "الفيلم",
+              "المسبح"
+            ],
+            "a": "الأغنية",
+            "why": "Lied = أغنية."
+          },
+          {
+            "q": "«Am Samstag gehen wir in die Disco.» — Wohin gehen sie?",
+            "choices": [
+              "إلى الديسكو",
+              "إلى السينما",
+              "إلى المسبح"
+            ],
+            "a": "إلى الديسكو",
+            "why": "in die Disco = إلى الديسكو."
+          },
+          {
+            "q": "«Sport im Park — Mach mit!» — Was soll man machen?",
+            "choices": [
+              "يشارك",
+              "يدفع",
+              "يتوقف"
+            ],
+            "a": "يشارك",
+            "why": "Mach mit! = شارك! (الأمر من mitmachen)."
+          },
+          {
+            "q": "«Schluss um 3 Uhr» — Was bedeutet das?",
+            "choices": [
+              "النهاية في الثالثة",
+              "البداية في الثالثة",
+              "الدخول من الثالثة"
+            ],
+            "a": "النهاية في الثالثة",
+            "why": "Schluss = النهاية."
+          },
+          {
+            "q": "«Zurzeit fahre ich nicht Rad.» — Fährt sie jetzt Rad?",
+            "choices": [
+              "لا، حالياً لا",
+              "نعم، كل يوم",
+              "نعم، أحياناً"
+            ],
+            "a": "لا، حالياً لا",
+            "why": "zurzeit … nicht = حالياً لا."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Freizeit — zum Verstehen: die Freizeit · der Sport · mitmachen (Mach mit!) · mitkommen (Kommst du mit?) · Rad fahren · das Schwimmbad · die CD · die Disco · der Eintritt (frei!) · das Lied · der Schluss (Um zwölf ist Schluss.) · aufhören (Hör auf!) · das Lieblingslied · zurzeit · eilig (Ich habe es eilig.)",
+      "ar": "درس للفهم لا للإنتاج (تكملة SD1): كلمات وقت الفراغ — الرياضة وركوب الدراجة والمسبح والديسكو والقرص والأغنية — وثلاثة أفعال منفصلة تسمعها كثيراً: يشارك ويأتي مع ويتوقف — ورسم الدخول (frei = مجاني) والنهاية (Schluss) وحالياً (zurzeit) ومستعجل (es eilig haben). تقرأها على لافتة المسبح وإعلان الديسكو ورسالة صديق، وتسمعها في مكالمة، وتعرف: متى وكم وإلى أين."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Kommst du mit uns mit ins Kino? — Ja, ich mitkomme.~~",
+          "ar": "في الجملة الفعل المنفصل ينقسم: ich komme mit — وبعد السؤال Kommst du mit? الجواب: Ja, ich komme mit."
+        },
+        "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: «أرافقك» في العربية فعل واحد لا ينقسم، فيكتب المتعلم mitkomme كتلةً واحدة — وفي الألمانية mit تذهب إلى آخر الجملة (الوحدة 7) وتبقى معنى «مع» حتى في الفهم: Kommst du mit? = هل تأتي معنا؟",
+        "correct": {
+          "de": "Kommst du mit? — Ja, ich komme mit.",
+          "ar": "هل تأتي معنا؟ — نعم، آتي معكم."
+        },
+        "exercise": {
+          "q": "Machst du beim Sport ___? (mit / mitmachen)",
+          "a": "mit"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Der Eintritt ist 5 Euro frei.~~",
+          "ar": "frei بعد Eintritt تعني «مجاني» لا «حرّ»: Der Eintritt ist frei. — أو سعر: Der Eintritt kostet 5 Euro."
+        },
+        "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: frei في العربية «حرّ/فارغ» (frei haben · ein freier Platz)، لكن على اللافتة «Eintritt frei» = الدخول مجاني — فيظن المتعلم أن هناك سعراً أيضاً. القاعدة في الفهم: frei بجانب سعر أو Eintritt = بلا مقابل.",
+        "correct": {
+          "de": "Eintritt frei — Kinder frei.",
+          "ar": "الدخول مجاني — الأطفال مجاناً."
+        },
+        "exercise": {
+          "q": "«Jugendliche 2 Euro, Kinder frei.» — Was zahlt ein Kind? (___ Euro)",
+          "a": "0"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe eilig.~~",
+          "ar": "التعبير يحتاج es: Ich habe es eilig. — وSchluss بلا فعل: Um zwölf ist Schluss."
+        },
+        "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: «أنا مستعجل» في العربية صفة بلا مفعول، فيُسقط المتعلم es — والألمانية تقول es eilig haben بـes ثابتة (كـes gibt). وSchluss ليست فعلاً: لا ~~Es schlusst~~ بل ist Schluss.",
+        "correct": {
+          "de": "Ich habe es eilig — um zwölf ist Schluss.",
+          "ar": "أنا مستعجل — في الثانية عشرة النهاية."
+        },
+        "exercise": {
+          "q": "Ich habe ___ eilig, der Bus kommt gleich. (es / ich)",
+          "a": "es"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "freizeit",
+      "sport",
+      "mitmachen",
+      "mitkommen",
+      "rad-fahren",
+      "schwimmbad",
+      "cd",
+      "disco",
+      "eintritt",
+      "lied",
+      "schluss",
+      "aufhoeren",
+      "lieblingslied",
+      "zurzeit",
+      "eilig"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Freizeit",
+      "https://www.duden.de/rechtschreibung/Eintritt",
+      "https://www.duden.de/rechtschreibung/aufhoeren"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Rad_fahren"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-trennbare"
+  ],
+  "audioManifestRefs": [
+    "word-freizeit",
+    "word-sport",
+    "word-mitmachen",
+    "word-mitkommen",
+    "word-rad-fahren",
+    "word-schwimmbad",
+    "word-cd",
+    "word-disco",
+    "word-eintritt",
+    "word-lied",
+    "word-schluss",
+    "word-aufhoeren",
+    "word-lieblingslied",
+    "word-zurzeit",
+    "word-eilig"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Freizeit) — Ergänzung zum Verstehen, Einheit 13 (D113)",
+    "goetheWordListOverlap": []
+  }
+}
