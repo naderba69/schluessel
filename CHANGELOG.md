@@ -1,5 +1,14 @@
 # CHANGELOG.md
 
+## 2026-10-18 — الدفعة 134: a1-u12-d4 مُرقّى — Der Plan für Samstag (D179) · نواة zum Beispiel · der Satz · glauben (47/48) · denn/sondern/deswegen على القاعدتين القائمتين · حوار kh-1..20
+- **النواة الثلاث** (`word-entry-generator` — `specs179.json`): zum Beispiel (chunk · «Ich mag Obst, zum Beispiel Äpfel.») · der Satz (die Sätze · «Der Satz ist zu lang.») · glauben (hat geglaubt · «Ich glaube, das ist eine gute Idee.») — الثلاث في SD1 وA2 (D110) · خطة SD1 u12-d4 done ⇒ 47/48 · 880 → 883 كلمة.
+- **a1-u12-d4:** 6 بنود choice ⇒ 58 بنداً/4 أنواع (فراغ 22 · استماع 16 · ترتيب 10 · إملاء 10) · Quiz 3×4 ⇒ 3×6 · 3 مصائد بـ10‑ي (denn/weil/deswegen · aber/sondern · الظرف أولاً + Ich glaube,) · properNouns Yusuf/Lena/Rom/Italien · ars-weil-satz + ars-satzklammer (لا ملف جديد).
+- **أمثلة البطاقات:** dann «Wir essen Kuchen, dann hören wir Musik.» (كان erst) · zuletzt «Zuletzt haben wir einen Film gesehen.» (كان Dom) · beispiel «Das ist nur ein Beispiel.» (كان Berlin).
+- **حوار** `a1-u12-d4-der-plan-fuer-samstag` (kh-1..20 · الثلاثاء 14 أبريل مساءً — خطة عيد لينا) — المانيفست 2012 → 2035.
+- **النطق:** المعجم 78 بلا جديد (regnet kh-7 · April kh-8) · المرجع 1638 → 1653.
+- **اختبارات:** كتلة D179 (+1 ⇒ 712) · المثال غير المُرقّى ← a1-u12-d5 (الأخير) · curriculum-plan: u12-d4 done (15) · 47 done · pending الوحيد u12-d5 (das Thema) — اختبارات typo/التوليف/الشبح/الحمل على u12-d5 (الحمل بإسناد ثانٍ لا بنقل) · content-units 883 · validator 1129/0/0.
+- **وثائق:** الموجّه 3.36 · حُدّثت N-096 · N-099 · N-103 · N-110 · N-113.
+
 ## 2026-10-18 — الدفعة 133: a1-u12-d3 مُرقّى — Der erste Schultag (D178) · ars-trennbar كُتبت أخيراً (Perfekt المنفصل — N-117 مغلقة) · حوار kg-1..20 · معجم النطق +losgefahren/geplant
 - **ars-trennbar** (جديدة · shufra · أحمر · 10‑ي · usedInLessons [a1-u12-d3]) — الاسم الذي كان بلا ملف منذ D176 (N-117): ge بين الجزء والجذع (ein‑ge‑packt · aus‑ge‑packt · mit‑ge‑bracht · an‑ge‑sehen · aus‑ge‑geben · mit‑ge‑nommen · auf‑ge‑passt · an‑ge‑meldet) · sein للحركة (ist losgefahren · bin angekommen · ist zurückgekommen) · sich anmelden بالضمير · مقابل gemietet/geplant (ge في الأول) وbesichtigt/verpasst/reserviert (بلا ge) · الألمانية المعروضة كلمات كاملة (التفكيك بالعربية فقط).
 - **a1-u12-d3:** 6 بنود choice ⇒ 56 بنداً/4 أنواع (فراغ 20 · استماع 16 · ترتيب 10 · إملاء 10) · Quiz 3×4 ⇒ 3×6 · 3 مصائد بـ10‑ي · properNouns Yusuf/Lena/Tunis · ars-trennbar + ars-perfekt · بلا كلمة جديدة.
