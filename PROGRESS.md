@@ -1,5 +1,17 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
+## الدفعة 135 (2026-10-18) — الدرس الستون مُرقّى: «Das Thema: Natur» (D180) — المرور مكتمل 60/60 · النواة مكتملة 48/48
+- **قرار النطاق:** مرجعا الدرس القديم `ars-perfekt` و`ars-zeitangaben` موجودان، والثانية تنصّ على «بلا ge‑ للأفعال بـ‑ieren» ⇒ لا ملف جديد — اليوم يطبّق: fotografiert/telefoniert/studiert/reserviert بلا ge مقابل gekauft/geschickt/gesprochen/geschrieben · war/hatten · der See (بحيرة) ↔ das Meer/die See (بحر) · Strände/Wälder/Flüsse بالأوملاوت وThemen بإسقاط ‑a.
+- **النواة** das Thema بالمولِّد — خطة SD1 u12-d5 done ⇒ **48/48 · 123/123** (`plan-status.ts`).
+- **حوار جديد** `a1-u12-d5-das-thema-natur` (ki-1..20) — **مكالمة الأربعاء 15 أبريل:** Heute hatten wir in der Schule ein neues Thema: die Natur · Wir haben über Berge, Wälder und Flüsse gesprochen · sechs Sätze geschrieben — über das Meer in Tunesien · Tunis liegt am Meer. Der Strand ist lang, und das Wasser ist warm · Im Urlaub fahren wir oft an einen See · Der See ist klein und ruhig, das Meer ist groß. Aber die See ist das Meer! · im Norden am Meer … eine große Insel · Hast du dort fotografiert? — Ja, ich habe viel fotografiert · Am Samstag zeige ich dir die Fotos · ein kleines Andenken gekauft — vom Meer · Meine Tante hat mir eine Postkarte aus den Bergen geschickt · Ich habe nur gelernt und mit meiner Tante telefoniert.
+- **التطبيق:** 58 بنداً/4 أنواع (فراغ 22: التصريف الثالث ×6 · war/hatten ×2 · الجمع ×7 · المقال/الجنس ×4 · الكلمة ×3 — استماع 16 — ترتيب 10 — إملاء 10: ki-6/11/12/17 + thema/strand/fluss/wald/fotografieren/landschaft) · Quiz 3×6 · 18 إجابة من 18 تحمل كلمة طبيعة أو تصريفاً ثالثاً.
+- **ما أمسكته الفحوص قبل الالتزام:** Sommer/Juli/Vorsicht/wunderschön/Ah خارج الجبهة · «Die Landschaft ist sehr schön.» A2 حرفياً · «Der See ist klein.» داخل فراغ مملوء · Perfekt/ge في نصوص البنود · why بلا حرف عربي ×2 · sourceLesson سقط عند تعديل meer يدوياً (أعدته).
+- **قصة (N-119 جديدة):** «يأتي يوسف إلى لينا السبت» (D178) وهما في بلدين — لم أعدّل الحوارات المرفوعة؛ صحّحتُ سطري أنا (ki-6 بلا «in Deutschland») وسجّلت الخيارين للمالك.
+- **النطق:** المعجم 78 بلا جديد (Tunesien ki-3/4/13/14/17) · المرجع 1666 · صفر مخالفة بلا قرار.
+- **اختبارات:** كتلة D180 (+1) تثبّت الستين done · المثال غير المُرقّى ← a1-u12-d6 (توليف — ضابط سلبي حقيقي خارج المرور) · curriculum-plan 48 done ولا pending · 884 كلمة · 713/713 · validator 1131/0/0.
+- **الحالة:** **ترقية 60/60 — المرور مكتمل** · نواة 48/48 · 884 كلمة · 2056 مساراً · 56 قاعدة يوم · معجم 78 · التالي: مراجعة ختامية ثم ملخّص الملاحظات والقرارات للمالك (لا محتوى جديد قبل قراره).
+- **السجل:** N-119 جديدة · حُدّثت N-096 · N-099 · N-103 · N-110 · N-113.
+
 ## الدفعة 134 (2026-10-18) — الدرس التاسع والخمسون مُرقّى: «Der Plan für Samstag» (D179) — نواة zum Beispiel/Satz/glauben (47/48) · بلا قاعدة جديدة
 - **قرار النطاق:** مرجعا الدرس القديم `ars-weil-satz` و`ars-satzklammer` موجودان ويغطّيان المفهومين (weil الفعل آخراً ↔ قوس الجملة الرئيسية: الظرف أولاً والفعل ثانياً) ⇒ denn (لا تغيير) · deswegen (الفعل بعده) · sondern بعد النفي · Leider/Vielleicht/Dann/Zuletzt/Meiner Meinung nach أولاً · Ich glaube, + جملة رئيسية — لا ملف جديد.
 - **النواة** zum Beispiel (chunk) · der Satz (die Sätze) · glauben (hat geglaubt) بالمولِّد — خطة SD1 u12-d4 done ⇒ **47/48** (بقي das Thema في u12-d5).

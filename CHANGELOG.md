@@ -1,5 +1,14 @@
 # CHANGELOG.md
 
+## 2026-10-18 — الدفعة 135: a1-u12-d5 مُرقّى — Das Thema: Natur (D180) · المرور مكتمل 60/60 · النواة مكتملة 48/48 · حوار ki-1..20 · N-119
+- **النواة** (`word-entry-generator` — `specs180.json`): das Thema (die Themen · «Unser Thema heute ist die Natur.») — في SD1 وA2 (D110) · خطة SD1 u12-d5 done ⇒ **48/48 إسناداً · 123/123 كلمة** · 883 → 884 كلمة.
+- **a1-u12-d5:** 6 بنود choice ⇒ 58 بنداً/4 أنواع (فراغ 22 · استماع 16 · ترتيب 10 · إملاء 10) · Quiz 3×4 ⇒ 3×6 · 3 مصائد بـ10‑ي (‑ieren بلا ge · الجمع بالأوملاوت · der See/die See/das Meer) · ثلاثة أخطاء معلنة (D128) · properNouns Yusuf/Lena/Tunis · ars-perfekt + ars-zeitangaben (لا ملف جديد).
+- **مثال البطاقة:** meer «Das Meer ist blau.» (blau غير مدروسة) ⇒ «Das Meer ist groß.».
+- **حوار** `a1-u12-d5-das-thema-natur` (ki-1..20 · الأربعاء 15 أبريل مساءً — موضوع الطبيعة وصور تونس) — المانيفست 2035 → 2056 · ki-6 أُعيد توليده وحده بعد حذف «in Deutschland» من فم لينا (N-100/N-119).
+- **النطق:** المعجم 78 بلا جديد (Tunesien ki-3/4/13/14/17) · المرجع 1653 → 1666.
+- **اختبارات:** كتلة D180 (+1 ⇒ 713) تثبّت done للستين من ملف الترقية · المثال غير المُرقّى ← a1-u12-d6 (توليف خارج المرور — N-004) بفجواته المقيسة · curriculum-plan: u12-d5 done (13) · 48 done · لا pending — اختبارات typo/التوليف/الشبح/الحمل تعيد u12-d5 إلى pending في النسخة وتحذف thema من السياق · content-units 884 · validator 1131/0/0.
+- **وثائق:** الموجّه 3.37 · N-119 جديدة (حضور يوسف عيد لينا وهما في بلدين) · حُدّثت N-096 · N-099 · N-103 · N-110 · N-113.
+
 ## 2026-10-18 — الدفعة 134: a1-u12-d4 مُرقّى — Der Plan für Samstag (D179) · نواة zum Beispiel · der Satz · glauben (47/48) · denn/sondern/deswegen على القاعدتين القائمتين · حوار kh-1..20
 - **النواة الثلاث** (`word-entry-generator` — `specs179.json`): zum Beispiel (chunk · «Ich mag Obst, zum Beispiel Äpfel.») · der Satz (die Sätze · «Der Satz ist zu lang.») · glauben (hat geglaubt · «Ich glaube, das ist eine gute Idee.») — الثلاث في SD1 وA2 (D110) · خطة SD1 u12-d4 done ⇒ 47/48 · 880 → 883 كلمة.
 - **a1-u12-d4:** 6 بنود choice ⇒ 58 بنداً/4 أنواع (فراغ 22 · استماع 16 · ترتيب 10 · إملاء 10) · Quiz 3×4 ⇒ 3×6 · 3 مصائد بـ10‑ي (denn/weil/deswegen · aber/sondern · الظرف أولاً + Ich glaube,) · properNouns Yusuf/Lena/Rom/Italien · ars-weil-satz + ars-satzklammer (لا ملف جديد).
