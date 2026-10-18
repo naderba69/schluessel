@@ -10,10 +10,22 @@ import {
 
 const LEVEL_ORDER: Record<string, number> = { A1: 0, A2: 1, B1: 2, B2: 3 };
 
+/**
+ * D197: خطأ مخطط في ملف واحد (why بلا عربية · canDoDaily > 2 …) كان يُسقط كل الأدوات بتتبّع Zod خام بلا اسم ملف.
+ * هنا: اسم الملف + المسار داخل JSON + الرسالة — في سطر واحد لكل خلل، ثم إيقاف (لا تجاهل صامت).
+ */
+export function parseFile<T>(schema: { safeParse: (d: unknown) => { success: true; data: T } | { success: false; error: { issues: { path: PropertyKey[]; message: string }[] } } }, path: string, data: unknown): T {
+  const r = schema.safeParse(data);
+  if (r.success) return r.data;
+  const rel = path.replace(/^.*?content\//, "content/");
+  const lines = r.error.issues.slice(0, 12).map((i) => `  • ${i.path.map(String).join(".") || "(الجذر)"}: ${i.message}`);
+  throw new Error(`مخطط غير صالح — ${rel} (${r.error.issues.length} خلل):\n${lines.join("\n")}${r.error.issues.length > 12 ? "\n  …" : ""}`);
+}
+
 export function loadWords(contentRoot: string): WordT[] {
   const dir = join(contentRoot, "words");
   return readdirSync(dir).filter((f) => f.endsWith(".json")).sort()
-    .map((f) => Word.parse(JSON.parse(readFileSync(join(dir, f), "utf8"))));
+    .map((f) => parseFile(Word, join(dir, f), JSON.parse(readFileSync(join(dir, f), "utf8"))));
 }
 
 export function loadLessons(contentRoot: string): LessonT[] {
@@ -23,7 +35,7 @@ export function loadLessons(contentRoot: string): LessonT[] {
     const dir = join(root, lvl);
     if (!existsSync(dir)) continue;
     for (const f of readdirSync(dir).filter((x) => x.endsWith(".json")).sort())
-      out.push(Lesson.parse(JSON.parse(readFileSync(join(dir, f), "utf8"))));
+      out.push(parseFile(Lesson, join(dir, f), JSON.parse(readFileSync(join(dir, f), "utf8"))));
   }
   return out.sort((a, b) => LEVEL_ORDER[a.level]! - LEVEL_ORDER[b.level]! || a.unit - b.unit || a.day - b.day);
 }
@@ -33,7 +45,7 @@ export function loadWordlists(contentRoot: string): WordlistT[] {
   const dir = join(contentRoot, "wordlists");
   if (!existsSync(dir)) return [];
   return readdirSync(dir).filter((f) => f.endsWith(".json")).sort()
-    .map((f) => OfficialWordlist.parse(JSON.parse(readFileSync(join(dir, f), "utf8"))));
+    .map((f) => parseFile(OfficialWordlist, join(dir, f), JSON.parse(readFileSync(join(dir, f), "utf8"))));
 }
 
 const jsonFiles = (dir: string) => (existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith(".json")).sort() : []);
@@ -46,7 +58,7 @@ export function loadGrammarRules(contentRoot: string): Map<string, RuleT> {
   for (const f of jsonFiles(dir)) {
     const data = readJson(join(dir, f));
     if (ArsenalFile.parse(data).kind !== "shufra") continue;
-    const r = GrammarRuleFile.parse(data);
+    const r = parseFile(GrammarRuleFile, join(dir, f), data);
     out.set(r.id, r);
   }
   return out;
@@ -55,7 +67,7 @@ export function loadGrammarRules(contentRoot: string): Map<string, RuleT> {
 /** D115: خطط ترقية الدروس (content/upgrades/*.json) */
 export function loadUpgradePlans(contentRoot: string): UpgradeT[] {
   const dir = join(contentRoot, "upgrades");
-  return jsonFiles(dir).map((f) => LessonUpgradePlan.parse(readJson(join(dir, f))));
+  return jsonFiles(dir).map((f) => parseFile(LessonUpgradePlan, join(dir, f), readJson(join(dir, f))));
 }
 
 /** مسارات المانيفستات الصوتية: المعرّف ← النص المنطوق (للتحقق من بنود الاستماع/الإملاء) */

@@ -5,7 +5,7 @@
 // المبادئ: (1) المانيفست مصدر الحقيقة لصوت كل شخصية (القانون 11) · (2) لا إعادة توليد لسطر لم يتغير
 // (VITS عشوائي — فخ موثَّق) · (3) أسطر محذوفة من السكربت ← مساراتها وملفاتها تُزال · (4) المانيفست
 // يُتحقق منه بـzod قبل الكتابة — لا يُكتب مانيفست مكسور أبداً · (5) القياسات كلها من الملف الفعلي.
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
@@ -142,4 +142,13 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   console.log(`سكربتات: ${files.length} | وُلّد: ${r.generated.length} | بقي كما هو: ${r.kept.length} | أُزيل: ${r.pruned.length}${r.written ? " | المانيفست حُدِّث" : ""}`);
   for (const id of r.generated) console.log(`  + ${id}`);
   for (const id of r.pruned) console.log(`  − ${id}`);
+  // D197: ما كان يُنسى بعد كل حوار جديد (N-099) يجري هنا آلياً — مزامنة معجم النطق ودفتر القصة؛ فشلهما يُرى لا يُبلع
+  if (r.written) {
+    for (const [cmd, argv] of [["python3", ["tools/dev/lexicon-sync.py", "--write"]], ["npx", ["tsx", "tools/dev/story-sentences.ts", "--write"]]] as const) {
+      const p = spawnSync(cmd, [...argv], { cwd: ROOT, encoding: "utf8" });
+      const last = (p.stdout + p.stderr).trim().split("\n").filter(Boolean).pop() ?? "";
+      console.log(`  ${p.status === 0 ? "↻" : "✗"} ${last}`);
+      if (p.status !== 0) process.exitCode = 1;
+    }
+  }
 }

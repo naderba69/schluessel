@@ -11,7 +11,8 @@
     "validate:content": "tsx tools/validate-content.ts",
     "gate": "tsx tools/dev/gate.ts",
     "content:diff": "tsx tools/dev/content-diff.ts",
-    "hooks:install": "git config core.hooksPath tools/dev/hooks && echo 'hooks: core.hooksPath = tools/dev/hooks'"
+    "hooks:install": "git config core.hooksPath tools/dev/hooks && echo 'hooks: core.hooksPath = tools/dev/hooks'",
+    "bootstrap": "bash tools/dev/bootstrap.sh"
   },
   "dependencies": {
     "dexie": "^4.4.6",

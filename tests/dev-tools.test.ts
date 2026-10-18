@@ -1,5 +1,7 @@
 // tests/dev-tools.test.ts — أدوات الفحص داخل المستودع (N-104) + بوابة سرعة الكلام (قرار المالك على N-015 — D182)
 import { describe, it, expect } from "vitest";
+import { parseFile } from "../tools/lib/content-disk.js";
+import { Lesson } from "../content/schemas/index.js";
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
@@ -8,7 +10,7 @@ const ROOT = join(__dirname, "..");
 
 describe("tools/dev — N-104: أدوات الفحص لا تضيع مع الصندوق", () => {
   it("أدوات tools/dev موجودة ومذكورة في README · .dev-cache في .gitignore", () => {
-    const tools = ["fetch-official.sh", "check-lesson.ts", "speech-rate.py", "owner-review.py", "docs-sync.py", "notes.py", "gate.ts", "content-diff.ts", "hooks/pre-push"];
+    const tools = ["fetch-official.sh", "check-lesson.ts", "speech-rate.py", "owner-review.py", "docs-sync.py", "notes.py", "gate.ts", "content-diff.ts", "hooks/pre-push", "lexicon-sync.py", "bootstrap.sh"];
     for (const f of [...tools, "README.md"]) expect(existsSync(join(ROOT, "tools/dev", f)), f).toBe(true);
     const readme = readFileSync(join(ROOT, "tools/dev/README.md"), "utf8");
     for (const f of tools) expect(readme).toContain(f);
@@ -85,11 +87,23 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
     expect(sh).toContain("tools/dev/gate.ts");
   });
 
+  it("D197: خطأ مخطط في ملف محتوى يُقرأ — اسم الملف + المسار + الرسالة (لا تتبّع Zod خام)", () => {
+    const lesson = JSON.parse(readFileSync(join(ROOT, "content/lessons/a1/a1-u6-d6.json"), "utf8")) as { canDoDaily: string[] };
+    lesson.canDoDaily.push("ثالث");
+    expect(() => parseFile(Lesson, "/x/content/lessons/a1/a1-u6-d6.json", lesson)).toThrow(/content\/lessons\/a1\/a1-u6-d6\.json \(1 خلل\):\n {2}• canDoDaily: /u);
+    expect(parseFile(Lesson, "/x/content/lessons/a1/a1-u6-d6.json", JSON.parse(readFileSync(join(ROOT, "content/lessons/a1/a1-u6-d6.json"), "utf8"))).id).toBe("a1-u6-d6");
+  });
+  it("D197: lexicon-sync.py --check متزامن (N-099 آلية) · package.json فيه bootstrap", () => {
+    const out = execFileSync("python3", ["tools/dev/lexicon-sync.py", "--check"], { cwd: ROOT, encoding: "utf8" });
+    expect(out).toMatch(/lexicon-sync: متزامن — ناقص 0 · زائد 0/u);
+    const pkg = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as { scripts: Record<string, string> };
+    expect(pkg.scripts.bootstrap).toBe("bash tools/dev/bootstrap.sh");
+  });
   it("gate.ts --quick --json: كل خطوة لها معرّف وملخّص ورقم · التقرير بثلاثة أسطر", () => {
     const out = execFileSync("npx", ["tsx", "tools/dev/gate.ts", "--quick", "--json", "--did", "اختبار"], { cwd: ROOT, encoding: "utf8", timeout: 300_000 });
     const r = JSON.parse(out) as { ok: boolean; quick: boolean; results: { id: string; ok: boolean; summary: string }[]; report: string };
     expect(r.quick).toBe(true);
-    expect(r.results.map((x) => x.id)).toEqual(["tsc", "validate", "docs", "notes", "audit", "speech"]);
+    expect(r.results.map((x) => x.id)).toEqual(["tsc", "validate", "docs", "notes", "audit", "lexicon", "speech"]); // lexicon من D197
     expect(r.results.filter((x) => !x.ok)).toEqual([]);
     expect(r.report.split("\n")).toHaveLength(3);
     expect(r.report).toContain("1. **ما نُفّذ:** اختبار");
