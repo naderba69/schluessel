@@ -51,8 +51,12 @@ export const LessonUpgradePlan = SchemaVersioned.extend({
   title: z.object({ de: DeText, ar: ArText }).strict(),
   /** التقرير الذي يثبت الحاجة (التدقيق) */
   report: z.string().regex(/^docs\/reports\/[a-z0-9-]+\.md$/),
-  /** نطاق الخطة: كل درس محتوى من المستوى في هذه الوحدات يجب أن يكون مُدرجاً (الاكتمال) */
-  scope: z.object({ fromUnit: UnitNumber, toUnit: UnitNumber }).strict(),
+  /**
+   * نطاق الخطة: كل درس من الأنواع المذكورة في هذه الوحدات يجب أن يكون مُدرجاً (الاكتمال).
+   * kinds (D194 — N-004 · قرار المالك D182 أ): كانت الخطة لدروس المحتوى وحدها؛ مرور التوليف الثاني يضمّ دروس d6 وأسبوع الامتحان
+   * بالمعايير نفسها — «pending» المعلن أصدق من درس خارج الخطة لا يراه أحد.
+   */
+  scope: z.object({ fromUnit: UnitNumber, toUnit: UnitNumber, kinds: z.array(z.enum(["content", "integration"])).min(1).default(["content"]) }).strict(),
   lessons: z.array(LessonUpgradeEntry).min(1),
 })
   .strict()

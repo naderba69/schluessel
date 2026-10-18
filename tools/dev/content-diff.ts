@@ -69,7 +69,10 @@ for (const file of changedFiles()) {
 }
 
 const summary = { from: FROM, to: TO, files: reports.length, texts: reports.reduce((n, r) => n + r.texts.length, 0), audio: reports.filter((r) => r.kind === "audio").length };
-if (flags.has("--json")) { console.log(JSON.stringify({ summary, reports }, null, 1)); process.exit(0); }
+if (flags.has("--json")) {
+  // لا process.exit بعد الكتابة: stdout إلى أنبوب غير متزامن في Node — الخروج الفوري يبتر المخرجات الكبيرة (ظهر في D194 عند 224 KB)
+  process.stdout.write(JSON.stringify({ summary, reports }, null, 1) + "\n");
+} else {
 
 const q = (s: string | null) => (s === null ? "∅" : `«${s.replace(/\n/g, "⏎")}»`);
 console.log(`# فرق المحتوى — ${FROM} ← ${TO}${lessonFilter ? ` · الدرس ${lessonFilter}` : ""}\n`);
@@ -84,4 +87,5 @@ for (const r of reports) {
   for (const t of r.texts) console.log(`- \`${t.path}\`\n  - قبل: ${q(t.before)}\n  - بعد: ${q(t.after)}`);
   if (r.kind === "audio") console.log(`- ملف صوتي ${r.status === "added" ? "جديد" : r.status === "deleted" ? "محذوف" : "أُعيد توليده"}`);
   console.log("");
+}
 }

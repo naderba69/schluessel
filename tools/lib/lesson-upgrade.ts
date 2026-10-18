@@ -471,18 +471,18 @@ export function checkUpgrade(plan: LessonUpgradePlan, ctx: UpgradeContext): Upgr
   const issues: UpgradeIssue[] = [];
   const err = (code: string, message: string) => issues.push({ level: "error", code, message });
   const inScope = (l: Lesson) =>
-    l.level === plan.level && l.kind === "content" && l.unit >= plan.scope.fromUnit && l.unit <= plan.scope.toUnit;
+    l.level === plan.level && plan.scope.kinds.includes(l.kind) && l.unit >= plan.scope.fromUnit && l.unit <= plan.scope.toUnit; // D194: kinds
   const byId = new Map(ctx.lessons.map((l) => [l.id, l]));
 
   for (const e of plan.lessons) {
     const lesson = byId.get(e.lessonId);
     if (!lesson) err("e-upgrade-lesson", `${e.lessonId}: درس غير موجود`);
     else if (!inScope(lesson))
-      err("e-upgrade-lesson", `${e.lessonId}: الخطة لدروس محتوى ${plan.level} في الوحدات ${plan.scope.fromUnit}–${plan.scope.toUnit} فقط`);
+      err("e-upgrade-lesson", `${e.lessonId}: الخطة لدروس ${plan.scope.kinds.join("/")} من ${plan.level} في الوحدات ${plan.scope.fromUnit}–${plan.scope.toUnit} فقط`);
   }
   const listed = new Set(plan.lessons.map((e) => e.lessonId));
   const absent = ctx.lessons.filter((l) => inScope(l) && !listed.has(l.id)).map((l) => l.id);
-  if (absent.length) err("e-upgrade-complete", `${absent.length} درس محتوى داخل النطاق غائب عن الخطة: ${absent.slice(0, 10).join("، ")}${absent.length > 10 ? "…" : ""}`);
+  if (absent.length) err("e-upgrade-complete", `${absent.length} درس ${plan.scope.kinds.includes("integration") ? "" : "محتوى "}داخل النطاق غائب عن الخطة: ${absent.slice(0, 10).join("، ")}${absent.length > 10 ? "…" : ""}`);
 
   for (const s of upgradeStatus(plan, ctx)) {
     if (!s.report) continue;

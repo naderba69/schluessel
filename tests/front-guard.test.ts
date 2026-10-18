@@ -71,8 +71,8 @@ describe("N-022 — meta الدروس المُرقّاة الستين تحت ق�
   it("metaOf: هدف الدرس · هدف المهمة وموقفها · الخلاصة", () => {
     expect(metaOf(lessons.find((l) => l.id === "a1-u1-d1")!)).toHaveLength(4);
   });
-  it("صفر e-upgrade-meta في الستين (كانت 11 درساً: u1-d1..u3-d3)", () => {
-    const bad = plan.lessons.map((e) => {
+  it("صفر e-upgrade-meta في كل درس مُرقّى (practice=done — كانت 11 درساً: u1-d1..u3-d3؛ منذ D194 الخطة تضم دروس التوليف وpending منها خارج هذا الفحص كما في الحارس)", () => {
+    const bad = plan.lessons.filter((e) => e.practice === "done").map((e) => {
       const l = lessons.find((x) => x.id === e.lessonId)!;
       return [e.lessonId, inspectLesson(l, e, { lessons, words, tracks, rules }).meta.map((i) => i.message)] as const;
     }).filter(([, m]) => m.length);

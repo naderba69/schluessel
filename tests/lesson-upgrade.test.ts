@@ -5136,10 +5136,17 @@ describe("D115 — الخطة الحقيقية", () => {
   const plans = loadUpgradePlans(CONTENT);
   const plan = plans.find((p) => p.id === "a1-lesson-upgrade")!;
   const ctx: UpgradeContext = { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) };
-  it("تغطي دروس المحتوى الستين في الوحدات 1–12 بالضبط — لا درس منسي ولا زائد", () => {
-    const expected = realLessons.filter((l) => l.level === "A1" && l.kind === "content" && l.unit <= 12).map((l) => l.id).sort();
+  it("تغطي دروس A1 كلها في الوحدات 1–15 بالضبط (60 محتوى + 18 توليفاً منذ D194 — N-004) — لا درس منسي ولا زائد", () => {
+    const expected = realLessons.filter((l) => l.level === "A1" && l.unit <= 15).map((l) => l.id).sort();
     expect(plan.lessons.map((e) => e.lessonId).sort()).toEqual(expected);
-    expect(expected).toHaveLength(60);
+    expect(expected).toHaveLength(78);
+    expect(plan.scope).toEqual({ fromUnit: 1, toUnit: 15, kinds: ["content", "integration"] });
+    // دروس المحتوى الستون كلها done (D180) · التوليف: u1-d6 وu2-d6 done (D194) والباقي pending معلن (practice/quiz)
+    const content = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "content");
+    expect(content).toHaveLength(60);
+    for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
+    const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
+    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6"]);
   });
   it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
@@ -5147,5 +5154,49 @@ describe("D115 — الخطة الحقيقية", () => {
     // D125: التنبيهات كانت تظهر في المدقِّق وحده (اسم علم معلن لا يُستعمل · pending يستوفي المعايير) — الآن يمسكها الاختبار أيضاً
     expect(checkUpgrade(plan, ctx)).toEqual([]);
     expect(checkGrammarRules(ctx)).toEqual([]);
+  });
+});
+
+describe("D194 — مرور التوليف الثاني (N-004 · قرار المالك D182 أ): a1-u1-d6 + a1-u2-d6 بالمعايير نفسها", () => {
+  const rules = loadGrammarRules(CONTENT);
+  const plan = loadUpgradePlans(CONTENT)[0]!;
+  const check = (id: string) => {
+    const l = realLessons.find((x) => x.id === id)!;
+    const e = plan.lessons.find((x) => x.lessonId === id)!;
+    const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
+    expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, meta: r.meta, misspellings: r.misspellings }, id)
+      .toEqual({ rule: [], practice: [], quiz: [], coverage: [], meta: [], misspellings: [] });
+    expect([e.rule, e.practice, e.quiz]).toEqual(["done", "done", "done"]);
+    expect(l.kind).toBe("integration");
+    // توليف: لا كلمة جديدة إلا الجسيمان القديمان · 4 أنواع منها error-hunt (أول استعمال له — مصائد الأسبوع تُصطاد لا تُقرأ) · Quiz 3×6 بعتبة 75%
+    expect(l.praesentation.wordIds).toHaveLength(2);
+    expect(r.practiceTypes.sort()).toEqual(["dictation", "error-hunt", "gap-fill", "listening"]);
+    expect(r.practiceItems).toBeGreaterThanOrEqual(28);
+    expect(r.quizMin).toBe(6);
+    for (const v of l.quiz.variants) expect(v.passingScore).toBe(0.75);
+    // القاعدتان مرساتا الوحدة القائمتان (لا ملف وهمي ars-unitN-review) — والفهرس العكسي يضمّ الدرس
+    for (const rid of l.praesentation.grammarArsenalIds) expect(rules.get(rid)!.usedInLessons, rid).toContain(id);
+    expect(l.usedArsenalIds).toEqual(l.praesentation.grammarArsenalIds);
+    // حوار 20 سطراً كله مستعمل في الاستماع/الإملاء أو القصة — وجملة القصة من أول سطر
+    expect(l.praesentation.storySentenceIds).toEqual([`story-${id.replace(/-d6$/, "-s6")}`]);
+    return { l, r };
+  };
+  it("a1-u1-d6 «Die Woche ist zu Ende!» — ars-sein + ars-wer-woher · 28 بنداً · wm-1..20 · يوسف 19 (Student) ولينا 16 (Schülerin)", () => {
+    const { l } = check("a1-u1-d6");
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-sein", "ars-wer-woher"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^wm-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    expect(JSON.stringify(l)).toContain("neunzehn Jahre alt"); // عمر يوسف الثابت في القصة (D194): 19 — Student لا Schüler
+    expect(JSON.stringify(l)).not.toContain("15 Jahre"); // الـQuiz القديم كان يقول 15 — تناقض مع Student
+  });
+  it("a1-u2-d6 «Woche zwei ist zu Ende!» — ars-ein-eine + ars-genuscode · 30 بنداً · zw-1..20 مع عائشة", () => {
+    const { l } = check("a1-u2-d6");
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-ein-eine", "ars-genuscode"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^zw-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(15);
+    // Quiz بلا مشتِّتات مكتوبة خطأً (Strasse/Tase/Okey) — ß/ss تُكتب لا تُختار
+    expect(l.quiz.variants.flatMap((v) => v.items.flatMap((i) => i.choices ?? []))).not.toContain("Strasse");
   });
 });
