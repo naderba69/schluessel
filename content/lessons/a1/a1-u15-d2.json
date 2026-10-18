@@ -6,31 +6,44 @@
   "day": 2,
   "kind": "integration",
   "ziel": {
-    "de": "Wiederholung Einheiten 3–4: in der Stadt und beim Essen — Akkusativ und Empfehlung.",
-    "ar": "مراجعة الوحدتين 3–4: المدينة والطعام (Akkusativ + التوصية)"
+    "de": "Woche drei und vier noch einmal: Heute ist Dienstag, der einundzwanzigste April · Meine Oma ist achtzig, zweiunddreißig Leute kommen · Das Handy hat zweihundertneunundsiebzig Euro gekostet · Halb acht ist sieben Uhr dreißig · am Montag, um halb fünf, im April · Ich habe eine Schwester, ihr Mann ist Lehrer · Siehst du den Hund? — Ja, ich sehe ihn.",
+    "ar": "أسبوع المراجعة، اليوم الثاني (الثلاثاء 21 أبريل): الأسبوعان 3–4 من جديد — الأعداد حتى المئة والألف (zweiunddreißig لا dreiundzwanzig · 279) · الوقت (halb acht = 7:30 · Viertel nach/vor) · um/am/im · العائلة (Schwester · Brüder · Zwillinge · Oma) · الأكوزاتيف (einen Bruder · den Hund · ihn) · mein/dein/sein/ihr — ثم معركة اليوم (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (die Uhr · die Familie) من الأسبوعين نفسيهما."
   },
   "canDoDaily": [
-    "يطلب في مطعم ويوصي ويشتكي"
+    "يفهم ويقول الأعداد والأسعار والأوقات كما تُسمع في الامتحان (zweiunddreißig · zweihundertneunundsiebzig Euro · halb acht · Viertel nach sieben) ويضع um/am/im في مكانها",
+    "يصف عائلته بالأكوزاتيف والملكية (Ich habe eine Schwester · ihr Mann · Ich sehe ihn) ويجتاز معركة اليوم الثاني من أسبوع المراجعة بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
-      "bahn",
-      "apotheke",
-      "broetchen"
+      "uhr",
+      "familie",
+      "oma"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "المراجعة التراكمية: أصلح الخطأ في الجملة"
+          "de": "«السابعة والنصف» — تخمين فقط"
         },
         "choices": [
-          "التصحيح بالقلنسوة/القاعدة الصحيحة",
-          "تصحيح آخر خاطئ",
-          "تصحيح ثالث خاطئ"
+          "halb acht",
+          "halb sieben",
+          "sieben und halb"
         ],
-        "answer": "التصحيح بالقلنسوة/القاعدة الصحيحة",
+        "answer": "halb acht",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«هل ترى الكلب؟ — نعم، أراه» — تخمين فقط"
+        },
+        "choices": [
+          "Siehst du den Hund? — Ja, ich sehe ihn.",
+          "Siehst du der Hund? — Ja, ich sehe er.",
+          "Siehst du den Hund? — Ja, ich sehe er."
+        ],
+        "answer": "Siehst du den Hund? — Ja, ich sehe ihn.",
         "revealNextSession": true
       }
     ],
@@ -38,87 +51,310 @@
   },
   "praesentation": {
     "wordIds": [
-      "bahn",
-      "apotheke"
+      "uhr",
+      "familie"
     ],
     "grammarArsenalIds": [
-      "ars-satzklammer",
-      "ars-perfekt"
+      "ars-zahlen-100",
+      "ars-preis-1000",
+      "ars-uhrzeit",
+      "ars-um-am-im",
+      "ars-akkusativ-1",
+      "ars-possessiv"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a1-u15-s2"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«إلى المحطة من فضلك»؟",
-            "a": "Zum Bahnhof, bitte."
+            "q": "Meine Oma ist ___. (80)",
+            "a": "achtzig",
+            "why": "العشرات بـ‑zig: zwanzig · dreißig · vierzig … achtzig (u3-d1)."
           },
           {
-            "q": "«ماذا توصي؟»؟",
-            "a": "Was empfehlen Sie?"
+            "q": "___ Leute kommen zum Essen. (32)",
+            "a": "Zweiunddreißig",
+            "why": "الآحاد أولاً ثم und ثم العشرات: zwei‑und‑dreißig — لا dreiundzwanzig (23)."
+          },
+          {
+            "q": "Das Handy kostet ___ Euro. (279)",
+            "a": "zweihundertneunundsiebzig",
+            "why": "المئات ثم الآحاد ثم العشرات في كلمة واحدة: zweihundert‑neun‑und‑siebzig (u3-d2)."
+          },
+          {
+            "q": "Halb acht ist ___ Uhr dreißig. (7)",
+            "a": "sieben",
+            "why": "halb تسبق الساعة القادمة: halb acht = 7:30 (u3-d3)."
+          },
+          {
+            "q": "Der Termin ist ___ Montag. (في)",
+            "a": "am",
+            "why": "الأيام بـam: am Montag · am Sonntag (u3-d4)."
+          },
+          {
+            "q": "___ April regnet es oft in Berlin. (في)",
+            "a": "im",
+            "why": "الشهور بـim: im April · im Januar."
+          },
+          {
+            "q": "Das Essen ist ___ halb acht. (في الساعة)",
+            "a": "um",
+            "why": "الساعة بـum: um halb acht · um neun Uhr."
+          },
+          {
+            "q": "Ich habe ___ Schwester. (ein/eine)",
+            "a": "eine",
+            "why": "haben + أكوزاتيف: eine Schwester (المؤنث لا يتغيّر) · einen Bruder (u4-d3)."
+          },
+          {
+            "q": "Siehst du ___ Hund? — Ja, ich sehe ihn. (der)",
+            "a": "den",
+            "why": "المفعول المذكر: der ⇐ den، وضميره er ⇐ ihn (u4-d4)."
+          },
+          {
+            "q": "Meine Schwester studiert. ___ Mann ist Lehrer. (ملكية: هي)",
+            "a": "Ihr",
+            "why": "ملكية «هي» = ihr: ihr Mann · ihre Arbeit (u4-d5)."
           }
         ],
         "interleavedWith": [
-          "bahnhof",
-          "bitten"
+          "oma",
+          "leute",
+          "handy",
+          "euro",
+          "montag",
+          "april",
+          "schwester",
+          "hund"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«أنا آخذ اليخنة»؟",
-            "a": "Ich nehme die Suppe."
+            "audioId": "wz-4",
+            "speakText": "Meine Oma ist achtzig. Und zweiunddreißig Leute kommen — nicht dreiundzwanzig!",
+            "q": "استمع: كم شخصاً يأتي إلى طعام الجدة؟",
+            "choices": [
+              "اثنان وثلاثون",
+              "ثلاثة وعشرون",
+              "ثمانون"
+            ],
+            "a": "اثنان وثلاثون",
+            "why": "zweiunddreißig = 32 (الآحاد أولاً) · dreiundzwanzig = 23 · achtzig = عمر الجدة."
           },
           {
-            "q": "«بلا لحم من فضلك»؟",
-            "a": "Ohne Fleisch, bitte."
+            "audioId": "wz-6",
+            "speakText": "Es hat zweihundertneunundsiebzig Euro gekostet. Ich habe mit Karte bezahlt — das war leicht.",
+            "q": "استمع: كم كلّف الهاتف؟",
+            "choices": [
+              "279 يورو",
+              "999 يورو",
+              "400 يورو"
+            ],
+            "a": "279 يورو",
+            "why": "zweihundertneunundsiebzig = 279 · mit Karte bezahlt = دفعتُ بالبطاقة."
+          },
+          {
+            "audioId": "wz-8",
+            "speakText": "Halb acht! Halb acht ist sieben Uhr dreißig — nicht acht Uhr dreißig.",
+            "q": "استمع: halb acht = ؟",
+            "choices": [
+              "7:30",
+              "8:30",
+              "7:15"
+            ],
+            "a": "7:30",
+            "why": "halb acht = نصف الطريق إلى الثامنة = 7:30."
+          },
+          {
+            "audioId": "wz-10",
+            "speakText": "Sieben Uhr fünfzehn und sieben Uhr fünfundvierzig. Um, am oder im — Frage vier?",
+            "q": "استمع: Viertel vor acht = ؟",
+            "choices": [
+              "7:45",
+              "7:15",
+              "8:15"
+            ],
+            "a": "7:45",
+            "why": "ربع بعد السابعة Viertel nach sieben = 7:15 · ربع قبل الثامنة Viertel vor acht = 7:45."
+          },
+          {
+            "audioId": "wz-12",
+            "speakText": "Der Termin war am Montag um halb fünf. Und im April regnet es oft — am Montag, um halb fünf, im April.",
+            "q": "استمع: متى كان الموعد؟",
+            "choices": [
+              "الاثنين في الرابعة والنصف",
+              "الأحد في الحادية عشرة",
+              "الاثنين في الثالثة"
+            ],
+            "a": "الاثنين في الرابعة والنصف",
+            "why": "am Montag (يوم) um halb fünf (ساعة = 4:30) · im April (شهر)."
+          },
+          {
+            "audioId": "wz-14",
+            "speakText": "Ja, ich habe eine Schwester. Sie studiert noch, und ihr Mann ist Lehrer. Und du hast zwei Brüder — Zwillinge!",
+            "q": "استمع: ماذا يعمل زوج أخت يوسف؟",
+            "choices": [
+              "معلّم",
+              "طالب",
+              "طبيب"
+            ],
+            "a": "معلّم",
+            "why": "زوجها معلّم: ihr Mann ist Lehrer · sie studiert noch · zwei Brüder — Zwillinge (u4-d5)."
+          },
+          {
+            "audioId": "wz-16",
+            "speakText": "Ja, ich sehe ihn. Aber nein — Bruno ist sein Hund, der Hund von deinem Onkel. Das hier ist dein Hund: alt, aber lustig!",
+            "q": "استمع: كلب من هو Bruno؟",
+            "choices": [
+              "كلب العم",
+              "كلب لينا",
+              "كلب يوسف"
+            ],
+            "a": "كلب العم",
+            "why": "sein Hund = كلبه (العم) · dein Hund = كلبك (لينا) · ich sehe ihn — ihn للمذكر المفعول."
+          },
+          {
+            "audioId": "wz-18",
+            "speakText": "Mia liebt deine Tasche! Einen Hund, eine Katze, ein Auto — den Hund sehe ich, die Katze liebe ich.",
+            "q": "استمع: ماذا تحب القطة Mia؟",
+            "choices": [
+              "حقيبة لينا",
+              "الكلب",
+              "السيارة"
+            ],
+            "a": "حقيبة لينا",
+            "why": "Mia liebt deine Tasche (u4-d2) · einen Hund / eine Katze / ein Auto — الأكوزاتيف يغيّر المذكر وحده."
           }
         ],
         "interleavedWith": [
-          "suppe",
-          "fleisch"
+          "karte",
+          "uhr",
+          "termin",
+          "lehrer",
+          "bruder",
+          "onkel",
+          "katze",
+          "tasche"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "error-hunt",
         "items": [
           {
-            "q": "«الزبون يطلب فاتورة»؟",
-            "a": "Der Kunde bestellt die Rechnung."
+            "q": "صحّح: ~~Dreiundzwanzig Leute kommen — nein: dreißig und zwei!~~",
+            "a": "Zweiunddreißig Leute kommen.",
+            "why": "32 = zwei‑und‑dreißig: الآحاد أولاً، كلمة واحدة."
           },
           {
-            "q": "«الصيدلية مقابل البنك»؟",
-            "a": "Die Apotheke ist gegenüber der Bank."
+            "q": "صحّح: ~~Halb acht ist acht Uhr dreißig.~~",
+            "a": "Halb acht ist sieben Uhr dreißig.",
+            "why": "halb acht = 7:30 — نصف الطريق إلى الثامنة."
+          },
+          {
+            "q": "صحّح: ~~Der Termin ist im Montag.~~",
+            "a": "Der Termin ist am Montag.",
+            "why": "الأيام بـam، الشهور بـim."
+          },
+          {
+            "q": "صحّح: ~~Das Essen ist am halb acht.~~",
+            "a": "Das Essen ist um halb acht.",
+            "why": "الساعة بـum."
+          },
+          {
+            "q": "صحّح: ~~Ich habe ein Bruder.~~",
+            "a": "Ich habe einen Bruder.",
+            "why": "haben + أكوزاتيف مذكر: einen."
+          },
+          {
+            "q": "صحّح: ~~Siehst du der Hund? — Ja, ich sehe er.~~",
+            "a": "Siehst du den Hund? — Ja, ich sehe ihn.",
+            "why": "المفعول المذكر: den · ihn."
           }
         ],
         "interleavedWith": [
-          "kunde",
-          "apotheke"
+          "leute",
+          "montag",
+          "essen",
+          "bruder",
+          "hund"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wz-1",
+            "speakText": "Hallo, Yusuf! Heute ist Dienstag, der einundzwanzigste April. Woche drei und vier: Zahlen, Zeit und Familie!",
+            "a": "Hallo, Yusuf! Heute ist Dienstag, der einundzwanzigste April. Woche drei und vier: Zahlen, Zeit und Familie!",
+            "why": "der einundzwanzigste (‑ste) · Dienstag بـie · Zahlen بـZ · Familie بحرف كبير."
+          },
+          {
+            "audioId": "wz-3",
+            "speakText": "Frage eins: Wie alt ist deine Oma, und wie viele Leute kommen zum Essen?",
+            "a": "Frage eins: Wie alt ist deine Oma, und wie viele Leute kommen zum Essen?",
+            "why": "Wie alt = كم العمر · wie viele = كم (عدد) · zum Essen (zu + dem)."
+          },
+          {
+            "audioId": "wz-7",
+            "speakText": "Billig! Frage drei — die Zeit: Sieben Uhr dreißig — wie heißt das?",
+            "a": "Billig! Frage drei — die Zeit: Sieben Uhr dreißig — wie heißt das?",
+            "why": "Billig بـ‑ig تُسمع «ش» · die Zeit بـZ وei · Uhr بـh صامتة."
+          },
+          {
+            "audioId": "wz-9",
+            "speakText": "Genau! Und Viertel nach sieben? Viertel vor acht?",
+            "a": "Genau! Und Viertel nach sieben? Viertel vor acht?",
+            "why": "Viertel بحرف كبير (اسم) · nach = بعد · vor = قبل."
+          },
+          {
+            "audioId": "wz-15",
+            "speakText": "Genau, beide sind zehn. Frage fünf: Siehst du den Hund auf meinem Foto? Ist das Bruno?",
+            "a": "Genau, beide sind zehn. Frage fünf: Siehst du den Hund auf meinem Foto? Ist das Bruno?",
+            "why": "beide = كلاهما · den Hund (أكوزاتيف) · auf meinem Foto (داتيف ⇐ ‑em)."
+          },
+          {
+            "audioId": "wz-19",
+            "speakText": "Mein, dein, sein, ihr — alles richtig! Frage sechs: Wen beschreibe ich? Sie ist alt, aber sehr schlau, und die Haare sind kurz.",
+            "a": "Mein, dein, sein, ihr — alles richtig! Frage sechs: Wen beschreibe ich? Sie ist alt, aber sehr schlau, und die Haare sind kurz.",
+            "why": "mein/dein/sein/ihr — الملكية · Wen = مَن (مفعول) · die Haare جمع · schlau بـau."
+          }
+        ],
+        "interleavedWith": [
+          "dienstag",
+          "familie",
+          "zeit",
+          "viertel",
+          "foto",
+          "haar"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die kumulative Wiederholung meistern",
-        "a": "x",
-        "ar": "إتقان المراجعة التراكمية"
+        "de": "Meine Familie und meine Woche: Ich habe eine Schwester und einen Bruder. Meine Schwester ist verheiratet, ihr Mann ist Lehrer. Meine Oma ist achtzig. Am Montag um halb fünf habe ich einen Termin, und im April habe ich Geburtstag. Das Handy hat zweihundertneunundsiebzig Euro gekostet.",
+        "ar": "أن يصف عائلته ومواعيده كما في الجزء الشفوي: فردان على الأقل بـhaben + أكوزاتيف (eine Schwester · einen Bruder) · ملكية واحدة لغيره (ihr Mann · sein Hund) · عمر أو عدد أو سعر فوق العشرين بالترتيب الألماني · موعد واحد بـam + um وشهر بـim"
       },
       "situation": {
-        "de": "Mischung aus den Einheiten der Woche",
-        "a": "x",
-        "ar": "خليط من وحدات الأسبوع"
+        "de": "Das Ende der Woche: Dienstag, der einundzwanzigste April — Lena und Yusuf wiederholen Woche drei und vier: Zahlen, Zeit und Familie. Und jetzt du: Wie viel, wann und wer?",
+        "ar": "أسبوع المراجعة: مساء الثلاثاء 21 أبريل — لينا ويوسف يعيدان الأسبوعين 3 و4: الأعداد والأسعار والوقت وum/am/im والعائلة بالأكوزاتيف والملكية — ثم أنت: كم ومتى ومَن"
       },
       "successCriteria": [
-        "جملة طلب + جملة توصية + تصحيح ohne"
+        "يقول عدداً فوق العشرين وسعراً فوق المئة بالترتيب الألماني (zweiunddreißig · zweihundertneunundsiebzig) ووقتاً بـhalb أو Viertel صحيحاً",
+        "يستعمل am لليوم وum للساعة وim للشهر في موعد واحد بلا خلط",
+        "يصف فردين من عائلته بـhaben + أكوزاتيف وملكية صحيحة (einen Bruder · ihr Mann · sein Hund)"
       ]
     }
   },
@@ -133,20 +369,59 @@
       {
         "items": [
           {
-            "q": "«صيدلية» و«مقابل»؟",
-            "a": "die Apotheke / gegenüber"
+            "q": "Die Oma von Lena ist ___. (73)",
+            "a": "dreiundsiebzig",
+            "choices": [
+              "dreiundsiebzig",
+              "siebenunddreißig",
+              "siebzig"
+            ],
+            "why": "73 = drei‑und‑siebzig: الآحاد أولاً · 37 = siebenunddreißig."
           },
           {
-            "q": "«فاتورة»؟",
-            "a": "die Rechnung"
+            "q": "Viertel nach sieben = sieben Uhr ___.",
+            "a": "fünfzehn",
+            "choices": [
+              "fünfzehn",
+              "fünfzig",
+              "fünfundvierzig"
+            ],
+            "why": "Viertel = ربع = 15 دقيقة بعد السابعة."
           },
           {
-            "q": "«بلا لحم»؟",
-            "a": "ohne Fleisch"
+            "q": "Im April hat Lena ___.",
+            "a": "Geburtstag",
+            "choices": [
+              "Geburtstag",
+              "Termin",
+              "Zeit"
+            ],
+            "why": "im April habe ich Geburtstag (u3-d4) — عيد ميلادها 18 أبريل."
           },
           {
-            "q": "«ماذا توصي؟»؟",
-            "a": "Was empfehlen Sie?"
+            "q": "Ich habe ___ Bruder.",
+            "a": "einen",
+            "choices": [
+              "einen",
+              "ein",
+              "eine"
+            ],
+            "why": "المذكر في الأكوزاتيف: einen."
+          },
+          {
+            "q": "Siehst du den Hund? — Ja, ich sehe ___.",
+            "a": "ihn",
+            "choices": [
+              "ihn",
+              "er",
+              "ihm"
+            ],
+            "why": "ضمير المفعول المذكر: ihn."
+          },
+          {
+            "q": "الترتيب: Euro. / Das Handy / zweihundertneunundsiebzig / kostet",
+            "a": "Das Handy kostet zweihundertneunundsiebzig Euro.",
+            "why": "الفعل ثانياً والسعر كلمة واحدة."
           }
         ],
         "passingScore": 0.75
@@ -154,20 +429,59 @@
       {
         "items": [
           {
-            "q": "«الزبون»؟",
-            "a": "der Kunde"
+            "q": "Yusuf hat vierhundert Euro, das Handy kostet zweihundertneunundsiebzig — er hat noch ___ Euro.",
+            "a": "hunderteinundzwanzig",
+            "choices": [
+              "hunderteinundzwanzig",
+              "hundertzwölf",
+              "hundertzwanzig"
+            ],
+            "why": "الباقي 121 = hundert‑ein‑und‑zwanzig (u3-d2)."
           },
           {
-            "q": "«آخذ»؟",
-            "a": "nehmen (ich nehme)"
+            "q": "Viertel vor acht = sieben Uhr ___.",
+            "a": "fünfundvierzig",
+            "choices": [
+              "fünfundvierzig",
+              "fünfzehn",
+              "dreißig"
+            ],
+            "why": "ربع قبل الثامنة = 7:45."
           },
           {
-            "q": "«خبز/لحم/جبن»؟",
-            "a": "Brot / Fleisch / Käse"
+            "q": "Lena hat zwei ___. (إخوة)",
+            "a": "Brüder",
+            "choices": [
+              "Brüder",
+              "Bruder",
+              "Brüdern"
+            ],
+            "why": "الجمع بالأوملاوت: der Bruder ⇐ die Brüder."
           },
           {
-            "q": "«إلى المحطة؟»؟",
-            "a": "Zum Bahnhof?"
+            "q": "Mia liebt ___ Tasche. (ملكية: لينا تتكلم عن نفسها)",
+            "a": "meine",
+            "choices": [
+              "meine",
+              "mein",
+              "meinen"
+            ],
+            "why": "die Tasche مؤنث ⇐ meine."
+          },
+          {
+            "q": "Bruno ist ___ Hund — der Hund von Onkel. (ملكية: هو)",
+            "a": "sein",
+            "choices": [
+              "sein",
+              "ihr",
+              "dein"
+            ],
+            "why": "ملكية «هو» = sein."
+          },
+          {
+            "q": "«كم ثمن الهاتف؟» — بالألمانية؟",
+            "a": "Was kostet das Handy?",
+            "why": "السؤال عن السعر بـWas kostet (u3-d2)."
           }
         ],
         "passingScore": 0.75
@@ -175,20 +489,59 @@
       {
         "items": [
           {
-            "q": "«الطلب = فعلين متجاورين»؟",
-            "a": "Ich möchte … haben (الفعلان آخر)"
+            "q": "Halb neun = ___ Uhr dreißig.",
+            "a": "acht",
+            "choices": [
+              "acht",
+              "neun",
+              "sieben"
+            ],
+            "why": "halb neun = نصف الطريق إلى التاسعة = 8:30."
           },
           {
-            "q": "«مقابل البنك»؟",
-            "a": "gegenüber der Bank (Dativ!)"
+            "q": "Wen ___ ich? — Meine Oma! (beschreiben)",
+            "a": "beschreibe",
+            "choices": [
+              "beschreibe",
+              "beschreibst",
+              "beschreibt"
+            ],
+            "why": "مع ich النهاية ‑e."
           },
           {
-            "q": "«الحليب/البيض»؟",
-            "a": "die Milch / die Eier"
+            "q": "Lena: Ist das ___ Hund? — Nein, das ist sein Hund.",
+            "a": "dein",
+            "choices": [
+              "dein",
+              "deine",
+              "sein"
+            ],
+            "why": "ملكية «أنت» للمذكر: dein."
           },
           {
-            "q": "«الشكوى: طلبي بارد»؟",
-            "a": "Mein Essen ist kalt."
+            "q": "Yusuf liebt ___ Oma. (ملكية: هو)",
+            "a": "seine",
+            "choices": [
+              "seine",
+              "sein",
+              "ihre"
+            ],
+            "why": "die Oma مؤنث ⇐ seine (الجذع sein + e)."
+          },
+          {
+            "q": "Die Brüder von Lena sind ___. (توأمان)",
+            "a": "Zwillinge",
+            "choices": [
+              "Zwillinge",
+              "Geschwister",
+              "Kinder"
+            ],
+            "why": "Zwillinge = توأمان (u4-d5)."
+          },
+          {
+            "q": "«متى الموعد؟» — بالألمانية؟",
+            "a": "Wann ist der Termin?",
+            "why": "السؤال عن الزمن بـWann (u3-d4)."
           }
         ],
         "passingScore": 0.75
@@ -197,59 +550,59 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einheiten 3–4: Empfehlung (empfehlen), Bestellung (möchte … haben), Akkusativ (ohne), gegenüber + Dativ.",
-      "ar": "الوحدتان 3–4: التوصية والطلب وAkkusativ ومقابل+Dativ."
+      "de": "Woche drei und vier noch einmal: Heute ist Dienstag, der einundzwanzigste April. Die Oma von Yusuf ist achtzig, zweiunddreißig Leute kommen. Das Handy hat zweihundertneunundsiebzig Euro gekostet. Halb acht ist sieben Uhr dreißig. Der Termin war am Montag um halb fünf, im April regnet es oft. Yusuf hat eine Schwester, ihr Mann ist Lehrer. Lena hat zwei Brüder und einen Hund — und Bruno ist sein Hund, der Hund von Onkel.",
+      "ar": "اليوم الثاني من أسبوع المراجعة اكتمل: تقول الأعداد والأسعار بالترتيب الألماني، والوقت بـhalb وViertel، وتضع um/am/im في مكانها، وتصف عائلتك بالأكوزاتيف والملكية."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich nehme Suppe~~ / ~~ohne der Fleisch~~",
-          "ar": "المفعول المعيّن يحتاج المقال · ohne بلا مقال"
+          "de": "~~Dreiundzwanzig Leute~~ (32 مقصودة) · ~~Halb acht ist acht Uhr dreißig.~~ · ~~Es ist sieben und halb.~~",
+          "ar": "ترتيب الأعداد وhalb"
         },
-        "whyArabicSpeakerFails": "«آخذ اليخنة» بأل في الألمانية (die Suppe) · وبدون «بلا» لا تحمل مقالاً أبداً (ohne Fleisch) — مصيدة الأداة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تقول «اثنان وثلاثون» بالآحاد أولاً مثل الألمانية، لكن المتعلم يكتبها بالأرقام من اليسار فيقلبها سماعاً (32 ⇄ 23) — وhalb الألمانية تسبق الساعة القادمة (halb acht = 7:30) بينما «السابعة والنصف» تتبع الساعة الماضية — فيزيد ساعة كاملة (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich nehme die Suppe. · ohne Fleisch",
-          "ar": "آخذ اليخنة. · بلا لحم."
+          "de": "Zweiunddreißig Leute kommen. · Halb acht ist sieben Uhr dreißig.",
+          "ar": "اثنان وثلاثون شخصاً يأتون · السابعة والنصف"
         },
         "exercise": {
-          "q": "أكمل: ohne ___ (die Milch)",
-          "a": "Milch"
+          "q": "أكمل: Oma ist ___ (80), und das Essen ist um ___ (8:30).",
+          "a": "achtzig / halb neun"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich habe Hunger auf Brot~~ / ~~Ich möchte haben die Suppe~~",
-          "ar": "الجوع والعطش + الترتيب"
+          "de": "~~im Montag~~ · ~~am halb fünf~~ · ~~am April~~",
+          "ar": "um/am/im"
         },
-        "whyArabicSpeakerFails": "«جائع» = habe Hunger (بلا auf) · و«أريد أن أحصل» = möchte … haben (الفعلان آخر) — القلنسوة في الطعام (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«في» العربية واحدة لليوم والساعة والشهر، فيختار المتعلم حرفاً واحداً للثلاثة — والألمانية تفصل: am لليوم (am Montag) وum للساعة (um halb fünf) وim للشهر (im April) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich habe Hunger. · Ich möchte die Suppe haben.",
-          "ar": "أنا جائع. · أريد اليخنة."
+          "de": "am Montag · um halb fünf · im April",
+          "ar": "يوم الاثنين · في الرابعة والنصف · في أبريل"
         },
         "exercise": {
-          "q": "أكمل: Ich möchte Kaffee ___ (haben — الترتيب)",
-          "a": "… haben (آخر)"
+          "q": "أكمل: Der Kurs ist ___ Sonntag ___ elf Uhr, und ___ Januar ist es kalt.",
+          "a": "am / um / im"
         }
       },
       {
         "commonError": {
-          "de": "~~gegenüber dem Bank~~ / ~~gegenüber die Bank~~",
-          "ar": "gegenüber + Dativ دائماً"
+          "de": "~~Ich habe ein Bruder.~~ · ~~Ich sehe er.~~ · ~~Sie liebt sein Arbeit.~~",
+          "ar": "الأكوزاتيف والملكية"
         },
-        "whyArabicSpeakerFails": "«مقابل» تتبعها Dativ (der/dem Bank) — حرف الجر الثابت للمكان — مراجعة u3 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "المفعول به العربي لا يغيّر الأداة، فيبقي المتعلم ein/der/er في موقع المفعول — والألمانية تغيّر المذكر وحده: einen/den/ihn — والملكية تتبع المالك (sein = هو، ihr = هي) ونهايتها تتبع المملوك (ihre Arbeit) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "gegenüber der Bank",
-          "ar": "مقابل البنك"
+          "de": "Ich habe einen Bruder. · Ich sehe ihn. · Sie liebt ihre Arbeit.",
+          "ar": "عندي أخ · أراه · هي تحب عملها"
         },
         "exercise": {
-          "q": "أكمل: gegenüber ___ (das Hotel)",
-          "a": "dem Hotel"
+          "q": "أكمل: Lena hat ___ Hund (ein). Sie liebt ___ (er). Und ___ Mutter arbeitet viel (ملكية: هي).",
+          "a": "einen / ihn / ihre"
         }
       }
     ],
     "srsBundleWordIds": [
-      "bahn",
-      "apotheke"
+      "uhr",
+      "familie"
     ]
   },
   "gReferences": {
@@ -260,16 +613,20 @@
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-satzklammer",
-    "ars-perfekt"
+    "ars-zahlen-100",
+    "ars-preis-1000",
+    "ars-uhrzeit",
+    "ars-um-am-im",
+    "ars-akkusativ-1",
+    "ars-possessiv"
   ],
   "audioManifestRefs": [
-    "word-bahn",
-    "word-apotheke"
+    "word-uhr",
+    "word-familie"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung)",
+    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung) — اليوم 2: الأسبوعان 3–4 — الثلاثاء 21 أبريل",
     "goetheWordListOverlap": []
   }
 }

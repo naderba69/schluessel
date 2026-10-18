@@ -6,31 +6,44 @@
   "day": 1,
   "kind": "integration",
   "ziel": {
-    "de": "Wiederholung Einheiten 1–2: Begrüßung, Familie und Wegbeschreibung — die Grundlagen sitzen.",
-    "ar": "مراجعة الوحدتين 1–2: التحية والأسرة والاتجاهات"
+    "de": "Woche eins und zwei noch einmal: Heute ist Montag, der zwanzigste April · Ich heiße Yusuf Haddad, ich bin Student · Woher kommst du? — Aus Tunesien. Wo wohnst du? — In Berlin · H, A, D, D, A, D · Tunesien ist ein Land, Berlin ist eine Stadt · die Zeitung, das Mädchen, der Schmetterling · Arabisch ist meine Muttersprache.",
+    "ar": "أسبوع المراجعة، اليوم الأول (الاثنين 20 أبريل، بعد نهاية الدورة): الأسبوعان 1–2 من جديد — heißen وsein (bin/bist/ist/sind) · Wer/Woher/Wo مع aus/in · التهجئة ورقم الهاتف · ein/eine (ein Land · eine Stadt) · رموز الجنس (‑ung ⇐ die · ‑chen ⇐ das · ‑ling ⇐ der · ‑schaft ⇐ die) · اللغات وMuttersprache/Fremdsprache — ثم معركة اليوم (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (Hallo · Danke) من اليوم الأول."
   },
   "canDoDaily": [
-    "يعرّف بنفسه ويصف اتجاهاً ويفوّق wohin/wo"
+    "يعرّف بنفسه كاملاً بعد اثني عشر أسبوعاً (الاسم والتهجئة والعمر والبلد والمدينة ورقم الهاتف واللغات) بـsein وkommen aus وwohnen in صحيحة",
+    "يفرّق Wer/Woher/Wo ويختار ein/eine وder/die/das من رمز الكلمة ويجتاز معركة اليوم الأول من أسبوع المراجعة بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
       "hallo",
       "danke",
-      "familie"
+      "woher"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "المراجعة التراكمية: أصلح الخطأ في الجملة"
+          "de": "«من أين أنت؟ وأين تسكن؟» — تخمين فقط"
         },
         "choices": [
-          "التصحيح بالقلنسوة/القاعدة الصحيحة",
-          "تصحيح آخر خاطئ",
-          "تصحيح ثالث خاطئ"
+          "Woher kommst du? Wo wohnst du?",
+          "Wo kommst du? Woher wohnst du?",
+          "Wer kommst du? Wo wohnst du?"
         ],
-        "answer": "التصحيح بالقلنسوة/القاعدة الصحيحة",
+        "answer": "Woher kommst du? Wo wohnst du?",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«برلين مدينة وتونس بلد» — تخمين فقط"
+        },
+        "choices": [
+          "Berlin ist eine Stadt, Tunesien ist ein Land.",
+          "Berlin ist ein Stadt, Tunesien ist eine Land.",
+          "Berlin ist die Stadt, Tunesien ist der Land."
+        ],
+        "answer": "Berlin ist eine Stadt, Tunesien ist ein Land.",
         "revealNextSession": true
       }
     ],
@@ -42,82 +55,303 @@
       "danke"
     ],
     "grammarArsenalIds": [
-      "ars-satzklammer",
-      "ars-perfekt"
+      "ars-sein",
+      "ars-wer-woher",
+      "ars-alphabet-spelling",
+      "ars-wo-woher",
+      "ars-ein-eine",
+      "ars-genuscode"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a1-u15-s1"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«اسمي يوسف وأنا من تونس»؟",
-            "a": "Ich heiße Yusuf und ich komme aus Tunesien."
+            "q": "Ich ___ Student. (sein)",
+            "a": "bin",
+            "why": "sein مع ich: bin — لا تُشتق من المصدر (u1-d1)."
           },
           {
-            "q": "«البيت يميناً»؟",
-            "a": "Das Haus ist rechts."
-          }
-        ],
-        "interleavedWith": [
-          "rechts",
-          "heissen"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "«هذا زميلي»؟",
-            "a": "Das ist mein Kollege."
+            "q": "Nabil ___ Schüler. (sein)",
+            "a": "ist",
+            "why": "sein مع er/sie/es والاسم المفرد: ist."
           },
           {
-            "q": "«الوجهة؟» — سؤال الاتجاه؟",
-            "a": "Wohin?"
-          }
-        ],
-        "interleavedWith": [
-          "wohin"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "«شمال/جنوب»؟",
-            "a": "Norden / Süden."
+            "q": "Woher ___ du? — Aus Tunesien. (kommen — die Frage von Woche eins, im Januar)",
+            "a": "kommst",
+            "why": "مع du النهاية ‑st: kommst · wohnst · heißt."
           },
           {
-            "q": "«أنا طالب»؟",
-            "a": "Ich bin Student."
+            "q": "Wo ___ du jetzt? — In Berlin. (wohnen)",
+            "a": "wohnst",
+            "why": "Wo = أين (المكان) مع wohnen in · Woher = من أين مع kommen aus (u2-d1)."
+          },
+          {
+            "q": "Yusuf kommt aus Tunesien, Ayşe kommt aus der ___. (تركيا)",
+            "a": "Türkei",
+            "why": "بلاد بأداة تأخذ aus der: aus der Türkei · aus der Schweiz (u1-d2)."
+          },
+          {
+            "q": "Tunesien ist ein ___. (بلد)",
+            "a": "Land",
+            "why": "das Land ⇐ ein Land (محايد بلا نهاية) · die Stadt ⇐ eine Stadt (u2-d2)."
+          },
+          {
+            "q": "Berlin ist eine ___. (مدينة)",
+            "a": "Stadt",
+            "why": "die Stadt مؤنث ⇐ eine Stadt."
+          },
+          {
+            "q": "die Zeitung, die Wohnung — und die ___. (الصداقة)",
+            "a": "Freundschaft",
+            "why": "‑ung و‑schaft و‑heit/‑keit ⇐ die دائماً (u2-d3)."
+          },
+          {
+            "q": "das Mädchen — wie das ___. (خبيزة صغيرة)",
+            "a": "Brötchen",
+            "why": "‑chen ⇐ das دائماً: das Mädchen · das Brötchen."
+          },
+          {
+            "q": "Arabisch ist meine ___, Deutsch ist eine Fremdsprache. (اللغة الأم)",
+            "a": "Muttersprache",
+            "why": "die Muttersprache = اللغة الأم · die Fremdsprache = لغة أجنبية (u2-d2)."
           }
         ],
         "interleavedWith": [
           "student",
-          "nord"
+          "schueler",
+          "land",
+          "stadt",
+          "zeitung",
+          "wohnung",
+          "maedchen",
+          "fremdsprache"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "wh-4",
+            "speakText": "Ich heiße Yusuf Haddad. Ich bin Student, ich bin neunzehn Jahre alt, und ich bin nicht mehr neu!",
+            "q": "استمع: كم عمر يوسف؟",
+            "choices": [
+              "تسعة عشر",
+              "ستة عشر",
+              "سبعة عشر"
+            ],
+            "a": "تسعة عشر",
+            "why": "neunzehn Jahre alt · ich bin Student · nicht mehr neu = لم أعد جديداً."
+          },
+          {
+            "audioId": "wh-6",
+            "speakText": "Ich komme aus Tunesien, aber ich wohne in Berlin. Tunesien ist ein Land, Berlin ist eine Stadt.",
+            "q": "استمع: أين يسكن يوسف؟",
+            "choices": [
+              "في برلين",
+              "في تونس",
+              "في سويسرا"
+            ],
+            "a": "في برلين",
+            "why": "komme aus Tunesien (الأصل) · wohne in Berlin (السكن) · ein Land / eine Stadt."
+          },
+          {
+            "audioId": "wh-8",
+            "speakText": "H, A, D, D, A, D. Und Lena: L, E, N, A — nicht I!",
+            "q": "استمع: أي حرف ليس في Lena؟",
+            "choices": [
+              "I",
+              "E",
+              "N"
+            ],
+            "a": "I",
+            "why": "L, E, N, A — nicht I: الخطأ نفسه من مكالمة التسجيل (u1-d3)."
+          },
+          {
+            "audioId": "wh-10",
+            "speakText": "Null, eins, sieben, drei, neun, acht, zwei. Langsam — alles klar?",
+            "q": "استمع: ما آخر رقمين في هاتف يوسف؟",
+            "choices": [
+              "8 2",
+              "9 8",
+              "3 9"
+            ],
+            "a": "8 2",
+            "why": "null eins sieben drei neun acht zwei — الرقم نفسه من u1-d6."
+          },
+          {
+            "audioId": "wh-12",
+            "speakText": "Ein Haus, eine Wohnung, eine Stadt, ein Ort. Du wohnst in einem Haus in der Schweiz, ich in einer Wohnung in Berlin.",
+            "q": "استمع: أين تسكن لينا؟",
+            "choices": [
+              "في بيت في سويسرا",
+              "في شقة في برلين",
+              "في مدينة في ألمانيا"
+            ],
+            "a": "في بيت في سويسرا",
+            "why": "in einem Haus in der Schweiz · ich in einer Wohnung in Berlin — ein Haus (محايد) · eine Wohnung (مؤنث)."
+          },
+          {
+            "audioId": "wh-14",
+            "speakText": "Die Zeitung, das Mädchen, der Schmetterling — und die Freundschaft. Du und ich!",
+            "q": "استمع: ما أداة Schmetterling؟",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "why": "النهايات: ‑ling ⇐ der · ‑ung/‑schaft ⇐ die · ‑chen ⇐ das (u2-d3)."
+          },
+          {
+            "audioId": "wh-16",
+            "speakText": "Vier: Arabisch, Französisch, Englisch — und jetzt gut Deutsch! Arabisch ist meine Muttersprache, Deutsch ist eine Fremdsprache.",
+            "q": "استمع: كم لغة يتكلم يوسف؟",
+            "choices": [
+              "أربع",
+              "ثلاث",
+              "لغتين"
+            ],
+            "a": "أربع",
+            "why": "أربع: Arabisch, Französisch, Englisch, Deutsch · Muttersprache (الأم) / Fremdsprache (أجنبية)."
+          },
+          {
+            "audioId": "wh-20",
+            "speakText": "Danke, Lena! Morgen Woche drei und vier: Zahlen, Zeit und Familie. Tschüss — bis morgen!",
+            "q": "استمع: ماذا يراجعان غداً؟",
+            "choices": [
+              "الأعداد والوقت والعائلة",
+              "الطعام والمطعم",
+              "الجسم والطبيب"
+            ],
+            "a": "الأعداد والوقت والعائلة",
+            "why": "Zahlen, Zeit und Familie = الأسبوعان 3 و4 · Danke · Tschüss, bis morgen."
+          }
+        ],
+        "interleavedWith": [
+          "jahr",
+          "haus",
+          "schweiz",
+          "familie",
+          "muttersprache",
+          "woche"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "صحّح: ~~Ich bist Student.~~",
+            "a": "Ich bin Student.",
+            "why": "مع ich: bin · مع du: bist."
+          },
+          {
+            "q": "صحّح: ~~Woher wohnst du? — In Berlin.~~",
+            "a": "Wo wohnst du? — In Berlin.",
+            "why": "السكن بـWo … in · الأصل بـWoher … aus."
+          },
+          {
+            "q": "صحّح: ~~Ich komme von Tunesien.~~",
+            "a": "Ich komme aus Tunesien.",
+            "why": "الأصل دائماً aus."
+          },
+          {
+            "q": "صحّح: ~~Berlin ist ein Stadt.~~",
+            "a": "Berlin ist eine Stadt.",
+            "why": "die Stadt مؤنث ⇐ eine."
+          },
+          {
+            "q": "صحّح: ~~Das Zeitung ist neu.~~",
+            "a": "Die Zeitung ist neu.",
+            "why": "النهاية ‑ung ⇐ die دائماً."
+          },
+          {
+            "q": "صحّح: ~~Ich spreche arabisch und deutsch.~~",
+            "a": "Ich spreche Arabisch und Deutsch.",
+            "why": "أسماء اللغات بحرف كبير."
+          }
+        ],
+        "interleavedWith": [
+          "student",
+          "stadt",
+          "zeitung",
+          "deutsch"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wh-1",
+            "speakText": "Hallo, Yusuf! Der Kurs ist zu Ende — und jetzt wiederholen wir alles. Heute ist Montag, der zwanzigste April.",
+            "a": "Hallo, Yusuf! Der Kurs ist zu Ende — und jetzt wiederholen wir alles. Heute ist Montag, der zwanzigste April.",
+            "why": "wiederholen بـie طويلة · der zwanzigste (‑ste من 20) · April بحرف كبير."
+          },
+          {
+            "audioId": "wh-5",
+            "speakText": "Sehr gut! Bin, bist, ist, sind. Frage zwei: Woher kommst du, und wo wohnst du?",
+            "a": "Sehr gut! Bin, bist, ist, sind. Frage zwei: Woher kommst du, und wo wohnst du?",
+            "why": "bin · bist · ist · sind — تصريف sein · Woher (من أين) · wo (أين)."
+          },
+          {
+            "audioId": "wh-7",
+            "speakText": "Aus Tunesien — und aus der Türkei, aus der Schweiz! Frage drei: Buchstabieren Sie bitte, Herr Haddad!",
+            "a": "Aus Tunesien — und aus der Türkei, aus der Schweiz! Frage drei: Buchstabieren Sie bitte, Herr Haddad!",
+            "why": "aus der Türkei / aus der Schweiz (بلاد بأداة) · Buchstabieren Sie — صيغة Sie · Herr بـrr."
+          },
+          {
+            "audioId": "wh-11",
+            "speakText": "Alles klar! Frage fünf: ein oder eine? Haus, Wohnung, Stadt, Ort.",
+            "a": "Alles klar! Frage fünf: ein oder eine? Haus, Wohnung, Stadt, Ort.",
+            "why": "Haus (das) · Wohnung (die) · Stadt (die) · Ort (der) — الأسماء بحرف كبير."
+          },
+          {
+            "audioId": "wh-13",
+            "speakText": "Genau! Und der, die oder das? Zeitung, Mädchen, Schmetterling, Freundschaft.",
+            "a": "Genau! Und der, die oder das? Zeitung, Mädchen, Schmetterling, Freundschaft.",
+            "why": "Mädchen بأوملاوت · Schmetterling بـtt · Freundschaft بـeu."
+          },
+          {
+            "audioId": "wh-19",
+            "speakText": "Ja, und jetzt bin ich siebzehn! Sechs Fragen, sechs Antworten — wie in Woche eins. Super, Yusuf.",
+            "a": "Ja, und jetzt bin ich siebzehn! Sechs Fragen, sechs Antworten — wie in Woche eins. Super, Yusuf.",
+            "why": "siebzehn (لينا بعد عيد ميلادها 18 أبريل) · Fragen/Antworten جمع بـ‑n."
+          }
+        ],
+        "interleavedWith": [
+          "kurs",
+          "montag",
+          "april",
+          "tuerkei",
+          "herr",
+          "frage"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die kumulative Wiederholung meistern",
-        "a": "x",
-        "ar": "إتقان المراجعة التراكمية"
+        "de": "Ich stelle mich vor — nach zwölf Wochen: Ich heiße Yusuf Haddad, H, A, D, D, A, D. Ich bin neunzehn Jahre alt und Student. Ich komme aus Tunesien, aber ich wohne in Berlin, in einer Wohnung. Meine Telefonnummer ist null eins sieben drei neun acht zwei. Arabisch ist meine Muttersprache, und ich spreche Französisch, Englisch und Deutsch.",
+        "ar": "أن يعرّف بنفسه كاملاً كما في الامتحان الشفوي: الاسم مع التهجئة · العمر · البلد بـaus والمدينة بـin · رقم الهاتف ببطء · اللغات مع Muttersprache — ثم يسأل زميله الأسئلة الثلاثة Wer/Woher/Wo"
       },
       "situation": {
-        "de": "Mischung aus den Einheiten der Woche",
-        "a": "x",
-        "ar": "خليط من وحدات الأسبوع"
+        "de": "Das Ende der Woche: Montag, der zwanzigste April — der Kurs ist zu Ende, Lena und Yusuf wiederholen Woche eins und zwei. Und jetzt du: Wer bist du?",
+        "ar": "أسبوع المراجعة: مساء الاثنين 20 أبريل — الدورة انتهت، ولينا تعيد على يوسف أسئلة الأسبوع الأول الستة ومصائد الأسبوع الثاني — ثم أنت: عرّف بنفسك"
       },
       "successCriteria": [
-        "جملة تعريف + جملة اتجاه + تصحيح خطأ wohin/wo"
+        "يقول خمس جمل عن نفسه بـbin وkomme aus وwohne in وspreche بلا خطأ في sein",
+        "يتهجّى اسمه ويقول رقم هاتفه ببطء رقماً رقماً",
+        "يسأل زميله Wer bist du? Woher kommst du? Wo wohnst du? ويفرّق Woher عن Wo"
       ]
     }
   },
@@ -132,20 +366,59 @@
       {
         "items": [
           {
-            "q": "«مرحباً» و«إلى اللقاء»؟",
-            "a": "hallo / tschüss"
+            "q": "Wir ___ eine Gruppe.",
+            "a": "sind",
+            "choices": [
+              "sind",
+              "seid",
+              "bist"
+            ],
+            "why": "sein مع wir: sind."
           },
           {
-            "q": "«الأسرة» و«الجدة»؟",
-            "a": "familie / grossmutter"
+            "q": "___ kommt Nabil? — Aus Tunesien.",
+            "a": "Woher",
+            "choices": [
+              "Woher",
+              "Wo",
+              "Wer"
+            ],
+            "why": "الجواب بـaus ⇐ السؤال Woher."
           },
           {
-            "q": "«البيت يميناً»؟",
-            "a": "Das Haus ist rechts."
+            "q": "Das ist ___ Haus.",
+            "a": "ein",
+            "choices": [
+              "ein",
+              "eine",
+              "einen"
+            ],
+            "why": "das Haus محايد ⇐ ein."
           },
           {
-            "q": "«اسمي…»؟",
-            "a": "Ich heiße …"
+            "q": "Ich ___ in Berlin. (wohnen)",
+            "a": "wohne",
+            "choices": [
+              "wohne",
+              "wohnst",
+              "wohnt"
+            ],
+            "why": "مع ich النهاية ‑e."
+          },
+          {
+            "q": "Yusuf ___ Arabisch, Französisch und Deutsch. (sprechen)",
+            "a": "spricht",
+            "choices": [
+              "spricht",
+              "sprecht",
+              "spreche"
+            ],
+            "why": "sprechen مع er: spricht (e ⇐ i)."
+          },
+          {
+            "q": "الترتيب: aus / Ich / Tunesien. / komme",
+            "a": "Ich komme aus Tunesien.",
+            "why": "الفاعل ثم الفعل ثانياً ثم aus + البلد."
           }
         ],
         "passingScore": 0.75
@@ -153,20 +426,59 @@
       {
         "items": [
           {
-            "q": "«شمال/جنوب/شرق/غرب»؟",
-            "a": "Norden / Süden / Osten / Westen"
+            "q": "Du ___ Schülerin. (sein)",
+            "a": "bist",
+            "choices": [
+              "bist",
+              "bin",
+              "ist"
+            ],
+            "why": "sein مع du: bist."
           },
           {
-            "q": "«أين؟» و«إلى أين؟»؟",
-            "a": "wo? / wohin?"
+            "q": "___ wohnst du? — In Berlin.",
+            "a": "Wo",
+            "choices": [
+              "Wo",
+              "Woher",
+              "Wer"
+            ],
+            "why": "الجواب بـin ⇐ السؤال Wo."
           },
           {
-            "q": "«زميل»؟",
-            "a": "der Kollege"
+            "q": "Berlin ist ___ Stadt.",
+            "a": "eine",
+            "choices": [
+              "eine",
+              "ein",
+              "einen"
+            ],
+            "why": "die Stadt مؤنث ⇐ eine."
           },
           {
-            "q": "«أنا من تونس»؟",
-            "a": "Ich komme aus Tunesien."
+            "q": "der Schmetterling, ___ Freundschaft",
+            "a": "die",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "why": "النهاية ‑schaft ⇐ die."
+          },
+          {
+            "q": "Deutsch ist eine ___ für mich. (لغة أجنبية)",
+            "a": "Fremdsprache",
+            "choices": [
+              "Fremdsprache",
+              "Muttersprache",
+              "Sprache"
+            ],
+            "why": "Fremdsprache = لغة أجنبية · Muttersprache = اللغة الأم."
+          },
+          {
+            "q": "«ما اسمك؟» (بصيغة du) — بالألمانية؟",
+            "a": "Wie heißt du?",
+            "why": "heißen مع du: heißt (الجذع ينتهي بـß فلا تُضاف s)."
           }
         ],
         "passingScore": 0.75
@@ -174,20 +486,59 @@
       {
         "items": [
           {
-            "q": "«الاتجاهات الأربعة»؟",
-            "a": "rechts, links, geradeaus, zurück"
+            "q": "___ bist du? — Ich bin Yusuf.",
+            "a": "Wer",
+            "choices": [
+              "Wer",
+              "Wo",
+              "Woher"
+            ],
+            "why": "السؤال عن الشخص: Wer."
           },
           {
-            "q": "«هذا/هذه؟»؟",
-            "a": "Das ist … / Das sind …"
+            "q": "Ich komme ___ der Türkei.",
+            "a": "aus",
+            "choices": [
+              "aus",
+              "in",
+              "von"
+            ],
+            "why": "الأصل بـaus — ومع البلاد ذات الأداة aus der."
           },
           {
-            "q": "«التحية الرسمية»؟",
-            "a": "Guten Tag / Grüß Gott"
+            "q": "___ Mädchen heißt Lena.",
+            "a": "Das",
+            "choices": [
+              "Das",
+              "Die",
+              "Der"
+            ],
+            "why": "‑chen ⇐ das حتى للبنت."
           },
           {
-            "q": "«أنا لا أشرب القهوة»؟",
-            "a": "Ich trinke keinen Kaffee."
+            "q": "Wie ___ ist Nabil? — Sechzehn.",
+            "a": "alt",
+            "choices": [
+              "alt",
+              "neu",
+              "viel"
+            ],
+            "why": "Wie alt = كم العمر."
+          },
+          {
+            "q": "Buchstabieren Sie ___! — L, E, N, A.",
+            "a": "bitte",
+            "choices": [
+              "bitte",
+              "danke",
+              "genau"
+            ],
+            "why": "الطلب المهذّب بـbitte (u1-d3)."
+          },
+          {
+            "q": "«أين تسكن؟» — بالألمانية؟",
+            "a": "Wo wohnst du?",
+            "why": "أين = Wo، وwohnst مع du بـ‑st."
           }
         ],
         "passingScore": 0.75
@@ -196,53 +547,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einheiten 1–2: heißen, kommen aus, die Wegbeschreibung (rechts/links/geradeaus), wohin vs wo. Die Basis sitzt!",
-      "ar": "الوحدتان 1–2: الاسم والجنسية والاتجاهات وwo↔wohin — الأساس متين!"
+      "de": "Woche eins und zwei noch einmal: Heute ist Montag, der zwanzigste April. Ich heiße Yusuf Haddad, ich bin Student und neunzehn Jahre alt. Ich komme aus Tunesien, aber ich wohne in Berlin. Tunesien ist ein Land, Berlin ist eine Stadt. Die Zeitung, das Mädchen, der Schmetterling, die Freundschaft. Arabisch ist meine Muttersprache — und Lena ist jetzt siebzehn.",
+      "ar": "اليوم الأول من أسبوع المراجعة اكتمل: تعرّف بنفسك بـsein وkommen aus وwohnen in، وتتهجّى وتقول رقم هاتفك، وتفرّق Wer/Woher/Wo، وتختار ein/eine وder/die/das من رمز الكلمة."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich heiße von Yusuf~~ / ~~Das Haus ist die rechte Seite~~",
-          "ar": "أخطاء التحية والاتجاه"
+          "de": "~~Ich bist Student.~~ · ~~Du ist Schülerin.~~ · ~~Wir ist eine Gruppe.~~",
+          "ar": "تصريف sein"
         },
-        "whyArabicSpeakerFails": "«اسمي» فعل heißen بالألمانية (لا «لدي اسم») · والاتجاه خبر بحرف جر لا مضاف — بداية الخطة تعود (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الجملة الاسمية العربية بلا فعل («أنا طالب»)، فيحفظ المتعلم sein شكلاً واحداً ويعمّمه — والألمانية تغيّره مع كل فاعل: bin · bist · ist · sind — وهو أول ما يُسمع في الامتحان الشفوي (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich heiße Yusuf. · Das Haus ist rechts.",
-          "ar": "اسمي يوسف. · البيت يميناً."
+          "de": "Ich bin Student. · Du bist Schülerin. · Wir sind eine Gruppe.",
+          "ar": "أنا طالب · أنتِ تلميذة · نحن مجموعة"
         },
         "exercise": {
-          "q": "حوّل: اسمي أحمد → …",
-          "a": "Ich heiße Ahmad."
+          "q": "أكمل: Nabil ___ Schüler, und wir ___ Freunde.",
+          "a": "ist / sind"
         }
       },
       {
         "commonError": {
-          "de": "~~wo?~~ (للحركة) / ~~wohin?~~ (للمكان)",
-          "ar": "الفرق القاتل: wohin للحركة (إلى أين) · wo للمكان (أين)"
+          "de": "~~Woher wohnst du?~~ · ~~Ich komme von Tunesien.~~ · ~~Ich wohne aus Berlin.~~",
+          "ar": "Woher/aus مقابل Wo/in"
         },
-        "whyArabicSpeakerFails": "العربية «أين» واحدة للحالتين؛ الألماني يفرّق منذ الدرس الأول — مصيدة الاتجاه الأصلية (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«من» العربية واحدة للأصل والمصدر، فيخلط المتعلم von وaus ويضع Woher مع السكن — والألمانية تربط زوجين ثابتين: Woher … aus (الأصل) وWo … in (السكن) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Wo bist du? · Wohin gehst du?",
-          "ar": "أين أنت؟ · إلى أين تذهب؟"
+          "de": "Wo wohnst du? — In Berlin. · Woher kommst du? — Aus Tunesien.",
+          "ar": "أين تسكن؟ — في برلين · من أين أنت؟ — من تونس"
         },
         "exercise": {
-          "q": "أكمل: ___ bist du? (أين)",
-          "a": "wo"
+          "q": "أكمل: ___ kommt Lena? — ___ Deutschland. Und ___ wohnt sie? — ___ der Schweiz.",
+          "a": "Woher / Aus / wo / In"
         }
       },
       {
         "commonError": {
-          "de": "~~Das sind mein Kollege~~ / ~~Das ist meine Kollege~~",
-          "ar": "هذا/هذه + الجنس"
+          "de": "~~Berlin ist ein Stadt.~~ · ~~das Zeitung~~ · ~~die Mädchen~~",
+          "ar": "ein/eine ورموز الجنس"
         },
-        "whyArabicSpeakerFails": "مطابقة ist مع المضاف إليه: mein Kollege (der) · meine Kollegin (die) — التذكير بالوحدة 2 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية بلا أداة نكرة وجنسها من المعنى، فيخمّن المتعلم ein/eine وder/die/das كيفما اتفق — والألمانية تعطي رموزاً في آخر الكلمة: ‑ung/‑schaft/‑heit ⇐ die، ‑chen ⇐ das (حتى للبنت)، ‑ling ⇐ der — وein للمذكر والمحايد وeine للمؤنث (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Das ist mein Kollege. · Das ist meine Kollegin.",
-          "ar": "هذا زميلي. · هذه زميلتي."
+          "de": "Berlin ist eine Stadt. · die Zeitung · das Mädchen · der Schmetterling",
+          "ar": "برلين مدينة · الجريدة · الفتاة · الفراشة"
         },
         "exercise": {
-          "q": "أكمل: Das ist meine ___ (der Kollege)",
-          "a": "Kollegin"
+          "q": "أكمل: ___ Wohnung ist klein, und ___ Brötchen ist süß. (الأداة المعرفة)",
+          "a": "Die / das"
         }
       }
     ],
@@ -259,8 +610,12 @@
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-satzklammer",
-    "ars-perfekt"
+    "ars-sein",
+    "ars-wer-woher",
+    "ars-alphabet-spelling",
+    "ars-wo-woher",
+    "ars-ein-eine",
+    "ars-genuscode"
   ],
   "audioManifestRefs": [
     "word-hallo",
@@ -268,7 +623,7 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung)",
+    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung) — اليوم 1: الأسبوعان 1–2 — الاثنين 20 أبريل",
     "goetheWordListOverlap": []
   }
 }

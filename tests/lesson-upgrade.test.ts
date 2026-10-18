@@ -2516,7 +2516,7 @@ describe("D115 — أدوات القياس", () => {
     expect(rules.has("ars-praeteritum")).toBe(false);
     expect(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-praeteritum"))).toEqual([]);
     const pf = rules.get("ars-perfekt")!;
-    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6", "a2-u1-d1"]);
+    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6", "a2-u1-d1"]); // D201: u15-d1/d2 يراجعان قواعد الأسابيع 1–4 لا الماضي
     expect(pf.usedInLessons).toEqual(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-perfekt")).map((x) => x.id).sort((a, b) => a.localeCompare(b, "en", { numeric: true })));
     for (const x of ["Ich bin heute zu Hause geblieben.", "Ich bin nach Hause gefahren.", "Das Fieber ist verschwunden.", "Ich bin um sieben aufgestanden.", "Ich habe im Bett gelegen.", "Ich habe gehustet und geniest.", "Mein Hals hat gebrannt.", "Die Erkältung hat eine Woche gedauert.", "Wie war dein Tag?", "Warst du auch krank?", "Wir waren eine Woche zu Hause.", "Ich hatte Fieber.", "Hattest du auch Schwindel?", "Wir hatten keine Zeit.", "Jetzt geht es besser.", "Meine Nase juckt."])
       expect(pf.payload.ruleDe).toContain(x);
@@ -3085,7 +3085,7 @@ describe("D115 — أدوات القياس", () => {
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-satzklammer", "ars-tekamolo"]);
     const sk = rules.get("ars-satzklammer")!;
     const tk = rules.get("ars-tekamolo")!;
-    expect(sk.usedInLessons).toEqual(["a1-u9-d5", "a1-u9-d6", "a1-u11-d4", "a1-u12-d4", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6"]);
+    expect(sk.usedInLessons).toEqual(["a1-u9-d5", "a1-u9-d6", "a1-u11-d4", "a1-u12-d4", "a1-u12-d6", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6"]); // D201
     expect(tk.usedInLessons).toEqual(["a1-u9-d5", "a1-u9-d6"]);
     expect(sk.payload.ruleDe).toBe("Ich fahre heute in die Stadt. · Heute fahre ich in die Stadt. · Bei uns ist der Zug immer pünktlich. — Ich steige am Bahnhof aus. · Der Bus kommt um neun an. · Bald fahren wir weiter. · Der Bus fährt heute nicht weiter. — Ich muss am Hauptbahnhof umsteigen. · Du kannst hier aussteigen. · Ich muss nicht umsteigen. — Hält der Bus im Zentrum? · Kommt der Bus pünktlich an? · Wann kommt der Bus an? · Wohin fährst du? — ich halte · du hältst · er hält · wir halten — Heute ist Stau. · Das ist der Grund. · Die Polizei steht an der Kreuzung. · An dieser Stelle hält der Bus nicht. · Die Haltestelle ist auf der anderen Seite. · Die Verbindung ist gut. · Im Fahrplan steht: um neun Uhr.");
     expect(tk.payload.ruleDe).toBe("Ich fahre heute mit dem Bus in die Stadt. · Ich fahre jeden Tag um sieben mit dem Zug zur Schule. · Ich fahre heute Abend um sechs mit dem Bus zurück. — Heute fahre ich mit dem Bus in die Stadt. · Morgen gehe ich um zehn mit meiner Schwester zu Fuß ans Ufer. · Um neun kommt der Bus am Bahnhof an. — Ich muss heute mit dem Bus in die Stadt fahren. · Mein Vater fährt am Morgen mit dem Auto zur Arbeit. · Wir gehen am Abend zu Fuß ans Ufer. — Wann? Wie? Wohin?");
@@ -5150,7 +5150,7 @@ describe("D115 — الخطة الحقيقية", () => {
     expect(content).toHaveLength(60);
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
-    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6"].sort());
+    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2"].sort());
   });
   it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
@@ -5183,7 +5183,7 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     for (const rid of l.praesentation.grammarArsenalIds) expect(rules.get(rid)!.usedInLessons, rid).toContain(id);
     expect(l.usedArsenalIds).toEqual(l.praesentation.grammarArsenalIds);
     // حوار 20 سطراً كله مستعمل في الاستماع/الإملاء أو القصة — وجملة القصة من أول سطر
-    expect(l.praesentation.storySentenceIds).toEqual([`story-${id.replace(/-d6$/, "-s6")}`]);
+    expect(l.praesentation.storySentenceIds).toEqual([`story-${id.replace(/-d(\d)$/, "-s$1")}`]); // D201: يشمل u15-dN
     return { l, r };
   };
   it("a1-u1-d6 «Die Woche ist zu Ende!» — ars-sein + ars-wer-woher · 28 بنداً · wm-1..20 · يوسف 19 (Student) ولينا 16 (Schülerin)", () => {
@@ -5316,5 +5316,30 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     // مشتّتات Quiz كلمات حقيقية (N-103): الخطأ المقصود الوحيد gefotografiert معلن ومشطوب (auspackt صيغة حقيقية فلا تُعلن)
     for (const fake of ["gelosfahren", "angekommt", "geankommen"]) expect(txt).not.toContain(fake);
     expect(plan.lessons.find((e) => e.lessonId === "a1-u12-d6")!.misspellings?.map((m) => m.wrong)).toEqual(["gefotografiert"]);
+  });
+  it("a1-u15-d1 «Woche eins und zwei» — أسبوع المراجعة اليوم 1 (الاثنين 20 أبريل) · ستّ قواعد الأسبوعين 1–2 لا الماضي · 30 بنداً · wh-1..20 · D201", () => {
+    const { l } = check("a1-u15-d1", 6);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-sein", "ars-wer-woher", "ars-alphabet-spelling", "ars-wo-woher", "ars-ein-eine", "ars-genuscode"]);
+    for (const old of ["ars-satzklammer", "ars-perfekt"]) expect(rules.get(old)!.usedInLessons).not.toContain("a1-u15-d1");
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^wh-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["der zwanzigste April", "Yusuf Haddad", "H, A, D, D, A, D", "Woher kommst du", "wo wohnst du", "ein Land", "eine Stadt", "das Mädchen", "der Schmetterling", "Muttersprache", "siebzehn", "Hallo", "Danke"]) expect(txt, f).toContain(f);
+    expect(l.praesentation.wordIds).toEqual(["hallo", "danke"]);
+  });
+  it("a1-u15-d2 «Woche drei und vier» — أسبوع المراجعة اليوم 2 (الثلاثاء 21 أبريل) · ستّ قواعد الأسبوعين 3–4 · كلمتا اليوم uhr/familie بدل bahn/apotheke · wz-1..20 · D201", () => {
+    const { l } = check("a1-u15-d2", 6);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-zahlen-100", "ars-preis-1000", "ars-uhrzeit", "ars-um-am-im", "ars-akkusativ-1", "ars-possessiv"]);
+    expect(l.praesentation.wordIds).toEqual(["uhr", "familie"]);
+    expect(l.audioManifestRefs).toEqual(["word-uhr", "word-familie"]);
+    for (const w of ["bahn", "apotheke", "broetchen"]) expect(words.find((x) => x.id === w)!.usedInLessons).not.toContain("a1-u15-d2");
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^wz-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["der einundzwanzigste April", "zweiunddreißig", "zweihundertneunundsiebzig", "sieben Uhr dreißig", "Viertel vor acht", "am Montag um halb fünf", "im April", "einen Bruder", "ich sehe ihn", "ihr Mann", "sein Hund", "Zwillinge"]) expect(txt, f).toContain(f);
+    // مشتّتات Quiz كلمات حقيقية (N-103): لا dreißigundsieben / einhundertzwanzigeins
+    for (const fake of ["dreißigundsieben", "einhundertzwanzigeins", "achtundzig"]) expect(txt).not.toContain(fake);
   });
 });

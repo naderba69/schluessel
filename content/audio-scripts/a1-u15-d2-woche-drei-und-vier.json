@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u15-d2-woche-drei-und-vier",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Woche drei und vier — Dienstag, der einundzwanzigste April",
+    "ar": "أسبوع المراجعة، اليوم الثاني — الثلاثاء 21 أبريل: الأعداد (32 لا 23 · 279 يورو) · الوقت (halb acht = 7:30 · Viertel nach/vor) · um/am/im · العائلة (الأخت المتزوجة · التوأمان · Bruno كلب العم · Mia) · Akkusativ (den Hund · ihn · einen) · mein/dein/sein/ihr · وصف الجدة"
+  },
+  "usedIn": [
+    "a1-u15-d2"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "wz-1",
+      "speaker": "lena",
+      "text": "Hallo, Yusuf! Heute ist Dienstag, der einundzwanzigste April. Woche drei und vier: Zahlen, Zeit und Familie!",
+      "direction": "لينا تفتح — الثلاثاء 21 أبريل · موضوع اليوم"
+    },
+    {
+      "id": "wz-2",
+      "speaker": "yusuf",
+      "text": "Hallo, Lena! Zahlen sind leicht. Frage eins?",
+      "direction": "يوسف — الأعداد سهلة (u3)"
+    },
+    {
+      "id": "wz-3",
+      "speaker": "lena",
+      "text": "Frage eins: Wie alt ist deine Oma, und wie viele Leute kommen zum Essen?",
+      "direction": "لينا — السؤال الأول: Oma achtzig · zweiunddreißig Leute (u3-d1)"
+    },
+    {
+      "id": "wz-4",
+      "speaker": "yusuf",
+      "text": "Meine Oma ist achtzig. Und zweiunddreißig Leute kommen — nicht dreiundzwanzig!",
+      "direction": "يوسف — 32 لا 23 (u3-d1 / u3-d6)"
+    },
+    {
+      "id": "wz-5",
+      "speaker": "lena",
+      "text": "Genau: zwei und dreißig. Frage zwei: Was hat dein Handy gekostet?",
+      "direction": "لينا — السؤال الثاني: سعر الهاتف (u3-d2) بالماضي"
+    },
+    {
+      "id": "wz-6",
+      "speaker": "yusuf",
+      "text": "Es hat zweihundertneunundsiebzig Euro gekostet. Ich habe mit Karte bezahlt — das war leicht.",
+      "direction": "يوسف — 279 يورو · mit Karte (u3-d2) · gekostet/bezahlt"
+    },
+    {
+      "id": "wz-7",
+      "speaker": "lena",
+      "text": "Billig! Frage drei — die Zeit: Sieben Uhr dreißig — wie heißt das?",
+      "direction": "لينا — السؤال الثالث: الوقت (u3-d3)"
+    },
+    {
+      "id": "wz-8",
+      "speaker": "yusuf",
+      "text": "Halb acht! Halb acht ist sieben Uhr dreißig — nicht acht Uhr dreißig.",
+      "direction": "يوسف — halb acht = 7:30 لا 8:30 (u3-d3 / u3-d6)"
+    },
+    {
+      "id": "wz-9",
+      "speaker": "lena",
+      "text": "Genau! Und Viertel nach sieben? Viertel vor acht?",
+      "direction": "لينا — Viertel nach / Viertel vor (u3-d3)"
+    },
+    {
+      "id": "wz-10",
+      "speaker": "yusuf",
+      "text": "Sieben Uhr fünfzehn und sieben Uhr fünfundvierzig. Um, am oder im — Frage vier?",
+      "direction": "يوسف — 7:15 و7:45 · um/am/im (u3-d4)"
+    },
+    {
+      "id": "wz-11",
+      "speaker": "lena",
+      "text": "Ja! Wann war der Termin, und wann regnet es oft in Berlin?",
+      "direction": "لينا — السؤال الرابع: الموعد والمطر (u3-d4)"
+    },
+    {
+      "id": "wz-12",
+      "speaker": "yusuf",
+      "text": "Der Termin war am Montag um halb fünf. Und im April regnet es oft — am Montag, um halb fünf, im April.",
+      "direction": "يوسف — am Montag um halb fünf · im April regnet es (u3-d4 / u3-d6)"
+    },
+    {
+      "id": "wz-13",
+      "speaker": "lena",
+      "text": "Sehr gut! Jetzt Woche vier: Hast du Geschwister?",
+      "direction": "لينا — الأسبوع الرابع: Geschwister (u4-d5)"
+    },
+    {
+      "id": "wz-14",
+      "speaker": "yusuf",
+      "text": "Ja, ich habe eine Schwester. Sie studiert noch, und ihr Mann ist Lehrer. Und du hast zwei Brüder — Zwillinge!",
+      "direction": "يوسف — eine Schwester studiert · ihr Mann ist Lehrer (u4-d5) · Zwillinge (u4-d5)"
+    },
+    {
+      "id": "wz-15",
+      "speaker": "lena",
+      "text": "Genau, beide sind zehn. Frage fünf: Siehst du den Hund auf meinem Foto? Ist das Bruno?",
+      "direction": "لينا — beide sind zehn (u4-d6) · السؤال الخامس: den Hund (u4-d4)"
+    },
+    {
+      "id": "wz-16",
+      "speaker": "yusuf",
+      "text": "Ja, ich sehe ihn. Aber nein — Bruno ist sein Hund, der Hund von deinem Onkel. Das hier ist dein Hund: alt, aber lustig!",
+      "direction": "يوسف — ich sehe ihn (u4-d4) · Bruno = sein Hund، كلب العم (u4-d2) · كلب لينا alt aber lustig (u4-d6)"
+    },
+    {
+      "id": "wz-17",
+      "speaker": "lena",
+      "text": "Genau! Und meine Katze Mia — wen liebt sie?",
+      "direction": "لينا — Mia (u4-d2) · wen (u4-d3)"
+    },
+    {
+      "id": "wz-18",
+      "speaker": "yusuf",
+      "text": "Mia liebt deine Tasche! Einen Hund, eine Katze, ein Auto — den Hund sehe ich, die Katze liebe ich.",
+      "direction": "يوسف — Mia liebt deine Tasche (u4-d2) · Akkusativ einen/eine/ein · den/die"
+    },
+    {
+      "id": "wz-19",
+      "speaker": "lena",
+      "text": "Mein, dein, sein, ihr — alles richtig! Frage sechs: Wen beschreibe ich? Sie ist alt, aber sehr schlau, und die Haare sind kurz.",
+      "direction": "لينا — الملكية (u4-d2/d5) · السؤال السادس: وصف الجدة (u4-d3)"
+    },
+    {
+      "id": "wz-20",
+      "speaker": "yusuf",
+      "text": "Meine Oma! Ich liebe meine Oma. Woche drei und vier sind fertig — morgen Woche fünf und sechs. Tschüss, Lena!",
+      "direction": "يوسف يختم — meine Oma (u4-d3) · الغد: الأسبوعان 5 و6"
+    }
+  ]
+}

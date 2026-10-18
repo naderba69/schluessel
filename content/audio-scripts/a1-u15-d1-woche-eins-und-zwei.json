@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u15-d1-woche-eins-und-zwei",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Woche eins und zwei — Montag, der zwanzigste April",
+    "ar": "أسبوع المراجعة، اليوم الأول — الاثنين 20 أبريل، بعد نهاية الدورة: لينا تعيد على يوسف أسئلة الأسبوع الأول الستة (u1-d6) ومصائد الأسبوع الثاني — heißen/sein · woher/wo · aus/in · التهجئة · رقم الهاتف · ein/eine · der/die/das · اللغات · Nabil — ولينا صارت 17"
+  },
+  "usedIn": [
+    "a1-u15-d1"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "wh-1",
+      "speaker": "lena",
+      "text": "Hallo, Yusuf! Der Kurs ist zu Ende — und jetzt wiederholen wir alles. Heute ist Montag, der zwanzigste April.",
+      "direction": "لينا تفتح أسبوع المراجعة — الاثنين 20 أبريل (الدورة انتهت الجمعة 17 — u10-d2)"
+    },
+    {
+      "id": "wh-2",
+      "speaker": "yusuf",
+      "text": "Hallo, Lena! Woche eins und zwei — das war im Januar!",
+      "direction": "يوسف — الأسبوعان الأولان كانا في يناير"
+    },
+    {
+      "id": "wh-3",
+      "speaker": "lena",
+      "text": "Genau! Die Fragen von Woche eins — noch einmal. Frage eins: Wer bist du?",
+      "direction": "لينا — أسئلة u1-d6 من جديد · Wer bist du?"
+    },
+    {
+      "id": "wh-4",
+      "speaker": "yusuf",
+      "text": "Ich heiße Yusuf Haddad. Ich bin Student, ich bin neunzehn Jahre alt, und ich bin nicht mehr neu!",
+      "direction": "يوسف — heißen · sein · neunzehn (u1-d6) · لم يعد جديداً"
+    },
+    {
+      "id": "wh-5",
+      "speaker": "lena",
+      "text": "Sehr gut! Bin, bist, ist, sind. Frage zwei: Woher kommst du, und wo wohnst du?",
+      "direction": "لينا — تصريف sein (u1-d1) · Woher/Wo (u2-d1)"
+    },
+    {
+      "id": "wh-6",
+      "speaker": "yusuf",
+      "text": "Ich komme aus Tunesien, aber ich wohne in Berlin. Tunesien ist ein Land, Berlin ist eine Stadt.",
+      "direction": "يوسف — aus/in · ein Land / eine Stadt (u2-d6)"
+    },
+    {
+      "id": "wh-7",
+      "speaker": "lena",
+      "text": "Aus Tunesien — und aus der Türkei, aus der Schweiz! Frage drei: Buchstabieren Sie bitte, Herr Haddad!",
+      "direction": "لينا — aus der Türkei / aus der Schweiz (u1-d2) · Buchstabieren Sie (u1-d3)"
+    },
+    {
+      "id": "wh-8",
+      "speaker": "yusuf",
+      "text": "H, A, D, D, A, D. Und Lena: L, E, N, A — nicht I!",
+      "direction": "يوسف — تهجئة Haddad وLena كما في u1-d3 (E لا I)"
+    },
+    {
+      "id": "wh-9",
+      "speaker": "lena",
+      "text": "Genau wie am Telefon im Januar! Frage vier: Wie ist deine Telefonnummer?",
+      "direction": "لينا — السؤال الرابع: رقم الهاتف (u1-d6)"
+    },
+    {
+      "id": "wh-10",
+      "speaker": "yusuf",
+      "text": "Null, eins, sieben, drei, neun, acht, zwei. Langsam — alles klar?",
+      "direction": "يوسف — الرقم نفسه من u1-d6 · langsam · alles klar"
+    },
+    {
+      "id": "wh-11",
+      "speaker": "lena",
+      "text": "Alles klar! Frage fünf: ein oder eine? Haus, Wohnung, Stadt, Ort.",
+      "direction": "لينا — ein/eine (u2-d2)"
+    },
+    {
+      "id": "wh-12",
+      "speaker": "yusuf",
+      "text": "Ein Haus, eine Wohnung, eine Stadt, ein Ort. Du wohnst in einem Haus in der Schweiz, ich in einer Wohnung in Berlin.",
+      "direction": "يوسف — ein Haus · eine Wohnung · eine Stadt · ein Ort (u2-d2) · in einem/einer"
+    },
+    {
+      "id": "wh-13",
+      "speaker": "lena",
+      "text": "Genau! Und der, die oder das? Zeitung, Mädchen, Schmetterling, Freundschaft.",
+      "direction": "لينا — رموز الجنس (u2-d3)"
+    },
+    {
+      "id": "wh-14",
+      "speaker": "yusuf",
+      "text": "Die Zeitung, das Mädchen, der Schmetterling — und die Freundschaft. Du und ich!",
+      "direction": "يوسف — die Zeitung · das Mädchen · der Schmetterling · die Freundschaft (u2-d3)"
+    },
+    {
+      "id": "wh-15",
+      "speaker": "lena",
+      "text": "Frage sechs: Deine Sprachen — wie viele?",
+      "direction": "لينا — اللغات (u1-d2 / u2-d2)"
+    },
+    {
+      "id": "wh-16",
+      "speaker": "yusuf",
+      "text": "Vier: Arabisch, Französisch, Englisch — und jetzt gut Deutsch! Arabisch ist meine Muttersprache, Deutsch ist eine Fremdsprache.",
+      "direction": "يوسف — أربع لغات · Muttersprache/Fremdsprache (u2-d2) · لم يعد «ein bisschen»"
+    },
+    {
+      "id": "wh-17",
+      "speaker": "lena",
+      "text": "Nicht mehr «ein bisschen Deutsch»! Und Nabil? Wer ist Nabil?",
+      "direction": "لينا — Wer ist Nabil? (u1-d5)"
+    },
+    {
+      "id": "wh-18",
+      "speaker": "yusuf",
+      "text": "Nabil ist ein Freund aus Tunesien. Er ist Schüler, und er ist sechzehn — wie du im Januar!",
+      "direction": "يوسف — Nabil: Freund · Schüler · sechzehn (u1-d6)"
+    },
+    {
+      "id": "wh-19",
+      "speaker": "lena",
+      "text": "Ja, und jetzt bin ich siebzehn! Sechs Fragen, sechs Antworten — wie in Woche eins. Super, Yusuf.",
+      "direction": "لينا — صارت 17 (عيد ميلادها 18 أبريل — u3-d4/u10) · ختام الأسئلة الستة"
+    },
+    {
+      "id": "wh-20",
+      "speaker": "yusuf",
+      "text": "Danke, Lena! Morgen Woche drei und vier: Zahlen, Zeit und Familie. Tschüss — bis morgen!",
+      "direction": "يوسف يختم — الغد: الأسبوعان 3 و4"
+    }
+  ]
+}
