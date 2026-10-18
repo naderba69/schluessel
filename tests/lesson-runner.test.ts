@@ -33,7 +33,7 @@ describe("مُشغِّل الدرس — الدرس الحقيقي a1-u1-d1", () 
     const plan = planLessonStations(firstLesson, firstLessonWords);
     expect(plan.close.warningCards.length).toBe(3);
     expect(plan.close.srsBundleWordIds.length).toBe(17);
-    expect(plan.practice.communicativeTask.goal.de).toBe("Sich vorstellen");
+    expect(plan.practice.communicativeTask.goal.de).toBe("Hallo! Ich heiße … Ich komme aus …"); // D185 (N-022): meta بالمدروس
   });
 
   it("كلمة مفقودة = خطأ فوري (لا شاشات ناقصة أبداً)", () => {

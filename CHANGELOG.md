@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-18 — الدفعة 140: D185 — صيانة (د) 2/7: N-103 + N-112 + N-022 مغلقات · N-120 جديدة
+- **الحارس:** الجذع المشتق القصير من الفعل وحده وبنهاية فعل (`stemKnown`) · صيغ الدروس اللاحقة تُرفض (`withLaterForms`/`laterWordLeak`) · tun ⇒ tue/tust · hattest/hattet/warst/wart مغلقة · `IMPLICIT_FORMS` (gut · jeder) · `e-upgrade-meta` للهدف/المهمة/الخلاصة.
+- **محتوى:** meta 11 درساً (u1-d1..u3-d3) بالمدروس · u8-d2 fragt ⇒ kennt · u8-d4 fh-17 «Meine Oma wohnt dort.» (أُعيد توليده) · u6-d3 تلميح (jed-) · u11-d1 +tust/tue (71) · ars-perfekt «Hattest du auch Schwindel?».
+- **اختبارات:** `tests/front-guard.test.ts` (10) · كتل u8-d2/u11-d1/u11-d3/u12-d6 · content-units · lesson-runner · 733/733.
+- **وثائق:** الموجّه 3.42 · N-103/N-112/N-022 مغلقات ← D185 · +N-120 (gut بلا بطاقة) · التقرير أُعيد توليده.
+
 ## 2026-10-18 — الدفعة 139: D184 — صيانة (د) 1/7: N-102 + N-110 مغلقتان · حارس السرعة في المدقّق
 - **أدوات:** `interleaveSupported` مشتركة (رمز كامل · صيغ مسجَّلة · جذع + نهاية مغلقة · المنفصل بجزئه · deumlaut · ‑nen/‑innen · speakText) · `e-upgrade-interleave` في checkUpgrade · `w-audio-speech-rate` (>200 · ≥3 كلمات) في validate-content.
 - **اختبارات:** `tests/interleave.test.ts` جديد (78 درساً + ضوابط) · حلقات الكتل الـ35 في lesson-upgrade.test.ts على الدالة نفسها (−26 سطراً) · 723/723.

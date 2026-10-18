@@ -39,7 +39,7 @@ import {
   type Word,
 } from "../../content/schemas/index.js";
 import {
-  CLOSED, contentTokens, deumlaut, knownForms, knownStems, stem, stripGraphemeNotation, stripMorphemeNotation, unknownTokens,
+  CLOSED, contentTokens, deumlaut, knownForms, knownStems, stem, stripGraphemeNotation, stripMorphemeNotation, unknownTokens, withLaterForms,
 } from "./vocab-forms.js";
 
 export const PRACTICE_ITEMS_MIN = 12;
@@ -330,6 +330,8 @@ function checkQuizPart(lesson: Lesson, stems: ReadonlySet<string>, allow: Readon
 
 export type LessonPartsReport = Record<UpgradePart, UpgradeIssue[]> & {
   coverage: UpgradeIssue[]; practiceItems: number; practiceTypes: string[]; quizMin: number;
+  /** N-022 (D185): الهدف/المهمة/الخلاصة تحت قانون الجبهة (تُحتسب حين يكون التدريب done) */
+  meta: UpgradeIssue[];
   /** D128: صلاحية الأخطاء المقصودة المعلنة (تُحتسب حين يكون التدريب أو Quiz done) */
   misspellings: UpgradeIssue[];
   /** نصوص كل جزء (لفحص استعمال أسماء العلم المعلنة) */
@@ -366,16 +368,28 @@ function checkMisspellings(
 }
 
 /** كل فحوص الدرس كأن أجزاءه كلها done — أساس الحارس وأداة الحالة (ما الذي ينقص بالضبط) */
+/** النصوص الوصفية الألمانية للدرس: هدف الدرس · هدف المهمة التواصلية وموقفها · خلاصة اليوم */
+export const metaOf = (l: Lesson): string[] =>
+  [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+
 export function inspectLesson(
   lesson: Lesson, entry: Pick<LessonUpgradeEntry, "properNouns"> & Partial<Pick<LessonUpgradeEntry, "misspellings">>, ctx: UpgradeContext,
 ): LessonPartsReport {
-  const stems = knownStems(taughtUpTo(lesson, ctx.lessons, ctx.words));
+  const taught = taughtUpTo(lesson, ctx.lessons, ctx.words);
+  // N-103 (D185): صيغ كلمات الدروس اللاحقة تُرفض ولو طابقت جذعاً (علامة «<» في المجموعة نفسها)
+  const stems = withLaterForms(knownStems(taught), taught, ctx.words);
   const allow = allowSet(entry.properNouns);
   const declared = entry.misspellings ?? [];
   const wrong = new Set(declared.map((m) => m.wrong.toLowerCase()));
   const rule = checkRulePart(lesson, ctx, stems, allow);
   const practice = checkPracticePart(lesson, ctx, stems, allow, wrong);
   const quiz = checkQuizPart(lesson, stems, allow, wrong);
+  // N-022 (D185): نصوص الدرس الوصفية (meta) — هدف الدرس · هدف المهمة وموقفها · الخلاصة — تحت قانون الجبهة أيضاً
+  const metaTexts = metaOf(lesson);
+  const metaUnknown = frontViolations(metaTexts, stems, allow, wrong);
+  const meta: UpgradeIssue[] = metaUnknown.length
+    ? [{ level: "error", code: "e-upgrade-meta", lessonId: lesson.id, message: `${lesson.id} (الهدف/المهمة/الخلاصة): غير مدروسة حتى الدرس: ${metaUnknown.join("، ")}` }]
+    : [];
   const tokens = tokenSet([...practice.texts, ...quiz.texts]);
   const byId = new Map(ctx.words.map((w) => [w.id, w]));
   const unpracticed = lesson.praesentation.wordIds.filter((id) => {
@@ -390,6 +404,7 @@ export function inspectLesson(
     practice: practice.issues,
     quiz: quiz.issues,
     coverage,
+    meta,
     misspellings: checkMisspellings(lesson, declared, ctx, stems, allow),
     practiceItems: lesson.uebung.stations.reduce((n, s) => n + s.items.length, 0),
     practiceTypes: [...new Set(lesson.uebung.stations.map((s) => s.type))],
@@ -442,6 +457,7 @@ export function checkUpgrade(plan: LessonUpgradePlan, ctx: UpgradeContext): Upgr
         issues.push({ level: "warning", code: "w-upgrade-mark-done", lessonId: s.lessonId, message: `${s.lessonId}: ${part} (pending) يستوفي معايير done — علِّمه done` });
     }
     if (s.practice === "done" && s.quiz === "done") issues.push(...r.coverage);
+    if (s.practice === "done") issues.push(...r.meta);
     // أسماء العلم المعلنة يجب أن تُستعمل فعلاً في نصوص الدرس المُرقّاة (أمثلة البطاقات · التدريب والمصائد · Quiz)
     if (s.rule === "done" || s.practice === "done" || s.quiz === "done") {
       const entry = plan.lessons.find((e) => e.lessonId === s.lessonId)!;

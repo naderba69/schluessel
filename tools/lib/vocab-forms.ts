@@ -8,7 +8,7 @@ import type { Word } from "../../content/schemas/index.js";
  * في درس الأعداد نفسه (a1-u1-d4)، وnull لا غنى عنها لرقم الهاتف. */
 export const CLOSED: ReadonlySet<string> = new Set(`der die das den dem des ein eine einen einem einer eines kein keine keinen keinem keiner
 ich du er sie es wir ihr mich dich ihn uns euch mir dir ihm ihnen sich man mein meine meinen meinem meiner dein deine deinen deinem
-sein seine seinen seinem ihre ihren ihrem unser unsere euer eure bin bist ist sind seid war waren habe hast hat haben habt hatte
+sein seine seinen seinem ihre ihren ihrem unser unsere euer eure bin bist ist sind seid war warst wart waren habe hast hat haben habt hatte hattest hattet hatten
 werde wirst wird werden kann kannst können könnt muss musst müssen will willst wollen möchte möchtest möchten darf darfst dürfen
 soll sollst sollen in im ins an am ans auf aus bei mit nach von vom zu zum zur für um ohne gegen durch bis seit über unter vor
 hinter neben zwischen beim und oder aber denn sondern weil dass wenn als ob nicht auch noch schon nur sehr ja nein doch mal so wie was
@@ -22,23 +22,100 @@ export const deumlaut = (s: string) => s.replace(/ä/g, "a").replace(/ö/g, "o")
  * D115: تُقطَّع بـcontentTokens نفسها التي تقطّع النص المفحوص — كان التقطيع على [\s/!.,] فقط فيُنتج
  * «geht's?» و«(sie)» و«koste(n» التي لا تطابق أي نص (11 مدخلاً: Wie geht's? · Stell (dich) vor! · …).
  */
+/**
+ * D185 (N-103): صيغ مُعلنة تُتعلَّم داخل بطاقة كلمة بلا بطاقة خاصة — قائمة مغلقة صغيرة لا تُوسَّع إلا بقرار:
+ * · gut: لا بطاقة لها في المقرر كله، وتُتعلَّم في a1-u1-d1 من مثال «Wie geht's? — Danke, gut.» (كانت تمرّ خطأً بجذع «gut» المشتق من Guten Tag).
+ * · jeder: تصريف أداة الكلّية (jede · jedes · jeden · jedem) — كان يمرّ بالجذع المشتق «jed» قبل حصر الجذوع القصيرة.
+ */
+export const IMPLICIT_FORMS: Readonly<Record<string, readonly string[]>> = {
+  "wie-gehts": ["gut"],
+  jeder: ["jede", "jedes", "jeden", "jedem"],
+};
 export function knownForms(w: Word): string[] {
   const base = w.de.replace(/^(der|die|das) /, "").replace(/^sich /, "").toLowerCase();
-  const parts = [base, w.plural?.replace(/^die /, ""), w.forms?.praesens3s, w.forms?.perfekt, w.forms?.praeteritum, w.forms?.imperative]
+  const parts = [base, w.plural?.replace(/^die /, ""), w.forms?.praesens3s, w.forms?.perfekt, w.forms?.praeteritum, w.forms?.imperative, ...(IMPLICIT_FORMS[w.id] ?? [])]
     .filter((x): x is string => !!x).flatMap((x) => contentTokens(x));
   return parts;
 }
 
+export const STEM_SUFFIXES = ["en", "st", "et", "te", "ten", "e", "t", "n", "s", "er", "es"] as const;
+/** نهايات تصريف الفعل وحدها (N-103 — الجذع القصير لا يقبل غيرها) */
+export const VERB_SUFFIXES: ReadonlySet<string> = new Set(["e", "st", "t", "en", "et", "te", "ten", "est"]);
 export function stem(t: string): string[] {
-  const out = [t];
-  for (const suf of ["en", "st", "et", "te", "ten", "e", "t", "n", "s", "er", "es"]) if (t.length > suf.length + 2 && t.endsWith(suf)) out.push(t.slice(0, -suf.length));
+  return stemmed(t).map((x) => x.base);
+}
+/** الجذوع المحتملة مع النهاية المقصوصة ("" للرمز نفسه) */
+export function stemmed(t: string, minBase = 3): { base: string; suffix: string }[] {
+  const out = [{ base: t, suffix: "" }];
+  for (const suf of STEM_SUFFIXES) if (t.length - suf.length >= minBase && t.endsWith(suf)) out.push({ base: t.slice(0, -suf.length), suffix: suf });
   return out;
 }
 
-/** كل جذوع الصيغ المعروفة لمجموعة كلمات */
+/** علامتا المجموعة: «=» صيغة مسجَّلة كاملة · «~» جذع مشتق من صيغة فعل (D185 — N-103) */
+export const FULL = "=";
+export const VERB = "~";
+/** علامة صيغة كلمة درسٍ لاحق (تُضاف بـwithLaterForms) */
+export const LATER = "<";
+/**
+ * كل جذوع الصيغ المعروفة لمجموعة كلمات.
+ * N-103 (D185 — بإذن المالك): الجذع المشتق القصير (≤3 أحرف) لا يدخل إلا من صيغة فعل وبقصّ نهاية فعل — كان «wei» يُشتق من
+ * Wein بقصّ n فيمرّ weit (كلمة درس لاحق)، و«bei» من Bein و«dan» من dann … (128 جذعاً قصيراً من أسماء وظروف).
+ * الصيغة الكاملة تُسجَّل كما هي (وبعلامة «=») مهما قصرت (Tag · gut · neu · Oma · ab) ويُقبل عليها أي نهاية (neues · guter · Tage).
+ * N-112: الفعل القصير المنتهي بـ‑n لا ‑en (tun) يعطي جذعه بقصّ n (tu ⇒ tue · tust · tut).
+ */
 export function knownStems(words: readonly Word[]): Set<string> {
   const out = new Set<string>();
-  for (const w of words) for (const f of knownForms(w)) for (const s of stem(deumlaut(f))) out.add(s);
+  for (const w of words) {
+    const verb = !!w.forms;
+    for (const f0 of knownForms(w)) {
+      const f = deumlaut(f0);
+      out.add(f);
+      out.add(FULL + f);
+      for (const { base, suffix } of stemmed(f)) {
+        if (base === f) continue;
+        if (verb && VERB_SUFFIXES.has(suffix)) { out.add(VERB + base); out.add(base); continue; }
+        if (base.length >= 4) out.add(base);
+      }
+      if (verb && /[^e]n$/u.test(f) && f.length <= 4) { const b = f.slice(0, -1); out.add(b); out.add(VERB + b); }
+    }
+  }
+  return out;
+}
+/** هل يُقبل الرمز على الصيغ المعروفة؟ (الكاملة · أو كاملة + نهاية · أو جذع ≥4 · أو جذع فعل قصير + نهاية فعل) */
+export function stemKnown(d: string, stems: ReadonlySet<string>): boolean {
+  if (stems.has(d)) return true;
+  for (const { base, suffix } of stemmed(d, 2)) { // الجذع ذو الحرفين لفعل قصير معلن (tu ⇒ tue/tust — N-112)
+    if (base === d) continue;
+    if (stems.has(FULL + base)) return true;
+    if (base.length >= 4 && stems.has(base)) return true;
+    if (stems.has(VERB + base) && VERB_SUFFIXES.has(suffix)) return true;
+  }
+  return false;
+}
+/**
+ * N-103 (1): الرمز الذي هو صيغة مسجَّلة لكلمة درسٍ لاحق يُرفض ولو طابق جذعاً — إلا أن يكون صيغة كاملة مدروسة،
+ * أو صيغة كاملة مدروسة + نهاية (große ⇐ groß · lernen ⇐ lern من kennenlernen)، أو جذع فعل مدروس + نهاية فعل (wasche ⇐ waschen).
+ * (fragt من Frage قبل fragen · weit من Wein قبل weit ⇒ مرفوضان.)
+ */
+export function laterWordLeak(d: string, stems: ReadonlySet<string>): boolean {
+  if (!stems.has(LATER + d)) return false;
+  if (stems.has(FULL + d)) return false;
+  for (const { base, suffix } of stemmed(d, 2)) {
+    if (base === d) continue;
+    if (stems.has(FULL + base)) return false;
+    if (stems.has(VERB + base) && VERB_SUFFIXES.has(suffix)) return false;
+  }
+  return true;
+}
+/** يضيف إلى مجموعة الجذوع صيغ كلمات الدروس اللاحقة (بعلامة «<») — ما ليس صيغةً مدروسة ولا مغلقة */
+export function withLaterForms(stems: ReadonlySet<string>, taught: readonly Word[], all: readonly Word[]): Set<string> {
+  const ids = new Set(taught.map((w) => w.id));
+  const earlier = new Set(taught.flatMap((w) => knownForms(w)).map(deumlaut));
+  const out = new Set(stems);
+  for (const w of all) {
+    if (ids.has(w.id)) continue;
+    for (const f0 of knownForms(w)) { const f = deumlaut(f0); if (f.length > 2 && !earlier.has(f) && !CLOSED.has(f0) && !CLOSED.has(f)) out.add(LATER + f); }
+  }
   return out;
 }
 
@@ -164,7 +241,9 @@ export function unknownTokens(text: string, stems: ReadonlySet<string>, allow: R
   const out = new Set<string>();
   for (const t of contentTokens(text)) {
     if (CLOSED.has(t) || allow.has(t)) continue;
-    if (stem(deumlaut(t)).some((s) => stems.has(s))) continue;
+    const d = deumlaut(t);
+    if (laterWordLeak(d, stems)) { out.add(t); continue; }
+    if (stemKnown(d, stems)) continue;
     if (numberWordKnown(t, stems)) continue;
     if (daCompoundKnown(t, stems)) continue;
     if (ordinalKnown(t, stems)) continue;

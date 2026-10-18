@@ -603,13 +603,13 @@ describe("D115 — أدوات القياس", () => {
   it("درس غير مُرقّى خارج المرور (a1-u12-d6 توليف — N-004؛ المرور اكتمل 60/60 في D180): يُشخَّص من محتواه الفعلي", () => {
     const r = inspectLesson(legacy, { properNouns: [] }, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect(r.practiceItems).toBe(6);
-    // الفجوات الفعلية لـu12-d6 (مقيسة): 6 بنود choice بلا خيارات ونوع واحد · بلا استماع ولا إملاء · dativ/ge/geeinpackt/gefotografiert/gehabt/gewesen/hattest في التدريب والمصائد
+    // الفجوات الفعلية لـu12-d6 (مقيسة): 6 بنود choice بلا خيارات ونوع واحد · بلا استماع ولا إملاء · dativ/ge/geeinpackt/gefotografiert/gehabt/gewesen في التدريب والمصائد (hattest صارت مغلقة — D185)
     // · ge/welchem في الـQuiz · Quiz 3×4 · وhören/sprechen بلا بند — القياس لا التخمين
     expect(r.rule).toEqual([]);
     expect(r.practice.map((i) => i.code).sort()).toEqual([
       ...Array(6).fill("e-upgrade-item"), "e-upgrade-front", "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
     ].sort());
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: dativ، ge، geeinpackt، gefotografiert، gehabt، gewesen، hattest$/);
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: dativ، ge، geeinpackt، gefotografiert، gehabt، gewesen$/); // hattest مغلقة منذ D185 (N-112)
     expect(r.quiz.map((i) => i.code).sort()).toEqual(["e-upgrade-front", "e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size"]);
     expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: ge، welchem$/);
     expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);
@@ -2426,7 +2426,7 @@ describe("D115 — أدوات القياس", () => {
     expect(rules.get("ars-satzklammer")!.usedInLessons).toContain("a1-u11-d4");
     // لا passiert/Angst/mutig/schneiden/geschnitten/dazu/etwas/Winter/Oh (خارج الجبهة) ولا Schnupfen/schmerzen (u11-d5) ولا denn/leider/dann (u12-d4) ولا gewesen/gehabt في ما يُعرض — ولا مثال SD1 الرسمي «Wie fühlen Sie sich?» مستقلاً (D108 · N-113)
     const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise.a]), g: l.ziel.de, t: [l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de] });
-    expect(shown).not.toMatch(/\b(passiert|Angst|mutig|schneiden|geschnitten|dazu|etwas|Winter|Oh|Schnupfen|schmerzen|denn|leider|dann|gewesen|gehabt|hattest|Körper|Doktor|Lenas|Mama)\b|Wie fühlen Sie sich\?/);
+    expect(shown).not.toMatch(/\b(passiert|Angst|mutig|schneiden|geschnitten|dazu|etwas|Winter|Oh|Schnupfen|schmerzen|denn|leider|dann|gewesen|gehabt|Körper|Doktor|Lenas|Mama)\b|Wie fühlen Sie sich\?/);
     expect(JSON.stringify(l.quiz.variants.map((v) => v.items.map((i) => i.choices)))).not.toMatch(/\b(gebekommen|geverbunden|gewesen|gehabt)\b/); // المشتِّتات أيضاً من صيغ معروفة (لا ge‑ مختلقة)
     expect(e.properNouns).toEqual(["Lena"]); // Yusuf لا يظهر في نصوص الدرس (الحوار يرويه الصوت فقط)
     expect(e.misspellings ?? []).toEqual([]);
@@ -2527,9 +2527,9 @@ describe("D115 — أدوات القياس", () => {
     const pf = rules.get("ars-perfekt")!;
     expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6", "a2-u1-d1"]);
     expect(pf.usedInLessons).toEqual(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-perfekt")).map((x) => x.id).sort((a, b) => a.localeCompare(b, "en", { numeric: true })));
-    for (const x of ["Ich bin heute zu Hause geblieben.", "Ich bin nach Hause gefahren.", "Das Fieber ist verschwunden.", "Ich bin um sieben aufgestanden.", "Ich habe im Bett gelegen.", "Ich habe gehustet und geniest.", "Mein Hals hat gebrannt.", "Die Erkältung hat eine Woche gedauert.", "Wie war dein Tag?", "Warst du auch krank?", "Wir waren eine Woche zu Hause.", "Ich hatte Fieber.", "Hatten Sie auch Schwindel?", "Wir hatten keine Zeit.", "Jetzt geht es besser.", "Meine Nase juckt."])
+    for (const x of ["Ich bin heute zu Hause geblieben.", "Ich bin nach Hause gefahren.", "Das Fieber ist verschwunden.", "Ich bin um sieben aufgestanden.", "Ich habe im Bett gelegen.", "Ich habe gehustet und geniest.", "Mein Hals hat gebrannt.", "Die Erkältung hat eine Woche gedauert.", "Wie war dein Tag?", "Warst du auch krank?", "Wir waren eine Woche zu Hause.", "Ich hatte Fieber.", "Hattest du auch Schwindel?", "Wir hatten keine Zeit.", "Jetzt geht es besser.", "Meine Nase juckt."])
       expect(pf.payload.ruleDe).toContain(x);
-    expect(pf.payload.ruleDe).not.toMatch(/\b(gewesen|gehabt|hattest|fühle|fühlen|Wunde|Schnupfen|dann|leider|denn|ganz|ganze|Körper|passiert|Winter)\b|Ich bin zu Hause geblieben\.|Gestern war ich krank\./); // N-103 · hattest خارج الجبهة (N-112) · D108
+    expect(pf.payload.ruleDe).not.toMatch(/\b(gewesen|gehabt|fühle|fühlen|Wunde|Schnupfen|dann|leider|denn|ganz|ganze|Körper|passiert|Winter)\b|Ich bin zu Hause geblieben\.|Gestern war ich krank\./); // N-103 · hattest خارج الجبهة (N-112) · D108
     for (const x of ["sein", "haben", "war", "hatte", "bleiben", "geblieben", "verschwunden", "التصريف الثالث في الآخر"]) expect(pf.payload.ruleAr).toContain(x);
     for (const x of ["~~Ich habe zu Hause geblieben~~", "~~Der Schmerz hat verschwunden~~", "خريطة التداخل 10‑ي"]) expect(pf.payload.contrastAr).toContain(x);
     expect(pf.payload.limitsAr).toHaveLength(4);
@@ -2541,8 +2541,8 @@ describe("D115 — أدوات القياس", () => {
     expect(pf.payload.properNouns).toEqual([]);
     // لا gewesen/gehabt/hattest (خارج الجبهة) ولا fühlen/Wunde (u11-d4) ولا Schnupfen (u11-d5) ولا dann/leider/denn (u12-d4) ولا ganz/Körper/passiert في ما يُعرض — ولا مثال SD1 الرسمي حرفياً («Ich bin zu Hause» تُعرض داخل «heute … geblieben» فقط — D108)
     const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise.a]), g: l.ziel.de, t: [l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de] });
-    expect(shown).not.toMatch(/\b(gewesen|gehabt|hattest|geworden|fühle|fühlen|Wunde|Schnupfen|dann|leider|denn|ganz|ganze|Körper|passiert|Winter|Strand|Doktor|Lenas|Mama|Oh|zehnmal|dreimal)\b|Ich bin zu Hause geblieben\.|Gestern war ich krank\.|Ich bleibe heute zu Hause\.|Es geht mir schon besser\.|Wie lange dauert der Film\?/);
-    expect(JSON.stringify(l.quiz.variants.map((v) => v.items.map((i) => i.choices)))).not.toMatch(/\b(gewesen|gehabt|hattest)\b/); // المشتِّتات أيضاً من صيغ معروفة
+    expect(shown).not.toMatch(/\b(gewesen|gehabt|geworden|fühle|fühlen|Wunde|Schnupfen|dann|leider|denn|ganz|ganze|Körper|passiert|Winter|Strand|Doktor|Lenas|Mama|Oh|zehnmal|dreimal)\b|Ich bin zu Hause geblieben\.|Gestern war ich krank\.|Ich bleibe heute zu Hause\.|Es geht mir schon besser\.|Wie lange dauert der Film\?/);
+    expect(JSON.stringify(l.quiz.variants.map((v) => v.items.map((i) => i.choices)))).not.toMatch(/\b(gewesen|gehabt)\b/); // المشتِّتات أيضاً من صيغ معروفة
     expect(e.properNouns).toEqual(["Yusuf", "Lena"]);
     expect(e.misspellings ?? []).toEqual([]);
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
@@ -2556,7 +2556,7 @@ describe("D115 — أدوات القياس", () => {
     const script = JSON.parse(readFileSync(join(CONTENT, "audio-scripts/a1-u11-d3-ich-bin-im-bett-geblieben.json"), "utf8")) as { lines: { id: string; speaker: string; text: string }[] };
     expect(script.lines).toHaveLength(20);
     expect(script.lines.find((x) => x.id === "kb-1")?.text).toBe("Hallo Lena! Wie war dein Tag? Bist du noch im Bett?");
-    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\b(gewesen|gehabt|hattest|fühle|Wunde|Schnupfen|dann|leider|denn|ganz|ganze|Körper|passiert|Winter|Perfekt|Doktor|Mama|Lenas|Oh)\b|Ich bin zu Hause geblieben\./);
+    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\b(gewesen|gehabt|fühle|Wunde|Schnupfen|dann|leider|denn|ganz|ganze|Körper|passiert|Winter|Perfekt|Doktor|Mama|Lenas|Oh)\b|Ich bin zu Hause geblieben\./);
     expect(script.lines.filter((x) => /\bgeblieben\b/.test(x.text))).toHaveLength(3); // kb-2 · kb-13 · kb-14
     expect(script.lines.filter((x) => /\b(war|Warst|hatte)\b/.test(x.text)).map((x) => x.id)).toEqual(["kb-1", "kb-7", "kb-8", "kb-11", "kb-16"]); // war/warst خمس مرات — hatte لا تظهر في الحوار (القاعدة والتدريب فقط)
     // N-020 لهذا الدرس: الاستدعاء من دروس سابقة (gehen · sein · kommen — أفعال sein في الماضي)
@@ -2742,14 +2742,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u11-d1 مُرقّى (D171): صفر نقص — 69 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-koerper (جديدة) · نواة der Teil/tun/weh tun · ثلاثة أمثلة صُحّحت · كل 20 سطراً وتسعة مقاطع كلمات مستخدمة", () => {
+  it("a1-u11-d1 مُرقّى (D171 · D185): صفر نقص — 71 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-koerper (جديدة) · نواة der Teil/tun/weh tun · ثلاثة أمثلة صُحّحت · كل 20 سطراً وتسعة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u11-d1")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u11-d1")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([69, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([71, 4, 6, 15]); // D185 (N-112): +tust/tue في الفراغات
     // الكلمات الخمس عشرة كلها جديدة (لا تكرار من الوحدات 1–10) — والنواة (D113: der Teil · tun · weh tun) في آخر القائمة
     const earlier = new Set(realLessons.filter((x) => x.unit <= 10).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -2763,7 +2763,7 @@ describe("D115 — أدوات القياس", () => {
     expect(ko.payload.ruleDe).toContain("die Hand → die Hände");
     expect(ko.payload.ruleDe).toContain("Was kann ich für dich tun?");
     expect(ko.payload.ruleDe).toContain("Die Aufgabe hat zwei Teile");
-    expect(ko.payload.ruleDe).not.toMatch(/\b(Körper|Arzt|Ärztin|Schmerzen|Fieber|bleibe|bleiben|fühle|rot|blau|tue|tust|war|hatte)\b/);
+    expect(ko.payload.ruleDe).not.toMatch(/\b(Körper|Arzt|Ärztin|Schmerzen|Fieber|bleibe|bleiben|fühle|rot|blau|war|hatte)\b/);
     expect(ko.payload.ruleDe).not.toMatch(/Mein Kopf tut weh\.|Mir tut der Hals weh\.|Mein Arm tut weh\.|Mein Bein tut weh\.|Wo tut es weh\?/); // D108: أمثلة SD1 الرسمية لـKopf/Hals/Arm/weh tun حرفياً
     // الجسم بأربع خطوات: الجنس بلا منطق · أنماط الجمع الأربعة · weh tun (tut/tun · weh آخراً · الداتيف) · tun وder Teil
     for (const x of ["اثنا عشر جزءاً بجنسها", "die Hand أنثى وdas Bein محايد", "أومالوت + e: die Hände", "بلا نهاية: die Finger", "weh tun = «يؤلم»", "Meine Beine tun weh.", "Mir tut der Kopf weh.", "Seit wann tut dein Hals weh?", "tun = «يفعل»", "der Teil (‑e) = «الجزء»"])
@@ -2779,7 +2779,7 @@ describe("D115 — أدوات القياس", () => {
     expect(ko.payload.properNouns).toEqual([]);
     // لا Körper (ليست في SD1 ولا في المقرر) ولا Arzt/Fieber/Schmerzen (u11-d2) ولا bleiben/liegen (u11-d3) ولا fühlen (u11-d4) ولا rot/blau (N-107) ولا tue/tust (N-112) في ما يُعرض — ولا مثال SD1 الرسمي حرفياً
     const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.commonError.de, c.correct.de, c.exercise.a]), g: l.ziel.de, t: [l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de] });
-    expect(shown).not.toMatch(/\b(Körper|Arzt|Ärztin|Schmerzen|Kopfschmerzen|Fieber|bleibe|bleiben|liege|liegen|fühle|rot|blau|tue|tust|war|hatte|Lenas|Mama)\b|Mein Kopf tut weh\.|Mir tut der Hals weh\.|Mein Arm tut weh\.|Mein Bein tut weh\.|Wo tut es weh\?|Wie geht es dir\?/);
+    expect(shown).not.toMatch(/\b(Körper|Arzt|Ärztin|Schmerzen|Kopfschmerzen|Fieber|bleibe|bleiben|liege|liegen|fühle|rot|blau|war|hatte|Lenas|Mama)\b|Mein Kopf tut weh\.|Mir tut der Hals weh\.|Mein Arm tut weh\.|Mein Bein tut weh\.|Wo tut es weh\?|Wie geht es dir\?/);
     expect(e.properNouns).toEqual(["Yusuf", "Lena"]);
     expect(e.misspellings ?? []).toEqual([]); // المصائد الثلاث جنس وجمع وترتيب بكلمات حقيقية — لا صيغة مشطوبة تحتاج إعلاناً (Hands/Zahns/Kopfs/Fuße تُشطب في النص وتُقرأ كجذوع معروفة)
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
@@ -2800,7 +2800,7 @@ describe("D115 — أدوات القياس", () => {
     const script = JSON.parse(readFileSync(join(CONTENT, "audio-scripts/a1-u11-d1-alles-tut-weh.json"), "utf8")) as { lines: { id: string; speaker: string; text: string }[] };
     expect(script.lines).toHaveLength(20);
     expect(script.lines.find((x) => x.id === "kw-1")?.text).toBe("Hallo Lena! Geht es dir heute gut? Bist du noch müde?");
-    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\b(Körper|Arzt|Ärztin|Fieber|Schmerzen|bleibe|bleiben|fühle|rot|blau|tue|tust|Mama|gehabt|hatte|war|Lenas|Oh)\b|Mir tut der Hals weh\.|Wo tut es weh\?/);
+    expect(script.lines.map((x) => x.text).join(" ")).not.toMatch(/\b(Körper|Arzt|Ärztin|Fieber|Schmerzen|bleibe|bleiben|fühle|rot|blau|Mama|gehabt|hatte|war|Lenas|Oh)\b|Mir tut der Hals weh\.|Wo tut es weh\?/);
     expect(script.lines.filter((x) => /\bweh\b/.test(x.text))).toHaveLength(8);
     // N-020 لهذا الدرس: الاستدعاء من دروس سابقة (der Fuß · das Haar · das Ohr — أجزاء مدروسة من قبل) كما كان
     expect(l.warmup.cardIds).toEqual(["fuss", "haar", "ohr"]);

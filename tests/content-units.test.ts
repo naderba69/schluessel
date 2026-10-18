@@ -1282,8 +1282,8 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(wie!.commonError.de).toBe("~~Wie kostet das Hemd?~~");
     expect(wie!.correct.de).toBe("Was kostet das Hemd? / Wie viel kostet das Hemd?");
     expect(wie!.whyArabicSpeakerFails).toMatch(/«كم».*Wie وحدها = «كيف»/);
-    expect(nDekl!.commonError.de).toBe("~~Der Verkäufer fragt den Kunde.~~");
-    expect(nDekl!.correct.de).toBe("Der Verkäufer fragt den Kunden.");
+    expect(nDekl!.commonError.de).toBe("~~Der Verkäufer kennt den Kunde.~~"); // D185 (N-103): fragen كلمة u10-d3 — كانت تمرّ بجذع Frage
+    expect(nDekl!.correct.de).toBe("Der Verkäufer kennt den Kunden.");
     expect(nDekl!.whyArabicSpeakerFails).toMatch(/den Nachbarn/);
     for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // الاستدعاء من دروس سابقة (der Preis · kosten · bezahlen) — كانت Cent من كلمات اليوم نفسه
