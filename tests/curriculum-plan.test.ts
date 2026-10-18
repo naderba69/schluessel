@@ -273,8 +273,12 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(cs.find((c) => c.lessonId === "a1-u11-d2")).toMatchObject({
       status: "done", missing: [], headwords: ["fehlen"], size: 13,
     });
+    // D175: das Ergebnis فوق كلماته الاثنتي عشرة ⇒ 13 كلمة
+    expect(cs.find((c) => c.lessonId === "a1-u11-d5")).toMatchObject({
+      status: "done", missing: [], headwords: ["das Ergebnis, -se"], size: 13,
+    });
     expect(cs.find((c) => c.status === "pending")).toMatchObject({
-      lessonId: "a1-u11-d5", headwords: ["das Ergebnis, -se"], missing: ["das Ergebnis, -se"],
+      lessonId: "a1-u12-d2", headwords: ["der Blick", "das Internet", "die Information, -en"], missing: ["der Blick", "das Internet", "die Information, -en"],
     });
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
     expect(next.lessonId).toBe("a1-u13-d1");
@@ -315,12 +319,12 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
 
   it("e-plan-source · e-plan-headword · e-plan-complete", () => {
     expect(codes(checkPlan({ ...plan, sourceList: "goethe-xx" }, ctx))).toEqual(["e-plan-source"]);
-    // إسناد pending الذي لم يُنتَج بعد: بعد D172 صار التالي a1-u11-d5 (u11-d3/d4 بلا نواة)؛ تغيير كلمة منه يترك الأصلية غير مخططة.
+    // إسناد pending الذي لم يُنتَج بعد: بعد D175 صار التالي a1-u12-d2 (u12-d1 بلا نواة)؛ تغيير كلمة منه يترك الأصلية غير مخططة.
     const typo = clonePlan();
-    typo.core!.lessons.find((c) => c.lessonId === "a1-u11-d5")!.headwords[0] = "das Ergebnis, -se!";
+    typo.core!.lessons.find((c) => c.lessonId === "a1-u12-d2")!.headwords[0] = "der Blick!";
     const issues = checkPlan(typo, ctx);
     expect(codes(issues)).toEqual(["e-plan-complete", "e-plan-headword"]);
-    expect(issues.find((i) => i.code === "e-plan-complete")!.message).toMatch(/: das Ergebnis, -se$/u);
+    expect(issues.find((i) => i.code === "e-plan-complete")!.message).toMatch(/: der Blick$/u);
   });
 
   it("e-plan-taught: إسناد done ولم يُعلَّم ⇒ خطأ لكل كلمة · done ومُعلَّم بدليل حقيقي (a1-u1-d2 بعد ترقيته — D119) ⇒ صفر", () => {
@@ -358,10 +362,10 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
 
   it("e-plan-core-lesson (توليف · غير موجود) · e-plan-core-load (> 18) · e-plan-text-fix", () => {
     const integ = clonePlan();
-    integ.core!.lessons.find((c) => c.lessonId === "a1-u11-d5")!.lessonId = "a1-u3-d6"; // النواة لا تُسند إلى درس التوليف
+    integ.core!.lessons.find((c) => c.lessonId === "a1-u12-d2")!.lessonId = "a1-u3-d6"; // النواة لا تُسند إلى درس التوليف (إسناد ما زال pending — نقل إسناد done يطلق w-plan-elsewhere أيضاً)
     expect(codes(checkPlan(integ, ctx))).toEqual(["e-plan-core-lesson"]);
     const ghost = clonePlan();
-    ghost.core!.lessons.find((c) => c.lessonId === "a1-u11-d5")!.lessonId = "a1-u12-d7";
+    ghost.core!.lessons.find((c) => c.lessonId === "a1-u12-d2")!.lessonId = "a1-u12-d7";
     expect(codes(checkPlan(ghost, ctx))).toEqual(["e-plan-core-lesson"]);
     const heavy = clonePlan(); // a1-u9-d1 فيه 18 كلمة — أي إسناد يتجاوز السقف
     const u12d2 = heavy.core!.lessons.find((c) => c.lessonId === "a1-u12-d2")!; // إسناد ما زال pending بثلاث كلمات (u11-d2 بكلمة واحدة — نقلها يفرغه فيطلق w-plan-mark-done)

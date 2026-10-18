@@ -6,11 +6,12 @@
   "day": 5,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst deine Beschwerden erklären und den Rat des Arztes verstehen: Ich habe seit gestern Zahnschmerzen — Sie müssen zum Spezialisten.",
-    "ar": "تصف شكواه وتسمع نصيحة الطبيب (muss/darf) — المهمة الكبرى للوحدة"
+    "de": "Ich habe seit gestern Zahnschmerzen. Was soll ich machen? — Sie müssen zum Spezialisten. · Sie sollen eine Salbe nehmen. · Sie dürfen nicht rauchen. · Das hilft mir. · Der Krankenwagen kommt sofort.",
+    "ar": "تشرح شكواك (seit gestern + الألم جمعاً) وتفهم نصيحة الطبيب بالأفعال الناقصة الخمسة في صندوق واحد — واليوم darf (الإذن/المنع) وsoll (النصيحة): الناقص ثانياً والمصدر آخراً · nicht dürfen = ممنوع ≠ nicht müssen = لا حاجة · helfen + Dativ (Das hilft mir · dem Patienten) · جنس المركّب من آخر كلمة (der Krankenwagen · die Notaufnahme) — ومعها der Patient · der Hausarzt · der Spezialist · die Notaufnahme · der Unfall · der Schnupfen · die Tropfen · die Salbe · das Ergebnis"
   },
   "canDoDaily": [
-    "يصف شكواه (seit + الألم) ويستمع لنصيحة واحدة (muss/darf + verb am Ende)"
+    "يصف شكواه بجملة (Ich habe seit gestern Zahnschmerzen. · Meine Nase läuft, ich habe Schnupfen.) ويطلب النصيحة (Was soll ich machen?) ويفهم ثلاث نصائح بالأفعال الناقصة (Sie müssen zum Spezialisten. · Sie sollen eine Salbe nehmen. · Sie dürfen nicht rauchen.) ويميّز المنع من «لا حاجة».",
+    "يسأل عن الإذن (Darf ich am Montag in die Schule gehen?) ويقول ما يساعده بالداتيف (Die Tropfen helfen mir.) ويعرف جنس der Krankenwagen · die Notaufnahme · der Zahnschmerz من آخر كلمة."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«يجب أن أذهب إلى الطبيب» — أين يذهب الفعل الرئيسي؟"
+          "de": "«ممنوع التدخين هنا» — أي فعل ناقص؟ (تخمين فقط)"
         },
         "choices": [
-          "Ich muss zum Arzt gehen (الفعل آخر الجملة)",
-          "Ich muss gehen zum Arzt",
-          "Ich geh muss zum Arzt"
+          "Sie dürfen nicht rauchen.",
+          "Sie müssen nicht rauchen.",
+          "Sie sollen nicht rauchen."
         ],
-        "answer": "Ich muss zum Arzt gehen (الفعل آخر الجملة)",
+        "answer": "Sie dürfen nicht rauchen.",
         "revealNextSession": true
       }
     ],
@@ -49,7 +50,8 @@
       "bauchschmerz",
       "schmerzen",
       "tropfen",
-      "salbe"
+      "salbe",
+      "ergebnis"
     ],
     "grammarArsenalIds": [
       "ars-modal-fix",
@@ -59,78 +61,603 @@
       "story-a11-u11-s5"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "sp-st-initial",
+      "z",
+      "umlaut-u",
+      "auslaut-d"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«عندي ألم في السن»؟",
-            "a": "Ich habe Zahnschmerzen."
+            "q": "Was ___ ich heute machen? (sollen — ich)",
+            "a": "soll",
+            "why": "طلب النصيحة: Was soll ich machen? — ich soll بلا نهاية."
           },
           {
-            "q": "«الإسعاف يأتي فوراً»؟",
-            "a": "Der Krankenwagen kommt sofort."
+            "q": "Sie ___ eine Salbe nehmen. (sollen — Sie)",
+            "a": "sollen",
+            "why": "Sie (رسمي) → sollen كالمصدر — النصيحة من الطبيب."
+          },
+          {
+            "q": "Du ___ viel Wasser trinken. (sollen — du)",
+            "a": "sollst",
+            "why": "du → sollst — نهاية ‑st."
+          },
+          {
+            "q": "___ ich am Montag in die Schule gehen? (dürfen — ich)",
+            "a": "Darf",
+            "why": "سؤال نعم/لا: الفعل الناقص أولاً — Darf ich …? (الإذن)."
+          },
+          {
+            "q": "Du ___ drei Tage kein Fußball spielen. (dürfen — du)",
+            "a": "darfst",
+            "why": "du → darfst — الحركة a في المفرد (darf ← dürfen)."
+          },
+          {
+            "q": "Sie ___ im Zimmer nicht rauchen. (dürfen — Sie)",
+            "a": "dürfen",
+            "why": "Sie dürfen nicht … = ممنوع — dürfen كالمصدر مع Sie."
+          },
+          {
+            "q": "Der Patient ___ nicht rauchen. (dürfen — er)",
+            "a": "darf",
+            "why": "er → darf — كـich darf بلا ‑t."
+          },
+          {
+            "q": "Mein Bruder ___ zum Spezialisten gehen. (müssen — er)",
+            "a": "muss",
+            "why": "er muss — كـich muss (الوحدة 8)؛ gehen في الآخر."
+          },
+          {
+            "q": "Der Hausarzt ___ das nicht machen. (können — er)",
+            "a": "kann",
+            "why": "er kann — الاستطاعة؛ machen يغلق القوس."
+          },
+          {
+            "q": "Der Mann muss in die Notaufnahme ___. (fahren — المصدر في الآخر)",
+            "a": "fahren",
+            "why": "القوس: müssen ثانياً والمصدر fahren آخراً — ويجوز حذفه مع الاتجاه."
+          },
+          {
+            "q": "Ich soll am Morgen die Salbe ___. (nehmen — المصدر في الآخر)",
+            "a": "nehmen",
+            "why": "soll ثانياً … nehmen في آخر الجملة بلا zu."
+          },
+          {
+            "q": "Du musst heute nicht ___. (kommen) — «لا حاجة أن تأتي»",
+            "a": "kommen",
+            "why": "nicht müssen = لا حاجة — والمصدر في الآخر."
+          },
+          {
+            "q": "Der Arzt schickt mich zum ___. (der Spezialist — بعد zum)",
+            "a": "Spezialisten",
+            "why": "اسم ضعيف: zum Spezialisten · den Patienten — ‑en بعد الأداة في غير الرفع."
+          },
+          {
+            "q": "Die Salbe hilft ___. (ich — الداتيف)",
+            "a": "mir",
+            "why": "helfen + Dativ: Das hilft mir — لا mich."
+          },
+          {
+            "q": "Die Tropfen helfen ___ Patienten. (der — الداتيف)",
+            "a": "dem",
+            "why": "helfen + Dativ: dem Patienten (der → dem + ‑en للاسم الضعيف)."
+          },
+          {
+            "q": "Kannst du ___ heute helfen? (ich — الداتيف)",
+            "a": "mir",
+            "why": "helfen يأخذ الداتيف: mir · dir · ihm · ihr."
+          },
+          {
+            "q": "___ Krankenwagen kommt sofort. (der/die/das)",
+            "a": "Der",
+            "why": "جنس المركّب من آخر كلمة: der Wagen → der Krankenwagen."
+          },
+          {
+            "q": "___ Notaufnahme ist im Krankenhaus. (der/die/das)",
+            "a": "Die",
+            "why": "آخر كلمة ‑nahme مؤنث → die Notaufnahme."
+          },
+          {
+            "q": "___ Hausarzt ist sehr nett. (der/die/das)",
+            "a": "Der",
+            "why": "der Arzt → der Hausarzt — الجنس من آخر كلمة."
+          },
+          {
+            "q": "Mein Bruder hat seit gestern ___. (ألم أسنان — جمعاً)",
+            "a": "Zahnschmerzen",
+            "why": "الألم جمعاً: Zahnschmerzen (der Zahn + der Schmerz)."
+          },
+          {
+            "q": "Keine ___ mehr, kein Fieber. (ألم بطن — جمعاً)",
+            "a": "Bauchschmerzen",
+            "why": "der Bauch + die Schmerzen → Bauchschmerzen — ألم البطن جمعاً."
+          },
+          {
+            "q": "Meine Nase läuft: ___! (زكام)",
+            "a": "Schnupfen",
+            "why": "der Schnupfen — بلا أداة بعد haben: Ich habe Schnupfen."
+          },
+          {
+            "q": "Der Finger ___ noch ein bisschen. (schmerzen — er · الحاضر)",
+            "a": "schmerzt",
+            "why": "schmerzen → schmerzt — es/sie schmerzt = يؤلم."
+          },
+          {
+            "q": "Meine Mutter hat ___ für die Nase gekauft. (قطرات)",
+            "a": "Tropfen",
+            "why": "die Tropfen — جمع: قطرات للأنف."
+          },
+          {
+            "q": "Ich nehme die ___ am Morgen und am Abend. (مرهم)",
+            "a": "Salbe",
+            "why": "die Salbe — المرهم للجرح."
+          },
+          {
+            "q": "Der Arzt sagt das ___ morgen. (النتيجة)",
+            "a": "Ergebnis",
+            "why": "das Ergebnis — النتيجة (النواة من قائمة الامتحان)."
+          },
+          {
+            "q": "Ein Mann hatte einen ___ mit dem Fahrrad. (حادث)",
+            "a": "Unfall",
+            "why": "der Unfall — einen Unfall haben (hatte: الماضي البسيط)."
+          },
+          {
+            "q": "Viele ___ warten beim Arzt. (مرضى — جمعاً)",
+            "a": "Patienten",
+            "why": "der Patient → die Patienten (‑en) — الجمع."
+          },
+          {
+            "q": "Ich gehe heute zum ___. (طبيب الأسرة — بعد zum)",
+            "a": "Hausarzt",
+            "why": "zum Hausarzt — zu + dem؛ Hausarzt ليس اسماً ضعيفاً فلا ‑en."
+          },
+          {
+            "q": "Der ___ kommt sofort. (سيارة الإسعاف)",
+            "a": "Krankenwagen",
+            "why": "der Krankenwagen — المفرد والجمع سواء."
           }
         ],
         "interleavedWith": [
-          "zahnschmerz",
-          "krankenwagen"
+          "arzt",
+          "wasser",
+          "schule",
+          "montag",
+          "fieber",
+          "nase",
+          "bruder",
+          "mutter",
+          "fahrrad",
+          "morgen",
+          "abend",
+          "gestern",
+          "rauchen",
+          "helfen"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«الطبيب يرسلني إلى الأخصائي»؟",
-            "a": "Der Arzt schickt mich zum Spezialisten."
+            "audioId": "kd-1",
+            "speakText": "Hallo Lena! Ich war heute beim Hausarzt. Die Spritze hat nur kurz wehgetan!",
+            "q": "استمع: أين كان يوسف اليوم وماذا يقول عن الحقنة؟",
+            "choices": [
+              "عند طبيب الأسرة — آلمت قليلاً فقط",
+              "في غرفة الطوارئ — آلمت كثيراً",
+              "في المدرسة — لم يأخذها"
+            ],
+            "a": "عند طبيب الأسرة — آلمت قليلاً فقط",
+            "why": "beim Hausarzt · Die Spritze hat nur kurz wehgetan — آلمت قليلاً فقط."
           },
           {
-            "q": "«القطرات للسعال»؟",
-            "a": "Die Tropfen sind für den Husten."
+            "audioId": "kd-2",
+            "speakText": "Super! Und wie war es beim Arzt? Erzähl!",
+            "q": "استمع: ماذا تطلب لينا؟",
+            "choices": [
+              "أن يحكي كيف كان عند الطبيب",
+              "أن يرسل صورة",
+              "أن يتصل غداً"
+            ],
+            "a": "أن يحكي كيف كان عند الطبيب",
+            "why": "Wie war es beim Arzt? Erzähl! — احكِ."
+          },
+          {
+            "audioId": "kd-3",
+            "speakText": "Viele Patienten! Ich habe eine Stunde gewartet. Ein Mann hatte einen Unfall mit dem Fahrrad.",
+            "q": "استمع: ماذا حدث في غرفة الانتظار؟",
+            "choices": [
+              "مرضى كثيرون، انتظر ساعة، ورجل أصابه حادث بالدراجة",
+              "لا أحد، دخل فوراً",
+              "الطبيب غائب"
+            ],
+            "a": "مرضى كثيرون، انتظر ساعة، ورجل أصابه حادث بالدراجة",
+            "why": "Viele Patienten · eine Stunde gewartet · einen Unfall mit dem Fahrrad — حادث بالدراجة."
+          },
+          {
+            "audioId": "kd-4",
+            "speakText": "Ein Unfall? Was hat der Arzt gemacht?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "ماذا فعل الطبيب",
+              "ماذا أكل الرجل",
+              "أين الدراجة"
+            ],
+            "a": "ماذا فعل الطبيب",
+            "why": "Was hat der Arzt gemacht? — ماذا فعل؟"
+          },
+          {
+            "audioId": "kd-5",
+            "speakText": "Der Hausarzt hat gesagt: Das kann ich nicht machen. Sie müssen in die Notaufnahme. Der Krankenwagen ist gekommen.",
+            "q": "استمع: ماذا قال طبيب الأسرة للرجل؟",
+            "choices": [
+              "يجب أن تذهب إلى الطوارئ — وجاءت سيارة الإسعاف",
+              "خذ حبة ونم",
+              "اذهب إلى البيت"
+            ],
+            "a": "يجب أن تذهب إلى الطوارئ — وجاءت سيارة الإسعاف",
+            "why": "Sie müssen in die Notaufnahme (المصدر محذوف مع الاتجاه) · Der Krankenwagen ist gekommen — سيارة الإسعاف."
+          },
+          {
+            "audioId": "kd-6",
+            "speakText": "Zum Glück! Und deine Wunde am Finger?",
+            "q": "استمع: عمّ تسأل لينا بعد ذلك؟",
+            "choices": [
+              "عن جرح إصبعه",
+              "عن أمه",
+              "عن الدورة"
+            ],
+            "a": "عن جرح إصبعه",
+            "why": "Und deine Wunde am Finger? — جرح الإصبع."
+          },
+          {
+            "audioId": "kd-7",
+            "speakText": "Der Arzt hat sie gesehen. Das Ergebnis ist gut! Aber die Wunde schmerzt noch ein bisschen.",
+            "q": "استمع: ما نتيجة فحص الجرح؟",
+            "choices": [
+              "جيدة — لكنه ما زال يؤلم قليلاً",
+              "سيئة — يحتاج حقنة",
+              "لم يفحصه الطبيب"
+            ],
+            "a": "جيدة — لكنه ما زال يؤلم قليلاً",
+            "why": "Das Ergebnis ist gut! Aber die Wunde schmerzt noch ein bisschen — النتيجة جيدة."
+          },
+          {
+            "audioId": "kd-9",
+            "speakText": "Ich soll eine Salbe nehmen, am Morgen und am Abend. Und ich darf drei Tage kein Fußball spielen.",
+            "q": "استمع: ماذا عليه أن يفعل وما الممنوع؟",
+            "choices": [
+              "مرهم صباحاً ومساءً — وممنوع كرة القدم ثلاثة أيام",
+              "حبوب ثلاث مرات — وممنوع الأكل",
+              "لا شيء"
+            ],
+            "a": "مرهم صباحاً ومساءً — وممنوع كرة القدم ثلاثة أيام",
+            "why": "Ich soll eine Salbe nehmen (النصيحة) · ich darf drei Tage kein Fußball spielen (المنع)."
+          },
+          {
+            "audioId": "kd-10",
+            "speakText": "Kein Fußball? Das ist nicht gut für dich!",
+            "q": "استمع: كيف تعلّق لينا؟",
+            "choices": [
+              "هذا ليس جيداً له",
+              "هذا رائع",
+              "هذا لا يهم"
+            ],
+            "a": "هذا ليس جيداً له",
+            "why": "Kein Fußball? Das ist nicht gut für dich! — ليس جيداً له."
+          },
+          {
+            "audioId": "kd-11",
+            "speakText": "Ja, sehr! Und du? Wie fühlst du dich heute?",
+            "q": "استمع: ماذا يسأل يوسف لينا؟",
+            "choices": [
+              "كيف تشعر اليوم",
+              "ماذا تأكل اليوم",
+              "متى تنام"
+            ],
+            "a": "كيف تشعر اليوم",
+            "why": "Wie fühlst du dich heute? — سؤال الأمس نفسه."
+          },
+          {
+            "audioId": "kd-13",
+            "speakText": "Hast du Tropfen für die Nase?",
+            "q": "استمع: ماذا يسأل يوسف عن الأنف؟",
+            "choices": [
+              "هل عندها قطرات للأنف",
+              "هل عندها منديل",
+              "هل الأنف يؤلم"
+            ],
+            "a": "هل عندها قطرات للأنف",
+            "why": "Hast du Tropfen für die Nase? — قطرات للأنف."
+          },
+          {
+            "audioId": "kd-16",
+            "speakText": "Ja, morgen. Der Hausarzt kann das nicht machen. Mein Vater fährt ihn hin.",
+            "q": "استمع: من يذهب إلى الأخصائي ومتى ومع من؟",
+            "choices": [
+              "أخوها، غداً، وأبوها يوصله",
+              "أمها، اليوم، وحدها",
+              "لينا، الاثنين، مع يوسف"
+            ],
+            "a": "أخوها، غداً، وأبوها يوصله",
+            "why": "Ja, morgen · Mein Vater fährt ihn hin — أبوها يوصله."
+          },
+          {
+            "audioId": "kd-17",
+            "speakText": "Alle sind krank bei euch! Darfst du am Montag in die Schule gehen?",
+            "q": "استمع: ماذا يسأل يوسف في الآخر؟",
+            "choices": [
+              "هل يُسمح لها بالمدرسة يوم الاثنين",
+              "هل تريد السباحة",
+              "هل عندها واجب"
+            ],
+            "a": "هل يُسمح لها بالمدرسة يوم الاثنين",
+            "why": "Darfst du am Montag in die Schule gehen? — dürfen = الإذن."
+          },
+          {
+            "audioId": "kd-18",
+            "speakText": "Ja, die Ärztin hat es erlaubt. Ich darf am Montag gehen. Aber ich soll noch nicht schwimmen.",
+            "q": "استمع: ماذا قالت الطبيبة للينا؟",
+            "choices": [
+              "مسموح المدرسة الاثنين — لكن لا سباحة بعد",
+              "ممنوع المدرسة — وتسبح",
+              "يجب أن تبقى أسبوعاً"
+            ],
+            "a": "مسموح المدرسة الاثنين — لكن لا سباحة بعد",
+            "why": "Ich darf am Montag gehen (الإذن). Aber ich soll noch nicht schwimmen (النصيحة)."
           }
         ],
         "interleavedWith": [
-          "spezialist",
-          "tropfen"
+          "spritze",
+          "wunde",
+          "finger",
+          "fahrrad",
+          "stunde",
+          "fussball",
+          "nase",
+          "vater",
+          "schule",
+          "montag",
+          "schwimmen"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«يؤلم»؟",
-            "a": "Es schmerzt."
+            "tokens": [
+              "rauchen.",
+              "Sie",
+              "Hier",
+              "dürfen",
+              "nicht"
+            ],
+            "a": "Hier dürfen Sie nicht rauchen.",
+            "why": "Hier أولاً ← dürfen ثانياً ← Sie ← nicht ← rauchen آخراً (المنع)."
           },
           {
-            "q": "«غرفة الطوارئ»؟",
-            "a": "die Notaufnahme"
+            "tokens": [
+              "jetzt",
+              "machen?",
+              "soll",
+              "Was",
+              "ich"
+            ],
+            "a": "Was soll ich jetzt machen?",
+            "why": "Was ← soll ← ich ← jetzt ← machen آخراً."
+          },
+          {
+            "tokens": [
+              "eine",
+              "nehmen.",
+              "soll",
+              "Ich",
+              "Salbe"
+            ],
+            "a": "Ich soll eine Salbe nehmen.",
+            "why": "soll ثانياً ← eine Salbe ← nehmen آخراً."
+          },
+          {
+            "tokens": [
+              "schwimmen",
+              "ich",
+              "Darf",
+              "morgen",
+              "gehen?"
+            ],
+            "a": "Darf ich morgen schwimmen gehen?",
+            "why": "سؤال نعم/لا: Darf أولاً ← ich ← morgen ← schwimmen gehen."
+          },
+          {
+            "tokens": [
+              "muss",
+              "Mein",
+              "Bruder",
+              "gehen.",
+              "zum",
+              "Spezialisten"
+            ],
+            "a": "Mein Bruder muss zum Spezialisten gehen.",
+            "why": "muss ثانياً ← zum Spezialisten (‑en) ← gehen آخراً."
+          },
+          {
+            "tokens": [
+              "fahren.",
+              "Sie",
+              "müssen",
+              "Notaufnahme",
+              "die",
+              "sofort",
+              "in"
+            ],
+            "a": "Sie müssen sofort in die Notaufnahme fahren.",
+            "why": "müssen ثانياً ← sofort ← in die Notaufnahme ← fahren."
+          },
+          {
+            "tokens": [
+              "helfen",
+              "Tropfen",
+              "mir",
+              "Die",
+              "gut.",
+              "sehr"
+            ],
+            "a": "Die Tropfen helfen mir sehr gut.",
+            "why": "helfen + mir (الداتيف) ← sehr gut."
+          },
+          {
+            "tokens": [
+              "Patienten",
+              "hilft",
+              "dem",
+              "gut.",
+              "Die",
+              "Salbe"
+            ],
+            "a": "Die Salbe hilft dem Patienten gut.",
+            "why": "hilft ← dem Patienten (الداتيف والاسم الضعيف بـ‑en) ← gut."
+          },
+          {
+            "tokens": [
+              "Der",
+              "Krankenwagen",
+              "Minuten.",
+              "zehn",
+              "kommt",
+              "in"
+            ],
+            "a": "Der Krankenwagen kommt in zehn Minuten.",
+            "why": "Der Krankenwagen (der Wagen) فاعل ← kommt ← in zehn Minuten."
+          },
+          {
+            "tokens": [
+              "gestern",
+              "habe",
+              "Bauchschmerzen.",
+              "seit",
+              "Ich"
+            ],
+            "a": "Ich habe seit gestern Bauchschmerzen.",
+            "why": "habe ثانياً ← seit gestern ← Bauchschmerzen آخراً."
           }
         ],
         "interleavedWith": [
-          "schmerzen",
-          "notaufnahme"
+          "rauchen",
+          "schwimmen",
+          "bruder",
+          "minute",
+          "gestern",
+          "helfen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "kd-8",
+            "speakText": "Was sollst du machen?",
+            "a": "Was sollst du machen?",
+            "why": "Was بحرف كبير · sollst بـll وst · machen بـch."
+          },
+          {
+            "audioId": "kd-12",
+            "speakText": "Besser. Aber jetzt habe ich Schnupfen. Meine Nase läuft und läuft.",
+            "a": "Besser. Aber jetzt habe ich Schnupfen. Meine Nase läuft und läuft.",
+            "why": "Besser بـss · Schnupfen بـSchn وpf · Nase بحرف كبير · läuft بـäu."
+          },
+          {
+            "audioId": "kd-14",
+            "speakText": "Ja, meine Mutter hat Tropfen gekauft. Und mein Bruder hat heute Zahnschmerzen!",
+            "a": "Ja, meine Mutter hat Tropfen gekauft. Und mein Bruder hat heute Zahnschmerzen!",
+            "why": "Tropfen بـpf · gekauft بـau · Bruder بـu طويلة · Zahnschmerzen بـZ وsch."
+          },
+          {
+            "audioId": "kd-15",
+            "speakText": "Zahnschmerzen? Muss er zum Spezialisten?",
+            "a": "Zahnschmerzen? Muss er zum Spezialisten?",
+            "why": "Zahnschmerzen بحرف كبير · Muss بـss · Spezialisten بـSp تُنطق schp."
+          },
+          {
+            "audioId": "kd-19",
+            "speakText": "Gut. Und keine Bauchschmerzen mehr?",
+            "a": "Gut. Und keine Bauchschmerzen mehr?",
+            "why": "Gut بحرف كبير · keine · Bauchschmerzen بـau وch · mehr."
+          },
+          {
+            "audioId": "kd-20",
+            "speakText": "Nein, keine Bauchschmerzen, kein Fieber. Nur der Schnupfen. Bald bin ich wieder fit!",
+            "a": "Nein, keine Bauchschmerzen, kein Fieber. Nur der Schnupfen. Bald bin ich wieder fit!",
+            "why": "Nein · Fieber بـie · Schnupfen · Bald بـd آخراً تُنطق t · fit."
+          },
+          {
+            "audioId": "word-patient",
+            "speakText": "der Patient.",
+            "a": "der Patient.",
+            "why": "Patient — t قبل ie تُنطق ts · النبر على الآخر."
+          },
+          {
+            "audioId": "word-hausarzt",
+            "speakText": "der Hausarzt.",
+            "a": "der Hausarzt.",
+            "why": "Hausarzt — au · rz · t آخراً."
+          },
+          {
+            "audioId": "word-notaufnahme",
+            "speakText": "die Notaufnahme.",
+            "a": "die Notaufnahme.",
+            "why": "Notaufnahme — Not + Aufnahme · h صامتة تطيل a."
+          },
+          {
+            "audioId": "word-krankenwagen",
+            "speakText": "der Krankenwagen.",
+            "a": "der Krankenwagen.",
+            "why": "Krankenwagen — nk · W تُنطق v · g جهرية."
+          },
+          {
+            "audioId": "word-unfall",
+            "speakText": "der Unfall.",
+            "a": "der Unfall.",
+            "why": "Unfall — U قصيرة · ll."
+          },
+          {
+            "audioId": "word-ergebnis",
+            "speakText": "das Ergebnis.",
+            "a": "das Ergebnis.",
+            "why": "Ergebnis — Er + geb + nis · g جهرية · s آخراً."
+          }
+        ],
+        "interleavedWith": [
+          "nase",
+          "bruder",
+          "fieber",
+          "fit"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Beim Arzt: Beschwerden erklären und den Rat verstehen",
-        "a": "x",
-        "ar": "المهمة الكبرى: عند الطبيب"
+        "de": "Was tut Ihnen weh? — Ich habe seit gestern Zahnschmerzen. Was soll ich machen? — Sie müssen zum Spezialisten. Und Sie dürfen nicht rauchen. — Darf ich arbeiten? — Ja, aber Sie sollen viel trinken. Die Tropfen helfen Ihnen.",
+        "ar": "أنت المريض وزميلك الطبيب: تشرح شكواك بـseit + الألم، تطلب النصيحة بـWas soll ich machen? وتسأل عن الإذن بـDarf ich …? — والطبيب يجيب بثلاثة أفعال ناقصة مختلفة وجملة helfen بالداتيف — ثم تعكسان الأدوار"
       },
       "situation": {
-        "de": "Du bist Patient. Erkläre dem Arzt deine Beschwerden — und verstehe seinen Rat!",
-        "a": "x",
-        "ar": "أنت المريض. اشرح شكواك للطبيب — وافهم نصيحته!"
+        "de": "Beim Hausarzt: Guten Tag, was tut Ihnen weh? — Ich habe seit gestern Bauchschmerzen und Schnupfen. — Haben Sie Fieber? — Nein. Was soll ich machen? — Sie sollen viel Wasser trinken und diese Tropfen nehmen. Sie dürfen heute nicht arbeiten. — Muss ich zum Spezialisten? — Nein, das brauchen Sie nicht. Das Ergebnis ist gut.",
+        "ar": "عند طبيب الأسرة: تشرح شكواك منذ أمس، الطبيب يسأل عن الحمّى، تطلب النصيحة وتسأل هل تحتاج الأخصائي — وهو يجيب بـsollen وdürfen وmüssen"
       },
       "successCriteria": [
-        "جملتا شكوا (seit + الألم) + سؤال للطبيب + فهم نصيحتين (muss/darf + verb am Ende) + جملة شكر"
+        "شكوى بـseit + الألم جمعاً (Ich habe seit gestern Zahnschmerzen/Bauchschmerzen.) أو بـSchnupfen",
+        "سؤال النصيحة أو الإذن بالفعل الناقص أولاً أو بعد كلمة السؤال (Was soll ich machen? · Darf ich arbeiten? · Muss ich zum Spezialisten?)",
+        "ثلاث نصائح بثلاثة أفعال ناقصة مختلفة والمصدر في الآخر (Sie müssen zum Spezialisten gehen. · Sie sollen eine Salbe nehmen. · Sie dürfen nicht rauchen.) — والمنع بـdürfen لا بـmüssen",
+        "جملة helfen بالداتيف (Das hilft mir. · Die Tropfen helfen Ihnen.) وكلمتان من اليوم: Hausarzt · Spezialist · Notaufnahme · Krankenwagen · Unfall · Salbe · Tropfen · Ergebnis"
       ]
     }
   },
@@ -145,20 +672,64 @@
       {
         "items": [
           {
-            "q": "«مريض»؟",
-            "a": "der Patient"
+            "q": "«ممنوع عليكم التدخين في المستشفى» (رسمي)؟",
+            "choices": [
+              "Sie dürfen im Krankenhaus nicht rauchen.",
+              "Sie müssen im Krankenhaus nicht rauchen.",
+              "Sie dürfen im Krankenhaus rauchen nicht."
+            ],
+            "a": "Sie dürfen im Krankenhaus nicht rauchen.",
+            "why": "المنع = nicht dürfen · والمصدر في الآخر."
           },
           {
-            "q": "«طبيب الأسرة»؟",
-            "a": "der Hausarzt"
+            "q": "«ماذا أفعل؟» (طلب النصيحة)؟",
+            "choices": [
+              "Was soll ich machen?",
+              "Was soll ich mache?",
+              "Was ich soll machen?"
+            ],
+            "a": "Was soll ich machen?",
+            "why": "soll ثانياً والمصدر machen آخراً."
           },
           {
-            "q": "«عندي ألم في السن»؟",
-            "a": "Ich habe Zahnschmerzen."
+            "q": "«هل يُسمح لي بالذهاب إلى المدرسة؟»؟",
+            "choices": [
+              "Darf ich in die Schule gehen?",
+              "Darf ich gehen in die Schule?",
+              "Darfst ich in die Schule gehen?"
+            ],
+            "a": "Darf ich in die Schule gehen?",
+            "why": "Darf ich …? والمصدر في الآخر."
+          },
+          {
+            "q": "«هذا يساعدني»؟",
+            "choices": [
+              "Das hilft mir.",
+              "Das hilft mich.",
+              "Das hilft ich."
+            ],
+            "a": "Das hilft mir.",
+            "why": "helfen + الداتيف: mir."
+          },
+          {
+            "q": "«سيارة الإسعاف هنا»؟",
+            "choices": [
+              "Der Krankenwagen ist da.",
+              "Die Krankenwagen ist da.",
+              "Das Krankenwagen ist da."
+            ],
+            "a": "Der Krankenwagen ist da.",
+            "why": "der Wagen → der Krankenwagen — الجنس من آخر كلمة."
           },
           {
             "q": "«عندي زكام»؟",
-            "a": "Ich habe Schnupfen."
+            "choices": [
+              "Ich habe Schnupfen.",
+              "Ich habe Schnupfe.",
+              "Ich bin Schnupfen."
+            ],
+            "a": "Ich habe Schnupfen.",
+            "why": "Ich habe Schnupfen — بلا أداة."
           }
         ],
         "passingScore": 0.75
@@ -166,20 +737,64 @@
       {
         "items": [
           {
-            "q": "«سيارة الإسعاف»؟",
-            "a": "der Krankenwagen"
+            "q": "«عليك (حضرتك) بالأخصائي»؟",
+            "choices": [
+              "Sie müssen zum Spezialisten.",
+              "Sie müssen zum Spezialist.",
+              "Sie müssen zu Spezialisten."
+            ],
+            "a": "Sie müssen zum Spezialisten.",
+            "why": "zum + الاسم الضعيف بـ‑en: zum Spezialisten."
           },
           {
-            "q": "«غرفة الطوارئ»؟",
-            "a": "die Notaufnahme"
+            "q": "«لست مضطراً للمجيء»؟",
+            "choices": [
+              "Du musst nicht kommen.",
+              "Du darfst nicht kommen.",
+              "Du musst kommen nicht."
+            ],
+            "a": "Du musst nicht kommen.",
+            "why": "nicht müssen = لا حاجة (لا ممنوع)."
           },
           {
-            "q": "«حادث» والجمع؟",
-            "a": "der Unfall → die Unfälle"
+            "q": "«خذ المرهم!» (نصيحة الطبيب رسمياً بـsollen)؟",
+            "choices": [
+              "Sie sollen die Salbe nehmen.",
+              "Sie sollen nehmen die Salbe.",
+              "Sie soll die Salbe nehmen."
+            ],
+            "a": "Sie sollen die Salbe nehmen.",
+            "why": "Sie sollen + المصدر آخراً."
           },
           {
-            "q": "«يجب أن أذهب إلى الطبيب»؟",
-            "a": "Ich muss zum Arzt gehen."
+            "q": "«المرهم يساعد المريض»؟",
+            "choices": [
+              "Die Salbe hilft dem Patienten.",
+              "Die Salbe hilft den Patient.",
+              "Die Salbe hilft der Patient."
+            ],
+            "a": "Die Salbe hilft dem Patienten.",
+            "why": "helfen + الداتيف: dem Patienten (‑en)."
+          },
+          {
+            "q": "«غرفة الطوارئ كبيرة»؟",
+            "choices": [
+              "Die Notaufnahme ist groß.",
+              "Der Notaufnahme ist groß.",
+              "Das Notaufnahme ist groß."
+            ],
+            "a": "Die Notaufnahme ist groß.",
+            "why": "آخر كلمة مؤنثة → die Notaufnahme."
+          },
+          {
+            "q": "«عندي ألم أسنان منذ أمس»؟",
+            "choices": [
+              "Ich habe seit gestern Zahnschmerzen.",
+              "Ich habe seit gestern Zahnschmerz.",
+              "Ich habe seit gestern Zahnschmerze."
+            ],
+            "a": "Ich habe seit gestern Zahnschmerzen.",
+            "why": "الألم جمعاً: Zahnschmerzen."
           }
         ],
         "passingScore": 0.75
@@ -187,20 +802,64 @@
       {
         "items": [
           {
-            "q": "«أخصائي»؟",
-            "a": "der Spezialist"
+            "q": "«هو لا يُسمح له بلعب كرة القدم»؟",
+            "choices": [
+              "Er darf nicht Fußball spielen.",
+              "Er dürfen nicht Fußball spielen.",
+              "Er darf nicht spielen Fußball."
+            ],
+            "a": "Er darf nicht Fußball spielen.",
+            "why": "er darf بلا ‑t · المصدر آخراً."
           },
           {
-            "q": "«المرهم للجرح»؟",
-            "a": "Die Salbe ist für die Wunde."
+            "q": "«يجب أن تذهبوا إلى الطوارئ» (رسمي)؟",
+            "choices": [
+              "Sie müssen in die Notaufnahme fahren.",
+              "Sie müssen fahren in die Notaufnahme.",
+              "Sie müssen in die Notaufnahme fahrt."
+            ],
+            "a": "Sie müssen in die Notaufnahme fahren.",
+            "why": "müssen ثانياً والمصدر fahren آخراً."
           },
           {
-            "q": "«يؤلم»؟",
-            "a": "Es schmerzt."
+            "q": "«هل تستطيع أن تساعدني؟»؟",
+            "choices": [
+              "Kannst du mir helfen?",
+              "Kannst du mich helfen?",
+              "Kannst du helfen mir?"
+            ],
+            "a": "Kannst du mir helfen?",
+            "why": "helfen + mir · المصدر آخراً."
           },
           {
-            "q": "«ذلك يساعدني» — أي حالة؟",
-            "a": "Das hilft mir (Dativ)"
+            "q": "«الجرح يؤلم»؟",
+            "choices": [
+              "Die Wunde schmerzt.",
+              "Die Wunde schmerzen.",
+              "Die Wunde schmerze."
+            ],
+            "a": "Die Wunde schmerzt.",
+            "why": "schmerzen → schmerzt مع المفرد."
+          },
+          {
+            "q": "«طبيب الأسرة لطيف»؟",
+            "choices": [
+              "Der Hausarzt ist nett.",
+              "Die Hausarzt ist nett.",
+              "Das Hausarzt ist nett."
+            ],
+            "a": "Der Hausarzt ist nett.",
+            "why": "der Arzt → der Hausarzt — الجنس من آخر كلمة."
+          },
+          {
+            "q": "«النتيجة جيدة»؟",
+            "choices": [
+              "Das Ergebnis ist gut.",
+              "Der Ergebnis ist gut.",
+              "Die Ergebnis ist gut."
+            ],
+            "a": "Das Ergebnis ist gut.",
+            "why": "das Ergebnis — محايد."
           }
         ],
         "passingScore": 0.75
@@ -209,53 +868,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Beim Arzt: Ich habe seit gestern Zahn- und Bauchschmerzen, Schnupfen, und es schmerzt. Der Rat: Sie müssen zum Spezialisten, Sie dürfen nicht rauchen, nehmen Sie Tropfen und Salbe. Das hilft!",
-      "ar": "عند الطبيب: عندي منذ أمس ألم سن وبطن وزكام ويؤلم. النصيحة: يجب أن تذهب للأخصائي، لا يجوز أن تدخّن، تناول القطرات والمرهم. ذلك يساعد!"
+      "de": "Ich habe seit gestern Zahnschmerzen. · Was soll ich machen? — Sie müssen zum Spezialisten. · Sie sollen eine Salbe nehmen. · Sie dürfen nicht rauchen. · Du musst nicht kommen. · Darf ich am Montag in die Schule gehen? — Ja, du darfst. — Das hilft mir. · Die Salbe hilft dem Patienten. — der Krankenwagen · die Notaufnahme · der Zahnschmerz · der Hausarzt · der Unfall · der Schnupfen · die Tropfen · das Ergebnis",
+      "ar": "الأفعال الناقصة الخمسة في صندوق واحد: muss · kann · will/möchte من قبل + darf (الإذن/المنع: ich darf · du darfst · wir dürfen) وsoll (النصيحة: ich soll · du sollst · wir sollen) — الناقص في المكان الثاني والمصدر في الآخر بلا zu، وفي السؤال يتقدّم (Darf ich …?) · nicht dürfen = ممنوع، nicht müssen = لا حاجة · helfen + Dativ (mir · dem Patienten) · جنس المركّب = جنس آخر كلمة (der Wagen → der Krankenwagen) · الاسم الضعيف: zum Spezialisten · dem Patienten · الألم جمعاً: Zahnschmerzen · Bauchschmerzen"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich muss gehen zum Arzt~~ / ~~Sie dürfen rauchen nicht~~",
-          "ar": "المساعد يقعد في **المركز** والفعل الأخير يُقال **آخر** الجملة (Sandwich/Glocke كاملة!)"
+          "de": "~~Sie müssen nicht rauchen.~~ (للمنع) · ~~Ich darf gehe in die Schule.~~ · ~~Du darf nicht rauchen.~~",
+          "ar": "المنع بـnicht dürfen لا nicht müssen — والمصدر في الآخر — وdarf/soll تتصرّف: du darfst · du sollst · wir dürfen"
         },
-        "whyArabicSpeakerFails": "«يجب أن أذهب» فعلان متجاوران بالعربية؛ الألماني يفرّقهما: **muss** (ثاني الكلمة) + … + **gehen** (آخر الكلمة) — المساعد والفعل يصنعان قلنسوة تضم الجملة كلها (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«لا يجب أن تدخّن» في العربية منعٌ، فينقلها المتعلم حرفياً بـmüssen nicht — وهي في الألمانية «لا حاجة» (Du musst nicht kommen = لست مضطراً)؛ المنع بـdürfen: Sie dürfen nicht rauchen. ثم تصرّف العربية الفعلين («يُسمح لي أن أذهبَ») فيضع المتعلم الثاني مصرّفاً بعد الناقص مباشرة — والألمانية تُبقيه مصدراً في آخر الجملة كما في الوحدتين 5 و8: Ich darf in die Schule gehen. و«مسموح/ينبغي» كلمة واحدة لكل فاعل في العربية — وفي الألمانية du darfst · wir dürfen · du sollst — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich muss zum Arzt gehen. · Sie dürfen nicht rauchen.",
-          "ar": "يجب أن أذهب إلى الطبيب. · لا يجوز أن تدخّن."
+          "de": "Sie dürfen nicht rauchen. · Ich darf in die Schule gehen. · Du darfst nicht rauchen.",
+          "ar": "ممنوع عليك التدخين · مسموح لي بالذهاب إلى المدرسة · لا يُسمح لك بالتدخين"
         },
         "exercise": {
-          "q": "أكمل: Ich muss die Tablette ___ (nehmen) — الترتيب.",
-          "a": "Ich muss die Tablette nehmen."
+          "q": "Wir ___ hier nicht rauchen. (dürfen — wir)",
+          "a": "dürfen"
         }
       },
       {
         "commonError": {
-          "de": "~~Das hilft mich~~ / ~~Das hilft der Patient~~",
-          "ar": "helfen + **Dativ** (يساعد + لمن؟) — مراجعة u5-d2 في سياق الطبيب"
+          "de": "~~Das hilft mich.~~ · ~~Die Salbe hilft den Patient.~~ · ~~Kannst du mich helfen?~~",
+          "ar": "helfen يأخذ الداتيف دائماً: mir · dir · ihm · ihr · dem Patienten (‑en للاسم الضعيف)"
         },
-        "whyArabicSpeakerFails": "«يساعدني» مفعول به مرفوع بالعربية؛ الألماني يضع المفيد في حالة Dativ: hilft **mir** (nicht mich) — «للأقوى عند الميناء» تتكرر بالفعل العابر helfen (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«يساعدني» في العربية مفعولٌ به مباشر، فيضع المتعلم الأكوزاتيف mich/den — والألمانية تجعل helfen (كـdanken وgefallen وweh tun من الوحدة 9 وهذه الوحدة) فعلاً بالداتيف: Das hilft mir · Die Tropfen helfen dem Patienten · Kannst du mir helfen? — والاسم الضعيف (Patient · Spezialist) يأخذ ‑en بعد الأداة في غير الرفع: dem Patienten · zum Spezialisten — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Das hilft mir. · Das hilft dem Patienten.",
-          "ar": "ذلك يساعدني. · ذلك يساعد المريض."
+          "de": "Das hilft mir. · Die Salbe hilft dem Patienten. · Kannst du mir helfen?",
+          "ar": "هذا يساعدني · المرهم يساعد المريض · هل تستطيع أن تساعدني؟"
         },
         "exercise": {
-          "q": "أكمل: Das hilft ___ (ich)",
-          "a": "mir"
+          "q": "Die Tropfen helfen ___ sehr. (er — الداتيف)",
+          "a": "ihm"
         }
       },
       {
         "commonError": {
-          "de": "~~die Krankenwagen~~ / ~~der Notaufnahme~~ / ~~das Zahnschmerz~~",
-          "ar": "جنس الكلمة المركّبة = جنس **آخر** كلمة: Wagen=der → der Krankenwagen · Aufnahme=die → die Notaufnahme · Schmerz=der → der Zahnschmerz"
+          "de": "~~die Krankenwagen~~ (المفرد) · ~~der Notaufnahme~~ · ~~das Zahnschmerz~~ · ~~die Hausarzt~~",
+          "ar": "جنس الكلمة المركّبة = جنس آخر كلمة: der Wagen → der Krankenwagen · die Aufnahme → die Notaufnahme · der Schmerz → der Zahnschmerz · der Arzt → der Hausarzt"
         },
-        "whyArabicSpeakerFails": "المركّب كلمة واحدة بالعربية بلا جنس ظاهر؛ الألماني يرث الجنس من **آخر** مكوّن: سيارة+إسعاف = Wagen (der) — القاعدة الذهبية للمركّبات تحل مصيدة جنس بلا حفظ (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "المركّب الألماني كلمتان في كلمة، والعربية تضع المضاف أولاً («سيارة الإسعاف» — المؤنث «سيارة» أولاً)، فيأخذ المتعلم الجنس من الكلمة الأولى أو من معناها العربي: ~~die Krankenwagen~~ قياساً على «سيارة». والألمانية تأخذ الجنس والجمع من آخر كلمة دائماً: der Wagen → der Krankenwagen (الجمع die Krankenwagen) · die Aufnahme → die Notaufnahme · der Schmerz → der Zahnschmerz (die Zahnschmerzen) · der Arzt → der Hausarzt (die Hausärzte) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "der Krankenwagen · die Notaufnahme · der Zahnschmerz",
-          "ar": "الإسعاف · الطوارئ · ألم السن (بأجنستها)"
+          "de": "der Krankenwagen · die Notaufnahme · der Zahnschmerz · der Hausarzt",
+          "ar": "سيارة الإسعاف · غرفة الطوارئ · ألم السن · طبيب الأسرة"
         },
         "exercise": {
-          "q": "أكمل: der Tisch + die Lampe → ___ Tischlampe (der/die/das)?",
-          "a": "die Tischlampe (Lampe = die)"
+          "q": "___ Bauchschmerz (der/die/das — من der Schmerz)",
+          "a": "der"
         }
       }
     ],
@@ -271,7 +930,8 @@
       "bauchschmerz",
       "schmerzen",
       "tropfen",
-      "salbe"
+      "salbe",
+      "ergebnis"
     ]
   },
   "gReferences": {
@@ -301,7 +961,8 @@
     "word-bauchschmerz",
     "word-schmerzen",
     "word-tropfen",
-    "word-salbe"
+    "word-salbe",
+    "word-ergebnis"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-modal-fix",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Sie müssen zum Spezialisten. · Sie dürfen nicht rauchen. · Was soll ich machen?",
+    "ar": "الأفعال الناقصة عند الطبيب — الخمسة في صندوق واحد: muss · kann · will/möchte من قبل، واليوم darf (الإذن والمنع) وsoll (النصيحة) · الفعل الناقص في المكان الثاني والمصدر في الآخر · nicht dürfen = ممنوع ≠ nicht müssen = لا حاجة"
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u11-d5",
+    "a1-u11-d6",
+    "a1-u12-d2",
+    "a1-u12-d6"
+  ],
+  "payload": {
+    "topicAr": "اليوم تشرح شكواك وتفهم نصيحة الطبيب — وتسمع منه الأفعال الناقصة كلها: Ich habe seit gestern Zahnschmerzen. · Was soll ich machen? · Sie müssen zum Spezialisten. · Sie sollen eine Salbe nehmen. · Sie dürfen nicht rauchen. · Darf ich am Montag in die Schule gehen? ومعه كلمات اليوم: der Patient · der Hausarzt · der Spezialist · die Notaufnahme · der Krankenwagen · der Unfall · der Schnupfen · der Zahnschmerz · der Bauchschmerz · schmerzen · der Tropfen · die Salbe · das Ergebnis.",
+    "sceneAr": "مكالمة الجمعة 10 أبريل: يوسف أخذ الحقنة عند طبيب الأسرة — آلمت قليلاً فقط. في غرفة الانتظار مرضى كثيرون، ورجل أصابه حادث بالدراجة: Sie müssen in die Notaufnahme — فجاءت سيارة الإسعاف. الطبيب رأى جرح الإصبع: النتيجة جيدة، لكنه يؤلم قليلاً — Ich soll eine Salbe nehmen · ich darf drei Tage kein Fußball spielen. ولينا زكام وأخوها ألم أسنان: Muss er zum Spezialisten? — والطبيبة سمحت: Ich darf am Montag in die Schule gehen.",
+    "examples": [
+      {
+        "de": "Ich muss zum Hausarzt gehen. · Sie müssen zum Spezialisten.",
+        "ar": "يجب أن أذهب إلى طبيب الأسرة · عليك (حضرتك) بالأخصائي — muss في المكان الثاني وgehen في الآخر؛ ومع الاتجاه (zum …) يُحذف gehen كثيراً: Sie müssen zum Spezialisten."
+      },
+      {
+        "de": "Was soll ich machen? — Sie sollen eine Salbe nehmen.",
+        "ar": "ماذا أفعل؟ (ما نصيحتك؟) — خذ مرهماً — sollen: تطلب النصيحة به وتنقل بها كلام الطبيب: ich soll · du sollst · er/sie soll · wir/Sie sollen"
+      },
+      {
+        "de": "Darf ich am Montag in die Schule gehen? — Ja, du darfst.",
+        "ar": "هل يُسمح لي بالذهاب إلى المدرسة يوم الاثنين؟ — نعم، مسموح — dürfen = الإذن: ich darf · du darfst · er/sie darf · wir/Sie dürfen — وdarfst وحدها حين يُفهم الفعل"
+      },
+      {
+        "de": "Sie dürfen nicht rauchen. · Du musst nicht kommen.",
+        "ar": "ممنوع عليك التدخين · لست مضطراً للمجيء — nicht dürfen = ممنوع، وnicht müssen = لا حاجة — ليستا سواء"
+      },
+      {
+        "de": "Ich kann heute nicht arbeiten. · Ich will zu Hause bleiben.",
+        "ar": "لا أستطيع أن أعمل اليوم · أريد أن أبقى في البيت — können وwollen من قبل: القاعدة نفسها، الفعل الناقص ثانياً والمصدر آخراً"
+      },
+      {
+        "de": "Ich darf drei Tage kein Fußball spielen, aber ich kann fernsehen.",
+        "ar": "لا يُسمح لي بكرة القدم ثلاثة أيام، لكن أستطيع أن أشاهد التلفاز — kein مع الاسم (kein Fußball) وnicht مع الفعل (nicht rauchen)، والمصدر في الآخر في الجملتين"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأول: أين muss وأين gehen؟ وفي الجملة الثانية: أين الفعل الثاني أصلاً — ولماذا فُهم بلا قول؟ (2) في الثاني والثالث: ich soll · ich darf — هل لهما نهاية؟ وقارن بـdu sollst · du darfst: ما الذي أُضيف؟ وبـwir dürfen: ما الذي تغيّر في الحركة؟ (3) في الرابع: Sie dürfen nicht rauchen وDu musst nicht kommen — أيهما «ممنوع» وأيهما «لا حاجة»؟ (4) في الثالث: السؤال بلا كلمة سؤال — بم بدأ؟",
+    "ruleDe": "ich darf · du darfst · er/sie/es darf · wir/sie/Sie dürfen — ich soll · du sollst · er/sie/es soll · wir/sie/Sie sollen — Was soll ich machen? · Sie sollen eine Salbe nehmen. · Darf ich am Montag in die Schule gehen? · Sie dürfen nicht rauchen. · Du musst nicht kommen. · Sie müssen zum Spezialisten.",
+    "ruleAr": "عند الطبيب تحتاج الأفعال الناقصة كلها — في صندوق واحد بثلاث خطوات: (1) الصيغ: dürfen (الإذن/المنع): ich darf · du darfst · er/sie/es darf · wir dürfen · sie/Sie dürfen — وsollen (النصيحة ونقل الطلب): ich soll · du sollst · er/sie/es soll · wir sollen · sie/Sie sollen. لاحظ كما في können وmüssen (الوحدة 8) وmöchte وwollen (الوحدة 5): ich وer/sie/es سواء بلا ‑t، والحركة تتغيّر في المفرد عند dürfen (darf ← dürfen) ولا تتغيّر عند sollen (soll ← sollen). (2) الترتيب واحد للخمسة: الفعل الناقص في المكان الثاني، والمصدر في آخر الجملة بلا zu — وفي سؤال نعم/لا يتقدّم الفعل الناقص: Darf ich …? · Muss er zum Spezialisten? — ومع اتجاهٍ (zum Arzt · in die Notaufnahme · nach Hause) يُحذف gehen/fahren كثيراً: Sie müssen in die Notaufnahme. (3) المعنى: muss = يجب · kann = يستطيع/يمكن · will/möchte = يريد/يودّ · soll = نصيحة أو «ماذا أفعل؟» · darf = مسموح — والنفي: nicht dürfen = ممنوع (Sie dürfen nicht rauchen)، وnicht müssen = لا حاجة (Du musst nicht kommen)، وkein مع الاسم (kein Fußball spielen).",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «ممنوع» و«مسموح» يسبقان الفعل في العربية كما تسبق darf/darf nicht المصدرَ في الألمانية — عون. (2) «ماذا أفعل؟» طلباً للنصيحة = Was soll ich machen? — الصيغة نفسها سؤالاً بـW — عون. (3) الترتيب المعروف من الوحدتين 5 و8 (الناقص ثانياً والمصدر آخراً) لا يتغيّر مع darf وsoll — عون. وما يختلف ثلاثة: (1) «لا يجب أن تدخّن» في العربية تعني المنع، فينقلها المتعلم حرفياً: ~~Sie müssen nicht rauchen.~~ — وهي في الألمانية «لا حاجة» لا «ممنوع»؛ المنع بـdürfen: Sie dürfen nicht rauchen. (2) العربية تصرّف الفعلين («يُسمح لي أن أذهبَ») فيضع المتعلم الثاني مصرّفاً وبعد الناقص مباشرة: ~~Ich darf gehe in die Schule.~~ — والألمانية تُبقيه مصدراً في الآخر: Ich darf in die Schule gehen. (3) «يجب» و«ينبغي» و«مسموح» كلماتٌ واحدة لا تتغيّر مع الفاعل، فيُبقي المتعلم darf/soll لكل فاعل: ~~Du darf nicht rauchen.~~ · ~~Wir darf kommen.~~ — وهي تتصرّف: du darfst · wir dürfen · du sollst — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "sollen اليوم مضارعاً: Sie sollen viel trinken · Was soll ich machen? — والنصيحة الألطف بصيغة «ينبغي لك» (صيغة الاقتراح) من المستوى A2؛ اليوم يكفي sollen أو الأمر المهذّب: Trinken Sie viel!",
+      "ماضي الأفعال الناقصة (كان يجب · كان مسموحاً) من المستوى A2 — اليوم تحكي ما قاله الطبيب بالمضارع: Der Arzt hat gesagt: Sie müssen in die Notaufnahme.",
+      "nicht müssen = «لا حاجة» (الوحدة 8) تبقى كما هي: Du musst nicht kommen — فلا تستعملها للمنع؛ المنع اليوم بـnicht dürfen وحدها.",
+      "حذف المصدر بعد الناقص (Sie müssen zum Spezialisten · Ja, du darfst) للاتجاهات ولجواب نعم/لا القصير — ومع فعلٍ آخر أبقِ المصدر: Ich darf am Montag in die Schule gehen."
+    ],
+    "beads": [
+      "Sie",
+      "dürfen",
+      "nicht",
+      "rauchen."
+    ],
+    "properNouns": []
+  }
+}

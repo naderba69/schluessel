@@ -17529,6 +17529,26 @@
       "rmsDb": -16.99
     },
     {
+      "id": "word-ergebnis",
+      "file": "words/audio/de-DE/word-ergebnis.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Ergebnis.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 1256,
+      "sizeBytes": 6037,
+      "hash": "sha256:cf2ae8b03c575a3308eec52f51a45b826dfd3f24bbf8fca9c03b165997b6881f",
+      "pcmSha256": "e822d2d6faef5887752511923a98166a482f61950db72f0565763c294d7a431f",
+      "rmsDb": -17.1
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -40594,6 +40614,446 @@
       "hash": "sha256:59f801e8c173108581126c0fd0db1764e3c35f694708e3a65e6e2610fbba42ef",
       "pcmSha256": "21324725a45379c5b68f2746cbc1f967eefc08fa6c2cc3b141ef615b13ddc7d7",
       "rmsDb": -17.16
+    },
+    {
+      "id": "kd-1",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Lena! Ich war heute beim Hausarzt. Die Spritze hat nur kurz wehgetan!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 5378,
+      "sizeBytes": 24109,
+      "hash": "sha256:0e532863d54b198004ea3571547585864f5f2b8e8081a894d2b34e74ece13e79",
+      "pcmSha256": "9922aba9e84d40d84d5996ad46ec445c3140a2758f4672ab10ce1057d104af41",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "kd-2",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! Und wie war es beim Arzt? Erzähl!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 3256,
+      "sizeBytes": 15284,
+      "hash": "sha256:29a29d9a66208daee41b22e5fbcbf69fb2ededcd521d8126d594930565625e3c",
+      "pcmSha256": "2ad20a0234a555e1cf4df06d497c02b41ebaee3cccd4f5a5f605d67d53ce8daa",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "kd-3",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Viele Patienten! Ich habe eine Stunde gewartet. Ein Mann hatte einen Unfall mit dem Fahrrad.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 5970,
+      "sizeBytes": 27009,
+      "hash": "sha256:b40e6d55dcaf367e2368ea91a3982bf3561ec5e8c5f40cbfa1142a5eaa617ee7",
+      "pcmSha256": "e4bfae15bbf365460deb2da68442c0c45d4d2ccf5d287fc0e8630e1d8ea7c822",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "kd-4",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ein Unfall? Was hat der Arzt gemacht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 2904,
+      "sizeBytes": 13643,
+      "hash": "sha256:4dd885013f9e51d5f11aee176b25e9be009fe71744d06bda154210e95533aa8d",
+      "pcmSha256": "295161724e06289a67ef0a5f43ead59dc600b16a27eaab2edd6b8ec252607838",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "kd-5",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Hausarzt hat gesagt: Das kann ich nicht machen. Sie müssen in die Notaufnahme. Der Krankenwagen ist gekommen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 7061,
+      "sizeBytes": 32369,
+      "hash": "sha256:aa73caf093c5fdb0299a556957294ec61dc1fd7b4c4da664ab830c159f78eaf7",
+      "pcmSha256": "fa3a9f0e77d527d77420120a5ac065ae4a02c01b36b18f2686354009cf4badad",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "kd-6",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zum Glück! Und deine Wunde am Finger?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 3080,
+      "sizeBytes": 14429,
+      "hash": "sha256:fc007c053416709a8e720b267eca0331ab66b5ef90c8ecc5961801601849f5cd",
+      "pcmSha256": "a237daea412ece038a693204d66fec02ae0c59ddd0442aa4b5d7d3d3c86ed9a1",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "kd-7",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 167,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Arzt hat sie gesehen. Das Ergebnis ist gut! Aber die Wunde schmerzt noch ein bisschen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 5738,
+      "sizeBytes": 26204,
+      "hash": "sha256:8a9e5008e31bbcb6622e7a14bd2f7b150f0f88b1f492159bdd2400af351168c9",
+      "pcmSha256": "f2d4eae0cc8f742b3790b0234f33ff34932384f9fd8a85ba5faac1873dd99822",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "kd-8",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 108,
+        "lengthScale": 1.32
+      },
+      "textDe": "Was sollst du machen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 2216,
+      "sizeBytes": 10512,
+      "hash": "sha256:877dd1cc2eb3728408addc5c96cab4c6cfdac9a9d4bbdf8db81b3db81edf07d7",
+      "pcmSha256": "ce339a5d6515309b6c8ae137a4a2efe4ac984f0956ea53449511c657d74f24eb",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "kd-9",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 164,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich soll eine Salbe nehmen, am Morgen und am Abend. Und ich darf drei Tage kein Fußball spielen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 6597,
+      "sizeBytes": 30444,
+      "hash": "sha256:908024472baa356811b0024e64676c1acbb8112efe58e71f519a074250c6d4a0",
+      "pcmSha256": "68dfb5507c72915c67422e337606bfb0b0fd6bde0cdcd2fae5ce6750030cdfd9",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "kd-10",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 133,
+        "lengthScale": 1.32
+      },
+      "textDe": "Kein Fußball? Das ist nicht gut für dich!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 3608,
+      "sizeBytes": 16714,
+      "hash": "sha256:29ee720eb6ed8a2fcb3c7723ba7d33e7ac9a02c529d5e2dfa32f3a83299a2ade",
+      "pcmSha256": "0f63d36b482acb185b97d6df629e0beb1c11432896a8cc2bf1c6fded30d113b9",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "kd-11",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 143,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, sehr! Und du? Wie fühlst du dich heute?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 3764,
+      "sizeBytes": 17130,
+      "hash": "sha256:e1cfb6bdfaa4bcb5e6516f3ed46ab76242d12a4d8e559c9498abb3116425baa2",
+      "pcmSha256": "558c9a2bd132d550c85fcc3f74f923edea6e4d0e07adf92a570770826420b469",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "kd-12",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Besser. Aber jetzt habe ich Schnupfen. Meine Nase läuft und läuft.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 5000,
+      "sizeBytes": 23284,
+      "hash": "sha256:d9555a73d6765121775493f230954299b4b1fb22cb6199d6c2174d8515c0b86e",
+      "pcmSha256": "070a6034124e816a256edaea802e0087f167859c2cab3be92215cb927b5629bc",
+      "rmsDb": -17.32
+    },
+    {
+      "id": "kd-13",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 179,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hast du Tropfen für die Nase?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 2011,
+      "sizeBytes": 9291,
+      "hash": "sha256:e78df11e237eb49b13b86682eaff47352363bf69e07231627dbec086a3f7f7d3",
+      "pcmSha256": "0266fbd39e41078ddd410f9ee551f348a09bdd92d4c49cdd63e9b2d7a2e14500",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "kd-14",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 112,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, meine Mutter hat Tropfen gekauft. Und mein Bruder hat heute Zahnschmerzen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 6440,
+      "sizeBytes": 29910,
+      "hash": "sha256:3a9f23e4f9700dcc3c81c82f10c5b2ac697a11afe8ab3d3f6f1fa5c5cb1735eb",
+      "pcmSha256": "f65dc21e1abc87a0a3565e32b435e078af56fa9a5e03663cba4ee18afa672e67",
+      "rmsDb": -17.44
+    },
+    {
+      "id": "kd-15",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 96,
+        "lengthScale": 1.32
+      },
+      "textDe": "Zahnschmerzen? Muss er zum Spezialisten?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 3126,
+      "sizeBytes": 14372,
+      "hash": "sha256:83a2fc37d5ddd5a35ab256debfc4040086f19167220f30106f0adfb1a3587c8e",
+      "pcmSha256": "8aca9db7d116ee5baea78085811a5dcbbb17978d5d89b9e2b7ab1ea2e99485fc",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "kd-16",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 136,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, morgen. Der Hausarzt kann das nicht machen. Mein Vater fährt ihn hin.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 5720,
+      "sizeBytes": 26480,
+      "hash": "sha256:3efe669be6f35cf1f1348cc9bcec826c6b41e1c9d50c9dbd278b824bc296f43e",
+      "pcmSha256": "353efe1b5f104bcaa45c8faf24c722482b778e49ed07b0e39c754dce2c529f29",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "kd-17",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 188,
+        "lengthScale": 1.32
+      },
+      "textDe": "Alle sind krank bei euch! Darfst du am Montag in die Schule gehen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 4147,
+      "sizeBytes": 19191,
+      "hash": "sha256:a1265fff1afa5396b88222af8cf38c7d5d63366ec6270edbd65e1c170ef56f78",
+      "pcmSha256": "2a32706fe9b5bb31367248f94569ff0571318a08e35d87d4592b11d476fba944",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "kd-18",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 158,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, die Ärztin hat es erlaubt. Ich darf am Montag gehen. Aber ich soll noch nicht schwimmen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 6456,
+      "sizeBytes": 29908,
+      "hash": "sha256:159f50c1ad505b3454fa33ff9902873daae0ef0ad4627944987a44e8d72106af",
+      "pcmSha256": "ffe84fe0fc135d2123eb1bf4fec492cd8451717be3788613db6f9598e3ce8421",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "kd-19",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 112,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut. Und keine Bauchschmerzen mehr?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 2673,
+      "sizeBytes": 12142,
+      "hash": "sha256:65d2ae68d5f7f5792b7f58ea7fac69d8dbb41acfda47c4b3b7f3a8e154c81882",
+      "pcmSha256": "b061722c5d5cabdd97f128ef71cf708067b111822043628bc45740cd1edf2cfa",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "kd-20",
+      "file": "audio/scripts/a1-u11-d5-beim-hausarzt/kd-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 119,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, keine Bauchschmerzen, kein Fieber. Nur der Schnupfen. Bald bin ich wieder fit!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u11-d5"
+      ],
+      "durationMs": 6552,
+      "sizeBytes": 29993,
+      "hash": "sha256:601970cdbfc246a3cfdd8a1cad5ed970fbeca1c48f50e63f61cfe3d504b815cc",
+      "pcmSha256": "942c7daa128952952635ae64725892771ccc7f8e17b054d366371be1f4b6fc0f",
+      "rmsDb": -17.32
     }
   ],
   "characterVoices": {

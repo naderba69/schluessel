@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u11-d5-beim-hausarzt",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Beim Hausarzt",
+    "ar": "عند طبيب الأسرة — مكالمة فيديو مساء الجمعة 10 أبريل (اليوم الثاني عشر بتونس): يوسف أخذ الحقنة عند طبيب الأسرة — آلمت قليلاً فقط · مرضى كثيرون وانتظار ساعة · رجل أصابه حادث بالدراجة: Sie müssen in die Notaufnahme — وجاءت سيارة الإسعاف · الطبيب رأى جرح الإصبع: النتيجة جيدة لكنه يؤلم قليلاً — عليه مرهم صباحاً ومساءً، ولا كرة قدم ثلاثة أيام · لينا في يومها الثالث: زكام والأنف يسيل، أمها اشترت قطرات · أخوها عنده ألم أسنان ويذهب غداً إلى الأخصائي · تسمح لها الطبيبة بالمدرسة الاثنين لكن بلا سباحة · لا ألم بطن ولا حمّى — قريباً fit"
+  },
+  "usedIn": [
+    "a1-u11-d5"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "kd-1",
+      "speaker": "yusuf",
+      "text": "Hallo Lena! Ich war heute beim Hausarzt. Die Spritze hat nur kurz wehgetan!",
+      "direction": "يوسف يفتح (الجمعة 10 أبريل — اليوم الثاني عشر بتونس، مكالمة فيديو مساءً): beim Hausarzt · Die Spritze hat nur kurz wehgetan — وعد الأمس"
+    },
+    {
+      "id": "kd-2",
+      "speaker": "lena",
+      "text": "Super! Und wie war es beim Arzt? Erzähl!",
+      "direction": "لينا: Wie war es beim Arzt? Erzähl!"
+    },
+    {
+      "id": "kd-3",
+      "speaker": "yusuf",
+      "text": "Viele Patienten! Ich habe eine Stunde gewartet. Ein Mann hatte einen Unfall mit dem Fahrrad.",
+      "direction": "يوسف: Viele Patienten · eine Stunde gewartet · Ein Mann hatte einen Unfall (hatte — الماضي البسيط من u11-d3)"
+    },
+    {
+      "id": "kd-4",
+      "speaker": "lena",
+      "text": "Ein Unfall? Was hat der Arzt gemacht?",
+      "direction": "لينا: Was hat der Arzt gemacht?"
+    },
+    {
+      "id": "kd-5",
+      "speaker": "yusuf",
+      "text": "Der Hausarzt hat gesagt: Das kann ich nicht machen. Sie müssen in die Notaufnahme. Der Krankenwagen ist gekommen.",
+      "direction": "يوسف ينقل كلام الطبيب: Sie müssen in die Notaufnahme (المودال + المصدر محذوف — قطعة) · Der Krankenwagen ist gekommen (sein)"
+    },
+    {
+      "id": "kd-6",
+      "speaker": "lena",
+      "text": "Zum Glück! Und deine Wunde am Finger?",
+      "direction": "لينا: Zum Glück! · deine Wunde am Finger؟"
+    },
+    {
+      "id": "kd-7",
+      "speaker": "yusuf",
+      "text": "Der Arzt hat sie gesehen. Das Ergebnis ist gut! Aber die Wunde schmerzt noch ein bisschen.",
+      "direction": "يوسف: Das Ergebnis ist gut (النواة) · die Wunde schmerzt noch (schmerzen)"
+    },
+    {
+      "id": "kd-8",
+      "speaker": "lena",
+      "text": "Was sollst du machen?",
+      "direction": "لينا تسأل بـsollen: Was sollst du machen? — سؤال النصيحة"
+    },
+    {
+      "id": "kd-9",
+      "speaker": "yusuf",
+      "text": "Ich soll eine Salbe nehmen, am Morgen und am Abend. Und ich darf drei Tage kein Fußball spielen.",
+      "direction": "يوسف: Ich soll eine Salbe nehmen (sollen = النصيحة) · ich darf … kein Fußball spielen (dürfen = الإذن/المنع)"
+    },
+    {
+      "id": "kd-10",
+      "speaker": "lena",
+      "text": "Kein Fußball? Das ist nicht gut für dich!",
+      "direction": "لينا: Das ist nicht gut für dich!"
+    },
+    {
+      "id": "kd-11",
+      "speaker": "yusuf",
+      "text": "Ja, sehr! Und du? Wie fühlst du dich heute?",
+      "direction": "يوسف يعيد سؤال الأمس: Wie fühlst du dich heute?"
+    },
+    {
+      "id": "kd-12",
+      "speaker": "lena",
+      "text": "Besser. Aber jetzt habe ich Schnupfen. Meine Nase läuft und läuft.",
+      "direction": "لينا: jetzt habe ich Schnupfen · Meine Nase läuft"
+    },
+    {
+      "id": "kd-13",
+      "speaker": "yusuf",
+      "text": "Hast du Tropfen für die Nase?",
+      "direction": "يوسف: Tropfen für die Nase؟"
+    },
+    {
+      "id": "kd-14",
+      "speaker": "lena",
+      "text": "Ja, meine Mutter hat Tropfen gekauft. Und mein Bruder hat heute Zahnschmerzen!",
+      "direction": "لينا: meine Mutter hat Tropfen gekauft · mein Bruder hat Zahnschmerzen (الألم جمعاً)"
+    },
+    {
+      "id": "kd-15",
+      "speaker": "yusuf",
+      "text": "Zahnschmerzen? Muss er zum Spezialisten?",
+      "direction": "يوسف: Muss er zum Spezialisten? (zum + ‑en: الاسم الضعيف)"
+    },
+    {
+      "id": "kd-16",
+      "speaker": "lena",
+      "text": "Ja, morgen. Der Hausarzt kann das nicht machen. Mein Vater fährt ihn hin.",
+      "direction": "لينا: morgen · Der Hausarzt kann das nicht machen · Mein Vater fährt ihn hin"
+    },
+    {
+      "id": "kd-17",
+      "speaker": "yusuf",
+      "text": "Alle sind krank bei euch! Darfst du am Montag in die Schule gehen?",
+      "direction": "يوسف: Darfst du am Montag in die Schule gehen? — dürfen في السؤال"
+    },
+    {
+      "id": "kd-18",
+      "speaker": "lena",
+      "text": "Ja, die Ärztin hat es erlaubt. Ich darf am Montag gehen. Aber ich soll noch nicht schwimmen.",
+      "direction": "لينا: Ich darf am Montag gehen · ich soll noch nicht schwimmen — darf/soll معاً"
+    },
+    {
+      "id": "kd-19",
+      "speaker": "yusuf",
+      "text": "Gut. Und keine Bauchschmerzen mehr?",
+      "direction": "يوسف: keine Bauchschmerzen mehr?"
+    },
+    {
+      "id": "kd-20",
+      "speaker": "lena",
+      "text": "Nein, keine Bauchschmerzen, kein Fieber. Nur der Schnupfen. Bald bin ich wieder fit!",
+      "direction": "لينا تختم: keine Bauchschmerzen, kein Fieber. Nur der Schnupfen. Bald bin ich wieder fit!"
+    }
+  ]
+}
