@@ -285,10 +285,13 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(cs.find((c) => c.lessonId === "a1-u12-d4")).toMatchObject({
       status: "done", missing: [], headwords: ["zum Beispiel/z. B.", "Satz, -ä, e", "glauben"], size: 15,
     });
-    expect(cs.filter((c) => c.status === "done")).toHaveLength(47); // N-118: العدّ من الملف لا من الوثائق (كانت الوثائق تزيد واحداً منذ D168)
-    expect(cs.find((c) => c.status === "pending")).toMatchObject({
-      lessonId: "a1-u12-d5", headwords: ["das Thema"], missing: ["das Thema"],
+    // D180: das Thema فوق كلماته الاثنتي عشرة ⇒ 13 كلمة — آخر إسناد نواة (48/48)
+    expect(cs.find((c) => c.lessonId === "a1-u12-d5")).toMatchObject({
+      status: "done", missing: [], headwords: ["das Thema"], size: 13,
     });
+    expect(cs.filter((c) => c.status === "done")).toHaveLength(48); // N-118: العدّ من الملف لا من الوثائق (كانت الوثائق تزيد واحداً منذ D168)
+    expect(cs.find((c) => c.status === "pending")).toBeUndefined(); // D180: النواة مكتملة — لا pending
+    expect(cs.every((c) => c.missing.length === 0)).toBe(true);
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
     expect(next.lessonId).toBe("a1-u13-d1");
     expect(next.headwords).toHaveLength(15);
@@ -328,10 +331,13 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
 
   it("e-plan-source · e-plan-headword · e-plan-complete", () => {
     expect(codes(checkPlan({ ...plan, sourceList: "goethe-xx" }, ctx))).toEqual(["e-plan-source"]);
-    // إسناد pending الذي لم يُنتَج بعد: بعد D179 صار التالي a1-u12-d5 (الأخير — das Thema)؛ تغيير كلمته يترك الأصلية غير مخططة.
+    // D180: لم يبقَ إسناد pending (48/48) والمنهج يعلّم das Thema فعلاً ⇒ في النسخة: u12-d5 يعود pending وتُحرَّف كلمته،
+    // والسياق بلا كلمة thema (وإلا عدّها الحارس مغطّاة بالمنهج فلا يطلق e-plan-complete).
     const typo = clonePlan();
-    typo.core!.lessons.find((c) => c.lessonId === "a1-u12-d5")!.headwords[0] = "das Thema!";
-    const issues = checkPlan(typo, ctx);
+    const typoEntry = typo.core!.lessons.find((c) => c.lessonId === "a1-u12-d5")!;
+    typoEntry.status = "pending";
+    typoEntry.headwords[0] = "das Thema!";
+    const issues = checkPlan(typo, { ...ctx, words: words.filter((w) => w.id !== "thema") });
     expect(codes(issues)).toEqual(["e-plan-complete", "e-plan-headword"]);
     expect(issues.find((i) => i.code === "e-plan-complete")!.message).toMatch(/: das Thema$/u);
   });
@@ -370,16 +376,20 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
   });
 
   it("e-plan-core-lesson (توليف · غير موجود) · e-plan-core-load (> 18) · e-plan-text-fix", () => {
+    // D180: كل الإسنادات done — نقل إسناد done يطلق w-plan-elsewhere أيضاً ⇒ يُعاد u12-d5 إلى pending في النسخة قبل النقل
+    // وبلا كلمة thema في السياق (وإلا أطلق u12-d5 الذي يعلّمها w-plan-elsewhere فوق الخطأ المقصود)
+    const noThema = { ...ctx, words: words.filter((w) => w.id !== "thema") };
     const integ = clonePlan();
-    integ.core!.lessons.find((c) => c.lessonId === "a1-u12-d5")!.lessonId = "a1-u3-d6"; // النواة لا تُسند إلى درس التوليف (إسناد ما زال pending — نقل إسناد done يطلق w-plan-elsewhere أيضاً)
-    expect(codes(checkPlan(integ, ctx))).toEqual(["e-plan-core-lesson"]);
+    Object.assign(integ.core!.lessons.find((c) => c.lessonId === "a1-u12-d5")!, { lessonId: "a1-u3-d6", status: "pending" }); // النواة لا تُسند إلى درس التوليف
+    expect(codes(checkPlan(integ, noThema))).toEqual(["e-plan-core-lesson"]);
     const ghost = clonePlan();
-    ghost.core!.lessons.find((c) => c.lessonId === "a1-u12-d5")!.lessonId = "a1-u12-d7";
-    expect(codes(checkPlan(ghost, ctx))).toEqual(["e-plan-core-lesson"]);
+    Object.assign(ghost.core!.lessons.find((c) => c.lessonId === "a1-u12-d5")!, { lessonId: "a1-u12-d7", status: "pending" });
+    expect(codes(checkPlan(ghost, noThema))).toEqual(["e-plan-core-lesson"]);
     const heavy = clonePlan(); // a1-u9-d1 فيه 18 كلمة — أي إسناد يتجاوز السقف
-    // D179: لم يبقَ pending إلا u12-d5 بكلمة واحدة (نقلها يفرغه فيطلق w-plan-mark-done) ⇒ إسناد ثانٍ لـdas Thema إلى u9-d1 (18 + 1 > 18) من دون حذف الأصلي
+    // D179/D180: إسناد ثانٍ لـdas Thema إلى u9-d1 (18 + 1 > 18) من دون حذف الأصلي (نقل إسناد done يطلق w-plan-elsewhere)
+    heavy.core!.lessons.find((c) => c.lessonId === "a1-u12-d5")!.status = "pending"; // بلا thema في السياق يكون الإسناد done غير مُعلَّم (e-plan-taught)
     heavy.core!.lessons.push({ lessonId: "a1-u9-d1", headwords: ["das Thema"], status: "pending" });
-    expect(codes(checkPlan(heavy, ctx))).toEqual(["e-plan-core-load"]);
+    expect(codes(checkPlan(heavy, noThema))).toEqual(["e-plan-core-load"]);
     const noFile = new Set([...paths].filter((x) => x !== "words/fuss.json"));
     expect(codes(checkPlan(plan, { ...ctx, paths: noFile }))).toEqual(["e-plan-text-fix"]);
   });

@@ -17669,6 +17669,26 @@
       "rmsDb": -17.06
     },
     {
+      "id": "word-thema",
+      "file": "words/audio/de-DE/word-thema.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Thema.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 1094,
+      "sizeBytes": 4923,
+      "hash": "sha256:f40fd7f9a63ec2ae0d37193a7d9e9d9c5757d565f1780205148f109ffbf100be",
+      "pcmSha256": "97975fb73b9cf3ed18c496e10c43492825d0a81225cd97b659d68d9b8ca1a12a",
+      "rmsDb": -17.02
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -42934,6 +42954,446 @@
       "hash": "sha256:7187d3501141f73a0c03452e90a9848f2803e410518d0db757e2bba8b897151d",
       "pcmSha256": "e148beb3d4f4fed98c9e85260a98fe7373226579eb2a9d60b123a76dd6472740",
       "rmsDb": -17.15
+    },
+    {
+      "id": "ki-1",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 170,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Lena! Heute hatten wir in der Schule ein neues Thema: die Natur.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 4589,
+      "sizeBytes": 20850,
+      "hash": "sha256:f368248c24491aa0154728151e9e4cfc13f973cbfb82fcebd5a4161a4c4f4ded",
+      "pcmSha256": "2aaafe15f690a6583a5512cf8921095c74c9ff579ad83e4b4cf3922fa02be2da",
+      "rmsDb": -17
+    },
+    {
+      "id": "ki-2",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die Natur? Das ist ein schönes Thema. Was habt ihr gemacht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 4744,
+      "sizeBytes": 21988,
+      "hash": "sha256:afe51ab66fc6262dcca7ed9b138ed5f566fea00ff0294b6cb2fec7b7e778cd55",
+      "pcmSha256": "b34f3db4324ba285edf079e7c9fad6859b6e6d35f11d2ffe6848669ae82fa3cf",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "ki-3",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 156,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wir haben über Berge, Wälder und Flüsse gesprochen. Und ich habe sechs Sätze geschrieben — über das Meer in Tunesien.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 7294,
+      "sizeBytes": 33514,
+      "hash": "sha256:be4783212179715615198c0abf0938d045151531bbac9da3cc183919e56d75f5",
+      "pcmSha256": "db78e9dd82aec5d14c0725f0adda0d02ccfbe768cc7623ca51d6a0c5ccce7088",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "ki-4",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 176,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das Meer! Warst du in Tunesien am Meer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 2728,
+      "sizeBytes": 12784,
+      "hash": "sha256:c849964555b7101bd7854754f0fe75c36e6c77ff978d23aaecdb8fac9c72a2d9",
+      "pcmSha256": "931e0fb3381caf2da8ee7fb26a044bed91e1d8b914635c7c827705cdce613a14",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "ki-5",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 162,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, Tunis liegt am Meer. Der Strand ist lang, und das Wasser ist warm.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 5181,
+      "sizeBytes": 23448,
+      "hash": "sha256:163bf91e03e18e293111fe800f651070f6c0deebdf3c1aea4857257610e890fd",
+      "pcmSha256": "52dd9f48b675d3580a10921ccd215c076adb1f91c179fabde1ada847b97141df",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "ki-6",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wunderbar! Im Urlaub fahren wir in Deutschland oft an einen See.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 5064,
+      "sizeBytes": 23577,
+      "hash": "sha256:249cb5c413a0045ea18403ee4474c84f665180254b50e459b69258dfcd09daaa",
+      "pcmSha256": "db6cf0ae7549b84f6e5b484fd64d2acbff447d89097b73982b80e8a3957592d0",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "ki-7",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 161,
+        "lengthScale": 1.32
+      },
+      "textDe": "An einen See? Der See — ist das nicht das Meer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 3729,
+      "sizeBytes": 16947,
+      "hash": "sha256:48afe9dca6e466b1d8a046d59e1ece400b6e521f4ff90c8788782cfd44fbbd38",
+      "pcmSha256": "140ce3217c25dd3902f4d5c953aa2d4d9c219d17fd9cde0853e55812fedd02fc",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "ki-8",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 158,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein! Der See ist klein und ruhig, das Meer ist groß. Aber die See ist das Meer!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 6440,
+      "sizeBytes": 29699,
+      "hash": "sha256:9ccd554c1279069360c62cf14342cb334384aa3db252597c305d3bf44188e7b4",
+      "pcmSha256": "403c9fe9be286f0f5c90d4d6a571ee0bffaae78eed0f04516fa953a02dbae773",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "ki-9",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut: der See ist klein, die See ist groß. Und gibt es in Deutschland auch Strände?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 5726,
+      "sizeBytes": 25870,
+      "hash": "sha256:f28162709e763735172398752ed467a3fcac86c8be65498926b7664c7e961661",
+      "pcmSha256": "56b47e03eee4fd2042e2ff0133f55bc78a1ef53a53c7e38527dcc17e69f22d6d",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "ki-10",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 167,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, im Norden am Meer. Dort gibt es eine große Insel — da macht meine Familie oft Urlaub.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 6120,
+      "sizeBytes": 28402,
+      "hash": "sha256:4756f455c8b3767f144932a79c8e5279850608c310ed9d1ba1d29763a8945de4",
+      "pcmSha256": "d36cc03814022466a0e2f0bf4b341b1f255d555c38ad371bc09914ce5c2a0b45",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "ki-11",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hast du dort fotografiert?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 1941,
+      "sizeBytes": 9066,
+      "hash": "sha256:f16941ec91d9ed27e1c6fd04b26cac89e9e8da9b757c89860d2ce611efcac2dc",
+      "pcmSha256": "74b319ade53d9a1c56f2cad7d22c0da73e48d67780023855f038c49e4c689182",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "ki-12",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich habe viel fotografiert: den Strand, die Insel und die Landschaft. Alles ist sehr schön.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 7400,
+      "sizeBytes": 34040,
+      "hash": "sha256:f437c464e74638d3d85b9390ae7dd463dd2e2b1689d4f2d953b9f09b9c0736c0",
+      "pcmSha256": "81d348c1dd49707b52a95e641b4123db80c005046d49d54648ae7263df11f9ec",
+      "rmsDb": -17.64
+    },
+    {
+      "id": "ki-13",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 154,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich habe in Tunesien auch viel fotografiert. Am Samstag zeige ich dir die Fotos.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 5448,
+      "sizeBytes": 24923,
+      "hash": "sha256:b472ffe480f97246c37de10ccee4c1c6389a54f048b5c5b34d2508ae21b50891",
+      "pcmSha256": "d2b33f37f3b983331bc249df5f8fa8c43ba2d7729f50690d4cef58e90e9f6581",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "ki-14",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! Hast du auch ein Andenken aus Tunesien?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 3224,
+      "sizeBytes": 15183,
+      "hash": "sha256:8aea9ecc018a20ce74a4063b58b0fa1c644d87d5e8b48f456c9f789c5e0fc89a",
+      "pcmSha256": "86a0995620de89234131d96e26ce71be8d7979f0a7ffd2b8c4a481a432c8862f",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "ki-15",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich habe für dich ein kleines Andenken gekauft — vom Meer.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 3938,
+      "sizeBytes": 18423,
+      "hash": "sha256:f483fa08b605e21f107f14af37b24ed1dabf0dfbb62918d09b9457cb40553a1f",
+      "pcmSha256": "cdcb8f863eab1317902c1a2d9042fc9bd68d414db3fb9a43848807c225eb5079",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "ki-16",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke! Meine Tante hat mir eine Postkarte aus den Bergen geschickt. Die Landschaft ist so schön!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 6888,
+      "sizeBytes": 31871,
+      "hash": "sha256:fee54152cd04ceaf14ba4e90974645a66b8a5d97ff4a62ed67c648ef432304b5",
+      "pcmSha256": "4ef750ee37ffb41561aaa537587a99758330fff540bdb77f5d668f7da387cd9c",
+      "rmsDb": -17.46
+    },
+    {
+      "id": "ki-17",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Berge, Wälder, Flüsse und Seen — Deutschland hat viel Natur! Und Tunesien hat das Meer, die Strände und eine Insel.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 8849,
+      "sizeBytes": 39775,
+      "hash": "sha256:57601123fa21ad2d5807b4f3f4ab530da7adf473358a51ea6e0af2b4157169b1",
+      "pcmSha256": "28205e2b366364433e2b1c6d06cb22fef95f5b232ab4226c0aef521a7c4b6630",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "ki-18",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Dann ist das dein Thema für Samstag: deine Fotos vom Meer!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 4376,
+      "sizeBytes": 20501,
+      "hash": "sha256:2e72f2e3e6bf5b39e174039427905a83ffb734e3c1d8b93ac8c0191e3213c21a",
+      "pcmSha256": "a23b3954dfc8bb90e7c80247ed25448a391582f24057e727abf62fae00153081",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "ki-19",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gern! Und zuletzt eine Frage: Was hast du heute gemacht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 3962,
+      "sizeBytes": 18019,
+      "hash": "sha256:944bdcff3af92fc79a2776ff582105f68e7d7ed6eb222c6b3d4930cc53c25aa6",
+      "pcmSha256": "90411eceb3ee6b908ae0f640428b10d842d45947f885016de941c7ca9c36171e",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "ki-20",
+      "file": "audio/scripts/a1-u12-d5-das-thema-natur/ki-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 142,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich habe nur gelernt und mit meiner Tante telefoniert. Bis morgen, Yusuf!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d5"
+      ],
+      "durationMs": 5064,
+      "sizeBytes": 23546,
+      "hash": "sha256:549e462dbba9941a03286f1b8c5bd599f64a3512c1b80b51f5e567b8a35d953d",
+      "pcmSha256": "f9ca1959367a18ba4cd56f5a67997476d8db34b3d11735de74a5597bb0797aa3",
+      "rmsDb": -17.31
     }
   ],
   "characterVoices": {

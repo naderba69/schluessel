@@ -1114,6 +1114,7 @@ def build_all() -> None:
     ("word-zum-beispiel", "zum Beispiel.", "zum-beispiel", ["a1-u12-d4"]),
     ("word-satz", "der Satz.", "satz", ["a1-u12-d4"]),
     ("word-glauben", "glauben.", "glauben", ["a1-u12-d4"]),
+    ("word-thema", "das Thema.", "thema", ["a1-u12-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
