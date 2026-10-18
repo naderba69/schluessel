@@ -1,6 +1,6 @@
 // tools/lib/script-audio.ts — منطق السكربت الصوتي المشترك (D103): المولِّد (dialogue-splitter) والمدقِّق
 // يستخدمان الدوال نفسها — فلا ينحرف ما يُولَّد عمّا يُفحص. دوال نقية بلا قرص (مختبرة وحدةً وحدة).
-import type { AudioScript, AudioScriptLine, ScriptKind, ScriptSpeaker } from "../../content/schemas/index.js";
+import { lineLengthScale, type AudioScript, type AudioScriptLine, type ScriptKind, type ScriptSpeaker } from "../../content/schemas/index.js";
 import { VOICE_ID, PINNED_VOICES } from "../../src/lib/audio.js";
 
 /** نوع السكربت ← دور المسار (القانون 11 + D98: الأنثوي مسموح في character/dialogue فقط من هذه) */
@@ -53,7 +53,7 @@ export function buildTrack(script: AudioScript, line: AudioScriptLine, voice: st
     role: ROLE_FOR_KIND[script.kind],
     ...(line.speaker === "announcer" ? {} : { characterId: line.speaker }),
     isGuest: false,
-    voiceParams: { speaker: voice, speedWpm: measuredWpm(line.text, m.durationMs), lengthScale: script.lengthScale },
+    voiceParams: { speaker: voice, speedWpm: measuredWpm(line.text, m.durationMs), lengthScale: lineLengthScale(script, line) },
     textDe: line.text,
     priority: PRIORITY_FOR_KIND[script.kind],
     lessonRefs: script.usedIn.filter((u) => LESSON_ID.test(u)),
@@ -84,7 +84,7 @@ export function planScript(
       t !== undefined &&
       t.textDe === line.text &&
       t.voiceParams.speaker === expectedVoice(line.speaker, characterVoices) &&
-      (t.voiceParams.lengthScale ?? 1) === script.lengthScale &&
+      (t.voiceParams.lengthScale ?? 1) === lineLengthScale(script, line) &&
       t.role === ROLE_FOR_KIND[script.kind] &&
       t.file === scriptTrackFile(script.id, line.id) &&
       (t.characterId ?? "announcer") === line.speaker &&

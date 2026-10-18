@@ -10,7 +10,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { AudioManifest, AudioScript } from "../content/schemas/index.js";
+import { AudioManifest, AudioScript, lineLengthScale } from "../content/schemas/index.js";
 import {
   buildTrack, expectedVoice, planScript, scriptTrackFile,
   type ClipMeasurement, type TrackLike,
@@ -90,7 +90,7 @@ export function runSplitter(opts: {
       const voice = expectedVoice(line.speaker, raw.characterVoices);
       report.generated.push(line.id);
       if (opts.dryRun) continue;
-      const m = generate(voice, line.text, join(contentRoot, scriptTrackFile(script.id, line.id)), script.lengthScale);
+      const m = generate(voice, line.text, join(contentRoot, scriptTrackFile(script.id, line.id)), lineLengthScale(script, line));
       const track = buildTrack(script, line, voice, m);
       const i = raw.tracks.findIndex((t) => t.id === line.id);
       if (i >= 0) raw.tracks[i] = track;

@@ -3,7 +3,7 @@ import { describe, it, expect, beforeEach } from "vitest";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { AudioScript, AudioManifest, Modelltest, A1_LENGTH_SCALE, evidenceIn } from "../content/schemas/index.js";
+import { AudioScript, AudioManifest, Modelltest, A1_LENGTH_SCALE, evidenceIn, lineLengthScale } from "../content/schemas/index.js";
 import {
   ROLE_FOR_KIND, PRIORITY_FOR_KIND, expectedVoice, measuredWpm, buildTrack, planScript,
   checkScriptAgainstManifest, answerSupported, scriptTrackFile, type TrackLike,
@@ -16,7 +16,7 @@ const VOICES = {
   yusuf: VOICE_ID, mueller: VOICE_ID, lena: VOICE_ID_FEMALE, ayse: VOICE_ID_FEMALE,
   "frau-berg": VOICE_ID_FEMALE, thomas: VOICE_ID, "frau-schmidt": VOICE_ID_FEMALE, "dr-weber": VOICE_ID,
 };
-const dialog = (lines: { id: string; speaker: string; text: string }[], extra: Record<string, unknown> = {}) =>
+const dialog = (lines: { id: string; speaker: string; text: string; lengthScale?: number }[], extra: Record<string, unknown> = {}) =>
   AudioScript.parse({
     schemaVersion: "1.0.0", id: "t-dialog", kind: "dialogue", level: "A2", title: { de: "T", ar: "ت" },
     usedIn: ["a2-u1-d3"], lines, ...extra,
