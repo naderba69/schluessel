@@ -10,6 +10,7 @@ import {
   ReadingText,
   ImageManifest,
   GrammarRuleFile,
+  StoryBook,
   type Lesson,
   type Word,
 } from "../content/schemas/index.js";
@@ -45,6 +46,10 @@ export const ALL_LESETEXTS = json(import.meta.glob("../content/lese/*.json", { e
 /** قواعد اليوم (D115): content/arsenal/grammar/*.json بصيغة الاكتشاف الموجَّه — يعرضها المُشغِّل بعد الكلمات */
 export const ALL_GRAMMAR_RULES: GrammarRule[] = json(import.meta.glob("../content/arsenal/grammar/*.json", { eager: true, import: "default" }))
   .map((j) => ruleFromShufra(GrammarRuleFile.parse(j)));
+
+/** دفاتر القصة المتصلة (D193): مولَّدة من أول سطر في حوار كل درس — تُعرض في الخلاصة */
+export const ALL_STORY: StoryBook[] = json(import.meta.glob("../content/story/*.json", { eager: true, import: "default" }))
+  .map((j) => StoryBook.parse(j));
 
 /** كل الكلمات المُتحقَّق منها — بلا استثناءات (مرتبة بالمعرّف) */
 export const ALL_WORDS: Word[] = WORD_JSONS.map((j) => WordSchema.parse(j));

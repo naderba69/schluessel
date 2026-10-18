@@ -24,6 +24,7 @@ import {
   runtimeWordsForLesson,
   ALL_LESSONS,
   ALL_GRAMMAR_RULES,
+  ALL_STORY,
   PHRASE_BANK,
   LESSON_ORDER,
 } from "./lesson-packs.js";
@@ -65,7 +66,7 @@ function LessonRun({
   onAttempt: (o: QuizOutcome) => void;
   onFinish: (last: QuizOutcome | null) => void;
 }) {
-  const plan = useMemo(() => planLessonStations(lesson, runtimeWordsForLesson(lesson), ALL_GRAMMAR_RULES), [lesson]);
+  const plan = useMemo(() => planLessonStations(lesson, runtimeWordsForLesson(lesson), ALL_GRAMMAR_RULES, ALL_STORY), [lesson]);
   /** §6 + قانون الجبهة: Redemittel ضمن سياق الدرس — مما ظهر حتى درس الحصة فقط */
   const redemittel = useMemo(() => phrasesAvailable(PHRASE_BANK, LESSON_ORDER, lesson.id).slice(0, 6), [lesson.id]);
   const [done, setDone] = useState<Partial<Record<Station, boolean>>>(() => ({

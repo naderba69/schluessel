@@ -7,7 +7,7 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
-  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, StoryBook, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
   GrammarRuleFile, LessonUpgradePlan,
 } from "../content/schemas/index.js";
 import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
@@ -50,7 +50,7 @@ const SPEECH_RATE_MAX_WPM = 200;
 const SPEECH_RATE_MIN_WORDS = 3;
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "audio-script" | "exam-format" | "wordlist" | "plan" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "audio-script" | "story" | "exam-format" | "wordlist" | "plan" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -64,6 +64,7 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("modelltest/")) return "modelltest";
   if (p.startsWith("lese/")) return "lese";
   if (p.startsWith("audio-scripts/")) return "audio-script";
+  if (p.startsWith("story/")) return "story";
   if (p.startsWith("exam-formats/")) return "exam-format";
   if (p.startsWith("wordlists/")) return "wordlist";
   if (p.startsWith("plans/")) return "plan";
@@ -116,6 +117,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
   const plans: { path: string; plan: CurriculumPlan }[] = []; // D112: خطط التوزيع المنهجية المُلزِمة
   const grammarRules = new Map<string, { path: string; rule: GrammarRuleFile }>(); // D115: قواعد اليوم (الشفرات)
   const upgradePlans: { path: string; plan: LessonUpgradePlan }[] = []; // D115: خطط ترقية الدروس (D114)
+  const storyBooks: { path: string; book: StoryBook }[] = []; // D193: جمل القصة المولَّدة من الحوارات (N-003)
   let curriculum: CurriculumReference | null = null;
 
   for (const entry of entries) {
@@ -291,6 +293,10 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
           scripts.set(sc.id, { path: entry.path, script: sc });
           break;
         }
+        case "story": {
+          storyBooks.push({ path: entry.path, book: StoryBook.parse(entry.data) }); // D193
+          break;
+        }
         default:
           push("warning", "w-unknown-file", entry.path, "ملف غير معروف في شجرة المحتوى");
       }
@@ -313,6 +319,34 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
     for (const t of manifestTracks.values())
       if (t.file.startsWith("audio/scripts/") && !scriptLineIds.has(t.id))
         push("error", "e-audio-script-orphan", manifestPath, `مسار سكربت يتيم بلا سطر في أي سكربت: ${t.id}`);
+  }
+
+  // ——— D193 (N-003): جمل القصة ⇔ أول سطر في حوار الدرس — مولَّدة لا مكتوبة؛ أي انحراف = أعد التوليد ———
+  // كل معرّف في storySentenceIds له جملة · كل جملة تطابق سطرها الأول في سكربتها (نصاً ومتحدثاً) ودرسها موجود ·
+  // درس له حوار بلا جملة قصة = حقل لم يُحدَّث (tools/dev/story-sentences.ts --write).
+  {
+    const sentences = new Map<string, { path: string; s: StoryBook["sentences"][number] }>();
+    for (const { path, book } of storyBooks)
+      for (const s of book.sentences) {
+        if (sentences.has(s.id)) push("error", "e-story-dup", path, `جملة قصة مكررة عبر الدفاتر: ${s.id}`);
+        sentences.set(s.id, { path, s });
+        const sc = scripts.get(s.scriptId)?.script;
+        if (!sc) { push("error", "e-story-script", path, `${s.id}: سكربت غير موجود ${s.scriptId}`); continue; }
+        const first = sc.lines[0];
+        if (!first || first.id !== s.lineId || first.text !== s.de || first.speaker !== s.speaker)
+          push("error", "e-story-stale", path, `${s.id}: لا تطابق أول سطر في ${s.scriptId} — شغّل story-sentences --write`);
+        if (!lessons.has(s.lessonId)) push("error", "e-story-lesson", path, `${s.id}: درس غير موجود ${s.lessonId}`);
+        else if (!lessons.get(s.lessonId)!.lesson.praesentation.storySentenceIds.includes(s.id))
+          push("error", "e-story-unlinked", path, `${s.id}: درسه ${s.lessonId} لا يشير إليها`);
+      }
+    const dialogueByLesson = new Map<string, string>();
+    for (const { script } of scripts.values()) if (script.kind === "dialogue") for (const u of script.usedIn) dialogueByLesson.set(u, script.id);
+    for (const { path, lesson } of lessons.values()) {
+      for (const id of lesson.praesentation.storySentenceIds)
+        if (!sentences.has(id)) push("error", "e-story-missing", path, `جملة قصة غير موجودة: ${id}`);
+      if (dialogueByLesson.has(lesson.id) && lesson.praesentation.storySentenceIds.length === 0)
+        push("error", "e-story-unlinked", path, `الدرس له حوار (${dialogueByLesson.get(lesson.id)}) بلا جملة قصة — شغّل story-sentences --write`);
+    }
   }
 
   // ——— D108 + D109: الامتحان التجريبي مقابل الصيغة الرسمية لمستواه ———

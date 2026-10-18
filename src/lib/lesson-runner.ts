@@ -4,6 +4,8 @@ import type { Lesson, Word } from "../../content/schemas/index.js";
 import type { GrammarRule } from "./grammar-discovery.js";
 import { pronunciationHint } from "./phonetic-risks.js";
 import { goetheTagLabel } from "./goethe-tag.js";
+import { storyLineFor, storySoFar, type StoryLine } from "./story.js";
+import type { StoryBook } from "../../content/schemas/index.js";
 
 /** بطاقة المصيدة — من مخطط الدرس مباشرة (لا نكرر التعريف) */
 export type WarningCardData = Lesson["zusammenfassung"]["warningCards"][number];
@@ -42,6 +44,10 @@ export type CloseData = {
   summaryAr: string;
   warningCards: WarningCardData[];
   srsBundleWordIds: string[];
+  /** D193: سطر قصة الدرس (أول سطر في حواره) — null لدرس بلا حوار بعدُ */
+  storyLine: StoryLine | null;
+  /** D193: آخر سطور القصة قبل هذا الدرس — الخيط لا يُقطع */
+  storySoFar: StoryLine[];
 };
 
 export type LessonStationPlan = {
@@ -102,7 +108,7 @@ function explainWord(w: Word, known: ReadonlyMap<string, Word>): string {
  * الاسترجاع (الدفء) ← الجديد (العرض) ← التدريب (المحطات + المهمة التواصلية) ← الخلاصة (المصائد + حزمة SRS).
  * أي كلمة مفقودة = خطأ فوري (لا شاشات ناقصة أبداً).
  */
-export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: readonly GrammarRule[] = []): LessonStationPlan {
+export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: readonly GrammarRule[] = [], story: readonly StoryBook[] = []): LessonStationPlan {
   const known: ReadonlyMap<string, Word> = new Map(words.map((w) => [w.id, w]));
   const recall: RecallCardData[] = lesson.warmup.cardIds.map((id) => {
     const w = wordById(words, id);
@@ -144,6 +150,8 @@ export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: 
       summaryAr: lesson.zusammenfassung.summary.ar,
       warningCards: lesson.zusammenfassung.warningCards,
       srsBundleWordIds: lesson.zusammenfassung.srsBundleWordIds,
+      storyLine: storyLineFor(lesson.id, story),
+      storySoFar: storySoFar(lesson.id, story),
     },
   };
 }

@@ -17,3 +17,4 @@ export * from "./answer-key.js";
 export * from "./wordlist.js";
 export * from "./curriculum-plan.js";
 export * from "./upgrade.js";
+export * from "./story.js";

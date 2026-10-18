@@ -539,6 +539,19 @@ export function CloseStation({
           </li>
         ))}
       </ul>
+      {data.storyLine && (
+        <div data-testid="story-line" data-story-id={data.storyLine.id}>
+          <h4>سطر القصة اليوم 📖</h4>
+          {data.storySoFar.length > 0 && (
+            <p data-testid="story-so-far">
+              القصة حتى الآن: {data.storySoFar.map((l) => `${l.speakerAr}: «${l.de}»`).join(" · ")}
+            </p>
+          )}
+          <p>
+            {data.storyLine.speakerAr}: <span dir="ltr">«{data.storyLine.de}»</span> — {data.storyLine.contextAr}
+          </p>
+        </div>
+      )}
       <CloseView report={report} preview={preview} muellerLine={muellerLine} />
     </section>
   );
