@@ -6,31 +6,44 @@
   "day": 6,
   "kind": "integration",
   "ziel": {
-    "de": "Die Einheit 4 zusammenfassen und die Wochen-Meisterschaft bestehen (≥75%).",
-    "ar": "تجميع مادة الوحدة 4 واجتياز معركتها (75% فأكثر)."
+    "de": "Woche vier ist zu Ende: Das ist mein Vater, das ist meine Mutter · Ich habe zwei Brüder und einen Hund · Siehst du ihn? — Ja, ich sehe ihn · Ihr Mann ist Lehrer · Ich bin stolz auf meine Familie — Wunderbar, prima!",
+    "ar": "توليف الأسبوع الرابع: أفراد الأسرة · mein/dein/ihr بنهاية من المملوك · المفعول المذكر einen/ihn · الجواب بضمير (ihn · sie · es) · ihr/sein من المالك · stolz auf — ثم معركة الوحدة (75% فأكثر). لا جديد إلا كلمتا الرد: wunderbar · prima."
   },
   "canDoDaily": [
-    "يجتاز معركة الوحدة 4 (أسرة + ملكية + مفعول به) بنسبة 75% فأكثر"
+    "يصف صورة عائلة بجمل فيها mein/meine وein/eine/einen صحيحة (Links steht mein Vater · Ich habe einen Hund) ويجيب بضمير المفعول (Ja, ich sehe ihn)",
+    "يفرّق ihr/sein من المالك (Ihr Mann · seine Arbeit) ويجتاز معركة الوحدة 4 بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
-      "familie",
       "bruder",
-      "foto"
+      "mein",
+      "wen"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«أرى أبي» — Ich sehe mein Vater أم meinen Vater? (التوليف — بلا جديد)"
+          "de": "«رائع / بديع!» بالألمانية — تخمين فقط"
         },
         "choices": [
-          "meinen Vater",
-          "mein Vater",
-          "meinem Vater"
+          "Wunderbar!",
+          "Toll!",
+          "Genau!"
         ],
-        "answer": "meinen Vater",
+        "answer": "Wunderbar!",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«ممتاز!» (كلمة قصيرة) بالألمانية — تخمين فقط"
+        },
+        "choices": [
+          "Prima!",
+          "Super!",
+          "Klar!"
+        ],
+        "answer": "Prima!",
         "revealNextSession": true
       }
     ],
@@ -42,80 +55,297 @@
       "prima"
     ],
     "grammarArsenalIds": [
-      "ars-unit4-review"
+      "ars-possessiv",
+      "ars-akkusativ-1"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a1-u4-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "خطأ الأسبوع 1: «عندي أخاً»؟",
-            "a": "Ich habe einen Bruder. (einen لا ein)"
+            "q": "Links steht ___ Vater. (أبي)",
+            "a": "mein",
+            "why": "der Vater مذكر ⇐ mein بلا نهاية. النهاية من المملوك (Vater) لا من المالك."
           },
           {
-            "q": "«مَن ترى؟»؟",
-            "a": "Wen siehst du? (wen لا wer)"
+            "q": "Rechts steht ___ Mutter. (أمي)",
+            "a": "meine",
+            "why": "die Mutter مؤنثة ⇐ meine بـ‑e. ~~mein Mutter~~ خطأ الأسبوع."
+          },
+          {
+            "q": "Sind das ___ Brüder? (إخوتكَ)",
+            "a": "deine",
+            "why": "الجمع يأخذ ‑e مثل المؤنث: deine Brüder · deine Großeltern."
+          },
+          {
+            "q": "Ich habe zwei Brüder und ___ Hund.",
+            "a": "einen",
+            "why": "der Hund مذكر وهو مفعول (habe) ⇐ einen. المذكر وحده يتغيّر في المفعول."
+          },
+          {
+            "q": "Siehst du den Mann links? — Ja, ich sehe ___.",
+            "a": "ihn",
+            "why": "der Mann مذكر مفعول ⇐ ihn (لا er). الضمير يتبع جنس الكلمة."
+          },
+          {
+            "q": "Siehst du das Foto? — Ja, ich sehe ___.",
+            "a": "es",
+            "why": "das Foto محايد ⇐ es. للمؤنث sie، وللمذكر ihn."
+          },
+          {
+            "q": "Das ist meine Tante. ___ Mann arbeitet heute. (زوجها)",
+            "a": "Ihr",
+            "why": "المالكة مؤنثة (Tante) ⇐ الجذع ihr؛ والمملوك der Mann مذكر ⇐ بلا نهاية: Ihr Mann."
+          },
+          {
+            "q": "Ich bin stolz ___ meine Familie.",
+            "a": "auf",
+            "why": "stolz auf + المفعول: stolz auf meine Familie · stolz auf meinen Hund — لا mit ولا von."
+          },
+          {
+            "q": "___ beschreibe ich? — Meine Mutter.",
+            "a": "Wen",
+            "why": "السؤال عن الشخص المفعول: Wen? (لا Wer). Wer للفاعل فقط."
+          }
+        ],
+        "interleavedWith": [
+          "vater",
+          "mutter",
+          "bruder",
+          "hund",
+          "mann",
+          "foto",
+          "tante",
+          "familie",
+          "beschreiben"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "wv-3",
+            "speakText": "Das ist mein Vater. Er ist Lehrer, und er trägt eine Brille.",
+            "q": "استمع: ما مهنة والد لينا؟",
+            "choices": [
+              "معلّم",
+              "طبيب",
+              "طالب"
+            ],
+            "a": "معلّم",
+            "why": "Er ist Lehrer = هو معلّم (المهنة بلا أداة بعد ist). وträgt eine Brille = يلبس نظارة."
+          },
+          {
+            "audioId": "wv-5",
+            "speakText": "Rechts steht meine Mutter. Sie arbeitet viel, aber hier lächelt sie.",
+            "q": "استمع: أين تقف أم لينا؟",
+            "choices": [
+              "على اليمين",
+              "على اليسار",
+              "في الوسط"
+            ],
+            "a": "على اليمين",
+            "why": "Rechts steht meine Mutter — rechts أولاً فالفعل steht ثانياً. وmeine بـ‑e لأن Mutter مؤنثة."
+          },
+          {
+            "audioId": "wv-7",
+            "speakText": "Ja, das sind meine Brüder. Sie sind Zwillinge — beide sind zehn.",
+            "q": "استمع: كم عمر أخوي لينا؟",
+            "choices": [
+              "عشر سنوات",
+              "ست عشرة سنة",
+              "تسع سنوات"
+            ],
+            "a": "عشر سنوات",
+            "why": "beide sind zehn = كلاهما في العاشرة. Zwillinge = توأمان."
+          },
+          {
+            "audioId": "wv-9",
+            "speakText": "Ja, das ist mein Hund. Er ist alt, aber lustig. Siehst du ihn?",
+            "q": "استمع: بأي ضمير سألت لينا عن الكلب؟",
+            "choices": [
+              "ihn",
+              "er",
+              "es"
+            ],
+            "a": "ihn",
+            "why": "der Hund مذكر مفعول (siehst) ⇐ ihn. er للفاعل فقط (Er ist alt)."
+          },
+          {
+            "audioId": "wv-11",
+            "speakText": "Das ist meine Tante. Ihr Mann arbeitet heute.",
+            "q": "استمع: من المقصود بـIhr Mann؟",
+            "choices": [
+              "زوج العمة",
+              "زوج الأم",
+              "أخو لينا"
+            ],
+            "a": "زوج العمة",
+            "why": "ihr = لها (المالكة مؤنثة: die Tante) ⇐ Ihr Mann = زوجها."
+          },
+          {
+            "audioId": "wv-13",
+            "speakText": "Nein. Ich habe zwei Brüder und einen Hund — das ist meine Familie!",
+            "q": "استمع: ماذا تملك لينا؟",
+            "choices": [
+              "أخوين وكلباً",
+              "أختاً وكلباً",
+              "أخوين وقطة"
+            ],
+            "a": "أخوين وكلباً",
+            "why": "zwei Brüder (جمع) und einen Hund (مذكر مفعول ⇐ einen). لا أخت: Nein."
+          },
+          {
+            "audioId": "wv-16",
+            "speakText": "Genau! Und: Sie ist klein, sie trägt eine Brille, und sie liebt ihre Arbeit.",
+            "q": "استمع: من يصف يوسف؟",
+            "choices": [
+              "أم لينا",
+              "عمة لينا",
+              "أخت يوسف"
+            ],
+            "a": "أم لينا",
+            "why": "sie liebt ihre Arbeit — الأم «تعمل كثيراً» في الحوار؛ وihre Arbeit = عملها (المالكة مؤنثة، Arbeit مؤنثة ⇐ ‑e)."
+          },
+          {
+            "audioId": "wv-19",
+            "speakText": "Ich auch. Ich bin stolz auf meine Familie — und auf meinen Hund!",
+            "q": "استمع: على من تفتخر لينا؟",
+            "choices": [
+              "على عائلتها وكلبها",
+              "على عائلتها فقط",
+              "على مدرستها"
+            ],
+            "a": "على عائلتها وكلبها",
+            "why": "stolz auf meine Familie (مؤنث ⇐ meine) und auf meinen Hund (مذكر مفعول ⇐ meinen)."
+          }
+        ],
+        "interleavedWith": [
+          "lehrer",
+          "brille",
+          "arbeiten",
+          "zwilling",
+          "beide",
+          "lustig",
+          "klein",
+          "stolz"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "صحّح: ~~Ich habe ein Bruder.~~",
+            "a": "Ich habe einen Bruder.",
+            "why": "der Bruder مذكر مفعول ⇐ einen. المذكر وحده يأخذ ‑en في المفعول — وهذا هو خطأ الأسبوع الأول."
+          },
+          {
+            "q": "صحّح: ~~Das ist mein Mutter.~~",
+            "a": "Das ist meine Mutter.",
+            "why": "die Mutter مؤنثة ⇐ meine. النهاية من المملوك (Mutter) لا من المتكلم."
+          },
+          {
+            "q": "صحّح: ~~Wer beschreibst du?~~",
+            "a": "Wen beschreibst du?",
+            "why": "الشخص هنا مفعول (المُوصَف) ⇐ Wen. Wer للفاعل: Wer beschreibt? = من يصف؟"
+          },
+          {
+            "q": "صحّح: ~~Links mein Vater steht.~~",
+            "a": "Links steht mein Vater.",
+            "why": "الفعل في الموضع الثاني دائماً: Links (1) steht (2) mein Vater (3)."
+          },
+          {
+            "q": "صحّح: ~~Siehst du den Hund? — Ja, ich sehe er.~~",
+            "a": "Siehst du den Hund? — Ja, ich sehe ihn.",
+            "why": "المذكر المفعول ضميره ihn لا er: den Hund ← ihn."
+          },
+          {
+            "q": "صحّح: ~~Mein Vater liebt ihre Arbeit.~~ (عمله)",
+            "a": "Mein Vater liebt seine Arbeit.",
+            "why": "الجذع من المالك: المالك مذكر (Vater) ⇐ sein؛ والنهاية من المملوك: Arbeit مؤنثة ⇐ seine. ihre = عملها."
           }
         ],
         "interleavedWith": [
           "bruder",
-          "wen"
+          "mutter",
+          "vater",
+          "hund",
+          "arbeit"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "dictation",
         "items": [
           {
-            "q": "خطأ الأسبوع 2: «زوجتي»؟",
-            "a": "meine Frau (الملكية تتبع المُملوك)"
+            "audioId": "wv-1",
+            "speakText": "Hallo, Yusuf! Woche vier ist zu Ende. Jetzt mein Foto — siehst du es?",
+            "a": "Hallo, Yusuf! Woche vier ist zu Ende. Jetzt mein Foto — siehst du es?",
+            "why": "mein Foto (das Foto محايد ⇐ mein بلا نهاية) · siehst du es? — es للصورة · Woche وEnde وFoto بحرف كبير."
           },
           {
-            "q": "«السيارة لي»؟",
-            "a": "Das Auto gehört mir. (Dativ)"
+            "audioId": "wv-2",
+            "speakText": "Ja, ich sehe es. Wunderbar! Wer ist das? Links steht ein Mann.",
+            "a": "Ja, ich sehe es. Wunderbar! Wer ist das? Links steht ein Mann.",
+            "why": "Wunderbar! كلمة اليوم (wunder + bar) · Links steht — الفعل ثانياً · ein Mann فاعل ⇐ ein بلا ‑en."
+          },
+          {
+            "audioId": "wv-6",
+            "speakText": "Prima! Und die zwei Jungen? Sind das deine Brüder?",
+            "a": "Prima! Und die zwei Jungen? Sind das deine Brüder?",
+            "why": "Prima! كلمة اليوم · Jungen وBrüder جمع بحرف كبير (Brüder بـü) · deine بـ‑e للجمع."
+          },
+          {
+            "audioId": "wv-8",
+            "speakText": "Zwischen Mutter und Vater sitzt ein Hund. Ist das dein Hund?",
+            "a": "Zwischen Mutter und Vater sitzt ein Hund. Ist das dein Hund?",
+            "why": "zwischen … und … (بين … و…) · sitzt — الفعل ثانياً بعد الظرف · dein Hund (مذكر ⇐ بلا نهاية)."
+          },
+          {
+            "audioId": "wv-17",
+            "speakText": "Meine Mutter! Prima, Yusuf. Und deine Familie? Dein Vater, deine Schwester?",
+            "a": "Meine Mutter! Prima, Yusuf. Und deine Familie? Dein Vater, deine Schwester?",
+            "why": "deine Familie · deine Schwester (مؤنث ⇐ ‑e) · Dein Vater (مذكر ⇐ بلا نهاية) — ثلاث كلمات ملكية في سطر واحد."
+          },
+          {
+            "audioId": "wv-20",
+            "speakText": "Wunderbar! Die Woche ist zu Ende. Tschüss, Lena!",
+            "a": "Wunderbar! Die Woche ist zu Ende. Tschüss, Lena!",
+            "why": "Wunderbar! كلمة اليوم · zu Ende بحرف كبير · Tschüss بـü وss."
           }
         ],
         "interleavedWith": [
-          "frau",
-          "auto"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "خطأ الأسبوع 3: «على اليسار يقف أبي»؟",
-            "a": "Links steht mein Vater. (الفعل ثانياً)"
-          },
-          {
-            "q": "«إخوتي»؟",
-            "a": "meine Geschwister (جمع فقط)"
-          }
-        ],
-        "interleavedWith": [
-          "links",
-          "geschwister"
+          "woche",
+          "junge",
+          "zwischen",
+          "sitzen",
+          "schwester"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Meisterschaft: Familienfoto + Aufnahme + Akkusativ",
-        "ar": "المعركة: صورة أسرية + تسجيل + مفعول به"
+        "de": "Mein Foto: Links steht mein Vater, rechts steht meine Mutter. Ich habe zwei Brüder und einen Hund. Siehst du ihn? — Wunderbar, prima!",
+        "ar": "أن يصف صورة عائلته لزميل: الجهات (links · rechts · zwischen) · mein/meine · einen للمفعول المذكر · ويجيب عن أسئلة الزميل بضمير (ihn · sie · es) — ويردّ بـwunderbar وprima"
       },
       "situation": {
-        "de": "Das Abschlussgespräch: die Familie vorstellen",
-        "ar": "الحوار الختامي: تعريف الأسرة"
+        "de": "Das Ende der Woche: Lena zeigt ihr Foto — und jetzt du.",
+        "ar": "نهاية الأسبوع الرابع: لينا تعرض صورتها كما وعدت، ويوسف يسأل — ثم دورك مع صورة عائلتك"
       },
       "successCriteria": [
-        "يجتاز 3 مجموعات بـ75% فأكثر ويصحّح أخطاء الوحدة الثلاثة"
+        "يذكر أربعة أفراد من عائلته بـmein/meine صحيحة وبالجهات (Links steht mein Vater · Rechts steht meine Mutter)",
+        "يقول ما يملك بـeinen/eine (Ich habe einen Bruder und eine Schwester) ويجيب عن Siehst du …? بـihn/sie/es",
+        "يسأل زميله Wen beschreibe ich? ويصف شخصاً بصفتين (jung · lustig · klein) — ويردّ بـWunderbar! وPrima!"
       ]
     }
   },
@@ -130,20 +360,59 @@
       {
         "items": [
           {
-            "q": "المعركة (1): «عندي أختاً»؟",
-            "a": "Ich habe eine Schwester."
+            "q": "«رائع / بديع!» — بالألمانية؟",
+            "a": "Wunderbar!",
+            "choices": [
+              "Wunderbar!",
+              "Prima!",
+              "Klar!"
+            ],
+            "why": "Wunderbar! = رائع/بديع — ردّ الإعجاب الطويل، كما قالها يوسف للصورة."
           },
           {
-            "q": "المعركة (2): «أرى إخوتي»؟",
-            "a": "Ich sehe meine Geschwister."
+            "q": "Das ist ___ Mutter. (أمي)",
+            "a": "meine",
+            "choices": [
+              "meine",
+              "mein",
+              "meinen"
+            ],
+            "why": "die Mutter مؤنثة ⇐ meine. ~~mein Mutter~~ خطأ الأسبوع."
           },
           {
-            "q": "المعركة (3): «مهنة أبي معلّم»؟",
-            "a": "Der Beruf meines Vaters ist Lehrer."
+            "q": "Ich habe ___ Bruder.",
+            "a": "einen",
+            "choices": [
+              "einen",
+              "ein",
+              "eine"
+            ],
+            "why": "der Bruder مذكر مفعول ⇐ einen."
           },
           {
-            "q": "«رائع، شكراً»؟",
-            "a": "Wunderbar, danke!"
+            "q": "Siehst du den Hund? — Ja, ich sehe ___.",
+            "a": "ihn",
+            "choices": [
+              "ihn",
+              "er",
+              "es"
+            ],
+            "why": "den Hund مذكر مفعول ⇐ ihn."
+          },
+          {
+            "q": "Lena: Meine Tante — ___ Mann arbeitet heute.",
+            "a": "ihr",
+            "choices": [
+              "ihr",
+              "sein",
+              "dein"
+            ],
+            "why": "المالكة مؤنثة (Tante) ⇐ ihr. sein للمالك المذكر."
+          },
+          {
+            "q": "الترتيب: mein / Links / Vater. / steht",
+            "a": "Links steht mein Vater.",
+            "why": "الفعل ثانياً: Links · steht · mein Vater."
           }
         ],
         "passingScore": 0.75
@@ -151,20 +420,59 @@
       {
         "items": [
           {
-            "q": "المعركة (4): «مَن ترى؟»؟",
-            "a": "Wen siehst du?"
+            "q": "«ممتاز!» (كلمة قصيرة) — بالألمانية؟",
+            "a": "Prima!",
+            "choices": [
+              "Prima!",
+              "Wunderbar!",
+              "Toll!"
+            ],
+            "why": "Prima! = ممتاز — ردّ قصير، كما قاله يوسف لأم لينا."
           },
           {
-            "q": "المعركة (5): «الجميع يبتسمون»؟",
-            "a": "Alle lächeln."
+            "q": "Sind das ___ Brüder? (إخوتكَ)",
+            "a": "deine",
+            "choices": [
+              "deine",
+              "dein",
+              "deinen"
+            ],
+            "why": "الجمع يأخذ ‑e: deine Brüder."
           },
           {
-            "q": "«أنا فخور بعائلتي»؟",
-            "a": "Ich bin stolz auf meine Familie."
+            "q": "Ich habe zwei Brüder und ___ Hund.",
+            "a": "einen",
+            "choices": [
+              "einen",
+              "ein",
+              "eine"
+            ],
+            "why": "der Hund مذكر مفعول ⇐ einen."
           },
           {
-            "q": "«ممتاز، إلى الغد»؟",
-            "a": "Prima, bis morgen!"
+            "q": "Siehst du das Foto? — Ja, ich sehe ___.",
+            "a": "es",
+            "choices": [
+              "es",
+              "ihn",
+              "sie"
+            ],
+            "why": "das Foto محايد ⇐ es."
+          },
+          {
+            "q": "___ beschreibst du? — Meine Mutter.",
+            "a": "Wen",
+            "choices": [
+              "Wen",
+              "Wer",
+              "Was"
+            ],
+            "why": "الشخص المفعول ⇐ Wen. Wer للفاعل."
+          },
+          {
+            "q": "الترتيب: auf / Familie. / stolz / meine / Ich bin",
+            "a": "Ich bin stolz auf meine Familie.",
+            "why": "stolz auf + المفعول (meine Familie)."
           }
         ],
         "passingScore": 0.75
@@ -172,20 +480,59 @@
       {
         "items": [
           {
-            "q": "المعركة (6): «زوجتي اسمها لينا»؟",
-            "a": "Meine Frau heißt Lina."
+            "q": "Yusuf: Ja, ich sehe es. ___! Wer ist das?",
+            "a": "Wunderbar",
+            "choices": [
+              "Wunderbar",
+              "Prima",
+              "Klar"
+            ],
+            "why": "Wunderbar! = رائع — كلمة اليوم في رد يوسف على الصورة."
           },
           {
-            "q": "«أسجّل تسجيلاً قصيراً»؟",
-            "a": "Ich nehme eine kurze Aufnahme auf."
+            "q": "Das ist ___ Vater. (أبي)",
+            "a": "mein",
+            "choices": [
+              "mein",
+              "meine",
+              "meinen"
+            ],
+            "why": "der Vater مذكر فاعل/خبر ⇐ mein بلا نهاية."
           },
           {
-            "q": "«تونس وطني»؟",
-            "a": "Tunesien ist meine Heimat."
+            "q": "Mein Vater liebt ___ Arbeit. (عمله)",
+            "a": "seine",
+            "choices": [
+              "seine",
+              "ihre",
+              "sein"
+            ],
+            "why": "المالك مذكر ⇐ sein؛ Arbeit مؤنثة ⇐ seine. ihre = عملها."
           },
           {
-            "q": "Ich sehe ___ Bruder und ___ Eltern?",
-            "a": "meinen Bruder · meine Eltern"
+            "q": "Siehst du die Frau? — Ja, ich sehe ___.",
+            "a": "sie",
+            "choices": [
+              "sie",
+              "ihn",
+              "es"
+            ],
+            "why": "die Frau مؤنثة ⇐ sie (لا تتغيّر في المفعول)."
+          },
+          {
+            "q": "Ich bin stolz ___ meinen Hund.",
+            "a": "auf",
+            "choices": [
+              "auf",
+              "mit",
+              "von"
+            ],
+            "why": "stolz auf — حرف ثابت، وبعده المفعول: meinen Hund."
+          },
+          {
+            "q": "«بين الأم والأب يجلس كلب» — بالألمانية؟",
+            "a": "Zwischen Mutter und Vater sitzt ein Hund.",
+            "why": "Zwischen … und … أولاً ثم الفعل sitzt ثانياً ثم ein Hund (فاعل ⇐ ein)."
           }
         ],
         "passingScore": 0.75
@@ -194,53 +541,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einheit 4 geschafft: Du stellst deine Familie vor — mit Akkusativ, Besitz und einem Foto, das alles erzählt!",
-      "ar": "اكتملت الوحدة 4: تعرّف بعائلتك — بالمفعول به والملكية وصورة تحكي كل شيء!"
+      "de": "Woche vier ist zu Ende: Links steht mein Vater, rechts steht meine Mutter. Ich habe zwei Brüder und einen Hund — siehst du ihn? Ihr Mann ist Lehrer. Ich bin stolz auf meine Familie. — Wunderbar, prima!",
+      "ar": "الوحدة الرابعة اكتملت: تسمّي أفراد الأسرة، وتضع mein/meine من المملوك، وeinen/ihn للمذكر المفعول، وihr/sein من المالك، وstolz auf — وتردّ بـwunderbar وprima."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich habe ein Bruder.~~",
-          "ar": "einen عند المفعول (der فقط)"
+          "de": "~~mein Mutter~~ · ~~meine Vater~~",
+          "ar": "النهاية من المتكلم"
         },
-        "whyArabicSpeakerFails": "قاعدة الأسبوع: der ← einen عند المفعول — die/das تبقى (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أمي · أبي» في العربية ياء واحدة للكل، والألمانية تأخذ النهاية من جنس المملوك: meine Mutter (مؤنث) · mein Vater (مذكر) · meine Brüder (جمع) — والخلط يعود في التوليف حين تُعدّ أفراد الأسرة واحداً بعد الآخر (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich habe einen Bruder.",
-          "ar": "عندي أخاً."
+          "de": "mein Vater · meine Mutter · meine Brüder",
+          "ar": "أبي · أمي · إخوتي"
         },
         "exercise": {
-          "q": "أكمل: Ich habe ___ alten Vater",
-          "a": "einen alten Vater"
+          "q": "أكمل: Das ist ___ Tante. (عمتي)",
+          "a": "meine"
         }
       },
       {
         "commonError": {
-          "de": "~~mein Frau~~",
-          "ar": "الملكية تتبع المُملوك"
+          "de": "~~Ich habe ein Bruder.~~ · ~~Ja, ich sehe er.~~",
+          "ar": "المذكر لا يتغيّر في المفعول"
         },
-        "whyArabicSpeakerFails": "«زوجتي» بالياء فقط؛ الألماني يصرّف حسب الشيء: meine Frau / mein Mann (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تنصب بحركة لا تُسمع، فيظنّ المتعلم أن المفعول لا يتغيّر — والألمانية تغيّر المذكر وحده: ein ← einen · er ← ihn · mein ← meinen (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "meine Frau",
-          "ar": "زوجتي"
+          "de": "Ich habe einen Bruder. · Ja, ich sehe ihn. · stolz auf meinen Hund",
+          "ar": "عندي أخ · نعم أراه · فخور بكلبي"
         },
         "exercise": {
-          "q": "أكمل: mein___ Katze · mein___ Auto",
-          "a": "meine Katze · mein Auto"
+          "q": "أكمل: Ich beschreibe ___ Opa. (جدي)",
+          "a": "meinen"
         }
       },
       {
         "commonError": {
-          "de": "~~Links mein Vater steht.~~",
-          "ar": "الفعل ثانياً دائماً"
+          "de": "~~Mein Vater liebt ihre Arbeit.~~ (عمله)",
+          "ar": "ihr/sein من المملوك"
         },
-        "whyArabicSpeakerFails": "الترتيب الحر بالعربية يكسر القاعدة الألمانية الذهبية (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "المتعلم يختار ihre لأن Arbeit مؤنثة — والألمانية تأخذ الجذع من المالك (Vater ⇐ sein) والنهاية فقط من المملوك (Arbeit ⇐ ‑e): seine Arbeit (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Links steht mein Vater.",
-          "ar": "على اليسار يقف أبي."
+          "de": "Er liebt seine Arbeit. · Sie liebt ihre Arbeit. · Ihr Mann ist Lehrer.",
+          "ar": "هو يحب عمله · هي تحب عملها · زوجها معلّم"
         },
         "exercise": {
-          "q": "أعد الترتيب: Oma / Rechts / sitzt",
-          "a": "Rechts sitzt Oma."
+          "q": "أكمل: Meine Tante liebt ___ Mann. (زوجها)",
+          "a": "ihren"
         }
       }
     ],
@@ -259,7 +606,8 @@
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-unit4-review"
+    "ars-possessiv",
+    "ars-akkusativ-1"
   ],
   "audioManifestRefs": [
     "word-wunderbar",
@@ -267,7 +615,7 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 — توليف الوحدة 4 (معركة 70/30)",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 — توليف الوحدة 4: صورة عائلة لينا",
     "goetheWordListOverlap": [
       "wunderbar",
       "prima"

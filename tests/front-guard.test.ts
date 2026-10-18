@@ -118,7 +118,8 @@ describe("D188 — الصيغ الثابتة المعلنة من SD1 (fixedPhras
     const all = loadUpgradePlans(CONTENT)[0]!.lessons.flatMap((e) => e.fixedPhrases.map((p) => [e.lessonId, p.de] as const));
     console.log("fixedPhrases:", JSON.stringify(all));
     for (const e of loadUpgradePlans(CONTENT)[0]!.lessons) expect(e.fixedPhrases.length, e.lessonId).toBeLessThanOrEqual(2);
-    expect(all).toEqual([]);
+    // D195: أول إعلان — سؤال الساعة الثابت في توليف u3 (هدف u3-d3 نفسه)؛ كل إضافة هنا قرار موثَّق لا تسريب صامت
+    expect(all).toEqual([["a1-u3-d6", "Wie spät ist es?"]]);
   });
   it("check-lesson.ts يستعمل المجموعة نفسها (withLaterForms + المستعارات): u8-d2 front 0 · later 0 — لا منطق ثانٍ", () => {
     const out = execFileSync("npx", ["tsx", "tools/dev/check-lesson.ts", "a1-u8-d2", "--json"], { cwd: join(__dirname, ".."), encoding: "utf8", timeout: 120_000 });

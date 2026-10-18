@@ -6,31 +6,44 @@
   "day": 6,
   "kind": "integration",
   "ziel": {
-    "de": "Die Einheit 3 zusammenfassen und die Wochen-Meisterschaft bestehen (≥75%).",
-    "ar": "تجميع مادة الوحدة 3 واجتياز معركتها (75% فأكثر)."
+    "de": "Woche drei ist zu Ende: zweiunddreißig, nicht dreiundzwanzig · Das Handy kostet nur 279 Euro · Es ist halb acht · am Montag um halb fünf, im April · Noch einmal, bitte! — Toll, klar!",
+    "ar": "توليف الأسبوع الثالث: الأعداد المركّبة (الآحاد أولاً) · السعر بـnur · الساعة (halb للساعة التالية) · um للساعة وam لليوم وim للشهر · فهم رقم هاتف بالسمع وطلب الإعادة — ثم معركة الوحدة (75% فأكثر). لا جديد إلا كلمتا الرد: toll · klar."
   },
   "canDoDaily": [
-    "يجتاز معركة الوحدة 3 (أرقام + وقت + مواعيد منطوقة) بنسبة 75% فأكثر"
+    "يفهم عدداً مركّباً ورقم هاتف وساعة بالسمع (zweiunddreißig · halb acht) ويطلب الإعادة بـNoch einmal, bitte!",
+    "يحدّد موعداً بـum/am/im صحيحة (am Sonntag um elf · im April) ويجتاز معركة الوحدة 3 بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
-      "zwanzig",
-      "uhr",
-      "januar"
+      "halb",
+      "termin",
+      "zaehlen"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«الساعة الرابعة والنصف» بالألمانية؟ (التوليف — بلا جديد)"
+          "de": "«رائع!» بالألمانية — تخمين فقط"
         },
         "choices": [
-          "halb fünf",
-          "halb vier",
-          "viertel vier"
+          "Toll!",
+          "Gut!",
+          "Genau!"
         ],
-        "answer": "halb fünf",
+        "answer": "Toll!",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«واضح / مفهوم!» بالألمانية — تخمين فقط"
+        },
+        "choices": [
+          "Klar!",
+          "Ja!",
+          "Gern!"
+        ],
+        "answer": "Klar!",
         "revealNextSession": true
       }
     ],
@@ -42,80 +55,295 @@
       "klar"
     ],
     "grammarArsenalIds": [
-      "ars-unit3-review"
+      "ars-uhrzeit",
+      "ars-um-am-im"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a1-u3-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "خطأ الأسبوع 1: halb drei = ?",
-            "a": "2:30 (نصف الثالث — العدّاد للتالي)"
+            "q": "Ich zähle: zehn, zwanzig, ___ — und zwei.",
+            "a": "dreißig",
+            "why": "dreißig تُكتب بـß (لا dreizig ولا dreissig) — العشرات: zwanzig · dreißig · vierzig."
           },
           {
-            "q": "«الآن التاسعة»؟",
-            "a": "Es ist neun Uhr. (بلا um)"
+            "q": "Das Essen ist für ___ Leute. (32)",
+            "a": "zweiunddreißig",
+            "why": "الآحاد أولاً ثم und ثم العشرات: zwei‑und‑dreißig = 32. أما dreiundzwanzig فهي 23 — مصيدة الأسبوع."
+          },
+          {
+            "q": "Das Handy kostet ___ zweihundertneunundsiebzig Euro. (فقط)",
+            "a": "nur",
+            "why": "nur تأتي قبل العدد مباشرة: kostet nur 279 Euro — لا في آخر الجملة كما تقول العربية «فقط»."
+          },
+          {
+            "q": "Es ist ___ acht. (7:30)",
+            "a": "halb",
+            "why": "halb تنظر إلى الساعة التالية: halb acht = 7:30 (نصف الطريق إلى الثامنة) — لا 8:30."
+          },
+          {
+            "q": "Es ist Viertel ___ elf. (11:15)",
+            "a": "nach",
+            "why": "Viertel nach = وربع (بعد الساعة الكاملة). Viertel vor = إلا ربعاً."
+          },
+          {
+            "q": "Der Termin ist ___ Montag um halb fünf.",
+            "a": "am",
+            "why": "am لليوم (am Montag · am Sonntag) · um للساعة · im للشهر — ثلاثة حروف مكان «في» العربية الواحدة."
+          },
+          {
+            "q": "___ April regnet es oft.",
+            "a": "Im",
+            "why": "im للشهر: im April · im Juni. وes لا تسقط: regnet es."
+          },
+          {
+            "q": "Die Gruppe kommt ___ elf Uhr.",
+            "a": "um",
+            "why": "um للساعة بالضبط: um elf Uhr · um halb acht."
+          },
+          {
+            "q": "Noch ___, bitte! Nicht so schnell.",
+            "a": "einmal",
+            "why": "Noch einmal, bitte! = مرة أخرى من فضلك — عبارة الأسبوع الخامس للرقم الذي لم تفهمه."
+          }
+        ],
+        "interleavedWith": [
+          "dreissig",
+          "leute",
+          "nur",
+          "halb",
+          "viertel",
+          "montag",
+          "april",
+          "uhr",
+          "einmal"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "wd-4",
+            "speakText": "Meine Oma ist achtzig. Und das Essen ist für zweiunddreißig Leute!",
+            "q": "استمع: لكم شخصاً الطعام؟",
+            "choices": [
+              "32",
+              "23",
+              "80"
+            ],
+            "a": "32",
+            "why": "zwei‑und‑dreißig = 32: الآحاد (zwei) أولاً ثم العشرات (dreißig). وachtzig = 80 عمر الجدة."
+          },
+          {
+            "audioId": "wd-6",
+            "speakText": "Es kostet nur zweihundertneunundsiebzig Euro. Das ist billig.",
+            "q": "استمع: كم يكلّف الهاتف؟",
+            "choices": [
+              "279 يورو",
+              "297 يورو",
+              "972 يورو"
+            ],
+            "a": "279 يورو",
+            "why": "zweihundert‑neun‑und‑siebzig: المئات أولاً (200) ثم الآحاد (9) ثم العشرات (70) = 279. وnur = فقط."
+          },
+          {
+            "audioId": "wd-9",
+            "speakText": "Es ist Viertel nach elf. Klar!",
+            "q": "استمع: كم الساعة؟",
+            "choices": [
+              "11:15",
+              "10:45",
+              "11:30"
+            ],
+            "a": "11:15",
+            "why": "Viertel nach elf = الحادية عشرة وربع. nach = بعد الساعة الكاملة."
+          },
+          {
+            "audioId": "wd-11",
+            "speakText": "Um halb acht. Halb acht ist sieben Uhr dreißig — nicht acht Uhr dreißig!",
+            "q": "استمع: متى العشاء؟",
+            "choices": [
+              "7:30",
+              "8:30",
+              "7:00"
+            ],
+            "a": "7:30",
+            "why": "halb acht = 7:30 — عائشة تقولها صراحة: sieben Uhr dreißig, nicht acht Uhr dreißig."
+          },
+          {
+            "audioId": "wd-13",
+            "speakText": "Im April regnet es oft. Und wann ist dein Termin mit Lena?",
+            "q": "استمع: متى تمطر كثيراً؟",
+            "choices": [
+              "في أبريل",
+              "في الاثنين",
+              "في الصباح"
+            ],
+            "a": "في أبريل",
+            "why": "im April = في أبريل (im للشهر). وregnet es: es الطقس لا تسقط."
+          },
+          {
+            "audioId": "wd-14",
+            "speakText": "Am Montag um halb fünf. Am Montag — nicht im Montag!",
+            "q": "استمع: متى موعد يوسف مع لينا؟",
+            "choices": [
+              "الاثنين 4:30",
+              "الاثنين 5:30",
+              "الأحد 4:30"
+            ],
+            "a": "الاثنين 4:30",
+            "why": "am Montag (اليوم بـam) · um halb fünf (4:30 — halb تنظر إلى الخامسة)."
+          },
+          {
+            "audioId": "wd-17",
+            "speakText": "Null eins sieben sechs — dreiundvierzig — neunzig.",
+            "q": "استمع: ما رقم هاتف عائشة؟",
+            "choices": [
+              "0176 43 90",
+              "0176 34 19",
+              "0167 43 90"
+            ],
+            "a": "0176 43 90",
+            "why": "null eins sieben sechs = 0176 · dreiundvierzig = 43 (drei أولاً!) · neunzig = 90."
+          },
+          {
+            "audioId": "wd-20",
+            "speakText": "Toll! Bis morgen um neun Uhr, Ayşe!",
+            "q": "استمع: متى يلتقيان غداً؟",
+            "choices": [
+              "في التاسعة",
+              "في الحادية عشرة",
+              "في السابعة والنصف"
+            ],
+            "a": "في التاسعة",
+            "why": "um neun Uhr = في التاسعة (um للساعة). وToll! كلمة اليوم."
+          }
+        ],
+        "interleavedWith": [
+          "oma",
+          "euro",
+          "leute",
+          "regnen",
+          "termin",
+          "neunzig"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "صحّح: ~~vierzig und drei~~ (43)",
+            "a": "dreiundvierzig",
+            "why": "الآحاد أولاً: drei‑und‑vierzig — كلمة واحدة، لا كما تُقال بالعربية «ثلاثة وأربعون»… بل العربية هنا تساعد: الآحاد أولاً أيضاً!"
+          },
+          {
+            "q": "صحّح: ~~Es ist halb sieben.~~ (7:30)",
+            "a": "Es ist halb acht.",
+            "why": "halb تنظر إلى الساعة التالية: 7:30 = halb acht. halb sieben = 6:30."
+          },
+          {
+            "q": "صحّح: ~~Am April regnet es oft.~~",
+            "a": "Im April regnet es oft.",
+            "why": "الشهر بـim (im April) · اليوم بـam (am Montag) · الساعة بـum (um elf)."
+          },
+          {
+            "q": "صحّح: ~~Der Termin ist im Montag.~~",
+            "a": "Der Termin ist am Montag.",
+            "why": "اليوم بـam: am Montag · am Sonntag. im للشهر فقط."
+          },
+          {
+            "q": "صحّح: ~~Das Handy kostet zweihundert Euro nur.~~",
+            "a": "Das Handy kostet nur zweihundert Euro.",
+            "why": "nur قبل العدد مباشرة — لا في آخر الجملة كما «فقط» العربية."
+          },
+          {
+            "q": "صحّح: ~~Die Gruppe kommt am elf Uhr.~~",
+            "a": "Die Gruppe kommt um elf Uhr.",
+            "why": "الساعة بـum: um elf Uhr. am لليوم والأجزاء من اليوم (am Montag · am Abend) لا للساعة."
           }
         ],
         "interleavedWith": [
           "halb",
+          "april",
+          "montag",
+          "euro",
           "uhr"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "dictation",
         "items": [
           {
-            "q": "خطأ الأسبوع 2: «في فبراير»؟",
-            "a": "im Februar (im للشهور)"
+            "audioId": "wd-1",
+            "speakText": "Hallo, Yusuf! Sonntag, elf Uhr — die Gruppe ist hier. Toll!",
+            "a": "Hallo, Yusuf! Sonntag, elf Uhr — die Gruppe ist hier. Toll!",
+            "why": "Sonntag وUhr وGruppe بحرف كبير · Toll! كلمة اليوم بـll مزدوجة بعد o القصيرة."
           },
           {
-            "q": "«يوم الجمعة في الثامنة»؟",
-            "a": "Am Freitag um acht Uhr."
+            "audioId": "wd-2",
+            "speakText": "Hallo, Ayşe! Ja, der Termin ist am Sonntag um elf. Klar!",
+            "a": "Hallo, Ayşe! Ja, der Termin ist am Sonntag um elf. Klar!",
+            "why": "am Sonntag (اليوم) · um elf (الساعة) · Klar! كلمة اليوم — Termin مذكر: der Termin."
+          },
+          {
+            "audioId": "wd-12",
+            "speakText": "Genau! Frage vier: Wann regnet es oft in Berlin?",
+            "a": "Genau! Frage vier: Wann regnet es oft in Berlin?",
+            "why": "Wann = متى (سؤال الزمن) · regnet es — الفعل ثم es · oft = كثيراً."
+          },
+          {
+            "audioId": "wd-16",
+            "speakText": "Noch einmal, bitte! Nicht so schnell.",
+            "a": "Noch einmal, bitte! Nicht so schnell.",
+            "why": "Noch einmal, bitte! عبارة الطلب بفاصلة قبل bitte · nicht so schnell = ليس بهذه السرعة."
+          },
+          {
+            "audioId": "wd-18",
+            "speakText": "Ich verstehe: null eins sieben sechs, dreiundvierzig, neunzig. Klar!",
+            "a": "Ich verstehe: null eins sieben sechs, dreiundvierzig, neunzig. Klar!",
+            "why": "الأرقام بحرف صغير · dreiundvierzig كلمة واحدة · null بـll · Klar! كلمة اليوم."
+          },
+          {
+            "audioId": "wd-19",
+            "speakText": "Super! Sechs Fragen, sechs Antworten. Die Woche ist zu Ende.",
+            "a": "Super! Sechs Fragen, sechs Antworten. Die Woche ist zu Ende.",
+            "why": "Fragen وAntworten جمع بحرف كبير · zu Ende = انتهى (Ende اسم بحرف كبير)."
           }
         ],
         "interleavedWith": [
-          "februar",
-          "uhr"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "خطأ الأسبوع 3: 35 بالألمانية؟",
-            "a": "fünfunddreißig (الوحدة أولاً + ß)"
-          },
-          {
-            "q": "«مرة أخرى من فضلك»؟",
-            "a": "Noch einmal, bitte!"
-          }
-        ],
-        "interleavedWith": [
-          "noch",
-          "bitte"
+          "gruppe",
+          "sonntag",
+          "schnell",
+          "frage",
+          "woche"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Meisterschaft: Uhrzeit + Termin + Zahlen am Telefon",
-        "ar": "المعركة: وقت + موعد + أرقام بالهاتف"
+        "de": "Wiederholen wir zusammen: Wie alt ist deine Oma? Was kostet das Handy? Wie spät ist es? Wann ist der Termin? Noch einmal, bitte! — Toll, klar!",
+        "ar": "أن يراجع مع زميل بلعبة الأسئلة: عدد مركّب · سعر · ساعة · موعد بـum/am/im · رقم هاتف يُسمع ويُعاد — ويردّ بـtoll وklar"
       },
       "situation": {
-        "de": "Das Abschlussgespräch: Termin am Telefon",
-        "ar": "الحوار الختامي: موعد بالهاتف"
+        "de": "Sonntag, elf Uhr: Die Gruppe trifft sich, wie Ayşe und Yusuf.",
+        "ar": "الأحد في الحادية عشرة: موعد المجموعة الذي حدّده يوسف في الأسبوع — عائشة ويوسف يراجعان معاً"
       },
       "successCriteria": [
-        "يجتاز 3 مجموعات بـ75% فأكثر ويصحّح أخطاء الوحدة الثلاثة"
+        "يقول عدداً مركّباً وسعراً صحيحين (zweiunddreißig · nur zweihundertneunundsiebzig Euro) ويفهمهما من زميله",
+        "يقول الساعة بـhalb وViertel nach ويحدّد موعداً بـam + um (Am Montag um halb fünf)",
+        "يُملي رقم هاتفه على زميله ويطلب الإعادة بـNoch einmal, bitte! — ويردّ بـToll! وKlar!"
       ]
     }
   },
@@ -130,66 +358,179 @@
       {
         "items": [
           {
-            "q": "المعركة (1): «كم الساعة؟» — الجواب (3:30)؟",
-            "a": "Es ist halb vier."
-          },
-          {
-            "q": "المعركة (2): «الرقم 70»؟",
-            "a": "siebzig"
-          },
-          {
-            "q": "المعركة (3): «نلتقي يوم الاثنين»؟",
-            "a": "Wir treffen uns am Montag."
-          },
-          {
-            "q": "«رائع، أنت تستطيع»؟",
-            "a": "Toll, das kannst du!"
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "المعركة (4): «في مارس»؟",
-            "a": "im März"
-          },
-          {
-            "q": "المعركة (5): «عندي مكالمة»؟",
-            "a": "Ich habe einen Anruf."
-          },
-          {
-            "q": "«أجيبك لاحقاً»؟",
-            "a": "Ich antworte dir später."
-          },
-          {
-            "q": "«بالتأكيد، إلى الغد»؟",
-            "a": "Klar, bis morgen!"
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "المعركة (6): «الموعد في الثالثة»؟",
-            "a": "Der Termin ist um drei Uhr."
-          },
-          {
-            "q": "«25» كلمة واحدة؟",
-            "a": "fünfundzwanzig"
-          },
-          {
-            "q": "«مرة أخرى من فضلك»؟",
-            "a": "Noch einmal, bitte!"
-          },
-          {
-            "q": "halb sechs = ?",
+            "q": "«رائع!» — بالألمانية؟",
+            "a": "Toll!",
             "choices": [
-              "5:30",
-              "6:30"
+              "Toll!",
+              "Klar!",
+              "Gern!"
             ],
-            "a": "5:30"
+            "why": "Toll! = رائع — ردّ الإعجاب، كما قالتها عائشة في الحوار."
+          },
+          {
+            "q": "zehn, zwanzig, dreißig — und zwei = ?",
+            "a": "zweiunddreißig",
+            "choices": [
+              "zweiunddreißig",
+              "dreiundzwanzig",
+              "zweiundzwanzig"
+            ],
+            "why": "الآحاد أولاً ثم und ثم العشرات: zwei‑und‑dreißig = 32."
+          },
+          {
+            "q": "7:30 = Es ist ___.",
+            "a": "halb acht",
+            "choices": [
+              "halb acht",
+              "halb sieben",
+              "sieben Uhr halb"
+            ],
+            "why": "halb تنظر إلى الساعة التالية: 7:30 = halb acht."
+          },
+          {
+            "q": "Der Termin ist ___ Montag ___ halb fünf.",
+            "a": "am · um",
+            "choices": [
+              "am · um",
+              "im · am",
+              "um · am"
+            ],
+            "why": "am لليوم · um للساعة. ~~im Montag~~ خطأ الأسبوع."
+          },
+          {
+            "q": "Das Handy kostet ___ 279 Euro. (فقط)",
+            "a": "nur",
+            "choices": [
+              "nur",
+              "noch",
+              "viel"
+            ],
+            "why": "nur = فقط، وتسبق العدد مباشرة."
+          },
+          {
+            "q": "الترتيب: bitte! / einmal, / Noch",
+            "a": "Noch einmal, bitte!",
+            "why": "Noch einmal, bitte! — عبارة الإعادة: Noch أولاً، ثم einmal، ثم bitte بعد الفاصلة."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«واضح / مفهوم!» — بالألمانية؟",
+            "a": "Klar!",
+            "choices": [
+              "Klar!",
+              "Toll!",
+              "Genau!"
+            ],
+            "why": "Klar! = واضح/مفهوم — ردّ الفهم، كما قالها يوسف بعد الرقم."
+          },
+          {
+            "q": "43 = ?",
+            "a": "dreiundvierzig",
+            "choices": [
+              "dreiundvierzig",
+              "vierundvierzig",
+              "vierunddreißig"
+            ],
+            "why": "drei‑und‑vierzig = 43. أما vierunddreißig فهي 34."
+          },
+          {
+            "q": "11:15 = Es ist ___.",
+            "a": "Viertel nach elf",
+            "choices": [
+              "Viertel nach elf",
+              "Viertel vor elf",
+              "halb elf"
+            ],
+            "why": "nach = بعد: Viertel nach elf = 11:15. vor = قبل (10:45)."
+          },
+          {
+            "q": "___ April regnet es oft.",
+            "a": "Im",
+            "choices": [
+              "Im",
+              "Am",
+              "Um"
+            ],
+            "why": "الشهر بـim: im April."
+          },
+          {
+            "q": "«لكم شخصاً الطعام؟» — Für wie viele Leute? — Für ___. (80)",
+            "a": "achtzig",
+            "choices": [
+              "achtzig",
+              "achtzehn",
+              "achtundzwanzig"
+            ],
+            "why": "achtzig = 80 (‑zig للعشرات). achtzehn = 18 وachtundzwanzig = 28."
+          },
+          {
+            "q": "الترتيب: elf / kommt / um / Uhr. / Die Gruppe",
+            "a": "Die Gruppe kommt um elf Uhr.",
+            "why": "الفاعل ثم الفعل ثانياً ثم um elf Uhr (الساعة بـum)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Ayşe: Sonntag, elf Uhr — die Gruppe ist hier. ___!",
+            "a": "Toll",
+            "choices": [
+              "Toll",
+              "Klar",
+              "Nur"
+            ],
+            "why": "Toll! = رائع — ردّ الإعجاب (كلمة اليوم)."
+          },
+          {
+            "q": "279 Euro = ?",
+            "a": "zweihundertneunundsiebzig",
+            "choices": [
+              "zweihundertneunundsiebzig",
+              "zweihundertsiebenundneunzig",
+              "neunhundertneunundsiebzig"
+            ],
+            "why": "المئات (zweihundert) ثم الآحاد (neun) ثم und ثم العشرات (siebzig) = 279."
+          },
+          {
+            "q": "4:30 = ___.",
+            "a": "halb fünf",
+            "choices": [
+              "halb fünf",
+              "halb vier",
+              "Viertel nach vier"
+            ],
+            "why": "halb fünf = 4:30 (نصف الطريق إلى الخامسة)."
+          },
+          {
+            "q": "Die Gruppe kommt ___ elf Uhr.",
+            "a": "um",
+            "choices": [
+              "um",
+              "am",
+              "im"
+            ],
+            "why": "الساعة بـum: um elf Uhr."
+          },
+          {
+            "q": "Wann regnet es oft? — ___ April.",
+            "a": "Im",
+            "choices": [
+              "Im",
+              "Am",
+              "Um"
+            ],
+            "why": "الشهر بـim. am لليوم، um للساعة."
+          },
+          {
+            "q": "«مرة أخرى من فضلك!» — بالألمانية؟",
+            "a": "Noch einmal, bitte!",
+            "why": "Noch einmal, bitte! — بفاصلة قبل bitte وعلامة تعجب."
           }
         ],
         "passingScore": 0.75
@@ -198,53 +539,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einheit 3 geschafft: Zahlen bis 1000, Uhrzeiten und Termine — du kannst telefonieren und verabreden!",
-      "ar": "اكتملت الوحدة 3: الأرقام حتى 1000 والأوقات والمواعيد — تستطيع التелефن وحجز المواعيد!"
+      "de": "Woche drei ist zu Ende: zweiunddreißig Leute, nur 279 Euro, halb acht, am Montag um halb fünf, im April. Noch einmal, bitte! — Toll, klar!",
+      "ar": "الوحدة الثالثة اكتملت: تركّب الأعداد بالآحاد أولاً، وتضع nur قبل السعر، وتقرأ الساعة بـhalb للساعة التالية، وتختار um/am/im، وتطلب الإعادة — وتردّ بـtoll وklar."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~halb drei = 3:30~~",
-          "ar": "halb للساعة التالية"
+          "de": "~~Es ist halb drei.~~ (3:30)",
+          "ar": "halb من الساعة الحالية"
         },
-        "whyArabicSpeakerFails": "«الثالثة والنصف» تبدأ من الثالثة بالعربية — halb drei = 2:30 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«الثالثة والنصف» بالعربية تبدأ من الثالثة، وhalb الألمانية تنظر إلى الساعة التالية: halb drei = 2:30 وhalb vier = 3:30 — والخلط يعود في التوليف حين تُقرأ ساعات متعددة متتالية (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "halb drei = 2:30",
-          "ar": "نصف الثالث = الثانية والنصف"
+          "de": "3:30 = halb vier · 7:30 = halb acht",
+          "ar": "الثالثة والنصف = halb vier · السابعة والنصف = halb acht"
         },
         "exercise": {
-          "q": "«الساعة السابعة والنصف»؟",
-          "a": "halb acht (7:30)"
+          "q": "أكمل: 2:30 = halb ___",
+          "a": "drei"
         }
       },
       {
         "commonError": {
-          "de": "~~am Februar~~ / ~~um Montag~~",
-          "ar": "um/am/im"
+          "de": "~~am April~~ · ~~im Montag~~ · ~~am elf Uhr~~",
+          "ar": "«في» واحدة للكل"
         },
-        "whyArabicSpeakerFails": "«في» واحدة بالعربية — الألماني يفرّق الثلاثة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تقول «في أبريل · في الاثنين · في الحادية عشرة» بحرف واحد، والألمانية تفرّق: im للشهر · am لليوم · um للساعة — ثلاثة حروف لا تتبادل (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "um drei Uhr / am Montag / im Februar",
-          "ar": "الساعة / اليوم / الشهر"
+          "de": "im April · am Montag · um elf Uhr",
+          "ar": "في أبريل · يوم الاثنين · في الحادية عشرة"
         },
         "exercise": {
-          "q": "أكمل: ___ Sonntag ___ April ___ halb neun",
-          "a": "am · im · um"
+          "q": "أكمل: Der Termin ist ___ Sonntag ___ elf.",
+          "a": "am · um"
         }
       },
       {
         "commonError": {
-          "de": "~~dreissig~~ / ~~zwanzigeins~~",
-          "ar": "ß + ترتيب الوحدة أولاً"
+          "de": "~~dreiundzwanzig~~ (32) · ~~vierzig und drei~~",
+          "ar": "ترتيب الآحاد والعشرات"
         },
-        "whyArabicSpeakerFails": "قاعدة ß من الوحدة 2 + ترتيب الأرقام المركّبة — كلاهما يعود (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "المتعلم يقرأ العدد المكتوب 32 من اليسار «ثلاثون واثنان»، والألمانية تنطق الآحاد أولاً في كلمة واحدة: zweiunddreißig — ومن سمع dreiund… ظنّها 30 (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "dreißig / einundzwanzig",
-          "ar": "ثلاثون / واحد وعشرون"
+          "de": "32 = zweiunddreißig · 23 = dreiundzwanzig · 43 = dreiundvierzig",
+          "ar": "الآحاد أولاً ثم und ثم العشرات — كلمة واحدة"
         },
         "exercise": {
-          "q": "اكتب 42: ~~zweiundfünfzig~~?",
-          "a": "zweiundvierzig"
+          "q": "أكمل: 34 = ___",
+          "a": "vierunddreißig"
         }
       }
     ],
@@ -263,7 +604,8 @@
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-unit3-review"
+    "ars-uhrzeit",
+    "ars-um-am-im"
   ],
   "audioManifestRefs": [
     "word-toll",
@@ -271,7 +613,7 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 — توليف الوحدة 3 (معركة 70/30)",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 — توليف الوحدة 3: عائشة ويوسف في موعد المجموعة",
     "goetheWordListOverlap": [
       "toll",
       "klar"

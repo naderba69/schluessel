@@ -1505,7 +1505,7 @@ describe("D115 — أدوات القياس", () => {
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد — regnet (المدخل القائم) يمسّ أربعة أسطر جديدة (wt-4 · wt-5 · wt-11 · wt-15) سُجّلت (N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries.find((x) => x.word === "regnet")?.regeneratedTracks).toEqual(["tm-2", "tr-3", "km-11", "fh-14", "vb-19", "wt-4", "wt-5", "wt-11", "wt-15", "wg-13", "kh-7"]); // wg-13 من D168 · kh-7 من D179
+    expect(lex.entries.find((x) => x.word === "regnet")?.regeneratedTracks).toEqual(["tm-2", "tr-3", "km-11", "fh-14", "vb-19", "wt-4", "wt-5", "wt-11", "wt-15", "wg-13", "kh-7", "wd-12", "wd-13"]); // wg-13 من D168 · kh-7 من D179 · wd-12/13 من D195 (a1-u3-d6)
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
     expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
@@ -5146,7 +5146,7 @@ describe("D115 — الخطة الحقيقية", () => {
     expect(content).toHaveLength(60);
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
-    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6"]);
+    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6"]);
   });
   it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
@@ -5198,5 +5198,28 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     expect(new Set(audio).size).toBe(15);
     // Quiz بلا مشتِّتات مكتوبة خطأً (Strasse/Tase/Okey) — ß/ss تُكتب لا تُختار
     expect(l.quiz.variants.flatMap((v) => v.items.flatMap((i) => i.choices ?? []))).not.toContain("Strasse");
+  });
+  // D195 — الزوج الثاني (بعد «واصل» المالك = قبول الزوج الأول، D182)
+  it("a1-u3-d6 «Woche drei ist zu Ende!» — ars-uhrzeit + ars-um-am-im · 29 بنداً · wd-1..20 في موعد المجموعة (am Sonntag um elf من u3-d4) · «Wie spät ist es?» صيغة ثابتة معلنة", () => {
+    const { l } = check("a1-u3-d6");
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-uhrzeit", "ars-um-am-im"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^wd-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    expect(plan.lessons.find((x) => x.lessonId === "a1-u3-d6")!.fixedPhrases.map((f) => f.de)).toEqual(["Wie spät ist es?"]);
+    // مشتّتات الأعداد كلمات حقيقية (zweiundzwanzig · vierundvierzig) لا مختلقة (zwanzigzwei · vierzigdrei)
+    const choices = l.quiz.variants.flatMap((v) => v.items.flatMap((i) => i.choices ?? []));
+    expect(choices).not.toContain("zwanzigzwei");
+    expect(choices).toContain("zweiundzwanzig");
+  });
+  it("a1-u4-d6 «Woche vier ist zu Ende!» — ars-possessiv + ars-akkusativ-1 · 29 بنداً · wv-1..20 صورة عائلة لينا (الوعد في آخر u4-d4)", () => {
+    const { l } = check("a1-u4-d6");
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-possessiv", "ars-akkusativ-1"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^wv-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    // ثوابت القصة الجديدة (N-096): أخوا لينا توأمان في العاشرة · كلب · عمة · الأب معلّم بنظارة · الأم تعمل كثيراً
+    const txt = JSON.stringify(l);
+    for (const f of ["beide sind zehn", "einen Hund", "meine Tante", "Er ist Lehrer", "Sie arbeitet viel"]) expect(txt, f).toContain(f);
   });
 });

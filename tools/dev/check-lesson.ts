@@ -124,7 +124,8 @@ for (const line of lines) {
   const n = norm(de);
   const declared = fixedPhrases.some((p) => n === norm(p.de) || n.includes(norm(p.de)));
   const off = declared ? [] : official
-    .filter((o) => n.length >= 12 && (o.text === n || o.text.includes(n) || (n.includes(o.text) && o.text.split(" ").length >= 4)))
+    // D195: كلمة واحدة طويلة (dreiundzwanzig · Telefonnummer) ليست «نسخاً» ولو وردت داخل جملة رسمية — فرع الاحتواء يتطلّب كلمتين فأكثر
+    .filter((o) => n.length >= 12 && (o.text === n || (o.text.includes(n) && n.split(" ").length >= 2) || (n.includes(o.text) && o.text.split(" ").length >= 4)))
     .slice(0, 2)
     .map((o) => `${o.src}«${o.text}»`);
   hits.push({ line, front, later: [...later], official: off });
