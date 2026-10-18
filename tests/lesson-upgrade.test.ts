@@ -5146,7 +5146,7 @@ describe("D115 — الخطة الحقيقية", () => {
     expect(content).toHaveLength(60);
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
-    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6"]);
+    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6"]);
   });
   it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
@@ -5160,7 +5160,7 @@ describe("D115 — الخطة الحقيقية", () => {
 describe("D194 — مرور التوليف الثاني (N-004 · قرار المالك D182 أ): a1-u1-d6 + a1-u2-d6 بالمعايير نفسها", () => {
   const rules = loadGrammarRules(CONTENT);
   const plan = loadUpgradePlans(CONTENT)[0]!;
-  const check = (id: string, rules_n = 2) => {
+  const check = (id: string, rules_n = 2, words_n = 2) => {
     const l = realLessons.find((x) => x.id === id)!;
     const e = plan.lessons.find((x) => x.lessonId === id)!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
@@ -5169,7 +5169,7 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     expect([e.rule, e.practice, e.quiz]).toEqual(["done", "done", "done"]);
     expect(l.kind).toBe("integration");
     // توليف: لا كلمة جديدة إلا الجسيمان القديمان · 4 أنواع منها error-hunt (أول استعمال له — مصائد الأسبوع تُصطاد لا تُقرأ) · Quiz 3×6 بعتبة 75%
-    expect(l.praesentation.wordIds).toHaveLength(2);
+    expect(l.praesentation.wordIds).toHaveLength(words_n); // u8-d6: 2 + سبعة ألوان (D190 · قرار المالك D182 N-107)
     expect(l.praesentation.grammarArsenalIds).toHaveLength(rules_n);
     expect(r.practiceTypes.sort()).toEqual(["dictation", "error-hunt", "gap-fill", "listening"]);
     expect(r.practiceItems).toBeGreaterThanOrEqual(28);
@@ -5241,5 +5241,27 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     expect(new Set(audio).size).toBe(14);
     // «Gibt es einen Computer?» كانت مقطعاً من جملة A2 رسمية (4 كلمات) — استُبدلت لا أُعلنت
     expect(JSON.stringify(l)).not.toContain("Gibt es einen Computer?");
+  });
+  it("a1-u7-d6 «Woche sieben ist zu Ende!» — trennbare + unregelm + regelm · 30 بنداً · sb-1..20 يوم يوسف بكل أفعال الأسبوع", () => {
+    const { l } = check("a1-u7-d6", 3);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-trennbare", "ars-praesens-unregelm", "ars-praesens-regelm"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^sb-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["stehe um halb acht auf", "er wartet", "fährt mit dem Fahrrad", "er ist müde", "Ich möchte früh aufstehen"]) expect(txt, f).toContain(f);
+  });
+  it("a1-u8-d6 «Woche acht ist zu Ende!» — von-seit-bei + dativ-fix + koennen-muessen · 30 بنداً · ac-1..20 حقيبة يوسف بالألوان السبعة (D190)", () => {
+    const { l } = check("a1-u8-d6", 3, 9);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-von-seit-bei", "ars-dativ-fix", "ars-koennen-muessen"]);
+    expect(l.praesentation.wordIds).toEqual(["passen", "kunde", "blau", "rot", "gruen", "gelb", "schwarz", "weiss", "braun"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^ac-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    // كل لون من السبعة يظهر في نص الدرس (الحوار يسمّيها كلها: الحقيبة ثم تونس ثم الشاي والقهوة)
+    const txt = JSON.stringify(l);
+    for (const c of ["blau", "rot", "grün", "gelb", "schwarz", "weiß", "braun"]) expect(txt, c).toContain(c);
+    // لا تقليب في «Der Kaffee ist …» — كان مقطعاً من جملتين A2 رسميتين
+    expect(txt).not.toContain('"Der Kaffee ist ___');
   });
 });

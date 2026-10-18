@@ -6,31 +6,44 @@
   "day": 6,
   "kind": "integration",
   "ziel": {
-    "de": "Die Einheit 8 zusammenfassen und die Wochen-Meisterschaft bestehen.",
-    "ar": "تلخيص الوحدة 8 واجتياز معركة الأسبوع"
+    "de": "Woche acht ist zu Ende: Die Jacke ist blau, die Schuhe sind schwarz · Die Hose passt gut · Die Kette ist vom Markt, die Sonnenbrille aus dem Geschäft bei der Bäckerei · seit zwei Monaten · mit der Bahn zum Flughafen nach Tunesien · Ich muss nichts kaufen.",
+    "ar": "توليف الأسبوع الثامن: سبعة ألوان (blau · rot · grün · gelb · schwarz · weiß · braun) بعد ist/sind · passen · الزبون والبائع · vom/aus dem/bei der/seit (الداتيف بعد von · seit · bei) · mit der Bahn · zum Flughafen · nach Tunesien · muss/kann + الفعل في الآخر — ثم معركة الوحدة (75% فأكثر). الألوان كلمات الأسبوع الجديدة (D190)، وpassen وKunde تعودان من الوحدة نفسها."
   },
   "canDoDaily": [
-    "يجتاز معركة الوحدة 8 بعتبة 0.75"
+    "يصف ما في حقيبته بالألوان بعد ist/sind (Die Jacke ist blau · Die Schuhe sind schwarz) ويقول إن شيئاً يناسبه (Die Hose passt gut)",
+    "يستعمل vom/aus dem/bei der/seit/mit der/zum/nach صحيحاً (Die Kette ist vom Markt · mit der Bahn zum Flughafen) وmuss/kann مع الفعل في الآخر ويجتاز معركة الوحدة 8 بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
-      "hose",
+      "koffer",
       "passen",
-      "preis"
+      "bahn"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«أستطيع أن أقيس البنطال عند البائع» — الصيغة الصحيحة؟ (تخمين فقط)"
+          "de": "«أسافر بالقطار إلى المطار» — تخمين فقط"
         },
         "choices": [
-          "Ich kann die Hose beim Verkäufer anprobieren.",
-          "Ich kann anprobieren die Hose bei dem Verkäufer.",
-          "Ich kann die Hose anprobieren beim Verkäufer."
+          "Ich fahre mit der Bahn zum Flughafen.",
+          "Ich fahre mit die Bahn zum Flughafen.",
+          "Ich fahre mit der Bahn nach Flughafen."
         ],
-        "answer": "Ich kann die Hose beim Verkäufer anprobieren.",
+        "answer": "Ich fahre mit der Bahn zum Flughafen.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«السترة زرقاء» — تخمين فقط"
+        },
+        "choices": [
+          "Die Jacke ist blau.",
+          "Die Jacke ist blaue.",
+          "Der Jacke ist blau."
+        ],
+        "answer": "Die Jacke ist blau.",
         "revealNextSession": true
       }
     ],
@@ -53,90 +66,303 @@
       "ars-dativ-fix",
       "ars-koennen-muessen"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a1-u8-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«البنطال مقاسه جيد»؟",
-            "a": "Die Hose passt gut."
+            "q": "Die Jacke ist ___, die Schuhe sind schwarz. (أزرق)",
+            "a": "blau",
+            "why": "اللون بعد ist/sind بلا نهاية: blau · schwarz. (لا ~~blaue~~ هنا — النهايات تأتي لاحقاً.)"
           },
           {
-            "q": "«الزبون يدفع عند الشباك»؟",
-            "a": "Der Kunde zahlt am Schalter."
+            "q": "Die Hose ist ___, und sie passt gut! (بنّي)",
+            "a": "braun",
+            "why": "braun = بنّي. وpassen = يناسب المقاس: die Hose passt (مفرد) · die Stiefel passen (جمع)."
           },
           {
-            "q": "«السترة زرقاء والحذاء أسود»؟",
-            "a": "Die Jacke ist blau und die Schuhe sind schwarz."
+            "q": "Die Kette ist ___ Markt. (من السوق = von + dem)",
+            "a": "vom",
+            "why": "von + dem = vom (der Markt مذكر ⇐ dem). von يأخذ الداتيف دائماً."
           },
           {
-            "q": "«القميص أبيض والحزام بنّي»؟",
-            "a": "Das Hemd ist weiß und der Gürtel ist braun."
+            "q": "Die Sonnenbrille ist aus dem Geschäft ___ der Bäckerei. (عند)",
+            "a": "bei",
+            "why": "bei + الداتيف: bei der Bäckerei (die ⇐ der) — لا ~~bei die~~. وbei dem = beim."
+          },
+          {
+            "q": "Ich spare ___ zwei Monaten. (منذ)",
+            "a": "seit",
+            "why": "seit + الداتيف: seit zwei Monaten (Monate + n في جمع الداتيف) · seit einem Jahr."
+          },
+          {
+            "q": "Ich fahre mit ___ Bahn zum Flughafen. (die Bahn)",
+            "a": "der",
+            "why": "mit يأخذ الداتيف دائماً: die Bahn ⇐ mit der Bahn · der Bus ⇐ mit dem Bus."
+          },
+          {
+            "q": "Mein Vater holt mich ab — mit ___ Auto. (das Auto)",
+            "a": "dem",
+            "why": "das Auto محايد ⇐ في الداتيف dem: mit dem Auto. وabholen منفصل: holt … ab."
+          },
+          {
+            "q": "Wann fliegst du ___ Tunesien? (إلى بلد)",
+            "a": "nach",
+            "why": "الأماكن والبلدان بلا أداة ⇐ nach: nach Tunesien · nach Berlin. أما المباني ⇐ zum/zur (zum Flughafen)."
+          },
+          {
+            "q": "Ich muss nichts ___. (kaufen)",
+            "a": "kaufen",
+            "why": "بعد muss يأتي الفعل الثاني مصدراً في آخر الجملة: Ich muss … kaufen — لا ~~Ich muss zu kaufen~~."
+          },
+          {
+            "q": "Der Verkäufer möchte fünfundzwanzig, der ___ bezahlt zwanzig! (الزبون)",
+            "a": "Kunde",
+            "why": "der Kunde = الزبون (مذكر) والـVerkäufer = البائع. في u8-d2: den Kunden في المفعول (+n)."
           }
         ],
         "interleavedWith": [
-          "passen",
-          "kunde",
           "jacke",
           "schuh",
-          "hemd",
-          "guertel"
+          "hose",
+          "kette",
+          "markt",
+          "sonnenbrille",
+          "geschaeft",
+          "baeckerei",
+          "sparen",
+          "bahn",
+          "flughafen",
+          "auto",
+          "verkaeufer"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«بالقطار إلى برلين»؟",
-            "a": "Mit der Bahn nach Berlin."
+            "audioId": "ac-2",
+            "speakText": "Ja! Darin sind die Jacke, zwei Hemden und die Schuhe für Oma. Die Jacke ist blau, die Schuhe sind schwarz.",
+            "q": "استمع: ما لون السترة؟",
+            "choices": [
+              "أزرق",
+              "أسود",
+              "بنّي"
+            ],
+            "a": "أزرق",
+            "why": "Die Jacke ist blau (أزرق) · die Schuhe sind schwarz (أسود) — اللون بعد ist/sind بلا نهاية."
           },
           {
-            "q": "«يجب أن أتسوّق»؟",
-            "a": "Ich muss einkaufen."
+            "audioId": "ac-4",
+            "speakText": "Die Hose ist braun, und sie passt gut! Die Hose vom Markt passt nicht — sie ist zu groß.",
+            "q": "استمع: أي بنطال لا يناسب؟",
+            "choices": [
+              "بنطال السوق — كبير جداً",
+              "البنطال البنّي",
+              "كلاهما يناسب"
+            ],
+            "a": "بنطال السوق — كبير جداً",
+            "why": "Die Hose vom Markt passt nicht — sie ist zu groß. وvom = von dem (من السوق)."
+          },
+          {
+            "audioId": "ac-6",
+            "speakText": "Die Kette ist vom Markt: Der Verkäufer möchte fünfundzwanzig, der Kunde bezahlt zwanzig! Die Sonnenbrille ist aus dem Geschäft bei der Bäckerei.",
+            "q": "استمع: من أين النظارة الشمسية؟",
+            "choices": [
+              "من المحلّ عند المخبز",
+              "من السوق",
+              "من المطار"
+            ],
+            "a": "من المحلّ عند المخبز",
+            "why": "aus dem Geschäft bei der Bäckerei — aus + dem (das Geschäft) · bei + der (die Bäckerei). والقلادة vom Markt."
+          },
+          {
+            "audioId": "ac-8",
+            "speakText": "Seit zwei Monaten. Und seit einem Jahr bin ich nicht zu Hause.",
+            "q": "استمع: منذ متى يوسف بعيد عن بيته؟",
+            "choices": [
+              "منذ سنة",
+              "منذ شهرين",
+              "منذ أسبوع"
+            ],
+            "a": "منذ سنة",
+            "why": "seit einem Jahr = منذ سنة (das Jahr ⇐ einem) · seit zwei Monaten = منذ شهرين (مدة الادّخار)."
+          },
+          {
+            "audioId": "ac-10",
+            "speakText": "Mit der Bahn — nicht mit dem Taxi. Ein Taxi ist zu teuer. Die Bahn fährt vierzig Minuten.",
+            "q": "استمع: كم تستغرق رحلة القطار إلى المطار؟",
+            "choices": [
+              "أربعين دقيقة",
+              "أربع عشرة دقيقة",
+              "عشرين دقيقة"
+            ],
+            "a": "أربعين دقيقة",
+            "why": "vierzig Minuten = أربعون دقيقة · mit der Bahn (die ⇐ der) · mit dem Taxi (das ⇐ dem)."
+          },
+          {
+            "audioId": "ac-12",
+            "speakText": "Und mein Vater holt mich ab — mit dem Auto. Er kommt aus Tunis.",
+            "q": "استمع: من يستقبل يوسف في تونس؟",
+            "choices": [
+              "أبوه بالسيارة",
+              "أمّه بالحافلة",
+              "أخته بالتاكسي"
+            ],
+            "a": "أبوه بالسيارة",
+            "why": "mein Vater holt mich ab (abholen منفصل) · mit dem Auto · aus Tunis (من مدينة بلا أداة)."
+          },
+          {
+            "audioId": "ac-14",
+            "speakText": "Ich muss noch einen Regenschirm kaufen — nein! In Tunesien ist immer Sonne. Ich muss nichts kaufen.",
+            "q": "استمع: ماذا يجب أن يشتري يوسف بعد؟",
+            "choices": [
+              "لا شيء",
+              "مظلّة",
+              "حقيبة ظهر"
+            ],
+            "a": "لا شيء",
+            "why": "Ich muss nichts kaufen — الفعل kaufen في الآخر بعد muss · في تونس شمس دائماً فلا مظلّة."
+          },
+          {
+            "audioId": "ac-18",
+            "speakText": "Rot? In Tunesien ist die Sonne gelb, das Haus ist weiß, und das Wasser ist blau!",
+            "q": "استمع: ما لون البيت في تونس؟",
+            "choices": [
+              "أبيض",
+              "أصفر",
+              "أزرق"
+            ],
+            "a": "أبيض",
+            "why": "das Haus ist weiß (أبيض) · die Sonne gelb (أصفر) · das Wasser blau (أزرق)."
+          }
+        ],
+        "interleavedWith": [
+          "hemd",
+          "oma",
+          "taxi",
+          "abholen",
+          "regenschirm",
+          "sonne",
+          "haus",
+          "wasser"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "صحّح: ~~Ich fahre mit die Bahn.~~",
+            "a": "Ich fahre mit der Bahn.",
+            "why": "mit + الداتيف: die Bahn ⇐ der Bahn."
+          },
+          {
+            "q": "صحّح: ~~Die Sonnenbrille ist bei die Bäckerei.~~",
+            "a": "Die Sonnenbrille ist aus dem Geschäft bei der Bäckerei.",
+            "why": "bei + الداتيف: bei der Bäckerei. والنظارة من المحلّ (aus dem Geschäft) الذي عند المخبز."
+          },
+          {
+            "q": "صحّح: ~~Ich fliege zu Tunesien.~~",
+            "a": "Ich fliege nach Tunesien.",
+            "why": "البلدان بلا أداة ⇐ nach. zu/zum للمباني والأشخاص (zum Flughafen)."
+          },
+          {
+            "q": "صحّح: ~~Ich spare seit zwei Monate.~~",
+            "a": "Ich spare seit zwei Monaten.",
+            "why": "seit + الداتيف: جمع الداتيف يأخذ ‑n: Monaten."
+          },
+          {
+            "q": "صحّح: ~~Ich muss kaufen nichts.~~",
+            "a": "Ich muss nichts kaufen.",
+            "why": "بعد muss يذهب الفعل الثاني إلى آخر الجملة: nichts kaufen."
+          },
+          {
+            "q": "صحّح: ~~Die Jacke ist blaue.~~",
+            "a": "Die Jacke ist blau.",
+            "why": "اللون بعد ist بلا نهاية: blau. (مثل: Die Schuhe sind schwarz.)"
           }
         ],
         "interleavedWith": [
           "bahn",
-          "einkaufen"
+          "baeckerei",
+          "fliegen",
+          "sparen",
+          "jacke"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "dictation",
         "items": [
           {
-            "q": "«هذا غالٍ — أين الباقي؟»؟",
-            "a": "Das ist zu teuer! Wo ist mein Wechselgeld?"
+            "audioId": "ac-1",
+            "speakText": "Hallo, Yusuf! Woche acht ist zu Ende. Ist der Koffer fertig? Was ist darin?",
+            "a": "Hallo, Yusuf! Woche acht ist zu Ende. Ist der Koffer fertig? Was ist darin?",
+            "why": "Koffer مذكر ⇐ der · darin = فيها (da + r + in من الأسبوع السادس) · acht بـch."
           },
           {
-            "q": "«أشتري عند الخبّاز»؟",
-            "a": "Ich kaufe beim Bäcker ein."
+            "audioId": "ac-3",
+            "speakText": "Blau und schwarz — und die Hose?",
+            "a": "Blau und schwarz — und die Hose?",
+            "why": "Blau بحرف كبير في أول الجملة فقط · schwarz بـsch وz · die Hose مؤنث."
+          },
+          {
+            "audioId": "ac-9",
+            "speakText": "Frage zwei: Wie kommst du am Montag zum Flughafen?",
+            "a": "Frage zwei: Wie kommst du am Montag zum Flughafen?",
+            "why": "zum = zu dem (der Flughafen مذكر) · kommst بـmm و‑st · am Montag."
+          },
+          {
+            "audioId": "ac-13",
+            "speakText": "Frage drei: Was musst du noch kaufen?",
+            "a": "Frage drei: Was musst du noch kaufen?",
+            "why": "musst مع du بـss و‑t · kaufen المصدر في الآخر · noch = بعدُ."
+          },
+          {
+            "audioId": "ac-17",
+            "speakText": "Ja, die Stiefel passen! Sie sind rot und nicht teuer — dreißig Euro mit Rabatt.",
+            "a": "Ja, die Stiefel passen! Sie sind rot und nicht teuer — dreißig Euro mit Rabatt.",
+            "why": "die Stiefel جمع ⇐ passen وsind · rot بلا نهاية · dreißig بـß · Rabatt بـtt."
+          },
+          {
+            "audioId": "ac-19",
+            "speakText": "Und grün? Gibt es in Tunesien auch grün?",
+            "a": "Und grün? Gibt es in Tunesien auch grün?",
+            "why": "grün بـü · Gibt es …? السؤال بـes (الأسبوع السادس) · in Tunesien (مكان ثابت ⇐ in)."
           }
         ],
         "interleavedWith": [
-          "wechselgeld",
-          "kaufen"
+          "koffer",
+          "hose",
+          "montag",
+          "stiefel",
+          "rabatt"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Wochen-Meisterschaft: Einkaufen",
-        "ar": "معركة الأسبوع: التسوق"
+        "de": "Mein Koffer: Die Jacke ist blau, die Schuhe sind schwarz. Die Hose passt gut. Die Kette ist vom Markt. Ich fahre mit der Bahn zum Flughafen — und ich muss nichts kaufen.",
+        "ar": "أن يصف حقيبة سفره لزميل: الأشياء بألوانها بعد ist/sind · ما يناسبه (passt) · من أين كل شيء (vom · aus dem · bei der) · كيف يصل (mit der · zum · nach) · وما يجب أو يستطيع أن يفعله بعد (muss/kann + الفعل في الآخر)"
       },
       "situation": {
-        "de": "Abschlussprüfung der Einheit 8",
-        "ar": "اختبار ختام الوحدة 8"
+        "de": "Das Ende der Woche: Der Koffer von Yusuf ist fertig — und jetzt dein Koffer.",
+        "ar": "نهاية الأسبوع الثامن: حقيبة يوسف جاهزة للسفر إلى تونس ولينا تسأل عن كل شيء فيها — ثم حقيبتك أنت"
       },
       "successCriteria": [
-        "اجتياز المعركة بـ ≥ 0.75 مع الداتيف والأسعار والأفعال الناقمة صحيحة"
+        "يذكر ثلاثة أشياء في حقيبته بثلاثة ألوان صحيحة بعد ist/sind (Die Jacke ist blau · Die Schuhe sind schwarz)",
+        "يستعمل von/aus/bei/seit/mit مع الداتيف صحيحاً في ثلاث جمل (vom Markt · bei der Bäckerei · mit der Bahn)",
+        "يقول جملة واحدة بـmuss وجملة بـkann والفعل الثاني في الآخر (Ich muss nichts kaufen · Ich kann die Hose anprobieren)"
       ]
     }
   },
@@ -151,20 +377,59 @@
       {
         "items": [
           {
-            "q": "«عند الخبّاز»؟",
-            "a": "beim Bäcker"
+            "q": "Die Jacke ___ blau.",
+            "a": "ist",
+            "choices": [
+              "ist",
+              "sind",
+              "bist"
+            ],
+            "why": "die Jacke مفرد ⇐ ist؛ اللون بعدها بلا نهاية."
           },
           {
-            "q": "«يجب أن أدفع»؟",
-            "a": "Ich muss zahlen."
+            "q": "Die Kette ist ___ Markt.",
+            "a": "vom",
+            "choices": [
+              "vom",
+              "von die",
+              "aus"
+            ],
+            "why": "von + dem تندمجان: vom (der Markt مذكر)."
           },
           {
-            "q": "«تذكرة»؟",
-            "a": "die Fahrkarte"
+            "q": "Ich fahre mit ___ Bahn.",
+            "a": "der",
+            "choices": [
+              "der",
+              "die",
+              "dem"
+            ],
+            "why": "mit + الداتيف: die Bahn ⇐ der."
           },
           {
-            "q": "«هذا مناسب!»؟",
-            "a": "Das ist günstig!"
+            "q": "Ich fliege ___ Tunesien.",
+            "a": "nach",
+            "choices": [
+              "nach",
+              "zu",
+              "in"
+            ],
+            "why": "البلدان بلا أداة ⇐ nach."
+          },
+          {
+            "q": "Ich muss nichts ___.",
+            "a": "kaufen",
+            "choices": [
+              "kaufen",
+              "kaufe",
+              "kaufst"
+            ],
+            "why": "بعد muss المصدر في الآخر: kaufen."
+          },
+          {
+            "q": "الترتيب: Bäckerei. / bei / Das Geschäft ist / der",
+            "a": "Das Geschäft ist bei der Bäckerei.",
+            "why": "bei + الداتيف المؤنث der: bei der Bäckerei."
           }
         ],
         "passingScore": 0.75
@@ -172,20 +437,59 @@
       {
         "items": [
           {
-            "q": "«بالحافلة»؟",
-            "a": "mit dem Bus"
+            "q": "Die Schuhe ___ schwarz.",
+            "a": "sind",
+            "choices": [
+              "sind",
+              "ist",
+              "seid"
+            ],
+            "why": "die Schuhe جمع ⇐ sind."
           },
           {
-            "q": "«أستطيع أن أجده»؟",
-            "a": "Ich kann das finden."
+            "q": "Ich spare ___ zwei Monaten.",
+            "a": "seit",
+            "choices": [
+              "seit",
+              "von",
+              "bei"
+            ],
+            "why": "منذ = seit + الداتيف (Monaten)."
           },
           {
-            "q": "«الزبون»؟",
-            "a": "der Kunde (die Kunden)"
+            "q": "Wie kommst du ___ Flughafen? (der)",
+            "a": "zum",
+            "choices": [
+              "zum",
+              "nach",
+              "zur"
+            ],
+            "why": "zu + dem تندمجان: zum (der Flughafen مذكر)."
           },
           {
-            "q": "«منذ أسبوعين»؟",
-            "a": "seit zwei Wochen"
+            "q": "Die Hose ___ gut. (يناسب)",
+            "a": "passt",
+            "choices": [
+              "passt",
+              "passen",
+              "passe"
+            ],
+            "why": "die Hose مفرد ⇐ passt؛ die Stiefel ⇐ passen."
+          },
+          {
+            "q": "Kann ich die Hose ___?",
+            "a": "anprobieren",
+            "choices": [
+              "anprobieren",
+              "anprobiere",
+              "probiere an"
+            ],
+            "why": "بعد kann المصدر كاملاً في الآخر: anprobieren."
+          },
+          {
+            "q": "الترتيب: ab. / Mein Vater / mich / holt",
+            "a": "Mein Vater holt mich ab.",
+            "why": "abholen منفصل: holt ثانياً وab في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -193,20 +497,59 @@
       {
         "items": [
           {
-            "q": "«كم يكلف هذا؟»؟",
-            "a": "Was kostet das?"
+            "q": "Die Sonnenbrille ist ___ dem Geschäft. (من داخل)",
+            "a": "aus",
+            "choices": [
+              "aus",
+              "von",
+              "bei"
+            ],
+            "why": "من داخل مكان ⇐ aus dem Geschäft؛ von للمصدر (vom Markt)."
           },
           {
-            "q": "«إلى برلين»؟",
-            "a": "nach Berlin"
+            "q": "Mein Vater holt mich mit ___ Auto ab. (das)",
+            "a": "dem",
+            "choices": [
+              "dem",
+              "das",
+              "der"
+            ],
+            "why": "mit + الداتيف المحايد dem: mit dem Auto."
           },
           {
-            "q": "«الباقي»؟",
-            "a": "das Wechselgeld"
+            "q": "Der Tee ist grün, der Kaffee ist ___. (أسود)",
+            "a": "schwarz",
+            "choices": [
+              "schwarz",
+              "weiß",
+              "grün"
+            ],
+            "why": "schwarz = أسود · weiß = أبيض · grün = أخضر."
           },
           {
-            "q": "«المقاس جيد»؟",
-            "a": "Die Hose passt gut."
+            "q": "Seit ___ Jahr bin ich nicht zu Hause. (ein)",
+            "a": "einem",
+            "choices": [
+              "einem",
+              "ein",
+              "einen"
+            ],
+            "why": "seit + الداتيف: das Jahr ⇐ einem Jahr."
+          },
+          {
+            "q": "Du ___ die Fahrkarte am Schalter kaufen. (müssen)",
+            "a": "musst",
+            "choices": [
+              "musst",
+              "muss",
+              "müssen"
+            ],
+            "why": "du musst بـ‑st؛ ich/er muss."
+          },
+          {
+            "q": "«القلادة من السوق» — بالألمانية؟",
+            "a": "Die Kette ist vom Markt.",
+            "why": "vom = von dem (der Markt) — من السوق."
           }
         ],
         "passingScore": 0.75
@@ -215,53 +558,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einheit 8 gemeistert: Du kaufst ein, verhandelst, zahlst — mit dem Bus, beim Bäcker, von der Familie, seit Jahren!",
-      "ar": "الوحدة 8 متقنة: تتسوّق وتتفاوض وتدفع — بالحافلة وعند الخبّاز ومن العائلة وسنوات!"
+      "de": "Woche acht ist zu Ende: Die Jacke ist blau, die Schuhe sind schwarz, die Hose ist braun und passt gut. Die Kette ist vom Markt, die Sonnenbrille aus dem Geschäft bei der Bäckerei. Ich spare seit zwei Monaten. Mit der Bahn zum Flughafen, nach Tunesien — und ich muss nichts kaufen.",
+      "ar": "الوحدة الثامنة اكتملت: تسمّي الألوان بعد ist/sind بلا نهاية، وتقول passt/passen، وتضع الداتيف بعد von وseit وbei وmit (vom · bei der · seit zwei Monaten · mit der Bahn)، وتفرّق nach (بلد) عن zum (مبنى)، وتضع الفعل الثاني في الآخر بعد muss/kann."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~mit den Bus~~ / ~~beim Bäckers~~ / ~~von die Familie~~",
-          "ar": "الداتيف الثابت + الاندماجات"
+          "de": "~~mit die Bahn~~ · ~~bei die Bäckerei~~ · ~~seit zwei Monate~~",
+          "ar": "الداتيف بعد mit · bei · von · seit"
         },
-        "whyArabicSpeakerFails": "حروف الجر الألمانية تفرض الداتيف وتندمج (beim/zum/vom)؛ العربي يجرّ دائماً لكن بلا اندماجات (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "حرف الجر العربي لا يغيّر شكل الأداة («بالقطار» · «عند المخبز»)، والألماني يحوّل die ⇐ der وder/das ⇐ dem بعد mit وbei وvon وseit دائماً ويلصقها (vom · beim · zum) ويزيد ‑n في جمع الداتيف (Monaten) — والخلط يعود في التوليف حين تجتمع أربعة حروف في وصف واحد (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "mit dem Bus · beim Bäcker · von der Familie",
-          "ar": "dem/der بعد الحروف + اندماجات"
+          "de": "mit der Bahn · bei der Bäckerei · vom Markt · seit zwei Monaten",
+          "ar": "بالقطار · عند المخبز · من السوق · منذ شهرين"
         },
         "exercise": {
-          "q": "أكمل: mit ___ Bus · bei ___ Bäcker · von ___ Familie.",
-          "a": "dem / dem / der"
+          "q": "أكمل: Ich fahre mit ___ Bus ___ Flughafen. (der Bus · der Flughafen)",
+          "a": "dem / zum"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich muss zu einkaufen.~~ / ~~Ich kann anprobieren die Hose.~~",
-          "ar": "الأفعال الناقمة: الفعل في النهاية"
+          "de": "~~Ich fliege zu Tunesien.~~ · ~~Ich fahre nach dem Flughafen.~~",
+          "ar": "nach وzu/zum سؤال واحد: إلى"
         },
-        "whyArabicSpeakerFails": "«يجب أن» و«أستطيع أن» بـ«أن»؛ الألماني يضع الفعل الآخر في نهاية الجملة — نفس نمط möchte (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«إلى» العربية واحدة للبلد والمبنى والشخص، والألمانية تفصل: nach للبلدان والمدن بلا أداة (nach Tunesien · nach Berlin) وzum/zur للمباني والأشخاص (zum Flughafen · zur Oma) — فيضع المتعلم حرفاً واحداً للكل (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich muss einkaufen. / Ich kann die Hose anprobieren.",
-          "ar": "الفعل غير المصرَّف في النهاية."
+          "de": "Ich fliege nach Tunesien. · Ich fahre zum Flughafen. · Ich fahre zur Oma.",
+          "ar": "أطير إلى تونس · أذهب إلى المطار · أذهب إلى الجدة"
         },
         "exercise": {
-          "q": "صحّح: ~~Ich will anprobieren die Jacke.~~",
-          "a": "Ich will die Jacke anprobieren."
+          "q": "أكمل: Yusuf fliegt ___ Tunesien, und Lena fährt ___ Bahnhof. (der Bahnhof)",
+          "a": "nach / zum"
         }
       },
       {
         "commonError": {
-          "de": "~~Wie kostet das?~~ / ~~Ich verkaufe~~ (حين أشتري)",
-          "ar": "Was kostet + ver-/kaufen"
+          "de": "~~Ich muss kaufen nichts.~~ · ~~Die Jacke ist blaue.~~",
+          "ar": "الفعل الثاني في الآخر · اللون بلا نهاية"
         },
-        "whyArabicSpeakerFails": "ترتيب السؤال وقلب ver- يورّثان من الوحدتين 2 و8 — الخلاصة الختامية للوحدة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«يجب أن أشتري» يضع الفعلين متجاورين، والألماني يرمي الثاني إلى آخر الجملة (Ich muss nichts kaufen · Ich kann die Hose anprobieren) · واللون العربي يتبع الاسم ويتغيّر («سترة زرقاء») بينما الألماني بعد ist/sind ثابت (blau) — نهايات الصفة تأتي في مستوى لاحق لا الآن (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Was kostet das? / Ich kaufe ein, der Verkäufer verkauft.",
-          "ar": "السؤال بالترتيب الصحيح والفعل الصحيح."
+          "de": "Ich muss nichts kaufen. · Die Jacke ist blau, die Schuhe sind schwarz.",
+          "ar": "لا يجب أن أشتري شيئاً · السترة زرقاء والحذاء أسود"
         },
         "exercise": {
-          "q": "أكمل: ___ kostet das? Ich ___ ein.",
-          "a": "Was / kaufe"
+          "q": "صحّح: ~~Ich kann anprobieren die Stiefel. Sie sind rote.~~",
+          "a": "Ich kann die Stiefel anprobieren. Sie sind rot."
         }
       }
     ],
@@ -306,7 +649,7 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Wiederholung & Test",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 — توليف الوحدة 8: حقيبة يوسف إلى تونس بالألوان",
     "goetheWordListOverlap": [
       "passen",
       "kunde",

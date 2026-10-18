@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d6-woche-acht-ist-zu-ende",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Woche acht ist zu Ende! — Yusufs Koffer für Tunesien",
+    "ar": "الأسبوع الثامن انتهى! — لينا تسأل يوسف عن حقيبته قبل السفر: الألوان (blau · schwarz · braun · rot · gelb · weiß · grün) · passen · vom/aus dem/bei der/seit · mit der Bahn zum Flughafen nach Tunesien · muss/kann + فعل في الآخر"
+  },
+  "usedIn": [
+    "a1-u8-d6"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "ac-1",
+      "speaker": "lena",
+      "text": "Hallo, Yusuf! Woche acht ist zu Ende. Ist der Koffer fertig? Was ist darin?",
+      "direction": "لينا تفتح — الحقيبة (u8-d1) · darin (u6)"
+    },
+    {
+      "id": "ac-2",
+      "speaker": "yusuf",
+      "text": "Ja! Darin sind die Jacke, zwei Hemden und die Schuhe für Oma. Die Jacke ist blau, die Schuhe sind schwarz.",
+      "direction": "يوسف — محتوى الحقيبة · الألوان الأولى: blau · schwarz"
+    },
+    {
+      "id": "ac-3",
+      "speaker": "lena",
+      "text": "Blau und schwarz — und die Hose?",
+      "direction": "لينا — تكرار اللونين · die Hose"
+    },
+    {
+      "id": "ac-4",
+      "speaker": "yusuf",
+      "text": "Die Hose ist braun, und sie passt gut! Die Hose vom Markt passt nicht — sie ist zu groß.",
+      "direction": "يوسف — braun · passen (u8-d3) · vom Markt (u8-d5)"
+    },
+    {
+      "id": "ac-5",
+      "speaker": "lena",
+      "text": "Frage eins: Woher ist die Kette? Vom Markt oder aus dem Geschäft?",
+      "direction": "لينا — السؤال الأول: vom مقابل aus dem"
+    },
+    {
+      "id": "ac-6",
+      "speaker": "yusuf",
+      "text": "Die Kette ist vom Markt: Der Verkäufer möchte fünfundzwanzig, der Kunde bezahlt zwanzig! Die Sonnenbrille ist aus dem Geschäft bei der Bäckerei.",
+      "direction": "يوسف — vom Markt · المساومة (u8-d5) · der Kunde · bei der Bäckerei"
+    },
+    {
+      "id": "ac-7",
+      "speaker": "lena",
+      "text": "Bei der Bäckerei — nicht «bei die»! Und seit wann sparst du?",
+      "direction": "لينا — bei der لا bei die (بطاقة u8-d5) · seit wann"
+    },
+    {
+      "id": "ac-8",
+      "speaker": "yusuf",
+      "text": "Seit zwei Monaten. Und seit einem Jahr bin ich nicht zu Hause.",
+      "direction": "يوسف — seit zwei Monaten · seit einem Jahr (u8-d5)"
+    },
+    {
+      "id": "ac-9",
+      "speaker": "lena",
+      "text": "Frage zwei: Wie kommst du am Montag zum Flughafen?",
+      "direction": "لينا — السؤال الثاني: zum Flughafen (u8-d4)"
+    },
+    {
+      "id": "ac-10",
+      "speaker": "yusuf",
+      "text": "Mit der Bahn — nicht mit dem Taxi. Ein Taxi ist zu teuer. Die Bahn fährt vierzig Minuten.",
+      "direction": "يوسف — mit der Bahn · mit dem Taxi · vierzig Minuten (u8-d4)"
+    },
+    {
+      "id": "ac-11",
+      "speaker": "lena",
+      "text": "Mit der Bahn, zum Flughafen, nach Tunesien — drei kleine Wörter!",
+      "direction": "لينا — الخلاصة: mit · zu · nach"
+    },
+    {
+      "id": "ac-12",
+      "speaker": "yusuf",
+      "text": "Und mein Vater holt mich ab — mit dem Auto. Er kommt aus Tunis.",
+      "direction": "يوسف — abholen · mit dem Auto · aus Tunis (u8-d4)"
+    },
+    {
+      "id": "ac-13",
+      "speaker": "lena",
+      "text": "Frage drei: Was musst du noch kaufen?",
+      "direction": "لينا — السؤال الثالث: müssen (u8-d3)"
+    },
+    {
+      "id": "ac-14",
+      "speaker": "yusuf",
+      "text": "Ich muss noch einen Regenschirm kaufen — nein! In Tunesien ist immer Sonne. Ich muss nichts kaufen.",
+      "direction": "يوسف — muss … kaufen · الشمس في تونس"
+    },
+    {
+      "id": "ac-15",
+      "speaker": "lena",
+      "text": "Ich muss auch einkaufen: einen Kuchen für Oma, bei der Bäckerei. Und die Fahrkarte am Schalter.",
+      "direction": "لينا — muss … einkaufen · bei der Bäckerei · am Schalter (u8-d5)"
+    },
+    {
+      "id": "ac-16",
+      "speaker": "yusuf",
+      "text": "Und die Stiefel? Passen die Stiefel?",
+      "direction": "يوسف — passen بصيغة الجمع"
+    },
+    {
+      "id": "ac-17",
+      "speaker": "lena",
+      "text": "Ja, die Stiefel passen! Sie sind rot und nicht teuer — dreißig Euro mit Rabatt.",
+      "direction": "لينا — الحذاء الطويل أحمر · Rabatt (u8-d2)"
+    },
+    {
+      "id": "ac-18",
+      "speaker": "yusuf",
+      "text": "Rot? In Tunesien ist die Sonne gelb, das Haus ist weiß, und das Wasser ist blau!",
+      "direction": "يوسف — gelb · weiß · blau"
+    },
+    {
+      "id": "ac-19",
+      "speaker": "lena",
+      "text": "Und grün? Gibt es in Tunesien auch grün?",
+      "direction": "لينا — grün؟"
+    },
+    {
+      "id": "ac-20",
+      "speaker": "yusuf",
+      "text": "Ja — der Tee! Der Tee ist grün, und der Kaffee ist schwarz. Komm nach Tunesien, Lena! Woche acht ist zu Ende.",
+      "direction": "يوسف يختم — grün · schwarz · دعوة إلى تونس · ختام الأسبوع"
+    }
+  ]
+}
