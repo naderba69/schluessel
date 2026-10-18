@@ -7,7 +7,8 @@
 #       → يعيد بناء المقتطف tools/pronunciation-reference.de.json من المرجع الكامل بعد التحقق من بصمة git
 #         (جلبه: gh api repos/open-dict-data/ipa-dict/git/blobs/<gitBlob> -H "Accept: application/vnd.github.raw")
 # ما يُدقَّق: كل كلمة في نصوص المسارات المنشورة (المانيفست) وفي حقل de لكل كلمة — كما يقرؤها الصوت المثبَّت
-# فعلاً بعد معجم النطق (synth_phonemes)، معزولةً. فحصان: طول الحركة المنبورة · موضع النبر (عدد النوى قبله).
+# فعلاً بعد معجم النطق (synth_phonemes)، معزولةً. ثلاثة فحوص: طول الحركة المنبورة · موضع النبر (عدد النوى قبله)
+# · إجهار النهاية داخل الكلمة (D189: b/d/ɡ مجهورة قبل صامت حيث يهمسها المرجع).
 # الحكم: كلمة يخالف نطقُها المرجعَ في كل صيغه، أو لا مرجع لها، يجب أن تكون مصحَّحة في المعجم (entries)
 # أو مفحوصة مقبولة بسبب مكتوب (reviewed) — وإلا تفشل البوابة (tests/pronunciation-audit.test.ts).
 # حدود معلنة: الكلمة معزولةً لا في جملتها (صيغ السياق يحرسها اختبار المعجم) · لا فحص للصوامت (Familienname
@@ -86,9 +87,41 @@ def stressed_long(ipa: str) -> bool | None:
     return None if not m else m.group(0).endswith("ː")
 
 
+_DEVOICE = {"b": "p", "d": "t", "ɡ": "k"}
+_C_NEXT = "ptkbdɡfvszʃçxhmnlrɾŋ"  # صامت يليه داخل الكلمة — لا حركة ولا علامة نبر ولا حدّ كلمة
+
+
+def _devoice_norm(ipa: str) -> str:
+    """تطبيع للمقارنة الصامتية فقط: رموز المرجع ← أعراف espeak (ʁ→r · t͡s→ts) وحذف النبر وʔ والعلامات غير المقطعية."""
+    s = _norm(ipa).replace("t͡s", "ts").replace("ʁ", "r").replace("ʔ", "")
+    return re.sub(r"[ˈˌ̩ˑ]", "", s).replace("ɾ", "r")
+
+
+def devoicing_errors(espeak: str, refs: list[str]) -> list[str]:
+    """D189 (N-101): إجهار النهاية داخل المركّبات وقبل اللواحق — espeak يُبقي b/d/ɡ مجهورةً قبل صامت
+    (Flughafen [ɡh] · Mädchen [dç] · ‑undsechzig [ndz]) حيث المرجع يهمسها (k/t/t). المخالفة: الزوج المجهور+التالي
+    غائب عن كل صيغ المرجع بينما نظيره المهموس (أو المهموس+المجهور، حين يدمج espeak الصامتَين: ‑unddreißig [ndr] ← [ntdr]) حاضر.
+    يعود بالأزواج الخاطئة (مثل «ɡh») — فارغ = لا خطأ من هذا الصنف. لا يُحكم قبل حركة أو علامة نبر (وصل طبيعي: ‑undachtzig)."""
+    e = _devoice_norm(espeak)
+    rs = [_devoice_norm(r) for r in refs]
+    if not rs:
+        return []
+    bad = []
+    for m in re.finditer(rf"([bdɡ])(?=([{_C_NEXT}]))", e):
+        v, nxt = m.group(1), m.group(2)
+        voiced, devoiced = v + nxt, _DEVOICE[v] + nxt
+        geminate = _DEVOICE[v] + v + nxt
+        if all(voiced not in r for r in rs) and any(devoiced in r or geminate in r for r in rs):
+            bad.append(voiced)
+    return bad
+
+
 def compare(espeak: str, refs: list[str]) -> list[str]:
-    """أنواع المخالفة: length إن خالفت كلُّ صيغ المرجع طولَ الحركة المنبورة · stress إن خالفت كلُّها موضعَ النبر."""
+    """أنواع المخالفة: length إن خالفت كلُّ صيغ المرجع طولَ الحركة المنبورة · stress إن خالفت كلُّها موضعَ النبر
+    · devoicing (D189) إن أبقى espeak صامتاً مجهوراً قبل صامت حيث يهمسه المرجع في كل صيغه."""
     kinds = []
+    if devoicing_errors(espeak, refs):
+        kinds.append("devoicing")
     el = stressed_long(espeak)
     rl = [stressed_long(r) for r in refs]
     if el is not None and all(x is not None and x != el for x in rl):

@@ -13,5 +13,6 @@
 | `gate.ts` | **D187 — البوابة الواحدة:** vitest · tsc · validate-content · build · docs-sync · notes · pronunciation-audit · speech-rate (ناعم) بأمر واحد، أرقام مجموعة آلياً + تقرير الأسطر الثلاثة بالعربية + `.dev-cache/gate.json`؛ رمز خروج ≠0 عند خلل صلب | `npm run gate` · `-- --quick` (بلا vitest/build) · `-- --did "…"` · `-- --json` |
 | `content-diff.ts` | **D187 — فرق المحتوى للمالك:** بين مرجعين (أو شجرة العمل) كل نصّ تغيّر في `content/` قبل/بعد بمساره + مسارات الصوت المضافة/المعاد توليدها (المانيفست بالمعرّف) | `npm run content:diff -- <from> [<to>] [--lesson a1-u1-d6] [--json]` |
 | `hooks/pre-push` | **D187 — خطّاف حقيقي** (بديل `.husky` الميّت): يمنع الدفع إلى main ويشغّل `npm run gate` | `npm run hooks:install` مرة في كل صندوق |
+| `../../.github/workflows/gate.yml` | **D189 — البوابة على GitHub:** `npm run gate` نفسه على ubuntu (node 22 · python 3.11 · `tools/requirements.txt`) عند كل دفع إلى `arena/**`/`main` · تقرير الأسطر الثلاثة تعليقاً على الالتزام + artifact `gate-report` | يعمل وحده بعد `git push` · النتيجة: `gh run list --branch <الفرع>` |
 
 قواعد: لا تُلتزم ملفات `.dev-cache/` أبداً · `check-lesson.ts` بلا `.dev-cache` يعمل ويقول صراحةً إن المقارنة الرسمية لم تُفحص · الإبطاء لسطر بعينه يكون بحقل `lengthScale` في سطر السكربت (D182) ثم `npx tsx tools/dialogue-splitter.ts <script.json>` (يُعيد ذلك السطر وحده).

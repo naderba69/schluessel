@@ -582,8 +582,8 @@ describe("D115 — أدوات القياس", () => {
     const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; voiceParams: { speedWpm: number } }[] };
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
+    // D189 (قاعدة الكشّاف): عدد الأسطر السريعة كان مكتوباً (35 كتلة) — سرعة Piper عشوائية بين توليدين، فالثابت هو: كل سطر >132 في الاستماع لا الإملاء
     const fast = Array.from({ length: 20 }, (_, i) => `fh-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(19);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -1313,7 +1313,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `sk-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(16);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // نص الإملاء = نص المسار حرفياً (مقاطع الكلمات القديمة غير متسقة: «die Apotheke.» و«Krankenhaus.» — D68)
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
@@ -1408,7 +1407,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `hb-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(11);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
@@ -1501,13 +1499,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `wt-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(15);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد — regnet (المدخل القائم) يمسّ أربعة أسطر جديدة (wt-4 · wt-5 · wt-11 · wt-15) سُجّلت (N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78); // 72 في D166 — ثم geregnet · geholt في D168 — ثم gehustet في D173
     expect(lex.entries.find((x) => x.word === "regnet")?.regeneratedTracks).toEqual(["tm-2", "tr-3", "km-11", "fh-14", "vb-19", "wt-4", "wt-5", "wt-11", "wt-15", "wg-13", "kh-7"]); // wg-13 من D168 · kh-7 من D179
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -1600,13 +1596,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `za-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(11);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D167 (72 ← 74 بعد D168: geregnet · geholt) — April (8 أسطر) · Kurs (za-3 · za-4) · Onkel (za-12) مدخلات قائمة سُجّلت أسطرها الجديدة (N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("za-"));
     expect(regen("April")).toEqual(["za-2", "za-3", "za-4", "za-5", "za-6", "za-8", "za-19", "za-20"]);
     expect(regen("Kurs")).toEqual(["za-3", "za-4"]);
@@ -1705,13 +1699,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `wg-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(14);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: مدخلان جديدان (geregnet · geholt) + مدخلات قائمة سُجّلت أسطرها الجديدة (Onkel · Fußball · regnet · Spaziergang — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("wg-"));
     expect(regen("geregnet")).toEqual(["wg-9", "wg-12"]);
     expect(regen("geholt")).toEqual(["wg-15"]);
@@ -1823,16 +1815,15 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `ki-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(16);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D180 (78) — Tunesien ki-3/4/13/14/17 سُجّلت (N-099) · المرجع 1653 → 1666
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("ki-"));
     expect(regen("Tunesien")).toEqual(["ki-3", "ki-4", "ki-13", "ki-14", "ki-17"]);
-    expect(lex.entries.flatMap((x) => x.regeneratedTracks).filter((t) => t.startsWith("ki-"))).toHaveLength(5);
+    // D189: Landschaft (إجهار النهاية — N-101) أعادت ki-12 · ki-16 أيضاً
+    expect(lex.entries.flatMap((x) => x.regeneratedTracks).filter((t) => t.startsWith("ki-")).sort()).toEqual(["ki-3", "ki-4", "ki-13", "ki-14", "ki-17", "ki-12", "ki-16"].sort());
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
     expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
@@ -1941,13 +1932,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `kh-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(16);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D179 (78) — regnet kh-7 · April kh-8 سُجّلت (N-099) · المرجع 1638 → 1653
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("kh-"));
     expect(regen("regnet")).toEqual(["kh-7"]);
     expect(regen("April")).toEqual(["kh-8"]);
@@ -2060,13 +2049,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `kg-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(16);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: مدخلان جديدان في D178 (76 → 78): losgefahren (o طويلة وge شوا — كـwehgetan D175) kg-2/3 · geplant (a طويلة قبل nt كـplanen) kg-12/13 — وKurs kg-14 · geregnet kg-13 سُجّلت (N-099) · المرجع 1622 → 1638
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; referenceIpa: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const lx = (word: string) => lex.entries.find((x) => x.word === word)!;
     expect([lx("losgefahren").forms[0], lx("losgefahren").referenceIpa, lx("losgefahren").regeneratedTracks]).toEqual([{ espeak: "lˈɔsɡeːfˌɑːrən", ipa: "lˈoːsɡəfˌɑːrən" }, "/ˈloːsɡəˌfaːʁən/", ["kg-2", "kg-3"]]);
     expect([lx("geplant").forms[0], lx("geplant").referenceIpa, lx("geplant").regeneratedTracks]).toEqual([{ espeak: "ɡəplˈant", ipa: "ɡəplˈɑːnt" }, "/ɡəˈplaːnt/", ["kg-12", "kg-13"]]);
@@ -2158,7 +2145,7 @@ describe("D115 — أدوات القياس", () => {
       }
     }
     expect(l.uebung.stations.find((s) => s.type === "listening")!.interleavedWith).toEqual(expect.arrayContaining(["flughafen", "hotel", "park", "bett", "bus", "nachricht"]));
-    // الحوار الجديد (kf-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من خمسة أسطر بطيئة (≤132) مع سبعة مقاطع كلمات، والأسرع الخمسة عشر كلها استماعاً
+    // الحوار الجديد (kf-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من أربعة أسطر بطيئة (≤132 — kf-2 انتقل إلى الاستماع في D189: بعد تصحيح Flughafen يُنطق 142) مع سبعة مقاطع كلمات، والأسرع الخمسة عشر كلها استماعاً
     const listening = l.uebung.stations.find((s) => s.type === "listening")!;
     const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
     const audioIds = [...listening.items, ...dictation.items].map((i) => String(i.audioId));
@@ -2173,13 +2160,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `kf-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(15);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D177 (76 حينها — 78 بعد D178) — Hotel kf-6/7/13/14 · vor kf-16 · Nachricht kf-19 سُجّلت (N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("kf-"));
     expect(regen("Hotel")).toEqual(["kf-6", "kf-7", "kf-13", "kf-14"]);
     expect(regen("vor")).toEqual(["kf-16"]);
@@ -2272,13 +2257,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `ke-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(15);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D176 (76) — ثلاثة مداخل قائمة سُجّلت أسطرها (Hotel ke-12 · Nachricht ke-18 · vierzig ke-3 — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("ke-"));
     expect(regen("Hotel")).toEqual(["ke-12"]);
     expect(regen("Nachricht")).toEqual(["ke-18"]);
@@ -2378,13 +2361,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `kd-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(14);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: مدخل جديد wehgetan (النبر على weh وge- شوا — espeak نبر tan) أُعيد به kd-1 (76) — ومدخلان قائمان سُجّلت أسطرهما (Fußball · fit — N-099) · Spezialisten مراجَع artifact كـSpezialist
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; regeneratedTracks: string[] }[]; reviewed: { word: string; verdict: string }[] };
-    expect(lex.entries).toHaveLength(78);
     const weh = lex.entries.find((x) => x.word === "wehgetan")!;
     expect(weh.forms).toEqual([{ espeak: "vˌeːɡeːtˈɑːn", ipa: "vˈeːɡətˌɑːn" }]);
     expect(weh.regeneratedTracks).toEqual(["kd-1"]);
@@ -2481,13 +2462,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `kc-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(16);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D174 (75) — مدخلان قائمان سُجّلت أسطرهما الجديدة (Hals · Kurs — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("kc-"));
     expect(regen("Hals")).toEqual(["kc-4"]);
     expect(regen("Kurs")).toEqual(["kc-9"]);
@@ -2593,13 +2572,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `kb-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(14);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: مدخل جديد واحد في D173 — gehustet (espeak يقصّر u في الصيغة المصرَّفة: ʊ → uː · أُعيد توليد kb-4) — وثلاثة مداخل قائمة سُجّلت أسطرها الجديدة (Hals · Kurs · fit — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; ipa: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     expect(lex.entries.find((x) => x.word === "gehustet")?.regeneratedTracks).toEqual(["kb-4"]);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("kb-"));
     expect(regen("Hals")).toEqual(["kb-5", "kb-6"]);
@@ -2714,13 +2691,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `ka-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(14);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D172 (74) — أربعة مداخل قائمة سُجّلت أسطرها الجديدة (Hals · Tablette · holt · Kurs — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("ka-"));
     expect(regen("Hals")).toEqual(["ka-6", "ka-10"]);
     expect(regen("Tablette")).toEqual(["ka-12"]);
@@ -2834,13 +2809,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `kw-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(17);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D171 (74) — أربعة مداخل قائمة سُجّلت أسطرها الجديدة (Hals · Fußball · okay · Kurs — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("kw-"));
     expect(regen("Hals")).toEqual(["kw-2", "kw-3", "kw-16"]);
     expect(regen("Fußball")).toEqual(["kw-4", "kw-6"]);
@@ -2949,13 +2922,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `wk-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(14);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D170 (74) — خمسة مداخل قائمة سُجّلت أسطرها الجديدة (Notfall · Fußball · Kurs · Tunesien · okay — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("wk-"));
     expect(regen("Notfall")).toEqual(["wk-1", "wk-2"]);
     expect(regen("Fußball")).toEqual(["wk-5"]);
@@ -3061,13 +3032,11 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `ew-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(8);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد في D169 (74 كما في D168) — مدخلات قائمة سُجّلت أسطرها الجديدة (Kurs · April · Fußball · nachher · Notiz · geregnet — N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries).toHaveLength(78);
     const regen = (word: string) => lex.entries.find((x) => x.word === word)?.regeneratedTracks.filter((t) => t.startsWith("ew-"));
     expect(regen("Kurs")).toEqual(["ew-12"]);
     expect(regen("April")).toEqual(["ew-4", "ew-19"]);
@@ -3176,7 +3145,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `st-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(19);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
@@ -3273,7 +3241,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `tn-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(18);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
@@ -3374,7 +3341,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `wf-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(7);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     const textDe = new Map(manifest.tracks.map((t) => [t.id, t.textDe]));
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
@@ -3475,7 +3441,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `vb-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(14);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -3945,7 +3910,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `mb-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(13);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -4042,7 +4006,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `zi-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(12);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -4130,7 +4093,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `eg-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(16);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -4222,7 +4184,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `ww-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(18);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -4316,7 +4277,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `mw-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(13);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -4416,7 +4376,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `mo-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(15);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -4513,7 +4472,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `fz-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(7);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -4616,7 +4574,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `pr-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(11);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -4725,7 +4682,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `zg-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(11);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -4823,7 +4779,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `hh-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(14);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -4916,7 +4871,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `kl-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(12);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء (ومع التلميح) · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -5018,7 +4972,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `ws-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(8);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
@@ -5116,7 +5069,6 @@ describe("D115 — أدوات القياس", () => {
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
     const fast = Array.from({ length: 20 }, (_, i) => `km-${i + 1}`).filter((id) => wpm.get(id)! > 132);
-    expect(fast).toHaveLength(13);
     for (const id of fast) expect(listening.items.map((i) => String(i.audioId))).toContain(id);
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));

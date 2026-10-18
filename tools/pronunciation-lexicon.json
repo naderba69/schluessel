@@ -1,7 +1,7 @@
 {
   "schemaVersion": "2.0.0",
   "decision": "D122",
-  "about": "كلمات يخطئ espeak-ng (محرك الفونيمات تحت Piper) طول حركتها المنبورة أو موضع نبرها — مقيسة مقابل مرجع حر (D121 · D122). تُصحَّح على مستوى الفونيمات قبل النموذج (tools/gen-audio.py: synth_phonemes ← apply_lexicon) وفي الـIPA المقيس (tools/phonemize.py)، فيتطابق ما يُقاس وما يُنطق دائماً. لكل كلمة صيغ espeak كما تظهر فعلاً (معزولة بنبر أولي ˈ · في الجملة بنبر ثانوي ˌ) ولكل صيغة تصحيحها. الرمز الصحيح يُكتب بأعراف espeak نفسها (analogy) ليصل النموذجَ تسلسلٌ رآه في تدريبه. ما فحصه التدقيق وقُبل كما هو مسجَّل في reviewed بسببه.",
+  "about": "كلمات يخطئ espeak-ng (محرك الفونيمات تحت Piper) طول حركتها المنبورة أو موضع نبرها — مقيسة مقابل مرجع حر (D121 · D122). تُصحَّح على مستوى الفونيمات قبل النموذج (tools/gen-audio.py: synth_phonemes ← apply_lexicon) وفي الـIPA المقيس (tools/phonemize.py)، فيتطابق ما يُقاس وما يُنطق دائماً. لكل كلمة صيغ espeak كما تظهر فعلاً (معزولة بنبر أولي ˈ · في الجملة بنبر ثانوي ˌ) ولكل صيغة تصحيحها. الرمز الصحيح يُكتب بأعراف espeak نفسها (analogy) ليصل النموذجَ تسلسلٌ رآه في تدريبه. ما فحصه التدقيق وقُبل كما هو مسجَّل في reviewed بسببه. حقل earReview (D189 · N-101): مدخل مقيس بالمرجع لكنّ الأذن لم تحكم فيه بعد — قائمة «تحت التحقق السمعي» يراجعها المالك قبل الإطلاق (Q24).",
   "reference": {
     "name": "open-dict-data/ipa-dict — data/de.txt ← devio-at/german-ipa-dict ← Wiktionary",
     "license": "CC-BY-SA",
@@ -1735,6 +1735,257 @@
         "kg-12",
         "kg-13"
       ]
+    },
+    {
+      "word": "Flughafen",
+      "forms": [
+        {
+          "espeak": "flˈuːɡhɑːfən",
+          "ipa": "flˈuːkhɑːfən"
+        }
+      ],
+      "referenceIpa": "/ˈfluːkˌhaːfn̩/",
+      "referenceNote": "إجهار النهاية (D189): Flug‑ آخره g تُهمس [k] قبل h كما في المرجع /ˈfluːkˌhaːfn̩/ — espeak يُبقيها [ɡ] لأنه يلصق flˈuːɡ بـhɑːfən دون قاعدة الهمس. التصحيح يهمس الصامت فقط.",
+      "analogy": "Rückhand [rˈʏkhant] (espeak نفسه: k قبل h داخل المركّب) · Flug [flˈuːk] معزولة",
+      "contexts": [
+        "Flughafen.",
+        "Wie kommst du zum Flughafen?"
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "fh-3",
+        "fh-6",
+        "fh-8",
+        "hb-1",
+        "hb-10",
+        "hb-3",
+        "hb-4",
+        "hb-6",
+        "hb-8",
+        "ke-19",
+        "ke-2",
+        "kf-2",
+        "kf-3",
+        "mt1-h1-d6-l1",
+        "mt1-h1-d6-l2",
+        "word-flughafen"
+      ]
+    },
+    {
+      "word": "Mädchen",
+      "forms": [
+        {
+          "espeak": "mˈɛːdçən",
+          "ipa": "mˈɛːtçən"
+        }
+      ],
+      "referenceIpa": "/ˈmɛːtçən/",
+      "referenceNote": "إجهار النهاية (D189): d قبل لاحقة ‑chen تُهمس [t] — المرجع /ˈmɛːtçən/ (وصيغة /ˈmeːtçən/). espeak يُبقي [d]. التصحيح يهمس الصامت فقط؛ طول ɛː كما هو.",
+      "analogy": "Brötchen [brˈøːtçən] (espeak نفسه: t قبل ç) · Mäd‑ من Magd/Maid",
+      "contexts": [
+        "Mädchen.",
+        "Es heißt das Mädchen; wie das Brötchen."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "fe-5",
+        "fe-6",
+        "word-maedchen"
+      ]
+    },
+    {
+      "word": "Freundschaft",
+      "forms": [
+        {
+          "espeak": "frˈɔøndʃaft",
+          "ipa": "frˈɔøntʃaft"
+        }
+      ],
+      "referenceIpa": "/ˈfʁɔɪ̯ntʃaft/",
+      "referenceNote": "إجهار النهاية (D189): Freund آخره d تُهمس [t] قبل لاحقة ‑schaft — المرجع /ˈfʁɔɪ̯ntʃaft/. espeak يُبقي [d].",
+      "analogy": "Wirtschaft [vˈɪɾtʃaft] (espeak نفسه: t قبل ʃ) · Freund [frˈɔønt] معزولة",
+      "contexts": [
+        "Freundschaft.",
+        "Was bedeutet Freundschaft?"
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "fe-10",
+        "fe-11",
+        "fe-9",
+        "word-freundschaft"
+      ]
+    },
+    {
+      "word": "Landschaft",
+      "forms": [
+        {
+          "espeak": "lˈandʃaft",
+          "ipa": "lˈantʃaft"
+        }
+      ],
+      "referenceIpa": "/ˈlantʃaft/",
+      "referenceNote": "إجهار النهاية (D189): Land آخره d تُهمس [t] قبل ‑schaft — المرجع /ˈlantʃaft/. espeak يُبقي [d].",
+      "analogy": "Wirtschaft [vˈɪɾtʃaft] (espeak نفسه) · Land [lˈant] معزولة",
+      "contexts": [
+        "Landschaft.",
+        "Die Landschaft ist so schön!"
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "ki-12",
+        "ki-16",
+        "word-landschaft"
+      ]
+    },
+    {
+      "word": "Ergebnis",
+      "forms": [
+        {
+          "espeak": "ɛɾɡˈeːbnɪs",
+          "ipa": "ɛɾɡˈeːpnɪs"
+        }
+      ],
+      "referenceIpa": "/ɛɐ̯ˈɡeːpnɪs/",
+      "referenceNote": "إجهار النهاية (D189): b قبل n داخل الكلمة تُهمس [p] — المرجع /ɛɐ̯ˈɡeːpnɪs/. espeak يُبقي [b]. وجدها كاشف الإجهار الجديد (لم تكن في مسح N-101 اليدوي).",
+      "analogy": "Abnahme [ˈapnˌɑːmə] · abnehmen [ˈapnˌeːmən] (espeak نفسه: p قبل n)",
+      "contexts": [
+        "Ergebnis.",
+        "Das Ergebnis ist gut!"
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "kd-7",
+        "word-ergebnis"
+      ]
+    },
+    {
+      "word": "dreiundsechzig",
+      "forms": [
+        {
+          "espeak": "drˈaɪʊndzˌɛçtsɪç",
+          "ipa": "drˈaɪʊntzˌɛçtsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈdʁaɪ̯ʔʊntˌzɛçt͡sɪç/",
+      "referenceNote": "إجهار النهاية (D189): und داخل العدد المركّب [ʊnt] لا [ʊnd] — المرجع /ˈdʁaɪ̯ʔʊntˌzɛçt͡sɪç/. espeak يُجهر d قبل z (مماثلة لا يعرفها الألماني). التصحيح يهمس d فقط؛ z في sechzig تبقى كما في المرجع.",
+      "analogy": "und sie [ʊnt ziː] (espeak نفسه عبر حد الكلمة) · dreiundfünfzig [drˈaɪʊntfˌʏnftsɪç] · zweiundvierzig (مدخل في هذا المعجم)",
+      "contexts": [
+        "dreiundsechzig.",
+        "Er ist dreiundsechzig."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "num-63"
+      ]
+    },
+    {
+      "word": "dreiundsiebzig",
+      "forms": [
+        {
+          "espeak": "drˈaɪʊndzˌiːptsɪç",
+          "ipa": "drˈaɪʊntzˌiːptsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈdʁaɪ̯ʊntˌziːpt͡sɪç/",
+      "referenceNote": "إجهار النهاية (D189): und في العدد المركّب [ʊnt] — المرجع /ˈdʁaɪ̯ʊntˌziːpt͡sɪç/. espeak يُجهر d قبل z. التصحيح يهمس d فقط.",
+      "analogy": "und sie [ʊnt ziː] (espeak نفسه) · dreiundfünfzig [drˈaɪʊntfˌʏnftsɪç]",
+      "contexts": [
+        "dreiundsiebzig.",
+        "Opa ist dreiundsiebzig."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "om-4"
+      ]
+    },
+    {
+      "word": "neunundneunzig",
+      "forms": [
+        {
+          "espeak": "nˈɔønʊndnˌɔøntsɪç",
+          "ipa": "nˈɔønʊntnˌɔøntsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈnɔɪ̯nʔʊntˈnɔɪ̯nt͡sɪç/",
+      "referenceNote": "إجهار النهاية (D189): und في العدد المركّب [ʊnt] — المرجع /ˈnɔɪ̯nʔʊntˈnɔɪ̯nt͡sɪç/. espeak يُجهر d قبل n. التصحيح يهمس d فقط.",
+      "analogy": "und nein [ʊnt nˈaɪn] (espeak نفسه) · neunundzwanzig [nˈɔønʊnttsvˌantsɪç]",
+      "contexts": [
+        "neunundneunzig.",
+        "Das kostet neunundneunzig Euro."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "eur-19-99",
+        "num-99",
+        "ws-6",
+        "ws-8"
+      ]
+    },
+    {
+      "word": "neunhundertneunundneunzig",
+      "forms": [
+        {
+          "espeak": "nˈɔønhʊndɜtnˌɔønʊndnˌɔøntsɪç",
+          "ipa": "nˈɔønhʊndɜtnˌɔønʊntnˌɔøntsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈnɔɪ̯nˌhʊndɐtnɔɪ̯nʔʊntˈnɔɪ̯nt͡sɪç/",
+      "referenceNote": "عدد مركّب غائب عن المرجع (D132) — مركّب من جزأيه: neunhundert /ˈnɔɪ̯nˌhʊndɐt/ + neunundneunzig /ˈnɔɪ̯nʔʊntˈnɔɪ̯nt͡sɪç/. إجهار النهاية (D189): und [ʊnt] لا [ʊnd] كما في neunundneunzig (مدخل). كان في reviewed بلا مرجع (D132) ونُقل إلى المداخل لاتساقه مع جزئه.",
+      "analogy": "neunundneunzig (مدخل في هذا المعجم) · und nein [ʊnt nˈaɪn] (espeak نفسه)",
+      "contexts": [
+        "neunhundertneunundneunzig.",
+        "Es kostet neunhundertneunundneunzig Euro."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "hd-3",
+        "hd-4"
+      ]
+    },
+    {
+      "word": "zweihundertneunundsiebzig",
+      "forms": [
+        {
+          "espeak": "tsvˈaɪhʊndɜtnˌɔønʊndzˌiːptsɪç",
+          "ipa": "tsvˈaɪhʊndɜtnˌɔønʊntzˌiːptsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈt͡svaɪ̯ˌhʊndɐtnɔɪ̯nʔʊntˈziːpt͡sɪç/",
+      "referenceNote": "عدد مركّب غائب عن المرجع (D132) — مركّب من جزأيه: zweihundert /ˈt͡svaɪ̯ˌhʊndɐt/ + neunundsiebzig (siebzig /ˈziːpt͡sɪç/ · dreiundsiebzig /ˈdʁaɪ̯ʊntˌziːpt͡sɪç/). إجهار النهاية (D189): und [ʊnt] لا [ʊnd]. كان في reviewed بلا مرجع (D132) ونُقل إلى المداخل.",
+      "analogy": "dreiundsiebzig (مدخل في هذا المعجم) · und sie [ʊnt ziː] (espeak نفسه)",
+      "contexts": [
+        "zweihundertneunundsiebzig.",
+        "Das kostet zweihundertneunundsiebzig Euro."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "hd-5"
+      ]
+    },
+    {
+      "word": "Bäckerei",
+      "forms": [
+        {
+          "espeak": "bˌɛkeːrˈaɪ",
+          "ipa": "bˌɛkərˈaɪ"
+        }
+      ],
+      "referenceIpa": "/ˌbɛkəˈʁaɪ̯/",
+      "referenceNote": "الحركة غير المنبورة قبل r في ‑erei (D160 · N-101 تمدّدها): المرجع شوا /ˌbɛkəˈʁaɪ̯/، وespeak يقرؤها e طويلة مشدودة [eː] (اصطلاحه المنهجي في ‑erei). التصحيح يعيدها شوا فقط. الوحيدة من صنفها في المحتوى (Metzgerei لا تُنطق في مسار · Polizei تحتاج o/i قصيرتين غير منبورتين لا قياس لهما في خرج espeak — تُركت).",
+      "analogy": "andere [ˈandərə] (espeak نفسه: ə قبل r) · Bäcker [bˈɛkɜ] — ‑er غير منبورة لا تُشدّ",
+      "contexts": [
+        "Bäckerei.",
+        "Die Haltestelle ist gegenüber der Bäckerei."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "hb-2",
+        "vb-17",
+        "vb-18",
+        "vb-8",
+        "word-baeckerei"
+      ]
     }
   ],
   "reviewed": [
@@ -1839,18 +2090,6 @@
       "verdict": "no-reference",
       "espeak": "jˈuːzuːf",
       "note": "اسم علم لا يورده المرجع — فُحص يدوياً: النبر والحركة الأولى الطويلة صحيحان وs بين حركتين تُجهر [z] كما يقرؤها الألمان؛ طول الحركة الثانية غير المنبورة فرقٌ طفيف."
-    },
-    {
-      "word": "neunhundertneunundneunzig",
-      "verdict": "no-reference",
-      "espeak": "nˈɔønhʊndɜtnˌɔønʊndnˌɔøntsɪç",
-      "note": "عدد مركّب غائب عن المرجع (D132) — فُحص بأجزائه: neunhundert /ˈnɔɪ̯nˌhʊndɐt/ + neunundneunzig /ˈnɔɪ̯nʔʊntˈnɔɪ̯nt͡sɪç/؛ espeak يقرأ الجزأين كمرجعيهما والنبر الأول على أول المركّب كما في neunhundert، والحركات المنبورة بطولها."
-    },
-    {
-      "word": "zweihundertneunundsiebzig",
-      "verdict": "no-reference",
-      "espeak": "tsvˈaɪhʊndɜtnˌɔønʊndzˌiːptsɪç",
-      "note": "عدد مركّب غائب عن المرجع (D132) — فُحص بأجزائه: zweihundert /ˈt͡svaɪ̯ˌhʊndɐt/ + neunundsiebzig /nɔɪ̯nʔʊntˈziːpt͡sɪç/ · /ˈnɔɪ̯nʔʊntˌzɪpt͡sɪç/؛ espeak يقرأ siebzig بـiː الطويلة (الصيغة الأولى في المرجع) والنبر الأول على zwei كما في zweihundert."
     },
     {
       "word": "hunderteinundzwanzig",

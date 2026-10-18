@@ -260,6 +260,18 @@
             "why": "Ich bin wieder in Berlin · um dreizehn Uhr angekommen — الوصول الواحدة."
           },
           {
+            "audioId": "kf-2",
+            "speakText": "Super! War die Reise gut? Und der Zug vom Flughafen?",
+            "q": "استمع: عمّ تسأل لينا يوسف؟",
+            "choices": [
+              "عن الرحلة والقطار من المطار",
+              "عن الفندق في روما",
+              "عن المدرسة غداً"
+            ],
+            "a": "عن الرحلة والقطار من المطار",
+            "why": "War die Reise gut? Und der Zug vom Flughafen? — سؤالان عن الرحلة والقطار من المطار."
+          },
+          {
             "audioId": "kf-3",
             "speakText": "Der Flug war gut. Aber am Flughafen hatte der Zug zwanzig Minuten Verspätung.",
             "q": "استمع: ماذا حدث للقطار من المطار؟",
@@ -429,6 +441,7 @@
           }
         ],
         "interleavedWith": [
+          "reise",
           "flughafen",
           "stadt",
           "hotel",
@@ -589,12 +602,6 @@
         "type": "dictation",
         "items": [
           {
-            "audioId": "kf-2",
-            "speakText": "Super! War die Reise gut? Und der Zug vom Flughafen?",
-            "a": "Super! War die Reise gut? Und der Zug vom Flughafen?",
-            "why": "Super بحرف كبير · Reise بـei · Flughafen كلمة واحدة بحرف كبير."
-          },
-          {
             "audioId": "kf-9",
             "speakText": "Und die Zimmer? Habt ihr ein Doppelzimmer?",
             "a": "Und die Zimmer? Habt ihr ein Doppelzimmer?",
@@ -662,8 +669,6 @@
           }
         ],
         "interleavedWith": [
-          "reise",
-          "flughafen",
           "zimmer",
           "eltern",
           "bruder",

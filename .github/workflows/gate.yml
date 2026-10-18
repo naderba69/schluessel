@@ -1,11 +1,14 @@
 # .github/workflows/gate.yml — البوابة نفسها (npm run gate) تعمل على GitHub عند كل دفع (D189)
 # شهادة مستقلة عن صندوق المنفّذ: الأخضر هنا من النظام لا من انضباط أحد. لا توليد صوت (Piper يُثبَّت للتدقيق فقط).
+# تقرير الأسطر الثلاثة يُكتب تعليقاً على الالتزام نفسه (يقرؤه المالك على GitHub ويقرؤه المنفّذ عبر API).
 name: gate
 on:
   push:
     branches: ["arena/**", "main"]
   pull_request:
   workflow_dispatch:
+permissions:
+  contents: write
 concurrency:
   group: gate-${{ github.ref }}
   cancel-in-progress: true
@@ -15,25 +18,53 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # content-diff HEAD~1 واختبار dev-tools يحتاجان التاريخ
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.11"
           cache: pip
           cache-dependency-path: tools/requirements.txt
       - name: Python deps (تدقيق النطق وقياس الصوت — لا توليد)
         run: pip install -r tools/requirements.txt
       - run: npm ci
       - name: npm run gate
-        run: npm run gate
-      - name: تقرير الأسطر الثلاثة
-        if: always()
-        run: python3 -c "import json;print(json.load(open('.dev-cache/gate.json'))['report'])" >> "$GITHUB_STEP_SUMMARY" || echo "لا تقرير — البوابة لم تصل إلى الكتابة" >> "$GITHUB_STEP_SUMMARY"
+        id: gate
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run gate 2>&1 | tee gate.log
+      - name: تقرير الأسطر الثلاثة ← تعليق على الالتزام
+        if: always() && github.event_name == 'push'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OUTCOME: ${{ steps.gate.outcome }}
+        run: |
+          python3 - <<'PY' > comment.md
+          import json, os, pathlib
+          ok = os.environ["OUTCOME"] == "success"
+          head = ("✅" if ok else "❌") + " **gate على GitHub** — " + os.environ["OUTCOME"]
+          try:
+              rep = json.load(open(".dev-cache/gate.json"))["report"]
+          except Exception as e:
+              rep = f"(لا تقرير — البوابة لم تصل إلى الكتابة: {e})"
+          tail = ""
+          if not ok:
+              lines = pathlib.Path("gate.log").read_text(errors="replace").splitlines()[-80:]
+              tail = "\n\n<details><summary>آخر 80 سطراً</summary>\n\n```\n" + "\n".join(lines) + "\n```\n</details>"
+          print(head + "\n\n" + rep + tail)
+          PY
+          cat comment.md >> "$GITHUB_STEP_SUMMARY"
+          gh api "repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/comments" -f body="$(cat comment.md)" >/dev/null
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: gate-report
-          path: .dev-cache/gate.json
+          path: |
+            .dev-cache/gate.json
+            gate.log

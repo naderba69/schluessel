@@ -26,6 +26,7 @@ const Entry = z
     analogy: z.string().min(10),
     contexts: z.array(z.string().min(1)).min(2),
     regeneratedTracks: z.array(z.string().min(1)).min(1),
+    earReview: z.literal("تحت التحقق السمعي").optional(), // D189 (N-101 · Q24): مقيس بالمرجع، والأذن لم تحكم بعد
   })
   .strict();
 const Reviewed = z
@@ -81,6 +82,9 @@ const py = (body: string): unknown =>
     ),
   );
 
+const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+/** حدّ الكلمة في IPA كما في apply_lexicon (gen-audio.py: _IPA_EDGE) — مسافة/ترقيم/طرف */
+const wholeForm = (espeak: string) => new RegExp(`(?<![^\\s.,;:!?])${esc(nfd(espeak))}(?![^\\s.,;:!?])`, "gu");
 const wholeWordCI = (word: string) => new RegExp(`(?<![\\p{L}])${word}(?![\\p{L}])`, "iu");
 /** (5) مسارات تذكر الكلمة نصاً ولا يمسّها المعجم = الكلمة تُنطق فيها بصيغة لا يعرفها المعجم (تبقى خاطئة بصمت) */
 const unknownForm = (word: string, tracks: { id: string; textDe: string }[], touched: readonly string[]) =>
@@ -108,8 +112,8 @@ describe("D121/D122 — معجم النطق", () => {
       const present = e.forms.filter((f) => raw[i]!.includes(nfd(f.espeak)));
       expect(present.length, `espeak لم يعد يخطئ في «${c}» — احذف الصيغة أو المدخل ${e.word}`).toBeGreaterThan(0);
       present.forEach((f) => exercised.add(`${e.word}|${f.espeak}`));
-      let expected = raw[i]!;
-      for (const f of e.forms) expected = expected.replaceAll(nfd(f.espeak), nfd(f.ipa));
+      let expected = raw[i]!; // لا يتغير في الجملة إلا كلمات المعجم (سياق Bahnsteig يحوي Flughafen — مدخل آخر منذ D189)
+      for (const f of lex.entries.flatMap((x) => x.forms)) expected = expected.replace(wholeForm(f.espeak), nfd(f.ipa));
       expect(fixed[i], c).toBe(expected);
       for (const f of e.forms) expect(fixed[i]).not.toContain(nfd(f.espeak));
     });
@@ -231,5 +235,27 @@ describe("D121/D122 — معجم النطق", () => {
     ) as Record<string, string[]>;
     expect(Object.keys(missing)).toHaveLength(2);
     for (const [voice, chars] of Object.entries(missing)) expect(chars, voice).toEqual([]);
+  });
+  it("D189 (N-101): قائمة «تحت التحقق السمعي» معلنة ومثبَّتة — إجهار النهاية داخل المركّبات + Bäckerei (‑erei)", () => {
+    // الأحد عشر مدخلاً مقيسة بالمرجع (كاشف devoicing في pronunciation-audit.py) لا بالأذن؛ المالك يحكم قبل الإطلاق
+    // (Q24). تغيير القائمة (حكم سمعي · مدخل جديد من الكاشف) يغيّر هذا الاختبار عمداً — لا قبول صامت.
+    const pending = lex.entries.filter((e) => e.earReview).map((e) => e.word).sort();
+    expect(pending).toEqual(
+      ["Bäckerei", "Ergebnis", "Flughafen", "Freundschaft", "Landschaft", "Mädchen", "dreiundsechzig", "dreiundsiebzig", "neunhundertneunundneunzig", "neunundneunzig", "zweihundertneunundsiebzig"].sort(),
+    );
+    // كل مدخل منها يهمس صامتاً واحداً (b/d/ɡ ← p/t/k) أو يعيد شوا ‑erei (eː ← ə) — لا يغيّر شيئاً آخر في الكلمة
+    const dev: Record<string, string> = { b: "p", d: "t", "\u0261": "k" };
+    for (const e of lex.entries.filter((x) => x.earReview))
+      for (const f of e.forms) {
+        if (e.word === "Bäckerei") {
+          expect(f.ipa).toBe(f.espeak.replace("eː", "ə"));
+          continue;
+        }
+        const a = [...nfd(f.espeak)], b = [...nfd(f.ipa)];
+        expect(b.length, e.word).toBe(a.length);
+        const diff = a.map((c, i) => [c, b[i]!] as const).filter(([x, y]) => x !== y);
+        expect(diff.length, `${e.word}: صامت واحد فقط`).toBe(1);
+        expect(dev[diff[0]![0]], e.word).toBe(diff[0]![1]);
+      }
   });
 });
