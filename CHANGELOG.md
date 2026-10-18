@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-10-18 — الدفعة 130: a1-u11-d5 مُرقّى — Beim Hausarzt (D175) · ars-modal-fix جديدة (dürfen/sollen + الخمسة) · helfen+Dativ · جنس المركّب · نواة das Ergebnis
+- **إضافة:** قاعدة `ars-modal-fix` (shufra · 10‑ي · usedInLessons u11-d5/u11-d6/u12-d2/u12-d6 — كانت بلا ملف) · كلمة `ergebnis` (نواة SD1 بالمولِّد — A1 · die Ergebnisse · «Das Ergebnis ist gut: nur eine Erkältung.») · حوار `a1-u11-d5-beim-hausarzt` (kd-1..20 مكالمة اليوم الثاني عشر) · مانيفست 1949 · المرجع 1582 · معجم النطق 76 (+wehgetan — kd-1 أُعيد؛ Fußball kd-9/10 · fit kd-20 · Spezialisten مراجَع artifact).
+- **تحسين المحتوى:** 66 بنداً/4 أنواع (فراغ 30 · استماع 14 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (المنع بـmüssen/المصدر مصرّفاً/darf لكل فاعل ⇒ ~~Sie müssen nicht rauchen~~ (للمنع) / ~~Ich darf gehe in die Schule~~ / ~~Du darf nicht rauchen~~ · helfen بالأكوزاتيف ⇒ ~~Das hilft mich~~ / ~~hilft den Patient~~ · جنس المركّب من الكلمة الأولى أو الترجمة ⇒ ~~die Krankenwagen~~ / ~~der Notaufnahme~~ / ~~das Zahnschmerz~~) · 13 كلمة · خطة SD1: u11-d5 done.
+- **ما خرج:** tischlampe من تمرين مصيدة الجنس · «Das hilft mir (Dativ)» إجابةً في الـQuiz · «Ich muss zum Arzt gehen» (مثال SD1) من الاختبار القبلي والـQuiz · bauchschmerz صار له بنود.
+- **اختبارات:** كتلة D175 (+1 — تثبّت العدد الكلي للمانيفست 1949؛ كتلة D174 صارت تثبّت kc-1..20 فقط) · المثال غير المُرقّى ← a1-u12-d1 بفجواته المقيسة · curriculum-plan: u11-d5 done (13) والتالي pending a1-u12-d2 · content-units 877 كلمة · 708/708 · validator 1118/0/0.
+- **الوثائق:** +N-116 (بانتظار المالك: dürfen وsollen معاً؟) · حُدّثت N-096 · N-099 · N-103 · N-110 · N-113 · الموجّه 3.32.
+
 ## 2026-10-18 — الدفعة 129: a1-u11-d4 مُرقّى — Wie fühlst du dich? (D174) · sich fühlen · haben/sein بأفعال اليوم · الأمر بـSie والقوس · مثال blut مصحّح
 - **إضافة:** حوار `a1-u11-d4-wie-fuehlst-du-dich` (kc-1..20 مكالمة اليوم الحادي عشر) · مانيفست 1928 · المرجع 1572 · معجم النطق 75 (بلا جديد — Hals kc-4 · Kurs kc-9).
 - **تحسين المحتوى:** 68 بنداً/4 أنواع (فراغ 30 · استماع 16 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (sich fühlen بلا منعكس/بالداتيف ⇒ ~~Ich fühle besser~~ / ~~Ich fühle mir gut~~ · sein بدل haben ⇒ ~~Der Finger ist geblutet~~ / ~~Ich bin eine Spritze bekommen~~ · الأمر بـSie والقوس ⇒ ~~Sie rauchen nicht!~~ / ~~Ich kann schlucken nicht gut~~) · 12 كلمة · القاعدتان القائمتان ars-perfekt + ars-satzklammer (لا ملف جديد — sich fühlen بلا ملف: N-115).
