@@ -62,6 +62,6 @@ describe("D182 — سرعة الكلام: لا سطر منشور فوق 200 كل
         expect(byId.get(l.id)?.voiceParams.lengthScale, l.id).toBe(l.lengthScale);
       }
     }
-    expect(perLine).toBe(19); // الأسطر التي قاسها speech-rate فوق 200 في D182
+    expect(perLine).toBe(20); // 19 سطراً قاسها speech-rate فوق 200 في D182 + ki-6 (إملاء ≤132 بعد إعادة صياغته — D183)
   });
 });

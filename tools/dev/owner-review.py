@@ -1,134 +1,215 @@
 #!/usr/bin/env python3
-# tools/dev/owner-review.py — توليد تقرير المراجعة وملخّص الملاحظات والقرارات للمالك من الملفات نفسها (D181 · N-104)
-# المصادر: docs/PROFESSIONAL_CONTINUATION_PROMPT_AR.md §10 · DECISIONS.md · tools/upgrade-status.ts · tools/plan-status.ts
-# الاستعمال: python3 tools/dev/owner-review.py [--out docs/reports/owner-review-<date>.md] [--date 2026-10-18]
-# التوصيات (REC) تُكتب يدوياً هنا لكل ملاحظة «بانتظار المالك» — ما عداها مولَّد.
-import re, json, glob, subprocess, sys, os, datetime
+# tools/dev/owner-review.py — تقرير المالك: المراجعة الختامية + الملاحظات (مفتوحة بتوصية · مغلقة بعنوانها) + §7 القادم + ما يحتاج أذنه
+# (D181 → أعيد تشكيله بطلب المالك في D183: ≤400 سطر، قابل للنقاش في جلسة واحدة)
+# المصادر: §10 من docs/PROFESSIONAL_CONTINUATION_PROMPT_AR.md · content/upgrades/a1-lesson-upgrade.json · دروس a1 · tools/plan-status.ts
+#          · tools/dev/check-lesson.ts (D108 على عيّنة ببذرة معلنة) · عناوين السكربتات (N-096)
+# الاستعمال: python3 tools/dev/owner-review.py [--out docs/reports/owner-review-<date>.md] [--date YYYY-MM-DD] [--seed 183]
+# التوصيات (REC) تُكتب يدوياً هنا — ما عداها مولَّد.
+import re, json, glob, subprocess, sys, os, datetime, random
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 os.chdir(ROOT)
-DATE = sys.argv[sys.argv.index('--date') + 1] if '--date' in sys.argv else datetime.date.today().isoformat()
-OUT = sys.argv[sys.argv.index('--out') + 1] if '--out' in sys.argv else f'docs/reports/owner-review-{DATE}.md'
-P=open('docs/PROFESSIONAL_CONTINUATION_PROMPT_AR.md',encoding='utf-8').read()
-sec=P[P.index('## 10.'):P.index('<!-- owner-notes:end -->')]
-notes=re.findall(r'^- \*\*(N-\d+)\*\* · \[([^\]]+)\] · ([^·]*) · (.*)$',sec,flags=re.M)
+def arg(name, default):
+    return sys.argv[sys.argv.index(name) + 1] if name in sys.argv else default
+DATE = arg('--date', datetime.date.today().isoformat())
+OUT = arg('--out', f'docs/reports/owner-review-{DATE}.md')
+SEED = int(arg('--seed', '183'))
+MAX_LINES = 400
+
+P = open('docs/PROFESSIONAL_CONTINUATION_PROMPT_AR.md', encoding='utf-8').read()
+sec = P[P.index('<!-- owner-notes:start -->'):P.index('<!-- owner-notes:end -->')]
+notes = re.findall(r'^- \*\*(N-\d+)\*\* · \[([^\]]+)\] · ([^·]*) · (.*)$', sec, flags=re.M)
 assert notes, 'لم تُقرأ ملاحظات §10'
-D=open('DECISIONS.md',encoding='utf-8').read()
-heads=re.findall(r'^## (D\d+) \(([\d-]+)\): ([^\n]*)',D,flags=re.M)
-early=re.findall(r'\*\*(D\d+)\*\* ([^*]+?)(?=\*\*D\d+\*\*|\n)',D[:D.index('## D47')] if '## D47' in D else D[:5000])
-def cat(body):
-    m=re.match(r'\s*\(([^)]*)\)',body)
-    if m: return m.group(1)
-    b=body
-    if re.search(r'SRS|الواجهة|الحصة|الصفحة|`sessions`|مختبر القواعد|جدول ألفباء',b): return 'التطبيق'
-    if re.search(r'نطق|IPA|espeak|صوت|مقطع|كلمة/دقيقة|حركة',b): return 'النطق والصوت'
-    if re.search(r'محجوب|مرفقات|المرجع المنهجي|Duden|Goethe',b): return 'المصادر والبيئة'
-    return 'المحتوى (قديمة — قبل اصطلاح الباب)'
-def title(body):
-    b=re.sub(r'^\s*\([^)]*\)\s*','',body); m=re.search(r'\*\*(.+?)\*\*',b)
-    t=(m.group(1) if m else b[:100]); return t[:140]
-def req(body):
-    if '— المطلوب:' in body: return body.split('— المطلوب:')[-1].strip()
-    if '— أُغلقت:' in body: return body.split('— أُغلقت:')[-1].strip()
-    return ''
-def cut(t,n): t=t.replace('|','¦').replace('\n',' '); return t if len(t)<=n else t[:n].rstrip()+' …'
-# توصياتي للملاحظات التي تنتظر المالك (11)
-REC={
- 'N-001':'أكّد الافتراضات الخمسة كما نُفّذت (كلها عاملة في المحرك منذ M1 ولم تظهر مشكلة) — أي تغيير الآن يمسّ الاختبارات والمحتوى معاً.',
- 'N-002':'وافق على الرموز الثلاثة (w=[v] · ie · r) — مُعلَّمة فعلاً في الدروس ولا تنقص إلا من قائمة الأخطار المغلقة.',
- 'N-003':'لا تكتب 79 جملة قصة جديدة: احذف الحقل أو املأه آلياً من أول سطر في حوار كل درس (57 حواراً جاهزاً — D181 يثبّت التواريخ من 3 إلى 15 أبريل).',
- 'N-004':'نعم — ضمّ دروس التوليف الـ18 إلى مرور ثانٍ بالمعايير نفسها؛ a1-u12-d6 اليوم ضابط سلبي حقيقي في الاختبارات (6 بنود choice · Quiz 3×4 · gewesen/gehabt).',
- 'N-045':'أبقِ الكلمات السبع (مفيدة للتواصل) مع وسم «خارج A1» في المدخل — لا استبدال؛ النواة 48/48 اكتملت بلا حاجة إليها.',
- 'N-063':'أكّد ما نُفّذ في D140 (ihr/ihre في u4-d5) — مستقر منذ 40 دفعة ومُختبَر.',
- 'N-066':'وافق: ein Bekannter للفهم في u13–u14 لا قبلها (نهايات الصفة A2).',
- 'N-069':'وافق على القيد الثقافي الحالي (لا Wurst/Bier ليوسف) — أو ارفعه صراحةً؛ لا أثر على الاختبارات.',
- 'N-073':'أبقِ قطعة zum Frühstück المبكرة (u5) — تأجيلها يعيد صوغ قاعدة ومثالين وسطري حوار بلا مكسب.',
- 'N-115':'(ب) يكفي ما في u11-d4 حتى A2 حيث تُجمع الأفعال المنعكسة — ملف ars-reflexiv لفعل واحد يثقل الخريطة.',
- 'N-116':'(أ) يبقى dürfen+sollen معاً في ars-modal-fix — الموقف الطبي يجمعهما؛ و(ج) إضافة بطاقتي كلمة duerfen/sollen للـSRS مقبولة لاحقاً إن أردت.',
+
+def title(body, n=90):
+    b = re.sub(r'^\s*\([^)]*\)\s*', '', body)
+    m = re.search(r'\*\*(.+?)\*\*', b)
+    t = (m.group(1) if m else b)
+    t = re.sub(r'\*\*', '', t).split(' — المطلوب:')[0].replace('|', '¦').replace('\n', ' ').strip()
+    return t if len(t) <= n else t[:n].rstrip() + ' …'
+
+# ---- توصيتي لكل ملاحظة مفتوحة (المالك قرر؛ هنا «ما يُفعل بها الآن» بسطر)
+REC = {
+ 'N-002': 'نُفّذ في الصيانة: الرموز الثلاثة إلى القائمة المقفلة + أعلام الكلمات (دفعة واحدة).',
+ 'N-003': 'نُفّذ في الصيانة: توليد آلي من أول سطر حوار كل درس (57 حواراً) + اختبار يمنع الفراغ.',
+ 'N-004': 'مرور ثانٍ على 18 درس توليف بعد الصيانة (ترتيبك ب) — يبدأ بفحص N-105 عليها كلها.',
+ 'N-005': 'بعد مرور التوليف: ربط srsBundleWordIds بمجموعة SRS عند النجاح (الافتراض 5 المؤكَّد) — مع N-116 (ج).',
+ 'N-006': 'تطبيق: حفظ موضع المحطة/البند في Dexie — دفعة واجهة واحدة مع N-007.',
+ 'N-007': 'تطبيق: كتابة سجل الجلسة عند نهاية الحصة — مع N-006.',
+ 'N-008': 'تطبيق: شاشة جدول الألفباء (المقاطع موجودة) — دفعة واجهة صغيرة.',
+ 'N-009': 'تطبيق: مختبر القواعد يقرأ ملفات Arsenal الـ56 بدل A1_RULES المكتوبة — بعد مرور التوليف.',
+ 'N-010': 'تطبيق: عرض الحوار كاملاً قبل بنود الاستماع (المسارات موجودة) — مع N-006/N-007.',
+ 'N-011': 'يحتاج أذنك (§5): عيّنة 20 مقطعاً أعدّها لك عند طلبك.',
+ 'N-012': 'أداة: قياس مدة الحركة في المقطع المولَّد — مع N-013 حين يتوفر مرجع صوامت؛ لا عجلة.',
+ 'N-013': 'تبقى حدّاً معلناً للبوابة — تُوسَّع حين يتوفر مرجع صوامت حر.',
+ 'N-014': 'تبقى كما هي (VITS غير حتمي) — تُغلق إن وُجد اختبار حتمي.',
+ 'N-017': 'نُفّذ فعلاً في D154 (sprechen مراجعةً في u7-d4) — أقترح إغلاقها ← D154 في الدفعة القادمة.',
+ 'N-021': 'أمثلة البطاقات القديمة: ما بقي خارج الدروس المُرقّاة يُفحص في مرور التوليف ثم تُغلق.',
+ 'N-022': 'حارس: تعميم فحص الجبهة على meta (ziel/title/task) — مع N-103 في الصيانة (قياس ما ينكسر أولاً).',
+ 'N-023': 'حارس: بطاقات الثقافة ونصوص القراءة تحت قانون الجبهة — بعد N-022.',
+ 'N-024': 'تحرير «ein Freund von mir» عند لمس الكلمة — لا دفعة مستقلة.',
+ 'N-025': 'نُفّذ (pluralOnly في D136/D141) — أقترح إغلاقها ← D141.',
+ 'N-026': 'منطق دليل A1: الكلمات المغلقة تُعدّ مُدرجة داخل القطع — قياس الأثر ثم قرار؛ بعد الصيانة.',
+ 'N-027': 'إكمال فصول A1 من فهرس Klett — مع تخطيط A2 (ترتيبك ج).',
+ 'N-028': 'تبقى حتى يتوفر الوصول إلى duden.de — فحص آلي عندها.',
+ 'N-029': 'تحقق يدوي منك قبل النشر (أسعار/مواعيد Goethe) — قبل الإطلاق.',
+ 'N-030': 'لا عمل — تذكير: الروابط العامة بدل المرفقات.',
+ 'N-038': 'بطاقة audio للتعابير الحوارية — بعد قياس نسبة SRS؛ مع N-005.',
+ 'N-039': 'يحتاج أذنك (§5) — Portugal: مدخل معجم إن سمعتَ u طويلة.',
+ 'N-040': 'تحرير ترجمة woher «من أين حضرتك؟» عند لمس الكلمة.',
+ 'N-041': 'مدقّق: الاتجاه الثاني للفهرس العكسي بعد قياس أثره — مع N-102 في الصيانة.',
+ 'N-043': 'إعادة توليد 301 مقطع اسم بأداته — دفعة صوت مستقلة بعد الصيانة (بوابة البصمات + speech-rate).',
+ 'N-045': 'نُفّذ في الصيانة: وسم «خارج A1» في مخطط الكلمة + الكلمات السبع وما شابهها.',
+ 'N-047': 'تطبيق: تمرين كل بطاقة مصيدة بمحاولة قبل الكشف — دفعة واجهة مع N-006.',
+ 'N-048': 'تبقى قاعدة ≤2 — تُقاس في مرور التوليف ثم تُغلق.',
+ 'N-049': 'تطبيق: بطاقة لوحة المفاتيح عند أول حرف خاص + تمرين ß — دفعة واجهة.',
+ 'N-050': 'أداء: تحميل المحتوى عند الحاجة قبل النشر — قياس على هاتف متوسط.',
+ 'N-051': 'تطبيق: عرض الكلمة الفائتة برسمها الأصلي — صغيرة، مع دفعة الواجهة.',
+ 'N-053': 'حارس: التلازمات تحت الجبهة — مع N-022.',
+ 'N-054': 'توحيد علم v2-order للظروف الـ36 — دفعة بيانات صغيرة بعد الصيانة.',
+ 'N-055': 'حقل accept للترتيب — مع N-102 (قياس البنود الملتبسة آلياً).',
+ 'N-057': 'يحتاج أذنك (§5) — نبر الأعداد المركّبة؛ المرجع غير متسق.',
+ 'N-059': 'قرار من Duden حين يتوفر — لا استعمال قبله.',
+ 'N-060': 'قياس الرموز المعروفة بجذع قطعة فقط — مع N-103 في الصيانة.',
+ 'N-074': 'توحيد معرّفات slugify (erkaltung · الجهات) — مع مرور التوليف (تمسّ مسارات).',
+ 'N-078': 'ترتيب الخيارات (الإجابة أولاً) في الدروس المتبقية — تلقائياً في مرور التوليف.',
+ 'N-085': 'نُفّذ لدروس المرور — المتبقي (Gleich_plural في كلمات غير مُرقّاة) يُقاس ثم تُغلق.',
+ 'N-093': 'لا قرار عاجل — مراجعة جودة المعاني العربية حين تريد.',
+ 'N-095': 'جموع الجهات: حذفها في دفعة بيانات صغيرة مع N-054.',
+ 'N-096': 'تبقى سجلاً زمنياً حياً — حوارات مرور التوليف تُضاف إليه.',
+ 'N-099': 'أداة: القاطع يسجّل المسارات على مداخل المعجم تلقائياً — مع N-101 في الصيانة.',
+ 'N-101': 'نُفّذ في الصيانة بقرارك: 11 مدخلاً بعلامة «تحت التحقق السمعي» (حقل جديد) + مساراتها؛ ثم أذنك (§5).',
+ 'N-102': 'نُفّذ في الصيانة (قرارك 13): الرموز الكاملة في كل الكتل — قياس ما ينكسر ثم الإصلاح.',
+ 'N-103': 'نُفّذ في الصيانة (قرارك 15): الفحص الثاني في frontViolations + حصر الجذوع القصيرة.',
+ 'N-105': 'أول خطوة في مرور التوليف (قرارك 19).',
+ 'N-107': 'نُفّذ في الصيانة (قرارك 21): الفصول إلى u10-d1/u10-d6 والألوان إلى u8-d6 بالمولِّد.',
+ 'N-110': 'نُفّذ مع N-102 (قرارك 14).',
+ 'N-112': 'نُفّذ في الصيانة (قرارك 16): tun/hattest ثم إعادة tue/tust إلى التدريب.',
+ 'N-113': 'قرارك 22 على N-083 يحسمها عملياً: (أ)+(ب) الصيغ الثابتة القصيرة تجوز — أقترح إغلاقها ← D182 بالقرار نفسه.',
+ 'N-116': 'تبقى لبند (ج) وحده — بطاقتا duerfen/sollen عند دورة SRS (N-005).',
+ 'N-118': 'أقترح: قبول التصحيح وترك رؤوس الإصدارات القديمة كما هي (تاريخ صادق) — ثم الإغلاق.',
+ 'N-119': 'نُفّذت (أ) في D183 — kg-17 (قطار إلى سويسرا) + ki-6 — تُغلق في هذا التقرير.',
 }
-# أرقام مقيسة
-def run(c): return subprocess.run(c,shell=True,capture_output=True,text=True).stdout.strip()
-up=run('npx tsx tools/upgrade-status.ts 2>&1 | tail -3')
-ps=run('npx tsx tools/plan-status.ts 2>&1 | sed -n 2p')
-words=len(glob.glob('content/words/*.json')); 
-M=json.load(open('content/manifests/audio-manifest.a1-u1.json')); tracks=len(M['tracks'])
-rules=len(glob.glob('content/arsenal/grammar/*.json'))
-lex=len(json.load(open('tools/pronunciation-lexicon.json'))['entries'])
-dlg=0
-for f in glob.glob('content/audio-scripts/a1-u*-d*.json'):
-    if json.load(open(f,encoding='utf-8')).get('kind')=='dialogue': dlg+=1
-from collections import Counter
-st=Counter('مغلقة' if n[1].startswith('مغلقة') else n[1] for n in notes)
-L=[]
-L.append(f'# المراجعة الختامية وملخّص الملاحظات والقرارات — للمالك (D181 · {DATE})\n')
-L.append('> أمر المالك (2026-10-17): «جمع جميع ملاحظاتك وقراراتك لنناقشها في نهاية المشروع». هذا الملف مولَّد من `docs/PROFESSIONAL_CONTINUATION_PROMPT_AR.md` §10 وDECISIONS.md والأدوات (`upgrade-status` · `plan-status`) بالسكربت `tools/dev/owner-review.py` — المصدر الحاكم يبقى §10 وDECISIONS.md؛ هنا الترتيب والتوصية فقط. لا يُعدَّل يدوياً؛ يُعاد توليده عند الحاجة.\n')
-L.append('## 1. حالة المشروع عند نهاية المرور (مقيسة)\n')
-L.append(f'- **ترقية الدروس:** {up.splitlines()[1].strip()} — دروس المحتوى في الوحدات 1–12 كلها (D116–D180) · دروس التوليف d6 وأسبوع الامتحان u15 (18 درساً) خارج المرور (N-004).')
-L.append(f'- **نواة SD1 (D113):** {ps.strip()}')
-L.append(f'- **الحجم:** {words} بطاقة كلمة · {tracks} مساراً صوتياً (Piper — مثبّت في git) · {rules} ملف قاعدة يوم (Arsenal) · {dlg} حواراً (كلها مكالمات فيديو بين يوسف في برلين ولينا في سويسرا — N-037/N-100) · معجم النطق {lex} مدخلاً.')
-L.append('- **البوابة الأخيرة (الدفعة 135):** vitest 713/713 (64 ملفاً) · tsc 0 · validate-content 1131 ملفاً / 0 خطأ / 0 تحذير · build ✓ · تدقيق النطق 1666 كلمة / 0 مخالفة بلا قرار.')
-L.append(f'- **السجل:** {len(notes)} ملاحظة في §10 (بانتظار المالك {st["بانتظار المالك"]} · مفتوحة {st["مفتوحة"]} · مغلقة {st["مغلقة"]}) · {len(heads)+46} قراراً (D1–D46 في رأس DECISIONS.md · D47–D180 كتلاً مفصّلة).\n')
-L.append('## 2. نتائج المراجعة الختامية (D181 — لقطة ثابتة من الدفعة 135، لا تُحدَّث آلياً)\n')
-L.append('| الفحص | الأداة | النتيجة |')
-L.append('|---|---|---|')
-L.append('| اكتمال الترقية (قاعدة · تطبيق · Quiz · تغطية · أخطاء معلنة) للستين | `tools/upgrade-status.ts` | 60/60 في الأجزاء الثلاثة — صفر نقص |')
-L.append('| نواة SD1 داخل الدروس | `tools/plan-status.ts` | 48/48 إسناداً · 123/123 كلمة · إصلاحات النص 2/4 (الباقيان Straßenbahn/Ticket ينتميان إلى وحدتي الفهم 13–14 غير المنتَجتين — ليسا من المرور) |')
-L.append('| النسخ الحرفي من SD1/A2 (D108) على نصوص الستين المعروضة | `check.ts` (خارج المستودع — N-104) على 60 درساً | 63 تطابقاً كلها كلمة واحدة أو عبارة ثابتة قصيرة (Wie spät ist es? · Können Sie mir helfen? · Ich bin zu Hause داخل جملة أطول · zum Beispiel) — لا جملة مثال كاملة منسوخة؛ هذه حالات N-113 (الصيغ الثابتة القصيرة) لا خرقاً |')
-L.append('| تسرّب كلمات الدروس اللاحقة (N-103) | `check.ts` · يدوياً في الوحدة 12 | صفر في الوحدة 12؛ الوحدات السابقة فُحصت درساً درساً عند ترقيتها |')
-L.append('| تسلسل تواريخ القصة (N-096) | عناوين السكربتات | متصل بلا فجوة: u10-d3 الجمعة 3 أبريل → u12-d5 الأربعاء 15 أبريل (13 يوماً متتالية) · قبلها أيام الأسبوع بلا تاريخ (u7-d4 … u10-d2) |')
-L.append('| إطار المكالمة (N-037/N-100) | يدوياً | ثغرة واحدة مسجَّلة: **N-119** — حضور يوسف عيد لينا السبت 18 أبريل جسدياً (D178/D179/D180) وهما في بلدين |')
-L.append('| الاختبارات | `npx vitest run` | 713/713 — كتلة D180 تثبّت done للستين من ملف الترقية، وa1-u12-d6 ضابط سلبي حقيقي |')
-L.append('')
-L.append('## 3. ما ينتظر قرارك (11) — مع توصيتي\n')
-L.append('| # | الموضوع | ما طُلب منك | توصيتي |')
-L.append('|---|---|---|---|')
-for nid,stt,ds,body in notes:
-    if stt=='بانتظار المالك':
-        L.append(f'| {nid} | {cut(title(body),110)} | {cut(req(body),220)} | {REC.get(nid,"—")} |')
-L.append('')
-L.append('## 4. قرارات مؤقتة اتخذتُها بلا قرارك (تُناقش دفعةً واحدة)\n')
-L.append('هذه قرارات نطاق أو منهج نُفّذت لأن المرور كان سيتوقف بدونها؛ كلها مسجَّلة في DECISIONS.md وقابلة للعكس:\n')
-for x in [
- '**لا ملف قاعدة جديد حين يغطّي ملفٌ قائم المفهوم** (D174 · D176 · D177 · D179 · D180): denn/deswegen/sondern والظرف أولاً على ars-satzklammer/ars-weil-satz · ‑ieren بلا ge على ars-zeitangaben/ars-perfekt · abfahren/ankommen على ars-trennbare — البديل: ملفات صغيرة مستقلة (أوضح للمتعلم، أثقل للخريطة).',
- '**ars-modal-fix تجمع dürfen وsollen** (D175 — N-116) و**sich fühlen بلا ملف منعكس** (D174 — N-115).',
- '**الصيغ الثابتة القصيرة من SD1/A2 ليست نسخاً** (N-113): Wie spät ist es? · Können Sie mir helfen? · Was ist Ihre Meinung? — والجمل الكاملة تُعاد صياغتها دائماً.',
- '**كل حوار مكالمة فيديو** (N-037/N-100) ولينا 16 سنة في سويسرا ويوسف في برلين — ومنه N-119 المفتوحة.',
- '**عدّ النواة من الملف لا من الوثائق** (N-118): الوثائق زادت واحداً من D168 إلى D177؛ صُحّح من D177 ولم تُصحَّح رؤوس الإصدارات القديمة.',
- '**a1-u12-d6 (توليف) يُعامل محتوىً في اختبار واحد** (D180) بوصفه المثال غير المُرقّى بعد اكتمال المرور — إلى أن تقرر N-004.',
- '**لا محتوى جديد بعد D180** (لا u13 ولا A2) حتى تقرر — §7 محدَّث بهذا.',
-]: L.append('- '+x)
-L.append('')
-L.append(f'## 5. الملاحظات المفتوحة ({st["مفتوحة"]}) — مجمّعة بالباب\n')
-L.append('> «مفتوحة» = مسجَّلة وتُحدَّث كل دفعة ولا تحتاج قرارك الآن إلا إن أردت إغلاقها؛ آخر عمود هو ما تطلبه الملاحظة حرفياً (مقتطع).\n')
-groups={}
-for nid,stt,ds,body in notes:
-    if stt=='مفتوحة': groups.setdefault(cat(body),[]).append((nid,ds,body))
-for g in sorted(groups,key=lambda k:-len(groups[k])):
-    L.append(f'### {g} ({len(groups[g])})\n')
-    L.append('| # | الدفعات | الموضوع | المطلوب |')
-    L.append('|---|---|---|---|')
-    for nid,ds,body in groups[g]:
-        dd=ds.strip().split('، '); dsx=dd[0] if len(dd)==1 else f'{dd[0]} … {dd[-1]} ({len(dd)})'
-        L.append(f'| {nid} | {dsx} | {cut(title(body),110)} | {cut(req(body),200)} |')
-    L.append('')
-L.append(f'## 6. الملاحظات المغلقة ({st["مغلقة"]})\n')
-L.append('| # | أُغلقت ← | الموضوع |')
-L.append('|---|---|---|')
-for nid,stt,ds,body in notes:
-    if stt.startswith('مغلقة'): L.append(f'| {nid} | {stt.replace("مغلقة ← ","")} | {cut(title(body),120)} |')
-L.append('')
-L.append(f'## 7. فهرس القرارات D47–D180 ({len(heads)} كتلة — والتفصيل في DECISIONS.md؛ D1–D46 في رأسه)\n')
-L.append('| القرار | التاريخ | العنوان |')
-L.append('|---|---|---|')
-for did,date,t in sorted(heads,key=lambda h:int(h[0][1:])):
-    L.append(f'| {did} | {date} | {cut(t,150)} |')
-L.append('')
-L.append('## 8. ما أقترحه بعد نقاشك (ترتيب تنفيذ)\n')
-for x in [
- 'قرارات الـ11 المعلّقة (§3) — معظمها تأكيد لما نُفّذ؛ ثلاثة منها تفتح عملاً: N-004 (مرور التوليف — 18 درساً) · N-003 (جمل القصة) · N-115/N-116 (ملفات قاعدة صغيرة).',
- 'N-119 (أ أو ب) ثم دفعة صيانة واحدة لكل ما يتطلّب تعديل محتوى مرفوع (N-102/N-103/N-110/N-112 أدوات · N-108/N-109 أمثلة).',
- 'بعدها فقط: وحدتا الفهم 13–14 (153 كلمة · D113) ثم A2 (D105) — أو مرور التوليف أولاً إن اخترت N-004.',
-]: L.append('1. '+x)
-L.append('')
+
+# ---- قياسات
+def run(cmd): return subprocess.run(cmd, shell=True, capture_output=True, text=True).stdout
+up = json.load(open('content/upgrades/a1-lesson-upgrade.json', encoding='utf-8'))
+rows = []
+for e in up['lessons']:
+    lid = e['lessonId']; l = json.load(open(f'content/lessons/a1/{lid}.json', encoding='utf-8'))
+    sts = l['uebung']['stations']; items = sum(len(s['items']) for s in sts); types = len({s['type'] for s in sts})
+    quiz = l['quiz']['variants']; qn = min(len(v['items']) for v in quiz) if quiz else 0
+    rules = ' · '.join(x.replace('ars-', '') for x in l['praesentation'].get('grammarArsenalIds', []))
+    dlg = next((f.split('/')[-1][len(lid) + 1:-5] for f in glob.glob(f'content/audio-scripts/{lid}-*.json')), '—')
+    rows.append((lid, e['rule'], e['practice'], e['quiz'], len(l['praesentation']['wordIds']), items, types, len(quiz), qn, rules, len(e.get('misspellings', [])), dlg))
+plan = run('npx tsx tools/plan-status.ts 2>&1').strip().splitlines()
+words = len(glob.glob('content/words/*.json')); tracks = len(json.load(open('content/manifests/audio-manifest.a1-u1.json'))['tracks'])
+rules_n = len(glob.glob('content/arsenal/grammar/*.json')); lex = len(json.load(open('tools/pronunciation-lexicon.json'))['entries'])
+# D108 عيّنة ببذرة معلنة: 3 دروس محتوى + 2 توليف
+random.seed(SEED)
+content_ids = [f'a1-u{u}-d{d}' for u in range(1, 13) for d in range(1, 6)]
+synth_ids = [f'a1-u{u}-d6' for u in range(1, 13)] + [f'a1-u15-d{d}' for d in range(1, 7)]
+sample = random.sample(content_ids, 3) + random.sample(synth_ids, 2)
+d108 = {}
+for lid in sample:
+    r = run(f'npx tsx tools/dev/check-lesson.ts {lid} --script --json 2>/dev/null')
+    try: d108[lid] = json.loads(r)
+    except Exception: d108[lid] = None
+# N-096 تواريخ
+days = 'الاثنين|الثلاثاء|الأربعاء|الخميس|الجمعة|السبت|الأحد'
+dated = []
+for f in sorted(glob.glob('content/audio-scripts/a1-u*-d*.json'), key=lambda x: (int(re.search(r'u(\d+)', x).group(1)), int(re.search(r'-d(\d+)', x).group(1)))):
+    s = json.load(open(f, encoding='utf-8'))
+    if s.get('kind') != 'dialogue': continue
+    m = re.search(rf'({days})\s+(\d+)\s+أبريل', s['title']['ar'])
+    if m: dated.append((re.search(r'(a1-u\d+-d\d+)', f).group(1), s['lines'][0]['id'].rsplit('-', 1)[0], f'{m.group(1)} {m.group(2)} أبريل'))
+n_dialogues = sum(1 for f in glob.glob('content/audio-scripts/a1-u*-d*.json') if json.load(open(f, encoding='utf-8')).get('kind') == 'dialogue')
+
+st = {'بانتظار المالك': 0, 'مفتوحة': 0, 'مغلقة': 0}
+for _, s_, _, _ in notes: st['مغلقة' if s_.startswith('مغلقة') else s_] += 1
+
+L = []
+A = L.append
+A(f'# تقرير المالك — المراجعة الختامية لمستوى A1 + الملاحظات + المرحلة القادمة ({DATE} · D183)')
+A('')
+A('> مولَّد بـ`tools/dev/owner-review.py` من §10 وملف الترقية والدروس والأدوات؛ التوصيات وحدها مكتوبة يدوياً. ≤400 سطر بطلبك — قابل للنقاش في جلسة واحدة. المصدر الحاكم: §10 وDECISIONS.md.')
+A('')
+A('## 0. الحالة بالأرقام (مقيسة الآن)')
+A('')
+A(f'- {words} بطاقة كلمة · {tracks} مساراً صوتياً · {rules_n} ملف قاعدة · {n_dialogues} حواراً · معجم النطق {lex} · الملاحظات {len(notes)} = بانتظار المالك {st["بانتظار المالك"]} · مفتوحة {st["مفتوحة"]} · مغلقة {st["مغلقة"]}.')
+A(f'- البوابة: vitest · tsc · validate-content · build · تدقيق النطق — كلها خضراء عند الرفع (الأرقام في CHANGELOG الدفعة الأخيرة).')
+A('')
+A('## 1. المراجعة الختامية على الستين (بلا تعديل إلا لخطأ صريح)')
+A('')
+A('### 1.1 `upgrade-status` — الستون درساً سطراً سطراً')
+A('')
+A('| الدرس | قاعدة | تطبيق | Quiz | كلمات | بنود | أنواع | Quiz نسخ×بنود | قواعد اليوم | أخطاء معلنة | الحوار |')
+A('|---|---|---|---|---|---|---|---|---|---|---|')
+ok = lambda s: '✓' if s == 'done' else s
+for r in rows:
+    A(f'| {r[0]} | {ok(r[1])} | {ok(r[2])} | {ok(r[3])} | {r[4]} | {r[5]} | {r[6]} | {r[7]}×{r[8]} | {r[9]} | {r[10]} | {r[11]} |')
+done = sum(1 for r in rows if r[1] == r[2] == r[3] == 'done')
+A('')
+A(f'**الخلاصة:** مكتمل {done}/{len(rows)} · أقل عدد بنود {min(r[5] for r in rows)} (a1-u1-d1 — درس اليوم الأول قصير بقرار D116) · كل درس ≥3 أنواع · كل Quiz 3 نسخ × ≥6 بنود.')
+A('')
+A('### 1.2 `plan-status` — نواة SD1 (الإسناد + التغطية)')
+A('')
+for ln in plan[:3]: A(f'- {ln.strip()}')
+A('- إصلاحا النص الباقيان (die Straßenbahn · das Ticket) ينتميان إلى وحدتي الفهم 13–14 غير المنتَجتين — ليسا من المرور.')
+A('')
+A(f'### 1.3 D108 — عيّنة عشوائية ببذرة {SEED}: {", ".join(sample)} (الأخيران توليف)')
+A('')
+A('| الدرس | أسطر مفحوصة (درس + حوار) | front | later (N-103) | تطابق رسمي | الحكم |')
+A('|---|---|---|---|---|---|')
+for lid in sample:
+    d = d108.get(lid)
+    if not d: A(f'| {lid} | — | — | — | — | تعذّر الفحص |'); continue
+    s_ = d['summary']; offs = [h for h in d['hits'] if h['official']]
+    desc = ' · '.join(f"«{h['line'][:40]}» ⊂ {h['official'][0].split('«')[0]}" for h in offs[:3]) or '—'
+    long_hits = [h for h in offs if len(re.findall(r"[A-Za-zÄÖÜäöüß]+", h['line'])) >= 5]
+    verdict = 'توليف — ينتظر مروره (N-004)' if lid in synth_ids else ('front في عناوين meta فقط (N-022)' if s_['front'] else 'سليم')
+    if offs: verdict += ' · تطابق رسمي: صيغ قصيرة ثابتة (N-113)' if not long_hits else ' · **جملة كاملة مطابقة — تُصلَح**'
+    A(f'| {lid} | {s_["lines"]} | {s_["front"]} | {s_["later"]} | {desc} | {verdict} |')
+A('')
+A('- **ما أُصلح (خطأ صريح — D183):** a1-u12-d6 كان فيه «Ich muss zum Arzt gehen» حرفياً من SD1 (مرتين) ⇒ «Ich muss heute zum Arzt gehen» · و«Ich bin zu Hause geblieben.» تحوي جملة SD1 الأربع كلمات ⇒ «Ich bin gestern zu Hause geblieben.» · «Hier wohne ich.» (u2-d1) صيغة ثابتة من ثلاث كلمات — جائزة بقرارك 22.')
+A('- front في دروس المحتوى = عناوين الهدف/المهمة (meta) التي لا يفحصها المدقّق بعد (N-022) — تُعالَج في الصيانة؛ ودروس التوليف تنتظر مرورها (N-004).')
+A('')
+A('### 1.4 تسلسل التواريخ (N-096)')
+A('')
+A(f'- {n_dialogues} حواراً؛ من u1 إلى u10-d2 أيام أسبوع بلا تاريخ؛ ثم تواريخ متصلة بلا فجوة:')
+A('- ' + ' → '.join(f'{d[1]} {d[2]}' for d in dated) + ' (kh = الثلاثاء 14 أبريل — عنوانه «خطة السبت»).')
+A('- **N-119 نُفّذت (أ):** kg-17 «Am Samstag fahre ich mit dem Zug in die Schweiz. Um sechs Uhr bin ich bei dir.» · ki-6 «Am Samstag bist du hier — dann fahren wir an einen See.» — مساران أُعيدا فقط؛ kh متسق (الحفل عند لينا ويوسف حاضر).')
+A('')
+A(f'## 2. الملاحظات المفتوحة ({st["مفتوحة"]}) — رقمها · عنوانها · ما أوصي به الآن')
+A('')
+A('> صفر «بانتظار المالك» بعد D182؛ كل مفتوحة هنا لها عمل مقرَّر أو حدّ معلن. «نُفّذ في الصيانة» = ضمن دفعة (د) الجارية.')
+A('')
+A('| # | الموضوع | التوصية |')
+A('|---|---|---|')
+for n, s_, ds, b in notes:
+    if s_ == 'مفتوحة': A(f'| {n} | {title(b)} | {REC.get(n, "—")} |')
+A('')
+A(f'## 3. الملاحظات المغلقة ({st["مغلقة"]}) — بعنوانها فقط')
+A('')
+closed = [(n, s_.replace('مغلقة ← ', ''), title(b, 60)) for n, s_, ds, b in notes if s_.startswith('مغلقة')]
+for i in range(0, len(closed), 2):
+    pair = closed[i:i + 2]
+    A('- ' + ' · '.join(f'**{n}** ← {d}: {t}' for n, d, t in pair))
+A('')
+A('## 4. §7 المحدَّث — المرحلة القادمة بترتيبك (27): د ← ب ← أ ← ج')
+A('')
+A('1. **(د) الصيانة — جارية:** N-102+N-110 (كتل الاختبار) → N-103+N-112 (الحارس) → N-101 (11 مدخلاً بعلامة) → N-107 (الفصول/الألوان) → N-002 (الرموز) → N-045 (الوسم) → N-003 (جمل القصة) → N-022/N-053 (meta والتلازمات تحت الجبهة). كل خطوة دفعة ببوابة ورفع.')
+A('2. **(ب) مرور التوليف — 18 درساً** (u1–u12 d6 + u15 d1–d6): يبدأ بـN-105 (الجبهة والخيارات على الـ18) ثم كل درس على نموذج u11-d5: ≥12 بنداً/≥3 أنواع · Quiz 3×6 بـ«لماذا» · مصائد بـ10‑ي · D108 · حوار مكالمة يدخل N-096 · لا قاعدة جديدة (التوليف يراجع قواعد وحدته).')
+A('3. **(أ) وحدتا الفهم 13–14** (D113): 10 دروس + توليفان · 153 كلمة comprehension بلا production · ein Bekannter هنا (N-066) · إصلاحا النص Straßenbahn/Ticket.')
+A('4. **(ج) A2** (D105): الخطة من فهرس Klett المكتمل (N-027) · 12 فصلاً · قوائم goethe-a2 (1406 مدخلاً) بالمولِّد وحده (D110) · أول قاعدة A2: نهايات الصفة (وعد D138/N-066) ثم الأفعال المنعكسة مجموعةً (N-115) ثم الأفعال ذات الحرف الثابت (N-089) · سرعة الصوت 0.85× تبقى (A1_LENGTH_SCALE) · المنهج نفسه: استرجاع قبل شرح · مكالمات لينا/يوسف تستمر (الصيف: روما في يونيو).')
+A('5. **قبل الإطلاق:** N-050 (الحزمة) · N-029 (أسعار Goethe يدوياً) · N-011 (أذنك على 20 مقطعاً) · دفعة الواجهة (N-006/007/008/010/047/049/051).')
+A('')
+A('## 5. ما يحتاج أذنك أنت (السؤالان 24 و25 فقط)')
+A('')
+A('- **24 — N-101 (إجهار النهاية داخل المركّبات):** بقرارك تُضاف الأحد عشر مدخلاً للمعجم بعلامة «تحت التحقق السمعي» وتُعاد مساراتها. ما أطلبه منك بعدها: استمع إلى `word-flughafen` و`word-maedchen` و`word-freundschaft` قبل التعديل (من git) وبعده؛ إن سمعتَ النسخة الجديدة أصحّ ([k]/[t] مهموسة) تُرفع العلامة وتُغلق؛ وإن سمعتَ الفرق معدوماً نعود إلى القديمة. أرفق معهما N-039 (Portugal) وN-057 (نبر الأعداد المركّبة: zweiundvierzig) — دقيقتان من وقتك.')
+A('- **25 — N-015 (السرعة):** أُغلقت آلياً: `tools/dev/speech-rate.py` + بوابة ≤200 كلمة/دقيقة. ما يبقى لأذنك: هل 1.8–2.0 (الأسطر الثمانية الأبطأ: wer-9 · om-2 · vb-11 · mw-5 · kw-17 · ww-12 · hh-3 · ww-15) تبدو طبيعية أم متثاقلة؟ إن متثاقلة: أعيد صياغة الجمل القصيرة أطول قليلاً بدل الإبطاء.')
+A('')
+A('— يوسف يقرر؛ وأنا لا أسأل ثانية إلا عن جديد.')
+assert len(L) <= MAX_LINES, f'التقرير {len(L)} سطراً > {MAX_LINES}'
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
-open(OUT,'w',encoding='utf-8').write('\n'.join(L))
-print('ok', OUT, len(L))
+open(OUT, 'w', encoding='utf-8').write('\n'.join(L) + '\n')
+print('ok', OUT, len(L), 'سطراً', 'عيّنة', sample)

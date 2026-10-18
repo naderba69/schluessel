@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-10-18 — الدفعة 138: D183 — N-119 (أ) منفَّذة (kg-17 + ki-6) · المراجعة الختامية الثانية · خطآن صريحان في u12-d6 · تقرير المالك ≤400 سطر
+- **قصة (N-119 مغلقة):** kg-17 «Am Samstag fahre ich mit dem Zug in die Schweiz. Um sechs Uhr bin ich bei dir.» · ki-6 «Am Samstag bist du hier — dann fahren wir an einen See.» (إملاء — lengthScale 1.65 ⇒ 131 كلمة/دقيقة) · بندا u12-d3/u12-d5 حُدّثا · interleavedWith urlaub ⇒ samstag · مساران أُعيدا — المانيفست 2056.
+- **مراجعة:** 60/60 · 48/48 · D108 عيّنة ببذرة 183 (u2-d2 · u2-d1 · u10-d3 · u1-d6 · u12-d6) · التواريخ متصلة 3–15 أبريل.
+- **محتوى (خطأ صريح):** a1-u12-d6 «Ich muss zum Arzt gehen» ⇒ «… heute …» (مرتين) · «Ich bin zu Hause geblieben.» ⇒ «… gestern …».
+- **تقرير:** `docs/reports/owner-review-2026-10-18.md` أُعيد تشكيله (217 سطراً) بـ`tools/dev/owner-review.py` (بذرة/تاريخ/مخرج) · اختبار dev-tools: lengthScale لكل سطر = 20.
+- **وثائق:** الموجّه 3.40 · N-119 مغلقة ← D183 · N-096/N-113/N-022 محدَّثة · كتلة D180 فيها سطر التصحيح.
+
 ## 2026-10-18 — الدفعة 137: D182 — قرارات المالك الـ27 + صيانة: tools/dev في git (N-104) · سرعة الكلام مقيسة و19 سطراً أُبطئت (N-015) · شطب u10-d6 (N-111)
 - **قرارات المالك** مسجَّلة نصاً في DECISIONS.md D182 · §10: 42 ملاحظة أُغلقت ← D182 · صفر «بانتظار المالك» · الباقي مفتوح بعمل مقرَّر وترتيب تنفيذ (د ← ب ← أ ← ج).
 - **tools/dev/** جديد: `fetch-official.sh` (SD1/A2/ipa-dict بالـblob المثبَّت + sha256 → `.dev-cache/` خارج git) · `check-lesson.ts` · `speech-rate.py` · `owner-review.py` · README · `tests/dev-tools.test.ts` (+5 ⇒ 718 مع اختبار المقسِّم).
