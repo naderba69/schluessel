@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-18 — الدفعة 151: D196 — N-004 — الزوج الثالث: a1-u5-d6 «Woche fünf ist zu Ende!» + a1-u6-d6 «Woche sechs ist zu Ende!» (6/18) · حارس البادئة المكرّرة في مقسِّم الحوار
+«واصل» = الزوج الثالث بالقالب نفسه. **الوحدة 5:** فطور عائشة ويوسف في المطعم — كل مصائد أسبوع الطعام في حوار واحد: Ich mag Fisch بلا أداة · Ich möchte einen Tee (لا will) · Was für einen Tee? · keinen Löffel وnicht scharf وden Kaffee nicht · Ich habe Hunger / Ich bin satt · Zahlen, bitte — bar mit Trinkgeld. **الوحدة 6:** لينا تسأل عن غرفة يوسف في برلين بعد اكتمالها (الأريكة والصورة والمفتاح من u6-d4/d5): vier Stühle · es gibt keinen Fernseher · Wo (an der Wand) مقابل Wohin (in die Ecke) · darauf/darin/darüber · الجيران والإيجار — والمفتاح اليوم في الدرج. لكلٍّ 20 سطراً مسجّلاً و29 تمريناً وQuiz ثلاثي.
+- **البوابة:** vitest 766/766 (69 ملفاً) · tsc 0 · validator 1150/0/0 · build ✓ · docs-sync ✓ · notes 0/48/72 · audit 0 · speech-rate 0 فوق 200 من 2154 · upgrade-status 66/78 — من `npm run gate`.
+
 ## 2026-10-18 — الدفعة 150: D195 — N-004 — الزوج الثاني: a1-u3-d6 «Woche drei ist zu Ende!» + a1-u4-d6 «Woche vier ist zu Ende!» (4/18) · إصلاح إنذار كاذب في check-lesson · تناقض عيد ميلاد لينا مسجَّل
 «واصل» بعد الزوج الأول = قبول (D182: السكوت قبول) — فالزوج الثاني بالقالب نفسه: حوار 20 سطراً مسجّل، 29 تمريناً من أربعة أنواع، Quiz ثلاثي، بلا كلمة جديدة إلا كلمتي الرد. الجديد هنا أن الحوارين ينبتان من وعدين في دروس الأسبوع نفسه: موعد المجموعة «am Sonntag um elf» الذي حدّده يوسف في u3-d4، و«Und jetzt mein Foto» التي أنهت بها لينا u4-d4 — فالمتعلم يسمع ما وُعد به.
 - **البوابة:** vitest 763/763 (69 ملفاً) · tsc 0 · validator 1148/0/0 · build ✓ · docs-sync ✓ · notes 0/48/72 · audit 0 · speech-rate 0 فوق 200 من 2114 · upgrade-status 64/78 — من `npm run gate`.

@@ -45394,6 +45394,886 @@
       "hash": "sha256:900ab391a4b9e18d6893c6cb9e358d5802d318eaf9614a0fde6fd7d952bd4ad3",
       "pcmSha256": "f697d54b18036f217ef76a2e8fd7b902a23085f1884cb68b4158e594d1d130cd",
       "rmsDb": -17.04
+    },
+    {
+      "id": "wu-1",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-1.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 123,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo, Yusuf! Woche fünf ist zu Ende — heute Frühstück im Restaurant. Hast du Hunger?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 6840,
+      "sizeBytes": 31574,
+      "hash": "sha256:1bb4b5806666f246d7323514594c7738734fa6fe5e16f00b7fea86531f6e1a44",
+      "pcmSha256": "7e2366ebf352641cb04e2115f891b74054205eb296cc4f290ff88b3400d07703",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "wu-2",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 148,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich habe Hunger und Durst. Wo ist die Speisekarte?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 4054,
+      "sizeBytes": 18687,
+      "hash": "sha256:915e0603ebdace30fa9b67588c251b17b6765138bea1679513e31a853b5db69d",
+      "pcmSha256": "0cca3183cdcf8c15ffa94ebea30d850aa1e7473e880642622c24f1384af939e8",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "wu-3",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-3.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 144,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hier. Frage eins: Was isst du gern — Fisch oder Fleisch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 4168,
+      "sizeBytes": 19397,
+      "hash": "sha256:f6dacb5fe7b72eb9694b0c9522ccd386b561b2db75066a2b3e30d00c3cd61f09",
+      "pcmSha256": "6c08a3bce90e7ecfd057c582802efc12796f173ff9dc6874e1cda2a34a912088",
+      "rmsDb": -17.8
+    },
+    {
+      "id": "wu-4",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 161,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich mag Fisch. Aber zum Frühstück esse ich Brot mit Butter und Marmelade.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 4856,
+      "sizeBytes": 22388,
+      "hash": "sha256:9bc9f467dfe6ac1cd808de5c4a3f283cac7536faa5d83ebcaf374414f562ac42",
+      "pcmSha256": "c198a4506635eaaceb10b43e5717a545b4356fce1e921d5543a20cea90e055b0",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "wu-5",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-5.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und möchtest du zum Frühstück auch ein Ei, Yusuf?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 3528,
+      "sizeBytes": 16587,
+      "hash": "sha256:6129df32a2cd9c4e5bd8af560a626012655524496499df20a7cde4b4d57c3142",
+      "pcmSha256": "d6c25d28e059b5578d17a14871f3c90eedc654c8a240e2384f04bdbd86853b41",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "wu-6",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich esse ein Ei. Und du? Was möchtest du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 4484,
+      "sizeBytes": 19669,
+      "hash": "sha256:00b4d2438a97a60b3864ca28a46bc9f056abb3667004dbfe945e5015508d71fd",
+      "pcmSha256": "32ae9f38b5e7664ac23da4f84497ca9dc73da5548af0105265e4baf363907262",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "wu-7",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-7.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich möchte ein Brötchen mit Käse und einen Tee.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 3880,
+      "sizeBytes": 18252,
+      "hash": "sha256:c14fe494fef05d93c572e1214d0e4f85da504edc99320d545e3d5588df776b43",
+      "pcmSha256": "84bb211a17867fcb6fdf0587d3d1a1f1b42fd3484d1547f084048e8249c0bcb3",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "wu-8",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 119,
+        "lengthScale": 1.32
+      },
+      "textDe": "Einen Tee? Im Glas, natürlich! Was für einen Tee?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 4542,
+      "sizeBytes": 19742,
+      "hash": "sha256:6a86727076f5ec0e6cb58e9f7890435824ee301bf3c774063367012e7fad200c",
+      "pcmSha256": "2190cddd635286ebc383a473842e03323e4641c84bfd77ddad5279be4afe2a32",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "wu-9",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-9.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 158,
+        "lengthScale": 1.32
+      },
+      "textDe": "Einen Tee mit Milch. Und du? Was trinkst du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 3416,
+      "sizeBytes": 16035,
+      "hash": "sha256:cb3a0ae3a0807608758aca8b7f5feb9aee8b3f60f5123c16866f03512d7ed1cd",
+      "pcmSha256": "986eb2433a10c07ecc3cf64e4b94e4fe89f1f0f2b5a9dadb538646d6c3851cb9",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "wu-10",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 182,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich trinke einen Kaffee ohne Zucker. Mit Zucker trinke ich den Kaffee nicht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 4275,
+      "sizeBytes": 19663,
+      "hash": "sha256:c6f94940bce473249ca2f26284b9e78c34f34bf3dd9bacb68aed82d388ac8d67",
+      "pcmSha256": "55e1816e5c9e58f0be48ac6c46c5cbb46d7f43df83eba40c3d9739d43e5cf8b0",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "wu-11",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-11.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 135,
+        "lengthScale": 1.32
+      },
+      "textDe": "Frage zwei: Hier ist kein Löffel! Und du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 3544,
+      "sizeBytes": 16554,
+      "hash": "sha256:a2eda702eb43b942b24ddbb5bf4111b8bc8b64b862e7c5e8150a7f6de9e4c009",
+      "pcmSha256": "7ecff53928e4f88782080a7d880ff3d6d96ba7adcc83051fce3d847c8e3798bb",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "wu-12",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 141,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich habe keinen Löffel — und keine Gabel. Nicht «nicht Löffel»!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 4263,
+      "sizeBytes": 18661,
+      "hash": "sha256:110cb6465c0804e307857308c93180302c87dc9b89e3ec4f9839df6ae627a8e3",
+      "pcmSha256": "f33b85f3c156605f36a4fca82b6502f6f8ec63574fd83d647c08bc07f966a827",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "wu-13",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-13.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 171,
+        "lengthScale": 1.32
+      },
+      "textDe": "Genau! Und: Die Suppe ist nicht scharf. — kein oder nicht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 3512,
+      "sizeBytes": 16344,
+      "hash": "sha256:f7c9319eb9cea08d5393fa70cea8ce97b30d1532851efa57dd4c6864afd27875",
+      "pcmSha256": "acc8dbf47a164f04f3e275b40caf26859da2b02d457b9a85bc1fea0ccd4b784b",
+      "rmsDb": -17.34
+    },
+    {
+      "id": "wu-14",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 100,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nicht. Keine Suppe, aber: nicht scharf.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 3602,
+      "sizeBytes": 15794,
+      "hash": "sha256:f310ef34b779f189afbdc86d3d1baf619d3621f330f1f9533cd9affcfcc64a66",
+      "pcmSha256": "ed55d600a214c28cdf8da6d9336a810e9a109d2fc2016250b26db574989c37c1",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "wu-15",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-15.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 185,
+        "lengthScale": 1.32
+      },
+      "textDe": "Toll. Und jetzt: Bist du satt?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 1944,
+      "sizeBytes": 9317,
+      "hash": "sha256:0b814bb2eafff8ac9109e0ac905af493b4fdf8db382be8025aaf6859f5252c67",
+      "pcmSha256": "153fdc14d1aac3efb56d18c937abbbca40421e0e573359805cb0347f39ed0918",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "wu-16",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 165,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, ich bin satt — nicht «ich habe satt»! Ich möchte nichts.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 3996,
+      "sizeBytes": 17874,
+      "hash": "sha256:a53a476ae92f1bcf2fa82105ad3f6491ad5581ba0253dd9ba42c639151146a92",
+      "pcmSha256": "ed49290e637b82c440d9775f010d395c1e15e0394a771e6edb26c78f0d43d0b9",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "wu-17",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-17.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Also zahlen wir. Zahlen, bitte! Bar oder mit Karte?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 4248,
+      "sizeBytes": 19788,
+      "hash": "sha256:fb05df1bc280f3700be8b22773897dc9c78954fd979e0068973ce17cc5c8f8c0",
+      "pcmSha256": "78c9ad83f5ade4011449b1630e4f020f89145440f60835e5213103f7f7fe6c6e",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "wu-18",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich zahle bar: acht Euro und ein Euro Trinkgeld.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 3613,
+      "sizeBytes": 16730,
+      "hash": "sha256:7e644a76ad0e3147ed794d79b6dd3fdb40824a5b805362f2f13e532231dadfba",
+      "pcmSha256": "38161f2dc9df896225546b9b6eed66532b241e7b68133574e49dbfebb20078c2",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "wu-19",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-19.opus",
+      "role": "dialogue",
+      "characterId": "ayse",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! Das Frühstück schmeckt, und die Woche ist zu Ende.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 4488,
+      "sizeBytes": 20768,
+      "hash": "sha256:8365290c02e38098f11071509ebd2ee1a1bdefa35c90f22ae41b8d3ef06b191c",
+      "pcmSha256": "ff9fdc857b85b93d39c0dfd74edaae6f4337f5ff761b2050e1cd86f90d8356ed",
+      "rmsDb": -17.64
+    },
+    {
+      "id": "wu-20",
+      "file": "audio/scripts/a1-u5-d6-woche-fuenf-ist-zu-ende/wu-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 118,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Bis morgen, Ayşe — und guten Appetit zum Mittagessen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u5-d6"
+      ],
+      "durationMs": 4577,
+      "sizeBytes": 21025,
+      "hash": "sha256:83b4e192a58de48ecf07ec912766d8ecb6db3c265713bce071b583c879f2da9e",
+      "pcmSha256": "8feaadd58faae1ebd7a41de29576a767bdab86d36d3d4c3182f25432e6b5f411",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "we-1",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-1.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo, Yusuf! Woche sechs ist zu Ende. Ist dein Zimmer jetzt fertig?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 5592,
+      "sizeBytes": 25796,
+      "hash": "sha256:64af8307c61b2ba0a440df95a5fae6da19f181892015f45e09aef2fe04eae626",
+      "pcmSha256": "98a52dd8bafbbe4b057e7b73d42ffac9dee17265d38069548cac4128dc91e7a9",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "we-2",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-2.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 134,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Die Einrichtung ist fertig, und die Möbel sind da.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 4461,
+      "sizeBytes": 20388,
+      "hash": "sha256:adeba5eabb889c88da26164b98c9a46a36de99de8b74541790f050f788c66535",
+      "pcmSha256": "c4ef5ab06412a92cec2c0047b04a5bfead95eccb955a5a08fdab641385d5def2",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "we-3",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-3.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 129,
+        "lengthScale": 1.32
+      },
+      "textDe": "Frage eins: Wie viele Stühle hast du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 3256,
+      "sizeBytes": 15438,
+      "hash": "sha256:f950cbc5d98dc78a55b785c978525fbc487e00328f1e24d49971b20b9fd57473",
+      "pcmSha256": "3a05425a648a9882e23430f0cc19390ee89ebb7fc939aebb3f5f65eb007ebf83",
+      "rmsDb": -17.72
+    },
+    {
+      "id": "we-4",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-4.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 148,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich habe vier Stühle — nicht «vier Stuhl»! Und zwei Regale.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 4043,
+      "sizeBytes": 18536,
+      "hash": "sha256:44f0a0f2023f860d6e673426cada31ed037d7d8a8f6eafe9edf2abb112f0aabc",
+      "pcmSha256": "9f858689b446e978288fd0adc6284d2b2002fe7d76cb0f6bd5f1eaab4b12d4d5",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "we-5",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-5.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 111,
+        "lengthScale": 1.32
+      },
+      "textDe": "Prima! Frage zwei: Gibt es einen Fernseher?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 3800,
+      "sizeBytes": 17771,
+      "hash": "sha256:569305f1d55b2e859bb059a8cc4bf59cec74d4d797d5f37f479d8d0f2bf4c573",
+      "pcmSha256": "c315bdaa9579ef62bd71ba8e7ad14e9674b6754612837d11cc7154528024eda9",
+      "rmsDb": -17.43
+    },
+    {
+      "id": "we-6",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-6.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, es gibt keinen Fernseher. Aber es gibt einen Computer und einen Schreibtisch.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 5227,
+      "sizeBytes": 24608,
+      "hash": "sha256:46a60abc7ee0f5a921354709ffa35e40628c0e2f1484561e6d4b588fcee95aec",
+      "pcmSha256": "2dd0ba3b929b660c92348713413d03fff13d6476a625f8b229af045e71e74b9d",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "we-7",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-7.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 124,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wo steht der Schreibtisch?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 1928,
+      "sizeBytes": 9153,
+      "hash": "sha256:3416dc856e7170bfead28e303799f5d15bfa2725b2d77ea6b2b5209a0edae4b3",
+      "pcmSha256": "89845d2f677f904ae950dcb4b92984f80e2047d3c854531f3d25cd29239c6e85",
+      "rmsDb": -17.56
+    },
+    {
+      "id": "we-8",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-8.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 158,
+        "lengthScale": 1.32
+      },
+      "textDe": "Er steht an der Wand, unter dem Fenster. Das Bett steht daneben.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 4554,
+      "sizeBytes": 20666,
+      "hash": "sha256:fa824b39fa8d8edd3b8ecc36236e2fa8b23c43f912d0043c735ef01c071f1ce0",
+      "pcmSha256": "8da93c78c33ff2f2325cba20bdd3d266f4a8afa9b08ca59f9f8db5f6655ef36f",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "we-9",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-9.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und wohin stellst du die Lampe?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 2632,
+      "sizeBytes": 12238,
+      "hash": "sha256:02fbe839cae7f40d0c247e3f1e7f26e166198806fb156f4f87f2780565c39a8d",
+      "pcmSha256": "376975f4c6995d07c0ffc554d8b557b0639c0eb58fec92dbadab3c94b615328b",
+      "rmsDb": -17.47
+    },
+    {
+      "id": "we-10",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-10.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 194,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich stelle die Lampe in die Ecke — neben das Sofa.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 3091,
+      "sizeBytes": 14091,
+      "hash": "sha256:8215e2b867f7cc14dc589203682b2b1bde365f0d284ea7bbc8ea51130e98f45c",
+      "pcmSha256": "36537147251dcfb23b12ceca1696d362dc60899ad9ec3dc86cc83687af900bc9",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "we-11",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-11.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 127,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wo oder wohin? Das ist schwer!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 2824,
+      "sizeBytes": 13063,
+      "hash": "sha256:ed42cbf5a227070145790456631fabea2acd14d952e0a37c70192e659eefe645",
+      "pcmSha256": "a4a69961b234a037a104cbbb52aae918fe39f8ede1e97ed19df26e88c6ca8b41",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "we-12",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-12.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wo? — an der Wand, in der Ecke. Wohin? — in die Ecke, auf den Tisch.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 5424,
+      "sizeBytes": 23481,
+      "hash": "sha256:25ba12581412d28ee4ce5e8d70f8da55deaca507e314eadefe216bd7157f9d7d",
+      "pcmSha256": "69a9ba92ceb8379fab314841555c2ead98bb1d24510fec24bf1170bb4d4bd964",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "we-13",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-13.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 121,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! Frage drei: Da ist der Tisch. Was steht darauf?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 4952,
+      "sizeBytes": 22960,
+      "hash": "sha256:bb8a0595f7d4ddd28d596f396a1b1f32ed9e72e162872ee93ec1d6a5f82445be",
+      "pcmSha256": "5a9d39a507ef40b9277ffbbc9c33b9548ad27fb2eb71dfca29513392eed7e5cd",
+      "rmsDb": -17.59
+    },
+    {
+      "id": "we-14",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-14.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 145,
+        "lengthScale": 1.32
+      },
+      "textDe": "Darauf steht die Vase. Und darin ist jetzt eine Pflanze!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 4136,
+      "sizeBytes": 18532,
+      "hash": "sha256:c36e661096b8e55da6e909a531f9bddb18613b8fd8dd52f0decd30715b18def1",
+      "pcmSha256": "4576bc0852a688e928ba83f82d5b67c2d6593b546595eb164ec99d52a50df8fc",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "we-15",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-15.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und das Foto aus Tunesien? Hängt es noch über dem Bett?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 4424,
+      "sizeBytes": 20584,
+      "hash": "sha256:01b030c6f5c9489a936cadd82e297cacfd1a708f27058517857c003260063f48",
+      "pcmSha256": "97b52d1e582671d7683df0835e71828288647080093c04c5a8b52978df3607c1",
+      "rmsDb": -17.21
+    },
+    {
+      "id": "we-16",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-16.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, es hängt darüber, mit Rahmen. Das Zimmer ist hell und gemütlich.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 5239,
+      "sizeBytes": 23375,
+      "hash": "sha256:c827ded6396f1cab9631c3975578c819cdc0750d3016d6d280bc717ad18f6c01",
+      "pcmSha256": "2e75e9fae937ebd84f9e8d687a7ac22e574b9eac55e56d8357cb66f2fc26632f",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "we-17",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-17.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 168,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Nachbarn? Ist es noch laut?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 2504,
+      "sizeBytes": 11759,
+      "hash": "sha256:b2d84de9bafe331ce4363e2bf2777fe2f8db6e20f1fbb5f48d97b1034c8b695b",
+      "pcmSha256": "e643c59f04291bbe2428b4153123bc69bc776772b8c95caf90693c520f2b8389",
+      "rmsDb": -17.23
+    },
+    {
+      "id": "we-18",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-18.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Rechts ist es laut, aber die Nachbarn sind nett. Die Miete ist hoch — das ist Berlin!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 6051,
+      "sizeBytes": 27201,
+      "hash": "sha256:87d81eb8c16ce1f8b43e52914241eeb2a03dbb8f29f3966ac9208d2822acb675",
+      "pcmSha256": "8bbb285b7ab87c3b7fdc28e254a4cdd34d02d8c21b5939d6cc0a68b055f5a16c",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "we-19",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-19.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 163,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und dein Schlüssel? Wo ist er heute?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 2584,
+      "sizeBytes": 12105,
+      "hash": "sha256:b9d023cf9209d17d57e9b116bd56fd6ce8c39f71690bb437d186bbd37c93b083",
+      "pcmSha256": "7846d0d652c36771f4921efad076d2a10904ddea930f05398bce488463df263b",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "we-20",
+      "file": "audio/scripts/a1-u6-d6-woche-sechs-ist-zu-ende/we-20.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "In der Schublade, im Schreibtisch. Alles klar — die Woche ist zu Ende!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u6-d6"
+      ],
+      "durationMs": 4821,
+      "sizeBytes": 22103,
+      "hash": "sha256:da65d6ef0f3332aae9a82d06538e7eb09002bba8b66c53852020e9f3fc96bcd4",
+      "pcmSha256": "9583bf4a566282da309f6a7ed762734577eb4657ad1b01cfe0bd1ab159926a14",
+      "rmsDb": -17.1
     }
   ],
   "characterVoices": {

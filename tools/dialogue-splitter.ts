@@ -77,6 +77,11 @@ export function runSplitter(opts: {
   if (unknown.length > 0) throw new Error(`أسطر غير موجودة في السكربتات المعطاة: ${unknown.join(", ")} — لا تجاهل صامت`);
 
   for (const script of scripts) {
+    // D196: معرّف سطر يملكه سكربت آخر (بادئة مكرّرة — ws-/wf- في u8-d2/u9-d3) يُرفض قبل أي توليد؛ وإلا استُبدلت مسارات درس آخر صامتةً
+    const dir = scriptTrackFile(script.id, "x").replace(/x\.opus$/, "");
+    const byId = tracksById();
+    const stolen = script.lines.map((l) => byId.get(l.id)).filter((t): t is TrackLike => !!t && !t.file.startsWith(dir));
+    if (stolen.length > 0) throw new Error(`بادئة مكرّرة: ${stolen.map((t) => `${t.id} ← ${t.file}`).slice(0, 3).join(" · ")} — اختر بادئة أسطر أخرى للسكربت ${script.id}`);
     const base = opts.force
       ? { generate: script.lines, keep: [] }
       : planScript(script, tracksById(), raw.characterVoices, fileHashOk);

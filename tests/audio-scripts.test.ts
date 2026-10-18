@@ -167,6 +167,21 @@ describe("D103 — مقسِّم الحوار على شجرة مؤقتة (مول�
     expect(r.kept).toEqual([]);
   });
 
+  it("D196: بادئة أسطر يملكها سكربت آخر ← رفض قبل أي توليد أو كتابة (كاد يستبدل ws-/wf- لدرسين قائمين)", () => {
+    runSplitter({ scriptFiles: [scriptFile()], contentRoot: root, generate: fake });
+    const before = readFileSync(join(root, MANIFEST_REL), "utf8");
+    const other = join(root, "audio-scripts/t-other.json");
+    writeFileSync(other, JSON.stringify({
+      schemaVersion: "1.0.0", id: "t-other", kind: "dialogue", level: "A2", title: { de: "O", ar: "أ" },
+      usedIn: ["a2-u1-d4"], lines: [{ id: "t-l1", speaker: "lena", text: "Moin!" }, { id: "t-l2", speaker: "thomas", text: "Servus!" }],
+    }));
+    calls = [];
+    expect(() => runSplitter({ scriptFiles: [other], contentRoot: root, generate: fake })).toThrow(/بادئة مكرّرة.*t-l1 ← audio\/scripts\/t-dialog\//u);
+    expect(calls).toEqual([]);
+    expect(readFileSync(join(root, MANIFEST_REL), "utf8")).toBe(before);
+    expect(readFileSync(join(root, "audio/scripts/t-dialog/t-l1.opus"), "utf8")).toBe("de_DE-kerstin-low:Hallo!"); // ملف الدرس الأول سليم
+  });
+
   it("--dry-run لا يكتب شيئاً ولا يولّد", () => {
     const before = readFileSync(join(root, MANIFEST_REL), "utf8");
     const r = runSplitter({ scriptFiles: [scriptFile()], contentRoot: root, generate: fake, dryRun: true });

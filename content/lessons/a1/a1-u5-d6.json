@@ -6,31 +6,44 @@
   "day": 6,
   "kind": "integration",
   "ziel": {
-    "de": "Die Einheit 5 zusammenfassen und die Wochen-Meisterschaft bestehen.",
-    "ar": "تلخيص الوحدة 5 واجتياز معركة الأسبوع"
+    "de": "Woche fünf ist zu Ende: Ich mag Fisch · Ich möchte ein Brötchen und einen Tee · Was für einen Tee? · Ich habe keinen Löffel, die Suppe ist nicht scharf · Ich bin satt · Zahlen, bitte — bar!",
+    "ar": "توليف الأسبوع الخامس: الطعام عموماً بلا أداة والشيء الواحد بـein/einen · الطلب بـmöchte (لا will) · Was für ein/einen? · kein للاسم وnicht للصفة والمعيّن · Hunger/Durst مع haben وsatt مع sein · الدفع والبقشيش — ثم معركة الوحدة (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (Hunger · zahlen) تعودان من الأسبوع نفسه."
   },
   "canDoDaily": [
-    "يجتاز معركة الوحدة 5 بعتبة 0.75"
+    "يطلب فطوراً كاملاً بلطف (Ich möchte ein Brötchen und einen Tee · Was für einen Tee? — mit Milch) ويرفض بـkein/nicht في موضعهما (keinen Löffel · nicht scharf · den Kaffee nicht)",
+    "يقول Ich habe Hunger / Ich bin satt بلا خلط، ويدفع (Zahlen, bitte! — bar · Trinkgeld) ويجتاز معركة الوحدة 5 بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
-      "brot",
-      "tee",
-      "bestellen"
+      "moegen",
+      "loeffel",
+      "satt"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«أنا جوعان، أريد أن آكل» — الصيغة الصحيحة؟ (تخمين فقط)"
+          "de": "«أنا شبعان» بالألمانية — تخمين فقط"
         },
         "choices": [
-          "Ich habe Hunger und möchte essen.",
-          "Ich bin Hunger und möchte zu essen.",
-          "Ich habe Hunger und will essen zu."
+          "Ich bin satt.",
+          "Ich habe satt.",
+          "Ich bin Hunger."
         ],
-        "answer": "Ich habe Hunger und möchte essen.",
+        "answer": "Ich bin satt.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«ليس عندي ملعقة» — تخمين فقط"
+        },
+        "choices": [
+          "Ich habe keinen Löffel.",
+          "Ich habe nicht Löffel.",
+          "Ich habe kein Löffel."
+        ],
+        "answer": "Ich habe keinen Löffel.",
         "revealNextSession": true
       }
     ],
@@ -45,78 +58,295 @@
       "ars-moechte-wollen",
       "ars-kein-nicht"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a1-u5-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أنا جوعان وأريد خبزاً»؟",
-            "a": "Ich habe Hunger und möchte Brot."
+            "q": "Ich ___ Fisch. (أحب السمك عموماً)",
+            "a": "mag",
+            "why": "mögen للطعام عموماً: Ich mag Fisch — بلا أداة، لأن المقصود السمك كلّه لا سمكة واحدة."
           },
           {
-            "q": "«لا آخذ نقانق»؟",
-            "a": "Ich nehme keine Wurst."
+            "q": "Ich habe ___ und Durst. (جوع)",
+            "a": "Hunger",
+            "why": "الجوع والعطش مع haben: Ich habe Hunger / Durst — لا ~~Ich bin Hunger~~ (الترجمة الحرفية لـ«أنا جوعان»)."
+          },
+          {
+            "q": "Ich möchte ein Brötchen und ___ Tee. (مفعول مذكر)",
+            "a": "einen",
+            "why": "der Tee مذكر وهو مفعول möchte ⇐ einen Tee. المذكر وحده يأخذ ‑en في المفعول."
+          },
+          {
+            "q": "Was für ___ Tee? — Einen Tee mit Milch.",
+            "a": "einen",
+            "why": "Was für + أداة النكرة في حالة المفعول: Was für einen Tee? (مذكر) · Was für ein Eis? (محايد) · Was für eine Suppe? (مؤنث)."
+          },
+          {
+            "q": "Hier ist kein Löffel! — Ich habe ___ Löffel.",
+            "a": "keinen",
+            "why": "نفي الاسم بـkein، والمذكر المفعول ⇐ keinen. ~~nicht Löffel~~ خطأ الأسبوع."
+          },
+          {
+            "q": "Die Suppe ist ___ scharf. (ليست حارّة)",
+            "a": "nicht",
+            "why": "الصفة تُنفى بـnicht (nicht scharf)، والاسم بـkein (keine Suppe)."
+          },
+          {
+            "q": "Mit Zucker trinke ich den Kaffee ___.",
+            "a": "nicht",
+            "why": "الشيء المعيّن (den Kaffee) يُنفى بـnicht في آخر الجملة: Ich trinke den Kaffee nicht."
+          },
+          {
+            "q": "Ja, ich ___ satt, danke. (شبعان)",
+            "a": "bin",
+            "why": "satt صفة ⇐ sein: Ich bin satt — لا ~~ich habe satt~~. أما Hunger فمع haben."
+          },
+          {
+            "q": "Ich zahle ___. (نقداً)",
+            "a": "bar",
+            "why": "bar = نقداً (bar zahlen) مقابل mit Karte. وZahlen, bitte! لطلب الحساب."
+          }
+        ],
+        "interleavedWith": [
+          "fisch",
+          "hunger",
+          "broetchen",
+          "tee",
+          "loeffel",
+          "suppe",
+          "kaffee",
+          "satt",
+          "bar"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "wu-4",
+            "speakText": "Ich mag Fisch. Aber zum Frühstück esse ich Brot mit Butter und Marmelade.",
+            "q": "استمع: ماذا يأكل يوسف في الفطور؟",
+            "choices": [
+              "خبزاً بالزبدة والمربى",
+              "سمكاً مع الأرز",
+              "بيضة فقط"
+            ],
+            "a": "خبزاً بالزبدة والمربى",
+            "why": "zum Frühstück esse ich Brot mit Butter und Marmelade — والسمك يحبّه عموماً (Ich mag Fisch) لكن لا في الفطور."
+          },
+          {
+            "audioId": "wu-7",
+            "speakText": "Ich möchte ein Brötchen mit Käse und einen Tee.",
+            "q": "استمع: ماذا تطلب عائشة؟",
+            "choices": [
+              "خبزة صغيرة بالجبن وشاياً",
+              "خبزاً بالزبدة وقهوة",
+              "بيضة وحليباً"
+            ],
+            "a": "خبزة صغيرة بالجبن وشاياً",
+            "why": "ein Brötchen (محايد ⇐ ein) · einen Tee (مذكر مفعول ⇐ einen) — الطلب بـIch möchte."
+          },
+          {
+            "audioId": "wu-9",
+            "speakText": "Einen Tee mit Milch. Und du? Was trinkst du?",
+            "q": "استمع: أي شاي تريد عائشة؟",
+            "choices": [
+              "بالحليب",
+              "بالسكر",
+              "بالليمون"
+            ],
+            "a": "بالحليب",
+            "why": "Einen Tee mit Milch — الجواب عن Was für einen Tee? يكرّر einen."
+          },
+          {
+            "audioId": "wu-10",
+            "speakText": "Ich trinke einen Kaffee ohne Zucker. Mit Zucker trinke ich den Kaffee nicht.",
+            "q": "استمع: كيف يشرب يوسف القهوة؟",
+            "choices": [
+              "بلا سكر",
+              "بالسكر",
+              "بالحليب"
+            ],
+            "a": "بلا سكر",
+            "why": "ohne Zucker = بلا سكر. وden Kaffee nicht = لا يشرب القهوة المعيّنة (بالسكر) — nicht في الآخر."
+          },
+          {
+            "audioId": "wu-12",
+            "speakText": "Ich habe keinen Löffel — und keine Gabel. Nicht «nicht Löffel»!",
+            "q": "استمع: ما الناقص عند يوسف؟",
+            "choices": [
+              "ملعقة وشوكة",
+              "سكين وصحن",
+              "كأس وملعقة"
+            ],
+            "a": "ملعقة وشوكة",
+            "why": "keinen Löffel (مذكر مفعول) · keine Gabel (مؤنث) — kein للاسم، ويوسف يذكّر: لا nicht Löffel."
+          },
+          {
+            "audioId": "wu-14",
+            "speakText": "Nicht. Keine Suppe, aber: nicht scharf.",
+            "q": "استمع: كيف تُنفى «scharf»؟",
+            "choices": [
+              "nicht scharf",
+              "kein scharf",
+              "keine scharf"
+            ],
+            "a": "nicht scharf",
+            "why": "scharf صفة ⇐ nicht. Suppe اسم ⇐ keine Suppe. القاعدة من يوسف نفسه."
+          },
+          {
+            "audioId": "wu-16",
+            "speakText": "Ja, ich bin satt — nicht «ich habe satt»! Ich möchte nichts.",
+            "q": "استمع: هل يريد يوسف شيئاً آخر؟",
+            "choices": [
+              "لا، شبعان ولا يريد شيئاً",
+              "نعم، يريد كعكة",
+              "نعم، يريد قهوة"
+            ],
+            "a": "لا، شبعان ولا يريد شيئاً",
+            "why": "Ich bin satt (sein!) · Ich möchte nichts = لا أريد شيئاً. nichts تنفي «شيء»."
+          },
+          {
+            "audioId": "wu-18",
+            "speakText": "Ich zahle bar: acht Euro und ein Euro Trinkgeld.",
+            "q": "استمع: كم يدفع يوسف مع البقشيش؟",
+            "choices": [
+              "9 يورو",
+              "8 يورو",
+              "18 يورو"
+            ],
+            "a": "9 يورو",
+            "why": "acht Euro + ein Euro Trinkgeld = 9. وbar = نقداً."
+          }
+        ],
+        "interleavedWith": [
+          "fruehstueck",
+          "butter",
+          "marmelade",
+          "kaese",
+          "milch",
+          "zucker",
+          "gabel",
+          "trinkgeld"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "صحّح: ~~Ich bin Hunger.~~",
+            "a": "Ich habe Hunger.",
+            "why": "الجوع اسم في الألمانية ويُملك: Ich habe Hunger — لا ترجمة حرفية لـ«أنا جوعان»."
+          },
+          {
+            "q": "صحّح: ~~Ich habe satt.~~",
+            "a": "Ich bin satt.",
+            "why": "satt صفة ⇐ sein. المصيدة معكوسة عن Hunger: haben للجوع، sein للشبع."
+          },
+          {
+            "q": "صحّح: ~~Ich mag den Fisch.~~ (السمك عموماً)",
+            "a": "Ich mag Fisch.",
+            "why": "الطعام عموماً بلا أداة: Ich mag Fisch. den Fisch = هذه السمكة المعيّنة."
+          },
+          {
+            "q": "صحّح: ~~Ich will einen Kaffee.~~ (للنادل، بلطف)",
+            "a": "Ich möchte einen Kaffee.",
+            "why": "Ich will حادّة كطلب طفل؛ في المطعم möchte هي الصيغة المهذّبة — كما صحّحت لينا يوسف في الأسبوع."
+          },
+          {
+            "q": "صحّح: ~~Ich habe nicht Gabel.~~",
+            "a": "Ich habe keine Gabel.",
+            "why": "الاسم يُنفى بـkein: keine Gabel (مؤنث). nicht للصفة والفعل والمعيّن."
+          },
+          {
+            "q": "صحّح: ~~Ich trinke nicht den Kaffee.~~",
+            "a": "Ich trinke den Kaffee nicht.",
+            "why": "nicht تنفي الجملة كلها فتذهب إلى آخرها: Ich trinke den Kaffee nicht."
           }
         ],
         "interleavedWith": [
           "hunger",
-          "brot"
+          "satt",
+          "fisch",
+          "kaffee",
+          "gabel"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "dictation",
         "items": [
           {
-            "q": "«شاي من فضلك» (der Tee — طلب)؟",
-            "a": "Einen Tee, bitte!"
+            "audioId": "wu-2",
+            "speakText": "Ja, ich habe Hunger und Durst. Wo ist die Speisekarte?",
+            "a": "Ja, ich habe Hunger und Durst. Wo ist die Speisekarte?",
+            "why": "Hunger وDurst اسمان بحرف كبير مع habe · Speisekarte كلمة واحدة (Speise + Karte) مؤنثة."
           },
           {
-            "q": "«أنا شبعان ولا أدفع اليوم»؟",
-            "a": "Ich bin satt und zahle heute nicht."
+            "audioId": "wu-6",
+            "speakText": "Ja, ich esse ein Ei. Und du? Was möchtest du?",
+            "a": "Ja, ich esse ein Ei. Und du? Was möchtest du?",
+            "why": "ein Ei (محايد ⇐ ein) · möchtest بـö وst مع du."
+          },
+          {
+            "audioId": "wu-8",
+            "speakText": "Einen Tee? Im Glas, natürlich! Was für einen Tee?",
+            "a": "Einen Tee? Im Glas, natürlich! Was für einen Tee?",
+            "why": "Einen Tee بـ‑en (مفعول مذكر) حتى في السؤال المختصر · Was für einen Tee? · natürlich بـü."
+          },
+          {
+            "audioId": "wu-11",
+            "speakText": "Frage zwei: Hier ist kein Löffel! Und du?",
+            "a": "Frage zwei: Hier ist kein Löffel! Und du?",
+            "why": "kein Löffel (فاعل مذكر ⇐ kein بلا نهاية) · Löffel بـö وff."
+          },
+          {
+            "audioId": "wu-17",
+            "speakText": "Also zahlen wir. Zahlen, bitte! Bar oder mit Karte?",
+            "a": "Also zahlen wir. Zahlen, bitte! Bar oder mit Karte?",
+            "why": "Zahlen, bitte! — طلب الحساب بفاصلة · bar بحرف صغير في الجملة وكبير في أولها · Karte بحرف كبير."
+          },
+          {
+            "audioId": "wu-20",
+            "speakText": "Ja! Bis morgen, Ayşe — und guten Appetit zum Mittagessen!",
+            "a": "Ja! Bis morgen, Ayşe — und guten Appetit zum Mittagessen!",
+            "why": "guten Appetit بحرف صغير لـguten وكبير لـAppetit · Mittagessen كلمة واحدة (Mittag + Essen)."
           }
         ],
         "interleavedWith": [
-          "tee",
-          "satt"
-        ],
-        "explanationRequired": true
-      },
-      {
-        "type": "choice",
-        "items": [
-          {
-            "q": "«المعكرونة» — مفرد أم جمع؟",
-            "a": "die Nudeln (جمع فقط)"
-          },
-          {
-            "q": "«آيس كريم أم بيضة» — Eis وEi؟",
-            "a": "das Eis (آيس كريم) ↔ das Ei (بيضة)"
-          }
-        ],
-        "interleavedWith": [
-          "nudeln",
-          "ei"
+          "durst",
+          "speisekarte",
+          "ei",
+          "glas",
+          "zahlen",
+          "mittagessen"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Wochen-Meisterschaft: Essen & Trinken",
-        "ar": "معركة الأسبوع: الطعام والشراب"
+        "de": "Frühstück zusammen: Was isst du gern? Was möchtest du? Was für einen Tee? — Ich habe keinen Löffel! — Ich bin satt. Zahlen, bitte!",
+        "ar": "أن يفطر مع زميل بلعب أدوار: يسأل عن الذوق (mögen بلا أداة) · يطلب بـmöchte وeinen · يسأل Was für …? · يرفض بـkein/nicht في موضعهما · يقول satt ويدفع ببقشيش"
       },
       "situation": {
-        "de": "Abschlussprüfung der Einheit 5",
-        "ar": "اختبار ختام الوحدة 5"
+        "de": "Das Ende der Woche: Frühstück im Restaurant, wie Ayşe und Yusuf.",
+        "ar": "نهاية الأسبوع الخامس: فطور في المطعم كما فعل عائشة ويوسف — أحدكما يطلب والآخر يسأل"
       },
       "successCriteria": [
-        "اجتياز المعركة بـ ≥ 0.75 مع صيغ الطلب والنفي الصحيحة"
+        "يقول ما يحب عموماً بلا أداة (Ich mag Fisch) ويطلب شيئاً واحداً بـmöchte + ein/einen (Ich möchte einen Tee)",
+        "يسأل Was für einen/ein/eine …? ويجيب، ويرفض بـkein للاسم (keinen Löffel) وnicht للصفة والمعيّن (nicht scharf · den Kaffee nicht)",
+        "يقول Ich habe Hunger / Ich bin satt صحيحتين ويطلب الحساب (Zahlen, bitte!) ويختار bar أو mit Karte مع Trinkgeld"
       ]
     }
   },
@@ -131,20 +361,59 @@
       {
         "items": [
           {
-            "q": "«أنا جوعان»؟",
-            "a": "Ich habe Hunger."
+            "q": "«أنا جوعان» — بالألمانية؟",
+            "a": "Ich habe Hunger.",
+            "choices": [
+              "Ich habe Hunger.",
+              "Ich bin Hunger.",
+              "Ich bin satt."
+            ],
+            "why": "الجوع مع haben. ~~Ich bin Hunger~~ ترجمة حرفية خاطئة."
           },
           {
-            "q": "«أريد قهوة» (طلب مهب)؟",
-            "a": "Einen Kaffee, bitte!"
+            "q": "Ich mag ___. (السمك عموماً)",
+            "a": "Fisch",
+            "choices": [
+              "Fisch",
+              "den Fisch",
+              "einen Fisch"
+            ],
+            "why": "الطعام عموماً بلا أداة."
           },
           {
-            "q": "«لا آخذ حليباً»؟",
-            "a": "Ich nehme keine Milch."
+            "q": "Ich möchte ___ Tee, bitte.",
+            "a": "einen",
+            "choices": [
+              "einen",
+              "ein",
+              "eine"
+            ],
+            "why": "der Tee مذكر مفعول ⇐ einen."
           },
           {
-            "q": "«أريد أن آكل»؟",
-            "a": "Ich möchte essen."
+            "q": "Ich habe ___ Löffel.",
+            "a": "keinen",
+            "choices": [
+              "keinen",
+              "nicht",
+              "kein"
+            ],
+            "why": "نفي الاسم بـkein، والمذكر المفعول ⇐ keinen."
+          },
+          {
+            "q": "Die Suppe ist ___ scharf.",
+            "a": "nicht",
+            "choices": [
+              "nicht",
+              "kein",
+              "keine"
+            ],
+            "why": "الصفة تُنفى بـnicht."
+          },
+          {
+            "q": "الترتيب: bitte! / Zahlen,",
+            "a": "Zahlen, bitte!",
+            "why": "Zahlen, bitte! — طلب الحساب: الفعل أولاً ثم bitte بعد الفاصلة."
           }
         ],
         "passingScore": 0.75
@@ -152,20 +421,59 @@
       {
         "items": [
           {
-            "q": "«الخبز والجبن»؟",
-            "a": "das Brot und der Käse"
+            "q": "«أنا شبعان» — بالألمانية؟",
+            "a": "Ich bin satt.",
+            "choices": [
+              "Ich bin satt.",
+              "Ich habe satt.",
+              "Ich habe Hunger."
+            ],
+            "why": "satt صفة ⇐ sein."
           },
           {
-            "q": "«الحساء ليس حاراً»؟",
-            "a": "Die Suppe ist nicht scharf."
+            "q": "Was für ___ Tee? — Mit Milch.",
+            "a": "einen",
+            "choices": [
+              "einen",
+              "ein",
+              "eine"
+            ],
+            "why": "Was für + einen للمذكر المفعول (der Tee)."
           },
           {
-            "q": "«أنا شبعان»؟",
-            "a": "Ich bin satt."
+            "q": "Ich ___ einen Kaffee, bitte. (بلطف)",
+            "a": "möchte",
+            "choices": [
+              "möchte",
+              "will",
+              "mag"
+            ],
+            "why": "möchte الصيغة المهذّبة للطلب؛ will حادّة؛ mag للذوق العام."
           },
           {
-            "q": "«قائمة الطعام»؟",
-            "a": "die Speisekarte"
+            "q": "Ich habe ___ Gabel.",
+            "a": "keine",
+            "choices": [
+              "keine",
+              "nicht",
+              "kein"
+            ],
+            "why": "die Gabel مؤنث ⇐ keine. الاسم لا يُنفى بـnicht."
+          },
+          {
+            "q": "Ich trinke den Kaffee ___.",
+            "a": "nicht",
+            "choices": [
+              "nicht",
+              "kein",
+              "keinen"
+            ],
+            "why": "الشيء المعيّن (den Kaffee) يُنفى بـnicht في الآخر."
+          },
+          {
+            "q": "الترتيب: bar. / zahle / Ich",
+            "a": "Ich zahle bar.",
+            "why": "الفاعل ثم الفعل ثم bar (نقداً)."
           }
         ],
         "passingScore": 0.75
@@ -173,20 +481,59 @@
       {
         "items": [
           {
-            "q": "«أدفع عند الصندوق»؟",
-            "a": "Ich zahle an der Kasse."
+            "q": "Ayşe: Hast du Hunger? — Yusuf: Ja, ich habe Hunger und ___. (عطش)",
+            "a": "Durst",
+            "choices": [
+              "Durst",
+              "Salz",
+              "Zucker"
+            ],
+            "why": "Durst = عطش، مع haben مثل Hunger."
           },
           {
-            "q": "«البيض» — الجمع؟",
-            "a": "die Eier"
+            "q": "Ich esse ___ Ei. (بيضة واحدة)",
+            "a": "ein",
+            "choices": [
+              "ein",
+              "einen",
+              "eine"
+            ],
+            "why": "das Ei محايد ⇐ ein (المحايد لا يتغيّر في المفعول)."
           },
           {
-            "q": "«دجاجة بالبطاطا»؟",
-            "a": "Hähnchen mit Kartoffeln, bitte."
+            "q": "Ich möchte ___. (لا شيء)",
+            "a": "nichts",
+            "choices": [
+              "nichts",
+              "nicht",
+              "kein"
+            ],
+            "why": "nichts = لا شيء (ضمير)؛ nicht = لا (نفي)."
           },
           {
-            "q": "«أريد آيس كريم»؟",
-            "a": "Ich möchte ein Eis, bitte."
+            "q": "Ich trinke einen Kaffee ___ Zucker. (بلا)",
+            "a": "ohne",
+            "choices": [
+              "ohne",
+              "mit",
+              "nicht"
+            ],
+            "why": "ohne = بلا، mit = مع."
+          },
+          {
+            "q": "Acht Euro — und ein Euro ___. (بقشيش)",
+            "a": "Trinkgeld",
+            "choices": [
+              "Trinkgeld",
+              "Geld",
+              "Kasse"
+            ],
+            "why": "Trinkgeld = بقشيش (Trink + Geld)."
+          },
+          {
+            "q": "«أريد قطعة كعك من فضلك» (بلطف) — بالألمانية؟",
+            "a": "Ich möchte einen Kuchen, bitte.",
+            "why": "möchte + einen Kuchen (der Kuchen مذكر مفعول) + bitte."
           }
         ],
         "passingScore": 0.75
@@ -195,53 +542,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einheit 5 gemeistert: Du kannst bestellen (möchte), verneinen (kein/nicht), zahlen — und weißt: Hunger/Durst mit haben, satt mit sein!",
-      "ar": "الوحدة 5 متقنة: تطلب بـ möchte، وتنفي بـ kein/nicht، وتدفع — وتعرف: الجوع/العطش مع haben، والشبع مع sein!"
+      "de": "Woche fünf ist zu Ende: Ich mag Fisch. Ich möchte ein Brötchen und einen Tee — was für einen Tee? Ich habe keinen Löffel, die Suppe ist nicht scharf. Ich habe Hunger — ich bin satt. Zahlen, bitte! Bar.",
+      "ar": "الوحدة الخامسة اكتملت: تقول ما تحب بلا أداة، وتطلب بـmöchte وeinen، وتسأل Was für …?، وتنفي بـkein للاسم وnicht للصفة والمعيّن، وتفرّق Hunger (haben) عن satt (sein)، وتدفع."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich möchte zu essen.~~",
-          "ar": "möchte + مصدر بلا zu"
+          "de": "~~Ich bin Hunger.~~ · ~~Ich habe satt.~~",
+          "ar": "haben/sein معكوسان"
         },
-        "whyArabicSpeakerFails": "«أريد أن آكل» بـ«أن»؛ الألماني möchte ينصب الفعل في النهاية بلا zu — مصيدة الوحدة الأولى (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أنا جوعان · أنا شبعان» بالعربية صفتان بلا فعل، فيختار المتعلم sein للاثنتين أو يعكسهما — والألمانية: Hunger/Durst اسمان يُملكان (haben)، وsatt صفة (sein) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich möchte essen.",
-          "ar": "أريد أن آكل."
+          "de": "Ich habe Hunger. · Ich habe Durst. · Ich bin satt.",
+          "ar": "أنا جوعان · أنا عطشان · أنا شبعان"
         },
         "exercise": {
-          "q": "صحّح: ~~Ich möchte zu trinken.~~",
-          "a": "Ich möchte trinken."
+          "q": "أكمل: Ich ___ Durst. (عطشان)",
+          "a": "habe"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich bin Hunger.~~ / ~~Ich habe satt.~~",
-          "ar": "Hunger/Durst = haben · satt = sein"
+          "de": "~~Ich habe nicht Löffel.~~ · ~~Die Suppe ist keine scharf.~~",
+          "ar": "kein/nicht متبادلان"
         },
-        "whyArabicSpeakerFails": "الحالات الثلاث تُخبر بالـ«أنا» بالعربية؛ الألماني يمتلك الجوع/العطش ويخبر عن الشبع — انعكاس زوجي (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«لا/ليس/ما» العربية كلمة نفي واحدة تقريباً للكل، والألمانية تقسم: kein (بنهايات ein) للاسم النكرة، وnicht للصفة والفعل والاسم المعيّن — والخلط يعود في التوليف حين يُنفى اسم وصفة في جملة واحدة (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich habe Hunger/Durst. Ich bin satt.",
-          "ar": "عندي جوع/عطش. أنا شبعان."
+          "de": "Ich habe keinen Löffel. · Die Suppe ist nicht scharf. · Ich trinke den Kaffee nicht.",
+          "ar": "ليس عندي ملعقة · الحساء ليس حارّاً · لا أشرب هذه القهوة"
         },
         "exercise": {
-          "q": "أكمل: Ich ___ Hunger. Ich ___ satt.",
-          "a": "habe / bin"
+          "q": "أكمل: Ich habe ___ Glas. (das Glas)",
+          "a": "kein"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich nehme nicht Kuchen.~~",
-          "ar": "kein↔nicht: الاسم أم الباقي"
+          "de": "~~Ich will einen Kaffee.~~ (للنادل) · ~~Ich mag den Fisch.~~ (عموماً)",
+          "ar": "will للطلب · أداة للعموم"
         },
-        "whyArabicSpeakerFails": "«لا» العربية تصلح للجميع؛ الألماني: kein قبل الاسم وnicht قبل الفعل/الصفة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أريد قهوة» العربية محايدة النبرة فتُترجم will، والألمانية تسمعها حادّة — المهذّب möchte؛ و«أحب السمك» العربية تضع «ال» للعموم فيضعها المتعلم den — والألمانية تحذف الأداة للعموم (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich nehme keinen Kuchen. Das ist nicht scharf.",
-          "ar": "kein + اسم · nicht + فعل/صفة."
+          "de": "Ich möchte einen Kaffee, bitte. · Ich mag Fisch.",
+          "ar": "أريد قهوة من فضلك · أحب السمك"
         },
         "exercise": {
-          "q": "أكمل: Ich nehme ___ Kuchen. Das ist ___ scharf.",
-          "a": "keinen / nicht"
+          "q": "صحّح: ~~Ich will ein Eis.~~ (للنادل)",
+          "a": "Ich möchte ein Eis."
         }
       }
     ],
@@ -271,7 +618,7 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Wiederholung & Test",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 — توليف الوحدة 5: فطور عائشة ويوسف",
     "goetheWordListOverlap": [
       "hunger",
       "zahlen"

@@ -3588,7 +3588,7 @@ describe("D115 — أدوات القياس", () => {
     expect(l.warmup.cardIds).toEqual(["tasse", "kellner", "suppe"]);
     // النطق: e الوصل في Speisekarte شوا لا [eː] (مدخل معجم — خطأ صامت خارج التدقيق الآلي N-013) · word-speisekarte أُعيد وet-2 وُلّد به
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; regeneratedTracks: string[] }[] };
-    expect(lex.entries.find((x) => x.word === "Speisekarte")).toMatchObject({ forms: [{ espeak: "ʃpˈaɪzeːkˌaɾtə", ipa: "ʃpˈaɪzəkˌaɾtə" }], regeneratedTracks: ["word-speisekarte", "et-2"] });
+    expect(lex.entries.find((x) => x.word === "Speisekarte")).toMatchObject({ forms: [{ espeak: "ʃpˈaɪzeːkˌaɾtə", ipa: "ʃpˈaɪzəkˌaɾtə" }], regeneratedTracks: ["word-speisekarte", "et-2", "wu-2"] }); // wu-2 من D196
     // الحوار الجديد (et-1..20) كله في الاستماع والإملاء مرة واحدة · Wasser وdie Bitte إملاءً
     const listening = l.uebung.stations.find((s) => s.type === "listening")!;
     const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
@@ -3677,7 +3677,7 @@ describe("D115 — أدوات القياس", () => {
     expect(l.warmup.cardIds).toEqual(["mittag", "abend", "moegen"]);
     // النطق: همس آخر الجزء الأول في المركّبين (Mittag|essen [k] و a طويلة · Abend|essen [t]) — خطأ صامت خارج التدقيق الآلي (N-013)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; regeneratedTracks: string[] }[] };
-    expect(lex.entries.find((x) => x.word === "Mittagessen")).toMatchObject({ forms: [{ espeak: "mˈɪtaɡˌɛsən", ipa: "mˈɪtɑːkˌɛsən" }], regeneratedTracks: ["word-mittagessen", "me-2"] });
+    expect(lex.entries.find((x) => x.word === "Mittagessen")).toMatchObject({ forms: [{ espeak: "mˈɪtaɡˌɛsən", ipa: "mˈɪtɑːkˌɛsən" }], regeneratedTracks: ["word-mittagessen", "me-2", "wu-20"] }); // wu-20 من D196
     expect(lex.entries.find((x) => x.word === "Abendessen")).toMatchObject({ forms: [{ espeak: "ˈɑːbəndˌɛsən", ipa: "ˈɑːbəntˌɛsən" }], regeneratedTracks: ["word-abendessen", "me-17"] });
     expect(words.find((w) => w.id === "mittagessen")!.phoneticRisks).toContain("auslaut-g");
     expect(words.find((w) => w.id === "abendessen")!.phoneticRisks).toContain("auslaut-d");
@@ -5146,7 +5146,7 @@ describe("D115 — الخطة الحقيقية", () => {
     expect(content).toHaveLength(60);
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
-    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6"]);
+    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6"]);
   });
   it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
@@ -5160,7 +5160,7 @@ describe("D115 — الخطة الحقيقية", () => {
 describe("D194 — مرور التوليف الثاني (N-004 · قرار المالك D182 أ): a1-u1-d6 + a1-u2-d6 بالمعايير نفسها", () => {
   const rules = loadGrammarRules(CONTENT);
   const plan = loadUpgradePlans(CONTENT)[0]!;
-  const check = (id: string) => {
+  const check = (id: string, rules_n = 2) => {
     const l = realLessons.find((x) => x.id === id)!;
     const e = plan.lessons.find((x) => x.lessonId === id)!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
@@ -5170,6 +5170,7 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     expect(l.kind).toBe("integration");
     // توليف: لا كلمة جديدة إلا الجسيمان القديمان · 4 أنواع منها error-hunt (أول استعمال له — مصائد الأسبوع تُصطاد لا تُقرأ) · Quiz 3×6 بعتبة 75%
     expect(l.praesentation.wordIds).toHaveLength(2);
+    expect(l.praesentation.grammarArsenalIds).toHaveLength(rules_n);
     expect(r.practiceTypes.sort()).toEqual(["dictation", "error-hunt", "gap-fill", "listening"]);
     expect(r.practiceItems).toBeGreaterThanOrEqual(28);
     expect(r.quizMin).toBe(6);
@@ -5221,5 +5222,24 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     // ثوابت القصة الجديدة (N-096): أخوا لينا توأمان في العاشرة · كلب · عمة · الأب معلّم بنظارة · الأم تعمل كثيراً
     const txt = JSON.stringify(l);
     for (const f of ["beide sind zehn", "einen Hund", "meine Tante", "Er ist Lehrer", "Sie arbeitet viel"]) expect(txt, f).toContain(f);
+  });
+  // D196 — الزوج الثالث: كلمتا اليوم هنا موروثتان من الأسبوع نفسه (Hunger/zahlen · Zimmer/stellen) لا جسيما ردّ — والقواعد القائمة بقيت (u6 ثلاث)
+  it("a1-u5-d6 «Woche fünf ist zu Ende!» — ars-moechte-wollen + ars-kein-nicht · 29 بنداً · wu-1..20 فطور مع عائشة", () => {
+    const { l } = check("a1-u5-d6", 2);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-moechte-wollen", "ars-kein-nicht"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^wu-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["Ich habe Hunger", "Ich bin satt", "keinen Löffel", "nicht scharf", "den Kaffee nicht"]) expect(txt, f).toContain(f);
+  });
+  it("a1-u6-d6 «Woche sechs ist zu Ende!» — es-gibt + wo-wohin + da-komposita · 29 بنداً · we-1..20 غرفة يوسف اكتملت (المفتاح في الدرج)", () => {
+    const { l } = check("a1-u6-d6", 3);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-es-gibt", "ars-wo-wohin", "ars-da-komposita"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^we-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    // «Gibt es einen Computer?» كانت مقطعاً من جملة A2 رسمية (4 كلمات) — استُبدلت لا أُعلنت
+    expect(JSON.stringify(l)).not.toContain("Gibt es einen Computer?");
   });
 });
