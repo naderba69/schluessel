@@ -1,5 +1,14 @@
 # CHANGELOG.md
 
+## 2026-10-18 — الدفعة 133: a1-u12-d3 مُرقّى — Der erste Schultag (D178) · ars-trennbar كُتبت أخيراً (Perfekt المنفصل — N-117 مغلقة) · حوار kg-1..20 · معجم النطق +losgefahren/geplant
+- **ars-trennbar** (جديدة · shufra · أحمر · 10‑ي · usedInLessons [a1-u12-d3]) — الاسم الذي كان بلا ملف منذ D176 (N-117): ge بين الجزء والجذع (ein‑ge‑packt · aus‑ge‑packt · mit‑ge‑bracht · an‑ge‑sehen · aus‑ge‑geben · mit‑ge‑nommen · auf‑ge‑passt · an‑ge‑meldet) · sein للحركة (ist losgefahren · bin angekommen · ist zurückgekommen) · sich anmelden بالضمير · مقابل gemietet/geplant (ge في الأول) وbesichtigt/verpasst/reserviert (بلا ge) · الألمانية المعروضة كلمات كاملة (التفكيك بالعربية فقط).
+- **a1-u12-d3:** 6 بنود choice ⇒ 56 بنداً/4 أنواع (فراغ 20 · استماع 16 · ترتيب 10 · إملاء 10) · Quiz 3×4 ⇒ 3×6 · 3 مصائد بـ10‑ي · properNouns Yusuf/Lena/Tunis · ars-trennbar + ars-perfekt · بلا كلمة جديدة.
+- **أمثلة البطاقات:** ansehen بلا Dom («Wir haben die Fotos angesehen.») · losfahren «Der Bus ist um sieben Uhr losgefahren.» · ausgeben «Ich habe nur fünfzig Euro ausgegeben.» · anmelden «Ich habe mich für einen Kurs angemeldet.» · auspacken «Ich habe den Rucksack ausgepackt.».
+- **حوار** `a1-u12-d3-der-erste-schultag` (kg-1..20 · الاثنين 13 أبريل مساءً — أول يوم مدرسة لكليهما) — المانيفست 1992 → 2012.
+- **معجم النطق 76 → 78:** losgefahren (kg-2/3) · geplant (kg-12/13) · المرجع 1622 → 1638 · Kurs kg-14 · geregnet kg-13.
+- **اختبارات:** كتلة D178 (+1 ⇒ 711) · المثال غير المُرقّى ← a1-u12-d4 · كتلتا D176/D177 تثبّتان أن ars-trennbar لا تشملهما · أطوال المعجم 78 · validator 1125/0/0.
+- **وثائق:** الموجّه 3.35 · N-117 مغلقة ← D178 · حُدّثت N-096 · N-099 · N-103 · N-110 · N-113.
+
 ## 2026-10-18 — الدفعة 132: a1-u12-d2 مُرقّى — Am Bahnhof und im Hotel · Wieder in Berlin (D177) · نواة der Blick · das Internet · die Information · ars-trennbare + ars-modal-fix بدل ars-trennbar بلا ملف · N-118 تصحيح عدّ النواة
 - **إضافة:** ثلاث كلمات نواة بالمولِّد (`specs177.json` — blick · internet · information؛ Internet/Information في قائمتي SD1 وA2) · حوار `a1-u12-d2-wieder-in-berlin` (kf-1..20 · مكالمة الأحد 12 أبريل — يوم العودة إلى برلين) · `usedInLessons` لـars-trennbare += a1-u12-d2 · خطة SD1 u12-d2 done.
 - **تحسين المحتوى:** 67 بنداً/4 أنواع (فراغ 30 · استماع 15 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (~~Der Zug ist Verspätung~~/~~Ich bin den Zug verpasst~~ · ~~Zurückgeben Sie den Schlüssel!~~/~~muss … geben zurück~~ · ~~der Bad~~/~~Blick auf dem Park~~) · مثالا gleis (كان بـwelchem) وrezeption (كان بـErdgeschoss) مصحّحان · مقطع word-information أُعيد (1500 ⇒ 1407ms).
