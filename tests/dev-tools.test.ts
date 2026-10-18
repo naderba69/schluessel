@@ -1,14 +1,14 @@
 // tests/dev-tools.test.ts — أدوات الفحص داخل المستودع (N-104) + بوابة سرعة الكلام (قرار المالك على N-015 — D182)
 import { describe, it, expect } from "vitest";
 import { execFileSync } from "node:child_process";
-import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const ROOT = join(__dirname, "..");
 
 describe("tools/dev — N-104: أدوات الفحص لا تضيع مع الصندوق", () => {
   it("أدوات tools/dev موجودة ومذكورة في README · .dev-cache في .gitignore", () => {
-    const tools = ["fetch-official.sh", "check-lesson.ts", "speech-rate.py", "owner-review.py", "docs-sync.py", "notes.py"];
+    const tools = ["fetch-official.sh", "check-lesson.ts", "speech-rate.py", "owner-review.py", "docs-sync.py", "notes.py", "gate.ts", "content-diff.ts", "hooks/pre-push"];
     for (const f of [...tools, "README.md"]) expect(existsSync(join(ROOT, "tools/dev", f)), f).toBe(true);
     const readme = readFileSync(join(ROOT, "tools/dev/README.md"), "utf8");
     for (const f of tools) expect(readme).toContain(f);
@@ -64,4 +64,43 @@ describe("D182 — سرعة الكلام: لا سطر منشور فوق 200 كل
     }
     expect(perLine).toBe(20); // 19 سطراً قاسها speech-rate فوق 200 في D182 + ki-6 (إملاء ≤132 بعد إعادة صياغته — D183)
   });
+});
+
+describe("D187 — البوابة الواحدة وفرق المحتوى والخطّاف الحقيقي", () => {
+  it("package.json: gate · content:diff · hooks:install — ولا husky ميّت", () => {
+    const pkg = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as { scripts: Record<string, string>; devDependencies: Record<string, string> };
+    expect(pkg.scripts.gate).toBe("tsx tools/dev/gate.ts");
+    expect(pkg.scripts["content:diff"]).toBe("tsx tools/dev/content-diff.ts");
+    expect(pkg.scripts["hooks:install"]).toContain("core.hooksPath tools/dev/hooks");
+    expect(existsSync(join(ROOT, ".husky"))).toBe(false);
+    expect(pkg.devDependencies.husky).toBeUndefined();
+  });
+
+  it("خطّاف pre-push قابل للتنفيذ · يمنع main · يشغّل البوابة", () => {
+    const p = join(ROOT, "tools/dev/hooks/pre-push");
+    expect(existsSync(p)).toBe(true);
+    expect(statSync(p).mode & 0o111).not.toBe(0);
+    const sh = readFileSync(p, "utf8");
+    expect(sh).toContain("refs/heads/main");
+    expect(sh).toContain("tools/dev/gate.ts");
+  });
+
+  it("gate.ts --quick --json: كل خطوة لها معرّف وملخّص ورقم · التقرير بثلاثة أسطر", () => {
+    const out = execFileSync("npx", ["tsx", "tools/dev/gate.ts", "--quick", "--json", "--did", "اختبار"], { cwd: ROOT, encoding: "utf8", timeout: 300_000 });
+    const r = JSON.parse(out) as { ok: boolean; quick: boolean; results: { id: string; ok: boolean; summary: string }[]; report: string };
+    expect(r.quick).toBe(true);
+    expect(r.results.map((x) => x.id)).toEqual(["tsc", "validate", "docs", "notes", "audit", "speech"]);
+    expect(r.results.filter((x) => !x.ok)).toEqual([]);
+    expect(r.report.split("\n")).toHaveLength(3);
+    expect(r.report).toContain("1. **ما نُفّذ:** اختبار");
+    expect(r.report).toContain("3. **ما ينكسر:**");
+  }, 300_000);
+
+  it("content-diff.ts --json بين التزامين: ملخّص + تقارير بنصوص قبل/بعد", () => {
+    const out = execFileSync("npx", ["tsx", "tools/dev/content-diff.ts", "HEAD~1", "HEAD", "--json"], { cwd: ROOT, encoding: "utf8", timeout: 120_000 });
+    const r = JSON.parse(out) as { summary: { from: string; to: string; files: number; texts: number }; reports: { file: string; texts: { path: string }[] }[] };
+    expect(r.summary.from).toBe("HEAD~1");
+    expect(r.reports.length).toBe(r.summary.files);
+    for (const f of r.reports) expect(f.file.startsWith("content/"), f.file).toBe(true);
+  }, 120_000);
 });

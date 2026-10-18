@@ -1,0 +1,15 @@
+#!/bin/sh
+# tools/dev/hooks/pre-push — بوابة حقيقية قبل كل دفع (D187 — بديل .husky الميّت الذي لم يعمل يوماً)
+# التثبيت مرة واحدة في كل صندوق:  npm run hooks:install   (= git config core.hooksPath tools/dev/hooks)
+# 1) لا دفع إلى main أبداً (أمر المالك) · 2) البوابة الكاملة npm run gate يجب أن تكون خضراء.
+remote="$1"
+while read -r local_ref local_sha remote_ref remote_sha; do
+  case "$remote_ref" in
+    refs/heads/main|refs/heads/master)
+      echo "pre-push ✗: الدفع إلى $remote_ref ممنوع (أمر المالك — فرع الجلسة فقط)." >&2
+      exit 1 ;;
+  esac
+done
+cd "$(git rev-parse --show-toplevel)" || exit 1
+echo "pre-push: البوابة الكاملة قبل الدفع إلى $remote …"
+npx tsx tools/dev/gate.ts || { echo "pre-push ✗: البوابة حمراء — لا دفع." >&2; exit 1; }
