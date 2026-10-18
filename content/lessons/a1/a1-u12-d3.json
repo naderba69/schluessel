@@ -6,11 +6,12 @@
   "day": 3,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst deine Reise im Perfekt mit trennbaren Verben erzählen: Ich habe den Koffer eingepackt, wir sind losgefahren, und ich habe mich angemeldet.",
-    "ar": "تروي رحلتك بالماضي والأفعال المنفصلة (ge في المنتصف!)"
+    "de": "Der Bus ist um sieben Uhr losgefahren. · Ich bin um acht Uhr angekommen. · Ich habe den Rucksack ausgepackt. · Ich habe Geschenke mitgebracht. · Wir haben die Fotos angesehen. · Ich habe fünfzig Euro ausgegeben. · Ich habe mich für einen Kurs angemeldet. · Mein Vater hat ein Auto gemietet.",
+    "ar": "تروي يومك ورحلتك بالماضي بالأفعال المنفصلة: ge في المنتصف (ein‑ge‑packt · aus‑ge‑packt · mit‑ge‑bracht · an‑ge‑sehen · aus‑ge‑geben · mit‑ge‑nommen · auf‑ge‑passt) · الحركة بـsein (ist losgefahren · bin angekommen · ist zurückgekommen) · sich anmelden بالضمير (habe mich angemeldet) · وغير المنفصل بـge في الأول (gemietet · geplant) — ومعها losfahren · zurückkommen · mitbringen · ansehen · mitnehmen · ausgeben · einpacken · auspacken · sich anmelden · aufpassen · mieten · planen"
   },
   "canDoDaily": [
-    "يروي رحلته بـ3 جمل ماضٍ بأفعال منفصلة (ge في المنتصف) + جملة bin-حركة"
+    "يروي رحلته بأفعال منفصلة في الماضي (Ich habe den Koffer eingepackt. · Ich habe Geschenke mitgebracht. · Ich habe nur fünfzig Euro ausgegeben.) وبجملة حركة بـsein (Der Bus ist um sieben Uhr losgefahren. · Ich bin um acht Uhr angekommen.).",
+    "يسجّل نفسه ويستعمل غير المنفصل (Ich habe mich für einen Kurs angemeldet. · Mein Vater hat ein Auto gemietet. · Wir haben alles geplant.)."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«حزمتُ الحقيبة» — أين ge في الفعل المنفصل؟"
+          "de": "«حزمتُ الحقيبة» — أين ge في الفعل المنفصل؟ (تخمين فقط)"
         },
         "choices": [
-          "Ich habe den Koffer eingepackt (ein-ge-packt)",
-          "Ich habe den Koffer geeinpackt",
-          "Ich habe den Koffer gepacktein"
+          "Ich habe den Koffer eingepackt.",
+          "Ich habe den Koffer gepackt ein.",
+          "Ich bin den Koffer eingepackt."
         ],
-        "answer": "Ich habe den Koffer eingepackt (ein-ge-packt)",
+        "answer": "Ich habe den Koffer eingepackt.",
         "revealNextSession": true
       }
     ],
@@ -59,78 +60,579 @@
       "story-a12-u12-s3"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "z",
+      "umlaut-u",
+      "ch-ach-laut",
+      "auslaut-g",
+      "double-consonant"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«حزمتُ الحقيبة»؟",
-            "a": "Ich habe den Koffer eingepackt."
+            "q": "Der Bus ist um sieben Uhr ___. (losfahren — التصريف الثالث)",
+            "a": "losgefahren",
+            "why": "los‑ge‑fahren: ge في المنتصف · وبـist لأن الحافلة تتحرّك."
           },
           {
-            "q": "«انطلقنا الساعة الثامنة»؟",
-            "a": "Wir sind um 8 Uhr losgefahren."
+            "q": "Der Bus ___ um sieben Uhr losgefahren. (ist/hat)",
+            "a": "ist",
+            "why": "losfahren حركة من مكان إلى مكان → sein: ist losgefahren."
+          },
+          {
+            "q": "Ich ___ um acht Uhr in der Schule angekommen. (bin/habe)",
+            "a": "bin",
+            "why": "ankommen حركة → sein: bin angekommen."
+          },
+          {
+            "q": "Mein Bruder ist um sechs Uhr ___. (zurückkommen — التصريف الثالث)",
+            "a": "zurückgekommen",
+            "why": "zurück‑ge‑kommen: ge بين الجزء والجذر · sein لأنه حركة."
+          },
+          {
+            "q": "Ich habe den Rucksack ___. (auspacken — التصريف الثالث)",
+            "a": "ausgepackt",
+            "why": "aus‑ge‑packt: فعل منتظم بـ‑t وge في المنتصف · haben لأن له مفعولاً."
+          },
+          {
+            "q": "Ich habe den Koffer gestern ___. (einpacken — التصريف الثالث)",
+            "a": "eingepackt",
+            "why": "ein‑ge‑packt — لا geeinpackt: ge بعد الجزء المنفصل."
+          },
+          {
+            "q": "Ich habe Geschenke aus Tunis ___. (mitbringen — التصريف الثالث)",
+            "a": "mitgebracht",
+            "why": "mit‑ge‑bracht: bringen غير منتظم (gebracht) والجزء mit قبل ge."
+          },
+          {
+            "q": "In der Pause haben wir die Fotos ___. (ansehen — التصريف الثالث)",
+            "a": "angesehen",
+            "why": "an‑ge‑sehen: sehen → gesehen والجزء an قبله."
+          },
+          {
+            "q": "Ich habe nur fünfzig Euro ___. (ausgeben — التصريف الثالث)",
+            "a": "ausgegeben",
+            "why": "aus‑ge‑geben: geben → gegeben والجزء aus قبله."
+          },
+          {
+            "q": "Ich habe meinen Regenschirm ___. (mitnehmen — التصريف الثالث)",
+            "a": "mitgenommen",
+            "why": "mit‑ge‑nommen: nehmen → genommen (تغيّر الحركة) والجزء mit قبله."
+          },
+          {
+            "q": "Ich habe ___ für einen Kurs angemeldet. (sich anmelden — ich)",
+            "a": "mich",
+            "why": "sich anmelden انعكاسي: ich habe mich … angemeldet — mich بعد habe مباشرة."
+          },
+          {
+            "q": "Lena hat ___ für den Kurs angemeldet. (sich anmelden — sie)",
+            "a": "sich",
+            "why": "الغائبة sie → sich: hat sich angemeldet."
+          },
+          {
+            "q": "Ich habe in der Schule gut ___. (aufpassen — التصريف الثالث)",
+            "a": "aufgepasst",
+            "why": "auf‑ge‑passt: منتظم بـ‑t · ss مضاعفة."
+          },
+          {
+            "q": "Mein Vater hat in Tunis ein Auto ___. (mieten — التصريف الثالث)",
+            "a": "gemietet",
+            "why": "mieten غير منفصل → ge في الأول: gemietet · ‑et بعد t."
+          },
+          {
+            "q": "Wir haben alle Ausflüge ___. (planen — التصريف الثالث)",
+            "a": "geplant",
+            "why": "planen غير منفصل → geplant: ge في الأول."
+          },
+          {
+            "q": "Morgen ___ die Lehrerin auf. (aufpassen — sie — المضارع)",
+            "a": "passt",
+            "why": "في المضارع يعود الجزء auf إلى آخر الجملة: passt … auf."
+          },
+          {
+            "q": "Mein Bruder ___ um sechs Uhr zurück. (zurückkommen — er — المضارع)",
+            "a": "kommt",
+            "why": "المضارع: kommt ثانياً وzurück آخراً."
+          },
+          {
+            "q": "___ die Fotos mit! (mitbringen — الأمر مع du)",
+            "a": "Bring",
+            "why": "الأمر: Bring أولاً وmit في الآخر."
+          },
+          {
+            "q": "Ich muss noch zwei Wochen ___. (aufpassen — بعد muss)",
+            "a": "aufpassen",
+            "why": "بعد الفعل الناقص يعود المنفصل متصلاً في الآخر."
+          },
+          {
+            "q": "Habt ihr Ausflüge ___? (planen — التصريف الثالث)",
+            "a": "geplant",
+            "why": "سؤال نعم/لا بالماضي: Habt أولاً والتصريف الثالث آخراً."
           }
         ],
         "interleavedWith": [
-          "einpacken",
-          "losfahren"
+          "bus",
+          "uhr",
+          "schule",
+          "bruder",
+          "rucksack",
+          "koffer",
+          "geschenk",
+          "pause",
+          "foto",
+          "euro",
+          "regenschirm",
+          "kurs",
+          "vater",
+          "auto",
+          "lehrerin"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«سجّلتُ نفسي (في الفندق)»؟",
-            "a": "Ich habe mich angemeldet."
+            "audioId": "kg-1",
+            "speakText": "Hallo Lena! Wie war dein erster Tag in der Schule?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "عن أول يوم في المدرسة",
+              "عن الطقس في تونس",
+              "عن عيد ميلاد لينا"
+            ],
+            "a": "عن أول يوم في المدرسة",
+            "why": "Wie war dein erster Tag in der Schule? — أول يوم مدرسة."
           },
           {
-            "q": "«عدتُ يوم الأحد»؟",
-            "a": "Ich bin am Sonntag zurückgekommen."
+            "audioId": "kg-2",
+            "speakText": "Gut! Ich habe in der Schule gut aufgepasst — aber ich war müde. Und du? Bist du pünktlich losgefahren?",
+            "q": "استمع: كيف كان يوم لينا وماذا تسأل؟",
+            "choices": [
+              "انتبهت جيداً لكنها تعبت — هل انطلق في الوقت",
+              "نامت في الصف — هل أكل",
+              "لم تذهب — هل مرض"
+            ],
+            "a": "انتبهت جيداً لكنها تعبت — هل انطلق في الوقت",
+            "why": "gut aufgepasst · müde · Bist du pünktlich losgefahren? — في الوقت."
+          },
+          {
+            "audioId": "kg-3",
+            "speakText": "Ja, der Bus ist um sieben Uhr losgefahren, und ich bin um acht Uhr in der Schule angekommen.",
+            "q": "استمع: متى انطلقت الحافلة ومتى وصل يوسف؟",
+            "choices": [
+              "السابعة — وصل الثامنة",
+              "السادسة — وصل السابعة",
+              "الثامنة — وصل التاسعة"
+            ],
+            "a": "السابعة — وصل الثامنة",
+            "why": "um sieben Uhr losgefahren · um acht Uhr angekommen — السابعة والثامنة."
+          },
+          {
+            "audioId": "kg-5",
+            "speakText": "Ja, ich habe alles ausgepackt. Und ich habe Geschenke aus Tunis mitgebracht — auch für dich!",
+            "q": "استمع: ماذا أحضر يوسف من تونس؟",
+            "choices": [
+              "هدايا — ولِلينا أيضاً",
+              "صوراً فقط",
+              "طعاماً لأمّه"
+            ],
+            "a": "هدايا — ولِلينا أيضاً",
+            "why": "Geschenke aus Tunis mitgebracht — auch für dich! — هدايا."
+          },
+          {
+            "audioId": "kg-7",
+            "speakText": "Das sage ich nicht! Du siehst es am Samstag.",
+            "q": "استمع: متى ترى لينا هديتها؟",
+            "choices": [
+              "يوم السبت",
+              "غداً",
+              "الآن"
+            ],
+            "a": "يوم السبت",
+            "why": "Du siehst es am Samstag — السبت."
+          },
+          {
+            "audioId": "kg-8",
+            "speakText": "Gut, ich warte. Hast du heute die Fotos aus Tunis angesehen?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل شاهد صور تونس اليوم",
+              "هل اشترى حقيبة جديدة",
+              "هل كتب الواجبات"
+            ],
+            "a": "هل شاهد صور تونس اليوم",
+            "why": "Hast du heute die Fotos aus Tunis angesehen? — الصور."
+          },
+          {
+            "audioId": "kg-9",
+            "speakText": "Ja, in der Pause haben wir die Fotos angesehen. Meine Freunde haben viel gefragt.",
+            "q": "استمع: متى شاهدوا الصور وماذا فعل الأصدقاء؟",
+            "choices": [
+              "في الاستراحة — سألوا كثيراً",
+              "في الدرس — ناموا",
+              "في الحافلة — ضحكوا"
+            ],
+            "a": "في الاستراحة — سألوا كثيراً",
+            "why": "in der Pause … angesehen · viel gefragt — الاستراحة."
+          },
+          {
+            "audioId": "kg-10",
+            "speakText": "Und wie viel Geld hast du in Tunis ausgegeben?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "كم أنفق من المال في تونس",
+              "كم صورة التقط",
+              "كم يوماً بقي"
+            ],
+            "a": "كم أنفق من المال في تونس",
+            "why": "Wie viel Geld hast du … ausgegeben? — المال."
+          },
+          {
+            "audioId": "kg-11",
+            "speakText": "Nicht viel. Ich habe nur fünfzig Euro ausgegeben — für Geschenke. Und mein Vater hat dort ein Auto gemietet.",
+            "q": "استمع: كم أنفق يوسف وماذا فعل أبوه؟",
+            "choices": [
+              "خمسين يورو — أبوه استأجر سيارة",
+              "مئة يورو — أبوه اشترى سيارة",
+              "عشرين يورو — أبوه ركب القطار"
+            ],
+            "a": "خمسين يورو — أبوه استأجر سيارة",
+            "why": "nur fünfzig Euro ausgegeben · ein Auto gemietet — خمسون واستأجر."
+          },
+          {
+            "audioId": "kg-13",
+            "speakText": "Ja, wir haben alles geplant und viel gesehen. Aber ich habe meinen Regenschirm mitgenommen — und es hat nicht geregnet!",
+            "q": "استمع: ماذا أخذ يوسف معه وماذا حدث؟",
+            "choices": [
+              "مظلته — ولم تمطر",
+              "دراجته — وأمطرت",
+              "كتابه — وكان الجو حاراً"
+            ],
+            "a": "مظلته — ولم تمطر",
+            "why": "Regenschirm mitgenommen · es hat nicht geregnet — المظلة."
+          },
+          {
+            "audioId": "kg-14",
+            "speakText": "So ist das Wetter! Ich habe mich heute für einen Kurs im Mai angemeldet: Schwimmen!",
+            "q": "استمع: في ماذا سجّلت لينا نفسها؟",
+            "choices": [
+              "دورة سباحة في مايو",
+              "دورة ألمانية في يونيو",
+              "رحلة إلى روما"
+            ],
+            "a": "دورة سباحة في مايو",
+            "why": "für einen Kurs im Mai angemeldet: Schwimmen — السباحة."
+          },
+          {
+            "audioId": "kg-15",
+            "speakText": "Toll! Darfst du schon wieder schwimmen?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل يُسمح لها بالسباحة من جديد",
+              "هل تحبّ السباحة",
+              "أين المسبح"
+            ],
+            "a": "هل يُسمح لها بالسباحة من جديد",
+            "why": "Darfst du schon wieder schwimmen? — يُسمح."
+          },
+          {
+            "audioId": "kg-16",
+            "speakText": "Im Mai ja. Die Ärztin hat gesagt: Noch zwei Wochen aufpassen.",
+            "q": "استمع: ماذا قالت الطبيبة؟",
+            "choices": [
+              "الانتباه أسبوعين بعد",
+              "السباحة من الغد",
+              "البقاء في البيت شهراً"
+            ],
+            "a": "الانتباه أسبوعين بعد",
+            "why": "Noch zwei Wochen aufpassen — أسبوعان."
+          },
+          {
+            "audioId": "kg-17",
+            "speakText": "Gut. Ich komme am Samstag um sechs Uhr zu dir. Ist das gut?",
+            "q": "استمع: متى يأتي يوسف إلى لينا؟",
+            "choices": [
+              "السبت الساعة السادسة",
+              "الأحد الساعة الخامسة",
+              "الجمعة الساعة السابعة"
+            ],
+            "a": "السبت الساعة السادسة",
+            "why": "am Samstag um sechs Uhr zu dir — السبت السادسة."
+          },
+          {
+            "audioId": "kg-18",
+            "speakText": "Ja, sehr gut! Mein Bruder kommt auch um sechs Uhr zurück. Bring die Fotos mit!",
+            "q": "استمع: من يعود في السادسة أيضاً وماذا يطلب من يوسف؟",
+            "choices": [
+              "أخوها — إحضار الصور",
+              "أبوها — إحضار الهدايا",
+              "أمّها — إحضار الكعك"
+            ],
+            "a": "أخوها — إحضار الصور",
+            "why": "Mein Bruder kommt … zurück · Bring die Fotos mit! — الأخ والصور."
+          },
+          {
+            "audioId": "kg-19",
+            "speakText": "Mache ich. Und jetzt muss ich meine Hausaufgaben machen — morgen passt die Lehrerin auf!",
+            "q": "استمع: ماذا على يوسف الآن ومن ينتبه غداً؟",
+            "choices": [
+              "الواجبات — المعلمة تنتبه",
+              "النوم — الأمّ تنتبه",
+              "الأكل — الأب ينتبه"
+            ],
+            "a": "الواجبات — المعلمة تنتبه",
+            "why": "Hausaufgaben machen · morgen passt die Lehrerin auf — المعلمة."
           }
         ],
         "interleavedWith": [
-          "anmelden",
-          "zurueckkommen"
+          "schule",
+          "uhr",
+          "pause",
+          "foto",
+          "geld",
+          "euro",
+          "auto",
+          "regenschirm",
+          "kurs",
+          "bruder",
+          "lehrerin"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«أنفقتُ 200 يورو»؟",
-            "a": "Ich habe 200 Euro ausgegeben."
+            "tokens": [
+              "Der",
+              "losgefahren.",
+              "sieben",
+              "ist",
+              "Uhr",
+              "um",
+              "Bus"
+            ],
+            "a": "Der Bus ist um sieben Uhr losgefahren.",
+            "why": "ist ثانياً ← um sieben Uhr ← losgefahren آخراً (sein للحركة)."
           },
           {
-            "q": "«انتبهوا!»؟",
-            "a": "Passen Sie auf!"
+            "tokens": [
+              "um",
+              "Ich",
+              "Uhr",
+              "angekommen.",
+              "acht",
+              "bin"
+            ],
+            "a": "Ich bin um acht Uhr angekommen.",
+            "why": "bin ثانياً ← الوقت ← angekommen آخراً."
+          },
+          {
+            "tokens": [
+              "Ich",
+              "den",
+              "Rucksack",
+              "ausgepackt.",
+              "habe"
+            ],
+            "a": "Ich habe den Rucksack ausgepackt.",
+            "why": "habe ثانياً ← den Rucksack ← ausgepackt آخراً."
+          },
+          {
+            "tokens": [
+              "habe",
+              "Ich",
+              "mitgebracht.",
+              "Tunis",
+              "Geschenke",
+              "aus"
+            ],
+            "a": "Ich habe Geschenke aus Tunis mitgebracht.",
+            "why": "habe ← Geschenke ← aus Tunis ← mitgebracht آخراً."
+          },
+          {
+            "tokens": [
+              "Wir",
+              "angesehen.",
+              "Pause",
+              "Fotos",
+              "der",
+              "haben",
+              "in",
+              "die"
+            ],
+            "a": "Wir haben die Fotos in der Pause angesehen.",
+            "why": "haben ← die Fotos ← in der Pause ← angesehen آخراً."
+          },
+          {
+            "tokens": [
+              "habe",
+              "einen",
+              "mich",
+              "für",
+              "Ich",
+              "angemeldet.",
+              "Kurs"
+            ],
+            "a": "Ich habe mich für einen Kurs angemeldet.",
+            "why": "habe ← mich مباشرةً ← für einen Kurs ← angemeldet آخراً."
+          },
+          {
+            "tokens": [
+              "hat",
+              "Vater",
+              "Auto",
+              "gemietet.",
+              "Mein",
+              "ein"
+            ],
+            "a": "Mein Vater hat ein Auto gemietet.",
+            "why": "hat ثانياً ← ein Auto ← gemietet آخراً (ge في الأول)."
+          },
+          {
+            "tokens": [
+              "am",
+              "Bruder",
+              "Mein",
+              "zurückgekommen.",
+              "ist",
+              "Sonntag"
+            ],
+            "a": "Mein Bruder ist am Sonntag zurückgekommen.",
+            "why": "ist ← am Sonntag ← zurückgekommen آخراً."
+          },
+          {
+            "tokens": [
+              "die",
+              "Lehrerin",
+              "Morgen",
+              "passt",
+              "auf."
+            ],
+            "a": "Morgen passt die Lehrerin auf.",
+            "why": "Morgen أولاً ← passt ثانياً ← die Lehrerin ← auf آخراً."
+          },
+          {
+            "tokens": [
+              "mitgenommen?",
+              "Regenschirm",
+              "den",
+              "ihr",
+              "Habt"
+            ],
+            "a": "Habt ihr den Regenschirm mitgenommen?",
+            "why": "سؤال نعم/لا: Habt أولاً ← ihr ← den Regenschirm ← mitgenommen آخراً."
           }
         ],
         "interleavedWith": [
-          "ausgeben",
-          "aufpassen"
+          "bus",
+          "uhr",
+          "rucksack",
+          "geschenk",
+          "foto",
+          "pause",
+          "kurs",
+          "vater",
+          "auto",
+          "bruder",
+          "sonntag",
+          "lehrerin",
+          "regenschirm"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "kg-4",
+            "speakText": "Super. Hast du gestern Abend den Rucksack ausgepackt?",
+            "a": "Super. Hast du gestern Abend den Rucksack ausgepackt?",
+            "why": "Super بحرف كبير · Abend بحرف كبير وd آخراً تُنطق t · Rucksack بـck · ausgepackt بـck و‑t."
+          },
+          {
+            "audioId": "kg-6",
+            "speakText": "Danke! Was hast du mitgebracht?",
+            "a": "Danke! Was hast du mitgebracht?",
+            "why": "Danke بحرف كبير · mitgebracht بـch (ach‑Laut) و‑t آخراً."
+          },
+          {
+            "audioId": "kg-12",
+            "speakText": "Ein Auto? Habt ihr Ausflüge geplant?",
+            "a": "Ein Auto? Habt ihr Ausflüge geplant?",
+            "why": "Auto بحرف كبير · Ausflüge بـü وجمع ‑e · geplant بـge في الأول."
+          },
+          {
+            "audioId": "kg-20",
+            "speakText": "Viel Spaß! Bis morgen, Yusuf!",
+            "a": "Viel Spaß! Bis morgen, Yusuf!",
+            "why": "Viel بـie · Spaß بـß · Yusuf بحرف كبير."
+          },
+          {
+            "audioId": "word-losfahren",
+            "speakText": "losfahren.",
+            "a": "losfahren",
+            "why": "losfahren بـs ثم f — كلمة واحدة في المصدر."
+          },
+          {
+            "audioId": "word-zurueckkommen",
+            "speakText": "zurückkommen.",
+            "a": "zurückkommen",
+            "why": "zurückkommen بـü وck ثم kk."
+          },
+          {
+            "audioId": "word-mitbringen",
+            "speakText": "mitbringen.",
+            "a": "mitbringen",
+            "why": "mitbringen بـng."
+          },
+          {
+            "audioId": "word-anmelden",
+            "speakText": "anmelden.",
+            "a": "anmelden",
+            "why": "anmelden بـd قبل ‑en."
+          },
+          {
+            "audioId": "word-aufpassen",
+            "speakText": "aufpassen.",
+            "a": "aufpassen",
+            "why": "aufpassen بـss مضاعفة."
+          },
+          {
+            "audioId": "word-einpacken",
+            "speakText": "einpacken.",
+            "a": "einpacken",
+            "why": "einpacken بـei وck."
+          }
+        ],
+        "interleavedWith": [
+          "abend",
+          "rucksack",
+          "auto",
+          "ausflug"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die Reise im Perfekt erzählen",
-        "a": "x",
-        "ar": "رواية الرحلة بالماضي"
+        "de": "Wie war deine Reise? — Wir sind um sieben Uhr losgefahren und um zwölf Uhr angekommen. Ich habe den Koffer am Abend ausgepackt. · Was hast du mitgebracht? — Geschenke! Ich habe nur fünfzig Euro ausgegeben. · Mein Vater hat ein Auto gemietet, und wir haben Ausflüge geplant. · Ich habe mich für einen Kurs angemeldet.",
+        "ar": "زميلك يسأل عن رحلتك وأنت تروي: الانطلاق والوصول بـsein (sind losgefahren · angekommen) · ما حزمتَ وأحضرتَ وأنفقتَ بـhaben (ausgepackt · mitgebracht · ausgegeben) · ما استأجرتم وخطّطتم (gemietet · geplant) · وفي ماذا سجّلتَ نفسك (habe mich angemeldet) — ثم تعكسان الأدوار"
       },
       "situation": {
-        "de": "Erzähle deine letzte Reise: Was hast du gemacht? Wohin bist du gefahren?",
-        "a": "x",
-        "ar": "إحكي رحلتك الأخيرة: ماذا فعلت؟ إلى أين ذهبت؟"
+        "de": "Am Montag in der Pause: Wie war deine Reise? — Super! Wir sind am Freitag um sieben Uhr losgefahren und um zwölf Uhr angekommen. — Was hast du gemacht? — Mein Vater hat ein Auto gemietet, wir haben alles geplant und viel gesehen. Ich habe nur fünfzig Euro ausgegeben. — Hast du Fotos mitgebracht? — Ja, ich habe sie heute Morgen angesehen. Und du? — Ich habe mich für einen Kurs angemeldet!",
+        "ar": "يوم الاثنين في الاستراحة: زميلك سافر في العطلة وأنت تسأله (متى انطلقتم؟ متى وصلتم؟ ماذا أحضرتَ؟ كم أنفقتَ؟) وهو يجيب بجمل اليوم — ثم تخبره أنت بما فعلتَ"
       },
       "successCriteria": [
-        "جملتان بأفعال منفصلة (ge في المنتصف) + جملة bin-حركة + جملة sich anmelden"
+        "جملة حركة بـsein (sind losgefahren · bin angekommen · ist zurückgekommen)",
+        "جملتان بـhaben وفعل منفصل (eingepackt · ausgepackt · mitgebracht · angesehen · ausgegeben · mitgenommen · aufgepasst)",
+        "جملة sich anmelden بالضمير (Ich habe mich … angemeldet.)",
+        "جملة بغير منفصل (gemietet · geplant)"
       ]
     }
   },
@@ -145,62 +647,194 @@
       {
         "items": [
           {
-            "q": "«ينطلق» — والماضي؟",
-            "a": "losfahren — ist losgefahren"
+            "q": "«حزمتُ الحقيبة»؟",
+            "choices": [
+              "Ich habe den Koffer eingepackt.",
+              "Ich habe den Koffer gepackt ein.",
+              "Ich bin den Koffer eingepackt."
+            ],
+            "a": "Ich habe den Koffer eingepackt.",
+            "why": "ein‑ge‑packt كلمة واحدة في الآخر · haben مع المفعول."
           },
           {
-            "q": "«يعود» — والماضي؟",
-            "a": "zurückkommen — ist zurückgekommen"
+            "q": "«انطلقنا الساعة الثامنة»؟",
+            "choices": [
+              "Wir sind um acht Uhr losgefahren.",
+              "Wir haben um acht Uhr losgefahren.",
+              "Wir sind um acht Uhr gefahren los."
+            ],
+            "a": "Wir sind um acht Uhr losgefahren.",
+            "why": "losfahren حركة → sein · los‑ge‑fahren كلمة واحدة."
           },
-          {
-            "q": "«يجلب (معه)»؟",
-            "a": "mitbringen (hat mitgebracht)"
-          },
-          {
-            "q": "«يشاهد المعالم»؟",
-            "a": "ansehen (hat angesehen)"
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "«يأخذ (معه)»؟",
-            "a": "mitnehmen (hat mitgenommen)"
-          },
-          {
-            "q": "«ينفق»؟",
-            "a": "ausgeben (hat ausgegeben)"
-          },
-          {
-            "q": "«يحزم الحقيبة»؟",
-            "a": "einpacken (hat eingepackt)"
-          },
-          {
-            "q": "«يفتح الحقيبة»؟",
-            "a": "auspacken (hat ausgepackt)"
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
           {
             "q": "«سجّلتُ نفسي»؟",
-            "a": "Ich habe mich angemeldet."
+            "choices": [
+              "Ich habe mich angemeldet.",
+              "Ich habe angemeldet.",
+              "Ich bin mich angemeldet."
+            ],
+            "a": "Ich habe mich angemeldet.",
+            "why": "sich anmelden انعكاسي: mich بعد habe · angemeldet كلمة واحدة."
           },
           {
-            "q": "«ينتبه»؟",
-            "a": "aufpassen (Passen Sie auf!)"
+            "q": "«أحضرتُ هدية»؟",
+            "choices": [
+              "Ich habe ein Geschenk mitgebracht.",
+              "Ich bin ein Geschenk mitgebracht.",
+              "Ich habe ein Geschenk gebracht mit."
+            ],
+            "a": "Ich habe ein Geschenk mitgebracht.",
+            "why": "mitbringen بـhaben · mit‑ge‑bracht."
           },
           {
-            "q": "«يستأجر»؟",
-            "a": "mieten (hat gemietet)"
+            "q": "«عاد أبي يوم السبت»؟",
+            "choices": [
+              "Mein Vater ist am Samstag zurückgekommen.",
+              "Mein Vater hat am Samstag zurückgekommen.",
+              "Mein Vater ist am Samstag gekommen zurück."
+            ],
+            "a": "Mein Vater ist am Samstag zurückgekommen.",
+            "why": "zurückkommen حركة → sein · zurück‑ge‑kommen."
           },
           {
-            "q": "«يخطّط»؟",
-            "a": "planen (hat geplant)"
+            "q": "«استأجرنا سيارة»؟",
+            "choices": [
+              "Wir haben ein Auto gemietet.",
+              "Wir sind ein Auto gemietet.",
+              "Wir haben ein Auto mieten."
+            ],
+            "a": "Wir haben ein Auto gemietet.",
+            "why": "mieten منتظم غير منفصل: hat gemietet."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«شاهدتُ الصور»؟",
+            "choices": [
+              "Ich habe die Fotos angesehen.",
+              "Ich habe die Fotos gesehen an.",
+              "Ich bin die Fotos angesehen."
+            ],
+            "a": "Ich habe die Fotos angesehen.",
+            "why": "an‑ge‑sehen كلمة واحدة · haben."
+          },
+          {
+            "q": "«أخذتُ المظلة معي»؟",
+            "choices": [
+              "Ich habe den Regenschirm mitgenommen.",
+              "Ich bin den Regenschirm mitgenommen.",
+              "Ich habe den Regenschirm genommen mit."
+            ],
+            "a": "Ich habe den Regenschirm mitgenommen.",
+            "why": "mit‑ge‑nommen كلمة واحدة · haben للمفعول."
+          },
+          {
+            "q": "«وصل القطار الساعة التاسعة»؟",
+            "choices": [
+              "Der Zug ist um neun Uhr angekommen.",
+              "Der Zug hat um neun Uhr angekommen.",
+              "Der Zug ist um neun Uhr gekommen an."
+            ],
+            "a": "Der Zug ist um neun Uhr angekommen.",
+            "why": "ankommen حركة → sein · an‑ge‑kommen."
+          },
+          {
+            "q": "«هل سجّلتَ نفسك؟» (du)",
+            "choices": [
+              "Hast du dich angemeldet?",
+              "Hast du angemeldet?",
+              "Hast dich du angemeldet?"
+            ],
+            "a": "Hast du dich angemeldet?",
+            "why": "du → dich بعد الفاعل: Hast du dich …?"
+          },
+          {
+            "q": "«أنفقتَ مالاً كثيراً» (du)؟",
+            "choices": [
+              "Du hast viel Geld ausgegeben.",
+              "Du bist viel Geld ausgegeben.",
+              "Du hast viel Geld gegeben aus."
+            ],
+            "a": "Du hast viel Geld ausgegeben.",
+            "why": "ausgeben بـhaben · aus‑ge‑geben."
+          },
+          {
+            "q": "«خطّطنا الرحلة»؟",
+            "choices": [
+              "Wir haben die Reise geplant.",
+              "Wir haben die Reise planen.",
+              "Wir sind die Reise geplant."
+            ],
+            "a": "Wir haben die Reise geplant.",
+            "why": "planen غير منفصل: haben + geplant."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«فتحتُ الحقيبة مساءً»؟",
+            "choices": [
+              "Ich habe am Abend den Koffer ausgepackt.",
+              "Ich bin am Abend den Koffer ausgepackt.",
+              "Ich habe am Abend den Koffer auspacken."
+            ],
+            "a": "Ich habe am Abend den Koffer ausgepackt.",
+            "why": "auspacken بـhaben · aus‑ge‑packt."
+          },
+          {
+            "q": "«انتبهتُ في المدرسة»؟",
+            "choices": [
+              "Ich habe in der Schule aufgepasst.",
+              "Ich bin in der Schule aufgepasst.",
+              "Ich habe in der Schule gepasst auf."
+            ],
+            "a": "Ich habe in der Schule aufgepasst.",
+            "why": "aufpassen بـhaben · auf‑ge‑passt."
+          },
+          {
+            "q": "«هل انطلقتم في الوقت؟» (ihr)",
+            "choices": [
+              "Seid ihr pünktlich losgefahren?",
+              "Habt ihr pünktlich losgefahren?",
+              "Seid ihr pünktlich gefahren los?"
+            ],
+            "a": "Seid ihr pünktlich losgefahren?",
+            "why": "ihr + sein = seid · losgefahren آخراً."
+          },
+          {
+            "q": "«أحضِر الهدية معك!» (لصديق)",
+            "choices": [
+              "Bring das Geschenk mit!",
+              "Mitbring das Geschenk!",
+              "Bring mit das Geschenk!"
+            ],
+            "a": "Bring das Geschenk mit!",
+            "why": "الأمر: Bring أولاً وmit آخراً."
+          },
+          {
+            "q": "«سجّلت لينا نفسها في دورة»؟",
+            "choices": [
+              "Lena hat sich für einen Kurs angemeldet.",
+              "Lena hat für einen Kurs angemeldet.",
+              "Lena ist sich für einen Kurs angemeldet."
+            ],
+            "a": "Lena hat sich für einen Kurs angemeldet.",
+            "why": "sich للغائبة · haben لا sein."
+          },
+          {
+            "q": "«غداً ينتبه المعلم»؟",
+            "choices": [
+              "Morgen passt der Lehrer auf.",
+              "Morgen aufpasst der Lehrer.",
+              "Morgen passt auf der Lehrer."
+            ],
+            "a": "Morgen passt der Lehrer auf.",
+            "why": "المضارع: passt ثانياً وauf في آخر الجملة."
           }
         ],
         "passingScore": 0.75
@@ -209,53 +843,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Meine Reise: Ich habe den Koffer eingepackt und die Reise geplant. Wir sind um 8 Uhr losgefahren. Im Hotel: ich habe mich angemeldet. Am Sonntag bin ich zurückgekommen — und ich habe 200 Euro ausgegeben!",
-      "ar": "رحلتي: حزمتُ الحقيبة وخطّطتُ الرحلة. انطلقنا الساعة الثامنة. في الفندق: سجّلتُ نفسي. يوم الأحد عدتُ — وأنفقتُ 200 يورو!"
+      "de": "Mein erster Tag in der Schule: Der Bus ist um sieben Uhr losgefahren, und ich bin um acht Uhr angekommen. · Ich habe in der Schule gut aufgepasst. · Am Abend habe ich den Rucksack ausgepackt. · Ich habe Geschenke mitgebracht, und wir haben die Fotos angesehen. · Ich habe nur fünfzig Euro ausgegeben. · Mein Vater hat ein Auto gemietet, wir haben Ausflüge geplant. · Ich habe den Regenschirm mitgenommen. · Ich habe mich für einen Kurs angemeldet. · Mein Bruder ist am Sonntag zurückgekommen.",
+      "ar": "الفعل المنفصل في الماضي: الجزء + ge + الجذر كلمة واحدة في آخر الجملة (ein‑ge‑packt · aus‑ge‑packt · mit‑ge‑bracht · an‑ge‑sehen · aus‑ge‑geben · mit‑ge‑nommen · auf‑ge‑passt · an‑ge‑meldet) · الحركة بـsein كما في الوحدة 10 (ist losgefahren · bin angekommen · ist zurückgekommen) والمفعول بـhaben · sich anmelden بالضمير بعد habe (habe mich angemeldet · hat sich angemeldet) · غير المنفصل بـge في الأول (gemietet · geplant) · وفي المضارع والأمر يعود الجزء إلى الآخر (passt … auf · kommt … zurück · Bring … mit!) وبعد الناقص متصلاً (muss … aufpassen) · كلمات اليوم: losfahren (ist losgefahren) · zurückkommen (ist zurückgekommen) · mitbringen (hat mitgebracht) · ansehen (hat angesehen) · mitnehmen (hat mitgenommen) · ausgeben (hat ausgegeben) · einpacken (hat eingepackt) · auspacken (hat ausgepackt) · sich anmelden (hat sich angemeldet) · aufpassen (hat aufgepasst) · mieten (hat gemietet) · planen (hat geplant)"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich habe den Koffer geeinpackt~~ / ~~gepacktein~~ / ~~Ich habe eingepackt den Koffer~~",
-          "ar": "الفعل المنفصل في الماضي: البادئة + **ge** + الجذر: **ein-ge-packt** (ge في المنتصف!) — والمفعول بين المساعدين"
+          "de": "~~Ich habe den Koffer packt ein.~~ · ~~Ich habe den Koffer gepackt ein.~~ · ~~Ich habe eingepackt den Koffer.~~",
+          "ar": "الفعل المنفصل في الماضي: الجزء + ge + الجذر في كلمة واحدة آخر الجملة: ein‑ge‑packt · aus‑ge‑packt · mit‑ge‑bracht"
         },
-        "whyArabicSpeakerFails": "«حزمتُ» فعل واحد؛ الألماني ثلاثة أجزاء: habe + den Koffer + **eingepackt** (ein-ge-packt) — ge يدخل بين البادئة والجذر — لا «geeinpackt» أبداً (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«حزمتُ» كلمة واحدة بالعربية، وتعلّم المتعلم في الوحدة 10 أن الماضي يبدأ بـge (gemacht · gekauft) فيلصقها في أول الفعل المنفصل (~~geeinpackt~~) أو يفصل الجزء ثانية كالمضارع (~~gepackt ein~~). والألمانية تحشر ge بين الجزء والجذر: ein‑ge‑packt · aus‑ge‑packt · mit‑ge‑bracht · an‑ge‑sehen — كلمة واحدة في آخر الجملة، والمفعول قبلها: Ich habe den Koffer eingepackt. أمّا mieten وplanen فغير منفصلين → ge في الأول: gemietet · geplant — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich habe den Koffer eingepackt.",
-          "ar": "حزمتُ الحقيبة."
+          "de": "Ich habe den Koffer eingepackt. · Ich habe den Rucksack ausgepackt. · Ich habe Geschenke mitgebracht.",
+          "ar": "حزمتُ الحقيبة · فتحتُ حقيبة الظهر · أحضرتُ هدايا"
         },
         "exercise": {
-          "q": "كوّن الماضي: mitnehmen → mit-___-nommen",
-          "a": "mitgenommen"
+          "q": "Ich habe die Fotos ___. (ansehen — التصريف الثالث)",
+          "a": "angesehen"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich habe losgefahren~~ / ~~Ich bin eingepackt~~",
-          "ar": "قاعدة القرار مع البادئات: **losgefahren/zurückgekommen = ist** (حركة) · **eingepackt/mitgebracht = hat** (فعل في مكانه)"
+          "de": "~~Der Bus hat losgefahren.~~ · ~~Ich habe um acht Uhr angekommen.~~ · ~~Mein Bruder hat zurückgekommen.~~ · ~~Ich bin den Rucksack ausgepackt.~~",
+          "ar": "الحركة بـsein حتى مع الجزء المنفصل: ist losgefahren · bin angekommen · ist zurückgekommen — والمفعول بـhaben: habe … ausgepackt"
         },
-        "whyArabicSpeakerFails": "البادئة (los/zurück/mit) توحي بالحركة كلها؛ الألماني يفرّق: هل تغيّر المَكان فعلاً؟ = ist · هل فعلتُ شيئاً بيدي؟ = hat — البادئة لا تغيّر القاعدة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الماضي بالعربية بلا فعل مساعد، فيختار المتعلم haben للجميع (الوحدة 10) — أو يعمّم sein على كل فعل منفصل بعد أن رأى ist losgefahren. والقاعدة من الوحدة 10 لا تتغيّر بالجزء المنفصل: الحركة من مكان إلى مكان بـsein (ist losgefahren · bin angekommen · ist zurückgekommen كـist gefahren · ist gekommen)، وما له مفعول بـhaben (habe den Rucksack ausgepackt · habe Geschenke mitgebracht). السؤال: هل الفاعل انتقل؟ نعم → sein. هل هناك مفعول؟ نعم → haben — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Wir sind losgefahren. · Ich habe eingepackt.",
-          "ar": "انطلقنا. · حزمتُ."
+          "de": "Der Bus ist losgefahren. · Ich bin um acht Uhr angekommen. · Ich habe den Rucksack ausgepackt.",
+          "ar": "انطلقت الحافلة · وصلتُ الساعة الثامنة · فتحتُ حقيبة الظهر"
         },
         "exercise": {
-          "q": "أكمل: Ich ___ zurückgekommen · Ich ___ mitgenommen.",
-          "a": "bin / habe"
+          "q": "Wir ___ um zehn Uhr in Tunis angekommen. (sind/haben)",
+          "a": "sind"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich habe angemeldet~~ / ~~Ich habe mich angemeldet~~ (صحيح!) / ~~Ich habe mich anmeldet~~",
-          "ar": "sich anmelden = **انعكاسي + منفصل**: mich في المنتصف + angemeldet (an-ge-meldet)"
+          "de": "~~Ich habe angemeldet.~~ · ~~Ich habe für einen Kurs mich angemeldet.~~ · ~~Hast dich du angemeldet?~~",
+          "ar": "sich anmelden لا يستغني عن الضمير: Ich habe mich … angemeldet · Hast du dich …? — mich/dich مباشرة بعد habe أو بعد الفاعل"
         },
-        "whyArabicSpeakerFails": "«سجّلتُ نفسي» فعلان بالعربية؛ الألماني ثلاثة أجزاء: habe + **mich** + **angemeldet** — الانعكاسي (mich) يقعد بين المساعد والمفعول — الترتيب: habe … mich … angemeldet (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«سجّلتُ» بالعربية فعل تام لا يحتاج «نفسي»، فيسقط المتعلم mich (~~Ich habe angemeldet~~) أو يرميه في الآخر قبل الفعل. والألمانية تلتزم الضمير الانعكاسي (الوحدة 9: Ich wasche mich) وتضعه مباشرة بعد الفعل المساعد: Ich habe mich für einen Kurs angemeldet — وفي السؤال بعد الفاعل: Hast du dich angemeldet? · Lena hat sich angemeldet — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich habe mich angemeldet.",
-          "ar": "سجّلتُ نفسي."
+          "de": "Ich habe mich für einen Kurs angemeldet. · Hast du dich angemeldet? · Lena hat sich angemeldet.",
+          "ar": "سجّلتُ نفسي في دورة · هل سجّلتَ نفسك؟ · سجّلت لينا نفسها"
         },
         "exercise": {
-          "q": "أكمل: Er hat ___ (sich) angemeldet.",
-          "a": "sich"
+          "q": "Wir haben ___ für den Kurs angemeldet. (uns/sich/mich)",
+          "a": "uns"
         }
       }
     ],
@@ -305,7 +939,7 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 12 (Reise) — Im Perfekt erzählen (trennbare Verben)",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 12 (Reise) — Perfekt mit trennbaren Verben",
     "goetheWordListOverlap": []
   }
 }
