@@ -4,7 +4,7 @@
 
 ## 0. الحالة بالأرقام (مقيسة الآن)
 
-- 896 بطاقة كلمة · 2228 مساراً صوتياً · 56 ملف قاعدة · 65 حواراً · معجم النطق 90 · الملاحظات 120 = بانتظار المالك 0 · مفتوحة 47 · مغلقة 73.
+- 896 بطاقة كلمة · 2268 مساراً صوتياً · 56 ملف قاعدة · 67 حواراً · معجم النطق 91 · الملاحظات 120 = بانتظار المالك 0 · مفتوحة 47 · مغلقة 73.
 - البوابة: vitest · tsc · validate-content · build · تدقيق النطق — كلها خضراء عند الرفع (الأرقام في CHANGELOG الدفعة الأخيرة).
 
 ## 1. المراجعة الختامية على الستين (بلا تعديل إلا لخطأ صريح)
@@ -81,8 +81,8 @@
 | a1-u6-d6 | ✓ | ✓ | ✓ | 2 | 29 | 4 | 3×6 | es-gibt · wo-wohin · da-komposita | 0 | woche-sechs-ist-zu-ende |
 | a1-u7-d6 | ✓ | ✓ | ✓ | 2 | 30 | 4 | 3×6 | trennbare · praesens-unregelm · praesens-regelm | 0 | woche-sieben-ist-zu-ende |
 | a1-u8-d6 | ✓ | ✓ | ✓ | 9 | 30 | 4 | 3×6 | von-seit-bei · dativ-fix · koennen-muessen | 0 | woche-acht-ist-zu-ende |
-| a1-u9-d6 | ✓ | pending | pending | 2 | 6 | 1 | 3×4 | stadt-ort · weg-verkehr · imperativ-sie · wechselpraep · satzklammer · tekamolo | 0 | — |
-| a1-u10-d6 | ✓ | pending | pending | 2 | 6 | 1 | 3×4 | wetter-es · termin-datum · perfekt-haben · zeitangaben · weil-satz | 0 | — |
+| a1-u9-d6 | ✓ | ✓ | ✓ | 2 | 30 | 4 | 3×6 | stadt-ort · weg-verkehr · imperativ-sie · wechselpraep · satzklammer · tekamolo | 0 | woche-neun-ist-zu-ende |
+| a1-u10-d6 | ✓ | ✓ | ✓ | 2 | 30 | 4 | 3×6 | wetter-es · termin-datum · perfekt-haben · zeitangaben · weil-satz | 1 | woche-zehn-ist-zu-ende |
 | a1-u11-d6 | ✓ | pending | pending | 2 | 6 | 1 | 3×4 | koerper · gesundheit · perfekt · dativ-fix · modal-fix | 0 | — |
 | a1-u12-d6 | ✓ | pending | pending | 2 | 6 | 1 | 3×4 | satzklammer · perfekt · modal-fix · dativ-fix · weil-satz | 0 | — |
 | a1-u15-d1 | pending | pending | pending | 2 | 6 | 1 | 3×4 | satzklammer · perfekt | 0 | — |
@@ -92,7 +92,7 @@
 | a1-u15-d5 | ✓ | pending | pending | 2 | 6 | 1 | 3×4 | satzklammer · perfekt | 0 | — |
 | a1-u15-d6 | ✓ | pending | pending | 2 | 6 | 1 | 3×4 | satzklammer · perfekt | 0 | — |
 
-**الخلاصة:** مكتمل 68/78 · أقل عدد بنود 6 (a1-u1-d1 — درس اليوم الأول قصير بقرار D116) · كل درس ≥3 أنواع · كل Quiz 3 نسخ × ≥6 بنود.
+**الخلاصة:** مكتمل 70/78 · أقل عدد بنود 6 (a1-u1-d1 — درس اليوم الأول قصير بقرار D116) · كل درس ≥3 أنواع · كل Quiz 3 نسخ × ≥6 بنود.
 
 ### 1.2 `plan-status` — نواة SD1 (الإسناد + التغطية)
 
@@ -116,8 +116,8 @@
 
 ### 1.4 تسلسل التواريخ (N-096)
 
-- 65 حواراً؛ من u1 إلى u10-d2 أيام أسبوع بلا تاريخ؛ ثم تواريخ متصلة بلا فجوة:
-- wg الجمعة 3 أبريل → ew السبت 4 أبريل → wk الأحد 5 أبريل → kw الاثنين 6 أبريل → ka الثلاثاء 7 أبريل → kb الأربعاء 8 أبريل → kc الخميس 9 أبريل → kd الجمعة 10 أبريل → ke السبت 11 أبريل → kf الأحد 12 أبريل → kg الاثنين 13 أبريل → kh الثلاثاء 14 أبريل → ki الأربعاء 15 أبريل (kh = الثلاثاء 14 أبريل — عنوانه «خطة السبت»).
+- 67 حواراً؛ من u1 إلى u10-d2 أيام أسبوع بلا تاريخ؛ ثم تواريخ متصلة بلا فجوة:
+- wg الجمعة 3 أبريل → ew السبت 4 أبريل → wk الأحد 5 أبريل → zh الاثنين 6 أبريل → kw الاثنين 6 أبريل → ka الثلاثاء 7 أبريل → kb الأربعاء 8 أبريل → kc الخميس 9 أبريل → kd الجمعة 10 أبريل → ke السبت 11 أبريل → kf الأحد 12 أبريل → kg الاثنين 13 أبريل → kh الثلاثاء 14 أبريل → ki الأربعاء 15 أبريل (kh = الثلاثاء 14 أبريل — عنوانه «خطة السبت»).
 - **N-119 نُفّذت (أ):** kg-17 «Am Samstag fahre ich mit dem Zug in die Schweiz. Um sechs Uhr bin ich bei dir.» · ki-6 «Am Samstag bist du hier — dann fahren wir an einen See.» — مساران أُعيدا فقط؛ kh متسق (الحفل عند لينا ويوسف حاضر).
 
 ## 2. الملاحظات المفتوحة (47) — رقمها · عنوانها · ما أوصي به الآن

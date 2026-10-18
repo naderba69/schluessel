@@ -1505,7 +1505,8 @@ describe("D115 — أدوات القياس", () => {
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق: لا مدخل جديد — regnet (المدخل القائم) يمسّ أربعة أسطر جديدة (wt-4 · wt-5 · wt-11 · wt-15) سُجّلت (N-099)
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
-    expect(lex.entries.find((x) => x.word === "regnet")?.regeneratedTracks).toEqual(["tm-2", "tr-3", "km-11", "fh-14", "vb-19", "wt-4", "wt-5", "wt-11", "wt-15", "wg-13", "kh-7", "wd-12", "wd-13"]); // wg-13 من D168 · kh-7 من D179 · wd-12/13 من D195 (a1-u3-d6)
+    // D199: القائمة الكاملة تتغيّر مع كل حوار جديد يذكر المطر (المزامنة آلية منذ D197 وتُفحص في البوابة) — الثابت هنا: أسطر u10-d1 الأربعة مسجَّلة
+    expect(lex.entries.find((x) => x.word === "regnet")?.regeneratedTracks).toEqual(expect.arrayContaining(["wt-4", "wt-5", "wt-11", "wt-15"]));
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
     expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
@@ -5146,7 +5147,7 @@ describe("D115 — الخطة الحقيقية", () => {
     expect(content).toHaveLength(60);
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
-    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6"]);
+    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6"].sort());
   });
   it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
@@ -5263,5 +5264,28 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     for (const c of ["blau", "rot", "grün", "gelb", "schwarz", "weiß", "braun"]) expect(txt, c).toContain(c);
     // لا تقليب في «Der Kaffee ist …» — كان مقطعاً من جملتين A2 رسميتين
     expect(txt).not.toContain('"Der Kaffee ist ___');
+  });
+  it("a1-u9-d6 «Woche neun ist zu Ende!» — ستّ قواعد الوحدة · 30 بنداً · nz-1..20 يوسف في تونس: المدينة والطريق والحافلة", () => {
+    const { l } = check("a1-u9-d6", 6);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-stadt-ort", "ars-weg-verkehr", "ars-imperativ-sie", "ars-wechselpraep", "ars-satzklammer", "ars-tekamolo"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^nz-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["gegenüber der Post", "steige ich aus", "Biegen Sie links ab!", "über die Brücke", "um zehn zu Fuß ans Ufer"]) expect(txt, f).toContain(f);
+    // «Können Sie mir helfen?» عبارة SD1 ثابتة — معلنة في fixedPhrases لا ملويّة
+    expect(plan.lessons.find((e) => e.lessonId === "a1-u9-d6")!.fixedPhrases?.map((f) => f.de)).toEqual(["Können Sie mir helfen?"]);
+  });
+  it("a1-u10-d6 «Woche zehn ist zu Ende!» — خمس قواعد الوحدة · 30 بنداً · zh-1..20 الاثنين 6 أبريل (بين u10-d5 وu11-d1) · sechste في معجم النطق", () => {
+    const { l } = check("a1-u10-d6", 5);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-wetter-es", "ars-termin-datum", "ars-perfekt-haben", "ars-zeitangaben", "ars-weil-satz"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^zh-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["der sechste April", "am siebzehnten April", "am achtzehnten April", "weil ich müde bin", "deshalb lerne ich"]) expect(txt, f).toContain(f);
+    // مشتّتات Quiz كلمات حقيقية (N-103): لا geesst/getelefoniert/geaufschrieben — الخطأ المقصود الوحيد gebesucht معلن ومشطوب
+    for (const fake of ["geesst", "getelefoniert", "geaufschrieben", "gelernen"]) expect(txt).not.toContain(fake);
+    expect(plan.lessons.find((e) => e.lessonId === "a1-u10-d6")!.misspellings?.map((m) => m.wrong)).toEqual(["gebesucht"]);
   });
 });

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d6-woche-neun-ist-zu-ende",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Woche neun ist zu Ende! — Yusuf in Tunis: Stadt, Weg und Verkehr",
+    "ar": "الأسبوع التاسع انتهى! — لينا تسأل يوسف في تونس (اليوم الثاني): gegenüber der Post · auf/zu · einsteigen/aussteigen/umsteigen · kommt … an · لعب أدوار بـSie (Gehen Sie · biegen Sie ab · steigen Sie aus) · über die Brücke (wohin) · am Ufer/ans Ufer · ترتيب wann/wie/wohin"
+  },
+  "usedIn": [
+    "a1-u9-d6"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "nz-1",
+      "speaker": "lena",
+      "text": "Hallo, Yusuf! Woche neun ist zu Ende. Bist du zu Hause in Tunis?",
+      "direction": "لينا تفتح — يوسف في تونس (u9-d4/d5)"
+    },
+    {
+      "id": "nz-2",
+      "speaker": "yusuf",
+      "text": "Ja, seit einer Stunde. Der Bus im Stau — du weißt es!",
+      "direction": "يوسف — seit einer Stunde · الازدحام (u9-d5)"
+    },
+    {
+      "id": "nz-3",
+      "speaker": "lena",
+      "text": "Frage eins: Wo ist das Haus von deiner Familie?",
+      "direction": "لينا — السؤال الأول: المكان"
+    },
+    {
+      "id": "nz-4",
+      "speaker": "yusuf",
+      "text": "Im Zentrum, gegenüber der Post — nicht «gegenüber die Post»! Und in der Nähe vom Park.",
+      "direction": "يوسف — gegenüber der Post (u9-d1) · in der Nähe vom Park (u9-d4)"
+    },
+    {
+      "id": "nz-5",
+      "speaker": "lena",
+      "text": "Gegenüber der Post — der, nicht die! Und die Apotheke? Ist sie heute auf?",
+      "direction": "لينا — gegenüber + der (بطاقة u9-d1) · auf/zu (u9-d4)"
+    },
+    {
+      "id": "nz-6",
+      "speaker": "yusuf",
+      "text": "Nein, die Apotheke gegenüber ist heute zu. Aber die Bank an der Ecke ist bis vier Uhr auf.",
+      "direction": "يوسف — zu/auf · an der Ecke · bis vier Uhr (u9-d4)"
+    },
+    {
+      "id": "nz-7",
+      "speaker": "lena",
+      "text": "Frage zwei: Wie fährst du in die Stadt? Steigst du um?",
+      "direction": "لينا — السؤال الثاني: umsteigen (u9-d2)"
+    },
+    {
+      "id": "nz-8",
+      "speaker": "yusuf",
+      "text": "Ich steige vor dem Haus ein. Am Bahnhof steige ich aus — ich muss nicht umsteigen.",
+      "direction": "يوسف — einsteigen · aussteigen · muss nicht umsteigen (u9-d5)"
+    },
+    {
+      "id": "nz-9",
+      "speaker": "lena",
+      "text": "Ich steige ein, ich steige aus — und du steigst nicht um. Das kleine Wort am Ende!",
+      "direction": "لينا — البادئة في الآخر (بطاقة u9-d2)"
+    },
+    {
+      "id": "nz-10",
+      "speaker": "yusuf",
+      "text": "Genau. Der Bus kommt um neun an — aber heute nicht pünktlich! Stau an der Kreuzung vor der Brücke.",
+      "direction": "يوسف — kommt … an · pünktlich · Kreuzung vor der Brücke (u9-d5)"
+    },
+    {
+      "id": "nz-11",
+      "speaker": "lena",
+      "text": "Frage drei — mit Sie. Ich bin jetzt in Tunis: Entschuldigung, können Sie mir helfen? Ich suche den Bahnhof.",
+      "direction": "لينا — السؤال الثالث: لعب أدوار بـSie (u9-d3)"
+    },
+    {
+      "id": "nz-12",
+      "speaker": "yusuf",
+      "text": "Gerne! Gehen Sie zuerst über die Brücke, danach geradeaus. Am Platz biegen Sie links ab — der Bahnhof ist gegenüber dem Museum.",
+      "direction": "يوسف — Gehen Sie · biegen Sie ab · gegenüber dem Museum"
+    },
+    {
+      "id": "nz-13",
+      "speaker": "lena",
+      "text": "Über die Brücke: Wohin? — die Brücke! Ist das weit?",
+      "direction": "لينا — über die Brücke: Wohin (u9-d4)"
+    },
+    {
+      "id": "nz-14",
+      "speaker": "yusuf",
+      "text": "Nein, nicht weit — zehn Minuten zu Fuß. Oder nehmen Sie den Bus und steigen Sie am Bahnhof aus!",
+      "direction": "يوسف — nehmen Sie · steigen Sie aus (u9-d3)"
+    },
+    {
+      "id": "nz-15",
+      "speaker": "lena",
+      "text": "Danke für die Hilfe! Jetzt du: Wo sitzt ihr am Abend? Und wohin geht ihr morgen?",
+      "direction": "لينا — Danke für die Hilfe · wo/wohin"
+    },
+    {
+      "id": "nz-16",
+      "speaker": "yusuf",
+      "text": "Am Abend sitzen wir am Ufer. Und morgen gehen wir um zehn zu Fuß ans Ufer.",
+      "direction": "يوسف — am Ufer (wo) · ans Ufer (wohin) · ترتيب wann/wie/wohin (u9-d5)"
+    },
+    {
+      "id": "nz-17",
+      "speaker": "lena",
+      "text": "Am Ufer — wo? Ans Ufer — wohin? Und: morgen, um zehn, zu Fuß, ans Ufer — wann, wie, wohin!",
+      "direction": "لينا — الخلاصة: wo/wohin · wann wie wohin"
+    },
+    {
+      "id": "nz-18",
+      "speaker": "yusuf",
+      "text": "Und du? Fährst du morgen um sieben mit dem Zug zur Schule?",
+      "direction": "يوسف — جملة لينا الثابتة (u9-d5)"
+    },
+    {
+      "id": "nz-19",
+      "speaker": "lena",
+      "text": "Ja, jeden Tag um sieben mit dem Zug zur Schule. Und wann kommst du nach Berlin zurück?",
+      "direction": "لينا — jeden Tag um sieben mit dem Zug zur Schule · zurück"
+    },
+    {
+      "id": "nz-20",
+      "speaker": "yusuf",
+      "text": "In zwei Wochen fliege ich zurück — nicht mit dem Bus! Woche neun ist zu Ende. Bis morgen, Lena!",
+      "direction": "يوسف يختم — fliege … zurück · ختام الأسبوع"
+    }
+  ]
+}

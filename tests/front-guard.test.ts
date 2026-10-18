@@ -119,7 +119,8 @@ describe("D188 — الصيغ الثابتة المعلنة من SD1 (fixedPhras
     console.log("fixedPhrases:", JSON.stringify(all));
     for (const e of loadUpgradePlans(CONTENT)[0]!.lessons) expect(e.fixedPhrases.length, e.lessonId).toBeLessThanOrEqual(2);
     // D195: أول إعلان — سؤال الساعة الثابت في توليف u3 (هدف u3-d3 نفسه)؛ كل إضافة هنا قرار موثَّق لا تسريب صامت
-    expect(all).toEqual([["a1-u3-d6", "Wie spät ist es?"]]);
+    // D199: طلب المساعدة الثابت بـSie في لعب أدوار توليف u9 (هدف u9-d3) · «أنا في البيت» في جملة weil بتوليف u10 (u10-d5) — لا بديل طبيعي لهما
+    expect(all).toEqual([["a1-u3-d6", "Wie spät ist es?"], ["a1-u9-d6", "Können Sie mir helfen?"], ["a1-u10-d6", "Ich bin zu Hause."]]);
   });
   it("check-lesson.ts يستعمل المجموعة نفسها (withLaterForms + المستعارات): u8-d2 front 0 · later 0 — لا منطق ثانٍ", () => {
     const out = execFileSync("npx", ["tsx", "tools/dev/check-lesson.ts", "a1-u8-d2", "--json"], { cwd: join(__dirname, ".."), encoding: "utf8", timeout: 120_000 });
