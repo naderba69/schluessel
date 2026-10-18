@@ -3,6 +3,7 @@
 import type { Lesson, Word } from "../../content/schemas/index.js";
 import type { GrammarRule } from "./grammar-discovery.js";
 import { pronunciationHint } from "./phonetic-risks.js";
+import { goetheTagLabel } from "./goethe-tag.js";
 
 /** بطاقة المصيدة — من مخطط الدرس مباشرة (لا نكرر التعريف) */
 export type WarningCardData = Lesson["zusammenfassung"]["warningCards"][number];
@@ -91,7 +92,9 @@ function explainWord(w: Word, known: ReadonlyMap<string, Word>): string {
   const sentence = w.sampleSentence ? ` مثال: «${w.sampleSentence.de}» = ${w.sampleSentence.ar}` : "";
   const hint = pronunciationHint(w.phoneticRisks); // D191: أعلام النطق تصل إلى الشاشة (القانون 12)
   const pron = hint ? ` انتبه للنطق: ${hint}.` : "";
-  return `${fullForm(w)}${gender} = ${w.ar.join("، ")}${family}.${sentence}${pron}`;
+  const tag = goetheTagLabel(w); // D192 (N-045): وسم «خارج A1» مشتق من goetheList يصل إلى الشاشة
+  const scope = tag ? ` [${tag}]` : "";
+  return `${fullForm(w)}${gender} = ${w.ar.join("، ")}${family}.${sentence}${pron}${scope}`;
 }
 
 /**

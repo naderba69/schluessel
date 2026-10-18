@@ -319,3 +319,32 @@ describe("D191 (N-002) — ثلاثة أعلام نطق جديدة في القا
     expect(pronunciationHint(["w-v", "ng-velar"])).toContain("ڤ");
   });
 });
+
+describe("D192 (N-045) — وسم «خارج A1» مشتق من goetheList ويصل إلى بطاقة العرض", () => {
+  it("التصنيف: A1 · A2-only · outside — والنص فارغ للكلمات من قائمة A1 ولغير مستوى A1", async () => {
+    const { goetheTag, goetheTagLabel } = await import("../src/lib/goethe-tag.js");
+    expect(goetheTag({ goetheList: ["A1", "A2"] })).toBe("A1");
+    expect(goetheTag({ goetheList: ["A2"] })).toBe("A2-only");
+    expect(goetheTag({ goetheList: [] })).toBe("outside");
+    expect(goetheTagLabel({ goetheList: ["A1"], level: "A1" })).toBe("");
+    expect(goetheTagLabel({ goetheList: [], level: "A2" })).toBe("");
+    expect(goetheTagLabel({ goetheList: ["A2"], level: "A1" })).toContain("A2");
+    expect(goetheTagLabel({ goetheList: [], level: "A1" })).toContain("خارج قائمتي");
+  });
+  it("المحتوى الحقيقي: كل كلمة A1 خارج القائمة الرسمية تحمل الوسم في شرح بطاقتها — والمعدود معلن (لا وسم صامت)", async () => {
+    const { planLessonStations } = await import("../src/lib/lesson-runner.js");
+    const { goetheTag } = await import("../src/lib/goethe-tag.js");
+    const a1 = ALL_WORDS.filter((w) => w.level === "A1");
+    const outside = a1.filter((w) => goetheTag(w) !== "A1");
+    // 2026-10-18 (D192): 883 كلمة بمستوى A1 — 254 منها خارج قائمة A1 الرسمية (124 من قائمة A2 وحدها · 130 خارج القائمتين) = 28.8%؛ السقف 30% حارس لا هدف.
+    expect(outside.length / a1.length).toBeLessThan(0.3);
+    for (const l of ALL_LESSONS.filter((x) => x.level === "A1")) {
+      const words = ALL_WORDS.filter((w) => l.praesentation.wordIds.includes(w.id) || l.warmup.cardIds.includes(w.id) || l.zusammenfassung.srsBundleWordIds.includes(w.id));
+      const plan = planLessonStations(l, words);
+      for (const c of plan.learn) {
+        const w = ALL_WORDS.find((x) => x.id === c.wordId)!;
+        expect(c.explanation.includes("خارج قائم"), `${l.id}/${w.id}`).toBe(goetheTag(w) !== "A1");
+      }
+    }
+  });
+});
