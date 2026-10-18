@@ -1437,11 +1437,12 @@ describe("D115 — أدوات القياس", () => {
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([60, 4, 6, 12]);
+    // D190 (N-107 — قرار المالك D182): الفصول الأربعة أُسندت إلى هذا الدرس (+4 كلمات · +4 فراغات · +4 إملاء) — 60/12 في D166
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([68, 4, 6, 16]);
     // الكلمات الاثنتا عشرة كما في الخطة (بلا إسناد نواة — u10-d1 ليس في خطة SD1) — sonne وحدها تكرار مقصود من u3-d4 (كانت كذلك قبل الترقية)
     const earlier = new Set(realLessons.filter((x) => x.unit <= 9).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual(["sonne"]);
-    expect(l.praesentation.wordIds).toEqual(["wetter", "sonne", "regen", "schnee", "wind", "wolke", "himmel", "grad", "warm", "kalt", "nass", "sonnig"]);
+    expect(l.praesentation.wordIds).toEqual(["wetter", "sonne", "regen", "schnee", "wind", "wolke", "himmel", "grad", "warm", "kalt", "nass", "sonnig", "winter", "sommer", "fruehling", "herbst"]);
     // قاعدة اليوم جديدة: ars-wetter-es (تشاركها u10-d6)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-wetter-es"]);
     const we = rules.get("ars-wetter-es")!;
@@ -1458,14 +1459,14 @@ describe("D115 — أدوات القياس", () => {
     expect(we.payload.properNouns).toEqual(["Tunis"]);
     // النطاق في نصوص المتعلم الألمانية: لا schneit/Winter/Sommer/stark/blau (كانت في الملف القديم) ولا Perfekt/war ولا «Es ist regnet»
     const shown = JSON.stringify({ e: l.einstieg.pretestItems.map((p) => p.answer), s: l.uebung.stations.map((st) => st.items.map((i) => ({ ...i, why: "", choices: undefined, audioId: undefined }))), q: l.quiz.variants.map((v) => v.items.map((i) => ({ ...i, why: "", choices: undefined }))), z: l.zusammenfassung.summary.de, w: l.zusammenfassung.warningCards.map((c) => [c.correct.de, c.exercise.a]), g: l.ziel.de, t: [l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de] });
-    expect(shown).not.toMatch(/\b(schneit|schneien|Winter|Sommer|stark|blau|war|geregnet|Es ist regnet|Grade)\b/i);
+    expect(shown).not.toMatch(/\b(schneit|schneien|stark|blau|war|geregnet|Es ist regnet|Grade)\b/i); // Winter/Sommer كلمتا الدرس منذ D190 (N-107)
     expect(e.properNouns).toEqual(["Yusuf", "Lena", "Berlin", "Tunis"]);
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
     // أربعة أمثلة كلمات صُحّحت (كانت بـschneit/Winter · stark · blau · Winter — غير مدروسة) — بكلمات الدرس نفسه
     const w = (id: string) => words.find((x) => x.id === id)!;
     const sample = (id: string) => w(id).sampleSentence!.de;
     expect([sample("schnee"), sample("wind"), sample("himmel"), sample("kalt")]).toEqual(["Am Morgen ist hier Schnee.", "Der Wind ist heute kalt.", "Am Himmel sind keine Wolken.", "Heute ist es kalt."]);
-    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|schneit|Winter|stark|blau/);
+    expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|schneit|stark|blau/); // Winter صار كلمة الدرس (D190)
     for (const id of ["schnee", "wind", "himmel", "kalt"]) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u10-d1");
     expect(w("sonne").sampleSentence?.sourceLesson).toBe("a1-u3-d4");
     // الحوار (wt-1..20) مكالمة فيديو صباحية في اليوم الثالث بتونس (N-037/N-100): شمس عند يوسف ومطر وثلج عند لينا — لا لقاء في مكان واحد
@@ -1493,7 +1494,7 @@ describe("D115 — أدوات القياس", () => {
     expect(new Set(audioIds).size).toBe(audioIds.length);
     expect(audioIds.filter((id) => id.startsWith("wt-")).sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))))
       .toEqual(Array.from({ length: 20 }, (_, i) => `wt-${i + 1}`));
-    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-grad", "word-himmel", "word-kalt", "word-nass", "word-regen", "word-schnee", "word-sonnig", "word-warm", "word-wetter", "word-wind", "word-wolke"]);
+    expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-fruehling", "word-grad", "word-herbst", "word-himmel", "word-kalt", "word-nass", "word-regen", "word-schnee", "word-sommer", "word-sonnig", "word-warm", "word-wetter", "word-wind", "word-winter", "word-wolke"]); // +الفصول الأربعة (D190)
     expect(audioIds.every((id) => tracks.has(id))).toBe(true);
     const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; textDe: string; voiceParams: { speedWpm: number } }[] };
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));

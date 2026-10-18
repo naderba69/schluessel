@@ -1116,6 +1116,17 @@ def build_all() -> None:
     ("word-glauben", "glauben.", "glauben", ["a1-u12-d4"]),
     ("word-thema", "das Thema.", "thema", ["a1-u12-d5"]),
     ("word-gut", "gut.", "gut", ["a1-u1-d1"]),
+    ("word-winter", "der Winter.", "winter", ["a1-u10-d1"]),
+    ("word-sommer", "der Sommer.", "sommer", ["a1-u10-d1"]),
+    ("word-fruehling", "der Frühling.", "fruehling", ["a1-u10-d1"]),
+    ("word-herbst", "der Herbst.", "herbst", ["a1-u10-d1"]),
+    ("word-blau", "blau.", "blau", ["a1-u8-d6"]),
+    ("word-rot", "rot.", "rot", ["a1-u8-d6"]),
+    ("word-gruen", "grün.", "gruen", ["a1-u8-d6"]),
+    ("word-gelb", "gelb.", "gelb", ["a1-u8-d6"]),
+    ("word-schwarz", "schwarz.", "schwarz", ["a1-u8-d6"]),
+    ("word-weiss", "weiß.", "weiss", ["a1-u8-d6"]),
+    ("word-braun", "braun.", "braun", ["a1-u8-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

@@ -6,8 +6,8 @@
   "day": 1,
   "kind": "content",
   "ziel": {
-    "de": "Wie ist das Wetter? — Es regnet. · Es ist kalt. · Die Sonne scheint. · Es sind zwanzig Grad. — Jetzt regnet es. · Hier ist es warm.",
-    "ar": "تصف الطقس بجملة es الشكلي الصحيحة: es + فعل الطقس (Es regnet.) أو es ist + صفة (Es ist kalt · warm · heiß · nass · sonnig) أو es sind + الدرجات (Es sind zwanzig Grad.) — وes لا يسقط إذا تقدّم الزمن أو المكان (Jetzt regnet es. · Hier ist es warm.) — وما له فاعل حقيقي فبلا es (Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken.) — ومعها كلمات الطقس: das Wetter · die Sonne · der Regen · der Schnee · der Wind · die Wolke · der Himmel · der Grad · warm · kalt · nass · sonnig."
+    "de": "Wie ist das Wetter? — Es regnet. · Es ist kalt. · Die Sonne scheint. · Es sind zwanzig Grad. — Jetzt regnet es. · Hier ist es warm. · Im Winter ist es kalt.",
+    "ar": "تصف الطقس بجملة es الشكلي الصحيحة: es + فعل الطقس (Es regnet.) أو es ist + صفة (Es ist kalt · warm · heiß · nass · sonnig) أو es sind + الدرجات (Es sind zwanzig Grad.) — وes لا يسقط إذا تقدّم الزمن أو المكان (Jetzt regnet es. · Hier ist es warm.) — وما له فاعل حقيقي فبلا es (Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken.) — ومعها كلمات الطقس: das Wetter · die Sonne · der Regen · der Schnee · der Wind · die Wolke · der Himmel · der Grad · warm · kalt · nass · sonnig. — والفصول الأربعة (SD1): der Winter · der Sommer · der Frühling · der Herbst — «Im Winter ist es kalt.»"
   },
   "canDoDaily": [
     "يسأل عن الطقس ويجيب بثلاثة أشكال: Wie ist das Wetter heute? — Es regnet. · Es ist kalt. · Es sind zwanzig Grad. — وبالفاعل الحقيقي: Die Sonne scheint. · Der Wind ist heute kalt.",
@@ -50,7 +50,11 @@
       "warm",
       "kalt",
       "nass",
-      "sonnig"
+      "sonnig",
+      "winter",
+      "sommer",
+      "fruehling",
+      "herbst"
     ],
     "grammarArsenalIds": [
       "ars-wetter-es"
@@ -186,6 +190,26 @@
             "q": "Morgen ___ es sonnig. (sein — الزمن أولاً)",
             "a": "ist",
             "why": "Morgen أولاً ← ist ثانياً ← es ← sonnig — الشكل الثاني مع تقديم الزمن."
+          },
+          {
+            "q": "Im ___ ist es kalt. Es gibt Schnee. (الشتاء)",
+            "a": "Winter",
+            "why": "der Winter = الشتاء — im Winter (in + dem) للزمن: «في الشتاء». الجو بارد والثلج موجود."
+          },
+          {
+            "q": "Im ___ ist es heiß. (الصيف)",
+            "a": "Sommer",
+            "why": "der Sommer = الصيف — im Sommer «في الصيف»: الجو حارّ (heiß)."
+          },
+          {
+            "q": "Im ___ scheint die Sonne. (الربيع)",
+            "a": "Frühling",
+            "why": "der Frühling = الربيع — im Frühling «في الربيع»: الشمس تسطع (scheint)."
+          },
+          {
+            "q": "Im ___ ist es nass und kalt. (الخريف)",
+            "a": "Herbst",
+            "why": "der Herbst = الخريف — im Herbst «في الخريف»: مطر وبرد (nass und kalt)."
           }
         ],
         "interleavedWith": [
@@ -576,6 +600,30 @@
             "speakText": "sonnig.",
             "a": "sonnig.",
             "why": "sonnig: nn مضاعفة (o قصيرة) · ‑ig في الآخر تُنطق ‑ich."
+          },
+          {
+            "audioId": "word-winter",
+            "speakText": "der Winter.",
+            "a": "der Winter.",
+            "why": "Winter: W تُنطق [v] · i قصيرة قبل nt · ‑er في الآخر [ɐ] خفيفة."
+          },
+          {
+            "audioId": "word-sommer",
+            "speakText": "der Sommer.",
+            "a": "der Sommer.",
+            "why": "Sommer: mm مضاعفة (o قصيرة) · S في الأول [z]."
+          },
+          {
+            "audioId": "word-fruehling",
+            "speakText": "der Frühling.",
+            "a": "der Frühling.",
+            "why": "Frühling: ü طويلة [yː] — ليست u ولا i · ‑ling آخره [ŋ]."
+          },
+          {
+            "audioId": "word-herbst",
+            "speakText": "der Herbst.",
+            "a": "der Herbst.",
+            "why": "Herbst: b قبل st تُنطق [p] (إجهار النهاية) · r قبل b مصوَّتة خفيفة."
           }
         ],
         "interleavedWith": [
@@ -812,8 +860,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Wie ist das Wetter? — Es regnet. · Es ist kalt. · Es ist warm. · Es ist heiß. · Heute ist es sonnig. — Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. · Morgen regnet es nicht. — Wie viel Grad sind es? — Es sind zwanzig Grad. — Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. · Die Straße ist nass. · Am Morgen ist hier Schnee.",
-      "ar": "جملة الطقس بأربع خطوات: (1) السؤال: Wie ist das Wetter? — والجواب يبدأ بـes الشكلي لأن الألمانية لا تعرف جملة بلا فاعل. (2) شكلان: es + فعل الطقس (Es regnet.) أو es ist + صفة (Es ist kalt · warm · heiß · sonnig · nass) — لا الاثنان معاً. (3) es لا يسقط: إذا تقدّم الزمن أو المكان جاء الفعل ثانياً وes بعده (Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. · Morgen regnet es nicht.) وفي السؤال: Regnet es? (4) الدرجات بالجمع: Wie viel Grad sind es? — Es sind zwanzig Grad. (Grad بلا ‑e بعد العدد) — وما له فاعل حقيقي فبلا es: Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. · Die Straße ist nass. الكلمات: das Wetter · die Sonne (‑n) · der Regen · der Schnee · der Wind (‑e) · die Wolke (‑n) · der Himmel · der Grad · warm · kalt · nass · sonnig."
+      "de": "Wie ist das Wetter? — Es regnet. · Es ist kalt. · Es ist warm. · Es ist heiß. · Heute ist es sonnig. — Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. · Morgen regnet es nicht. — Wie viel Grad sind es? — Es sind zwanzig Grad. — Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. · Die Straße ist nass. · Am Morgen ist hier Schnee. — Im Winter ist es kalt. · Im Sommer ist es heiß.",
+      "ar": "جملة الطقس بأربع خطوات: (1) السؤال: Wie ist das Wetter? — والجواب يبدأ بـes الشكلي لأن الألمانية لا تعرف جملة بلا فاعل. (2) شكلان: es + فعل الطقس (Es regnet.) أو es ist + صفة (Es ist kalt · warm · heiß · sonnig · nass) — لا الاثنان معاً. (3) es لا يسقط: إذا تقدّم الزمن أو المكان جاء الفعل ثانياً وes بعده (Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. · Morgen regnet es nicht.) وفي السؤال: Regnet es? (4) الدرجات بالجمع: Wie viel Grad sind es? — Es sind zwanzig Grad. (Grad بلا ‑e بعد العدد) — وما له فاعل حقيقي فبلا es: Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. · Die Straße ist nass. الكلمات: das Wetter · die Sonne (‑n) · der Regen · der Schnee · der Wind (‑e) · die Wolke (‑n) · der Himmel · der Grad · warm · kalt · nass · sonnig. — والفصول: im Winter · im Sommer · im Frühling · im Herbst (in + dem = im): «Im Winter ist es kalt.»"
     },
     "warningCards": [
       {
@@ -874,7 +922,11 @@
       "warm",
       "kalt",
       "nass",
-      "sonnig"
+      "sonnig",
+      "winter",
+      "sommer",
+      "fruehling",
+      "herbst"
     ]
   },
   "gReferences": {
@@ -913,7 +965,11 @@
     "word-warm",
     "word-kalt",
     "word-nass",
-    "word-sonnig"
+    "word-sonnig",
+    "word-winter",
+    "word-sommer",
+    "word-fruehling",
+    "word-herbst"
   ],
   "imageManifestRefs": [
     "img-sonne"
@@ -932,7 +988,11 @@
       "warm",
       "kalt",
       "nass",
-      "sonnig"
+      "sonnig",
+      "winter",
+      "sommer",
+      "fruehling",
+      "herbst"
     ]
   }
 }

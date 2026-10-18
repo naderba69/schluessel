@@ -39,7 +39,14 @@
   "praesentation": {
     "wordIds": [
       "passen",
-      "kunde"
+      "kunde",
+      "blau",
+      "rot",
+      "gruen",
+      "gelb",
+      "schwarz",
+      "weiss",
+      "braun"
     ],
     "grammarArsenalIds": [
       "ars-von-seit-bei",
@@ -64,11 +71,23 @@
           {
             "q": "«الزبون يدفع عند الشباك»؟",
             "a": "Der Kunde zahlt am Schalter."
+          },
+          {
+            "q": "«السترة زرقاء والحذاء أسود»؟",
+            "a": "Die Jacke ist blau und die Schuhe sind schwarz."
+          },
+          {
+            "q": "«القميص أبيض والحزام بنّي»؟",
+            "a": "Das Hemd ist weiß und der Gürtel ist braun."
           }
         ],
         "interleavedWith": [
           "passen",
-          "kunde"
+          "kunde",
+          "jacke",
+          "schuh",
+          "hemd",
+          "guertel"
         ],
         "explanationRequired": true
       },
@@ -250,7 +269,14 @@
     ],
     "srsBundleWordIds": [
       "passen",
-      "kunde"
+      "kunde",
+      "blau",
+      "rot",
+      "gruen",
+      "gelb",
+      "schwarz",
+      "weiss",
+      "braun"
     ]
   },
   "gReferences": {
@@ -271,14 +297,28 @@
   ],
   "audioManifestRefs": [
     "word-passen",
-    "word-kunde"
+    "word-kunde",
+    "word-blau",
+    "word-rot",
+    "word-gruen",
+    "word-gelb",
+    "word-schwarz",
+    "word-weiss",
+    "word-braun"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Wiederholung & Test",
     "goetheWordListOverlap": [
       "passen",
-      "kunde"
+      "kunde",
+      "blau",
+      "rot",
+      "gruen",
+      "gelb",
+      "schwarz",
+      "weiss",
+      "braun"
     ]
   }
 }
