@@ -1,5 +1,13 @@
 # CHANGELOG.md
 
+## 2026-10-18 — الدفعة 132: a1-u12-d2 مُرقّى — Am Bahnhof und im Hotel · Wieder in Berlin (D177) · نواة der Blick · das Internet · die Information · ars-trennbare + ars-modal-fix بدل ars-trennbar بلا ملف · N-118 تصحيح عدّ النواة
+- **إضافة:** ثلاث كلمات نواة بالمولِّد (`specs177.json` — blick · internet · information؛ Internet/Information في قائمتي SD1 وA2) · حوار `a1-u12-d2-wieder-in-berlin` (kf-1..20 · مكالمة الأحد 12 أبريل — يوم العودة إلى برلين) · `usedInLessons` لـars-trennbare += a1-u12-d2 · خطة SD1 u12-d2 done.
+- **تحسين المحتوى:** 67 بنداً/4 أنواع (فراغ 30 · استماع 15 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (~~Der Zug ist Verspätung~~/~~Ich bin den Zug verpasst~~ · ~~Zurückgeben Sie den Schlüssel!~~/~~muss … geben zurück~~ · ~~der Bad~~/~~Blick auf dem Park~~) · مثالا gleis (كان بـwelchem) وrezeption (كان بـErdgeschoss) مصحّحان · مقطع word-information أُعيد (1500 ⇒ 1407ms).
+- **ما خرج:** مرجع `ars-trennbar` (بلا ملف) · 6 بنود choice بلا خيارات · welchem من الهدف والمهمة والمصائد · مفتاح «a» الغريب في المهمة القديمة.
+- **تصحيح (N-118):** عدّ النواة في الوثائق كان يزيد واحداً منذ D168 — الصحيح الآن **46/48** (من الملف؛ اختبار curriculum-plan يثبّته).
+- **اختبارات:** كتلة D177 (+1 — تثبّت العدد الكلي للمانيفست 1992؛ كتلة D176 صارت تثبّت ke-1..20 فقط) · المثال غير المُرقّى ← a1-u12-d3 بفجواته المقيسة · curriculum-plan (u12-d2 done 15 كلمة · 46 done · التالي pending a1-u12-d4 · اختبارات التوليف/الشبح/الحمل تنقل إسناد u12-d4) · 880 كلمة · 710/710 · validator 1123/0/0.
+- **الوثائق:** +N-118 · حُدّثت N-096 · N-099 · N-103 · N-104 (الحادث الثالث) · N-110 · N-113 · N-117 · الموجّه 3.34.
+
 ## 2026-10-18 — الدفعة 131: a1-u12-d1 مُرقّى — Das Reiseziel · Mein letzter Tag in Tunis (D176) · مراجعة ars-trennbare + ars-wechselpraep بدل مرجعين بلا ملف · بلا نواة
 - **إضافة:** حوار `a1-u12-d1-mein-letzter-tag-in-tunis` (ke-1..20 · مكالمة اليوم الثالث عشر والأخير بتونس — السبت 11 أبريل) · `usedInLessons` لـars-trennbare وars-wechselpraep += a1-u12-d1 · لا ملف قاعدة جديد ولا كلمة جديدة (877).
 - **تحسين المحتوى:** 67 بنداً/4 أنواع (فراغ 30 · استماع 15 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (~~Der Zug fährt ab um acht Uhr~~ / ~~Ich reise im Ausland~~ / ~~die Pass · der Visum · die Visums~~) · الكلمات الاثنتا عشرة بأمثلة بلا أسماء شخصيات (Berlin معلنة في مثال ziel) · 18 إجابة Quiz من مادة اليوم.
