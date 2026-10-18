@@ -4,9 +4,10 @@
 // N-112: الفعل القصير tun ⇒ tue/tust · وhattest/hattet/warst/wart مغلقة. · N-022: meta الدروس المُرقّاة تحت الجبهة.
 import { describe, expect, it } from "vitest";
 import { join } from "node:path";
+import { execFileSync } from "node:child_process";
 import { loadAudioTracks, loadGrammarRules, loadLessons, loadUpgradePlans, loadWords } from "../tools/lib/content-disk.js";
 import { inspectLesson, metaOf, taughtUpTo } from "../tools/lib/lesson-upgrade.js";
-import { CLOSED, IMPLICIT_FORMS, knownStems, unknownTokens, withLaterForms } from "../tools/lib/vocab-forms.js";
+import { CLOSED, knownStems, unknownTokens, withLaterForms } from "../tools/lib/vocab-forms.js";
 
 const CONTENT = join(__dirname, "..", "content");
 const words = loadWords(CONTENT);
@@ -21,7 +22,7 @@ describe("N-103 (2) — الجذوع القصيرة", () => {
     expect(unknown("dann", ["dank"])).toEqual(["dann"]);
   });
   it("الصيغة الكاملة القصيرة تبقى وتقبل النهايات (Tag/Tage · neu/neues · gut/guter · Oma/Omas · ab)", () => {
-    expect(unknown("Tag Tage neu neues neuer gut guter Omas ab", ["tag", "neu", "wie-gehts", "oma", "ab"])).toEqual([]);
+    expect(unknown("Tag Tage neu neues neuer gut guter Omas ab", ["tag", "neu", "gut", "oma", "ab"])).toEqual([]);
   });
   it("جذع الفعل القصير يقبل نهايات الفعل وحدها (geh+st · ess+e · hör+t — لا ess+er؛ أما geh+er فتمرّ لأن Geh! صيغة أمر مسجَّلة كاملة)", () => {
     expect(unknown("gehst esse hört", ["gehen", "essen", "hoeren"])).toEqual([]);
@@ -38,9 +39,12 @@ describe("N-112 — الأفعال القصيرة والمساعدة", () => {
   it("hattest/hattet/warst/wart مغلقة كأخواتها war/hatte", () => {
     for (const f of ["hattest", "hattet", "warst", "wart", "hatten", "waren"]) expect(CLOSED.has(f), f).toBe(true);
   });
-  it("القائمة الضمنية مغلقة وصغيرة: gut من بطاقة Wie geht's · تصريف jeder", () => {
-    expect(Object.keys(IMPLICIT_FORMS).sort()).toEqual(["jeder", "wie-gehts"]);
-    expect(words.some((x) => x.id === "gut")).toBe(false); // لا بطاقة gut في المقرر — فإن أُضيفت تُحذف من القائمة
+  it("D188: لا قائمة ضمنية في الكود — gut بطاقة في u1-d1 · تصريف jeder معلن في بطاقته (forms.declined) · جذع tun في forms.stem", () => {
+    expect(words.find((x) => x.id === "gut")?.usedInLessons).toEqual(["a1-u1-d1"]);
+    expect(w("jeder").forms?.declined).toEqual(["jede", "jedes", "jeden", "jedem"]);
+    expect(w("tun").forms?.stem).toBe("tu");
+    expect(unknown("gut guter gute", ["gut"])).toEqual([]);
+    expect(unknown("gut", ["wie-gehts"])).toEqual(["gut"]);
     expect(unknown("jede jedes jeden jedem", ["jeder"])).toEqual([]);
     expect(unknown("jede", [])).toEqual(["jede"]);
   });
@@ -74,4 +78,51 @@ describe("N-022 — meta الدروس المُرقّاة الستين تحت ق�
     }).filter(([, m]) => m.length);
     expect(bad).toEqual([]);
   });
+});
+
+describe("D188 — الكلمات المستعارة المعلنة (borrowedWords): الأمانة قبل الطبيعية — وللمتعلم لا للحارس وحده", () => {
+  const tracks = loadAudioTracks(CONTENT);
+  const rules = loadGrammarRules(CONTENT);
+  const plan = loadUpgradePlans(CONTENT)[0]!;
+  const u8d2 = lessons.find((l) => l.id === "a1-u8-d2")!;
+  const entry = plan.lessons.find((e) => e.lessonId === "a1-u8-d2")!;
+  const ctx = { lessons, words, tracks, rules };
+  const inspect = (l: typeof u8d2) => inspectLesson(l, entry, ctx);
+  const withBorrowed = (b: (typeof u8d2)["praesentation"]["borrowedWords"]) => ({ ...u8d2, praesentation: { ...u8d2.praesentation, borrowedWords: b } });
+
+  it("u8-d2: «Der Verkäufer fragt den Kunden.» عادت (كانت D185 قد لوتها إلى kennt) — fragt مستعارة من fragen (u10-d3) وتمرّ بلا خطأ", () => {
+    expect(u8d2.praesentation.borrowedWords).toEqual([expect.objectContaining({ form: "fragt", wordId: "fragen", ar: "يسأل" })]);
+    expect(JSON.stringify(u8d2)).toContain("Der Verkäufer fragt den Kunden.");
+    const r = inspect(u8d2);
+    expect([r.borrowed, r.practice, r.quiz, r.meta]).toEqual([[], [], [], []]);
+  });
+  it("بلا الإعلان تُرفض fragt (الحارس لم يلن) — ومع إعلان كاذب يُرفض الإعلان", () => {
+    expect(inspect(withBorrowed([])).practice.map((i) => i.code)).toContain("e-upgrade-front");
+    const msgs = (b: Parameters<typeof withBorrowed>[0]) => inspect(withBorrowed(b)).borrowed.map((i) => i.message);
+    expect(msgs([{ form: "fragt", wordId: "kennen", ar: "يعرف", whyAr: "اختبار" }]).join()).toContain("مدروسة أصلاً");
+    expect(msgs([{ form: "fragt", wordId: "weit", ar: "بعيد", whyAr: "اختبار" }]).join()).toContain("ليست صيغة لبطاقة");
+    expect(msgs([{ form: "weit", wordId: "weit", ar: "بعيد", whyAr: "اختبار" }]).join()).toContain("لا تظهر في نصوص الدرس");
+    expect(msgs([{ form: "fragt", wordId: "xx-nicht-da", ar: "؟", whyAr: "اختبار" }]).join()).toContain("لا بطاقة");
+  });
+  it("القائمة الكاملة للمستعارات في المقرر — تُطبع وتُثبَّت كي لا تكبر صامتةً (≤2 لكل درس بالمخطط)", () => {
+    const all = lessons.flatMap((l) => l.praesentation.borrowedWords.map((b) => [l.id, b.form, b.wordId] as const));
+    console.log("borrowedWords:", JSON.stringify(all));
+    for (const l of lessons) expect(l.praesentation.borrowedWords.length, l.id).toBeLessThanOrEqual(2);
+    for (const l of lessons) for (const b of l.praesentation.borrowedWords) expect(b.whyAr, `${l.id} ${b.form}`).toMatch(/\p{Script=Arabic}/u);
+    expect(all).toEqual([["a1-u8-d2", "fragt", "fragen"]]);
+  });
+});
+
+describe("D188 — الصيغ الثابتة المعلنة من SD1 (fixedPhrases) وتوحيد منطق «الكلمة اللاحقة»", () => {
+  it("قائمة fixedPhrases في خطة الترقية تُطبع وتُثبَّت (قرار المالك: العتبة ≥4 كلمات تبقى — والشائع يُعلن لا يُلوى)", () => {
+    const all = loadUpgradePlans(CONTENT)[0]!.lessons.flatMap((e) => e.fixedPhrases.map((p) => [e.lessonId, p.de] as const));
+    console.log("fixedPhrases:", JSON.stringify(all));
+    for (const e of loadUpgradePlans(CONTENT)[0]!.lessons) expect(e.fixedPhrases.length, e.lessonId).toBeLessThanOrEqual(2);
+    expect(all).toEqual([]);
+  });
+  it("check-lesson.ts يستعمل المجموعة نفسها (withLaterForms + المستعارات): u8-d2 front 0 · later 0 — لا منطق ثانٍ", () => {
+    const out = execFileSync("npx", ["tsx", "tools/dev/check-lesson.ts", "a1-u8-d2", "--json"], { cwd: join(__dirname, ".."), encoding: "utf8", timeout: 120_000 });
+    const r = JSON.parse(out) as { summary: { front: number; later: number } };
+    expect([r.summary.front, r.summary.later]).toEqual([0, 0]);
+  }, 120_000);
 });

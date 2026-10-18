@@ -30,6 +30,15 @@ export const LessonUpgradeEntry = z
           .refine((m) => m.wrong.toLowerCase() !== m.right.toLowerCase(), { message: "الخطأ يساوي تصحيحه" }),
       )
       .default([]),
+    /**
+     * D188 (قرار المالك: عتبة Goethe تبقى ≥4 كلمات — والعبارة الشائعة تُعلن لا تُلوى): صيغة ثابتة من نصوص SD1/A2 الرسمية
+     * يستعملها الدرس عمداً («Ich muss zum Arzt gehen»). check-lesson يُسقط إصابة official المطابقة لإعلانٍ هنا وحده،
+     * والاختبار يطبع القائمة كاملة كي لا تكبر صامتةً. ≤2 لكل درس.
+     */
+    fixedPhrases: z
+      .array(z.object({ de: z.string().min(1), whyAr: z.string().min(1) }).strict())
+      .max(2)
+      .default([]),
   })
   .strict();
 export type LessonUpgradeEntry = z.infer<typeof LessonUpgradeEntry>;

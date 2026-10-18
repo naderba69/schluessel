@@ -22,18 +22,9 @@ export const deumlaut = (s: string) => s.replace(/ä/g, "a").replace(/ö/g, "o")
  * D115: تُقطَّع بـcontentTokens نفسها التي تقطّع النص المفحوص — كان التقطيع على [\s/!.,] فقط فيُنتج
  * «geht's?» و«(sie)» و«koste(n» التي لا تطابق أي نص (11 مدخلاً: Wie geht's? · Stell (dich) vor! · …).
  */
-/**
- * D185 (N-103): صيغ مُعلنة تُتعلَّم داخل بطاقة كلمة بلا بطاقة خاصة — قائمة مغلقة صغيرة لا تُوسَّع إلا بقرار:
- * · gut: لا بطاقة لها في المقرر كله، وتُتعلَّم في a1-u1-d1 من مثال «Wie geht's? — Danke, gut.» (كانت تمرّ خطأً بجذع «gut» المشتق من Guten Tag).
- * · jeder: تصريف أداة الكلّية (jede · jedes · jeden · jedem) — كان يمرّ بالجذع المشتق «jed» قبل حصر الجذوع القصيرة.
- */
-export const IMPLICIT_FORMS: Readonly<Record<string, readonly string[]>> = {
-  "wie-gehts": ["gut"],
-  jeder: ["jede", "jedes", "jeden", "jedem"],
-};
 export function knownForms(w: Word): string[] {
   const base = w.de.replace(/^(der|die|das) /, "").replace(/^sich /, "").toLowerCase();
-  const parts = [base, w.plural?.replace(/^die /, ""), w.forms?.praesens3s, w.forms?.perfekt, w.forms?.praeteritum, w.forms?.imperative, ...(IMPLICIT_FORMS[w.id] ?? [])]
+  const parts = [base, w.plural?.replace(/^die /, ""), w.forms?.praesens3s, w.forms?.perfekt, w.forms?.praeteritum, w.forms?.imperative, ...(w.forms?.declined ?? [])]
     .filter((x): x is string => !!x).flatMap((x) => contentTokens(x));
   return parts;
 }
@@ -61,12 +52,14 @@ export const LATER = "<";
  * N-103 (D185 — بإذن المالك): الجذع المشتق القصير (≤3 أحرف) لا يدخل إلا من صيغة فعل وبقصّ نهاية فعل — كان «wei» يُشتق من
  * Wein بقصّ n فيمرّ weit (كلمة درس لاحق)، و«bei» من Bein و«dan» من dann … (128 جذعاً قصيراً من أسماء وظروف).
  * الصيغة الكاملة تُسجَّل كما هي (وبعلامة «=») مهما قصرت (Tag · gut · neu · Oma · ab) ويُقبل عليها أي نهاية (neues · guter · Tage).
- * N-112: الفعل القصير المنتهي بـ‑n لا ‑en (tun) يعطي جذعه بقصّ n (tu ⇒ tue · tust · tut).
+ * N-112/D188: الفعل القصير (tun) يعلن جذعه في بطاقته `forms.stem` (tu) فتُسجَّل صيغه التامة — لا استنتاج ولا حدّ خاص.
  */
 export function knownStems(words: readonly Word[]): Set<string> {
   const out = new Set<string>();
   for (const w of words) {
-    const verb = !!w.forms;
+    const verb = w.wordClass === "verb" || !!(w.forms?.praesens3s || w.forms?.perfekt || w.forms?.praeteritum);
+    // D188: الجذع الصريح للفعل القصير (tun ⇒ tu) يُسجَّل بصيغه التامة (tue · tust · tut …) — فلا حدّ خاص للجذوع القصيرة في الفحص
+    if (w.forms?.stem) { const b = deumlaut(w.forms.stem); out.add(VERB + b); for (const suf of VERB_SUFFIXES) out.add(b + suf); }
     for (const f0 of knownForms(w)) {
       const f = deumlaut(f0);
       out.add(f);
@@ -76,7 +69,6 @@ export function knownStems(words: readonly Word[]): Set<string> {
         if (verb && VERB_SUFFIXES.has(suffix)) { out.add(VERB + base); out.add(base); continue; }
         if (base.length >= 4) out.add(base);
       }
-      if (verb && /[^e]n$/u.test(f) && f.length <= 4) { const b = f.slice(0, -1); out.add(b); out.add(VERB + b); }
     }
   }
   return out;
@@ -84,7 +76,7 @@ export function knownStems(words: readonly Word[]): Set<string> {
 /** هل يُقبل الرمز على الصيغ المعروفة؟ (الكاملة · أو كاملة + نهاية · أو جذع ≥4 · أو جذع فعل قصير + نهاية فعل) */
 export function stemKnown(d: string, stems: ReadonlySet<string>): boolean {
   if (stems.has(d)) return true;
-  for (const { base, suffix } of stemmed(d, 2)) { // الجذع ذو الحرفين لفعل قصير معلن (tu ⇒ tue/tust — N-112)
+  for (const { base, suffix } of stemmed(d)) {
     if (base === d) continue;
     if (stems.has(FULL + base)) return true;
     if (base.length >= 4 && stems.has(base)) return true;
@@ -100,7 +92,7 @@ export function stemKnown(d: string, stems: ReadonlySet<string>): boolean {
 export function laterWordLeak(d: string, stems: ReadonlySet<string>): boolean {
   if (!stems.has(LATER + d)) return false;
   if (stems.has(FULL + d)) return false;
-  for (const { base, suffix } of stemmed(d, 2)) {
+  for (const { base, suffix } of stemmed(d)) {
     if (base === d) continue;
     if (stems.has(FULL + base)) return false;
     if (stems.has(VERB + base) && VERB_SUFFIXES.has(suffix)) return false;

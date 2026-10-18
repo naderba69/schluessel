@@ -53,6 +53,10 @@ export const Word = SchemaVersioned.extend({
       perfekt: z.string().optional(),
       imperative: z.string().optional(),
       konjunktivII: z.string().optional(),
+      /** D188: جذع صريح للفعل القصير الذي لا يُشتق جذعه بقصّ ‑en (tun ⇒ tu) — حارس الجبهة يقبل عليه نهايات الفعل */
+      stem: z.string().regex(/^\p{Ll}+$/u).optional(),
+      /** D188: صيغ التصريف المعلنة لأدوات/ضمائر (jeder ⇒ jede · jedes · jeden · jedem) — بدل قائمة ضمنية في الكود */
+      declined: z.array(z.string().regex(/^\p{Ll}+$/u)).optional(),
     })
     .optional(),
   /** أعلام الخطر */

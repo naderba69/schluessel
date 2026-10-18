@@ -31,6 +31,8 @@ export type LearnCardData = {
 export type PracticeData = {
   stations: Lesson["uebung"]["stations"];
   communicativeTask: Lesson["uebung"]["communicativeTask"];
+  /** D188: الكلمات المستعارة المعلنة — تُعرض قبل التدريب وتُترجم على الكلمة */
+  borrowed?: Lesson["praesentation"]["borrowedWords"];
 };
 
 export type CloseData = {
@@ -129,6 +131,7 @@ export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: 
     practice: {
       stations: lesson.uebung.stations,
       communicativeTask: lesson.uebung.communicativeTask,
+      borrowed: lesson.praesentation.borrowedWords ?? [],
     },
     close: {
       summaryDe: lesson.zusammenfassung.summary.de,

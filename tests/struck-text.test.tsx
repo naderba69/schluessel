@@ -4,7 +4,7 @@
 import { describe, it, expect } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import { splitStruck, visibleText } from "../src/lib/struck-text.js";
-import { StruckText } from "../src/components/StruckText.js";
+import { BorrowedProvider, BorrowedWordsBox, StruckText } from "../src/components/StruckText.js";
 import { CloseStation } from "../src/components/LessonContent.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
 import { ALL_LESSONS, ALL_WORDS } from "../src/lesson-packs.js";
@@ -41,5 +41,30 @@ describe("D128 — الرسم", () => {
       struck += (html.match(/<del /g) ?? []).length;
     }
     expect(struck).toBeGreaterThan(ALL_LESSONS.length); // كل بطاقة مصيدة تحمل خطأها بين ~~ (tests/content-units)
+  });
+});
+
+describe("D188 — الكلمة المستعارة تصل إلى المتعلم: ترجمة على الكلمة + صندوق قبل التدريب", () => {
+  const borrowed = [{ form: "fragt", wordId: "fragen", ar: "يسأل", whyAr: "تتعلّم fragen في a1-u10-d3." }];
+  it("StruckText داخل BorrowedProvider يرسم <abbr title=…> حول fragt وحدها (كلمة كاملة — لا داخل gefragt)", () => {
+    const html = renderToStaticMarkup(
+      <BorrowedProvider words={borrowed}>
+        <StruckText text="Der Verkäufer fragt den Kunden. ~~gefragt~~ fragt." />
+      </BorrowedProvider>,
+    );
+    expect(html.match(/data-testid="borrowed"/g)).toHaveLength(2);
+    expect(html).toContain('title="يسأل — كلمة مستعارة من درس قادم"');
+    expect(html).toContain('<del data-testid="struck">gefragt</del>');
+  });
+  it("بلا مزوّد: لا تلميح — النص كما كان (الدروس بلا مستعارات لا تتغير)", () => {
+    expect(renderToStaticMarkup(<StruckText text="Der Verkäufer fragt den Kunden." />)).not.toContain("borrowed");
+    expect(splitStruck("a fragt b", new Map([["fragt", "x"]])).map((p) => [p.text, p.gloss ?? null])).toEqual([["a ", null], ["fragt", "x"], [" b", null]]);
+  });
+  it("BorrowedWordsBox: الصيغة = المعنى — السبب", () => {
+    const html = renderToStaticMarkup(<BorrowedWordsBox words={borrowed} />);
+    expect(html).toContain('data-testid="borrowed-words"');
+    expect(html).toContain("fragt");
+    expect(html).toContain("يسأل");
+    expect(renderToStaticMarkup(<BorrowedWordsBox words={[]} />)).toBe("");
   });
 });

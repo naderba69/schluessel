@@ -12,6 +12,7 @@ import {
   JitCardOverlay,
 } from "./components/LessonContent.js";
 import { QuizStation } from "./components/QuizStation.js";
+import { BorrowedProvider } from "./components/StruckText.js";
 import { lessonStatus } from "./lib/routes.js";
 import { planLessonStations } from "./lib/lesson-runner.js";
 import type { Station } from "./lib/lesson-engine.js";
@@ -76,6 +77,7 @@ function LessonRun({
   const due = plan.close.srsBundleWordIds.length;
 
   return (
+    <BorrowedProvider words={lesson.praesentation.borrowedWords ?? []}>
     <LessonSession
       done={done}
       onFinish={() => onFinish(last)}
@@ -110,6 +112,7 @@ function LessonRun({
         ),
       }}
     />
+    </BorrowedProvider>
   );
 }
 

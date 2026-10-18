@@ -26,6 +26,7 @@
 //   e-upgrade-misspelling    D128: خطأ مقصود معلن غير صالح — تصحيحه غير مدروس · أو هو كلمة حقيقية في المقرر · أو يعرفه
 //                            الحارس أصلاً · أو بعيد عن تصحيحه (> MISSPELLING_DISTANCE_MAX) · أو معلن مرتين
 //   w-upgrade-misspelling    خطأ مقصود معلن لا يظهر مشطوباً (~~…~~) في نصوص الدرس المُرقّاة
+//   e-upgrade-borrowed       كلمة مستعارة معلنة (D188) غير مستعملة · أو مدروسة أصلاً حتى الدرس · أو ليست صيغة للكلمة المذكورة · أو بلا بطاقة
 //   e-rule-index · e-rule-level · e-rule-front · w-rule-proper-noun   فحوص ملفات القواعد نفسها (checkGrammarRules)
 import {
   AUDIO_STATION_TYPES,
@@ -39,7 +40,7 @@ import {
   type Word,
 } from "../../content/schemas/index.js";
 import {
-  CLOSED, contentTokens, deumlaut, knownForms, knownStems, stem, stripGraphemeNotation, stripMorphemeNotation, unknownTokens, withLaterForms,
+  CLOSED, FULL, contentTokens, deumlaut, knownForms, knownStems, stem, stemKnown, stripGraphemeNotation, stripMorphemeNotation, unknownTokens, withLaterForms,
 } from "./vocab-forms.js";
 
 export const PRACTICE_ITEMS_MIN = 12;
@@ -155,6 +156,13 @@ export function frontViolations(
 
 const allowSet = (names: readonly string[]) => new Set(names.flatMap((n) => contentTokens(n)));
 const tokenSet = (texts: readonly string[]) => new Set(contentTokens(germanOnly(texts.join("\n"))).map(deumlaut));
+/** كل النصوص في ملف الدرس (D188 — لفحص أن المستعارة المعلنة تُستعمل فعلاً في أي موضع) */
+function allLessonTexts(v: unknown, out: string[] = []): string[] {
+  if (typeof v === "string") out.push(v);
+  else if (Array.isArray(v)) for (const x of v) allLessonTexts(x, out);
+  else if (v && typeof v === "object") for (const x of Object.values(v)) allLessonTexts(x, out);
+  return out;
+}
 
 /**
  * D137: الشرح بين القوسين في حقل de ليس جزءاً من الكلمة — «sein (ملكيته)» · «am (an + dem)»؛ الاصطلاح نفسه في
@@ -332,6 +340,8 @@ export type LessonPartsReport = Record<UpgradePart, UpgradeIssue[]> & {
   coverage: UpgradeIssue[]; practiceItems: number; practiceTypes: string[]; quizMin: number;
   /** N-022 (D185): الهدف/المهمة/الخلاصة تحت قانون الجبهة (تُحتسب حين يكون التدريب done) */
   meta: UpgradeIssue[];
+  /** D188: الكلمات المستعارة المعلنة — غير المستعملة أو المدروسة أصلاً أو غير المطابقة لبطاقتها */
+  borrowed: UpgradeIssue[];
   /** D128: صلاحية الأخطاء المقصودة المعلنة (تُحتسب حين يكون التدريب أو Quiz done) */
   misspellings: UpgradeIssue[];
   /** نصوص كل جزء (لفحص استعمال أسماء العلم المعلنة) */
@@ -372,12 +382,37 @@ function checkMisspellings(
 export const metaOf = (l: Lesson): string[] =>
   [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
 
+/**
+ * D188: الكلمة المستعارة المعلنة (praesentation.borrowedWords) — صادقة بأربعة شروط:
+ * بطاقتها موجودة · ليست مدروسة أصلاً حتى هذا الدرس (وإلا فلا حاجة للاستعارة) · الصيغة المعلنة صيغة حقيقية لتلك الكلمة
+ * (جذعاً أو صيغة مسجَّلة) · وتُستعمل فعلاً في نصوص الدرس (وإلا فهي إعلان ميّت).
+ */
+export function checkBorrowed(lesson: Lesson, taught: readonly Word[], all: readonly Word[]): UpgradeIssue[] {
+  const issues: UpgradeIssue[] = [];
+  if (lesson.praesentation.borrowedWords.length === 0) return issues;
+  const taughtIds = new Set(taught.map((w) => w.id));
+  const texts = tokenSet(allLessonTexts({ ...lesson, praesentation: { ...lesson.praesentation, borrowedWords: [] } })); // الإعلان نفسه ليس استعمالاً
+  for (const b of lesson.praesentation.borrowedWords) {
+    const label = `${lesson.id}: المستعارة «${b.form}» (${b.wordId})`;
+    const w = all.find((x) => x.id === b.wordId);
+    const f = deumlaut(b.form.toLowerCase());
+    if (!w) issues.push({ level: "error", code: "e-upgrade-borrowed", lessonId: lesson.id, message: `${label}: لا بطاقة بهذا المعرّف` });
+    else if (taughtIds.has(w.id)) issues.push({ level: "error", code: "e-upgrade-borrowed", lessonId: lesson.id, message: `${label}: مدروسة أصلاً حتى هذا الدرس — لا استعارة` });
+    else if (!stemKnown(f, knownStems([w]))) issues.push({ level: "error", code: "e-upgrade-borrowed", lessonId: lesson.id, message: `${label}: ليست صيغة لبطاقة «${w.de}»` });
+    if (!texts.has(f)) issues.push({ level: "error", code: "e-upgrade-borrowed", lessonId: lesson.id, message: `${label}: لا تظهر في نصوص الدرس — إعلان بلا استعمال` });
+  }
+  return issues;
+}
+
 export function inspectLesson(
   lesson: Lesson, entry: Pick<LessonUpgradeEntry, "properNouns"> & Partial<Pick<LessonUpgradeEntry, "misspellings">>, ctx: UpgradeContext,
 ): LessonPartsReport {
   const taught = taughtUpTo(lesson, ctx.lessons, ctx.words);
   // N-103 (D185): صيغ كلمات الدروس اللاحقة تُرفض ولو طابقت جذعاً (علامة «<» في المجموعة نفسها)
   const stems = withLaterForms(knownStems(taught), taught, ctx.words);
+  // D188: الكلمات المستعارة المعلنة تُقبل بصيغتها المعلنة وحدها (كصيغة كاملة) — بعد التحقق منها في checkBorrowed
+  const borrowed = checkBorrowed(lesson, taught, ctx.words);
+  for (const b of lesson.praesentation.borrowedWords) { const f = deumlaut(b.form.toLowerCase()); stems.add(f); stems.add(FULL + f); }
   const allow = allowSet(entry.properNouns);
   const declared = entry.misspellings ?? [];
   const wrong = new Set(declared.map((m) => m.wrong.toLowerCase()));
@@ -405,6 +440,7 @@ export function inspectLesson(
     quiz: quiz.issues,
     coverage,
     meta,
+    borrowed,
     misspellings: checkMisspellings(lesson, declared, ctx, stems, allow),
     practiceItems: lesson.uebung.stations.reduce((n, s) => n + s.items.length, 0),
     practiceTypes: [...new Set(lesson.uebung.stations.map((s) => s.type))],
@@ -458,6 +494,7 @@ export function checkUpgrade(plan: LessonUpgradePlan, ctx: UpgradeContext): Upgr
     }
     if (s.practice === "done" && s.quiz === "done") issues.push(...r.coverage);
     if (s.practice === "done") issues.push(...r.meta);
+    issues.push(...r.borrowed);
     // أسماء العلم المعلنة يجب أن تُستعمل فعلاً في نصوص الدرس المُرقّاة (أمثلة البطاقات · التدريب والمصائد · Quiz)
     if (s.rule === "done" || s.practice === "done" || s.quiz === "done") {
       const entry = plan.lessons.find((e) => e.lessonId === s.lessonId)!;

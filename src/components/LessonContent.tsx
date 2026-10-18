@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { audioPlayer } from "../lib/audio-player.js";
 import { FUNCTION_LABELS_AR, type Phrase } from "../lib/phrase-bank.js";
 import { PlayButton } from "./LessonSession.js";
-import { StruckText } from "./StruckText.js";
+import { BorrowedWordsBox, StruckText } from "./StruckText.js";
 import type { Unit0Card } from "../../content/schemas/index.js";
 import type { LearnCardData, RecallCardData, PracticeData, CloseData } from "../lib/lesson-runner.js";
 import { RecallCardView, LearnCardView, CloseView } from "./LessonSession.js";
@@ -468,6 +468,7 @@ export function PracticeStation({
   if (typed) {
     return (
       <section data-testid="practice-station" data-type={station.type}>
+        {state.station === 0 && state.item === 0 && !state.verdict && <BorrowedWordsBox words={data.borrowed ?? []} />}
         {counter}
         <TypedItemView
           key={`${state.station}-${state.item}`}

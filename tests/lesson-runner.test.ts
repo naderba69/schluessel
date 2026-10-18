@@ -9,7 +9,7 @@ describe("مُشغِّل الدرس — الدرس الحقيقي a1-u1-d1", () 
     const plan = planLessonStations(firstLesson, firstLessonWords);
     expect(plan.lessonId).toBe("a1-u1-d1");
     expect(plan.recall.length).toBeGreaterThan(0);
-    expect(plan.learn.length).toBe(17);
+    expect(plan.learn.length).toBe(firstLesson.praesentation.wordIds.length); // ثابت مشتقّ (D188): لا كلمة تسقط من الدرس
     expect(plan.practice.stations.length).toBeGreaterThanOrEqual(3);
     expect(plan.close.summaryAr).toContain("قدمت نفسك");
   });
@@ -29,10 +29,10 @@ describe("مُشغِّل الدرس — الدرس الحقيقي a1-u1-d1", () 
     expect(kommen?.promptDe).toBe("Ich komme aus Tunesien."); // الجملة أولاً لا القائمة
   });
 
-  it("الخلاصة: 3 مصائد ذهبية + حزمة SRS كاملة (15 كلمة)", () => {
+  it("الخلاصة: 3 مصائد ذهبية + حزمة SRS كاملة (كل كلمات الدرس)", () => {
     const plan = planLessonStations(firstLesson, firstLessonWords);
     expect(plan.close.warningCards.length).toBe(3);
-    expect(plan.close.srsBundleWordIds.length).toBe(17);
+    expect([...plan.close.srsBundleWordIds].sort()).toEqual([...firstLesson.praesentation.wordIds].sort()); // ثابت مشتقّ (D188)
     expect(plan.practice.communicativeTask.goal.de).toBe("Hallo! Ich heiße … Ich komme aus …"); // D185 (N-022): meta بالمدروس
   });
 

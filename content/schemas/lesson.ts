@@ -97,6 +97,20 @@ export const Lesson = SchemaVersioned.extend({
   /** 4. Präsentation — طقس أول لقاء */
   praesentation: z.object({
     wordIds: z.array(Slug).min(1),
+    /**
+     * D188 (قرار المالك 2026-10-18 — «الأمانة قبل الطبيعية»): كلمة مستعارة من درس لاحق تُعلَن للمتعلم بدل ليّ الجملة.
+     * تصل إلى الشاشة (ترجمة على الكلمة + صندوق «كلمات مستعارة» قبل التدريب) ويقبلها حارس الجبهة بصيغتها هذه وحدها.
+     * ≤2 لكل درس — والحارس يرفض المستعارة غير المستعملة أو المدروسة أصلاً أو التي ليست صيغة للكلمة المذكورة.
+     */
+    borrowedWords: z.array(z.object({
+      /** الصيغة كما تظهر في النص (fragt) */
+      form: z.string().regex(/^\p{L}+$/u),
+      /** معرّف بطاقة الكلمة التي تُدرَّس لاحقاً (fragen) */
+      wordId: Slug,
+      ar: ArText,
+      /** لماذا استُعيرت هنا — للمتعلم بالعربية */
+      whyAr: ArText,
+    })).max(2).default([]),
     grammarArsenalIds: z.array(z.string()).default([]),
     storySentenceIds: z.array(z.string()).default([]),
     dualCodingRequired: z.literal(true), // §15‑هـ إلزامي

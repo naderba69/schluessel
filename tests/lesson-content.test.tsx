@@ -24,9 +24,9 @@ describe("تشغيل الدرس الحقيقي على الواجهة", () => {
     expect(html).toContain("حاول تذكر");
   });
 
-  it("محطة الجديد: أول عنصر من 17 — بجملة الدرس الحقيقية · ثم قاعدة اليوم (D116)", () => {
+  it("محطة الجديد: أول عنصر من كل كلمات الدرس — بجملة الدرس الحقيقية · ثم قاعدة اليوم (D116 · ثابت مشتقّ D188)", () => {
     const html = renderToStaticMarkup(<LearnStation cards={plan.learn} />);
-    expect(html).toContain("عنصر 1 من 17");
+    expect(html).toContain(`عنصر 1 من ${plan.learn.length}`);
     expect(html).toContain("Hallo! Ich heiße Yusuf.");
   });
 

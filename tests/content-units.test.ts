@@ -1,5 +1,7 @@
 // content-units.test.ts — المحتوى حيّ: كل درس وكلماته تعمل على المُشغِّل (D45)
 import { describe, it, expect } from "vitest";
+import { readdirSync } from "node:fs";
+import { join } from "node:path";
 import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, LEVEL_ORDER, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
 import { slugify } from "../tools/lib/word-entry.js";
 import { planLessonStations, fullForm } from "../src/lib/lesson-runner.js";
@@ -16,7 +18,7 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
       [1, 1],
     ]);
-    expect(ALL_WORDS.length).toBe(884); // + zum Beispiel · der Satz · glauben (نواة a1-u12-d4 — D179) + der Blick · das Internet · die Information (نواة a1-u12-d2 — D177) + das Ergebnis (نواة a1-u11-d5 — D175) + fehlen (نواة a1-u11-d2 — D172) + der Teil · tun · weh tun (نواة a1-u11-d1 — D171) + normal · der Job · verdienen (نواة a1-u10-d5 — D170) + der Anfang · der Verein (نواة a1-u10-d4 — D169) + früher · gewinnen (نواة a1-u10-d3 — D168) + lieb · der Moment · enden (نواة a1-u10-d2 — D167) + andere · weiter · halten · die Polizei · die Stelle (نواة a1-u9-d5 — D165) + auf sein · zu sein (نواة a1-u9-d4 — D164) + bitten · erklären · die Hilfe (نواة a1-u9-d3 — D163) + kriegen (نواة a1-u8-d3 — D158) + beste · circa (نواة a1-u8-d2 — D157) + dieser · gefallen (نواة a1-u8-d1 — D156) + gleich · ab · Achtung (نواة a1-u7-d4 — D154) + die Hausaufgabe · nie · einfach (نواة a1-u7-d3 — D153) + der Film · mehr · wandern (نواة a1-u7-d2 — D152) + die Firma · immer · die meisten (نواة a1-u7-d1 — D151) + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
+    expect(ALL_WORDS.length).toBe(readdirSync(join(__dirname, "..", "content", "words")).filter((f) => f.endsWith(".json")).length); // ثابت مشتقّ (D188): السجل = ملفات القرص · كان 884 + + zum Beispiel · der Satz · glauben (نواة a1-u12-d4 — D179) + der Blick · das Internet · die Information (نواة a1-u12-d2 — D177) + das Ergebnis (نواة a1-u11-d5 — D175) + fehlen (نواة a1-u11-d2 — D172) + der Teil · tun · weh tun (نواة a1-u11-d1 — D171) + normal · der Job · verdienen (نواة a1-u10-d5 — D170) + der Anfang · der Verein (نواة a1-u10-d4 — D169) + früher · gewinnen (نواة a1-u10-d3 — D168) + lieb · der Moment · enden (نواة a1-u10-d2 — D167) + andere · weiter · halten · die Polizei · die Stelle (نواة a1-u9-d5 — D165) + auf sein · zu sein (نواة a1-u9-d4 — D164) + bitten · erklären · die Hilfe (نواة a1-u9-d3 — D163) + kriegen (نواة a1-u8-d3 — D158) + beste · circa (نواة a1-u8-d2 — D157) + dieser · gefallen (نواة a1-u8-d1 — D156) + gleich · ab · Achtung (نواة a1-u7-d4 — D154) + die Hausaufgabe · nie · einfach (نواة a1-u7-d3 — D153) + der Film · mehr · wandern (نواة a1-u7-d2 — D152) + die Firma · immer · die meisten (نواة a1-u7-d1 — D151) + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
 
   it("d6 توليف: نوع integration + معركة بعتبة 75% + جسيما التوليف", () => {
@@ -48,10 +50,10 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
     }
   });
 
-  it("التوافق مع الاستخدام القديم: firstLesson هو d1 بكل كلماته الـ17 (15 + نواة D113)", () => {
+  it("التوافق مع الاستخدام القديم: firstLesson هو d1 بكل كلماته (ثابت مشتقّ — D188)", () => {
     expect(firstLesson.id).toBe("a1-u1-d1");
-    expect(firstLessonWords).toHaveLength(17);
-    expect(firstLessonWords.slice(-2).map((w) => w.id)).toEqual(["neu", "wie-viel"]);
+    expect(firstLessonWords.map((w) => w.id)).toEqual(firstLesson.praesentation.wordIds);
+    expect(firstLessonWords.map((w) => w.id)).toEqual(expect.arrayContaining(["neu", "wie-viel", "gut"])); // نواة D113 + gut (D188)
     expect(() => wordsForLesson({ ...firstLesson, praesentation: { ...firstLesson.praesentation, wordIds: ["xx"] } })).toThrow(/مفقودة/);
   });
 });
@@ -1282,8 +1284,8 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(wie!.commonError.de).toBe("~~Wie kostet das Hemd?~~");
     expect(wie!.correct.de).toBe("Was kostet das Hemd? / Wie viel kostet das Hemd?");
     expect(wie!.whyArabicSpeakerFails).toMatch(/«كم».*Wie وحدها = «كيف»/);
-    expect(nDekl!.commonError.de).toBe("~~Der Verkäufer kennt den Kunde.~~"); // D185 (N-103): fragen كلمة u10-d3 — كانت تمرّ بجذع Frage
-    expect(nDekl!.correct.de).toBe("Der Verkäufer kennt den Kunden.");
+    expect(nDekl!.commonError.de).toBe("~~Der Verkäufer fragt den Kunde.~~"); // D188: fragt مستعارة معلنة (borrowedWords) بدل ليّ D185 إلى kennt
+    expect(nDekl!.correct.de).toBe("Der Verkäufer fragt den Kunden.");
     expect(nDekl!.whyArabicSpeakerFails).toMatch(/den Nachbarn/);
     for (const c of u.zusammenfassung.warningCards) expect(c.whyArabicSpeakerFails).toContain("10‑ي");
     // الاستدعاء من دروس سابقة (der Preis · kosten · bezahlen) — كانت Cent من كلمات اليوم نفسه

@@ -54,6 +54,14 @@
       "circa",
       "beste"
     ],
+    "borrowedWords": [
+      {
+        "form": "fragt",
+        "wordId": "fragen",
+        "ar": "يسأل",
+        "whyAr": "البائع «يسأل» الزبون هو المشهد الطبيعي في المتجر؛ تتعلّم الفعل fragen كاملاً في الدرس a1-u10-d3 — هنا صيغته fragt وحدها."
+      }
+    ],
     "grammarArsenalIds": [
       "ars-preise"
     ],
@@ -447,11 +455,11 @@
               "den",
               "Kunden.",
               "Verkäufer",
-              "kennt",
+              "fragt",
               "Der"
             ],
-            "a": "Der Verkäufer kennt den Kunden.",
-            "why": "الفاعل Der Verkäufer ثم kennt ثم المفعول den Kunden — Kunde تأخذ ‑n في المفعول أيضاً."
+            "a": "Der Verkäufer fragt den Kunden.",
+            "why": "الفاعل Der Verkäufer ثم fragt ثم المفعول den Kunden — Kunde تأخذ ‑n في المفعول أيضاً."
           },
           {
             "tokens": [
@@ -666,11 +674,11 @@
           {
             "q": "«الزبون يسأل البائع»؟",
             "choices": [
-              "Der Kunde kennt den Verkäufer.",
-              "Der Kunden kennt den Verkäufer.",
-              "Der Kunde kennt der Verkäufer."
+              "Der Kunde fragt den Verkäufer.",
+              "Der Kunden fragt den Verkäufer.",
+              "Der Kunde fragt der Verkäufer."
             ],
-            "a": "Der Kunde kennt den Verkäufer.",
+            "a": "Der Kunde fragt den Verkäufer.",
             "why": "الفاعل der Kunde بلا ‑n (الـ‑n في المفعول فقط: den Kunden) — والمفعول هنا den Verkäufer (der ← den، والاسم كما هو)."
           },
           {
@@ -801,13 +809,13 @@
       },
       {
         "commonError": {
-          "de": "~~Der Verkäufer kennt den Kunde.~~",
+          "de": "~~Der Verkäufer fragt den Kunde.~~",
           "ar": "Kunde تأخذ ‑n في المفعول: den Kunden"
         },
-        "whyArabicSpeakerFails": "تعلّمت في الوحدة 4 أن علامة المفعول على الأداة (der ← den) والاسم يبقى كما هو — وبالعربية لا تظهر فتحة المفعول في الكتابة اليومية («يعرف الزبون») — فيترك المتعلم Kunde بلا تغيير. وKunde من مجموعة صغيرة من أسماء الأشخاص المذكرة تأخذ ‑n في المفعول أيضاً (كـder Nachbar ← den Nachbarn · der Junge ← den Jungen): Der Verkäufer kennt den Kunden. — خريطة التداخل 10‑ي",
+        "whyArabicSpeakerFails": "تعلّمت في الوحدة 4 أن علامة المفعول على الأداة (der ← den) والاسم يبقى كما هو — وبالعربية لا تظهر فتحة المفعول في الكتابة اليومية («يسأل الزبون») — فيترك المتعلم Kunde بلا تغيير. وKunde من مجموعة صغيرة من أسماء الأشخاص المذكرة تأخذ ‑n في المفعول أيضاً (كـder Nachbar ← den Nachbarn · der Junge ← den Jungen): Der Verkäufer fragt den Kunden. — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Der Verkäufer kennt den Kunden.",
-          "ar": "البائع يعرف الزبون."
+          "de": "Der Verkäufer fragt den Kunden.",
+          "ar": "البائع يسأل الزبون."
         },
         "exercise": {
           "q": "صحّح: ~~Ich frage den Kunde.~~",

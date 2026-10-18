@@ -29,8 +29,9 @@ const STEPS: Step[] = [
     id: "vitest", label: "vitest", cmd: "npx", argv: ["vitest", "run"],
     parse: (o) => {
       const s = strip(o);
-      const passed = num(/Tests\s+(\d+) passed/u, s), total = num(/Tests\s+.*?\((\d+)\)/u, s), files = num(/Test Files\s+(\d+) passed/u, s);
-      const failed = num(/Tests\s+(\d+) failed/u, s);
+      const testsLine = /Tests\s+([^\n]*)/u.exec(s)?.[1] ?? "";
+      const passed = num(/(\d+) passed/u, testsLine), total = num(/\((\d+)\)/u, testsLine), files = num(/Test Files\s+(\d+) passed/u, s);
+      const failed = num(/(\d+) failed/u, testsLine);
       const ok = Number.isFinite(passed) && passed === total && !Number.isFinite(failed);
       return { ok, summary: ok ? `${passed}/${total} (${files} ملفاً)` : `فشل ${Number.isFinite(failed) ? failed : "?"} · نجح ${passed}/${total}`, numbers: { passed, total, files } };
     },

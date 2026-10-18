@@ -4,6 +4,7 @@
 import { describe, it, expect } from "vitest";
 import { join } from "node:path";
 import { readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import {
   GrammarRuleFile, LessonUpgradeEntry, LessonUpgradePlan, ShufraPayload, type Lesson,
 } from "../content/schemas/index.js";
@@ -111,8 +112,8 @@ function ctxWith(lesson: Lesson, rules: GrammarRuleFile[] = [rule()], ws = words
 }
 
 const entry = (over: Partial<LessonUpgradeEntry> = {}): LessonUpgradeEntry => ({
-  lessonId: "a1-u1-d1", rule: "done", practice: "done", quiz: "done", properNouns: ["Yusuf", "Lena", "Tunis"], misspellings: [], ...over,
-});
+  lessonId: "a1-u1-d1", rule: "done", practice: "done", quiz: "done", properNouns: ["Yusuf", "Lena", "Tunis"], misspellings: [], fixedPhrases: [], ...over,
+} as LessonUpgradeEntry);
 /** خطة بدرس واحد — النطاق يحصرها في درس u1-d1 (بقية دروس الوحدة 1 خارج الاكتمال بنطاق اليوم الأول) */
 const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) =>
   LessonUpgradePlan.parse({
@@ -620,7 +621,11 @@ describe("D115 — أدوات القياس", () => {
     const entryReal = loadUpgradePlans(CONTENT)[0]!.lessons.find((e) => e.lessonId === "a1-u1-d1")!;
     const r = inspectLesson(real, entryReal, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage }).toEqual({ rule: [], practice: [], quiz: [], coverage: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, real.praesentation.wordIds.length]).toEqual([14, 4, 6, 17]);
+    // ثابت مشتقّ (D188): البنود من الملف · 4 أنواع · Quiz ≥6 · الكلمات ≥15 وتساوي حزمة SRS
+    expect(r.practiceItems).toBe(real.uebung.stations.reduce((n, s) => n + s.items.length, 0));
+    expect([r.practiceTypes.length, r.quizMin]).toEqual([4, 6]);
+    expect(real.praesentation.wordIds.length).toBeGreaterThanOrEqual(15);
+    expect([...real.zusammenfassung.srsBundleWordIds].sort()).toEqual([...real.praesentation.wordIds].sort());
     expect(real.praesentation.grammarArsenalIds).toEqual(["ars-sein"]);
   });
   it("a1-u1-d2 مُرقّى (D119): صفر نقص — 16 بنداً · 4 أنواع · Quiz 6 · 16 كلمة مُسترجعة · قاعدة ars-laender-sprachen", () => {
@@ -1810,8 +1815,10 @@ describe("D115 — أدوات القياس", () => {
       .toEqual(Array.from({ length: 20 }, (_, i) => `ki-${i + 1}`));
     expect(audioIds.filter((id) => id.startsWith("word-")).sort()).toEqual(["word-fluss", "word-fotografieren", "word-landschaft", "word-strand", "word-thema", "word-wald"]);
     expect(audioIds.every((id) => tracks.has(id))).toBe(true);
-    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; textDe: string; durationMs: number; voiceParams: { speedWpm: number } }[] };
-    expect(manifest.tracks).toHaveLength(2056); // 2035 بعد D179 + word-thema + ki-1..20 — أحدث كتلة تثبّت العدد الكلي
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; file: string; textDe: string; durationMs: number; voiceParams: { speedWpm: number } }[] };
+    // ثابت مشتقّ (D188): المانيفست = ملفات opus على القرص واحداً لواحد (لا مسار يتيم ولا ملف بلا مسار) — كان عدداً مكتوباً (2056)
+    const opusOnDisk = execFileSync("find", [CONTENT, "-name", "*.opus"], { encoding: "utf8" }).trim().split("\n").filter(Boolean).map((p) => p.slice(CONTENT.length + 1)).sort();
+    expect([...manifest.tracks.map((t) => t.file)].sort()).toEqual(opusOnDisk);
     expect(manifest.tracks.find((t) => t.id === "word-thema")!.durationMs).toBeLessThan(1500);
     const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
     expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);

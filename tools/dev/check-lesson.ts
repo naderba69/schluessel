@@ -1,7 +1,7 @@
 // tools/dev/check-lesson.ts — فحص نصوص درس قبل الالتزام (N-104: كانت أداة خارج المستودع تضيع مع كل انقطاع)
 // ثلاثة فحوص على كل جملة ألمانية:
 //   front    — قانون الجبهة (الدستور 13): كلمة غير مدروسة حتى هذا الدرس (frontViolations من tools/lib/lesson-upgrade)
-//   later    — تسرّب كلمة درسٍ لاحق في المسار عبر الجذوع (N-103)
+//   later    — تسرّب كلمة درسٍ لاحق (N-103 — D188: المنطق نفسه الذي في الحارس الرسمي: withLaterForms/laterWordLeak · لا منطق ثانٍ هنا)
 //   official — تطابق حرفي مع نصوص SD1/A2 الرسمية (D108) — يتطلّب .dev-cache (bash tools/dev/fetch-official.sh)
 // الاستعمال:
 //   npx tsx tools/dev/check-lesson.ts a1-u12-d2                      ← نصوص الدرس نفسه (ziel/einstieg/uebung/quiz/zusammenfassung)
@@ -15,7 +15,7 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadLessons, loadWords } from "../lib/content-disk.js";
 import { frontViolations, taughtUpTo, pathOrder, germanOnly } from "../lib/lesson-upgrade.js";
-import { knownStems, contentTokens, deumlaut, stem } from "../lib/vocab-forms.js";
+import { FULL, LATER, knownForms, knownStems, contentTokens, deumlaut, laterWordLeak, withLaterForms } from "../lib/vocab-forms.js";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const CONTENT = resolve(ROOT, "content");
@@ -44,28 +44,29 @@ if (!lesson) {
 // الأعلام المسموحة: من السطر أو من إدخال الترقية (properNouns)
 const upgradeFile = resolve(CONTENT, "upgrades/a1-lesson-upgrade.json");
 let autoNames: string[] = [];
+let fixedPhrases: { de: string; whyAr: string }[] = [];
 if (existsSync(upgradeFile)) {
-  const up = JSON.parse(readFileSync(upgradeFile, "utf8")) as { lessons?: { lessonId: string; properNouns?: string[] }[] };
-  autoNames = up.lessons?.find((e) => e.lessonId === lessonId)?.properNouns ?? [];
+  const up = JSON.parse(readFileSync(upgradeFile, "utf8")) as { lessons?: { lessonId: string; properNouns?: string[]; fixedPhrases?: { de: string; whyAr: string }[] }[] };
+  const e = up.lessons?.find((x) => x.lessonId === lessonId);
+  autoNames = e?.properNouns ?? [];
+  fixedPhrases = e?.fixedPhrases ?? []; // D188: الصيغ الثابتة المعلنة من SD1 — تُسقط إصابة official المطابقة لها وحدها
 }
 const names = (opt("names") ?? autoNames.join(",")).split(",").map((s) => s.trim()).filter(Boolean);
 const allow = new Set(names.flatMap((n) => contentTokens(n)));
-const taught = knownStems(taughtUpTo(lesson, lessons, words));
-
-// كلمات الدروس اللاحقة (N-103): جذع ← معرّف الكلمة (درس أول ظهورها)
-const laterStems = new Map<string, string>();
+const taughtWords = taughtUpTo(lesson, lessons, words);
+// D188: المجموعة نفسها التي يستعملها الحارس الرسمي (inspectLesson): المدروس + صيغ اللاحق بعلامة «<» + المستعارات المعلنة
+const taught = withLaterForms(knownStems(taughtWords), taughtWords, words);
+for (const b of lesson.praesentation.borrowedWords) { const f = deumlaut(b.form.toLowerCase()); taught.add(f); taught.add(FULL + f); }
+// صيغة لاحقة ← معرّف كلمتها (درس أول ظهورها) — للتسمية في المخرج فقط
+const taughtIds = new Set(taughtWords.map((w) => w.id));
 const firstLesson = new Map<string, (typeof lessons)[number]>();
 for (const l of [...lessons].sort((a, b) => pathOrder(a) - pathOrder(b)))
   for (const id of l.praesentation.wordIds) if (!firstLesson.has(id)) firstLesson.set(id, l);
-for (const l of lessons) {
-  if (pathOrder(l) <= pathOrder(lesson)) continue;
-  for (const id of l.praesentation.wordIds) {
-    if (firstLesson.get(id) !== l) continue;
-    const w = words.find((x) => x.id === id);
-    if (!w) continue;
-    const base = w.de.replace(/\s*\([^)]*\)\s*/g, " ").replace(/^(der|die|das) /, "").replace(/^sich /, "").trim();
-    for (const t of contentTokens(base)) for (const s of stem(deumlaut(t))) if (!laterStems.has(s)) laterStems.set(s, `${id}(${l.id.replace("a1-", "")})`);
-  }
+const laterOwner = new Map<string, string>();
+for (const w of words) {
+  if (taughtIds.has(w.id)) continue;
+  const l = firstLesson.get(w.id);
+  for (const f of knownForms(w)) { const d = deumlaut(f); if (!laterOwner.has(d)) laterOwner.set(d, `${w.id}(${(l?.id ?? "؟").replace("a1-", "")})`); }
 }
 
 // النصوص الرسمية (D108) — اختيارية
@@ -117,10 +118,12 @@ for (const line of lines) {
   const later = new Set<string>();
   for (const t of contentTokens(de)) {
     if (allow.has(t)) continue;
-    for (const s of stem(deumlaut(t))) { const hit = laterStems.get(s); if (hit) later.add(`${t}→${hit}`); }
+    const d = deumlaut(t);
+    if (taught.has(LATER + d) && laterWordLeak(d, taught)) later.add(`${t}→${laterOwner.get(d) ?? "؟"}`);
   }
   const n = norm(de);
-  const off = official
+  const declared = fixedPhrases.some((p) => n === norm(p.de) || n.includes(norm(p.de)));
+  const off = declared ? [] : official
     .filter((o) => n.length >= 12 && (o.text === n || o.text.includes(n) || (n.includes(o.text) && o.text.split(" ").length >= 4)))
     .slice(0, 2)
     .map((o) => `${o.src}«${o.text}»`);
