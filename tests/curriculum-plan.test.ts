@@ -281,9 +281,13 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(cs.find((c) => c.lessonId === "a1-u12-d2")).toMatchObject({
       status: "done", missing: [], headwords: ["der Blick", "das Internet", "die Information, -en"], size: 15,
     });
-    expect(cs.filter((c) => c.status === "done")).toHaveLength(46); // N-118: العدّ من الملف لا من الوثائق (كانت الوثائق تزيد واحداً منذ D168)
+    // D179: zum Beispiel · der Satz · glauben فوق كلماته الاثنتي عشرة ⇒ 15 كلمة
+    expect(cs.find((c) => c.lessonId === "a1-u12-d4")).toMatchObject({
+      status: "done", missing: [], headwords: ["zum Beispiel/z. B.", "Satz, -ä, e", "glauben"], size: 15,
+    });
+    expect(cs.filter((c) => c.status === "done")).toHaveLength(47); // N-118: العدّ من الملف لا من الوثائق (كانت الوثائق تزيد واحداً منذ D168)
     expect(cs.find((c) => c.status === "pending")).toMatchObject({
-      lessonId: "a1-u12-d4", headwords: ["zum Beispiel/z. B.", "Satz, -ä, e", "glauben"], missing: ["zum Beispiel/z. B.", "Satz, -ä, e", "glauben"],
+      lessonId: "a1-u12-d5", headwords: ["das Thema"], missing: ["das Thema"],
     });
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
     expect(next.lessonId).toBe("a1-u13-d1");
@@ -324,12 +328,12 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
 
   it("e-plan-source · e-plan-headword · e-plan-complete", () => {
     expect(codes(checkPlan({ ...plan, sourceList: "goethe-xx" }, ctx))).toEqual(["e-plan-source"]);
-    // إسناد pending الذي لم يُنتَج بعد: بعد D177 صار التالي a1-u12-d4 (u12-d3 بلا نواة)؛ تغيير كلمة منه يترك الأصلية غير مخططة.
+    // إسناد pending الذي لم يُنتَج بعد: بعد D179 صار التالي a1-u12-d5 (الأخير — das Thema)؛ تغيير كلمته يترك الأصلية غير مخططة.
     const typo = clonePlan();
-    typo.core!.lessons.find((c) => c.lessonId === "a1-u12-d4")!.headwords[2] = "glauben!";
+    typo.core!.lessons.find((c) => c.lessonId === "a1-u12-d5")!.headwords[0] = "das Thema!";
     const issues = checkPlan(typo, ctx);
     expect(codes(issues)).toEqual(["e-plan-complete", "e-plan-headword"]);
-    expect(issues.find((i) => i.code === "e-plan-complete")!.message).toMatch(/: glauben$/u);
+    expect(issues.find((i) => i.code === "e-plan-complete")!.message).toMatch(/: das Thema$/u);
   });
 
   it("e-plan-taught: إسناد done ولم يُعلَّم ⇒ خطأ لكل كلمة · done ومُعلَّم بدليل حقيقي (a1-u1-d2 بعد ترقيته — D119) ⇒ صفر", () => {
@@ -367,15 +371,14 @@ describe("D113 — المدقِّق: كل قاعدة تُطلق في حالته�
 
   it("e-plan-core-lesson (توليف · غير موجود) · e-plan-core-load (> 18) · e-plan-text-fix", () => {
     const integ = clonePlan();
-    integ.core!.lessons.find((c) => c.lessonId === "a1-u12-d4")!.lessonId = "a1-u3-d6"; // النواة لا تُسند إلى درس التوليف (إسناد ما زال pending — نقل إسناد done يطلق w-plan-elsewhere أيضاً)
+    integ.core!.lessons.find((c) => c.lessonId === "a1-u12-d5")!.lessonId = "a1-u3-d6"; // النواة لا تُسند إلى درس التوليف (إسناد ما زال pending — نقل إسناد done يطلق w-plan-elsewhere أيضاً)
     expect(codes(checkPlan(integ, ctx))).toEqual(["e-plan-core-lesson"]);
     const ghost = clonePlan();
-    ghost.core!.lessons.find((c) => c.lessonId === "a1-u12-d4")!.lessonId = "a1-u12-d7";
+    ghost.core!.lessons.find((c) => c.lessonId === "a1-u12-d5")!.lessonId = "a1-u12-d7";
     expect(codes(checkPlan(ghost, ctx))).toEqual(["e-plan-core-lesson"]);
     const heavy = clonePlan(); // a1-u9-d1 فيه 18 كلمة — أي إسناد يتجاوز السقف
-    const u12d4 = heavy.core!.lessons.find((c) => c.lessonId === "a1-u12-d4")!; // إسناد ما زال pending بثلاث كلمات (u12-d5 بكلمة واحدة — نقلها يفرغه فيطلق w-plan-mark-done)
-    u12d4.headwords = u12d4.headwords.filter((h) => h !== "glauben");
-    heavy.core!.lessons.push({ lessonId: "a1-u9-d1", headwords: ["glauben"], status: "pending" });
+    // D179: لم يبقَ pending إلا u12-d5 بكلمة واحدة (نقلها يفرغه فيطلق w-plan-mark-done) ⇒ إسناد ثانٍ لـdas Thema إلى u9-d1 (18 + 1 > 18) من دون حذف الأصلي
+    heavy.core!.lessons.push({ lessonId: "a1-u9-d1", headwords: ["das Thema"], status: "pending" });
     expect(codes(checkPlan(heavy, ctx))).toEqual(["e-plan-core-load"]);
     const noFile = new Set([...paths].filter((x) => x !== "words/fuss.json"));
     expect(codes(checkPlan(plan, { ...ctx, paths: noFile }))).toEqual(["e-plan-text-fix"]);

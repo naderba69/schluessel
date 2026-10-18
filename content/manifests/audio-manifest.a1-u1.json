@@ -17609,6 +17609,66 @@
       "rmsDb": -17.01
     },
     {
+      "id": "word-zum-beispiel",
+      "file": "words/audio/de-DE/word-zum-beispiel.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "zum Beispiel.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 1280,
+      "sizeBytes": 5787,
+      "hash": "sha256:a8de388d35111561ef54e0d4b7d497f634b13a705f1aefb8127a2ad48d662c83",
+      "pcmSha256": "e5c58dd5cf43a7df4be444abbb117da85626600093f6162715bc2886de097bb4",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "word-satz",
+      "file": "words/audio/de-DE/word-satz.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Satz.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 827,
+      "sizeBytes": 3987,
+      "hash": "sha256:4388338d2ebecb71c8c402106dd991f25c5d37ea4f919c750c03b17b1d28e6e3",
+      "pcmSha256": "d26ba84a48f32110ee0e1ae14cfc9e280568292d19a51c8323190bdc43f1c529",
+      "rmsDb": -17.25
+    },
+    {
+      "id": "word-glauben",
+      "file": "words/audio/de-DE/word-glauben.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "glauben.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 746,
+      "sizeBytes": 3649,
+      "hash": "sha256:2cce5e9139e1bc67657e25a1a29ec5a28b0ab6dd4f0bb5d74d7ba5b7c464a40e",
+      "pcmSha256": "c47bc842dc15de9d24b558dcff26f0a8cdd0eedbb2d1fc20102c6404d3f729cc",
+      "rmsDb": -17.06
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -42434,6 +42494,446 @@
       "hash": "sha256:27d8d92d22268a3901115fd2c7aa9b43331608c95785e31df33761b35827661c",
       "pcmSha256": "3bd1d67d7dc59e42239487c75a01f7a7c32cdb7b77787de2a2d3478abb7c0b5a",
       "rmsDb": -17.44
+    },
+    {
+      "id": "kh-1",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 162,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Lena! Wie war dein zweiter Tag in der Schule?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 3706,
+      "sizeBytes": 16754,
+      "hash": "sha256:9f9ee887ab844e51d62dd2d448531b28eeec85e258fb7c12e28adfe29548e3df",
+      "pcmSha256": "576e937a9561f64b4b97b792495ce3e1f74c3c7629c0b5a4a9c29e01d90c733a",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "kh-2",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 135,
+        "lengthScale": 1.32
+      },
+      "textDe": "Gut, aber lang. Wir hatten Deutsch, dann Englisch, und zuletzt Musik. Und du?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 5784,
+      "sizeBytes": 26872,
+      "hash": "sha256:01a5502dda088c2a18577ff614f5318b4638598671a00141370c46fc4d7fc36e",
+      "pcmSha256": "a52100e227d658431e004b2f2c00ba0f3c309f38b1231097e8abe8cf5841a588",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "kh-3",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Auch gut. Ich habe in der Schule zehn Sätze geschrieben — zum Beispiel über meine Reise.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 5877,
+      "sizeBytes": 26511,
+      "hash": "sha256:c667b4b71eb1aca1a97a50c77bc164e684a4ecdca802b61ab1964bbb5d4d167e",
+      "pcmSha256": "0a697066102ca4be92954de51dbc7bd0366e71770a28896be4da6a6d79f48fe8",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "kh-4",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! Und jetzt mein Plan für Samstag: Ich habe eine Idee. Was ist deine Meinung?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 6408,
+      "sizeBytes": 29720,
+      "hash": "sha256:37088c5dac1cd7bff1e9136c0a54f7daf91be443e847530d7889337552c1f6e1",
+      "pcmSha256": "ba75ff80a91b89fe76b4b5ca605a7580c1963f8d542ba40dc83f6c8f03772414",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "kh-5",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 119,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, gern. Was ist deine Idee?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 3033,
+      "sizeBytes": 14239,
+      "hash": "sha256:251cc4318eb4db5ee4fd9d14bd0a14603ce6e4bae98b6b55029c9352838b2870",
+      "pcmSha256": "4252f74865d34726ddf3531860ab7d613acc420e163560a41f2a8dadfe5734b9",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "kh-6",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 167,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wir feiern nicht zu Hause, sondern im Park — denn mein Zimmer ist zu klein.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 5032,
+      "sizeBytes": 23377,
+      "hash": "sha256:f9ae94c2778681820b98192f1567f4679917b68057eb3ed6265bb707cf05ad09",
+      "pcmSha256": "7b1460579913f44d19548878a2c5e007bef3bc8ec7d0847bce5cae8e86431871",
+      "rmsDb": -17.44
+    },
+    {
+      "id": "kh-7",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Eine gute Idee! Aber vielleicht regnet es. Dann ist der Park keine gute Idee.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 5413,
+      "sizeBytes": 24424,
+      "hash": "sha256:e94403551a44e075605ecda49925b861ac9ebfc1ffa3cd3401c96c79662d1606",
+      "pcmSha256": "f8a4557c359f75c6404fcedad8f1bccdc032ad5a4fc57714ee77fecc98497c8a",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "kh-8",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das stimmt. Leider ist das Wetter im April oft schlecht. Deswegen habe ich noch einen Vorschlag.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 6520,
+      "sizeBytes": 30298,
+      "hash": "sha256:3ae7466f60d2fb3eb414454660eee3dd62c3bd83edd65df886e0d6934c3d3c7b",
+      "pcmSha256": "0bd467bc453bf189b1a2dbc7becd1e27ea877668a89de78f25cffe068b917df6",
+      "rmsDb": -17.37
+    },
+    {
+      "id": "kh-9",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 149,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und was ist der Vorschlag?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 2011,
+      "sizeBytes": 9387,
+      "hash": "sha256:2c10d7a06e41a00f0331ed4b2424d768f9622070d5331303edd096d3388a4665",
+      "pcmSha256": "c3edc6661ca5c3cff9cb6edde357c666c3e238a97cd1017b9f04eae106c308cb",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "kh-10",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 155,
+        "lengthScale": 1.32
+      },
+      "textDe": "Wir feiern bei mir, denn meine Mutter macht einen Kuchen. Meiner Meinung nach ist das ein guter Plan.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 6968,
+      "sizeBytes": 32224,
+      "hash": "sha256:89e1bd9bd5f29615869af28f7007425a45f2c2094c8110f084869125bc2652dd",
+      "pcmSha256": "144d87ddb1da165359c0a35fb344e49a3372c3a78be3dd71c2b2ca509f4582ce",
+      "rmsDb": -17.3
+    },
+    {
+      "id": "kh-11",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ich glaube, das ist ein guter Plan. Kommen viele Freunde?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 4275,
+      "sizeBytes": 19461,
+      "hash": "sha256:b549eaffafacd09705f237825d95d7209d3c3bd7c08858094d69cb568fd79553",
+      "pcmSha256": "934beefc281cc64890e1fdfc942572da720c189ece9684efe1b20ac886c1d2e2",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "kh-12",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 126,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nicht viele, sondern nur sechs — zum Beispiel zwei Freundinnen aus meiner Klasse.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 5720,
+      "sizeBytes": 26411,
+      "hash": "sha256:5bb2b56736d2d7882c9529a029aab00d45c782623d9a7c703da7f56f1a81cf57",
+      "pcmSha256": "c11e4671e5ebed805908a54c5ac0b87c7b3f7a535b29e9ca0139574127a3fe28",
+      "rmsDb": -17.28
+    },
+    {
+      "id": "kh-13",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 172,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und was machen wir? Essen wir, und dann hören wir Musik?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 3846,
+      "sizeBytes": 17415,
+      "hash": "sha256:3790638b06662543ab4599e0d48bd2d906cee145a46cd03409d63a41224ec35e",
+      "pcmSha256": "99530262b118ccf11fc58cbc46d2aa4796f59ee5a574c29449ec32cf0f896828",
+      "rmsDb": -17
+    },
+    {
+      "id": "kh-14",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Wir essen Kuchen, dann spielen wir ein Spiel, und zuletzt sehen wir einen Film.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 5976,
+      "sizeBytes": 27614,
+      "hash": "sha256:bd451f5c26fc30452305f11cd3b6c5cbf25613e6f290a4407486b20e625b709b",
+      "pcmSha256": "b24208d16d953c0694d96a22fde913cd25ccd1de45eabdc7f4a3ea8284c6b7d9",
+      "rmsDb": -17.51
+    },
+    {
+      "id": "kh-15",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 146,
+        "lengthScale": 1.32
+      },
+      "textDe": "Einen Film? Vielleicht einen Film über Italien — denn du fährst im Juni nach Rom!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 5773,
+      "sizeBytes": 25983,
+      "hash": "sha256:2f3fcc754219387d8bb6c1fc4b3527f2bdce2646c49ace580b6aa52cd65423f6",
+      "pcmSha256": "80e1781014ff14dad74d78b085493d7e676a860a8ac62d47118386baca531645",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "kh-16",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 147,
+        "lengthScale": 1.32
+      },
+      "textDe": "Das ist eine gute Idee! Leider habe ich keinen Film über Italien. Hast du einen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 6104,
+      "sizeBytes": 28502,
+      "hash": "sha256:1f767f61118076cc2f57a33d22720c8ca658859f45296431b2296e42f2f2cb0a",
+      "pcmSha256": "5198c45d6161866e0372884a82981a0a0312ee01d06cf0a3e76996846934c46a",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "kh-17",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 154,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein, aber mein Vater hat vielleicht einen. Ich frage ihn, und dann schreibe ich dir.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 5854,
+      "sizeBytes": 26510,
+      "hash": "sha256:0b27de5a77d1be8e7154efa6d7becb5ddcbafbd1b3bac6e09875187ba0af5daa",
+      "pcmSha256": "abb633f1bdbb936b1b16ff94a1ba922ec7e8aec93d4c3aeabfaaf87be3ff8013",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "kh-18",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 133,
+        "lengthScale": 1.32
+      },
+      "textDe": "Danke! Und was glaubst du: Kuchen oder Eis? Was ist deine Meinung?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 5400,
+      "sizeBytes": 25008,
+      "hash": "sha256:7e016c2914a0b67c2eab413a4fe92f18c2c62ec199b50b92afc5d445f769cc29",
+      "pcmSha256": "121bad2c17ac7e6b91692c0647d83cc3962b63855ed9da1b5d23b9e3e9bd6b4f",
+      "rmsDb": -17.61
+    },
+    {
+      "id": "kh-19",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 128,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nicht Kuchen oder Eis, sondern Kuchen und Eis! Das ist mein Vorschlag.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 5633,
+      "sizeBytes": 25294,
+      "hash": "sha256:c6f7e341330f9196465b7b388b4a7c2ecc45cad4065ebaeadea3ffbecae8271f",
+      "pcmSha256": "a15945c7688a5de0b05d34785c95afd38a9ef41731cdd7ea34e315158a1d191a",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "kh-20",
+      "file": "audio/scripts/a1-u12-d4-der-plan-fuer-samstag/kh-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 112,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sehr gut! Dann bis morgen, Yusuf!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d4"
+      ],
+      "durationMs": 3224,
+      "sizeBytes": 15150,
+      "hash": "sha256:7187d3501141f73a0c03452e90a9848f2803e410518d0db757e2bba8b897151d",
+      "pcmSha256": "e148beb3d4f4fed98c9e85260a98fe7373226579eb2a9d60b123a76dd6472740",
+      "rmsDb": -17.15
     }
   ],
   "characterVoices": {
