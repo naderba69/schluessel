@@ -9,6 +9,7 @@ export const PhoneticRisk = z.enum([
   "ch-ich-laut", "ch-ach-laut", "umlaut-u", "umlaut-o", "umlaut-a",
   "vowel-long-short", "auslaut-d", "auslaut-b", "auslaut-g",
   "r-uvular", "sp-st-initial", "ig-ending", "double-consonant", "z", "v-f",
+  "w-v", "ie-short", "ng-velar", // D191 (N-002 — قرار المالك D182): w=[v] · «ie» قصيرة · [ŋ] في ‑ng وقبل k
 ]);
 export type PhoneticRisk = z.infer<typeof PhoneticRisk>;
 

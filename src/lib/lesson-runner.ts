@@ -2,6 +2,7 @@
 // الربط: E01 (المحطات) · §2.5 (الاسترجاع) · F121 (محاولة قبل كشف) · D29 (حصة واحدة متصلة)
 import type { Lesson, Word } from "../../content/schemas/index.js";
 import type { GrammarRule } from "./grammar-discovery.js";
+import { pronunciationHint } from "./phonetic-risks.js";
 
 /** بطاقة المصيدة — من مخطط الدرس مباشرة (لا نكرر التعريف) */
 export type WarningCardData = Lesson["zusammenfassung"]["warningCards"][number];
@@ -88,7 +89,9 @@ function explainWord(w: Word, known: ReadonlyMap<string, Word>): string {
   const members = familyForms(w, known);
   const family = members.length ? ` — عائلة: ${members.join("، ")}` : "";
   const sentence = w.sampleSentence ? ` مثال: «${w.sampleSentence.de}» = ${w.sampleSentence.ar}` : "";
-  return `${fullForm(w)}${gender} = ${w.ar.join("، ")}${family}.${sentence}`;
+  const hint = pronunciationHint(w.phoneticRisks); // D191: أعلام النطق تصل إلى الشاشة (القانون 12)
+  const pron = hint ? ` انتبه للنطق: ${hint}.` : "";
+  return `${fullForm(w)}${gender} = ${w.ar.join("، ")}${family}.${sentence}${pron}`;
 }
 
 /**

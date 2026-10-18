@@ -287,3 +287,35 @@ describe("D106 — إعادة وسم أعلام الخطر: المكتشَف ∪
     }
   }, 60_000);
 });
+
+describe("D191 (N-002) — ثلاثة أعلام نطق جديدة في القائمة المقفلة: w-v · ie-short · ng-velar", () => {
+  it("الكشف من الرسم + النطق المقيس: wer/Wort/schwer ⇒ w-v · vierzig/vielleicht ⇒ ie-short · lang/Wohnung/Onkel ⇒ ng-velar", () => {
+    expect(detectPhoneticRisks("wer", "vˈeːɾ")).toContain("w-v");
+    expect(detectPhoneticRisks("das Wort", "vˈɔɾt")).toContain("w-v");
+    expect(detectPhoneticRisks("schwer", "ʃvˈeːɾ")).toContain("w-v");
+    expect(detectPhoneticRisks("vierzig", "fˈɪɾtsɪç")).toContain("ie-short");
+    expect(detectPhoneticRisks("vielleicht", "fɪlˈaɪçt")).toContain("ie-short");
+    expect(detectPhoneticRisks("lang", "lˈaŋ")).toContain("ng-velar");
+    expect(detectPhoneticRisks("die Wohnung", "vˈoːnʊŋ")).toContain("ng-velar");
+    expect(detectPhoneticRisks("der Onkel", "ˈɔŋkəl")).toContain("ng-velar");
+  });
+  it("لا إنذار كاذب: vier (ie طويلة) · feiern (ei+e لا ie) · Spanien/Familie (i‑e مقطعان) · Vase (v لا w) · Anna (n لا ŋ)", () => {
+    expect(detectPhoneticRisks("vier", "fˈiːɾ")).not.toContain("ie-short");
+    expect(detectPhoneticRisks("feiern", "fˈaɪɜn")).not.toContain("ie-short");
+    expect(detectPhoneticRisks("Spanien", "ʃpˈɑnɪʲən")).not.toContain("ie-short");
+    expect(detectPhoneticRisks("die Familie", "famˈiːlɪʲə")).not.toContain("ie-short");
+    expect(detectPhoneticRisks("die Vase", "vˈɑːzə")).not.toContain("w-v");
+    expect(detectPhoneticRisks("Anna", "ˈanɑː")).not.toContain("ng-velar");
+    expect(plausibleRisk("ie-short", "feiern", "fˈaɪɜn")).toBe(false);
+    expect(plausibleRisk("w-v", "vier", "fˈiːɾ")).toBe(false);
+    expect(plausibleRisk("ng-velar", "der Onkel", "ˈɔŋkəl")).toBe(true);
+  });
+  it("كل علَم في القائمة المقفلة له تنبيه عربي يصل إلى بطاقة العرض (القانون 12) — ولا نص إنجليزي", async () => {
+    const { PhoneticRisk } = await import("../content/schemas/index.js");
+    const { PHONETIC_RISK_HINT, pronunciationHint } = await import("../src/lib/phonetic-risks.js");
+    for (const r of PhoneticRisk.options) expect(PHONETIC_RISK_HINT[r], r).toMatch(/\p{Script=Arabic}/u);
+    expect(Object.keys(PHONETIC_RISK_HINT).sort()).toEqual([...PhoneticRisk.options].sort());
+    expect(pronunciationHint([])).toBe("");
+    expect(pronunciationHint(["w-v", "ng-velar"])).toContain("ڤ");
+  });
+});

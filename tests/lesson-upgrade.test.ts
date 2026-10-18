@@ -4149,7 +4149,7 @@ describe("D115 — أدوات القياس", () => {
     // النواة D113 (da · daneben · weg sein) بالمولِّد — goetheList مشتقة · weg-sein قطعة بجانب der Weg (u7-d1)
     const w = (id: string) => words.find((x) => x.id === id)!;
     for (const id of ["da", "daneben"]) expect([w(id).wordClass, w(id).goetheList, w(id).usedInLessons]).toEqual(["adverb", ["A1", "A2"], ["a1-u6-d4"]]);
-    expect([w("weg-sein").wordClass, w("weg-sein").chunk, w("weg-sein").goetheList, w("weg-sein").phoneticRisks]).toEqual(["chunk", true, ["A1", "A2"], ["auslaut-g"]]);
+    expect([w("weg-sein").wordClass, w("weg-sein").chunk, w("weg-sein").goetheList, w("weg-sein").phoneticRisks]).toEqual(["chunk", true, ["A1", "A2"], ["auslaut-g", "w-v"]]); // +w-v منذ D191 (weg = [vɛk])
     expect(w("weg").de).toBe("Weg");
     expect(["word-da", "word-daneben", "word-weg-sein"].map((id) => tracks.get(id)?.textDe)).toEqual(["da.", "daneben.", "weg sein."]);
     // أمثلة البطاقات القديمة الاثنا عشر «… ist PREP dem/der …» رتيبة («Das Bild ist oben.» · «Der Keller ist unten.») — صارت جملاً متنوعة: المكان بـsteht/hängt/ist والوضع بـstellen/legen/hängen
