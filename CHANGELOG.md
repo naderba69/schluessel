@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 2026-10-18 — الدفعة 139: D184 — صيانة (د) 1/7: N-102 + N-110 مغلقتان · حارس السرعة في المدقّق
+- **أدوات:** `interleaveSupported` مشتركة (رمز كامل · صيغ مسجَّلة · جذع + نهاية مغلقة · المنفصل بجزئه · deumlaut · ‑nen/‑innen · speakText) · `e-upgrade-interleave` في checkUpgrade · `w-audio-speech-rate` (>200 · ≥3 كلمات) في validate-content.
+- **اختبارات:** `tests/interleave.test.ts` جديد (78 درساً + ضوابط) · حلقات الكتل الـ35 في lesson-upgrade.test.ts على الدالة نفسها (−26 سطراً) · 723/723.
+- **محتوى (interleavedWith فقط — بلا نص):** 94 استدعاءً معلناً خاطئاً أُزيل (70 في 21 درساً مُرقّى + 24 في 12 توليفاً) و124 أُضيف في 86 محطة من 39 درساً.
+- **وثائق:** الموجّه 3.41 · N-102/N-110 مغلقتان ← D184 · التقرير أُعيد توليده.
+
 ## 2026-10-18 — الدفعة 138: D183 — N-119 (أ) منفَّذة (kg-17 + ki-6) · المراجعة الختامية الثانية · خطآن صريحان في u12-d6 · تقرير المالك ≤400 سطر
 - **قصة (N-119 مغلقة):** kg-17 «Am Samstag fahre ich mit dem Zug in die Schweiz. Um sechs Uhr bin ich bei dir.» · ki-6 «Am Samstag bist du hier — dann fahren wir an einen See.» (إملاء — lengthScale 1.65 ⇒ 131 كلمة/دقيقة) · بندا u12-d3/u12-d5 حُدّثا · interleavedWith urlaub ⇒ samstag · مساران أُعيدا — المانيفست 2056.
 - **مراجعة:** 60/60 · 48/48 · D108 عيّنة ببذرة 183 (u2-d2 · u2-d1 · u10-d3 · u1-d6 · u12-d6) · التواريخ متصلة 3–15 أبريل.

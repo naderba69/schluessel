@@ -10,7 +10,7 @@ import {
 import { loadAudioTracks, loadGrammarRules, loadLessons, loadUpgradePlans, loadWords } from "../tools/lib/content-disk.js";
 import {
   MISSPELLING_DISTANCE_MAX, checkGrammarRules, checkUpgrade, editDistance, fillInWordGap, frontViolations, germanOnly, inspectLesson,
-  itemTexts, taughtUpTo, wordAppears, type UpgradeContext,
+  interleaveSupported, itemTexts, taughtUpTo, wordAppears, type UpgradeContext,
 } from "../tools/lib/lesson-upgrade.js";
 import {
   CLOSED, COMPOUND_NUMBER, DA_COMPOUND, DA_COMPOUND_ANCHOR, GRAPHEMES, HUNDREDS_NUMBER, ORDINAL_ANCHOR, ORDINAL_NUMBER, compoundNumberKnown, contentTokens, daCompoundKnown, deumlaut, knownForms, knownStems, numberWordKnown, ordinalKnown,
@@ -564,10 +564,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (fh-1..20) كله في الاستماع والإملاء مرة واحدة — السطر البطيء الوحيد (fh-1 · 105 كلمة/د) إملاءً مع ستة مقاطع كلمات، والتسعة عشر الباقية استماعاً
@@ -1289,15 +1288,11 @@ describe("D115 — أدوات القياس", () => {
     expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
     // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102 — من هذه الكتلة فصاعداً)
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
-    const VERB_STEMS: Record<string, string> = { fliegen: "flieg", fahren: "fahr", gehen: "geh", wohnen: "wohn", kommen: "komm" };
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const stem = VERB_STEMS[ref];
-        const ok = stem ? [...toks].some((t) => t.startsWith(stem)) : [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (sk-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة (sk-3 · sk-7 · sk-15 · sk-20 ≤132) مع خمسة مقاطع كلمات، والأسرع كلها استماعاً
@@ -1388,15 +1383,11 @@ describe("D115 — أدوات القياس", () => {
     expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
     // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102)
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
-    const VERB_STEMS: Record<string, string> = { fliegen: "flieg", fahren: "fahr", kommen: "komm", kosten: "kost", wissen: "weiß", abholen: "holt" };
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const stem = VERB_STEMS[ref];
-        const ok = stem ? [...toks].some((t) => t.startsWith(fold(stem))) : [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (hb-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة (hb-2 · hb-3 · hb-5 · hb-9 · hb-17 ≤132) مع أربعة مقاطع كلمات، والأسرع كلها استماعاً
@@ -1487,11 +1478,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (wt-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة الخمسة (≤132) مع أحد عشر مقطع كلمة (بلا sonne المعروفة)، والأسرع الخمسة عشر كلها استماعاً
@@ -1588,11 +1577,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (za-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة التسعة (≤132) مع خمسة مقاطع كلمات (النواة الثلاث + datum + kalender)، والأسرع الأحد عشر كلها استماعاً
@@ -1695,11 +1682,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (wg-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة الستة (≤132) مع ستة مقاطع كلمات (النواة + gestern · vorgestern · brief · paket)، والأسرع الأربعة عشر كلها استماعاً
@@ -1810,11 +1795,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     expect(l.uebung.stations.find((s) => s.type === "gap-fill")!.interleavedWith).toEqual(expect.arrayContaining(["tante", "telefonieren", "sprechen", "kaufen", "schicken", "schreiben", "satz"]));
@@ -1930,11 +1913,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     expect(l.uebung.stations.find((s) => s.type === "gap-fill")!.interleavedWith).toEqual(expect.arrayContaining(["hotel", "wetter", "april", "kuchen", "musik", "park", "weil"]));
@@ -2052,11 +2033,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     expect(l.uebung.stations.find((s) => s.type === "gap-fill")!.interleavedWith).toEqual(expect.arrayContaining(["bus", "rucksack", "koffer", "geschenk", "regenschirm", "kurs", "lehrerin"]));
@@ -2166,11 +2145,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     expect(l.uebung.stations.find((s) => s.type === "listening")!.interleavedWith).toEqual(expect.arrayContaining(["flughafen", "hotel", "park", "bett", "bus", "nachricht"]));
@@ -2268,11 +2245,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     expect(l.uebung.stations.find((s) => s.type === "listening")!.interleavedWith).toEqual(expect.arrayContaining(["flughafen", "rucksack", "zug", "stadt"]));
@@ -2376,11 +2351,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     expect(l.uebung.stations.find((s) => s.type === "listening")!.interleavedWith).toEqual(expect.arrayContaining(["spritze", "wunde", "finger", "nase"]));
@@ -2480,11 +2453,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     expect(l.uebung.stations.find((s) => s.type === "listening")!.interleavedWith).toEqual(expect.arrayContaining(["finger", "hals", "kurs", "arzt"]));
@@ -2595,11 +2566,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     expect(l.uebung.stations.find((s) => s.type === "gap-fill")!.interleavedWith).toEqual(expect.arrayContaining(["fieber", "erkaltung", "hals"]));
@@ -2719,11 +2688,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     expect(l.uebung.stations.find((s) => s.type === "listening")!.interleavedWith).toEqual(expect.arrayContaining(["hals", "ohr", "bauch"]));
@@ -2842,11 +2809,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (kw-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة الثلاثة (≤132) مع تسعة مقاطع كلمات (النواة الثلاث + hand · zahn · auge · bein · ruecken · bauch)، والأسرع السبعة عشر كلها استماعاً
@@ -2959,11 +2924,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (wk-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة الستة (≤132) مع ستة مقاطع كلمات (النواة + weil · deshalb · notfall)، والأسرع الأربعة عشر كلها استماعاً
@@ -3073,11 +3036,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s", fold(ref) + "t"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (ew-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من ثمانية أسطر بطيئة (≤132) مع ستة مقاطع كلمات (النواة + neulich · damals · notiz · erinnerung)، والأسرع الثمانية كلها استماعاً
@@ -3190,11 +3151,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (st-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من السطر البطيء الوحيد (st-16 ≤132) مع تسعة مقاطع كلمات، والأسرع التسعة عشر كلها استماعاً
@@ -3289,11 +3248,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const ok = [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (tn-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من السطرين البطيئين (tn-12 · tn-20 ≤132) مع ثمانية مقاطع كلمات، والأسرع الثمانية عشر كلها استماعاً
@@ -3390,15 +3347,11 @@ describe("D115 — أدوات القياس", () => {
     expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
     // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102)
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
-    const VERB_STEMS: Record<string, string> = { zeigen: "zeig", kommen: "komm", suchen: "such", geben: "geb", fliegen: "flieg" };
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const toks = new Set(fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" })))).split(/[^a-z0-9]+/));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        const stem = VERB_STEMS[ref];
-        const ok = stem ? [...toks].some((t) => t.startsWith(fold(stem))) : [fold(ref), fold(ref) + "n", fold(ref) + "e", fold(ref) + "en", fold(ref) + "s"].some((f) => toks.has(f));
-        expect(ok, `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (wf-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة (wf-4 · wf-9 · wf-12 · wf-15 · wf-20 ≤132) مع خمسة مقاطع كلمات، والأسرع السبعة كلها استماعاً
@@ -3497,10 +3450,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (vb-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من الأسطر البطيئة (vb-4 · vb-18 · vb-20 ≤132) مع خمسة مقاطع كلمات، والأسرع كلها استماعاً
@@ -3968,10 +3920,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(before.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (mb-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الثلاثة عشر فوق 132 كلها استماعاً (الإملاء سبعة أسطر ≤132 + ثلاثة مقاطع)
@@ -4066,10 +4017,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(before.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (zi-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الاثنا عشر فوق 132 كلها استماعاً (الإملاء ثمانية أسطر ≤132 + مقطعان)
@@ -4155,10 +4105,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(before.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (eg-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الستة عشر فوق 132 كلها استماعاً (الإملاء أربعة أسطر ≤132 + أربعة مقاطع)
@@ -4248,10 +4197,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(before.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (ww-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الثمانية عشر فوق 132 كلها استماعاً (الإملاء سطران ≤132 + ستة مقاطع)
@@ -4343,10 +4291,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(before.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (mw-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الثلاثة عشر فوق 132 كلها استماعاً (الإملاء ثلاثة أسطر ≤132 + خمسة مقاطع)
@@ -4444,10 +4391,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(before.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (mo-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الخمسة عشر فوق 132 كلها استماعاً (الإملاء ثلاثة أسطر ≤132 + خمسة مقاطع)
@@ -4542,10 +4488,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(before.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (fz-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر السبعة فوق 132 كلها استماعاً (الإملاء ثلاثة أسطر ≤132 + خمسة مقاطع)
@@ -4646,10 +4591,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(before.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (pr-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الأحد عشر فوق 132 كلها استماعاً (الإملاء ثلاثة أسطر ≤132 + خمسة مقاطع)
@@ -4756,10 +4700,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (zg-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الأحد عشر فوق 132 كلها استماعاً (الإملاء ثلاثة أسطر ≤132 + خمسة مقاطع)
@@ -4855,10 +4798,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (hh-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الأربعة عشر فوق 132 كلها استماعاً (الإملاء ثلاثة أسطر ≤132 + خمسة مقاطع)
@@ -4949,10 +4891,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (kl-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الاثنا عشر فوق 132 كلها استماعاً (الإملاء ثلاثة أسطر ≤132 + خمسة مقاطع)
@@ -5052,10 +4993,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (ws-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الثمانية فوق 132 كلها استماعاً (الإملاء أربعة أسطر ≤132 + خمسة مقاطع)
@@ -5151,10 +5091,9 @@ describe("D115 — أدوات القياس", () => {
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
-      const text = fold(JSON.stringify(st.items.map((i) => ({ ...i, why: "" }))));
       for (const ref of st.interleavedWith) {
         expect(earlier.has(ref), `${st.type}: ${ref} ليس كلمة درس سابق`).toBe(true);
-        expect(text.includes(fold(ref).slice(0, 4)), `${st.type}: ${ref} لا يظهر في بنود المحطة`).toBe(true);
+        expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
     // الحوار الجديد (km-1..20) كله في الاستماع والإملاء مرة واحدة — والأسطر الثلاثة عشر فوق 132 كلها استماعاً (الإملاء أربعة أسطر ≤132 + خمسة مقاطع)

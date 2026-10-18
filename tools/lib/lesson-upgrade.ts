@@ -175,6 +175,33 @@ export function wordAppears(w: Word, tokens: ReadonlySet<string>): boolean {
   });
 }
 
+
+/**
+ * N-102/N-110 (D184 — بإذن المالك): الاستدعاء المعلن في المحطة (interleavedWith) يُقبل فقط إن ظهرت الكلمة في نصوص
+ * بنود المحطة (speakText ضمنها) **رمزاً كاملاً** أو صيغةً مسجَّلة لها في ملفها (praesens3s · perfekt بلا hat/ist ·
+ * praeteritum · imperative · الجمع) أو جذعَها + نهاية تصريف/جمع/نعت مغلقة (e · st · t · en · et · te · ten · est · n · s · er · es · em · nen · innen).
+ * المقارنة عبر Word.de (بأومالوته الحقيقي) مطويّاً بـdeumlaut على الطرفين — لا عبر المعرّف ASCII (muede/aerztin: حالة N-110).
+ * كان الفحص القديم في الكتل يقبل أول أربعة أحرف (geschaeft ≈ Geschenk · schweiz ≈ Schwester) — N-102.
+ */
+export const INFLECTION_SUFFIX = /^(?:e|st|t|en|et|te|ten|est|n|s|er|es|em|nen|innen)?$/u;
+export function interleaveSupported(w: Word, texts: readonly string[]): boolean {
+  const toks = new Set(contentTokens(germanOnly(texts.join("\n"))).map(deumlaut));
+  const aux = new Set(["hat", "ist", "sich", "sind", "haben"]);
+  const forms = knownForms(w).map(deumlaut).filter((f) => !CLOSED.has(f) && !aux.has(f));
+  if (forms.some((f) => toks.has(f))) return true;
+  const base = contentTokens(withoutGloss(w.de).replace(/^(der|die|das) /, "").replace(/^sich /, "")).map(deumlaut);
+  const open = base.filter((t) => !CLOSED.has(t));
+  // الفعل المنفصل في المضارع (stehe … auf): رأس الصيغة الثالثة المسجَّلة (steht) جذعٌ أيضاً — والجزء المنفصل يُشترط ظهوره
+  const p3 = contentTokens(w.forms?.praesens3s ?? "").map(deumlaut);
+  const particle = p3.length > 1 ? p3.slice(1) : [];
+  if (particle.some((pt) => !toks.has(pt))) return false;
+  const heads = [...(open.length ? open : base), ...(p3.length > 1 && !aux.has(p3[0]) ? [p3[0]] : [])];
+  return heads.some((h) => {
+    const stems = new Set([h.replace(/(?:en|n)$/u, ""), h.replace(/(?:et|t)$/u, "")]);
+    return [...stems].some((st) => st.length >= 3 && [...toks].some((t) => t.startsWith(st) && INFLECTION_SUFFIX.test(t.slice(st.length))));
+  });
+}
+
 const firstIssue = (e: { issues: { message: string; path: PropertyKey[] }[] }) => {
   const i = e.issues[0];
   return i ? `${i.path.length ? i.path.join(".") + ": " : ""}${i.message}` : "شكل غير صالح";
@@ -260,6 +287,17 @@ function checkPracticePart(
     const before = new Set(earlier.flatMap((l) => l.praesentation.wordIds));
     const notYet = lesson.warmup.cardIds.filter((id) => !before.has(id));
     if (notYet.length) err("e-upgrade-warmup", `${lesson.id}: بطاقات الاستدعاء لم تُدرَّس قبل هذا الدرس: ${notYet.join("، ")} — الاستدعاء لما سبق (F121)`);
+    // N-102/N-110 (D184): الاستدعاء المعلن في كل محطة كلمةُ درسٍ سابق وتظهر فعلاً في بنودها (رمزاً كاملاً أو صيغة مسجَّلة)
+    const byId = new Map(ctx.words.map((w) => [w.id, w]));
+    lesson.uebung.stations.forEach((st, si) => {
+      const stationTexts = st.items.flatMap((item) => itemTexts(item));
+      for (const ref of st.interleavedWith) {
+        const w = byId.get(ref);
+        if (!w || !before.has(ref)) { err("e-upgrade-interleave", `${lesson.id} محطة ${si + 1} (${st.type}): الاستدعاء المعلن «${ref}» ليس كلمة درس سابق`); continue; }
+        if (!interleaveSupported(w, stationTexts))
+          err("e-upgrade-interleave", `${lesson.id} محطة ${si + 1} (${st.type}): الاستدعاء المعلن «${ref}» لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110)`);
+      }
+    });
   }
   return { issues, texts };
 }

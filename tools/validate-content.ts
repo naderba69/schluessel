@@ -44,6 +44,10 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
   B2: { production: 0.7, comprehension: 0.2, audio: 0.1 },
 };
 
+/** D184: حارس السرعة (مطابق لـtools/dev/speech-rate.py: الكلمة ≥ حرفين · الحدّ 200 · ≥3 كلمات) */
+const SPEECH_WORD_RE = /[A-Za-zÄÖÜäöüß]{2,}(?:[-'][A-Za-zÄÖÜäöüß]+)*/g;
+const SPEECH_RATE_MAX_WPM = 200;
+const SPEECH_RATE_MIN_WORDS = 3;
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
 function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "audio-script" | "exam-format" | "wordlist" | "plan" | "unknown" {
@@ -186,6 +190,14 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
                     `RMS خارج النافذة [${RMS_WINDOW_DB[0]}..${RMS_WINDOW_DB[1]}]: ${t.file} = ${probe.rmsDb}dB`);
               } catch {
                 push("error", "e-audio-missing", entry.path, `تعذّر تحليل الملف الصوتي: ${t.file}`);
+              }
+              // D184 (Q24/Q25 — بأمر المالك): حارس السرعة الآلي — مساعد الأذن البشرية قبل الإطلاق، لا بديلها (الحدّ 200 كلمة/دقيقة · ≥3 كلمات — speech-rate.py نفسه)
+              if (typeof t.durationMs === "number" && t.durationMs > 0 && typeof t.textDe === "string") {
+                const n = (t.textDe.match(SPEECH_WORD_RE) ?? []).length;
+                const wpm = (n * 60_000) / t.durationMs;
+                if (n >= SPEECH_RATE_MIN_WORDS && wpm > SPEECH_RATE_MAX_WPM)
+                  push("warning", "w-audio-speech-rate", entry.path,
+                    `سرعة نطق مشبوهة ${wpm.toFixed(0)} كلمة/دقيقة > ${SPEECH_RATE_MAX_WPM} (${n} كلمات في ${t.durationMs}ms): ${t.id} «${t.textDe}» — أبطئه بـlengthScale (N-015/D182)`);
               }
               if (t.role === "word") {
                 const wid = t.id.replace(/^word-/, "");
