@@ -1,0 +1,38 @@
+# .github/workflows/gate.yml — البوابة نفسها (npm run gate) تعمل على GitHub عند كل دفع (D189)
+# شهادة مستقلة عن صندوق المنفّذ: الأخضر هنا من النظام لا من انضباط أحد. لا توليد صوت (Piper يُثبَّت للتدقيق فقط).
+name: gate
+on:
+  push:
+    branches: ["arena/**", "main"]
+  pull_request:
+  workflow_dispatch:
+concurrency:
+  group: gate-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Python deps (تدقيق النطق وقياس الصوت — لا توليد)
+        run: pip install piper-tts soundfile numpy
+      - run: npm ci
+      - name: npm run gate
+        run: npm run gate
+      - name: تقرير الأسطر الثلاثة
+        if: always()
+        run: python3 -c "import json;print(json.load(open('.dev-cache/gate.json'))['report'])" >> "$GITHUB_STEP_SUMMARY" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gate-report
+          path: .dev-cache/gate.json
