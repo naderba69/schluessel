@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-10-18 — الدفعة 131: a1-u12-d1 مُرقّى — Das Reiseziel · Mein letzter Tag in Tunis (D176) · مراجعة ars-trennbare + ars-wechselpraep بدل مرجعين بلا ملف · بلا نواة
+- **إضافة:** حوار `a1-u12-d1-mein-letzter-tag-in-tunis` (ke-1..20 · مكالمة اليوم الثالث عشر والأخير بتونس — السبت 11 أبريل) · `usedInLessons` لـars-trennbare وars-wechselpraep += a1-u12-d1 · لا ملف قاعدة جديد ولا كلمة جديدة (877).
+- **تحسين المحتوى:** 67 بنداً/4 أنواع (فراغ 30 · استماع 15 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (~~Der Zug fährt ab um acht Uhr~~ / ~~Ich reise im Ausland~~ / ~~die Pass · der Visum · die Visums~~) · الكلمات الاثنتا عشرة بأمثلة بلا أسماء شخصيات (Berlin معلنة في مثال ziel) · 18 إجابة Quiz من مادة اليوم.
+- **ما خرج:** مرجعا `ars-trennbar` و`ars-wechselprae-dat` (بلا ملف) · 6 بنود choice بلا خيارات · berlin في التدريب القديم · الاختبار القبلي القديم.
+- **اختبارات:** كتلة D176 (+1 — تثبّت العدد الكلي للمانيفست 1969؛ كتلة D175 صارت تثبّت kd-1..20 فقط) · المثال غير المُرقّى ← a1-u12-d2 بفجواته المقيسة · 709/709 · validator 1119/0/0.
+- **الوثائق:** +N-117 (مفتوحة: اسم ars-trennbar — u12-d2/u12-d3) · حُدّثت N-096 · N-099 · N-103 · N-110 · N-113 · الموجّه 3.33.
+
 ## 2026-10-18 — الدفعة 130: a1-u11-d5 مُرقّى — Beim Hausarzt (D175) · ars-modal-fix جديدة (dürfen/sollen + الخمسة) · helfen+Dativ · جنس المركّب · نواة das Ergebnis
 - **إضافة:** قاعدة `ars-modal-fix` (shufra · 10‑ي · usedInLessons u11-d5/u11-d6/u12-d2/u12-d6 — كانت بلا ملف) · كلمة `ergebnis` (نواة SD1 بالمولِّد — A1 · die Ergebnisse · «Das Ergebnis ist gut: nur eine Erkältung.») · حوار `a1-u11-d5-beim-hausarzt` (kd-1..20 مكالمة اليوم الثاني عشر) · مانيفست 1949 · المرجع 1582 · معجم النطق 76 (+wehgetan — kd-1 أُعيد؛ Fußball kd-9/10 · fit kd-20 · Spezialisten مراجَع artifact).
 - **تحسين المحتوى:** 66 بنداً/4 أنواع (فراغ 30 · استماع 14 · ترتيب 10 · إملاء 12) · Quiz 3×6 · 3 مصائد بـ10‑ي (المنع بـmüssen/المصدر مصرّفاً/darf لكل فاعل ⇒ ~~Sie müssen nicht rauchen~~ (للمنع) / ~~Ich darf gehe in die Schule~~ / ~~Du darf nicht rauchen~~ · helfen بالأكوزاتيف ⇒ ~~Das hilft mich~~ / ~~hilft den Patient~~ · جنس المركّب من الكلمة الأولى أو الترجمة ⇒ ~~die Krankenwagen~~ / ~~der Notaufnahme~~ / ~~das Zahnschmerz~~) · 13 كلمة · خطة SD1: u11-d5 done.
