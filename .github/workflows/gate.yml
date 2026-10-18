@@ -23,14 +23,15 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: tools/requirements.txt
       - name: Python deps (تدقيق النطق وقياس الصوت — لا توليد)
-        run: pip install piper-tts soundfile numpy
+        run: pip install -r tools/requirements.txt
       - run: npm ci
       - name: npm run gate
         run: npm run gate
       - name: تقرير الأسطر الثلاثة
         if: always()
-        run: python3 -c "import json;print(json.load(open('.dev-cache/gate.json'))['report'])" >> "$GITHUB_STEP_SUMMARY" || true
+        run: python3 -c "import json;print(json.load(open('.dev-cache/gate.json'))['report'])" >> "$GITHUB_STEP_SUMMARY" || echo "لا تقرير — البوابة لم تصل إلى الكتابة" >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
