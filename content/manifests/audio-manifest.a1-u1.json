@@ -17549,6 +17549,66 @@
       "rmsDb": -17.1
     },
     {
+      "id": "word-blick",
+      "file": "words/audio/de-DE/word-blick.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Blick.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 804,
+      "sizeBytes": 3954,
+      "hash": "sha256:066b8f4e778249098fd5acaf44f5cf545d2b7e9891b590359dac967c55918ef0",
+      "pcmSha256": "70f6bd72399a6aae85eacb06549e85f02b989d7764325a4ad447c78cd12969cf",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "word-internet",
+      "file": "words/audio/de-DE/word-internet.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Internet.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 1071,
+      "sizeBytes": 5162,
+      "hash": "sha256:0b9b37d9ec30833de13e8c641c43f0d798da5c7dbe48ff48906d123bec15b1cb",
+      "pcmSha256": "5c4c3b3a15f51dc1a798cb329743e97bf568edfd95825bf893da4a8f8e1d58a0",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "word-information",
+      "file": "words/audio/de-DE/word-information.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Information.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 1407,
+      "sizeBytes": 6696,
+      "hash": "sha256:689ebb855d828806c0e03f2b50eded36919f3f5c4d6c6f7adf2d6ec314fadd51",
+      "pcmSha256": "a18181a4529ad4959bd779f674b57d94338af9055ef91787ace5a691fffc46a6",
+      "rmsDb": -17.01
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
@@ -41494,6 +41554,446 @@
       "hash": "sha256:f89131be2c06575b4b1fbec13243563dfb723f1a86f6419ef63d1f730fc2f4a6",
       "pcmSha256": "d13604bc50426e4636938f8749722756adbaa1a23d480f263e13e0cad64a4f90",
       "rmsDb": -17.26
+    },
+    {
+      "id": "kf-1",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-1.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Hallo Lena! Ich bin wieder in Berlin. Ich bin um dreizehn Uhr angekommen.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 4902,
+      "sizeBytes": 21806,
+      "hash": "sha256:c8d524d9d3dae77cf654124ebde254050afec98a7603ae264a63c8f855055de0",
+      "pcmSha256": "177cdf8e24ff08eb326c951e05ba2e17f2ec91f5a02bb4c6f1f380d00f9461b5",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "kf-2",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-2.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Super! War die Reise gut? Und der Zug vom Flughafen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 4616,
+      "sizeBytes": 21201,
+      "hash": "sha256:44ede2c32f7b2e68128fed27a8b6cf0edf044a597084b4f6e5d0216a8c123cd6",
+      "pcmSha256": "bc9df90f8dc0f79bf55dfa22b373a4bbb1a40f479c0cb9c8a8935322704ef1d3",
+      "rmsDb": -17.27
+    },
+    {
+      "id": "kf-3",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-3.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 139,
+        "lengthScale": 1.32
+      },
+      "textDe": "Der Flug war gut. Aber am Flughafen hatte der Zug zwanzig Minuten Verspätung.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 5610,
+      "sizeBytes": 25316,
+      "hash": "sha256:89a7a424454aba65dbe4c746a4c2d305f856116ec7c116c663739ec01c9d027c",
+      "pcmSha256": "40f1a967ba73a275be44a2b6d9ce5e212ebecc88ee3f87c4b706fd77c0e798ba",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "kf-4",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-4.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Was? Hast du den Zug verpasst?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 2568,
+      "sizeBytes": 12016,
+      "hash": "sha256:cbb7cc6127cc209459057d8b29e5cd9816ad6b9aa851491a78ad1fb55d9ec77b",
+      "pcmSha256": "c8d90085559cda6b534d322fe48f4bac47b3b1e1e82ae5e97a8bcfc50c6bbe7c",
+      "rmsDb": -17.29
+    },
+    {
+      "id": "kf-5",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-5.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 164,
+        "lengthScale": 1.32
+      },
+      "textDe": "Nein! Ich habe an der Information gefragt: Der Zug in die Stadt fährt von Gleis zwei ab.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 6226,
+      "sizeBytes": 28841,
+      "hash": "sha256:13d29d88259dc38ac69469ad9f3084f71d405b49189a48d33c4f7359decb9afb",
+      "pcmSha256": "00cd2d7806950a1b68c6e1120f7c61ad2e84a7d5ecf1063c4ede86d584179a3f",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "kf-6",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-6.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Sehr gut! Ich habe heute im Internet unser Hotel in Rom gesucht.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 5144,
+      "sizeBytes": 24050,
+      "hash": "sha256:918068b83fc7eebb79f960211127af034b72ef1629e65b82ae1c450a22ea0422",
+      "pcmSha256": "c147455e875f7708c0cbd521c21920a616d38e1b8ba69413daa9301224366c1c",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "kf-7",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-7.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 153,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und? Wie ist das Hotel? Hast du Fotos gesehen?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 3532,
+      "sizeBytes": 16086,
+      "hash": "sha256:2d99ef513464ff4b6727e319af5a33b90fb14277a89b73e5a48df2e165f77698",
+      "pcmSha256": "742d966899b6ffac222a02f78631db0f7e697eac65b2eea9d94458c324afb7dd",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "kf-8",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-8.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 150,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja! Es gibt eine große Halle und einen Empfang mit Sofa. Die Rezeption ist Tag und Nacht geöffnet.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 7208,
+      "sizeBytes": 33308,
+      "hash": "sha256:9f5e7ee6baee0b0ae109ffac455298bb28af15ba9f9f83e4924f00420aacd237",
+      "pcmSha256": "81f16e3b8e51a51c77a6d1fc9b35cf3216d977fb3defbf5e188419b946f3b162",
+      "rmsDb": -17.26
+    },
+    {
+      "id": "kf-9",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-9.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 130,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und die Zimmer? Habt ihr ein Doppelzimmer?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 3219,
+      "sizeBytes": 14338,
+      "hash": "sha256:3efb57b6e19cfaa54daa052c0d87d7882f6bb5955686d5df4870ec16006464e6",
+      "pcmSha256": "9aa5eae11d5546fbcc4def44a2fad4df7200ffa019a3ca92773931751a3f2bbc",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "kf-10",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-10.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 132,
+        "lengthScale": 1.32
+      },
+      "textDe": "Meine Eltern haben ein Doppelzimmer. Mein Bruder und ich haben zwei Einzelzimmer mit Bad.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 6360,
+      "sizeBytes": 29500,
+      "hash": "sha256:58add2f478c8d203d27e7a12e74981cdde23c5602e6464ff2292dd6576de9eb0",
+      "pcmSha256": "c681e53c33ae51bddc8d732af2750f52d9e30f1259a16e039340172883a3521a",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "kf-11",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-11.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 140,
+        "lengthScale": 1.32
+      },
+      "textDe": "Toll! Und wie ist die Aussicht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 2568,
+      "sizeBytes": 11639,
+      "hash": "sha256:a8802125c859808c90d34d8382b989671e70dc6e84109e1ca7366d09403b95fb",
+      "pcmSha256": "afe56f996b73f98d626173e6442eee4cbf0a8b6c1370eb8a29f49c34ecb6b898",
+      "rmsDb": -17.05
+    },
+    {
+      "id": "kf-12",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-12.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 170,
+        "lengthScale": 1.32
+      },
+      "textDe": "Die Aussicht ist sehr schön: Mein Zimmer hat einen Blick auf einen alten Park.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 4952,
+      "sizeBytes": 23109,
+      "hash": "sha256:19fb601dc9c3a14fc4cf9e68da178524123ecb8d2073be7cd62650a49950752c",
+      "pcmSha256": "912e0a223a34c3e7738e2d6712e9326ca4c2a44903003c0a4c33f030a7912078",
+      "rmsDb": -17.75
+    },
+    {
+      "id": "kf-13",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-13.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 111,
+        "lengthScale": 1.32
+      },
+      "textDe": "Schön! Gibt es Internet im Hotel?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 3230,
+      "sizeBytes": 13974,
+      "hash": "sha256:8490a1010b38ddf30e1a8a42c4a4321ba96a0762c67b1504e2d646e5b3c7c617",
+      "pcmSha256": "d9a2a27ba7da3c216ae96a96c221bdcd317766cf7a1ed55b1819fc19e9817252",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "kf-14",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-14.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 137,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, das Internet ist frei. Meine Mutter hat das Hotel im Internet gebucht — das war sehr einfach.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 7464,
+      "sizeBytes": 34689,
+      "hash": "sha256:5aa66da0b72bd433825e36100057da0fd2db5d213838a68ec84bb1f511fa4d62",
+      "pcmSha256": "d7d64fb67849a9c09df73a207c06cbb4fa0658292f69e0dc376ce74d0afeccc5",
+      "rmsDb": -17.29
+    },
+    {
+      "id": "kf-15",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-15.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 160,
+        "lengthScale": 1.32
+      },
+      "textDe": "Muss man den Schlüssel am Abend an der Rezeption zurückgeben?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 3753,
+      "sizeBytes": 17224,
+      "hash": "sha256:5e934c779d82edf1f7c255933abac8974a00fdac3b5efc72afcff09070fe5dbc",
+      "pcmSha256": "c5dd6602beca7675dc49b48643def2e8db885ab415c4cf3df4ee74877e767bda",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "kf-16",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-16.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 159,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, man gibt den Schlüssel am Empfang zurück. Und am letzten Tag muss man ihn vor elf Uhr zurückgeben.",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 7160,
+      "sizeBytes": 33343,
+      "hash": "sha256:fae61b51669006e88db8679e0af8261203b770b6cb76a507cb82d07df08c9c7c",
+      "pcmSha256": "7e0c369bc7eef50289779cdc7517e9ac8844a4ab3ae5290d0f8b0db7aef83da2",
+      "rmsDb": -17.36
+    },
+    {
+      "id": "kf-17",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-17.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 204,
+        "lengthScale": 1.32
+      },
+      "textDe": "Und ich soll morgen früh in die Schule gehen. Ich darf nicht zu spät kommen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 4403,
+      "sizeBytes": 20365,
+      "hash": "sha256:9f4ec20b182c15c2824efc86423715f4fbb479e376d25b09c1e489b1a005df75",
+      "pcmSha256": "b391a649f659c14dd097c12dc5aa1d07770d55c952fb6669d6e88a7f22f3717c",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "kf-18",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-18.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 151,
+        "lengthScale": 1.32
+      },
+      "textDe": "Geh heute früh ins Bett! Der Bus fährt um sieben Uhr ab — du darfst ihn nicht verpassen!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 6744,
+      "sizeBytes": 30992,
+      "hash": "sha256:00d9a22b58a70c389079d2763b285ec4eca00c17b4ea126b3ab0ac6b439af48e",
+      "pcmSha256": "3161153c7eecaa6eda8283263cf25565ae139b7f5ab440b31543bc59aa1ad359",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "kf-19",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-19.opus",
+      "role": "dialogue",
+      "characterId": "yusuf",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 169,
+        "lengthScale": 1.32
+      },
+      "textDe": "Kein Problem! Ich stehe um sechs Uhr auf. Schickst du mir morgen eine Nachricht?",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 4972,
+      "sizeBytes": 22768,
+      "hash": "sha256:8ee80b0e8c60e53b2a2ee099788c8f00ea27925cfe98f81d4de20cf34b104277",
+      "pcmSha256": "ae2eb4fdcc3741f53735981663caff6765df734b8159e854cb117f35a05eaa21",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "kf-20",
+      "file": "audio/scripts/a1-u12-d2-wieder-in-berlin/kf-20.opus",
+      "role": "dialogue",
+      "characterId": "lena",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-kerstin-low",
+        "speedWpm": 131,
+        "lengthScale": 1.32
+      },
+      "textDe": "Ja, klar. Gute Nacht, Yusuf — und bis bald!",
+      "priority": "P0",
+      "lessonRefs": [
+        "a1-u12-d2"
+      ],
+      "durationMs": 3672,
+      "sizeBytes": 17044,
+      "hash": "sha256:472428bfdbc163922d677a549e658f01af25b7918d8edde85df9e4ae0876325d",
+      "pcmSha256": "15dfbf5e13a8ffde729017e992cd5523b570595de83676ff0a083fbaf37d32ed",
+      "rmsDb": -17.35
     }
   ],
   "characterVoices": {
