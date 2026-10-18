@@ -6,31 +6,44 @@
   "day": 3,
   "kind": "integration",
   "ziel": {
-    "de": "Wiederholung Einheiten 5–6: Verkehr und Einkauf — Modalverben und Zahlen.",
-    "ar": "مراجعة الوحدتين 5–6: المواصلات والتسوق (المساعدات والأرقام)"
+    "de": "Woche fünf und sechs noch einmal: Heute ist Mittwoch, der zweiundzwanzigste April · Es gibt eine Suppe und einen Salat · Ich möchte einen Tee mit Milch · Ich habe keinen Löffel, die Suppe ist nicht scharf · ein Stuhl, vier Stühle · Der Schreibtisch steht an der Wand, die Lampe stelle ich in die Ecke · Darauf steht die Vase.",
+    "ar": "أسبوع المراجعة، اليوم الثالث (الأربعاء 22 أبريل): الأسبوعان 5–6 من جديد — es gibt + أكوزاتيف · möchte للطلب (لا will) · kein للاسم وnicht للصفة والفعل · الجمع بالأوملاوت (Stuhl ⇐ Stühle) · Wo + داتيف وWohin + أكوزاتيف (an der Wand · in die Ecke) · darauf/darin/darüber — ثم معركة اليوم (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (das Frühstück · die Möbel) من الأسبوعين نفسيهما."
   },
   "canDoDaily": [
-    "يشتري تذكرة ويستفسر عن الثمن ويساعده المساعد"
+    "يطلب ويصف طعامه كما في الجزء الشفوي (Es gibt einen Salat · Ich möchte einen Tee · Ich habe keinen Löffel · Die Suppe ist nicht scharf) ويفرّق kein عن nicht",
+    "يصف غرفته بالجمع وWo/Wohin وdarauf/darin (vier Stühle · an der Wand · in die Ecke · Darauf steht die Vase) ويجتاز معركة اليوم الثالث من أسبوع المراجعة بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
-      "fahrkarte",
-      "supermarkt",
-      "preis"
+      "fruehstueck",
+      "moebel",
+      "satt"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "المراجعة التراكمية: أصلح الخطأ في الجملة"
+          "de": "«لا أملك ملعقة» — تخمين فقط"
         },
         "choices": [
-          "التصحيح بالقلنسوة/القاعدة الصحيحة",
-          "تصحيح آخر خاطئ",
-          "تصحيح ثالث خاطئ"
+          "Ich habe keinen Löffel.",
+          "Ich habe nicht Löffel.",
+          "Ich habe kein Löffel."
         ],
-        "answer": "التصحيح بالقلنسوة/القاعدة الصحيحة",
+        "answer": "Ich habe keinen Löffel.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«أضع المصباح في الزاوية» — تخمين فقط"
+        },
+        "choices": [
+          "Die Lampe stelle ich in die Ecke.",
+          "Die Lampe stelle ich in der Ecke.",
+          "Die Lampe stelle ich auf die Ecke."
+        ],
+        "answer": "Die Lampe stelle ich in die Ecke.",
         "revealNextSession": true
       }
     ],
@@ -38,87 +51,314 @@
   },
   "praesentation": {
     "wordIds": [
-      "fahrkarte",
-      "supermarkt"
+      "fruehstueck",
+      "moebel"
     ],
     "grammarArsenalIds": [
-      "ars-satzklammer",
-      "ars-perfekt"
+      "ars-moechte-wollen",
+      "ars-kein-nicht",
+      "ars-plural-umlaut",
+      "ars-es-gibt",
+      "ars-wo-wohin",
+      "ars-da-komposita"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a1-u15-s3"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أريد تذكرة إلى برلين»؟",
-            "a": "Ich möchte eine Fahrkarte nach Berlin."
+            "q": "Heute Abend gibt ___ eine Suppe und einen Salat. (ضمير ثابت)",
+            "a": "es",
+            "why": "es gibt تعبير ثابت: es لا يتغيّر أبداً (u6-d3)."
           },
           {
-            "q": "«هذا غالي جداً»؟",
-            "a": "Das ist zu teuer."
+            "q": "Es gibt ___ Salat. (ein)",
+            "a": "einen",
+            "why": "بعد es gibt يأتي الأكوزاتيف: einen Salat (المذكر وحده يتغيّر)."
+          },
+          {
+            "q": "Zum Frühstück ___ ich einen Tee mit Milch. (möchten: ich)",
+            "a": "möchte",
+            "why": "الطلب المهذب بـmöchte — لا will (u5-d4) · مع ich بلا نهاية."
+          },
+          {
+            "q": "Ich habe ___ Löffel. (نفي الاسم)",
+            "a": "keinen",
+            "why": "الاسم يُنفى بـkein: der Löffel ⇐ keinen Löffel في الأكوزاتيف (u5-d5)."
+          },
+          {
+            "q": "Die Suppe ist ___ scharf. (نفي الصفة)",
+            "a": "nicht",
+            "why": "الصفة والفعل يُنفيان بـnicht لا بـkein."
+          },
+          {
+            "q": "Ein Stuhl, vier ___. (جمع)",
+            "a": "Stühle",
+            "why": "الجمع بالأوملاوت + e: Stuhl ⇐ Stühle (u6-d1)."
+          },
+          {
+            "q": "Die Möbel: ein Regal, zwei ___. (جمع)",
+            "a": "Regale",
+            "why": "Regal ⇐ Regale: + e بلا أوملاوت (a لا تأخذ أوملاوت هنا) · Möbel جمع دائماً."
+          },
+          {
+            "q": "Der Schreibtisch steht ___ der Wand. (عند الجدار)",
+            "a": "an",
+            "why": "Wo? + داتيف: an der Wand — السكون يأخذ الداتيف (u6-d4)."
+          },
+          {
+            "q": "Die Lampe stelle ich ___ die Ecke. (في: حركة)",
+            "a": "in",
+            "why": "Wohin? + أكوزاتيف: in die Ecke — الحركة تأخذ الأكوزاتيف."
+          },
+          {
+            "q": "Was steht auf dem Tisch? — ___ steht die Vase. (da + auf)",
+            "a": "Darauf",
+            "why": "da + حرف جر = كلمة واحدة: darauf · darin · darüber (u6-d5)."
           }
         ],
         "interleavedWith": [
-          "fahrkarte",
-          "teuer"
+          "suppe",
+          "salat",
+          "tee",
+          "milch",
+          "loeffel",
+          "stuhl",
+          "regal",
+          "wand",
+          "ecke",
+          "vase"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«كم الثمن؟»؟",
-            "a": "Was kostet das?"
+            "audioId": "wr-4",
+            "speakText": "Ich mag Fisch und Gemüse. Fleisch esse ich nicht so gern — und Zucker mag ich nicht.",
+            "q": "استمع: ماذا يحب يوسف؟",
+            "choices": [
+              "السمك والخضار",
+              "اللحم والسكر",
+              "القهوة والحليب"
+            ],
+            "a": "السمك والخضار",
+            "why": "يحب السمك والخضار: Ich mag Fisch und Gemüse · اللحم لا يأكله كثيراً · والسكر لا يحبه: Zucker mag ich nicht."
           },
           {
-            "q": "«لا أستطيع الدفع»؟",
-            "a": "Ich kann nicht bezahlen."
+            "audioId": "wr-6",
+            "speakText": "Ich möchte einen Tee mit Milch. Und ich trinke den Kaffee ohne Zucker.",
+            "q": "استمع: كيف يشرب يوسف القهوة؟",
+            "choices": [
+              "بلا سكر",
+              "مع حليب",
+              "مع سكر"
+            ],
+            "a": "بلا سكر",
+            "why": "den Kaffee ohne Zucker = القهوة بلا سكر · الشاي هو الذي مع الحليب (mit Milch)."
+          },
+          {
+            "audioId": "wr-8",
+            "speakText": "Ich habe keinen Löffel, keine Gabel — aber: Die Suppe ist nicht scharf, ich esse nicht viel.",
+            "q": "استمع: ما الذي نُفي بـnicht؟",
+            "choices": [
+              "scharf و viel",
+              "Löffel و Gabel",
+              "Suppe"
+            ],
+            "a": "scharf و viel",
+            "why": "الأسماء بـkein (keinen Löffel · keine Gabel) · الصفة والكمية بـnicht (nicht scharf · nicht viel)."
+          },
+          {
+            "audioId": "wr-10",
+            "speakText": "Nein — ich bin satt! Und dann zahle ich: bar, acht Euro und ein Euro Trinkgeld.",
+            "q": "استمع: كم الإكرامية؟",
+            "choices": [
+              "يورو واحد",
+              "ثمانية يورو",
+              "تسعة يورو"
+            ],
+            "a": "يورو واحد",
+            "why": "acht Euro الثمن · ein Euro Trinkgeld = إكرامية يورو واحد · ich bin satt (لا habe)."
+          },
+          {
+            "audioId": "wr-12",
+            "speakText": "Vier Stühle und zwei Regale. Ein Stuhl, vier Stühle — ein Regal, zwei Regale.",
+            "q": "استمع: كم كرسياً عند يوسف؟",
+            "choices": [
+              "أربعة",
+              "اثنان",
+              "واحد"
+            ],
+            "a": "أربعة",
+            "why": "vier Stühle = أربعة كراسٍ · zwei Regale = رفّان."
+          },
+          {
+            "audioId": "wr-14",
+            "speakText": "Nein, es gibt keinen Fernseher. Es gibt einen Computer, einen Schreibtisch und ein Bett.",
+            "q": "استمع: ما الذي لا يوجد في الغرفة؟",
+            "choices": [
+              "تلفاز",
+              "حاسوب",
+              "سرير"
+            ],
+            "a": "تلفاز",
+            "why": "es gibt keinen Fernseher = لا يوجد تلفاز · الحاسوب والمكتب والسرير موجودة."
+          },
+          {
+            "audioId": "wr-16",
+            "speakText": "Der Schreibtisch steht an der Wand, unter dem Fenster. Die Lampe stelle ich in die Ecke, auf den Tisch.",
+            "q": "استمع: أين يقف المكتب؟",
+            "choices": [
+              "عند الجدار تحت النافذة",
+              "في الزاوية",
+              "على الطاولة"
+            ],
+            "a": "عند الجدار تحت النافذة",
+            "why": "steht an der Wand, unter dem Fenster (Wo + داتيف) · المصباح هو الذي يُوضع in die Ecke."
+          },
+          {
+            "audioId": "wr-18",
+            "speakText": "Darauf steht die Vase, und darin ist eine Pflanze. Das Foto aus Tunesien hängt über dem Bett — darüber.",
+            "q": "استمع: ماذا في المزهرية؟",
+            "choices": [
+              "نبتة",
+              "صورة",
+              "مصباح"
+            ],
+            "a": "نبتة",
+            "why": "darin ist eine Pflanze = فيها نبتة · darauf = عليها (الطاولة) · darüber = فوقه (السرير)."
           }
         ],
         "interleavedWith": [
-          "kosten",
-          "bezahlen"
+          "fisch",
+          "gemuese",
+          "zucker",
+          "kaffee",
+          "gabel",
+          "fernseher",
+          "computer",
+          "bett",
+          "fenster",
+          "pflanze"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "error-hunt",
         "items": [
           {
-            "q": "«أين المحطة؟»؟",
-            "a": "Wo ist der Bahnhof?"
+            "q": "صحّح: ~~Es gibt ein Salat.~~",
+            "a": "Es gibt einen Salat.",
+            "why": "es gibt + أكوزاتيف: المذكر ein ⇐ einen."
           },
           {
-            "q": "«بكم؟» — بالساعة؟",
-            "a": "pro Stunde"
+            "q": "صحّح: ~~Ich will einen Tee, bitte.~~",
+            "a": "Ich möchte einen Tee, bitte.",
+            "why": "في الطلب نقول möchte لا will — will تُسمع فظّة."
+          },
+          {
+            "q": "صحّح: ~~Ich habe nicht Löffel.~~",
+            "a": "Ich habe keinen Löffel.",
+            "why": "الاسم يُنفى بـkein لا بـnicht."
+          },
+          {
+            "q": "صحّح: ~~Die Suppe ist kein scharf.~~",
+            "a": "Die Suppe ist nicht scharf.",
+            "why": "الصفة تُنفى بـnicht."
+          },
+          {
+            "q": "صحّح: ~~Vier Stuhl und zwei Regal.~~",
+            "a": "Vier Stühle und zwei Regale.",
+            "why": "بعد العدد يأتي الجمع: Stühle (أوملاوت + e) · Regale (+ e)."
+          },
+          {
+            "q": "صحّح: ~~Die Lampe stelle ich in der Ecke.~~",
+            "a": "Die Lampe stelle ich in die Ecke.",
+            "why": "stellen = حركة ⇐ Wohin + أكوزاتيف: in die Ecke."
           }
         ],
         "interleavedWith": [
-          "bahnhof",
-          "stunde"
+          "salat",
+          "tee",
+          "loeffel",
+          "suppe",
+          "stuhl",
+          "lampe"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wr-1",
+            "speakText": "Hallo, Yusuf! Heute ist Mittwoch, der zweiundzwanzigste April. Woche fünf und sechs: das Essen und das Zimmer!",
+            "a": "Hallo, Yusuf! Heute ist Mittwoch, der zweiundzwanzigste April. Woche fünf und sechs: das Essen und das Zimmer!",
+            "why": "der zweiundzwanzigste (‑ste) · Mittwoch بـtt · Essen وZimmer بحرف كبير."
+          },
+          {
+            "audioId": "wr-3",
+            "speakText": "Es gibt eine Suppe und einen Salat — es gibt mit einen! Frage eins: Was magst du, und was magst du nicht?",
+            "a": "Es gibt eine Suppe und einen Salat — es gibt mit einen! Frage eins: Was magst du, und was magst du nicht?",
+            "why": "einen Salat (أكوزاتيف) · magst بـg تُسمع «ك» · nicht في آخر الجملة."
+          },
+          {
+            "audioId": "wr-7",
+            "speakText": "Frage zwei: kein oder nicht? Der Löffel — und scharf.",
+            "a": "Frage zwei: kein oder nicht? Der Löffel — und scharf.",
+            "why": "Löffel بـö وff · scharf بـsch وrf."
+          },
+          {
+            "audioId": "wr-11",
+            "speakText": "Jetzt Woche sechs — dein Zimmer. Frage drei: Wie viele Stühle und Regale hast du?",
+            "a": "Jetzt Woche sechs — dein Zimmer. Frage drei: Wie viele Stühle und Regale hast du?",
+            "why": "Wie viele + جمع · Stühle بـü · Regale بـe الجمع."
+          },
+          {
+            "audioId": "wr-15",
+            "speakText": "Frage vier: Wo steht der Schreibtisch, und wohin stellst du die Lampe?",
+            "a": "Frage vier: Wo steht der Schreibtisch, und wohin stellst du die Lampe?",
+            "why": "Wo (سكون) · wohin (حركة) · Schreibtisch كلمة مركبة بـsch مرتين."
+          },
+          {
+            "audioId": "wr-19",
+            "speakText": "Darauf, darin, darüber — super! Und die Suppe? Ist sie fertig?",
+            "a": "Darauf, darin, darüber — super! Und die Suppe? Ist sie fertig?",
+            "why": "darauf · darin · darüber كلمة واحدة · sie = die Suppe."
+          }
+        ],
+        "interleavedWith": [
+          "mittwoch",
+          "essen",
+          "zimmer",
+          "schreibtisch",
+          "lampe"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die kumulative Wiederholung meistern",
-        "a": "x",
-        "ar": "إتقان المراجعة التراكمية"
+        "de": "Mein Essen und mein Zimmer: Zum Frühstück esse ich Brot mit Käse und trinke einen Tee mit Milch. Ich mag Fisch, aber ich mag keinen Zucker. Die Suppe ist nicht scharf. In meinem Zimmer gibt es vier Stühle, zwei Regale und ein Bett. Der Schreibtisch steht an der Wand, die Lampe stelle ich auf den Tisch. Darauf steht eine Vase.",
+        "ar": "أن يصف طعامه وغرفته كما في الجزء الشفوي: طلب واحد بـmöchte · نفيان: واحد بـkein للاسم وواحد بـnicht للصفة · es gibt مع جمع واحد صحيح (vier Stühle) · مكان واحد بـWo + داتيف ومكان واحد بـWohin + أكوزاتيف · كلمة واحدة بـda- (darauf/darin)"
       },
       "situation": {
-        "de": "Mischung aus den Einheiten der Woche",
-        "a": "x",
-        "ar": "خليط من وحدات الأسبوع"
+        "de": "Das Ende der Woche: Mittwoch, der zweiundzwanzigste April — Lena und Yusuf wiederholen Woche fünf und sechs: das Essen und das Zimmer. Und jetzt du: Was isst du, und wo steht was?",
+        "ar": "أسبوع المراجعة: مساء الأربعاء 22 أبريل — لينا ويوسف يعيدان الأسبوعين 5 و6: الطعام (es gibt · möchte · kein/nicht) والغرفة (الجمع · Wo/Wohin · darauf) — ثم أنت: ماذا تأكل وأين يقف ماذا"
       },
       "successCriteria": [
-        "جملة تذكرة + سؤال ثمن + جملة مساعد"
+        "يطلب بـmöchte ويستعمل es gibt + أكوزاتيف صحيحاً (einen Salat · keinen Fernseher)",
+        "يفرّق kein (للاسم) عن nicht (للصفة والفعل) في جملتين بلا خلط",
+        "يصف مكانين في غرفته: سكون بـWo + داتيف (an der Wand) وحركة بـWohin + أكوزاتيف (in die Ecke) ويستعمل darauf أو darin مرة"
       ]
     }
   },
@@ -133,20 +373,59 @@
       {
         "items": [
           {
-            "q": "«تذكرة»؟",
-            "a": "die Fahrkarte"
+            "q": "Es gibt ___ Fernseher. (نفي)",
+            "a": "keinen",
+            "choices": [
+              "keinen",
+              "kein",
+              "nicht"
+            ],
+            "why": "es gibt + أكوزاتيف: der Fernseher ⇐ keinen Fernseher."
           },
           {
-            "q": "«غالي/رخيص»؟",
-            "a": "teuer / billig"
+            "q": "Was ___ du trinken? (möchten: du)",
+            "a": "möchtest",
+            "choices": [
+              "möchtest",
+              "möchte",
+              "willst"
+            ],
+            "why": "möchten مع du: möchtest — وللطلب لا نقول willst."
           },
           {
-            "q": "«كم الثمن؟»؟",
-            "a": "Was kostet das?"
+            "q": "Ein Regal, zwei ___.",
+            "a": "Regale",
+            "choices": [
+              "Regale",
+              "Regal",
+              "Regalen"
+            ],
+            "why": "Regal ⇐ Regale: + e فقط."
           },
           {
-            "q": "«بلا مقابل»؟",
-            "a": "kostenlos"
+            "q": "Lena fragt: Wo hängt das Foto? — Es hängt ___ dem Bett. (فوق)",
+            "a": "über",
+            "choices": [
+              "über",
+              "unter",
+              "auf"
+            ],
+            "why": "über dem Bett = فوق السرير (داتيف لأن الصورة معلّقة ساكنة)."
+          },
+          {
+            "q": "Die Vase steht auf dem Tisch — und die Pflanze ist ___. (da + in)",
+            "a": "darin",
+            "choices": [
+              "darin",
+              "darauf",
+              "darüber"
+            ],
+            "why": "في المزهرية = darin (da + in)."
+          },
+          {
+            "q": "الترتيب: und einen Salat. / Heute Abend / eine Suppe / gibt es",
+            "a": "Heute Abend gibt es eine Suppe und einen Salat.",
+            "why": "الفعل ثانياً (gibt) ثم es، والمذكر einen في الأكوزاتيف."
           }
         ],
         "passingScore": 0.75
@@ -154,20 +433,59 @@
       {
         "items": [
           {
-            "q": "«أستطيع»؟",
-            "a": "können (ich kann)"
+            "q": "Ich ___ Fisch und Gemüse. (mögen: ich)",
+            "a": "mag",
+            "choices": [
+              "mag",
+              "magst",
+              "möchte"
+            ],
+            "why": "mögen مع ich: mag بلا نهاية (u5-d3) · möchte للطلب لا للتفضيل."
           },
           {
-            "q": "«يجب»؟",
-            "a": "müssen (ich muss)"
+            "q": "Ich esse ___ viel. (نفي)",
+            "a": "nicht",
+            "choices": [
+              "nicht",
+              "kein",
+              "keine"
+            ],
+            "why": "الكمية والفعل يُنفيان بـnicht."
           },
           {
-            "q": "«11/12»؟",
-            "a": "elf / zwölf"
+            "q": "Die Möbel: ein Stuhl, zwei ___.",
+            "a": "Stühle",
+            "choices": [
+              "Stühle",
+              "Stuhl",
+              "Stühlen"
+            ],
+            "why": "الجمع بالأوملاوت + e: Stühle."
           },
           {
-            "q": "«100 يورو»؟",
-            "a": "100 Euro"
+            "q": "Die Lampe steht ___ dem Tisch. (على: سكون)",
+            "a": "auf",
+            "choices": [
+              "auf",
+              "in",
+              "an"
+            ],
+            "why": "steht = سكون ⇐ Wo + داتيف: auf dem Tisch."
+          },
+          {
+            "q": "Ich stelle die Lampe ___ den Tisch. (على: حركة)",
+            "a": "auf",
+            "choices": [
+              "auf",
+              "an",
+              "unter"
+            ],
+            "why": "stellen = حركة ⇐ Wohin + أكوزاتيف: auf den Tisch — الحرف نفسه، والأداة تتغيّر."
+          },
+          {
+            "q": "«هل أنت شبعان؟» — بالألمانية؟",
+            "a": "Bist du satt?",
+            "why": "satt مع sein: Bist du satt? — لا Hast du satt (u5-d3)."
           }
         ],
         "passingScore": 0.75
@@ -175,20 +493,59 @@
       {
         "items": [
           {
-            "q": "«المساعد يقعد والفعل آخر»؟",
-            "a": "Ich muss bezahlen. (الفعل آخر)"
+            "q": "Zum Frühstück trinke ich den Kaffee ___ Zucker. (بلا)",
+            "a": "ohne",
+            "choices": [
+              "ohne",
+              "mit",
+              "kein"
+            ],
+            "why": "ohne = بلا (u5-d4) · mit = مع."
           },
           {
-            "q": "«الساعة الواحدة»؟",
-            "a": "ein Uhr"
+            "q": "Ich habe ___ Gabel. (نفي)",
+            "a": "keine",
+            "choices": [
+              "keine",
+              "keinen",
+              "nicht"
+            ],
+            "why": "die Gabel مؤنث ⇐ keine."
           },
           {
-            "q": "«أيام الأسبوع»؟",
-            "a": "Montag bis Sonntag"
+            "q": "Der Schreibtisch steht unter ___ Fenster. (das)",
+            "a": "dem",
+            "choices": [
+              "dem",
+              "das",
+              "den"
+            ],
+            "why": "steht = سكون ⇐ Wo + داتيف: das Fenster ⇐ dem Fenster."
           },
           {
-            "q": "«نصف/ربع»؟",
-            "a": "halb / Viertel"
+            "q": "___ steht der Schreibtisch? — An der Wand. (سؤال السكون)",
+            "a": "Wo",
+            "choices": [
+              "Wo",
+              "Wohin",
+              "Woher"
+            ],
+            "why": "Wo للسكون (داتيف) · Wohin للحركة · Woher للمصدر."
+          },
+          {
+            "q": "Das Foto hängt über dem Bett — es hängt ___. (da + über)",
+            "a": "darüber",
+            "choices": [
+              "darüber",
+              "darauf",
+              "darin"
+            ],
+            "why": "da + حرف الجر über = darüber كلمة واحدة."
+          },
+          {
+            "q": "«ماذا تحب؟» — بالألمانية؟",
+            "a": "Was magst du?",
+            "why": "السؤال بـWas + magst (mögen مع du)."
           }
         ],
         "passingScore": 0.75
@@ -197,59 +554,59 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einheiten 5–6: Fahrkarte, Preis, Modalverben (muss/kann), Zahlen und Uhrzeit (halb drei).",
-      "ar": "الوحدتان 5–6: التذكرة والثمن والمساعدات والأرقام والوقت."
+      "de": "Woche fünf und sechs noch einmal: Heute ist Mittwoch, der zweiundzwanzigste April. Yusuf kocht, und es gibt eine Suppe und einen Salat. Er mag Fisch und Gemüse, Zucker mag er nicht. Er möchte einen Tee mit Milch. Er hat keinen Löffel, aber die Suppe ist nicht scharf. In seinem Zimmer gibt es vier Stühle und zwei Regale, aber keinen Fernseher. Der Schreibtisch steht an der Wand, die Lampe stellt er in die Ecke. Darauf steht die Vase, und darin ist eine Pflanze.",
+      "ar": "اليوم الثالث من أسبوع المراجعة اكتمل: تطلب بـmöchte، وتنفي الاسم بـkein والصفة بـnicht، وتجمع بالأوملاوت، وتفرّق Wo (داتيف) عن Wohin (أكوزاتيف)، وتستعمل darauf/darin/darüber."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich muss bezahlen die Rechnung~~ / ~~Ich kann nicht finden der Koffer~~",
-          "ar": "المساعد في المركز والفعل الآخر — القلنسوة!"
+          "de": "~~Ich habe nicht Löffel.~~ · ~~Die Suppe ist kein scharf.~~ · ~~Ich esse kein viel.~~",
+          "ar": "kein أم nicht"
         },
-        "whyArabicSpeakerFails": "«يجب أن أدفع» فعلان متجاوران بالعربية؛ الألماني: muss … bezahlen — نفس القاعدة من u5 في التسوق (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تنفي بأداة واحدة قبل أي شيء («لا» و«ليس») فيختار المتعلم أداة واحدة للجميع — والألمانية تفصل: kein قبل الاسم النكرة (keinen Löffel) وnicht للصفة والفعل والكمية (nicht scharf · nicht viel) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich muss die Rechnung bezahlen.",
-          "ar": "يجب أن أدفع الفاتورة."
+          "de": "Ich habe keinen Löffel. · Die Suppe ist nicht scharf. · Ich esse nicht viel.",
+          "ar": "لا أملك ملعقة · الحساء ليس حارّاً · لا آكل كثيراً"
         },
         "exercise": {
-          "q": "أكمل: Ich muss ___ (finden) den Koffer.",
-          "a": "… finden (آخر)"
+          "q": "أكمل: Ich habe ___ Gabel, und der Tee ist ___ heiß.",
+          "a": "keine / nicht"
         }
       },
       {
         "commonError": {
-          "de": "~~Was ist der Preis?~~ / ~~Wie viel kostet?~~",
-          "ar": "السؤال عن الثمن: Was kostet das?"
+          "de": "~~Die Lampe stelle ich in der Ecke.~~ · ~~Der Schreibtisch steht an die Wand.~~",
+          "ar": "Wo (داتيف) أم Wohin (أكوزاتيف)"
         },
-        "whyArabicSpeakerFails": "«كم الثمن» بأي فعل بالعربية؛ الألماني فعل واحد: kostet + المضاف إليه — التمرين الملايين (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«في» و«على» العربية لا تفرّقان بين السكون والحركة، فيستعمل المتعلم أداة واحدة بعد الحرف — والألمانية تسأل أولاً: Wo؟ (سكون ⇐ داتيف: an der Wand) أم Wohin؟ (حركة ⇐ أكوزاتيف: in die Ecke) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Was kostet das?",
-          "ar": "كم الثمن؟"
+          "de": "Die Lampe stelle ich in die Ecke. · Der Schreibtisch steht an der Wand.",
+          "ar": "أضع المصباح في الزاوية · المكتب يقف عند الجدار"
         },
         "exercise": {
-          "q": "حوّل: كم هذه الحقيبة؟",
-          "a": "Was kostet der Koffer?"
+          "q": "أكمل: Das Bett steht unter ___ Fenster (das), und die Vase stelle ich auf ___ Regal (das).",
+          "a": "dem / das"
         }
       },
       {
         "commonError": {
-          "de": "~~zwölf Uhr halb~~ / ~~halb Uhr~~",
-          "ar": "نصف/ربع الوقت: halb drei = 2:30 (بلا «halb Uhr»)"
+          "de": "~~Es gibt ein Salat.~~ · ~~Ich will einen Tee.~~ · ~~Vier Stuhl.~~",
+          "ar": "es gibt + أكوزاتيف · möchte · الجمع"
         },
-        "whyArabicSpeakerFails": "«الثانية والنصف» = halb drei (النصف يسبقه!) — نظام ألماني عكسي — مصيدة u8 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«يوجد» العربية يتبعها فاعل مرفوع، فيضع المتعلم ein بعد es gibt — والألمانية تجعله مفعولاً (einen Salat)؛ و«أريد» العربية مهذبة في الطلب فينقلها will — والألمانية تطلب بـmöchte؛ والعدد العربي يتبعه مفرد أحياناً («أربعة كراسٍ» جمع لكن «أربعون كرسياً» مفرد) فينسى المتعلم الجمع بعد العدد (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "halb drei (2:30)",
-          "ar": "الثانية والنصف"
+          "de": "Es gibt einen Salat. · Ich möchte einen Tee. · Vier Stühle.",
+          "ar": "يوجد سلطة · أودّ شاياً · أربعة كراسٍ"
         },
         "exercise": {
-          "q": "أكمل: 2:30 بالألمانية",
-          "a": "halb drei"
+          "q": "أكمل: Es gibt ___ Computer (ein), ich ___ einen Kaffee (möchten), und ich habe zwei ___ (Regal).",
+          "a": "einen / möchte / Regale"
         }
       }
     ],
     "srsBundleWordIds": [
-      "fahrkarte",
-      "supermarkt"
+      "fruehstueck",
+      "moebel"
     ]
   },
   "gReferences": {
@@ -260,16 +617,20 @@
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-satzklammer",
-    "ars-perfekt"
+    "ars-moechte-wollen",
+    "ars-kein-nicht",
+    "ars-plural-umlaut",
+    "ars-es-gibt",
+    "ars-wo-wohin",
+    "ars-da-komposita"
   ],
   "audioManifestRefs": [
-    "word-fahrkarte",
-    "word-supermarkt"
+    "word-fruehstueck",
+    "word-moebel"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung)",
+    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung) — اليوم 3: الأسبوعان 5–6 — الأربعاء 22 أبريل",
     "goetheWordListOverlap": []
   }
 }

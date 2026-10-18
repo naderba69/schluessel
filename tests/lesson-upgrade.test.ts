@@ -527,7 +527,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-dativ-fix: «الداتيف الثابت mit/nach/aus/zu» في خطة v6.1) — تشاركها ستة دروس لاحقة فـusedInLessons يضمّها كلها (§10‑ح)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-dativ-fix"]);
     const rule = rules.get("ars-dativ-fix")!;
-    expect(rule.usedInLessons).toEqual(["a1-u8-d4", "a1-u8-d6", "a1-u9-d1", "a1-u11-d2", "a1-u11-d5", "a1-u11-d6", "a1-u12-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u8-d4", "a1-u8-d6", "a1-u9-d1", "a1-u11-d2", "a1-u11-d5", "a1-u11-d6", "a1-u12-d6", "a1-u15-d4"]); // D202: أسبوع المراجعة
     expect(rule.payload.ruleDe).toBe("mit · nach · aus · zu: der/das → dem · die → der — zu dem = zum · zu der = zur — mit dem Bus · mit der Bahn · mit dem Auto · zum Flughafen · zur Schule · nach Berlin · nach Tunesien · nach Hause · aus Tunis · aus der Schweiz");
     // ثلاث خطوات: الحالة (الداتيف دائماً · dem/der · zum/zur) · nach أم zu (المدن والبلدان وHause بلا أداة · zu لما له أداة وللأشخاص) · aus للأصل (بلا أداة إلا die Schweiz)
     for (const x of ["يأتي الداتيف دائماً", "der ← dem · das ← dem · die ← der", "zu dem = zum", "zu der = zur", "nach للمدن والبلدان والقارات بلا أداة", "nach Hause = إلى البيت (حركة) · zu Hause = في البيت (مكان)", "zu لكل مكانٍ له أداة ولكل شخص", "die Schweiz ← aus der Schweiz", "Woher kommst du? — Aus Tunesien.", "abholen (يستقبل/يأخذ: Mein Vater holt mich ab"])
@@ -2516,7 +2516,7 @@ describe("D115 — أدوات القياس", () => {
     expect(rules.has("ars-praeteritum")).toBe(false);
     expect(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-praeteritum"))).toEqual([]);
     const pf = rules.get("ars-perfekt")!;
-    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6", "a2-u1-d1"]); // D201: u15-d1/d2 يراجعان قواعد الأسابيع 1–4 لا الماضي
+    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u15-d5", "a1-u15-d6", "a2-u1-d1"]); // D201/D202: u15-d1..d4 يراجعون قواعد الأسابيع 1–8 لا الماضي
     expect(pf.usedInLessons).toEqual(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-perfekt")).map((x) => x.id).sort((a, b) => a.localeCompare(b, "en", { numeric: true })));
     for (const x of ["Ich bin heute zu Hause geblieben.", "Ich bin nach Hause gefahren.", "Das Fieber ist verschwunden.", "Ich bin um sieben aufgestanden.", "Ich habe im Bett gelegen.", "Ich habe gehustet und geniest.", "Mein Hals hat gebrannt.", "Die Erkältung hat eine Woche gedauert.", "Wie war dein Tag?", "Warst du auch krank?", "Wir waren eine Woche zu Hause.", "Ich hatte Fieber.", "Hattest du auch Schwindel?", "Wir hatten keine Zeit.", "Jetzt geht es besser.", "Meine Nase juckt."])
       expect(pf.payload.ruleDe).toContain(x);
@@ -3085,7 +3085,7 @@ describe("D115 — أدوات القياس", () => {
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-satzklammer", "ars-tekamolo"]);
     const sk = rules.get("ars-satzklammer")!;
     const tk = rules.get("ars-tekamolo")!;
-    expect(sk.usedInLessons).toEqual(["a1-u9-d5", "a1-u9-d6", "a1-u11-d4", "a1-u12-d4", "a1-u12-d6", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6"]); // D201
+    expect(sk.usedInLessons).toEqual(["a1-u9-d5", "a1-u9-d6", "a1-u11-d4", "a1-u12-d4", "a1-u12-d6", "a1-u15-d5", "a1-u15-d6"]); // D201/D202
     expect(tk.usedInLessons).toEqual(["a1-u9-d5", "a1-u9-d6"]);
     expect(sk.payload.ruleDe).toBe("Ich fahre heute in die Stadt. · Heute fahre ich in die Stadt. · Bei uns ist der Zug immer pünktlich. — Ich steige am Bahnhof aus. · Der Bus kommt um neun an. · Bald fahren wir weiter. · Der Bus fährt heute nicht weiter. — Ich muss am Hauptbahnhof umsteigen. · Du kannst hier aussteigen. · Ich muss nicht umsteigen. — Hält der Bus im Zentrum? · Kommt der Bus pünktlich an? · Wann kommt der Bus an? · Wohin fährst du? — ich halte · du hältst · er hält · wir halten — Heute ist Stau. · Das ist der Grund. · Die Polizei steht an der Kreuzung. · An dieser Stelle hält der Bus nicht. · Die Haltestelle ist auf der anderen Seite. · Die Verbindung ist gut. · Im Fahrplan steht: um neun Uhr.");
     expect(tk.payload.ruleDe).toBe("Ich fahre heute mit dem Bus in die Stadt. · Ich fahre jeden Tag um sieben mit dem Zug zur Schule. · Ich fahre heute Abend um sechs mit dem Bus zurück. — Heute fahre ich mit dem Bus in die Stadt. · Morgen gehe ich um zehn mit meiner Schwester zu Fuß ans Ufer. · Um neun kommt der Bus am Bahnhof an. — Ich muss heute mit dem Bus in die Stadt fahren. · Mein Vater fährt am Morgen mit dem Auto zur Arbeit. · Wir gehen am Abend zu Fuß ans Ufer. — Wann? Wie? Wohin?");
@@ -3384,7 +3384,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-von-seit-bei: «von/seit/bei + مهمة: في المتجر» في خطة v6.1) — تشاركها u8-d6 (توليف) فـusedInLessons يضمّهما (§10‑ح)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-von-seit-bei"]);
     const rule = rules.get("ars-von-seit-bei")!;
-    expect(rule.usedInLessons).toEqual(["a1-u8-d5", "a1-u8-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u8-d5", "a1-u8-d6", "a1-u15-d4"]); // D202
     expect(rule.payload.ruleDe).toBe("von · seit · bei: der/das → dem · die → der · die Monate → den Monaten — von dem = vom · bei dem = beim — vom Markt · von mir · die Jacke von Lena · seit zwei Monaten · seit einem Jahr · Seit wann? · bei mir · bei der Bäckerei · beim Bäcker");
     // ثلاث خطوات: von (المصدر والمرسل والملكية · vom · von Lena = الإضافة · ≠ aus) · seit (الداتيف · الجمع + n · einem · المضارع · Seit wann) · bei (عند · bei mir · beim · bei der)
     for (const x of ["von = «من» للمصدر والمرسل والملكية", "von + dem تُدمج دائماً: vom", "die Jacke von Lena = سترة لينا", "aus للأصل والخروج من داخل مكان", "seit = «منذ» للمدة التي بدأت في الماضي وما زالت", "seit zwei Monaten (الجمع بـn)", "seit einem Jahr (das Jahr ← einem)", "والفعل بعدها مضارعٌ دائماً", "Seit wann …? — Seit einem Jahr.", "bei = «عند»", "bei + dem = beim دائماً", "bei der Bäckerei (die ← der)"])
@@ -3642,7 +3642,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-moechte-wollen — أشار إليها grammarArsenalIds في d3 وd5 وd6 ولم يُكتب لها ملف قط) فتُفهرس في الثلاثة
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-moechte-wollen"]);
     const rule = rules.get("ars-moechte-wollen")!;
-    expect(rule.usedInLessons).toEqual(["a1-u5-d3", "a1-u5-d6"]); // D145: d5 صار بقاعدة يومه الخاصة ars-kein-nicht-2
+    expect(rule.usedInLessons).toEqual(["a1-u5-d3", "a1-u5-d6", "a1-u15-d3"]); // D202: أسبوع المراجعة · D145: d5 صار بقاعدة يومه الخاصة ars-kein-nicht-2
     expect(rule.payload.ruleDe).toMatch(/ich möchte · du möchtest · er\/sie möchte · wir\/Sie möchten — ich will · du willst · er\/sie will · wir\/Sie wollen/);
     expect(rule.payload.ruleDe).toMatch(/Was für einen Kuchen\? · Was für eine Suppe\? · Was für ein Eis\?/);
     // möchte من mögen ومعناها غيره (Ich mag Kaffee ≠ Ich möchte einen Kaffee) — وmögen في بطاقات الاستدعاء
@@ -3726,7 +3726,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-kein-nicht — أشار إليها grammarArsenalIds في d4 وd5 وd6 ولم يُكتب لها ملف قط) فتُفهرس في الثلاثة
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-kein-nicht"]);
     const rule = rules.get("ars-kein-nicht")!;
-    expect(rule.usedInLessons).toEqual(["a1-u5-d4", "a1-u5-d6"]); // D145: d5 صار بقاعدة يومه الخاصة ars-kein-nicht-2
+    expect(rule.usedInLessons).toEqual(["a1-u5-d4", "a1-u5-d6", "a1-u15-d3"]); // D202: أسبوع المراجعة · D145: d5 صار بقاعدة يومه الخاصة ars-kein-nicht-2
     expect(rule.payload.ruleDe).toMatch(/ein Glas → kein Glas · eine Gabel → keine Gabel · einen Löffel → keinen Löffel · Fleisch → kein Fleisch · Eier → keine Eier — Die Suppe ist nicht scharf\./);
     expect(rule.payload.ruleAr).toContain("وهي ein بحرف k في أولها، فتتصرّف مثلها تماماً");
     // النقل الإيجابي يُسمّى عوناً: «لا» النافية للجنس ≈ kein · «لا شيء» = nichts · الفرنسية pas de · والفروق بمبررها: النفي على «عند» والاسم كما هو
@@ -3867,7 +3867,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-plural-umlaut — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط): الجمع يُحفظ مع الكلمة وله خمسة أنماط
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-plural-umlaut"]);
     const rule = rules.get("ars-plural-umlaut")!;
-    expect(rule.usedInLessons).toEqual(["a1-u6-d1"]);
+    expect(rule.usedInLessons).toEqual(["a1-u6-d1", "a1-u15-d3"]); // D202
     expect(rule.payload.ruleDe).toMatch(/der Stuhl → die Stühle · der Schrank → die Schränke · der Tisch → die Tische · die Lampe → die Lampen · das Sofa → die Sofas · der Sessel → die Sessel/);
     expect(rule.payload.ruleAr).toContain("ميولٌ لا قوانين");
     // العونان المسمّيان: جمع التكسير يغيّر داخل الكلمة (كرسي ← كراسي) كالنقطتين · المعدود من 3 إلى 10 جمع بالعربية أيضاً
@@ -4039,7 +4039,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-es-gibt — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u6-d6 يشير إليها أيضاً (سابقة ars-kein-nicht)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-es-gibt"]);
     const rule = rules.get("ars-es-gibt")!;
-    expect(rule.usedInLessons).toEqual(["a1-u6-d3", "a1-u6-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u6-d3", "a1-u6-d6", "a1-u15-d3"]); // D202
     expect(rule.payload.ruleDe).toBe("Es gibt einen Schreibtisch. · Es gibt ein Fenster. · Es gibt keine Waschmaschine. · Es gibt zwei Fenster. · Gibt es einen Fernseher? · Hier gibt es ein Fenster.");
     for (const x of ["ما بعد es gibt مفعولٌ به كما بعد haben", "es وgibt لا يتغيّران مع ما بعدهما", "jeder · jede · jedes (كلّ) بنهاية der · die · das نفسها", "Es gibt Kaffee."])
       expect(rule.payload.ruleAr).toContain(x);
@@ -4126,7 +4126,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-wo-wohin — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u6-d6 يشير إليها أيضاً (سابقة ars-es-gibt)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-wo-wohin"]);
     const rule = rules.get("ars-wo-wohin")!;
-    expect(rule.usedInLessons).toEqual(["a1-u6-d4", "a1-u6-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u6-d4", "a1-u6-d6", "a1-u15-d3"]); // D202
     expect(rule.payload.ruleDe).toBe("Wo? — Das Bett steht an der Wand. · Der Teppich ist unter dem Tisch. · Das Sofa steht im Zimmer. · Wohin? — Ich stelle das Sofa in die Ecke. · Ich lege den Schlüssel auf den Tisch. · Ich hänge das Foto über das Bett.");
     // أول Dativ مكانٍ بأداة في المنهج (قبل ars-dativ-fix u8-d4 وars-wechselpraep u9-d4 — هكذا خطّطه المنهج فلا سحب): dem/der للمكان وحدهما
     // · im/am من الوقت (u3-d4) · in der Schweiz من الوحدة 2 · وللوضع أداة المفعول به من الوحدة 4 · والفعل بشكل الشيء
@@ -4220,7 +4220,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-da-komposita — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u6-d6 يشير إليها أيضاً (سابقة ars-wo-wohin)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-da-komposita"]);
     const rule = rules.get("ars-da-komposita")!;
-    expect(rule.usedInLessons).toEqual(["a1-u6-d5", "a1-u6-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u6-d5", "a1-u6-d6", "a1-u15-d3"]); // D202
     expect(rule.payload.ruleDe).toBe("Da ist der Tisch. Darauf steht eine Vase. · Da ist der Schrank. Darin sind zwei Handtücher. · Da ist die Tür. Dahinter ist das Badezimmer.");
     // «da أول لقاء» كما في الخطة اليومية (والنظام كله مع الأفعال وwo-Komposita في A2 — لا سحب): للمكان · dar- قبل الحركة · لا تتغيّر · الفعل يطابق فاعله · وللوضع أيضاً
     for (const x of ["dar- قبل الحركة وda- قبل الساكن", "الكلمة لا تتغيّر أبداً", "والفعل يطابق الفاعل الذي بعده", "وللوضع (Wohin?) أيضاً"])
@@ -4512,7 +4512,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-praesens-regelm — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u7-d6 يشير إليها أيضاً فهي في usedInLessons
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-praesens-regelm"]);
     const rule = rules.get("ars-praesens-regelm")!;
-    expect(rule.usedInLessons).toEqual(["a1-u7-d3", "a1-u7-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u7-d3", "a1-u7-d6", "a1-u15-d4"]); // D202
     expect(realLessons.find((x) => x.id === "a1-u7-d6")!.usedArsenalIds).toContain("ars-praesens-regelm");
     expect(rule.payload.ruleDe).toBe("ich mache · du machst · er/sie/es macht · wir machen · ihr macht · sie/Sie machen — du wartest · er wartet · er öffnet — du putzt · du schließt — ich telefoniere · er telefoniert");
     // قاعدة اليوم في الخطة اليومية («Präsens regelmäßig»): جذعٌ ثابت + نهاية الفاعل · e بعد t/d وبعد ساكنٍ ثم n · لا s ثانية بعد s/ß/z · ‑ieren منتظمة · الفاعل لا يُحذف
@@ -4619,7 +4619,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-praesens-unregelm) · وتوليف u7-d6 يشير إليها فهي في usedInLessons
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-praesens-unregelm"]);
     const rule = rules.get("ars-praesens-unregelm")!;
-    expect(rule.usedInLessons).toEqual(["a1-u7-d4", "a1-u7-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u7-d4", "a1-u7-d6", "a1-u15-d4"]); // D202
     expect(realLessons.find((x) => x.id === "a1-u7-d6")!.usedArsenalIds).toContain("ars-praesens-unregelm");
     expect(rule.payload.ruleDe).toBe("ich fahre · du fährst · er/sie/es fährt · wir fahren · ihr fahrt · sie/Sie fahren — du läufst · er läuft — du nimmst · er nimmt · du gibst · er gibt — du isst · er isst · du liest · er liest");
     // قاعدة اليوم في الخطة اليومية («Präsens شاذ (fährt/isst)»): التغيير مع du وer/sie/es وحدهما · a ← ä · au ← äu · e ← i · e ← ie · nimmt
@@ -4724,7 +4724,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-trennbare — «Trennbare (الإدخال)» في الخطة اليومية) · وتوليف u7-d6 يشير إليها فهي في usedInLessons
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-trennbare"]);
     const rule = rules.get("ars-trennbare")!;
-    expect(rule.usedInLessons).toEqual(["a1-u7-d5", "a1-u7-d6", "a1-u12-d1", "a1-u12-d2"]); // D176: u12-d1 يراجعها بـabfahren/ankommen · D177: u12-d2 بالأمر وبعد الناقص (zurückgeben — N-117)
+    expect(rule.usedInLessons).toEqual(["a1-u7-d5", "a1-u7-d6", "a1-u12-d1", "a1-u12-d2", "a1-u15-d4"]); // D202: أسبوع المراجعة · // D176: u12-d1 يراجعها بـabfahren/ankommen · D177: u12-d2 بالأمر وبعد الناقص (zurückgeben — N-117)
     expect(realLessons.find((x) => x.id === "a1-u7-d6")!.usedArsenalIds).toContain("ars-trennbare");
     expect(rule.payload.ruleDe).toBe("Ich stehe um sieben auf. · Er räumt sein Zimmer auf. · Stehst du früh auf? · Steh auf! · Ich möchte früh aufstehen. · Wir frühstücken. · Ich besuche Oma.");
     // الجزء في الآخر والفعل ثانياً (قوسان) · السؤال والأمر · بعد möchte متصلاً · النبر علامة الانفصال · frühstücken/besuchen لا تنفصلان · القطع السابقة (aufwachen · ankommen)
@@ -5007,7 +5007,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-koennen-muessen) — تشاركها u8-d6 (توليف) فـusedInLessons يضمّهما (§10‑ح)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-koennen-muessen"]);
     const rule = rules.get("ars-koennen-muessen")!;
-    expect(rule.usedInLessons).toEqual(["a1-u8-d3", "a1-u8-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u8-d3", "a1-u8-d6", "a1-u15-d4"]); // D202
     expect(rule.payload.ruleDe).toBe("ich kann · du kannst · er/sie/es kann · wir/sie/Sie können — ich muss · du musst · er/sie/es muss · wir/sie/Sie müssen — Ich muss einen Rucksack kaufen. · Kann ich den Rucksack anprobieren? · Was musst du kaufen? · Du musst nicht viel bezahlen.");
     // ثلاث خطوات: الصيغ (ich=er بلا ‑t · تغيّر الحركة kann/können · muss/müssen) · القنطرة (الناقص ثانياً والمصدر آخراً بلا zu · المنفصل متصلاً · الحذف حين يُفهم) · المعنى (قدرة/إمكان/طلب مهذب · وجوب · nicht müssen = لا حاجة)
     for (const x of ["ich kann · du kannst · er/sie/es kann · wir können", "ich muss · du musst · er/sie/es muss · wir müssen", "ich وer/sie/es سواء بلا ‑t", "kann ← können · muss ← müssen", "لا يتصرّف ولا تسبقه zu", "Kann ich den Rucksack anprobieren?", "يبقى متصلاً في الآخر (anprobieren · einkaufen)", "Er kann gut Deutsch (= sprechen)", "الطلب المهذب في السؤال (Kann ich …? · Können Sie …?)", "müssen + nicht = لا حاجة ولا ضرورة، لا «ممنوع»", "Du musst nicht viel bezahlen"])
@@ -5150,7 +5150,7 @@ describe("D115 — الخطة الحقيقية", () => {
     expect(content).toHaveLength(60);
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
-    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2"].sort());
+    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4"].sort());
   });
   it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
@@ -5341,5 +5341,37 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     for (const f of ["der einundzwanzigste April", "zweiunddreißig", "zweihundertneunundsiebzig", "sieben Uhr dreißig", "Viertel vor acht", "am Montag um halb fünf", "im April", "einen Bruder", "ich sehe ihn", "ihr Mann", "sein Hund", "Zwillinge"]) expect(txt, f).toContain(f);
     // مشتّتات Quiz كلمات حقيقية (N-103): لا dreißigundsieben / einhundertzwanzigeins
     for (const fake of ["dreißigundsieben", "einhundertzwanzigeins", "achtundzig"]) expect(txt).not.toContain(fake);
+  });
+  it("a1-u15-d3 «Woche fünf und sechs» — أسبوع المراجعة اليوم 3 (الأربعاء 22 أبريل) · ستّ قواعد الأسبوعين 5–6 · كلمتا اليوم fruehstueck/moebel بدل fahrkarte/supermarkt · wr-1..20 · D202", () => {
+    const { l } = check("a1-u15-d3", 6);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-moechte-wollen", "ars-kein-nicht", "ars-plural-umlaut", "ars-es-gibt", "ars-wo-wohin", "ars-da-komposita"]);
+    for (const old of ["ars-satzklammer", "ars-perfekt"]) expect(rules.get(old)!.usedInLessons).not.toContain("a1-u15-d3");
+    expect(l.praesentation.wordIds).toEqual(["fruehstueck", "moebel"]);
+    expect(l.audioManifestRefs).toEqual(["word-fruehstueck", "word-moebel"]);
+    for (const w of ["fahrkarte", "supermarkt", "preis"]) expect(words.find((x) => x.id === w)!.usedInLessons).not.toContain("a1-u15-d3");
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^wr-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["der zweiundzwanzigste April", "einen Salat", "möchte einen Tee", "keinen Löffel", "nicht scharf", "vier Stühle", "an der Wand", "in die Ecke", "Darauf steht die Vase", "darin", "Frühstück", "Möbel", "satt"]) expect(txt, f).toContain(f);
+    // SD1 الرسمية «Fleisch mag ich nicht» لا تظهر حرفياً (D108) — الحوار يقول «Fleisch esse ich nicht so gern»
+    expect(txt).not.toContain("Fleisch mag ich nicht");
+    for (const fake of ["Stuhls", "Regäle", "Stuhle", "Regals"]) expect(txt).not.toContain(fake);
+  });
+  it("a1-u15-d4 «Woche sieben und acht» — أسبوع المراجعة اليوم 4 (الخميس 23 أبريل) · ستّ قواعد الأسبوعين 7–8 · كلمتا اليوم wecker/kleidung بدل wetter/uhr · wp-1..20 · D202", () => {
+    const { l } = check("a1-u15-d4", 6);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-trennbare", "ars-praesens-regelm", "ars-praesens-unregelm", "ars-koennen-muessen", "ars-dativ-fix", "ars-von-seit-bei"]);
+    for (const old of ["ars-satzklammer", "ars-perfekt"]) expect(rules.get(old)!.usedInLessons).not.toContain("a1-u15-d4");
+    expect(l.praesentation.wordIds).toEqual(["wecker", "kleidung"]);
+    expect(l.audioManifestRefs).toEqual(["word-wecker", "word-kleidung"]);
+    for (const w of ["wetter", "uhr", "kalt"]) expect(words.find((x) => x.id === w)!.usedInLessons).not.toContain("a1-u15-d4");
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^wp-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["der dreiundzwanzigste April", "wache um acht auf", "halb neun", "fährst mit dem Rad", "nimmt das Fahrrad", "lese lieber", "aus dem Geschäft bei der Bäckerei", "seit zwei Monaten", "vom Markt", "muss einkaufen", "Wecker", "Kleidung", "dreißig Euro mit Rabatt"]) expect(txt, f).toContain(f);
+    // مشتّتات Quiz كلمات حقيقية (N-103): fahrt/nehmt/tragt صيغ ihr الحقيقية — لا nehmst/tragst؛ والخطأ المقصود fahrst مشطوب وحده داخل ~~…~~
+    for (const fake of ["nehmst", "Stuhle"]) expect(txt).not.toContain(fake);
+    expect((txt.match(/fahrst/g) ?? []).length).toBe((txt.match(/~~[^~]*fahrst[^~]*~~/g) ?? []).length);
   });
 });

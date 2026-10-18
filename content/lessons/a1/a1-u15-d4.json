@@ -6,31 +6,44 @@
   "day": 4,
   "kind": "integration",
   "ziel": {
-    "de": "Wiederholung Einheiten 7–8: Wetter und Zeit — Es-Fake und seit/Dativ.",
-    "ar": "مراجعة الوحدتين 7–8: الطقس والوقت (Es الصوري + seit+Dativ)"
+    "de": "Woche sieben und acht noch einmal: Heute ist Donnerstag, der dreiundzwanzigste April · Ich wache um acht auf, ich stehe um halb neun auf · Du fährst mit dem Rad, er nimmt den Zug · Ich lese lieber · Die Jacke ist aus dem Geschäft bei der Bäckerei, ich habe sie seit zwei Monaten · Ich muss einkaufen, ich kann lange lesen.",
+    "ar": "أسبوع المراجعة، اليوم الرابع (الخميس 23 أبريل): الأسبوعان 7–8 من جديد — الأفعال المنفصلة (wache … auf · stehe … auf · rufe … an) · نهايات الحاضر المنتظمة (machst/macht) وتغيّر الجذر (fährst · nimmt · trägst) · gern/lieber · mit/aus/bei/seit/von + داتيف (mit dem Rad · aus dem Geschäft · bei der Bäckerei · seit zwei Monaten · vom Markt) · muss/kann + مصدر في آخر الجملة — ثم معركة اليوم (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (der Wecker · die Kleidung) من الأسبوعين نفسيهما."
   },
   "canDoDaily": [
-    "يصف الطقس ويحدد المدة ويسأل عن الوقت"
+    "يروي يومه كما في الجزء الشفوي بالأفعال المنفصلة وتغيّر الجذر (Ich wache um acht auf · Du fährst mit dem Rad · Er nimmt den Zug · Ich lese lieber) ويضع muss/kann مع المصدر في آخر الجملة",
+    "يصف ملابسه ومصدرها بالداتيف (aus dem Geschäft · bei der Bäckerei · seit zwei Monaten · vom Markt · mit dem Bus) ويجتاز معركة اليوم الرابع من أسبوع المراجعة بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
-      "wetter",
-      "uhr",
-      "kalt"
+      "wecker",
+      "kleidung",
+      "lieber"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "المراجعة التراكمية: أصلح الخطأ في الجملة"
+          "de": "«أستيقظ في الثامنة» — تخمين فقط"
         },
         "choices": [
-          "التصحيح بالقلنسوة/القاعدة الصحيحة",
-          "تصحيح آخر خاطئ",
-          "تصحيح ثالث خاطئ"
+          "Ich wache um acht auf.",
+          "Ich aufwache um acht.",
+          "Ich wache auf um acht."
         ],
-        "answer": "التصحيح بالقلنسوة/القاعدة الصحيحة",
+        "answer": "Ich wache um acht auf.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«أذهب بالحافلة» — تخمين فقط"
+        },
+        "choices": [
+          "Ich fahre mit dem Bus.",
+          "Ich fahre mit den Bus.",
+          "Ich fahre mit der Bus."
+        ],
+        "answer": "Ich fahre mit dem Bus.",
         "revealNextSession": true
       }
     ],
@@ -38,87 +51,311 @@
   },
   "praesentation": {
     "wordIds": [
-      "wetter",
-      "uhr"
+      "wecker",
+      "kleidung"
     ],
     "grammarArsenalIds": [
-      "ars-satzklammer",
-      "ars-perfekt"
+      "ars-trennbare",
+      "ars-praesens-regelm",
+      "ars-praesens-unregelm",
+      "ars-koennen-muessen",
+      "ars-dativ-fix",
+      "ars-von-seit-bei"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a1-u15-s4"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«الجو ممطر»؟",
-            "a": "Es regnet."
+            "q": "Der Wecker ist laut, und ich wache um acht ___. (aufwachen)",
+            "a": "auf",
+            "why": "الفعل المنفصل: البادئة auf تذهب إلى آخر الجملة (u7-d3)."
           },
           {
-            "q": "«أنا أنتظر منذ ساعة»؟",
-            "a": "Ich warte seit einer Stunde."
+            "q": "Ich ___ um halb neun auf. (aufstehen: ich)",
+            "a": "stehe",
+            "why": "الجذع يُصرَّف في المكان الثاني (stehe) والبادئة في الآخر (auf)."
+          },
+          {
+            "q": "Du ___ mit dem Rad in die Stadt. (fahren: du)",
+            "a": "fährst",
+            "why": "fahren يغيّر a ⇐ ä مع du وer: fährst · fährt (u7-d4)."
+          },
+          {
+            "q": "Nabil ___ das Fahrrad. (nehmen: er)",
+            "a": "nimmt",
+            "why": "nehmen يغيّر e ⇐ i مع du وer: nimmst · nimmt."
+          },
+          {
+            "q": "Was ___ du um drei Uhr? (machen: du)",
+            "a": "machst",
+            "why": "الفعل المنتظم: ‑st مع du، ‑t مع er (u7-d2)."
+          },
+          {
+            "q": "Am Abend sehe ich nicht fern — ich lese ___. (gern: تفضيل)",
+            "a": "lieber",
+            "why": "gern = بسرور · lieber = أفضّل (المقارنة) (u7-d2)."
+          },
+          {
+            "q": "Die Kleidung ist aus ___ Geschäft bei der Bäckerei. (das)",
+            "a": "dem",
+            "why": "aus + داتيف: das Geschäft ⇐ dem Geschäft (u8-d5)."
+          },
+          {
+            "q": "Ich habe die Jacke ___ zwei Monaten. (منذ)",
+            "a": "seit",
+            "why": "seit + داتيف: seit zwei Monaten (الجمع في الداتيف يأخذ ‑n)."
+          },
+          {
+            "q": "Ich fahre mit ___ Bus. (der)",
+            "a": "dem",
+            "why": "mit + داتيف دائماً: der Bus ⇐ dem Bus (u8-d4)."
+          },
+          {
+            "q": "Ich ___ einkaufen und die Wäsche waschen. (müssen: ich)",
+            "a": "muss",
+            "why": "muss في المكان الثاني والمصدر في آخر الجملة (u8-d4)."
           }
         ],
         "interleavedWith": [
-          "warten",
-          "stunde"
+          "wecker",
+          "stadt",
+          "fahrrad",
+          "uhr",
+          "geschaeft",
+          "baeckerei",
+          "jacke",
+          "bus",
+          "waesche"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«كيف الجو؟»؟",
-            "a": "Wie ist das Wetter?"
+            "audioId": "wp-4",
+            "speakText": "Ich wache um acht auf, und ich stehe um halb neun auf. Dann dusche ich und frühstücke.",
+            "q": "استمع: متى ينهض يوسف من السرير؟",
+            "choices": [
+              "الثامنة والنصف",
+              "الثامنة",
+              "التاسعة والنصف"
+            ],
+            "a": "الثامنة والنصف",
+            "why": "ich stehe um halb neun auf = أنهض في 8:30 · ich wache um acht auf = أستيقظ في الثامنة."
           },
           {
-            "q": "«الساعة الخامسة»؟",
-            "a": "Es ist fünf Uhr."
+            "audioId": "wp-6",
+            "speakText": "Ich fahre mit dem Bus, und ich nehme den Zug. Du fährst mit dem Rad, Nabil nimmt das Fahrrad.",
+            "q": "استمع: بماذا تذهب لينا؟",
+            "choices": [
+              "بالدراجة",
+              "بالحافلة",
+              "بالقطار"
+            ],
+            "a": "بالدراجة",
+            "why": "Du fährst mit dem Rad = أنتِ تذهبين بالدراجة · يوسف بالحافلة والقطار."
+          },
+          {
+            "audioId": "wp-8",
+            "speakText": "Ich rufe meine Familie an, ich kaufe ein, und ich räume auf. Am Abend sehe ich nicht fern — ich lese lieber.",
+            "q": "استمع: ماذا يفعل يوسف في المساء؟",
+            "choices": [
+              "يقرأ",
+              "يشاهد التلفاز",
+              "يتسوّق"
+            ],
+            "a": "يقرأ",
+            "why": "ich lese lieber = أفضّل القراءة · sehe nicht fern = لا أشاهد التلفاز."
+          },
+          {
+            "audioId": "wp-10",
+            "speakText": "Die Jacke ist blau, das Hemd ist weiß, und die Hose ist braun. Die Hose passt gut!",
+            "q": "استمع: ما لون القميص؟",
+            "choices": [
+              "أبيض",
+              "أزرق",
+              "بنّي"
+            ],
+            "a": "أبيض",
+            "why": "das Hemd ist weiß = القميص أبيض · الجاكيت أزرق · البنطال بنّي."
+          },
+          {
+            "audioId": "wp-12",
+            "speakText": "Die Jacke ist aus dem Geschäft bei der Bäckerei, und ich habe sie seit zwei Monaten. Die Kette für Oma war vom Markt.",
+            "q": "استمع: منذ متى عند يوسف الجاكيت؟",
+            "choices": [
+              "منذ شهرين",
+              "منذ أسبوعين",
+              "منذ سنتين"
+            ],
+            "a": "منذ شهرين",
+            "why": "seit zwei Monaten = منذ شهرين · aus dem Geschäft bei der Bäckerei = من المحل عند المخبز."
+          },
+          {
+            "audioId": "wp-14",
+            "speakText": "Ich muss einkaufen und die Wäsche waschen. Und ich kann heute lange lesen — ohne Hausaufgaben!",
+            "q": "استمع: ماذا يجب على يوسف؟",
+            "choices": [
+              "التسوّق وغسل الغسيل",
+              "القراءة طويلاً",
+              "الواجبات"
+            ],
+            "a": "التسوّق وغسل الغسيل",
+            "why": "Ich muss einkaufen und die Wäsche waschen = يجب · ich kann lange lesen = يستطيع."
+          },
+          {
+            "audioId": "wp-18",
+            "speakText": "Mit dem Rad, mit der Bahn, mit dem Taxi — mit dem oder der. Und wie viel kosten deine Stiefel?",
+            "q": "استمع: عمّ يسأل يوسف في النهاية؟",
+            "choices": [
+              "عن ثمن الجزمة",
+              "عن القطار",
+              "عن التاكسي"
+            ],
+            "a": "عن ثمن الجزمة",
+            "why": "Wie viel kosten deine Stiefel? = كم ثمن جزمتك؟ · mit + داتيف: dem/der."
+          },
+          {
+            "audioId": "wp-19",
+            "speakText": "Dreißig Euro mit Rabatt — sie sind rot und passen gut. Woche sieben und acht sind fertig!",
+            "q": "استمع: كم ثمن جزمة لينا؟",
+            "choices": [
+              "ثلاثون يورو مع تخفيض",
+              "ثلاثة عشر يورو",
+              "ثلاثون يورو بلا تخفيض"
+            ],
+            "a": "ثلاثون يورو مع تخفيض",
+            "why": "dreißig Euro mit Rabatt = ثلاثون يورو مع تخفيض · sie sind rot = حمراء."
           }
         ],
         "interleavedWith": [
-          "wetter",
-          "uhr"
+          "familie",
+          "hemd",
+          "hose",
+          "kette",
+          "markt",
+          "bahn",
+          "taxi",
+          "stiefel",
+          "rabatt"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "error-hunt",
         "items": [
           {
-            "q": "«الشمس تشرق»؟",
-            "a": "Die Sonne scheint."
+            "q": "صحّح: ~~Ich aufwache um acht.~~",
+            "a": "Ich wache um acht auf.",
+            "why": "الفعل المنفصل ينقسم: wache ثانياً وauf في آخر الجملة."
           },
           {
-            "q": "«يومين»؟",
-            "a": "zwei Tage"
+            "q": "صحّح: ~~Du fahrst mit dem Rad.~~",
+            "a": "Du fährst mit dem Rad.",
+            "why": "fahren مع du: a ⇐ ä."
+          },
+          {
+            "q": "صحّح: ~~Er nehmt den Zug.~~",
+            "a": "Er nimmt den Zug.",
+            "why": "nehmen مع er: nimmt (e ⇐ i)."
+          },
+          {
+            "q": "صحّح: ~~Ich muss die Wäsche waschen heute.~~",
+            "a": "Ich muss heute die Wäsche waschen.",
+            "why": "المصدر waschen في آخر الجملة — لا شيء بعده."
+          },
+          {
+            "q": "صحّح: ~~Die Jacke ist aus das Geschäft.~~",
+            "a": "Die Jacke ist aus dem Geschäft.",
+            "why": "aus + داتيف: dem."
+          },
+          {
+            "q": "صحّح: ~~Ich fahre mit den Bus.~~",
+            "a": "Ich fahre mit dem Bus.",
+            "why": "mit + داتيف: dem (den للأكوزاتيف)."
           }
         ],
         "interleavedWith": [
-          "sonne",
-          "tag"
+          "rad",
+          "zug",
+          "waesche",
+          "geschaeft",
+          "bus"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wp-1",
+            "speakText": "Hallo, Yusuf! Heute ist Donnerstag, der dreiundzwanzigste April. Woche sieben und acht: dein Tag und deine Kleidung!",
+            "a": "Hallo, Yusuf! Heute ist Donnerstag, der dreiundzwanzigste April. Woche sieben und acht: dein Tag und deine Kleidung!",
+            "why": "der dreiundzwanzigste (‑ste) · Donnerstag بـnn · Kleidung بحرف كبير وei."
+          },
+          {
+            "audioId": "wp-3",
+            "speakText": "Frage eins: Wann wachst du auf, und wann stehst du auf?",
+            "a": "Frage eins: Wann wachst du auf, und wann stehst du auf?",
+            "why": "Wann = متى · wachst … auf وstehst … auf: البادئة منفصلة في الآخر."
+          },
+          {
+            "audioId": "wp-7",
+            "speakText": "Ich nehme, du nimmst, er nimmt. Frage zwei: Was machst du um drei Uhr? Machst — macht!",
+            "a": "Ich nehme, du nimmst, er nimmt. Frage zwei: Was machst du um drei Uhr? Machst — macht!",
+            "why": "nehme/nimmst/nimmt (e ⇐ i) · machst بـ‑st · macht بـ‑t."
+          },
+          {
+            "audioId": "wp-11",
+            "speakText": "Frage drei: Woher ist die Jacke? Und seit wann hast du sie?",
+            "a": "Frage drei: Woher ist die Jacke? Und seit wann hast du sie?",
+            "why": "Woher = من أين · seit wann = منذ متى · sie = die Jacke."
+          },
+          {
+            "audioId": "wp-15",
+            "speakText": "Muss einkaufen, kann lesen — einkaufen und lesen am Ende!",
+            "a": "Muss einkaufen, kann lesen — einkaufen und lesen am Ende!",
+            "why": "muss/kann ثانياً والمصدر (einkaufen · lesen) في آخر الجملة · Ende بحرف كبير."
+          },
+          {
+            "audioId": "wp-17",
+            "speakText": "Ich muss noch Hausaufgaben machen und meinen Bruder abholen — mit dem Rad.",
+            "a": "Ich muss noch Hausaufgaben machen und meinen Bruder abholen — mit dem Rad.",
+            "why": "Hausaufgaben بحرف كبير وجمع · abholen مصدر كامل في الآخر · mit dem Rad (داتيف)."
+          }
+        ],
+        "interleavedWith": [
+          "donnerstag",
+          "kleidung",
+          "jacke",
+          "hausaufgabe",
+          "bruder"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die kumulative Wiederholung meistern",
-        "a": "x",
-        "ar": "إتقان المراجعة التراكمية"
+        "de": "Mein Tag und meine Kleidung: Der Wecker ist laut, ich wache um acht auf und stehe um halb neun auf. Ich fahre mit dem Bus in die Stadt. Am Abend lese ich lieber. Meine Jacke ist blau, sie ist aus dem Geschäft bei der Bäckerei, und ich habe sie seit zwei Monaten. Heute muss ich einkaufen, aber ich kann auch lange lesen.",
+        "ar": "أن يروي يومه وملابسه كما في الجزء الشفوي: فعلان منفصلان في جملتين (wache … auf · rufe … an) · فعل واحد بتغيّر الجذر مع du أو er (fährst · nimmt) · lieber مرة · مصدران اثنان على الأقل بالداتيف (mit dem Bus · aus dem Geschäft · bei der Bäckerei · seit zwei Monaten) · جملة بـmuss وجملة بـkann والمصدر في الآخر"
       },
       "situation": {
-        "de": "Mischung aus den Einheiten der Woche",
-        "a": "x",
-        "ar": "خليط من وحدات الأسبوع"
+        "de": "Das Ende der Woche: Donnerstag, der dreiundzwanzigste April — Lena und Yusuf wiederholen Woche sieben und acht: der Tag und die Kleidung. Und jetzt du: Wann stehst du auf, und was trägst du?",
+        "ar": "أسبوع المراجعة: مساء الخميس 23 أبريل — لينا ويوسف يعيدان الأسبوعين 7 و8: اليوم (الأفعال المنفصلة · تغيّر الجذر · lieber) والملابس (mit/aus/bei/seit/von + داتيف · muss/kann) — ثم أنت: متى تنهض وماذا تلبس"
       },
       "successCriteria": [
-        "جملة طقس + جملة منذ-مدة + سؤال wann"
+        "يروي يومه بفعلين منفصلين صحيحين (البادئة في الآخر) وفعل واحد بتغيّر الجذر مع du أو er",
+        "يذكر مصدرين أو وسيلتين بالداتيف الصحيح (mit dem Bus · aus dem Geschäft · bei der Bäckerei · seit zwei Monaten) بلا den/das بعدها",
+        "يقول ما يجب وما يستطيع بـmuss وkann والمصدر في آخر الجملة"
       ]
     }
   },
@@ -133,20 +370,59 @@
       {
         "items": [
           {
-            "q": "«ممطر/ممطرة»؟",
-            "a": "Es regnet / Es schneit"
+            "q": "Der Wecker ist laut, und Yusuf ___ um acht auf. (aufwachen: er)",
+            "a": "wacht",
+            "choices": [
+              "wacht",
+              "wache",
+              "wachst"
+            ],
+            "why": "aufwachen مع er: wacht … auf (‑t)."
           },
           {
-            "q": "«الشمس تشرق»؟",
-            "a": "Die Sonne scheint."
+            "q": "Lena ___ mit dem Rad. (fahren: sie)",
+            "a": "fährt",
+            "choices": [
+              "fährt",
+              "fahrt",
+              "fahre"
+            ],
+            "why": "fahren مع sie/er: fährt (a ⇐ ä)."
           },
           {
-            "q": "«كيف الجو؟»؟",
-            "a": "Wie ist das Wetter?"
+            "q": "Ich ___ heute lange lesen. (können: ich)",
+            "a": "kann",
+            "choices": [
+              "kann",
+              "kannst",
+              "können"
+            ],
+            "why": "können مع ich: kann بلا نهاية — والمصدر lesen في الآخر."
           },
           {
-            "q": "«الساعة 8:30»؟",
-            "a": "halb neun"
+            "q": "Ich fahre mit ___ Bahn. (die)",
+            "a": "der",
+            "choices": [
+              "der",
+              "die",
+              "dem"
+            ],
+            "why": "mit + داتيف: die Bahn ⇐ der Bahn (المؤنث في الداتيف der)."
+          },
+          {
+            "q": "Das Hemd ist ___. (أبيض)",
+            "a": "weiß",
+            "choices": [
+              "weiß",
+              "blau",
+              "braun"
+            ],
+            "why": "الألوان بعد ist: das Hemd ist weiß (أبيض) · die Jacke ist blau · die Hose ist braun (u8-d2)."
+          },
+          {
+            "q": "الترتيب: an. / meine Familie / rufe / Ich",
+            "a": "Ich rufe meine Familie an.",
+            "why": "rufe ثانياً، البادئة an في آخر الجملة."
           }
         ],
         "passingScore": 0.75
@@ -154,20 +430,59 @@
       {
         "items": [
           {
-            "q": "«منذ» + أي حالة؟",
-            "a": "seit + Dativ"
+            "q": "Du ___ den Zug. (nehmen: du)",
+            "a": "nimmst",
+            "choices": [
+              "nimmst",
+              "nehmt",
+              "nimmt"
+            ],
+            "why": "nehmen مع du: nimmst (e ⇐ i)."
           },
           {
-            "q": "«منذ ساعتين»؟",
-            "a": "seit zwei Stunden"
+            "q": "Was ___ du heute? (tragen: du)",
+            "a": "trägst",
+            "choices": [
+              "trägst",
+              "tragt",
+              "trägt"
+            ],
+            "why": "tragen مع du: trägst (a ⇐ ä)."
           },
           {
-            "q": "«صباح/مساء»؟",
-            "a": "der Morgen / der Abend"
+            "q": "Am Abend sehe ich nicht ___. (fernsehen)",
+            "a": "fern",
+            "choices": [
+              "fern",
+              "fernsehen",
+              "sehe"
+            ],
+            "why": "fernsehen منفصل: sehe … fern — البادئة fern في الآخر."
           },
           {
-            "q": "«اليوم/غداً/أمس»؟",
-            "a": "heute / morgen / gestern"
+            "q": "Die Jacke ist ___ dem Geschäft. (من: مصدر)",
+            "a": "aus",
+            "choices": [
+              "aus",
+              "bei",
+              "mit"
+            ],
+            "why": "aus + داتيف = من (المصدر) · bei = عند."
+          },
+          {
+            "q": "Lena muss ihren Bruder ___. (abholen)",
+            "a": "abholen",
+            "choices": [
+              "abholen",
+              "holt ab",
+              "holen"
+            ],
+            "why": "بعد muss يأتي المصدر كاملاً غير منفصل: abholen في الآخر."
+          },
+          {
+            "q": "«منذ متى عندك الجاكيت؟» — بالألمانية؟",
+            "a": "Seit wann hast du die Jacke?",
+            "why": "السؤال عن المدة بـSeit wann (u8-d5)."
           }
         ],
         "passingScore": 0.75
@@ -175,20 +490,59 @@
       {
         "items": [
           {
-            "q": "«Es الفاعل الصوري»؟",
-            "a": "Es regnet (لا فاعل حقيقي)"
+            "q": "Yusuf ___ um halb neun auf. (aufstehen: er)",
+            "a": "steht",
+            "choices": [
+              "steht",
+              "stehe",
+              "stehst"
+            ],
+            "why": "aufstehen مع er: steht … auf."
           },
           {
-            "q": "«الطقس البارد»؟",
-            "a": "Es ist kalt."
+            "q": "Die Stiefel kosten dreißig Euro ___ Rabatt. (مع)",
+            "a": "mit",
+            "choices": [
+              "mit",
+              "ohne",
+              "bei"
+            ],
+            "why": "mit Rabatt = مع تخفيض · ohne = بلا."
           },
           {
-            "q": "«أمس/غداً»؟",
-            "a": "gestern / morgen"
+            "q": "Lena ___ noch Hausaufgaben machen. (müssen: sie)",
+            "a": "muss",
+            "choices": [
+              "muss",
+              "musst",
+              "müssen"
+            ],
+            "why": "müssen مع sie/er: muss — والمصدر machen في الآخر."
           },
           {
-            "q": "«متى؟»؟",
-            "a": "wann?"
+            "q": "Das Geschäft ist ___ der Bäckerei. (عند)",
+            "a": "bei",
+            "choices": [
+              "bei",
+              "aus",
+              "seit"
+            ],
+            "why": "bei + داتيف = عند/بجانب: bei der Bäckerei."
+          },
+          {
+            "q": "Ich dusche und ___. (frühstücken: ich)",
+            "a": "frühstücke",
+            "choices": [
+              "frühstücke",
+              "frühstückt",
+              "frühstücken"
+            ],
+            "why": "frühstücken فعل منتظم غير منفصل: مع ich ‑e."
+          },
+          {
+            "q": "«ماذا يجب أن تفعل اليوم؟» — بالألمانية؟",
+            "a": "Was musst du heute machen?",
+            "why": "musst مع du في المكان الثاني والمصدر machen في الآخر (u8-d4)."
           }
         ],
         "passingScore": 0.75
@@ -197,59 +551,59 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einheiten 7–8: Es-Fake (regnet/schneit), seit + Dativ, Uhrzeit und wann-Fragen.",
-      "ar": "الوحدتان 7–8: Es الصوري وseit+Dativ والوقت وwann."
+      "de": "Woche sieben und acht noch einmal: Heute ist Donnerstag, der dreiundzwanzigste April. Yusuf hat keinen Kurs mehr: Er wacht um acht auf und steht um halb neun auf. Er fährt mit dem Bus, Lena fährt mit dem Rad, Nabil nimmt das Fahrrad. Am Abend sieht Yusuf nicht fern, er liest lieber. Die Jacke ist blau, sie ist aus dem Geschäft bei der Bäckerei, und er hat sie seit zwei Monaten. Er muss einkaufen und die Wäsche waschen, aber er kann heute lange lesen. Die Stiefel von Lena sind rot — dreißig Euro mit Rabatt.",
+      "ar": "اليوم الرابع من أسبوع المراجعة اكتمل: تفصل البادئة إلى آخر الجملة، وتغيّر الجذر مع du وer، وتقول lieber للتفضيل، وتضع الداتيف بعد mit/aus/bei/seit/von، وتضع المصدر في الآخر بعد muss وkann."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Es regnet es~~ / ~~Der Wetter ist schön~~",
-          "ar": "Es الفاعل الصوري + das Wetter"
+          "de": "~~Ich aufwache um acht.~~ · ~~Ich wache auf um acht.~~ · ~~Ich muss die Wäsche waschen heute.~~",
+          "ar": "البادئة والمصدر في آخر الجملة"
         },
-        "whyArabicSpeakerFails": "«الجو ممطر» بلا فاعل بالعربية؛ الألماني يفرض Es دائماً — و«الجو» محايد: das Wetter — الوحدة 7 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الفعل العربي كتلة واحدة لا تنقسم («أستيقظ في الثامنة») فيبقي المتعلم aufwachen كتلة أو يضع auf مباشرة بعد الفعل — والألمانية تقسم: الجذع ثانياً والبادئة في آخر الجملة (Ich wache um acht auf) والشيء نفسه مع المصدر بعد muss/kann (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Es regnet. · Das Wetter ist schön.",
-          "ar": "الجو ممطر. · الجو جميل."
+          "de": "Ich wache um acht auf. · Ich muss heute die Wäsche waschen.",
+          "ar": "أستيقظ في الثامنة · يجب أن أغسل الغسيل اليوم"
         },
         "exercise": {
-          "q": "أكمل: ___ schneit.",
-          "a": "Es"
+          "q": "رتّب: ein / Ich / am Abend / kaufe",
+          "a": "Ich kaufe am Abend ein."
         }
       },
       {
         "commonError": {
-          "de": "~~seit zwei Stunde~~ / ~~seit den zwei Stunden~~",
-          "ar": "seit + Dativ (الوحدات الزمنية جمع بلا مقال)"
+          "de": "~~Du fahrst mit dem Rad.~~ · ~~Er nehmt den Zug.~~ · ~~Was tragst du?~~",
+          "ar": "تغيّر الجذر مع du وer"
         },
-        "whyArabicSpeakerFails": "«منذ ساعتين» جمع بالعربية؛ الألماني seit zwei Stunden (Dativ جمع بلا مقال) — مصيدة u8 الأصلية (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "المتعلم يعمّم نهايات المضارع (‑st/‑t) على كل فعل كما تُعمَّم أحرف المضارعة العربية — لكن أفعالاً شائعة تغيّر حرف العلة في الجذر مع du وer فقط: fahren ⇐ fährst/fährt · nehmen ⇐ nimmst/nimmt · tragen ⇐ trägst/trägt (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "seit zwei Stunden",
-          "ar": "منذ ساعتين"
+          "de": "Du fährst mit dem Rad. · Er nimmt den Zug. · Was trägst du?",
+          "ar": "أنتَ تذهب بالدراجة · هو يأخذ القطار · ماذا تلبس؟"
         },
         "exercise": {
-          "q": "أكمل: seit ___ Tag (واحد → Dativ)",
-          "a": "einem Tag"
+          "q": "أكمل: Nabil ___ mit dem Fahrrad (fahren), und du ___ den Bus (nehmen).",
+          "a": "fährt / nimmst"
         }
       },
       {
         "commonError": {
-          "de": "~~Wann es ist fünf Uhr?~~ / ~~Es ist wann fünf~~",
-          "ar": "سؤال «متى» + القلنسوة"
+          "de": "~~mit den Bus~~ · ~~aus das Geschäft~~ · ~~seit zwei Monate~~",
+          "ar": "mit/aus/bei/seit/von + داتيف"
         },
-        "whyArabicSpeakerFails": "«متى الساعة الخامسة» ترتيب خاطئ: wann يبدأ والفعل يقفز — Wann fährst du? — مصيدة الاستفهام (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "حروف الجر العربية لا تغيّر الأداة («بالحافلة» · «من المحل») فيترك المتعلم der/das كما هي أو يضع الأكوزاتيف الذي تعلّمه أولاً — والألمانية تضع بعد mit/aus/bei/seit/von الداتيف دائماً: dem (مذكر ومحايد) · der (مؤنث) · ‑n للجمع (seit zwei Monaten) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Wann fährst du?",
-          "ar": "متى تسافر؟"
+          "de": "mit dem Bus · aus dem Geschäft · seit zwei Monaten",
+          "ar": "بالحافلة · من المحل · منذ شهرين"
         },
         "exercise": {
-          "q": "أكمل: Wann ___ (fahren) du?",
-          "a": "fährst"
+          "q": "أكمل: Ich fahre mit ___ Bahn (die), die Kette ist ___ Markt (von + dem), und ich wohne hier seit zwei ___ (Monat).",
+          "a": "der / vom / Monaten"
         }
       }
     ],
     "srsBundleWordIds": [
-      "wetter",
-      "uhr"
+      "wecker",
+      "kleidung"
     ]
   },
   "gReferences": {
@@ -260,16 +614,20 @@
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-satzklammer",
-    "ars-perfekt"
+    "ars-trennbare",
+    "ars-praesens-regelm",
+    "ars-praesens-unregelm",
+    "ars-koennen-muessen",
+    "ars-dativ-fix",
+    "ars-von-seit-bei"
   ],
   "audioManifestRefs": [
-    "word-wetter",
-    "word-uhr"
+    "word-wecker",
+    "word-kleidung"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung)",
+    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung) — اليوم 4: الأسبوعان 7–8 — الخميس 23 أبريل",
     "goetheWordListOverlap": []
   }
 }
