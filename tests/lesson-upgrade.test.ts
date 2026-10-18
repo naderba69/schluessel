@@ -1256,7 +1256,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-stadt-ort) — تشاركها u9-d6 (توليف) · وars-dativ-fix تبقى مرجعاً مستدعًى (zum · mit dem — usedInLessons السبعة من D159)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-stadt-ort", "ars-dativ-fix"]);
     const rule = rules.get("ars-stadt-ort")!;
-    expect(rule.usedInLessons).toEqual(["a1-u9-d1", "a1-u9-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u9-d1", "a1-u9-d6", "a1-u15-d5"]); // D203: أسبوع المراجعة
     expect(rule.payload.ruleDe).toBe("Wo ist …? — gegenüber: der/das → dem · die → der — gegenüber der Kirche · gegenüber dem Park · gegenüber dem Bahnhof — in dem = im: im Norden · im Süden · im Osten · im Westen (Wo?) — nach Norden · nach Süden (Wohin?) — hier · dort · geradeaus · Ich gehe zurück. · zurück zum Kurs");
     // ثلاث خطوات: Wo ist + hier/dort · gegenüber + الداتيف · im (موقع) ≠ nach (اتجاه) — وكلمتا الطريق geradeaus/zurück
     for (const x of ["Wo ist …? = أين …؟", "hier (هنا) · dort (هناك)", "«مقابل» = gegenüber + الداتيف دائماً", "gegenüber der Kirche (die Kirche)", "gegenüber dem Park (der Park)", "in + dem = im", "im Norden von Berlin", "nach بلا أداة: nach Norden", "geradeaus = إلى الأمام مباشرة", "zurück = رجوعاً، وتقف في آخر الجملة", "Ich komme morgen zurück."])
@@ -1349,7 +1349,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-weg-verkehr) — تشاركها u9-d3 (الأمر Sie + الطريق) وu9-d6 (توليف) · بلا نواة (الخطة: الإسناد المعلّق التالي a1-u9-d3)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-weg-verkehr"]);
     const rule = rules.get("ars-weg-verkehr")!;
-    expect(rule.usedInLessons).toEqual(["a1-u9-d2", "a1-u9-d3", "a1-u9-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u9-d2", "a1-u9-d3", "a1-u9-d6", "a1-u15-d5"]); // D203
     expect(rule.payload.ruleDe).toBe("einsteigen · umsteigen · aussteigen: Ich steige … ein / um / aus. — Am Hauptbahnhof steige ich um. · Wo steigst du aus? — Am Flughafen. · Musst du umsteigen? — Nein, ich steige nicht um. — Wohin fährst du? — Zum Hauptbahnhof. · Wo ist die Haltestelle? — Gegenüber der Post. — Linie 5 · Bahnsteig 3 · von Bahnsteig 3 ab · in Richtung Flughafen · Die Abfahrt ist um acht Uhr. · Die Ankunft ist um neun Uhr. · weit ≠ nah · hin und zurück · am Park vorbei · Überall ist Verkehr.");
     // أربع خطوات: الأفعال المنفصلة الثلاثة (+ muss + الفعل كاملاً · nicht قبل الجزء) · Wohin ≠ Wo · أرقام الرحلة بلا أداة + um … Uhr · weit/nah · hin und zurück · vorbei · überall
     for (const x of ["einsteigen (يركب) · umsteigen (يغيّر وسيلة النقل) · aussteigen (ينزل)", "ich steige · du steigst · er steigt", "Am Hauptbahnhof steige ich um.", "Ich muss am Hauptbahnhof umsteigen.", "Ich steige nicht um.", "Wohin? (إلى أين) للاتجاه", "Wo? (أين) للموقع", "Linie 5 (الخط 5) · Bahnsteig 3 (الرصيف 3)", "in Richtung Flughafen", "Die Abfahrt ist um acht Uhr.", "weit (بعيد) ≠ nah (قريب)", "hin und zurück (ذهاباً وإياباً — بهذا الترتيب دائماً", "Der Zug fährt am Park vorbei.", "Überall ist Verkehr."])
@@ -1415,7 +1415,7 @@ describe("D115 — أدوات القياس", () => {
     // معجم النطق (D162): Bahnsteig [st→ʃt] وHaltestelle [ɛ→ə] — مقطعا الكلمتين وأسطر الحوار ومسار نموذج الامتحان القديم أُعيدت
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; regeneratedTracks: string[] }[] };
     expect(lex.entries.find((x) => x.word === "Bahnsteig")).toMatchObject({ forms: [{ espeak: "bˈɑːnstaɪk", ipa: "bˈɑːnʃtˌaɪk" }], regeneratedTracks: ["word-bahnsteig", "hb-9", "hb-10"] });
-    expect(lex.entries.find((x) => x.word === "Haltestelle")).toMatchObject({ forms: [{ espeak: "hˈaltɛʃtˌɛlə", ipa: "hˈaltəʃtˌɛlə" }], regeneratedTracks: ["word-haltestelle", "mt1-h1-d6-l3", "hb-2", "hb-16", "st-9"] }); // st-9 (D165) يمسّ المدخل نفسه
+    expect(lex.entries.find((x) => x.word === "Haltestelle")).toMatchObject({ forms: [{ espeak: "hˈaltɛʃtˌɛlə", ipa: "hˈaltəʃtˌɛlə" }], regeneratedTracks: expect.arrayContaining(["word-haltestelle", "mt1-h1-d6-l3", "hb-2", "hb-16", "st-9"]) }); // st-9 (D165) يمسّ المدخل نفسه · lexicon-sync يلحق المسارات الجديدة تلقائياً (wn-3/wn-4 في D203) فالقائمة احتواء لا تطابق
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
     expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
@@ -1448,7 +1448,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدة اليوم جديدة: ars-wetter-es (تشاركها u10-d6)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-wetter-es"]);
     const we = rules.get("ars-wetter-es")!;
-    expect(we.usedInLessons).toEqual(["a1-u10-d1", "a1-u10-d6"]);
+    expect(we.usedInLessons).toEqual(["a1-u10-d1", "a1-u10-d6", "a1-u15-d5"]); // D203
     expect(we.payload.ruleDe).toBe("Wie ist das Wetter? — Es regnet. · Es ist kalt. · Es ist warm. · Es ist heiß. · Heute ist es sonnig. · Es ist schön. — Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. · Morgen regnet es nicht. — Wie viel Grad sind es? — Es sind zwanzig Grad. · Nur acht Grad. — Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. · Die Straße ist nass. · Am Morgen ist hier Schnee.");
     // جملة الطقس بأربع خطوات: السؤال · الشكلان (فعل الطقس / ist + صفة) · es لا يسقط بعد الزمن/المكان · الدرجات بالجمع وGrad بلا ‑e — والفاعل الحقيقي بلا es
     for (const x of ["جملة الطقس بأربع خطوات", "Wie ist das Wetter?", "es + فعل الطقس: Es regnet.", "es ist + صفة: Es ist kalt.", "إما الفعل وإما ist + صفة، لا معاً", "Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt.", "Regnet es? · Ist es kalt?", "Es sind zwanzig Grad.", "Grad لا يأخذ ‑e بعد العدد", "Die Sonne scheint. · Der Wind ist heute kalt."])
@@ -1543,7 +1543,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدة اليوم جديدة: ars-termin-datum (تشاركها u10-d6)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-termin-datum"]);
     const td = rules.get("ars-termin-datum")!;
-    expect(td.usedInLessons).toEqual(["a1-u10-d2", "a1-u10-d6"]);
+    expect(td.usedInLessons).toEqual(["a1-u10-d2", "a1-u10-d6", "a1-u15-d5"]); // D203
     expect(td.payload.ruleDe).toBe("Montag · Dienstag · Mittwoch · Donnerstag · Freitag · Samstag · Sonntag — am Dienstag · am Wochenende · Am Dienstag habe ich Zeit. — Welches Datum ist heute? — Heute ist der zweite April. · Heute ist der erste Mai. · Heute ist der dritte Juni. · Heute ist der siebte Januar. · Heute ist der zwölfte März. · Heute ist der zwanzigste Februar. — Wann? — Am zwölften April. · Am siebzehnten April endet der Kurs. · Ich habe am achtzehnten April Geburtstag. · Ich schreibe den achtzehnten April in meinen Kalender. — Hast du am Samstag Zeit? — Ja, am Samstag bin ich frei. · Nein, am Freitag ist alles besetzt. — Einen kleinen Moment! · Vielen Dank für die Einladung! · Das ist die erste Absage. — Liebe Lena, · Lieber Yusuf,");
     // التاريخ والموعد بأربع خطوات: الأيام مع am · الترتيبي (‑te حتى 19 · ‑ste من 20 · الشواذ) · النهاية حسب السؤال (der ‑e / am ‑en / den ‑en) · الموعد frei/besetzt + Einladung/Absage + lieb-/Moment/enden
     for (const x of ["التاريخ والموعد بأربع خطوات", "am Montag · am Dienstag · am Mittwoch · am Donnerstag · am Freitag · am Samstag · am Sonntag · am Wochenende", "Am Dienstag habe ich Zeit. (قوس u9-d5)", "من 1 إلى 19 بـ‑te", "من 20 فصاعداً بـ‑ste", "eins → erste · drei → dritte · sieben → siebte", "der 2. April = der zweite April", "Heute ist der zweite April. (der + ‑e بعد ist)", "am zwölften April (am + ‑en)", "den achtzehnten April in meinen Kalender. (den + ‑en)", "~~der zweite von April~~", "frei للشخص والمكان", "besetzt للمكان والموعد", "die Einladung والجواب: Vielen Dank für die Einladung! أو die Absage", "Der Kurs endet am siebzehnten April. (endet بـ‑et)", "Einen kleinen Moment!", "Liebe + مؤنث (Liebe Lena, · Liebe Oma,) وLieber + مذكر (Lieber Yusuf, · Lieber Vater,)"])
@@ -1643,7 +1643,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدة اليوم جديدة: ars-perfekt-haben (كانت مُشاراً إليها بلا ملف — تشاركها u10-d4 وu10-d6)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-perfekt-haben"]);
     const ph = rules.get("ars-perfekt-haben")!;
-    expect(ph.usedInLessons).toEqual(["a1-u10-d3", "a1-u10-d4", "a1-u10-d6"]);
+    expect(ph.usedInLessons).toEqual(["a1-u10-d3", "a1-u10-d4", "a1-u10-d6", "a1-u15-d5"]); // D203
     expect(ph.payload.ruleDe).toContain("Was hast du gestern gemacht? — Gestern habe ich Deutsch gelernt.");
     expect(ph.payload.ruleDe).not.toMatch(/\b(Pizza|gehabt|war|hatte|bin|ist|gegangen|gefahren)\b/);
     // الماضي المركّب مع haben بأربع خطوات: جزءان (haben ثانياً + التصريف آخراً) · المنتظم ge‑…‑t (‑et بعد t/d) · القوي ge‑…‑en يُحفظ + المختلطان · ظروف الزمن والسؤال
@@ -2311,7 +2311,7 @@ describe("D115 — أدوات القياس", () => {
     expect(l.audioManifestRefs).toContain("word-ergebnis");
     // القاعدة الجديدة ars-modal-fix: كانت بلا ملف ومُشار إليها من أربعة دروس (u11-d5 · u11-d6 · u12-d2 · u12-d6) — تضيف dürfen وsollen (أُجّلتا في ars-koennen-muessen «لاحقاً») وتجمع الخمسة
     const mf = rules.get("ars-modal-fix")!;
-    expect(mf.usedInLessons).toEqual(["a1-u11-d5", "a1-u11-d6", "a1-u12-d2", "a1-u12-d6"]);
+    expect(mf.usedInLessons).toEqual(["a1-u11-d5", "a1-u11-d6", "a1-u12-d2", "a1-u12-d6", "a1-u15-d6"]); // D203
     expect(mf.payload.ruleDe).toContain("ich darf · du darfst · er/sie/es darf · wir/sie/Sie dürfen — ich soll · du sollst · er/sie/es soll · wir/sie/Sie sollen");
     expect(mf.payload.ruleDe).toContain("Sie dürfen nicht rauchen. · Du musst nicht kommen.");
     expect(mf.payload.beads).toEqual(["Sie", "dürfen", "nicht", "rauchen."]);
@@ -2516,7 +2516,7 @@ describe("D115 — أدوات القياس", () => {
     expect(rules.has("ars-praeteritum")).toBe(false);
     expect(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-praeteritum"))).toEqual([]);
     const pf = rules.get("ars-perfekt")!;
-    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u15-d5", "a1-u15-d6", "a2-u1-d1"]); // D201/D202: u15-d1..d4 يراجعون قواعد الأسابيع 1–8 لا الماضي
+    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u15-d6", "a2-u1-d1"]); // D201–D203: من أسبوع المراجعة يبقى u15-d6 وحده (الأسبوعان 11–12)
     expect(pf.usedInLessons).toEqual(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-perfekt")).map((x) => x.id).sort((a, b) => a.localeCompare(b, "en", { numeric: true })));
     for (const x of ["Ich bin heute zu Hause geblieben.", "Ich bin nach Hause gefahren.", "Das Fieber ist verschwunden.", "Ich bin um sieben aufgestanden.", "Ich habe im Bett gelegen.", "Ich habe gehustet und geniest.", "Mein Hals hat gebrannt.", "Die Erkältung hat eine Woche gedauert.", "Wie war dein Tag?", "Warst du auch krank?", "Wir waren eine Woche zu Hause.", "Ich hatte Fieber.", "Hattest du auch Schwindel?", "Wir hatten keine Zeit.", "Jetzt geht es besser.", "Meine Nase juckt."])
       expect(pf.payload.ruleDe).toContain(x);
@@ -2624,7 +2624,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدة اليوم جديدة: ars-gesundheit (كانت مُشاراً إليها بلا ملف — تشاركها u11-d6) + ars-dativ-fix مراجعةً (zum/zur)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-gesundheit", "ars-dativ-fix"]);
     const ge = rules.get("ars-gesundheit")!;
-    expect(ge.usedInLessons).toEqual(["a1-u11-d2", "a1-u11-d6"]);
+    expect(ge.usedInLessons).toEqual(["a1-u11-d2", "a1-u11-d6", "a1-u15-d6"]); // D203
     expect(ge.payload.ruleDe).toContain("Ich habe Kopfschmerzen.");
     expect(ge.payload.ruleDe).toContain("Was fehlt dir?");
     expect(ge.payload.ruleDe).toContain("Die Ärztin fragt: Was fehlt Ihnen?"); // الصيغة الثلاثية داخل جملة أطول لا وحدها (D172 — D108)
@@ -2744,7 +2744,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدة اليوم جديدة: ars-koerper (كانت مُشاراً إليها بلا ملف — تشاركها u11-d6)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-koerper"]);
     const ko = rules.get("ars-koerper")!;
-    expect(ko.usedInLessons).toEqual(["a1-u11-d1", "a1-u11-d6"]);
+    expect(ko.usedInLessons).toEqual(["a1-u11-d1", "a1-u11-d6", "a1-u15-d6"]); // D203
     expect(ko.payload.ruleDe).toContain("Mir tut der Kopf weh.");
     expect(ko.payload.ruleDe).toContain("Meine Beine tun weh.");
     expect(ko.payload.ruleDe).toContain("die Hand → die Hände");
@@ -2861,7 +2861,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدة اليوم جديدة: ars-weil-satz (كانت مُشاراً إليها بلا ملف — تشاركها u10-d6 وu12-d4 وu12-d6)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-weil-satz"]);
     const ws = rules.get("ars-weil-satz")!;
-    expect(ws.usedInLessons).toEqual(["a1-u10-d5", "a1-u10-d6", "a1-u12-d4", "a1-u12-d6"]);
+    expect(ws.usedInLessons).toEqual(["a1-u10-d5", "a1-u10-d6", "a1-u12-d4", "a1-u12-d6", "a1-u15-d6"]); // D203
     expect(ws.payload.ruleDe).toContain("Ich brauche einen Termin, weil ich krank bin.");
     expect(ws.payload.ruleDe).toContain("Yusuf kann nicht kommen, weil er lernen muss.");
     expect(ws.payload.ruleDe).toContain("Weil ich krank bin, brauche ich einen Termin.");
@@ -3085,7 +3085,7 @@ describe("D115 — أدوات القياس", () => {
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-satzklammer", "ars-tekamolo"]);
     const sk = rules.get("ars-satzklammer")!;
     const tk = rules.get("ars-tekamolo")!;
-    expect(sk.usedInLessons).toEqual(["a1-u9-d5", "a1-u9-d6", "a1-u11-d4", "a1-u12-d4", "a1-u12-d6", "a1-u15-d5", "a1-u15-d6"]); // D201/D202
+    expect(sk.usedInLessons).toEqual(["a1-u9-d5", "a1-u9-d6", "a1-u11-d4", "a1-u12-d4", "a1-u12-d6", "a1-u15-d6"]); // D201–D203
     expect(tk.usedInLessons).toEqual(["a1-u9-d5", "a1-u9-d6"]);
     expect(sk.payload.ruleDe).toBe("Ich fahre heute in die Stadt. · Heute fahre ich in die Stadt. · Bei uns ist der Zug immer pünktlich. — Ich steige am Bahnhof aus. · Der Bus kommt um neun an. · Bald fahren wir weiter. · Der Bus fährt heute nicht weiter. — Ich muss am Hauptbahnhof umsteigen. · Du kannst hier aussteigen. · Ich muss nicht umsteigen. — Hält der Bus im Zentrum? · Kommt der Bus pünktlich an? · Wann kommt der Bus an? · Wohin fährst du? — ich halte · du hältst · er hält · wir halten — Heute ist Stau. · Das ist der Grund. · Die Polizei steht an der Kreuzung. · An dieser Stelle hält der Bus nicht. · Die Haltestelle ist auf der anderen Seite. · Die Verbindung ist gut. · Im Fahrplan steht: um neun Uhr.");
     expect(tk.payload.ruleDe).toBe("Ich fahre heute mit dem Bus in die Stadt. · Ich fahre jeden Tag um sieben mit dem Zug zur Schule. · Ich fahre heute Abend um sechs mit dem Bus zurück. — Heute fahre ich mit dem Bus in die Stadt. · Morgen gehe ich um zehn mit meiner Schwester zu Fuß ans Ufer. · Um neun kommt der Bus am Bahnhof an. — Ich muss heute mit dem Bus in die Stadt fahren. · Mein Vater fährt am Morgen mit dem Auto zur Arbeit. · Wir gehen am Abend zu Fuß ans Ufer. — Wann? Wie? Wohin?");
@@ -3283,7 +3283,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدتا اليوم: ars-imperativ-sie (الجديدة — تشاركها u9-d4 وu9-d6) + ars-weg-verkehr (من D162)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-imperativ-sie", "ars-weg-verkehr"]);
     const rule = rules.get("ars-imperativ-sie")!;
-    expect(rule.usedInLessons).toEqual(["a1-u9-d3", "a1-u9-d4", "a1-u9-d6"]);
+    expect(rule.usedInLessons).toEqual(["a1-u9-d3", "a1-u9-d4", "a1-u9-d6", "a1-u15-d5"]); // D203
     expect(rule.payload.ruleDe).toBe("Gehen Sie geradeaus! · Nehmen Sie den Bus! · Warten Sie hier, bitte! · Kommen Sie sofort! — Biegen Sie links ab! · Steigen Sie hier aus! — Helfen Sie mir, bitte! · Entschuldigung, können Sie mir helfen? — Gerne! / Kein Problem. · Ich helfe dir. — Gehen Sie zuerst geradeaus, danach biegen Sie links ab. — Können Sie mir den Weg erklären? · Ich bitte um Hilfe. · Danke für die Hilfe! — Entschuldigung, wo ist die Auskunft? — Am Eingang, links. · Der Ausgang ist dort. · Haben Sie auch einen Stadtplan?");
     // أربع خطوات: الفعل أولاً ثم Sie · الجزء المنفصل في الآخر · helfen + الداتيف والطلب بـkönnen · zuerst/danach + um Hilfe bitten + die Hilfe + erklären
     for (const x of ["الفعل أولاً كما في المصدر ثم Sie مباشرة", "Sie gehen geradeaus. (خبر) → Gehen Sie geradeaus! (أمر)", "nehmen يبقى Nehmen Sie — لا nimmt", "Biegen Sie links ab! · Steigen Sie am Hauptbahnhof aus!", "Gehen Sie nicht links!", "Helfen Sie mir! · Hilfst du mir? · Ich helfe dir. · Er hilft mir. (mir/dir — لا mich/dich)", "ich helfe · du hilfst · er hilft · Sie helfen", "Entschuldigung, können Sie mir helfen?", "zuerst (أولاً) … danach (بعد ذلك) …", "Ich bitte um Hilfe. · Ich bitte dich um Hilfe. (um + الأكوزاتيف)", "Danke für die Hilfe!", "der Eingang (المدخل) ≠ der Ausgang (المخرج)"])
@@ -5150,7 +5150,7 @@ describe("D115 — الخطة الحقيقية", () => {
     expect(content).toHaveLength(60);
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
-    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4"].sort());
+    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6"].sort());
   });
   it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
@@ -5373,5 +5373,39 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     // مشتّتات Quiz كلمات حقيقية (N-103): fahrt/nehmt/tragt صيغ ihr الحقيقية — لا nehmst/tragst؛ والخطأ المقصود fahrst مشطوب وحده داخل ~~…~~
     for (const fake of ["nehmst", "Stuhle"]) expect(txt).not.toContain(fake);
     expect((txt.match(/fahrst/g) ?? []).length).toBe((txt.match(/~~[^~]*fahrst[^~]*~~/g) ?? []).length);
+  });
+  it("a1-u15-d5 «Woche neun und zehn» — أسبوع المراجعة اليوم 5 (الجمعة 24 أبريل) · ستّ قواعد الأسبوعين 9–10 · كلمتا اليوم haltestelle/wetter بدل arzt/termin · wn-1..20 · D203", () => {
+    const { l } = check("a1-u15-d5", 6);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-stadt-ort", "ars-weg-verkehr", "ars-imperativ-sie", "ars-wetter-es", "ars-termin-datum", "ars-perfekt-haben"]);
+    for (const old of ["ars-satzklammer", "ars-perfekt"]) expect(rules.get(old)!.usedInLessons).not.toContain("a1-u15-d5");
+    expect(l.praesentation.wordIds).toEqual(["haltestelle", "wetter"]);
+    expect(l.audioManifestRefs).toEqual(["word-haltestelle", "word-wetter"]);
+    for (const w of ["arzt", "termin"]) expect(words.find((x) => x.id === w)!.usedInLessons).not.toContain("a1-u15-d5");
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^wn-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["der vierundzwanzigste April", "es sind zwanzig Grad", "gegenüber der Post", "steige am Bahnhof aus", "nicht umsteigen", "Gehen Sie geradeaus", "biegen Sie rechts ab", "am siebzehnten April", "am achtzehnten", "Kuchen gegessen", "fotografiert", "getanzt", "eingekauft", "telefoniert", "Haltestelle", "Wetter"]) expect(txt, f).toContain(f);
+    // الخطأ المقصود الوحيد getelefoniert معلن ومشطوب (N-103) — ولا مشتّتات مختلقة
+    expect(plan.lessons.find((e) => e.lessonId === "a1-u15-d5")!.misspellings?.map((m) => m.wrong)).toEqual(["getelefoniert"]);
+    for (const fake of ["gebesucht", "geeinkauft", "schneit"]) expect(txt).not.toContain(fake);
+    expect((txt.match(/getelefoniert/g) ?? []).length).toBe((txt.match(/~~[^~]*getelefoniert[^~]*~~/g) ?? []).length);
+  });
+  it("a1-u15-d6 «Woche elf und zwölf» — اليوم الأخير من أسبوع المراجعة (السبت 25 أبريل) · ستّ قواعد الأسبوعين 11–12 (هنا تبقى perfekt/satzklammer) · كلمتا اليوم kopfschmerz/verspaetung · wl-1..20 · D203 — N-004 مكتملة 18/18", () => {
+    const { l } = check("a1-u15-d6", 6);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-koerper", "ars-gesundheit", "ars-perfekt", "ars-satzklammer", "ars-modal-fix", "ars-weil-satz"]);
+    expect(l.praesentation.wordIds).toEqual(["kopfschmerz", "verspaetung"]);
+    expect(l.audioManifestRefs).toEqual(["word-kopfschmerz", "word-verspaetung"]);
+    for (const w of ["reise", "ziel"]) expect(words.find((x) => x.id === w)!.usedInLessons).not.toContain("a1-u15-d6");
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^wl-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["der fünfundzwanzigste April", "tut weh", "tun weh", "hilft dir", "sollst viel trinken", "nicht in die Schule gehen", "bin mit dem Zug gekommen", "ist um neun losgefahren", "um sieben angekommen", "nicht verpasst", "weil ein Mann krank war", "deshalb haben wir", "mitgebracht", "Kopfschmerzen", "Verspätung", "Fieber"]) expect(txt, f).toContain(f);
+    // «Ich bin zu Hause (geblieben)» الرسمية مثبتة لـu10-d6 وحده (D199) — لا تظهر هنا · ولا مشتّتات مختلقة
+    expect(txt).not.toMatch(/Ich bin zu Hause/);
+    for (const fake of ["zurückgekommt", "gebleibt", "sollt\""]) expect(txt).not.toContain(fake);
+    // الفهرس العكسي: perfekt/satzklammer في u15-d6 وحده من أسبوع المراجعة
+    for (const r of ["ars-perfekt", "ars-satzklammer"]) expect(rules.get(r)!.usedInLessons.filter((x) => x.startsWith("a1-u15-"))).toEqual(["a1-u15-d6"]);
   });
 });
