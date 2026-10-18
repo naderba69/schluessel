@@ -136,8 +136,9 @@ export function detectGrammarRisks(spec: {
 /** أخطار صوتية تستحق بطاقة سماع (§4): الحركات المدوَّرة/الطول/الاحتكاكيان/r المُصوَّتة */
 const AUDIO_WORTHY: readonly PhoneticRisk[] = ["umlaut-u", "umlaut-o", "ch-ich-laut", "ch-ach-laut", "vowel-long-short", "r-uvular"];
 
-export function cardTypesFor(spec: { wordClass: string; gender: string; chunk?: boolean; kollocation?: unknown }, risks: PhoneticRisk[]): CardType[] {
-  const out: CardType[] = ["production", "comprehension"];
+export function cardTypesFor(spec: { wordClass: string; gender: string; chunk?: boolean; kollocation?: unknown; receptive?: boolean }, risks: PhoneticRisk[]): CardType[] {
+  // D204: الكلمة الاستقبالية (تكملة SD1) تُفهم ولا تُنتَج — بطاقة فهم بلا إنتاج
+  const out: CardType[] = spec.receptive ? ["comprehension"] : ["production", "comprehension"];
   if (spec.gender !== "none") out.push("gender");
   if (risks.some((r) => AUDIO_WORTHY.includes(r))) out.push("audio");
   if (spec.chunk) out.push("chunk");

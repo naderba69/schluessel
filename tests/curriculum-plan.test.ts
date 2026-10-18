@@ -293,8 +293,11 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(cs.find((c) => c.status === "pending")).toBeUndefined(); // D180: النواة مكتملة — لا pending
     expect(cs.every((c) => c.missing.length === 0)).toBe(true);
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
-    expect(next.lessonId).toBe("a1-u13-d1");
+    expect(next.lessonId).toBe("a1-u13-d2"); // D204: u13-d1 أُنتج (15 كلمة رئيسية · receptive)
     expect(next.headwords).toHaveLength(15);
+    const d1 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u13-d1")!;
+    expect(d1.produced).toBe(true);
+    expect(d1.missing).toEqual([]);
   });
 });
 

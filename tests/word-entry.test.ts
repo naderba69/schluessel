@@ -8,7 +8,7 @@ import {
   slugify, nounGender, detectPhoneticRisks, detectGrammarRisks, cardTypesFor, clipText, srsDistance,
   plausibleRisk, reannotate, citationForm, lemmaOf,
 } from "../tools/lib/word-entry.js";
-import { planWord, runGenerator, phonemizeAll, auditRisks, spokenForm, type WordSpec } from "../tools/word-entry-generator.js";
+import { planWord, runGenerator, phonemizeAll, auditRisks, spokenForm, WordSpec } from "../tools/word-entry-generator.js";
 import { ALL_WORDS, ALL_LESSONS } from "../src/lesson-packs.js";
 
 // espeak يُخرج ç مفككة — الاختبار يستعمل الشكل نفسه
@@ -118,8 +118,17 @@ describe("D105 — planWord: مواصفة ← كلمة كاملة صالحة", (
   const base: WordSpec = {
     de: "das Erlebnis", ar: ["تجربة"], wordClass: "noun", level: "A2", unit: 1, lesson: "a2-u1-d3", thema: "Vergangenheit",
     sample: { de: "Das war ein tolles Erlebnis!", ar: "كانت تجربة رائعة!" }, plural: "die Erlebnisse",
-    goetheList: [], chunk: false, functionWord: false, wordFamily: [],
+    goetheList: [], chunk: false, receptive: false, functionWord: false, wordFamily: [],
   };
+  it("D204: receptive ⇒ بطاقة فهم بلا إنتاج (تكملة SD1 للوحدتين 13–14) — والوحدة حتى 15 لا 12", () => {
+    expect(cardTypesFor({ wordClass: "noun", gender: "das", receptive: true }, [])).toEqual(["comprehension", "gender"]);
+    expect(cardTypesFor({ wordClass: "verb", gender: "none", receptive: true }, ["umlaut-u"])).toEqual(["comprehension", "audio"]);
+    const p = planWord({ ...base, level: "A1", unit: 13, lesson: "a1-u13-d1", receptive: true }, "ɛɾlˈeːpnɪs");
+    expect(p.word.srsCardTypes).toContain("comprehension");
+    expect(p.word.srsCardTypes).not.toContain("production");
+    expect(p.word.unit).toBe(13);
+    expect(WordSpec.safeParse({ ...base, unit: 16 }).success).toBe(false);
+  });
   it("اسم: أداة/جنس/بطاقة جنس/فهرس الاستخدام — ويمر من zod", () => {
     const p = planWord(base, "ɛɾlˈeːpnɪs");
     expect(Word.parse(p.word)).toBeTruthy();

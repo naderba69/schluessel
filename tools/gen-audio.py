@@ -1127,6 +1127,22 @@ def build_all() -> None:
     ("word-schwarz", "schwarz.", "schwarz", ["a1-u8-d6"]),
     ("word-weiss", "weiß.", "weiss", ["a1-u8-d6"]),
     ("word-braun", "braun.", "braun", ["a1-u8-d6"]),
+    ("word-baby", "das Baby.", "baby", ["a1-u13-d1"]),
+    ("word-jugendliche", "der Jugendliche.", "jugendliche", ["a1-u13-d1"]),
+    ("word-erwachsene", "der Erwachsene.", "erwachsene", ["a1-u13-d1"]),
+    ("word-verwandte", "der Verwandte.", "verwandte", ["a1-u13-d1"]),
+    ("word-ehefrau", "die Ehefrau.", "ehefrau", ["a1-u13-d1"]),
+    ("word-ehemann", "der Ehemann.", "ehemann", ["a1-u13-d1"]),
+    ("word-kindergarten", "der Kindergarten.", "kindergarten", ["a1-u13-d1"]),
+    ("word-heiraten", "heiraten.", "heiraten", ["a1-u13-d1"]),
+    ("word-hochzeit", "die Hochzeit.", "hochzeit", ["a1-u13-d1"]),
+    ("word-gestorben", "gestorben.", "gestorben", ["a1-u13-d1"]),
+    ("word-party", "die Party.", "party", ["a1-u13-d1"]),
+    ("word-feiertag", "der Feiertag.", "feiertag", ["a1-u13-d1"]),
+    ("word-einladen", "einladen.", "einladen", ["a1-u13-d1"]),
+    ("word-glueckwunsch", "der Glückwunsch.", "glueckwunsch", ["a1-u13-d1"]),
+    ("word-gratulieren", "gratulieren.", "gratulieren", ["a1-u13-d1"]),
+    ("word-zufrieden", "zufrieden.", "zufrieden", ["a1-u13-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

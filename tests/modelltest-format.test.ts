@@ -134,8 +134,8 @@ describe("D109 — قواعد المدقِّق: التوازن وقفل المف
   });
   it("كلمة غير مدروسة = e-modelltest-vocab يسمّي الجزء والكلمة", () => {
     const t = valid();
-    sayIt(t, "Ich heiße Lena und ich trinke Wasser auf der Hochzeit.");
-    expect(issues(t, "e-modelltest-vocab")).toEqual([expect.stringMatching(/^sprechen-1: .*hochzeit$/)]);
+    sayIt(t, "Ich heiße Lena und ich trinke Wasser auf der Konferenz."); // D204: Hochzeit صارت مدروسة (u13-d1)
+    expect(issues(t, "e-modelltest-vocab")).toEqual([expect.stringMatching(/^sprechen-1: .*konferenz$/)]);
   });
   it("كلمة A2 في امتحان A1 = مخالفة · والامتحان نفسه بمستوى A2 = مقبول (المستوى وما قبله)", () => {
     const t = valid();

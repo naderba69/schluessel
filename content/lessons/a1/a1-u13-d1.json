@@ -1,0 +1,721 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u13-d1",
+  "level": "A1",
+  "unit": 13,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du verstehst Einladungen, Karten und kurze Texte über Menschen, Hochzeit und Party: die Hochzeit, die Party, der Feiertag, der Glückwunsch. · Wer kommt? — Alle Verwandten, die Großeltern und ein Baby. · Erwachsene 12 Euro, Jugendliche 6 Euro, Babys frei.",
+    "ar": "تفهم بطاقات الدعوة والتهاني واللافتات والنصوص القصيرة عن الناس والأعياد: من يتزوج، متى وأين الحفل، من يأتي، وكم يدفع البالغ والشاب والرضيع — تقرأ وتسمع وتعرف المطلوب، ولا يُطلب منك إنتاج هذه الكلمات (تكملة SD1 للفهم)."
+  },
+  "canDoDaily": [
+    "يفهم بطاقة دعوة أو تهنئة (Hochzeit · Party · Feiertag · Glückwunsch) ويعرف متى وأين ومن.",
+    "يتعرّف على كلمات الناس في لافتة أو إعلان أو نص قصير (Baby · Jugendliche · Erwachsene · Verwandte · Ehefrau/Ehemann)."
+  ],
+  "warmup": {
+    "cardIds": [
+      "einladung",
+      "geburtstag",
+      "familie"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«Glückwunsch zur Hochzeit!» — ماذا يحدث؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Eine Hochzeit.",
+          "Ein Geburtstag.",
+          "Ein Feiertag im Mai."
+        ],
+        "answer": "Eine Hochzeit.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "ما كلمات العائلة التي تعرفها من الوحدة 4؟ (Mutter · Vater · Tante · Onkel · Großeltern · Kind)",
+      "ما الذي تتذكره من بطاقة الدعوة في الوحدة 10؟ (Die Einladung ist für Samstag.)"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "baby",
+      "jugendliche",
+      "erwachsene",
+      "verwandte",
+      "ehefrau",
+      "ehemann",
+      "kindergarten",
+      "heiraten",
+      "hochzeit",
+      "gestorben",
+      "party",
+      "feiertag",
+      "einladen",
+      "glueckwunsch",
+      "gratulieren",
+      "zufrieden"
+    ],
+    "grammarArsenalIds": [
+      "ars-perfekt"
+    ],
+    "storySentenceIds": [
+      "story-a1-u13-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ich-laut",
+      "umlaut-u",
+      "vowel-long-short",
+      "w-v",
+      "auslaut-d"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "reading",
+        "items": [
+          {
+            "text": "Einladung! Wir heiraten am ersten Mai. Die Hochzeit ist um elf Uhr in der Kirche. Danach essen wir alle im Restaurant am Park. Bitte antwortet bis zum zwanzigsten April. Maria und Jonas",
+            "q": "Wann und wo ist die Hochzeit?",
+            "choices": [
+              "um elf Uhr in der Kirche",
+              "um elf Uhr im Restaurant",
+              "am zwanzigsten April im Park"
+            ],
+            "a": "um elf Uhr in der Kirche",
+            "why": "البطاقة تقول: Die Hochzeit ist um elf Uhr in der Kirche — المطعم بعدها (danach)، والعشرون من أبريل آخر موعد للرد لا موعد الزفاف."
+          },
+          {
+            "text": "Kindergarten Sonne — Am Freitag, dem ersten Mai, ist Feiertag. Der Kindergarten ist geschlossen. Am Montag sind wir wieder da.",
+            "q": "Richtig oder falsch? Am Freitag ist der Kindergarten geschlossen.",
+            "choices": [
+              "Richtig",
+              "Falsch"
+            ],
+            "a": "Richtig",
+            "why": "Feiertag = عطلة رسمية، وgeschlossen = مغلق — الروضة مغلقة الجمعة وتفتح الاثنين."
+          },
+          {
+            "text": "Museum am Park — Preise: Erwachsene 12 Euro · Jugendliche von 14 bis 17 Jahren 6 Euro · Kinder bis 6 Jahre und Babys frei.",
+            "q": "Lena ist 17 Jahre alt. Was zahlt sie?",
+            "choices": [
+              "6 Euro",
+              "12 Euro",
+              "nichts"
+            ],
+            "a": "6 Euro",
+            "why": "لينا في السابعة عشرة ← Jugendliche (من 14 إلى 17) ← 6 يورو. Erwachsene = البالغون 12، وfrei = مجاناً للأطفال الصغار والرضّع."
+          },
+          {
+            "text": "Liebe Oma, Glückwunsch zum Geburtstag! Wir kommen am Sonntag um drei und bringen einen Kuchen mit. Deine Lena",
+            "q": "Richtig oder falsch? Lena gratuliert ihrer Oma zur Hochzeit.",
+            "choices": [
+              "Falsch",
+              "Richtig"
+            ],
+            "a": "Falsch",
+            "why": "البطاقة تقول Glückwunsch zum Geburtstag — تهنئة بعيد الميلاد، لا بالزفاف (zur Hochzeit)."
+          },
+          {
+            "text": "Party! Samstag ab 20 Uhr bei Ayşe. Bitte Musik mitbringen! Essen und Trinken gibt es. Kommt alle!",
+            "q": "Was bringen die Gäste mit?",
+            "choices": [
+              "Musik",
+              "Essen",
+              "Trinken"
+            ],
+            "a": "Musik",
+            "why": "Bitte Musik mitbringen — الضيوف يحضرون الموسيقى؛ الأكل والشرب موجودان (gibt es)."
+          },
+          {
+            "text": "Lieber Yusuf, unser Nachbar, Herr Müller, ist gestorben. Er war 90 Jahre alt. Am Freitag gehen wir zur Familie. Deine Mutter",
+            "q": "Richtig oder falsch? Herr Müller ist krank.",
+            "choices": [
+              "Falsch",
+              "Richtig"
+            ],
+            "a": "Falsch",
+            "why": "ist gestorben = توفي، لا مريض (krank) — والعائلة تذهب لتعزية أهله يوم الجمعة."
+          },
+          {
+            "text": "Familie Braun: Jonas Braun, 32 Jahre · Ehefrau: Maria Braun, 30 Jahre · Kinder: ein Baby, drei Monate alt",
+            "q": "Wer ist Maria Braun?",
+            "choices": [
+              "die Ehefrau von Jonas",
+              "die Tochter von Jonas",
+              "die Schwester von Jonas"
+            ],
+            "a": "die Ehefrau von Jonas",
+            "why": "في البطاقة: Ehefrau: Maria Braun — الزوجة. الابنة هي الرضيع ذو الثلاثة أشهر."
+          }
+        ],
+        "interleavedWith": [
+          "kirche",
+          "restaurant",
+          "geschlossen",
+          "geburtstag",
+          "kuchen",
+          "museum",
+          "nachbar",
+          "krank"
+        ],
+        "hints": [
+          "اقرأ السؤال أولاً، ثم ابحث عن الكلمة في النص — لا تترجم كل شيء."
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "fs-1",
+            "speakText": "Hallo, Yusuf! Meine Tante heiratet im Mai — hier ist die Einladung zur Hochzeit.",
+            "q": "استمع: ماذا تفعل عمّة لينا في مايو؟",
+            "choices": [
+              "تتزوج",
+              "تسافر",
+              "تعمل"
+            ],
+            "a": "تتزوج",
+            "why": "heiratet im Mai — تتزوج في مايو، وهناك Einladung zur Hochzeit."
+          },
+          {
+            "audioId": "fs-3",
+            "speakText": "Er heißt Jonas. Er arbeitet im Kindergarten — er mag Kinder sehr.",
+            "q": "استمع: أين يعمل Jonas؟",
+            "choices": [
+              "في روضة الأطفال",
+              "في مطعم",
+              "في مدرسة"
+            ],
+            "a": "في روضة الأطفال",
+            "why": "im Kindergarten — في روضة الأطفال؛ وهو يحب الأطفال."
+          },
+          {
+            "audioId": "fs-5",
+            "speakText": "Ja, alle Verwandten: die Großeltern, mein Onkel und seine Ehefrau — und ein Baby!",
+            "q": "استمع: من يأتي إلى الزفاف؟",
+            "choices": [
+              "كل الأقارب ورضيع",
+              "الأصدقاء فقط",
+              "الجدّان فقط"
+            ],
+            "a": "كل الأقارب ورضيع",
+            "why": "alle Verwandten … und ein Baby — الأقارب كلهم ومعهم رضيع."
+          },
+          {
+            "audioId": "fs-9",
+            "speakText": "Ja, zwei Freundinnen. Die Erwachsenen essen im Restaurant, die Jugendlichen machen am Abend eine Party.",
+            "q": "استمع: أين يأكل الكبار، وماذا يفعل الشباب؟",
+            "choices": [
+              "الكبار في المطعم والشباب حفلة مساءً",
+              "الكبار في البيت والشباب في المطعم",
+              "الجميع في المطعم"
+            ],
+            "a": "الكبار في المطعم والشباب حفلة مساءً",
+            "why": "الكبار يأكلون في المطعم (die Erwachsenen essen im Restaurant) والشباب يقيمون حفلة مساءً (die Jugendlichen machen am Abend eine Party)."
+          },
+          {
+            "audioId": "fs-11",
+            "speakText": "Am ersten Mai — das ist ein Feiertag. Alle haben frei.",
+            "q": "استمع: لماذا الجميع في عطلة في أول مايو؟",
+            "choices": [
+              "لأنه عطلة رسمية",
+              "لأنه يوم أحد",
+              "لأن المدرسة مغلقة للتنظيف"
+            ],
+            "a": "لأنه عطلة رسمية",
+            "why": "das ist ein Feiertag — عطلة رسمية، لذلك alle haben frei."
+          },
+          {
+            "audioId": "fs-14",
+            "speakText": "Meine Oma tanzt gern. Mein Opa ist vor zwei Jahren gestorben.",
+            "q": "استمع: ماذا يقول يوسف عن جدّه؟",
+            "choices": [
+              "توفي قبل سنتين",
+              "يرقص كثيراً",
+              "يعيش في برلين"
+            ],
+            "a": "توفي قبل سنتين",
+            "why": "Mein Opa ist vor zwei Jahren gestorben — توفي قبل سنتين؛ الجدة هي التي ترقص."
+          },
+          {
+            "audioId": "fs-19",
+            "speakText": "Mache ich! Und Jonas lädt dich auch ein — zur Party am Abend.",
+            "q": "استمع: إلى ماذا يدعو Jonas يوسف؟",
+            "choices": [
+              "إلى الحفلة في المساء",
+              "إلى روضة الأطفال",
+              "إلى الكنيسة"
+            ],
+            "a": "إلى الحفلة في المساء",
+            "why": "lädt dich ein — zur Party am Abend: يدعوه إلى الحفلة مساءً."
+          }
+        ],
+        "interleavedWith": [
+          "tante",
+          "restaurant",
+          "abend",
+          "mai",
+          "kind"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "match",
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "das Baby",
+                "ar": "الرضيع"
+              },
+              {
+                "de": "der Jugendliche",
+                "ar": "الشاب"
+              },
+              {
+                "de": "der Erwachsene",
+                "ar": "البالغ"
+              },
+              {
+                "de": "der Verwandte",
+                "ar": "القريب"
+              },
+              {
+                "de": "der Kindergarten",
+                "ar": "روضة الأطفال"
+              }
+            ],
+            "why": "كلمات الناس: Baby رضيع · Jugendliche شاب (14–17) · Erwachsene بالغ · Verwandte قريب من العائلة · Kindergarten مكان الصغار."
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Ehefrau",
+                "ar": "الزوجة"
+              },
+              {
+                "de": "der Ehemann",
+                "ar": "الزوج"
+              },
+              {
+                "de": "heiraten",
+                "ar": "يتزوج"
+              },
+              {
+                "de": "die Hochzeit",
+                "ar": "حفل الزفاف"
+              },
+              {
+                "de": "gestorben",
+                "ar": "متوفًّى"
+              }
+            ],
+            "why": "Ehe- = زواج: Ehefrau الزوجة · Ehemann الزوج · heiraten الفعل · Hochzeit الحفل · gestorben توفي (مع ist)."
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Party",
+                "ar": "الحفلة"
+              },
+              {
+                "de": "der Feiertag",
+                "ar": "العطلة الرسمية"
+              },
+              {
+                "de": "einladen",
+                "ar": "يدعو"
+              },
+              {
+                "de": "der Glückwunsch",
+                "ar": "التهنئة"
+              },
+              {
+                "de": "gratulieren",
+                "ar": "يهنّئ"
+              },
+              {
+                "de": "zufrieden",
+                "ar": "راضٍ"
+              }
+            ],
+            "why": "الأعياد: Party حفلة · Feiertag يوم عطلة رسمية · einladen يدعو (Einladung) · Glückwunsch التهنئة · gratulieren يهنّئ · zufrieden راضٍ."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "fs-7",
+            "speakText": "Drei Monate. Es schläft viel.",
+            "a": "Drei Monate. Es schläft viel.",
+            "why": "Monate بحرف كبير · schläft بـä (من schlafen) · viel بـie."
+          },
+          {
+            "audioId": "fs-10",
+            "speakText": "Eine Party! Und wann ist die Hochzeit?",
+            "a": "Eine Party! Und wann ist die Hochzeit?",
+            "why": "Party بـP كبيرة وy في الآخر (كلمة أجنبية) · Hochzeit: ch ثم z — كلمة واحدة."
+          },
+          {
+            "audioId": "fs-13",
+            "speakText": "Drei Tage! Tanzen alle — auch die Großeltern?",
+            "a": "Drei Tage! Tanzen alle — auch die Großeltern?",
+            "why": "Tage بحرف كبير · Tanzen أول الجملة بحرف كبير · Großeltern بـß."
+          },
+          {
+            "audioId": "fs-2",
+            "speakText": "Deine Tante heiratet? Glückwunsch! Und wer ist der Ehemann?",
+            "a": "Deine Tante heiratet? Glückwunsch! Und wer ist der Ehemann?",
+            "why": "Glückwunsch: ü وck ثم sch · Ehemann بـnn مضاعفة · علامتا الاستفهام والتعجب."
+          }
+        ],
+        "interleavedWith": [
+          "monat",
+          "schlafen",
+          "tanzen",
+          "grosseltern"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Lies die Einladung von Maria und Jonas und sag: Wann ist die Hochzeit? Wo? Wer kommt? — Am ersten Mai um elf in der Kirche. Alle Verwandten kommen — und ein Baby. Am Abend machen die Jugendlichen eine Party.",
+        "ar": "اقرأ (أو اسمع) دعوة حقيقية وأجب بالعربية أو بألمانية بسيطة: متى؟ أين؟ من يأتي؟ — هدفك أن تفهم، لا أن تكتب الدعوة بنفسك."
+      },
+      "situation": {
+        "de": "Du hast eine Einladung zur Hochzeit bekommen. Deine Freundin fragt: Wann? Wo? Wer kommt? Du antwortest kurz.",
+        "ar": "وصلتك دعوة إلى زفاف. صديقتك تسأل: متى؟ أين؟ من يأتي؟ — تجيب باختصار مما فهمت."
+      },
+      "successCriteria": [
+        "يحدد موعد الحفل ومكانه من البطاقة",
+        "يذكر من يأتي (الأقارب · الجدّان · رضيع)",
+        "يميّز Glückwunsch (تهنئة) من Einladung (دعوة)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«Wir heiraten am ersten Mai.» — Was ist am ersten Mai?",
+            "choices": [
+              "حفل زفاف",
+              "عيد ميلاد",
+              "حفلة مدرسة"
+            ],
+            "a": "حفل زفاف",
+            "why": "heiraten = يتزوج ← am ersten Mai حفل الزفاف."
+          },
+          {
+            "q": "«Der Kindergarten ist geschlossen.» — Wer bleibt zu Hause?",
+            "choices": [
+              "الأطفال الصغار",
+              "الشباب",
+              "البالغون"
+            ],
+            "a": "الأطفال الصغار",
+            "why": "Kindergarten = روضة الأطفال الصغار؛ مغلقة ← يبقون في البيت."
+          },
+          {
+            "q": "«Ich gratuliere dir!» — Was sagt sie?",
+            "choices": [
+              "أهنّئك",
+              "أدعوك",
+              "أشكرك"
+            ],
+            "a": "أهنّئك",
+            "why": "gratulieren = يهنّئ؛ einladen = يدعو؛ danke = شكر."
+          },
+          {
+            "q": "«Erwachsene 12 Euro, Kinder frei.» — Was zahlt ein Baby?",
+            "choices": [
+              "لا شيء",
+              "12 يورو",
+              "6 يورو"
+            ],
+            "a": "لا شيء",
+            "why": "frei هنا = مجاناً؛ الرضيع طفل ← لا يدفع."
+          },
+          {
+            "q": "«Ihr Ehemann arbeitet in Hamburg.» — Wer arbeitet in Hamburg?",
+            "choices": [
+              "زوجها",
+              "أخوها",
+              "ابنها"
+            ],
+            "a": "زوجها",
+            "why": "Ehemann = الزوج؛ ihr = ها (ملكيتها)."
+          },
+          {
+            "q": "«Alle haben frei — es ist Feiertag.» — Was ist ein Feiertag?",
+            "choices": [
+              "يوم عطلة رسمية",
+              "يوم عمل",
+              "يوم مدرسة"
+            ],
+            "a": "يوم عطلة رسمية",
+            "why": "Feiertag من feiern — يوم لا عمل فيه ولا مدرسة."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«Meine Tante hat geheiratet.» — Was bedeutet das?",
+            "choices": [
+              "العمّة تزوّجت",
+              "العمّة سافرت",
+              "العمّة مرضت"
+            ],
+            "a": "العمّة تزوّجت",
+            "why": "hat geheiratet = تزوّجت (الماضي المركّب مع hat)."
+          },
+          {
+            "q": "«Jonas lädt dich zur Party ein.» — Was macht Jonas?",
+            "choices": [
+              "يدعوك إلى حفلة",
+              "يهنّئك",
+              "يزورك"
+            ],
+            "a": "يدعوك إلى حفلة",
+            "why": "lädt … ein = يدعو (الفعل المنفصل einladen)."
+          },
+          {
+            "q": "«Jugendliche 6 Euro» — Wer ist ein Jugendlicher?",
+            "choices": [
+              "شاب بين 14 و17 سنة",
+              "طفل عمره سنتان",
+              "رجل عمره 50 سنة"
+            ],
+            "a": "شاب بين 14 و17 سنة",
+            "why": "Jugendliche = الشباب الصغار؛ الطفل Kind والرجل Erwachsener."
+          },
+          {
+            "q": "«Unser Nachbar ist gestorben.» — Was bedeutet das?",
+            "choices": [
+              "الجار توفي",
+              "الجار انتقل",
+              "الجار مريض"
+            ],
+            "a": "الجار توفي",
+            "why": "gestorben = توفي."
+          },
+          {
+            "q": "«Alle Verwandten kommen.» — Wer kommt?",
+            "choices": [
+              "العائلة الكبيرة كلها",
+              "الأصدقاء",
+              "الزملاء"
+            ],
+            "a": "العائلة الكبيرة كلها",
+            "why": "Verwandte = الأقارب."
+          },
+          {
+            "q": "«Oma ist zufrieden.» — Wie geht es Oma?",
+            "choices": [
+              "بخير وراضية",
+              "مريضة",
+              "حزينة"
+            ],
+            "a": "بخير وراضية",
+            "why": "zufrieden = راضٍ، مرتاح."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«Die Hochzeit ist in der Kirche.» — Was ist in der Kirche?",
+            "choices": [
+              "حفل زفاف",
+              "حفلة عيد ميلاد",
+              "درس"
+            ],
+            "a": "حفل زفاف",
+            "why": "Hochzeit = حفل الزفاف."
+          },
+          {
+            "q": "«Das Baby schläft viel.» — Wer schläft viel?",
+            "choices": [
+              "الرضيع",
+              "الشاب",
+              "الجد"
+            ],
+            "a": "الرضيع",
+            "why": "Baby = الرضيع."
+          },
+          {
+            "q": "«Das ist seine Ehefrau.» — Wer ist das?",
+            "choices": [
+              "زوجته",
+              "أمه",
+              "أخته"
+            ],
+            "a": "زوجته",
+            "why": "Ehefrau = الزوجة؛ seine = ـه."
+          },
+          {
+            "q": "«Glückwunsch zum Geburtstag!» — Was ist das?",
+            "choices": [
+              "تهنئة",
+              "دعوة",
+              "سؤال"
+            ],
+            "a": "تهنئة",
+            "why": "Glückwunsch = تهنئة؛ Einladung = دعوة."
+          },
+          {
+            "q": "«Kindergarten: Am Montag sind wir wieder da.» — Wann kann das Kind wieder kommen?",
+            "choices": [
+              "يوم الاثنين",
+              "يوم الجمعة",
+              "في العطلة"
+            ],
+            "a": "يوم الاثنين",
+            "why": "am Montag sind wir wieder da = نعود (نفتح) يوم الاثنين."
+          },
+          {
+            "q": "«Wir machen am Abend eine Party.» — Wann ist die Party?",
+            "choices": [
+              "في المساء",
+              "في الصباح",
+              "في الظهر"
+            ],
+            "a": "في المساء",
+            "why": "am Abend = في المساء."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Menschen, Hochzeit und Party — zum Verstehen: das Baby · der Jugendliche · der Erwachsene · der Verwandte · die Ehefrau und der Ehemann · der Kindergarten · heiraten (hat geheiratet) · die Hochzeit · gestorben (ist gestorben) · die Party · der Feiertag · einladen (lädt ein) · der Glückwunsch · gratulieren (dir · ihr) · zufrieden. — Glückwunsch zur Hochzeit! Alle Verwandten kommen.",
+      "ar": "درس للفهم لا للإنتاج (تكملة SD1): كلمات الناس — الرضيع والشاب والبالغ والقريب والزوجة والزوج وروضة الأطفال — وكلمات الأعياد — يتزوج وحفل الزفاف والحفلة والعطلة الرسمية ويدعو والتهنئة ويهنّئ وراضٍ — وgestorben (توفي، مع ist). تقرأها في بطاقة دعوة أو لافتة أو إعلان أسعار، وتسمعها في مكالمة، وتعرف: متى وأين ومن وكم."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich gratuliere dich.~~",
+          "ar": "gratulieren فعل Dativ: Ich gratuliere dir · ihr · meiner Tante"
+        },
+        "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: «أهنّئك» في العربية مفعول به مباشر، فيضع المتعلم dich (Akkusativ) — وgratulieren في الألمانية يأخذ Dativ دائماً: dir · ihm · ihr · meiner Tante (كـhelfen وdanken).",
+        "correct": {
+          "de": "Ich gratuliere dir zur Hochzeit.",
+          "ar": "أهنّئك بالزفاف."
+        },
+        "exercise": {
+          "q": "Ich gratuliere ___ zum Geburtstag. (dir / dich)",
+          "a": "dir"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Die Jugendliche kommen am Abend.~~",
+          "ar": "الاسم المشتق من صفة يأخذ نهاية الصفة: der Jugendliche · die Jugendlichen (جمع -n) — وكذلك Erwachsene وVerwandte"
+        },
+        "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: «الشاب/الشباب» في العربية اسم عادي، فيظنه المتعلم اسماً ثابتاً — لكن Jugendliche وErwachsene وVerwandte صفات صارت أسماء، فتتصرّف كالصفة: der Jugendliche (مفرد) · die Jugendlichen (جمع بعد die).",
+        "correct": {
+          "de": "Die Jugendlichen kommen am Abend.",
+          "ar": "الشباب يأتون في المساء."
+        },
+        "exercise": {
+          "q": "Alle ___ kommen zur Hochzeit. (Verwandte / Verwandten)",
+          "a": "Verwandten"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Meine Tante ist heiraten.~~",
+          "ar": "heiraten فعل: Meine Tante heiratet (im Mai). — والحالة صفة: Sie ist verheiratet."
+        },
+        "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: «تتزوج» و«متزوجة» في العربية من جذر واحد، فيخلط المتعلم بين الفعل heiraten (الحدث: heiratet · hat geheiratet) والصفة verheiratet (الحالة بعد ist).",
+        "correct": {
+          "de": "Meine Tante heiratet im Mai. Jetzt ist sie verheiratet.",
+          "ar": "عمّتي تتزوج في مايو. الآن هي متزوجة."
+        },
+        "exercise": {
+          "q": "Maria und Jonas ___ am ersten Mai. (heiraten / verheiratet)",
+          "a": "heiraten"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "baby",
+      "jugendliche",
+      "erwachsene",
+      "verwandte",
+      "ehefrau",
+      "ehemann",
+      "kindergarten",
+      "heiraten",
+      "hochzeit",
+      "gestorben",
+      "party",
+      "feiertag",
+      "einladen",
+      "glueckwunsch",
+      "gratulieren",
+      "zufrieden"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Hochzeit",
+      "https://www.duden.de/rechtschreibung/gratulieren",
+      "https://www.duden.de/rechtschreibung/Jugendliche"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Verwandter"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-perfekt"
+  ],
+  "audioManifestRefs": [
+    "word-baby",
+    "word-jugendliche",
+    "word-erwachsene",
+    "word-verwandte",
+    "word-ehefrau",
+    "word-ehemann",
+    "word-kindergarten",
+    "word-heiraten",
+    "word-hochzeit",
+    "word-gestorben",
+    "word-party",
+    "word-feiertag",
+    "word-einladen",
+    "word-glueckwunsch",
+    "word-gratulieren",
+    "word-zufrieden"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Menschen · Feste) — Ergänzung zum Verstehen, Einheit 13 (D113)",
+    "goetheWordListOverlap": []
+  }
+}
