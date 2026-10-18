@@ -6,9 +6,9 @@ import { join } from "node:path";
 import { readFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import {
-  GrammarRuleFile, LessonUpgradeEntry, LessonUpgradePlan, ShufraPayload, type Lesson,
+  GrammarRuleFile, Lesson as LessonSchema, LessonUpgradeEntry, LessonUpgradePlan, ShufraPayload, type Lesson,
 } from "../content/schemas/index.js";
-import { loadAudioTracks, loadGrammarRules, loadLessons, loadUpgradePlans, loadWords } from "../tools/lib/content-disk.js";
+import { loadAudioTracks, loadGrammarRules, loadLessons, loadUpgradePlans, loadWords, parseFile } from "../tools/lib/content-disk.js";
 import {
   MISSPELLING_DISTANCE_MAX, checkGrammarRules, checkUpgrade, editDistance, fillInWordGap, frontViolations, germanOnly, inspectLesson,
   interleaveSupported, itemTexts, taughtUpTo, wordAppears, type UpgradeContext,
@@ -124,7 +124,9 @@ const planWith = (e: LessonUpgradeEntry[], scope = { fromUnit: 1, toUnit: 12 }) 
 const lessonIssues = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) =>
   checkUpgrade(planWith([e]), ctxWith(lesson, rules, ws)).filter((i) => i.code !== "e-upgrade-complete");
 const codes = (lesson: Lesson, e = entry(), rules?: GrammarRuleFile[], ws = words) => lessonIssues(lesson, e, rules, ws).map((i) => i.code);
-const legacy = realLessons.find((l) => l.id === "a1-u12-d6")!; // المثال غير المُرقّى: بعد D180 اكتمل المرور (الوحدات 1–12 d1..d5 — 60/60)؛ بقي درس التوليف d6 خارج المرور (N-004) ضابطاً سلبياً حقيقياً
+// المثال غير المُرقّى: كان a1-u12-d6 الحيّ ضابطاً سلبياً حقيقياً حتى D199؛ في D200 رُقّي (آخر درس d6 — N-004) فجُمّدت نسخته القديمة
+// كما كانت في 17d3987 في `tests/fixtures/legacy-a1-u12-d6.json` — القياس من محتوى حقيقي قديم لا من مثال مختلق (D185: ثوابت لا قوائم هشّة)
+const legacy = parseFile(LessonSchema, "tests/fixtures/legacy-a1-u12-d6.json", JSON.parse(readFileSync(join(__dirname, "fixtures", "legacy-a1-u12-d6.json"), "utf8")));
 
 describe("D115 — الضابط الإيجابي", () => {
   it("درس مُرقّى كامل + قاعدة صالحة = صفر مشكلة (ولا تنبيه)", () => {
@@ -2057,7 +2059,8 @@ describe("D115 — أدوات القياس", () => {
     // معجم النطق: مدخلان جديدان في D178 (76 → 78): losgefahren (o طويلة وge شوا — كـwehgetan D175) kg-2/3 · geplant (a طويلة قبل nt كـplanen) kg-12/13 — وKurs kg-14 · geregnet kg-13 سُجّلت (N-099) · المرجع 1622 → 1638
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; referenceIpa: string; regeneratedTracks: string[] }[] };
     const lx = (word: string) => lex.entries.find((x) => x.word === word)!;
-    expect([lx("losgefahren").forms[0], lx("losgefahren").referenceIpa, lx("losgefahren").regeneratedTracks]).toEqual([{ espeak: "lˈɔsɡeːfˌɑːrən", ipa: "lˈoːsɡəfˌɑːrən" }, "/ˈloːsɡəˌfaːʁən/", ["kg-2", "kg-3"]]);
+    expect([lx("losgefahren").forms[0], lx("losgefahren").referenceIpa]).toEqual([{ espeak: "lˈɔsɡeːfˌɑːrən", ipa: "lˈoːsɡəfˌɑːrən" }, "/ˈloːsɡəˌfaːʁən/"]);
+    expect(lx("losgefahren").regeneratedTracks).toEqual(expect.arrayContaining(["kg-2", "kg-3"])); // D200: zf-6/zf-7 (u12-d6) انضما — القائمة الكاملة تحرسها lexicon-sync --check (D185)
     expect([lx("geplant").forms[0], lx("geplant").referenceIpa, lx("geplant").regeneratedTracks]).toEqual([{ espeak: "ɡəplˈant", ipa: "ɡəplˈɑːnt" }, "/ɡəˈplaːnt/", ["kg-12", "kg-13"]]);
     expect(lx("Kurs").regeneratedTracks.filter((t) => t.startsWith("kg-"))).toEqual(["kg-14"]);
     expect(lx("geregnet").regeneratedTracks.filter((t) => t.startsWith("kg-"))).toEqual(["kg-13"]);
@@ -5147,7 +5150,7 @@ describe("D115 — الخطة الحقيقية", () => {
     expect(content).toHaveLength(60);
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
-    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6"].sort());
+    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6"].sort());
   });
   it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
@@ -5287,5 +5290,31 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     // مشتّتات Quiz كلمات حقيقية (N-103): لا geesst/getelefoniert/geaufschrieben — الخطأ المقصود الوحيد gebesucht معلن ومشطوب
     for (const fake of ["geesst", "getelefoniert", "geaufschrieben", "gelernen"]) expect(txt).not.toContain(fake);
     expect(plan.lessons.find((e) => e.lessonId === "a1-u10-d6")!.misspellings?.map((m) => m.wrong)).toEqual(["gebesucht"]);
+  });
+  it("a1-u11-d6 «Woche elf ist zu Ende!» — خمس قواعد الوحدة · 30 بنداً · ez-1..20 السبت 11 أبريل صباحاً (آخر يوم ليوسف في تونس، قبل u12-d1) · D200", () => {
+    const { l } = check("a1-u11-d6", 5);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-koerper", "ars-gesundheit", "ars-perfekt", "ars-dativ-fix", "ars-modal-fix"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^ez-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["der elfte April", "tun weh", "im Bett gelegen", "zu Hause geblieben", "hilft mir", "kein Fußball spielen", "zwei Hände", "Kopfschmerzen", "Fieber"]) expect(txt, f).toContain(f);
+    // مشتّتات Quiz كلمات حقيقية (N-103): الخطأ المقصود الوحيد geliegen معلن ومشطوب
+    for (const fake of ["gebekommen", "gesieht", "geliegt"]) expect(txt).not.toContain(fake);
+    expect(plan.lessons.find((e) => e.lessonId === "a1-u11-d6")!.misspellings?.map((m) => m.wrong)).toEqual(["geliegen"]);
+    // «Ich bin zu Hause» الرسمية لا تظهر مستقلة (D199 ثبّتتها لـu10-d6 وحده) — هنا دائماً «drei Tage zu Hause»
+    expect(txt).not.toMatch(/Ich bin zu Hause geblieben/);
+  });
+  it("a1-u12-d6 «Woche zwölf ist zu Ende!» — خمس قواعد الوحدة · 30 بنداً · zf-1..20 الخميس 16 أبريل مساءً (قبل آخر يوم في الدورة الجمعة 17) · D200", () => {
+    const { l } = check("a1-u12-d6", 5);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-satzklammer", "ars-perfekt", "ars-modal-fix", "ars-dativ-fix", "ars-weil-satz"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^zf-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["der sechzehnte April", "bin um dreizehn Uhr angekommen", "nicht verpasst", "losgefahren", "ausgepackt", "um sechs aufstehen", "weil meine Mutter einen Kuchen macht", "denn vielleicht regnet es", "Der See ist klein", "das Meer ist groß", "fotografiert", "wir hören", "wir sprechen"]) expect(txt, f).toContain(f);
+    // مشتّتات Quiz كلمات حقيقية (N-103): الخطأ المقصود الوحيد gefotografiert معلن ومشطوب (auspackt صيغة حقيقية فلا تُعلن)
+    for (const fake of ["gelosfahren", "angekommt", "geankommen"]) expect(txt).not.toContain(fake);
+    expect(plan.lessons.find((e) => e.lessonId === "a1-u12-d6")!.misspellings?.map((m) => m.wrong)).toEqual(["gefotografiert"]);
   });
 });

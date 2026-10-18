@@ -6,31 +6,44 @@
   "day": 6,
   "kind": "integration",
   "ziel": {
-    "de": "Du meisterst die große A1-Mini-Schlacht: alle 4 Fertigkeiten, alle goldenen Regeln — Satzklammer, bin/hat, und die arabischen Feinheiten.",
-    "ar": "المعركة الكبرى: كل القواعد الذهبية + المهارات الأربع (خاتمة خطة A1!)"
+    "de": "Woche zwölf ist zu Ende: Heute ist Donnerstag, der sechzehnte April · Ich bin um dreizehn Uhr angekommen, ich habe den Zug nicht verpasst · Ich bin losgefahren, ich habe ausgepackt · Ich darf nicht zu spät kommen, ich muss um sechs aufstehen · Wir feiern bei mir, weil meine Mutter einen Kuchen macht · Der See ist klein, das Meer ist groß.",
+    "ar": "توليف الأسبوع الثاني عشر والمستوى كله (الخميس 16 أبريل، قبل آخر يوم في الدورة): الماضي بـsein أو haben (angekommen · verpasst · hatte) · الأفعال المنفصلة في الماضي (losgefahren · ausgepackt · angesehen) · darf/muss/soll والفعل في الآخر · weil يرمي الفعل إلى الآخر وdenn لا · mitbringen · der See/das Meer · fotografiert بلا ge‑ — ثم معركة الوحدة (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (hören · sprechen) تعودان من الأسبوع نفسه."
   },
   "canDoDaily": [
-    "يجتاز معركة A1 النهائية (عتبة 75%) في أشكال مختلطة شاملة"
+    "يحكي رحلة ويومه الأول بالماضي بـsein أو haben والأفعال المنفصلة (bin angekommen · habe ausgepackt · bin losgefahren) ويقول ما يجب وما لا يجوز بـmuss/darf والفعل في الآخر",
+    "يعلّل خطة بـweil (الفعل في الآخر) أو denn (الفعل ثانياً) ويفرّق der See عن das Meer ويجتاز معركة الوحدة 12 بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
-      "hallo",
-      "danke",
-      "bitte"
+      "hoeren",
+      "sprechen",
+      "ankommen"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "المعركة الكبرى: «القطار يغادر الساعة الثامنة» — القلنسوة الكاملة؟"
+          "de": "«وصلتُ في الساعة الواحدة ظهراً» — تخمين فقط"
         },
         "choices": [
-          "Der Zug fährt um 8 Uhr ab (فعل ثانٍ + … + البادئة آخر)",
-          "Der Zug fährt ab um 8 Uhr",
-          "Der Zug ab fährt um 8 Uhr"
+          "Ich bin um dreizehn Uhr angekommen.",
+          "Ich habe um dreizehn Uhr angekommen.",
+          "Ich bin um dreizehn Uhr ankommen."
         ],
-        "answer": "Der Zug fährt um 8 Uhr ab (فعل ثانٍ + … + البادئة آخر)",
+        "answer": "Ich bin um dreizehn Uhr angekommen.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«نحتفل عندي لأن أمي تصنع كعكة» — تخمين فقط"
+        },
+        "choices": [
+          "Wir feiern bei mir, weil meine Mutter einen Kuchen macht.",
+          "Wir feiern bei mir, weil meine Mutter macht einen Kuchen.",
+          "Wir feiern bei mir, weil macht meine Mutter einen Kuchen."
+        ],
+        "answer": "Wir feiern bei mir, weil meine Mutter einen Kuchen macht.",
         "revealNextSession": true
       }
     ],
@@ -48,80 +61,296 @@
       "ars-dativ-fix",
       "ars-weil-satz"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a1-u12-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«يجب أن أذهب اليوم إلى الطبيب» — القلنسوة؟",
-            "a": "Ich muss heute zum Arzt gehen (muss ثانٍ · gehen آخر)."
+            "q": "Ich ___ am Sonntag um dreizehn Uhr angekommen. (sein)",
+            "a": "bin",
+            "why": "ankommen حركة ⇐ sein: ich bin angekommen (u12-d2)."
           },
           {
-            "q": "«القطار متأخر، لذلك أنا متأخر»؟",
-            "a": "Der Zug hat Verspätung, deswegen bin ich spät."
+            "q": "Der Zug ___ zwanzig Minuten Verspätung. (haben — الماضي)",
+            "a": "hatte",
+            "why": "ماضي haben كلمة واحدة: hatte (مثل war)."
+          },
+          {
+            "q": "Ich habe den Zug nicht ___. (verpassen)",
+            "a": "verpasst",
+            "why": "ver‑ بلا ge‑: verpasst — مع haben."
+          },
+          {
+            "q": "Am Montag bin ich um sieben ___. (losfahren)",
+            "a": "losgefahren",
+            "why": "المنفصل في الماضي: los‑ge‑fahren، مع sein لأنه حركة."
+          },
+          {
+            "q": "Ich habe den Rucksack ___. (auspacken)",
+            "a": "ausgepackt",
+            "why": "المنفصل: aus‑ge‑packt — منتظم بـ‑t ومع haben."
+          },
+          {
+            "q": "Ich ___ nicht zu spät kommen. (dürfen)",
+            "a": "darf",
+            "why": "المنع بـdürfen + nicht: ich darf nicht … kommen، وkommen في الآخر."
+          },
+          {
+            "q": "Ich muss morgen um sechs ___. (aufstehen)",
+            "a": "aufstehen",
+            "why": "بعد muss يبقى المنفصل كلمة واحدة في الآخر: aufstehen."
+          },
+          {
+            "q": "Wir feiern bei mir, ___ meine Mutter einen Kuchen macht. (لأن — الفعل في الآخر)",
+            "a": "weil",
+            "why": "weil تابعة: الفعل macht في الآخر (u12-d4)."
+          },
+          {
+            "q": "Nicht im Park, ___ vielleicht regnet es. (لأن — الفعل ثانياً)",
+            "a": "denn",
+            "why": "denn رابطة في المكان صفر: الجملة بعدها عادية (regnet es)."
+          },
+          {
+            "q": "Ich habe am Meer viel ___. (fotografieren)",
+            "a": "fotografiert",
+            "why": "‑ieren بلا ge‑: fotografiert · telefoniert (u12-d5)."
           }
         ],
         "interleavedWith": [
-          "gehen",
-          "zug"
+          "zug",
+          "verspaetung",
+          "rucksack",
+          "mutter",
+          "kuchen",
+          "park",
+          "meer"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«حزمتُ الحقيبة وانطلقنا»؟",
-            "a": "Ich habe den Koffer eingepackt und wir sind losgefahren."
+            "audioId": "zf-2",
+            "speakText": "Ja! Morgen ist der letzte Tag. Wir hören, wir sprechen, wir schreiben — alles noch einmal!",
+            "q": "استمع: ماذا يفعلون غداً في آخر يوم؟",
+            "choices": [
+              "يسمعون ويتكلمون ويكتبون",
+              "يحتفلون في الحديقة",
+              "يسافرون إلى سويسرا"
+            ],
+            "a": "يسمعون ويتكلمون ويكتبون",
+            "why": "wir hören · wir sprechen · wir schreiben — أفعال الدورة الثلاثة · der letzte Tag = اليوم الأخير."
           },
           {
-            "q": "«صوّرتُ صوراً»؟",
-            "a": "Ich habe fotografiert (لا ge مع -ieren)."
+            "audioId": "zf-4",
+            "speakText": "Ich bin um dreizehn Uhr angekommen. Der Zug vom Flughafen hatte zwanzig Minuten Verspätung — aber ich habe ihn nicht verpasst.",
+            "q": "استمع: كم تأخر القطار من المطار في Berlin؟",
+            "choices": [
+              "عشرين دقيقة",
+              "ثلاث عشرة دقيقة",
+              "لم يتأخر"
+            ],
+            "a": "عشرين دقيقة",
+            "why": "zwanzig Minuten Verspätung · bin angekommen (sein) · habe … nicht verpasst (haben، بلا ge‑)."
+          },
+          {
+            "audioId": "zf-6",
+            "speakText": "Am Montag bin ich um sieben losgefahren und um acht in der Schule angekommen. Ich habe den Rucksack ausgepackt und die Fotos angesehen.",
+            "q": "استمع: متى وصل يوسف إلى المدرسة يوم الاثنين؟",
+            "choices": [
+              "في الثامنة",
+              "في السابعة",
+              "في السادسة"
+            ],
+            "a": "في الثامنة",
+            "why": "um sieben losgefahren · um acht … angekommen — المنفصل في الماضي: ge‑ في الوسط."
+          },
+          {
+            "audioId": "zf-8",
+            "speakText": "Ich darf nicht zu spät kommen. Ich muss morgen um sechs aufstehen. Und ich soll viel sprechen — sagt die Lehrerin.",
+            "q": "استمع: ماذا تقول المعلّمة ليوسف؟",
+            "choices": [
+              "أن يتكلم كثيراً",
+              "أن يستيقظ في السادسة",
+              "أن يأتي متأخراً"
+            ],
+            "a": "أن يتكلم كثيراً",
+            "why": "ich soll viel sprechen — sagt die Lehrerin · darf nicht · muss — والمصدر في الآخر."
+          },
+          {
+            "audioId": "zf-12",
+            "speakText": "Und nicht im Park, denn vielleicht regnet es. Weil — regnet am Ende. Denn — regnet nicht am Ende!",
+            "q": "استمع: لماذا ليس الاحتفال في الحديقة؟",
+            "choices": [
+              "لأنه ربما تمطر",
+              "لأن الحديقة بعيدة",
+              "لأن الغرفة صغيرة"
+            ],
+            "a": "لأنه ربما تمطر",
+            "why": "denn vielleicht regnet es — بعد denn الفعل ثانياً · بعد weil في الآخر (u12-d4)."
+          },
+          {
+            "audioId": "zf-14",
+            "speakText": "Ich bringe die Fotos vom Meer mit — und ein kleines Andenken für dich. Mein Vater hat einen Film über Italien gefunden!",
+            "q": "استمع: ماذا وجد والد يوسف؟",
+            "choices": [
+              "فيلماً عن Italien",
+              "صوراً من البحر",
+              "تذكاراً"
+            ],
+            "a": "فيلماً عن Italien",
+            "why": "einen Film über Italien gefunden · bringe … mit (المنفصل: mit في الآخر) · ein Andenken = تذكار (u12-d5)."
+          },
+          {
+            "audioId": "zf-18",
+            "speakText": "Der See ist klein, das Meer ist groß — und die See ist das Meer. Ich habe am Meer viel fotografiert — kurz, wie telefoniert!",
+            "q": "استمع: ما الفرق بين der See وdas Meer؟",
+            "choices": [
+              "der See بحيرة صغيرة وdas Meer بحر كبير",
+              "der See بحر وdas Meer بحيرة",
+              "لا فرق"
+            ],
+            "a": "der See بحيرة صغيرة وdas Meer بحر كبير",
+            "why": "der See = بحيرة (klein) · das Meer = بحر (groß) · die See = البحر أيضاً (u12-d5)."
+          },
+          {
+            "audioId": "zf-20",
+            "speakText": "Der Zug fährt um neun ab, und ich komme um sechs bei dir an. Woche zwölf ist zu Ende — und der Kurs auch bald! Bis morgen, Lena!",
+            "q": "استمع: متى ينطلق قطار يوسف يوم السبت؟",
+            "choices": [
+              "في التاسعة",
+              "في السادسة",
+              "في الثامنة"
+            ],
+            "a": "في التاسعة",
+            "why": "Der Zug fährt um neun ab · ich komme um sechs bei dir an — ab وan في آخر الجملة."
           }
         ],
         "interleavedWith": [
-          "einpacken",
-          "fotografieren"
+          "flughafen",
+          "schule",
+          "foto",
+          "lehrerin",
+          "vater",
+          "film",
+          "see"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "error-hunt",
         "items": [
           {
-            "q": "«عندي صداع منذ يومين»؟",
-            "a": "Ich habe seit zwei Tagen Kopfschmerzen."
+            "q": "صحّح: ~~Ich habe um dreizehn Uhr angekommen.~~",
+            "a": "Ich bin um dreizehn Uhr angekommen.",
+            "why": "ankommen حركة ⇐ sein."
           },
           {
-            "q": "«ذلك يساعدني»؟",
-            "a": "Das hilft mir (Dativ)."
+            "q": "صحّح: ~~Ich habe den Zug nicht verpassen.~~",
+            "a": "Ich habe den Zug nicht verpasst.",
+            "why": "الصيغة الثالثة: verpasst (بلا ge‑)."
+          },
+          {
+            "q": "صحّح: ~~Ich habe den Rucksack auspackt.~~",
+            "a": "Ich habe den Rucksack ausgepackt.",
+            "why": "ge‑ في وسط المنفصل: aus‑ge‑packt."
+          },
+          {
+            "q": "صحّح: ~~Ich muss morgen um sechs stehe auf.~~",
+            "a": "Ich muss morgen um sechs aufstehen.",
+            "why": "بعد muss: المصدر كاملاً في الآخر."
+          },
+          {
+            "q": "صحّح: ~~Wir feiern bei mir, weil meine Mutter macht einen Kuchen.~~",
+            "a": "Wir feiern bei mir, weil meine Mutter einen Kuchen macht.",
+            "why": "weil يرمي macht إلى الآخر."
+          },
+          {
+            "q": "صحّح: ~~Ich habe am Meer viel gefotografiert.~~",
+            "a": "Ich habe am Meer viel fotografiert.",
+            "why": "‑ieren بلا ge‑."
           }
         ],
         "interleavedWith": [
-          "kopfschmerz",
-          "helfen"
+          "zug",
+          "mutter",
+          "kuchen",
+          "meer"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "zf-1",
+            "speakText": "Hallo, Yusuf! Heute ist Donnerstag, der sechzehnte April. Woche zwölf ist zu Ende — und morgen endet der Kurs!",
+            "a": "Hallo, Yusuf! Heute ist Donnerstag, der sechzehnte April. Woche zwölf ist zu Ende — und morgen endet der Kurs!",
+            "why": "der sechzehnte (‑te) · zwölf بـö · endet بـ‑et بعد d · der Kurs بحرف كبير."
+          },
+          {
+            "audioId": "zf-5",
+            "speakText": "Bin angekommen, habe verpasst — sein oder haben. Und am Montag?",
+            "a": "Bin angekommen, habe verpasst — sein oder haben. Und am Montag?",
+            "why": "angekommen بـge‑ في الوسط · verpasst بـss وبلا ge‑ · am Montag."
+          },
+          {
+            "audioId": "zf-9",
+            "speakText": "Und bei mir: Ich darf wieder in die Schule gehen, aber ich soll noch nicht schwimmen.",
+            "a": "Und bei mir: Ich darf wieder in die Schule gehen, aber ich soll noch nicht schwimmen.",
+            "why": "bei mir (داتيف) · darf … gehen · soll … schwimmen — المصدر في الآخر · schwimmen بـmm."
+          },
+          {
+            "audioId": "zf-13",
+            "speakText": "Richtig! Und was bringst du am Samstag mit?",
+            "a": "Richtig! Und was bringst du am Samstag mit?",
+            "why": "bringst … mit — المنفصل: mit في الآخر · am Samstag."
+          },
+          {
+            "audioId": "zf-17",
+            "speakText": "Sehr gut! Und der See und das Meer?",
+            "a": "Sehr gut! Und der See und das Meer?",
+            "why": "der See (مذكر = بحيرة) · das Meer (محايد = بحر) بـee طويلة."
+          },
+          {
+            "audioId": "zf-19",
+            "speakText": "Du bist fertig für morgen! Wann kommst du am Samstag an?",
+            "a": "Du bist fertig für morgen! Wann kommst du am Samstag an?",
+            "why": "fertig بـ‑ig · kommst … an — المنفصل في السؤال: an في الآخر."
+          }
+        ],
+        "interleavedWith": [
+          "donnerstag",
+          "april",
+          "kurs",
+          "montag",
+          "samstag",
+          "fertig"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die große A1-Mini-Schlacht meistern",
-        "a": "x",
-        "ar": "إتقان المعركة الكبرى"
+        "de": "Meine Reise: Ich bin um sieben losgefahren und um dreizehn Uhr angekommen. Der Zug hatte Verspätung, aber ich habe ihn nicht verpasst. Zu Hause habe ich den Rucksack ausgepackt. Morgen muss ich früh aufstehen, weil der Kurs um acht anfängt. Ich bringe Fotos mit, denn meine Freunde möchten das Meer sehen.",
+        "ar": "أن يحكي لزميل رحلة قصيرة: ثلاثة أفعال في الماضي منها واحد بـsein وفعل منفصل (bin losgefahren · bin angekommen · habe ausgepackt) · شيء يجب وشيء لا يجوز بـmuss/darf والفعل في الآخر · سبب بـweil (الفعل في الآخر) وسبب بـdenn (الفعل ثانياً)"
       },
       "situation": {
-        "de": "Mischung aus allen 12 Einheiten — alle 4 Fertigkeiten",
-        "a": "x",
-        "ar": "خليط من الوحدات الـ12 — المهارات الأربع"
+        "de": "Das Ende der Woche: Donnerstag, der sechzehnte April — morgen endet der Kurs, am Samstag fährt Yusuf zu Lena. Und jetzt deine Reise.",
+        "ar": "نهاية الأسبوع الثاني عشر: مساء الخميس 16 أبريل — غداً آخر يوم في الدورة، والسبت يسافر يوسف إلى لينا؛ يراجعان المستوى كله: الماضي والأفعال المنفصلة وdarf/muss/soll وweil/denn والبحر والبحيرة — ثم رحلتك أنت"
       },
       "successCriteria": [
-        "القلنسوة + bin/hat + المصائد الخطرة (الجنس · الوملاوت · Dativ · -ieren · denn≠weil)"
+        "يحكي ثلاثة أفعال في الماضي منها واحد بـsein (bin angekommen) وفعل منفصل (ausgepackt أو losgefahren)",
+        "يقول جملتين بـmuss وdarf nicht والمصدر في الآخر (muss um sechs aufstehen · darf nicht zu spät kommen)",
+        "يعلّل مرة بـweil (الفعل في الآخر) ومرة بـdenn (الفعل ثانياً) بلا خلط، ويستعمل der See وdas Meer صحيحاً"
       ]
     }
   },
@@ -136,20 +365,59 @@
       {
         "items": [
           {
-            "q": "«رأسي يؤلمني» — بالتركيب؟",
-            "a": "Mein Kopf tut weh."
+            "q": "Ich bin um dreizehn Uhr ___.",
+            "a": "angekommen",
+            "choices": [
+              "angekommen",
+              "ankommen",
+              "kommt an"
+            ],
+            "why": "المنفصل الشاذ: an‑ge‑kommen."
           },
           {
-            "q": "«بقيتُ أمس في البيت»؟",
-            "a": "Ich bin gestern zu Hause geblieben."
+            "q": "Ich ___ den Zug nicht verpasst.",
+            "a": "habe",
+            "choices": [
+              "habe",
+              "bin",
+              "hatte"
+            ],
+            "why": "verpassen مع haben: ich habe verpasst."
           },
           {
-            "q": "«اليد» والجمع؟",
-            "a": "die Hand → die Hände"
+            "q": "Ich habe die Fotos ___.",
+            "a": "angesehen",
+            "choices": [
+              "angesehen",
+              "ansehen",
+              "sieht an"
+            ],
+            "why": "المنفصل الشاذ: an‑ge‑sehen."
           },
           {
-            "q": "«يجب أن أذهب»؟",
-            "a": "Ich muss gehen."
+            "q": "Ich ___ morgen um sechs aufstehen.",
+            "a": "muss",
+            "choices": [
+              "muss",
+              "musst",
+              "müssen"
+            ],
+            "why": "müssen مع ich: muss."
+          },
+          {
+            "q": "Wir feiern bei mir, weil meine Mutter einen Kuchen ___.",
+            "a": "macht",
+            "choices": [
+              "macht",
+              "machen",
+              "mache"
+            ],
+            "why": "الفعل في الآخر بعد weil ومع meine Mutter: macht."
+          },
+          {
+            "q": "الترتيب: kommen. / zu spät / Ich darf / nicht",
+            "a": "Ich darf nicht zu spät kommen.",
+            "why": "darf ثانياً وkommen في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -157,20 +425,59 @@
       {
         "items": [
           {
-            "q": "«لأنني متعب» — denn (الترتيب)؟",
-            "a": "…, denn ich bin müde (الفعل ثانٍ)"
+            "q": "Mein Vater ___ einen Film über Italien gefunden.",
+            "a": "hat",
+            "choices": [
+              "hat",
+              "ist",
+              "habe"
+            ],
+            "why": "finden مع haben ومع mein Vater: hat."
           },
           {
-            "q": "«أمس اتصلتُ»؟",
-            "a": "Gestern habe ich angerufen."
+            "q": "Ich ___ viel sprechen, sagt die Lehrerin.",
+            "a": "soll",
+            "choices": [
+              "soll",
+              "sollst",
+              "sollen"
+            ],
+            "why": "sollen مع ich: soll — التعليمات."
           },
           {
-            "q": "«شمال/يمين»؟",
-            "a": "links / rechts"
+            "q": "Nicht im Park, denn vielleicht ___ es.",
+            "a": "regnet",
+            "choices": [
+              "regnet",
+              "regnen",
+              "regne"
+            ],
+            "why": "بعد denn ترتيب عادي: regnet es."
           },
           {
-            "q": "«القديم/الجديد»؟",
-            "a": "alt / neu"
+            "q": "Ich bringe die Fotos vom Meer ___.",
+            "a": "mit",
+            "choices": [
+              "mit",
+              "an",
+              "ab"
+            ],
+            "why": "mitbringen: mit في الآخر."
+          },
+          {
+            "q": "Das Pflaster hilft ___. (ich)",
+            "a": "mir",
+            "choices": [
+              "mir",
+              "mich",
+              "ich"
+            ],
+            "why": "helfen + الداتيف: mir (u11)."
+          },
+          {
+            "q": "الترتيب: ab. / um neun / Der Zug / fährt",
+            "a": "Der Zug fährt um neun ab.",
+            "why": "abfahren: fährt ثانياً وab في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -178,20 +485,59 @@
       {
         "items": [
           {
-            "q": "«من أي رصيف؟»؟",
-            "a": "Von welchem Gleis?"
+            "q": "Ich habe seit zwei ___ Kopfschmerzen.",
+            "a": "Tagen",
+            "choices": [
+              "Tagen",
+              "Tage",
+              "Tag"
+            ],
+            "why": "seit + الداتيف الجمع: seit zwei Tagen (‑n)."
           },
           {
-            "q": "«صوّرتُ» — ge أم لا؟",
-            "a": "Ich habe fotografiert (-ieren بلا ge)."
+            "q": "___ Meer ist groß.",
+            "a": "Das",
+            "choices": [
+              "Das",
+              "Der",
+              "Die"
+            ],
+            "why": "das Meer محايد."
           },
           {
-            "q": "«بحيرة» والبحر؟",
-            "a": "der See (بحيرة) · die See/das Meer (بحر)"
+            "q": "___ See ist klein.",
+            "a": "Der",
+            "choices": [
+              "Der",
+              "Das",
+              "Die"
+            ],
+            "why": "der See (مذكر) = بحيرة · die See = بحر."
           },
           {
-            "q": "«الإسعاف» والجنس؟",
-            "a": "der Krankenwagen (جنس آخر كلمة)"
+            "q": "Ich komme um sechs bei dir ___.",
+            "a": "an",
+            "choices": [
+              "an",
+              "ab",
+              "mit"
+            ],
+            "why": "ankommen: an في الآخر."
+          },
+          {
+            "q": "Dann sehen wir ___ den Film. (أخيراً)",
+            "a": "zuletzt",
+            "choices": [
+              "zuletzt",
+              "zuerst",
+              "dann"
+            ],
+            "why": "zuletzt = في الآخر/أخيراً (u12-d4) · zuerst = أولاً."
+          },
+          {
+            "q": "«لماذا نحتفل عندك؟» — بالألمانية؟",
+            "a": "Warum feiern wir bei dir?",
+            "why": "Warum + الفعل ثانياً · bei + الداتيف: bei dir."
           }
         ],
         "passingScore": 0.75
@@ -200,53 +546,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Das große Finale: Die Satzklammer (Verb zweit, … Verb/Praefix letzte), die zwei Helfer (bin/hat + war/hatte), und die arabischen Feinheiten (Geschlecht, Umlaut, Dativ, -ieren ohne ge, denn≠weil). Damit bist du A1-bereit!",
-      "ar": "الختام الكبير: القلنسوة (الفعل ثانٍ … الفعل/البادئة آخر) · المساعدان (bin/hat + war/hatte) · والدقة العربية (الجنس · الوملاوت · Dativ · -ieren بلا ge · denn≠weil). بهذا أنت جاهز لـA1!"
+      "de": "Woche zwölf ist zu Ende: Heute ist Donnerstag, der sechzehnte April. Yusuf ist um dreizehn Uhr in Berlin angekommen und hat den Zug nicht verpasst. Am Montag ist er um sieben losgefahren und hat den Rucksack ausgepackt. Er darf nicht zu spät kommen und muss um sechs aufstehen. Wir feiern bei Lena, weil ihre Mutter einen Kuchen macht — nicht im Park, denn vielleicht regnet es. Der See ist klein, das Meer ist groß.",
+      "ar": "الوحدة الثانية عشرة والمستوى A1 اكتملا: تحكي الماضي بـsein أو haben والأفعال المنفصلة بـge‑ في الوسط، وتقول ما يجب وما لا يجوز بـmuss/darf/soll والفعل في الآخر، وتعلّل بـweil (الفعل في الآخر) وdenn (الفعل ثانياً)، وتفرّق der See عن das Meer."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Der Zug fährt ab um 8~~ / ~~Ich muss heute gehen zum Arzt~~ / ~~Ich habe den Koffer geeinpackt~~",
-          "ar": "القلنسوة الثلاثية: فعل ثانٍ + … + آخر (فعل رئيسي · بادئة · الفعل الثاني) — القاعدة الأم للمسك"
+          "de": "~~Ich habe angekommen.~~ · ~~Ich habe auspackt.~~ · ~~Ich habe gefotografiert.~~",
+          "ar": "الماضي: sein/haben ومكان ge‑"
         },
-        "whyArabicSpeakerFails": "العربية فعل واحد في مكانه؛ الألماني يشطر كل شيء إلى قلنسوة: der Zug **fährt** um 8 **ab** · muss … **gehen** · ein-**ge**-packt — إتقان القلنسوة = إتقان 70% من أخطاء العرب (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الماضي العربي كلمة واحدة بلا فعل مساعد وبلا سابقة، والألمانية تختار sein للحركة (bin angekommen · bin losgefahren) وتضع ge‑ في وسط المنفصل (los‑ge‑fahren · aus‑ge‑packt) وتحذفها مع ‑ieren وver‑ (fotografiert · verpasst) — فيخلط المتعلم الثلاثة في سرد الرحلة (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Der Zug fährt um 8 Uhr ab. · Ich muss heute zum Arzt gehen. · eingepackt",
-          "ar": "الثلاثة بالقلنسوة الصحيحة"
+          "de": "Ich bin angekommen. · Ich bin losgefahren. · Ich habe fotografiert.",
+          "ar": "وصلتُ · انطلقتُ · صوّرتُ"
         },
         "exercise": {
-          "q": "أكمل: anrufen → Ich ___ dich gestern ___ (القلنسوة).",
-          "a": "habe … angerufen"
+          "q": "أكمل: Ich ___ um acht angekommen und ___ den Rucksack ausgepackt.",
+          "a": "bin / habe"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich habe geblieben~~ / ~~Ich bin gehustet~~ / ~~Ich habe krank gewesen~~",
-          "ar": "المساعدان + الوجوه: bin للحركة/التغيّر · hat للعَرَض/المكان · **war** المباشر لـ«كنتُ» · **hatte** لـ«كان لدي»"
+          "de": "~~Ich muss stehe um sechs auf.~~ · ~~Ich darf komme nicht zu spät.~~",
+          "ar": "muss/darf والمصدر في الآخر"
         },
-        "whyArabicSpeakerFails": "أربعة أوجه بلا مقابل عربي: bin/hat/war/hatte — القاعدة: تغيّر؟=bin · عَرَض؟=hat · «كنتُ»=war · «كان لدي»=hatte — الحفظ بالقاعدة الذهبية (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«يجب أن أستيقظ» تصرّف الفعل الثاني بالعربية، والألمانية تتركه مصدراً كاملاً في آخر الجملة — والمنفصل يعود كلمة واحدة (muss … aufstehen · darf nicht … kommen) — فيصرّف المتعلم الفعل الثاني ويفصله (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich bin geblieben. · Ich habe gehustet. · Ich war krank. · Ich hatte Kopfschmerzen.",
-          "ar": "بقيتُ · سعلتُ · كنتُ مريضاً · كان لدي صداع."
+          "de": "Ich muss um sechs aufstehen. · Ich darf nicht zu spät kommen.",
+          "ar": "يجب أن أستيقظ في السادسة · لا يجوز أن آتي متأخراً"
         },
         "exercise": {
-          "q": "أكمل: Ich ___ Fieber gehabt (hattest) gestern? لا — gestern ___ ich Fieber.",
-          "a": "hatte"
+          "q": "أكمل: Du ___ morgen früh ___. (müssen · losfahren)",
+          "a": "musst / losfahren"
         }
       },
       {
         "commonError": {
-          "de": "~~die Hand~~ (der) / ~~Kopfschmerz~~ (جمع) / ~~seit zwei Tag~~ / ~~Das hilft mich~~ / ~~gefotografiert~~ / ~~denn ich müde bin~~",
-          "ar": "الست المصائد الخطرة للعرب: الجنس · الوملاوت · seit+Dativ · helfen+Dativ · -ieren بلا ge · denn≠weil"
+          "de": "~~weil meine Mutter macht einen Kuchen~~ · ~~denn es regnet vielleicht~~ · ~~Ich fahre an den Meer.~~",
+          "ar": "weil/denn والبحر والبحيرة"
         },
-        "whyArabicSpeakerFails": "الست مصائد تتكرر في كل مستوى: die Hand (جنس عشوائي) · Hände (وملاوت) · seit Tagen (Dativ) · hilft mir (Dativ) · fotografiert (بلا ge) · denn … bin (V2) — المراجعة النهائية قبل الامتحان (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«لأن» واحدة بالعربية لسببين، والألمانية تفصل: weil تابعة ترمي الفعل إلى الآخر وdenn رابطة تترك الفعل ثانياً — و«البحر» كلمة واحدة بالعربية مقابل das Meer (محايد) وder See (بحيرة) وdie See (بحر) — فيوحّد المتعلم الترتيب ويخلط الجنس (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "die Hand · die Hände · seit zwei Tagen · Das hilft mir · fotografiert · denn ich bin müde",
-          "ar": "الست بالصيغة الصحيحة"
+          "de": "…, weil meine Mutter einen Kuchen macht. · …, denn vielleicht regnet es. · Ich fahre ans Meer.",
+          "ar": "لأن أمي تصنع كعكة · لأنه ربما تمطر · أذهب إلى البحر"
         },
         "exercise": {
-          "q": "أصلح: Das hilft mich seit zwei Tag.",
-          "a": "Das hilft mir seit zwei Tagen."
+          "q": "أكمل: Wir bleiben zu Hause, ___ es regnet. — Wir bleiben zu Hause, ___ es regnet ___. (denn · weil · الفعل)",
+          "a": "denn / weil / regnet"
         }
       }
     ],
@@ -278,7 +624,7 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Wiederholung: die große Mini-Schlacht (alle Einheiten)",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 12 — توليف الوحدة 12 والمستوى: الخميس 16 أبريل — الرحلة والماضي وdarf/muss وweil/denn",
     "goetheWordListOverlap": []
   }
 }

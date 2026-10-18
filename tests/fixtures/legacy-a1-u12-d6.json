@@ -1,0 +1,284 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u12-d6",
+  "level": "A1",
+  "unit": 12,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Du meisterst die große A1-Mini-Schlacht: alle 4 Fertigkeiten, alle goldenen Regeln — Satzklammer, bin/hat, und die arabischen Feinheiten.",
+    "ar": "المعركة الكبرى: كل القواعد الذهبية + المهارات الأربع (خاتمة خطة A1!)"
+  },
+  "canDoDaily": [
+    "يجتاز معركة A1 النهائية (عتبة 75%) في أشكال مختلطة شاملة"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hallo",
+      "danke",
+      "bitte"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "المعركة الكبرى: «القطار يغادر الساعة الثامنة» — القلنسوة الكاملة؟"
+        },
+        "choices": [
+          "Der Zug fährt um 8 Uhr ab (فعل ثانٍ + … + البادئة آخر)",
+          "Der Zug fährt ab um 8 Uhr",
+          "Der Zug ab fährt um 8 Uhr"
+        ],
+        "answer": "Der Zug fährt um 8 Uhr ab (فعل ثانٍ + … + البادئة آخر)",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "hoeren",
+      "sprechen"
+    ],
+    "grammarArsenalIds": [
+      "ars-satzklammer",
+      "ars-perfekt",
+      "ars-modal-fix",
+      "ars-dativ-fix",
+      "ars-weil-satz"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«يجب أن أذهب اليوم إلى الطبيب» — القلنسوة؟",
+            "a": "Ich muss heute zum Arzt gehen (muss ثانٍ · gehen آخر)."
+          },
+          {
+            "q": "«القطار متأخر، لذلك أنا متأخر»؟",
+            "a": "Der Zug hat Verspätung, deswegen bin ich spät."
+          }
+        ],
+        "interleavedWith": [
+          "gehen",
+          "zug"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«حزمتُ الحقيبة وانطلقنا»؟",
+            "a": "Ich habe den Koffer eingepackt und wir sind losgefahren."
+          },
+          {
+            "q": "«صوّرتُ صوراً»؟",
+            "a": "Ich habe fotografiert (لا ge مع -ieren)."
+          }
+        ],
+        "interleavedWith": [
+          "einpacken",
+          "fotografieren"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "choice",
+        "items": [
+          {
+            "q": "«عندي صداع منذ يومين»؟",
+            "a": "Ich habe seit zwei Tagen Kopfschmerzen."
+          },
+          {
+            "q": "«ذلك يساعدني»؟",
+            "a": "Das hilft mir (Dativ)."
+          }
+        ],
+        "interleavedWith": [
+          "kopfschmerz",
+          "helfen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Die große A1-Mini-Schlacht meistern",
+        "a": "x",
+        "ar": "إتقان المعركة الكبرى"
+      },
+      "situation": {
+        "de": "Mischung aus allen 12 Einheiten — alle 4 Fertigkeiten",
+        "a": "x",
+        "ar": "خليط من الوحدات الـ12 — المهارات الأربع"
+      },
+      "successCriteria": [
+        "القلنسوة + bin/hat + المصائد الخطرة (الجنس · الوملاوت · Dativ · -ieren · denn≠weil)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«رأسي يؤلمني» — بالتركيب؟",
+            "a": "Mein Kopf tut weh."
+          },
+          {
+            "q": "«بقيتُ أمس في البيت»؟",
+            "a": "Ich bin gestern zu Hause geblieben."
+          },
+          {
+            "q": "«اليد» والجمع؟",
+            "a": "die Hand → die Hände"
+          },
+          {
+            "q": "«يجب أن أذهب»؟",
+            "a": "Ich muss gehen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«لأنني متعب» — denn (الترتيب)؟",
+            "a": "…, denn ich bin müde (الفعل ثانٍ)"
+          },
+          {
+            "q": "«أمس اتصلتُ»؟",
+            "a": "Gestern habe ich angerufen."
+          },
+          {
+            "q": "«شمال/يمين»؟",
+            "a": "links / rechts"
+          },
+          {
+            "q": "«القديم/الجديد»؟",
+            "a": "alt / neu"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«من أي رصيف؟»؟",
+            "a": "Von welchem Gleis?"
+          },
+          {
+            "q": "«صوّرتُ» — ge أم لا؟",
+            "a": "Ich habe fotografiert (-ieren بلا ge)."
+          },
+          {
+            "q": "«بحيرة» والبحر؟",
+            "a": "der See (بحيرة) · die See/das Meer (بحر)"
+          },
+          {
+            "q": "«الإسعاف» والجنس؟",
+            "a": "der Krankenwagen (جنس آخر كلمة)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Das große Finale: Die Satzklammer (Verb zweit, … Verb/Praefix letzte), die zwei Helfer (bin/hat + war/hatte), und die arabischen Feinheiten (Geschlecht, Umlaut, Dativ, -ieren ohne ge, denn≠weil). Damit bist du A1-bereit!",
+      "ar": "الختام الكبير: القلنسوة (الفعل ثانٍ … الفعل/البادئة آخر) · المساعدان (bin/hat + war/hatte) · والدقة العربية (الجنس · الوملاوت · Dativ · -ieren بلا ge · denn≠weil). بهذا أنت جاهز لـA1!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Der Zug fährt ab um 8~~ / ~~Ich muss heute gehen zum Arzt~~ / ~~Ich habe den Koffer geeinpackt~~",
+          "ar": "القلنسوة الثلاثية: فعل ثانٍ + … + آخر (فعل رئيسي · بادئة · الفعل الثاني) — القاعدة الأم للمسك"
+        },
+        "whyArabicSpeakerFails": "العربية فعل واحد في مكانه؛ الألماني يشطر كل شيء إلى قلنسوة: der Zug **fährt** um 8 **ab** · muss … **gehen** · ein-**ge**-packt — إتقان القلنسوة = إتقان 70% من أخطاء العرب (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Der Zug fährt um 8 Uhr ab. · Ich muss heute zum Arzt gehen. · eingepackt",
+          "ar": "الثلاثة بالقلنسوة الصحيحة"
+        },
+        "exercise": {
+          "q": "أكمل: anrufen → Ich ___ dich gestern ___ (القلنسوة).",
+          "a": "habe … angerufen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe geblieben~~ / ~~Ich bin gehustet~~ / ~~Ich habe krank gewesen~~",
+          "ar": "المساعدان + الوجوه: bin للحركة/التغيّر · hat للعَرَض/المكان · **war** المباشر لـ«كنتُ» · **hatte** لـ«كان لدي»"
+        },
+        "whyArabicSpeakerFails": "أربعة أوجه بلا مقابل عربي: bin/hat/war/hatte — القاعدة: تغيّر؟=bin · عَرَض؟=hat · «كنتُ»=war · «كان لدي»=hatte — الحفظ بالقاعدة الذهبية (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bin geblieben. · Ich habe gehustet. · Ich war krank. · Ich hatte Kopfschmerzen.",
+          "ar": "بقيتُ · سعلتُ · كنتُ مريضاً · كان لدي صداع."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ Fieber gehabt (hattest) gestern? لا — gestern ___ ich Fieber.",
+          "a": "hatte"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Hand~~ (der) / ~~Kopfschmerz~~ (جمع) / ~~seit zwei Tag~~ / ~~Das hilft mich~~ / ~~gefotografiert~~ / ~~denn ich müde bin~~",
+          "ar": "الست المصائد الخطرة للعرب: الجنس · الوملاوت · seit+Dativ · helfen+Dativ · -ieren بلا ge · denn≠weil"
+        },
+        "whyArabicSpeakerFails": "الست مصائد تتكرر في كل مستوى: die Hand (جنس عشوائي) · Hände (وملاوت) · seit Tagen (Dativ) · hilft mir (Dativ) · fotografiert (بلا ge) · denn … bin (V2) — المراجعة النهائية قبل الامتحان (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Hand · die Hände · seit zwei Tagen · Das hilft mir · fotografiert · denn ich bin müde",
+          "ar": "الست بالصيغة الصحيحة"
+        },
+        "exercise": {
+          "q": "أصلح: Das hilft mich seit zwei Tag.",
+          "a": "Das hilft mir seit zwei Tagen."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "hoeren",
+      "sprechen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/fahren",
+      "https://www.duden.de/rechtschreibung/helfen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/fahren"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-satzklammer",
+    "ars-perfekt",
+    "ars-modal-fix",
+    "ars-dativ-fix",
+    "ars-weil-satz"
+  ],
+  "audioManifestRefs": [
+    "word-hoeren",
+    "word-sprechen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Wiederholung: die große Mini-Schlacht (alle Einheiten)",
+    "goetheWordListOverlap": []
+  }
+}
