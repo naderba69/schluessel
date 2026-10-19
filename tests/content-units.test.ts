@@ -1320,7 +1320,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
   });
 
   it("D151: ملاحظات الجمع في الدروس المُرقّاة بلا مصطلح داخلي — كان «Gleich_plural» يظهر للمتعلم في 11 كلمة (Sessel · Spiegel · Kissen · Wecker …) فصار «بلا نهاية: der Sessel ← die Sessel» (نمط D146)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4", "a1-u7-d5", "a1-u8-d1", "a1-u8-d2", "a1-u8-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D158: u8-d3 · D152: u7-d2 · D153: u7-d3 · D154: u7-d4 · D155: u7-d5 · D156: u8-d1 · D157: u8-d2
+    const done = new Set(ALL_LESSONS.filter((l) => l.level === "A1").flatMap((l) => l.praesentation.wordIds)); // D216: كل دروس A1 مُرقّاة (60/60 + 20/20) — مشتق من الملفات بدل القائمة المجمدة عند u8-d3 (قاعدة الكشاف D188)
     const jargon = ALL_WORDS.filter((w) => done.has(w.id) && /Gleich_plural|[A-Za-z]+_[A-Za-z]+/.test(w.pluralRuleNote ?? "")).map((w) => w.id);
     expect(jargon).toEqual([]);
     const note = (id: string) => ALL_WORDS.find((w) => w.id === id)!.pluralRuleNote;
