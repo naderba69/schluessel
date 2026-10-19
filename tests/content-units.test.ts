@@ -1,6 +1,6 @@
 // content-units.test.ts — المحتوى حيّ: كل درس وكلماته تعمل على المُشغِّل (D45)
 import { describe, it, expect } from "vitest";
-import { readdirSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, LEVEL_ORDER, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
 import { slugify } from "../tools/lib/word-entry.js";
@@ -1482,5 +1482,21 @@ describe("A2 يبدأ (D101) — الترتيب بالمستوى + قواعد A2
       for (const c of plan.learn) expect(c.explanation, `${l.id}/${c.wordId}`).not.toMatch(doubled);
       for (const c of plan.recall) expect(c.front, `${l.id}/${c.id}`).not.toMatch(doubled);
     }
+  });
+});
+
+describe("N-048 (D221) — الخطأ البعيد الوحيد محصور في نطاق الملاحظات (لا توسيع للحد — القياس: صفر في المواضع المفحوصة)", () => {
+  it("كل وقوع لـgeeinpackt في المستودع داخل why/whyArabicSpeakerFails/contrastAr حصراً (ثلاثة مواضع: why وتعليل u12-d3 وقاعدة trennbar) — تسرّبه لأي حقل تدريب يُكسر هنا قبل أن يراه المتعلم", () => {
+    const hits: string[] = [];
+    const walk = (x: unknown, file: string, key: string): void => {
+      if (typeof x === "string") { if (x.toLowerCase().includes("geeinpackt")) hits.push(`${file} :: ${key}`); return; }
+      if (Array.isArray(x)) { x.forEach((v, i) => walk(v, file, `${key}[${i}]`)); return; }
+      if (x && typeof x === "object") for (const [k, v] of Object.entries(x)) walk(v, file, k);
+    };
+    for (const dir of ["content/lessons/a1", "content/arsenal/grammar"])
+      for (const f of readdirSync(join(__dirname, "..", dir)).filter((x) => x.endsWith(".json")))
+        walk(JSON.parse(readFileSync(join(__dirname, "..", dir, f), "utf8")), f, "");
+    expect(hits.length).toBeGreaterThan(0); // الضابط إيجابي: الاستثناء موجود فعلاً
+    for (const h of hits) expect(/:: (why|whyArabicSpeakerFails|contrastAr)$/.test(h), h).toBe(true);
   });
 });
