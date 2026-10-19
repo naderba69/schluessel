@@ -1,0 +1,136 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "a1-u14-d4-reisebuero",
+ "kind": "dialogue",
+ "level": "A1",
+ "title": {
+  "de": "Im Reisebüro",
+  "ar": "في مكتب السفر بلا تاريخ (تكملة SD1 للفهم): يوسف ولينا في مكتب السفر — نشرة أم مرشد؟ الجولة ثقافية · أين نبيت؟ في الشقة · بنصف إقامة · القرية ثقافية · العيادة في الخلف وأين الجمارك؟ لافتة: انتبه! · الباب تلقائي · الجمارك قريبة · التصوير ممنوع · متى تأتي الجولة؟ اقرأ النشرة · المرشد يضيع ثم يوجد · شكراً وإلى اللقاء"
+ },
+ "usedIn": [
+  "a1-u14-d4"
+ ],
+ "lengthScale": 1.32,
+ "lines": [
+  {
+   "id": "ef-1",
+   "speaker": "yusuf",
+   "text": "Lena, ich gehe ins Reisebüro! Kommst du mit?",
+   "direction": "Reisebüro معروف"
+  },
+  {
+   "id": "ef-2",
+   "speaker": "lena",
+   "text": "Ja! Ein Prospekt, bitte! Oder ein Reiseführer?",
+   "direction": "Prospekt · Reiseführer"
+  },
+  {
+   "id": "ef-3",
+   "speaker": "yusuf",
+   "text": "Der Prospekt ist neu. Die Führung ist kulturell!",
+   "direction": "Führung · kulturell"
+  },
+  {
+   "id": "ef-4",
+   "speaker": "lena",
+   "text": "Wo übernachten wir? Im Apartment?",
+   "direction": "übernachten · Apartment"
+  },
+  {
+   "id": "ef-5",
+   "speaker": "yusuf",
+   "text": "Mit Halbpension! Das Apartment ist groß.",
+   "direction": "Halbpension"
+  },
+  {
+   "id": "ef-6",
+   "speaker": "lena",
+   "text": "Eine Führung: Das Dorf ist kulturell!",
+   "direction": "Dorf"
+  },
+  {
+   "id": "ef-7",
+   "speaker": "yusuf",
+   "text": "Hinten ist die Praxis. Wo ist der Zoll?",
+   "direction": "hinten · Praxis · Zoll"
+  },
+  {
+   "id": "ef-8",
+   "speaker": "lena",
+   "text": "Da! Ein Schild: Vorsicht!",
+   "direction": "Schild · Vorsicht"
+  },
+  {
+   "id": "ef-9",
+   "speaker": "yusuf",
+   "text": "Das Schild ist neu. Und wichtig!",
+   "direction": "wichtig معروف"
+  },
+  {
+   "id": "ef-10",
+   "speaker": "lena",
+   "text": "Die Tür ist automatisch! Wir sind da!",
+   "direction": "automatisch"
+  },
+  {
+   "id": "ef-11",
+   "speaker": "yusuf",
+   "text": "Wo ist der Zoll? Da ist das Schild!",
+   "direction": "Zoll · Schild"
+  },
+  {
+   "id": "ef-12",
+   "speaker": "lena",
+   "text": "Der Zoll ist bald. Und das Foto?",
+   "direction": "Foto معروف"
+  },
+  {
+   "id": "ef-13",
+   "speaker": "yusuf",
+   "text": "Verboten! Das Foto ist verboten!",
+   "direction": "verboten"
+  },
+  {
+   "id": "ef-14",
+   "speaker": "lena",
+   "text": "Da! Das Dorf ist klein!",
+   "direction": "Dorf · klein"
+  },
+  {
+   "id": "ef-15",
+   "speaker": "yusuf",
+   "text": "Wann kommt die Führung? Lies den Prospekt!",
+   "direction": "Lies معروف"
+  },
+  {
+   "id": "ef-16",
+   "speaker": "lena",
+   "text": "Sehr bald! Komm schnell!",
+   "direction": "bald · schnell"
+  },
+  {
+   "id": "ef-17",
+   "speaker": "yusuf",
+   "text": "Mein Reiseführer! Wo ist mein Reiseführer?",
+   "direction": "Reiseführer"
+  },
+  {
+   "id": "ef-18",
+   "speaker": "lena",
+   "text": "Hier ist dein Reiseführer!",
+   "direction": "hier معروف"
+  },
+  {
+   "id": "ef-19",
+   "speaker": "yusuf",
+   "text": "Danke, Lena! Bis bald!",
+   "direction": "Danke معروف"
+  },
+  {
+   "id": "ef-20",
+   "speaker": "lena",
+   "text": "Gern! Tschüss, Yusuf!",
+   "direction": "وداع معروف"
+  }
+ ]
+}

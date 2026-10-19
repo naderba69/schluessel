@@ -293,8 +293,8 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(cs.find((c) => c.status === "pending")).toBeUndefined(); // D180: النواة مكتملة — لا pending
     expect(cs.every((c) => c.missing.length === 0)).toBe(true);
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
-    expect(next.lessonId).toBe("a1-u14-d4"); // D212: u14-d3 أُنتج (receptive) — التالي السفر والإقامة
-    expect(next.headwords).toHaveLength(16); // D212: التالي a1-u14-d4 (16 رأساً: Reisebüro · Reiseführer · Prospekt …)
+    expect(next.lessonId).toBe("a1-u14-d5"); // D213: u14-d4 أُنتج (receptive) — التالي السكن والامتحان
+    expect(next.headwords).toHaveLength(15); // D213: التالي a1-u14-d5 (15 رأساً: umziehen · ausziehen · vermieten …)
     const d1 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u13-d1")!;
     expect(d1.produced).toBe(true);
     expect(d1.missing).toEqual([]);
@@ -322,6 +322,9 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     const e3 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u14-d3")!;
     expect(e3.produced).toBe(true);
     expect(e3.missing).toEqual([]); // D212: S-Bahn بشرطة (s-bahn) · abfliegen لازم+ist
+    const e4 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u14-d4")!;
+    expect(e4.produced).toBe(true);
+    expect(e4.missing).toEqual([]); // D213: Dorf بجمع شاذ Dörfer · verboten صفة (participle)
   });
 });
 

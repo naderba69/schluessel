@@ -110,12 +110,20 @@ describe("D188 — الكلمات المستعارة المعلنة (borrowedWor
     expect(msgs([{ form: "weit", wordId: "weit", ar: "بعيد", whyAr: "اختبار" }]).join()).toContain("لا تظهر في نصوص الدرس");
     expect(msgs([{ form: "fragt", wordId: "xx-nicht-da", ar: "؟", whyAr: "اختبار" }]).join()).toContain("لا بطاقة");
   });
+  it("D213: u8-d3 تستعير hinten (تُدرَّس u14-d4) — كانت تمرّ بجذع hinter (hint) فكشفتها صيغة <hinten اللاحقة", () => {
+    const l = lessons.find((x) => x.id === "a1-u8-d3")!;
+    expect(l.praesentation.borrowedWords).toEqual([expect.objectContaining({ form: "hinten", wordId: "hinten" })]);
+    expect(JSON.stringify(l)).toContain("Dort hinten.");
+    const e = plan.lessons.find((x) => x.lessonId === "a1-u8-d3")!;
+    const r = inspectLesson(l, e, ctx);
+    expect([r.borrowed, r.practice, r.quiz, r.meta]).toEqual([[], [], [], []]);
+  });
   it("القائمة الكاملة للمستعارات في المقرر — تُطبع وتُثبَّت كي لا تكبر صامتةً (≤2 لكل درس بالمخطط)", () => {
     const all = lessons.flatMap((l) => l.praesentation.borrowedWords.map((b) => [l.id, b.form, b.wordId] as const));
     console.log("borrowedWords:", JSON.stringify(all));
     for (const l of lessons) expect(l.praesentation.borrowedWords.length, l.id).toBeLessThanOrEqual(2);
     for (const l of lessons) for (const b of l.praesentation.borrowedWords) expect(b.whyAr, `${l.id} ${b.form}`).toMatch(/\p{Script=Arabic}/u);
-    expect(all).toEqual([["a1-u8-d2", "fragt", "fragen"]]);
+    expect(all).toEqual([["a1-u8-d2", "fragt", "fragen"], ["a1-u8-d3", "hinten", "hinten"]]); // D213: hinten
   });
 });
 

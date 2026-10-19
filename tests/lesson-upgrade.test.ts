@@ -3867,7 +3867,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-plural-umlaut — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط): الجمع يُحفظ مع الكلمة وله خمسة أنماط
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-plural-umlaut"]);
     const rule = rules.get("ars-plural-umlaut")!;
-    expect(rule.usedInLessons).toEqual(["a1-u6-d1", "a1-u15-d3"]); // D202
+    expect(rule.usedInLessons).toEqual(["a1-u6-d1", "a1-u14-d4", "a1-u15-d3"]); // D213: u14-d4 (Dörfer للفهم) // D202
     expect(rule.payload.ruleDe).toMatch(/der Stuhl → die Stühle · der Schrank → die Schränke · der Tisch → die Tische · die Lampe → die Lampen · das Sofa → die Sofas · der Sessel → die Sessel/);
     expect(rule.payload.ruleAr).toContain("ميولٌ لا قوانين");
     // العونان المسمّيان: جمع التكسير يغيّر داخل الكلمة (كرسي ← كراسي) كالنقطتين · المعدود من 3 إلى 10 جمع بالعربية أيضاً
@@ -5140,14 +5140,14 @@ describe("D115 — الخطة الحقيقية", () => {
   const plans = loadUpgradePlans(CONTENT);
   const plan = plans.find((p) => p.id === "a1-lesson-upgrade")!;
   const ctx: UpgradeContext = { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) };
-  it("تغطي دروس A1 كلها في الوحدات 1–15 بالضبط (68 محتوى منذ D212 + 19 توليفاً منذ D209 — N-004) — لا درس منسي ولا زائد", () => {
+  it("تغطي دروس A1 كلها في الوحدات 1–15 بالضبط (69 محتوى منذ D213 + 19 توليفاً منذ D209 — N-004) — لا درس منسي ولا زائد", () => {
     const expected = realLessons.filter((l) => l.level === "A1" && l.unit <= 15).map((l) => l.id).sort();
     expect(plan.lessons.map((e) => e.lessonId).sort()).toEqual(expected);
-    expect(expected).toHaveLength(87); // D212
+    expect(expected).toHaveLength(88); // D213
     expect(plan.scope).toEqual({ fromUnit: 1, toUnit: 15, kinds: ["content", "integration"] });
     // دروس المحتوى الستون كلها done (D180) · التوليف: u1-d6 وu2-d6 done (D194) والباقي pending معلن (practice/quiz)
     const content = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "content");
-    expect(content).toHaveLength(68); // D212
+    expect(content).toHaveLength(69); // D213
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
     expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6", "a1-u13-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6"].sort());

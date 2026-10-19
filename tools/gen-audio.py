@@ -1251,6 +1251,22 @@ def build_all() -> None:
     ("word-anzeige", "die Anzeige.", "anzeige", ["a1-u14-d3"]),
     ("word-ansage", "die Ansage.", "ansage", ["a1-u14-d3"]),
     ("word-anschluss", "der Anschluss.", "anschluss", ["a1-u14-d3"]),
+    ("word-reisebuero", "das Reisebüro.", "reisebuero", ["a1-u14-d4"]),
+    ("word-reisefuehrer", "der Reiseführer.", "reisefuehrer", ["a1-u14-d4"]),
+    ("word-prospekt", "der Prospekt.", "prospekt", ["a1-u14-d4"]),
+    ("word-fuehrung", "die Führung.", "fuehrung", ["a1-u14-d4"]),
+    ("word-uebernachten", "übernachten.", "uebernachten", ["a1-u14-d4"]),
+    ("word-halbpension", "die Halbpension.", "halbpension", ["a1-u14-d4"]),
+    ("word-apartment", "das Apartment.", "apartment", ["a1-u14-d4"]),
+    ("word-kulturell", "kulturell.", "kulturell", ["a1-u14-d4"]),
+    ("word-zoll", "der Zoll.", "zoll", ["a1-u14-d4"]),
+    ("word-dorf", "das Dorf.", "dorf", ["a1-u14-d4"]),
+    ("word-hinten", "hinten.", "hinten", ["a1-u14-d4"]),
+    ("word-schild", "das Schild.", "schild", ["a1-u14-d4"]),
+    ("word-verboten", "verboten.", "verboten", ["a1-u14-d4"]),
+    ("word-vorsicht", "die Vorsicht.", "vorsicht", ["a1-u14-d4"]),
+    ("word-praxis", "die Praxis.", "praxis", ["a1-u14-d4"]),
+    ("word-automatisch", "automatisch.", "automatisch", ["a1-u14-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
