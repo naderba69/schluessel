@@ -10,7 +10,8 @@ export const ReadingText = z.object({
   unit: UnitNumber,
   title: z.object({ de: z.string().min(1), ar: z.string().min(1) }),
   text: z.object({ de: z.string().min(40), ar: z.string().min(10) }),
-  glossary: z.array(z.object({ de: z.string().min(1), ar: z.string().min(1) })).min(1),
+  glossary: z.array(z.object({ de: z.string().min(1), ar: z.string().min(1) })),
+  properNouns: z.array(z.string().min(1)).optional(), // N-023 (D222): أعلام معلنة كالدروس — تُفحص استعمالاً لا حفظاً
   questions: z.array(z.object({ q: z.string().min(1), a: z.string().min(1) })).min(2),
   sourceNote: z.string().min(1),
 });

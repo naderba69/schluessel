@@ -3,6 +3,9 @@ import { describe, it, expect } from "vitest";
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, LEVEL_ORDER, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { ReadingText } from "../content/schemas/index.js";
+import { taughtUpTo, frontViolations } from "../tools/lib/lesson-upgrade.js";
+import { knownStems, knownForms, contentTokens, CLOSED } from "../tools/lib/vocab-forms.js";
 import { slugify } from "../tools/lib/word-entry.js";
 import { planLessonStations, fullForm } from "../src/lib/lesson-runner.js";
 
@@ -1411,13 +1414,13 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     }
   });
 
-  it("نصوص القراءة: نص لكل وحدة + أسئلة + مسرد + حدود الصدق", () => {
+  it("نصوص القراءة: نص لكل وحدة + أسئلة + مسرد (قد يفرغ — النص النظيف بلا مسرد N-023) + حدود الصدق", () => {
     expect(ALL_LESETEXTS.length).toBe(12);
     const units = ALL_LESETEXTS.map((t) => t.unit).sort((a, b) => a - b);
     expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
     for (const t of ALL_LESETEXTS) {
       expect(t.text.de.length).toBeGreaterThanOrEqual(40);
-      expect(t.glossary.length).toBeGreaterThanOrEqual(1);
+      expect(t.glossary.length).toBeGreaterThanOrEqual(0); // N-023 (D222): النص النظيف تماماً بلا مسرد (u7/u10/u12) — وصدق المسرد يفحصه حارس N-023 (لا مدخل ميت)
       expect(t.questions.length).toBeGreaterThanOrEqual(2);
       expect(t.sourceNote.length).toBeGreaterThan(0);
     }
@@ -1499,4 +1502,28 @@ describe("N-048 (D221) — الخطأ البعيد الوحيد محصور في 
     expect(hits.length).toBeGreaterThan(0); // الضابط إيجابي: الاستثناء موجود فعلاً
     for (const h of hits) expect(/:: (why|whyArabicSpeakerFails|contrastAr)$/.test(h), h).toBe(true);
   });
+});
+
+describe("N-023 (D222) — نصوص القراءة تحت حارس الجبهة — المرحلة 1 (u1/u6/u7/u8/u10/u11/u12 · الباقي D223 ثم الثقافة D224)", () => {
+  // الأفق: آخر درس في وحدة النص (شاملاً كلماته) · المسرد يمنح جذوعه كالمدروس (lernen تغطي lerne/lernt) · الأعلام معلنة
+  // المسرد الميت: كل رموزه معروفة-الأفق حرفياً بلا جذوع (schön ≠ schon — تصادم مقصود يُبقي مسرد u1 صادقاً)
+  const lastOfUnit = (u: number) => ALL_LESSONS.filter((l) => l.level === "A1" && l.unit === u).sort((a, b) => a.day - b.day).at(-1)!;
+  const auditLese = (id: string) => {
+    const d = ReadingText.parse(JSON.parse(readFileSync(join(__dirname, "..", "content/lese", `${id}.json`), "utf8")));
+    const taught = taughtUpTo(lastOfUnit(d.unit), ALL_LESSONS, ALL_WORDS);
+    const stems = new Set([...knownStems(taught), ...d.glossary.flatMap((g) => [...knownStems([{ de: g.de, wordClass: "noun" } as never])])]);
+    const allow = new Set((d.properNouns ?? []).flatMap((n) => contentTokens(n)));
+    const texts = [d.title.de, d.text.de, ...d.questions.flatMap((q) => [q.q, q.a])];
+    const bad = frontViolations(texts, stems, allow);
+    const horizonForms = new Set([...taught.flatMap((w) => knownForms(w as never)), ...CLOSED]);
+    const dead = d.glossary.filter((g) => contentTokens(g.de).every((t) => horizonForms.has(t))).map((g) => g.de);
+    const seen = new Set(contentTokens(texts.join("\n")));
+    const unusedPropers = (d.properNouns ?? []).filter((n) => !contentTokens(n).every((t) => seen.has(t)));
+    return { bad, dead, unusedPropers };
+  };
+  for (const id of ["a1-lese-u1", "a1-lese-u6", "a1-lese-u7", "a1-lese-u8", "a1-lese-u10", "a1-lese-u11", "a1-lese-u12"]) {
+    it(`${id} نظيف: صفر مخالفات · صفر مسرد ميت · كل علم مستعمل`, () => {
+      expect(auditLese(id)).toEqual({ bad: [], dead: [], unusedPropers: [] });
+    });
+  }
 });
