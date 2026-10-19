@@ -1,0 +1,723 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "a1-u14-d3",
+ "level": "A1",
+ "unit": 14,
+ "day": 3,
+ "kind": "content",
+ "ziel": {
+  "de": "Du fährst zum Flughafen: S-Bahn oder Straßenbahn? Du verstehst: Tickets am Automat · drücken · der Fahrer wartet · Durchsage · Lkw auf der Autobahn · Ansage · Abflug und Anzeige · Anschluss · das Flugzeug fliegt ab!",
+  "ar": "إلى المطار (تكملة SD1 للفهم — بلا تاريخ): تفهم السفر والمواصلات: القطار والترام · التذاكر من الآلة · السائق · النداء · الشاحنة على الطريق السيّار · الإعلان الصوتي · الإقلاع واللوحة · المواصلة · إقلاع الطائرة — ولا يُطلب منك إنتاج هذه الكلمات."
+ },
+ "canDoDaily": [
+  "يفهم إجراءات السفر (Ticket · Automat · Anzeige · Abflug) ويعرف أين يجد الإقلاع.",
+  "يميز المسموع من المقروء: Ansage تُسمَع وAnzeige تُقرَأ · ويفصل abfliegen (fliegt … ab)."
+ ],
+ "warmup": {
+  "cardIds": [
+   "zug",
+   "geld",
+   "flughafen"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "de": "«das Flugzeug fliegt ab» — ماذا يفعل؟ (تخمين فقط)"
+    },
+    "choices": [
+     "يُقلع",
+     "يهبط",
+     "يقف"
+    ],
+    "answer": "يُقلع",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "de": "«Drück hier!» — ماذا يطلب؟ (تخمين فقط)"
+    },
+    "choices": [
+     "أن يضغط هنا",
+     "أن يجلس هنا",
+     "أن يخرج"
+    ],
+    "answer": "أن يضغط هنا",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "ما كلمات الطريق؟ (S-Bahn · Straßenbahn · Autobahn · Lkw · Fahrer)",
+   "ما كلمات المطار؟ (Ticket · Anzeige · Abflug · Flugzeug · Anschluss)"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "s-bahn",
+   "strassenbahn",
+   "autobahn",
+   "lkw",
+   "fahrer",
+   "ticket",
+   "durchsage",
+   "flugzeug",
+   "abfliegen",
+   "abflug",
+   "automat",
+   "druecken",
+   "anzeige",
+   "ansage",
+   "anschluss"
+  ],
+  "grammarArsenalIds": [
+   "ars-trennbare"
+  ],
+  "storySentenceIds": [
+   "story-a1-u14-s3"
+  ],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "auslaut-b",
+   "auslaut-g",
+   "double-consonant",
+   "r-uvular",
+   "sp-st-initial",
+   "umlaut-u",
+   "vowel-long-short",
+   "w-v",
+   "z"
+  ]
+ },
+ "uebung": {
+  "stations": [
+   {
+    "type": "reading",
+    "items": [
+     {
+      "text": "S-Bahn oder Straßenbahn? Die S-Bahn ist schnell.",
+      "q": "Was ist schnell?",
+      "choices": [
+       "die S-Bahn",
+       "die Straßenbahn",
+       "der Lkw"
+      ],
+      "a": "die S-Bahn",
+      "why": "Die S-Bahn ist schnell — قطار الضاحية سريع (oder = أو)."
+     },
+     {
+      "text": "Tickets am Automat! Drück hier, bitte!",
+      "q": "Wo sind die Tickets?",
+      "choices": [
+       "am Automat",
+       "im Kino",
+       "im Park"
+      ],
+      "a": "am Automat",
+      "why": "Tickets am Automat — التذاكر من الآلة (Drück hier = اضغط هنا)."
+     },
+     {
+      "text": "Der Fahrer wartet. Schnell, Lena!",
+      "q": "Wer wartet?",
+      "choices": [
+       "der Fahrer",
+       "der Lehrer",
+       "der Arzt"
+      ],
+      "a": "der Fahrer",
+      "why": "Der Fahrer wartet — السائق ينتظر (warten = ينتظر)."
+     },
+     {
+      "text": "Eine Durchsage: Die S-Bahn kommt!",
+      "q": "Was kommt?",
+      "choices": [
+       "die S-Bahn",
+       "der Lkw",
+       "der Bus"
+      ],
+      "a": "die S-Bahn",
+      "why": "Die S-Bahn kommt — القطار قادم (Durchsage = نداء)."
+     },
+     {
+      "text": "Da! Ein Lkw auf der Autobahn!",
+      "q": "Wo ist der Lkw?",
+      "choices": [
+       "auf der Autobahn",
+       "im Garten",
+       "im Haus"
+      ],
+      "a": "auf der Autobahn",
+      "why": "auf der Autobahn — على الطريق السيّار (der Lkw = الشاحنة)."
+     },
+     {
+      "text": "Wo ist der Abflug? Da ist die Anzeige!",
+      "q": "Was zeigt die Anzeige?",
+      "choices": [
+       "den Abflug",
+       "das Wetter",
+       "die Zeit"
+      ],
+      "a": "den Abflug",
+      "why": "die Anzeige zeigt den Abflug — اللوحة تعرض الإقلاع (zeigen = يعرض)."
+     },
+     {
+      "text": "Kein Anschluss! Das Flugzeug fliegt ab!",
+      "q": "Was fliegt ab?",
+      "choices": [
+       "das Flugzeug",
+       "die S-Bahn",
+       "der Lkw"
+      ],
+      "a": "das Flugzeug",
+      "why": "Das Flugzeug fliegt ab — الطائرة تُقلع (abfliegen منفصل!)."
+     }
+    ],
+    "interleavedWith": [
+     "schnell",
+     "warten",
+     "kommen",
+     "hier",
+     "bitte",
+     "da"
+    ]
+   },
+   {
+    "type": "listening",
+    "items": [
+     {
+      "audioId": "ee-2",
+      "speakText": "Ja! S-Bahn oder Straßenbahn?",
+      "q": "بماذا يسافر يوسف ولينا؟",
+      "choices": [
+       "بالقطار أو الترام",
+       "بالطائرة فقط",
+       "بالسيارة"
+      ],
+      "a": "بالقطار أو الترام",
+      "why": "S-Bahn oder Straßenbahn — بالقطار أو الترام."
+     },
+     {
+      "audioId": "ee-4",
+      "speakText": "Drück hier! Zwei Tickets, bitte!",
+      "q": "ماذا تفعل لينا عند الآلة؟",
+      "choices": [
+       "تضغط وتطلب تذكرتين",
+       "تنام وتستريح",
+       "تأكل وتشرب"
+      ],
+      "a": "تضغط وتطلب تذكرتين",
+      "why": "Drück hier! Zwei Tickets — اضغطي هنا! تذكرتين (drücken = يضغط)."
+     },
+     {
+      "audioId": "ee-6",
+      "speakText": "Eine Durchsage: Die S-Bahn kommt!",
+      "q": "ماذا يقول النداء؟",
+      "choices": [
+       "القطار قادم",
+       "القطار معطّل",
+       "القطار ممتلئ"
+      ],
+      "a": "القطار قادم",
+      "why": "Die S-Bahn kommt — القطار قادم (Durchsage = نداء)."
+     },
+     {
+      "audioId": "ee-8",
+      "speakText": "Da! Ein Lkw auf der Autobahn!",
+      "q": "ماذا ترى لينا؟",
+      "choices": [
+       "شاحنة على الطريق السيار",
+       "قطاراً في المحطة",
+       "طائرة في السماء"
+      ],
+      "a": "شاحنة على الطريق السيار",
+      "why": "Ein Lkw auf der Autobahn — شاحنة على الطريق السيّار."
+     },
+     {
+      "audioId": "ee-11",
+      "speakText": "Wo ist der Abflug? Da ist die Anzeige!",
+      "q": "أين يجد يوسف الإقلاع؟",
+      "choices": [
+       "في اللوحة هناك",
+       "في جيبه",
+       "عند السائق"
+      ],
+      "a": "في اللوحة هناك",
+      "why": "Da ist die Anzeige — اللوحة هناك (der Abflug = الإقلاع)."
+     },
+     {
+      "audioId": "ee-13",
+      "speakText": "Kein Anschluss! Das Flugzeug fliegt ab!",
+      "q": "هل هناك مواصلة؟",
+      "choices": [
+       "لا، الطائرة تقلع مباشرة",
+       "نعم، بعد ساعتين",
+       "نعم، في برلين"
+      ],
+      "a": "لا، الطائرة تقلع مباشرة",
+      "why": "Kein Anschluss! Das Flugzeug fliegt ab — بلا مواصلة، الطائرة تُقلع."
+     },
+     {
+      "audioId": "ee-17",
+      "speakText": "Mein Ticket! Wo ist mein Ticket?",
+      "q": "ما مشكلة يوسف؟",
+      "choices": [
+       "لا يجد تذكرته",
+       "لا يجد نقوده",
+       "لا يجد هاتفه"
+      ],
+      "a": "لا يجد تذكرته",
+      "why": "Wo ist mein Ticket — أين تذكرتي (suchen = يبحث)."
+     }
+    ],
+    "interleavedWith": [
+     "hier",
+     "bitte",
+     "kommen",
+     "da"
+    ]
+   },
+   {
+    "type": "match",
+    "items": [
+     {
+      "pairs": [
+       {
+        "de": "die S-Bahn",
+        "ar": "قطار الضاحية"
+       },
+       {
+        "de": "die Straßenbahn",
+        "ar": "الترام"
+       },
+       {
+        "de": "die Autobahn",
+        "ar": "الطريق السيّار"
+       },
+       {
+        "de": "der Lkw",
+        "ar": "شاحنة"
+       },
+       {
+        "de": "der Fahrer",
+        "ar": "سائق"
+       }
+      ],
+      "why": "الطريق: S-Bahn قطار ضاحية · Straßenbahn ترام (Straße طويلة!) · Autobahn طريق سيّار · Lkw شاحنة (el-ka-we!) · Fahrer سائق."
+     },
+     {
+      "pairs": [
+       {
+        "de": "das Ticket",
+        "ar": "تذكرة"
+       },
+       {
+        "de": "die Durchsage",
+        "ar": "نداء"
+       },
+       {
+        "de": "das Flugzeug",
+        "ar": "طائرة"
+       },
+       {
+        "de": "abfliegen",
+        "ar": "يُقلع"
+       },
+       {
+        "de": "der Abflug",
+        "ar": "الإقلاع"
+       }
+      ],
+      "why": "السفر: Ticket تذكرة (Tickets!) · Durchsage نداء · Flugzeug طائرة (g تُهمس k!) · abfliegen يُقلع (منفصل!) · Abflug إقلاع."
+     },
+     {
+      "pairs": [
+       {
+        "de": "der Automat",
+        "ar": "آلة"
+       },
+       {
+        "de": "drücken",
+        "ar": "يضغط"
+       },
+       {
+        "de": "die Anzeige",
+        "ar": "لوحة"
+       },
+       {
+        "de": "die Ansage",
+        "ar": "إعلان صوتي"
+       },
+       {
+        "de": "der Anschluss",
+        "ar": "مواصلة"
+       }
+      ],
+      "why": "في المحطة: Automat آلة · drücken يضغط (Drück!) · Anzeige لوحة مكتوبة ≠ Ansage إعلان منطوق · Anschluss مواصلة."
+     }
+    ]
+   },
+   {
+    "type": "dictation",
+    "items": [
+     {
+      "audioId": "ee-3",
+      "speakText": "Die S-Bahn ist schnell. Tickets am Automat!",
+      "a": "Die S-Bahn ist schnell. Tickets am Automat!",
+      "why": "S-Bahn بشرطة · schnell بـsch وll مزدوجة · Automat بـAu."
+     },
+     {
+      "audioId": "ee-9",
+      "speakText": "Der Lkw ist groß. Und laut!",
+      "a": "Der Lkw ist groß. Und laut!",
+      "why": "Lkw تُتهجى el-ka-we · groß بـß · laut بـau."
+     },
+     {
+      "audioId": "ee-14",
+      "speakText": "Da! Das Flugzeug ist groß!",
+      "a": "Da! Das Flugzeug ist groß!",
+      "why": "Flugzeug بـeu تُنطق أوي وz تُنطق تس · groß بـß."
+     },
+     {
+      "audioId": "ee-20",
+      "speakText": "Gern! Tschüss, Yusuf!",
+      "a": "Gern! Tschüss, Yusuf!",
+      "why": "Gern بـG وr · Tschüss بـtsch وss · Yusuf."
+     }
+    ],
+    "interleavedWith": [
+     "schnell",
+     "gross",
+     "laut",
+     "da",
+     "gern",
+     "tschuess"
+    ]
+   }
+  ],
+  "communicativeTask": {
+   "goal": {
+    "de": "Du fährst zum Flughafen: Kauf zwei Tickets am Automat! Hör die Durchsage! Such die Anzeige! Wann fliegt das Flugzeug ab?",
+    "ar": "أنت مسافر إلى المطار: اشترِ تذكرتين من الآلة واستمع إلى النداء وابحث عن اللوحة — متى تُقلع الطائرة؟"
+   },
+   "situation": {
+    "de": "Du bist am Bahnhof. Die S-Bahn fährt ab. Schnell: Ticket, Anzeige, Abflug!",
+    "ar": "أنت في المحطة والقطار ينطلق: بسرعة — التذكرة واللوحة والإقلاع!"
+   },
+   "successCriteria": [
+    "يذكر عناصر السفر الثلاثة (Ticket · Anzeige · Abflug) في مواضعها",
+    "يفرّق بين Ansage (تُسمَع) وAnzeige (تُقرَأ)",
+    "يفصل abfliegen (fliegt … ab)"
+   ]
+  }
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«Die S-Bahn ist schnell.» — Wie ist die S-Bahn?",
+      "choices": [
+       "سريعة",
+       "بطيئة",
+       "قديمة"
+      ],
+      "a": "سريعة",
+      "why": "schnell = سريعة (Die S-Bahn = قطار الضاحية)."
+     },
+     {
+      "q": "«Tickets am Automat!» — Wo sind die Tickets?",
+      "choices": [
+       "في الآلة",
+       "في الشباك",
+       "عند السائق"
+      ],
+      "a": "في الآلة",
+      "why": "am Automat = في الآلة (das Ticket = تذكرة)."
+     },
+     {
+      "q": "«Der Fahrer wartet.» — Wer wartet?",
+      "choices": [
+       "السائق",
+       "المعلم",
+       "الطبيب"
+      ],
+      "a": "السائق",
+      "why": "Der Fahrer = السائق (warten = ينتظر)."
+     },
+     {
+      "q": "«Die S-Bahn kommt!» — Was kommt?",
+      "choices": [
+       "القطار",
+       "الشاحنة",
+       "الحافلة"
+      ],
+      "a": "القطار",
+      "why": "Die S-Bahn kommt = القطار قادم."
+     },
+     {
+      "q": "«Ein Lkw auf der Autobahn!» — Wo ist der Lkw?",
+      "choices": [
+       "على الطريق السيار",
+       "في الحديقة",
+       "في البيت"
+      ],
+      "a": "على الطريق السيار",
+      "why": "auf der Autobahn = على الطريق السيّار."
+     },
+     {
+      "q": "«Da ist die Anzeige!» — Was ist da?",
+      "choices": [
+       "اللوحة",
+       "الساعة",
+       "الخريطة"
+      ],
+      "a": "اللوحة",
+      "why": "die Anzeige = اللوحة (da = هناك)."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Das Flugzeug fliegt ab!» — Was fliegt ab?",
+      "choices": [
+       "الطائرة",
+       "القطار",
+       "الشاحنة"
+      ],
+      "a": "الطائرة",
+      "why": "Das Flugzeug = الطائرة (abfliegen = يُقلع)."
+     },
+     {
+      "q": "«Drück hier!» — Was soll er machen?",
+      "choices": [
+       "يضغط هنا",
+       "يجلس هنا",
+       "ينتظر هنا"
+      ],
+      "a": "يضغط هنا",
+      "why": "Drück hier = اضغط هنا (drücken = يضغط)."
+     },
+     {
+      "q": "«Die Durchsage: Die S-Bahn kommt!» — Was ist die Durchsage?",
+      "choices": [
+       "نداءً صوتياً",
+       "أغنية جميلة",
+       "مكالمة مهمة"
+      ],
+      "a": "نداءً صوتياً",
+      "why": "Die Durchsage = النداء (الإذاعة الداخلية)."
+     },
+     {
+      "q": "«Kein Anschluss!» — Gibt es einen Anschluss?",
+      "choices": [
+       "لا، بلا مواصلة",
+       "نعم، مواصلة",
+       "نعم، مواصلتان"
+      ],
+      "a": "لا، بلا مواصلة",
+      "why": "Kein Anschluss = بلا مواصلة."
+     },
+     {
+      "q": "«Wo ist der Abflug?» — Was sucht er?",
+      "choices": [
+       "مكان الإقلاع",
+       "مكان الوصول",
+       "مكان الخروج"
+      ],
+      "a": "مكان الإقلاع",
+      "why": "der Abflug = الإقلاع (suchen = يبحث)."
+     },
+     {
+      "q": "«Die Ansage: Flughafen!» — Was hört er?",
+      "choices": [
+       "إعلان المطار",
+       "صوت القطار",
+       "جرس الباب"
+      ],
+      "a": "إعلان المطار",
+      "why": "Die Ansage = الإعلان الصوتي (hören = يسمع)."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«S-Bahn oder Straßenbahn?» — Was fragt sie?",
+      "choices": [
+       "قطار أم ترام",
+       "طائرة أم قطار",
+       "سيارة أم حافلة"
+      ],
+      "a": "قطار أم ترام",
+      "why": "S-Bahn oder Straßenbahn = قطار أم ترام (oder = أو)."
+     },
+     {
+      "q": "«Der Abflug ist bald.» — Wann ist der Abflug?",
+      "choices": [
+       "قريباً",
+       "أمس",
+       "غداً صباحاً"
+      ],
+      "a": "قريباً",
+      "why": "bald = قريباً (der Abflug = الإقلاع)."
+     },
+     {
+      "q": "«Mein Ticket! Wo ist mein Ticket?» — Was sucht er?",
+      "choices": [
+       "تذكرته",
+       "نقوده",
+       "هاتفه"
+      ],
+      "a": "تذكرته",
+      "why": "mein Ticket = تذكرتي (suchen = يبحث)."
+     },
+     {
+      "q": "«Hör die Durchsage!» — Was soll er machen?",
+      "choices": [
+       "يستمع إلى النداء",
+       "يقرأ اللوحة",
+       "يكتب رسالة"
+      ],
+      "a": "يستمع إلى النداء",
+      "why": "Hör die Durchsage = استمع إلى النداء (hören = يسمع)."
+     },
+     {
+      "q": "«Sehr bald! Komm schnell!» — Wie soll er kommen?",
+      "choices": [
+       "بسرعة",
+       "ببطء",
+       "غداً"
+      ],
+      "a": "بسرعة",
+      "why": "Komm schnell = تعال بسرعة."
+     },
+     {
+      "q": "«Gute Reise!» — Was sagt sie?",
+      "choices": [
+       "رحلة طيبة",
+       "نوماً هنيئاً",
+       "شفاء عاجلاً"
+      ],
+      "a": "رحلة طيبة",
+      "why": "Gute Reise = رحلة طيبة."
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Yusuf fährt mit der S-Bahn zum Flughafen: Tickets am Automat · der Fahrer wartet · Durchsage · Lkw auf der Autobahn · Ansage · Abflug auf der Anzeige. Kein Anschluss — das Flugzeug fliegt ab! Gute Reise, Yusuf!",
+   "ar": "إلى المطار (15 رأساً للفهم): السفر والمواصلات — تفهم ولا تُنتج؛ والقاعدة: abfliegen منفصل (fliegt … ab)."
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "de": "~~Das Flugzeug fliegt.~~",
+     "ar": "abfliegen منفصل: ab في آخر الجملة — لا تنسها."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «تُقلع» فعل واحد متصل فينسى المتعلم ab. القاعدة (ars-trennbare): fliegt … ab — الجزء في الآخر دائماً.",
+    "correct": {
+     "de": "Das Flugzeug fliegt ab.",
+     "ar": "الطائرة تُقلع."
+    },
+    "exercise": {
+     "q": "Das Flugzeug fliegt ___. (ab / an)",
+     "a": "ab"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Ich sehe der Fahrer.~~",
+     "ar": "Fahrer مذكر قوي: den Fahrer في النصب — المقالة وحدها تتغير."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية لا تصرّف المقالة حسب الموقع فيبقي المتعلم der. القاعدة: المذكر في Akkusativ يأخذ den — den Fahrer (لا n هنا!).",
+    "correct": {
+     "de": "Ich sehe den Fahrer.",
+     "ar": "أرى السائق."
+    },
+    "exercise": {
+     "q": "Ich sehe ___ Fahrer. (den / der)",
+     "a": "den"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Die Ansage steht hier.~~",
+     "ar": "Ansage تُسمَع (إعلان صوتي) وAnzeige تُقرَأ (لوحة) — لا تخلط."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: الكلمتان من جذر واحد (sagen) فيخلط بينهما المتعلم. القاعدة: An-sage تُقال بالأذن (Hör die Ansage!) وAn-zeige تُعرض للعين (Da ist die Anzeige!).",
+    "correct": {
+     "de": "Hör die Ansage! Da ist die Anzeige!",
+     "ar": "استمع إلى الإعلان! اللوحة هناك!"
+    },
+    "exercise": {
+     "q": "___ die Ansage! (Hör / Lies)",
+     "a": "Hör"
+    }
+   }
+  ],
+  "srsBundleWordIds": [
+   "s-bahn",
+   "strassenbahn",
+   "autobahn",
+   "lkw",
+   "fahrer",
+   "ticket",
+   "durchsage",
+   "flugzeug",
+   "abfliegen",
+   "abflug",
+   "automat",
+   "druecken",
+   "anzeige",
+   "ansage",
+   "anschluss"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-trennbare"
+ ],
+ "audioManifestRefs": [
+  "word-s-bahn",
+  "word-strassenbahn",
+  "word-autobahn",
+  "word-lkw",
+  "word-fahrer",
+  "word-ticket",
+  "word-durchsage",
+  "word-flugzeug",
+  "word-abfliegen",
+  "word-abflug",
+  "word-automat",
+  "word-druecken",
+  "word-anzeige",
+  "word-ansage",
+  "word-anschluss"
+ ],
+ "imageManifestRefs": [],
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Flugzeug",
+   "https://www.duden.de/rechtschreibung/Strassenbahn"
+  ],
+  "wiktionary": [
+   "https://de.wiktionary.org/wiki/abfliegen"
+  ],
+  "goethe": []
+ },
+ "curriculumRef": {
+  "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Zug · Geld · Flughafen) — الدرس الثالث من الوحدة 14 (D113)",
+  "goetheWordListOverlap": []
+ }
+}

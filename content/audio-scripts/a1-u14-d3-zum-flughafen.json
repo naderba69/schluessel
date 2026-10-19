@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u14-d3-zum-flughafen",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Zum Flughafen",
+    "ar": "إلى المطار بلا تاريخ (تكملة SD1 للفهم): يوسف يسافر إلى المطار مع لينا — القطار أم الترام؟ تذاكر من الآلة · السائق ينتظر · النداء: القطار قادم · القطار ينطلق · شاحنة على الطريق السيار · الإعلان: المطار · أين الإقلاع؟ اللوحة هناك · الإقلاع قريب والمواصلة؟ بلا مواصلة — الطائرة تقلع · متى تقلع؟ اسمع النداء · قريباً جداً · التذكرة هنا · شكراً وإلى اللقاء"
+  },
+  "usedIn": [
+    "a1-u14-d3"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "ee-1",
+      "speaker": "yusuf",
+      "text": "Lena, ich fahre zum Flughafen! Kommst du mit?",
+      "direction": "Flughafen معروف"
+    },
+    {
+      "id": "ee-2",
+      "speaker": "lena",
+      "text": "Ja! S-Bahn oder Straßenbahn?",
+      "direction": "S-Bahn · Straßenbahn"
+    },
+    {
+      "id": "ee-3",
+      "speaker": "yusuf",
+      "text": "Die S-Bahn ist schnell. Tickets am Automat!",
+      "direction": "Tickets (جمع) · Automat"
+    },
+    {
+      "id": "ee-4",
+      "speaker": "lena",
+      "text": "Drück hier! Zwei Tickets, bitte!",
+      "direction": "Drück أمر"
+    },
+    {
+      "id": "ee-5",
+      "speaker": "yusuf",
+      "text": "Der Fahrer wartet. Schnell, Lena!",
+      "direction": "Fahrer · wartet"
+    },
+    {
+      "id": "ee-6",
+      "speaker": "lena",
+      "text": "Eine Durchsage: Die S-Bahn kommt!",
+      "direction": "Durchsage"
+    },
+    {
+      "id": "ee-7",
+      "speaker": "yusuf",
+      "text": "Schnell! Die S-Bahn fährt ab!",
+      "direction": "fährt ab (abfahren)"
+    },
+    {
+      "id": "ee-8",
+      "speaker": "lena",
+      "text": "Da! Ein Lkw auf der Autobahn!",
+      "direction": "Lkw · Autobahn"
+    },
+    {
+      "id": "ee-9",
+      "speaker": "yusuf",
+      "text": "Der Lkw ist groß. Und laut!",
+      "direction": "Lkw ثانيةً"
+    },
+    {
+      "id": "ee-10",
+      "speaker": "lena",
+      "text": "Die Ansage: Flughafen! Wir sind da!",
+      "direction": "Ansage"
+    },
+    {
+      "id": "ee-11",
+      "speaker": "yusuf",
+      "text": "Wo ist der Abflug? Da ist die Anzeige!",
+      "direction": "Abflug · Anzeige"
+    },
+    {
+      "id": "ee-12",
+      "speaker": "lena",
+      "text": "Der Abflug ist bald. Und der Anschluss?",
+      "direction": "Abflug · Anschluss"
+    },
+    {
+      "id": "ee-13",
+      "speaker": "yusuf",
+      "text": "Kein Anschluss! Das Flugzeug fliegt ab!",
+      "direction": "Anschluss · Flugzeug · fliegt ab"
+    },
+    {
+      "id": "ee-14",
+      "speaker": "lena",
+      "text": "Da! Das Flugzeug ist groß!",
+      "direction": "Flugzeug ثانيةً"
+    },
+    {
+      "id": "ee-15",
+      "speaker": "yusuf",
+      "text": "Wann fliegt es ab? Hör die Durchsage!",
+      "direction": "fliegt ab · Hör · Durchsage"
+    },
+    {
+      "id": "ee-16",
+      "speaker": "lena",
+      "text": "Sehr bald! Komm schnell!",
+      "direction": "Komm"
+    },
+    {
+      "id": "ee-17",
+      "speaker": "yusuf",
+      "text": "Mein Ticket! Wo ist mein Ticket?",
+      "direction": "Ticket"
+    },
+    {
+      "id": "ee-18",
+      "speaker": "lena",
+      "text": "Hier ist dein Ticket!",
+      "direction": "dein Ticket"
+    },
+    {
+      "id": "ee-19",
+      "speaker": "yusuf",
+      "text": "Danke, Lena! Bis bald!",
+      "direction": "Bis bald"
+    },
+    {
+      "id": "ee-20",
+      "speaker": "lena",
+      "text": "Gern! Tschüss, Yusuf!",
+      "direction": "ختام"
+    }
+  ]
+}

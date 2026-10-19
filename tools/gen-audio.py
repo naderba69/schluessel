@@ -1236,6 +1236,21 @@ def build_all() -> None:
     ("word-vorwahl", "die Vorwahl.", "vorwahl", ["a1-u14-d2"]),
     ("word-wiederhoeren", "das Wiederhören.", "wiederhoeren", ["a1-u14-d2"]),
     ("word-anrufbeantworter", "der Anrufbeantworter.", "anrufbeantworter", ["a1-u14-d2"]),
+    ("word-s-bahn", "die S-Bahn.", "s-bahn", ["a1-u14-d3"]),
+    ("word-strassenbahn", "die Straßenbahn.", "strassenbahn", ["a1-u14-d3"]),
+    ("word-autobahn", "die Autobahn.", "autobahn", ["a1-u14-d3"]),
+    ("word-lkw", "der Lkw.", "lkw", ["a1-u14-d3"]),
+    ("word-fahrer", "der Fahrer.", "fahrer", ["a1-u14-d3"]),
+    ("word-ticket", "das Ticket.", "ticket", ["a1-u14-d3"]),
+    ("word-durchsage", "die Durchsage.", "durchsage", ["a1-u14-d3"]),
+    ("word-flugzeug", "das Flugzeug.", "flugzeug", ["a1-u14-d3"]),
+    ("word-abfliegen", "abfliegen.", "abfliegen", ["a1-u14-d3"]),
+    ("word-abflug", "der Abflug.", "abflug", ["a1-u14-d3"]),
+    ("word-automat", "der Automat.", "automat", ["a1-u14-d3"]),
+    ("word-druecken", "drücken.", "druecken", ["a1-u14-d3"]),
+    ("word-anzeige", "die Anzeige.", "anzeige", ["a1-u14-d3"]),
+    ("word-ansage", "die Ansage.", "ansage", ["a1-u14-d3"]),
+    ("word-anschluss", "der Anschluss.", "anschluss", ["a1-u14-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

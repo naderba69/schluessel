@@ -62,6 +62,12 @@ describe("N-103 (1) — كلمة الدرس اللاحق تُرفض ولو طا�
   it("الاستثناءات: صيغة مدروسة كاملة + نهاية (große ⇐ groß) · جذع فعل مدروس + نهاية فعل (wasche ⇐ waschen) · lernen ⇐ lern (kennenlernen)", () => {
     expect(unknownTokens("Die große Stadt. Ich wasche mich. Ich lerne Deutsch.", stems)).toEqual([]);
   });
+  it("D212: أمر drucken مسجَّل كاملاً (Druck!) — بدونه صيغة drücken اللاحقة (u14-d3) تكسر meta درس u13-d5 («Druck ihn!»)", () => {
+    expect(w("drucken").forms?.imperative).toBe("druck!");
+    const d5 = lessons.find((l) => l.id === "a1-u13-d5")!;
+    const t = taughtUpTo(d5, lessons, words);
+    expect(unknownTokens("Druck ihn!", withLaterForms(knownStems(t), t, words))).toEqual([]);
+  });
 });
 
 describe("N-022 — meta الدروس المُرقّاة الستين تحت قانون الجبهة", () => {
