@@ -1158,6 +1158,20 @@ def build_all() -> None:
     ("word-lieblingslied", "das Lieblingslied.", "lieblingslied", ["a1-u13-d2"]),
     ("word-zurzeit", "zurzeit.", "zurzeit", ["a1-u13-d2"]),
     ("word-eilig", "eilig.", "eilig", ["a1-u13-d2"]),
+    ("word-banane", "die Banane.", "banane", ["a1-u13-d3"]),
+    ("word-birne", "die Birne.", "birne", ["a1-u13-d3"]),
+    ("word-schinken", "der Schinken.", "schinken", ["a1-u13-d3"]),
+    ("word-oel", "das Öl.", "oel", ["a1-u13-d3"]),
+    ("word-pommes-frites", "die Pommes frites.", "pommes-frites", ["a1-u13-d3"]),
+    ("word-bitter", "bitter.", "bitter", ["a1-u13-d3"]),
+    ("word-riechen", "riechen.", "riechen", ["a1-u13-d3"]),
+    ("word-laden", "der Laden.", "laden", ["a1-u13-d3"]),
+    ("word-kiosk", "der Kiosk.", "kiosk", ["a1-u13-d3"]),
+    ("word-herd", "der Herd.", "herd", ["a1-u13-d3"]),
+    ("word-boese", "böse.", "boese", ["a1-u13-d3"]),
+    ("word-kaputt", "kaputt.", "kaputt", ["a1-u13-d3"]),
+    ("word-fremd", "fremd.", "fremd", ["a1-u13-d3"]),
+    ("word-aussehen", "aussehen.", "aussehen", ["a1-u13-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

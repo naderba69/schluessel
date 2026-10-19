@@ -1643,7 +1643,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدة اليوم جديدة: ars-perfekt-haben (كانت مُشاراً إليها بلا ملف — تشاركها u10-d4 وu10-d6)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-perfekt-haben"]);
     const ph = rules.get("ars-perfekt-haben")!;
-    expect(ph.usedInLessons).toEqual(["a1-u10-d3", "a1-u10-d4", "a1-u10-d6", "a1-u15-d5"]); // D203
+    expect(ph.usedInLessons).toEqual(["a1-u10-d3", "a1-u10-d4", "a1-u10-d6", "a1-u13-d3", "a1-u15-d5"]); // D206
     expect(ph.payload.ruleDe).toContain("Was hast du gestern gemacht? — Gestern habe ich Deutsch gelernt.");
     expect(ph.payload.ruleDe).not.toMatch(/\b(Pizza|gehabt|war|hatte|bin|ist|gegangen|gefahren)\b/);
     // الماضي المركّب مع haben بأربع خطوات: جزءان (haben ثانياً + التصريف آخراً) · المنتظم ge‑…‑t (‑et بعد t/d) · القوي ge‑…‑en يُحفظ + المختلطان · ظروف الزمن والسؤال
@@ -5140,14 +5140,14 @@ describe("D115 — الخطة الحقيقية", () => {
   const plans = loadUpgradePlans(CONTENT);
   const plan = plans.find((p) => p.id === "a1-lesson-upgrade")!;
   const ctx: UpgradeContext = { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) };
-  it("تغطي دروس A1 كلها في الوحدات 1–15 بالضبط (62 محتوى منذ D205 + 18 توليفاً منذ D194 — N-004) — لا درس منسي ولا زائد", () => {
+  it("تغطي دروس A1 كلها في الوحدات 1–15 بالضبط (63 محتوى منذ D206 + 18 توليفاً منذ D194 — N-004) — لا درس منسي ولا زائد", () => {
     const expected = realLessons.filter((l) => l.level === "A1" && l.unit <= 15).map((l) => l.id).sort();
     expect(plan.lessons.map((e) => e.lessonId).sort()).toEqual(expected);
-    expect(expected).toHaveLength(80);
+    expect(expected).toHaveLength(81);
     expect(plan.scope).toEqual({ fromUnit: 1, toUnit: 15, kinds: ["content", "integration"] });
     // دروس المحتوى الستون كلها done (D180) · التوليف: u1-d6 وu2-d6 done (D194) والباقي pending معلن (practice/quiz)
     const content = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "content");
-    expect(content).toHaveLength(62);
+    expect(content).toHaveLength(63); // D206
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
     expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6"].sort());
