@@ -2553,7 +2553,7 @@ describe("D115 — أدوات القياس", () => {
     // N-020 لهذا الدرس: الاستدعاء من دروس سابقة (gehen · sein · kommen — أفعال sein في الماضي)
     expect(l.warmup.cardIds).toEqual(["gehen", "sein", "kommen"]);
     expect(l.warmup.cardIds.filter((id) => !earlier.has(id))).toEqual([]);
-    // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102) — ومنه كلمات أمس (fieber · erkaltung · hals)
+    // الاستدعاء المعلن كلمةً كاملة (أو جذع فعل) لا بادئة (N-102) — ومنه كلمات أمس (fieber · erkaeltung · hals)
     const fold = (x: string) => x.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss");
     for (const st of l.uebung.stations) {
       expect(st.interleavedWith.length).toBeGreaterThan(0);
@@ -2562,7 +2562,7 @@ describe("D115 — أدوات القياس", () => {
         expect(interleaveSupported(words.find((x) => x.id === ref)!, st.items.flatMap((i) => itemTexts(i))), `${st.type}: ${ref} لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110 — الحارس المشترك D184)`).toBe(true);
       }
     }
-    expect(l.uebung.stations.find((s) => s.type === "gap-fill")!.interleavedWith).toEqual(expect.arrayContaining(["fieber", "erkaltung", "hals"]));
+    expect(l.uebung.stations.find((s) => s.type === "gap-fill")!.interleavedWith).toEqual(expect.arrayContaining(["fieber", "erkaeltung", "hals"]));
     // الحوار الجديد (kb-1..20) كله في الاستماع والإملاء مرة واحدة — الإملاء من أربعة أسطر بطيئة (≤132) مع ثمانية مقاطع كلمات (الخمس غير المتدرَّبة سابقاً + wieder · schwach · dauern)، والأسرع الأربعة عشر كلها استماعاً
     const listening = l.uebung.stations.find((s) => s.type === "listening")!;
     const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
@@ -2620,7 +2620,7 @@ describe("D115 — أدوات القياس", () => {
     // الكلمات الثلاث عشرة كلها جديدة (لا تكرار من الوحدات 1–10 وu11-d1) — والنواة (D113: fehlen) في آخر القائمة
     const earlier = new Set(realLessons.filter((x) => x.unit <= 10 || (x.unit === 11 && x.day < 2)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
-    expect(l.praesentation.wordIds).toEqual(["arzt", "aerztin", "schmerz", "kopfschmerz", "fieber", "erkaltung", "grippe", "schwindel", "medikament", "tablette", "rezept", "untersuchen", "fehlen"]);
+    expect(l.praesentation.wordIds).toEqual(["arzt", "aerztin", "schmerz", "kopfschmerz", "fieber", "erkaeltung", "grippe", "schwindel", "medikament", "tablette", "rezept", "untersuchen", "fehlen"]);
     // قاعدة اليوم جديدة: ars-gesundheit (كانت مُشاراً إليها بلا ملف — تشاركها u11-d6) + ars-dativ-fix مراجعةً (zum/zur)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-gesundheit", "ars-dativ-fix"]);
     const ge = rules.get("ars-gesundheit")!;

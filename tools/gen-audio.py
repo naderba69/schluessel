@@ -869,7 +869,7 @@ def build_all() -> None:
     ("word-schmerz", "der Schmerz.", "schmerz", ["a1-u11-d2"]),
     ("word-kopfschmerz", "der Kopfschmerz.", "kopfschmerz", ["a1-u11-d2"]),
     ("word-fieber", "das Fieber.", "fieber", ["a1-u11-d2"]),
-    ("word-erkaltung", "die Erkältung.", "erkaltung", ["a1-u11-d2"]),
+    ("word-erkaeltung", "die Erkältung.", "erkaeltung", ["a1-u11-d2"]),
     ("word-grippe", "die Grippe.", "grippe", ["a1-u11-d2"]),
     ("word-schwindel", "der Schwindel.", "schwindel", ["a1-u11-d2"]),
     ("word-medikament", "das Medikament.", "medikament", ["a1-u11-d2"]),

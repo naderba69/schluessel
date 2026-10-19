@@ -1345,9 +1345,8 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const off = ALL_WORDS.filter((w) => slugify(w.de.replace(/\s*\(.*?\)\s*/g, " ").trim()) !== w.id).map((w) => w.id).sort();
     expect(off).toEqual([
       "achso", "das-essen", "das-leben", "die-bitte", // die-bitte · das-essen · das-leben: معرّف صريح للمتجانس بجانب bitte/essen/leben (D126) · achso: قطعة «ach so» بلا فاصل
-      "erkaltung", // N-074: رسم خاطئ (ä ← a بدل ae) — يُصحَّح مع مساره في ترقية a1-u11-d2
       "morgen", // «der Morgen / morgen» مدخل واحد للاسم والظرف
-      "nord", "ost", "sued", "west", // N-074: مختصرة (der Norden …) — قرار التوحيد في ترقية a1-u9-d1
+      "nord", "ost", "sued", "west", // N-074: مختصرة (der Norden …) — قرار D218: تبقى معلنة دائماً (المعرّف لا يظهر للمتعلّم D118 — لا فائدة له من الترحيل)
       "wie-gehts", // «Wie geht's?» بلا الفاصلة العليا
     ]);
     expect(ALL_WORDS.find((w) => w.id === "loeffel")?.de).toBe("Löffel");
