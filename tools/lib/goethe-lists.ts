@@ -276,6 +276,11 @@ function deinflect(t: string): string[] {
   return [...out];
 }
 
+/** N-026: الفئات المغلقة — أدوات · حروف (ومدمجاتها) · ضمائر · نفي. ليست كلمات رئيسية في الفهارس لكنها مدروسة فلا تحجب دليل القطعة. */
+const CLOSED_CLASS = new Set(
+  "der die das den dem des ein eine einer einen einem eines und oder aber denn sondern zu zum zur vom von bei mit nach aus für gegen ohne um an auf hinter neben über unter vor zwischen im ins am ans bis ich du er sie es wir ihr mich dich sich uns euch mein meine meinen meiner meinem meines dein deine deinen deiner deinem deines sein seine seinen seiner seinem seines unser unsere unseren unserer unserem unseres euer eure euren eurer eurem eures ihr ihre ihren ihrer ihrem ihres nicht kein keine keinen keiner keinem keines wer wen wem was welcher welche welches".split(" "),
+);
+
 function tokenEvidence(ix: ListIndex, token: string, initial: boolean): Evidence | null {
   for (const cand of deinflect(token)) {
     // داخل القطعة: الكلمة الكبيرة اسمٌ (Tag · Wiedersehen) — والأولى قد تكون كبيرة لبداية الجملة فقط (Guten · Auf · Wie)
@@ -332,9 +337,12 @@ export function evidenceIn(w: WordLike, ix: ListIndex): Evidence | null {
     const tokens = lemma.split(" ").map((t) => t.replace(/[^\p{L}'-]/gu, "")).filter(Boolean);
     if (tokens.length > 1) {
       const parts = tokens.map((t, i) => tokenEvidence(ix, t, i === 0));
-      if (parts.every(Boolean)) {
-        const first = parts[0]!;
-        return { list: ix.id, level: ix.level, kind: "composed", headword: first.headword, page: first.page, via: parts.map((p) => p!.headword).join(" + ") };
+      // N-026 (D219): جزء القطعة من كلمة مغلقة (أداة · حرف · ضمير · نفي) لا يحجب الدليل — الفهارس لا تُدرجها ككلمات رئيسية لكنها مدروسة.
+      // والحارس: جزءٌ مُدرَج واحد على الأقل — فلا دليل من فراغ («ach so» تبقى بلا دليل: الصوت والتعجب ليسا فئة مغلقة).
+      const eff = parts.map((evd, i) => evd ?? (CLOSED_CLASS.has(tokens[i]!.toLowerCase()) ? { headword: tokens[i]!, page: -1 } : null));
+      if (eff.every(Boolean) && parts.some(Boolean)) {
+        const first = parts.find(Boolean)!;
+        return { list: ix.id, level: ix.level, kind: "composed", headword: first.headword, page: first.page, via: eff.map((p) => p!.headword).join(" + ") };
       }
     }
   }

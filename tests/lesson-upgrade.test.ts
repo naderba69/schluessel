@@ -3664,7 +3664,7 @@ describe("D115 — أدوات القياس", () => {
     // النواة D113 (was für ein) بالمولِّد — قطعة chunk بمعرّف was-fuer-ein ودليل SD1
     expect(l.praesentation.wordIds).toContain("was-fuer-ein");
     const wfe = words.find((w) => w.id === "was-fuer-ein")!;
-    expect([wfe.de, wfe.wordClass, wfe.chunk, wfe.goetheList, wfe.usedInLessons]).toEqual(["was für ein", "chunk", true, ["A1"], ["a1-u5-d3"]]);
+    expect([wfe.de, wfe.wordClass, wfe.chunk, wfe.goetheList, wfe.usedInLessons]).toEqual(["was für ein", "chunk", true, ["A1", "A2"], ["a1-u5-d3"]]); // N-026 (D219): القطعة بدليل A2 أيضاً (was+für مُدرجتان في A2 وein مغلقة لا تحجب)
     expect(wfe.sampleSentence?.de).toBe("Was für ein Eis isst du gern?"); // لا نسخ لمثال SD1 «Was für eine Farbe möchten Sie?»
     expect(tracks.get("word-was-fuer-ein")?.textDe).toBe("was für ein.");
     // أمثلة البطاقات القديمة: es gibt (u6-d3) · gleichfalls · frisch (الدرس الرابع) — وبلا أسماء علم (N-021)
@@ -5091,10 +5091,9 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("D146 مفتاح الإجابة أولاً: كل بند اختيار في الدروس المُرقّاة يكتب إجابته أول الخيارات (العرض يخلطها displayOrder) — فالمفتاح المقلوب إلى مشتِّت يُمسك آلياً · ثلاثة دروس قديمة مستثناة بالاسم", () => {
+  it("D146 مفتاح الإجابة أولاً: كل بند اختيار في الدروس المُرقّاة يكتب إجابته أول الخيارات (العرض يخلطها displayOrder) — فالمفتاح المقلوب إلى مشتِّت يُمسك آلياً · بلا استثناء (N-078 أُغلقت في D219: رُتّبت بنود u2-d3 الأربعة وu2-d4 الثلاثة وQuiz-u3-d5 الأربعة عشر)", () => {
     // الطفرة «إجابة استماع = مشتِّت» نجت في D146: الإجابة بين الخيارات فيقبلها المخطط، ومعنى الخيار العربي لا يُفحص آلياً.
-    // اتفاق التأليف (li/mc: a = choices[0]) يجعل المفتاح المقلوب مخالفةً بنيوية تُرى. الدروس الثلاثة كُتبت قبل الاتفاق ولم تُمسّ (عمل منجز — N-078).
-    const LEGACY_ORDER = ["a1-u2-d3", "a1-u2-d4", "a1-u3-d5"];
+    // اتفاق التأليف (li/mc: a = choices[0]) يجعل المفتاح المقلوب مخالفةً بنيوية تُرى.
     const plan = loadUpgradePlans(CONTENT)[0]!;
     const done = plan.lessons.filter((e) => e.rule === "done" && e.practice === "done" && e.quiz === "done").map((e) => e.lessonId);
     const keyedLate = (id: string) => {
@@ -5107,9 +5106,7 @@ describe("D115 — أدوات القياس", () => {
       return items.filter((i) => i.choices[0] !== i.a).length;
     };
     expect(done.length).toBeGreaterThanOrEqual(26);
-    expect(done.filter((id) => !LEGACY_ORDER.includes(id) && keyedLate(id) > 0)).toEqual([]);
-    // الاستثناء صادق: كل درس مستثنى يخالف فعلاً (إن رُتّب يوماً فليُحذف من القائمة)
-    for (const id of LEGACY_ORDER) expect(keyedLate(id), id).toBeGreaterThan(0);
+    expect(done.filter((id) => keyedLate(id) > 0)).toEqual([]);
   });
 
   it("D121 e-upgrade-warmup: بطاقة استدعاء من كلمات اليوم أو لاحقة ⇒ خطأ · أول درس في المسار مستثنى", () => {

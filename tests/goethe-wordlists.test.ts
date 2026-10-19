@@ -229,6 +229,14 @@ describe("D110 — الحارس الدائم على المحتوى الحقيق�
     expect(bad).toEqual([]);
   });
 
+  it("N-026 (D219): جزء القطعة المغلق (أداة·حرف·ضمير) لا يحجب الدليل — بشرط جزء مُدرَج واحد: ein-bisschen وwas-fuer-ein صارتا A1+A2 · وachso بلا دليل (لا دليل من فراغ)", () => {
+    const byId = Object.fromEntries(words.map((w) => [w.id, w]));
+    expect(deriveGoetheList(byId["ein-bisschen"]!, IXS).sort()).toEqual(["A1", "A2"]);
+    expect(deriveGoetheList(byId["was-fuer-ein"]!, IXS).sort()).toEqual(["A1", "A2"]);
+    expect(deriveGoetheList(byId["achso"]!, IXS)).toEqual([]);
+    expect(evidenceFor(byId["ein-bisschen"]!, IXS).find((e) => e.level === "A2")!.kind).toBe("composed");
+  });
+
   it("كلمات A2 كلها في قائمة A2 الرسمية · وجمعنا لا يخالف أي جمع مطبوع قابل للقراءة", () => {
     for (const w of words.filter((x) => x.level === "A2")) expect(w.goetheList, w.id).toContain("A2");
     const { plurals } = auditGoethe(words, LISTS);
