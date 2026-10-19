@@ -293,8 +293,8 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(cs.find((c) => c.status === "pending")).toBeUndefined(); // D180: النواة مكتملة — لا pending
     expect(cs.every((c) => c.missing.length === 0)).toBe(true);
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
-    expect(next.lessonId).toBe("a1-u13-d4"); // D204–D206: u13-d1..d3 أُنتجت (receptive)
-    expect(next.headwords).toHaveLength(14);
+    expect(next.lessonId).toBe("a1-u13-d5"); // D204–D207: u13-d1..d4 أُنتجت (receptive)
+    expect(next.headwords).toHaveLength(16); // D207: d5 ست عشرة كلمة
     const d1 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u13-d1")!;
     expect(d1.produced).toBe(true);
     expect(d1.missing).toEqual([]);
@@ -304,6 +304,9 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     const d3 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u13-d3")!;
     expect(d3.produced).toBe(true);
     expect(d3.missing).toEqual([]); // D206: Pommes frites قطعةً (pluralOnly)
+    const d4 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u13-d4")!;
+    expect(d4.produced).toBe(true);
+    expect(d4.missing).toEqual([]); // D207: das Café بـcafe (علامة فرنسية — D207)
   });
 });
 

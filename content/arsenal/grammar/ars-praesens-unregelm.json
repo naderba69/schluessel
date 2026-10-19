@@ -1,65 +1,66 @@
 {
-  "schemaVersion": "1.0.0",
-  "id": "ars-praesens-unregelm",
-  "kind": "shufra",
-  "constitutionSection": "10‑ي",
-  "title": {
-    "de": "ich fahre · du fährst · er fährt — ich nehme · du nimmst · er nimmt",
-    "ar": "المضارع الشاذ: تتغيّر حركة الجذع مع du وer/sie/es وحدهما — a ← ä (fährt) · au ← äu (läuft) · e ← i (gibt · nimmt) · e ← ie (liest) — والنهايات كالمنتظم، وich وwir وihr وsie/Sie بلا تغيير"
-  },
-  "payload": {
-    "topicAr": "اليوم تصرّف الأفعال التي تتغيّر حركتها مع du وer/sie/es: du fährst · er fährt · du nimmst · er nimmt. ومعه كلمات اليوم: fahren · waschen · geben · nehmen · laufen · ankommen · die Fahrkarte · der Bahnhof · der Zug · der Bus · das Fahrrad — والنواة gleich · ab · Achtung — وsprechen تعرفها منذ الوحدة الأولى (er spricht).",
-    "sceneAr": "مهمة الوحدة السابعة على الشاشة: الطريق والمواصلات. لينا تحكي ليوسف خطة الأحد: تزور أسرتها الجدّة بالقطار — يتحرّك في التاسعة ويصل في الحادية عشرة. أبوها لا يحبّ قيادة السيارة ويفضّل النوم في القطار، ويشتري التذاكر في المحطة. أخواها لا يهدآن أبداً: واحدٌ يجري وواحدٌ ينادي «انتبهوا، القطار قادمٌ حالاً!»، وأمها تقرأ، وأحد الأخوين يأكل الكعك منذ الآن. ولينا لا تنجز واجباتها في القطار — فمعلّمها يعطي واجباتٍ كثيرة. أما يوسف في برلين فلا يأخذ القطار أبداً: يركب الدراجة كل يوم، ويأخذ الحافلة في المساء حين يُظلم الجو، ويغسل دراجته كل يوم أحد — ولينا ستركب الدراجة ابتداءً من الاثنين.",
-    "examples": [
-      {
-        "de": "Ich fahre Fahrrad. Fährst du auch Fahrrad?",
-        "ar": "أركب الدراجة. هل تركبها أنتَ أيضاً؟ — ich بلا تغيير، ومع du: a ← ä"
-      },
-      {
-        "de": "Lena fährt Bus, und wir fahren Zug.",
-        "ar": "لينا تركب الحافلة، ونحن نركب القطار — مع هي: fährt، ومع wir بلا تغيير"
-      },
-      {
-        "de": "Ihr fahrt Auto, aber er fährt Fahrrad.",
-        "ar": "أنتم تقودون السيارة، لكنه يركب الدراجة — ihr بلا ä، وer بـä"
-      },
-      {
-        "de": "Nimmst du den Bus? — Nein, ich nehme das Fahrrad.",
-        "ar": "هل تأخذ الحافلة؟ — لا، آخذ الدراجة — e ← i مع du، وتتضاعف m وتسقط h: nimmst"
-      },
-      {
-        "de": "Mein Opa läuft jeden Morgen.",
-        "ar": "جدّي يمشي كل صباح — au ← äu مع er"
-      },
-      {
-        "de": "Isst du gern Kuchen? Lena isst gern Obst.",
-        "ar": "هل تحبّ أكل الكعك؟ لينا تحبّ أكل الفواكه — e ← i: isst مع du ومع هي، بلا s ثانية"
-      }
-    ],
-    "inferencePromptAr": "قارن الأمثلة: (1) في الأول: fahre وFährst — ما الذي تغيّر في وسط الفعل مع du؟ وهل تغيّر مع ich؟ (2) في الثاني: fährt مع Lena — فماذا مع wir؟ (3) في الثالث: ihr fahrt وer fährt — كلاهما ينتهي بـ‑t، فأين الفرق؟ (4) في الرابع: nehme وnimmst — ماذا صارت e؟ وكم m في nimmst؟ وأين ذهبت h؟ (5) في الخامس: lauf + t — ماذا صارت au؟ (6) في الأخير: Isst du وLena isst — هل تسمع s ثانية مع du؟ وبأي قاعدة من الدرس الماضي؟",
-    "ruleDe": "ich fahre · du fährst · er/sie/es fährt · wir fahren · ihr fahrt · sie/Sie fahren — du läufst · er läuft — du nimmst · er nimmt · du gibst · er gibt — du isst · er isst · du liest · er liest",
-    "ruleAr": "صرّف الفعل الشاذ بثلاث خطوات: (1) النهايات هي نهايات الدرس الماضي نفسها: ‑e · ‑st · ‑t · ‑en · ‑t · ‑en — والفاعل يُذكر دائماً. (2) مع du وer/sie/es وحدهما تتغيّر حركة الجذع: a ← ä (fahren: du fährst · er fährt · waschen: er wäscht · schlafen: er schläft · tragen: er trägt) · au ← äu (laufen: du läufst · er läuft) · e ← i (geben: du gibst · er gibt · sprechen: er spricht · essen: er isst · treffen: er trifft) · e ← ie (sehen: er sieht · lesen: er liest) — وفي nehmen تتغيّر الحروف أيضاً: du nimmst · er nimmt (mm بلا h). (3) ich وwir وihr وsie/Sie بلا تغيير: ich fahre · wir fahren · ihr fahrt · sie fahren — فـihr fahrt بلا ä وإن شاركت er نهايتها ‑t. والتغيير لا يُستنتج من المصدر: احفظ صيغة er مع الفعل (fahren — er fährt) كما تعطيها بطاقة الكلمة والقاموس. وقاعدة الدرس الماضي في s/ß/z باقية: du isst · du liest — بلا s ثانية.",
-    "contrastAr": "ما يساعدك ثلاثة: (1) في العربية تحفظ حركة عين المضارع مع كل فعل ولا تستنتجها (فتَح يفتَح · نصَر ينصُر · ضرَب يضرِب) — وكذلك هنا: تحفظ صيغة er مع المصدر (fahren — fährt · nehmen — nimmt). (2) جمع التكسير يغيّر حركات الكلمة من داخلها (كتاب ← كُتُب) — وكذلك جموع اليوم: der Zug ← die Züge · der Bahnhof ← die Bahnhöfe · das Fahrrad ← die Fahrräder. (3) «آخذ الحافلة» تقولها الإنجليزية take the bus والفرنسية prendre le bus — والألمانية مثلهما: den Bus nehmen · den Zug nehmen. وما يختلف ثلاثة: (1) حركة المضارع العربي ثابتة مع كل الضمائر: «آخذ · تأخذ · يأخذ» بحركةٍ واحدة — وقاعدة الدرس الماضي قالت «الجذع ثابت» — فيقول المتعلم: ~~Lena nehmt das Fahrrad.~~ — والألمانية تغيّر الجذع مع du وer/sie/es: Lena nimmt das Fahrrad. (2) «أركب القطار» بمفعولٍ مباشر — فيضع المتعلم fahren مكان «ركب»: ~~Ich fahre den Zug.~~ — وهي صحيحة نحواً بمعنى آخر: fahren مع مفعولٍ مباشر = «يقود»، فكأنك سائق القطار! والراكب يقول: Ich nehme den Zug. — أو Ich fahre Zug. بلا أداة. (3) isst وist تُنطقان بالصوت نفسه — والعربية تفصل «تأكل» عن «هي» تماماً، بل لا فعل كون في جملتها الاسمية، فتغلب ist المحفوظة منذ الدرس الأول عند الكتابة: ~~Lena ist einen Apfel.~~ — والصواب Lena isst einen Apfel. (ss بعد i القصيرة كالشدّة) — خريطة التداخل 10‑ي.",
-    "limitsAr": [
-      "في لهجات جنوب ألمانيا والنمسا تُسمع er fahrt · er lauft · er wascht بلا ä — صحيحةٌ هناك، ونحن نكتب الفصحى: fährt · läuft · wäscht.",
-      "«بالقطار» و«بالحافلة» بحرف mit وأداةٍ تتغيّر — بابها في الوحدة 8 — اليوم: Ich nehme den Zug. · Ich fahre Fahrrad. · والذهاب إلى مدينة (nach + المدينة) في الوحدة 8 أيضاً.",
-      "ankommen فعلٌ منفصل تحفظه اليوم قطعةً: Der Zug kommt um elf an. (an في آخر الجملة) — وباب الأفعال المنفصلة في الدرس القادم.",
-      "geben لمن؟ («يعطيني …») بحالة الداتيف لاحقاً — اليوم: Der Lehrer gibt viele Hausaufgaben. · وes gibt (الوحدة 6) — والماضي (ist gefahren · hat gegeben) في الوحدة العاشرة."
-    ],
-    "beads": [
-      "Du",
-      "fährst",
-      "Fahrrad."
-    ],
-    "properNouns": [
-      "Lena"
-    ]
-  },
-  "riskLevel": "red",
-  "levelIntroduced": "A1",
-  "usedInLessons": [
-    "a1-u7-d4",
-    "a1-u7-d6",
-    "a1-u15-d4"
+ "schemaVersion": "1.0.0",
+ "id": "ars-praesens-unregelm",
+ "kind": "shufra",
+ "constitutionSection": "10‑ي",
+ "title": {
+  "de": "ich fahre · du fährst · er fährt — ich nehme · du nimmst · er nimmt",
+  "ar": "المضارع الشاذ: تتغيّر حركة الجذع مع du وer/sie/es وحدهما — a ← ä (fährt) · au ← äu (läuft) · e ← i (gibt · nimmt) · e ← ie (liest) — والنهايات كالمنتظم، وich وwir وihr وsie/Sie بلا تغيير"
+ },
+ "payload": {
+  "topicAr": "اليوم تصرّف الأفعال التي تتغيّر حركتها مع du وer/sie/es: du fährst · er fährt · du nimmst · er nimmt. ومعه كلمات اليوم: fahren · waschen · geben · nehmen · laufen · ankommen · die Fahrkarte · der Bahnhof · der Zug · der Bus · das Fahrrad — والنواة gleich · ab · Achtung — وsprechen تعرفها منذ الوحدة الأولى (er spricht).",
+  "sceneAr": "مهمة الوحدة السابعة على الشاشة: الطريق والمواصلات. لينا تحكي ليوسف خطة الأحد: تزور أسرتها الجدّة بالقطار — يتحرّك في التاسعة ويصل في الحادية عشرة. أبوها لا يحبّ قيادة السيارة ويفضّل النوم في القطار، ويشتري التذاكر في المحطة. أخواها لا يهدآن أبداً: واحدٌ يجري وواحدٌ ينادي «انتبهوا، القطار قادمٌ حالاً!»، وأمها تقرأ، وأحد الأخوين يأكل الكعك منذ الآن. ولينا لا تنجز واجباتها في القطار — فمعلّمها يعطي واجباتٍ كثيرة. أما يوسف في برلين فلا يأخذ القطار أبداً: يركب الدراجة كل يوم، ويأخذ الحافلة في المساء حين يُظلم الجو، ويغسل دراجته كل يوم أحد — ولينا ستركب الدراجة ابتداءً من الاثنين.",
+  "examples": [
+   {
+    "de": "Ich fahre Fahrrad. Fährst du auch Fahrrad?",
+    "ar": "أركب الدراجة. هل تركبها أنتَ أيضاً؟ — ich بلا تغيير، ومع du: a ← ä"
+   },
+   {
+    "de": "Lena fährt Bus, und wir fahren Zug.",
+    "ar": "لينا تركب الحافلة، ونحن نركب القطار — مع هي: fährt، ومع wir بلا تغيير"
+   },
+   {
+    "de": "Ihr fahrt Auto, aber er fährt Fahrrad.",
+    "ar": "أنتم تقودون السيارة، لكنه يركب الدراجة — ihr بلا ä، وer بـä"
+   },
+   {
+    "de": "Nimmst du den Bus? — Nein, ich nehme das Fahrrad.",
+    "ar": "هل تأخذ الحافلة؟ — لا، آخذ الدراجة — e ← i مع du، وتتضاعف m وتسقط h: nimmst"
+   },
+   {
+    "de": "Mein Opa läuft jeden Morgen.",
+    "ar": "جدّي يمشي كل صباح — au ← äu مع er"
+   },
+   {
+    "de": "Isst du gern Kuchen? Lena isst gern Obst.",
+    "ar": "هل تحبّ أكل الكعك؟ لينا تحبّ أكل الفواكه — e ← i: isst مع du ومع هي، بلا s ثانية"
+   }
+  ],
+  "inferencePromptAr": "قارن الأمثلة: (1) في الأول: fahre وFährst — ما الذي تغيّر في وسط الفعل مع du؟ وهل تغيّر مع ich؟ (2) في الثاني: fährt مع Lena — فماذا مع wir؟ (3) في الثالث: ihr fahrt وer fährt — كلاهما ينتهي بـ‑t، فأين الفرق؟ (4) في الرابع: nehme وnimmst — ماذا صارت e؟ وكم m في nimmst؟ وأين ذهبت h؟ (5) في الخامس: lauf + t — ماذا صارت au؟ (6) في الأخير: Isst du وLena isst — هل تسمع s ثانية مع du؟ وبأي قاعدة من الدرس الماضي؟",
+  "ruleDe": "ich fahre · du fährst · er/sie/es fährt · wir fahren · ihr fahrt · sie/Sie fahren — du läufst · er läuft — du nimmst · er nimmt · du gibst · er gibt — du isst · er isst · du liest · er liest",
+  "ruleAr": "صرّف الفعل الشاذ بثلاث خطوات: (1) النهايات هي نهايات الدرس الماضي نفسها: ‑e · ‑st · ‑t · ‑en · ‑t · ‑en — والفاعل يُذكر دائماً. (2) مع du وer/sie/es وحدهما تتغيّر حركة الجذع: a ← ä (fahren: du fährst · er fährt · waschen: er wäscht · schlafen: er schläft · tragen: er trägt) · au ← äu (laufen: du läufst · er läuft) · e ← i (geben: du gibst · er gibt · sprechen: er spricht · essen: er isst · treffen: er trifft) · e ← ie (sehen: er sieht · lesen: er liest) — وفي nehmen تتغيّر الحروف أيضاً: du nimmst · er nimmt (mm بلا h). (3) ich وwir وihr وsie/Sie بلا تغيير: ich fahre · wir fahren · ihr fahrt · sie fahren — فـihr fahrt بلا ä وإن شاركت er نهايتها ‑t. والتغيير لا يُستنتج من المصدر: احفظ صيغة er مع الفعل (fahren — er fährt) كما تعطيها بطاقة الكلمة والقاموس. وقاعدة الدرس الماضي في s/ß/z باقية: du isst · du liest — بلا s ثانية.",
+  "contrastAr": "ما يساعدك ثلاثة: (1) في العربية تحفظ حركة عين المضارع مع كل فعل ولا تستنتجها (فتَح يفتَح · نصَر ينصُر · ضرَب يضرِب) — وكذلك هنا: تحفظ صيغة er مع المصدر (fahren — fährt · nehmen — nimmt). (2) جمع التكسير يغيّر حركات الكلمة من داخلها (كتاب ← كُتُب) — وكذلك جموع اليوم: der Zug ← die Züge · der Bahnhof ← die Bahnhöfe · das Fahrrad ← die Fahrräder. (3) «آخذ الحافلة» تقولها الإنجليزية take the bus والفرنسية prendre le bus — والألمانية مثلهما: den Bus nehmen · den Zug nehmen. وما يختلف ثلاثة: (1) حركة المضارع العربي ثابتة مع كل الضمائر: «آخذ · تأخذ · يأخذ» بحركةٍ واحدة — وقاعدة الدرس الماضي قالت «الجذع ثابت» — فيقول المتعلم: ~~Lena nehmt das Fahrrad.~~ — والألمانية تغيّر الجذع مع du وer/sie/es: Lena nimmt das Fahrrad. (2) «أركب القطار» بمفعولٍ مباشر — فيضع المتعلم fahren مكان «ركب»: ~~Ich fahre den Zug.~~ — وهي صحيحة نحواً بمعنى آخر: fahren مع مفعولٍ مباشر = «يقود»، فكأنك سائق القطار! والراكب يقول: Ich nehme den Zug. — أو Ich fahre Zug. بلا أداة. (3) isst وist تُنطقان بالصوت نفسه — والعربية تفصل «تأكل» عن «هي» تماماً، بل لا فعل كون في جملتها الاسمية، فتغلب ist المحفوظة منذ الدرس الأول عند الكتابة: ~~Lena ist einen Apfel.~~ — والصواب Lena isst einen Apfel. (ss بعد i القصيرة كالشدّة) — خريطة التداخل 10‑ي.",
+  "limitsAr": [
+   "في لهجات جنوب ألمانيا والنمسا تُسمع er fahrt · er lauft · er wascht بلا ä — صحيحةٌ هناك، ونحن نكتب الفصحى: fährt · läuft · wäscht.",
+   "«بالقطار» و«بالحافلة» بحرف mit وأداةٍ تتغيّر — بابها في الوحدة 8 — اليوم: Ich nehme den Zug. · Ich fahre Fahrrad. · والذهاب إلى مدينة (nach + المدينة) في الوحدة 8 أيضاً.",
+   "ankommen فعلٌ منفصل تحفظه اليوم قطعةً: Der Zug kommt um elf an. (an في آخر الجملة) — وباب الأفعال المنفصلة في الدرس القادم.",
+   "geben لمن؟ («يعطيني …») بحالة الداتيف لاحقاً — اليوم: Der Lehrer gibt viele Hausaufgaben. · وes gibt (الوحدة 6) — والماضي (ist gefahren · hat gegeben) في الوحدة العاشرة."
+  ],
+  "beads": [
+   "Du",
+   "fährst",
+   "Fahrrad."
+  ],
+  "properNouns": [
+   "Lena"
   ]
+ },
+ "riskLevel": "red",
+ "levelIntroduced": "A1",
+ "usedInLessons": [
+  "a1-u7-d4",
+  "a1-u7-d6",
+  "a1-u13-d4",
+  "a1-u15-d4"
+ ]
 }

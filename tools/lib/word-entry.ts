@@ -22,6 +22,7 @@ export function slugify(de: string): string {
     .replace(/^sich /, "")
     .toLowerCase()
     .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // D207: Café → cafe (الحروف المستعارة بعلامات)
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 }

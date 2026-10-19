@@ -101,6 +101,7 @@ describe("D105 — الكشف النحوي + المعرّف + البطاقات",
     expect(slugify("Auf Wiedersehen")).toBe("auf-wiedersehen");
     expect(slugify("die Straße")).toBe("strasse");
     expect(slugify("der Schlüssel")).toBe("schluessel");
+    expect(slugify("das Café")).toBe("cafe"); // D207: الحروف المستعارة بعلامات (é ← NFD)
     expect(nounGender("die Wohnung")).toEqual({ article: "die", gender: "die", lemma: "Wohnung" });
     expect(nounGender("lachen")).toBeNull();
     expect(clipText("das Licht")).toBe("das Licht.");

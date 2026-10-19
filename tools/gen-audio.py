@@ -1172,6 +1172,20 @@ def build_all() -> None:
     ("word-kaputt", "kaputt.", "kaputt", ["a1-u13-d3"]),
     ("word-fremd", "fremd.", "fremd", ["a1-u13-d3"]),
     ("word-aussehen", "aussehen.", "aussehen", ["a1-u13-d3"]),
+    ("word-cafe", "das Café.", "cafe", ["a1-u13-d4"]),
+    ("word-lokal", "das Lokal.", "lokal", ["a1-u13-d4"]),
+    ("word-empfehlen", "empfehlen.", "empfehlen", ["a1-u13-d4"]),
+    ("word-anbieten", "anbieten.", "anbieten", ["a1-u13-d4"]),
+    ("word-grillen", "grillen.", "grillen", ["a1-u13-d4"]),
+    ("word-draussen", "draußen.", "draussen", ["a1-u13-d4"]),
+    ("word-blume", "die Blume.", "blume", ["a1-u13-d4"]),
+    ("word-baum", "der Baum.", "baum", ["a1-u13-d4"]),
+    ("word-zigarette", "die Zigarette.", "zigarette", ["a1-u13-d4"]),
+    ("word-feuer", "das Feuer.", "feuer", ["a1-u13-d4"]),
+    ("word-danken", "danken.", "danken", ["a1-u13-d4"]),
+    ("word-entschuldigen", "entschuldigen.", "entschuldigen", ["a1-u13-d4"]),
+    ("word-willkommen", "willkommen.", "willkommen", ["a1-u13-d4"]),
+    ("word-herzlich", "herzlich.", "herzlich", ["a1-u13-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
