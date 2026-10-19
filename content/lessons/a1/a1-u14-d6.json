@@ -1,0 +1,667 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "a1-u14-d6",
+ "level": "A1",
+ "unit": 14,
+ "day": 6,
+ "kind": "integration",
+ "ziel": {
+  "de": "Woche vierzehn ist zu Ende: Alles ist fertig! Du verstehst Formular und Prüfung: Das Formular ist unterschrieben · Der Ausweis ist gültig · Ich habe den Bogen abgegeben · Ich ziehe um — fertig! Der Vermieter ist nett.",
+  "ar": "توليف الوحدة 14 (تكملة SD1 للفهم — بلا تاريخ): تفهم الاستمارة والطريق والامتحان: unterschreiben وabgeben · S-Bahn وDurchsage · Reisebüro وFührung — والإنتاج في القواعد القديمة وحدها (الماضي بـsein/haben · المنفصل · جمع التكسير)، ولا يُطلب منك إنتاج كلمات الوحدة."
+ },
+ "canDoDaily": [
+  "يفهم نتيجة الامتحان والأوراق (Prüfung · Bogen · Formular · Ausweis) ويعرف كيف تم الانتقال.",
+  "ينتج الماضي والمنفصل وجمع التكسير في القواعد القديمة (gelernt · fährt … ab · Brüder) داخل سياق كلمات الوحدة."
+ ],
+ "warmup": {
+  "cardIds": [
+   "abgeben",
+   "unterschreiben",
+   "pruefung"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "de": "«Gib den Bogen ab!» — ماذا يطلب؟ (تخمين فقط)"
+    },
+    "choices": [
+     "سلّم الورقة",
+     "مزّق الورقة",
+     "اقرأ الورقة"
+    ],
+    "answer": "سلّم الورقة",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "de": "«Unterschreib das Formular!» — ماذا يطلب؟ (تخمين فقط)"
+    },
+    "choices": [
+     "وقّع الاستمارة",
+     "انسخ الاستمارة",
+     "أحرق الاستمارة"
+    ],
+    "answer": "وقّع الاستمارة",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "ما كلمات الاستمارة والأوراق؟ (Formular · Papiere · Ausweis · unterschreiben)",
+   "ما كلمات الطريق والسفر؟ (S-Bahn · Ticket · Durchsage · Reisebüro · Führung)"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "abgeben",
+   "unterschreiben"
+  ],
+  "grammarArsenalIds": [
+   "ars-perfekt",
+   "ars-trennbare",
+   "ars-plural-umlaut"
+  ],
+  "storySentenceIds": [
+   "story-a1-u14-s6"
+  ],
+  "dualCodingRequired": true,
+  "riskFlagsShown": []
+ },
+ "uebung": {
+  "stations": [
+   {
+    "type": "gap-fill",
+    "items": [
+     {
+      "q": "Yusuf hat für die Prüfung viel ___. (lernen — الماضي)",
+      "a": "gelernt",
+      "why": "hat + الصيغة الثالثة: gelernt (lernen قديم) · Prüfung (d5) للفهم."
+     },
+     {
+      "q": "Lena hat den Brief an Oma ___. (schreiben — الماضي)",
+      "a": "geschrieben",
+      "why": "schreiben شاذ في الماضي: geschrieben (قديم) · Brief/Oma للفهم."
+     },
+     {
+      "q": "Wir haben das Formular heute ___. (lesen — الماضي)",
+      "a": "gelesen",
+      "why": "hat + gelesen (lesen قديم) · Formular (d1) للفهم."
+     },
+     {
+      "q": "Lena ist ins Reisebüro ___. (gehen — الماضي)",
+      "a": "gegangen",
+      "why": "gehen حركة ⇐ sein: ist gegangen · Reisebüro (d4) للفهم."
+     },
+     {
+      "q": "Der Brief ist gestern ___. (kommen — الماضي)",
+      "a": "gekommen",
+      "why": "kommen حركة ⇐ sein: ist gekommen · Brief (d2) للفهم."
+     },
+     {
+      "q": "Die Prüfung ___ super! (sein — الماضي)",
+      "a": "war",
+      "why": "war = كان (ars-perfekt: war/hatte) · Prüfung (d5) للفهم."
+     },
+     {
+      "q": "Der Zug ___ um halb acht ab. (abfahren)",
+      "a": "fährt",
+      "why": "abfahren منفصل: fährt … ab (قديم) · halb acht وقت قديم."
+     },
+     {
+      "q": "Oma ruft morgen ___ . (anrufen)",
+      "a": "an",
+      "why": "anrufen منفصل: ruft … an (قديم)."
+     },
+     {
+      "q": "Meine zwei ___ kommen mit. (der Bruder)",
+      "a": "Brüder",
+      "why": "جمع التكسير: der Bruder ← die Brüder (قديم)."
+     },
+     {
+      "q": "Viele ___ fahren heute. (der Zug)",
+      "a": "Züge",
+      "why": "جمع التكسير: der Zug ← die Züge (قديم)."
+     }
+    ],
+    "interleavedWith": [
+     "pruefung",
+     "lernen",
+     "brief",
+     "oma",
+     "schreiben",
+     "formular",
+     "lesen",
+     "reisebuero",
+     "gehen",
+     "kommen",
+     "zug",
+     "abfahren",
+     "anrufen",
+     "bruder",
+     "mitkommen"
+    ]
+   },
+   {
+    "type": "listening",
+    "items": [
+     {
+      "audioId": "fd-2",
+      "speakText": "Super! Alles ist fertig?",
+      "q": "هل كل شيء جاهز؟",
+      "choices": [
+       "نعم، كل شيء جاهز",
+       "لا، ليس بعد",
+       "لا يعرف"
+      ],
+      "a": "نعم، كل شيء جاهز",
+      "why": "Alles ist fertig — كل شيء جاهز."
+     },
+     {
+      "audioId": "fd-3",
+      "speakText": "Ja! Ich habe den Bogen abgegeben!",
+      "q": "ماذا سلّم يوسف؟",
+      "choices": [
+       "ورقة الامتحان",
+       "الرسالة",
+       "التذكرة"
+      ],
+      "a": "ورقة الامتحان",
+      "why": "Ich habe den Bogen abgegeben — سلّم ورقة الامتحان."
+     },
+     {
+      "audioId": "fd-6",
+      "speakText": "Gut! Und das Formular? Die Papiere?",
+      "q": "عن ماذا تسأل لينا؟",
+      "choices": [
+       "عن الاستمارة والأوراق",
+       "عن الطقس",
+       "عن الطعام"
+      ],
+      "a": "عن الاستمارة والأوراق",
+      "why": "Und das Formular? Die Papiere؟ — تسأل عن الاستمارة والأوراق."
+     },
+     {
+      "audioId": "fd-9",
+      "speakText": "Ja! Ich fahre mit der S-Bahn!",
+      "q": "كيف يذهب يوسف؟",
+      "choices": [
+       "بالقطار السريع",
+       "بالسيارة",
+       "مشياً"
+      ],
+      "a": "بالقطار السريع",
+      "why": "Ich fahre mit der S-Bahn — يذهب بالقطار السريع."
+     },
+     {
+      "audioId": "fd-12",
+      "speakText": "Der Zug fährt ab! Schnell!",
+      "q": "ماذا يفعل القطار؟",
+      "choices": [
+       "ينطلق — بسرعة",
+       "يتأخر ساعة",
+       "يتوقف هنا"
+      ],
+      "a": "ينطلق — بسرعة",
+      "why": "Der Zug fährt ab! Schnell! — القطار ينطلق."
+     },
+     {
+      "audioId": "fd-13",
+      "speakText": "Oma ruft an! Der Anrufbeantworter ist aus!",
+      "q": "من يتصل؟",
+      "choices": [
+       "الجدة",
+       "المدير",
+       "السائق"
+      ],
+      "a": "الجدة",
+      "why": "Oma ruft an — الجدة تتصل."
+     },
+     {
+      "audioId": "fd-17",
+      "speakText": "Ich ziehe um — fertig! Der Vermieter ist nett!",
+      "q": "كيف المؤجر؟",
+      "choices": [
+       "لطيف",
+       "غاضب",
+       "مشغول"
+      ],
+      "a": "لطيف",
+      "why": "Der Vermieter ist nett — المؤجر لطيف."
+     },
+     {
+      "audioId": "fd-19",
+      "speakText": "Ja! Das Reisebüro ist nah. Eine Führung?",
+      "q": "أين مكتب السفر وماذا يقترح؟",
+      "choices": [
+       "قريب — ويقترح جولة",
+       "بعيد — ويقترح تأجيلاً",
+       "مغلق — ويقترح انتظاراً"
+      ],
+      "a": "قريب — ويقترح جولة",
+      "why": "Das Reisebüro ist nah. Eine Führung؟ — المكتب قريب ويقترح جولة."
+     }
+    ],
+    "interleavedWith": [
+     "fertig",
+     "bogen",
+     "abgeben",
+     "formular",
+     "papiere",
+     "s-bahn",
+     "fahren",
+     "zug",
+     "oma",
+     "anrufen",
+     "anrufbeantworter",
+     "umziehen",
+     "vermieter",
+     "nett",
+     "reisebuero",
+     "fuehrung"
+    ]
+   },
+   {
+    "type": "error-hunt",
+    "items": [
+     {
+      "q": "صحّح: ~~Lena hat ins Reisebüro gegangen.~~",
+      "a": "Lena ist ins Reisebüro gegangen.",
+      "why": "gehen حركة ⇐ sein (ars-perfekt) · Reisebüro (d4) للفهم."
+     },
+     {
+      "q": "صحّح: ~~Wir haben das Formular lesen.~~",
+      "a": "Wir haben das Formular gelesen.",
+      "why": "الصيغة الثالثة بعد haben: gelesen (ars-perfekt)."
+     },
+     {
+      "q": "صحّح: ~~Der Zug fährt um halb acht.~~",
+      "a": "Der Zug fährt um halb acht ab.",
+      "why": "abfahren منفصل: ab في الآخر (ars-trennbare)."
+     },
+     {
+      "q": "صحّح: ~~Ich muss Oma morgen anrufe.~~",
+      "a": "Ich muss Oma morgen anrufen.",
+      "why": "بعد muss المصدر متصلاً: anrufen (ars-trennbare)."
+     },
+     {
+      "q": "صحّح: ~~Meine zwei Bruder kommen mit.~~",
+      "a": "Meine zwei Brüder kommen mit.",
+      "why": "جمع التكسير: Brüder لا Bruder (ars-plural-umlaut)."
+     },
+     {
+      "q": "صحّح: ~~Viele Zug fahren heute.~~",
+      "a": "Viele Züge fahren heute.",
+      "why": "جمع التكسير: Züge لا Zug (ars-plural-umlaut)."
+     }
+    ],
+    "interleavedWith": [
+     "reisebuero",
+     "gehen",
+     "formular",
+     "lesen",
+     "zug",
+     "abfahren",
+     "anrufen",
+     "bruder",
+     "mitkommen"
+    ]
+   },
+   {
+    "type": "dictation",
+    "items": [
+     {
+      "audioId": "fd-1",
+      "speakText": "Lena! Die Prüfung ist gut!",
+      "a": "Lena! Die Prüfung ist gut!",
+      "why": "Prüfung بـü · Lena بـL كبيرة أول الجملة."
+     },
+     {
+      "audioId": "fd-5",
+      "speakText": "Ja! Ich habe alles angekreuzt!",
+      "a": "Ja! Ich habe alles angekreuzt!",
+      "why": "angekreuzt بـeu وtz · alles بـll مزدوجة."
+     },
+     {
+      "audioId": "fd-7",
+      "speakText": "Das Formular ist unterschrieben! Alles da!",
+      "a": "Das Formular ist unterschrieben! Alles da!",
+      "why": "Formular بـF كبيرة · unterschrieben بـsch ثم ie."
+     },
+     {
+      "audioId": "fd-11",
+      "speakText": "Alles da! Hör die Durchsage!",
+      "a": "Alles da! Hör die Durchsage!",
+      "why": "Hör بـH كبيرة وö · Durchsage بـch."
+     },
+     {
+      "audioId": "fd-14",
+      "speakText": "Schön! Viele Grüße an Oma!",
+      "a": "Schön! Viele Grüße an Oma!",
+      "why": "Grüße بـß · Viele بـV · Schön بـö."
+     },
+     {
+      "audioId": "fd-20",
+      "speakText": "Wir übernachten im Dorf! Tschüss, Yusuf!",
+      "a": "Wir übernachten im Dorf! Tschüss, Yusuf!",
+      "why": "übernachten بـü وch · Dorf بـD كبيرة · Tschüss بـTsch وss."
+     }
+    ],
+    "interleavedWith": [
+     "pruefung",
+     "ankreuzen",
+     "formular",
+     "unterschreiben",
+     "durchsage",
+     "hoeren",
+     "gruss",
+     "oma",
+     "uebernachten",
+     "dorf",
+     "tschuess"
+    ]
+   }
+  ],
+  "communicativeTask": {
+   "goal": {
+    "de": "Sag Lena: Was ist fertig? Das Formular ist unterschrieben. Der Ausweis ist gültig. Ich habe den Bogen abgegeben. Ich ziehe um — fertig! Nach der Prüfung: Urlaub!",
+    "ar": "أخبر لينا بما تم: الاستمارة والأوراق والامتحان والانتقال — ثم الإجازة بعد الامتحان."
+   },
+   "situation": {
+    "de": "Du schreibst Oma: Die Prüfung ist gut! Dann fragst du Lena: Eine Führung durch Berlin?",
+    "ar": "تكتب للجدة «الامتحان جيد!» ثم تسأل لينا «جولة في برلين؟»."
+   },
+   "successCriteria": [
+    "يذكر ما تم من الوحدة (Formular · Bogen · abgegeben)",
+    "يذكر الطريق والمكافأة (S-Bahn · Reisebüro · Urlaub)",
+    "ينتج ماضياً ومنفصلاً وجمع تكسير صحيحاً (gelernt · fährt ab · Züge)"
+   ]
+  }
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«Ich gebe den Bogen ab.» (abgeben) — ماذا يفعل؟",
+      "choices": [
+       "يسلّم الورقة",
+       "يمزّق الورقة",
+       "يخفي الورقة"
+      ],
+      "a": "يسلّم الورقة",
+      "why": "gebe … ab = يسلّم (abgeben منفصل)."
+     },
+     {
+      "q": "«Der Ausweis ist gültig.» — ما حال الهوية؟",
+      "choices": [
+       "سارية المفعول",
+       "منتهية الصلاحية",
+       "مفقودة"
+      ],
+      "a": "سارية المفعول",
+      "why": "gültig = ساري المفعول."
+     },
+     {
+      "q": "«Hör die Durchsage!» — ماذا يسمع؟",
+      "choices": [
+       "النداء",
+       "الأغنية",
+       "الجرس"
+      ],
+      "a": "النداء",
+      "why": "die Durchsage = النداء/الإعلان."
+     },
+     {
+      "q": "«Wir übernachten im Dorf.» — أين يبيتون؟",
+      "choices": [
+       "في القرية",
+       "في الفندق",
+       "في القطار"
+      ],
+      "a": "في القرية",
+      "why": "übernachten im Dorf = نبيت في القرية."
+     },
+     {
+      "q": "«Die Ordnung ist gut.» — كيف النظام؟",
+      "choices": [
+       "جيد",
+       "سيئ",
+       "غريب"
+      ],
+      "a": "جيد",
+      "why": "die Ordnung = النظام."
+     },
+     {
+      "q": "«Oma ruft an.» — ماذا تفعل الجدة؟",
+      "choices": [
+       "تتصل",
+       "تكتب",
+       "تسافر"
+      ],
+      "a": "تتصل",
+      "why": "ruft an = تتصل (anrufen قديم)."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Das Formular ist unterschrieben.» — ما حال الاستمارة؟",
+      "choices": [
+       "موقّعة",
+       "فارغة",
+       "ممزقة"
+      ],
+      "a": "موقّعة",
+      "why": "unterschrieben = موقّعة."
+     },
+     {
+      "q": "«Ich überweise das Geld.» — ماذا يفعل؟",
+      "choices": [
+       "يحوّل المال",
+       "يعدّ المال",
+       "يخفي المال"
+      ],
+      "a": "يحوّل المال",
+      "why": "überweisen = يحوّل (بنك)."
+     },
+     {
+      "q": "«Der Zug fährt ab!» — ماذا يفعل القطار؟",
+      "choices": [
+       "ينطلق",
+       "يتأخر",
+       "يرجع"
+      ],
+      "a": "ينطلق",
+      "why": "fährt ab = ينطلق."
+     },
+     {
+      "q": "«Das Reisebüro ist nah.» — أين مكتب السفر؟",
+      "choices": [
+       "قريب",
+       "بعيد",
+       "مغلق"
+      ],
+      "a": "قريب",
+      "why": "nah = قريب — das Reisebüro ist nah."
+     },
+     {
+      "q": "«Der Vermieter ist nett.» — من اللطيف؟",
+      "choices": [
+       "المؤجر",
+       "المدير",
+       "السائق"
+      ],
+      "a": "المؤجر",
+      "why": "Der Vermieter ist nett = المؤجر لطيف."
+     },
+     {
+      "q": "«Ich fahre mit der S-Bahn.» — ماذا يركب؟",
+      "choices": [
+       "القطار السريع",
+       "الحافلة",
+       "الدراجة"
+      ],
+      "a": "القطار السريع",
+      "why": "mit der S-Bahn = بالقطار السريع."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Ich kreuze alles an.» — ماذا يفعل؟",
+      "choices": [
+       "يضع علامة على كل شيء",
+       "يشطب كل شيء",
+       "يقرأ كل شيء"
+      ],
+      "a": "يضع علامة على كل شيء",
+      "why": "kreuze … an = يضع علامة (ankreuzen منفصل)."
+     },
+     {
+      "q": "«Viele Grüße an Oma!» — لمن التحيات؟",
+      "choices": [
+       "للجدة",
+       "للمدير",
+       "للسائق"
+      ],
+      "a": "للجدة",
+      "why": "Grüße an Oma = تحيات للجدة."
+     },
+     {
+      "q": "«Das Ticket ist neu.» — ما حال التذكرة؟",
+      "choices": [
+       "جديدة",
+       "قديمة",
+       "مستعملة"
+      ],
+      "a": "جديدة",
+      "why": "neu = جديد — das Ticket ist neu."
+     },
+     {
+      "q": "«Eine Führung durch Berlin?» — أين الجولة؟",
+      "choices": [
+       "في برلين",
+       "في القرية",
+       "في المتحف"
+      ],
+      "a": "في برلين",
+      "why": "durch Berlin = في برلين (عبرها)."
+     },
+     {
+      "q": "«Die Aussagen sind richtig.» — كيف العبارات؟",
+      "choices": [
+       "صحيحة",
+       "خاطئة",
+       "ناقصة"
+      ],
+      "a": "صحيحة",
+      "why": "richtig = صحيح."
+     },
+     {
+      "q": "«Ich ziehe um.» — ماذا يفعل؟",
+      "choices": [
+       "ينتقل إلى سكن جديد",
+       "يسافر بعيداً",
+       "يغيّر عمله"
+      ],
+      "a": "ينتقل إلى سكن جديد",
+      "why": "ziehe um = ينتقل (umziehen منفصل)."
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Woche vierzehn ist zu Ende: Alles ist fertig! Die Prüfung ist gut. Das Formular ist unterschrieben und der Ausweis ist gültig. Yusuf hat den Bogen abgegeben. Er zieht um — fertig! Der Vermieter ist nett. Nach der Prüfung: Urlaub!",
+   "ar": "توليف الوحدة 14 (79 رأساً للفهم): الاستمارة والبريد والطريق والسفر والانتقال والامتحان — تفهم ولا تُنتج كلمات الوحدة؛ والإنتاج للقواعد القديمة (الماضي بـsein/haben · المنفصل · جمع التكسير)."
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "de": "~~Ich gebe den Bogen.~~",
+     "ar": "abgeben منفصل: ab في آخر الجملة — لا تنسها."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «أسلّم» فعل واحد متصل فينسى المتعلم ab. القاعدة (ars-trennbare): gebe … ab — الجزء في الآخر دائماً.",
+    "correct": {
+     "de": "Ich gebe den Bogen ab.",
+     "ar": "أسلّم الورقة."
+    },
+    "exercise": {
+     "q": "Ich gebe den Bogen ___. (ab / auf)",
+     "a": "ab"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Er hat das Formular unterschreibt.~~",
+     "ar": "الماضي يحتاج الصيغة الثالثة: unterschrieben — لا الحاضر unterschreibt."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: unterschreiben بلا ge- في الماضي (untrennbar كـverkauft) فيظنها المتعلم حاضراً منتظماً: unterschreibt. القاعدة (ars-perfekt): hat unterschrieben — احفظ en.",
+    "correct": {
+     "de": "Er hat das Formular unterschrieben.",
+     "ar": "لقد وقّع الاستمارة."
+    },
+    "exercise": {
+     "q": "Er hat das Formular ___. (unterschrieben / unterschreibt)",
+     "a": "unterschrieben"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Gib mich den Bogen!~~",
+     "ar": "geben تأخذ Dativ للشخص: mir — لا mich."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «أعطني» بلا حالة ظاهرة، والألمانية تفرض Dativ مع geben (كـgratulieren وdanken): mich تنقلب إلى mir — والشيء Akkusativ: den Bogen.",
+    "correct": {
+     "de": "Gib mir den Bogen!",
+     "ar": "أعطني الورقة!"
+    },
+    "exercise": {
+     "q": "Gib ___ den Bogen! (mir / mich)",
+     "a": "mir"
+    }
+   }
+  ],
+  "srsBundleWordIds": [
+   "abgeben",
+   "unterschreiben"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-perfekt",
+  "ars-trennbare",
+  "ars-plural-umlaut"
+ ],
+ "audioManifestRefs": [
+  "word-abgeben",
+  "word-unterschreiben"
+ ],
+ "imageManifestRefs": [],
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/abgeben",
+   "https://www.duden.de/rechtschreibung/unterschreiben"
+  ],
+  "wiktionary": [
+   "https://de.wiktionary.org/wiki/Vermieter"
+  ],
+  "goethe": []
+ },
+ "curriculumRef": {
+  "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Ämter · Unterwegs · Prüfung) — توليف الوحدة 14 (D113)",
+  "goetheWordListOverlap": []
+ }
+}

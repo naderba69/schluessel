@@ -2516,7 +2516,7 @@ describe("D115 — أدوات القياس", () => {
     expect(rules.has("ars-praeteritum")).toBe(false);
     expect(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-praeteritum"))).toEqual([]);
     const pf = rules.get("ars-perfekt")!;
-    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u13-d1", "a1-u13-d6", "a1-u14-d1", "a1-u15-d6", "a2-u1-d1"]); // D210: u14-d1 (geboren + sein في نصوص الفهم) // D209: توليف u13-d6 // D204: u13-d1 (ist gestorben · hat geheiratet في نصوص الفهم) // D201–D203: من أسبوع المراجعة يبقى u15-d6 وحده (الأسبوعان 11–12)
+    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u13-d1", "a1-u13-d6", "a1-u14-d1", "a1-u14-d6", "a1-u15-d6", "a2-u1-d1"]); // D215: توليف u14-d6 // D210: u14-d1 (geboren + sein في نصوص الفهم) // D209: توليف u13-d6 // D204: u13-d1 (ist gestorben · hat geheiratet في نصوص الفهم) // D201–D203: من أسبوع المراجعة يبقى u15-d6 وحده (الأسبوعان 11–12)
     expect(pf.usedInLessons).toEqual(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-perfekt")).map((x) => x.id).sort((a, b) => a.localeCompare(b, "en", { numeric: true })));
     for (const x of ["Ich bin heute zu Hause geblieben.", "Ich bin nach Hause gefahren.", "Das Fieber ist verschwunden.", "Ich bin um sieben aufgestanden.", "Ich habe im Bett gelegen.", "Ich habe gehustet und geniest.", "Mein Hals hat gebrannt.", "Die Erkältung hat eine Woche gedauert.", "Wie war dein Tag?", "Warst du auch krank?", "Wir waren eine Woche zu Hause.", "Ich hatte Fieber.", "Hattest du auch Schwindel?", "Wir hatten keine Zeit.", "Jetzt geht es besser.", "Meine Nase juckt."])
       expect(pf.payload.ruleDe).toContain(x);
@@ -3867,7 +3867,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-plural-umlaut — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط): الجمع يُحفظ مع الكلمة وله خمسة أنماط
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-plural-umlaut"]);
     const rule = rules.get("ars-plural-umlaut")!;
-    expect(rule.usedInLessons).toEqual(["a1-u6-d1", "a1-u14-d4", "a1-u15-d3"]); // D213: u14-d4 (Dörfer للفهم) // D202
+    expect(rule.usedInLessons).toEqual(["a1-u6-d1", "a1-u14-d4", "a1-u14-d6", "a1-u15-d3"]); // D215: توليف u14-d6 // D213: u14-d4 (Dörfer للفهم) // D202
     expect(rule.payload.ruleDe).toMatch(/der Stuhl → die Stühle · der Schrank → die Schränke · der Tisch → die Tische · die Lampe → die Lampen · das Sofa → die Sofas · der Sessel → die Sessel/);
     expect(rule.payload.ruleAr).toContain("ميولٌ لا قوانين");
     // العونان المسمّيان: جمع التكسير يغيّر داخل الكلمة (كرسي ← كراسي) كالنقطتين · المعدود من 3 إلى 10 جمع بالعربية أيضاً
@@ -4724,7 +4724,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-trennbare — «Trennbare (الإدخال)» في الخطة اليومية) · وتوليف u7-d6 يشير إليها فهي في usedInLessons
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-trennbare"]);
     const rule = rules.get("ars-trennbare")!;
-    expect(rule.usedInLessons).toEqual(["a1-u7-d5", "a1-u7-d6", "a1-u12-d1", "a1-u12-d2", "a1-u13-d2", "a1-u13-d5", "a1-u13-d6", "a1-u14-d2", "a1-u14-d3", "a1-u14-d5", "a1-u15-d4"]); // D214: u14-d5 (zieht um/gibt ab للفهم) // D212: u14-d3 (fliegt ab للفهم) // D211: u14-d2 (rufe … an للفهم) // D209: توليف u13-d6 // D208: u13-d5 (anklicken للفهم) · // D205: u13-d2 (mitmachen/mitkommen/aufhören للفهم) · // D202: أسبوع المراجعة · // D176: u12-d1 يراجعها بـabfahren/ankommen · D177: u12-d2 بالأمر وبعد الناقص (zurückgeben — N-117)
+    expect(rule.usedInLessons).toEqual(["a1-u7-d5", "a1-u7-d6", "a1-u12-d1", "a1-u12-d2", "a1-u13-d2", "a1-u13-d5", "a1-u13-d6", "a1-u14-d2", "a1-u14-d3", "a1-u14-d5", "a1-u14-d6", "a1-u15-d4"]); // D215: توليف u14-d6 // D214: u14-d5 (zieht um/gibt ab للفهم) // D212: u14-d3 (fliegt ab للفهم) // D211: u14-d2 (rufe … an للفهم) // D209: توليف u13-d6 // D208: u13-d5 (anklicken للفهم) · // D205: u13-d2 (mitmachen/mitkommen/aufhören للفهم) · // D202: أسبوع المراجعة · // D176: u12-d1 يراجعها بـabfahren/ankommen · D177: u12-d2 بالأمر وبعد الناقص (zurückgeben — N-117)
     expect(realLessons.find((x) => x.id === "a1-u7-d6")!.usedArsenalIds).toContain("ars-trennbare");
     expect(rule.payload.ruleDe).toBe("Ich stehe um sieben auf. · Er räumt sein Zimmer auf. · Stehst du früh auf? · Steh auf! · Ich möchte früh aufstehen. · Wir frühstücken. · Ich besuche Oma.");
     // الجزء في الآخر والفعل ثانياً (قوسان) · السؤال والأمر · بعد möchte متصلاً · النبر علامة الانفصال · frühstücken/besuchen لا تنفصلان · القطع السابقة (aufwachen · ankommen)
@@ -5140,17 +5140,17 @@ describe("D115 — الخطة الحقيقية", () => {
   const plans = loadUpgradePlans(CONTENT);
   const plan = plans.find((p) => p.id === "a1-lesson-upgrade")!;
   const ctx: UpgradeContext = { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) };
-  it("تغطي دروس A1 كلها في الوحدات 1–15 بالضبط (70 محتوى منذ D214 + 19 توليفاً منذ D209 — N-004) — لا درس منسي ولا زائد", () => {
+  it("تغطي دروس A1 كلها في الوحدات 1–15 بالضبط (70 محتوى منذ D214 + 20 توليفاً منذ D215 — N-004) — لا درس منسي ولا زائد", () => {
     const expected = realLessons.filter((l) => l.level === "A1" && l.unit <= 15).map((l) => l.id).sort();
     expect(plan.lessons.map((e) => e.lessonId).sort()).toEqual(expected);
-    expect(expected).toHaveLength(89); // D214
+    expect(expected).toHaveLength(90); // D215
     expect(plan.scope).toEqual({ fromUnit: 1, toUnit: 15, kinds: ["content", "integration"] });
     // دروس المحتوى الستون كلها done (D180) · التوليف: u1-d6 وu2-d6 done (D194) والباقي pending معلن (practice/quiz)
     const content = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "content");
     expect(content).toHaveLength(70); // D214
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
-    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6", "a1-u13-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6"].sort());
+    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6", "a1-u13-d6", "a1-u14-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6"].sort());
   });
   it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
@@ -5329,6 +5329,24 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     // التاريخ ممنوع في حوارات 13–14 (D204): لا April ولا أرقام أيام — والخطأ empfehlt صيغة حقيقية (ihr) فلا يُعلن (D209)
     for (const fake of ["April", "sechzehnte", "empfehlt\""]) expect(txt).not.toContain(fake);
     expect(plan.lessons.find((e) => e.lessonId === "a1-u13-d6")!.misspellings ?? []).toEqual([]);
+  });
+  it("a1-u14-d6 «Alles ist fertig!» — توليف الوحدة 14 (تكملة SD1 للفهم — D215): 3 قواعد د1–د5 · 30 بنداً · fd-1..20 بلا تاريخ · abgeben + unterschreiben · الإنتاج للقواعد القديمة وحدها", () => {
+    const { l } = check("a1-u14-d6", 3);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-perfekt", "ars-trennbare", "ars-plural-umlaut"]);
+    expect(l.praesentation.wordIds).toEqual(["abgeben", "unterschreiben"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^fd-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["Die Prüfung ist gut", "den Bogen abgegeben", "alles angekreuzt", "ist unterschrieben", "ist gültig", "mit der S-Bahn", "Hör die Durchsage", "fährt ab", "ruft an", "Anrufbeantworter ist aus", "Viele Grüße", "Die Papiere", "ziehe um", "Vermieter ist nett", "Reisebüro ist nah", "übernachten im Dorf", "geschrieben", "gegangen", "Brüder", "Züge", "Gib mir den Bogen"]) expect(txt, f).toContain(f);
+    // التاريخ ممنوع في حوارات 13–14 (D204): لا April ولا أرقام أيام
+    for (const fake of ["April", "sechzehnte", "zwanzigste"]) expect(txt).not.toContain(fake);
+    expect(plan.lessons.find((e) => e.lessonId === "a1-u14-d6")!.misspellings ?? []).toEqual([]);
+    // D189: الإملاء للأسطر البطيئة (≤132 — مقاس حياً من المانيفست لا رقم مكتوب)
+    const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; voiceParams: { speedWpm: number } }[] };
+    const wpm = new Map(manifest.tracks.map((t) => [t.id, t.voiceParams.speedWpm]));
+    const dictation = l.uebung.stations.find((s) => s.type === "dictation")!;
+    expect(Math.max(...dictation.items.map((i) => wpm.get(String(i.audioId))!))).toBeLessThanOrEqual(132);
   });
   it("a1-u15-d1 «Woche eins und zwei» — أسبوع المراجعة اليوم 1 (الاثنين 20 أبريل) · ستّ قواعد الأسبوعين 1–2 لا الماضي · 30 بنداً · wh-1..20 · D201", () => {
     const { l } = check("a1-u15-d1", 6);

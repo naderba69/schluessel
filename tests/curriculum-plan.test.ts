@@ -292,9 +292,8 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(cs.filter((c) => c.status === "done")).toHaveLength(48); // N-118: العدّ من الملف لا من الوثائق (كانت الوثائق تزيد واحداً منذ D168)
     expect(cs.find((c) => c.status === "pending")).toBeUndefined(); // D180: النواة مكتملة — لا pending
     expect(cs.every((c) => c.missing.length === 0)).toBe(true);
-    const next = planStatus(plan, ctx).find((s) => !s.produced)!;
-    expect(next.lessonId).toBe("a1-u14-d6"); // D214: u14-d5 أُنتج (receptive) — التالي توليف الوحدة 14 (تكامل بلا رؤوس)
-    expect(next.headwords).toHaveLength(0); // D214: التالي a1-u14-d6 توليف — بلا رؤوس جديدة (كـu13-d6 في D209)
+    const next = planStatus(plan, ctx).find((s) => !s.produced);
+    expect(next).toBeUndefined(); // D215: الخطة مكتملة — u14-d6 أُنتج (توليف) ولا درس غير مُنتَج (مرحلة أ: 10/10 · 153/153 · التوليف 2/2)
     const d1 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u13-d1")!;
     expect(d1.produced).toBe(true);
     expect(d1.missing).toEqual([]);
@@ -328,6 +327,9 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     const e5 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u14-d5")!;
     expect(e5.produced).toBe(true);
     expect(e5.missing).toEqual([]); // D214: ausziehen بمعنى الانتقال (ist) · sich kümmern انعكاسي
+    const e6 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u14-d6")!;
+    expect(e6.produced).toBe(true);
+    expect(e6.missing).toEqual([]); // D215: توليف بلا رؤوس — الفجوات والتصحيح على القواعد القديمة المنتَجة (كـu13-d6 في D209)
   });
 });
 
