@@ -1332,7 +1332,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
   });
 
   it("D141: اسم الجمع الدائم في الدروس المُرقّاة بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136) — die Leute صُحّحت (كانت بطاقة جنس تسأل عن die كأنها مؤنثة)", () => {
-    const done = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4", "a1-u6-d5", "a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4", "a1-u7-d5", "a1-u8-d1", "a1-u8-d2", "a1-u8-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds)); // D158: u8-d3 · D157: u8-d2 · D145: الوحدة 5 كلها مُرقّاة · D146: u6-d1 · D147: u6-d2 · D148: u6-d3 · D149: u6-d4 · D150: u6-d5 · D151: u7-d1 · D152: u7-d2 · D153: u7-d3 · D154: u7-d4 · D155: u7-d5 · D156: u8-d1
+    const done = new Set(ALL_LESSONS.filter((l) => l.level === "A1").flatMap((l) => l.praesentation.wordIds)); // D217: كل دروس A1 مُرقّاة (60/60 + 20/20) — مشتق من الملفات بدل القائمة المجمدة عند u8-d3 (قاعدة الكشاف D188 — كـD151 في D216)
     const pluralOnly = ALL_WORDS.filter((w) => done.has(w.id) && w.wordClass === "noun" && /جمع فقط|قائمة Goethe: pl\./.test(w.pluralRuleNote ?? ""));
     // D150: Möbel دخلت (N-070 — كانت بجنس die وبطاقة جنس و«جمع فقط … مثل Nudeln» — والمفرد das Möbel موجود نادراً) ⇒ «جمعاً عادةً» بلا جنس مفرد
     expect(pluralOnly.map((w) => w.id).sort()).toEqual(["eltern", "geschwister", "grosseltern", "lebensmittel", "leute", "moebel"]);
