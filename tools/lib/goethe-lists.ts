@@ -147,6 +147,7 @@ export function pluralsFor(entry: WordlistEntry, lemma: string): string[] {
   if (!/^[-¨äöüÄÖÜ=]/.test(marker)) return [];
   const um = /¨/.test(marker) || /^-?[äöüÄÖÜ](?:$|[\s,-])/.test(marker);
   const suffix = (marker.replace(/¨/g, "").match(/([a-zäöüß]*)\s*$/)?.[1] ?? "").replace(/^[äöü]$/, "");
+  if (suffix.length > 3) return []; // D208: لاحقة صغيرة بأكثر من 3 أحرف ليست لاحقة جمع (أطولها nen) بل اختصار إبدال ذيل («- männer» ← Hausmänner · «-ücher» ← Wörterbücher) — لا تُقرأ بيقين فلا تُدَّعى (لا تخمين)
   if (/um$/.test(lemma) && /^(e?en|a)$/.test(suffix)) { // Datum → Daten · Museum, -een → Museen · Praktikum, -a
     const stem = lemma.slice(0, -2);
     return [stem + (stem.endsWith("e") && suffix.startsWith("e") ? suffix.slice(1) : suffix).replace(/^een$/, "en")];

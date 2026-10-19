@@ -18,8 +18,8 @@ const word = (id: string) => { const w = byId.get(id); if (!w) throw new Error(`
 
 describe("interleavedWith — الاستدعاء المعلن كلمةُ درسٍ سابق تظهر فعلاً في المحطة (N-102/N-110)", () => {
   const declared = lessons.flatMap((l) => l.uebung.stations.flatMap((s) => s.interleavedWith.map((r) => ({ l, s, r }))));
-  it("كل دروس A1 الـ82 (12×6 + u13-d1..d4 + u15×6 — D204–D207) تُعلن استدعاءً (≥ 1 محطة من اليوم 3) وكلها مرجعيّة", () => {
-    expect(lessons.length).toBe(82);
+  it("كل دروس A1 الـ83 (12×6 + u13-d1..d5 + u15×6 — D204–D208) تُعلن استدعاءً (≥ 1 محطة من اليوم 3) وكلها مرجعيّة", () => {
+    expect(lessons.length).toBe(83);
     expect(declared.length).toBeGreaterThan(300);
     for (const { l, r } of declared) expect(byId.has(r), `${l.id}: «${r}» بلا ملف كلمة`).toBe(true);
   });

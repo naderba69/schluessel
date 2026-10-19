@@ -1,0 +1,737 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "a1-u13-d5",
+ "level": "A1",
+ "unit": 13,
+ "day": 5,
+ "kind": "content",
+ "ziel": {
+  "de": "Du verstehst das Praktikum und die Arbeit in der Firma: der Chef und die Kollegen · der Arbeitsplatz mit Computer und Papier · Kugelschreiber oder Bleistift? · Der Drucker ist kaputt. · Lies den Text und frag den Chef!",
+  "ar": "تفهم التدريب العملي والعمل في الشركة: المدير والزملاء · مكان العمل بالحاسوب والورق · قلم الحبر وقلم الرصاص · الطابعة والآلة · «عاطل» و«يعمل لحسابه» و«ربّة بيت» — ولا يُطلب منك إنتاج هذه الكلمات (تكملة SD1 للفهم)."
+ },
+ "canDoDaily": [
+  "يفهم نصاً عن تدريب أو عمل (Praktikum · Firma · Chef · Kollegen · Arbeitsplatz) ويعرف المطلوب.",
+  "يتعرّف على anklicken وdrucken وarbeitslos وselbstständig وHausfrau/Hausmann وUnterricht في مكالمة أو رسالة."
+ ],
+ "warmup": {
+  "cardIds": [
+   "arbeit",
+   "computer",
+   "schreiben"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "de": "«Der Drucker ist kaputt.» — ماذا يعني؟ (تخمين فقط)"
+    },
+    "choices": [
+     "الطابعة معطّلة",
+     "الطابعة جديدة",
+     "الطابعة غالية"
+    ],
+    "answer": "الطابعة معطّلة",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "ما كلمات العمل التي تعرفها؟ (Arbeit · Firma · Computer · Geld · helfen)",
+   "بماذا تكتب — بقلم حبر أم رصاص؟ اليوم تضيف للفهم: Kugelschreiber وBleistift."
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "arbeitsplatz",
+   "chef",
+   "kollege",
+   "arbeitslos",
+   "selbststaendig",
+   "praktikum",
+   "hausfrau",
+   "hausmann",
+   "studium",
+   "maschine",
+   "unterricht",
+   "kugelschreiber",
+   "bleistift",
+   "papier",
+   "anklicken",
+   "drucken",
+   "drucker"
+  ],
+  "grammarArsenalIds": [
+   "ars-trennbare"
+  ],
+  "storySentenceIds": [
+   "story-a1-u13-s5"
+  ],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "auslaut-b",
+   "ch-ich-laut",
+   "double-consonant",
+   "ig-ending",
+   "r-uvular",
+   "sp-st-initial",
+   "umlaut-a",
+   "vowel-long-short",
+   "z"
+  ]
+ },
+ "uebung": {
+  "stations": [
+   {
+    "type": "reading",
+    "items": [
+     {
+      "text": "Firma Schmidt sucht Hilfe! Arbeit am Computer · nette Kollegen · Geld gut. Telefon 030 11 22 33",
+      "q": "Was sucht die Firma?",
+      "choices": [
+       "Hilfe",
+       "Geld",
+       "Papier"
+      ],
+      "a": "Hilfe",
+      "why": "sucht Hilfe — الشركة تبحث عن مساعدة (عامل)؛ العمل على الحاسوب مع زملاء لطفاء."
+     },
+     {
+      "text": "Mein Arbeitsplatz: ein Tisch, ein Computer, ein Kugelschreiber und viel Papier. Mein Chef ist nett.",
+      "q": "Was ist auf dem Arbeitsplatz?",
+      "choices": [
+       "Tisch, Computer, Kugelschreiber und Papier",
+       "Nur ein Bleistift",
+       "Nichts"
+      ],
+      "a": "Tisch, Computer, Kugelschreiber und Papier",
+      "why": "auf dem Arbeitsplatz: طاولة وحاسوب وقلم حبر وورق كثير — والمدير (Chef) لطيف."
+     },
+     {
+      "text": "Hallo Nabil, bist du noch arbeitslos? Wir suchen Hilfe in der Firma. Frag den Chef! Yusuf",
+      "q": "Was schreibt Yusuf?",
+      "choices": [
+       "يقترح على نبيل عملاً في الشركة",
+       "يطلب من نبيل مالاً",
+       "يدعو نبيل إلى حفلة"
+      ],
+      "a": "يقترح على نبيل عملاً في الشركة",
+      "why": "Wir suchen Hilfe … Frag den Chef — يوسف يعرض على نبيل العاطل (arbeitslos) أن يسأل المدير عن عمل."
+     },
+     {
+      "text": "Im Kurs: Klick den Satz an und lies den Text! Frag den Lehrer!",
+      "q": "Was machen sie im Kurs?",
+      "choices": [
+       "ينقرون ويقرؤون ويسألون",
+       "ينامون",
+       "يلعبون"
+      ],
+      "a": "ينقرون ويقرؤون ويسألون",
+      "why": "Klick … an (anklicken) · lies (lesen) · frag (fragen) — ثلاثة أوامر بصيغة du."
+     },
+     {
+      "text": "Die Maschine ist kaputt. Der Drucker druckt nicht. Bitte frag den Kollegen!",
+      "q": "Was ist kaputt?",
+      "choices": [
+       "Die Maschine und der Drucker",
+       "Der Computer",
+       "Das Telefon"
+      ],
+      "a": "Die Maschine und der Drucker",
+      "why": "kaputt = معطّل: الآلة (Maschine) والطابعة (Drucker)؛ المطلوب سؤال الزميل (den Kollegen)."
+     },
+     {
+      "text": "Meine Mutter ist Hausfrau. Mein Vater arbeitet selbstständig. Er hat eine Firma.",
+      "q": "Wer arbeitet selbstständig?",
+      "choices": [
+       "Der Vater",
+       "Die Mutter",
+       "Der Sohn"
+      ],
+      "a": "Der Vater",
+      "why": "selbstständig = يعمل لحسابه: الأب عنده شركة (Firma)؛ الأم ربّة بيت (Hausfrau)."
+     },
+     {
+      "text": "Yusuf studiert in Berlin. Sein Studium ist gut. Morgen hat er Unterricht.",
+      "q": "Richtig oder falsch? Yusuf arbeitet in Berlin.",
+      "choices": [
+       "Falsch",
+       "Richtig"
+      ],
+      "a": "Falsch",
+      "why": "Yusuf studiert — يدرس (لا يعمل)؛ دراسته الجامعية (Studium) جيدة وعنده دروس (Unterricht) غداً."
+     }
+    ],
+    "interleavedWith": [
+     "firma",
+     "hilfe",
+     "arbeit",
+     "computer",
+     "geld",
+     "tisch",
+     "nett",
+     "kurs",
+     "satz",
+     "text",
+     "lehrer",
+     "kaputt",
+     "mutter",
+     "vater"
+    ]
+   },
+   {
+    "type": "listening",
+    "items": [
+     {
+      "audioId": "fb-1",
+      "speakText": "Hallo, Lena! Ich habe ein Praktikum — bei einer Firma in Berlin!",
+      "q": "أين تدريب يوسف؟",
+      "choices": [
+       "في شركة في برلين",
+       "في مدرسة في تونس",
+       "في مطعم في سويسرا"
+      ],
+      "a": "في شركة في برلين",
+      "why": "ein Praktikum bei einer Firma in Berlin — تدريب عملي في شركة في برلين."
+     },
+     {
+      "audioId": "fb-3",
+      "speakText": "Ich arbeite am Computer. Ich klicke den Text an und drucke ihn.",
+      "q": "ماذا يفعل يوسف على الحاسوب؟",
+      "choices": [
+       "ينقر النص ويطبعه",
+       "يلعب ويغني",
+       "ينام"
+      ],
+      "a": "ينقر النص ويطبعه",
+      "why": "klicke den Text an (anklicken) und drucke ihn — ينقر النص ويطبعه."
+     },
+     {
+      "audioId": "fb-5",
+      "speakText": "Sehr nett! Und die Kollegen helfen mir.",
+      "q": "من يساعد يوسف؟",
+      "choices": [
+       "الزملاء",
+       "المدير وحده",
+       "لا أحد"
+      ],
+      "a": "الزملاء",
+      "why": "die Kollegen helfen mir — الزملاء يساعدونه؛ والمدير لطيف أيضاً."
+     },
+     {
+      "audioId": "fb-7",
+      "speakText": "Klein, aber gut. Ein Tisch, ein Computer und viel Papier.",
+      "q": "ماذا يوجد في مكان عمله؟",
+      "choices": [
+       "طاولة وحاسوب وورق كثير",
+       "سرير وخزانة",
+       "تلفاز وكرسي"
+      ],
+      "a": "طاولة وحاسوب وورق كثير",
+      "why": "Ein Tisch, ein Computer und viel Papier — مكان صغير (Arbeitsplatz) لكن جيد."
+     },
+     {
+      "audioId": "fb-11",
+      "speakText": "Nabil ist arbeitslos. Er sucht Arbeit.",
+      "q": "ما مشكلة نبيل؟",
+      "choices": [
+       "عاطل عن العمل ويبحث عن عمل",
+       "مريض في البيت",
+       "مسافر في العطلة"
+      ],
+      "a": "عاطل عن العمل ويبحث عن عمل",
+      "why": "arbeitslos = عاطل عن العمل؛ sucht Arbeit = يبحث عن عمل."
+     },
+     {
+      "audioId": "fb-13",
+      "speakText": "Ayşe studiert. Ihr Studium ist gut.",
+      "q": "ماذا تفعل عائشة؟",
+      "choices": [
+       "تدرس ودراستها جيدة",
+       "تعمل في شركة",
+       "تبحث عن عمل"
+      ],
+      "a": "تدرس ودراستها جيدة",
+      "why": "Ayşe studiert — تدرس؛ Ihr Studium ist gut — دراستها الجامعية جيدة."
+     },
+     {
+      "audioId": "fb-19",
+      "speakText": "Nein, das ist der Drucker. Er druckt nicht — er ist kaputt!",
+      "q": "ما المشكلة؟",
+      "choices": [
+       "الطابعة لا تطبع — معطّلة",
+       "الحاسوب مسروق",
+       "الهاتف مكسور"
+      ],
+      "a": "الطابعة لا تطبع — معطّلة",
+      "why": "Der Drucker druckt nicht — er ist kaputt — الطابعة (Drucker) معطّلة."
+     }
+    ],
+    "interleavedWith": [
+     "computer",
+     "text",
+     "helfen",
+     "tisch",
+     "suchen",
+     "arbeit",
+     "firma",
+     "kaputt"
+    ]
+   },
+   {
+    "type": "match",
+    "items": [
+     {
+      "pairs": [
+       {
+        "de": "der Chef",
+        "ar": "المدير"
+       },
+       {
+        "de": "der Kollege",
+        "ar": "الزميل"
+       },
+       {
+        "de": "die Hausfrau",
+        "ar": "ربّة البيت"
+       },
+       {
+        "de": "der Hausmann",
+        "ar": "ربّ البيت"
+       },
+       {
+        "de": "arbeitslos",
+        "ar": "عاطل عن العمل"
+       },
+       {
+        "de": "selbstständig",
+        "ar": "يعمل لحسابه الخاص"
+       }
+      ],
+      "why": "الناس في العمل: Chef مدير (يُنطق شِف) · Kollege زميل · Hausfrau/Hausmann ربّة/ربّ بيت · arbeitslos عاطل · selbstständig لحسابه."
+     },
+     {
+      "pairs": [
+       {
+        "de": "der Arbeitsplatz",
+        "ar": "مكان العمل"
+       },
+       {
+        "de": "das Praktikum",
+        "ar": "التدريب العملي"
+       },
+       {
+        "de": "das Studium",
+        "ar": "الدراسة الجامعية"
+       },
+       {
+        "de": "der Unterricht",
+        "ar": "الدروس"
+       },
+       {
+        "de": "die Maschine",
+        "ar": "الآلة"
+       },
+       {
+        "de": "das Papier",
+        "ar": "الورق"
+       }
+      ],
+      "why": "الأماكن والأشياء: Arbeitsplatz مكان العمل · Praktikum تدريب · Studium دراسة جامعية · Unterricht دروس (مفرد فقط) · Maschine آلة · Papier ورق."
+     },
+     {
+      "pairs": [
+       {
+        "de": "der Kugelschreiber",
+        "ar": "قلم الحبر"
+       },
+       {
+        "de": "der Bleistift",
+        "ar": "قلم الرصاص"
+       },
+       {
+        "de": "der Drucker",
+        "ar": "الطابعة"
+       },
+       {
+        "de": "anklicken",
+        "ar": "ينقر على"
+       },
+       {
+        "de": "drucken",
+        "ar": "يطبع"
+       }
+      ],
+      "why": "الأدوات والأفعال: Kugelschreiber قلم حبر · Bleistift قلم رصاص · Drucker طابعة (آلة) · anklicken ينقر (klicke … an) · drucken يطبع."
+     }
+    ],
+    "interleavedWith": []
+   },
+   {
+    "type": "dictation",
+    "items": [
+     {
+      "audioId": "fb-9",
+      "speakText": "Mit dem Kugelschreiber. Der Bleistift ist zu kurz.",
+      "a": "Mit dem Kugelschreiber. Der Bleistift ist zu kurz.",
+      "why": "Kugelschreiber كلمة طويلة مركبة (Kugel + Schreiber) بحرف كبير · Bleistift بـei وst."
+     },
+     {
+      "audioId": "fb-11",
+      "speakText": "Nabil ist arbeitslos. Er sucht Arbeit.",
+      "a": "Nabil ist arbeitslos. Er sucht Arbeit.",
+      "why": "arbeitslos صغيرة (صفة) بـss · sucht بـch · Arbeit بحرف كبير."
+     },
+     {
+      "audioId": "fb-16",
+      "speakText": "Bei uns kocht mein Vater. Und morgen habe ich Unterricht.",
+      "a": "Bei uns kocht mein Vater. Und morgen habe ich Unterricht.",
+      "why": "Unterricht بحرف كبير وrr وch · morgen صغيرة (ظرف زمان) · Vater بـV."
+     },
+     {
+      "audioId": "fb-20",
+      "speakText": "Dann lies den Text am Computer! Und frag den Chef!",
+      "a": "Dann lies den Text am Computer! Und frag den Chef!",
+      "why": "lies بـie (اقرأ!) · frag بلا e (اسأل!) · Chef بـCh تُنطق ش (شِف)."
+     }
+    ],
+    "interleavedWith": [
+     "kurz",
+     "suchen",
+     "arbeit",
+     "kochen",
+     "vater",
+     "text",
+     "computer",
+     "fragen"
+    ]
+   }
+  ],
+  "communicativeTask": {
+   "goal": {
+    "de": "Lies die Nachricht von Yusuf und den Text von der Firma und sag: Was sucht die Firma? Was ist kaputt? Wer ist arbeitslos? — Hilfe am Computer. Die Maschine und der Drucker. Nabil.",
+    "ar": "اقرأ رسالة يوسف ونص الشركة وأجب بالعربية أو بألمانية بسيطة: عمّ تبحث الشركة؟ ما المعطّل؟ من العاطل؟ — هدفك أن تفهم، لا أن تكتب بنفسك."
+   },
+   "situation": {
+    "de": "Du bist im Praktikum. Der Chef sagt: Klick den Text an! Druck ihn! Du hörst zu und fragst.",
+    "ar": "أنت في التدريب. المدير يقول: انقر النص! اطبعه! تسمع وتسأل."
+   },
+   "successCriteria": [
+    "يقرأ إعلان شركة ويعرف المطلوب (Hilfe · Arbeit am Computer)",
+    "يميّز anklicken (ينقر) من drucken (يطبع) ومن Drucker (الطابعة)",
+    "يعرف arbeitslos (عاطل) وselbstständig (لحسابه) وHausfrau/Hausmann من السياق"
+   ]
+  }
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«Ich habe ein Praktikum.» — Was hat er?",
+      "choices": [
+       "تدريب عملي في شركة",
+       "عطلة في البيت",
+       "امتحان في المدرسة"
+      ],
+      "a": "تدريب عملي في شركة",
+      "why": "ein Praktikum = تدريب عملي."
+     },
+     {
+      "q": "«Die Kollegen helfen mir.» — Wer hilft?",
+      "choices": [
+       "الزملاء في العمل",
+       "الجيران في البيت",
+       "الأصدقاء في المدرسة"
+      ],
+      "a": "الزملاء في العمل",
+      "why": "die Kollegen = الزملاء؛ helfen = يساعدون."
+     },
+     {
+      "q": "«Der Bleistift ist zu kurz.» — Wie ist der Bleistift?",
+      "choices": [
+       "قصير جداً",
+       "طويل جداً",
+       "جديد جداً"
+      ],
+      "a": "قصير جداً",
+      "why": "zu kurz = قصير جداً (زيادة عن اللزوم)."
+     },
+     {
+      "q": "«Er sucht Arbeit.» — Was macht er?",
+      "choices": [
+       "يبحث عن عمل",
+       "يهرب من العمل",
+       "يترك العمل"
+      ],
+      "a": "يبحث عن عمل",
+      "why": "suchen = يبحث؛ Arbeit = عمل."
+     },
+     {
+      "q": "«Mein Vater ist Hausmann.» — Wer ist Hausmann?",
+      "choices": [
+       "أبوه",
+       "أخوه",
+       "عمّه"
+      ],
+      "a": "أبوه",
+      "why": "Hausmann = ربّ بيت؛ Vater = أب."
+     },
+     {
+      "q": "«Der Drucker druckt nicht.» — Was ist das Problem?",
+      "choices": [
+       "الطابعة لا تعمل",
+       "الورق نفد",
+       "الحبر جفّ"
+      ],
+      "a": "الطابعة لا تعمل",
+      "why": "druckt nicht = لا يطبع؛ الطابعة (Drucker) لا تعمل."
+     }
+    ]
+   },
+   {
+    "items": [
+     {
+      "q": "«Mein Chef ist nett.» — Wer ist nett?",
+      "choices": [
+       "مديره",
+       "زميله",
+       "جاره"
+      ],
+      "a": "مديره",
+      "why": "der Chef = المدير (يُنطق شِف)؛ nett = لطيف."
+     },
+     {
+      "q": "«Klick den Satz an!» — Was soll er machen?",
+      "choices": [
+       "ينقر على الجملة",
+       "يحذف الجملة",
+       "ينسخ الجملة"
+      ],
+      "a": "ينقر على الجملة",
+      "why": "Klick … an = انقر على (anklicken منفصل)."
+     },
+     {
+      "q": "«Sie ist Hausfrau.» — Was ist sie?",
+      "choices": [
+       "ربّة بيت",
+       "موظفة في شركة",
+       "طالبة في الجامعة"
+      ],
+      "a": "ربّة بيت",
+      "why": "Hausfrau = ربّة بيت."
+     },
+     {
+      "q": "«Ich drucke den Text.» — Was druckt er?",
+      "choices": [
+       "النص",
+       "الصورة",
+       "الرسالة"
+      ],
+      "a": "النص",
+      "why": "drucken = يطبع؛ den Text = النص."
+     },
+     {
+      "q": "«Er arbeitet selbstständig.» — Wie arbeitet er?",
+      "choices": [
+       "لحسابه الخاص",
+       "عند مدير صارم",
+       "بلا أجر"
+      ],
+      "a": "لحسابه الخاص",
+      "why": "selbstständig = مستقلّ/لحسابه الخاص."
+     },
+     {
+      "q": "«Morgen habe ich Unterricht.» — Wann hat er Unterricht?",
+      "choices": [
+       "غداً",
+       "أمس",
+       "اليوم"
+      ],
+      "a": "غداً",
+      "why": "morgen = غداً؛ Unterricht = دروس."
+     }
+    ]
+   },
+   {
+    "items": [
+     {
+      "q": "«Mein Arbeitsplatz ist klein.» — Wie ist der Arbeitsplatz?",
+      "choices": [
+       "صغير",
+       "كبير",
+       "مظلم"
+      ],
+      "a": "صغير",
+      "why": "klein = صغير؛ Arbeitsplatz = مكان العمل."
+     },
+     {
+      "q": "«Die Maschine ist kaputt.» — Wie ist die Maschine?",
+      "choices": [
+       "معطّلة",
+       "جديدة",
+       "نظيفة"
+      ],
+      "a": "معطّلة",
+      "why": "kaputt = معطّل/معطّلة؛ die Maschine = الآلة."
+     },
+     {
+      "q": "«Ich schreibe mit dem Kugelschreiber.» — بماذا يكتب؟",
+      "choices": [
+       "بقلم حبر",
+       "بقلم رصاص",
+       "بفرشاة"
+      ],
+      "a": "بقلم حبر",
+      "why": "mit dem Kugelschreiber = بقلم الحبر."
+     },
+     {
+      "q": "«Papier für den Drucker.» — الورق لأجل ماذا؟",
+      "choices": [
+       "للطابعة",
+       "للرسم",
+       "للتغليف"
+      ],
+      "a": "للطابعة",
+      "why": "Papier für den Drucker = ورق للطابعة."
+     },
+     {
+      "q": "«Ihr Studium ist gut.» — Was ist gut?",
+      "choices": [
+       "دراستها الجامعية",
+       "وظيفتها الجديدة",
+       "شقتها الكبيرة"
+      ],
+      "a": "دراستها الجامعية",
+      "why": "das Studium = الدراسة الجامعية."
+     },
+     {
+      "q": "«Nabil ist arbeitslos.» — Hat Nabil Arbeit?",
+      "choices": [
+       "لا، يبحث عن عمل",
+       "نعم، عنده شركة",
+       "نعم، هو مدير"
+      ],
+      "a": "لا، يبحث عن عمل",
+      "why": "arbeitslos = عاطل عن العمل؛ Nabil يبحث عن عمل."
+     }
+    ]
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Praktikum und Arbeit in der Firma — zum Verstehen: der Arbeitsplatz · der Chef · der Kollege (die Kollegen) · arbeitslos · selbstständig · das Praktikum · die Hausfrau · der Hausmann · das Studium · die Maschine · der Unterricht · der Kugelschreiber · der Bleistift · das Papier · anklicken (klicke … an) · drucken · der Drucker. · Der Drucker ist kaputt — frag den Chef!",
+   "ar": "درس للفهم لا للإنتاج (تكملة SD1): التدريب والشركة والمدير والزملاء · مكان العمل والأدوات · الطابعة والآلة · عاطل ولحسابه وربّة/ربّ بيت · الدراسة والدروس."
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "de": "~~Ich klicke den Text.~~ · ~~Klick den Text!~~",
+     "ar": "anklicken منفصل: an تذهب إلى آخر الجملة — لا تنسها."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «انقر على النص» فعل واحد متصل فينسى المتعلم an أو يلصقها بالفعل. القاعدة: klicke … an — الجزء an في الآخر دائماً.",
+    "correct": {
+     "de": "Ich klicke den Text an. · Klick den Satz an!",
+     "ar": "أنقر على النص. · انقر على الجملة!"
+    },
+    "exercise": {
+     "q": "Ich klicke den Text ___. (an / auf)",
+     "a": "an"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Der Chef kocht gut.~~ · ~~Mein Chef ist ein Koch.~~",
+     "ar": "Chef = المدير (يُنطق شِف) — لا تخلطه مع الطباخ."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية الدارجة تستعمل «شيف» للطباخ (من الإنجليزية) فيسمع المتعلم der Chef ويفهم طباخاً! في الألمانية Chef = المدير/الرئيس — والطباخ كلمة أخرى (kochen يطبخ).",
+    "correct": {
+     "de": "Mein Chef ist nett. · Unser Chef hat eine Firma.",
+     "ar": "مديري لطيف. · مديرنا عنده شركة."
+    },
+    "exercise": {
+     "q": "Mein Chef hat ___. (eine Firma / einen Kuchen)",
+     "a": "eine Firma"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Der Hausfrau kocht.~~ · ~~Die Hausmann arbeitet.~~",
+     "ar": "die Hausfrau مؤنث وder Hausmann مذكر — المقالة جزء من الكلمة."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «ربّ بيت/ربّة بيت» بالتاء المربوطة فينسى المتعلم أن الألمانية تميّز بكلمتين ومقالتين: die Hausfrau (مؤنث) وder Hausmann (مذكر) — المقالة الخطأ تغيّر المعنى.",
+    "correct": {
+     "de": "Meine Mutter ist Hausfrau. · Mein Vater ist Hausmann.",
+     "ar": "أمي ربّة بيت. · أبي ربّ بيت."
+    },
+    "exercise": {
+     "q": "___ Hausfrau kocht. (Die / Der)",
+     "a": "Die"
+    }
+   }
+  ],
+  "srsBundleWordIds": [
+   "arbeitsplatz",
+   "chef",
+   "kollege",
+   "arbeitslos",
+   "selbststaendig",
+   "praktikum",
+   "hausfrau",
+   "hausmann",
+   "studium",
+   "maschine",
+   "unterricht",
+   "kugelschreiber",
+   "bleistift",
+   "papier",
+   "anklicken",
+   "drucken",
+   "drucker"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-trennbare"
+ ],
+ "audioManifestRefs": [
+  "word-arbeitsplatz",
+  "word-chef",
+  "word-kollege",
+  "word-arbeitslos",
+  "word-selbststaendig",
+  "word-praktikum",
+  "word-hausfrau",
+  "word-hausmann",
+  "word-studium",
+  "word-maschine",
+  "word-unterricht",
+  "word-kugelschreiber",
+  "word-bleistift",
+  "word-papier",
+  "word-anklicken",
+  "word-drucken",
+  "word-drucker"
+ ],
+ "imageManifestRefs": [],
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Arbeitsplatz",
+   "https://www.duden.de/rechtschreibung/Praktikum",
+   "https://www.duden.de/rechtschreibung/anklicken"
+  ],
+  "wiktionary": [
+   "https://de.wiktionary.org/wiki/selbstständig"
+  ],
+  "goethe": []
+ },
+ "curriculumRef": {
+  "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Arbeit · Firma) — Ergänzung zum Verstehen, Einheit 13 (D113)",
+  "goetheWordListOverlap": []
+ }
+}

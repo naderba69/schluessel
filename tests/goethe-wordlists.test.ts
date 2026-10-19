@@ -204,6 +204,9 @@ describe("D110 — الجمع من علامة القائمة (الأساليب �
     const pair: WordlistEntry = { headword: "der Freund, -e, die Freundin, -nen", lemmas: ["Freund", "Freundin"], article: "der", page: 1, kind: "main" };
     expect(pluralsFor(pair, "Freund")).toEqual(["Freunde"]);
     expect(pluralsFor(pair, "Freundin")).toEqual([]);
+    // D208: اختصار إبدال الذيل لا يُقرأ بيقين («- männer» كانت تُنتج «Hausmannmänner»)
+    expect(pluralsFor(e("r Hausmann, - männer / e Hausfrau, -en", "Hausmann"), "Hausmann")).toEqual([]);
+    expect(pluralsFor(e("s Wörterbuch, -ücher", "Wörterbuch", "das"), "Wörterbuch")).toEqual([]);
   });
   it("D131: الصيغة في قوسين منفصلين كلمةٌ أخرى لا تُحمَّل علامة الأولى («Großmutter, ¨- (Oma)») — والقوس الملتصق جزء من الكلمة («(Fahr)Rad»)", () => {
     const oma: WordlistEntry = { headword: "Großmutter, ¨- (Oma)", lemmas: ["Großmutter", "Oma"], article: "die", page: 5, kind: "group" };

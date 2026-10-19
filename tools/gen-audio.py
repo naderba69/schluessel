@@ -1186,6 +1186,23 @@ def build_all() -> None:
     ("word-entschuldigen", "entschuldigen.", "entschuldigen", ["a1-u13-d4"]),
     ("word-willkommen", "willkommen.", "willkommen", ["a1-u13-d4"]),
     ("word-herzlich", "herzlich.", "herzlich", ["a1-u13-d4"]),
+    ("word-arbeitsplatz", "der Arbeitsplatz.", "arbeitsplatz", ["a1-u13-d5"]),
+    ("word-chef", "der Chef.", "chef", ["a1-u13-d5"]),
+    ("word-kollege", "der Kollege.", "kollege", ["a1-u13-d5"]),
+    ("word-arbeitslos", "arbeitslos.", "arbeitslos", ["a1-u13-d5"]),
+    ("word-selbststaendig", "selbstständig.", "selbststaendig", ["a1-u13-d5"]),
+    ("word-praktikum", "das Praktikum.", "praktikum", ["a1-u13-d5"]),
+    ("word-hausfrau", "die Hausfrau.", "hausfrau", ["a1-u13-d5"]),
+    ("word-hausmann", "der Hausmann.", "hausmann", ["a1-u13-d5"]),
+    ("word-studium", "das Studium.", "studium", ["a1-u13-d5"]),
+    ("word-maschine", "die Maschine.", "maschine", ["a1-u13-d5"]),
+    ("word-unterricht", "der Unterricht.", "unterricht", ["a1-u13-d5"]),
+    ("word-kugelschreiber", "der Kugelschreiber.", "kugelschreiber", ["a1-u13-d5"]),
+    ("word-bleistift", "der Bleistift.", "bleistift", ["a1-u13-d5"]),
+    ("word-papier", "das Papier.", "papier", ["a1-u13-d5"]),
+    ("word-anklicken", "anklicken.", "anklicken", ["a1-u13-d5"]),
+    ("word-drucken", "drucken.", "drucken", ["a1-u13-d5"]),
+    ("word-drucker", "der Drucker.", "drucker", ["a1-u13-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
