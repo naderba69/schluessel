@@ -1203,6 +1203,22 @@ def build_all() -> None:
     ("word-anklicken", "anklicken.", "anklicken", ["a1-u13-d5"]),
     ("word-drucken", "drucken.", "drucken", ["a1-u13-d5"]),
     ("word-drucker", "der Drucker.", "drucker", ["a1-u13-d5"]),
+    ("word-formular", "das Formular.", "formular", ["a1-u14-d1"]),
+    ("word-ausfuellen", "ausfüllen.", "ausfuellen", ["a1-u14-d1"]),
+    ("word-familienstand", "der Familienstand.", "familienstand", ["a1-u14-d1"]),
+    ("word-ledig", "ledig.", "ledig", ["a1-u14-d1"]),
+    ("word-geboren", "geboren.", "geboren", ["a1-u14-d1"]),
+    ("word-geburtsjahr", "das Geburtsjahr.", "geburtsjahr", ["a1-u14-d1"]),
+    ("word-geburtsort", "der Geburtsort.", "geburtsort", ["a1-u14-d1"]),
+    ("word-maennlich", "männlich.", "maennlich", ["a1-u14-d1"]),
+    ("word-weiblich", "weiblich.", "weiblich", ["a1-u14-d1"]),
+    ("word-unterschrift", "die Unterschrift.", "unterschrift", ["a1-u14-d1"]),
+    ("word-unterschreiben", "unterschreiben.", "unterschreiben", ["a1-u14-d1"]),
+    ("word-ausweis", "der Ausweis.", "ausweis", ["a1-u14-d1"]),
+    ("word-papiere", "die Papiere.", "papiere", ["a1-u14-d1"]),
+    ("word-gueltig", "gültig.", "gueltig", ["a1-u14-d1"]),
+    ("word-auslaender", "der Ausländer.", "auslaender", ["a1-u14-d1"]),
+    ("word-auslaendisch", "ausländisch.", "auslaendisch", ["a1-u14-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

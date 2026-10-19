@@ -293,8 +293,8 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(cs.find((c) => c.status === "pending")).toBeUndefined(); // D180: النواة مكتملة — لا pending
     expect(cs.every((c) => c.missing.length === 0)).toBe(true);
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
-    expect(next.lessonId).toBe("a1-u14-d1"); // D209: u13-d1..d6 أُنتجت (receptive) — التالي أول دروس الوحدة 14
-    expect(next.headwords).toHaveLength(16); // D209: التالي a1-u14-d1 «Das Formular» (16 رأساً)
+    expect(next.lessonId).toBe("a1-u14-d2"); // D210: u14-d1 أُنتج (receptive) — التالي البريد والبنك
+    expect(next.headwords).toHaveLength(17); // D210: التالي a1-u14-d2 (17 رأساً: Beamte · Konto · überweisen …)
     const d1 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u13-d1")!;
     expect(d1.produced).toBe(true);
     expect(d1.missing).toEqual([]);
@@ -313,6 +313,9 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     const d6 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u13-d6")!;
     expect(d6.produced).toBe(true);
     expect(d6.missing).toEqual([]); // D209: توليف بلا رؤوس — الفجوات والتصحيح على القواعد القديمة المنتَجة
+    const e1 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u14-d1")!;
+    expect(e1.produced).toBe(true);
+    expect(e1.missing).toEqual([]); // D210: Papiere جمع فقط (pluralOnly)
   });
 });
 
