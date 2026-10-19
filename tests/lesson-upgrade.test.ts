@@ -14,7 +14,7 @@ import {
   interleaveSupported, itemTexts, taughtUpTo, wordAppears, type UpgradeContext,
 } from "../tools/lib/lesson-upgrade.js";
 import {
-  CLOSED, COMPOUND_NUMBER, DA_COMPOUND, DA_COMPOUND_ANCHOR, GRAPHEMES, HUNDREDS_NUMBER, ORDINAL_ANCHOR, ORDINAL_NUMBER, compoundNumberKnown, contentTokens, daCompoundKnown, deumlaut, knownForms, knownStems, numberWordKnown, ordinalKnown,
+  CLOSED, COMPOUND_NUMBER, DA_COMPOUND, DA_COMPOUND_ANCHOR, GRAPHEMES, HUNDREDS_NUMBER, ORDINAL_ANCHOR, ORDINAL_NUMBER, compoundNumberKnown, contentTokens, daCompoundKnown, deumlaut, knownForms, knownStems, numberWordKnown, ordinalKnown, stemKnown,
 } from "../tools/lib/vocab-forms.js";
 
 const CONTENT = join(__dirname, "..", "content");
@@ -910,7 +910,7 @@ describe("D115 — أدوات القياس", () => {
     expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["fertig", "regnen", "scheinen", "sonne"]));
     const sonne = words.find((w) => w.id === "sonne")!;
     expect([sonne.unit, sonne.usedInLessons, sonne.sampleSentence?.sourceLesson, sonne.sampleSentence?.de])
-      .toEqual([3, ["a1-u3-d4", "a1-u10-d1", "a1-u15-d4"], "a1-u3-d4", "Heute scheint die Sonne."]); // كان «Die Sonne scheint.» = مثال SD1 حرفياً
+      .toEqual([3, ["a1-u3-d4", "a1-u10-d1"], "a1-u3-d4", "Heute scheint die Sonne."]); // كان «Die Sonne scheint.» = مثال SD1 حرفياً · N-041 (D220): سقط a1-u15-d4 (بلا أي أثر — والمانيفست نفسه لا يذكره، السطر التالي)
     const manifest = JSON.parse(readFileSync(join(CONTENT, "manifests/audio-manifest.a1-u1.json"), "utf8")) as { tracks: { id: string; lessonRefs: string[] }[] };
     expect(manifest.tracks.find((t) => t.id === "word-sonne")?.lessonRefs).toEqual(["a1-u3-d4", "a1-u10-d1"]);
     expect(words.find((w) => w.id === "regnen")!.grammarRisks).toContain("needs-es-dummy");
@@ -5435,5 +5435,25 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     for (const fake of ["zurückgekommt", "gebleibt", "sollt\""]) expect(txt).not.toContain(fake);
     // الفهرس العكسي: perfekt/satzklammer في u15-d6 وحده من أسبوع المراجعة
     for (const r of ["ars-perfekt", "ars-satzklammer"]) expect(rules.get(r)!.usedInLessons.filter((x) => x.startsWith("a1-u15-"))).toEqual(["a1-u15-d6"]);
+  });
+});
+
+describe("N-041 (D220) — الفهرس العكسي: الاتجاه الثاني — ادعاء بلا أي أثر (إعلان·إحماء·خلط·جذع في النص والصوت) = مرفوض", () => {
+  it("صفر ادعاءات يقينية التعفّن على مستوى المستودع (fahrrad→u9-d2 وregal→u9-d4 و16 ادعاء u15 حُذفت في D220 · وsprechen→u7-d4 يمرّ بجذع spricht)", () => {
+    const byId = new Map(realLessons.map((l) => [l.id, l]));
+    const stale: string[] = [];
+    for (const w of words) {
+      const stems = knownStems([w]);
+      for (const lid of w.usedInLessons) {
+        const l = byId.get(lid)!;
+        if (l.praesentation.wordIds.includes(w.id) || l.zusammenfassung.srsBundleWordIds.includes(w.id)) continue;
+        if (l.warmup.cardIds.includes(w.id)) continue;
+        if (l.uebung.stations.some((st) => (st.interleavedWith ?? []).includes(w.id))) continue;
+        let text = JSON.stringify(l);
+        for (const ref of l.audioManifestRefs ?? []) text += " " + (tracks.get(ref)?.textDe ?? "");
+        if (!contentTokens(text).some((t) => stemKnown(deumlaut(t), stems))) stale.push(`${w.id} → ${lid}`);
+      }
+    }
+    expect(stale).toEqual([]);
   });
 });
