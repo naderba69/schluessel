@@ -1504,15 +1504,16 @@ describe("N-048 (D221) — الخطأ البعيد الوحيد محصور في 
   });
 });
 
-describe("N-023 (D222) — نصوص القراءة تحت حارس الجبهة — المرحلة 1 (u1/u6/u7/u8/u10/u11/u12 · الباقي D223 ثم الثقافة D224)", () => {
-  // الأفق: آخر درس في وحدة النص (شاملاً كلماته) · المسرد يمنح جذوعه كالمدروس (lernen تغطي lerne/lernt) · الأعلام معلنة
+describe("N-023 (D223) — نصوص القراءة الـ12 كلها تحت حارس الجبهة (الثقافة في D224)", () => {
+  // الأفق: آخر درس في وحدة النص (شاملاً كلماته) · المسرد يمنح جذوعه كالمدروس (lernen تغطي lerne/lernt) · الأعلام معلنة · التعجب الصرف مسموح
+  const INTERJECTIONS = new Set(["ah"]); // D223: صوت بلا معنى معجمي (Ah!) — يُوسَّع عند الحاجة لا استباقاً
   // المسرد الميت: كل رموزه معروفة-الأفق حرفياً بلا جذوع (schön ≠ schon — تصادم مقصود يُبقي مسرد u1 صادقاً)
   const lastOfUnit = (u: number) => ALL_LESSONS.filter((l) => l.level === "A1" && l.unit === u).sort((a, b) => a.day - b.day).at(-1)!;
   const auditLese = (id: string) => {
     const d = ReadingText.parse(JSON.parse(readFileSync(join(__dirname, "..", "content/lese", `${id}.json`), "utf8")));
     const taught = taughtUpTo(lastOfUnit(d.unit), ALL_LESSONS, ALL_WORDS);
     const stems = new Set([...knownStems(taught), ...d.glossary.flatMap((g) => [...knownStems([{ de: g.de, wordClass: "noun" } as never])])]);
-    const allow = new Set((d.properNouns ?? []).flatMap((n) => contentTokens(n)));
+    const allow = new Set([...(d.properNouns ?? []).flatMap((n) => contentTokens(n)), ...INTERJECTIONS]);
     const texts = [d.title.de, d.text.de, ...d.questions.flatMap((q) => [q.q, q.a])];
     const bad = frontViolations(texts, stems, allow);
     const horizonForms = new Set([...taught.flatMap((w) => knownForms(w as never)), ...CLOSED]);
@@ -1521,7 +1522,7 @@ describe("N-023 (D222) — نصوص القراءة تحت حارس الجبهة 
     const unusedPropers = (d.properNouns ?? []).filter((n) => !contentTokens(n).every((t) => seen.has(t)));
     return { bad, dead, unusedPropers };
   };
-  for (const id of ["a1-lese-u1", "a1-lese-u6", "a1-lese-u7", "a1-lese-u8", "a1-lese-u10", "a1-lese-u11", "a1-lese-u12"]) {
+  for (const id of ["a1-lese-u1", "a1-lese-u2", "a1-lese-u3", "a1-lese-u4", "a1-lese-u5", "a1-lese-u6", "a1-lese-u7", "a1-lese-u8", "a1-lese-u9", "a1-lese-u10", "a1-lese-u11", "a1-lese-u12"]) {
     it(`${id} نظيف: صفر مخالفات · صفر مسرد ميت · كل علم مستعمل`, () => {
       expect(auditLese(id)).toEqual({ bad: [], dead: [], unusedPropers: [] });
     });
