@@ -1643,7 +1643,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدة اليوم جديدة: ars-perfekt-haben (كانت مُشاراً إليها بلا ملف — تشاركها u10-d4 وu10-d6)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-perfekt-haben"]);
     const ph = rules.get("ars-perfekt-haben")!;
-    expect(ph.usedInLessons).toEqual(["a1-u10-d3", "a1-u10-d4", "a1-u10-d6", "a1-u13-d3", "a1-u15-d5"]); // D206
+    expect(ph.usedInLessons).toEqual(["a1-u10-d3", "a1-u10-d4", "a1-u10-d6", "a1-u13-d3", "a1-u13-d6", "a1-u15-d5"]); // D209: توليف u13-d6 // D206
     expect(ph.payload.ruleDe).toContain("Was hast du gestern gemacht? — Gestern habe ich Deutsch gelernt.");
     expect(ph.payload.ruleDe).not.toMatch(/\b(Pizza|gehabt|war|hatte|bin|ist|gegangen|gefahren)\b/);
     // الماضي المركّب مع haben بأربع خطوات: جزءان (haben ثانياً + التصريف آخراً) · المنتظم ge‑…‑t (‑et بعد t/d) · القوي ge‑…‑en يُحفظ + المختلطان · ظروف الزمن والسؤال
@@ -2516,7 +2516,7 @@ describe("D115 — أدوات القياس", () => {
     expect(rules.has("ars-praeteritum")).toBe(false);
     expect(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-praeteritum"))).toEqual([]);
     const pf = rules.get("ars-perfekt")!;
-    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u13-d1", "a1-u15-d6", "a2-u1-d1"]); // D204: u13-d1 (ist gestorben · hat geheiratet في نصوص الفهم) // D201–D203: من أسبوع المراجعة يبقى u15-d6 وحده (الأسبوعان 11–12)
+    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u13-d1", "a1-u13-d6", "a1-u15-d6", "a2-u1-d1"]); // D209: توليف u13-d6 // D204: u13-d1 (ist gestorben · hat geheiratet في نصوص الفهم) // D201–D203: من أسبوع المراجعة يبقى u15-d6 وحده (الأسبوعان 11–12)
     expect(pf.usedInLessons).toEqual(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-perfekt")).map((x) => x.id).sort((a, b) => a.localeCompare(b, "en", { numeric: true })));
     for (const x of ["Ich bin heute zu Hause geblieben.", "Ich bin nach Hause gefahren.", "Das Fieber ist verschwunden.", "Ich bin um sieben aufgestanden.", "Ich habe im Bett gelegen.", "Ich habe gehustet und geniest.", "Mein Hals hat gebrannt.", "Die Erkältung hat eine Woche gedauert.", "Wie war dein Tag?", "Warst du auch krank?", "Wir waren eine Woche zu Hause.", "Ich hatte Fieber.", "Hattest du auch Schwindel?", "Wir hatten keine Zeit.", "Jetzt geht es besser.", "Meine Nase juckt."])
       expect(pf.payload.ruleDe).toContain(x);
@@ -4619,7 +4619,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-praesens-unregelm) · وتوليف u7-d6 يشير إليها فهي في usedInLessons
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-praesens-unregelm"]);
     const rule = rules.get("ars-praesens-unregelm")!;
-    expect(rule.usedInLessons).toEqual(["a1-u7-d4", "a1-u7-d6", "a1-u13-d4", "a1-u15-d4"]); // D207
+    expect(rule.usedInLessons).toEqual(["a1-u7-d4", "a1-u7-d6", "a1-u13-d4", "a1-u13-d6", "a1-u15-d4"]); // D209: توليف u13-d6 // D207
     expect(realLessons.find((x) => x.id === "a1-u7-d6")!.usedArsenalIds).toContain("ars-praesens-unregelm");
     expect(rule.payload.ruleDe).toBe("ich fahre · du fährst · er/sie/es fährt · wir fahren · ihr fahrt · sie/Sie fahren — du läufst · er läuft — du nimmst · er nimmt · du gibst · er gibt — du isst · er isst · du liest · er liest");
     // قاعدة اليوم في الخطة اليومية («Präsens شاذ (fährt/isst)»): التغيير مع du وer/sie/es وحدهما · a ← ä · au ← äu · e ← i · e ← ie · nimmt
@@ -4724,7 +4724,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-trennbare — «Trennbare (الإدخال)» في الخطة اليومية) · وتوليف u7-d6 يشير إليها فهي في usedInLessons
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-trennbare"]);
     const rule = rules.get("ars-trennbare")!;
-    expect(rule.usedInLessons).toEqual(["a1-u7-d5", "a1-u7-d6", "a1-u12-d1", "a1-u12-d2", "a1-u13-d2", "a1-u13-d5", "a1-u15-d4"]); // D208: u13-d5 (anklicken للفهم) · // D205: u13-d2 (mitmachen/mitkommen/aufhören للفهم) · // D202: أسبوع المراجعة · // D176: u12-d1 يراجعها بـabfahren/ankommen · D177: u12-d2 بالأمر وبعد الناقص (zurückgeben — N-117)
+    expect(rule.usedInLessons).toEqual(["a1-u7-d5", "a1-u7-d6", "a1-u12-d1", "a1-u12-d2", "a1-u13-d2", "a1-u13-d5", "a1-u13-d6", "a1-u15-d4"]); // D209: توليف u13-d6 // D208: u13-d5 (anklicken للفهم) · // D205: u13-d2 (mitmachen/mitkommen/aufhören للفهم) · // D202: أسبوع المراجعة · // D176: u12-d1 يراجعها بـabfahren/ankommen · D177: u12-d2 بالأمر وبعد الناقص (zurückgeben — N-117)
     expect(realLessons.find((x) => x.id === "a1-u7-d6")!.usedArsenalIds).toContain("ars-trennbare");
     expect(rule.payload.ruleDe).toBe("Ich stehe um sieben auf. · Er räumt sein Zimmer auf. · Stehst du früh auf? · Steh auf! · Ich möchte früh aufstehen. · Wir frühstücken. · Ich besuche Oma.");
     // الجزء في الآخر والفعل ثانياً (قوسان) · السؤال والأمر · بعد möchte متصلاً · النبر علامة الانفصال · frühstücken/besuchen لا تنفصلان · القطع السابقة (aufwachen · ankommen)
@@ -5140,17 +5140,17 @@ describe("D115 — الخطة الحقيقية", () => {
   const plans = loadUpgradePlans(CONTENT);
   const plan = plans.find((p) => p.id === "a1-lesson-upgrade")!;
   const ctx: UpgradeContext = { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) };
-  it("تغطي دروس A1 كلها في الوحدات 1–15 بالضبط (65 محتوى منذ D208 + 18 توليفاً منذ D194 — N-004) — لا درس منسي ولا زائد", () => {
+  it("تغطي دروس A1 كلها في الوحدات 1–15 بالضبط (65 محتوى منذ D208 + 19 توليفاً منذ D209 — N-004) — لا درس منسي ولا زائد", () => {
     const expected = realLessons.filter((l) => l.level === "A1" && l.unit <= 15).map((l) => l.id).sort();
     expect(plan.lessons.map((e) => e.lessonId).sort()).toEqual(expected);
-    expect(expected).toHaveLength(83); // D208
+    expect(expected).toHaveLength(84); // D209
     expect(plan.scope).toEqual({ fromUnit: 1, toUnit: 15, kinds: ["content", "integration"] });
     // دروس المحتوى الستون كلها done (D180) · التوليف: u1-d6 وu2-d6 done (D194) والباقي pending معلن (practice/quiz)
     const content = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "content");
     expect(content).toHaveLength(65); // D208
     for (const e of content) expect([e.rule, e.practice, e.quiz], e.lessonId).toEqual(["done", "done", "done"]);
     const integ = plan.lessons.filter((e) => realLessons.find((l) => l.id === e.lessonId)!.kind === "integration");
-    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6"].sort());
+    expect(integ.filter((e) => e.practice === "done" && e.quiz === "done").map((e) => e.lessonId).sort()).toEqual(["a1-u1-d6", "a1-u2-d6", "a1-u3-d6", "a1-u4-d6", "a1-u5-d6", "a1-u6-d6", "a1-u7-d6", "a1-u8-d6", "a1-u9-d6", "a1-u10-d6", "a1-u11-d6", "a1-u12-d6", "a1-u13-d6", "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6"].sort());
   });
   it("الحارس: صفر مشكلة على المحتوى الحقيقي (done مُثبت · pending معلن) — ولا تنبيه أيضاً (البوابة 0/0)", () => {
     expect(checkUpgrade(plan, ctx).filter((i) => i.level === "error")).toEqual([]);
@@ -5316,6 +5316,19 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
     // مشتّتات Quiz كلمات حقيقية (N-103): الخطأ المقصود الوحيد gefotografiert معلن ومشطوب (auspackt صيغة حقيقية فلا تُعلن)
     for (const fake of ["gelosfahren", "angekommt", "geankommen"]) expect(txt).not.toContain(fake);
     expect(plan.lessons.find((e) => e.lessonId === "a1-u12-d6")!.misspellings?.map((m) => m.wrong)).toEqual(["gefotografiert"]);
+  });
+  it("a1-u13-d6 «Party am Samstag» — توليف الوحدة 13 (تكملة SD1 للفهم — D209): 4 قواعد د1–د5 · 30 بنداً · eb-1..20 بلا تاريخ · einladen + empfehlen · الإنتاج للقواعد القديمة وحدها", () => {
+    const { l } = check("a1-u13-d6", 4);
+    expect(l.praesentation.grammarArsenalIds).toEqual(["ars-perfekt", "ars-trennbare", "ars-perfekt-haben", "ars-praesens-unregelm"]);
+    expect(l.praesentation.wordIds).toEqual(["einladen", "empfehlen"]);
+    const audio = l.uebung.stations.flatMap((s) => s.items.map((i) => String(i.audioId ?? ""))).filter(Boolean);
+    expect(audio.every((a) => /^eb-\d+$/.test(a))).toBe(true);
+    expect(new Set(audio).size).toBe(14);
+    const txt = JSON.stringify(l);
+    for (const f of ["ich lade dich ein", "Draußen im Garten", "Salat mit Käse", "keinen Schinken", "meine Kollegen", "keine Zeit", "empfiehlt Musik", "gratuliere dir", "gespielt", "gegessen", "aufstehen", "isst", "liest", "gefahren"]) expect(txt, f).toContain(f);
+    // التاريخ ممنوع في حوارات 13–14 (D204): لا April ولا أرقام أيام — والخطأ empfehlt صيغة حقيقية (ihr) فلا يُعلن (D209)
+    for (const fake of ["April", "sechzehnte", "empfehlt\""]) expect(txt).not.toContain(fake);
+    expect(plan.lessons.find((e) => e.lessonId === "a1-u13-d6")!.misspellings ?? []).toEqual([]);
   });
   it("a1-u15-d1 «Woche eins und zwei» — أسبوع المراجعة اليوم 1 (الاثنين 20 أبريل) · ستّ قواعد الأسبوعين 1–2 لا الماضي · 30 بنداً · wh-1..20 · D201", () => {
     const { l } = check("a1-u15-d1", 6);

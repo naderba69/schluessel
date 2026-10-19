@@ -1,0 +1,674 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "a1-u13-d6",
+ "level": "A1",
+ "unit": 13,
+ "day": 6,
+ "kind": "integration",
+ "ziel": {
+  "de": "Woche dreizehn ist zu Ende: eine Party am Samstag! Du verstehst die Einladung und das Essen: Ich lade dich ein · Salat ohne Schinken · Ayşe isst keinen Schinken · Die Kollegen kommen · Der Chef hat keine Zeit · Ayşe empfiehlt Musik · Ich gratuliere dir!",
+  "ar": "توليف الوحدة 13 (تكملة SD1 للفهم — بلا تاريخ): تفهم الدعوة والطعام والعمل: einladen وgratulieren · Schinken وBananen وgrillen · Kollegen وChef وPraktikum — والإنتاج في القواعد القديمة وحدها (الماضي بـsein/haben · المنفصل · الشاذ e→ie)، ولا يُطلب منك إنتاج كلمات الوحدة."
+ },
+ "canDoDaily": [
+  "يفهم دعوة لحفلة (Party · einladen · gratulieren) ويعرف من يأتي وماذا يؤكل.",
+  "ينتج الماضي والمنفصل والشاذ في القواعد القديمة (gespielt · stehe … auf · isst) داخل سياق كلمات الوحدة."
+ ],
+ "warmup": {
+  "cardIds": [
+   "einladen",
+   "empfehlen",
+   "party"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "de": "«ich lade dich ein» — ماذا يعني؟ (تخمين فقط)"
+    },
+    "choices": [
+     "أدعوك",
+     "أودّعك",
+     "أمنعك"
+    ],
+    "answer": "أدعوك",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "de": "«Ayşe empfiehlt Musik» — ماذا تفعل عائشة؟ (تخمين فقط)"
+    },
+    "choices": [
+     "توصي بالموسيقى",
+     "تكره الموسيقى",
+     "تبيع الموسيقى"
+    ],
+    "answer": "توصي بالموسيقى",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "ما كلمات الحفلة؟ (Party · einladen · gratulieren · Geburtstag)",
+   "ما كلمات الطعام؟ (Schinken · Banane · Birne · Käse · Salat)"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "einladen",
+   "empfehlen"
+  ],
+  "grammarArsenalIds": [
+   "ars-perfekt",
+   "ars-trennbare",
+   "ars-perfekt-haben",
+   "ars-praesens-unregelm"
+  ],
+  "storySentenceIds": [
+   "story-a1-u13-s6"
+  ],
+  "dualCodingRequired": true,
+  "riskFlagsShown": []
+ },
+ "uebung": {
+  "stations": [
+   {
+    "type": "gap-fill",
+    "items": [
+     {
+      "q": "Wir haben am Samstag viel Fußball ___. (spielen — الماضي)",
+      "a": "gespielt",
+      "why": "Perfekt mit haben: gespielt (spielen قديم) · Fußball (d2) للفهم."
+     },
+     {
+      "q": "Ayşe hat keinen Schinken ___. (essen — الماضي)",
+      "a": "gegessen",
+      "why": "الصيغة الثالثة بعد hat: gegessen (essen قديم) · Schinken (d3) للفهم."
+     },
+     {
+      "q": "Die Party ___ super! (sein — الماضي)",
+      "a": "war",
+      "why": "war = كان (ars-perfekt: war/hatte) · Party (d1) للفهم."
+     },
+     {
+      "q": "Yusuf hat viele CDs und Kuchen ___. (kaufen — الماضي)",
+      "a": "gekauft",
+      "why": "ge- + الجذع + t: gekauft (kaufen قديم) · CDs (d2) للفهم."
+     },
+     {
+      "q": "Am Samstag stehe ich früh ___ und kaufe Bananen. (aufstehen)",
+      "a": "auf",
+      "why": "aufstehen منفصل: auf في الآخر (ars-trennbare) · Bananen (d3) للفهم."
+     },
+     {
+      "q": "Ich muss morgen früh für die Party Kuchen ___. (kaufen)",
+      "a": "kaufen",
+      "why": "بعد muss المصدر: kaufen · Party (d1) للفهم."
+     },
+     {
+      "q": "Ayşe ___ keinen Schinken. (essen)",
+      "a": "isst",
+      "why": "essen شاذ: sie isst — e ← i (ars-praesens-unregelm)."
+     },
+     {
+      "q": "Lena ___ die Speisekarte im Lokal. (lesen)",
+      "a": "liest",
+      "why": "lesen شاذ: sie liest — e ← ie · Lokal (d4) للفهم."
+     },
+     {
+      "q": "Nabil ist gestern mit dem Rad in den Park ___. (fahren — الماضي)",
+      "a": "gefahren",
+      "why": "fahren حركة ⇐ sein: ist gefahren · Rad (d2) للفهم."
+     },
+     {
+      "q": "Habt ihr die CDs schon ___? (hören — الماضي)",
+      "a": "gehört",
+      "why": "gehört (hören قديم) · CDs (d2) للفهم."
+     }
+    ],
+    "interleavedWith": [
+     "samstag",
+     "fussball",
+     "spielen",
+     "schinken",
+     "essen",
+     "party",
+     "cd",
+     "kuchen",
+     "kaufen",
+     "aufstehen",
+     "banane",
+     "speisekarte",
+     "lokal",
+     "lesen",
+     "rad",
+     "park",
+     "fahren",
+     "hoeren"
+    ]
+   },
+   {
+    "type": "listening",
+    "items": [
+     {
+      "audioId": "eb-3",
+      "speakText": "Für dich! Du hast bald Geburtstag — ich lade dich ein!",
+      "q": "لماذا يقيم يوسف حفلة؟",
+      "choices": [
+       "لعيد ميلاد لينا القريب",
+       "لعيد ميلاده هو",
+       "بلا سبب"
+      ],
+      "a": "لعيد ميلاد لينا القريب",
+      "why": "Du hast bald Geburtstag — ich lade dich ein — عيد ميلادها قريب وهو يدعوها."
+     },
+     {
+      "audioId": "eb-5",
+      "speakText": "Am Samstag, bei mir. Draußen im Garten!",
+      "q": "أين الحفلة؟",
+      "choices": [
+       "يوم السبت في الحديقة في الخارج",
+       "يوم الأحد في المقهى",
+       "يوم الجمعة في البيت"
+      ],
+      "a": "يوم السبت في الحديقة في الخارج",
+      "why": "Am Samstag, bei mir. Draußen im Garten — السبت في الحديقة في الخارج."
+     },
+     {
+      "audioId": "eb-7",
+      "speakText": "Ja! Und Salat mit Käse — aber ohne Schinken.",
+      "q": "ماذا في السلطة؟",
+      "choices": [
+       "جبن بلا شينكن",
+       "شينكن بلا جبن",
+       "سمك وبطاطا"
+      ],
+      "a": "جبن بلا شينكن",
+      "why": "Salat mit Käse — aber ohne Schinken — سلطة بالجبن بلا شينكن."
+     },
+     {
+      "audioId": "eb-8",
+      "speakText": "Gut — Ayşe isst keinen Schinken. Und Obst? Bananen?",
+      "q": "لماذا بلا شينكن؟",
+      "choices": [
+       "لأن عائشة لا تأكله",
+       "لأنه غالٍ",
+       "لأنه نفد"
+      ],
+      "a": "لأن عائشة لا تأكله",
+      "why": "Ayşe isst keinen Schinken — عائشة لا تأكل الشينكن."
+     },
+     {
+      "audioId": "eb-11",
+      "speakText": "Nabil und Ayşe — und meine Kollegen!",
+      "q": "من يأتي إلى الحفلة؟",
+      "choices": [
+       "نبيل وعائشة والزملاء",
+       "المدير وحده",
+       "الجيران فقط"
+      ],
+      "a": "نبيل وعائشة والزملاء",
+      "why": "Nabil und Ayşe — und meine Kollegen — نبيل وعائشة وزملاء التدريب."
+     },
+     {
+      "audioId": "eb-13",
+      "speakText": "Nein, der Chef hat keine Zeit. Aber das Praktikum ist super!",
+      "q": "هل يأتي المدير؟",
+      "choices": [
+       "لا، ليس عنده وقت",
+       "نعم، يأتي مع زوجته",
+       "نعم، يحضر الكعكة"
+      ],
+      "a": "لا، ليس عنده وقت",
+      "why": "der Chef hat keine Zeit — المدير مشغول؛ التدريب (Praktikum) رائع."
+     },
+     {
+      "audioId": "eb-15",
+      "speakText": "Ja! Und Ayşe empfiehlt Musik. Sie tanzt gern!",
+      "q": "من يختار الموسيقى؟",
+      "choices": [
+       "عائشة — عندها أقراص كثيرة",
+       "يوسف — يغني بنفسه",
+       "لينا — تعزف على البيانو"
+      ],
+      "a": "عائشة — عندها أقراص كثيرة",
+      "why": "Ayşe empfiehlt Musik — عائشة توصي بالموسيقى (وترقص بفرح: Sie tanzt gern!)."
+     },
+     {
+      "audioId": "eb-17",
+      "speakText": "Ja — und ich gratuliere dir am Samstag!",
+      "q": "ماذا يفعل يوسف يوم السبت؟",
+      "choices": [
+       "يهنئ لينا بعيد ميلادها",
+       "يسافر إلى تونس",
+       "يعمل في الشركة"
+      ],
+      "a": "يهنئ لينا بعيد ميلادها",
+      "why": "ich gratuliere dir am Samstag — يهنئها (gratulieren + Dativ) يوم السبت."
+     }
+    ],
+    "interleavedWith": [
+     "geburtstag",
+     "garten",
+     "draussen",
+     "kaese",
+     "salat",
+     "obst",
+     "banane",
+     "kollege",
+     "zeit",
+     "praktikum",
+     "musik",
+     "gratulieren",
+     "samstag",
+     "super"
+    ]
+   },
+   {
+    "type": "error-hunt",
+    "items": [
+     {
+      "q": "صحّح: ~~Wir haben mit dem Rad nach Berlin gefahren.~~",
+      "a": "Wir sind mit dem Rad nach Berlin gefahren.",
+      "why": "fahren حركة ⇐ sein (ars-perfekt) · mit dem Rad (d2) للفهم."
+     },
+     {
+      "q": "صحّح: ~~Ayşe hat keinen Schinken essen.~~",
+      "a": "Ayşe hat keinen Schinken gegessen.",
+      "why": "الصيغة الثالثة بعد hat: gegessen (ars-perfekt-haben)."
+     },
+     {
+      "q": "صحّح: ~~Am Samstag stehe ich früh und kaufe Bananen.~~",
+      "a": "Am Samstag stehe ich früh auf und kaufe Bananen.",
+      "why": "aufstehen منفصل: auf في الآخر (ars-trennbare)."
+     },
+     {
+      "q": "صحّح: ~~Ayşe esst keinen Schinken.~~",
+      "a": "Ayşe isst keinen Schinken.",
+      "why": "essen شاذ: sie isst — e ← i (ars-praesens-unregelm)."
+     },
+     {
+      "q": "صحّح: ~~Ich muss morgen früh für die Party aufstehe.~~",
+      "a": "Ich muss morgen früh für die Party aufstehen.",
+      "why": "بعد muss المصدر متصلاً: aufstehen (ars-trennbare)."
+     },
+     {
+      "q": "صحّح: ~~Zur Party trinke ich einen Wasser.~~",
+      "a": "Zur Party trinke ich ein Wasser.",
+      "why": "Wasser محايد (das) — ein Wasser · Party (d1) للفهم."
+     }
+    ],
+    "interleavedWith": [
+     "rad",
+     "fahren",
+     "schinken",
+     "essen",
+     "samstag",
+     "aufstehen",
+     "banane",
+     "party",
+     "wasser"
+    ]
+   },
+   {
+    "type": "dictation",
+    "items": [
+     {
+      "audioId": "eb-1",
+      "speakText": "Hallo, Lena! Ich habe eine Idee: eine Party!",
+      "a": "Hallo, Lena! Ich habe eine Idee: eine Party!",
+      "why": "Idee بـie ثم ee · Party بـP كبيرة وy في الآخر."
+     },
+     {
+      "audioId": "eb-6",
+      "speakText": "Super! Was grillen wir? Wurst? Fisch?",
+      "a": "Super! Was grillen wir? Wurst? Fisch?",
+      "why": "grillen بـll مزدوجة · Wurst بـW وst · Fisch بـsch."
+     },
+     {
+      "audioId": "eb-9",
+      "speakText": "Ja, Bananen und Birnen. Und was trinken wir?",
+      "a": "Ja, Bananen und Birnen. Und was trinken wir?",
+      "why": "Bananen بثلاث n · Birnen بـi · trinken بـnk."
+     },
+     {
+      "audioId": "eb-12",
+      "speakText": "Deine Kollegen? Ist der Chef auch da?",
+      "a": "Deine Kollegen? Ist der Chef auch da?",
+      "why": "Kollegen بـll وen · Chef بـCh تُنطق ش."
+     },
+     {
+      "audioId": "eb-16",
+      "speakText": "Gute Musik! Und Blumen für den Tisch?",
+      "a": "Gute Musik! Und Blumen für den Tisch?",
+      "why": "Musik بـs تُنطق ز · Blumen بـBl · Tisch بـsch."
+     },
+     {
+      "audioId": "eb-20",
+      "speakText": "Ja, ich komme! Bis Samstag!",
+      "a": "Ja, ich komme! Bis Samstag!",
+      "why": "komme بميمين · Bis بـB كبيرة أول الجملة وss."
+     }
+    ],
+    "interleavedWith": [
+     "idee",
+     "party",
+     "grillen",
+     "wurst",
+     "fisch",
+     "banane",
+     "birne",
+     "trinken",
+     "kollege",
+     "chef",
+     "musik",
+     "blume",
+     "tisch",
+     "kommen",
+     "samstag"
+    ]
+   }
+  ],
+  "communicativeTask": {
+   "goal": {
+    "de": "Lade Nabil zur Party ein und sag: Wann? Wo? Was essen wir? Was trinken wir? Wer kommt? — Am Samstag, bei mir, draußen im Garten. Salat ohne Schinken, Bananen und Birnen. Saft und Wasser. Nabil, Ayşe und die Kollegen.",
+    "ar": "ادعُ نبيل إلى الحفلة وأخبره: متى وأين وماذا نأكل ونشرب ومن يأتي — بالعربية أو بألمانية بسيطة من الحوار."
+   },
+   "situation": {
+    "de": "Du machst eine Party und schreibst Nabil: Komm am Samstag! Dann fragst du Ayşe: Was grillen wir?",
+    "ar": "تنظّم حفلة السبت: تكتب لنبيل «تعال السبت!» وتسأل عائشة «ماذا نشوي؟»."
+   },
+   "successCriteria": [
+    "يدعو إلى حفلة ويذكر اليوم والمكان (Samstag · draußen im Garten)",
+    "يذكر الطعام والضيوف من الوحدة (Schinken · Bananen · Kollegen)",
+    "ينتج ماضياً ومنفصلاً وشاذاً صحيحاً في القواعد القديمة (gekauft · stehe auf · isst)"
+   ]
+  }
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«Ich lade dich zur Party ein.» (einladen) — Was macht er?",
+      "choices": [
+       "يدعوه إلى الحفلة",
+       "يطرده من الحفلة",
+       "ينسى الحفلة"
+      ],
+      "a": "يدعوه إلى الحفلة",
+      "why": "lade … ein = يدعو (einladen منفصل)."
+     },
+     {
+      "q": "«Spielt ihr Fußball im Park?» — Wo spielen sie?",
+      "choices": [
+       "في الحديقة",
+       "في المسبح",
+       "في المقهى"
+      ],
+      "a": "في الحديقة",
+      "why": "im Park = في الحديقة."
+     },
+     {
+      "q": "«Ohne Schinken, bitte!» — Was will er?",
+      "choices": [
+       "سلطة بلا شينكن",
+       "شينكن بلا سلطة",
+       "جبن بلا خبز"
+      ],
+      "a": "سلطة بلا شينكن",
+      "why": "ohne Schinken = بلا شينكن."
+     },
+     {
+      "q": "«Was empfehlen Sie?» — Was fragt er?",
+      "choices": [
+       "بماذا تنصحون",
+       "كم السعر",
+       "أين الحمّام"
+      ],
+      "a": "بماذا تنصحون",
+      "why": "empfehlen = يوصي/ينصح."
+     },
+     {
+      "q": "«Der Drucker ist kaputt.» — Was ist kaputt?",
+      "choices": [
+       "الطابعة",
+       "الحاسوب",
+       "الهاتف"
+      ],
+      "a": "الطابعة",
+      "why": "Der Drucker = الطابعة؛ kaputt = معطّلة."
+     },
+     {
+      "q": "«Herzlich willkommen!» — Was sagt sie?",
+      "choices": [
+       "أهلاً وسهلاً من القلب",
+       "مع السلامة",
+       "عفواً"
+      ],
+      "a": "أهلاً وسهلاً من القلب",
+      "why": "Herzlich willkommen = أهلاً وسهلاً."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Ich gratuliere dir!» — Was macht er?",
+      "choices": [
+       "يهنئه",
+       "يودّعه",
+       "يعاتبه"
+      ],
+      "a": "يهنئه",
+      "why": "gratulieren (+ Dativ) = يهنئ."
+     },
+     {
+      "q": "«Sie hat viele CDs.» — Was hat sie?",
+      "choices": [
+       "أقراصاً كثيرة",
+       "كتباً كثيرة",
+       "صوراً كثيرة"
+      ],
+      "a": "أقراصاً كثيرة",
+      "why": "viele CDs = أقراص مدمجة كثيرة."
+     },
+     {
+      "q": "«Bananen und Birnen.» — Was kauft er?",
+      "choices": [
+       "موزاً وكمّثرى",
+       "تفاحاً وبرتقالاً",
+       "عنباً وتمراً"
+      ],
+      "a": "موزاً وكمّثرى",
+      "why": "Bananen = موز؛ Birnen = كمّثرى."
+     },
+     {
+      "q": "«Wir grillen im Garten.» — Was machen sie?",
+      "choices": [
+       "يشوون في الحديقة",
+       "يطبخون في المطبخ",
+       "يأكلون في المطعم"
+      ],
+      "a": "يشوون في الحديقة",
+      "why": "grillen = يشوي."
+     },
+     {
+      "q": "«Meine Mutter ist Hausfrau.» — Wer ist Hausfrau?",
+      "choices": [
+       "أمّه",
+       "أخته",
+       "جدّته"
+      ],
+      "a": "أمّه",
+      "why": "Hausfrau = ربّة بيت؛ Mutter = أم."
+     },
+     {
+      "q": "«Der Kuchen schmeckt gut.» — Wie schmeckt der Kuchen?",
+      "choices": [
+       "طعمه طيب",
+       "طعمه مرّ",
+       "طعمه مالح"
+      ],
+      "a": "طعمه طيب",
+      "why": "schmeckt gut = طعمه طيب."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Du hast bald Geburtstag.» — Wann hat sie Geburtstag?",
+      "choices": [
+       "قريباً",
+       "أمس",
+       "العام الماضي"
+      ],
+      "a": "قريباً",
+      "why": "bald = قريباً؛ Geburtstag = عيد ميلاد."
+     },
+     {
+      "q": "«Ayşe hört Musik.» — Was macht Ayşe?",
+      "choices": [
+       "تستمع إلى الموسيقى",
+       "تعزف الموسيقى",
+       "تشتري الموسيقى"
+      ],
+      "a": "تستمع إلى الموسيقى",
+      "why": "hört Musik = تستمع إلى الموسيقى (hören قديم)."
+     },
+     {
+      "q": "«Ayşe isst keinen Schinken.» — Was isst Ayşe nicht?",
+      "choices": [
+       "الشينكن",
+       "الجبن",
+       "الخبز"
+      ],
+      "a": "الشينكن",
+      "why": "keinen Schinken = لا شينكن."
+     },
+     {
+      "q": "«Kaffee und Kuchen, bitte!» — Was bestellt er?",
+      "choices": [
+       "قهوة وكعكة",
+       "شاياً وحليباً",
+       "عصيراً وماءً"
+      ],
+      "a": "قهوة وكعكة",
+      "why": "Kaffee und Kuchen = قهوة وكعكة."
+     },
+     {
+      "q": "«Unser Chef hat keine Zeit.» — Hat der Chef Zeit?",
+      "choices": [
+       "لا، هو مشغول",
+       "نعم، عنده وقت",
+       "نعم، هو في عطلة"
+      ],
+      "a": "لا، هو مشغول",
+      "why": "keine Zeit = لا وقت؛ المدير (Chef) مشغول."
+     },
+     {
+      "q": "«Bis Samstag!» — Was sagt sie?",
+      "choices": [
+       "إلى اللقاء يوم السبت",
+       "صباح الخير",
+       "تصبح على خير"
+      ],
+      "a": "إلى اللقاء يوم السبت",
+      "why": "Bis Samstag! = إلى السبت!"
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Woche dreizehn ist zu Ende: Yusuf macht eine Party am Samstag — draußen im Garten! Die Einladung ist für Lena. Er gratuliert ihr am Samstag. Es gibt Salat ohne Schinken, Bananen und Birnen, Saft und Wasser. Nabil, Ayşe und die Kollegen kommen — der Chef hat keine Zeit. Ayşe empfiehlt Musik.",
+   "ar": "توليف الوحدة 13 (74 رأساً للفهم): الدعوة والحفلة والطعام والمقهى والعمل — تفهم ولا تُنتج كلمات الوحدة؛ والإنتاج للقواعد القديمة (الماضي بـsein/haben · المنفصل · الشاذ e→ie)."
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "de": "~~Ich lade dich zur Party.~~",
+     "ar": "einladen منفصل: ein في آخر الجملة — لا تنسها."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «أدعوك» فعل واحد متصل فينسى المتعلم ein. القاعدة (ars-trennbare): lade … ein — الجزء في الآخر دائماً.",
+    "correct": {
+     "de": "Ich lade dich zur Party ein.",
+     "ar": "أدعوك إلى الحفلة."
+    },
+    "exercise": {
+     "q": "Ich lade dich zur Party ___. (ein / aus)",
+     "a": "ein"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Was empfehlt Ayşe?~~",
+     "ar": "empfehlen شاذ: e ← ie مع du وer/sie — empfehlt تصريف منتظم خاطئ."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية تصرّف بانتظام (توصي/يوصي) فيطبّق المتعلم empfehlen بانتظام: empfehlt. القاعدة (ars-praesens-unregelm): er empfiehlt — احفظ ie.",
+    "correct": {
+     "de": "Was empfiehlt Ayşe? · Ayşe empfiehlt Musik.",
+     "ar": "بماذا توصي عائشة؟ · عائشة توصي بالموسيقى."
+    },
+    "exercise": {
+     "q": "Ayşe ___ die Musik. (empfiehlt / kocht)",
+     "a": "empfiehlt"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Ich gratuliere dich.~~",
+     "ar": "gratulieren تأخذ Dativ: dir — لا dich."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «أهنئك» بلا حالة ظاهرة، والألمانية تفرض Dativ مع gratulieren (كـdanken وhelfen): dich تنقلب إلى dir.",
+    "correct": {
+     "de": "Ich gratuliere dir am Samstag.",
+     "ar": "أهنئك يوم السبت."
+    },
+    "exercise": {
+     "q": "Ich gratuliere ___ am Samstag. (dir / dich)",
+     "a": "dir"
+    }
+   }
+  ],
+  "srsBundleWordIds": [
+   "einladen",
+   "empfehlen"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-perfekt",
+  "ars-trennbare",
+  "ars-perfekt-haben",
+  "ars-praesens-unregelm"
+ ],
+ "audioManifestRefs": [
+  "word-einladen",
+  "word-empfehlen"
+ ],
+ "imageManifestRefs": [],
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/einladen",
+   "https://www.duden.de/rechtschreibung/empfehlen"
+  ],
+  "wiktionary": [
+   "https://de.wiktionary.org/wiki/gratulieren"
+  ],
+  "goethe": []
+ },
+ "curriculumRef": {
+  "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Party · Essen · Arbeit) — توليف الوحدة 13 (D113)",
+  "goetheWordListOverlap": []
+ }
+}
