@@ -37,17 +37,17 @@ describe("tools/dev — N-104: أدوات الفحص لا تضيع مع الصن
   });
 });
 
-describe("D182 — سرعة الكلام: لا سطر منشور فوق 200 كلمة/دقيقة (≥3 كلمات)", () => {
-  it("speech-rate.py --json: المقيس كل المسارات ذات النص · المعلَّم صفر", () => {
+describe("D182/D214 — سرعة الكلام ناعمة (report-only): العتبة 200 تُبلَّغ ولا توقف — وكل معلَّم مذكور في DECISIONS.md", () => {
+  it("speech-rate.py --json: المقيس كل المسارات ذات النص · المعلَّم يُطبَع ويُذكَر في القرارات (D214: ناعم بأمر المالك D185 — لا ضبط ولا إعادة)", () => {
     const out = execFileSync("python3", ["tools/dev/speech-rate.py", "--json"], { cwd: ROOT, encoding: "utf8" });
     const r = JSON.parse(out) as { threshold: number; minWords: number; measured: number; flagged: { id: string; wpm: number }[]; byRole: Record<string, { tracks: number; meanWpm: number; max: number }> };
     expect(r.threshold).toBe(200);
     expect(r.minWords).toBe(3);
     expect(r.measured).toBeGreaterThan(2000);
-    expect(r.flagged.map((f) => `${f.id} ${f.wpm}`)).toEqual([]);
     expect(r.byRole.dialogue!.tracks).toBeGreaterThan(1000);
-    expect(r.byRole.dialogue!.max).toBeLessThanOrEqual(200);
-    expect(r.byRole.word!.max).toBeLessThanOrEqual(200);
+    console.log("flagged:", JSON.stringify(r.flagged.map((f) => `${f.id} ${f.wpm}`)));
+    const log = readFileSync(join(ROOT, "DECISIONS.md"), "utf8");
+    for (const f of r.flagged) expect(log, f.id).toContain(f.id);
   });
 
   it("الأسطر المُبطَأة بـlengthScale خاص بالسطر مسجَّلة في المانيفست بالقيمة نفسها — ولا سطر أسرع من سكربته", () => {
@@ -101,10 +101,10 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
   });
   it("gate.ts --quick --json: كل خطوة لها معرّف وملخّص ورقم · التقرير بثلاثة أسطر", () => {
     const out = execFileSync("npx", ["tsx", "tools/dev/gate.ts", "--quick", "--json", "--did", "اختبار"], { cwd: ROOT, encoding: "utf8", timeout: 300_000 });
-    const r = JSON.parse(out) as { ok: boolean; quick: boolean; results: { id: string; ok: boolean; summary: string }[]; report: string };
+    const r = JSON.parse(out) as { ok: boolean; quick: boolean; results: { id: string; ok: boolean; soft: boolean; summary: string }[]; report: string };
     expect(r.quick).toBe(true);
     expect(r.results.map((x) => x.id)).toEqual(["tsc", "validate", "docs", "notes", "audit", "lexicon", "speech"]); // lexicon من D197
-    expect(r.results.filter((x) => !x.ok)).toEqual([]);
+    expect(r.results.filter((x) => !x.ok && !x.soft)).toEqual([]); // D214: الناعم (speech) يُبلَّغ ولا يوقف — كمنطق البوابة نفسها
     expect(r.report.split("\n")).toHaveLength(3);
     expect(r.report).toContain("1. **ما نُفّذ:** اختبار");
     expect(r.report).toContain("3. **ما ينكسر:**");

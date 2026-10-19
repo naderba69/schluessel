@@ -1267,6 +1267,21 @@ def build_all() -> None:
     ("word-vorsicht", "die Vorsicht.", "vorsicht", ["a1-u14-d4"]),
     ("word-praxis", "die Praxis.", "praxis", ["a1-u14-d4"]),
     ("word-automatisch", "automatisch.", "automatisch", ["a1-u14-d4"]),
+    ("word-umziehen", "umziehen.", "umziehen", ["a1-u14-d5"]),
+    ("word-ausziehen", "ausziehen.", "ausziehen", ["a1-u14-d5"]),
+    ("word-vermieten", "vermieten.", "vermieten", ["a1-u14-d5"]),
+    ("word-vermieter", "der Vermieter.", "vermieter", ["a1-u14-d5"]),
+    ("word-stock", "der Stock.", "stock", ["a1-u14-d5"]),
+    ("word-reparieren", "reparieren.", "reparieren", ["a1-u14-d5"]),
+    ("word-reparatur", "die Reparatur.", "reparatur", ["a1-u14-d5"]),
+    ("word-ordnung", "die Ordnung.", "ordnung", ["a1-u14-d5"]),
+    ("word-kuemmern", "sich kümmern.", "kuemmern", ["a1-u14-d5"]),
+    ("word-pruefung", "die Prüfung.", "pruefung", ["a1-u14-d5"]),
+    ("word-test", "der Test.", "test", ["a1-u14-d5"]),
+    ("word-aussage", "die Aussage.", "aussage", ["a1-u14-d5"]),
+    ("word-ankreuzen", "ankreuzen.", "ankreuzen", ["a1-u14-d5"]),
+    ("word-bogen", "der Bogen.", "bogen", ["a1-u14-d5"]),
+    ("word-abgeben", "abgeben.", "abgeben", ["a1-u14-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

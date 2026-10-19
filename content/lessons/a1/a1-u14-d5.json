@@ -1,0 +1,721 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "a1-u14-d5",
+ "level": "A1",
+ "unit": 14,
+ "day": 5,
+ "kind": "content",
+ "ziel": {
+  "de": "Du ziehst um in ein Apartment: Du verstehst: Vermieter und Stock · reparieren und Reparatur · Ordnung · sich kümmern · Prüfung und Test · Aussage · ankreuzen · Bogen · abgeben!",
+  "ar": "الانتقال… ثم الامتحان (تكملة SD1 للفهم — بلا تاريخ): تفهم السكن والامتحان: الانتقال من السكن · المؤجر والطابق · التصليح والنظام · الاعتناء · الامتحان والاختبار · العبارة والعلامة والورقة والتسليم — ولا يُطلب منك إنتاج هذه الكلمات."
+ },
+ "canDoDaily": [
+  "يفهم إجراءات السكن (Vermieter · Stock · Ordnung) والامتحان (Test · Aussage · Bogen).",
+  "يفصل الأفعال المنفصلة (zieht … um · gibt … ab) ويستعمل sich مع kümmern."
+ ],
+ "warmup": {
+  "cardIds": [
+   "apartment",
+   "auto",
+   "falsch"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "de": "«Gib den Bogen ab» — ماذا يطلب؟ (تخمين فقط)"
+    },
+    "choices": [
+     "أن يُسلّم الورقة",
+     "أن يمزق الورقة",
+     "أن يقرأ الورقة"
+    ],
+    "answer": "أن يُسلّم الورقة",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "de": "«Kreuz an!» — ماذا يطلب؟ (تخمين فقط)"
+    },
+    "choices": [
+     "أن يضع علامة",
+     "أن يجلس",
+     "أن يخرج"
+    ],
+    "answer": "أن يضع علامة",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "ما كلمات السكن؟ (umziehen · ausziehen · Vermieter · Stock · Ordnung)",
+   "ما كلمات الامتحان؟ (Prüfung · Test · Aussage · Bogen · abgeben)"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "umziehen",
+   "ausziehen",
+   "vermieten",
+   "vermieter",
+   "stock",
+   "reparieren",
+   "reparatur",
+   "ordnung",
+   "kuemmern",
+   "pruefung",
+   "test",
+   "aussage",
+   "ankreuzen",
+   "bogen",
+   "abgeben"
+  ],
+  "grammarArsenalIds": [
+   "ars-trennbare"
+  ],
+  "storySentenceIds": [
+   "story-a1-u14-s5"
+  ],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "double-consonant",
+   "ng-velar",
+   "r-uvular",
+   "sp-st-initial",
+   "umlaut-u",
+   "v-f",
+   "vowel-long-short",
+   "z"
+  ]
+ },
+ "uebung": {
+  "stations": [
+   {
+    "type": "reading",
+    "items": [
+     {
+      "text": "Lena, ich ziehe um! Du ziehst aus?",
+      "q": "Wer zieht um?",
+      "choices": [
+       "Yusuf",
+       "Lena",
+       "der Vermieter"
+      ],
+      "a": "Yusuf",
+      "why": "Ich ziehe um — أنا أنتقل (umziehen منفصل: ziehe … um)."
+     },
+     {
+      "text": "Der Vermieter vermietet. Die Ordnung ist gut!",
+      "q": "Wer vermietet?",
+      "choices": [
+       "der Vermieter",
+       "der Fahrer",
+       "der Lehrer"
+      ],
+      "a": "der Vermieter",
+      "why": "Der Vermieter vermietet — المؤجر يؤجر (Ordnung = نظام)."
+     },
+     {
+      "text": "Das Apartment ist neu. Im Stock drei!",
+      "q": "Wo ist das Apartment?",
+      "choices": [
+       "im Stock drei",
+       "im Kino",
+       "im Park"
+      ],
+      "a": "im Stock drei",
+      "why": "Im Stock drei — في الطابق الثالث (der Stock = الطابق)."
+     },
+     {
+      "text": "Kümmere dich um die Ordnung!",
+      "q": "Was soll er machen?",
+      "choices": [
+       "sich um die Ordnung kümmern",
+       "das Auto reparieren",
+       "den Test abgeben"
+      ],
+      "a": "sich um die Ordnung kümmern",
+      "why": "Kümmere dich — اعتنِ (sich kümmern انعكاسي: sich لا تسقط!)."
+     },
+     {
+      "text": "Die Reparatur? Wer repariert das Auto?",
+      "q": "Was repariert er?",
+      "choices": [
+       "das Auto",
+       "das Fahrrad",
+       "der Lkw"
+      ],
+      "a": "das Auto",
+      "why": "Wer repariert das Auto — من يصلح السيارة (Reparatur = تصليح)."
+     },
+     {
+      "text": "Da! Ein Bogen: Kreuz an!",
+      "q": "Was soll er machen?",
+      "choices": [
+       "ankreuzen",
+       "abgeben",
+       "umziehen"
+      ],
+      "a": "ankreuzen",
+      "why": "Kreuz an — ضع علامة (ankreuzen منفصل: kreuz … an)."
+     },
+     {
+      "text": "Gib den Bogen ab! Schnell!",
+      "q": "Was gibt er ab?",
+      "choices": [
+       "den Bogen",
+       "den Test",
+       "den Brief"
+      ],
+      "a": "den Bogen",
+      "why": "Gib den Bogen ab — سلم الورقة (abgeben منفصل!)."
+     }
+    ],
+    "interleavedWith": [
+     "auto",
+     "kino",
+     "park",
+     "lehrer",
+     "fahrrad",
+     "brief"
+    ]
+   },
+   {
+    "type": "listening",
+    "items": [
+     {
+      "audioId": "fc-2",
+      "speakText": "Ja! Du ziehst aus?",
+      "q": "هل ينتقل يوسف من السكن؟",
+      "choices": [
+       "نعم، ينتقل",
+       "لا، يبقى",
+       "لا، يسافر بعيداً"
+      ],
+      "a": "نعم، ينتقل",
+      "why": "Du ziehst aus — أنت تنتقل من السكن (ausziehen منفصل!)."
+     },
+     {
+      "audioId": "fc-4",
+      "speakText": "Das Apartment ist neu. Im Stock drei!",
+      "q": "أين الشقة؟",
+      "choices": [
+       "في الطابق الثالث",
+       "في الطابق الأرضي",
+       "في القرية"
+      ],
+      "a": "في الطابق الثالث",
+      "why": "Im Stock drei — في الطابق الثالث (das Apartment = الشقة)."
+     },
+     {
+      "audioId": "fc-6",
+      "speakText": "Die Reparatur? Wer repariert das Auto?",
+      "q": "ماذا يحتاج يوسف؟",
+      "choices": [
+       "تصليح السيارة",
+       "سيارة جديدة",
+       "سائق جديد"
+      ],
+      "a": "تصليح السيارة",
+      "why": "Wer repariert das Auto — من يصلح السيارة (Reparatur = تصليح)."
+     },
+     {
+      "audioId": "fc-8",
+      "speakText": "Da! Ein Bogen: Kreuz an!",
+      "q": "ماذا تفعل لينا بالورقة؟",
+      "choices": [
+       "تضع علامة عليها",
+       "تمزقها وترميها",
+       "تقرأها بصوت عالٍ"
+      ],
+      "a": "تضع علامة عليها",
+      "why": "Kreuz an — ضعي علامة (der Bogen = الورقة)."
+     },
+     {
+      "audioId": "fc-11",
+      "speakText": "Wo ist der Test? Da ist der Bogen!",
+      "q": "أين يجد يوسف الاختبار؟",
+      "choices": [
+       "الورقة هناك",
+       "في جيبه",
+       "عند المعلم"
+      ],
+      "a": "الورقة هناك",
+      "why": "Da ist der Bogen — الورقة هناك (der Test = الاختبار)."
+     },
+     {
+      "audioId": "fc-13",
+      "speakText": "Gib den Bogen ab! Schnell!",
+      "q": "ماذا يطلب يوسف؟",
+      "choices": [
+       "تسليم الورقة بسرعة",
+       "تمزيق الورقة",
+       "نسخ الورقة"
+      ],
+      "a": "تسليم الورقة بسرعة",
+      "why": "Gib den Bogen ab — سلم الورقة (schnell = بسرعة)."
+     },
+     {
+      "audioId": "fc-17",
+      "speakText": "Mein Test! Wo ist mein Test?",
+      "q": "ما مشكلة يوسف؟",
+      "choices": [
+       "لا يجد اختباره",
+       "لا يجد نقوده",
+       "لا يجد هاتفه"
+      ],
+      "a": "لا يجد اختباره",
+      "why": "Wo ist mein Test — أين اختباري (suchen = يبحث)."
+     }
+    ],
+    "interleavedWith": [
+     "neu",
+     "auto",
+     "da",
+     "schnell"
+    ]
+   },
+   {
+    "type": "match",
+    "items": [
+     {
+      "pairs": [
+       {
+        "de": "umziehen",
+        "ar": "ينتقل إلى سكن جديد"
+       },
+       {
+        "de": "ausziehen",
+        "ar": "يغادر السكن"
+       },
+       {
+        "de": "vermieten",
+        "ar": "يؤجّر"
+       },
+       {
+        "de": "der Vermieter",
+        "ar": "المؤجّر"
+       },
+       {
+        "de": "der Stock",
+        "ar": "طابق"
+       }
+      ],
+      "why": "السكن: umziehen ينتقل (ist umgezogen!) · ausziehen يغادر (ist!) · vermieten يؤجر · Vermieter مؤجر · Stock طابق."
+     },
+     {
+      "pairs": [
+       {
+        "de": "reparieren",
+        "ar": "يُصلح"
+       },
+       {
+        "de": "die Reparatur",
+        "ar": "تصليح"
+       },
+       {
+        "de": "die Ordnung",
+        "ar": "نظام"
+       },
+       {
+        "de": "sich kümmern",
+        "ar": "يعتني"
+       },
+       {
+        "de": "die Prüfung",
+        "ar": "امتحان"
+       }
+      ],
+      "why": "البيت والامتحان: reparieren يصلح · Reparatur تصليح · Ordnung نظام · sich kümmern يعتني (sich!) · Prüfung امتحان."
+     },
+     {
+      "pairs": [
+       {
+        "de": "der Test",
+        "ar": "اختبار"
+       },
+       {
+        "de": "die Aussage",
+        "ar": "عبارة"
+       },
+       {
+        "de": "ankreuzen",
+        "ar": "يضع علامة"
+       },
+       {
+        "de": "der Bogen",
+        "ar": "ورقة"
+       },
+       {
+        "de": "abgeben",
+        "ar": "يُسلّم"
+       }
+      ],
+      "why": "الورقة: Test اختبار · Aussage عبارة (جمعها Aussagen!) · ankreuzen يضع علامة (منفصل!) · Bogen ورقة · abgeben يسلم (gibt ab!)."
+     }
+    ]
+   },
+   {
+    "type": "dictation",
+    "items": [
+     {
+      "audioId": "fc-3",
+      "speakText": "Der Vermieter vermietet. Die Ordnung ist gut!",
+      "a": "Der Vermieter vermietet. Die Ordnung ist gut!",
+      "why": "Vermieter بـV تُنطق f وie طويلة · vermietet بـt مزدوجة · Ordnung بـng."
+     },
+     {
+      "audioId": "fc-9",
+      "speakText": "Die Aussage ist falsch. Lies noch mal!",
+      "a": "Die Aussage ist falsch. Lies noch mal!",
+      "why": "Aussage بـAu وss · falsch بـf وsch · Lies بـie · noch بـch."
+     },
+     {
+      "audioId": "fc-14",
+      "speakText": "Da! Die Ordnung ist gut!",
+      "a": "Da! Die Ordnung ist gut!",
+      "why": "Da بـD كبيرة · Ordnung بـng · gut بـg."
+     },
+     {
+      "audioId": "fc-20",
+      "speakText": "Gern! Tschüss, Yusuf!",
+      "a": "Gern! Tschüss, Yusuf!",
+      "why": "Gern بـG وr · Tschüss بـtsch وss · Yusuf."
+     }
+    ],
+    "interleavedWith": [
+     "gut",
+     "falsch",
+     "da",
+     "gern",
+     "tschuess"
+    ]
+   }
+  ],
+  "communicativeTask": {
+   "goal": {
+    "de": "Du ziehst um: Such das Apartment! Kreuz die Aussage an! Gib den Test ab! Wann ist die Prüfung?",
+    "ar": "أنت تنتقل: ابحث عن الشقة! ضع علامة على العبارة! سلم الاختبار! متى الامتحان؟"
+   },
+   "situation": {
+    "de": "Du bist im Apartment. Der Vermieter wartet. Schnell: Bogen, Test, Prüfung!",
+    "ar": "أنت في الشقة والمؤجر ينتظر: بسرعة — الورقة والاختبار والامتحان!"
+   },
+   "successCriteria": [
+    "يذكر عناصر الانتقال الثلاثة (Bogen · Test · Prüfung) في مواضعها",
+    "يفصل الأفعال المنفصلة (zieht … um · kreuzt … an · gibt … ab)",
+    "يستعمل sich مع kümmern (kümmert sich)"
+   ]
+  }
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«Ich ziehe um!» — Was macht er?",
+      "choices": [
+       "ينتقل لسكن جديد",
+       "يبقى في مكانه",
+       "يسافر للخارج"
+      ],
+      "a": "ينتقل لسكن جديد",
+      "why": "Ich ziehe um = أنا أنتقل (umziehen منفصل!)."
+     },
+     {
+      "q": "«Du ziehst aus?» — Was will sie?",
+      "choices": [
+       "هل يغادر السكن",
+       "هل يشتري بيتاً",
+       "هل يزور الجدة"
+      ],
+      "a": "هل يغادر السكن",
+      "why": "Du ziehst aus = أنت تغادر السكن (ausziehen = يغادر)."
+     },
+     {
+      "q": "«Der Vermieter vermietet.» — Wer vermietet?",
+      "choices": [
+       "صاحب البيت",
+       "السمسار",
+       "الجار"
+      ],
+      "a": "صاحب البيت",
+      "why": "Der Vermieter = المؤجر (vermieten = يؤجر)."
+     },
+     {
+      "q": "«Im Stock drei!» — Wo ist das Apartment?",
+      "choices": [
+       "في الدور الثالث",
+       "في الدور الأول",
+       "في القبو"
+      ],
+      "a": "في الدور الثالث",
+      "why": "Im Stock drei = في الطابق الثالث (der Stock = الطابق)."
+     },
+     {
+      "q": "«Kümmere dich um die Ordnung!» — Was soll er machen?",
+      "choices": [
+       "يعتني بالنظام",
+       "يكسر النظام",
+       "يتجاهل النظام"
+      ],
+      "a": "يعتني بالنظام",
+      "why": "Kümmere dich = اعتنِ (sich kümmern = يعتني)."
+     },
+     {
+      "q": "«Wer repariert das Auto?» — Was will sie?",
+      "choices": [
+       "من يُصلح السيارة",
+       "من يشتري السيارة",
+       "من يقود السيارة"
+      ],
+      "a": "من يُصلح السيارة",
+      "why": "Wer repariert = من يصلح (das Auto = السيارة)."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Der Test ist bald.» — Wann ist der Test?",
+      "choices": [
+       "بعد قليل",
+       "أمس",
+       "السنة الماضية"
+      ],
+      "a": "بعد قليل",
+      "why": "bald = قريباً (der Test = الاختبار)."
+     },
+     {
+      "q": "«Da! Ein Bogen!» — Was ist da?",
+      "choices": [
+       "ورقة اختبار",
+       "ساعة حائط",
+       "خريطة ورقية"
+      ],
+      "a": "ورقة اختبار",
+      "why": "Ein Bogen = ورقة (da = هناك)."
+     },
+     {
+      "q": "«Kreuz an!» — Was soll er machen?",
+      "choices": [
+       "يضع إشارة صح",
+       "يمزق الورقة",
+       "يخفي الورقة"
+      ],
+      "a": "يضع إشارة صح",
+      "why": "Kreuz an = ضع علامة (ankreuzen = يضع علامة)."
+     },
+     {
+      "q": "«Die Aussage ist falsch.» — Wie ist die Aussage?",
+      "choices": [
+       "غير صحيحة",
+       "صحيحة تماماً",
+       "نصف صحيحة"
+      ],
+      "a": "غير صحيحة",
+      "why": "falsch = خاطئة (die Aussage = العبارة)."
+     },
+     {
+      "q": "«Gib den Bogen ab!» — Was soll er machen?",
+      "choices": [
+       "يُسلّم الورقة",
+       "يحتفظ بالورقة",
+       "ينسخ الورقة"
+      ],
+      "a": "يُسلّم الورقة",
+      "why": "Gib den Bogen ab = سلم الورقة (abgeben = يسلم)."
+     },
+     {
+      "q": "«Lies noch mal!» — Was soll er machen?",
+      "choices": [
+       "يقرأ مرة أخرى",
+       "يكتب مرة أخرى",
+       "يرسم مرة أخرى"
+      ],
+      "a": "يقرأ مرة أخرى",
+      "why": "Lies noch mal = اقرأ مرة أخرى (lesen = يقرأ)."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Die Prüfung ist bald!» — Was ist bald?",
+      "choices": [
+       "الامتحان الكبير",
+       "العطلة الصيفية",
+       "الرحلة المدرسية"
+      ],
+      "a": "الامتحان الكبير",
+      "why": "Die Prüfung ist bald = الامتحان قريب."
+     },
+     {
+      "q": "«Wo ist der Test?» — Was sucht er?",
+      "choices": [
+       "مكان الاختبار",
+       "مكان الحفلة",
+       "مكان الاجتماع"
+      ],
+      "a": "مكان الاختبار",
+      "why": "der Test = الاختبار (suchen = يبحث)."
+     },
+     {
+      "q": "«Wann gibst du ab?» — Was will sie?",
+      "choices": [
+       "متى يُسلّم",
+       "أين يسكن",
+       "ماذا يأكل"
+      ],
+      "a": "متى يُسلّم",
+      "why": "Wann gibst du ab = متى تسلم (abgeben = يسلم)."
+     },
+     {
+      "q": "«Mein Test! Wo ist mein Test?» — Was sucht er?",
+      "choices": [
+       "اختباره الخاص",
+       "حقيبته الخاصة",
+       "دراجته الخاصة"
+      ],
+      "a": "اختباره الخاص",
+      "why": "mein Test = اختباري (suchen = يبحث)."
+     },
+     {
+      "q": "«Danke, Lena! Bis bald!» — Was sagt er?",
+      "choices": [
+       "شكراً وإلى اللقاء",
+       "صباح الخير",
+       "ليلة سعيدة"
+      ],
+      "a": "شكراً وإلى اللقاء",
+      "why": "Danke, bis bald = شكراً، إلى اللقاء (sagen = يقول)."
+     },
+     {
+      "q": "«Gern! Tschüss, Yusuf!» — Was sagt sie?",
+      "choices": [
+       "عفواً ووداعاً",
+       "أهلاً وسهلاً",
+       "حظاً سعيداً"
+      ],
+      "a": "عفواً ووداعاً",
+      "why": "Gern, Tschüss = عفواً، وداعاً."
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Yusuf zieht um: Vermieter und Stock · Reparatur am Auto · Ordnung ist gut · Test und Prüfung · Aussage ankreuzen · Bogen abgeben. Viel Glück, Yusuf!",
+   "ar": "الانتقال والامتحان (15 رأساً للفهم): السكن والامتحان — تفهم ولا تُنتج؛ والقاعدة: الأفعال المنفصلة (zieht … um · gibt … ab)."
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "de": "~~Ich umziehe bald.~~",
+     "ar": "umziehen منفصل: um في آخر الجملة — لا تلصقها بالفعل."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «ينتقل» فعل واحد متصل فيلصق المتعلم um بالفعل. القاعدة (ars-trennbare): Ich ziehe bald um — الجزء في الآخر دائماً.",
+    "correct": {
+     "de": "Ich ziehe bald um.",
+     "ar": "أنتقل قريباً."
+    },
+    "exercise": {
+     "q": "Ich ziehe bald ___. (um / aus)",
+     "a": "um"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Ich kümmere die Ordnung.~~",
+     "ar": "kümmern انعكاسي: sich/mich جزء من الفعل — لا تسقطها."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «يعتني» بلا ضمير منعكس ظاهر فيسقط المتعلم sich. القاعدة: sich kümmern — Ich kümmere mich (mich مع ich · dich مع du).",
+    "correct": {
+     "de": "Ich kümmere mich um die Ordnung.",
+     "ar": "أعتني بالنظام."
+    },
+    "exercise": {
+     "q": "Ich kümmere ___ um die Ordnung. (mich / dich)",
+     "a": "mich"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Ich ankreuze die Aussage.~~",
+     "ar": "ankreuzen منفصل: an في آخر الجملة — لا تلصقها."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: بعد umziehen يعمّم المتعلم اللصق على كل فعل ببادئة. القاعدة (ars-trennbare): Ich kreuze die Aussage an — الجزء في الآخر دائماً.",
+    "correct": {
+     "de": "Ich kreuze die Aussage an.",
+     "ar": "أضع علامة على العبارة."
+    },
+    "exercise": {
+     "q": "Ich kreuze die Aussage ___. (an / ab)",
+     "a": "an"
+    }
+   }
+  ],
+  "srsBundleWordIds": [
+   "umziehen",
+   "ausziehen",
+   "vermieten",
+   "vermieter",
+   "stock",
+   "reparieren",
+   "reparatur",
+   "ordnung",
+   "kuemmern",
+   "pruefung",
+   "test",
+   "aussage",
+   "ankreuzen",
+   "bogen",
+   "abgeben"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-trennbare"
+ ],
+ "audioManifestRefs": [
+  "word-umziehen",
+  "word-ausziehen",
+  "word-vermieten",
+  "word-vermieter",
+  "word-stock",
+  "word-reparieren",
+  "word-reparatur",
+  "word-ordnung",
+  "word-kuemmern",
+  "word-pruefung",
+  "word-test",
+  "word-aussage",
+  "word-ankreuzen",
+  "word-bogen",
+  "word-abgeben"
+ ],
+ "imageManifestRefs": [],
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Wohnung",
+   "https://www.duden.de/rechtschreibung/Pruefung"
+  ],
+  "wiktionary": [
+   "https://de.wiktionary.org/wiki/umziehen"
+  ],
+  "goethe": []
+ },
+ "curriculumRef": {
+  "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Apartment · Auto · Falsch) — الدرس الخامس من الوحدة 14 (D113)",
+  "goetheWordListOverlap": []
+ }
+}

@@ -33,6 +33,8 @@ export interface ContentEntry {
 export interface ValidationReport {
   errors: Issue[];
   warnings: Issue[];
+  /** D214: بلاغات ناعمة (report-only) — تُطبع ولا تُحسب ولا توقف البوابة */
+  notes: Issue[];
   fileCount: number;
 }
 
@@ -99,6 +101,7 @@ export function probeAudioFiles(files: readonly string[]): Map<string, { duratio
 export function validateContentTree(entries: ContentEntry[], opts: { contentRoot?: string } = {}): ValidationReport {
   const errors: Issue[] = [];
   const warnings: Issue[] = [];
+  const notes: Issue[] = [];
   const push = (level: "error" | "warning", code: string, path: string, message: string) =>
     (level === "error" ? errors : warnings).push({ level, code, path, message });
 
@@ -193,13 +196,14 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
               } catch {
                 push("error", "e-audio-missing", entry.path, `تعذّر تحليل الملف الصوتي: ${t.file}`);
               }
+              // D214: حارس السرعة ناعم (report-only) تنفيذاً لأمر المالك (D185: لا ضبط lengthScale ولا إعادة توليد) — كان warning يوقف البوابة وينصح بما مُنع
               // D184 (Q24/Q25 — بأمر المالك): حارس السرعة الآلي — مساعد الأذن البشرية قبل الإطلاق، لا بديلها (الحدّ 200 كلمة/دقيقة · ≥3 كلمات — speech-rate.py نفسه)
               if (typeof t.durationMs === "number" && t.durationMs > 0 && typeof t.textDe === "string") {
                 const n = (t.textDe.match(SPEECH_WORD_RE) ?? []).length;
                 const wpm = (n * 60_000) / t.durationMs;
                 if (n >= SPEECH_RATE_MIN_WORDS && wpm > SPEECH_RATE_MAX_WPM)
-                  push("warning", "w-audio-speech-rate", entry.path,
-                    `سرعة نطق مشبوهة ${wpm.toFixed(0)} كلمة/دقيقة > ${SPEECH_RATE_MAX_WPM} (${n} كلمات في ${t.durationMs}ms): ${t.id} «${t.textDe}» — أبطئه بـlengthScale (N-015/D182)`);
+                  notes.push({ level: "warning", code: "w-audio-speech-rate", path: entry.path,
+                    message: `سرعة نطق مشبوهة ${wpm.toFixed(0)} كلمة/دقيقة > ${SPEECH_RATE_MAX_WPM} (${n} كلمات في ${t.durationMs}ms): ${t.id} «${t.textDe}» — ناعم: يُراجع بالأذن البشرية قبل الإطلاق (D214 · N-015)` });
               }
               if (t.role === "word") {
                 const wid = t.id.replace(/^word-/, "");
@@ -589,7 +593,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
       push("warning", "w-schema-major", entry.path, `schemaVersion ${v} يختلف في الإصدار الرئيسي عن ${SCHEMA_VERSION}`);
   }
 
-  return { errors, warnings, fileCount: entries.length };
+  return { errors, warnings, notes, fileCount: entries.length };
 }
 
 /** قراءة شجرة المحتوى من القرص */
@@ -618,6 +622,8 @@ function main() {
   const report = validateContentDirSafe(root);
   for (const i of [...report.errors, ...report.warnings])
     console.log(`[${i.level === "error" ? "ERROR" : "WARN "}] ${i.code} @ ${i.path}: ${i.message}`);
+  for (const i of report.notes)
+    console.log(`[NOTE ] ${i.code} @ ${i.path}: ${i.message}`);
   console.log(`\nfiles: ${report.fileCount} | errors: ${report.errors.length} | warnings: ${report.warnings.length}`);
   if (report.errors.length > 0) process.exit(1);
 }
@@ -626,7 +632,7 @@ function validateContentDirSafe(root: string): ValidationReport {
   try {
     return validateContentTree(loadContentDir(root), { contentRoot: root });
   } catch (err) {
-    return { errors: [{ level: "error", code: "e-io", path: root, message: String(err) }], warnings: [], fileCount: 0 };
+    return { errors: [{ level: "error", code: "e-io", path: root, message: String(err) }], warnings: [], notes: [], fileCount: 0 };
   }
 }
 
