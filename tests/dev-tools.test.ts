@@ -94,11 +94,11 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
     expect(parseFile(Lesson, "/x/content/lessons/a1/a1-u6-d6.json", JSON.parse(readFileSync(join(ROOT, "content/lessons/a1/a1-u6-d6.json"), "utf8"))).id).toBe("a1-u6-d6");
   });
   it("D197: lexicon-sync.py --check متزامن (N-099 آلية) · package.json فيه bootstrap", () => {
-    const out = execFileSync("python3", ["tools/dev/lexicon-sync.py", "--check"], { cwd: ROOT, encoding: "utf8" });
+    const out = execFileSync("python3", ["tools/dev/lexicon-sync.py", "--check"], { cwd: ROOT, encoding: "utf8", timeout: 60_000 });
     expect(out).toMatch(/lexicon-sync: متزامن — ناقص 0 · زائد 0/u);
     const pkg = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as { scripts: Record<string, string> };
     expect(pkg.scripts.bootstrap).toBe("bash tools/dev/bootstrap.sh");
-  });
+  }, 60_000); // D216: مهلة صريحة كسائر اختبارات العمليات — الخادم البطيء كان يوقّت الـ5s الافتراضية (CI فشل 784/785)
   it("gate.ts --quick --json: كل خطوة لها معرّف وملخّص ورقم · التقرير بثلاثة أسطر", () => {
     const out = execFileSync("npx", ["tsx", "tools/dev/gate.ts", "--quick", "--json", "--did", "اختبار"], { cwd: ROOT, encoding: "utf8", timeout: 300_000 });
     const r = JSON.parse(out) as { ok: boolean; quick: boolean; results: { id: string; ok: boolean; soft: boolean; summary: string }[]; report: string };
