@@ -655,7 +655,7 @@ describe("D115 — أدوات القياس", () => {
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage }).toEqual({ rule: [], practice: [], quiz: [], coverage: [] });
     expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([20, 4, 6, 15]);
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-zahlen-1-20"]);
-    expect(e.properNouns).toEqual(["Yusuf", "Haddad", "Lena", "Gartenstraße"]);
+    expect(e.properNouns).toEqual(["Yusuf", "Haddad", "Lena"]); // N-021 (D225): Gartenstraße سقطت مع مثال strasse القديم
     // الاستدعاء من دروس سابقة (كان zahl/alt/telefon — كلمات اليوم نفسه)
     expect(l.warmup.cardIds).toEqual(["telefonnummer", "wie-viel", "heute"]);
   });
@@ -5111,7 +5111,7 @@ describe("D115 — أدوات القياس", () => {
 
   it("D121 e-upgrade-warmup: بطاقة استدعاء من كلمات اليوم أو لاحقة ⇒ خطأ · أول درس في المسار مستثنى", () => {
     const d4 = realLessons.find((x) => x.id === "a1-u1-d4")!;
-    const e = entry({ lessonId: "a1-u1-d4", properNouns: ["Yusuf", "Haddad", "Lena", "Gartenstraße"] });
+    const e = entry({ lessonId: "a1-u1-d4", properNouns: ["Yusuf", "Haddad", "Lena"] });
     const rules = [...loadGrammarRules(CONTENT).values()];
     expect(codes(d4, e, rules)).toEqual([]);
     const today = clone(d4);

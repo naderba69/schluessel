@@ -1552,3 +1552,29 @@ describe("N-023 (D224) — بطاقات الثقافة الـ12 تحت حارس 
     });
   }
 });
+
+// N-021+N-053 (D225): أمثلة البطاقات ومتلازماتها تحت حارس الجبهة — المثال يُقرأ في درس مصدره · المتلازمة تُسند لأحدث كلماتها تدريساً (تُعرض حين تُعرف كل كلماتها)
+describe("N-021+N-053 (D225) — أمثلة البطاقات ومتلازماتها تحت حارس الجبهة (تُغلق N-021 وN-053)", () => {
+  // الاستثناء المعلن الوحيد (D185 — معلن لا صامت): مكانا عالم القصة (برلين/تونس يعرفهما المتعلم من أول درس) · أي علم آخر في مثالٍ يُعاد صياغته لا يُستثنى
+  const DECLARED_PLACES = new Set(["berlin", "tunis"]);
+  it("كل مثال نظيف في درس مصدره (بلا أعلام إلا المعلنين)", () => {
+    const bad: string[] = [];
+    for (const w of ALL_WORDS.filter((w) => w.sampleSentence)) {
+      const l = ALL_LESSONS.find((x) => x.id === w.sampleSentence!.sourceLesson)!;
+      const taught = taughtUpTo(l, ALL_LESSONS, ALL_WORDS);
+      const v = frontViolations([w.sampleSentence!.de], knownStems(taught), DECLARED_PLACES);
+      if (v.length) bad.push(`${w.id} [${l.id}] «${w.sampleSentence!.de}» -> ${v.join(",")}`);
+    }
+    expect(bad).toEqual([]);
+  });
+  it("كل متلازمة نظيفة في أول درس لمالكها (صرامة كاملة — بلا سماح)", () => {
+    const bad: string[] = [];
+    for (const w of ALL_WORDS.filter((w) => w.kollocation)) {
+      const l = ALL_LESSONS.find((x) => x.id === w.usedInLessons[0])!;
+      const taught = taughtUpTo(l, ALL_LESSONS, ALL_WORDS);
+      const v = frontViolations([w.kollocation!.de], knownStems(taught), new Set());
+      if (v.length) bad.push(`${w.id} [${l.id}] «${w.kollocation!.de}» -> ${v.join(",")}`);
+    }
+    expect(bad).toEqual([]);
+  });
+});

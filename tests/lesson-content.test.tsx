@@ -27,7 +27,7 @@ describe("تشغيل الدرس الحقيقي على الواجهة", () => {
   it("محطة الجديد: أول عنصر من كل كلمات الدرس — بجملة الدرس الحقيقية · ثم قاعدة اليوم (D116 · ثابت مشتقّ D188)", () => {
     const html = renderToStaticMarkup(<LearnStation cards={plan.learn} />);
     expect(html).toContain(`عنصر 1 من ${plan.learn.length}`);
-    expect(html).toContain("Hallo! Ich heiße Yusuf.");
+    expect(html).toContain("Hallo! Wie heißt du?"); // N-021 (D225): مثال hallo بلا اسم شخصية
   });
 
   it("محطة التدريب (الدرس المُرقّى — D116): أول بند فراغ قاعدة اليوم · لا إجابة ولا «لماذا» قبل المحاولة", () => {
