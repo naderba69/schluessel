@@ -1219,6 +1219,23 @@ def build_all() -> None:
     ("word-gueltig", "gültig.", "gueltig", ["a1-u14-d1"]),
     ("word-auslaender", "der Ausländer.", "auslaender", ["a1-u14-d1"]),
     ("word-auslaendisch", "ausländisch.", "auslaendisch", ["a1-u14-d1"]),
+    ("word-beamte", "der Beamte.", "beamte", ["a1-u14-d2"]),
+    ("word-konto", "das Konto.", "konto", ["a1-u14-d2"]),
+    ("word-ueberweisen", "überweisen.", "ueberweisen", ["a1-u14-d2"]),
+    ("word-postleitzahl", "die Postleitzahl.", "postleitzahl", ["a1-u14-d2"]),
+    ("word-absender", "der Absender.", "absender", ["a1-u14-d2"]),
+    ("word-empfaenger", "der Empfänger.", "empfaenger", ["a1-u14-d2"]),
+    ("word-briefmarke", "die Briefmarke.", "briefmarke", ["a1-u14-d2"]),
+    ("word-gewicht", "das Gewicht.", "gewicht", ["a1-u14-d2"]),
+    ("word-anrede", "die Anrede.", "anrede", ["a1-u14-d2"]),
+    ("word-dame", "die Dame.", "dame", ["a1-u14-d2"]),
+    ("word-doktor", "der Doktor.", "doktor", ["a1-u14-d2"]),
+    ("word-gruss", "der Gruß.", "gruss", ["a1-u14-d2"]),
+    ("word-e-mail", "die E-Mail.", "e-mail", ["a1-u14-d2"]),
+    ("word-fax", "das Fax.", "fax", ["a1-u14-d2"]),
+    ("word-vorwahl", "die Vorwahl.", "vorwahl", ["a1-u14-d2"]),
+    ("word-wiederhoeren", "das Wiederhören.", "wiederhoeren", ["a1-u14-d2"]),
+    ("word-anrufbeantworter", "der Anrufbeantworter.", "anrufbeantworter", ["a1-u14-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

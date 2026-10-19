@@ -293,8 +293,8 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     expect(cs.find((c) => c.status === "pending")).toBeUndefined(); // D180: النواة مكتملة — لا pending
     expect(cs.every((c) => c.missing.length === 0)).toBe(true);
     const next = planStatus(plan, ctx).find((s) => !s.produced)!;
-    expect(next.lessonId).toBe("a1-u14-d2"); // D210: u14-d1 أُنتج (receptive) — التالي البريد والبنك
-    expect(next.headwords).toHaveLength(17); // D210: التالي a1-u14-d2 (17 رأساً: Beamte · Konto · überweisen …)
+    expect(next.lessonId).toBe("a1-u14-d3"); // D211: u14-d2 أُنتج (receptive) — التالي المواصلات
+    expect(next.headwords).toHaveLength(15); // D211: التالي a1-u14-d3 (15 رأساً: S-Bahn · Straßenbahn · Autobahn …)
     const d1 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u13-d1")!;
     expect(d1.produced).toBe(true);
     expect(d1.missing).toEqual([]);
@@ -316,6 +316,9 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     const e1 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u14-d1")!;
     expect(e1.produced).toBe(true);
     expect(e1.missing).toEqual([]); // D210: Papiere جمع فقط (pluralOnly)
+    const e2 = planStatus(plan, ctx).find((s) => s.lessonId === "a1-u14-d2")!;
+    expect(e2.produced).toBe(true);
+    expect(e2.missing).toEqual([]); // D211: E-Mail بشرطة (e-mail) · Gruß بجمع Grüße
   });
 });
 
