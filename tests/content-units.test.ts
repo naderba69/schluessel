@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, LEVEL_ORDER, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
-import { ReadingText } from "../content/schemas/index.js";
+import { ReadingText, CultureCard } from "../content/schemas/index.js";
 import { taughtUpTo, frontViolations } from "../tools/lib/lesson-upgrade.js";
 import { knownStems, knownForms, contentTokens, CLOSED } from "../tools/lib/vocab-forms.js";
 import { slugify } from "../tools/lib/word-entry.js";
@@ -1504,7 +1504,7 @@ describe("N-048 (D221) — الخطأ البعيد الوحيد محصور في 
   });
 });
 
-describe("N-023 (D223) — نصوص القراءة الـ12 كلها تحت حارس الجبهة (الثقافة في D224)", () => {
+describe("N-023 (D223) — نصوص القراءة الـ12 كلها تحت حارس الجبهة (الثقافة لحقت في D224)", () => {
   // الأفق: آخر درس في وحدة النص (شاملاً كلماته) · المسرد يمنح جذوعه كالمدروس (lernen تغطي lerne/lernt) · الأعلام معلنة · التعجب الصرف مسموح
   const INTERJECTIONS = new Set(["ah"]); // D223: صوت بلا معنى معجمي (Ah!) — يُوسَّع عند الحاجة لا استباقاً
   // المسرد الميت: كل رموزه معروفة-الأفق حرفياً بلا جذوع (schön ≠ schon — تصادم مقصود يُبقي مسرد u1 صادقاً)
@@ -1525,6 +1525,30 @@ describe("N-023 (D223) — نصوص القراءة الـ12 كلها تحت حا
   for (const id of ["a1-lese-u1", "a1-lese-u2", "a1-lese-u3", "a1-lese-u4", "a1-lese-u5", "a1-lese-u6", "a1-lese-u7", "a1-lese-u8", "a1-lese-u9", "a1-lese-u10", "a1-lese-u11", "a1-lese-u12"]) {
     it(`${id} نظيف: صفر مخالفات · صفر مسرد ميت · كل علم مستعمل`, () => {
       expect(auditLese(id)).toEqual({ bad: [], dead: [], unusedPropers: [] });
+    });
+  }
+});
+
+// N-023 (D224): بطاقات الثقافة الـ12 تحت نفس الحارس — الأفق آخر درس في وحدة البطاقة · المسرد بصيغة المفرد ما لم يرد الجمع (das Geschäft, die Geschäfte) · العربية تُستثنى في germanOnly
+describe("N-023 (D224) — بطاقات الثقافة الـ12 تحت حارس الجبهة (تُغلق N-023)", () => {
+  const INTERJECTIONS = new Set(["ah"]);
+  const lastOfUnit = (u: number) => ALL_LESSONS.filter((l) => l.level === "A1" && l.unit === u).sort((a, b) => a.day - b.day).at(-1)!;
+  const auditLK = (id: string) => {
+    const d = CultureCard.parse(JSON.parse(readFileSync(join(__dirname, "..", "content/landeskunde", `${id}.json`), "utf8")));
+    const taught = taughtUpTo(lastOfUnit(d.unit), ALL_LESSONS, ALL_WORDS);
+    const stems = new Set([...knownStems(taught), ...d.glossary.flatMap((g) => [...knownStems([{ de: g.de, wordClass: "noun" } as never])])]);
+    const allow = new Set([...(d.properNouns ?? []).flatMap((n) => contentTokens(n)), ...INTERJECTIONS]);
+    const texts = [d.title.de, ...d.facts.map((f) => f.de)];
+    const bad = frontViolations(texts, stems, allow);
+    const horizonForms = new Set([...taught.flatMap((w) => knownForms(w as never)), ...CLOSED]);
+    const dead = d.glossary.filter((g) => contentTokens(g.de).every((t) => horizonForms.has(t))).map((g) => g.de);
+    const seen = new Set(contentTokens(texts.join("\n")));
+    const unusedPropers = (d.properNouns ?? []).filter((n) => !contentTokens(n).every((t) => seen.has(t)));
+    return { bad, dead, unusedPropers };
+  };
+  for (const id of ["a1-landeskunde-u1", "a1-landeskunde-u2", "a1-landeskunde-u3", "a1-landeskunde-u4", "a1-landeskunde-u5", "a1-landeskunde-u6", "a1-landeskunde-u7", "a1-landeskunde-u8", "a1-landeskunde-u9", "a1-landeskunde-u10", "a1-landeskunde-u11", "a1-landeskunde-u12"]) {
+    it(`${id} نظيف: صفر مخالفات · صفر مسرد ميت · كل علم مستعمل`, () => {
+      expect(auditLK(id)).toEqual({ bad: [], dead: [], unusedPropers: [] });
     });
   }
 });
