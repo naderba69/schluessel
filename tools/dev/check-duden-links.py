@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+"""tools/dev/check-duden-links.py — فحص حيوية روابط Duden في gReferences (N-028 · D234).
+
+يجمع روابط https://www.duden.de فريدةً من content/**/*.json ويفحصها (HEAD ثم GET عند الحاجة).
+  - رابط الضبط (صفحة Duden الرئيسية) لا يُفتح ⇒ لا وصول شبكي ⇒ «تُخطّي» ورمز 0
+    (الصندوق المحلي بلا إنترنت؛ بوابة CI على GitHub تملك الوصول فتُنفّذ الفحص فعلاً).
+  - 404 ⇒ مكسور (رمز خروج 1 + سرد الروابط). غير ذلك (403/429/5xx/مهلة) ⇒ «غير مؤكد» يُبلَّغ ولا يُسقط.
+  - --collect-only: يطبع الروابط بلا شبكة (للفحص السريع والاختبار).
+
+مكتبة قياسية فقط (urllib) — بلا اعتماد جديد.
+"""
+from __future__ import annotations
+
+import json
+import re
+import sys
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+URL_RE = re.compile(r"https://www\.duden\.de/[^\s\"']+")
+CONTROL = "https://www.duden.de/"
+UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) schluessel-linkcheck/1.0"}
+TIMEOUT = 8
+
+
+def collect() -> list[str]:
+    urls: set[str] = set()
+    for p in sorted((ROOT / "content").rglob("*.json")):
+        try:
+            urls.update(URL_RE.findall(p.read_text(encoding="utf-8")))
+        except OSError:
+            continue
+    return sorted(urls)
+
+
+def fetch(url: str, method: str) -> int | str:
+    try:
+        req = urllib.request.Request(url, headers=UA, method=method)
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+            return r.status
+    except urllib.error.HTTPError as e:  # type: ignore[attr-defined]
+        return e.code
+    except Exception as e:
+        return f"{type(e).__name__}: {e}"
+
+
+def check(url: str) -> tuple[str, str, str]:
+    st = fetch(url, "HEAD")
+    if st == 200:
+        return (url, "ok", "")
+    if st == 404:
+        return (url, "broken", "404")
+    st2 = fetch(url, "GET")
+    if st2 == 200:
+        return (url, "ok", "")
+    if st2 == 404:
+        return (url, "broken", "404")
+    return (url, "unknown", str(st2)[:100])
+
+
+def main(argv: list[str]) -> int:
+    urls = collect()
+    if "--collect-only" in argv:
+        print(f"duden-links: {len(urls)} رابطاً فريداً (جمع فقط — بلا شبكة)")
+        for u in urls:
+            print(u)
+        return 0
+    if fetch(CONTROL, "GET") != 200:
+        print(f"duden-links: تُخطّي — لا وصول شبكي ({len(urls)} رابطاً مؤجلاً لـCI)")
+        return 0
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        results = list(ex.map(check, urls))
+    ok = [u for u, s, _ in results if s == "ok"]
+    broken = [(u, w) for u, s, w in results if s == "broken"]
+    unknown = [(u, w) for u, s, w in results if s == "unknown"]
+    print(f"duden-links: سليم {len(ok)} · مكسور {len(broken)} · غير مؤكد {len(unknown)} (المجموع {len(urls)})")
+    for u, w in broken:
+        print(f"  مكسور: {u} ({w})")
+    for u, w in unknown:
+        print(f"  غير مؤكد: {u} ({w})")
+    return 1 if broken else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))

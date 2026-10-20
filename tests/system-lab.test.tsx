@@ -26,9 +26,9 @@ describe("الصدفة — لوحة النظام بست شاشات", () => {
 describe("E17 — شاشة البوابات", () => {
   it("تحذير صيغة Goethe ظاهر دائماً — والبوابة تظهر في أسبوع البوابة", () => {
     const html = renderToStaticMarkup(<GateScreen week={6} />);
-    expect(html).toContain("تُتحقق من موقع المعهد عند النشر");
+    expect(html).toContain("متحقق منها من وثائق Goethe الرسمية");
     expect(html).toContain('data-testid="gate-view"');
-    expect(html).toContain('data-format="needs-web-verify"');
+    expect(html).toContain('data-format="goethe-verifiziert"');
     expect(html).toContain("عتبتنا الداخلية"); // العتبة معلنة لا مخفية
   });
 

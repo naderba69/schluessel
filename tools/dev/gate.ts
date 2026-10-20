@@ -2,7 +2,7 @@
 // تشغّل كل بوابات المشروع بأمر واحد، تجمع أرقامها آلياً (لا نقل يدوي)، وتطبع تقرير الأسطر الثلاثة بالعربية
 // (ما نُفّذ · البوابة · ما ينكسر) وتكتب `.dev-cache/gate.json`. رمز الخروج ≠0 عند أي خلل صلب.
 //
-//   npm run gate                 البوابة كاملة (vitest · tsc · validate-content · build · docs-sync · notes · pronunciation-audit · lexicon-sync · speech-rate)
+//   npm run gate                 البوابة كاملة (vitest · tsc · validate-content · build · docs-sync · notes · pronunciation-audit · lexicon-sync · duden-links · speech-rate)
 //   npm run gate -- --quick      بلا vitest وبلا build (فحص سريع أثناء العمل — ليس بديلاً قبل الدفع)
 //   npm run gate -- --did "…"    السطر الأول من التقرير (وإلا يُؤخذ عنوان آخر قرار مهيكل من DECISIONS.md)
 //   npm run gate -- --json       يطبع JSON فقط
@@ -46,6 +46,7 @@ const STEPS: Step[] = [
   { id: "notes", label: "notes check", cmd: "python3", argv: ["tools/dev/notes.py", "check"], parse: (o) => { const m = /بانتظار المالك (\d+) · مفتوحة (\d+) · مغلقة (\d+) · المجموع (\d+)/u.exec(o); return { ok: /سليم/.test(o), summary: m ? `${m[1]}/${m[2]}/${m[3]} (${m[4]})` : o.trim().slice(0, 80), numbers: m ? { owner: +m[1]!, open: +m[2]!, closed: +m[3]!, total: +m[4]! } : {} }; } },
   { id: "audit", label: "pronunciation-audit", cmd: "python3", argv: ["tools/pronunciation-audit.py"], parse: (o) => { const bad = num(/مخالفة بلا قرار: (\d+)/u, o), old = num(/مقتطف قديم: (\d+)/u, o), chg = num(/مراجَع تغيّر نطقه: (\d+)/u, o); return { ok: bad === 0 && old === 0 && chg === 0, summary: `بلا قرار ${bad} · قديم ${old} · تغيّر ${chg}`, numbers: { bad, old, chg } }; } },
   { id: "lexicon", label: "lexicon-sync --check", cmd: "python3", argv: ["tools/dev/lexicon-sync.py", "--check"], parse: (o) => { const m = /ناقص (\d+) · زائد (\d+) · مدخلات (\d+)/u.exec(o); return { ok: /متزامن —/.test(o) && !/غير متزامن/.test(o), summary: m ? `ناقص ${m[1]} · زائد ${m[2]} · مدخلات ${m[3]}` : o.trim().slice(0, 80), numbers: m ? { missing: +m[1]!, extra: +m[2]!, entries: +m[3]! } : {} }; } },
+  { id: "links", label: "duden-links", cmd: "python3", argv: ["tools/dev/check-duden-links.py"], parse: (o) => { const m = /سليم (\d+) · مكسور (\d+) · غير مؤكد (\d+) \(المجموع (\d+)\)/u.exec(o); const skip = /تُخطّي — لا وصول شبكي \((\d+) رابطاً مؤجلاً لـCI\)/u.exec(o); const ok = (!!m && +m[2]! === 0) || !!skip; return { ok, summary: m ? `سليم ${m[1]} · مكسور ${m[2]} · غير مؤكد ${m[3]} (${m[4]})` : skip ? `تُخطّي (${skip[1]} لـCI)` : o.trim().slice(0, 80), numbers: m ? { ok: +m[1]!, broken: +m[2]!, unknown: +m[3]!, total: +m[4]! } : skip ? { deferred: +skip[1]! } : {} }; } },
   { id: "speech", label: "speech-rate (ناعم)", cmd: "python3", argv: ["tools/dev/speech-rate.py", "--json"], soft: true, parse: (o) => { const j = JSON.parse(o) as { measured: number; flagged: unknown[]; threshold: number }; return { ok: j.flagged.length === 0, summary: `${j.flagged.length} فوق ${j.threshold} من ${j.measured}`, numbers: { flagged: j.flagged.length, measured: j.measured } }; } },
 ];
 

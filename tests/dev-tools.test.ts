@@ -10,7 +10,7 @@ const ROOT = join(__dirname, "..");
 
 describe("tools/dev — N-104: أدوات الفحص لا تضيع مع الصندوق", () => {
   it("أدوات tools/dev موجودة ومذكورة في README · .dev-cache في .gitignore", () => {
-    const tools = ["fetch-official.sh", "check-lesson.ts", "speech-rate.py", "owner-review.py", "docs-sync.py", "notes.py", "gate.ts", "content-diff.ts", "hooks/pre-push", "lexicon-sync.py", "bootstrap.sh"];
+    const tools = ["fetch-official.sh", "check-lesson.ts", "speech-rate.py", "owner-review.py", "docs-sync.py", "notes.py", "gate.ts", "content-diff.ts", "hooks/pre-push", "lexicon-sync.py", "check-duden-links.py", "listening-sample.py", "bootstrap.sh"];
     for (const f of [...tools, "README.md"]) expect(existsSync(join(ROOT, "tools/dev", f)), f).toBe(true);
     const readme = readFileSync(join(ROOT, "tools/dev/README.md"), "utf8");
     for (const f of tools) expect(readme).toContain(f);
@@ -103,12 +103,32 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
     const out = execFileSync("npx", ["tsx", "tools/dev/gate.ts", "--quick", "--json", "--did", "اختبار"], { cwd: ROOT, encoding: "utf8", timeout: 300_000 });
     const r = JSON.parse(out) as { ok: boolean; quick: boolean; results: { id: string; ok: boolean; soft: boolean; summary: string }[]; report: string };
     expect(r.quick).toBe(true);
-    expect(r.results.map((x) => x.id)).toEqual(["tsc", "validate", "docs", "notes", "audit", "lexicon", "speech"]); // lexicon من D197
+    expect(r.results.map((x) => x.id)).toEqual(["tsc", "validate", "docs", "notes", "audit", "lexicon", "links", "speech"]); // lexicon من D197 · links من D234
     expect(r.results.filter((x) => !x.ok && !x.soft)).toEqual([]); // D214: الناعم (speech) يُبلَّغ ولا يوقف — كمنطق البوابة نفسها
     expect(r.report.split("\n")).toHaveLength(3);
     expect(r.report).toContain("1. **ما نُفّذ:** اختبار");
     expect(r.report).toContain("3. **ما ينكسر:**");
   }, 300_000);
+
+  it("D234 (N-028): check-duden-links.py --collect-only يجمع الروابط الفريدة بلا شبكة — كلها بنمط rechtschreibung", () => {
+    const out = execFileSync("python3", ["tools/dev/check-duden-links.py", "--collect-only"], { cwd: ROOT, encoding: "utf8", timeout: 60_000 });
+    const lines = out.trim().split("\n");
+    expect(lines[0]).toMatch(/duden-links: (\d+) رابطاً فريداً/u);
+    const urls = lines.slice(1);
+    expect(urls.length).toBeGreaterThan(300);
+    expect(new Set(urls).size).toBe(urls.length); // فريدة
+    for (const u of urls) expect(u).toMatch(/^https:\/\/www\.duden\.de\/rechtschreibung\/(?:[A-Za-zÄÖÜäöüß_-]|%[0-9A-F]{2})+$/u);
+  }, 60_000);
+
+  it("D234 (N-011/N-122): listening-sample.py تشتق 20 مقطعاً حتمياً وتكتب وثيقة العينة", () => {
+    const out = execFileSync("python3", ["tools/dev/listening-sample.py"], { cwd: ROOT, encoding: "utf8", timeout: 60_000 });
+    expect(out.split("\n").filter((l) => /^\s*\d+\. \S+ /u.test(l))).toHaveLength(20);
+    expect(out).toContain("fc-11");
+    expect(out).toContain("word-circa");
+    const doc = readFileSync(join(ROOT, "docs/reports/listening-sample.md"), "utf8");
+    expect(doc).toContain("fc-11");
+    expect(doc.match(/☐ سليم/g)).toHaveLength(20);
+  }, 60_000);
 
   it("content-diff.ts --json بين التزامين: ملخّص + تقارير بنصوص قبل/بعد", () => {
     const out = execFileSync("npx", ["tsx", "tools/dev/content-diff.ts", "HEAD~1", "HEAD", "--json"], { cwd: ROOT, encoding: "utf8", timeout: 120_000 });

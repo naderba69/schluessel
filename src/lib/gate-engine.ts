@@ -1,7 +1,9 @@
 // gate-engine.ts — E17 محرك البوابات | M3
 // المصادر: Goethe-Institut (بنية المهارات الأربع Hören/Lesen/Schreiben/Sprechen) · §4 حدود الصدق
-// ⚠️ حدود صدق صريحة: **تفاصيل النسخ الحالية من نماذج Goethe (عدد الأجزاء/سلالم الدرجات) تُتحقق ويبياً عند النشر** —
-// لا نُطلقها هنا كثوابت. البنية العامة فقط (4 مهارات + بوابة كل 6 أسابيع) هي المبنيّ عليها.
+// ⚠️ حدود صدق صريحة (N-029 ← D234): صيغة Sprechen متحقق منها من وثائق Goethe الرسمية
+// (Prüfungsziele/Testbeschreibung A1 SD1 ط4 ©2022 · Modellsatz · Übungssatz 01 · bfu.goethe.de — أكتوبر 2026):
+// 3 أجزاء (التعارف · الأسئلة والأجوبة · صياغة طلب والرد عليه) في مجموعة ≤4 بلا تحضير — 15 دقيقة · 25 نقطة.
+// تُعاد المراجعة عند النشر إن حدّث المعهد نماذجه. العتبة الداخلية (70%) ليست مقياس Goethe الرسمي (§4).
 
 export const GATE_INTERVAL_WEEKS = 6;
 
@@ -11,8 +13,8 @@ export type GateSection = {
   skill: Skill;
   labelDe: string;
   labelAr: string;
-  /** مصدر الصيغة: عام (مستقر) أم تفاصيله تُتحقق ويبياً */
-  formatSource: "goethe-modell-general" | "needs-web-verify";
+  /** مصدر الصيغة: بنية عامة مستقرة · متحقق من وثائق Goethe (N-029) · أم تفاصيله تُتحقق ويبياً */
+  formatSource: "goethe-modell-general" | "goethe-verifiziert" | "needs-web-verify";
   noteAr: string;
 };
 
@@ -32,10 +34,10 @@ export function buildGate(week: number): {
       { skill: "hoeren", labelDe: "Hören", labelAr: "الاستماع", formatSource: "goethe-modell-general", noteAr: "استماع وفهم — بنية عامة." },
       { skill: "lesen", labelDe: "Lesen", labelAr: "القراءة", formatSource: "goethe-modell-general", noteAr: "قراءة وفهم — بنية عامة." },
       { skill: "schreiben", labelDe: "Schreiben", labelAr: "الكتابة", formatSource: "goethe-modell-general", noteAr: "كتابة رسالة/رسالة قصيرة — بنية عامة." },
-      { skill: "sprechen", labelDe: "Sprechen", labelAr: "التحدث", formatSource: "needs-web-verify", noteAr: "صيغة التحدث الدقيقة (أجزاء Introductions/Talk/Plan) تُتحقق من موقع Goethe عند النشر." },
+      { skill: "sprechen", labelDe: "Sprechen", labelAr: "التحدث", formatSource: "goethe-verifiziert", noteAr: "التحدث: 3 أجزاء (التعارف مع التهجية ورقم هاتف · أسئلة وأجوبة ببطاقات المواضيع · صياغة طلب والرد عليه ببطاقات الصور) — مجموعة ≤4 بلا تحضير · 15 دقيقة · 25 نقطة (وثائق Goethe الرسمية، أكتوبر 2026)." },
     ]),
     overallNoteAr:
-      "⚠️ تفاصيل النسخ الحالية (عدد الأجزاء، سلالم الدرجات، نسب النجاح) تُتحقق ويبياً عند البناء النهائي (§4) — لا تُؤخذ من هنا كمرجع.",
+      "⚠️ صيغة Sprechen متحقق منها (أكتوبر 2026) وتُعاد مراجعتها عند النشر إن حدّث المعهد نماذجه (§4) — والعتبة الداخلية ليست مقياس Goethe.",
   };
 }
 

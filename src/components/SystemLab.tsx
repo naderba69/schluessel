@@ -34,7 +34,7 @@ export function GateScreen({ week = 6 }: { week?: number }) {
         />
       </label>
       <p data-testid="goethe-honesty">
-        ⚠️ صيغة نماذج Goethe الرسمية الدقيقة (الأجزاء والدرجات) تُتحقق من موقع المعهد عند النشر — المعروض هنا بنية عامة فقط (§4).
+        ⚠️ صيغة Sprechen متحقق منها من وثائق Goethe الرسمية (أكتوبر 2026) — وتُعاد مراجعتها عند النشر إن حدّث المعهد نماذجه (§4).
       </p>
       {gate ? (
         <div data-testid="gate-view">
