@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
-"""tools/dev/check-duden-links.py — فحص حيوية روابط Duden في gReferences (N-028 · D234 · قُسّي D235 · هُذّب D236).
+"""tools/dev/check-duden-links.py — فحص حيوية روابط Duden في gReferences (N-028 · D234 · قُسّي D235 · هُذّب D236–D237).
 
 يجمع روابط https://www.duden.de فريدةً من content/**/*.json ويفحصها.
   - رابط الضبط (صفحة Duden الرئيسية) لا يُفتح بعد 3 محاولات ⇒ لا وصول ⇒ «تُخطّي» ورمز 0.
-  - 404 ⇒ مكسور (رمز خروج 1 + سرد الروابط مع ملفاتها). غير ذلك ⇒ «غير مؤكد» يُبلَّغ ولا يُسقط.
+  - 404 ⇒ مكسور (رمز خروج 1 + سرد الروابط مع ملفاتها + سطر مضغوط أخير لا يضيع من الذيل).
+  - غير ذلك ⇒ «غير مؤكد» يُبلَّغ ولا يُسقط.
   - --collect-only: يطبع الروابط بلا شبكة. DUDEN_LINKS=skip: تخطٍّ صريح (اختبار التوصيل).
-  - D236: تهذيب ضد تحديد المعدل (HEAD أولاً · GET فقط عند 5xx/مهلة · فاصل 0.2 ث · جولة ثانية
-    للناجية بعد 20 ث) + المكسور يُطبَع أخيراً مع ملفاته (ذيل البوابة يكشفه دائماً).
+  - D237: إيقاع بطيء (عامل واحد + 0.7 ث) يتجنب تحديد المعدل (~60 طلباً/دقيقة بدل ~200) +
+    جولة ثانية بعد 30 ث + سطران مضغوطان (المكسور وغير المؤكد) في سطرين لا يُقطَعان.
 
 مكتبة قياسية فقط (urllib) — بلا اعتماد جديد.
 D235: سلاسل Duden القياسية ASCII مطوية (Maedchen لا M%C3%A4dchen — المشفّر يعيد 404 مؤكداً).
+D237: سلاسل Duden ليست جذوعاً ساذجة (Euro→Euro_Waehrung وأشباهها) — الميت يُحذف لا يُخمَّن (G2 أدلة للمؤلف لا روابط للمتعلم).
 """
 from __future__ import annotations
 
@@ -27,7 +29,8 @@ CONTROL = "https://www.duden.de/"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) schluessel-linkcheck/1.0"}
 TIMEOUT = 8
 CONTROL_TRIES = 3
-GAP = 0.2  # فاصل تهذيب بين الطلبات (تحديد المعدل عند Duden)
+GAP = 0.7  # D237: إيقاع بطيء — تحديد المعدل عند Duden نافذة زمنية لا حظر دائم
+COOLDOWN = 30
 
 
 def collect() -> tuple[list[str], dict[str, list[str]]]:
@@ -90,12 +93,12 @@ def main(argv: list[str]) -> int:
     if reason != 200:
         print(f"duden-links: تُخطّي — لا وصول ({len(urls)} رابطاً مؤجلاً لـCI · الضبط: {str(reason)[:80]})")
         return 0
-    with ThreadPoolExecutor(max_workers=4) as ex:
+    with ThreadPoolExecutor(max_workers=1) as ex:
         results = list(ex.map(check, urls))
     unknown_urls = [u for u, s, _ in results if s == "unknown"]
     if unknown_urls:  # جولة ثانية بعد تهدئة — كثير من 403 يزول
-        time.sleep(20)
-        with ThreadPoolExecutor(max_workers=2) as ex:
+        time.sleep(COOLDOWN)
+        with ThreadPoolExecutor(max_workers=1) as ex:
             second = dict(zip(unknown_urls, ex.map(check, unknown_urls)))
         results = [second[u] if s == "unknown" and second.get(u, ("", "unknown", ""))[1] != "unknown" else (u, s, w)
                    for u, s, w in results]
@@ -104,6 +107,7 @@ def main(argv: list[str]) -> int:
     ok = [u for u, s, _ in results if s == "ok"]
     broken = [(u, w) for u, s, w in results if s == "broken"]
     unknown = [(u, w) for u, s, w in results if s == "unknown"]
+    slug = lambda u: u.rsplit("/", 1)[-1]
     summary = f"duden-links: سليم {len(ok)} · مكسور {len(broken)} · غير مؤكد {len(unknown)} (المجموع {len(urls)})"
     print(summary)
     for u, w in unknown:
@@ -111,6 +115,8 @@ def main(argv: list[str]) -> int:
     for u, w in broken:
         print(f"  مكسور: {u} ({w}) ← {', '.join(owners.get(u, []))}")
     print(summary + " — القائمة الكاملة أعلاه")
+    print(f"مكسور-{len(broken)}: " + ("|".join(slug(u) for u, _ in broken) or "—"))
+    print(f"غيرمؤكد-{len(unknown)}: " + ("|".join(slug(u) for u, _ in unknown) or "—"))
     return 1 if broken else 0
 
 
