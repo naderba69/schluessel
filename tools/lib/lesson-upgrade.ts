@@ -548,3 +548,20 @@ export function checkGrammarRules(ctx: UpgradeContext): UpgradeIssue[] {
   }
   return issues;
 }
+
+/** النصوص الألمانية المفحوصة في درس (تستثنى الترجمة والتعليل والربط) — مشتركة: check-lesson · measure-stems (N-060 · D226) */
+export function lessonGermanStrings(l: unknown): string[] {
+  const out: string[] = [];
+  // تُستثنى حقول الترجمة والتعليل (عربية) وحقول الربط (معرّفات · أنواع · مراجع) — الاختبار الحقيقي للمعرّفات عند المدقّق
+  const skip = new Set(["why", "ar", "whyArabicSpeakerFails", "tokens", "speakText", "type", "kind", "station", "interleavedWith", "riskFlagsShown"]);
+  const skipKey = (k: string): boolean => skip.has(k) || /Ids?$|Refs?$|^id$/.test(k);
+  const walk = (x: unknown): void => {
+    if (Array.isArray(x)) x.forEach(walk);
+    else if (x && typeof x === "object") for (const [k, v] of Object.entries(x as Record<string, unknown>)) { if (!skipKey(k)) walk(v); }
+    else if (typeof x === "string" && /[A-Za-zÄÖÜäöüß]{3}/.test(x) && !/^[a-z0-9]+(-[a-z0-9]+)+$/.test(x)) out.push(x);
+  };
+  const L = l as Record<string, unknown>;
+  walk(Object.fromEntries(["ziel", "einstieg", "uebung", "quiz", "zusammenfassung"].filter((k) => k in L).map((k) => [k, L[k]])));
+  return [...new Set(out)];
+}
+

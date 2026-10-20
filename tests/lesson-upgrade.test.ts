@@ -2422,6 +2422,7 @@ describe("D115 — أدوات القياس", () => {
     expect(shown).not.toMatch(/\b(passiert|Angst|mutig|schneiden|geschnitten|dazu|etwas|Winter|Oh|Schnupfen|schmerzen|denn|leider|dann|gewesen|gehabt|Körper|Doktor|Lenas|Mama)\b|Wie fühlen Sie sich\?/);
     expect(JSON.stringify(l.quiz.variants.map((v) => v.items.map((i) => i.choices)))).not.toMatch(/\b(gebekommen|geverbunden|gewesen|gehabt)\b/); // المشتِّتات أيضاً من صيغ معروفة (لا ge‑ مختلقة)
     expect(e.properNouns).toEqual(["Lena"]); // Yusuf لا يظهر في نصوص الدرس (الحوار يرويه الصوت فقط)
+    expect(JSON.stringify(l.uebung.communicativeTask)).not.toContain("Ich muss zum Arzt gehen"); // D108 · N-113 (D226): مثال SD1 الحرفي أُعيدت صياغته (Hausarzt) — كان في successCriteria
     expect(e.misspellings ?? []).toEqual([]);
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
     // مثال blut صُحّح («Das Blut ist rot.» — rot بلا درس) — والأمثلة كلها من هذا الدرس وبلا أسماء

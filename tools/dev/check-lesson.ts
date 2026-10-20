@@ -14,7 +14,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadLessons, loadWords } from "../lib/content-disk.js";
-import { frontViolations, taughtUpTo, pathOrder, germanOnly } from "../lib/lesson-upgrade.js";
+import { frontViolations, taughtUpTo, pathOrder, germanOnly, lessonGermanStrings } from "../lib/lesson-upgrade.js";
 import { FULL, LATER, knownForms, knownStems, contentTokens, deumlaut, laterWordLeak, withLaterForms } from "../lib/vocab-forms.js";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..");
@@ -82,21 +82,6 @@ for (const [src, f] of [["SD1", resolve(CACHE, "sd1.txt")], ["A2", resolve(CACHE
   }
 }
 
-// الأسطر المفحوصة
-export function lessonGermanStrings(l: unknown): string[] {
-  const out: string[] = [];
-  // تُستثنى حقول الترجمة والتعليل (عربية) وحقول الربط (معرّفات · أنواع · مراجع) — الاختبار الحقيقي للمعرّفات عند المدقّق
-  const skip = new Set(["why", "ar", "whyArabicSpeakerFails", "tokens", "speakText", "type", "kind", "station", "interleavedWith", "riskFlagsShown"]);
-  const skipKey = (k: string): boolean => skip.has(k) || /Ids?$|Refs?$|^id$/.test(k);
-  const walk = (x: unknown): void => {
-    if (Array.isArray(x)) x.forEach(walk);
-    else if (x && typeof x === "object") for (const [k, v] of Object.entries(x as Record<string, unknown>)) { if (!skipKey(k)) walk(v); }
-    else if (typeof x === "string" && /[A-Za-zÄÖÜäöüß]{3}/.test(x) && !/^[a-z0-9]+(-[a-z0-9]+)+$/.test(x)) out.push(x);
-  };
-  const L = l as Record<string, unknown>;
-  walk(Object.fromEntries(["ziel", "einstieg", "uebung", "quiz", "zusammenfassung"].filter((k) => k in L).map((k) => [k, L[k]])));
-  return [...new Set(out)];
-}
 let lines: string[];
 const file = opt("file");
 if (file) lines = readFileSync(file, "utf8").split("\n").map((l) => l.split("|")[0]!.trim()).filter(Boolean);

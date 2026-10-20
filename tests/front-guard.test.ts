@@ -5,9 +5,10 @@
 import { describe, expect, it } from "vitest";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
+import { readdirSync, readFileSync } from "node:fs";
 import { loadAudioTracks, loadGrammarRules, loadLessons, loadUpgradePlans, loadWords } from "../tools/lib/content-disk.js";
-import { inspectLesson, metaOf, taughtUpTo } from "../tools/lib/lesson-upgrade.js";
-import { CLOSED, knownStems, unknownTokens, withLaterForms } from "../tools/lib/vocab-forms.js";
+import { inspectLesson, metaOf, taughtUpTo, lessonGermanStrings } from "../tools/lib/lesson-upgrade.js";
+import { CLOSED, knownStems, knownForms, contentTokens, deumlaut, stemKnown, unknownTokens, withLaterForms, stripMorphemeNotation, stripGraphemeNotation } from "../tools/lib/vocab-forms.js";
 
 const CONTENT = join(__dirname, "..", "content");
 const words = loadWords(CONTENT);
@@ -134,11 +135,71 @@ describe("D188 — الصيغ الثابتة المعلنة من SD1 (fixedPhras
     for (const e of loadUpgradePlans(CONTENT)[0]!.lessons) expect(e.fixedPhrases.length, e.lessonId).toBeLessThanOrEqual(2);
     // D195: أول إعلان — سؤال الساعة الثابت في توليف u3 (هدف u3-d3 نفسه)؛ كل إضافة هنا قرار موثَّق لا تسريب صامت
     // D199: طلب المساعدة الثابت بـSie في لعب أدوار توليف u9 (هدف u9-d3) · «أنا في البيت» في جملة weil بتوليف u10 (u10-d5) — لا بديل طبيعي لهما
-    expect(all).toEqual([["a1-u3-d6", "Wie spät ist es?"], ["a1-u9-d6", "Können Sie mir helfen?"], ["a1-u10-d6", "Ich bin zu Hause."]]);
+    // D226 (N-113): اكتمال الإعلان — دروس التعليم نفسها (u1-d5 سؤال الأصل · u3-d3 الساعة · u3-d5 التمهل · u9-d3 المساعدة وتنويعتها · u10-d5 مركبة weil) + حوار مسجل لا يُعاد (u13-d6 eb-18)
+    expect(all).toEqual([["a1-u1-d5", "Woher kommen Sie?"], ["a1-u3-d3", "Wie spät ist es?"], ["a1-u3-d5", "Bitte nicht so schnell!"], ["a1-u9-d3", "Können Sie mir helfen?"], ["a1-u9-d3", "Können Sie mir bitte helfen?"], ["a1-u10-d5", "Ich bin zu Hause."], ["a1-u3-d6", "Wie spät ist es?"], ["a1-u9-d6", "Können Sie mir helfen?"], ["a1-u10-d6", "Ich bin zu Hause."], ["a1-u13-d6", "Das ist sehr nett von dir!"]]);
   });
   it("check-lesson.ts يستعمل المجموعة نفسها (withLaterForms + المستعارات): u8-d2 front 0 · later 0 — لا منطق ثانٍ", () => {
     const out = execFileSync("npx", ["tsx", "tools/dev/check-lesson.ts", "a1-u8-d2", "--json"], { cwd: join(__dirname, ".."), encoding: "utf8", timeout: 120_000 });
     const r = JSON.parse(out) as { summary: { front: number; later: number } };
     expect([r.summary.front, r.summary.later]).toEqual([0, 0]);
   }, 120_000);
+});
+
+describe("N-060 (D226) — ثقوب الجذوع معلنة لا صامتة: لقطة أزواج جذوع-القطع + الثقب المركّب الموثّق", () => {
+  // الرمز المقبول بجذع وحده (لا صيغة مسجلة) إما تصريف حقيقي (ممرَّر بنيوياً: له كلمة غير-قطعة) أو في اللقطة؛
+  // أي رمز جديد بجذع قطعة وحده يكسر هنا للفرز (إصلاح أو إعلان). والجذر المركّب المشترك (lernen ⇐ kennenlernen)
+  // حدٌّ بنيوي (لا فاصل مركّبات) فموضعه الحي معلن. الفحص الكامل: npx tsx tools/dev/measure-stems.ts
+  const CHUNK_SOLE = [ // [درس, رمز]: «الكل جاهز؟» ×12 (تُقرأ عبر Alles-klar) + wehe (مشتت إملائي مقصود u11-d6)
+    // + ihrer (تصريف جدول الضمير المحفوظ) + viele ×2 (جمع طبيعي: Länder/Menschen — سابقة D224)
+    ["a1-u1-d6", "alle"], ["a1-u11-d1", "alle"], ["a1-u11-d5", "alle"], ["a1-u11-d6", "wehe"],
+    ["a1-u12-d1", "alle"], ["a1-u12-d3", "alle"], ["a1-u13-d1", "alle"], ["a1-u13-d1", "ihrer"], ["a1-u13-d2", "alle"],
+    ["a1-u13-d4", "alle"], ["a1-u14-d6", "alle"], ["a1-u15-d6", "alle"], ["a1-u2-d1", "viele"], ["a1-u2-d2", "viele"], ["a1-u2-d4", "alle"], ["a1-u8-d3", "alle"],
+  ].map(([l, t]) => `${l} :: ${t}`).sort();
+  const KNOWN_COMPOUND = ["a1-u2-d5 :: lernen"]; // split-chunk موثّق في ars-kennenlernen («نحفظهما قطعتين كاملتين») — الإصلاح مرفوض: حِمل تعليمي
+  let cache: { chunkSole: string[]; indirectAt: (l: string) => Set<string> } | undefined;
+  const holes = () => {
+    if (cache) return cache;
+    const plan = loadUpgradePlans(CONTENT)[0]!.lessons;
+    const doneIds = new Set(plan.filter((e) => e.rule === "done").map((e) => e.lessonId));
+    const wStems = new Map(words.map((x) => [x.id, knownStems([x])]));
+    const byId = new Map(words.map((x) => [x.id, x]));
+    const chunkSole = new Set<string>();
+    const perLesson = new Map<string, Set<string>>();
+    for (const l of lessons.filter((x) => doneIds.has(x.id))) {
+      const e = plan.find((x) => x.lessonId === l.id);
+      const allow = new Set((e?.properNouns ?? []).flatMap((n) => contentTokens(n)));
+      const taught = taughtUpTo(l, lessons, words);
+      const horizon = knownStems(taught);
+      const direct = new Set([...taught.flatMap((x) => knownForms(x).map(deumlaut)), ...CLOSED, ...allow]);
+      const lines = lessonGermanStrings(l);
+      for (const f of readdirSync(join(CONTENT, "audio-scripts"))) {
+        if (!f.startsWith(`${l.id}-`) || !f.endsWith(".json")) continue;
+        const s = JSON.parse(readFileSync(join(CONTENT, "audio-scripts", f), "utf8")) as { lines?: { textDe?: string; text?: string }[] };
+        for (const ln of s.lines ?? []) { const t = ln.textDe ?? ln.text; if (t) lines.push(t); }
+      }
+      const ind = new Set<string>();
+      for (const line of lines) {
+        const de = stripGraphemeNotation(stripMorphemeNotation(line.replace(/~~/g, " ")));
+        for (const t of contentTokens(de)) {
+          const d = deumlaut(t);
+          if (direct.has(d) || !stemKnown(d, horizon) || ind.has(d)) continue;
+          ind.add(d);
+          const via = taught.filter((x) => stemKnown(d, wStems.get(x.id)!));
+          if (via.length > 0 && via.every((x) => byId.get(x.id)!.chunk)) chunkSole.add(`${l.id} :: ${d}`);
+        }
+      }
+      perLesson.set(l.id, ind);
+    }
+    cache = { chunkSole: [...chunkSole].sort(), indirectAt: (x) => perLesson.get(x) ?? new Set() };
+    return cache;
+  };
+  it("الرموز المقبولة بجذع قطعة وحده = اللقطة المعلنة لا غير", () => {
+    expect(holes().chunkSole).toEqual(CHUNK_SOLE);
+  });
+  it("الثقب المركّب الموثّق حي في موضعه", () => {
+    for (const pair of KNOWN_COMPOUND) {
+      const [l, t] = pair.split(" :: ");
+      expect(holes().indirectAt(l!).has(t!), pair).toBe(true);
+    }
+  });
 });
