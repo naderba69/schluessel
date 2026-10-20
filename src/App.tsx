@@ -1,6 +1,6 @@
 // src/App.tsx — القشرة: أول تشغيل → مسار الدروس + حصة الدرس الحالي + بوابة Quiz + حفظ التقدّم (S0.6/S0.7/S0.8 + M1 + D117)
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { LearnerState, Lesson, Unit0Card } from "./../content/schemas/index.js";
+import type { LearnerState, Lesson, OpenSession, Unit0Card } from "./../content/schemas/index.js";
 import { GenderBadge } from "./components/GenderBadge.js";
 import { FirstRun } from "./components/FirstRun.js";
 import { LessonSession } from "./components/LessonSession.js";
@@ -25,11 +25,13 @@ import {
   ALL_LESSONS,
   ALL_GRAMMAR_RULES,
   ALL_STORY,
+  ALL_SCRIPTS,
   PHRASE_BANK,
   LESSON_ORDER,
 } from "./lesson-packs.js";
 import { phrasesAvailable } from "./lib/phrase-bank.js";
-import { currentLessonId, lessonAfter, quizAttempts, reconcileState, recordQuizAttempt } from "./lib/lesson-path.js";
+import { currentLessonId, lessonAfter, openSessionFor, quizAttempts, reconcileState, recordQuizAttempt, setOpenSession } from "./lib/lesson-path.js";
+import { recordSession } from "./lib/session-log.js";
 import type { QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
@@ -59,22 +61,58 @@ function LessonRun({
   hasNext,
   onAttempt,
   onFinish,
+  initialOpen,
+  onProgress,
 }: {
   lesson: Lesson;
   priorAttempts: number;
   hasNext: boolean;
   onAttempt: (o: QuizOutcome) => void;
   onFinish: (last: QuizOutcome | null) => void;
+  /** N-006: لقطة حصة سابقة لهذا الدرس تُستأنف (محطة+بنود+اختبار) */
+  initialOpen?: OpenSession;
+  /** N-006: يُنادى عند كل تقدّم داخل الحصة لحفظ اللقطة */
+  onProgress: (open: OpenSession) => void;
 }) {
-  const plan = useMemo(() => planLessonStations(lesson, runtimeWordsForLesson(lesson), ALL_GRAMMAR_RULES, ALL_STORY), [lesson]);
+  const plan = useMemo(() => planLessonStations(lesson, runtimeWordsForLesson(lesson), ALL_GRAMMAR_RULES, ALL_STORY, ALL_SCRIPTS), [lesson]);
   /** §6 + قانون الجبهة: Redemittel ضمن سياق الدرس — مما ظهر حتى درس الحصة فقط */
   const redemittel = useMemo(() => phrasesAvailable(PHRASE_BANK, LESSON_ORDER, lesson.id).slice(0, 6), [lesson.id]);
   const [done, setDone] = useState<Partial<Record<Station, boolean>>>(() => ({
-    recall: plan.recall.length === 0,
-    learn: plan.learn.length === 0 && plan.rules.length === 0,
+    recall: plan.recall.length === 0 || initialOpen?.done.includes("recall") === true,
+    learn: (plan.learn.length === 0 && plan.rules.length === 0) || initialOpen?.done.includes("learn") === true,
+    ...(initialOpen?.done.includes("practice") ? { practice: true as const } : {}),
+    ...(initialOpen?.done.includes("close") ? { close: true as const } : {}),
   }));
   const [last, setLast] = useState<QuizOutcome | null>(null);
-  const mark = (s: Station) => setDone((d) => ({ ...d, [s]: true }));
+  /** N-006: مرآة قابلة للتغيير للقطة — تُدفع كاملة عند كل تقدّم (لا إغلاقات قديمة) */
+  const snap = useRef({
+    station: initialOpen?.station ?? "recall",
+    done: new Set<Station>(initialOpen?.done ?? []),
+    pos: {
+      recall: initialOpen?.pos.recall,
+      learn: initialOpen?.pos.learn ? { ...initialOpen.pos.learn } : undefined,
+      practice: initialOpen?.pos.practice ? { ...initialOpen.pos.practice } : undefined,
+    },
+    quiz: initialOpen?.quiz,
+  });
+  const save = () => {
+    const pos: OpenSession["pos"] = {};
+    if (snap.current.pos.recall !== undefined) pos.recall = snap.current.pos.recall;
+    if (snap.current.pos.learn) pos.learn = { ...snap.current.pos.learn };
+    if (snap.current.pos.practice) pos.practice = { ...snap.current.pos.practice };
+    onProgress({
+      lessonId: lesson.id,
+      station: snap.current.station,
+      done: [...snap.current.done],
+      pos,
+      ...(snap.current.quiz ? { quiz: snap.current.quiz } : {}),
+    });
+  };
+  const mark = (st: Station) => {
+    snap.current.done.add(st);
+    setDone((d) => ({ ...d, [st]: true }));
+    save();
+  };
   const due = plan.close.srsBundleWordIds.length;
 
   return (
@@ -82,15 +120,58 @@ function LessonRun({
     <LessonSession
       done={done}
       onFinish={() => onFinish(last)}
+      initialStation={initialOpen?.station}
+      onStationChange={(st) => {
+        snap.current.station = st;
+        save();
+      }}
       content={{
-        recall: <RecallStation cards={plan.recall} onDone={() => mark("recall")} />,
-        learn: <LearnStation cards={plan.learn} rules={plan.rules} onDone={() => mark("learn")} />,
-        practice: <PracticeStation data={plan.practice} redemittel={redemittel} onDone={() => mark("practice")} />,
+        recall: (
+          <RecallStation
+            cards={plan.recall}
+            onDone={() => mark("recall")}
+            initialIndex={initialOpen?.pos.recall}
+            onProgress={(i) => {
+              snap.current.pos.recall = i;
+              save();
+            }}
+          />
+        ),
+        learn: (
+          <LearnStation
+            cards={plan.learn}
+            rules={plan.rules}
+            onDone={() => mark("learn")}
+            initialIndex={initialOpen?.pos.learn?.index}
+            initialRuleIndex={initialOpen?.pos.learn?.ruleIndex}
+            onProgress={(i, r) => {
+              snap.current.pos.learn = { index: i, ruleIndex: r };
+              save();
+            }}
+          />
+        ),
+        practice: (
+          <PracticeStation
+            data={plan.practice}
+            redemittel={redemittel}
+            onDone={() => mark("practice")}
+            initial={initialOpen?.pos.practice}
+            onProgress={(st, i) => {
+              snap.current.pos.practice = { station: st, item: i };
+              save();
+            }}
+          />
+        ),
         close: (
           <>
             <QuizStation
               lesson={lesson}
               priorAttempts={priorAttempts}
+              initialQuiz={initialOpen?.quiz}
+              onQuizProgress={(q) => {
+                snap.current.quiz = q;
+                save();
+              }}
               onAttemptComplete={(o) => {
                 setLast(o);
                 mark("close");
@@ -129,6 +210,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [saveError, setSaveError] = useState<string | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
   const [session, setSession] = useState<{ lesson: Lesson; priorAttempts: number } | null>(null);
+  const sessionStart = useRef<number>(0); // N-007: بداية الحصة لقياس مدتها عند النهاية
   const [finishedNote, setFinishedNote] = useState<string | null>(null);
   const [labOpen, setLabOpen] = useState(false);
   const [systemOpen, setSystemOpen] = useState(false);
@@ -242,6 +324,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const openSession = () => {
     if (!current) return;
     setFinishedNote(null);
+    sessionStart.current = Date.now();
     setSession({ lesson: current, priorAttempts: quizAttempts(state.progress, current.id) });
   };
 
@@ -270,9 +353,29 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     }
   };
 
+  const onProgress = (open: OpenSession) => {
+    const s = stateRef.current;
+    if (!s || !session || open.lessonId !== session.lesson.id) return;
+    try {
+      commit({ ...s, progress: setOpenSession(s.progress, open) });
+    } catch (e) {
+      setSaveError(errText(e));
+    }
+  };
+
   const onFinish = (last: QuizOutcome | null) => {
     if (!session) return;
     const id = session.lesson.id;
+    // N-007: سجل الجلسة اليومي — المدة من بداية الحصة (دقيقة على الأقل)، والجديد = كلمات الدرس
+    const s = stateRef.current;
+    if (s) {
+      const minutes = Math.max(1, Math.round((Date.now() - sessionStart.current) / 60000));
+      try {
+        commit({ ...s, sessions: recordSession(s.sessions, { date: localDay(), durationMinutes: minutes, wordsNew: session.lesson.praesentation.wordIds.length }) });
+      } catch (e) {
+        setSaveError(errText(e));
+      }
+    }
     const next = lessonAfter(id, ALL_LESSONS);
     setFinishedNote(
       last?.passed
@@ -311,6 +414,8 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           hasNext={lessonAfter(session.lesson.id, ALL_LESSONS) !== null}
           onAttempt={onAttempt}
           onFinish={onFinish}
+          initialOpen={openSessionFor(state.progress, session.lesson.id)}
+          onProgress={onProgress}
         />
       ) : current ? (
         <>
@@ -327,7 +432,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
 
       <h2>مختبر المهارات (M2 — E09–E16)</h2>
       {labOpen ? (
-        <SkillsLab />
+        <SkillsLab currentLessonId={currentId} />
       ) : (
         <button data-testid="open-skills-lab" onClick={() => setLabOpen(true)}>
           🧪 افتح مختبر المهارات

@@ -11,6 +11,7 @@ import {
   ImageManifest,
   GrammarRuleFile,
   StoryBook,
+  AudioScript,
   type Lesson,
   type Word,
 } from "../content/schemas/index.js";
@@ -50,6 +51,10 @@ export const ALL_GRAMMAR_RULES: GrammarRule[] = json(import.meta.glob("../conten
 /** دفاتر القصة المتصلة (D193): مولَّدة من أول سطر في حوار كل درس — تُعرض في الخلاصة */
 export const ALL_STORY: StoryBook[] = json(import.meta.glob("../content/story/*.json", { eager: true, import: "default" }))
   .map((j) => StoryBook.parse(j));
+
+/** N-010 (D231): سكربتات الصوت (88 حواراً + كلمات/إعلان/رسالة) — الحوار الكامل يُعرض قبل بنود الاستماع */
+export const ALL_SCRIPTS: AudioScript[] = json(import.meta.glob("../content/audio-scripts/*.json", { eager: true, import: "default" }))
+  .map((j) => AudioScript.parse(j));
 
 /** كل الكلمات المُتحقَّق منها — بلا استثناءات (مرتبة بالمعرّف) */
 export const ALL_WORDS: Word[] = WORD_JSONS.map((j) => WordSchema.parse(j));

@@ -33,6 +33,7 @@ import {
   PRACTICE_ITEM_SHAPES,
   QuizItem,
   dictationForm,
+  type AudioScript,
   type GrammarRuleFile,
   type Lesson,
   type LessonUpgradeEntry,
@@ -63,6 +64,8 @@ export type UpgradeContext = {
   rules: ReadonlyMap<string, GrammarRuleFile>;
   /** مسارات المانيفست الصوتي: المعرّف ← النص المنطوق */
   tracks: ReadonlyMap<string, { textDe: string }>;
+  /** N-010 (D231): سكربتات الصوت — الحوار الكامل معروض في التدريب فيخضع لقانون الجبهة (اختياري لتوافق الاختبارات) */
+  scripts?: readonly AudioScript[];
 };
 
 const LEVEL_ORDER: Record<Lesson["level"], number> = { A1: 0, A2: 1, B1: 2, B2: 3 };
@@ -250,6 +253,25 @@ function checkRulePart(lesson: Lesson, ctx: UpgradeContext, stems: ReadonlySet<s
   return { issues, texts };
 }
 
+/**
+ * N-010 (D231): حوارات الدرس — سكربت الحوار الذي تستعمل بنود محطة الاستماع سطوره (مقاطع الكلمات word- ليست
+ * سطوراً). العلاقة 1:1 في المحتوى كله (لا سكربت حوار بأكثر من usedIn) — المرآة الحارسة للمشغِّل في lesson-runner.
+ */
+export function dialogueScriptsFor(lesson: Lesson, scripts: readonly AudioScript[] | undefined): AudioScript[] {
+  if (!scripts) return [];
+  const out: AudioScript[] = [];
+  for (const st of lesson.uebung.stations) {
+    if (st.type !== "listening") continue;
+    const lineIds = new Set<string>();
+    for (const item of st.items)
+      if ("audioId" in item && typeof item.audioId === "string" && !item.audioId.startsWith("word-")) lineIds.add(item.audioId);
+    if (lineIds.size === 0) continue;
+    const script = scripts.find((sc) => sc.kind === "dialogue" && sc.lines.some((ln) => lineIds.has(ln.id)));
+    if (script && !out.includes(script)) out.push(script);
+  }
+  return out;
+}
+
 function checkPracticePart(
   lesson: Lesson, ctx: UpgradeContext, stems: ReadonlySet<string>, allow: ReadonlySet<string>, wrong: ReadonlySet<string>,
 ): PartResult {
@@ -289,6 +311,13 @@ function checkPracticePart(
   for (const c of lesson.zusammenfassung.warningCards) texts.push(c.commonError.de, c.correct.de, ...itemTexts(c.exercise));
   const unknown = frontViolations(texts, stems, allow, wrong);
   if (unknown.length) err("e-upgrade-front", `${lesson.id} (تدريب/مصائد): غير مدروسة حتى الدرس: ${unknown.join("، ")}`);
+  // N-010 (D231): الحوار الكامل معروض قبل بنود الاستماع — كل سطر فيه (حتى غير المُبنَّد) تحت قانون الجبهة
+  for (const sc of dialogueScriptsFor(lesson, ctx.scripts))
+    for (const ln of sc.lines) {
+      const lineUnknown = frontViolations([ln.text], stems, allow, wrong);
+      if (lineUnknown.length)
+        err("e-dialogue-front", `${lesson.id}: حوار ${sc.id} سطر ${ln.id} «${ln.text}» — غير مدروسة حتى الدرس: ${lineUnknown.join("، ")}`);
+    }
   // D121: الاستدعاء لما سبق تعلمه — بطاقة أول تدريسها اليوم (أو لاحقاً) ليست استدعاءً بل عرضٌ قبل الشرح
   const earlier = ctx.lessons.filter((l) => pathOrder(l) < pathOrder(lesson));
   if (earlier.length > 0) {
@@ -499,6 +528,10 @@ export function checkUpgrade(plan: LessonUpgradePlan, ctx: UpgradeContext): Upgr
     if (s.rule === "done" || s.practice === "done" || s.quiz === "done") {
       const entry = plan.lessons.find((e) => e.lessonId === s.lessonId)!;
       const texts = (["rule", "practice", "quiz"] as const).flatMap((p) => (s[p] === "done" ? r.texts[p] : []));
+      // N-010 (D231): الحوار المعروض نصٌّ من نصوص الدرس — اسم العلم المستعمل في سطوره مستعملٌ فعلاً
+      const dialogueLesson = byId.get(s.lessonId);
+      if (dialogueLesson)
+        for (const sc of dialogueScriptsFor(dialogueLesson, ctx.scripts)) for (const ln of sc.lines) texts.push(ln.text);
       const seen = new Set(contentTokens(germanOnly(texts.join("\n"))));
       for (const n of entry.properNouns)
         if (!contentTokens(n).every((t) => seen.has(t)))

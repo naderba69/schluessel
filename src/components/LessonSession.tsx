@@ -228,12 +228,18 @@ export function LessonSession({
   content,
   done,
   onFinish,
+  initialStation,
+  onStationChange,
 }: {
   content?: StationContent;
   done?: Partial<Record<Station, boolean>>;
   onFinish?: () => void;
+  /** N-006: محطة الاستئناف (حالة أولية — لا كسر لقفل الاتجاه فالتنقل بعده تقدمي وحده) */
+  initialStation?: Station;
+  /** N-006: يُنادى عند كل انتقال لمحطة تالية (مباشرةً أو بعد الاستراحة) */
+  onStationChange?: (station: Station) => void;
 }) {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(() => Math.max(0, STATIONS.indexOf(initialStation ?? "recall")));
   const [onBreak, setOnBreak] = useState(false);
   const station = STATIONS[index];
   const ready = done === undefined || done[station] === true;
@@ -248,7 +254,10 @@ export function LessonSession({
     }
     if (canMove(station, next)) {
       if (BREAKS_AFTER.includes(station)) setOnBreak(true);
-      else setIndex(index + 1);
+      else {
+        setIndex(index + 1);
+        onStationChange?.(next);
+      }
     }
   };
 
@@ -261,6 +270,7 @@ export function LessonSession({
           onContinue={() => {
             setOnBreak(false);
             setIndex(index + 1);
+            onStationChange?.(STATIONS[index + 1]!);
           }}
         />
       </section>

@@ -4,8 +4,8 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import {
-  ArsenalFile, AudioManifest, GrammarRuleFile, Lesson, LessonUpgradePlan, OfficialWordlist, Word,
-  type GrammarRuleFile as RuleT, type Lesson as LessonT, type LessonUpgradePlan as UpgradeT, type OfficialWordlist as WordlistT, type Word as WordT,
+  ArsenalFile, AudioManifest, AudioScript, GrammarRuleFile, Lesson, LessonUpgradePlan, OfficialWordlist, Word,
+  type AudioScript as ScriptT, type GrammarRuleFile as RuleT, type Lesson as LessonT, type LessonUpgradePlan as UpgradeT, type OfficialWordlist as WordlistT, type Word as WordT,
 } from "../../content/schemas/index.js";
 
 const LEVEL_ORDER: Record<string, number> = { A1: 0, A2: 1, B1: 2, B2: 3 };
@@ -41,6 +41,13 @@ export function loadLessons(contentRoot: string): LessonT[] {
 }
 
 /** D110: فهارس قوائم Goethe الرسمية (content/wordlists/*.json) — مرتبة بالمعرّف؛ [] إن غاب المجلد */
+/** N-010 (D231): سكربتات الصوت — الحوار المعروض في التدريب تحت قانون الجبهة */
+export function loadAudioScripts(contentRoot: string): ScriptT[] {
+  const dir = join(contentRoot, "audio-scripts");
+  return readdirSync(dir).filter((f) => f.endsWith(".json")).sort()
+    .map((f) => parseFile(AudioScript, join(dir, f), JSON.parse(readFileSync(join(dir, f), "utf8"))));
+}
+
 export function loadWordlists(contentRoot: string): WordlistT[] {
   const dir = join(contentRoot, "wordlists");
   if (!existsSync(dir)) return [];

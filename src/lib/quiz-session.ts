@@ -6,7 +6,7 @@
 // («ترجم: اسمي يوسف» ← Ich heiße Yusuf. / Ich bin Yusuf.) أو إجابة بصيغة لا يعرفها المتعلم مسبقاً («يصل» ← ankommen → er kommt an.).
 // المطابقة الحرفية وحدها تُسقط من أجاب صواباً — وبوابة تقفل المسار لا تُبنى على مصحِّح معروف الخطأ. فيرى المتعلم النموذج
 // ويحكم (كحكم «self» في الإنتاج الحر — practice-session)، ويُحتسب حكمه ويُعلَن عدده في النتيجة وفي السجل (selfJudged).
-import type { Lesson, QuizItem } from "../../content/schemas/index.js";
+import type { Lesson, QuizAnswer, QuizItem } from "../../content/schemas/index.js";
 import { normalizeAnswer } from "./practice-session.js";
 
 /** نصف درجة: الفرق في حالة الأحرف أو في كتابة ß/ä/ö/ü فقط — خطأ إملائي حقيقي في الألمانية لا يمحو المعرفة */
@@ -22,7 +22,8 @@ export type QuizVerdict =
 
 export type CloseKind = "case" | "spelling";
 export type Graded = { verdict: "correct" | "close" | "wrong" | "judge"; closeKind?: CloseKind };
-export type QuizAnswer = { given: string } & ({ verdict: Exclude<QuizVerdict, "close">; closeKind?: undefined } | { verdict: "close"; closeKind: CloseKind });
+// N-006 (D228): QuizAnswer مصدره المخطط (lesson.ts) — يُعاد تصدير النوع وحده ليتابع المستوردون
+export type { QuizAnswer };
 
 export type QuizAttempt = {
   readonly lessonId: string;
@@ -79,6 +80,29 @@ export function startQuizAttempt(lesson: Pick<Lesson, "id" | "quiz">, priorAttem
   const variantIndex = variantFor(priorAttempts, lesson.quiz.variants.length);
   const v = lesson.quiz.variants[variantIndex]!;
   return { lessonId: lesson.id, variantIndex, items: v.items, passingScore: v.passingScore, predicted: null, answers: [], cursor: 0 };
+}
+
+/**
+ * N-006 (D228): استعادة محاولة من لقطة الحصة المفتوحة — البنود تُشتق من النسخة المخزَّنة.
+ * fail-safe: نسخة/بنود تغيّرت في المحتوى بعد الحفظ ← تقليم صامت للمؤشر والإجابات، ونسخة خارج النطاق ← محاولة جديدة (لا عطل أبداً).
+ */
+export function restoreQuizAttempt(
+  lesson: Pick<Lesson, "id" | "quiz">,
+  snap: { variantIndex: number; predicted: number | null; answers: readonly QuizAnswer[]; cursor: number },
+): QuizAttempt {
+  const v = lesson.quiz.variants[snap.variantIndex];
+  if (!v) return startQuizAttempt(lesson, 0);
+  const cursor = Math.max(0, Math.min(snap.cursor, v.items.length));
+  const answers = snap.answers.slice(0, Math.min(cursor + 1, v.items.length));
+  return {
+    lessonId: lesson.id,
+    variantIndex: snap.variantIndex,
+    items: v.items,
+    passingScore: v.passingScore,
+    predicted: snap.predicted,
+    answers,
+    cursor,
+  };
 }
 
 /** §14: التوقّع قبل الاختبار فقط — عدد صحيح 0–100 */

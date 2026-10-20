@@ -6,7 +6,7 @@ import { createHash } from "node:crypto";
 import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
-  Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
+  Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile, BARE_ARTICLE_IDS,
   Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, StoryBook, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
   GrammarRuleFile, LessonUpgradePlan,
 } from "../content/schemas/index.js";
@@ -511,8 +511,9 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
   for (const [wordId, { path, word }] of words) {
     // R10: بطاقة الجنس إلزامية لكل اسم ذي جنس (§4)
     if (word.gender !== "none") {
-      if (!word.article) push("error", "e-article", path, `كلمة ${wordId} ذات جنس بلا article كامل (§4/§15‑هـ)`);
-      else if (!word.article.startsWith(word.gender))
+      // N-137: العارية الاستعمال المعلنة (بلدان/لغات) بلا article عمداً — الجنس للبطاقة النحوية والنعت
+      if (!word.article && !BARE_ARTICLE_IDS.has(wordId)) push("error", "e-article", path, `كلمة ${wordId} ذات جنس بلا article كامل (§4/§15‑هـ)`);
+      else if (word.article && !word.article.startsWith(word.gender))
         push("error", "e-article-gender", path, `article «${word.article}» لا يطابق gender «${word.gender}»`);
       if (!word.srsCardTypes.includes("gender"))
         push("error", "e-gender-card", path, `كلمة ${wordId} ذات جنس بلا بطاقة gender (§4)`);
@@ -569,6 +570,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
       words: [...words.values()].map((w) => w.word),
       rules: new Map([...grammarRules].map(([id, r]) => [id, r.rule] as const)),
       tracks: manifestTracks,
+      scripts: [...scripts.values()].map((s) => s.script), // N-010 (D231): الحوار المعروض تحت قانون الجبهة
     };
     const where = (i: { lessonId?: string; ruleId?: string }, fallback: string) =>
       (i.ruleId && grammarRules.get(i.ruleId)?.path) || (i.lessonId && lessons.get(i.lessonId)?.path) || fallback;

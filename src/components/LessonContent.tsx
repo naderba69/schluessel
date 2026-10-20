@@ -5,7 +5,8 @@ import { audioPlayer } from "../lib/audio-player.js";
 import { FUNCTION_LABELS_AR, type Phrase } from "../lib/phrase-bank.js";
 import { PlayButton } from "./LessonSession.js";
 import { BorrowedWordsBox, StruckText } from "./StruckText.js";
-import type { Unit0Card } from "../../content/schemas/index.js";
+import type { AudioScript, Unit0Card } from "../../content/schemas/index.js";
+import { CHARACTER_NAME_AR } from "../lib/story.js";
 import type { LearnCardData, RecallCardData, PracticeData, CloseData } from "../lib/lesson-runner.js";
 import { RecallCardView, LearnCardView, CloseView } from "./LessonSession.js";
 import type { RecallRating } from "../lib/review-engine.js";
@@ -14,7 +15,7 @@ import {
   type DiscoverySession, type GrammarRule,
 } from "../lib/grammar-discovery.js";
 import {
-  displayOrder, initialPractice, nextItem, submitAttempt, toTypedItem, type Attempt, type PracticeState, type TypedItem, type Verdict,
+  displayOrder, initialPractice, nextItem, normalizeAnswer, submitAttempt, toTypedItem, type Attempt, type PracticeState, type TypedItem, type Verdict,
 } from "../lib/practice-session.js";
 
 /** أحرف ألمانية خاصة (D117): لوحة مفاتيح عربية/إنجليزية لا تملك ä ö ü ß — بلا هذه الأزرار يُعاقَب المتعلم على لوحته لا على معرفته */
@@ -41,8 +42,8 @@ export function insertAtCursor(el: HTMLInputElement | null, text: string, ch: st
 }
 
 /** محطة 1 — الاسترجاع: بطاقة بعد بطاقة، والتقييم يمرّر للتالية */
-export function RecallStation({ cards, onDone }: { cards: RecallCardData[]; onDone?: () => void }) {
-  const [index, setIndex] = useState(0);
+export function RecallStation({ cards, onDone, initialIndex = 0, onProgress }: { cards: RecallCardData[]; onDone?: () => void; initialIndex?: number; onProgress?: (index: number) => void }) {
+  const [index, setIndex] = useState(Math.max(0, Math.min(initialIndex, Math.max(0, cards.length - 1))));
   const [revealed, setRevealed] = useState(false);
   const card = cards[index];
   if (!card) return <p data-testid="recall-done">انتهت جولة الاسترجاع — إلى الجديد! 💪</p>;
@@ -61,6 +62,7 @@ export function RecallStation({ cards, onDone }: { cards: RecallCardData[]; onDo
         onRate={(_r: RecallRating) => {
           setRevealed(false);
           setIndex(index + 1);
+          onProgress?.(index + 1); // N-006
           if (index + 1 >= cards.length) onDone?.(); // D117: اكتملت المحطة ← يُفتح «التالي»
         }}
       />
@@ -73,13 +75,19 @@ export function LearnStation({
   cards,
   rules = [],
   onDone,
+  initialIndex = 0,
+  initialRuleIndex = 0,
+  onProgress,
 }: {
   cards: LearnCardData[];
   rules?: readonly GrammarRule[];
   onDone?: () => void;
+  initialIndex?: number;
+  initialRuleIndex?: number;
+  onProgress?: (index: number, ruleIndex: number) => void;
 }) {
-  const [index, setIndex] = useState(0);
-  const [ruleIndex, setRuleIndex] = useState(0);
+  const [index, setIndex] = useState(Math.max(0, initialIndex));
+  const [ruleIndex, setRuleIndex] = useState(Math.max(0, initialRuleIndex));
   const [attempted, setAttempted] = useState(false);
   const [revealed, setRevealed] = useState(false);
   const card = cards[index];
@@ -96,6 +104,7 @@ export function LearnStation({
           rule={rule}
           onDone={() => {
             setRuleIndex(ruleIndex + 1);
+            onProgress?.(index, ruleIndex + 1); // N-006
             if (ruleIndex + 1 >= rules.length) onDone?.(); // D117: آخر قاعدة ← اكتملت المحطة
           }}
         />
@@ -126,6 +135,7 @@ export function LearnStation({
             setRevealed(false);
             setAttempted(false);
             setIndex(index + 1);
+            onProgress?.(index + 1, ruleIndex); // N-006
             if (index + 1 >= cards.length && rules.length === 0) onDone?.(); // D117: بلا قاعدة ← آخر بطاقة تُكمل المحطة
           }}
         >
@@ -417,12 +427,20 @@ export function PracticeStation({
   data,
   redemittel = [],
   onDone,
+  initial,
+  onProgress,
 }: {
   data: PracticeData;
   redemittel?: Phrase[];
   onDone?: () => void;
+  initial?: { station: number; item: number };
+  onProgress?: (station: number, item: number) => void;
 }) {
-  const [state, setState] = useState<PracticeState>(initialPractice);
+  const [state, setState] = useState<PracticeState>(() => ({
+    ...initialPractice(),
+    station: Math.max(0, initial?.station ?? 0),
+    item: Math.max(0, initial?.item ?? 0),
+  }));
   const station = data.stations[state.station];
   const item = station?.items[state.item] as { q?: string; a?: string } | undefined;
 
@@ -454,9 +472,14 @@ export function PracticeStation({
   }
 
   const typed = toTypedItem(station.type, item);
+  // N-010 (D231): حوار محطة الاستماع هذه — يُعرض كاملاً قبل بندها الأول وحده (بقية البنود: زر سطرها يكفي)
+  const dialogue = station.type === "listening" && state.item === 0
+    ? data.dialogues.find((d) => d.station === state.station)?.script
+    : undefined;
   const next = () => {
     const after = nextItem(state, data.stations);
     setState(after);
+    onProgress?.(after.station, after.item); // N-006
     if (!data.stations[after.station]) onDone?.(); // D117: آخر بند ← اكتملت المحطة (ثم المهمة التواصلية)
   };
   const counter = (
@@ -469,6 +492,7 @@ export function PracticeStation({
     return (
       <section data-testid="practice-station" data-type={station.type}>
         {state.station === 0 && state.item === 0 && !state.verdict && <BorrowedWordsBox words={data.borrowed ?? []} />}
+        {dialogue && <DialogueView script={dialogue} />}
         {counter}
         <TypedItemView
           key={`${state.station}-${state.item}`}
@@ -485,6 +509,7 @@ export function PracticeStation({
   const legacy: TypedItem = { kind: "production", prompt: item.q ?? "", model: item.a ?? "", why: "" };
   return (
     <section data-testid="practice-station" data-type={station.type}>
+      {dialogue && <DialogueView script={dialogue} />}
       {counter}
       <p dir="ltr">
         <StruckText text={item.q ?? ""} />
@@ -507,7 +532,74 @@ export function PracticeStation({
   );
 }
 
+/**
+ * N-010 (D231): الحوار الكامل قبل بنود الاستماع — المتعلم يرى المشهد كله أولاً ثم يجيب؛ كل سطر بزر صوته المسجل.
+ */
+export function DialogueView({ script }: { script: AudioScript }) {
+  return (
+    <div data-testid="station-dialogue">
+      <h4>الحوار كاملاً 🎭 — اقرأ واستمع أولاً، ثم أجب عن الأسئلة</h4>
+      <ol>
+        {script.lines.map((ln) => (
+          <li key={ln.id}>
+            <strong>{ln.speaker === "announcer" ? "المذيع" : CHARACTER_NAME_AR[ln.speaker]}:</strong>{" "}
+            <span dir="ltr">{ln.text}</span>{" "}
+            <PlayButton audioId={ln.id} speakText={ln.text} />
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 /** محطة 4 — الخلاصة: التلخيص + المصائد الذهبية + تقرير مولر المسائي (E08) */
+/**
+ * N-047 (D229): تمرين بطاقة المصيدة — محاولة قبل الكشف (F121): إدخال أو اختيار ← تحقق ← الكشف بعد المحاولة وحدها.
+ * بلا درجات (خلاصة هادئة) — والقيمة أن المتعلم ينتج الصحيح بنفسه لا أن يقرأه.
+ */
+export function WarningExerciseView({ q, a, choices }: { q: string; a: string; choices?: readonly string[] }) {
+  const [given, setGiven] = useState("");
+  const [tried, setTried] = useState(false);
+  const [revealed, setRevealed] = useState(false);
+  const ok = tried && normalizeAnswer(given) === normalizeAnswer(a);
+  return (
+    <div data-testid="warning-exercise">
+      <p>
+        تمرينها: <span dir="auto"><StruckText text={q} /></span>
+      </p>
+      {choices ? (
+        <p>
+          {choices.map((c) => (
+            <button key={c} data-testid={`warning-choice-${c}`} onClick={() => { setGiven(c); setTried(true); }}>
+              <span dir="ltr">{c}</span>
+            </button>
+          ))}
+        </p>
+      ) : (
+        !revealed && (
+          <p>
+            <input data-testid="warning-input" aria-label="إجابة التمرين" value={given} onChange={(e) => setGiven(e.target.value)} dir="ltr" />
+            <button data-testid="warning-check" onClick={() => setTried(true)}>
+              تحقق
+            </button>
+          </p>
+        )
+      )}
+      {tried && (ok ? <p data-testid="warning-verdict">✓ صحيح — هكذا تُكتب دائماً.</p> : <p data-testid="warning-verdict">ليس بعد — حاول مرة أخرى أو اكشف الصحيح.</p>)}
+      {tried && !ok && !revealed && (
+        <button data-testid="warning-reveal" onClick={() => setRevealed(true)}>
+          اكشف الصحيح
+        </button>
+      )}
+      {revealed && (
+        <p data-testid="warning-answer">
+          الصحيح: <span dir="ltr">{a}</span>
+        </p>
+      )}
+    </div>
+  );
+}
+
 export function CloseStation({
   data,
   report,
@@ -536,6 +628,7 @@ export function CloseStation({
             <span dir="ltr">
               <StruckText text={card.correct.de} />
             </span>
+            <WarningExerciseView q={card.exercise.q} a={card.exercise.a} choices={card.exercise.choices} />
           </li>
         ))}
       </ul>

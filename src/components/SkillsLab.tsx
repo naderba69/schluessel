@@ -15,7 +15,11 @@ import { buildNetwork, memoryPalace, networkReviewFlow } from "../lib/vocab-netw
 import { familyForms } from "../lib/lesson-runner.js";
 import { A1_TASKS, taskFlow, type RealTask } from "../lib/real-tasks.js";
 import { CULTURE_FACTS, songOfTheWeek, factsNeedingWebVerify } from "../lib/culture.js";
-import { firstLessonWords } from "../lesson-packs.js";
+import { LESSON_ORDER, firstLessonWords } from "../lesson-packs.js";
+import { PlayButton } from "./LessonSession.js";
+import { CHARACTER_NAME_AR } from "../lib/story.js";
+import { AudioScript } from "../../content/schemas/index.js";
+import alphabetJson from "../../content/audio-scripts/a1-alphabet.json";
 
 /* ══════════ E09 — الاستماع المتقدم ══════════ */
 export function ListeningLab() {
@@ -153,10 +157,35 @@ export function WritingLab({ initialText = "" }: { initialText?: string }) {
  * مختبر القواعد (خارج المسار): القواعد الثلاث المكتوبة في الكود — بالمكوّن نفسه الذي تعرض به محطة «الجديد»
  * قواعد المحتوى (D115). كانت نسخة مستقلة لا تستدعي viewExamples فيرمي «سجّل استنتاجي» خطأ عند الضغط.
  */
-export function GrammarLab({ ruleId = A1_RULES[0]!.id }: { ruleId?: string }) {
-  const rule = A1_RULES.find((r) => r.id === ruleId)!;
+export function unlockedLabRules(currentLessonId?: string | null) {
+  if (currentLessonId === undefined || currentLessonId === null) return [...A1_RULES];
+  const rank = new Map(LESSON_ORDER.map((id, i) => [id, i] as const));
+  const at = rank.get(currentLessonId);
+  if (at === undefined) return [];
+  return A1_RULES.filter((r) => !r.lesson || (rank.get(r.lesson) ?? Infinity) <= at).sort(
+    (x, y) => (rank.get(x.lesson ?? "") ?? -1) - (rank.get(y.lesson ?? "") ?? -1),
+  );
+}
+
+export function GrammarLab({ ruleId, currentLessonId }: { ruleId?: string; currentLessonId?: string | null }) {
+  const unlocked = unlockedLabRules(currentLessonId);
+  const [chosenId, setChosenId] = useState<string | undefined>(ruleId);
+  const rule = unlocked.find((r) => r.id === chosenId) ?? unlocked[0];
+  if (!rule)
+    return (
+      <section data-testid="grammar-lab">
+        <p>لا قواعد متاحة بعد — أكمل الدرس الحالي أولاً.</p>
+      </section>
+    );
   return (
     <section data-testid="grammar-lab">
+      <nav data-testid="grammar-rules">
+        {unlocked.map((r) => (
+          <button key={r.id} data-testid={`rule-${r.id}`} onClick={() => setChosenId(r.id)}>
+            {r.topicAr}
+          </button>
+        ))}
+      </nav>
       <RuleDiscoveryView rule={rule} />
     </section>
   );
@@ -260,6 +289,7 @@ const TABS = [
   { id: "netzwerk", label: "🕸️ شبكة" },
   { id: "aufgaben", label: "🎯 مهام" },
   { id: "kultur", label: "🇩🇪 ثقافة" },
+  { id: "alphabet", label: "🔤 الأبجدية" },
 ] as const;
 
 export const DEMO_TEXT: ReadingText = {
@@ -274,7 +304,36 @@ export const DEMO_TEXT: ReadingText = {
   ],
 };
 
-export function SkillsLab() {
+/* ══════════ N-008 (D231) — جدول الأبجدية ══════════ */
+/** جدول الحروف الثلاثين + 3 تهجيات مسجلة (سكربت a1-alphabet) — كل حرف بزر صوته */
+export function AlphabetLab() {
+  const script = AudioScript.parse(alphabetJson);
+  const letters = script.lines.filter((ln) => !ln.id.startsWith("abc-spell-"));
+  const spells = script.lines.filter((ln) => ln.id.startsWith("abc-spell-"));
+  return (
+    <section data-testid="alphabet-lab">
+      <h3>الأبجدية الألمانية 🔤 — اضغط الحرف لتسمع اسمه</h3>
+      <ol data-testid="alphabet-letters">
+        {letters.map((ln) => (
+          <li key={ln.id}>
+            <strong dir="ltr">{ln.text.replace(/\.$/, "")}</strong> <PlayButton audioId={ln.id} speakText={ln.text} />
+          </li>
+        ))}
+      </ol>
+      <h4>تهجية الأسماء — كما تُقال حرفاً حرفاً</h4>
+      <ul data-testid="alphabet-spells">
+        {spells.map((ln) => (
+          <li key={ln.id}>
+            {ln.speaker === "announcer" ? "المذيع" : CHARACTER_NAME_AR[ln.speaker]} يتهجى:{" "}
+            <span dir="ltr">{ln.text}</span> <PlayButton audioId={ln.id} speakText={ln.text} />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+export function SkillsLab({ currentLessonId }: { currentLessonId?: string | null }) {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("hoeren");
   return (
     <div data-testid="skills-lab">
@@ -290,10 +349,11 @@ export function SkillsLab() {
       {tab === "sprechen" && <PronunciationLab />}
       {tab === "lesen" && <ReadingLab text={DEMO_TEXT} />}
       {tab === "schreiben" && <WritingLab />}
-      {tab === "grammatik" && <GrammarLab />}
+      {tab === "grammatik" && <GrammarLab currentLessonId={currentLessonId} />}
       {tab === "netzwerk" && <NetworkLab />}
       {tab === "aufgaben" && <TasksLab />}
       {tab === "kultur" && <CultureLab />}
+      {tab === "alphabet" && <AlphabetLab />}
     </div>
   );
 }

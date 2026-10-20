@@ -45,6 +45,14 @@ function words(text: string): string[] {
   return normalize(text).toLowerCase().split(" ").filter(Boolean);
 }
 
+/** N-051: رسم العرض — الكلمة كما سُمعت (حرفها الأصلي) بلا ترقيم الجملة الملتصق (ترقيم الجملة للجملة لا للكلمة) */
+function displayWords(text: string): string[] {
+  return normalize(text)
+    .split(" ")
+    .filter(Boolean)
+    .map((w) => w.replace(/[.,!?;:]+$/, ""));
+}
+
 /**
  * مقارنة لطيفة (F077): مولر يصحح بلطف ويشرح لماذا.
  * - تطابق تام → correct
@@ -53,9 +61,10 @@ function words(text: string): string[] {
  */
 export function compareDictation(expected: string, written: string): DictationComparison {
   const expWords = words(expected);
-  const gotWords = words(written);
-  const matchedWords = expWords.filter((w) => gotWords.includes(w));
-  const missedWords = expWords.filter((w) => !gotWords.includes(w));
+  const display = displayWords(expected); // N-051: المقارنة على الصغيرة · والعرض بالرسم الأصلي
+  const got = new Set(words(written));
+  const matchedWords = expWords.map((w, i) => ({ w, i })).filter(({ w }) => got.has(w)).map(({ i }) => display[i]!);
+  const missedWords = expWords.map((w, i) => ({ w, i })).filter(({ w }) => !got.has(w)).map(({ i }) => display[i]!);
   const ratio = expWords.length === 0 ? 1 : matchedWords.length / expWords.length;
 
   if (normalize(expected) === normalize(written)) {

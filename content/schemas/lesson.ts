@@ -64,17 +64,39 @@ export const QuizItem = z
   .refine((i) => !i.accept || distinct([i.a, ...i.accept]), { message: "accept يكرر الإجابة أو يكرر نفسه" });
 export type QuizItem = z.infer<typeof QuizItem>;
 
+/**
+ * N-006 (D228): إجابة Quiz مُخزَّنة (لقطة الاستئناف) — المصدر الوحيد (المحرّك يستورد النوع من هنا فلا انحراف).
+ * close: الحرف الكبير/الصغير أو ß/ä/ö/ü فقط ← نصف درجة + نوع الفرق إلزامي؛ غيرها بلا closeKind.
+ */
+export const QuizAnswer = z.union([
+  z.object({
+    given: z.string(),
+    verdict: z.enum(["correct", "wrong", "judge", "self-correct", "self-wrong"]),
+    closeKind: z.undefined().optional(),
+  }),
+  z.object({ given: z.string(), verdict: z.literal("close"), closeKind: z.enum(["case", "spelling"]) }),
+]);
+export type QuizAnswer = z.infer<typeof QuizAnswer>;
+
 export const QuizVariant = z.object({
   items: z.array(QuizItem).min(3),
   passingScore: z.number().min(0.75).max(1).default(0.75),
 });
+
+/** N-047 (D229): تمرين بطاقة المصيدة — كان سجلاً بلا شكل (273 بطاقة: 271 إدخال + 2 اختيار) فشُدِّد */
+export const WarningExercise = z
+  .object({ q: ItemText, a: ItemText, choices: z.array(ItemText).min(2).max(5).optional() })
+  .strict()
+  .refine((i) => !i.choices || i.choices.includes(i.a), { message: "الإجابة ليست بين الخيارات" })
+  .refine((i) => !i.choices || distinct(i.choices), { message: "خيارات مكررة" });
+export type WarningExercise = z.infer<typeof WarningExercise>;
 
 export const WarningCard = z.object({
   /** الخطأ الشائع ← لماذا يقع فيه العربي ← الصحيح + تمرينه */
   commonError: z.object({ de: DeText, ar: ArText }),
   whyArabicSpeakerFails: z.string(),
   correct: z.object({ de: DeText, ar: ArText }),
-  exercise: z.record(z.string(), z.unknown()),
+  exercise: WarningExercise,
 });
 
 export const Lesson = SchemaVersioned.extend({
@@ -196,10 +218,14 @@ export const GapFillItem = z
 
 /** ترتيب الجملة: البطاقات هي كلمات الإجابة نفسها وليست مرتبة سلفاً */
 export const BuildSentenceItem = z
-  .object({ q: ItemText.optional(), tokens: z.array(ItemText).min(3).max(10), a: ItemText, why: WhyAr })
+  .object({ q: ItemText.optional(), tokens: z.array(ItemText).min(3).max(10), a: ItemText, accept: z.array(ItemText).optional(), why: WhyAr })
   .strict()
   .refine((i) => sameMultiset(i.tokens, sentenceTokens(i.a)), { message: "بطاقات الترتيب ليست كلمات الإجابة نفسها" })
-  .refine((i) => i.tokens.join(" ") !== sentenceTokens(i.a).join(" "), { message: "البطاقات مرتبة سلفاً — لا تمرين" });
+  .refine((i) => i.tokens.join(" ") !== sentenceTokens(i.a).join(" "), { message: "البطاقات مرتبة سلفاً — لا تمرين" })
+  // N-055 (D229): الترتيب الصحيح الثاني (ظرف أول الجملة · TEKAMOLO) — يُصرَّح به لا أن يُرفض ظلماً
+  .refine((i) => (i.accept ?? []).every((x) => sameMultiset(i.tokens, sentenceTokens(x))), { message: "ترتيب مقبول ليس من البطاقات نفسها" })
+  .refine((i) => (i.accept ?? []).every((x) => x.trim() !== i.a.trim()), { message: "ترتيب مقبول يكرر الإجابة" })
+  .refine((i) => distinct([i.a.trim(), ...(i.accept ?? []).map((x) => x.trim())]), { message: "ترتيبات مقبولة مكررة" });
 
 /** صيد الخطأ: جملة خاطئة ← تصحيحها (q ≠ a) */
 export const ErrorHuntItem = z

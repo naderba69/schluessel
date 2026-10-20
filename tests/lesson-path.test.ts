@@ -5,7 +5,8 @@ import { LearnerState as LearnerStateSchema, type LearnerState } from "../conten
 import { createInitialState } from "../src/lib/state-factory.js";
 import { lessonStatus } from "../src/lib/routes.js";
 import {
-  currentLessonId, lessonAfter, quizAttempts, reconcileProgress, reconcileState, recordQuizAttempt, type PathLesson,
+  currentLessonId, lessonAfter, openSessionFor, quizAttempts, reconcileProgress, reconcileState, recordQuizAttempt, setOpenSession,
+  type PathLesson,
 } from "../src/lib/lesson-path.js";
 import {
   advanceQuiz, answerQuizItem, predictScore, quizOutcome, startQuizAttempt, type QuizOutcome,
@@ -134,5 +135,24 @@ describe("N-005 (D227) — دورة ربط SRS: الحزمة تدخل المرا
     expect(s1.srsCards).toEqual([]);
     const s2 = recordQuizAttempt(s1, outcome("a1-u1-d1", 0.8), PATH, DAY, ["hund", "hund", "katze"]);
     expect(s2.srsCards.map((c) => c.cardId)).toEqual(["hund", "katze"]);
+  });
+});
+
+describe("N-006 (D228) — الحصة المفتوحة: حفظ/مطابقة/مسح بالنحاح", () => {
+  const OPEN = { lessonId: "a1-u1-d1", station: "practice" as const, done: ["recall" as const], pos: { recall: 3 }, quiz: undefined };
+
+  it("setOpenSession تحفظ اللقطة · وopenSessionFor يطابق الدرس وحده", () => {
+    const p = setOpenSession(fresh().progress, OPEN);
+    expect(p.openSession).toMatchObject({ lessonId: "a1-u1-d1", station: "practice" });
+    expect(openSessionFor(p, "a1-u1-d1")).toBeDefined();
+    expect(openSessionFor(p, "a1-u1-d2")).toBeUndefined();
+  });
+
+  it("النجاح يمسح الحصة المفتوحة · و«ليس بعد» يُبقيها للاستئناف", () => {
+    const withOpen = { ...fresh(), progress: setOpenSession(fresh().progress, OPEN) };
+    const passed = recordQuizAttempt(withOpen, outcome("a1-u1-d1", 1), PATH, DAY);
+    expect(passed.progress.openSession).toBeUndefined();
+    const failed = recordQuizAttempt(withOpen, outcome("a1-u1-d1", 0.5), PATH, DAY);
+    expect(failed.progress.openSession).toMatchObject({ lessonId: "a1-u1-d1" });
   });
 });

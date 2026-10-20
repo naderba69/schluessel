@@ -40,6 +40,7 @@ export const Word = SchemaVersioned.extend({
   /** التحديد الكامل عند الاسم: der Tisch (لا الجنس مفرداً — بطاقة الجنس v6.1) */
   article: z.string().optional(),
   gender: Gender.default("none"),
+
   /** الجمع (German plural) */
   plural: z.string().optional(),
   /** ملاحظة الجمع الاحتمالية (شفرة الجمع) */
@@ -95,3 +96,14 @@ export const Word = SchemaVersioned.extend({
   cefr: CefrTag.optional(),
 });
 export type Word = z.infer<typeof Word>;
+
+/**
+ * N-137 (D230): أسماء عارية الاستعمال بجنس نحوي — البلدان بلا أداة (aus Frankreich) واللغات (Ich spreche
+ * Deutsch) ما عدا المؤنث/الجمع (die Türkei · die Schweiz · die Niederlande). بلا article عمداً (البطاقة
+ * والصوت عاريان) مع إبقاء gender النحوي (das — حقيقة يحتاجها النعت: das schöne Frankreich). النمو حصراً
+ * بإعلان هنا (الحارس والاختبار يقرآنه).
+ */
+export const BARE_ARTICLE_IDS: ReadonlySet<string> = new Set([
+  "aegypten", "arabisch", "deutsch", "englisch", "europa", "frankreich", "franzoesisch", "griechenland",
+  "italien", "marokko", "oesterreich", "polen", "portugal", "russland", "spanien",
+]);

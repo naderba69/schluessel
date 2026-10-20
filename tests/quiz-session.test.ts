@@ -1,12 +1,13 @@
 // tests/quiz-session.test.ts — بوابة Quiz الدرس (D117): التصحيح · ترتيب القوانين (§14/F121) · الحدّ 75% · تبادل النسخ · المحتوى الحي
 import { describe, it, expect } from "vitest";
-import type { Lesson, QuizItem } from "../content/schemas/index.js";
-import { QuizItem as QuizItemSchema } from "../content/schemas/index.js";
+import type { Lesson, OpenStation, QuizItem } from "../content/schemas/index.js";
+import { OpenStation as OpenStationSchema, OpenSession, QuizAnswer as QuizAnswerSchema, QuizItem as QuizItemSchema } from "../content/schemas/index.js";
 import {
   advanceQuiz, answerQuizItem, calibrationNoteAr, canRetryInSession, CLOSE_CREDIT, currentQuizItem, gradeQuizAnswer,
-  isComplete, judgeQuizItem, needsJudgment, outcomeHeadlineAr, predictScore, quizNormal, quizOutcome, startQuizAttempt,
-  variantFor, verdictNoteAr, type QuizAttempt,
+  isComplete, judgeQuizItem, needsJudgment, outcomeHeadlineAr, predictScore, quizNormal, quizOutcome, restoreQuizAttempt,
+  startQuizAttempt, variantFor, verdictNoteAr, type QuizAttempt,
 } from "../src/lib/quiz-session.js";
+import { STATIONS } from "../src/lib/lesson-engine.js";
 import { displayOrder } from "../src/lib/practice-session.js";
 import { hasBlame } from "../src/lib/warmth-engine.js";
 import { ALL_LESSONS } from "../src/lesson-packs.js";
@@ -177,5 +178,74 @@ describe("المحتوى الحي — كل بند Quiz في كل درس منشو
     expect(displayOrder(c, "seed")).toEqual(displayOrder(c, "seed"));
     expect([...displayOrder(c, "seed")].sort()).toEqual(c);
     expect(new Set(["s1", "s2", "s3", "s4", "s5", "s6"].map((s) => displayOrder(c, s).join(""))).size).toBeGreaterThan(1);
+  });
+});
+
+describe("N-006 (D228) — استعادة المحاولة من اللقطة", () => {
+  const lesson = lessonOf([[choice, open, noun, street], [arabic, withAccept, noun, choice]]);
+
+  it("استعادة تامة: النسخة والتوقّع والإجابات والمؤشر", () => {
+    const live = run(predictScore(startQuizAttempt(lesson, 0), 80), ["bin", { given: "xxx", claim: true }]);
+    const restored = restoreQuizAttempt(lesson, {
+      variantIndex: live.variantIndex,
+      predicted: live.predicted,
+      answers: [...live.answers],
+      cursor: live.cursor,
+    });
+    expect(restored.variantIndex).toBe(live.variantIndex);
+    expect(restored.predicted).toBe(80);
+    expect(restored.answers).toEqual(live.answers);
+    expect(restored.cursor).toBe(live.cursor);
+    expect(restored.items).toEqual(lesson.quiz.variants[live.variantIndex]!.items);
+  });
+
+  it("fail-safe: نسخة خارج النطاق بعد تغيير المحتوى ← محاولة جديدة لا عطل", () => {
+    const restored = restoreQuizAttempt(lesson, { variantIndex: 99, predicted: 70, answers: [], cursor: 5 });
+    expect(restored.variantIndex).toBe(0);
+    expect(restored.cursor).toBe(0);
+    expect(restored.answers).toEqual([]);
+  });
+
+  it("fail-safe: مؤشر وإجابات تتجاوز البنود الجديدة ← تقليم صامت", () => {
+    const short = lessonOf([[choice]]);
+    const restored = restoreQuizAttempt(short, {
+      variantIndex: 0,
+      predicted: null,
+      answers: [
+        { given: "bin", verdict: "correct" },
+        { given: "x", verdict: "wrong" },
+        { given: "y", verdict: "wrong" },
+      ],
+      cursor: 5,
+    });
+    expect(restored.cursor).toBe(1);
+    expect(restored.answers).toHaveLength(1);
+  });
+});
+
+describe("N-006 (D228) — المخطط: محطات الاستئناف مرآة STATIONS + إجابة الـQuiz مميَّزة", () => {
+  it("OpenStation يطابق STATIONS حرفياً وبالترتيب", () => {
+    expect(OpenStationSchema.options).toEqual([...STATIONS]);
+    const st: OpenStation = "close";
+    expect(st).toBe("close");
+  });
+
+  it("QuizAnswer: close بلا نوع تُرفض · وغير-close بنوع تُرفض · والصحيح يُقبل", () => {
+    expect(QuizAnswerSchema.safeParse({ given: "x", verdict: "close", closeKind: "case" }).success).toBe(true);
+    expect(QuizAnswerSchema.safeParse({ given: "x", verdict: "close" }).success).toBe(false);
+    expect(QuizAnswerSchema.safeParse({ given: "x", verdict: "correct", closeKind: "case" }).success).toBe(false);
+    expect(QuizAnswerSchema.safeParse({ given: "x", verdict: "self-correct" }).success).toBe(true);
+  });
+
+  it("OpenSession كاملة تُقبل · ومحطة غريبة تُرفض", () => {
+    const good = {
+      lessonId: "a1-u1-d1",
+      station: "practice",
+      done: ["recall", "learn"],
+      pos: { recall: 3, learn: { index: 9, ruleIndex: 0 }, practice: { station: 1, item: 2 } },
+      quiz: { variantIndex: 1, predicted: 80, answers: [{ given: "bin", verdict: "correct" }], cursor: 1 },
+    };
+    expect(OpenSession.safeParse(good).success).toBe(true);
+    expect(OpenSession.safeParse({ ...good, station: "nope" }).success).toBe(false);
   });
 });
