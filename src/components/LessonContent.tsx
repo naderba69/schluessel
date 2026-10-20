@@ -14,7 +14,7 @@ import {
   type DiscoverySession, type GrammarRule,
 } from "../lib/grammar-discovery.js";
 import {
-  displayOrder, initialPractice, nextItem, submitAttempt, toTypedItem, type Attempt, type PracticeState, type TypedItem, type Verdict,
+  displayOrder, initialPractice, nextItem, normalizeAnswer, submitAttempt, toTypedItem, type Attempt, type PracticeState, type TypedItem, type Verdict,
 } from "../lib/practice-session.js";
 
 /** أحرف ألمانية خاصة (D117): لوحة مفاتيح عربية/إنجليزية لا تملك ä ö ü ß — بلا هذه الأزرار يُعاقَب المتعلم على لوحته لا على معرفته */
@@ -526,6 +526,53 @@ export function PracticeStation({
 }
 
 /** محطة 4 — الخلاصة: التلخيص + المصائد الذهبية + تقرير مولر المسائي (E08) */
+/**
+ * N-047 (D229): تمرين بطاقة المصيدة — محاولة قبل الكشف (F121): إدخال أو اختيار ← تحقق ← الكشف بعد المحاولة وحدها.
+ * بلا درجات (خلاصة هادئة) — والقيمة أن المتعلم ينتج الصحيح بنفسه لا أن يقرأه.
+ */
+export function WarningExerciseView({ q, a, choices }: { q: string; a: string; choices?: readonly string[] }) {
+  const [given, setGiven] = useState("");
+  const [tried, setTried] = useState(false);
+  const [revealed, setRevealed] = useState(false);
+  const ok = tried && normalizeAnswer(given) === normalizeAnswer(a);
+  return (
+    <div data-testid="warning-exercise">
+      <p>
+        تمرينها: <span dir="auto"><StruckText text={q} /></span>
+      </p>
+      {choices ? (
+        <p>
+          {choices.map((c) => (
+            <button key={c} data-testid={`warning-choice-${c}`} onClick={() => { setGiven(c); setTried(true); }}>
+              <span dir="ltr">{c}</span>
+            </button>
+          ))}
+        </p>
+      ) : (
+        !revealed && (
+          <p>
+            <input data-testid="warning-input" aria-label="إجابة التمرين" value={given} onChange={(e) => setGiven(e.target.value)} dir="ltr" />
+            <button data-testid="warning-check" onClick={() => setTried(true)}>
+              تحقق
+            </button>
+          </p>
+        )
+      )}
+      {tried && (ok ? <p data-testid="warning-verdict">✓ صحيح — هكذا تُكتب دائماً.</p> : <p data-testid="warning-verdict">ليس بعد — حاول مرة أخرى أو اكشف الصحيح.</p>)}
+      {tried && !ok && !revealed && (
+        <button data-testid="warning-reveal" onClick={() => setRevealed(true)}>
+          اكشف الصحيح
+        </button>
+      )}
+      {revealed && (
+        <p data-testid="warning-answer">
+          الصحيح: <span dir="ltr">{a}</span>
+        </p>
+      )}
+    </div>
+  );
+}
+
 export function CloseStation({
   data,
   report,
@@ -554,6 +601,7 @@ export function CloseStation({
             <span dir="ltr">
               <StruckText text={card.correct.de} />
             </span>
+            <WarningExerciseView q={card.exercise.q} a={card.exercise.a} choices={card.exercise.choices} />
           </li>
         ))}
       </ul>

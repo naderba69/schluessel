@@ -37,7 +37,7 @@ describe("E07 — المقارنة والتصحيح اللطيف (F077 — لا 
   it("نصف الكلمات مطابق → minor يسمّي الناقصة", () => {
     const c = compareDictation("Ich wohne in Berlin", "Ich wohne in");
     expect(c.status).toBe("minor");
-    expect(c.missedWords).toContain("berlin");
+    expect(c.missedWords).toContain("Berlin"); // N-051: الرسم الأصلي لا الصغيرة
     expect(c.feedback).toContain("أعد سماع");
     expect(feedbackIsGentle(c.feedback)).toBe(true);
   });
@@ -57,5 +57,27 @@ describe("E07 — المقارنة والتصحيح اللطيف (F077 — لا 
       compareDictation("Guten Morgen zusammen", "x"),
     ];
     for (const c of samples) expect(feedbackIsGentle(c.feedback)).toBe(true);
+  });
+});
+
+describe("N-051 (D229) — الكلمة الفائتة برسمها الأصلي (المقارنة تبقى كما هي)", () => {
+  it("الاسم يُعرض مكبَّراً في المصفوفة وفي نص التلميح", () => {
+    const c = compareDictation("Ich trinke Kaffee", "Ich trinke");
+    expect(c.missedWords).toEqual(["Kaffee"]);
+    expect(c.feedback).toContain("Kaffee");
+    expect(c.feedback).not.toContain("kaffee");
+  });
+
+  it("ترقيم الجملة الملتصق يُسقط من العرض (للجملة لا للكلمة)", () => {
+    const c = compareDictation("Kennst du das Wort?", "Kennst du das");
+    expect(c.missedWords).toEqual(["Wort"]);
+  });
+
+  it("المقارنة لم تتغير: الصغيرة المكتوبة تطابق المكبَّرة المسموعة", () => {
+    const c = compareDictation("Ich trinke Kaffee", "ich trinke kaffee");
+    expect(c.status).toBe("minor"); // فرق التهجئة فقط
+    expect(c.missedWords).toEqual([]);
+    const d = compareDictation("Ich trinke Kaffee", "Ich trinke Kaffee");
+    expect(d.status).toBe("correct");
   });
 });
