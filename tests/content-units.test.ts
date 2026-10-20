@@ -40,7 +40,9 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       const words = wordsForLesson(l);
       expect(words.length).toBeGreaterThanOrEqual(2); // d6 توليف: جسيمان فقط (بلا جديد تقريباً)
       expect(l.zusammenfassung.warningCards).toHaveLength(3);
-      expect(l.zusammenfassung.srsBundleWordIds).toEqual(l.praesentation.wordIds);
+      // N-116 (ج — D227): dürfen/sollen بطاقتان بلا عرض (القاعدة ars-modal-fix علّمتهما) تدخلان SRS عبر حزمة u11-d5 وحدها — الاستثناء الوحيد المعلن
+      const bundleExtra = l.id === "a1-u11-d5" ? ["duerfen", "sollen"] : [];
+      expect(l.zusammenfassung.srsBundleWordIds).toEqual([...l.praesentation.wordIds, ...bundleExtra]);
       expect(l.audioManifestRefs).toHaveLength(l.praesentation.wordIds.length);
       for (const w of words) expect(w.usedInLessons).toContain(l.id);
     }
