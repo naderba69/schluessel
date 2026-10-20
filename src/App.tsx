@@ -264,7 +264,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     const s = stateRef.current;
     if (!s) return;
     try {
-      commit(recordQuizAttempt(s, o, ALL_LESSONS, localDay()));
+      commit(recordQuizAttempt(s, o, ALL_LESSONS, localDay(), LESSON_BY_ID.get(o.lessonId)?.zusammenfassung.srsBundleWordIds ?? [])); // N-005 (D227)
     } catch (e) {
       setSaveError(errText(e)); // قفل المسار لا يُتجاوز بصمت — يُعلن
     }

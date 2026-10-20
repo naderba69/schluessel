@@ -4,6 +4,7 @@
 // (reconcileProgress) — فتغيير المحتوى (مثل نقل الوحدة 17 ← 15 في D113) لا يترك متعلماً معلَّقاً بمعرّف اختفى.
 import type { GateResult, LearnerProgress, LearnerState, Level } from "../../content/schemas/index.js";
 import type { QuizOutcome } from "./quiz-session.js";
+import { enrollSrsCards } from "./review-engine.js";
 
 export type PathLesson = { readonly id: string; readonly level: Level; readonly unit: number };
 
@@ -48,6 +49,7 @@ export function recordQuizAttempt(
   outcome: QuizOutcome,
   path: readonly PathLesson[],
   date: string,
+  srsBundle: readonly string[] = [], // N-005 (D227): حزمة الدرس — تدخل SRS عند النجاح وحده
 ): LearnerState {
   const cur = currentLessonId(state.progress, path);
   if (outcome.lessonId !== cur)
@@ -71,5 +73,12 @@ export function recordQuizAttempt(
     outcome.predicted === null
       ? state.profile.calibration
       : [...state.profile.calibration, { date, predicted: outcome.predicted, actual: outcome.percent, lessonId: cur }];
-  return { ...state, profile: { ...state.profile, calibration }, progress: reconcileProgress(progress, path) };
+  return {
+    ...state,
+    profile: { ...state.profile, calibration },
+    progress: reconcileProgress(progress, path),
+    ...(outcome.passed && srsBundle.length > 0
+      ? { srsCards: [...state.srsCards, ...enrollSrsCards(state.srsCards, srsBundle, new Date(date))] }
+      : {}),
+  };
 }

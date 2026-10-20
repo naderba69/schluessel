@@ -55,7 +55,7 @@ export const SrsCardState = z.object({
   /** حقول ts-fsrs */
   due: z.string(), // ISO date
   stability: z.number().nonnegative(),
-  difficulty: z.number().min(1).max(10),
+  difficulty: z.number().min(0).max(10), // N-005 (D227): 0 = بطاقة جديدة لم تُقيَّم بعد (مصنع ts-fsrs) — أول تقييم يضعها في 1–10
   elapsed_days: z.number().nonnegative(),
   scheduled_days: z.number().nonnegative(),
   reps: z.number().nonnegative().default(0),

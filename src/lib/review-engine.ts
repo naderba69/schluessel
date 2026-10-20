@@ -2,6 +2,7 @@
 // المصادر: retrieval practice (Roediger & Karpicke 2006) · D6 (ts-fsrs بمعاملات افتراضية) · F121 · §2.5
 // الحارس الحاسم: لا جلسة بلا استرجاع أولاً (اختبار يقفله) — الجديد لا يدخل محطة الاسترجاع أبداً
 import {
+  createEmptyCard,
   fsrs,
   generatorParameters,
   Rating,
@@ -82,6 +83,22 @@ export function scheduleRecall(
 ): SrsCardState {
   const result = scheduler.next(toFsrsCard(prev), now, RATING_TO_FSRS[rating]);
   return fromFsrsCard(result.card, prev);
+}
+
+/**
+ * N-005 (D227 — دورة ربط SRS): حزمة الدرس تدخل مجموعة المراجعة عند النجاح.
+ * البطاقة الجديدة = مصنع ts-fsrs نفسه (New · مستحقة الآن · معاملات D6 الافتراضية) + L0 — لا أرقام يدوية.
+ * المعرّف المسجَّل لا يتكرر (خمولية صريحة).
+ */
+export function enrollSrsCards(existing: readonly SrsCardState[], wordIds: readonly string[], now: Date = new Date()): SrsCardState[] {
+  const have = new Set(existing.map((c) => c.cardId));
+  const fresh: SrsCardState[] = [];
+  for (const id of wordIds) {
+    if (have.has(id)) continue;
+    have.add(id);
+    fresh.push({ ...fromFsrsCard(createEmptyCard(now), { cardId: id } as SrsCardState), cardId: id, masteryLevel: "L0" });
+  }
+  return fresh;
 }
 
 /** عناصر محطة الاسترجاع — لا «new» هنا إطلاقاً (الجديد محطة 2 فقط) */

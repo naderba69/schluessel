@@ -1,5 +1,6 @@
 // tests/lesson-path.test.ts — مسار الدروس (D117): الدرس الحالي · الفتح بالنجاح وحده · قفل المسار · المصالحة · المسار المنشور كله
 import { describe, it, expect } from "vitest";
+import { createEmptyCard } from "ts-fsrs";
 import { LearnerState as LearnerStateSchema, type LearnerState } from "../content/schemas/index.js";
 import { createInitialState } from "../src/lib/state-factory.js";
 import { lessonStatus } from "../src/lib/routes.js";
@@ -114,5 +115,24 @@ describe("المسار المنشور كله — من a1-u1-d1 إلى آخر د�
     expect(visited).toEqual(LESSON_ORDER);
     expect(currentLessonId(s.progress, ALL_LESSONS)).toBeNull();
     expect(() => LearnerStateSchema.parse(s)).not.toThrow();
+  });
+});
+
+describe("N-005 (D227) — دورة ربط SRS: الحزمة تدخل المراجعة عند النجاح وحده", () => {
+  it("النجاح يُسجّل كلمات الحزمة بطاقات New مستحقة الآن (L0 · مصنع FSRS نفسه)", () => {
+    const s = recordQuizAttempt(fresh(), outcome("a1-u1-d1", 1), PATH, DAY, ["hund", "katze"]);
+    expect(s.srsCards.map((c) => [c.cardId, c.state, c.due, c.masteryLevel])).toEqual([
+      ["hund", "New", new Date(DAY).toISOString(), "L0"],
+      ["katze", "New", new Date(DAY).toISOString(), "L0"],
+    ]);
+    const factory = createEmptyCard(new Date(DAY)); // القيم الافتراضية من المكتبة لا من يدي
+    expect([s.srsCards[0]!.stability, s.srsCards[0]!.difficulty, s.srsCards[0]!.reps]).toEqual([factory.stability, factory.difficulty, factory.reps]);
+    expect(() => LearnerStateSchema.parse(s)).not.toThrow();
+  });
+  it("الرسوب لا يُسجّل شيئاً · والمسجَّلة لا تتكرر", () => {
+    const s1 = recordQuizAttempt(fresh(), outcome("a1-u1-d1", 0.5), PATH, DAY, ["hund"]);
+    expect(s1.srsCards).toEqual([]);
+    const s2 = recordQuizAttempt(s1, outcome("a1-u1-d1", 0.8), PATH, DAY, ["hund", "hund", "katze"]);
+    expect(s2.srsCards.map((c) => c.cardId)).toEqual(["hund", "katze"]);
   });
 });

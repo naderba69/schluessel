@@ -85,7 +85,8 @@ const FIRST_TAUGHT: ReadonlyMap<string, number> = (() => {
 /** كلمات التشغيل: الجديد + بطاقات الدفء (استرجاع من دروس سابقة) + أعضاء عائلتها المدروسون حتى الدرس (D118) */
 export function runtimeWordsForLesson(lesson: Lesson): Word[] {
   const byId = new Map(ALL_WORDS.map((w) => [w.id, w]));
-  const ids = [...new Set([...lesson.praesentation.wordIds, ...lesson.warmup.cardIds])];
+  // N-116 (ج — D227): الحزمة أيضاً — قد تفوق كلمات العرض (dürfen/sollen في u11-d5) والمشغّل يتحقق من اكتمالها
+  const ids = [...new Set([...lesson.praesentation.wordIds, ...lesson.warmup.cardIds, ...lesson.zusammenfassung.srsBundleWordIds])];
   const base = ids.map((id) => {
     const w = byId.get(id);
     if (!w) throw new Error(`كلمة مفقودة من المحتوى: ${id}`);
