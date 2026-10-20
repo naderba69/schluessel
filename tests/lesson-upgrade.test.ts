@@ -8,9 +8,9 @@ import { execFileSync } from "node:child_process";
 import {
   GrammarRuleFile, Lesson as LessonSchema, LessonUpgradeEntry, LessonUpgradePlan, ShufraPayload, type Lesson,
 } from "../content/schemas/index.js";
-import { loadAudioTracks, loadGrammarRules, loadLessons, loadUpgradePlans, loadWords, parseFile } from "../tools/lib/content-disk.js";
+import { loadAudioScripts, loadAudioTracks, loadGrammarRules, loadLessons, loadUpgradePlans, loadWords, parseFile } from "../tools/lib/content-disk.js";
 import {
-  MISSPELLING_DISTANCE_MAX, checkGrammarRules, checkUpgrade, editDistance, fillInWordGap, frontViolations, germanOnly, inspectLesson,
+  MISSPELLING_DISTANCE_MAX, checkGrammarRules, checkUpgrade, dialogueScriptsFor, editDistance, fillInWordGap, frontViolations, germanOnly, inspectLesson,
   interleaveSupported, itemTexts, taughtUpTo, wordAppears, type UpgradeContext,
 } from "../tools/lib/lesson-upgrade.js";
 import {
@@ -5137,7 +5137,7 @@ describe("D115 — أدوات القياس", () => {
 describe("D115 — الخطة الحقيقية", () => {
   const plans = loadUpgradePlans(CONTENT);
   const plan = plans.find((p) => p.id === "a1-lesson-upgrade")!;
-  const ctx: UpgradeContext = { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) };
+  const ctx: UpgradeContext = { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT), scripts: loadAudioScripts(CONTENT) }; // N-010 (D231): كالمدقِّق — الحوار نصٌّ من نصوص الدرس
   it("تغطي دروس A1 كلها في الوحدات 1–15 بالضبط (70 محتوى منذ D214 + 20 توليفاً منذ D215 — N-004) — لا درس منسي ولا زائد", () => {
     const expected = realLessons.filter((l) => l.level === "A1" && l.unit <= 15).map((l) => l.id).sort();
     expect(plan.lessons.map((e) => e.lessonId).sort()).toEqual(expected);
@@ -5456,5 +5456,46 @@ describe("N-041 (D220) — الفهرس العكسي: الاتجاه الثان�
       }
     }
     expect(stale).toEqual([]);
+  });
+});
+
+describe("N-010 (D231) — الحوار الكامل معروض في التدريب: تحت قانون الجبهة وأسماؤه مستعملة", () => {
+  const scripts = loadAudioScripts(CONTENT);
+  const d3 = realLessons.find((l) => l.id === "a1-u1-d3")!;
+  const d3entry = (over: Partial<LessonUpgradeEntry> = {}) =>
+    entry({ lessonId: "a1-u1-d3", properNouns: ["Yusuf", "Haddad", "Lena", "Müller"], ...over });
+  const d3codes = (e = d3entry(), sc = scripts) =>
+    checkUpgrade(planWith([e]), { ...ctxWith(d3), scripts: sc }).filter((i) => i.code !== "e-upgrade-complete").map((i) => i.code);
+
+  it("الربط 1:1 — محطة الاستماع تجد حوارها بسطرٍ تستعمله بنودها (ومحطة الكلمات وحدها بلا حوار)", () => {
+    expect(dialogueScriptsFor(d3, scripts).map((sc) => sc.id)).toEqual(["a1-u1-d3-anmeldung"]);
+    const d1 = realLessons.find((l) => l.id === "a1-u1-d1")!;
+    expect(dialogueScriptsFor(d1, scripts)).toEqual([]);
+    // ثابت على المقرر كله: لا محطة استماع تلمس حوارين (والأول المطابق هو المعروض)
+    for (const l of realLessons) {
+      const got = dialogueScriptsFor(l, scripts);
+      const withLines = l.uebung.stations.filter((st) => st.type === "listening").filter((st) =>
+        st.items.some((it) => "audioId" in it && typeof it.audioId === "string" && !it.audioId.startsWith("word-") &&
+          scripts.some((sc) => sc.kind === "dialogue" && sc.lines.some((ln) => ln.id === it.audioId))));
+      expect(got.length).toBe(withLines.length);
+    }
+  });
+  it("e-dialogue-front: سطر غير مُبنَّد بكلمة غريبة يُخطئ (الثغرة التي كانت خضراء قبل العرض)", () => {
+    const dirty = clone(scripts);
+    const anm = dirty.find((sc) => sc.id === "a1-u1-d3-anmeldung")!;
+    anm.lines[0] = { ...anm.lines[0], text: "Zebra Quallen Xylophon." };
+    expect(d3codes(d3entry(), dirty)).toContain("e-dialogue-front");
+  });
+  it("المحتوى الحالي نظيف: لا e-dialogue-front على أي درس (الثقوب الثلاثة سُدّت بأسماء معلنة)", () => {
+    expect(d3codes()).not.toContain("e-dialogue-front");
+  });
+  it("w-upgrade-proper-noun: الاسم المستعمل في الحوار وحده مستعملٌ فعلاً — والغائب كلياً يُحذَّر", () => {
+    const named = clone(scripts);
+    const anm = named.find((sc) => sc.id === "a1-u1-d3-anmeldung")!;
+    anm.lines[0] = { ...anm.lines[0], text: `Xylander, ${anm.lines[0].text}` };
+    const e = d3entry({ properNouns: [...d3entry().properNouns, "Xylander"] });
+    expect(d3codes(e, named)).not.toContain("w-upgrade-proper-noun");
+    expect(d3codes(e, named)).not.toContain("e-dialogue-front");
+    expect(d3codes(e, scripts)).toContain("w-upgrade-proper-noun");
   });
 });

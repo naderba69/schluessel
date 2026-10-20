@@ -16,6 +16,10 @@ import { familyForms } from "../lib/lesson-runner.js";
 import { A1_TASKS, taskFlow, type RealTask } from "../lib/real-tasks.js";
 import { CULTURE_FACTS, songOfTheWeek, factsNeedingWebVerify } from "../lib/culture.js";
 import { LESSON_ORDER, firstLessonWords } from "../lesson-packs.js";
+import { PlayButton } from "./LessonSession.js";
+import { CHARACTER_NAME_AR } from "../lib/story.js";
+import { AudioScript } from "../../content/schemas/index.js";
+import alphabetJson from "../../content/audio-scripts/a1-alphabet.json";
 
 /* ══════════ E09 — الاستماع المتقدم ══════════ */
 export function ListeningLab() {
@@ -285,6 +289,7 @@ const TABS = [
   { id: "netzwerk", label: "🕸️ شبكة" },
   { id: "aufgaben", label: "🎯 مهام" },
   { id: "kultur", label: "🇩🇪 ثقافة" },
+  { id: "alphabet", label: "🔤 الأبجدية" },
 ] as const;
 
 export const DEMO_TEXT: ReadingText = {
@@ -298,6 +303,35 @@ export const DEMO_TEXT: ReadingText = {
     { id: "r3", de: "Ich komme aus Tunesien.", ar: "أنا من تونس.", focusWordIds: ["kommen", "tunesien"] },
   ],
 };
+
+/* ══════════ N-008 (D231) — جدول الأبجدية ══════════ */
+/** جدول الحروف الثلاثين + 3 تهجيات مسجلة (سكربت a1-alphabet) — كل حرف بزر صوته */
+export function AlphabetLab() {
+  const script = AudioScript.parse(alphabetJson);
+  const letters = script.lines.filter((ln) => !ln.id.startsWith("abc-spell-"));
+  const spells = script.lines.filter((ln) => ln.id.startsWith("abc-spell-"));
+  return (
+    <section data-testid="alphabet-lab">
+      <h3>الأبجدية الألمانية 🔤 — اضغط الحرف لتسمع اسمه</h3>
+      <ol data-testid="alphabet-letters">
+        {letters.map((ln) => (
+          <li key={ln.id}>
+            <strong dir="ltr">{ln.text.replace(/\.$/, "")}</strong> <PlayButton audioId={ln.id} speakText={ln.text} />
+          </li>
+        ))}
+      </ol>
+      <h4>تهجية الأسماء — كما تُقال حرفاً حرفاً</h4>
+      <ul data-testid="alphabet-spells">
+        {spells.map((ln) => (
+          <li key={ln.id}>
+            {ln.speaker === "announcer" ? "المذيع" : CHARACTER_NAME_AR[ln.speaker]} يتهجى:{" "}
+            <span dir="ltr">{ln.text}</span> <PlayButton audioId={ln.id} speakText={ln.text} />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
 
 export function SkillsLab({ currentLessonId }: { currentLessonId?: string | null }) {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("hoeren");
@@ -319,6 +353,7 @@ export function SkillsLab({ currentLessonId }: { currentLessonId?: string | null
       {tab === "netzwerk" && <NetworkLab />}
       {tab === "aufgaben" && <TasksLab />}
       {tab === "kultur" && <CultureLab />}
+      {tab === "alphabet" && <AlphabetLab />}
     </div>
   );
 }

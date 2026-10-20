@@ -42,7 +42,7 @@ describe("D120 — إملاء الحروف", () => {
   it("الواجهة: بند إملاء الحروف يعرض تعليمته (لا «اكتب ما تسمعه بالضبط»)", () => {
     const d3 = ALL_LESSONS.find((l) => l.id === "a1-u1-d3")!;
     const station = d3.uebung.stations.find((s) => s.type === "dictation")!;
-    const data = { stations: [station] as Lesson["uebung"]["stations"], communicativeTask: d3.uebung.communicativeTask };
+    const data = { stations: [station] as Lesson["uebung"]["stations"], communicativeTask: d3.uebung.communicativeTask, dialogues: [] };
     const html = renderToStaticMarkup(createElement(PracticeStation, { data }));
     expect(html).toContain(SPELLED_DICTATION_AR);
     expect(html).not.toContain("اكتب ما تسمعه بالضبط");

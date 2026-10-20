@@ -1,6 +1,6 @@
 // src/lib/lesson-runner.ts — مُشغِّل الدرس: يحوّل محتوى الدرس (D3: بيانات في git) إلى شاشات الحصة الأربع
 // الربط: E01 (المحطات) · §2.5 (الاسترجاع) · F121 (محاولة قبل كشف) · D29 (حصة واحدة متصلة)
-import type { Lesson, Word } from "../../content/schemas/index.js";
+import type { AudioScript, Lesson, Word } from "../../content/schemas/index.js";
 import type { GrammarRule } from "./grammar-discovery.js";
 import { pronunciationHint } from "./phonetic-risks.js";
 import { goetheTagLabel } from "./goethe-tag.js";
@@ -37,6 +37,8 @@ export type PracticeData = {
   communicativeTask: Lesson["uebung"]["communicativeTask"];
   /** D188: الكلمات المستعارة المعلنة — تُعرض قبل التدريب وتُترجم على الكلمة */
   borrowed?: Lesson["praesentation"]["borrowedWords"];
+  /** N-010 (D231): حوار كل محطة استماع — يُعرض كاملاً قبل بنودها */
+  dialogues: { station: number; script: AudioScript }[];
 };
 
 export type CloseData = {
@@ -63,6 +65,24 @@ export type LessonStationPlan = {
   /** محطة 4 — الخلاصة */
   close: CloseData;
 };
+
+/**
+ * N-010 (D231): حوار محطة الاستماع — أول سكربت حوار يحوي سطراً تستعمله بنودها (مقاطع الكلمات word- ليست
+ * سطوراً). العلاقة 1:1 في المحتوى كله (90 محطة استماع: 87 بحوار و3 بمقاطع كلمات فقط — بلا حوار).
+ */
+function dialoguesFor(lesson: Lesson, scripts: readonly AudioScript[]): { station: number; script: AudioScript }[] {
+  const out: { station: number; script: AudioScript }[] = [];
+  lesson.uebung.stations.forEach((st, i) => {
+    if (st.type !== "listening") return;
+    const lineIds = new Set(
+      st.items.flatMap((it) => ("audioId" in it && typeof it.audioId === "string" && !it.audioId.startsWith("word-") ? [it.audioId] : [])),
+    );
+    if (lineIds.size === 0) return;
+    const script = scripts.find((sc) => sc.kind === "dialogue" && sc.lines.some((ln) => lineIds.has(ln.id)));
+    if (script) out.push({ station: i, script });
+  });
+  return out;
+}
 
 function wordById(words: Word[], id: string): Word {
   const w = words.find((x) => x.id === id);
@@ -110,7 +130,7 @@ function explainWord(w: Word, known: ReadonlyMap<string, Word>): string {
  * الاسترجاع (الدفء) ← الجديد (العرض) ← التدريب (المحطات + المهمة التواصلية) ← الخلاصة (المصائد + حزمة SRS).
  * أي كلمة مفقودة = خطأ فوري (لا شاشات ناقصة أبداً).
  */
-export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: readonly GrammarRule[] = [], story: readonly StoryBook[] = []): LessonStationPlan {
+export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: readonly GrammarRule[] = [], story: readonly StoryBook[] = [], scripts: readonly AudioScript[] = []): LessonStationPlan {
   const known: ReadonlyMap<string, Word> = new Map(words.map((w) => [w.id, w]));
   const recall: RecallCardData[] = lesson.warmup.cardIds.map((id) => {
     const w = wordById(words, id);
@@ -146,6 +166,7 @@ export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: 
       stations: lesson.uebung.stations,
       communicativeTask: lesson.uebung.communicativeTask,
       borrowed: lesson.praesentation.borrowedWords ?? [],
+      dialogues: dialoguesFor(lesson, scripts),
     },
     close: {
       summaryDe: lesson.zusammenfassung.summary.de,

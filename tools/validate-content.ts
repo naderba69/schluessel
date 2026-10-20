@@ -570,6 +570,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
       words: [...words.values()].map((w) => w.word),
       rules: new Map([...grammarRules].map(([id, r]) => [id, r.rule] as const)),
       tracks: manifestTracks,
+      scripts: [...scripts.values()].map((s) => s.script), // N-010 (D231): الحوار المعروض تحت قانون الجبهة
     };
     const where = (i: { lessonId?: string; ruleId?: string }, fallback: string) =>
       (i.ruleId && grammarRules.get(i.ruleId)?.path) || (i.lessonId && lessons.get(i.lessonId)?.path) || fallback;

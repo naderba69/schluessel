@@ -140,6 +140,7 @@ describe("محطة التدريب في الواجهة", () => {
   const practice = (items: unknown[], type: Lesson["uebung"]["stations"][number]["type"]) => ({
     stations: [{ type, items: items as Record<string, unknown>[], interleavedWith: [], explanationRequired: true }],
     communicativeTask: firstLesson.uebung.communicativeTask,
+    dialogues: [],
   });
   it("بند مُنمَّط: السؤال وطريقة الإجابة ظاهران — لا why ولا الإجابة قبل المحاولة (F121)", () => {
     const html = renderToStaticMarkup(<PracticeStation data={practice([{ q: "Ich ___ Yusuf.", a: "heiße", why: WHY }], "gap-fill")} />);

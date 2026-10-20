@@ -5,7 +5,8 @@ import { audioPlayer } from "../lib/audio-player.js";
 import { FUNCTION_LABELS_AR, type Phrase } from "../lib/phrase-bank.js";
 import { PlayButton } from "./LessonSession.js";
 import { BorrowedWordsBox, StruckText } from "./StruckText.js";
-import type { Unit0Card } from "../../content/schemas/index.js";
+import type { AudioScript, Unit0Card } from "../../content/schemas/index.js";
+import { CHARACTER_NAME_AR } from "../lib/story.js";
 import type { LearnCardData, RecallCardData, PracticeData, CloseData } from "../lib/lesson-runner.js";
 import { RecallCardView, LearnCardView, CloseView } from "./LessonSession.js";
 import type { RecallRating } from "../lib/review-engine.js";
@@ -471,6 +472,10 @@ export function PracticeStation({
   }
 
   const typed = toTypedItem(station.type, item);
+  // N-010 (D231): حوار محطة الاستماع هذه — يُعرض كاملاً قبل بندها الأول وحده (بقية البنود: زر سطرها يكفي)
+  const dialogue = station.type === "listening" && state.item === 0
+    ? data.dialogues.find((d) => d.station === state.station)?.script
+    : undefined;
   const next = () => {
     const after = nextItem(state, data.stations);
     setState(after);
@@ -487,6 +492,7 @@ export function PracticeStation({
     return (
       <section data-testid="practice-station" data-type={station.type}>
         {state.station === 0 && state.item === 0 && !state.verdict && <BorrowedWordsBox words={data.borrowed ?? []} />}
+        {dialogue && <DialogueView script={dialogue} />}
         {counter}
         <TypedItemView
           key={`${state.station}-${state.item}`}
@@ -503,6 +509,7 @@ export function PracticeStation({
   const legacy: TypedItem = { kind: "production", prompt: item.q ?? "", model: item.a ?? "", why: "" };
   return (
     <section data-testid="practice-station" data-type={station.type}>
+      {dialogue && <DialogueView script={dialogue} />}
       {counter}
       <p dir="ltr">
         <StruckText text={item.q ?? ""} />
@@ -522,6 +529,26 @@ export function PracticeStation({
         </>
       )}
     </section>
+  );
+}
+
+/**
+ * N-010 (D231): الحوار الكامل قبل بنود الاستماع — المتعلم يرى المشهد كله أولاً ثم يجيب؛ كل سطر بزر صوته المسجل.
+ */
+export function DialogueView({ script }: { script: AudioScript }) {
+  return (
+    <div data-testid="station-dialogue">
+      <h4>الحوار كاملاً 🎭 — اقرأ واستمع أولاً، ثم أجب عن الأسئلة</h4>
+      <ol>
+        {script.lines.map((ln) => (
+          <li key={ln.id}>
+            <strong>{ln.speaker === "announcer" ? "المذيع" : CHARACTER_NAME_AR[ln.speaker]}:</strong>{" "}
+            <span dir="ltr">{ln.text}</span>{" "}
+            <PlayButton audioId={ln.id} speakText={ln.text} />
+          </li>
+        ))}
+      </ol>
+    </div>
   );
 }
 
