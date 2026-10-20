@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, LEVEL_ORDER, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
-import { ReadingText, CultureCard } from "../content/schemas/index.js";
+import { ReadingText, CultureCard, BARE_ARTICLE_IDS } from "../content/schemas/index.js";
 import { taughtUpTo, frontViolations } from "../tools/lib/lesson-upgrade.js";
 import { knownStems, knownForms, contentTokens, CLOSED } from "../tools/lib/vocab-forms.js";
 import { slugify } from "../tools/lib/word-entry.js";
@@ -1481,6 +1481,7 @@ describe("A2 يبدأ (D101) — الترتيب بالمستوى + قواعد A2
     expect(fullForm({ de: "die Landschaft", article: "die" })).toBe("die Landschaft");
     expect(fullForm({ de: "Wohnung", article: "die" })).toBe("die Wohnung");
     expect(fullForm({ de: "lachen" })).toBe("lachen");
+    expect(fullForm({ de: "der Morgen / morgen", article: "der" })).toBe("der Morgen"); // N-043: البديل الأول وحده
     const doubled = /\b(der|die|das) \1\b/;
     for (const l of ALL_LESSONS) {
       const plan = planLessonStations(l, runtimeWordsForLesson(l));
@@ -1578,5 +1579,30 @@ describe("N-021+N-053 (D225) — أمثلة البطاقات ومتلازمات�
       if (v.length) bad.push(`${w.id} [${l.id}] «${w.kollocation!.de}» -> ${v.join(",")}`);
     }
     expect(bad).toEqual([]);
+  });
+});
+
+describe("N-137 (D230) — البلدان واللغات عارية الاستعمال (بلا article — والجنس النحوي باقٍ)", () => {
+  it("الخمسة عشر معلنة عاريةً بجنس das — والنمو حصراً بإعلان", () => {
+    expect(BARE_ARTICLE_IDS.size).toBe(15);
+    for (const id of BARE_ARTICLE_IDS) {
+      const w = ALL_WORDS.find((x) => x.id === id)!;
+      expect(w, id).toBeDefined();
+      expect(w.article, id).toBeUndefined();
+      expect(w.gender, id).toBe("das");
+    }
+  });
+
+  it("القاعدة: أسماء اللغات (-isch) عارية · Länder بلا أداة أو die وحدهن (die Türkei/Schweiz/Niederlande)", () => {
+    for (const w of ALL_WORDS) {
+      if (w.wordClass !== "noun") continue;
+      // أسماء اللغات وحدهن (لا مفاهيم اللغة: die Sprache/Fremdsprache/Muttersprache بأداتها الصحيحة)
+      if (w.thema === "Sprachen" && w.de.endsWith("isch")) expect(w.article, w.id).toBeUndefined();
+      // أسماء البلدان وحدهن (لا مفهومي das Land/die Welt بأداتهما الصحيحة)
+      if (w.thema === "Länder" && w.id !== "land" && w.id !== "welt")
+        expect(["die", undefined] as const, w.id).toContain(w.article);
+    }
+    const wde = ALL_WORDS.find((w) => w.id === "deutsch")!;
+    expect(wde.article).toBeUndefined(); // لغة بموضوع Begrüßung — خارج القاعدة الموضوعية فيُثبَّت بالاسم
   });
 });

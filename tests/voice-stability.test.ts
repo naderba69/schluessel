@@ -4,10 +4,11 @@
 import { describe, it, expect } from "vitest";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { AudioManifest } from "../content/schemas/index.js";
 import { VOICE_ID, VOICE_ID_FEMALE, PINNED_VOICES, FEMALE_ROLES, AUDIO_ENGINE, VOICE_LICENSE } from "../src/lib/audio.js";
+import { fullForm } from "../src/lib/lesson-runner.js";
 
 const CONTENT = join(process.cwd(), "content");
 const manifest = AudioManifest.parse(
@@ -19,14 +20,14 @@ function sha256(file: string): string {
 }
 
 function genOne(out: string): string {
-  execFileSync("python3", [join(process.cwd(), "tools/gen-audio.py"), "one", "Wohnung.", out], {
+  execFileSync("python3", [join(process.cwd(), "tools/gen-audio.py"), "one", "die Wohnung.", out], {
     encoding: "utf8", timeout: 120_000,
   });
   return out;
 }
 
 function genWav(out: string): string {
-  execFileSync("python3", [join(process.cwd(), "tools/gen-audio.py"), "one-wav", "Wohnung.", out], {
+  execFileSync("python3", [join(process.cwd(), "tools/gen-audio.py"), "one-wav", "die Wohnung.", out], {
     encoding: "utf8", timeout: 120_000,
   });
   return out;
@@ -80,6 +81,22 @@ describe("استقرار الأصوات عبر الجلسات (test-audio-voice-
     expect(c.durRatio).toBeGreaterThan(0.6);
     expect(c.durRatio).toBeLessThan(1.7);
   }, 120_000);
+
+  it("N-043 (D230): نص مقطع الاسم = الشكل الكامل بالأداة (تُسمَع كما تُرى)", () => {
+    let checked = 0;
+    for (const f of readdirSync(join(CONTENT, "words"))) {
+      if (!f.endsWith(".json")) continue;
+      const w = JSON.parse(readFileSync(join(CONTENT, "words", f), "utf8")) as {
+        id: string; de: string; article?: string; wordClass: string;
+      };
+      if (w.wordClass !== "noun" || !w.article) continue;
+      const t = manifest.tracks.find((x) => x.id === `word-${w.id}`);
+      expect(t, `لا مقطع للاسم: ${w.id}`).toBeDefined();
+      expect(t!.textDe).toBe(`${fullForm(w)}.`);
+      checked++;
+    }
+    expect(checked).toBe(585); // الدبوس: كل الأسماء ذات الأداة (600 − 15 العارية N-137)
+  });
 
   it("الملف الملتزم من نفس الصوت: التوقيع الطيفي ≥ 0.93 مع إعادة التوليد + سلسلة البصمة موثّقة", () => {
     const committed = join(CONTENT, "words/audio/de-DE/word-wohnung.opus");

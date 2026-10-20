@@ -75,8 +75,10 @@ function wordById(words: Word[], id: string): Word {
  * 273 اسماً من A1 تحمل الأداة داخل `de` نفسه ("die Landschaft") — كانت تُعرض «die die Landschaft».
  */
 export function fullForm(w: Pick<Word, "de" | "article">): string {
-  if (!w.article) return w.de;
-  return w.de.startsWith(`${w.article} `) ? w.de : `${w.article} ${w.de}`;
+  // N-043: البديل الأول وحده يُعرَض ويُنطَق («der Morgen / morgen» ← «der Morgen» — الشرطة للمدخل لا للبطاقة)
+  const head = w.de.split(" / ")[0]!.trim();
+  if (!w.article) return head;
+  return head.startsWith(`${w.article} `) ? head : `${w.article} ${head}`;
 }
 
 /**
