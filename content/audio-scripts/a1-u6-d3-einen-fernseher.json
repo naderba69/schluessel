@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d3-einen-fernseher",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Gibt es einen Fernseher?",
+    "ar": "هل يوجد تلفاز؟ — جولة الكاميرا تتواصل: يوسف يُري ما في غرفته ببرلين ولينا تسأل بـ Gibt es …? — وبعد es gibt مفعولٌ به (einen · keinen)"
+  },
+  "usedIn": [
+    "a1-u6-d3"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "eg-1",
+      "speaker": "lena",
+      "text": "Yusuf, was gibt es dort? Ist das dein Zimmer?",
+      "direction": "تتواصل جولة الكاميرا في مهمة الوحدة السادسة: لينا ترى غرفة يوسف في برلين على الشاشة — dort لأن الغرفة عنده (ويوسف يقول hier)"
+    },
+    {
+      "id": "eg-2",
+      "speaker": "yusuf",
+      "text": "Ja. Hier ist die Tür, und hier gibt es ein Fenster.",
+      "direction": "يُري الباب ثم النافذة — Hier gibt es: الفعل ثانياً ثم es"
+    },
+    {
+      "id": "eg-3",
+      "speaker": "lena",
+      "text": "Das Fenster ist sehr groß!",
+      "direction": "النافذة كبيرة جداً"
+    },
+    {
+      "id": "eg-4",
+      "speaker": "yusuf",
+      "text": "Ja, und die Decke ist hoch. Die Wände sind hell.",
+      "direction": "السقف عالٍ والجدران مضيئة — die Wand ← die Wände"
+    },
+    {
+      "id": "eg-5",
+      "speaker": "lena",
+      "text": "Und der Boden? Ist er neu?",
+      "direction": "تسأل عن الأرضية — er = der Boden"
+    },
+    {
+      "id": "eg-6",
+      "speaker": "yusuf",
+      "text": "Nein, der Boden ist alt, aber schön.",
+      "direction": "الأرضية قديمة لكنها جميلة"
+    },
+    {
+      "id": "eg-7",
+      "speaker": "lena",
+      "text": "Gibt es einen Schreibtisch?",
+      "direction": "سؤال بـGibt es …? — es بعد الفعل لا تسقط"
+    },
+    {
+      "id": "eg-8",
+      "speaker": "yusuf",
+      "text": "Ja, es gibt einen Schreibtisch und einen Computer.",
+      "direction": "مكتب وحاسوب — der ⇒ einen مرتين بعد es gibt"
+    },
+    {
+      "id": "eg-9",
+      "speaker": "lena",
+      "text": "Ist der Computer jetzt an?",
+      "direction": "هل الحاسوب مشتغل الآن؟"
+    },
+    {
+      "id": "eg-10",
+      "speaker": "yusuf",
+      "text": "Natürlich ist er an — wir sprechen doch!",
+      "direction": "بالطبع — فهما يتكلمان عبر الحاسوب نفسه"
+    },
+    {
+      "id": "eg-11",
+      "speaker": "lena",
+      "text": "Ach so! Und gibt es auch einen Fernseher?",
+      "direction": "تسأل عن تلفاز"
+    },
+    {
+      "id": "eg-12",
+      "speaker": "yusuf",
+      "text": "Nein, es gibt keinen Fernseher. Ich habe ja den Computer.",
+      "direction": "لا تلفاز — keinen للمذكر؛ يكفيه الحاسوب"
+    },
+    {
+      "id": "eg-13",
+      "speaker": "lena",
+      "text": "Und die Küche? Gibt es einen Kühlschrank?",
+      "direction": "تنتقل إلى المطبخ: ثلاجة؟ — der Kühlschrank (آخر جزء der Schrank)"
+    },
+    {
+      "id": "eg-14",
+      "speaker": "yusuf",
+      "text": "Ja, aber es gibt keine Waschmaschine.",
+      "direction": "ثلاجة نعم، غسالة لا — keine للمؤنث كما هي"
+    },
+    {
+      "id": "eg-15",
+      "speaker": "lena",
+      "text": "Und die Heizung? Ist sie an?",
+      "direction": "هل التدفئة مشتغلة؟ — sie = die Heizung",
+      "lengthScale": 1.5
+    },
+    {
+      "id": "eg-16",
+      "speaker": "yusuf",
+      "text": "Nein, sie ist aus. Heute scheint die Sonne!",
+      "direction": "مطفأة — الشمس مشرقة اليوم في برلين"
+    },
+    {
+      "id": "eg-17",
+      "speaker": "yusuf",
+      "text": "Und dein Haus, Lena? Hat jedes Zimmer einen Fernseher?",
+      "direction": "يقلب السؤال على لينا مازحاً: هل في كل غرفة تلفاز؟ — jedes لأن das Zimmer"
+    },
+    {
+      "id": "eg-18",
+      "speaker": "lena",
+      "text": "Nein! Es gibt nur einen Fernseher. Aber jeder Raum hat eine Heizung.",
+      "direction": "تلفاز واحد فقط في بيت الأسرة — لكن في كل حجرة تدفئة: jeder لأن der Raum"
+    },
+    {
+      "id": "eg-19",
+      "speaker": "yusuf",
+      "text": "Und das Dach? Ist es auch alt?",
+      "direction": "يسأل عن السطح — es = das Dach"
+    },
+    {
+      "id": "eg-20",
+      "speaker": "lena",
+      "text": "Nein, das Dach ist neu. Und die Waschmaschine ist an — hörst du?",
+      "direction": "السطح جديد — والغسالة تعمل الآن بصوت عالٍ"
+    }
+  ]
+}

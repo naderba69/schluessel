@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-preise",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Was kostet der Hut? — Was kosten die Schuhe? — Neunundzwanzig Euro neunundneunzig · neunundneunzig Cent · circa vierzig Euro · am besten",
+    "ar": "السؤال عن السعر والجواب: الشيء فاعلٌ وkosten تتبعه (kostet للمفرد · kosten للجمع) — والسعر بالسنتات: Euro ثم العدد بلا كلمة Cent (29,99 € = neunundzwanzig Euro neunundneunzig) وما دون اليورو بـCent — وcirca (ca.) قبل التقريب — وgünstig/billig/teuer وam besten للحكم"
+  },
+  "payload": {
+    "topicAr": "اليوم تسأل عن السعر وتجيب بأرقام كبيرة وبالسنتات وتحكم عليه: Was kostet der Hut? · Was kosten die Schuhe? · Neunundzwanzig Euro neunundneunzig. · neunundneunzig Cent · circa vierzig Euro · Das ist günstig! ومعه كلمات اليوم: der Cent · der Rabatt · das Angebot · günstig · das Wechselgeld · verkaufen · der Verkäufer · der Kunde · der Supermarkt · das Geschäft · der Markt · anprobieren — والنواة circa · am besten.",
+    "sceneAr": "مهمة الوحدة الثامنة على الشاشة: «التسوّق — الأسعار». يوسف يبحث عن الحذاء الخفيف لجدّته: في المتجر يكلّف تسعة وثمانين يورو — غالٍ جداً — وفي السوق حوالي أربعين، وبالضبط 39,99 €، واليوم خصمٌ عشرة يورو فيصير المجموع 29,99 €. البائع لطيف ويبيع قبعات أيضاً، فيقيس يوسف قبعةً بخمسة يورو وخمسين — لكنها كبيرة جداً. يدفع خمسين يورو ويستلم الباقي: عشرون يورو وسنت واحد. ولينا تشتري كتاباً لجدّتها من السوبرماركت بحوالي اثني عشر يورو — فالكتب هناك مناسبة السعر.",
+    "examples": [
+      {
+        "de": "Was kostet der Hut? — Er kostet nur fünf Euro fünfzig.",
+        "ar": "كم تكلّف القبعة؟ — خمسة يورو وخمسون فقط — القبعة فاعلٌ مفرد: kostet · والجواب بضمير جنسها: er"
+      },
+      {
+        "de": "Was kosten die Schuhe? — Sie kosten neununddreißig Euro neunundneunzig.",
+        "ar": "كم يكلّف الحذاء؟ — تسعة وثلاثون يورو وتسعة وتسعون — الزوج جمعٌ: kosten · sie"
+      },
+      {
+        "de": "Das Wasser kostet neunundneunzig Cent.",
+        "ar": "الماء يكلّف تسعة وتسعين سنتاً — ما دون اليورو بـCent بلا نهاية"
+      },
+      {
+        "de": "Auf dem Markt kosten die Schuhe circa vierzig Euro.",
+        "ar": "في السوق يكلّف الحذاء حوالي أربعين يورو — circa قبل العدد التقريبي (وتُكتب ca.)"
+      },
+      {
+        "de": "Heute gibt es zehn Euro Rabatt. Das macht neunundzwanzig Euro neunundneunzig.",
+        "ar": "اليوم خصمٌ عشرة يورو، فالمجموع 29,99 € — Das macht … = «يكون المجموع»"
+      },
+      {
+        "de": "Der Markt ist am besten — dort ist alles günstig.",
+        "ar": "السوق هو الأفضل — هناك كل شيء مناسب السعر — am besten للحكم الأعلى"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأول والثاني: متى kostet ومتى kosten؟ ومن الفاعل في السؤال — السائل أم الشيء؟ (2) في الجواب الأول er وفي الثاني sie — ما الذي يحدد الضمير؟ (3) في الثاني: أين تقع السنتات في 39,99 €؟ وهل سمعت كلمة Cent؟ (4) في الثالث: السعر أقل من يورو — بأي كلمة انتهى؟ وهل لها نهاية جمع؟ (5) في الرابع: ما معنى circa وأين موقعها من العدد؟ (6) في الخامس: ماذا تعني Das macht … في المتجر؟ (7) في الأخير: am besten — هل تصف الشيء أم تحكم عليه بين أشياء؟",
+    "ruleDe": "Was kostet der Hut? — Er kostet fünf Euro fünfzig. · Was kosten die Schuhe? — Sie kosten neununddreißig Euro neunundneunzig. · neunundneunzig Cent · circa vierzig Euro · Das macht zwanzig Euro. · Das ist günstig! · Der Markt ist am besten.",
+    "ruleAr": "اسأل عن السعر واحكم عليه بثلاث خطوات: (1) الشيء هو الفاعل والفعل يتبعه: Was kostet der Hut? (مفرد ← kostet) · Was kosten die Schuhe? (جمع ← kosten) — وWie viel kostet …? بالمعنى نفسه — والجواب بضمير الشيء بجنس كلمته الألمانية: Er kostet … (der Hut) · Sie kostet … (die Jacke) · Es kostet … (das Hemd) · Sie kosten … (die Schuhe). (2) السعر بالسنتات: قل Euro ثم عدد السنتات بلا كلمة Cent: 29,99 € = neunundzwanzig Euro neunundneunzig · 5,50 € = fünf Euro fünfzig — وما دون اليورو بـCent: 0,99 € = neunundneunzig Cent — وEuro وCent بلا نهاية جمع بعد العدد (الوحدة 3) — والفاصلة تفصل السنتات في الكتابة الألمانية (29,99 €) — وDas macht … = «يكون المجموع» عند الدفع: Das macht zwanzig Euro. — وcirca (مختصرةً ca.) قبل العدد التقريبي: circa vierzig Euro = «حوالي أربعين». (3) الحكم على السعر: günstig = مناسب السعر (يستحق ثمنه) · billig = رخيص · teuer = غالٍ · zu teuer = أغلى من اللازم · im Angebot = في العرض · zehn Euro Rabatt = خصم عشرة يورو — وam besten = «الأفضل» حكماً أعلى: Der Markt ist am besten. — وفي أول الجملة يأتي الفعل بعدها مباشرة: Am besten kaufe ich die Schuhe dort.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «كم يكلّف الحذاء؟» — الشيء فاعلٌ في العربية أيضاً، وفعل «يكلّف» يتبعه: Was kosten die Schuhe? — عون. (2) «حوالي أربعين يورو»: «حوالي» قبل العدد كـcirca تماماً — عون. (3) «مناسب السعر / رخيص / غالٍ» ثلاث درجات كـgünstig / billig / teuer — عون. وما يختلف ثلاثة: (1) «الحذاء» مفردٌ في العربية للزوج كله (كما تعلّمت أمس)، فيقول المتعلم: ~~Was kostet die Schuhe?~~ — وdie Schuhe جمعٌ فالفعل kosten: Was kosten die Schuhe? (2) «كم» كلمةٌ واحدة للعدد والسعر، فيترجمها المتعلم بـWie وحدها: ~~Wie kostet das Hemd?~~ — وWie وحدها = «كيف»؛ والسؤال عن السعر بـWas kostet …? أو Wie viel kostet …? (3) تعلّمت في الوحدة 4 أن علامة المفعول على الأداة والاسم يبقى كما هو — وبالعربية لا تظهر الفتحة في الكتابة اليومية («يسأل الزبون») — فيقول المتعلم: ~~Der Verkäufer fragt den Kunde.~~ — وKunde من مجموعة صغيرة تأخذ ‑n في المفعول أيضاً (كـder Nachbar ← den Nachbarn · der Junge ← den Jungen): Der Verkäufer fragt den Kunden. — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "am besten اليوم حكمٌ بعد ist أو في أول الجملة (Der Markt ist am besten. · Am besten kaufe ich dort.) · وبعد الأداة der/die/das beste … (das beste Angebot) — وباب المقارنة كله (gut · besser · am besten · teurer als …) في الوحدة 11.",
+      "zehn Euro Rabatt بالمبلغ — والنسبة المئوية (zehn Prozent) لاحقاً · وDas macht … تُقال عند الدفع فقط، ولا تُجمع فيها Euro وCent بـund: neunundzwanzig Euro neunundneunzig.",
+      "Ich bezahle fünfzig Euro. · Das Wechselgeld: zwanzig Euro und ein Cent. — والدفع بالبطاقة و«بالنقد» بحروف الجر (mit · in bar) في الدرس الرابع من هذه الوحدة.",
+      "verkaufen = يبيع (ver‑ تقلب kaufen) · anprobieren فعلٌ منفصل كقاعدة الوحدة 7: Ich probiere den Hut an. · Ich möchte den Hut anprobieren. — والتفاوض على السعر في مهمة الدرس الخامس."
+    ],
+    "beads": [
+      "Was",
+      "kosten",
+      "die",
+      "Schuhe?"
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u8-d2"
+  ]
+}

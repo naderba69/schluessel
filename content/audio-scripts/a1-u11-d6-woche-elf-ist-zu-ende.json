@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u11-d6-woche-elf-ist-zu-ende",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Woche elf ist zu Ende! — Samstag, der elfte April",
+    "ar": "الأسبوع الحادي عشر انتهى! — مكالمة صباح السبت 11 أبريل (آخر يوم ليوسف في تونس، قبل رحلة المساء u12-d1): لينا تتعافى (Schnupfen فقط) ويوسف بعد طبيب الأسرة — tut weh/Schmerzen · habe gelegen/bin geblieben · soll/darf + الفعل في الآخر · hilft mir · Hände/Beine/Augen/Zähne · الأخ عند الاختصاصي"
+  },
+  "usedIn": [
+    "a1-u11-d6"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "ez-1",
+      "speaker": "lena",
+      "text": "Hallo, Yusuf! Woche elf ist zu Ende — die Woche mit Fieber und Schnupfen. Heute ist Samstag, der elfte April.",
+      "direction": "لينا تفتح — السبت 11 أبريل صباحاً (قبل رحلة يوسف الأخيرة u12-d1)"
+    },
+    {
+      "id": "ez-2",
+      "speaker": "yusuf",
+      "text": "Der elfte April — mein letzter Tag in Tunis! Und du? Wie fühlst du dich?",
+      "direction": "يوسف — التاريخ · Wie fühlst du dich? (u11-d4)"
+    },
+    {
+      "id": "ez-3",
+      "speaker": "lena",
+      "text": "Viel besser. Kein Fieber mehr, keine Kopfschmerzen. Nur der Schnupfen — meine Nase läuft noch.",
+      "direction": "لينا — kein Fieber mehr · Kopfschmerzen جمع · Schnupfen (u11-d5)"
+    },
+    {
+      "id": "ez-4",
+      "speaker": "yusuf",
+      "text": "Und der Hals? Tut dein Hals noch weh?",
+      "direction": "يوسف — tut … weh (u11-d1)"
+    },
+    {
+      "id": "ez-5",
+      "speaker": "lena",
+      "text": "Nein, der Hals tut nicht mehr weh. Aber meine Beine tun weh — ich habe drei Tage im Bett gelegen!",
+      "direction": "لينا — tut/tun weh · habe … gelegen (u11-d3)"
+    },
+    {
+      "id": "ez-6",
+      "speaker": "yusuf",
+      "text": "Du hast gelegen, du bist geblieben — haben oder sein, das ist die Frage!",
+      "direction": "يوسف — haben/sein في الماضي (بطاقة u11-d3)"
+    },
+    {
+      "id": "ez-7",
+      "speaker": "lena",
+      "text": "Genau! Frage eins für dich: Was hast du beim Hausarzt gemacht?",
+      "direction": "لينا — السؤال الأول: beim Hausarzt (u11-d5)"
+    },
+    {
+      "id": "ez-8",
+      "speaker": "yusuf",
+      "text": "Ich habe eine Stunde gewartet. Der Arzt hat die Wunde gesehen — und ich habe eine Spritze bekommen.",
+      "direction": "يوسف — gewartet · gesehen · bekommen"
+    },
+    {
+      "id": "ez-9",
+      "speaker": "lena",
+      "text": "Und was sollst du machen?",
+      "direction": "لينا — sollen (u11-d5)"
+    },
+    {
+      "id": "ez-10",
+      "speaker": "yusuf",
+      "text": "Ich soll die Salbe nehmen, am Morgen und am Abend. Und ich darf drei Tage kein Fußball spielen.",
+      "direction": "يوسف — soll … nehmen · darf kein … spielen"
+    },
+    {
+      "id": "ez-11",
+      "speaker": "lena",
+      "text": "Sollen, dürfen — und nehmen, spielen am Ende! Frage zwei: Was hilft dir?",
+      "direction": "لينا — الفعل في الآخر · السؤال الثاني: helfen + Dativ"
+    },
+    {
+      "id": "ez-12",
+      "speaker": "yusuf",
+      "text": "Die Salbe hilft mir. Und das Pflaster hilft mir auch — nicht «hilft mich»!",
+      "direction": "يوسف — hilft mir لا mich (بطاقة u11-d5)"
+    },
+    {
+      "id": "ez-13",
+      "speaker": "lena",
+      "text": "Mir, dir, dem Patienten! Und was ist mit deinem Finger jetzt?",
+      "direction": "لينا — mir/dir/dem Patienten"
+    },
+    {
+      "id": "ez-14",
+      "speaker": "yusuf",
+      "text": "Der Finger blutet nicht mehr. Das Ergebnis ist gut, hat der Arzt gesagt.",
+      "direction": "يوسف — blutet nicht mehr · Ergebnis (u11-d4/d5)"
+    },
+    {
+      "id": "ez-15",
+      "speaker": "lena",
+      "text": "Super! Frage drei — die Wörter: eine Hand, ein Bein, ein Auge — und zwei?",
+      "direction": "لينا — السؤال الثالث: الجمع (بطاقة u11-d1)"
+    },
+    {
+      "id": "ez-16",
+      "speaker": "yusuf",
+      "text": "Zwei Hände, zwei Beine, zwei Augen. Und die Zähne! Hat dein Bruder noch Zahnschmerzen?",
+      "direction": "يوسف — Hände · Beine · Augen · Zähne · Zahnschmerzen"
+    },
+    {
+      "id": "ez-17",
+      "speaker": "lena",
+      "text": "Ja, er ist heute beim Spezialisten. Mein Vater fährt ihn hin.",
+      "direction": "لينا — الأخ عند الاختصاصي اليوم (u11-d5 «morgen») · fährt … hin"
+    },
+    {
+      "id": "ez-18",
+      "speaker": "yusuf",
+      "text": "Und du? Darfst du am Montag in die Schule gehen?",
+      "direction": "يوسف — dürfen + gehen"
+    },
+    {
+      "id": "ez-19",
+      "speaker": "lena",
+      "text": "Ja, ich darf gehen — aber ich soll noch nicht schwimmen. Und du musst morgen früh aufstehen!",
+      "direction": "لينا — darf gehen · soll nicht schwimmen (u11-d5) · musst aufstehen"
+    },
+    {
+      "id": "ez-20",
+      "speaker": "yusuf",
+      "text": "Ja, um sechs! Wir fahren um sieben zum Flughafen ab. Woche elf ist zu Ende — bis morgen aus Berlin, Lena!",
+      "direction": "يوسف يختم — fahren … ab (u12-d1) · ختام الأسبوع"
+    }
+  ]
+}

@@ -1,0 +1,850 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d1",
+  "level": "A1",
+  "unit": 8,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Dieser Pullover, diese Jacke, dieses Kleid — das Kleid gefällt mir!",
+    "ar": "تسمّي ملابسك بجنسها الصحيح (der Mantel · die Hose · das Hemd) وتشير إليها بـdieser/diese/dieses وتقول ما يعجبك بـgefallen (Das Kleid gefällt mir.) — ومعها die Größe · die Farbe والزوج بالجمع (die Schuhe · die Socken)."
+  },
+  "canDoDaily": [
+    "يسمّي ملابسه بجنسها: der Rock · der Hut · der Pullover · die Hose · die Socke · das Hemd · das Kleid — والزوج بالجمع (Meine Schuhe sind neu.) — ويشير بـdieser/diese/dieses/diesen.",
+    "يقول ما يعجبه: Das Kleid gefällt mir. · Gefällt dir die Jacke? · Die Schuhe gefallen mir. — ويسأل Was für eine Größe? ويصف اللون (Die Farbe ist hell.)."
+  ],
+  "warmup": {
+    "cardIds": [
+      "tasche",
+      "tragen",
+      "kaufen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«هذا الفستان» بالألمانية: أي صيغة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "dieses Kleid",
+          "dieser Kleid",
+          "diese Kleid"
+        ],
+        "answer": "dieses Kleid",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "hose",
+      "hemd",
+      "schuh",
+      "jacke",
+      "mantel",
+      "kleid",
+      "rock",
+      "socke",
+      "hut",
+      "pullover",
+      "groesse",
+      "farbe",
+      "dieser",
+      "gefallen"
+    ],
+    "grammarArsenalIds": [
+      "ars-kleidung-genus"
+    ],
+    "storySentenceIds": [
+      "story-a1-u8-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "auslaut-d",
+      "double-consonant",
+      "r-uvular",
+      "umlaut-o",
+      "vowel-long-short"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Meine ___ ist neu. (بنطالي)",
+            "a": "Hose",
+            "why": "die Hose = البنطال — مفردٌ بالألمانية (والإنجليزية trousers جمع) · ‑e في الآخر مؤنث غالباً."
+          },
+          {
+            "q": "Ich trage heute ein ___. (قميصاً)",
+            "a": "Hemd",
+            "why": "das Hemd محايد ← ein Hemd في المنصوب كما هو — والقميص مذكّر بالعربية."
+          },
+          {
+            "q": "Die ___ sind zu klein. (الحذاء — الزوج)",
+            "a": "Schuhe",
+            "why": "الزوج بالجمع: die Schuhe … sind — والعربية «الحذاء» مفرد للزوج."
+          },
+          {
+            "q": "Am Abend brauche ich eine ___. (سترة)",
+            "a": "Jacke",
+            "why": "die Jacke ← eine Jacke — وck بعد a القصيرة."
+          },
+          {
+            "q": "Ist dein ___ neu? (معطفك)",
+            "a": "Mantel",
+            "why": "der Mantel ← dein Mantel (فاعل) — والجمع die Mäntel بلا نهاية."
+          },
+          {
+            "q": "Meine Schwester trägt gern ein ___. (فستاناً)",
+            "a": "Kleid",
+            "why": "das Kleid محايد ← ein Kleid — والفستان مذكّر بالعربية."
+          },
+          {
+            "q": "Lena trägt heute einen ___. (تنورة)",
+            "a": "Rock",
+            "why": "der Rock مذكّر ← einen Rock — والتنورة مؤنثة بالعربية: الجنس يُحفظ مع الكلمة."
+          },
+          {
+            "q": "Meine ___ sind im Koffer. (جواربي)",
+            "a": "Socken",
+            "why": "الزوج بالجمع: die Socke ← die Socken (‑n) — والفعل sind."
+          },
+          {
+            "q": "Mein Opa hat einen ___. (قبعة)",
+            "a": "Hut",
+            "why": "der Hut مذكّر ← einen Hut — والقبعة مؤنثة بالعربية."
+          },
+          {
+            "q": "Mein Bruder trägt den ___ gern. (الكنزة)",
+            "a": "Pullover",
+            "why": "der Pullover ← den Pullover (مفعول به مذكر) — والجمع die Pullover بلا نهاية."
+          },
+          {
+            "q": "Ist die ___ gut? (المقاس)",
+            "a": "Größe",
+            "why": "die Größe = المقاس — ö طويلة ثم ß ثم e."
+          },
+          {
+            "q": "Diese ___ ist so hell! (اللون)",
+            "a": "Farbe",
+            "why": "die Farbe ← diese Farbe = هذا اللون — وhell = فاتح."
+          },
+          {
+            "q": "___ Hut ist zu groß. (هذه القبعة)",
+            "a": "Dieser",
+            "why": "der Hut ← dieser Hut: dies‑ بنهاية الأداة (r) — والقبعة مؤنثة بالعربية لكنها مذكّرة هنا."
+          },
+          {
+            "q": "Ich kaufe ___ Rock. (هذه التنورة)",
+            "a": "diesen",
+            "why": "Rock مفعول به مذكر: den ← diesen."
+          },
+          {
+            "q": "Wie teuer ist ___ Hemd? (هذا القميص)",
+            "a": "dieses",
+            "why": "das Hemd ← dieses Hemd: dies‑ بنهاية الأداة (s)."
+          },
+          {
+            "q": "Der Hut ___ mir nicht. (يعجب)",
+            "a": "gefällt",
+            "why": "gefallen: الشيء فاعل (der Hut) والفعل معه gefällt (a ← ä) — كـ«لا تعجبني القبعة»."
+          },
+          {
+            "q": "Diese Socken ___ mir. (تعجب)",
+            "a": "gefallen",
+            "why": "الفاعل جمع (diese Socken) فالفعل gefallen — كـ«تعجبني هذه الجوارب»."
+          }
+        ],
+        "interleavedWith": [
+          "neu",
+          "tragen",
+          "klein",
+          "brauchen",
+          "abend",
+          "schwester",
+          "koffer",
+          "bruder",
+          "opa",
+          "hell",
+          "kaufen",
+          "teuer"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "kl-1",
+            "speakText": "Yusuf, ist dein Koffer schon fertig?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل حقيبته جاهزة",
+              "هل حقيبته جديدة",
+              "هل حقيبته ثقيلة"
+            ],
+            "a": "هل حقيبته جاهزة",
+            "why": "Ist dein Koffer schon fertig? = هل حقيبتك جاهزة؟"
+          },
+          {
+            "audioId": "kl-3",
+            "speakText": "Und ein Mantel? Brauchst du keinen Mantel?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل يحتاج معطفاً",
+              "هل عنده معطف جديد",
+              "هل يحبّ المعاطف"
+            ],
+            "a": "هل يحتاج معطفاً",
+            "why": "Brauchst du keinen Mantel? = ألا تحتاج معطفاً؟ — keinen مع der Mantel."
+          },
+          {
+            "audioId": "kl-4",
+            "speakText": "Nein, in Tunesien ist es heiß. Aber diese Jacke nehme ich — für den Abend.",
+            "q": "استمع: لماذا لا يأخذ يوسف معطفاً، وماذا يأخذ؟",
+            "choices": [
+              "الجو حار في تونس — يأخذ سترةً للمساء",
+              "الجو بارد في تونس — يأخذ سترةً للمساء",
+              "الجو حار في تونس — يأخذ قبعةً للمساء"
+            ],
+            "a": "الجو حار في تونس — يأخذ سترةً للمساء",
+            "why": "in Tunesien ist es heiß = الجو حار في تونس · diese Jacke nehme ich — für den Abend = هذه السترة آخذها للمساء."
+          },
+          {
+            "audioId": "kl-5",
+            "speakText": "Diese Jacke gefällt mir. Die Farbe ist so hell!",
+            "q": "استمع: ماذا تقول لينا عن السترة؟",
+            "choices": [
+              "تعجبها — ولونها فاتح جداً",
+              "لا تعجبها — لونها مظلم",
+              "تعجبها — لكنها غالية"
+            ],
+            "a": "تعجبها — ولونها فاتح جداً",
+            "why": "Diese Jacke gefällt mir = تعجبني هذه السترة (السترة فاعل) · Die Farbe ist so hell = اللون فاتح جداً."
+          },
+          {
+            "audioId": "kl-6",
+            "speakText": "Danke! Und dieser Pullover ist für meinen Vater.",
+            "q": "استمع: لمن الكنزة؟",
+            "choices": [
+              "لأبيه",
+              "لأخته",
+              "لجدّته"
+            ],
+            "a": "لأبيه",
+            "why": "dieser Pullover ist für meinen Vater = هذه الكنزة لأبي (der ← dieser)."
+          },
+          {
+            "audioId": "kl-7",
+            "speakText": "Toll! Und die Größe? Ist dein Vater groß?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "عن المقاس — هل أبوه طويل",
+              "عن اللون — هل يحبّه أبوه",
+              "عن السعر — هل الكنزة غالية"
+            ],
+            "a": "عن المقاس — هل أبوه طويل",
+            "why": "Und die Größe? = والمقاس؟ · Ist dein Vater groß? = هل أبوك طويل؟"
+          },
+          {
+            "audioId": "kl-9",
+            "speakText": "Und deine Schwester? Bekommt sie ein Kleid oder einen Rock?",
+            "q": "استمع: ماذا تقترح لينا لأخته؟",
+            "choices": [
+              "فستاناً أو تنورة",
+              "بنطالاً أو كنزة",
+              "قبعة أو جوارب"
+            ],
+            "a": "فستاناً أو تنورة",
+            "why": "ein Kleid oder einen Rock = فستاناً أو تنورة — das Kleid · der Rock."
+          },
+          {
+            "audioId": "kl-10",
+            "speakText": "Nein, sie trägt keine Kleider und keine Röcke. Sie trägt immer Hosen.",
+            "q": "استمع: ماذا تلبس أخت يوسف؟",
+            "choices": [
+              "البنطال دائماً — لا فساتين ولا تنانير",
+              "الفساتين دائماً",
+              "التنانير أحياناً"
+            ],
+            "a": "البنطال دائماً — لا فساتين ولا تنانير",
+            "why": "sie trägt keine Kleider und keine Röcke = لا تلبس فساتين ولا تنانير (جمع) · Sie trägt immer Hosen = تلبس البنطال دائماً."
+          },
+          {
+            "audioId": "kl-11",
+            "speakText": "Und deine Oma? Bekommt sie einen Hut?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل تحصل جدّته على قبعة",
+              "هل تلبس جدّته قبعة",
+              "هل تحبّ جدّته القبعات"
+            ],
+            "a": "هل تحصل جدّته على قبعة",
+            "why": "Bekommt sie einen Hut? = هل تحصل على قبعة؟ — einen مع der Hut."
+          },
+          {
+            "audioId": "kl-12",
+            "speakText": "Nein, sie trägt nie einen Hut! Sie bekommt Schuhe aus Berlin.",
+            "q": "استمع: ماذا تحصل الجدّة، ولماذا لا قبعة؟",
+            "choices": [
+              "حذاءً من برلين — فهي لا تلبس القبعة أبداً",
+              "قبعةً من برلين — فهي تحبّها",
+              "حذاءً من تونس — فهي لا تلبس القبعة"
+            ],
+            "a": "حذاءً من برلين — فهي لا تلبس القبعة أبداً",
+            "why": "sie trägt nie einen Hut = لا تلبس قبعة أبداً · Sie bekommt Schuhe aus Berlin = تحصل على حذاء من برلين (الزوج بالجمع)."
+          },
+          {
+            "audioId": "kl-13",
+            "speakText": "Schuhe? Was für Schuhe?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "أي نوع من الأحذية",
+              "كم ثمن الحذاء",
+              "ما مقاس الحذاء"
+            ],
+            "a": "أي نوع من الأحذية",
+            "why": "Was für Schuhe? = أي نوع من الأحذية؟ (was für من الوحدة 5)."
+          },
+          {
+            "audioId": "kl-14",
+            "speakText": "Leichte Schuhe — meine Oma läuft viel.",
+            "q": "استمع: أي حذاء، ولماذا؟",
+            "choices": [
+              "خفيف — فجدّته تمشي كثيراً",
+              "ثقيل — فجدّته تمشي قليلاً",
+              "خفيف — فجدّته لا تمشي"
+            ],
+            "a": "خفيف — فجدّته تمشي كثيراً",
+            "why": "Leichte Schuhe = حذاء خفيف · meine Oma läuft viel = جدّتي تمشي كثيراً (läuft)."
+          },
+          {
+            "audioId": "kl-15",
+            "speakText": "Und ich trage am Sonntag ein Kleid — meine Oma hat Geburtstag!",
+            "q": "استمع: ماذا تلبس لينا يوم الأحد، ولماذا؟",
+            "choices": [
+              "فستاناً — لعيد ميلاد جدّتها",
+              "تنورة — لعيد ميلادها",
+              "فستاناً — لزيارة يوسف"
+            ],
+            "a": "فستاناً — لعيد ميلاد جدّتها",
+            "why": "ich trage am Sonntag ein Kleid = ألبس يوم الأحد فستاناً · meine Oma hat Geburtstag = عيد ميلاد جدّتي."
+          },
+          {
+            "audioId": "kl-16",
+            "speakText": "Ach ja! Zeig mal — dieses Kleid hier?",
+            "q": "استمع: ماذا يطلب يوسف؟",
+            "choices": [
+              "أن تُريه الفستان",
+              "أن تشتري فستاناً",
+              "أن تلبس الفستان"
+            ],
+            "a": "أن تُريه الفستان",
+            "why": "Zeig mal = أريني · dieses Kleid hier? = هذا الفستان؟ (das ← dieses)."
+          },
+          {
+            "audioId": "kl-18",
+            "speakText": "Ja, es gefällt mir. Die Farbe ist schön!",
+            "q": "استمع: ماذا يقول يوسف عن الفستان؟",
+            "choices": [
+              "يعجبه — ولونه جميل",
+              "لا يعجبه لونه",
+              "يعجبه — لكنه طويل"
+            ],
+            "a": "يعجبه — ولونه جميل",
+            "why": "gefällt (مع es = das Kleid) = يعجبني · Die Farbe ist schön = اللون جميل."
+          },
+          {
+            "audioId": "kl-19",
+            "speakText": "Danke! Und deine Schuhe? Sind sie auch im Koffer?",
+            "q": "استمع: عمّ تسأل لينا في النهاية؟",
+            "choices": [
+              "هل أحذيته في الحقيبة",
+              "هل حذاؤه جديد",
+              "هل يحبّ الأحذية"
+            ],
+            "a": "هل أحذيته في الحقيبة",
+            "why": "Und deine Schuhe? Sind sie auch im Koffer? = وأحذيتك؟ هل هي في الحقيبة أيضاً؟"
+          },
+          {
+            "audioId": "kl-20",
+            "speakText": "Nein, meine Schuhe trage ich!",
+            "q": "استمع: أين أحذية يوسف؟",
+            "choices": [
+              "يلبسها — ليست في الحقيبة",
+              "في الحقيبة",
+              "في البيت"
+            ],
+            "a": "يلبسها — ليست في الحقيبة",
+            "why": "meine Schuhe trage ich = أحذيتي ألبسها — المفعول أولاً للتأكيد."
+          }
+        ],
+        "interleavedWith": [
+          "koffer",
+          "tunesien",
+          "abend",
+          "vater",
+          "schwester",
+          "oma",
+          "geburtstag",
+          "sonntag",
+          "fertig",
+          "brauchen",
+          "bekommen",
+          "tragen",
+          "leicht",
+          "zeigen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "neu.",
+              "ist",
+              "Mantel",
+              "Dieser"
+            ],
+            "a": "Dieser Mantel ist neu.",
+            "why": "Dieser Mantel (der ← dieser) ثم ist ثم neu."
+          },
+          {
+            "tokens": [
+              "mir.",
+              "gefällt",
+              "Rock",
+              "Der"
+            ],
+            "a": "Der Rock gefällt mir.",
+            "why": "الشيء فاعل أولاً (Der Rock) ثم gefällt ثم mir — كـ«تعجبني التنورة»."
+          },
+          {
+            "tokens": [
+              "Hut?",
+              "der",
+              "dir",
+              "Gefällt"
+            ],
+            "a": "Gefällt dir der Hut?",
+            "why": "سؤال: Gefällt أولاً ثم dir ثم الفاعل der Hut."
+          },
+          {
+            "tokens": [
+              "Röcke.",
+              "keine",
+              "trägt",
+              "Lena"
+            ],
+            "a": "Lena trägt keine Röcke.",
+            "why": "Lena ثم trägt (a ← ä) ثم keine Röcke (جمع der Rock)."
+          },
+          {
+            "tokens": [
+              "Hemd.",
+              "dieses",
+              "nehme",
+              "Ich"
+            ],
+            "a": "Ich nehme dieses Hemd.",
+            "why": "Ich ثم nehme ثم dieses Hemd (das ← dieses — المنصوب المحايد كما هو)."
+          },
+          {
+            "tokens": [
+              "teuer.",
+              "sind",
+              "Socken",
+              "Die"
+            ],
+            "a": "Die Socken sind teuer.",
+            "why": "Die Socken (جمع) ثم sind ثم teuer."
+          }
+        ],
+        "interleavedWith": [
+          "neu",
+          "nehmen",
+          "teuer"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "kl-2",
+            "speakText": "Ja! Drei Hemden, zwei Hosen und viele Socken.",
+            "a": "Ja! Drei Hemden, zwei Hosen und viele Socken.",
+            "why": "Hemden (‑en) · Hosen (‑n) · Socken (ck ثم ‑n) — الجموع بحرف كبير · viele بـie."
+          },
+          {
+            "audioId": "kl-8",
+            "speakText": "Ja, sehr groß — er hat Größe zweiundfünfzig.",
+            "a": "Ja, sehr groß — er hat Größe zweiundfünfzig.",
+            "why": "groß بـß بعد o الطويلة · Größe بـö وß · zweiundfünfzig كلمةٌ واحدة: الآحاد ثم und ثم العشرات."
+          },
+          {
+            "audioId": "kl-17",
+            "speakText": "Ja, dieses Kleid. Gefällt es dir?",
+            "a": "Ja, dieses Kleid. Gefällt es dir?",
+            "why": "dieses بـie ثم ‑es (مع das Kleid) · Gefällt بـä وll · dir بـi."
+          },
+          {
+            "audioId": "word-pullover",
+            "speakText": "Pullover.",
+            "a": "Pullover",
+            "why": "Pullover بحرف كبير: ll بعد u القصيرة ثم v تُنطق «ف»."
+          },
+          {
+            "audioId": "word-groesse",
+            "speakText": "Größe.",
+            "a": "Größe",
+            "why": "Größe بحرف كبير: ö طويلة ثم ß ثم e."
+          },
+          {
+            "audioId": "word-mantel",
+            "speakText": "Mantel.",
+            "a": "Mantel",
+            "why": "Mantel بحرف كبير: a قصيرة ثم nt ثم el."
+          },
+          {
+            "audioId": "word-gefallen",
+            "speakText": "gefallen.",
+            "a": "gefallen",
+            "why": "gefallen: ge ثم f ثم ll بعد a القصيرة ثم en."
+          },
+          {
+            "audioId": "word-dieser",
+            "speakText": "dieser.",
+            "a": "dieser",
+            "why": "dieser: ie طويلة ثم s بين حركتين ثم er."
+          }
+        ],
+        "interleavedWith": [
+          "viel",
+          "gross"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Was trägst du gern? Dieser Pullover gefällt mir.",
+        "ar": "تصف لزميلك ملابسك وتشير إليها وتقول ما يعجبك وما لا يعجبك"
+      },
+      "situation": {
+        "de": "Was trägst du heute? Gefällt dir diese Jacke? Was für eine Größe hast du?",
+        "ar": "في الدورة: يُري كلٌّ منكما الآخر ثلاث قطع من ملابسه أمام الكاميرا ويسأله: Was trägst du heute? · Gefällt dir diese Jacke? · Was für eine Größe hast du? — ويجيب بجمل كاملة بـdieser/diese/dieses وgefällt mir — ثم تتبادلان."
+      },
+      "successCriteria": [
+        "خمس قطع ملابس بأدواتها الصحيحة (der Mantel · die Hose · das Hemd …) — والزوج بالجمع (meine Schuhe · meine Socken).",
+        "جملتان بـdies‑ (Dieser Pullover … · Dieses Kleid …) وجملة بما يعجبك وأخرى بالنفي (Der Hut gefällt mir nicht.) — الشيء فاعلٌ دائماً."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«هذا القميص جديد»؟",
+            "choices": [
+              "Dieses Hemd ist neu.",
+              "Dieser Hemd ist neu.",
+              "Diese Hemd ist neu."
+            ],
+            "a": "Dieses Hemd ist neu.",
+            "why": "das Hemd ← dieses Hemd: dies‑ بنهاية الأداة (s)."
+          },
+          {
+            "q": "«تعجبني السترة»؟",
+            "choices": [
+              "Die Jacke gefällt mir.",
+              "Ich gefalle die Jacke.",
+              "Die Jacke gefällst mir."
+            ],
+            "a": "Die Jacke gefällt mir.",
+            "why": "الشيء فاعل (Die Jacke) والفعل معه gefällt، والشخص mir — كـ«تعجبني السترة»."
+          },
+          {
+            "q": "die Größe = ؟",
+            "choices": [
+              "المقاس",
+              "اللون",
+              "السعر"
+            ],
+            "a": "المقاس",
+            "why": "die Größe = المقاس · die Farbe = اللون · der Preis = السعر."
+          },
+          {
+            "q": "«آخذ هذا المعطف»؟",
+            "choices": [
+              "Ich nehme diesen Mantel.",
+              "Ich nehme dieser Mantel.",
+              "Ich nehme dieses Mantel."
+            ],
+            "a": "Ich nehme diesen Mantel.",
+            "why": "Mantel مفعول به مذكر: den ← diesen."
+          },
+          {
+            "q": "«الفساتين» (das Kleid — الجمع مع الأداة)؟",
+            "a": "die Kleider",
+            "why": "الجمع: das Kleid ← die Kleider — ‑er بلا Umlaut."
+          },
+          {
+            "q": "«أخي يلبس قبعة» — ابدأ بـ Mein Bruder",
+            "a": "Mein Bruder trägt einen Hut.",
+            "why": "trägt (a ← ä مع er) ثم einen Hut (der Hut ← einen)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "سؤال لصديقتك: «هل تعجبك هذه التنورة؟»",
+            "choices": [
+              "Gefällt dir dieser Rock?",
+              "Gefällst du dieser Rock?",
+              "Gefällt dir diese Rock?"
+            ],
+            "a": "Gefällt dir dieser Rock?",
+            "why": "الشيء فاعل (dieser Rock — der ← dieser) والشخص dir: Gefällt dir …?"
+          },
+          {
+            "q": "«حذائي (الزوج) قديم»؟",
+            "choices": [
+              "Meine Schuhe sind alt.",
+              "Mein Schuhe ist alt.",
+              "Meine Schuhe ist alt."
+            ],
+            "a": "Meine Schuhe sind alt.",
+            "why": "الزوج بالجمع: meine Schuhe … sind."
+          },
+          {
+            "q": "die Farbe = ؟",
+            "choices": [
+              "اللون",
+              "المقاس",
+              "القماش"
+            ],
+            "a": "اللون",
+            "why": "die Farbe = اللون · die Größe = المقاس."
+          },
+          {
+            "q": "«هذه القبعة صغيرة جداً»؟",
+            "choices": [
+              "Dieser Hut ist zu klein.",
+              "Diese Hut ist zu klein.",
+              "Dieses Hut ist zu klein."
+            ],
+            "a": "Dieser Hut ist zu klein.",
+            "why": "der Hut ← dieser — والقبعة مؤنثة بالعربية لكنها مذكّرة بالألمانية."
+          },
+          {
+            "q": "«القمصان» (das Hemd — الجمع مع الأداة)؟",
+            "a": "die Hemden",
+            "why": "الجمع: das Hemd ← die Hemden — ‑en."
+          },
+          {
+            "q": "«لا تعجبني الكنزة» — ابدأ بـ Der Pullover",
+            "a": "Der Pullover gefällt mir nicht.",
+            "why": "الشيء فاعل أولاً ثم gefällt ثم mir ثم nicht."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«هذه الجوارب جديدة»؟",
+            "choices": [
+              "Diese Socken sind neu.",
+              "Dieser Socken sind neu.",
+              "Diese Socken ist neu."
+            ],
+            "a": "Diese Socken sind neu.",
+            "why": "الجمع ← diese، والفعل مع الجمع sind."
+          },
+          {
+            "q": "«يلبس أبي معطفاً»؟",
+            "choices": [
+              "Mein Vater trägt einen Mantel.",
+              "Mein Vater trägst einen Mantel.",
+              "Mein Vater trägt einen Mäntel."
+            ],
+            "a": "Mein Vater trägt einen Mantel.",
+            "why": "trägt مع er، وder Mantel ← einen Mantel في المنصوب — وMäntel جمعٌ لا يأخذ einen."
+          },
+          {
+            "q": "gefallen = ؟",
+            "choices": [
+              "يُعجِب",
+              "يسقط",
+              "يلبس"
+            ],
+            "a": "يُعجِب",
+            "why": "gefallen = يُعجِب (Die Jacke gefällt mir.) — لا «يسقط» · tragen = يلبس."
+          },
+          {
+            "q": "«أريد هذا الفستان»؟",
+            "choices": [
+              "Ich möchte dieses Kleid.",
+              "Ich möchte diesen Kleid.",
+              "Ich möchte dieser Kleid."
+            ],
+            "a": "Ich möchte dieses Kleid.",
+            "why": "das Kleid ← dieses Kleid — المنصوب المحايد كما هو."
+          },
+          {
+            "q": "dies‑ مع die Hose؟",
+            "a": "diese Hose",
+            "why": "die ← diese: dies‑ بنهاية الأداة (e)."
+          },
+          {
+            "q": "«هذا اللون جميل» — ابدأ بـ Diese",
+            "a": "Diese Farbe ist schön.",
+            "why": "die Farbe ← diese Farbe ثم ist ثم schön."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "der Rock · die Hose · das Hemd · die Schuhe · dieser Mantel · diese Jacke · dieses Kleid · Ich nehme diesen Pullover. · Das Kleid gefällt mir. · Gefällt dir die Jacke? · Die Schuhe gefallen mir. · Die Farbe ist hell.",
+      "ar": "احفظ جنس كل قطعة ولا تنقله من العربية: der Rock (التنورة مؤنثة بالعربية) · der Hut · der Pullover · der Mantel · die Hose · die Jacke · die Socke · das Hemd · das Kleid — و‑e في الآخر مؤنثٌ غالباً. الزوج بالجمع: die Schuhe · die Socken. dies‑ بنهاية الأداة: dieser · diese · dieses · diese (جمع) — وdiesen للمنصوب المذكر. gefallen = «يُعجِب»: الشيء فاعلٌ والشخص بـmir/dir (Das Kleid gefällt mir.) — والفعل يطابق الشيء (Die Schuhe gefallen mir.). die Größe = المقاس · die Farbe = اللون · tragen = يلبس."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Mein Schuh ist neu.~~",
+          "ar": "الزوج بالجمع: meine Schuhe"
+        },
+        "whyArabicSpeakerFails": "«حذائي جديد» بالمفرد للزوج كله — فيقول المتعلم Schuh مفرداً. والمشطوبة صحيحة نحواً بمعنى آخر: «فردة حذائي جديدة» — حذاءٌ واحد لا زوج! والزوج بالجمع: Meine Schuhe sind neu. — وكذلك الجوارب: meine Socken (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Meine Schuhe sind neu.",
+          "ar": "حذائي جديد."
+        },
+        "exercise": {
+          "q": "صحّح (الزوج كله): ~~Wo ist mein Schuh?~~",
+          "a": "Wo sind meine Schuhe?"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich gefalle das Kleid.~~",
+          "ar": "الشيء فاعل: Das Kleid gefällt mir."
+        },
+        "whyArabicSpeakerFails": "«أحبّ الفستان» والإنجليزية I like the dress تجعلان الشخص فاعلاً — فيضع المتعلم ich أولاً مع gefallen. لكن gefallen = «يُعجِب»: الشيء فاعلٌ والشخص بـmir — كما في «يعجبني الفستان» العربية وla robe me plaît الفرنسية (عونان): Das Kleid gefällt mir. — وللشخص فاعلاً mögen (الوحدة 5): Ich mag das Kleid. (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Das Kleid gefällt mir.",
+          "ar": "يعجبني الفستان."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich gefalle diesen Pullover.~~",
+          "a": "Dieser Pullover gefällt mir."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Dieser Kleid ist schön.~~",
+          "ar": "das Kleid ← dieses"
+        },
+        "whyArabicSpeakerFails": "«هذا» العربية لمذكر ومؤنث فقط («هذا» و«هذه») ولا محايد فيها، و«الفستان» مذكّر — فيختار المتعلم dieser. لكن الألمانية ثلاثة أجناس، وdies‑ تأخذ نهاية الأداة: das Kleid ← dieses Kleid (‑s كـdas) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Dieses Kleid ist schön.",
+          "ar": "هذا الفستان جميل."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Diese Hemd ist zu klein.~~",
+          "a": "Dieses Hemd ist zu klein."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "hose",
+      "hemd",
+      "schuh",
+      "jacke",
+      "mantel",
+      "kleid",
+      "rock",
+      "socke",
+      "hut",
+      "pullover",
+      "groesse",
+      "farbe",
+      "dieser",
+      "gefallen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Hemd",
+      "https://www.duden.de/rechtschreibung/Kleid",
+      "https://www.duden.de/rechtschreibung/Mantel",
+      "https://www.duden.de/rechtschreibung/gefallen",
+      "https://www.duden.de/rechtschreibung/dieser"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Hemd",
+      "https://de.wiktionary.org/wiki/Kleid",
+      "https://de.wiktionary.org/wiki/gefallen",
+      "https://de.wiktionary.org/wiki/dieser"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-kleidung-genus"
+  ],
+  "audioManifestRefs": [
+    "word-hose",
+    "word-hemd",
+    "word-schuh",
+    "word-jacke",
+    "word-mantel",
+    "word-kleid",
+    "word-rock",
+    "word-socke",
+    "word-hut",
+    "word-pullover",
+    "word-groesse",
+    "word-farbe",
+    "word-dieser",
+    "word-gefallen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Kleidung",
+    "goetheWordListOverlap": [
+      "hose",
+      "hemd",
+      "schuh",
+      "jacke",
+      "mantel",
+      "kleid",
+      "rock",
+      "pullover",
+      "groesse",
+      "farbe",
+      "dieser",
+      "gefallen"
+    ]
+  }
+}

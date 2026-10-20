@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u3-d4-der-naechste-termin",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Wann ist der nächste Termin?",
+    "ar": "متى الموعد القادم؟ — um للساعة · am لليوم · im للشهر"
+  },
+  "usedIn": [
+    "a1-u3-d4"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "tm-1",
+      "speaker": "lena",
+      "text": "Yusuf, wie ist es in Berlin? Hier scheint die Sonne!",
+      "direction": "مكالمة فيديو بعد الدرس — لينا في سويسرا: الشمس خلفها في النافذة. مرحة"
+    },
+    {
+      "id": "tm-2",
+      "speaker": "yusuf",
+      "text": "In Berlin regnet es. Hier regnet es oft.",
+      "direction": "يبتسم بأسى — المطر خلفه"
+    },
+    {
+      "id": "tm-3",
+      "speaker": "lena",
+      "text": "Wann ist der nächste Termin?",
+      "direction": "عملية — تفتح مفكرتها"
+    },
+    {
+      "id": "tm-4",
+      "speaker": "yusuf",
+      "text": "Am Montag um drei Uhr?",
+      "direction": "يقترح"
+    },
+    {
+      "id": "tm-5",
+      "speaker": "lena",
+      "text": "Am Montag habe ich Schule. Um vier bin ich fertig.",
+      "direction": "تشرح — لينا تلميذة"
+    },
+    {
+      "id": "tm-6",
+      "speaker": "yusuf",
+      "text": "Also am Montag um halb fünf?",
+      "direction": "يعدّل الاقتراح"
+    },
+    {
+      "id": "tm-7",
+      "speaker": "lena",
+      "text": "Gern! Und am Sonntag? Treffen wir uns auch?",
+      "direction": "موافقة ثم سؤال"
+    },
+    {
+      "id": "tm-8",
+      "speaker": "yusuf",
+      "text": "Am Sonntag habe ich eine Verabredung mit der Gruppe.",
+      "direction": "يعتذر بلطف"
+    },
+    {
+      "id": "tm-9",
+      "speaker": "lena",
+      "text": "Mit der Gruppe? Wann denn?",
+      "direction": "فضول"
+    },
+    {
+      "id": "tm-10",
+      "speaker": "yusuf",
+      "text": "Am Sonntag um elf Uhr.",
+      "direction": "عادي"
+    },
+    {
+      "id": "tm-11",
+      "speaker": "lena",
+      "text": "Und im April habe ich Geburtstag!",
+      "direction": "تتذكر فجأة — فرحة"
+    },
+    {
+      "id": "tm-12",
+      "speaker": "yusuf",
+      "text": "Im April bist du siebzehn!",
+      "direction": "يحسب ويفرح لها"
+    },
+    {
+      "id": "tm-13",
+      "speaker": "lena",
+      "text": "Genau! Also: Montag um halb fünf.",
+      "direction": "تلخّص الموعد"
+    },
+    {
+      "id": "tm-14",
+      "speaker": "yusuf",
+      "text": "Ja, der Termin ist am Montag um halb fünf. Tschüss, Lena!",
+      "direction": "يؤكد ويودّع"
+    },
+    {
+      "id": "tm-15",
+      "speaker": "lena",
+      "text": "Tschüss! Und viel Sonne in Berlin!",
+      "direction": "تمنٍّ لطيف"
+    }
+  ]
+}

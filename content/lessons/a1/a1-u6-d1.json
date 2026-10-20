@@ -1,0 +1,771 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d1",
+  "level": "A1",
+  "unit": 6,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Hier sind zwei Stühle. — Ich habe keine Vorhänge. Mein Sofa ist breit.",
+    "ar": "تسمّي أثاثك بجنسه، وتعدّه بالجمع الصحيح بعد كل عدد (zwei Stühle · zwanzig Stühle)، وتعرف أنماط الجمع الخمسة: Stühle · Tische · Lampen · Sofas · Sessel."
+  },
+  "canDoDaily": [
+    "يسمّي أثاث بيته بجنسه الصحيح (der Tisch · das Bett · die Lampe) ويصفه (Das Sofa ist breit.).",
+    "يجمع الأسماء بأنماطها (Stühle · Tische · Lampen · Sofas · Sessel) ويستعمل الجمع بعد كل عدد فوق الواحد (zwanzig Stühle)."
+  ],
+  "warmup": {
+    "cardIds": [
+      "wohnung",
+      "apfel",
+      "mutter"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«كرسيّان» بالألمانية: أي صيغة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "zwei Stühle",
+          "zwei Stuhl",
+          "zwei Stuhls"
+        ],
+        "answer": "zwei Stühle",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "tisch",
+      "stuhl",
+      "sofa",
+      "bett",
+      "schrank",
+      "lampe",
+      "teppich",
+      "sessel",
+      "regal",
+      "spiegel",
+      "vorhang",
+      "kissen",
+      "breit"
+    ],
+    "grammarArsenalIds": [
+      "ars-plural-umlaut"
+    ],
+    "storySentenceIds": [
+      "story-a1-u6-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "sp-st-initial",
+      "double-consonant",
+      "vowel-long-short",
+      "ch-ich-laut",
+      "v-f"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Wir haben drei ___. (Stuhl)",
+            "a": "Stühle",
+            "why": "der Stuhl ← die Stühle: نقطتان فوق u ثم ‑e — وبعد drei جمعٌ."
+          },
+          {
+            "q": "Yusuf möchte zwei ___. (Schrank)",
+            "a": "Schränke",
+            "why": "der Schrank ← die Schränke: a ← ä ثم ‑e (كـStuhl)."
+          },
+          {
+            "q": "Lena hat vier ___. (Lampe)",
+            "a": "Lampen",
+            "why": "die Lampe ← die Lampen: المؤنث المنتهي بـ‑e يأخذ ‑n في الغالب."
+          },
+          {
+            "q": "Oma hat zwei ___. (Sofa)",
+            "a": "Sofas",
+            "why": "das Sofa ← die Sofas: الكلمة الأجنبية المنتهية بحركة تأخذ ‑s (كـAuto ← Autos)."
+          },
+          {
+            "q": "Hier sind drei ___. (Spiegel)",
+            "a": "Spiegel",
+            "why": "der Spiegel ← die Spiegel: ‑el في الآخر ⇒ بلا نهاية — والأداة die وحدها تقول «كثير»."
+          },
+          {
+            "q": "Wir kaufen zwei ___. (Bett)",
+            "a": "Betten",
+            "why": "das Bett ← die Betten: ‑en — والجمع يُحفظ مع الكلمة."
+          },
+          {
+            "q": "Die Schule hat zwanzig ___. (Tisch)",
+            "a": "Tische",
+            "why": "der Tisch ← die Tische (‑e بلا نقطتين) — وبعد zwanzig جمعٌ، لا مفرد كـ«عشرون طاولةً»."
+          },
+          {
+            "q": "Hier sind vier ___. (Teppich)",
+            "a": "Teppiche",
+            "why": "der Teppich ← die Teppiche: ‑e وحدها."
+          },
+          {
+            "q": "___ Kissen sind neu. (das أم die؟)",
+            "a": "Die",
+            "why": "sind تقول «جمع» ⇒ die — وKissen جمعه كمفرده، فالأداة وحدها تفرّق: das Kissen ↔ die Kissen."
+          },
+          {
+            "q": "Lena möchte keine ___. (Vorhang)",
+            "a": "Vorhänge",
+            "why": "der Vorhang ← die Vorhänge: a ← ä ثم ‑e — وkeine للجمع."
+          },
+          {
+            "q": "Der Schrank ist ___. (عريض)",
+            "a": "breit",
+            "why": "breit = عريض — صفة بعد ist بلا نهاية."
+          },
+          {
+            "q": "___ Schrank ist neu. (der/die/das؟)",
+            "a": "Der",
+            "why": "der Schrank مذكر وإن كانت «الخزانة» مؤنثة بالعربية — الجنس يُحفظ مع الكلمة."
+          }
+        ],
+        "interleavedWith": [
+          "oma",
+          "schule",
+          "kaufen",
+          "neu"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "mb-2",
+            "speakText": "Ja! Hier ist mein Tisch, und hier sind zwei Stühle.",
+            "q": "استمع: ماذا يُري يوسف أولاً؟",
+            "choices": [
+              "طاولة وكرسيين",
+              "سريراً وخزانة",
+              "أريكة وطاولة"
+            ],
+            "a": "طاولة وكرسيين",
+            "why": "mein Tisch = طاولتي · zwei Stühle = كرسيان (der Stuhl ← die Stühle) — وsind للجمع."
+          },
+          {
+            "audioId": "mb-3",
+            "speakText": "Nur zwei Stühle?",
+            "q": "استمع: بماذا تستغرب لينا؟",
+            "choices": [
+              "أن عنده كرسيين فقط",
+              "أن الكراسي قديمة",
+              "أن الطاولة كبيرة"
+            ],
+            "a": "أن عنده كرسيين فقط",
+            "why": "Nur zwei Stühle? = كرسيان فقط؟ · nur = فقط."
+          },
+          {
+            "audioId": "mb-4",
+            "speakText": "Ja. Ich habe auch ein Bett, einen Schrank und eine Lampe.",
+            "q": "استمع: ماذا عند يوسف أيضاً؟",
+            "choices": [
+              "سرير وخزانة ومصباح",
+              "سرير وأريكة ومصباح",
+              "خزانة ومرآة ومصباح"
+            ],
+            "a": "سرير وخزانة ومصباح",
+            "why": "ein Bett · einen Schrank (der Schrank مفعولاً) · eine Lampe."
+          },
+          {
+            "audioId": "mb-5",
+            "speakText": "Und ein Sofa?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "عن أريكة",
+              "عن سجادة",
+              "عن مرآة"
+            ],
+            "a": "عن أريكة",
+            "why": "das Sofa = الأريكة · وجمعها die Sofas بـ‑s."
+          },
+          {
+            "audioId": "mb-6",
+            "speakText": "Nein, ich habe kein Sofa. Meine Wohnung ist klein.",
+            "q": "استمع: لماذا ليس عند يوسف أريكة؟",
+            "choices": [
+              "لأن شقته صغيرة",
+              "لأن الأريكة غالية",
+              "لأنه لا يحب الأرائك"
+            ],
+            "a": "لأن شقته صغيرة",
+            "why": "kein Sofa · Meine Wohnung ist klein = شقتي صغيرة."
+          },
+          {
+            "audioId": "mb-7",
+            "speakText": "Ich zeige mein Sofa. Es ist neu und sehr breit!",
+            "q": "استمع: كيف أريكة لينا؟",
+            "choices": [
+              "جديدة وعريضة جداً",
+              "قديمة وعريضة",
+              "جديدة وصغيرة"
+            ],
+            "a": "جديدة وعريضة جداً",
+            "why": "neu = جديدة · sehr breit = عريضة جداً · es = das Sofa."
+          },
+          {
+            "audioId": "mb-8",
+            "speakText": "Breit, ja! Und das sind sechs Kissen!",
+            "q": "استمع: كم وسادة على الأريكة؟",
+            "choices": [
+              "ستّ وسائد",
+              "وسادتان",
+              "عشرون وسادة"
+            ],
+            "a": "ستّ وسائد",
+            "why": "sechs Kissen — das Kissen ← die Kissen (الجمع كالمفرد بعد ‑en)."
+          },
+          {
+            "audioId": "mb-10",
+            "speakText": "Und links? Ist das ein Spiegel?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "عن مرآة على اليسار",
+              "عن مرآة على اليمين",
+              "عن رفّ على اليسار"
+            ],
+            "a": "عن مرآة على اليسار",
+            "why": "links = يساراً · der Spiegel = المرآة."
+          },
+          {
+            "audioId": "mb-11",
+            "speakText": "Ja, das ist ein Spiegel. Und rechts sind zwei Regale.",
+            "q": "استمع: ماذا على اليمين؟",
+            "choices": [
+              "رفّان",
+              "مرآتان",
+              "خزانتان"
+            ],
+            "a": "رفّان",
+            "why": "rechts = يميناً · zwei Regale (das Regal ← die Regale) — والمثنى العربي جمعٌ عادي بالألمانية."
+          },
+          {
+            "audioId": "mb-14",
+            "speakText": "Ich habe keine Vorhänge. Aber ich habe einen Teppich.",
+            "q": "استمع: ماذا ليس عند يوسف، وماذا عنده؟",
+            "choices": [
+              "لا ستائر، لكن عنده سجادة",
+              "لا سجادة، لكن عنده ستائر",
+              "لا ستائر ولا سجادة"
+            ],
+            "a": "لا ستائر، لكن عنده سجادة",
+            "why": "keine Vorhänge = لا ستائر (keine للجمع) · einen Teppich = سجادة."
+          },
+          {
+            "audioId": "mb-15",
+            "speakText": "Und deine Oma? Hat sie auch nur zwei Stühle?",
+            "q": "استمع: عمّن تسأل لينا؟",
+            "choices": [
+              "عن جدة يوسف",
+              "عن أم يوسف",
+              "عن أخت يوسف"
+            ],
+            "a": "عن جدة يوسف",
+            "why": "deine Oma = جدتك · nur zwei Stühle = كرسيان فقط."
+          },
+          {
+            "audioId": "mb-18",
+            "speakText": "Ja, einen Sessel. Er ist alt, aber Oma liebt ihn.",
+            "q": "استمع: كيف الكرسي ذو الذراعين عند الجدة؟",
+            "choices": [
+              "قديم، والجدة تحبه",
+              "جديد، والجدة تحبه",
+              "قديم، والجدة لا تحبه"
+            ],
+            "a": "قديم، والجدة تحبه",
+            "why": "Er ist alt = هو قديم · liebt ihn = تحبه (ihn = den Sessel)."
+          },
+          {
+            "audioId": "mb-19",
+            "speakText": "Und du? Was kaufst du jetzt?",
+            "q": "استمع: بماذا تسأل لينا في النهاية؟",
+            "choices": [
+              "ماذا سيشتري يوسف",
+              "كم سعر الأريكة",
+              "أين الشقة"
+            ],
+            "a": "ماذا سيشتري يوسف",
+            "why": "Was kaufst du jetzt? = ماذا تشتري الآن؟ — kaufst: kaufen مع du."
+          }
+        ],
+        "interleavedWith": [
+          "wohnung",
+          "klein",
+          "neu",
+          "oma",
+          "alt",
+          "kaufen",
+          "links",
+          "rechts"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "sind",
+              "Hier",
+              "Lampen.",
+              "zwei"
+            ],
+            "a": "Hier sind zwei Lampen.",
+            "why": "Hier ثم sind ثانياً (للجمع) ثم zwei Lampen — die Lampe ← die Lampen."
+          },
+          {
+            "tokens": [
+              "hat",
+              "Das",
+              "Kissen.",
+              "sechs",
+              "Sofa"
+            ],
+            "a": "Das Sofa hat sechs Kissen.",
+            "why": "Das Sofa فاعل ثم hat ثانياً ثم sechs Kissen — Kissen جمعه كمفرده."
+          },
+          {
+            "tokens": [
+              "keine",
+              "Ich",
+              "Regale.",
+              "habe"
+            ],
+            "a": "Ich habe keine Regale.",
+            "why": "Ich ثم habe ثانياً ثم keine Regale — keine للجمع، والجمع das Regal ← die Regale."
+          },
+          {
+            "tokens": [
+              "Sessel",
+              "Die",
+              "alt.",
+              "sind"
+            ],
+            "a": "Die Sessel sind alt.",
+            "why": "Die Sessel (جمع — الأداة die) ثم sind ثم alt — Sessel جمعه كمفرده."
+          },
+          {
+            "tokens": [
+              "breit.",
+              "Sofa",
+              "Das",
+              "ist"
+            ],
+            "a": "Das Sofa ist breit.",
+            "why": "Das Sofa ثم ist ثم الصفة breit (عريضة)."
+          },
+          {
+            "tokens": [
+              "Tische.",
+              "hundert",
+              "Das",
+              "hat",
+              "Restaurant"
+            ],
+            "a": "Das Restaurant hat hundert Tische.",
+            "why": "Das Restaurant ثم hat ثانياً ثم hundert Tische — بعد المئة جمعٌ لا مفرد كـ«مئة طاولة»."
+          }
+        ],
+        "interleavedWith": [
+          "restaurant",
+          "alt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "mb-1",
+            "speakText": "Hallo, Yusuf! Zeigst du heute deine Wohnung?",
+            "a": "Hallo, Yusuf! Zeigst du heute deine Wohnung?",
+            "why": "Zeigst بـz «تس» وgst في آخرها · deine Wohnung: die Wohnung ← deine · وh في Wohnung صامتة تُطيل o."
+          },
+          {
+            "audioId": "mb-9",
+            "speakText": "Ja, sechs Kissen. Ich liebe Kissen!",
+            "a": "Ja, sechs Kissen. Ich liebe Kissen!",
+            "why": "Kissen بـss بعد i القصيرة — والجمع كالمفرد: das Kissen ← die Kissen · liebe بـie طويلة."
+          },
+          {
+            "audioId": "mb-12",
+            "speakText": "Zwei Regale! Ich habe kein Regal.",
+            "a": "Zwei Regale! Ich habe kein Regal",
+            "why": "Regale بـe طويلة والنبر على ga · kein Regal: das Regal ← kein."
+          },
+          {
+            "audioId": "mb-13",
+            "speakText": "Und deine Vorhänge?",
+            "a": "Und deine Vorhänge?",
+            "why": "Vorhänge: V تُنطق «ف» · ä في الجمع (der Vorhang) · وng ثم e."
+          },
+          {
+            "audioId": "mb-16",
+            "speakText": "Nein! Oma hat zwanzig Stühle — für die Gäste!",
+            "a": "Nein! Oma hat zwanzig Stühle — für die Gäste!",
+            "why": "zwanzig Stühle: بعد العدد جمعٌ دائماً · Stühle بـü · Gäste بـä (der Gast ← die Gäste)."
+          },
+          {
+            "audioId": "mb-17",
+            "speakText": "Zwanzig Stühle! Und einen Sessel?",
+            "a": "Zwanzig Stühle! Und einen Sessel?",
+            "why": "Zwanzig بـz «تس» و‑ig كـich · Sessel بـss والجمع كالمفرد · einen Sessel: der Sessel مفعولاً."
+          },
+          {
+            "audioId": "mb-20",
+            "speakText": "Ich kaufe Vorhänge, zwei Kissen und ein Sofa!",
+            "a": "Ich kaufe Vorhänge, zwei Kissen und ein Sofa!",
+            "why": "ثلاثة أسماء: Vorhänge (‑e مع ä) · Kissen (بلا نهاية) · ein Sofa (والجمع die Sofas)."
+          },
+          {
+            "audioId": "word-teppich",
+            "speakText": "Teppich.",
+            "a": "Teppich",
+            "why": "der Teppich: pp بعد e القصيرة و‑ich في آخرها · والجمع die Teppiche."
+          },
+          {
+            "audioId": "word-spiegel",
+            "speakText": "Spiegel.",
+            "a": "Spiegel",
+            "why": "der Spiegel: sp في أولها «شب» وie طويلة · والجمع die Spiegel بلا نهاية."
+          },
+          {
+            "audioId": "word-breit",
+            "speakText": "breit.",
+            "a": "breit",
+            "why": "breit: ei «آي» وt في آخرها — صفة: Das Bett ist breit."
+          }
+        ],
+        "interleavedWith": [
+          "wohnung",
+          "lieben",
+          "gast",
+          "oma",
+          "kaufen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Meine Wohnung: Hier sind zwei Stühle. Ich habe keine Vorhänge.",
+        "ar": "تُري زميلك أثاث بيتك (أو صورةً له) وتعدّه بالجمع الصحيح"
+      },
+      "situation": {
+        "de": "Zeigst du heute deine Wohnung? — Ja! Hier ist mein Tisch.",
+        "ar": "في الدورة: يُري كلٌّ منكما أثاثه للآخر ويعدّه: Hier sind zwei Stühle. · Ich habe sechs Kissen. · Ich habe kein Sofa / keine Vorhänge — ويسأل الآخر ويقارن، ثم تتبادلان."
+      },
+      "successCriteria": [
+        "خمس قطع أثاث بأدواتها الصحيحة (der Tisch · das Bett · die Lampe …) وصفة واحدة على الأقل (Das Sofa ist breit.).",
+        "ثلاثة جموع بعد عدد (zwei Stühle · sechs Kissen · zwanzig …) + جملة بـkeine للجمع (Ich habe keine Vorhänge.)."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«عشرون كرسياً»؟",
+            "choices": [
+              "zwanzig Stühle",
+              "zwanzig Stuhl",
+              "zwanzig Stuhle"
+            ],
+            "a": "zwanzig Stühle",
+            "why": "بعد كل عدد فوق الواحد جمعٌ: zwanzig Stühle — لا مفرد كـ«عشرون كرسياً» · والنقطتان فوق u علامة الجمع."
+          },
+          {
+            "q": "«المصابيح» (الجمع مع الأداة)؟",
+            "a": "die Lampen",
+            "why": "die Lampe ← die Lampen (‑n) · وأداة الجمع die دائماً."
+          },
+          {
+            "q": "«المرايا جديدة»؟",
+            "choices": [
+              "Die Spiegel sind neu.",
+              "Der Spiegel sind neu.",
+              "Die Spiegels sind neu."
+            ],
+            "a": "Die Spiegel sind neu.",
+            "why": "Spiegel جمعه كمفرده ⇒ die (لا der) مع sind · ولا ‑s."
+          },
+          {
+            "q": "der Teppich = ؟",
+            "choices": [
+              "السجادة",
+              "الستارة",
+              "الوسادة"
+            ],
+            "a": "السجادة",
+            "why": "der Teppich = السجادة · der Vorhang = الستارة · das Kissen = الوسادة."
+          },
+          {
+            "q": "«ليس عندنا ستائر»؟",
+            "choices": [
+              "Wir haben keine Vorhänge.",
+              "Wir haben keine Vorhange.",
+              "Wir haben kein Vorhänge."
+            ],
+            "a": "Wir haben keine Vorhänge.",
+            "why": "der Vorhang ← die Vorhänge (بالنقطتين) · وkeine للجمع لا kein."
+          },
+          {
+            "q": "«الكرسي ذو الذراعين» بالألمانية مع الأداة؟",
+            "a": "der Sessel",
+            "why": "der Sessel مذكر — وجمعه die Sessel بلا نهاية (‑el)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«مئة سرير»؟",
+            "choices": [
+              "hundert Betten",
+              "hundert Bett",
+              "hundert Bette"
+            ],
+            "a": "hundert Betten",
+            "why": "بعد المئة جمعٌ لا مفرد كـ«مئة سرير» · das Bett ← die Betten (‑en)."
+          },
+          {
+            "q": "«الأرائك» (الجمع مع الأداة)؟",
+            "a": "die Sofas",
+            "why": "das Sofa ← die Sofas: الكلمة الأجنبية المنتهية بحركة ‑s."
+          },
+          {
+            "q": "«الستائر قديمة»؟",
+            "choices": [
+              "Die Vorhänge sind alt.",
+              "Der Vorhänge sind alt.",
+              "Die Vorhange sind alt."
+            ],
+            "a": "Die Vorhänge sind alt.",
+            "why": "أداة الجمع die · وVorhänge بـä في الجمع."
+          },
+          {
+            "q": "das Regal = ؟",
+            "choices": [
+              "الرفّ",
+              "المصباح",
+              "الكرسي"
+            ],
+            "a": "الرفّ",
+            "why": "das Regal = الرفّ (die Regale) · die Lampe = المصباح · der Stuhl = الكرسي."
+          },
+          {
+            "q": "«ليس عندي أريكة»؟",
+            "choices": [
+              "Ich habe kein Sofa.",
+              "Ich habe keine Sofa.",
+              "Ich habe keinen Sofa."
+            ],
+            "a": "Ich habe kein Sofa.",
+            "why": "das Sofa محايد مفرد ⇒ kein · keine للمؤنث والجمع · keinen للمذكر."
+          },
+          {
+            "q": "«الطاولة» بالألمانية مع الأداة؟",
+            "a": "der Tisch",
+            "why": "der Tisch مذكر — وجمعه die Tische (‑e بلا نقطتين)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«عشرون رفّاً»؟",
+            "choices": [
+              "zwanzig Regale",
+              "zwanzig Regal",
+              "zwanzig Regals"
+            ],
+            "a": "zwanzig Regale",
+            "why": "بعد zwanzig جمعٌ · das Regal ← die Regale (‑e) — لا ‑s."
+          },
+          {
+            "q": "«الخزائن» (الجمع مع الأداة)؟",
+            "a": "die Schränke",
+            "why": "der Schrank ← die Schränke: a ← ä ثم ‑e."
+          },
+          {
+            "q": "«الكراسي جديدة»؟",
+            "choices": [
+              "Die Stühle sind neu.",
+              "Der Stühle sind neu.",
+              "Die Stuhle sind neu."
+            ],
+            "a": "Die Stühle sind neu.",
+            "why": "أداة الجمع die · وStühle بـü — النقطتان علامة الجمع."
+          },
+          {
+            "q": "das Kissen = ؟",
+            "choices": [
+              "الوسادة",
+              "السجادة",
+              "المرآة"
+            ],
+            "a": "الوسادة",
+            "why": "das Kissen = الوسادة (die Kissen) · der Teppich = السجادة · der Spiegel = المرآة."
+          },
+          {
+            "q": "«ليس عندنا مصابيح»؟",
+            "choices": [
+              "Wir haben keine Lampen.",
+              "Wir haben kein Lampen.",
+              "Wir haben keinen Lampen."
+            ],
+            "a": "Wir haben keine Lampen.",
+            "why": "keine للجمع: die Lampen ← keine Lampen · لا kein ولا keinen."
+          },
+          {
+            "q": "«السرير» بالألمانية مع الأداة؟",
+            "a": "das Bett",
+            "why": "das Bett محايد — وجمعه die Betten."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "der Stuhl → die Stühle · der Tisch → die Tische · die Lampe → die Lampen · das Sofa → die Sofas · der Sessel → die Sessel · zwei Stühle · zwanzig Stühle · Das Sofa ist breit.",
+      "ar": "احفظ الجمع مع الكلمة كما تحفظ جنسها: der Stuhl, die Stühle. وله خمسة أنماط: نقطتان + ‑e (Stühle · Schränke · Vorhänge) · ‑e (Tische · Teppiche · Regale) · ‑(e)n (Lampen · Betten) · ‑s (Sofas) · بلا نهاية (Sessel · Spiegel · Kissen) — وأداة الجمع die دائماً. وبعد كل عدد فوق الواحد جمعٌ: zwanzig Stühle · hundert Tische. وجنس الأثاث لا يتبع العربية: der Schrank · der Tisch · das Sofa."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~zwanzig Stuhl~~",
+          "ar": "المعدود بعد العشرين مفرد بالعربية — وبالألمانية جمع"
+        },
+        "whyArabicSpeakerFails": "بالعربية يأتي المعدود من ثلاثة إلى عشرة جمعاً («ثلاثة كراسٍ»)، لكنه من أحد عشر إلى تسعة وتسعين مفردٌ منصوب («عشرون كرسياً»)، وبعد المئة والألف مفردٌ مجرور («مئة كرسيّ») — فينقل المتعلم المفرد بعد zwanzig وhundert. والألمانية تجعل المعدود جمعاً بعد كل عدد فوق الواحد: zwei Stühle · zwanzig Stühle · hundert Stühle (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "zwanzig Stühle",
+          "ar": "عشرون كرسياً"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Das Restaurant hat dreißig Tisch.~~",
+          "a": "Das Restaurant hat dreißig Tische."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Stuhle~~",
+          "ar": "ü بلا نقطتين — والنقطتان علامة الجمع"
+        },
+        "whyArabicSpeakerFails": "ü حركة أمامية مدوّرة لا مقابل لها في العربية (لسانٌ كـi وشفتان مضمومتان كـu)، فيسمعها المتعلم u ويكتبها u ويقولها كذلك. لكن النقطتين هنا علامة الجمع نفسها: der Stuhl (واحد) ← die Stühle (كثير)، وكذلك a ← ä: der Schrank ← die Schränke (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Stühle",
+          "ar": "الكراسي"
+        },
+        "exercise": {
+          "q": "صحّح: ~~zwei Schranke~~",
+          "a": "zwei Schränke"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Schrank~~",
+          "ar": "جنس «الخزانة» العربي لا ينتقل"
+        },
+        "whyArabicSpeakerFails": "«الخزانة» و«الطاولة» و«الأريكة» مؤنثة بالعربية، فيضع المتعلم die قبلها. والجنس الألماني لا يتبع العربية ولا يُستنتج من المعنى: der Schrank · der Tisch · das Sofa — يُحفظ مع الكلمة كما يُحفظ جمعها: der Schrank, die Schränke (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Schrank",
+          "ar": "الخزانة"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Die Tisch ist neu.~~",
+          "a": "Der Tisch ist neu."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "tisch",
+      "stuhl",
+      "sofa",
+      "bett",
+      "schrank",
+      "lampe",
+      "teppich",
+      "sessel",
+      "regal",
+      "spiegel",
+      "vorhang",
+      "kissen",
+      "breit"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Stuhl",
+      "https://www.duden.de/rechtschreibung/Schrank",
+      "https://www.duden.de/rechtschreibung/Vorhang",
+      "https://www.duden.de/rechtschreibung/Teppich"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Stuhl",
+      "https://de.wiktionary.org/wiki/Sofa",
+      "https://de.wiktionary.org/wiki/Kissen",
+      "https://de.wiktionary.org/wiki/breit"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-plural-umlaut"
+  ],
+  "audioManifestRefs": [
+    "word-tisch",
+    "word-stuhl",
+    "word-sofa",
+    "word-bett",
+    "word-schrank",
+    "word-lampe",
+    "word-teppich",
+    "word-sessel",
+    "word-regal",
+    "word-spiegel",
+    "word-vorhang",
+    "word-kissen",
+    "word-breit"
+  ],
+  "imageManifestRefs": [
+    "img-koffer"
+  ],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 6 (Wohnen) — Möbel",
+    "goetheWordListOverlap": [
+      "tisch",
+      "stuhl",
+      "sofa",
+      "bett",
+      "schrank",
+      "lampe",
+      "breit"
+    ]
+  }
+}

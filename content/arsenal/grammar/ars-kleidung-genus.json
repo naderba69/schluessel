@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-kleidung-genus",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "der Rock · die Hose · das Hemd · die Schuhe — dieser · diese · dieses — Das Kleid gefällt mir.",
+    "ar": "الملابس: الجنس يُحفظ مع كل قطعة ولا يُنقل من العربية (der Rock · die Hose · das Hemd) — وdies‑ بنهاية الأداة نفسها (dieser · diese · dieses · diese) وdiesen للمنصوب المذكر — والزوج بالجمع (die Schuhe) — وgefallen: الشيء فاعلٌ كـ«يعجبني»"
+  },
+  "payload": {
+    "topicAr": "اليوم تسمّي ملابسك وتشير إليها وتقول ما يعجبك: der Mantel · die Jacke · das Kleid · Dieser Pullover ist schön. · Das Kleid gefällt mir. ومعه كلمات اليوم: die Hose · das Hemd · der Schuh · die Jacke · der Mantel · das Kleid · der Rock · die Socke · der Hut · der Pullover · die Größe · die Farbe — والنواة dieser · gefallen.",
+    "sceneAr": "مهمة الوحدة الثامنة على الشاشة: «التسوّق — الملابس». حقيبة يوسف لرحلته إلى تونس جاهزة: ثلاثة قمصان وبنطالان وجوارب كثيرة — بلا معطف فالجو حار هناك، لكن سترةً للمساء تعجب لينا بلونها الفاتح. وكنزةٌ لأبيه الطويل (مقاس اثنين وخمسين)، وأخته لا تلبس الفساتين ولا التنانير، وجدّته لا تلبس القبعة أبداً — فلها حذاءٌ خفيف من برلين لأنها تمشي كثيراً. ولينا تُريه فستانها لعيد ميلاد جدّتها يوم الأحد فيعجبه لونه — وأحذيته؟ يلبسها في الطريق!",
+    "examples": [
+      {
+        "de": "Der Rock ist kurz, und die Hose ist lang.",
+        "ar": "التنورة قصيرة، والبنطال طويل — der Rock مذكّر وdie Hose مؤنثة: عكس جنسهما بالعربية"
+      },
+      {
+        "de": "Dieser Mantel ist teuer, aber diese Jacke ist billig.",
+        "ar": "هذا المعطف غالٍ، لكن هذه السترة رخيصة — der ← dieser · die ← diese"
+      },
+      {
+        "de": "Dieses Hemd ist zu klein.",
+        "ar": "هذا القميص صغير جداً — das ← dieses"
+      },
+      {
+        "de": "Ich nehme diesen Pullover.",
+        "ar": "آخذ هذه الكنزة — الكنزة مفعول به مذكر: den ← diesen"
+      },
+      {
+        "de": "Diese Schuhe sind sehr leicht.",
+        "ar": "هذا الحذاء خفيف جداً — الزوج بالجمع: diese Schuhe … sind"
+      },
+      {
+        "de": "Das Kleid gefällt mir.",
+        "ar": "يعجبني الفستان — الفستان فاعلٌ كما في «يعجبني الفستان»، وmir = «ـني»"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأول: ما أداة Rock وما أداة Hose؟ وما جنسهما بالعربية؟ (2) في الثاني: dieser مع أي أداة؟ وdiese مع أي أداة؟ وما الحرف الأخير في كلٍّ منهما؟ (3) في الثالث: dieses مع das — أي حرفٍ يشتركان فيه في آخرهما؟ (4) في الرابع: الكنزة مفعول به — هل بقيت dieser؟ وماذا صارت؟ (5) في الخامس: «حذائي» بالعربية مفرد — وبالألمانية؟ وماذا صار الفعل؟ (6) في الأخير: من الفاعل في Das Kleid gefällt mir؟ وما يقابل mir في «يعجبني»؟",
+    "ruleDe": "der Rock · die Hose · das Hemd · die Schuhe — dieser Rock · diese Hose · dieses Hemd · diese Schuhe — Ich nehme diesen Rock. — Das Kleid gefällt mir. · Die Schuhe gefallen mir.",
+    "ruleAr": "تكلّم عن ملابسك بثلاث خطوات: (1) احفظ الجنس مع كل قطعة ولا تنقله من العربية: der Rock (والتنورة مؤنثة بالعربية!) · der Pullover · der Hut · der Mantel · die Hose · die Socke · das Hemd · das Kleid — وقاعدة الوحدة 6 تعينك: ‑e في الآخر مؤنثٌ غالباً (die Hose · die Jacke · die Socke · die Größe · die Farbe). والزوج بالجمع: die Schuhe · die Socken — Meine Schuhe sind neu. (2) dies‑ (هذا/هذه) تأخذ نهاية الأداة نفسها: der ← dieser · die ← diese · das ← dieses · die للجمع ← diese — وفي المنصوب المذكر den ← diesen: Ich nehme diesen Mantel. (3) gefallen = «يُعجِب»: الشيء فاعلٌ والشخص بـmir أو dir — كما بالعربية تماماً: Das Kleid gefällt mir. = «يعجبني الفستان» · Gefällt dir die Jacke? = «هل تعجبك السترة؟» — والفعل يطابق الشيء: Die Schuhe gefallen mir.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «يعجبني الفستان»: الفستان فاعلٌ وأنا مفعول — والألمانية مثلها حرفاً: Das Kleid gefällt mir. (والفرنسية La robe me plaît مثلهما — عون). (2) «هذا» و«هذه» تطابقان جنس الاسم كما تطابق dies‑ الأداة: هذا المعطف ← dieser Mantel · هذه السترة ← diese Jacke. (3) ‑e في آخر الاسم الألماني مؤنثٌ غالباً كتاء التأنيث «ـة»: die Jacke · die Socke · die Farbe. وما يختلف ثلاثة: (1) «حذائي جديد» بالمفرد للزوج — فيقول المتعلم: ~~Mein Schuh ist neu.~~ — وهي صحيحة نحواً بمعنى آخر: «فردة حذائي جديدة»! والزوج بالجمع: Meine Schuhe sind neu. (2) «أحبّ الفستان» والإنجليزية I like the dress تجعلان الشخص فاعلاً — فيقول المتعلم: ~~Ich gefalle das Kleid.~~ — والصواب: Das Kleid gefällt mir. (كـ«يعجبني») أو Ich mag das Kleid. (الوحدة 5). (3) «هذا» العربية لمذكر ومؤنث فقط — ولا محايد فيها، و«الفستان» مذكر — فيقول المتعلم: ~~Dieser Kleid ist schön.~~ — والفستان محايد: Dieses Kleid ist schön. (كـdas Kleid) — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "mir وdir قطعتان اليوم مع gefallen (Gefällt dir die Jacke? · Die Jacke gefällt mir.) — وباب الداتيف في الدرس الرابع من هذه الوحدة، وضمائره كلها في A2.",
+      "أسماء الألوان (أحمر · أزرق …) لاحقاً — اليوم: Die Farbe ist hell. · Mein Zimmer hat eine helle Farbe.",
+      "السعر والسؤال عنه بالأعداد الكبيرة في الدرس القادم — اليوم: Was für eine Größe? · Diese Jacke ist billig.",
+      "tragen = يلبس (Sie trägt immer Hosen.) — وفعل الارتداء نفسه عرفتَه قطعةً في الوحدة 7 · وzu قبل الصفة = «أكثر من اللازم»: zu klein · zu lang."
+    ],
+    "beads": [
+      "Dieses",
+      "Kleid",
+      "gefällt",
+      "mir."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u8-d1"
+  ]
+}

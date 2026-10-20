@@ -1,0 +1,779 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d4",
+  "level": "A1",
+  "unit": 5,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Hier ist kein Glas! — Ich habe keinen Löffel. Die Suppe ist nicht scharf. Nein, danke, ich möchte nichts.",
+    "ar": "تنفي في المطعم: الاسم الذي يأتي بـein أو بلا أداة بـkein (kein Glas · keinen Löffel · keine Gabel)، والصفة والفعل بـnicht (Die Suppe ist nicht scharf. · Ich zahle heute nicht.)، وترفض بلطف بـnichts وتقول «قليلاً» بـwenig."
+  },
+  "canDoDaily": [
+    "ينفي اسماً في المطعم بـkein بنهايته الصحيحة (kein Glas · keine Gabel · keinen Löffel · kein Fleisch) ويرفض بلطف: Nein, danke, ich möchte nichts.",
+    "ينفي صفةً بعد sein وفعلاً بـnicht في موضعها (Die Suppe ist nicht scharf. · Ich zahle heute nicht.) ويقول wenig عكس viel."
+  ],
+  "warmup": {
+    "cardIds": [
+      "glas",
+      "kellner",
+      "viel"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«لا أريد قهوة» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Ich möchte keinen Kaffee.",
+          "Ich möchte kein Kaffee.",
+          "Ich nicht möchte Kaffee."
+        ],
+        "answer": "Ich möchte keinen Kaffee.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "scharf",
+      "salzig",
+      "frisch",
+      "portion",
+      "teller",
+      "loeffel",
+      "gabel",
+      "messer",
+      "gast",
+      "bestellung",
+      "trinkgeld",
+      "getraenk",
+      "nichts",
+      "wenig"
+    ],
+    "grammarArsenalIds": [
+      "ars-kein-nicht"
+    ],
+    "storySentenceIds": [
+      "story-a1-u5-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-o",
+      "ch-ich-laut",
+      "ig-ending",
+      "sp-st-initial",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Ich habe ___ Löffel. (kein)",
+            "a": "keinen",
+            "why": "der Löffel مذكر ومفعول به لـhabe ← keinen، كما einen Löffel تماماً: kein = ein بحرف k."
+          },
+          {
+            "q": "Hier ist ___ Gabel. (kein)",
+            "a": "keine",
+            "why": "die Gabel مؤنثة ← keine (كـeine) — وبعد ist لا مفعول، والمؤنث لا يتغير أصلاً."
+          },
+          {
+            "q": "Wir haben ___ Messer. (kein)",
+            "a": "kein",
+            "why": "das Messer محايد ← kein (كـein) فاعلاً ومفعولاً."
+          },
+          {
+            "q": "Ich esse ___ Fleisch. (kein)",
+            "a": "kein",
+            "why": "Fleisch مادة بلا أداة (Ich esse Fleisch) ← نفيها kein أيضاً، وdas Fleisch محايد ← kein."
+          },
+          {
+            "q": "Lena möchte ___ Eier. (kein)",
+            "a": "keine",
+            "why": "Eier جمع بلا أداة (zwei Eier) ← نفي الجمع keine."
+          },
+          {
+            "q": "Die Portion ist ___ groß. (nicht أم kein؟)",
+            "a": "nicht",
+            "why": "ننفي صفةً (groß) بعد ist ← nicht قبل الصفة، وist باقية — kein للاسم وحده."
+          },
+          {
+            "q": "Das Brot ist ___ frisch. (nicht أم kein؟)",
+            "a": "nicht",
+            "why": "frisch صفة بعد ist ← nicht · كالعربية «ليس طازجاً» لكن ist لا تسقط."
+          },
+          {
+            "q": "Er arbeitet heute ___. (nicht أم kein؟)",
+            "a": "nicht",
+            "why": "ننفي الفعل (arbeitet) ← nicht في آخر الجملة، والفعل ثانياً كالعادة."
+          },
+          {
+            "q": "Wir trinken ___, danke. (لا شيء)",
+            "a": "nichts",
+            "why": "nichts = «لا شيء» كلمة واحدة · وnicht وحدها تنفي الفعل («لا أريد») لا الشيء."
+          },
+          {
+            "q": "Oma isst nur ___. (قليلاً)",
+            "a": "wenig",
+            "why": "wenig = قليل · قليلاً، عكس viel: Oma isst viel ↔ Oma isst wenig."
+          },
+          {
+            "q": "Der ___ bestellt ein Getränk. (الزبون)",
+            "a": "Gast",
+            "why": "der Gast = الزبون · الضيف (والجمع die Gäste) — يُقال للمرأة أيضاً: Lena ist der Gast."
+          },
+          {
+            "q": "Die Suppe ist sehr ___. (مالح)",
+            "a": "salzig",
+            "why": "salzig = مالح (من das Salz) و‑ig في آخرها تُنطق كـich: «زالتسِش»."
+          }
+        ],
+        "interleavedWith": [
+          "fleisch",
+          "ei",
+          "brot",
+          "oma",
+          "arbeiten",
+          "suppe"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "kn-1",
+            "speakText": "Yusuf, heute bin ich der Gast im Restaurant, und du bist der Kellner.",
+            "q": "استمع: ما دور لينا ويوسف في مهمة اليوم؟",
+            "choices": [
+              "لينا الزبونة ويوسف النادل",
+              "يوسف الزبون ولينا النادلة",
+              "لينا المعلمة ويوسف الطالب"
+            ],
+            "a": "لينا الزبونة ويوسف النادل",
+            "why": "der Gast = الزبون (يُقال للمرأة أيضاً) · der Kellner = النادل · im Restaurant = في المطعم."
+          },
+          {
+            "audioId": "kn-2",
+            "speakText": "Gut! Guten Abend! Möchten Sie ein Getränk?",
+            "q": "استمع: ماذا يعرض النادل أولاً؟",
+            "choices": [
+              "مشروباً",
+              "حساءً",
+              "قائمة الطعام"
+            ],
+            "a": "مشروباً",
+            "why": "das Getränk = المشروب · Möchten Sie …? عرضٌ مهذب بصيغة Sie."
+          },
+          {
+            "audioId": "kn-4",
+            "speakText": "Kein Glas? Hier, bitte! Und was möchten Sie essen?",
+            "q": "استمع: بماذا يسأل النادل بعد الكأس؟",
+            "choices": [
+              "ماذا تأكلين؟",
+              "ماذا تشربين؟",
+              "كم تدفعين؟"
+            ],
+            "a": "ماذا تأكلين؟",
+            "why": "Kein Glas? = لا كأس؟ (يكرر مستغرباً) · was möchten Sie essen = ماذا تودّين أن تأكلي — essen في الآخر."
+          },
+          {
+            "audioId": "kn-5",
+            "speakText": "Einen Teller Suppe, bitte. Ist die Suppe scharf?",
+            "q": "استمع: ماذا تطلب لينا، وبماذا تسأل؟",
+            "choices": [
+              "صحن حساء — هل هو حار؟",
+              "صحن حساء — هل هو مالح؟",
+              "صحن سلطة — هل هي حارة؟"
+            ],
+            "a": "صحن حساء — هل هو حار؟",
+            "why": "Teller Suppe = صحن حساء (الوعاء ثم الطعام بلا أداة) · scharf = حارّ."
+          },
+          {
+            "audioId": "kn-7",
+            "speakText": "Gut. Und haben Sie Fisch?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "عن السمك",
+              "عن اللحم",
+              "عن الخبز"
+            ],
+            "a": "عن السمك",
+            "why": "haben Sie Fisch? = هل عندكم سمك؟ — سؤال نعم/لا يبدأ بالفعل."
+          },
+          {
+            "audioId": "kn-8",
+            "speakText": "Heute haben wir keinen Fisch. Aber das Fleisch ist frisch!",
+            "q": "استمع: ماذا يقول النادل عن السمك واللحم؟",
+            "choices": [
+              "لا سمك اليوم، واللحم طازج",
+              "السمك طازج، ولا لحم اليوم",
+              "لا سمك ولا لحم اليوم"
+            ],
+            "a": "لا سمك اليوم، واللحم طازج",
+            "why": "keinen Fisch = لا سمك (der Fisch مفعولاً ← keinen) · frisch = طازج."
+          },
+          {
+            "audioId": "kn-10",
+            "speakText": "Gern. Die Bestellung ist fertig: eine Suppe und ein Wasser!",
+            "q": "استمع: ما الطلب الذي يقدّمه النادل؟",
+            "choices": [
+              "حساء وماء",
+              "حساء وعصير",
+              "لحم وماء"
+            ],
+            "a": "حساء وماء",
+            "why": "die Bestellung = الطلب (ما طلبه الزبون) · fertig = جاهز."
+          },
+          {
+            "audioId": "kn-12",
+            "speakText": "Keinen Löffel? Hier, bitte. Und eine Gabel und ein Messer?",
+            "q": "استمع: ماذا يعرض النادل مع الملعقة؟",
+            "choices": [
+              "شوكة وسكيناً",
+              "كأساً وصحناً",
+              "ملعقة ثانية"
+            ],
+            "a": "شوكة وسكيناً",
+            "why": "eine Gabel = شوكة (die Gabel) · ein Messer = سكين (das Messer)."
+          },
+          {
+            "audioId": "kn-14",
+            "speakText": "Natürlich! Guten Appetit!",
+            "q": "استمع: ماذا يقول النادل قبل الأكل؟",
+            "choices": [
+              "طبعاً! بالهناء!",
+              "شكراً! إلى اللقاء!",
+              "طبعاً! الحساب من فضلك!"
+            ],
+            "a": "طبعاً! بالهناء!",
+            "why": "Natürlich = طبعاً · Guten Appetit! = بالهناء (من الدرس السابق)."
+          },
+          {
+            "audioId": "kn-17",
+            "speakText": "Nein, danke, ich möchte nichts. Ich esse heute nur wenig.",
+            "q": "استمع: لماذا لا تريد لينا شيئاً آخر؟",
+            "choices": [
+              "لأنها تأكل اليوم قليلاً",
+              "لأن الكعكة غالية",
+              "لأنها لا تحب الكعك"
+            ],
+            "a": "لأنها تأكل اليوم قليلاً",
+            "why": "ich möchte nichts = لا أريد شيئاً · nur wenig = قليلاً فقط."
+          },
+          {
+            "audioId": "kn-19",
+            "speakText": "Hier sind zehn Euro. Das Trinkgeld ist für Sie!",
+            "q": "استمع: كم تدفع لينا، ولماذا؟",
+            "choices": [
+              "عشرة يورو — والباقي بقشيش",
+              "تسعة يورو — بلا بقشيش",
+              "عشرة يورو — لأن الحساء غالٍ"
+            ],
+            "a": "عشرة يورو — والباقي بقشيش",
+            "why": "zehn Euro = عشرة يورو والحساب neun (تسعة) · das Trinkgeld = البقشيش · für Sie = لحضرتك."
+          },
+          {
+            "audioId": "kn-20",
+            "speakText": "Danke! Lena, du bist ein super Gast!",
+            "q": "استمع: ماذا يقول يوسف في النهاية؟",
+            "choices": [
+              "أنتِ زبونة رائعة",
+              "أنتِ نادلة رائعة",
+              "الحساء رائع"
+            ],
+            "a": "أنتِ زبونة رائعة",
+            "why": "du bist ein super Gast = أنتِ زبونة رائعة — يعود إلى du بعد انتهاء الدور."
+          }
+        ],
+        "interleavedWith": [
+          "kellner",
+          "restaurant",
+          "suppe",
+          "fisch",
+          "fleisch",
+          "wasser",
+          "essen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "keine",
+              "Wir",
+              "Gabel.",
+              "haben"
+            ],
+            "a": "Wir haben keine Gabel.",
+            "why": "Wir ثم haben ثانياً ثم المنفي keine Gabel — die Gabel مؤنثة ← keine."
+          },
+          {
+            "tokens": [
+              "bestelle",
+              "einen",
+              "Ich",
+              "Suppe.",
+              "Teller"
+            ],
+            "a": "Ich bestelle einen Teller Suppe.",
+            "why": "Ich ثم bestelle ثانياً ثم الوعاء einen Teller (der Teller مفعولاً) ثم Suppe بلا أداة."
+          },
+          {
+            "tokens": [
+              "jetzt",
+              "Wir",
+              "nicht.",
+              "essen"
+            ],
+            "a": "Wir essen jetzt nicht.",
+            "why": "Wir ثم essen ثانياً ثم jetzt ثم nicht في آخر الجملة — ننفي الفعل."
+          },
+          {
+            "tokens": [
+              "nichts.",
+              "möchte",
+              "Oma"
+            ],
+            "a": "Oma möchte nichts.",
+            "why": "Oma ثم möchte ثانياً (مع er/sie بلا ‑t) ثم nichts = لا شيء."
+          },
+          {
+            "tokens": [
+              "wenig.",
+              "isst",
+              "Lena",
+              "nur"
+            ],
+            "a": "Lena isst nur wenig.",
+            "why": "Lena ثم isst ثانياً (essen مع er/sie: e ← i) ثم nur wenig = قليلاً فقط."
+          },
+          {
+            "tokens": [
+              "ist",
+              "Messer",
+              "Das",
+              "scharf.",
+              "nicht"
+            ],
+            "a": "Das Messer ist nicht scharf.",
+            "why": "Das Messer ثم ist ثانياً ثم nicht قبل الصفة scharf (حادّ للسكين) — ist لا تسقط."
+          }
+        ],
+        "interleavedWith": [
+          "oma",
+          "suppe",
+          "bestellen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "kn-3",
+            "speakText": "Ja, ein Wasser, bitte. Aber hier ist kein Glas!",
+            "a": "Ja, ein Wasser, bitte. Aber hier ist kein Glas!",
+            "why": "kein بـei «آي» وk في أولها · Glas بـa طويلة وs في آخرها · Wasser بـss وw تُنطق «ف» مجهورة."
+          },
+          {
+            "audioId": "kn-6",
+            "speakText": "Nein, sie ist nicht scharf.",
+            "a": "Nein, sie ist nicht scharf",
+            "why": "nicht بـch بعد i تُنطق كـich وt في آخرها · scharf بـsch «ش» وf في آخرها · وsie (= die Suppe) بحرف صغير."
+          },
+          {
+            "audioId": "kn-9",
+            "speakText": "Nein, danke, kein Fleisch. Nur die Suppe.",
+            "a": "Nein, danke, kein Fleisch. Nur die Suppe",
+            "why": "kein Fleisch: das Fleisch بلا أداة ← kein · Fleisch بـei وsch · وdanke بحرف صغير بعد الفاصلة."
+          },
+          {
+            "audioId": "kn-11",
+            "speakText": "Danke! Aber ich habe keinen Löffel!",
+            "a": "Danke! Aber ich habe keinen Löffel!",
+            "why": "keinen بـ‑en للمذكر مفعولاً · Löffel بـö (لا o) وff بعد الحركة القصيرة · Aber بحرف كبير أول الجملة."
+          },
+          {
+            "audioId": "kn-13",
+            "speakText": "Nein, keine Gabel und kein Messer. Das ist eine Suppe!",
+            "a": "Nein, keine Gabel und kein Messer. Das ist eine Suppe!",
+            "why": "keine Gabel (die) · kein Messer (das) — النهاية من جنس الاسم · Messer بـss بعد e القصيرة."
+          },
+          {
+            "audioId": "kn-15",
+            "speakText": "Die Portion ist groß, und die Suppe ist sehr salzig.",
+            "a": "Die Portion ist groß, und die Suppe ist sehr salzig",
+            "why": "Portion بـtion تُنطق «تسيون» · salzig بـz «تس» و‑ig في آخرها كـich · groß بـß بعد o الطويلة."
+          },
+          {
+            "audioId": "kn-16",
+            "speakText": "Salzig? Das ist nicht gut! Möchten Sie einen Kuchen?",
+            "a": "Salzig? Das ist nicht gut! Möchten Sie einen Kuchen?",
+            "why": "Salzig بحرف كبير أول السؤال · nicht gut: nicht قبل الصفة · Möchten بـö وch."
+          },
+          {
+            "audioId": "kn-18",
+            "speakText": "Gut. Das sind neun Euro, bitte.",
+            "a": "Gut. Das sind neun Euro, bitte",
+            "why": "neun بـeu «أوي» · Euro بـeu أيضاً · sind بـd في آخرها تُسمع t."
+          },
+          {
+            "audioId": "word-nichts",
+            "speakText": "nichts.",
+            "a": "nichts",
+            "why": "nichts = nicht + s: ch كـich ثم ts — كلمة واحدة معناها «لا شيء»."
+          },
+          {
+            "audioId": "word-wenig",
+            "speakText": "wenig.",
+            "a": "wenig",
+            "why": "wenig: w تُنطق «ف» مجهورة (v) وe طويلة · و‑ig في آخرها تُنطق كـich."
+          }
+        ],
+        "interleavedWith": [
+          "glas",
+          "wasser",
+          "fleisch",
+          "suppe"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Im Restaurant: Hier ist kein Glas! · Die Suppe ist nicht scharf.",
+        "ar": "تلعب مع زميلك دوري الزبون والنادل في مطعم: ينقص الطاولةَ شيء، ويرفض الزبون بلطف"
+      },
+      "situation": {
+        "de": "Im Restaurant: Ich bin der Gast, und du bist der Kellner. Jetzt du!",
+        "ar": "في الدورة: الزبون يطلب بصيغة Sie ويلاحظ ما ينقص (Hier ist kein … · keinen Löffel …)، والنادل يقول ما ليس عنده (Heute haben wir kein …)، والزبون يصف الطعام بالنفي (… ist nicht scharf) ويرفض بلطف (Nein, danke, ich möchte nichts.) ثم تتبادلان الدورين."
+      },
+      "successCriteria": [
+        "ثلاث جمل بـkein بنهايات مختلفة (kein … · keine … · keinen …) لأشياء تنقص أو طعام لا تريده.",
+        "جملة بـnicht لصفة بعد ist وجملة بـnicht لفعل + Nein, danke, ich möchte nichts."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«ليس عندي كأس»؟",
+            "choices": [
+              "Ich habe kein Glas.",
+              "Ich habe keinen Glas.",
+              "Ich habe keine Glas."
+            ],
+            "a": "Ich habe kein Glas.",
+            "why": "das Glas محايد ← kein (كـein) · keinen للمذكر مفعولاً وحده · keine للمؤنث والجمع (die Gläser)."
+          },
+          {
+            "q": "«الشاي ليس ساخناً»؟",
+            "choices": [
+              "Der Tee ist nicht heiß.",
+              "Der Tee nicht heiß.",
+              "Der Tee ist kein heiß."
+            ],
+            "a": "Der Tee ist nicht heiß.",
+            "why": "heiß صفة ← nicht، وist لا تسقط (لا تقل «ليس» وحدها) · kein للاسم لا للصفة."
+          },
+          {
+            "q": "«السكين» بالألمانية مع الأداة؟",
+            "a": "das Messer",
+            "why": "das Messer محايد وجمعه die Messer كالمفرد · وscharf له: حادّ."
+          },
+          {
+            "q": "«لا أريد شيئاً» (رفضاً مهذباً)؟",
+            "choices": [
+              "Ich möchte nichts.",
+              "Ich nichts möchte.",
+              "Ich möchtest nichts."
+            ],
+            "a": "Ich möchte nichts.",
+            "why": "nichts = لا شيء كلمة واحدة بعد الفعل، والفعل ثانياً · وmöchte مع ich (möchtest لـdu)."
+          },
+          {
+            "q": "das Trinkgeld = ؟",
+            "choices": [
+              "البقشيش",
+              "الحساب",
+              "المشروب"
+            ],
+            "a": "البقشيش",
+            "why": "das Trinkgeld = البقشيش · die Rechnung = الحساب · das Getränk = المشروب."
+          },
+          {
+            "q": "«يوسف لا يدفع اليوم»؟",
+            "choices": [
+              "Yusuf zahlt heute nicht.",
+              "Yusuf nicht zahlt heute.",
+              "Yusuf zahlt heute kein."
+            ],
+            "a": "Yusuf zahlt heute nicht.",
+            "why": "الفعل zahlt ثانياً كالعادة وnicht في آخر الجملة — لا قبل الفعل كـ«لا يدفع» · وkein للاسم وحده."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«ليس عندي سكين»؟",
+            "choices": [
+              "Ich habe kein Messer.",
+              "Ich habe keinen Messer.",
+              "Ich nicht habe Messer."
+            ],
+            "a": "Ich habe kein Messer.",
+            "why": "das Messer محايد ← kein · keinen للمذكر وحده · والفعل ثانياً، والنفي على الاسم لا قبل الفعل."
+          },
+          {
+            "q": "«الصحن ليس كبيراً»؟",
+            "choices": [
+              "Der Teller ist nicht groß.",
+              "Der Teller nicht groß.",
+              "Der Teller ist keinen groß."
+            ],
+            "a": "Der Teller ist nicht groß.",
+            "why": "groß صفة ← nicht قبلها وist باقية · keinen للاسم المذكر مفعولاً لا للصفة."
+          },
+          {
+            "q": "«الصحن» بالألمانية مع الأداة؟",
+            "a": "der Teller",
+            "why": "der Teller مذكر وجمعه die Teller كالمفرد — ومعه الطعام بلا أداة: ein Teller Suppe."
+          },
+          {
+            "q": "«يوسف لا يأكل شيئاً»؟",
+            "choices": [
+              "Yusuf isst nichts.",
+              "Yusuf nichts isst.",
+              "Yusuf esst nichts."
+            ],
+            "a": "Yusuf isst nichts.",
+            "why": "nichts = لا شيء بعد الفعل (isst ثانياً) · وessen مع er: isst (e ← i) — esst لـihr."
+          },
+          {
+            "q": "die Gabel = ؟",
+            "choices": [
+              "الشوكة",
+              "الملعقة",
+              "السكين"
+            ],
+            "a": "الشوكة",
+            "why": "die Gabel = الشوكة · der Löffel = الملعقة · das Messer = السكين."
+          },
+          {
+            "q": "«لينا لا تأكل اليوم»؟",
+            "choices": [
+              "Lena isst heute nicht.",
+              "Lena nicht isst heute.",
+              "Lena isst heute kein."
+            ],
+            "a": "Lena isst heute nicht.",
+            "why": "isst ثانياً وnicht في الآخر — ننفي الفعل لا الاسم."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«ليس عندنا خبز»؟",
+            "choices": [
+              "Wir haben kein Brot.",
+              "Wir haben keinen Brot.",
+              "Wir nicht haben Brot."
+            ],
+            "a": "Wir haben kein Brot.",
+            "why": "das Brot محايد ← kein · keinen للمذكر · والفعل ثانياً لا بعد nicht."
+          },
+          {
+            "q": "«اللحم ليس طازجاً»؟",
+            "choices": [
+              "Das Fleisch ist nicht frisch.",
+              "Das Fleisch nicht frisch.",
+              "Das Fleisch ist kein frisch."
+            ],
+            "a": "Das Fleisch ist nicht frisch.",
+            "why": "frisch صفة ← ist nicht frisch · ist لا تسقط كما تسقط في «اللحم ليس طازجاً»."
+          },
+          {
+            "q": "«الملعقة» بالألمانية مع الأداة؟",
+            "a": "der Löffel",
+            "why": "der Löffel مذكر وجمعه die Löffel كالمفرد · بـö (لا o) وff."
+          },
+          {
+            "q": "«نشرب ماءً قليلاً»؟",
+            "choices": [
+              "Wir trinken wenig Wasser.",
+              "Wir trinken keinen Wasser.",
+              "Wir wenig trinken Wasser."
+            ],
+            "a": "Wir trinken wenig Wasser.",
+            "why": "wenig + اسم بلا حرف: wenig Wasser (كـviel Wasser) · keinen للمذكر وحده (das Wasser ← kein) وهي «لا» لا «قليل» · والفعل ثانياً."
+          },
+          {
+            "q": "die Bestellung = ؟",
+            "choices": [
+              "الطلب (في المطعم)",
+              "الحساب",
+              "الحصة"
+            ],
+            "a": "الطلب (في المطعم)",
+            "why": "die Bestellung = الطلب، من bestellen (الدرس الثاني) · die Portion = الحصة."
+          },
+          {
+            "q": "«لا أدفع الآن»؟",
+            "choices": [
+              "Ich zahle jetzt nicht.",
+              "Ich nicht zahle jetzt.",
+              "Ich zahle jetzt kein."
+            ],
+            "a": "Ich zahle jetzt nicht.",
+            "why": "zahle ثانياً وnicht في الآخر — «لا» العربية قبل الفعل، وnicht الألمانية بعده."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Hier ist kein Glas! · Ich habe keinen Löffel. · Keine Gabel und kein Messer. · Die Suppe ist nicht scharf. · Ich zahle heute nicht. · Nein, danke, ich möchte nichts. · Ich esse nur wenig.",
+      "ar": "انفِ بسؤال واحد: اسمٌ كان سيأتي بـein أو بلا أداة؟ ⇒ kein، وهي ein بحرف k وتتصرّف مثلها: kein Glas (das) · keine Gabel (die) · keinen Löffel (der مفعولاً) · kein Fleisch · keine Eier. وغير ذلك ⇒ nicht: قبل الصفة بعد ist وist باقية (Die Suppe ist nicht scharf.)، وفي آخر الجملة لنفي الفعل والفعل ثانياً (Ich zahle heute nicht.). وnichts = لا شيء (Nein, danke, ich möchte nichts.) · wenig = قليل عكس viel."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich habe nicht Gabel.~~",
+          "ar": "النفي على «عندي» والاسم كما هو — والألمانية تنفي الاسم"
+        },
+        "whyArabicSpeakerFails": "بالعربية «ليس عندي شوكة» — وفي تونس «ما عنديش …»: النفي يقع على «عند» (التملّك)، والاسم نكرة بلا أداة كما هو. فيترجم المتعلم كلمةً كلمة: nicht للنفي وGabel كما هي. والألمانية تنفي الاسم نفسه بـkein، وهي ein بحرف k وتتصرّف مثلها: eine Gabel ← keine Gabel · einen Löffel ← keinen Löffel · ein Glas ← kein Glas (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe keine Gabel.",
+          "ar": "ليس عندي شوكة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Lena hat nicht Tasse.~~",
+          "a": "Lena hat keine Tasse."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Die Suppe nicht scharf.~~",
+          "ar": "«ليس» تحمل الربط فتسقط ist"
+        },
+        "whyArabicSpeakerFails": "بالعربية «الحساءُ ليس حارّاً»: «ليس» فعلٌ ناقص يحمل النفي والربط معاً، وفي تونس «الشربة موش حارّة» بلا فعل أصلاً — فيترجم المتعلم «ليس» إلى nicht ويُسقط ist. والألمانية تُبقي ist في المكان الثاني وتضع nicht بعدها قبل الصفة: Die Suppe ist nicht scharf. — كما تعلمت أن الجملة الألمانية لا تقوم بلا فعل (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Die Suppe ist nicht scharf.",
+          "ar": "الحساء ليس حاراً."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Der Fisch nicht frisch.~~",
+          "a": "Der Fisch ist nicht frisch."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich nicht zahle heute.~~",
+          "ar": "«لا» قبل الفعل — وnicht بعده"
+        },
+        "whyArabicSpeakerFails": "بالعربية «لا أدفعُ اليوم»: «لا» تسبق الفعل مباشرة — فيضع المتعلم nicht قبل الفعل. والألمانية تُبقي الفعل في المكان الثاني كالعادة، وتضع nicht لنفي الفعل في آخر الجملة البسيطة: Ich zahle heute nicht. · Wir bestellen jetzt nicht. (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich zahle heute nicht.",
+          "ar": "لا أدفع اليوم."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wir nicht bestellen jetzt.~~",
+          "a": "Wir bestellen jetzt nicht."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "scharf",
+      "salzig",
+      "frisch",
+      "portion",
+      "teller",
+      "loeffel",
+      "gabel",
+      "messer",
+      "gast",
+      "bestellung",
+      "trinkgeld",
+      "getraenk",
+      "nichts",
+      "wenig"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Trinkgeld",
+      "https://www.duden.de/rechtschreibung/Loeffel",
+      "https://www.duden.de/rechtschreibung/Bestellung",
+      "https://www.duden.de/rechtschreibung/salzig"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/kein",
+      "https://de.wiktionary.org/wiki/nicht",
+      "https://de.wiktionary.org/wiki/nichts",
+      "https://de.wiktionary.org/wiki/wenig"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-kein-nicht"
+  ],
+  "audioManifestRefs": [
+    "word-scharf",
+    "word-salzig",
+    "word-frisch",
+    "word-portion",
+    "word-teller",
+    "word-loeffel",
+    "word-gabel",
+    "word-messer",
+    "word-gast",
+    "word-bestellung",
+    "word-trinkgeld",
+    "word-getraenk",
+    "word-nichts",
+    "word-wenig"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Verneinung im Restaurant",
+    "goetheWordListOverlap": [
+      "scharf",
+      "frisch",
+      "portion",
+      "teller",
+      "loeffel",
+      "gabel",
+      "messer",
+      "gast",
+      "getraenk",
+      "nichts",
+      "wenig"
+    ]
+  }
+}

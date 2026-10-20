@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-possessiv",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "mein Hund · meine Katze · mein Auto — Ist das dein Hund?",
+    "ar": "الملكية mein/dein/sein: الكلمة قبل الاسم مكان der/die/das — ونهايتها ‑e من المملوك لا من المالك"
+  },
+  "payload": {
+    "topicAr": "كلمات الملكية mein (لي) · dein (لك) · sein (له): تقف قبل الاسم مكان der/die/das، ونختار شكلها بسؤالين — مَن المالك؟ (mein · dein · sein) وما أداة المملوك؟ (der وdas ← بلا نهاية · die للمؤنث والجمع ← ‑e) — ثم السؤال عن الملكية Ist das dein …? وجوابه، و«هذا لي» بمعنى الملكية: Das gehört mir.",
+    "sceneAr": "قبل الدرس عبر الإنترنت: مكالمة فيديو بين يوسف في برلين ولينا في بيتها في سويسرا. تقفز قطة أمام الكاميرا — قطة لينا واسمها Mia، وتحب حقيبة لينا. وفي الغرفة خلفها ضيفان اليوم: عمّها أو خالها (الألمانية تقول Onkel للاثنين) وعمّتها أو خالتها (Tante)، ومعهما كلب العم Bruno، وسيارة العم الجديدة أمام النافذة. يسأل يوسف: لمن هذا؟ وتسأله لينا عن عائلته — عائلته في تونس.",
+    "examples": [
+      {
+        "de": "Das ist mein Hund.",
+        "ar": "هذا كلبي. (der Hund)"
+      },
+      {
+        "de": "Das ist meine Katze.",
+        "ar": "هذه قطتي. (die Katze)"
+      },
+      {
+        "de": "Dein Auto ist neu!",
+        "ar": "سيارتك جديدة! (das Auto)"
+      },
+      {
+        "de": "Sind das deine Eltern? — Nein, das sind mein Onkel und meine Tante.",
+        "ar": "هل هذان والداكِ؟ — لا، هذان عمّي وعمّتي (أو خالي وخالتي). (die Eltern جمع · der Onkel · die Tante)"
+      },
+      {
+        "de": "Mein Onkel ist hier. Das ist sein Hund.",
+        "ar": "عمّي هنا. هذا كلبه."
+      },
+      {
+        "de": "Wie ist Ihr Name? · Wie ist Ihre Telefonnummer?",
+        "ar": "ما اسم حضرتك؟ · ما رقم هاتف حضرتك؟ (من الوحدة الأولى: der Name · die Telefonnummer)"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأمثلة 1–3 متى جاءت mein أو dein بلا نهاية، ومتى جاءت meine بـ‑e؟ انظر إلى أداة الاسم بين القوسين: der · die · das. (2) في المثال 4: Eltern جمع — أي شكل جاء معها؟ وما الشكل مع Onkel ومع Tante؟ (3) لينا تقول mein Onkel، ويوسف يقول meine Familie: هل تتبع ‑e جنسَ المتكلم أم أداةَ الاسم؟ (4) في المثال 5: لمن الكلب؟ ولماذا sein لا mein؟ (5) تعرف من الوحدة الأولى Ihr Name وIhre Telefonnummer: هل ترى القاعدة نفسها؟ (6) قل بالعربية «كلبي» و«قطتي»: هل تغيّرت الياء؟ وهل في «كلبي» أداة تعريف؟",
+    "ruleDe": "der Hund → mein Hund · die Katze → meine Katze · das Auto → mein Auto · die Eltern → meine Eltern · ich → mein · du → dein · er → sein · Ist das dein Hund? — Nein, das ist sein Hund. · Das gehört mir.",
+    "ruleAr": "كلمة الملكية تقف قبل الاسم وتأخذ مكان der/die/das: der Hund ← mein Hund (لا der mein Hund). نختارها بسؤالين: (1) مَن المالك؟ أنا ← mein · أنتَ أو أنتِ ← dein · هو ← sein (وحضرتك ← Ihr كما في Ihr Name). (2) ما أداة المملوك؟ der أو das ← بلا نهاية: mein Hund · mein Auto · sein Hund. die ← ‑e: meine Katze · deine Tasche · seine Tasche — وdie هنا للمؤنث وللجمع معاً: meine Eltern. وهذا ما تعرفه من ein/eine: ein Hund ← mein Hund · eine Katze ← meine Katze · ein Auto ← mein Auto — والجمع الذي لا ein له يأخذ meine. السؤال عن الملكية: Ist das dein Hund? والجواب: Ja, das ist mein Hund. / Nein, das ist nicht mein Hund. — Das ist sein Hund. ولـ«هذا لي» و«هل هذا لك؟» بمعنى الملكية قطعتان بالفعل gehören: Das gehört mir. · Gehört das dir?",
+    "contrastAr": "العربية تلصق الملكية بآخر الاسم («كلبي» · «قطتي» · «عائلتي») ولا تغيّرها مع المملوك: الياء نفسها للمذكر والمؤنث — فيُبقي المتعلم mein كما هي: ~~mein Katze~~ · ~~mein Familie~~. والألمانية تضع الكلمة قبل الاسم وتضيف ‑e إذا كان المملوك die: meine Katze · meine Familie. والعربية تعلّم جنس المخاطَب في الضمير نفسه («كلبكَ» ليوسف و«كلبكِ» للينا)، فقد يظن المتعلم أن ‑e علامة المخاطَبة الأنثى: ~~Lena, ist das deine Hund?~~ — وdein لا تنظر إلى جنس من تخاطبه أبداً: dein Hund ليوسف وللينا، والنهاية من المملوك وحده. وفي الغائب تفرّق العربية «كلبه/كلبها» والألمانية كذلك: sein للمالك المذكر، وللمالكة كلمة أخرى نتعلمها لاحقاً. وفي أمر واحد العربية في صفّك: «كلبي» بلا «ال»، والألمانية كذلك: mein Hund بلا der — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "sein للمالك المذكر وحده: Onkel ← sein Hund. وللمالكة المؤنثة كلمة أخرى (كلبها = ihr Hund) — تعرف شكلها من Ihr Name (حضرتك)، ونتدرب عليها في درس لاحق؛ فلا تقل sein عن شيء تملكه لينا.",
+      "بعد فعل كـlieben يتغيّر mein مع المذكر وحده: Ich buchstabiere meinen Namen (تعرفها من درس التهجئة) — وهذه قاعدة الدرس التالي. ومع المؤنث والمحايد والجمع لا يتغير شيء: Ich liebe meine Familie · mein Auto · meine Eltern.",
+      "gehören: نحفظ اليوم قطعتين — Das gehört mir. · Gehört das dir? — والاسم بعد gehören («السيارة لعمّي») قاعدة الوحدة الثامنة. وlieben تأخذ اسماً (Ich liebe Katzen)، أما «أحب القراءة» فبالفعل + gern: Ich lese gern.",
+      "Onkel = العم أو الخال، وTante = العمة أو الخالة: الألمانية لا تفرّق بين جهة الأب وجهة الأم، والسياق يوضح."
+    ],
+    "beads": [
+      "Nein,",
+      "das",
+      "ist",
+      "nicht",
+      "meine",
+      "Katze."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u4-d2",
+    "a1-u4-d6",
+    "a1-u15-d2"
+  ]
+}

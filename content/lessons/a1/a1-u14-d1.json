@@ -1,0 +1,733 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "a1-u14-d1",
+ "level": "A1",
+ "unit": 14,
+ "day": 1,
+ "kind": "content",
+ "ziel": {
+  "de": "Du bist beim Chef: ein Formular für das Praktikum! Du verstehst: Familienstand · ledig · geboren in Tunis · Geburtsjahr und Geburtsort · männlich · Ausweis gültig · Papiere · Ausländer und ausländisch · Unterschrift — und du füllst es aus!",
+  "ar": "أوراق التدريب (تكملة SD1 للفهم — بلا تاريخ): تفهم الاستمارة الألمانية: الحالة العائلية (أعزب) · مولود في تونس · سنة ومكان الولادة · ذَكَر/أنثى · بطاقة الهوية السارية · الأوراق · أجنبي · التوقيع — ولا يُطلب منك إنتاج هذه الكلمات."
+ },
+ "canDoDaily": [
+  "يفهم استمارة ألمانية (Formular · Familienstand · Geburtsjahr · Unterschrift) ويعرف ما يُكتب في كل حقل.",
+  "يميز الذكر من الأنثى والأجنبي: männlich/weiblich · Ausländer/ausländisch."
+ ],
+ "warmup": {
+  "cardIds": [
+   "name",
+   "schreiben",
+   "papier"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "de": "«ein Formular ausfüllen» — ماذا يعني؟ (تخمين فقط)"
+    },
+    "choices": [
+     "ملء استمارة",
+     "قراءة كتاب",
+     "كتابة رسالة"
+    ],
+    "answer": "ملء استمارة",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "de": "«der Ausländer» — ماذا تعني؟ (تخمين فقط)"
+    },
+    "choices": [
+     "الأجنبي",
+     "المواطن",
+     "الموظف"
+    ],
+    "answer": "الأجنبي",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "ما كلمات الورق؟ (Papier · Formular · Papiere · Ausweis)",
+   "ما كلمات الناس؟ (Ausländer · ausländisch · männlich · weiblich)"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "formular",
+   "ausfuellen",
+   "familienstand",
+   "ledig",
+   "geboren",
+   "geburtsjahr",
+   "geburtsort",
+   "maennlich",
+   "weiblich",
+   "unterschrift",
+   "unterschreiben",
+   "ausweis",
+   "papiere",
+   "gueltig",
+   "auslaender",
+   "auslaendisch"
+  ],
+  "grammarArsenalIds": [
+   "ars-perfekt"
+  ],
+  "storySentenceIds": [
+   "story-a1-u14-s1"
+  ],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "auslaut-b",
+   "auslaut-d",
+   "ch-ich-laut",
+   "double-consonant",
+   "ig-ending",
+   "r-uvular",
+   "umlaut-a",
+   "umlaut-u",
+   "vowel-long-short",
+   "w-v"
+  ]
+ },
+ "uebung": {
+  "stations": [
+   {
+    "type": "reading",
+    "items": [
+     {
+      "text": "Formular für Yusuf Haddad: Name, Geburtsort, Unterschrift. Bitte ausfüllen!",
+      "q": "Was muss Yusuf machen?",
+      "choices": [
+       "ausfüllen",
+       "kochen",
+       "schlafen"
+      ],
+      "a": "ausfüllen",
+      "why": "Bitte ausfüllen — يجب ملء الاستمارة (ausfüllen منفصل: fülle … aus)."
+     },
+     {
+      "text": "Familienstand: ledig. Geboren in Tunis.",
+      "q": "Wo ist Yusuf geboren?",
+      "choices": [
+       "in Tunis",
+       "in Berlin",
+       "zu Hause"
+      ],
+      "a": "in Tunis",
+      "why": "Geboren in Tunis — مولود في تونس (geboren مع sein: ist geboren)."
+     },
+     {
+      "text": "Der Ausweis ist gültig. Die Papiere sind neu.",
+      "q": "Was ist gültig?",
+      "choices": [
+       "der Ausweis",
+       "der Kuchen",
+       "der Film"
+      ],
+      "a": "der Ausweis",
+      "why": "Der Ausweis ist gültig — بطاقة الهوية سارية (gültig)."
+     },
+     {
+      "text": "Männlich oder weiblich? Yusuf ist männlich.",
+      "q": "Was ist Yusuf?",
+      "choices": [
+       "männlich",
+       "weiblich",
+       "ledig"
+      ],
+      "a": "männlich",
+      "why": "Yusuf ist männlich — يوسف ذَكَر (männlich ≠ weiblich)."
+     },
+     {
+      "text": "Der Ausländer kommt aus Tunis. Ayşe ist ausländisch.",
+      "q": "Wer ist ausländisch?",
+      "choices": [
+       "Ayşe",
+       "der Chef",
+       "der Lehrer"
+      ],
+      "a": "Ayşe",
+      "why": "Ayşe ist ausländisch — عائشة أجنبية (صفة)؛ Yusuf Ausländer (اسم)."
+     },
+     {
+      "text": "Unterschrift hier: Yusuf unterschreibt das Formular.",
+      "q": "Was macht Yusuf?",
+      "choices": [
+       "unterschreibt",
+       "kocht",
+       "spielt"
+      ],
+      "a": "unterschreibt",
+      "why": "unterschreibt das Formular — يوقّع الاستمارة (unterschreiben شاذ: unterschreibt)."
+     },
+     {
+      "text": "Geburtsjahr und Geburtsort stehen im Formular.",
+      "q": "Wo stehen Geburtsjahr und Geburtsort?",
+      "choices": [
+       "im Formular",
+       "im Kino",
+       "im Park"
+      ],
+      "a": "im Formular",
+      "why": "stehen im Formular — سنة ومكان الولادة مكتوبان في الاستمارة."
+     }
+    ],
+    "interleavedWith": [
+     "name",
+     "neu",
+     "kommen",
+     "stehen",
+     "hier",
+     "bitte"
+    ]
+   },
+   {
+    "type": "listening",
+    "items": [
+     {
+      "audioId": "ec-1",
+      "speakText": "Lena, Hilfe! Der Chef gibt mir ein Formular!",
+      "q": "ماذا أعطى المدير ليوسف؟",
+      "choices": [
+       "استمارة",
+       "نقوداً",
+       "مفاتيح"
+      ],
+      "a": "استمارة",
+      "why": "Der Chef gibt mir ein Formular — المدير يعطيه استمارة."
+     },
+     {
+      "audioId": "ec-3",
+      "speakText": "Ja! Ich muss es ausfüllen. Was heißt Familienstand?",
+      "q": "ماذا يجب على يوسف أن يفعل؟",
+      "choices": [
+       "أن يملأ الاستمارة",
+       "أن يطبخ الغداء",
+       "أن ينام مبكراً"
+      ],
+      "a": "أن يملأ الاستمارة",
+      "why": "Ich muss es ausfüllen — يجب أن يملأها (ausfüllen منفصل)."
+     },
+     {
+      "audioId": "ec-5",
+      "speakText": "Gut: ledig. Und geboren? Ich bin in Tunis geboren.",
+      "q": "أين وُلد يوسف؟",
+      "choices": [
+       "في تونس",
+       "في برلين",
+       "في سويسرا"
+      ],
+      "a": "في تونس",
+      "why": "Ich bin in Tunis geboren — مولود في تونس (geboren + sein)."
+     },
+     {
+      "audioId": "ec-7",
+      "speakText": "Mein Geburtsjahr und mein Geburtsort. Wo steht das? Im Ausweis?",
+      "q": "أين يجد يوسف سنة ومكان ولادته؟",
+      "choices": [
+       "في بطاقة الهوية",
+       "في المطبخ",
+       "في الحديقة"
+      ],
+      "a": "في بطاقة الهوية",
+      "why": "Im Ausweis — في بطاقة الهوية (Ausweis)."
+     },
+     {
+      "audioId": "ec-9",
+      "speakText": "Ja, er ist gültig. Hier sind meine Papiere.",
+      "q": "هل بطاقة يوسف سارية؟",
+      "choices": [
+       "نعم، سارية",
+       "لا، منتهية",
+       "لا يملك بطاقة"
+      ],
+      "a": "نعم، سارية",
+      "why": "er ist gültig — سارية (gültig)."
+     },
+     {
+      "audioId": "ec-11",
+      "speakText": "Ja, männlich. Und was heißt Ausländer?",
+      "q": "ماذا يسأل يوسف؟",
+      "choices": [
+       "عن معنى أجنبي",
+       "عن الطريق",
+       "عن الوقت"
+      ],
+      "a": "عن معنى أجنبي",
+      "why": "was heißt Ausländer — ماذا تعني «أجنبي»."
+     },
+     {
+      "audioId": "ec-15",
+      "speakText": "Verstehe! Und jetzt: die Unterschrift.",
+      "q": "ماذا بقي على يوسف؟",
+      "choices": [
+       "التوقيع",
+       "التصوير",
+       "الدفع"
+      ],
+      "a": "التوقيع",
+      "why": "die Unterschrift — التوقيع."
+     }
+    ],
+    "interleavedWith": [
+     "chef",
+     "heissen",
+     "stehen",
+     "verstehen",
+     "jetzt",
+     "hilfe"
+    ]
+   },
+   {
+    "type": "match",
+    "items": [
+     {
+      "pairs": [
+       {
+        "de": "das Formular",
+        "ar": "الاستمارة"
+       },
+       {
+        "de": "der Familienstand",
+        "ar": "الحالة العائلية"
+       },
+       {
+        "de": "das Geburtsjahr",
+        "ar": "سنة الولادة"
+       },
+       {
+        "de": "der Geburtsort",
+        "ar": "مكان الولادة"
+       },
+       {
+        "de": "die Unterschrift",
+        "ar": "التوقيع"
+       },
+       {
+        "de": "der Ausweis",
+        "ar": "بطاقة الهوية"
+       }
+      ],
+      "why": "حقول الاستمارة: Formular استمارة · Familienstand حالة عائلية · Geburtsjahr سنة الولادة · Geburtsort مكان الولادة · Unterschrift توقيع · Ausweis بطاقة هوية."
+     },
+     {
+      "pairs": [
+       {
+        "de": "ledig",
+        "ar": "أعزب"
+       },
+       {
+        "de": "geboren",
+        "ar": "مولود"
+       },
+       {
+        "de": "männlich",
+        "ar": "ذَكَر"
+       },
+       {
+        "de": "weiblich",
+        "ar": "أنثى"
+       },
+       {
+        "de": "gültig",
+        "ar": "ساري المفعول"
+       }
+      ],
+      "why": "الأوصاف: ledig أعزب · geboren مولود (مع sein!) · männlich ذَكَر · weiblich أنثى · gültig سارٍ."
+     },
+     {
+      "pairs": [
+       {
+        "de": "ausfüllen",
+        "ar": "يملأ"
+       },
+       {
+        "de": "unterschreiben",
+        "ar": "يوقّع"
+       },
+       {
+        "de": "die Papiere",
+        "ar": "أوراق رسمية"
+       },
+       {
+        "de": "der Ausländer",
+        "ar": "أجنبي"
+       },
+       {
+        "de": "ausländisch",
+        "ar": "أجنبي (صفة)"
+       }
+      ],
+      "why": "الأفعال والناس: ausfüllen يملأ (منفصل) · unterschreiben يوقّع · Papiere أوراق (جمع دائماً) · Ausländer أجنبي (اسم) ≠ ausländisch (صفة)."
+     }
+    ]
+   },
+   {
+    "type": "dictation",
+    "items": [
+     {
+      "audioId": "ec-4",
+      "speakText": "Das heißt: ledig! Du bist ledig, Yusuf.",
+      "a": "Das heißt: ledig! Du bist ledig, Yusuf.",
+      "why": "ledig بـg تُنطق كـch في الآخر (ig-ending) · Du كبيرة."
+     },
+     {
+      "audioId": "ec-10",
+      "speakText": "Männlich oder weiblich? Du bist männlich!",
+      "a": "Männlich oder weiblich? Du bist männlich!",
+      "why": "männlich بـä وll مزدوجة · weiblich بـw تُنطق v."
+     },
+     {
+      "audioId": "ec-16",
+      "speakText": "Ja — unterschreib hier, bitte!",
+      "a": "Ja — unterschreib hier, bitte!",
+      "why": "unterschreib أمر بلا st · hier بـie · bitte بـtt."
+     },
+     {
+      "audioId": "ec-20",
+      "speakText": "Gern! Viel Glück im Praktikum!",
+      "a": "Gern! Viel Glück im Praktikum!",
+      "why": "Viel بـV تُنطق ف · Glück بـü وck · Praktikum بـk."
+     }
+    ],
+    "interleavedWith": [
+     "heissen",
+     "hier",
+     "bitte",
+     "glueck",
+     "praktikum",
+     "gern"
+    ]
+   }
+  ],
+  "communicativeTask": {
+   "goal": {
+    "de": "Füll das Formular für Yusuf aus: Name Yusuf Haddad · Familienstand ledig · geboren in Tunis · Geburtsort Tunis · männlich · Ausweis gültig. Dann unterschreib: Yusuf Haddad!",
+    "ar": "املأ استمارة يوسف: الاسم والحالة العائلية ومكان الولادة والجنس وصلاحية البطاقة — ثم وقّع باسمه."
+   },
+   "situation": {
+    "de": "Du bist Yusuf. Der Chef wartet. Füll das Formular schnell aus und gib es dem Chef!",
+    "ar": "أنت يوسف والمدير ينتظر: املأ الاستمارة بسرعة وسلّمها للمدير."
+   },
+   "successCriteria": [
+    "يملأ حقول الاستمارة الستة من الدرس (Familienstand · geboren · Geburtsort · männlich · gültig · Unterschrift)",
+    "يفرّق بين Ausländer (اسم) وausländisch (صفة)",
+    "يستعمل geboren مع sein (ich bin geboren)"
+   ]
+  }
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«Füll das Formular aus!» — Was soll er machen?",
+      "choices": [
+       "يملأ الاستمارة",
+       "يمزّق الاستمارة",
+       "يخفي الاستمارة"
+      ],
+      "a": "يملأ الاستمارة",
+      "why": "Füll … aus = املأ (ausfüllen منفصل — الأمر: Füll aus!)."
+     },
+     {
+      "q": "«Yusuf ist ledig.» — Hat Yusuf eine Frau?",
+      "choices": [
+       "لا، هو أعزب",
+       "نعم، هو متزوج",
+       "نعم، عنده ولد"
+      ],
+      "a": "لا، هو أعزب",
+      "why": "ledig = أعزب — لا زوجة له."
+     },
+     {
+      "q": "«Wo bist du geboren?» — Was fragt sie?",
+      "choices": [
+       "أين وُلدت",
+       "كم عمرك",
+       "ما اسمك"
+      ],
+      "a": "أين وُلدت",
+      "why": "Wo bist du geboren = أين وُلدت (geboren + sein)."
+     },
+     {
+      "q": "«Bist du männlich oder weiblich?» — Was fragt sie?",
+      "choices": [
+       "هل أنت ذكر أم أنثى",
+       "هل أنت جائع أم عطشان",
+       "هل أنت متعب أم نشيط"
+      ],
+      "a": "هل أنت ذكر أم أنثى",
+      "why": "männlich oder weiblich = ذَكَر أم أنثى."
+     },
+     {
+      "q": "«Unterschreib hier!» — Was soll er machen?",
+      "choices": [
+       "يوقّع هنا",
+       "يجلس هنا",
+       "ينتظر هنا"
+      ],
+      "a": "يوقّع هنا",
+      "why": "Unterschreib hier = وقّع هنا (الأمر: unterschreib!)."
+     },
+     {
+      "q": "«Der Ausweis ist gültig.» — Wie ist der Ausweis?",
+      "choices": [
+       "سارٍ",
+       "منتهٍ",
+       "مفقود"
+      ],
+      "a": "سارٍ",
+      "why": "gültig = سارٍ (بطاقة الهوية صالحة)."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Das Formular ist neu.» — Wie ist das Formular?",
+      "choices": [
+       "جديد",
+       "قديم",
+       "ممزق"
+      ],
+      "a": "جديد",
+      "why": "neu = جديد (الاستمارة جديدة)."
+     },
+     {
+      "q": "«Der Geburtsort ist Tunis.» — Was ist Tunis für ihn?",
+      "choices": [
+       "مكان ولادته",
+       "مكان عمله",
+       "مكان دراسته"
+      ],
+      "a": "مكان ولادته",
+      "why": "Der Geburtsort = مكان الولادة."
+     },
+     {
+      "q": "«Hier sind meine Papiere.» — Was zeigt er?",
+      "choices": [
+       "أوراقه",
+       "صوره",
+       "مفاتيحه"
+      ],
+      "a": "أوراقه",
+      "why": "meine Papiere = أوراقي (Papiere جمع دائماً)."
+     },
+     {
+      "q": "«Ayşe ist ausländisch.» — Was ist Ayşe?",
+      "choices": [
+       "أجنبية",
+       "ألمانية",
+       "سائحة"
+      ],
+      "a": "أجنبية",
+      "why": "ausländisch = أجنبية (صفة)."
+     },
+     {
+      "q": "«Du bist Ausländer.» — Ist er aus Tunis?",
+      "choices": [
+       "نعم، هو أجنبي من تونس",
+       "لا، هو من برلين",
+       "لا، هو من سويسرا"
+      ],
+      "a": "نعم، هو أجنبي من تونس",
+      "why": "Ausländer aus Tunis = أجنبي من تونس."
+     },
+     {
+      "q": "«Die Unterschrift ist hier.» — Wo ist die Unterschrift?",
+      "choices": [
+       "هنا",
+       "هناك",
+       "في البيت"
+      ],
+      "a": "هنا",
+      "why": "hier = هنا (التوقيع هنا)."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Ich fülle das Formular aus.» — Was macht er?",
+      "choices": [
+       "يملؤها الآن",
+       "قرأها أمس",
+       "سيحرقها غداً"
+      ],
+      "a": "يملؤها الآن",
+      "why": "fülle … aus = يملأ الآن (ausfüllen منفصل)."
+     },
+     {
+      "q": "«Lena ist weiblich.» — Ist Lena ein Mann?",
+      "choices": [
+       "لا، هي أنثى",
+       "نعم، هو ذكر",
+       "لا، هي طفلة"
+      ],
+      "a": "لا، هي أنثى",
+      "why": "weiblich = أنثى — ليست رجلاً."
+     },
+     {
+      "q": "«Yusuf unterschreibt das Formular.» — Was macht Yusuf?",
+      "choices": [
+       "يوقّع الاستمارة",
+       "يقرأ الاستمارة",
+       "يطبع الاستمارة"
+      ],
+      "a": "يوقّع الاستمارة",
+      "why": "unterschreibt = يوقّع (unterschreiben)."
+     },
+     {
+      "q": "«Ist dein Ausweis gültig?» — Was fragt sie?",
+      "choices": [
+       "هل بطاقتك سارية",
+       "هل بطاقتك جديدة",
+       "هل بطاقتك معك"
+      ],
+      "a": "هل بطاقتك سارية",
+      "why": "Ist … gültig = هل … سارية."
+     },
+     {
+      "q": "«Du kommst aus Tunis!» — Woher kommt er?",
+      "choices": [
+       "من تونس",
+       "من برلين",
+       "من سويسرا"
+      ],
+      "a": "من تونس",
+      "why": "aus Tunis = من تونس (kommen aus = يأتي من)."
+     },
+     {
+      "q": "«Gib das Formular dem Chef!» — Wer bekommt das Formular?",
+      "choices": [
+       "للمدير",
+       "للزميل",
+       "للمعلم"
+      ],
+      "a": "للمدير",
+      "why": "bekommt = يستلم — المدير يستلم الاستمارة (dem Chef = للمدير)."
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Yusuf füllt ein Formular für das Praktikum aus: Familienstand ledig · geboren in Tunis · Geburtsort Tunis · männlich · Ausweis gültig. Er unterschreibt und gibt das Formular dem Chef. Viel Glück, Yusuf!",
+   "ar": "أوراق التدريب (16 رأساً للفهم): الاستمارة والحقول والتوقيع — تفهم ولا تُنتج؛ والقاعدة: geboren مع sein."
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "de": "~~Ich fülle das Formular.~~",
+     "ar": "ausfüllen منفصل: aus في آخر الجملة — لا تنسها."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «أملأ» فعل واحد متصل فينسى المتعلم aus. القاعدة (ars-trennbare): fülle … aus — الجزء في الآخر دائماً.",
+    "correct": {
+     "de": "Ich fülle das Formular aus.",
+     "ar": "أملأ الاستمارة."
+    },
+    "exercise": {
+     "q": "Ich fülle das Formular ___. (aus / an)",
+     "a": "aus"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Ich habe in Tunis geboren.~~",
+     "ar": "geboren مع sein لا haben: ich bin geboren."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «وُلدت» مبني للمجهول فيظن المتعلم haben (كـgemacht). القاعدة (ars-perfekt): geboren تغيّر حال ⇐ sein — ich bin geboren.",
+    "correct": {
+     "de": "Ich bin in Tunis geboren.",
+     "ar": "وُلدت في تونس."
+    },
+    "exercise": {
+     "q": "Ich ___ in Tunis geboren. (bin / habe)",
+     "a": "bin"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Ayşe ist Ausländer.~~",
+     "ar": "Ayşe مؤنث: ausländisch (صفة) لا Ausländer (اسم مذكر)."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «أجنبية» صيغة واحدة فيخلط المتعلم الاسم بالصفة. القاعدة: الشخص (Ayşe) يأخذ الصفة ausländisch — والاسم der Ausländer للمذكر وحده.",
+    "correct": {
+     "de": "Ayşe ist ausländisch.",
+     "ar": "عائشة أجنبية."
+    },
+    "exercise": {
+     "q": "Ayşe ist ___. (ausländisch / Ausländer)",
+     "a": "ausländisch"
+    }
+   }
+  ],
+  "srsBundleWordIds": [
+   "formular",
+   "ausfuellen",
+   "familienstand",
+   "ledig",
+   "geboren",
+   "geburtsjahr",
+   "geburtsort",
+   "maennlich",
+   "weiblich",
+   "unterschrift",
+   "unterschreiben",
+   "ausweis",
+   "papiere",
+   "gueltig",
+   "auslaender",
+   "auslaendisch"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-perfekt"
+ ],
+ "audioManifestRefs": [
+  "word-formular",
+  "word-ausfuellen",
+  "word-familienstand",
+  "word-ledig",
+  "word-geboren",
+  "word-geburtsjahr",
+  "word-geburtsort",
+  "word-maennlich",
+  "word-weiblich",
+  "word-unterschrift",
+  "word-unterschreiben",
+  "word-ausweis",
+  "word-papiere",
+  "word-gueltig",
+  "word-auslaender",
+  "word-auslaendisch"
+ ],
+ "imageManifestRefs": [],
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Formular",
+   "https://www.duden.de/rechtschreibung/Ausweis"
+  ],
+  "wiktionary": [
+   "https://de.wiktionary.org/wiki/unterschreiben"
+  ],
+  "goethe": []
+ },
+ "curriculumRef": {
+  "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Formular · Ausweis · Unterschrift) — الدرس الأول من الوحدة 14 (D113)",
+  "goetheWordListOverlap": []
+ }
+}

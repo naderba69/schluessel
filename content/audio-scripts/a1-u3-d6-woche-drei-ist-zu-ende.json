@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u3-d6-woche-drei-ist-zu-ende",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Woche drei ist zu Ende! — Ayşe und Yusuf am Sonntag um elf",
+    "ar": "الأسبوع الثالث انتهى! — عائشة ويوسف في موعد المجموعة (الأحد الساعة 11 من u3-d4): الأعداد حتى 100 · السعر · الساعة (halb acht) · um/am/im · رقم هاتف بالسمع"
+  },
+  "usedIn": [
+    "a1-u3-d6"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "wd-1",
+      "speaker": "ayse",
+      "text": "Hallo, Yusuf! Sonntag, elf Uhr — die Gruppe ist hier. Toll!",
+      "direction": "عائشة تفتح — موعد المجموعة (u3-d4: am Sonntag um elf) — toll كلمة اليوم"
+    },
+    {
+      "id": "wd-2",
+      "speaker": "yusuf",
+      "text": "Hallo, Ayşe! Ja, der Termin ist am Sonntag um elf. Klar!",
+      "direction": "يوسف يؤكد الموعد بـam + um — klar كلمة اليوم"
+    },
+    {
+      "id": "wd-3",
+      "speaker": "ayse",
+      "text": "Woche drei ist zu Ende. Wiederholen wir? Frage eins: Wie alt ist deine Oma?",
+      "direction": "تقترح المراجعة: السؤال الأول عن عمر الجدة (u3-d1)"
+    },
+    {
+      "id": "wd-4",
+      "speaker": "yusuf",
+      "text": "Meine Oma ist achtzig. Und das Essen ist für zweiunddreißig Leute!",
+      "direction": "achtzig · zweiunddreißig — العدد المركّب (الآحاد أولاً)"
+    },
+    {
+      "id": "wd-5",
+      "speaker": "ayse",
+      "text": "Zweiunddreißig — nicht dreiundzwanzig! Toll. Frage zwei: Was kostet dein Handy?",
+      "direction": "تصحح الخلط 32/23 (مصيدة u3-d1) وتسأل عن السعر (u3-d2)"
+    },
+    {
+      "id": "wd-6",
+      "speaker": "yusuf",
+      "text": "Es kostet nur zweihundertneunundsiebzig Euro. Das ist billig.",
+      "direction": "السعر بـnur قبل العدد (مصيدة u3-d2)"
+    },
+    {
+      "id": "wd-7",
+      "speaker": "ayse",
+      "text": "Und wie bezahlst du das Handy? Mit Karte?",
+      "direction": "سؤال الدفع (u3-d2)"
+    },
+    {
+      "id": "wd-8",
+      "speaker": "yusuf",
+      "text": "Ja, mit Karte. Das ist leicht. Jetzt du: Wie spät ist es?",
+      "direction": "mit Karte · ثم يقلب السؤال: الساعة (u3-d3) — عبارة ثابتة معلنة"
+    },
+    {
+      "id": "wd-9",
+      "speaker": "ayse",
+      "text": "Es ist Viertel nach elf. Klar!",
+      "direction": "Viertel nach elf — ساعة الموعد نفسها + ربع"
+    },
+    {
+      "id": "wd-10",
+      "speaker": "yusuf",
+      "text": "Und das Essen im Restaurant — wann ist es?",
+      "direction": "سؤال عن وقت العشاء (u3-d3)"
+    },
+    {
+      "id": "wd-11",
+      "speaker": "ayse",
+      "text": "Um halb acht. Halb acht ist sieben Uhr dreißig — nicht acht Uhr dreißig!",
+      "direction": "halb acht = 7:30 — المصيدة الكبرى معلنةً"
+    },
+    {
+      "id": "wd-12",
+      "speaker": "yusuf",
+      "text": "Genau! Frage vier: Wann regnet es oft in Berlin?",
+      "direction": "سؤال الطقس: wann + regnen (u3-d4)"
+    },
+    {
+      "id": "wd-13",
+      "speaker": "ayse",
+      "text": "Im April regnet es oft. Und wann ist dein Termin mit Lena?",
+      "direction": "im April (im للشهر) وتسأل عن موعد لينا (u3-d4)"
+    },
+    {
+      "id": "wd-14",
+      "speaker": "yusuf",
+      "text": "Am Montag um halb fünf. Am Montag — nicht im Montag!",
+      "direction": "am Montag um halb fünf — ويصحح im Montag بنفسه"
+    },
+    {
+      "id": "wd-15",
+      "speaker": "ayse",
+      "text": "Toll! Frage fünf: Meine Telefonnummer — hörst du? Null eins sieben sechs, dreiundvierzig, neunzig.",
+      "direction": "رقم هاتف بالسمع (u3-d5) — ثلاث مجموعات"
+    },
+    {
+      "id": "wd-16",
+      "speaker": "yusuf",
+      "text": "Noch einmal, bitte! Nicht so schnell.",
+      "direction": "Noch einmal, bitte! (u3-d5) — لا يفهم"
+    },
+    {
+      "id": "wd-17",
+      "speaker": "ayse",
+      "text": "Null eins sieben sechs — dreiundvierzig — neunzig.",
+      "direction": "تكرار أبطأ بفواصل"
+    },
+    {
+      "id": "wd-18",
+      "speaker": "yusuf",
+      "text": "Ich verstehe: null eins sieben sechs, dreiundvierzig, neunzig. Klar!",
+      "direction": "يعيد الرقم كاملاً ويؤكد بـklar"
+    },
+    {
+      "id": "wd-19",
+      "speaker": "ayse",
+      "text": "Super! Sechs Fragen, sechs Antworten. Die Woche ist zu Ende.",
+      "direction": "ستة أسئلة — نهاية الأسبوع"
+    },
+    {
+      "id": "wd-20",
+      "speaker": "yusuf",
+      "text": "Toll! Bis morgen um neun Uhr, Ayşe!",
+      "direction": "وداع بموعد: um neun Uhr"
+    }
+  ]
+}

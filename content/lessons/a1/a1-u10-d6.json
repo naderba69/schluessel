@@ -1,0 +1,629 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u10-d6",
+  "level": "A1",
+  "unit": 10,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Woche zehn ist zu Ende: Heute ist Montag, der sechste April · Es regnet nicht, es ist sonnig · Gestern haben wir bei Oma gegessen · Vorher habe ich eingekauft, nachher telefoniert · Der Kurs endet am siebzehnten April · Ich bin zu Hause, weil ich müde bin — deshalb lerne ich.",
+    "ar": "توليف الأسبوع العاشر (الاثنين 6 أبريل): الطقس بـes (regnet es · ist es kalt · sind es dreißig Grad) · التاريخ (der sechste · am siebzehnten · am achtzehnten) · الماضي بـhaben + الصيغة الثالثة في الآخر (gegessen · gelernt · besucht · eingekauft · telefoniert) · vorher/nachher/gestern/vorgestern · weil يرمي الفعل إلى الآخر وdeshalb لا — ثم معركة الوحدة (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (weil · gestern) تعودان من الأسبوع نفسه."
+  },
+  "canDoDaily": [
+    "يحكي ما فعله أمس وأول أمس بـhaben + الصيغة الثالثة في الآخر (Gestern habe ich eingekauft) ويقول التاريخ والطقس (Heute ist der sechste April · Es regnet nicht)",
+    "يعلّل بـweil والفعل في الآخر (weil ich müde bin) ويفرّق عنها deshalb (deshalb lerne ich) ويجتاز معركة الوحدة 10 بنتيجة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "wetter",
+      "gestern",
+      "weil"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أمس تعلّمتُ الألمانية» — تخمين فقط"
+        },
+        "choices": [
+          "Gestern habe ich Deutsch gelernt.",
+          "Gestern ich habe Deutsch gelernt.",
+          "Gestern habe ich gelernt Deutsch."
+        ],
+        "answer": "Gestern habe ich Deutsch gelernt.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«أنا في البيت لأنني متعب» — تخمين فقط"
+        },
+        "choices": [
+          "Ich bin zu Hause, weil ich müde bin.",
+          "Ich bin zu Hause, weil ich bin müde.",
+          "Ich bin zu Hause, weil bin ich müde."
+        ],
+        "answer": "Ich bin zu Hause, weil ich müde bin.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "weil",
+      "gestern"
+    ],
+    "grammarArsenalIds": [
+      "ars-wetter-es",
+      "ars-termin-datum",
+      "ars-perfekt-haben",
+      "ars-zeitangaben",
+      "ars-weil-satz"
+    ],
+    "storySentenceIds": [
+      "story-a1-u10-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Heute ___ es nicht — es ist sonnig. (regnen)",
+            "a": "regnet",
+            "why": "أفعال الطقس تحتاج es دائماً: Es regnet · Heute regnet es nicht (الفعل ثانياً وes بعده)."
+          },
+          {
+            "q": "Bei uns ___ es dreißig Grad. (sein)",
+            "a": "sind",
+            "why": "مع الدرجات الجمع: Es sind dreißig Grad — أما الصفة فمفرد: Es ist kalt."
+          },
+          {
+            "q": "Heute ist Montag, der ___ April. (6)",
+            "a": "sechste",
+            "why": "التاريخ بعد der: der sechste (‑te حتى 19) · der zwanzigste (‑ste من 20)."
+          },
+          {
+            "q": "Der Kurs endet ___ siebzehnten April. (في)",
+            "a": "am",
+            "why": "«في» التاريخ = am + ‑ten: am siebzehnten · am achtzehnten (u10-d2)."
+          },
+          {
+            "q": "Gestern haben wir bei meiner Oma ___. (essen)",
+            "a": "gegessen",
+            "why": "الصيغة الثالثة لـessen: gegessen (شاذة: ge‑ + ‑en) في آخر الجملة بعد haben."
+          },
+          {
+            "q": "Vorgestern habe ich meine Oma ___. (besuchen)",
+            "a": "besucht",
+            "why": "الأفعال بـbe‑/ver‑ و‑ieren بلا ge‑: besucht · telefoniert · vereinbart (u10-d4)."
+          },
+          {
+            "q": "Vorher habe ich ___. (einkaufen)",
+            "a": "eingekauft",
+            "why": "الفعل المنفصل يضع ge‑ في الوسط: ein‑ge‑kauft · auf‑ge‑schrieben."
+          },
+          {
+            "q": "Ich bin zu Hause, weil ich müde ___.",
+            "a": "bin",
+            "why": "بعد weil يذهب الفعل المصرَّف إلى آخر الجملة: weil ich müde bin."
+          },
+          {
+            "q": "Du bist müde, weil du im Regen Fußball gespielt ___.",
+            "a": "hast",
+            "why": "مع الماضي في جملة weil: الصيغة الثالثة ثم haben في الآخر تماماً: gespielt hast."
+          },
+          {
+            "q": "Ich brauche Deutsch für einen Job — ___ lerne ich jeden Tag. (لذلك)",
+            "a": "deshalb",
+            "why": "deshalb = لذلك: يأتي أولاً ثم الفعل ثانياً (deshalb lerne ich) — لا يرمي الفعل إلى الآخر مثل weil."
+          }
+        ],
+        "interleavedWith": [
+          "sonnig",
+          "grad",
+          "april",
+          "oma",
+          "job",
+          "regen",
+          "fussball"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "zh-4",
+            "speakText": "Hier scheint die Sonne, und es sind dreißig Grad. Zu heiß! Bist du in der Schule?",
+            "q": "استمع: كم درجة الحرارة عند يوسف في Tunis؟",
+            "choices": [
+              "ثلاثون",
+              "ستّ",
+              "ثلاث عشرة"
+            ],
+            "a": "ثلاثون",
+            "why": "es sind dreißig Grad (جمع ⇐ sind) · die Sonne scheint · zu heiß = حارّ جداً."
+          },
+          {
+            "audioId": "zh-6",
+            "speakText": "Gestern haben wir bei meiner Oma gegessen — sehr lange! Und ich habe zwei Stunden gelernt.",
+            "q": "استمع: ماذا فعل يوسف أمس؟",
+            "choices": [
+              "أكل عند جدته وتعلّم ساعتين",
+              "تسوّق واتصل",
+              "زار جدته وطبخ"
+            ],
+            "a": "أكل عند جدته وتعلّم ساعتين",
+            "why": "haben … gegessen (bei meiner Oma — الداتيف) · habe … gelernt — الصيغة الثالثة في الآخر."
+          },
+          {
+            "audioId": "zh-8",
+            "speakText": "Vorgestern habe ich meine Oma besucht. Vorher habe ich eingekauft, nachher habe ich eine Stunde telefoniert.",
+            "q": "استمع: ماذا فعل يوسف قبل الزيارة؟",
+            "choices": [
+              "تسوّق",
+              "اتصل ساعة",
+              "تعلّم"
+            ],
+            "a": "تسوّق",
+            "why": "Vorher habe ich eingekauft = قبلها تسوّقت · nachher … telefoniert = بعدها اتصلت."
+          },
+          {
+            "audioId": "zh-10",
+            "speakText": "Der Kurs endet am siebzehnten April — ein Freitag. Und ich fliege am zwölften April zurück, am Sonntag.",
+            "q": "استمع: متى يعود يوسف إلى برلين؟",
+            "choices": [
+              "الأحد 12 أبريل",
+              "الجمعة 17 أبريل",
+              "السبت 18 أبريل"
+            ],
+            "a": "الأحد 12 أبريل",
+            "why": "am zwölften April, am Sonntag = الأحد 12 أبريل · am siebzehnten = نهاية الدورة (الجمعة)."
+          },
+          {
+            "audioId": "zh-12",
+            "speakText": "Am achtzehnten April hast du Geburtstag! Samstag, neunzehn Uhr, im Restaurant. Ich habe es aufgeschrieben.",
+            "q": "استمع: متى عيد ميلاد لينا؟",
+            "choices": [
+              "السبت 18 أبريل، السابعة مساءً",
+              "الجمعة 17 أبريل",
+              "الأحد 12 أبريل"
+            ],
+            "a": "السبت 18 أبريل، السابعة مساءً",
+            "why": "am achtzehnten April · Samstag · neunzehn Uhr = 19:00 — وaufgeschrieben: ge‑ في وسط الفعل المنفصل."
+          },
+          {
+            "audioId": "zh-14",
+            "speakText": "Du bist zu Hause, weil du müde bist. Und du bist müde, weil du im Regen Fußball gespielt hast!",
+            "q": "استمع: لماذا لينا متعبة؟",
+            "choices": [
+              "لأنها لعبت كرة القدم في المطر",
+              "لأنها مريضة",
+              "لأنها تعلّمت كثيراً"
+            ],
+            "a": "لأنها لعبت كرة القدم في المطر",
+            "why": "weil du im Regen Fußball gespielt hast — gespielt ثم hast في الآخر تماماً."
+          },
+          {
+            "audioId": "zh-16",
+            "speakText": "Weil ich in Berlin arbeiten möchte. Ich brauche Deutsch für einen Job — deshalb lerne ich jeden Tag.",
+            "q": "استمع: لماذا يتعلّم يوسف كثيراً؟",
+            "choices": [
+              "لأنه يريد العمل في برلين",
+              "لأن الدورة انتهت",
+              "لأنه يريد السفر"
+            ],
+            "a": "لأنه يريد العمل في برلين",
+            "why": "Weil ich … arbeiten möchte (الفعل المصرَّف möchte في الآخر) · deshalb lerne ich (الفعل ثانياً)."
+          },
+          {
+            "audioId": "zh-18",
+            "speakText": "Morgen ist es auch heiß — dreißig Grad. Und bei dir? Schnee?",
+            "q": "استمع: كيف الطقس غداً عند يوسف؟",
+            "choices": [
+              "حارّ، ثلاثون درجة",
+              "ثلج",
+              "مطر"
+            ],
+            "a": "حارّ، ثلاثون درجة",
+            "why": "Morgen ist es heiß — الفعل ثانياً وes بعده · dreißig Grad."
+          }
+        ],
+        "interleavedWith": [
+          "sonne",
+          "heiss",
+          "schule",
+          "restaurant",
+          "geburtstag",
+          "arbeiten",
+          "schnee"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "صحّح: ~~Heute regnet nicht.~~",
+            "a": "Heute regnet es nicht.",
+            "why": "es لا تسقط من أفعال الطقس: regnet es."
+          },
+          {
+            "q": "صحّح: ~~Heute ist der sechs April.~~",
+            "a": "Heute ist der sechste April.",
+            "why": "التاريخ ترتيبي: der sechste (‑te)."
+          },
+          {
+            "q": "صحّح: ~~Gestern ich habe Deutsch gelernt.~~",
+            "a": "Gestern habe ich Deutsch gelernt.",
+            "why": "بعد Gestern الفعل ثانياً: habe ich — وgelernt في الآخر."
+          },
+          {
+            "q": "صحّح: ~~Ich habe meine Oma gebesucht.~~",
+            "a": "Ich habe meine Oma besucht.",
+            "why": "be‑ لا تأخذ ge‑: besucht."
+          },
+          {
+            "q": "صحّح: ~~Ich habe gekauft ein.~~",
+            "a": "Ich habe eingekauft.",
+            "why": "المنفصل في الماضي كلمة واحدة بـge‑ في الوسط: eingekauft."
+          },
+          {
+            "q": "صحّح: ~~Ich bin zu Hause, weil ich bin müde.~~",
+            "a": "Ich bin zu Hause, weil ich müde bin.",
+            "why": "weil يرمي الفعل المصرَّف إلى الآخر: müde bin."
+          }
+        ],
+        "interleavedWith": [
+          "deutsch",
+          "oma",
+          "einkaufen",
+          "muede"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "zh-1",
+            "speakText": "Hallo, Yusuf! Woche zehn ist zu Ende. Heute ist Montag, der sechste April.",
+            "a": "Hallo, Yusuf! Woche zehn ist zu Ende. Heute ist Montag, der sechste April.",
+            "why": "zehn بـh صامتة · der sechste بـchs تُنطق «كس» · April بحرف كبير."
+          },
+          {
+            "audioId": "zh-3",
+            "speakText": "Nein, heute regnet es nicht. Es ist sonnig, aber kalt — nur sechs Grad.",
+            "a": "Nein, heute regnet es nicht. Es ist sonnig, aber kalt — nur sechs Grad.",
+            "why": "regnet es — es بعد الفعل · sonnig بـ‑ig تُسمع «ش» · Grad بحرف كبير وd تُسمع «ت»."
+          },
+          {
+            "audioId": "zh-7",
+            "speakText": "Gegessen, gelernt — haben und das Wort am Ende! Und vorgestern?",
+            "a": "Gegessen, gelernt — haben und das Wort am Ende! Und vorgestern?",
+            "why": "gegessen بـss وge‑ · gelernt بـge‑ و‑t · vorgestern كلمة واحدة = أول أمس."
+          },
+          {
+            "audioId": "zh-11",
+            "speakText": "Und am achtzehnten April?",
+            "a": "Und am achtzehnten April?",
+            "why": "am مع ‑ten للتاريخ: achtzehnten (18 + ten) · April بحرف كبير."
+          },
+          {
+            "audioId": "zh-13",
+            "speakText": "Richtig! Frage drei — für mich: Warum bin ich zu Hause?",
+            "a": "Richtig! Frage drei — für mich: Warum bin ich zu Hause?",
+            "why": "Richtig بـ‑ig · für + Akkusativ (mich) · Warum = لماذا — السؤال الذي يجيبه weil."
+          },
+          {
+            "audioId": "zh-19",
+            "speakText": "Nein, kein Schnee mehr. Morgen regnet es — und ich gehe in die Schule.",
+            "a": "Nein, kein Schnee mehr. Morgen regnet es — und ich gehe in die Schule.",
+            "why": "kein Schnee (مذكر بلا نهاية) · Morgen regnet es — الفعل ثانياً · in die Schule (wohin ⇐ die)."
+          }
+        ],
+        "interleavedWith": [
+          "montag",
+          "kalt",
+          "vorgestern",
+          "richtig",
+          "warum"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Meine Woche: Heute ist Montag, der sechste April. Es regnet nicht. Gestern habe ich eingekauft und mit meiner Familie telefoniert. Ich bin müde, weil ich wenig geschlafen habe — deshalb gehe ich früh schlafen.",
+        "ar": "أن يحكي أسبوعه لزميل: التاريخ والطقس بـes · ثلاثة أشياء فعلها أمس أو أول أمس بـhaben + الصيغة الثالثة في الآخر (منها فعل منفصل وفعل بـbe‑ أو ‑ieren) · سبب واحد بـweil والفعل في الآخر · ونتيجة واحدة بـdeshalb والفعل ثانياً"
+      },
+      "situation": {
+        "de": "Das Ende der Woche: Montag, der sechste April — Yusuf in Tunis, Lena zu Hause. Und jetzt deine Woche.",
+        "ar": "نهاية الأسبوع العاشر: صباح الاثنين 6 أبريل — يوسف في تونس ولينا في البيت لأنها متعبة، يراجعان الطقس والتواريخ وما فعلاه في عطلة الأسبوع ولماذا — ثم أسبوعك أنت"
+      },
+      "successCriteria": [
+        "يقول التاريخ والطقس في جملتين صحيحتين (Heute ist der sechste April · Es regnet nicht, es sind sechs Grad)",
+        "يحكي ثلاثة أفعال في الماضي بـhaben والصيغة الثالثة في الآخر، منها eingekauft أو aufgeschrieben وbesucht أو telefoniert",
+        "يعلّل مرة بـweil (الفعل في الآخر) ومرة بـdeshalb (الفعل ثانياً) بلا خلط"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "Heute ___ es nicht.",
+            "a": "regnet",
+            "choices": [
+              "regnet",
+              "regnen",
+              "regne"
+            ],
+            "why": "الطقس مع es ⇐ regnet."
+          },
+          {
+            "q": "Heute ist der ___ April. (6)",
+            "a": "sechste",
+            "choices": [
+              "sechste",
+              "sechs",
+              "sechsten"
+            ],
+            "why": "بعد der في التاريخ: sechste. (am sechsten.)"
+          },
+          {
+            "q": "Gestern habe ich Deutsch ___.",
+            "a": "gelernt",
+            "choices": [
+              "gelernt",
+              "lernen",
+              "lerne"
+            ],
+            "why": "lernen منتظم: ge‑ + lern + ‑t."
+          },
+          {
+            "q": "Ich habe meine Oma ___.",
+            "a": "besucht",
+            "choices": [
+              "besucht",
+              "besuchen",
+              "besuche"
+            ],
+            "why": "be‑ بلا ge‑: besucht."
+          },
+          {
+            "q": "Ich bin zu Hause, weil ich müde ___.",
+            "a": "bin",
+            "choices": [
+              "bin",
+              "ist",
+              "sein"
+            ],
+            "why": "weil + الفعل المصرَّف في الآخر: ich … bin."
+          },
+          {
+            "q": "الترتيب: eingekauft. / habe / Vorher / ich",
+            "a": "Vorher habe ich eingekauft.",
+            "why": "بعد Vorher الفعل المساعد ثانياً ثم الفاعل، والصيغة الثالثة في الآخر."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Es ___ dreißig Grad.",
+            "a": "sind",
+            "choices": [
+              "sind",
+              "ist",
+              "hat"
+            ],
+            "why": "الدرجات جمع ⇐ Es sind dreißig Grad."
+          },
+          {
+            "q": "Der Kurs endet ___ siebzehnten April.",
+            "a": "am",
+            "choices": [
+              "am",
+              "im",
+              "der"
+            ],
+            "why": "في تاريخ = am + ‑ten."
+          },
+          {
+            "q": "Wir haben bei Oma ___. (essen)",
+            "a": "gegessen",
+            "choices": [
+              "gegessen",
+              "essen",
+              "isst"
+            ],
+            "why": "essen شاذ: gegessen."
+          },
+          {
+            "q": "Ich habe eine Stunde ___. (telefonieren)",
+            "a": "telefoniert",
+            "choices": [
+              "telefoniert",
+              "telefonieren",
+              "telefoniere"
+            ],
+            "why": "‑ieren بلا ge‑: telefoniert."
+          },
+          {
+            "q": "Ich brauche Deutsch, ___ lerne ich jeden Tag.",
+            "a": "deshalb",
+            "choices": [
+              "deshalb",
+              "weil",
+              "warum"
+            ],
+            "why": "النتيجة بـdeshalb والفعل ثانياً (lerne ich)."
+          },
+          {
+            "q": "الترتيب: gespielt hast. / weil du / Du bist müde, / Fußball",
+            "a": "Du bist müde, weil du Fußball gespielt hast.",
+            "why": "في جملة weil: الصيغة الثالثة (gespielt) ثم haben (hast) في الآخر."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Morgen ___ es heiß.",
+            "a": "ist",
+            "choices": [
+              "ist",
+              "sind",
+              "regnet"
+            ],
+            "why": "الصفة مع es ist: Es ist heiß."
+          },
+          {
+            "q": "Ich fliege ___ zwölften April zurück.",
+            "a": "am",
+            "choices": [
+              "am",
+              "der",
+              "um"
+            ],
+            "why": "am + ‑ten للتاريخ · um للساعة."
+          },
+          {
+            "q": "Ich habe den Termin ___. (aufschreiben)",
+            "a": "aufgeschrieben",
+            "choices": [
+              "aufgeschrieben",
+              "aufschreiben",
+              "schreibt"
+            ],
+            "why": "المنفصل: auf‑ge‑schrieben (شاذ: ‑en)."
+          },
+          {
+            "q": "Was hast du ___ gemacht? (أمس)",
+            "a": "gestern",
+            "choices": [
+              "gestern",
+              "morgen",
+              "heute"
+            ],
+            "why": "gestern = أمس · vorgestern = أول أمس."
+          },
+          {
+            "q": "Lena: ___ lernst du so viel? — Yusuf: Weil ich arbeiten möchte.",
+            "a": "Warum",
+            "choices": [
+              "Warum",
+              "Wann",
+              "Wo"
+            ],
+            "why": "Warum = لماذا، والجواب بـweil."
+          },
+          {
+            "q": "«لأنني أريد أن أعمل في برلين» — بالألمانية؟",
+            "a": "Weil ich in Berlin arbeiten möchte.",
+            "why": "weil … möchte في الآخر، وarbeiten قبله."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Woche zehn ist zu Ende: Heute ist Montag, der sechste April. Bei Lena regnet es nicht, bei Yusuf sind es dreißig Grad. Gestern haben wir bei Oma gegessen, vorgestern habe ich eingekauft und telefoniert. Der Kurs endet am siebzehnten April. Ich bin zu Hause, weil ich müde bin — deshalb lerne ich morgen.",
+      "ar": "الوحدة العاشرة اكتملت: تقول الطقس بـes، والتاريخ بـder/am + ‑te/‑ten، والماضي بـhaben والصيغة الثالثة في الآخر (ge‑ · بلا ge‑ · ge‑ في الوسط)، وتعلّل بـweil (الفعل في الآخر) وdeshalb (الفعل ثانياً)."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Heute regnet nicht.~~ · ~~Heute kalt.~~ · ~~Es ist dreißig Grad.~~",
+          "ar": "es المحذوفة · sind مع الدرجات"
+        },
+        "whyArabicSpeakerFails": "«تمطر» و«بارد اليوم» جملتان بلا فاعل بالعربية، والألمانية لا تترك الفعل بلا فاعل فتضع es (regnet es · ist es kalt) وتجعل الدرجات جمعاً (es sind dreißig Grad) — فيحذف المتعلم es ويفرد sind (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Heute regnet es nicht. · Heute ist es kalt. · Es sind dreißig Grad.",
+          "ar": "اليوم لا تمطر · اليوم بارد · الحرارة ثلاثون درجة"
+        },
+        "exercise": {
+          "q": "أكمل: Morgen ___ es sonnig, und es ___ zwanzig Grad.",
+          "a": "ist / sind"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Gestern ich habe gelernt.~~ · ~~gebesucht~~ · ~~gekauft ein~~",
+          "ar": "الماضي: المكان الثاني وأشكال الصيغة الثالثة"
+        },
+        "whyArabicSpeakerFails": "الماضي العربي كلمة واحدة («تعلّمتُ»)، والألماني قطعتان: haben في المكان الثاني والصيغة الثالثة في الآخر — وشكلها ثلاثة: ge‑ + ‑t/‑en (gelernt · gegessen)، بلا ge‑ مع be‑/ver‑/‑ieren (besucht · telefoniert)، وge‑ في الوسط مع المنفصل (eingekauft · aufgeschrieben) — فيخلط المتعلم الثلاثة في سرد واحد (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Gestern habe ich gelernt. · Ich habe Oma besucht. · Ich habe eingekauft.",
+          "ar": "أمس تعلّمتُ · زرتُ الجدة · تسوّقتُ"
+        },
+        "exercise": {
+          "q": "أكمل: Nachher habe ich eine Stunde ___ und den Termin ___. (telefonieren · aufschreiben)",
+          "a": "telefoniert / aufgeschrieben"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~weil ich bin müde~~ · ~~Deshalb ich lerne.~~",
+          "ar": "weil يرمي الفعل إلى الآخر وdeshalb لا"
+        },
+        "whyArabicSpeakerFails": "«لأن» و«لذلك» العربيتان لا تغيّران ترتيب الجملة، والألمانية تفصل: weil تابعة ترمي الفعل المصرَّف إلى الآخر (weil ich müde bin · weil ich gespielt habe)، وdeshalb ظرف في المكان الأول يجعل الفعل ثانياً (deshalb lerne ich) — فيعامل المتعلم الكلمتين سواء (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bin zu Hause, weil ich müde bin. · Ich bin müde, deshalb bin ich zu Hause.",
+          "ar": "أنا في البيت لأنني متعب · أنا متعب، لذلك أنا في البيت"
+        },
+        "exercise": {
+          "q": "أكمل: Ich lerne viel, weil der Kurs bald ___. — Der Kurs endet bald, deshalb ___ ich viel. (enden · lernen)",
+          "a": "endet / lerne"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "weil",
+      "gestern"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/weil",
+      "https://www.duden.de/rechtschreibung/gestern"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/weil"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-wetter-es",
+    "ars-termin-datum",
+    "ars-perfekt-haben",
+    "ars-zeitangaben",
+    "ars-weil-satz"
+  ],
+  "audioManifestRefs": [
+    "word-weil",
+    "word-gestern"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 — توليف الوحدة 10: الاثنين 6 أبريل — طقس وتواريخ وماضٍ وweil",
+    "goetheWordListOverlap": []
+  }
+}

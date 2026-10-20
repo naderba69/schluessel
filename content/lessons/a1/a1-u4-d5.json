@@ -1,0 +1,757 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u4-d5",
+  "level": "A1",
+  "unit": 4,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Meine Familie: Ich habe eine Schwester. Ihr Mann ist Lehrer. Ich bin stolz auf sie.",
+    "ar": "تعرّف بأسرتك في رسالة صوتية قصيرة بأربع جمل (الإخوة · العمل أو الدراسة أو الزواج · المهنة)، بكلمة ملكية صحيحة: الجذع من المالك (sein لمالك مذكر · ihr لمالكة مؤنثة) والنهاية من المملوك ودوره (‑e · ‑en)."
+  },
+  "canDoDaily": [
+    "يعرّف بأسرته في رسالة صوتية قصيرة بأربع جمل: الإخوة (Ich habe eine Schwester. · Hast du Geschwister?) · متزوج أو يدرس أو يعمل · المهنة (Was ist sein Beruf?) · Ich bin stolz auf …",
+    "يختار كلمة الملكية بسؤالين: جذعها من المالك (sein لمالك مذكر · ihr لمالكة مؤنثة) ونهايتها من المملوك ودوره (ihr Mann · ihre Arbeit · ihren Mann · seinen Beruf)."
+  ],
+  "warmup": {
+    "cardIds": [
+      "mann",
+      "brille",
+      "kind"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«زوجُها معلّم» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Ihr Mann ist Lehrer.",
+          "Ihre Mann ist Lehrer.",
+          "Ihren Mann ist Lehrer."
+        ],
+        "answer": "Ihr Mann ist Lehrer.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "geschwister",
+      "zwilling",
+      "verheiratet",
+      "beruf",
+      "arbeiten",
+      "studieren",
+      "arbeit",
+      "aufnehmen",
+      "erzaehlen",
+      "stolz",
+      "heimat",
+      "glueck",
+      "gluecklich",
+      "ihr"
+    ],
+    "grammarArsenalIds": [
+      "ars-familie-mix"
+    ],
+    "storySentenceIds": [
+      "story-a1-u4-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-u",
+      "ch-ich-laut",
+      "vowel-long-short",
+      "r-uvular"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Oma ist achtzig. ___ Essen ist toll. (ملكيتها)",
+            "a": "Ihr",
+            "why": "المالكة Oma امرأة ← الجذع ihr · وEssen محايد (das Essen) فاعل ← بلا نهاية: Ihr Essen. والحرف كبير لأنها أول الجملة."
+          },
+          {
+            "q": "Meine Mutter ist Lehrerin. ___ Arbeit ist schwer. (ملكيتها)",
+            "a": "Ihre",
+            "why": "المالكة امرأة ← ihr · وArbeit مؤنثة (die Arbeit) ← ‑e: Ihre Arbeit. النهاية من المملوك، لا من المالكة."
+          },
+          {
+            "q": "Mein Onkel hat ein Auto. ___ Auto ist neu. (ملكيته)",
+            "a": "Sein",
+            "why": "المالك رجل (der Onkel) ← sein · وAuto محايد (das Auto) ← بلا نهاية: Sein Auto. كما «سيارتُه» بالعربية."
+          },
+          {
+            "q": "Meine Mutter liebt ___ Beruf. (ملكيتها)",
+            "a": "ihren",
+            "why": "المالكة امرأة ← ihr · وBeruf مذكر (der Beruf) ومفعول به بعد liebt ← ‑en: ihren = ihr + ‑en."
+          },
+          {
+            "q": "Ich bin stolz ___ meine Familie. (بـ)",
+            "a": "auf",
+            "why": "stolz يأتي بعده auf ثم المفعول: stolz auf … — والباء العربية في «فخور بـ» لا تُترجم mit."
+          },
+          {
+            "q": "Ich bin stolz auf ___ Bruder. (mein)",
+            "a": "meinen",
+            "why": "بعد stolz auf يأتي المفعول، وBruder مذكر ← mein ← meinen."
+          },
+          {
+            "q": "___ du Geschwister? (haben)",
+            "a": "Hast",
+            "why": "سؤال نعم/لا: الفعل أولاً — haben مع du ← hast · وdie Geschwister جمع دائم (الإخوة والأخوات)."
+          },
+          {
+            "q": "Meine Schwester ist ___. Ihr Mann ist Lehrer. (متزوجة)",
+            "a": "verheiratet",
+            "why": "verheiratet = متزوج أو متزوجة، صفة بعد ist بلا نهاية · وفي الجملة الثانية Ihr Mann = زوجُها."
+          },
+          {
+            "q": "Mein Bruder ___ in Berlin. (studieren)",
+            "a": "studiert",
+            "why": "studieren مع er ← studiert · وstudieren للدراسة في الجامعة (Student)، والتلميذ في المدرسة Schüler."
+          },
+          {
+            "q": "Mein Vater ___ in Tunesien. (arbeiten)",
+            "a": "arbeitet",
+            "why": "arbeiten مع er ← arbeitet: الجذع arbeit ينتهي بـt، فتُضاف e قبل ‑t (arbeit‑e‑t) ليُسمع."
+          },
+          {
+            "q": "Jetzt nehme ich ___. (aufnehmen)",
+            "a": "auf",
+            "why": "aufnehmen (يسجّل) ينقسم في الجملة كـvorstellen: nehme في موضع الفعل وauf في آخر الجملة."
+          },
+          {
+            "q": "Die Nachricht ist ___. (قصيرة)",
+            "a": "kurz",
+            "why": "kurz = قصير — من الوحدة الثانية (lang أم kurz؟)، صفة بعد ist بلا نهاية."
+          }
+        ],
+        "interleavedWith": [
+          "das-essen",
+          "mutter",
+          "onkel",
+          "auto",
+          "bruder",
+          "vater",
+          "kurz"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "na-1",
+            "speakText": "Yusuf, die Aufgabe heute: Wir nehmen eine Nachricht auf.",
+            "q": "استمع: ما مهمة اليوم في الدورة؟",
+            "choices": [
+              "نسجّل رسالة صوتية",
+              "نكتب رسالة قصيرة",
+              "نصف صورة معاً"
+            ],
+            "a": "نسجّل رسالة صوتية",
+            "why": "nehmen … auf من aufnehmen (يسجّل) — الفعل ينقسم: nehmen ثانياً وauf في الآخر، كـIch stelle mich vor · eine Nachricht = رسالة."
+          },
+          {
+            "audioId": "na-2",
+            "speakText": "Eine Nachricht? Für wen?",
+            "q": "استمع: بماذا يسأل يوسف عن الرسالة؟",
+            "choices": [
+              "لمن الرسالة؟",
+              "متى الرسالة؟",
+              "أين الرسالة؟"
+            ],
+            "a": "لمن الرسالة؟",
+            "why": "Für wen? = لمن؟ — wen بعد für كما تعرف für dich · für mich."
+          },
+          {
+            "audioId": "na-3",
+            "speakText": "Für die Lehrerin. Erzählst du von Tunesien?",
+            "q": "استمع: لمن الرسالة، وعمّ يحكي يوسف؟",
+            "choices": [
+              "للمعلمة — ويحكي عن تونس",
+              "للمعلم — ويحكي عن برلين",
+              "للينا — ويحكي عن سويسرا"
+            ],
+            "a": "للمعلمة — ويحكي عن تونس",
+            "why": "die Lehrerin = المعلمة · Erzählst du … von erzählen (يحكي) · von Tunesien = عن تونس — von مع اسم بلد بلا أداة."
+          },
+          {
+            "audioId": "na-4",
+            "speakText": "Gern! Ich nehme jetzt auf.",
+            "q": "استمع: بماذا يجيب يوسف؟",
+            "choices": [
+              "بكل سرور! أسجّل الآن",
+              "شكراً! أسمع الآن",
+              "حسناً! أكتب الآن"
+            ],
+            "a": "بكل سرور! أسجّل الآن",
+            "why": "Gern! = بكل سرور · Ich nehme jetzt auf = أسجّل الآن — auf في آخر الجملة."
+          },
+          {
+            "audioId": "na-7",
+            "speakText": "Ihr Mann ist Lehrer. Er liebt seinen Beruf.",
+            "q": "استمع: ماذا نعرف عن زوج أخت يوسف؟",
+            "choices": [
+              "معلّم ويحب مهنته",
+              "طالب ويحب مهنته",
+              "معلّم ويعمل كثيراً"
+            ],
+            "a": "معلّم ويحب مهنته",
+            "why": "Ihr Mann = زوجُها (ihr لأن المالكة الأخت) · seinen Beruf = مهنتَه (sein لأن المالك الزوج، و‑en لأن Beruf مذكر ومفعول) · وIhr هنا ليست «حضرتك»: الحرف كبير لأنها أول الجملة."
+          },
+          {
+            "audioId": "na-8",
+            "speakText": "Meine Schwester studiert noch. Ich bin stolz auf sie.",
+            "q": "استمع: ماذا تفعل أخت يوسف، وبماذا يشعر هو؟",
+            "choices": [
+              "ما زالت تدرس — وهو فخور بها",
+              "تعمل كثيراً — وهو فخور بها",
+              "ما زالت تدرس — وهو سعيد بزوجها"
+            ],
+            "a": "ما زالت تدرس — وهو فخور بها",
+            "why": "studiert من studieren (يدرس في الجامعة) · noch = ما زال · stolz auf sie = فخور بها — بعد stolz auf مفعول (sie)."
+          },
+          {
+            "audioId": "na-10",
+            "speakText": "Ja! Jetzt nehme ich auf.",
+            "q": "استمع: ماذا تفعل لينا الآن؟",
+            "choices": [
+              "تسجّل رسالتها",
+              "تسمع رسالة يوسف",
+              "تكتب رسالتها"
+            ],
+            "a": "تسجّل رسالتها",
+            "why": "Jetzt nehme ich auf: Jetzt أولاً ثم الفعل nehme ثانياً ثم ich — وauf في الآخر."
+          },
+          {
+            "audioId": "na-13",
+            "speakText": "Zwillinge? Du hast Glück!",
+            "q": "استمع: ماذا يقول يوسف عن التوأمين؟",
+            "choices": [
+              "أنتِ محظوظة!",
+              "أنتِ فخورة!",
+              "أنتِ متزوجة!"
+            ],
+            "a": "أنتِ محظوظة!",
+            "why": "Glück haben = يكون محظوظاً: Du hast Glück! · die Zwillinge = التوأمان (جمع der Zwilling)."
+          },
+          {
+            "audioId": "na-15",
+            "speakText": "Und dein Vater? Was ist sein Beruf?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "عن مهنة أبي لينا",
+              "عن مهنة أم لينا",
+              "عن عمر أبي لينا"
+            ],
+            "a": "عن مهنة أبي لينا",
+            "why": "sein Beruf = مهنتُه — sein لأن المالك der Vater مذكر، وBeruf فاعل بعد ist فلا ‑en."
+          },
+          {
+            "audioId": "na-16",
+            "speakText": "Er ist auch Lehrer!",
+            "q": "استمع: ما مهنة أبي لينا؟",
+            "choices": [
+              "معلّم أيضاً",
+              "طالب أيضاً",
+              "نادل أيضاً"
+            ],
+            "a": "معلّم أيضاً",
+            "why": "auch = أيضاً — مثل زوج أخت يوسف · Lehrer = معلّم، وLehrerin للمرأة."
+          },
+          {
+            "audioId": "na-17",
+            "speakText": "Toll! Die Aufgabe ist fertig.",
+            "q": "استمع: ماذا يقول يوسف في الآخر؟",
+            "choices": [
+              "رائع! المهمة انتهت",
+              "رائع! المهمة صعبة",
+              "شكراً! الرسالة طويلة"
+            ],
+            "a": "رائع! المهمة انتهت",
+            "why": "Toll! = رائع · fertig = جاهز أو منتهٍ · die Aufgabe = المهمة."
+          }
+        ],
+        "interleavedWith": [
+          "aufgabe",
+          "nachricht",
+          "lehrerin",
+          "mann",
+          "lehrer",
+          "vater"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Brüder?",
+              "zwei",
+              "du",
+              "Hast"
+            ],
+            "a": "Hast du zwei Brüder?",
+            "why": "سؤال نعم/لا: الفعل Hast أولاً ثم الفاعل du ثم المفعول zwei Brüder — Brüder جمع Bruder بـü."
+          },
+          {
+            "tokens": [
+              "stolz",
+              "Vater.",
+              "Ich",
+              "auf",
+              "bin",
+              "meinen"
+            ],
+            "a": "Ich bin stolz auf meinen Vater.",
+            "why": "Ich ثم bin ثانياً ثم stolz auf ثم المفعول meinen Vater — Vater مذكر ومفعول بعد auf ← meinen."
+          },
+          {
+            "tokens": [
+              "seine",
+              "Er",
+              "Arbeit.",
+              "liebt"
+            ],
+            "a": "Er liebt seine Arbeit.",
+            "why": "المالك رجل ← sein، وArbeit مؤنثة ← ‑e: seine Arbeit."
+          },
+          {
+            "tokens": [
+              "viel.",
+              "Mann",
+              "arbeitet",
+              "Ihr"
+            ],
+            "a": "Ihr Mann arbeitet viel.",
+            "why": "Ihr Mann فاعل أولاً (زوجُها — المالكة امرأة، وMann مذكر فاعل بلا نهاية) ثم الفعل arbeitet ثانياً."
+          },
+          {
+            "tokens": [
+              "eine",
+              "auf.",
+              "Wir",
+              "Nachricht",
+              "nehmen"
+            ],
+            "a": "Wir nehmen eine Nachricht auf.",
+            "why": "Wir ثم nehmen ثانياً ثم المفعول eine Nachricht — وauf في آخر الجملة (aufnehmen ينقسم)."
+          },
+          {
+            "tokens": [
+              "Mann?",
+              "arbeitet",
+              "ihr",
+              "Wo"
+            ],
+            "a": "Wo arbeitet ihr Mann?",
+            "why": "Wo أولاً ثم الفعل arbeitet ثانياً ثم الفاعل ihr Mann — ihr لأن المالكة امرأة، وMann مذكر فاعل بلا نهاية."
+          }
+        ],
+        "interleavedWith": [
+          "bruder",
+          "vater",
+          "mann",
+          "nachricht"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "na-5",
+            "speakText": "Hallo, ich bin Yusuf. Tunesien ist meine Heimat.",
+            "a": "Hallo, ich bin Yusuf. Tunesien ist meine Heimat",
+            "why": "Yusuf وTunesien اسمان علمان بحرف كبير · Heimat اسم بحرف كبير بـei ثم a طويلة بلا علامة."
+          },
+          {
+            "audioId": "na-6",
+            "speakText": "Ich habe eine Schwester. Sie ist verheiratet.",
+            "a": "Ich habe eine Schwester. Sie ist verheiratet",
+            "why": "Schwester بـsch في أولها · verheiratet: ver + heirat + et — بـei وحرف t مرتين في آخرها."
+          },
+          {
+            "audioId": "na-9",
+            "speakText": "Fertig! Und du, Lena? Hast du Geschwister?",
+            "a": "Fertig! Und du, Lena? Hast du Geschwister?",
+            "why": "Fertig بحرف كبير في أول الجملة · Geschwister بـsch وw تُنطق v — والسؤال يبدأ بالفعل Hast."
+          },
+          {
+            "audioId": "na-11",
+            "speakText": "Hallo, hier ist Lena. Ich habe zwei Brüder. Sie sind Zwillinge.",
+            "a": "Hallo, hier ist Lena. Ich habe zwei Brüder. Sie sind Zwillinge",
+            "why": "Brüder بـü (جمع Bruder) · Zwillinge بـll بعد حركة قصيرة وng في آخرها، وz في أولها «تس»."
+          },
+          {
+            "audioId": "na-12",
+            "speakText": "Meine Mutter arbeitet viel. Sie liebt ihre Arbeit.",
+            "a": "Meine Mutter arbeitet viel. Sie liebt ihre Arbeit",
+            "why": "arbeitet بـe قبل ‑t · ihre بـh صامتة بعد i الطويلة و‑e لأن Arbeit مؤنثة."
+          },
+          {
+            "audioId": "na-14",
+            "speakText": "Ja, ich bin glücklich. Meine Brüder sind sehr lustig.",
+            "a": "Ja, ich bin glücklich. Meine Brüder sind sehr lustig",
+            "why": "glücklich بـü وck بعدها (حركة قصيرة) وch خفيفة في آخرها · Brüder بـü · lustig آخرها ‑ig."
+          },
+          {
+            "audioId": "word-ihr",
+            "speakText": "ihr.",
+            "a": "ihr",
+            "why": "ihr (ملكيتها): i طويلة تُكتب بـh صامتة بعدها — لا ie كما في hier."
+          },
+          {
+            "audioId": "word-stolz",
+            "speakText": "stolz.",
+            "a": "stolz",
+            "why": "stolz = فخور: st في أولها تُنطق «شت» · وz في آخرها «تس»."
+          }
+        ],
+        "interleavedWith": [
+          "schwester",
+          "mutter",
+          "bruder",
+          "lustig"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Meine Familie: Ich habe eine Schwester. Ihr Mann ist Lehrer. Ich bin stolz auf sie.",
+        "ar": "تسجّل رسالة صوتية قصيرة (4 جمل) تعرّف فيها بأسرتك، بكلمات ملكية صحيحة"
+      },
+      "situation": {
+        "de": "Im Kurs: eine Nachricht für die Lehrerin",
+        "ar": "في الدورة: تسجّل رسالة صوتية للمعلمة عن أسرتك — حقيقية أو خيالية باختيارك، بلا حاجة إلى معلومات عائلية حقيقية — ثم تسمع رسالة زميلك وتسأله سؤالين."
+      },
+      "successCriteria": [
+        "أربع جمل والفعل ثانياً: الإخوة (Ich habe … · Hast du Geschwister?) · العمل أو الدراسة أو الزواج (arbeitet · studiert · ist verheiratet) · مهنة بكلمة ملكية (Ihr Mann ist Lehrer. · Sein Beruf …) · وIch bin stolz auf ….",
+        "كلمة ملكية واحدة على الأقل لمالكة (ihr · ihre · ihren) وواحدة لمالك (sein · seine · seinen)، والنهاية من المملوك ودوره — ويسأل زميله عن مهنة: Was ist sein Beruf? أو Wo arbeitet ihr Mann?"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«عملُها جديد»؟",
+            "choices": [
+              "Ihre Arbeit ist neu.",
+              "Ihr Arbeit ist neu.",
+              "Ihren Arbeit ist neu."
+            ],
+            "a": "Ihre Arbeit ist neu.",
+            "why": "المالكة امرأة ← ihr · وArbeit مؤنثة فاعلاً ← ‑e: Ihre Arbeit — ‑en للمذكر المفعول وحده."
+          },
+          {
+            "q": "«تحب مهنتَها»؟",
+            "choices": [
+              "Sie liebt ihren Beruf.",
+              "Sie liebt ihr Beruf.",
+              "Sie liebt ihre Beruf."
+            ],
+            "a": "Sie liebt ihren Beruf.",
+            "why": "المالكة امرأة ← ihr · وBeruf مذكر ومفعول به بعد liebt ← ‑en: ihren Beruf."
+          },
+          {
+            "q": "«الإخوة والأخوات» بالألمانية مع أداتها؟",
+            "a": "die Geschwister",
+            "why": "die Geschwister جمع دائم كـdie Eltern — لا مفرد له في الكلام اليومي؛ للواحد Bruder أو Schwester."
+          },
+          {
+            "q": "«أنا فخور بجدّي»؟",
+            "choices": [
+              "Ich bin stolz auf meinen Opa.",
+              "Ich bin stolz auf mein Opa.",
+              "Ich bin stolz mit Opa."
+            ],
+            "a": "Ich bin stolz auf meinen Opa.",
+            "why": "stolz auf + مفعول: Opa مذكر (der Opa) ← meinen · والباء العربية لا تُترجم mit هنا."
+          },
+          {
+            "q": "verheiratet = ؟",
+            "choices": [
+              "متزوج",
+              "سعيد",
+              "فخور"
+            ],
+            "a": "متزوج",
+            "why": "verheiratet = متزوج · glücklich = سعيد · stolz = فخور."
+          },
+          {
+            "q": "«أختي تدرس في تونس»؟",
+            "choices": [
+              "Meine Schwester studiert in Tunesien.",
+              "Meine Schwester studieren in Tunesien.",
+              "Meine Schwester studierst in Tunesien."
+            ],
+            "a": "Meine Schwester studiert in Tunesien.",
+            "why": "studieren مع sie (المفرد) ← studiert — كـer · وstudieren للجامعة."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أبوها معلّم»؟",
+            "choices": [
+              "Ihr Vater ist Lehrer.",
+              "Ihre Vater ist Lehrer.",
+              "Ihren Vater ist Lehrer."
+            ],
+            "a": "Ihr Vater ist Lehrer.",
+            "why": "المالكة امرأة ← ihr · وVater مذكر فاعل ← بلا نهاية: Ihr Vater — لا ‑e لأن Vater ليس die."
+          },
+          {
+            "q": "«هل يعمل أبوك كثيراً؟»",
+            "choices": [
+              "Arbeitet dein Vater viel?",
+              "Arbeitest dein Vater viel?",
+              "Arbeit dein Vater viel?"
+            ],
+            "a": "Arbeitet dein Vater viel?",
+            "why": "سؤال نعم/لا يبدأ بالفعل · arbeiten مع er ← arbeitet (e قبل ‑t)."
+          },
+          {
+            "q": "«الحظ» بالألمانية مع أداته؟",
+            "a": "das Glück",
+            "why": "das Glück (محايد، بلا جمع) — Glück haben = يكون محظوظاً، ومنه glücklich = سعيد."
+          },
+          {
+            "q": "«أعرف زوجَها»؟",
+            "choices": [
+              "Ich kenne ihren Mann.",
+              "Ich kenne ihr Mann.",
+              "Ich kenne ihre Mann."
+            ],
+            "a": "Ich kenne ihren Mann.",
+            "why": "المالكة امرأة ← ihr · وMann مذكر ومفعول به بعد kenne ← ‑en: ihren Mann."
+          },
+          {
+            "q": "die Heimat = ؟",
+            "choices": [
+              "الوطن / البلد الأم",
+              "العائلة",
+              "المهنة"
+            ],
+            "a": "الوطن / البلد الأم",
+            "why": "die Heimat = الوطن · die Familie = العائلة · der Beruf = المهنة."
+          },
+          {
+            "q": "«أختي وأخي توأمان»؟",
+            "choices": [
+              "Meine Schwester und mein Bruder sind Zwillinge.",
+              "Meine Schwester und mein Bruder sind Zwilling.",
+              "Meine Schwester und mein Bruder ist Zwillinge."
+            ],
+            "a": "Meine Schwester und mein Bruder sind Zwillinge.",
+            "why": "اثنان ← الفعل sind والجمع Zwillinge (der Zwilling ← die Zwillinge)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«زوجتُه معلّمة»؟",
+            "choices": [
+              "Seine Frau ist Lehrerin.",
+              "Sein Frau ist Lehrerin.",
+              "Seinen Frau ist Lehrerin."
+            ],
+            "a": "Seine Frau ist Lehrerin.",
+            "why": "المالك رجل ← sein · وFrau مؤنثة فاعلاً ← ‑e: Seine Frau."
+          },
+          {
+            "q": "«مهنتُها جميلة»؟",
+            "choices": [
+              "Ihr Beruf ist schön.",
+              "Ihre Beruf ist schön.",
+              "Ihren Beruf ist schön."
+            ],
+            "a": "Ihr Beruf ist schön.",
+            "why": "المالكة امرأة ← ihr · وBeruf مذكر فاعل بعد ist ← بلا نهاية: Ihr Beruf."
+          },
+          {
+            "q": "«سعيد» بالألمانية؟",
+            "a": "glücklich",
+            "why": "glücklich = سعيد — من das Glück · بـü وck وch خفيفة في آخرها."
+          },
+          {
+            "q": "«تسجّل لينا رسالة»؟",
+            "choices": [
+              "Lena nimmt eine Nachricht auf.",
+              "Lena nimmt auf eine Nachricht.",
+              "Lena nehmt eine Nachricht auf."
+            ],
+            "a": "Lena nimmt eine Nachricht auf.",
+            "why": "aufnehmen ينقسم: nimmt في موضع الفعل وauf في آخر الجملة · ومع Lena (هي) ← nimmt لا nehmt."
+          },
+          {
+            "q": "erzählen = ؟",
+            "choices": [
+              "يحكي",
+              "يعمل",
+              "يسجّل"
+            ],
+            "a": "يحكي",
+            "why": "erzählen = يحكي · arbeiten = يعمل · aufnehmen = يسجّل."
+          },
+          {
+            "q": "«أعمل كثيراً»؟",
+            "choices": [
+              "Ich arbeite viel.",
+              "Ich arbeitet viel.",
+              "Ich arbeiten viel."
+            ],
+            "a": "Ich arbeite viel.",
+            "why": "arbeiten مع ich ← arbeite (‑e كأي فعل)."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Ihr Mann ist Lehrer. · Er liebt seinen Beruf. · Sie liebt ihre Arbeit. · Meine Schwester liebt ihren Mann. · Ich bin stolz auf meinen Bruder. · Hast du Geschwister?",
+      "ar": "كلمة الملكية سؤالان: الجذع من المالك (ich ← mein · du ← dein · er ← sein · sie ← ihr) والنهاية من المملوك ودوره (der/das ← بلا نهاية · die والجمع ← ‑e · المذكر مفعولاً ← ‑en): ihr Mann · ihre Arbeit · ihren Mann · seinen Beruf. و«ـها» العربية لا تتغير مع المملوك، أما ihr فتأخذ نهاية المملوك. وبعد stolz يأتي auf ثم المفعول."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~ihre Mann~~",
+          "ar": "‑e علامةً لأن المالكة امرأة، كما «ـها»"
+        },
+        "whyArabicSpeakerFails": "في العربية «ـها» علامة المالكة المؤنثة وحدها، ولا تتغير مع المملوك («زوجُها · عملُها»)، فيظن المتعلم أن ‑e في ihre علامةُ أن المالكة امرأة فيضعها مع كل اسم. والألمانية تأخذ الجذع ihr من المالكة، والنهاية من أداة المملوك ودوره: der Mann ← ihr Mann · die Arbeit ← ihre Arbeit · den Mann ← ihren Mann (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ihr Mann ist Lehrer. · Ihre Tochter ist jung.",
+          "ar": "زوجها معلّم. · ابنتها صغيرة السن."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ihre Vater wohnt in Tunesien.~~",
+          "a": "Ihr Vater wohnt in Tunesien."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Er liebt ihre Mutter.~~ (= أمّه)",
+          "ar": "الجذع بجنس المملوك كما في الفرنسية sa mère"
+        },
+        "whyArabicSpeakerFails": "العربية في صفّك هنا: «أمُّه» و«أمُّها» تفرّقان المالك كما seine وihre. الخطر من الفرنسية التي يعرفها كثير من العرب في المغرب العربي: son وsa فيها بجنس المملوك لا المالك (sa mère = أمّه وأمّها)، فيختار المتعلم ihre لأن Mutter مؤنثة. والألمانية تأخذ الجذع من المالك: هو ← seine Mutter · هي ← ihre Mutter (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Er liebt seine Mutter.",
+          "ar": "يحب أمّه."
+        },
+        "exercise": {
+          "q": "أكمل: Yusuf liebt ___ Schwester. · Lena liebt ___ Brüder.",
+          "a": "seine · ihre"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich bin stolz mit Oma.~~",
+          "ar": "باء «فخور بـ» تصير mit"
+        },
+        "whyArabicSpeakerFails": "في العربية «فخور بـ»، والباء تقابل mit («مع») في كثير من المواضع، فيقول المتعلم stolz mit. والألمانية تربط stolz بحرف auf ويأتي بعده المفعول: stolz auf Oma · stolz auf meinen Bruder (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bin stolz auf Oma.",
+          "ar": "أنا فخور بجدتي."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Lena ist stolz mit Mia.~~",
+          "a": "Lena ist stolz auf Mia."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "geschwister",
+      "zwilling",
+      "verheiratet",
+      "beruf",
+      "arbeiten",
+      "studieren",
+      "arbeit",
+      "aufnehmen",
+      "erzaehlen",
+      "stolz",
+      "heimat",
+      "glueck",
+      "gluecklich",
+      "ihr"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Geschwister",
+      "https://www.duden.de/rechtschreibung/aufnehmen",
+      "https://www.duden.de/rechtschreibung/Heimat",
+      "https://www.duden.de/rechtschreibung/Glueck",
+      "https://www.duden.de/rechtschreibung/gluecklich",
+      "https://www.duden.de/rechtschreibung/stolz"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Geschwister",
+      "https://de.wiktionary.org/wiki/ihr"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-familie-mix"
+  ],
+  "audioManifestRefs": [
+    "word-geschwister",
+    "word-zwilling",
+    "word-verheiratet",
+    "word-beruf",
+    "word-arbeiten",
+    "word-studieren",
+    "word-arbeit",
+    "word-aufnehmen",
+    "word-erzaehlen",
+    "word-stolz",
+    "word-heimat",
+    "word-glueck",
+    "word-gluecklich",
+    "word-ihr"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 (Meine Familie) — Familienaufnahme",
+    "goetheWordListOverlap": [
+      "geschwister",
+      "verheiratet",
+      "beruf",
+      "arbeiten",
+      "studieren",
+      "arbeit",
+      "erzaehlen",
+      "heimat",
+      "glueck",
+      "gluecklich",
+      "ihr"
+    ]
+  }
+}

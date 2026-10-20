@@ -1,0 +1,406 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u1-d1",
+  "level": "A2",
+  "unit": 1,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst deinen gestrigen Morgen erzählen — mit dem Perfekt-System: gelacht · gefallen · angemacht · vergessen · passiert.",
+    "ar": "تروي صباح أمس بنظام الماضي (Perfekt) كاملاً: خمسة قوالب لاسم المفعول + اختيار haben أو sein"
+  },
+  "canDoDaily": [
+    "يروي صباح أمس في 6 جمل بالماضي (Perfekt) مرتبة زمنياً ويختار haben/sein صحيحاً",
+    "يميّز التصريف بلا ge (vergessen · beeilt · passiert) من التصريف بـge (gelacht · gefallen · angemacht)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "aufstehen",
+      "gestern",
+      "fruehstuecken"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«نسيتُ مفتاحي» — أي صيغة صحيحة؟"
+        },
+        "choices": [
+          "Ich habe meinen Schlüssel vergessen.",
+          "Ich habe meinen Schlüssel gevergessen.",
+          "Ich bin meinen Schlüssel vergessen."
+        ],
+        "answer": "Ich habe meinen Schlüssel vergessen.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«ماذا حدث؟» — haben أم sein؟"
+        },
+        "choices": [
+          "Was ist passiert?",
+          "Was hat passiert?"
+        ],
+        "answer": "Was ist passiert?",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من A1: aufstehen → ich bin aufgestanden (sein: انتقال من النوم إلى الوقوف)",
+      "من A1: frühstücken → ich habe gefrühstückt (ge-…-t) · fotografieren → ich habe fotografiert (لا ge)"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "licht",
+      "vergessen",
+      "lachen",
+      "schon",
+      "ausgehen",
+      "beeilen",
+      "fallen",
+      "gerade",
+      "anmachen",
+      "verlieren",
+      "passieren",
+      "ausmachen",
+      "beginnen"
+    ],
+    "grammarArsenalIds": [
+      "ars-perfekt",
+      "ars-haben-sein"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "needs-ist",
+      "reflexive",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "verb-bank",
+        "items": [
+          {
+            "q": "lachen → Ich habe ___ (القالب 1)",
+            "a": "gelacht — ge + الجذر + t"
+          },
+          {
+            "q": "fallen → Es ist ___ (القالب 2)",
+            "a": "gefallen — ge + الجذر + en"
+          },
+          {
+            "q": "anmachen → Ich habe das Licht ___ (القالب 3)",
+            "a": "angemacht — البادئة المنفصلة + ge + الجذر + t"
+          },
+          {
+            "q": "vergessen → Ich habe ___ (القالب 4)",
+            "a": "vergessen — ver- ملتصقة: بلا ge"
+          },
+          {
+            "q": "passieren → Was ist ___? (القالب 5)",
+            "a": "passiert — -ieren: بلا ge"
+          }
+        ],
+        "interleavedWith": [
+          "fruehstuecken",
+          "aufstehen",
+          "fotografieren"
+        ],
+        "hints": [
+          "بادئة منفصلة (an/aus/auf)؟ ge في المنتصف: angemacht",
+          "بادئة ملتصقة (be-/ver-/er-) أو -ieren؟ لا ge أبداً"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Mein Handy ___ auf den Boden gefallen.",
+            "a": "ist — السقوط تغيّر مكان"
+          },
+          {
+            "q": "Ich ___ das Licht ausgemacht.",
+            "a": "habe — فعل متعدٍّ: أطفأتُ شيئاً"
+          },
+          {
+            "q": "Das Licht ___ plötzlich ausgegangen.",
+            "a": "ist — لازم: انطفأ وحده"
+          },
+          {
+            "q": "Was ___ gestern passiert?",
+            "a": "ist — passieren دائماً مع sein"
+          },
+          {
+            "q": "Ich ___ mich sehr beeilt.",
+            "a": "habe — الانعكاسي دائماً مع haben"
+          }
+        ],
+        "interleavedWith": [
+          "aufstehen",
+          "bleiben",
+          "fahren"
+        ],
+        "hints": [
+          "حركة أو تغيّر حال (من A إلى B) = sein",
+          "مفعول به أو sich = haben"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "Ich habe meine Brille geverloren.",
+            "a": "Ich habe meine Brille verloren. — ver- بلا ge"
+          },
+          {
+            "q": "Das Spiel hat schon gebeginnt.",
+            "a": "Das Spiel hat schon begonnen. — be- بلا ge + تصريف قوي"
+          },
+          {
+            "q": "Hast du schon gefrühstückt? — Nein, schon nicht.",
+            "a": "Nein, noch nicht. — نفي schon هو noch nicht"
+          },
+          {
+            "q": "Gestern ich bin spät ausgegangen.",
+            "a": "Gestern bin ich spät ausgegangen. — الفعل المساعد في الخانة الثانية (V2)"
+          }
+        ],
+        "interleavedWith": [
+          "gestern",
+          "deswegen",
+          "brille"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "speaking",
+        "items": [
+          {
+            "q": "احكِ صباح أمس في 3 جمل (سجّل صوتك): الاستيقاظ ← الضوء ← مشكلة صغيرة",
+            "a": "Gestern bin ich um sieben aufgestanden. Ich habe das Licht angemacht und mich beeilt. Dann habe ich meinen Schlüssel vergessen!"
+          }
+        ],
+        "interleavedWith": [
+          "aufstehen",
+          "schluessel",
+          "zuerst"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Den gestrigen Morgen erzählen",
+        "ar": "سرد صباح الأمس"
+      },
+      "situation": {
+        "de": "Deine Freundin fragt: »Warum bist du zu spät gekommen? Was ist passiert?«",
+        "ar": "صديقتك تسأل: «لماذا تأخرت؟ ماذا حدث؟»"
+      },
+      "successCriteria": [
+        "6 جمل بالماضي على الأقل بترتيب زمني (zuerst · dann · danach · zuletzt)",
+        "3 قوالب مختلفة على الأقل: بـge (gelacht/gefallen) + بادئة منفصلة (angemacht) + بلا ge (vergessen/passiert)",
+        "haben/sein صحيح في كل جملة — خصوصاً ist passiert · ist gefallen · ist ausgegangen"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«ضحكنا كثيراً» بالماضي؟",
+            "a": "Wir haben viel gelacht."
+          },
+          {
+            "q": "«أشعلتُ الضوء»؟",
+            "a": "Ich habe das Licht angemacht."
+          },
+          {
+            "q": "«ماذا حدث؟»",
+            "a": "Was ist passiert?"
+          },
+          {
+            "q": "«ضوء» — الأداة والجمع؟",
+            "a": "das Licht → die Lichter"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«نسيتُ مفتاحي»؟",
+            "a": "Ich habe meinen Schlüssel vergessen."
+          },
+          {
+            "q": "«سقط هاتفي»؟",
+            "a": "Mein Handy ist gefallen."
+          },
+          {
+            "q": "«هل أطفأتَ التلفاز؟»",
+            "a": "Hast du den Fernseher ausgemacht?"
+          },
+          {
+            "q": "«وصلتُ للتوّ»؟",
+            "a": "Ich bin gerade angekommen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أضعتُ نظارتي»؟",
+            "a": "Ich habe meine Brille verloren."
+          },
+          {
+            "q": "«المباراة بدأت بالفعل»؟",
+            "a": "Das Spiel hat schon begonnen."
+          },
+          {
+            "q": "«استعجلتُ»؟",
+            "a": "Ich habe mich beeilt."
+          },
+          {
+            "q": "«خرجنا للسهر يوم السبت»؟",
+            "a": "Am Samstag sind wir ausgegangen."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Gestern Morgen bin ich um sieben aufgestanden und habe das Licht angemacht. Dann ist etwas passiert: Mein Handy ist auf den Boden gefallen! Ich habe gelacht und mich beeilt. Ich habe das Licht ausgemacht — und meinen Schlüssel vergessen. Das System: gelacht · gefallen · angemacht · vergessen · passiert.",
+      "ar": "صباح أمس نهضتُ في السابعة وأشعلتُ الضوء. ثم حدث شيء: سقط هاتفي على الأرض! ضحكتُ واستعجلتُ. أطفأتُ الضوء — ونسيتُ مفتاحي. النظام خمسة قوالب: gelacht · gefallen · angemacht · vergessen · passiert."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich habe gevergessen~~ · ~~Ich habe geverloren~~ · ~~Es hat gebeginnt~~ · ~~Was ist gepassiert?~~",
+          "ar": "لا **ge** مع البادئات الملتصقة (be- · ver- · er-) ولا مع **-ieren**: vergessen · verloren · begonnen · beeilt · passiert"
+        },
+        "whyArabicSpeakerFails": "تعميم قاعدة ge المحفوظة من A1 على كل فعل: الماضي العربي وزن واحد ثابت (فَعَلَ) لكل الأفعال، فيتوقع المتعلم قالباً واحداً — بينما الألمانية تُسقط ge حين يبدأ الفعل ببادئة ملتصقة غير منبورة أو ينتهي بـ-ieren (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe vergessen. · Ich habe verloren. · Es hat begonnen. · Was ist passiert?",
+          "ar": "نسيتُ. · أضعتُ. · بدأ. · ماذا حدث؟"
+        },
+        "exercise": {
+          "q": "بـge أم بلا ge؟ verstehen → hat ___ · bezahlen → hat ___ · lachen → hat ___",
+          "a": "verstanden · bezahlt · gelacht"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Was hat passiert?~~ · ~~Mein Handy hat gefallen.~~ · ~~Das Licht hat ausgegangen.~~",
+          "ar": "**sein** لا haben مع passieren · fallen · ausgehen — وقارن الزوج: Ich **habe** das Licht ausgemacht ↔ Das Licht **ist** ausgegangen"
+        },
+        "whyArabicSpeakerFails": "الماضي العربي بلا فعل مساعد (حدثَ · سقطَ · انطفأَ كلٌّ منها كلمة واحدة)، فيختار المتعلم haben تلقائياً كأنه «علامة الماضي». الجسر العربي المفيد: «أطفأتُ الضوءَ» (متعدٍّ = haben) ↔ «انطفأَ الضوءُ» (مطاوع لازم = sein) — وزن «انفعل» يدل غالباً على sein (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Was ist passiert? · Mein Handy ist gefallen. · Das Licht ist ausgegangen.",
+          "ar": "ماذا حدث؟ · سقط هاتفي. · انطفأ الضوء."
+        },
+        "exercise": {
+          "q": "Ich ___ das Licht ausgemacht. / Das Licht ___ ausgegangen.",
+          "a": "habe / ist"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Hast du schon gefrühstückt? — Nein, schon nicht.~~",
+          "ar": "نفي **schon** ليس «schon nicht» بل **noch nicht** (ليس بعد) — والإيجاب: Ja, ich habe schon …"
+        },
+        "whyArabicSpeakerFails": "العربية تنفي بإضافة أداة إلى الجملة نفسها («لم أفطر بعد»)، فيُترجم المتعلم حرفياً بإضافة nicht إلى schon — بينما الألمانية تبدّل الكلمة كلها: schon ↔ noch nicht (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Hast du schon gefrühstückt? — Nein, noch nicht. / Ja, ich habe schon gefrühstückt.",
+          "ar": "هل فطرتَ بالفعل؟ — لا، ليس بعد. / نعم، فطرتُ."
+        },
+        "exercise": {
+          "q": "أجب بالنفي: Hast du das Licht schon ausgemacht? — Nein, ___",
+          "a": "noch nicht."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "licht",
+      "vergessen",
+      "lachen",
+      "schon",
+      "ausgehen",
+      "beeilen",
+      "fallen",
+      "gerade",
+      "anmachen",
+      "verlieren",
+      "passieren",
+      "ausmachen",
+      "beginnen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/vergessen",
+      "https://www.duden.de/rechtschreibung/passieren",
+      "https://www.duden.de/rechtschreibung/Licht"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/ausgehen"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-perfekt",
+    "ars-haben-sein"
+  ],
+  "audioManifestRefs": [
+    "word-licht",
+    "word-vergessen",
+    "word-lachen",
+    "word-schon",
+    "word-ausgehen",
+    "word-beeilen",
+    "word-fallen",
+    "word-gerade",
+    "word-anmachen",
+    "word-verlieren",
+    "word-passieren",
+    "word-ausmachen",
+    "word-beginnen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 1 «Und was machst du?» · Abschnitt «Und was hast du gemacht?» — über Vergangenes berichten (فهرس Klett الرسمي — D108)",
+    "goetheWordListOverlap": [
+      "licht",
+      "vergessen",
+      "lachen",
+      "schon",
+      "ausgehen",
+      "beeilen",
+      "fallen",
+      "gerade",
+      "anmachen",
+      "verlieren",
+      "passieren",
+      "ausmachen",
+      "beginnen"
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d5-heute-koche-ich",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Heute koche ich!",
+    "ar": "اليوم أطبخ أنا! — مهمة المقهى: يوسف يطلب طلباً كاملاً ويرفض صنفين بلطف (keine Vorspeise · keine Sahne) وينفي المعيّن بـnicht (Ich trinke den Kaffee nicht.)"
+  },
+  "usedIn": [
+    "a1-u5-d5"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "ko-1",
+      "speaker": "lena",
+      "text": "Yusuf, heute bist du der Gast, und ich koche! Guten Tag!",
+      "direction": "مهمة الوحدة الأخيرة في الدورة عبر الإنترنت: طلب كامل في مقهى بصيغة Sie — لينا صاحبة المقهى التي تطبخ وتخدم، ويوسف الزبون"
+    },
+    {
+      "id": "ko-2",
+      "speaker": "yusuf",
+      "text": "Guten Tag! Ich habe Durst. Eine Limonade, bitte.",
+      "direction": "يبدأ بالمشروب — der Durst اسم مع haben كـHunger"
+    },
+    {
+      "id": "ko-3",
+      "speaker": "lena",
+      "text": "Gern. Möchten Sie auch eine Vorspeise?",
+      "direction": "تعرض المقبلات بلطف"
+    },
+    {
+      "id": "ko-4",
+      "speaker": "yusuf",
+      "text": "Nein, danke, keine Vorspeise. Aber ich habe Hunger!",
+      "direction": "الرفض المهذب الأول: Nein, danke + keine (die Vorspeise بلا أداة في الرفض)"
+    },
+    {
+      "id": "ko-5",
+      "speaker": "lena",
+      "text": "Heute koche ich Hähnchen mit Reis. Das ist gesund!",
+      "direction": "تقترح طبق اليوم — koche: kochen مع ich"
+    },
+    {
+      "id": "ko-6",
+      "speaker": "yusuf",
+      "text": "Super! Das Hähnchen, bitte.",
+      "direction": "يطلب الطبق المعيّن الذي اقترحته (das Hähnchen — ‑chen ← das)"
+    },
+    {
+      "id": "ko-7",
+      "speaker": "lena",
+      "text": "Hier ist das Hähnchen. Guten Appetit!",
+      "direction": "تقدّم الطبق"
+    },
+    {
+      "id": "ko-8",
+      "speaker": "yusuf",
+      "text": "Danke! Aber das Hähnchen hat kein Salz.",
+      "direction": "يلاحظ بلطف: kein Salz — das Salz مادة بلا أداة ← kein"
+    },
+    {
+      "id": "ko-9",
+      "speaker": "lena",
+      "text": "Kein Salz? Hier sind Salz und Pfeffer.",
+      "direction": "تقدّم الملح والفلفل"
+    },
+    {
+      "id": "ko-10",
+      "speaker": "yusuf",
+      "text": "Danke, jetzt ist es gut!",
+      "direction": "es = das Hähnchen"
+    },
+    {
+      "id": "ko-11",
+      "speaker": "lena",
+      "text": "Möchten Sie einen Nachtisch? Ich backe auch Kuchen!",
+      "direction": "تعرض الحلوى: تخبز الكعك بنفسها في مقهاها"
+    },
+    {
+      "id": "ko-12",
+      "speaker": "yusuf",
+      "text": "Gern! Ich probiere den Kuchen.",
+      "direction": "يجرّب الكعكة المعيّنة (den Kuchen)"
+    },
+    {
+      "id": "ko-13",
+      "speaker": "lena",
+      "text": "Mit Sahne?",
+      "direction": "تسأل عن القشدة"
+    },
+    {
+      "id": "ko-14",
+      "speaker": "yusuf",
+      "text": "Nein, danke, keine Sahne. Und einen Kaffee ohne Zucker, bitte.",
+      "direction": "الرفض المهذب الثاني: keine Sahne — ويطلب قهوة بلا سكر"
+    },
+    {
+      "id": "ko-15",
+      "speaker": "lena",
+      "text": "Hier sind der Kuchen und der Kaffee.",
+      "direction": "تقدّم الكعكة والقهوة — لكنها أخطأت القهوة"
+    },
+    {
+      "id": "ko-16",
+      "speaker": "yusuf",
+      "text": "Danke! Aber der Kaffee ist sehr süß. Ich trinke den Kaffee nicht.",
+      "direction": "القهوة المعيّنة (den Kaffee) يُنفى فعلها بـnicht في آخر الجملة — لا kein"
+    },
+    {
+      "id": "ko-17",
+      "speaker": "lena",
+      "text": "Ach so, mit Zucker! Hier ist der Kaffee ohne Zucker.",
+      "direction": "تفهم الخطأ وتبدّل القهوة"
+    },
+    {
+      "id": "ko-18",
+      "speaker": "yusuf",
+      "text": "Danke! Der Kuchen schmeckt sehr gut, und die Küche hier ist super!",
+      "direction": "يمدح الكعكة والمطبخ (die Küche = المطبخ وطعامه — غير der Kuchen!)"
+    },
+    {
+      "id": "ko-19",
+      "speaker": "lena",
+      "text": "Danke! Die Kasse ist dort. Elf Euro, bitte.",
+      "direction": "تشير إلى الصندوق — والحساب أحد عشر يورو"
+    },
+    {
+      "id": "ko-20",
+      "speaker": "yusuf",
+      "text": "Hier, bitte. Und ich möchte für morgen reservieren!",
+      "direction": "يدفع، وأعجبه المكان فيحجز للغد"
+    }
+  ]
+}

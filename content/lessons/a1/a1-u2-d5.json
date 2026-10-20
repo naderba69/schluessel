@@ -1,0 +1,686 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u2-d5",
+  "level": "A1",
+  "unit": 2,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Wir lernen uns kennen: Ich stelle mich vor. · Ich lese auch gern. · Natürlich sprechen wir Deutsch!",
+    "ar": "تجري حوار تعارف قصيراً من 6 تبادلات — والفعل ثانياً دائماً: auch وgern بعده لا قبله، وبعد Natürlich يأتي الفعل ثم الفاعل"
+  },
+  "canDoDaily": [
+    "يجري حوار تعارف من 6 تبادلات: يعرّف نفسه (Ich stelle mich vor) ويسأل عن الأصل والسكن واللغة والهواية ثم يودّع",
+    "يضع الفعل ثانياً مع الظروف: Ich lese auch gern · Natürlich sprechen wir Deutsch — ويبدأ سؤال نعم/لا بالفعل: Hast du ein Hobby?"
+  ],
+  "warmup": {
+    "cardIds": [
+      "vorname",
+      "kennen",
+      "freund"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«وأنا أيضاً أحب القراءة» — أين auch وgern؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Ich lese auch gern.",
+          "Ich auch lese gern.",
+          "Ich auch gern lese."
+        ],
+        "answer": "Ich lese auch gern.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "vorstellen",
+      "kennenlernen",
+      "freuen",
+      "gern",
+      "nett",
+      "gespraech",
+      "auch",
+      "oder",
+      "natuerlich",
+      "hobby",
+      "lesen",
+      "musik",
+      "schlecht",
+      "also",
+      "gruppe"
+    ],
+    "grammarArsenalIds": [
+      "ars-kennenlernen"
+    ],
+    "storySentenceIds": [
+      "story-a1-u2-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ich-laut",
+      "sp-st-initial",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "«وأنا أيضاً أسكن في برلين»: Ich wohne ___ in Berlin.",
+            "a": "auch",
+            "why": "auch بعد الفعل wohne مباشرة — لا بين ich وفعله. العربية تقول «أنا أيضاً أسكن»، والألمانية تقدّم الفعل: Ich wohne auch in Berlin."
+          },
+          {
+            "q": "«أحب القراءة»: Ich ___ gern.",
+            "a": "lese",
+            "why": "gern ليست فعلاً بل ظرف (بمحبة): الفعل lese ثانياً بعد Ich ثم gern — «أقرأ بمحبة» = أحب القراءة."
+          },
+          {
+            "q": "«طبعاً نتكلم الألمانية»: Natürlich ___ wir Deutsch!",
+            "a": "sprechen",
+            "why": "Natürlich في الموضع الأول ⇐ الفعل sprechen ثانياً مباشرة ثم الفاعل wir — كما في Hier wohne ich."
+          },
+          {
+            "q": "«إذن نتكلم ببطء»: Also sprechen ___ langsam.",
+            "a": "wir",
+            "why": "Also أولاً والفعل sprechen ثانياً ⇐ الفاعل wir ينتقل إلى ما بعد الفعل: Also sprechen wir langsam."
+          },
+          {
+            "q": "«هل عندك هواية؟»: ___ du ein Hobby?",
+            "a": "Hast",
+            "why": "سؤال جوابه نعم أو لا ⇐ الفعل أولاً: Hast du ein Hobby? — وdas Hobby ⇐ ein Hobby."
+          },
+          {
+            "q": "«إذن أنتِ أيضاً تسكنين هنا»: Du wohnst ___ auch hier!",
+            "a": "also",
+            "why": "also (إذن) بعد الفعل wohnst ومعها auch. وalso الألمانية ليست also الإنجليزية: «أيضاً» بالألمانية auch."
+          },
+          {
+            "q": "«أُعرّف بنفسي»: Ich stelle mich ___.",
+            "a": "vor",
+            "why": "vorstellen تنقسم في الجملة: stelle ثانياً كأي فعل وvor في آخر الجملة — نحفظها الآن قطعة واحدة: Ich stelle mich vor."
+          },
+          {
+            "q": "«يسعدني!»: Ich freue ___!",
+            "a": "mich",
+            "why": "freuen تحتاج mich: Ich freue mich = يسعدني (حرفياً: أُفرِح نفسي) — وmich لا تسقط. وفي التحية القصيرة: Freut mich!"
+          },
+          {
+            "q": "«نحن مجموعة»: Wir sind eine ___.",
+            "a": "Gruppe",
+            "why": "die Gruppe مؤنث ⇐ eine Gruppe — والمعلمة تقسم الصف مجموعات من اثنين للعمل الثنائي."
+          }
+        ],
+        "interleavedWith": [
+          "wohnen",
+          "sprechen",
+          "hier"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "gr-3",
+            "speakText": "Ich stelle mich vor: Ich heiße Yusuf.",
+            "q": "استمع: ماذا يفعل يوسف؟",
+            "choices": [
+              "يعرّف بنفسه",
+              "يسأل عن اسمها",
+              "يودّعها"
+            ],
+            "a": "يعرّف بنفسه",
+            "why": "Ich stelle mich vor = أُعرّف بنفسي — ثم Ich heiße Yusuf. وvorstellen تنقسم: stelle … vor."
+          },
+          {
+            "audioId": "gr-4",
+            "speakText": "Freut mich! Ich bin Ayşe. Ich komme aus der Türkei.",
+            "q": "استمع: من أين Ayşe؟",
+            "choices": [
+              "من تركيا",
+              "من تونس",
+              "من ألمانيا"
+            ],
+            "a": "من تركيا",
+            "why": "aus der Türkei = من تركيا (البلد بأداته — درس البلدان) · Freut mich! = يسعدني، تحية التعارف. وAyşe تُنطق «آيْشه»: ş التركية = ش."
+          },
+          {
+            "audioId": "gr-5",
+            "speakText": "Ich komme aus Tunesien. Ich wohne in Berlin.",
+            "q": "استمع: أين يسكن يوسف؟",
+            "choices": [
+              "في برلين",
+              "في تونس",
+              "في تركيا"
+            ],
+            "a": "في برلين",
+            "why": "Ich wohne in Berlin = أسكن في برلين · Ich komme aus Tunesien = أنا من تونس — الأصل غير السكن (درس wo وwoher)."
+          },
+          {
+            "audioId": "gr-6",
+            "speakText": "Ich wohne auch in Berlin!",
+            "q": "استمع: ماذا تقول Ayşe؟",
+            "choices": [
+              "إنها تسكن في برلين أيضاً",
+              "إنها تسكن في تركيا",
+              "إنها لا تعرف برلين"
+            ],
+            "a": "إنها تسكن في برلين أيضاً",
+            "why": "Ich wohne auch in Berlin = أنا أيضاً أسكن في برلين — auch بعد الفعل wohne، لا بين ich وفعله."
+          },
+          {
+            "audioId": "gr-7",
+            "speakText": "Du wohnst also auch hier!",
+            "q": "استمع: ماذا يستنتج يوسف؟",
+            "choices": [
+              "أنها تسكن هنا أيضاً",
+              "أنها من برلين",
+              "أنها تتكلم الإنجليزية"
+            ],
+            "a": "أنها تسكن هنا أيضاً",
+            "why": "also = إذن (استنتاج) · auch = أيضاً — كلاهما بعد الفعل wohnst. وhier = هنا: يوسف في برلين."
+          },
+          {
+            "audioId": "gr-8",
+            "speakText": "Ja! Sprechen wir Deutsch oder Englisch?",
+            "q": "استمع: ماذا تسأل Ayşe؟",
+            "choices": [
+              "بأي لغة يتكلمان",
+              "من أين يوسف",
+              "ما هواية يوسف"
+            ],
+            "a": "بأي لغة يتكلمان",
+            "why": "Sprechen wir Deutsch oder Englisch? = هل نتكلم الألمانية أم الإنجليزية؟ — سؤال نعم/لا يبدأ بالفعل، وoder للاختيار بين شيئين."
+          },
+          {
+            "audioId": "gr-13",
+            "speakText": "Hast du ein Hobby? Ich lese gern.",
+            "q": "استمع: ما هواية يوسف؟",
+            "choices": [
+              "القراءة",
+              "الموسيقى",
+              "الكتابة"
+            ],
+            "a": "القراءة",
+            "why": "Ich lese gern = أحب القراءة (أقرأ بمحبة) — gern بعد الفعل. وHast du ein Hobby? سؤال يبدأ بالفعل."
+          },
+          {
+            "audioId": "gr-14",
+            "speakText": "Ich lese auch gern! Und Musik.",
+            "q": "استمع: ماذا تحب Ayşe؟",
+            "choices": [
+              "القراءة والموسيقى",
+              "الموسيقى فقط",
+              "القراءة فقط"
+            ],
+            "a": "القراءة والموسيقى",
+            "why": "Ich lese auch gern = وأنا أيضاً أحب القراءة · Und Musik = والموسيقى — auch وgern كلاهما بعد الفعل lese."
+          },
+          {
+            "audioId": "gr-15",
+            "speakText": "Das Gespräch ist kurz, aber nett. Tschüss, Ayşe!",
+            "q": "استمع: كيف كان الحوار؟",
+            "choices": [
+              "قصيراً لكن لطيفاً",
+              "طويلاً لكن لطيفاً",
+              "قصيراً وصعباً"
+            ],
+            "a": "قصيراً لكن لطيفاً",
+            "why": "Das Gespräch ist kurz, aber nett = الحوار قصير لكنه لطيف — kurz من درس أمس، وdas Gespräch من sprechen."
+          },
+          {
+            "audioId": "gr-16",
+            "speakText": "Bis morgen, Yusuf! Ich freue mich.",
+            "q": "استمع: متى يلتقيان مرة أخرى؟",
+            "choices": [
+              "غداً",
+              "اليوم مساءً",
+              "بعد أسبوع"
+            ],
+            "a": "غداً",
+            "why": "Bis morgen = إلى الغد · Ich freue mich = يسعدني (أتطلع بسرور) — وmich لا تسقط."
+          }
+        ],
+        "interleavedWith": [
+          "tuerkei",
+          "tunesien",
+          "kommen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "gern.",
+              "Ich",
+              "auch",
+              "lese"
+            ],
+            "a": "Ich lese auch gern.",
+            "why": "الفعل lese ثانياً بعد Ich، ثم auch ثم gern — لا شيء يدخل بين الفاعل وفعله."
+          },
+          {
+            "tokens": [
+              "ich",
+              "gern!",
+              "Natürlich",
+              "lese"
+            ],
+            "a": "Natürlich lese ich gern!",
+            "why": "Natürlich أولاً ⇐ الفعل lese ثانياً ثم الفاعل ich — كـHier wohne ich."
+          },
+          {
+            "tokens": [
+              "Deutsch!",
+              "also",
+              "Du",
+              "sprichst"
+            ],
+            "a": "Du sprichst also Deutsch!",
+            "why": "الفاعل Du أولاً والفعل sprichst ثانياً، ثم also (إذن) بعد الفعل — لا بين du وفعله."
+          },
+          {
+            "tokens": [
+              "ein",
+              "du",
+              "Hobby?",
+              "Hast"
+            ],
+            "a": "Hast du ein Hobby?",
+            "why": "سؤال نعم/لا ⇐ الفعل Hast أولاً ثم الفاعل du — وdas Hobby ⇐ ein Hobby."
+          },
+          {
+            "tokens": [
+              "vor.",
+              "mich",
+              "stelle",
+              "Ich"
+            ],
+            "a": "Ich stelle mich vor.",
+            "why": "stelle ثانياً كأي فعل، وvor في آخر الجملة — قطعة نحفظها: Ich stelle mich vor."
+          },
+          {
+            "tokens": [
+              "kennen.",
+              "uns",
+              "lernen",
+              "Wir"
+            ],
+            "a": "Wir lernen uns kennen.",
+            "why": "lernen ثانياً وkennen في آخر الجملة — كـvorstellen: قطعة واحدة نحفظها الآن."
+          }
+        ],
+        "interleavedWith": [
+          "deutsch",
+          "kennen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "gr-1",
+            "speakText": "Hallo! Wir sind eine Gruppe.",
+            "a": "Hallo! Wir sind eine Gruppe.",
+            "why": "die Gruppe ⇐ eine Gruppe — وGruppe بحرف كبير (اسم) وpp مضاعفة بعد u قصيرة (درس أمس)."
+          },
+          {
+            "audioId": "gr-2",
+            "speakText": "Ja! Wir lernen uns kennen.",
+            "a": "Ja! Wir lernen uns kennen.",
+            "why": "lernen ثانياً وkennen في آخر الجملة — وkennen بـnn بعد e قصيرة."
+          },
+          {
+            "audioId": "gr-9",
+            "speakText": "Natürlich sprechen wir Deutsch!",
+            "a": "Natürlich sprechen wir Deutsch!",
+            "why": "Natürlich أولاً ثم الفعل sprechen ثم wir · ü في Natürlich طويلة، وDeutsch بحرف كبير."
+          },
+          {
+            "audioId": "gr-10",
+            "speakText": "Mein Deutsch ist noch schlecht.",
+            "a": "Mein Deutsch ist noch schlecht.",
+            "why": "schlecht: sch في أولها ثم ch بعد e (صوت ich) ثم t — وnoch = ما زال."
+          },
+          {
+            "audioId": "gr-11",
+            "speakText": "Also sprechen wir langsam.",
+            "a": "Also sprechen wir langsam.",
+            "why": "Also أولاً ⇐ sprechen ثانياً ثم wir · وs في also تُنطق [z] قبل الحركة — كـlesen."
+          },
+          {
+            "audioId": "gr-12",
+            "speakText": "Danke, das ist nett!",
+            "a": "Danke, das ist nett!",
+            "why": "nett بـtt بعد e قصيرة (درس أمس) · والفاصلة بعد Danke."
+          }
+        ],
+        "interleavedWith": [
+          "danke",
+          "hallo",
+          "sprechen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wir lernen uns kennen: ein Gespräch mit sechs Fragen und Antworten",
+        "ar": "حوار تعارف من 6 تبادلات: الاسم · الأصل · السكن · اللغة · الهواية · الوداع"
+      },
+      "situation": {
+        "de": "Im Kurs: Yusuf und Ayşe sind eine Gruppe.",
+        "ar": "في الدورة عبر الإنترنت: المعلمة تجعل يوسف وAyşe مجموعة من اثنين للعمل الثنائي"
+      },
+      "successCriteria": [
+        "6 تبادلات كاملة بلا صمت: يعرّف نفسه (Ich stelle mich vor) · يسأل ويجيب عن الأصل والسكن · يسأل عن الهواية · يودّع (Bis morgen!)",
+        "الفعل ثانياً في كل جملة خبرية: Ich lese auch gern. · Natürlich sprechen wir Deutsch! — وسؤال نعم/لا يبدأ بالفعل: Hast du ein Hobby?"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«وأنا أيضاً أسكن في برلين» — أي جملة صحيحة؟",
+            "a": "Ich wohne auch in Berlin.",
+            "choices": [
+              "Ich wohne auch in Berlin.",
+              "Ich auch wohne in Berlin."
+            ],
+            "why": "auch بعد الفعل wohne — لا شيء يدخل بين ich وفعله."
+          },
+          {
+            "q": "«طبعاً أحب القراءة» — أي ترتيب؟",
+            "a": "Natürlich lese ich gern.",
+            "choices": [
+              "Natürlich lese ich gern.",
+              "Natürlich ich lese gern."
+            ],
+            "why": "Natürlich أولاً ⇐ الفعل lese ثانياً ثم ich."
+          },
+          {
+            "q": "«نحن مجموعة»: Wir sind ___ Gruppe.",
+            "a": "eine",
+            "choices": [
+              "eine",
+              "ein"
+            ],
+            "why": "die Gruppe مؤنث ⇐ eine Gruppe (درس ein وeine)."
+          },
+          {
+            "q": "تحية التعارف القصيرة «يسعدني!»؟",
+            "a": "Freut mich!",
+            "why": "Freut mich! = يسعدني/تشرفنا — وبالجملة الكاملة: Ich freue mich."
+          },
+          {
+            "q": "also بالعربية؟",
+            "a": "إذن",
+            "choices": [
+              "إذن",
+              "أيضاً"
+            ],
+            "why": "also = إذن · وauch = أيضاً — also الإنجليزية تقابل auch الألمانية!"
+          },
+          {
+            "q": "«الحوار» بالألمانية مع أداته؟",
+            "a": "das Gespräch",
+            "why": "das Gespräch (محايد) — من sprechen: Das Gespräch ist kurz, aber nett."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أحب القراءة» — أي جملة صحيحة؟",
+            "a": "Ich lese gern.",
+            "choices": [
+              "Ich lese gern.",
+              "Ich gern lese."
+            ],
+            "why": "gern ظرف لا فعل: مكانها بعد الفعل lese."
+          },
+          {
+            "q": "«هل نتكلم الألمانية أم الإنجليزية؟»: Sprechen wir Deutsch ___ Englisch?",
+            "a": "oder",
+            "choices": [
+              "oder",
+              "und",
+              "auch"
+            ],
+            "why": "oder للاختيار بين شيئين — und تجمع، وauch = أيضاً."
+          },
+          {
+            "q": "«طبعاً نتكلم الألمانية» — أي ترتيب؟",
+            "a": "Natürlich sprechen wir Deutsch!",
+            "choices": [
+              "Natürlich sprechen wir Deutsch!",
+              "Natürlich wir sprechen Deutsch!"
+            ],
+            "why": "Natürlich أولاً ⇐ الفعل sprechen ثانياً ثم wir."
+          },
+          {
+            "q": "schlecht بالعربية؟",
+            "a": "سيئ / ضعيف",
+            "choices": [
+              "سيئ / ضعيف",
+              "لطيف",
+              "قصير"
+            ],
+            "why": "schlecht = سيئ/ضعيف: Mein Deutsch ist noch schlecht."
+          },
+          {
+            "q": "«نتعارف» — أكمل: Wir lernen uns ___.",
+            "a": "kennen",
+            "why": "kennenlernen تنقسم: lernen ثانياً وkennen في آخر الجملة."
+          },
+          {
+            "q": "«الموسيقى» بالألمانية مع أداتها؟",
+            "a": "die Musik",
+            "why": "die Musik (مؤنث): Musik ist mein Hobby."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«وأنا أيضاً أحب القراءة» — أي جملة صحيحة؟",
+            "a": "Ich lese auch gern.",
+            "choices": [
+              "Ich lese auch gern.",
+              "Ich auch lese gern."
+            ],
+            "why": "auch وgern كلاهما بعد الفعل lese."
+          },
+          {
+            "q": "«أُعرّف بنفسي» — أي جملة صحيحة؟",
+            "a": "Ich stelle mich vor.",
+            "choices": [
+              "Ich stelle mich vor.",
+              "Ich vorstelle mich."
+            ],
+            "why": "vorstellen تنقسم: stelle ثانياً وvor في آخر الجملة."
+          },
+          {
+            "q": "سؤال نعم/لا «هل عندك هواية؟» — بأي كلمة يبدأ؟",
+            "a": "Hast",
+            "choices": [
+              "Hast",
+              "du",
+              "Hobby"
+            ],
+            "why": "سؤال نعم/لا يبدأ بالفعل: Hast du ein Hobby?"
+          },
+          {
+            "q": "nett بالعربية؟",
+            "a": "لطيف",
+            "choices": [
+              "لطيف",
+              "سيئ",
+              "طويل"
+            ],
+            "why": "nett = لطيف: Danke, das ist nett!"
+          },
+          {
+            "q": "«الهواية» بالألمانية مع أداتها؟",
+            "a": "das Hobby",
+            "why": "das Hobby (محايد) ⇐ ein Hobby: Hast du ein Hobby?"
+          },
+          {
+            "q": "gern بالعربية؟",
+            "a": "بمحبة / بسرور",
+            "choices": [
+              "بمحبة / بسرور",
+              "أيضاً",
+              "إذن"
+            ],
+            "why": "gern = بمحبة/بسرور: Ich lese gern = أحب القراءة."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute: Ich stelle mich vor. · Wir lernen uns kennen. · Ich lese auch gern. · Natürlich sprechen wir Deutsch! · Also sprechen wir langsam. — Hast du ein Hobby?",
+      "ar": "اليوم: حوار تعارف كامل — والفعل ثانياً دائماً: auch وgern وalso بعده لا قبله، وإن بدأت الجملة بـNatürlich أو Also جاء الفعل ثم الفاعل؛ وسؤال نعم/لا يبدأ بالفعل. وvorstellen وkennenlernen قطعتان: Ich stelle mich vor · Wir lernen uns kennen."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich auch lese gern.~~ / ~~Ich gern lese.~~",
+          "ar": "auch أو gern بين الفاعل والفعل"
+        },
+        "whyArabicSpeakerFails": "العربية تضع «أيضاً» بين الفاعل والفعل بلا حرج («أنا أيضاً أقرأ»)، وتعبّر عن المحبة بفعلٍ يسبق الفعل الآخر («أحب أن أقرأ») — فينقل المتعلم الترتيب حرفياً. والألمانية تثبّت الفعل ثانياً: لا شيء يدخل بين ich وفعله، وauch وgern ظرفان مكانهما بعد الفعل (حرية الظرف مقابل V2 — خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich lese auch gern.",
+          "ar": "وأنا أيضاً أحب القراءة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich auch wohne in Berlin.~~",
+          "a": "Ich wohne auch in Berlin."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Natürlich ich lese gern.~~",
+          "ar": "الفاعل قبل الفعل بعد Natürlich"
+        },
+        "whyArabicSpeakerFails": "في العربية يبقى الترتيب بعد «طبعاً» كما هو: «طبعاً أنا أحب القراءة» — فيُبقي المتعلم ich قبل الفعل. والألمانية: ما في الموضع الأول، فاعلاً كان أو ظرفاً، يأتي بعده الفعل فوراً، فينتقل الفاعل إلى ما بعد الفعل — كـHier wohne ich (حرية الظرف مقابل V2 — خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Natürlich lese ich gern.",
+          "ar": "طبعاً أحب القراءة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Natürlich wir sprechen Deutsch!~~",
+          "a": "Natürlich sprechen wir Deutsch!"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich vorstelle mich.~~",
+          "ar": "vorstellen كاملة في موضع الفعل"
+        },
+        "whyArabicSpeakerFails": "الفعل في العربية كلمة واحدة لا تنقسم («أُعرّف»)، فيأخذ المتعلم vorstellen كما في القاموس ويضعها كلها في موضع الفعل. والألمانية تقسم هذا الفعل في الجملة: stelle ثانياً كأي فعل، وvor في آخر الجملة — ومثله Wir lernen uns kennen. نحفظهما الآن قطعتين، والقاعدة كاملة في الوحدة السابعة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich stelle mich vor.",
+          "ar": "أُعرّف بنفسي."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wir kennenlernen uns.~~",
+          "a": "Wir lernen uns kennen."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "vorstellen",
+      "kennenlernen",
+      "freuen",
+      "gern",
+      "nett",
+      "gespraech",
+      "auch",
+      "oder",
+      "natuerlich",
+      "hobby",
+      "lesen",
+      "musik",
+      "schlecht",
+      "also",
+      "gruppe"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/vorstellen",
+      "https://www.duden.de/rechtschreibung/kennenlernen",
+      "https://www.duden.de/rechtschreibung/Gespr%C3%A4ch"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/kennenlernen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-kennenlernen"
+  ],
+  "audioManifestRefs": [
+    "word-vorstellen",
+    "word-kennenlernen",
+    "word-freuen",
+    "word-gern",
+    "word-nett",
+    "word-gespraech",
+    "word-auch",
+    "word-oder",
+    "word-natuerlich",
+    "word-hobby",
+    "word-lesen",
+    "word-musik",
+    "word-schlecht",
+    "word-also",
+    "word-gruppe"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 2 — Kennenlern-Gespräch",
+    "goetheWordListOverlap": [
+      "vorstellen",
+      "kennenlernen",
+      "freuen",
+      "gern",
+      "nett",
+      "gespraech",
+      "auch",
+      "oder",
+      "hobby",
+      "lesen",
+      "musik",
+      "schlecht",
+      "also",
+      "gruppe"
+    ]
+  }
+}

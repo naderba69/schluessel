@@ -70,6 +70,8 @@ export const CurriculumReference = SchemaVersioned.extend({
         }),
       ),
       targetWordCount: z.number().int().positive(), // A1≈700 | A2≈750 | B1≈1000 | B2≈1100
+      /** D108: من أين جاءت عناوين الفصول (مصدر رسمي متحقَّق منه) — غيابه = غير متحقَّق */
+      source: z.string().min(1).optional(),
     }),
   ),
 });
@@ -78,3 +80,53 @@ export type ArsenalFile = z.infer<typeof ArsenalFile>;
 export type FesteVerbenEntry = z.infer<typeof FesteVerbenEntry>;
 export type InterferenceEntry = z.infer<typeof InterferenceEntry>;
 export type CurriculumReference = z.infer<typeof CurriculumReference>;
+
+// ——— D115: الشفرة النحوية = قاعدة اليوم بصيغة الاكتشاف الموجَّه (E13 · D114) ———
+
+/** مرجع خريطة التداخل النحوي (D59) — المقارنة العربية في كل قاعدة تشير إليه كما تفعل بطاقات المصائد */
+export const INTERFERENCE_MAP_REF = "10‑ي";
+
+/** مثال اكتشاف: جملة ألمانية كاملة + معناها — الأمثلة قبل القاعدة دائماً (F121) */
+export const DiscoveryExample = z.object({ de: DeText, ar: ArText }).strict();
+
+/**
+ * محتوى «الشفرة» (§10: قصة + قاعدة + استثناءات + تمارين) بصيغة الاكتشاف الموجَّه:
+ * المشهد ← أمثلة ≥3 منه ← سؤال استنتاج ← القاعدة (de/ar) ← مقارنة عربية إلزامية ← الحدود ← حبّات الجملة.
+ * قانون الجبهة (13) على نصوصها الألمانية يفرضه المدقِّق نسبةً لأول درس يشير إليها في المسار.
+ */
+export const ShufraPayload = z
+  .object({
+    topicAr: ArText,
+    /** المشهد القصير الذي تأتي منه الأمثلة (سياق قصة لا جمل معزولة) */
+    sceneAr: ArText,
+    examples: z.array(DiscoveryExample).min(3).max(6),
+    inferencePromptAr: ArText,
+    ruleDe: DeText,
+    ruleAr: ArText,
+    /** «لا قاعدة بلا مقارنة» (E13) — بمرجع خريطة التداخل */
+    contrastAr: ArText.refine((s) => s.includes(INTERFERENCE_MAP_REF), {
+      message: `المقارنة العربية تشير إلى خريطة التداخل (${INTERFERENCE_MAP_REF}) — D59`,
+    }),
+    /** ما لا تغطيه القاعدة اليوم — معلن لا مسكوت عنه */
+    limitsAr: z.array(ArText).max(4).default([]),
+    /** حبّات الجملة: الترتيب الصحيح هو المصفوفة نفسها — بلا تكرار (ترتيب واحد ممكن) */
+    beads: z
+      .array(DeText)
+      .min(3)
+      .max(8)
+      .refine((b) => new Set(b).size === b.length, { message: "حبّات مكررة تجعل الترتيب ملتبساً" }),
+    /** أسماء العلم في الأمثلة تُعلن ولا تُستنتج (كقفل الامتحان D109) */
+    properNouns: z.array(z.string().regex(/^\p{Lu}\p{Ll}+$/u, { message: "اسم علم: حرف كبير ثم صغيرة" })).default([]),
+  })
+  .strict();
+export type ShufraPayload = z.infer<typeof ShufraPayload>;
+
+/** ملف قاعدة: content/arsenal/grammar/<id>.json — يعرضه المُشغِّل في محطة «الجديد» بعد الكلمات */
+export const GrammarRuleFile = ArsenalFile.extend({
+  id: z.string().regex(/^ars-[a-z0-9-]+$/, { message: "معرّف القاعدة ars-…" }),
+  kind: z.literal("shufra"),
+  title: z.object({ de: DeText, ar: ArText }).strict(),
+  payload: ShufraPayload,
+  levelIntroduced: Level,
+}).strict();
+export type GrammarRuleFile = z.infer<typeof GrammarRuleFile>;

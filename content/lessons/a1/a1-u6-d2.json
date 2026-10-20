@@ -1,0 +1,776 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d2",
+  "level": "A1",
+  "unit": 6,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Das ist das Wohnzimmer. — Mein Zimmer ist klein, aber gemütlich. Ich wohne allein.",
+    "ar": "تسمّي غرف البيت بأداتها الصحيحة — والمركّب يأخذ أداته وجمعه من آخر جزء (das Wohnzimmer · der Familienname) — وتصفها بصفة لا تتغير بعد ist (Die Wohnung ist ruhig.)."
+  },
+  "canDoDaily": [
+    "يسمّي غرف البيت (das Wohnzimmer · das Schlafzimmer · das Badezimmer · der Flur · der Keller …) ويعرف أداة المركّب من آخر جزء (die Familie + der Name → der Familienname).",
+    "يصف بيته بصفات لا تتغير بعد ist (hell · ruhig · gemütlich · hoch) ويقول إنه يسكن وحده (Ich wohne allein.)."
+  ],
+  "warmup": {
+    "cardIds": [
+      "familienname",
+      "telefonnummer",
+      "speisekarte"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«غرفة النوم صغيرة» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Das Schlafzimmer ist klein.",
+          "Die Schlafzimmer ist klein.",
+          "Der Schlafzimmer ist klein."
+        ],
+        "answer": "Das Schlafzimmer ist klein.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "zimmer",
+      "schlafzimmer",
+      "wohnzimmer",
+      "badezimmer",
+      "flur",
+      "balkon",
+      "treppe",
+      "keller",
+      "garten",
+      "hell",
+      "ruhig",
+      "gemuetlich",
+      "hoch",
+      "allein",
+      "raum"
+    ],
+    "grammarArsenalIds": [
+      "ars-komposita-genus"
+    ],
+    "storySentenceIds": [
+      "story-a1-u6-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "z",
+      "double-consonant",
+      "ig-ending",
+      "ch-ach-laut",
+      "umlaut-u"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "___ Wohnzimmer ist groß. (der/die/das؟)",
+            "a": "Das",
+            "why": "آخر جزء Zimmer، وdas Zimmer ⇒ das Wohnzimmer — الأداة من آخر المركّب."
+          },
+          {
+            "q": "___ Telefonnummer ist neu. (der/die/das؟)",
+            "a": "Die",
+            "why": "die Nummer آخراً ⇒ die Telefonnummer — لا das من das Telefon."
+          },
+          {
+            "q": "Das ist ___ Familienname. (mein أم meine؟)",
+            "a": "mein",
+            "why": "der Name آخراً ⇒ der Familienname ⇒ mein (كـmein Name) — لا meine من die Familie."
+          },
+          {
+            "q": "Das Haus hat zwei ___. (Badezimmer)",
+            "a": "Badezimmer",
+            "why": "الجمع من آخر جزء: das Zimmer ← die Zimmer بلا نهاية ⇒ die Badezimmer بلا نهاية."
+          },
+          {
+            "q": "Hier sind zwei ___. (Garten)",
+            "a": "Gärten",
+            "why": "der Garten ← die Gärten: نقطتان فوق a بلا نهاية (كـder Apfel ← die Äpfel)."
+          },
+          {
+            "q": "Ich wohne ___. (وحدي)",
+            "a": "allein",
+            "why": "allein = وحده — لا تتغير: ich wohne allein · er wohnt allein، والعربية تصرّفها (وحدي · وحده)."
+          },
+          {
+            "q": "Der Raum ist sehr ___. (عالٍ)",
+            "a": "hoch",
+            "why": "hoch = عالٍ — خبراً بعد ist بلا نهاية."
+          },
+          {
+            "q": "Das Badezimmer ist nicht ___. (مضيء)",
+            "a": "hell",
+            "why": "hell = مضيء — وnicht قبل الصفة: nicht hell = معتم."
+          },
+          {
+            "q": "Die Wohnung ist klein und ___. (هادئة)",
+            "a": "ruhig",
+            "why": "ruhig بلا ‑e: الصفة بعد ist لا تتغير مع المؤنث — تاء التأنيث في «هادئة» عربية وحدها."
+          },
+          {
+            "q": "Das Wohnzimmer ist sehr ___. (مريح ودافئ)",
+            "a": "gemütlich",
+            "why": "gemütlich = مريح دافئ — بـü، وصفة بلا نهاية بعد ist."
+          },
+          {
+            "q": "Die Schule hat zehn ___. (Raum)",
+            "a": "Räume",
+            "why": "der Raum ← die Räume: au ← äu ثم ‑e (كـder Stuhl ← die Stühle)."
+          },
+          {
+            "q": "___ Balkon ist klein. (der/die/das؟)",
+            "a": "Der",
+            "why": "der Balkon مذكر وإن كانت «الشرفة» مؤنثة بالعربية — الجنس يُحفظ مع الكلمة."
+          }
+        ],
+        "interleavedWith": [
+          "schule",
+          "telefonnummer",
+          "familienname",
+          "haus",
+          "wohnung",
+          "neu",
+          "klein"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "zi-5",
+            "speakText": "Ja. Und hier ist die Treppe. Mein Zimmer ist klein, aber gemütlich.",
+            "q": "استمع: كيف غرفة لينا؟",
+            "choices": [
+              "صغيرة لكنها مريحة",
+              "كبيرة ومريحة",
+              "صغيرة وصاخبة"
+            ],
+            "a": "صغيرة لكنها مريحة",
+            "why": "Mein Zimmer ist klein, aber gemütlich = غرفتي صغيرة لكنها مريحة."
+          },
+          {
+            "audioId": "zi-6",
+            "speakText": "Und deine Brüder? Haben sie auch ein Zimmer?",
+            "q": "استمع: عمّن يسأل يوسف؟",
+            "choices": [
+              "عن إخوة لينا",
+              "عن والدي لينا",
+              "عن جدّي لينا"
+            ],
+            "a": "عن إخوة لينا",
+            "why": "deine Brüder = إخوتك (der Bruder ← die Brüder) · Haben sie auch ein Zimmer? = هل لهم غرفة أيضاً؟"
+          },
+          {
+            "audioId": "zi-7",
+            "speakText": "Ja, die Zwillinge haben ein Zimmer zusammen. Es ist sehr laut!",
+            "q": "استمع: كيف غرفة التوأمين؟",
+            "choices": [
+              "واحدة لهما معاً وصاخبة جداً",
+              "واحدة لهما معاً وهادئة جداً",
+              "لكلٍّ منهما غرفته وهي صاخبة"
+            ],
+            "a": "واحدة لهما معاً وصاخبة جداً",
+            "why": "ein Zimmer zusammen = غرفة واحدة معاً · sehr laut = صاخبة جداً."
+          },
+          {
+            "audioId": "zi-9",
+            "speakText": "Nein, es ist klein. Aber wir haben einen Balkon und einen Garten.",
+            "q": "استمع: ماذا عند أسرة لينا أيضاً؟",
+            "choices": [
+              "شرفة وحديقة",
+              "حديقة وقبو",
+              "شرفة وقبو"
+            ],
+            "a": "شرفة وحديقة",
+            "why": "einen Balkon und einen Garten = شرفة وحديقة — der Balkon · der Garten مفعولين بـeinen."
+          },
+          {
+            "audioId": "zi-11",
+            "speakText": "Ja, der Keller ist alt und nicht hell.",
+            "q": "استمع: كيف القبو؟",
+            "choices": [
+              "قديم ومعتم",
+              "قديم ومضيء",
+              "جديد ومعتم"
+            ],
+            "a": "قديم ومعتم",
+            "why": "alt = قديم · nicht hell = غير مضيء — nicht قبل الصفة."
+          },
+          {
+            "audioId": "zi-12",
+            "speakText": "Ich habe keinen Garten und keinen Balkon.",
+            "q": "استمع: ماذا ليس عند يوسف؟",
+            "choices": [
+              "لا حديقة ولا شرفة",
+              "لا حديقة، لكن عنده شرفة",
+              "لا قبو ولا شرفة"
+            ],
+            "a": "لا حديقة ولا شرفة",
+            "why": "keinen Garten und keinen Balkon — keinen للمذكر مفعولاً."
+          },
+          {
+            "audioId": "zi-13",
+            "speakText": "Und wie ist deine Wohnung?",
+            "q": "استمع: ماذا تريد لينا أن تعرف الآن؟",
+            "choices": [
+              "كيف شقة يوسف",
+              "أين شقة يوسف",
+              "كم غرفة في شقة يوسف"
+            ],
+            "a": "كيف شقة يوسف",
+            "why": "Wie ist …? = كيف …؟ · deine Wohnung = شقتك."
+          },
+          {
+            "audioId": "zi-14",
+            "speakText": "Das Haus ist sehr hoch, und meine Wohnung ist klein.",
+            "q": "استمع: كيف البناية وكيف الشقة؟",
+            "choices": [
+              "البناية عالية جداً والشقة صغيرة",
+              "البناية صغيرة والشقة عالية",
+              "البناية عالية جداً والشقة كبيرة"
+            ],
+            "a": "البناية عالية جداً والشقة صغيرة",
+            "why": "sehr hoch = عالٍ جداً · klein = صغيرة — والصفتان بعد ist بلا نهاية."
+          },
+          {
+            "audioId": "zi-15",
+            "speakText": "Wohnst du allein?",
+            "q": "استمع: ما سؤال لينا عن السكن؟",
+            "choices": [
+              "هل يسكن يوسف وحده؟",
+              "هل يسكن يوسف مع أسرته؟",
+              "أين يسكن يوسف؟"
+            ],
+            "a": "هل يسكن يوسف وحده؟",
+            "why": "allein = وحده · wohnst: wohnen مع du."
+          },
+          {
+            "audioId": "zi-16",
+            "speakText": "Ja, ich wohne allein. Ich habe ein Zimmer, einen Flur, eine Küche und ein Badezimmer.",
+            "q": "استمع: ماذا في شقة يوسف؟",
+            "choices": [
+              "غرفة وممر ومطبخ وحمّام",
+              "غرفتان ومطبخ وحمّام",
+              "غرفة وشرفة ومطبخ وحمّام"
+            ],
+            "a": "غرفة وممر ومطبخ وحمّام",
+            "why": "ein Zimmer · einen Flur (der Flur مفعولاً) · eine Küche · ein Badezimmer."
+          },
+          {
+            "audioId": "zi-17",
+            "speakText": "Nur ein Zimmer? Und wo ist dein Bett?",
+            "q": "استمع: عمّ تسأل لينا بعد «غرفة واحدة فقط»؟",
+            "choices": [
+              "عن مكان سرير يوسف",
+              "عن سعر سرير يوسف",
+              "عن خزانة يوسف"
+            ],
+            "a": "عن مكان سرير يوسف",
+            "why": "Wo ist dein Bett? = أين سريرك؟ · nur ein Zimmer = غرفة واحدة فقط."
+          },
+          {
+            "audioId": "zi-19",
+            "speakText": "Ist das Zimmer ruhig?",
+            "q": "استمع: أيّ صفة للغرفة تسأل عنها لينا؟",
+            "choices": [
+              "هل هي هادئة",
+              "هل هي مضيئة",
+              "هل هي كبيرة"
+            ],
+            "a": "هل هي هادئة",
+            "why": "ruhig = هادئ — بلا ‑e وإن كانت «الغرفة» مؤنثة بالعربية."
+          }
+        ],
+        "interleavedWith": [
+          "wohnung",
+          "dein",
+          "laut",
+          "zusammen",
+          "bruder",
+          "bett",
+          "klein",
+          "alt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "wohne",
+              "Jetzt",
+              "allein.",
+              "ich"
+            ],
+            "a": "Jetzt wohne ich allein.",
+            "why": "Jetzt أولاً ⇒ الفعل wohne ثانياً ثم ich — وallein لا تتغير."
+          },
+          {
+            "tokens": [
+              "einen",
+              "Das",
+              "Garten.",
+              "hat",
+              "Haus"
+            ],
+            "a": "Das Haus hat einen Garten.",
+            "why": "Das Haus فاعل ثم hat ثانياً ثم einen Garten — der Garten مفعولاً ⇒ einen."
+          },
+          {
+            "tokens": [
+              "sind",
+              "Die",
+              "ruhig.",
+              "Zimmer"
+            ],
+            "a": "Die Zimmer sind ruhig.",
+            "why": "Die Zimmer جمع (sind) — والصفة ruhig لا تتغير مع الجمع كما لا تتغير مع المؤنث."
+          },
+          {
+            "tokens": [
+              "ist",
+              "Mein",
+              "lang.",
+              "Familienname"
+            ],
+            "a": "Mein Familienname ist lang.",
+            "why": "Mein لا Meine: der Name آخر المركّب ⇒ der Familienname ⇒ mein."
+          },
+          {
+            "tokens": [
+              "keinen",
+              "Wir",
+              "Balkon.",
+              "haben"
+            ],
+            "a": "Wir haben keinen Balkon.",
+            "why": "Wir ثم haben ثانياً ثم keinen Balkon — der Balkon مذكر مفعولاً ⇒ keinen."
+          },
+          {
+            "tokens": [
+              "ist",
+              "Der",
+              "kurz.",
+              "Flur"
+            ],
+            "a": "Der Flur ist kurz.",
+            "why": "Der Flur ثم ist ثم الصفة kurz — der Flur مذكر."
+          }
+        ],
+        "interleavedWith": [
+          "jetzt",
+          "familienname",
+          "haus",
+          "lang",
+          "kurz",
+          "wohnen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "zi-1",
+            "speakText": "Hallo, Yusuf! Heute zeige ich unser Haus.",
+            "a": "Hallo, Yusuf! Heute zeige ich unser Haus",
+            "why": "zeige بـei «آي» · unser Haus: das Haus ← unser · heute بـeu «أوي»."
+          },
+          {
+            "audioId": "zi-2",
+            "speakText": "Toll! Wie viele Zimmer hat es?",
+            "a": "Toll! Wie viele Zimmer hat es?",
+            "why": "viele: v «ف» وie طويلة · Zimmer بـZ «تس» وmm بعد i القصيرة · es = das Haus."
+          },
+          {
+            "audioId": "zi-3",
+            "speakText": "Sechs Zimmer. Hier ist das Wohnzimmer — groß und hell.",
+            "a": "Sechs Zimmer. Hier ist das Wohnzimmer — groß und hell",
+            "why": "Wohnzimmer كلمة واحدة بحرف كبير واحد وh صامتة تُطيل o · groß بـß بعد الطويلة · hell بـll بعد e القصيرة."
+          },
+          {
+            "audioId": "zi-4",
+            "speakText": "Ja, sehr hell! Und dort? Ist das die Küche?",
+            "a": "Ja, sehr hell! Und dort? Ist das die Küche?",
+            "why": "Küche بـü ثم ch كـich · dort بـt في آخرها · Ist das …? سؤال بالفعل أولاً."
+          },
+          {
+            "audioId": "zi-8",
+            "speakText": "Und das Badezimmer? Ist es groß?",
+            "a": "Und das Badezimmer? Ist es groß?",
+            "why": "Badezimmer كلمة واحدة: a طويلة ثم e وصلٌ خفيف · das Badezimmer: Zimmer آخراً ⇒ das."
+          },
+          {
+            "audioId": "zi-10",
+            "speakText": "Einen Garten! Und einen Keller?",
+            "a": "Einen Garten! Und einen Keller?",
+            "why": "einen: der Garten · der Keller مفعولين · Keller بـll بعد e القصيرة."
+          },
+          {
+            "audioId": "zi-18",
+            "speakText": "Hier! Wohnzimmer und Schlafzimmer — das ist ein Raum.",
+            "a": "Hier! Wohnzimmer und Schlafzimmer — das ist ein Raum",
+            "why": "مركّبان بحرف كبير واحد لكلٍّ · Schlafzimmer: Sch «ش» وa طويلة · der Raum بـau «آو»."
+          },
+          {
+            "audioId": "zi-20",
+            "speakText": "Ja, ruhig und hell. Klein, aber gemütlich — wie dein Zimmer!",
+            "a": "Ja, ruhig und hell. Klein, aber gemütlich — wie dein Zimmer!",
+            "why": "ruhig: ‑ig في الآخر كـich · gemütlich بـü و‑lich · والصفات بلا نهاية."
+          },
+          {
+            "audioId": "word-treppe",
+            "speakText": "Treppe.",
+            "a": "Treppe",
+            "why": "die Treppe: pp بعد e القصيرة · والجمع die Treppen."
+          },
+          {
+            "audioId": "word-gemuetlich",
+            "speakText": "gemütlich.",
+            "a": "gemütlich",
+            "why": "gemütlich: ü طويلة ثم ‑lich في الآخر — صفة بلا نهاية بعد ist."
+          }
+        ],
+        "interleavedWith": [
+          "heute",
+          "zeigen",
+          "haus",
+          "viel",
+          "dort",
+          "toll"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Meine Wohnung: Hier ist das Wohnzimmer. Mein Zimmer ist klein, aber gemütlich.",
+        "ar": "تُري زميلك بيتك غرفةً غرفة (أو رسماً له) وتصف كل غرفة"
+      },
+      "situation": {
+        "de": "Wie viele Zimmer hat deine Wohnung? — Drei Zimmer. Hier ist der Flur.",
+        "ar": "في الدورة: يُري كلٌّ منكما بيته للآخر: Hier ist das Wohnzimmer — groß und hell. · Wir haben einen Balkon. / Wir haben keinen Garten. · Ich wohne allein. — ويسأل الآخر: Ist dein Zimmer ruhig? ثم تتبادلان."
+      },
+      "successCriteria": [
+        "خمس غرف بأدواتها الصحيحة (das Wohnzimmer · das Schlafzimmer · der Flur · die Küche · der Balkon …) — والمركّب بأداة آخر جزء.",
+        "ثلاث جمل وصف بصفة بلا نهاية بعد ist (Das Wohnzimmer ist hell. · Die Küche ist klein.) + سؤال واحد عن بيت الزميل (Ist dein Zimmer ruhig?)."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«غرفة المعيشة مضيئة»؟",
+            "choices": [
+              "Das Wohnzimmer ist hell.",
+              "Die Wohnzimmer ist hell.",
+              "Das Wohnzimmer ist helle."
+            ],
+            "a": "Das Wohnzimmer ist hell.",
+            "why": "Zimmer آخر المركّب ⇒ das Wohnzimmer · والصفة بعد ist لا تأخذ ‑e."
+          },
+          {
+            "q": "«الممر» بالألمانية مع الأداة؟",
+            "a": "der Flur",
+            "why": "der Flur مذكر — وجمعه die Flure."
+          },
+          {
+            "q": "die Telefonnummer — لماذا die؟",
+            "choices": [
+              "لأن آخر جزء die Nummer",
+              "لأن أول جزء das Telefon",
+              "لأن كل الكلمات الطويلة مؤنثة"
+            ],
+            "a": "لأن آخر جزء die Nummer",
+            "why": "الأداة من آخر المركّب دائماً: die Nummer ⇒ die Telefonnummer — ولا أثر لـdas Telefon."
+          },
+          {
+            "q": "der Keller = ؟",
+            "choices": [
+              "القبو",
+              "الممر",
+              "الشرفة"
+            ],
+            "a": "القبو",
+            "why": "der Keller = القبو · der Flur = الممر · der Balkon = الشرفة."
+          },
+          {
+            "q": "«الحدائق جميلة»؟",
+            "choices": [
+              "Die Gärten sind schön.",
+              "Die Garten sind schön.",
+              "Die Gärtens sind schön."
+            ],
+            "a": "Die Gärten sind schön.",
+            "why": "der Garten ← die Gärten: نقطتان بلا نهاية — ولا ‑s."
+          },
+          {
+            "q": "«الغرف» جمع der Raum مع الأداة؟",
+            "a": "die Räume",
+            "why": "der Raum ← die Räume: au ← äu ثم ‑e (كـder Stuhl ← die Stühle)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«غرفة النوم هادئة»؟",
+            "choices": [
+              "Das Schlafzimmer ist ruhig.",
+              "Der Schlafzimmer ist ruhig.",
+              "Das Schlafzimmer ist ruhige."
+            ],
+            "a": "Das Schlafzimmer ist ruhig.",
+            "why": "Zimmer آخراً ⇒ das Schlafzimmer · وruhig بعد ist بلا ‑e."
+          },
+          {
+            "q": "«القبو» بالألمانية مع الأداة؟",
+            "a": "der Keller",
+            "why": "der Keller مذكر — وجمعه die Keller بلا نهاية (‑er)."
+          },
+          {
+            "q": "der Familienname — لماذا der؟",
+            "choices": [
+              "لأن آخر جزء der Name",
+              "لأن أول جزء die Familie",
+              "لأن الأسماء كلها مذكرة"
+            ],
+            "a": "لأن آخر جزء der Name",
+            "why": "الأداة من آخر المركّب: der Name ⇒ der Familienname — die Familie أوله فلا تقرر شيئاً."
+          },
+          {
+            "q": "die Treppe = ؟",
+            "choices": [
+              "الدرج",
+              "الممر",
+              "القبو"
+            ],
+            "a": "الدرج",
+            "why": "die Treppe = الدرج · der Flur = الممر · der Keller = القبو."
+          },
+          {
+            "q": "«الحمّامات صغيرة»؟",
+            "choices": [
+              "Die Badezimmer sind klein.",
+              "Die Badezimmers sind klein.",
+              "Das Badezimmer sind klein."
+            ],
+            "a": "Die Badezimmer sind klein.",
+            "why": "الجمع من الآخر: die Zimmer بلا نهاية ⇒ die Badezimmer بلا ‑s · وsind للجمع."
+          },
+          {
+            "q": "«الحديقة» بالألمانية مع الأداة؟",
+            "a": "der Garten",
+            "why": "der Garten مذكر وإن كانت «الحديقة» مؤنثة بالعربية — وجمعه die Gärten."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المطبخ مريح»؟",
+            "choices": [
+              "Die Küche ist gemütlich.",
+              "Die Küche ist gemütliche.",
+              "Das Küche ist gemütlich."
+            ],
+            "a": "Die Küche ist gemütlich.",
+            "why": "die Küche مؤنث · والصفة gemütlich بعد ist بلا ‑e."
+          },
+          {
+            "q": "«غرفة النوم» بالألمانية مع الأداة؟",
+            "a": "das Schlafzimmer",
+            "why": "das Schlafzimmer: Zimmer آخراً ⇒ das — وجمعه die Schlafzimmer."
+          },
+          {
+            "q": "die Speisekarte — من أين أداتها؟",
+            "choices": [
+              "من die Karte آخر المركّب",
+              "من أول الكلمة",
+              "من المعنى: «القائمة» مؤنثة بالعربية"
+            ],
+            "a": "من die Karte آخر المركّب",
+            "why": "الأداة من آخر المركّب: die Karte ⇒ die Speisekarte — وموافقة العربية هنا مصادفة."
+          },
+          {
+            "q": "hoch = ؟",
+            "choices": [
+              "عالٍ",
+              "هادئ",
+              "مضيء"
+            ],
+            "a": "عالٍ",
+            "why": "hoch = عالٍ · ruhig = هادئ · hell = مضيء."
+          },
+          {
+            "q": "«الحديقة صغيرة»؟",
+            "choices": [
+              "Der Garten ist klein.",
+              "Die Garten ist klein.",
+              "Das Garten ist klein."
+            ],
+            "a": "Der Garten ist klein.",
+            "why": "der Garten مذكر — لا die من «الحديقة» العربية."
+          },
+          {
+            "q": "«اسم العائلة» بالألمانية مع الأداة؟",
+            "a": "der Familienname",
+            "why": "der Name آخراً ⇒ der Familienname — لا die من die Familie."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "das Zimmer → das Wohnzimmer · das Schlafzimmer · das Badezimmer · der Name → der Familienname · die Nummer → die Telefonnummer · das Zimmer → die Zimmer · Die Wohnung ist ruhig. · Ich wohne allein.",
+      "ar": "المركّب كلمة واحدة بحرف كبير واحد، وآخر جزء هو الأصل: يقرر المعنى والأداة والجمع — das Wohnzimmer (من das Zimmer) · der Familienname (من der Name لا die Familie) · die Schlafzimmer (كـdie Zimmer) — والنبر على أوله. والصفة بعد ist لا تتغير مع المؤنث ولا مع الجمع: Die Wohnung ist ruhig · Das Haus ist hoch. وder Raum أعمّ من das Zimmer، وجمعه die Räume."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~die Familienname~~",
+          "ar": "أداة الجزء الأول لا تنتقل إلى المركّب"
+        },
+        "whyArabicSpeakerFails": "في الإضافة العربية الأصل أولاً («اسمُ العائلة»)، فينظر المتعلم إلى أول جزء ويأخذ أداته: die Familie ⇒ ~~die Familienname~~. لكن الأصل في المركّب الألماني آخراً، ومنه وحده الأداة: der Name ⇒ der Familienname · die Nummer ⇒ die Telefonnummer · das Zimmer ⇒ das Wohnzimmer (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Familienname",
+          "ar": "اسم العائلة"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Der Mittagessen ist gut.~~",
+          "a": "Das Mittagessen ist gut."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wohn Zimmer~~",
+          "ar": "المركّب كلمة واحدة لا كلمتان"
+        },
+        "whyArabicSpeakerFails": "الإضافة العربية كلمتان منفصلتان و«ال» على الثانية («غرفة النوم»)، وكذلك الإنجليزية living room كلمتان — فيفصل المتعلم الجزأين أو يكتب حرفين كبيرين. والمركّب الألماني كلمة واحدة بحرف كبير واحد في أولها وأداة واحدة قبله كله: das Wohnzimmer · das Schlafzimmer (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "das Wohnzimmer",
+          "ar": "غرفة المعيشة"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Meine Telefon Nummer ist neu.~~",
+          "a": "Meine Telefonnummer ist neu."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Die Wohnung ist ruhige.~~",
+          "ar": "الصفة بعد ist لا تتغير"
+        },
+        "whyArabicSpeakerFails": "الخبر العربي يطابق المبتدأ: «الشقةُ هادئةٌ» بتاء التأنيث و«البيتُ هادئٌ» بدونها — فيبحث المتعلم عن علامة تأنيث يضيفها، و‑e تشبهها لأن مؤنثات كثيرة تنتهي بها (die Lampe · die Treppe). لكن الصفة الألمانية بعد ist لا تتغير أبداً، لا مع المؤنث ولا مع الجمع: Die Wohnung ist ruhig · Das Haus ist ruhig · Die Zimmer sind ruhig (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Die Wohnung ist ruhig.",
+          "ar": "الشقة هادئة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Die Küche ist kleine.~~",
+          "a": "Die Küche ist klein."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "zimmer",
+      "schlafzimmer",
+      "wohnzimmer",
+      "badezimmer",
+      "flur",
+      "balkon",
+      "treppe",
+      "keller",
+      "garten",
+      "hell",
+      "ruhig",
+      "gemuetlich",
+      "hoch",
+      "allein",
+      "raum"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Wohnzimmer",
+      "https://www.duden.de/rechtschreibung/Schlafzimmer",
+      "https://www.duden.de/rechtschreibung/Raum",
+      "https://www.duden.de/rechtschreibung/gemuetlich"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Zimmer",
+      "https://de.wiktionary.org/wiki/Raum",
+      "https://de.wiktionary.org/wiki/hoch",
+      "https://de.wiktionary.org/wiki/allein"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-komposita-genus"
+  ],
+  "audioManifestRefs": [
+    "word-zimmer",
+    "word-schlafzimmer",
+    "word-wohnzimmer",
+    "word-badezimmer",
+    "word-flur",
+    "word-balkon",
+    "word-treppe",
+    "word-keller",
+    "word-garten",
+    "word-hell",
+    "word-ruhig",
+    "word-gemuetlich",
+    "word-hoch",
+    "word-allein",
+    "word-raum"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 6 (Wohnen) — Zimmer & Beschreibung",
+    "goetheWordListOverlap": [
+      "zimmer",
+      "schlafzimmer",
+      "wohnzimmer",
+      "balkon",
+      "treppe",
+      "keller",
+      "garten",
+      "hell",
+      "ruhig",
+      "gemuetlich",
+      "hoch",
+      "allein",
+      "raum"
+    ]
+  }
+}

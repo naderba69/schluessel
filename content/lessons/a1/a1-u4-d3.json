@@ -1,0 +1,760 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u4-d3",
+  "level": "A1",
+  "unit": 4,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Ich beschreibe einen Freund: Er ist jung und lustig. — Wen beschreibe ich?",
+    "ar": "تصف شخصاً بصفتين وتقدّمه مفعولاً به: einen للمذكر (der ← den · mein ← meinen) والمؤنث والمحايد بلا تغيير — وتسأل عن الشخص المفعول بـWen?"
+  },
+  "canDoDaily": [
+    "يصف أخاً أو صديقاً بصفتين بعد ist (Er ist jung und lustig.) ويقدّمه مفعولاً به بأداة صحيحة: Ich habe einen Bruder · eine Schwester · ein Kind.",
+    "يغيّر المذكر المفعول وحده (der ← den · ein ← einen · mein ← meinen) ويبقيه بعد ist كما هو (Das ist mein Bruder.)، ويفرّق Wer? للفاعل من Wen? للمفعول."
+  ],
+  "warmup": {
+    "cardIds": [
+      "hund",
+      "katze",
+      "auto"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«عندي أخ وأخت» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Ich habe einen Bruder und eine Schwester.",
+          "Ich habe ein Bruder und eine Schwester.",
+          "Ich habe einen Bruder und einen Schwester."
+        ],
+        "answer": "Ich habe einen Bruder und eine Schwester.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "jung",
+      "klein",
+      "schoen",
+      "freundlich",
+      "lustig",
+      "schlau",
+      "haar",
+      "gesicht",
+      "foto",
+      "bild",
+      "beschreiben",
+      "wen",
+      "beide",
+      "loesung"
+    ],
+    "grammarArsenalIds": [
+      "ars-akkusativ-1"
+    ],
+    "storySentenceIds": [
+      "story-a1-u4-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-o",
+      "ch-ich-laut",
+      "ig-ending",
+      "auslaut-d"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "der Bruder → Ich habe ___ Bruder. (أخٌ)",
+            "a": "einen",
+            "why": "Bruder مذكر، وبعد habe صار مفعولاً به: ein ← einen. وفي العربية «عندي أخٌ» الأخ مبتدأ مرفوع فلا يخطر لك تغيير — لكن الألمانية تقول بالفعل haben «أملك أخاً»، والمذكر المفعول يأخذ ‑en."
+          },
+          {
+            "q": "die Schwester → Ich habe ___ Schwester. (أختٌ)",
+            "a": "eine",
+            "why": "Schwester مؤنثة (die): eine تبقى eine مفعولاً — مع أن العربية تنصب «أختاً» كما تنصب «أخاً». الألمانية تغيّر المذكر وحده."
+          },
+          {
+            "q": "das Kind → Ich beschreibe ___ Kind. (طفلاً)",
+            "a": "ein",
+            "why": "Kind محايد (das): ein يبقى ein مفعولاً — المحايد لا يتغير، والـ‑en للمذكر وحده."
+          },
+          {
+            "q": "der Hund → Ich beschreibe ___ Hund. (الكلبَ)",
+            "a": "den",
+            "why": "der المعرّفة تصير den مع المذكر المفعول: den Hund — الـn نفسها التي في einen."
+          },
+          {
+            "q": "der Vater → Ich liebe ___ Vater. (أبي)",
+            "a": "meinen",
+            "why": "mein يتبع ein: ein ← einen، إذن mein ← meinen مع المذكر المفعول — وتعرفها من الوحدة الأولى: Ich buchstabiere meinen Namen."
+          },
+          {
+            "q": "die Tante → Kennst du ___ Tante? (عمّتي)",
+            "a": "meine",
+            "why": "Tante مؤنثة (die): meine تبقى meine مفعولاً — لا ‑n مع المؤنث أبداً."
+          },
+          {
+            "q": "der Sohn → Mein Opa liebt ___ Sohn. (ابنه)",
+            "a": "seinen",
+            "why": "سؤالان: المالك هو (Opa) ← sein، والمملوك Sohn مذكر مفعول به بعد liebt ← ‑en: seinen Sohn."
+          },
+          {
+            "q": "«مَن تصف؟»: ___ beschreibst du?",
+            "a": "Wen",
+            "why": "الشخص هنا مفعول به (أنت تصفه) فالسؤال Wen — بالـ‑n نفسها التي في den وeinen. أما Wer فللفاعل: Wer wohnt hier?"
+          },
+          {
+            "q": "«مَن يصف الكلب؟»: ___ beschreibt den Hund?",
+            "a": "Wer",
+            "why": "مَن يصف؟ الشخص هنا فاعل (هو الذي يصف) ← Wer، والكلب هو المفعول (den Hund). «مَن» العربية واحدة للحالتين، والألمانية تختار: Wer للفاعل وWen للمفعول."
+          },
+          {
+            "q": "Das ist ___ Bruder. (أخي)",
+            "a": "mein",
+            "why": "بعد ist لا مفعول، فلا ‑en: Das ist mein Bruder — قارن Ich beschreibe meinen Bruder."
+          },
+          {
+            "q": "Mein Bruder und meine Schwester sind ___ jung. (كلاهما)",
+            "a": "beide",
+            "why": "beide = كلاهما (الاثنان معاً): جمع، فالفعل sind — وbeide لا تتغير مفعولاً أيضاً: Ich kenne beide."
+          }
+        ],
+        "interleavedWith": [
+          "bruder",
+          "schwester",
+          "vater"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "wb-1",
+            "speakText": "Yusuf, die Aufgabe heute: Wen beschreibe ich?",
+            "q": "استمع: ما مهمة اليوم في الدورة؟",
+            "choices": [
+              "لعبة: مَن أصف؟",
+              "لعبة: ماذا أشتري؟",
+              "لعبة: أين أسكن؟"
+            ],
+            "a": "لعبة: مَن أصف؟",
+            "why": "Wen beschreibe ich? = مَن أصف؟ — Wen لأن الشخص مفعول به (أنا أصفه)، وbeschreibe من beschreiben (يصف)؛ وdie Aufgabe = المهمة (من الوحدة الثالثة)."
+          },
+          {
+            "audioId": "wb-2",
+            "speakText": "Okay, ich höre.",
+            "q": "استمع: بماذا يجيب يوسف؟",
+            "choices": [
+              "حسناً، أنا أسمع",
+              "حسناً، أنا أصف",
+              "لا، لا أفهم"
+            ],
+            "a": "حسناً، أنا أسمع",
+            "why": "höre من hören (يسمع) — يوسف مستعد ليسمع الوصف؛ وOkay تعرفها من الوحدة الثانية."
+          },
+          {
+            "audioId": "wb-4",
+            "speakText": "Ist er klein?",
+            "q": "استمع: ماذا يسأل يوسف عن الشخص؟",
+            "choices": [
+              "هل هو قصير؟",
+              "هل هو شاب؟",
+              "هل هو مرح؟"
+            ],
+            "a": "هل هو قصير؟",
+            "why": "klein = صغير — وللأشخاص قصير القامة، وعكسها groß في الجواب. أما «صغير السن» فـjung."
+          },
+          {
+            "audioId": "wb-5",
+            "speakText": "Nein, er ist groß. Er ist Schüler und wohnt in Tunesien.",
+            "q": "استمع: ماذا نعرف الآن عن الشخص؟",
+            "choices": [
+              "طويل، وتلميذ، ويسكن في تونس",
+              "قصير، وطالب جامعي، ويسكن في برلين",
+              "طويل، ومعلم، ويسكن في سويسرا"
+            ],
+            "a": "طويل، وتلميذ، ويسكن في تونس",
+            "why": "groß = طويل (للأشخاص) · Schüler = تلميذ مدرسة (لا Student) · wohnt in Tunesien = يسكن في تونس — Nabil كما عرفته في الوحدتين الأولى والثانية."
+          },
+          {
+            "audioId": "wb-8",
+            "speakText": "Jetzt ich: Ich beschreibe einen Hund.",
+            "q": "استمع: ماذا سيصف يوسف؟",
+            "choices": [
+              "كلباً",
+              "قطة",
+              "صديقاً"
+            ],
+            "a": "كلباً",
+            "why": "einen Hund = كلباً (مفعولاً به): Hund مذكر، فصارت ein ← einen بعد beschreibe — كما تنصب العربية «كلباً»، لكن العلامة هنا في الكلمة التي قبل الاسم."
+          },
+          {
+            "audioId": "wb-9",
+            "speakText": "Einen Hund? Wie ist er denn?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "كيف هو (ما صفاته)؟",
+              "أين هو؟",
+              "ما اسمه؟"
+            ],
+            "a": "كيف هو (ما صفاته)؟",
+            "why": "Wie ist er? = كيف هو؟ — سؤال عن الصفات، وer تعود على der Hund (مذكر) كما تعود «هو» على الكلب؛ وdenn تضيف الفضول."
+          },
+          {
+            "audioId": "wb-11",
+            "speakText": "Die Lösung ist leicht: Bruno!",
+            "q": "استمع: ما جواب لينا؟",
+            "choices": [
+              "الحل سهل: Bruno",
+              "الحل صعب: Bruno",
+              "الحل سهل: Nabil"
+            ],
+            "a": "الحل سهل: Bruno",
+            "why": "die Lösung = الحل · leicht = سهل — وLösung مؤنثة لأنها تنتهي بـ‑ung، كما في شفرة الجنس: ‑ung ← die."
+          },
+          {
+            "audioId": "wb-13",
+            "speakText": "Jetzt ein Foto. Wen beschreibe ich?",
+            "q": "استمع: ماذا ترفع لينا أمام الكاميرا؟",
+            "choices": [
+              "صورة",
+              "حقيبة",
+              "هاتفاً"
+            ],
+            "a": "صورة",
+            "why": "ein Foto = صورة (das Foto محايد) — ثم تعيد السؤال Wen beschreibe ich? عن الشخص الذي في الصورة."
+          },
+          {
+            "audioId": "wb-14",
+            "speakText": "Ist das eine Frau?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل هذه امرأة؟",
+              "هل هذه عمّتكِ؟",
+              "هل هذا رجل؟"
+            ],
+            "a": "هل هذه امرأة؟",
+            "why": "Ist das eine Frau? — بعد ist لا مفعول، وeine للمؤنث تبقى eine في الحالتين."
+          },
+          {
+            "audioId": "wb-15",
+            "speakText": "Ja. Sie ist alt, aber sehr schlau. Die Haare sind kurz.",
+            "q": "استمع: كيف تصف لينا المرأة؟",
+            "choices": [
+              "كبيرة السن لكنها ذكية جداً، وشعرها قصير",
+              "شابة وذكية، وشعرها طويل",
+              "كبيرة السن ومرحة، وشعرها طويل"
+            ],
+            "a": "كبيرة السن لكنها ذكية جداً، وشعرها قصير",
+            "why": "alt = كبيرة السن · schlau = ذكية · Die Haare sind kurz = الشعر قصير: الألمانية تقول Haare بالجمع (sind) والعربية «الشعر» مفرداً."
+          },
+          {
+            "audioId": "wb-16",
+            "speakText": "Ist das deine Oma?",
+            "q": "استمع: مَن يظن يوسف أنها في الصورة؟",
+            "choices": [
+              "جدّة لينا",
+              "أم لينا",
+              "عمّة لينا"
+            ],
+            "a": "جدّة لينا",
+            "why": "deine Oma = جدّتكِ — Oma مؤنثة فجاءت deine بـ‑e (درس الأمس)، وبعد ist لا مفعول."
+          },
+          {
+            "audioId": "wb-17",
+            "speakText": "Ja! Ich liebe meine Oma.",
+            "q": "استمع: ماذا تقول لينا؟",
+            "choices": [
+              "نعم! أحب جدتي",
+              "نعم! أعرف جدتي",
+              "لا! هذه أمي"
+            ],
+            "a": "نعم! أحب جدتي",
+            "why": "Ich liebe meine Oma — Oma مفعول به مؤنث، فبقيت meine كما هي: المؤنث لا يتغير (قارن Er liebt deinen Onkel)."
+          },
+          {
+            "audioId": "word-bild",
+            "speakText": "Bild.",
+            "q": "استمع إلى الكلمة: ما معناها؟",
+            "choices": [
+              "صورة أو لوحة",
+              "وجه",
+              "شَعر"
+            ],
+            "a": "صورة أو لوحة",
+            "why": "das Bild = صورة أو لوحة (مرسومة أو مطبوعة)، وdas Foto = صورة فوتوغرافية — والاثنان محايدان، فلا يتغيران مفعولاً: Ich beschreibe ein Bild."
+          }
+        ],
+        "interleavedWith": [
+          "aufgabe",
+          "schueler",
+          "oma"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Bruder.",
+              "habe",
+              "einen",
+              "Ich"
+            ],
+            "a": "Ich habe einen Bruder.",
+            "why": "Ich أولاً ثم الفعل habe ثانياً ثم المفعول einen Bruder — Bruder مذكر فصارت ein ← einen."
+          },
+          {
+            "tokens": [
+              "Lena?",
+              "beschreibt",
+              "Wen"
+            ],
+            "a": "Wen beschreibt Lena?",
+            "why": "كلمة السؤال Wen أولاً (الشخص مفعول: لينا تصفه) ثم الفعل beschreibt ثانياً ثم الفاعل Lena."
+          },
+          {
+            "tokens": [
+              "Vater.",
+              "kenne",
+              "deinen",
+              "Ich"
+            ],
+            "a": "Ich kenne deinen Vater.",
+            "why": "Vater مذكر ومفعول به بعد kenne ← deinen، كما ein ← einen."
+          },
+          {
+            "tokens": [
+              "schlau.",
+              "sind",
+              "Kinder",
+              "Die"
+            ],
+            "a": "Die Kinder sind schlau.",
+            "why": "Die Kinder (جمع) ثم sind ثانياً ثم الصفة schlau بلا نهاية بعد sind."
+          },
+          {
+            "tokens": [
+              "jung.",
+              "sind",
+              "Beide"
+            ],
+            "a": "Beide sind jung.",
+            "why": "Beide = كلاهما (جمع) فالفعل sind، والصفة jung بعده بلا نهاية."
+          },
+          {
+            "tokens": [
+              "Foto.",
+              "ein",
+              "beschreibt",
+              "Lena"
+            ],
+            "a": "Lena beschreibt ein Foto.",
+            "why": "Lena (هي) ← beschreibt بـ‑t، وein Foto مفعول به محايد ← ein لا يتغير."
+          }
+        ],
+        "interleavedWith": [
+          "kennen",
+          "vater",
+          "kind"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wb-3",
+            "speakText": "Ich beschreibe einen Freund. Er ist jung und lustig.",
+            "a": "Ich beschreibe einen Freund. Er ist jung und lustig.",
+            "why": "einen بـ‑en لأن Freund مذكر ومفعول به · beschreibe بـei (تُنطق «اي») · Freund بـeu (تُنطق «وي») وd في آخرها تُنطق t · lustig آخرها ‑ig تُنطق «ِش» الخفيفة."
+          },
+          {
+            "audioId": "wb-6",
+            "speakText": "Ich weiß die Lösung: Nabil!",
+            "a": "Ich weiß die Lösung: Nabil!",
+            "why": "weiß بـß بعد ei · Lösung بـö واسم بحرف كبير — مؤنثة (‑ung) فبقيت die مفعولاً · وNabil اسم علم بحرف كبير."
+          },
+          {
+            "audioId": "wb-7",
+            "speakText": "Genau! Du kennst deinen Freund.",
+            "a": "Genau! Du kennst deinen Freund.",
+            "why": "kennst بـnn بعد حركة قصيرة · deinen بـ‑en: Freund مذكر ومفعول به بعد kennst، وdein ← deinen كما ein ← einen."
+          },
+          {
+            "audioId": "wb-10",
+            "speakText": "Er ist alt, aber freundlich. Er liebt deinen Onkel.",
+            "a": "Er ist alt, aber freundlich. Er liebt deinen Onkel.",
+            "why": "freundlich = Freund + ‑lich بحرف صغير لأنها صفة · liebt بـie · deinen Onkel: مذكر مفعول به ← ‑en."
+          },
+          {
+            "audioId": "wb-12",
+            "speakText": "Genau! Nabil und Bruno sind beide lustig.",
+            "a": "Genau! Nabil und Bruno sind beide lustig.",
+            "why": "beide بـei (تُنطق «بايده») وبحرف صغير وسط الجملة · sind لأن الفاعل اثنان."
+          },
+          {
+            "audioId": "wb-18",
+            "speakText": "Das Gesicht ist freundlich. Das Foto ist schön!",
+            "a": "Das Gesicht ist freundlich. Das Foto ist schön!",
+            "why": "Gesicht بـch بعد i (الصوت الخفيف) واسم بحرف كبير · schön بـö: شفتان مدوّرتان كـo ولسان على e · وFoto بـF."
+          },
+          {
+            "audioId": "word-loesung",
+            "speakText": "die Lösung.",
+            "a": "die Lösung",
+            "why": "Lösung: ö ثم s تُنطق «ز» بين حركتين ثم ‑ung — وكل اسم آخره ‑ung مؤنث: die Lösung · الجمع die Lösungen."
+          },
+          {
+            "audioId": "word-haar",
+            "speakText": "Haar.",
+            "a": "Haar",
+            "why": "Haar بـaa (حركة طويلة تُكتب بحرفين) واسم بحرف كبير — والألمانية تقول عن شعر الرأس غالباً die Haare بالجمع."
+          }
+        ],
+        "interleavedWith": [
+          "freund",
+          "kennen",
+          "onkel"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wen beschreibe ich? — Ich beschreibe einen Freund. Er ist jung und lustig.",
+        "ar": "لعبة «مَن أصف؟»: تصف شخصاً بصفتين وتقدّمه مفعولاً به، وزميلك يقول الحل"
+      },
+      "situation": {
+        "de": "Im Kurs: Lena, Yusuf und die Aufgabe",
+        "ar": "في الدورة: تصف لزميلك شخصاً أو حيواناً تعرفانه — من الأسرة أو من الدرس، حقيقياً أو خيالياً باختيارك، بلا حاجة إلى معلومات عائلية حقيقية — فيخمّن مَن هو، ثم يصف لك."
+      },
+      "successCriteria": [
+        "يقدّم ثلاثة أشخاص أو حيوانات بمفعول صحيح — Ich beschreibe einen Freund / eine Frau / ein Kind، و‑en مع المذكر وحده — ويصف كلاً منهم بصفتين بعد ist (Er ist jung und lustig.).",
+        "يسأل Wen beschreibst du? ويخمّن الحل بـIst das …? أو Die Lösung: …، ويستعمل beide مرة واحدة على الأقل (Beide sind lustig.)."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«عندي كلب» بالألمانية؟",
+            "choices": [
+              "Ich habe einen Hund.",
+              "Ich habe ein Hund.",
+              "Ich bin einen Hund."
+            ],
+            "a": "Ich habe einen Hund.",
+            "why": "Hund مذكر ومفعول به بعد habe ← einen — «عندي» بالعربية حرف جر، وبالألمانية الفعل haben."
+          },
+          {
+            "q": "«أصف امرأة»؟",
+            "choices": [
+              "Ich beschreibe eine Frau.",
+              "Ich beschreibe einen Frau.",
+              "Ich beschreibe ein Frau."
+            ],
+            "a": "Ich beschreibe eine Frau.",
+            "why": "Frau مؤنثة ← eine لا تتغير مفعولاً — الـ‑en للمذكر وحده."
+          },
+          {
+            "q": "Ich liebe ___ Opa. (جدّي)",
+            "choices": [
+              "meinen",
+              "mein",
+              "meine"
+            ],
+            "a": "meinen",
+            "why": "Opa مذكر (der Opa) ومفعول به بعد liebe ← meinen."
+          },
+          {
+            "q": "«مَن تحب؟»",
+            "choices": [
+              "Wen liebst du?",
+              "Wer liebst du?",
+              "Wen liebt du?"
+            ],
+            "a": "Wen liebst du?",
+            "why": "تسأل عن المفعول (الشخص الذي تحبه) ← Wen · والفعل مع du ← liebst."
+          },
+          {
+            "q": "schlau = ؟",
+            "choices": [
+              "ذكي",
+              "جميل",
+              "صغير"
+            ],
+            "a": "ذكي",
+            "why": "schlau = ذكي · schön = جميل · klein = صغير."
+          },
+          {
+            "q": "«الصورة الفوتوغرافية» بالألمانية مع أداتها؟",
+            "a": "das Foto",
+            "why": "das Foto (محايد) — والجمع die Fotos؛ وdas Bild للصورة أو اللوحة عموماً."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أعرف الرجل»؟",
+            "choices": [
+              "Ich kenne den Mann.",
+              "Ich kenne der Mann.",
+              "Ich kenne dem Mann."
+            ],
+            "a": "Ich kenne den Mann.",
+            "why": "Mann مذكر ومفعول به بعد kenne ← der تصير den."
+          },
+          {
+            "q": "Nabil ist ___ Freund. (صديقي)",
+            "choices": [
+              "mein",
+              "meinen"
+            ],
+            "a": "mein",
+            "why": "بعد ist لا مفعول ← mein بلا ‑en: Nabil ist mein Freund — قارن Ich kenne meinen Freund."
+          },
+          {
+            "q": "«عندي الحل!»",
+            "choices": [
+              "Ich habe die Lösung!",
+              "Ich habe den Lösung!",
+              "Ich habe einen Lösung!"
+            ],
+            "a": "Ich habe die Lösung!",
+            "why": "Lösung مؤنثة (‑ung ← die) فتبقى die مفعولاً — den للمذكر وحده."
+          },
+          {
+            "q": "«جدّتي مرِحة»؟",
+            "choices": [
+              "Meine Oma ist lustig.",
+              "Meinen Oma ist lustig.",
+              "Meine Oma lustig."
+            ],
+            "a": "Meine Oma ist lustig.",
+            "why": "بعد ist لا مفعول، وOma مؤنثة ← Meine — وist لا تُحذف كما تُحذف في العربية («جدتي مرحة» بلا فعل)."
+          },
+          {
+            "q": "«الوجه» بالألمانية مع أداته؟",
+            "a": "das Gesicht",
+            "why": "das Gesicht (محايد) — والجمع die Gesichter."
+          },
+          {
+            "q": "jung = ؟",
+            "choices": [
+              "شاب (صغير السن)",
+              "قصير (صغير الحجم)",
+              "طويل"
+            ],
+            "a": "شاب (صغير السن)",
+            "why": "jung = صغير السن · klein = صغير الحجم أو قصير القامة · groß = كبير أو طويل."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أشتري سيارة»؟",
+            "choices": [
+              "Ich kaufe ein Auto.",
+              "Ich kaufe einen Auto.",
+              "Ich kaufe eine Auto."
+            ],
+            "a": "Ich kaufe ein Auto.",
+            "why": "Auto محايد (das) ← ein لا يتغير مفعولاً."
+          },
+          {
+            "q": "«هل تعرف أخي؟»",
+            "choices": [
+              "Kennst du meinen Bruder?",
+              "Kennst du mein Bruder?",
+              "Kennst du meine Bruder?"
+            ],
+            "a": "Kennst du meinen Bruder?",
+            "why": "Bruder مذكر ومفعول به بعد kennst ← meinen."
+          },
+          {
+            "q": "«مَن يسكن في تونس؟»: ___ wohnt in Tunesien?",
+            "choices": [
+              "Wer",
+              "Wen"
+            ],
+            "a": "Wer",
+            "why": "مَن يسكن؟ الشخص فاعل (هو الذي يسكن) ← Wer — وWen للمفعول وحده."
+          },
+          {
+            "q": "beide = ؟",
+            "choices": [
+              "كلاهما / الاثنان",
+              "معاً",
+              "أيضاً"
+            ],
+            "a": "كلاهما / الاثنان",
+            "why": "beide = كلاهما (للاثنين معاً) · zusammen = معاً · auch = أيضاً."
+          },
+          {
+            "q": "«اللوحة» بالألمانية مع أداتها؟",
+            "a": "das Bild",
+            "why": "das Bild = اللوحة أو الصورة (محايد) — والجمع die Bilder."
+          },
+          {
+            "q": "beschreiben = ؟",
+            "choices": [
+              "يصف",
+              "يكتب",
+              "يقرأ"
+            ],
+            "a": "يصف",
+            "why": "beschreiben = يصف · schreiben = يكتب (be + schreiben) · lesen = يقرأ."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Ich habe einen Bruder. · Ich beschreibe den Hund. · Bruno liebt meinen Onkel. — eine Frau · ein Foto · meine Eltern — Wer wohnt hier? · Wen beschreibst du?",
+      "ar": "المفعول به (Akkusativ) بعد haben · beschreiben · kennen · lieben: المذكر المفرد وحده يأخذ ‑n — der ← den · ein ← einen · mein ← meinen (وdeinen · seinen). المؤنث والمحايد والجمع لا تتغير: eine Frau · ein Foto · meine Eltern. وبعد ist لا مفعول: Das ist mein Bruder. والسؤال عن الشخص: Wer? للفاعل وWen? للمفعول. والصفات اليوم بعد ist وحدها: Mein Bruder ist jung · Das Foto ist schön."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich habe ein Bruder.~~",
+          "ar": "المذكر المفعول بلا ‑en لأن «عندي أخٌ» مرفوع في العربية"
+        },
+        "whyArabicSpeakerFails": "في العربية «عندي أخٌ»: الملكية بحرف الجر «عند»، والأخ مبتدأ مرفوع لا مفعول — والعامية لا تنطق علامة الإعراب أصلاً. والألمانية تعبّر بالفعل haben: الأخ مفعول به، والمذكر المفعول يأخذ ‑en: Ich habe einen Bruder (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe einen Bruder.",
+          "ar": "عندي أخ."
+        },
+        "exercise": {
+          "q": "أكمل: Ich habe ___ Sohn und ___ Tochter.",
+          "a": "einen Sohn und eine Tochter"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wer beschreibst du?~~",
+          "ar": "«مَن» العربية واحدة للفاعل والمفعول"
+        },
+        "whyArabicSpeakerFails": "«مَن» في العربية لا تتغير: «مَن جاء؟» و«مَن رأيت؟» بالكلمة نفسها — فيقول المتعلم Wer في الحالتين. والألمانية تفرّق: Wer للفاعل (Wer wohnt hier?) وWen للمفعول (Wen beschreibst du?) — بالـ‑n نفسها التي في den وeinen (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wen beschreibst du?",
+          "ar": "مَن تصف؟"
+        },
+        "exercise": {
+          "q": "أكمل بـWer أو Wen: ___ wohnt hier? · ___ kennst du hier?",
+          "a": "Wer · Wen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe einen Schwester.~~ / ~~einen Foto~~",
+          "ar": "‑en مع كل الأجناس كما يعمّ النصب العربي كل الأسماء"
+        },
+        "whyArabicSpeakerFails": "العربية تنصب كل مفعول: «أخاً» و«أختاً» و«صورةً» — فمن تعلّم أن المفعول الألماني «يُنصب» بـeinen قد يعمّمها على كل اسم. والألمانية تغيّر المذكر وحده: einen Bruder · eine Schwester · ein Foto — المؤنث والمحايد والجمع كما هي (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich habe eine Schwester. · Ich beschreibe ein Foto.",
+          "ar": "عندي أخت. · أصف صورة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich habe einen Katze.~~",
+          "a": "Ich habe eine Katze."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "jung",
+      "klein",
+      "schoen",
+      "freundlich",
+      "lustig",
+      "schlau",
+      "haar",
+      "gesicht",
+      "foto",
+      "bild",
+      "beschreiben",
+      "wen",
+      "beide",
+      "loesung"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/beschreiben",
+      "https://www.duden.de/rechtschreibung/wen",
+      "https://www.duden.de/rechtschreibung/beide",
+      "https://www.duden.de/rechtschreibung/Loesung"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/wen",
+      "https://de.wiktionary.org/wiki/Akkusativ"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-akkusativ-1"
+  ],
+  "audioManifestRefs": [
+    "word-jung",
+    "word-klein",
+    "word-schoen",
+    "word-freundlich",
+    "word-lustig",
+    "word-schlau",
+    "word-haar",
+    "word-gesicht",
+    "word-foto",
+    "word-bild",
+    "word-beschreiben",
+    "word-wen",
+    "word-beide",
+    "word-loesung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 (Meine Familie) — erster Akkusativ",
+    "goetheWordListOverlap": [
+      "jung",
+      "klein",
+      "schoen",
+      "freundlich",
+      "lustig",
+      "haar",
+      "gesicht",
+      "foto",
+      "bild",
+      "beschreiben",
+      "wen",
+      "beide",
+      "loesung"
+    ]
+  }
+}

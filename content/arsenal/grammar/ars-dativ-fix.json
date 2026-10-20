@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-dativ-fix",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Ich fahre mit der Bahn zum Flughafen. · Wann fliegst du nach Tunesien?",
+    "ar": "الداتيف الثابت: mit · nach · aus · zu — بعدها الداتيف دائماً: der/das ← dem · die ← der — zu dem = zum · zu der = zur — nach للمدن والبلدان وHause بلا أداة · aus للأصل"
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u8-d4",
+    "a1-u8-d6",
+    "a1-u9-d1",
+    "a1-u11-d2",
+    "a1-u11-d5",
+    "a1-u11-d6",
+    "a1-u12-d6",
+    "a1-u15-d4"
+  ],
+  "payload": {
+    "topicAr": "اليوم تقول كيف تذهب وإلى أين ومن أين: Ich fahre mit der Bahn. · Mein Vater holt mich ab — mit dem Auto. · Wie kommst du zum Flughafen? · Ich fahre mit dem Rad zur Schule. · Wann fliegst du nach Tunesien? · Kommt dein Vater aus Tunis? — أربعة حروف جر يأتي بعدها الداتيف دائماً: mit · nach · aus · zu. ومعها كلمات اليوم: nach · aus · zu · das Taxi · fliegen · der Flug · der Flughafen · parken · das Rad · die Bahn · abholen · das Gepäck.",
+    "sceneAr": "مكالمة الدورة عبر الإنترنت: يوسف في برلين يسافر يوم الاثنين إلى تونس، ورحلته في الثامنة صباحاً. لينا تسأل من سويسرا: كيف تصل إلى المطار؟ بالتاكسي؟ — التاكسي غالٍ، فيأخذ القطار (die Bahn) إلى المطار، وأمتعته ليست ثقيلة: حقيبة وحقيبة ظهر. في تونس يستقبله أبوه بالسيارة ويركن في المطار. أبوه وأمه من تونس. وفي تونس يتنقّل بالحافلة أو بالتاكسي — التاكسيات هناك رخيصة. أما لينا ففي سويسرا تذهب دائماً بالدراجة إلى المدرسة والسوبرماركت — إلا اليوم فإنها تمطر — ويوم الأحد تذهب بالقطار إلى جدّتها (عيد ميلادها) — وهي لا تحب الطيران: في القطار تستطيع أن تقرأ.",
+    "examples": [
+      {
+        "de": "Ich fahre mit der Bahn. · Mein Vater holt mich ab — mit dem Auto.",
+        "ar": "أذهب بالقطار · أبي يستقبلني — بالسيارة — mit + الداتيف دائماً: die Bahn ← mit der Bahn · das Auto ← mit dem Auto"
+      },
+      {
+        "de": "Wie kommst du zum Flughafen? — Die Bahn fährt zum Flughafen.",
+        "ar": "كيف تصل إلى المطار؟ — القطار يذهب إلى المطار — der Flughafen ← zu dem Flughafen = zum Flughafen (تُدمج دائماً)"
+      },
+      {
+        "de": "Ich fahre mit dem Rad zur Schule und zum Supermarkt.",
+        "ar": "أذهب بالدراجة إلى المدرسة وإلى السوبرماركت — die Schule ← zu der Schule = zur Schule · der Supermarkt ← zum Supermarkt — zu لمكانٍ له أداة (أو لشخص: zur Oma)"
+      },
+      {
+        "de": "Wann fliegst du nach Tunesien? · Wir fahren nach Berlin. · Ich fahre jetzt nach Hause.",
+        "ar": "متى تطير إلى تونس؟ · نسافر إلى برلين · أذهب الآن إلى البيت — nach للبلدان والمدن بلا أداة — وnach Hause ثابتة (إلى البيت) مقابل zu Hause (في البيت)"
+      },
+      {
+        "de": "Kommt dein Vater aus Tunis? · Ich komme aus Tunesien. · Lena kommt aus der Schweiz.",
+        "ar": "هل أبوك من تونس (العاصمة)؟ · أنا من تونس · لينا من سويسرا — aus للأصل: البلدان والمدن بلا أداة — إلا البلدان التي لها أداة: die Schweiz ← aus der Schweiz"
+      },
+      {
+        "de": "Fährst du mit dem Taxi? — Nein, ein Taxi ist zu teuer. Ich fahre mit dem Bus.",
+        "ar": "هل تذهب بالتاكسي؟ — لا، التاكسي غالٍ جداً. أذهب بالحافلة — das Taxi ← mit dem Taxi · der Bus ← mit dem Bus — وzu هنا قبل الصفة = «أكثر من اللازم» لا حرف جر"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأول: die Bahn وdas Auto — ماذا صارت الأداة بعد mit؟ (2) في الثاني: der Flughafen — لماذا zum وليس zu der؟ ومن أي كلمتين جاءت zum؟ (3) في الثالث: die Schule ← zur وder Supermarkt ← zum — ما الفرق؟ (4) في الرابع: Tunesien وBerlin وHause — هل بعد nach أداة؟ وقارن بـzum Flughafen في الثاني: متى nach ومتى zu؟ (5) في الخامس: aus Tunesien بلا أداة وaus der Schweiz بأداة — لماذا؟ (6) في الأخير: zu teuer — هل zu هنا حرف جر؟ وما بعده؟ (7) في كل الأمثلة: هل رأيت den أو einen بعد mit أو zu؟",
+    "ruleDe": "mit · nach · aus · zu: der/das → dem · die → der — zu dem = zum · zu der = zur — mit dem Bus · mit der Bahn · mit dem Auto · zum Flughafen · zur Schule · nach Berlin · nach Tunesien · nach Hause · aus Tunis · aus der Schweiz",
+    "ruleAr": "قل كيف تذهب وإلى أين ومن أين بثلاث خطوات: (1) الحالة: بعد mit (بـ/مع) وnach (إلى) وaus (من) وzu (إلى) يأتي الداتيف دائماً — لا الأكوزاتيف الذي تعرفه مع المفعول (den/einen). والأداة في الداتيف: der ← dem · das ← dem · die ← der · والجمع die ← den مع ‑n في آخر الاسم (mit den Freunden): mit dem Bus · mit dem Auto · mit der Bahn · mit dem Rad · mit der Kreditkarte. وzu تُدمج مع الأداة دائماً: zu dem = zum (zum Flughafen · zum Supermarkt · zum Bahnhof · zum Kurs) · zu der = zur (zur Schule · zur Arbeit · zur Oma). (2) nach أم zu؟ كلتاهما «إلى» — nach للمدن والبلدان والقارات بلا أداة (nach Berlin · nach Tunesien · nach Deutschland) ولعبارة nach Hause (إلى البيت) — وzu لكل مكانٍ له أداة ولكل شخص (zum Flughafen · zur Schule · zur Oma). وتذكّر الزوج: nach Hause = إلى البيت (حركة) · zu Hause = في البيت (مكان). (3) aus = «من» للأصل والمصدر: Ich komme aus Tunesien · Kommt dein Vater aus Tunis? — بلا أداة مع البلدان والمدن، إلا البلدان التي تحمل أداة: die Schweiz ← aus der Schweiz. والسؤال: Woher kommst du? — Aus Tunesien. · Wie kommst du zum Flughafen? — Mit der Bahn. · Wohin fliegst du? — Nach Tunis. — وأفعال الطريق: fahren (بمركبة: mit dem Bus/Zug/Rad) · gehen (مشياً) · fliegen (بالطائرة: nach Tunis) · abholen (يستقبل/يأخذ: Mein Vater holt mich ab — فعل منفصل كما في الوحدة 7).",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «بالحافلة» = mit dem Bus — حرف جر قبل الاسم في اللغتين بالترتيب نفسه — عون. (2) «من تونس» = aus Tunesien — «من» للأصل بلا أداة كما في الألمانية — عون. (3) «إلى البيت» و«في البيت» تفرّق العربية بينهما بحرف الجر — وكذلك الألمانية: nach Hause · zu Hause — عون. وما يختلف ثلاثة: (1) «بـ» و«إلى» و«من» في العربية لا تغيّر شكل «الـ» بعدها، فيُبقي المتعلم الأداة كما يعرفها أو يضع الأكوزاتيف: ~~mit den Bus~~ · ~~mit die Bahn~~ · ~~zu der Flughafen~~ — والألمانية تضع الداتيف دائماً بعد هذه الأربعة: mit dem Bus · mit der Bahn · zum Flughafen. (2) «إلى» واحدة في العربية لبرلين وللمطار، فيقول المتعلم ~~zu Berlin~~ أو ~~nach dem Flughafen~~ — والألمانية تفرّق: nach للمدن والبلدان بلا أداة (nach Berlin) وzu لما له أداة (zum Flughafen). (3) العربية تقول «من تونس» و«من سويسرا» سواء، فيقول المتعلم ~~aus Schweiz~~ أو يضيف أداة حيث لا أداة ~~aus dem Tunesien~~ — والألمانية: aus Tunesien بلا أداة، وaus der Schweiz بالأداة لأن die Schweiz من البلدان القليلة التي تحمل أداة — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "اليوم أربعة حروف فقط: mit · nach · aus · zu — وvon (من: من عند شخص، من مكانٍ له أداة) وseit (منذ) وbei (عند) في الدرس القادم (a1-u8-d5 وa1-u8-d6) — فلا تقل اليوم «من أبي» بـaus.",
+      "اليوم الأداة المعرّفة وحدها بعد الحرف: dem · der · zum · zur — وأدوات الملكية في الداتيف (mit meinem Vater · zu meiner Oma) في الوحدة 11 مع الداتيف الكامل؛ فإن أردت اليوم قل: Mein Vater holt mich ab — mit dem Auto.",
+      "im Supermarkt · am Flughafen · am Montag · in der Schweiz عباراتٌ ثابتة تعرفها من قبل — وحروف in/an/auf وحدها (متى داتيف ومتى أكوزاتيف) قاعدة لاحقة؛ اليوم احفظها كما هي. — وضمائر الداتيف mir وdir تعرفها (Wie geht es dir?)، والباقي (ihm · ihr · uns) وgefällt mir في الوحدتين 9 و11؛ اليوم بعد mit/zu اسمٌ بأداة لا ضمير.",
+      "zu قبل الصفة = «أكثر من اللازم» (zu teuer · zu groß) وليست حرف جر — ولا تأتي بعدها أداة؛ وzu + المصدر (zu kaufen) ليست في A1."
+    ],
+    "beads": [
+      "Ich",
+      "fahre",
+      "mit",
+      "der",
+      "Bahn",
+      "zum",
+      "Flughafen."
+    ],
+    "properNouns": [
+      "Tunesien",
+      "Tunis",
+      "Berlin",
+      "Schweiz",
+      "Lena",
+      "Hause"
+    ]
+  }
+}

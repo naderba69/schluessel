@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-plural-umlaut",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "der Stuhl → die Stühle · der Tisch → die Tische · die Lampe → die Lampen · das Sofa → die Sofas · der Sessel → die Sessel",
+    "ar": "الجمع يُحفظ مع الكلمة — وله خمسة أنماط: نقطتان فوق الحرف + ‑e (Stühle) · ‑e · ‑(e)n · ‑s · بلا نهاية — وأداة الجمع die دائماً، وبعد العدد جمعٌ دائماً"
+  },
+  "payload": {
+    "topicAr": "اليوم تسمّي أثاثك وتعدّه: Hier sind zwei Stühle. · Ich habe sechs Kissen. الجمع في الألمانية لا قاعدة واحدة له — يُحفظ مع كل كلمة كما يُحفظ جنسها — لكن له خمسة أنماط ترى أكثرها في الأثاث: نقطتان فوق الحرف + ‑e (der Stuhl ← die Stühle) · ‑e وحدها (der Tisch ← die Tische) · ‑(e)n (die Lampe ← die Lampen) · ‑s (das Sofa ← die Sofas) · بلا نهاية (der Sessel ← die Sessel). والأداة في الجمع die دائماً، وبعد العدد جمعٌ دائماً: zwei Stühle · zwanzig Stühle.",
+    "sceneAr": "مهمة الوحدة السادسة في الدورة عبر الإنترنت: يُري كلٌّ منهما أثاثه أمام الكاميرا. شقة يوسف في برلين صغيرة: طاولة وكرسيان وسرير وخزانة ومصباح وسجادة — بلا أريكة ولا رفّ ولا ستائر. ولينا في بيتها في سويسرا تُري أريكتها الجديدة العريضة وعليها ست وسائد، ومرآة يساراً ورفّين يميناً. وجدّة يوسف في تونس عندها عشرون كرسياً لضيوفها، وكرسيٌّ قديم بذراعين تحبه. ويقرر يوسف أن يشتري ستائر ووسادتين وأريكة.",
+    "examples": [
+      {
+        "de": "der Stuhl → die Stühle · der Schrank → die Schränke",
+        "ar": "الكرسي ← الكراسي · الخزانة ← الخزائن — نقطتان فوق الحرف (u ← ü · a ← ä) + ‑e"
+      },
+      {
+        "de": "der Tisch → die Tische · das Regal → die Regale",
+        "ar": "الطاولة ← الطاولات · الرفّ ← الرفوف — ‑e وحدها بلا نقطتين"
+      },
+      {
+        "de": "die Lampe → die Lampen · das Sofa → die Sofas",
+        "ar": "المؤنث المنتهي بـ‑e ← ‑n · والكلمة الأجنبية المنتهية بحركة ← ‑s"
+      },
+      {
+        "de": "der Sessel → die Sessel · das Kissen → die Kissen",
+        "ar": "‑el و‑en في الآخر ← بلا نهاية: الأداة die وحدها تقول «كثير»"
+      },
+      {
+        "de": "Hier sind zwei Stühle. · Oma hat zwanzig Stühle.",
+        "ar": "بعد العدد جمعٌ دائماً من اثنين فصاعداً — والفعل للجمع: sind"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) der Stuhl وdie Stühle: ما الذي تغيّر داخل الكلمة؟ وما الذي أُضيف في آخرها؟ (2) der Tisch ← die Tische: هل تغيّرت حركة i؟ (3) der Sessel ← die Sessel: كيف تعرف أن الثانية جمع؟ (4) ما أداة الجمع في die Stühle · die Lampen · die Sofas؟ هل تتغير بحسب الجنس؟ (5) بالعربية «كرسي ← كراسي» و«خزانة ← خزائن»: أين التغيير؟ وبالألمانية Stuhl ← Stühle؟ (6) بالعربية «عشرون كرسياً»: «كرسياً» مفرد أم جمع؟ وبالألمانية zwanzig …؟",
+    "ruleDe": "der Stuhl → die Stühle · der Schrank → die Schränke · der Tisch → die Tische · die Lampe → die Lampen · das Sofa → die Sofas · der Sessel → die Sessel — zwei Stühle · zwanzig Stühle",
+    "ruleAr": "اجمع بخمس خطوات: (1) احفظ الجمع مع الكلمة كما تحفظ جنسها — der Stuhl, die Stühle — هكذا يكتبه القاموس وهكذا تحفظه بطاقتك. (2) أداة الجمع die لكل الأجناس: der Tisch ← die Tische · das Bett ← die Betten · die Lampe ← die Lampen، وkein في الجمع keine (من الوحدة الخامسة): Ich habe keine Vorhänge. (3) خمسة أنماط — ميولٌ لا قوانين: (أ) نقطتان فوق الحرف + ‑e، كثيراً في المذكر ذي المقطع الواحد: Stuhl ← Stühle · Schrank ← Schränke · Vorhang ← Vorhänge (ب) ‑e وحدها: Tisch ← Tische · Teppich ← Teppiche · Regal ← Regale (ج) ‑(e)n، وأغلب المؤنث المنتهي بـ‑e: Lampe ← Lampen، ومعه Bett ← Betten (د) ‑s للكلمة الأجنبية المنتهية بحركة: Sofa ← Sofas (كما Auto ← Autos · Foto ← Fotos) (هـ) بلا نهاية للمذكر والمحايد المنتهي بـ‑el أو ‑er أو ‑en: Sessel ← Sessel · Spiegel ← Spiegel · Kissen ← Kissen — فالأداة وحدها تقول «كثير»: der Spiegel ↔ die Spiegel. (4) النقطتان تغيّران الصوت: a ← ä (يقترب من e) · u ← ü (لسانٌ كـi وشفتان مضمومتان كـu) · o ← ö — فـStühle غير Stuhle، والنقطتان هنا علامة الجمع نفسها. (5) بعد العدد جمعٌ دائماً من اثنين فصاعداً: zwei Stühle · sechs Kissen · zwanzig Stühle · hundert Stühle — والفعل للجمع: Hier sind zwei Stühle.",
+    "contrastAr": "ما يساعدك اثنان: (1) جمع التكسير العربي يغيّر داخل الكلمة: «كرسي ← كراسي» · «خزانة ← خزائن» · «سرير ← أسِرّة» — والألمانية تغيّر داخل الكلمة أيضاً بالنقطتين: Stuhl ← Stühle · Schrank ← Schränke، فالتغيير الداخلي مألوف لك. (2) من ثلاثة إلى عشرة يأتي المعدود جمعاً بالعربية: «ثلاثة كراسٍ» · «ستّ وسائد» — كما في الألمانية: drei Stühle · sechs Kissen. وما يختلف ثلاثة: (1) العربية تجعل المعدود من أحد عشر إلى تسعة وتسعين مفرداً منصوباً («عشرون كرسياً») وبعد المئة والألف مفرداً مجروراً («مئة كرسيّ») — فيظهر ~~zwanzig Stuhl~~؛ والألمانية جمعٌ بعد كل عدد فوق الواحد: zwanzig Stühle · hundert Stühle. (2) ü حركة أمامية مدوّرة لا مقابل لها في العربية، فيسمعها المتعلم u ويكتبها u: ~~die Stuhle~~ — والنقطتان هنا علامة الجمع نفسها: die Stühle. (3) جنس الاسم لا ينتقل من العربية: «الخزانة» و«الطاولة» و«الأريكة» مؤنثة، لكن der Schrank · der Tisch · das Sofa — فيظهر ~~die Schrank~~، والجنس يُحفظ مع الكلمة — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "الجمع بـ‑er رأيته قبلاً: das Kind ← die Kinder · das Bild ← die Bilder · das Haus ← die Häuser (مع النقطتين) — والنقطتان قد تأتيان بلا نهاية: der Apfel ← die Äpfel · die Mutter ← die Mütter.",
+      "الأنماط ميولٌ لا قوانين: der Tisch ← die Tische بلا نقطتين، والمذكر ذو المقطع الواحد لا يأخذها دائماً — فاحفظ الجمع مع الكلمة: der Stuhl, die Stühle.",
+      "المثنى العربي («كرسيّان» · «وسادتان») لا مقابل له في الألمانية: zwei Stühle · zwei Kissen جمعٌ عادي بعد العدد.",
+      "كلمة «الأثاث» نفسها جمعٌ دائم تأتي في الدرس الخامس من هذه الوحدة، وأسماء الغرف في الدرس القادم — واليوم كل قطعة باسمها."
+    ],
+    "beads": [
+      "Hier",
+      "sind",
+      "zwei",
+      "Stühle."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u6-d1",
+    "a1-u14-d4",
+    "a1-u14-d6",
+    "a1-u15-d3"
+  ]
+}

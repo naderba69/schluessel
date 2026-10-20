@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-da-komposita",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Da ist der Tisch. Darauf steht eine Vase. · Da ist der Schrank. Darin sind zwei Handtücher.",
+    "ar": "عليه · فيه · خلفه: da + حرف المكان كلمةٌ واحدة تعود على شيءٍ ذكرته للتوّ — dar- قبل الحركة (darauf · darin · darüber · darunter) وda- قبل الساكن (daneben · dahinter · dazwischen) — والفعل بعدها يطابق فاعله"
+  },
+  "payload": {
+    "topicAr": "اليوم تصف شقتك (die Wohnung) بأثاثها وحمّامها وطوابقها وإيجارها وجيرانها، وتشير إلى الشيء الذي ذكرته للتوّ بكلمة واحدة بدل تكرار اسمه: Da ist der Tisch. Darauf steht eine Vase. — darauf = da + auf = «عليه» (على الطاولة). ومثلها darin «فيه» · darunter «تحته» · darüber «فوقه» · dahinter «خلفه» · dazwischen «بينهما» — وdaneben «بجانبه» تعرفها من الدرس الماضي. ومعها كلمات الشقة: die Möbel (جمعاً) · die Einrichtung · das Gerät · die Schublade · der Rahmen · das Handtuch · die Seife · die Dusche · die Toilette · die Pflanze · die Vase · der Hof · die Etage · das Stockwerk · die Miete · der Nachbar · dunkel.",
+    "sceneAr": "مهمة الوحدة السادسة الأخيرة على الشاشة: يصف يوسف شقته في برلين للينا. البيت ستة طوابق وشقته في الأعلى، وخلفه فناءٌ صغير معتم قليلاً، والإيجار مرتفع جداً («هذه برلين!»)، وجار اليسار لطيف أما من اليمين فضجيجٌ كثيراً. ثم الغرفة: الأثاث وصل والتأثيث اكتمل — على الطاولة مزهرية فيها ماءٌ فقط، وصورة تونس فوق السرير صار لها إطار. والحمّام صغير: الدُش يساراً والمرحاض يميناً وبينهما رفّ عليه الصابون ومنشفتان. والمفتاح الذي وُجد فوق الخزانة؟ صار في درج المكتب.",
+    "examples": [
+      {
+        "de": "Da ist der Tisch. Darauf steht eine Vase.",
+        "ar": "هناك الطاولة، وعليها مزهرية — darauf = da + auf: على الطاولة ← عليها"
+      },
+      {
+        "de": "Da ist der Schrank. Darin sind zwei Handtücher.",
+        "ar": "هناك الخزانة، وفيها منشفتان — darin = da + in: في الخزانة ← فيها"
+      },
+      {
+        "de": "Das Bett steht am Fenster. Darunter ist eine Schublade.",
+        "ar": "السرير عند النافذة، وتحته درج — darunter = da + unter"
+      },
+      {
+        "de": "Da ist die Tür. Dahinter ist das Badezimmer.",
+        "ar": "هناك الباب، وخلفه الحمّام — dahinter = da + hinter: بلا r لأن hinter تبدأ بساكن"
+      },
+      {
+        "de": "Links ist das Bett, rechts der Schrank. Dazwischen steht eine Pflanze.",
+        "ar": "السرير يساراً والخزانة يميناً، وبينهما نبتة — dazwischen = da + zwischen"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في المثال الأول: على أيّ شيء تقف المزهرية؟ فماذا تعني darauf، ومن أيّ كلمتين تتكوّن؟ (2) darin في المثال الثاني — ماذا تعني، وما الحرف الذي فيها؟ (3) قارن darauf · darin · darunter بـ dahinter · dazwischen: لماذا جاءت r في الأولى ولم تأتِ في الثانية؟ انظر إلى أول حرفٍ بعد da: أهو حركة أم ساكن؟ (4) بالعربية «عليها» · «فيها»: أين الضمير، في أول الكلمة أم في آخرها؟ وهل يتغيّر بين «عليه» و«عليها» و«عليهم»؟ وبالألمانية: هل تتغيّر darauf إن كان الشيء der أو die أو das أو جمعاً؟ (5) في المثال الثاني darin sind — لماذا sind لا ist؟ وما الفاعل؟",
+    "ruleDe": "Da ist der Tisch. Darauf steht eine Vase. · Da ist der Schrank. Darin sind zwei Handtücher. · Da ist die Tür. Dahinter ist das Badezimmer.",
+    "ruleAr": "أشِر إلى شيءٍ ذكرته للتوّ بأربع خطوات: (1) لا تكرّر اسمه بعد الحرف — ضع da قبل الحرف كلمةً واحدة: auf dem Tisch ← darauf (عليه) · im Schrank ← darin (فيه) · unter dem Bett ← darunter (تحته) · über dem Sofa ← darüber (فوقه) · hinter der Tür ← dahinter (خلفه) · zwischen Bett und Schrank ← dazwischen (بينهما) — وdaneben (بجانبه) من الدرس الماضي. (2) dar- قبل الحركة وda- قبل الساكن: auf · in · an · über · unter تبدأ بحركة ⇒ darauf · darin · daran · darüber · darunter — والـr تفصل بين الحركتين؛ neben · hinter · zwischen تبدأ بساكن ⇒ daneben · dahinter · dazwischen. (3) الكلمة لا تتغيّر أبداً: للمذكر والمؤنث والمحايد والجمع darauf نفسها — Da ist der Tisch. · Da ist die Tasche. · Da ist das Regal. · Da sind die Betten. ⇒ Darauf steht eine Vase. (4) مكانها أول الجملة غالباً ثم الفعل ثانياً ثم الفاعل — والفعل يطابق الفاعل الذي بعده: Darauf steht eine Vase. · Darauf stehen zwei Vasen. · Darin sind zwei Handtücher. وقد تأتي بعد الفعل: Eine Vase steht darauf. — وللوضع (Wohin?) أيضاً: Ich stelle die Vase darauf.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) العربية تلصق الحرف بالشيء المذكور في كلمة واحدة أيضاً: «عليه» · «فيه» · «تحته» · «فوقه» · «خلفه» · «بجانبه» · «بينهما» — حرفٌ وضميرٌ متصل، كما darauf · darin · darunter · darüber · dahinter · daneben · dazwischen كلمةٌ واحدة. (2) العربية لا تجمع حركتين متتاليتين بلا حرفٍ بينهما (قارئ · سائل: الهمزة تفصل بينهما) — والألمانية تفصل بـr: da + auf ← darauf · da + in ← darin. (3) الفرنسية dessus · dessous · dedans («عليه · تحته · فيه») كلمةٌ واحدة كذلك — تأثيرٌ فرنسي يعينك. وما يختلف ثلاثة: (1) في «عليه» الحرف أولاً ثم الضمير، فيترجم المتعلم حرفاً بحرف: ~~Ich lege die Kissen auf es.~~ (وكذلك on it الإنجليزية) — والألمانية لا تضع es بعد الحرف للشيء، بل da أولاً ثم الحرف: Ich lege die Kissen darauf. (2) «عليها مزهريتان» بلا فعل، والفصحى تُفرد الفعل إذا تقدّم على فاعله («تقف عليها مزهريتان»)، وes gibt من هذه الوحدة لا تتغيّر مع الجمع — فيُبقي المتعلم الفعل مفرداً: ~~Darauf steht zwei Vasen.~~ — والفعل الألماني يطابق فاعله ولو جاء بعده: Darauf stehen zwei Vasen. (3) «الأثاث» مفرد اللفظ يُخبر عنه بالمفرد («الأثاث قديم»)، وكذلك furniture الإنجليزية (furniture is) — فيقول المتعلم: ~~Die Möbel ist alt.~~ — وdie Möbel جمعٌ: Die Möbel sind alt. (والفرنسية les meubles sont تعينك هنا) — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "اليوم للمكان (Wo?)، وللوضع (Wohin?) تصلح كذلك darauf · darüber · darunter · daneben · dahinter · dazwischen: Ich stelle die Vase darauf. · Ich hänge das Bild darüber. — أما darin فللمكان وحده (Darin sind zwei Handtücher.)، و«إلى داخله» للوضع كلمةٌ أخرى لاحقاً.",
+      "davor مع vor (أمام) في الوحدة 9 · وda مع حروفٍ بمعنى غير المكان (darum · danach — كلمتان بمدخليهما لاحقاً) ومع الأفعال، وأسئلة wo + حرف (Worauf? · Wovon?) في المستوى A2 — اليوم للمكان وحده.",
+      "die Möbel جمعٌ في الاستعمال (قائمة Goethe: pl.) ⇒ sind · sie، والمفرد das Möbel (قطعة أثاث) نادر. · der Nachbar ← die Nachbarn، وللمفعول به den Nachbarn (‑n كـder Junge ← den Jungen — الوحدة 4) وتسمع den Nachbar أيضاً: الصيغتان مقبولتان، ونكتب den Nachbarn.",
+      "في الكلام تسمع drauf · drin · drunter (بلا a) — صحيحة في الكلام، ونكتب الآن darauf · darin · darunter. · والطابق بعدده الترتيبي (in der zweiten Etage = في الطابق الثاني) في الوحدة 10 مع التاريخ — اليوم: Das Haus hat sechs Stockwerke. · Meine Wohnung ist oben."
+    ],
+    "beads": [
+      "Darauf",
+      "steht",
+      "eine",
+      "Vase."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u6-d5",
+    "a1-u6-d6",
+    "a1-u15-d3"
+  ]
+}

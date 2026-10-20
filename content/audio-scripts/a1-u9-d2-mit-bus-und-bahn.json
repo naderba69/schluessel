@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d2-mit-bus-und-bahn",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Mit Bus und Bahn",
+    "ar": "بالحافلة والقطار — مكالمة الدورة قبل السفر: لينا تسأل كيف يصل يوسف إلى المطار يوم الاثنين (الخط 5 إلى المحطة المركزية، تغيير إلى القطار، الانطلاق 6:10 والوصول 6:50 من الرصيف 3 باتجاه المطار) ويوسف يسأل عن قطارها إلى الجدة يوم الأحد (بلا تغيير، ذهاباً وإياباً اثنا عشر يورو، من الموقف قريب جداً) — einsteigen/umsteigen/aussteigen · Wo/Wohin · Abfahrt/Ankunft um … Uhr · weit/nah · hin und zurück · vorbei · überall"
+  },
+  "usedIn": [
+    "a1-u9-d2"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "hb-1",
+      "speaker": "lena",
+      "text": "Hallo Yusuf! Am Montag fliegst du. Wie kommst du zum Flughafen — mit der Bahn?",
+      "direction": "مكالمة الدورة قبل السفر — لينا تفتح بسؤال الرحلة: Wie kommst du zum Flughafen? · mit der Bahn (الداتيف من الوحدة 8)"
+    },
+    {
+      "id": "hb-2",
+      "speaker": "yusuf",
+      "text": "Ja. Die Haltestelle ist gegenüber der Bäckerei. Dort steige ich ein — Linie 5.",
+      "direction": "الموقف مقابل المخبز (gegenüber der Bäckerei — من u9-d1) · Dort steige ich ein: الفعل المنفصل einsteigen، ein في آخر الجملة · Linie 5 بلا أداة"
+    },
+    {
+      "id": "hb-3",
+      "speaker": "lena",
+      "text": "Linie 5 fährt zum Flughafen?",
+      "direction": "سؤال قصير بالنبرة: Linie 5 fährt zum Flughafen? — تأكيد لا سؤال بـWohin"
+    },
+    {
+      "id": "hb-4",
+      "speaker": "yusuf",
+      "text": "Nein, zum Hauptbahnhof. Am Hauptbahnhof steige ich um. Die Bahn fährt zum Flughafen.",
+      "direction": "Am Hauptbahnhof steige ich um — umsteigen منفصل: um في الآخر · zum Hauptbahnhof (zu + dem)"
+    },
+    {
+      "id": "hb-5",
+      "speaker": "lena",
+      "text": "Und wann ist die Abfahrt?",
+      "direction": "سؤال عن وقت الانطلاق: Wann ist die Abfahrt?"
+    },
+    {
+      "id": "hb-6",
+      "speaker": "yusuf",
+      "text": "Die Abfahrt ist um sechs Uhr zehn, die Ankunft am Flughafen um sechs Uhr fünfzig.",
+      "direction": "die Abfahrt um … Uhr · die Ankunft um … Uhr — الوقت بـum دائماً · am Flughafen عبارة ثابتة"
+    },
+    {
+      "id": "hb-7",
+      "speaker": "lena",
+      "text": "Vierzig Minuten — das ist nicht weit. Und wo steigst du aus?",
+      "direction": "das ist nicht weit — weit بعد ist بلا نهاية · Wo steigst du aus? — السؤال بـWo والجزء aus في الآخر"
+    },
+    {
+      "id": "hb-8",
+      "speaker": "yusuf",
+      "text": "Ich steige am Flughafen aus. Von dort sind es fünf Minuten zu Fuß.",
+      "direction": "Ich steige am Flughafen aus — الجواب بـam (موقع) · Von dort … zu Fuß"
+    },
+    {
+      "id": "hb-9",
+      "speaker": "lena",
+      "text": "Weißt du schon den Bahnsteig?",
+      "direction": "Weißt du schon den Bahnsteig? — den Bahnsteig أكوزاتيف (wissen + مفعول)"
+    },
+    {
+      "id": "hb-10",
+      "speaker": "yusuf",
+      "text": "Bahnsteig drei, Richtung Flughafen. Am Montag ist überall Verkehr — ich fahre früh.",
+      "direction": "Bahnsteig drei بلا أداة · Richtung Flughafen بلا أداة · überall Verkehr · früh من الوحدة 3"
+    },
+    {
+      "id": "hb-11",
+      "speaker": "lena",
+      "text": "Bei mir: Am Sonntag fahre ich mit dem Zug zur Oma — eine Stunde.",
+      "direction": "انتقال إلى لينا: Bei mir — mit dem Zug zur Oma (zu + der) · eine Stunde"
+    },
+    {
+      "id": "hb-12",
+      "speaker": "yusuf",
+      "text": "Musst du umsteigen?",
+      "direction": "Musst du umsteigen? — بعد muss يعود الفعل كاملاً umsteigen إلى آخر الجملة"
+    },
+    {
+      "id": "hb-13",
+      "speaker": "lena",
+      "text": "Nein, ich steige nicht um. Der Zug fährt am Park vorbei, am Krankenhaus vorbei — und ich lese.",
+      "direction": "ich steige nicht um — nicht قبل الجزء المنفصل · am Park vorbei · am Krankenhaus vorbei: vorbei في الآخر"
+    },
+    {
+      "id": "hb-14",
+      "speaker": "yusuf",
+      "text": "Hin und zurück — wie viel kostet das?",
+      "direction": "Hin und zurück — ذهاباً وإياباً بهذا الترتيب · wie viel kostet das? من الوحدة 3"
+    },
+    {
+      "id": "hb-15",
+      "speaker": "lena",
+      "text": "Hin und zurück zwölf Euro. Die Fahrkarte kaufe ich am Schalter.",
+      "direction": "zwölf Euro · Die Fahrkarte kaufe ich am Schalter — المفعول أولاً والفعل ثانياً (من u8-d5)"
+    },
+    {
+      "id": "hb-16",
+      "speaker": "yusuf",
+      "text": "Und von der Haltestelle zur Oma — ist das weit?",
+      "direction": "von der Haltestelle (von + der) · zur Oma · ist das weit?"
+    },
+    {
+      "id": "hb-17",
+      "speaker": "lena",
+      "text": "Nein, sehr nah: geradeaus zur Kreuzung, dort links — zwei Minuten.",
+      "direction": "sehr nah — ضد weit · geradeaus zur Kreuzung (zu + der) · dort links — وصف طريق قصير كما في u9-d1"
+    },
+    {
+      "id": "hb-18",
+      "speaker": "yusuf",
+      "text": "In Berlin ist überall Verkehr — aber die Bahn ist schnell.",
+      "direction": "In Berlin ist überall Verkehr — überall كلمة مكان · aber … schnell"
+    },
+    {
+      "id": "hb-19",
+      "speaker": "lena",
+      "text": "Und in Tunis? Steigst du dort auch um?",
+      "direction": "Und in Tunis? Steigst du dort auch um? — السؤال بالفعل المنفصل: um في الآخر"
+    },
+    {
+      "id": "hb-20",
+      "speaker": "yusuf",
+      "text": "Nein — mein Vater holt mich ab. Hin und zurück mit dem Auto! Bis morgen, Lena!",
+      "direction": "Nein — mein Vater holt mich ab (abholen من u8-d4) · Hin und zurück mit dem Auto · ختام المكالمة: Bis morgen, Lena! (ما زال في برلين — يطير الاثنين)"
+    }
+  ]
+}

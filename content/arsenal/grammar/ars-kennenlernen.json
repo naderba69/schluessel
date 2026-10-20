@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-kennenlernen",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Ich lese auch gern. — Natürlich sprechen wir Deutsch!",
+    "ar": "الفعل ثانياً دائماً — والظرف (auch · gern · also · natürlich) لا يدخل بين الفاعل والفعل"
+  },
+  "payload": {
+    "topicAr": "ترتيب الجملة في حوار التعارف: الفعل المصرَّف في الموضع الثاني — auch وgern وalso بعده لا قبله، وإن بدأت الجملة بـNatürlich أو Also جاء الفعل بعدها مباشرة ثم الفاعل؛ وسؤال نعم/لا يبدأ بالفعل",
+    "sceneAr": "الدورة عبر الإنترنت: المعلمة تقسم المشاركين مجموعات من اثنين للعمل الثنائي — ويوسف مع مشاركة جديدة في الدورة اسمها Ayşe (تُنطق «آيْشه»: ş التركية = ش، وهو الصيغة التركية لاسم عائشة)، من تركيا. أول حوار تعارف بينهما: يعرّف كل منهما نفسه فيكتشفان أنهما يسكنان كلاهما في برلين؛ هي تقول إن ألمانيتها ما زالت ضعيفة فيقترح يوسف أن يتكلما ببطء — ثم الهوايات: يوسف يحب القراءة، وAyşe تحبها أيضاً وتحب الموسيقى.",
+    "examples": [
+      {
+        "de": "Ich lese gern.",
+        "ar": "أحب القراءة. (حرفياً: أقرأ بمحبة)"
+      },
+      {
+        "de": "Ich wohne auch in Berlin.",
+        "ar": "أنا أيضاً أسكن في برلين."
+      },
+      {
+        "de": "Du wohnst also auch hier!",
+        "ar": "إذن أنتِ أيضاً تسكنين هنا!"
+      },
+      {
+        "de": "Natürlich sprechen wir Deutsch!",
+        "ar": "طبعاً نتكلم الألمانية!"
+      },
+      {
+        "de": "Also sprechen wir langsam.",
+        "ar": "إذن نتكلم ببطء."
+      },
+      {
+        "de": "Hast du ein Hobby? — Ja, Musik!",
+        "ar": "هل عندك هواية؟ — نعم، الموسيقى!"
+      }
+    ],
+    "inferencePromptAr": "انظر إلى الأمثلة: (1) في الأمثلة 1–3 أين تقع gern وauch وalso: قبل الفعل أم بعده؟ وهل تدخل يوماً بين الفاعل (ich · du) وفعله؟ (2) في المثالين 4 و5: ما الكلمة الأولى، وما الثانية، وأين ذهب الفاعل wir؟ (3) في المثال الأخير سؤال جوابه «نعم» أو «لا» — بأي كلمة يبدأ؟ (4) قل بالعربية «أنا أيضاً أقرأ»: أين وضعت «أيضاً»؟",
+    "ruleDe": "Ich lese auch gern. · Du wohnst also auch hier. · Natürlich sprechen wir Deutsch! · Also sprechen wir langsam. · Hast du ein Hobby?",
+    "ruleAr": "الفعل المصرَّف هو الثابت في الجملة الخبرية: يقف في الموضع الثاني دائماً. وقبله شيء واحد فقط — الفاعل (Ich lese gern.) أو ظرف (Natürlich … · Also … · Hier …). فإن بدأتَ بالظرف جاء الفعل بعده مباشرة ثم الفاعل: Natürlich sprechen wir Deutsch! · Also sprechen wir langsam. — كما تعلمنا Hier wohne ich. أما auch (أيضاً) وgern (بمحبة) وalso (إذن) في وسط الجملة فمكانها بعد الفعل، لا بين الفاعل والفعل أبداً: Ich lese auch gern. · Ich wohne auch in Berlin. · Du wohnst also auch hier. وgern ليست فعلاً: «أحب القراءة» = Ich lese gern (أقرأ بمحبة) — الفعل lese ثم gern. وسؤال نعم/لا يبدأ بالفعل: Hast du ein Hobby? · Sprechen wir Deutsch oder Englisch? وسؤال W يبدأ بكلمة السؤال ثم الفعل: Woher kommst du? (درس wer وwoher).",
+    "contrastAr": "العربية حرة في موضع الظرف: «أنا أيضاً أقرأ» · «طبعاً نحن نتكلم الألمانية» — يأتي الظرف قبل الفعل، بعد الفاعل أو قبله، وكله صحيح. فيقول المتعلم ~~Ich auch lese gern.~~ و~~Natürlich wir sprechen Deutsch.~~ — والألمانية تثبّت الفعل ثانياً: لا شيء يدخل بين الفاعل وفعله، والظرف في أول الجملة يدفع الفاعل إلى ما بعد الفعل (حرية الظرف مقابل V2 — خريطة التداخل 10‑ي). ومعنى «أحب» تعبّر عنه العربية بفعلٍ يسبق الفعل الآخر («أحب أن أقرأ»)، فيضع المتعلم gern مكانه: ~~Ich gern lese.~~ — وgern ظرف لا فعل، مكانه بعد الفعل: Ich lese gern. ومن يعرف الإنجليزية يقول I also read فيترجم الترتيب حرفياً: ~~Ich also lese.~~ — وفي الألمانية «أيضاً» هي auch وتأتي بعد الفعل: Ich lese auch.",
+    "limitsAr": [
+      "الجواب القصير بلا فعل صحيح في الحوار: Ich lese gern. — Ich auch! · Sprechen wir Deutsch? — Natürlich! وAuch ich lese gern. صحيحة أيضاً: auch ich كتلة واحدة في الموضع الأول ثم الفعل، فالفعل ما زال ثانياً. ونقول الآن: Ich lese auch gern.",
+      "في الكلام تسمع أيضاً Also, … بوقفة بعدها ثم ترتيب عادي (Also, ich heiße Ayşe.): كلمة افتتاح خارج الجملة كـ«طيب،». ونحن نستعمل also الآن داخل الجملة: Also sprechen wir langsam. · Du wohnst also auch hier. — وalso ليست «أيضاً»: also الإنجليزية = auch الألمانية.",
+      "vorstellen وkennenlernen تنقسمان في الجملة: Ich stelle mich vor. · Wir lernen uns kennen. — الجزء الثاني (vor · kennen) يذهب إلى آخر الجملة. نحفظهما الآن قطعتين كاملتين، وقاعدة هذه الأفعال كلها في الوحدة السابعة.",
+      "Ich freue mich: mich لا تسقط — «يسعدني» بالألمانية «أُفرِح نفسي»، فنحفظها قطعة: Freut mich! · Ich freue mich. وgern للمحبة الآن فقط، والمقارنة («أحب أكثر») في الوحدة السابعة."
+    ],
+    "beads": [
+      "Natürlich",
+      "sprechen",
+      "wir",
+      "Deutsch!"
+    ],
+    "properNouns": [
+      "Berlin"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u2-d5"
+  ]
+}

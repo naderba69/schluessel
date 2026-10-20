@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-es-gibt",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Es gibt einen Schreibtisch. · Gibt es einen Fernseher? — Nein, es gibt keinen Fernseher.",
+    "ar": "es gibt = «يوجد · فيه»: بعدها مفعولٌ به (einen · keinen للمذكر) — وgibt لا تتغيّر وes لا تسقط"
+  },
+  "payload": {
+    "topicAr": "اليوم تقول ما يوجد في البيت وما لا يوجد: Es gibt einen Schreibtisch. · Gibt es einen Fernseher? — Nein, es gibt keinen Fernseher. es gibt تعني «يوجد / فيه»، وما بعدها مفعولٌ به كما بعد haben (الوحدة 4) — فالمذكر وحده يتغيّر (einen · keinen) — وgibt لا تتغيّر أبداً ولو جاء بعدها جمع، وes لا تسقط. ومعها كلمات اليوم: jeder · jede · jedes (كلّ) بنهاية der/die/das، وan/aus بعد ist للجهاز: Der Computer ist an. · Die Heizung ist aus.",
+    "sceneAr": "تتواصل جولة الكاميرا في مهمة الوحدة السادسة: لينا تسأل يوسف عمّا في غرفته في برلين — باب ونافذة كبيرة، والسقف عالٍ والجدران مضيئة، والأرضية قديمة لكنها جميلة، ومكتب وحاسوب مشتغل («نحن نتكلم عبره!»)، ولا تلفاز، وفي المطبخ ثلاجة لكن لا غسالة، والتدفئة مطفأة لأن الشمس مشرقة اليوم. ثم يسأل يوسف عن بيت لينا: هل في كل غرفة تلفاز؟ لا — تلفاز واحد قديم، لكن في كل حجرة تدفئة، والسطح جديد، والغسالة مشتغلة الآن… أتسمعها؟",
+    "examples": [
+      {
+        "de": "Hier gibt es ein Fenster.",
+        "ar": "هنا توجد نافذة — das Fenster محايد: ein كما هي"
+      },
+      {
+        "de": "Es gibt einen Schreibtisch und einen Computer.",
+        "ar": "يوجد مكتب وحاسوب — der ⇒ einen: مفعولٌ به"
+      },
+      {
+        "de": "Es gibt keine Waschmaschine.",
+        "ar": "لا توجد غسالة — die ⇒ keine كما هي"
+      },
+      {
+        "de": "Es gibt zwei Fenster.",
+        "ar": "توجد نافذتان — gibt لا تتغيّر مع الجمع"
+      },
+      {
+        "de": "Gibt es einen Fernseher? — Nein, es gibt keinen Fernseher.",
+        "ar": "هل يوجد تلفاز؟ — لا، لا يوجد تلفاز (في السؤال es بعد gibt)"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) Es gibt einen Schreibtisch · Es gibt ein Fenster · Es gibt keine Waschmaschine — قبل أيّ اسم تغيّرت الكلمة؟ وأين رأيت ein ← einen من قبل (Ich habe einen Schrank)؟ (2) Es gibt zwei Fenster: هل تغيّرت gibt مع الجمع؟ (3) في السؤال Gibt es einen Fernseher? أين صارت es؟ هل سقطت؟ وفي Hier gibt es ein Fenster؟ (4) بالعربية «هل يوجد تلفاز؟» — هل فيها كلمة مثل es؟ (5) ما الفرق بين Es gibt einen Computer وDer Computer ist an؟",
+    "ruleDe": "Es gibt einen Schreibtisch. · Es gibt ein Fenster. · Es gibt keine Waschmaschine. · Es gibt zwei Fenster. · Gibt es einen Fernseher? · Hier gibt es ein Fenster.",
+    "ruleAr": "قل ما يوجد بأربع خطوات: (1) es gibt = «يوجد / فيه» لشيء تذكره أول مرة، وبعدها اسمٌ نكرة: مع ein أو kein أو عدد — أو بلا أداة للمادة كما في الوحدة 5: Es gibt einen Computer. · Es gibt zwei Fenster. · Es gibt Kaffee. (2) ما بعد es gibt مفعولٌ به كما بعد haben (الوحدة 4)، فالمذكر وحده يتغيّر: ein ← einen · kein ← keinen (Es gibt einen Schreibtisch · Es gibt keinen Fernseher)، والمؤنث والمحايد والجمع كما هي (eine Heizung · ein Fenster · zwei Fenster). (3) es وgibt لا يتغيّران مع ما بعدهما — Es gibt zwei Fenster: gibt مفردٌ ولو جاء بعدها جمع — وes لا تسقط: في السؤال تأتي بعد الفعل (Gibt es einen Balkon?) وبعد كلمة أولى كذلك (Hier gibt es ein Fenster. — الفعل ثانياً ثم es). (4) ومعها كلمات اليوم: jeder · jede · jedes (كلّ) بنهاية der · die · das نفسها — jeder Raum · jede Wand · jedes Zimmer — للمفرد وحده؛ وan/aus بعد ist للجهاز: Der Computer ist an. · Die Heizung ist aus. — فإذا ذكرت الشيء مرة صار معروفاً بـder/die/das: Es gibt einen Computer. Der Computer ist an.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «يوجد / فيه» العربية مثل es gibt تقدّم شيئاً جديداً نكرةً («فيه نافذة» · «فمّا تلفزة؟») — فالنكرة بعدها كـein وkein. (2) الفعل العربي قبل الاسم يبقى مفرداً مع المثنى والجمع («يوجد كرسيان» · «توجد غرفتان») كما تبقى gibt: Es gibt zwei Fenster. (3) والفرنسية il y a فيها ضمير شكلي كـes (il y a une fenêtre) — عونٌ لمن يعرفها. وما يختلف ثلاثة: (1) الاسم بعد «يوجد» فاعلٌ مرفوع («يوجد مكتبٌ»)، وبعد «في الغرفة» مبتدأ مؤخر مرفوع («في الغرفة نافذةٌ») — فيبقى المتعلم على صيغة الفاعل: ~~Es gibt ein Tisch.~~ — والاسم بعد es gibt مفعولٌ به: einen Tisch. (2) العربية بلا ضمير شكلي: «يوجد مكتب؟» · «فيه بلكون؟» بلا «هو» — فيُسقط المتعلم es: ~~Gibt einen Balkon?~~ · ~~Hier gibt einen Kühlschrank.~~ — وes لا تسقط أبداً. (3) «كلّ» لا تتغيّر مع جنس ما بعدها («كلُّ غرفةٍ» · «كلُّ بيتٍ»)، وكذلك every الإنجليزية — فيكتب المتعلم صيغة واحدة: ~~jeder Zimmer~~ — وjed- تأخذ نهاية der/die/das: jeder Tisch · jede Wohnung · jedes Zimmer — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "«في الغرفة» و«في المطبخ» تحتاجان قاعدة المكان (أين؟)، وهي في الدرس القادم — اليوم: hier · dort (Hier gibt es ein Fenster. · Was gibt es dort?).",
+      "es gibt مع der/die/das نادرة ولها معنى آخر يأتي لاحقاً في التسوّق — اليوم بعدها نكرةٌ دائماً: ein · kein · عدد · أو بلا أداة.",
+      "jed- للمفرد وحده (للجمع كلمةٌ أخرى لاحقاً)، وهو مفعولاً كـein: jeden للمذكر (jeden Tag = كلّ يوم).",
+      "an/aus للجهاز بعد ist، والفعل منهما (شغّل · أطفئ) لاحقاً — والعامية تقول كثيراً «حلّ التلفزة · سكّر الضوّ» (افتح · أغلق)، لكن geöffnet/geschlossen للمحل والمكتب (الوحدة 3) لا للجهاز: Der Fernseher ist an/aus."
+    ],
+    "beads": [
+      "Hier",
+      "gibt",
+      "es",
+      "ein",
+      "Fenster."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u6-d3",
+    "a1-u6-d6",
+    "a1-u15-d3"
+  ]
+}

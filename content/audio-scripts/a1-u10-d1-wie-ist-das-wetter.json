@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u10-d1-wie-ist-das-wetter",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Wie ist das Wetter?",
+    "ar": "كيف الطقس؟ — مكالمة فيديو صباحية في اليوم الثالث بتونس: عند يوسف الشمس مشرقة وبلا سحب وخمس وعشرون درجة (دافئ لا حار) · عند لينا سحب ومطر وبرد وريح باردة وثماني درجات وثلج صباحاً وشارع مبلل · يوسف يمشي اليوم ولا يركب الحافلة · لينا بالحافلة لا بالدراجة بسبب المطر ومظلتها الجديدة في حقيبتها · غداً عند لينا مشمس لكن بارد وعند يوسف ثلاثون درجة · يوسف مع أخته إلى الضفة ولينا بالدراجة بلا مطر ولا مظلة — es الشكلي (Es regnet · Es ist kalt · Es sind … Grad) والفاعل الحقيقي (Die Sonne scheint · Der Wind ist kalt) وes بعد الفعل حين يتقدّم المكان أو الزمن (Hier ist es … · Morgen regnet es nicht)"
+  },
+  "usedIn": [
+    "a1-u10-d1"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "wt-1",
+      "speaker": "lena",
+      "text": "Guten Morgen, Yusuf! Wie ist das Wetter in Tunis?",
+      "direction": "لينا تفتح صباحاً (مكالمة فيديو — اليوم الثالث في تونس): Wie ist das Wetter in Tunis? — سؤال الطقس"
+    },
+    {
+      "id": "wt-2",
+      "speaker": "yusuf",
+      "text": "Guten Morgen, Lena! Hier ist es schön: Die Sonne scheint, und am Himmel sind keine Wolken.",
+      "direction": "يوسف: Hier ist es schön (es الشكلي بعد المكان) · Die Sonne scheint (فاعل حقيقي) · am Himmel sind keine Wolken"
+    },
+    {
+      "id": "wt-3",
+      "speaker": "lena",
+      "text": "Keine Wolken? Bei uns sind heute nur Wolken am Himmel.",
+      "direction": "لينا: Bei uns sind heute nur Wolken am Himmel — المكان أولاً والفعل ثانياً"
+    },
+    {
+      "id": "wt-4",
+      "speaker": "yusuf",
+      "text": "Und wie ist das Wetter bei dir? Regnet es?",
+      "direction": "يوسف يسأل: Wie ist das Wetter bei dir? Regnet es? — سؤال نعم/لا وes بعد الفعل"
+    },
+    {
+      "id": "wt-5",
+      "speaker": "lena",
+      "text": "Ja, es regnet, und es ist kalt. Der Wind ist auch kalt.",
+      "direction": "لينا: es regnet · es ist kalt (الشكلان) · Der Wind ist auch kalt"
+    },
+    {
+      "id": "wt-6",
+      "speaker": "yusuf",
+      "text": "Wie viel Grad sind es bei dir?",
+      "direction": "يوسف: Wie viel Grad sind es bei dir? — سؤال الحرارة (wie viel من u1-d1)"
+    },
+    {
+      "id": "wt-7",
+      "speaker": "lena",
+      "text": "Nur acht Grad. Am Morgen Schnee und jetzt Regen — die Straße ist nass.",
+      "direction": "لينا: Nur acht Grad · Am Morgen Schnee und jetzt Regen · die Straße ist nass"
+    },
+    {
+      "id": "wt-8",
+      "speaker": "yusuf",
+      "text": "Schnee und Regen? Bei uns sind es fünfundzwanzig Grad. Es ist warm, nicht heiß.",
+      "direction": "يوسف: Bei uns sind es fünfundzwanzig Grad · Es ist warm, nicht heiß — تمييز warm/heiß"
+    },
+    {
+      "id": "wt-9",
+      "speaker": "lena",
+      "text": "Fünfundzwanzig Grad! Fährst du heute mit dem Bus in die Stadt?",
+      "direction": "لينا تستغرب وتسأل عن الحافلة (ربط بـu9-d5)"
+    },
+    {
+      "id": "wt-10",
+      "speaker": "yusuf",
+      "text": "Nein, heute gehe ich zu Fuß. Das Wetter ist zu schön für den Bus!",
+      "direction": "يوسف: heute gehe ich zu Fuß (الزمن أولاً) · Das Wetter ist zu schön für den Bus"
+    },
+    {
+      "id": "wt-11",
+      "speaker": "lena",
+      "text": "Ich fahre heute nicht mit dem Fahrrad zur Schule. Heute fahre ich mit dem Bus — es regnet zu viel.",
+      "direction": "لينا: اليوم لا بالدراجة بل بالحافلة — es regnet zu viel (N-096: اليوم بالحافلة — تمطر)"
+    },
+    {
+      "id": "wt-12",
+      "speaker": "yusuf",
+      "text": "Hast du deinen Regenschirm? Der ist neu!",
+      "direction": "يوسف: Hast du deinen Regenschirm? Der ist neu! (مظلة u8-d3)"
+    },
+    {
+      "id": "wt-13",
+      "speaker": "lena",
+      "text": "Ja, der Regenschirm ist immer in meiner Tasche.",
+      "direction": "لينا: der Regenschirm ist immer in meiner Tasche"
+    },
+    {
+      "id": "wt-14",
+      "speaker": "yusuf",
+      "text": "Und wie ist das Wetter morgen bei dir?",
+      "direction": "يوسف يسأل عن الغد: Wie ist das Wetter morgen bei dir?"
+    },
+    {
+      "id": "wt-15",
+      "speaker": "lena",
+      "text": "Morgen regnet es nicht. Morgen ist es sonnig, aber kalt.",
+      "direction": "لينا: Morgen regnet es nicht (es بعد الفعل مع الزمن أولاً) · Morgen ist es sonnig, aber kalt"
+    },
+    {
+      "id": "wt-16",
+      "speaker": "yusuf",
+      "text": "Sonnig und kalt — das ist auch gut. Hier ist es morgen heiß: dreißig Grad!",
+      "direction": "يوسف: Hier ist es morgen heiß: dreißig Grad!"
+    },
+    {
+      "id": "wt-17",
+      "speaker": "lena",
+      "text": "Dreißig Grad! Das ist zu heiß für mich. Was machst du morgen?",
+      "direction": "لينا: Das ist zu heiß für mich · Was machst du morgen?"
+    },
+    {
+      "id": "wt-18",
+      "speaker": "yusuf",
+      "text": "Morgen gehe ich um zehn mit meiner Schwester ans Ufer. Da ist der Wind schön.",
+      "direction": "يوسف: Morgen gehe ich um zehn mit meiner Schwester ans Ufer (ترتيب u9-d5) · Da ist der Wind schön"
+    },
+    {
+      "id": "wt-19",
+      "speaker": "lena",
+      "text": "Schön! Und ich fahre morgen mit dem Fahrrad zur Schule — ohne Regen und ohne Regenschirm!",
+      "direction": "لينا: morgen mit dem Fahrrad zur Schule — ohne Regen und ohne Regenschirm"
+    },
+    {
+      "id": "wt-20",
+      "speaker": "yusuf",
+      "text": "Ohne Regen und ohne Regenschirm! Bis morgen, Lena!",
+      "direction": "يوسف يختم: Ohne Regen und ohne Regenschirm! Bis morgen, Lena!"
+    }
+  ]
+}

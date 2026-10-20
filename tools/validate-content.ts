@@ -7,9 +7,16 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
-  Unit0Deck, SCHEMA_VERSION,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, StoryBook, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
+  GrammarRuleFile, LessonUpgradePlan,
 } from "../content/schemas/index.js";
-import { VOICE_ID, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
+import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
+import { evidenceIn } from "../content/schemas/answer-key.js";
+import { contentTokens, knownStems, unknownTokens } from "./lib/vocab-forms.js";
+import { deriveGoetheList, describeEvidence, evidenceFor, indexWordlists, sameLevels } from "./lib/goethe-lists.js";
+import { checkPlan, proseStrings } from "./lib/curriculum-plan.js";
+import { checkGrammarRules, checkUpgrade } from "./lib/lesson-upgrade.js";
+import { VOICE_ID, VOICE_ID_FEMALE, PINNED_VOICES, FEMALE_ROLES, WORD_CLIP_MAX_SEC, RMS_WINDOW_DB } from "../src/lib/audio.js";
 
 export interface Issue {
   level: "error" | "warning";
@@ -26,6 +33,8 @@ export interface ContentEntry {
 export interface ValidationReport {
   errors: Issue[];
   warnings: Issue[];
+  /** D214: بلاغات ناعمة (report-only) — تُطبع ولا تُحسب ولا توقف البوابة */
+  notes: Issue[];
   fileCount: number;
 }
 
@@ -37,9 +46,13 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
   B2: { production: 0.7, comprehension: 0.2, audio: 0.1 },
 };
 
+/** D184: حارس السرعة (مطابق لـtools/dev/speech-rate.py: الكلمة ≥ حرفين · الحدّ 200 · ≥3 كلمات) */
+const SPEECH_WORD_RE = /[A-Za-zÄÖÜäöüß]{2,}(?:[-'][A-Za-zÄÖÜäöüß]+)*/g;
+const SPEECH_RATE_MAX_WPM = 200;
+const SPEECH_RATE_MIN_WORDS = 3;
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "audio-script" | "story" | "exam-format" | "wordlist" | "plan" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -48,12 +61,47 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("words/")) return "word";
   if (p.startsWith("lessons/")) return "lesson";
   if (p.startsWith("unit0/")) return "unit0";
+  if (p.startsWith("landeskunde/")) return "landeskunde";
+  if (p.startsWith("pruefungen/")) return "pruefungen";
+  if (p.startsWith("modelltest/")) return "modelltest";
+  if (p.startsWith("lese/")) return "lese";
+  if (p.startsWith("audio-scripts/")) return "audio-script";
+  if (p.startsWith("story/")) return "story";
+  if (p.startsWith("exam-formats/")) return "exam-format";
+  if (p.startsWith("wordlists/")) return "wordlist";
+  if (p.startsWith("plans/")) return "plan";
+  if (p.startsWith("upgrades/")) return "upgrade";
   return "unknown";
+}
+
+/**
+ * D133: قياس الملفات الصوتية بعملية Python واحدة (كان المدقِّق يشغّل عملية لكل مسار — أكثر من ألف عملية) ·
+ * إن فشلت الدفعة (ملف معطوب) يعود إلى القياس ملفاً ملفاً فيُنسب الخطأ إلى ملفه بالضبط.
+ */
+export function probeAudioFiles(files: readonly string[]): Map<string, { durationSec: number; rmsDb: number }> {
+  const tool = join(process.cwd(), "tools/audio_probe.py");
+  const out = new Map<string, { durationSec: number; rmsDb: number }>();
+  if (files.length === 0) return out;
+  try {
+    const raw = JSON.parse(execFileSync("python3", [tool, ...files], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024, stdio: ["ignore", "pipe", "ignore"] })) as unknown;
+    const list = (files.length === 1 ? [raw] : raw) as { durationSec: number; rmsDb: number }[];
+    files.forEach((f, i) => out.set(f, list[i]!));
+  } catch {
+    for (const f of files) {
+      try {
+        out.set(f, JSON.parse(execFileSync("python3", [tool, f], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] })) as { durationSec: number; rmsDb: number });
+      } catch {
+        /* يبقى بلا قياس ← e-audio-missing «تعذّر تحليل الملف الصوتي» */
+      }
+    }
+  }
+  return out;
 }
 
 export function validateContentTree(entries: ContentEntry[], opts: { contentRoot?: string } = {}): ValidationReport {
   const errors: Issue[] = [];
   const warnings: Issue[] = [];
+  const notes: Issue[] = [];
   const push = (level: "error" | "warning", code: string, path: string, message: string) =>
     (level === "error" ? errors : warnings).push({ level, code, path, message });
 
@@ -61,6 +109,18 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
   const lessons = new Map<string, { path: string; lesson: Lesson }>();
   const entryPaths = new Set(entries.map((e) => e.path)); // فحص الإشارات مستقل عن ترتيب الملفات
   let audioIds: Set<string> | null = null;
+  // D103: للفحص المتقاطع بعد قراءة كل الملفات (ترتيب الملفات لا يهم)
+  let manifestPath = "";
+  let manifestTracks = new Map<string, TrackLike & { file: string }>();
+  let characterVoices: Record<string, string> = {};
+  const scripts = new Map<string, { path: string; script: AudioScript }>();
+  const modelltests: { path: string; test: Modelltest }[] = [];
+  const examFormats = new Map<string, ExamFormat>(); // D108: الصيغة الرسمية لكل مستوى
+  const wordlists = new Map<string, OfficialWordlist>(); // D110: فهارس قوائم Goethe الرسمية
+  const plans: { path: string; plan: CurriculumPlan }[] = []; // D112: خطط التوزيع المنهجية المُلزِمة
+  const grammarRules = new Map<string, { path: string; rule: GrammarRuleFile }>(); // D115: قواعد اليوم (الشفرات)
+  const upgradePlans: { path: string; plan: LessonUpgradePlan }[] = []; // D115: خطط ترقية الدروس (D114)
+  const storyBooks: { path: string; book: StoryBook }[] = []; // D193: جمل القصة المولَّدة من الحوارات (N-003)
   let curriculum: CurriculumReference | null = null;
 
   for (const entry of entries) {
@@ -80,18 +140,43 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         case "audio-manifest": {
           const m = AudioManifest.parse(entry.data);
           audioIds = new Set(m.tracks.map((t) => t.id));
+          manifestPath = entry.path;
+          manifestTracks = new Map(m.tracks.map((t) => [t.id, t] as const));
+          characterVoices = m.characterVoices;
+          // القانون 11 + D103: صوت ثابت لكل شخصية — مسار بشخصية صوته = characterVoices[الشخصية] حرفياً
+          for (const t of m.tracks) {
+            if (!t.characterId) continue;
+            const want = m.characterVoices[t.characterId];
+            if (want && t.voiceParams.speaker !== want)
+              push("error", "e-audio-character-voice", entry.path,
+                `صوت ${t.id} = ${t.voiceParams.speaker} والصوت الثابت لـ${t.characterId} = ${want} (القانون 11)`);
+          }
           if (m.tracks.some((t) => t.isGuest && t.priority === "P0"))
             push("warning", "w-audio-guest-p0", entry.path, "ضيوف P0 — الضيوف مخصصون لتمارين Hören لا للحوارات السردية (§5‑هـ)");
-          // استقرار الصوت (D20): كل المسارات بالمصوّت المثبّت عبر الجلسات — لا تذبذب أبداً
+          // استقرار الصوت (D20 + D98 — مُنفَّذ فعلياً في D100): الصوتان المثبَّتان حصراً — لا تذبذب أبداً
+          const pinned: readonly string[] = PINNED_VOICES;
+          const femaleRoles: readonly string[] = FEMALE_ROLES;
           for (const t of m.tracks) {
-            if (t.voiceParams.speaker !== VOICE_ID)
+            const speaker = t.voiceParams.speaker;
+            if (!pinned.includes(speaker))
               push("error", "e-audio-voice-drift", entry.path,
-                `تذبذب صوت في ${t.id}: ${t.voiceParams.speaker} ≠ المثبت ${VOICE_ID}`);
+                `تذبذب صوت في ${t.id}: ${speaker} ليس من الصوتين المثبَّتين (${PINNED_VOICES.join(" / ")})`);
+            // D98: الصوت الأنثوي للحوار فقط (character/guest/dialogue) — الكلمات والإعلانات بالصوت الرئيسي (thorsten) دائماً
+            else if (speaker === VOICE_ID_FEMALE && !femaleRoles.includes(t.role))
+              push("error", "e-audio-voice-role", entry.path,
+                `الصوت الأنثوي في دور غير مسموح: ${t.id} (role=${t.role}) — المسموح: ${FEMALE_ROLES.join("/")}`);
+          }
+          for (const [character, voice] of Object.entries(m.characterVoices)) {
+            if (!pinned.includes(voice))
+              push("error", "e-audio-voice-drift", entry.path,
+                `صوت الشخصية ${character} غير مثبَّت: ${voice} (المسموح: ${PINNED_VOICES.join(" / ")})`);
           }
           // تحليل فعلي للملفات (القانون 6) — يُفعَّل عند تمرير contentRoot (CLI)
           if (opts.contentRoot) {
+            const root = opts.contentRoot;
+            const probes = probeAudioFiles(m.tracks.map((t) => resolvePath(root, t.file)).filter((f) => existsSync(f)));
             for (const t of m.tracks) {
-              const f = resolvePath(opts.contentRoot, t.file);
+              const f = resolvePath(root, t.file);
               if (!existsSync(f)) {
                 push("error", "e-audio-missing", entry.path, `ملف صوتي مفقود فعلياً: ${t.file}`);
                 continue;
@@ -100,9 +185,8 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
               if (t.hash && t.hash !== sha)
                 push("error", "e-audio-hash", entry.path, `بصمة الملف لا تطابق المانيفست: ${t.file}`);
               try {
-                const probe = JSON.parse(
-                  execFileSync("python3", [join(process.cwd(), "tools/audio_probe.py"), f], { encoding: "utf8" }),
-                ) as { durationSec: number; rmsDb: number };
+                const probe = probes.get(f);
+                if (!probe) throw new Error("probe");
                 if (t.role === "word" && probe.durationSec > WORD_CLIP_MAX_SEC)
                   push("error", "e-audio-duration", entry.path,
                     `مقطع كلمة أطول من ${WORD_CLIP_MAX_SEC}s: ${t.file} = ${probe.durationSec.toFixed(2)}s`);
@@ -111,6 +195,15 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
                     `RMS خارج النافذة [${RMS_WINDOW_DB[0]}..${RMS_WINDOW_DB[1]}]: ${t.file} = ${probe.rmsDb}dB`);
               } catch {
                 push("error", "e-audio-missing", entry.path, `تعذّر تحليل الملف الصوتي: ${t.file}`);
+              }
+              // D214: حارس السرعة ناعم (report-only) تنفيذاً لأمر المالك (D185: لا ضبط lengthScale ولا إعادة توليد) — كان warning يوقف البوابة وينصح بما مُنع
+              // D184 (Q24/Q25 — بأمر المالك): حارس السرعة الآلي — مساعد الأذن البشرية قبل الإطلاق، لا بديلها (الحدّ 200 كلمة/دقيقة · ≥3 كلمات — speech-rate.py نفسه)
+              if (typeof t.durationMs === "number" && t.durationMs > 0 && typeof t.textDe === "string") {
+                const n = (t.textDe.match(SPEECH_WORD_RE) ?? []).length;
+                const wpm = (n * 60_000) / t.durationMs;
+                if (n >= SPEECH_RATE_MIN_WORDS && wpm > SPEECH_RATE_MAX_WPM)
+                  notes.push({ level: "warning", code: "w-audio-speech-rate", path: entry.path,
+                    message: `سرعة نطق مشبوهة ${wpm.toFixed(0)} كلمة/دقيقة > ${SPEECH_RATE_MAX_WPM} (${n} كلمات في ${t.durationMs}ms): ${t.id} «${t.textDe}» — ناعم: يُراجع بالأذن البشرية قبل الإطلاق (D214 · N-015)` });
               }
               if (t.role === "word") {
                 const wid = t.id.replace(/^word-/, "");
@@ -134,12 +227,78 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         }
         case "arsenal": {
           const a = ArsenalFile.parse(entry.data);
+          if (a.kind === "shufra") {
+            const r = GrammarRuleFile.parse(entry.data); // D115: صيغة الاكتشاف الموجَّه كاملة (E13)
+            if (entry.path !== `arsenal/grammar/${r.id}.json`)
+              push("error", "e-arsenal-path", entry.path, `ملف القاعدة مكانه arsenal/grammar/${r.id}.json`);
+            if (grammarRules.has(r.id)) push("error", "e-arsenal-dup", entry.path, `قاعدة مكررة: ${r.id}`);
+            grammarRules.set(r.id, { path: entry.path, rule: r });
+          }
           if (a.usedInLessons.length === 0)
             push("warning", "w-arsenal-unused", entry.path, "ملف خزانة بلا usedInLessons بعد (§10‑ح)");
           break;
         }
         case "unit0": {
           Unit0Deck.parse(entry.data); // يفرض 4 يوم أول + 8 JIT ومعرّفات فريدة (§9)
+          break;
+        }
+        case "landeskunde": {
+          const card = CultureCard.parse(entry.data); // D93: بطاقات الثقافة الأسبوعية
+          if (card.facts.length < 2)
+            push("error", "e-culture-facts", entry.path, "بطاقة ثقافة بلا حقائق كافية (≥2)");
+          break;
+        }
+        case "modelltest": {
+          // D95: الامتحان التجريبي الكامل — المخطط يفرض المهارات الأربع مرة واحدة لكلٍّ (D109)
+          modelltests.push({ path: entry.path, test: Modelltest.parse(entry.data) });
+          break;
+        }
+        case "lese": {
+          const r = ReadingText.parse(entry.data); // D97: نصوص القراءة
+          if (r.questions.length < 2)
+            push("error", "e-lese-questions", entry.path, "نص قراءة بلا أسئلة كافية (≥2)");
+          break;
+        }
+        case "pruefungen": {
+          const t = CyclicTest.parse(entry.data); // D94: الاختبارات الدورية التراكمية
+          if (t.kind === "kurztest" && t.items.length > 12)
+            push("error", "e-kurztest-size", entry.path, "Kurztest أطول من 12 عنصراً (15 دقيقة فقط)");
+          if (t.kind === "monatspruefung" && t.items.length < 10)
+            push("error", "e-monats-size", entry.path, "Monatsprüfung أقصر من 10 عناصر");
+          break;
+        }
+        case "exam-format": {
+          const f = ExamFormat.parse(entry.data); // D108: الصيغة الرسمية (وثائق Goethe المجانية)
+          if (examFormats.has(f.level)) push("error", "e-exam-format-dup", entry.path, `صيغتان رسميتان للمستوى ${f.level}`);
+          examFormats.set(f.level, f);
+          break;
+        }
+        case "wordlist": {
+          const l = OfficialWordlist.parse(entry.data); // D110: الكلمات الرئيسية فقط — لا جمل أمثلة
+          if (wordlists.has(l.id)) push("error", "e-wordlist-dup", entry.path, `فهرس مكرر: ${l.id}`);
+          wordlists.set(l.id, l);
+          break;
+        }
+        case "plan": {
+          const pl = CurriculumPlan.parse(entry.data); // D112: البنية (المعرّفات · التتابع · الأحجام · لا تكرار)
+          if (plans.some((x) => x.plan.id === pl.id)) push("error", "e-plan-dup", entry.path, `خطة مكررة: ${pl.id}`);
+          plans.push({ path: entry.path, plan: pl });
+          break;
+        }
+        case "upgrade": {
+          const up = LessonUpgradePlan.parse(entry.data); // D115: قاعدة · تدريب · Quiz لكل درس (D114)
+          if (upgradePlans.some((x) => x.plan.id === up.id)) push("error", "e-upgrade-dup", entry.path, `خطة ترقية مكررة: ${up.id}`);
+          upgradePlans.push({ path: entry.path, plan: up });
+          break;
+        }
+        case "audio-script": {
+          const sc = AudioScript.parse(entry.data); // D103: السكربت الصوتي الموجَّه
+          if (scripts.has(sc.id)) push("error", "e-audio-script-dup", entry.path, `معرّف سكربت مكرر: ${sc.id}`);
+          scripts.set(sc.id, { path: entry.path, script: sc });
+          break;
+        }
+        case "story": {
+          storyBooks.push({ path: entry.path, book: StoryBook.parse(entry.data) }); // D193
           break;
         }
         default:
@@ -152,6 +311,150 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
 
   if (!curriculum)
     push("warning", "w-no-curriculum", "arsenal/curriculum-reference.json", "المرجع المنهجي مفقود (D15/§10‑ط)");
+
+  // ——— D103: السكربتات الصوتية ↔ المانيفست ———
+  if (audioIds) {
+    const scriptLineIds = new Set<string>();
+    for (const { path, script } of scripts.values()) {
+      for (const l of script.lines) scriptLineIds.add(l.id);
+      for (const issue of checkScriptAgainstManifest(script, manifestTracks, characterVoices))
+        push("error", issue.code, path, issue.message);
+    }
+    for (const t of manifestTracks.values())
+      if (t.file.startsWith("audio/scripts/") && !scriptLineIds.has(t.id))
+        push("error", "e-audio-script-orphan", manifestPath, `مسار سكربت يتيم بلا سطر في أي سكربت: ${t.id}`);
+  }
+
+  // ——— D193 (N-003): جمل القصة ⇔ أول سطر في حوار الدرس — مولَّدة لا مكتوبة؛ أي انحراف = أعد التوليد ———
+  // كل معرّف في storySentenceIds له جملة · كل جملة تطابق سطرها الأول في سكربتها (نصاً ومتحدثاً) ودرسها موجود ·
+  // درس له حوار بلا جملة قصة = حقل لم يُحدَّث (tools/dev/story-sentences.ts --write).
+  {
+    const sentences = new Map<string, { path: string; s: StoryBook["sentences"][number] }>();
+    for (const { path, book } of storyBooks)
+      for (const s of book.sentences) {
+        if (sentences.has(s.id)) push("error", "e-story-dup", path, `جملة قصة مكررة عبر الدفاتر: ${s.id}`);
+        sentences.set(s.id, { path, s });
+        const sc = scripts.get(s.scriptId)?.script;
+        if (!sc) { push("error", "e-story-script", path, `${s.id}: سكربت غير موجود ${s.scriptId}`); continue; }
+        const first = sc.lines[0];
+        if (!first || first.id !== s.lineId || first.text !== s.de || first.speaker !== s.speaker)
+          push("error", "e-story-stale", path, `${s.id}: لا تطابق أول سطر في ${s.scriptId} — شغّل story-sentences --write`);
+        if (!lessons.has(s.lessonId)) push("error", "e-story-lesson", path, `${s.id}: درس غير موجود ${s.lessonId}`);
+        else if (!lessons.get(s.lessonId)!.lesson.praesentation.storySentenceIds.includes(s.id))
+          push("error", "e-story-unlinked", path, `${s.id}: درسه ${s.lessonId} لا يشير إليها`);
+      }
+    const dialogueByLesson = new Map<string, string>();
+    for (const { script } of scripts.values()) if (script.kind === "dialogue") for (const u of script.usedIn) dialogueByLesson.set(u, script.id);
+    for (const { path, lesson } of lessons.values()) {
+      for (const id of lesson.praesentation.storySentenceIds)
+        if (!sentences.has(id)) push("error", "e-story-missing", path, `جملة قصة غير موجودة: ${id}`);
+      if (dialogueByLesson.has(lesson.id) && lesson.praesentation.storySentenceIds.length === 0)
+        push("error", "e-story-unlinked", path, `الدرس له حوار (${dialogueByLesson.get(lesson.id)}) بلا جملة قصة — شغّل story-sentences --write`);
+    }
+  }
+
+  // ——— D108 + D109: الامتحان التجريبي مقابل الصيغة الرسمية لمستواه ———
+  // المدة · عدد الأجزاء · البنود · نوع المهمة · مرات السماع. كان تحذيراً (D108) لأن امتحاننا خالفها
+  // معلناً؛ صار مطابقاً بنداً بنداً (D109) فأي انحراف لاحق خطأ يمنع الدمج — لا تراجع صامت.
+  for (const { path, test } of modelltests) {
+    const f = examFormats.get(test.level);
+    if (!f) continue;
+    for (const official of f.skills) {
+      const ours = test.sections.find((x) => x.skill === official.skill);
+      if (!ours) continue; // غياب المهارة يرفضه المخطط
+      const diffs: string[] = [];
+      if (ours.timeBudgetMin !== official.minutes) diffs.push(`المدة ${ours.timeBudgetMin} والرسمية ${official.minutes} د`);
+      if (ours.parts.length !== official.parts.length) diffs.push(`الأجزاء ${ours.parts.length} والرسمية ${official.parts.length}`);
+      else
+        official.parts.forEach((op, i) => {
+          const p = ours.parts[i]!;
+          if (op.items && p.items.length !== op.items) diffs.push(`الجزء ${op.part}: ${p.items.length} بنود والرسمي ${op.items}`);
+          if (p.taskType !== op.kind) diffs.push(`الجزء ${op.part}: المهمة ${p.taskType} والرسمية ${op.kind}`);
+          if (op.playCount && p.playCount !== op.playCount) diffs.push(`الجزء ${op.part}: السماع ${p.playCount ?? "—"}× والرسمي ${op.playCount}×`);
+        });
+      if (diffs.length)
+        push("error", "e-modelltest-format", path, `${official.skill} لا يطابق «${f.exam}»: ${diffs.join(" · ")}`);
+    }
+  }
+
+  // ——— D103 + D109: لا سؤال استماع بلا صوت حقيقي يحمل جوابه ودليله ———
+  for (const { path, test } of modelltests) {
+    for (const section of test.sections.filter((s) => s.skill === "hoeren")) {
+      for (const part of section.parts) {
+        const ref = part.audioScriptRef;
+        const entry = ref ? scripts.get(ref) : undefined;
+        if (!entry) {
+          if (ref) push("error", "e-hoeren-audio", path, `سكربت الاستماع غير موجود: ${ref} (${part.id})`);
+          continue; // غياب المرجع نفسه يرفضه zod
+        }
+        if (!entry.script.usedIn.includes(`${test.id}#${part.id}`))
+          push("error", "e-hoeren-audio", path, `السكربت ${ref} لا يعلن استخدامه في ${test.id}#${part.id} (usedIn)`);
+        const lines = new Map(entry.script.lines.map((l) => [l.id, l] as const));
+        for (const [i, item] of part.items.entries()) {
+          const heard: string[] = [];
+          for (const a of item.audioRefs ?? []) {
+            const l = lines.get(a);
+            if (!l) push("error", "e-hoeren-audio", path, `${part.id}#${i + 1}: المقطع ${a} ليس من أسطر ${ref}`);
+            else heard.push(l.text);
+          }
+          if (heard.length === 0) continue;
+          const transcript = heard.join(" ");
+          // D109: الدليل منطوق حرفياً في مقاطع البند نفسه (لا في مقطع آخر)
+          if (item.evidence && !evidenceIn(item.evidence, transcript))
+            push("error", "e-hoeren-evidence", path, `${part.id}#${i + 1}: الدليل «${item.evidence}» غير منطوق في مقاطعه`);
+          // Richtig/Falsch: الجواب حكم على عبارة لا كلمة تُسمع — الدليل وحده يحسمه
+          if (part.taskType === "richtig-falsch") continue;
+          const sup = answerSupported(item.a, transcript);
+          if (!sup.ok)
+            push("error", "e-hoeren-answer", path, `${part.id}#${i + 1}: الجواب «${item.a}» غير مسموع في المقاطع (ينقص: ${sup.missing.join("، ")})`);
+        }
+      }
+    }
+  }
+
+  // ——— D109: توازن مفتاح الإجابة — جزء كل أجوبته «Richtig» أو كلها الخيار نفسه يُحل بالتخمين ———
+  for (const { path, test } of modelltests) {
+    for (const section of test.sections) {
+      for (const part of section.parts) {
+        if (!["mc3", "richtig-falsch", "a-b"].includes(part.taskType) || part.items.length < 3) continue;
+        const keys = part.items.map((it) => (part.taskType === "mc3" ? String(it.choices?.indexOf(it.a)) : it.a));
+        if (new Set(keys).size === 1)
+          push("warning", "w-modelltest-balance", path, `${part.id}: كل الأجوبة ${part.taskType === "mc3" ? `في الموضع ${Number(keys[0]) + 1}` : `«${keys[0]}»`} — مفتاح يُخمَّن`);
+      }
+    }
+  }
+
+  // ——— D109: قفل المفردات في الامتحان (قانون الجبهة 13) ———
+  // كل نص يراه/يسمعه المتعلم (النصوص · الصوت · الأسئلة · الخيارات · نماذج الإجابة) من مفردات مستواه وما قبله
+  // فقط؛ التعليمات خارج القفل لأنها ثنائية اللغة. أسماء العلم تُستثنى بإعلانها في properNouns فقط.
+  if (words.size > 0) {
+    const order: Record<string, number> = { A1: 0, A2: 1, B1: 2, B2: 3 };
+    for (const { path, test } of modelltests) {
+      const stems = knownStems([...words.values()].map((w) => w.word).filter((w) => order[w.level]! <= order[test.level]!));
+      const allow = new Set(test.properNouns.flatMap((n) => contentTokens(n)));
+      const seen = new Set<string>();
+      for (const section of test.sections) {
+        for (const part of section.parts) {
+          const shown: string[] = [];
+          if (part.audioScriptRef) for (const l of scripts.get(part.audioScriptRef)?.script.lines ?? []) shown.push(l.text);
+          for (const t of part.texts ?? []) shown.push(t.title ?? "", t.de);
+          for (const it of part.items) {
+            shown.push(it.q, ...(it.choices ?? []));
+            if (section.skill === "schreiben" || section.skill === "sprechen") shown.push(it.a);
+          }
+          const text = shown.join("\n");
+          for (const t of contentTokens(text)) seen.add(t);
+          const unknown = unknownTokens(text, stems, allow);
+          if (unknown.length)
+            push("error", "e-modelltest-vocab", path, `${part.id}: مفردات غير مدروسة حتى ${test.level} (قانون الجبهة 13): ${unknown.join("، ")}`);
+        }
+      }
+      // اسم علم مُعلن ولا يظهر في الامتحان = استثناء بلا سبب (باب خلفي لتمرير كلمة غير مدروسة)
+      for (const n of test.properNouns)
+        if (!contentTokens(n).every((t) => seen.has(t)))
+          push("warning", "w-modelltest-proper-noun", path, `اسم علم مُعلن لا يظهر في نصوص الامتحان: ${n}`);
+    }
+  }
 
   // ——— قوانين الدرس ———
   for (const [id, { path, lesson }] of lessons) {
@@ -229,6 +532,51 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
     }
     bucket.total += Math.max(1, word.srsCardTypes.length);
   }
+  // ——— D110: goetheList دليلٌ لا رأي — تساوي بالضبط ما تثبته القوائم الرسمية ———
+  // (مُعطَّل فقط حين لا فهارس في الشجرة — أشجار الاختبار الجزئية؛ المحتوى الحقيقي يحمل الثلاثة
+  // ويفرض اختبارٌ وجودها). وسمٌ بلا دليل خطأ، ودليلٌ بلا وسم خطأ: المولِّد يملؤها آلياً.
+  if (wordlists.size > 0) {
+    const ixs = indexWordlists([...wordlists.values()]);
+    for (const [wordId, { path, word }] of words) {
+      const derived = deriveGoetheList(word, ixs);
+      if (!sameLevels(word.goetheList, derived))
+        push("error", "e-goethe-list", path,
+          `goetheList لـ${wordId} = ${JSON.stringify(word.goetheList)} والدليل = ${JSON.stringify(derived)} — ${describeEvidence(evidenceFor(word, ixs))} (أصلحها: npx tsx tools/goethe-audit.ts --apply)`);
+    }
+  }
+
+  // ——— D112: خطة التوزيع المُلزِمة — كل كلمة رسمية غير مُعلَّمة مخططة · الدرس المنتَج يعلّم كلماته ———
+  // (تحتاج الفهارس — أشجار الاختبار الجزئية بلا فهارس ولا خطط)
+  if (wordlists.size > 0) {
+    const ctx = {
+      words: [...words.values()].map((w) => w.word),
+      lessons: [...lessons.values()].map((l) => l.lesson),
+      lists: [...wordlists.values()],
+      paths: new Set(entries.map((e) => e.path)), // D113: ملفات textFixes موجودة
+      texts: (() => { // D115: «done» في إصلاح النص يُثبت — الكلمة غابت فعلاً من نصوص الملف
+        const sources = new Set(plans.flatMap((p) => (p.plan.core?.textFixes ?? []).map((t) => t.source)));
+        return new Map(entries.filter((e) => sources.has(e.path)).map((e) => [e.path, proseStrings(e.data)] as const));
+      })(),
+    };
+    for (const { path, plan } of plans)
+      for (const i of checkPlan(plan, ctx)) push(i.level, i.code, path, i.message);
+  }
+
+  // ——— D115: قواعد اليوم + حارس ترقية الدروس (D114) — «done» يُتحقق منه، «pending» دَين معلن ———
+  if (words.size > 0 && lessons.size > 0) {
+    const uctx = {
+      lessons: [...lessons.values()].map((l) => l.lesson),
+      words: [...words.values()].map((w) => w.word),
+      rules: new Map([...grammarRules].map(([id, r]) => [id, r.rule] as const)),
+      tracks: manifestTracks,
+    };
+    const where = (i: { lessonId?: string; ruleId?: string }, fallback: string) =>
+      (i.ruleId && grammarRules.get(i.ruleId)?.path) || (i.lessonId && lessons.get(i.lessonId)?.path) || fallback;
+    for (const i of checkGrammarRules(uctx)) push(i.level, i.code, where(i, "arsenal/grammar"), i.message);
+    for (const { path, plan } of upgradePlans)
+      for (const i of checkUpgrade(plan, uctx)) push(i.level, i.code, where(i, path), i.message);
+  }
+
   for (const [level, b] of Object.entries(perLevelCards)) {
     const target = SRS_TARGETS[level];
     if (!target || b.total === 0) continue;
@@ -245,7 +593,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
       push("warning", "w-schema-major", entry.path, `schemaVersion ${v} يختلف في الإصدار الرئيسي عن ${SCHEMA_VERSION}`);
   }
 
-  return { errors, warnings, fileCount: entries.length };
+  return { errors, warnings, notes, fileCount: entries.length };
 }
 
 /** قراءة شجرة المحتوى من القرص */
@@ -274,6 +622,8 @@ function main() {
   const report = validateContentDirSafe(root);
   for (const i of [...report.errors, ...report.warnings])
     console.log(`[${i.level === "error" ? "ERROR" : "WARN "}] ${i.code} @ ${i.path}: ${i.message}`);
+  for (const i of report.notes)
+    console.log(`[NOTE ] ${i.code} @ ${i.path}: ${i.message}`);
   console.log(`\nfiles: ${report.fileCount} | errors: ${report.errors.length} | warnings: ${report.warnings.length}`);
   if (report.errors.length > 0) process.exit(1);
 }
@@ -282,7 +632,7 @@ function validateContentDirSafe(root: string): ValidationReport {
   try {
     return validateContentTree(loadContentDir(root), { contentRoot: root });
   } catch (err) {
-    return { errors: [{ level: "error", code: "e-io", path: root, message: String(err) }], warnings: [], fileCount: 0 };
+    return { errors: [{ level: "error", code: "e-io", path: root, message: String(err) }], warnings: [], notes: [], fileCount: 0 };
   }
 }
 

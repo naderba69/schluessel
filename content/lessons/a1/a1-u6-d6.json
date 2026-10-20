@@ -1,0 +1,629 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d6",
+  "level": "A1",
+  "unit": 6,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Woche sechs ist zu Ende: vier Stühle, zwei Regale · Es gibt keinen Fernseher · Wo steht der Schreibtisch? — An der Wand. · Wohin stellst du die Lampe? — In die Ecke. · Darauf steht die Vase, darin ist eine Pflanze.",
+    "ar": "توليف الأسبوع السادس: الجمع بعد العدد (Stühle · Regale) · es gibt + einen/keinen · Wo? (dem/der) مقابل Wohin? (den/die/das) · كلمات da (darauf · darin · darüber) · الجيران والإيجار والمفتاح — ثم معركة الوحدة (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (Zimmer · stellen) تعودان من الأسبوع نفسه."
+  },
+  "canDoDaily": [
+    "يصف غرفته بجمع صحيح بعد العدد (vier Stühle) وبـes gibt + einen/keinen، ويفرّق Wo? (an der Wand) عن Wohin? (in die Ecke)",
+    "يستعمل darauf/darin/darüber بدل تكرار الاسم ويجتاز معركة الوحدة 6 بنتيجة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "stuhl",
+      "wohin",
+      "darauf"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أين تضع المصباح؟» (إلى أين) — تخمين فقط"
+        },
+        "choices": [
+          "Wohin stellst du die Lampe?",
+          "Wo stellst du die Lampe?",
+          "Woher stellst du die Lampe?"
+        ],
+        "answer": "Wohin stellst du die Lampe?",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«أربعة كراسٍ» — تخمين فقط"
+        },
+        "choices": [
+          "vier Stühle",
+          "vier Stuhl",
+          "vier Stuhle"
+        ],
+        "answer": "vier Stühle",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "zimmer",
+      "stellen"
+    ],
+    "grammarArsenalIds": [
+      "ars-es-gibt",
+      "ars-wo-wohin",
+      "ars-da-komposita"
+    ],
+    "storySentenceIds": [
+      "story-a1-u6-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Ich habe vier ___. (كراسٍ)",
+            "a": "Stühle",
+            "why": "بعد العدد جمعٌ دائماً، وجمع Stuhl بالأوملاوت: die Stühle — لا ~~vier Stuhl~~ ولا ~~Stuhle~~."
+          },
+          {
+            "q": "Die Möbel ___ da. (الأثاث موجود)",
+            "a": "sind",
+            "why": "die Möbel جمع دائماً في الألمانية ⇐ sind. «الأثاث» مفرد بالعربية — هنا المصيدة."
+          },
+          {
+            "q": "Nein, es gibt ___ Fernseher. (لا تلفاز)",
+            "a": "keinen",
+            "why": "بعد es gibt مفعول به: der Fernseher مذكر ⇐ keinen / einen."
+          },
+          {
+            "q": "Gibt ___ einen Computer? — Ja.",
+            "a": "es",
+            "why": "es gibt تحتاج es دائماً، حتى في السؤال: Gibt es …? — لا ~~Gibt einen …?~~."
+          },
+          {
+            "q": "Wo steht der Schreibtisch? — An ___ Wand.",
+            "a": "der",
+            "why": "Wo? (مكان ثابت) ⇐ Dativ: an der Wand (die Wand مؤنث ⇐ der)."
+          },
+          {
+            "q": "Wohin stellst du die Lampe? — In ___ Ecke.",
+            "a": "die",
+            "why": "Wohin? (حركة إلى) ⇐ Akkusativ: in die Ecke (مؤنث يبقى die)."
+          },
+          {
+            "q": "Ich stelle die Lampe neben ___ Sofa. (Wohin)",
+            "a": "das",
+            "why": "Wohin ⇐ Akkusativ: neben das Sofa (محايد يبقى das). مع Wo: neben dem Sofa."
+          },
+          {
+            "q": "Da ist der Tisch. ___ steht die Vase. (عليه)",
+            "a": "Darauf",
+            "why": "da + r + auf = darauf (عليه) — بدل auf dem Tisch: الشيء ذُكر فلا يُعاد."
+          },
+          {
+            "q": "Hängt das Foto über dem Bett? — Ja, es hängt ___. (فوقه)",
+            "a": "darüber",
+            "why": "da + r + über = darüber (فوقه). الحرف يبدأ بحرف علّة ⇐ تُضاف r."
+          }
+        ],
+        "interleavedWith": [
+          "stuhl",
+          "moebel",
+          "fernseher",
+          "computer",
+          "wand",
+          "ecke",
+          "sofa",
+          "vase",
+          "bett"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "we-4",
+            "speakText": "Ich habe vier Stühle — nicht «vier Stuhl»! Und zwei Regale.",
+            "q": "استمع: كم كرسياً عند يوسف؟",
+            "choices": [
+              "أربعة",
+              "اثنان",
+              "عشرون"
+            ],
+            "a": "أربعة",
+            "why": "vier Stühle = أربعة كراسٍ (جمع بالأوملاوت) · zwei Regale = رفّان."
+          },
+          {
+            "audioId": "we-6",
+            "speakText": "Nein, es gibt keinen Fernseher. Aber es gibt einen Computer und einen Schreibtisch.",
+            "q": "استمع: ما الذي لا يوجد في الغرفة؟",
+            "choices": [
+              "تلفاز",
+              "حاسوب",
+              "مكتب"
+            ],
+            "a": "تلفاز",
+            "why": "es gibt keinen Fernseher (نفي بـkeinen) · einen Computer · einen Schreibtisch (إثبات بـeinen)."
+          },
+          {
+            "audioId": "we-8",
+            "speakText": "Er steht an der Wand, unter dem Fenster. Das Bett steht daneben.",
+            "q": "استمع: أين المكتب؟",
+            "choices": [
+              "عند الحائط تحت النافذة",
+              "في الزاوية",
+              "في الوسط"
+            ],
+            "a": "عند الحائط تحت النافذة",
+            "why": "an der Wand · unter dem Fenster — Wo? ⇐ der/dem. وdaneben = بجانبه (السرير)."
+          },
+          {
+            "audioId": "we-10",
+            "speakText": "Ich stelle die Lampe in die Ecke — neben das Sofa.",
+            "q": "استمع: إلى أين يضع يوسف المصباح؟",
+            "choices": [
+              "في الزاوية بجانب الأريكة",
+              "على الطاولة",
+              "تحت النافذة"
+            ],
+            "a": "في الزاوية بجانب الأريكة",
+            "why": "stellen = حركة إلى ⇐ Wohin? ⇐ in die Ecke · neben das Sofa (حالة المفعول)."
+          },
+          {
+            "audioId": "we-12",
+            "speakText": "Wo? — an der Wand, in der Ecke. Wohin? — in die Ecke, auf den Tisch.",
+            "q": "استمع: أي عبارة جاءت مع Wohin؟",
+            "choices": [
+              "in die Ecke",
+              "in der Ecke",
+              "an der Wand"
+            ],
+            "a": "in die Ecke",
+            "why": "Wohin ⇐ die/den (in die Ecke · auf den Tisch) · أما Wo ⇐ der/dem (in der Ecke · an der Wand)."
+          },
+          {
+            "audioId": "we-14",
+            "speakText": "Darauf steht die Vase. Und darin ist jetzt eine Pflanze!",
+            "q": "استمع: ماذا في المزهرية الآن؟",
+            "choices": [
+              "نبتة",
+              "ماء فقط",
+              "لا شيء"
+            ],
+            "a": "نبتة",
+            "why": "darin = فيها (في المزهرية) · eine Pflanze = نبتة. وdarauf = على الطاولة."
+          },
+          {
+            "audioId": "we-18",
+            "speakText": "Rechts ist es laut, aber die Nachbarn sind nett. Die Miete ist hoch — das ist Berlin!",
+            "q": "استمع: كيف الجيران؟",
+            "choices": [
+              "لطفاء، لكن اليمين صاخب",
+              "غير لطفاء",
+              "هادئون جداً"
+            ],
+            "a": "لطفاء، لكن اليمين صاخب",
+            "why": "die Nachbarn sind nett (جمع ⇐ sind) · rechts ist es laut. وdie Miete ist hoch = الإيجار مرتفع."
+          },
+          {
+            "audioId": "we-20",
+            "speakText": "In der Schublade, im Schreibtisch. Alles klar — die Woche ist zu Ende!",
+            "q": "استمع: أين المفتاح اليوم؟",
+            "choices": [
+              "في الدرج في المكتب",
+              "فوق الخزانة",
+              "خلف الباب"
+            ],
+            "a": "في الدرج في المكتب",
+            "why": "in der Schublade (Wo? ⇐ der) · im Schreibtisch = in dem. في الأسبوع كان فوق الخزانة!"
+          }
+        ],
+        "interleavedWith": [
+          "regal",
+          "schreibtisch",
+          "fenster",
+          "lampe",
+          "pflanze",
+          "nachbar",
+          "miete",
+          "schublade"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "صحّح: ~~Ich habe vier Stuhl.~~",
+            "a": "Ich habe vier Stühle.",
+            "why": "بعد العدد جمع: Stühle (بالأوملاوت و‑e)."
+          },
+          {
+            "q": "صحّح: ~~Es gibt ein Fernseher.~~",
+            "a": "Es gibt einen Fernseher.",
+            "why": "بعد es gibt مفعول به: der Fernseher ⇐ einen."
+          },
+          {
+            "q": "صحّح: ~~Gibt einen Balkon?~~",
+            "a": "Gibt es einen Balkon?",
+            "why": "es لا تسقط من es gibt حتى في السؤال."
+          },
+          {
+            "q": "صحّح: ~~Ich stelle die Lampe in der Ecke.~~",
+            "a": "Ich stelle die Lampe in die Ecke.",
+            "why": "stellen = حركة إلى ⇐ Wohin? ⇐ Akkusativ: in die Ecke. in der Ecke جواب Wo?"
+          },
+          {
+            "q": "صحّح: ~~Wo stellst du den Tisch?~~",
+            "a": "Wohin stellst du den Tisch?",
+            "why": "مع stellen (الوضع) السؤال Wohin؟ — Wo لما هو ثابت (steht)."
+          },
+          {
+            "q": "صحّح: ~~Die Möbel ist neu.~~",
+            "a": "Die Möbel sind neu.",
+            "why": "Möbel جمع دائماً ⇐ sind. مثلها die Nachbarn sind nett."
+          }
+        ],
+        "interleavedWith": [
+          "stuhl",
+          "fernseher",
+          "balkon",
+          "lampe",
+          "tisch",
+          "moebel"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "we-1",
+            "speakText": "Hallo, Yusuf! Woche sechs ist zu Ende. Ist dein Zimmer jetzt fertig?",
+            "a": "Hallo, Yusuf! Woche sechs ist zu Ende. Ist dein Zimmer jetzt fertig?",
+            "why": "Zimmer محايد ⇐ dein بلا نهاية · fertig بـg في الآخر تُسمع «ش»."
+          },
+          {
+            "audioId": "we-2",
+            "speakText": "Ja! Die Einrichtung ist fertig, und die Möbel sind da.",
+            "a": "Ja! Die Einrichtung ist fertig, und die Möbel sind da.",
+            "why": "Einrichtung بـ‑ung مؤنثة ⇐ ist · Möbel جمع ⇐ sind — فعلان مختلفان في سطر واحد."
+          },
+          {
+            "audioId": "we-5",
+            "speakText": "Prima! Frage zwei: Gibt es einen Fernseher?",
+            "a": "Prima! Frage zwei: Gibt es einen Fernseher?",
+            "why": "Gibt es …? — es بعد الفعل · einen Fernseher (مذكر مفعول)."
+          },
+          {
+            "audioId": "we-9",
+            "speakText": "Und wohin stellst du die Lampe?",
+            "a": "Und wohin stellst du die Lampe?",
+            "why": "wohin كلمة واحدة بحرف صغير · stellst بـll وst · die Lampe."
+          },
+          {
+            "audioId": "we-13",
+            "speakText": "Super! Frage drei: Da ist der Tisch. Was steht darauf?",
+            "a": "Super! Frage drei: Da ist der Tisch. Was steht darauf?",
+            "why": "darauf كلمة واحدة (da + r + auf) بحرف صغير · der Tisch مذكر."
+          },
+          {
+            "audioId": "we-19",
+            "speakText": "Und dein Schlüssel? Wo ist er heute?",
+            "a": "Und dein Schlüssel? Wo ist er heute?",
+            "why": "Schlüssel بـü وss · er يعود على der Schlüssel (مذكر) · Wo للمكان الثابت."
+          }
+        ],
+        "interleavedWith": [
+          "zimmer",
+          "einrichtung",
+          "stellen",
+          "darauf",
+          "schluessel"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Mein Zimmer: Es gibt einen Tisch und vier Stühle. Der Tisch steht in der Mitte. Die Lampe stelle ich in die Ecke. Darauf steht eine Vase.",
+        "ar": "أن يصف غرفته لزميل: ما يوجد (es gibt + einen/keinen) · أين الأشياء (Wo + dem/der) · إلى أين يضع الجديد (Wohin + den/die/das) · ويختصر بـdarauf/darin/daneben"
+      },
+      "situation": {
+        "de": "Das Ende der Woche: Das Zimmer ist fertig — und jetzt dein Zimmer.",
+        "ar": "نهاية الأسبوع السادس: غرفة يوسف في برلين اكتملت ولينا تسأل عنها — ثم غرفتك أنت"
+      },
+      "successCriteria": [
+        "يذكر أربعة أشياء في غرفته بجمع صحيح بعد العدد وبـes gibt + einen/keinen (Es gibt keinen Fernseher)",
+        "يجيب عن Wo? بـdem/der وعن Wohin? بـden/die/das في جملتين على الأقل (an der Wand · in die Ecke)",
+        "يستعمل darauf أو darin أو daneben مرة واحدة على الأقل بدل تكرار الاسم"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "Ich habe vier ___.",
+            "a": "Stühle",
+            "choices": [
+              "Stühle",
+              "Stuhl",
+              "Stuhle"
+            ],
+            "why": "بعد العدد جمع بالأوملاوت: Stühle."
+          },
+          {
+            "q": "Es gibt ___ Fernseher. (لا يوجد)",
+            "a": "keinen",
+            "choices": [
+              "keinen",
+              "kein",
+              "keine"
+            ],
+            "why": "بعد es gibt مفعول به: der Fernseher ⇐ keinen."
+          },
+          {
+            "q": "Wo steht das Bett? — An ___ Wand.",
+            "a": "der",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "why": "Wo (ثابت) ⇐ an der Wand: die Wand تصير der."
+          },
+          {
+            "q": "Wohin stellst du die Lampe? — In ___ Ecke.",
+            "a": "die",
+            "choices": [
+              "die",
+              "der",
+              "dem"
+            ],
+            "why": "Wohin (حركة) ⇐ in die Ecke: المؤنث يبقى die."
+          },
+          {
+            "q": "Da ist der Tisch. ___ steht eine Vase. (عليه)",
+            "a": "Darauf",
+            "choices": [
+              "Darauf",
+              "Darin",
+              "Daneben"
+            ],
+            "why": "darauf = عليه (auf dem Tisch)."
+          },
+          {
+            "q": "الترتيب: Schreibtisch? / es / Gibt / einen",
+            "a": "Gibt es einen Schreibtisch?",
+            "why": "Gibt es …? — es بعد الفعل، ثم einen Schreibtisch (مذكر مفعول)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Die Möbel ___ neu.",
+            "a": "sind",
+            "choices": [
+              "sind",
+              "ist",
+              "bin"
+            ],
+            "why": "Möbel جمع دائماً ⇐ sind."
+          },
+          {
+            "q": "___ stellst du den Tisch? — In die Mitte.",
+            "a": "Wohin",
+            "choices": [
+              "Wohin",
+              "Wo",
+              "Woher"
+            ],
+            "why": "stellen = حركة ⇐ Wohin."
+          },
+          {
+            "q": "Die Vase steht ___ dem Tisch. (Wo)",
+            "a": "auf",
+            "choices": [
+              "auf",
+              "in",
+              "unter"
+            ],
+            "why": "auf dem Tisch = على الطاولة (Wo ⇐ dem)."
+          },
+          {
+            "q": "Ist Wasser in der Vase? — Ja, ___ ist Wasser. (فيها)",
+            "a": "darin",
+            "choices": [
+              "darin",
+              "darauf",
+              "darüber"
+            ],
+            "why": "darin = فيها (in der Vase)."
+          },
+          {
+            "q": "Es gibt ___ Computer und einen Schreibtisch.",
+            "a": "einen",
+            "choices": [
+              "einen",
+              "ein",
+              "eine"
+            ],
+            "why": "der Computer مذكر مفعول بعد es gibt ⇐ einen."
+          },
+          {
+            "q": "الترتيب: die / Ecke. / in / Ich stelle / die Lampe",
+            "a": "Ich stelle die Lampe in die Ecke.",
+            "why": "الفاعل والفعل ثم المفعول (die Lampe) ثم الاتجاه (in die Ecke)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Lena: Wie viele ___ hast du? — Vier.",
+            "a": "Stühle",
+            "choices": [
+              "Stühle",
+              "Stuhl",
+              "Tisch"
+            ],
+            "why": "السؤال عن العدد ⇐ جمع: Stühle."
+          },
+          {
+            "q": "Das Foto hängt über dem Bett. — Ja, es hängt ___.",
+            "a": "darüber",
+            "choices": [
+              "darüber",
+              "darauf",
+              "darin"
+            ],
+            "why": "darüber = فوقه (über dem Bett)."
+          },
+          {
+            "q": "Ich stelle die Lampe neben ___ Sofa. (Wohin)",
+            "a": "das",
+            "choices": [
+              "das",
+              "dem",
+              "der"
+            ],
+            "why": "Wohin (حركة) ⇐ neben das Sofa: المحايد يبقى das."
+          },
+          {
+            "q": "Der Schreibtisch steht unter ___ Fenster. (Wo)",
+            "a": "dem",
+            "choices": [
+              "dem",
+              "das",
+              "den"
+            ],
+            "why": "Wo (ثابت) ⇐ unter dem Fenster: das Fenster تصير dem."
+          },
+          {
+            "q": "Die ___ sind nett. (الجيران)",
+            "a": "Nachbarn",
+            "choices": [
+              "Nachbarn",
+              "Nachbar",
+              "Nachbars"
+            ],
+            "why": "جمع Nachbar = Nachbarn (‑n). لا Nachbars."
+          },
+          {
+            "q": "«لا يوجد تلفاز» — بالألمانية؟",
+            "a": "Es gibt keinen Fernseher.",
+            "why": "Es gibt + keinen (der Fernseher مذكر مفعول)."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Woche sechs ist zu Ende: vier Stühle, zwei Regale. Es gibt keinen Fernseher, aber einen Computer. Der Schreibtisch steht an der Wand, die Lampe stelle ich in die Ecke. Darauf steht die Vase, darin ist eine Pflanze.",
+      "ar": "الوحدة السادسة اكتملت: تجمع بعد العدد، وتضع einen/keinen بعد es gibt، وتفرّق Wo (dem/der) عن Wohin (den/die/das)، وتختصر بكلمات da."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich stelle die Lampe in der Ecke.~~ · ~~Wo stellst du den Tisch?~~",
+          "ar": "Wo وWohin سؤال واحد"
+        },
+        "whyArabicSpeakerFails": "«أين» العربية تسأل عن المكان والاتجاه معاً، والألمانية تفصل: Wo? للثابت (steht · hängt · liegt ⇐ dem/der) وWohin? للحركة (stellen · legen · hängen ⇐ den/die/das) — والخلط يعود في التوليف حين يوصف أثاث ثابت ثم يُنقل (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wo steht die Lampe? — In der Ecke. · Wohin stellst du die Lampe? — In die Ecke.",
+          "ar": "أين المصباح؟ — في الزاوية · إلى أين تضع المصباح؟ — في الزاوية"
+        },
+        "exercise": {
+          "q": "أكمل: Ich lege das Kissen auf ___ Sofa. (Wohin)",
+          "a": "das"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Es gibt ein Tisch.~~ · ~~Gibt einen Balkon?~~",
+          "ar": "es gibt بلا مفعول أو بلا es"
+        },
+        "whyArabicSpeakerFails": "«يوجد طاولة» العربية ترفع الاسم بعد «يوجد»، والألمانية تنصبه بعد es gibt (einen Tisch · keinen Fernseher)؛ و«يوجد؟» بلا فاعل بالعربية فيسقط المتعلم es — وهي لا تسقط (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Es gibt einen Tisch. · Gibt es einen Balkon? — Nein, es gibt keinen Balkon.",
+          "ar": "توجد طاولة · هل توجد شرفة؟ — لا، لا توجد شرفة"
+        },
+        "exercise": {
+          "q": "أكمل: Gibt es ___ Kühlschrank? (der)",
+          "a": "einen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~vier Stuhl~~ · ~~Die Möbel ist neu.~~",
+          "ar": "الجمع بعد العدد وMöbel"
+        },
+        "whyArabicSpeakerFails": "العربية تُفرد بعد الأعداد من 11 فصاعداً («عشرون كرسياً») وتعدّ «الأثاث» مفرداً — والألمانية تجمع بعد كل عدد (vier Stühle · zwanzig Stühle) وMöbel جمع دائماً (sind) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "vier Stühle · zwanzig Stühle · Die Möbel sind neu. · Die Nachbarn sind nett.",
+          "ar": "أربعة كراسٍ · عشرون كرسياً · الأثاث جديد · الجيران لطفاء"
+        },
+        "exercise": {
+          "q": "أكمل: Ich habe zwei ___. (Regal)",
+          "a": "Regale"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "zimmer",
+      "stellen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/gibt",
+      "https://www.duden.de/rechtschreibung/darauf",
+      "https://www.duden.de/rechtschreibung/Moebel"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/da-Komposita"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-es-gibt",
+    "ars-wo-wohin",
+    "ars-da-komposita"
+  ],
+  "audioManifestRefs": [
+    "word-zimmer",
+    "word-stellen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 6 — توليف الوحدة 6: غرفة يوسف اكتملت",
+    "goetheWordListOverlap": [
+      "zimmer",
+      "stellen"
+    ]
+  }
+}

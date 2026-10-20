@@ -1,0 +1,919 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d3",
+  "level": "A1",
+  "unit": 8,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Ich muss einen Rucksack kaufen. — Kann ich ihn anprobieren? — Ja, das ist möglich.",
+    "ar": "تقول ما يجب عليك وما تستطيع (Ich muss einen Rucksack kaufen. · Kann ich den Rucksack anprobieren? · Was musst du kaufen? · Wir können jetzt bezahlen. · Du musst nicht viel bezahlen.) — الفعل الناقص في المكان الثاني والمصدر في الآخر بلا zu — ومعها كلمات المتجر: القسم والسلة والعربة والملابس وحقيبة الظهر والحزام والمظلة وبطاقة الائتمان والقطعة."
+  },
+  "canDoDaily": [
+    "يقول ما يجب وما يمكن: Ich muss einen Rucksack kaufen. · Du musst einen Verkäufer fragen. · Wir können jetzt bezahlen. · Kann ich den Rucksack anprobieren? · Was musst du kaufen? · Du musst nicht viel bezahlen. (= لا حاجة)",
+    "يتكلم في المتجر: Die Gürtel sind in der Abteilung für Kleidung. · Passt er? — Er passt gut. · Brauchst du einen Korb oder einen Wagen? · Zwei Stück Kuchen, bitte. · Geht hier die Kreditkarte? · Einen Regenschirm kriegst du im Supermarkt."
+  ],
+  "warmup": {
+    "cardIds": [
+      "anprobieren",
+      "kaufen",
+      "bezahlen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«يجب أن أتسوّق» بالألمانية — أي صيغة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Ich muss einkaufen.",
+          "Ich muss zu einkaufen.",
+          "Ich muss einkaufe."
+        ],
+        "answer": "Ich muss einkaufen.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "passen",
+      "stueck",
+      "korb",
+      "wagen",
+      "kleidung",
+      "kreditkarte",
+      "regenschirm",
+      "rucksack",
+      "guertel",
+      "abteilung",
+      "finden",
+      "moeglich",
+      "kriegen"
+    ],
+    "borrowedWords": [
+      {
+        "form": "hinten",
+        "wordId": "hinten",
+        "ar": "هناك في الخلف",
+        "whyAr": "«هناك في الخلف» — ظرف المكان hinten تتعلّمه كاملاً في الدرس a1-u14-d4؛ هنا معناه في هذا المشهد وحده (Dort hinten = هناك في الخلف)."
+      }
+    ],
+    "grammarArsenalIds": [
+      "ars-koennen-muessen"
+    ],
+    "storySentenceIds": [
+      "story-a1-u8-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "auslaut-b",
+      "auslaut-g",
+      "ch-ich-laut",
+      "double-consonant",
+      "sp-st-initial",
+      "umlaut-o",
+      "umlaut-u",
+      "vowel-long-short"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Ich ___ einen Rucksack kaufen. (يجب)",
+            "a": "muss",
+            "why": "müssen = يجب — مع ich: muss بلا نهاية، والفعل الثاني kaufen مصدراً في آخر الجملة بلا zu."
+          },
+          {
+            "q": "Du ___ einen Verkäufer fragen. (يجب — أنت)",
+            "a": "musst",
+            "why": "du musst — «يجب» العربية لا تتغيّر مع الفاعل، وmüssen يتصرّف: ich muss · du musst."
+          },
+          {
+            "q": "Wir ___ jetzt bezahlen. (نستطيع)",
+            "a": "können",
+            "why": "wir können — الجمع كصيغة القاموس بـö، والمفرد kann بلا نقطتين."
+          },
+          {
+            "q": "___ ich den Rucksack anprobieren? (هل يمكنني)",
+            "a": "Kann",
+            "why": "سؤال نعم/لا: الفعل الناقص أولاً Kann ثم الفاعل ich — وanprobieren يبقى متصلاً في الآخر."
+          },
+          {
+            "q": "Er ___ gut Deutsch. (يجيد)",
+            "a": "kann",
+            "why": "er kann — كـich kann بلا ‑t (كـer möchte) — والفعل الثاني sprechen محذوف لأنه مفهوم."
+          },
+          {
+            "q": "Ich muss einen Gürtel ___. (أشتري)",
+            "a": "kaufen",
+            "why": "الفعل الثاني مصدراً في آخر الجملة كما في القاموس: kaufen — لا kaufe ولا zu kaufen."
+          },
+          {
+            "q": "Die Hose ___ gut. (تناسب)",
+            "a": "passt",
+            "why": "passen = يناسب (المقاس) — الفاعل الشيء: Die Hose passt. · Passt er? — Er passt gut."
+          },
+          {
+            "q": "Zwei ___ Kuchen, bitte. (قطعتان)",
+            "a": "Stück",
+            "why": "Stück بعد العدد كمقياس بلا نهاية: zwei Stück Kuchen — كـzwei Euro · zwei Kilo."
+          },
+          {
+            "q": "Brauchst du einen ___ oder einen Wagen? (سلة)",
+            "a": "Korb",
+            "why": "der Korb = السلة — مفعول: einen Korb — والجمع die Körbe بنقطتين."
+          },
+          {
+            "q": "Der ___ ist zu groß. Ich nehme einen Korb. (العربة)",
+            "a": "Wagen",
+            "why": "der Wagen = العربة (وفي الكلام: السيارة) — والجمع die Wagen بلا نهاية."
+          },
+          {
+            "q": "Die ___ ist dort: Hosen, Jacken, Hemden. (الملابس)",
+            "a": "Kleidung",
+            "why": "die Kleidung اسم جامد بلا جمع — فعلٌ مفرد دائماً: ist."
+          },
+          {
+            "q": "Geht hier die ___? (بطاقة الائتمان)",
+            "a": "Kreditkarte",
+            "why": "die Kreditkarte — مركّب والجنس من آخر جزء: die Karte. (Geht …? = هل تُقبل؟)"
+          },
+          {
+            "q": "In Berlin regnet es oft. Ich brauche einen ___. (مظلة)",
+            "a": "Regenschirm",
+            "why": "der Regenschirm — من Regen + Schirm، والجنس من آخر جزء: der Schirm."
+          },
+          {
+            "q": "Für Tunesien brauche ich einen ___. (حقيبة ظهر)",
+            "a": "Rucksack",
+            "why": "der Rucksack — من Rücken + Sack، مفعول: einen Rucksack — والجمع die Rucksäcke."
+          },
+          {
+            "q": "Die ___ hier sind alle zu lang. (الأحزمة)",
+            "a": "Gürtel",
+            "why": "der Gürtel ← die Gürtel بلا نهاية (‑el) — الأداة والفعل sind يدلّان على الجمع."
+          },
+          {
+            "q": "Die ___ für Taschen ist dort. (القسم)",
+            "a": "Abteilung",
+            "why": "die Abteilung = القسم في المتجر — ‑ung دائماً die، والجمع ‑en."
+          },
+          {
+            "q": "Ich ___ keinen Gürtel. (أجد)",
+            "a": "finde",
+            "why": "finden = يجد — ich finde · du findest · er findet (‑et بعد d) — والنفي keinen (مفعول مذكر)."
+          },
+          {
+            "q": "Kann ich bar bezahlen? Ist das ___? (ممكن)",
+            "a": "möglich",
+            "why": "möglich = ممكن — صفة بعد ist: Das ist möglich. · Ist das möglich?"
+          },
+          {
+            "q": "Einen Regenschirm ___ du im Supermarkt. (تحصل على)",
+            "a": "kriegst",
+            "why": "kriegen = bekommen في الكلام اليومي — du kriegst · er kriegt — والمفعول أولاً فالفعل ثانياً ثم du."
+          }
+        ],
+        "interleavedWith": [
+          "kaufen",
+          "bezahlen",
+          "anprobieren",
+          "hose",
+          "gross",
+          "lang",
+          "regnen",
+          "oft",
+          "bar",
+          "verkaeufer",
+          "kuchen",
+          "supermarkt",
+          "brauchen",
+          "nehmen",
+          "jetzt",
+          "dort",
+          "hier",
+          "tasche",
+          "deutsch",
+          "jacke"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "km-1",
+            "speakText": "Yusuf, was musst du noch für Tunesien kaufen?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "ماذا يجب أن يشتري يوسف لتونس",
+              "متى يسافر يوسف إلى تونس",
+              "ماذا يريد يوسف أن يأكل"
+            ],
+            "a": "ماذا يجب أن يشتري يوسف لتونس",
+            "why": "Was musst du noch für Tunesien kaufen? = ماذا يجب أن تشتري أيضاً لتونس؟ — musst … kaufen."
+          },
+          {
+            "audioId": "km-2",
+            "speakText": "Ich muss einen Rucksack kaufen. Und einen Gürtel — meine Hose ist zu groß!",
+            "q": "استمع: ماذا يجب أن يشتري يوسف؟ ولماذا؟",
+            "choices": [
+              "حقيبة ظهر وحزاماً — بنطاله واسع",
+              "حقيبة ظهر وبنطالاً — حزامه قصير",
+              "حزاماً فقط — بنطاله ضيّق"
+            ],
+            "a": "حقيبة ظهر وحزاماً — بنطاله واسع",
+            "why": "Ich muss einen Rucksack kaufen. Und einen Gürtel — meine Hose ist zu groß! — zu groß = أكبر من اللازم."
+          },
+          {
+            "audioId": "km-3",
+            "speakText": "Die Rucksäcke sind dort, in der Abteilung für Taschen.",
+            "q": "استمع: أين حقائب الظهر؟",
+            "choices": [
+              "في قسم الحقائب",
+              "في قسم الملابس",
+              "عند الكاسا"
+            ],
+            "a": "في قسم الحقائب",
+            "why": "in der Abteilung für Taschen = في قسم الحقائب — die Abteilung = القسم."
+          },
+          {
+            "audioId": "km-5",
+            "speakText": "Ja, das ist möglich. Passt er?",
+            "q": "استمع: ماذا تجيب لينا؟ وماذا تسأل؟",
+            "choices": [
+              "ممكن — هل تناسبه؟",
+              "غير ممكن — كم تكلّف؟",
+              "ممكن — ما لونها؟"
+            ],
+            "a": "ممكن — هل تناسبه؟",
+            "why": "Ja, das ist möglich. Passt er? — er = der Rucksack · passen = يناسب."
+          },
+          {
+            "audioId": "km-6",
+            "speakText": "Er passt gut! Und er kostet nur fünfundzwanzig Euro.",
+            "q": "استمع: كيف حقيبة الظهر؟ وبكم؟",
+            "choices": [
+              "تناسب جيداً — 25 €",
+              "لا تناسب — 25 €",
+              "تناسب جيداً — 35 €"
+            ],
+            "a": "تناسب جيداً — 25 €",
+            "why": "Er passt gut! … nur fünfundzwanzig Euro = خمسة وعشرون فقط — fünf ثم und ثم zwanzig."
+          },
+          {
+            "audioId": "km-7",
+            "speakText": "Und der Gürtel? Gürtel findest du in der Abteilung für Kleidung.",
+            "q": "استمع: أين يجد يوسف الأحزمة؟",
+            "choices": [
+              "في قسم الملابس",
+              "في قسم الحقائب",
+              "في السوبرماركت"
+            ],
+            "a": "في قسم الملابس",
+            "why": "Gürtel findest du in der Abteilung für Kleidung — die Kleidung = الملابس."
+          },
+          {
+            "audioId": "km-8",
+            "speakText": "Ich finde keinen Gürtel. Die Gürtel hier sind alle zu lang.",
+            "q": "استمع: ما مشكلة الأحزمة؟",
+            "choices": [
+              "كلها طويلة جداً",
+              "كلها قصيرة جداً",
+              "كلها غالية جداً"
+            ],
+            "a": "كلها طويلة جداً",
+            "why": "Die Gürtel hier sind alle zu lang — zu lang = أطول من اللازم · alle = كلها."
+          },
+          {
+            "audioId": "km-9",
+            "speakText": "Du musst einen Verkäufer fragen. Er findet einen für dich.",
+            "q": "استمع: ماذا يجب أن يفعل يوسف؟",
+            "choices": [
+              "أن يسأل بائعاً",
+              "أن يشتري بنطالاً",
+              "أن يذهب إلى الكاسا"
+            ],
+            "a": "أن يسأل بائعاً",
+            "why": "Du musst einen Verkäufer fragen — musst في المكان الثاني وfragen في الآخر."
+          },
+          {
+            "audioId": "km-12",
+            "speakText": "Einen Regenschirm kriegst du im Supermarkt — für fünf Euro.",
+            "q": "استمع: أين تحصل لينا على مظلة؟ وبكم؟",
+            "choices": [
+              "في السوبرماركت — 5 €",
+              "في قسم الحقائب — 5 €",
+              "في السوبرماركت — 15 €"
+            ],
+            "a": "في السوبرماركت — 5 €",
+            "why": "Einen Regenschirm kriegst du im Supermarkt — für fünf Euro. = تحصلين على مظلة في السوبرماركت بخمسة يورو — kriegen = bekommen في الكلام اليومي."
+          },
+          {
+            "audioId": "km-13",
+            "speakText": "Im Supermarkt? Gut, dort kaufe ich auch ein Stück Kuchen für meine Oma.",
+            "q": "استمع: ماذا تشتري لينا أيضاً؟ ولمن؟",
+            "choices": [
+              "قطعة كعك لجدّتها",
+              "كعكة لأمها",
+              "قطعة خبز لجدّتها"
+            ],
+            "a": "قطعة كعك لجدّتها",
+            "why": "ein Stück Kuchen für meine Oma = قطعة كعك لجدّتي — das Stück = القطعة."
+          },
+          {
+            "audioId": "km-14",
+            "speakText": "Kuchen? Ich möchte auch ein Stück! Kannst du zwei Stück kaufen?",
+            "q": "استمع: ماذا يطلب يوسف؟",
+            "choices": [
+              "أن تشتري قطعتين",
+              "أن تشتري كعكة كاملة",
+              "أن تشتري قطعة له فقط"
+            ],
+            "a": "أن تشتري قطعتين",
+            "why": "Kannst du zwei Stück kaufen? — zwei Stück بلا نهاية بعد العدد."
+          },
+          {
+            "audioId": "km-15",
+            "speakText": "Zwei Stück — das ist möglich! Brauchst du einen Korb oder einen Wagen?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "سلة أم عربة",
+              "كعكة أم خبز",
+              "بطاقة أم نقد"
+            ],
+            "a": "سلة أم عربة",
+            "why": "Brauchst du einen Korb oder einen Wagen? — der Korb = السلة · der Wagen = العربة."
+          },
+          {
+            "audioId": "km-16",
+            "speakText": "Einen Korb. Ich kaufe nicht viel.",
+            "q": "استمع: ماذا يختار يوسف؟ ولماذا؟",
+            "choices": [
+              "سلة — لا يشتري كثيراً",
+              "عربة — يشتري كثيراً",
+              "سلة — العربة غالية"
+            ],
+            "a": "سلة — لا يشتري كثيراً",
+            "why": "Einen Korb. Ich kaufe nicht viel. — nicht viel = ليس كثيراً."
+          },
+          {
+            "audioId": "km-18",
+            "speakText": "Ja, aber ich habe meine Kreditkarte nicht hier. Ich muss bar bezahlen.",
+            "q": "استمع: كيف يجب أن يدفع يوسف؟ ولماذا؟",
+            "choices": [
+              "نقداً — بطاقته ليست معه",
+              "بالبطاقة — بطاقته معه",
+              "نقداً — البطاقة لا تُقبل"
+            ],
+            "a": "نقداً — بطاقته ليست معه",
+            "why": "Ich habe meine Kreditkarte nicht hier. Ich muss bar bezahlen. — bar = نقداً."
+          },
+          {
+            "audioId": "km-19",
+            "speakText": "Das ist okay — du musst nicht viel bezahlen. Wo ist die Kasse?",
+            "q": "استمع: ماذا تقول لينا؟ وماذا تسأل؟",
+            "choices": [
+              "لا داعي لأن يدفع كثيراً — وأين الكاسا؟",
+              "يجب أن يدفع كثيراً — وأين الكاسا؟",
+              "ممنوع أن يدفع نقداً — والكاسا مغلقة"
+            ],
+            "a": "لا داعي لأن يدفع كثيراً — وأين الكاسا؟",
+            "why": "du musst nicht viel bezahlen = لا حاجة لأن تدفع كثيراً — nicht müssen = لا حاجة، لا «ممنوع» · Wo ist die Kasse? = أين الكاسا؟"
+          },
+          {
+            "audioId": "km-20",
+            "speakText": "Dort hinten. Ich kann jetzt bezahlen — und ich bin fertig für Tunesien!",
+            "q": "استمع: أين الكاسا؟ وبم يختم يوسف؟",
+            "choices": [
+              "في الخلف — يمكنه أن يدفع الآن وهو جاهز لتونس",
+              "في الأمام — يجب أن يدفع غداً وهو جاهز لبرلين",
+              "لا كاسا — لا يمكنه أن يدفع"
+            ],
+            "a": "في الخلف — يمكنه أن يدفع الآن وهو جاهز لتونس",
+            "why": "Dort hinten. = هناك في الخلف · Ich kann jetzt bezahlen = أستطيع أن أدفع الآن · fertig = جاهز."
+          }
+        ],
+        "interleavedWith": [
+          "kaufen",
+          "bezahlen",
+          "hose",
+          "gross",
+          "lang",
+          "kasse",
+          "bar",
+          "verkaeufer",
+          "kuchen",
+          "oma",
+          "supermarkt",
+          "brauchen",
+          "fertig",
+          "nur",
+          "viel",
+          "jetzt",
+          "dort",
+          "hier",
+          "euro",
+          "noch",
+          "tasche"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "kaufen.",
+              "einen",
+              "Ich",
+              "Regenschirm",
+              "muss"
+            ],
+            "a": "Ich muss einen Regenschirm kaufen.",
+            "why": "muss في المكان الثاني، والمفعول einen Regenschirm بينهما، وkaufen مصدراً في الآخر."
+          },
+          {
+            "tokens": [
+              "anprobieren?",
+              "den",
+              "Kann",
+              "Rucksack",
+              "ich"
+            ],
+            "a": "Kann ich den Rucksack anprobieren?",
+            "why": "سؤال نعم/لا: Kann أولاً ثم ich — وanprobieren متصلاً في آخر الجملة (لا ينفصل مع الفعل الناقص)."
+          },
+          {
+            "tokens": [
+              "kaufen?",
+              "du",
+              "Was",
+              "musst"
+            ],
+            "a": "Was musst du kaufen?",
+            "why": "كلمة السؤال Was ثم الفعل الناقص musst ثم الفاعل du — والمصدر kaufen في الآخر."
+          },
+          {
+            "tokens": [
+              "bezahlen.",
+              "viel",
+              "Du",
+              "nicht",
+              "musst"
+            ],
+            "a": "Du musst nicht viel bezahlen.",
+            "why": "nicht viel بين الفعل الناقص والمصدر — والمعنى: لا حاجة لأن تدفع كثيراً."
+          },
+          {
+            "tokens": [
+              "jetzt",
+              "bezahlen.",
+              "können",
+              "Wir"
+            ],
+            "a": "Wir können jetzt bezahlen.",
+            "why": "wir können (الجمع بـö) في المكان الثاني، jetzt بينهما، وbezahlen في الآخر."
+          },
+          {
+            "tokens": [
+              "du",
+              "Supermarkt.",
+              "Einen",
+              "kriegst",
+              "im",
+              "Regenschirm"
+            ],
+            "a": "Einen Regenschirm kriegst du im Supermarkt.",
+            "why": "المفعول في الموضع الأول للتأكيد ← الفعل kriegst ثانياً ثم الفاعل du (الفعل ثانياً دائماً)."
+          }
+        ],
+        "interleavedWith": [
+          "kaufen",
+          "bezahlen",
+          "anprobieren",
+          "supermarkt",
+          "viel",
+          "jetzt"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "km-4",
+            "speakText": "Super. Kann ich den Rucksack anprobieren?",
+            "a": "Super. Kann ich den Rucksack anprobieren?",
+            "why": "Super بحرف كبير (اسم تعجّب في أول الجملة) · Kann بـK كبيرة وnn مزدوجة بعد a القصيرة · Rucksack بـck مرتين · anprobieren كلمةً واحدة في الآخر."
+          },
+          {
+            "audioId": "km-10",
+            "speakText": "Okay. Und du, Lena? Was musst du kaufen?",
+            "a": "Okay. Und du, Lena? Was musst du kaufen?",
+            "why": "Okay كما في الإنجليزية · Lena بحرف كبير · musst بـss ثم t (du musst)."
+          },
+          {
+            "audioId": "km-11",
+            "speakText": "Ich muss einen Regenschirm kaufen. In Berlin regnet es oft!",
+            "a": "Ich muss einen Regenschirm kaufen. In Berlin regnet es oft!",
+            "why": "muss بـss (ich muss) · Regenschirm بحرف كبير (اسم مركّب) وsch · Berlin بحرف كبير · regnet بـg ثم n (من regnen)."
+          },
+          {
+            "audioId": "km-17",
+            "speakText": "Und wie bezahlst du? Geht dort die Kreditkarte?",
+            "a": "Und wie bezahlst du? Geht dort die Kreditkarte?",
+            "why": "bezahlst بـhl ثم st · Kreditkarte بحرف كبير وdt في وسطها · Geht بحرف كبير في أول الجملة الثانية · dort بـt في الآخر."
+          },
+          {
+            "audioId": "word-kriegen",
+            "speakText": "kriegen.",
+            "a": "kriegen.",
+            "why": "kriegen: ie طويلة [iː] (لا ei) · g قبل ‑en."
+          },
+          {
+            "audioId": "word-rucksack",
+            "speakText": "Rucksack.",
+            "a": "Rucksack.",
+            "why": "Rucksack: ck مرتين — بعد u وبعد a القصيرتين."
+          },
+          {
+            "audioId": "word-guertel",
+            "speakText": "Gürtel.",
+            "a": "Gürtel.",
+            "why": "Gürtel: ü بنقطتين · ‑el في الآخر (كـSchlüssel)."
+          },
+          {
+            "audioId": "word-abteilung",
+            "speakText": "Abteilung.",
+            "a": "Abteilung.",
+            "why": "Abteilung: b في آخر Ab (تُنطق [p]) · ei · ‑ung دائماً die — والنبر على teil."
+          },
+          {
+            "audioId": "word-kreditkarte",
+            "speakText": "Kreditkarte.",
+            "a": "Kreditkarte.",
+            "why": "Kreditkarte: K مرتين · dt في وسطها · ‑e في الآخر."
+          }
+        ],
+        "interleavedWith": [
+          "kaufen",
+          "bezahlen",
+          "anprobieren",
+          "regnen",
+          "oft",
+          "dort",
+          "gehen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Was musst du kaufen? — Ich muss eine Jacke kaufen. Kann ich sie anprobieren?",
+        "ar": "تقول لزميلك ما يجب أن تشتريه وتسأل ما يمكنك فعله في المتجر"
+      },
+      "situation": {
+        "de": "Im Geschäft: Was musst du kaufen? Wo findest du das? Kannst du es anprobieren? Wie musst du bezahlen?",
+        "ar": "في الدورة: كلٌّ منكما يسافر — يقول ثلاثة أشياء يجب أن يشتريها (Ich muss … kaufen.) ويسأل الآخر أين هي (Wo sind die Gürtel? — In der Abteilung für Kleidung.) وهل يمكنه أن يقيسها (Kann ich … anprobieren?) — ثم يسأل عن الدفع (Geht hier die Kreditkarte? — Nein, du musst bar bezahlen.) — وتتبادلان."
+      },
+      "successCriteria": [
+        "ثلاث جمل بـmuss/musst وجملتان بـkann/kannst — الفعل الناقص ثانياً والمصدر في الآخر بلا zu (Ich muss einen Gürtel kaufen. · Kann ich den Gürtel anprobieren?).",
+        "جملة بـnicht müssen بمعنى «لا حاجة» (Du musst nicht viel bezahlen.) وجملة بكلمة من كلمات اليوم: Abteilung · Korb · Wagen · Stück · Kreditkarte · passen."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يجب أن أشتري كعكة»؟",
+            "choices": [
+              "Ich muss einen Kuchen kaufen.",
+              "Ich muss kaufen einen Kuchen.",
+              "Ich muss zu kaufen einen Kuchen."
+            ],
+            "a": "Ich muss einen Kuchen kaufen.",
+            "why": "الفعل الناقص muss ثانياً والمصدر kaufen في الآخر — بلا zu والمفعول بينهما."
+          },
+          {
+            "q": "«هل يمكنني أن أدفع الآن؟»؟",
+            "choices": [
+              "Kann ich jetzt bezahlen?",
+              "Kann ich jetzt zu bezahlen?",
+              "Ich kann jetzt bezahlen?"
+            ],
+            "a": "Kann ich jetzt bezahlen?",
+            "why": "سؤال نعم/لا: Kann أولاً ثم ich — وjetzt بينهما والمصدر bezahlen في الآخر بلا zu."
+          },
+          {
+            "q": "das Stück = ؟",
+            "choices": [
+              "القطعة",
+              "السلة",
+              "القسم"
+            ],
+            "a": "القطعة",
+            "why": "das Stück = القطعة · der Korb = السلة · die Abteilung = القسم."
+          },
+          {
+            "q": "«يجب أن ندفع»؟",
+            "choices": [
+              "Wir müssen bezahlen.",
+              "Wir muss bezahlen.",
+              "Wir müssen bezahlt."
+            ],
+            "a": "Wir müssen bezahlen.",
+            "why": "wir müssen — «يجب» العربية ثابتة لكن müssen يتصرّف: wir müssen (الجمع بـü) — والمصدر bezahlen."
+          },
+          {
+            "q": "«الأحزمة هنا طويلة جداً»؟",
+            "choices": [
+              "Die Gürtel hier sind zu lang.",
+              "Die Gürtels hier sind zu lang.",
+              "Die Gürtel hier ist zu lang."
+            ],
+            "a": "Die Gürtel hier sind zu lang.",
+            "why": "die Gürtel جمعٌ بلا نهاية — والفعل sind للجمع."
+          },
+          {
+            "q": "«لا داعي لأن تدفعي»؟",
+            "choices": [
+              "Du musst nicht bezahlen.",
+              "Du musst nicht bezahlt.",
+              "Du nicht musst bezahlen."
+            ],
+            "a": "Du musst nicht bezahlen.",
+            "why": "nicht müssen = لا حاجة — nicht بعد الفعل الناقص وقبل المصدر bezahlen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يمكنه أن يجد حزاماً»؟",
+            "choices": [
+              "Er kann einen Gürtel finden.",
+              "Er kannt einen Gürtel finden.",
+              "Er kann einen Gürtel findet."
+            ],
+            "a": "Er kann einen Gürtel finden.",
+            "why": "er kann بلا ‑t (كـich kann) — والفعل الثاني finden مصدراً في الآخر."
+          },
+          {
+            "q": "«ماذا يجب أن نشتري؟»؟",
+            "choices": [
+              "Was müssen wir kaufen?",
+              "Was muss wir kaufen?",
+              "Was wir müssen kaufen?"
+            ],
+            "a": "Was müssen wir kaufen?",
+            "why": "Was ثم الفعل الناقص müssen (wir) ثم الفاعل — والمصدر kaufen في الآخر."
+          },
+          {
+            "q": "die Abteilung = ؟",
+            "choices": [
+              "القسم",
+              "العربة",
+              "المظلة"
+            ],
+            "a": "القسم",
+            "why": "die Abteilung = القسم · der Wagen = العربة · der Regenschirm = المظلة."
+          },
+          {
+            "q": "«الملابس جميلة»؟",
+            "choices": [
+              "Die Kleidung ist schön.",
+              "Die Kleidungen sind schön.",
+              "Die Kleidung sind schön."
+            ],
+            "a": "Die Kleidung ist schön.",
+            "why": "die Kleidung اسم جامد بلا جمع — فعلٌ مفرد: ist."
+          },
+          {
+            "q": "«هل يمكنك أن تشتري قطعتي كعك؟»؟",
+            "choices": [
+              "Kannst du zwei Stück Kuchen kaufen?",
+              "Kannst du zwei Stücke Kuchen kaufen?",
+              "Kannst du kaufen zwei Stück Kuchen?"
+            ],
+            "a": "Kannst du zwei Stück Kuchen kaufen?",
+            "why": "Stück بعد العدد بلا نهاية (كـEuro) — والمصدر kaufen في الآخر."
+          },
+          {
+            "q": "kriegen = ؟",
+            "choices": [
+              "bekommen",
+              "kaufen",
+              "finden"
+            ],
+            "a": "bekommen",
+            "why": "kriegen = bekommen (يحصل على) في الكلام اليومي · kaufen = يشتري · finden = يجد."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أستطيع أن أقيس حقيبة الظهر»؟",
+            "choices": [
+              "Ich kann den Rucksack anprobieren.",
+              "Ich kann den Rucksack anprobiere.",
+              "Ich kann anprobieren den Rucksack."
+            ],
+            "a": "Ich kann den Rucksack anprobieren.",
+            "why": "المصدر anprobieren متصلاً في آخر الجملة — والمفعول den Rucksack بينهما."
+          },
+          {
+            "q": "«يجب أن تسألي جدّتك»؟",
+            "choices": [
+              "Du musst deine Oma fragen.",
+              "Du muss deine Oma fragen.",
+              "Du musst deine Oma fragst."
+            ],
+            "a": "Du musst deine Oma fragen.",
+            "why": "du musst (بـ‑st) — والفعل الثاني fragen مصدراً لا fragst."
+          },
+          {
+            "q": "der Regenschirm = ؟",
+            "choices": [
+              "المظلة",
+              "الحزام",
+              "حقيبة الظهر"
+            ],
+            "a": "المظلة",
+            "why": "der Regenschirm = المظلة · der Gürtel = الحزام · der Rucksack = حقيبة الظهر."
+          },
+          {
+            "q": "«هل تناسبك حقيبة الظهر؟ — نعم، تناسب جيداً»؟",
+            "choices": [
+              "Passt der Rucksack? — Ja, er passt gut.",
+              "Passt der Rucksack? — Ja, er passen gut.",
+              "Passt der Rucksack? — Ja, es passt gut."
+            ],
+            "a": "Passt der Rucksack? — Ja, er passt gut.",
+            "why": "passen مع فاعل مفرد: passt — والضمير er لأن der Rucksack مذكر."
+          },
+          {
+            "q": "«يجب أن أدفع نقداً»؟",
+            "choices": [
+              "Ich muss bar bezahlen.",
+              "Ich muss bar zu bezahlen.",
+              "Ich muss bezahle bar."
+            ],
+            "a": "Ich muss bar bezahlen.",
+            "why": "muss ثانياً وbar بينهما وbezahlen مصدراً في الآخر — بلا zu."
+          },
+          {
+            "q": "möglich = ؟",
+            "choices": [
+              "ممكن",
+              "جاهز",
+              "فقط"
+            ],
+            "a": "ممكن",
+            "why": "möglich = ممكن · fertig = جاهز · nur = فقط."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Ich muss einen Rucksack kaufen. · Du musst einen Verkäufer fragen. · Wir können jetzt bezahlen. · Kann ich den Rucksack anprobieren? — Ja, das ist möglich. · Was musst du kaufen? · Du musst nicht viel bezahlen. · Passt er? — Er passt gut. · Die Abteilung für Kleidung · Brauchst du einen Korb oder einen Wagen? · Zwei Stück Kuchen, bitte. · Geht hier die Kreditkarte? · Einen Regenschirm kriegst du im Supermarkt.",
+      "ar": "الفعل الناقص (kann · muss) في المكان الثاني، وكل شيء بينهما، والفعل الثاني مصدراً في آخر الجملة بلا zu — والفعل المنفصل يبقى متصلاً (anprobieren). الصيغ: ich kann · du kannst · er kann · wir/sie/Sie können — ich muss · du musst · er muss · wir/sie/Sie müssen: ich وer سواء بلا ‑t، والحركة تتغيّر بين المفرد والجمع. können = القدرة أو الإمكان أو الطلب المهذب (Kann ich …?) · müssen = الوجوب · nicht müssen = لا حاجة (لا «ممنوع»). الكلمات: passen (يناسب المقاس: Passt er?) · das Stück (zwei Stück بلا نهاية) · der Korb (die Körbe) · der Wagen (die Wagen) · die Kleidung (بلا جمع) · die Kreditkarte · der Regenschirm · der Rucksack (die Rucksäcke) · der Gürtel (die Gürtel) · die Abteilung · finden · möglich · kriegen = bekommen."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich muss zu bezahlen.~~",
+          "ar": "لا zu قبل المصدر بعد الفعل الناقص: Ich muss bezahlen."
+        },
+        "whyArabicSpeakerFails": "«يجب أن أدفع» — «أن» قبل الفعل الثاني تطلب في ذهن المتعلم مقابلاً فيضع zu. والألمانية بعد الفعل الناقص (kann · muss · möchte · will) لا تضع شيئاً قبل المصدر: Ich muss bezahlen. · Ich kann kochen. — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Ich muss bezahlen.",
+          "ar": "يجب أن أدفع."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich kann zu kochen.~~",
+          "a": "Ich kann kochen."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich muss kaufe einen Gürtel.~~",
+          "ar": "الفعل الثاني مصدراً جامداً في آخر الجملة: Ich muss einen Gürtel kaufen."
+        },
+        "whyArabicSpeakerFails": "العربية تصرّف الفعلين معاً («أستطيعُ أن أشتريَ» — الثاني مضارعٌ للمتكلم أيضاً) وتضع الثاني مباشرةً بعد الأول، فيقول المتعلم kaufe بعد muss. والألمانية تصرّف الفعل الناقص وحده وتُبقي الثاني مصدراً كما في القاموس وتؤخّره إلى آخر الجملة، والمفعول بينهما: Ich muss einen Gürtel kaufen. — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Ich muss einen Gürtel kaufen.",
+          "ar": "يجب أن أشتري حزاماً."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich kann finde den Rucksack.~~",
+          "a": "Ich kann den Rucksack finden."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Du muss bezahlen.~~",
+          "ar": "müssen يتصرّف مع الفاعل: du musst · wir müssen"
+        },
+        "whyArabicSpeakerFails": "«يجب» في العربية كلمةٌ واحدة ثابتة لكل الفاعلين («يجب أن أدفع · يجب أن تدفع · يجب أن ندفع») — والفاعل يظهر على الفعل الثاني. فيُبقي المتعلم muss ثابتةً. والألمانية تضع علامة الفاعل على الفعل الناقص نفسه: ich muss · du musst · er muss · wir müssen — وكذلك kann: du kannst · wir können — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Du musst bezahlen.",
+          "ar": "يجب أن تدفع."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wir muss einkaufen.~~",
+          "a": "Wir müssen einkaufen."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "passen",
+      "stueck",
+      "korb",
+      "wagen",
+      "kleidung",
+      "kreditkarte",
+      "regenschirm",
+      "rucksack",
+      "guertel",
+      "abteilung",
+      "finden",
+      "moeglich",
+      "kriegen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/koennen",
+      "https://www.duden.de/rechtschreibung/muessen",
+      "https://www.duden.de/rechtschreibung/kriegen_bekommen_erhalten",
+      "https://www.duden.de/rechtschreibung/Stueck",
+      "https://www.duden.de/rechtschreibung/Abteilung"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/k%C3%B6nnen",
+      "https://de.wiktionary.org/wiki/m%C3%BCssen",
+      "https://de.wiktionary.org/wiki/kriegen",
+      "https://de.wiktionary.org/wiki/St%C3%BCck"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-koennen-muessen"
+  ],
+  "audioManifestRefs": [
+    "word-passen",
+    "word-stueck",
+    "word-korb",
+    "word-wagen",
+    "word-kleidung",
+    "word-kreditkarte",
+    "word-regenschirm",
+    "word-rucksack",
+    "word-guertel",
+    "word-abteilung",
+    "word-finden",
+    "word-moeglich",
+    "word-kriegen"
+  ],
+  "imageManifestRefs": [
+    "img-regenschirm"
+  ],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — können & müssen",
+    "goetheWordListOverlap": [
+      "passen",
+      "stueck",
+      "wagen",
+      "kleidung",
+      "kreditkarte",
+      "rucksack",
+      "finden",
+      "moeglich",
+      "kriegen"
+    ]
+  }
+}

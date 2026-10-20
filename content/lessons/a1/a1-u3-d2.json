@@ -6,94 +6,707 @@
   "day": 2,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst Zahlen bis 1000 sagen und einen Preis nennen.",
-    "ar": "تستطيع ذكر الأرقام حتى 1000 وتسمية سعر."
+    "de": "Wie viel kostet das? — Das kostet nur zweihundertneunundsiebzig Euro.",
+    "ar": "تقول الأعداد حتى 1000 والأسعار وتسأل عنها: المئات أولاً ثم الباقي في كلمة واحدة، وkosten + السعر بلا حرف جر"
   },
-  "canDoDaily": ["يذكر السعر والرقم الكبير"],
-  "warmup": { "cardIds": ["wohnung", "tisch"] },
+  "canDoDaily": [
+    "يقول الأعداد حتى 1000 ويكتبها في كلمة واحدة: zweihundert · dreihundertfünfundsechzig · tausend",
+    "يسأل عن السعر ويجيب ويدفع: Wie viel kostet das? — Das kostet nur … Euro. — Ich bezahle mit Karte."
+  ],
+  "warmup": {
+    "cardIds": [
+      "zwanzig",
+      "hundert",
+      "zaehlen"
+    ]
+  },
   "einstieg": {
     "pretestItems": [
       {
-        "prompt": { "de": "Wie sagt man 21?" },
-        "choices": ["einundzwanzig", "zweieins", "zwanzigeins"],
-        "answer": "einundzwanzig",
+        "prompt": {
+          "de": "«ثلاثمئة وخمسون» بالألمانية — أي ترتيب؟ (تخمين فقط)"
+        },
+        "choices": [
+          "dreihundertfünfzig — المئات أولاً كالعربية",
+          "fünfzig und dreihundert — العشرات أولاً"
+        ],
+        "answer": "dreihundertfünfzig — المئات أولاً كالعربية",
         "revealNextSession": true
       }
     ],
-    "guidedRetrieval": ["Zahlen 1–20"]
+    "guidedRetrieval": []
   },
   "praesentation": {
-    "wordIds": ["wohnung"],
-    "grammarArsenalIds": ["ars-zahlen"],
-    "storySentenceIds": ["story-a1-u3-s2"],
+    "wordIds": [
+      "tausend",
+      "euro",
+      "preis",
+      "kosten",
+      "billig",
+      "teuer",
+      "geld",
+      "bezahlen",
+      "karte",
+      "kaufen",
+      "nur",
+      "viel",
+      "dank",
+      "leicht",
+      "restaurant"
+    ],
+    "grammarArsenalIds": [
+      "ars-preis-1000"
+    ],
+    "storySentenceIds": [
+      "story-a1-u3-s2"
+    ],
     "dualCodingRequired": true,
-    "riskFlagsShown": ["vowel-long-short"]
+    "riskFlagsShown": [
+      "auslaut-d",
+      "r-uvular",
+      "z"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
-        "items": [{ "q": "Wie viel kostet das?", "a": "21 Euro" }],
-        "interleavedWith": [],
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "«مئتان» (200): ___hundert",
+            "a": "zwei",
+            "why": "المئات: العدد + hundert في كلمة واحدة — zwei + hundert = zweihundert، كـ«مئتان» من «اثنين» و«مئة»."
+          },
+          {
+            "q": "«مئة وعشرون» (120): hundert___",
+            "a": "zwanzig",
+            "why": "المئات أولاً ثم الباقي كما تعلّمناه: hundert + zwanzig = hundertzwanzig — بلا und بعد hundert."
+          },
+          {
+            "q": "«ثلاثمئة وخمسة وستون» (365): dreihundert___",
+            "a": "fünfundsechzig",
+            "why": "المئات ثم الآحاد ثم und ثم العشرات — كالعربية «ثلاثمئة وخمسة وستون» تماماً، وكلها كلمة واحدة."
+          },
+          {
+            "q": "«ألف» (1000): ___",
+            "a": "tausend",
+            "why": "tausend = ألف (أو eintausend) — وفي ألمانيا تُكتب 1.000 بنقطة للآلاف."
+          },
+          {
+            "q": "«بكم هذا؟»: Wie viel ___ das?",
+            "a": "kostet",
+            "why": "kosten = يكلّف: Wie viel kostet das? — والفعل ثانياً بعد كلمة السؤال Wie viel."
+          },
+          {
+            "q": "«يكلّف مئتي يورو فقط»: Das kostet ___ zweihundert Euro.",
+            "a": "nur",
+            "why": "nur قبل ما تقصره مباشرة: nur zweihundert Euro — والعربية تضع «فقط» بعد الكمية («بمئتي يورو فقط»)."
+          },
+          {
+            "q": "«أدفع بالبطاقة»: Ich bezahle mit ___.",
+            "a": "Karte",
+            "why": "mit Karte = بالبطاقة (die Karte) — وbar = نقداً نتعلمها لاحقاً."
+          },
+          {
+            "q": "«ألف شكر!»: Tausend ___!",
+            "a": "Dank",
+            "why": "der Dank = الشكر: Tausend Dank! كـ«ألف شكر» بالعربية تماماً — وVielen Dank! أشهر."
+          },
+          {
+            "q": "«إنه غالٍ جداً!» (999 يورو): Das ist zu ___!",
+            "a": "teuer",
+            "why": "teuer = غالٍ · zu teuer = أغلى مما يجب — وضده billig (رخيص)."
+          }
+        ],
+        "interleavedWith": [
+          "zwanzig",
+          "wie-viel"
+        ],
         "explanationRequired": true
       },
       {
-        "type": "gap-fill",
-        "items": [{ "q": "Ich habe ___ Euro.", "a": "einundzwanzig" }],
-        "interleavedWith": ["a1-u2-d3"],
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "hd-1",
+            "speakText": "Lena, ich kaufe heute ein Handy.",
+            "q": "استمع: ماذا يشتري يوسف اليوم؟",
+            "choices": [
+              "هاتفاً",
+              "طعاماً",
+              "بطاقة"
+            ],
+            "a": "هاتفاً",
+            "why": "ich kaufe = أشتري · ein Handy = هاتفاً (das Handy ⇐ ein) — والفعل ثانياً ثم heute."
+          },
+          {
+            "audioId": "hd-2",
+            "speakText": "Ein Handy? Was kostet es?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "عن السعر",
+              "عن اللون",
+              "عن المتجر"
+            ],
+            "a": "عن السعر",
+            "why": "Was kostet es? = بكم هو؟ — كـWie viel kostet das?، وes تعود على das Handy."
+          },
+          {
+            "audioId": "hd-3",
+            "speakText": "Das hier kostet neunhundertneunundneunzig Euro.",
+            "q": "استمع: بكم الهاتف الأول؟",
+            "choices": [
+              "999 €",
+              "990 €",
+              "909 €"
+            ],
+            "a": "999 €",
+            "why": "neunhundert + neunundneunzig = 999 — المئات أولاً ثم neun + und + neunzig."
+          },
+          {
+            "audioId": "hd-5",
+            "speakText": "Ja. Und das hier kostet nur zweihundertneunundsiebzig Euro.",
+            "q": "استمع: بكم الهاتف الثاني؟",
+            "choices": [
+              "279 €",
+              "297 €",
+              "972 €"
+            ],
+            "a": "279 €",
+            "why": "zweihundert + neunundsiebzig = 279 — وnur قبل العدد: «فقط 279»."
+          },
+          {
+            "audioId": "hd-6",
+            "speakText": "Das ist billig! Wie viel Geld hast du?",
+            "q": "استمع: ماذا تقول لينا ثم تسأل؟",
+            "choices": [
+              "إنه رخيص — وكم معه من المال",
+              "إنه غالٍ — ومتى يشتريه",
+              "إنه رخيص — ومن أين يشتريه"
+            ],
+            "a": "إنه رخيص — وكم معه من المال",
+            "why": "billig = رخيص · Wie viel Geld hast du? = كم معك من المال؟ — das Geld بلا جمع هنا."
+          },
+          {
+            "audioId": "hd-8",
+            "speakText": "Also hast du noch hunderteinundzwanzig Euro!",
+            "q": "استمع: كم يبقى مع يوسف؟",
+            "choices": [
+              "121 €",
+              "112 €",
+              "211 €"
+            ],
+            "a": "121 €",
+            "why": "hundert + einundzwanzig = 121 (400 − 279) — وAlso أولاً ⇐ hast ثانياً ثم du."
+          },
+          {
+            "audioId": "hd-9",
+            "speakText": "Genau! Für ein Essen im Restaurant.",
+            "q": "استمع: لماذا يحتاج الباقي؟",
+            "choices": [
+              "لطعام في مطعم",
+              "لهاتف ثانٍ",
+              "لهدية للينا"
+            ],
+            "a": "لطعام في مطعم",
+            "why": "für ein Essen im Restaurant = لطعامٍ في مطعم — das Essen من درس الأمس وdas Restaurant من اليوم."
+          },
+          {
+            "audioId": "hd-11",
+            "speakText": "Mit Karte. Das ist leicht.",
+            "q": "استمع: كيف يدفع يوسف؟",
+            "choices": [
+              "بالبطاقة",
+              "نقداً",
+              "لا يدفع اليوم"
+            ],
+            "a": "بالبطاقة",
+            "why": "mit Karte = بالبطاقة · leicht = سهل — ولينا سألت: Wie bezahlst du das Handy? (bezahlen + المفعول مباشرة)."
+          },
+          {
+            "audioId": "num-102",
+            "speakText": "hundertzwei.",
+            "q": "استمع: أي عدد؟",
+            "choices": [
+              "102",
+              "120",
+              "200"
+            ],
+            "a": "102",
+            "why": "hundertzwei = مئة واثنان (102) — hundertzwanzig = 120 · zweihundert = 200: الجزء الأول يقرر."
+          },
+          {
+            "audioId": "num-600",
+            "speakText": "sechshundert.",
+            "q": "استمع: أي عدد؟",
+            "choices": [
+              "600",
+              "60",
+              "16"
+            ],
+            "a": "600",
+            "why": "sechshundert = 600 (sechs كاملة + hundert) — sechzig = 60 · sechzehn = 16: انتبه لآخر الكلمة."
+          },
+          {
+            "audioId": "num-700",
+            "speakText": "siebenhundert.",
+            "q": "استمع: أي عدد؟",
+            "choices": [
+              "700",
+              "70",
+              "17"
+            ],
+            "a": "700",
+            "why": "siebenhundert = 700 (sieben كاملة) — siebzig = 70 · siebzehn = 17: ‑hundert · ‑zig · ‑zehn."
+          },
+          {
+            "audioId": "num-900",
+            "speakText": "neunhundert.",
+            "q": "استمع: أي عدد؟",
+            "choices": [
+              "900",
+              "90",
+              "19"
+            ],
+            "a": "900",
+            "why": "neunhundert = 900 — neunzig = 90 · neunzehn = 19: الفرق في آخر الكلمة وحده."
+          },
+          {
+            "audioId": "eur-19-99",
+            "speakText": "neunzehn Euro neunundneunzig.",
+            "q": "استمع: أي سعر؟",
+            "choices": [
+              "19,99 €",
+              "99,19 €",
+              "90,19 €"
+            ],
+            "a": "19,99 €",
+            "why": "neunzehn Euro neunundneunzig = 19,99 € — الكسور بعد Euro بلا كلمة Cent، والفاصلة للكسور في ألمانيا."
+          }
+        ],
+        "interleavedWith": [
+          "handy",
+          "das-essen",
+          "essen"
+        ],
         "explanationRequired": true
       },
       {
         "type": "build-sentence",
-        "items": [{ "q": "kostet / Das / 21 / Euro", "a": "Das kostet 21 Euro." }],
-        "interleavedWith": ["a1-u1-d5"],
+        "items": [
+          {
+            "tokens": [
+              "Euro.",
+              "kostet",
+              "Handy",
+              "dreihundert",
+              "nur",
+              "Das"
+            ],
+            "a": "Das Handy kostet nur dreihundert Euro.",
+            "why": "nur قبل العدد مباشرة · Euro بلا جمع بعد العدد · kostet ثانياً بعد الفاعل das Handy."
+          },
+          {
+            "tokens": [
+              "das?",
+              "kostet",
+              "viel",
+              "Wie"
+            ],
+            "a": "Wie viel kostet das?",
+            "why": "Wie viel (كم) أولاً ثم الفعل kostet ثم das — سؤال السعر."
+          },
+          {
+            "tokens": [
+              "Karte.",
+              "mit",
+              "bezahle",
+              "Ich"
+            ],
+            "a": "Ich bezahle mit Karte.",
+            "why": "bezahlen = يدفع · mit Karte = بالبطاقة (بلا أداة)."
+          },
+          {
+            "tokens": [
+              "teuer!",
+              "zu",
+              "ist",
+              "Das"
+            ],
+            "a": "Das ist zu teuer!",
+            "why": "zu قبل الصفة = أكثر مما يجب: zu teuer."
+          },
+          {
+            "tokens": [
+              "Geld",
+              "hast",
+              "du?",
+              "Wie",
+              "viel"
+            ],
+            "a": "Wie viel Geld hast du?",
+            "why": "Wie viel + الاسم (Geld) معاً في الأول، ثم الفعل hast ثم du."
+          }
+        ],
+        "interleavedWith": [
+          "handy",
+          "wie-viel"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "hd-4",
+            "speakText": "Neunhundertneunundneunzig? Das ist zu teuer!",
+            "a": "Neunhundertneunundneunzig? Das ist zu teuer!",
+            "why": "Neunhundertneunundneunzig كلمة واحدة: neun + hundert + neun + und + neunzig — بحرف كبير لأنها أول الجملة."
+          },
+          {
+            "audioId": "hd-7",
+            "speakText": "Ich habe vierhundert Euro.",
+            "a": "Ich habe vierhundert Euro.",
+            "why": "vierhundert كلمة واحدة · Euro بحرف كبير (اسم) وبلا جمع بعد العدد."
+          },
+          {
+            "audioId": "hd-10",
+            "speakText": "Und wie bezahlst du das Handy?",
+            "a": "Und wie bezahlst du das Handy?",
+            "why": "bezahlst (du) · das Handy مفعول مباشر بلا حرف جر: يدفع ثمن الهاتف = bezahlt das Handy."
+          },
+          {
+            "audioId": "hd-12",
+            "speakText": "Der Preis ist super!",
+            "a": "Der Preis ist super!",
+            "why": "der Preis (مذكر) بـei · super من درس المراجعة."
+          },
+          {
+            "audioId": "hd-13",
+            "speakText": "Tausend Dank, Lena!",
+            "a": "Tausend Dank, Lena!",
+            "why": "Tausend بحرف كبير أول الجملة · der Dank بحرف كبير (اسم) · والفاصلة قبل الاسم المنادى."
+          },
+          {
+            "audioId": "hd-14",
+            "speakText": "Gern, Yusuf!",
+            "a": "Gern, Yusuf!",
+            "why": "Gern = عفواً/بكل سرور (جواب الشكر) — والفاصلة قبل المنادى."
+          },
+          {
+            "audioId": "num-200",
+            "speakText": "zweihundert.",
+            "a": "zweihundert.",
+            "why": "zweihundert كلمة واحدة بحرف صغير (عدد لا اسم)."
+          },
+          {
+            "audioId": "eur-2-50",
+            "speakText": "zwei Euro fünfzig.",
+            "a": "zwei Euro fünfzig.",
+            "why": "zwei Euro fünfzig = 2,50 € — الكسور بعد Euro، وEuro بحرف كبير."
+          }
+        ],
+        "interleavedWith": [
+          "gern",
+          "handy",
+          "super"
+        ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
-      "goal": { "de": "Ein Ticket kaufen", "ar": "شراء تذكرة" },
-      "situation": { "de": "Am Bahnhof", "ar": "في المحطة" },
-      "successCriteria": ["يستخدم رقماً صحيحاً في جملة كاملة", "يستخدم صيغة طلب مهذبة"]
+      "goal": {
+        "de": "Wie viel kostet das? — Ich bezahle mit Karte.",
+        "ar": "السؤال عن السعر وقوله والدفع"
+      },
+      "situation": {
+        "de": "Yusuf kauft ein Handy. Wie viel kostet es?",
+        "ar": "يوسف يشتري هاتفاً ولينا تقارن معه الأسعار عبر الإنترنت"
+      },
+      "successCriteria": [
+        "يسأل عن سعرين ويقول كل سعر بجملة كاملة بلا حرف جر: Das kostet zweihundertneunundsiebzig Euro.",
+        "يكتب 4 من 5 أسعار مسموعة صحيحةً حروفاً وأرقاماً: neunhundert ≠ neunzig · zwei Euro fünfzig = 2,50 €"
+      ]
     }
   },
   "slider": {
     "questionDe": "Wie viel Prozent wirst du schaffen?",
-    "questionAr": "كم نسبة ما تتوقع إنجازه؟",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
     "min": 0,
     "max": 100
   },
   "quiz": {
     "variants": [
-      { "items": [{ "q": 1 }, { "q": 2 }, { "q": 3 }], "passingScore": 0.75 },
-      { "items": [{ "q": 4 }, { "q": 5 }, { "q": 6 }], "passingScore": 0.75 },
-      { "items": [{ "q": 7 }, { "q": 8 }, { "q": 9 }], "passingScore": 0.75 }
+      {
+        "items": [
+          {
+            "q": "365 بالحروف؟",
+            "a": "dreihundertfünfundsechzig",
+            "choices": [
+              "dreihundertfünfundsechzig",
+              "dreihundertsechsundfünfzig"
+            ],
+            "why": "365: dreihundert ثم fünf + und + sechzig — المئات أولاً ثم الآحاد ثم العشرات؛ و356 = dreihundertsechsundfünfzig."
+          },
+          {
+            "q": "أي جملة صحيحة؟",
+            "a": "Das kostet fünf Euro.",
+            "choices": [
+              "Das kostet fünf Euro.",
+              "Das kostet für fünf Euro."
+            ],
+            "why": "kosten + السعر مباشرة بلا حرف جر — والعربية «بخمسة» بالباء."
+          },
+          {
+            "q": "«ألف» بالألمانية؟",
+            "a": "tausend",
+            "why": "tausend = 1000 (أو eintausend)."
+          },
+          {
+            "q": "«معي مئة يورو فقط» — أي ترتيب؟",
+            "a": "Ich habe nur hundert Euro.",
+            "choices": [
+              "Ich habe nur hundert Euro.",
+              "Ich habe hundert Euro nur."
+            ],
+            "why": "nur قبل ما تقصره: nur hundert Euro — لا في آخر الجملة كـ«فقط»."
+          },
+          {
+            "q": "«المطعم» بالألمانية مع أداته؟",
+            "a": "das Restaurant",
+            "why": "das Restaurant (محايد) والجمع die Restaurants."
+          },
+          {
+            "q": "billig = ؟",
+            "a": "رخيص",
+            "choices": [
+              "رخيص",
+              "غالٍ",
+              "سهل"
+            ],
+            "why": "billig = رخيص · teuer = غالٍ · leicht = سهل."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "720 بالحروف؟",
+            "a": "siebenhundertzwanzig",
+            "choices": [
+              "siebenhundertzwanzig",
+              "zweihundertsiebzig"
+            ],
+            "why": "720 = siebenhundert + zwanzig — و270 = zweihundert + siebzig: المئات أولاً دائماً."
+          },
+          {
+            "q": "بعد العدد: zweihundert ___",
+            "a": "Euro",
+            "choices": [
+              "Euro",
+              "Euros"
+            ],
+            "why": "Euro بلا جمع بعد العدد: zweihundert Euro — كـ«مئتا يورو» بالعربية؛ وEuros من الفرنسية والإنجليزية."
+          },
+          {
+            "q": "«المال» بالألمانية مع أداته؟",
+            "a": "das Geld",
+            "why": "das Geld (محايد) — بلا جمع في الكلام اليومي."
+          },
+          {
+            "q": "«شكراً جزيلاً» بالألمانية (بكلمة Dank)؟",
+            "a": "Vielen Dank!",
+            "why": "Vielen Dank! = شكراً جزيلاً — وTausend Dank! = ألف شكر."
+          },
+          {
+            "q": "leicht = ؟",
+            "a": "سهل",
+            "choices": [
+              "سهل",
+              "رخيص",
+              "غالٍ"
+            ],
+            "why": "leicht = سهل (وخفيف): Mit Karte ist das leicht."
+          },
+          {
+            "q": "«أدفع الحساب»: Ich ___ die Rechnung.",
+            "a": "bezahle",
+            "why": "bezahlen + المفعول مباشرة: Ich bezahle die Rechnung."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "999 بالحروف؟",
+            "a": "neunhundertneunundneunzig",
+            "choices": [
+              "neunhundertneunundneunzig",
+              "neunhundertneunzehn"
+            ],
+            "why": "999 = neunhundert + neunundneunzig — و919 = neunhundert + neunzehn."
+          },
+          {
+            "q": "sechshundert = ؟",
+            "a": "600",
+            "choices": [
+              "600",
+              "60",
+              "16"
+            ],
+            "why": "sechshundert = 600 · sechzig = 60 · sechzehn = 16 — آخر الكلمة يقرر: ‑hundert · ‑zig · ‑zehn."
+          },
+          {
+            "q": "«غالٍ» بالألمانية؟",
+            "a": "teuer",
+            "why": "teuer = غالٍ — وzu teuer = أغلى مما يجب."
+          },
+          {
+            "q": "«أشتريه بمئتي يورو» — أي جملة صحيحة؟",
+            "a": "Ich kaufe es für zweihundert Euro.",
+            "choices": [
+              "Ich kaufe es für zweihundert Euro.",
+              "Ich kaufe es zweihundert Euro."
+            ],
+            "why": "kaufen + für + السعر صحيحة (اشتريته بـ…) — أما kosten فبلا حرف جر: Es kostet zweihundert Euro."
+          },
+          {
+            "q": "«السعر» بالألمانية مع أداته؟",
+            "a": "der Preis",
+            "why": "der Preis (مذكر) والجمع die Preise."
+          },
+          {
+            "q": "«بالبطاقة، من فضلك» بالألمانية؟",
+            "a": "Mit Karte, bitte.",
+            "why": "mit Karte = بالبطاقة · bitte = من فضلك."
+          }
+        ],
+        "passingScore": 0.75
+      }
     ]
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Heute hast du Zahlen bis 1000 und Preise gelernt.",
-      "ar": "اليوم تعلمت الأرقام حتى 1000 والأسعار."
+      "de": "Heute: zweihundert · dreihundertfünfundsechzig · tausend — Wie viel kostet das? Das kostet nur zweihundertneunundsiebzig Euro. Ich bezahle mit Karte.",
+      "ar": "اليوم: المئات أولاً ثم الباقي في كلمة واحدة (كالعربية «ثلاثمئة وخمسة وستون») · kosten + السعر بلا حرف جر · Euro بلا جمع بعد العدد · nur قبل العدد · والكسور بعد Euro: zwei Euro fünfzig = 2,50 €."
     },
     "warningCards": [
       {
-        "commonError": { "de": "einundzwanzig → ~~zweieins~~", "ar": "قلب ترتيب الجزأين" },
-        "whyArabicSpeakerFails": "العربية تضع الأصغر قبل الأكبر (واحد وعشرون) لكن بترتيب معكوس عن الألمانية في الصياغة الكاملة",
-        "correct": { "de": "einundzwanzig", "ar": "واحد وعشرون (الأصغر أولاً دائماً)" },
-        "exercise": { "q": "31؟", "a": "einunddreißig" }
+        "commonError": {
+          "de": "~~Das kostet zweihundert Euro nur.~~",
+          "ar": "nur بعد الكمية (كـ«فقط»)"
+        },
+        "whyArabicSpeakerFails": "العربية تضع «فقط» بعد الكمية: «بمئتي يورو فقط» — فيضع المتعلم nur في آخر الجملة. والألمانية تضع nur قبل ما تقصره مباشرة: nur zweihundert Euro (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Das kostet nur zweihundert Euro.",
+          "ar": "يكلّف مئتي يورو فقط."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich habe vierhundert Euro nur.~~",
+          "a": "Ich habe nur vierhundert Euro."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Das kostet für fünf Euro.~~",
+          "ar": "حرف جر قبل السعر (كالباء في «بخمسة»)"
+        },
+        "whyArabicSpeakerFails": "العربية تقرن السعر بالباء: «بكم هذا؟ — بخمسة يورو»، فيضع المتعلم für قبل السعر بعد kosten. والألمانية: kosten + السعر مباشرة بلا حرف جر — Das kostet fünf Euro. (أما «اشتريته بخمسة» فـkaufen + für صحيحة: Ich kaufe es für fünf Euro.) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Das kostet fünf Euro.",
+          "ar": "يكلّف خمسة يورو."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Das Handy kostet für dreihundert Euro.~~",
+          "a": "Das Handy kostet dreihundert Euro."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~zweihundert Euros~~",
+          "ar": "Euro بجمع ‑s بعد العدد"
+        },
+        "whyArabicSpeakerFails": "العربية في صفّك هنا: «يورو» لا تُجمع بعد العدد («مئتا يورو»)، كـzweihundert Euro تماماً. الخطر من الفرنسية (deux cents euros) والإنجليزية (two hundred euros) بـ‑s — فيقول من يعرفهما ~~zweihundert Euros~~. اتبع العربية: Euro بعد العدد بلا جمع (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "zweihundert Euro",
+          "ar": "مئتا يورو"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Das kostet neun Euros.~~",
+          "a": "Das kostet neun Euro."
+        }
       }
     ],
-    "srsBundleWordIds": ["wohnung"]
+    "srsBundleWordIds": [
+      "tausend",
+      "euro",
+      "preis",
+      "kosten",
+      "billig",
+      "teuer",
+      "geld",
+      "bezahlen",
+      "karte",
+      "kaufen",
+      "nur",
+      "viel",
+      "dank",
+      "leicht",
+      "restaurant"
+    ]
   },
   "gReferences": {
-    "duden": ["https://www.duden.de/rechtschreibung/Wohnung"],
-    "wiktionary": ["https://de.wiktionary.org/wiki/Wohnung"],
+    "duden": [
+      "https://www.duden.de/rechtschreibung/tausend",
+      "https://www.duden.de/rechtschreibung/Euro",
+      "https://www.duden.de/rechtschreibung/kosten"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/kosten"
+    ],
     "goethe": []
   },
-  "usedArsenalIds": ["ars-zahlen"],
-  "audioManifestRefs": ["word-wohnung"],
+  "usedArsenalIds": [
+    "ars-preis-1000"
+  ],
+  "audioManifestRefs": [
+    "word-tausend",
+    "word-euro",
+    "word-preis",
+    "word-kosten",
+    "word-billig",
+    "word-teuer",
+    "word-geld",
+    "word-bezahlen",
+    "word-karte",
+    "word-kaufen",
+    "word-nur",
+    "word-viel",
+    "word-dank",
+    "word-leicht",
+    "word-restaurant"
+  ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen/Uhrzeit)",
-    "goetheWordListOverlap": ["wohnung"]
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen & Uhrzeit) — Zahlen bis 1000 & Preise",
+    "goetheWordListOverlap": [
+      "tausend",
+      "euro",
+      "preis",
+      "kosten",
+      "billig",
+      "teuer",
+      "geld",
+      "bezahlen",
+      "karte",
+      "kaufen",
+      "nur",
+      "viel",
+      "dank",
+      "leicht",
+      "restaurant"
+    ]
   }
 }

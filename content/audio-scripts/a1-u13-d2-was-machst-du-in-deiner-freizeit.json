@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u13-d2-was-machst-du-in-deiner-freizeit",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Was machst du in deiner Freizeit?",
+    "ar": "ماذا تفعل في وقت فراغك؟ — مكالمة بلا تاريخ (الوحدتان 13–14 تكملة SD1 للفهم — D204): يوسف حالياً وقت فراغه قليل، لكنه في نهاية الأسبوع يمارس الرياضة: كرة القدم في الحديقة مع نبيل وعائشة، ويركب الدراجة · لينا تذهب كثيراً إلى المسبح — الدخول أربعة يورو وللشباب اثنان، وفي برلين ستة · السبت ديسكو مع عائشة (Kommst du mit?) · أغنية يوسف المفضّلة من تونس على قرص أرسلته جدته، ونبيل يقول له كل مساء: Hör auf! · في الديسكو النهاية في الثانية وعند لينا في الثانية عشرة · لينا تشارك في نادٍ كل ثلاثاء — وتستعجل لأن حافلتها تأتي حالاً"
+  },
+  "usedIn": [
+    "a1-u13-d2"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "fr-1",
+      "speaker": "lena",
+      "text": "Hallo, Yusuf! Was machst du in deiner Freizeit?",
+      "direction": "لينا تفتح: in deiner Freizeit"
+    },
+    {
+      "id": "fr-2",
+      "speaker": "yusuf",
+      "text": "Zurzeit habe ich wenig Freizeit — aber am Wochenende mache ich Sport.",
+      "direction": "zurzeit أول الجملة ثم الفعل · mache Sport"
+    },
+    {
+      "id": "fr-3",
+      "speaker": "lena",
+      "text": "Sport? Spielst du Fußball?",
+      "direction": "سؤال قصير"
+    },
+    {
+      "id": "fr-4",
+      "speaker": "yusuf",
+      "text": "Ja, im Park mit Nabil und Ayşe. Und ich fahre gern Rad.",
+      "direction": "Rad fahren: fahre … Rad"
+    },
+    {
+      "id": "fr-5",
+      "speaker": "lena",
+      "text": "Ich auch! Und ich gehe oft ins Schwimmbad.",
+      "direction": "ins Schwimmbad"
+    },
+    {
+      "id": "fr-6",
+      "speaker": "yusuf",
+      "text": "Ins Schwimmbad? Was kostet der Eintritt?",
+      "direction": "der Eintritt = رسم الدخول"
+    },
+    {
+      "id": "fr-7",
+      "speaker": "lena",
+      "text": "Vier Euro. Für Jugendliche nur zwei.",
+      "direction": "Jugendliche من الدرس السابق"
+    },
+    {
+      "id": "fr-8",
+      "speaker": "yusuf",
+      "text": "Das ist nicht viel. Hier in Berlin kostet er sechs Euro.",
+      "direction": "مقارنة بسيطة"
+    },
+    {
+      "id": "fr-9",
+      "speaker": "lena",
+      "text": "Und am Abend? Gehst du in die Disco?",
+      "direction": "in die Disco"
+    },
+    {
+      "id": "fr-10",
+      "speaker": "yusuf",
+      "text": "Am Samstag, ja! Ayşe hat gefragt: Kommst du mit? Und ich komme mit.",
+      "direction": "mitkommen: Kommst du mit? · komme mit"
+    },
+    {
+      "id": "fr-11",
+      "speaker": "lena",
+      "text": "Super! Und die Musik? Hast du ein Lieblingslied?",
+      "direction": "Lieblingslied"
+    },
+    {
+      "id": "fr-12",
+      "speaker": "yusuf",
+      "text": "Ja, ein Lied aus Tunesien. Meine Oma hat mir eine CD geschickt.",
+      "direction": "ein Lied · eine CD (تُنطق تسيه-ديه)"
+    },
+    {
+      "id": "fr-13",
+      "speaker": "lena",
+      "text": "Eine CD! Hörst du sie oft?",
+      "direction": "سؤال قصير"
+    },
+    {
+      "id": "fr-14",
+      "speaker": "yusuf",
+      "text": "Jeden Abend. Nabil sagt immer: Hör auf, Yusuf! Aber ich höre nicht auf.",
+      "direction": "aufhören: Hör auf! · höre nicht auf — بمرح"
+    },
+    {
+      "id": "fr-15",
+      "speaker": "lena",
+      "text": "Und wann ist in der Disco Schluss?",
+      "direction": "Schluss = النهاية"
+    },
+    {
+      "id": "fr-16",
+      "speaker": "yusuf",
+      "text": "Um zwei Uhr. Dann hört die Musik auf, und alle gehen nach Hause.",
+      "direction": "hört … auf"
+    },
+    {
+      "id": "fr-17",
+      "speaker": "lena",
+      "text": "So spät! Bei uns ist um zwölf Schluss.",
+      "direction": "مقارنة"
+    },
+    {
+      "id": "fr-18",
+      "speaker": "yusuf",
+      "text": "Und du, Lena? Machst du auch Sport?",
+      "direction": "سؤال"
+    },
+    {
+      "id": "fr-19",
+      "speaker": "lena",
+      "text": "Ja, ich mache im Verein mit — wir spielen jeden Dienstag. Ach, mein Bus kommt gleich, ich habe es eilig!",
+      "direction": "mitmachen: mache … mit · es eilig haben — بعجلة"
+    },
+    {
+      "id": "fr-20",
+      "speaker": "yusuf",
+      "text": "Dann schnell! Bis bald, Lena!",
+      "direction": "ختام سريع"
+    }
+  ]
+}

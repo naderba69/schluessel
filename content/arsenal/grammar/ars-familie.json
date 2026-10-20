@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-familie",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "der Vater · die Mutter · das Kind · die Großeltern",
+    "ar": "أسماء الأسرة: الأداة والمركّب والجمع"
+  },
+  "payload": {
+    "topicAr": "أسماء أفراد الأسرة مع أداتها، وكيف يحتفظ Groß- بأداة العنصر الأخير، وكيف تتبدل صيغة الجمع؛ Eltern وGroßeltern جمعان دائمان.",
+    "sceneAr": "في نشاط تدريبي خيالي داخل الدورة عبر الإنترنت، يراجع متعلمان رسماً أسرياً عاماً لا يصف أسرة أيٍّ منهما. يسمّيان الأشخاص بالألمانية، ثم يلاحظان أداة Vater وMutter داخل Großvater وGroßmutter، ويميّزان المفرد من الجمع.",
+    "examples": [
+      {
+        "de": "der Vater → der Großvater",
+        "ar": "الأب → الجد؛ أداة Vater باقية في المركب"
+      },
+      {
+        "de": "die Mutter → die Großmutter",
+        "ar": "الأم → الجدة؛ أداة Mutter باقية في المركب"
+      },
+      {
+        "de": "das Kind → die Kinder · der Junge → die Jungen",
+        "ar": "الطفل → الأطفال · الولد → الأولاد؛ للجمع صيغ مختلفة"
+      },
+      {
+        "de": "die Eltern → die Großeltern",
+        "ar": "الوالدان → الأجداد؛ الاثنان صيغ جمع"
+      },
+      {
+        "de": "die Frau · der Mann · der Opa",
+        "ar": "المرأة/الزوجة · الرجل/الزوج · الجد بلفظ مألوف"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) ما الأداة في Vater وGroßvater؟ وفي Mutter وGroßmutter؟ (2) أي جزء من المركب يحدد الأداة؟ (3) ماذا تغيّر بين Kind/Kinder وJunge/Jungen؟ (4) هل Eltern وGroßeltern مفرد أم جمع؟ (5) هل تعني Frau دائماً «زوجة» وMann دائماً «زوجاً»؟",
+    "ruleDe": "der Vater → der Großvater · die Mutter → die Großmutter · das Kind → die Kinder · die Eltern → die Großeltern",
+    "ruleAr": "احفظ الاسم مع أداته: der Vater · die Mutter · das Kind. في Großvater وGroßmutter يأتي Groß- قبل الاسم، وتبقى أداة العنصر الأخير: der Vater → der Großvater، وdie Mutter → die Großmutter. في صيغة الرفع للجمع نستخدم die، لكن شكل الجمع يختلف: der Vater → die Väter · die Mutter → die Mütter · das Kind → die Kinder · der Junge → die Jungen. أما die Eltern وdie Großeltern فهما جمعان دائمان، لا مفرد لهما بهذه الصيغة؛ للأب والأم نقول der Vater وdie Mutter، وللجد والجدة der Großvater وdie Großmutter.",
+    "contrastAr": "قد ينقل العربي تذكير «الطفل» إلى الألمانية فيقول ~~der Kind~~؛ لكن الأداة جزء من المدخل الألماني: das Kind. وقد يوحي المثنى العربي في «الوالدان/الجدان» بوجود مفرد مباشر، بينما Eltern وGroßeltern صيغ جمع دائمة. وفي المركب لا نخمن الأداة من معنى Groß وحده؛ نأخذها من الاسم الأخير: der Vater → der Großvater وdie Mutter → die Großmutter — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "اليوم نتعلم أداة الاسم في صيغة التعريف والجمع في الرفع؛ تغيّر الأداة في بقية الحالات النحوية مؤجل.",
+      "Frau قد تعني «امرأة» أو «زوجة»، وMann قد تعني «رجلاً» أو «زوجاً»؛ السياق هو الذي يحدد.",
+      "لا تعمم شكلاً واحداً للجمع: der Junge → die Jungen، وder Opa → die Opas؛ احفظ صيغة كل كلمة."
+    ],
+    "beads": [
+      "Der",
+      "Opa",
+      "ist",
+      "der",
+      "Großvater."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u4-d1"
+  ]
+}

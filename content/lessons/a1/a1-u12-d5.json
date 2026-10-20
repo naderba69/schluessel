@@ -1,0 +1,953 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u12-d5",
+  "level": "A1",
+  "unit": 12,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Unser Thema heute ist die Natur. · Ich habe viel fotografiert. · Ich habe mit meiner Tante telefoniert. · Der See ist klein und ruhig, das Meer ist groß. · Berge, Wälder, Flüsse und Seen · Der Strand ist lang, und das Wasser ist warm. · Ich habe ein Andenken gekauft. · Meine Tante hat eine Postkarte aus den Bergen geschickt.",
+    "ar": "تروي رحلتك بكلمات الطبيعة والماضي الصحيح: أفعال ‑ieren بلا ge (fotografiert · telefoniert) مقابل ge‑ المنتظمة والقوية (gekauft · geschickt · gesprochen · geschrieben) · der See (بحيرة) مقابل das Meer/die See (بحر) · الجمع بالأوملاوت (Strände · Wälder · Flüsse) — ومعها die Landschaft · die Natur · der See · der Berg · das Meer · der Strand · die Insel · der Fluss · der Wald · das Andenken · fotografieren · die Postkarte · das Thema"
+  },
+  "canDoDaily": [
+    "يروي رحلته بالماضي الصحيح (Ich habe viel fotografiert. · Ich habe ein Andenken gekauft. · Meine Tante hat eine Postkarte geschickt. · Wir haben über das Meer gesprochen.).",
+    "يصف الطبيعة بالمفرد والجمع والجنس الصحيح (Der See ist klein und ruhig. · Das Meer ist groß. · Berge, Wälder, Flüsse und Seen · Die Landschaft ist schön. · Unser Thema heute ist die Natur.)."
+  ],
+  "warmup": {
+    "cardIds": [
+      "foto",
+      "reise",
+      "ausflug"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«صوّرتُ كثيراً» — أي صيغة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Ich habe viel fotografiert.",
+          "Ich habe viel ~~gefotografiert~~.",
+          "Ich bin viel fotografieren."
+        ],
+        "answer": "Ich habe viel fotografiert.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "landschaft",
+      "natur",
+      "see",
+      "berg",
+      "meer",
+      "strand",
+      "insel",
+      "fluss",
+      "wald",
+      "andenken",
+      "fotografieren",
+      "postkarte",
+      "thema"
+    ],
+    "grammarArsenalIds": [
+      "ars-perfekt",
+      "ars-zeitangaben"
+    ],
+    "storySentenceIds": [
+      "story-a1-u12-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-a",
+      "umlaut-u",
+      "sp-st-initial",
+      "auslaut-d",
+      "vowel-long-short"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Ich habe viel ___. (fotografieren — الماضي المركّب)",
+            "a": "fotografiert",
+            "why": "أفعال ‑ieren بلا ge: fotografiert — النبر على ‑iert."
+          },
+          {
+            "q": "Ich habe mit meiner Tante ___. (telefonieren — الماضي المركّب)",
+            "a": "telefoniert",
+            "why": "telefonieren ← hat telefoniert — بلا ge كالأفعال بـ‑ieren كلها."
+          },
+          {
+            "q": "Wir haben über das Meer ___. (sprechen — الماضي المركّب)",
+            "a": "gesprochen",
+            "why": "sprechen فعل قوي: hat gesprochen (تغيّر الحركة e → o)."
+          },
+          {
+            "q": "Ich habe ein Andenken ___. (kaufen — الماضي المركّب)",
+            "a": "gekauft",
+            "why": "kaufen منتظم: ge + kauf + t."
+          },
+          {
+            "q": "Meine Tante hat eine Postkarte ___. (schicken — الماضي المركّب)",
+            "a": "geschickt",
+            "why": "schicken منتظم: ge + schick + t."
+          },
+          {
+            "q": "Ich habe sechs Sätze ___. (schreiben — الماضي المركّب)",
+            "a": "geschrieben",
+            "why": "schreiben قوي: hat geschrieben (‑en وتغيّر ei → ie)."
+          },
+          {
+            "q": "___ du in Tunesien am Meer? (sein — الماضي البسيط du)",
+            "a": "Warst",
+            "why": "sein في الماضي البسيط: ich war · du warst — لا Perfekt هنا."
+          },
+          {
+            "q": "Wir ___ heute ein neues Thema. (haben — الماضي البسيط wir)",
+            "a": "hatten",
+            "why": "haben في الماضي البسيط: wir hatten — والاسم محايد: ein neues Thema."
+          },
+          {
+            "q": "der Berg → die ___ (الجمع)",
+            "a": "Berge",
+            "why": "der Berg → die Berge: ‑e بلا أوملاوت."
+          },
+          {
+            "q": "der Strand → die ___ (الجمع)",
+            "a": "Strände",
+            "why": "der Strand → die Strände: أوملاوت a → ä + ‑e."
+          },
+          {
+            "q": "der Wald → die ___ (الجمع)",
+            "a": "Wälder",
+            "why": "der Wald → die Wälder: أوملاوت + ‑er."
+          },
+          {
+            "q": "der Fluss → die ___ (الجمع)",
+            "a": "Flüsse",
+            "why": "der Fluss → die Flüsse: أوملاوت u → ü + ‑e."
+          },
+          {
+            "q": "der See → die ___ (الجمع)",
+            "a": "Seen",
+            "why": "der See → die Seen: ‑n فقط."
+          },
+          {
+            "q": "die Insel → die ___ (الجمع)",
+            "a": "Inseln",
+            "why": "die Insel → die Inseln: ‑n فقط بلا أوملاوت."
+          },
+          {
+            "q": "das Thema → die ___ (الجمع)",
+            "a": "Themen",
+            "why": "das Thema → die Themen: تسقط ‑a وتأتي ‑en (لا Themas)."
+          },
+          {
+            "q": "___ See ist klein und ruhig. (بحيرة — المقال)",
+            "a": "Der",
+            "why": "der See = البحيرة (مذكر)."
+          },
+          {
+            "q": "___ See ist das Meer. (البحر — المقال)",
+            "a": "Die",
+            "why": "die See = البحر (مؤنث) — الكلمة نفسها بجنس آخر تغيّر المعنى."
+          },
+          {
+            "q": "___ Meer ist groß. (المقال)",
+            "a": "Das",
+            "why": "das Meer — محايد."
+          },
+          {
+            "q": "Wir fahren an ___ See. (ein — أكوزاتيف مذكر)",
+            "a": "einen",
+            "why": "an + أكوزاتيف للحركة: an einen See (der See مذكر)."
+          },
+          {
+            "q": "Unser ___ heute ist die Natur. (موضوع)",
+            "a": "Thema",
+            "why": "das Thema — محايد · الجمع die Themen."
+          },
+          {
+            "q": "Die ___ in Deutschland ist schön. (منظر طبيعي)",
+            "a": "Landschaft",
+            "why": "die Landschaft — مؤنث بـ‑schaft · الجمع die Landschaften."
+          },
+          {
+            "q": "Die ___ ist ruhig. (طبيعة)",
+            "a": "Natur",
+            "why": "die Natur — مؤنث · بلا جمع."
+          }
+        ],
+        "interleavedWith": [
+          "tante",
+          "telefonieren",
+          "sprechen",
+          "kaufen",
+          "schicken",
+          "schreiben",
+          "satz",
+          "ruhig",
+          "klein",
+          "gross",
+          "neu",
+          "schoen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "ki-1",
+            "speakText": "Hallo Lena! Heute hatten wir in der Schule ein neues Thema: die Natur.",
+            "q": "استمع: ما الموضوع الجديد في المدرسة؟",
+            "choices": [
+              "الطبيعة",
+              "الرياضة",
+              "العائلة"
+            ],
+            "a": "الطبيعة",
+            "why": "ein neues Thema: die Natur — الطبيعة."
+          },
+          {
+            "audioId": "ki-2",
+            "speakText": "Die Natur? Das ist ein schönes Thema. Was habt ihr gemacht?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "ماذا فعلتم",
+              "متى الحصة",
+              "أين المدرسة"
+            ],
+            "a": "ماذا فعلتم",
+            "why": "Was habt ihr gemacht? — ماذا فعلتم."
+          },
+          {
+            "audioId": "ki-3",
+            "speakText": "Wir haben über Berge, Wälder und Flüsse gesprochen. Und ich habe sechs Sätze geschrieben — über das Meer in Tunesien.",
+            "q": "استمع: عمّ تحدّثوا وعمّ كتب يوسف؟",
+            "choices": [
+              "عن الجبال والغابات والأنهار — وعن البحر في تونس",
+              "عن المدن — وعن برلين",
+              "عن الطقس — وعن المطر"
+            ],
+            "a": "عن الجبال والغابات والأنهار — وعن البحر في تونس",
+            "why": "über Berge, Wälder und Flüsse gesprochen … über das Meer in Tunesien — الطبيعة والبحر."
+          },
+          {
+            "audioId": "ki-4",
+            "speakText": "Das Meer! Warst du in Tunesien am Meer?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل كان في تونس على البحر",
+              "هل يسبح",
+              "هل عنده صور"
+            ],
+            "a": "هل كان في تونس على البحر",
+            "why": "Warst du in Tunesien am Meer? — على البحر."
+          },
+          {
+            "audioId": "ki-5",
+            "speakText": "Ja, Tunis liegt am Meer. Der Strand ist lang, und das Wasser ist warm.",
+            "q": "استمع: كيف الشاطئ والماء في تونس؟",
+            "choices": [
+              "الشاطئ طويل والماء دافئ",
+              "الشاطئ صغير والماء بارد",
+              "الشاطئ قصير والماء هادئ"
+            ],
+            "a": "الشاطئ طويل والماء دافئ",
+            "why": "Der Strand ist lang, und das Wasser ist warm — طويل ودافئ."
+          },
+          {
+            "audioId": "ki-7",
+            "speakText": "An einen See? Der See — ist das nicht das Meer?",
+            "q": "استمع: ما سؤال يوسف؟",
+            "choices": [
+              "هل البحيرة هي البحر",
+              "أين البحيرة",
+              "كم تبعد البحيرة"
+            ],
+            "a": "هل البحيرة هي البحر",
+            "why": "Der See — ist das nicht das Meer? — البحيرة والبحر."
+          },
+          {
+            "audioId": "ki-8",
+            "speakText": "Nein! Der See ist klein und ruhig, das Meer ist groß. Aber die See ist das Meer!",
+            "q": "استمع: ما الفرق بين der See وdas Meer برأي لينا؟",
+            "choices": [
+              "البحيرة صغيرة وهادئة — البحر كبير",
+              "البحيرة كبيرة — البحر صغير",
+              "لا فرق"
+            ],
+            "a": "البحيرة صغيرة وهادئة — البحر كبير",
+            "why": "Der See ist klein und ruhig, das Meer ist groß — صغيرة/كبير."
+          },
+          {
+            "audioId": "ki-9",
+            "speakText": "Gut: der See ist klein, die See ist groß. Und gibt es in Deutschland auch Strände?",
+            "q": "استمع: ماذا يسأل يوسف عن ألمانيا؟",
+            "choices": [
+              "هل فيها شواطئ أيضاً",
+              "هل فيها جبال",
+              "هل فيها بحيرات"
+            ],
+            "a": "هل فيها شواطئ أيضاً",
+            "why": "gibt es in Deutschland auch Strände? — الشواطئ."
+          },
+          {
+            "audioId": "ki-10",
+            "speakText": "Ja, im Norden am Meer. Dort gibt es eine große Insel — da macht meine Familie oft Urlaub.",
+            "q": "استمع: أين الشواطئ وأين تقضي عائلة لينا الإجازة؟",
+            "choices": [
+              "في الشمال على البحر — على جزيرة كبيرة",
+              "في الجنوب على بحيرة — في الجبال",
+              "في الغرب على نهر — في الغابة"
+            ],
+            "a": "في الشمال على البحر — على جزيرة كبيرة",
+            "why": "im Norden am Meer … eine große Insel — da macht meine Familie oft Urlaub — الجزيرة."
+          },
+          {
+            "audioId": "ki-13",
+            "speakText": "Ich habe in Tunesien auch viel fotografiert. Am Samstag zeige ich dir die Fotos.",
+            "q": "استمع: ماذا يُري يوسف لينا يوم السبت؟",
+            "choices": [
+              "الصور من تونس",
+              "التذكار",
+              "البطاقة البريدية"
+            ],
+            "a": "الصور من تونس",
+            "why": "Am Samstag zeige ich dir die Fotos — الصور."
+          },
+          {
+            "audioId": "ki-14",
+            "speakText": "Super! Hast du auch ein Andenken aus Tunesien?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "عن تذكار من تونس",
+              "عن بطاقة بريدية",
+              "عن كعكة"
+            ],
+            "a": "عن تذكار من تونس",
+            "why": "Hast du auch ein Andenken aus Tunesien? — التذكار."
+          },
+          {
+            "audioId": "ki-15",
+            "speakText": "Ja, ich habe für dich ein kleines Andenken gekauft — vom Meer.",
+            "q": "استمع: ماذا اشترى يوسف للينا؟",
+            "choices": [
+              "تذكاراً صغيراً من البحر",
+              "بطاقة بريدية من الجبال",
+              "كتاباً عن تونس"
+            ],
+            "a": "تذكاراً صغيراً من البحر",
+            "why": "ein kleines Andenken gekauft — vom Meer — من البحر."
+          },
+          {
+            "audioId": "ki-16",
+            "speakText": "Danke! Meine Tante hat mir eine Postkarte aus den Bergen geschickt. Die Landschaft ist so schön!",
+            "q": "استمع: ماذا أرسلت عمّة لينا؟",
+            "choices": [
+              "بطاقة بريدية من الجبال",
+              "صوراً من البحر",
+              "تذكاراً من الجزيرة"
+            ],
+            "a": "بطاقة بريدية من الجبال",
+            "why": "eine Postkarte aus den Bergen geschickt — من الجبال."
+          },
+          {
+            "audioId": "ki-18",
+            "speakText": "Dann ist das dein Thema für Samstag: deine Fotos vom Meer!",
+            "q": "استمع: ما موضوع يوسف يوم السبت برأي لينا؟",
+            "choices": [
+              "صوره من البحر",
+              "جمله الست",
+              "التذكار"
+            ],
+            "a": "صوره من البحر",
+            "why": "dein Thema für Samstag: deine Fotos vom Meer — الصور."
+          },
+          {
+            "audioId": "ki-19",
+            "speakText": "Gern! Und zuletzt eine Frage: Was hast du heute gemacht?",
+            "q": "استمع: ماذا يسأل يوسف أخيراً؟",
+            "choices": [
+              "ماذا فعلت لينا اليوم",
+              "متى العيد",
+              "أين الجزيرة"
+            ],
+            "a": "ماذا فعلت لينا اليوم",
+            "why": "zuletzt eine Frage: Was hast du heute gemacht? — ماذا فعلت."
+          },
+          {
+            "audioId": "ki-20",
+            "speakText": "Ich habe nur gelernt und mit meiner Tante telefoniert. Bis morgen, Yusuf!",
+            "q": "استمع: ماذا فعلت لينا اليوم؟",
+            "choices": [
+              "تعلّمت وهاتفت عمّتها",
+              "صوّرت الشاطئ",
+              "اشترت تذكاراً"
+            ],
+            "a": "تعلّمت وهاتفت عمّتها",
+            "why": "nur gelernt und mit meiner Tante telefoniert — telefoniert بلا ge."
+          }
+        ],
+        "interleavedWith": [
+          "schule",
+          "wasser",
+          "warm",
+          "lang",
+          "familie",
+          "urlaub",
+          "foto",
+          "tante",
+          "samstag",
+          "frage",
+          "neu",
+          "schoen",
+          "lernen",
+          "zeigen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Ich",
+              "habe",
+              "fotografiert.",
+              "viele",
+              "Fotos"
+            ],
+            "a": "Ich habe viele Fotos fotografiert.",
+            "why": "habe ثانياً ← viele Fotos ← fotografiert آخراً (بلا ge)."
+          },
+          {
+            "tokens": [
+              "Wir",
+              "gesprochen.",
+              "Natur",
+              "die",
+              "haben",
+              "über"
+            ],
+            "a": "Wir haben über die Natur gesprochen.",
+            "why": "haben ثانياً ← über die Natur ← gesprochen آخراً."
+          },
+          {
+            "tokens": [
+              "klein",
+              "ruhig.",
+              "ist",
+              "See",
+              "und",
+              "Der"
+            ],
+            "a": "Der See ist klein und ruhig.",
+            "why": "der See (بحيرة — مذكر) ← ist ← klein und ruhig."
+          },
+          {
+            "tokens": [
+              "ist",
+              "und",
+              "Meer",
+              "Das",
+              "groß",
+              "warm."
+            ],
+            "a": "Das Meer ist groß und warm.",
+            "why": "das Meer (محايد) ← ist ← groß und warm."
+          },
+          {
+            "tokens": [
+              "Im",
+              "an",
+              "wir",
+              "See.",
+              "einen",
+              "fahren",
+              "Urlaub"
+            ],
+            "a": "Im Urlaub fahren wir an einen See.",
+            "why": "Im Urlaub أولاً ← fahren ثانياً ← wir ← an einen See (أكوزاتيف)."
+          },
+          {
+            "tokens": [
+              "geschickt.",
+              "Tante",
+              "hat",
+              "eine",
+              "Postkarte",
+              "Meine"
+            ],
+            "a": "Meine Tante hat eine Postkarte geschickt.",
+            "why": "hat ثانياً ← eine Postkarte ← geschickt آخراً."
+          },
+          {
+            "tokens": [
+              "gekauft.",
+              "kleines",
+              "habe",
+              "ein",
+              "Ich",
+              "Andenken"
+            ],
+            "a": "Ich habe ein kleines Andenken gekauft.",
+            "why": "habe ثانياً ← ein kleines Andenken ← gekauft آخراً."
+          },
+          {
+            "tokens": [
+              "ist",
+              "Die",
+              "Landschaft",
+              "in",
+              "Tunesien",
+              "schön."
+            ],
+            "a": "Die Landschaft in Tunesien ist schön.",
+            "why": "die Landschaft (مؤنث) ← in Tunesien ← ist ← schön."
+          },
+          {
+            "tokens": [
+              "die",
+              "Am",
+              "ich",
+              "Fotos.",
+              "dir",
+              "Samstag",
+              "zeige"
+            ],
+            "a": "Am Samstag zeige ich dir die Fotos.",
+            "why": "Am Samstag أولاً ← zeige ثانياً ← ich ← dir ← die Fotos."
+          },
+          {
+            "tokens": [
+              "hatten",
+              "Heute",
+              "Thema.",
+              "wir",
+              "neues",
+              "ein"
+            ],
+            "a": "Heute hatten wir ein neues Thema.",
+            "why": "Heute أولاً ← hatten ثانياً ← wir ← ein neues Thema (محايد)."
+          }
+        ],
+        "interleavedWith": [
+          "foto",
+          "urlaub",
+          "tante",
+          "samstag",
+          "heute",
+          "neu",
+          "schoen",
+          "zeigen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "ki-6",
+            "speakText": "Wunderbar! Am Samstag bist du hier — dann fahren wir an einen See.",
+            "a": "Wunderbar! Am Samstag bist du hier — dann fahren wir an einen See.",
+            "why": "Wunderbar بحرف كبير وv تُكتب W · Samstag بـS كبيرة · einen See — ee مضاعفة."
+          },
+          {
+            "audioId": "ki-11",
+            "speakText": "Hast du dort fotografiert?",
+            "a": "Hast du dort fotografiert?",
+            "why": "Hast بـst · dort بـt · fotografiert بـf (لا ph) وبلا ge — النبر على iert."
+          },
+          {
+            "audioId": "ki-12",
+            "speakText": "Ja, ich habe viel fotografiert: den Strand, die Insel und die Landschaft. Alles ist sehr schön.",
+            "a": "Ja, ich habe viel fotografiert: den Strand, die Insel und die Landschaft. Alles ist sehr schön.",
+            "why": "fotografiert بلا ge · Strand بحرف كبير وd آخراً تُنطق t · Insel بـI كبيرة · Landschaft بـsch وft · sehr بـh صامتة."
+          },
+          {
+            "audioId": "ki-17",
+            "speakText": "Berge, Wälder, Flüsse und Seen — Deutschland hat viel Natur! Und Tunesien hat das Meer, die Strände und eine Insel.",
+            "a": "Berge, Wälder, Flüsse und Seen — Deutschland hat viel Natur! Und Tunesien hat das Meer, die Strände und eine Insel.",
+            "why": "Berge · Wälder · Flüsse · Seen — أربعة جموع بأحرف كبيرة · Wälder بـä · Flüsse بـü وss · Strände بـä · Insel مفردة."
+          },
+          {
+            "audioId": "word-thema",
+            "speakText": "das Thema.",
+            "a": "das Thema",
+            "why": "Thema بـTh تُنطق t · محايد."
+          },
+          {
+            "audioId": "word-strand",
+            "speakText": "der Strand.",
+            "a": "der Strand",
+            "why": "Strand بـst تُنطق scht · d آخراً تُنطق t."
+          },
+          {
+            "audioId": "word-fluss",
+            "speakText": "der Fluss.",
+            "a": "der Fluss",
+            "why": "Fluss بـss بعد u قصيرة."
+          },
+          {
+            "audioId": "word-wald",
+            "speakText": "der Wald.",
+            "a": "der Wald",
+            "why": "Wald بـW تُنطق v · d آخراً تُنطق t."
+          },
+          {
+            "audioId": "word-fotografieren",
+            "speakText": "fotografieren.",
+            "a": "fotografieren",
+            "why": "fotografieren بـf (لا ph) وie طويلة — فعل بـ‑ieren."
+          },
+          {
+            "audioId": "word-landschaft",
+            "speakText": "die Landschaft.",
+            "a": "die Landschaft",
+            "why": "Landschaft بـsch وft · مؤنث بـ‑schaft."
+          }
+        ],
+        "interleavedWith": [
+          "samstag",
+          "deutschland",
+          "dort",
+          "schoen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Erzähl von deiner Reise! — Ich war in Tunesien am Meer. Der Strand ist lang, und das Wasser ist warm. — Hast du fotografiert? — Ja, ich habe viel fotografiert: den Strand und eine Insel. — Und was hast du gekauft? — Ein Andenken. Und ich habe eine Postkarte geschickt. — Und in Deutschland? — Hier gibt es Berge, Wälder, Flüsse und Seen. Die Landschaft ist so schön.",
+        "ar": "زميلك وأنت تحكيان رحلتيكما: أين كنت (ich war …) · ماذا صوّرت (fotografiert بلا ge) · ماذا اشتريت وأرسلت (gekauft · geschickt) · ما الطبيعة هناك (Meer · Strand · Insel مقابل Berge · Wälder · Flüsse · Seen) — ثم تعكسان الأدوار"
+      },
+      "situation": {
+        "de": "Am Telefon: Unser Thema heute war die Natur. — Was habt ihr gemacht? — Wir haben über Berge und Flüsse gesprochen, und ich habe sechs Sätze geschrieben. — Über was? — Über das Meer. Der See ist klein, das Meer ist groß! — Richtig. Und am Samstag? — Am Samstag zeige ich dir die Fotos. Ich habe viel fotografiert.",
+        "ar": "على الهاتف: تحكي لصديقك موضوع اليوم في المدرسة (das Thema) وما فعلتم (gesprochen · geschrieben) والفرق بين der See وdas Meer — وتَعِده بالصور (fotografiert)"
+      },
+      "successCriteria": [
+        "جملتان في الماضي بـ‑ieren بلا ge (fotografiert · telefoniert) وجملتان بـge (gekauft · geschickt · gesprochen · geschrieben)",
+        "ثلاث كلمات طبيعة بالجنس الصحيح (der See · das Meer · die Insel …) وجمعان بالأوملاوت (Strände · Wälder · Flüsse)",
+        "جملة بـwar/hatten (Ich war am Meer · Wir hatten ein neues Thema)",
+        "كلمة Thema أو Andenken أو Postkarte في جملة كاملة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«صوّرتُ الجزيرة»؟",
+            "choices": [
+              "Ich habe die Insel fotografiert.",
+              "Ich bin die Insel fotografiert.",
+              "Ich habe die Insel fotografieren."
+            ],
+            "a": "Ich habe die Insel fotografiert.",
+            "why": "fotografieren بـhaben والتصريف الثالث بلا ge: fotografiert."
+          },
+          {
+            "q": "«هاتفتُ جدتي»؟",
+            "choices": [
+              "Ich habe mit meiner Oma telefoniert.",
+              "Ich habe mit meiner Oma telefonieren.",
+              "Ich bin mit meiner Oma telefoniert."
+            ],
+            "a": "Ich habe mit meiner Oma telefoniert.",
+            "why": "telefonieren ← hat telefoniert — بلا ge."
+          },
+          {
+            "q": "«الجبال عالية»؟",
+            "choices": [
+              "Die Berge sind hoch.",
+              "Die Berge ist hoch.",
+              "Die Bergen sind hoch."
+            ],
+            "a": "Die Berge sind hoch.",
+            "why": "der Berg → die Berge والفعل جمع: sind."
+          },
+          {
+            "q": "«الغابات كبيرة»؟",
+            "choices": [
+              "Die Wälder sind groß.",
+              "Die Walder sind groß.",
+              "Die Wälde sind groß."
+            ],
+            "a": "Die Wälder sind groß.",
+            "why": "der Wald → die Wälder: أوملاوت + ‑er."
+          },
+          {
+            "q": "«البحيرة هادئة»؟",
+            "choices": [
+              "Der See ist ruhig.",
+              "Das See ist ruhig.",
+              "Die Seen ist ruhig."
+            ],
+            "a": "Der See ist ruhig.",
+            "why": "der See = البحيرة — مذكر مفرد."
+          },
+          {
+            "q": "«البحر دافئ»؟",
+            "choices": [
+              "Das Meer ist warm.",
+              "Der Meer ist warm.",
+              "Die Meer ist warm."
+            ],
+            "a": "Das Meer ist warm.",
+            "why": "das Meer — محايد."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الأنهار طويلة»؟",
+            "choices": [
+              "Die Flüsse sind lang.",
+              "Die Flusse sind lang.",
+              "Die Flüssen sind lang."
+            ],
+            "a": "Die Flüsse sind lang.",
+            "why": "der Fluss → die Flüsse: أوملاوت u → ü + ‑e."
+          },
+          {
+            "q": "«الشواطئ طويلة»؟",
+            "choices": [
+              "Die Strände sind lang.",
+              "Die Strande sind lang.",
+              "Die Stränder sind lang."
+            ],
+            "a": "Die Strände sind lang.",
+            "why": "der Strand → die Strände: أوملاوت + ‑e."
+          },
+          {
+            "q": "«هل أرسلتَ بطاقة بريدية؟»؟",
+            "choices": [
+              "Hast du eine Postkarte geschickt?",
+              "Bist du eine Postkarte geschickt?",
+              "Hast du eine Postkarte schicken?"
+            ],
+            "a": "Hast du eine Postkarte geschickt?",
+            "why": "schicken بـhaben: hat geschickt."
+          },
+          {
+            "q": "«اشترينا تذكارَين»؟",
+            "choices": [
+              "Wir haben zwei Andenken gekauft.",
+              "Wir haben zwei Andenkens gekauft.",
+              "Wir haben zwei Andenken kaufen."
+            ],
+            "a": "Wir haben zwei Andenken gekauft.",
+            "why": "das Andenken → die Andenken (بلا تغيير) · gekauft آخراً."
+          },
+          {
+            "q": "«عندنا موضوعان»؟",
+            "choices": [
+              "Wir haben zwei Themen.",
+              "Wir haben zwei Themas.",
+              "Wir haben zwei Thema."
+            ],
+            "a": "Wir haben zwei Themen.",
+            "why": "das Thema → die Themen: ‑en بإسقاط ‑a."
+          },
+          {
+            "q": "«الجزر صغيرة»؟",
+            "choices": [
+              "Die Inseln sind klein.",
+              "Die Insels sind klein.",
+              "Die Insel sind klein."
+            ],
+            "a": "Die Inseln sind klein.",
+            "why": "die Insel → die Inseln: ‑n فقط بلا أوملاوت."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«هل كنتَ على البحر؟»؟",
+            "choices": [
+              "Warst du am Meer?",
+              "War du am Meer?",
+              "Hast du am Meer?"
+            ],
+            "a": "Warst du am Meer?",
+            "why": "sein في الماضي البسيط: du warst · am = an dem (داتيف)."
+          },
+          {
+            "q": "«كان عندنا موضوع جديد»؟",
+            "choices": [
+              "Wir hatten ein neues Thema.",
+              "Wir hatte ein neues Thema.",
+              "Wir hatten eine neue Thema."
+            ],
+            "a": "Wir hatten ein neues Thema.",
+            "why": "wir hatten · das Thema محايد ⇒ ein neues."
+          },
+          {
+            "q": "«المنظر الطبيعي جميل»؟",
+            "choices": [
+              "Die Landschaft ist schön.",
+              "Der Landschaft ist schön.",
+              "Die Landschaft sind schön."
+            ],
+            "a": "Die Landschaft ist schön.",
+            "why": "die Landschaft مؤنث مفرد ⇒ ist."
+          },
+          {
+            "q": "«نذهب إلى الغابة»؟",
+            "choices": [
+              "Wir gehen in den Wald.",
+              "Wir gehen in dem Wald.",
+              "Wir gehen in der Wald."
+            ],
+            "a": "Wir gehen in den Wald.",
+            "why": "in + أكوزاتيف للحركة: in den Wald (مذكر)."
+          },
+          {
+            "q": "«هو صوّر» (الماضي المركّب)؟",
+            "choices": [
+              "Er hat fotografiert.",
+              "Er ist fotografiert.",
+              "Er hat fotografieren."
+            ],
+            "a": "Er hat fotografiert.",
+            "why": "fotografieren بـhaben والتصريف الثالث بلا ge."
+          },
+          {
+            "q": "«عائلتي تذهب إلى بحيرة»؟",
+            "choices": [
+              "Meine Familie fährt an einen See.",
+              "Meine Familie fahrt an einen See.",
+              "Meine Familie fährt an ein See."
+            ],
+            "a": "Meine Familie fährt an einen See.",
+            "why": "fahren: er/sie fährt (أوملاوت) · an einen See (مذكر أكوزاتيف)."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Unser Thema heute war die Natur. · Ich war in Tunesien am Meer: Der Strand ist lang, und das Wasser ist warm. · Ich habe viel fotografiert und ein Andenken gekauft. · In Deutschland gibt es Berge, Wälder, Flüsse und Seen — der See ist klein und ruhig, das Meer ist groß. · Meine Tante hat eine Postkarte aus den Bergen geschickt. · Ich habe mit meiner Tante telefoniert.",
+      "ar": "الماضي المركّب (الوحدة 11) يكتمل: أفعال ‑ieren بلا ge (fotografiert · telefoniert · studiert · reserviert) مقابل ge‑ المنتظمة (gekauft · geschickt · gemacht · gelernt) والقوية (gesprochen · geschrieben) — وwar/hatten لـsein وhaben · der See (بحيرة) مقابل das Meer (بحر) وdie See (= das Meer) · الجمع بالأوملاوت: Strände · Wälder · Flüsse (وBerge · Seen · Inseln · Themen بلا أوملاوت) · كلمات اليوم: die Landschaft (die Landschaften) · die Natur · der See (die Seen) · der Berg (die Berge) · das Meer (die Meere) · der Strand (die Strände) · die Insel (die Inseln) · der Fluss (die Flüsse) · der Wald (die Wälder) · das Andenken (die Andenken) · fotografieren (hat fotografiert) · die Postkarte (die Postkarten) · das Thema (die Themen)"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich habe gefotografiert.~~ · ~~Ich habe getelefoniert.~~ · ~~Ich habe gestudiert.~~",
+          "ar": "أفعال ‑ieren لا تأخذ ge أبداً: fotografiert · telefoniert · studiert · reserviert — النبر على ‑iert (كـbesucht/verstanden في الوحدة 10)"
+        },
+        "whyArabicSpeakerFails": "قاعدة ge التي تعلّمها المتعلم في الوحدة 11 (gemacht · gekauft · geschickt) تنهار لأول مرة: الأفعال بـ‑ieren (مستعارة من الفرنسية/اللاتينية) تحمل النبر على ‑ie فلا تقبل البادئة ge — «صوّرتُ» = Ich habe fotografiert (لا ~~gefotografiert~~) · «هاتفتُ» = Ich habe telefoniert. القاعدة الصوتية: إن لم يكن النبر على المقطع الأول فلا ge (‑ieren · be‑ · ver‑ · er‑). والمتعلم العربي يعمّم ge على كل الأفعال لأنها عنده علامة الماضي الوحيدة — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Ich habe fotografiert. · Ich habe telefoniert. · Ich habe studiert.",
+          "ar": "صوّرتُ. · هاتفتُ. · درستُ (في الجامعة)."
+        },
+        "exercise": {
+          "q": "reservieren → er hat ___ (هل تُضاف البادئة؟)",
+          "a": "reserviert"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Strands~~ · ~~die Walds~~ · ~~die Flusse~~ · ~~die Themas~~",
+          "ar": "جمع كلمات الطبيعة بالأوملاوت: der Strand → die Strände · der Wald → die Wälder · der Fluss → die Flüsse (وder Berg → die Berge بلا أوملاوت) — وdas Thema → die Themen"
+        },
+        "whyArabicSpeakerFails": "الجمع بالأوملاوت لا نظير له في العربية (جمع التكسير يغيّر البنية كلها، والأوملاوت يغيّر حركة واحدة ويضيف لاحقة): Strand → Strände (a → ä + e) · Wald → Wälder (a → ä + er) · Fluss → Flüsse (u → ü + e) — فيكتب المتعلم ‑s الإنجليزية (~~Strands~~) أو اللاحقة بلا أوملاوت (~~Flusse~~). وThema الأجنبية تسقط ‑a وتأخذ ‑en: Themen. الحفظ بالزوج: المفرد والجمع معاً كلمةً واحدة — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "die Berge · die Strände · die Wälder · die Flüsse · die Themen",
+          "ar": "الجبال · الشواطئ · الغابات · الأنهار · الموضوعات"
+        },
+        "exercise": {
+          "q": "der Berg → die ___ · der Wald → die ___",
+          "a": "Berge / Wälder"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~das See~~ · ~~die See (بحيرة)~~ · ~~der Meer~~",
+          "ar": "der See = البحيرة · die See = البحر (= das Meer) — الكلمة نفسها بجنسين ومعنيين · das Meer محايد"
+        },
+        "whyArabicSpeakerFails": "«بحر» و«بحيرة» كلمتان مختلفتان بالعربية فلا يتوقع المتعلم أن المقال وحده يغيّر المعنى: der See (بحيرة — der Fluss, der Berg, der Wald مذكرات) مقابل die See (البحر — نادرة في الكلام، شائعة في الشمال) وdas Meer (البحر — الكلمة العادية). والمتعلم يختار das لـSee قياساً على das Meer (~~das See~~) أو der لـMeer قياساً على der See (~~der Meer~~). القاعدة العملية: der See = بحيرة · das Meer = بحر — وdie See تُفهم فقط — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "der See (بحيرة) · das Meer (بحر) · die See (= das Meer)",
+          "ar": "البحيرة · البحر · البحر (كلمة الشمال)"
+        },
+        "exercise": {
+          "q": "___ See ist klein und ruhig. (بحيرة — المقال)",
+          "a": "Der"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "landschaft",
+      "natur",
+      "see",
+      "berg",
+      "meer",
+      "strand",
+      "insel",
+      "fluss",
+      "wald",
+      "andenken",
+      "fotografieren",
+      "postkarte",
+      "thema"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/See",
+      "https://www.duden.de/rechtschreibung/fotografieren",
+      "https://www.duden.de/rechtschreibung/Strand"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/See"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-perfekt",
+    "ars-zeitangaben"
+  ],
+  "audioManifestRefs": [
+    "word-landschaft",
+    "word-natur",
+    "word-see",
+    "word-berg",
+    "word-meer",
+    "word-strand",
+    "word-insel",
+    "word-fluss",
+    "word-wald",
+    "word-andenken",
+    "word-fotografieren",
+    "word-postkarte",
+    "word-thema"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 12 (Reise) — Natur · Perfekt ohne ge (-ieren) · Plural mit Umlaut",
+    "goetheWordListOverlap": []
+  }
+}

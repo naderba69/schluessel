@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-uhrzeit",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Wie spät ist es? — Es ist halb acht.",
+    "ar": "الساعة بالألمانية — halb للساعة التالية · Uhr للوقت وStunde للمدة"
+  },
+  "payload": {
+    "topicAr": "قول الوقت بطريقتين: اليومية (halb · Viertel nach/vor · zehn nach · zwanzig vor) والرسمية (vierzehn Uhr dreißig) — وhalb تعدّ نحو الساعة التالية؛ وUhr للوقت وStunde للمدة؛ وum للموعد وEs ist للوقت الآن",
+    "sceneAr": "بعد الدرس عبر الإنترنت تسأل Ayşe — وهي تسكن في برلين مثل يوسف — عن موعد العشاء في المطعم: «um halb acht». تتحقق: «sieben Uhr dreißig?» — نعم. الساعة الآن halb sieben فبقيت ساعة كاملة؛ والمطعم مفتوح من السادسة حتى الحادية عشرة، وغداً مغلق. والدرس التالي غداً في التاسعة: «مبكر!» تقول Ayşe، و«متأخر!» يقول يوسف.",
+    "examples": [
+      {
+        "de": "Es ist drei Uhr. · Es ist halb drei.",
+        "ar": "الساعة الثالثة · الساعة الثانية والنصف (2:30!)"
+      },
+      {
+        "de": "Es ist Viertel nach drei. · Es ist Viertel vor drei.",
+        "ar": "الثالثة والربع (3:15) · الثالثة إلا ربعاً (2:45) — كالعربية"
+      },
+      {
+        "de": "Es ist zehn nach acht. · Es ist zwanzig vor neun.",
+        "ar": "الثامنة وعشر دقائق (8:10) · التاسعة إلا عشرين (8:40)"
+      },
+      {
+        "de": "halb acht = sieben Uhr dreißig",
+        "ar": "7:30 بالطريقتين: اليومية (halb + الساعة التالية) والرسمية"
+      },
+      {
+        "de": "Wir haben noch eine Stunde. · Um halb acht im Restaurant!",
+        "ar": "بقيت ساعة (مدة: Stunde) · في 7:30 في المطعم (موعد: um)"
+      },
+      {
+        "de": "am Morgen · am Mittag · am Abend · in der Nacht",
+        "ar": "في الصباح · في الظهيرة · في المساء · في الليل (in der لا am)"
+      }
+    ],
+    "inferencePromptAr": "انظر إلى الأمثلة: (1) halb drei — هل هي 2:30 أم 3:30؟ ونحو أي ساعة يعدّ النصف؟ (2) Viertel nach وViertel vor: هل تعدّان كالعربية «والربع» و«إلا ربعاً»؟ (3) في المثال الرابع: كيف يُقال 7:30 بالطريقتين؟ (4) متى جاءت Uhr ومتى Stunde؟ ومتى جاءت um؟ (5) أي وقت من اليوم لا يأخذ am؟",
+    "ruleDe": "Es ist drei Uhr. · halb drei = 2:30 · Viertel nach drei · Viertel vor drei · zehn nach acht — vierzehn Uhr dreißig · eine Stunde · um halb acht",
+    "ruleAr": "للوقت طريقتان: الرسمية (القطارات والإعلانات والتطبيقات) — الساعة من 0 إلى 24 + Uhr + الدقائق: vierzehn Uhr dreißig = 14:30؛ واليومية — الساعة من 1 إلى 12 مع nach (بعد) وvor (قبل): zehn nach acht = 8:10 · zwanzig vor neun = 8:40 · Viertel nach drei = 3:15 · Viertel vor drei = 2:45، وكلها كالعربية («والربع» · «إلا ربعاً»). أما halb فتعدّ نحو الساعة التالية: halb drei = نصفٌ نحو الثالثة = 2:30 · halb acht = 7:30. والساعة الكاملة: drei Uhr، و1:00 = ein Uhr أو eins. وUhr للوقت وStunde للمدة: zwei Uhr = الثانية · zwei Stunden = ساعتان. والوقت الآن بـEs ist بلا حرف جر (Es ist halb sieben)، والموعد بـum (um halb acht). وأوقات اليوم: am Morgen · am Mittag · am Abend · in der Nacht — وheute Abend · morgen früh.",
+    "contrastAr": "العربية في صفّك في Viertel nach («الثالثة والربع») وViertel vor («الثالثة إلا ربعاً») والدقائق. الخطر في ثلاثة مواضع (خريطة التداخل 10‑ي): (1) «السابعة والنصف» تبدأ من الساعة الحالية، فيقول المتعلم ~~halb sieben~~ لـ7:30 — والألمانية تعدّ النصف نحو الساعة التالية: halb acht (2) «ساعة» العربية للوقت والمدة معاً، فيقول ~~zwei Uhr lang~~ — والمدة Stunde: zwei Stunden (3) الكتابة العربية بلا حروف كبيرة، فلا ينتبه إلى أن der Morgen (الصباح) وmorgen (غداً) كلمتان يفرّقهما الحرف الأول.",
+    "limitsAr": [
+      "في بعض مناطق ألمانيا والنمسا يُقال viertel vier لـ3:15 وdreiviertel vier لـ3:45 (نحو الساعة التالية كـhalb) — صحيحة هناك؛ ونحن نقول Viertel nach drei · Viertel vor vier.",
+      "في الكلام اليومي تُحذف Uhr كثيراً: Es ist drei. · um acht — والوقت الرسمي لا يحذفها: vierzehn Uhr dreißig.",
+      "Wie spät ist es? وWie viel Uhr ist es? سؤالان بمعنى واحد — والجواب واحد: Es ist …",
+      "in der Nacht قطعة نحفظها (لا am Nacht) — وسبب الفرق في حروف الجر نتعلمه لاحقاً."
+    ],
+    "beads": [
+      "Es",
+      "ist",
+      "halb",
+      "acht."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u3-d3",
+    "a1-u3-d6",
+    "a1-u15-d2"
+  ]
+}

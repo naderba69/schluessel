@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-laender-sprachen",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "aus Marokko · aus der Türkei · Ich spreche Arabisch",
+    "ar": "البلد واللغة: متى تأتي الأداة ومتى لا تأتي"
+  },
+  "payload": {
+    "topicAr": "أداة البلد واللغة: أغلب البلدان بلا أداة، وقلّة منها بأداتها، واللغة بعد sprechen بلا أداة",
+    "sceneAr": "اليوم الثاني في دورة اللغة: المعلمة تسأل كل طالب من أين هو وأي لغة يتحدث. يوسف من تونس، وزميل من مصر، وزميلة من تركيا، ولينا تحكي عن سويسرا حيث تسكن الآن.",
+    "examples": [
+      {
+        "de": "Ich komme aus Tunesien. Ich spreche Arabisch.",
+        "ar": "أنا من تونس. أتحدث العربية."
+      },
+      {
+        "de": "Er kommt aus Ägypten. Er spricht auch Arabisch.",
+        "ar": "هو من مصر. يتحدث العربية أيضاً."
+      },
+      {
+        "de": "Sie kommt aus der Türkei.",
+        "ar": "هي من تركيا."
+      },
+      {
+        "de": "Lena wohnt jetzt in der Schweiz. Sie spricht Deutsch und Französisch.",
+        "ar": "لينا تسكن الآن في سويسرا. تتحدث الألمانية والفرنسية."
+      },
+      {
+        "de": "In Marokko spricht man Arabisch und Französisch.",
+        "ar": "في المغرب يتحدث الناس العربية والفرنسية."
+      }
+    ],
+    "inferencePromptAr": "انظر إلى الجمل الخمس. (1) بعد aus أو in: مع أي بلدين جاءت der قبل اسم البلد؟ ومع أي بلدان لم تأتِ أداة؟ (2) قبل اسم اللغة (Arabisch · Deutsch · Französisch): هل رأيت der أو die أو das؟ قارن مع العربية: نقول «أتحدث العربية» بـ«ال».",
+    "ruleDe": "aus Tunesien · aus Ägypten — aber: aus der Türkei · in der Schweiz · Ich spreche Arabisch.",
+    "ruleAr": "أغلب البلدان بلا أداة: aus Tunesien · aus Ägypten · in Marokko. وقلّة منها تأتي بأداتها، مثل die Türkei وdie Schweiz — وبعد aus أو in تصير die ← der: aus der Türkei · in der Schweiz. أما اسم اللغة بعد sprechen فبلا أداة أبداً، ويبدأ بحرف كبير، وينتهي غالباً بـ‑isch: Ich spreche Arabisch · Englisch · Französisch.",
+    "contrastAr": "العربية تعرّف اسم اللغة بـ«ال»: «أتحدث العربية» — فينقلها المتعلم العربي إلى الألمانية: «Ich spreche das Arabisch» ✗. والألمانية لا تضع أداة قبل اسم اللغة: Ich spreche Arabisch ✓. وفي البلدان لا تصلح العربية دليلاً: «المغرب» بـ«ال» لكن Marokko بلا أداة، و«تركيا» بلا «ال» لكن die Türkei بأداة — فاحفظ die مع اسم البلد (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "لماذا der لا die بعد aus وin؟ لأن هذين الحرفين يغيّران الأداة (حالة Dativ) — شرحها في درس لاحق؛ الآن احفظ aus der Türkei · in der Schweiz قطعة واحدة.",
+      "sprechen يغيّر حرفه مع du وer/sie: ich spreche · du sprichst · er/sie spricht — النمط كاملاً مع أفعال أخرى في الوحدة 7.",
+      "بلدان أخرى قليلة تأتي بأداة أيضاً، نتعلم كل واحد منها حين نحتاجه — والقاعدة: إن رأيت أداة مع اسم بلد فاحفظها معه."
+    ],
+    "beads": [
+      "Ich",
+      "komme",
+      "aus",
+      "der",
+      "Türkei."
+    ],
+    "properNouns": [
+      "Lena"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u1-d2"
+  ]
+}

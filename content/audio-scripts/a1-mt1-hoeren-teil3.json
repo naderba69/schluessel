@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-mt1-hoeren-teil3",
+  "kind": "message",
+  "level": "A1",
+  "title": {
+    "de": "Hören Teil 3 — Fünf Telefonnachrichten",
+    "ar": "الاستماع — القسم 3: خمس رسائل هاتفية"
+  },
+  "usedIn": [
+    "a1-modelltest-1#hoeren-teil3"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "mt1-h3-m1",
+      "speaker": "lena",
+      "text": "Hallo Yusuf, hier ist Lena. Wir treffen uns nicht um sechs Uhr, sondern um sieben Uhr. Ich warte vor dem Kino auf dich. Bis später!",
+      "direction": "رسالة صديقة — مشتِّت: sechs يُذكر منفياً"
+    },
+    {
+      "id": "mt1-h3-m2",
+      "speaker": "mueller",
+      "text": "Guten Tag, hier ist die Apotheke am Markt. Wir haben Ihr Medikament. Sie können es morgen von neun bis zwölf Uhr holen. Bitte bringen Sie das Rezept mit.",
+      "direction": "صيدلي — رسمي وواضح"
+    },
+    {
+      "id": "mt1-h3-m3",
+      "speaker": "frau-berg",
+      "text": "Hallo Yusuf, hier ist Frau Berg. Ich habe ein Paket für dich. Ich bin bis drei Uhr zu Hause. Danach bin ich im Garten.",
+      "direction": "الجارة — مكانان بزمنين"
+    },
+    {
+      "id": "mt1-h3-m4",
+      "speaker": "thomas",
+      "text": "Hallo Lena, hier ist Thomas. Ich stehe im Stau und komme zwanzig Minuten später. Bitte bestell schon das Essen für mich: keinen Fisch und keine Suppe, nur einen Salat. Danke!",
+      "direction": "توماس — مستعجل في الزحام (مشتِّتان منفيان)"
+    },
+    {
+      "id": "mt1-h3-m5",
+      "speaker": "frau-schmidt",
+      "text": "Guten Tag, hier ist Frau Schmidt vom Hotel Sonne. Sie haben ein Zimmer für Freitag reserviert. Leider ist am Freitag kein Zimmer frei. Am Samstag haben wir ein Doppelzimmer für Sie. Bitte rufen Sie uns zurück. Danke!",
+      "direction": "موظفة الفندق — مهنية"
+    }
+  ]
+}

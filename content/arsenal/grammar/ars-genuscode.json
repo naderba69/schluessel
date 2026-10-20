@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-genuscode",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "die Zeitung · das Mädchen · der Schmetterling",
+    "ar": "شفرة الجنس: نهاية الاسم تكشف der/die/das"
+  },
+  "payload": {
+    "topicAr": "شفرة الجنس: نهاية الاسم تكشف أداته في أسماء كثيرة — ‑ung و‑heit و‑keit و‑schaft و‑in ← die · ‑chen ← das دائماً و‑um ← das غالباً · ‑ling ← der و‑er للشخص ← der. وما لا نهاية دالّة له نحفظ أداته معه",
+    "sceneAr": "في الدورة عبر الإنترنت: المعلمة أرسلت نصاً قصيراً فيه ثلاثة أخطاء مقصودة في الأداة، ولينا ويوسف يبحثان عنها معاً على الشاشة: das Zeitung ثم die Mädchen — والفتاة في النص هي لينا نفسها — ثم die Schmetterling. يصححانها بنهاية كل كلمة، ثم يسأل يوسف عن معنى Freundschaft فتجيبه لينا بمثال.",
+    "examples": [
+      {
+        "de": "Es heißt die Zeitung — wie die Wohnung und die Rechnung.",
+        "ar": "الصواب die Zeitung (الجريدة) — مثل die Wohnung (الشقة) وdie Rechnung (الفاتورة)."
+      },
+      {
+        "de": "die Freiheit · die Gesundheit · die Möglichkeit · die Freundschaft",
+        "ar": "الحرية · الصحة · الإمكانية · الصداقة"
+      },
+      {
+        "de": "der Lehrer → die Lehrerin · der Schüler → die Schülerin",
+        "ar": "المعلم ← المعلمة · التلميذ ← التلميذة"
+      },
+      {
+        "de": "das Mädchen · das Brötchen · das Zentrum",
+        "ar": "الفتاة · الخبزة الصغيرة · المركز"
+      },
+      {
+        "de": "der Schmetterling · der Kellner · der Partner",
+        "ar": "الفراشة · النادل · الشريك"
+      },
+      {
+        "de": "Das Mädchen heißt Lena. — Der Text hat drei Fehler.",
+        "ar": "الفتاة اسمها لينا. — في النص ثلاثة أخطاء."
+      }
+    ],
+    "inferencePromptAr": "انظر إلى الأمثلة: (1) Zeitung وWohnung وRechnung — بماذا تنتهي الثلاث، وما أداتها؟ (2) في المثال الثاني أربع نهايات مختلفة — هل تتغير الأداة؟ (3) Lehrer ← Lehrerin: ماذا أُضيف للمؤنث، وما الأداة الآن؟ وما الذي يقابله في «معلم ← معلمة»؟ (4) Mädchen وBrötchen: النهاية نفسها والأداة das — و«الفتاة» مؤنثة بالعربية؛ فمن يقرر الأداة: المعنى أم النهاية؟ (5) «الفراشة» مؤنثة بالعربية أيضاً — فما أداة Schmetterling، ولماذا؟",
+    "ruleDe": "‑ung · ‑heit · ‑keit · ‑schaft · ‑in → die · ‑chen · ‑um → das · ‑ling · ‑er (der Lehrer) → der",
+    "ruleAr": "اقرأ آخر الكلمة قبل أن تختار الأداة: (1) ‑ung و‑heit و‑keit و‑schaft ← die دائماً: die Zeitung · die Freiheit · die Möglichkeit · die Freundschaft — ولو كان أصل الكلمة مذكراً: der Freund لكن die Freundschaft، فالنهاية الأخيرة تحكم. (2) ‑in للأنثى من الأشخاص ← die: der Lehrer ← die Lehrerin · der Schüler ← die Schülerin. (3) ‑chen ← das دائماً، وهي نهاية التصغير: das Mädchen · das Brötchen — ولو كان المعنى مؤنثاً. (4) ‑um ← das غالباً: das Zentrum. (5) ‑ling ← der: der Schmetterling — و‑er للشخص الذي يعمل شيئاً ← der: der Lehrer · der Kellner · der Partner. وما لا نهاية دالّة له (die Stadt · das Haus · der Ort) نحفظ أداته معه — الشفرة تخفف الحفظ ولا تلغيه.",
+    "contrastAr": "خريطة التداخل 10‑ي («das Mädchen = هي»): العربي يختار الأداة من المعنى أو من جنس الكلمة العربية — «الفتاة» مؤنثة فيقول die Mädchen ✗، و«الفراشة» مؤنثة بالتاء فيقول die Schmetterling ✗، و«المركز» مذكر والعربية بلا محايد أصلاً فيقول der Zentrum ✗. والألمانية تحسم بالنهاية: das Mädchen · der Schmetterling · das Zentrum. والفكرة نفسها مألوفة لنا: التاء المربوطة نهايةٌ تدل على المؤنث في العربية غالباً، و‑in الألمانية تقابلها في الأشخاص (معلم ← معلمة · Lehrer ← Lehrerin). لكن اقرأ الشفرة من الكلمة الألمانية لا من ترجمتها: قد يتفق الجنسان (جريدة/die Zeitung · صداقة/die Freundschaft) وقد يختلفان (فراشة/der Schmetterling · فتاة/das Mädchen). ومن يعرف الفرنسية يعرف أن ‑té مؤنثة (la liberté) كما ‑heit (die Freiheit)؛ والإنجليزية ‑ship تقابل ‑schaft (friendship = Freundschaft) لكن بلا أداة تتغير.",
+    "limitsAr": [
+      "الشفرة للنهاية الحقيقية: ‑chen في Mädchen وBrötchen نهاية تصغير، و‑in في Lehrerin للأنثى — وكلمة تنتهي بهذه الحروف صدفةً وليست منها قد تخالف الشفرة؛ فإذا لقيت كلمة كهذه لاحقاً فاحفظ أداتها معها.",
+      "‑er آمنة للأشخاص (der Lehrer · der Kellner · der Schüler)، وder Fehler مذكر أيضاً — لكن ليس كل اسم ينتهي بـ‑er مذكراً، وستلقى أسماء أشياء بـ‑er أداتها das أو die. و‑um «غالباً» لا «دائماً».",
+      "الجمع كله die مهما كان المفرد: die Zeitungen · die Mädchen · die Lehrer — فـdie Lehrer تعني «المعلمون» لا «المعلمة»، والمعلمة die Lehrerin. وأشكال الجمع نفسها نتعلمها لاحقاً.",
+      "الضمير يتبع الأداة: der Text ← er (Er hat drei Fehler.) · das Mädchen ← es في الكتابة — وفي الكلام اليومي يقول كثيرون sie للفتاة، وكلاهما مسموع."
+    ],
+    "beads": [
+      "Das",
+      "Mädchen",
+      "heißt",
+      "Lena."
+    ],
+    "properNouns": [
+      "Lena"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u2-d3",
+    "a1-u2-d6",
+    "a1-u15-d1"
+  ]
+}

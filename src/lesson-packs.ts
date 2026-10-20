@@ -1,0 +1,115 @@
+// src/lesson-packs.ts — سجل المحتوى الحي (D3: المحتوى بيانات في git) — تلقائي منذ D105
+// كل ملف تحت content/ يُكتشف بـimport.meta.glob ويُتحقق منه بـzod عند الاستيراد — خطأ محتوى = خطأ بناء فوري.
+// كان السجل ~1,700 سطر استيراد يدوي: كلمة تُنسى = كلمة غائبة عن المتعلم. الآن: الملف موجود ⇔ مُسجَّل.
+import {
+  Lesson as LessonSchema,
+  Word as WordSchema,
+  CultureCard,
+  CyclicTest,
+  Modelltest,
+  ReadingText,
+  ImageManifest,
+  GrammarRuleFile,
+  StoryBook,
+  type Lesson,
+  type Word,
+} from "../content/schemas/index.js";
+import imageManifest from "../content/manifests/image-manifest.json";
+import { harvestPhrases, type Phrase } from "./lib/phrase-bank.js";
+import { ruleFromShufra, type GrammarRule } from "./lib/grammar-discovery.js";
+
+type JsonModules = Record<string, unknown>;
+const json = (mods: JsonModules) => Object.keys(mods).sort().map((k) => mods[k]);
+
+const WORD_JSONS = json(import.meta.glob("../content/words/*.json", { eager: true, import: "default" }));
+const LESSON_JSONS = json(import.meta.glob("../content/lessons/*/*.json", { eager: true, import: "default" }));
+
+/** بطاقات الثقافة الأسبوعية (D93) */
+export const ALL_LANDESKUNDE = json(import.meta.glob("../content/landeskunde/*.json", { eager: true, import: "default" }))
+  .map((j) => CultureCard.parse(j));
+
+/** الاختبارات الدورية التراكمية (D94) */
+export const ALL_PRUEFUNGEN = json(import.meta.glob("../content/pruefungen/*.json", { eager: true, import: "default" }))
+  .map((j) => CyclicTest.parse(j));
+
+/** الامتحانات التجريبية الكاملة (D95) */
+export const ALL_MODELLTESTS = json(import.meta.glob("../content/modelltest/*.json", { eager: true, import: "default" }))
+  .map((j) => Modelltest.parse(j));
+
+/** مانيفست الصور — الترميز المزدوج (D96) */
+export const ALL_IMAGES = ImageManifest.parse(imageManifest).assets;
+
+/** نصوص القراءة (D97) */
+export const ALL_LESETEXTS = json(import.meta.glob("../content/lese/*.json", { eager: true, import: "default" }))
+  .map((j) => ReadingText.parse(j));
+
+/** قواعد اليوم (D115): content/arsenal/grammar/*.json بصيغة الاكتشاف الموجَّه — يعرضها المُشغِّل بعد الكلمات */
+export const ALL_GRAMMAR_RULES: GrammarRule[] = json(import.meta.glob("../content/arsenal/grammar/*.json", { eager: true, import: "default" }))
+  .map((j) => ruleFromShufra(GrammarRuleFile.parse(j)));
+
+/** دفاتر القصة المتصلة (D193): مولَّدة من أول سطر في حوار كل درس — تُعرض في الخلاصة */
+export const ALL_STORY: StoryBook[] = json(import.meta.glob("../content/story/*.json", { eager: true, import: "default" }))
+  .map((j) => StoryBook.parse(j));
+
+/** كل الكلمات المُتحقَّق منها — بلا استثناءات (مرتبة بالمعرّف) */
+export const ALL_WORDS: Word[] = WORD_JSONS.map((j) => WordSchema.parse(j));
+
+/** ترتيب المستويات (D101): A1 كله قبل A2 — قفل المسار لا يقفز بين المستويات أبداً */
+export const LEVEL_ORDER: Record<Lesson["level"], number> = { A1: 0, A2: 1, B1: 2, B2: 3 };
+
+/** كل الدروس مرتّبة (مستوى، وحدة، يوم) — بدون المستوى كان a2-u1-d1 سيقع بين a1-u1-d1 وa1-u1-d2 */
+export const ALL_LESSONS: Lesson[] = LESSON_JSONS.map((j) => LessonSchema.parse(j)).sort(
+  (a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level] || a.unit - b.unit || a.day - b.day,
+);
+
+/** كلمات درس بترتيب عرضه — كلمة مفقودة = خطأ فوري (D3) */
+export function wordsForLesson(lesson: Lesson): Word[] {
+  const byId = new Map(ALL_WORDS.map((w) => [w.id, w]));
+  return lesson.praesentation.wordIds.map((id) => {
+    const w = byId.get(id);
+    if (!w) throw new Error(`كلمة مفقودة من المحتوى: ${id}`);
+    return w;
+  });
+}
+
+/** موضع كل درس في المسار، وأول درس يعلّم كل كلمة — أساس «ما دُرس حتى الآن» (D118) */
+const LESSON_INDEX: ReadonlyMap<string, number> = new Map(ALL_LESSONS.map((l, i) => [l.id, i]));
+const FIRST_TAUGHT: ReadonlyMap<string, number> = (() => {
+  const m = new Map<string, number>();
+  ALL_LESSONS.forEach((l, i) => {
+    for (const id of l.praesentation.wordIds) if (!m.has(id)) m.set(id, i);
+  });
+  return m;
+})();
+
+/** كلمات التشغيل: الجديد + بطاقات الدفء (استرجاع من دروس سابقة) + أعضاء عائلتها المدروسون حتى الدرس (D118) */
+export function runtimeWordsForLesson(lesson: Lesson): Word[] {
+  const byId = new Map(ALL_WORDS.map((w) => [w.id, w]));
+  const ids = [...new Set([...lesson.praesentation.wordIds, ...lesson.warmup.cardIds])];
+  const base = ids.map((id) => {
+    const w = byId.get(id);
+    if (!w) throw new Error(`كلمة مفقودة من المحتوى: ${id}`);
+    return w;
+  });
+  // D118: أعضاء عائلة كلمات الدرس الذين دُرسوا حتى هذا الدرس (ضمناً) — لتُعرض العائلة بصيغتها الألمانية؛
+  // ما لم يُدرَّس بعد لا يُمرَّر فلا يظهر (قانون الجبهة 13). درس خارج المسار (اختبار) ⇒ لا إضافات.
+  const at = LESSON_INDEX.get(lesson.id);
+  const extra = new Set<string>();
+  if (at !== undefined)
+    for (const w of base)
+      for (const f of w.wordFamily) {
+        const first = FIRST_TAUGHT.get(f);
+        if (first !== undefined && first <= at && !ids.includes(f)) extra.add(f);
+      }
+  return [...base, ...[...extra].map((id) => byId.get(id)!)];
+}
+
+/** توافق مع الاستخدام القديم */
+export const firstLesson: Lesson = ALL_LESSONS.find((l) => l.id === "a1-u1-d1")!;
+export const firstLessonWords: Word[] = wordsForLesson(firstLesson);
+
+/** ترتيب المسار (معرّفات الدروس) — أساس قانون الجبهة */
+export const LESSON_ORDER: string[] = ALL_LESSONS.map((l) => l.id);
+
+/** بنك Redemittel المحصود من المحتوى الحي (D107) — كل عبارة بوسم «ظهرت في درس…» */
+export const PHRASE_BANK: Phrase[] = harvestPhrases(ALL_LESSONS, ALL_WORDS);

@@ -1,0 +1,1000 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u10-d4",
+  "level": "A1",
+  "unit": 10,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Vorher habe ich eingekauft, nachher habe ich telefoniert. · Neulich habe ich im Verein angefangen. · Ich habe den Termin vereinbart und aufgeschrieben. · Plötzlich hat es geregnet! · Deine Antwort ist richtig. · Das Datum ist falsch.",
+    "ar": "تحكي الأيام الماضية بظروف الزمن داخل الماضي المركّب: neulich · damals · vorher · nachher · plötzlich · endlich · am Anfang — في المقدمة فينقلب الفاعل أو بين haben والتصريف الثالث (لا بعده) · والتصريف الثالث للمنفصل كلمة واحدة بـge في الوسط (angerufen · aufgeschrieben · eingekauft · aufgeräumt · angefangen) · وبلا ge‑ لـ‑ieren وbe‑/ver‑/er‑ (telefoniert · vereinbart · besucht · verstanden) — ومعها die Notiz · die Erinnerung · der Anfang · der Verein · richtig/falsch بعد ist."
+  },
+  "canDoDaily": [
+    "يحكي يومه بثلاث جمل Perfekt بظروف مختلفة في المقدمة أو داخل القوس: Vorher habe ich eingekauft. · Ich habe nachher telefoniert. · Neulich habe ich im Verein angefangen.",
+    "يكوّن التصريف الثالث على ثلاثة أنواع بلا خلط: المنفصل (angerufen · aufgeschrieben) · بلا ge‑ (telefoniert · vereinbart · besucht) · البسيط (gekauft · gespielt) — ويجيب Richtig oder falsch? بـDeine Antwort ist richtig. / Das Datum ist falsch."
+  ],
+  "warmup": {
+    "cardIds": [
+      "anrufen",
+      "telefonieren",
+      "termin"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«كتبتُ الموعد» (aufschreiben) — أين تذهب ge؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Ich habe den Termin aufgeschrieben.",
+          "Ich habe den Termin geschrieben auf.",
+          "Ich habe den Termin aufschreiben."
+        ],
+        "answer": "Ich habe den Termin aufgeschrieben.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "neulich",
+      "damals",
+      "vorher",
+      "nachher",
+      "endlich",
+      "ploetzlich",
+      "vereinbaren",
+      "aufschreiben",
+      "erinnerung",
+      "notiz",
+      "richtig",
+      "falsch",
+      "anfang",
+      "verein"
+    ],
+    "grammarArsenalIds": [
+      "ars-perfekt-haben",
+      "ars-zeitangaben"
+    ],
+    "storySentenceIds": [
+      "story-a1-u10-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v-f",
+      "umlaut-o",
+      "z",
+      "ch-ich-laut",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Vorher ___ ich eingekauft. (haben — ich)",
+            "a": "habe",
+            "why": "الظرف أولاً ← haben ثانياً (habe) ← الفاعل ← التصريف الثالث آخراً."
+          },
+          {
+            "q": "Nachher ___ wir Kaffee getrunken. (haben — wir)",
+            "a": "haben",
+            "why": "Nachher في المقدمة فينقلب الفاعل: haben wir — getrunken في الآخر."
+          },
+          {
+            "q": "Plötzlich ___ es geregnet. (haben — es)",
+            "a": "hat",
+            "why": "es الشكلي (u10-d1) بعد hat — Plötzlich أولاً."
+          },
+          {
+            "q": "Yusuf ___ seine Oma besucht. (haben — er)",
+            "a": "hat",
+            "why": "er hat — وbesucht بلا ge‑ (be‑ بادئة غير منفصلة)."
+          },
+          {
+            "q": "___ habe ich meine Oma angerufen. (مؤخراً)",
+            "a": "Neulich",
+            "why": "neulich = مؤخراً (ماضٍ قريب) — في المقدمة فيأتي habe ich."
+          },
+          {
+            "q": "___ habe ich in Tunesien gewohnt. Jetzt wohne ich in Berlin. (في ذلك الحين)",
+            "a": "Damals",
+            "why": "damals = في ذلك الحين (ماضٍ بعيد) — يقابله jetzt."
+          },
+          {
+            "q": "Ich habe eingekauft. ___ habe ich mein Zimmer aufgeräumt. (بعد ذلك)",
+            "a": "Nachher",
+            "why": "nachher = بعد ذلك — الترتيب: اشتريتُ ثم رتّبتُ."
+          },
+          {
+            "q": "Ich habe aufgeräumt. ___ habe ich eingekauft. (قبل ذلك)",
+            "a": "Vorher",
+            "why": "vorher = قبل ذلك — الشراء سبق الترتيب."
+          },
+          {
+            "q": "___ hat es geregnet — und wir haben weiter gespielt. (فجأة)",
+            "a": "Plötzlich",
+            "why": "plötzlich = فجأة — ö مع tz."
+          },
+          {
+            "q": "___ habe ich Zeit! (أخيراً)",
+            "a": "Endlich",
+            "why": "endlich = أخيراً — بعد انتظار."
+          },
+          {
+            "q": "Am ___ habe ich wenig verstanden. (في البداية)",
+            "a": "Anfang",
+            "why": "am Anfang = في البداية — der Anfang مذكر (am = an dem)."
+          },
+          {
+            "q": "Mein Freund spielt im ___ Fußball. (النادي)",
+            "a": "Verein",
+            "why": "im Verein = في النادي — der Verein مذكر (im = in dem) · v تُنطق f."
+          },
+          {
+            "q": "Ich habe eine ___ geschrieben: Samstag, neunzehn Uhr. (ملاحظة)",
+            "a": "Notiz",
+            "why": "die Notiz = الملاحظة المكتوبة — eine Notiz schreiben."
+          },
+          {
+            "q": "Ich habe im Handy eine ___ gemacht. (تذكير)",
+            "a": "Erinnerung",
+            "why": "die Erinnerung = التذكير/الذكرى — eine Erinnerung machen في الهاتف."
+          },
+          {
+            "q": "Dein Geburtstag ist am Samstag — das ist ___. (صحيح)",
+            "a": "richtig",
+            "why": "richtig بعد ist بلا نهاية — صفة خبرية."
+          },
+          {
+            "q": "Der Termin ist um achtzehn Uhr? — Nein, das ist ___. (خاطئ)",
+            "a": "falsch",
+            "why": "falsch بعد ist بلا نهاية — ضد richtig."
+          },
+          {
+            "q": "Ich habe im Restaurant ___. (anrufen)",
+            "a": "angerufen",
+            "why": "المنفصل: an + ge + rufen = angerufen — ge في الوسط كلمة واحدة."
+          },
+          {
+            "q": "Ich habe den Termin ___. (aufschreiben)",
+            "a": "aufgeschrieben",
+            "why": "auf + ge + schrieben = aufgeschrieben — الجذع كـgeschrieben."
+          },
+          {
+            "q": "Vorher habe ich Obst und Brot ___. (einkaufen)",
+            "a": "eingekauft",
+            "why": "ein + ge + kauft = eingekauft — الجذع كـgekauft."
+          },
+          {
+            "q": "Heute habe ich mein Zimmer ___. (aufräumen)",
+            "a": "aufgeräumt",
+            "why": "auf + ge + räumt = aufgeräumt — منتظم بـ‑t."
+          },
+          {
+            "q": "Ich habe im Verein ___. (anfangen)",
+            "a": "angefangen",
+            "why": "an + ge + fangen = angefangen — قوي بـ‑en."
+          },
+          {
+            "q": "Ich habe am Abend ___. (fernsehen)",
+            "a": "ferngesehen",
+            "why": "fern + ge + sehen = ferngesehen — الجذع كـgesehen."
+          },
+          {
+            "q": "Wir haben den Termin ___. (vereinbaren)",
+            "a": "vereinbart",
+            "why": "ver‑ بادئة غير منفصلة ⇒ بلا ge‑: vereinbart (‑t)."
+          },
+          {
+            "q": "Gestern habe ich mit meiner Oma ___. (telefonieren)",
+            "a": "telefoniert",
+            "why": "‑ieren ⇒ بلا ge‑: telefoniert."
+          },
+          {
+            "q": "Heute habe ich meinen Freund ___. (besuchen)",
+            "a": "besucht",
+            "why": "be‑ ⇒ بلا ge‑: besucht."
+          },
+          {
+            "q": "Am Anfang habe ich wenig ___. (verstehen)",
+            "a": "verstanden",
+            "why": "ver‑ ⇒ بلا ge‑ والجذع يتغيّر كالقوي: verstanden."
+          },
+          {
+            "q": "Lena hat einen Tisch ___. (reservieren)",
+            "a": "reserviert",
+            "why": "‑ieren ⇒ بلا ge‑: reserviert."
+          },
+          {
+            "q": "Ich habe ___ im Verein angefangen. (neulich — داخل القوس)",
+            "a": "neulich",
+            "why": "الظرف داخل القوس: بين habe وangefangen — لا بعد التصريف."
+          },
+          {
+            "q": "Es hat ___ geregnet. (plötzlich — داخل القوس)",
+            "a": "plötzlich",
+            "why": "الموضع الثاني للظرف: بين hat وgeregnet."
+          }
+        ],
+        "interleavedWith": [
+          "kaffee",
+          "oma",
+          "tunesien",
+          "freund",
+          "fussball",
+          "handy",
+          "geburtstag",
+          "termin",
+          "restaurant",
+          "obst",
+          "brot",
+          "zimmer",
+          "abend",
+          "tisch",
+          "anrufen",
+          "einkaufen",
+          "anfangen",
+          "fernsehen",
+          "telefonieren",
+          "besuchen",
+          "verstehen",
+          "reservieren",
+          "aufraeumen",
+          "wohnen",
+          "trinken",
+          "regnen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "ew-2",
+            "speakText": "Hallo Yusuf! Heute habe ich mit meiner Mutter ein Kleid gekauft — für meinen Geburtstag. Vorher haben wir in der Stadt Kaffee getrunken.",
+            "q": "استمع: ماذا فعلت لينا اليوم؟",
+            "choices": [
+              "اشترت فستاناً مع أمها — وقبل ذلك شربتا قهوة في المدينة",
+              "رتّبت البيت",
+              "لعبت كرة القدم"
+            ],
+            "a": "اشترت فستاناً مع أمها — وقبل ذلك شربتا قهوة في المدينة",
+            "why": "ein Kleid gekauft · Vorher haben wir in der Stadt Kaffee getrunken — vorher = قبل ذلك."
+          },
+          {
+            "audioId": "ew-4",
+            "speakText": "Nachher habe ich aufgeräumt und im Restaurant angerufen. Ich habe den Termin vereinbart: Samstag, der achtzehnte April, neunzehn Uhr.",
+            "q": "استمع: ماذا فعلت لينا بعد ذلك؟",
+            "choices": [
+              "رتّبت واتصلت بالمطعم واتفقت على الموعد",
+              "نامت",
+              "كتبت رسالة"
+            ],
+            "a": "رتّبت واتصلت بالمطعم واتفقت على الموعد",
+            "why": "Nachher habe ich aufgeräumt und … angerufen · den Termin vereinbart — ثلاثة تصريفات: منفصلان وواحد بلا ge‑."
+          },
+          {
+            "audioId": "ew-5",
+            "speakText": "Hast du den Termin aufgeschrieben?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل كتبتِ الموعد؟",
+              "هل دفعتِ؟",
+              "هل أكلتِ؟"
+            ],
+            "a": "هل كتبتِ الموعد؟",
+            "why": "Hast du den Termin aufgeschrieben? — سؤال بالمنفصل auf‑ge‑schrieben."
+          },
+          {
+            "audioId": "ew-8",
+            "speakText": "Falsch! Am Samstag. Und du? Was hast du heute gemacht?",
+            "q": "استمع: متى عيد ميلاد لينا؟",
+            "choices": [
+              "يوم السبت",
+              "يوم الجمعة",
+              "يوم الأحد"
+            ],
+            "a": "يوم السبت",
+            "why": "Falsch! Am Samstag. — جواب لعبة Richtig oder falsch."
+          },
+          {
+            "audioId": "ew-9",
+            "speakText": "Heute habe ich meine Oma besucht. Vorher habe ich eingekauft — Obst und Brot für sie.",
+            "q": "استمع: ماذا فعل يوسف اليوم؟",
+            "choices": [
+              "زار جدّته — وقبل ذلك اشترى فاكهة وخبزاً",
+              "زار صديقه",
+              "لعب في النادي"
+            ],
+            "a": "زار جدّته — وقبل ذلك اشترى فاكهة وخبزاً",
+            "why": "meine Oma besucht · Vorher habe ich eingekauft — Obst und Brot (قبل الزيارة)."
+          },
+          {
+            "audioId": "ew-10",
+            "speakText": "Und nachher?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "وبعد ذلك؟",
+              "وقبل ذلك؟",
+              "ولماذا؟"
+            ],
+            "a": "وبعد ذلك؟",
+            "why": "Und nachher? — nachher = بعد ذلك."
+          },
+          {
+            "audioId": "ew-11",
+            "speakText": "Nachher habe ich eine Stunde telefoniert — mit meinem Freund in Berlin.",
+            "q": "استمع: ماذا فعل يوسف بعد ذلك؟",
+            "choices": [
+              "هاتف صديقه في برلين ساعة",
+              "شاهد التلفاز",
+              "رتّب الغرفة"
+            ],
+            "a": "هاتف صديقه في برلين ساعة",
+            "why": "Nachher habe ich eine Stunde telefoniert — mit meinem Freund in Berlin — telefoniert بلا ge‑."
+          },
+          {
+            "audioId": "ew-13",
+            "speakText": "Am Anfang habe ich wenig verstanden. Jetzt verstehe ich viel.",
+            "q": "استمع: كيف كانت الدورة في البداية؟",
+            "choices": [
+              "فهم قليلاً — والآن يفهم كثيراً",
+              "فهم كل شيء",
+              "لا يفهم شيئاً حتى الآن"
+            ],
+            "a": "فهم قليلاً — والآن يفهم كثيراً",
+            "why": "Am Anfang habe ich wenig verstanden. Jetzt verstehe ich viel. — verstanden بلا ge‑."
+          },
+          {
+            "audioId": "ew-14",
+            "speakText": "Super! Neulich habe ich im Verein angefangen — Fußball. Am Anfang habe ich schlecht gespielt.",
+            "q": "استمع: ماذا بدأت لينا مؤخراً؟",
+            "choices": [
+              "كرة القدم في النادي",
+              "دورة ألمانية",
+              "عملاً جديداً"
+            ],
+            "a": "كرة القدم في النادي",
+            "why": "Neulich habe ich im Verein angefangen — Fußball — بدأت مؤخراً (an‑ge‑fangen)."
+          },
+          {
+            "audioId": "ew-15",
+            "speakText": "Im Verein? Super! Damals in Tunis habe ich auch im Verein gespielt.",
+            "q": "استمع: أين لعب يوسف في النادي في ذلك الحين؟",
+            "choices": [
+              "في تونس",
+              "في برلين",
+              "في سويسرا"
+            ],
+            "a": "في تونس",
+            "why": "Damals in Tunis habe ich auch im Verein gespielt — damals = في ذلك الحين."
+          },
+          {
+            "audioId": "ew-16",
+            "speakText": "Gestern haben wir im Verein gespielt — plötzlich hat es geregnet! Aber wir haben weiter gespielt.",
+            "q": "استمع: ماذا حدث أمس في النادي؟",
+            "choices": [
+              "أمطرت فجأة — وواصلوا اللعب",
+              "انتهت المباراة",
+              "فازوا"
+            ],
+            "a": "أمطرت فجأة — وواصلوا اللعب",
+            "why": "plötzlich hat es geregnet! Aber wir haben weiter gespielt. — فجأة ثم المواصلة."
+          },
+          {
+            "audioId": "ew-17",
+            "speakText": "Hier hat es nicht geregnet — hier ist es schön. Und noch eine Frage: Der Termin im Restaurant ist um achtzehn Uhr, richtig?",
+            "q": "استمع: ما سؤال يوسف؟",
+            "choices": [
+              "هل الموعد في المطعم الساعة الثامنة عشرة؟",
+              "هل أمطرت عند لينا؟",
+              "هل المطعم مفتوح؟"
+            ],
+            "a": "هل الموعد في المطعم الساعة الثامنة عشرة؟",
+            "why": "Der Termin im Restaurant ist um achtzehn Uhr, richtig? — richtig? سؤالاً."
+          }
+        ],
+        "interleavedWith": [
+          "mutter",
+          "kleid",
+          "geburtstag",
+          "stadt",
+          "kaffee",
+          "restaurant",
+          "termin",
+          "samstag",
+          "oma",
+          "obst",
+          "brot",
+          "stunde",
+          "freund",
+          "fussball",
+          "uhr",
+          "aufraeumen",
+          "trinken",
+          "regnen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "eingekauft.",
+              "ich",
+              "habe",
+              "Vorher"
+            ],
+            "a": "Vorher habe ich eingekauft.",
+            "why": "Vorher أولاً ← habe ← ich ← eingekauft يغلق القوس."
+          },
+          {
+            "tokens": [
+              "telefoniert.",
+              "Stunde",
+              "eine",
+              "ich",
+              "habe",
+              "Nachher"
+            ],
+            "a": "Nachher habe ich eine Stunde telefoniert.",
+            "why": "Nachher ← habe ich ← eine Stunde ← telefoniert (بلا ge‑) آخراً."
+          },
+          {
+            "tokens": [
+              "angefangen.",
+              "Verein",
+              "im",
+              "ich",
+              "habe",
+              "Neulich"
+            ],
+            "a": "Neulich habe ich im Verein angefangen.",
+            "why": "Neulich ← habe ich ← im Verein ← angefangen (ge في الوسط) آخراً."
+          },
+          {
+            "tokens": [
+              "gewohnt.",
+              "Tunesien",
+              "in",
+              "ich",
+              "habe",
+              "Damals"
+            ],
+            "a": "Damals habe ich in Tunesien gewohnt.",
+            "why": "Damals أولاً ← habe ich ← in Tunesien ← gewohnt."
+          },
+          {
+            "tokens": [
+              "geregnet!",
+              "es",
+              "hat",
+              "Plötzlich"
+            ],
+            "a": "Plötzlich hat es geregnet!",
+            "why": "Plötzlich ← hat ← es (لا يسقط) ← geregnet."
+          },
+          {
+            "tokens": [
+              "aufgeschrieben.",
+              "Termin",
+              "den",
+              "habe",
+              "Ich"
+            ],
+            "a": "Ich habe den Termin aufgeschrieben.",
+            "why": "Ich habe ← den Termin ← aufgeschrieben كلمة واحدة في الآخر."
+          },
+          {
+            "tokens": [
+              "vereinbart.",
+              "Termin",
+              "einen",
+              "hat",
+              "Lena"
+            ],
+            "a": "Lena hat einen Termin vereinbart.",
+            "why": "Lena hat ← einen Termin ← vereinbart (ver‑ بلا ge‑)."
+          },
+          {
+            "tokens": [
+              "angerufen.",
+              "Restaurant",
+              "im",
+              "ich",
+              "habe",
+              "Nachher"
+            ],
+            "a": "Nachher habe ich im Restaurant angerufen.",
+            "why": "Nachher أولاً ← habe ich ← im Restaurant ← angerufen كلمة واحدة."
+          },
+          {
+            "tokens": [
+              "verstanden.",
+              "wenig",
+              "ich",
+              "habe",
+              "Anfang",
+              "Am"
+            ],
+            "a": "Am Anfang habe ich wenig verstanden.",
+            "why": "Am Anfang ظرف أولاً ← habe ich ← wenig ← verstanden."
+          },
+          {
+            "tokens": [
+              "gemacht.",
+              "Erinnerung",
+              "eine",
+              "Handy",
+              "im",
+              "habe",
+              "Ich"
+            ],
+            "a": "Ich habe im Handy eine Erinnerung gemacht.",
+            "why": "Ich habe ← im Handy ← eine Erinnerung ← gemacht يغلق القوس."
+          }
+        ],
+        "interleavedWith": [
+          "stunde",
+          "restaurant",
+          "handy",
+          "tunesien",
+          "termin",
+          "wohnen",
+          "regnen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "ew-1",
+            "speakText": "Hallo Lena! Endlich Wochenende! Was hast du heute gemacht?",
+            "a": "Hallo Lena! Endlich Wochenende! Was hast du heute gemacht?",
+            "why": "Lena اسم علم · Endlich بحرف كبير في أول الجملة · Wochenende بحرف كبير · gemacht في الآخر."
+          },
+          {
+            "audioId": "ew-3",
+            "speakText": "Schön! Und nachher?",
+            "a": "Schön! Und nachher?",
+            "why": "Schön! بـö · Und nachher? — nachher بحرف صغير وh في الوسط."
+          },
+          {
+            "audioId": "ew-6",
+            "speakText": "Ja, ich habe eine Notiz geschrieben — und im Handy eine Erinnerung gemacht.",
+            "a": "Ja, ich habe eine Notiz geschrieben — und im Handy eine Erinnerung gemacht.",
+            "why": "Ja, · Notiz بحرف كبير وz في الآخر · Handy بحرف كبير · Erinnerung بحرف كبير وnn."
+          },
+          {
+            "audioId": "ew-7",
+            "speakText": "Richtig oder falsch: Dein Geburtstag ist am Freitag?",
+            "a": "Richtig oder falsch: Dein Geburtstag ist am Freitag?",
+            "why": "Richtig بحرف كبير في الأول · falsch بحرف صغير · Geburtstag · Freitag · علامة استفهام."
+          },
+          {
+            "audioId": "ew-12",
+            "speakText": "Eine Stunde! Und der Kurs? Verstehst du jetzt alles?",
+            "a": "Eine Stunde! Und der Kurs? Verstehst du jetzt alles?",
+            "why": "Eine Stunde! · Kurs بحرف كبير · Verstehst بـst."
+          },
+          {
+            "audioId": "ew-18",
+            "speakText": "Falsch! Um neunzehn Uhr. Ich habe es richtig aufgeschrieben — hier, die Notiz!",
+            "a": "Falsch! Um neunzehn Uhr. Ich habe es richtig aufgeschrieben — hier, die Notiz!",
+            "why": "Falsch! · Um neunzehn Uhr. · richtig بحرف صغير · aufgeschrieben كلمة واحدة · Notiz."
+          },
+          {
+            "audioId": "ew-19",
+            "speakText": "Gut. Ich habe es auch aufgeschrieben: Samstag, der achtzehnte April, neunzehn Uhr. Jetzt ist alles richtig.",
+            "a": "Gut. Ich habe es auch aufgeschrieben: Samstag, der achtzehnte April, neunzehn Uhr. Jetzt ist alles richtig.",
+            "why": "Gut. · aufgeschrieben كلمة واحدة · Samstag · achtzehnte بحرف صغير · April · neunzehn Uhr · richtig."
+          },
+          {
+            "audioId": "ew-20",
+            "speakText": "Endlich! Bis morgen, Yusuf!",
+            "a": "Endlich! Bis morgen, Yusuf!",
+            "why": "Endlich! · Bis morgen · Yusuf اسم علم."
+          },
+          {
+            "audioId": "word-anfang",
+            "speakText": "der Anfang.",
+            "a": "der Anfang.",
+            "why": "der Anfang — A كبيرة · ng في الآخر [ŋ] · الجمع die Anfänge بـä."
+          },
+          {
+            "audioId": "word-verein",
+            "speakText": "der Verein.",
+            "a": "der Verein.",
+            "why": "der Verein — V تُنطق f · ei = [aɪ] · النبر على ‑ein."
+          },
+          {
+            "audioId": "word-neulich",
+            "speakText": "neulich.",
+            "a": "neulich.",
+            "why": "neulich — eu = [ɔɪ] · ‑lich بـch خفيفة."
+          },
+          {
+            "audioId": "word-damals",
+            "speakText": "damals.",
+            "a": "damals.",
+            "why": "damals — a طويلة في الأول · s في الآخر."
+          },
+          {
+            "audioId": "word-notiz",
+            "speakText": "die Notiz.",
+            "a": "die Notiz.",
+            "why": "die Notiz — N كبيرة · النبر على ‑tiz · z = [ts]."
+          },
+          {
+            "audioId": "word-erinnerung",
+            "speakText": "die Erinnerung.",
+            "a": "die Erinnerung.",
+            "why": "die Erinnerung — Er‑ ثم ‑inn‑ بـnn مضاعفة · ‑ung في الآخر."
+          }
+        ],
+        "interleavedWith": [
+          "wochenende",
+          "handy",
+          "geburtstag",
+          "freitag",
+          "kurs",
+          "uhr",
+          "april",
+          "samstag"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Was hast du heute gemacht? — Vorher habe ich eingekauft, nachher habe ich aufgeräumt. Ich habe im Restaurant angerufen und den Termin vereinbart. — Hast du den Termin aufgeschrieben? — Ja, ich habe eine Notiz geschrieben. — Richtig oder falsch: Der Termin ist am Freitag? — Falsch! Am Samstag.",
+        "ar": "تحكي لزميلك يومك بثلاث جمل Perfekt على الأقل بظرفين مختلفين (vorher · nachher · neulich · plötzlich · endlich · am Anfang) وفيها منفصل واحد وفعل بلا ge‑ — ثم تلعبان Richtig oder falsch؟ عن موعد — ثم تتبادلان"
+      },
+      "situation": {
+        "de": "Im Kurs, auf dem Handy: Was hast du heute gemacht? — Vorher habe ich eingekauft. Nachher habe ich meine Oma besucht und eine Stunde telefoniert. Und du? — Ich habe aufgeräumt und im Restaurant angerufen. Ich habe den Termin vereinbart und aufgeschrieben. — Richtig oder falsch: Der Termin ist um achtzehn Uhr? — Falsch! Um neunzehn Uhr. — Und wie ist der Kurs? — Am Anfang habe ich wenig verstanden. Jetzt verstehe ich viel.",
+        "ar": "في الدورة على الهاتف: زميلك يسألك عن يومك — تحكي بظرفي زمن وتصريفات من الأنواع الثلاثة، وتختبره بلعبة صحيح/خاطئ عن موعد"
+      },
+      "successCriteria": [
+        "ثلاث جمل Perfekt على الأقل بظرفين مختلفين — الظرف في المقدمة مع القلب أو داخل القوس، لا بعد التصريف الثالث",
+        "منفصل واحد على الأقل كلمة واحدة بـge في الوسط: angerufen · aufgeschrieben · eingekauft · aufgeräumt · angefangen",
+        "فعل واحد على الأقل بلا ge‑: telefoniert · reserviert · besucht · bezahlt · vereinbart · verstanden",
+        "سؤال Richtig oder falsch? وجوابه: Deine Antwort ist richtig. / Das Datum ist falsch. — بلا نهاية على الصفة"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«اتصلتُ مؤخراً» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe neulich angerufen.",
+              "Ich habe angerufen neulich.",
+              "Ich habe neulich anrufen."
+            ],
+            "a": "Ich habe neulich angerufen.",
+            "why": "الظرف داخل القوس قبل التصريف الثالث — لا بعده؛ وangerufen لا المصدر."
+          },
+          {
+            "q": "«قبل ذلك اشتريتُ خبزاً» — أي جملة صحيحة؟",
+            "choices": [
+              "Vorher habe ich Brot gekauft.",
+              "Vorher ich habe Brot gekauft.",
+              "Vorher habe ich Brot kaufen."
+            ],
+            "a": "Vorher habe ich Brot gekauft.",
+            "why": "Vorher أولاً ← habe ثانياً ← ich — gekauft في الآخر."
+          },
+          {
+            "q": "«بعد ذلك رتّبتُ» — أي جملة صحيحة؟",
+            "choices": [
+              "Nachher habe ich aufgeräumt.",
+              "Nachher habe ich aufräumen.",
+              "Nachher ich habe aufgeräumt."
+            ],
+            "a": "Nachher habe ich aufgeräumt.",
+            "why": "aufgeräumt (ge في الوسط) لا المصدر — وhabe ثانياً بعد Nachher."
+          },
+          {
+            "q": "«زرتُ جدّتي» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe meine Oma besucht.",
+              "Ich habe meine Oma besuchen.",
+              "Ich habe besucht meine Oma."
+            ],
+            "a": "Ich habe meine Oma besucht.",
+            "why": "besucht بلا ge‑ (be‑) — في الآخر بعد المفعول."
+          },
+          {
+            "q": "«هاتفتُ ساعة» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe eine Stunde telefoniert.",
+              "Ich habe eine Stunde telefonieren.",
+              "Ich habe telefoniert eine Stunde."
+            ],
+            "a": "Ich habe eine Stunde telefoniert.",
+            "why": "‑ieren ⇒ telefoniert بلا ge‑ — في الآخر."
+          },
+          {
+            "q": "«إجابتك صحيحة» — أي جملة صحيحة؟",
+            "choices": [
+              "Deine Antwort ist richtig.",
+              "Deine Antwort richtig ist.",
+              "Deine Antwort ist richtige."
+            ],
+            "a": "Deine Antwort ist richtig.",
+            "why": "richtig بعد ist بلا نهاية — والفعل ثانياً."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«فجأة أمطرت كثيراً» — أي جملة صحيحة؟",
+            "choices": [
+              "Plötzlich hat es viel geregnet.",
+              "Plötzlich es hat viel geregnet.",
+              "Plötzlich hat viel geregnet."
+            ],
+            "a": "Plötzlich hat es viel geregnet.",
+            "why": "Plötzlich أولاً ← hat ← es (لا يسقط — u10-d1) ← geregnet."
+          },
+          {
+            "q": "«أخيراً فهمتُ!» — أي جملة صحيحة؟",
+            "choices": [
+              "Endlich habe ich verstanden!",
+              "Endlich ich habe verstanden!",
+              "Endlich habe ich verstehen!"
+            ],
+            "a": "Endlich habe ich verstanden!",
+            "why": "Endlich ← habe ich — verstanden بلا ge‑ (ver‑)."
+          },
+          {
+            "q": "«هل كتبتَ الموعد؟» — أي جملة صحيحة؟",
+            "choices": [
+              "Hast du den Termin aufgeschrieben?",
+              "Hast du den Termin geschrieben auf?",
+              "Hast du den Termin aufschreiben?"
+            ],
+            "a": "Hast du den Termin aufgeschrieben?",
+            "why": "aufgeschrieben كلمة واحدة في الآخر — البادئة لا تنفصل في التصريف الثالث."
+          },
+          {
+            "q": "«في البداية لعبتُ بشكل سيّئ» — أي جملة صحيحة؟",
+            "choices": [
+              "Am Anfang habe ich schlecht gespielt.",
+              "Am Anfang ich habe schlecht gespielt.",
+              "Am Anfang habe ich gespielt schlecht."
+            ],
+            "a": "Am Anfang habe ich schlecht gespielt.",
+            "why": "Am Anfang ظرف أولاً فينقلب الفاعل — gespielt يغلق القوس."
+          },
+          {
+            "q": "«حجزنا طاولة» — أي جملة صحيحة؟",
+            "choices": [
+              "Wir haben einen Tisch reserviert.",
+              "Wir haben einen Tisch reservieren.",
+              "Wir haben reserviert einen Tisch."
+            ],
+            "a": "Wir haben einen Tisch reserviert.",
+            "why": "reserviert بلا ge‑ (‑ieren) — بعد المفعول."
+          },
+          {
+            "q": "«في ذلك الحين لعبتُ في النادي» — أي جملة صحيحة؟",
+            "choices": [
+              "Damals habe ich im Verein gespielt.",
+              "Damals ich habe im Verein gespielt.",
+              "Damals habe ich im Verein spielen."
+            ],
+            "a": "Damals habe ich im Verein gespielt.",
+            "why": "Damals أولاً ← habe ich ← im Verein ← gespielt."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«اشتريتُ قبل ذلك» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe vorher eingekauft.",
+              "Ich habe eingekauft vorher.",
+              "Ich habe vorher einkaufen."
+            ],
+            "a": "Ich habe vorher eingekauft.",
+            "why": "vorher داخل القوس قبل eingekauft — التصريف يغلق القوس."
+          },
+          {
+            "q": "«اتفقتُ على الموعد» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe den Termin vereinbart.",
+              "Ich habe den Termin vereinbaren.",
+              "Ich habe vereinbart den Termin."
+            ],
+            "a": "Ich habe den Termin vereinbart.",
+            "why": "vereinbart بلا ge‑ (ver‑) — في الآخر."
+          },
+          {
+            "q": "«هل شاهدتَ التلفاز أمس؟» — أي جملة صحيحة؟",
+            "choices": [
+              "Hast du gestern ferngesehen?",
+              "Hast du gestern fernsehen?",
+              "Hast du gestern gesehen fern?"
+            ],
+            "a": "Hast du gestern ferngesehen?",
+            "why": "ferngesehen كلمة واحدة: fern + ge + sehen."
+          },
+          {
+            "q": "«التاريخ خاطئ» — أي جملة صحيحة؟",
+            "choices": [
+              "Das Datum ist falsch.",
+              "Das Datum falsch ist.",
+              "Das ist Datum falsch."
+            ],
+            "a": "Das Datum ist falsch.",
+            "why": "falsch بعد ist — والفعل ثانياً بعد الفاعل Das Datum."
+          },
+          {
+            "q": "«اتصلتُ بالمطعم بعد ذلك» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe nachher im Restaurant angerufen.",
+              "Ich habe im Restaurant angerufen nachher.",
+              "Ich habe nachher im Restaurant anrufen."
+            ],
+            "a": "Ich habe nachher im Restaurant angerufen.",
+            "why": "nachher داخل القوس — angerufen آخراً لا المصدر."
+          },
+          {
+            "q": "«لينا بدأت في النادي» — أي جملة صحيحة؟",
+            "choices": [
+              "Lena hat im Verein angefangen.",
+              "Lena hat im Verein anfangen.",
+              "Lena hat angefangen im Verein."
+            ],
+            "a": "Lena hat im Verein angefangen.",
+            "why": "angefangen (an + ge + fangen) في الآخر بعد im Verein."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Vorher habe ich eingekauft, nachher habe ich telefoniert. · Ich habe neulich angerufen. · Damals habe ich in Tunesien gewohnt. · Plötzlich hat es geregnet! · Endlich habe ich Zeit! · Am Anfang habe ich wenig verstanden. — angerufen · aufgeschrieben · eingekauft · aufgeräumt · angefangen — telefoniert · reserviert · besucht · vereinbart · verstanden — Deine Antwort ist richtig. · Das Datum ist falsch.",
+      "ar": "ظروف الزمن في الماضي المركّب: في المقدمة فينقلب الفاعل أو بين haben والتصريف الثالث — لا بعده · neulich (مؤخراً) · damals (في ذلك الحين) · vorher (قبل ذلك) · nachher (بعد ذلك) · plötzlich (فجأة) · endlich (أخيراً) · am Anfang (في البداية) · المنفصل كلمة واحدة بـge في الوسط · بلا ge‑ لـ‑ieren وbe‑/ver‑/er‑ · richtig/falsch بعد ist · die Notiz · die Erinnerung · der Anfang · der Verein · vereinbaren · aufschreiben"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich habe angerufen neulich.~~ · ~~Ich habe eingekauft vorher.~~",
+          "ar": "ظرف الزمن لا يأتي بعد التصريف الثالث: داخل القوس أو في المقدمة"
+        },
+        "whyArabicSpeakerFails": "العربية تُلحق الظرف آخر الجملة («اتصلتُ مؤخراً» · «اشتريتُ قبل ذلك»)، فيضعه المتعلم بعد التصريف الثالث. والألمانية تغلق القوس بالتصريف (u10-d3) فلا شيء بعده: الظرف داخل القوس — Ich habe neulich angerufen. — أو في المقدمة فينقلب الفاعل — Neulich habe ich angerufen. — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Ich habe neulich angerufen. · Neulich habe ich angerufen. · Vorher habe ich eingekauft.",
+          "ar": "اتصلتُ مؤخراً · مؤخراً اتصلتُ · قبل ذلك اشتريتُ"
+        },
+        "exercise": {
+          "q": "أكمل: Ich habe ___ angerufen. (neulich)",
+          "a": "neulich"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe gerufen an.~~ · ~~Ich habe geschrieben auf.~~",
+          "ar": "المنفصل في التصريف الثالث كلمة واحدة: البادئة + ge + الجذع"
+        },
+        "whyArabicSpeakerFails": "المتعلم يعرف أن المنفصل ينفصل في الحاضر (Ich rufe an. — u7-d5) فيفصله في الماضي أيضاً ويضع ge في أول الجذع: ~~gerufen an~~ · ~~geschrieben auf~~. والألمانية تضمّ البادئة وتُدخل ge بينها وبين الجذع كلمة واحدة في آخر الجملة: angerufen · aufgeschrieben · eingekauft · aufgeräumt · angefangen — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Ich habe angerufen. · Ich habe den Termin aufgeschrieben. · Ich habe eingekauft und aufgeräumt.",
+          "ar": "اتصلتُ · كتبتُ الموعد · اشتريتُ ورتّبتُ"
+        },
+        "exercise": {
+          "q": "كوّن التصريف الثالث: aufschreiben → ___ · anrufen → ___",
+          "a": "aufgeschrieben / angerufen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~getelefoniert~~ · ~~gebesucht~~ · ~~gevereinbart~~",
+          "ar": "لا ge‑ للأفعال بـ‑ieren وبـbe‑/ver‑/er‑"
+        },
+        "whyArabicSpeakerFails": "قاعدة u10-d3 (ge‑ في أول التصريف) تُغري بتعميمها على كل فعل: ~~getelefoniert~~ · ~~gebesucht~~ · ~~gevereinbart~~. والألمانية لا تضع ge‑ على الأفعال بـ‑ieren (telefoniert · reserviert · probiert · studiert) ولا على الأفعال ببادئة غير منفصلة be‑/ver‑/er‑ (besucht · bezahlt · bestellt · vereinbart · verstanden · erklärt) — النهاية وحدها كالفعل البسيط — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "telefoniert · reserviert · besucht · bezahlt · vereinbart · verstanden · erklärt",
+          "ar": "هاتف · حجز · زار · دفع · اتفق · فهم · شرح — كلها بلا ge‑"
+        },
+        "exercise": {
+          "q": "كوّن التصريف الثالث: telefonieren → ___ · besuchen → ___",
+          "a": "telefoniert / besucht"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "neulich",
+      "damals",
+      "vorher",
+      "nachher",
+      "endlich",
+      "ploetzlich",
+      "vereinbaren",
+      "aufschreiben",
+      "erinnerung",
+      "notiz",
+      "richtig",
+      "falsch",
+      "anfang",
+      "verein"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/vereinbaren",
+      "https://www.duden.de/rechtschreibung/aufschreiben",
+      "https://www.duden.de/rechtschreibung/ploetzlich",
+      "https://www.duden.de/rechtschreibung/neulich",
+      "https://www.duden.de/rechtschreibung/damals",
+      "https://www.duden.de/rechtschreibung/Anfang",
+      "https://www.duden.de/rechtschreibung/Verein"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/vereinbaren",
+      "https://de.wiktionary.org/wiki/Partizip_II",
+      "https://de.wiktionary.org/wiki/anrufen",
+      "https://de.wiktionary.org/wiki/telefonieren"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-perfekt-haben",
+    "ars-zeitangaben"
+  ],
+  "audioManifestRefs": [
+    "word-neulich",
+    "word-damals",
+    "word-vorher",
+    "word-nachher",
+    "word-endlich",
+    "word-ploetzlich",
+    "word-vereinbaren",
+    "word-aufschreiben",
+    "word-erinnerung",
+    "word-notiz",
+    "word-richtig",
+    "word-falsch",
+    "word-anfang",
+    "word-verein"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Erzähl die letzten Tage: Zeitangaben + Perfekt (trennbar · ohne ge-)",
+    "goetheWordListOverlap": [
+      "damals",
+      "vorher",
+      "endlich",
+      "ploetzlich",
+      "vereinbaren",
+      "notiz",
+      "richtig",
+      "falsch",
+      "anfang",
+      "verein"
+    ]
+  }
+}

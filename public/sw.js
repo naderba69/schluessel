@@ -1,5 +1,6 @@
-// public/sw.js — PWA: offline بالكامل (قانون 25) — cache-first للقشرة
-const CACHE = "reise-yusuf-v1";
+// public/sw.js — PWA: offline بالكامل (قانون 25) — cache-first للقشرة والأصول (والمقاطع الصوتية عند أول تشغيل)
+// D104: اسم الذاكرة باسم المنتج (لا الاسم الداخلي — D31) + الإصدار يُرفع ليُفعَّل العامل الجديد ويُحذف القديم.
+const CACHE = "schluessel-v2";
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon.svg"];
 
 self.addEventListener("install", (e) => {
@@ -15,10 +16,15 @@ self.addEventListener("activate", (e) => {
 });
 
 self.addEventListener("fetch", (e) => {
+  const req = e.request;
+  // GET من نفس الأصل فقط — طلبات أخرى (POST/خارجية) تمر بلا تخزين (Cache API لا يقبل غير GET)
+  if (req.method !== "GET" || new URL(req.url).origin !== self.location.origin) return;
   e.respondWith(
-    caches.match(e.request).then((hit) => hit || fetch(e.request).then((res) => {
-      const copy = res.clone();
-      caches.open(CACHE).then((c) => c.put(e.request, copy));
+    caches.match(req).then((hit) => hit || fetch(req).then((res) => {
+      if (res.ok && res.status === 200) {
+        const copy = res.clone();
+        caches.open(CACHE).then((c) => c.put(req, copy));
+      }
       return res;
     }).catch(() => caches.match("./index.html"))),
   );

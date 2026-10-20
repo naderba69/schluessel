@@ -1,0 +1,1010 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u12-d2",
+  "level": "A1",
+  "unit": 12,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Zug hat Verspätung. · Von Gleis zwei fährt der Zug ab. · Ich habe den Zug verpasst! · Ich möchte ein Doppelzimmer mit Bad buchen. · Geben Sie den Schlüssel an der Rezeption zurück! · Gibt es Internet? · Ein Zimmer mit Blick auf den Park.",
+    "ar": "تتدبّر أمرك في المحطة والفندق: التأخير بـhat Verspätung والفوات بـhabe … verpasst (بلا ge‑) · الفعل المنفصل في الأمر (Geben Sie … zurück!) وبعد muss/möchte متصلاً (… zurückgeben · … buchen) وabfahren/ankommen · الأفعال الناقصة man muss/kann/darf · ومعها das Gleis · die Rezeption · das Doppelzimmer · das Einzelzimmer · die Aussicht · das Bad · buchen · der Empfang · die Halle · die Verspätung · verpassen · zurückgeben · der Blick · das Internet · die Information"
+  },
+  "canDoDaily": [
+    "يخبر عن التأخير والفوات ويسأل عن الرصيف (Der Zug hat zwanzig Minuten Verspätung. · Ich habe den Zug verpasst. · Der Zug fährt von Gleis zwei ab.) ويسأل في مكتب الاستعلامات (Ich frage an der Information.).",
+    "يحجز غرفة ويصفها ويعيد المفتاح (Ich möchte ein Doppelzimmer mit Bad buchen. · Mein Zimmer hat einen Blick auf den Park. · Gibt es Internet? · Geben Sie den Schlüssel an der Rezeption zurück!)."
+  ],
+  "warmup": {
+    "cardIds": [
+      "schluessel",
+      "zimmer",
+      "abfahren"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«القطار متأخر» — ist أم hat؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Der Zug hat Verspätung.",
+          "Der Zug ist Verspätung.",
+          "Der Zug hat spät."
+        ],
+        "answer": "Der Zug hat Verspätung.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "gleis",
+      "rezeption",
+      "doppelzimmer",
+      "einzelzimmer",
+      "aussicht",
+      "bad",
+      "buchen",
+      "empfang",
+      "halle",
+      "verspaetung",
+      "verpassen",
+      "zurueckgeben",
+      "blick",
+      "internet",
+      "information"
+    ],
+    "grammarArsenalIds": [
+      "ars-trennbare",
+      "ars-modal-fix"
+    ],
+    "storySentenceIds": [
+      "story-a1-u12-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v-f",
+      "sp-st-initial",
+      "z",
+      "auslaut-d",
+      "ch-ich-laut"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Der Zug hat zwanzig Minuten ___. (تأخير)",
+            "a": "Verspätung",
+            "why": "التأخير بـhaben + اسم: hat Verspätung — لا ist."
+          },
+          {
+            "q": "Der Zug fährt von ___ zwei ab. (رصيف القطار)",
+            "a": "Gleis",
+            "why": "das Gleis — von Gleis zwei بلا أداة مع الرقم."
+          },
+          {
+            "q": "Ich habe den Zug ___. (verpassen — التصريف الثالث)",
+            "a": "verpasst",
+            "why": "ver‑ لا تأخذ ge‑: hat verpasst — وبـhaben لأن له مفعولاً."
+          },
+          {
+            "q": "Ich habe an der ___ gefragt. (مكتب الاستعلامات)",
+            "a": "Information",
+            "why": "die Information — an der Information (Wo? → الداتيف)."
+          },
+          {
+            "q": "Der Zug in die Stadt fährt von Gleis zwei ___. (abfahren — الجزء المنفصل)",
+            "a": "ab",
+            "why": "الفعل المنفصل: fährt ثانياً وab في آخر الجملة."
+          },
+          {
+            "q": "Ich möchte ein ___ für meine Eltern buchen. (غرفة مزدوجة)",
+            "a": "Doppelzimmer",
+            "why": "das Doppelzimmer — محايد كـZimmer · بعد möchte المصدر buchen في الآخر."
+          },
+          {
+            "q": "Mein Bruder hat ein ___ mit Bad. (غرفة مفردة)",
+            "a": "Einzelzimmer",
+            "why": "das Einzelzimmer — غرفة لشخص واحد."
+          },
+          {
+            "q": "Das Zimmer hat ein ___ mit Dusche. (حمّام)",
+            "a": "Bad",
+            "why": "das Bad — الدال الأخيرة تُنطق t."
+          },
+          {
+            "q": "Die ___ ist Tag und Nacht geöffnet. (الاستقبال — مؤنث)",
+            "a": "Rezeption",
+            "why": "die Rezeption — ‑tion مؤنث دائماً وz تُنطق ts."
+          },
+          {
+            "q": "Der ___ ist links in der Halle. (مكتب الاستقبال — مذكر)",
+            "a": "Empfang",
+            "why": "der Empfang — مذكر؛ الكلمة الثانية للاستقبال."
+          },
+          {
+            "q": "Die ___ im Hotel ist groß. (صالة)",
+            "a": "Halle",
+            "why": "die Halle — مؤنث بـ‑e."
+          },
+          {
+            "q": "Die ___ vom Zimmer ist sehr schön. (إطلالة — مؤنث)",
+            "a": "Aussicht",
+            "why": "die Aussicht — ‑sicht مؤنث · ch هنا ich-Laut."
+          },
+          {
+            "q": "Mein Zimmer hat einen ___ auf den Park. (نظرة/إطلالة — مذكر)",
+            "a": "Blick",
+            "why": "der Blick → einen Blick · Blick auf + أكوزاتيف (auf den Park)."
+          },
+          {
+            "q": "Das ___ im Hotel ist frei. (الإنترنت)",
+            "a": "Internet",
+            "why": "das Internet — محايد · النبر على In‑."
+          },
+          {
+            "q": "Meine Mutter hat das Hotel im Internet ___. (buchen — التصريف الثالث)",
+            "a": "gebucht",
+            "why": "فعل منتظم: ge‑ + buch + ‑t = gebucht."
+          },
+          {
+            "q": "Ich möchte ein Zimmer ___. (buchen — بعد möchte)",
+            "a": "buchen",
+            "why": "بعد möchte المصدر في آخر الجملة."
+          },
+          {
+            "q": "Geben Sie den Schlüssel bitte ___! (zurückgeben — الأمر مع Sie)",
+            "a": "zurück",
+            "why": "الأمر بالفعل المنفصل: Geben Sie … zurück — الجزء في الآخر."
+          },
+          {
+            "q": "___ Sie den Schlüssel an der Rezeption zurück! (zurückgeben — الأمر مع Sie)",
+            "a": "Geben",
+            "why": "الفعل أولاً في الأمر، ثم Sie، والجزء zurück آخراً."
+          },
+          {
+            "q": "Man muss den Schlüssel vor elf Uhr ___. (zurückgeben — بعد muss)",
+            "a": "zurückgeben",
+            "why": "بعد الفعل الناقص يعود المنفصل متصلاً في الآخر."
+          },
+          {
+            "q": "Ich ___ den Schlüssel am Abend zurück. (zurückgeben — ich)",
+            "a": "gebe",
+            "why": "ich gebe … zurück — geben بلا تغيير حركة مع ich."
+          },
+          {
+            "q": "Der Bus fährt um sieben Uhr ab — du ___ ihn nicht verpassen! (dürfen — du)",
+            "a": "darfst",
+            "why": "du darfst · nicht dürfen = ممنوع."
+          },
+          {
+            "q": "Ich ___ morgen früh in die Schule gehen. (sollen — ich)",
+            "a": "soll",
+            "why": "ich soll — بلا ‑e: النصيحة أو ما طُلب مني."
+          },
+          {
+            "q": "___ man hier im Internet buchen? (können — man)",
+            "a": "Kann",
+            "why": "man = er → kann · في سؤال نعم/لا الناقص أولاً."
+          },
+          {
+            "q": "Wir ___ um dreizehn Uhr in Berlin an. (ankommen — wir)",
+            "a": "kommen",
+            "why": "wir kommen … an — الجزء an في الآخر."
+          },
+          {
+            "q": "Der Zug ___ zwanzig Minuten Verspätung. (haben — er)",
+            "a": "hat",
+            "why": "Verspätung تُملك: der Zug hat Verspätung."
+          },
+          {
+            "q": "Wir haben zwei ___ mit Bad. (Einzelzimmer — الجمع)",
+            "a": "Einzelzimmer",
+            "why": "‑zimmer: الجمع كالمفرد (das Zimmer → die Zimmer)."
+          },
+          {
+            "q": "Das Hotel hat zwei ___. (Bad — الجمع)",
+            "a": "Bäder",
+            "why": "das Bad → die Bäder — جمع بالأوملاوت و‑er."
+          },
+          {
+            "q": "Ich stehe morgen um sechs Uhr ___. (aufstehen — الجزء المنفصل)",
+            "a": "auf",
+            "why": "aufstehen: stehe … auf — مراجعة الوحدة 7."
+          },
+          {
+            "q": "Viele ___ findest du im Internet. (Information — الجمع)",
+            "a": "Informationen",
+            "why": "die Information → die Informationen (‑en) — جمع بـ‑en."
+          },
+          {
+            "q": "Von Gleis drei ___ der Zug nach Rom ab. (abfahren — er)",
+            "a": "fährt",
+            "why": "er fährt … ab — تغيّر الحركة a → ä."
+          }
+        ],
+        "interleavedWith": [
+          "zug",
+          "minute",
+          "stadt",
+          "bruder",
+          "dusche",
+          "park",
+          "hotel",
+          "zimmer",
+          "bus",
+          "schule",
+          "abend",
+          "eltern",
+          "schluessel"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "kf-1",
+            "speakText": "Hallo Lena! Ich bin wieder in Berlin. Ich bin um dreizehn Uhr angekommen.",
+            "q": "استمع: أين يوسف الآن ومتى وصل؟",
+            "choices": [
+              "في برلين — وصل الواحدة ظهراً",
+              "في تونس — يصل غداً",
+              "في المطار — ينتظر الطائرة"
+            ],
+            "a": "في برلين — وصل الواحدة ظهراً",
+            "why": "Ich bin wieder in Berlin · um dreizehn Uhr angekommen — الوصول الواحدة."
+          },
+          {
+            "audioId": "kf-2",
+            "speakText": "Super! War die Reise gut? Und der Zug vom Flughafen?",
+            "q": "استمع: عمّ تسأل لينا يوسف؟",
+            "choices": [
+              "عن الرحلة والقطار من المطار",
+              "عن الفندق في روما",
+              "عن المدرسة غداً"
+            ],
+            "a": "عن الرحلة والقطار من المطار",
+            "why": "War die Reise gut? Und der Zug vom Flughafen? — سؤالان عن الرحلة والقطار من المطار."
+          },
+          {
+            "audioId": "kf-3",
+            "speakText": "Der Flug war gut. Aber am Flughafen hatte der Zug zwanzig Minuten Verspätung.",
+            "q": "استمع: ماذا حدث للقطار من المطار؟",
+            "choices": [
+              "تأخر عشرين دقيقة",
+              "جاء مبكراً",
+              "لم يأتِ أبداً"
+            ],
+            "a": "تأخر عشرين دقيقة",
+            "why": "der Zug hatte zwanzig Minuten Verspätung — تأخير عشرين دقيقة."
+          },
+          {
+            "audioId": "kf-4",
+            "speakText": "Was? Hast du den Zug verpasst?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل فاته القطار",
+              "هل أكل في الطائرة",
+              "أين الفندق"
+            ],
+            "a": "هل فاته القطار",
+            "why": "Hast du den Zug verpasst? — فوّت."
+          },
+          {
+            "audioId": "kf-5",
+            "speakText": "Nein! Ich habe an der Information gefragt: Der Zug in die Stadt fährt von Gleis zwei ab.",
+            "q": "استمع: أين سأل يوسف ومن أي رصيف ينطلق القطار؟",
+            "choices": [
+              "في مكتب الاستعلامات — من الرصيف اثنين",
+              "في الفندق — من الرصيف خمسة",
+              "في الحافلة — من الرصيف واحد"
+            ],
+            "a": "في مكتب الاستعلامات — من الرصيف اثنين",
+            "why": "an der Information gefragt · von Gleis zwei ab — الرصيف اثنين."
+          },
+          {
+            "audioId": "kf-6",
+            "speakText": "Sehr gut! Ich habe heute im Internet unser Hotel in Rom gesucht.",
+            "q": "استمع: ماذا فعلت لينا اليوم؟",
+            "choices": [
+              "بحثت عن فندق روما في الإنترنت",
+              "اشترت تذكرة قطار",
+              "ذهبت إلى المحطة"
+            ],
+            "a": "بحثت عن فندق روما في الإنترنت",
+            "why": "im Internet unser Hotel in Rom gesucht — البحث في الإنترنت."
+          },
+          {
+            "audioId": "kf-7",
+            "speakText": "Und? Wie ist das Hotel? Hast du Fotos gesehen?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "كيف الفندق وهل رأت صوراً",
+              "كم ثمن الفندق",
+              "أين المحطة"
+            ],
+            "a": "كيف الفندق وهل رأت صوراً",
+            "why": "Wie ist das Hotel? Hast du Fotos gesehen? — الصور."
+          },
+          {
+            "audioId": "kf-8",
+            "speakText": "Ja! Es gibt eine große Halle und einen Empfang mit Sofa. Die Rezeption ist Tag und Nacht geöffnet.",
+            "q": "استمع: ما في الفندق ومتى يفتح الاستقبال؟",
+            "choices": [
+              "صالة كبيرة ومكتب استقبال — الاستقبال مفتوح ليلاً ونهاراً",
+              "مطعم صغير — الاستقبال مغلق ليلاً",
+              "مسبح — الاستقبال صباحاً فقط"
+            ],
+            "a": "صالة كبيرة ومكتب استقبال — الاستقبال مفتوح ليلاً ونهاراً",
+            "why": "eine große Halle · einen Empfang mit Sofa · Tag und Nacht geöffnet — ليلاً ونهاراً."
+          },
+          {
+            "audioId": "kf-11",
+            "speakText": "Toll! Und wie ist die Aussicht?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "عن الإطلالة",
+              "عن الثمن",
+              "عن الفطور"
+            ],
+            "a": "عن الإطلالة",
+            "why": "Wie ist die Aussicht? — الإطلالة."
+          },
+          {
+            "audioId": "kf-12",
+            "speakText": "Die Aussicht ist sehr schön: Mein Zimmer hat einen Blick auf einen alten Park.",
+            "q": "استمع: على ماذا تطلّ غرفة لينا؟",
+            "choices": [
+              "على متنزّه قديم",
+              "على المحطة",
+              "على البحر"
+            ],
+            "a": "على متنزّه قديم",
+            "why": "einen Blick auf einen alten Park — متنزّه قديم."
+          },
+          {
+            "audioId": "kf-14",
+            "speakText": "Ja, das Internet ist frei. Meine Mutter hat das Hotel im Internet gebucht — das war sehr einfach.",
+            "q": "استمع: كيف حجزت أمّ لينا الفندق؟",
+            "choices": [
+              "في الإنترنت — كان سهلاً جداً",
+              "بالهاتف — كان صعباً",
+              "في مكتب السفر"
+            ],
+            "a": "في الإنترنت — كان سهلاً جداً",
+            "why": "im Internet gebucht · sehr einfach — سهل."
+          },
+          {
+            "audioId": "kf-15",
+            "speakText": "Muss man den Schlüssel am Abend an der Rezeption zurückgeben?",
+            "q": "استمع: ماذا يسأل يوسف عن المفتاح؟",
+            "choices": [
+              "هل يجب إعادته مساءً إلى الاستقبال",
+              "هل المفتاح كبير",
+              "هل المفتاح في الحقيبة"
+            ],
+            "a": "هل يجب إعادته مساءً إلى الاستقبال",
+            "why": "Muss man den Schlüssel … zurückgeben? — الإعادة."
+          },
+          {
+            "audioId": "kf-16",
+            "speakText": "Ja, man gibt den Schlüssel am Empfang zurück. Und am letzten Tag muss man ihn vor elf Uhr zurückgeben.",
+            "q": "استمع: متى يجب إعادة المفتاح في اليوم الأخير؟",
+            "choices": [
+              "قبل الحادية عشرة",
+              "قبل الثامنة",
+              "بعد الظهر"
+            ],
+            "a": "قبل الحادية عشرة",
+            "why": "vor elf Uhr zurückgeben — قبل الحادية عشرة."
+          },
+          {
+            "audioId": "kf-17",
+            "speakText": "Und ich soll morgen früh in die Schule gehen. Ich darf nicht zu spät kommen!",
+            "q": "استمع: ماذا على يوسف غداً؟",
+            "choices": [
+              "الذهاب إلى المدرسة مبكراً وألا يتأخر",
+              "النوم طويلاً",
+              "زيارة الطبيب"
+            ],
+            "a": "الذهاب إلى المدرسة مبكراً وألا يتأخر",
+            "why": "soll … in die Schule gehen · darf nicht zu spät kommen — المدرسة."
+          },
+          {
+            "audioId": "kf-18",
+            "speakText": "Geh heute früh ins Bett! Der Bus fährt um sieben Uhr ab — du darfst ihn nicht verpassen!",
+            "q": "استمع: ماذا تنصحه لينا ومتى تنطلق الحافلة؟",
+            "choices": [
+              "ينام مبكراً — الحافلة السابعة",
+              "يشاهد فيلماً — الحافلة التاسعة",
+              "يأكل أولاً — الحافلة الثامنة"
+            ],
+            "a": "ينام مبكراً — الحافلة السابعة",
+            "why": "Geh früh ins Bett! · fährt um sieben Uhr ab — السابعة."
+          },
+          {
+            "audioId": "kf-19",
+            "speakText": "Kein Problem! Ich stehe um sechs Uhr auf. Schickst du mir morgen eine Nachricht?",
+            "q": "استمع: متى يستيقظ يوسف وماذا يطلب؟",
+            "choices": [
+              "السادسة — رسالة من لينا غداً",
+              "الثامنة — صورة من روما",
+              "السابعة — مكالمة الليلة"
+            ],
+            "a": "السادسة — رسالة من لينا غداً",
+            "why": "Ich stehe um sechs Uhr auf · Schickst du mir morgen eine Nachricht? — السادسة."
+          }
+        ],
+        "interleavedWith": [
+          "reise",
+          "flughafen",
+          "stadt",
+          "hotel",
+          "foto",
+          "park",
+          "bett",
+          "bus",
+          "schule",
+          "nachricht",
+          "schluessel"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Minuten",
+              "Der",
+              "Verspätung.",
+              "zwanzig",
+              "Zug",
+              "hat"
+            ],
+            "a": "Der Zug hat zwanzig Minuten Verspätung.",
+            "why": "hat ثانياً ← zwanzig Minuten ← Verspätung اسماً آخراً."
+          },
+          {
+            "tokens": [
+              "von",
+              "ab.",
+              "Gleis",
+              "fährt",
+              "Der",
+              "Zug",
+              "zwei"
+            ],
+            "a": "Der Zug fährt von Gleis zwei ab.",
+            "why": "fährt ثانياً ← von Gleis zwei ← ab آخراً."
+          },
+          {
+            "tokens": [
+              "verpasst.",
+              "nicht",
+              "Ich",
+              "habe",
+              "den",
+              "Zug"
+            ],
+            "a": "Ich habe den Zug nicht verpasst.",
+            "why": "habe ثانياً ← nicht قبل verpasst ← verpasst آخراً بلا ge‑."
+          },
+          {
+            "tokens": [
+              "zurück!",
+              "den",
+              "Geben",
+              "Schlüssel",
+              "Sie",
+              "bitte"
+            ],
+            "a": "Geben Sie den Schlüssel bitte zurück!",
+            "why": "الأمر: Geben أولاً ← Sie ← den Schlüssel ← zurück آخراً."
+          },
+          {
+            "tokens": [
+              "muss",
+              "vor",
+              "den",
+              "Man",
+              "zurückgeben.",
+              "Uhr",
+              "elf",
+              "Schlüssel"
+            ],
+            "a": "Man muss den Schlüssel vor elf Uhr zurückgeben.",
+            "why": "muss ثانياً ← zurückgeben متصلاً في الآخر."
+          },
+          {
+            "tokens": [
+              "ein",
+              "buchen.",
+              "Ich",
+              "mit",
+              "möchte",
+              "Doppelzimmer",
+              "Bad"
+            ],
+            "a": "Ich möchte ein Doppelzimmer mit Bad buchen.",
+            "why": "möchte ثانياً ← buchen في الآخر."
+          },
+          {
+            "tokens": [
+              "Blick",
+              "den",
+              "hat",
+              "auf",
+              "Zimmer",
+              "einen",
+              "Mein",
+              "Park."
+            ],
+            "a": "Mein Zimmer hat einen Blick auf den Park.",
+            "why": "einen Blick (أكوزاتيف) ← auf den Park (أكوزاتيف)."
+          },
+          {
+            "tokens": [
+              "ist",
+              "Die",
+              "Tag",
+              "Nacht",
+              "Rezeption",
+              "geöffnet.",
+              "und"
+            ],
+            "a": "Die Rezeption ist Tag und Nacht geöffnet.",
+            "why": "ist ثانياً ← geöffnet آخراً."
+          },
+          {
+            "tokens": [
+              "Hotel?",
+              "im",
+              "es",
+              "Internet",
+              "Gibt"
+            ],
+            "a": "Gibt es Internet im Hotel?",
+            "why": "سؤال نعم/لا: Gibt أولاً ← es ← Internet ← im Hotel."
+          },
+          {
+            "tokens": [
+              "Ich",
+              "dem",
+              "frage",
+              "Information",
+              "Gleis.",
+              "nach",
+              "an",
+              "der"
+            ],
+            "a": "Ich frage an der Information nach dem Gleis.",
+            "why": "an der Information (Wo?) ← nach dem Gleis (الداتيف)."
+          }
+        ],
+        "interleavedWith": [
+          "zug",
+          "minute",
+          "zimmer",
+          "park",
+          "hotel",
+          "nacht",
+          "schluessel"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "kf-9",
+            "speakText": "Und die Zimmer? Habt ihr ein Doppelzimmer?",
+            "a": "Und die Zimmer? Habt ihr ein Doppelzimmer?",
+            "why": "Zimmer بـZ تُنطق ts وmm مضاعفة · Doppelzimmer كلمة واحدة بـpp."
+          },
+          {
+            "audioId": "kf-10",
+            "speakText": "Meine Eltern haben ein Doppelzimmer. Mein Bruder und ich haben zwei Einzelzimmer mit Bad.",
+            "a": "Meine Eltern haben ein Doppelzimmer. Mein Bruder und ich haben zwei Einzelzimmer mit Bad.",
+            "why": "Eltern بحرف كبير · Doppelzimmer وEinzelzimmer بـzz/lz · Bad بـd آخراً تُنطق t."
+          },
+          {
+            "audioId": "kf-13",
+            "speakText": "Schön! Gibt es Internet im Hotel?",
+            "a": "Schön! Gibt es Internet im Hotel?",
+            "why": "Schön بـö · Internet بحرف كبير · Hotel بـH."
+          },
+          {
+            "audioId": "kf-20",
+            "speakText": "Ja, klar. Gute Nacht, Yusuf — und bis bald!",
+            "a": "Ja, klar. Gute Nacht, Yusuf — und bis bald!",
+            "why": "klar بـk · Nacht بـch · Yusuf بحرف كبير · bald بـd آخراً."
+          },
+          {
+            "audioId": "word-gleis",
+            "speakText": "das Gleis.",
+            "a": "das Gleis",
+            "why": "Gleis بـG · ei."
+          },
+          {
+            "audioId": "word-rezeption",
+            "speakText": "die Rezeption.",
+            "a": "die Rezeption",
+            "why": "Rezeption بـz تُنطق ts و‑tion."
+          },
+          {
+            "audioId": "word-verspaetung",
+            "speakText": "die Verspätung.",
+            "a": "die Verspätung",
+            "why": "Verspätung بـv تُنطق f · sp تُنطق schp · ä."
+          },
+          {
+            "audioId": "word-doppelzimmer",
+            "speakText": "das Doppelzimmer.",
+            "a": "das Doppelzimmer",
+            "why": "Doppelzimmer بـpp وmm."
+          },
+          {
+            "audioId": "word-aussicht",
+            "speakText": "die Aussicht.",
+            "a": "die Aussicht",
+            "why": "Aussicht بـss وch."
+          },
+          {
+            "audioId": "word-information",
+            "speakText": "die Information.",
+            "a": "die Information",
+            "why": "Information بـ‑tion."
+          },
+          {
+            "audioId": "word-zurueckgeben",
+            "speakText": "zurückgeben.",
+            "a": "zurückgeben",
+            "why": "zurückgeben بـü وck — كلمة واحدة في المصدر."
+          }
+        ],
+        "interleavedWith": [
+          "zimmer",
+          "eltern",
+          "bruder",
+          "hotel",
+          "nacht"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Am Bahnhof: Der Zug hat Verspätung — zwanzig Minuten! · Fährt der Zug von Gleis zwei ab? — Ja, um neun Uhr. · Im Hotel: Ich möchte ein Doppelzimmer mit Bad buchen. Gibt es Internet? — Ja, und das Zimmer hat einen Blick auf den Park. · Geben Sie den Schlüssel bitte an der Rezeption zurück!",
+        "ar": "زميلك المسافر وأنت موظف الاستعلامات ثم موظف الاستقبال: التأخير والرصيف (hat Verspätung · von Gleis … ab) ثم حجز الغرفة والإطلالة والإنترنت وإعادة المفتاح (Geben Sie … zurück!) — ثم تعكسان الأدوار"
+      },
+      "situation": {
+        "de": "Am Bahnhof an der Information: Entschuldigung, der Zug nach Rom? — Er hat zwanzig Minuten Verspätung und fährt von Gleis zwei ab. — Danke! Ich darf ihn nicht verpassen. · Im Hotel am Empfang: Guten Tag, ich möchte ein Doppelzimmer buchen, bitte mit Bad. — Gern. Das Zimmer hat einen Blick auf den Park, und das Internet ist frei. — Super! — Geben Sie den Schlüssel am Abend bitte an der Rezeption zurück.",
+        "ar": "في المحطة ثم في الفندق: زميلك يسأل عن القطار (التأخير · الرصيف) ثم يحجز غرفة (مزدوجة/مفردة · حمّام · إطلالة · إنترنت) ويسمع تعليمة إعادة المفتاح — وأنت تجيب بجمل اليوم"
+      },
+      "successCriteria": [
+        "جملة تأخير أو فوات (Der Zug hat … Verspätung. · Ich habe den Zug verpasst.)",
+        "جملة فعل منفصل: خبر أو أمر أو بعد ناقص (fährt von Gleis … ab · Geben Sie … zurück! · muss … zurückgeben)",
+        "جملة حجز بـmöchte (Ich möchte ein Doppelzimmer/Einzelzimmer mit Bad buchen.)",
+        "كلمتان من اليوم على الأقل: Rezeption · Empfang · Halle · Aussicht · Blick · Internet · Information"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«القطار متأخر عشر دقائق»؟",
+            "choices": [
+              "Der Zug hat zehn Minuten Verspätung.",
+              "Der Zug ist zehn Minuten Verspätung.",
+              "Der Zug hat zehn Minuten spät."
+            ],
+            "a": "Der Zug hat zehn Minuten Verspätung.",
+            "why": "hat Verspätung — اسم مع haben."
+          },
+          {
+            "q": "«القطار ينطلق من الرصيف الرابع»؟",
+            "choices": [
+              "Der Zug fährt von Gleis vier ab.",
+              "Der Zug abfährt von Gleis vier.",
+              "Der Zug fährt ab von Gleis vier."
+            ],
+            "a": "Der Zug fährt von Gleis vier ab.",
+            "why": "fährt ثانياً وab آخراً."
+          },
+          {
+            "q": "«فاتتني الحافلة»؟",
+            "choices": [
+              "Ich habe den Bus verpasst.",
+              "Ich bin den Bus verpasst.",
+              "Ich habe den Bus verpassen."
+            ],
+            "a": "Ich habe den Bus verpasst.",
+            "why": "hat verpasst — haben مع المفعول وبلا ge‑."
+          },
+          {
+            "q": "«أعِد الكتاب!» (لصديق)",
+            "choices": [
+              "Gib das Buch zurück!",
+              "Zurück gib das Buch!",
+              "Gib zurück das Buch!"
+            ],
+            "a": "Gib das Buch zurück!",
+            "why": "الأمر: Gib أولاً وzurück آخراً."
+          },
+          {
+            "q": "«أريد حجز غرفة مفردة»؟",
+            "choices": [
+              "Ich möchte ein Einzelzimmer buchen.",
+              "Ich möchte ein Einzelzimmer bucht.",
+              "Ich buchen möchte ein Einzelzimmer."
+            ],
+            "a": "Ich möchte ein Einzelzimmer buchen.",
+            "why": "möchte ثانياً والمصدر buchen آخراً."
+          },
+          {
+            "q": "«الإطلالة من الغرفة جميلة»؟",
+            "choices": [
+              "Die Aussicht vom Zimmer ist schön.",
+              "Der Aussicht vom Zimmer ist schön.",
+              "Die Aussicht vom Zimmer sind schön."
+            ],
+            "a": "Die Aussicht vom Zimmer ist schön.",
+            "why": "die Aussicht مؤنث · ist للمفرد."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الاستقبال في الأسفل»؟",
+            "choices": [
+              "Die Rezeption ist unten.",
+              "Der Rezeption ist unten.",
+              "Die Rezeption sind unten."
+            ],
+            "a": "Die Rezeption ist unten.",
+            "why": "die Rezeption — ‑tion مؤنث."
+          },
+          {
+            "q": "«هل يوجد إنترنت في الغرفة؟»؟",
+            "choices": [
+              "Gibt es Internet im Zimmer?",
+              "Gibt es Internet in Zimmer?",
+              "Es gibt Internet im Zimmer?"
+            ],
+            "a": "Gibt es Internet im Zimmer?",
+            "why": "Gibt es …? أولاً · im Zimmer (Wo?)."
+          },
+          {
+            "q": "«يجب أن تعيد المفتاح» (du)؟",
+            "choices": [
+              "Du musst den Schlüssel zurückgeben.",
+              "Du musst den Schlüssel geben zurück.",
+              "Du musst zurück den Schlüssel geben."
+            ],
+            "a": "Du musst den Schlüssel zurückgeben.",
+            "why": "بعد musst المنفصل متصلاً في الآخر."
+          },
+          {
+            "q": "«غرفة بإطلالة على الحديقة»؟",
+            "choices": [
+              "ein Zimmer mit Blick auf den Garten",
+              "ein Zimmer mit Blick auf dem Garten",
+              "ein Zimmer mit Blick auf der Garten"
+            ],
+            "a": "ein Zimmer mit Blick auf den Garten",
+            "why": "Blick auf + أكوزاتيف: auf den Garten."
+          },
+          {
+            "q": "«الصالة كبيرة ومكتب الاستقبال على اليمين»؟",
+            "choices": [
+              "Die Halle ist groß und der Empfang ist rechts.",
+              "Der Halle ist groß und die Empfang ist rechts.",
+              "Die Halle ist groß und das Empfang ist rechts."
+            ],
+            "a": "Die Halle ist groß und der Empfang ist rechts.",
+            "why": "die Halle مؤنث · der Empfang مذكر."
+          },
+          {
+            "q": "«لا يجوز أن تفوّت القطار» (du)؟",
+            "choices": [
+              "Du darfst den Zug nicht verpassen.",
+              "Du darfst nicht den Zug verpasst.",
+              "Du darfst den Zug nicht verpasst."
+            ],
+            "a": "Du darfst den Zug nicht verpassen.",
+            "why": "darfst + المصدر verpassen آخراً · nicht قبله."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«حجزنا غرفتين»؟",
+            "choices": [
+              "Wir haben zwei Zimmer gebucht.",
+              "Wir haben zwei Zimmer buchen.",
+              "Wir sind zwei Zimmer gebucht."
+            ],
+            "a": "Wir haben zwei Zimmer gebucht.",
+            "why": "haben + gebucht — فعل منتظم."
+          },
+          {
+            "q": "«الحمّام صغير لكنه نظيف»؟",
+            "choices": [
+              "Das Bad ist klein, aber schön.",
+              "Der Bad ist klein, aber schön.",
+              "Die Bad ist klein, aber schön."
+            ],
+            "a": "Das Bad ist klein, aber schön.",
+            "why": "das Bad — محايد."
+          },
+          {
+            "q": "«نسأل في مكتب الاستعلامات»؟",
+            "choices": [
+              "Wir fragen an der Information.",
+              "Wir fragen an die Information.",
+              "Wir fragen auf der Information."
+            ],
+            "a": "Wir fragen an der Information.",
+            "why": "an der Information — Wo? → الداتيف."
+          },
+          {
+            "q": "«متى يصل القطار؟»؟",
+            "choices": [
+              "Wann kommt der Zug an?",
+              "Wann ankommt der Zug?",
+              "Wann kommt an der Zug?"
+            ],
+            "a": "Wann kommt der Zug an?",
+            "why": "kommt ثانياً · an آخراً."
+          },
+          {
+            "q": "«يجب أن أستيقظ السادسة»؟",
+            "choices": [
+              "Ich muss um sechs Uhr aufstehen.",
+              "Ich muss um sechs Uhr stehe auf.",
+              "Ich muss um sechs Uhr auf stehen."
+            ],
+            "a": "Ich muss um sechs Uhr aufstehen.",
+            "why": "بعد muss: aufstehen متصلاً في الآخر."
+          },
+          {
+            "q": "«معلومات كثيرة توجد في الإنترنت»؟",
+            "choices": [
+              "Viele Informationen gibt es im Internet.",
+              "Viele Information gibt es im Internet.",
+              "Viele Informationen gibt es in Internet."
+            ],
+            "a": "Viele Informationen gibt es im Internet.",
+            "why": "الجمع Informationen · im Internet."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Am Bahnhof: Der Zug hat zwanzig Minuten Verspätung. · Ich habe den Zug verpasst. · Der Zug fährt von Gleis zwei ab. · Ich frage an der Information. — Im Hotel: Ich möchte ein Doppelzimmer mit Bad buchen. · Mein Bruder hat ein Einzelzimmer. · Die Aussicht ist schön — ein Blick auf den Park. · Gibt es Internet? · Die Rezeption ist in der Halle, der Empfang ist links. — Geben Sie den Schlüssel zurück! · Man muss den Schlüssel vor elf Uhr zurückgeben. · Du darfst den Zug nicht verpassen!",
+      "ar": "التأخير بـhaben + اسم (hat Verspätung) والفوات بـhaben بلا ge‑ (habe … verpasst) · الفعل المنفصل (الوحدة 7) في الأمر: Geben Sie … zurück! وبعد الناقص متصلاً (الوحدة 8): muss … zurückgeben · möchte … buchen · وabfahren/ankommen في الخبر · man + الفعل الناقص (man muss · kann man …?) · Wo? → الداتيف: an der Information · an der Rezeption · im Hotel — وBlick auf + أكوزاتيف · كلمات اليوم: das Gleis (die Gleise) · die Rezeption · das Doppelzimmer · das Einzelzimmer · die Aussicht · das Bad (die Bäder) · buchen (hat gebucht) · der Empfang · die Halle · die Verspätung · verpassen (hat verpasst) · zurückgeben · der Blick · das Internet · die Information (die Informationen)"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Der Zug ist Verspätung.~~ · ~~Der Zug ist zwanzig Minuten Verspätung.~~ · ~~Ich bin den Zug verpasst.~~ · ~~Ich habe den Zug verpassen.~~",
+          "ar": "التأخير يُملك: hat Verspätung — وverpassen في الماضي بـhaben وبلا ge‑: habe … verpasst"
+        },
+        "whyArabicSpeakerFails": "«القطار متأخر» صفةٌ بالعربية، فيضع المتعلم ist (~~ist Verspätung~~) — والألمانية تجعل التأخير شيئاً يملكه القطار: Der Zug hat Verspätung · hat zwanzig Minuten Verspätung (كـ«عندي صداع» في الوحدة 11). و«فاتني القطار» فاعله القطار بالعربية، فيأتي المتعلم بـsein (~~bin verpasst~~) أو بالمصدر — والألمانية: ich habe den Zug verpasst — haben لأن له مفعولاً، وبلا ge‑ لأن ver‑ لا تنفصل (الوحدة 10) — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Der Zug hat zwanzig Minuten Verspätung. · Ich habe den Zug verpasst.",
+          "ar": "القطار متأخر عشرين دقيقة · فاتني القطار"
+        },
+        "exercise": {
+          "q": "Der Bus ___ zehn Minuten Verspätung. (haben)",
+          "a": "hat"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Zurückgeben Sie den Schlüssel!~~ · ~~Geben zurück Sie den Schlüssel!~~ · ~~Ich muss den Schlüssel geben zurück.~~ · ~~Der Zug abfährt von Gleis zwei.~~",
+          "ar": "الفعل المنفصل في الأمر: Geben Sie … zurück! — وبعد muss/kann/möchte يعود متصلاً في الآخر: … zurückgeben"
+        },
+        "whyArabicSpeakerFails": "«أعيدوا المفتاح» فعلٌ واحد في أول الجملة، فيُبقي المتعلم zurückgeben كتلةً (~~Zurückgeben Sie~~) أو يلصق الجزء بالفعل (~~Geben zurück Sie~~). والألمانية تفتح القوسين في الأمر كما في الخبر (الوحدة 7): Geben Sie den Schlüssel zurück! · Gib das Buch zurück! — وبعد الفعل الناقص يلتئم المصدر في آخر الجملة: Man muss den Schlüssel vor elf Uhr zurückgeben (الوحدة 8). وabfahren كذلك: Der Zug fährt von Gleis zwei ab — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Geben Sie den Schlüssel zurück! · Man muss den Schlüssel zurückgeben. · Der Zug fährt von Gleis zwei ab.",
+          "ar": "أعيدوا المفتاح! · يجب إعادة المفتاح · القطار ينطلق من الرصيف اثنين"
+        },
+        "exercise": {
+          "q": "___ Sie bitte das Buch ___! (zurückgeben — الأمر مع Sie)",
+          "a": "Geben Sie bitte das Buch zurück!"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Doppelzimmer~~ (مفرد) · ~~der Bad~~ · ~~die Internet~~ · ~~ein Zimmer mit Blick auf dem Park~~ · ~~viele Information~~",
+          "ar": "das Doppelzimmer · das Bad · das Internet · der Blick · die Information — وBlick auf + أكوزاتيف (auf den Park)"
+        },
+        "whyArabicSpeakerFails": "«غرفة» و«إنترنت» و«معلومة» تحمل جنس العربية، فيختار المتعلم die لها — والألمانية: das Zimmer وكل مركّب ينتهي به (das Doppelzimmer · das Einzelzimmer — الجنس من آخر كلمة، الوحدة 6)، das Bad · das Internet محايدان، der Blick مذكر، وdie Information مؤنث لأن ‑tion مؤنث دائماً (كـdie Rezeption) وجمعها ‑en: viele Informationen. وبعد Blick يأتي auf بالأكوزاتيف لأن النظرة «تتجه»: ein Blick auf den Park — لا dem — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "das Doppelzimmer · das Bad · das Internet · ein Zimmer mit Blick auf den Park · viele Informationen",
+          "ar": "الغرفة المزدوجة · الحمّام · الإنترنت · غرفة بإطلالة على المتنزّه · معلومات كثيرة"
+        },
+        "exercise": {
+          "q": "Ich möchte ein Zimmer mit Blick auf ___ Park. (den/dem/der)",
+          "a": "den"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "gleis",
+      "rezeption",
+      "doppelzimmer",
+      "einzelzimmer",
+      "aussicht",
+      "bad",
+      "buchen",
+      "empfang",
+      "halle",
+      "verspaetung",
+      "verpassen",
+      "zurueckgeben",
+      "blick",
+      "internet",
+      "information"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Verspaetung",
+      "https://www.duden.de/rechtschreibung/verpassen",
+      "https://www.duden.de/rechtschreibung/zur%C3%BCckgeben"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Versp%C3%A4tung"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-trennbare",
+    "ars-modal-fix"
+  ],
+  "audioManifestRefs": [
+    "word-gleis",
+    "word-rezeption",
+    "word-doppelzimmer",
+    "word-einzelzimmer",
+    "word-aussicht",
+    "word-bad",
+    "word-buchen",
+    "word-empfang",
+    "word-halle",
+    "word-verspaetung",
+    "word-verpassen",
+    "word-zurueckgeben",
+    "word-blick",
+    "word-internet",
+    "word-information"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 12 (Reise) — Am Bahnhof und im Hotel",
+    "goetheWordListOverlap": []
+  }
+}

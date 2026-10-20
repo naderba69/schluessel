@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-sein",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "sein: ich bin, du bist, er/sie ist, Sie sind",
+    "ar": "الفعل sein — «أنا يوسف» تحتاج فعلاً بالألمانية"
+  },
+  "payload": {
+    "topicAr": "الفعل sein (يكون): لا جملة بلا فعل",
+    "sceneAr": "أول يوم في دورة اللغة: يوسف يعرّف بنفسه، ولينا زميلته في الصف جديدة مثله، والمعلمة تخاطب يوسف باحترام.",
+    "examples": [
+      {
+        "de": "Hallo! Ich bin Yusuf.",
+        "ar": "مرحباً! أنا يوسف."
+      },
+      {
+        "de": "Ich bin aus Tunesien.",
+        "ar": "أنا من تونس."
+      },
+      {
+        "de": "Du bist auch neu.",
+        "ar": "أنتِ جديدة أيضاً."
+      },
+      {
+        "de": "Lena ist aus Deutschland.",
+        "ar": "لينا من ألمانيا."
+      },
+      {
+        "de": "Sie sind aus Tunesien.",
+        "ar": "حضرتك من تونس. (المعلمة تخاطب يوسف باحترام)"
+      }
+    ],
+    "inferencePromptAr": "في العربية نقول «أنا يوسف» و«أنا من تونس» بلا فعل. انظر إلى الجمل الخمس: أي كلمة تأتي بعد ich؟ وبعد du؟ وبعد Lena؟ وبعد Sie؟ ماذا يحدث لهذه الكلمة مع كل شخص؟",
+    "ruleDe": "ich bin · du bist · er/sie ist · Sie sind",
+    "ruleAr": "الجملة الألمانية لا تكتمل بلا فعل: حيث تقول العربية «أنا يوسف» تقول الألمانية Ich bin Yusuf. والفعل sein (يكون) يتغيّر مع الشخص: ich bin (أنا) · du bist (أنتَ/أنتِ) · er/sie ist (هو/هي) · Sie sind (حضرتك).",
+    "contrastAr": "العربية تبني جملة اسمية بلا فعل («أنا من تونس»)، والألمانية لا تقبل جملة بلا فعل: حذف bin/bist/ist أشهر أخطاء العربي في أسبوعه الأول — «Ich Yusuf» خطأ، والصحيح Ich bin Yusuf (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "Sie بحرف كبير = حضرتك (مخاطبة باحترام) وفعلها sind؛ أما sie بحرف صغير = هي وفعلها ist.",
+      "صيغ الجمع (wir sind · ihr seid · sie sind) تأتي في درس لاحق.",
+      "للاسم تقول أيضاً heißen: Ich heiße Yusuf = Ich bin Yusuf — كلاهما صحيح."
+    ],
+    "beads": [
+      "Ich",
+      "bin",
+      "aus",
+      "Tunesien."
+    ],
+    "properNouns": [
+      "Yusuf",
+      "Lena"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u1-d1",
+    "a1-u1-d6",
+    "a1-u15-d1"
+  ]
+}

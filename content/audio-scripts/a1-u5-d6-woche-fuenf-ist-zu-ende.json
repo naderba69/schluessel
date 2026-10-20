@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d6-woche-fuenf-ist-zu-ende",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Woche fünf ist zu Ende! — Frühstück mit Ayşe",
+    "ar": "الأسبوع الخامس انتهى! — فطور عائشة ويوسف في المطعم: الطعام بلا أداة (Ich mag Fisch) · الطلب بـmöchte وeinen · Was für einen? · kein/nicht · satt · الدفع والبقشيش"
+  },
+  "usedIn": [
+    "a1-u5-d6"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "wu-1",
+      "speaker": "ayse",
+      "text": "Hallo, Yusuf! Woche fünf ist zu Ende — heute Frühstück im Restaurant. Hast du Hunger?",
+      "direction": "عائشة تفتح — فطور نهاية الأسبوع · Hunger (u5-d1)"
+    },
+    {
+      "id": "wu-2",
+      "speaker": "yusuf",
+      "text": "Ja, ich habe Hunger und Durst. Wo ist die Speisekarte?",
+      "direction": "Hunger وDurst مع haben (مصيدة u5-d1/d5) · Speisekarte (u5-d2)"
+    },
+    {
+      "id": "wu-3",
+      "speaker": "ayse",
+      "text": "Hier. Frage eins: Was isst du gern — Fisch oder Fleisch?",
+      "direction": "السؤال الأول (u5-d1)"
+    },
+    {
+      "id": "wu-4",
+      "speaker": "yusuf",
+      "text": "Ich mag Fisch. Aber zum Frühstück esse ich Brot mit Butter und Marmelade.",
+      "direction": "Ich mag Fisch بلا أداة (مصيدة u5-d1) · Frühstück (u5-d3)"
+    },
+    {
+      "id": "wu-5",
+      "speaker": "ayse",
+      "text": "Und möchtest du zum Frühstück auch ein Ei, Yusuf?",
+      "direction": "ein Ei — الشيء الواحد بأداة"
+    },
+    {
+      "id": "wu-6",
+      "speaker": "yusuf",
+      "text": "Ja, ich esse ein Ei. Und du? Was möchtest du?",
+      "direction": "يقلب السؤال بـmöchte (u5-d3)"
+    },
+    {
+      "id": "wu-7",
+      "speaker": "ayse",
+      "text": "Ich möchte ein Brötchen mit Käse und einen Tee.",
+      "direction": "ein Brötchen · einen Tee (مفعول مذكر، u5-d2)"
+    },
+    {
+      "id": "wu-8",
+      "speaker": "yusuf",
+      "text": "Einen Tee? Im Glas, natürlich! Was für einen Tee?",
+      "direction": "Was für einen Tee? (u5-d3) · im Glas"
+    },
+    {
+      "id": "wu-9",
+      "speaker": "ayse",
+      "text": "Einen Tee mit Milch. Und du? Was trinkst du?",
+      "direction": "Tee mit Milch (u5-d2)"
+    },
+    {
+      "id": "wu-10",
+      "speaker": "yusuf",
+      "text": "Ich trinke einen Kaffee ohne Zucker. Mit Zucker trinke ich den Kaffee nicht.",
+      "direction": "ohne Zucker (u5-d5) · den Kaffee nicht (نفي المعيّن u5-d5)"
+    },
+    {
+      "id": "wu-11",
+      "speaker": "ayse",
+      "text": "Frage zwei: Hier ist kein Löffel! Und du?",
+      "direction": "kein Löffel (u5-d4)"
+    },
+    {
+      "id": "wu-12",
+      "speaker": "yusuf",
+      "text": "Ich habe keinen Löffel — und keine Gabel. Nicht «nicht Löffel»!",
+      "direction": "keinen Löffel · keine Gabel — لا nicht Löffel (مصيدة u5-d4)"
+    },
+    {
+      "id": "wu-13",
+      "speaker": "ayse",
+      "text": "Genau! Und: Die Suppe ist nicht scharf. — kein oder nicht?",
+      "direction": "nicht scharf (u5-d4)"
+    },
+    {
+      "id": "wu-14",
+      "speaker": "yusuf",
+      "text": "Nicht. Keine Suppe, aber: nicht scharf.",
+      "direction": "يميّز kein للاسم وnicht للصفة"
+    },
+    {
+      "id": "wu-15",
+      "speaker": "ayse",
+      "text": "Toll. Und jetzt: Bist du satt?",
+      "direction": "satt (u5-d3)"
+    },
+    {
+      "id": "wu-16",
+      "speaker": "yusuf",
+      "text": "Ja, ich bin satt — nicht «ich habe satt»! Ich möchte nichts.",
+      "direction": "ich bin satt لا habe satt (مصيدة u5-d3) · nichts (u5-d4)"
+    },
+    {
+      "id": "wu-17",
+      "speaker": "ayse",
+      "text": "Also zahlen wir. Zahlen, bitte! Bar oder mit Karte?",
+      "direction": "Zahlen, bitte! · bar / mit Karte (u5-d2)"
+    },
+    {
+      "id": "wu-18",
+      "speaker": "yusuf",
+      "text": "Ich zahle bar: acht Euro und ein Euro Trinkgeld.",
+      "direction": "zahle bar · Trinkgeld (u5-d4)"
+    },
+    {
+      "id": "wu-19",
+      "speaker": "ayse",
+      "text": "Super! Das Frühstück schmeckt, und die Woche ist zu Ende.",
+      "direction": "schmecken (u5-d3) — نهاية الأسبوع"
+    },
+    {
+      "id": "wu-20",
+      "speaker": "yusuf",
+      "text": "Ja! Bis morgen, Ayşe — und guten Appetit zum Mittagessen!",
+      "direction": "وداع · Guten Appetit · Mittagessen (u5-d3)"
+    }
+  ]
+}

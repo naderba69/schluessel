@@ -1,0 +1,5 @@
+# تبعيات Python للصوت (D37 · D189): التوليد والتدقيق والقياس — مثبَّتة الإصدار لتتطابق فونيمات espeak بين الصندوق وCI.
+#   pip3 install --break-system-packages -r tools/requirements.txt
+piper-tts==1.8.0
+soundfile==0.14.0
+numpy==2.4.6

@@ -1,0 +1,825 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u7-d1",
+  "level": "A1",
+  "unit": 7,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Um sieben wache ich auf. Mein Handy weckt mich. Am Abend bin ich immer müde.",
+    "ar": "تصف صباحك ويومك في ثلاث جمل على الأقل: متى تستيقظ ومن يوقظك (um sieben · am Morgen)، وكم مرة (immer · oft)، وما يفعله أغلب الناس (die meisten Leute) — ومتى تذهب لتنام بلا zu: Um elf gehe ich schlafen."
+  },
+  "canDoDaily": [
+    "يصف صباحه بقطع اليوم (Um sieben wache ich auf. · Mein Handy weckt mich. · Ich dusche immer am Morgen. · Ich ziehe mich an.) ويفرّق duschen (تحت الدُش) من baden (في الحوض).",
+    "يقول متى وكم مرة (am Abend · aber in der Nacht · immer · oft) وما يفعله أغلب الناس (Die meisten Leute schlafen in der Nacht.)، ومتى يذهب لينام بلا zu (Um elf gehe ich schlafen.)."
+  ],
+  "warmup": {
+    "cardIds": [
+      "uhr",
+      "morgen",
+      "abend"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أستيقظ في السابعة» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Um sieben wache ich auf.",
+          "Um sieben aufwache ich.",
+          "Um sieben ich wache auf."
+        ],
+        "answer": "Um sieben wache ich auf.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "aufwachen",
+      "schlafen",
+      "duschen",
+      "anziehen",
+      "muede",
+      "pause",
+      "wecker",
+      "alltag",
+      "baden",
+      "anfangen",
+      "wecken",
+      "weg",
+      "firma",
+      "immer",
+      "meisten"
+    ],
+    "grammarArsenalIds": [
+      "ars-tagesablauf"
+    ],
+    "storySentenceIds": [
+      "story-a1-u7-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-u",
+      "ch-ach-laut",
+      "vowel-long-short",
+      "z",
+      "double-consonant",
+      "auslaut-g",
+      "r-uvular"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Um sieben ___ ich auf. (أستيقظ)",
+            "a": "wache",
+            "why": "aufwachen في الجملة: wache … auf — الفعل ثانياً بعد الوقت وauf في آخر الجملة (قطعة)."
+          },
+          {
+            "q": "Mein Handy ___ mich. (يوقظني)",
+            "a": "weckt",
+            "why": "wecken بمفعول: das Handy weckt mich = الهاتف يوقظني — لا aufwachen (بلا مفعول)."
+          },
+          {
+            "q": "Am Abend bin ich ___. (متعب)",
+            "a": "müde",
+            "why": "müde صفة بعد bin كما «أنا تعبان»: Am Abend bin ich müde."
+          },
+          {
+            "q": "Ich dusche ___ am Morgen. (دائماً)",
+            "a": "immer",
+            "why": "immer = دائماً بعد الفعل: Ich dusche immer am Morgen."
+          },
+          {
+            "q": "Die ___ Leute schlafen in der Nacht. (أغلب)",
+            "a": "meisten",
+            "why": "die meisten = أغلب: die أولاً ثم meisten ثم الاسم الجمع — والفعل جمع (schlafen)."
+          },
+          {
+            "q": "Am Abend gehe ich früh ___. (أنام)",
+            "a": "schlafen",
+            "why": "gehen + فعلٌ ثانٍ في آخر الجملة بلا zu: Ich gehe früh schlafen."
+          },
+          {
+            "q": "Ich ___ mich an. (أرتدي ملابسي)",
+            "a": "ziehe",
+            "why": "sich anziehen: Ich ziehe mich an — mich لا تسقط، وan في آخر الجملة."
+          },
+          {
+            "q": "Die Schule ___ um halb acht an. (تبدأ)",
+            "a": "fängt",
+            "why": "anfangen مع die Schule (هي): fängt … an — بـä تُحفظ مع الفعل."
+          },
+          {
+            "q": "Um zehn habe ich eine ___. (استراحة)",
+            "a": "Pause",
+            "why": "die Pause = الاستراحة: eine Pause — والجمع die Pausen."
+          },
+          {
+            "q": "Mein ___ ist kurz: zehn Minuten. (الطريق)",
+            "a": "Weg",
+            "why": "der Weg = الطريق (e طويلة) — غير weg (ضاع، e قصيرة)."
+          },
+          {
+            "q": "Meine Mutter fängt um sieben in der ___ an. (الشركة)",
+            "a": "Firma",
+            "why": "die Firma = الشركة: in der Firma (أين؟ die ← der)."
+          },
+          {
+            "q": "Am Sonntag ___ ich. (أستحمّ في الحوض)",
+            "a": "bade",
+            "why": "baden = في حوض الاستحمام (أو في البحر): ich bade — وتحت الدُش ich dusche."
+          }
+        ],
+        "interleavedWith": [
+          "handy",
+          "abend",
+          "leute",
+          "nacht",
+          "schule",
+          "mutter"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "mo-1",
+            "speakText": "Yusuf, die Aufgabe heute ist unser Morgen. Also: Wann wachst du auf?",
+            "q": "استمع: ما مهمة اليوم؟",
+            "choices": [
+              "أن يصفا صباحهما",
+              "أن يرتّبا غرفتهما",
+              "أن يتكلّما عن أسرتهما"
+            ],
+            "a": "أن يصفا صباحهما",
+            "why": "die Aufgabe heute ist unser Morgen = مهمة اليوم صباحنا · Wann wachst du auf? = متى تستيقظ؟"
+          },
+          {
+            "audioId": "mo-4",
+            "speakText": "Nein, das Handy ist mein Wecker. Und du?",
+            "q": "استمع: ما منبّه يوسف؟",
+            "choices": [
+              "هاتفه",
+              "ساعة قديمة",
+              "أمه"
+            ],
+            "a": "هاتفه",
+            "why": "das Handy ist mein Wecker = الهاتف منبّهي — der Wecker = المنبّه."
+          },
+          {
+            "audioId": "mo-5",
+            "speakText": "Um halb sieben — meine Mutter weckt mich. Sie fängt um sieben in der Firma an.",
+            "q": "استمع: من يوقظ لينا، ولماذا في هذا الوقت؟",
+            "choices": [
+              "أمها — لأنها تبدأ عملها في الشركة في السابعة",
+              "أخوها — لأنه يبدأ المدرسة في السابعة",
+              "منبّهها — لأن الدورة تبدأ في السابعة"
+            ],
+            "a": "أمها — لأنها تبدأ عملها في الشركة في السابعة",
+            "why": "meine Mutter weckt mich = أمي توقظني · Sie fängt um sieben in der Firma an = تبدأ في السابعة في الشركة."
+          },
+          {
+            "audioId": "mo-6",
+            "speakText": "Um sieben schon? Sie arbeitet viel!",
+            "q": "استمع: ماذا يقول يوسف عن أم لينا؟",
+            "choices": [
+              "إنها تعمل كثيراً",
+              "إنها تنام طويلاً",
+              "إنها تعمل قليلاً"
+            ],
+            "a": "إنها تعمل كثيراً",
+            "why": "Sie arbeitet viel! = تعمل كثيراً — Um sieben schon? = في السابعة بالفعل؟"
+          },
+          {
+            "audioId": "mo-7",
+            "speakText": "Ja. Und meine Brüder? Die schlafen immer lange!",
+            "q": "استمع: ماذا يفعل أخوا لينا؟",
+            "choices": [
+              "ينامان طويلاً دائماً",
+              "يستيقظان مبكراً دائماً",
+              "يستحمّان طويلاً"
+            ],
+            "a": "ينامان طويلاً دائماً",
+            "why": "Die schlafen immer lange = هما ينامان طويلاً دائماً (Die = هما للإشارة)."
+          },
+          {
+            "audioId": "mo-8",
+            "speakText": "Die meisten Jungen schlafen gern lange — ich auch!",
+            "q": "استمع: ماذا يقول يوسف؟",
+            "choices": [
+              "أغلب الأولاد يحبّون النوم طويلاً، وهو أيضاً",
+              "كل الأولاد يستيقظون مبكراً، وهو أيضاً",
+              "أغلب الأولاد يحبّون النوم طويلاً، لكنه لا"
+            ],
+            "a": "أغلب الأولاد يحبّون النوم طويلاً، وهو أيضاً",
+            "why": "Die meisten Jungen schlafen gern lange = أغلب الأولاد يحبّون النوم طويلاً · ich auch = وأنا أيضاً."
+          },
+          {
+            "audioId": "mo-10",
+            "speakText": "Ja, ich dusche immer am Morgen — und ich trinke Tee.",
+            "q": "استمع: ماذا يفعل يوسف كل صباح؟",
+            "choices": [
+              "يستحمّ تحت الدُش ويشرب الشاي",
+              "يستحمّ في الحوض ويشرب القهوة",
+              "يشرب الشاي ولا يستحمّ"
+            ],
+            "a": "يستحمّ تحت الدُش ويشرب الشاي",
+            "why": "ich dusche immer am Morgen = أستحمّ تحت الدُش دائماً في الصباح · ich trinke Tee = أشرب الشاي."
+          },
+          {
+            "audioId": "mo-11",
+            "speakText": "Im Glas, ich weiß!",
+            "q": "استمع: ماذا تعرف لينا؟",
+            "choices": [
+              "أنه يشرب الشاي في كأس",
+              "أنه يشرب القهوة في فنجان",
+              "أنه لا يشرب الشاي"
+            ],
+            "a": "أنه يشرب الشاي في كأس",
+            "why": "Im Glas, ich weiß! = في كأس، أعرف! — كما في تونس."
+          },
+          {
+            "audioId": "mo-12",
+            "speakText": "Genau! Und du? Badest du am Morgen?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل تستحمّ لينا في الحوض صباحاً",
+              "هل تستحمّ لينا تحت الدُش صباحاً",
+              "هل تشرب لينا الشاي صباحاً"
+            ],
+            "a": "هل تستحمّ لينا في الحوض صباحاً",
+            "why": "Badest du am Morgen? = هل تستحمّين في الحوض صباحاً؟ — baden للحوض."
+          },
+          {
+            "audioId": "mo-13",
+            "speakText": "Nein, ich dusche am Abend. Baden? Nur am Sonntag!",
+            "q": "استمع: متى تستحمّ لينا؟",
+            "choices": [
+              "تحت الدُش مساءً، وفي الحوض يوم الأحد فقط",
+              "تحت الدُش صباحاً، وفي الحوض يوم الأحد",
+              "في الحوض كل مساء"
+            ],
+            "a": "تحت الدُش مساءً، وفي الحوض يوم الأحد فقط",
+            "why": "ich dusche am Abend = أستحمّ تحت الدُش مساءً · Baden? Nur am Sonntag! = الحوض؟ يوم الأحد فقط!"
+          },
+          {
+            "audioId": "mo-14",
+            "speakText": "Und wann ziehst du dich an?",
+            "q": "استمع: عمّ يسأل يوسف الآن؟",
+            "choices": [
+              "متى ترتدي لينا ملابسها",
+              "متى تستيقظ لينا",
+              "متى تنام لينا"
+            ],
+            "a": "متى ترتدي لينا ملابسها",
+            "why": "Wann ziehst du dich an? = متى ترتدين ملابسك؟ (sich anziehen)."
+          },
+          {
+            "audioId": "mo-15",
+            "speakText": "Um sieben. Um halb acht fängt die Schule an.",
+            "q": "استمع: متى تبدأ المدرسة؟",
+            "choices": [
+              "في السابعة والنصف",
+              "في السابعة",
+              "في الثامنة والنصف"
+            ],
+            "a": "في السابعة والنصف",
+            "why": "Um halb acht fängt die Schule an = في السابعة والنصف تبدأ المدرسة (halb acht = 7:30)."
+          },
+          {
+            "audioId": "mo-16",
+            "speakText": "Und um zwölf hast du Pause, oder?",
+            "q": "استمع: ماذا يقول يوسف عن الثانية عشرة؟",
+            "choices": [
+              "إنها وقت استراحة لينا",
+              "إنها وقت المدرسة",
+              "إنها وقت النوم"
+            ],
+            "a": "إنها وقت استراحة لينا",
+            "why": "um zwölf hast du Pause, oder? = في الثانية عشرة استراحتك، أليس كذلك؟"
+          },
+          {
+            "audioId": "mo-17",
+            "speakText": "Ja, eine Stunde. Das ist die Zeit für den Kurs!",
+            "q": "استمع: كم استراحة لينا، ولماذا هي مهمة؟",
+            "choices": [
+              "ساعة — وفيها الدورة",
+              "نصف ساعة — وفيها الغداء",
+              "ساعتان — وفيها النوم"
+            ],
+            "a": "ساعة — وفيها الدورة",
+            "why": "eine Stunde = ساعة · Das ist die Zeit für den Kurs = هذا وقت الدورة."
+          },
+          {
+            "audioId": "mo-18",
+            "speakText": "Mein Weg ist kurz: Der Computer steht auf dem Schreibtisch!",
+            "q": "استمع: لماذا طريق يوسف إلى الدورة قصير؟",
+            "choices": [
+              "لأن الحاسوب على مكتبه",
+              "لأن الدورة قريبة من بيته",
+              "لأنه يذهب بالحافلة"
+            ],
+            "a": "لأن الحاسوب على مكتبه",
+            "why": "Mein Weg ist kurz = طريقي قصير · Der Computer steht auf dem Schreibtisch = الحاسوب على المكتب."
+          },
+          {
+            "audioId": "mo-19",
+            "speakText": "Und am Abend? Wann gehst du schlafen?",
+            "q": "استمع: عمّ تسأل لينا في النهاية؟",
+            "choices": [
+              "متى يذهب يوسف لينام",
+              "متى يستيقظ يوسف",
+              "متى يأكل يوسف"
+            ],
+            "a": "متى يذهب يوسف لينام",
+            "why": "Wann gehst du schlafen? = متى تذهب لتنام؟ — gehen + schlafen بلا zu."
+          },
+          {
+            "audioId": "mo-20",
+            "speakText": "Um elf. Am Abend bin ich immer müde — so ist mein Alltag!",
+            "q": "استمع: متى ينام يوسف، وكيف هو مساءً؟",
+            "choices": [
+              "في الحادية عشرة، ومتعب دائماً",
+              "في العاشرة، ومتعب دائماً",
+              "في الحادية عشرة، ونشيط دائماً"
+            ],
+            "a": "في الحادية عشرة، ومتعب دائماً",
+            "why": "Um elf = في الحادية عشرة · Am Abend bin ich immer müde = في المساء أنا متعب دائماً · so ist mein Alltag = هكذا يومي."
+          }
+        ],
+        "interleavedWith": [
+          "handy",
+          "mutter",
+          "bruder",
+          "tee",
+          "glas",
+          "schule",
+          "computer",
+          "abend"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "wache",
+              "Am",
+              "auf.",
+              "ich",
+              "Sonntag",
+              "spät"
+            ],
+            "a": "Am Sonntag wache ich spät auf.",
+            "why": "الوقت أولاً (Am Sonntag) ثم wache ثانياً ثم ich ثم spät — وauf في الآخر."
+          },
+          {
+            "tokens": [
+              "weckt",
+              "Der",
+              "mich.",
+              "Wecker"
+            ],
+            "a": "Der Wecker weckt mich.",
+            "why": "Der Wecker فاعل ثم weckt ثم المفعول mich — wecken بمفعول."
+          },
+          {
+            "tokens": [
+              "ist",
+              "Die",
+              "kurz.",
+              "Pause"
+            ],
+            "a": "Die Pause ist kurz.",
+            "why": "Die Pause ثم ist ثم الصفة kurz."
+          },
+          {
+            "tokens": [
+              "trinken",
+              "Die",
+              "Leute",
+              "meisten",
+              "Tee."
+            ],
+            "a": "Die meisten Leute trinken Tee.",
+            "why": "Die meisten Leute (die أولاً) ثم trinken (جمع) ثم Tee."
+          },
+          {
+            "tokens": [
+              "gehe",
+              "Um",
+              "schlafen.",
+              "ich",
+              "zehn"
+            ],
+            "a": "Um zehn gehe ich schlafen.",
+            "why": "Um zehn أولاً ثم gehe ثم ich، وschlafen في الآخر بلا zu."
+          },
+          {
+            "tokens": [
+              "dusche",
+              "Ich",
+              "Abend.",
+              "immer",
+              "am"
+            ],
+            "a": "Ich dusche immer am Abend.",
+            "why": "Ich dusche ثم immer بعد الفعل ثم الوقت am Abend."
+          }
+        ],
+        "interleavedWith": [
+          "sonntag",
+          "leute",
+          "tee",
+          "abend"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "mo-2",
+            "speakText": "Um sieben. Mein Handy weckt mich.",
+            "a": "Um sieben. Mein Handy weckt mich.",
+            "why": "Um بحرف كبير أول الجملة · Handy بـy في آخره · weckt بـck و‑t · mich بـch بعد i."
+          },
+          {
+            "audioId": "mo-3",
+            "speakText": "Du hast keinen Wecker?",
+            "a": "Du hast keinen Wecker?",
+            "why": "keinen بـei «اي» و‑en للمفعول المذكر · Wecker بحرف كبير وck."
+          },
+          {
+            "audioId": "mo-9",
+            "speakText": "Duschst du am Morgen?",
+            "a": "Duschst du am Morgen?",
+            "why": "Duschst: sch كاملة ثم st · Morgen بحرف كبير بعد am."
+          },
+          {
+            "audioId": "word-aufwachen",
+            "speakText": "aufwachen.",
+            "a": "aufwachen",
+            "why": "aufwachen كلمة واحدة في القاموس: auf + wachen — وch بعد a تُنطق «خ»."
+          },
+          {
+            "audioId": "word-anziehen",
+            "speakText": "anziehen.",
+            "a": "anziehen",
+            "why": "anziehen: an + ziehen — z «تس» وie طويلة وh صامتة."
+          },
+          {
+            "audioId": "word-muede",
+            "speakText": "müde.",
+            "a": "müde",
+            "why": "müde: ü بشفتين مدوّرتين و‑de في آخرها."
+          },
+          {
+            "audioId": "word-alltag",
+            "speakText": "Alltag.",
+            "a": "Alltag",
+            "why": "Alltag بحرف كبير: All + Tag — ll مضاعفة وg تُنطق k في آخرها."
+          },
+          {
+            "audioId": "word-immer",
+            "speakText": "immer.",
+            "a": "immer",
+            "why": "immer: mm مضاعفة بعد i قصيرة، و‑er خفيفة."
+          }
+        ],
+        "interleavedWith": [
+          "handy",
+          "morgen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Mein Morgen: Um sieben wache ich auf. Ich dusche immer am Morgen.",
+        "ar": "تصف صباحك لزميلك في ثلاث جمل على الأقل وتسأله عن صباحه"
+      },
+      "situation": {
+        "de": "Wann wachst du auf? Wer weckt dich? Wann gehst du schlafen?",
+        "ar": "في الدورة: يسأل كلٌّ منكما الآخر عن يومه: Wann wachst du auf? · Wer weckt dich? · Duschst du am Morgen oder am Abend? · Wann gehst du schlafen? — ويجيب بجمل كاملة تبدأ بالوقت (Um sieben wache ich auf.)، ثم يقول كلٌّ منكما ما يفعله أغلب الناس في بلده: Die meisten Leute … — ثم تتبادلان."
+      },
+      "successCriteria": [
+        "ثلاث جمل عن صباحك على الأقل تبدأ بالوقت والفعل ثانياً (Um sieben wache ich auf. · Am Morgen dusche ich.) — وفيها wecken بمفعول (Mein Handy weckt mich.).",
+        "جملة بـ immer أو oft، وجملة بـ die meisten + اسمٍ جمع، وسؤال Wann gehst du schlafen? — بلا zu."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أغلب الأطفال ينامون كثيراً»؟",
+            "choices": [
+              "Die meisten Kinder schlafen viel.",
+              "Meisten die Kinder schlafen viel.",
+              "Die meisten Kinder schläft viel."
+            ],
+            "a": "Die meisten Kinder schlafen viel.",
+            "why": "die meisten قبل الاسم الجمع، وdie أولاً لا قبل Kinder · والفعل جمع schlafen — schläft للمفرد."
+          },
+          {
+            "q": "baden = ؟",
+            "choices": [
+              "يستحمّ في الحوض (أو يسبح)",
+              "يستحمّ تحت الدُش",
+              "يغسل يديه"
+            ],
+            "a": "يستحمّ في الحوض (أو يسبح)",
+            "why": "baden = في حوض الاستحمام (أو في البحر) · duschen = تحت الدُش."
+          },
+          {
+            "q": "«تذهب لينا لتنام في العاشرة»؟",
+            "choices": [
+              "Lena geht um zehn schlafen.",
+              "Lena geht um zehn zu schlafen.",
+              "Lena gehen um zehn schlafen."
+            ],
+            "a": "Lena geht um zehn schlafen.",
+            "why": "gehen + schlafen في آخر الجملة بلا zu · وgeht مع Lena (هي)."
+          },
+          {
+            "q": "wecken = ؟",
+            "choices": [
+              "يوقظ",
+              "يستيقظ",
+              "ينام"
+            ],
+            "a": "يوقظ",
+            "why": "wecken = يوقظ (بمفعول) · aufwachen = يستيقظ · schlafen = ينام."
+          },
+          {
+            "q": "«الاستراحات» (الجمع مع الأداة)؟",
+            "a": "die Pausen",
+            "why": "die Pause ← die Pausen: ‑n بعد e."
+          },
+          {
+            "q": "«أستيقظ في السادسة» — ابدأ بـ Um (sechs · wache … auf)",
+            "a": "Um sechs wache ich auf.",
+            "why": "الوقت أولاً ثم wache ثانياً ثم ich — وauf في آخر الجملة."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أغلب الشركات صغيرة»؟",
+            "choices": [
+              "Die meisten Firmen sind klein.",
+              "Meisten die Firmen sind klein.",
+              "Die meisten Firmen ist klein."
+            ],
+            "a": "Die meisten Firmen sind klein.",
+            "why": "die meisten + الجمع die Firmen (die Firma ← die Firmen) والفعل sind."
+          },
+          {
+            "q": "«المنبّه يوقظ أخي»؟",
+            "choices": [
+              "Der Wecker weckt meinen Bruder.",
+              "Der Wecker weckt mein Bruder.",
+              "Der Wecker wecken meinen Bruder."
+            ],
+            "a": "Der Wecker weckt meinen Bruder.",
+            "why": "wecken بمفعول: meinen Bruder (der ← meinen) · وweckt مع der Wecker (هو)."
+          },
+          {
+            "q": "«في الظهر أنا متعب دائماً»؟",
+            "choices": [
+              "Am Mittag bin ich immer müde.",
+              "Am Mittag habe ich immer müde.",
+              "Am Mittag ich bin immer müde."
+            ],
+            "a": "Am Mittag bin ich immer müde.",
+            "why": "müde بعد bin (sein) كما «أنا تعبان» — لا habe · والفعل ثانياً بعد الوقت."
+          },
+          {
+            "q": "aufwachen = ؟",
+            "choices": [
+              "يستيقظ",
+              "يوقظ",
+              "يرتدي"
+            ],
+            "a": "يستيقظ",
+            "why": "aufwachen = يستيقظ (بلا مفعول) · wecken = يوقظ · anziehen = يرتدي."
+          },
+          {
+            "q": "«الطرق» (der Weg — الجمع مع الأداة)؟",
+            "a": "die Wege",
+            "why": "der Weg ← die Wege: ‑e في الجمع."
+          },
+          {
+            "q": "«أذهب لأنام في العاشرة والنصف» — ابدأ بـ Um (halb elf · gehe … schlafen)",
+            "a": "Um halb elf gehe ich schlafen.",
+            "why": "الوقت أولاً (halb elf) ثم gehe ثم ich، وschlafen في الآخر بلا zu."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أغلب الغرف هنا صغيرة»؟",
+            "choices": [
+              "Die meisten Zimmer hier sind klein.",
+              "Meisten die Zimmer hier sind klein.",
+              "Die meisten Zimmer hier ist klein."
+            ],
+            "a": "Die meisten Zimmer hier sind klein.",
+            "why": "die meisten + الجمع die Zimmer (كالمفرد) والفعل sind."
+          },
+          {
+            "q": "«أرتدي ملابسي في السابعة»؟",
+            "choices": [
+              "Um sieben ziehe ich mich an.",
+              "Um sieben anziehe ich mich.",
+              "Um sieben ich ziehe mich an."
+            ],
+            "a": "Um sieben ziehe ich mich an.",
+            "why": "ziehe ثانياً بعد الوقت ثم ich mich، وan في الآخر."
+          },
+          {
+            "q": "«تستحمّ لينا في الحوض يوم الأحد»؟",
+            "choices": [
+              "Am Sonntag badet Lena.",
+              "Am Sonntag Lena badet.",
+              "Am Sonntag badest Lena."
+            ],
+            "a": "Am Sonntag badet Lena.",
+            "why": "badet مع Lena (هي) ثانياً بعد الوقت · badest مع du."
+          },
+          {
+            "q": "anfangen = ؟",
+            "choices": [
+              "يبدأ",
+              "ينام",
+              "يرتدي"
+            ],
+            "a": "يبدأ",
+            "why": "anfangen = يبدأ (Der Kurs fängt an.) · schlafen = ينام · anziehen = يرتدي."
+          },
+          {
+            "q": "«المنبّهات» (der Wecker — الجمع مع الأداة)؟",
+            "a": "die Wecker",
+            "why": "بلا نهاية: der Wecker ← die Wecker (‑er في الآخر) — الأداة وحدها تقول الجمع."
+          },
+          {
+            "q": "«تبدأ الدورة في الثانية عشرة» — ابدأ بـ Um (zwölf · fängt … an)",
+            "a": "Um zwölf fängt der Kurs an.",
+            "why": "Um zwölf ثم fängt ثانياً ثم der Kurs، وan في الآخر."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Um sieben wache ich auf. · Mein Wecker weckt mich. · Ich dusche immer am Morgen. · Ich ziehe mich an. · Die Schule fängt um halb acht an. · Die meisten Leute schlafen in der Nacht. · Um elf gehe ich schlafen. · Am Abend bin ich müde.",
+      "ar": "أفعال يومك قطعٌ: aufwachen (أستيقظ — بلا مفعول) · wecken (أُوقظ — بمفعول: Mein Wecker weckt mich.) · duschen (تحت الدُش) · baden (في الحوض) · sich anziehen (Ich ziehe mich an.) · anfangen (Der Kurs fängt an.) — وauf/an في آخر الجملة. متى؟ um sieben · am Morgen · am Abend · aber in der Nacht — والفعل ثانياً بعد الوقت. كم مرة؟ immer · oft بعد الفعل. die meisten (أغلب) قبل اسمٍ جمع: Die meisten Leute … — وgehen + فعلٌ ثانٍ في الآخر بلا zu: Um elf gehe ich schlafen. ومعها: die Pause · der Wecker · müde · schlafen · der Alltag · der Weg · die Firma."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Meisten die Leute trinken am Morgen Kaffee.~~",
+          "ar": "die قبل meisten لا قبل الاسم"
+        },
+        "whyArabicSpeakerFails": "في «معظم الناس» و«أغلب الناس» «ال» على الكلمة الثانية وحدها و«معظم» بلا «ال» (إضافة)، وكذلك most people الإنجليزية بلا the — فيكتب المتعلم ~~Meisten die Leute~~ أو ~~Meisten Leute~~. والألمانية تضع die أولاً للعبارة كلها: die meisten Leute — والفعل بعدها جمع (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Die meisten Leute trinken am Morgen Kaffee.",
+          "ar": "أغلب الناس يشربون القهوة في الصباح."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Meisten Jungen schlafen gern lange.~~",
+          "a": "Die meisten Jungen schlafen gern lange."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich bade jeden Morgen.~~",
+          "ar": "تحت الدُش: duschen"
+        },
+        "whyArabicSpeakerFails": "في الفصحى «أستحمّ» للدُش والحوض معاً، والقاموس يترجمها baden — فيقولها المتعلم للدُش اليومي. والجملة المشطوبة صحيحة نحواً بمعنى آخر: أستحمّ في الحوض كل صباح (أو أسبح!) — فbaden للحوض والبحر، وduschen تحت الدُش. والعامية «نعمل دوش» والفرنسية se doucher تعينانك هنا (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich dusche jeden Morgen.",
+          "ar": "أستحمّ تحت الدُش كل صباح."
+        },
+        "exercise": {
+          "q": "صحّح (تحت الدُش): ~~Mein Bruder badet am Morgen.~~",
+          "a": "Mein Bruder duscht am Morgen."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich gehe zu schlafen.~~",
+          "ar": "gehen + المصدر بلا zu"
+        },
+        "whyArabicSpeakerFails": "«أذهبُ لأنام» باللام، وكذلك go to sleep الإنجليزية — فيضع المتعلم zu قبل الفعل الثاني. لكن الفعل الثاني بعد gehen يأتي في آخر الجملة بصيغة المصدر بلا zu، كما بعد möchte وwill (الوحدة 5): Ich gehe jetzt schlafen. · Ich möchte jetzt schlafen. (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich gehe jetzt schlafen.",
+          "ar": "أذهب الآن لأنام."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Um elf gehe ich zu schlafen.~~",
+          "a": "Um elf gehe ich schlafen."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "aufwachen",
+      "schlafen",
+      "duschen",
+      "anziehen",
+      "muede",
+      "pause",
+      "wecker",
+      "alltag",
+      "baden",
+      "anfangen",
+      "wecken",
+      "weg",
+      "firma",
+      "immer",
+      "meisten"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/aufwachen",
+      "https://www.duden.de/rechtschreibung/wecken",
+      "https://www.duden.de/rechtschreibung/baden",
+      "https://www.duden.de/rechtschreibung/duschen",
+      "https://www.duden.de/rechtschreibung/meist",
+      "https://www.duden.de/rechtschreibung/Firma"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/aufwachen",
+      "https://de.wiktionary.org/wiki/wecken",
+      "https://de.wiktionary.org/wiki/baden",
+      "https://de.wiktionary.org/wiki/meisten"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-tagesablauf"
+  ],
+  "audioManifestRefs": [
+    "word-aufwachen",
+    "word-schlafen",
+    "word-duschen",
+    "word-anziehen",
+    "word-muede",
+    "word-pause",
+    "word-wecker",
+    "word-alltag",
+    "word-baden",
+    "word-anfangen",
+    "word-wecken",
+    "word-weg",
+    "word-firma",
+    "word-immer",
+    "word-meisten"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Tagesablauf",
+    "goetheWordListOverlap": [
+      "schlafen",
+      "duschen",
+      "anziehen",
+      "muede",
+      "pause",
+      "baden",
+      "anfangen",
+      "wecken",
+      "weg",
+      "firma",
+      "immer",
+      "meisten"
+    ]
+  }
+}

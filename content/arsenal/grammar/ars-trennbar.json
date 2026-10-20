@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-trennbar",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Der Bus ist losgefahren. · Ich habe den Rucksack ausgepackt. · Ich habe mich angemeldet.",
+    "ar": "الماضي المركّب للأفعال المنفصلة: ge‑ تدخل بين الجزء والجذع (ein‑ge‑packt · mit‑ge‑bracht) · sein مع الحركة (ist losgefahren · ist zurückgekommen) وhaben مع المفعول · والأفعال بلا ge‑ (besichtigt · verpasst · reserviert) كما كانت"
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u12-d3"
+  ],
+  "payload": {
+    "topicAr": "اليوم تروي رحلتك بالماضي بأفعال الرحلة المنفصلة: Der Bus ist um sieben Uhr losgefahren. · Ich habe den Rucksack ausgepackt. · Ich habe Geschenke mitgebracht. · Wir haben die Fotos angesehen. · Ich habe mich für einen Kurs angemeldet. — ومعها كلمات اليوم: losfahren · zurückkommen · mitbringen · ansehen · mitnehmen · ausgeben · einpacken · auspacken · anmelden · aufpassen · mieten · planen.",
+    "sceneAr": "مكالمة الاثنين 13 أبريل — أول يوم مدرسة لكليهما: حافلة يوسف انطلقت السابعة ووصل الثامنة · فتح حقيبته مساء الأحد وأحضر هدايا من تونس · في الاستراحة شاهد الأصدقاء الصور · أنفق خمسين يورو فقط · أبوه استأجر سيارة هناك وخطّطوا النزهات · أخذ مظلته ولم تمطر · لينا سجّلت نفسها في دورة سباحة في مايو — والطبيبة: أسبوعان من الانتباه بعد.",
+    "examples": [
+      {
+        "de": "Der Bus ist um sieben Uhr losgefahren. · Ich bin um acht Uhr in der Schule angekommen.",
+        "ar": "انطلقت الحافلة السابعة · وصلتُ المدرسة الثامنة — los‑ge‑fahren · an‑ge‑kommen: ge‑ في الوسط، وsein لأنها حركة من مكان إلى مكان (الوحدة 11)"
+      },
+      {
+        "de": "Ich habe den Rucksack ausgepackt und Geschenke mitgebracht.",
+        "ar": "فتحتُ حقيبة الظهر وأحضرتُ هدايا — aus‑ge‑packt (منتظم: ‑t) · mit‑ge‑bracht (غير منتظم: bracht) — haben لأن لهما مفعولاً"
+      },
+      {
+        "de": "Wir haben die Fotos angesehen. · Ich habe nur fünfzig Euro ausgegeben.",
+        "ar": "شاهدنا الصور · أنفقتُ خمسين يورو فقط — an‑ge‑sehen · aus‑ge‑geben: الجذع كما في gesehen وgegeben (الوحدة 10) والجزء قبله"
+      },
+      {
+        "de": "Ich habe mich für einen Kurs angemeldet. · Mein Bruder ist um sechs Uhr zurückgekommen.",
+        "ar": "سجّلتُ نفسي في دورة · عاد أخي السادسة — an‑ge‑meldet مع mich بعد habe مباشرة · zurück‑ge‑kommen بـist (حركة عودة)"
+      },
+      {
+        "de": "Mein Vater hat ein Auto gemietet. · Wir haben alles geplant.",
+        "ar": "استأجر أبي سيارة · خطّطنا كل شيء — mieten وplanen بلا جزء منفصل ⇒ ge‑ في أول الكلمة كالمعتاد: ge‑mietet · ge‑plant"
+      },
+      {
+        "de": "Wir haben die Sehenswürdigkeiten besichtigt. · Ich habe den Zug nicht verpasst. · Meine Mutter hat das Hotel reserviert.",
+        "ar": "زرنا المعالم · لم يفتني القطار · حجزت أمي الفندق — بلا ge‑ أبداً: be‑ وver‑ لا تنفصلان (الوحدة 7) و‑ieren لا تأخذ ge‑"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في eingepackt وmitgebracht وangesehen: أين ge‑ — في أول الكلمة أم بعد الجزء؟ وقارن بـgemietet وgeplant: أين ge‑ هناك ولماذا؟ (2) losgefahren وzurückgekommen وangekommen جاءت مع ist — وausgepackt وmitgebracht مع habe: ما الفرق في المعنى؟ (3) besichtigt وverpasst وreserviert: هل فيها ge‑؟ ما المشترك في بداياتها ونهايتها؟ (4) في «Ich habe mich … angemeldet»: أين mich؟",
+    "ruleDe": "Der Bus ist losgefahren. · Ich bin angekommen. · Mein Bruder ist zurückgekommen. — Ich habe den Rucksack ausgepackt. · Ich habe den Koffer eingepackt. · Ich habe Geschenke mitgebracht. · Ich habe den Regenschirm mitgenommen. · Wir haben die Fotos angesehen. · Ich habe fünfzig Euro ausgegeben. · Ich habe gut aufgepasst. · Ich habe mich angemeldet. — Mein Vater hat ein Auto gemietet. · Wir haben alles geplant. — Wir haben die Sehenswürdigkeiten besichtigt. · Ich habe den Zug verpasst. · Sie hat das Hotel reserviert.",
+    "ruleAr": "الماضي المركّب (الوحدتان 10 و11) مع الأفعال المنفصلة (الوحدة 7) — ثلاث خطوات: (1) الشكل: الجزء المنفصل + ge‑ + جذع الماضي كلمةً واحدة: ein‑ge‑packt · aus‑ge‑packt · mit‑ge‑bracht · mit‑ge‑nommen · an‑ge‑sehen · aus‑ge‑geben · an‑ge‑meldet · auf‑ge‑passt · los‑ge‑fahren · zurück‑ge‑kommen · an‑ge‑kommen — الجذع هو ماضي الفعل الأصلي الذي تعرفه (gepackt · gebracht · genommen · gesehen · gegeben · gefahren · gekommen)، وge‑ تدخل بين الجزء والجذع لا قبل الجزء. (2) المساعد: sein مع الحركة من مكان إلى مكان (ist losgefahren · ist zurückgekommen · ist angekommen — كـist gefahren وist gekommen) وhaben مع ما له مفعول أو حدثٌ في مكانه (hat eingepackt · hat mitgebracht · hat angesehen · hat ausgegeben · hat aufgepasst) — والمنعكس مع haben وmich/dich/sich بعد المساعد مباشرة: Ich habe mich angemeldet. (3) ما لا جزء منفصل له يبقى كما تعلمت: ge‑ في الأول (gemietet · geplant)، وبلا ge‑ أبداً إذا بدأ بـbe‑/ver‑ أو انتهى بـ‑ieren (besichtigt · verpasst · reserviert · telefoniert). وترتيب الجملة واحد: المساعد ثانياً والمشاركة في الآخر: Ich habe gestern den Rucksack ausgepackt.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) جذع الماضي تعرفه أصلاً (gebracht · genommen · gesehen · gefahren) — فالمنفصل يضيف جزءاً قبله لا غير — عون. (2) قاعدة sein/haben هي نفسها من الوحدة 11: حركة ⇒ sein، مفعول ⇒ haben — الجزء لا يغيّرها — عون. (3) العربية تصوغ «أحضرتُ معي» بكلمتين (فعل + معي) كما تلصق الألمانية mit بالفعل — عون. وما يختلف ثلاثة: (1) «حزمتُ» في العربية كلمة واحدة بلا تركيب، فيضع المتعلم ge‑ في أول الكلمة كلها: ~~geeinpackt~~ · ~~gemitbracht~~ — والألمانية تدخلها بين الجزء والجذع: eingepackt · mitgebracht. (2) الجزء los/zurück/mit يوحي بالحركة فيختار المتعلم sein لكل ما فيه جزء: ~~Ich bin eingepackt~~ · ~~Ich bin mitgebracht~~ — والسؤال الوحيد: هل تغيّر مكانُ الفاعل؟ ist losgefahren نعم · hat eingepackt لا. (3) «سجّلتُ نفسي» فعلان في العربية فيحذف المتعلم mich أو يؤخّرها: ~~Ich habe angemeldet~~ · ~~Ich habe angemeldet mich~~ — والألمانية: Ich habe mich angemeldet — mich بعد habe مباشرة والمشاركة في الآخر — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "الجملة الفرعية التي يلتئم فيها الفعل المنفصل (… weil der Bus losgefahren ist) من المستوى A2 — اليوم الجملة الرئيسية وحدها: المساعد ثانياً والمشاركة آخراً.",
+      "الماضي البسيط (fuhr los · kam zurück) من المستوى A2 — اليوم الماضي المركّب وحده، وwar/hatte كما في الوحدة 11.",
+      "zu + المصدر مع المنفصل (einzupacken) من المستوى A2 — اليوم بعد الفعل الناقص المصدر متصلاً كما في الوحدة 8: Ich muss den Koffer einpacken.",
+      "sich anmelden اليوم مع ich وdu وer (mich · dich · sich) في الماضي المركّب — وباب الأفعال المنعكسة كاملاً (uns · euch · wir waschen uns) لاحقاً؛ وهنا aufpassen بلا مفعول: Ich habe gut aufgepasst."
+    ],
+    "beads": [
+      "Ich",
+      "habe",
+      "den",
+      "Rucksack",
+      "ausgepackt."
+    ],
+    "properNouns": []
+  }
+}

@@ -1,0 +1,783 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u5-d3",
+  "level": "A1",
+  "unit": 5,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Ich möchte einen Kuchen. — Was für einen Kuchen? Ich möchte ein Eis essen. Ich bin satt.",
+    "ar": "تقول ما تريد أن تأكله بلطف (Ich möchte …) مع اسمٍ أو مع فعلٍ في آخر الجملة، وتفرّق بين möchte المهذبة وwill الحادّة، وتسأل عن النوع (Was für ein …?) وتتكلم عن الوجبات الثلاث."
+  },
+  "canDoDaily": [
+    "يطلب طعاماً بلطف بـmöchte مع اسم أو مع فعل في آخر الجملة (Ich möchte einen Kuchen. · Ich möchte ein Eis essen.) ويعرف أن Ich will … للنادل حادّة.",
+    "يسأل عن النوع بـWas für ein/eine/einen …? ويجيب، ويتكلم عن الوجبات (zum Frühstück · Guten Appetit! · Ich bin satt)."
+  ],
+  "warmup": {
+    "cardIds": [
+      "mittag",
+      "abend",
+      "moegen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أودّ أن آكل آيس كريم» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Ich möchte ein Eis essen.",
+          "Ich möchte esse ein Eis.",
+          "Ich möchte essen ein Eis."
+        ],
+        "answer": "Ich möchte ein Eis essen.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "fruehstueck",
+      "mittagessen",
+      "abendessen",
+      "butter",
+      "marmelade",
+      "kuchen",
+      "eis",
+      "appetit",
+      "schmecken",
+      "satt",
+      "kartoffel",
+      "tomate",
+      "was-fuer-ein"
+    ],
+    "grammarArsenalIds": [
+      "ars-moechte-wollen"
+    ],
+    "storySentenceIds": [
+      "story-a1-u5-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-u",
+      "ch-ach-laut",
+      "auslaut-d",
+      "auslaut-g",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "___ du ein Eis? (möchten)",
+            "a": "Möchtest",
+            "why": "möchten مع du ← möchtest (‑st) · وفي سؤال نعم/لا يأتي الفعل أولاً بحرف كبير — وein Eis: das Eis محايد ← ein."
+          },
+          {
+            "q": "Oma ___ einen Tee trinken. (möchten)",
+            "a": "möchte",
+            "why": "مع er/sie (Oma) ← möchte بلا ‑t، كـich möchte تماماً · والفعل الثاني trinken مصدرٌ في آخر الجملة."
+          },
+          {
+            "q": "Ich ___ einen Kaffee, bitte. (للنادل بلطف: möchten أم wollen؟)",
+            "a": "möchte",
+            "why": "للطلب من النادل: Ich möchte … المهذبة — Ich will … طلبٌ حادّ حتى مع bitte، و«أريد» العربية المحايدة لا تُترجم will هنا."
+          },
+          {
+            "q": "Yusuf ___ Fisch mit Reis. (wollen)",
+            "a": "will",
+            "why": "wollen شاذ: مع er/sie ← will بلا ‑t (كـich will) — وهنا خبرٌ عن رغبته، لا طلبٌ من نادل."
+          },
+          {
+            "q": "___ du Butter oder Marmelade? (wollen)",
+            "a": "Willst",
+            "why": "wollen مع du ← willst (‑st) والجذع i: will · willst — سؤالٌ بين صديقين فلا حدّة فيه · وButter وMarmelade بلا أداة: مادة."
+          },
+          {
+            "q": "Was für ___ Salat möchten Sie? (ein)",
+            "a": "einen",
+            "why": "der Salat مذكر ومفعول به لـmöchten ← einen، كما في الجواب: Einen Salat mit Tomaten."
+          },
+          {
+            "q": "Was für ___ Brot ist das? (ein)",
+            "a": "ein",
+            "why": "das Brot محايد ← ein — وبعد ist لا مفعول به، فالمذكر هنا ein أيضاً: Was für ein Kuchen ist das?"
+          },
+          {
+            "q": "Ich möchte ein Eis ___. (essen)",
+            "a": "essen",
+            "why": "الفعل الثاني في آخر الجملة بصيغة المصدر كما في القاموس: essen — لا esse (كـ«آكلَ» المصرّفة بالعربية) ولا isst، وبلا zu قبله."
+          },
+          {
+            "q": "Die Kartoffeln ___ gut. (schmecken)",
+            "a": "schmecken",
+            "why": "الفاعل جمع (die Kartoffeln) ← schmecken · ومع المفرد: Die Suppe schmeckt."
+          },
+          {
+            "q": "Lena ___ satt. (sein)",
+            "a": "ist",
+            "why": "satt صفة مع sein كـ«هي شبعانة» — لا haben: Hunger وحده اسمٌ مع haben (Sie hat Hunger)."
+          },
+          {
+            "q": "Was möchtest du ___ Frühstück? (zu + dem)",
+            "a": "zum",
+            "why": "قطعة الوجبات الجاهزة: zum Frühstück · zum Mittagessen · zum Abendessen (zum = zu + dem) — تُحفظ كما هي."
+          },
+          {
+            "q": "Zwei ___, bitte! (آيس كريم)",
+            "a": "Eis",
+            "why": "das Eis يُعدّ بالحصة بلا جمع: ein Eis · zwei Eis — وzwei Eier بيضتان (das Ei)."
+          }
+        ],
+        "interleavedWith": [
+          "oma",
+          "tee",
+          "kaffee",
+          "fisch",
+          "reis",
+          "salat",
+          "brot"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "me-2",
+            "speakText": "Ja! Es ist Mittag. Hier ist mein Mittagessen: Fisch mit Reis.",
+            "q": "استمع: ماذا يأكل يوسف على الغداء؟",
+            "choices": [
+              "سمكاً مع أرز",
+              "لحماً مع أرز",
+              "سمكاً مع خبز"
+            ],
+            "a": "سمكاً مع أرز",
+            "why": "das Mittagessen = الغداء (der Mittag + das Essen) · Fisch mit Reis = سمك مع أرز."
+          },
+          {
+            "audioId": "me-3",
+            "speakText": "Toll! Und hier ist meine Suppe. Guten Appetit!",
+            "q": "استمع: ماذا تقول لينا قبل الأكل؟",
+            "choices": [
+              "بالهناء (شهية طيبة)!",
+              "أنا شبعانة!",
+              "الحساب من فضلك!"
+            ],
+            "a": "بالهناء (شهية طيبة)!",
+            "why": "Guten Appetit! = بالهناء — تُقال قبل الأكل، وder Appetit = الشهية."
+          },
+          {
+            "audioId": "me-4",
+            "speakText": "Danke, guten Appetit! Was für eine Suppe ist das?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "عن نوع الحساء",
+              "عن سعر الحساء",
+              "عن وقت الغداء"
+            ],
+            "a": "عن نوع الحساء",
+            "why": "Was für eine Suppe? = أيّ نوع من الحساء؟ — eine لأن die Suppe مؤنثة."
+          },
+          {
+            "audioId": "me-7",
+            "speakText": "Ja, sehr gut! Und dein Fisch?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "وسمكك؟ (أهو لذيذ؟)",
+              "وحساؤك؟",
+              "وكعكتك؟"
+            ],
+            "a": "وسمكك؟ (أهو لذيذ؟)",
+            "why": "dein Fisch = سمكك (der Fisch ← dein بلا نهاية) — وsehr gut جوابها عن حسائها."
+          },
+          {
+            "audioId": "me-8",
+            "speakText": "Er schmeckt super! Und jetzt? Möchtest du Kuchen oder Eis?",
+            "q": "استمع: ماذا يعرض يوسف بعد الطعام؟",
+            "choices": [
+              "كعكاً أو آيس كريم",
+              "قهوة أو شاياً",
+              "خبزاً أو أرزاً"
+            ],
+            "a": "كعكاً أو آيس كريم",
+            "why": "Möchtest du …? = هل تودّين …؟ عرضٌ مهذب · er schmeckt = هو (السمك) لذيذ."
+          },
+          {
+            "audioId": "me-10",
+            "speakText": "Was für einen Kuchen?",
+            "q": "استمع: بماذا يسأل يوسف؟",
+            "choices": [
+              "أيّ نوع من الكعك؟",
+              "كم كعكة؟",
+              "أين الكعكة؟"
+            ],
+            "a": "أيّ نوع من الكعك؟",
+            "why": "Was für einen …? = أيّ نوع من …؟ — einen لأن der Kuchen مذكر ومفعول به (Ich möchte einen Kuchen)."
+          },
+          {
+            "audioId": "me-11",
+            "speakText": "Einen Kuchen mit Obst. Und du, Yusuf?",
+            "q": "استمع: أيّ كعكة تودّ لينا؟",
+            "choices": [
+              "كعكة بالفواكه",
+              "كعكة بالقهوة",
+              "كعكة بالمربّى"
+            ],
+            "a": "كعكة بالفواكه",
+            "why": "mit Obst = بالفواكه (das Obst — من الدرس الأول) · والجواب بالأداة نفسها: Einen Kuchen."
+          },
+          {
+            "audioId": "me-13",
+            "speakText": "Yusuf, wie ein Kind! Bitte mit «möchte»!",
+            "q": "استمع: لماذا تضحك لينا؟",
+            "choices": [
+              "لأن «Ich will» تبدو كطلب طفل",
+              "لأن يوسف لا يحب الآيس كريم",
+              "لأن يوسف شبعان"
+            ],
+            "a": "لأن «Ich will» تبدو كطلب طفل",
+            "why": "wie = مثل · Kind = طفل — Ich will طلبٌ حادّ كطلب طفل يُلحّ، والمهذب: Ich möchte …"
+          },
+          {
+            "audioId": "me-15",
+            "speakText": "Sehr gut! Was für ein Eis?",
+            "q": "استمع: ماذا تسأل لينا بعد طلبه المهذب؟",
+            "choices": [
+              "أيّ نوع من الآيس كريم؟",
+              "كم آيس كريم؟",
+              "هل الآيس كريم لذيذ؟"
+            ],
+            "a": "أيّ نوع من الآيس كريم؟",
+            "why": "Was für ein Eis? — ein لأن das Eis محايد، والمحايد لا يتغير مفعولاً."
+          },
+          {
+            "audioId": "me-16",
+            "speakText": "Ein Eis mit Kaffee. Es ist sehr süß!",
+            "q": "استمع: أيّ آيس كريم يختار يوسف؟",
+            "choices": [
+              "آيس كريم بالقهوة",
+              "آيس كريم بالفواكه",
+              "آيس كريم بالحليب"
+            ],
+            "a": "آيس كريم بالقهوة",
+            "why": "mit Kaffee = بالقهوة · es = das Eis · süß = حلو (من الوحدة الثانية)."
+          },
+          {
+            "audioId": "me-18",
+            "speakText": "Nur Brot mit Butter. Ich bin satt!",
+            "q": "استمع: ماذا يأكل يوسف على العشاء، ولماذا؟",
+            "choices": [
+              "خبزاً بالزبدة فقط — لأنه شبعان",
+              "سمكاً — لأنه جائع",
+              "حساءً — لأنه شبعان"
+            ],
+            "a": "خبزاً بالزبدة فقط — لأنه شبعان",
+            "why": "nur = فقط · die Butter = الزبدة · Ich bin satt = أنا شبعان (satt مع sein كالعربية)."
+          },
+          {
+            "audioId": "me-20",
+            "speakText": "Brot mit Marmelade und einen Tee — im Glas, natürlich!",
+            "q": "استمع: ماذا يودّ يوسف لفطور الغد؟",
+            "choices": [
+              "خبزاً بالمربّى وشاياً في كأس",
+              "خبزاً بالزبدة وشاياً في فنجان",
+              "خبزاً بالمربّى وقهوة"
+            ],
+            "a": "خبزاً بالمربّى وشاياً في كأس",
+            "why": "die Marmelade = المربّى · einen Tee مفعول به لـ«Ich möchte …» المفهومة · im Glas كعادته التونسية (الدرس السابق)."
+          }
+        ],
+        "interleavedWith": [
+          "fisch",
+          "reis",
+          "suppe",
+          "obst",
+          "kind",
+          "kaffee",
+          "brot",
+          "glas",
+          "suess"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "möchte",
+              "Oma",
+              "Suppe",
+              "eine",
+              "essen."
+            ],
+            "a": "Oma möchte eine Suppe essen.",
+            "why": "Oma ثم möchte ثانياً (مع er/sie بلا ‑t) ثم المفعول eine Suppe ثم المصدر essen في آخر الجملة."
+          },
+          {
+            "tokens": [
+              "für",
+              "Eis",
+              "Was",
+              "du?",
+              "ein",
+              "möchtest"
+            ],
+            "a": "Was für ein Eis möchtest du?",
+            "why": "Was für ein Eis كتلة واحدة في أول السؤال، ثم الفعل möchtest ثانياً، ثم du — das Eis محايد ← ein."
+          },
+          {
+            "tokens": [
+              "jetzt",
+              "Lena",
+              "bestellen.",
+              "will"
+            ],
+            "a": "Lena will jetzt bestellen.",
+            "why": "Lena ثم will ثانياً (wollen مع er/sie بلا ‑t) ثم jetzt ثم المصدر bestellen في آخر الجملة."
+          },
+          {
+            "tokens": [
+              "süß.",
+              "Kuchen",
+              "schmeckt",
+              "Der"
+            ],
+            "a": "Der Kuchen schmeckt süß.",
+            "why": "Der Kuchen فاعل ثم schmeckt ثانياً (‑t مع er) ثم süß — schmecken فعلٌ معناه «طعمُه …»."
+          },
+          {
+            "tokens": [
+              "du",
+              "trinken?",
+              "Was",
+              "möchtest"
+            ],
+            "a": "Was möchtest du trinken?",
+            "why": "Was ثم möchtest ثانياً ثم du ثم المصدر trinken في الآخر — والسؤال المهذب بـmöchte."
+          },
+          {
+            "tokens": [
+              "Kartoffeln",
+              "essen.",
+              "Wir",
+              "wollen"
+            ],
+            "a": "Wir wollen Kartoffeln essen.",
+            "why": "Wir ثم wollen ثانياً (كالمصدر مع wir) ثم المفعول Kartoffeln بلا أداة (جمع) ثم essen في الآخر."
+          }
+        ],
+        "interleavedWith": [
+          "oma",
+          "suppe",
+          "bestellen",
+          "suess",
+          "trinken"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "me-1",
+            "speakText": "Hallo, Yusuf! Wir wollen heute zusammen essen, ja?",
+            "a": "Hallo, Yusuf! Wir wollen heute zusammen essen, ja?",
+            "why": "wollen بـw تُنطق «ف» مجهورة (v) وll بعد o القصيرة · zusammen بـz «تس» في أولها وmm · essen بـss."
+          },
+          {
+            "audioId": "me-5",
+            "speakText": "Eine Suppe mit Kartoffeln und Tomaten.",
+            "a": "Eine Suppe mit Kartoffeln und Tomaten",
+            "why": "Kartoffeln بـff بعد o القصيرة وجمعها ‑n · Tomaten بـa طويلة · والأسماء بحرف كبير."
+          },
+          {
+            "audioId": "me-6",
+            "speakText": "Schmeckt sie?",
+            "a": "Schmeckt sie?",
+            "why": "Schmeckt بـsch «ش» وck بعد e القصيرة وt في آخرها · sie بـie طويلة (= die Suppe)."
+          },
+          {
+            "audioId": "me-9",
+            "speakText": "Ich möchte einen Kuchen essen.",
+            "a": "Ich möchte einen Kuchen essen",
+            "why": "möchte بـö (لا o) ثم ch كـich · Kuchen بـch بعد u تُنطق من الحلق كـach · والمصدر essen في الآخر."
+          },
+          {
+            "audioId": "me-12",
+            "speakText": "Ich will ein Eis! Ein Eis, ein Eis!",
+            "a": "Ich will ein Eis! Ein Eis, ein Eis!",
+            "why": "will بـll بعد i القصيرة · Eis بـei «آي» وs في آخرها — غير Ei (بيضة) بلا s · وهي مزاح يوسف كطفل يُلحّ؛ وللنادل: Ich möchte …"
+          },
+          {
+            "audioId": "me-14",
+            "speakText": "Okay, okay: Ich möchte ein Eis, bitte.",
+            "a": "Okay, okay: Ich möchte ein Eis, bitte",
+            "why": "Okay بحرف كبير أول الجملة · möchte بـö · ein Eis: das Eis محايد ← ein · وbitte بحرف صغير."
+          },
+          {
+            "audioId": "me-17",
+            "speakText": "Und heute Abend? Was willst du zum Abendessen?",
+            "a": "Und heute Abend? Was willst du zum Abendessen?",
+            "why": "willst بـll وst في آخرها · Abendessen كلمة واحدة: Abend + Essen، وd في آخر Abend تُسمع t."
+          },
+          {
+            "audioId": "me-19",
+            "speakText": "Ich auch! Und morgen zum Frühstück?",
+            "a": "Ich auch! Und morgen zum Frühstück?",
+            "why": "Frühstück بـü مرتين: طويلة في früh وقصيرة قبل ck، وst في وسطها «شت» · zum = zu + dem."
+          },
+          {
+            "audioId": "word-kartoffel",
+            "speakText": "Kartoffel.",
+            "a": "Kartoffel",
+            "why": "die Kartoffel: ff بعد o القصيرة والنبر على tof · و‑el في آخرها حركة خفيفة."
+          },
+          {
+            "audioId": "word-appetit",
+            "speakText": "Appetit.",
+            "a": "Appetit",
+            "why": "der Appetit: pp بعد a · والنبر على المقطع الأخير tit."
+          }
+        ],
+        "interleavedWith": [
+          "zusammen",
+          "suppe",
+          "okay",
+          "abend"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Was möchtest du essen? — Ich möchte …",
+        "ar": "تتغدّى مع زميلك (حقيقةً أو تمثيلاً): تسألان عن الطعام ونوعه وتطلبان الحلوى بلطف"
+      },
+      "situation": {
+        "de": "Mittagessen zusammen: Was für …? · Schmeckt es? · Ich bin satt.",
+        "ar": "على الغداء معاً: يسأل كلٌّ منكما الآخر Was möchtest du? وعن النوع Was für ein …?، ويطلب الحلوى بـIch möchte … (لا Ich will …)، ويسأل Schmeckt es? ويختم بـIch bin satt."
+      },
+      "successCriteria": [
+        "طلبان بـmöchte: أحدهما مع مفعول به (Ich möchte einen Kuchen) والآخر مع فعل في آخر الجملة (Ich möchte ein Eis essen).",
+        "سؤال Was für ein/eine/einen …? بالصيغة الصحيحة + Guten Appetit! + Ich bin satt."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أودّ (أنا) أن أشرب عصيراً»؟",
+            "choices": [
+              "Ich möchte einen Saft trinken.",
+              "Ich möchte trinken einen Saft.",
+              "Ich möchte trinke einen Saft."
+            ],
+            "a": "Ich möchte einen Saft trinken.",
+            "why": "الفعل الثاني مصدرٌ في آخر الجملة: trinken — لا trinke (مصرّفةً مع ich كـ«أشربَ» العربية) ولا بعد möchte مباشرة · وder Saft ← einen."
+          },
+          {
+            "q": "«هل تريد سلطة؟» (بين صديقين — wollen)",
+            "choices": [
+              "Willst du einen Salat?",
+              "Will du einen Salat?",
+              "Wollen du einen Salat?"
+            ],
+            "a": "Willst du einen Salat?",
+            "why": "wollen شاذ: مع du ← willst (الجذع i والنهاية ‑st) · will لـich وer/sie · wollen لـwir وSie."
+          },
+          {
+            "q": "«الفطور» بالألمانية مع الأداة؟",
+            "a": "das Frühstück",
+            "why": "das Frühstück محايد — ويبدأ بـfrüh (مبكر — من الوحدة الثالثة): وجبة الصباح."
+          },
+          {
+            "q": "«أيّ نوع من المربّى هذا؟»",
+            "choices": [
+              "Was für eine Marmelade ist das?",
+              "Was für einen Marmelade ist das?",
+              "Was für ein Marmelade ist das?"
+            ],
+            "a": "Was für eine Marmelade ist das?",
+            "why": "die Marmelade مؤنثة ← eine — والمؤنث لا يتغير فاعلاً ولا مفعولاً، وeinen للمذكر المفعول وحده."
+          },
+          {
+            "q": "«نحن شبعانون»؟",
+            "choices": [
+              "Wir sind satt.",
+              "Wir haben satt.",
+              "Wir sind satten."
+            ],
+            "a": "Wir sind satt.",
+            "why": "satt صفة مع sein (wir sind) كالعربية «نحن شبعانون» — ولا نهاية للصفة بعد sein (لا satten)."
+          },
+          {
+            "q": "das Abendessen = ؟",
+            "choices": [
+              "العشاء",
+              "الغداء",
+              "الفطور"
+            ],
+            "a": "العشاء",
+            "why": "das Abendessen = der Abend (المساء) + das Essen (الطعام) — والغداء das Mittagessen والفطور das Frühstück."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«تودّ لينا أن تأكل كعكة»؟",
+            "choices": [
+              "Lena möchte einen Kuchen essen.",
+              "Lena möchtest einen Kuchen essen.",
+              "Lena möchte einen Kuchen isst."
+            ],
+            "a": "Lena möchte einen Kuchen essen.",
+            "why": "مع er/sie ← möchte بلا ‑t كـich (وmöchtest لـdu وحده) · والفعل الثاني مصدرٌ في الآخر: essen لا isst."
+          },
+          {
+            "q": "«نريد أن نشرب شاياً» (خطة)",
+            "choices": [
+              "Wir wollen Tee trinken.",
+              "Wir will Tee trinken.",
+              "Wir wollen trinken Tee."
+            ],
+            "a": "Wir wollen Tee trinken.",
+            "why": "wollen مع wir ← wollen (كالمصدر) — will وwillst للمفرد وحده · والمصدر trinken في آخر الجملة."
+          },
+          {
+            "q": "«الغداء» بالألمانية مع الأداة؟",
+            "a": "das Mittagessen",
+            "why": "das Mittagessen = der Mittag (الظهر) + das Essen (الطعام) — والأداة من الجزء الأخير: das."
+          },
+          {
+            "q": "«أيّ نوع من الكعك تودّ (أنتَ)؟»",
+            "choices": [
+              "Was für einen Kuchen möchtest du?",
+              "Was für ein Kuchen möchtest du?",
+              "Was für eine Kuchen möchtest du?"
+            ],
+            "a": "Was für einen Kuchen möchtest du?",
+            "why": "der Kuchen مذكر ومفعول به لـmöchtest ← einen، كما في الجواب Einen Kuchen mit Obst · وein للمذكر بعد ist وحده (Was für ein Kuchen ist das?)."
+          },
+          {
+            "q": "«الحساء لذيذ» (schmecken)؟",
+            "choices": [
+              "Die Suppe schmeckt gut.",
+              "Die Suppe schmecken gut.",
+              "Die Suppe schmeckst gut."
+            ],
+            "a": "Die Suppe schmeckt gut.",
+            "why": "die Suppe مفردة ← schmeckt (‑t) · schmecken للجمع (Die Kartoffeln schmecken) · schmeckst لـdu."
+          },
+          {
+            "q": "die Butter = ؟",
+            "choices": [
+              "الزبدة",
+              "المربّى",
+              "الخبز"
+            ],
+            "a": "الزبدة",
+            "why": "die Butter = الزبدة (بلا جمع) · die Marmelade = المربّى · das Brot = الخبز."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أودّ حساءً من فضلك» (للنادل بلطف)",
+            "choices": [
+              "Ich möchte eine Suppe, bitte.",
+              "Ich möchte einen Suppe, bitte.",
+              "Ich möchtest eine Suppe, bitte."
+            ],
+            "a": "Ich möchte eine Suppe, bitte.",
+            "why": "للنادل: Ich möchte … المهذبة · die Suppe مؤنثة ← eine حتى مفعولاً · وmöchtest لـdu وحده."
+          },
+          {
+            "q": "«هل تودّ حضرتك أن تأكل بطاطا؟»",
+            "choices": [
+              "Möchten Sie Kartoffeln essen?",
+              "Möchtest Sie Kartoffeln essen?",
+              "Möchten Sie essen Kartoffeln?"
+            ],
+            "a": "Möchten Sie Kartoffeln essen?",
+            "why": "Sie المهذبة مع صيغة الجمع ← möchten · والمصدر essen في الآخر والمفعول Kartoffeln قبله."
+          },
+          {
+            "q": "«الطماطم» (المفرد) بالألمانية مع الأداة؟",
+            "a": "die Tomate",
+            "why": "die Tomate مؤنثة وجمعها die Tomaten (‑n) — والنبر على ma."
+          },
+          {
+            "q": "«أيّ نوع من الآيس كريم تودّ حضرتك؟»",
+            "choices": [
+              "Was für ein Eis möchten Sie?",
+              "Was für einen Eis möchten Sie?",
+              "Was für eine Eis möchten Sie?"
+            ],
+            "a": "Was für ein Eis möchten Sie?",
+            "why": "das Eis محايد ← ein فاعلاً ومفعولاً · einen للمذكر وحده · eine للمؤنث."
+          },
+          {
+            "q": "«هل أنتِ شبعانة؟» (للينا)",
+            "choices": [
+              "Bist du satt?",
+              "Hast du satt?",
+              "Bist du satten?"
+            ],
+            "a": "Bist du satt?",
+            "why": "satt مع sein: du bist ← Bist du satt? · لا haben (Hast du Hunger? للجوع وحده) · ولا نهاية للصفة بعد sein."
+          },
+          {
+            "q": "das Eis = ؟",
+            "choices": [
+              "الآيس كريم (المثلّجات)",
+              "البيضة",
+              "الكعكة"
+            ],
+            "a": "الآيس كريم (المثلّجات)",
+            "why": "das Eis = الآيس كريم (والجليد) · das Ei = البيضة (بلا s): زوجٌ متقارب · der Kuchen = الكعكة."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Ich möchte einen Kuchen. · Möchtest du ein Eis? · Ich möchte ein Eis essen. · Wir wollen zusammen essen. · Was für einen Kuchen? · Guten Appetit! · Ich bin satt.",
+      "ar": "اطلب بلطف بـmöchte (ich möchte · du möchtest · er/sie möchte): مع اسمٍ مفعولٍ به (Ich möchte einen Kuchen) أو مع فعلٍ ثانٍ مصدراً في آخر الجملة بلا zu (Ich möchte ein Eis essen). وwollen شاذ (ich will · du willst · er will) للخطط وبين الأصدقاء، لكن Ich will … للنادل حادّة. وwas für ein تسأل عن النوع وein فيها كما في الجواب: Was für einen Kuchen? — Einen Kuchen mit Obst. والوجبات: das Frühstück · das Mittagessen · das Abendessen (zum Frühstück قطعة جاهزة) — وحول الأكل: Guten Appetit! · Der Kuchen schmeckt gut. · Ich bin satt."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich will einen Kaffee.~~ (للنادل)",
+          "ar": "«أريد» العربية تصير will — طلبٌ حادّ"
+        },
+        "whyArabicSpeakerFails": "«أريد قهوةً من فضلك» مهذبة بالعربية: الفعل «أريد» محايد، واللطف تحمله «من فضلك» والنبرة — وفي تونس «نحبّ قهوة». فيترجم المتعلم «أريد» إلى will. والألمانية تحمل اللطف في صيغة الفعل نفسها: Ich will … طلبٌ مباشر حادّ (كطفل يُلحّ: Ich will ein Eis!) لا تكفي bitte لتلطيفه، وIch möchte … صيغة الطلب المهذبة — كما تفرّق الفرنسية بين je veux وje voudrais (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich möchte einen Kaffee, bitte.",
+          "ar": "أودّ قهوة من فضلك."
+        },
+        "exercise": {
+          "q": "صحّح (للنادل): ~~Ich will ein Wasser.~~",
+          "a": "Ich möchte ein Wasser."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Er möchte isst einen Kuchen.~~",
+          "ar": "الفعل الثاني مصرَّف وبعد الأول مباشرة كالعربية"
+        },
+        "whyArabicSpeakerFails": "بالعربية «يريد أن يأكلَ كعكةً»: الفعل الثاني مصرَّف مع الفاعل (يأكلَ · تأكلَ · آكلَ) ويأتي بعد الأول مباشرة، وفي تونس «يحبّ ياكل» بلا «أن» — فينقل المتعلم الجملة كلمةً كلمة: möchte ثم isst ثم المفعول. والألمانية تجعل الفعل الثاني مصدراً كما في القاموس (essen) لا يتصرّف، وتضعه في آخر الجملة والمفعول بينهما: Er möchte einen Kuchen essen. — ولا zu قبل المصدر (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Er möchte einen Kuchen essen.",
+          "ar": "يودّ أن يأكل كعكة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Du möchtest trinkst einen Tee.~~",
+          "a": "Du möchtest einen Tee trinken."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe satt.~~",
+          "ar": "قياسٌ على Hunger haben — والشبع صفة مع sein"
+        },
+        "whyArabicSpeakerFails": "هنا تساعدك العربية: «أنا شبعان» صفةٌ مع «أنا» تماماً كـIch bin satt. والخطأ لا يأتي من العربية بل من القياس على Hunger haben من الدرس الأول في هذه الوحدة (Du hast Hunger): الجوع اسمٌ مع haben، والشبع صفةٌ مع sein. وانتبه: Ich habe es satt (بـes) تعبيرٌ آخر معناه «سئمتُ» — فلا تقلها لمن قدّم لك الطعام! (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bin satt, danke.",
+          "ar": "أنا شبعان، شكراً."
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ Hunger, und du ___ satt. (haben · sein)",
+          "a": "habe / bist"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "fruehstueck",
+      "mittagessen",
+      "abendessen",
+      "butter",
+      "marmelade",
+      "kuchen",
+      "eis",
+      "appetit",
+      "schmecken",
+      "satt",
+      "kartoffel",
+      "tomate",
+      "was-fuer-ein"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Fruehstueck",
+      "https://www.duden.de/rechtschreibung/Marmelade",
+      "https://www.duden.de/rechtschreibung/Appetit",
+      "https://www.duden.de/rechtschreibung/satt"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/schmecken",
+      "https://de.wiktionary.org/wiki/m%C3%B6gen",
+      "https://de.wiktionary.org/wiki/wollen",
+      "https://de.wiktionary.org/wiki/Eis"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-moechte-wollen"
+  ],
+  "audioManifestRefs": [
+    "word-fruehstueck",
+    "word-mittagessen",
+    "word-abendessen",
+    "word-butter",
+    "word-marmelade",
+    "word-kuchen",
+    "word-eis",
+    "word-appetit",
+    "word-schmecken",
+    "word-satt",
+    "word-kartoffel",
+    "word-tomate",
+    "word-was-fuer-ein"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 5 (Essen & Trinken) — Mahlzeiten bestellen",
+    "goetheWordListOverlap": [
+      "fruehstueck",
+      "mittagessen",
+      "butter",
+      "marmelade",
+      "kuchen",
+      "eis",
+      "appetit",
+      "schmecken",
+      "kartoffel",
+      "tomate",
+      "was-fuer-ein"
+    ]
+  }
+}

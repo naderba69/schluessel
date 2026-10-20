@@ -69,7 +69,7 @@ export function Unit0Day1Screen({ onNext }: { onNext: () => void }) {
   );
 }
 
-export function FirstLessonScreen({ lesson, words }: { lesson: Lesson; words: Word[] }) {
+export function FirstLessonScreen({ lesson, words, onStart }: { lesson: Lesson; words: Word[]; onStart?: () => void }) {
   return (
     <section data-screen="first-lesson" data-lesson-id={lesson.id}>
       <h1>أول درس: {lesson.ziel.de}</h1>
@@ -83,16 +83,24 @@ export function FirstLessonScreen({ lesson, words }: { lesson: Lesson; words: Wo
           </li>
         ))}
       </ul>
+      {onStart && (
+        <button data-testid="first-lesson-start" onClick={onStart}>
+          ▶ إلى حصة اليوم
+        </button>
+      )}
     </section>
   );
 }
 
 export function FirstRun({
   onComplete,
+  onFinish,
   firstLesson,
   firstLessonWords,
 }: {
   onComplete: (state: LearnerState) => void;
+  /** D117: نهاية التهيئة (بعد بطاقات اليوم الأول وشاشة أول درس) — قبلها كانت القشرة تقفز للوحة لحظة إدخال الاسم فلا تُرى الشاشتان */
+  onFinish?: () => void;
   firstLesson: Lesson;
   firstLessonWords: Word[];
 }) {
@@ -113,5 +121,5 @@ export function FirstRun({
       />
     );
   if (step === "unit0-day1") return <Unit0Day1Screen onNext={advance} />;
-  return <FirstLessonScreen lesson={firstLesson} words={firstLessonWords} />;
+  return <FirstLessonScreen lesson={firstLesson} words={firstLessonWords} onStart={onFinish} />;
 }

@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d5-im-stau",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Im Stau",
+    "ar": "في الازدحام — مكالمة من الحافلة في تونس: يوسف متأخر لأن الحافلة واقفة (الشرطة عند التقاطع أمام الجسر) · الحافلة لا تتوقف في المركز فينزل عند المحطة والموقف على الجانب الآخر · الجدول يقول التاسعة لكنها لا تصل في الموعد · عند لينا القطار دائماً في الموعد: كل يوم في السابعة بالقطار إلى المدرسة · يوسف يستخرج الترتيب: متى؟ كيف؟ إلى أين؟ · العودة مساءً بالحافلة بلا تغيير · غداً مشياً مع الأخت إلى الضفة · الشرطة ذهبت والحافلة تواصل — الفعل ثانياً والقوس (steige … aus · kommt … an · fährt … weiter · muss … umsteigen) والزمن قبل الكيفية قبل المكان"
+  },
+  "usedIn": [
+    "a1-u9-d5"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "st-1",
+      "speaker": "yusuf",
+      "text": "Hallo Lena! Entschuldigung, ich bin spät. Ich bin noch im Bus.",
+      "direction": "يوسف يفتح متأخراً من الحافلة (Handy): Entschuldigung, ich bin spät · Ich bin noch im Bus (Wo: im)"
+    },
+    {
+      "id": "st-2",
+      "speaker": "lena",
+      "text": "Im Bus? Wohin fährst du?",
+      "direction": "Wohin fährst du? (من u9-d2)"
+    },
+    {
+      "id": "st-3",
+      "speaker": "yusuf",
+      "text": "Ich fahre heute mit meinem Vater in die Stadt. Aber der Bus steht — heute ist Stau.",
+      "direction": "الجملة النموذج: Ich fahre heute mit meinem Vater in die Stadt (الزمن ← الكيفية ← المكان) · الفعل ثانياً · heute ist Stau (Stau نواة الدرس — القلب بعد heute)"
+    },
+    {
+      "id": "st-4",
+      "speaker": "lena",
+      "text": "Stau? Das ist der Grund! Und wo steht der Bus jetzt?",
+      "direction": "Das ist der Grund! (der Grund) · Wo steht der Bus jetzt?"
+    },
+    {
+      "id": "st-5",
+      "speaker": "yusuf",
+      "text": "An der Kreuzung vor der Brücke. Die Polizei steht da, und der Bus fährt nicht mehr weiter.",
+      "direction": "An der Kreuzung vor der Brücke (u9-d2 + u9-d4) · Die Polizei steht da (نواة: Polizei) · der Bus fährt nicht mehr weiter (weiter في آخر القوس)"
+    },
+    {
+      "id": "st-6",
+      "speaker": "lena",
+      "text": "Die Polizei? Ist da ein Problem?",
+      "direction": "Ist da ein Problem? (Problem u9-d3)"
+    },
+    {
+      "id": "st-7",
+      "speaker": "yusuf",
+      "text": "Ja, ein Auto steht auf der Straße. Aber kein Problem — bald fahren wir weiter.",
+      "direction": "ein Auto steht auf der Straße · Aber kein Problem · Bald fahren wir weiter (bald أولاً ← الفعل ثانياً ← weiter يغلق القوس)"
+    },
+    {
+      "id": "st-8",
+      "speaker": "lena",
+      "text": "Hält der Bus im Zentrum?",
+      "direction": "Hält der Bus im Zentrum? (halten: hält — تغيّر الحركة · سؤال نعم/لا: الفعل أولاً)"
+    },
+    {
+      "id": "st-9",
+      "speaker": "yusuf",
+      "text": "Nein, er hält nicht im Zentrum. Ich steige am Bahnhof aus — die Haltestelle ist auf der anderen Seite.",
+      "direction": "er hält nicht im Zentrum · Ich steige am Bahnhof aus (القوس: steige … aus) · auf der anderen Seite (ander-: الصفة المصرَّفة كقطعة)"
+    },
+    {
+      "id": "st-10",
+      "speaker": "lena",
+      "text": "Und der Fahrplan? Wann kommt der Bus am Bahnhof an?",
+      "direction": "Und der Fahrplan? (نواة) · Wann kommt der Bus am Bahnhof an? (القوس في السؤال: kommt … an)"
+    },
+    {
+      "id": "st-11",
+      "speaker": "yusuf",
+      "text": "Im Fahrplan steht: um neun Uhr. Aber heute kommt er nicht pünktlich an.",
+      "direction": "Im Fahrplan steht: um neun Uhr · heute kommt er nicht pünktlich an (القلب بعد heute + القوس kommt … an · pünktlich)"
+    },
+    {
+      "id": "st-12",
+      "speaker": "lena",
+      "text": "Bei uns ist der Zug immer pünktlich. Ich fahre jeden Tag um sieben mit dem Zug zur Schule.",
+      "direction": "Bei uns ist der Zug immer pünktlich (القلب بعد Bei uns) · Ich fahre jeden Tag um sieben mit dem Zug zur Schule (الزمن ← الكيفية ← المكان بالكامل)"
+    },
+    {
+      "id": "st-13",
+      "speaker": "yusuf",
+      "text": "Jeden Tag um sieben mit dem Zug zur Schule — zuerst: wann? Danach: wie? Am Ende: wohin?",
+      "direction": "يوسف يستخرج القاعدة: zuerst: wann? Danach: wie? Am Ende: wohin? (بلا مصطلح أجنبي — الأسئلة الثلاثة)"
+    },
+    {
+      "id": "st-14",
+      "speaker": "lena",
+      "text": "Genau: Wann? Wie? Wohin? — Und du? Wann fährst du zurück?",
+      "direction": "Wann? Wie? Wohin? · Wann fährst du zurück? (القوس: fährst … zurück)"
+    },
+    {
+      "id": "st-15",
+      "speaker": "yusuf",
+      "text": "Ich fahre heute Abend um sechs mit dem Bus zurück. Die Verbindung ist gut, ich muss nicht umsteigen.",
+      "direction": "Ich fahre heute Abend um sechs mit dem Bus zurück (الزمن ← الكيفية ← الاتجاه zurück في الآخر) · Die Verbindung ist gut (نواة) · ich muss nicht umsteigen (المودال: المصدر في الآخر)"
+    },
+    {
+      "id": "st-16",
+      "speaker": "lena",
+      "text": "Gut! Und morgen?",
+      "direction": "Und morgen؟ — انتقال"
+    },
+    {
+      "id": "st-17",
+      "speaker": "yusuf",
+      "text": "Morgen gehe ich um zehn mit meiner Schwester zu Fuß ans Ufer.",
+      "direction": "Morgen gehe ich um zehn mit meiner Schwester zu Fuß ans Ufer (القلب بعد Morgen + الزمن ← الكيفية ← المكان ans Ufer من u9-d4)",
+      "lengthScale": 1.5
+    },
+    {
+      "id": "st-18",
+      "speaker": "lena",
+      "text": "Super! Fährt der Bus jetzt weiter?",
+      "direction": "Super! Fährt der Bus jetzt weiter? (سؤال نعم/لا + weiter في الآخر)"
+    },
+    {
+      "id": "st-19",
+      "speaker": "yusuf",
+      "text": "Ja! Die Polizei ist weg, und der Bus fährt weiter. An der nächsten Stelle steige ich aus.",
+      "direction": "Die Polizei ist weg (weg sein u6-d4) · der Bus fährt weiter · An der nächsten Stelle steige ich aus (نواة: Stelle · القلب + القوس)"
+    },
+    {
+      "id": "st-20",
+      "speaker": "lena",
+      "text": "Bis bald, Yusuf — und viel Spaß in der Stadt!",
+      "direction": "الختام: Bis bald (bald) · viel Spaß in der Stadt (u7-d2)"
+    }
+  ]
+}

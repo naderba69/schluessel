@@ -1,0 +1,629 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u2-d6",
+  "level": "A1",
+  "unit": 2,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Woche zwei ist zu Ende: Wo wohnst du? Woher kommst du? Was ist deine Muttersprache? — die Zeitung · das Mädchen · der Schmetterling — Straße oder Tasse? — Okay, super!",
+    "ar": "توليف الأسبوع الثاني: أين تسكن ومن أين أنت · اللغة الأم · شفرة الجنس (‑ung/‑chen/‑ling) · ß بعد الطويلة وss بعد القصيرة · التعارف والهوايات — ثم معركة الوحدة (75% فأكثر). لا جديد إلا كلمتا الرد: okay · super."
+  },
+  "canDoDaily": [
+    "يفرّق wo (السكن: in) وwoher (الأصل: aus) ويضع ein/eine، ويحدّد جنس الاسم من نهايته (‑ung · ‑chen · ‑ling) ويكتب ß/ss من طول الحركة",
+    "يجتاز معركة الوحدة 2 بنتيجة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "wohnen",
+      "muttersprache",
+      "zeitung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«حسناً / أوكي» بالألمانية — تخمين فقط"
+        },
+        "choices": [
+          "Okay",
+          "Genau",
+          "Danke"
+        ],
+        "answer": "Okay",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«ممتاز!» بالألمانية — تخمين فقط"
+        },
+        "choices": [
+          "Super!",
+          "Gut!",
+          "Genau!"
+        ],
+        "answer": "Super!",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "okay",
+      "super"
+    ],
+    "grammarArsenalIds": [
+      "ars-ein-eine",
+      "ars-genuscode"
+    ],
+    "storySentenceIds": [
+      "story-a1-u2-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "___ wohnst du? — In Berlin.",
+            "a": "Wo",
+            "why": "الجواب بـin ⇐ السؤال wo (أين، مكان السكن). أما woher فجوابها aus (الأصل)."
+          },
+          {
+            "q": "___ kommst du? — Aus der Türkei.",
+            "a": "Woher",
+            "why": "الجواب بـaus ⇐ السؤال woher (من أين). وTürkei من البلدان التي تأخذ أداة: aus der Türkei."
+          },
+          {
+            "q": "Berlin ist ___ Stadt.",
+            "a": "eine",
+            "why": "die Stadt مؤنثة ⇐ eine. «برلين مدينةٌ» بالتنوين وحده في العربية — الألمانية تحتاج ein/eine."
+          },
+          {
+            "q": "Tunesien ist ___ Land.",
+            "a": "ein",
+            "why": "das Land محايد ⇐ ein (كالمذكر). الفرق مع eine Stadt هو جنس الكلمة لا المعنى."
+          },
+          {
+            "q": "Meine ___ ist Arabisch.",
+            "a": "Muttersprache",
+            "why": "die Muttersprache = اللغة الأم (Mutter + Sprache) — مؤنثة لأن آخرها Sprache ⇐ meine بـ‑e."
+          },
+          {
+            "q": "___ Zeitung ist international.",
+            "a": "Die",
+            "why": "‑ung ⇐ مؤنث دائماً: die Zeitung. شفرة الجنس من النهاية لا من المعنى."
+          },
+          {
+            "q": "___ Mädchen ist nett.",
+            "a": "Das",
+            "why": "‑chen ⇐ محايد دائماً: das Mädchen — ولو كان المعنى «فتاة». النهاية تحكم لا الترجمة."
+          },
+          {
+            "q": "Ich lese ___. (أحب القراءة)",
+            "a": "gern",
+            "why": "«أحبّ أن أقرأ» = Ich lese gern: الفعل الأساسي + gern بعده — لا فعل ثانٍ للحب."
+          },
+          {
+            "q": "Das Gespräch ist kurz, aber ___. (لطيف)",
+            "a": "nett",
+            "why": "nett = لطيف (للحديث وللأشخاص). وaber = لكن، تأتي بعد الفاصلة ولا تغيّر ترتيب الجملة."
+          }
+        ],
+        "interleavedWith": [
+          "wohnen",
+          "kommen",
+          "stadt",
+          "land",
+          "muttersprache",
+          "zeitung",
+          "maedchen",
+          "lesen",
+          "gespraech"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "zw-3",
+            "speakText": "Super! Frage eins: Wo wohnst du, und woher kommst du?",
+            "q": "استمع: ما السؤالان؟",
+            "choices": [
+              "أين تسكن ومن أين أنت",
+              "من أين أنت وكم عمرك",
+              "أين تسكن وما اسمك"
+            ],
+            "a": "أين تسكن ومن أين أنت",
+            "why": "Wo wohnst du? = أين تسكن (in) · Woher kommst du? = من أين أنت (aus). كلمتا سؤال مختلفتان لمعنيين مختلفين."
+          },
+          {
+            "audioId": "zw-4",
+            "speakText": "Ich wohne hier in Berlin, aber ich komme aus Tunesien. Berlin ist eine Stadt, Tunesien ist ein Land.",
+            "q": "استمع: ما الصحيح؟",
+            "choices": [
+              "يسكن في برلين وأصله من تونس",
+              "يسكن في تونس وأصله من برلين",
+              "يسكن ويأتي من برلين"
+            ],
+            "a": "يسكن في برلين وأصله من تونس",
+            "why": "wohne in Berlin (السكن) · komme aus Tunesien (الأصل). ثم eine Stadt (مؤنثة) وein Land (محايد)."
+          },
+          {
+            "audioId": "zw-6",
+            "speakText": "Meine Muttersprache ist Arabisch. Deutsch ist eine Fremdsprache. Und deine?",
+            "q": "استمع: ماذا تمثّل الألمانية ليوسف؟",
+            "choices": [
+              "لغة أجنبية",
+              "لغته الأم",
+              "لغة ثانية في البيت"
+            ],
+            "a": "لغة أجنبية",
+            "why": "Fremdsprache = لغة أجنبية (fremd + Sprache)، وMuttersprache = اللغة الأم. وUnd deine? = وأنتِ، ما لغتك؟ (deine تعود على Muttersprache المؤنثة)."
+          },
+          {
+            "audioId": "zw-7",
+            "speakText": "Meine Muttersprache ist nicht Deutsch — ich komme aus der Türkei.",
+            "q": "استمع: من أين عائشة؟",
+            "choices": [
+              "من تركيا",
+              "من ألمانيا",
+              "من النمسا"
+            ],
+            "a": "من تركيا",
+            "why": "aus der Türkei — تركيا من البلدان ذات الأداة (die Türkei) فتأخذ der بعد aus. وnicht Deutsch = ليست الألمانية."
+          },
+          {
+            "audioId": "zw-9",
+            "speakText": "Die Zeitung, das Mädchen, das Zentrum. Das ist nicht schwer!",
+            "q": "استمع: ما أداة Zentrum التي قالتها عائشة؟",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "why": "‑um ⇐ محايد: das Zentrum. و‑ung ⇐ die Zeitung، و‑chen ⇐ das Mädchen — ثلاث نهايات تحسم الجنس."
+          },
+          {
+            "audioId": "zw-11",
+            "speakText": "Straße: lang. Tasse: kurz. Fuß: lang.",
+            "q": "استمع: أي كلمة حركتها قصيرة؟",
+            "choices": [
+              "Tasse",
+              "Straße",
+              "Fuß"
+            ],
+            "a": "Tasse",
+            "why": "Tasse حركتها قصيرة ⇐ ss. أما Straße وFuß فحركتهما طويلة ⇐ ß. اسمع طول a وu."
+          },
+          {
+            "audioId": "zw-13",
+            "speakText": "Das weiß ich! Der Schmetterling — der, nicht das.",
+            "q": "استمع: ما جنس Schmetterling؟",
+            "choices": [
+              "مذكر",
+              "محايد",
+              "مؤنث"
+            ],
+            "a": "مذكر",
+            "why": "‑ling ⇐ مذكر: der Schmetterling — ولو كانت «الفراشة» مؤنثة في العربية. النهاية تحكم لا الترجمة."
+          },
+          {
+            "audioId": "zw-17",
+            "speakText": "Ja, ich lese gern — und Musik! Und du?",
+            "q": "استمع: ما هوايتا عائشة؟",
+            "choices": [
+              "القراءة والموسيقى",
+              "القراءة والرياضة",
+              "الموسيقى والطبخ"
+            ],
+            "a": "القراءة والموسيقى",
+            "why": "ich lese gern = أحب القراءة · und Musik = والموسيقى. gern بعد الفعل تعني «بحبّ»."
+          },
+          {
+            "audioId": "zw-19",
+            "speakText": "Das Gespräch ist nett, aber jetzt gehe ich essen. Brötchen mit Käse!",
+            "q": "استمع: ماذا ستفعل عائشة الآن؟",
+            "choices": [
+              "تذهب لتأكل",
+              "تذهب إلى المدرسة",
+              "تقرأ الجريدة"
+            ],
+            "a": "تذهب لتأكل",
+            "why": "jetzt gehe ich essen = الآن أذهب لآكل. لاحظ: jetzt أولاً فالفعل gehe ثانياً ثم ich — الفعل في الموضع الثاني دائماً."
+          }
+        ],
+        "interleavedWith": [
+          "fremdsprache",
+          "tuerkei",
+          "zentrum",
+          "tasse",
+          "schmetterling",
+          "musik",
+          "essen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "صحّح: ~~Berlin ist Stadt.~~",
+            "a": "Berlin ist eine Stadt.",
+            "why": "«برلين مدينةٌ» بالتنوين وحده في العربية، والألمانية تحتاج أداة النكرة: eine (die Stadt مؤنثة)."
+          },
+          {
+            "q": "صحّح: ~~Wo kommst du?~~ (للأصل)",
+            "a": "Woher kommst du?",
+            "why": "wo = أين (المكان، جوابه in)، وwoher = من أين (الأصل، جوابه aus). السؤال عن الأصل بـwoher."
+          },
+          {
+            "q": "صحّح: ~~Die Mädchen ist nett.~~ (فتاة واحدة)",
+            "a": "Das Mädchen ist nett.",
+            "why": "‑chen محايد دائماً: das Mädchen. die Mädchen = الفتيات (جمع) — والفعل ist يدل على المفرد."
+          },
+          {
+            "q": "صحّح: ~~Der Zeitung ist neu.~~",
+            "a": "Die Zeitung ist neu.",
+            "why": "‑ung مؤنث دائماً: die Zeitung. الجنس من النهاية لا من معنى «الجريدة» ولا من تخمين."
+          },
+          {
+            "q": "صحّح: ~~Ich auch lese gern.~~",
+            "a": "Ich lese auch gern.",
+            "why": "الفعل في الموضع الثاني دائماً: Ich lese … — وauch وgern بعده، لا بينه وبين الفاعل."
+          },
+          {
+            "q": "صحّح: ~~Ich wohne in Tunesien, aber ich komme aus Berlin.~~ (يوسف)",
+            "a": "Ich wohne in Berlin, aber ich komme aus Tunesien.",
+            "why": "wohnen in = مكان السكن الآن (برلين)، kommen aus = الأصل (تونس). الحرفان ثابتان: in للسكن وaus للأصل."
+          }
+        ],
+        "interleavedWith": [
+          "stadt",
+          "maedchen",
+          "zeitung",
+          "lesen",
+          "wohnen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "zw-2",
+            "speakText": "Hallo, Ayşe! Okay — wiederholen wir zusammen?",
+            "a": "Hallo, Ayşe! Okay — wiederholen wir zusammen?",
+            "why": "Okay تُكتب هكذا (كلمة اليوم) · wiederholen بـie طويلة · في السؤال الفعل أولاً: Wiederholen wir …?"
+          },
+          {
+            "audioId": "zw-5",
+            "speakText": "Genau! Frage zwei: Was ist deine Muttersprache?",
+            "a": "Genau! Frage zwei: Was ist deine Muttersprache?",
+            "why": "Muttersprache كلمة واحدة بحرف كبير (Mutter + Sprache) — مؤنثة ⇐ deine بـ‑e. وwas للشيء."
+          },
+          {
+            "audioId": "zw-10",
+            "speakText": "Super! Frage vier: lang oder kurz? Straße, Tasse, Fuß.",
+            "a": "Super! Frage vier: lang oder kurz? Straße, Tasse, Fuß.",
+            "why": "Straße وFuß بـß (حركة طويلة) وTasse بـss (قصيرة) — هذا هو الإملاء الذي يفحصه السؤال نفسه. Super كلمة اليوم."
+          },
+          {
+            "audioId": "zw-12",
+            "speakText": "Genau! Und Schmetterling — was bedeutet das?",
+            "a": "Genau! Und Schmetterling — was bedeutet das?",
+            "why": "bedeuten = يعني: Was bedeutet das? سؤال المعنى. Schmetterling بحرف كبير وtt مزدوجة بعد e القصيرة."
+          },
+          {
+            "audioId": "zw-15",
+            "speakText": "Lena ist eine Freundin aus Deutschland. Sie ist Schülerin, und sie ist sechzehn.",
+            "a": "Lena ist eine Freundin aus Deutschland. Sie ist Schülerin, und sie ist sechzehn.",
+            "why": "eine Freundin (مؤنثة بـ‑in) · Schülerin بـü وبلا أداة بعد ist للمهنة/الصفة · sechzehn = 16."
+          },
+          {
+            "audioId": "zw-20",
+            "speakText": "Okay! Tschüss, Ayşe — bis morgen!",
+            "a": "Okay! Tschüss, Ayşe — bis morgen!",
+            "why": "Okay! كلمة اليوم · Tschüss بـü وss · bis morgen بحرف صغير (غداً)."
+          }
+        ],
+        "interleavedWith": [
+          "wiederholen",
+          "muttersprache",
+          "strasse",
+          "bedeuten",
+          "freundin"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wiederholen wir zusammen: Wo wohnst du? Woher kommst du? Was ist deine Muttersprache? Hast du ein Hobby? — Okay, super!",
+        "ar": "أن يراجع مع زميل بلعبة الأسئلة: السكن والأصل · اللغة الأم · جنس ثلاث كلمات من نهايتها · الهواية — ويردّ بـokay وsuper"
+      },
+      "situation": {
+        "de": "Das Ende der Woche: Die Gruppe wiederholt zusammen, wie Ayşe und Yusuf.",
+        "ar": "نهاية الأسبوع الثاني: المجموعة تراجع معاً كما فعلت عائشة ويوسف"
+      },
+      "successCriteria": [
+        "يجيب عن wo بـin وعن woher بـaus في جملتين كاملتين، ويصف بلده ومدينته بـein Land / eine Stadt",
+        "يسأل زميله عن جنس ثلاث كلمات بنهاياتها (‑ung · ‑chen · ‑ling) ويصحّح له بـder/die/das",
+        "يسأل عن الهواية (Hast du ein Hobby?) ويجيب بـgern: Ich lese gern · Ich lese auch gern — ويردّ بـOkay! وSuper!"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«ممتاز!» — بالألمانية؟",
+            "a": "Super!",
+            "choices": [
+              "Super!",
+              "Gut!",
+              "Genau!"
+            ],
+            "why": "Super! = ممتاز/رائع — ردّ على جواب صحيح كما قالها يوسف لعائشة. Gut! = جيد، Genau! = بالضبط."
+          },
+          {
+            "q": "___ wohnt Lena? — In Berlin.",
+            "a": "Wo",
+            "choices": [
+              "Wo",
+              "Woher",
+              "Wer"
+            ],
+            "why": "الجواب in ⇐ wo (أين). woher جوابها aus، وwer = مَن."
+          },
+          {
+            "q": "Deutschland ist ___ Land.",
+            "a": "ein",
+            "choices": [
+              "ein",
+              "eine",
+              "die"
+            ],
+            "why": "das Land محايد ⇐ ein. «ألمانيا بلدٌ» بالتنوين في العربية، وبـein في الألمانية."
+          },
+          {
+            "q": "die, der oder das? ___ Zentrum",
+            "a": "das",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "why": "‑um ⇐ محايد: das Zentrum (كما في الحوار). ~~der Zentrum~~ خطأ الأسبوع."
+          },
+          {
+            "q": "«الشارع» بالألمانية — بـß أم ss؟ اكتب الكلمة مع أداتها.",
+            "a": "die Straße",
+            "accept": [
+              "Straße"
+            ],
+            "why": "a طويلة ⇐ ß: die Straße. ss بعد الحركة القصيرة فقط (Tasse)."
+          },
+          {
+            "q": "الترتيب: gern / auch / Ich / lese",
+            "a": "Ich lese auch gern.",
+            "why": "الفعل ثانياً (lese) ثم auch ثم gern — لا auch بين ich وlese."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«حسناً / أوكي» — بالألمانية؟",
+            "a": "Okay",
+            "choices": [
+              "Okay",
+              "Genau",
+              "Danke"
+            ],
+            "why": "Okay = حسناً/أوكي — ردّ الموافقة. Genau = بالضبط، Danke = شكراً."
+          },
+          {
+            "q": "___ kommt Ayşe? — Aus der Türkei.",
+            "a": "Woher",
+            "choices": [
+              "Woher",
+              "Wo",
+              "Was"
+            ],
+            "why": "الجواب aus ⇐ woher (من أين). wo للسكن (in)."
+          },
+          {
+            "q": "Berlin ist ___ Stadt.",
+            "a": "eine",
+            "choices": [
+              "eine",
+              "ein",
+              "das"
+            ],
+            "why": "die Stadt مؤنثة ⇐ eine. ~~Berlin ist Stadt~~ (بلا أداة) خطأ الأسبوع."
+          },
+          {
+            "q": "die, der oder das? ___ Schmetterling",
+            "a": "der",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "why": "‑ling ⇐ مذكر: der Schmetterling — لا تتبع «الفراشة» المؤنثة."
+          },
+          {
+            "q": "«الفنجان» بالألمانية — بـß أم ss؟ اكتب الكلمة مع أداتها.",
+            "a": "die Tasse",
+            "accept": [
+              "Tasse"
+            ],
+            "why": "a قصيرة ⇐ ss: die Tasse. ß بعد الطويلة فقط (Straße · Fuß)."
+          },
+          {
+            "q": "Ayşe: Meine ___ ist nicht Deutsch.",
+            "a": "Muttersprache",
+            "choices": [
+              "Muttersprache",
+              "Fremdsprache",
+              "Sprache"
+            ],
+            "why": "اللغة الأم = Muttersprache. الألمانية لها Fremdsprache (لغة أجنبية)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Yusuf: Ich wohne ___ Berlin, aber ich komme ___ Tunesien.",
+            "a": "in · aus",
+            "choices": [
+              "in · aus",
+              "aus · in",
+              "in · von"
+            ],
+            "why": "wohnen in (السكن) · kommen aus (الأصل) — حرفان ثابتان."
+          },
+          {
+            "q": "die, der oder das? ___ Mädchen",
+            "a": "das",
+            "choices": [
+              "das",
+              "die",
+              "der"
+            ],
+            "why": "‑chen ⇐ محايد دائماً: das Mädchen، ولو كان المعنى «فتاة»."
+          },
+          {
+            "q": "die, der oder das? ___ Zeitung",
+            "a": "die",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "why": "‑ung ⇐ مؤنث دائماً: die Zeitung."
+          },
+          {
+            "q": "«القدم» بالألمانية — بـß أم ss؟ اكتب الكلمة مع أداتها.",
+            "a": "der Fuß",
+            "accept": [
+              "Fuß"
+            ],
+            "why": "u طويلة ⇐ ß: der Fuß. وss بعد القصيرة فقط."
+          },
+          {
+            "q": "«ماذا يعني هذا؟» — بالألمانية؟",
+            "a": "Was bedeutet das?",
+            "why": "bedeuten = يعني؛ was للشيء ثم الفعل bedeutet ثم das."
+          },
+          {
+            "q": "الترتيب: Hobby? / du / Hast / ein",
+            "a": "Hast du ein Hobby?",
+            "why": "سؤال نعم/لا يبدأ بالفعل Hast، ثم du، ثم ein Hobby (das Hobby محايد ⇐ ein)."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Woche zwei ist zu Ende: Ich wohne in Berlin, ich komme aus Tunesien. Berlin ist eine Stadt. Die Zeitung · das Mädchen · der Schmetterling. Straße, Tasse, Fuß. — Okay, super!",
+      "ar": "الوحدة الثانية اكتملت: تفرّق السكن عن الأصل، وتضع ein/eine، وتعرف الجنس من النهاية، وتكتب ß/ss من طول الحركة — وتردّ بـokay وsuper."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Wo kommst du? — Aus Tunesien.~~",
+          "ar": "wo للأصل"
+        },
+        "whyArabicSpeakerFails": "«أين» و«من أين» في العربية كلمتان من جذر واحد فيبدوان سؤالاً واحداً، والألمانية تفصلهما: wo (السكن ← in) وwoher (الأصل ← aus) — والخلط يعود في التوليف حين يُسأل السؤالان معاً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Woher kommst du? — Aus Tunesien. · Wo wohnst du? — In Berlin.",
+          "ar": "من أين أنت؟ — من تونس. · أين تسكن؟ — في برلين."
+        },
+        "exercise": {
+          "q": "أكمل: ___ wohnt Ayşe? — In Berlin.",
+          "a": "Wo"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Tunesien ist Land.~~",
+          "ar": "حذف ein"
+        },
+        "whyArabicSpeakerFails": "التنوين العربي («بلدٌ») يحمل معنى النكرة بلا كلمة، فيسقط المتعلم ein/eine — والألمانية لا تضع اسماً نكرة مفرداً بلا أداة: ein Land (محايد) · eine Stadt (مؤنثة) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Tunesien ist ein Land. Berlin ist eine Stadt.",
+          "ar": "تونس بلدٌ. برلين مدينةٌ."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Österreich ist Land.~~",
+          "a": "Österreich ist ein Land."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~die Schmetterling~~ · ~~der Zeitung~~",
+          "ar": "الجنس من الترجمة"
+        },
+        "whyArabicSpeakerFails": "المتعلم ينقل جنس الكلمة العربية (الفراشة مؤنثة · الجريدة مؤنثة) — والألمانية تحسمه بالنهاية: ‑ling مذكر، ‑ung مؤنث، ‑chen محايد؛ الترجمة لا تحكم (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "der Schmetterling · die Zeitung · das Mädchen",
+          "ar": "الفراشة (مذكر!) · الجريدة · الفتاة (محايد!)"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Möglichkeit (‑keit)",
+          "a": "die"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "okay",
+      "super"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/M%C3%A4dchen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/-chen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-ein-eine",
+    "ars-genuscode"
+  ],
+  "audioManifestRefs": [
+    "word-okay",
+    "word-super"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 2 — توليف الوحدة 2: عائشة ويوسف يراجعان معاً",
+    "goetheWordListOverlap": [
+      "okay",
+      "super"
+    ]
+  }
+}

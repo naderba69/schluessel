@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-ein-eine",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "ein Haus · eine Stadt",
+    "ar": "أداة النكرة: der وdas ← ein · die ← eine — ومتى لا أداة أصلاً"
+  },
+  "payload": {
+    "topicAr": "أداة النكرة: der وdas تصيران ein، وdie تصير eine — للشيء الواحد غير المعيَّن (بيتٌ · مدينةٌ). ولا أداة أصلاً مع أسماء اللغات، ولا مع المهنة والدراسة بعد sein، ولا مع أكثر البلدان والمدن، ولا مع الجمع",
+    "sceneAr": "في الدورة عبر الإنترنت: لينا تُري يوسف أمام الكاميرا البيت الذي تسكن فيه في سويسرا — بيتاً في بلدة صغيرة لا في مدينة — ويوسف يحكي عن شقته في برلين وعن الحياة هناك، ثم يتحدثان عن اللغة الأم واللغات الأجنبية: كل منهما يتكلم أكثر من لغة.",
+    "examples": [
+      {
+        "de": "Das ist ein Haus. — Das Haus ist neu.",
+        "ar": "هذا بيتٌ. — البيتُ جديد."
+      },
+      {
+        "de": "Berlin ist eine Stadt.",
+        "ar": "برلين مدينةٌ."
+      },
+      {
+        "de": "Das ist ein Ort in der Schweiz.",
+        "ar": "هذه بلدةٌ في سويسرا."
+      },
+      {
+        "de": "Deutsch ist eine Fremdsprache für mich.",
+        "ar": "الألمانية لغةٌ أجنبية بالنسبة لي."
+      },
+      {
+        "de": "Ich spreche Arabisch. — Lena ist Schülerin.",
+        "ar": "أتكلم العربية. — لينا تلميذة."
+      },
+      {
+        "de": "Yusuf spricht vier Sprachen. — In Berlin leben viele Menschen.",
+        "ar": "يوسف يتكلم أربع لغات. — في برلين يعيش ناسٌ كثيرون."
+      }
+    ],
+    "inferencePromptAr": "انظر إلى الأمثلة: (1) Haus وOrt مع ein، وStadt وFremdsprache مع eine — ما أداة التعريف (der/die/das) لكل منها؟ فما العلاقة؟ (2) في المثال الأول: متى قلنا ein Haus، ومتى das Haus؟ (3) «برلين مدينةٌ» — تكفي العربيةَ التنوينُ في آخر الكلمة؛ فما الكلمة التي تقوم مقامه في الألمانية؟ (4) في المثال الخامس: Arabisch وSchülerin — هل قبلهما أداة؟ (5) وفي الأخير: Sprachen وMenschen جمع — هل قبلهما ein؟",
+    "ruleDe": "der Ort → ein Ort · das Haus → ein Haus · die Stadt → eine Stadt · Ich spreche Arabisch. · Ich bin Student. · viele Menschen",
+    "ruleAr": "أداة النكرة تتبع أداة التعريف: der ← ein · das ← ein · die ← eine. نقولها للشيء الواحد أول مرة نذكره أو حين نصف ما هو: Das ist ein Haus. · Berlin ist eine Stadt. — فإذا صار معروفاً عدنا إلى der/die/das: Das Haus ist neu. ولا أداة أصلاً في أربعة مواضع: (1) أسماء اللغات: Ich spreche Arabisch. · Deutsch ist schwer. (2) المهنة والدراسة بعد sein: Ich bin Student. · Lena ist Schülerin. (3) أكثر البلدان والمدن: Ich wohne in Berlin. · Ich komme aus Tunesien. — أما in der Schweiz وaus der Türkei فقطعتان حفظناهما. (4) الجمع: vier Sprachen · viele Menschen — فلا جمع لـein. وبعد in تتغير ein: in einer Wohnung · in einem Haus — نحفظهما الآن قطعتين.",
+    "contrastAr": "خريطة التداخل 10‑ي، بندها الأول (حذف ein): العربية تُنكِّر بالتنوين في آخر الكلمة («بيتٌ» · «مدينةٌ») بلا كلمة مستقلة قبلها، فيقول المتعلم Berlin ist Stadt. ✗ — والألمانية تضع كلمة قبل الاسم: Berlin ist eine Stadt. ✓. ويتضاعف الخطأ إن سقط الفعل أيضاً كما يسقط في «برلين مدينةٌ» (البند الثاني، حذف ist): Berlin Stadt. ✗. والتنوين لا يدل على الجنس، والجنس العربي لا يدل على الجنس الألماني: «بيت» مذكر وdas Haus محايد، و«حياة» مؤنثة وdas Leben محايد، و«مدينة» مؤنثة وdie Stadt مؤنثة صدفةً — فاحفظ الأداة مع الاسم دائماً، فمنها تعرف ein أو eine. ومن يعرف الفرنسية يعرف un/une، لكن الفرنسية تضع للجمع النكرة أداةً (des maisons) والألمانية لا: Häuser. ومن يعرف الإنجليزية يقول I am a student، والألمانية بلا أداة: Ich bin Student.",
+    "limitsAr": [
+      "بعد in تتغير ein وeine: in einer Wohnung · in einem Haus — والسبب حالة نتعلمها لاحقاً؛ الآن نحفظ القطعتين كما هما، كما حفظنا in der Schweiz.",
+      "بعد haben تبقى ein وeine كما هما مع المؤنث والمحايد: Ich habe eine Wohnung. · Wir haben ein Haus. أما المذكر بعد haben فيتغير — نتعلمه في الوحدة الرابعة.",
+      "إذا وُصفت المهنة بصفة عادت الأداة — نتعلم ذلك لاحقاً؛ الآن نقول بلا أداة: Ich bin Student. · Lena ist Schülerin.",
+      "ein bisschen (قليلاً) قطعة ثابتة لا تتغير ولا علاقة لها بجنس ما بعدها: ein bisschen Deutsch."
+    ],
+    "beads": [
+      "Berlin",
+      "ist",
+      "eine",
+      "Stadt."
+    ],
+    "properNouns": [
+      "Berlin",
+      "Lena",
+      "Yusuf"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u2-d2",
+    "a1-u2-d6",
+    "a1-u15-d1"
+  ]
+}

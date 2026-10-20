@@ -1,0 +1,631 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u11-d6",
+  "level": "A1",
+  "unit": 11,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Woche elf ist zu Ende: Heute ist Samstag, der elfte April · Mein Hals tut weh, meine Beine tun weh · Ich habe drei Tage im Bett gelegen, ich bin drei Tage zu Hause geblieben · Ich soll die Salbe nehmen, ich darf kein Fußball spielen · Die Salbe hilft mir · zwei Hände, zwei Beine, zwei Augen, die Zähne.",
+    "ar": "توليف الأسبوع الحادي عشر (السبت 11 أبريل، آخر يوم ليوسف في تونس): الجسم والألم (tut weh / tun weh · Kopfschmerzen · Fieber · Schnupfen) · الماضي بـhaben أو sein (gelegen · gewartet · bekommen / geblieben) · soll وdarf والفعل في الآخر · helfen مع الداتيف (hilft mir · dem Patienten) · الجمع (Hände · Beine · Augen · Zähne) — ثم معركة الوحدة (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (Kopfschmerzen · Fieber) تعودان من الأسبوع نفسه."
+  },
+  "canDoDaily": [
+    "يقول أين يؤلمه بـtut/tun weh وKopfschmerzen وFieber ويحكي ما جرى عند الطبيب بـhaben أو sein (Ich habe gewartet · Ich bin geblieben)",
+    "ينقل تعليمات الطبيب بـsoll/darf والفعل في الآخر ويستعمل hilft mir لا mich ويجتاز معركة الوحدة 11 بنتيجة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hand",
+      "arzt",
+      "bleiben"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«يجب أن آخذ المرهم» — تخمين فقط"
+        },
+        "choices": [
+          "Ich soll die Salbe nehmen.",
+          "Ich soll nehmen die Salbe.",
+          "Ich nehmen soll die Salbe."
+        ],
+        "answer": "Ich soll die Salbe nehmen.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«المرهم يساعدني» — تخمين فقط"
+        },
+        "choices": [
+          "Die Salbe hilft mir.",
+          "Die Salbe hilft mich.",
+          "Die Salbe hilft ich."
+        ],
+        "answer": "Die Salbe hilft mir.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "kopfschmerz",
+      "fieber"
+    ],
+    "grammarArsenalIds": [
+      "ars-koerper",
+      "ars-gesundheit",
+      "ars-perfekt",
+      "ars-dativ-fix",
+      "ars-modal-fix"
+    ],
+    "storySentenceIds": [
+      "story-a1-u11-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Mein Hals ___ weh. (tun)",
+            "a": "tut",
+            "why": "مفرد ⇐ tut weh: Der Hals tut weh · Der Kopf tut weh."
+          },
+          {
+            "q": "Meine Beine ___ weh. (tun)",
+            "a": "tun",
+            "why": "جمع ⇐ tun weh: Die Beine tun weh · Die Augen tun weh."
+          },
+          {
+            "q": "Ich habe drei Tage im Bett ___. (liegen)",
+            "a": "gelegen",
+            "why": "liegen شاذ: gelegen — مع haben، والصيغة الثالثة في الآخر."
+          },
+          {
+            "q": "Ich ___ drei Tage zu Hause geblieben. (sein)",
+            "a": "bin",
+            "why": "bleiben يأخذ sein في الماضي: ich bin geblieben (u11-d3)."
+          },
+          {
+            "q": "Ich habe beim Hausarzt eine Stunde ___. (warten)",
+            "a": "gewartet",
+            "why": "warten منتظم: ge‑ + wart + ‑et (بعد t تُزاد e)."
+          },
+          {
+            "q": "Ich ___ die Salbe am Morgen und am Abend nehmen. (sollen)",
+            "a": "soll",
+            "why": "تعليمات الطبيب بـsollen: ich soll … nehmen — الفعل الثاني في الآخر."
+          },
+          {
+            "q": "Ich ___ drei Tage kein Fußball spielen. (dürfen)",
+            "a": "darf",
+            "why": "المنع بـdürfen + kein/nicht: ich darf kein Fußball spielen (u11-d5)."
+          },
+          {
+            "q": "Die Salbe hilft ___. (ich)",
+            "a": "mir",
+            "why": "helfen يأخذ الداتيف: hilft mir · hilft dir · hilft dem Patienten — لا mich."
+          },
+          {
+            "q": "Eine Hand, zwei ___.",
+            "a": "Hände",
+            "why": "الجمع بالأوملاوت و‑e: die Hand ⇐ die Hände (u11-d1)."
+          },
+          {
+            "q": "Lena hat kein Fieber und keine Kopfschmerzen mehr — nur noch ___. (الزكام)",
+            "a": "Schnupfen",
+            "why": "der Schnupfen = الزكام (الأنف يسيل) · das Fieber = الحمّى · die Kopfschmerzen = صداع (جمع)."
+          }
+        ],
+        "interleavedWith": [
+          "hals",
+          "bein",
+          "bett",
+          "salbe",
+          "fussball",
+          "hand",
+          "fieber",
+          "kopfschmerz"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "ez-2",
+            "speakText": "Der elfte April — mein letzter Tag in Tunis! Und du? Wie fühlst du dich?",
+            "q": "استمع: ما يوم يوسف اليوم في Tunis؟",
+            "choices": [
+              "يومه الأخير",
+              "يومه الأول",
+              "يوم الطبيب"
+            ],
+            "a": "يومه الأخير",
+            "why": "mein letzter Tag = يومي الأخير · der elfte April · Wie fühlst du dich? = كيف تشعرين؟ (u11-d4)."
+          },
+          {
+            "audioId": "ez-3",
+            "speakText": "Viel besser. Kein Fieber mehr, keine Kopfschmerzen. Nur der Schnupfen — meine Nase läuft noch.",
+            "q": "استمع: ماذا بقي عند لينا؟",
+            "choices": [
+              "الزكام فقط",
+              "الحمّى",
+              "الصداع"
+            ],
+            "a": "الزكام فقط",
+            "why": "Kein Fieber mehr · keine Kopfschmerzen · nur der Schnupfen — meine Nase läuft = أنفي يسيل."
+          },
+          {
+            "audioId": "ez-5",
+            "speakText": "Nein, der Hals tut nicht mehr weh. Aber meine Beine tun weh — ich habe drei Tage im Bett gelegen!",
+            "q": "استمع: ما الذي يؤلم لينا الآن؟",
+            "choices": [
+              "ساقاها",
+              "حلقها",
+              "رأسها"
+            ],
+            "a": "ساقاها",
+            "why": "meine Beine tun weh (جمع ⇐ tun) · der Hals tut nicht mehr weh · im Bett gelegen = رقدتُ في السرير."
+          },
+          {
+            "audioId": "ez-8",
+            "speakText": "Ich habe eine Stunde gewartet. Der Arzt hat die Wunde gesehen — und ich habe eine Spritze bekommen.",
+            "q": "استمع: كم انتظر يوسف عند الطبيب؟",
+            "choices": [
+              "ساعة",
+              "ثلاثة أيام",
+              "عشرين دقيقة"
+            ],
+            "a": "ساعة",
+            "why": "eine Stunde gewartet · die Wunde gesehen · eine Spritze bekommen — كلها مع haben والصيغة الثالثة في الآخر."
+          },
+          {
+            "audioId": "ez-10",
+            "speakText": "Ich soll die Salbe nehmen, am Morgen und am Abend. Und ich darf drei Tage kein Fußball spielen.",
+            "q": "استمع: ماذا لا يجوز ليوسف ثلاثة أيام؟",
+            "choices": [
+              "لعب كرة القدم",
+              "أخذ المرهم",
+              "الذهاب إلى المدرسة"
+            ],
+            "a": "لعب كرة القدم",
+            "why": "ich darf … kein Fußball spielen = لا يُسمح لي · ich soll die Salbe nehmen = عليّ أن آخذ المرهم."
+          },
+          {
+            "audioId": "ez-12",
+            "speakText": "Die Salbe hilft mir. Und das Pflaster hilft mir auch — nicht «hilft mich»!",
+            "q": "استمع: ما الذي يساعد يوسف؟",
+            "choices": [
+              "المرهم واللاصق",
+              "الحقنة والأقراص",
+              "القطرات"
+            ],
+            "a": "المرهم واللاصق",
+            "why": "die Salbe hilft mir · das Pflaster hilft mir auch — helfen + الداتيف (mir)."
+          },
+          {
+            "audioId": "ez-20",
+            "speakText": "Ja, um sechs! Wir fahren um sieben zum Flughafen ab. Woche elf ist zu Ende — bis morgen aus Berlin, Lena!",
+            "q": "استمع: متى ينطلق يوسف إلى المطار غداً؟",
+            "choices": [
+              "في السابعة",
+              "في السادسة",
+              "في الحادية عشرة"
+            ],
+            "a": "في السابعة",
+            "why": "um sechs = يستيقظ · Wir fahren um sieben zum Flughafen ab — ab في الآخر (u12-d1) · bis morgen aus Berlin."
+          },
+          {
+            "audioId": "ez-16",
+            "speakText": "Zwei Hände, zwei Beine, zwei Augen. Und die Zähne! Hat dein Bruder noch Zahnschmerzen?",
+            "q": "استمع: عمّن يسأل يوسف في الآخر؟",
+            "choices": [
+              "عن أخي لينا وألم أسنانه",
+              "عن أبي لينا",
+              "عن طبيب لينا"
+            ],
+            "a": "عن أخي لينا وألم أسنانه",
+            "why": "dein Bruder … Zahnschmerzen = ألم الأسنان · Hände · Beine · Augen · Zähne — الجمع."
+          }
+        ],
+        "interleavedWith": [
+          "nase",
+          "stunde",
+          "arzt",
+          "spritze",
+          "pflaster",
+          "flughafen",
+          "bruder"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "صحّح: ~~Mein Kopf tut mich weh.~~",
+            "a": "Mein Kopf tut mir weh.",
+            "why": "الألم مع الداتيف: tut mir weh."
+          },
+          {
+            "q": "صحّح: ~~Ich habe drei Tage im Bett geliegen.~~",
+            "a": "Ich habe drei Tage im Bett gelegen.",
+            "why": "liegen شاذ: gelegen."
+          },
+          {
+            "q": "صحّح: ~~Ich habe drei Tage zu Hause geblieben.~~",
+            "a": "Ich bin drei Tage zu Hause geblieben.",
+            "why": "bleiben مع sein: bin geblieben."
+          },
+          {
+            "q": "صحّح: ~~Ich soll nehmen die Salbe.~~",
+            "a": "Ich soll die Salbe nehmen.",
+            "why": "soll ثانياً وnehmen في الآخر."
+          },
+          {
+            "q": "صحّح: ~~Das Pflaster hilft mich.~~",
+            "a": "Das Pflaster hilft mir.",
+            "why": "helfen + الداتيف: mir."
+          },
+          {
+            "q": "صحّح: ~~Ich habe zwei Hand.~~",
+            "a": "Ich habe zwei Hände.",
+            "why": "الجمع: Hände (أوملاوت + e)."
+          }
+        ],
+        "interleavedWith": [
+          "kopf",
+          "salbe",
+          "pflaster",
+          "hand"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "ez-1",
+            "speakText": "Hallo, Yusuf! Woche elf ist zu Ende — die Woche mit Fieber und Schnupfen. Heute ist Samstag, der elfte April.",
+            "a": "Hallo, Yusuf! Woche elf ist zu Ende — die Woche mit Fieber und Schnupfen. Heute ist Samstag, der elfte April.",
+            "why": "elf ثم der elfte (‑te للتاريخ) · Fieber بـie طويلة · Schnupfen بـpf · April بحرف كبير."
+          },
+          {
+            "audioId": "ez-4",
+            "speakText": "Und der Hals? Tut dein Hals noch weh?",
+            "a": "Und der Hals? Tut dein Hals noch weh?",
+            "why": "der Hals (مذكر) · Tut … weh — الفعل أولاً في السؤال وweh في الآخر."
+          },
+          {
+            "audioId": "ez-9",
+            "speakText": "Und was sollst du machen?",
+            "a": "Und was sollst du machen?",
+            "why": "sollst بـ‑st مع du · machen في الآخر بعد sollen."
+          },
+          {
+            "audioId": "ez-13",
+            "speakText": "Mir, dir, dem Patienten! Und was ist mit deinem Finger jetzt?",
+            "a": "Mir, dir, dem Patienten! Und was ist mit deinem Finger jetzt?",
+            "why": "الداتيف: mir · dir · dem Patienten (‑en) · mit deinem Finger (mit + داتيف ⇐ ‑em)."
+          },
+          {
+            "audioId": "ez-15",
+            "speakText": "Super! Frage drei — die Wörter: eine Hand, ein Bein, ein Auge — und zwei?",
+            "a": "Super! Frage drei — die Wörter: eine Hand, ein Bein, ein Auge — und zwei?",
+            "why": "die Wörter بأوملاوت · eine Hand (مؤنث) · ein Bein · ein Auge (محايد)."
+          },
+          {
+            "audioId": "ez-18",
+            "speakText": "Und du? Darfst du am Montag in die Schule gehen?",
+            "a": "Und du? Darfst du am Montag in die Schule gehen?",
+            "why": "Darfst بـ‑st · am Montag · in die Schule (wohin ⇐ die) · gehen في الآخر."
+          }
+        ],
+        "interleavedWith": [
+          "woche",
+          "april",
+          "hals",
+          "patient",
+          "auge",
+          "schule"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Ich war krank: Mein Hals hat weh getan, ich hatte Fieber. Ich habe drei Tage im Bett gelegen und bin zu Hause geblieben. Der Arzt hat gesagt: Ich soll Tabletten nehmen und darf nicht schwimmen. Die Tabletten helfen mir.",
+        "ar": "أن يحكي لزميل مرضاً صغيراً: أين كان الألم (tut/tun weh · Kopfschmerzen · Fieber) · ما فعل بـhaben أو sein (gelegen · gewartet · geblieben) · تعليمتان من الطبيب بـsoll وdarf والفعل في الآخر · وما الذي يساعده بـhilft mir"
+      },
+      "situation": {
+        "de": "Das Ende der Woche: Samstag, der elfte April — Lena wird gesund, Yusuf war beim Hausarzt. Und jetzt du: Was tut dir weh?",
+        "ar": "نهاية الأسبوع الحادي عشر: صباح السبت 11 أبريل، آخر يوم ليوسف في تونس — لينا تتعافى ويوسف بعد طبيب الأسرة، يراجعان الجسم والألم والماضي وتعليمات الطبيب — ثم مرضك أنت"
+      },
+      "successCriteria": [
+        "يسمّي عضوين على الأقل مع tut/tun weh صحيحة (Der Hals tut weh · Die Beine tun weh) ويقول Fieber أو Kopfschmerzen",
+        "يحكي ثلاثة أفعال في الماضي منها واحد بـsein (bin geblieben) واثنان بـhaben (habe gelegen · habe gewartet) والصيغة الثالثة في الآخر",
+        "ينقل تعليمتين بـsoll وdarf والفعل في الآخر، ويقول hilft mir لا mich"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "Mein Hals tut ___.",
+            "a": "weh",
+            "choices": [
+              "weh",
+              "wehe",
+              "Weh"
+            ],
+            "why": "tut weh = يؤلم، وweh في الآخر."
+          },
+          {
+            "q": "Ich bin drei Tage zu Hause ___.",
+            "a": "geblieben",
+            "choices": [
+              "geblieben",
+              "bleiben",
+              "geblieb"
+            ],
+            "why": "bleiben شاذ: geblieben مع sein."
+          },
+          {
+            "q": "Ich ___ eine Stunde gewartet.",
+            "a": "habe",
+            "choices": [
+              "habe",
+              "bin",
+              "hat"
+            ],
+            "why": "warten مع haben: ich habe gewartet."
+          },
+          {
+            "q": "Lena: Was hilft ___? — Yusuf: Die Salbe hilft mir.",
+            "a": "dir",
+            "choices": [
+              "dir",
+              "dich",
+              "du"
+            ],
+            "why": "helfen + الداتيف: dir."
+          },
+          {
+            "q": "Ein Bein, zwei ___.",
+            "a": "Beine",
+            "choices": [
+              "Beine",
+              "Beins",
+              "Bein"
+            ],
+            "why": "الجمع: das Bein ⇐ die Beine (‑e)."
+          },
+          {
+            "q": "الترتيب: spielen. / Ich darf / kein Fußball / drei Tage",
+            "a": "Ich darf drei Tage kein Fußball spielen.",
+            "why": "darf ثانياً وspielen في الآخر."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Der Arzt ___ die Wunde gesehen.",
+            "a": "hat",
+            "choices": [
+              "hat",
+              "ist",
+              "habe"
+            ],
+            "why": "sehen مع haben: der Arzt hat gesehen."
+          },
+          {
+            "q": "Ein Auge, zwei ___.",
+            "a": "Augen",
+            "choices": [
+              "Augen",
+              "Auges",
+              "Augene"
+            ],
+            "why": "الجمع: das Auge ⇐ die Augen (‑n)."
+          },
+          {
+            "q": "Was ___ du machen? — Ich soll die Salbe nehmen.",
+            "a": "sollst",
+            "choices": [
+              "sollst",
+              "soll",
+              "sollen"
+            ],
+            "why": "sollen مع du: sollst."
+          },
+          {
+            "q": "Die Tabletten helfen ___ Patienten.",
+            "a": "dem",
+            "choices": [
+              "dem",
+              "den",
+              "der"
+            ],
+            "why": "helfen + الداتيف: dem Patienten."
+          },
+          {
+            "q": "Ich habe eine Spritze ___.",
+            "a": "bekommen",
+            "choices": [
+              "bekommen",
+              "bekommt",
+              "bekomme"
+            ],
+            "why": "be‑ بلا ge‑: bekommen (الصيغة الثالثة مثل المصدر)."
+          },
+          {
+            "q": "«ساقاي تؤلمانني» — بالألمانية؟",
+            "a": "Meine Beine tun weh.",
+            "why": "جمع ⇐ tun weh."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "Ein Zahn, zwei ___.",
+            "a": "Zähne",
+            "choices": [
+              "Zähne",
+              "Zahne",
+              "Zahns"
+            ],
+            "why": "der Zahn ⇐ die Zähne (أوملاوت + e)."
+          },
+          {
+            "q": "___ du am Montag in die Schule gehen?",
+            "a": "Darfst",
+            "choices": [
+              "Darfst",
+              "Darf",
+              "Dürfen"
+            ],
+            "why": "dürfen مع du: darfst."
+          },
+          {
+            "q": "Lena ___ drei Tage im Bett geblieben.",
+            "a": "ist",
+            "choices": [
+              "ist",
+              "hat",
+              "bin"
+            ],
+            "why": "bleiben مع sein، ومع Lena: ist."
+          },
+          {
+            "q": "Der Arzt hilft ___. (er)",
+            "a": "ihm",
+            "choices": [
+              "ihm",
+              "ihn",
+              "er"
+            ],
+            "why": "helfen + الداتيف: ihm."
+          },
+          {
+            "q": "Der Arzt hat die Wunde ___.",
+            "a": "gesehen",
+            "choices": [
+              "gesehen",
+              "sehen",
+              "sieht"
+            ],
+            "why": "sehen شاذ: gesehen."
+          },
+          {
+            "q": "«كيف تشعر؟» — بالألمانية؟",
+            "a": "Wie fühlst du dich?",
+            "why": "الفعل المنعكس sich fühlen: fühlst du dich (u11-d4)."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Woche elf ist zu Ende: Heute ist Samstag, der elfte April. Lena hat kein Fieber mehr, nur Schnupfen — ihre Beine tun weh, sie hat drei Tage im Bett gelegen. Yusuf hat beim Hausarzt gewartet und eine Spritze bekommen. Er soll die Salbe nehmen und darf kein Fußball spielen. Die Salbe hilft ihm. Zwei Hände, zwei Beine, zwei Augen, die Zähne.",
+      "ar": "الوحدة الحادية عشرة اكتملت: تقول أين يؤلمك بـtut/tun weh وKopfschmerzen وFieber، وتحكي الماضي بـhaben أو sein، وتنقل تعليمات الطبيب بـsoll/darf والفعل في الآخر، وتستعمل helfen مع الداتيف، والجمع Hände/Beine/Augen/Zähne."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Mein Kopf tut mich weh.~~ · ~~Meine Beine tut weh.~~ · ~~Ich habe Kopfschmerz.~~",
+          "ar": "الألم: الداتيف وtut/tun والجمع"
+        },
+        "whyArabicSpeakerFails": "«يؤلمني رأسي» بالعربية: المفعول «ني» مباشر، والألمانية تضع المتألم في الداتيف (tut mir weh) وتوافق الفعل مع العضو (Beine tun) وتجعل الصداع جمعاً دائماً (Kopfschmerzen) — فيستعمل المتعلم mich وtut مع الجمع وKopfschmerz مفرداً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Mein Kopf tut mir weh. · Meine Beine tun weh. · Ich habe Kopfschmerzen.",
+          "ar": "رأسي يؤلمني · ساقاي تؤلمانني · عندي صداع"
+        },
+        "exercise": {
+          "q": "أكمل: Meine Augen ___ weh, und ich habe ___. (tun · صداع)",
+          "a": "tun / Kopfschmerzen"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich habe zu Hause geblieben.~~ · ~~Ich bin eine Stunde gewartet.~~",
+          "ar": "الماضي: haben أم sein"
+        },
+        "whyArabicSpeakerFails": "الماضي العربي لا يحتاج فعلاً مساعداً، والألمانية تختار بين haben (الأغلب: gewartet · gelegen · bekommen) وsein (الحركة والتغيّر وbleiben: geblieben · gegangen) — فيعمّم المتعلم haben على bleiben أو sein على warten (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich bin drei Tage zu Hause geblieben. · Ich habe eine Stunde gewartet.",
+          "ar": "بقيتُ ثلاثة أيام في البيت · انتظرتُ ساعة"
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ drei Tage im Bett gelegen, und Lena ___ zu Hause geblieben.",
+          "a": "habe / ist"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich soll nehmen die Salbe.~~ · ~~Ich darf spiele kein Fußball.~~",
+          "ar": "soll/darf والفعل في الآخر"
+        },
+        "whyArabicSpeakerFails": "«يجب أن آخذ المرهم» تضع الفعلين متجاورين بالعربية، والألمانية تفصلهما: soll/darf في المكان الثاني والمصدر في آخر الجملة تماماً (Ich soll die Salbe nehmen · Ich darf kein Fußball spielen) — فيلصق المتعلم المصدر بالفعل الناقص أو يصرّفه (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich soll die Salbe nehmen. · Ich darf kein Fußball spielen.",
+          "ar": "عليّ أن آخذ المرهم · لا يُسمح لي بلعب كرة القدم"
+        },
+        "exercise": {
+          "q": "أكمل: Du ___ drei Tage nicht ___. (dürfen · schwimmen)",
+          "a": "darfst / schwimmen"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "kopfschmerz",
+      "fieber"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Krankenwagen",
+      "https://www.duden.de/rechtschreibung/helfen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/helfen"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-koerper",
+    "ars-gesundheit",
+    "ars-perfekt",
+    "ars-dativ-fix",
+    "ars-modal-fix"
+  ],
+  "audioManifestRefs": [
+    "word-kopfschmerz",
+    "word-fieber"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 11 — توليف الوحدة 11: السبت 11 أبريل — الجسم والمرض والطبيب والماضي",
+    "goetheWordListOverlap": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-familie-mix",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Ihr Mann ist Lehrer. Er liebt seinen Beruf.",
+    "ar": "خلط الملكية والمفعول: الجذع من المالك (mein · dein · sein · ihr) والنهاية من المملوك ودوره (بلا نهاية · ‑e · ‑en)"
+  },
+  "payload": {
+    "topicAr": "التعريف بالأسرة يجمع قاعدتي الوحدة: الملكية والمفعول. كلمة الملكية تجيب عن سؤالين معاً: مَن المالك؟ ← الجذع: ich ← mein · du ← dein · er ← sein · sie ← ihr (الجديدة اليوم: ملكيتها). وما المملوك وما دوره؟ ← النهاية: der أو das ← بلا نهاية · die أو الجمع ← ‑e · المذكر مفعولاً ← ‑en: Ihr Mann ist Lehrer · Er liebt seinen Beruf · Sie liebt ihre Arbeit · Ich bin stolz auf meinen Bruder.",
+    "sceneAr": "مهمة اليوم من معلمة الدورة عبر الإنترنت: كل مشارك يسجّل رسالة صوتية قصيرة عن عائلته (Wir nehmen eine Nachricht auf). يسجّل يوسف: تونس وطنه، وأخته متزوجة وما زالت تدرس، وزوجها معلّم يحب مهنته، ويوسف فخور بها. ثم تسجّل لينا: لها أخوان توأمان مرِحان، وأمها تعمل كثيراً وتحب عملها، وأبوها معلّم أيضاً.",
+    "examples": [
+      {
+        "de": "Ich habe eine Schwester. Ihr Mann ist Lehrer.",
+        "ar": "عندي أخت. زوجُها معلّم. (die Schwester ← ihr · der Mann)"
+      },
+      {
+        "de": "Ihr Mann ist Lehrer. Er liebt seinen Beruf.",
+        "ar": "زوجُها معلّم. يحب مهنتَه. (der Mann ← sein · der Beruf مفعولاً)"
+      },
+      {
+        "de": "Meine Mutter arbeitet viel. Sie liebt ihre Arbeit.",
+        "ar": "أمي تعمل كثيراً. تحب عملَها. (die Mutter ← ihr · die Arbeit)"
+      },
+      {
+        "de": "Mein Vater ist Lehrer. Sein Beruf ist schön.",
+        "ar": "أبي معلّم. مهنتُه جميلة. (der Vater ← sein · der Beruf فاعلاً)"
+      },
+      {
+        "de": "Lena hat eine Katze. Ihre Katze heißt Mia.",
+        "ar": "عند لينا قطة. قطتُها اسمها Mia. (Lena ← ihr · die Katze)"
+      },
+      {
+        "de": "Meine Schwester liebt ihren Mann.",
+        "ar": "أختي تحب زوجَها. (die Schwester ← ihr · der Mann مفعولاً)"
+      }
+    ],
+    "inferencePromptAr": "(1) مَن المالك في كل مثال؟ متى جاء sein ومتى جاء ihr؟ (2) المالكة في الأمثلة 1 و3 و5 و6 امرأة، فلماذا ihr Mann في 1 وihre Arbeit في 3 وihren Mann في 6؟ ما أداة Mann وما أداة Arbeit؟ وفي أي مثال صار Mann مفعولاً؟ (3) قارن seinen Beruf في 2 بـSein Beruf في 4: ماذا تغيّر، ولماذا؟ (4) كل كلمة ملكية تجيب عن سؤالين: مَن يملك؟ وماذا يُملك وما دوره؟ أي جزء من ihren يجيب عن كل سؤال؟ (5) قل بالعربية «زوجُها» و«عملُها» و«رأيتُ زوجَها»: هل تتغير «ـها» مع المملوك أو دوره؟ وهل تتغير ihr؟",
+    "ruleDe": "ich → mein · du → dein · er → sein · sie → ihr — der Mann → ihr Mann · die Arbeit → ihre Arbeit · den Mann → ihren Mann · den Beruf → seinen Beruf · Ich bin stolz auf meinen Bruder.",
+    "ruleAr": "كلمة الملكية في الألمانية تحمل جوابين: (1) مَن المالك؟ ← الجذع: ich ← mein · du ← dein · er أو اسم مذكر (der Vater · Yusuf) ← sein · sie أو اسم مؤنث (die Mutter · Lena) ← ihr. (2) ما المملوك وما دوره؟ ← النهاية كما تعلّمتَها مع ein: der أو das ← بلا نهاية (ihr Mann · sein Foto) · die أو الجمع ← ‑e (ihre Arbeit · seine Eltern) · المذكر مفعولاً ← ‑en (seinen Beruf · ihren Mann). فـihren = ihr (المالكة مؤنثة) + ‑en (المملوك مذكر مفعول). وبعد stolz auf يأتي المفعول: Ich bin stolz auf meinen Bruder · Ich bin stolz auf sie.",
+    "contrastAr": "العربية في صفّك في السؤال الأول: «زوجُه» و«زوجُها» تفرّقان المالك المذكر من المالكة المؤنثة كما sein وihr — وهذا عون حقيقي. والفرق في السؤال الثاني: «ـها» العربية علامة المالكة وحدها، لا تتغير مع المملوك ولا مع دوره («زوجُها · عملُها · رأيتُ زوجَها»)، والألمانية تضيف إلى ihr نهاية من المملوك ودوره (ihr Mann · ihre Arbeit · ihren Mann) — فمن ظنّ ‑e علامة المالكة المؤنثة قال ~~ihre Mann~~. والخطر الآخر من الفرنسية التي يعرفها كثير من العرب في المغرب العربي: son وsa فيها بجنس المملوك (sa mère = أمّه وأمّها)، فيُنقل التأنيث من المملوك إلى الجذع: ~~Er liebt ihre Mutter~~ (يقصد أمّه) ← seine Mutter — والعربية «أمّه» تحميك هنا. و«فخور بـ»: الباء العربية لا تُترجم mit — stolz auf + مفعول (stolz auf meinen Bruder) — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "ihr بثلاثة معانٍ بشكل واحد: ihr (ملكيتها) اليوم · وIhr بحرف كبير «حضرتك» كما تعرفها من Ihr Name · وihr ضمير «أنتم» — لاحقاً. وفي أول الجملة يكبر الحرف دائماً، فالسياق يحسم: Ich habe eine Schwester. Ihr Mann ist Lehrer = زوجُها.",
+      "erzählen von وverheiratet mit: بعد von وmit تتغيّر الأداة (von meiner Familie) — قاعدة لاحقة (Dativ في الوحدة 8). اليوم von مع بلد أو اسم بلا أداة: Erzählst du von Tunesien?",
+      "aufnehmen ينقسم في الجملة كـvorstellen: Ich nehme eine Nachricht auf · Jetzt nehme ich auf — نحفظه قطعة، وقاعدة هذه الأفعال كلها في الوحدة 7.",
+      "die Geschwister جمع دائم كـdie Eltern — لا مفرد له في الكلام اليومي، فنقول Bruder أو Schwester: Hast du Geschwister? · وder Zwilling جمعه die Zwillinge."
+    ],
+    "beads": [
+      "Sie",
+      "liebt",
+      "ihren",
+      "Mann."
+    ],
+    "properNouns": [
+      "Lena",
+      "Mia"
+    ]
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u4-d5"
+  ]
+}

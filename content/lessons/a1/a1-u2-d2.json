@@ -1,0 +1,607 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u2-d2",
+  "level": "A1",
+  "unit": 2,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Ich wohne in Berlin. Berlin ist eine Stadt. Meine Muttersprache ist Arabisch, Deutsch ist eine Fremdsprache.",
+    "ar": "تستطيع أن تقول أين تسكن وتتحدث عن لغاتك"
+  },
+  "canDoDaily": [
+    "يقدّم شيئاً أو مكاناً بأداة النكرة: Das ist ein Haus. · Berlin ist eine Stadt.",
+    "يتكلم عن سكنه وحياته ولغته الأم ولغاته الأجنبية — ولا أداة قبل اسم اللغة ولا قبل المهنة بعد sein"
+  ],
+  "warmup": {
+    "cardIds": [
+      "land",
+      "sprache",
+      "wohnen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«برلين مدينةٌ» (مدينة = Stadt) — أي جملة ألمانية صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Berlin ist eine Stadt.",
+          "Berlin ist Stadt.",
+          "Berlin Stadt."
+        ],
+        "answer": "Berlin ist eine Stadt.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "leben",
+      "stadt",
+      "haus",
+      "muttersprache",
+      "fremdsprache",
+      "wohnung",
+      "mensch",
+      "ort",
+      "das-leben"
+    ],
+    "grammarArsenalIds": [
+      "ars-ein-eine"
+    ],
+    "storySentenceIds": [
+      "story-a1-u2-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "sp-st-initial",
+      "ch-ach-laut",
+      "auslaut-d"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Das ist ___ Haus.",
+            "a": "ein",
+            "why": "das Haus ⇐ ein Haus: der وdas تصيران ein. نقولها للشيء الواحد غير المعيَّن — كالتنوين في «بيتٌ»، لكنها كلمة قبل الاسم."
+          },
+          {
+            "q": "Berlin ist ___ Stadt.",
+            "a": "eine",
+            "why": "die Stadt ⇐ eine Stadt: die تصير eine. العربية تكتفي بالتنوين «مدينةٌ»، والألمانية تحتاج كلمة قبل الاسم — والفعل ist لا يسقط."
+          },
+          {
+            "q": "Das ist ___ Ort in der Schweiz.",
+            "a": "ein",
+            "why": "der Ort ⇐ ein Ort: المذكر والمحايد كلاهما ein هنا. وder Ort = مكان أو بلدة صغيرة، لا مدينة (die Stadt)."
+          },
+          {
+            "q": "Deutsch ist ___ Fremdsprache für mich.",
+            "a": "eine",
+            "why": "die Fremdsprache ⇐ eine Fremdsprache = لغةٌ أجنبية. أما Deutsch فاسم لغة بلا أداة."
+          },
+          {
+            "q": "Lena ist ___. (تلميذة)",
+            "a": "Schülerin",
+            "why": "المهنة والدراسة بعد sein بلا أداة: Lena ist Schülerin — لا eine Schülerin. الإنجليزية تقول a student، والألمانية لا."
+          },
+          {
+            "q": "___ Leben in Berlin ist neu. (أداة التعريف)",
+            "a": "Das",
+            "why": "das Leben (الحياة) محايد — مع أن «الحياة» مؤنثة بالعربية: الجنس العربي ليس دليلاً، فاحفظ الأداة مع الاسم. وLeben بحرف كبير لأنه اسم."
+          },
+          {
+            "q": "Yusuf spricht vier ___. (لغات)",
+            "a": "Sprachen",
+            "why": "die Sprache ⇐ الجمع die Sprachen. والجمع بلا ein: vier Sprachen · viele Menschen — ein للمفرد وحده."
+          },
+          {
+            "q": "In Berlin ___ viele Menschen. (leben)",
+            "a": "leben",
+            "why": "die Menschen جمع ⇐ الفعل بـ‑en: Menschen leben. وleben (يعيش — الحياة كلها) غير wohnen (يسكن — مكان السكن)."
+          },
+          {
+            "q": "Meine ___ ist Arabisch. (اللغة الأم)",
+            "a": "Muttersprache",
+            "why": "die Muttersprache = اللغة الأم (Mutter = أم · Sprache = لغة)، كلمة واحدة بحرف كبير. وبعد Meine لا ein، وArabisch بلا أداة."
+          }
+        ],
+        "interleavedWith": [
+          "sprache",
+          "schweiz",
+          "sprechen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "ha-1",
+            "speakText": "Yusuf, das ist ein Haus in der Schweiz. Hier wohne ich.",
+            "q": "استمع: ماذا تُري لينا يوسفَ؟",
+            "choices": [
+              "بيتاً في سويسرا تسكن فيه",
+              "شقة في برلين",
+              "مدينة في ألمانيا"
+            ],
+            "a": "بيتاً في سويسرا تسكن فيه",
+            "why": "ein Haus = بيتٌ (das Haus ⇐ ein) · in der Schweiz = في سويسرا · Hier wohne ich = هنا أسكن — والفعل بعد Hier مباشرة."
+          },
+          {
+            "audioId": "ha-3",
+            "speakText": "Nein, das ist ein Ort. Er ist neu für mich. Und du?",
+            "q": "استمع: هل بيت لينا في مدينة؟",
+            "choices": [
+              "لا، في بلدة — وهي جديدة عليها",
+              "نعم، في مدينة",
+              "لا، في برلين"
+            ],
+            "a": "لا، في بلدة — وهي جديدة عليها",
+            "why": "ein Ort = بلدة أو مكان — لا eine Stadt (مدينة). وEr ist neu für mich: er يعود على der Ort — الضمير يتبع أداة الاسم الألمانية لا العربية: «البلدة» مؤنثة عندنا، وder Ort مذكر ⇐ er."
+          },
+          {
+            "audioId": "ha-4",
+            "speakText": "Ich wohne in einer Wohnung in Berlin.",
+            "q": "استمع: أين يسكن يوسف؟",
+            "choices": [
+              "في شقة في برلين",
+              "في بيت في برلين",
+              "في شقة في سويسرا"
+            ],
+            "a": "في شقة في برلين",
+            "why": "in einer Wohnung = في شقة: die Wohnung ⇐ eine، وبعد in تصير einer — قطعة نحفظها الآن. أما «بيت» فـein Haus."
+          },
+          {
+            "audioId": "ha-6",
+            "speakText": "Neu und ein bisschen schwer. Hier leben viele Menschen.",
+            "q": "استمع: كيف يصف يوسف الحياة في برلين؟",
+            "choices": [
+              "جديدة وصعبة قليلاً — وفيها ناس كثيرون",
+              "سهلة — وفيها ناس قليلون",
+              "صعبة جداً — وهو وحده"
+            ],
+            "a": "جديدة وصعبة قليلاً — وفيها ناس كثيرون",
+            "why": "neu = جديد · ein bisschen schwer = صعبة قليلاً · viele Menschen = ناس كثيرون (viele من wie viele = كم) — والجمع Menschen بلا ein."
+          },
+          {
+            "audioId": "ha-7",
+            "speakText": "Deine Muttersprache ist Arabisch, und Deutsch ist eine Fremdsprache für dich.",
+            "q": "استمع: ماذا تقول لينا عن لغات يوسف؟",
+            "choices": [
+              "لغته الأم العربية، والألمانية لغة أجنبية له",
+              "لغته الأم الألمانية، والعربية لغة أجنبية له",
+              "يتكلم العربية فقط"
+            ],
+            "a": "لغته الأم العربية، والألمانية لغة أجنبية له",
+            "why": "die Muttersprache = اللغة الأم · eine Fremdsprache = لغةٌ أجنبية (die ⇐ eine) — وArabisch وDeutsch اسما لغتين بلا أداة. für dich = بالنسبة لك."
+          },
+          {
+            "audioId": "ha-8",
+            "speakText": "Genau. Und Französisch ist auch eine Fremdsprache für mich.",
+            "q": "استمع: ماذا يضيف يوسف؟",
+            "choices": [
+              "الفرنسية أيضاً لغة أجنبية له",
+              "الفرنسية لغته الأم",
+              "لا يتكلم الفرنسية"
+            ],
+            "a": "الفرنسية أيضاً لغة أجنبية له",
+            "why": "auch = أيضاً · eine Fremdsprache für mich = لغة أجنبية بالنسبة لي — وFranzösisch اسم لغة بلا أداة."
+          },
+          {
+            "audioId": "ha-10",
+            "speakText": "Ich spreche vier Sprachen: Arabisch, Französisch, Englisch und ein bisschen Deutsch.",
+            "q": "استمع: كم لغة يتكلم يوسف — وأيها يتكلمها قليلاً؟",
+            "choices": [
+              "أربعاً — والألمانية قليلاً",
+              "ثلاثاً — والإنجليزية قليلاً",
+              "أربعاً — والفرنسية قليلاً"
+            ],
+            "a": "أربعاً — والألمانية قليلاً",
+            "why": "vier Sprachen = أربع لغات — الجمع بلا ein. وein bisschen Deutsch = قليلاً من الألمانية: ein bisschen قطعة ثابتة، لا أداة نكرة."
+          },
+          {
+            "audioId": "ha-11",
+            "speakText": "Vier Sprachen? Du bist international!",
+            "q": "استمع: كيف تصف لينا يوسف؟",
+            "choices": [
+              "دولي — بلغاته الأربع",
+              "طالب جديد",
+              "من سويسرا"
+            ],
+            "a": "دولي — بلغاته الأربع",
+            "why": "Du bist international! = أنت دولي! — كلمة الأمس (Der Kurs ist international) تصف بها لينا يوسف مازحة، والنبر في آخرها (‑nal). وvier Sprachen بلا أداة لأنها جمع."
+          }
+        ],
+        "interleavedWith": [
+          "arabisch",
+          "franzoesisch",
+          "englisch"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Stadt.",
+              "ist",
+              "Berlin",
+              "eine"
+            ],
+            "a": "Berlin ist eine Stadt.",
+            "why": "الفعل ist ثانياً ولا يسقط، وeine قبل Stadt — التنوين في «مدينةٌ» يصير كلمة قبل الاسم."
+          },
+          {
+            "tokens": [
+              "Haus.",
+              "ist",
+              "ein",
+              "Das"
+            ],
+            "a": "Das ist ein Haus.",
+            "why": "Das ist … = هذا … · das Haus ⇐ ein Haus. وDas في أولها بحرف كبير لأنها أول الجملة."
+          },
+          {
+            "tokens": [
+              "Student.",
+              "bin",
+              "Ich"
+            ],
+            "a": "Ich bin Student.",
+            "why": "المهنة والدراسة بعد sein بلا أداة: Ich bin Student — لا ein Student (الإنجليزية: a student)."
+          },
+          {
+            "tokens": [
+              "Menschen.",
+              "viele",
+              "leben",
+              "Hier"
+            ],
+            "a": "Hier leben viele Menschen.",
+            "why": "بعد Hier يأتي الفعل leben مباشرة، ثم viele Menschen — والجمع بلا ein."
+          },
+          {
+            "tokens": [
+              "Fremdsprache.",
+              "eine",
+              "ist",
+              "Deutsch"
+            ],
+            "a": "Deutsch ist eine Fremdsprache.",
+            "why": "Deutsch اسم لغة بلا أداة، وdie Fremdsprache ⇐ eine Fremdsprache — والفعل ist ثانياً."
+          }
+        ],
+        "interleavedWith": [
+          "deutsch",
+          "student",
+          "wie-viel"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "ha-2",
+            "speakText": "Ein Haus! Ist das eine Stadt?",
+            "a": "Ein Haus! Ist das eine Stadt?",
+            "why": "Haus وStadt اسمان ⇐ حرف كبير · ein مع das Haus وeine مع die Stadt · وبعد ! يبدأ السؤال Ist بحرف كبير."
+          },
+          {
+            "audioId": "ha-5",
+            "speakText": "Und wie ist das Leben in Berlin?",
+            "a": "Und wie ist das Leben in Berlin?",
+            "why": "das Leben اسم ⇐ L كبيرة، والفعل leben (يعيش) بحرف صغير: Hier leben viele Menschen. السمع واحد والكتابة تفرّق."
+          },
+          {
+            "audioId": "ha-9",
+            "speakText": "Für mich auch! Meine Muttersprache ist Deutsch.",
+            "a": "Für mich auch! Meine Muttersprache ist Deutsch.",
+            "why": "Für بحرف كبير في أول الجملة وü بنقطتين · Muttersprache كلمة واحدة بـtt · Deutsch اسم لغة ⇐ حرف كبير بلا أداة."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wo wohnst du? Was ist deine Muttersprache?",
+        "ar": "التحدث عن اللغات ومكان السكن"
+      },
+      "situation": {
+        "de": "Im Kurs: Wer bist du? Wo lebst du?",
+        "ar": "في الدورة: جولة تعريف"
+      },
+      "successCriteria": [
+        "يقدّم مكان سكنه بجملة فيها أداة نكرة: Das ist ein Haus. · Ich wohne in einer Wohnung. · Berlin ist eine Stadt.",
+        "يذكر لغته الأم ولغة أجنبية واحدة على الأقل بلا أداة قبل اسم اللغة: Meine Muttersprache ist Arabisch. · Deutsch ist eine Fremdsprache für mich.",
+        "يقول ما يدرسه بعد sein بلا أداة: Ich bin Student. / Ich bin Schülerin."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«مدينةٌ» بالألمانية — مع أداة النكرة؟",
+            "a": "eine Stadt",
+            "why": "die Stadt ⇐ eine Stadt: die تصير eine — وStadt اسم بحرف كبير."
+          },
+          {
+            "q": "Wir wohnen in ___ Haus.",
+            "a": "einem",
+            "choices": [
+              "einem",
+              "einer"
+            ],
+            "why": "das Haus ⇐ in einem Haus · die Wohnung ⇐ in einer Wohnung — قطعتان نحفظهما الآن."
+          },
+          {
+            "q": "der Mensch — الجمع؟",
+            "a": "die Menschen",
+            "accept": [
+              "Menschen"
+            ],
+            "why": "Mensch ⇐ Menschen (‑en) — وفي الجمع لا ein: viele Menschen."
+          },
+          {
+            "q": "«اللغة الأم» بالألمانية؟",
+            "a": "die Muttersprache",
+            "accept": [
+              "Muttersprache"
+            ],
+            "why": "die Muttersprache: Mutter (أم) + Sprache (لغة) — كلمة واحدة بحرف كبير."
+          },
+          {
+            "q": "صحّح: ~~Berlin ist Stadt.~~",
+            "a": "Berlin ist eine Stadt.",
+            "why": "التنوين في «مدينةٌ» يصير كلمة قبل الاسم: eine Stadt (die ⇐ eine)."
+          },
+          {
+            "q": "leben = ?",
+            "a": "يعيش",
+            "choices": [
+              "يعيش",
+              "يسكن",
+              "يتكلم"
+            ],
+            "why": "leben = يعيش (الحياة كلها) · wohnen = يسكن · sprechen = يتكلم."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«بيتٌ» بالألمانية — مع أداة النكرة؟",
+            "a": "ein Haus",
+            "why": "das Haus ⇐ ein Haus — و«بيت» مذكر بالعربية لكن Haus محايد."
+          },
+          {
+            "q": "Französisch ist ___ Fremdsprache für Yusuf.",
+            "a": "eine",
+            "choices": [
+              "eine",
+              "ein"
+            ],
+            "why": "die Fremdsprache ⇐ eine Fremdsprache = لغةٌ أجنبية — وFranzösisch اسم لغة بلا أداة."
+          },
+          {
+            "q": "der Ort = ?",
+            "a": "البلدة",
+            "choices": [
+              "البلدة",
+              "المدينة",
+              "البيت"
+            ],
+            "why": "der Ort = مكان أو بلدة صغيرة · die Stadt = مدينة · das Haus = بيت."
+          },
+          {
+            "q": "Ich bin ___. (طالب)",
+            "a": "Student",
+            "choices": [
+              "Student",
+              "ein Student"
+            ],
+            "why": "المهنة والدراسة بعد sein بلا أداة: Ich bin Student."
+          },
+          {
+            "q": "___ Leben ist schwer. (أداة التعريف)",
+            "a": "Das",
+            "choices": [
+              "Das",
+              "Die",
+              "Der"
+            ],
+            "why": "das Leben محايد — مع أن «الحياة» مؤنثة بالعربية: الجنس العربي ليس دليلاً."
+          },
+          {
+            "q": "«الشقة» بالألمانية؟",
+            "a": "die Wohnung",
+            "accept": [
+              "Wohnung"
+            ],
+            "why": "die Wohnung — ومنها wohnen (يسكن): in einer Wohnung = في شقة."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "صحّح: ~~Ich wohne in eine Wohnung.~~",
+            "a": "Ich wohne in einer Wohnung.",
+            "why": "بعد in تصير eine ⇐ einer: in einer Wohnung — قطعة نحفظها الآن."
+          },
+          {
+            "q": "der Mensch = ?",
+            "a": "الإنسان",
+            "choices": [
+              "الإنسان",
+              "المكان",
+              "الحياة"
+            ],
+            "why": "der Mensch = الإنسان، وجمعه die Menschen = الناس: viele Menschen."
+          },
+          {
+            "q": "die Fremdsprache = ?",
+            "a": "اللغة الأجنبية",
+            "choices": [
+              "اللغة الأجنبية",
+              "اللغة الأم",
+              "المدينة"
+            ],
+            "why": "die Fremdsprache = اللغة الأجنبية · die Muttersprache = اللغة الأم."
+          },
+          {
+            "q": "Er ist ___. (تلميذ)",
+            "a": "Schüler",
+            "choices": [
+              "Schüler",
+              "ein Schüler"
+            ],
+            "why": "المهنة والدراسة بعد sein بلا أداة: Er ist Schüler — لا ein Schüler."
+          },
+          {
+            "q": "Lena ___ in der Schweiz. (يعيش)",
+            "a": "lebt",
+            "choices": [
+              "lebt",
+              "leben"
+            ],
+            "why": "Lena = sie ⇐ lebt (بـ‑t) · أما الجمع فـleben: Menschen leben."
+          },
+          {
+            "q": "Das ist ein ___ in der Schweiz. (بلدة)",
+            "a": "Ort",
+            "why": "der Ort ⇐ ein Ort = بلدة أو مكان — لا Stadt (مدينة)."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute: Das ist ein Haus. · Berlin ist eine Stadt. · Ich bin Student. · Hier leben viele Menschen.",
+      "ar": "اليوم: der وdas ⇐ ein · die ⇐ eine — للشيء الواحد كالتنوين · ولا أداة مع أسماء اللغات ولا مع المهنة بعد sein ولا مع الجمع · وتسع كلمات جديدة: بيت وشقة وبلدة ومدينة وإنسان والحياة ويعيش واللغة الأم واللغة الأجنبية!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Berlin ist Stadt.~~",
+          "ar": "«برلين مدينةٌ» — التنوين وحده"
+        },
+        "whyArabicSpeakerFails": "العربية تُنكِّر بالتنوين في آخر الكلمة («مدينةٌ» · «بيتٌ») بلا كلمة مستقلة قبلها، فيُسقط المتعلم أداة النكرة — والألمانية تضع كلمة قبل الاسم: ein Haus · eine Stadt. وإن سقط الفعل أيضاً كما في «برلين مدينةٌ» تضاعف الخطأ: Berlin Stadt. (حذف ein وحذف ist — خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Berlin ist eine Stadt.",
+          "ar": "برلين مدينةٌ."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Das ist Haus.~~",
+          "a": "Das ist ein Haus."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Die Leben in Berlin ist neu.~~",
+          "ar": "«الحياة» مؤنثة بالعربية ⇐ die"
+        },
+        "whyArabicSpeakerFails": "المتعلم ينقل الجنس العربي إلى الألمانية: «الحياة» مؤنثة فيقول die Leben — والألمانية das Leben (محايد). الجنس الألماني لا يتبع العربية: «بيت» مذكر وdas Haus محايد، و«مدينة» مؤنثة وdie Stadt مؤنثة صدفةً — فاحفظ الأداة مع الاسم دائماً (الجنس العربي ليس دليلاً — خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Das Leben in Berlin ist neu.",
+          "ar": "الحياة في برلين جديدة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Der Haus ist neu.~~",
+          "a": "Das Haus ist neu."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich wohne in eine Wohnung.~~",
+          "ar": "eine كما هي بعد in"
+        },
+        "whyArabicSpeakerFails": "في الفصحى يتغير آخر الاسم بعد حرف الجر («في شقةٍ» بالكسر)، والعامية لا تنطق هذا الإعراب، ولا شيء قبل الاسم يتغير — فيترك المتعلم eine كما هي. والألمانية تغيّر الأداة نفسها بعد in: in einer Wohnung · in einem Haus — منطق الجر نفسه، لكنه على الأداة لا على آخر الاسم. السبب الكامل حالة نتعلمها لاحقاً؛ الآن نحفظ القطعتين كما حفظنا in der Schweiz (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich wohne in einer Wohnung.",
+          "ar": "أسكن في شقة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Lena wohnt in ein Haus.~~",
+          "a": "Lena wohnt in einem Haus."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "leben",
+      "stadt",
+      "haus",
+      "muttersprache",
+      "fremdsprache",
+      "wohnung",
+      "mensch",
+      "ort",
+      "das-leben"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Sprache",
+      "https://www.duden.de/rechtschreibung/wohnen",
+      "https://www.duden.de/rechtschreibung/Muttersprache"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/ein",
+      "https://de.wiktionary.org/wiki/Mensch",
+      "https://de.wiktionary.org/wiki/Leben"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-ein-eine"
+  ],
+  "audioManifestRefs": [
+    "word-leben",
+    "word-stadt",
+    "word-haus",
+    "word-muttersprache",
+    "word-fremdsprache",
+    "word-wohnung",
+    "word-mensch",
+    "word-ort",
+    "word-das-leben"
+  ],
+  "imageManifestRefs": [
+    "img-haus"
+  ],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 2 (Ich komme aus …) — Sprachen & Wohnort",
+    "goetheWordListOverlap": [
+      "leben",
+      "stadt",
+      "haus",
+      "wohnung",
+      "mensch",
+      "ort",
+      "das-leben"
+    ]
+  }
+}

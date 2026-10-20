@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u10-d6-woche-zehn-ist-zu-ende",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Woche zehn ist zu Ende! — Montag, der sechste April",
+    "ar": "الأسبوع العاشر انتهى! — مكالمة صباح الاثنين 6 أبريل (اليوم الثامن بتونس، قبل مساء u11-d1): الطقس (regnet es nicht · scheint die Sonne · Grad) · gestern/vorgestern + haben + Partizip (gegessen · gelernt · besucht · eingekauft · telefoniert) · التواريخ (der sechste · am siebzehnten · am zwölften · am achtzehnten) · weil … bin/bist/hast مقابل deshalb lerne ich"
+  },
+  "usedIn": [
+    "a1-u10-d6"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "zh-1",
+      "speaker": "lena",
+      "text": "Hallo, Yusuf! Woche zehn ist zu Ende. Heute ist Montag, der sechste April.",
+      "direction": "لينا تفتح — الاثنين 6 أبريل (بعد الأحد u10-d5 وقبل مساء u11-d1)"
+    },
+    {
+      "id": "zh-2",
+      "speaker": "yusuf",
+      "text": "Der sechste April! Und wie ist das Wetter bei dir heute? Regnet es?",
+      "direction": "يوسف — التاريخ · سؤال الطقس (u10-d1)"
+    },
+    {
+      "id": "zh-3",
+      "speaker": "lena",
+      "text": "Nein, heute regnet es nicht. Es ist sonnig, aber kalt — nur sechs Grad.",
+      "direction": "لينا — es regnet nicht · sonnig · Grad"
+    },
+    {
+      "id": "zh-4",
+      "speaker": "yusuf",
+      "text": "Hier scheint die Sonne, und es sind dreißig Grad. Zu heiß! Bist du in der Schule?",
+      "direction": "يوسف — die Sonne scheint · es sind dreißig Grad (u10-d1)"
+    },
+    {
+      "id": "zh-5",
+      "speaker": "lena",
+      "text": "Nein, heute bin ich zu Hause, weil ich noch müde bin. Frage eins: Was hast du gestern gemacht?",
+      "direction": "لينا — weil … bin (u10-d5) · السؤال الأول: gestern (u10-d3)"
+    },
+    {
+      "id": "zh-6",
+      "speaker": "yusuf",
+      "text": "Gestern haben wir bei meiner Oma gegessen — sehr lange! Und ich habe zwei Stunden gelernt.",
+      "direction": "يوسف — gegessen bei Oma (u10-d5) · gelernt"
+    },
+    {
+      "id": "zh-7",
+      "speaker": "lena",
+      "text": "Gegessen, gelernt — haben und das Wort am Ende! Und vorgestern?",
+      "direction": "لينا — haben + Partizip في الآخر"
+    },
+    {
+      "id": "zh-8",
+      "speaker": "yusuf",
+      "text": "Vorgestern habe ich meine Oma besucht. Vorher habe ich eingekauft, nachher habe ich eine Stunde telefoniert.",
+      "direction": "يوسف — besucht · vorher eingekauft · nachher telefoniert (u10-d4)"
+    },
+    {
+      "id": "zh-9",
+      "speaker": "lena",
+      "text": "Besucht und telefoniert — kurz. Eingekauft und aufgeschrieben — lang! Frage zwei: Wann endet der Kurs?",
+      "direction": "لينا — besucht/telefoniert بلا ge · eingekauft بـge في الوسط (بطاقة u10-d4)"
+    },
+    {
+      "id": "zh-10",
+      "speaker": "yusuf",
+      "text": "Der Kurs endet am siebzehnten April — ein Freitag. Und ich fliege am zwölften April zurück, am Sonntag.",
+      "direction": "يوسف — am siebzehnten · am zwölften (u10-d2)"
+    },
+    {
+      "id": "zh-11",
+      "speaker": "lena",
+      "text": "Und am achtzehnten April?",
+      "direction": "لينا — am achtzehnten؟"
+    },
+    {
+      "id": "zh-12",
+      "speaker": "yusuf",
+      "text": "Am achtzehnten April hast du Geburtstag! Samstag, neunzehn Uhr, im Restaurant. Ich habe es aufgeschrieben.",
+      "direction": "يوسف — عيد ميلاد لينا 18 أبريل · 19 Uhr · aufgeschrieben (u10-d4)"
+    },
+    {
+      "id": "zh-13",
+      "speaker": "lena",
+      "text": "Richtig! Frage drei — für mich: Warum bin ich zu Hause?",
+      "direction": "لينا — السؤال الثالث: warum (u10-d5)"
+    },
+    {
+      "id": "zh-14",
+      "speaker": "yusuf",
+      "text": "Du bist zu Hause, weil du müde bist. Und du bist müde, weil du im Regen Fußball gespielt hast!",
+      "direction": "يوسف — weil … bist · weil … gespielt hast"
+    },
+    {
+      "id": "zh-15",
+      "speaker": "lena",
+      "text": "Genau! Und bei weil steht alles am Ende: gespielt hast. Und warum lernst du so viel?",
+      "direction": "لينا — الفعل في آخر جملة weil"
+    },
+    {
+      "id": "zh-16",
+      "speaker": "yusuf",
+      "text": "Weil ich in Berlin arbeiten möchte. Ich brauche Deutsch für einen Job — deshalb lerne ich jeden Tag.",
+      "direction": "يوسف — Weil ich … möchte · deshalb lerne ich (u10-d5)"
+    },
+    {
+      "id": "zh-17",
+      "speaker": "lena",
+      "text": "Deshalb lerne ich — hier steht lerne nicht am Ende! Und wie ist das Wetter morgen bei dir?",
+      "direction": "لينا — deshalb لا يرمي الفعل إلى الآخر (بطاقة u10-d5) · الطقس غداً"
+    },
+    {
+      "id": "zh-18",
+      "speaker": "yusuf",
+      "text": "Morgen ist es auch heiß — dreißig Grad. Und bei dir? Schnee?",
+      "direction": "يوسف — heiß · Schnee؟"
+    },
+    {
+      "id": "zh-19",
+      "speaker": "lena",
+      "text": "Nein, kein Schnee mehr. Morgen regnet es — und ich gehe in die Schule.",
+      "direction": "لينا — kein Schnee mehr · morgen regnet es"
+    },
+    {
+      "id": "zh-20",
+      "speaker": "yusuf",
+      "text": "Gut! Ruh dich heute aus. Woche zehn ist zu Ende — bis heute Abend, Lena!",
+      "direction": "يوسف يختم — ausruhen (u10-d5) · bis heute Abend = u11-d1"
+    }
+  ]
+}

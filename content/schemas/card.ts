@@ -1,6 +1,6 @@
 // card.ts — مخطط البطاقة (قالب المحتوى) | §4 — أنواع البطاقات ونسبها v6.1
 import { z } from "zod";
-import { ArText, DeText, Level, SchemaVersioned, Slug } from "./common.js";
+import { ArText, DeText, Level, SchemaVersioned, Slug, UnitNumber } from "./common.js";
 
 /**
  * أنواع البطاقات (§4):
@@ -37,7 +37,7 @@ export const CardTemplate = SchemaVersioned.extend({
   sourceWordIds: z.array(Slug).default([]),
   sourceArsenalIds: z.array(z.string()).default([]),
   level: Level,
-  unit: z.number().int().min(1).max(12),
+  unit: UnitNumber,
   lessonId: z.string().optional(),
   hints: ThreeHints.optional(),
   /** تفسير الخطأ الشائع المتوقع (من 10‑ي) — يُعرض في التصحيح الفوري */
@@ -60,6 +60,8 @@ export const SrsCardState = z.object({
   scheduled_days: z.number().nonnegative(),
   reps: z.number().nonnegative().default(0),
   lapses: z.number().nonnegative().default(0),
+  /** خطوات التعلّم داخل ts-fsrs v5 (فهرس الخطوة الحالية) — للتحويل الكامل forth/back (اختياري — البيانات القديمة سليمة) */
+  learning_steps: z.number().nonnegative().optional(),
   state: z.enum(["New", "Learning", "Review", "Relearning"]),
   last_review: z.string().optional(),
   /** L0–L4 (سلم الإتقان) */

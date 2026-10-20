@@ -1,0 +1,709 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u3-d1",
+  "level": "A1",
+  "unit": 3,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst bis hundert zählen: zweiunddreißig · dreiundsiebzig · achtzig.",
+    "ar": "تعدّ حتى 100 وتسمع العدد المركّب وتكتبه: الآحاد ثم und ثم العشرات في كلمة واحدة (zweiunddreißig = 32)"
+  },
+  "canDoDaily": [
+    "يعدّ بالعشرات حتى 100 ويكتبها مع استثناءاتها الثلاثة: dreißig · sechzig · siebzig",
+    "يسمع العدد المركّب ويكتبه حروفاً وأرقاماً: zweiunddreißig = 32 لا 23 — ويقول العمر بالعشرات: Meine Oma ist achtzig."
+  ],
+  "warmup": {
+    "cardIds": [
+      "zahl",
+      "nummer",
+      "jahr"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«اثنان وثلاثون» بالألمانية — ماذا تسمع أولاً؟ (تخمين فقط)"
+        },
+        "choices": [
+          "zwei … und dreißig — الآحاد أولاً",
+          "dreißig … und zwei — العشرات أولاً"
+        ],
+        "answer": "zwei … und dreißig — الآحاد أولاً",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "zwanzig",
+      "dreissig",
+      "vierzig",
+      "fuenfzig",
+      "sechzig",
+      "siebzig",
+      "achtzig",
+      "neunzig",
+      "hundert",
+      "zaehlen",
+      "ziffer",
+      "mal",
+      "oma",
+      "das-essen"
+    ],
+    "grammarArsenalIds": [
+      "ars-zahlen-100"
+    ],
+    "storySentenceIds": [
+      "story-a1-u3-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ig-ending",
+      "z",
+      "ch-ich-laut"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "«ثلاثون» (30): drei___ig — ß أم z؟",
+            "a": "ß",
+            "why": "dreißig وحدها من العشرات بـ‑ßig لا ‑zig: ei ثم ß كقاعدة طول الحركة — والبقية vierzig · fünfzig … بـ‑zig."
+          },
+          {
+            "q": "«ستون» (60): ___",
+            "a": "sechzig",
+            "why": "sechs تصير sech في العشرات (تسقط s) — كما في sechzehn (16) من درس الأعداد الأول."
+          },
+          {
+            "q": "«سبعون» (70): ___",
+            "a": "siebzig",
+            "why": "sieben تصير sieb في العشرات (تسقط en) — كما في siebzehn (17)."
+          },
+          {
+            "q": "«واحد وعشرون» (21): ___",
+            "a": "einundzwanzig",
+            "why": "الآحاد ثم und ثم العشرات في كلمة واحدة — كالعربية «واحد وعشرون» — وeins تصير ein قبل und."
+          },
+          {
+            "q": "«خمسة وأربعون» (45): fünfund___",
+            "a": "vierzig",
+            "why": "45 = fünf + und + vierzig: الآحاد أولاً ثم العشرات — وv في vierzig تُنطق [f]."
+          },
+          {
+            "q": "«ستة وعشرون» (26): ___undzwanzig",
+            "a": "sechs",
+            "why": "في المركّب تبقى sechs كاملة: sechsundzwanzig — الحذف في العشرات وحدها (sechzig)."
+          },
+          {
+            "q": "Die Zahl 32 hat zwei ___.",
+            "a": "Ziffern",
+            "why": "die Ziffer = الخانة (0–9) والجمع die Ziffern · die Zahl = العدد: العدد 32 من خانتين، 3 ثم 2."
+          },
+          {
+            "q": "«أعدّ حتى مئة»: Ich ___ bis hundert.",
+            "a": "zähle",
+            "why": "zählen = يعدّ، من die Zahl (a صارت ä): ich zähle — والفعل ثانياً بعد ich."
+          }
+        ],
+        "interleavedWith": [
+          "zahl"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "om-1",
+            "speakText": "Lena, heute hat meine Oma Geburtstag!",
+            "q": "استمع: من عيد ميلادها اليوم؟",
+            "choices": [
+              "جدة يوسف",
+              "لينا",
+              "جدة لينا"
+            ],
+            "a": "جدة يوسف",
+            "why": "meine Oma = جدتي · hat heute Geburtstag = عيد ميلادها اليوم — يوسف في برلين وجدته في تونس."
+          },
+          {
+            "audioId": "om-2",
+            "speakText": "Wie alt ist sie denn?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "عن عمر الجدة",
+              "عن اسم الجدة",
+              "عن مكان الجدة"
+            ],
+            "a": "عن عمر الجدة",
+            "why": "Wie alt ist sie? = كم عمرها؟ (درس الأعداد الأول) · denn تليّن السؤال ولا تغيّر معناه."
+          },
+          {
+            "audioId": "om-5",
+            "speakText": "Heute ist das Essen bei Oma in Tunesien. Zweiunddreißig Leute kommen!",
+            "q": "استمع: كم شخصاً يأتي؟",
+            "choices": [
+              "32",
+              "23",
+              "30"
+            ],
+            "a": "32",
+            "why": "zweiunddreißig = zwei + und + dreißig = 32 — نسمع الآحاد أولاً ونكتب الثلاثة أولاً، كالعربية «اثنان وثلاثون»."
+          },
+          {
+            "audioId": "om-6",
+            "speakText": "Wie bitte? Noch mal, bitte!",
+            "q": "استمع: ماذا تطلب لينا؟",
+            "choices": [
+              "أن يعيد العدد",
+              "أن يكتب العدد",
+              "أن يتكلم أسرع"
+            ],
+            "a": "أن يعيد العدد",
+            "why": "Wie bitte? = عفواً؟ · Noch mal, bitte! = مرة أخرى من فضلك — mal هنا «مرة»."
+          },
+          {
+            "audioId": "om-8",
+            "speakText": "Dreiundzwanzig?",
+            "q": "استمع: أي عدد فهمت لينا؟",
+            "choices": [
+              "23",
+              "32",
+              "33"
+            ],
+            "a": "23",
+            "why": "dreiundzwanzig = drei + und + zwanzig = 23 — قلبت الآحاد والعشرات: والصحيح zweiunddreißig (32)."
+          },
+          {
+            "audioId": "om-9",
+            "speakText": "Nein! Ich zähle: zehn, zwanzig, dreißig — und zwei.",
+            "q": "استمع: كيف يصحّح يوسف؟",
+            "choices": [
+              "يعدّ بالعشرات ثم يضيف اثنين",
+              "يتهجى العدد حرفاً حرفاً",
+              "يكتب العدد بالأرقام"
+            ],
+            "a": "يعدّ بالعشرات ثم يضيف اثنين",
+            "why": "Ich zähle = أعدّ: zehn, zwanzig, dreißig (10 · 20 · 30) — und zwei = وَاثنان ⇐ 32."
+          },
+          {
+            "audioId": "om-10",
+            "speakText": "Ach so! Das ist ja eine Gruppe!",
+            "q": "استمع: ماذا تقول لينا عن الضيوف؟",
+            "choices": [
+              "إنهم مجموعة",
+              "إنهم قليلون",
+              "إنهم من ألمانيا"
+            ],
+            "a": "إنهم مجموعة",
+            "why": "Ach so! = آه، فهمت! · eine Gruppe = مجموعة (من درس التعارف) — وja هنا للتأكيد لا «نعم»."
+          },
+          {
+            "audioId": "om-11",
+            "speakText": "Ja! Und das Essen ist von Oma.",
+            "q": "استمع: من صنع الطعام؟",
+            "choices": [
+              "الجدة",
+              "يوسف",
+              "الضيوف"
+            ],
+            "a": "الجدة",
+            "why": "das Essen = الطعام (اسم من الفعل essen) · von Oma = من الجدة."
+          },
+          {
+            "audioId": "om-13",
+            "speakText": "Natürlich! Und das Essen ist für hundert!",
+            "q": "استمع: الطعام يكفي كم شخصاً؟",
+            "choices": [
+              "مئة",
+              "اثنين وثلاثين",
+              "ثمانين"
+            ],
+            "a": "مئة",
+            "why": "für hundert = لمئة شخص — الجدة كريمة: الطعام أكثر بكثير من الضيوف الاثنين والثلاثين."
+          },
+          {
+            "audioId": "num-24",
+            "speakText": "vierundzwanzig.",
+            "q": "استمع: أي عدد؟",
+            "choices": [
+              "24",
+              "42",
+              "14"
+            ],
+            "a": "24",
+            "why": "vierundzwanzig = vier + und + zwanzig = 24 — الآحاد أولاً: «أربعة وعشرون»."
+          },
+          {
+            "audioId": "num-42",
+            "speakText": "zweiundvierzig.",
+            "q": "استمع: أي عدد؟",
+            "choices": [
+              "42",
+              "24",
+              "52"
+            ],
+            "a": "42",
+            "why": "zweiundvierzig = zwei + und + vierzig = 42 — «اثنان وأربعون»: نسمع 2 أولاً ونكتب 4 أولاً."
+          },
+          {
+            "audioId": "num-53",
+            "speakText": "dreiundfünfzig.",
+            "q": "استمع: أي عدد؟",
+            "choices": [
+              "53",
+              "35",
+              "63"
+            ],
+            "a": "53",
+            "why": "dreiundfünfzig = drei + und + fünfzig = 53 — وfünfunddreißig = 35."
+          },
+          {
+            "audioId": "num-63",
+            "speakText": "dreiundsechzig.",
+            "q": "استمع: أي عدد؟",
+            "choices": [
+              "63",
+              "36",
+              "73"
+            ],
+            "a": "63",
+            "why": "dreiundsechzig = drei + und + sechzig = 63 — sechzig بلا s، وsiebzig = 70."
+          },
+          {
+            "audioId": "num-99",
+            "speakText": "neunundneunzig.",
+            "q": "استمع: أي عدد؟",
+            "choices": [
+              "99",
+              "89",
+              "19"
+            ],
+            "a": "99",
+            "why": "neunundneunzig = neun + und + neunzig = 99 — آخر عدد قبل hundert."
+          }
+        ],
+        "interleavedWith": [
+          "geburtstag",
+          "leute",
+          "tunesien"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "achtzig.",
+              "ist",
+              "Oma",
+              "Meine"
+            ],
+            "a": "Meine Oma ist achtzig.",
+            "why": "العمر بـsein والعدد وحده (أو + Jahre alt): Meine Oma ist achtzig — والفعل ist ثانياً."
+          },
+          {
+            "tokens": [
+              "Leute",
+              "kommen!",
+              "Zweiunddreißig"
+            ],
+            "a": "Zweiunddreißig Leute kommen!",
+            "why": "zweiunddreißig كلمة واحدة بلا مسافة — ثم Leute ثم الفعل kommen ثانياً بعد الفاعل كله."
+          },
+          {
+            "tokens": [
+              "hundert.",
+              "bis",
+              "zähle",
+              "Ich"
+            ],
+            "a": "Ich zähle bis hundert.",
+            "why": "zählen bis = يعدّ حتى: ich zähle ثم bis hundert."
+          },
+          {
+            "tokens": [
+              "Oma.",
+              "ist",
+              "von",
+              "Essen",
+              "Das"
+            ],
+            "a": "Das Essen ist von Oma.",
+            "why": "das Essen (محايد) فاعل الجملة ثم ist ثانياً · von Oma = من الجدة."
+          },
+          {
+            "tokens": [
+              "siebzig.",
+              "ist",
+              "zehn",
+              "mal",
+              "Sieben"
+            ],
+            "a": "Sieben mal zehn ist siebzig.",
+            "why": "mal = ضرب (×) · ist = يساوي: 7 × 10 = 70 — وsieben تصير sieb في siebzig."
+          }
+        ],
+        "interleavedWith": [
+          "essen",
+          "kommen",
+          "zahl"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "om-3",
+            "speakText": "Sie ist achtzig.",
+            "a": "Sie ist achtzig.",
+            "why": "achtzig: acht + zig — ch بعد a (صوت الحلق كـ«خ») ثم tz."
+          },
+          {
+            "audioId": "om-4",
+            "speakText": "Achtzig! Meine Oma ist dreiundsiebzig.",
+            "a": "Achtzig! Meine Oma ist dreiundsiebzig.",
+            "why": "dreiundsiebzig كلمة واحدة: drei + und + siebzig — وsiebzig بلا en، وOma بحرف كبير (اسم)."
+          },
+          {
+            "audioId": "om-7",
+            "speakText": "Zweiunddreißig!",
+            "a": "Zweiunddreißig!",
+            "why": "zweiunddreißig كلمة واحدة بحرف كبير هنا لأنها أول الجملة — وdreißig بـß."
+          },
+          {
+            "audioId": "om-12",
+            "speakText": "Mit achtzig? Für zweiunddreißig Leute?",
+            "a": "Mit achtzig? Für zweiunddreißig Leute?",
+            "why": "zweiunddreißig كلمة واحدة · Leute جمع بلا مفرد في هذا المعنى، بحرف كبير."
+          },
+          {
+            "audioId": "num-21",
+            "speakText": "einundzwanzig.",
+            "a": "einundzwanzig.",
+            "why": "eins تصير ein قبل und: einundzwanzig — كلمة واحدة بحرف صغير (عدد لا اسم)."
+          },
+          {
+            "audioId": "num-27",
+            "speakText": "siebenundzwanzig.",
+            "a": "siebenundzwanzig.",
+            "why": "في المركّب تبقى sieben كاملة: siebenundzwanzig — الحذف في siebzig وحدها."
+          },
+          {
+            "audioId": "num-35",
+            "speakText": "fünfunddreißig.",
+            "a": "fünfunddreißig.",
+            "why": "fünf + und + dreißig — ü في fünf وß في dreißig، والكل كلمة واحدة."
+          },
+          {
+            "audioId": "num-36",
+            "speakText": "sechsunddreißig.",
+            "a": "sechsunddreißig.",
+            "why": "في المركّب تبقى sechs كاملة: sechsunddreißig — والحذف في sechzig وحدها."
+          }
+        ],
+        "interleavedWith": [
+          "leute"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Zahlen bis hundert zählen und schreiben",
+        "ar": "العدّ حتى 100 وكتابة الأعداد حروفاً وأرقاماً"
+      },
+      "situation": {
+        "de": "Im Kurs: Lena spricht über Oma. Wie alt ist sie?",
+        "ar": "قبل الدرس عبر الإنترنت: يوسف يخبر لينا عن عيد ميلاد جدته الثمانين"
+      },
+      "successCriteria": [
+        "يكتب 8 من 10 أعداد مسموعة صحيحةً حروفاً وأرقاماً: 24 لا 42 · dreißig بـß · sechzig وsiebzig بلا s وen",
+        "يقول أعمار ثلاثة أشخاص بالعشرات والمركّب في جمل كاملة: Meine Oma ist achtzig. · Ich bin neunzehn."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "32 بالحروف؟",
+            "a": "zweiunddreißig",
+            "choices": [
+              "zweiunddreißig",
+              "dreiundzwanzig"
+            ],
+            "why": "32 = اثنان وثلاثون: zwei + und + dreißig — الآحاد أولاً كالعربية؛ وdreiundzwanzig = 23."
+          },
+          {
+            "q": "أي العشرات تُكتب بـß؟",
+            "a": "dreißig",
+            "choices": [
+              "dreißig",
+              "vierzig",
+              "neunzig"
+            ],
+            "why": "dreißig وحدها بـß (‑ßig) — والبقية ‑zig: vierzig · neunzig."
+          },
+          {
+            "q": "جدة لينا (73): Meine Oma ist ___.",
+            "a": "dreiundsiebzig",
+            "choices": [
+              "dreiundsiebzig",
+              "siebenunddreißig"
+            ],
+            "why": "73 = ثلاثة وسبعون: drei + und + siebzig — وsiebenunddreißig = 37."
+          },
+          {
+            "q": "die Ziffer؟",
+            "a": "الخانة (0–9)",
+            "choices": [
+              "الخانة (0–9)",
+              "العدد",
+              "رقم الهاتف"
+            ],
+            "why": "die Ziffer خانة واحدة من 0 إلى 9 · die Zahl العدد · die Nummer الرقم المعرِّف (Telefonnummer)."
+          },
+          {
+            "q": "«الطعام / الوجبة» بالألمانية مع أداته؟",
+            "a": "das Essen",
+            "why": "das Essen (محايد) من الفعل essen بحرف كبير — كـdas Leben من leben."
+          },
+          {
+            "q": "أكمل: Ich zähle bis ___ (100).",
+            "a": "hundert",
+            "why": "hundert = مئة (أو einhundert)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "47 بالحروف؟",
+            "a": "siebenundvierzig",
+            "choices": [
+              "siebenundvierzig",
+              "vierundsiebzig"
+            ],
+            "why": "47 = سبعة وأربعون: sieben + und + vierzig — وsieben تبقى كاملة في المركّب."
+          },
+          {
+            "q": "fünfzig = ؟",
+            "a": "50",
+            "choices": [
+              "50",
+              "15",
+              "60"
+            ],
+            "why": "fünfzig = 50 · fünfzehn = 15 — ‑zig للعشرات وzehn لما بين 13 و19."
+          },
+          {
+            "q": "«ستة وثلاثون» بالحروف؟",
+            "a": "sechsunddreißig",
+            "why": "sechs تبقى كاملة في المركّب + und + dreißig — كلمة واحدة."
+          },
+          {
+            "q": "zählen بالعربية؟",
+            "a": "يعدّ",
+            "choices": [
+              "يعدّ",
+              "يكتب",
+              "يسأل"
+            ],
+            "why": "zählen = يعدّ (من die Zahl): Ich zähle bis hundert."
+          },
+          {
+            "q": "«الجدة» بالألمانية مع أداتها؟",
+            "a": "die Oma",
+            "why": "die Oma (مؤنث) والجمع die Omas — كلمة الكلام اليومي."
+          },
+          {
+            "q": "«مرة أخرى، من فضلك!» بالألمانية؟",
+            "a": "Noch mal, bitte!",
+            "why": "noch mal = مرة أخرى · bitte = من فضلك."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "85 بالحروف؟",
+            "a": "fünfundachtzig",
+            "choices": [
+              "fünfundachtzig",
+              "achtundfünfzig"
+            ],
+            "why": "85 = خمسة وثمانون: fünf + und + achtzig — وachtundfünfzig = 58."
+          },
+          {
+            "q": "«تسعون» بالألمانية؟",
+            "a": "neunzig",
+            "why": "neun + zig = neunzig — منتظمة بلا حذف."
+          },
+          {
+            "q": "«واحد وثلاثون» بالحروف؟",
+            "a": "einunddreißig",
+            "why": "eins تصير ein قبل und: einunddreißig — كلمة واحدة."
+          },
+          {
+            "q": "«الخانة» (0–9)؟",
+            "a": "die Ziffer",
+            "choices": [
+              "die Ziffer",
+              "die Zahl"
+            ],
+            "why": "die Ziffer = خانة واحدة · die Zahl = العدد كله."
+          },
+          {
+            "q": "Zweiunddreißig Leute kommen — كم شخصاً؟",
+            "a": "32",
+            "choices": [
+              "32",
+              "23"
+            ],
+            "why": "zweiunddreißig = 32: الآحاد (2) أولاً في الكلام، والعشرات (3) أولاً في الكتابة."
+          },
+          {
+            "q": "«جدتي في الثمانين»: Meine Oma ist ___.",
+            "a": "achtzig",
+            "why": "achtzig = 80: acht + zig — منتظمة."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute: zwanzig · dreißig · vierzig … hundert — zwei + und + dreißig = zweiunddreißig. Meine Oma ist achtzig. Ich zähle bis hundert.",
+      "ar": "اليوم: العشرات بـ‑zig واستثناءاتها الثلاثة (dreißig · sechzig · siebzig)، والعدد المركّب: الآحاد ثم und ثم العشرات في كلمة واحدة — كالعربية «اثنان وثلاثون» — ونكتبه بالأرقام 32."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~vierzig und zwei~~",
+          "ar": "العشرات أولاً (كالفرنسية والإنجليزية)"
+        },
+        "whyArabicSpeakerFails": "العربية في صفّك هنا: «اثنان وأربعون» — الآحاد أولاً ثم «و» ثم العشرات، كـzweiundvierzig تماماً. الخطر من الفرنسية التي يعرفها كثير من العرب في المغرب العربي (quarante-deux · vingt et un) ومن الإنجليزية (forty-two): العشرات أولاً — فيقول المتعلم ~~vierzig und zwei~~. اتبع العربية لا الفرنسية: الآحاد ثم und ثم العشرات (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "zweiundvierzig",
+          "ar": "اثنان وأربعون (42)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~zwanzig und eins~~ (21)",
+          "a": "einundzwanzig"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~ein und zwanzig~~ / ~~einsundzwanzig~~",
+          "ar": "كلمتان منفصلتان · أو eins كاملة"
+        },
+        "whyArabicSpeakerFails": "العربية تكتب العدد كلمتين («واحد وعشرون») وتُبقي «واحد» كما هي — فيكتب المتعلم ~~ein und zwanzig~~ منفصلة، أو يُبقي eins التي تعلّمها للعدّ. والألمانية تكتب العدد المركّب كلمة واحدة بلا مسافة، وeins تصير ein قبل und: einundzwanzig (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "einundzwanzig",
+          "ar": "واحد وعشرون — كلمة واحدة"
+        },
+        "exercise": {
+          "q": "صحّح: ~~eins und dreißig~~ (31)",
+          "a": "einunddreißig"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~dreizig~~ / ~~sechszig~~ / ~~siebenzig~~",
+          "ar": "العشرات من الآحاد كاملة"
+        },
+        "whyArabicSpeakerFails": "يبني المتعلم كل العشرات بقاعدة واحدة: الآحاد كاملة + ‑zig (vierzig من vier · achtzig من acht) فيكتب ~~dreizig~~ و~~sechszig~~ و~~siebenzig~~. والعربية نفسها تغيّر الآحاد في العشرات («ثلاثون» من «ثلاثة» · «ستون» من «ستة»)، فالفكرة مألوفة: ثلاثة استثناءات تُحفظ — dreißig (‑ßig لا ‑zig) · sechzig (تسقط s) · siebzig (تسقط en) كما في sechzehn وsiebzehn (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "dreißig / sechzig / siebzig",
+          "ar": "ثلاثون / ستون / سبعون"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Meine Oma ist siebenzig.~~",
+          "a": "Meine Oma ist siebzig."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "zwanzig",
+      "dreissig",
+      "vierzig",
+      "fuenfzig",
+      "sechzig",
+      "siebzig",
+      "achtzig",
+      "neunzig",
+      "hundert",
+      "zaehlen",
+      "ziffer",
+      "mal",
+      "oma",
+      "das-essen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/zwanzig",
+      "https://www.duden.de/rechtschreibung/drei%C3%9Fig",
+      "https://www.duden.de/rechtschreibung/sechzig"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/-zig"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-zahlen-100"
+  ],
+  "audioManifestRefs": [
+    "word-zwanzig",
+    "word-dreissig",
+    "word-vierzig",
+    "word-fuenfzig",
+    "word-sechzig",
+    "word-siebzig",
+    "word-achtzig",
+    "word-neunzig",
+    "word-hundert",
+    "word-zaehlen",
+    "word-ziffer",
+    "word-mal",
+    "word-oma",
+    "word-das-essen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 3 (Zahlen & Uhrzeit) — Zählen bis 100",
+    "goetheWordListOverlap": [
+      "zwanzig",
+      "dreissig",
+      "vierzig",
+      "fuenfzig",
+      "sechzig",
+      "siebzig",
+      "achtzig",
+      "neunzig",
+      "hundert",
+      "oma",
+      "das-essen"
+    ]
+  }
+}

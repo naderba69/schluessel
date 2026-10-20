@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d3-weg-und-hilfe",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Der Weg und die Hilfe",
+    "ar": "الطريق والمساعدة — مكالمة الدورة تمرينُ أدوار: لينا «مكتب الاستعلامات» ويوسف يسأل عن الطريق إلى المحطة المركزية وعن الاستعلامات والمخرج ويطلب خريطة المدينة بصيغة Sie، ثم يتبادلان فيشرح يوسف الطريق إلى الصيدلية وتشكره لينا على المساعدة وتطلب منه شرح الواجب — Gehen Sie! · Nehmen Sie den Bus! · Biegen Sie links ab! · Helfen Sie mir! (الداتيف) · Können Sie mir helfen/den Weg erklären? · zuerst … danach … · um Hilfe bitten · Danke für die Hilfe!"
+  },
+  "usedIn": [
+    "a1-u9-d3"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "wf-1",
+      "speaker": "lena",
+      "text": "Hallo Yusuf! Heute im Kurs: der Weg — mit Sie. Ich bin die Auskunft, und du suchst den Hauptbahnhof.",
+      "direction": "مكالمة الدورة — تمرين أدوار: لينا «مكتب الاستعلامات» ويوسف يسأل عن الطريق بصيغة Sie · der Weg (من u7-d1) · du suchst den Hauptbahnhof (الأكوزاتيف)"
+    },
+    {
+      "id": "wf-2",
+      "speaker": "yusuf",
+      "text": "Gut! Entschuldigung, können Sie mir helfen? Ich suche den Hauptbahnhof.",
+      "direction": "فتح السؤال لغريب: Entschuldigung, können Sie mir helfen? — helfen + mir (الداتيف) · können ثانياً وhelfen آخراً · Ich suche den Hauptbahnhof"
+    },
+    {
+      "id": "wf-3",
+      "speaker": "lena",
+      "text": "Gerne! Gehen Sie zuerst geradeaus, danach links. Der Hauptbahnhof ist gegenüber der Post.",
+      "direction": "الأمر المهذب: Gehen Sie zuerst geradeaus, danach links. — الفعل أولاً ثم Sie · zuerst … danach … · gegenüber der Post (من u9-d1)"
+    },
+    {
+      "id": "wf-4",
+      "speaker": "yusuf",
+      "text": "Zuerst geradeaus, danach links — ist das weit?",
+      "direction": "يوسف يعيد التأكيد: Zuerst geradeaus, danach links — ist das weit? (weit من u9-d2)"
+    },
+    {
+      "id": "wf-5",
+      "speaker": "lena",
+      "text": "Nein, zehn Minuten zu Fuß. Oder nehmen Sie den Bus, Linie 5, und steigen Sie am Hauptbahnhof aus!",
+      "direction": "بديلان: zu Fuß أو الحافلة — nehmen Sie den Bus, Linie 5 · steigen Sie am Hauptbahnhof aus! (فعل منفصل في الأمر: aus في الآخر)"
+    },
+    {
+      "id": "wf-6",
+      "speaker": "yusuf",
+      "text": "Danke! Und die Auskunft? Ich habe ein Problem mit der Fahrkarte.",
+      "direction": "سؤال ثانٍ: Und die Auskunft? · ein Problem mit der Fahrkarte (mit + الداتيف من u8)"
+    },
+    {
+      "id": "wf-7",
+      "speaker": "lena",
+      "text": "Kein Problem. Die Auskunft ist am Eingang — biegen Sie am Eingang links ab!",
+      "direction": "Kein Problem. · am Eingang · الأمر مع فعل منفصل: biegen Sie am Eingang links ab!"
+    },
+    {
+      "id": "wf-8",
+      "speaker": "yusuf",
+      "text": "Am Eingang links. Und wo ist der Ausgang zum Bus?",
+      "direction": "يوسف يكرّر ويسأل: Und wo ist der Ausgang zum Bus? (zum من u9-d1)"
+    },
+    {
+      "id": "wf-9",
+      "speaker": "lena",
+      "text": "Der Ausgang ist dort, geradeaus. Haben Sie schon einen Stadtplan?",
+      "direction": "Der Ausgang ist dort, geradeaus. · Haben Sie schon einen Stadtplan? (einen — الأكوزاتيف بعد haben)"
+    },
+    {
+      "id": "wf-10",
+      "speaker": "yusuf",
+      "text": "Nein, noch nicht. Können Sie mir einen Stadtplan geben?",
+      "direction": "Nein, noch nicht. · الطلب المهذب: Können Sie mir einen Stadtplan geben? (mir + einen Stadtplan — geben من u7-d4)"
+    },
+    {
+      "id": "wf-11",
+      "speaker": "lena",
+      "text": "Sofort! Hier, bitte. — Super, Yusuf! Und jetzt du: Du bist die Auskunft.",
+      "direction": "Sofort! Hier, bitte. — ثم تبديل الأدوار: Und jetzt du: Du bist die Auskunft."
+    },
+    {
+      "id": "wf-12",
+      "speaker": "yusuf",
+      "text": "Okay. Guten Tag! Was suchen Sie?",
+      "direction": "يوسف «مكتب الاستعلامات»: Guten Tag! Was suchen Sie?"
+    },
+    {
+      "id": "wf-13",
+      "speaker": "lena",
+      "text": "Entschuldigung, ich suche die Apotheke. Können Sie mir den Weg erklären?",
+      "direction": "لينا تطلب الشرح: Entschuldigung, ich suche die Apotheke. · Können Sie mir den Weg erklären? (erklären + mir + den Weg)"
+    },
+    {
+      "id": "wf-14",
+      "speaker": "yusuf",
+      "text": "Gerne. Nehmen Sie den Ausgang dort und biegen Sie rechts ab. Danach gehen Sie geradeaus — die Apotheke ist gegenüber der Kirche.",
+      "direction": "شرح الطريق بأمرين وdanach: Nehmen Sie den Ausgang dort und biegen Sie rechts ab. · Danach gehen Sie geradeaus (بعد danach الفعل مباشرة) · gegenüber der Kirche"
+    },
+    {
+      "id": "wf-15",
+      "speaker": "lena",
+      "text": "Danke für die Hilfe! Sehr gut erklärt!",
+      "direction": "الشكر: Danke für die Hilfe! (die Hilfe — النواة) · Sehr gut erklärt!"
+    },
+    {
+      "id": "wf-16",
+      "speaker": "yusuf",
+      "text": "Bitte, gerne! In Tunis hilft mir mein Vater — er erklärt mir alles.",
+      "direction": "Bitte, gerne! · الواقع: In Tunis hilft mir mein Vater (hilft — غير منتظم · mir الداتيف) · er erklärt mir alles"
+    },
+    {
+      "id": "wf-17",
+      "speaker": "lena",
+      "text": "Und ich bitte dich um Hilfe: die Hausaufgabe. Erklärst du mir das noch einmal?",
+      "direction": "لينا تطلب المساعدة بصيغة du: Ich bitte dich um Hilfe (bitten um + الأكوزاتيف) · Erklärst du mir das noch einmal?"
+    },
+    {
+      "id": "wf-18",
+      "speaker": "yusuf",
+      "text": "Sofort! Es ist einfach: Gehen Sie! Nehmen Sie! Biegen Sie ab! — und bei helfen: Helfen Sie mir!",
+      "direction": "يوسف يلخّص القاعدة: Gehen Sie! · Nehmen Sie! · Biegen Sie ab! — und bei helfen: Helfen Sie mir! (الداتيف)"
+    },
+    {
+      "id": "wf-19",
+      "speaker": "lena",
+      "text": "Helfen Sie mir — nicht mich. Danke, Yusuf! Kein Problem mehr.",
+      "direction": "لينا تثبّت الفخ: Helfen Sie mir — nicht mich. · Kein Problem mehr."
+    },
+    {
+      "id": "wf-20",
+      "speaker": "yusuf",
+      "text": "Gerne! Bis morgen, Lena — morgen fliege ich nach Tunesien!",
+      "direction": "الختام: Bis morgen — morgen fliege ich nach Tunesien! (الرحلة يوم الاثنين من u9-d2)"
+    }
+  ]
+}

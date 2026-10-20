@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-kein-nicht",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Ich habe keinen Löffel. · Die Suppe ist nicht scharf. · Ich möchte nichts.",
+    "ar": "النفي: kein للاسم (تتصرّف كـein) · nicht للصفة والفعل · nichts = لا شيء"
+  },
+  "payload": {
+    "topicAr": "اليوم تنفي في المطعم بكلمتين: الاسم الذي يأتي بـein أو بلا أداة يُنفى بـkein — وkein تتصرّف كـein تماماً: ein Glas ← kein Glas · eine Gabel ← keine Gabel · einen Löffel ← keinen Löffel · Fleisch ← kein Fleisch · Eier ← keine Eier. والصفة بعد sein والفعل يُنفيان بـnicht: Die Suppe ist nicht scharf. · Ich zahle heute nicht. ومعهما nichts = «لا شيء» (Ich möchte nichts.) وwenig = «قليل» (Ich esse nur wenig.).",
+    "sceneAr": "لعب أدوار جديد في الدورة عبر الإنترنت بصيغة Sie: لينا الزبونة في مطعم ويوسف النادل. لا كأس على الطاولة، ولا سمك اليوم، وترفض لينا اللحم وتطلب صحن حساء ليس حاراً — لكنه مالح جداً. لا ملعقة أيضاً، ولا حاجة إلى شوكة وسكين للحساء! ثم لا تريد شيئاً بعده لأنها تأكل قليلاً اليوم، فتدفع عشرة يورو عن تسعة وتترك الباقي بقشيشاً.",
+    "examples": [
+      {
+        "de": "Hier ist kein Glas! · Ich habe keinen Löffel.",
+        "ar": "لا كأس هنا! · ليس عندي ملعقة — ein ← kein: das Glas ← kein · der Löffel مفعولاً ← keinen"
+      },
+      {
+        "de": "Keine Gabel und kein Messer! · Heute haben wir keinen Fisch.",
+        "ar": "لا شوكة ولا سكين! · ليس عندنا سمك اليوم — die ← keine · das ← kein · وFisch بلا أداة يُنفى بـkein أيضاً"
+      },
+      {
+        "de": "Die Suppe ist nicht scharf. · Das ist nicht gut.",
+        "ar": "الحساء ليس حاراً · هذا ليس جيداً — nicht قبل الصفة، وist باقية"
+      },
+      {
+        "de": "Ich zahle heute nicht. · Er arbeitet heute nicht.",
+        "ar": "لا أدفع اليوم · لا يعمل اليوم — الفعل ثانياً كالعادة وnicht في آخر الجملة"
+      },
+      {
+        "de": "Nein, danke, ich möchte nichts. · Ich esse nur wenig.",
+        "ar": "لا، شكراً، لا أريد شيئاً · آكل قليلاً فقط — nichts = لا شيء · wenig = قليل"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) ein Glas وkein Glas · einen Löffel وkeinen Löffel · eine Gabel وkeine Gabel: ماذا أُضيف إلى ein؟ وهل تغيّرت النهاية؟ (2) في Heute haben wir keinen Fisch: هل كان قبل Fisch أداة؟ ومع ذلك نفيناه بـkein. (3) في Die Suppe ist nicht scharf: ماذا ننفي — اسماً أم صفة؟ أين nicht؟ وهل بقيت ist؟ (4) في Ich zahle heute nicht: أين الفعل وأين nicht؟ (5) بالعربية «ليس عندي ملعقة»: على أيّ كلمة يقع النفي؟ وبالألمانية Ich habe keinen Löffel؟ (6) nicht وnichts: أيّهما معناه «لا شيء»؟",
+    "ruleDe": "ein Glas → kein Glas · eine Gabel → keine Gabel · einen Löffel → keinen Löffel · Fleisch → kein Fleisch · Eier → keine Eier — Die Suppe ist nicht scharf. · Ich zahle heute nicht. · Ich möchte nichts. · Ich esse nur wenig.",
+    "ruleAr": "انفِ بسؤال واحد ثم أربع خطوات: هل تنفي اسماً كان سيأتي بـein أو بلا أداة؟ إذن kein — وإلا فـnicht. (1) kein = نفي الاسم نفسه، وهي ein بحرف k في أولها، فتتصرّف مثلها تماماً: ein ← kein · eine ← keine · einen ← keinen (المذكر مفعولاً كما تعلمت في Akkusativ): Hier ist kein Glas. · Ich habe keine Gabel. · Ich habe keinen Löffel. والاسم بلا أداة — المادة والجمع — يُنفى بـkein أيضاً: Fleisch ← kein Fleisch · Fisch ← keinen Fisch (مفعولاً) · Eier ← keine Eier (الجمع keine). وأشهر مواضعها: Ich habe kein … · Hier ist kein … · Ich möchte kein … (2) nicht = نفي الصفة والفعل: الصفة بعد sein وist باقية في مكانها: Die Suppe ist nicht scharf. · Das ist nicht gut. — والفعل: يبقى ثانياً كالعادة وتأتي nicht في آخر الجملة البسيطة: Ich zahle heute nicht. · Er arbeitet heute nicht. (3) nichts = «لا شيء» كلمة واحدة: Nein, danke, ich möchte nichts. · Ich esse heute nichts. (4) wenig = «قليل»، عكس viel (من الوحدة الثالثة): Ich esse nur wenig. · Wir haben heute wenig Zeit. والرفض المهذب: Nein, danke. · Nein, danke, kein Fleisch.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «لا» النافية للجنس تنفي الاسم النكرة نفسه: «لا ماءَ في الكأس» · «لا شكَّ» — كما تنفي kein الاسم: kein Wasser. (2) «لا شيء» = nichts كلمة واحدة، و«قليل» = wenig. (3) الفرنسية التي يعرفها كثيرون في المغرب العربي تنفي الاسم النكرة بـpas de: je n'ai pas de cuillère = Ich habe keinen Löffel — de بدل un كما تحلّ kein محل ein. وما يختلف ثلاثة: (1) «ليس عندي ملعقة» — وفي تونس «ما عنديش …»: النفي على «عند» (التملّك) والاسم نكرة بلا أداة كما هو، فيترجم المتعلم كلمةً كلمة: ~~Ich habe nicht Gabel.~~ والألمانية تنفي الاسم نفسه: Ich habe keine Gabel. (2) «الحساءُ ليس حارّاً»: «ليس» فعلٌ ناقص يحمل النفي والربط معاً، وفي تونس «الشربة موش حارّة» بلا فعل أصلاً — فيُسقط المتعلم ist: ~~Die Suppe nicht scharf.~~ والألمانية تُبقي ist وتضع nicht بعدها: Die Suppe ist nicht scharf. (3) «لا أدفعُ اليوم»: «لا» تسبق الفعل — فيظهر ~~Ich nicht zahle heute.~~ والألمانية: الفعل ثانياً كالعادة وnicht في آخر الجملة: Ich zahle heute nicht — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "nicht مع الاسم المعرّف أو بكلمة ملكية، وموضع nicht في الجمل الأطول، والتمييز المفصّل بين kein وnicht — في الدرس القادم. اليوم سؤال واحد: اسمٌ كان سيأتي بـein أو بلا أداة؟ ⇒ kein.",
+      "nichts = «لا شيء» وnicht = «لا/ليس»: Ich möchte nichts (لا أريد شيئاً) · Ich esse heute nicht (لا آكل اليوم) — جملتان صحيحتان بمعنيين، فلا تخلط الكلمتين.",
+      "wenig عكس viel (من الوحدة الثالثة): viel Fleisch ↔ wenig Fleisch · Ich esse viel ↔ Ich esse wenig — وein bisschen (من الوحدة الأولى) «شيءٌ قليل» بنبرة أخفّ: Ich spreche ein bisschen Deutsch.",
+      "scharf بمعنيين: «حارّ» للطعام (Die Suppe ist scharf) و«حادّ» للسكين (Das Messer ist scharf). وdas Trinkgeld بقشيش صغير يُترك عادةً أو يُقرَّب به المبلغ: neun Euro ← zehn Euro."
+    ],
+    "beads": [
+      "Ich",
+      "habe",
+      "keinen",
+      "Löffel."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u5-d4",
+    "a1-u5-d6",
+    "a1-u15-d3"
+  ]
+}

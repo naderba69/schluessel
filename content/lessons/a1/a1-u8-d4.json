@@ -1,0 +1,947 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d4",
+  "level": "A1",
+  "unit": 8,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Wie kommst du zum Flughafen? — Mit der Bahn. · Wann fliegst du nach Tunesien? · Kommt dein Vater aus Tunis?",
+    "ar": "تقول كيف تذهب وإلى أين ومن أين (Ich fahre mit der Bahn zum Flughafen. · Ich fahre mit dem Rad zur Schule. · Wann fliegst du nach Tunesien? · Kommt dein Vater aus Tunis?) — بعد mit وnach وaus وzu الداتيف دائماً: dem · der · zum · zur — وnach للمدن والبلدان بلا أداة — ومعها كلمات السفر: التاكسي والرحلة الجوية والمطار والقطار والدراجة والأمتعة، ويطير ويركن ويستقبل."
+  },
+  "canDoDaily": [
+    "يقول كيف يذهب: Ich fahre mit der Bahn. · Wir fahren mit dem Bus. · Mein Vater holt mich ab — mit dem Auto. · Fährst du mit dem Rad? · Ein Taxi ist zu teuer.",
+    "يقول إلى أين ومن أين: Wie kommst du zum Flughafen? · Ich fahre mit dem Bus zur Schule. · Wann fliegst du nach Tunesien? · Wir fahren nach Hause. · Kommt dein Vater aus Tunis? · Kommst du aus der Schweiz?"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bus",
+      "zug",
+      "fahren"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«بالحافلة» بالألمانية — أي صيغة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "mit dem Bus",
+          "mit den Bus",
+          "mit der Bus"
+        ],
+        "answer": "mit dem Bus",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "nach",
+      "aus",
+      "zu",
+      "taxi",
+      "fliegen",
+      "flug",
+      "flughafen",
+      "parken",
+      "rad",
+      "bahn",
+      "abholen",
+      "gepaeck"
+    ],
+    "grammarArsenalIds": [
+      "ars-dativ-fix"
+    ],
+    "storySentenceIds": [
+      "story-a1-u8-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "auslaut-b",
+      "auslaut-d",
+      "auslaut-g",
+      "ch-ach-laut",
+      "double-consonant",
+      "r-uvular",
+      "umlaut-a",
+      "vowel-long-short",
+      "z"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Ich fahre ___ der Bahn. (بـ)",
+            "a": "mit",
+            "why": "mit = بـ/مع — وبعدها الداتيف دائماً: die Bahn ← mit der Bahn."
+          },
+          {
+            "q": "Wir fahren mit ___ Bus. (الأداة)",
+            "a": "dem",
+            "why": "der Bus ← mit dem Bus — بعد mit الداتيف: der ← dem (لا den: الأكوزاتيف للمفعول وحده)."
+          },
+          {
+            "q": "Ich fahre mit ___ Bahn zum Flughafen. (الأداة)",
+            "a": "der",
+            "why": "die Bahn ← mit der Bahn — المؤنث في الداتيف der (لا die)."
+          },
+          {
+            "q": "Wie kommst du ___ Flughafen? (إلى الـ — كلمة واحدة)",
+            "a": "zum",
+            "why": "der Flughafen ← zu dem Flughafen = zum — zu + dem تُدمج دائماً."
+          },
+          {
+            "q": "Heute fahre ich mit dem Bus ___ Schule. (إلى الـ — كلمة واحدة)",
+            "a": "zur",
+            "why": "die Schule ← zu der Schule = zur — zu + der تُدمج دائماً."
+          },
+          {
+            "q": "Wann fliegst du ___ Tunesien? (إلى)",
+            "a": "nach",
+            "why": "nach للبلدان والمدن بلا أداة: nach Tunesien · nach Berlin — لا zu."
+          },
+          {
+            "q": "Wir fahren am Sonntag ___ Hause. (إلى البيت)",
+            "a": "nach",
+            "why": "nach Hause = إلى البيت (حركة) — مقابل zu Hause = في البيت."
+          },
+          {
+            "q": "Kommt dein Vater ___ Tunis? (من)",
+            "a": "aus",
+            "why": "aus = من (الأصل) — مع المدن والبلدان بلا أداة: aus Tunis · aus Tunesien."
+          },
+          {
+            "q": "Kommst du aus ___ Schweiz? (الأداة)",
+            "a": "der",
+            "why": "die Schweiz من البلدان القليلة التي تحمل أداة — وبعد aus الداتيف: aus der Schweiz."
+          },
+          {
+            "q": "Ein ___ ist zu teuer. (تاكسي)",
+            "a": "Taxi",
+            "why": "das Taxi — كلمة أجنبية، الجمع die Taxis بـ‑s."
+          },
+          {
+            "q": "Ich ___ am Montag nach Tunis. (أطير)",
+            "a": "fliege",
+            "why": "fliegen = يطير — ich fliege · du fliegst · er fliegt — والوجهة بـnach."
+          },
+          {
+            "q": "Der ___ ist um acht Uhr morgens. (الرحلة الجوية)",
+            "a": "Flug",
+            "why": "der Flug = الرحلة الجوية — الجمع die Flüge بنقطتين."
+          },
+          {
+            "q": "Die Bahn fährt zum ___. (المطار)",
+            "a": "Flughafen",
+            "why": "der Flughafen — مركّب من Flug + Hafen، والجنس من آخر جزء: der Hafen — وg في الوسط تُنطق [k]."
+          },
+          {
+            "q": "Mein Vater ___ am Flughafen. (يركن)",
+            "a": "parkt",
+            "why": "parken = يركن السيارة — er parkt — وam Flughafen عبارة ثابتة (في المطار)."
+          },
+          {
+            "q": "In der Schweiz fahre ich mit dem ___ zur Schule. (الدراجة)",
+            "a": "Rad",
+            "why": "das Rad = الدراجة (اختصار Fahrrad) ← mit dem Rad — الجمع die Räder."
+          },
+          {
+            "q": "Mit der ___ nur vierzig Minuten. (القطار)",
+            "a": "Bahn",
+            "why": "die Bahn = القطار/السكة الحديدية ← mit der Bahn — vierzig = 40."
+          },
+          {
+            "q": "Meine Mutter holt mich am Flughafen ___. (يستقبل — الجزء المنفصل)",
+            "a": "ab",
+            "why": "abholen فعل منفصل: holt … ab — الجزء ab في آخر الجملة كما في الوحدة 7."
+          },
+          {
+            "q": "Wer ___ dich in Tunis ab? (يستقبل)",
+            "a": "holt",
+            "why": "wer holt … ab? — السؤال بـwer والفعل ثانياً، وab في الآخر — dich = ـك (مفعول)."
+          },
+          {
+            "q": "Das ___ ist nicht schwer: ein Koffer und ein Rucksack. (الأمتعة)",
+            "a": "Gepäck",
+            "why": "das Gepäck = الأمتعة — اسم جامد بلا جمع — فعلٌ مفرد: ist."
+          },
+          {
+            "q": "Ein Taxi ist ___ teuer. (أكثر من اللازم)",
+            "a": "zu",
+            "why": "zu قبل الصفة = «أكثر من اللازم» (zu teuer · zu groß) — ليست حرف الجر zu ولا تأتي بعدها أداة."
+          }
+        ],
+        "interleavedWith": [
+          "bus",
+          "fahren",
+          "koffer",
+          "rucksack",
+          "schule",
+          "vater",
+          "mutter",
+          "montag",
+          "sonntag",
+          "teuer",
+          "schwer",
+          "heute",
+          "minute",
+          "uhr",
+          "nur",
+          "schweiz",
+          "tunesien"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "fh-2",
+            "speakText": "Am Montag. Der Flug ist um acht Uhr morgens — sehr früh!",
+            "q": "استمع: متى يسافر يوسف؟ ومتى الرحلة؟",
+            "choices": [
+              "يوم الاثنين — في الثامنة صباحاً",
+              "يوم الأحد — في الثامنة مساءً",
+              "يوم الاثنين — في الساعة الثامنة عشرة"
+            ],
+            "a": "يوم الاثنين — في الثامنة صباحاً",
+            "why": "Am Montag. Der Flug ist um acht Uhr morgens — sehr früh! — morgens = صباحاً · früh = مبكّر."
+          },
+          {
+            "audioId": "fh-3",
+            "speakText": "Und wie kommst du zum Flughafen? Fährst du mit dem Taxi?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "كيف يصل إلى المطار — بالتاكسي؟",
+              "كيف يصل إلى المحطة — بالحافلة؟",
+              "متى يصل إلى المطار"
+            ],
+            "a": "كيف يصل إلى المطار — بالتاكسي؟",
+            "why": "Wie kommst du zum Flughafen? = كيف تصل إلى المطار؟ · Fährst du mit dem Taxi? = هل تذهب بالتاكسي؟ — zum = zu dem."
+          },
+          {
+            "audioId": "fh-4",
+            "speakText": "Nein, ein Taxi ist zu teuer. Ich fahre mit der Bahn.",
+            "q": "استمع: بم يذهب يوسف؟ ولماذا لا بالتاكسي؟",
+            "choices": [
+              "بالقطار — التاكسي غالٍ جداً",
+              "بالتاكسي — القطار غالٍ جداً",
+              "بالسيارة — التاكسي بعيد"
+            ],
+            "a": "بالقطار — التاكسي غالٍ جداً",
+            "why": "Nein, ein Taxi ist zu teuer. Ich fahre mit der Bahn. — zu teuer = غالٍ أكثر من اللازم · mit der Bahn."
+          },
+          {
+            "audioId": "fh-5",
+            "speakText": "Mit der Bahn — und dein Gepäck? Du hast einen Koffer und einen Rucksack.",
+            "q": "استمع: ما أمتعة يوسف؟",
+            "choices": [
+              "حقيبة وحقيبة ظهر",
+              "حقيبتان",
+              "حقيبة ظهر فقط"
+            ],
+            "a": "حقيبة وحقيبة ظهر",
+            "why": "einen Koffer und einen Rucksack — das Gepäck = الأمتعة."
+          },
+          {
+            "audioId": "fh-6",
+            "speakText": "Das Gepäck ist nicht schwer. Und die Bahn fährt zum Flughafen — nur vierzig Minuten.",
+            "q": "استمع: كيف الأمتعة؟ وكم يستغرق القطار؟",
+            "choices": [
+              "ليست ثقيلة — أربعون دقيقة",
+              "ثقيلة — أربعون دقيقة",
+              "ليست ثقيلة — أربع عشرة دقيقة"
+            ],
+            "a": "ليست ثقيلة — أربعون دقيقة",
+            "why": "Das Gepäck ist nicht schwer … nur vierzig Minuten — vierzig = 40 (لا vierzehn = 14)."
+          },
+          {
+            "audioId": "fh-7",
+            "speakText": "Gut. Und wer holt dich in Tunis ab?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "من يستقبله في تونس",
+              "من يستقبله في برلين",
+              "متى يصل إلى تونس"
+            ],
+            "a": "من يستقبله في تونس",
+            "why": "Wer holt dich in Tunis ab? — abholen منفصل: holt … ab · dich = ـك."
+          },
+          {
+            "audioId": "fh-8",
+            "speakText": "Mein Vater holt mich ab — mit dem Auto. Er parkt am Flughafen.",
+            "q": "استمع: من يستقبل يوسف؟ وبم؟",
+            "choices": [
+              "أبوه — بالسيارة، ويركن في المطار",
+              "أمه — بالتاكسي",
+              "أبوه — بالحافلة"
+            ],
+            "a": "أبوه — بالسيارة، ويركن في المطار",
+            "why": "Mein Vater holt mich ab — mit dem Auto. Er parkt am Flughafen. — parken = يركن."
+          },
+          {
+            "audioId": "fh-9",
+            "speakText": "Kommt dein Vater aus Tunis?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل أبوه من تونس العاصمة",
+              "هل أبوه في تونس الآن",
+              "هل أمه من تونس"
+            ],
+            "a": "هل أبوه من تونس العاصمة",
+            "why": "Kommt dein Vater aus Tunis? — aus = من (الأصل) · Tunis مدينة بلا أداة."
+          },
+          {
+            "audioId": "fh-10",
+            "speakText": "Ja. Und meine Mutter kommt auch aus Tunis. Meine Familie wohnt dort.",
+            "q": "استمع: من أين أمه؟ وأين تسكن العائلة؟",
+            "choices": [
+              "من تونس أيضاً — تسكن هناك",
+              "من سويسرا — تسكن في برلين",
+              "من تونس — تسكن في برلين"
+            ],
+            "a": "من تونس أيضاً — تسكن هناك",
+            "why": "Meine Mutter kommt auch aus Tunis. Meine Familie wohnt dort. — dort = هناك."
+          },
+          {
+            "audioId": "fh-11",
+            "speakText": "Und wie fährst du in Tunis? Mit dem Rad?",
+            "q": "استمع: ماذا تقترح لينا؟",
+            "choices": [
+              "الدراجة",
+              "الحافلة",
+              "التاكسي"
+            ],
+            "a": "الدراجة",
+            "why": "Mit dem Rad? = بالدراجة؟ — das Rad ← mit dem Rad (داتيف)."
+          },
+          {
+            "audioId": "fh-12",
+            "speakText": "Mit dem Rad? Nein! Ich fahre mit dem Bus oder mit dem Taxi. Taxis sind dort günstig.",
+            "q": "استمع: بم يتنقّل يوسف في تونس؟",
+            "choices": [
+              "بالحافلة أو بالتاكسي — التاكسيات رخيصة",
+              "بالدراجة — التاكسيات غالية",
+              "بالسيارة — الحافلات رخيصة"
+            ],
+            "a": "بالحافلة أو بالتاكسي — التاكسيات رخيصة",
+            "why": "mit dem Bus oder mit dem Taxi. Taxis sind dort günstig. — günstig = رخيص."
+          },
+          {
+            "audioId": "fh-13",
+            "speakText": "In der Schweiz fahre ich immer mit dem Rad — zur Schule und zum Supermarkt.",
+            "q": "استمع: بم تذهب لينا في سويسرا؟ وإلى أين؟",
+            "choices": [
+              "بالدراجة — إلى المدرسة والسوبرماركت",
+              "بالحافلة — إلى المدرسة",
+              "بالقطار — إلى السوبرماركت"
+            ],
+            "a": "بالدراجة — إلى المدرسة والسوبرماركت",
+            "why": "mit dem Rad = بالدراجة — zur Schule und zum Supermarkt = إلى المدرسة والسوبرماركت — zur = zu der · zum = zu dem."
+          },
+          {
+            "audioId": "fh-14",
+            "speakText": "Auch heute? Es regnet in der Schweiz!",
+            "q": "استمع: ماذا يسأل يوسف؟ ولماذا؟",
+            "choices": [
+              "حتى اليوم؟ — إنها تمطر في سويسرا",
+              "حتى غداً؟ — الجو جميل",
+              "حتى في الصيف؟ — الجو حار"
+            ],
+            "a": "حتى اليوم؟ — إنها تمطر في سويسرا",
+            "why": "Auch heute? Es regnet in der Schweiz! — regnet = تمطر."
+          },
+          {
+            "audioId": "fh-15",
+            "speakText": "Heute nicht. Heute fahre ich mit dem Bus zur Schule.",
+            "q": "استمع: بم تذهب لينا اليوم؟",
+            "choices": [
+              "بالحافلة إلى المدرسة",
+              "بالدراجة إلى المدرسة",
+              "بالقطار إلى المدرسة"
+            ],
+            "a": "بالحافلة إلى المدرسة",
+            "why": "Heute fahre ich mit dem Bus zur Schule. = اليوم أذهب بالحافلة إلى المدرسة — mit dem Bus · zur Schule."
+          },
+          {
+            "audioId": "fh-16",
+            "speakText": "Und am Sonntag ist der Geburtstag. Wie kommst du zur Oma?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "كيف تصل إلى جدّتها يوم الأحد",
+              "متى عيد ميلاد جدّتها",
+              "أين تسكن جدّتها"
+            ],
+            "a": "كيف تصل إلى جدّتها يوم الأحد",
+            "why": "Wie kommst du zur Oma? — zur Oma: zu لشخص."
+          },
+          {
+            "audioId": "fh-17",
+            "speakText": "Mit dem Zug, nur eine Stunde. Meine Oma wohnt dort.",
+            "q": "استمع: بم تذهب لينا؟ وكم تستغرق؟",
+            "choices": [
+              "بالقطار — ساعة واحدة",
+              "بالحافلة — ساعتان",
+              "بالقطار — ساعتان"
+            ],
+            "a": "بالقطار — ساعة واحدة",
+            "why": "Mit dem Zug, nur eine Stunde. = بالقطار، ساعة واحدة فقط — der Zug ← mit dem Zug."
+          },
+          {
+            "audioId": "fh-18",
+            "speakText": "Fliegst du auch gern?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل تحب الطيران أيضاً",
+              "هل تحب القطار",
+              "هل تطير يوم الأحد"
+            ],
+            "a": "هل تحب الطيران أيضاً",
+            "why": "Fliegst du auch gern? — gern = بحب/بسرور."
+          },
+          {
+            "audioId": "fh-19",
+            "speakText": "Nein, ich fliege nicht so gern. Im Zug kann ich lesen.",
+            "q": "استمع: ماذا تجيب لينا؟ ولماذا؟",
+            "choices": [
+              "لا تحب الطيران كثيراً — في القطار تقرأ",
+              "تحب الطيران — في الطائرة تقرأ",
+              "لا تحب القطار — في القطار لا تقرأ"
+            ],
+            "a": "لا تحب الطيران كثيراً — في القطار تقرأ",
+            "why": "Nein, ich fliege nicht so gern. Im Zug kann ich lesen. — nicht so gern = ليس كثيراً."
+          },
+          {
+            "audioId": "fh-20",
+            "speakText": "Mein Flug ist kurz — nur zwei Stunden. Dort kann ich auch lesen!",
+            "q": "استمع: كم تستغرق رحلة يوسف؟",
+            "choices": [
+              "ساعتان فقط — ويقرأ أيضاً",
+              "ساعة فقط — ولا يقرأ",
+              "ثلاث ساعات — ويقرأ"
+            ],
+            "a": "ساعتان فقط — ويقرأ أيضاً",
+            "why": "Mein Flug ist kurz — nur zwei Stunden. Dort kann ich auch lesen! — kurz = قصير."
+          }
+        ],
+        "interleavedWith": [
+          "bus",
+          "zug",
+          "fahren",
+          "auto",
+          "koffer",
+          "rucksack",
+          "schule",
+          "supermarkt",
+          "oma",
+          "vater",
+          "mutter",
+          "montag",
+          "sonntag",
+          "teuer",
+          "schwer",
+          "lesen",
+          "regnen",
+          "heute",
+          "stunde",
+          "minute",
+          "uhr",
+          "geburtstag",
+          "kurz",
+          "familie",
+          "wohnen",
+          "dort",
+          "nur",
+          "gern",
+          "auch",
+          "immer",
+          "schweiz"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Bahn.",
+              "mit",
+              "Ich",
+              "der",
+              "fahre"
+            ],
+            "a": "Ich fahre mit der Bahn.",
+            "why": "mit ثم الداتيف der Bahn — الفعل fahre ثانياً."
+          },
+          {
+            "tokens": [
+              "Flughafen?",
+              "du",
+              "Wie",
+              "zum",
+              "kommst"
+            ],
+            "a": "Wie kommst du zum Flughafen?",
+            "why": "كلمة السؤال Wie ثم الفعل kommst ثم du — وzum Flughafen (zu + dem) في الآخر."
+          },
+          {
+            "tokens": [
+              "Tunesien?",
+              "du",
+              "nach",
+              "Wann",
+              "fliegst"
+            ],
+            "a": "Wann fliegst du nach Tunesien?",
+            "why": "Wann ثم fliegst ثم du — وnach Tunesien بلا أداة (بلد)."
+          },
+          {
+            "tokens": [
+              "ab?",
+              "holt",
+              "Wer",
+              "Tunis",
+              "dich",
+              "in"
+            ],
+            "a": "Wer holt dich in Tunis ab?",
+            "why": "سؤال بـWer ثم الفعل holt — وab منفصلاً في آخر الجملة، وdich (المفعول) وin Tunis بينهما."
+          },
+          {
+            "tokens": [
+              "Tunis?",
+              "Vater",
+              "aus",
+              "Kommt",
+              "dein"
+            ],
+            "a": "Kommt dein Vater aus Tunis?",
+            "why": "سؤال نعم/لا: الفعل Kommt أولاً — وaus Tunis بلا أداة (مدينة)."
+          },
+          {
+            "tokens": [
+              "Schule.",
+              "zur",
+              "mit",
+              "ich",
+              "Heute",
+              "Bus",
+              "fahre",
+              "dem"
+            ],
+            "a": "Heute fahre ich mit dem Bus zur Schule.",
+            "why": "Heute أولاً ← الفعل fahre ثانياً ← ich — ثم الوسيلة mit dem Bus ثم الوجهة zur Schule."
+          }
+        ],
+        "interleavedWith": [
+          "bus",
+          "fahren",
+          "schule",
+          "vater",
+          "heute",
+          "tunesien"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "fh-1",
+            "speakText": "Yusuf, wann fliegst du nach Tunesien?",
+            "a": "Yusuf, wann fliegst du nach Tunesien?",
+            "why": "Yusuf بحرف كبير · fliegst بـie ثم gst · nach بـch (صوت الحلق بعد a) · Tunesien بحرف كبير وie."
+          },
+          {
+            "audioId": "word-flughafen",
+            "speakText": "Flughafen.",
+            "a": "Flughafen.",
+            "why": "Flughafen: مركّب Flug + Hafen — g في الوسط تُكتب g وتُنطق [k] · h بعدها · ‑en في الآخر."
+          },
+          {
+            "audioId": "word-gepaeck",
+            "speakText": "Gepäck.",
+            "a": "Gepäck.",
+            "why": "Gepäck: Ge‑ بـe · ä بنقطتين · ck في الآخر — والنبر على päck."
+          },
+          {
+            "audioId": "word-abholen",
+            "speakText": "abholen.",
+            "a": "abholen.",
+            "why": "abholen: b في آخر ab (تُنطق [p]) · h ثم o طويلة · كلمة واحدة في القاموس."
+          },
+          {
+            "audioId": "word-fliegen",
+            "speakText": "fliegen.",
+            "a": "fliegen.",
+            "why": "fliegen: ie طويلة [iː] (لا ei) · g قبل ‑en."
+          },
+          {
+            "audioId": "word-bahn",
+            "speakText": "Bahn.",
+            "a": "Bahn.",
+            "why": "Bahn: h صامتة تطيل a — كـFahren وZahn."
+          },
+          {
+            "audioId": "word-taxi",
+            "speakText": "Taxi.",
+            "a": "Taxi.",
+            "why": "Taxi: x = [ks] · i في الآخر — والجمع Taxis."
+          }
+        ],
+        "interleavedWith": [
+          "tunesien"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wie kommst du zum Kurs? — Mit dem Bus. Und du? — Ich fahre mit dem Rad.",
+        "ar": "تقول لزميلك كيف تذهب وإلى أين ومن أين — وتسأله"
+      },
+      "situation": {
+        "de": "Im Kurs: Woher kommst du? Wie kommst du zum Kurs? Wie fährst du zur Arbeit? Wann fliegst du nach Hause?",
+        "ar": "في الدورة: كلٌّ منكما يقول من أين هو (Ich komme aus Tunesien. · Ich komme aus der Schweiz.) وكيف يصل إلى الدورة وإلى العمل أو المدرسة (Ich fahre mit dem Bus zum Kurs. · Ich fahre mit dem Rad zur Schule.) ومتى يسافر إلى بلده ومن يستقبله (Ich fliege am Montag nach Tunesien. Mein Vater holt mich ab.) — وتتبادلان الأسئلة: Woher kommst du? · Wie kommst du zum Kurs? · Wann fliegst du nach Hause?"
+      },
+      "successCriteria": [
+        "ثلاث جمل بـmit + الداتيف (mit dem Bus · mit der Bahn · mit dem Rad) وجملتان بـzum/zur (zum Kurs · zur Arbeit · zur Schule) — لا den ولا die بعد mit وzu.",
+        "جملة بـnach + مدينة/بلد بلا أداة (nach Tunesien) وجملة بـaus (aus Tunesien · aus der Schweiz) وجملة بـabholen منفصلاً (Mein Vater holt mich ab.)."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«نسافر بالسيارة»؟",
+            "choices": [
+              "Wir fahren mit dem Auto.",
+              "Wir fahren mit das Auto.",
+              "Wir fahren mit den Auto."
+            ],
+            "a": "Wir fahren mit dem Auto.",
+            "why": "das Auto ← mit dem Auto — بعد mit الداتيف: das ← dem (لا das ولا den)."
+          },
+          {
+            "q": "«كيف تصل إلى المحطة؟»؟",
+            "choices": [
+              "Wie kommst du zum Bahnhof?",
+              "Wie kommst du nach Bahnhof?",
+              "Wie kommst du zu Bahnhof?"
+            ],
+            "a": "Wie kommst du zum Bahnhof?",
+            "why": "der Bahnhof مكانٌ له أداة ← zu dem = zum Bahnhof — وnach للمدن والبلدان فقط."
+          },
+          {
+            "q": "das Gepäck = ؟",
+            "choices": [
+              "الأمتعة",
+              "المطار",
+              "الرحلة الجوية"
+            ],
+            "a": "الأمتعة",
+            "why": "das Gepäck = الأمتعة · der Flughafen = المطار · der Flug = الرحلة الجوية."
+          },
+          {
+            "q": "«أطير إلى ألمانيا»؟",
+            "choices": [
+              "Ich fliege nach Deutschland.",
+              "Ich fliege zu Deutschland.",
+              "Ich fliege nach dem Deutschland."
+            ],
+            "a": "Ich fliege nach Deutschland.",
+            "why": "nach + بلد بلا أداة: nach Deutschland — لا zu ولا أداة."
+          },
+          {
+            "q": "«هل أنت من تونس؟»؟",
+            "choices": [
+              "Kommst du aus Tunesien?",
+              "Kommst du aus dem Tunesien?",
+              "Kommst du nach Tunesien?"
+            ],
+            "a": "Kommst du aus Tunesien?",
+            "why": "aus = من (الأصل) — والبلد بلا أداة: aus Tunesien — nach = إلى."
+          },
+          {
+            "q": "«أبي يستقبلني»؟",
+            "choices": [
+              "Mein Vater holt mich ab.",
+              "Mein Vater abholt mich.",
+              "Mein Vater holt ab mich."
+            ],
+            "a": "Mein Vater holt mich ab.",
+            "why": "abholen منفصل: holt ثانياً وab في آخر الجملة — وmich بينهما."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أذهب بالقطار إلى المطار»؟",
+            "choices": [
+              "Ich fahre mit dem Zug zum Flughafen.",
+              "Ich fahre mit den Zug zum Flughafen.",
+              "Ich fahre mit dem Zug nach Flughafen."
+            ],
+            "a": "Ich fahre mit dem Zug zum Flughafen.",
+            "why": "der Zug ← mit dem Zug (داتيف لا den) — والمطار له أداة ← zum Flughafen (لا nach)."
+          },
+          {
+            "q": "«نذهب بالحافلة إلى العمل»؟",
+            "choices": [
+              "Wir fahren mit dem Bus zur Arbeit.",
+              "Wir fahren mit dem Bus zum Arbeit.",
+              "Wir fahren mit dem Bus nach Arbeit."
+            ],
+            "a": "Wir fahren mit dem Bus zur Arbeit.",
+            "why": "die Arbeit ← zu der = zur Arbeit — zum للمذكر والمحايد وzur للمؤنث."
+          },
+          {
+            "q": "der Flughafen = ؟",
+            "choices": [
+              "المطار",
+              "المحطة",
+              "الرحلة الجوية"
+            ],
+            "a": "المطار",
+            "why": "der Flughafen = المطار · der Bahnhof = المحطة · der Flug = الرحلة الجوية."
+          },
+          {
+            "q": "«أذهب الآن إلى البيت»؟",
+            "choices": [
+              "Ich fahre jetzt nach Hause.",
+              "Ich fahre jetzt zu Hause.",
+              "Ich fahre jetzt nach dem Haus."
+            ],
+            "a": "Ich fahre jetzt nach Hause.",
+            "why": "nach Hause = إلى البيت (حركة) — zu Hause = في البيت (مكان) — عبارة ثابتة بلا أداة."
+          },
+          {
+            "q": "«لينا من سويسرا»؟",
+            "choices": [
+              "Lena kommt aus der Schweiz.",
+              "Lena kommt aus Schweiz.",
+              "Lena kommt aus die Schweiz."
+            ],
+            "a": "Lena kommt aus der Schweiz.",
+            "why": "die Schweiz تحمل أداة — وبعد aus الداتيف: aus der Schweiz (لا die ولا بلا أداة)."
+          },
+          {
+            "q": "abholen = ؟",
+            "choices": [
+              "يستقبل (شخصاً)",
+              "يركن",
+              "يطير"
+            ],
+            "a": "يستقبل (شخصاً)",
+            "why": "abholen = يستقبل/يأخذ شخصاً من مكان · parken = يركن · fliegen = يطير."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«نسافر يوم الاثنين إلى برلين»؟",
+            "choices": [
+              "Wir fahren am Montag nach Berlin.",
+              "Wir fahren am Montag zu Berlin.",
+              "Wir fahren am Montag nach dem Berlin."
+            ],
+            "a": "Wir fahren am Montag nach Berlin.",
+            "why": "nach + مدينة بلا أداة: nach Berlin — «إلى» العربية واحدة لكن الألمانية تفرّق: nach للمدن وzu لما له أداة."
+          },
+          {
+            "q": "«بالتاكسي من فضلك»؟",
+            "choices": [
+              "Mit dem Taxi, bitte.",
+              "Mit den Taxi, bitte.",
+              "Mit das Taxi, bitte."
+            ],
+            "a": "Mit dem Taxi, bitte.",
+            "why": "das Taxi ← mit dem Taxi — بعد mit الداتيف دائماً."
+          },
+          {
+            "q": "parken = ؟",
+            "choices": [
+              "يركن",
+              "يستقبل",
+              "يطير"
+            ],
+            "a": "يركن",
+            "why": "parken = يركن السيارة · abholen = يستقبل · fliegen = يطير."
+          },
+          {
+            "q": "«كيف تصلين إلى الجدّة؟»؟",
+            "choices": [
+              "Wie kommst du zur Oma?",
+              "Wie kommst du zum Oma?",
+              "Wie kommst du nach der Oma?"
+            ],
+            "a": "Wie kommst du zur Oma?",
+            "why": "die Oma شخص ← zu der = zur Oma — zur للمؤنث، وnach لا تأتي مع الأشخاص."
+          },
+          {
+            "q": "«الرحلة الجوية غالية جداً»؟",
+            "choices": [
+              "Der Flug ist zu teuer.",
+              "Der Flug ist zum teuer.",
+              "Der Flug ist nach teuer."
+            ],
+            "a": "Der Flug ist zu teuer.",
+            "why": "zu قبل الصفة = «أكثر من اللازم»: zu teuer — ليست حرف الجر ولا تُدمج مع أداة."
+          },
+          {
+            "q": "«أحب الطيران»؟",
+            "choices": [
+              "Ich fliege gern.",
+              "Ich fliegen gern.",
+              "Ich gern fliege."
+            ],
+            "a": "Ich fliege gern.",
+            "why": "ich fliege (‑e) والفعل ثانياً — وgern بعده = بحب."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Ich fahre mit der Bahn. · Wir fahren mit dem Bus. · Mein Vater holt mich ab — mit dem Auto. · Wie kommst du zum Flughafen? · Ich fahre mit dem Rad zur Schule. · Wann fliegst du nach Tunesien? · Wir fahren nach Hause. · Kommt dein Vater aus Tunis? · Kommst du aus der Schweiz? · Ein Taxi ist zu teuer. · Der Flug ist um acht Uhr. · Mein Vater parkt am Flughafen. · Das Gepäck ist nicht schwer.",
+      "ar": "بعد mit وnach وaus وzu يأتي الداتيف دائماً: der/das ← dem · die ← der — mit dem Bus · mit der Bahn · mit dem Rad · mit dem Auto. وzu تُدمج مع الأداة: zu dem = zum (zum Flughafen · zum Supermarkt) · zu der = zur (zur Schule · zur Oma). nach أم zu؟ nach للمدن والبلدان بلا أداة (nach Tunesien · nach Berlin) ولـnach Hause (إلى البيت ≠ zu Hause في البيت) — وzu لكل مكانٍ له أداة ولكل شخص. aus = من (الأصل) بلا أداة (aus Tunis · aus Tunesien) إلا die Schweiz ← aus der Schweiz. وzu قبل الصفة = «أكثر من اللازم» (zu teuer) لا حرف جر. الكلمات: das Taxi (die Taxis) · fliegen (ich fliege nach …) · der Flug (die Flüge) · der Flughafen · parken (er parkt) · das Rad (die Räder) · die Bahn · abholen (holt … ab) · das Gepäck (بلا جمع)."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~mit den Bus~~ · ~~mit die Bahn~~",
+          "ar": "بعد mit الداتيف دائماً: mit dem Bus · mit der Bahn"
+        },
+        "whyArabicSpeakerFails": "«بـ» و«مع» في العربية لا تغيّران شكل «الـ» بعدهما («بالحافلة · بالقطار»)، فيُبقي المتعلم الأداة كما يعرفها (die) أو يضع الأكوزاتيف الذي تعلّمه للمفعول (den). والألمانية تضع بعد mit الداتيف دائماً: der/das ← dem · die ← der: mit dem Bus · mit der Bahn · mit dem Auto — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "mit dem Bus · mit der Bahn",
+          "ar": "بالحافلة · بالقطار"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Er fährt mit die Bahn.~~",
+          "a": "Er fährt mit der Bahn."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~zu Berlin~~ · ~~nach dem Flughafen~~",
+          "ar": "nach للمدن والبلدان بلا أداة · zu لما له أداة: nach Berlin · zum Flughafen"
+        },
+        "whyArabicSpeakerFails": "«إلى» واحدة في العربية لبرلين وللمطار وللجدّة، فيختار المتعلم حرفاً واحداً للكل: zu Berlin أو nach dem Flughafen. والألمانية تفرّق: nach للمدن والبلدان (بلا أداة) ولـnach Hause — وzu لكل مكانٍ له أداة ولكل شخص، وتُدمج: zum Flughafen · zur Schule · zur Oma — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "nach Berlin · zum Flughafen",
+          "ar": "إلى برلين · إلى المطار"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wir fahren nach dem Bahnhof.~~",
+          "a": "Wir fahren zum Bahnhof."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~aus Schweiz~~ · ~~aus dem Tunesien~~",
+          "ar": "aus + بلد بلا أداة: aus Tunesien — إلا die Schweiz: aus der Schweiz"
+        },
+        "whyArabicSpeakerFails": "«من تونس» و«من سويسرا» سواء في العربية، فيقيس المتعلم: إما يحذف الأداة من الجميع (aus Schweiz) أو يضيفها للجميع (aus dem Tunesien). والألمانية: البلدان والمدن بلا أداة (aus Tunesien · aus Tunis · aus Deutschland)، والبلدان القليلة التي تحمل أداة تُبقيها في الداتيف: die Schweiz ← aus der Schweiz — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "aus Tunesien · aus der Schweiz",
+          "ar": "من تونس · من سويسرا"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich komme aus dem Tunesien.~~",
+          "a": "Ich komme aus Tunesien."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "nach",
+      "aus",
+      "zu",
+      "taxi",
+      "fliegen",
+      "flug",
+      "flughafen",
+      "parken",
+      "rad",
+      "bahn",
+      "abholen",
+      "gepaeck"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/mit",
+      "https://www.duden.de/rechtschreibung/nach",
+      "https://www.duden.de/rechtschreibung/aus_heraus_vorbei",
+      "https://www.duden.de/rechtschreibung/zu",
+      "https://www.duden.de/rechtschreibung/Flughafen",
+      "https://www.duden.de/rechtschreibung/abholen"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/mit",
+      "https://de.wiktionary.org/wiki/nach",
+      "https://de.wiktionary.org/wiki/aus",
+      "https://de.wiktionary.org/wiki/zu",
+      "https://de.wiktionary.org/wiki/Gep%C3%A4ck"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-dativ-fix"
+  ],
+  "audioManifestRefs": [
+    "word-nach",
+    "word-aus",
+    "word-zu",
+    "word-taxi",
+    "word-fliegen",
+    "word-flug",
+    "word-flughafen",
+    "word-parken",
+    "word-rad",
+    "word-bahn",
+    "word-abholen",
+    "word-gepaeck"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Dativ-Präpositionen & Reise",
+    "goetheWordListOverlap": [
+      "nach",
+      "aus",
+      "zu",
+      "taxi",
+      "fliegen",
+      "flug",
+      "flughafen",
+      "parken",
+      "rad",
+      "bahn",
+      "abholen",
+      "gepaeck"
+    ]
+  }
+}

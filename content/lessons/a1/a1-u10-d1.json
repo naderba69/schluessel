@@ -1,0 +1,998 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u10-d1",
+  "level": "A1",
+  "unit": 10,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Wie ist das Wetter? — Es regnet. · Es ist kalt. · Die Sonne scheint. · Es sind zwanzig Grad. — Jetzt regnet es. · Hier ist es warm. · Im Winter ist es kalt.",
+    "ar": "تصف الطقس بجملة es الشكلي الصحيحة: es + فعل الطقس (Es regnet.) أو es ist + صفة (Es ist kalt · warm · heiß · nass · sonnig) أو es sind + الدرجات (Es sind zwanzig Grad.) — وes لا يسقط إذا تقدّم الزمن أو المكان (Jetzt regnet es. · Hier ist es warm.) — وما له فاعل حقيقي فبلا es (Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken.) — ومعها كلمات الطقس: das Wetter · die Sonne · der Regen · der Schnee · der Wind · die Wolke · der Himmel · der Grad · warm · kalt · nass · sonnig. — والفصول الأربعة (SD1): der Winter · der Sommer · der Frühling · der Herbst — «Im Winter ist es kalt.»"
+  },
+  "canDoDaily": [
+    "يسأل عن الطقس ويجيب بثلاثة أشكال: Wie ist das Wetter heute? — Es regnet. · Es ist kalt. · Es sind zwanzig Grad. — وبالفاعل الحقيقي: Die Sonne scheint. · Der Wind ist heute kalt.",
+    "يقدّم الزمن أو المكان ويُبقي es بعد الفعل: Jetzt regnet es. · Morgen ist es sonnig. · Hier ist es warm. · Bei uns ist es kalt. — ويسأل عن الدرجات: Wie viel Grad sind es?"
+  ],
+  "warmup": {
+    "cardIds": [
+      "heiss",
+      "morgen",
+      "uhr"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«اليوم لا تمطر» — أي جملة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Heute regnet es nicht.",
+          "Heute regnet nicht.",
+          "Heute es regnet nicht."
+        ],
+        "answer": "Heute regnet es nicht.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "wetter",
+      "sonne",
+      "regen",
+      "schnee",
+      "wind",
+      "wolke",
+      "himmel",
+      "grad",
+      "warm",
+      "kalt",
+      "nass",
+      "sonnig",
+      "winter",
+      "sommer",
+      "fruehling",
+      "herbst"
+    ],
+    "grammarArsenalIds": [
+      "ars-wetter-es"
+    ],
+    "storySentenceIds": [
+      "story-a1-u10-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "auslaut-d",
+      "double-consonant",
+      "ig-ending",
+      "r-uvular",
+      "vowel-long-short"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "___ regnet heute in Berlin. (الفاعل الشكلي)",
+            "a": "Es",
+            "why": "جملة الطقس تحتاج فاعلاً — es شكلي بلا معنى: Es regnet."
+          },
+          {
+            "q": "In Berlin regnet ___ oft. (es لا يسقط)",
+            "a": "es",
+            "why": "تقدّم المكان In Berlin فجاء الفعل ثانياً وes بعده مباشرة — لا يسقط أبداً."
+          },
+          {
+            "q": "Es ___ heute sehr kalt. (sein)",
+            "a": "ist",
+            "why": "الشكل الثاني: es ist + صفة — الصفة لا تكون جملة وحدها، لا بد من ist."
+          },
+          {
+            "q": "Hier ___ es warm. (sein — بعد المكان)",
+            "a": "ist",
+            "why": "Hier في الموضع الأول ← ist ثانياً ← es بعده (قوس الجملة — u9-d5)."
+          },
+          {
+            "q": "Es ___ heute zwanzig Grad. (sein — الجمع)",
+            "a": "sind",
+            "why": "مع الدرجات sind لأن zwanzig Grad جمع — Es sind zwanzig Grad."
+          },
+          {
+            "q": "Es sind dreißig ___. (الدرجات)",
+            "a": "Grad",
+            "why": "der Grad — بعد العدد بلا ‑e كـEuro: dreißig Grad."
+          },
+          {
+            "q": "Heute ___ die Sonne. (scheinen)",
+            "a": "scheint",
+            "why": "الشمس فاعل حقيقي (die Sonne) فلا es — وscheinen مع sie: scheint."
+          },
+          {
+            "q": "Wie ist das ___ heute? (الطقس)",
+            "a": "Wetter",
+            "why": "das Wetter = الطقس — محايد، وسؤال الطقس الثابت: Wie ist das Wetter?"
+          },
+          {
+            "q": "In Tunis scheint die ___. (الشمس)",
+            "a": "Sonne",
+            "why": "die Sonne = الشمس — مؤنثة، والفعل معها scheint."
+          },
+          {
+            "q": "Am Morgen Schnee und jetzt ___. (المطر)",
+            "a": "Regen",
+            "why": "der Regen = المطر (الاسم) — والفعل regnen: Es regnet."
+          },
+          {
+            "q": "Am Morgen ist hier ___. (الثلج)",
+            "a": "Schnee",
+            "why": "der Schnee = الثلج — اسم بلا جمع، وهنا فاعل حقيقي: hier ist Schnee."
+          },
+          {
+            "q": "Der ___ ist auch kalt. (الريح)",
+            "a": "Wind",
+            "why": "der Wind = الريح — مذكر، وهو فاعل حقيقي فلا es."
+          },
+          {
+            "q": "Am Himmel sind keine ___. (السحب)",
+            "a": "Wolken",
+            "why": "die Wolke, ‑n = السحابة — الجمع Wolken والفعل sind."
+          },
+          {
+            "q": "Am ___ sind heute Wolken. (السماء)",
+            "a": "Himmel",
+            "why": "der Himmel = السماء — am Himmel (an dem) للمكان Wo?"
+          },
+          {
+            "q": "Es ist heute ___, nicht heiß. (دافئ)",
+            "a": "warm",
+            "why": "warm = دافئ وheiß = حار — درجتان مختلفتان بعد es ist."
+          },
+          {
+            "q": "Nur acht Grad — es ist sehr ___. (بارد)",
+            "a": "kalt",
+            "why": "kalt = بارد — ضدّ warm، بعد es ist."
+          },
+          {
+            "q": "Die Straße ist heute ___. (مبلل)",
+            "a": "nass",
+            "why": "nass = مبلل — صفة بعد ist، والفاعل هنا حقيقي: die Straße."
+          },
+          {
+            "q": "Morgen ist es ___, aber kalt. (مشمس)",
+            "a": "sonnig",
+            "why": "sonnig = مشمس (من die Sonne + ‑ig) — Morgen أولاً ← ist ← es."
+          },
+          {
+            "q": "Bei uns ___ es fünfundzwanzig Grad. (sein)",
+            "a": "sind",
+            "why": "Bei uns تقدّم ← sind ثانياً ← es بعده — والجمع لأجل الدرجات."
+          },
+          {
+            "q": "Regnet ___ in Berlin? (سؤال نعم/لا)",
+            "a": "es",
+            "why": "سؤال نعم/لا: الفعل أولاً ثم es — وes لا يسقط في السؤال أيضاً."
+          },
+          {
+            "q": "___ ist das Wetter in Tunis? (أداة السؤال: كيف)",
+            "a": "Wie",
+            "why": "سؤال الطقس بـWie (كيف) لا Was — Wie ist das Wetter?"
+          },
+          {
+            "q": "Am Montag ___ es in Berlin. (regnen)",
+            "a": "regnet",
+            "why": "regnen مع es: regnet — وes بعد الفعل لأن Am Montag تقدّم (u3-d4: Im April regnet es oft)."
+          },
+          {
+            "q": "Morgen ___ es sonnig. (sein — الزمن أولاً)",
+            "a": "ist",
+            "why": "Morgen أولاً ← ist ثانياً ← es ← sonnig — الشكل الثاني مع تقديم الزمن."
+          },
+          {
+            "q": "Im ___ ist es kalt. Es gibt Schnee. (الشتاء)",
+            "a": "Winter",
+            "why": "der Winter = الشتاء — im Winter (in + dem) للزمن: «في الشتاء». الجو بارد والثلج موجود."
+          },
+          {
+            "q": "Im ___ ist es heiß. (الصيف)",
+            "a": "Sommer",
+            "why": "der Sommer = الصيف — im Sommer «في الصيف»: الجو حارّ (heiß)."
+          },
+          {
+            "q": "Im ___ scheint die Sonne. (الربيع)",
+            "a": "Frühling",
+            "why": "der Frühling = الربيع — im Frühling «في الربيع»: الشمس تسطع (scheint)."
+          },
+          {
+            "q": "Im ___ ist es nass und kalt. (الخريف)",
+            "a": "Herbst",
+            "why": "der Herbst = الخريف — im Herbst «في الخريف»: مطر وبرد (nass und kalt)."
+          }
+        ],
+        "interleavedWith": [
+          "heute",
+          "jetzt",
+          "morgen",
+          "hier",
+          "regnen",
+          "scheinen",
+          "strasse",
+          "montag",
+          "heiss",
+          "zwanzig",
+          "dreissig"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "wt-2",
+            "speakText": "Guten Morgen, Lena! Hier ist es schön: Die Sonne scheint, und am Himmel sind keine Wolken.",
+            "q": "استمع: كيف الطقس عند يوسف؟",
+            "choices": [
+              "جميل — الشمس مشرقة ولا سحب في السماء",
+              "سيئ — تمطر والسماء رمادية",
+              "بارد — ثلج في الصباح"
+            ],
+            "a": "جميل — الشمس مشرقة ولا سحب في السماء",
+            "why": "Hier ist es schön (es بعد hier) · Die Sonne scheint (فاعل حقيقي) · am Himmel sind keine Wolken (لا سحب في السماء)."
+          },
+          {
+            "audioId": "wt-3",
+            "speakText": "Keine Wolken? Bei uns sind heute nur Wolken am Himmel.",
+            "q": "استمع: وكيف السماء عند لينا؟",
+            "choices": [
+              "اليوم سحب فقط",
+              "بلا سحب",
+              "مشمسة"
+            ],
+            "a": "اليوم سحب فقط",
+            "why": "Bei uns sind heute nur Wolken am Himmel = عندنا اليوم سحب فقط في السماء."
+          },
+          {
+            "audioId": "wt-4",
+            "speakText": "Und wie ist das Wetter bei dir? Regnet es?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "كيف الطقس عندها، وهل تمطر",
+              "كم الساعة عندها",
+              "هل الجو حار عندها"
+            ],
+            "a": "كيف الطقس عندها، وهل تمطر",
+            "why": "Wie ist das Wetter bei dir? (كيف الطقس عندك؟) · Regnet es? (هل تمطر؟ — الفعل أولاً وes بعده)."
+          },
+          {
+            "audioId": "wt-5",
+            "speakText": "Ja, es regnet, und es ist kalt. Der Wind ist auch kalt.",
+            "q": "استمع: كيف الطقس عند لينا؟",
+            "choices": [
+              "تمطر والجو بارد — والريح باردة أيضاً",
+              "مشمس ودافئ",
+              "ثلج والريح قوية"
+            ],
+            "a": "تمطر والجو بارد — والريح باردة أيضاً",
+            "why": "es regnet · es ist kalt (الشكلان) · Der Wind ist auch kalt (الريح باردة أيضاً — فاعل حقيقي)."
+          },
+          {
+            "audioId": "wt-6",
+            "speakText": "Wie viel Grad sind es bei dir?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "كم درجة عندها",
+              "كم الساعة عندها",
+              "كم يوماً تمطر"
+            ],
+            "a": "كم درجة عندها",
+            "why": "Wie viel Grad sind es bei dir? = كم درجة (الحرارة) عندك؟ — sind مع الدرجات."
+          },
+          {
+            "audioId": "wt-7",
+            "speakText": "Nur acht Grad. Am Morgen Schnee und jetzt Regen — die Straße ist nass.",
+            "q": "استمع: كم درجة، وماذا في الصباح؟",
+            "choices": [
+              "ثماني درجات فقط — ثلج صباحاً ومطر الآن والشارع مبلل",
+              "عشرون درجة — شمس",
+              "صفر — ثلج طوال اليوم"
+            ],
+            "a": "ثماني درجات فقط — ثلج صباحاً ومطر الآن والشارع مبلل",
+            "why": "Nur acht Grad (ثماني درجات فقط) · Am Morgen Schnee und jetzt Regen (ثلج صباحاً ومطر الآن) · die Straße ist nass (الشارع مبلل)."
+          },
+          {
+            "audioId": "wt-8",
+            "speakText": "Schnee und Regen? Bei uns sind es fünfundzwanzig Grad. Es ist warm, nicht heiß.",
+            "q": "استمع: كم درجة عند يوسف، وكيف الجو؟",
+            "choices": [
+              "خمس وعشرون — دافئ لا حار",
+              "ثلاثون — حار جداً",
+              "خمس عشرة — بارد"
+            ],
+            "a": "خمس وعشرون — دافئ لا حار",
+            "why": "Bei uns sind es fünfundzwanzig Grad (عندنا خمس وعشرون درجة) · Es ist warm, nicht heiß (دافئ لا حار)."
+          },
+          {
+            "audioId": "wt-10",
+            "speakText": "Nein, heute gehe ich zu Fuß. Das Wetter ist zu schön für den Bus!",
+            "q": "استمع: كيف يذهب يوسف اليوم إلى المدينة؟",
+            "choices": [
+              "مشياً — الطقس جميل جداً للحافلة",
+              "بالحافلة — تمطر",
+              "بالتاكسي — حار"
+            ],
+            "a": "مشياً — الطقس جميل جداً للحافلة",
+            "why": "heute gehe ich zu Fuß (اليوم أذهب مشياً — القلب بعد heute) · Das Wetter ist zu schön für den Bus (الطقس أجمل من أن أركب الحافلة)."
+          },
+          {
+            "audioId": "wt-11",
+            "speakText": "Ich fahre heute nicht mit dem Fahrrad zur Schule. Heute fahre ich mit dem Bus — es regnet zu viel.",
+            "q": "استمع: كيف تذهب لينا اليوم إلى المدرسة، ولماذا؟",
+            "choices": [
+              "بالحافلة لا بالدراجة — تمطر كثيراً",
+              "بالدراجة — الشمس مشرقة",
+              "مشياً — الحافلة متأخرة"
+            ],
+            "a": "بالحافلة لا بالدراجة — تمطر كثيراً",
+            "why": "nicht mit dem Fahrrad (لا بالدراجة) · Heute fahre ich mit dem Bus (اليوم بالحافلة) · es regnet zu viel (تمطر كثيراً جداً)."
+          },
+          {
+            "audioId": "wt-12",
+            "speakText": "Hast du deinen Regenschirm? Der ist neu!",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "عن مظلتها — الجديدة",
+              "عن حقيبتها — القديمة",
+              "عن معطفها"
+            ],
+            "a": "عن مظلتها — الجديدة",
+            "why": "Hast du deinen Regenschirm? (هل معك مظلتك؟) · Der ist neu! (إنها جديدة — مظلة u8-d3)."
+          },
+          {
+            "audioId": "wt-14",
+            "speakText": "Und wie ist das Wetter morgen bei dir?",
+            "q": "استمع: ماذا يسأل يوسف عن الغد؟",
+            "choices": [
+              "كيف الطقس غداً عندها",
+              "متى تستيقظ غداً",
+              "ماذا تأكل غداً"
+            ],
+            "a": "كيف الطقس غداً عندها",
+            "why": "Wie ist das Wetter morgen bei dir? = كيف الطقس غداً عندك؟"
+          },
+          {
+            "audioId": "wt-15",
+            "speakText": "Morgen regnet es nicht. Morgen ist es sonnig, aber kalt.",
+            "q": "استمع: كيف الطقس غداً عند لينا؟",
+            "choices": [
+              "لا تمطر — مشمس لكن بارد",
+              "تمطر — ودافئ",
+              "ثلج — وريح"
+            ],
+            "a": "لا تمطر — مشمس لكن بارد",
+            "why": "Morgen regnet es nicht (غداً لا تمطر — es بعد الفعل) · Morgen ist es sonnig, aber kalt (مشمس لكن بارد)."
+          },
+          {
+            "audioId": "wt-16",
+            "speakText": "Sonnig und kalt — das ist auch gut. Hier ist es morgen heiß: dreißig Grad!",
+            "q": "استمع: كيف الطقس غداً عند يوسف؟",
+            "choices": [
+              "حار — ثلاثون درجة",
+              "دافئ — عشرون درجة",
+              "بارد — عشر درجات"
+            ],
+            "a": "حار — ثلاثون درجة",
+            "why": "Hier ist es morgen heiß (هنا غداً حار — es بعد ist) · dreißig Grad (ثلاثون درجة)."
+          },
+          {
+            "audioId": "wt-18",
+            "speakText": "Morgen gehe ich um zehn mit meiner Schwester ans Ufer. Da ist der Wind schön.",
+            "q": "استمع: ماذا يفعل يوسف غداً؟",
+            "choices": [
+              "في العاشرة مع أخته إلى الضفة — الريح جميلة هناك",
+              "يبقى في البيت — حار جداً",
+              "يسبح في البحر"
+            ],
+            "a": "في العاشرة مع أخته إلى الضفة — الريح جميلة هناك",
+            "why": "Morgen gehe ich um zehn mit meiner Schwester ans Ufer (ترتيب u9-d5) · Da ist der Wind schön (الريح هناك جميلة)."
+          },
+          {
+            "audioId": "wt-19",
+            "speakText": "Schön! Und ich fahre morgen mit dem Fahrrad zur Schule — ohne Regen und ohne Regenschirm!",
+            "q": "استمع: وماذا تفعل لينا غداً؟",
+            "choices": [
+              "بالدراجة إلى المدرسة — بلا مطر ولا مظلة",
+              "بالحافلة — تمطر",
+              "تبقى في البيت — ثلج"
+            ],
+            "a": "بالدراجة إلى المدرسة — بلا مطر ولا مظلة",
+            "why": "mit dem Fahrrad zur Schule (بالدراجة إلى المدرسة) · ohne Regen und ohne Regenschirm (بلا مطر ولا مظلة)."
+          }
+        ],
+        "interleavedWith": [
+          "heute",
+          "morgen",
+          "bus",
+          "fahrrad",
+          "schule",
+          "regenschirm",
+          "schwester",
+          "ufer",
+          "strasse",
+          "fuss",
+          "heiss"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Berlin.",
+              "regnet",
+              "in",
+              "Heute",
+              "es"
+            ],
+            "a": "Heute regnet es in Berlin.",
+            "why": "Heute أولاً ← regnet ثانياً ← es بعده — لا يسقط."
+          },
+          {
+            "tokens": [
+              "kalt.",
+              "ist",
+              "Es",
+              "heute"
+            ],
+            "a": "Es ist heute kalt.",
+            "why": "es ← ist ← heute ← الصفة kalt — الشكل الثاني."
+          },
+          {
+            "tokens": [
+              "Grad.",
+              "uns",
+              "sind",
+              "Bei",
+              "es",
+              "dreißig"
+            ],
+            "a": "Bei uns sind es dreißig Grad.",
+            "why": "Bei uns أولاً ← sind (جمع الدرجات) ← es ← dreißig Grad."
+          },
+          {
+            "tokens": [
+              "Tunis.",
+              "scheint",
+              "Sonne",
+              "in",
+              "Die"
+            ],
+            "a": "Die Sonne scheint in Tunis.",
+            "why": "فاعل حقيقي die Sonne ← scheint — لا es هنا."
+          },
+          {
+            "tokens": [
+              "warm.",
+              "es",
+              "ist",
+              "Hier"
+            ],
+            "a": "Hier ist es warm.",
+            "why": "Hier أولاً ← ist ثانياً ← es ← warm."
+          },
+          {
+            "tokens": [
+              "Wolken.",
+              "sind",
+              "Himmel",
+              "keine",
+              "Am"
+            ],
+            "a": "Am Himmel sind keine Wolken.",
+            "why": "Am Himmel (المكان) أولاً ← sind ← الفاعل الحقيقي keine Wolken."
+          }
+        ],
+        "interleavedWith": [
+          "heute",
+          "hier",
+          "dreissig"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wt-1",
+            "speakText": "Guten Morgen, Yusuf! Wie ist das Wetter in Tunis?",
+            "a": "Guten Morgen, Yusuf! Wie ist das Wetter in Tunis?",
+            "why": "Guten Morgen بحرفين كبيرين · Wetter بحرف كبير (اسم) · Tunis اسم علم وعلامة استفهام."
+          },
+          {
+            "audioId": "wt-9",
+            "speakText": "Fünfundzwanzig Grad! Fährst du heute mit dem Bus in die Stadt?",
+            "a": "Fünfundzwanzig Grad! Fährst du heute mit dem Bus in die Stadt?",
+            "why": "Fünfundzwanzig كلمة واحدة بحرف كبير في أول الجملة · Grad بحرف كبير · Bus وStadt اسمان."
+          },
+          {
+            "audioId": "wt-13",
+            "speakText": "Ja, der Regenschirm ist immer in meiner Tasche.",
+            "a": "Ja, der Regenschirm ist immer in meiner Tasche.",
+            "why": "Regenschirm كلمة مركّبة واحدة (Regen + Schirm) · Tasche بحرف كبير · immer ظرف بحرف صغير."
+          },
+          {
+            "audioId": "wt-17",
+            "speakText": "Dreißig Grad! Das ist zu heiß für mich. Was machst du morgen?",
+            "a": "Dreißig Grad! Das ist zu heiß für mich. Was machst du morgen?",
+            "why": "Dreißig بـß · heiß بـß · Was بحرف كبير بعد النقطة وعلامة استفهام."
+          },
+          {
+            "audioId": "wt-20",
+            "speakText": "Ohne Regen und ohne Regenschirm! Bis morgen, Lena!",
+            "a": "Ohne Regen und ohne Regenschirm! Bis morgen, Lena!",
+            "why": "Ohne بحرف كبير في أول الجملة · Regen وRegenschirm اسمان · morgen بحرف صغير (ظرف: غداً)."
+          },
+          {
+            "audioId": "word-wetter",
+            "speakText": "das Wetter.",
+            "a": "das Wetter.",
+            "why": "das Wetter: W تُنطق v · tt مضاعفة (e قصيرة) — محايد."
+          },
+          {
+            "audioId": "word-regen",
+            "speakText": "der Regen.",
+            "a": "der Regen.",
+            "why": "der Regen: e الأولى طويلة · g منطوقة — مذكر."
+          },
+          {
+            "audioId": "word-schnee",
+            "speakText": "der Schnee.",
+            "a": "der Schnee.",
+            "why": "der Schnee: Sch = ش · ee طويلة — مذكر بلا جمع."
+          },
+          {
+            "audioId": "word-wind",
+            "speakText": "der Wind.",
+            "a": "der Wind.",
+            "why": "der Wind: W تُنطق v · d في الآخر تُنطق t — مذكر."
+          },
+          {
+            "audioId": "word-wolke",
+            "speakText": "die Wolke.",
+            "a": "die Wolke.",
+            "why": "die Wolke: W تُنطق v · ‑e في الآخر — مؤنثة، الجمع Wolken."
+          },
+          {
+            "audioId": "word-himmel",
+            "speakText": "der Himmel.",
+            "a": "der Himmel.",
+            "why": "der Himmel: h منطوقة · mm مضاعفة (i قصيرة) — مذكر."
+          },
+          {
+            "audioId": "word-grad",
+            "speakText": "der Grad.",
+            "a": "der Grad.",
+            "why": "der Grad: a طويلة · d في الآخر تُنطق t — بعد العدد بلا ‑e."
+          },
+          {
+            "audioId": "word-warm",
+            "speakText": "warm.",
+            "a": "warm.",
+            "why": "warm: W تُنطق v · a قصيرة قبل rm."
+          },
+          {
+            "audioId": "word-kalt",
+            "speakText": "kalt.",
+            "a": "kalt.",
+            "why": "kalt: a قصيرة قبل lt · t واضحة في الآخر."
+          },
+          {
+            "audioId": "word-nass",
+            "speakText": "nass.",
+            "a": "nass.",
+            "why": "nass: ss مضاعفة بعد a قصيرة — لا ß."
+          },
+          {
+            "audioId": "word-sonnig",
+            "speakText": "sonnig.",
+            "a": "sonnig.",
+            "why": "sonnig: nn مضاعفة (o قصيرة) · ‑ig في الآخر تُنطق ‑ich."
+          },
+          {
+            "audioId": "word-winter",
+            "speakText": "der Winter.",
+            "a": "der Winter.",
+            "why": "Winter: W تُنطق [v] · i قصيرة قبل nt · ‑er في الآخر [ɐ] خفيفة."
+          },
+          {
+            "audioId": "word-sommer",
+            "speakText": "der Sommer.",
+            "a": "der Sommer.",
+            "why": "Sommer: mm مضاعفة (o قصيرة) · S في الأول [z]."
+          },
+          {
+            "audioId": "word-fruehling",
+            "speakText": "der Frühling.",
+            "a": "der Frühling.",
+            "why": "Frühling: ü طويلة [yː] — ليست u ولا i · ‑ling آخره [ŋ]."
+          },
+          {
+            "audioId": "word-herbst",
+            "speakText": "der Herbst.",
+            "a": "der Herbst.",
+            "why": "Herbst: b قبل st تُنطق [p] (إجهار النهاية) · r قبل b مصوَّتة خفيفة."
+          }
+        ],
+        "interleavedWith": [
+          "morgen",
+          "heiss",
+          "bus",
+          "stadt",
+          "tasche",
+          "regenschirm",
+          "immer"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wie ist das Wetter heute bei dir? — Es regnet, und es ist kalt. · Die Sonne scheint. · Es sind zwanzig Grad. — Und morgen? — Morgen ist es sonnig, aber kalt.",
+        "ar": "تسأل زميلك عن طقس اليوم والغد عنده وتصف طقسك: جملتان بـes (فعل الطقس أو ist + صفة) وجملة بفاعل حقيقي (الشمس · الريح · السحب) ودرجة حرارة — ثم تتبادلان"
+      },
+      "situation": {
+        "de": "Im Kurs, auf dem Handy: Wie ist das Wetter heute bei dir? — Hier regnet es, und es ist kalt. Es sind acht Grad. · Und bei dir? — Die Sonne scheint, und es ist warm. Es sind fünfundzwanzig Grad. · Wie ist das Wetter morgen? — Morgen ist es sonnig, aber kalt.",
+        "ar": "في الدورة، على الهاتف: أحدكما يسأل Wie ist das Wetter heute bei dir? · Regnet es? · Wie viel Grad sind es? · Wie ist das Wetter morgen? والآخر يجيب بجمل كاملة: Hier regnet es, und es ist kalt. · Es sind acht Grad. · Die Sonne scheint, und es ist warm. · Am Himmel sind keine Wolken. · Morgen ist es sonnig, aber kalt. — ثم تتبادلان."
+      },
+      "successCriteria": [
+        "جملتان بـes الشكلي: واحدة بفعل الطقس (Es regnet. · Hier regnet es.) وواحدة بـist + صفة (Es ist kalt. · Heute ist es warm.) — وes باقٍ بعد الفعل إذا تقدّم الزمن أو المكان.",
+        "درجة حرارة بـsind (Es sind zwanzig Grad.) وجملة بفاعل حقيقي بلا es (Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken.) — وسؤال واحد على الأقل (Wie ist das Wetter? · Regnet es? · Wie viel Grad sind es?)."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الآن تمطر» (الزمن أولاً)؟",
+            "choices": [
+              "Jetzt regnet es.",
+              "Jetzt regnet.",
+              "Jetzt es regnet."
+            ],
+            "a": "Jetzt regnet es.",
+            "why": "Jetzt أولاً ← الفعل ثانياً ← es بعده — es لا يسقط ولا يتقدّم على الفعل."
+          },
+          {
+            "q": "«الآن الجو بارد»؟",
+            "choices": [
+              "Jetzt ist es kalt.",
+              "Jetzt es ist kalt.",
+              "Jetzt ist kalt."
+            ],
+            "a": "Jetzt ist es kalt.",
+            "why": "Jetzt ← ist ← es ← kalt — es ist + صفة، والفعل ثانياً وes بعده."
+          },
+          {
+            "q": "«الحرارة عشرون درجة»؟",
+            "choices": [
+              "Es sind zwanzig Grad.",
+              "Es ist zwanzig Grade.",
+              "Es sind zwanzig Grade."
+            ],
+            "a": "Es sind zwanzig Grad.",
+            "why": "sind للجمع — وGrad بلا ‑e بعد العدد."
+          },
+          {
+            "q": "«الثلج بارد»؟",
+            "choices": [
+              "Der Schnee ist kalt.",
+              "Es ist der Schnee kalt.",
+              "Der Schnee kalt."
+            ],
+            "a": "Der Schnee ist kalt.",
+            "why": "فاعل حقيقي der Schnee + ist + kalt — لا es مع فاعل حقيقي، ولا جملة بلا فعل."
+          },
+          {
+            "q": "der Wind = ؟",
+            "choices": [
+              "الريح",
+              "السحابة",
+              "الثلج"
+            ],
+            "a": "الريح",
+            "why": "der Wind = الريح · die Wolke = السحابة · der Schnee = الثلج."
+          },
+          {
+            "q": "«اليوم الجو دافئ» (الزمن أولاً)؟",
+            "choices": [
+              "Heute ist es warm.",
+              "Heute es ist warm.",
+              "Heute warm."
+            ],
+            "a": "Heute ist es warm.",
+            "why": "Heute ← ist ← es ← warm — الفعل ثانياً وes بعده."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«غداً لا تمطر»؟",
+            "choices": [
+              "Morgen regnet es nicht.",
+              "Morgen regnet nicht.",
+              "Morgen nicht regnet es."
+            ],
+            "a": "Morgen regnet es nicht.",
+            "why": "Morgen ← regnet ← es ← nicht — es باقٍ بعد الفعل."
+          },
+          {
+            "q": "«الجو دافئ لا حار»؟",
+            "choices": [
+              "Es ist warm, nicht heiß.",
+              "Es warm, nicht heiß.",
+              "Es ist warm, nicht heißt."
+            ],
+            "a": "Es ist warm, nicht heiß.",
+            "why": "es ist + صفة · heiß صفة (حار) — وheißt فعل (يُسمّى)."
+          },
+          {
+            "q": "«عندنا ثماني درجات»؟",
+            "choices": [
+              "Bei uns sind es acht Grad.",
+              "Bei uns es sind acht Grad.",
+              "Bei uns ist es acht Grad."
+            ],
+            "a": "Bei uns sind es acht Grad.",
+            "why": "Bei uns أولاً ← sind ثانياً (جمع الدرجات) ← es."
+          },
+          {
+            "q": "«هنا الجو مشمس»؟",
+            "choices": [
+              "Hier ist es sonnig.",
+              "Hier es ist sonnig.",
+              "Hier ist sonnig."
+            ],
+            "a": "Hier ist es sonnig.",
+            "why": "Hier ← ist ← es ← sonnig — es بعد الفعل ولا يسقط."
+          },
+          {
+            "q": "der Himmel = ؟",
+            "choices": [
+              "السماء",
+              "الطقس",
+              "المطر"
+            ],
+            "a": "السماء",
+            "why": "der Himmel = السماء · das Wetter = الطقس · der Regen = المطر."
+          },
+          {
+            "q": "«الشارع مبلل»؟",
+            "choices": [
+              "Die Straße ist nass.",
+              "Es ist die Straße nass.",
+              "Die Straße nass."
+            ],
+            "a": "Die Straße ist nass.",
+            "why": "فاعل حقيقي die Straße + ist + nass — لا es مع فاعل حقيقي."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«هل تمطر عندك؟»؟",
+            "choices": [
+              "Regnet es bei dir?",
+              "Regnet bei dir?",
+              "Es regnet bei dir?"
+            ],
+            "a": "Regnet es bei dir?",
+            "why": "سؤال نعم/لا: الفعل أولاً ثم es — وes لا يسقط."
+          },
+          {
+            "q": "«عندنا الجو بارد»؟",
+            "choices": [
+              "Bei uns ist es kalt.",
+              "Bei uns es ist kalt.",
+              "Bei uns ist kalt."
+            ],
+            "a": "Bei uns ist es kalt.",
+            "why": "Bei uns ← ist ← es ← kalt — الفعل ثانياً وes بعده."
+          },
+          {
+            "q": "«كم درجة؟»؟",
+            "choices": [
+              "Wie viel Grad sind es?",
+              "Wie viel Grad ist es?",
+              "Wie viel Grade sind es?"
+            ],
+            "a": "Wie viel Grad sind es?",
+            "why": "sind مع الدرجات (جمع) — وGrad بلا ‑e بعد wie viel."
+          },
+          {
+            "q": "«الريح باردة اليوم»؟",
+            "choices": [
+              "Der Wind ist heute kalt.",
+              "Es ist der Wind heute kalt.",
+              "Der Wind heute kalt."
+            ],
+            "a": "Der Wind ist heute kalt.",
+            "why": "فاعل حقيقي der Wind + ist + heute + kalt — بلا es."
+          },
+          {
+            "q": "der Schnee = ؟",
+            "choices": [
+              "الثلج",
+              "المطر",
+              "الريح"
+            ],
+            "a": "الثلج",
+            "why": "der Schnee = الثلج · der Regen = المطر · der Wind = الريح."
+          },
+          {
+            "q": "«في السماء سحب»؟",
+            "choices": [
+              "Am Himmel sind Wolken.",
+              "Am Himmel ist Wolken.",
+              "Am Himmel sind Wolke."
+            ],
+            "a": "Am Himmel sind Wolken.",
+            "why": "Wolken جمع ← sind — وam Himmel (an dem) للمكان."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Wie ist das Wetter? — Es regnet. · Es ist kalt. · Es ist warm. · Es ist heiß. · Heute ist es sonnig. — Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. · Morgen regnet es nicht. — Wie viel Grad sind es? — Es sind zwanzig Grad. — Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. · Die Straße ist nass. · Am Morgen ist hier Schnee. — Im Winter ist es kalt. · Im Sommer ist es heiß.",
+      "ar": "جملة الطقس بأربع خطوات: (1) السؤال: Wie ist das Wetter? — والجواب يبدأ بـes الشكلي لأن الألمانية لا تعرف جملة بلا فاعل. (2) شكلان: es + فعل الطقس (Es regnet.) أو es ist + صفة (Es ist kalt · warm · heiß · sonnig · nass) — لا الاثنان معاً. (3) es لا يسقط: إذا تقدّم الزمن أو المكان جاء الفعل ثانياً وes بعده (Jetzt regnet es. · Hier ist es warm. · Bei uns ist es kalt. · Morgen regnet es nicht.) وفي السؤال: Regnet es? (4) الدرجات بالجمع: Wie viel Grad sind es? — Es sind zwanzig Grad. (Grad بلا ‑e بعد العدد) — وما له فاعل حقيقي فبلا es: Die Sonne scheint. · Der Wind ist heute kalt. · Am Himmel sind Wolken. · Die Straße ist nass. الكلمات: das Wetter · die Sonne (‑n) · der Regen · der Schnee · der Wind (‑e) · die Wolke (‑n) · der Himmel · der Grad · warm · kalt · nass · sonnig. — والفصول: im Winter · im Sommer · im Frühling · im Herbst (in + dem = im): «Im Winter ist es kalt.»"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Heute regnet.~~ · ~~Regnet heute.~~",
+          "ar": "es الفاعل الشكلي لا يسقط: لا جملة طقس بلا es"
+        },
+        "whyArabicSpeakerFails": "«تمطر» فعل عربي بلا فاعل ظاهر، فينقل المتعلم الجملة بلا فاعل (~~Heute regnet.~~). والألمانية لا تعرف جملة بلا فاعل: مع الطقس فاعل شكلي es بلا معنى — في الأول (Es regnet heute.) أو بعد الفعل إذا تقدّم الزمن (Jetzt regnet es.) — وفي السؤال أيضاً (Regnet es?) — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Es regnet heute. · Jetzt regnet es. · Regnet es?",
+          "ar": "تمطر اليوم · الآن تمطر · هل تمطر؟"
+        },
+        "exercise": {
+          "q": "أكمل: Jetzt regnet ___ bei uns. (الفاعل الشكلي)",
+          "a": "es"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Es kalt.~~ · ~~Heute kalt.~~",
+          "ar": "الصفة تحتاج فعلاً: es ist + صفة"
+        },
+        "whyArabicSpeakerFails": "«الجو بارد» و«اليوم بارد» جملتان اسميتان بلا فعل، فيترجم المتعلم حرفياً (~~Es kalt.~~ · ~~Heute kalt.~~). وكل جملة ألمانية لها فعل مصرَّف في الموضع الثاني: Es ist kalt. · Heute ist es kalt. — وes بعد ist حين يتقدّم heute — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Es ist kalt. · Heute ist es kalt. · Bei uns ist es warm.",
+          "ar": "الجو بارد · اليوم الجو بارد · عندنا الجو دافئ"
+        },
+        "exercise": {
+          "q": "صحّح: Morgen kalt.",
+          "a": "Morgen ist es kalt."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Es ist regnet.~~ · ~~Es ist regnen.~~",
+          "ar": "فعل الطقس وحده أو ist + صفة — لا معاً"
+        },
+        "whyArabicSpeakerFails": "«الجو ممطر» وصفٌ في العربية (اسم فاعل بعد مبتدأ)، فيخلط المتعلم الشكلين: ist من الوصف وregnet من الفعل (~~Es ist regnet.~~). والألمانية تختار شكلاً واحداً: فعل الطقس وحده (Es regnet.) أو ist + صفة (Es ist nass. · Es ist kalt.) — لا فعلان مصرَّفان في جملة واحدة — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Es regnet. · Es ist nass. · Die Sonne scheint.",
+          "ar": "تمطر · الجو مبلل · الشمس مشرقة"
+        },
+        "exercise": {
+          "q": "صحّح: Es ist regnet in Berlin.",
+          "a": "Es regnet in Berlin."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "wetter",
+      "sonne",
+      "regen",
+      "schnee",
+      "wind",
+      "wolke",
+      "himmel",
+      "grad",
+      "warm",
+      "kalt",
+      "nass",
+      "sonnig",
+      "winter",
+      "sommer",
+      "fruehling",
+      "herbst"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Wetter",
+      "https://www.duden.de/rechtschreibung/regnen",
+      "https://www.duden.de/rechtschreibung/Sonne",
+      "https://www.duden.de/rechtschreibung/Grad",
+      "https://www.duden.de/rechtschreibung/Wolke",
+      "https://www.duden.de/rechtschreibung/Himmel",
+      "https://www.duden.de/rechtschreibung/Schnee",
+      "https://www.duden.de/rechtschreibung/Wind"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/regnen",
+      "https://de.wiktionary.org/wiki/es",
+      "https://de.wiktionary.org/wiki/Wetter",
+      "https://de.wiktionary.org/wiki/Grad"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-wetter-es"
+  ],
+  "audioManifestRefs": [
+    "word-wetter",
+    "word-sonne",
+    "word-regen",
+    "word-schnee",
+    "word-wind",
+    "word-wolke",
+    "word-himmel",
+    "word-grad",
+    "word-warm",
+    "word-kalt",
+    "word-nass",
+    "word-sonnig",
+    "word-winter",
+    "word-sommer",
+    "word-fruehling",
+    "word-herbst"
+  ],
+  "imageManifestRefs": [
+    "img-sonne"
+  ],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Das Wetter heute · unpersönliches es",
+    "goetheWordListOverlap": [
+      "wetter",
+      "sonne",
+      "regen",
+      "schnee",
+      "wind",
+      "wolke",
+      "himmel",
+      "grad",
+      "warm",
+      "kalt",
+      "nass",
+      "sonnig",
+      "winter",
+      "sommer",
+      "fruehling",
+      "herbst"
+    ]
+  }
+}

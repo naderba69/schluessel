@@ -1,0 +1,747 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u4-d2",
+  "level": "A1",
+  "unit": 4,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Ist das dein Hund? — Nein, das ist nicht mein Hund. Das ist sein Hund.",
+    "ar": "تسأل عن الملكية وتجيب بـmein/dein/sein، وتختار ‑e بحسب أداة المملوك (die للمؤنث والجمع)، وتقول «هذا لي» بمعنى الملكية: Das gehört mir."
+  },
+  "canDoDaily": [
+    "يسأل ويجيب عن ملكية شيء أو حيوان أو فرد من الأسرة: Ist das dein Hund? — Ja, das ist mein Hund. / Nein, das ist nicht mein Hund. Das ist sein Hund.",
+    "يختار mein/meine · dein/deine · sein/seine من أداة الاسم (der وdas بلا ‑e · die والجمع بـ‑e) لا من جنس المالك أو المخاطَب، ويقول Das gehört mir."
+  ],
+  "warmup": {
+    "cardIds": [
+      "bruder",
+      "mutter",
+      "kind"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أمي» و«أبي» بالألمانية: أي زوج صحيح؟ (تخمين فقط)"
+        },
+        "choices": [
+          "meine Mutter · mein Vater",
+          "mein Mutter · meine Vater",
+          "mein Mutter · mein Vater"
+        ],
+        "answer": "meine Mutter · mein Vater",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "familie",
+      "tante",
+      "onkel",
+      "hund",
+      "katze",
+      "schluessel",
+      "tasche",
+      "auto",
+      "gehoeren",
+      "mein",
+      "dein",
+      "sein",
+      "lieben"
+    ],
+    "grammarArsenalIds": [
+      "ars-possessiv"
+    ],
+    "storySentenceIds": [
+      "story-a1-u4-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-u",
+      "umlaut-o",
+      "auslaut-d",
+      "z"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "der Bruder → Das ist ___ Bruder. (أخي)",
+            "a": "mein",
+            "why": "Bruder مذكر (der)، والمذكر لا يأخذ نهاية: mein Bruder — كما تقول ein Bruder. والأداة der تسقط: كلمة الملكية تأخذ مكانها، كما «أخي» بلا «ال»."
+          },
+          {
+            "q": "die Mutter → Das ist ___ Mutter. (أمي)",
+            "a": "meine",
+            "why": "Mutter مؤنثة (die) فتأخذ ‑e: meine Mutter — كما eine Mutter. والعربية تقول «أمي» و«أبي» بالياء نفسها، أما الألمانية فتغيّر النهاية بحسب أداة الاسم."
+          },
+          {
+            "q": "das Auto → Ist ___ Auto neu? (سيارتك)",
+            "a": "dein",
+            "why": "Auto محايد (das)، والمحايد كالمذكر بلا نهاية: dein Auto. والـ‑e للمؤنث وللجمع فقط — ولو كانت «سيارة» مؤنثة في العربية: الحكم لأداة الاسم الألماني."
+          },
+          {
+            "q": "die Eltern → Sind das ___ Eltern? (والداك)",
+            "a": "deine",
+            "why": "Eltern جمع دائم، والجمع أداته die فيأخذ ‑e كالمؤنث: deine Eltern — ومعه sind لا ist."
+          },
+          {
+            "q": "Lena, ist das ___ Hund? (كلبكِ)",
+            "a": "dein",
+            "why": "لينا أنثى لكن dein لا تتغير لأجلها: النهاية من المملوك وحده، وHund مذكر ← dein. العربية تفرّق «كلبكَ» و«كلبكِ» بحسب المخاطَب، والألمانية لا تفرّق."
+          },
+          {
+            "q": "Mein Onkel ist hier. Das ist ___ Auto. (سيارته)",
+            "a": "sein",
+            "why": "المالك Onkel (هو) ← sein، والمملوك Auto (das) ← بلا نهاية: sein Auto = «سيارته»."
+          },
+          {
+            "q": "Mein Onkel ist hier. Das ist ___ Tasche. (حقيبته)",
+            "a": "seine",
+            "why": "سؤالان: المالك هو (Onkel) ← sein، والمملوك Tasche (die) ← ‑e: seine Tasche. الجذع من المالك والنهاية من المملوك."
+          },
+          {
+            "q": "«هذا لي (أملكه)»: Das gehört ___.",
+            "a": "mir",
+            "why": "gehören + mir = «لي» بمعنى الملكية: Das gehört mir. أما für mich فـ«بالنسبة لي» أو «مقصود لي» (Für mich ist das spät) — لا ملكية فيها."
+          },
+          {
+            "q": "«هل السيارة لكِ؟» (الملكية): Gehört das Auto ___?",
+            "a": "dir",
+            "why": "مع du نقول dir (لكَ أو لكِ — كلمة واحدة للرجل والمرأة): Gehört das Auto dir? — سؤال نعم/لا يبدأ بالفعل gehört."
+          }
+        ],
+        "interleavedWith": [
+          "bruder",
+          "mutter",
+          "eltern"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "be-1",
+            "speakText": "Hallo, Lena! Wer ist das denn?",
+            "q": "استمع: قطة تظهر فجأة على شاشة لينا. ماذا يسأل يوسف؟",
+            "choices": [
+              "مَن هذا؟",
+              "أين أنتِ؟",
+              "كيف حالكِ؟"
+            ],
+            "a": "مَن هذا؟",
+            "why": "Wer ist das? = مَن هذا؟ — سؤال بـwer عن «مَن»، وdenn تضيف الدهشة: «مَن هذا يا ترى؟»."
+          },
+          {
+            "audioId": "be-2",
+            "speakText": "Das ist meine Katze. Sie heißt Mia.",
+            "q": "استمع: ماذا تقول لينا؟",
+            "choices": [
+              "هذه قطتي، واسمها Mia",
+              "هذه قطة عمّي، واسمها Mia",
+              "هذا كلبي، واسمه Mia"
+            ],
+            "a": "هذه قطتي، واسمها Mia",
+            "why": "meine Katze = قطتي (لينا تتكلم عن نفسها) — Katze مؤنثة فجاءت meine بـ‑e، وsie في Sie heißt تعود على die Katze."
+          },
+          {
+            "audioId": "be-3",
+            "speakText": "Deine Katze ist süß! Ich liebe Katzen.",
+            "q": "استمع: ماذا يقول يوسف؟",
+            "choices": [
+              "قطتكِ لطيفة، وهو يحب القطط",
+              "قطتكِ لطيفة، وهو لا يحب القطط",
+              "قطته لطيفة، وهو يحب الكلاب"
+            ],
+            "a": "قطتكِ لطيفة، وهو يحب القطط",
+            "why": "deine Katze = قطتكِ · Ich liebe Katzen = أحب القطط (Katzen جمع Katze). وsüß = حلو: للطعم وللّطيف المحبوب أيضاً — كما تقول بالعربية «قطة حلوة»."
+          },
+          {
+            "audioId": "be-6",
+            "speakText": "Nein, das sind mein Onkel und meine Tante.",
+            "q": "استمع: سأل يوسف عن والدَي لينا. مَن الشخصان؟",
+            "choices": [
+              "عمّها وعمّتها (أو خالها وخالتها)",
+              "والداها",
+              "أخوها وأختها"
+            ],
+            "a": "عمّها وعمّتها (أو خالها وخالتها)",
+            "why": "mein Onkel und meine Tante: Onkel مذكر بلا ‑e وTante مؤنثة فـmeine — وdas sind للاثنين. وOnkel للعم والخال معاً، وTante للعمة والخالة."
+          },
+          {
+            "audioId": "be-7",
+            "speakText": "Und der Hund? Ist das dein Hund?",
+            "q": "استمع: عمّ يسأل يوسف الآن؟",
+            "choices": [
+              "هل الكلب للينا؟",
+              "ما اسم الكلب؟",
+              "أين الكلب؟"
+            ],
+            "a": "هل الكلب للينا؟",
+            "why": "Ist das dein Hund? = هل هذا كلبكِ؟ — سؤال نعم/لا يبدأ بالفعل Ist، وdein بلا ‑e لأن Hund مذكر (ولو كانت لينا أنثى)."
+          },
+          {
+            "audioId": "be-8",
+            "speakText": "Nein, das ist nicht mein Hund. Das ist sein Hund.",
+            "q": "استمع: لمن الكلب؟",
+            "choices": [
+              "لعمّ لينا (أو خالها)",
+              "للينا",
+              "لعمّة لينا (أو خالتها)"
+            ],
+            "a": "لعمّ لينا (أو خالها)",
+            "why": "nicht mein Hund = ليس كلبي · sein Hund = كلبه: sein لمالك مذكر، والمذكر الوحيد في كلامها السابق هو Onkel. ولو كان الكلب للعمة لاختلفت الكلمة."
+          },
+          {
+            "audioId": "be-9",
+            "speakText": "Wie heißt sein Hund?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "ما اسم كلبه؟",
+              "هل هذا كلبه؟",
+              "كم عمر كلبه؟"
+            ],
+            "a": "ما اسم كلبه؟",
+            "why": "Wie heißt …? = ما اسم …؟ (حرفياً: كيف يُسمّى) · sein Hund = كلبه (كلب العم) — وsein بلا ‑e لأن Hund مذكر."
+          },
+          {
+            "audioId": "be-10",
+            "speakText": "Er heißt Bruno.",
+            "q": "استمع: ما اسم الكلب؟",
+            "choices": [
+              "Bruno",
+              "Mia",
+              "Yusuf"
+            ],
+            "a": "Bruno",
+            "why": "Er heißt Bruno — er تعود على der Hund (مذكر)، كما عادت sie على die Katze."
+          },
+          {
+            "audioId": "be-11",
+            "speakText": "Und das Auto dort? Gehört es dir?",
+            "q": "استمع: ماذا يسأل يوسف عن السيارة؟",
+            "choices": [
+              "هل السيارة ملكها؟",
+              "كم ثمن السيارة؟",
+              "هل السيارة جديدة؟"
+            ],
+            "a": "هل السيارة ملكها؟",
+            "why": "Gehört es dir? = هل هي لكِ (ملككِ)؟ — es تعود على das Auto، وgehören + dir للملكية."
+          },
+          {
+            "audioId": "be-12",
+            "speakText": "Mir? Nein, ich bin sechzehn! Das ist auch sein Auto.",
+            "q": "استمع: لماذا تضحك لينا من السؤال؟",
+            "choices": [
+              "هي في السادسة عشرة، والسيارة لعمّها",
+              "السيارة قديمة جداً",
+              "السيارة لأمها"
+            ],
+            "a": "هي في السادسة عشرة، والسيارة لعمّها",
+            "why": "ich bin sechzehn = عمري ستة عشر عاماً · auch sein Auto = سيارته هو أيضاً (كالكلب) — وMir? صدى لكلمة dir في السؤال: «لي أنا؟»."
+          },
+          {
+            "audioId": "be-14",
+            "speakText": "Ja, es ist neu. Und deine Familie, Yusuf?",
+            "q": "استمع: عمّ تسأل لينا في آخر الجملة؟",
+            "choices": [
+              "عن عائلة يوسف",
+              "عن سيارة يوسف",
+              "عن قطة يوسف"
+            ],
+            "a": "عن عائلة يوسف",
+            "why": "deine Familie = عائلتك — Familie مؤنثة فـdeine بـ‑e. وUnd …? وحدها سؤال قصير: «وماذا عن عائلتك؟»."
+          },
+          {
+            "audioId": "be-17",
+            "speakText": "Ja, genau! Tschüss, Mia!",
+            "q": "استمع: لمن يقول يوسف Tschüss في آخر المكالمة؟",
+            "choices": [
+              "للقطة Mia",
+              "للينا",
+              "لعمّ لينا"
+            ],
+            "a": "للقطة Mia",
+            "why": "Tschüss, Mia! — يودّع القطة قبل بدء الدرس؛ وTschüss للأصدقاء والأسرة (وهنا للقطة)، لا Auf Wiedersehen الرسمية."
+          },
+          {
+            "audioId": "word-onkel",
+            "speakText": "Onkel.",
+            "q": "استمع: أي كلمة تسمع؟",
+            "choices": [
+              "Onkel",
+              "Tante",
+              "Oma"
+            ],
+            "a": "Onkel",
+            "why": "Onkel: الحركة o قصيرة، وn قبل k تُنطق [ŋ] كما في Danke — «أونكِل» بنون من أقصى الحلق لا من الأسنان."
+          }
+        ],
+        "interleavedWith": [
+          "oma",
+          "suess",
+          "heissen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "süß.",
+              "Katze",
+              "ist",
+              "Deine"
+            ],
+            "a": "Deine Katze ist süß.",
+            "why": "Deine Katze (الفاعل) ثم ist ثانياً ثم süß — وDeine بـ‑e لأن Katze مؤنثة، وبحرف كبير في أول الجملة."
+          },
+          {
+            "tokens": [
+              "mein",
+              "Das",
+              "Hund.",
+              "nicht",
+              "ist"
+            ],
+            "a": "Das ist nicht mein Hund.",
+            "why": "Das ist ثم nicht قبل mein Hund: النفي قبل العبارة كلها — «ليس كلبي». وmein بلا ‑e لأن Hund مذكر."
+          },
+          {
+            "tokens": [
+              "Auto.",
+              "hat",
+              "Mein",
+              "ein",
+              "Bruder"
+            ],
+            "a": "Mein Bruder hat ein Auto.",
+            "why": "Mein Bruder (الفاعل) ثم الفعل hat ثانياً ثم ein Auto — وMein بلا ‑e لأن Bruder مذكر."
+          },
+          {
+            "tokens": [
+              "mir.",
+              "Schlüssel",
+              "gehört",
+              "Der"
+            ],
+            "a": "Der Schlüssel gehört mir.",
+            "why": "Der Schlüssel (الفاعل) ثم gehört ثانياً ثم mir — «المفتاح لي» بمعنى الملكية، كلمة بكلمة."
+          },
+          {
+            "tokens": [
+              "Auto.",
+              "mein",
+              "liebe",
+              "Ich"
+            ],
+            "a": "Ich liebe mein Auto.",
+            "why": "Ich ثم liebe ثانياً ثم mein Auto — lieben تأخذ اسماً بعدها، وAuto محايد فتبقى mein بلا ‑e."
+          },
+          {
+            "tokens": [
+              "Tante?",
+              "deine",
+              "Wie",
+              "heißt"
+            ],
+            "a": "Wie heißt deine Tante?",
+            "why": "سؤال W: Wie أولاً ثم الفعل heißt ثم deine Tante — وdeine بـ‑e لأن Tante مؤنثة."
+          }
+        ],
+        "interleavedWith": [
+          "suess",
+          "bruder",
+          "heissen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "be-4",
+            "speakText": "Danke! Mia liebt meine Tasche.",
+            "a": "Danke! Mia liebt meine Tasche.",
+            "why": "liebt بـie طويلة (lieben مع sie: liebt) · meine Tasche بـ‑e لأن Tasche مؤنثة · وكل اسم بحرف كبير — حتى اسم القطة Mia."
+          },
+          {
+            "audioId": "be-5",
+            "speakText": "Und dort? Sind das deine Eltern?",
+            "a": "Und dort? Sind das deine Eltern?",
+            "why": "Eltern جمع ← sind وdeine بـ‑e — وEltern اسم بحرف كبير، وSind بحرف كبير بعد علامة السؤال."
+          },
+          {
+            "audioId": "be-13",
+            "speakText": "Ach so! Sein Auto ist neu, oder?",
+            "a": "Ach so! Sein Auto ist neu, oder?",
+            "why": "Sein بحرف كبير بعد علامة التعجب · Auto محايد فـsein بلا ‑e · وoder في آخر الجملة سؤال تأكيد: «أليس كذلك؟»."
+          },
+          {
+            "audioId": "be-15",
+            "speakText": "Meine Familie ist in Tunesien. Meine Oma auch.",
+            "a": "Meine Familie ist in Tunesien. Meine Oma auch.",
+            "why": "Meine بـ‑e مرتين لأن Familie وOma مؤنثتان، وبحرف كبير في أول كل جملة · وTunesien اسم بلد بحرف كبير."
+          },
+          {
+            "audioId": "be-16",
+            "speakText": "Deine Oma ist achtzig, oder?",
+            "a": "Deine Oma ist achtzig, oder?",
+            "why": "achtzig = acht + zig (ثمانون) — لا achtzehn (18) · وDeine بـ‑e لأن Oma مؤنثة."
+          },
+          {
+            "audioId": "word-schluessel",
+            "speakText": "Schlüssel.",
+            "a": "Schlüssel",
+            "why": "ü بشفتين مضمومتين ولسان على «ي»، وss بعد ü القصيرة — وSchlüssel اسم بحرف كبير، وجمعه مثله: die Schlüssel."
+          },
+          {
+            "audioId": "word-lieben",
+            "speakText": "lieben.",
+            "a": "lieben",
+            "why": "ie حرفان يُنطقان i طويلة: «ليبِن» — والفعل بحرف صغير؛ ومع ich: liebe، ومع er/sie: liebt."
+          }
+        ],
+        "interleavedWith": [
+          "eltern",
+          "oma",
+          "achtzig"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Ist das dein Hund? — Nein, das ist sein Hund.",
+        "ar": "السؤال عن الملكية والجواب: لي · لك · له"
+      },
+      "situation": {
+        "de": "Vor dem Kurs: Lena, Yusuf, eine Katze und ein Hund",
+        "ar": "في مكالمة قبل الدرس: تسأل زميلك عن أشياء وحيوانات وأشخاص على الشاشة — حقيقية أو خيالية باختيارك، بلا حاجة إلى معلومات عائلية حقيقية — ويسألك."
+      },
+      "successCriteria": [
+        "يسأل عن ملكية 3 أشياء أو حيوانات من الدرس بـIst das dein …? / Sind das deine …? ويجيب بـJa, das ist mein … / Nein, das ist nicht mein … بنهاية صحيحة (‑e مع die والجمع).",
+        "يقول لمن شيء لشخص ثالث مذكر بـsein (Das ist sein Auto.)، ويستعمل Das gehört mir. أو Gehört das dir? مرة واحدة على الأقل."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«قطتي» بالألمانية؟",
+            "choices": [
+              "meine Katze",
+              "mein Katze",
+              "die meine Katze"
+            ],
+            "a": "meine Katze",
+            "why": "Katze مؤنثة (die) فتأخذ ‑e: meine Katze — ولا أداة مع كلمة الملكية."
+          },
+          {
+            "q": "«حقيبتك»؟",
+            "choices": [
+              "deine Tasche",
+              "dein Tasche",
+              "meine Tasche"
+            ],
+            "a": "deine Tasche",
+            "why": "Tasche مؤنثة (die) ← deine بـ‑e — وdeine = لك، meine = لي."
+          },
+          {
+            "q": "«السيارة لي (أملكها)»؟",
+            "choices": [
+              "Das Auto gehört mir.",
+              "Das Auto ist für mich.",
+              "Das Auto gehört ich."
+            ],
+            "a": "Das Auto gehört mir.",
+            "why": "الملكية بـgehören + mir؛ أما Das Auto ist für mich فمعناها «السيارة مقصودة لي» (هدية مثلاً) لا «أملكها»."
+          },
+          {
+            "q": "Mein Onkel ist hier. ___ Hund heißt Bruno. (كلبه)",
+            "choices": [
+              "Sein",
+              "Seine",
+              "Mein"
+            ],
+            "a": "Sein",
+            "why": "الكلب للعم (هو) ← sein، وHund مذكر ← بلا ‑e — وبحرف كبير في أول الجملة."
+          },
+          {
+            "q": "«يوسف يحب عائلته»؟",
+            "choices": [
+              "Yusuf liebt seine Familie.",
+              "Yusuf liebt sein Familie.",
+              "Yusuf liebe seine Familie."
+            ],
+            "a": "Yusuf liebt seine Familie.",
+            "why": "مع Yusuf (هو) يصير الفعل liebt · والمالك هو ← sein، وFamilie مؤنثة ← seine."
+          },
+          {
+            "q": "«العائلة» بالألمانية مع أداتها؟",
+            "a": "die Familie",
+            "why": "die Familie (مؤنثة) — ولهذا meine Familie بـ‑e."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أمك» (تخاطب صديقة)؟",
+            "choices": [
+              "deine Mutter",
+              "dein Mutter",
+              "meine Mutter"
+            ],
+            "a": "deine Mutter",
+            "why": "Mutter مؤنثة ← deine؛ والـ‑e من Mutter لا من أن الصديقة أنثى."
+          },
+          {
+            "q": "«أخوه»؟",
+            "choices": [
+              "sein Bruder",
+              "seine Bruder",
+              "mein Bruder"
+            ],
+            "a": "sein Bruder",
+            "why": "المالك هو ← sein، وBruder مذكر ← بلا ‑e: sein Bruder = أخوه."
+          },
+          {
+            "q": "«الحقيبة ليست لي»؟",
+            "choices": [
+              "Die Tasche gehört mir nicht.",
+              "Die Tasche gehört nicht ich.",
+              "Die Tasche ist nicht mich."
+            ],
+            "a": "Die Tasche gehört mir nicht.",
+            "why": "gehört mir = لي (ملكية)، ونفيها بـnicht بعدها: Die Tasche gehört mir nicht."
+          },
+          {
+            "q": "Yusuf: «Das ist ___ Schlüssel.» (مفتاحي)",
+            "choices": [
+              "mein",
+              "meine"
+            ],
+            "a": "mein",
+            "why": "Schlüssel مذكر ← mein بلا ‑e — وDas ist للمفرد (جمعه die Schlüssel بالشكل نفسه، فـist هي التي تحسم)."
+          },
+          {
+            "q": "lieben = ؟",
+            "choices": [
+              "يحب",
+              "يعيش",
+              "يقرأ"
+            ],
+            "a": "يحب",
+            "why": "lieben = يحب · leben = يعيش · lesen = يقرأ — ثلاث كلمات متقاربة الشكل: ie في lieben."
+          },
+          {
+            "q": "«الكلب» بالألمانية مع أداته؟",
+            "a": "der Hund",
+            "why": "der Hund (مذكر) — ولهذا mein Hund بلا ‑e."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "أي جملة صحيحة؟",
+            "choices": [
+              "Das ist meine Familie.",
+              "Das ist mein Familie.",
+              "Das ist die meine Familie."
+            ],
+            "a": "Das ist meine Familie.",
+            "why": "Familie مؤنثة ← meine، ولا أداة مع كلمة الملكية — كما «عائلتي» بلا «ال»."
+          },
+          {
+            "q": "يوسف يسأل لينا: «هل هذا مفتاحكِ؟»",
+            "choices": [
+              "Ist das dein Schlüssel?",
+              "Ist das deine Schlüssel?",
+              "Ist das mein Schlüssel?"
+            ],
+            "a": "Ist das dein Schlüssel?",
+            "why": "Schlüssel مذكر ← dein — ولينا أنثى لكن dein لا تتغير بجنس المخاطَبة؛ وIst das للمفرد."
+          },
+          {
+            "q": "«قطته» (قطة أخي)؟",
+            "choices": [
+              "seine Katze",
+              "sein Katze",
+              "meine Katze"
+            ],
+            "a": "seine Katze",
+            "why": "المالك أخي (هو) ← sein، وKatze مؤنثة ← ‑e: seine Katze."
+          },
+          {
+            "q": "«حقيبتي جديدة»؟",
+            "choices": [
+              "Meine Tasche ist neu.",
+              "Mein Tasche ist neu.",
+              "Meine Tasche neu."
+            ],
+            "a": "Meine Tasche ist neu.",
+            "why": "Tasche مؤنثة ← Meine بـ‑e — وist لا تُحذف كما تُحذف في العربية («حقيبتي جديدة» بلا فعل)."
+          },
+          {
+            "q": "«عمّتي» أو «خالتي» بالألمانية؟",
+            "choices": [
+              "meine Tante",
+              "mein Onkel",
+              "meine Oma"
+            ],
+            "a": "meine Tante",
+            "why": "Tante = العمة والخالة معاً — الألمانية لا تفرّق بين الجهتين؛ وOnkel = العم والخال."
+          },
+          {
+            "q": "«القطة» بالألمانية مع أداتها؟",
+            "a": "die Katze",
+            "why": "die Katze (مؤنثة) — ولهذا meine Katze بـ‑e."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "mein Hund · meine Katze · mein Auto · meine Eltern — Ist das dein Hund? — Nein, das ist sein Hund. · Das gehört mir.",
+      "ar": "كلمة الملكية قبل الاسم مكان der/die/das: mein (لي) · dein (لك) · sein (له)، وتأخذ ‑e حين يكون المملوك die — مؤنثاً أو جمعاً: meine Katze · meine Eltern؛ ومع der وdas بلا نهاية: mein Hund · mein Auto. النهاية من المملوك لا من المالك ولا من المخاطَب. «هذا لي» بمعنى الملكية = Das gehört mir — وfür mich ليست للملكية. وlieben تأخذ اسماً (Ich liebe meine Familie)، وللهواية gern."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~mein Katze~~ / ~~mein Familie~~",
+          "ar": "‑e المؤنث تسقط لأن «ـي» العربية لا تتغير"
+        },
+        "whyArabicSpeakerFails": "العربية تلصق ياء الملكية بآخر الاسم ولا تغيّرها مع المملوك: «كلبي» و«قطتي» و«عائلتي» بالياء نفسها — فيُبقي المتعلم mein كما هي مع كل اسم. والألمانية تضع كلمة الملكية قبل الاسم وتضيف ‑e إذا كان المملوك die (مؤنثاً أو جمعاً): meine Katze · meine Familie · meine Eltern — كما eine Katze (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "meine Katze · meine Familie · mein Hund",
+          "ar": "قطتي · عائلتي · كلبي"
+        },
+        "exercise": {
+          "q": "أكمل: mein___ Tasche · mein___ Auto · mein___ Eltern",
+          "a": "meine Tasche · mein Auto · meine Eltern"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Das Auto ist für mich.~~ (= السيارة مُلكي)",
+          "ar": "«لي» للملكية تُترجم für mich"
+        },
+        "whyArabicSpeakerFails": "«لي» في العربية للملكية («السيارة لي») وللمقصود له وللرأي («الهدية لي» · «بالنسبة لي») — وتعلّمتَ für mich بمعنى «بالنسبة لي» (Für mich ist das spät)، فيقول المتعلم Das Auto ist für mich وهو يريد «أملكها». والألمانية تفرّق: الملكية بـgehören + mir أو بكلمة الملكية — Das Auto gehört mir. · Das ist mein Auto. — أما Das Auto ist für mich فمعناها «السيارة مقصودة لي» (هدية مثلاً) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Das Auto gehört mir. · Das ist mein Auto.",
+          "ar": "السيارة لي (أملكها). · هذه سيارتي."
+        },
+        "exercise": {
+          "q": "«الحقيبة لي (أملكها)» — أكمل: Die Tasche ___ mir.",
+          "a": "gehört"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich liebe lese.~~",
+          "ar": "فعلان مصرَّفان بعد «أحب»"
+        },
+        "whyArabicSpeakerFails": "العربية تضع بعد «أحب» فعلاً ثانياً مصرَّفاً: «أحب أقرأ» أو «أحب أن أقرأ» — فيقول المتعلم Ich liebe lese بفعلين مصرَّفين. والألمانية لا تجمع فعلين مصرَّفين هكذا: للنشاط المحبوب نقول الفعل + gern (Ich lese gern — من درس التعارف)، وlieben تأخذ اسماً: Ich liebe meine Familie · Ich liebe Katzen (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich lese gern. · Ich liebe meine Familie.",
+          "ar": "أحب القراءة. · أحب عائلتي."
+        },
+        "exercise": {
+          "q": "«أحب الموسيقى» و«أحب القراءة» — أكمل: Ich ___ Musik. · Ich lese ___.",
+          "a": "liebe · gern"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "familie",
+      "tante",
+      "onkel",
+      "hund",
+      "katze",
+      "schluessel",
+      "tasche",
+      "auto",
+      "gehoeren",
+      "mein",
+      "dein",
+      "sein",
+      "lieben"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/mein",
+      "https://www.duden.de/rechtschreibung/geh%C3%B6ren",
+      "https://www.duden.de/rechtschreibung/Familie",
+      "https://www.duden.de/rechtschreibung/lieben"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/mein"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-possessiv"
+  ],
+  "audioManifestRefs": [
+    "word-familie",
+    "word-tante",
+    "word-onkel",
+    "word-hund",
+    "word-katze",
+    "word-schluessel",
+    "word-tasche",
+    "word-auto",
+    "word-gehoeren",
+    "word-mein",
+    "word-dein",
+    "word-sein",
+    "word-lieben"
+  ],
+  "imageManifestRefs": [
+    "img-familie"
+  ],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 4 (Meine Familie) — Besitz: mein/dein/sein",
+    "goetheWordListOverlap": [
+      "familie",
+      "tante",
+      "onkel",
+      "hund",
+      "katze",
+      "schluessel",
+      "tasche",
+      "auto",
+      "gehoeren",
+      "mein",
+      "dein",
+      "sein",
+      "lieben"
+    ]
+  }
+}

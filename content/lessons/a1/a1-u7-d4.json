@@ -1,0 +1,864 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u7-d4",
+  "level": "A1",
+  "unit": 7,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Ich fahre, du fährst, Lena fährt — ich nehme, du nimmst, er nimmt. Der Zug kommt gleich!",
+    "ar": "تصرّف الأفعال الشاذة الشائعة مع du وer/sie (fährt · läuft · wäscht · gibt · nimmt · spricht · isst · liest) وتُبقي ich وwir وihr وsie/Sie بلا تغيير — وتتكلّم عن الطريق والمواصلات: der Zug · der Bus · das Fahrrad · der Bahnhof · die Fahrkarte · ankommen — ومعها Achtung! · gleich · ab."
+  },
+  "canDoDaily": [
+    "يصرّف الأفعال الشاذة: du fährst · er fährt · du läufst · er läuft · du nimmst · er nimmt · er gibt · er isst · er liest — ويُبقي ich وwir وihr بلا تغيير (ihr fahrt).",
+    "يتكلّم عن طريقه: Ich nehme den Zug. · Ich fahre Fahrrad. · Der Bus kommt um acht an. — ويقول Achtung! وgleich وab + الوقت — والراكب يأخذ القطار (den Zug nehmen) ولا يقوده."
+  ],
+  "warmup": {
+    "cardIds": [
+      "essen",
+      "lesen",
+      "schlafen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«هي تأخذ» بالألمانية: أي صيغة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "sie nimmt",
+          "sie nehmt",
+          "sie nimmst"
+        ],
+        "answer": "sie nimmt",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "fahren",
+      "waschen",
+      "geben",
+      "nehmen",
+      "laufen",
+      "ankommen",
+      "fahrkarte",
+      "bahnhof",
+      "zug",
+      "bus",
+      "fahrrad",
+      "gleich",
+      "ab",
+      "achtung"
+    ],
+    "grammarArsenalIds": [
+      "ars-praesens-unregelm"
+    ],
+    "storySentenceIds": [
+      "story-a1-u7-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "auslaut-b",
+      "auslaut-d",
+      "auslaut-g",
+      "ch-ach-laut",
+      "ch-ich-laut",
+      "double-consonant",
+      "r-uvular",
+      "vowel-long-short",
+      "z"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Mein Vater ___ jeden Tag Auto. (يقود)",
+            "a": "fährt",
+            "why": "a ← ä مع er: fahr + t ← fährt — وAuto fahren = يقود السيارة."
+          },
+          {
+            "q": "Du ___ sehr schnell! (تجري)",
+            "a": "läufst",
+            "why": "au ← äu مع du: lauf + st ← läufst."
+          },
+          {
+            "q": "Mein Bruder ___ das Auto. (يغسل)",
+            "a": "wäscht",
+            "why": "a ← ä مع er: wasch + t ← wäscht."
+          },
+          {
+            "q": "Im Kino ___ es heute einen Film. (يوجد)",
+            "a": "gibt",
+            "why": "es gibt = يوجد — gibt صيغة er من geben (e ← i)، كما في الوحدة 6."
+          },
+          {
+            "q": "Was ___ du? Saft oder Wasser? (تأخذ)",
+            "a": "nimmst",
+            "why": "e ← i مع du، وتتضاعف m وتسقط h: nimmst."
+          },
+          {
+            "q": "Wir ___ den Bus. (نأخذ)",
+            "a": "nehmen",
+            "why": "wir بلا تغيير: nehmen — التغيير مع du وer/sie/es وحدهما."
+          },
+          {
+            "q": "Opa ___ die Zeitung. (يقرأ)",
+            "a": "liest",
+            "why": "e ← ie مع er: liest — وبلا s ثانية بعد s (قاعدة الدرس الماضي)."
+          },
+          {
+            "q": "Das Kind ___ gern Fisch. (يأكل)",
+            "a": "isst",
+            "why": "e ← i مع er وss بعد i القصيرة: isst — لا ist (هو)."
+          },
+          {
+            "q": "Der Zug kommt um acht ___. (يصل)",
+            "a": "an",
+            "why": "ankommen قطعةً: kommt … an — وan في آخر الجملة."
+          },
+          {
+            "q": "Wo ist hier der ___? Ich brauche eine Fahrkarte. (محطة القطار)",
+            "a": "Bahnhof",
+            "why": "der Bahnhof = محطة القطار — الأداة من آخر الكلمة: der Hof ← der Bahnhof."
+          },
+          {
+            "q": "Die ___ kostet zwanzig Euro. (التذكرة)",
+            "a": "Fahrkarte",
+            "why": "die Fahrkarte = fahren + die Karte — والأداة من die Karte."
+          },
+          {
+            "q": "Der ___ fährt um neun. (القطار)",
+            "a": "Zug",
+            "why": "der Zug = القطار — والجمع die Züge (ü + ‑e)."
+          },
+          {
+            "q": "Ich nehme heute den ___. (الحافلة)",
+            "a": "Bus",
+            "why": "der Bus ← den Bus (مفعول به مذكر) — والجمع die Busse."
+          },
+          {
+            "q": "In Berlin gibt es viele ___. (دراجات)",
+            "a": "Fahrräder",
+            "why": "das Fahrrad ← die Fahrräder (ä + ‑er) — وبعد es gibt جمعٌ بلا أداة."
+          },
+          {
+            "q": "Warte, ich komme ___! (حالاً)",
+            "a": "gleich",
+            "why": "gleich = حالاً · بعد قليل — بعد الفعل."
+          },
+          {
+            "q": "___ morgen habe ich Zeit. (ابتداءً من)",
+            "a": "Ab",
+            "why": "ab + الوقت = ابتداءً من: Ab morgen … — والفعل ثانياً ثم ich."
+          },
+          {
+            "q": "___, Lena — ein Fahrrad! (انتبه)",
+            "a": "Achtung",
+            "why": "Achtung! = انتبه! · احذر! — بحرف كبير، وch بعد a «خ»."
+          }
+        ],
+        "interleavedWith": [
+          "vater",
+          "auto",
+          "bruder",
+          "kino",
+          "film",
+          "saft",
+          "wasser",
+          "opa",
+          "zeitung",
+          "euro",
+          "zeit",
+          "kind",
+          "fisch",
+          "warten",
+          "morgen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "zg-1",
+            "speakText": "Yusuf, am Sonntag besuchen wir Oma. Wir nehmen den Zug!",
+            "q": "استمع: ماذا ستفعل أسرة لينا يوم الأحد، وكيف؟",
+            "choices": [
+              "تزور الجدّة — بالقطار",
+              "تزور الجدّة — بالسيارة",
+              "تزور العمّ — بالقطار"
+            ],
+            "a": "تزور الجدّة — بالقطار",
+            "why": "am Sonntag besuchen wir Oma = يوم الأحد نزور الجدّة · Wir nehmen den Zug = نأخذ القطار (wir بلا تغيير)."
+          },
+          {
+            "audioId": "zg-2",
+            "speakText": "Den Zug? Fährt dein Vater nicht Auto?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "ألا يقود أبوها السيارة",
+              "ألا يحبّ أبوها القطار",
+              "ألا تقود أمها السيارة"
+            ],
+            "a": "ألا يقود أبوها السيارة",
+            "why": "Fährt dein Vater nicht Auto? = ألا يقود أبوك السيارة؟ — fährt: a ← ä مع er · وAuto fahren = يقود السيارة."
+          },
+          {
+            "audioId": "zg-3",
+            "speakText": "Doch, aber nicht gern. Im Zug schläft er lieber!",
+            "q": "استمع: ماذا تقول لينا عن أبيها؟",
+            "choices": [
+              "لا يحبّ القيادة، ويفضّل النوم في القطار",
+              "يحبّ القيادة كثيراً",
+              "لا يحبّ القطار، ويفضّل السيارة"
+            ],
+            "a": "لا يحبّ القيادة، ويفضّل النوم في القطار",
+            "why": "aber nicht gern = لكن لا يحبّها · Im Zug schläft er lieber = في القطار يفضّل النوم — schläft: a ← ä."
+          },
+          {
+            "audioId": "zg-4",
+            "speakText": "Und wann fährt der Zug?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "متى يتحرّك القطار",
+              "أين المحطة",
+              "كم ثمن التذكرة"
+            ],
+            "a": "متى يتحرّك القطار",
+            "why": "Wann fährt der Zug? = متى يتحرّك القطار؟ — fährt مع der Zug (er)."
+          },
+          {
+            "audioId": "zg-5",
+            "speakText": "Um neun. Er kommt um elf an.",
+            "q": "استمع: متى يتحرّك القطار، ومتى يصل؟",
+            "choices": [
+              "في التاسعة — ويصل في الحادية عشرة",
+              "في التاسعة — ويصل في العاشرة",
+              "في الحادية عشرة — ويصل في التاسعة"
+            ],
+            "a": "في التاسعة — ويصل في الحادية عشرة",
+            "why": "Um neun = في التاسعة · Er kommt um elf an = يصل في الحادية عشرة (ankommen: an في الآخر)."
+          },
+          {
+            "audioId": "zg-6",
+            "speakText": "Und die Fahrkarten? Sind sie teuer?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل التذاكر غالية",
+              "أين يشترون التذاكر",
+              "كم تذكرة يحتاجون"
+            ],
+            "a": "هل التذاكر غالية",
+            "why": "die Fahrkarten = التذاكر (جمع die Fahrkarte) · Sind sie teuer? = هل هي غالية؟"
+          },
+          {
+            "audioId": "zg-7",
+            "speakText": "Ein bisschen. Mein Vater kauft sie am Bahnhof.",
+            "q": "استمع: ماذا تقول لينا عن التذاكر؟",
+            "choices": [
+              "غالية قليلاً — وأبوها يشتريها في المحطة",
+              "رخيصة — وأمها تشتريها في المحطة",
+              "غالية جداً — وأبوها يشتريها على الهاتف"
+            ],
+            "a": "غالية قليلاً — وأبوها يشتريها في المحطة",
+            "why": "Ein bisschen = قليلاً · Mein Vater kauft sie am Bahnhof = أبي يشتريها في المحطة (am Bahnhof: أين؟)."
+          },
+          {
+            "audioId": "zg-8",
+            "speakText": "Und deine Brüder? Sind sie im Zug ruhig?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل أخواها هادئان في القطار",
+              "هل أخواها في القطار",
+              "هل أخواها يحبّان القطار"
+            ],
+            "a": "هل أخواها هادئان في القطار",
+            "why": "Sind sie im Zug ruhig? = هل هما هادئان في القطار؟"
+          },
+          {
+            "audioId": "zg-10",
+            "speakText": "Und deine Mutter? Was macht sie?",
+            "q": "استمع: عمّن يسأل يوسف؟",
+            "choices": [
+              "عن أمها — ماذا تفعل",
+              "عن أبيها — ماذا يفعل",
+              "عن جدّتها — ماذا تفعل"
+            ],
+            "a": "عن أمها — ماذا تفعل",
+            "why": "Und deine Mutter? Was macht sie? = وأمك؟ ماذا تفعل؟"
+          },
+          {
+            "audioId": "zg-11",
+            "speakText": "Sie liest. Und mein Bruder isst schon Kuchen!",
+            "q": "استمع: ماذا تفعل الأم، وماذا يفعل أحد الأخوين؟",
+            "choices": [
+              "الأم تقرأ — وأحد الأخوين يأكل الكعك منذ الآن",
+              "الأم تنام — وأحد الأخوين يقرأ",
+              "الأم تقرأ — وأحد الأخوين ينام"
+            ],
+            "a": "الأم تقرأ — وأحد الأخوين يأكل الكعك منذ الآن",
+            "why": "Sie liest = تقرأ (e ← ie) · mein Bruder isst schon Kuchen = أخي يأكل الكعك منذ الآن (e ← i — وist «هو» بالصوت نفسه)."
+          },
+          {
+            "audioId": "zg-12",
+            "speakText": "Und du? Machst du im Zug Hausaufgaben?",
+            "q": "استمع: عمّ يسأل يوسف لينا؟",
+            "choices": [
+              "هل تنجز الواجبات في القطار",
+              "هل تقرأ في القطار",
+              "هل تنام في القطار"
+            ],
+            "a": "هل تنجز الواجبات في القطار",
+            "why": "Machst du im Zug Hausaufgaben? = هل تنجزين الواجبات في القطار؟"
+          },
+          {
+            "audioId": "zg-14",
+            "speakText": "In Berlin nehme ich nie den Zug. Ich fahre Fahrrad.",
+            "q": "استمع: كيف يتنقّل يوسف في برلين؟",
+            "choices": [
+              "يركب الدراجة — ولا يأخذ القطار أبداً",
+              "يأخذ القطار كل يوم",
+              "يركب الدراجة ويأخذ القطار"
+            ],
+            "a": "يركب الدراجة — ولا يأخذ القطار أبداً",
+            "why": "nehme ich nie den Zug = لا آخذ القطار أبداً (ich بلا تغيير) · Ich fahre Fahrrad = أركب الدراجة."
+          },
+          {
+            "audioId": "zg-15",
+            "speakText": "Jeden Tag? Und nimmst du nie den Bus?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل يركب الدراجة كل يوم، وألا يأخذ الحافلة أبداً",
+              "هل يحبّ الحافلة",
+              "هل يغسل دراجته كل يوم"
+            ],
+            "a": "هل يركب الدراجة كل يوم، وألا يأخذ الحافلة أبداً",
+            "why": "Jeden Tag? = كل يوم؟ · nimmst du nie den Bus? = ألا تأخذ الحافلة أبداً؟ — nimmst: e ← i."
+          },
+          {
+            "audioId": "zg-16",
+            "speakText": "Doch, am Abend — da ist es dunkel.",
+            "q": "استمع: متى يأخذ يوسف الحافلة، ولماذا؟",
+            "choices": [
+              "في المساء — لأن الجو مظلم",
+              "في الصباح — لأن الجو بارد",
+              "في المساء — لأنه متعب"
+            ],
+            "a": "في المساء — لأن الجو مظلم",
+            "why": "Doch, am Abend = بلى، في المساء · da ist es dunkel = عندها يكون الجو مظلماً."
+          },
+          {
+            "audioId": "zg-17",
+            "speakText": "Super! Ab Montag fahre ich auch Fahrrad!",
+            "q": "استمع: ماذا تقرّر لينا؟",
+            "choices": [
+              "أن تركب الدراجة ابتداءً من الاثنين",
+              "أن تأخذ الحافلة ابتداءً من الاثنين",
+              "أن تركب الدراجة يوم الأحد"
+            ],
+            "a": "أن تركب الدراجة ابتداءً من الاثنين",
+            "why": "Ab Montag = ابتداءً من الاثنين · fahre ich auch Fahrrad = أركب الدراجة أنا أيضاً."
+          },
+          {
+            "audioId": "zg-18",
+            "speakText": "Toll! Ich wasche mein Fahrrad jeden Sonntag.",
+            "q": "استمع: ماذا يفعل يوسف كل يوم أحد؟",
+            "choices": [
+              "يغسل دراجته",
+              "يركب القطار",
+              "يغسل سيارته"
+            ],
+            "a": "يغسل دراجته",
+            "why": "Ich wasche mein Fahrrad jeden Sonntag = أغسل دراجتي كل يوم أحد (ich بلا تغيير)."
+          },
+          {
+            "audioId": "zg-20",
+            "speakText": "Danke! Viel Spaß am Sonntag — und Achtung im Zug!",
+            "q": "استمع: بماذا ينهي يوسف الكلام؟",
+            "choices": [
+              "يشكرها ويتمنّى لها أحداً ممتعاً — وينبّهها مازحاً في القطار",
+              "يشكرها ويسألها عن القطار",
+              "يتمنّى لها رحلة طويلة إلى برلين"
+            ],
+            "a": "يشكرها ويتمنّى لها أحداً ممتعاً — وينبّهها مازحاً في القطار",
+            "why": "Danke! = شكراً · Viel Spaß am Sonntag = استمتعي يوم الأحد · Achtung im Zug! = انتبهي في القطار!"
+          }
+        ],
+        "interleavedWith": [
+          "sonntag",
+          "oma",
+          "vater",
+          "auto",
+          "teuer",
+          "ruhig",
+          "mutter",
+          "kuchen",
+          "hausaufgabe",
+          "abend",
+          "dunkel",
+          "montag",
+          "lieber"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Fahrrad.",
+              "fährt",
+              "Lena"
+            ],
+            "a": "Lena fährt Fahrrad.",
+            "why": "Lena ثم fährt (a ← ä مع هي) ثم Fahrrad بلا أداة."
+          },
+          {
+            "tokens": [
+              "Bus?",
+              "den",
+              "du",
+              "Nimmst"
+            ],
+            "a": "Nimmst du den Bus?",
+            "why": "سؤال نعم/لا: الفعل Nimmst أولاً (e ← i مع du) ثم du ثم den Bus."
+          },
+          {
+            "tokens": [
+              "schnell.",
+              "läuft",
+              "Bruder",
+              "Mein"
+            ],
+            "a": "Mein Bruder läuft schnell.",
+            "why": "Mein Bruder ثم läuft (au ← äu مع er) ثم schnell."
+          },
+          {
+            "tokens": [
+              "an.",
+              "Zug",
+              "um",
+              "Der",
+              "kommt",
+              "elf"
+            ],
+            "a": "Der Zug kommt um elf an.",
+            "why": "Der Zug ثم kommt ثانياً ثم الوقت ثم an في الآخر — ankommen قطعةً."
+          },
+          {
+            "tokens": [
+              "Fahrrad?",
+              "ihr",
+              "Fahrt"
+            ],
+            "a": "Fahrt ihr Fahrrad?",
+            "why": "Fahrt أولاً مع ihr بلا ä — التغيير مع du وer/sie/es وحدهما."
+          },
+          {
+            "tokens": [
+              "Bahnhof.",
+              "einen",
+              "hier",
+              "gibt",
+              "Es"
+            ],
+            "a": "Es gibt hier einen Bahnhof.",
+            "why": "Es gibt ثم hier ثم einen Bahnhof (مفعول به مذكر) — وgibt من geben."
+          }
+        ],
+        "interleavedWith": [
+          "bruder",
+          "hier"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "zg-9",
+            "speakText": "Ruhig? Nie! Einer läuft, einer ruft: Achtung, der Zug kommt gleich!",
+            "a": "Ruhig? Nie! Einer läuft, einer ruft: Achtung, der Zug kommt gleich!",
+            "why": "läuft بـäu · ruft بـu الطويلة · Achtung بحرف كبير وch بعد a «خ» · gleich: ei ثم ch «ش» الرقيقة."
+          },
+          {
+            "audioId": "zg-13",
+            "speakText": "Nein! Mein Lehrer gibt so viele Hausaufgaben — im Zug mache ich nichts!",
+            "a": "Nein! Mein Lehrer gibt so viele Hausaufgaben — im Zug mache ich nichts!",
+            "why": "gibt بـi (e ← i) · viele بـie · Hausaufgaben كلمة واحدة بحرف كبير · nichts بـchts."
+          },
+          {
+            "audioId": "zg-19",
+            "speakText": "Du wäschst dein Fahrrad und putzt die Küche? Super, Yusuf!",
+            "a": "Du wäschst dein Fahrrad und putzt die Küche? Super, Yusuf!",
+            "why": "wäschst: ä ثم sch ثم st · Fahrrad بـrr · putzt بـtzt · Küche بـü ثم ch."
+          },
+          {
+            "audioId": "word-fahrkarte",
+            "speakText": "Fahrkarte.",
+            "a": "Fahrkarte",
+            "why": "Fahr + Karte: h بعد a الطويلة · وk في Karte."
+          },
+          {
+            "audioId": "word-bahnhof",
+            "speakText": "Bahnhof.",
+            "a": "Bahnhof",
+            "why": "Bahnhof: h بعد a الطويلة في المقطع الأول ثم Hof — وf في الآخر."
+          },
+          {
+            "audioId": "word-fahrrad",
+            "speakText": "Fahrrad.",
+            "a": "Fahrrad",
+            "why": "Fahrrad من fahren: h بعد a الطويلة · rr مضاعفة في الوسط · وd في آخرها تُنطق t."
+          },
+          {
+            "audioId": "word-achtung",
+            "speakText": "Achtung.",
+            "a": "Achtung",
+            "why": "Achtung بحرف كبير: ch بعد a «خ» ثم t ثم ung."
+          },
+          {
+            "audioId": "word-gleich",
+            "speakText": "gleich.",
+            "a": "gleich",
+            "why": "gleich: g ثم l ثم ei «اي» ثم ch بعد ei («ش» الرقيقة)."
+          }
+        ],
+        "interleavedWith": [
+          "ruhig",
+          "nie",
+          "lehrer",
+          "hausaufgabe",
+          "nichts",
+          "putzen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Mein Weg: Ich fahre Fahrrad, du nimmst den Bus …",
+        "ar": "تحكي لزميلك كيف تتنقّل أنت وأسرتك، وتسأله عن طريقه — بالأفعال الشاذة مع du وer/sie"
+      },
+      "situation": {
+        "de": "Fährst du Fahrrad? Nimmst du den Bus oder den Zug? Wann fährt dein Bus?",
+        "ar": "في الدورة: يسأل كلٌّ منكما الآخر عن طريقه وتنقّله: Fährst du Fahrrad? · Nimmst du den Bus oder den Zug? · Wann fährt dein Bus? — ويجيب بجمل كاملة، ثم يحكي عن فرد من أسرته بـer/sie (Mein Vater fährt … · Meine Schwester nimmt …) — ثم تتبادلان."
+      },
+      "successCriteria": [
+        "خمس جمل على الأقل عن تنقّلك وتنقّل أسرتك: ich بلا تغيير (Ich fahre Fahrrad.)، وجملتان بـer/sie بتغيير الحركة (Mein Vater fährt … · Meine Mutter nimmt den Bus.)، وجملة بـankommen (Der Bus kommt um … an.).",
+        "سؤالان لزميلك بـdu (Fährst du …? · Nimmst du …?) — والراكب يقول den Bus nehmen لا den Bus fahren — وجملة بـab أو gleich (Ab Montag … · Der Bus kommt gleich.)."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "سؤال لزميلك: «هل تقود السيارة؟»",
+            "choices": [
+              "Fährst du Auto?",
+              "Fährt du Auto?",
+              "Fähren du Auto?"
+            ],
+            "a": "Fährst du Auto?",
+            "why": "a ← ä مع du ونهايتها ‑st: Fährst du …? — وAuto fahren = يقود السيارة."
+          },
+          {
+            "q": "«أخي يأخذ الحافلة»؟",
+            "choices": [
+              "Mein Bruder nimmt den Bus.",
+              "Mein Bruder nehmt den Bus.",
+              "Mein Bruder nimmst den Bus."
+            ],
+            "a": "Mein Bruder nimmt den Bus.",
+            "why": "e ← i مع er وتتضاعف m: nimmt — و‑st لـdu وحدها."
+          },
+          {
+            "q": "gleich = ؟",
+            "choices": [
+              "حالاً · بعد قليل",
+              "أمس",
+              "أبداً"
+            ],
+            "a": "حالاً · بعد قليل",
+            "why": "gleich = حالاً · بعد قليل — و«أبداً» nie (الدرس الماضي)."
+          },
+          {
+            "q": "لأخويك معاً: «أنتما تركبان الدراجة كل يوم»؟",
+            "choices": [
+              "Ihr fahrt jeden Tag Fahrrad.",
+              "Ihr fährt jeden Tag Fahrrad.",
+              "Ihr fähren jeden Tag Fahrrad."
+            ],
+            "a": "Ihr fahrt jeden Tag Fahrrad.",
+            "why": "ihr بلا تغيير: fahrt — لا ä مع ihr وإن كانت نهايتها ‑t كـer."
+          },
+          {
+            "q": "laufen مع er؟",
+            "a": "er läuft",
+            "why": "au ← äu مع er: er läuft."
+          },
+          {
+            "q": "«القطار يصل في التاسعة» (ankommen) — ابدأ بـ Der Zug",
+            "a": "Der Zug kommt um neun an.",
+            "why": "Der Zug ثم kommt ثانياً ثم um neun ثم an في الآخر."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "لأختك: «هل تأخذين القطار؟»",
+            "choices": [
+              "Nimmst du den Zug?",
+              "Nehmst du den Zug?",
+              "Nimmt du den Zug?"
+            ],
+            "a": "Nimmst du den Zug?",
+            "why": "e ← i مع du ومعها mm بلا h: Nimmst du …?"
+          },
+          {
+            "q": "«لينا تجري بسرعة»؟",
+            "choices": [
+              "Lena läuft schnell.",
+              "Lena läufst schnell.",
+              "Lena laufen schnell."
+            ],
+            "a": "Lena läuft schnell.",
+            "why": "au ← äu مع هي ونهايتها ‑t: läuft."
+          },
+          {
+            "q": "Achtung = ؟",
+            "choices": [
+              "انتبه! · احذر!",
+              "شكراً!",
+              "تفضّل!"
+            ],
+            "a": "انتبه! · احذر!",
+            "why": "Achtung! = انتبه! · Danke! = شكراً! · Bitte! = تفضّل!"
+          },
+          {
+            "q": "«يوم الأحد يغسل أبي السيارة»؟",
+            "choices": [
+              "Am Sonntag wäscht mein Vater das Auto.",
+              "Am Sonntag wäschst mein Vater das Auto.",
+              "Am Sonntag mein Vater wäscht das Auto."
+            ],
+            "a": "Am Sonntag wäscht mein Vater das Auto.",
+            "why": "الوقت أولاً ثم wäscht ثانياً (a ← ä مع er) ثم الفاعل mein Vater."
+          },
+          {
+            "q": "nehmen مع du؟",
+            "a": "du nimmst",
+            "why": "e ← i مع du، وتتضاعف m وتسقط h: du nimmst."
+          },
+          {
+            "q": "«ابتداءً من اليوم أمشي كثيراً» — ابدأ بـ Ab heute",
+            "a": "Ab heute laufe ich viel.",
+            "why": "Ab heute أولاً ثم laufe ثانياً (ich بلا تغيير) ثم ich ثم viel."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المعلّمة تعطي واجباً»؟",
+            "choices": [
+              "Die Lehrerin gibt eine Hausaufgabe.",
+              "Die Lehrerin gebt eine Hausaufgabe.",
+              "Die Lehrerin gibst eine Hausaufgabe."
+            ],
+            "a": "Die Lehrerin gibt eine Hausaufgabe.",
+            "why": "e ← i مع هي: gibt — و‑st لـdu وحدها."
+          },
+          {
+            "q": "«أمي تقرأ كل مساء»؟",
+            "choices": [
+              "Meine Mutter liest jeden Abend.",
+              "Meine Mutter lest jeden Abend.",
+              "Meine Mutter liesst jeden Abend."
+            ],
+            "a": "Meine Mutter liest jeden Abend.",
+            "why": "e ← ie مع هي: liest — وبلا s ثانية بعد s."
+          },
+          {
+            "q": "ab = ؟",
+            "choices": [
+              "ابتداءً من (وقت)",
+              "حتى",
+              "منذ"
+            ],
+            "a": "ابتداءً من (وقت)",
+            "why": "ab + الوقت = ابتداءً من (Ab heute …) — و«حتى» bis (bis morgen)."
+          },
+          {
+            "q": "«ابني يأكل تفاحة»؟",
+            "choices": [
+              "Mein Sohn isst einen Apfel.",
+              "Mein Sohn ist einen Apfel.",
+              "Mein Sohn essen einen Apfel."
+            ],
+            "a": "Mein Sohn isst einen Apfel.",
+            "why": "essen: e ← i مع er وss: isst — وist (هو) لا تأخذ مفعولاً."
+          },
+          {
+            "q": "«القطارات» (der Zug — الجمع مع الأداة)؟",
+            "a": "die Züge",
+            "why": "الجمع: der Zug ← die Züge — ü + ‑e (كـder Gast ← die Gäste)."
+          },
+          {
+            "q": "«جدّي ينام في القطار» — ابدأ بـ Mein Opa",
+            "a": "Mein Opa schläft im Zug.",
+            "why": "schläft ثانياً (a ← ä مع er) ثم im Zug."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "ich fahre · du fährst · er fährt · ihr fahrt · du läufst · er läuft · du nimmst · er nimmt · er gibt · er isst · er liest · Ich nehme den Zug. · Der Bus kommt um acht an. · Achtung! · Der Bus kommt gleich. · Ab Montag fahre ich Fahrrad.",
+      "ar": "الفعل الشاذ يغيّر حركة جذعه مع du وer/sie/es وحدهما: a ← ä (fährt · wäscht · schläft) · au ← äu (läuft) · e ← i (gibt · nimmt · spricht · isst) · e ← ie (liest · sieht) — والنهايات كالمنتظم، وich وwir وihr وsie/Sie بلا تغيير (ihr fahrt). احفظ صيغة er مع الفعل. الراكب يأخذ القطار: Ich nehme den Zug. (وfahren مع مفعول = يقود). isst (يأكل) غير ist (هو). ankommen قطعةً: kommt … an. Achtung! = انتبه! · gleich = حالاً · ab + الوقت = ابتداءً من. ومعها: die Fahrkarte · der Bahnhof · der Zug ← die Züge · der Bus ← die Busse · das Fahrrad ← die Fahrräder."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Lena nehmt das Fahrrad.~~",
+          "ar": "e ← i مع «هي»: nimmt"
+        },
+        "whyArabicSpeakerFails": "حركة المضارع العربي ثابتة مع كل الضمائر: «آخذ · تأخذ · يأخذ» بحركةٍ واحدة — وقاعدة الدرس الماضي قالت «الجذع ثابت» — فيُبقي المتعلم nehm‑ مع «هي». لكن nehmen من الأفعال الشاذة: مع du وer/sie/es تصير e ← i وتتضاعف m وتسقط h: du nimmst · sie nimmt (وكذلك geben: er gibt) — ومع ich وwir وihr بلا تغيير: ich nehme · ihr nehmt (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Lena nimmt das Fahrrad.",
+          "ar": "لينا تأخذ الدراجة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Meine Oma sprecht nur Arabisch.~~",
+          "a": "Meine Oma spricht nur Arabisch."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich fahre den Zug.~~",
+          "ar": "الراكب: den Zug nehmen"
+        },
+        "whyArabicSpeakerFails": "«أركب القطار» بمفعولٍ مباشر، وfahren فعل المركبات — فيضع المتعلم fahren مكان «ركب» مع المفعول. والمشطوبة صحيحة نحواً بمعنى آخر: fahren مع مفعولٍ مباشر = «يقود»، فهي «أقود القطار» — كأنك سائقه! والراكب يقول: Ich nehme den Zug. — كما في take the train الإنجليزية وprendre le train الفرنسية (عونان) — أو Ich fahre Zug. بلا أداة (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich nehme den Zug.",
+          "ar": "آخذ القطار (أركبه راكباً)."
+        },
+        "exercise": {
+          "q": "صحّح (راكباً لا سائقاً): ~~Am Abend fahre ich den Bus.~~",
+          "a": "Am Abend nehme ich den Bus."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Lena ist einen Apfel.~~",
+          "ar": "isst (تأكل) — لا ist"
+        },
+        "whyArabicSpeakerFails": "isst وist تُنطقان بالصوت نفسه، والعربية تفصلهما تماماً: «تأكل» فعلٌ، و«هي» بلا فعل كون أصلاً في الجملة الاسمية («لينا جائعة») — فتغلب ist المحفوظة منذ الدرس الأول عند الكتابة. لكن essen شاذ: e ← i مع du وer/sie/es، وss بعد i القصيرة كالشدّة: du isst · sie isst — وist من sein لا تأخذ مفعولاً (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Lena isst einen Apfel.",
+          "ar": "لينا تأكل تفاحة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Mein Bruder ist einen Kuchen.~~",
+          "a": "Mein Bruder isst einen Kuchen."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "fahren",
+      "waschen",
+      "geben",
+      "nehmen",
+      "laufen",
+      "ankommen",
+      "fahrkarte",
+      "bahnhof",
+      "zug",
+      "bus",
+      "fahrrad",
+      "gleich",
+      "ab",
+      "achtung"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/fahren",
+      "https://www.duden.de/rechtschreibung/nehmen",
+      "https://www.duden.de/rechtschreibung/laufen",
+      "https://www.duden.de/rechtschreibung/Bahnhof",
+      "https://www.duden.de/rechtschreibung/gleich",
+      "https://www.duden.de/rechtschreibung/Achtung"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/fahren",
+      "https://de.wiktionary.org/wiki/nehmen",
+      "https://de.wiktionary.org/wiki/gleich",
+      "https://de.wiktionary.org/wiki/ab",
+      "https://de.wiktionary.org/wiki/Achtung"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesens-unregelm"
+  ],
+  "audioManifestRefs": [
+    "word-fahren",
+    "word-waschen",
+    "word-geben",
+    "word-nehmen",
+    "word-laufen",
+    "word-ankommen",
+    "word-fahrkarte",
+    "word-bahnhof",
+    "word-zug",
+    "word-bus",
+    "word-fahrrad",
+    "word-gleich",
+    "word-ab",
+    "word-achtung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Unregelmäßige Verben & Verkehr",
+    "goetheWordListOverlap": [
+      "fahren",
+      "waschen",
+      "geben",
+      "nehmen",
+      "laufen",
+      "ankommen",
+      "fahrkarte",
+      "bahnhof",
+      "zug",
+      "bus",
+      "fahrrad",
+      "gleich",
+      "ab",
+      "achtung"
+    ]
+  }
+}

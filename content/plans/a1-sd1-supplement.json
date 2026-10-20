@@ -1,0 +1,732 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-sd1-supplement",
+  "level": "A1",
+  "decision": "D113",
+  "title": {
+    "de": "Start Deutsch 1 — die fehlenden Wörter: Kern früh, Rest verstehen",
+    "ar": "Start Deutsch 1 — الكلمات الناقصة: النواة مبكراً والباقي للفهم"
+  },
+  "sourceList": "goethe-a1-sd1",
+  "method": {
+    "basis": "docs/reports/sd1-gap-pedagogy.md",
+    "core": "تردد اللِّمّة (wordfreq — مجموع الصيغ المصرّفة) ≥ Zipf 5.0 · أو ظهور في نص يراه المتعلم في دروس الوحدات 1–12 (ومداخل كلماتها) · أو في نص ثقافة/قراءة متسق الموضوع · + إكمال الأزواج (Oma/Opa · geschlossen/geöffnet)",
+    "placement": "في درس محتوى عند أول ظهور أو قبله، حيث يقتضي الموضوع، ≤ 3 كلمات للدرس — والظهور في نص غير متسق يُصلَح النص (textFixes) لا تُقدَّم الكلمة",
+    "receptive": "الباقي فهماً سلبياً (Goethe: »Alle aufgeführten Wörter sollten passiv verstanden werden«) — بطاقات comprehension بلا production"
+  },
+  "core": {
+    "lessons": [
+      {
+        "lessonId": "a1-u1-d1",
+        "headwords": [
+          "neu",
+          "wie viel"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u1-d2",
+        "headwords": [
+          "heute",
+          "jetzt",
+          "schwer"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u1-d3",
+        "headwords": [
+          "die Anmeldung",
+          "der Partner, -/ die Partnerin, -nen",
+          "der Herr, -en"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u1-d4",
+        "headwords": [
+          "das Alter",
+          "der Kurs, -e",
+          "die Klasse"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u1-d5",
+        "headwords": [
+          "das Ende",
+          "wissen",
+          "das Wort, -ö, er/-e",
+          "oft",
+          "bisschen",
+          "der Schüler, -",
+          "der Student, -en"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u2-d1",
+        "headwords": [
+          "international"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u2-d2",
+        "headwords": [
+          "der Mensch, -en",
+          "der Ort, -e",
+          "das Leben"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u2-d3",
+        "headwords": [
+          "bedeuten",
+          "der Text, -e",
+          "der Fehler, -"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u2-d4",
+        "headwords": [
+          "lang",
+          "lange"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u2-d5",
+        "headwords": [
+          "schlecht",
+          "also",
+          "die Gruppe, -n"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u3-d1",
+        "headwords": [
+          "die Oma, -s",
+          "das Essen"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u3-d2",
+        "headwords": [
+          "der Dank",
+          "leicht",
+          "das Restaurant, -s"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u3-d3",
+        "headwords": [
+          "nächst-",
+          "geschlossen",
+          "geöffnet"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u3-d4",
+        "headwords": [
+          "fertig",
+          "regnen",
+          "scheinen"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u3-d5",
+        "headwords": [
+          "einmal",
+          "später",
+          "die Aufgabe, -n"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u4-d1",
+        "headwords": [
+          "die Großeltern (pl.)",
+          "der Junge, -n",
+          "der Opa, -s"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u4-d2",
+        "headwords": [
+          "lieben"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u4-d3",
+        "headwords": [
+          "beide",
+          "die Lösung, -en"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u4-d4",
+        "headwords": [
+          "bekannt",
+          "der/die Bekannte, -n",
+          "tot"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u4-d5",
+        "headwords": [
+          "das Glück",
+          "glücklich"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u5-d1",
+        "headwords": [
+          "die Lebensmittel (pl.)",
+          "der Apfel, -Ä",
+          "mögen"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u5-d2",
+        "headwords": [
+          "bar",
+          "bekommen",
+          "die Bitte, -n"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u5-d3",
+        "headwords": [
+          "was für ein"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u5-d4",
+        "headwords": [
+          "nichts",
+          "wenig"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u6-d1",
+        "headwords": [
+          "breit"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u6-d2",
+        "headwords": [
+          "hoch",
+          "allein",
+          "der Raum, -ä, e"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u6-d3",
+        "headwords": [
+          "jed-",
+          "an sein",
+          "aus sein"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u6-d4",
+        "headwords": [
+          "da",
+          "daneben",
+          "weg sein"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u7-d1",
+        "headwords": [
+          "die Firma",
+          "immer",
+          "meist-"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u7-d2",
+        "headwords": [
+          "der Film, -e",
+          "mehr",
+          "wandern"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u7-d3",
+        "headwords": [
+          "die Hausaufgabe,-n",
+          "nie",
+          "einfach"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u7-d4",
+        "headwords": [
+          "gleich",
+          "ab",
+          "Achtung"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u8-d1",
+        "headwords": [
+          "dies-",
+          "gefallen"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u8-d2",
+        "headwords": [
+          "best-",
+          "circa/ca."
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u8-d3",
+        "headwords": [
+          "kriegen"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u9-d3",
+        "headwords": [
+          "bitten",
+          "erklären",
+          "die Hilfe"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u9-d4",
+        "headwords": [
+          "auf sein",
+          "zu sein"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u9-d5",
+        "headwords": [
+          "ander-",
+          "weiter",
+          "halten",
+          "die Polizei",
+          "die Stelle, -n"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u10-d2",
+        "headwords": [
+          "lieb-",
+          "der Moment",
+          "enden"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u10-d3",
+        "headwords": [
+          "früher",
+          "gewinnen"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u10-d4",
+        "headwords": [
+          "der Anfang",
+          "der Verein"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u10-d5",
+        "headwords": [
+          "normal",
+          "der Job, -s",
+          "verdienen"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u11-d1",
+        "headwords": [
+          "der Teil, -e",
+          "tun",
+          "weh tun"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u11-d2",
+        "headwords": [
+          "fehlen"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u11-d5",
+        "headwords": [
+          "das Ergebnis, -se"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u12-d2",
+        "headwords": [
+          "der Blick",
+          "das Internet",
+          "die Information, -en"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u12-d4",
+        "headwords": [
+          "zum Beispiel/z. B.",
+          "Satz, -ä, e",
+          "glauben"
+        ],
+        "status": "done"
+      },
+      {
+        "lessonId": "a1-u12-d5",
+        "headwords": [
+          "das Thema"
+        ],
+        "status": "done"
+      }
+    ],
+    "textFixes": [
+      {
+        "headword": "heute",
+        "source": "lessons/a1/a1-u1-d1.json",
+        "reason": "ملخص «Heute hast du …» في أول درس — تُعلَّم heute في a1-u1-d2 لتخفيف اليوم الأول (17 كلمة)",
+        "status": "done"
+      },
+      {
+        "headword": "die Straßenbahn",
+        "source": "landeskunde/a1-landeskunde-u3.json",
+        "reason": "بطاقة «In der Stadt» في الوحدة 3 وموضوع المدينة الوحدة 9 — كلمة نادرة تُعلَّم للفهم",
+        "status": "pending"
+      },
+      {
+        "headword": "das Ticket, -s",
+        "source": "landeskunde/a1-landeskunde-u5.json",
+        "reason": "بطاقة القطار (Deutschlandticket) في وحدة الطعام — كلمة تُعلَّم للفهم",
+        "status": "pending"
+      },
+      {
+        "headword": "weh tun",
+        "source": "words/fuss.json",
+        "reason": "مثال der Fuß «Mein Fuß tut weh.» في درس الإملاء a1-u2-d4 — tun/weh tun تُعلَّمان في a1-u11-d1 (وحدة الصحة) حيث كل استعمالاتها الأخرى",
+        "status": "done"
+      }
+    ]
+  },
+  "supplementMode": "receptive",
+  "headwordsPerLesson": {
+    "min": 13,
+    "max": 17
+  },
+  "placement": {
+    "afterUnit": 12,
+    "examWeekUnit": 15
+  },
+  "units": [
+    {
+      "unit": 13,
+      "theme": {
+        "de": "Menschen, Freizeit, Arbeit — verstehen",
+        "ar": "الناس ووقت الفراغ والعمل — للفهم"
+      },
+      "contentLessons": [
+        {
+          "lessonId": "a1-u13-d1",
+          "theme": {
+            "de": "Menschen und Feste",
+            "ar": "الناس والأعياد"
+          },
+          "headwords": [
+            "das Baby, -s",
+            "der Jugendliche, -n",
+            "der Erwachsene, -n",
+            "der Verwandte, -n",
+            "die Ehefrau, -en/ der Ehemann, ä, er",
+            "der Kindergarten",
+            "heiraten",
+            "die Hochzeit",
+            "gestorben",
+            "die Party",
+            "Feier-",
+            "einladen",
+            "der Glückwunsch",
+            "gratulieren",
+            "zufrieden"
+          ]
+        },
+        {
+          "lessonId": "a1-u13-d2",
+          "theme": {
+            "de": "Freizeit",
+            "ar": "وقت الفراغ"
+          },
+          "headwords": [
+            "die Freizeit",
+            "der Sport",
+            "mitmachen",
+            "mitkommen",
+            "Rad fahren",
+            "das Schwimmbad",
+            "die CD, -s",
+            "die Disco",
+            "der Eintritt",
+            "das Lied, -er",
+            "der Schluss",
+            "aufhören",
+            "Lieblings-",
+            "zurzeit",
+            "eilig"
+          ]
+        },
+        {
+          "lessonId": "a1-u13-d3",
+          "theme": {
+            "de": "Einkaufen, Essen — und wie sieht es aus?",
+            "ar": "التسوّق والطعام — وكيف يبدو؟"
+          },
+          "headwords": [
+            "die Banane, -n",
+            "die Birne, -n",
+            "der Schinken, -",
+            "das Öl",
+            "die Pommes frites (pl.)",
+            "bitter",
+            "riechen",
+            "der Laden, -ä",
+            "der Kiosk",
+            "der Herd",
+            "böse",
+            "kaputt",
+            "fremd",
+            "aussehen"
+          ]
+        },
+        {
+          "lessonId": "a1-u13-d4",
+          "theme": {
+            "de": "Im Café und draußen",
+            "ar": "في المقهى وفي الخارج"
+          },
+          "headwords": [
+            "das Café, -s",
+            "das Lokal",
+            "empfehlen",
+            "anbieten",
+            "grillen",
+            "draußen",
+            "die Blume, -n",
+            "der Baum, -ä, e",
+            "die Zigarette, -n",
+            "das Feuer",
+            "danken",
+            "entschuldigen",
+            "willkommen",
+            "herzlich"
+          ]
+        },
+        {
+          "lessonId": "a1-u13-d5",
+          "theme": {
+            "de": "Arbeit und Büro",
+            "ar": "العمل والمكتب"
+          },
+          "headwords": [
+            "der Arbeitsplatz, -ä, e",
+            "der Chef",
+            "der Kollege, -n",
+            "arbeitslos",
+            "selbstständig",
+            "das Praktikum",
+            "die Hausfrau, -en/ der Hausmann",
+            "das Studium",
+            "die Maschine, -n",
+            "der Unterricht",
+            "der Kugelschreiber",
+            "der Bleistift, -e",
+            "das Papier",
+            "anklicken",
+            "drucken",
+            "der Drucker, -"
+          ]
+        }
+      ],
+      "integrationLessonId": "a1-u13-d6"
+    },
+    {
+      "unit": 14,
+      "theme": {
+        "de": "Ämter, Unterwegs — und die Prüfung",
+        "ar": "الدوائر والطريق… ثم الامتحان"
+      },
+      "contentLessons": [
+        {
+          "lessonId": "a1-u14-d1",
+          "theme": {
+            "de": "Das Formular",
+            "ar": "الاستمارة"
+          },
+          "headwords": [
+            "das Formular, -e",
+            "ausfüllen",
+            "der Familienstand",
+            "ledig",
+            "geboren",
+            "das Geburtsjahr",
+            "der Geburtsort",
+            "männlich",
+            "weiblich",
+            "die Unterschrift",
+            "unterschreiben",
+            "der Ausweis",
+            "die Papiere (pl.)",
+            "gültig",
+            "der Ausländer, -",
+            "ausländisch"
+          ]
+        },
+        {
+          "lessonId": "a1-u14-d2",
+          "theme": {
+            "de": "Post, Bank und Telefon",
+            "ar": "البريد والبنك والهاتف"
+          },
+          "headwords": [
+            "der Beamte, -n",
+            "das Konto",
+            "überweisen",
+            "die Postleitzahl",
+            "der Absender",
+            "der Empfänger, -",
+            "die Briefmarke, -n",
+            "das Gewicht",
+            "die Anrede",
+            "die Dame, -n",
+            "der Doktor",
+            "der Gruß, -ü, e",
+            "die E-Mail, -s",
+            "das Fax, -e",
+            "die Vorwahl",
+            "der Anrufbeantworter",
+            "das Wiederhören"
+          ]
+        },
+        {
+          "lessonId": "a1-u14-d3",
+          "theme": {
+            "de": "Bahn, Bus, Flugzeug",
+            "ar": "القطار والحافلة والطائرة"
+          },
+          "headwords": [
+            "die S-Bahn",
+            "die Straßenbahn",
+            "die Autobahn, -en",
+            "der Lkw, -s",
+            "der Fahrer",
+            "das Ticket, -s",
+            "die Durchsage, -n",
+            "das Flugzeug",
+            "abfliegen",
+            "der Abflug",
+            "der Automat",
+            "drücken",
+            "die Anzeige, -n",
+            "die Ansage, -n",
+            "der Anschluss"
+          ]
+        },
+        {
+          "lessonId": "a1-u14-d4",
+          "theme": {
+            "de": "Reisen und Schilder",
+            "ar": "السفر واللافتات"
+          },
+          "headwords": [
+            "das Reisebüro, -s",
+            "der Reiseführer",
+            "der Prospekt, -e",
+            "die Führung",
+            "übernachten",
+            "die Halbpension",
+            "das Apartment, -s",
+            "kulturell",
+            "der Zoll",
+            "das Dorf, -ö, er",
+            "hinten",
+            "das Schild, -er",
+            "verboten",
+            "die Vorsicht",
+            "die Praxis",
+            "automatisch"
+          ]
+        },
+        {
+          "lessonId": "a1-u14-d5",
+          "theme": {
+            "de": "Wohnen — und die Prüfung",
+            "ar": "السكن… ثم الامتحان"
+          },
+          "headwords": [
+            "umziehen",
+            "(sich) ausziehen",
+            "vermieten",
+            "der Vermieter",
+            "der Stock",
+            "reparieren",
+            "die Reparatur",
+            "die Ordnung",
+            "sich kümmern",
+            "die Prüfung",
+            "der Test",
+            "die Aussage, -n",
+            "ankreuzen",
+            "der Bogen",
+            "abgeben"
+          ]
+        }
+      ],
+      "integrationLessonId": "a1-u14-d6"
+    }
+  ]
+}

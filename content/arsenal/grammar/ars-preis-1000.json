@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-preis-1000",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Wie viel kostet das? — Das kostet zweihundertneunundsiebzig Euro.",
+    "ar": "الأعداد حتى 1000 والأسعار — المئات أولاً ثم الباقي، وkosten + السعر بلا حرف جر"
+  },
+  "payload": {
+    "topicAr": "الأعداد من 100 إلى 1000: المئات (zweihundert … neunhundert) ثم الباقي كما تعلّمناه (hundertzwanzig · dreihundertfünfundsechzig) في كلمة واحدة — كالعربية «ثلاثمئة وخمسة وستون»؛ والسعر: Das kostet + العدد + Euro، بلا حرف جر وبلا جمع لـEuro، وnur قبل العدد",
+    "sceneAr": "يوسف يشتري هاتفاً جديداً عبر الإنترنت ولينا تقارن معه الأسعار على الشاشة: هاتف بتسعمئة وتسعة وتسعين يورو — غالٍ جداً — وآخر بمئتين وتسعة وسبعين فقط. معه أربعمئة يورو فيبقى له مئة وواحد وعشرون — لطعام في مطعم. يدفع بالبطاقة، ويشكر لينا «ألف شكر».",
+    "examples": [
+      {
+        "de": "zweihundert · dreihundert · neunhundert · tausend",
+        "ar": "200 · 300 · 900 · 1000 — العدد + hundert في كلمة واحدة، كـ«ثلاثمئة» بالعربية"
+      },
+      {
+        "de": "hundertzwanzig · dreihundertfünfundsechzig",
+        "ar": "120 · 365 — المئات أولاً ثم الباقي كما تعلّمناه: الآحاد ثم und ثم العشرات"
+      },
+      {
+        "de": "Das kostet neunhundertneunundneunzig Euro.",
+        "ar": "هذا يكلّف 999 يورو — السعر بعد kostet مباشرة"
+      },
+      {
+        "de": "Das hier kostet nur zweihundertneunundsiebzig Euro.",
+        "ar": "هذا يكلّف 279 يورو فقط — nur قبل العدد"
+      },
+      {
+        "de": "zwei Euro fünfzig · neunzehn Euro neunundneunzig",
+        "ar": "2,50 € · 19,99 € — الكسور بعد Euro بلا كلمة Cent، والفاصلة للكسور في ألمانيا"
+      },
+      {
+        "de": "Wie viel kostet das? — Ich bezahle mit Karte.",
+        "ar": "بكم هذا؟ — أدفع بالبطاقة"
+      }
+    ],
+    "inferencePromptAr": "انظر إلى الأمثلة: (1) كيف تُبنى 300 و900 — وهل تُكتب كلمة واحدة؟ (2) في 365: ما الذي يأتي أولاً، المئات أم الآحاد؟ وما الذي بعد المئات — هل هو ما تعلّمناه في 21–99؟ (3) هل جاء حرف جر بين kostet والسعر؟ (4) أين nur: قبل العدد أم بعده؟ وأين «فقط» في العربية؟ (5) هل أخذت Euro جمعاً بعد العدد؟",
+    "ruleDe": "zweihundert · dreihundert … neunhundert · tausend — dreihundert + fünfundsechzig = dreihundertfünfundsechzig — Das kostet nur zweihundert Euro.",
+    "ruleAr": "المئات: العدد + hundert في كلمة واحدة — zweihundert · dreihundert … neunhundert، و100 = hundert أو einhundert، و1000 = tausend أو eintausend. وما بعد المئات يأتي كما تعلّمناه: hundertzwei · hundertzwanzig · dreihundertfünfundsechzig — المئات أولاً ثم الآحاد ثم und ثم العشرات، كلها كلمة واحدة بلا und بعد المئات. وeins في آخر العدد تبقى بـs: hunderteins (وقبل und أو hundert تصير ein: einundzwanzig · einhundert). والسعر: Das kostet + العدد + Euro — بلا حرف جر بعد kostet، وEuro بلا جمع بعد العدد (zweihundert Euro)، والكسور بعد Euro: zwei Euro fünfzig = 2,50 € — والفاصلة للكسور والنقطة للآلاف في ألمانيا (1.000). وnur قبل ما تقصره: nur zweihundert Euro.",
+    "contrastAr": "هنا العربية في صفّك مرتين: «ثلاثمئة وخمسة وستون» بترتيب dreihundertfünfundsechzig نفسه (المئات ثم الآحاد ثم العشرات)، و«يورو» لا تُجمع بعد العدد («مئتا يورو») كـzweihundert Euro. الخطر في ثلاثة مواضع (خريطة التداخل 10‑ي): (1) «فقط» تأتي بعد الكمية («بمئتي يورو فقط») فيقول المتعلم ~~Das kostet zweihundert Euro nur.~~ — والألمانية: nur قبل ما تقصره (2) السعر بالباء في العربية («بكم؟ — بخمسة») فيضع المتعلم für: ~~Das kostet für fünf Euro.~~ — وkosten تأخذ السعر مباشرة (3) الفرنسية والإنجليزية تجمعان euros، فيقول من يعرفهما ~~zweihundert Euros~~ — اتبع العربية هنا.",
+    "limitsAr": [
+      "kaufen + für + السعر صحيحة: Ich kaufe das Handy für zweihundert Euro. — الممنوع حرف الجر بعد kosten وحده.",
+      "قد تسمع hundertundeins أو dreihundertundzwanzig بـund بعد المئات — صيغة أقل شيوعاً؛ نقول ونكتب hunderteins · dreihundertzwanzig.",
+      "Euros بالجمع تُسمع في الكلام عن القطع النقدية نفسها — أما بعد العدد في السعر فـEuro دائماً.",
+      "der Dank في التعابير: Vielen Dank! · Tausend Dank! (كـ«ألف شكر» بالعربية) — وفي الحوار اليومي Danke أقصر."
+    ],
+    "beads": [
+      "Das",
+      "kostet",
+      "nur",
+      "zweihundert",
+      "Euro."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u3-d2",
+    "a1-u15-d2"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "ars-trennbare",
+ "kind": "shufra",
+ "constitutionSection": "10‑ي",
+ "title": {
+  "de": "Ich stehe um sieben auf. · Stehst du früh auf? · Ich möchte früh aufstehen.",
+  "ar": "الأفعال المنفصلة: الجزء الأول (auf · an · ein · ab · fern) يذهب إلى آخر الجملة والفعل ثانياً — وفي السؤال الفعل أولاً والجزء في الآخر — وبعد möchte يبقى المصدر متصلاً في الآخر · والنبر على الجزء المنفصل · وfrühstücken وbesuchen لا تنفصلان"
+ },
+ "payload": {
+  "topicAr": "اليوم تحكي يومك وأعمال بيتك بأفعالٍ تنفصل: Ich stehe um sieben auf. · Ich kaufe am Montag ein. · Stehst du früh auf? ومعه كلمات اليوم: aufstehen · anrufen · fernsehen · einkaufen · aufräumen · frühstücken · abwaschen · der Haushalt · die Wäsche · der Müll · das Buch · der Besuch · der Urlaub · der Koffer · die Reise · hübsch · feiern.",
+  "sceneAr": "مهمة الوحدة السابعة على الشاشة: «من يقوم بأعمال البيت؟». يوسف يسكن وحده فيقوم بكل شيء: يتسوّق ويغسل الأطباق ويرتّب، والغسّالة تغسل الغسيل، والقمامة أُخرجت. أما أخوا لينا فلا يرتّبان أبداً، وأبواها يقومان بكل شيء؛ ولينا تغسل الأطباق مساءً وتتسوّق يوم الاثنين. يوم الأحد تنهض باكراً في السابعة: يفطرون، والقطار إلى الجدّة في التاسعة — فهو عيد ميلادها وسيحتفلون. ولينا تشاهد التلفاز مساءً أو تقرأ كتاباً، أما يوسف فلا تلفاز عنده أصلاً: يتصل بأسرته في تونس — وفي العطلة سيزورها، وحقيبة سفره جاهزة، ولينا تمدحها وتتمنّى له رحلة سعيدة.",
+  "examples": [
+   {
+    "de": "Ich stehe um sieben auf.",
+    "ar": "أنهض في السابعة — aufstehen ينفصل: stehe ثانياً وauf في آخر الجملة"
+   },
+   {
+    "de": "Mein Bruder räumt sein Zimmer nie auf.",
+    "ar": "أخي لا يرتّب غرفته أبداً — كل شيء بين räumt وauf: المفعول وnie"
+   },
+   {
+    "de": "Stehst du am Sonntag früh auf?",
+    "ar": "هل تنهض باكراً يوم الأحد؟ — في السؤال الفعل أولاً وauf ما زال في الآخر"
+   },
+   {
+    "de": "Mein Opa sieht jeden Abend fern.",
+    "ar": "جدّي يشاهد التلفاز كل مساء — fernsehen ينفصل، وsieht بتغيير الحركة من الدرس الماضي"
+   },
+   {
+    "de": "Ich möchte morgen früh aufstehen.",
+    "ar": "أريد أن أنهض باكراً غداً — بعد möchte يبقى المصدر متصلاً في آخر الجملة (الوحدة 5)"
+   },
+   {
+    "de": "Wir frühstücken und besuchen Oma.",
+    "ar": "نفطر ونزور الجدّة — frühstücken وbesuchen لا تنفصلان: لا جزء في الآخر"
+   }
+  ],
+  "inferencePromptAr": "قارن الأمثلة: (1) في الأول: أين ذهب auf من aufstehen؟ وأين الفعل stehe؟ (2) في الثاني: ما الذي يقع بين räumt وauf؟ وأين nie؟ (3) في الثالث — وهو سؤال: أين الفعل؟ وأين auf؟ (4) في الرابع: ما الجزء المنفصل من fernsehen؟ وماذا حدث لحركة sehen مع er؟ (5) في الخامس: بعد möchte — هل انفصل aufstehen؟ وأين هو؟ (6) في الأخير: هل لـfrühstücken أو besuchen جزءٌ في آخر الجملة؟",
+  "ruleDe": "Ich stehe um sieben auf. · Er räumt sein Zimmer auf. · Stehst du früh auf? · Steh auf! · Ich möchte früh aufstehen. · Wir frühstücken. · Ich besuche Oma.",
+  "ruleAr": "الفعل المنفصل بثلاث خطوات: (1) جزؤه الأول (auf · an · ein · ab · fern) يذهب إلى آخر الجملة، والفعل المصرّف ثانياً كالعادة: aufstehen ← Ich stehe um sieben auf. · einkaufen ← Ich kaufe am Montag ein. · anrufen ← Ich rufe meine Familie an. — وكل ما بينهما يقع داخلهما كأنهما قوسان: الوقت والمفعول وnie (Mein Bruder räumt sein Zimmer nie auf.). (2) في السؤال يتقدّم الفعل وحده والجزء يبقى في الآخر: Stehst du früh auf? · Wann rufst du an? — وكذلك الأمر: Steh auf! (3) بعد möchte (الوحدة 5) يبقى المصدر متصلاً في آخر الجملة: Ich möchte früh aufstehen. والتصريف كما تعرفه: النهايات من الدرس الثالث وتغيّر الحركة من الدرس الرابع (er sieht fern · er wäscht ab). وكيف تعرف المنفصل؟ النبر على الجزء الأول: AUFstehen · EINkaufen · FERNsehen — أما frühstücken وbesuchen فلا تنفصلان: Wir frühstücken. · Ich besuche Oma. وقد قلتَ أفعالاً منفصلة قطعاً من قبل: Wann wachst du auf? · Der Zug kommt um elf an. — واليوم صار لها قاعدة.",
+  "contrastAr": "ما يساعدك ثلاثة: (1) في الدارجة التونسية النفي من جزأين يحيطان بالفعل: «ما نعرفش» — والألمانية تحيط بالجملة بجزأي الفعل المنفصل كقوسين: Ich stehe … auf. (2) الإنجليزية تعرف الفعل وجزءه المنفصل (get up · tidy up) — فالفكرة نفسها مألوفة؛ والفرق أن الألمانية ترسل الجزء إلى آخر الجملة كلها. (3) أفعال اليوم تُبنى من أفعالٍ تعرفها: kaufen ← einkaufen · sehen ← fernsehen · rufen ← anrufen · stehen ← aufstehen · waschen ← abwaschen — فتصريفها هو تصريف الفعل الأصلي (er sieht fern · er wäscht ab). وما يختلف ثلاثة: (1) الفعل العربي كلمةٌ واحدة لا تتجزأ: «أنهض» — والقاموس يعطي aufstehen كلمةً واحدة — فيقول المتعلم: ~~Ich aufstehe um sieben.~~ — والألمانية تفصله: Ich stehe um sieben auf. (2) المفعول العربي يلي الفعل مباشرة: «أرتّب غرفتي» — والإنجليزية tidy up my room تضع الجزء بعد الفعل وقبل المفعول — فيقول المتعلم: ~~Ich räume auf mein Zimmer.~~ — والجزء يذهب إلى الآخر بعد المفعول: Ich räume mein Zimmer auf. (3) «أشاهد التلفاز» فعلٌ ومفعول، وكذلك watch TV الإنجليزية وregarder la télé الفرنسية — فيقول المتعلم: ~~Ich sehe den Fernseher.~~ — وهي صحيحة نحواً بمعنى آخر: «أرى جهاز التلفاز» (أنظر إلى الجهاز نفسه)! والمشاهدة بالفعل المنفصل وحده بلا مفعول: Ich sehe fern. — خريطة التداخل 10‑ي.",
+  "limitsAr": [
+   "الماضي (ge‑ في الوسط: aufgestanden · eingekauft) في الوحدة العاشرة — اليوم المضارع والأمر وبعد möchte.",
+   "الأجزاء التي لا تنفصل (be‑ · ver‑ · er‑) تعرف بعض أفعالها: besuchen · verstehen · erzählen — وبابها كاملاً لاحقاً؛ واليوم: النبر على الجزء الأول علامة الانفصال.",
+   "أفعال «يجب» و«يستطيع» مع المصدر في آخر الجملة في الوحدة 8 — كـmöchte اليوم · وفي الجملة الفرعية (A2) يلتئم الفعل المنفصل من جديد في الآخر.",
+   "der Fernseher = جهاز التلفاز (الوحدة 6) · وfernsehen = يشاهد التلفاز — فعلٌ لا يحتاج مفعولاً · وdie Wäsche اسمٌ («الغسيل») غير ich wasche (فعلٌ من الدرس الماضي)."
+  ],
+  "beads": [
+   "Ich",
+   "stehe",
+   "um",
+   "sieben",
+   "auf."
+  ],
+  "properNouns": []
+ },
+ "riskLevel": "red",
+ "levelIntroduced": "A1",
+ "usedInLessons": [
+  "a1-u7-d5",
+  "a1-u7-d6",
+  "a1-u12-d1",
+  "a1-u12-d2",
+  "a1-u13-d2",
+  "a1-u13-d5",
+  "a1-u13-d6",
+  "a1-u14-d2",
+  "a1-u14-d3",
+  "a1-u14-d5",
+  "a1-u14-d6",
+  "a1-u15-d4"
+ ]
+}

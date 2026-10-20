@@ -1,0 +1,811 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d3",
+  "level": "A1",
+  "unit": 6,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Hier gibt es ein Fenster. — Gibt es einen Fernseher? — Nein, es gibt keinen Fernseher.",
+    "ar": "تقول ما يوجد في البيت بـ es gibt وبعدها مفعولٌ به (einen · keinen للمذكر) وتسأل Gibt es …؟، وتعمّم بـ jeder · jede · jedes (كلّ)، وتقول إن الجهاز مشتغل أو مطفأ (Der Computer ist an.)."
+  },
+  "canDoDaily": [
+    "يقول ما يوجد في غرفته وما لا يوجد (Es gibt einen Schreibtisch. · Es gibt keine Waschmaschine.) ويسأل عنه (Gibt es einen Fernseher?).",
+    "يعمّم بـ jeder · jede · jedes (Jedes Zimmer hat ein Fenster.) ويقول إن الجهاز مشتغل أو مطفأ (Der Computer ist an. · Die Heizung ist aus.)."
+  ],
+  "warmup": {
+    "cardIds": [
+      "schrank",
+      "balkon",
+      "keller"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«توجد ثلاجة» بالألمانية: أي جملة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Es gibt einen Kühlschrank.",
+          "Es gibt eine Kühlschrank.",
+          "Es gibt einer Kühlschrank."
+        ],
+        "answer": "Es gibt einen Kühlschrank.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "fenster",
+      "tuer",
+      "wand",
+      "boden",
+      "decke",
+      "heizung",
+      "kuehlschrank",
+      "waschmaschine",
+      "fernseher",
+      "computer",
+      "schreibtisch",
+      "dach",
+      "jeder",
+      "an-sein",
+      "aus-sein"
+    ],
+    "grammarArsenalIds": [
+      "ars-es-gibt"
+    ],
+    "storySentenceIds": [
+      "story-a1-u6-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-u",
+      "auslaut-b",
+      "auslaut-d",
+      "ch-ach-laut",
+      "z"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Hier gibt es ___ Schreibtisch. (ein)",
+            "a": "einen",
+            "why": "der Schreibtisch مذكر ⇒ بعد es gibt مفعولٌ به: ein ← einen (كما بعد haben)."
+          },
+          {
+            "q": "Es gibt ___ Waschmaschine. (kein)",
+            "a": "keine",
+            "why": "die Waschmaschine مؤنث ⇒ keine كما هي — المؤنث لا يتغيّر مفعولاً."
+          },
+          {
+            "q": "Nein, es gibt ___ Fernseher. (kein)",
+            "a": "keinen",
+            "why": "der Fernseher مذكر ⇒ keinen — كما ein ← einen."
+          },
+          {
+            "q": "Gibt ___ eine Heizung? (هل توجد؟)",
+            "a": "es",
+            "why": "es لا تسقط: Gibt es …? — و«هل توجد تدفئة؟» العربية بلا ضمير."
+          },
+          {
+            "q": "Es ___ zwei Kühlschränke. (يوجد)",
+            "a": "gibt",
+            "why": "gibt لا تتغيّر مع الجمع: Es gibt zwei Kühlschränke — كما يبقى «يوجد» مفرداً قبل المثنى."
+          },
+          {
+            "q": "___ Zimmer hat eine Heizung. (jeder · jede · jedes?)",
+            "a": "Jedes",
+            "why": "das Zimmer محايد ⇒ jedes — نهاية das (s)."
+          },
+          {
+            "q": "___ Wohnung hat eine Küche. (jeder · jede · jedes?)",
+            "a": "Jede",
+            "why": "die Wohnung مؤنث ⇒ jede — نهاية die (e)."
+          },
+          {
+            "q": "___ Tisch ist neu. (jeder · jede · jedes?)",
+            "a": "Jeder",
+            "why": "der Tisch مذكر ⇒ jeder — نهاية der (r)."
+          },
+          {
+            "q": "Ist der Fernseher ___? (مشتغل)",
+            "a": "an",
+            "why": "an = مشتغل — بعد ist بلا تغيير (والعكس aus)."
+          },
+          {
+            "q": "Die Lampe ist ___. (مطفأ)",
+            "a": "aus",
+            "why": "aus = مطفأ — للجهاز والمصباح بعد ist."
+          },
+          {
+            "q": "Das Haus hat vier ___. (Tür)",
+            "a": "Türen",
+            "why": "die Tür ← die Türen: ‑en (Tür لا تنتهي بـe)."
+          },
+          {
+            "q": "___ Kühlschrank ist neu. (der/die/das؟)",
+            "a": "Der",
+            "why": "آخر جزء der Schrank ⇒ der Kühlschrank (قاعدة الدرس الماضي) — وإن كانت «الثلاجة» مؤنثة بالعربية."
+          }
+        ],
+        "interleavedWith": [
+          "hier",
+          "tisch",
+          "lampe",
+          "wohnung",
+          "zimmer",
+          "neu"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "eg-1",
+            "speakText": "Yusuf, was gibt es dort? Ist das dein Zimmer?",
+            "q": "استمع: عمّ تسأل لينا أولاً؟",
+            "choices": [
+              "عمّا يوجد في غرفة يوسف",
+              "عن عنوان يوسف",
+              "عن أسرة يوسف"
+            ],
+            "a": "عمّا يوجد في غرفة يوسف",
+            "why": "Was gibt es dort? = ماذا يوجد هناك؟ — dort لأن الغرفة عند يوسف · Ist das dein Zimmer? = أهذه غرفتك؟"
+          },
+          {
+            "audioId": "eg-2",
+            "speakText": "Ja. Hier ist die Tür, und hier gibt es ein Fenster.",
+            "q": "استمع: ماذا يُري يوسف أولاً؟",
+            "choices": [
+              "الباب ونافذة",
+              "الباب ومكتباً",
+              "نافذة وتلفازاً"
+            ],
+            "a": "الباب ونافذة",
+            "why": "die Tür = الباب · hier gibt es ein Fenster = هنا توجد نافذة (das Fenster ⇒ ein كما هي)."
+          },
+          {
+            "audioId": "eg-3",
+            "speakText": "Das Fenster ist sehr groß!",
+            "q": "استمع: ماذا تقول لينا عن النافذة؟",
+            "choices": [
+              "إنها كبيرة جداً",
+              "إنها صغيرة جداً",
+              "إنها جديدة جداً"
+            ],
+            "a": "إنها كبيرة جداً",
+            "why": "sehr groß = كبيرة جداً."
+          },
+          {
+            "audioId": "eg-4",
+            "speakText": "Ja, und die Decke ist hoch. Die Wände sind hell.",
+            "q": "استمع: كيف السقف والجدران؟",
+            "choices": [
+              "السقف عالٍ والجدران مضيئة",
+              "السقف منخفض والجدران مضيئة",
+              "السقف عالٍ والجدران معتمة"
+            ],
+            "a": "السقف عالٍ والجدران مضيئة",
+            "why": "die Decke ist hoch = السقف عالٍ · die Wände (جمع die Wand) sind hell = الجدران مضيئة."
+          },
+          {
+            "audioId": "eg-5",
+            "speakText": "Und der Boden? Ist er neu?",
+            "q": "استمع: عمّ تسأل لينا الآن؟",
+            "choices": [
+              "هل الأرضية جديدة",
+              "هل الباب جديد",
+              "هل السقف عالٍ"
+            ],
+            "a": "هل الأرضية جديدة",
+            "why": "der Boden = الأرضية · er = der Boden · neu = جديد."
+          },
+          {
+            "audioId": "eg-7",
+            "speakText": "Gibt es einen Schreibtisch?",
+            "q": "استمع: ما الذي تسأل لينا عن وجوده؟",
+            "choices": [
+              "مكتب",
+              "كرسي",
+              "سرير"
+            ],
+            "a": "مكتب",
+            "why": "Gibt es einen Schreibtisch? = هل يوجد مكتب؟ — es بعد gibt في السؤال، وder ⇒ einen."
+          },
+          {
+            "audioId": "eg-9",
+            "speakText": "Ist der Computer jetzt an?",
+            "q": "استمع: ماذا تريد لينا أن تعرف عن الحاسوب؟",
+            "choices": [
+              "هل هو مشتغل الآن",
+              "هل هو جديد",
+              "هل هو غالٍ"
+            ],
+            "a": "هل هو مشتغل الآن",
+            "why": "an = مشتغل · jetzt = الآن."
+          },
+          {
+            "audioId": "eg-11",
+            "speakText": "Ach so! Und gibt es auch einen Fernseher?",
+            "q": "استمع: عن أيّ جهاز تسأل لينا بعد ذلك؟",
+            "choices": [
+              "تلفاز",
+              "غسالة",
+              "ثلاجة"
+            ],
+            "a": "تلفاز",
+            "why": "der Fernseher = التلفاز — einen بعد es gibt."
+          },
+          {
+            "audioId": "eg-12",
+            "speakText": "Nein, es gibt keinen Fernseher. Ich habe ja den Computer.",
+            "q": "استمع: لماذا لا يحتاج يوسف تلفازاً؟",
+            "choices": [
+              "لأن عنده الحاسوب",
+              "لأن التلفاز غالٍ",
+              "لأن غرفته صغيرة"
+            ],
+            "a": "لأن عنده الحاسوب",
+            "why": "keinen Fernseher = لا تلفاز (keinen للمذكر) · Ich habe ja den Computer = فعندي الحاسوب."
+          },
+          {
+            "audioId": "eg-13",
+            "speakText": "Und die Küche? Gibt es einen Kühlschrank?",
+            "q": "استمع: عمّ تسأل لينا في المطبخ؟",
+            "choices": [
+              "عن ثلاجة",
+              "عن غسالة",
+              "عن طاولة"
+            ],
+            "a": "عن ثلاجة",
+            "why": "der Kühlschrank = الثلاجة · die Küche = المطبخ."
+          },
+          {
+            "audioId": "eg-14",
+            "speakText": "Ja, aber es gibt keine Waschmaschine.",
+            "q": "استمع: ماذا ليس عند يوسف؟",
+            "choices": [
+              "غسالة",
+              "ثلاجة",
+              "مطبخ"
+            ],
+            "a": "غسالة",
+            "why": "keine Waschmaschine = لا غسالة — keine للمؤنث كما هي."
+          },
+          {
+            "audioId": "eg-15",
+            "speakText": "Und die Heizung? Ist sie an?",
+            "q": "استمع: ما سؤال لينا عن التدفئة؟",
+            "choices": [
+              "هل هي مشتغلة",
+              "هل هي جديدة",
+              "هل هي كبيرة"
+            ],
+            "a": "هل هي مشتغلة",
+            "why": "sie = die Heizung · an = مشتغلة."
+          },
+          {
+            "audioId": "eg-16",
+            "speakText": "Nein, sie ist aus. Heute scheint die Sonne!",
+            "q": "استمع: لماذا التدفئة مطفأة؟",
+            "choices": [
+              "لأن الشمس مشرقة اليوم",
+              "لأن التدفئة قديمة",
+              "لأن يوسف ليس في البيت"
+            ],
+            "a": "لأن الشمس مشرقة اليوم",
+            "why": "aus = مطفأة · Heute scheint die Sonne = اليوم تشرق الشمس."
+          },
+          {
+            "audioId": "eg-18",
+            "speakText": "Nein! Es gibt nur einen Fernseher. Aber jeder Raum hat eine Heizung.",
+            "q": "استمع: ماذا في بيت لينا؟",
+            "choices": [
+              "تلفاز واحد فقط، وتدفئة في كل حجرة",
+              "تلفاز في كل غرفة، وتدفئة واحدة",
+              "تلفازان، ولا تدفئة"
+            ],
+            "a": "تلفاز واحد فقط، وتدفئة في كل حجرة",
+            "why": "nur einen Fernseher = تلفاز واحد فقط · jeder Raum hat eine Heizung = في كل حجرة تدفئة (jeder لأن der Raum)."
+          },
+          {
+            "audioId": "eg-19",
+            "speakText": "Und das Dach? Ist es auch alt?",
+            "q": "استمع: عمّ يسأل يوسف في النهاية؟",
+            "choices": [
+              "هل السطح قديم أيضاً",
+              "هل السقف عالٍ أيضاً",
+              "هل الباب جديد أيضاً"
+            ],
+            "a": "هل السطح قديم أيضاً",
+            "why": "das Dach = السطح · es = das Dach · auch alt = قديم أيضاً."
+          },
+          {
+            "audioId": "eg-20",
+            "speakText": "Nein, das Dach ist neu. Und die Waschmaschine ist an — hörst du?",
+            "q": "استمع: ما الذي يسمعه يوسف؟",
+            "choices": [
+              "الغسالة المشتغلة عند لينا",
+              "التلفاز المشتغل عند لينا",
+              "التدفئة المشتغلة عند لينا"
+            ],
+            "a": "الغسالة المشتغلة عند لينا",
+            "why": "die Waschmaschine ist an = الغسالة مشتغلة · hörst du? = أتسمع؟ — والسطح neu = جديد."
+          }
+        ],
+        "interleavedWith": [
+          "zimmer",
+          "dort",
+          "gross",
+          "hoch",
+          "hell",
+          "jetzt",
+          "sonne",
+          "raum"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "es",
+              "Hier",
+              "Fenster.",
+              "gibt",
+              "ein"
+            ],
+            "a": "Hier gibt es ein Fenster.",
+            "why": "Hier أولاً ⇒ gibt ثانياً ثم es — وes لا تسقط."
+          },
+          {
+            "tokens": [
+              "es",
+              "Gibt",
+              "Kühlschrank?",
+              "einen"
+            ],
+            "a": "Gibt es einen Kühlschrank?",
+            "why": "السؤال يبدأ بالفعل Gibt ثم es — وder Kühlschrank ⇒ einen."
+          },
+          {
+            "tokens": [
+              "hat",
+              "Jeder",
+              "Lampe.",
+              "Raum",
+              "eine"
+            ],
+            "a": "Jeder Raum hat eine Lampe.",
+            "why": "Jeder Raum (der ⇒ jeder) فاعل ثم hat ثانياً ثم eine Lampe."
+          },
+          {
+            "tokens": [
+              "ist",
+              "Der",
+              "aus.",
+              "Fernseher"
+            ],
+            "a": "Der Fernseher ist aus.",
+            "why": "Der Fernseher ثم ist ثم aus = مطفأ."
+          },
+          {
+            "tokens": [
+              "gibt",
+              "Es",
+              "Türen.",
+              "zwei"
+            ],
+            "a": "Es gibt zwei Türen.",
+            "why": "Es gibt ثم zwei Türen — gibt لا تتغيّر مع الجمع."
+          },
+          {
+            "tokens": [
+              "Wände",
+              "Die",
+              "hell.",
+              "sind"
+            ],
+            "a": "Die Wände sind hell.",
+            "why": "Die Wände جمع (sind) — die Wand ← die Wände · والصفة hell بلا نهاية."
+          }
+        ],
+        "interleavedWith": [
+          "hier",
+          "raum",
+          "lampe",
+          "hell"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "eg-6",
+            "speakText": "Nein, der Boden ist alt, aber schön.",
+            "a": "Nein, der Boden ist alt, aber schön",
+            "why": "Boden بـo طويلة ثم ‑en خفيفة · schön بـö طويلة · alt بـt في آخرها."
+          },
+          {
+            "audioId": "eg-8",
+            "speakText": "Ja, es gibt einen Schreibtisch und einen Computer.",
+            "a": "Ja, es gibt einen Schreibtisch und einen Computer",
+            "why": "gibt بـi طويلة وt · Schreibtisch كلمة واحدة: Sch «ش» وb تُنطق p قبل t · Computer بـC «ك»."
+          },
+          {
+            "audioId": "eg-10",
+            "speakText": "Natürlich ist er an — wir sprechen doch!",
+            "a": "Natürlich ist er an — wir sprechen doch!",
+            "why": "Natürlich بحرف كبير أول الجملة: ü ثم ‑lich · an = مشتغل · doch بـch بعد o «خ»."
+          },
+          {
+            "audioId": "eg-17",
+            "speakText": "Und dein Haus, Lena? Hat jedes Zimmer einen Fernseher?",
+            "a": "Und dein Haus, Lena? Hat jedes Zimmer einen Fernseher?",
+            "why": "jedes بـj «ي» ونهاية s لأن das Zimmer · Fernseher: النبر على أوله · Haus بـau «آو»."
+          },
+          {
+            "audioId": "word-waschmaschine",
+            "speakText": "Waschmaschine.",
+            "a": "Waschmaschine",
+            "why": "Waschmaschine كلمة واحدة: sch مرتين «ش» و‑ine في آخرها بـi طويلة."
+          },
+          {
+            "audioId": "word-kuehlschrank",
+            "speakText": "Kühlschrank.",
+            "a": "Kühlschrank",
+            "why": "Kühlschrank: ü طويلة ثم h صامتة · schr «شر» · der لأن آخر جزء der Schrank."
+          },
+          {
+            "audioId": "word-decke",
+            "speakText": "Decke.",
+            "a": "Decke",
+            "why": "Decke: ck بعد e القصيرة «ك» · والجمع die Decken."
+          },
+          {
+            "audioId": "word-jeder",
+            "speakText": "jeder.",
+            "a": "jeder",
+            "why": "jeder: j «ي» وe طويلة و‑er في آخرها خفيفة."
+          }
+        ],
+        "interleavedWith": [
+          "alt",
+          "schoen",
+          "sprechen",
+          "natuerlich",
+          "haus",
+          "zimmer"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Hier gibt es ein Fenster und einen Schreibtisch. Es gibt keinen Fernseher.",
+        "ar": "تُري زميلك غرفتك (أو رسماً لها) وتقول ما يوجد فيها وما لا يوجد"
+      },
+      "situation": {
+        "de": "Was gibt es dort? — Hier gibt es einen Computer. Er ist an.",
+        "ar": "في الدورة: يسأل كلٌّ منكما الآخر عن غرفته: Gibt es einen Fernseher? · Gibt es eine Heizung? — ويجيب: Ja, es gibt … / Nein, es gibt keinen … · ويعمّم: Jedes Zimmer hat ein Fenster. · ويقول: Die Heizung ist aus. ثم تتبادلان."
+      },
+      "successCriteria": [
+        "خمسة أشياء بـ es gibt ومفعولٍ به صحيح (einen Schreibtisch · eine Lampe · ein Fenster · zwei Fenster) — منها اثنان منفيّان بـ keinen/keine.",
+        "سؤالان بـ Gibt es …? + جملة بـ jeder/jede/jedes + جملة بـ an أو aus (Der Computer ist an.)."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«توجد طاولة»؟",
+            "choices": [
+              "Es gibt einen Tisch.",
+              "Es gibt eine Tisch.",
+              "Es gibt einer Tisch."
+            ],
+            "a": "Es gibt einen Tisch.",
+            "why": "der Tisch مذكر ⇒ بعد es gibt مفعولٌ به: einen — لا eine (مؤنث) ولا einer."
+          },
+          {
+            "q": "«النافذة» بالألمانية مع الأداة؟",
+            "a": "das Fenster",
+            "why": "das Fenster محايد — وجمعه die Fenster بلا نهاية."
+          },
+          {
+            "q": "der Boden = ؟",
+            "choices": [
+              "الأرضية",
+              "السقف",
+              "الجدار"
+            ],
+            "a": "الأرضية",
+            "why": "der Boden = الأرضية · die Decke = السقف · die Wand = الجدار."
+          },
+          {
+            "q": "«لكلّ غرفة باب»؟",
+            "choices": [
+              "Jedes Zimmer hat eine Tür.",
+              "Jeder Zimmer hat eine Tür.",
+              "Jede Zimmer hat eine Tür."
+            ],
+            "a": "Jedes Zimmer hat eine Tür.",
+            "why": "das Zimmer محايد ⇒ jedes — نهاية das."
+          },
+          {
+            "q": "an sein: «Der Fernseher ist an.» = ؟",
+            "choices": [
+              "التلفاز مشتغل",
+              "التلفاز مطفأ",
+              "التلفاز جديد"
+            ],
+            "a": "التلفاز مشتغل",
+            "why": "an sein = أن يكون مشتغلاً: Der Fernseher ist an. · والعكس aus sein = مطفأ."
+          },
+          {
+            "q": "«الجدران» (الجمع مع الأداة)؟",
+            "a": "die Wände",
+            "why": "die Wand ← die Wände: نقطتان + ‑e (كـder Stuhl ← die Stühle)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يوجد حاسوب»؟",
+            "choices": [
+              "Es gibt einen Computer.",
+              "Es gibt eine Computer.",
+              "Es gibt einer Computer."
+            ],
+            "a": "Es gibt einen Computer.",
+            "why": "der Computer مذكر ⇒ einen بعد es gibt."
+          },
+          {
+            "q": "«التدفئة» بالألمانية مع الأداة؟",
+            "a": "die Heizung",
+            "why": "die Heizung: ‑ung في الآخر ⇒ die دائماً — وجمعها die Heizungen."
+          },
+          {
+            "q": "die Decke = ؟",
+            "choices": [
+              "السقف",
+              "الأرضية",
+              "الباب"
+            ],
+            "a": "السقف",
+            "why": "die Decke = السقف (من الداخل) · der Boden = الأرضية · die Tür = الباب."
+          },
+          {
+            "q": "«كلّ مصباح جديد»؟",
+            "choices": [
+              "Jede Lampe ist neu.",
+              "Jeder Lampe ist neu.",
+              "Jedes Lampe ist neu."
+            ],
+            "a": "Jede Lampe ist neu.",
+            "why": "die Lampe مؤنث ⇒ jede — نهاية die."
+          },
+          {
+            "q": "aus sein: «Die Heizung ist aus.» = ؟",
+            "choices": [
+              "التدفئة مطفأة",
+              "التدفئة مشتغلة",
+              "التدفئة قديمة"
+            ],
+            "a": "التدفئة مطفأة",
+            "why": "aus sein = أن يكون مطفأً: Die Heizung ist aus. · والعكس an sein = مشتغل."
+          },
+          {
+            "q": "«هل يوجد تلفاز؟»",
+            "choices": [
+              "Gibt es einen Fernseher?",
+              "Gibt es eine Fernseher?",
+              "Gibt es einer Fernseher?"
+            ],
+            "a": "Gibt es einen Fernseher?",
+            "why": "السؤال: Gibt es …? — وder Fernseher مذكر ⇒ einen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«توجد غسالة»؟",
+            "choices": [
+              "Es gibt eine Waschmaschine.",
+              "Es gibt einen Waschmaschine.",
+              "Es gibt ein Waschmaschine."
+            ],
+            "a": "Es gibt eine Waschmaschine.",
+            "why": "die Waschmaschine مؤنث ⇒ eine كما هي — لا einen (مذكر) ولا ein (محايد)."
+          },
+          {
+            "q": "«سطح البيت» بالألمانية مع الأداة؟",
+            "a": "das Dach",
+            "why": "das Dach — وجمعه die Dächer: نقطتان + ‑er (كـdas Haus ← die Häuser)."
+          },
+          {
+            "q": "die Wand = ؟",
+            "choices": [
+              "الجدار",
+              "الأرضية",
+              "السقف"
+            ],
+            "a": "الجدار",
+            "why": "die Wand = الجدار · der Boden = الأرضية · die Decke = السقف."
+          },
+          {
+            "q": "«كلّ سرير جديد»؟",
+            "choices": [
+              "Jedes Bett ist neu.",
+              "Jeder Bett ist neu.",
+              "Jede Bett ist neu."
+            ],
+            "a": "Jedes Bett ist neu.",
+            "why": "das Bett محايد ⇒ jedes."
+          },
+          {
+            "q": "«توجد نافذتان»؟",
+            "choices": [
+              "Es gibt zwei Fenster.",
+              "Es gibt zwei Fensters.",
+              "Es gibt zwei Fenstere."
+            ],
+            "a": "Es gibt zwei Fenster.",
+            "why": "gibt لا تتغيّر مع الجمع · وdas Fenster ← die Fenster بلا نهاية (‑er في الآخر)."
+          },
+          {
+            "q": "«الباب» بالألمانية مع الأداة؟",
+            "a": "die Tür",
+            "why": "die Tür مؤنث — وجمعها die Türen."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Es gibt einen Schreibtisch. · Es gibt ein Fenster. · Es gibt keine Waschmaschine. · Es gibt zwei Fenster. · Gibt es einen Fernseher? · jeder Raum · jede Wand · jedes Zimmer · Der Computer ist an. · Die Heizung ist aus.",
+      "ar": "es gibt = «يوجد»، وبعدها مفعولٌ به: المذكر وحده يتغيّر (einen · keinen)، والمؤنث والمحايد والجمع كما هي. وgibt لا تتغيّر مع الجمع، وes لا تسقط: Gibt es …? · Hier gibt es ein Fenster. وjeder · jede · jedes (كلّ) بنهاية der/die/das، للمفرد وحده. وan/aus بعد ist للجهاز: Der Computer ist an. · Die Heizung ist aus."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Es gibt ein Tisch.~~",
+          "ar": "الاسم بعد es gibt مفعولٌ به لا فاعل"
+        },
+        "whyArabicSpeakerFails": "الاسم بعد «يوجد» فاعلٌ مرفوع («يوجد مكتبٌ»)، وبعد «في الغرفة» مبتدأ مؤخر مرفوع («في الغرفة نافذةٌ») — فيبقى المتعلم على صيغة الفاعل: ein Tisch. لكن ما بعد es gibt مفعولٌ به كما بعد haben، فالمذكر يتغيّر: einen Tisch · keinen Fernseher — والمؤنث والمحايد كما هما (eine Lampe · ein Fenster) (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Es gibt einen Tisch.",
+          "ar": "توجد طاولة."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Es gibt kein Schreibtisch.~~",
+          "a": "Es gibt keinen Schreibtisch."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Gibt einen Balkon?~~",
+          "ar": "es لا تسقط"
+        },
+        "whyArabicSpeakerFails": "العربية بلا ضمير شكلي: «هل توجد شرفة؟» · «فيه بلكون؟» بلا «هو» — فيُسقط المتعلم es. والألمانية لا تترك مكان الفاعل فارغاً: es فاعلٌ شكلي بلا معنى، يأتي بعد الفعل في السؤال (Gibt es einen Balkon?) وبعد كلمة أولى (Hier gibt es ein Fenster.) — والفرنسية il y a تعين من يعرفها (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Gibt es einen Balkon?",
+          "ar": "هل توجد شرفة؟"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Hier gibt einen Kühlschrank.~~",
+          "a": "Hier gibt es einen Kühlschrank."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~jeder Zimmer~~",
+          "ar": "jed- تأخذ نهاية der/die/das"
+        },
+        "whyArabicSpeakerFails": "«كلّ» لا تتغيّر مع جنس ما بعدها («كلُّ غرفةٍ» · «كلُّ بيتٍ» · «كلُّ حجرةٍ»)، وكذلك every الإنجليزية — فيكتب المتعلم صيغة واحدة لكل الأسماء. لكن jed- تأخذ نهاية der · die · das نفسها: jeder Raum (der) · jede Wohnung (die) · jedes Zimmer (das) — وللمفرد وحده (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "jedes Zimmer",
+          "ar": "كلّ غرفة"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Jeder Fenster ist groß.~~",
+          "a": "Jedes Fenster ist groß."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "fenster",
+      "tuer",
+      "wand",
+      "boden",
+      "decke",
+      "heizung",
+      "kuehlschrank",
+      "waschmaschine",
+      "fernseher",
+      "computer",
+      "schreibtisch",
+      "dach",
+      "jeder",
+      "an-sein",
+      "aus-sein"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/geben",
+      "https://www.duden.de/rechtschreibung/jeder",
+      "https://www.duden.de/rechtschreibung/Kuehlschrank",
+      "https://www.duden.de/rechtschreibung/Waschmaschine"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/es_gibt",
+      "https://de.wiktionary.org/wiki/jeder",
+      "https://de.wiktionary.org/wiki/Fenster",
+      "https://de.wiktionary.org/wiki/Heizung"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-es-gibt"
+  ],
+  "audioManifestRefs": [
+    "word-fenster",
+    "word-tuer",
+    "word-wand",
+    "word-boden",
+    "word-decke",
+    "word-heizung",
+    "word-kuehlschrank",
+    "word-waschmaschine",
+    "word-fernseher",
+    "word-computer",
+    "word-schreibtisch",
+    "word-dach",
+    "word-jeder",
+    "word-an-sein",
+    "word-aus-sein"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 6 (Wohnen) — Es gibt",
+    "goetheWordListOverlap": [
+      "fenster",
+      "tuer",
+      "heizung",
+      "kuehlschrank",
+      "fernseher",
+      "computer",
+      "jeder",
+      "an-sein",
+      "aus-sein"
+    ]
+  }
+}

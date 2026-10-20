@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u1-d6-die-woche-ist-zu-ende",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Die Woche ist zu Ende! — Sechs Fragen, sechs Antworten",
+    "ar": "الأسبوع انتهى! — ستة أسئلة وستة أجوبة: لينا تختبر يوسف على مادة الأسبوع الأول (مَن أنت · من أين · العمر · رقم الهاتف · الأصدقاء) ويقلب الأسئلة عليها"
+  },
+  "usedIn": [
+    "a1-u1-d6"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "wm-1",
+      "speaker": "lena",
+      "text": "Yusuf, die Woche ist zu Ende!",
+      "direction": "لينا تفتح — نهاية الأسبوع الأول في الدورة ببرلين: مرحة، تعلن «لعبة الأسئلة»"
+    },
+    {
+      "id": "wm-2",
+      "speaker": "yusuf",
+      "text": "Ja! Fünf Tage Deutsch — und jetzt kommen die Fragen.",
+      "direction": "يوسف يقبل التحدي — خمسة أيام ألمانية"
+    },
+    {
+      "id": "wm-3",
+      "speaker": "lena",
+      "text": "Alles klar. Frage eins: Wer bist du?",
+      "direction": "لينا تبدأ بالسؤال الأول — نبرة معلّمة تمزح"
+    },
+    {
+      "id": "wm-4",
+      "speaker": "yusuf",
+      "text": "Ich heiße Yusuf Haddad. Ich bin Student, und ich bin neu.",
+      "direction": "يوسف يجيب بجملتين كاملتين (sein — لا جملة بلا فعل)"
+    },
+    {
+      "id": "wm-5",
+      "speaker": "lena",
+      "text": "Gut! Frage zwei: Woher kommst du?",
+      "direction": "تشجيع ثم السؤال الثاني"
+    },
+    {
+      "id": "wm-6",
+      "speaker": "yusuf",
+      "text": "Aus Tunesien. Ich spreche Arabisch, Französisch und ein bisschen Deutsch.",
+      "direction": "الجواب بـaus — ويضيف لغاته (u1-d2)"
+    },
+    {
+      "id": "wm-7",
+      "speaker": "lena",
+      "text": "Sehr gut. Frage drei ist schwer: Wie alt bist du?",
+      "direction": "تحذير مرح: السؤال «الصعب»"
+    },
+    {
+      "id": "wm-8",
+      "speaker": "yusuf",
+      "text": "Ich bin neunzehn Jahre alt. Das ist nicht schwer!",
+      "direction": "يوسف فخور: العمر بـbin … Jahre alt (لا habe)"
+    },
+    {
+      "id": "wm-9",
+      "speaker": "lena",
+      "text": "Frage vier: Wie ist deine Telefonnummer?",
+      "direction": "السؤال الرابع: رقم الهاتف (u1-d4)"
+    },
+    {
+      "id": "wm-10",
+      "speaker": "yusuf",
+      "text": "Meine Nummer ist null, eins, sieben, drei, neun, acht, zwei.",
+      "direction": "يقرأ الأرقام رقماً رقماً بهدوء"
+    },
+    {
+      "id": "wm-11",
+      "speaker": "lena",
+      "text": "Wie bitte? Bitte langsam!",
+      "direction": "تطلب الإعادة ببطء (u1-d3: Wie bitte? · langsam)"
+    },
+    {
+      "id": "wm-12",
+      "speaker": "yusuf",
+      "text": "Null, eins, sieben, drei, neun, acht, zwei. Alles klar?",
+      "direction": "يعيد أبطأ ثم يسأل بالقطعة الجديدة Alles klar?"
+    },
+    {
+      "id": "wm-13",
+      "speaker": "lena",
+      "text": "Alles klar! Frage fünf: Wer ist Nabil?",
+      "direction": "تؤكد بالقطعة نفسها وتنتقل إلى نبيل (u1-d5)"
+    },
+    {
+      "id": "wm-14",
+      "speaker": "yusuf",
+      "text": "Nabil ist ein Freund aus Tunesien. Er ist Schüler, und wir sprechen oft zusammen Deutsch.",
+      "direction": "يعرّف بصديقه — Schüler لا Student"
+    },
+    {
+      "id": "wm-15",
+      "speaker": "lena",
+      "text": "Und wie alt ist er? Das weißt du nicht!",
+      "direction": "تضحك: إشارة إلى حوار u1-d5 (Das weiß ich nicht)"
+    },
+    {
+      "id": "wm-16",
+      "speaker": "yusuf",
+      "text": "Doch, jetzt weiß ich das: Er ist sechzehn.",
+      "direction": "يرد بـDoch — يعرف الآن"
+    },
+    {
+      "id": "wm-17",
+      "speaker": "lena",
+      "text": "Genau wie ich! Sechs Fragen, sechs Antworten — sehr gut, Yusuf.",
+      "direction": "تعلن النتيجة: ست أسئلة وست أجوبة"
+    },
+    {
+      "id": "wm-18",
+      "speaker": "yusuf",
+      "text": "Danke! Und jetzt du: Wie heißt du, woher kommst du, wie alt bist du?",
+      "direction": "يقلب الأسئلة الثلاثة عليها دفعة واحدة"
+    },
+    {
+      "id": "wm-19",
+      "speaker": "lena",
+      "text": "Ich heiße Lena, ich komme aus Deutschland, und ich bin sechzehn. Tschüss, Yusuf!",
+      "direction": "تجيب بثلاث جمل في سطر واحد ثم تودّع"
+    },
+    {
+      "id": "wm-20",
+      "speaker": "yusuf",
+      "text": "Tschüss, Lena! Bis morgen!",
+      "direction": "وداع بالقطعة الجديدة Bis morgen!"
+    }
+  ]
+}

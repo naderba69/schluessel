@@ -1,0 +1,970 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u9-d5",
+  "level": "A1",
+  "unit": 9,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Heute fahre ich mit dem Bus in die Stadt. · Ich steige am Bahnhof aus. · Der Bus kommt um neun an. · Ich muss am Hauptbahnhof umsteigen. · Hält der Bus im Zentrum?",
+    "ar": "تسمّي هيكل الجملة الذي تستعمله منذ الوحدة الأولى — قوس الجملة (Satzklammer): الفعل المصرَّف ثانياً دائماً (وإن بدأت بالزمن انقلب الفاعل بعده: Heute fahre ich …) والجزء الثاني يغلق القوس في الآخر (steige … aus · kommt … an · fährt … weiter · muss … umsteigen) — وفي السؤال الفعل أولاً أو بعد الأداة والقوس باقٍ · وترتيب الظروف داخله: الزمن ← الكيفية ← المكان (heute mit dem Bus in die Stadt · jeden Tag um sieben mit dem Zug zur Schule) — ومعها كلمات الطريق: bald · pünktlich · der Stau · der Grund · die Verbindung · der Fahrplan · andere · weiter · halten (hält) · die Polizei · die Stelle."
+  },
+  "canDoDaily": [
+    "يصف رحلة بجملة واحدة مرتّبة: Ich fahre heute mit dem Bus in die Stadt. · Heute fahre ich mit dem Bus in die Stadt. · Ich fahre jeden Tag um sieben mit dem Zug zur Schule. · Morgen gehe ich um zehn zu Fuß ans Ufer. — والفعل ثانياً مهما بدأ.",
+    "يغلق القوس في الآخر ويسأل داخله: Ich steige am Bahnhof aus. · Der Bus kommt um neun an. · Bald fahren wir weiter. · Ich muss am Hauptbahnhof umsteigen. · Hält der Bus im Zentrum? · Wann kommt der Bus an? — ويشرح التأخر: Heute ist Stau — das ist der Grund. · Der Bus kommt nicht pünktlich an."
+  ],
+  "warmup": {
+    "cardIds": [
+      "morgen",
+      "abfahrt",
+      "umsteigen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«غداً أسافر إلى المحطة» — أي ترتيب صحيح بعد كلمة morgen؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Morgen fahre ich zum Bahnhof.",
+          "Morgen ich fahre zum Bahnhof.",
+          "Ich morgen fahre zum Bahnhof."
+        ],
+        "answer": "Morgen fahre ich zum Bahnhof.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "bald",
+      "puenktlich",
+      "stau",
+      "grund",
+      "verbindung",
+      "fahrplan",
+      "andere",
+      "weiter",
+      "halten",
+      "polizei",
+      "stelle"
+    ],
+    "grammarArsenalIds": [
+      "ars-satzklammer",
+      "ars-tekamolo"
+    ],
+    "storySentenceIds": [
+      "story-a1-u9-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "auslaut-d",
+      "ch-ich-laut",
+      "double-consonant",
+      "r-uvular",
+      "sp-st-initial",
+      "umlaut-u",
+      "v-f",
+      "vowel-long-short",
+      "z"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Heute ___ ich mit dem Bus in die Stadt. (fahren — الفعل ثانياً)",
+            "a": "fahre",
+            "why": "heute في الموضع الأول ← الفعل المصرَّف ثانياً ← الفاعل ich بعده (القلب)."
+          },
+          {
+            "q": "Morgen gehe ___ um zehn ans Ufer. (الفاعل: أنا)",
+            "a": "ich",
+            "why": "بعد الزمن المتقدّم يأتي الفاعل بعد الفعل مباشرة — لا قبله."
+          },
+          {
+            "q": "Bei uns ___ der Zug immer pünktlich. (sein)",
+            "a": "ist",
+            "why": "Bei uns في الموضع الأول ← ist ثانياً ← الفاعل der Zug بعده."
+          },
+          {
+            "q": "Ich steige am Bahnhof ___. (aussteigen — الجزء المنفصل)",
+            "a": "aus",
+            "why": "القوس: steige يفتح وaus يغلق في الآخر — am Bahnhof بينهما."
+          },
+          {
+            "q": "Der Bus kommt um neun am Bahnhof ___. (ankommen)",
+            "a": "an",
+            "why": "kommt … an: الجزء المنفصل آخر الجملة بعد الزمن والمكان."
+          },
+          {
+            "q": "Bald fahren wir ___. (مواصلة)",
+            "a": "weiter",
+            "why": "weiter يغلق القوس كجزء منفصل (weiterfahren) — وbald تقدّم فجاء wir بعد الفعل."
+          },
+          {
+            "q": "Ich muss am Hauptbahnhof ___. (umsteigen — بعد muss)",
+            "a": "umsteigen",
+            "why": "بعد المودال يعود الفعل كاملاً مصدراً إلى آخر القوس (الوحدة 8)."
+          },
+          {
+            "q": "Du kannst hier ___. (aussteigen — بعد kannst)",
+            "a": "aussteigen",
+            "why": "kannst يفتح القوس والمصدر aussteigen يغلقه — لا ينفصل بعد المودال."
+          },
+          {
+            "q": "___ der Bus im Zentrum? (halten — سؤال نعم/لا)",
+            "a": "Hält",
+            "why": "سؤال نعم/لا: الفعل أولاً — وhalten مع er: hält (a → ä كـfährt)."
+          },
+          {
+            "q": "Der Bus ___ hier nicht. (halten)",
+            "a": "hält",
+            "why": "er/sie/es hält — تغيّر الحركة a → ä كما fahren/fährt."
+          },
+          {
+            "q": "Wann ___ der Bus an? (ankommen)",
+            "a": "kommt",
+            "why": "سؤال بأداة: Wann ثم الفعل ثم الفاعل — وan يبقى في الآخر."
+          },
+          {
+            "q": "Ich fahre heute ___ dem Bus in die Stadt. (الكيفية)",
+            "a": "mit",
+            "why": "الكيفية بـmit + الداتيف (dem Bus) — بعد الزمن heute وقبل المكان."
+          },
+          {
+            "q": "Ich fahre jeden Tag um sieben mit dem Zug ___ Schule. (إلى — zu der)",
+            "a": "zur",
+            "why": "المكان آخر الثلاثة: zu der = zur (die Schule) — من الوحدة 8."
+          },
+          {
+            "q": "Heute ist ___ auf der Straße. (الازدحام)",
+            "a": "Stau",
+            "why": "der Stau = الازدحام — Heute ist Stau بلا أداة كـHeute ist Verkehr."
+          },
+          {
+            "q": "Das ist der ___. (السبب)",
+            "a": "Grund",
+            "why": "der Grund = السبب — مذكر (الجمع Gründe)."
+          },
+          {
+            "q": "Die ___ zum Flughafen ist gut. (الربط بين وسيلتين)",
+            "a": "Verbindung",
+            "why": "die Verbindung = الرحلة/الربط بين وسيلتين — ‑ung مؤنث دائماً."
+          },
+          {
+            "q": "Im ___ steht: um neun Uhr. (الجدول)",
+            "a": "Fahrplan",
+            "why": "der Fahrplan = جدول المواعيد — im (in dem) لأنه مكانٌ للمعلومة."
+          },
+          {
+            "q": "Der Bus kommt heute nicht ___ an. (في الموعد)",
+            "a": "pünktlich",
+            "why": "pünktlich = في الموعد — داخل القوس قبل an، وnicht قبلها."
+          },
+          {
+            "q": "Der Zug kommt ___. (قريباً)",
+            "a": "bald",
+            "why": "bald = قريباً — ظرف زمن، ويتقدّم أيضاً: Bald fahren wir weiter."
+          },
+          {
+            "q": "Die ___ steht an der Kreuzung. (الشرطة)",
+            "a": "Polizei",
+            "why": "die Polizei = الشرطة — مفرد والفعل معها مفرد (steht)."
+          },
+          {
+            "q": "An dieser ___ hält der Bus nicht. (الموضع)",
+            "a": "Stelle",
+            "why": "die Stelle = الموضع/المكان — an dieser Stelle بالداتيف (Wo?)."
+          },
+          {
+            "q": "Die Haltestelle ist auf der ___ Seite. (الآخر)",
+            "a": "anderen",
+            "why": "andere كقطعة ثابتة: auf der anderen Seite (الجانب الآخر)."
+          },
+          {
+            "q": "Ich fahre heute Abend um sechs mit dem Bus ___. (عودة — في آخر القوس)",
+            "a": "zurück",
+            "why": "zurück يغلق القوس في الآخر — والترتيب قبله: الزمن (heute Abend um sechs) ← الكيفية (mit dem Bus)."
+          }
+        ],
+        "interleavedWith": [
+          "heute",
+          "morgen",
+          "bus",
+          "zug",
+          "bahnhof",
+          "hauptbahnhof",
+          "zentrum",
+          "schule",
+          "kreuzung",
+          "haltestelle",
+          "seite",
+          "ufer",
+          "flughafen",
+          "strasse",
+          "uhr",
+          "abend",
+          "hier"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "st-1",
+            "speakText": "Hallo Lena! Entschuldigung, ich bin spät. Ich bin noch im Bus.",
+            "q": "استمع: أين يوسف ولماذا يعتذر؟",
+            "choices": [
+              "ما زال في الحافلة — وهو متأخر",
+              "في البيت — ونسي الدورة",
+              "في المطار — والطائرة متأخرة"
+            ],
+            "a": "ما زال في الحافلة — وهو متأخر",
+            "why": "Entschuldigung, ich bin spät. Ich bin noch im Bus. = أنا متأخر، ما زلت في الحافلة."
+          },
+          {
+            "audioId": "st-2",
+            "speakText": "Im Bus? Wohin fährst du?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "إلى أين يسافر",
+              "أين الحافلة",
+              "كم تكلّف التذكرة"
+            ],
+            "a": "إلى أين يسافر",
+            "why": "Wohin fährst du? = إلى أين تسافر؟"
+          },
+          {
+            "audioId": "st-3",
+            "speakText": "Ich fahre heute mit meinem Vater in die Stadt. Aber der Bus steht — heute ist Stau.",
+            "q": "استمع: مع من وإلى أين — ولماذا الحافلة واقفة؟",
+            "choices": [
+              "مع أبيه إلى المدينة — اليوم ازدحام",
+              "مع أخته إلى الضفة — الحافلة معطّلة",
+              "وحده إلى المحطة — الشرطة أوقفتها"
+            ],
+            "a": "مع أبيه إلى المدينة — اليوم ازدحام",
+            "why": "Ich fahre heute mit meinem Vater in die Stadt (الزمن ← الكيفية ← المكان) · heute ist Stau (القلب بعد heute)."
+          },
+          {
+            "audioId": "st-4",
+            "speakText": "Stau? Das ist der Grund! Und wo steht der Bus jetzt?",
+            "q": "استمع: ماذا تقول لينا عن الازدحام؟",
+            "choices": [
+              "هذا هو السبب — وتسأل أين تقف الحافلة",
+              "ليس سبباً — وتغضب",
+              "تسأل كم يدوم"
+            ],
+            "a": "هذا هو السبب — وتسأل أين تقف الحافلة",
+            "why": "Das ist der Grund! (هذا هو السبب) · Wo steht der Bus jetzt? (أين تقف الحافلة الآن؟)"
+          },
+          {
+            "audioId": "st-5",
+            "speakText": "An der Kreuzung vor der Brücke. Die Polizei steht da, und der Bus fährt nicht mehr weiter.",
+            "q": "استمع: أين تقف الحافلة، ومن هناك؟",
+            "choices": [
+              "عند التقاطع أمام الجسر — الشرطة، والحافلة لا تواصل",
+              "في النفق — الإسعاف",
+              "عند المحطة — السائق ينتظر"
+            ],
+            "a": "عند التقاطع أمام الجسر — الشرطة، والحافلة لا تواصل",
+            "why": "An der Kreuzung vor der Brücke · Die Polizei steht da · der Bus fährt nicht mehr weiter (weiter يغلق القوس)."
+          },
+          {
+            "audioId": "st-6",
+            "speakText": "Die Polizei? Ist da ein Problem?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل هناك مشكلة",
+              "هل الشرطة لطيفة",
+              "هل الجسر مغلق"
+            ],
+            "a": "هل هناك مشكلة",
+            "why": "Ist da ein Problem? = هل هناك مشكلة؟"
+          },
+          {
+            "audioId": "st-7",
+            "speakText": "Ja, ein Auto steht auf der Straße. Aber kein Problem — bald fahren wir weiter.",
+            "q": "استمع: ما المشكلة، ومتى يواصلون؟",
+            "choices": [
+              "سيارة على الشارع — قريباً يواصلون",
+              "الجسر مكسور — غداً",
+              "لا مشكلة — الآن"
+            ],
+            "a": "سيارة على الشارع — قريباً يواصلون",
+            "why": "ein Auto steht auf der Straße · Bald fahren wir weiter (bald أولاً ← الفعل ثانياً ← weiter في الآخر)."
+          },
+          {
+            "audioId": "st-8",
+            "speakText": "Hält der Bus im Zentrum?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل تتوقف الحافلة في المركز",
+              "هل تتوقف الحافلة عند الجسر",
+              "هل الحافلة سريعة"
+            ],
+            "a": "هل تتوقف الحافلة في المركز",
+            "why": "Hält der Bus im Zentrum? — سؤال نعم/لا: الفعل أولاً (hält)."
+          },
+          {
+            "audioId": "st-9",
+            "speakText": "Nein, er hält nicht im Zentrum. Ich steige am Bahnhof aus — die Haltestelle ist auf der anderen Seite.",
+            "q": "استمع: أين ينزل يوسف، وأين الموقف؟",
+            "choices": [
+              "عند المحطة — والموقف على الجانب الآخر",
+              "في المركز — والموقف أمام البنك",
+              "عند الجسر — والموقف قريب"
+            ],
+            "a": "عند المحطة — والموقف على الجانب الآخر",
+            "why": "er hält nicht im Zentrum · Ich steige am Bahnhof aus (القوس) · auf der anderen Seite."
+          },
+          {
+            "audioId": "st-10",
+            "speakText": "Und der Fahrplan? Wann kommt der Bus am Bahnhof an?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "الجدول — متى تصل الحافلة عند المحطة",
+              "السعر — كم التذكرة",
+              "الشرطة — ماذا تفعل"
+            ],
+            "a": "الجدول — متى تصل الحافلة عند المحطة",
+            "why": "Und der Fahrplan? (والجدول؟) · Wann kommt der Bus am Bahnhof an? (متى تصل — القوس kommt … an)."
+          },
+          {
+            "audioId": "st-11",
+            "speakText": "Im Fahrplan steht: um neun Uhr. Aber heute kommt er nicht pünktlich an.",
+            "q": "استمع: ماذا في الجدول، وهل تصل في الموعد؟",
+            "choices": [
+              "التاسعة — لا، اليوم ليست في الموعد",
+              "الثامنة — نعم",
+              "العاشرة — لا أحد يعرف"
+            ],
+            "a": "التاسعة — لا، اليوم ليست في الموعد",
+            "why": "Im Fahrplan steht: um neun Uhr (في الجدول: التاسعة) · heute kommt er nicht pünktlich an (اليوم لا تصل في الموعد)."
+          },
+          {
+            "audioId": "st-12",
+            "speakText": "Bei uns ist der Zug immer pünktlich. Ich fahre jeden Tag um sieben mit dem Zug zur Schule.",
+            "q": "استمع: كيف تسافر لينا إلى المدرسة؟",
+            "choices": [
+              "كل يوم في السابعة بالقطار",
+              "بالحافلة في الثامنة",
+              "مشياً كل يوم"
+            ],
+            "a": "كل يوم في السابعة بالقطار",
+            "why": "Ich fahre jeden Tag um sieben mit dem Zug zur Schule — الزمن ← الكيفية ← المكان."
+          },
+          {
+            "audioId": "st-13",
+            "speakText": "Jeden Tag um sieben mit dem Zug zur Schule — zuerst: wann? Danach: wie? Am Ende: wohin?",
+            "q": "استمع: أي ترتيب يستخرج يوسف؟",
+            "choices": [
+              "أولاً: متى؟ بعد ذلك: كيف؟ في النهاية: إلى أين؟",
+              "أولاً: إلى أين؟ ثم متى؟",
+              "أولاً: كيف؟ ثم متى؟"
+            ],
+            "a": "أولاً: متى؟ بعد ذلك: كيف؟ في النهاية: إلى أين؟",
+            "why": "zuerst: wann? Danach: wie? Am Ende: wohin? — ترتيب الظروف."
+          },
+          {
+            "audioId": "st-14",
+            "speakText": "Genau: Wann? Wie? Wohin? — Und du? Wann fährst du zurück?",
+            "q": "استمع: ماذا تسأل لينا بعد التأكيد؟",
+            "choices": [
+              "متى يعود",
+              "متى يأكل",
+              "متى ينام"
+            ],
+            "a": "متى يعود",
+            "why": "Wann fährst du zurück? — القوس fährst … zurück."
+          },
+          {
+            "audioId": "st-15",
+            "speakText": "Ich fahre heute Abend um sechs mit dem Bus zurück. Die Verbindung ist gut, ich muss nicht umsteigen.",
+            "q": "استمع: متى وكيف يعود، وهل يغيّر؟",
+            "choices": [
+              "مساء اليوم في السادسة بالحافلة — لا يغيّر",
+              "غداً صباحاً بالقطار — يغيّر مرة",
+              "الليلة بسيارة أجرة — لا"
+            ],
+            "a": "مساء اليوم في السادسة بالحافلة — لا يغيّر",
+            "why": "heute Abend um sechs mit dem Bus zurück (مساء اليوم في السادسة بالحافلة) · Die Verbindung ist gut, ich muss nicht umsteigen (لا يجب أن أغيّر)."
+          },
+          {
+            "audioId": "st-17",
+            "speakText": "Morgen gehe ich um zehn mit meiner Schwester zu Fuß ans Ufer.",
+            "q": "استمع: ماذا يفعل يوسف غداً؟",
+            "choices": [
+              "في العاشرة يذهب مع أخته مشياً إلى الضفة",
+              "في الثامنة يسافر بالحافلة إلى المدينة",
+              "يبقى في البيت"
+            ],
+            "a": "في العاشرة يذهب مع أخته مشياً إلى الضفة",
+            "why": "Morgen gehe ich um zehn mit meiner Schwester zu Fuß ans Ufer — القلب بعد Morgen + الزمن ← الكيفية ← المكان."
+          },
+          {
+            "audioId": "st-18",
+            "speakText": "Super! Fährt der Bus jetzt weiter?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل تواصل الحافلة الآن",
+              "هل الشرطة ما زالت هناك",
+              "هل وصل إلى المدينة"
+            ],
+            "a": "هل تواصل الحافلة الآن",
+            "why": "Fährt der Bus jetzt weiter? (هل تواصل الحافلة الآن؟) — سؤال نعم/لا وweiter في الآخر."
+          },
+          {
+            "audioId": "st-19",
+            "speakText": "Ja! Die Polizei ist weg, und der Bus fährt weiter. An der nächsten Stelle steige ich aus.",
+            "q": "استمع: ماذا حدث، وأين ينزل يوسف؟",
+            "choices": [
+              "الشرطة ذهبت والحافلة تواصل — ينزل عند الموضع التالي",
+              "الشرطة أوقفت الحافلة — ينزل هنا",
+              "الحافلة عادت — ينزل عند البيت"
+            ],
+            "a": "الشرطة ذهبت والحافلة تواصل — ينزل عند الموضع التالي",
+            "why": "Die Polizei ist weg (الشرطة ذهبت) · der Bus fährt weiter · An der nächsten Stelle steige ich aus (عند الموضع التالي أنزل)."
+          },
+          {
+            "audioId": "st-20",
+            "speakText": "Bis bald, Yusuf — und viel Spaß in der Stadt!",
+            "q": "استمع: كيف تودّع لينا؟",
+            "choices": [
+              "إلى اللقاء قريباً — واستمتع في المدينة",
+              "إلى الغد — ونامي جيداً",
+              "وداعاً — ولا تتأخر"
+            ],
+            "a": "إلى اللقاء قريباً — واستمتع في المدينة",
+            "why": "Bis bald (إلى اللقاء قريباً) · viel Spaß in der Stadt! (استمتع في المدينة)"
+          }
+        ],
+        "interleavedWith": [
+          "bus",
+          "vater",
+          "schwester",
+          "stadt",
+          "kreuzung",
+          "auto",
+          "problem",
+          "zentrum",
+          "bahnhof",
+          "haltestelle",
+          "seite",
+          "schule",
+          "zug",
+          "abend",
+          "ufer",
+          "spass",
+          "zuerst",
+          "danach",
+          "morgen",
+          "heute",
+          "wohin"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Stadt.",
+              "fahre",
+              "in",
+              "Heute",
+              "ich",
+              "die"
+            ],
+            "a": "Heute fahre ich in die Stadt.",
+            "why": "Heute أولاً ← fahre ثانياً ← ich (القلب) ← in die Stadt."
+          },
+          {
+            "tokens": [
+              "aus.",
+              "am",
+              "steige",
+              "Ich",
+              "Bahnhof"
+            ],
+            "a": "Ich steige am Bahnhof aus.",
+            "why": "Ich ← steige ← am Bahnhof ← aus يغلق القوس."
+          },
+          {
+            "tokens": [
+              "an.",
+              "kommt",
+              "um",
+              "Bus",
+              "neun",
+              "Der"
+            ],
+            "a": "Der Bus kommt um neun an.",
+            "why": "Der Bus ← kommt ← um neun ← an في الآخر."
+          },
+          {
+            "tokens": [
+              "umsteigen.",
+              "am",
+              "muss",
+              "Ich",
+              "Hauptbahnhof"
+            ],
+            "a": "Ich muss am Hauptbahnhof umsteigen.",
+            "why": "muss ثانياً ← am Hauptbahnhof ← المصدر umsteigen يغلق القوس."
+          },
+          {
+            "tokens": [
+              "Stadt.",
+              "mit",
+              "fahre",
+              "Ich",
+              "heute",
+              "dem",
+              "Bus",
+              "in",
+              "die"
+            ],
+            "a": "Ich fahre heute mit dem Bus in die Stadt.",
+            "why": "بعد الفعل والفاعل: heute (الزمن) ← mit dem Bus (الكيفية) ← in die Stadt (المكان)."
+          },
+          {
+            "tokens": [
+              "Zentrum?",
+              "der",
+              "Hält",
+              "Bus",
+              "im"
+            ],
+            "a": "Hält der Bus im Zentrum?",
+            "why": "سؤال نعم/لا: Hält أولاً ← der Bus ← im Zentrum."
+          }
+        ],
+        "interleavedWith": [
+          "stadt",
+          "bahnhof",
+          "bus",
+          "hauptbahnhof",
+          "zentrum",
+          "heute"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "st-16",
+            "speakText": "Gut! Und morgen?",
+            "a": "Gut! Und morgen?",
+            "why": "Gut بحرف كبير · Und بحرف كبير بعد علامة التعجب · morgen بحرف صغير (ظرف: غداً) وعلامة استفهام."
+          },
+          {
+            "audioId": "word-polizei",
+            "speakText": "die Polizei.",
+            "a": "die Polizei.",
+            "why": "die Polizei: ei في الآخر والنبر عليها — مؤنث مفرد."
+          },
+          {
+            "audioId": "word-stelle",
+            "speakText": "die Stelle.",
+            "a": "die Stelle.",
+            "why": "die Stelle: St تُنطق شت · ll مضاعفة (e قصيرة)."
+          },
+          {
+            "audioId": "word-halten",
+            "speakText": "halten.",
+            "a": "halten.",
+            "why": "halten: h منطوقة · a قصيرة قبل lt."
+          },
+          {
+            "audioId": "word-weiter",
+            "speakText": "weiter.",
+            "a": "weiter.",
+            "why": "weiter: w تُنطق v · ei = آي · ‑er في الآخر."
+          },
+          {
+            "audioId": "word-andere",
+            "speakText": "andere.",
+            "a": "andere.",
+            "why": "andere: ثلاثة مقاطع an-de-re — النبر على الأول."
+          },
+          {
+            "audioId": "word-stau",
+            "speakText": "der Stau.",
+            "a": "der Stau.",
+            "why": "der Stau: St = شت · au = آو — مذكر."
+          },
+          {
+            "audioId": "word-grund",
+            "speakText": "der Grund.",
+            "a": "der Grund.",
+            "why": "der Grund: d في الآخر تُنطق t — مذكر."
+          },
+          {
+            "audioId": "word-verbindung",
+            "speakText": "die Verbindung.",
+            "a": "die Verbindung.",
+            "why": "die Verbindung: V تُنطق f · ‑ung مؤنث دائماً."
+          },
+          {
+            "audioId": "word-fahrplan",
+            "speakText": "der Fahrplan.",
+            "a": "der Fahrplan.",
+            "why": "der Fahrplan: ah طويلة · Fahr + Plan — مذكر كـder Plan."
+          }
+        ],
+        "interleavedWith": [
+          "morgen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wann fährst du? Wie fährst du? Wohin fährst du? — Ich fahre heute um acht mit dem Bus in die Stadt. · Ich steige am Bahnhof aus. · Der Bus kommt um neun an. · Hält der Bus im Zentrum?",
+        "ar": "تصف لزميلك رحلتك اليومية أو رحلة الغد في جملة واحدة مرتّبة (متى؟ كيف؟ إلى أين؟) وتجيب عن أسئلته داخل القوس (أين تنزل؟ متى تصل؟ هل تغيّر؟ هل تتوقف الحافلة؟) — وتشرح تأخراً: الازدحام هو السبب"
+      },
+      "situation": {
+        "de": "Im Kurs, auf dem Handy: Wann fährst du morgen? — Morgen fahre ich um acht mit dem Bus in die Stadt. · Wo steigst du aus? — Ich steige am Bahnhof aus. · Musst du umsteigen? — Nein, die Verbindung ist gut. · Kommt der Bus pünktlich an? — Heute nicht, es ist Stau. Das ist der Grund.",
+        "ar": "في الدورة، على الهاتف: أحدكما يسأل Wann fährst du morgen? · Wie fährst du? · Wohin fährst du? · Wo steigst du aus? · Wann kommt der Bus an? · Musst du umsteigen? · Hält der Bus im Zentrum? والآخر يجيب بجمل كاملة: Morgen fahre ich um acht mit dem Bus in die Stadt. · Ich steige am Bahnhof aus. · Der Bus kommt um neun an. · Nein, ich muss nicht umsteigen — die Verbindung ist gut. · Nein, er hält nicht im Zentrum. · Heute ist Stau — der Bus kommt nicht pünktlich an. — ثم تتبادلان."
+      },
+      "successCriteria": [
+        "جملة رحلة واحدة بالترتيب الزمن ← الكيفية ← المكان (heute um acht · mit dem Bus · in die Stadt) — مرة بالفاعل أولاً ومرة بالزمن أولاً والفعل ثانياً في الحالتين (Morgen fahre ich …).",
+        "أربع جمل بقوس مغلق: جزء منفصل في الآخر (steige … aus · kommt … an · fährt … weiter) · مصدر بعد muss/kann (muss … umsteigen) · سؤال نعم/لا بالفعل أولاً (Hält der Bus …?) — ومع hält لا haltet · وشرح التأخر بـStau وGrund وpünktlich."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«اليوم أسافر إلى المدرسة» (الفعل ثانياً)؟",
+            "choices": [
+              "Heute fahre ich zur Schule.",
+              "Heute ich fahre zur Schule.",
+              "Heute fahre zur Schule ich."
+            ],
+            "a": "Heute fahre ich zur Schule.",
+            "why": "بعد heute الفعل ثانياً ثم الفاعل مباشرة — القلب."
+          },
+          {
+            "q": "«الحافلة تصل في العاشرة»؟",
+            "choices": [
+              "Der Bus kommt um zehn an.",
+              "Der Bus kommt an um zehn.",
+              "Der Bus ankommt um zehn."
+            ],
+            "a": "Der Bus kommt um zehn an.",
+            "why": "القوس: kommt … an — الجزء المنفصل في الآخر، لا مع الفعل ولا متصلاً به."
+          },
+          {
+            "q": "der Stau = ؟",
+            "choices": [
+              "الازدحام",
+              "السبب",
+              "الجدول"
+            ],
+            "a": "الازدحام",
+            "why": "der Stau = الازدحام · der Grund = السبب · der Fahrplan = الجدول."
+          },
+          {
+            "q": "«يجب أن أنزل هنا»؟",
+            "choices": [
+              "Ich muss hier aussteigen.",
+              "Ich muss aussteigen hier.",
+              "Ich muss hier steige aus."
+            ],
+            "a": "Ich muss hier aussteigen.",
+            "why": "بعد muss المصدر كاملاً في آخر القوس — hier بينهما."
+          },
+          {
+            "q": "«أسافر غداً بالقطار إلى برلين» (الترتيب)؟",
+            "choices": [
+              "Ich fahre morgen mit dem Zug nach Berlin.",
+              "Ich fahre mit dem Zug morgen nach Berlin.",
+              "Ich fahre nach Berlin morgen mit dem Zug."
+            ],
+            "a": "Ich fahre morgen mit dem Zug nach Berlin.",
+            "why": "الزمن (morgen) ← الكيفية (mit dem Zug) ← المكان (nach Berlin)."
+          },
+          {
+            "q": "«هل يتوقف القطار هنا؟»؟",
+            "choices": [
+              "Hält der Zug hier?",
+              "Haltet der Zug hier?",
+              "Halt der Zug hier?"
+            ],
+            "a": "Hält der Zug hier?",
+            "why": "halten مع er/sie/es: hält — a → ä كـfährt؛ وسؤال نعم/لا بالفعل أولاً."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«غداً أذهب إلى الضفة»؟",
+            "choices": [
+              "Morgen gehe ich ans Ufer.",
+              "Morgen ich gehe ans Ufer.",
+              "Morgen gehe ans Ufer ich."
+            ],
+            "a": "Morgen gehe ich ans Ufer.",
+            "why": "Morgen أولاً ← gehe ثانياً ← ich بعده — لا قبل الفعل ولا في الآخر."
+          },
+          {
+            "q": "«متى تصل (أنت)؟»؟",
+            "choices": [
+              "Wann kommst du an?",
+              "Wann ankommst du?",
+              "Wann kommst an du?"
+            ],
+            "a": "Wann kommst du an?",
+            "why": "سؤال بأداة: Wann ← kommst ← du — وan يغلق القوس في الآخر."
+          },
+          {
+            "q": "die Verbindung = ؟",
+            "choices": [
+              "الرحلة الموصولة",
+              "الجدول",
+              "الموضع"
+            ],
+            "a": "الرحلة الموصولة",
+            "why": "die Verbindung = الرحلة/الربط · der Fahrplan = الجدول · die Stelle = الموضع."
+          },
+          {
+            "q": "«الشرطة واقفة عند الجسر»؟",
+            "choices": [
+              "Die Polizei steht an der Brücke.",
+              "Die Polizei stehen an der Brücke.",
+              "Die Polizei steht an die Brücke."
+            ],
+            "a": "Die Polizei steht an der Brücke.",
+            "why": "die Polizei مفرد ← steht (لا stehen) · وstehen = مكان ← an der Brücke (الداتيف — u9-d4)."
+          },
+          {
+            "q": "«نذهب مساءً مشياً إلى الضفة» (الترتيب)؟",
+            "choices": [
+              "Wir gehen am Abend zu Fuß ans Ufer.",
+              "Wir gehen zu Fuß am Abend ans Ufer.",
+              "Wir gehen ans Ufer am Abend zu Fuß."
+            ],
+            "a": "Wir gehen am Abend zu Fuß ans Ufer.",
+            "why": "الزمن (am Abend) ← الكيفية (zu Fuß) ← المكان (ans Ufer)."
+          },
+          {
+            "q": "«الحافلة لا تواصل اليوم»؟",
+            "choices": [
+              "Der Bus fährt heute nicht weiter.",
+              "Der Bus fährt nicht weiter heute.",
+              "Der Bus fährt heute weiter nicht."
+            ],
+            "a": "Der Bus fährt heute nicht weiter.",
+            "why": "weiter يغلق القوس في الآخر — heute وnicht بينهما، ولا يتصل weiter بالفعل المصرَّف."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«عندنا القطار في الموعد»؟",
+            "choices": [
+              "Bei uns ist der Zug pünktlich.",
+              "Bei uns der Zug ist pünktlich.",
+              "Bei uns ist pünktlich der Zug."
+            ],
+            "a": "Bei uns ist der Zug pünktlich.",
+            "why": "Bei uns في الموضع الأول ← ist ثانياً ← الفاعل der Zug ← pünktlich."
+          },
+          {
+            "q": "«يمكنك التغيير في المحطة»؟",
+            "choices": [
+              "Du kannst am Bahnhof umsteigen.",
+              "Du kannst umsteigen am Bahnhof.",
+              "Du kannst am Bahnhof steigst um."
+            ],
+            "a": "Du kannst am Bahnhof umsteigen.",
+            "why": "بعد kannst المصدر umsteigen كاملاً في آخر القوس."
+          },
+          {
+            "q": "die Stelle = ؟",
+            "choices": [
+              "الموضع",
+              "الشرطة",
+              "الجانب"
+            ],
+            "a": "الموضع",
+            "why": "die Stelle = الموضع/المكان · die Polizei = الشرطة · die Seite = الجانب."
+          },
+          {
+            "q": "«هل الموقف على الجانب الآخر؟»؟",
+            "choices": [
+              "Ist die Haltestelle auf der anderen Seite?",
+              "Die Haltestelle auf der anderen Seite ist?",
+              "Ist die Haltestelle auf der anderen Seite steht?"
+            ],
+            "a": "Ist die Haltestelle auf der anderen Seite?",
+            "why": "سؤال نعم/لا: ist أولاً ← die Haltestelle ← auf der anderen Seite (قطعة andere الثابتة)."
+          },
+          {
+            "q": "«أبي يسافر صباحاً بالسيارة إلى العمل» (الترتيب)؟",
+            "choices": [
+              "Mein Vater fährt am Morgen mit dem Auto zur Arbeit.",
+              "Mein Vater fährt mit dem Auto am Morgen zur Arbeit.",
+              "Mein Vater fährt zur Arbeit am Morgen mit dem Auto."
+            ],
+            "a": "Mein Vater fährt am Morgen mit dem Auto zur Arbeit.",
+            "why": "الزمن (am Morgen) ← الكيفية (mit dem Auto) ← المكان (zur Arbeit)."
+          },
+          {
+            "q": "«ما السبب؟»؟",
+            "choices": [
+              "Was ist der Grund?",
+              "Was ist die Grund?",
+              "Was ist das Grund?"
+            ],
+            "a": "Was ist der Grund?",
+            "why": "der Grund مذكر — Was ist der Grund?"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Ich fahre heute in die Stadt. · Heute fahre ich in die Stadt. · Bei uns ist der Zug immer pünktlich. — Ich steige am Bahnhof aus. · Der Bus kommt um neun an. · Bald fahren wir weiter. · Ich muss am Hauptbahnhof umsteigen. — Hält der Bus im Zentrum? · Wann kommt der Bus an? — Ich fahre heute mit dem Bus in die Stadt. · Ich fahre jeden Tag um sieben mit dem Zug zur Schule. · Morgen gehe ich um zehn zu Fuß ans Ufer. — Heute ist Stau — das ist der Grund. · Die Polizei steht an der Kreuzung. · An dieser Stelle hält der Bus nicht. · Die Haltestelle ist auf der anderen Seite. · Die Verbindung ist gut. · Im Fahrplan steht: um neun Uhr.",
+      "ar": "قوس الجملة (Satzklammer) بأربع خطوات: (1) الفعل المصرَّف ثانياً دائماً — إن بدأت بالزمن أو المكان جاء الفاعل بعد الفعل (Heute fahre ich … · Bei uns ist der Zug …). (2) الجزء الثاني يغلق القوس في الآخر: الجزء المنفصل (steige … aus · kommt … an · fährt … weiter) أو المصدر بعد muss/kann (muss … umsteigen) — وكل شيء بينهما. (3) السؤال لا يكسر القوس: نعم/لا بالفعل أولاً (Hält der Bus im Zentrum?) وبأداة: الأداة ثم الفعل (Wann kommt der Bus an?). (4) ترتيب الظروف داخل القوس: الزمن ← الكيفية ← المكان (Wann? Wie? Wohin? — heute mit dem Bus in die Stadt · jeden Tag um sieben mit dem Zug zur Schule) — والزمن يتقدّم كثيراً إلى الأول (Morgen gehe ich …) والباقي بترتيبه؛ واليوم قبل الساعة (heute Abend um sechs). الكلمات: bald · pünktlich · der Stau (‑s) · der Grund (Gründe) · die Verbindung (‑en) · der Fahrplan (‑pläne) · andere (auf der anderen Seite) · weiter · halten (er hält) · die Polizei (مفرد) · die Stelle (‑n)."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Heute ich fahre in die Stadt.~~ · ~~Morgen ich gehe ans Ufer.~~",
+          "ar": "بعد الزمن في البداية: الفعل ثانياً والفاعل بعده (القلب)"
+        },
+        "whyArabicSpeakerFails": "الجملة الاسمية العربية تُبقي الفاعل قبل الفعل بعد الظرف («اليوم أنا أسافر إلى المدينة»)، فينقل المتعلم الترتيب حرفياً (~~Heute ich fahre~~). والألمانية لا تضع في الموضع الأول إلا شيئاً واحداً ثم الفعل المصرَّف ثم الفاعل: Heute fahre ich in die Stadt. · Morgen gehe ich ans Ufer. — القانون نفسه الذي اتبعته منذ Um sieben wache ich auf — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Heute fahre ich in die Stadt. · Morgen gehe ich ans Ufer. · Bei uns ist der Zug immer pünktlich.",
+          "ar": "اليوم أسافر إلى المدينة · غداً أذهب إلى الضفة · عندنا القطار دائماً في الموعد"
+        },
+        "exercise": {
+          "q": "رتّب: jetzt · fahren · wir · weiter",
+          "a": "Jetzt fahren wir weiter."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Der Bus kommt an um neun.~~ · ~~Ich muss umsteigen am Hauptbahnhof.~~",
+          "ar": "القوس يُغلق في الآخر: الجزء المنفصل والمصدر آخر الجملة"
+        },
+        "whyArabicSpeakerFails": "«يصل في التاسعة» و«يجب أن أغيّر في المحطة» فعلٌ واحد متصل في العربية ثم تفاصيله، فيُلصق المتعلم الجزء الثاني بالفعل (~~kommt an um neun~~ · ~~muss umsteigen am Hauptbahnhof~~). والألمانية تفتح القوس بالفعل المصرَّف وتغلقه في آخر الجملة بالجزء المنفصل أو المصدر، وكل التفاصيل بينهما: Der Bus kommt um neun an. · Ich muss am Hauptbahnhof umsteigen. — تتويج مصيدة الأفعال المنفصلة (الوحدة 7) والمودال (الوحدة 8) — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Der Bus kommt um neun an. · Ich muss am Hauptbahnhof umsteigen. · Ich steige am Bahnhof aus.",
+          "ar": "الحافلة تصل في التاسعة · يجب أن أغيّر في المحطة المركزية · أنزل عند المحطة"
+        },
+        "exercise": {
+          "q": "أكمل: Der Zug kommt um elf am Flughafen ___. (ankommen)",
+          "a": "an"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich fahre mit dem Bus heute in die Stadt.~~ · ~~Ich fahre in die Stadt mit dem Bus.~~",
+          "ar": "ترتيب الظروف ثابت: الزمن ← الكيفية ← المكان"
+        },
+        "whyArabicSpeakerFails": "العربية تسمح بأي ترتيب للظروف بعد الفعل («أسافر بالحافلة اليوم إلى المدينة» · «أسافر إلى المدينة بالحافلة») ويميل المكان فيها إلى القرب من الفعل، فيُقدّم المتعلم الكيفية أو المكان (~~mit dem Bus heute~~ · ~~in die Stadt mit dem Bus~~). والألمانية تثبّت: Wann? ← Wie? ← Wohin?: Ich fahre heute mit dem Bus in die Stadt. — والمكان آخر الثلاثة قبل القوس المغلق — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Ich fahre heute mit dem Bus in die Stadt. · Ich fahre jeden Tag um sieben mit dem Zug zur Schule.",
+          "ar": "أسافر اليوم بالحافلة إلى المدينة · أسافر كل يوم في السابعة بالقطار إلى المدرسة"
+        },
+        "exercise": {
+          "q": "رتّب: (zum Flughafen) (heute) (mit dem Taxi) — Ich fahre …",
+          "a": "Ich fahre heute mit dem Taxi zum Flughafen."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "bald",
+      "puenktlich",
+      "stau",
+      "grund",
+      "verbindung",
+      "fahrplan",
+      "andere",
+      "weiter",
+      "halten",
+      "polizei",
+      "stelle"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/halten",
+      "https://www.duden.de/rechtschreibung/Polizei",
+      "https://www.duden.de/rechtschreibung/Stelle",
+      "https://www.duden.de/rechtschreibung/weiter",
+      "https://www.duden.de/rechtschreibung/andere",
+      "https://www.duden.de/rechtschreibung/Stau",
+      "https://www.duden.de/rechtschreibung/Grund",
+      "https://www.duden.de/rechtschreibung/Verbindung",
+      "https://www.duden.de/rechtschreibung/Fahrplan",
+      "https://www.duden.de/rechtschreibung/puenktlich"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Satzklammer",
+      "https://de.wiktionary.org/wiki/halten",
+      "https://de.wiktionary.org/wiki/Polizei",
+      "https://de.wiktionary.org/wiki/Stelle",
+      "https://de.wiktionary.org/wiki/bald"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-satzklammer",
+    "ars-tekamolo"
+  ],
+  "audioManifestRefs": [
+    "word-bald",
+    "word-puenktlich",
+    "word-stau",
+    "word-grund",
+    "word-verbindung",
+    "word-fahrplan",
+    "word-andere",
+    "word-weiter",
+    "word-halten",
+    "word-polizei",
+    "word-stelle"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Satzklammer · Zeit vor Ort (Te–Mo–Lo)",
+    "goetheWordListOverlap": [
+      "bald",
+      "puenktlich",
+      "fahrplan",
+      "andere",
+      "weiter",
+      "halten",
+      "polizei",
+      "stelle"
+    ]
+  }
+}

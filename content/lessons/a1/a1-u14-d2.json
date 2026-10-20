@@ -1,0 +1,760 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "a1-u14-d2",
+ "level": "A1",
+ "unit": 14,
+ "day": 2,
+ "kind": "content",
+ "ziel": {
+  "de": "Du bist bei der Post: ein Brief an Oma! Du verstehst: Absender und Empfänger · Postleitzahl · Briefmarke und Gewicht · der Beamte hilft · Anrede und Gruß · Doktor · E-Mail und Fax · überweisen auf das Konto · die Dame hilft · Vorwahl · Anrufbeantworter · Auf Wiederhören!",
+  "ar": "رسالة إلى الجدة (تكملة SD1 للفهم — بلا تاريخ): تفهم مكتب البريد والبنك والهاتف: المُرسِل والمُرسَل إليه · الرمز البريدي · الطابع والوزن · الموظف · التحية والختام · الإيميل والفاكس · التحويل إلى الحساب · الرمز الهاتفي · المجيب الآلي · وداع الهاتف — ولا يُطلب منك إنتاج هذه الكلمات."
+ },
+ "canDoDaily": [
+  "يفهم إجراءات البريد (Absender · Briefmarke · Gewicht) ويعرف ما يُكتب على الظرف.",
+  "يفهم البنك والهاتف: überweisen/Konto · Vorwahl/Anrufbeantworter/Wiederhören."
+ ],
+ "warmup": {
+  "cardIds": [
+   "brief",
+   "geld",
+   "telefon"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "de": "«eine Briefmarke» — ماذا تعني؟ (تخمين فقط)"
+    },
+    "choices": [
+     "طابعاً للرسالة",
+     "مفتاحاً للبيت",
+     "تذكرة للقطار"
+    ],
+    "answer": "طابعاً للرسالة",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "de": "«Auf Wiederhören!» — متى تُقال؟ (تخمين فقط)"
+    },
+    "choices": [
+     "عند وداع المكالمة",
+     "عند فتح الباب",
+     "عند بدء الدرس"
+    ],
+    "answer": "عند وداع المكالمة",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "ما كلمات الظرف؟ (Absender · Empfänger · Postleitzahl · Briefmarke)",
+   "ما كلمات الهاتف؟ (Vorwahl · Anrufbeantworter · Wiederhören)"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "beamte",
+   "konto",
+   "ueberweisen",
+   "postleitzahl",
+   "absender",
+   "empfaenger",
+   "briefmarke",
+   "gewicht",
+   "anrede",
+   "dame",
+   "doktor",
+   "gruss",
+   "e-mail",
+   "fax",
+   "vorwahl",
+   "anrufbeantworter",
+   "wiederhoeren"
+  ],
+  "grammarArsenalIds": [
+   "ars-trennbare"
+  ],
+  "storySentenceIds": [
+   "story-a1-u14-s2"
+  ],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "auslaut-b",
+   "ch-ich-laut",
+   "ng-velar",
+   "r-uvular",
+   "umlaut-a",
+   "umlaut-o",
+   "umlaut-u",
+   "v-f",
+   "vowel-long-short",
+   "w-v",
+   "z"
+  ]
+ },
+ "uebung": {
+  "stations": [
+   {
+    "type": "reading",
+    "items": [
+     {
+      "text": "Absender: Yusuf Haddad. Empfänger: Oma.",
+      "q": "Wer ist der Absender?",
+      "choices": [
+       "Yusuf Haddad",
+       "Oma",
+       "Nabil"
+      ],
+      "a": "Yusuf Haddad",
+      "why": "Absender: Yusuf Haddad — المُرسِل يوسف حداد (Empfänger = المُرسَل إليه)."
+     },
+     {
+      "text": "Die Postleitzahl von Tunis. Eine Briefmarke, bitte!",
+      "q": "Was braucht Yusuf?",
+      "choices": [
+       "eine Briefmarke",
+       "einen Kuchen",
+       "ein Taxi"
+      ],
+      "a": "eine Briefmarke",
+      "why": "Eine Briefmarke, bitte — طابعاً من فضلك (brauchen = يحتاج)."
+     },
+     {
+      "text": "Was ist das Gewicht? Der Beamte hilft.",
+      "q": "Wer hilft?",
+      "choices": [
+       "der Beamte",
+       "der Lehrer",
+       "der Arzt"
+      ],
+      "a": "der Beamte",
+      "why": "Der Beamte hilft — الموظف يساعد (Beamte بلا n في الرفع!)."
+     },
+     {
+      "text": "Liebe Oma! Viele Grüße! Die Anrede und der Gruß.",
+      "q": "Was steht am Ende?",
+      "choices": [
+       "der Gruß",
+       "die Anrede",
+       "der Name"
+      ],
+      "a": "der Gruß",
+      "why": "Viele Grüße am Ende — التحيات في الختام (Anrede في الأول)."
+     },
+     {
+      "text": "Oma ist oft beim Doktor. Oma hat kein Internet.",
+      "q": "Wo ist Oma oft?",
+      "choices": [
+       "beim Doktor",
+       "zu Hause",
+       "im Park"
+      ],
+      "a": "beim Doktor",
+      "why": "oft beim Doktor — غالباً عند الطبيب (kein Internet = بلا إنترنت)."
+     },
+     {
+      "text": "Ich überweise Geld auf das Konto von Oma.",
+      "q": "Was macht Yusuf?",
+      "choices": [
+       "überweist Geld",
+       "kocht Essen",
+       "kauft Blumen"
+      ],
+      "a": "überweist Geld",
+      "why": "überweise Geld auf das Konto — يحوّل مالاً إلى الحساب (überweisen متصل!)."
+     },
+     {
+      "text": "Die Dame hilft dir. Die Vorwahl steht hier.",
+      "q": "Wer hilft dir?",
+      "choices": [
+       "die Dame",
+       "der Herr",
+       "das Kind"
+      ],
+      "a": "die Dame",
+      "why": "Die Dame hilft dir — السيدة تساعدك (die Vorwahl = الرمز الهاتفي)."
+     }
+    ],
+    "interleavedWith": [
+     "brauchen",
+     "kuchen",
+     "taxi",
+     "bitte",
+     "helfen",
+     "lehrer",
+     "arzt",
+     "stehen",
+     "ende",
+     "name",
+     "oft",
+     "park",
+     "geld",
+     "kochen",
+     "essen",
+     "kaufen",
+     "blume",
+     "herr",
+     "kind",
+     "hier"
+    ]
+   },
+   {
+    "type": "listening",
+    "items": [
+     {
+      "audioId": "ed-2",
+      "speakText": "Schön! Absender: Yusuf Haddad. Empfänger: Oma!",
+      "q": "من المُرسِل ومن المُرسَل إليه؟",
+      "choices": [
+       "يوسف حداد والجدة",
+       "لينا والمدير",
+       "نبيل وعائشة"
+      ],
+      "a": "يوسف حداد والجدة",
+      "why": "Absender: Yusuf Haddad. Empfänger: Oma — المُرسِل يوسف والمُرسَل إليها الجدة."
+     },
+     {
+      "audioId": "ed-4",
+      "speakText": "Hier! Und eine Briefmarke. Was ist das Gewicht?",
+      "q": "ماذا تطلب لينا؟",
+      "choices": [
+       "طابعاً وتسأل عن الوزن",
+       "نقوداً وتسأل عن الوقت",
+       "قهوة وتسأل عن الطريق"
+      ],
+      "a": "طابعاً وتسأل عن الوزن",
+      "why": "eine Briefmarke. Was ist das Gewicht — طابعاً، وتسأل عن الوزن."
+     },
+     {
+      "audioId": "ed-7",
+      "speakText": "Liebe Oma! Und am Ende: Viele Grüße!",
+      "q": "بماذا يختم يوسف رسالته؟",
+      "choices": [
+       "بتحيات كثيرة",
+       "بسؤال عن الصحة",
+       "بطلب نقود"
+      ],
+      "a": "بتحيات كثيرة",
+      "why": "Viele Grüße — بتحيات كثيرة (der Gruß)."
+     },
+     {
+      "audioId": "ed-9",
+      "speakText": "Oder E-Mail? Oder Fax? Nein — Oma hat kein Internet!",
+      "q": "لماذا لا يرسل إيميلاً أو فاكساً؟",
+      "choices": [
+       "لأن الجدة بلا إنترنت",
+       "لأنه لا يعرف الإيميل",
+       "لأن الفاكس معطّل"
+      ],
+      "a": "لأن الجدة بلا إنترنت",
+      "why": "Oma hat kein Internet — الجدة بلا إنترنت (E-Mail · Fax للفهم)."
+     },
+     {
+      "audioId": "ed-11",
+      "speakText": "Und Geld? Ich überweise Geld auf das Konto von Oma!",
+      "q": "ماذا يفعل يوسف بالمال؟",
+      "choices": [
+       "يحوّله إلى حساب الجدة",
+       "يخبئه في البيت",
+       "يعطيه للمدير"
+      ],
+      "a": "يحوّله إلى حساب الجدة",
+      "why": "überweise Geld auf das Konto von Oma — يحوّله إلى حساب الجدة."
+     },
+     {
+      "audioId": "ed-15",
+      "speakText": "Oma antwortet nicht. Nur der Anrufbeantworter!",
+      "q": "من يردّ على الهاتف؟",
+      "choices": [
+       "المجيب الآلي فقط",
+       "الجدة نفسها",
+       "المدير"
+      ],
+      "a": "المجيب الآلي فقط",
+      "why": "Nur der Anrufbeantworter — المجيب الآلي وحده (antwortet nicht)."
+     },
+     {
+      "audioId": "ed-17",
+      "speakText": "Hallo Oma! Der Brief kommt bald. Auf Wiederhören!",
+      "q": "بماذا يودّع يوسف الجدة؟",
+      "choices": [
+       "إلى اللقاء (هاتفياً)",
+       "إلى اللقاء (وجهاً)",
+       "تصبح على خير"
+      ],
+      "a": "إلى اللقاء (هاتفياً)",
+      "why": "Auf Wiederhören — وداع الهاتف (النبر على WIE!)."
+     }
+    ],
+    "interleavedWith": [
+     "schoen",
+     "hier",
+     "ende",
+     "internet",
+     "geld",
+     "antworten",
+     "hallo",
+     "kommen",
+     "bald"
+    ]
+   },
+   {
+    "type": "match",
+    "items": [
+     {
+      "pairs": [
+       {
+        "de": "der Absender",
+        "ar": "المُرسِل"
+       },
+       {
+        "de": "der Empfänger",
+        "ar": "المُرسَل إليه"
+       },
+       {
+        "de": "die Postleitzahl",
+        "ar": "الرمز البريدي"
+       },
+       {
+        "de": "die Briefmarke",
+        "ar": "طابع بريدي"
+       },
+       {
+        "de": "das Gewicht",
+        "ar": "الوزن"
+       },
+       {
+        "de": "der Beamte",
+        "ar": "موظف رسمي"
+       }
+      ],
+      "why": "البريد: Absender مُرسِل · Empfänger مُرسَل إليه · Postleitzahl رمز بريدي · Briefmarke طابع · Gewicht وزن · Beamte موظف (den Beamten في النصب!)."
+     },
+     {
+      "pairs": [
+       {
+        "de": "die Anrede",
+        "ar": "صيغة المخاطبة"
+       },
+       {
+        "de": "der Gruß",
+        "ar": "تحية"
+       },
+       {
+        "de": "die Dame",
+        "ar": "سيدة"
+       },
+       {
+        "de": "der Doktor",
+        "ar": "طبيب"
+       },
+       {
+        "de": "die E-Mail",
+        "ar": "بريد إلكتروني"
+       },
+       {
+        "de": "das Fax",
+        "ar": "فاكس"
+       }
+      ],
+      "why": "الرسالة: Anrede مخاطبة (Liebe Oma!) · Gruß تحية (Viele Grüße!) · Dame سيدة · Doktor طبيب · E-Mail مؤنث! · Fax بألف قصيرة."
+     },
+     {
+      "pairs": [
+       {
+        "de": "das Konto",
+        "ar": "حساب بنكي"
+       },
+       {
+        "de": "überweisen",
+        "ar": "يحوّل مالاً"
+       },
+       {
+        "de": "die Vorwahl",
+        "ar": "رمز هاتفي"
+       },
+       {
+        "de": "der Anrufbeantworter",
+        "ar": "مجيب آلي"
+       },
+       {
+        "de": "das Wiederhören",
+        "ar": "إلى اللقاء هاتفياً"
+       }
+      ],
+      "why": "البنك والهاتف: Konto حساب · überweisen يحوّل (متصل — لا ينفصل أبداً!) · Vorwahl رمز هاتفي · Anrufbeantworter مجيب آلي · Wiederhören وداع الهاتف."
+     }
+    ]
+   },
+   {
+    "type": "dictation",
+    "items": [
+     {
+      "audioId": "ed-5",
+      "speakText": "Der Beamte hilft. Zwei Euro, bitte!",
+      "a": "Der Beamte hilft. Zwei Euro, bitte!",
+      "why": "Beamte بـea تُنطق ا طويلة · Euro بـEu تُنطق أوي · bitte بـtt."
+     },
+     {
+      "audioId": "ed-10",
+      "speakText": "Ein Fax? Nein — ein Brief!",
+      "a": "Ein Fax? Nein — ein Brief!",
+      "why": "Fax بـx وألف قصيرة · Nein بـN كبيرة وei · Brief بـie."
+     },
+     {
+      "audioId": "ed-14",
+      "speakText": "Die Vorwahl steht hier. Ruf an!",
+      "a": "Die Vorwahl steht hier. Ruf an!",
+      "why": "Vorwahl بـV تُنطق ف وah طويلة · Ruf أمر من anrufen (Ruf … an!)."
+     },
+     {
+      "audioId": "ed-20",
+      "speakText": "Gern! Bis bald, Yusuf!",
+      "a": "Gern! Bis bald, Yusuf!",
+      "why": "Gern بـr مُصوَّتة · Bis بـss · bald بـld."
+     }
+    ],
+    "interleavedWith": [
+     "helfen",
+     "euro",
+     "bitte",
+     "brief",
+     "stehen",
+     "hier",
+     "gern",
+     "anrufen"
+    ]
+   }
+  ],
+  "communicativeTask": {
+   "goal": {
+    "de": "Schreib einen Brief an Oma: Absender Yusuf Haddad · Empfänger Oma · Anrede Liebe Oma · Viele Grüße! Dann ruf Oma an und sag: Auf Wiederhören!",
+    "ar": "اكتب رسالة إلى الجدة (المرسل والتحية والختام) ثم اتصل بها وودّعها هاتفياً."
+   },
+   "situation": {
+    "de": "Du bist bei der Post. Schreib den Brief, kauf eine Briefmarke und ruf Oma an!",
+    "ar": "أنت في مكتب البريد: اكتب الرسالة واشترِ طابعاً واتصل بالجدة."
+   },
+   "successCriteria": [
+    "يكتب عناصر الظرف الأربعة (Absender · Empfänger · Postleitzahl · Briefmarke)",
+    "يستعمل Anrede وGruß في موضعهما (Liebe Oma · Viele Grüße)",
+    "يفصل anrufen (rufe … an · Ruf an!)"
+   ]
+  }
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«Der Absender heißt Yusuf Haddad.» — Wie heißt der Absender?",
+      "choices": [
+       "يوسف حداد",
+       "لينا مولر",
+       "نبيل وحده"
+      ],
+      "a": "يوسف حداد",
+      "why": "Der Absender = المُرسِل (heißt = اسمه)."
+     },
+     {
+      "q": "«Eine Briefmarke, bitte!» — Was will er?",
+      "choices": [
+       "طابعاً بريدياً",
+       "كعكة بالجبن",
+       "تذكرة قطار"
+      ],
+      "a": "طابعاً بريدياً",
+      "why": "Briefmarke = طابع بريدي."
+     },
+     {
+      "q": "«Was ist das Gewicht?» — Was fragt sie?",
+      "choices": [
+       "عن الوزن",
+       "عن السعر",
+       "عن الوقت"
+      ],
+      "a": "عن الوزن",
+      "why": "das Gewicht = الوزن."
+     },
+     {
+      "q": "«Der Beamte hilft gern.» — Wie hilft der Beamte?",
+      "choices": [
+       "بكل سرور",
+       "بلا اهتمام",
+       "بعد ساعة"
+      ],
+      "a": "بكل سرور",
+      "why": "hilft gern = يساعد بكل سرور."
+     },
+     {
+      "q": "«Liebe Oma!» — Was ist das?",
+      "choices": [
+       "صيغة مخاطبة",
+       "عنوان الرسالة",
+       "تاريخ الرسالة"
+      ],
+      "a": "صيغة مخاطبة",
+      "why": "Liebe Oma = صيغة المخاطبة (Anrede)."
+     },
+     {
+      "q": "«Viele Grüße!» — Was schickt er?",
+      "choices": [
+       "تحيات كثيرة",
+       "نقوداً كثيرة",
+       "صوراً كثيرة"
+      ],
+      "a": "تحيات كثيرة",
+      "why": "Viele Grüße = تحيات كثيرة (der Gruß)."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Oma ist oft beim Doktor.» — Ist Oma krank?",
+      "choices": [
+       "غالباً نعم",
+       "لا، هي طبيبة",
+       "لا، تزور صديقة"
+      ],
+      "a": "غالباً نعم",
+      "why": "oft beim Doktor = غالباً عند الطبيب (krank = مريضة)."
+     },
+     {
+      "q": "«Oma hat kein Internet.» — Hat Oma E-Mail?",
+      "choices": [
+       "لا، بلا إنترنت",
+       "نعم، عندها إيميل",
+       "نعم، عندها فاكس"
+      ],
+      "a": "لا، بلا إنترنت",
+      "why": "kein Internet = بلا إنترنت — لا إيميل."
+     },
+     {
+      "q": "«Ich überweise Geld auf das Konto.» — Wohin überweist er das Geld?",
+      "choices": [
+       "إلى الحساب",
+       "إلى الجيب",
+       "إلى المدير"
+      ],
+      "a": "إلى الحساب",
+      "why": "auf das Konto = إلى الحساب (überweisen = يحوّل)."
+     },
+     {
+      "q": "«Die Dame hilft dir.» — Hilft die Dame?",
+      "choices": [
+       "نعم، تساعدك",
+       "لا، ترفض",
+       "لا، هي مشغولة"
+      ],
+      "a": "نعم، تساعدك",
+      "why": "hilft dir = تساعدك (die Dame = السيدة)."
+     },
+     {
+      "q": "«Was ist die Vorwahl?» — Was fragt er?",
+      "choices": [
+       "عن الرمز الهاتفي",
+       "عن الرمز البريدي",
+       "عن رقم الحساب"
+      ],
+      "a": "عن الرمز الهاتفي",
+      "why": "die Vorwahl = الرمز الهاتفي."
+     },
+     {
+      "q": "«Nur der Anrufbeantworter!» — Wer antwortet?",
+      "choices": [
+       "المجيب الآلي وحده",
+       "الجدة بنفسها",
+       "لا أحد أبداً"
+      ],
+      "a": "المجيب الآلي وحده",
+      "why": "Nur der Anrufbeantworter = المجيب الآلي وحده."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Der Empfänger ist Oma.» — Wer bekommt den Brief?",
+      "choices": [
+       "الجدة",
+       "يوسف",
+       "لينا"
+      ],
+      "a": "الجدة",
+      "why": "Der Empfänger = المُرسَل إليه — الجدة تستلم (bekommt)."
+     },
+     {
+      "q": "«Die Postleitzahl von Tunis.» — Was sucht er?",
+      "choices": [
+       "الرمز البريدي لتونس",
+       "عنوان الجدة",
+       "اسم الموظف"
+      ],
+      "a": "الرمز البريدي لتونس",
+      "why": "Postleitzahl von Tunis = الرمز البريدي لتونس."
+     },
+     {
+      "q": "«Ein Fax? Nein!» — Will er ein Fax?",
+      "choices": [
+       "لا، يريد رسالة",
+       "نعم، يريد فاكساً",
+       "نعم، يريد إيميلاً"
+      ],
+      "a": "لا، يريد رسالة",
+      "why": "Nein = لا — رسالة (Brief) لا فاكس."
+     },
+     {
+      "q": "«Das Konto von Oma.» — Was ist das?",
+      "choices": [
+       "حساب الجدة",
+       "حساب يوسف",
+       "حساب البنك"
+      ],
+      "a": "حساب الجدة",
+      "why": "das Konto von Oma = حساب الجدة."
+     },
+     {
+      "q": "«Ruf an!» — Was soll er machen?",
+      "choices": [
+       "يتصل الآن",
+       "يكتب الآن",
+       "يدفع الآن"
+      ],
+      "a": "يتصل الآن",
+      "why": "Ruf an = اتصل (anrufen منفصل — الأمر: Ruf an!)."
+     },
+     {
+      "q": "«Auf Wiederhören!» — Wann sagt man das?",
+      "choices": [
+       "عند وداع الهاتف",
+       "عند دخول البيت",
+       "عند بدء الأكل"
+      ],
+      "a": "عند وداع الهاتف",
+      "why": "Auf Wiederhören = وداع المكالمة الهاتفية."
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Yusuf schreibt einen Brief an Oma: Absender Yusuf Haddad · Empfänger Oma · Postleitzahl · Briefmarke · Gewicht. Der Beamte hilft. Er überweist Geld auf das Konto von Oma. Dann ruft er Oma an — nur der Anrufbeantworter! Auf Wiederhören, Oma!",
+   "ar": "رسالة إلى الجدة (17 رأساً للفهم): البريد والبنك والهاتف — تفهم ولا تُنتج؛ والقاعدة: anrufen منفصل (rufe … an)."
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "de": "~~Ich rufe Oma.~~",
+     "ar": "anrufen منفصل: an في آخر الجملة — لا تنسها."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «أتصل» فعل واحد متصل فينسى المتعلم an. القاعدة (ars-trennbare): rufe … an — الجزء في الآخر دائماً.",
+    "correct": {
+     "de": "Ich rufe Oma an.",
+     "ar": "أتصل بجدتي."
+    },
+    "exercise": {
+     "q": "Ich rufe Oma ___. (an / auf)",
+     "a": "an"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Ich sehe der Beamte.~~",
+     "ar": "Beamte من فئة n: den Beamten في النصب — n تزاد."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية لا تصرّف الاسم حسب موقعه فينسى المتعلم n النصب. القاعدة: der Beamte مذكر ضعيف — Akkusativ: den Beamten (كـden Studenten).",
+    "correct": {
+     "de": "Ich sehe den Beamten.",
+     "ar": "أرى الموظف."
+    },
+    "exercise": {
+     "q": "Ich sehe ___ Beamten. (den / der)",
+     "a": "den"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Ich schreibe ein E-Mail.~~",
+     "ar": "E-Mail مؤنث: eine E-Mail (die Mail) — لا ein."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «بريد» مذكر فيختار المتعلم ein. القاعدة: E-Mail مؤنث (die) — eine E-Mail.",
+    "correct": {
+     "de": "Ich schreibe eine E-Mail.",
+     "ar": "أكتب بريداً إلكترونياً."
+    },
+    "exercise": {
+     "q": "Ich schreibe ___ E-Mail. (eine / ein)",
+     "a": "eine"
+    }
+   }
+  ],
+  "srsBundleWordIds": [
+   "beamte",
+   "konto",
+   "ueberweisen",
+   "postleitzahl",
+   "absender",
+   "empfaenger",
+   "briefmarke",
+   "gewicht",
+   "anrede",
+   "dame",
+   "doktor",
+   "gruss",
+   "e-mail",
+   "fax",
+   "vorwahl",
+   "anrufbeantworter",
+   "wiederhoeren"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-trennbare"
+ ],
+ "audioManifestRefs": [
+  "word-beamte",
+  "word-konto",
+  "word-ueberweisen",
+  "word-postleitzahl",
+  "word-absender",
+  "word-empfaenger",
+  "word-briefmarke",
+  "word-gewicht",
+  "word-anrede",
+  "word-dame",
+  "word-doktor",
+  "word-gruss",
+  "word-e-mail",
+  "word-fax",
+  "word-vorwahl",
+  "word-anrufbeantworter",
+  "word-wiederhoeren"
+ ],
+ "imageManifestRefs": [],
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Briefmarke",
+   "https://www.duden.de/rechtschreibung/Anrufbeantworter"
+  ],
+  "wiktionary": [
+   "https://de.wiktionary.org/wiki/ueberweisen"
+  ],
+  "goethe": []
+ },
+ "curriculumRef": {
+  "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Brief · Geld · Telefon) — الدرس الثاني من الوحدة 14 (D113)",
+  "goetheWordListOverlap": []
+ }
+}

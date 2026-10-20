@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-akkusativ-2",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Siehst du den Hund? — Ja, ich sehe ihn.",
+    "ar": "Akkusativ في السؤال والجواب: Wen? وWas? أولاً · سؤال نعم/لا يبدأ بالفعل · والجواب بضمير المفعول: er ← ihn للمذكر وحده، وsie وes كما هما"
+  },
+  "payload": {
+    "topicAr": "المفعول به في الأسئلة وأجوبتها. السؤال عن المفعول: Wen? للشخص وWas? للشيء في أول الجملة، ثم الفعل، ثم الفاعل (Wen siehst du?). وسؤال نعم/لا يبدأ بالفعل، والمفعول فيه بأداته نفسها (Siehst du den Hund?). وفي الجواب يحلّ ضمير محلّ المفعول: المذكر وحده يتغيّر (er ← ihn)، وsie وes تبقيان كما هما. أما stehen · sitzen · lächeln فلا مفعول لها، فالاسم بعدها فاعل: Links steht mein Vater.",
+    "sceneAr": "مهمة اليوم في الدورة عبر الإنترنت: يصف الثنائي صورة معاً. يرفع يوسف أمام الكاميرا صورة قديمة لعائلته في تونس: أبوه واقف على اليسار بنظارة، وجدّاه جالسان، وبينهما يوسف طفلاً في الخامسة، وعلى اليمين امرأة من معارف جدّته. ويتبادلان الأسئلة: Siehst du …? — Ja, ich sehe ihn.",
+    "examples": [
+      {
+        "de": "Siehst du den Hund? — Ja, ich sehe ihn.",
+        "ar": "هل ترى الكلب؟ — نعم، أراه. (der Hund)"
+      },
+      {
+        "de": "Siehst du die Katze? — Ja, ich sehe sie.",
+        "ar": "هل ترى القطة؟ — نعم، أراها. (die Katze)"
+      },
+      {
+        "de": "Siehst du das Foto? — Ja, ich sehe es.",
+        "ar": "هل ترى الصورة؟ — نعم، أراها. (das Foto)"
+      },
+      {
+        "de": "Kennst du meine Großeltern? — Ja, ich kenne sie.",
+        "ar": "هل تعرف جدّي وجدّتي؟ — نعم، أعرفهما. (الجمع)"
+      },
+      {
+        "de": "Wen siehst du links? — Ich sehe meinen Vater.",
+        "ar": "مَن ترى على اليسار؟ — أرى أبي."
+      },
+      {
+        "de": "Wer steht links? — Links steht mein Vater.",
+        "ar": "مَن يقف على اليسار؟ — على اليسار يقف أبي."
+      }
+    ],
+    "inferencePromptAr": "(1) في الأمثلة 1–4: أي ضمير حلّ محلّ den Hund وdie Katze وdas Foto وmeine Großeltern؟ (2) ضمير الفاعل لهذه الأسماء er · sie · es · sie: أيّها تغيّر في الجواب؟ وبأي حرف ينتهي ihn — هل يذكّرك بـden وeinen؟ (3) أين الفعل في Siehst du …? وKennst du …؟ (4) في المثال 5: ما الكلمة الأولى؟ ومَن الفاعل؟ ولماذا meinen؟ (5) في المثال 6: هل يقع الوقوف على شيء؟ فلماذا Wer وmein بلا ‑en مع أن الاسم جاء بعد الفعل؟ وفي «يقفُ أبي» بالعربية: هل الأب فاعل مرفوع أم مفعول به؟",
+    "ruleDe": "den Hund → ihn · die Katze → sie · das Foto → es · meine Großeltern → sie · Siehst du den Hund? — Ja, ich sehe ihn. · Wen siehst du? — Ich sehe meinen Vater. · Was trägt Opa? — Er trägt eine Brille. · Wer steht links? — Links steht mein Vater.",
+    "ruleAr": "في السؤال يبقى المفعول مفعولاً بأداته: Siehst du den Hund? — وسؤال نعم/لا يبدأ بالفعل كما في Sind Sie …? الذي تعرفه. والسؤال عن المفعول بكلمة السؤال في أوله: Wen? للشخص (Wen siehst du?) وWas? للشيء (Was trägt Opa?)، ثم الفعل ثانياً ثم الفاعل. وفي الجواب يحلّ ضمير محلّ المفعول، ويتبع أداة الكلمة الألمانية: المذكر وحده يتغيّر بـ‑n مرة أخرى — der Hund ← er ← ihn، كما der ← den — أما المؤنث والمحايد والجمع فضميرها كما هو: die Katze ← sie · das Foto ← es · meine Großeltern ← sie. وmich وdich تعرفهما قطعتين (Freut mich! · für dich). أما stehen · sitzen · lächeln فلا مفعول لها: الاسم بعدها فاعل بلا ‑n، والسؤال عنه Wer?: Wer steht links? — Links steht mein Vater.",
+    "contrastAr": "العربية تعرف ضمير المفعول: «هو» للفاعل و«ـه» المتصلة للمفعول («أراه»)، كما er ← ihn — وهذا عون حقيقي. وتعرف أن الفاعل قد يأتي بعد الفعل ويبقى مرفوعاً («يقفُ أبي»)، كما Links steht mein Vater — وهذا عون ثانٍ، فلا تضع ‑en بعد stehen. لكن انتبه لثلاثة فروق: (1) ضمير الشيء في العربية يتبع جنس الكلمة العربية، ولا محايد فيها: «الصورة» مؤنثة فنقول «أراها» — والألمانية يتبع ضميرها أداة الكلمة الألمانية: das Foto ← es. (2) العربية تغيّر ضمير المفعول في كل الأجناس (هي ← ـها · هم ← ـهم)، والألمانية تغيّره في المذكر وحده: sie تبقى sie وes تبقى es. (3) في المضارع العربي تتغير حروف المضارعة وحدها وتبقى حركة الجذع («أرى · ترى · يرى»)، والألمانية تغيّر حركة sehen وtragen مع du وer/sie/es: du siehst · er sieht · du trägst · er trägt. و«بين» تتكرر في العربية («بيني وبينك»)، أما zwischen فتُذكر مرة واحدة: zwischen Oma und Opa — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "neben وzwischen اليوم مع الأسماء وكلمات العائلة بلا أداة: neben Oma · zwischen Oma und Opa. ومع der أو mein تتغيّر الأداة بعدهما (neben dem …) — وهذه قاعدة لاحقة (Dativ في الوحدتين 8 و9).",
+      "sehen وtragen يتغيّر حرفهما مع du وer/sie/es: du siehst · er sieht · du trägst · er trägt — نحفظ الصيغتين مع الفعل كما حفظنا liest من lesen، وقاعدة هذه الأفعال كاملة في الوحدة 7.",
+      "die Bekannte للمرأة: eine Bekannte · die Bekannte. وللرجل der Bekannte، لكنها مع ein تصير ein Bekannter — نهاية الصفة قبل الاسم (A2)؛ لذلك نستعمل اليوم المؤنث.",
+      "zeigen اليوم بلا شخص: Das Foto zeigt meine Familie · Ich zeige ein Foto. أما «أُريك» (Ich zeige dir …) فبضمير آخر — لاحقاً."
+    ],
+    "beads": [
+      "Ja,",
+      "ich",
+      "sehe",
+      "ihn."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u4-d4"
+  ]
+}

@@ -1,0 +1,847 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u7-d3",
+  "level": "A1",
+  "unit": 7,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Ich mache, du machst, Lena macht, wir machen — und du wartest, er öffnet, du putzt.",
+    "ar": "تصرّف الفعل المنتظم مع كل فاعل (ich ‑e · du ‑st · er/sie ‑t · wir ‑en · ihr ‑t · sie/Sie ‑en) — مع e قبل النهاية بعد t/d (du wartest) وt وحدها مع du بعد s/ß/z (du putzt) — وتحكي يومك بأفعال اليوم: machen · suchen · putzen · öffnen · schließen · brauchen · rufen · besuchen · benutzen · telefonieren · schicken · warten."
+  },
+  "canDoDaily": [
+    "يصرّف الفعل المنتظم مع كل فاعل: ich mache · du machst · er/sie macht · wir machen · ihr macht · sie/Sie machen — ويضع e قبل النهاية بعد t/d وبعد ساكنٍ ثم n (du wartest · er öffnet)، وt وحدها مع du بعد s/ß/z (du putzt · du schließt)، ولا يحذف الفاعل.",
+    "يحكي يومه وأسبوعه: Ich mache meine Hausaufgaben. · Am Sonntag besuchen wir Oma. · Wartest du auf mich? — ويخاطب بـSie بصيغة الجمع (Warten Sie?)، ويقول Das macht Spaß! و«أبداً» بـnie وحدها و«سهل» بـeinfach."
+  ],
+  "warmup": {
+    "cardIds": [
+      "arbeiten",
+      "heissen",
+      "wohnen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«أنتَ تنتظر» بالألمانية: أي صيغة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "du wartest",
+          "du wartet",
+          "du warten"
+        ],
+        "answer": "du wartest",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "machen",
+      "suchen",
+      "putzen",
+      "oeffnen",
+      "schliessen",
+      "brauchen",
+      "rufen",
+      "besuchen",
+      "benutzen",
+      "telefonieren",
+      "schicken",
+      "warten",
+      "hausaufgabe",
+      "nie",
+      "einfach"
+    ],
+    "grammarArsenalIds": [
+      "ars-praesens-regelm"
+    ],
+    "storySentenceIds": [
+      "story-a1-u7-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ach-laut",
+      "double-consonant",
+      "umlaut-o",
+      "vowel-long-short",
+      "z"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Am Abend ___ ich die Tür. (أغلق)",
+            "a": "schließe",
+            "why": "ich + ‑e: schließ + e ← schließe — والفعل ثانياً بعد Am Abend ثم ich."
+          },
+          {
+            "q": "Warum ___ du den Schrank? (تفتح)",
+            "a": "öffnest",
+            "why": "du بعد öffn‑: e قبل st ← öffnest — ساكنٌ ثم n لا يُنطقان بلا حركة."
+          },
+          {
+            "q": "Mein Bruder ___ seine Hausaufgaben am Abend. (ينجز)",
+            "a": "macht",
+            "why": "er + ‑t: mach + t ← macht — والواجبات «تُفعل» بالألمانية: Hausaufgaben machen."
+          },
+          {
+            "q": "Wir ___ am Sonntag die Küche. (ننظّف)",
+            "a": "putzen",
+            "why": "wir + ‑en: putz + en ← putzen — بصيغة المصدر نفسها."
+          },
+          {
+            "q": "Du ___ jeden Tag, oder? (تعمل)",
+            "a": "arbeitest",
+            "why": "جذع arbeit‑ آخره t: e قبل st ← du arbeitest — كـdu wartest."
+          },
+          {
+            "q": "Ihr ___ den Weg, oder? (تبحثون عن)",
+            "a": "sucht",
+            "why": "ihr + ‑t: such + t ← sucht — كنهاية er تماماً."
+          },
+          {
+            "q": "Meine Eltern ___ ein Auto. (يحتاجان)",
+            "a": "brauchen",
+            "why": "sie (هم) + ‑en: brauch + en ← brauchen — والمحتاج إليه بعده بلا حرف جر."
+          },
+          {
+            "q": "Mein Vater ___ jeden Tag lange. (يتحدّث هاتفياً)",
+            "a": "telefoniert",
+            "why": "أفعال ‑ieren منتظمة: telefonier + t ← telefoniert — والنبر على ie."
+          },
+          {
+            "q": "Meine Tante ___ uns am Sonntag. (تزور)",
+            "a": "besucht",
+            "why": "sie (هي) + ‑t: besucht — وbe في أوله جزءٌ من الجذع لا ينفصل."
+          },
+          {
+            "q": "Du ___ das Handy für die Hausaufgabe, oder? (تستخدم)",
+            "a": "benutzt",
+            "why": "du بعد z: benutz + t ← benutzt (لا s ثانية) — فتتساوى du وer: du benutzt = er benutzt."
+          },
+          {
+            "q": "Mein Freund ___ ein Foto aus Berlin. (يرسل)",
+            "a": "schickt",
+            "why": "er + ‑t: schick + t ← schickt — وck بعد i القصيرة."
+          },
+          {
+            "q": "Die Lehrerin ___ die Kinder. (تنادي)",
+            "a": "ruft",
+            "why": "sie (هي) + ‑t: ruft — rufen = ينادي (لا «يتصل»)."
+          },
+          {
+            "q": "Die Aufgabe ist nicht schwer — sie ist ___. (سهلة)",
+            "a": "einfach",
+            "why": "einfach = سهل (ضدّ schwer) — وch بعد a تُنطق «خ»."
+          },
+          {
+            "q": "Am Sonntag arbeitet mein Vater ___. (أبداً)",
+            "a": "nie",
+            "why": "nie = «لا … أبداً» بكلمةٍ واحدة — بلا nicht: نفيٌ واحد يكفي."
+          },
+          {
+            "q": "Heute haben wir viele ___. (واجبات)",
+            "a": "Hausaufgaben",
+            "why": "die Hausaufgabe ← die Hausaufgaben (‑n) — Haus + Aufgabe: الأداة من الكلمة الأخيرة (die Aufgabe)."
+          },
+          {
+            "q": "Meine Schwester ___ gern. (ترسم)",
+            "a": "zeichnet",
+            "why": "zeichn‑ ساكنٌ ثم n: e قبل t ← zeichnet — القاعدة التي حفظتَ مثالها في الدرس الماضي."
+          }
+        ],
+        "interleavedWith": [
+          "schrank",
+          "bruder",
+          "eltern",
+          "auto",
+          "vater",
+          "tante",
+          "handy",
+          "freund",
+          "lehrerin",
+          "aufgabe",
+          "schwester",
+          "sonntag"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "pr-1",
+            "speakText": "Hallo Lena! Ich warte schon zehn Minuten.",
+            "q": "استمع: منذ متى ينتظر يوسف؟",
+            "choices": [
+              "منذ عشر دقائق",
+              "منذ دقيقتين",
+              "منذ ساعة"
+            ],
+            "a": "منذ عشر دقائق",
+            "why": "Ich warte schon zehn Minuten = أنتظر منذ عشر دقائق — wart + e، وschon مع المضارع كـ«منذ» العربية مع المضارع."
+          },
+          {
+            "audioId": "pr-2",
+            "speakText": "Hallo, Yusuf! Ich suche meine Hausaufgaben — ach, hier sind sie!",
+            "q": "استمع: عمّ تبحث لينا، وهل تجده؟",
+            "choices": [
+              "عن واجباتها — وتجدها",
+              "عن هاتفها — وتجده",
+              "عن واجباتها — ولا تجدها"
+            ],
+            "a": "عن واجباتها — وتجدها",
+            "why": "Ich suche meine Hausaufgaben = أبحث عن واجباتي · ach, hier sind sie! = آه، ها هي!"
+          },
+          {
+            "audioId": "pr-3",
+            "speakText": "Hausaufgaben? Sind sie schwer?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل الواجبات صعبة",
+              "هل الواجبات كثيرة",
+              "هل الواجبات طويلة"
+            ],
+            "a": "هل الواجبات صعبة",
+            "why": "Sind sie schwer? = هل هي صعبة؟ — sie هنا ضمير الجمع: الواجبات."
+          },
+          {
+            "audioId": "pr-4",
+            "speakText": "Nein, sie sind einfach, aber langweilig. Und du?",
+            "q": "استمع: كيف هي واجبات لينا؟",
+            "choices": [
+              "سهلة لكنها مملّة",
+              "صعبة لكنها ممتعة",
+              "سهلة وممتعة"
+            ],
+            "a": "سهلة لكنها مملّة",
+            "why": "sie sind einfach = هي سهلة · aber langweilig = لكنها مملّة · Und du? = وأنت؟"
+          },
+          {
+            "audioId": "pr-5",
+            "speakText": "Ich lese jeden Abend Texte auf Deutsch. Das macht Spaß!",
+            "q": "استمع: ماذا يفعل يوسف كل مساء، وكيف يجده؟",
+            "choices": [
+              "يقرأ نصوصاً بالألمانية — وهذا ممتع",
+              "يكتب نصوصاً بالألمانية — وهذا ممتع",
+              "يقرأ نصوصاً بالألمانية — لكنه مملّ"
+            ],
+            "a": "يقرأ نصوصاً بالألمانية — وهذا ممتع",
+            "why": "Ich lese jeden Abend Texte auf Deutsch = أقرأ كل مساء نصوصاً بالألمانية · Das macht Spaß! = هذا ممتع (machen + Spaß)."
+          },
+          {
+            "audioId": "pr-7",
+            "speakText": "Brauchst du den Computer für die Hausaufgaben?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل تحتاج الحاسوب للواجبات",
+              "هل تستخدم الهاتف للواجبات",
+              "هل تحتاج وقتاً للواجبات"
+            ],
+            "a": "هل تحتاج الحاسوب للواجبات",
+            "why": "Brauchst du den Computer …? = هل تحتاج الحاسوب…؟ — brauch + st مع du · für die Hausaufgaben = للواجبات."
+          },
+          {
+            "audioId": "pr-8",
+            "speakText": "Ja, ich benutze den Computer. Mein Lehrer schickt die Aufgaben am Morgen.",
+            "q": "استمع: متى يرسل معلّم لينا المهام؟",
+            "choices": [
+              "صباحاً",
+              "مساءً",
+              "يوم الأحد"
+            ],
+            "a": "صباحاً",
+            "why": "Mein Lehrer schickt die Aufgaben am Morgen = معلّمي يرسل المهام صباحاً — schick + t مع er · وich benutze = أستخدم."
+          },
+          {
+            "audioId": "pr-9",
+            "speakText": "Und was macht ihr am Sonntag?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "ماذا تفعل لينا وأسرتها يوم الأحد",
+              "ماذا تفعل لينا وحدها يوم الأحد",
+              "ماذا تفعل لينا يوم الاثنين"
+            ],
+            "a": "ماذا تفعل لينا وأسرتها يوم الأحد",
+            "why": "was macht ihr? = ماذا تفعلون؟ — ihr للمخاطَبين، ونهايته ‑t كنهاية er."
+          },
+          {
+            "audioId": "pr-11",
+            "speakText": "Meine Oma wohnt in Tunesien. Ich telefoniere jeden Sonntag lange.",
+            "q": "استمع: ماذا يفعل يوسف كل يوم أحد؟",
+            "choices": [
+              "يتحدّث هاتفياً طويلاً — فجدّته في تونس",
+              "يزور جدّته في تونس",
+              "يتحدّث هاتفياً قليلاً — فجدّته في برلين"
+            ],
+            "a": "يتحدّث هاتفياً طويلاً — فجدّته في تونس",
+            "why": "Meine Oma wohnt in Tunesien = جدّتي تسكن في تونس · Ich telefoniere jeden Sonntag lange = أتحدّث هاتفياً كل يوم أحد طويلاً (‑ieren منتظم)."
+          },
+          {
+            "audioId": "pr-12",
+            "speakText": "Und putzt du am Sonntag deine Wohnung?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل ينظّف شقته يوم الأحد",
+              "هل يبحث عن شقة يوم الأحد",
+              "هل ينظّف المطبخ يوم الاثنين"
+            ],
+            "a": "هل ينظّف شقته يوم الأحد",
+            "why": "Und putzt du …? = وهل تنظّف…؟ — putz + t مع du (لا s ثانية) · deine Wohnung = شقتك."
+          },
+          {
+            "audioId": "pr-14",
+            "speakText": "Meine Brüder putzen nie! Sie spielen nur Fußball.",
+            "q": "استمع: ماذا تقول لينا عن أخويها؟",
+            "choices": [
+              "لا ينظّفان أبداً — يلعبان كرة القدم فقط",
+              "ينظّفان دائماً — ثم يلعبان كرة القدم",
+              "لا يلعبان كرة القدم أبداً"
+            ],
+            "a": "لا ينظّفان أبداً — يلعبان كرة القدم فقط",
+            "why": "Meine Brüder putzen nie = أخواي لا ينظّفان أبداً (nie وحدها بلا nicht) · Sie spielen nur Fußball = يلعبان كرة القدم فقط."
+          },
+          {
+            "audioId": "pr-15",
+            "speakText": "Hörst du das? Wer ruft da?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "من ينادي هناك",
+              "من يتصل هاتفياً هناك",
+              "من يلعب هناك"
+            ],
+            "a": "من ينادي هناك",
+            "why": "Hörst du das? = هل تسمعين ذلك؟ · Wer ruft da? = من ينادي هناك؟ — rufen = ينادي (لا «يتصل»)."
+          },
+          {
+            "audioId": "pr-16",
+            "speakText": "Das sind meine Brüder im Garten. Sie rufen so laut!",
+            "q": "استمع: من ينادي، وأين؟",
+            "choices": [
+              "أخواها — في الحديقة",
+              "أمها — في المطبخ",
+              "أخواها — في غرفتهما"
+            ],
+            "a": "أخواها — في الحديقة",
+            "why": "meine Brüder im Garten = أخواي في الحديقة · Sie rufen so laut! = ينادون بصوت عالٍ جداً!"
+          },
+          {
+            "audioId": "pr-17",
+            "speakText": "Schließ doch das Fenster!",
+            "q": "استمع: ماذا يقترح يوسف؟",
+            "choices": [
+              "أن تغلق النافذة",
+              "أن تفتح النافذة",
+              "أن تغلق الباب"
+            ],
+            "a": "أن تغلق النافذة",
+            "why": "Schließ doch das Fenster! = أغلقي النافذة إذن! — Schließ صيغة الأمر مع du."
+          },
+          {
+            "audioId": "pr-18",
+            "speakText": "Okay, ich schließe das Fenster. So, jetzt ist es ruhig.",
+            "q": "استمع: ماذا تفعل لينا، وكيف صار المكان؟",
+            "choices": [
+              "تغلق النافذة — والآن هدوء",
+              "تفتح النافذة — والآن هدوء",
+              "تغلق النافذة — لكنه ما زال صاخباً"
+            ],
+            "a": "تغلق النافذة — والآن هدوء",
+            "why": "ich schließe das Fenster = أغلق النافذة (schließ + e) · jetzt ist es ruhig = الآن هادئ."
+          },
+          {
+            "audioId": "pr-19",
+            "speakText": "Hier in Berlin ist es heiß. Ich öffne mein Fenster.",
+            "q": "استمع: ماذا يفعل يوسف، ولماذا؟",
+            "choices": [
+              "يفتح نافذته — فالجو حار في برلين",
+              "يغلق نافذته — فالجو حار في برلين",
+              "يفتح الباب — فالجو حار في برلين"
+            ],
+            "a": "يفتح نافذته — فالجو حار في برلين",
+            "why": "Hier in Berlin ist es heiß = هنا في برلين الجو حار · Ich öffne mein Fenster = أفتح نافذتي (öffn + e)."
+          },
+          {
+            "audioId": "pr-20",
+            "speakText": "Und ich mache jetzt meine Hausaufgaben. Wartest du auf mich? Ich brauche nur zehn Minuten!",
+            "q": "استمع: ماذا تطلب لينا في النهاية؟",
+            "choices": [
+              "أن ينتظرها عشر دقائق",
+              "أن يساعدها في الواجبات",
+              "أن يتصل بها بعد ساعة"
+            ],
+            "a": "أن ينتظرها عشر دقائق",
+            "why": "Wartest du auf mich? = هل تنتظرني؟ (warten auf + mich) · Ich brauche nur zehn Minuten = أحتاج عشر دقائق فقط."
+          }
+        ],
+        "interleavedWith": [
+          "minute",
+          "text",
+          "computer",
+          "lehrer",
+          "oma",
+          "garten",
+          "laut",
+          "ruhig",
+          "fenster"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Tür.",
+              "öffnet",
+              "Er",
+              "die"
+            ],
+            "a": "Er öffnet die Tür.",
+            "why": "Er ثم öffnet (e قبل t بعد öffn‑) ثم المفعول die Tür."
+          },
+          {
+            "tokens": [
+              "mich.",
+              "auf",
+              "wartet",
+              "Lena"
+            ],
+            "a": "Lena wartet auf mich.",
+            "why": "Lena ثم wartet (wart + e + t) ثم auf mich — warten auf + المنصوب."
+          },
+          {
+            "tokens": [
+              "nie.",
+              "putzt",
+              "Bruder",
+              "Mein"
+            ],
+            "a": "Mein Bruder putzt nie.",
+            "why": "Mein Bruder ثم putzt (er + t) ثم nie في الآخر — بلا nicht."
+          },
+          {
+            "tokens": [
+              "Spaß!",
+              "macht",
+              "Das"
+            ],
+            "a": "Das macht Spaß!",
+            "why": "Das ثم macht (machen مع es/das: ‑t) ثم Spaß — «هذا ممتع»، التعبير الموعود في الدرس الماضي."
+          },
+          {
+            "tokens": [
+              "Küche?",
+              "die",
+              "Putzt",
+              "ihr"
+            ],
+            "a": "Putzt ihr die Küche?",
+            "why": "سؤال نعم/لا: الفعل Putzt أولاً (ihr + t) ثم ihr ثم die Küche."
+          },
+          {
+            "tokens": [
+              "einfach.",
+              "ist",
+              "Hausaufgabe",
+              "Die"
+            ],
+            "a": "Die Hausaufgabe ist einfach.",
+            "why": "Die Hausaufgabe (die من die Aufgabe) ثم ist ثم الصفة einfach."
+          }
+        ],
+        "interleavedWith": [
+          "bruder"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "pr-6",
+            "speakText": "Spaß? Hausaufgaben machen nie Spaß!",
+            "a": "Spaß? Hausaufgaben machen nie Spaß!",
+            "why": "Spaß بحرف كبير وß بعد a الطويلة · Hausaufgaben كلمة واحدة بحرف كبير (Haus + Aufgaben) · machen ‑en مع الجمع · nie بـie."
+          },
+          {
+            "audioId": "pr-10",
+            "speakText": "Am Sonntag besuchen wir Oma. Sie macht immer Kuchen!",
+            "a": "Am Sonntag besuchen wir Oma. Sie macht immer Kuchen!",
+            "why": "besuchen wir: ‑en مع wir والفعل ثانياً بعد Am Sonntag · Oma بحرف كبير · Kuchen بـch بعد u («خ»)."
+          },
+          {
+            "audioId": "pr-13",
+            "speakText": "Ja, ich putze die Küche — allein, natürlich!",
+            "a": "Ja, ich putze die Küche — allein, natürlich!",
+            "why": "putze: tz «تس» · Küche بـü ثم ch («ش» الرقيقة) · allein بـll · natürlich بـü."
+          },
+          {
+            "audioId": "word-hausaufgabe",
+            "speakText": "die Hausaufgabe.",
+            "a": "die Hausaufgabe",
+            "why": "die من آخر الكلمة (die Aufgabe) · Haus + Aufgabe كلمة واحدة بحرف كبير · au «او» مرتين."
+          },
+          {
+            "audioId": "word-einfach",
+            "speakText": "einfach.",
+            "a": "einfach",
+            "why": "einfach: ei «اي» ثم f ثم ach («خ» بعد a)."
+          },
+          {
+            "audioId": "word-oeffnen",
+            "speakText": "öffnen.",
+            "a": "öffnen",
+            "why": "öffnen: ö ثم ff مضاعفة بعد حركة قصيرة ثم nen."
+          },
+          {
+            "audioId": "word-schliessen",
+            "speakText": "schließen.",
+            "a": "schließen",
+            "why": "schließen: sch ثم l ثم ie طويلة ثم ß (بعد الحركة الطويلة) ثم en."
+          },
+          {
+            "audioId": "word-telefonieren",
+            "speakText": "telefonieren.",
+            "a": "telefonieren",
+            "why": "telefonieren بـf كـdas Telefon · ie طويلة عليها النبر · ثم ren."
+          }
+        ],
+        "interleavedWith": [
+          "sonntag",
+          "oma",
+          "kuchen",
+          "allein"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Mein Tag: Ich mache, du machst, Lena macht …",
+        "ar": "تحكي يومك وأسبوعك لزميلك بالأفعال المنتظمة، وتسأله عن يومه بـdu وعن أسرته"
+      },
+      "situation": {
+        "de": "Was machst du am Abend? Was macht deine Familie am Sonntag? Putzt du gern?",
+        "ar": "في الدورة: يسأل كلٌّ منكما الآخر عن يومه وأسبوعه: Was machst du am Abend? · Was macht deine Familie am Sonntag? · Putzt du gern? — ويجيب بجمل كاملة بخمسة أفعال على الأقل من أفعال اليوم، مع ich وwir وer/sie — ثم تحكي لزميلٍ ثالث ما يفعله شريكك (Er telefoniert … · Sie putzt …) — ثم تتبادلان."
+      },
+      "successCriteria": [
+        "خمس جمل على الأقل عن يومك بأفعال اليوم: ich ‑e (Ich mache meine Hausaufgaben.)، وجملة بـwir ‑en (Am Sonntag besuchen wir …)، وجملة بـnie (Ich putze nie …) — والفاعل في كل جملة.",
+        "سؤالان لزميلك بـdu (Wartest du …? · Putzt du …?) — ثم تحكي عنه بـer/sie ‑t (Er telefoniert jeden Sonntag.) — مع e بعد t/d (du wartest · er arbeitet) وt وحدها بعد s/ß/z (du putzt)."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "سؤال لزميلك: «هل تنتظر منذ وقت طويل؟»",
+            "choices": [
+              "Wartest du schon lange?",
+              "Warten du schon lange?",
+              "Wartet du schon lange?"
+            ],
+            "a": "Wartest du schon lange?",
+            "why": "du بعد wart‑: e قبل st ← Wartest — والفعل أولاً في السؤال."
+          },
+          {
+            "q": "«أختي تفتح النافذة»؟",
+            "choices": [
+              "Meine Schwester öffnet das Fenster.",
+              "Meine Schwester öffnest das Fenster.",
+              "Meine Schwester öffnt das Fenster."
+            ],
+            "a": "Meine Schwester öffnet das Fenster.",
+            "why": "sie (هي) + ‑t بعد e: öffnet — ‑st لـdu وحدها، وöffnt لا تُنطق."
+          },
+          {
+            "q": "einfach = ؟",
+            "choices": [
+              "سهل",
+              "صعب",
+              "مملّ"
+            ],
+            "a": "سهل",
+            "why": "einfach = سهل · schwer = صعب · langweilig = مملّ."
+          },
+          {
+            "q": "للمعلّمة بـSie: «ماذا تفعلين اليوم؟»",
+            "choices": [
+              "Was machen Sie heute?",
+              "Was machst Sie heute?",
+              "Was mache Sie heute?"
+            ],
+            "a": "Was machen Sie heute?",
+            "why": "Sie للاحترام بصيغة الجمع ‑en ولو لشخصٍ واحد: Was machen Sie …?"
+          },
+          {
+            "q": "putzen مع du؟",
+            "a": "du putzt",
+            "why": "بعد z لا s ثانية: putz + t ← du putzt (= er putzt)."
+          },
+          {
+            "q": "«في المساء نغلق النافذة» — ابدأ بـ Am Abend",
+            "a": "Am Abend schließen wir das Fenster.",
+            "why": "الوقت أولاً ثم schließen ثانياً (wir + ‑en) ثم wir ثم das Fenster."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "سؤال لزميلك: «هل تستخدم الحاسوب؟»",
+            "choices": [
+              "Benutzt du den Computer?",
+              "Benutzst du den Computer?",
+              "Benutzen du den Computer?"
+            ],
+            "a": "Benutzt du den Computer?",
+            "why": "بعد z لا s ثانية مع du: Benutzt du …? — والفعل أولاً في السؤال."
+          },
+          {
+            "q": "«يوسف ينتظر لينا»؟",
+            "choices": [
+              "Yusuf wartet auf Lena.",
+              "Yusuf wartest auf Lena.",
+              "Yusuf wartt auf Lena."
+            ],
+            "a": "Yusuf wartet auf Lena.",
+            "why": "er بعد wart‑: e قبل t ← wartet — وwarten auf + الشخص: auf Lena."
+          },
+          {
+            "q": "nie = ؟",
+            "choices": [
+              "لا … أبداً",
+              "دائماً",
+              "كثيراً"
+            ],
+            "a": "لا … أبداً",
+            "why": "nie = لا … أبداً · immer = دائماً · oft = كثيراً."
+          },
+          {
+            "q": "سؤال لأخويك معاً: «هل تحتاجان الحاسوب؟»",
+            "choices": [
+              "Braucht ihr den Computer?",
+              "Brauchst ihr den Computer?",
+              "Brauchen ihr den Computer?"
+            ],
+            "a": "Braucht ihr den Computer?",
+            "why": "ihr + ‑t: Braucht ihr …? — نهاية ihr كنهاية er."
+          },
+          {
+            "q": "warten مع er؟",
+            "a": "er wartet",
+            "why": "e قبل t بعد wart‑: er wartet."
+          },
+          {
+            "q": "«في الصباح أفتح النافذة» — ابدأ بـ Am Morgen",
+            "a": "Am Morgen öffne ich das Fenster.",
+            "why": "الوقت أولاً ثم öffne ثانياً (ich + ‑e) ثم ich ثم das Fenster."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«لينا تغلق الباب»؟",
+            "choices": [
+              "Lena schließt die Tür.",
+              "Lena schließen die Tür.",
+              "Lena schließst die Tür."
+            ],
+            "a": "Lena schließt die Tür.",
+            "why": "sie (هي) + ‑t: schließt — ولا s ثانية بعد ß."
+          },
+          {
+            "q": "«أبي يحتاج وقتاً»؟",
+            "choices": [
+              "Mein Vater braucht Zeit.",
+              "Mein Vater brauchst Zeit.",
+              "Mein Vater brauchen Zeit."
+            ],
+            "a": "Mein Vater braucht Zeit.",
+            "why": "er + ‑t: braucht — ‑st لـdu وحدها، و‑en للجمع."
+          },
+          {
+            "q": "rufen = ؟",
+            "choices": [
+              "ينادي",
+              "ينتظر",
+              "يبحث عن"
+            ],
+            "a": "ينادي",
+            "why": "rufen = ينادي · warten = ينتظر · suchen = يبحث عن."
+          },
+          {
+            "q": "سؤال لجارك بـSie: «هل تتحدّث هاتفياً كثيراً؟»",
+            "choices": [
+              "Telefonieren Sie oft?",
+              "Telefonierst Sie oft?",
+              "Telefoniere Sie oft?"
+            ],
+            "a": "Telefonieren Sie oft?",
+            "why": "Sie بصيغة الجمع ‑en: Telefonieren Sie …? — وأفعال ‑ieren منتظمة."
+          },
+          {
+            "q": "«الواجبات» (die Hausaufgabe — الجمع مع الأداة)؟",
+            "a": "die Hausaufgaben",
+            "why": "die Hausaufgabe ← die Hausaufgaben: ‑n كـdie Aufgaben."
+          },
+          {
+            "q": "«أختي لا تشرب الشاي أبداً» — ابدأ بـ Meine Schwester",
+            "a": "Meine Schwester trinkt nie Tee.",
+            "why": "trinkt ثانياً (sie + ‑t) ثم nie قبل Tee — بلا nicht."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "ich mache · du machst · er/sie macht · wir machen · ihr macht · sie/Sie machen · du wartest · er öffnet · du putzt · ich telefoniere · Warten Sie? · Ich warte auf dich. · Das macht Spaß! · Hausaufgaben machen nie Spaß!",
+      "ar": "الفعل المنتظم = جذعٌ ثابت + نهاية الفاعل: ich ‑e · du ‑st · er/sie/es ‑t · wir ‑en · ihr ‑t · sie/Sie ‑en — والفاعل يُذكر دائماً. e قبل النهاية بعد t/d وبعد ساكنٍ ثم n (du wartest · er öffnet · er arbeitet)، وt وحدها مع du بعد s/ß/z (du putzt · du schließt). أفعال ‑ieren منتظمة (er telefoniert). Sie للاحترام بصيغة الجمع ولو لشخصٍ واحد (Warten Sie?). warten auf + المنصوب (Ich warte auf dich.). nie = «لا … أبداً» بلا nicht · einfach = سهل · die Hausaufgabe ← die Hausaufgaben (Hausaufgaben machen) · Das macht Spaß! = هذا ممتع · rufen = ينادي. ومعها: suchen · brauchen · besuchen · benutzen · schicken."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Lena machst ihre Hausaufgaben.~~",
+          "ar": "‑st لـdu وحدها — ومع «هي» ‑t"
+        },
+        "whyArabicSpeakerFails": "في المضارع العربي «تـ» واحدة للمخاطَب وللغائبة: «أنتَ تعمل» و«هي تعمل» بالصيغة نفسها — فإذا ربط المتعلم ‑st بـ«تـ» وضعها مع «هي» أيضاً. والألمانية تفرّق بآخر الفعل لا بأوله: du machst ← أنتَ · sie macht ← هي (وكذلك Lena macht) — ‑st للمخاطَب du وحده (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Lena macht ihre Hausaufgaben.",
+          "ar": "لينا تنجز واجباتها."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Meine Mutter suchst den Schlüssel.~~",
+          "a": "Meine Mutter sucht den Schlüssel."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wartest Sie schon lange?~~",
+          "ar": "Sie (حضرتك) بصيغة الجمع ‑en"
+        },
+        "whyArabicSpeakerFails": "في الكلام اليومي نخاطب الشخص الواحد بفعل المفرد ولو احترمناه: «هل تنتظر يا أستاذ؟» — فيأخذ المتعلم صيغة du مع Sie. لكن Sie الألمانية تأخذ صيغة الجمع ‑en دائماً، ولو لشخصٍ واحد: Warten Sie …? — كصيغة الاحترام في الرسائل الرسمية العربية («حضرتكم تتفضّلون») وvous attendez الفرنسية: هذان يساعدانك (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Warten Sie schon lange?",
+          "ar": "هل تنتظر حضرتك منذ وقت طويل؟"
+        },
+        "exercise": {
+          "q": "صحّح (للمعلّمة): ~~Brauchst Sie den Computer?~~",
+          "a": "Brauchen Sie den Computer?"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich warte dich.~~",
+          "ar": "warten auf + المنصوب"
+        },
+        "whyArabicSpeakerFails": "«أنتظرك» و«أنتظر الحافلة» بمفعولٍ مباشر في العربية، وكذلك j'attends الفرنسية — فيضع المتعلم المفعول بعد warten مباشرة. لكن warten بمعنى «ينتظر» يحتاج auf ثم المنصوب: auf dich · auf den Kellner (والإنجليزية wait for بحرف جرٍّ أيضاً — تساعدك هنا). والمشطوبة صحيحة نحواً بمعنى آخر: warten مع مفعولٍ مباشر = «يصون آلةً ويفحصها» — فكأنك تقول «أصونك»! (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Ich warte auf dich.",
+          "ar": "أنتظرك."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Lena wartet ihren Bruder.~~",
+          "a": "Lena wartet auf ihren Bruder."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "machen",
+      "suchen",
+      "putzen",
+      "oeffnen",
+      "schliessen",
+      "brauchen",
+      "rufen",
+      "besuchen",
+      "benutzen",
+      "telefonieren",
+      "schicken",
+      "warten",
+      "hausaufgabe",
+      "nie",
+      "einfach"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/warten",
+      "https://www.duden.de/rechtschreibung/telefonieren",
+      "https://www.duden.de/rechtschreibung/oeffnen",
+      "https://www.duden.de/rechtschreibung/Hausaufgabe",
+      "https://www.duden.de/rechtschreibung/nie",
+      "https://www.duden.de/rechtschreibung/einfach"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/warten",
+      "https://de.wiktionary.org/wiki/telefonieren",
+      "https://de.wiktionary.org/wiki/Hausaufgabe",
+      "https://de.wiktionary.org/wiki/nie",
+      "https://de.wiktionary.org/wiki/einfach"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesens-regelm"
+  ],
+  "audioManifestRefs": [
+    "word-machen",
+    "word-suchen",
+    "word-putzen",
+    "word-oeffnen",
+    "word-schliessen",
+    "word-brauchen",
+    "word-rufen",
+    "word-besuchen",
+    "word-benutzen",
+    "word-telefonieren",
+    "word-schicken",
+    "word-warten",
+    "word-hausaufgabe",
+    "word-nie",
+    "word-einfach"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Regelmäßige Verben",
+    "goetheWordListOverlap": [
+      "machen",
+      "suchen",
+      "putzen",
+      "oeffnen",
+      "schliessen",
+      "brauchen",
+      "rufen",
+      "besuchen",
+      "benutzen",
+      "telefonieren",
+      "schicken",
+      "warten",
+      "hausaufgabe",
+      "nie",
+      "einfach"
+    ]
+  }
+}

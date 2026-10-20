@@ -1,0 +1,898 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u8-d2",
+  "level": "A1",
+  "unit": 8,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Was kosten die Schuhe? — Neununddreißig Euro neunundneunzig. Das ist günstig!",
+    "ar": "تسأل عن السعر وتجيب بأرقام كبيرة وبالسنتات (Was kostet der Hut? · Was kosten die Schuhe? · neunundzwanzig Euro neunundneunzig · neunundneunzig Cent) وتحكم عليه (günstig · billig · zu teuer · am besten) — ومعها circa والخصم والعرض والبائع والزبون والباقي."
+  },
+  "canDoDaily": [
+    "يسأل عن السعر ويجيب: Was kostet der Hut? — Er kostet fünf Euro fünfzig. · Was kosten die Schuhe? — Sie kosten neununddreißig Euro neunundneunzig. · neunundneunzig Cent · circa vierzig Euro · Das macht zwanzig Euro.",
+    "يحكم على السعر ويتكلم في المتجر: Das ist günstig / billig / zu teuer. · Heute gibt es zehn Euro Rabatt. · Das Angebot ist gut. · Der Markt ist am besten. · Ich probiere den Hut an. · Hier ist das Wechselgeld."
+  ],
+  "warmup": {
+    "cardIds": [
+      "preis",
+      "kosten",
+      "bezahlen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«كم يكلّف الحذاء؟» بالألمانية — أي صيغة صحيحة؟ (تخمين فقط)"
+        },
+        "choices": [
+          "Was kosten die Schuhe?",
+          "Was kostet die Schuhe?",
+          "Wie kosten die Schuhe?"
+        ],
+        "answer": "Was kosten die Schuhe?",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "cent",
+      "rabatt",
+      "angebot",
+      "guenstig",
+      "wechselgeld",
+      "verkaufen",
+      "verkaeufer",
+      "kunde",
+      "supermarkt",
+      "geschaeft",
+      "markt",
+      "anprobieren",
+      "circa",
+      "beste"
+    ],
+    "borrowedWords": [
+      {
+        "form": "fragt",
+        "wordId": "fragen",
+        "ar": "يسأل",
+        "whyAr": "البائع «يسأل» الزبون هو المشهد الطبيعي في المتجر؛ تتعلّم الفعل fragen كاملاً في الدرس a1-u10-d3 — هنا صيغته fragt وحدها."
+      }
+    ],
+    "grammarArsenalIds": [
+      "ars-preise"
+    ],
+    "storySentenceIds": [
+      "story-a1-u8-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "auslaut-d",
+      "double-consonant",
+      "ig-ending",
+      "r-uvular",
+      "umlaut-a",
+      "umlaut-u",
+      "v-f",
+      "vowel-long-short"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Was ___ die Schuhe? (يكلّف — الحذاء زوجٌ)",
+            "a": "kosten",
+            "why": "die Schuhe جمعٌ (الزوج بالجمع — الدرس السابق) فالفعل kosten: الشيء فاعلٌ وkosten تتبعه."
+          },
+          {
+            "q": "Was ___ der Hut? (يكلّف — مفرد)",
+            "a": "kostet",
+            "why": "der Hut مفردٌ فالفعل kostet — والجواب بضميره: Er kostet …"
+          },
+          {
+            "q": "Das Wasser kostet neunundneunzig ___. (سنتاً)",
+            "a": "Cent",
+            "why": "ما دون اليورو يُقال بـCent — وبلا نهاية جمع بعد العدد، كـEuro (الوحدة 3)."
+          },
+          {
+            "q": "Neunundzwanzig ___ neunundneunzig. (29,99 €)",
+            "a": "Euro",
+            "why": "السنتات تُقال بعد Euro عدداً بلا كلمة Cent: neunundzwanzig Euro neunundneunzig."
+          },
+          {
+            "q": "Heute gibt es zehn Euro ___. (خصم)",
+            "a": "Rabatt",
+            "why": "der Rabatt = الخصم — بالمبلغ: zehn Euro Rabatt."
+          },
+          {
+            "q": "Das ___ ist gut: Die Schuhe kosten nur dreißig Euro. (العرض)",
+            "a": "Angebot",
+            "why": "das Angebot = العرض — محايد (das) — وim Angebot = في العرض."
+          },
+          {
+            "q": "Zwölf Euro für ein Buch? Das ist ___! (مناسب السعر)",
+            "a": "günstig",
+            "why": "günstig = مناسب السعر (يستحق ثمنه) — وليس بالضرورة billig (رخيص)."
+          },
+          {
+            "q": "Ich bezahle fünfzig Euro und bekomme das ___. (الباقي)",
+            "a": "Wechselgeld",
+            "why": "das Wechselgeld = الباقي نقداً — مركّبٌ من wechseln + Geld، والجنس من آخر جزء: das Geld ← das Wechselgeld."
+          },
+          {
+            "q": "Der Verkäufer ___ auch Hüte. (يبيع)",
+            "a": "verkauft",
+            "why": "verkaufen = يبيع — ver‑ تقلب kaufen (يشتري) — وتصريفه كـkaufen: er verkauft."
+          },
+          {
+            "q": "Der ___ ist sehr nett. Er verkauft Schuhe. (البائع)",
+            "a": "Verkäufer",
+            "why": "der Verkäufer = البائع — من verkaufen + ‑er، والجمع بلا نهاية: die Verkäufer."
+          },
+          {
+            "q": "Heute hat der Verkäufer viele ___. (زبائن)",
+            "a": "Kunden",
+            "why": "der Kunde ← die Kunden (‑n) — وفي المفعول أيضاً den Kunden (كـden Nachbarn)."
+          },
+          {
+            "q": "Im ___ gibt es auch Bücher. (السوبرماركت)",
+            "a": "Supermarkt",
+            "why": "der Supermarkt — مركّب والجنس من آخر جزء: der Markt ← der Supermarkt · im = in + dem."
+          },
+          {
+            "q": "Im ___ kosten die Schuhe neunundachtzig Euro — zu teuer! (المتجر)",
+            "a": "Geschäft",
+            "why": "das Geschäft = المتجر (محايد) — وzu teuer = أغلى من اللازم."
+          },
+          {
+            "q": "Auf dem ___ kosten sie circa vierzig Euro. (السوق)",
+            "a": "Markt",
+            "why": "der Markt = السوق — auf dem Markt (Wo? — الوحدة 6) · circa = حوالي."
+          },
+          {
+            "q": "Ich ___ den Hut an. (أقيس)",
+            "a": "probiere",
+            "why": "anprobieren فعلٌ منفصل (قاعدة الوحدة 7): probiere أولاً وan في آخر الجملة."
+          },
+          {
+            "q": "Die Jacke kostet ___ vierzig Euro. (حوالي)",
+            "a": "circa",
+            "why": "circa = حوالي/تقريباً — قبل العدد التقريبي، وتُكتب مختصرةً ca."
+          },
+          {
+            "q": "Der Markt ist am ___. (الأفضل)",
+            "a": "besten",
+            "why": "am besten = الأفضل (حكماً أعلى) — بعد ist: Der Markt ist am besten."
+          }
+        ],
+        "interleavedWith": [
+          "schuh",
+          "hut",
+          "buch",
+          "wasser",
+          "teuer",
+          "bezahlen",
+          "euro",
+          "kosten",
+          "jacke",
+          "nett",
+          "heute",
+          "viel",
+          "bekommen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "ws-1",
+            "speakText": "Yusuf, hast du jetzt die Schuhe für deine Oma?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل اشترى الحذاء لجدّته",
+              "هل اشترى حذاءً لنفسه",
+              "هل جدّته في برلين"
+            ],
+            "a": "هل اشترى الحذاء لجدّته",
+            "why": "Hast du jetzt die Schuhe für deine Oma? = هل عندك الآن الحذاء لجدّتك؟ — für deine Oma."
+          },
+          {
+            "audioId": "ws-2",
+            "speakText": "Noch nicht. Im Geschäft kosten die Schuhe neunundachtzig Euro — zu teuer!",
+            "q": "استمع: كم يكلّف الحذاء في المتجر؟",
+            "choices": [
+              "89 €",
+              "98 €",
+              "19 €"
+            ],
+            "a": "89 €",
+            "why": "neunundachtzig = تسعة وثمانون: الآحاد أولاً ثم und ثم العشرات — وim Geschäft = في المتجر."
+          },
+          {
+            "audioId": "ws-4",
+            "speakText": "Der Markt ist am besten. Dort kosten die Schuhe circa vierzig Euro.",
+            "q": "استمع: أين الحذاء أرخص؟ وبكم تقريباً؟",
+            "choices": [
+              "في السوق — حوالي 40 €",
+              "في المتجر — حوالي 40 €",
+              "في السوق — بالضبط 40 €"
+            ],
+            "a": "في السوق — حوالي 40 €",
+            "why": "Der Markt ist am besten … circa vierzig Euro = حوالي أربعين — circa تقريبٌ لا تحديد."
+          },
+          {
+            "audioId": "ws-5",
+            "speakText": "Circa vierzig? Und was kosten sie genau?",
+            "q": "استمع: ماذا تريد لينا أن تعرف؟",
+            "choices": [
+              "السعر بالضبط",
+              "اسم السوق",
+              "لون الحذاء"
+            ],
+            "a": "السعر بالضبط",
+            "why": "Was kosten sie genau? = كم يكلّف بالضبط؟ — sie = die Schuhe · kosten بالجمع."
+          },
+          {
+            "audioId": "ws-6",
+            "speakText": "Neununddreißig Euro neunundneunzig. Und heute gibt es zehn Euro Rabatt!",
+            "q": "استمع: كم السعر بالضبط؟",
+            "choices": [
+              "39,99 €",
+              "39,90 €",
+              "93,99 €"
+            ],
+            "a": "39,99 €",
+            "why": "neununddreißig Euro neunundneunzig = 39,99 € — السنتات بعد Euro بلا كلمة Cent."
+          },
+          {
+            "audioId": "ws-7",
+            "speakText": "Zehn Euro Rabatt? Das Angebot ist gut!",
+            "q": "استمع: كيف تجد لينا العرض؟",
+            "choices": [
+              "جيد",
+              "غالٍ",
+              "سيّئ"
+            ],
+            "a": "جيد",
+            "why": "Das Angebot ist gut! — das Angebot = العرض."
+          },
+          {
+            "audioId": "ws-9",
+            "speakText": "Und der Verkäufer? Ist er nett?",
+            "q": "استمع: عمّن تسأل لينا؟",
+            "choices": [
+              "عن البائع",
+              "عن الزبون",
+              "عن الجدّة"
+            ],
+            "a": "عن البائع",
+            "why": "Und der Verkäufer? Ist er nett? — der Verkäufer = البائع."
+          },
+          {
+            "audioId": "ws-10",
+            "speakText": "Sehr nett. Er verkauft auch Hüte. Ich probiere einen Hut an — für mich!",
+            "q": "استمع: ماذا يبيع البائع أيضاً؟ وماذا يقيس يوسف؟",
+            "choices": [
+              "قبعات — يقيس قبعة لنفسه",
+              "أحذية — يقيس حذاءً",
+              "سترات — يقيس سترة"
+            ],
+            "a": "قبعات — يقيس قبعة لنفسه",
+            "why": "Er verkauft auch Hüte. Ich probiere einen Hut an — für mich! — verkaufen = يبيع · probiere … an = أقيس."
+          },
+          {
+            "audioId": "ws-11",
+            "speakText": "Ein Hut für dich? Was kostet er?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "عن سعر القبعة",
+              "عن لون القبعة",
+              "عن مقاس القبعة"
+            ],
+            "a": "عن سعر القبعة",
+            "why": "Was kostet er? — er = der Hut: السؤال عن سعرها."
+          },
+          {
+            "audioId": "ws-12",
+            "speakText": "Nur fünf Euro fünfzig. Aber er ist zu groß.",
+            "q": "استمع: كم تكلّف القبعة؟ وما مشكلتها؟",
+            "choices": [
+              "5,50 € — كبيرة جداً",
+              "5,15 € — صغيرة جداً",
+              "15,50 € — غالية جداً"
+            ],
+            "a": "5,50 € — كبيرة جداً",
+            "why": "fünf Euro fünfzig = 5,50 € · zu groß = كبيرة جداً (أكبر من اللازم)."
+          },
+          {
+            "audioId": "ws-13",
+            "speakText": "Zu groß? Und wie bezahlst du?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "كيف يدفع",
+              "متى يدفع",
+              "لمن يدفع"
+            ],
+            "a": "كيف يدفع",
+            "why": "Wie bezahlst du? = كيف تدفع؟ — bezahlen (الوحدة 3)."
+          },
+          {
+            "audioId": "ws-15",
+            "speakText": "Ein Cent! Hat der Verkäufer viele Kunden?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل عند البائع زبائن كثيرون",
+              "هل عند البائع سنتات كثيرة",
+              "هل البائع زبون"
+            ],
+            "a": "هل عند البائع زبائن كثيرون",
+            "why": "Hat der Verkäufer viele Kunden? — die Kunden جمع der Kunde = الزبائن."
+          },
+          {
+            "audioId": "ws-16",
+            "speakText": "Ja, heute kaufen viele Kunden Schuhe. Und du, Lena? Was kaufst du für deine Oma?",
+            "q": "استمع: ماذا يسأل يوسف لينا؟",
+            "choices": [
+              "ماذا تشتري لجدّتها",
+              "أين تسكن جدّتها",
+              "متى عيد ميلاد جدّتها"
+            ],
+            "a": "ماذا تشتري لجدّتها",
+            "why": "Was kaufst du für deine Oma? = ماذا تشترين لجدّتك؟"
+          },
+          {
+            "audioId": "ws-18",
+            "speakText": "Ein Buch im Supermarkt?",
+            "q": "استمع: ممّ يستغرب يوسف؟",
+            "choices": [
+              "كتاب في السوبرماركت",
+              "كتاب غالٍ",
+              "سوبرماركت جديد"
+            ],
+            "a": "كتاب في السوبرماركت",
+            "why": "Ein Buch im Supermarkt? — im Supermarkt = في السوبرماركت."
+          },
+          {
+            "audioId": "ws-19",
+            "speakText": "Ja, im Supermarkt gibt es auch Bücher — und sie sind günstig!",
+            "q": "استمع: لماذا تشتري لينا الكتاب من السوبرماركت؟",
+            "choices": [
+              "الكتب هناك مناسبة السعر",
+              "الكتب هناك جديدة",
+              "لا كتب في المتجر"
+            ],
+            "a": "الكتب هناك مناسبة السعر",
+            "why": "Im Supermarkt gibt es auch Bücher — und sie sind günstig! — günstig = مناسب السعر."
+          },
+          {
+            "audioId": "ws-20",
+            "speakText": "Super! Viel Spaß im Supermarkt!",
+            "q": "استمع: بم يودّع يوسف لينا؟",
+            "choices": [
+              "استمتعي في السوبرماركت",
+              "استمتعي في السوق",
+              "إلى اللقاء غداً"
+            ],
+            "a": "استمتعي في السوبرماركت",
+            "why": "Viel Spaß im Supermarkt! — Viel Spaß! (الوحدة 7)."
+          }
+        ],
+        "interleavedWith": [
+          "schuh",
+          "hut",
+          "kaufen",
+          "buch",
+          "teuer",
+          "bezahlen",
+          "euro",
+          "kosten",
+          "oma",
+          "nett",
+          "gross",
+          "heute",
+          "viel",
+          "dort"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "die",
+              "Schuhe?",
+              "kosten",
+              "Was"
+            ],
+            "a": "Was kosten die Schuhe?",
+            "why": "Was أولاً ثم الفعل kosten (الجمع) ثم الفاعل die Schuhe."
+          },
+          {
+            "tokens": [
+              "fünfzig.",
+              "Euro",
+              "kostet",
+              "Er",
+              "fünf"
+            ],
+            "a": "Er kostet fünf Euro fünfzig.",
+            "why": "الضمير er (der Hut) ثم kostet ثم السعر: fünf Euro fünfzig — السنتات بعد Euro."
+          },
+          {
+            "tokens": [
+              "Cent.",
+              "kostet",
+              "neunundneunzig",
+              "Wasser",
+              "Das"
+            ],
+            "a": "Das Wasser kostet neunundneunzig Cent.",
+            "why": "ما دون اليورو بـCent — بلا نهاية بعد العدد."
+          },
+          {
+            "tokens": [
+              "kaufe",
+              "dort.",
+              "Am",
+              "ich",
+              "besten",
+              "die",
+              "Schuhe"
+            ],
+            "a": "Am besten kaufe ich die Schuhe dort.",
+            "why": "Am besten يشغل الموضع الأول فيأتي الفعل kaufe ثانياً ثم الفاعل ich (الفعل ثانياً دائماً)."
+          },
+          {
+            "tokens": [
+              "den",
+              "Kunden.",
+              "Verkäufer",
+              "fragt",
+              "Der"
+            ],
+            "a": "Der Verkäufer fragt den Kunden.",
+            "why": "الفاعل Der Verkäufer ثم fragt ثم المفعول den Kunden — Kunde تأخذ ‑n في المفعول أيضاً."
+          },
+          {
+            "tokens": [
+              "an.",
+              "Hut",
+              "probiere",
+              "den",
+              "Ich"
+            ],
+            "a": "Ich probiere den Hut an.",
+            "why": "anprobieren منفصل: probiere في الموضع الثاني وan في آخر الجملة — وden Hut مفعول مذكر."
+          }
+        ],
+        "interleavedWith": [
+          "schuh",
+          "hut",
+          "kaufen",
+          "wasser",
+          "euro",
+          "kosten",
+          "dort"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "ws-3",
+            "speakText": "Neunundachtzig Euro? Das ist nicht günstig. Und der Markt?",
+            "a": "Neunundachtzig Euro? Das ist nicht günstig. Und der Markt?",
+            "why": "Neunundachtzig بحرف كبير في أول الجملة · günstig بـü وg في الآخر (تُنطق [ç]) · Markt بحرف كبير."
+          },
+          {
+            "audioId": "ws-8",
+            "speakText": "Ja! Das macht neunundzwanzig Euro neunundneunzig.",
+            "a": "Ja! Das macht neunundzwanzig Euro neunundneunzig.",
+            "why": "Das macht … = المجموع · neunundzwanzig وneunundneunzig كلمةٌ واحدة كلٌّ منهما: الآحاد ثم und ثم العشرات."
+          },
+          {
+            "audioId": "ws-14",
+            "speakText": "Ich habe fünfzig Euro. Das Wechselgeld: zwanzig Euro und ein Cent.",
+            "a": "Ich habe fünfzig Euro. Das Wechselgeld: zwanzig Euro und ein Cent.",
+            "why": "Wechselgeld بحرف كبير (اسم مركّب) وch ثم s · Cent بـC كبيرة ونهاية nt."
+          },
+          {
+            "audioId": "ws-17",
+            "speakText": "Ja, ein Buch. Im Supermarkt kostet es circa zwölf Euro.",
+            "a": "Ja, ein Buch. Im Supermarkt kostet es circa zwölf Euro.",
+            "why": "Supermarkt بحرف كبير · circa بـc في أولها وفي وسطها (تُنطق [ts] ثم [k]) · zwölf بـö."
+          },
+          {
+            "audioId": "word-rabatt",
+            "speakText": "Rabatt.",
+            "a": "Rabatt.",
+            "why": "Rabatt: b واحدة وtt مزدوجة بعد a القصيرة المنبورة."
+          },
+          {
+            "audioId": "word-angebot",
+            "speakText": "Angebot.",
+            "a": "Angebot.",
+            "why": "Angebot: An + ge + bot — oːt طويلة في الآخر وt."
+          },
+          {
+            "audioId": "word-verkaeufer",
+            "speakText": "Verkäufer.",
+            "a": "Verkäufer.",
+            "why": "Verkäufer: V تُنطق [f] · äu تُنطق [ɔʏ] · ‑er في الآخر."
+          },
+          {
+            "audioId": "word-circa",
+            "speakText": "circa.",
+            "a": "circa.",
+            "why": "circa تُكتب بـc مرتين — وتُنطق [ˈtsɪrka]؛ ومختصرةً ca."
+          },
+          {
+            "audioId": "word-beste",
+            "speakText": "beste.",
+            "a": "beste.",
+            "why": "beste: ‑e في الآخر (am besten بـ‑en)."
+          }
+        ],
+        "interleavedWith": [
+          "buch",
+          "euro",
+          "kosten",
+          "machen"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Was kostet das Hemd? — Zwölf Euro neunundneunzig. Das ist günstig!",
+        "ar": "تسأل زميلك عن أسعار أشياء وتجيب بأرقام كبيرة وبالسنتات وتحكم على السعر"
+      },
+      "situation": {
+        "de": "Im Geschäft: Was kostet der Pullover? Was kosten die Socken? Ist das günstig oder zu teuer?",
+        "ar": "في الدورة: يُري كلٌّ منكما الآخر ثلاث قطع (ملابس أو كتاباً أو قبعة) أمام الكاميرا، فيسأل الآخر: Was kostet …? / Was kosten …? — ويجيب بسعر فيه سنتات (zwölf Euro neunundneunzig · fünfzig Cent) أو تقريب (circa zwanzig Euro) — ثم يحكم السائل: Das ist günstig! / Das ist zu teuer! — وتتبادلان."
+      },
+      "successCriteria": [
+        "ثلاثة أسئلة سعر صحيحة الفعل (kostet للمفرد · kosten للجمع) وثلاثة أجوبة بالسنتات أو بـcirca — Euro وCent بلا نهاية.",
+        "حكمان على السعر (günstig · billig · zu teuer) وجملة بـam besten (Der Markt ist am besten.) وجملة بـRabatt أو Angebot."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«كم تكلّف القبعات؟»؟",
+            "choices": [
+              "Was kosten die Hüte?",
+              "Was kostet die Hüte?",
+              "Wie kosten die Hüte?"
+            ],
+            "a": "Was kosten die Hüte?",
+            "why": "die Hüte جمعٌ ← kosten — والسؤال بـWas (أو Wie viel) لا بـWie وحدها."
+          },
+          {
+            "q": "39,99 € بالكلمات؟",
+            "choices": [
+              "neununddreißig Euro neunundneunzig",
+              "neununddreißig Euro und neunundneunzig Cent",
+              "neununddreißig Cent neunundneunzig"
+            ],
+            "a": "neununddreißig Euro neunundneunzig",
+            "why": "السنتات بعد Euro عدداً بلا كلمة Cent — وEuro بلا نهاية."
+          },
+          {
+            "q": "der Rabatt = ؟",
+            "choices": [
+              "الخصم",
+              "العرض",
+              "الباقي"
+            ],
+            "a": "الخصم",
+            "why": "der Rabatt = الخصم · das Angebot = العرض · das Wechselgeld = الباقي."
+          },
+          {
+            "q": "«البائع يبيع أحذية»؟",
+            "choices": [
+              "Der Verkäufer verkauft Schuhe.",
+              "Der Verkäufer kauft Schuhe.",
+              "Der Kunde verkauft Schuhe."
+            ],
+            "a": "Der Verkäufer verkauft Schuhe.",
+            "why": "verkaufen = يبيع (ver‑ تقلب kaufen) — والبائع der Verkäufer."
+          },
+          {
+            "q": "«السوبرماركت هو الأفضل»؟",
+            "choices": [
+              "Der Supermarkt ist am besten.",
+              "Der Supermarkt ist beste.",
+              "Der Supermarkt ist am gut."
+            ],
+            "a": "Der Supermarkt ist am besten.",
+            "why": "am besten = الأفضل — حكماً أعلى بعد ist (لا beste وحدها ولا am gut)."
+          },
+          {
+            "q": "«أقيس السترة»؟",
+            "choices": [
+              "Ich probiere die Jacke an.",
+              "Ich anprobiere die Jacke.",
+              "Ich probiere an die Jacke."
+            ],
+            "a": "Ich probiere die Jacke an.",
+            "why": "anprobieren منفصل: probiere ثانياً وan في آخر الجملة — والمفعول die Jacke بينهما."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«كم تكلّف السترة؟»؟",
+            "choices": [
+              "Was kostet die Jacke?",
+              "Was kosten die Jacke?",
+              "Wie kostet die Jacke?"
+            ],
+            "a": "Was kostet die Jacke?",
+            "why": "die Jacke مفردٌ ← kostet — وWie وحدها = «كيف»."
+          },
+          {
+            "q": "0,50 € بالكلمات؟",
+            "choices": [
+              "fünfzig Cent",
+              "fünfzig Cents",
+              "null Euro fünfzig"
+            ],
+            "a": "fünfzig Cent",
+            "why": "ما دون اليورو بـCent — وبلا نهاية جمع بعد العدد."
+          },
+          {
+            "q": "der Kunde = ؟",
+            "choices": [
+              "الزبون",
+              "البائع",
+              "السوق"
+            ],
+            "a": "الزبون",
+            "why": "der Kunde = الزبون · der Verkäufer = البائع · der Markt = السوق."
+          },
+          {
+            "q": "«الزبون يسأل البائع»؟",
+            "choices": [
+              "Der Kunde fragt den Verkäufer.",
+              "Der Kunden fragt den Verkäufer.",
+              "Der Kunde fragt der Verkäufer."
+            ],
+            "a": "Der Kunde fragt den Verkäufer.",
+            "why": "الفاعل der Kunde بلا ‑n (الـ‑n في المفعول فقط: den Kunden) — والمفعول هنا den Verkäufer (der ← den، والاسم كما هو)."
+          },
+          {
+            "q": "«الحذاء يكلّف حوالي أربعين يورو»؟",
+            "choices": [
+              "Die Schuhe kosten circa vierzig Euro.",
+              "Die Schuhe kosten vierzig Euro circa.",
+              "Die Schuhe kostet circa vierzig Euro."
+            ],
+            "a": "Die Schuhe kosten circa vierzig Euro.",
+            "why": "circa قبل العدد — وdie Schuhe جمعٌ ← kosten."
+          },
+          {
+            "q": "«أين الباقي؟»؟",
+            "choices": [
+              "Wo ist das Wechselgeld?",
+              "Wo ist der Wechselgeld?",
+              "Wo ist die Wechselgeld?"
+            ],
+            "a": "Wo ist das Wechselgeld?",
+            "why": "das Wechselgeld محايد — الجنس من آخر جزء: das Geld."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«كم تكلّف القبعة؟ — خمسة يورو وخمسون»؟",
+            "choices": [
+              "Was kostet der Hut? — Fünf Euro fünfzig.",
+              "Was kosten der Hut? — Fünf Euro fünfzig.",
+              "Was kostet der Hut? — Fünf Euro und fünfzig Euro."
+            ],
+            "a": "Was kostet der Hut? — Fünf Euro fünfzig.",
+            "why": "der Hut مفردٌ ← kostet — والسنتات بعد Euro عدداً: fünf Euro fünfzig."
+          },
+          {
+            "q": "«هناك خصم عشرين يورو»؟",
+            "choices": [
+              "Es gibt zwanzig Euro Rabatt.",
+              "Es gibt Rabatt zwanzig Euro.",
+              "Es gibt zwanzig Euros Rabatt."
+            ],
+            "a": "Es gibt zwanzig Euro Rabatt.",
+            "why": "المبلغ قبل Rabatt: zwanzig Euro Rabatt — وEuro بلا نهاية."
+          },
+          {
+            "q": "das Angebot = ؟",
+            "choices": [
+              "العرض",
+              "الخصم",
+              "السوق"
+            ],
+            "a": "العرض",
+            "why": "das Angebot = العرض · der Rabatt = الخصم · der Markt = السوق."
+          },
+          {
+            "q": "«الزبائن يشترون في السوبرماركت»؟",
+            "choices": [
+              "Die Kunden kaufen im Supermarkt.",
+              "Die Kunde kaufen im Supermarkt.",
+              "Die Kunden kaufen in Supermarkt."
+            ],
+            "a": "Die Kunden kaufen im Supermarkt.",
+            "why": "die Kunden جمع der Kunde (‑n) — وim = in + dem (الوحدة 3)."
+          },
+          {
+            "q": "«الأفضل أن أشتري الكتاب هنا»؟",
+            "choices": [
+              "Am besten kaufe ich das Buch hier.",
+              "Am besten ich kaufe das Buch hier.",
+              "Am besten kaufe das Buch ich hier."
+            ],
+            "a": "Am besten kaufe ich das Buch hier.",
+            "why": "Am besten في الموضع الأول ← الفعل ثانياً ثم الفاعل: kaufe ich."
+          },
+          {
+            "q": "das Geschäft = ؟",
+            "choices": [
+              "المتجر",
+              "السوق",
+              "السوبرماركت"
+            ],
+            "a": "المتجر",
+            "why": "das Geschäft = المتجر · der Markt = السوق · der Supermarkt = السوبرماركت."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Was kostet der Hut? — Er kostet fünf Euro fünfzig. · Was kosten die Schuhe? — Sie kosten neununddreißig Euro neunundneunzig. · neunundneunzig Cent · circa vierzig Euro · zehn Euro Rabatt · Das macht zwanzig Euro. · Das ist günstig! · Der Markt ist am besten. · Ich probiere den Hut an.",
+      "ar": "الشيء فاعلٌ وkosten تتبعه: kostet للمفرد وkosten للجمع، والجواب بضمير جنس الكلمة (er · sie · es · sie). السعر بالسنتات: Euro ثم العدد بلا كلمة Cent (29,99 € = neunundzwanzig Euro neunundneunzig) وما دون اليورو بـCent — وEuro وCent بلا نهاية جمع. circa = حوالي (ca.) قبل العدد. Das macht … = المجموع عند الدفع. الحكم: günstig (مناسب السعر) · billig · zu teuer · am besten (الأفضل — وبعدها في أول الجملة الفعل مباشرة). der Rabatt = الخصم · das Angebot = العرض · das Wechselgeld = الباقي · der Verkäufer يبيع (verkaufen) وder Kunde يشتري (den Kunden في المفعول) · der Supermarkt · das Geschäft · der Markt · anprobieren منفصل."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Was kostet die Schuhe?~~",
+          "ar": "الحذاء زوجٌ = جمع: Was kosten die Schuhe?"
+        },
+        "whyArabicSpeakerFails": "«كم يكلّف الحذاء؟» — «الحذاء» مفردٌ في العربية للزوج كله (كما في «حذائي جديد» أمس)، فيُبقي المتعلم الفعل مفرداً kostet. والألمانية: die Schuhe جمعٌ والشيء فاعلٌ فالفعل يتبعه: Was kosten die Schuhe? — Sie kosten vierzig Euro. (والمفرد يبقى kostet: Was kostet der Hut?) — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Was kosten die Schuhe?",
+          "ar": "كم يكلّف الحذاء؟"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Was kostet die Socken?~~",
+          "a": "Was kosten die Socken?"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wie kostet das Hemd?~~",
+          "ar": "السؤال عن السعر: Was kostet …? أو Wie viel kostet …?"
+        },
+        "whyArabicSpeakerFails": "«كم» كلمةٌ واحدة في العربية للعدد وللسعر («كم عمرك؟» · «بكم هذا؟»)، فيترجمها المتعلم بـWie وحدها كما في Wie alt bist du? — وWie وحدها = «كيف»، فالمشطوبة تسأل «كيف يكلّف القميص؟». السؤال عن السعر بـWas kostet …? أو Wie viel kostet …? (كلمتان) — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Was kostet das Hemd? / Wie viel kostet das Hemd?",
+          "ar": "كم يكلّف القميص؟"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wie kostet der Pullover?~~",
+          "a": "Was kostet der Pullover?"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Der Verkäufer fragt den Kunde.~~",
+          "ar": "Kunde تأخذ ‑n في المفعول: den Kunden"
+        },
+        "whyArabicSpeakerFails": "تعلّمت في الوحدة 4 أن علامة المفعول على الأداة (der ← den) والاسم يبقى كما هو — وبالعربية لا تظهر فتحة المفعول في الكتابة اليومية («يسأل الزبون») — فيترك المتعلم Kunde بلا تغيير. وKunde من مجموعة صغيرة من أسماء الأشخاص المذكرة تأخذ ‑n في المفعول أيضاً (كـder Nachbar ← den Nachbarn · der Junge ← den Jungen): Der Verkäufer fragt den Kunden. — خريطة التداخل 10‑ي",
+        "correct": {
+          "de": "Der Verkäufer fragt den Kunden.",
+          "ar": "البائع يسأل الزبون."
+        },
+        "exercise": {
+          "q": "صحّح: ~~Ich frage den Kunde.~~",
+          "a": "Ich frage den Kunden."
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "cent",
+      "rabatt",
+      "angebot",
+      "guenstig",
+      "wechselgeld",
+      "verkaufen",
+      "verkaeufer",
+      "kunde",
+      "supermarkt",
+      "geschaeft",
+      "markt",
+      "anprobieren",
+      "circa",
+      "beste"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/kosten_Geld_Preis_Aufwand",
+      "https://www.duden.de/rechtschreibung/Cent",
+      "https://www.duden.de/rechtschreibung/circa",
+      "https://www.duden.de/rechtschreibung/Kunde_Kaeufer_Auftraggeber",
+      "https://www.duden.de/rechtschreibung/Wechselgeld"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/kosten",
+      "https://de.wiktionary.org/wiki/circa",
+      "https://de.wiktionary.org/wiki/Kunde",
+      "https://de.wiktionary.org/wiki/verkaufen"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-preise"
+  ],
+  "audioManifestRefs": [
+    "word-cent",
+    "word-rabatt",
+    "word-angebot",
+    "word-guenstig",
+    "word-wechselgeld",
+    "word-verkaufen",
+    "word-verkaeufer",
+    "word-kunde",
+    "word-supermarkt",
+    "word-geschaeft",
+    "word-markt",
+    "word-anprobieren",
+    "word-circa",
+    "word-beste"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Preise",
+    "goetheWordListOverlap": [
+      "cent",
+      "angebot",
+      "guenstig",
+      "verkaufen",
+      "verkaeufer",
+      "kunde",
+      "supermarkt",
+      "geschaeft",
+      "markt",
+      "circa",
+      "beste"
+    ]
+  }
+}

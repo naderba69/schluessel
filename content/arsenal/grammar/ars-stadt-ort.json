@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-stadt-ort",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Wo ist die Apotheke? — Gegenüber der Kirche. · Mein Kurs ist im Norden von Berlin. · Geradeaus — und zurück zum Bahnhof.",
+    "ar": "أماكن المدينة والاتجاهات: Wo ist …? · gegenüber + الداتيف (gegenüber der Kirche · gegenüber dem Park) · im Norden/Süden/Osten/Westen (موقع) ≠ nach Norden (اتجاه) · hier/dort · geradeaus · zurück في آخر الجملة"
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u9-d1",
+    "a1-u9-d6",
+    "a1-u15-d5"
+  ],
+  "payload": {
+    "topicAr": "اليوم المدينة: تسأل أين الشيء وتجيب بجملة موقع واحدة صحيحة — Wo ist die Apotheke? · Die Apotheke ist gegenüber der Kirche. · Das Museum ist gegenüber dem Park. · Mein Kurs ist im Norden von Berlin. · Das Krankenhaus ist im Süden — zwanzig Minuten mit dem Bus. · Die Bank ist hier, die Post ist dort. · Zu Fuß geradeaus — fünf Minuten. · Ich gehe jetzt zurück zum Kurs. ومعها أماكن المدينة: die Kirche · das Krankenhaus · die Apotheke · die Universität · die Bank · die Post · der Park · das Museum · der Platz · والجهات الأربع: der Norden · der Süden · der Osten · der Westen.",
+    "sceneAr": "مهمة الوحدة التاسعة على الشاشة: «المدينة — أين؟ وكيف أصل؟». مكالمة الدورة: لينا تسأل أين دورة يوسف في برلين — في الشمال، مقابل الجامعة؛ يصل بالقطار إلى المحطة ثم خمس دقائق مشياً إلى الأمام. وعند لينا كل شيء صغير: الكنيسة والبريد والبنك في الساحة، الصيدلية مقابل الكنيسة، والمستشفى في الجنوب — عشرون دقيقة بالحافلة — ولا متحف في البلدة: المتحف في المدينة، ساعة بالقطار. وفي برلين متاحف كثيرة، والمتحف الذي مقابل الحديقة رائع، والحديقة في الشرق. ثم تونس: في شمال تونس، وأسرة يوسف تسكن في المركز مقابل البريد، وأبوه يمشي كل يوم إلى السوق — إلى الأمام ثم يساراً — ويعود بالحافلة. ومدرسة لينا مقابل المحطة، عشر دقائق بالدراجة.",
+    "examples": [
+      {
+        "de": "Wo ist die Apotheke? — Die Apotheke ist gegenüber der Kirche.",
+        "ar": "أين الصيدلية؟ — الصيدلية مقابل الكنيسة — السؤال Wo ist …? والجواب بجملة موقع: gegenüber + الداتيف (die Kirche ← der Kirche)"
+      },
+      {
+        "de": "Das Museum ist gegenüber dem Park. · Die Schule ist gegenüber dem Bahnhof.",
+        "ar": "المتحف مقابل الحديقة · المدرسة مقابل المحطة — der Park ← dem Park · der Bahnhof ← dem Bahnhof: القاعدة نفسها التي تعرفها من mit/bei: der/das ← dem · die ← der"
+      },
+      {
+        "de": "Mein Kurs ist im Norden von Berlin. · Das Krankenhaus ist im Süden — zwanzig Minuten mit dem Bus.",
+        "ar": "دورتي في شمال برلين · المستشفى في الجنوب — عشرون دقيقة بالحافلة — im Norden = in dem Norden: الجهة بالأداة دائماً (der Norden · der Süden · der Osten · der Westen) — وim للموقع: أين؟"
+      },
+      {
+        "de": "Wir fahren nach Süden. · Fährst du nach Norden?",
+        "ar": "نسافر جنوباً (إلى الجنوب) · هل تسافر شمالاً؟ — nach + الجهة بلا أداة للاتجاه (إلى أين؟) — كـnach Berlin · nach Tunesien"
+      },
+      {
+        "de": "Die Bank ist hier, die Post ist dort. · Zu Fuß geradeaus — fünf Minuten.",
+        "ar": "البنك هنا، والبريد هناك · مشياً إلى الأمام مباشرة — خمس دقائق — hier/dort كلمتا مكان تقفان وحدهما، وgeradeaus = إلى الأمام مباشرة (كلمة واحدة)"
+      },
+      {
+        "de": "Ich gehe jetzt zurück zum Kurs. · Er fährt mit dem Bus zurück.",
+        "ar": "أعود الآن إلى الدورة · يعود بالحافلة — zurück = رجوعاً، وتقف في آخر الجملة أو قبل الوجهة (zurück zum Kurs) — كأجزاء الأفعال المنفصلة التي تعرفها (ab · an · ein)"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأول والثاني: ماذا جاء بعد gegenüber — der أم dem أم die؟ ومتى der ومتى dem؟ قارن بـbei der Bäckerei وmit dem Bus. (2) في الثالث: im Norden — من أي كلمتين جاءت im؟ وهل تذكر am وzum وbeim؟ (3) في الثالث والرابع: im Süden وnach Süden — أيهما يجيب عن «أين؟» وأيهما عن «إلى أين؟» وأين الأداة؟ (4) في الخامس: hier وdort — هل بعدهما أداة أو اسم؟ (5) في السادس: أين تقف zurück في الجملة؟ وهل تشبه ab في Ich hole dich ab؟ (6) في كل الأمثلة: هل رأيت die أو den بعد gegenüber؟",
+    "ruleDe": "Wo ist …? — gegenüber: der/das → dem · die → der — gegenüber der Kirche · gegenüber dem Park · gegenüber dem Bahnhof — in dem = im: im Norden · im Süden · im Osten · im Westen (Wo?) — nach Norden · nach Süden (Wohin?) — hier · dort · geradeaus · Ich gehe zurück. · zurück zum Kurs",
+    "ruleAr": "ثلاث خطوات لجملة الموقع: (1) السؤال Wo ist …? = أين …؟ (Wo ist die Apotheke? · Wo ist dein Kurs?) — والجواب الأبسط بكلمة مكان: hier (هنا) · dort (هناك) · Die Bank ist hier, die Post ist dort. (2) «مقابل» = gegenüber + الداتيف دائماً — القاعدة نفسها التي تعرفها من mit/nach/aus/zu/von/seit/bei: der/das ← dem · die ← der: gegenüber der Kirche (die Kirche) · gegenüber der Universität · gegenüber der Post · gegenüber dem Park (der Park) · gegenüber dem Museum (das Museum) · gegenüber dem Bahnhof. (3) الجهات الأربع أسماء مذكرة بالأداة: der Norden · der Süden · der Osten · der Westen — للموقع (أين؟) in + dem = im: im Norden von Berlin · im Süden · im Osten · im Westen (im تُدمج دائماً كـam وzum وbeim)؛ وللاتجاه (إلى أين؟) nach بلا أداة: nach Norden · nach Süden — كـnach Berlin وnach Tunesien. ومعها كلمتا الطريق: geradeaus = إلى الأمام مباشرة (كلمة واحدة — Zu Fuß geradeaus, fünf Minuten. · Geradeaus und links.) · zurück = رجوعاً، وتقف في آخر الجملة أو قبل الوجهة كأجزاء الأفعال المنفصلة: Ich komme morgen zurück. · Er fährt mit dem Bus zurück. · Ich gehe jetzt zurück zum Kurs. وأماكن المدينة التسعة: die Kirche (‑n) · das Krankenhaus (Krankenhäuser) · die Apotheke (‑n) · die Universität (‑en) · die Bank (‑en) · die Post (بلا جمع) · der Park (‑s) · das Museum (Museen) · der Platz (Plätze).",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «أين …؟» = Wo ist …? بالترتيب نفسه، والجواب «هنا/هناك» = hier/dort كلمةً واحدة — عون. (2) «مقابل الكنيسة» حرفٌ قبل الاسم = gegenüber der Kirche — الترتيب نفسه، عون. (3) «في الشمال» = im Norden و«إلى الشمال» = nach Norden — العربية تفرّق أيضاً بـ«في/إلى» حين تريد، عون. وما يختلف ثلاثة: (1) «مقابل» لا تغيّر «الـ» بعدها، فيقول المتعلم ~~gegenüber die Kirche~~ أو ~~gegenüber das Museum~~ — والألمانية: gegenüber + الداتيف دائماً: gegenüber der Kirche · gegenüber dem Museum. (2) «شمالاً» العربية تحتمل «في» و«إلى» معاً («المستشفى شمالاً» · «سافر شمالاً»)، فيخلط المتعلم ~~Das Krankenhaus ist nach Norden.~~ أو ~~Wir fahren im Norden.~~ — والألمانية: im Norden للموقع (ist) · nach Norden للاتجاه (fahren/gehen). (3) «أعود غداً» فعلٌ واحد ثم الزمن، فيقول المتعلم ~~Ich komme zurück morgen.~~ أو ~~Ich zurückkomme morgen.~~ — والألمانية: zurück في آخر الجملة: Ich komme morgen zurück. (كـIch hole dich ab.) — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "اليوم gegenüber قبل الاسم بالأداة المعرّفة (gegenüber der Kirche · gegenüber dem Park) — وgegenüber بعد الاسم (dem Bahnhof gegenüber) وgegenüber + ضمير (mir gegenüber) ليست اليوم.",
+      "in/an/auf/vor/neben بالسؤالين Wo? (الداتيف) وWohin? (الأكوزاتيف) باب الوحدة 9 اليوم الرابع — واليوم فقط im + الجهة (im Norden) وعبارتان ثابتتان تعرفهما: in der Stadt · in der Mitte.",
+      "nach Norden بلا أداة للاتجاه — و«إلى المتحف/إلى الحديقة» بـzum/zur من الوحدة 8 (zum Park · zum Museum)؛ وIn den Süden fahren (in + الأكوزاتيف) في اليوم الرابع.",
+      "geradeaus وzurück كلمتا طريق اليوم — وأفعال الطريق الكاملة (abbiegen · einsteigen · umsteigen) وصيغة الأمر المهذبة (Gehen Sie …!) في اليومين الثاني والثالث؛ وrechts/links تعرفهما من قبل."
+    ],
+    "beads": [
+      "Die",
+      "Apotheke",
+      "ist",
+      "gegenüber",
+      "der",
+      "Kirche."
+    ],
+    "properNouns": [
+      "Berlin"
+    ]
+  }
+}

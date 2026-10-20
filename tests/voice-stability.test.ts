@@ -7,7 +7,7 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { AudioManifest } from "../content/schemas/index.js";
-import { VOICE_ID, AUDIO_ENGINE, VOICE_LICENSE } from "../src/lib/audio.js";
+import { VOICE_ID, VOICE_ID_FEMALE, PINNED_VOICES, FEMALE_ROLES, AUDIO_ENGINE, VOICE_LICENSE } from "../src/lib/audio.js";
 
 const CONTENT = join(process.cwd(), "content");
 const manifest = AudioManifest.parse(
@@ -42,11 +42,17 @@ function compare(a: string, b: string): { specCorr: number; durRatio: number; en
 const SPEC_CORR_MIN = 0.93;
 
 describe("استقرار الأصوات عبر الجلسات (test-audio-voice-stability)", () => {
-  it("كل المسارات (الشخصيات الثمانية + الكلمات) بالمصوّت المثبّت الواحد — لا تذبذب", () => {
-    for (const t of manifest.tracks) expect(t.voiceParams.speaker).toBe(VOICE_ID);
+  it("كل المسارات بالصوتين المثبَّتين حصراً (D20+D98/D100): الكلمات والإعلانات بالرئيسي — والأنثوي للحوار فقط", () => {
+    const pinned: readonly string[] = PINNED_VOICES;
+    const femaleRoles: readonly string[] = FEMALE_ROLES;
+    for (const t of manifest.tracks) {
+      expect(pinned).toContain(t.voiceParams.speaker);
+      if (t.role === "word" || t.role === "announcement") expect(t.voiceParams.speaker).toBe(VOICE_ID);
+      if (t.voiceParams.speaker === VOICE_ID_FEMALE) expect(femaleRoles).toContain(t.role);
+    }
     const voices = Object.values(manifest.characterVoices);
     expect(voices).toHaveLength(8);
-    for (const v of voices) expect(v).toBe(VOICE_ID);
+    for (const v of voices) expect(pinned).toContain(v);
   });
 
   it("الهوية الصوتية المعلنة متطابقة: المحرك المحلي والرخصة CC0", () => {
@@ -64,7 +70,7 @@ describe("استقرار الأصوات عبر الجلسات (test-audio-voice-
     // VITS يغيّر الطول العيّني حتى ±28% (قياس فعلي) — المطلوب عدم الانزياح الجوهري
     expect(c.durRatio).toBeGreaterThan(0.6);
     expect(c.durRatio).toBeLessThan(1.7);
-  });
+  }, 120_000);
 
   it("الحضور الصوتي ثابت عبر المسار الكامل (توليد → تطبيع → Opus) مرتين", () => {
     const a = genOne("/tmp/vs-wohnung-a.opus");
@@ -73,7 +79,7 @@ describe("استقرار الأصوات عبر الجلسات (test-audio-voice-
     expect(c.specCorr).toBeGreaterThanOrEqual(SPEC_CORR_MIN);
     expect(c.durRatio).toBeGreaterThan(0.6);
     expect(c.durRatio).toBeLessThan(1.7);
-  });
+  }, 120_000);
 
   it("الملف الملتزم من نفس الصوت: التوقيع الطيفي ≥ 0.93 مع إعادة التوليد + سلسلة البصمة موثّقة", () => {
     const committed = join(CONTENT, "words/audio/de-DE/word-wohnung.opus");
@@ -83,5 +89,5 @@ describe("استقرار الأصوات عبر الجلسات (test-audio-voice-
     // سلسلة الالتزام: المانيفست يثبّت بصمة الملف الفعلي (لا وثيقة بلا تشغيل)
     const track = manifest.tracks.find((t) => t.id === "word-wohnung")!;
     expect(track.hash).toBe(`sha256:${sha256(committed)}`);
-  });
+  }, 120_000);
 });

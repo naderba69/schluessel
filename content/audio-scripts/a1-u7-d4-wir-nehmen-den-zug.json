@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u7-d4-wir-nehmen-den-zug",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Wir nehmen den Zug!",
+    "ar": "نأخذ القطار! — مهمة الوحدة السابعة على الشاشة: لينا تحكي ليوسف رحلة الأحد إلى الجدّة بالقطار — التذاكر والمحطة والأخوان اللذان لا يهدآن — ويوسف يحكي دراجته في برلين والحافلة في المساء"
+  },
+  "usedIn": [
+    "a1-u7-d4"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "zg-1",
+      "speaker": "lena",
+      "text": "Yusuf, am Sonntag besuchen wir Oma. Wir nehmen den Zug!",
+      "direction": "مهمة الوحدة السابعة على الشاشة: «الطريق والمواصلات» — لينا تحكي خطة الأحد: يزورون الجدّة بالقطار — wir nehmen (بلا تغيير مع wir)"
+    },
+    {
+      "id": "zg-2",
+      "speaker": "yusuf",
+      "text": "Den Zug? Fährt dein Vater nicht Auto?",
+      "direction": "يوسف يتعجّب: القطار؟ ألا يقود أبوك السيارة؟ — fährt: a ← ä مع er · Auto fahren = يقود السيارة"
+    },
+    {
+      "id": "zg-3",
+      "speaker": "lena",
+      "text": "Doch, aber nicht gern. Im Zug schläft er lieber!",
+      "direction": "بلى، لكنه لا يحبّ القيادة — في القطار يفضّل النوم! schläft: a ← ä مع er"
+    },
+    {
+      "id": "zg-4",
+      "speaker": "yusuf",
+      "text": "Und wann fährt der Zug?",
+      "direction": "يوسف يسأل عن موعد القطار — wann fährt …? (fährt مع der Zug)"
+    },
+    {
+      "id": "zg-5",
+      "speaker": "lena",
+      "text": "Um neun. Er kommt um elf an.",
+      "direction": "في التاسعة، ويصل في الحادية عشرة — kommt … an: ankommen قطعةً، وan في آخر الجملة"
+    },
+    {
+      "id": "zg-6",
+      "speaker": "yusuf",
+      "text": "Und die Fahrkarten? Sind sie teuer?",
+      "direction": "والتذاكر؟ هل هي غالية؟ — die Fahrkarten جمع die Fahrkarte"
+    },
+    {
+      "id": "zg-7",
+      "speaker": "lena",
+      "text": "Ein bisschen. Mein Vater kauft sie am Bahnhof.",
+      "direction": "قليلاً — أبوها يشتريها في المحطة: am Bahnhof (أين؟)"
+    },
+    {
+      "id": "zg-8",
+      "speaker": "yusuf",
+      "text": "Und deine Brüder? Sind sie im Zug ruhig?",
+      "direction": "وأخواها؟ هل هما هادئان في القطار؟"
+    },
+    {
+      "id": "zg-9",
+      "speaker": "lena",
+      "text": "Ruhig? Nie! Einer läuft, einer ruft: Achtung, der Zug kommt gleich!",
+      "direction": "هادئان؟ أبداً! واحدٌ يجري وواحدٌ ينادي: «انتبهوا، القطار قادمٌ حالاً!» — läuft: au ← äu · Achtung · gleich"
+    },
+    {
+      "id": "zg-10",
+      "speaker": "yusuf",
+      "text": "Und deine Mutter? Was macht sie?",
+      "direction": "وأمها؟ ماذا تفعل؟"
+    },
+    {
+      "id": "zg-11",
+      "speaker": "lena",
+      "text": "Sie liest. Und mein Bruder isst schon Kuchen!",
+      "direction": "تقرأ — وأحد أخويها يأكل الكعك منذ الآن! liest: e ← ie · isst: e ← i (وist «هو» بالصوت نفسه)"
+    },
+    {
+      "id": "zg-12",
+      "speaker": "yusuf",
+      "text": "Und du? Machst du im Zug Hausaufgaben?",
+      "direction": "وأنتِ؟ هل تنجزين الواجبات في القطار؟"
+    },
+    {
+      "id": "zg-13",
+      "speaker": "lena",
+      "text": "Nein! Mein Lehrer gibt so viele Hausaufgaben — im Zug mache ich nichts!",
+      "direction": "لا! معلّمها يعطي واجباتٍ كثيرة — وفي القطار لا تفعل شيئاً: gibt: e ← i (كـes gibt)"
+    },
+    {
+      "id": "zg-14",
+      "speaker": "yusuf",
+      "text": "In Berlin nehme ich nie den Zug. Ich fahre Fahrrad.",
+      "direction": "يوسف: في برلين لا يأخذ القطار أبداً — يركب الدراجة: ich nehme (بلا تغيير مع ich) · Fahrrad fahren"
+    },
+    {
+      "id": "zg-15",
+      "speaker": "lena",
+      "text": "Jeden Tag? Und nimmst du nie den Bus?",
+      "direction": "كل يوم؟ ألا تأخذ الحافلة أبداً؟ — nimmst: e ← i ومعها mm"
+    },
+    {
+      "id": "zg-16",
+      "speaker": "yusuf",
+      "text": "Doch, am Abend — da ist es dunkel.",
+      "direction": "بلى، في المساء — فالجو مظلم حينها"
+    },
+    {
+      "id": "zg-17",
+      "speaker": "lena",
+      "text": "Super! Ab Montag fahre ich auch Fahrrad!",
+      "direction": "رائع! وابتداءً من الاثنين تركب لينا الدراجة أيضاً — ab Montag = ابتداءً من الاثنين"
+    },
+    {
+      "id": "zg-18",
+      "speaker": "yusuf",
+      "text": "Toll! Ich wasche mein Fahrrad jeden Sonntag.",
+      "direction": "يوسف يغسل دراجته كل يوم أحد — ich wasche (بلا تغيير مع ich)"
+    },
+    {
+      "id": "zg-19",
+      "speaker": "lena",
+      "text": "Du wäschst dein Fahrrad und putzt die Küche? Super, Yusuf!",
+      "direction": "لينا تمدحه: تغسل دراجتك وتنظّف المطبخ؟ — wäschst: a ← ä مع du (sch + st)"
+    },
+    {
+      "id": "zg-20",
+      "speaker": "yusuf",
+      "text": "Danke! Viel Spaß am Sonntag — und Achtung im Zug!",
+      "direction": "يوسف يشكرها ويتمنّى لها أحداً ممتعاً — «وانتبهي في القطار!» (Achtung للمزاح: أخواها يجريان)"
+    }
+  ]
+}

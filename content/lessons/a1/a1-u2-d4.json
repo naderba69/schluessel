@@ -1,0 +1,676 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u2-d4",
+  "level": "A1",
+  "unit": 2,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Du kannst schreiben: lang → ß (die Straße) · kurz → ss (die Tasse).",
+    "ar": "تكتب ß بعد الحركة الطويلة والمركّبة (die Straße) وss بعد القصيرة (die Tasse) — الحركة قبل الحرف تقرر"
+  },
+  "canDoDaily": [
+    "يقرر ß أو ss من طول الحركة قبلها: die Straße (a طويلة) · die Tasse (a قصيرة) · heiß (ei)",
+    "يكتب كلمات مسموعة بحروفها: الحرف المضاعف بعد القصيرة (Kaffee · kommen) وعلامات الطول (Boot · wohnen · wie)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "stadt",
+      "zeitung",
+      "wohnen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«حارّ» بالألمانية: hei___ — ß أم ss؟ ولماذا؟ (تخمين فقط)"
+        },
+        "choices": [
+          "ß — بعد حركة طويلة أو مركّبة",
+          "ss — بعد كل حركة",
+          "s واحدة تكفي"
+        ],
+        "answer": "ß — بعد حركة طويلة أو مركّبة",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": []
+  },
+  "praesentation": {
+    "wordIds": [
+      "gross",
+      "heiss",
+      "fuss",
+      "suess",
+      "tasse",
+      "essen",
+      "kaffee",
+      "boot",
+      "gehen",
+      "kaese",
+      "schule",
+      "lang",
+      "lange",
+      "kurz"
+    ],
+    "grammarArsenalIds": [
+      "ars-vokalquantitaet"
+    ],
+    "storySentenceIds": [
+      "story-a1-u2-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "vowel-long-short",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "الشارع: die Stra___e (ß أم ss؟)",
+            "a": "ß",
+            "why": "الـa في Straße طويلة (ممدودة كالألف: «شتراا‑سه») ⇐ ß. صوت s واحد في الحالتين — والحركة قبله هي التي تقرر."
+          },
+          {
+            "q": "الكوب: die Ta___e (ß أم ss؟)",
+            "a": "ss",
+            "why": "الـa في Tasse قصيرة (كالفتحة) ⇐ ss. وss لا تُنطق مرتين كالشدّة: «تَسِه» لا «تاسّه»."
+          },
+          {
+            "q": "حارّ: hei___ (ß أم ss؟)",
+            "a": "ß",
+            "why": "ei حركة مركّبة (كـ«ـَيْ» في «بَيْت») تُعامَل معاملة الطويلة ⇐ ß — مثل ich heiße."
+          },
+          {
+            "q": "يأكل: e___en (ß أم ss؟)",
+            "a": "ss",
+            "why": "الـe في essen قصيرة ⇐ ss — وتبقى في er isst: الصيغ تحفظ كتابة الجذر."
+          },
+          {
+            "q": "القهوة: der Ka___ee (f أم ff؟)",
+            "a": "ff",
+            "why": "الـa في Kaffee قصيرة ⇐ يُضاعَف الحرف بعدها: ff. الحرف المضاعف علامةُ قِصَر لا صوتٌ مضاعف."
+          },
+          {
+            "q": "القارب: das B___t (o أم oo؟)",
+            "a": "oo",
+            "why": "Boot من الكلمات القليلة التي تكتب طولها بحرف مضاعف: oo. والـo طويلة أيضاً في groß — لكن بلا علامة على الحركة."
+          },
+          {
+            "q": "يسكن: wo___nen (أي حرف للطول؟)",
+            "a": "h",
+            "why": "h بعد الحركة الطويلة وقبل n: wohnen · die Wohnung — تُكتب ولا تُنطق. وh الإطالة لا تأتي إلا قبل l وm وn وr."
+          },
+          {
+            "q": "Das a in Tasse ist ___. (قصيرة)",
+            "a": "kurz",
+            "why": "kurz = قصير، وعكسها lang = طويل: Das a in Straße ist lang."
+          },
+          {
+            "q": "Wir sprechen ___ zusammen. (طويلاً)",
+            "a": "lange",
+            "why": "lange (ظرف) = طويلاً، مدةً طويلة — وlang (صفة) = طويل: Das Wort ist lang. الـe في آخرها تفرّق بينهما."
+          }
+        ],
+        "interleavedWith": [
+          "wohnen",
+          "heissen",
+          "sprechen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "lk-3",
+            "speakText": "Heiß — ein Wort für heute! Wir schreiben jetzt zehn Wörter.",
+            "q": "استمع: كم كلمة سيكتبان؟",
+            "choices": [
+              "عشر",
+              "ثلاث",
+              "اثنتا عشرة"
+            ],
+            "a": "عشر",
+            "why": "zehn Wörter = عشر كلمات (das Wort ← الجمع die Wörter) · Heiß — ein Wort für heute = «حارّ» كلمة لليوم: لينا تبدأ من قهوة يوسف."
+          },
+          {
+            "audioId": "lk-4",
+            "speakText": "Ja — aber bitte langsam!",
+            "q": "استمع: ماذا يطلب يوسف؟",
+            "choices": [
+              "أن تتكلم ببطء",
+              "أن تكرر الكلمة",
+              "أن تتهجى الكلمة"
+            ],
+            "a": "أن تتكلم ببطء",
+            "why": "aber bitte langsam = لكن ببطء من فضلك — langsam من درس الحروف. والإملاء يحتاج أذناً هادئة."
+          },
+          {
+            "audioId": "lk-5",
+            "speakText": "Wort Nummer eins: die Straße.",
+            "q": "استمع: ما الكلمة الأولى؟",
+            "choices": [
+              "die Straße",
+              "die Tasse",
+              "die Schule"
+            ],
+            "a": "die Straße",
+            "why": "Wort Nummer eins = الكلمة رقم واحد · die Straße = الشارع — والـa فيها طويلة."
+          },
+          {
+            "audioId": "lk-6",
+            "speakText": "Straße — mit zwei s oder mit ß?",
+            "q": "استمع: بماذا يتردد يوسف؟",
+            "choices": [
+              "ss أم ß",
+              "der أم die",
+              "a أم ä"
+            ],
+            "a": "ss أم ß",
+            "why": "mit zwei s oder mit ß? = بحرفَي s أم بـß؟ — والجواب في الحركة قبل s لا في صوت s نفسه."
+          },
+          {
+            "audioId": "lk-7",
+            "speakText": "Mit ß. Das a in Straße ist lang.",
+            "q": "استمع: لماذا ß في Straße؟",
+            "choices": [
+              "لأن الـa طويلة",
+              "لأن الـa قصيرة",
+              "لأن الكلمة اسم"
+            ],
+            "a": "لأن الـa طويلة",
+            "why": "Das a in Straße ist lang = الـa في Straße طويلة ⇐ ß. lang = طويل (كلمة اليوم)."
+          },
+          {
+            "audioId": "lk-8",
+            "speakText": "Und in Tasse ist das a kurz — zwei s!",
+            "q": "استمع: ماذا يكتشف يوسف في Tasse؟",
+            "choices": [
+              "الـa قصيرة فتأتي ss",
+              "الـa طويلة فتأتي ß",
+              "لا فرق بين ss وß"
+            ],
+            "a": "الـa قصيرة فتأتي ss",
+            "why": "in Tasse ist das a kurz — zwei s = في Tasse الـa قصيرة — حرفا s. kurz = قصير، وss لا تُنطق مرتين."
+          },
+          {
+            "audioId": "lk-9",
+            "speakText": "Genau! Wort Nummer zwei: heiß.",
+            "q": "استمع: ما الكلمة الثانية؟",
+            "choices": [
+              "heiß",
+              "groß",
+              "süß"
+            ],
+            "a": "heiß",
+            "why": "Wort Nummer zwei = الكلمة الثانية · heiß = حارّ — من جملة يوسف عن قهوته: Der Kaffee ist heiß."
+          },
+          {
+            "audioId": "lk-10",
+            "speakText": "Heiß mit ß — wie ich heiße!",
+            "q": "استمع: بأي كلمة يربط يوسف heiß؟",
+            "choices": [
+              "ich heiße",
+              "die Straße",
+              "der Fuß"
+            ],
+            "a": "ich heiße",
+            "why": "heiß وich heiße: ei قبل ß في الاثنتين — المركّبة تُعامَل كالطويلة. وheißen أول فعل تعلّمته: Ich heiße Yusuf."
+          },
+          {
+            "audioId": "lk-12",
+            "speakText": "Alle mit ß! Das o, das u und das ü sind lang.",
+            "q": "استمع: لماذا groß وFuß وsüß كلها بـß؟",
+            "choices": [
+              "لأن o وu وü طويلة فيها",
+              "لأنها صفات",
+              "لأن حركاتها قصيرة"
+            ],
+            "a": "لأن o وu وü طويلة فيها",
+            "why": "Alle mit ß = كلها بـß · das o, das u und das ü sind lang = الـo والـu والـü طويلة. وFuß اسم وgroß وsüß صفتان — والكتابة واحدة: الحركة تقرر لا نوع الكلمة."
+          },
+          {
+            "audioId": "lk-14",
+            "speakText": "Ja, Deutsch ist schwer! Und jetzt du: der Schmetterling!",
+            "q": "استمع: ماذا يفعل يوسف في النهاية؟",
+            "choices": [
+              "يملي على لينا كلمة",
+              "يترك الدرس",
+              "يسأل عن معنى كلمة"
+            ],
+            "a": "يملي على لينا كلمة",
+            "why": "Und jetzt du = والآن أنتِ — يقلب الأدوار ويملي عليها der Schmetterling (كلمة الأمس: ‑ling ← der). Deutsch ist schwer = الألمانية صعبة."
+          }
+        ],
+        "interleavedWith": [
+          "heissen",
+          "langsam",
+          "nummer"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "build-sentence",
+        "items": [
+          {
+            "tokens": [
+              "Schweiz.",
+              "der",
+              "aus",
+              "ist",
+              "Käse",
+              "Der"
+            ],
+            "a": "Der Käse ist aus der Schweiz.",
+            "why": "aus der Schweiz (البلد بأداته — درس البلدان) · Käse: الـä طويلة بلا علامة — ä حرف بنقطتين لا علامة طول."
+          },
+          {
+            "tokens": [
+              "Schule.",
+              "die",
+              "in",
+              "Fuß",
+              "zu",
+              "geht",
+              "Lena"
+            ],
+            "a": "Lena geht zu Fuß in die Schule.",
+            "why": "zu Fuß = مشياً · geht ثانياً بعد الفاعل Lena · وFuß بـß بعد u طويلة، وSchule طويلة بلا علامة."
+          },
+          {
+            "tokens": [
+              "groß.",
+              "ist",
+              "Boot",
+              "Das"
+            ],
+            "a": "Das Boot ist groß.",
+            "why": "الـo طويلة في الكلمتين وكتابتها مختلفة: Boot بـoo وgroß بـo ثم ß — الطول يُكتب أحياناً فقط."
+          },
+          {
+            "tokens": [
+              "Kaffee.",
+              "Tasse",
+              "eine",
+              "hat",
+              "Yusuf"
+            ],
+            "a": "Yusuf hat eine Tasse Kaffee.",
+            "why": "hat ثانياً بعد الفاعل · eine Tasse Kaffee = كوب قهوة (بلا «من» بينهما) · ss وff بعد a قصيرة."
+          },
+          {
+            "tokens": [
+              "Brötchen.",
+              "ein",
+              "esse",
+              "Ich"
+            ],
+            "a": "Ich esse ein Brötchen.",
+            "why": "ich esse: ss بعد e قصيرة · ein Brötchen (‑chen ← das ← ein — شفرة الأمس)."
+          }
+        ],
+        "interleavedWith": [
+          "schweiz",
+          "broetchen",
+          "wie-gehts"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "lk-1",
+            "speakText": "Yusuf, was ist das? Eine Tasse Kaffee?",
+            "a": "Yusuf, was ist das? Eine Tasse Kaffee?",
+            "why": "Tasse: ss بعد a قصيرة · Kaffee: ff بعد a قصيرة وفي آخرها ee · Yusuf اسم علم بحرف كبير، وبعد ? يبدأ Eine بحرف كبير."
+          },
+          {
+            "audioId": "lk-2",
+            "speakText": "Ja! Der Kaffee ist heiß.",
+            "a": "Ja! Der Kaffee ist heiß.",
+            "why": "heiß: ß بعد ei · Kaffee: ff وee · وبعد ! تبدأ الجملة التالية Der بحرف كبير."
+          },
+          {
+            "audioId": "lk-11",
+            "speakText": "Ja! Und jetzt groß, der Fuß und süß.",
+            "a": "Ja! Und jetzt groß, der Fuß und süß.",
+            "why": "ثلاث كلمات بـß بعد حركة طويلة: groß (o) · der Fuß (u) · süß (ü) — وFuß وحده بحرف كبير لأنه اسم."
+          },
+          {
+            "audioId": "lk-13",
+            "speakText": "Du schreibst aber lange!",
+            "a": "Du schreibst aber lange!",
+            "why": "lange بـe في آخرها: ظرف = طويلاً (وlang صفة = طويل) · schreibst: ‑st مع du."
+          },
+          {
+            "audioId": "lk-15",
+            "speakText": "Ach nein, das Wort ist so lang!",
+            "a": "Ach nein, das Wort ist so lang!",
+            "why": "lang بلا e: صفة = طويلة (das Wort ist lang) · Wort اسم ⇐ حرف كبير · والفاصلة بعد nein."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Lang oder kurz? Wörter mit ß und ss schreiben",
+        "ar": "طويلة أم قصيرة؟ كتابة الكلمات بـß وss صحيحةً"
+      },
+      "situation": {
+        "de": "Im Kurs: Lena spricht zehn Wörter, Yusuf schreibt.",
+        "ar": "في الدورة: لينا تنطق عشر كلمات ويوسف يكتبها"
+      },
+      "successCriteria": [
+        "يكتب 8 من 10 كلمات مسموعة صحيحةً: ß بعد الطويلة والمركّبة · ss والحرف المضاعف بعد القصيرة",
+        "يشرح كتابة كلمة بجملة من الحوار: Das a in Straße ist lang. · In Tasse ist das a kurz."
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "gro___ (كبير) — ß أم ss؟",
+            "a": "ß",
+            "choices": [
+              "ß",
+              "ss"
+            ],
+            "why": "الـo في groß طويلة ⇐ ß — وتبقى في große."
+          },
+          {
+            "q": "die Kla___e (الصف) — ß أم ss؟",
+            "a": "ss",
+            "choices": [
+              "ss",
+              "ß"
+            ],
+            "why": "الـa في Klasse قصيرة ⇐ ss — كـTasse."
+          },
+          {
+            "q": "Das a in Tasse ist …",
+            "a": "kurz",
+            "choices": [
+              "kurz",
+              "lang"
+            ],
+            "why": "Tasse: الـa قصيرة ⇐ ss. وفي Straße: Das a ist lang ⇐ ß."
+          },
+          {
+            "q": "«المدرسة» بالألمانية — مع أداة التعريف؟",
+            "a": "die Schule",
+            "why": "die Schule: الـu طويلة بلا علامة — تُحفظ مع كلمتها."
+          },
+          {
+            "q": "Kaffee: لماذا ff؟",
+            "a": "لأن الـa قبلها قصيرة",
+            "choices": [
+              "لأن الـa قبلها قصيرة",
+              "لأن الـa قبلها طويلة",
+              "لأن f تُنطق مرتين"
+            ],
+            "why": "الحرف المضاعف علامةُ قِصَر الحركة قبله، ولا يُنطق مرتين."
+          },
+          {
+            "q": "lange = ?",
+            "a": "طويلاً (مدةً طويلة)",
+            "choices": [
+              "طويلاً (مدةً طويلة)",
+              "قصير",
+              "ببطء"
+            ],
+            "why": "lange ظرف: Wir sprechen lange. · lang صفة = طويل · langsam = ببطء."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "wi___en (يعرف) — ß أم ss؟",
+            "a": "ss",
+            "choices": [
+              "ss",
+              "ß"
+            ],
+            "why": "الـi في wissen قصيرة ⇐ ss."
+          },
+          {
+            "q": "ich wei___ (أعرف) — ß أم ss؟",
+            "a": "ß",
+            "choices": [
+              "ß",
+              "ss"
+            ],
+            "why": "ei مركّبة ⇐ ß: ich weiß — مع أن wissen بـss: الفعل الواحد يتبع حركته."
+          },
+          {
+            "q": "Das a in Straße ist …",
+            "a": "lang",
+            "choices": [
+              "lang",
+              "kurz"
+            ],
+            "why": "Straße: الـa طويلة ⇐ ß. وفي Tasse: Das a ist kurz ⇐ ss."
+          },
+          {
+            "q": "«القارب» بالألمانية — مع أداة التعريف؟",
+            "a": "das Boot",
+            "why": "das Boot: الطول مكتوب oo — من الكلمات القليلة بحرف مضاعف للطول."
+          },
+          {
+            "q": "die Tasse: كيف تُنطق ss؟",
+            "a": "s واحدة — والـa قبلها قصيرة",
+            "choices": [
+              "s واحدة — والـa قبلها قصيرة",
+              "s مضاعفة كالشدّة",
+              "z"
+            ],
+            "why": "ss لا تُنطق مرتين كالشدّة العربية: «تَسِه» لا «تاسّه» — وظيفتها أن تقول إن الـa قصيرة."
+          },
+          {
+            "q": "kurz = ?",
+            "a": "قصير",
+            "choices": [
+              "قصير",
+              "طويل",
+              "كبير"
+            ],
+            "why": "kurz = قصير · lang = طويل · groß = كبير."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "sü___ (حلو) — ß أم ss؟",
+            "a": "ß",
+            "choices": [
+              "ß",
+              "ss"
+            ],
+            "why": "الـü في süß طويلة ⇐ ß."
+          },
+          {
+            "q": "er i___t (يأكل) — ß أم ss؟",
+            "a": "ss",
+            "choices": [
+              "ss",
+              "ß"
+            ],
+            "why": "isst من essen: الـi قصيرة وss تبقى من الجذر — وist (فعل الكينونة) تُنطق مثلها بـs واحدة."
+          },
+          {
+            "q": "Das a in Kaffee ist …",
+            "a": "kurz",
+            "choices": [
+              "kurz",
+              "lang"
+            ],
+            "why": "الـa الأولى في Kaffee قصيرة ⇐ ff."
+          },
+          {
+            "q": "«الجبن» بالألمانية — مع أداة التعريف؟",
+            "a": "der Käse",
+            "why": "der Käse: الـä طويلة بلا علامة — ä حرف بنقطتين لا علامة طول."
+          },
+          {
+            "q": "Schule: الـu طويلة — أين علامة الطول؟",
+            "a": "لا علامة: تُحفظ مع الكلمة",
+            "choices": [
+              "لا علامة: تُحفظ مع الكلمة",
+              "h بعد u",
+              "u مضاعفة"
+            ],
+            "why": "أكثر الطويلة بلا علامة: die Schule · der Name · der Käse."
+          },
+          {
+            "q": "gehen = ?",
+            "a": "يذهب / يمشي",
+            "choices": [
+              "يذهب / يمشي",
+              "يأكل",
+              "يكتب"
+            ],
+            "why": "gehen: الـh تفصل المقطعين ge‑hen وتبقى في geht — ليست علامة طول."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Heute: lang → ß (die Straße · groß · heiß) · kurz → ss (die Tasse · essen) · der Kaffee · das Boot · die Schule — Das a in Straße ist lang, das a in Tasse ist kurz.",
+      "ar": "اليوم: الحركة قبل الحرف تقرر الكتابة — ß بعد الطويلة والمركّبة (Straße · groß · heiß) وss بعد القصيرة (Tasse · essen)، والحرف المضاعف علامة قِصَر لا صوت مضاعف (Kaffee · kommen)، والطول يُكتب أحياناً (Boot · wohnen · wie) ويُترك في كلمات كثيرة (Schule · Käse). وأربع عشرة كلمة جديدة، منها lang وlange وkurz!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Strasse~~ / ~~gross~~ (في ألمانيا والنمسا)",
+          "ar": "ss بعد الحركة الطويلة"
+        },
+        "whyArabicSpeakerFails": "العربية تكتب صوت s بحرف واحد (س) مهما كانت الحركة قبله، وتضع علامة الطول على الحركة نفسها (حرف مدّ) — فلا يخطر للمتعلم أن الحرف بعد الحركة يتغير بطولها، فيكتب ss في كل مكان (ولوحة المفاتيح العربية بلا ß، وفي سويسرا تُكتب ss دائماً). والألمانية في ألمانيا والنمسا تقرر بالحركة قبل s: طويلة أو مركّبة ⇐ ß (Straße · groß · heiß)، وقصيرة ⇐ ss (Tasse). وأذنك العربية تسمع الطول جيداً: «شتراا‑سه» ممدودة ⇐ ß (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Straße / groß",
+          "ar": "الشارع / كبير (a وo طويلتان ⇐ ß)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Der Fuss ist gross.~~",
+          "a": "Der Fuß ist groß."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Tase~~ / ~~Kafee~~",
+          "ar": "حرف واحد بعد الحركة القصيرة"
+        },
+        "whyArabicSpeakerFails": "في الكتابة العربية يُكتب الصوت الواحد بحرف واحد، والتضعيف الحقيقي (الشدّة) علامة فوق الحرف لا حرفٌ ثانٍ؛ وفي Tasse لا يُسمع إلا s واحدة — فمن يكتب ما يسمع يكتب ~~Tase~~. والألمانية تضاعف الحرف بعد الحركة القصيرة علامةً على قِصَرها لا صوتاً مضاعفاً: die Tasse · der Kaffee · kommen · die Nummer (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "die Tasse / der Kaffee",
+          "ar": "الكوب / القهوة (حركة قصيرة ⇐ حرف مضاعف)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wir komen zusammen.~~",
+          "a": "Wir kommen zusammen."
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Wei geht's?~~ / ~~drie~~",
+          "ar": "ie وei مقلوبتان"
+        },
+        "whyArabicSpeakerFails": "في العربية حرفٌ واحد (ي) للياء الطويلة في «كبير» وللحركة المركّبة في «بَيْت» — والفرق في حركةٍ قبلها لا تُكتب غالباً؛ فلا يعتاد القارئ أن ترتيب الحرفين يغيّر الصوت. والألمانية تفرّق بالترتيب: ie = ياء طويلة «إي» (wie · die · vier — علامة طول) · ei = «آي» (drei · heiß · ich weiß — مركّبة تُعامَل كالطويلة قبل ß). ولمن يعرف الإنجليزية: انطق الحرف الثاني باسمه الإنجليزي — ie ← e «إي» · ei ← i «آي» (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Wie geht's? / drei",
+          "ar": "كيف حالك؟ / ثلاثة (ie = «إي» · ei = «آي»)"
+        },
+        "exercise": {
+          "q": "صحّح: ~~Wei heißt du?~~",
+          "a": "Wie heißt du?"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "gross",
+      "heiss",
+      "fuss",
+      "suess",
+      "tasse",
+      "essen",
+      "kaffee",
+      "boot",
+      "gehen",
+      "kaese",
+      "schule",
+      "lang",
+      "lange",
+      "kurz"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/heis%C3%9F",
+      "https://www.duden.de/rechtschreibung/gross",
+      "https://www.duden.de/rechtschreibung/Tasse"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/%C3%9F"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-vokalquantitaet"
+  ],
+  "audioManifestRefs": [
+    "word-gross",
+    "word-heiss",
+    "word-fuss",
+    "word-suess",
+    "word-tasse",
+    "word-essen",
+    "word-kaffee",
+    "word-boot",
+    "word-gehen",
+    "word-kaese",
+    "word-schule",
+    "word-lang",
+    "word-lange",
+    "word-kurz"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 2 — Rechtschreibung (Vokalquantität & ß/ss)",
+    "goetheWordListOverlap": [
+      "gross",
+      "fuss",
+      "suess",
+      "tasse",
+      "essen",
+      "kaffee",
+      "gehen",
+      "kaese",
+      "schule",
+      "lang",
+      "lange",
+      "kurz"
+    ]
+  }
+}

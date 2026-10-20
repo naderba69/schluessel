@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u13-d4-im-cafe-und-im-garten",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Im Café und im Garten",
+    "ar": "في المقهى وفي الحديقة — مكالمة بلا تاريخ (الوحدتان 13–14 تكملة SD1 للفهم — D204): يوسف يجلس مع عائشة في مقهى جديد في الخارج والنادل أوصى بالكعكة ويقدّمون الفطور حتى الثانية · عند لينا شواء في الحديقة مع الجيران وأمها ترحّب بالجميع والجارة تحضر زهوراً من حديقتها فتشكرها الأم · رجل يسأل يوسف «عفواً، هل معك ولّاعة؟» فيجيب أنه لا يدخّن والسجائر غالية (ثمانية يورو في الكشك) · لينا توصي بالمطعم المجاور لبيت يوسف · عائشة مرحَّب بها في سويسرا في الصيف"
+  },
+  "usedIn": [
+    "a1-u13-d4"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "es-1",
+      "speaker": "yusuf",
+      "text": "Hallo, Lena! Ich sitze im Café — draußen, die Sonne scheint.",
+      "direction": "im Café · draußen"
+    },
+    {
+      "id": "es-2",
+      "speaker": "lena",
+      "text": "Schön! Allein?",
+      "direction": "قصير"
+    },
+    {
+      "id": "es-3",
+      "speaker": "yusuf",
+      "text": "Nein, mit Ayşe. Das Café ist neu, und der Kellner hat uns den Kuchen empfohlen.",
+      "direction": "hat empfohlen (empfehlen)"
+    },
+    {
+      "id": "es-4",
+      "speaker": "lena",
+      "text": "Und? Schmeckt er?",
+      "direction": "سؤال"
+    },
+    {
+      "id": "es-5",
+      "speaker": "yusuf",
+      "text": "Sehr gut! Sie bieten auch Frühstück an — bis 14 Uhr.",
+      "direction": "bieten … an (anbieten) منفصل"
+    },
+    {
+      "id": "es-6",
+      "speaker": "lena",
+      "text": "Bei uns grillen wir heute im Garten. Mein Vater macht Wurst und Gemüse.",
+      "direction": "grillen"
+    },
+    {
+      "id": "es-7",
+      "speaker": "yusuf",
+      "text": "Grillen! Das machen wir in Tunis auch oft — draußen, unter den Bäumen.",
+      "direction": "die Bäume (جمع Baum)"
+    },
+    {
+      "id": "es-8",
+      "speaker": "lena",
+      "text": "Hier kommen alle Nachbarn. Meine Mutter sagt immer: Herzlich willkommen, kommt in den Garten!",
+      "direction": "Herzlich willkommen — بترحيب"
+    },
+    {
+      "id": "es-9",
+      "speaker": "yusuf",
+      "text": "Bringen die Nachbarn Blumen mit?",
+      "direction": "die Blumen"
+    },
+    {
+      "id": "es-10",
+      "speaker": "lena",
+      "text": "Ja, Frau Keller bringt immer Blumen aus ihrem Garten. Meine Mutter dankt ihr jedes Mal.",
+      "direction": "dankt (danken) + Dativ"
+    },
+    {
+      "id": "es-11",
+      "speaker": "yusuf",
+      "text": "Nett. Moment, Lena — ein Mann fragt mich.",
+      "direction": "مقاطعة"
+    },
+    {
+      "id": "es-12",
+      "speaker": "lena",
+      "text": "Was will der Mann?",
+      "direction": "سؤال — أبطأ من «Was will er؟» (علّمها speech-rate 202.7)"
+    },
+    {
+      "id": "es-13",
+      "speaker": "yusuf",
+      "text": "Er hat gefragt: Entschuldigen Sie, haben Sie Feuer? Ich habe gesagt: Nein, ich rauche nicht.",
+      "direction": "Entschuldigen Sie · Feuer = ولّاعة هنا"
+    },
+    {
+      "id": "es-14",
+      "speaker": "lena",
+      "text": "Richtig. Rauchen ist nicht gesund — und Zigaretten sind teuer.",
+      "direction": "Zigaretten"
+    },
+    {
+      "id": "es-15",
+      "speaker": "yusuf",
+      "text": "Sehr teuer! Am Kiosk kosten Zigaretten acht Euro.",
+      "direction": "Kiosk من الدرس السابق"
+    },
+    {
+      "id": "es-16",
+      "speaker": "lena",
+      "text": "Acht Euro! Für acht Euro bekommst du vier Stück Kuchen.",
+      "direction": "بمرح"
+    },
+    {
+      "id": "es-17",
+      "speaker": "yusuf",
+      "text": "Genau. Und was empfiehlst du mir für heute Abend? Ein Lokal?",
+      "direction": "empfiehlst (e→ie) · das Lokal"
+    },
+    {
+      "id": "es-18",
+      "speaker": "lena",
+      "text": "Das Lokal neben deinem Haus — Ayşe hat gesagt, das Essen ist super.",
+      "direction": "توصية"
+    },
+    {
+      "id": "es-19",
+      "speaker": "yusuf",
+      "text": "Gute Idee. Dann bis später — und viel Spaß beim Grillen!",
+      "direction": "ختام"
+    },
+    {
+      "id": "es-20",
+      "speaker": "lena",
+      "text": "Danke! Und Ayşe ist bei uns herzlich willkommen — im Sommer, in der Schweiz!",
+      "direction": "herzlich willkommen — دعوة"
+    }
+  ]
+}

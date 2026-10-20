@@ -1,7 +1,7 @@
 // word.ts — مخطط الكلمة | §10.7 + إضافات v6.1 (Kollokationen/Chunks/أعلام الخطر 10‑ي و10.1)
 import { z } from "zod";
 import {
-  ArText, CefrTag, DeText, Gender, Level, SchemaVersioned, Slug, UsedInLessons,
+  ArText, CefrTag, DeText, Gender, Level, SchemaVersioned, Slug, UnitNumber, UsedInLessons,
 } from "./common.js";
 
 /** أعلام الخطر الصوتي (مقابل خريطة 10.1) */
@@ -9,6 +9,7 @@ export const PhoneticRisk = z.enum([
   "ch-ich-laut", "ch-ach-laut", "umlaut-u", "umlaut-o", "umlaut-a",
   "vowel-long-short", "auslaut-d", "auslaut-b", "auslaut-g",
   "r-uvular", "sp-st-initial", "ig-ending", "double-consonant", "z", "v-f",
+  "w-v", "ie-short", "ng-velar", // D191 (N-002 — قرار المالك D182): w=[v] · «ie» قصيرة · [ŋ] في ‑ng وقبل k
 ]);
 export type PhoneticRisk = z.infer<typeof PhoneticRisk>;
 
@@ -53,6 +54,10 @@ export const Word = SchemaVersioned.extend({
       perfekt: z.string().optional(),
       imperative: z.string().optional(),
       konjunktivII: z.string().optional(),
+      /** D188: جذع صريح للفعل القصير الذي لا يُشتق جذعه بقصّ ‑en (tun ⇒ tu) — حارس الجبهة يقبل عليه نهايات الفعل */
+      stem: z.string().regex(/^\p{Ll}+$/u).optional(),
+      /** D188: صيغ التصريف المعلنة لأدوات/ضمائر (jeder ⇒ jede · jedes · jeden · jedem) — بدل قائمة ضمنية في الكود */
+      declined: z.array(z.string().regex(/^\p{Ll}+$/u)).optional(),
     })
     .optional(),
   /** أعلام الخطر */
@@ -73,7 +78,7 @@ export const Word = SchemaVersioned.extend({
     })
     .optional(),
   level: Level,
-  unit: z.number().int().min(1).max(12),
+  unit: UnitNumber, // وحدة أول تقديم (A1: 13–14 = تكملة SD1 للفهم — D113)
   /** وسم قائمة Goethe الرسمية */
   goetheList: z.array(Level).default([]),
   thema: z.string(),

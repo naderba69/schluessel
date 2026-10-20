@@ -1,0 +1,136 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "a1-u14-d5-umzug",
+ "kind": "dialogue",
+ "level": "A1",
+ "title": {
+  "de": "Umzug — und die Prüfung",
+  "ar": "الانتقال… ثم الامتحان بلا تاريخ (تكملة SD1 للفهم): يوسف ينتقل من السكن — المؤجر يؤجر والنظام جيد · الشقة في الطابق الثالث · اعتنِ بالنظام · من يصلح السيارة؟ · الاختبار قريب والامتحان؟ · ورقة: ضع علامة! · العبارة خاطئة — اقرأ مرة أخرى · أين الاختبار؟ الورقة هناك · سلم الورقة بسرعة · متى تسلم؟ اقرأ العبارة · الاختبار يضيع ثم يوجد · شكراً وإلى اللقاء"
+ },
+ "usedIn": [
+  "a1-u14-d5"
+ ],
+ "lengthScale": 1.32,
+ "lines": [
+  {
+   "id": "fc-1",
+   "speaker": "yusuf",
+   "text": "Lena, ich ziehe um! Kommst du mit?",
+   "direction": "umziehen"
+  },
+  {
+   "id": "fc-2",
+   "speaker": "lena",
+   "text": "Ja! Du ziehst aus?",
+   "direction": "ausziehen"
+  },
+  {
+   "id": "fc-3",
+   "speaker": "yusuf",
+   "text": "Der Vermieter vermietet. Die Ordnung ist gut!",
+   "direction": "Vermieter · vermieten · Ordnung"
+  },
+  {
+   "id": "fc-4",
+   "speaker": "lena",
+   "text": "Das Apartment ist neu. Im Stock drei!",
+   "direction": "Stock"
+  },
+  {
+   "id": "fc-5",
+   "speaker": "yusuf",
+   "text": "Kümmere dich um die Ordnung!",
+   "direction": "kümmern"
+  },
+  {
+   "id": "fc-6",
+   "speaker": "lena",
+   "text": "Die Reparatur? Wer repariert das Auto?",
+   "direction": "Reparatur · reparieren"
+  },
+  {
+   "id": "fc-7",
+   "speaker": "yusuf",
+   "text": "Der Test ist bald. Und die Prüfung?",
+   "direction": "Test · Prüfung"
+  },
+  {
+   "id": "fc-8",
+   "speaker": "lena",
+   "text": "Da! Ein Bogen: Kreuz an!",
+   "direction": "Bogen · ankreuzen"
+  },
+  {
+   "id": "fc-9",
+   "speaker": "yusuf",
+   "text": "Die Aussage ist falsch. Lies noch mal!",
+   "direction": "Aussage · Lies معروف"
+  },
+  {
+   "id": "fc-10",
+   "speaker": "lena",
+   "text": "Die Prüfung ist bald! Wir sind da!",
+   "direction": "Prüfung"
+  },
+  {
+   "id": "fc-11",
+   "speaker": "yusuf",
+   "text": "Wo ist der Test? Da ist der Bogen!",
+   "direction": "Test · Bogen"
+  },
+  {
+   "id": "fc-12",
+   "speaker": "lena",
+   "text": "Der Test ist neu. Und die Aussage?",
+   "direction": "Aussage"
+  },
+  {
+   "id": "fc-13",
+   "speaker": "yusuf",
+   "text": "Gib den Bogen ab! Schnell!",
+   "direction": "abgeben"
+  },
+  {
+   "id": "fc-14",
+   "speaker": "lena",
+   "text": "Da! Die Ordnung ist gut!",
+   "direction": "Ordnung"
+  },
+  {
+   "id": "fc-15",
+   "speaker": "yusuf",
+   "text": "Wann gibst du ab? Lies die Aussage!",
+   "direction": "abgeben · Lies"
+  },
+  {
+   "id": "fc-16",
+   "speaker": "lena",
+   "text": "Sehr bald! Komm schnell!",
+   "direction": "bald · schnell"
+  },
+  {
+   "id": "fc-17",
+   "speaker": "yusuf",
+   "text": "Mein Test! Wo ist mein Test?",
+   "direction": "Test"
+  },
+  {
+   "id": "fc-18",
+   "speaker": "lena",
+   "text": "Hier ist dein Test!",
+   "direction": "hier معروف"
+  },
+  {
+   "id": "fc-19",
+   "speaker": "yusuf",
+   "text": "Danke, Lena! Bis bald!",
+   "direction": "Danke معروف"
+  },
+  {
+   "id": "fc-20",
+   "speaker": "lena",
+   "text": "Gern! Tschüss, Yusuf!",
+   "direction": "وداع معروف"
+  }
+ ]
+}

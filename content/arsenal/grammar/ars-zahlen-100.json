@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-zahlen-100",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Die Zahlen bis hundert: zweiunddreißig, dreiundsiebzig …",
+    "ar": "الأعداد حتى 100 — الآحاد ثم und ثم العشرات في كلمة واحدة"
+  },
+  "payload": {
+    "topicAr": "الأعداد من 20 إلى 100: العشرات بـ‑zig واستثناءاتها الثلاثة (dreißig · sechzig · siebzig)، والعدد المركّب من 21 إلى 99: الآحاد ثم und ثم العشرات في كلمة واحدة — كالعربية «اثنان وثلاثون»",
+    "sceneAr": "قبل الدرس عبر الإنترنت يخبر يوسف لينا أن جدته في تونس تبلغ الثمانين اليوم، وأن اثنين وثلاثين شخصاً يأتون إلى الطعام عندها — فتسمع لينا «ثلاثة وعشرين»! يعدّ يوسف بالعشرات ليصحح (zehn, zwanzig, dreißig — und zwei)، ثم يضحك: الطعام الذي صنعته الجدة يكفي مئة.",
+    "examples": [
+      {
+        "de": "zwanzig · dreißig · vierzig · fünfzig",
+        "ar": "20 · 30 · 40 · 50 — العشرات بـ‑zig، وdreißig وحدها بـ‑ßig"
+      },
+      {
+        "de": "sechs → sechzig · sieben → siebzig",
+        "ar": "60 من 6: تسقط s · 70 من 7: تسقط en — كما في sechzehn وsiebzehn"
+      },
+      {
+        "de": "zwei + und + dreißig = zweiunddreißig",
+        "ar": "32 = اثنان وثلاثون: الآحاد ثم und ثم العشرات — كلمة واحدة"
+      },
+      {
+        "de": "dreiundzwanzig · zweiunddreißig",
+        "ar": "23 · 32 — الآحاد أولاً في الاثنين: انتبه لأول ما تسمع"
+      },
+      {
+        "de": "einundzwanzig · sechsundzwanzig · siebenundzwanzig",
+        "ar": "21 · 26 · 27 — eins تصير ein، وsechs وsieben تبقيان كاملتين في المركّب"
+      },
+      {
+        "de": "Meine Oma ist achtzig. · Ich zähle bis hundert.",
+        "ar": "جدتي في الثمانين · أعدّ حتى مئة"
+      }
+    ],
+    "inferencePromptAr": "انظر إلى الأمثلة: (1) بأي مقطع تنتهي العشرات؟ وأي عدد منها يختلف في كتابته؟ (2) ماذا سقط من sechs في 60 ومن sieben في 70 — وأين رأيت هذا من قبل؟ (3) في zweiunddreißig: ماذا تسمع أولاً، الآحاد أم العشرات؟ وهل هذا ترتيب العربية «اثنان وثلاثون»؟ (4) هل تبقى eins كاملة في 21؟ وsechs في 26؟",
+    "ruleDe": "zwanzig · dreißig · vierzig · fünfzig · sechzig · siebzig · achtzig · neunzig · hundert — zwei + und + dreißig = zweiunddreißig",
+    "ruleAr": "العشرات: الآحاد + ‑zig — vierzig · fünfzig · achtzig · neunzig — ومعها zwanzig (20) كلمة خاصة، وثلاثة استثناءات تُحفظ: dreißig (‑ßig لا ‑zig — ei ثم ß كقاعدة طول الحركة) · sechzig (تسقط s) · siebzig (تسقط en)، كما في sechzehn وsiebzehn. والعدد المركّب من 21 إلى 99: الآحاد ثم und ثم العشرات، في كلمة واحدة بلا مسافة: zwei + und + dreißig = zweiunddreißig — وeins تصير ein (einundzwanzig)، أما sechs وsieben فتبقيان كاملتين في المركّب (sechsundzwanzig · siebenundzwanzig). وبالأرقام نكتب كما في العربية: نسمع الآحاد أولاً ونكتب العشرات أولاً — zweiunddreißig = 32. وhundert (100) أو einhundert.",
+    "contrastAr": "هنا العربية في صفّك: «اثنان وثلاثون» تبدأ بالآحاد ثم «و» ثم العشرات — كـzweiunddreißig تماماً، ونكتبها 32 كما في الألمانية. الخطر في ثلاثة مواضع: (1) الفرنسية (trente-deux) والإنجليزية (thirty-two) تبدأ بالعشرات، ومن يعرفهما يقول ~~dreißig und zwei~~ (2) العربية تكتب العدد كلمتين («اثنان وثلاثون»)، والألمانية كلمة واحدة: zweiunddreißig (3) العربية تغيّر الآحاد في كل العشرات («ثلاثون» من «ثلاثة»)، والألمانية تغيّر ثلاثة فقط: dreißig · sechzig · siebzig — والباقي يبقى (vierzig · achtzig) (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "100 = hundert أو einhundert — كلاهما صحيح؛ وما بعد المئة (hunderteins · zweihundert) في الدرس التالي.",
+      "رقم الهاتف يُقرأ غالباً خانةً خانة (null, eins, sieben …) كما تعلّمنا في درس الأعداد الأول، وقد يُقرأ أزواجاً (siebenundzwanzig, vierzehn …) — والعدد المركّب للكميات والأعمار والأسعار.",
+      "Oma كلمة الكلام اليومي للجدة؛ وكلمات الأسرة كلها في الوحدة الرابعة.",
+      "das Essen (الطعام/الوجبة) اسمٌ من الفعل essen (يأكل) بحرف كبير — كـdas Leben من leben."
+    ],
+    "beads": [
+      "Meine",
+      "Oma",
+      "ist",
+      "achtzig."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u3-d1",
+    "a1-u15-d2"
+  ]
+}

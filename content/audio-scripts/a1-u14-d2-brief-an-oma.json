@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u14-d2-brief-an-oma",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Brief an Oma",
+    "ar": "رسالة إلى الجدة بلا تاريخ (تكملة SD1 للفهم): في مكتب البريد — يوسف يكتب رسالة لجدته بمساعدة لينا: المرسل والمرسل إليها والرمز البريدي والطابع والوزن والموظف والتحية والختام والطبيب والإيميل والفاكس والتحويل البنكي والاتصال والمجيب الآلي"
+  },
+  "usedIn": [
+    "a1-u14-d2"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "ed-1",
+      "speaker": "yusuf",
+      "text": "Lena, ich schreibe einen Brief an Oma!",
+      "direction": "Brief معروف"
+    },
+    {
+      "id": "ed-2",
+      "speaker": "lena",
+      "text": "Schön! Absender: Yusuf Haddad. Empfänger: Oma!",
+      "direction": "Absender Empfänger"
+    },
+    {
+      "id": "ed-3",
+      "speaker": "yusuf",
+      "text": "Und die Postleitzahl von Tunis? Wo steht sie?",
+      "direction": "Postleitzahl"
+    },
+    {
+      "id": "ed-4",
+      "speaker": "lena",
+      "text": "Hier! Und eine Briefmarke. Was ist das Gewicht?",
+      "direction": "Briefmarke Gewicht"
+    },
+    {
+      "id": "ed-5",
+      "speaker": "yusuf",
+      "text": "Der Beamte hilft. Zwei Euro, bitte!",
+      "direction": "Beamte Euro"
+    },
+    {
+      "id": "ed-6",
+      "speaker": "lena",
+      "text": "Schreib die Anrede: Liebe Oma!",
+      "direction": "Anrede Schreib"
+    },
+    {
+      "id": "ed-7",
+      "speaker": "yusuf",
+      "text": "Liebe Oma! Und am Ende: Viele Grüße!",
+      "direction": "Grüße"
+    },
+    {
+      "id": "ed-8",
+      "speaker": "lena",
+      "text": "Oma ist oft beim Doktor. Liebe Grüße an Oma!",
+      "direction": "Doktor Grüße"
+    },
+    {
+      "id": "ed-9",
+      "speaker": "yusuf",
+      "text": "Oder E-Mail? Oder Fax? Nein — Oma hat kein Internet!",
+      "direction": "E-Mail Fax Internet"
+    },
+    {
+      "id": "ed-10",
+      "speaker": "lena",
+      "text": "Ein Fax? Nein — ein Brief!",
+      "direction": "Fax ثانية"
+    },
+    {
+      "id": "ed-11",
+      "speaker": "yusuf",
+      "text": "Und Geld? Ich überweise Geld auf das Konto von Oma!",
+      "direction": "überweisen Konto"
+    },
+    {
+      "id": "ed-12",
+      "speaker": "lena",
+      "text": "Gute Idee! Die Dame hilft dir!",
+      "direction": "Dame Idee"
+    },
+    {
+      "id": "ed-13",
+      "speaker": "yusuf",
+      "text": "Ich rufe Oma an. Was ist die Vorwahl?",
+      "direction": "anrufen Vorwahl"
+    },
+    {
+      "id": "ed-14",
+      "speaker": "lena",
+      "text": "Die Vorwahl steht hier. Ruf an!",
+      "direction": "Vorwahl Ruf"
+    },
+    {
+      "id": "ed-15",
+      "speaker": "yusuf",
+      "text": "Oma antwortet nicht. Nur der Anrufbeantworter!",
+      "direction": "antwortet Anrufbeantworter"
+    },
+    {
+      "id": "ed-16",
+      "speaker": "lena",
+      "text": "Sprich laut: Hallo Oma!",
+      "direction": "Sprich laut"
+    },
+    {
+      "id": "ed-17",
+      "speaker": "yusuf",
+      "text": "Hallo Oma! Der Brief kommt bald. Auf Wiederhören!",
+      "direction": "Wiederhören"
+    },
+    {
+      "id": "ed-18",
+      "speaker": "lena",
+      "text": "Tschüss, Oma! Auf Wiederhören!",
+      "direction": "Wiederhören ثانية"
+    },
+    {
+      "id": "ed-19",
+      "speaker": "yusuf",
+      "text": "Danke, Lena! Ohne dich — kein Brief!",
+      "direction": "Ohne dich"
+    },
+    {
+      "id": "ed-20",
+      "speaker": "lena",
+      "text": "Gern! Bis bald, Yusuf!",
+      "direction": "ختام"
+    }
+  ]
+}
