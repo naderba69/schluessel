@@ -41,8 +41,8 @@ export function insertAtCursor(el: HTMLInputElement | null, text: string, ch: st
 }
 
 /** محطة 1 — الاسترجاع: بطاقة بعد بطاقة، والتقييم يمرّر للتالية */
-export function RecallStation({ cards, onDone }: { cards: RecallCardData[]; onDone?: () => void }) {
-  const [index, setIndex] = useState(0);
+export function RecallStation({ cards, onDone, initialIndex = 0, onProgress }: { cards: RecallCardData[]; onDone?: () => void; initialIndex?: number; onProgress?: (index: number) => void }) {
+  const [index, setIndex] = useState(Math.max(0, Math.min(initialIndex, Math.max(0, cards.length - 1))));
   const [revealed, setRevealed] = useState(false);
   const card = cards[index];
   if (!card) return <p data-testid="recall-done">انتهت جولة الاسترجاع — إلى الجديد! 💪</p>;
@@ -61,6 +61,7 @@ export function RecallStation({ cards, onDone }: { cards: RecallCardData[]; onDo
         onRate={(_r: RecallRating) => {
           setRevealed(false);
           setIndex(index + 1);
+          onProgress?.(index + 1); // N-006
           if (index + 1 >= cards.length) onDone?.(); // D117: اكتملت المحطة ← يُفتح «التالي»
         }}
       />
@@ -73,13 +74,19 @@ export function LearnStation({
   cards,
   rules = [],
   onDone,
+  initialIndex = 0,
+  initialRuleIndex = 0,
+  onProgress,
 }: {
   cards: LearnCardData[];
   rules?: readonly GrammarRule[];
   onDone?: () => void;
+  initialIndex?: number;
+  initialRuleIndex?: number;
+  onProgress?: (index: number, ruleIndex: number) => void;
 }) {
-  const [index, setIndex] = useState(0);
-  const [ruleIndex, setRuleIndex] = useState(0);
+  const [index, setIndex] = useState(Math.max(0, initialIndex));
+  const [ruleIndex, setRuleIndex] = useState(Math.max(0, initialRuleIndex));
   const [attempted, setAttempted] = useState(false);
   const [revealed, setRevealed] = useState(false);
   const card = cards[index];
@@ -96,6 +103,7 @@ export function LearnStation({
           rule={rule}
           onDone={() => {
             setRuleIndex(ruleIndex + 1);
+            onProgress?.(index, ruleIndex + 1); // N-006
             if (ruleIndex + 1 >= rules.length) onDone?.(); // D117: آخر قاعدة ← اكتملت المحطة
           }}
         />
@@ -126,6 +134,7 @@ export function LearnStation({
             setRevealed(false);
             setAttempted(false);
             setIndex(index + 1);
+            onProgress?.(index + 1, ruleIndex); // N-006
             if (index + 1 >= cards.length && rules.length === 0) onDone?.(); // D117: بلا قاعدة ← آخر بطاقة تُكمل المحطة
           }}
         >
@@ -417,12 +426,20 @@ export function PracticeStation({
   data,
   redemittel = [],
   onDone,
+  initial,
+  onProgress,
 }: {
   data: PracticeData;
   redemittel?: Phrase[];
   onDone?: () => void;
+  initial?: { station: number; item: number };
+  onProgress?: (station: number, item: number) => void;
 }) {
-  const [state, setState] = useState<PracticeState>(initialPractice);
+  const [state, setState] = useState<PracticeState>(() => ({
+    ...initialPractice(),
+    station: Math.max(0, initial?.station ?? 0),
+    item: Math.max(0, initial?.item ?? 0),
+  }));
   const station = data.stations[state.station];
   const item = station?.items[state.item] as { q?: string; a?: string } | undefined;
 
@@ -457,6 +474,7 @@ export function PracticeStation({
   const next = () => {
     const after = nextItem(state, data.stations);
     setState(after);
+    onProgress?.(after.station, after.item); // N-006
     if (!data.stations[after.station]) onDone?.(); // D117: آخر بند ← اكتملت المحطة (ثم المهمة التواصلية)
   };
   const counter = (

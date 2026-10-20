@@ -64,6 +64,20 @@ export const QuizItem = z
   .refine((i) => !i.accept || distinct([i.a, ...i.accept]), { message: "accept يكرر الإجابة أو يكرر نفسه" });
 export type QuizItem = z.infer<typeof QuizItem>;
 
+/**
+ * N-006 (D228): إجابة Quiz مُخزَّنة (لقطة الاستئناف) — المصدر الوحيد (المحرّك يستورد النوع من هنا فلا انحراف).
+ * close: الحرف الكبير/الصغير أو ß/ä/ö/ü فقط ← نصف درجة + نوع الفرق إلزامي؛ غيرها بلا closeKind.
+ */
+export const QuizAnswer = z.union([
+  z.object({
+    given: z.string(),
+    verdict: z.enum(["correct", "wrong", "judge", "self-correct", "self-wrong"]),
+    closeKind: z.undefined().optional(),
+  }),
+  z.object({ given: z.string(), verdict: z.literal("close"), closeKind: z.enum(["case", "spelling"]) }),
+]);
+export type QuizAnswer = z.infer<typeof QuizAnswer>;
+
 export const QuizVariant = z.object({
   items: z.array(QuizItem).min(3),
   passingScore: z.number().min(0.75).max(1).default(0.75),

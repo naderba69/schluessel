@@ -15,7 +15,7 @@ import { buildNetwork, memoryPalace, networkReviewFlow } from "../lib/vocab-netw
 import { familyForms } from "../lib/lesson-runner.js";
 import { A1_TASKS, taskFlow, type RealTask } from "../lib/real-tasks.js";
 import { CULTURE_FACTS, songOfTheWeek, factsNeedingWebVerify } from "../lib/culture.js";
-import { firstLessonWords } from "../lesson-packs.js";
+import { LESSON_ORDER, firstLessonWords } from "../lesson-packs.js";
 
 /* ══════════ E09 — الاستماع المتقدم ══════════ */
 export function ListeningLab() {
@@ -153,10 +153,35 @@ export function WritingLab({ initialText = "" }: { initialText?: string }) {
  * مختبر القواعد (خارج المسار): القواعد الثلاث المكتوبة في الكود — بالمكوّن نفسه الذي تعرض به محطة «الجديد»
  * قواعد المحتوى (D115). كانت نسخة مستقلة لا تستدعي viewExamples فيرمي «سجّل استنتاجي» خطأ عند الضغط.
  */
-export function GrammarLab({ ruleId = A1_RULES[0]!.id }: { ruleId?: string }) {
-  const rule = A1_RULES.find((r) => r.id === ruleId)!;
+export function unlockedLabRules(currentLessonId?: string | null) {
+  if (currentLessonId === undefined || currentLessonId === null) return [...A1_RULES];
+  const rank = new Map(LESSON_ORDER.map((id, i) => [id, i] as const));
+  const at = rank.get(currentLessonId);
+  if (at === undefined) return [];
+  return A1_RULES.filter((r) => !r.lesson || (rank.get(r.lesson) ?? Infinity) <= at).sort(
+    (x, y) => (rank.get(x.lesson ?? "") ?? -1) - (rank.get(y.lesson ?? "") ?? -1),
+  );
+}
+
+export function GrammarLab({ ruleId, currentLessonId }: { ruleId?: string; currentLessonId?: string | null }) {
+  const unlocked = unlockedLabRules(currentLessonId);
+  const [chosenId, setChosenId] = useState<string | undefined>(ruleId);
+  const rule = unlocked.find((r) => r.id === chosenId) ?? unlocked[0];
+  if (!rule)
+    return (
+      <section data-testid="grammar-lab">
+        <p>لا قواعد متاحة بعد — أكمل الدرس الحالي أولاً.</p>
+      </section>
+    );
   return (
     <section data-testid="grammar-lab">
+      <nav data-testid="grammar-rules">
+        {unlocked.map((r) => (
+          <button key={r.id} data-testid={`rule-${r.id}`} onClick={() => setChosenId(r.id)}>
+            {r.topicAr}
+          </button>
+        ))}
+      </nav>
       <RuleDiscoveryView rule={rule} />
     </section>
   );
@@ -274,7 +299,7 @@ export const DEMO_TEXT: ReadingText = {
   ],
 };
 
-export function SkillsLab() {
+export function SkillsLab({ currentLessonId }: { currentLessonId?: string | null }) {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("hoeren");
   return (
     <div data-testid="skills-lab">
@@ -290,7 +315,7 @@ export function SkillsLab() {
       {tab === "sprechen" && <PronunciationLab />}
       {tab === "lesen" && <ReadingLab text={DEMO_TEXT} />}
       {tab === "schreiben" && <WritingLab />}
-      {tab === "grammatik" && <GrammarLab />}
+      {tab === "grammatik" && <GrammarLab currentLessonId={currentLessonId} />}
       {tab === "netzwerk" && <NetworkLab />}
       {tab === "aufgaben" && <TasksLab />}
       {tab === "kultur" && <CultureLab />}

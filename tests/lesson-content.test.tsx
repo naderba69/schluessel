@@ -24,6 +24,11 @@ describe("تشغيل الدرس الحقيقي على الواجهة", () => {
     expect(html).toContain("حاول تذكر");
   });
 
+  it("N-006: initialIndex يستأنف من البطاقة المحفوظة (مع تقليم خارج النطاق)", () => {
+    expect(renderToStaticMarkup(<RecallStation cards={plan.recall} initialIndex={2} />)).toContain("بطاقة 3 من 3");
+    expect(renderToStaticMarkup(<RecallStation cards={plan.recall} initialIndex={99} />)).toContain("بطاقة 3 من 3");
+  });
+
   it("محطة الجديد: أول عنصر من كل كلمات الدرس — بجملة الدرس الحقيقية · ثم قاعدة اليوم (D116 · ثابت مشتقّ D188)", () => {
     const html = renderToStaticMarkup(<LearnStation cards={plan.learn} />);
     expect(html).toContain(`عنصر 1 من ${plan.learn.length}`);

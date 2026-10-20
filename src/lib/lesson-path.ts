@@ -2,7 +2,7 @@
 // القانون 3/§3: مسار خطّي — لا قفز ولا ارتجاع؛ يُفتح الدرس التالي بـ≥75% في Quiz سابقه فقط (routes.ts يعرض الحالة).
 // الحقيقة المخزَّنة = completedLessons (تاريخ لا يُمحى) · availableLessons مشتقّة منها ومن ترتيب المحتوى الحالي
 // (reconcileProgress) — فتغيير المحتوى (مثل نقل الوحدة 17 ← 15 في D113) لا يترك متعلماً معلَّقاً بمعرّف اختفى.
-import type { GateResult, LearnerProgress, LearnerState, Level } from "../../content/schemas/index.js";
+import type { GateResult, LearnerProgress, LearnerState, Level, OpenSession } from "../../content/schemas/index.js";
 import type { QuizOutcome } from "./quiz-session.js";
 import { enrollSrsCards } from "./review-engine.js";
 
@@ -68,6 +68,7 @@ export function recordQuizAttempt(
     ...state.progress,
     gateResults: [...state.progress.gateResults, result],
     completedLessons: outcome.passed ? [...state.progress.completedLessons, cur] : state.progress.completedLessons,
+    openSession: outcome.passed ? undefined : state.progress.openSession, // N-006: النجاح يُغلق الحصة المفتوحة؛ «ليس بعد» تُبقيها للاستئناف
   };
   const calibration =
     outcome.predicted === null
@@ -81,4 +82,15 @@ export function recordQuizAttempt(
       ? { srsCards: [...state.srsCards, ...enrollSrsCards(state.srsCards, srsBundle, new Date(date))] }
       : {}),
   };
+}
+
+/** N-006 (D228): حفظ لقطة الحصة المفتوحة (تُكتب عند كل تقدّم داخل الحصة) */
+export function setOpenSession(progress: LearnerProgress, open: OpenSession): LearnerProgress {
+  return { ...progress, openSession: { ...open, done: [...open.done], pos: { ...open.pos } } };
+}
+
+/** N-006: لقطة هذا الدرس وحده — لقطة درس آخر (قديمة) تُتجاهل عند الفتح */
+export function openSessionFor(progress: Pick<LearnerProgress, "openSession">, lessonId: string): OpenSession | undefined {
+  const o = progress.openSession;
+  return o && o.lessonId === lessonId ? o : undefined;
 }

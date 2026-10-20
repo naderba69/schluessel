@@ -43,7 +43,7 @@ describe("E13 — القفل: القاعدة لا تظهر قبل المثال (
 
 describe("E13 — حبّات الجملة + المقارنة العربية في كل قاعدة", () => {
   it("ترتيب الحبّات: الحل مصفوفة القاعدة — والخلط يُكشف", () => {
-    const rule = A1_RULES[0]!; // ["Heute", "lerne", "ich", "Deutsch"]
+    const rule = A1_RULES[0]!; // N-009: ["Hier", "wohne", "ich"]
     expect(checkBeads(rule, rule.beads)).toBe(true);
     expect(checkBeads(rule, shuffledBeads(rule, 1))).toBe(false);
     expect(checkBeads(rule, [...rule.beads, "x"])).toBe(false);
@@ -57,5 +57,33 @@ describe("E13 — حبّات الجملة + المقارنة العربية في
     }
     expect(A1_RULES.map((r) => r.id)).toEqual(["v2-position", "aus-vs-von", "heissen-du"]);
     expect(() => startDiscovery("xx")).toThrow();
+  });
+});
+
+describe("N-009 (D228) — قواعد المختبر الثلاث: ألمانية نظيفة عند أفق كل قاعدة", () => {
+  it("كل قاعدة تحمل أفقاً + ألمانيتها (أمثلة/حبّات/قاعدة/تعليمات) نظيفة عنده", async () => {
+    const { join } = await import("node:path");
+    const { loadLessons, loadWords } = await import("../tools/lib/content-disk.js");
+    const { taughtUpTo, frontViolations } = await import("../tools/lib/lesson-upgrade.js");
+    const { knownStems } = await import("../tools/lib/vocab-forms.js");
+    const root = join(__dirname, "..", "content");
+    const lessons = loadLessons(root);
+    const words = loadWords(root);
+    const byId = new Map(lessons.map((l) => [l.id, l]));
+    const horizons = new Map(A1_RULES.filter((r) => r.lesson).map((r) => [r.id, r.lesson!]));
+    // الدبوس: الآفاق الثلاثة المعتمدة (أي تغيير أفق يُراجَع هنا)
+    expect(horizons).toEqual(
+      new Map([
+        ["v2-position", "a1-u2-d1"],
+        ["aus-vs-von", "a1-u8-d5"],
+        ["heissen-du", "a1-u1-d1"],
+      ]),
+    );
+    for (const r of A1_RULES) {
+      const lesson = byId.get(r.lesson!)!;
+      const stems = knownStems(taughtUpTo(lesson, lessons, words));
+      const texts = [...r.examples.map((e) => e.de), [...r.beads].join(" "), r.ruleDe, r.inferencePromptAr, r.contrastAr];
+      expect(frontViolations(texts, stems, new Set(["yusuf", "lena"]))).toEqual([]);
+    }
   });
 });

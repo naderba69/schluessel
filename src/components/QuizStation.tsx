@@ -2,11 +2,11 @@
 // تشريح الدرس (§3): 6 Slider ← 7 Quiz ← 8 Zusammenfassung — فتُعرض الخلاصة بعد أول محاولة (للمراجعة عند «ليس بعد»).
 // القانون 13 (الجبهة): سؤال الـSlider يُعرض بالعربية فقط — «Wie viel Prozent wirst du schaffen?» فيها ما لم يُتعلَّم بعد.
 import { useRef, useState } from "react";
-import type { Lesson } from "../../content/schemas/index.js";
+import type { Lesson, OpenQuiz } from "../../content/schemas/index.js";
 import { displayOrder } from "../lib/practice-session.js";
 import {
   advanceQuiz, answerQuizItem, calibrationNoteAr, canRetryInSession, creditOf, currentQuizItem, isAnswered, isComplete,
-  judgeQuizItem, needsJudgment, outcomeHeadlineAr, predictScore, quizOutcome, startQuizAttempt, verdictNoteAr,
+  judgeQuizItem, needsJudgment, outcomeHeadlineAr, predictScore, quizOutcome, restoreQuizAttempt, startQuizAttempt, verdictNoteAr,
   type QuizAttempt, type QuizOutcome,
 } from "../lib/quiz-session.js";
 import { UmlautKeys, insertAtCursor } from "./LessonContent.js";
@@ -18,18 +18,41 @@ export function QuizStation({
   lesson,
   priorAttempts,
   onAttemptComplete,
+  initialQuiz,
+  onQuizProgress,
 }: {
   lesson: QuizLesson;
   /** محاولات مسجّلة قبل هذه الحصة — تحدد النسخة (قانون 21) */
   priorAttempts: number;
   /** يُنادى مرة واحدة عند اكتمال كل محاولة (نجاحاً أو «ليس بعد») */
   onAttemptComplete: (outcome: QuizOutcome) => void;
+  /** N-006: لقطة محاولة سابقة تُستأنف (fail-safe داخل restoreQuizAttempt) */
+  initialQuiz?: OpenQuiz;
+  /** N-006: يُنادى عند كل تغيّر في المحاولة (توقّع/إجابة/حكم/انتقال/إعادة) */
+  onQuizProgress?: (snap: OpenQuiz) => void;
 }) {
   const variantCount = lesson.quiz.variants.length;
   const [base] = useState(priorAttempts);
   const [sessionAttempts, setSessionAttempts] = useState(0);
-  const [attempt, setAttempt] = useState<QuizAttempt>(() => startQuizAttempt(lesson, priorAttempts));
-  const [outcome, setOutcome] = useState<QuizOutcome | null>(null);
+  // N-006: نسخ أُكملت في هذا الجلوس — الإعادة تتخطاها (حافة: استئناف محاولة ثانية مقطوعة ثم إكمالها ثم الإعادة)
+  const [sittingVariants, setSittingVariants] = useState<number[]>([]);
+  const nextVariant = (from: number): number => {
+    let c = from % variantCount;
+    while (sittingVariants.includes(c)) c = (c + 1) % variantCount;
+    return c;
+  };
+  const [attempt, setAttempt] = useState<QuizAttempt>(() =>
+    initialQuiz ? restoreQuizAttempt(lesson, initialQuiz) : startQuizAttempt(lesson, priorAttempts),
+  );
+  const [outcome, setOutcome] = useState<QuizOutcome | null>(() =>
+    // N-006: محاولة مكتملة مستعادة ← نتيجتها حاضرة (مع زر الإعادة عند «ليس بعد»)
+    initialQuiz && isComplete(restoreQuizAttempt(lesson, initialQuiz)) ? quizOutcome(restoreQuizAttempt(lesson, initialQuiz)) : null,
+  );
+  /** N-006: تغيير المحاولة + دفع اللقطة للحفظ */
+  const push = (a: QuizAttempt) => {
+    setAttempt(a);
+    onQuizProgress?.({ variantIndex: a.variantIndex, predicted: a.predicted, answers: [...a.answers], cursor: a.cursor });
+  };
   const lo = Math.max(0, lesson.slider.min);
   const hi = Math.min(100, lesson.slider.max);
   const [prediction, setPrediction] = useState(Math.round((lo + hi) / 2 / 5) * 5);
@@ -61,7 +84,7 @@ export function QuizStation({
           <output data-testid="quiz-prediction">{prediction}%</output>
         </label>
         <p>
-          <button data-testid="quiz-start" onClick={() => setAttempt(predictScore(attempt, prediction))}>
+          <button data-testid="quiz-start" onClick={() => push(predictScore(attempt, prediction))}>
             ابدأ الاختبار
           </button>
         </p>
@@ -106,7 +129,7 @@ export function QuizStation({
           <button
             data-testid="quiz-retry"
             onClick={() => {
-              setAttempt(startQuizAttempt(lesson, base + sessionAttempts));
+              push(startQuizAttempt(lesson, nextVariant(base + sessionAttempts)));
               setOutcome(null);
               setText("");
             }}
@@ -127,16 +150,19 @@ export function QuizStation({
   const item = currentQuizItem(attempt)!;
   const answered = isAnswered(attempt);
   const answer = answered ? attempt.answers[attempt.cursor]! : null;
-  const submit = (given: string) => setAttempt(answerQuizItem(attempt, given));
+  const submit = (given: string) => push(answerQuizItem(attempt, given));
   const next = () => {
     const after = advanceQuiz(attempt);
     setText("");
-    setAttempt(after);
     if (isComplete(after)) {
       const o = quizOutcome(after);
       setOutcome(o);
       setSessionAttempts(sessionAttempts + 1);
+      setSittingVariants((sv) => (sv.includes(after.variantIndex) ? sv : [...sv, after.variantIndex]));
+      push(after);
       onAttemptComplete(o);
+    } else {
+      push(after);
     }
   };
 
@@ -192,10 +218,10 @@ export function QuizStation({
           )}
           {needsJudgment(attempt) ? (
             <p>
-              <button data-testid="quiz-judge-yes" onClick={() => setAttempt(judgeQuizItem(attempt, true))}>
+              <button data-testid="quiz-judge-yes" onClick={() => push(judgeQuizItem(attempt, true))}>
                 إجابتي صحيحة بصيغة أخرى
               </button>{" "}
-              <button data-testid="quiz-judge-no" onClick={() => setAttempt(judgeQuizItem(attempt, false))}>
+              <button data-testid="quiz-judge-no" onClick={() => push(judgeQuizItem(attempt, false))}>
                 أخطأت
               </button>
             </p>

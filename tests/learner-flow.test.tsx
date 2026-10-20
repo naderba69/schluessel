@@ -239,11 +239,13 @@ describe("«ليس بعد» — مراجعة ثم نسخة أخرى · النس�
     expect(q("finished-note")!.textContent).toContain("الدرس يبقى مفتوحاً");
     expect(q("current-lesson")!.getAttribute("data-lesson-id")).toBe("a1-u1-d1");
 
-    // حصة 2: تبدأ بالنسخة 2 (محاولة سابقة واحدة) ← 3 ← 1 ← السقف (3 محاولات في هذه الحصة)
+    // حصة 2 (N-006: استئناف): تبدأ من close بنتيجة الحصة 1 + زر الإعادة ← النسخ 2←3←1 ← السقف
     await startSession();
-    await throughStations("a1-u1-d1");
-    for (const [i, v] of [1, 2, 0].entries()) {
-      if (i > 0) await click(q("quiz-retry"), "النسخة التالية");
+    expect(station()).toBe("close");
+    expect(q("quiz-station")!.getAttribute("data-phase")).toBe("result");
+    expect(q("quiz-station")!.getAttribute("data-passed")).toBe("no");
+    for (const v of [1, 2, 0]) {
+      await click(q("quiz-retry"), "النسخة التالية");
       expect(version()).toBe(String(v + 1));
       await doQuiz(l.quiz.variants[v]!.items, wrongOf);
       expect(q("quiz-station")!.getAttribute("data-passed")).toBe("no");
@@ -256,9 +258,11 @@ describe("«ليس بعد» — مراجعة ثم نسخة أخرى · النس�
     expect(saved.progress.completedLessons).toEqual([]);
     expect(saved.progress.gateResults.map((g) => [g.passed, g.attempts])).toEqual([[false, 1], [false, 2], [false, 3], [false, 4]]);
 
-    // حصة 3: المحاولة الخامسة = النسخة 2 (4 mod 3) — وبالإجابات الصحيحة تُفتح a1-u1-d2
+    // حصة 3 (N-006: استئناف): نتيجة الحصة 2 حاضرة والسقف جلوسٌ جديد ← الإعادة = النسخة 2 (4 mod 3) ← نجاح
     await startSession();
-    await throughStations("a1-u1-d1");
+    expect(station()).toBe("close");
+    expect(q("quiz-station")!.getAttribute("data-phase")).toBe("result");
+    await click(q("quiz-retry"), "النسخة التالية");
     expect(version()).toBe("2");
     await doQuiz(l.quiz.variants[1].items, (it) => it.a);
     expect(q("quiz-station")!.getAttribute("data-passed")).toBe("yes");
