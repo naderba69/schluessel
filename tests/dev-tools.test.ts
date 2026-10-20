@@ -100,7 +100,14 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
     expect(pkg.scripts.bootstrap).toBe("bash tools/dev/bootstrap.sh");
   }, 60_000); // D216: مهلة صريحة كسائر اختبارات العمليات — الخادم البطيء كان يوقّت الـ5s الافتراضية (CI فشل 784/785)
   it("gate.ts --quick --json: كل خطوة لها معرّف وملخّص ورقم · التقرير بثلاثة أسطر", () => {
-    const out = execFileSync("npx", ["tsx", "tools/dev/gate.ts", "--quick", "--json", "--did", "اختبار"], { cwd: ROOT, encoding: "utf8", timeout: 300_000 });
+    // D235: DUDEN_LINKS=skip — vitest يختبر التوصيل لا الشبكة (الفحص الحقيقي خطوة البوابة وحدها) · والفشل يرفق مخرج البوابة المتداخلة
+    let out: string;
+    try {
+      out = execFileSync("npx", ["tsx", "tools/dev/gate.ts", "--quick", "--json", "--did", "اختبار"], { cwd: ROOT, encoding: "utf8", timeout: 300_000, env: { ...process.env, DUDEN_LINKS: "skip" } });
+    } catch (e) {
+      const err = e as { stdout?: unknown; stderr?: unknown; message?: string };
+      throw new Error(`البوابة المتداخلة سقطت — مخرجها:\n${String(err.stdout ?? "")}\n--- stderr ---\n${String(err.stderr ?? err.message ?? e)}`);
+    }
     const r = JSON.parse(out) as { ok: boolean; quick: boolean; results: { id: string; ok: boolean; soft: boolean; summary: string }[]; report: string };
     expect(r.quick).toBe(true);
     expect(r.results.map((x) => x.id)).toEqual(["tsc", "validate", "docs", "notes", "audit", "lexicon", "links", "speech"]); // lexicon من D197 · links من D234

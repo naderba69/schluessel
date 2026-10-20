@@ -1,19 +1,24 @@
 #!/usr/bin/env python3
-"""tools/dev/check-duden-links.py — فحص حيوية روابط Duden في gReferences (N-028 · D234).
+"""tools/dev/check-duden-links.py — فحص حيوية روابط Duden في gReferences (N-028 · D234 · قُسّي D235).
 
 يجمع روابط https://www.duden.de فريدةً من content/**/*.json ويفحصها (HEAD ثم GET عند الحاجة).
-  - رابط الضبط (صفحة Duden الرئيسية) لا يُفتح ⇒ لا وصول شبكي ⇒ «تُخطّي» ورمز 0
+  - رابط الضبط (صفحة Duden الرئيسية) لا يُفتح بعد 3 محاولات ⇒ لا وصول ⇒ «تُخطّي» ورمز 0
     (الصندوق المحلي بلا إنترنت؛ بوابة CI على GitHub تملك الوصول فتُنفّذ الفحص فعلاً).
   - 404 ⇒ مكسور (رمز خروج 1 + سرد الروابط). غير ذلك (403/429/5xx/مهلة) ⇒ «غير مؤكد» يُبلَّغ ولا يُسقط.
   - --collect-only: يطبع الروابط بلا شبكة (للفحص السريع والاختبار).
+  - DUDEN_LINKS=skip: تخطٍّ صريح بلا شبكة (اختبار vitest يختبر التوصيل لا الشبكة —
+    الفحص الحقيقي خطوةُ البوابة وحدها، وإلا ضُرب الموقع مرتين في كل تشغيل CI).
 
 مكتبة قياسية فقط (urllib) — بلا اعتماد جديد.
+D235: سلاسل Duden القياسية ASCII مطوية (Maedchen لا M%C3%A4dchen — المشفّر يعيد 404 مؤكداً).
 """
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
+import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -23,6 +28,7 @@ URL_RE = re.compile(r"https://www\.duden\.de/[^\s\"']+")
 CONTROL = "https://www.duden.de/"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) schluessel-linkcheck/1.0"}
 TIMEOUT = 8
+CONTROL_TRIES = 3
 
 
 def collect() -> list[str]:
@@ -67,10 +73,20 @@ def main(argv: list[str]) -> int:
         for u in urls:
             print(u)
         return 0
-    if fetch(CONTROL, "GET") != 200:
-        print(f"duden-links: تُخطّي — لا وصول شبكي ({len(urls)} رابطاً مؤجلاً لـCI)")
+    if os.environ.get("DUDEN_LINKS") == "skip":
+        print(f"duden-links: تُخطّي (تجربة توصيل — {len(urls)} رابطاً يفحصها CI)")
         return 0
-    with ThreadPoolExecutor(max_workers=8) as ex:
+    reason: int | str = "?"
+    for i in range(CONTROL_TRIES):
+        reason = fetch(CONTROL, "GET")
+        if reason == 200:
+            break
+        if i < CONTROL_TRIES - 1:
+            time.sleep(3)
+    if reason != 200:
+        print(f"duden-links: تُخطّي — لا وصول ({len(urls)} رابطاً مؤجلاً لـCI · الضبط: {str(reason)[:80]})")
+        return 0
+    with ThreadPoolExecutor(max_workers=4) as ex:
         results = list(ex.map(check, urls))
     ok = [u for u, s, _ in results if s == "ok"]
     broken = [(u, w) for u, s, w in results if s == "broken"]
