@@ -27,6 +27,12 @@ export function shouldShowCard(card: Unit0Card, shownIds: string[], event: Unit0
 }
 
 /** البطاقات المستحقة للظهور عند حدث ما (بترتيبها) */
+/** N-049 (D233): الإجابة تحتاج حرفاً ألمانياً خاصاً (ä ö ü Ä Ö Ü ß) — تُكتب بلوحة الهاتف/الحاسوب أو بأزرارنا */
+const SPECIAL_CHAR_RE = /[äöüÄÖÜß]/u;
+export function answerNeedsSpecialChar(answer: string, accept: readonly string[] = []): boolean {
+  return SPECIAL_CHAR_RE.test(answer) || accept.some((a) => SPECIAL_CHAR_RE.test(a));
+}
+
 export function cardsForEvent(deck: Unit0Deck, shownIds: string[], event: Unit0Trigger): Unit0Card[] {
   return deck.cards.filter((c) => shouldShowCard(c, shownIds, event)).sort((a, b) => a.order - b.order);
 }

@@ -1,15 +1,17 @@
 // first-run.test.ts — S0.7 + S0.11 | test-first-run-flow / test-unit0-jit
 import { describe, it, expect } from "vitest";
+import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import {
   FIRST_RUN_STEPS, firstRunNext, completeFirstRun,
 } from "../src/lib/first-run.js";
 import {
-  loadUnit0Deck, dayOneCards, jitCards, shouldShowCard, cardsForEvent,
+  loadUnit0Deck, dayOneCards, jitCards, shouldShowCard, cardsForEvent, answerNeedsSpecialChar,
 } from "../src/lib/unit0.js";
 import {
-  WelcomeScreen, NameScreen, Unit0CardView, FirstLessonScreen,
+  WelcomeScreen, NameScreen, Unit0CardView, FirstLessonScreen, KeyboardCard, HandwritingExercise,
 } from "../src/components/FirstRun.js";
+import { PracticeStation } from "../src/components/LessonContent.js";
 import { Lesson as LessonSchema, Word as WordSchema } from "../content/schemas/index.js";
 import firstLessonJson from "../content/lessons/a1/a1-u1-d1.json";
 import wordHallo from "../content/words/hallo.json";
@@ -60,10 +62,10 @@ describe("أول تشغيل (test-first-run-flow)", () => {
 describe("الوحدة صفر JIT (test-unit0-jit)", () => {
   const deck = loadUnit0Deck();
 
-  it("الحزمة: 12 بطاقة = 4 يوم أول + 8 JIT", () => {
-    expect(deck.cards).toHaveLength(12);
+  it("الحزمة: 13 بطاقة = 4 يوم أول + 9 JIT (N-049: بطاقة لوحة المفاتيح)", () => {
+    expect(deck.cards).toHaveLength(13);
     expect(dayOneCards(deck)).toHaveLength(4);
-    expect(jitCards(deck)).toHaveLength(8);
+    expect(jitCards(deck)).toHaveLength(9);
   });
 
   it("كل بطاقة JIT لا تظهر إلا عند محفّزها فعلياً (لا دفعة واحدة)", () => {
@@ -98,5 +100,44 @@ describe("الوحدة صفر JIT (test-unit0-jit)", () => {
       expect(card.body.ar.length).toBeGreaterThan(30);
       expect(card.title.ar.length).toBeGreaterThan(3);
     }
+  });
+});
+
+describe("N-049 (D233) — بطاقة لوحة المفاتيح عند أول بند كتابة بحرف خاص", () => {
+  const deck = loadUnit0Deck();
+  const card = cardsForEvent(deck, [], "first-special-char")[0];
+  it("البطاقة u0-keyboard: الضغط المطوّل والتخطيطات وشكل ß باليد", () => {
+    expect(card.id).toBe("u0-keyboard");
+    const html = renderToStaticMarkup(createElement(KeyboardCard, { card }));
+    expect(html).toContain("ضغطة مطوّلة");
+    expect(html).toContain("ß");
+    expect(html).toContain('data-testid="handwriting-exercise"');
+    expect(html).toContain('data-testid="keyboard-dismiss"');
+  });
+  it("الكشف: الإجابة بحرف خاص (ولو في accept) تُظهر البطاقة — وغيرها لا", () => {
+    expect(answerNeedsSpecialChar("Grüße")).toBe(true);
+    expect(answerNeedsSpecialChar("Strasse", ["Straße"])).toBe(true);
+    expect(answerNeedsSpecialChar("Guten Tag")).toBe(false);
+    expect(cardsForEvent(deck, ["u0-keyboard"], "first-special-char")).toEqual([]);
+  });
+  it("تمرين ß: الكشف بعد زر المحاولة وحده (تقييم ذاتي بلا درجات)", () => {
+    const html = renderToStaticMarkup(createElement(HandwritingExercise, {}));
+    expect(html).toContain('data-testid="handwriting-reveal"');
+    expect(html).not.toContain('data-testid="handwriting-model"');
+  });
+  it("PracticeStation: البطاقة فوق أول بند إدخال بحرف خاص — وتغيب بلا توصيل أو بعد العرض", () => {
+    const d1 = LessonSchema.parse(firstLessonJson);
+    const data = { stations: d1.uebung.stations, communicativeTask: d1.uebung.communicativeTask, dialogues: [] };
+    const gap = d1.uebung.stations.findIndex((st) => st.type === "gap-fill");
+    const withCard = renderToStaticMarkup(createElement(PracticeStation, { data, unit0Shown: [], initial: { station: gap, item: 0 } }));
+    // u1-d1 بند الفجوة الأول «Ich ___ Yusuf.» إجابته heiße ← البطاقة تظهر من الدرس الأول فعلاً
+    expect(withCard).toContain('data-testid="keyboard-card"');
+    const atGap = { station: gap, item: 0 };
+    const shown = renderToStaticMarkup(createElement(PracticeStation, { data, unit0Shown: [], initial: atGap }));
+    expect(shown).toContain('data-testid="keyboard-card"');
+    const hidden = renderToStaticMarkup(createElement(PracticeStation, { data, unit0Shown: ["u0-keyboard"], initial: atGap }));
+    expect(hidden).not.toContain('data-testid="keyboard-card"');
+    const unwired = renderToStaticMarkup(createElement(PracticeStation, { data, initial: atGap }));
+    expect(unwired).not.toContain('data-testid="keyboard-card"');
   });
 });

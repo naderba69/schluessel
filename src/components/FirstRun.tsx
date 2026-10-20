@@ -50,6 +50,52 @@ export function Unit0CardView({ card }: { card: Unit0Card }) {
   );
 }
 
+/**
+ * N-049 (D233): تمرين كتابة ß باليد — تقييم ذاتي (كشف بعد المحاولة، بلا درجات): المتعلم يكتب على ورقة ثم يقارن بالرسم.
+ */
+export function HandwritingExercise() {
+  const [revealed, setRevealed] = useState(false);
+  return (
+    <div data-testid="handwriting-exercise">
+      <h4>تمرين: اكتب ß بيدك ✍️</h4>
+      <ol>
+        <li>من السطر العلوي انزل بخط عمودي طويل يتجاوز السطر السفلي.</li>
+        <li>من وسط الخط ارسم بطناً مستديرة لليمين تُغلق على الخط نفسه.</li>
+        <li>اكتبها 3 مرات على ورقة — ثم اكشف الرسم وقارن.</li>
+      </ol>
+      {!revealed ? (
+        <button data-testid="handwriting-reveal" onClick={() => setRevealed(true)}>
+          كتبتُها — أرني الرسم
+        </button>
+      ) : (
+        <div data-testid="handwriting-model">
+          <p dir="ltr" style={{ fontSize: "3rem" }}>ß</p>
+          <p>قارن كتابتك: هل ينزل الخط تحت السطر؟ هل البطن مغلقة على الخط؟ إن نعم — أحسنت، هذه هي ß.</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/**
+ * N-049 (D233): بطاقة لوحة المفاتيح عند أول استعمال — فوق أول بند كتابة فيه حرف خاص (التدريب وحده؛
+ * الاختبار تقييمٌ لا يُقاطَع بالتعليم). الرفض محلي + إبلاغ الأب للحفظ الدائم (تظهر مرة واحدة أبداً).
+ */
+export function KeyboardCard({ card, onDismiss }: { card: Unit0Card; onDismiss?: () => void }) {
+  const [gone, setGone] = useState(false);
+  if (gone) return null;
+  const dismiss = () => { setGone(true); onDismiss?.(); };
+  return (
+    <div data-testid="keyboard-card">
+      <Unit0CardView card={card} />
+      <HandwritingExercise />
+      <button data-testid="keyboard-dismiss" onClick={dismiss}>
+        فهمت — تابع
+      </button>
+    </div>
+  );
+}
+
 export function Unit0Day1Screen({ onNext }: { onNext: () => void }) {
   const cards = dayOneCards(loadUnit0Deck());
   const [i, setI] = useState(0);

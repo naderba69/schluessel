@@ -170,10 +170,14 @@ const TENS = "zwanzig|dreißig|vierzig|fünfzig|sechzig|siebzig|achtzig|neunzig"
  * أو عشرات أو مركّب (zweihundert · hunderteins · hundertzwanzig · dreihundertfünfundsechzig) — أو (ein)tausend.
  * eins في آخر العدد تبقى بـs (hunderteins لا hundertein) · ولا und بعد المئات (hundertundeins صيغة قديمة أقل شيوعاً —
  * لا تُقبل حتى يُقرَّر تدريسها) · وما فوق الألف (zweitausend) خارج النطاق حتى يُدرَّس.
+ * N-059 (D233 — قرار Duden): ein آخر العدد تُصرَّف قبل الاسم (Duden «ein» Zahlwort: ein Mann · eine Frau · ein Kind ·
+ * «ein Euro achtzig»؛ Dudengrammatik §455: آخر المركّب ein يُصرَّف والاسم مفرد) — hundertundein Euro (مذكّر/محايد) ·
+ * hundertundeine (مؤنّث، كـTausendundeine Nacht). تُقبل الصيغتان المسمّاتان وحدهما: الميل (undeinen/undeinem/undeiner)
+ * مرفوض حتى يُدرَّس · وموضعية الصحة (وحده eins · قبل الاسم ein) لا يفحصها الحارس الرمزي — شأنها شأن نهايات الصفة.
  */
 export const HUNDREDS_NUMBER = new RegExp(
   `^(?:(?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)?hundert((?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)und(?:${TENS})|${TENS}|` +
-    "eins|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|dreizehn|vierzehn|fünfzehn|sechzehn|siebzehn|achtzehn|neunzehn)?|(?:ein)?tausend)$",
+    "eins|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|dreizehn|vierzehn|fünfzehn|sechzehn|siebzehn|achtzehn|neunzehn|undein|undeine)?|(?:ein)?tausend)$",
   "u",
 );
 const TENS_ONLY = new RegExp(`^(?:${TENS})$`, "u");

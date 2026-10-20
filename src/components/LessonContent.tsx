@@ -7,6 +7,8 @@ import { PlayButton } from "./LessonSession.js";
 import { BorrowedWordsBox, StruckText } from "./StruckText.js";
 import type { AudioScript, Unit0Card } from "../../content/schemas/index.js";
 import { CHARACTER_NAME_AR } from "../lib/story.js";
+import { answerNeedsSpecialChar, cardsForEvent, loadUnit0Deck } from "../lib/unit0.js";
+import { KeyboardCard } from "./FirstRun.js";
 import type { LearnCardData, RecallCardData, PracticeData, CloseData } from "../lib/lesson-runner.js";
 import { RecallCardView, LearnCardView, CloseView } from "./LessonSession.js";
 import type { RecallRating } from "../lib/review-engine.js";
@@ -429,12 +431,17 @@ export function PracticeStation({
   onDone,
   initial,
   onProgress,
+  unit0Shown,
+  onUnit0Show,
 }: {
   data: PracticeData;
   redemittel?: Phrase[];
   onDone?: () => void;
   initial?: { station: number; item: number };
   onProgress?: (station: number, item: number) => void;
+  /** N-049 (D233): بطاقات الوحدة صفر المعروضة + إبلاغ العرض — بلا توصيل لا بطاقة (توافق الاختبارات القديمة) */
+  unit0Shown?: readonly string[];
+  onUnit0Show?: (id: string) => void;
 }) {
   const [state, setState] = useState<PracticeState>(() => ({
     ...initialPractice(),
@@ -472,6 +479,10 @@ export function PracticeStation({
   }
 
   const typed = toTypedItem(station.type, item);
+  // N-049 (D233): أول بند كتابة (input) إجابته بحرف خاص ← بطاقة لوحة المفاتيح (مرة واحدة أبداً)
+  const keyboardDue = typed?.kind === "input" && unit0Shown !== undefined && answerNeedsSpecialChar(typed.answer, typed.accept)
+    ? cardsForEvent(loadUnit0Deck(), [...unit0Shown], "first-special-char")[0]
+    : undefined;
   // N-010 (D231): حوار محطة الاستماع هذه — يُعرض كاملاً قبل بندها الأول وحده (بقية البنود: زر سطرها يكفي)
   const dialogue = station.type === "listening" && state.item === 0
     ? data.dialogues.find((d) => d.station === state.station)?.script
@@ -493,6 +504,7 @@ export function PracticeStation({
       <section data-testid="practice-station" data-type={station.type}>
         {state.station === 0 && state.item === 0 && !state.verdict && <BorrowedWordsBox words={data.borrowed ?? []} />}
         {dialogue && <DialogueView script={dialogue} />}
+        {keyboardDue && <KeyboardCard card={keyboardDue} onDismiss={() => onUnit0Show?.(keyboardDue.id)} />}
         {counter}
         <TypedItemView
           key={`${state.station}-${state.item}`}

@@ -63,6 +63,8 @@ function LessonRun({
   onFinish,
   initialOpen,
   onProgress,
+  unit0Shown,
+  onUnit0Show,
 }: {
   lesson: Lesson;
   priorAttempts: number;
@@ -73,6 +75,9 @@ function LessonRun({
   initialOpen?: OpenSession;
   /** N-006: يُنادى عند كل تقدّم داخل الحصة لحفظ اللقطة */
   onProgress: (open: OpenSession) => void;
+  /** N-049 (D233): بطاقات الوحدة صفر المعروضة + حفظ العرض الدائم */
+  unit0Shown: readonly string[];
+  onUnit0Show: (id: string) => void;
 }) {
   const plan = useMemo(() => planLessonStations(lesson, runtimeWordsForLesson(lesson), ALL_GRAMMAR_RULES, ALL_STORY, ALL_SCRIPTS), [lesson]);
   /** §6 + قانون الجبهة: Redemittel ضمن سياق الدرس — مما ظهر حتى درس الحصة فقط */
@@ -155,6 +160,8 @@ function LessonRun({
             data={plan.practice}
             redemittel={redemittel}
             onDone={() => mark("practice")}
+            unit0Shown={unit0Shown}
+            onUnit0Show={onUnit0Show}
             initial={initialOpen?.pos.practice}
             onProgress={(st, i) => {
               snap.current.pos.practice = { station: st, item: i };
@@ -416,6 +423,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           onFinish={onFinish}
           initialOpen={openSessionFor(state.progress, session.lesson.id)}
           onProgress={onProgress}
+          unit0Shown={state.profile.unit0Shown}
+          onUnit0Show={(id) => {
+            if (!stateRef.current!.profile.unit0Shown.includes(id))
+              commit({ ...stateRef.current!, profile: { ...stateRef.current!.profile, unit0Shown: [...stateRef.current!.profile.unit0Shown, id] } });
+          }}
         />
       ) : current ? (
         <>

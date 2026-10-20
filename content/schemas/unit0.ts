@@ -1,4 +1,4 @@
-// unit0.ts — الوحدة صفر (§9) — 4 بطاقات يوم أول + 8 بطاقات «عند أول استخدام فعلي» (Just-In-Time)
+// unit0.ts — الوحدة صفر (§9) — 4 بطاقات يوم أول + 9 بطاقات «عند أول استخدام فعلي» (Just-In-Time)
 import { z } from "zod";
 import { ArText, DeText, SchemaVersioned, Slug } from "./common.js";
 
@@ -13,13 +13,14 @@ export const Unit0Trigger = z.enum([
   "first-palace", // أول فتح لقصر الذاكرة
   "first-mastery-board", // أول ظهور للوحة الإتقان
   "first-gate-pass", // أول بوابة عبور ناجحة
+  "first-special-char", // N-049 (D233): أول بند كتابة فيه حرف ألماني خاص
 ]);
 export type Unit0Trigger = z.infer<typeof Unit0Trigger>;
 
 export const Unit0Card = z.object({
   id: Slug,
   trigger: Unit0Trigger,
-  order: z.number().int().min(1).max(12),
+  order: z.number().int().min(1).max(13), // N-049 (D233): البطاقة 13 (تُرفع عمداً مع كل بطاقة جديدة)
   title: z.object({ de: DeText.optional(), ar: ArText }),
   body: z.object({
     de: DeText.optional(),
@@ -30,7 +31,7 @@ export const Unit0Card = z.object({
 });
 
 export const Unit0Deck = SchemaVersioned.extend({
-  cards: z.array(Unit0Card).length(12),
+  cards: z.array(Unit0Card).length(13),
 })
   .refine((d) => d.cards.filter((c) => c.trigger === "day-one").length === 4, {
     message: "الوحدة صفر يجب أن تحوي 4 بطاقات يوم أول بالضبط (§9)",
