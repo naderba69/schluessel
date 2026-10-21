@@ -1,6 +1,6 @@
 // src/App.tsx — القشرة: أول تشغيل → مسار الدروس + حصة الدرس الحالي + بوابة Quiz + حفظ التقدّم (S0.6/S0.7/S0.8 + M1 + D117)
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { LearnerState, Lesson, OpenSession, Unit0Card } from "./../content/schemas/index.js";
+import type { LearnerState, OpenSession, Unit0Card } from "./../content/schemas/index.js";
 import { GenderBadge } from "./components/GenderBadge.js";
 import { FirstRun } from "./components/FirstRun.js";
 import { LessonSession } from "./components/LessonSession.js";
