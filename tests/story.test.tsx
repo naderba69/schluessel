@@ -3,7 +3,12 @@ import { describe, it, expect } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import { join } from "node:path";
 import { CharacterId } from "../content/schemas/index.js";
-import { ALL_LESSONS, ALL_STORY, ALL_GRAMMAR_RULES, ALL_WORDS } from "../src/lesson-packs.js";
+import { loadAllLessons, loadStoryBooks, loadAllGrammarRules, loadAllWords } from "../src/lesson-packs.js";
+const ALL_LESSONS = await loadAllLessons();
+const ALL_STORY = await loadStoryBooks();
+const ALL_GRAMMAR_RULES = await loadAllGrammarRules();
+const ALL_WORDS = await loadAllWords();
+
 import { planLessonStations } from "../src/lib/lesson-runner.js";
 import { CHARACTER_NAME_AR, storyLineFor, storySoFar } from "../src/lib/story.js";
 import { storyDrift, buildStory } from "../tools/dev/story-sentences.js";

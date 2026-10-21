@@ -7,7 +7,10 @@ import {
   networkReviewFlow,
   toNode,
 } from "../src/lib/vocab-network.js";
-import { firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLessonWords = __FIRST.direct;
+
 import { loadUnit0Deck } from "../src/lib/unit0.js";
 
 describe("E14 — الشبكة الدلالية: كل كلمة بروابطها", () => {

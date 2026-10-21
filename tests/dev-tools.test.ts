@@ -10,7 +10,7 @@ const ROOT = join(__dirname, "..");
 
 describe("tools/dev — N-104: أدوات الفحص لا تضيع مع الصندوق", () => {
   it("أدوات tools/dev موجودة ومذكورة في README · .dev-cache في .gitignore", () => {
-    const tools = ["fetch-official.sh", "check-lesson.ts", "speech-rate.py", "owner-review.py", "docs-sync.py", "notes.py", "gate.ts", "content-diff.ts", "hooks/pre-push", "lexicon-sync.py", "check-duden-links.py", "listening-sample.py", "bootstrap.sh"];
+    const tools = ["fetch-official.sh", "check-lesson.ts", "speech-rate.py", "owner-review.py", "docs-sync.py", "notes.py", "gate.ts", "content-diff.ts", "hooks/pre-push", "lexicon-sync.py", "check-duden-links.py", "listening-sample.py", "bootstrap.sh", "content-index.py", "build-phrase-bank.ts"];
     for (const f of [...tools, "README.md"]) expect(existsSync(join(ROOT, "tools/dev", f)), f).toBe(true);
     const readme = readFileSync(join(ROOT, "tools/dev/README.md"), "utf8");
     for (const f of tools) expect(readme).toContain(f);
@@ -99,6 +99,12 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
     const pkg = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as { scripts: Record<string, string> };
     expect(pkg.scripts.bootstrap).toBe("bash tools/dev/bootstrap.sh");
   }, 60_000); // D216: مهلة صريحة كسائر اختبارات العمليات — الخادم البطيء كان يوقّت الـ5s الافتراضية (CI فشل 784/785)
+  it("D242 (N-050): content-index.py --check + build-phrase-bank.ts --check متزامنان — الفهرس والبنك من المحتوى الحي", () => {
+    const idx = execFileSync("python3", ["tools/dev/content-index.py", "--check"], { cwd: ROOT, encoding: "utf8", timeout: 60_000 });
+    expect(idx).toMatch(/محدَّث/);
+    const bank = execFileSync("npx", ["tsx", "tools/dev/build-phrase-bank.ts", "--check"], { cwd: ROOT, encoding: "utf8", timeout: 120_000 });
+    expect(bank).toMatch(/محدَّث/);
+  }, 180_000);
   it("gate.ts --quick --json: كل خطوة لها معرّف وملخّص ورقم · التقرير بثلاثة أسطر", () => {
     // D235: DUDEN_LINKS=skip — vitest يختبر التوصيل لا الشبكة (الفحص الحقيقي خطوة البوابة وحدها) · والفشل يرفق مخرج البوابة المتداخلة
     let out: string;

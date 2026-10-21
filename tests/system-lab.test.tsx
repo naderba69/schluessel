@@ -11,10 +11,13 @@ import {
   SettingsScreen,
 } from "../src/components/SystemLab.js";
 import { BLAME_WORDS } from "../src/lib/warmth-engine.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+
+const FIRST_WORDS = (await loadFirstSession()).direct;
 
 describe("الصدفة — لوحة النظام بست شاشات", () => {
   it("التبويبات الستة ظاهرة (E17–E22)", () => {
-    const html = renderToStaticMarkup(<SystemLab />);
+    const html = renderToStaticMarkup(<SystemLab words={FIRST_WORDS} />);
     expect(html).toContain('data-testid="system-lab"');
     for (const t of ["gate", "progress", "adapt", "play", "data", "settings"]) {
       expect(html).toContain(`stab-${t}`);
@@ -66,7 +69,7 @@ describe("E19 — شاشة التكيّف", () => {
 
 describe("E20 — شاشة اللعب", () => {
   it("القواعد بلا ضغط + الكلمة من مفرداتي", () => {
-    const html = renderToStaticMarkup(<PlayScreen />);
+    const html = renderToStaticMarkup(<PlayScreen words={FIRST_WORDS} />);
     expect(html).toContain("بلا مؤقت");
     expect(html).toContain("من مفرداتك المدروسة أنت");
     for (const w of ["أسرع", "سريع", "عاجل"]) expect(html).not.toContain(w);

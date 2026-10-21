@@ -19,15 +19,13 @@ import type { Station } from "./lib/lesson-engine.js";
 import { cardsForEvent, loadUnit0Deck } from "./lib/unit0.js";
 import { eveningReport, tomorrowPreview, muellerMessage } from "./lib/warmth-engine.js";
 import {
-  firstLesson,
-  firstLessonWords,
-  runtimeWordsForLesson,
-  ALL_LESSONS,
-  ALL_GRAMMAR_RULES,
-  ALL_STORY,
-  ALL_SCRIPTS,
-  PHRASE_BANK,
+  PATH,
+  LESSON_INDEX,
   LESSON_ORDER,
+  indexEntry,
+  loadSessionBundle,
+  loadFirstSession,
+  type SessionBundle,
 } from "./lesson-packs.js";
 import { phrasesAvailable } from "./lib/phrase-bank.js";
 import { currentLessonId, lessonAfter, openSessionFor, quizAttempts, reconcileState, recordQuizAttempt, setOpenSession } from "./lib/lesson-path.js";
@@ -44,7 +42,7 @@ const STATUS_LABEL: Record<string, string> = {
 };
 
 const MAIN_STYLE = { fontFamily: "sans-serif", padding: 24, maxWidth: 720, margin: "0 auto" } as const;
-const LESSON_BY_ID = new Map(ALL_LESSONS.map((l) => [l.id, l]));
+const INDEX_IDS = new Set(LESSON_ORDER);
 
 /** تاريخ اليوم بتوقيت الجهاز (لا UTC — في تونس بعد منتصف الليل يختلف اليوم) */
 export function localDay(d = new Date()): string {
@@ -56,7 +54,7 @@ const errText = (e: unknown) => (e instanceof Error ? e.message : String(e));
 
 /** حصة درس واحد (D29: 120 دقيقة متصلة) — الدرس ثابت طوال الحصة ولو فُتح التالي بالنجاح في وسطها */
 function LessonRun({
-  lesson,
+  bundle,
   priorAttempts,
   hasNext,
   onAttempt,
@@ -66,7 +64,7 @@ function LessonRun({
   unit0Shown,
   onUnit0Show,
 }: {
-  lesson: Lesson;
+  bundle: SessionBundle;
   priorAttempts: number;
   hasNext: boolean;
   onAttempt: (o: QuizOutcome) => void;
@@ -79,9 +77,10 @@ function LessonRun({
   unit0Shown: readonly string[];
   onUnit0Show: (id: string) => void;
 }) {
-  const plan = useMemo(() => planLessonStations(lesson, runtimeWordsForLesson(lesson), ALL_GRAMMAR_RULES, ALL_STORY, ALL_SCRIPTS), [lesson]);
+  const { lesson } = bundle;
+  const plan = useMemo(() => planLessonStations(lesson, bundle.words, bundle.rules, bundle.story, bundle.scripts), [bundle]);
   /** §6 + قانون الجبهة: Redemittel ضمن سياق الدرس — مما ظهر حتى درس الحصة فقط */
-  const redemittel = useMemo(() => phrasesAvailable(PHRASE_BANK, LESSON_ORDER, lesson.id).slice(0, 6), [lesson.id]);
+  const redemittel = useMemo(() => phrasesAvailable(bundle.bank, LESSON_ORDER, lesson.id).slice(0, 6), [bundle]);
   const [done, setDone] = useState<Partial<Record<Station, boolean>>>(() => ({
     recall: plan.recall.length === 0 || initialOpen?.done.includes("recall") === true,
     learn: (plan.learn.length === 0 && plan.rules.length === 0) || initialOpen?.done.includes("learn") === true,
@@ -216,7 +215,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [onboarding, setOnboarding] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
-  const [session, setSession] = useState<{ lesson: Lesson; priorAttempts: number } | null>(null);
+  const [session, setSession] = useState<{ lessonId: string; bundle: SessionBundle | null; priorAttempts: number } | null>(null);
+  const openToken = useRef(0); // N-050: حارس تسابق فتح الحصص — آخر طلب وحده يُعتمد
+  /** حزمة الدرس الأول (الشاشة الأولى والمخابر) — تُحمَّل عند الحاجة فقط */
+  const [firstBundle, setFirstBundle] = useState<SessionBundle | null>(null);
+  const [firstError, setFirstError] = useState<string | null>(null);
   const sessionStart = useRef<number>(0); // N-007: بداية الحصة لقياس مدتها عند النهاية
   const [finishedNote, setFinishedNote] = useState<string | null>(null);
   const [labOpen, setLabOpen] = useState(false);
@@ -229,7 +232,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     store.load().then(
       (s) => {
         if (!alive) return;
-        setState(s ? reconcileState(s, ALL_LESSONS) : null);
+        setState(s ? reconcileState(s, PATH) : null);
         setBoot({ phase: "ready" });
       },
       (e) => {
@@ -240,6 +243,25 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       alive = false;
     };
   }, [store]);
+
+  // N-050: حزمة الدرس الأول عند الحاجة (الشاشة الأولى أو المخابر) — لا مع الغلاف
+  useEffect(() => {
+    // العائد بحالة محفوظة لا يحتاج الدرس الأول — يُحمَّل له وحده عند فتح مختبر
+    const needFirst = (boot.phase === "ready" && (!state || onboarding)) || labOpen || systemOpen;
+    if (!needFirst || firstBundle || firstError) return;
+    let alive = true;
+    void loadFirstSession().then(
+      (b) => {
+        if (alive) setFirstBundle(b);
+      },
+      (e) => {
+        if (alive) setFirstError(errText(e));
+      },
+    );
+    return () => {
+      alive = false;
+    };
+  }, [boot.phase, state, onboarding, labOpen, systemOpen, firstBundle, firstError]);
 
   /** كل تغيير في الحالة يُحفظ فوراً — والفشل يُعلن (لا يُبلع) */
   const commit = (next: LearnerState) => {
@@ -309,30 +331,56 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   }
 
   if (!state || onboarding) {
+    if (firstError) {
+      return (
+        <main style={MAIN_STYLE}>
+          <p role="alert">تعذّر تجهيز درسك الأول ({firstError}) — تحقق من الاتصال وأعد تحميل الصفحة.</p>
+        </main>
+      );
+    }
+    if (!firstBundle) {
+      return (
+        <main style={MAIN_STYLE}>
+          <p data-testid="first-loading">جارٍ تجهيز درسك الأول…</p>
+        </main>
+      );
+    }
     return (
       <main style={MAIN_STYLE}>
         <FirstRun
           onComplete={(s) => {
             setOnboarding(true);
-            commit(reconcileState(s, ALL_LESSONS));
+            commit(reconcileState(s, PATH));
           }}
           onFinish={() => setOnboarding(false)}
-          firstLesson={firstLesson}
-          firstLessonWords={firstLessonWords}
+          firstLesson={firstBundle.lesson}
+          firstLessonWords={firstBundle.direct}
         />
       </main>
     );
   }
 
-  const currentId = currentLessonId(state.progress, ALL_LESSONS);
-  const current = currentId ? LESSON_BY_ID.get(currentId) ?? null : null;
-  const completedCount = state.progress.completedLessons.filter((id) => LESSON_BY_ID.has(id)).length;
+  const currentId = currentLessonId(state.progress, PATH);
+  const current = currentId ? indexEntry(currentId) : null;
+  const completedCount = state.progress.completedLessons.filter((id) => INDEX_IDS.has(id)).length;
 
   const openSession = () => {
-    if (!current) return;
+    if (!currentId) return;
+    const id = currentId;
+    const t = ++openToken.current;
     setFinishedNote(null);
     sessionStart.current = Date.now();
-    setSession({ lesson: current, priorAttempts: quizAttempts(state.progress, current.id) });
+    setSession({ lessonId: id, bundle: null, priorAttempts: quizAttempts(state.progress, id) });
+    void loadSessionBundle(id).then(
+      (bundle) => {
+        if (openToken.current === t) setSession((s) => (s && s.lessonId === id ? { ...s, bundle } : s));
+      },
+      (e) => {
+        if (openToken.current !== t) return;
+        setSession(null);
+        setFinishedNote(`تعذّر فتح حصة ${id} (${errText(e)}) — تحقق من الاتصال وأعد المحاولة.`);
+      },
+    );
   };
 
   // الوحدة صفر JIT (§9): بطاقة عند أول استخدام فعلي — لا دفعة واحدة (قانون 23)
@@ -354,7 +402,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     const s = stateRef.current;
     if (!s) return;
     try {
-      commit(recordQuizAttempt(s, o, ALL_LESSONS, localDay(), LESSON_BY_ID.get(o.lessonId)?.zusammenfassung.srsBundleWordIds ?? [])); // N-005 (D227)
+      commit(recordQuizAttempt(s, o, PATH, localDay(), session?.bundle?.lesson.zusammenfassung.srsBundleWordIds ?? [])); // N-005 (D227)
     } catch (e) {
       setSaveError(errText(e)); // قفل المسار لا يُتجاوز بصمت — يُعلن
     }
@@ -362,7 +410,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
 
   const onProgress = (open: OpenSession) => {
     const s = stateRef.current;
-    if (!s || !session || open.lessonId !== session.lesson.id) return;
+    if (!s || !session || open.lessonId !== session.lessonId) return;
     try {
       commit({ ...s, progress: setOpenSession(s.progress, open) });
     } catch (e) {
@@ -372,18 +420,18 @@ export function App({ store: injected }: { store?: LearnerStore }) {
 
   const onFinish = (last: QuizOutcome | null) => {
     if (!session) return;
-    const id = session.lesson.id;
+    const id = session.lessonId;
     // N-007: سجل الجلسة اليومي — المدة من بداية الحصة (دقيقة على الأقل)، والجديد = كلمات الدرس
     const s = stateRef.current;
     if (s) {
       const minutes = Math.max(1, Math.round((Date.now() - sessionStart.current) / 60000));
       try {
-        commit({ ...s, sessions: recordSession(s.sessions, { date: localDay(), durationMinutes: minutes, wordsNew: session.lesson.praesentation.wordIds.length }) });
+        commit({ ...s, sessions: recordSession(s.sessions, { date: localDay(), durationMinutes: minutes, wordsNew: session.bundle?.lesson.praesentation.wordIds.length ?? 0 }) });
       } catch (e) {
         setSaveError(errText(e));
       }
     }
-    const next = lessonAfter(id, ALL_LESSONS);
+    const next = lessonAfter(id, PATH);
     setFinishedNote(
       last?.passed
         ? `أنهيت حصة ${id} ونجحت (${last.percent}%) ✓ — ${next ? `فُتح الدرس التالي: ${next}` : "أكملت كل ما نُشر حتى الآن"}.`
@@ -396,7 +444,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     <main style={MAIN_STYLE}>
       <h1>أهلاً {state.profile.name} — رحلتك بدأت</h1>
       <p data-testid="post-first-run">
-        أكملت {completedCount} من {ALL_LESSONS.length} درساً منشوراً
+        أكملت {completedCount} من {LESSON_INDEX.length} درساً منشوراً
         {current ? ` · الدرس الحالي: ${current.id}` : " · أكملت كل ما نُشر حتى الآن"}
       </p>
       {!store.persistent && (
@@ -414,14 +462,15 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       <h2>حصة اليوم (120 دقيقة متصلة — D29)</h2>
       {jitCard && <JitCardOverlay card={jitCard} onDismiss={dismissJit} />}
       {session ? (
+        session.bundle ? (
         <LessonRun
-          key={`${session.lesson.id}-${session.priorAttempts}`}
-          lesson={session.lesson}
+          key={`${session.lessonId}-${session.priorAttempts}`}
+          bundle={session.bundle}
           priorAttempts={session.priorAttempts}
-          hasNext={lessonAfter(session.lesson.id, ALL_LESSONS) !== null}
+          hasNext={lessonAfter(session.lessonId, PATH) !== null}
           onAttempt={onAttempt}
           onFinish={onFinish}
-          initialOpen={openSessionFor(state.progress, session.lesson.id)}
+          initialOpen={openSessionFor(state.progress, session.lessonId)}
           onProgress={onProgress}
           unit0Shown={state.profile.unit0Shown}
           onUnit0Show={(id) => {
@@ -429,10 +478,13 @@ export function App({ store: injected }: { store?: LearnerStore }) {
               commit({ ...stateRef.current!, profile: { ...stateRef.current!.profile, unit0Shown: [...stateRef.current!.profile.unit0Shown, id] } });
           }}
         />
+        ) : (
+          <p data-testid="session-loading">جارٍ فتح حصة {session.lessonId}…</p>
+        )
       ) : current ? (
         <>
           <p data-testid="current-lesson" data-lesson-id={current.id}>
-            <span dir="ltr">{current.id}</span> — {current.ziel.ar}
+            <span dir="ltr">{current.id}</span> — {current.zielAr}
           </p>
           <button data-testid="start-session" onClick={startSession}>
             ▶ ابدأ الحصة
@@ -444,7 +496,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
 
       <h2>مختبر المهارات (M2 — E09–E16)</h2>
       {labOpen ? (
-        <SkillsLab currentLessonId={currentId} />
+        firstBundle ? (
+          <SkillsLab currentLessonId={currentId} words={firstBundle.direct} />
+        ) : (
+          <p data-testid="lab-loading">جارٍ تجهيز المختبر…</p>
+        )
       ) : (
         <button data-testid="open-skills-lab" onClick={() => setLabOpen(true)}>
           🧪 افتح مختبر المهارات
@@ -453,7 +509,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
 
       <h2>لوحة النظام (M3)</h2>
       {systemOpen ? (
-        <SystemLab />
+        firstBundle ? (
+          <SystemLab words={firstBundle.direct} />
+        ) : (
+          <p data-testid="lab-loading">جارٍ تجهيز اللوحة…</p>
+        )
       ) : (
         <button data-testid="open-system-lab" onClick={() => setSystemOpen(true)}>
           🛠️ افتح لوحة النظام
@@ -462,11 +522,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
 
       <h2>مسارك</h2>
       <ul data-testid="path-list">
-        {ALL_LESSONS.map((l) => {
+        {LESSON_INDEX.map((l) => {
           const status = lessonStatus(l.id, state.progress);
           return (
             <li key={l.id} data-status={status} data-lesson-id={l.id}>
-              <span dir="ltr">{l.id}</span> — {l.ziel.ar} — {STATUS_LABEL[status]}
+              <span dir="ltr">{l.id}</span> — {l.zielAr} — {STATUS_LABEL[status]}
             </li>
           );
         })}

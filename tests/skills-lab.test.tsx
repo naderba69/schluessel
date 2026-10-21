@@ -14,11 +14,14 @@ import {
   DEMO_TEXT,
 } from "../src/components/SkillsLab.js";
 import { BLAME_WORDS } from "../src/lib/warmth-engine.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+
+const FIRST_WORDS = (await loadFirstSession()).direct;
 import { A1_RULES } from "../src/lib/grammar-discovery.js";
 
 describe("الصدفة — مختبر المهارات بثماني محطات", () => {
   it("التبويبات الثمانية كلها ظاهرة (E09–E16)", () => {
-    const html = renderToStaticMarkup(<SkillsLab />);
+    const html = renderToStaticMarkup(<SkillsLab words={FIRST_WORDS} />);
     expect(html).toContain('data-testid="skills-lab"');
     for (const t of ["hoeren", "sprechen", "lesen", "schreiben", "grammatik", "netzwerk", "aufgaben", "kultur"]) {
       expect(html).toContain(`tab-${t}`);
@@ -64,7 +67,7 @@ describe("E11 — شاشة القراءة: الترجمة مقفلة قبل ال
 
 describe("E12 — شاشة الكتابة", () => {
   it("جملة اليوم + اليوميات + التصحيح يشرح «لماذا» — بلا لوم", () => {
-    const html = renderToStaticMarkup(<WritingLab initialText="Ich komme von Tunesien." />);
+    const html = renderToStaticMarkup(<WritingLab initialText="Ich komme von Tunesien." words={FIRST_WORDS} />);
     expect(html).toContain("Heute:");
     expect(html).toContain("Mein Tag");
     expect(html).toContain("Ich komme aus Tunesien.");
@@ -115,7 +118,7 @@ describe("E13 — شاشة القواعد: القفل قبل المحاولة", 
 
 describe("E14 — شاشة الشبكة", () => {
   it("العارات والكبائش في الشاشة + القصر بغرفه", () => {
-    const html = renderToStaticMarkup(<NetworkLab />);
+    const html = renderToStaticMarkup(<NetworkLab words={FIRST_WORDS} />);
     expect(html).toContain('data-testid="kol-kommen"');
     expect(html).toContain("aus Tunesien kommen");
     expect(html).toContain("المدخل");

@@ -6,7 +6,9 @@ import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { AudioManifest } from "../content/schemas/index.js";
-import { ALL_WORDS } from "../src/lesson-packs.js";
+import { loadAllWords } from "../src/lesson-packs.js";
+const ALL_WORDS = await loadAllWords();
+
 import type { Word } from "../content/schemas/index.js";
 
 const manifest = AudioManifest.parse(

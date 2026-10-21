@@ -10,7 +10,11 @@ import { ruleFromShufra, startDiscovery, viewExamples, submitInference, revealRu
 import { hasBlame } from "../src/lib/warmth-engine.js";
 import { LearnStation, PracticeStation, RuleDiscoveryView } from "../src/components/LessonContent.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
-import { firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const firstLessonWords = __FIRST.direct;
+
 
 const WHY = "لأن الفعل مع ich ينتهي بـ ‑e";
 const typed = (type: Parameters<typeof toTypedItem>[0], raw: unknown) => {

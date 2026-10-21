@@ -10,7 +10,11 @@ import {
 } from "../src/components/LessonContent.js";
 import { LessonSession } from "../src/components/LessonSession.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
-import { firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const firstLessonWords = __FIRST.direct;
+
 import { loadUnit0Deck, jitCards } from "../src/lib/unit0.js";
 import { eveningReport, tomorrowPreview, muellerMessage, BLAME_WORDS } from "../src/lib/warmth-engine.js";
 

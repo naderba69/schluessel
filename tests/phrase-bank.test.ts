@@ -5,11 +5,18 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { PracticeStation } from "../src/components/LessonContent.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
-import { PHRASE_BANK, LESSON_ORDER, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { LESSON_ORDER, loadPhraseBank, loadAllLessons, loadAllWords, loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const PHRASE_BANK = await loadPhraseBank();
+const ALL_LESSONS = await loadAllLessons();
+const ALL_WORDS = await loadAllWords();
+const firstLessonWords = __FIRST.direct;
+
 import {
   cleanPhrase, classifyPhrase, harvestPhrases, phrasesAvailable, functionCoverage, SURVIVAL_FUNCTIONS, type Phrase,
 } from "../src/lib/phrase-bank.js";
-import { ALL_LESSONS, ALL_WORDS } from "../src/lesson-packs.js";
+
 import { vocabularyReport } from "../tools/phrase-harvester.js";
 import { loadLessons, loadWords } from "../tools/lib/content-disk.js";
 

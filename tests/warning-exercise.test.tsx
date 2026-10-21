@@ -7,7 +7,11 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { WarningExercise } from "../content/schemas/index.js";
 import { CloseStation, WarningExerciseView } from "../src/components/LessonContent.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
-import { firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const firstLessonWords = __FIRST.direct;
+
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
 

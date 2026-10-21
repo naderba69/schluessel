@@ -15,7 +15,7 @@ import {
   auditPalette,
   type ThemePrefs,
 } from "../lib/ui-accessibility.js";
-import { firstLessonWords } from "../lesson-packs.js";
+import type { Word } from "../../content/schemas/index.js";
 
 /* ══════════ E17 — البوابات ══════════ */
 export function GateScreen({ week = 6 }: { week?: number }) {
@@ -121,8 +121,8 @@ export function AdaptationScreen() {
 }
 
 /* ══════════ E20 — الألعاب ══════════ */
-export function PlayScreen() {
-  const studied = firstLessonWords.map((w) => w.de.toLowerCase());
+export function PlayScreen({ words }: { words: Word[] }) {
+  const studied = words.map((w) => w.de.toLowerCase());
   const wordle = makeWordle(studied);
   const sample = guessFeedback(wordle.word, wordle.word);
   const anagram = makeAnagram(studied);
@@ -228,7 +228,7 @@ const TABS = [
   { id: "settings", label: "⚙️ إعدادات" },
 ] as const;
 
-export function SystemLab() {
+export function SystemLab({ words }: { words: Word[] }) {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("gate");
   return (
     <div data-testid="system-lab">
@@ -243,7 +243,7 @@ export function SystemLab() {
       {tab === "gate" && <GateScreen />}
       {tab === "progress" && <ProgressScreen />}
       {tab === "adapt" && <AdaptationScreen />}
-      {tab === "play" && <PlayScreen />}
+      {tab === "play" && <PlayScreen words={words} />}
       {tab === "data" && <DataScreen />}
       {tab === "settings" && <SettingsScreen />}
     </div>

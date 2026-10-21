@@ -1,10 +1,27 @@
 // lesson-runner.test.ts — مُشغِّل الدرس: الدرس الحقيقي → شاشات الحصة الأربع (F121 + D3)
 import { describe, it, expect } from "vitest";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
-import { firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession, loadAllLessons, loadScriptsForLesson } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const firstLessonWords = __FIRST.direct;
+
 import type { Lesson } from "../content/schemas/index.js";
 
 describe("مُشغِّل الدرس — الدرس الحقيقي a1-u1-d1", () => {
+  it("N-050: كل صوت استماع في كل درس يُحلّ ضمن سكربتات الحصة الكسولة (بادئة الدرس + ملفات المستوى المشتركة)", async () => {
+    for (const l of await loadAllLessons()) {
+      const scripts = await loadScriptsForLesson(l.id, l.level);
+      const lines = new Set(scripts.flatMap((s) => s.lines.map((x) => x.id)));
+      for (const st of l.uebung.stations) {
+        if (st.type !== "listening") continue;
+        for (const item of st.items) {
+          const a = (item as { audioId: string }).audioId;
+          if (!a.startsWith("word-")) expect(lines.has(a), `${l.id}/${a}`).toBe(true);
+        }
+      }
+    }
+  });
   it("أربع محطات مبنية: استرجاع ← جديد ← تدريب ← خلاصة", () => {
     const plan = planLessonStations(firstLesson, firstLessonWords);
     expect(plan.lessonId).toBe("a1-u1-d1");

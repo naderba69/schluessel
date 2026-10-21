@@ -5,7 +5,11 @@ import { QuizStation } from "../src/components/QuizStation.js";
 import { LessonSession } from "../src/components/LessonSession.js";
 import { FirstLessonScreen } from "../src/components/FirstRun.js";
 import { GERMAN_KEYS, UmlautKeys } from "../src/components/LessonContent.js";
-import { firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const firstLessonWords = __FIRST.direct;
+
 
 const noop = () => {};
 

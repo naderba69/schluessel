@@ -52,10 +52,12 @@ const SPEECH_RATE_MAX_WPM = 200;
 const SPEECH_RATE_MIN_WORDS = 3;
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "audio-script" | "story" | "exam-format" | "wordlist" | "plan" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "audio-script" | "story" | "exam-format" | "wordlist" | "plan" | "derived" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
+  // N-050 (D242): ملفات مولَّدة (الفهرس الخفيف + بنك العبارات) — حداثتها يثبتها --check في dev-tools.test.ts
+  if (p === "manifests/lesson-index.json" || p === "manifests/phrase-bank.json") return "derived";
   if (p.startsWith("arsenal/curriculum-reference")) return "curriculum";
   if (p.startsWith("arsenal/")) return "arsenal";
   if (p.startsWith("words/")) return "word";
@@ -299,6 +301,10 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         }
         case "story": {
           storyBooks.push({ path: entry.path, book: StoryBook.parse(entry.data) }); // D193
+          break;
+        }
+        case "derived": {
+          // مولَّد آلياً — يُقبل كما هو (الشكل يتحقق عند التحميل في lesson-packs.ts)
           break;
         }
         default:

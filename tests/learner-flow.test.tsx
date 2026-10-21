@@ -12,7 +12,10 @@ import { dexieLearnerStore, type LearnerStore } from "../src/stores/learner-stor
 import { setAudioPlayer } from "../src/lib/audio-player.js";
 import { createInitialState } from "../src/lib/state-factory.js";
 import { reconcileState } from "../src/lib/lesson-path.js";
-import { ALL_GRAMMAR_RULES, ALL_LESSONS, LESSON_ORDER } from "../src/lesson-packs.js";
+import { LESSON_ORDER, loadAllGrammarRules, loadAllLessons } from "../src/lesson-packs.js";
+const ALL_GRAMMAR_RULES = await loadAllGrammarRules();
+const ALL_LESSONS = await loadAllLessons();
+
 import { visibleText } from "../src/lib/struck-text.js";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
@@ -63,7 +66,7 @@ const station = () => q("lesson-session")?.getAttribute("data-station");
 
 async function boot(store: LearnerStore) {
   await act(async () => root.render(<App store={store} />));
-  await waitFor(() => !q("boot-loading"), "انتهاء التحميل");
+  await waitFor(() => !q("boot-loading") && !q("first-loading"), "انتهاء التحميل");
 }
 
 /** محطة تلو محطة: «التالي» معطَّل قبل الإكمال ثم يعمل — والاستراحة بين المحطات */
@@ -151,7 +154,7 @@ const wrongOf = (it: QuizItem) => (it.choices ? it.choices.find((c) => c !== it.
 async function startSession() {
   await click(q("start-session"), "ابدأ الحصة");
   if (q("jit-overlay")) await click(q("jit-dismiss"), "فهمت");
-  expect(q("lesson-session")).not.toBeNull();
+  await waitFor(() => !!q("lesson-session"), "فتح الحصة");
 }
 
 async function throughStations(id: string) {

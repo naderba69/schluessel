@@ -5,7 +5,12 @@ import { describe, it, expect } from "vitest";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { NetworkLab } from "../src/components/SkillsLab.js";
-import { ALL_GRAMMAR_RULES, ALL_LESSONS, ALL_WORDS, LESSON_ORDER, runtimeWordsForLesson } from "../src/lesson-packs.js";
+import { LESSON_ORDER, loadAllGrammarRules, loadAllLessons, loadAllWords, runtimeWordsForLesson, loadFirstSession } from "../src/lesson-packs.js";
+const FIRST_WORDS = (await loadFirstSession()).direct;
+const ALL_GRAMMAR_RULES = await loadAllGrammarRules();
+const ALL_LESSONS = await loadAllLessons();
+const ALL_WORDS = await loadAllWords();
+
 import { familyForms, fullForm, planLessonStations } from "../src/lib/lesson-runner.js";
 
 const byId = new Map(ALL_WORDS.map((w) => [w.id, w]));
@@ -22,9 +27,9 @@ describe("D118 — عائلة الكلمة كما يراها المتعلم", ()
     expect(familyForms({ wordFamily: [] }, known)).toEqual([]);
   });
 
-  it("أول درس: wie viel ← «Wie geht's?» (تُدرَّس اليوم) تظهر و viel لا · neu بلا alt · wohnen ← kommen تظهر و Wohnung لا", () => {
+  it("أول درس: wie viel ← «Wie geht's?» (تُدرَّس اليوم) تظهر و viel لا · neu بلا alt · wohnen ← kommen تظهر و Wohnung لا", async () => {
     const l = ALL_LESSONS[0]!;
-    const plan = planLessonStations(l, runtimeWordsForLesson(l), ALL_GRAMMAR_RULES);
+    const plan = planLessonStations(l, await runtimeWordsForLesson(l), ALL_GRAMMAR_RULES);
     const card = (id: string) => plan.learn.find((c) => c.wordId === id)!.explanation;
     expect(card("wie-viel")).toContain("عائلة: Wie geht's?.");
     expect(card("wie-viel")).not.toContain("wie-gehts");
@@ -33,11 +38,11 @@ describe("D118 — عائلة الكلمة كما يراها المتعلم", ()
     expect(card("wohnen")).not.toMatch(/wohnung/i);
   });
 
-  it("كل الدروس: العائلة المعروضة = صيغ ألمانية لكلمات دُرست حتى الدرس بالضبط — لا معرّف ولا كلمة من المستقبل ولا نقص", () => {
+  it("كل الدروس: العائلة المعروضة = صيغ ألمانية لكلمات دُرست حتى الدرس بالضبط — لا معرّف ولا كلمة من المستقبل ولا نقص", async () => {
     let shown = 0;
-    LESSON_ORDER.forEach((id, i) => {
+    for (const [i, id] of LESSON_ORDER.entries()) {
       const l = ALL_LESSONS[i]!;
-      const known = new Map(runtimeWordsForLesson(l).map((w) => [w.id, w]));
+      const known = new Map((await runtimeWordsForLesson(l)).map((w) => [w.id, w]));
       const plan = planLessonStations(l, [...known.values()], ALL_GRAMMAR_RULES);
       for (const card of plan.learn) {
         const w = byId.get(card.wordId)!;
@@ -47,12 +52,12 @@ describe("D118 — عائلة الكلمة كما يراها المتعلم", ()
         else expect(card.explanation, `${id}/${w.id}`).not.toContain("عائلة:");
         shown += allowed.length;
       }
-    });
+    }
     expect(shown).toBeGreaterThan(30); // ليس فراغاً: العائلة تظهر حين تكون مدروسة
   });
 
   it("مختبر المفردات الشبكية بالقاعدة نفسها: «Wie geht's?» لا «wie-gehts» · neu بلا alt", () => {
-    const html = renderToStaticMarkup(createElement(NetworkLab));
+    const html = renderToStaticMarkup(createElement(NetworkLab, { words: FIRST_WORDS }));
     const node = (id: string) => html.match(new RegExp(`<li data-node="${id}"[^>]*>(.*?)</li>`))![1]!;
     expect(node("wie-viel")).toContain("عائلة: Wie geht&#x27;s?");
     expect(node("wie-viel")).not.toContain("wie-gehts");

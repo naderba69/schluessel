@@ -6,7 +6,9 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { DictationItem, spelledLetters, type Lesson } from "../content/schemas/index.js";
 import { checkAttempt, SPELLED_DICTATION_AR, toTypedItem } from "../src/lib/practice-session.js";
 import { PracticeStation } from "../src/components/LessonContent.js";
-import { ALL_LESSONS } from "../src/lesson-packs.js";
+import { loadAllLessons } from "../src/lesson-packs.js";
+const ALL_LESSONS = await loadAllLessons();
+
 
 const item = (speakText: string, a: string, spelled?: true) => ({ audioId: "abc-spell-lena", speakText, a, ...(spelled ? { spelled } : {}), why: "سبب واضح بما يكفي للبند." });
 

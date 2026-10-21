@@ -12,7 +12,10 @@ import {
   advanceQuiz, answerQuizItem, predictScore, quizOutcome, startQuizAttempt, type QuizOutcome,
 } from "../src/lib/quiz-session.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
-import { ALL_GRAMMAR_RULES, ALL_LESSONS, LESSON_ORDER, runtimeWordsForLesson } from "../src/lesson-packs.js";
+import { LESSON_ORDER, loadAllGrammarRules, loadAllLessons, runtimeWordsForLesson } from "../src/lesson-packs.js";
+const ALL_GRAMMAR_RULES = await loadAllGrammarRules();
+const ALL_LESSONS = await loadAllLessons();
+
 
 const PATH: PathLesson[] = [
   { id: "a1-u1-d1", level: "A1", unit: 1 },
@@ -97,14 +100,14 @@ describe("recordQuizAttempt — الفتح بالنجاح وحده (≥75%)", ()
 });
 
 describe("المسار المنشور كله — من a1-u1-d1 إلى آخر درس عبر الواجهة الخالصة نفسها", () => {
-  it(`كل درس يُبنى للحصة، وQuiz كل درس يُجتاز بإجابات النموذج، فيُفتح الذي يليه — حتى آخر درس (${ALL_LESSONS.length})`, () => {
+  it(`كل درس يُبنى للحصة، وQuiz كل درس يُجتاز بإجابات النموذج، فيُفتح الذي يليه — حتى آخر درس (${ALL_LESSONS.length})`, async () => {
     let s = reconcileState(createInitialState("يوسف", new Date(DAY)), ALL_LESSONS);
     const visited: string[] = [];
     for (let guard = 0; guard < ALL_LESSONS.length + 1; guard++) {
       const id = currentLessonId(s.progress, ALL_LESSONS);
       if (!id) break;
       const lesson = ALL_LESSONS.find((l) => l.id === id)!;
-      const plan = planLessonStations(lesson, runtimeWordsForLesson(lesson), ALL_GRAMMAR_RULES);
+      const plan = planLessonStations(lesson, await runtimeWordsForLesson(lesson), ALL_GRAMMAR_RULES);
       expect(plan.lessonId).toBe(id);
       let a = predictScore(startQuizAttempt(lesson, quizAttempts(s.progress, id)), 80);
       for (const it of a.items) a = advanceQuiz(answerQuizItem(a, it.a));

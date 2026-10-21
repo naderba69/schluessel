@@ -15,7 +15,8 @@ import { buildNetwork, memoryPalace, networkReviewFlow } from "../lib/vocab-netw
 import { familyForms } from "../lib/lesson-runner.js";
 import { A1_TASKS, taskFlow, type RealTask } from "../lib/real-tasks.js";
 import { CULTURE_FACTS, songOfTheWeek, factsNeedingWebVerify } from "../lib/culture.js";
-import { LESSON_ORDER, firstLessonWords } from "../lesson-packs.js";
+import { LESSON_ORDER } from "../lesson-packs.js";
+import type { Word } from "../../content/schemas/index.js";
 import { PlayButton } from "./LessonSession.js";
 import { CHARACTER_NAME_AR } from "../lib/story.js";
 import { AudioScript } from "../../content/schemas/index.js";
@@ -122,10 +123,10 @@ export function ReadingLab({ text }: { text: ReadingText }) {
 }
 
 /* ══════════ E12 — الكتابة ══════════ */
-export function WritingLab({ initialText = "" }: { initialText?: string }) {
+export function WritingLab({ initialText = "", words }: { initialText?: string; words: Word[] }) {
   const [text, setText] = useState(initialText);
   const [submitted, setSubmitted] = useState(initialText.length > 0);
-  const sotd = sentenceOfTheDay(firstLessonWords.map((w) => ({ de: w.de, ar: w.ar[0]! })), 0);
+  const sotd = sentenceOfTheDay(words.map((w) => ({ de: w.de, ar: w.ar[0]! })), 0);
   const diary = diaryPrompt("A1");
   const correction = submitted ? correctSentence(text) : null;
   return (
@@ -192,9 +193,9 @@ export function GrammarLab({ ruleId, currentLessonId }: { ruleId?: string; curre
 }
 
 /* ══════════ E14 — المفردات الشبكية ══════════ */
-export function NetworkLab() {
-  const { nodes } = buildNetwork(firstLessonWords);
-  const knownFirst = new Map(firstLessonWords.map((w) => [w.id, w])); // D118: العائلة بصيغتها ومن المدروس وحده
+export function NetworkLab({ words }: { words: Word[] }) {
+  const { nodes } = buildNetwork(words);
+  const knownFirst = new Map(words.map((w) => [w.id, w])); // D118: العائلة بصيغتها ومن المدروس وحده
   const { stations } = memoryPalace(nodes, ["المدخل", "المطبخ", "الغرفة", "الشرفة"]);
   return (
     <section data-testid="network-lab">
@@ -333,7 +334,7 @@ export function AlphabetLab() {
   );
 }
 
-export function SkillsLab({ currentLessonId }: { currentLessonId?: string | null }) {
+export function SkillsLab({ currentLessonId, words }: { currentLessonId?: string | null; words: Word[] }) {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("hoeren");
   return (
     <div data-testid="skills-lab">
@@ -348,9 +349,9 @@ export function SkillsLab({ currentLessonId }: { currentLessonId?: string | null
       {tab === "hoeren" && <ListeningLab />}
       {tab === "sprechen" && <PronunciationLab />}
       {tab === "lesen" && <ReadingLab text={DEMO_TEXT} />}
-      {tab === "schreiben" && <WritingLab />}
+      {tab === "schreiben" && <WritingLab words={words} />}
       {tab === "grammatik" && <GrammarLab currentLessonId={currentLessonId} />}
-      {tab === "netzwerk" && <NetworkLab />}
+      {tab === "netzwerk" && <NetworkLab words={words} />}
       {tab === "aufgaben" && <TasksLab />}
       {tab === "kultur" && <CultureLab />}
       {tab === "alphabet" && <AlphabetLab />}
