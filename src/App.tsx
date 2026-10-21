@@ -553,7 +553,13 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         <p data-testid="rest-day-note">🌿 اليوم الأحد راحة — لا شيء مطلوب منك. زر الجلسة يعمل لمن أراد، بلا لوم.</p>
       )}
       <MapView map={map} />
-      <CoachBlock errors={state.errors} dueCount={dueCount} hasNewContent={!!current} windows={state.profile.coachWindows} />
+      <CoachBlock
+        errors={state.errors}
+        dueCount={dueCount}
+        hasNewContent={!!current}
+        windows={state.profile.coachWindows}
+        words={firstBundle?.direct ?? []}
+      />
       <GoldenBook errors={state.errors} />
       <details data-testid="more-labs">
         <summary>🧪 المخابر والأدوات</summary>

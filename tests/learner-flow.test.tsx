@@ -189,6 +189,9 @@ describe("الرحلة كاملة — أول تشغيل ← درس كامل ← 
     await click(q("first-lesson-start"), "إلى حصة اليوم");
     expect(q("current-lesson")!.getAttribute("data-lesson-id")).toBe("a1-u1-d1");
     await waitFor(async () => (await store.load())?.profile.name === "يوسف", "حفظ الاسم");
+    // N-148 (D252): عبارة اليوم على القائمة (§2.10) — تظهر مع وصول الحزمة
+    await waitFor(() => !!q("coach-phrase"), "عبارة اليوم على القائمة");
+    expect(q("coach-phrase")!.textContent).toContain("Heute:");
 
     await startSession();
     const l = await throughStations("a1-u1-d1");

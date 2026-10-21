@@ -10,6 +10,7 @@ import { recordSession } from "../src/lib/session-log.js";
 import type { ErrorEntry, Word } from "../content/schemas/index.js";
 import { WritingLab } from "../src/components/SkillsLab.js";
 import { SettingsScreen, SystemLab } from "../src/components/SystemLab.js";
+import { CoachBlock } from "../src/components/CoachBlock.js";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
 
@@ -305,6 +306,47 @@ describe("طقس البداية على الشاشة (N-151 · D251)", () => {
     );
     await click(q("stab-settings"));
     expect(q("settings-name-input")).not.toBeNull();
+    await act(async () => r.unmount());
+  });
+});
+
+describe("عبارة اليوم على القائمة (N-148 · D252)", () => {
+  const WORDS = [
+    { de: "Hallo", ar: ["مرحباً"] },
+    { de: "Danke", ar: ["شكراً"] },
+  ] as Word[];
+  async function mountCoach(words: Word[], at: Date) {
+    vi.useFakeTimers();
+    vi.setSystemTime(at);
+    const { createRoot: makeRoot } = await import("react-dom/client");
+    const host = document.createElement("div");
+    container.appendChild(host);
+    const r = makeRoot(host);
+    await act(async () => r.render(<CoachBlock errors={[]} dueCount={0} hasNewContent={false} words={words} />));
+    return r;
+  }
+
+  it("مع الكلمات: العبارة ظاهرة مع زر استماع", async () => {
+    const r = await mountCoach(WORDS, new Date(2026, 0, 1, 7, 0));
+    expect(q("coach-phrase")!.textContent).toContain("Hallo");
+    const play = q("coach-phrase")!.querySelector('[data-testid="play-audio"]')!;
+    expect(play.getAttribute("aria-label")).toContain("عبارة اليوم");
+    await act(async () => r.unmount());
+  });
+
+  it("تدور يومياً على الكلمات", async () => {
+    const r1 = await mountCoach(WORDS, new Date(2026, 0, 1, 7, 0));
+    expect(q("coach-phrase")!.textContent).toContain("Hallo");
+    await act(async () => r1.unmount());
+    const r2 = await mountCoach(WORDS, new Date(2026, 0, 2, 7, 0));
+    expect(q("coach-phrase")!.textContent).toContain("Danke");
+    await act(async () => r2.unmount());
+  });
+
+  it("بلا كلمات (الحزمة لم تصل): لا عبارة — والقائمة لا تنتظر", async () => {
+    const r = await mountCoach([], new Date(2026, 0, 1, 7, 0));
+    expect(q("coach-phrase")).toBeNull();
+    expect(q("coach-block")).not.toBeNull();
     await act(async () => r.unmount());
   });
 });
