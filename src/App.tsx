@@ -13,7 +13,6 @@ import {
 } from "./components/LessonContent.js";
 import { QuizStation } from "./components/QuizStation.js";
 import { BorrowedProvider } from "./components/StruckText.js";
-import { lessonStatus } from "./lib/routes.js";
 import { planLessonStations } from "./lib/lesson-runner.js";
 import type { Station } from "./lib/lesson-engine.js";
 import { cardsForEvent, loadUnit0Deck } from "./lib/unit0.js";
@@ -38,16 +37,11 @@ import { isRestDay } from "./lib/coach-engine.js";
 import { CoachBlock } from "./components/CoachBlock.js";
 import { countDueSrs } from "./lib/review-engine.js";
 import { BRAND } from "./lib/brand.js";
+import { buildProgressMap } from "./lib/progress-engine.js";
+import { MapView } from "./components/MapView.js";
 import { SystemLab } from "./components/SystemLab.js";
 
-const STATUS_LABEL: Record<string, string> = {
-  completed: "✓ مكتمل",
-  available: "● الدرس الحالي",
-  locked: "🔒 مقفل",
-};
-
 const MAIN_STYLE = { fontFamily: "sans-serif", padding: 24, maxWidth: 720, margin: "0 auto" } as const;
-const INDEX_IDS = new Set(LESSON_ORDER);
 
 /** تاريخ اليوم بتوقيت الجهاز (لا UTC — في تونس بعد منتصف الليل يختلف اليوم) */
 export function localDay(d = new Date()): string {
@@ -367,7 +361,15 @@ export function App({ store: injected }: { store?: LearnerStore }) {
 
   const currentId = currentLessonId(state.progress, PATH);
   const current = currentId ? indexEntry(currentId) : null;
-  const completedCount = state.progress.completedLessons.filter((id) => INDEX_IDS.has(id)).length;
+  /** N-149 (D249): الخريطة الهادئة §2.8 — من الفهرس والتقدم الحقيقيين */
+  const map = buildProgressMap({
+    index: LESSON_INDEX,
+    completedIds: state.progress.completedLessons,
+    availableIds: state.progress.availableLessons,
+    currentId,
+    createdAtDay: state.profile.createdAt,
+    todayDay: localDay(),
+  });
   /** N-147 (D247): شاشة اليوم §2.2 — نقاط الأسبوع + المستحق + الذهبية */
   const weekday = new Date().toLocaleDateString("ar", { weekday: "long" });
   const week = weekDots(state.sessions);
@@ -512,6 +514,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       {isRestDay(new Date()) && (
         <p data-testid="rest-day-note">🌿 اليوم الأحد راحة — لا شيء مطلوب منك. زر الجلسة يعمل لمن أراد، بلا لوم.</p>
       )}
+      <MapView map={map} />
       <CoachBlock errors={state.errors} dueCount={dueCount} hasNewContent={!!current} />
       <details data-testid="more-labs">
         <summary>🧪 المخابر والأدوات</summary>
@@ -529,7 +532,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
 
       {systemOpen ? (
         firstBundle ? (
-          <SystemLab words={firstBundle.direct} />
+          <SystemLab words={firstBundle.direct} progress={state.progress} />
         ) : (
           <p data-testid="lab-loading">جارٍ تجهيز اللوحة…</p>
         )
@@ -538,24 +541,6 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           🛠️ افتح لوحة النظام
         </button>
       )}
-
-      </details>
-      <details data-testid="more-path">
-        <summary>🗺️ مسارك الكامل</summary>
-      <p data-testid="post-first-run">
-        أكملت {completedCount} من {LESSON_INDEX.length} درساً منشوراً
-        {current ? ` · الدرس الحالي: ${current.id}` : " · أكملت كل ما نُشر حتى الآن"}
-      </p>
-      <ul data-testid="path-list">
-        {LESSON_INDEX.map((l) => {
-          const status = lessonStatus(l.id, state.progress);
-          return (
-            <li key={l.id} data-status={status} data-lesson-id={l.id}>
-              <span dir="ltr">{l.id}</span> — {l.zielAr} — {STATUS_LABEL[status]}
-            </li>
-          );
-        })}
-      </ul>
 
       </details>
       <details data-testid="more-gender">

@@ -15,7 +15,9 @@ import {
   auditPalette,
   type ThemePrefs,
 } from "../lib/ui-accessibility.js";
-import type { Word } from "../../content/schemas/index.js";
+import type { LearnerProgress, Word } from "../../content/schemas/index.js";
+import { LESSON_INDEX } from "../lesson-packs.js";
+import { lessonStatus } from "../lib/routes.js";
 
 /* ══════════ E17 — البوابات ══════════ */
 export function GateScreen({ week = 6 }: { week?: number }) {
@@ -233,7 +235,40 @@ export function SettingsScreen() {
 }
 
 /* ══════════ الصدفة: لوحة النظام ══════════ */
+const STATUS_LABEL: Record<string, string> = {
+  completed: "✓ مكتمل",
+  available: "● الدرس الحالي",
+  locked: "🔒 مقفل",
+};
+
+/* ══════════ N-149 (D249) — المسار الكامل (انتقل من القائمة اليومية إلى هنا) ══════════ */
+export function PathScreen({ progress }: { progress: LearnerProgress | null }) {
+  if (!progress) return <p data-testid="path-needs-state">افتح اللوحة من التطبيق لرؤية مسارك الكامل.</p>;
+  const done = progress.completedLessons.length;
+  const current = progress.availableLessons.find((id) => !progress.lockedLessons.includes(id)) ?? null;
+  return (
+    <section data-testid="full-path-screen">
+      <h3>🗺️ المسار الكامل</h3>
+      <p data-testid="post-first-run">
+        أكملت {done} من {LESSON_INDEX.length} درساً منشوراً
+        {current ? ` · الدرس الحالي: ${current}` : " · أكملت كل ما نُشر حتى الآن"}
+      </p>
+      <ul data-testid="path-list">
+        {LESSON_INDEX.map((l) => {
+          const status = lessonStatus(l.id, progress);
+          return (
+            <li key={l.id} data-status={status} data-lesson-id={l.id}>
+              <span dir="ltr">{l.id}</span> — {l.zielAr} — {STATUS_LABEL[status]}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
 const TABS = [
+  { id: "path", label: "🗺️ المسار" },
   { id: "gate", label: "🚪 بوابة" },
   { id: "progress", label: "📈 تقدّم" },
   { id: "adapt", label: "🤝 تكيّف" },
@@ -242,7 +277,7 @@ const TABS = [
   { id: "settings", label: "⚙️ إعدادات" },
 ] as const;
 
-export function SystemLab({ words }: { words: Word[] }) {
+export function SystemLab({ words, progress }: { words: Word[]; progress?: LearnerProgress | null }) {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("gate");
   return (
     <div data-testid="system-lab">
@@ -254,6 +289,7 @@ export function SystemLab({ words }: { words: Word[] }) {
           </button>
         ))}
       </nav>
+      {tab === "path" && <PathScreen progress={progress ?? null} />}
       {tab === "gate" && <GateScreen />}
       {tab === "progress" && <ProgressScreen />}
       {tab === "adapt" && <AdaptationScreen />}

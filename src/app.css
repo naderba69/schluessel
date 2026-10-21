@@ -332,6 +332,20 @@ label { display: inline-block; margin: 0.4rem 0; }
 
 /* ═══════ 6 · القائمة والمسار ═══════ */
 [data-testid="brand-header"] { text-align: center; color: var(--muted); font-weight: 700; margin: 0 0 0.25rem; }
+/* ═══════ الخريطة الهادئة §2.8 (N-149 · D249) ═══════ */
+[data-testid="progress-map"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  margin-top: 1rem;
+}
+[data-testid="progress-map"] h2 { margin-top: 0; }
+[data-testid="map-levels"] { list-style: none; padding: 0; }
+[data-testid="map-levels"] li { margin: 0.2rem 0; font-size: 1.05rem; }
+[data-testid="map-unit"] { font-size: 1.1rem; letter-spacing: 1px; }
+[data-testid="map-week"], [data-testid="map-gate"] { color: var(--muted); }
+[data-testid="full-path-screen"] ul { max-height: 40vh; overflow: auto; }
 /* ═══════ المدرب اليومي §2.10 (N-148 · D248) ═══════ */
 [data-testid="coach-block"] {
   background: var(--surface);

@@ -213,6 +213,10 @@ describe("الرحلة كاملة — أول تشغيل ← درس كامل ← 
     await boot(dexieLearnerStore(openDb(name)));
     expect(byText("لنبدأ")).toBeNull();
     expect(q("current-lesson")!.getAttribute("data-lesson-id")).toBe(next);
+    // القائمة الكاملة في لوحة النظام (تبويب المسار — N-149): تُفتح وتُفحص حالات الدروس
+    await click(q("open-system-lab"), "لوحة النظام");
+    await waitFor(() => !!q("stab-path"), "تبويبات اللوحة");
+    await click(q("stab-path"), "تبويب المسار");
     expect(container.querySelector('[data-lesson-id="a1-u1-d1"][data-status="completed"]')).not.toBeNull();
     expect(container.querySelector(`li[data-lesson-id="${next}"][data-status="available"]`)).not.toBeNull();
     expect(container.querySelector(`li[data-lesson-id="${LESSON_ORDER[2]}"][data-status="locked"]`)).not.toBeNull();

@@ -9,7 +9,9 @@ import {
   PlayScreen,
   DataScreen,
   SettingsScreen,
+  PathScreen,
 } from "../src/components/SystemLab.js";
+import { createInitialState } from "../src/lib/state-factory.js";
 import { BLAME_WORDS } from "../src/lib/warmth-engine.js";
 import { loadFirstSession } from "../src/lesson-packs.js";
 
@@ -95,5 +97,28 @@ describe("E22 — شاشة الإعدادات", () => {
     expect(html).not.toContain('data-pass="fail"');
     expect(html).toContain('data-pass="aa"');
     expect(html).toContain("WCAG AA");
+  });
+});
+
+describe("تبويب المسار الكامل (N-149 · D249)", () => {
+  it("يعرض العدّاد والقائمة الـ91 بحالاتها (من التطبيق)", () => {
+    const html = renderToStaticMarkup(<PathScreen progress={createInitialState("س").progress} />);
+    expect(html).toContain('data-testid="path-list"');
+    expect(html).toContain("أكملت 0 من 91 درساً منشوراً");
+    expect(html).toContain("a1-u1-d1");
+    expect(html).toContain("● الدرس الحالي");
+    expect(html).toContain("🔒 مقفل");
+    expect(html.match(/data-lesson-id=/g)!.length).toBe(91);
+  });
+
+  it("بلا حالة: رسالة صريحة لا قائمة فارغة", () => {
+    const html = renderToStaticMarkup(<PathScreen progress={null} />);
+    expect(html).toContain('data-testid="path-needs-state"');
+    expect(html).not.toContain('data-testid="path-list"');
+  });
+
+  it("تبويب المسار ظاهر في اللوحة", () => {
+    const html = renderToStaticMarkup(<SystemLab words={FIRST_WORDS} />);
+    expect(html).toContain("stab-path");
   });
 });

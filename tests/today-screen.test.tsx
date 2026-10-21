@@ -97,8 +97,9 @@ describe("شاشة اليوم §2.2 (N-147)", () => {
     // المطوي: المخابر والمسار والترميز
     expect(q("open-skills-lab")!.closest("details")!.getAttribute("data-testid")).toBe("more-labs");
     expect(q("open-system-lab")!.closest("details")!.getAttribute("data-testid")).toBe("more-labs");
-    expect(q("path-list")!.closest("details")!.getAttribute("data-testid")).toBe("more-path");
-    expect(q("post-first-run")!.closest("details")!.getAttribute("data-testid")).toBe("more-path");
+    expect(q("path-list")).toBeNull(); // القائمة الكاملة انتقلت إلى لوحة النظام
+    expect(q("post-first-run")).toBeNull();
+    expect(q("progress-map")).not.toBeNull(); // الخريطة الهادئة ظاهرة بدلها
     expect(q("more-gender")!.textContent).toContain("Tisch");
   });
 });
@@ -175,5 +176,20 @@ describe("عبارة اليوم تتدوير يومياً (N-148 · D248)", () =
     root = fresh(container);
     const jan2 = await renderWritingAt(new Date(2026, 0, 2, 10, 0));
     expect(jan2).toContain("Danke");
+  });
+});
+
+describe("الخريطة الهادئة §2.8 (N-149 · D249)", () => {
+  it("مستويات + وحدة + أسبوع + بوابة من البيانات (متعلم جديد)", async () => {
+    await renderSeeded();
+    const levels = q("map-levels")!.textContent!;
+    expect(levels).toContain("A1");
+    expect(levels).toContain("░░░░░░░░░░"); // A1: صفر من 90
+    expect(q("map-unpublished-B1")!.textContent).toContain("قيد الإنتاج");
+    expect(q("map-unpublished-B2")!.textContent).toContain("قيد الإنتاج");
+    expect(q("map-unit")!.textContent).toContain("الوحدة 1");
+    expect(q("map-unit")!.textContent).toContain("◉○○○○○"); // d1 متاح والباقي مقفل
+    expect(q("map-week")!.textContent).toContain("الأسبوع 1 من 62");
+    expect(q("map-gate")!.textContent).toContain("الأسبوع 6");
   });
 });
