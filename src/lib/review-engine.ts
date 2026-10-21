@@ -173,3 +173,8 @@ export function recallFlowValid(steps: ReadonlyArray<RecallStep>): boolean {
   }
   return true;
 }
+
+/** N-147 (D247): عدد بطاقات SRS المستحقة اليوم أو قبله — لشاشة اليوم (§2.2) */
+export function countDueSrs(cards: readonly SrsCardState[], todayDay: string): number {
+  return cards.filter((c) => c.due.slice(0, 10) <= todayDay).length;
+}

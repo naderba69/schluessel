@@ -33,6 +33,8 @@ import { recordSession } from "./lib/session-log.js";
 import type { QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
+import { weekDots } from "./lib/day-engine.js";
+import { countDueSrs } from "./lib/review-engine.js";
 import { BRAND } from "./lib/brand.js";
 import { SystemLab } from "./components/SystemLab.js";
 
@@ -364,6 +366,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const currentId = currentLessonId(state.progress, PATH);
   const current = currentId ? indexEntry(currentId) : null;
   const completedCount = state.progress.completedLessons.filter((id) => INDEX_IDS.has(id)).length;
+  /** N-147 (D247): شاشة اليوم §2.2 — نقاط الأسبوع + المستحق + الذهبية */
+  const weekday = new Date().toLocaleDateString("ar", { weekday: "long" });
+  const week = weekDots(state.sessions);
+  const dueCount = countDueSrs(state.srsCards, localDay());
+  const goldenCount = state.errors.length;
 
   const openSession = () => {
     if (!currentId) return;
@@ -446,11 +453,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       <p data-testid="brand-header">
         🔑 {BRAND.nameAr} — <span dir="ltr">{BRAND.nameDe}</span> · {BRAND.sloganAr}
       </p>
-      <h1>أهلاً {state.profile.name} — رحلتك بدأت</h1>
-      <p data-testid="post-first-run">
-        أكملت {completedCount} من {LESSON_INDEX.length} درساً منشوراً
-        {current ? ` · الدرس الحالي: ${current.id}` : " · أكملت كل ما نُشر حتى الآن"}
-      </p>
+      <h1>أهلاً {state.profile.name} · اليوم: {weekday}</h1>
       {!store.persistent && (
         <p data-testid="no-storage" role="alert">
           ⚠️ التخزين المحلي غير متاح في هذا المتصفح — تقدّمك يبقى في هذه الجلسة فقط.
@@ -463,8 +466,10 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       )}
       {finishedNote && <p data-testid="finished-note">{finishedNote}</p>}
 
-      <h2>حصة اليوم (120 دقيقة متصلة — D29)</h2>
       {jitCard && <JitCardOverlay card={jitCard} onDismiss={dismissJit} />}
+      <p data-testid="week-dots">
+        <span dir="ltr">{week.dots.map((d) => (d ? "●" : "○")).join("")}</span> أسبوعك ({week.studied}/7)
+      </p>
       {session ? (
         session.bundle ? (
         <LessonRun
@@ -491,14 +496,19 @@ export function App({ store: injected }: { store?: LearnerStore }) {
             <span dir="ltr">{current.id}</span> — {current.zielAr}
           </p>
           <button data-testid="start-session" onClick={startSession}>
-            ▶ ابدأ الحصة
+            ▶ ابدأ جلسة اليوم (120 دقيقة)
           </button>
+          <ul data-testid="today-counts">
+            <li data-testid="due-count">مراجعات مستحقة اليوم: {dueCount} بطاقة</li>
+            <li data-testid="golden-count">أخطاؤك الذهبية: {goldenCount}</li>
+          </ul>
         </>
       ) : (
         <p data-testid="path-complete">أكملت كل ما نُشر من الدروس ✓ — الدروس التالية قيد الإنتاج.</p>
       )}
 
-      <h2>مختبر المهارات (M2 — E09–E16)</h2>
+      <details data-testid="more-labs">
+        <summary>🧪 المخابر والأدوات</summary>
       {labOpen ? (
         firstBundle ? (
           <SkillsLab currentLessonId={currentId} words={firstBundle.direct} />
@@ -511,7 +521,6 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         </button>
       )}
 
-      <h2>لوحة النظام (M3)</h2>
       {systemOpen ? (
         firstBundle ? (
           <SystemLab words={firstBundle.direct} />
@@ -524,7 +533,13 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         </button>
       )}
 
-      <h2>مسارك</h2>
+      </details>
+      <details data-testid="more-path">
+        <summary>🗺️ مسارك الكامل</summary>
+      <p data-testid="post-first-run">
+        أكملت {completedCount} من {LESSON_INDEX.length} درساً منشوراً
+        {current ? ` · الدرس الحالي: ${current.id}` : " · أكملت كل ما نُشر حتى الآن"}
+      </p>
       <ul data-testid="path-list">
         {LESSON_INDEX.map((l) => {
           const status = lessonStatus(l.id, state.progress);
@@ -536,11 +551,14 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         })}
       </ul>
 
-      <h2>الترميز المزدوج للجنس (§15‑هـ)</h2>
+      </details>
+      <details data-testid="more-gender">
+        <summary>عن الترميز المزدوج للجنس (§15‑هـ)</summary>
       <p>
         <GenderBadge gender="der" word="Tisch" /> | <GenderBadge gender="die" word="Wohnung" /> |{" "}
         <GenderBadge gender="das" word="Kind" />
       </p>
+      </details>
     </main>
   );
 }
