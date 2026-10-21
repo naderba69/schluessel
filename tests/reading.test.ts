@@ -11,7 +11,10 @@ import {
   FUNCTION_WORD_FORMS,
   type ReadingText,
 } from "../src/lib/reading.js";
-import { firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLessonWords = __FIRST.direct;
+
 
 const text: ReadingText = {
   id: "a1-text-1",

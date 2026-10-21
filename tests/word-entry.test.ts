@@ -9,7 +9,10 @@ import {
   plausibleRisk, reannotate, citationForm, lemmaOf,
 } from "../tools/lib/word-entry.js";
 import { planWord, runGenerator, phonemizeAll, auditRisks, spokenForm, WordSpec } from "../tools/word-entry-generator.js";
-import { ALL_WORDS, ALL_LESSONS } from "../src/lesson-packs.js";
+import { loadAllWords, loadAllLessons } from "../src/lesson-packs.js";
+const ALL_WORDS = await loadAllWords();
+const ALL_LESSONS = await loadAllLessons();
+
 
 // espeak يُخرج ç مفككة — الاختبار يستعمل الشكل نفسه
 const C = "c\u0327";

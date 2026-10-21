@@ -12,7 +12,10 @@ import { dexieLearnerStore, type LearnerStore } from "../src/stores/learner-stor
 import { setAudioPlayer } from "../src/lib/audio-player.js";
 import { createInitialState } from "../src/lib/state-factory.js";
 import { reconcileState } from "../src/lib/lesson-path.js";
-import { ALL_GRAMMAR_RULES, ALL_LESSONS, LESSON_ORDER } from "../src/lesson-packs.js";
+import { LESSON_ORDER, loadAllGrammarRules, loadAllLessons } from "../src/lesson-packs.js";
+const ALL_GRAMMAR_RULES = await loadAllGrammarRules();
+const ALL_LESSONS = await loadAllLessons();
+
 import { visibleText } from "../src/lib/struck-text.js";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
@@ -63,7 +66,7 @@ const station = () => q("lesson-session")?.getAttribute("data-station");
 
 async function boot(store: LearnerStore) {
   await act(async () => root.render(<App store={store} />));
-  await waitFor(() => !q("boot-loading"), "انتهاء التحميل");
+  await waitFor(() => !q("boot-loading") && !q("first-loading"), "انتهاء التحميل");
 }
 
 /** محطة تلو محطة: «التالي» معطَّل قبل الإكمال ثم يعمل — والاستراحة بين المحطات */
@@ -151,7 +154,7 @@ const wrongOf = (it: QuizItem) => (it.choices ? it.choices.find((c) => c !== it.
 async function startSession() {
   await click(q("start-session"), "ابدأ الحصة");
   if (q("jit-overlay")) await click(q("jit-dismiss"), "فهمت");
-  expect(q("lesson-session")).not.toBeNull();
+  await waitFor(() => !!q("lesson-session"), "فتح الحصة");
 }
 
 async function throughStations(id: string) {
@@ -210,6 +213,10 @@ describe("الرحلة كاملة — أول تشغيل ← درس كامل ← 
     await boot(dexieLearnerStore(openDb(name)));
     expect(byText("لنبدأ")).toBeNull();
     expect(q("current-lesson")!.getAttribute("data-lesson-id")).toBe(next);
+    // القائمة الكاملة في لوحة النظام (تبويب المسار — N-149): تُفتح وتُفحص حالات الدروس
+    await click(q("open-system-lab"), "لوحة النظام");
+    await waitFor(() => !!q("stab-path"), "تبويبات اللوحة");
+    await click(q("stab-path"), "تبويب المسار");
     expect(container.querySelector('[data-lesson-id="a1-u1-d1"][data-status="completed"]')).not.toBeNull();
     expect(container.querySelector(`li[data-lesson-id="${next}"][data-status="available"]`)).not.toBeNull();
     expect(container.querySelector(`li[data-lesson-id="${LESSON_ORDER[2]}"][data-status="locked"]`)).not.toBeNull();
@@ -257,6 +264,12 @@ describe("«ليس بعد» — مراجعة ثم نسخة أخرى · النس�
     const saved = (await store.load())!;
     expect(saved.progress.completedLessons).toEqual([]);
     expect(saved.progress.gateResults.map((g) => [g.passed, g.attempts])).toEqual([[false, 1], [false, 2], [false, 3], [false, 4]]);
+    // N-150 (D250): الإجابات الخاطئة التُقطت في الدفتر الذهبي تلقائياً (§2.7)
+    const sources = saved.errors.map((e) => e.payload.source);
+    expect(sources.some((x) => x.includes("a1-u1-d1/quiz"))).toBe(true);
+    expect(sources.some((x) => x.includes("a1-u1-d1/practice"))).toBe(true);
+    expect(saved.errors[0]!.kind).toBe("systematic");
+    expect(saved.errors.every((e) => !e.resolved)).toBe(true);
 
     // حصة 3 (N-006: استئناف): نتيجة الحصة 2 حاضرة والسقف جلوسٌ جديد ← الإعادة = النسخة 2 (4 mod 3) ← نجاح
     await startSession();

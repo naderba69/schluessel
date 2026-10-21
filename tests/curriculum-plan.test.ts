@@ -8,7 +8,9 @@ import { CORE_LOAD_MAX, checkPlan, coreStatus, planStatus, proseStrings, textFix
 import { coveredHeadwords, indexWordlists } from "../tools/lib/goethe-lists.js";
 import { auditGoethe } from "../tools/goethe-audit.js";
 import { loadPlans } from "../tools/plan-status.js";
-import { ALL_LESSONS, LESSON_ORDER } from "../src/lesson-packs.js";
+import { LESSON_ORDER, loadAllLessons } from "../src/lesson-packs.js";
+const ALL_LESSONS = await loadAllLessons();
+
 import { readFileSync, readdirSync, statSync } from "node:fs";
 
 const CONTENT = join(__dirname, "..", "content");

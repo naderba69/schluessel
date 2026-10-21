@@ -254,6 +254,16 @@ describe("D132 — الأعداد من 100 إلى 1000 (قانون الجبهة)
     expect(CLOSED.has("hundert")).toBe(true);
     expect(frontViolations(["zweihundert · hunderteins"], u3d1, none)).toEqual(["hunderteins", "zweihundert"]);
   });
+  it("N-059 (D233 — قرار Duden): قبل الاسم تُصرَّف ein — hundertundein/undeine معروفتان من درس tausend · والميل مرفوض", () => {
+    const u3d2 = at("a1-u3-d2");
+    expect(frontViolations(["hundertundein · hundertundeine · dreihundertundein"], u3d2, none)).toEqual([]);
+    expect(numberWordKnown("einhundertundeine", u3d2)).toBe(true);
+    const u3d1 = at("a1-u3-d1");
+    expect(frontViolations(["hundertundein"], u3d1, none)).toEqual(["hundertundein"]);
+    // الميل (undeinen/undeinem/undeiner) والقديمة (hundertundeins) مرفوضة — الصيغتان المسمّاتان وحدهما
+    expect(frontViolations(["hundertundeinen · hundertundeinem · hundertundeiner · hundertundeins"], u3d2, none))
+      .toEqual(["hundertundeinem", "hundertundeinen", "hundertundeiner", "hundertundeins"]);
+  });
   it("الباقي بعد المئات يتبع قاعدته: عشراته مدروسة — ولا باب خلفياً (hundertein · hundertundeins · zweitausend · neunzehnhundert · eins قبل und)", () => {
     const u3d2 = at("a1-u3-d2");
     expect(frontViolations(["hundertein · hundertundeins · zweitausend · neunzehnhundert · hunderteinsundzwanzig · einsundzwanzighundert · hundertzwanzigeins"], u3d2, none))

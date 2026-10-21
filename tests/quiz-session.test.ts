@@ -10,7 +10,9 @@ import {
 import { STATIONS } from "../src/lib/lesson-engine.js";
 import { displayOrder } from "../src/lib/practice-session.js";
 import { hasBlame } from "../src/lib/warmth-engine.js";
-import { ALL_LESSONS } from "../src/lesson-packs.js";
+import { loadAllLessons } from "../src/lesson-packs.js";
+const ALL_LESSONS = await loadAllLessons();
+
 
 const WHY = "مع ich فعل sein هو bin دائماً.";
 const choice: QuizItem = { q: "Ich ___ aus Tunesien.", a: "bin", choices: ["bin", "bist", "ist"], why: WHY };

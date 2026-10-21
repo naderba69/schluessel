@@ -6,7 +6,12 @@ import { join } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import { clipUrl, clipUrlForFile, CLIP_FILE_COUNT, CLIP_ID_COUNT } from "../src/lib/audio-assets.js";
 import { createAudioPlayer, setAudioPlayer, type AudioBackend, type AudioPlayer } from "../src/lib/audio-player.js";
-import { ALL_LESSONS, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { loadAllLessons, wordsForLesson, runtimeWordsForLesson, loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const ALL_LESSONS = await loadAllLessons();
+const firstLessonWords = __FIRST.direct;
+
 import { planLessonStations, fullForm } from "../src/lib/lesson-runner.js";
 import { LearnStation, RecallStation } from "../src/components/LessonContent.js";
 
@@ -36,9 +41,9 @@ describe("D104 — كل مقطع ملتزم يُضمَّن في البناء و�
     }
   });
 
-  it("كل كلمة في كل درس لها مقطعها — المتعلم لا يرى كلمة بلا صوت", () => {
+  it("كل كلمة في كل درس لها مقطعها — المتعلم لا يرى كلمة بلا صوت", async () => {
     for (const l of ALL_LESSONS)
-      for (const w of runtimeWordsForLesson(l)) expect(clipUrl(`word-${w.id}`), `${l.id}/${w.id}`).toBeTruthy();
+      for (const w of await runtimeWordsForLesson(l)) expect(clipUrl(`word-${w.id}`), `${l.id}/${w.id}`).toBeTruthy();
   });
 });
 
@@ -93,17 +98,17 @@ describe("D104 — المشغّل: المقطع أولاً ← Web Speech احت
 describe("D104 — البطاقات تحمل هوية صوتها والواجهة تعرض زر الاستماع", () => {
   afterEach(() => setAudioPlayer(null));
 
-  it("بطاقات الجديد والاسترجاع: audioId = word-<id> وspeakText = الشكل الكامل (الأداة مرة واحدة)", () => {
+  it("بطاقات الجديد والاسترجاع: audioId = word-<id> وspeakText = الشكل الكامل (الأداة مرة واحدة)", async () => {
     for (const l of ALL_LESSONS) {
-      const plan = planLessonStations(l, runtimeWordsForLesson(l));
-      const words = new Map(runtimeWordsForLesson(l).map((w) => [w.id, w]));
+      const plan = planLessonStations(l, await runtimeWordsForLesson(l));
+      const words = new Map((await runtimeWordsForLesson(l)).map((w) => [w.id, w]));
       for (const c of plan.learn) {
         expect(c.audioId).toBe(`word-${c.wordId}`);
         expect(c.speakText).toBe(fullForm(words.get(c.wordId)!));
       }
       for (const c of plan.recall) expect(c.audioId).toBe(`word-${c.id}`);
     }
-    expect(wordsForLesson(firstLesson).length).toBeGreaterThan(0);
+    expect((await wordsForLesson(firstLesson)).length).toBeGreaterThan(0);
   });
 
   it("محطة الجديد والاسترجاع تعرضان 🔊 بمعرّف المقطع الصحيح", () => {

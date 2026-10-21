@@ -236,19 +236,30 @@ describe("D121/D122 — معجم النطق", () => {
     expect(Object.keys(missing)).toHaveLength(2);
     for (const [voice, chars] of Object.entries(missing)) expect(chars, voice).toEqual([]);
   });
-  it("D189 (N-101): قائمة «تحت التحقق السمعي» معلنة ومثبَّتة — إجهار النهاية داخل المركّبات + Bäckerei (‑erei)", () => {
-    // الأحد عشر مدخلاً مقيسة بالمرجع (كاشف devoicing في pronunciation-audit.py) لا بالأذن؛ المالك يحكم قبل الإطلاق
+  it("D189 (N-101): قائمة «تحت التحقق السمعي» معلنة ومثبَّتة — إجهار النهاية داخل المركّبات + Bäckerei (‑erei) + فئة الطول الخمسة (N-039/N-012 · D239) + الإطباق النهائي (Job · D241)", () => {
+    // السبعة عشر مدخلاً مقيسة بالمرجع (كاشف devoicing في pronunciation-audit.py) لا بالأذن؛ المالك يحكم قبل الإطلاق
     // (Q24). تغيير القائمة (حكم سمعي · مدخل جديد من الكاشف) يغيّر هذا الاختبار عمداً — لا قبول صامت.
     const pending = lex.entries.filter((e) => e.earReview).map((e) => e.word).sort();
     expect(pending).toEqual(
-      ["Bäckerei", "Ergebnis", "Flughafen", "Freundschaft", "Landschaft", "Mädchen", "dreiundsechzig", "dreiundsiebzig", "neunhundertneunundneunzig", "neunundneunzig", "zweihundertneunundsiebzig"].sort(),
+      ["Arabisch", "Bäckerei", "Datum", "Ergebnis", "Flughafen", "Freundschaft", "Job", "Landschaft", "Mädchen", "Portugal", "Spanien", "damals", "dreiundsechzig", "dreiundsiebzig", "neunhundertneunundneunzig", "neunundneunzig", "zweihundertneunundsiebzig"].sort(),
     );
     // كل مدخل منها يهمس صامتاً واحداً (b/d/ɡ ← p/t/k) أو يعيد شوا ‑erei (eː ← ə) — لا يغيّر شيئاً آخر في الكلمة
+    // فئة الطول (D239): الفرق الوحيد علامة الطول ː تُضاف/تُحذف — وDatum وحده يبدّل uː ← ʊ معها (سابقة Badezimmer)
     const dev: Record<string, string> = { b: "p", d: "t", "\u0261": "k" };
+    const lengthClass = new Set(["Portugal", "Arabisch", "damals", "Datum", "Spanien"]);
     for (const e of lex.entries.filter((x) => x.earReview))
       for (const f of e.forms) {
         if (e.word === "Bäckerei") {
           expect(f.ipa).toBe(f.espeak.replace("eː", "ə"));
+          continue;
+        }
+        if (lengthClass.has(e.word)) {
+          const strip = (s: string) => [...nfd(s)].filter((c) => c !== "ː").join("");
+          const sa = strip(f.espeak), sb = [...strip(f.ipa)];
+          if (e.word === "Datum") {
+            expect(sb.length, e.word).toBe(sa.length);
+            expect([...sa].map((c, i) => [c, sb[i]] as const).filter(([x, y]) => x !== y)).toEqual([["u", "ʊ"]]);
+          } else expect(strip(f.ipa), e.word).toBe(sa);
           continue;
         }
         const a = [...nfd(f.espeak)], b = [...nfd(f.ipa)];

@@ -2,6 +2,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App.js";
+import "./app.css"; // N-144 (D244): تصميم التطبيق
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {

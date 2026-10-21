@@ -2,7 +2,13 @@
 import { describe, it, expect } from "vitest";
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { ALL_LESSONS, ALL_WORDS, ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, LEVEL_ORDER, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, LEVEL_ORDER, loadAllLessons, loadAllWords, wordsForLesson, runtimeWordsForLesson, loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const ALL_LESSONS = await loadAllLessons();
+const ALL_WORDS = await loadAllWords();
+const firstLessonWords = __FIRST.direct;
+
 import { ReadingText, CultureCard, BARE_ARTICLE_IDS } from "../content/schemas/index.js";
 import { taughtUpTo, frontViolations } from "../tools/lib/lesson-upgrade.js";
 import { knownStems, knownForms, contentTokens, CLOSED } from "../tools/lib/vocab-forms.js";
@@ -35,9 +41,9 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
     for (const v of d6.quiz.variants) expect(v.passingScore).toBe(0.75);
   });
 
-  it("كل درس: كلماته مكتملة + مصائده الثلاثة + حزمة SRS + مراجع صوت مطابقة", () => {
+  it("كل درس: كلماته مكتملة + مصائده الثلاثة + حزمة SRS + مراجع صوت مطابقة", async () => {
     for (const l of ALL_LESSONS) {
-      const words = wordsForLesson(l);
+      const words = await wordsForLesson(l);
       expect(words.length).toBeGreaterThanOrEqual(2); // d6 توليف: جسيمان فقط (بلا جديد تقريباً)
       expect(l.zusammenfassung.warningCards).toHaveLength(3);
       // N-116 (ج — D227): dürfen/sollen بطاقتان بلا عرض (القاعدة ars-modal-fix علّمتهما) تدخلان SRS عبر حزمة u11-d5 وحدها — الاستثناء الوحيد المعلن
@@ -48,9 +54,9 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
     }
   });
 
-  it("كل درس يمشي على مُشغِّل الحصة (planLessonStations) بكل محطاته", () => {
+  it("كل درس يمشي على مُشغِّل الحصة (planLessonStations) بكل محطاته", async () => {
     for (const l of ALL_LESSONS) {
-      const plan = planLessonStations(l, runtimeWordsForLesson(l));
+      const plan = planLessonStations(l, await runtimeWordsForLesson(l));
       expect(plan.lessonId).toBe(l.id);
       expect(plan.recall.length).toBeGreaterThan(0);
       expect(plan.learn.length).toBe(l.praesentation.wordIds.length);
@@ -59,11 +65,11 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
     }
   });
 
-  it("التوافق مع الاستخدام القديم: firstLesson هو d1 بكل كلماته (ثابت مشتقّ — D188)", () => {
+  it("التوافق مع الاستخدام القديم: firstLesson هو d1 بكل كلماته (ثابت مشتقّ — D188)", async () => {
     expect(firstLesson.id).toBe("a1-u1-d1");
     expect(firstLessonWords.map((w) => w.id)).toEqual(firstLesson.praesentation.wordIds);
     expect(firstLessonWords.map((w) => w.id)).toEqual(expect.arrayContaining(["neu", "wie-viel", "gut"])); // نواة D113 + gut (D188)
-    expect(() => wordsForLesson({ ...firstLesson, praesentation: { ...firstLesson.praesentation, wordIds: ["xx"] } })).toThrow(/مفقودة/);
+    await expect(wordsForLesson({ ...firstLesson, praesentation: { ...firstLesson.praesentation, wordIds: ["xx"] } })).rejects.toThrow(/مفقودة/);
   });
 });
 
@@ -1440,10 +1446,10 @@ describe("A2 يبدأ (D101) — الترتيب بالمستوى + قواعد A2
     expect(ALL_LESSONS[1]!.id).toBe("a1-u1-d2"); // a2-u1-d1 لا يقع بين a1-u1-d1 وa1-u1-d2
   });
 
-  it("a2-u1-d1: Perfekt منهجي — 13 كلمة A2 جديدة (لا تكرار لـA1) + أصوات مطابقة", () => {
+  it("a2-u1-d1: Perfekt منهجي — 13 كلمة A2 جديدة (لا تكرار لـA1) + أصوات مطابقة", async () => {
     const l = a2.find((x) => x.id === "a2-u1-d1")!;
     expect(l.ziel.ar).toContain("Perfekt");
-    const words = wordsForLesson(l);
+    const words = await wordsForLesson(l);
     expect(words).toHaveLength(13);
     for (const w of words) {
       expect(w.level).toBe("A2");
@@ -1469,22 +1475,22 @@ describe("A2 يبدأ (D101) — الترتيب بالمستوى + قواعد A2
     }
   });
 
-  it("الأفعال: Perfekt مسجّل لكل فعل — وأفعال sein موسومة needs-ist", () => {
-    for (const w of wordsForLesson(a2.find((x) => x.id === "a2-u1-d1")!)) {
+  it("الأفعال: Perfekt مسجّل لكل فعل — وأفعال sein موسومة needs-ist", async () => {
+    for (const w of await wordsForLesson(a2.find((x) => x.id === "a2-u1-d1")!)) {
       if (w.wordClass !== "verb") continue;
       expect(w.forms?.perfekt, w.id).toMatch(/^(hat|ist) /);
       expect(w.forms!.perfekt!.startsWith("ist ")).toBe(w.grammarRisks.includes("needs-ist"));
     }
   });
 
-  it("fullForm: الأداة تُعرض مرة واحدة — لا «die die Landschaft» في أي بطاقة من كل الدروس", () => {
+  it("fullForm: الأداة تُعرض مرة واحدة — لا «die die Landschaft» في أي بطاقة من كل الدروس", async () => {
     expect(fullForm({ de: "die Landschaft", article: "die" })).toBe("die Landschaft");
     expect(fullForm({ de: "Wohnung", article: "die" })).toBe("die Wohnung");
     expect(fullForm({ de: "lachen" })).toBe("lachen");
     expect(fullForm({ de: "der Morgen / morgen", article: "der" })).toBe("der Morgen"); // N-043: البديل الأول وحده
     const doubled = /\b(der|die|das) \1\b/;
     for (const l of ALL_LESSONS) {
-      const plan = planLessonStations(l, runtimeWordsForLesson(l));
+      const plan = planLessonStations(l, await runtimeWordsForLesson(l));
       for (const c of plan.learn) expect(c.explanation, `${l.id}/${c.wordId}`).not.toMatch(doubled);
       for (const c of plan.recall) expect(c.front, `${l.id}/${c.id}`).not.toMatch(doubled);
     }

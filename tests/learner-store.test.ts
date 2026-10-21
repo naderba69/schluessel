@@ -9,7 +9,9 @@ import {
 } from "../src/stores/learner-store.js";
 import { createInitialState } from "../src/lib/state-factory.js";
 import { recordQuizAttempt, reconcileState } from "../src/lib/lesson-path.js";
-import { ALL_LESSONS } from "../src/lesson-packs.js";
+import { loadAllLessons } from "../src/lesson-packs.js";
+const ALL_LESSONS = await loadAllLessons();
+
 import { App } from "../src/App.js";
 import type { LearnerProgress, LearnerState } from "../content/schemas/index.js";
 

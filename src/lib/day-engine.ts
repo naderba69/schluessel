@@ -44,3 +44,15 @@ export function recallBeforeNew(plan: DayPlan): boolean {
 
 /** حدود اليوم الأول: 4 بطاقات فقط (الوحدة صفر §9) — لا إغراق */
 export const DAY_ONE_MAX_CARDS = 4;
+
+/** N-147 (D247): نقاط الأسبوع لشاشة اليوم (§2.2) — الاثنين أولاً · محايد بلا لوم (D23) */
+export function weekDots(sessions: readonly { date: string }[], today = new Date()): { dots: readonly boolean[]; studied: number } {
+  const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const monday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - ((today.getDay() + 6) % 7));
+  const studiedDays = new Set(sessions.map((x) => x.date));
+  const dots = Array.from({ length: 7 }, (_, i) => {
+    const d = new Date(monday.getFullYear(), monday.getMonth(), monday.getDate() + i);
+    return studiedDays.has(iso(d));
+  });
+  return { dots, studied: dots.filter(Boolean).length };
+}

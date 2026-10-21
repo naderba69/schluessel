@@ -33,11 +33,15 @@ describe("E17 — المهارات الأربع + حدود الصدق", () => {
     for (const s of g.sections) expect(s.noteAr).toBeTruthy();
   });
 
-  it("تفاصيل النسخ الحالية مُعلَمة needs-web-verify — والتحذير ظاهر (§4)", () => {
+  it("N-029: صيغة Sprechen متحقق منها من وثائق Goethe — بلا needs-web-verify (§4)", () => {
     const g = buildGate(6);
-    expect(g.overallNoteAr).toContain("تُتحقق ويبياً");
+    expect(g.sections.every((s) => s.formatSource !== "needs-web-verify")).toBe(true);
     const sp = g.sections.find((s) => s.skill === "sprechen")!;
-    expect(sp.formatSource).toBe("needs-web-verify");
+    expect(sp.formatSource).toBe("goethe-verifiziert");
+    expect(sp.noteAr).toContain("3 أجزاء");
+    expect(sp.noteAr).toContain("صياغة طلب"); // Teil 3 = Bitten — لا «Plan» (ذاك A2 · N-139)
+    expect(sp.noteAr).toContain("مجموعة ≤4 بلا تحضير");
+    expect(g.overallNoteAr).toContain("تُعاد مراجعتها عند النشر");
   });
 
   it("التقييم: أربع نتائج إلزامية — والعتبة الداخلية معلنة لا مخفية", () => {

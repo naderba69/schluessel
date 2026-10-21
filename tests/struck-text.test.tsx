@@ -7,7 +7,10 @@ import { splitStruck, visibleText } from "../src/lib/struck-text.js";
 import { BorrowedProvider, BorrowedWordsBox, StruckText } from "../src/components/StruckText.js";
 import { CloseStation } from "../src/components/LessonContent.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
-import { ALL_LESSONS, ALL_WORDS } from "../src/lesson-packs.js";
+import { loadAllLessons, loadAllWords } from "../src/lesson-packs.js";
+const ALL_LESSONS = await loadAllLessons();
+const ALL_WORDS = await loadAllWords();
+
 
 describe("D128 — splitStruck / visibleText", () => {
   it("الزوج المغلق وحده يُشطب — بالترتيب، والعربية حوله كما هي", () => {

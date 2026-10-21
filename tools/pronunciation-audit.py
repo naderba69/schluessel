@@ -116,12 +116,82 @@ def devoicing_errors(espeak: str, refs: list[str]) -> list[str]:
     return bad
 
 
+_FINAL_DEVOICE = {"b": "p", "d": "t", "ɡ": "k", "v": "f", "z": "s", "ʒ": "ʃ"}
+
+
+def final_devoicing_errors(espeak: str, refs: list[str]) -> list[str]:
+    """D241 (N-013): الإطباق النهائي — espeak يُبقي الصامت الأخير مجهوراً (Job [dʒˈɒb])
+    حيث تهمسه كل صيغ المرجع ([d͡ʒɔp]). الألمانية لا تعرف مجهوراً في آخر الكلمة أبداً،
+    فالشرط الوحيد: إجماع الصيغ على النظير المهموس. يعود بالزوج (مثل «b→p») — فارغ = سليم."""
+    e = _devoice_norm(espeak)
+    m = re.search(r"([bdɡvzʒ])$", e)
+    if not m:
+        return []
+    v = m.group(1)
+    rs = [_devoice_norm(r) for r in refs]
+    if not rs:
+        return []
+    return [f"{v}→{_FINAL_DEVOICE[v]}"] if all(r.endswith(_FINAL_DEVOICE[v]) for r in rs) else []
+
+
+def st_errors(espeak: str, refs: list[str]) -> list[str]:
+    """D241 (N-013): st أول المقطع [ʃt] — espeak يقرؤها [st] كاسراً حدّ المقطع (Blei|stift)
+    حيث تُجمع الصيغ على [ʃt]. الشرط: «st» حاضرة و«ʃt» غائبة عند espeak و«ʃt» في كل صيغة."""
+    e = _devoice_norm(espeak)
+    rs = [_devoice_norm(r) for r in refs]
+    if not rs:
+        return []
+    return ["st"] if ("st" in e and "ʃt" not in e and all("ʃt" in r for r in rs)) else []
+
+
+def velar_nasal_errors(espeak: str, refs: list[str]) -> list[str]:
+    """D241 (N-013): n قبل k/ɡ تُنطق [ŋ] (فئة Onkel D137) — espeak يُبقي [n] (Krankenhaus)
+    حيث تُجمع الصيغ على [ŋ]. حدّ المقطع الحقيقي (an|kommen [nk]) يحميه غياب ŋ عن المرجع."""
+    e = _devoice_norm(espeak)
+    rs = [_devoice_norm(r) for r in refs]
+    if not rs:
+        return []
+    return ["n"] if (re.search(r"n[kɡ]", e) and "ŋ" not in e and all("ŋ" in r for r in rs)) else []
+
+
+def chs_errors(espeak: str, refs: list[str]) -> list[str]:
+    """D241 (N-013): chs تُنطق [ks] (wachsen) — espeak يقرؤها [x] (Erwachsene)
+    حيث تُجمع الصيغ على [ks] بلا [x]. الـ[x] الحقيقية (Buch · Dach) يحميها حضورها في المرجع."""
+    e = _devoice_norm(espeak)
+    rs = [_devoice_norm(r) for r in refs]
+    if not rs:
+        return []
+    return ["x"] if ("x" in e and all("x" not in r and "ks" in r for r in rs)) else []
+
+
+def ich_laut_errors(espeak: str, refs: list[str]) -> list[str]:
+    """D241 (N-013): ch بعد حركة أمامية [ç] — espeak يقرؤها [k] في عنقود chst (sprichst)
+    حيث تُجمع الصيغ على [ç]. الـ[k] الحقيقية بعد حركة (Bäcker) يحميها غياب ç عن المرجع."""
+    e = _devoice_norm(espeak)
+    rs = [_devoice_norm(r) for r in refs]
+    if not rs:
+        return []
+    return ["k"] if (re.search(r"[ɪieɛyʏøœ]k", e) and "ç" not in e and all("ç" in r for r in rs)) else []
+
+
 def compare(espeak: str, refs: list[str]) -> list[str]:
     """أنواع المخالفة: length إن خالفت كلُّ صيغ المرجع طولَ الحركة المنبورة · stress إن خالفت كلُّها موضعَ النبر
-    · devoicing (D189) إن أبقى espeak صامتاً مجهوراً قبل صامت حيث يهمسه المرجع في كل صيغه."""
+    · devoicing (D189) إن أبقى espeak صامتاً مجهوراً قبل صامت حيث يهمسه المرجع في كل صيغه
+    · final-devoicing (D241) للإطباق النهائي المجهور · st-sh لـst أول المقطع · n-ng لـn قبل k/ɡ
+    · chs-ks لـchs بـ[x] · ch-ich لـch بـ[k] بعد حركة أمامية."""
     kinds = []
     if devoicing_errors(espeak, refs):
         kinds.append("devoicing")
+    if final_devoicing_errors(espeak, refs):
+        kinds.append("final-devoicing")
+    if st_errors(espeak, refs):
+        kinds.append("st-sh")
+    if velar_nasal_errors(espeak, refs):
+        kinds.append("n-ng")
+    if chs_errors(espeak, refs):
+        kinds.append("chs-ks")
+    if ich_laut_errors(espeak, refs):
+        kinds.append("ch-ich")
     el = stressed_long(espeak)
     rl = [stressed_long(r) for r in refs]
     if el is not None and all(x is not None and x != el for x in rl):

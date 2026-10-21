@@ -135,3 +135,20 @@ describe("D108 — Netzwerk neu A2: عناوين الفصول من فهرس Klet
     expect(l.curriculumRef.netzwerkChapter).not.toContain("needs-web-verify");
   });
 });
+
+describe("D108 — Netzwerk neu A1: عناوين الفصول من حلول Klett المجانية (N-027)", () => {
+  const ref = CurriculumReference.parse(read("arsenal/curriculum-reference.json"));
+  it("12 فصلاً بالعناوين الرسمية حرفياً + مصدر مُعلن + تسلسل المتطلبات", () => {
+    const a1 = ref.levels.A1!;
+    expect(a1.chapters.map((c) => c.title)).toEqual([
+      "Guten Tag!", "Freunde, Kollegen und ich", "In Hamburg", "Guten Appetit!", "Alltag und Familie",
+      "Zeit mit Freunden", "Arbeitsalltag", "Fit und gesund", "Meine Wohnung", "Studium und Beruf",
+      "Die Jacke gefällt mir!", "Ab in den Urlaub!",
+    ]);
+    expect(a1.source).toContain("Klett");
+    expect(a1.chapters[0]!.requiresPrevious).toEqual([]);
+    expect(a1.chapters[11]!.requiresPrevious).toEqual(["k11"]);
+    expect(a1.chapters.every((c) => c.grammarPoints.length === 0)).toBe(true); // لم تُتحقق بعد — لا تخمين
+    expect(a1.chapters.every((c) => c.vocabTopics.length === 0)).toBe(true); // العناوين وحدها المتحقَّق منها
+  });
+});

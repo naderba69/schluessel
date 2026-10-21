@@ -20,7 +20,7 @@ describe("GenderBadge (test-gender-badge)", () => {
     expect(der).toContain("▲");
     expect(der).toContain("color:#2980b9");
     expect(das).toContain("■");
-    expect(das).toContain("color:#27ae60");
+    expect(das).toContain("color:#1e7e34"); // أخضر داكن AA (N-146)
     expect(GENDER_SHAPE_CHAR.die).toBe("●");
   });
 
