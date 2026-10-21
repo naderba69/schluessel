@@ -33,6 +33,7 @@ import { recordSession } from "./lib/session-log.js";
 import type { QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
+import { BRAND } from "./lib/brand.js";
 import { SystemLab } from "./components/SystemLab.js";
 
 const STATUS_LABEL: Record<string, string> = {
@@ -442,6 +443,9 @@ export function App({ store: injected }: { store?: LearnerStore }) {
 
   return (
     <main style={MAIN_STYLE}>
+      <p data-testid="brand-header">
+        🔑 {BRAND.nameAr} — <span dir="ltr">{BRAND.nameDe}</span> · {BRAND.sloganAr}
+      </p>
       <h1>أهلاً {state.profile.name} — رحلتك بدأت</h1>
       <p data-testid="post-first-run">
         أكملت {completedCount} من {LESSON_INDEX.length} درساً منشوراً

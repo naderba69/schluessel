@@ -13,7 +13,7 @@ export const GENDER_SHAPE_CHAR: Record<Gender, string> = {
 export const GENDER_COLOR: Record<Gender, string> = {
   der: "#2980b9", // أزرق
   die: "#c0392b", // أحمر
-  das: "#27ae60", // أخضر
+  das: "#1e7e34", // أخضر داكن (N-146: تباين AA 4.53 — قرار المالك)
   none: "#555555",
 };
 
