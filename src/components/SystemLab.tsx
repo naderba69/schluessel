@@ -1,6 +1,6 @@
 // SystemLab.tsx — واجهات M3: بوابة · تقدّم · تكيّف · ألعاب · نسخ احتياطي · إعدادات | D44
 // كل شاشة تعكس قواعد محركها: حدود صدق Goethe ظاهرة · لا أرقام من العدم · بلا لوم · بلا ضغط · بصمة سلامة.
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { buildGate, gateSchedule, isGateWeek, INTERNAL_PASS_PERCENT } from "../lib/gate-engine.js";
 import { skillBars, retention, monthlyEstimate, type SkillStat } from "../lib/progress-engine.js";
 import { freezePlan, resumePlan, REASON_AR, type FreezeReason, type ScheduledCard } from "../lib/adaptation-engine.js";
@@ -183,7 +183,21 @@ export function DataScreen() {
 
 /* ══════════ E22 — الإعدادات/الوصولية ══════════ */
 export function SettingsScreen() {
-  const [prefs, setPrefs] = useState<ThemePrefs>(DEFAULT_PREFS);
+  const [prefs, setPrefs] = useState<ThemePrefs>(() => {
+    // N-144 (D244): تفضيل محفوظ — الزر كان شكلياً (يبدّل حالة لا تُطبَّق)
+    try {
+      const raw = localStorage.getItem("schluessel-theme");
+      if (raw) return { ...DEFAULT_PREFS, ...(JSON.parse(raw) as Partial<ThemePrefs>) };
+    } catch { /* تخزين معطّل — الافتراضي */ }
+    return DEFAULT_PREFS;
+  });
+  useEffect(() => {
+    document.documentElement.dataset.theme = prefs.mode;
+    document.documentElement.style.fontSize = `${prefs.zoom * 100}%`;
+    try {
+      localStorage.setItem("schluessel-theme", JSON.stringify({ mode: prefs.mode, zoom: prefs.zoom }));
+    } catch { /* تخزين معطّل — يُطبَّق للجلسة فقط */ }
+  }, [prefs]);
   const audit = auditPalette();
   return (
     <section data-testid="settings-screen">
