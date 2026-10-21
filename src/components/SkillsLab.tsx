@@ -15,6 +15,7 @@ import { buildNetwork, memoryPalace, networkReviewFlow } from "../lib/vocab-netw
 import { familyForms } from "../lib/lesson-runner.js";
 import { A1_TASKS, taskFlow, type RealTask } from "../lib/real-tasks.js";
 import { CULTURE_FACTS, songOfTheWeek, factsNeedingWebVerify } from "../lib/culture.js";
+import { dayIndexOfYear } from "../lib/coach-engine.js";
 import { LESSON_ORDER } from "../lesson-packs.js";
 import type { Word } from "../../content/schemas/index.js";
 import { PlayButton } from "./LessonSession.js";
@@ -126,7 +127,7 @@ export function ReadingLab({ text }: { text: ReadingText }) {
 export function WritingLab({ initialText = "", words }: { initialText?: string; words: Word[] }) {
   const [text, setText] = useState(initialText);
   const [submitted, setSubmitted] = useState(initialText.length > 0);
-  const sotd = sentenceOfTheDay(words.map((w) => ({ de: w.de, ar: w.ar[0]! })), 0);
+  const sotd = sentenceOfTheDay(words.map((w) => ({ de: w.de, ar: w.ar[0]! })), dayIndexOfYear()); // N-148 (D248): تدوير حقيقي كل يوم (كان 0 ثابتاً)
   const diary = diaryPrompt("A1");
   const correction = submitted ? correctSentence(text) : null;
   return (
@@ -307,9 +308,16 @@ export const DEMO_TEXT: ReadingText = {
 
 /* ══════════ N-008 (D231) — جدول الأبجدية ══════════ */
 /** جدول الحروف الثلاثين + 3 تهجيات مسجلة (سكربت a1-alphabet) — كل حرف بزر صوته */
+/** N-148 (D248): حروف الأبجدية — مصدر واحد للجدول وتدريب المدرب */
+export function alphabetLetters(): { id: string; text: string }[] {
+  return AudioScript.parse(alphabetJson)
+    .lines.filter((ln) => !ln.id.startsWith("abc-spell-"))
+    .map((ln) => ({ id: ln.id, text: ln.text }));
+}
+
 export function AlphabetLab() {
   const script = AudioScript.parse(alphabetJson);
-  const letters = script.lines.filter((ln) => !ln.id.startsWith("abc-spell-"));
+  const letters = alphabetLetters();
   const spells = script.lines.filter((ln) => ln.id.startsWith("abc-spell-"));
   return (
     <section data-testid="alphabet-lab">

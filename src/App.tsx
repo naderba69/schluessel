@@ -34,6 +34,8 @@ import type { QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
 import { weekDots } from "./lib/day-engine.js";
+import { isRestDay } from "./lib/coach-engine.js";
+import { CoachBlock } from "./components/CoachBlock.js";
 import { countDueSrs } from "./lib/review-engine.js";
 import { BRAND } from "./lib/brand.js";
 import { SystemLab } from "./components/SystemLab.js";
@@ -507,6 +509,10 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         <p data-testid="path-complete">أكملت كل ما نُشر من الدروس ✓ — الدروس التالية قيد الإنتاج.</p>
       )}
 
+      {isRestDay(new Date()) && (
+        <p data-testid="rest-day-note">🌿 اليوم الأحد راحة — لا شيء مطلوب منك. زر الجلسة يعمل لمن أراد، بلا لوم.</p>
+      )}
+      <CoachBlock errors={state.errors} dueCount={dueCount} hasNewContent={!!current} />
       <details data-testid="more-labs">
         <summary>🧪 المخابر والأدوات</summary>
       {labOpen ? (

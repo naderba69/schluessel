@@ -332,6 +332,34 @@ label { display: inline-block; margin: 0.4rem 0; }
 
 /* ═══════ 6 · القائمة والمسار ═══════ */
 [data-testid="brand-header"] { text-align: center; color: var(--muted); font-weight: 700; margin: 0 0 0.25rem; }
+/* ═══════ المدرب اليومي §2.10 (N-148 · D248) ═══════ */
+[data-testid="coach-block"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  margin-top: 1rem;
+}
+[data-testid="coach-block"] h2 { margin-top: 0; }
+[data-testid="coach-windows"] { color: var(--muted); font-size: 0.95rem; }
+[data-testid="coach-drill"] {
+  background: var(--accent-soft);
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+}
+[data-testid="coach-answer"] { font-weight: 800; font-size: 1.15rem; }
+[data-testid="day-closing"] {
+  border-top: 1px dashed var(--border);
+  margin-top: 0.8rem;
+  padding-top: 0.6rem;
+}
+[data-testid="rest-day-note"],
+[data-testid="coach-rest"] {
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.9rem;
+}
 /* ═══════ شاشة اليوم §2.2 (N-147 · D247) ═══════ */
 [data-testid="week-dots"] { font-size: 1.1rem; letter-spacing: 2px; }
 [data-testid="week-dots"] span[dir="ltr"] { font-size: 1rem; }

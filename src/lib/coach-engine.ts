@@ -1,5 +1,6 @@
 // src/lib/coach-engine.ts — محرك المدرب E02: حضور طول اليوم خارج الحصة (قرار المالك v1.1 — الأفكار الـ12 كاملة)
 // حراس لا تُكسر (خطة v1.3 §2.10): تثبيت ومهارات فقط · ≤3 دقائق/تفاعل · ≤20 دقيقة/يوم · الأحد راحة · بلا لوم (D23)
+import type { ErrorEntry } from "../../content/schemas/index.js";
 
 export const COACH_TASK_MAX_SEC = 180; // كل تفاعل 30 ثانية–3 دقائق
 export const COACH_TASK_MIN_SEC = 30;
@@ -84,4 +85,21 @@ export function applyDailyCap(tasks: CoachTask[]): CoachTask[] {
     out.push(t);
   }
   return out;
+}
+
+/** N-148 (D248): أسماء النوافذ المعروضة للمتعلم */
+export const WINDOW_LABELS_AR: Record<CoachWindow, string> = { midday: "ظهيرة", afternoon: "عصر", evening: "مساء" };
+
+/** N-148 (D248): رقم اليوم في السنة (0–365) — لتدوير حرف اليوم وعبارة اليوم يومياً */
+export function dayIndexOfYear(today = new Date()): number {
+  const start = new Date(today.getFullYear(), 0, 1);
+  const day = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  return Math.round((day.getTime() - start.getTime()) / 86400000);
+}
+
+/** N-148 (D248): تدريب «درّبني» — أحدث خطأ غير محلول أولاً (تثبيتٌ من كنزك لا جديد) */
+export function pickCoachDrill(errors: readonly ErrorEntry[]): ErrorEntry | null {
+  const open = errors.filter((e) => !e.resolved);
+  if (open.length === 0) return null;
+  return [...open].sort((a, b) => b.createdAt.localeCompare(a.createdAt))[0]!;
 }
