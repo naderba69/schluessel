@@ -1,7 +1,7 @@
 // src/components/CoachBlock.tsx — حضور المدرب اليومي (N-148 · D248 — §2.10): درّبني + النوافذ + إغلاق اليوم
 // الحارس: تثبيت ومهارات فقط (أخطاؤك وحروفك — لا جديد) · الأحد صمت (isRestDay) · بلا لوم (D23)
 import { useMemo, useState } from "react";
-import type { ErrorEntry } from "../../content/schemas/index.js";
+import type { CoachWindow, ErrorEntry } from "../../content/schemas/index.js";
 import {
   DEFAULT_WINDOWS,
   WINDOW_LABELS_AR,
@@ -17,10 +17,13 @@ export function CoachBlock({
   errors,
   dueCount,
   hasNewContent,
+  windows = DEFAULT_WINDOWS,
 }: {
   errors: readonly ErrorEntry[];
   dueCount: number;
   hasNewContent: boolean;
+  /** N-151 (D251): نوافذ المتعلم من طقس البداية/الإعدادات — الافتراضي الثلاث */
+  windows?: readonly CoachWindow[];
 }) {
   const [open, setOpen] = useState(false);
   const [revealed, setRevealed] = useState(false);
@@ -38,8 +41,7 @@ export function CoachBlock({
     <section data-testid="coach-block">
       <h2>🤝 مدربك اليوم</h2>
       <p data-testid="coach-windows">
-        نوافذ المدرب: {DEFAULT_WINDOWS.map((w) => WINDOW_LABELS_AR[w]).join(" · ")} — تخصيص الأوقات يأتي في
-        طقس البداية
+        نوافذ المدرب: {windows.map((w) => WINDOW_LABELS_AR[w]).join(" · ")}
       </p>
       {rest ? (
         <p data-testid="coach-rest">🌿 اليوم راحة — المدرب صامت. نم جيداً، فالنوم شريكك.</p>

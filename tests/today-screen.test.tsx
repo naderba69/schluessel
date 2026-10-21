@@ -9,6 +9,7 @@ import { createInitialState } from "../src/lib/state-factory.js";
 import { recordSession } from "../src/lib/session-log.js";
 import type { ErrorEntry, Word } from "../content/schemas/index.js";
 import { WritingLab } from "../src/components/SkillsLab.js";
+import { SettingsScreen, SystemLab } from "../src/components/SystemLab.js";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
 
@@ -35,7 +36,7 @@ async function click(el: Element | null) {
 const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 const shiftDay = (base: Date, delta: number) => new Date(base.getFullYear(), base.getMonth(), base.getDate() + delta);
 
-async function renderSeeded(opts: { at?: Date; withErrors?: boolean } = {}) {
+async function renderSeeded(opts: { at?: Date; withErrors?: boolean; profilePatch?: Record<string, unknown> } = {}) {
   vi.useFakeTimers();
   vi.setSystemTime(opts.at ?? new Date(2026, 9, 21, 10, 0)); // أربعاء 10:00 — يوم عادي
   const store = memoryLearnerStore();
@@ -65,8 +66,10 @@ async function renderSeeded(opts: { at?: Date; withErrors?: boolean } = {}) {
     resolved: false,
     createdAt: iso(today),
   });
+  const base = createInitialState("ضياء");
   await store.save({
-    ...createInitialState("ضياء"),
+    ...base,
+    profile: { ...base.profile, ...opts.profilePatch },
     sessions,
     srsCards: [card("w-due-1", iso(shiftDay(today, -1))), card("w-due-2", iso(today)), card("w-future-1", iso(shiftDay(today, 3)))],
     errors: opts.withErrors === false ? [] : [err("e-1"), err("e-2")],
@@ -210,5 +213,98 @@ describe("الدفتر الذهبي §2.7 (N-150 · D250)", () => {
     await renderSeeded({ withErrors: false });
     expect(q("golden-empty")!.textContent).toContain("دفترك فارغ");
     expect(container.querySelector('[data-testid="golden-entry"]')).toBeNull();
+  });
+});
+
+describe("طقس البداية على الشاشة (N-151 · D251)", () => {
+  async function typeInto(el: Element | null, value: string) {
+    if (!el) throw new Error("حقل غير موجود");
+    const input = el as HTMLInputElement;
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(Object.getPrototypeOf(input), "value")!.set!.call(input, value);
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+  }
+  async function mount(node: React.ReactNode) {
+    const { createRoot: makeRoot } = await import("react-dom/client");
+    const host = document.createElement("div");
+    container.appendChild(host);
+    const r = makeRoot(host);
+    await act(async () => r.render(node));
+    return r;
+  }
+  async function renderSettings(onSave: (patch: Record<string, unknown>) => void) {
+    return mount(
+      <SettingsScreen
+        profile={{ name: "ضياء", journeyName: "", coachWindows: ["midday", "afternoon", "evening"] }}
+        onSaveProfile={onSave}
+      />,
+    );
+  }
+
+  it("اسم الرحلة أعلى الشاشة حين سُمّيت", async () => {
+    await renderSeeded({ profilePatch: { journeyName: "ألمانيتي" } });
+    expect(q("journey-name")!.textContent).toContain("ألمانيتي");
+    expect(q("brand-header")!.textContent).toContain("رحلة");
+  });
+
+  it("بلا اسم رحلة: لا سطر وهمي", async () => {
+    await renderSeeded();
+    expect(q("journey-name")).toBeNull();
+  });
+
+  it("المدرب يعرض النوافذ المختارة من الحالة", async () => {
+    await renderSeeded({ profilePatch: { coachWindows: ["midday", "evening"] } });
+    expect(q("coach-windows")!.textContent).toContain("ظهيرة · مساء");
+    expect(q("coach-windows")!.textContent).not.toContain("عصر");
+  });
+
+  it("الإعدادات: تعديل الاسم يُحفظ", async () => {
+    const onSave = vi.fn();
+    const r = await renderSettings(onSave);
+    await typeInto(q("settings-name-input"), "نور");
+    await click(q("settings-name-save"));
+    expect(onSave).toHaveBeenCalledWith({ name: "نور" });
+    await act(async () => r.unmount());
+  });
+
+  it("الإعدادات: تسمية الرحلة + تقليص النوافذ يُحفظان", async () => {
+    const onSave = vi.fn();
+    const r = await renderSettings(onSave);
+    await typeInto(q("settings-journey-input"), "برلين");
+    await click(q("settings-journey-save"));
+    expect(onSave).toHaveBeenCalledWith({ journeyName: "برلين" });
+    await click(q("settings-window-afternoon"));
+    await click(q("settings-windows-save"));
+    expect(onSave).toHaveBeenCalledWith({ coachWindows: ["midday", "evening"] });
+    await act(async () => r.unmount());
+  });
+
+  it("الإعدادات: نافذة واحدة ⇒ الحفظ معطّل", async () => {
+    const r = await renderSettings(() => {});
+    await click(q("settings-window-afternoon"));
+    await click(q("settings-window-evening"));
+    expect((q("settings-windows-save") as HTMLButtonElement).disabled).toBe(true);
+    await act(async () => r.unmount());
+  });
+
+  it("الإعدادات: بلا ملف ⇒ لا محررات (توافق)", async () => {
+    const r = await mount(<SettingsScreen />);
+    expect(q("profile-editors")).toBeNull();
+    expect(q("settings-controls")).not.toBeNull();
+    await act(async () => r.unmount());
+  });
+
+  it("لوحة النظام: تبويب الإعدادات يمرّر الملف والمحررات", async () => {
+    const r = await mount(
+      <SystemLab
+        words={[]}
+        profile={{ name: "ضياء", journeyName: "", coachWindows: ["midday", "afternoon", "evening"] }}
+        onSaveProfile={() => {}}
+      />,
+    );
+    await click(q("stab-settings"));
+    expect(q("settings-name-input")).not.toBeNull();
+    await act(async () => r.unmount());
   });
 });

@@ -12,6 +12,8 @@ export function createInitialState(name: string, today = new Date()): LearnerSta
       createdAt: iso,
       level: "A1" as Level,
       unit0Shown: [],
+      journeyName: "",
+      coachWindows: ["midday", "afternoon", "evening"],
       streak: { current: 0, freezesUsedThisMonth: 0 },
       calibration: [],
     },

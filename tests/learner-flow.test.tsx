@@ -175,11 +175,14 @@ describe("الرحلة كاملة — أول تشغيل ← درس كامل ← 
     const store = dexieLearnerStore(openDb(name));
     await boot(store);
 
-    // أول تشغيل: الترحيب ← الاسم ← بطاقات اليوم الأول ← شاشة أول درس (كانت تُتخطّى) ← اللوحة
+    // أول تشغيل: الترحيب ← الاسم ← الرحلة (تخطٍّ) ← النوافذ (تأجيل) ← بطاقات اليوم الأول ← شاشة أول درس ← اللوحة
     await click(byText("لنبدأ"), "لنبدأ");
     await type(container.querySelector('input[aria-label="اسم المتعلم"]'), "يوسف");
     await click(byText("أنا جاهز"), "أنا جاهز");
-    expect(container.querySelector('[data-screen="ask-name"]')).toBeNull();
+    expect(container.querySelector('[data-screen="journey-name"]')).not.toBeNull(); // N-151: خطوة الرحلة
+    await click(q("journey-next"), "تابع بلا اسم رحلة");
+    expect(container.querySelector('[data-screen="coach-windows"]')).not.toBeNull(); // N-151: خطوة النوافذ
+    await click(q("windows-defer"), "تأجيل النوافذ");
     while (byText("التالية")) await click(byText("التالية"), "التالية");
     await click(byText("إلى أول درس"), "إلى أول درس");
     expect(container.querySelector('[data-screen="first-lesson"]')).not.toBeNull();

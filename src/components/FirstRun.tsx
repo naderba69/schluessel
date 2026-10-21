@@ -1,7 +1,8 @@
 // src/components/FirstRun.tsx — أول تشغيل (§16): مولر → اسم → الوحدة صفر (4) → أول درس
 // لا اختبار تموضع في أي شاشة (D24) — المسار كاملاً FIRST_RUN_STEPS
 import { useState } from "react";
-import type { LearnerState, Lesson, Unit0Card, Word } from "../../content/schemas/index.js";
+import type { CoachWindow, LearnerState, Lesson, Unit0Card, Word } from "../../content/schemas/index.js";
+import { COACH_WINDOWS, WINDOW_LABELS_AR } from "../lib/coach-engine.js";
 import { completeFirstRun, FIRST_RUN_STEPS, firstRunNext, type FirstRunStep } from "../lib/first-run.js";
 import { dayOneCards, loadUnit0Deck } from "../lib/unit0.js";
 import { GenderBadge } from "./GenderBadge.js";
@@ -35,6 +36,62 @@ export function NameScreen({ onSubmit }: { onSubmit: (name: string) => void }) {
       />
       <button onClick={() => onSubmit(name)} disabled={!name.trim()}>
         أنا جاهز
+      </button>
+    </section>
+  );
+}
+
+/**
+ * N-151 (D251): اسم الرحلة الاختياري (§2.11 — خطوة 3): يظهر أعلى الشاشة طوال الرحلة — والتابع يعمل فارغاً.
+ */
+export function JourneyNameScreen({ onSubmit }: { onSubmit: (journeyName: string) => void }) {
+  const [journey, setJourney] = useState("");
+  return (
+    <section data-screen="journey-name">
+      <h1>ما اسم رحلتك؟ (اختياري)</h1>
+      <p>اسم مشروعك — سيظهر أعلى شاشتك طوال الرحلة. يمكنك تخطيه الآن وتسميتها لاحقاً من الإعدادات.</p>
+      <input
+        data-testid="journey-input"
+        aria-label="اسم الرحلة"
+        value={journey}
+        onChange={(e) => setJourney(e.target.value)}
+        placeholder="مثلاً: ألمانيتي"
+        dir="rtl"
+      />
+      <button data-testid="journey-next" onClick={() => onSubmit(journey)}>
+        تابع
+      </button>
+    </section>
+  );
+}
+
+/**
+ * N-151 (D251): ضبط نوافذ المدرب (§2.11 — خطوة 4): نافذتان على الأقل من الثلاث — أو التأجيل للافتراضي.
+ */
+export function WindowsScreen({ onSubmit }: { onSubmit: (windows: CoachWindow[] | null) => void }) {
+  const [pick, setPick] = useState<CoachWindow[]>([...COACH_WINDOWS]);
+  const toggle = (w: CoachWindow) =>
+    setPick((prev) => (prev.includes(w) ? prev.filter((x) => x !== w) : [...prev, w]));
+  return (
+    <section data-screen="coach-windows">
+      <h1>متى يدرّبك المدرب؟</h1>
+      <p>اختر نافذتين على الأقل — ينبض بلطف في كل نافذة، تقبل أو تؤجل بلا لوم.</p>
+      {COACH_WINDOWS.map((w) => (
+        <label key={w}>
+          <input
+            data-testid={`window-${w}`}
+            type="checkbox"
+            checked={pick.includes(w)}
+            onChange={() => toggle(w)}
+          />
+          {WINDOW_LABELS_AR[w]}
+        </label>
+      ))}
+      <button data-testid="windows-next" onClick={() => onSubmit(pick)} disabled={pick.length < 2}>
+        تابع
+      </button>
+      <button data-testid="windows-defer" onClick={() => onSubmit(null)}>
+        لاحقاً — النوافذ الثلاث
       </button>
     </section>
   );
@@ -151,17 +208,38 @@ export function FirstRun({
   firstLessonWords: Word[];
 }) {
   const [step, setStep] = useState<FirstRunStep>(FIRST_RUN_STEPS[0]);
+  const [name, setName] = useState("");
+  const [journey, setJourney] = useState("");
   const advance = () => {
     const next = firstRunNext(step);
     if (next) setStep(next);
   };
 
   if (step === "welcome") return <WelcomeScreen onNext={advance} />;
+  // N-151 (D251): الحالة تُنشأ مرة واحدة بعد النوافذ — كاملة (اسم + رحلة + نوافذ) قبل الدخول للدرس (§16)
   if (step === "ask-name")
     return (
       <NameScreen
-        onSubmit={(name) => {
-          onComplete(completeFirstRun(name)); // الحالة تُنشأ الآن — الدخول للدرس في نفس الجلسة (§16)
+        onSubmit={(n) => {
+          setName(n);
+          advance();
+        }}
+      />
+    );
+  if (step === "journey-name")
+    return (
+      <JourneyNameScreen
+        onSubmit={(j) => {
+          setJourney(j);
+          advance();
+        }}
+      />
+    );
+  if (step === "coach-windows")
+    return (
+      <WindowsScreen
+        onSubmit={(w) => {
+          onComplete(completeFirstRun(name, { journeyName: journey, coachWindows: w }));
           advance();
         }}
       />

@@ -481,6 +481,10 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     <main style={MAIN_STYLE}>
       <p data-testid="brand-header">
         🔑 {BRAND.nameAr} — <span dir="ltr">{BRAND.nameDe}</span> · {BRAND.sloganAr}
+        {/* N-151 (D251): اسم الرحلة أعلى الشاشة طوال الرحلة (§2.11) — اختياري */}
+        {(state.profile.journeyName ?? "").trim() && (
+          <span data-testid="journey-name"> · 🗺️ رحلة «{(state.profile.journeyName ?? "").trim()}»</span>
+        )}
       </p>
       <h1>أهلاً {state.profile.name} · اليوم: {weekday}</h1>
       {!store.persistent && (
@@ -549,7 +553,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         <p data-testid="rest-day-note">🌿 اليوم الأحد راحة — لا شيء مطلوب منك. زر الجلسة يعمل لمن أراد، بلا لوم.</p>
       )}
       <MapView map={map} />
-      <CoachBlock errors={state.errors} dueCount={dueCount} hasNewContent={!!current} />
+      <CoachBlock errors={state.errors} dueCount={dueCount} hasNewContent={!!current} windows={state.profile.coachWindows} />
       <GoldenBook errors={state.errors} />
       <details data-testid="more-labs">
         <summary>🧪 المخابر والأدوات</summary>
@@ -567,7 +571,16 @@ export function App({ store: injected }: { store?: LearnerStore }) {
 
       {systemOpen ? (
         firstBundle ? (
-          <SystemLab words={firstBundle.direct} progress={state.progress} />
+          <SystemLab
+            words={firstBundle.direct}
+            progress={state.progress}
+            profile={{
+              name: state.profile.name,
+              journeyName: state.profile.journeyName ?? "",
+              coachWindows: state.profile.coachWindows ?? ["midday", "afternoon", "evening"],
+            }}
+            onSaveProfile={(patch) => commit({ ...state, profile: { ...state.profile, ...patch } })}
+          />
         ) : (
           <p data-testid="lab-loading">جارٍ تجهيز اللوحة…</p>
         )

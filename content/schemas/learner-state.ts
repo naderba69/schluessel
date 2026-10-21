@@ -74,8 +74,16 @@ export const GateResult = z.object({
 });
 export type GateResult = z.infer<typeof GateResult>;
 
+/** N-151 (D251): نوافذ المدرب — مرآة COACH_WINDOWS (coach-engine)؛ المحتوى لا يستورد من src فيُعاد التعريف هنا والاختبار يثبّت التطابق */
+export const CoachWindow = z.enum(["midday", "afternoon", "evening"]);
+export type CoachWindow = z.infer<typeof CoachWindow>;
+
 export const LearnerProfile = SchemaVersioned.extend({
   name: z.string().min(1),
+  /** N-151 (D251): اسم الرحلة الاختياري (§2.11 — يظهر أعلى الشاشة طوال الرحلة) */
+  journeyName: z.string().default(""),
+  /** N-151 (D251): نوافذ المدرب المختارة (§2.11 — 2 على الأقل، الافتراضي الثلاث) */
+  coachWindows: z.array(CoachWindow).default(["midday", "afternoon", "evening"]),
   createdAt: z.string(),
   level: Level,
   /** الطقوس المكتملة (الوحدة صفر — Just-In-Time) */
