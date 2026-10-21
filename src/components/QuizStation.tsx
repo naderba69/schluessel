@@ -2,7 +2,7 @@
 // تشريح الدرس (§3): 6 Slider ← 7 Quiz ← 8 Zusammenfassung — فتُعرض الخلاصة بعد أول محاولة (للمراجعة عند «ليس بعد»).
 // القانون 13 (الجبهة): سؤال الـSlider يُعرض بالعربية فقط — «Wie viel Prozent wirst du schaffen?» فيها ما لم يُتعلَّم بعد.
 import { useRef, useState } from "react";
-import type { Lesson, OpenQuiz } from "../../content/schemas/index.js";
+import type { Lesson, OpenQuiz, QuizAnswer, QuizItem } from "../../content/schemas/index.js";
 import { displayOrder } from "../lib/practice-session.js";
 import {
   advanceQuiz, answerQuizItem, calibrationNoteAr, canRetryInSession, creditOf, currentQuizItem, isAnswered, isComplete,
@@ -20,6 +20,7 @@ export function QuizStation({
   onAttemptComplete,
   initialQuiz,
   onQuizProgress,
+  onGrade,
 }: {
   lesson: QuizLesson;
   /** محاولات مسجّلة قبل هذه الحصة — تحدد النسخة (قانون 21) */
@@ -30,6 +31,8 @@ export function QuizStation({
   initialQuiz?: OpenQuiz;
   /** N-006: يُنادى عند كل تغيّر في المحاولة (توقّع/إجابة/حكم/انتقال/إعادة) */
   onQuizProgress?: (snap: OpenQuiz) => void;
+  /** N-150 (D250): يُنادى عند كل إجابة غير كاملة (للدفتر الذهبي — close/wrong/self-wrong) */
+  onGrade?: (g: { item: QuizItem; given: string; verdict: QuizAnswer["verdict"] }) => void;
 }) {
   const variantCount = lesson.quiz.variants.length;
   const [base] = useState(priorAttempts);
@@ -150,7 +153,13 @@ export function QuizStation({
   const item = currentQuizItem(attempt)!;
   const answered = isAnswered(attempt);
   const answer = answered ? attempt.answers[attempt.cursor]! : null;
-  const submit = (given: string) => push(answerQuizItem(attempt, given));
+  const submit = (given: string) => {
+    const na = answerQuizItem(attempt, given);
+    push(na);
+    const ans = na.answers[attempt.cursor];
+    if (ans && ans.verdict !== "correct" && ans.verdict !== "judge")
+      onGrade?.({ item, given, verdict: ans.verdict });
+  };
   const next = () => {
     const after = advanceQuiz(attempt);
     setText("");
@@ -221,7 +230,11 @@ export function QuizStation({
               <button data-testid="quiz-judge-yes" onClick={() => push(judgeQuizItem(attempt, true))}>
                 إجابتي صحيحة بصيغة أخرى
               </button>{" "}
-              <button data-testid="quiz-judge-no" onClick={() => push(judgeQuizItem(attempt, false))}>
+              <button data-testid="quiz-judge-no" onClick={() => {
+                const prev = attempt.answers[attempt.cursor]?.given ?? "";
+                push(judgeQuizItem(attempt, false));
+                onGrade?.({ item, given: prev, verdict: "self-wrong" });
+              }}>
                 أخطأت
               </button>
             </p>

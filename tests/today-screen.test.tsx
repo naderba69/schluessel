@@ -193,3 +193,22 @@ describe("الخريطة الهادئة §2.8 (N-149 · D249)", () => {
     expect(q("map-gate")!.textContent).toContain("الأسبوع 6");
   });
 });
+
+describe("الدفتر الذهبي §2.7 (N-150 · D250)", () => {
+  it("يعرض الأخطاء: الخاطئ ← الصحيح + التعليل + النوع", async () => {
+    await renderSeeded();
+    expect(q("golden-book")!.textContent).toContain("دفتر أخطائك الذهبية (2)");
+    const entries = container.querySelectorAll('[data-testid="golden-entry"]');
+    expect(entries.length).toBe(2);
+    expect(q("golden-book")!.textContent).toContain("x");
+    expect(q("golden-book")!.textContent).toContain("y");
+    expect(q("golden-book")!.textContent).toContain("ز");
+    expect(q("golden-book")!.textContent).toContain("هفوة");
+  });
+
+  it("بلا أخطاء: رسالة فارغة صريحة لا قائمة وهمية", async () => {
+    await renderSeeded({ withErrors: false });
+    expect(q("golden-empty")!.textContent).toContain("دفترك فارغ");
+    expect(container.querySelector('[data-testid="golden-entry"]')).toBeNull();
+  });
+});

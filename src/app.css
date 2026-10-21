@@ -332,6 +332,26 @@ label { display: inline-block; margin: 0.4rem 0; }
 
 /* ═══════ 6 · القائمة والمسار ═══════ */
 [data-testid="brand-header"] { text-align: center; color: var(--muted); font-weight: 700; margin: 0 0 0.25rem; }
+/* ═══════ الدفتر الذهبي §2.7 (N-150 · D250) ═══════ */
+[data-testid="golden-book"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  margin-top: 1rem;
+}
+[data-testid="golden-book"] h2 { margin-top: 0; }
+[data-testid="golden-open"], [data-testid="golden-solved"] ul { list-style: none; padding: 0; }
+[data-testid="golden-entry"] {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.8rem;
+  margin: 0.5rem 0;
+}
+[data-testid="golden-wrong"] { color: var(--danger); font-weight: 700; }
+[data-testid="golden-correct"] { color: var(--success); font-weight: 700; }
+[data-testid="golden-why"] { margin: 0.3rem 0; }
+[data-testid="golden-meta"] { color: var(--muted); font-size: 0.85rem; margin: 0; }
 /* ═══════ الخريطة الهادئة §2.8 (N-149 · D249) ═══════ */
 [data-testid="progress-map"] {
   background: var(--surface);

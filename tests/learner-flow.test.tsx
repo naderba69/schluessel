@@ -264,6 +264,12 @@ describe("«ليس بعد» — مراجعة ثم نسخة أخرى · النس�
     const saved = (await store.load())!;
     expect(saved.progress.completedLessons).toEqual([]);
     expect(saved.progress.gateResults.map((g) => [g.passed, g.attempts])).toEqual([[false, 1], [false, 2], [false, 3], [false, 4]]);
+    // N-150 (D250): الإجابات الخاطئة التُقطت في الدفتر الذهبي تلقائياً (§2.7)
+    const sources = saved.errors.map((e) => e.payload.source);
+    expect(sources.some((x) => x.includes("a1-u1-d1/quiz"))).toBe(true);
+    expect(sources.some((x) => x.includes("a1-u1-d1/practice"))).toBe(true);
+    expect(saved.errors[0]!.kind).toBe("systematic");
+    expect(saved.errors.every((e) => !e.resolved)).toBe(true);
 
     // حصة 3 (N-006: استئناف): نتيجة الحصة 2 حاضرة والسقف جلوسٌ جديد ← الإعادة = النسخة 2 (4 mod 3) ← نجاح
     await startSession();

@@ -187,3 +187,38 @@ export function reshowAt(erroredAt: Date): Date {
 export function canReshow(erroredAt: Date, now: Date): boolean {
   return now.getTime() >= reshowAt(erroredAt).getTime();
 }
+
+/* ══════════ N-150 (D250) — الالتقاط التلقائي من الحصص ══════════ */
+/** أسماء الأنواع للدفتر (§2.7 — بلا لوم) */
+export const KIND_LABELS_AR: Record<ErrorKind, string> = {
+  systematic: "نظامي — نتعلّم قاعدته",
+  slip: "هفوة — عابرة",
+  fossilized: "متحجّر — يحتاج تدريباً مركّزاً",
+};
+
+/**
+ * إدخال خطأ من حصة (اختبار/تدريب): نفس الخطأ غير المحلول ⇒ تكرار (يُحييه ويعدّه، والثالث بعد
+ * تصحيح = تحجّر) — وإلا قيد جديد. القريب الشكلي (close) هفوة صريحة: عرفها وزلّت الصيغة.
+ */
+export function upsertGoldenError(
+  errors: readonly ErrorEntry[],
+  input: { skill: ErrorSkill; wrong: string; correct: string; explanation: string; source: string; closeSlip: boolean },
+): ErrorEntry[] {
+  const same = errors.find(
+    (e) => !e.resolved && e.payload.source === input.source && e.payload.wrong === input.wrong && e.payload.correct === input.correct,
+  );
+  if (same) return errors.map((e) => (e.id === same.id ? registerRecurrence(e, { correctedBefore: true }) : e));
+  const id = `err-${errors.length + 1}-${Date.now().toString(36)}`;
+  return [
+    ...errors,
+    captureError({
+      id,
+      skill: input.skill,
+      wrong: input.wrong,
+      correct: input.correct,
+      explanation: input.explanation,
+      source: input.source,
+      ...(input.closeSlip ? { kind: "slip" as const } : {}),
+    }),
+  ];
+}

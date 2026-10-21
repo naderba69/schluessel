@@ -66,3 +66,19 @@ describe("مُشغِّل الدرس — الدرس الحقيقي a1-u1-d1", () 
     expect(() => planLessonStations(broken, firstLessonWords)).toThrow("F121");
   });
 });
+
+describe("جولة الأخطاء في الاسترجاع (N-150 · D250)", () => {
+  it("بطاقات الجولة أولاً (خطأ) ثم الدفء — بالترتيب المعطى", () => {
+    const err = {
+      id: "e-9", kind: "systematic", skill: "schreiben",
+      payload: { wrong: "falsch geschrieben", correct: "richtig geschrieben", explanation: "التعليل", source: "a1-u1-d1/quiz" },
+      remedialExercises: [], occurrences: 1, resolved: false, createdAt: "2026-10-21",
+    } as unknown as import("../content/schemas/index.js").ErrorEntry;
+    const plan = planLessonStations(firstLesson, firstLessonWords, [], [], [], [err]);
+    expect(plan.recall[0]!.kind).toBe("error");
+    expect(plan.recall[0]!.errorId).toBe("e-9");
+    expect(plan.recall[0]!.front).toContain("falsch geschrieben");
+    expect(plan.recall[0]!.back).toContain("richtig geschrieben");
+    expect(plan.recall[1]!.kind).toBe("warmup");
+  });
+});

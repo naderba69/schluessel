@@ -12,6 +12,7 @@ import { KeyboardCard } from "./FirstRun.js";
 import type { LearnCardData, RecallCardData, PracticeData, CloseData } from "../lib/lesson-runner.js";
 import { RecallCardView, LearnCardView, CloseView } from "./LessonSession.js";
 import type { RecallRating } from "../lib/review-engine.js";
+import type { ErrorSkill } from "../lib/errors-engine.js";
 import {
   checkBeads, revealRule, shuffledBeads, startDiscovery, submitInference, viewExamples,
   type DiscoverySession, type GrammarRule,
@@ -44,7 +45,7 @@ export function insertAtCursor(el: HTMLInputElement | null, text: string, ch: st
 }
 
 /** محطة 1 — الاسترجاع: بطاقة بعد بطاقة، والتقييم يمرّر للتالية */
-export function RecallStation({ cards, onDone, initialIndex = 0, onProgress }: { cards: RecallCardData[]; onDone?: () => void; initialIndex?: number; onProgress?: (index: number) => void }) {
+export function RecallStation({ cards, onDone, initialIndex = 0, onProgress, onErrorResolved }: { cards: RecallCardData[]; onDone?: () => void; initialIndex?: number; onProgress?: (index: number) => void; /** N-150 (D250): بطاقة خطأ قُيّمت جيد/سهل في الجولة ← تُحلّ */ onErrorResolved?: (errorId: string, rating: RecallRating) => void }) {
   const [index, setIndex] = useState(Math.max(0, Math.min(initialIndex, Math.max(0, cards.length - 1))));
   const [revealed, setRevealed] = useState(false);
   const card = cards[index];
@@ -61,7 +62,8 @@ export function RecallStation({ cards, onDone, initialIndex = 0, onProgress }: {
         speakText={card.speakText}
         revealed={revealed}
         onReveal={() => setRevealed(true)}
-        onRate={(_r: RecallRating) => {
+        onRate={(r: RecallRating) => {
+          if (card.kind === "error" && card.errorId && (r === "good" || r === "easy")) onErrorResolved?.(card.errorId, r);
           setRevealed(false);
           setIndex(index + 1);
           onProgress?.(index + 1); // N-006
@@ -433,8 +435,14 @@ export function PracticeStation({
   onProgress,
   unit0Shown,
   onUnit0Show,
+  lessonId,
+  onGrade,
 }: {
   data: PracticeData;
+  /** N-150 (D250): معرّف الدرس للدفتر — بلا توصيل لا التقاط (توافق الاختبارات القديمة) */
+  lessonId?: string;
+  /** N-150 (D250): كل محاولة غير كاملة (retry/close — والإنتاج الحر self لا يُلتقط: الحكم للمتعلم) */
+  onGrade?: (g: { skill: ErrorSkill; wrong: string; correct: string; explanation: string; source: string; closeSlip: boolean }) => void;
   redemittel?: Phrase[];
   onDone?: () => void;
   initial?: { station: number; item: number };
@@ -510,7 +518,32 @@ export function PracticeStation({
           key={`${state.station}-${state.item}`}
           item={typed}
           verdict={state.verdict}
-          onAttempt={(a) => setState(submitAttempt(state, typed, a))}
+          onAttempt={(a) => {
+            const ns = submitAttempt(state, typed, a);
+            setState(ns);
+            // N-150 (D250): التقاط تلقائي للدفتر الذهبي (§2.7 — كل خطأ يُسجَّل)
+            if (lessonId && onGrade && ns.verdict && (ns.verdict.status === "retry" || ns.verdict.status === "close") && typed.kind !== "production") {
+              const wrong =
+                typed.kind === "order"
+                  ? (Array.isArray(a) ? a.join(" ") : "") || "—"
+                  : typed.kind === "match"
+                    ? (typed.pairs
+                        .filter((pr) => (a as Readonly<Record<string, string>>)[pr.de] !== pr.ar)
+                        .map((pr) => `${pr.de}↔${(a as Readonly<Record<string, string>>)[pr.de] ?? "؟"}`)
+                        .join("، ") || "—")
+                    : (typeof a === "string" ? a : "") || "—";
+              const skill: ErrorSkill =
+                typed.kind === "choice" ? "lesen" : typed.kind === "order" ? "grammar" : typed.kind === "match" ? "vocab" : typed.mode === "dictation" ? "hoeren" : "schreiben";
+              onGrade({
+                skill,
+                wrong,
+                correct: ns.verdict.expected,
+                explanation: typed.why,
+                source: `${lessonId}/practice-s${state.station}-i${state.item}`,
+                closeSlip: ns.verdict.status === "close",
+              });
+            }
+          }}
         />
         {state.verdict && <FeedbackView verdict={state.verdict} onNext={next} />}
       </section>

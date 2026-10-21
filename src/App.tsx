@@ -35,6 +35,8 @@ import { SkillsLab } from "./components/SkillsLab.js";
 import { weekDots } from "./lib/day-engine.js";
 import { isRestDay } from "./lib/coach-engine.js";
 import { CoachBlock } from "./components/CoachBlock.js";
+import { GoldenBook } from "./components/GoldenBook.js";
+import { buildErrorRound, upsertGoldenError, type ErrorSkill } from "./lib/errors-engine.js";
 import { countDueSrs } from "./lib/review-engine.js";
 import { BRAND } from "./lib/brand.js";
 import { buildProgressMap } from "./lib/progress-engine.js";
@@ -62,8 +64,15 @@ function LessonRun({
   onProgress,
   unit0Shown,
   onUnit0Show,
+  errors,
+  onCapture,
+  onResolveError,
 }: {
   bundle: SessionBundle;
+  /** N-150 (D250): أخطاء الدفتر + الالتقاط + الحل */
+  errors: readonly import("./../content/schemas/index.js").ErrorEntry[];
+  onCapture: (input: { skill: ErrorSkill; wrong: string; correct: string; explanation: string; source: string; closeSlip: boolean }) => void;
+  onResolveError: (errorId: string) => void;
   priorAttempts: number;
   hasNext: boolean;
   onAttempt: (o: QuizOutcome) => void;
@@ -77,7 +86,10 @@ function LessonRun({
   onUnit0Show: (id: string) => void;
 }) {
   const { lesson } = bundle;
-  const plan = useMemo(() => planLessonStations(lesson, bundle.words, bundle.rules, bundle.story, bundle.scripts), [bundle]);
+  const plan = useMemo(
+    () => planLessonStations(lesson, bundle.words, bundle.rules, bundle.story, bundle.scripts, buildErrorRound([...errors])),
+    [bundle, errors],
+  );
   /** §6 + قانون الجبهة: Redemittel ضمن سياق الدرس — مما ظهر حتى درس الحصة فقط */
   const redemittel = useMemo(() => phrasesAvailable(bundle.bank, LESSON_ORDER, lesson.id).slice(0, 6), [bundle]);
   const [done, setDone] = useState<Partial<Record<Station, boolean>>>(() => ({
@@ -138,6 +150,7 @@ function LessonRun({
               snap.current.pos.recall = i;
               save();
             }}
+            onErrorResolved={(id) => onResolveError(id)}
           />
         ),
         learn: (
@@ -165,6 +178,8 @@ function LessonRun({
               snap.current.pos.practice = { station: st, item: i };
               save();
             }}
+            lessonId={lesson.id}
+            onGrade={(g) => onCapture(g)}
           />
         ),
         close: (
@@ -182,6 +197,16 @@ function LessonRun({
                 mark("close");
                 onAttempt(o);
               }}
+              onGrade={({ item, given, verdict }) =>
+                onCapture({
+                  skill: item.choices ? "lesen" : "schreiben",
+                  wrong: given || "—",
+                  correct: item.a,
+                  explanation: item.why ?? "قارن إجابتك بالتصحيح واستنتج الفرق.",
+                  source: `${lesson.id}/quiz`,
+                  closeSlip: verdict === "close",
+                })
+              }
             />
             {last && (
               <CloseStation
@@ -486,6 +511,15 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           initialOpen={openSessionFor(state.progress, session.lessonId)}
           onProgress={onProgress}
           unit0Shown={state.profile.unit0Shown}
+          errors={state.errors}
+          onCapture={(input) => {
+            const s = stateRef.current;
+            if (s) commit({ ...s, errors: upsertGoldenError(s.errors, input) });
+          }}
+          onResolveError={(id) => {
+            const s = stateRef.current;
+            if (s) commit({ ...s, errors: s.errors.map((e) => (e.id === id ? { ...e, resolved: true } : e)) });
+          }}
           onUnit0Show={(id) => {
             if (!stateRef.current!.profile.unit0Shown.includes(id))
               commit({ ...stateRef.current!, profile: { ...stateRef.current!.profile, unit0Shown: [...stateRef.current!.profile.unit0Shown, id] } });
@@ -516,6 +550,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       )}
       <MapView map={map} />
       <CoachBlock errors={state.errors} dueCount={dueCount} hasNewContent={!!current} />
+      <GoldenBook errors={state.errors} />
       <details data-testid="more-labs">
         <summary>🧪 المخابر والأدوات</summary>
       {labOpen ? (

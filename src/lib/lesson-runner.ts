@@ -1,6 +1,6 @@
 // src/lib/lesson-runner.ts — مُشغِّل الدرس: يحوّل محتوى الدرس (D3: بيانات في git) إلى شاشات الحصة الأربع
 // الربط: E01 (المحطات) · §2.5 (الاسترجاع) · F121 (محاولة قبل كشف) · D29 (حصة واحدة متصلة)
-import type { AudioScript, Lesson, Word } from "../../content/schemas/index.js";
+import type { AudioScript, ErrorEntry, Lesson, Word } from "../../content/schemas/index.js";
 import type { GrammarRule } from "./grammar-discovery.js";
 import { pronunciationHint } from "./phonetic-risks.js";
 import { goetheTagLabel } from "./goethe-tag.js";
@@ -15,8 +15,11 @@ export type RecallCardData = {
   front: string;
   back: string;
   /** D104: مسار الكلمة في المانيفست (word-<id>) + نصها المنطوق للاحتياطي (Web Speech) */
-  audioId: string;
+  audioId?: string;
   speakText: string;
+  /** N-150 (D250): بطاقة دفء أم جولة أخطاء (§2.7 — الجولة أولاً دائماً) */
+  kind: "warmup" | "error";
+  errorId?: string;
 };
 
 export type LearnCardData = {
@@ -130,12 +133,23 @@ function explainWord(w: Word, known: ReadonlyMap<string, Word>): string {
  * الاسترجاع (الدفء) ← الجديد (العرض) ← التدريب (المحطات + المهمة التواصلية) ← الخلاصة (المصائد + حزمة SRS).
  * أي كلمة مفقودة = خطأ فوري (لا شاشات ناقصة أبداً).
  */
-export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: readonly GrammarRule[] = [], story: readonly StoryBook[] = [], scripts: readonly AudioScript[] = []): LessonStationPlan {
+export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: readonly GrammarRule[] = [], story: readonly StoryBook[] = [], scripts: readonly AudioScript[] = [], errorRound: readonly ErrorEntry[] = []): LessonStationPlan {
   const known: ReadonlyMap<string, Word> = new Map(words.map((w) => [w.id, w]));
-  const recall: RecallCardData[] = lesson.warmup.cardIds.map((id) => {
-    const w = wordById(words, id);
-    return { id, front: fullForm(w), back: w.ar.join(" · "), audioId: `word-${w.id}`, speakText: fullForm(w) };
-  });
+  const recall: RecallCardData[] = [
+    // N-150 (D250): جولة الأخطاء الذهبية أولاً (الأقدم أولاً — جاهزة مرتبة من buildErrorRound)
+    ...errorRound.map((e) => ({
+      id: `err-round-${e.id}`,
+      front: `أصلح خطأك الذهبي 💛: «${e.payload.wrong}»`,
+      back: `${e.payload.correct} — ${e.payload.explanation}`,
+      speakText: e.payload.correct,
+      kind: "error" as const,
+      errorId: e.id,
+    })),
+    ...lesson.warmup.cardIds.map((id) => {
+      const w = wordById(words, id);
+      return { id, front: fullForm(w), back: w.ar.join(" · "), audioId: `word-${w.id}`, speakText: fullForm(w), kind: "warmup" as const };
+    }),
+  ];
   if (recall.length === 0) throw new Error("لا جلسة بلا استرجاع (F121): بطاقات الدفء مطلوبة");
 
   const learn: LearnCardData[] = lesson.praesentation.wordIds.map((id) => {
