@@ -128,7 +128,7 @@ describe("D104 — عامل الخدمة: اسم المنتج + GET فقط", () 
   const sw = readFileSync(join(process.cwd(), "public/sw.js"), "utf8");
   it("لا اسم داخلي في الأصل المنشور (D31) + الإصدار رُفع + لا تخزين لغير GET", () => {
     expect(sw).not.toMatch(/reise-yusuf/i);
-    expect(sw).toContain('const CACHE = "schluessel-v2"');
+    expect(sw).toContain('const CACHE = "schluessel-v3"'); // N-154 (D268): رُفع مع إصلاح المدى
     expect(sw).toContain('req.method !== "GET"');
   });
 });
