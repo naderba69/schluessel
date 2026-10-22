@@ -422,7 +422,15 @@ describe("المخابر مخفية عن المتعلم (N-155 · D269)", () => 
     expect(q("labs-view")).not.toBeNull();
     expect(q("labs-note")!.textContent).toContain("المطوّر");
     expect(q("bottom-nav")).toBeNull();
-    await waitFor(() => !!q("skills-lab") && !!q("system-lab"), "مختبرا المهارات والنظام");
+    // تحميل الحزمة قرص حقيقي — مؤقّتات حقيقية وانتظار فعلي (الوهمية هشّة في الخارج)
+    vi.useRealTimers();
+    for (let i = 0; i < 200 && (!q("skills-lab") || !q("system-lab")); i++) {
+      await act(async () => {
+        await new Promise((r) => setTimeout(r, 25));
+      });
+    }
+    expect(q("skills-lab")).not.toBeNull();
+    expect(q("system-lab")).not.toBeNull();
     await act(async () => {
       window.location.hash = "";
     });
