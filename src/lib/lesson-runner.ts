@@ -31,7 +31,7 @@ export type LearnCardData = {
   /** الشرح بعد المحاولة: التحديد الكامل + الجنس + مصيدة متوقعة */
   explanation: string;
   /** D104: «الصوت يُشغَّل لحظة ظهور الكلمة» (§3 Präsentation) — مسار الكلمة + نصها المنطوق */
-  audioId: string;
+  audioId?: string;
   speakText: string;
 };
 
@@ -154,13 +154,18 @@ export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: 
 
   const learn: LearnCardData[] = lesson.praesentation.wordIds.map((id) => {
     const w = wordById(words, id);
+    const promptDe = w.sampleSentence?.de ?? fullForm(w);
+    // N-154 (D270): ما يُعرَض يُنطَق — البطاقة تعرض الجملة النموذجية فزرّها ينطقها (بصوت المتصفح —
+    // الاحتياطي المشروع، قانون 11) بدل مقطع الكلمة المفردة الذي كان «يقطع» كل جملة بعد كلمتها الأولى.
+    // (مقاطع ملتزمة للجمل النموذجية ← طور المحتوى N-156.)
+    const isSentence = w.sampleSentence != null;
     return {
       wordId: id,
-      promptDe: w.sampleSentence?.de ?? fullForm(w),
+      promptDe,
       promptAr: w.sampleSentence?.ar ?? w.ar[0],
       explanation: explainWord(w, known),
-      audioId: `word-${w.id}`,
-      speakText: fullForm(w),
+      audioId: isSentence ? undefined : `word-${w.id}`,
+      speakText: promptDe,
     };
   });
 

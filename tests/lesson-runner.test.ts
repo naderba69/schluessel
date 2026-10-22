@@ -82,3 +82,24 @@ describe("جولة الأخطاء في الاسترجاع (N-150 · D250)", () =
     expect(plan.recall[1]!.kind).toBe("warmup");
   });
 });
+
+describe("ما يُعرَض يُنطَق (N-154 · D270)", () => {
+  it("بطاقة الجملة النموذجية: تنطق جملتها بلا مقطع كلمة (لا قطع بعد الأولى)", () => {
+    const plan = planLessonStations(firstLesson, firstLessonWords);
+    expect(plan.learn.length).toBeGreaterThan(0);
+    for (const c of plan.learn) {
+      expect(c.speakText, c.wordId).toBe(c.promptDe);
+      expect(c.audioId, c.wordId).toBeUndefined(); // كل كلمات A1 لها جملة نموذجية
+    }
+  });
+
+  it("بطاقة بلا جملة نموذجية: تبقي مقطع الكلمة (تراجع آمن)", () => {
+    const lesson = { ...firstLesson, praesentation: { ...firstLesson.praesentation } } as Lesson;
+    const words = firstLessonWords.map((w) => ({ ...w, sampleSentence: undefined }));
+    const plan = planLessonStations(lesson, words);
+    for (const c of plan.learn) {
+      expect(c.audioId, c.wordId).toBe(`word-${c.wordId}`);
+      expect(c.speakText, c.wordId).toBe(c.promptDe);
+    }
+  });
+});

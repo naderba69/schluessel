@@ -99,8 +99,9 @@ body {
   line-height: 1.8;
 }
 
-/* الحاوية (تتعايش مع MAIN_STYLE الخامل: 720px) */
+/* الحاوية (العرض من MAIN_STYLE · الحشوة هنا: 24 ← 16 للضيقة) */
 main {
+  padding: 24px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -108,7 +109,7 @@ main {
   min-height: 60vh;
 }
 @media (max-width: 760px) {
-  main { border-radius: 0; border-inline: 0; border-top: 0; }
+  main { border-radius: 0; border-inline: 0; border-top: 0; padding: 16px; }
 }
 
 h1 { font-size: 1.5rem; line-height: 1.5; margin: 0 0 0.6rem; }
@@ -820,4 +821,21 @@ span[dir="ltr"] {
   border-radius: var(--radius);
   padding: 0.6rem 0.9rem;
   font-weight: 700;
+}
+
+/* ═══════ 16 · إصلاحات الشاشة الصغيرة (N-155 · D270) ═══════ */
+/* عناوين الشريط لا تلتف أبداً + تصغير مدروس للشاشات الضيقة */
+[data-testid="bottom-nav"] button {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 380px) {
+  [data-testid="bottom-nav"] button { font-size: 0.72rem; }
+}
+/* جداول المخابر (مطوّر): تمرير أفقي بدل الكسر */
+[data-testid="skills-lab"] table,
+[data-testid="system-lab"] table {
+  display: block;
+  overflow-x: auto;
 }

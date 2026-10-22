@@ -45,7 +45,7 @@ import { BottomNav } from "./components/BottomNav.js";
 import { SettingsView } from "./components/SettingsView.js";
 import type { MainTab } from "./components/main-tabs.js";
 
-const MAIN_STYLE = { fontFamily: "sans-serif", padding: 24, maxWidth: 720, margin: "0 auto" } as const;
+const MAIN_STYLE = { maxWidth: 720, margin: "0 auto" } as const; // N-155 (D270): الحشوة والخط من app.css وحدها (مصدر واحد — قانون 30)
 
 /** تاريخ اليوم بتوقيت الجهاز (لا UTC — في تونس بعد منتصف الليل يختلف اليوم) */
 export function localDay(d = new Date()): string {
