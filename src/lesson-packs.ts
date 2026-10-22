@@ -53,6 +53,12 @@ export const FIRST_TAUGHT: Record<string, number> = (() => {
   return m;
 })();
 
+/** D271: مستوى أول درس يدرّس الكلمة — undefined للكلمة الغريبة عن الفهرس (تُستبعد من M بصدق) */
+export function levelOfWord(wordId: string): LessonIndexEntry["level"] | undefined {
+  const i = FIRST_TAUGHT[wordId];
+  return i === undefined ? undefined : LESSON_INDEX[i].level;
+}
+
 /** صف الفهرس لدرس — غيابه يعني درساً محذوفاً من git والمسار يشير إليه (D3: خطأ صريح) */
 export function indexEntry(lessonId: string): LessonIndexEntry {
   const e = LESSON_INDEX.find((x) => x.id === lessonId);

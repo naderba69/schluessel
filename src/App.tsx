@@ -21,6 +21,7 @@ import {
   LESSON_INDEX,
   LESSON_ORDER,
   indexEntry,
+  levelOfWord,
   loadSessionBundle,
   loadFirstSession,
   type SessionBundle,
@@ -406,6 +407,8 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     currentId,
     createdAtDay: state.profile.createdAt,
     todayDay: localDay(),
+    srsCards: state.srsCards,
+    cardLevelOf: levelOfWord,
   });
   /** N-147 (D247): شاشة اليوم §2.2 — نقاط الأسبوع + المستحق + الذهبية */
   const weekday = new Date().toLocaleDateString("ar", { weekday: "long" });
