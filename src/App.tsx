@@ -1,6 +1,6 @@
 // src/App.tsx — القشرة: أول تشغيل → تبويبات خمسة (اليوم · الخريطة · المدرب · الدفتر · الإعدادات) + حصة الدرس الحالي + بوابة Quiz + حفظ التقدّم (S0.6/S0.7/S0.8 + M1 + D117 + N-155/D269)
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { CoachWindow, LearnerState, OpenSession, Unit0Card } from "./../content/schemas/index.js";
+import type { CoachWindow, LearnerState, OpenSession, SrsCardState, Unit0Card } from "./../content/schemas/index.js";
 import { FirstRun } from "./components/FirstRun.js";
 import { LessonSession } from "./components/LessonSession.js";
 import {
@@ -13,7 +13,7 @@ import {
 import { QuizStation } from "./components/QuizStation.js";
 import { CoachPulse } from "./components/CoachPulse.js";
 import { BorrowedProvider } from "./components/StruckText.js";
-import { planLessonStations } from "./lib/lesson-runner.js";
+import { planLessonStations, type SrsDuePair } from "./lib/lesson-runner.js";
 import type { Station } from "./lib/lesson-engine.js";
 import { cardsForEvent, loadUnit0Deck } from "./lib/unit0.js";
 import { eveningReport, tomorrowPreview, muellerMessage } from "./lib/warmth-engine.js";
@@ -24,6 +24,7 @@ import {
   indexEntry,
   levelOfWord,
   loadSessionBundle,
+  loadWords,
   loadFirstSession,
   type SessionBundle,
 } from "./lesson-packs.js";
@@ -38,7 +39,7 @@ import { PULSE_BODY_AR, PULSE_TITLE_AR, SNOOZE_MIN, isRestDay, pulseKey, readPul
 import { CoachBlock } from "./components/CoachBlock.js";
 import { GoldenBook } from "./components/GoldenBook.js";
 import { buildErrorRound, upsertGoldenError, type ErrorSkill } from "./lib/errors-engine.js";
-import { countDueSrs } from "./lib/review-engine.js";
+import { MAX_DUE_PER_SESSION, applySrsRating, countDueSrs, dueSrsCards } from "./lib/review-engine.js";
 import { BRAND } from "./lib/brand.js";
 import { buildProgressMap } from "./lib/progress-engine.js";
 import { MapView } from "./components/MapView.js";
@@ -71,12 +72,17 @@ function LessonRun({
   errors,
   onCapture,
   onResolveError,
+  srsCards,
+  onSrsRated,
 }: {
   bundle: SessionBundle;
   /** N-150 (D250): أخطاء الدفتر + الالتقاط + الحل */
   errors: readonly import("./../content/schemas/index.js").ErrorEntry[];
   onCapture: (input: { skill: ErrorSkill; wrong: string; correct: string; explanation: string; source: string; closeSlip: boolean }) => void;
   onResolveError: (errorId: string) => void;
+  /** D273: بطاقات SRS + حفظ التقييم — المستحق يُراجَع ويُجدوَل */
+  srsCards: readonly SrsCardState[];
+  onSrsRated: (srsCardId: string, rating: import("./lib/review-engine.js").RecallRating) => void;
   priorAttempts: number;
   hasNext: boolean;
   onAttempt: (o: QuizOutcome) => void;
@@ -90,9 +96,23 @@ function LessonRun({
   onUnit0Show: (id: string) => void;
 }) {
   const { lesson } = bundle;
+  /** D273: أزواج المستحق (الحالة + الكلمة) — كلمات الدروس الأخرى تُحمَّل كسلاً */
+  const [srsDue, setSrsDue] = useState<readonly SrsDuePair[]>([]);
+  useEffect(() => {
+    let alive = true;
+    const due = dueSrsCards(srsCards).slice(0, MAX_DUE_PER_SESSION);
+    const have = new Map(bundle.words.map((w) => [w.id, w]));
+    const missing = due.map((c) => c.cardId).filter((id) => !have.has(id));
+    Promise.allSettled(missing.map((id) => loadWords([id]).then((ws) => ws[0]!))).then((rs) => {
+      if (!alive) return;
+      for (const r of rs) if (r.status === "fulfilled" && r.value) have.set(r.value.id, r.value);
+      setSrsDue(due.flatMap((card) => { const word = have.get(card.cardId); return word ? [{ card, word }] : []; }));
+    });
+    return () => { alive = false; };
+  }, [bundle.words, srsCards]);
   const plan = useMemo(
-    () => planLessonStations(lesson, bundle.words, bundle.rules, bundle.story, bundle.scripts, buildErrorRound([...errors])),
-    [bundle, errors],
+    () => planLessonStations(lesson, bundle.words, bundle.rules, bundle.story, bundle.scripts, buildErrorRound([...errors]), srsDue),
+    [bundle, errors, srsDue],
   );
   /** §6 + قانون الجبهة: Redemittel ضمن سياق الدرس — مما ظهر حتى درس الحصة فقط */
   const redemittel = useMemo(() => phrasesAvailable(bundle.bank, LESSON_ORDER, lesson.id).slice(0, 6), [bundle]);
@@ -155,6 +175,7 @@ function LessonRun({
               save();
             }}
             onErrorResolved={(id) => onResolveError(id)}
+            onSrsRated={(id, r) => onSrsRated(id, r)}
           />
         ),
         learn: (
@@ -643,6 +664,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           onResolveError={(id) => {
             const s = stateRef.current;
             if (s) commit({ ...s, errors: s.errors.map((e) => (e.id === id ? { ...e, resolved: true } : e)) });
+          }}
+          srsCards={state.srsCards}
+          onSrsRated={(id, rating) => {
+            const st = stateRef.current;
+            if (st) commit({ ...st, srsCards: applySrsRating(st.srsCards, id, rating) });
           }}
           onUnit0Show={(id) => {
             if (!stateRef.current!.profile.unit0Shown.includes(id))

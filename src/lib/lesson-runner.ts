@@ -1,6 +1,8 @@
 // src/lib/lesson-runner.ts — مُشغِّل الدرس: يحوّل محتوى الدرس (D3: بيانات في git) إلى شاشات الحصة الأربع
 // الربط: E01 (المحطات) · §2.5 (الاسترجاع) · F121 (محاولة قبل كشف) · D29 (حصة واحدة متصلة)
 import type { AudioScript, ErrorEntry, Lesson, Word } from "../../content/schemas/index.js";
+import type { SrsCardState } from "../../content/schemas/index.js";
+import { srsDirection } from "./review-engine.js";
 import type { GrammarRule } from "./grammar-discovery.js";
 import { pronunciationHint } from "./phonetic-risks.js";
 import { goetheTagLabel } from "./goethe-tag.js";
@@ -17,10 +19,30 @@ export type RecallCardData = {
   /** D104: مسار الكلمة في المانيفست (word-<id>) + نصها المنطوق للاحتياطي (Web Speech) */
   audioId?: string;
   speakText: string;
-  /** N-150 (D250): بطاقة دفء أم جولة أخطاء (§2.7 — الجولة أولاً دائماً) */
-  kind: "warmup" | "error";
+  /** N-150 (D250): بطاقة دفء أم جولة أخطاء (§2.7 — الجولة أولاً دائماً) · D273: بطاقة SRS مستحقة */
+  kind: "warmup" | "error" | "srs";
   errorId?: string;
+  /** D273: معرّف بطاقة SRS — تقييمها يُجدولها (scheduleRecall) */
+  srsCardId?: string;
 };
+
+/** D273: زوج مستحق — حالة الجدولة + كلمتها */
+export type SrsDuePair = { card: SrsCardState; word: Word };
+
+/**
+ * D273: بطاقات المستحق من الأزواج — الاتجاه بالتناوب (F039):
+ * إنتاج ar→de (الوجه: المعنى — يُقال بالألمانية) أو فهم de→ar (الوجه: الصيغة — معناها؟).
+ */
+export function srsRecallCards(pairs: readonly SrsDuePair[]): RecallCardData[] {
+  return pairs.map(({ card, word }) => {
+    const dir = srsDirection(card);
+    const de = fullForm(word);
+    const ar = word.ar.join(" · ");
+    return dir === "production"
+      ? { id: `srs-${card.cardId}`, front: `«${ar}» — قلها بالألمانية`, back: de, audioId: `word-${word.id}`, speakText: de, kind: "srs" as const, srsCardId: card.cardId }
+      : { id: `srs-${card.cardId}`, front: de, back: ar, audioId: `word-${word.id}`, speakText: de, kind: "srs" as const, srsCardId: card.cardId };
+  });
+}
 
 export type LearnCardData = {
   wordId: string;
@@ -133,7 +155,7 @@ function explainWord(w: Word, known: ReadonlyMap<string, Word>): string {
  * الاسترجاع (الدفء) ← الجديد (العرض) ← التدريب (المحطات + المهمة التواصلية) ← الخلاصة (المصائد + حزمة SRS).
  * أي كلمة مفقودة = خطأ فوري (لا شاشات ناقصة أبداً).
  */
-export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: readonly GrammarRule[] = [], story: readonly StoryBook[] = [], scripts: readonly AudioScript[] = [], errorRound: readonly ErrorEntry[] = []): LessonStationPlan {
+export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: readonly GrammarRule[] = [], story: readonly StoryBook[] = [], scripts: readonly AudioScript[] = [], errorRound: readonly ErrorEntry[] = [], srsDue: readonly SrsDuePair[] = []): LessonStationPlan {
   const known: ReadonlyMap<string, Word> = new Map(words.map((w) => [w.id, w]));
   const recall: RecallCardData[] = [
     // N-150 (D250): جولة الأخطاء الذهبية أولاً (الأقدم أولاً — جاهزة مرتبة من buildErrorRound)
@@ -149,6 +171,8 @@ export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: 
       const w = wordById(words, id);
       return { id, front: fullForm(w), back: w.ar.join(" · "), audioId: `word-${w.id}`, speakText: fullForm(w), kind: "warmup" as const };
     }),
+    // D273: المستحق بعد الدفء (MR2: دفء ← مستحقات — بسقف 15 يُطبَّق عند النداء، أ-9)
+    ...srsRecallCards(srsDue),
   ];
   if (recall.length === 0) throw new Error("لا جلسة بلا استرجاع (F121): بطاقات الدفء مطلوبة");
 

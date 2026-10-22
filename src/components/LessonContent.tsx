@@ -45,7 +45,7 @@ export function insertAtCursor(el: HTMLInputElement | null, text: string, ch: st
 }
 
 /** محطة 1 — الاسترجاع: بطاقة بعد بطاقة، والتقييم يمرّر للتالية */
-export function RecallStation({ cards, onDone, initialIndex = 0, onProgress, onErrorResolved }: { cards: RecallCardData[]; onDone?: () => void; initialIndex?: number; onProgress?: (index: number) => void; /** N-150 (D250): بطاقة خطأ قُيّمت جيد/سهل في الجولة ← تُحلّ */ onErrorResolved?: (errorId: string, rating: RecallRating) => void }) {
+export function RecallStation({ cards, onDone, initialIndex = 0, onProgress, onErrorResolved, onSrsRated }: { cards: RecallCardData[]; onDone?: () => void; initialIndex?: number; onProgress?: (index: number) => void; /** N-150 (D250): بطاقة خطأ قُيّمت جيد/سهل في الجولة ← تُحلّ */ onErrorResolved?: (errorId: string, rating: RecallRating) => void; /** D273: بطاقة SRS قُيّمت ← تُجدوَل (scheduleRecall) */ onSrsRated?: (srsCardId: string, rating: RecallRating) => void }) {
   const [index, setIndex] = useState(Math.max(0, Math.min(initialIndex, Math.max(0, cards.length - 1))));
   const [revealed, setRevealed] = useState(false);
   const card = cards[index];
@@ -64,6 +64,7 @@ export function RecallStation({ cards, onDone, initialIndex = 0, onProgress, onE
         onReveal={() => setRevealed(true)}
         onRate={(r: RecallRating) => {
           if (card.kind === "error" && card.errorId && (r === "good" || r === "easy")) onErrorResolved?.(card.errorId, r);
+          if (card.kind === "srs" && card.srsCardId) onSrsRated?.(card.srsCardId, r); // D273: كل تقييم يُجدوِل
           setRevealed(false);
           setIndex(index + 1);
           onProgress?.(index + 1); // N-006
