@@ -62,3 +62,14 @@ self.addEventListener("fetch", (e) => {
     }).catch(() => caches.match("./index.html"))),
   );
 });
+
+/** D272 (F002): النقر على إشعار النافذة يفتح التطبيق على الشاشة — نافذة موجودة تُركَّز وإلا تُفتح */
+self.addEventListener("notificationclick", (e) => {
+  e.notification.close();
+  e.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((list) => {
+      if (list.length > 0) return list[0].focus();
+      if (self.clients.openWindow) return self.clients.openWindow("/");
+    }),
+  );
+});

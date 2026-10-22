@@ -48,6 +48,7 @@ export function CoachBlock({
       <p data-testid="coach-windows">
         نوافذ المدرب: {windows.map((w) => WINDOW_LABELS_AR[w]).join(" · ")}
       </p>
+      <NotificationOptIn />
       {phrase && (
         <p data-testid="coach-phrase">
           ☀️ عبارة اليوم (10 ثوانٍ — اسمع وردّد): <span dir="ltr">«{phrase.de}»</span>{" "}
@@ -100,5 +101,28 @@ export function CoachBlock({
         </div>
       )}
     </section>
+  );
+}
+
+/** D272: تفعيل تذكير النوافذ — اختياري صريح؛ الرفض يُحترم بلا لوم ولا إلحاح */
+export function NotificationOptIn() {
+  const supported = typeof Notification !== "undefined";
+  const [perm, setPerm] = useState<string>(supported ? Notification.permission : "unsupported");
+  if (!supported) return null;
+  if (perm === "granted")
+    return <p data-testid="notify-status">🔔 تذكير النوافذ مفعّل — مولر ينبض بلطف في وقتك 🌱</p>;
+  if (perm === "denied")
+    return (
+      <p data-testid="notify-status">🔕 التذكير مطفأ من المتصفح — لا بأس إطلاقاً، المدرب هنا متى جئت.</p>
+    );
+  return (
+    <button
+      data-testid="notify-enable"
+      onClick={() => {
+        Notification.requestPermission().then(setPerm).catch(() => setPerm(Notification.permission));
+      }}
+    >
+      🔔 فعّل تذكير النوافذ (اختياري)
+    </button>
   );
 }

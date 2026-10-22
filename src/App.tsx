@@ -1,6 +1,6 @@
 // src/App.tsx — القشرة: أول تشغيل → تبويبات خمسة (اليوم · الخريطة · المدرب · الدفتر · الإعدادات) + حصة الدرس الحالي + بوابة Quiz + حفظ التقدّم (S0.6/S0.7/S0.8 + M1 + D117 + N-155/D269)
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { LearnerState, OpenSession, Unit0Card } from "./../content/schemas/index.js";
+import type { CoachWindow, LearnerState, OpenSession, Unit0Card } from "./../content/schemas/index.js";
 import { FirstRun } from "./components/FirstRun.js";
 import { LessonSession } from "./components/LessonSession.js";
 import {
@@ -11,6 +11,7 @@ import {
   JitCardOverlay,
 } from "./components/LessonContent.js";
 import { QuizStation } from "./components/QuizStation.js";
+import { CoachPulse } from "./components/CoachPulse.js";
 import { BorrowedProvider } from "./components/StruckText.js";
 import { planLessonStations } from "./lib/lesson-runner.js";
 import type { Station } from "./lib/lesson-engine.js";
@@ -33,7 +34,7 @@ import type { QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
 import { weekDots } from "./lib/day-engine.js";
-import { isRestDay } from "./lib/coach-engine.js";
+import { PULSE_BODY_AR, PULSE_TITLE_AR, SNOOZE_MIN, isRestDay, pulseKey, readPulseStore, shouldPulse, writePulseStore } from "./lib/coach-engine.js";
 import { CoachBlock } from "./components/CoachBlock.js";
 import { GoldenBook } from "./components/GoldenBook.js";
 import { buildErrorRound, upsertGoldenError, type ErrorSkill } from "./lib/errors-engine.js";
@@ -251,6 +252,8 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [finishedNote, setFinishedNote] = useState<string | null>(null);
   /** N-155 (D269): التبويب الحالي — اليوم افتراضياً (قالب ثابت، قانون 16) */
   const [tab, setTab] = useState<MainTab>("today");
+  /** D272: نافذة المدرب الحائنة الآن — شريط على الشاشة + إشعار نظام */
+  const [pulse, setPulse] = useState<CoachWindow | null>(null);
   /** N-155 (D269): وضع المطوّر (#labs في العنوان) — المخابر مخفية عن المتعلم تماماً */
   const [labsMode, setLabsMode] = useState(
     () => typeof window !== "undefined" && window.location.hash === "#labs",
@@ -262,6 +265,37 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
+
+/** D272: نبض النوافذ — فحص كل 30 ثانية؛ أثناء الحصة صمت (وضع التركيز) */
+  useEffect(() => {
+    if (!state || session) return;
+    const windows = state.profile.coachWindows;
+    const tick = () => {
+      const now = new Date();
+      const store = readPulseStore();
+      const w = shouldPulse(now, windows, store);
+      if (!w) return;
+      const key = pulseKey(now, w);
+      writePulseStore({ seen: [...store.seen, key], snoozeUntilMs: store.snoozeUntilMs });
+      setPulse(w);
+      if (typeof Notification !== "undefined" && Notification.permission === "granted") {
+        try {
+          const n = new Notification(PULSE_TITLE_AR, { body: PULSE_BODY_AR[w], tag: key });
+          n.onclick = () => {
+            window.focus();
+            setTab("coach");
+            setPulse(null);
+          };
+        } catch {
+          /* الإشعار رفاهية — الشريط على الشاشة هو الأساس */
+        }
+      }
+    };
+    tick();
+    const id = setInterval(tick, 30000);
+    return () => clearInterval(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state, session]);
 
   // التحميل: الحالة المحفوظة ← مصالحة المسار مع ترتيب المحتوى الحالي · التالفة لا تُمسّ (شاشة إنقاذ)
   useEffect(() => {
@@ -501,6 +535,21 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           <span data-testid="journey-name"> · 🗺️ رحلة «{(state.profile.journeyName ?? "").trim()}»</span>
         )}
       </p>
+      {pulse && !session && !labsMode && (
+        <CoachPulse
+          window={pulse}
+          onTrain={() => {
+            setTab("coach");
+            setPulse(null);
+          }}
+          onSnooze={() => {
+            const store = readPulseStore();
+            writePulseStore({ seen: store.seen, snoozeUntilMs: Date.now() + SNOOZE_MIN * 60000 });
+            setPulse(null);
+          }}
+          onDismiss={() => setPulse(null)}
+        />
+      )}
       <h1>أهلاً {state.profile.name} · اليوم: {weekday}</h1>
       {!store.persistent && (
         <p data-testid="no-storage" role="alert">

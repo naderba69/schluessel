@@ -103,3 +103,88 @@ export function pickCoachDrill(errors: readonly ErrorEntry[]): ErrorEntry | null
   if (open.length === 0) return null;
   return [...open].sort((a, b) => b.createdAt.localeCompare(a.createdAt))[0]!;
 }
+
+/* ══════════ D272 — نبض النوافذ (F002): تذكير لطيف يفتح على الشاشة ══════════ */
+/** النطاقات الزمنية للنوافذ الرمزية (بالدقائق من منتصف الليل — توقيت الجهاز) */
+export const WINDOW_RANGES: Record<CoachWindow, { startMin: number; endMin: number }> = {
+  midday: { startMin: 12 * 60, endMin: 14 * 60 }, // 12:00–14:00
+  afternoon: { startMin: 15 * 60 + 30, endMin: 17 * 60 + 30 }, // 15:30–17:30
+  evening: { startMin: 19 * 60 + 30, endMin: 20 * 60 + 30 }, // 19:30–20:30 (قبل سهرة الإغلاق)
+};
+/** ساعات الصمت الليلي — لا نبض ولا إشعار فيها أبداً */
+export const QUIET_START_MIN = 22 * 60; // 22:00
+export const QUIET_END_MIN = 8 * 60; // 08:00
+/** التأجيل اللطيف: ساعة واحدة */
+export const SNOOZE_MIN = 60;
+
+const minOfDay = (d: Date) => d.getHours() * 60 + d.getMinutes();
+const dayKeyOf = (d: Date) => `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+
+/** النافذة المختارة الحائنة الآن — null خارج النطاقات */
+export function windowDueNow(now: Date, windows: readonly CoachWindow[]): CoachWindow | null {
+  const m = minOfDay(now);
+  for (const w of windows) {
+    const r = WINDOW_RANGES[w];
+    if (m >= r.startMin && m < r.endMin) return w;
+  }
+  return null;
+}
+
+/** هل نحن في صمت الليل؟ */
+export function isQuietHours(now: Date): boolean {
+  const m = minOfDay(now);
+  return m >= QUIET_START_MIN || m < QUIET_END_MIN;
+}
+
+/** مخزن النبض اليومي — يُحفظ في localStorage (يبقى بعد إعادة التحميل) */
+export type PulseStore = { seen: string[]; snoozeUntilMs: number };
+export const PULSE_STORE_KEY = "schluessel-pulse-v1";
+export const pulseKey = (now: Date, w: CoachWindow) => `${dayKeyOf(now)}:${w}`;
+
+export function readPulseStore(): PulseStore {
+  try {
+    if (typeof localStorage === "undefined") return { seen: [], snoozeUntilMs: 0 };
+    const raw = localStorage.getItem(PULSE_STORE_KEY);
+    if (!raw) return { seen: [], snoozeUntilMs: 0 };
+    const p = JSON.parse(raw) as Partial<PulseStore>;
+    return { seen: Array.isArray(p.seen) ? p.seen.filter((s) => typeof s === "string") : [], snoozeUntilMs: typeof p.snoozeUntilMs === "number" ? p.snoozeUntilMs : 0 };
+  } catch {
+    return { seen: [], snoozeUntilMs: 0 };
+  }
+}
+
+export function writePulseStore(store: PulseStore): void {
+  try {
+    if (typeof localStorage === "undefined") return;
+    localStorage.setItem(PULSE_STORE_KEY, JSON.stringify(store));
+  } catch {
+    /* التخزين ممتلئ/محظور — النبض يعمل للجلسة الحالية فقط */
+  }
+}
+
+/**
+ * هل يحين النبض الآن؟ الحراس بالترتيب: الأحد صمت · الليل صمت · نافذة حائنة ·
+ * لم تُعرض اليوم · انتهى التأجيل. تُعرض كل نافذة مرة واحدة في يومها.
+ */
+export function shouldPulse(
+  now: Date,
+  windows: readonly CoachWindow[],
+  store: PulseStore,
+): CoachWindow | null {
+  if (isRestDay(now) || isQuietHours(now)) return null;
+  if (now.getTime() < store.snoozeUntilMs) return null;
+  const w = windowDueNow(now, windows);
+  if (!w) return null;
+  if (store.seen.includes(pulseKey(now, w))) return null;
+  return w;
+}
+
+/** نص النبض الدافئ — بلا لوم أبداً (D23): دعوة لا توبيخ */
+export const PULSE_TITLE_AR = "🤝 مولر — دقيقة تثبيت";
+export const PULSE_BODY_AR: Record<CoachWindow, string> = {
+  midday: "استراحة الظهيرة 🌱 دقيقة تثبيت إن ناسبك — وإن كنت مشغولاً فتجاهلني بلا أي حرج.",
+  afternoon: "العصر وقت مناسب للتثبيت 🌱 دقيقة واحدة فقط — أو أجّلني، لا بأس إطلاقاً.",
+  evening: "قبل أن ينتهي اليوم 🌱 دقيقة مع أخطائك الذهبية — وإن تعبت فالراحة أولى.",
+};
+/** كلمات اللوم الممنوعة في أي نص مدرب — يفحصها الاختبار (D23) */
+export const BLAME_WORDS = ["فاتك", "خسرت", "لم تتدرب", "تأخرت", "كسل", "عقاب", "متأخر"];
