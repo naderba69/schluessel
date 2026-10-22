@@ -1,7 +1,6 @@
-// src/App.tsx — القشرة: أول تشغيل → مسار الدروس + حصة الدرس الحالي + بوابة Quiz + حفظ التقدّم (S0.6/S0.7/S0.8 + M1 + D117)
+// src/App.tsx — القشرة: أول تشغيل → تبويبات خمسة (اليوم · الخريطة · المدرب · الدفتر · الإعدادات) + حصة الدرس الحالي + بوابة Quiz + حفظ التقدّم (S0.6/S0.7/S0.8 + M1 + D117 + N-155/D269)
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { LearnerState, OpenSession, Unit0Card } from "./../content/schemas/index.js";
-import { GenderBadge } from "./components/GenderBadge.js";
 import { FirstRun } from "./components/FirstRun.js";
 import { LessonSession } from "./components/LessonSession.js";
 import {
@@ -42,6 +41,9 @@ import { BRAND } from "./lib/brand.js";
 import { buildProgressMap } from "./lib/progress-engine.js";
 import { MapView } from "./components/MapView.js";
 import { SystemLab } from "./components/SystemLab.js";
+import { BottomNav } from "./components/BottomNav.js";
+import { SettingsView } from "./components/SettingsView.js";
+import type { MainTab } from "./components/main-tabs.js";
 
 const MAIN_STYLE = { fontFamily: "sans-serif", padding: 24, maxWidth: 720, margin: "0 auto" } as const;
 
@@ -246,9 +248,19 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [firstError, setFirstError] = useState<string | null>(null);
   const sessionStart = useRef<number>(0); // N-007: بداية الحصة لقياس مدتها عند النهاية
   const [finishedNote, setFinishedNote] = useState<string | null>(null);
-  const [labOpen, setLabOpen] = useState(false);
-  const [systemOpen, setSystemOpen] = useState(false);
+  /** N-155 (D269): التبويب الحالي — اليوم افتراضياً (قالب ثابت، قانون 16) */
+  const [tab, setTab] = useState<MainTab>("today");
+  /** N-155 (D269): وضع المطوّر (#labs في العنوان) — المخابر مخفية عن المتعلم تماماً */
+  const [labsMode, setLabsMode] = useState(
+    () => typeof window !== "undefined" && window.location.hash === "#labs",
+  );
   const [jitCard, setJitCard] = useState<Unit0Card | null>(null);
+
+  useEffect(() => {
+    const onHash = () => setLabsMode(window.location.hash === "#labs");
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
 
   // التحميل: الحالة المحفوظة ← مصالحة المسار مع ترتيب المحتوى الحالي · التالفة لا تُمسّ (شاشة إنقاذ)
   useEffect(() => {
@@ -268,10 +280,10 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     };
   }, [store]);
 
-  // N-050: حزمة الدرس الأول عند الحاجة (الشاشة الأولى أو المخابر) — لا مع الغلاف
+  // N-050: حزمة الدرس الأول عند الحاجة (أول تشغيل أو تبويب المدرب أو وضع المطوّر) — لا مع الغلاف
   useEffect(() => {
-    // العائد بحالة محفوظة لا يحتاج الدرس الأول — يُحمَّل له وحده عند فتح مختبر
-    const needFirst = (boot.phase === "ready" && (!state || onboarding)) || labOpen || systemOpen;
+    // العائد بحالة محفوظة لا يحتاج الدرس الأول — يُحمَّل له وحده عند تبويب المدرب أو #labs
+    const needFirst = (boot.phase === "ready" && (!state || onboarding)) || tab === "coach" || labsMode;
     if (!needFirst || firstBundle || firstError) return;
     let alive = true;
     void loadFirstSession().then(
@@ -285,7 +297,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     return () => {
       alive = false;
     };
-  }, [boot.phase, state, onboarding, labOpen, systemOpen, firstBundle, firstError]);
+  }, [boot.phase, state, onboarding, tab, labsMode, firstBundle, firstError]);
 
   /** كل تغيير في الحالة يُحفظ فوراً — والفشل يُعلن (لا يُبلع) */
   const commit = (next: LearnerState) => {
@@ -500,6 +512,62 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       {finishedNote && <p data-testid="finished-note">{finishedNote}</p>}
 
       {jitCard && <JitCardOverlay card={jitCard} onDismiss={dismissJit} />}
+      {labsMode ? (
+        <div data-testid="labs-view">
+          <p data-testid="labs-note">🔧 وضع المطوّر — مختبرات الفحص (مخفية عن المتعلم).</p>
+          {firstError ? (
+            <p role="alert">تعذّر تجهيز المختبرات ({firstError}).</p>
+          ) : firstBundle ? (
+            <>
+              <SkillsLab currentLessonId={currentId} words={firstBundle.direct} />
+              <SystemLab
+                words={firstBundle.direct}
+                progress={state.progress}
+                profile={{
+                  name: state.profile.name,
+                  journeyName: state.profile.journeyName ?? "",
+                  coachWindows: state.profile.coachWindows ?? ["midday", "afternoon", "evening"],
+                }}
+                onSaveProfile={(patch) => commit({ ...state, profile: { ...state.profile, ...patch } })}
+              />
+            </>
+          ) : (
+            <p data-testid="lab-loading">جارٍ تجهيز المختبرات…</p>
+          )}
+        </div>
+      ) : tab === "map" ? (
+        <MapView map={map} />
+      ) : tab === "coach" ? (
+        <CoachBlock
+          errors={state.errors}
+          dueCount={dueCount}
+          hasNewContent={!!current}
+          windows={state.profile.coachWindows}
+          words={firstBundle?.direct ?? []}
+        />
+      ) : tab === "golden" ? (
+        <GoldenBook errors={state.errors} />
+      ) : tab === "settings" ? (
+        <SettingsView
+          profile={{
+            name: state.profile.name,
+            journeyName: state.profile.journeyName ?? "",
+            coachWindows: state.profile.coachWindows ?? ["midday", "afternoon", "evening"],
+          }}
+          onSaveProfile={(patch) => commit({ ...state, profile: { ...state.profile, ...patch } })}
+          onWipe={() =>
+            void store.clear().then(
+              () => {
+                setState(null);
+                setSession(null);
+                setTab("today");
+              },
+              (e) => setSaveError(errText(e)),
+            )
+          }
+        />
+      ) : (
+        <>
       <p data-testid="week-dots">
         <span dir="ltr">{week.dots.map((d) => (d ? "●" : "○")).join("")}</span> أسبوعك ({week.studied}/7)
       </p>
@@ -552,58 +620,9 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       {isRestDay(new Date()) && (
         <p data-testid="rest-day-note">🌿 اليوم الأحد راحة — لا شيء مطلوب منك. زر الجلسة يعمل لمن أراد، بلا لوم.</p>
       )}
-      <MapView map={map} />
-      <CoachBlock
-        errors={state.errors}
-        dueCount={dueCount}
-        hasNewContent={!!current}
-        windows={state.profile.coachWindows}
-        words={firstBundle?.direct ?? []}
-      />
-      <GoldenBook errors={state.errors} />
-      <details data-testid="more-labs">
-        <summary>🧪 المخابر والأدوات</summary>
-      {labOpen ? (
-        firstBundle ? (
-          <SkillsLab currentLessonId={currentId} words={firstBundle.direct} />
-        ) : (
-          <p data-testid="lab-loading">جارٍ تجهيز المختبر…</p>
-        )
-      ) : (
-        <button data-testid="open-skills-lab" onClick={() => setLabOpen(true)}>
-          🧪 افتح مختبر المهارات
-        </button>
+        </>
       )}
-
-      {systemOpen ? (
-        firstBundle ? (
-          <SystemLab
-            words={firstBundle.direct}
-            progress={state.progress}
-            profile={{
-              name: state.profile.name,
-              journeyName: state.profile.journeyName ?? "",
-              coachWindows: state.profile.coachWindows ?? ["midday", "afternoon", "evening"],
-            }}
-            onSaveProfile={(patch) => commit({ ...state, profile: { ...state.profile, ...patch } })}
-          />
-        ) : (
-          <p data-testid="lab-loading">جارٍ تجهيز اللوحة…</p>
-        )
-      ) : (
-        <button data-testid="open-system-lab" onClick={() => setSystemOpen(true)}>
-          🛠️ افتح لوحة النظام
-        </button>
-      )}
-
-      </details>
-      <details data-testid="more-gender">
-        <summary>عن الترميز المزدوج للجنس (§15‑هـ)</summary>
-      <p>
-        <GenderBadge gender="der" word="Tisch" /> | <GenderBadge gender="die" word="Wohnung" /> |{" "}
-        <GenderBadge gender="das" word="Kind" />
-      </p>
-      </details>
+      {!session && !labsMode && <BottomNav tab={tab} onTab={setTab} />}
     </main>
   );
 }

@@ -1,5 +1,5 @@
 // @vitest-environment happy-dom
-// tests/today-screen.test.tsx — شاشة اليوم §2.2 (N-147 · D247): تحية + يوم + نقاط أسبوع + زر واحد + عدّادان — والمخابر والمسار في تفاصيل مطوية
+// tests/today-screen.test.tsx — شاشة اليوم §2.2 (N-147 · D247 + تبويبات N-155 · D269): تحية + يوم + نقاط + زر واحد + عدّادان — والباقي في 5 تبويبات
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { act } from "react";
 import { createRoot, type Root } from "react-dom/client";
@@ -20,6 +20,7 @@ const q = (id: string) => container.querySelector<HTMLElement>(`[data-testid="${
 
 beforeEach(() => {
   container = document.createElement("div");
+  window.location.hash = ""; // N-155: عزل وضع المطوّر بين الاختبارات
   document.body.appendChild(container);
   root = createRoot(container);
 });
@@ -32,6 +33,11 @@ afterEach(async () => {
 async function click(el: Element | null) {
   if (!el) throw new Error("زر غير موجود");
   await act(async () => (el as HTMLElement).click());
+}
+
+async function waitFor(cond: () => boolean, what: string) {
+  for (let i = 0; i < 100 && !cond(); i++) await act(async () => {});
+  if (!cond()) throw new Error(`انتهت المهلة: ${what}`);
 }
 
 const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -92,25 +98,40 @@ describe("شاشة اليوم §2.2 (N-147)", () => {
     expect(q("brand-header")!.textContent).toContain("مفتاح");
   });
 
-  it("زر واحد كبير لجلسة اليوم + المخابر والمسار مطوية تحته", async () => {
+  it("زر واحد كبير لجلسة اليوم + الباقي في تبويبات (لا تكديس — N-155)", async () => {
     await renderSeeded();
     const btn = q("start-session")!;
     expect(btn.textContent).toContain("120 دقيقة");
     expect(btn.closest("details")).toBeNull(); // الزر ظاهر لا مطوي
     expect(q("current-lesson")!.closest("details")).toBeNull(); // الهدف ظاهر
-    // المطوي: المخابر والمسار والترميز
-    expect(q("open-skills-lab")!.closest("details")!.getAttribute("data-testid")).toBe("more-labs");
-    expect(q("open-system-lab")!.closest("details")!.getAttribute("data-testid")).toBe("more-labs");
-    expect(q("path-list")).toBeNull(); // القائمة الكاملة انتقلت إلى لوحة النظام
-    expect(q("post-first-run")).toBeNull();
-    expect(q("progress-map")).not.toBeNull(); // الخريطة الهادئة ظاهرة بدلها
-    expect(q("more-gender")!.textContent).toContain("Tisch");
+    // اليوم وحده ظاهر: لا خريطة ولا مدرب ولا دفتر ولا مخابر ولا ترميز
+    expect(q("progress-map")).toBeNull();
+    expect(q("coach-block")).toBeNull();
+    expect(q("golden-book")).toBeNull();
+    expect(q("open-skills-lab")).toBeNull();
+    expect(q("open-system-lab")).toBeNull();
+    expect(q("more-labs")).toBeNull();
+    expect(q("more-gender")).toBeNull();
+    expect(q("path-list")).toBeNull();
+    // الشريط السفلي بخمسة أقسام — اليوم مفعّل
+    expect(q("bottom-nav")).not.toBeNull();
+    for (const t of ["today", "map", "coach", "golden", "settings"]) expect(q(`tab-${t}`)).not.toBeNull();
+    expect(q("tab-today")!.getAttribute("data-active")).toBe("yes");
+  });
+
+  it("أثناء الحصة: الشريط مخفي (تركيز — N-155)", async () => {
+    await renderSeeded();
+    expect(q("bottom-nav")).not.toBeNull();
+    await click(q("start-session"));
+    if (q("jit-overlay")) await click(q("jit-dismiss")); // بطاقة الوحدة صفر أولاً
+    expect(q("bottom-nav")).toBeNull();
   });
 });
 
 describe("حضور المدرب اليومي (N-148 · D248)", () => {
   it("درّبني: خطأ ذهبي ← كشف ← تم", async () => {
     await renderSeeded();
+    await click(q("tab-coach"));
     expect(q("coach-windows")!.textContent).toContain("ظهيرة · عصر · مساء");
     await click(q("train-me"));
     expect(q("coach-drill")!.textContent).toContain("x"); // wrong من البذرة
@@ -124,6 +145,7 @@ describe("حضور المدرب اليومي (N-148 · D248)", () => {
   it("بلا أخطاء: تدريب حرف اليوم بالصوت", async () => {
     await renderSeeded({ withErrors: false });
     expect(q("golden-count")!.textContent).toContain("0");
+    await click(q("tab-coach"));
     await click(q("train-me"));
     expect(q("coach-drill")!.textContent).toContain("حرف اليوم");
     await click(q("coach-done"));
@@ -132,27 +154,31 @@ describe("حضور المدرب اليومي (N-148 · D248)", () => {
 
   it("إغلاق اليوم يظهر مساءً (21+) ويختفي صباحاً", async () => {
     await renderSeeded({ at: new Date(2026, 9, 21, 21, 30) });
+    await click(q("tab-coach"));
     expect(q("day-closing")!.textContent).toContain("ماذا تتذكر");
     expect(q("tomorrow-preview")!.textContent!.length).toBeGreaterThan(10);
   });
 
   it("صباحاً: لا إغلاق", async () => {
     await renderSeeded({ at: new Date(2026, 9, 21, 10, 0) });
+    await click(q("tab-coach"));
     expect(q("day-closing")).toBeNull();
   });
 
   it("الأحد راحة (N-152): المدرب صامت والزر يعمل بلا لوم", async () => {
     await renderSeeded({ at: new Date(2026, 9, 18, 10, 0) }); // أحد
     expect(new Date().getDay()).toBe(0);
-    expect(q("coach-rest")!.textContent).toContain("راحة");
-    expect(q("train-me")).toBeNull();
     expect(q("rest-day-note")!.textContent).toContain("راحة");
     expect(q("start-session")).not.toBeNull(); // الزر يبقى لمن أراد
+    await click(q("tab-coach"));
+    expect(q("coach-rest")!.textContent).toContain("راحة");
+    expect(q("train-me")).toBeNull();
   });
 
   it("يوم عادي: لا رسالة راحة", async () => {
     await renderSeeded();
     expect(q("rest-day-note")).toBeNull();
+    await click(q("tab-coach"));
     expect(q("coach-rest")).toBeNull();
     expect(q("train-me")).not.toBeNull();
   });
@@ -186,6 +212,7 @@ describe("عبارة اليوم تتدوير يومياً (N-148 · D248)", () =
 describe("الخريطة الهادئة §2.8 (N-149 · D249)", () => {
   it("مستويات + وحدة + أسبوع + بوابة من البيانات (متعلم جديد)", async () => {
     await renderSeeded();
+    await click(q("tab-map"));
     const levels = q("map-levels")!.textContent!;
     expect(levels).toContain("A1");
     expect(levels).toContain("░░░░░░░░░░"); // A1: صفر من 90
@@ -201,6 +228,7 @@ describe("الخريطة الهادئة §2.8 (N-149 · D249)", () => {
 describe("الدفتر الذهبي §2.7 (N-150 · D250)", () => {
   it("يعرض الأخطاء: الخاطئ ← الصحيح + التعليل + النوع", async () => {
     await renderSeeded();
+    await click(q("tab-golden"));
     expect(q("golden-book")!.textContent).toContain("دفتر أخطائك الذهبية (2)");
     const entries = container.querySelectorAll('[data-testid="golden-entry"]');
     expect(entries.length).toBe(2);
@@ -212,6 +240,7 @@ describe("الدفتر الذهبي §2.7 (N-150 · D250)", () => {
 
   it("بلا أخطاء: رسالة فارغة صريحة لا قائمة وهمية", async () => {
     await renderSeeded({ withErrors: false });
+    await click(q("tab-golden"));
     expect(q("golden-empty")!.textContent).toContain("دفترك فارغ");
     expect(container.querySelector('[data-testid="golden-entry"]')).toBeNull();
   });
@@ -256,6 +285,7 @@ describe("طقس البداية على الشاشة (N-151 · D251)", () => {
 
   it("المدرب يعرض النوافذ المختارة من الحالة", async () => {
     await renderSeeded({ profilePatch: { coachWindows: ["midday", "evening"] } });
+    await click(q("tab-coach"));
     expect(q("coach-windows")!.textContent).toContain("ظهيرة · مساء");
     expect(q("coach-windows")!.textContent).not.toContain("عصر");
   });
@@ -348,5 +378,53 @@ describe("عبارة اليوم على القائمة (N-148 · D252)", () => {
     expect(q("coach-phrase")).toBeNull();
     expect(q("coach-block")).not.toBeNull();
     await act(async () => r.unmount());
+  });
+});
+
+describe("تبويب الإعدادات (N-155 · D269)", () => {
+  it("المحررات + النسخ + المسح + عن المشروع (§2.9)", async () => {
+    await renderSeeded();
+    await click(q("tab-settings"));
+    expect(q("settings-view")).not.toBeNull();
+    expect(q("settings-name-input")).not.toBeNull();
+    expect(q("data-screen")).not.toBeNull();
+    expect(q("wipe-screen")).not.toBeNull();
+    expect(q("about-screen")!.textContent).toContain("مفتاح");
+  });
+
+  it("المسح: تأكيد بخطوتين ثم عودة لأول تشغيل", async () => {
+    await renderSeeded();
+    await click(q("tab-settings"));
+    expect(q("wipe-confirm")).toBeNull();
+    await click(q("wipe-start"));
+    expect(q("wipe-confirm")).not.toBeNull();
+    await click(q("wipe-confirm"));
+    await waitFor(() => !q("bottom-nav"), "اختفاء الشريط بعد المسح");
+    expect(q("current-lesson")).toBeNull();
+  });
+});
+
+describe("المخابر مخفية عن المتعلم (N-155 · D269)", () => {
+  it("بلا #labs: لا أثر للمخابر في أي تبويب", async () => {
+    window.location.hash = "";
+    await renderSeeded();
+    for (const t of ["today", "map", "coach", "golden", "settings"]) {
+      await click(q(`tab-${t}`));
+      expect(q("labs-view")).toBeNull();
+      expect(q("skills-lab")).toBeNull();
+      expect(q("system-lab")).toBeNull();
+    }
+  });
+
+  it("#labs: المختبرات ظاهرة للمطوّر وحده", async () => {
+    window.location.hash = "#labs";
+    await renderSeeded();
+    expect(q("labs-view")).not.toBeNull();
+    expect(q("labs-note")!.textContent).toContain("المطوّر");
+    expect(q("bottom-nav")).toBeNull();
+    await waitFor(() => !!q("skills-lab") && !!q("system-lab"), "مختبرا المهارات والنظام");
+    await act(async () => {
+      window.location.hash = "";
+    });
   });
 });

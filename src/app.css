@@ -760,3 +760,64 @@ span[dir="ltr"] {
   padding: 0.6rem 0.9rem;
   font-weight: 700;
 }
+
+/* ═══════ 15 · الشريط السفلي (N-155 · D269) ═══════ */
+/* 5 أقسام ثابتة — قالب لا يتغير (قانون 16) · هاتف أولاً · منطقة آمنة */
+[data-testid="bottom-nav"] {
+  position: sticky;
+  bottom: 0;
+  z-index: 30;
+  display: flex;
+  background: var(--surface);
+  border-top: 1.5px solid var(--border);
+  box-shadow: 0 -2px 12px rgb(30 40 60 / 0.08);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  margin: 1rem -24px -24px;
+}
+[data-testid="bottom-nav"] button {
+  flex: 1 1 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  min-height: 56px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  padding: 0.5rem 0.1rem;
+}
+[data-testid="bottom-nav"] button[data-active="yes"] {
+  color: var(--primary);
+  box-shadow: inset 0 3px 0 var(--primary);
+}
+[data-testid="bottom-nav"] button:hover:not(:disabled) {
+  box-shadow: none;
+  transform: none;
+}
+[data-testid="bottom-nav"] button[data-active="yes"]:hover:not(:disabled) {
+  box-shadow: inset 0 3px 0 var(--primary);
+}
+/* تبويب الإعدادات: أقسامه كبطاقات */
+[data-testid="settings-view"] h2 { margin-top: 0; }
+[data-testid="wipe-screen"],
+[data-testid="about-screen"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+}
+[data-testid="wipe-screen"] h3,
+[data-testid="about-screen"] h3 { margin-top: 0; }
+[data-testid="wipe-confirm"] {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+/* وضع المطوّر: شارة تحذير */
+[data-testid="labs-note"] {
+  background: var(--warn-bg);
+  border: 1.5px dashed var(--warn-border);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.9rem;
+  font-weight: 700;
+}
