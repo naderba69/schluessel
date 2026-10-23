@@ -96,3 +96,38 @@ export function weeklyGoalState(passed: boolean, weekday: number, evening: boole
   if (weekday === 6) return "measure";
   return "reminder";
 }
+
+/* ══════════ D282 — الأسبوع المرن (ب-16): 3×45 أسبوع ناجح + عودة بلا ديون ══════════ */
+/** الحد الأدنى للأسبوع الناجح: 3 أيام × 45 دقيقة */
+export const FLEX_DAYS = 3;
+export const FLEX_MINUTES = 45;
+
+export type FlexWeek = {
+  /** أيام ≥45 دقيقة */
+  days45: number;
+  /** أيام الدراسة (أي مدة) */
+  studied: number;
+  success: boolean;
+  /** اثنين الأسبوع (ISO) — لاكتشاف العودة بعد انقطاع */
+  monday: string;
+};
+
+/** أسبوع مرن: الحالي (0) أو الماضي (1...) — الاثنين أولاً */
+export function flexWeek(
+  sessions: readonly { date: string; durationMinutes: number }[],
+  today = new Date(),
+  back = 0,
+): FlexWeek {
+  const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const monday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - ((today.getDay() + 6) % 7) - back * 7);
+  const byDate = new Map(sessions.map((x) => [x.date, x.durationMinutes]));
+  let days45 = 0;
+  let studied = 0;
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(monday.getFullYear(), monday.getMonth(), monday.getDate() + i);
+    const mins = byDate.get(iso(d)) ?? 0;
+    if (mins > 0) studied++;
+    if (mins >= FLEX_MINUTES) days45++;
+  }
+  return { days45, studied, success: days45 >= FLEX_DAYS, monday: iso(monday) };
+}

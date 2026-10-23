@@ -48,7 +48,7 @@ import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, t
 import type { QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
-import { DAY_FOCUS_AR, dayFocus, weekDots, weeklyGoalState } from "./lib/day-engine.js";
+import { DAY_FOCUS_AR, dayFocus, flexWeek, weekDots, weeklyGoalState } from "./lib/day-engine.js";
 import { PULSE_BODY_AR, PULSE_TITLE_AR, SNOOZE_MIN, isRestDay, pulseKey, readPulseStore, shouldPulse, writePulseStore } from "./lib/coach-engine.js";
 import { CoachBlock } from "./components/CoachBlock.js";
 import { GoldenBook } from "./components/GoldenBook.js";
@@ -523,6 +523,18 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   /** N-147 (D247): شاشة اليوم §2.2 — نقاط الأسبوع + المستحق + الذهبية */
   const weekday = new Date().toLocaleDateString("ar", { weekday: "long" });
   const week = weekDots(state.sessions);
+  /** D282: الأسبوع المرن — الحالي والماضي + نافذة العودة (اثنين→أربعاء) */
+  const nowFlex = flexWeek(state.sessions);
+  const prevFlex = flexWeek(state.sessions, new Date(), 1);
+  const hasOlder = state.sessions.some((x) => x.date < prevFlex.monday);
+  const returnKind =
+    [1, 2, 3].includes(new Date().getDay())
+      ? prevFlex.studied > 0 && !prevFlex.success
+        ? ("light" as const)
+        : prevFlex.studied === 0 && hasOlder
+          ? ("back" as const)
+          : null
+      : null;
   const dueCount = countDueSrs(state.srsCards, localDay());
   const goldenCount = state.errors.length;
   /** D275: تركيز اليوم + إدخال اليوم + المساء (لبطاقة الغد) */
@@ -913,6 +925,19 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       <p data-testid="week-dots">
         <span dir="ltr">{week.dots.map((d) => (d ? "●" : "○")).join("")}</span> أسبوعك ({week.studied}/7)
       </p>
+      <p data-testid="flex-week">
+        {nowFlex.success
+          ? `أسبوع ناجح ✓ — ${nowFlex.days45} أيام × 45 دقيقة`
+          : nowFlex.days45 > 0
+            ? `${nowFlex.days45} من 3 — ثلاثة أيام × 45 دقيقة تكفي لأسبوع ناجح`
+            : "ثلاثة أيام × 45 دقيقة تكفي لأسبوع ناجح"}
+      </p>
+      {returnKind === "light" && (
+        <p data-testid="flex-return">الأسبوع الماضي كان خفيفاً — وهذا طبيعي. هذا الأسبوع يبدأ نظيفاً 🌱</p>
+      )}
+      {returnKind === "back" && (
+        <p data-testid="flex-return">عدت — وهذا أهم شيء. نبدأ بخفة، بلا ديون 🌱</p>
+      )}
       {!micro && !session && !deferred && !shadow && !reading && dueCount > 0 && (
         <button data-testid="start-micro" onClick={startMicro}>
           ⚡ جلسة مصغّرة — {dueCount} مستحقة (نحو 10 دقائق)
