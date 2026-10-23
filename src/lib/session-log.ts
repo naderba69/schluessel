@@ -69,7 +69,20 @@ export type SessionInput = {
   srsDueRemaining?: number;
   listeningMinutes?: number;
   shadowingMinutes?: number;
+  /** D275: سطر التأمل — يُدمَج مع القديم (الفارغ يُتجاهَل ولا يمحو) */
+  reflection?: { learned?: string; tomorrow?: string };
 };
+
+/** تنظيف سطر التأمل: تشذيب + إسقاط الفارغ — الفراغ الكامل = لا كتابة */
+function cleanReflection(r?: { learned?: string; tomorrow?: string }): { learned?: string; tomorrow?: string } | undefined {
+  if (!r) return undefined;
+  const out: { learned?: string; tomorrow?: string } = {};
+  const l = (r.learned ?? "").trim();
+  const m = (r.tomorrow ?? "").trim();
+  if (l) out.learned = l;
+  if (m) out.tomorrow = m;
+  return Object.keys(out).length > 0 ? out : undefined;
+}
 
 /**
  * تسجيل حصة: إدخال واحد لليوم (upsert بالتاريخ).
@@ -94,6 +107,7 @@ export function recordSession(sessions: readonly SessionLog[], input: SessionInp
         srsDueRemaining: Math.max(0, input.srsDueRemaining ?? 0),
         listeningMinutes: Math.max(0, input.listeningMinutes ?? 0),
         shadowingMinutes: Math.max(0, input.shadowingMinutes ?? 0),
+        ...(cleanReflection(input.reflection) ? { reflection: cleanReflection(input.reflection)! } : {}),
       },
     ];
   const prev = sessions[at]!;
@@ -108,5 +122,7 @@ export function recordSession(sessions: readonly SessionLog[], input: SessionInp
     shadowingMinutes: prev.shadowingMinutes + Math.max(0, input.shadowingMinutes ?? 0),
   };
   if (input.srsDueRemaining !== undefined) next.srsDueRemaining = input.srsDueRemaining; // رصيد لحظي: آخر قراءة
+  const refl = cleanReflection(input.reflection);
+  if (refl) next.reflection = { ...prev.reflection, ...refl };
   return [...sessions.slice(0, at), next, ...sessions.slice(at + 1)];
 }

@@ -14,6 +14,7 @@ import { QuizStation } from "./components/QuizStation.js";
 import { CoachPulse } from "./components/CoachPulse.js";
 import { DosePicker } from "./components/DosePicker.js";
 import { MicroSession } from "./components/MicroSession.js";
+import { ReflectionCard } from "./components/ReflectionCard.js";
 import { BorrowedProvider } from "./components/StruckText.js";
 import { planLessonStations, type SrsDuePair } from "./lib/lesson-runner.js";
 import type { Station } from "./lib/lesson-engine.js";
@@ -36,7 +37,7 @@ import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, t
 import type { QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
-import { weekDots } from "./lib/day-engine.js";
+import { DAY_FOCUS_AR, dayFocus, weekDots } from "./lib/day-engine.js";
 import { PULSE_BODY_AR, PULSE_TITLE_AR, SNOOZE_MIN, isRestDay, pulseKey, readPulseStore, shouldPulse, writePulseStore } from "./lib/coach-engine.js";
 import { CoachBlock } from "./components/CoachBlock.js";
 import { GoldenBook } from "./components/GoldenBook.js";
@@ -476,6 +477,10 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const week = weekDots(state.sessions);
   const dueCount = countDueSrs(state.srsCards, localDay());
   const goldenCount = state.errors.length;
+  /** D275: تركيز اليوم + إدخال اليوم + المساء (لبطاقة الغد) */
+  const focus = DAY_FOCUS_AR[dayFocus(new Date())];
+  const todayEntry = state.sessions.find((s) => s.date === localDay());
+  const evening = new Date().getHours() >= 21;
 
   const openSession = () => {
     if (!currentId) return;
@@ -747,6 +752,34 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         </>
       ) : (
         <p data-testid="path-complete">أكملت كل ما نُشر من الدروس ✓ — الدروس التالية قيد الإنتاج.</p>
+      )}
+
+      {!micro && !session && (
+        <>
+          <p data-testid="day-focus">
+            تركيز اليوم: {focus.label} — {focus.tip}
+          </p>
+          {todayEntry && todayEntry.durationMinutes > 0 && (
+            <ReflectionCard
+              key={todayEntry.date}
+              initial={todayEntry.reflection ?? {}}
+              onSave={(learned, tomorrow) => {
+                const s = stateRef.current;
+                if (s)
+                  commit({
+                    ...s,
+                    sessions: recordSession(s.sessions, { date: localDay(), durationMinutes: 0, reflection: { learned, tomorrow } }),
+                  });
+              }}
+            />
+          )}
+          {(evening || todayEntry?.reflection) && (
+            <p data-testid="tomorrow-card">
+              {tomorrowPreview({ hasNewContent: !!current, dueCount })}
+              {todayEntry?.reflection?.tomorrow ? ` قلتَ إن الغد يحتاج: ${todayEntry.reflection.tomorrow} 🌱` : ""}
+            </p>
+          )}
+        </>
       )}
 
       {isRestDay(new Date()) && (

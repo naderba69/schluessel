@@ -56,3 +56,30 @@ export function weekDots(sessions: readonly { date: string }[], today = new Date
   });
   return { dots, studied: dots.filter(Boolean).length };
 }
+
+/* ══════════ D275 — تخصص الأيام (ب-4/ب-13): عادة معرفية ثابتة ══════════ */
+/** تركيز اليوم — ثقل إضافي لا إلغاء للتشريح (الاثنين استماع … السبت معركة · الأحد راحة) */
+export type DayFocus = "listening" | "grammar" | "speaking" | "writing" | "culture" | "battle" | "rest";
+
+export function dayFocus(date: Date): DayFocus {
+  switch (date.getDay()) {
+    case 1: return "listening";
+    case 2: return "grammar";
+    case 3: return "speaking";
+    case 4: return "writing";
+    case 5: return "culture";
+    case 6: return "battle";
+    default: return "rest";
+  }
+}
+
+/** التسمية + سطر التوجيه اللطيف (D23 — تشجيع لا أمر ولا لوم) */
+export const DAY_FOCUS_AR: Record<DayFocus, { label: string; tip: string }> = {
+  listening: { label: "الاستماع 🎧", tip: "اليوم أذنك أولاً — استمع كل جملة مرتين قبل أن تقرأها." },
+  grammar: { label: "القواعد 🧩", tip: "الثلاثاء يوم القواعد — قاعدة اليوم تستحق التمهل." },
+  speaking: { label: "الكلام 🗣️", tip: "تحدث بصوت عالٍ اليوم — مهمتك التواصلية تستحق وقتاً أطول." },
+  writing: { label: "الكتابة ✍️", tip: "اكتب بيدك أو بلوحتك — الإملاء اليوم بتركيز خاص." },
+  culture: { label: "التوليف والثقافة 🌍", tip: "نجمع خيوط الأسبوع — ولا تنسَ بطاقة ثقافة الجمعة." },
+  battle: { label: "المعركة ⚔️", tip: "يوم المراجعة الأسبوعية — أظهر ما ثبت بهدوء." },
+  rest: { label: "الراحة 🌿", tip: "لا شيء مطلوب منك — النوم شريكك في التثبيت." },
+};

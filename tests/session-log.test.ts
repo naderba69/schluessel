@@ -66,3 +66,37 @@ describe("D274 — الجرعة المخططة", () => {
     expect(() => writePlannedDose("2026-10-22", 45)).not.toThrow();
   });
 });
+
+describe("D275 — سطر التأمل", () => {
+  it("يُحفَظ مع الإدخال الجديد", () => {
+    const out = recordSession([], {
+      date: "2026-10-22",
+      durationMinutes: 30,
+      reflection: { learned: "الماضي", tomorrow: "الأرقام" },
+    });
+    expect(out[0]!.reflection).toEqual({ learned: "الماضي", tomorrow: "الأرقام" });
+  });
+
+  it("التحديث الجزئي يُدمَج ولا يمحو (دقائق صفر مسموحة)", () => {
+    const once = recordSession([], {
+      date: "2026-10-22",
+      durationMinutes: 30,
+      reflection: { learned: "الماضي", tomorrow: "الأرقام" },
+    });
+    const twice = recordSession(once, {
+      date: "2026-10-22",
+      durationMinutes: 0,
+      reflection: { tomorrow: "الجمع" },
+    });
+    expect(twice[0]).toMatchObject({ durationMinutes: 30 });
+    expect(twice[0]!.reflection).toEqual({ learned: "الماضي", tomorrow: "الجمع" });
+  });
+
+  it("الفارغ يُتجاهَل — لا يمحو ولا يُنشئ", () => {
+    const once = recordSession([], { date: "2026-10-22", durationMinutes: 30, reflection: { learned: "x" } });
+    const twice = recordSession(once, { date: "2026-10-22", durationMinutes: 0, reflection: { learned: "  " } });
+    expect(twice[0]!.reflection).toEqual({ learned: "x" });
+    const fresh = recordSession([], { date: "2026-10-22", durationMinutes: 30, reflection: { learned: " " } });
+    expect(fresh[0]!.reflection).toBeUndefined();
+  });
+});
