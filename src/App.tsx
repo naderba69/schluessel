@@ -48,7 +48,7 @@ import { phrasesAvailable } from "./lib/phrase-bank.js";
 import { battleAttempts, currentLessonId, cyclicAttempts, cyclicDue, cyclicTestFor, deferredDue, delayedAttempts, journeyWeek, lessonAfter, openSessionFor, passedBattleUnits, passedUnitBattle, quizAttempts, reconcileState, recordCyclicTest, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitDebrief, unitKeyOf } from "./lib/lesson-path.js";
 import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, type DoseChoice } from "./lib/session-log.js";
 import { cyclicQuizLesson, type QuizOutcome } from "./lib/quiz-session.js";
-import { examSkillAr, levelExamProgress, levelExamReady, levelUnits, modellHoerenQuiz, modellLesenQuiz, modellSchreibenQuiz, modellTotal, recordLevelSection, sectionAttempts, EXAM_SKILLS } from "./lib/exam-engine.js";
+import { examSkillAr, levelExamProgress, levelExamReady, levelUnits, modellHoerenQuiz, modellLesenQuiz, modellSchreibenQuiz, modellSprechenRun, modellTotal, recordLevelSection, sectionAttempts, EXAM_SKILLS, type SprechenGrade } from "./lib/exam-engine.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
 import { DAY_FOCUS_AR, dayFocus, flexWeek, weekDots, weeklyGoalState } from "./lib/day-engine.js";
@@ -60,6 +60,7 @@ import { MAX_DUE_PER_SESSION, applySrsRating, countDueSrs, dueSrsCards } from ".
 import { BRAND } from "./lib/brand.js";
 import { buildProgressMap } from "./lib/progress-engine.js";
 import { MapView } from "./components/MapView.js";
+import { ExamSprechenRun } from "./components/ExamSprechenRun.js";
 import { SystemLab } from "./components/SystemLab.js";
 import { BottomNav } from "./components/BottomNav.js";
 import { SettingsView } from "./components/SettingsView.js";
@@ -302,7 +303,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [shadow, setShadow] = useState<{ lessonId: string; script: AudioScript | null } | null>(null); // D280: الشادوينغ الجاري
   const [reading, setReading] = useState<{ textId: string } | null>(null); // D281: نص الخميس الجاري (النصوص حاضرة — بلا تحميل)
   const [cyclic, setCyclic] = useState<{ testId: string } | null>(null); // D283: الاختبار الدوري الجاري (حاضر — بلا تحميل)
-  const [examRun, setExamRun] = useState<false | "lesen" | "hoeren" | "schreiben">(false); // D286: قسم الامتحان الجاري (حاضر — بلا تحميل)
+  const [examRun, setExamRun] = useState<false | "lesen" | "hoeren" | "schreiben" | "sprechen">(false); // D287: قسم الامتحان الجاري (حاضر — بلا تحميل)
   const microStart = useRef<number>(0);
   const deferredStart = useRef<number>(0); // D277: بداية المؤجلة لقياس مدتها
   const shadowStart = useRef<number>(0); // D280: بداية الشادوينغ لقياس دقائقه
@@ -607,6 +608,8 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const hoerenQuiz = modell && hoerenParts ? modellHoerenQuiz(modell.id, modell.passingScore, hoerenParts) : null;
   const schreibenParts = modell?.sections.find((s) => s.skill === "schreiben")?.parts;
   const schreibenQuiz = modell && schreibenParts ? modellSchreibenQuiz(modell.id, modell.passingScore, schreibenParts) : null;
+  const sprechenParts = modell?.sections.find((s) => s.skill === "sprechen")?.parts;
+  const sprechenRun = modell && sprechenParts ? modellSprechenRun(modell.id, modell.passingScore, sprechenParts) : null;
   /** D279: هدف الأسبوع — canDo الأول لاختبار السادس في الوحدة الحالية (يُحمَّل مرة لكل وحدة) */
   const curKey = current ? unitKeyOf(current.level, current.unit) : undefined;
   const goalState =
@@ -913,6 +916,44 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     setFinishedNote(`قسم الكتابة تم (${points}/25 نقطة) — المجموع الرسمي يكتمل بالأقسام الأربعة.`);
   };
 
+  /** D287: بدء قسم التحدث — حاضر فوراً */
+  const startExamSprechen = () => {
+    if (!sprechenRun || !examReady) return;
+    examStart.current = Date.now();
+    setFinishedNote(null);
+    setExamRun("sprechen");
+  };
+
+  /** D287: اكتمال التحدث — يُسجَّل قسماً + غير الكامل في الذهبي + دقائقه في سجل اليوم */
+  const finishExamSprechen = (o: QuizOutcome, partial: { q: string; model: string; grade: SprechenGrade }[]) => {
+    if (!modell || examRun !== "sprechen") return;
+    const points = Math.floor(o.score * 25);
+    const s = stateRef.current;
+    if (s) {
+      const minutes = Math.max(1, Math.round((Date.now() - examStart.current) / 60000));
+      try {
+        const s1 = recordLevelSection(s, modell.id, s.profile.level, "sprechen", o, localDay());
+        let errors = s1.errors;
+        for (const p of partial) {
+          errors = upsertGoldenError(errors, {
+            skill: "sprechen",
+            wrong: p.grade === 0 ? "تعثّرت في النطق" : "نطقت جزءها فقط",
+            correct: p.model,
+            explanation: `الموجّه: ${p.q} — كرر النموذج بصوت عالٍ ثلاث مرات.`,
+            source: `${modell.id}/sprechen`,
+            closeSlip: p.grade === 0.5,
+          });
+        }
+        commit({ ...s1, errors, sessions: recordSession(s1.sessions, { date: localDay(), durationMinutes: minutes }) });
+      } catch (e) {
+        setSaveError(errText(e));
+      }
+    }
+    setExamRun(false);
+    setTab("today");
+    setFinishedNote(`قسم التحدث تم (${points}/25 نقطة) — المجموع الرسمي يكتمل بالأقسام الأربعة.`);
+  };
+
   const rateSrs = (id: string, rating: import("./lib/review-engine.js").RecallRating) => {
     const st = stateRef.current;
     if (st) commit({ ...st, srsCards: applySrsRating(st.srsCards, id, rating) });
@@ -1026,7 +1067,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       ) : tab === "map" ? (
         <>
           <MapView map={map} />
-          {modell && lesenParts && examTotal && !examRun && hoerenQuiz && schreibenQuiz && (
+          {modell && lesenParts && examTotal && !examRun && hoerenQuiz && schreibenQuiz && sprechenRun && (
             <section data-testid="exam-card">
               <h2>🎓 امتحان المستوى التجريبي</h2>
               {!examReady ? (
@@ -1059,8 +1100,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
                   </button>{" "}
                   <button data-testid="start-exam-schreiben" onClick={startExamSchreiben}>
                     ابدأ قسم الكتابة ✍️ (8 بنود — 25 نقطة)
+                  </button>{" "}
+                  <button data-testid="start-exam-sprechen" onClick={startExamSprechen}>
+                    ابدأ قسم التحدث 🎙️ (21 بنداً — 25 نقطة)
                   </button>
-                  <p data-testid="exam-roadmap">التحدث: القسم الأخير قادم</p>
+                  <p data-testid="exam-roadmap">الأقسام الأربعة حيّة ✓ — بالتوفيق 🎓</p>
                 </>
               )}
             </section>
@@ -1141,6 +1185,17 @@ export function App({ store: injected }: { store?: LearnerStore }) {
                       }),
                     });
                 }}
+              />
+            </>
+          )}
+          {modell && sprechenRun && examRun === "sprechen" && (
+            <>
+              <p data-testid="exam-sprechen-title">قسم التحدث 🎙️ — {modell.id} (21 بنداً — 25 نقطة)</p>
+              <ExamSprechenRun
+                runId={sprechenRun.id}
+                passingScore={sprechenRun.passingScore}
+                prompts={sprechenRun.prompts}
+                onComplete={finishExamSprechen}
               />
             </>
           )}

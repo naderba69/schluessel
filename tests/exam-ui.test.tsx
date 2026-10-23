@@ -97,7 +97,7 @@ describe("D284: بطاقة الامتحان", () => {
     expect(q("exam-ready")!.textContent).toContain("مفتوح");
     expect(q("exam-points")!.textContent).toContain("القراءة —");
     expect(q("start-exam-lesen")!.textContent).toContain("15 بنداً");
-    expect(q("exam-roadmap")!.textContent).toContain("قادم");
+    expect(q("exam-roadmap")!.textContent).toContain("حيّة");
     expect(q("exam-total")!.textContent).toContain("يكتمل بالأقسام الأربعة");
   });
 
@@ -162,7 +162,7 @@ describe("D285: قسم الاستماع", () => {
   it("البطاقة تعرض زر الاستماع وخارطة الأقسام الباقية", async () => {
     await renderSeeded(READY);
     expect(q("start-exam-hoeren")!.textContent).toContain("🔊");
-    expect(q("exam-roadmap")!.textContent).toContain("قادم");
+    expect(q("exam-roadmap")!.textContent).toContain("حيّة");
   });
 
   it("التشغيل يستهلك من السماح — والفاشل لا يُحسَب", async () => {
@@ -231,7 +231,7 @@ describe("D286: قسم الكتابة", () => {
   it("البطاقة تعرض زر الكتابة والقسم الأخير المتبقي", async () => {
     await renderSeeded(READY);
     expect(q("start-exam-schreiben")!.textContent).toContain("8 بنود");
-    expect(q("exam-roadmap")!.textContent).toContain("التحدث");
+    expect(q("exam-roadmap")!.textContent).toContain("حيّة");
   });
 
   it("التدفق الكامل — استمارة آلية + رسالة بحكم ذاتي + دفتر ذهبي", async () => {
@@ -268,5 +268,40 @@ describe("D286: قسم الكتابة", () => {
     const gold = saved!.errors.filter((e) => e.payload.source === "a1-modelltest-1/schreiben");
     expect(gold).toHaveLength(2);
     expect(gold.every((e) => e.skill === "schreiben")).toBe(true);
+  });
+});
+
+describe("D287: قسم التحدث", () => {
+  it("البطاقة تعرض زر التحدث واكتمال الأقسام", async () => {
+    await renderSeeded(READY);
+    expect(q("start-exam-sprechen")!.textContent).toContain("21 بنداً");
+    expect(q("exam-roadmap")!.textContent).toContain("الأقسام الأربعة حيّة");
+  });
+
+  it("التدفق الكامل — تحدُّث معلَن + نموذج + تقييم صادق + ذهبي", async () => {
+    const store = await renderSeeded(READY);
+    await click(q("start-exam-sprechen"), "ابدأ التحدث");
+    expect(q("exam-sprechen-title")!.textContent).toContain("a1-modelltest-1");
+    expect(q("sprechen-counter")!.textContent).toContain("بند 1 من 21");
+    // 14 كاملة + 4 نصف + 3 تعثّر = 16/21 ← 19 نقطة
+    const plan = [...Array<string>(14).fill("sprechen-full"), ...Array<string>(4).fill("sprechen-half"), ...Array<string>(3).fill("sprechen-miss")];
+    for (const btn of plan) {
+      await click(q("sprechen-said"), "تحدثت");
+      expect(q("sprechen-model")).not.toBeNull();
+      await click(q(btn), btn);
+    }
+    await waitFor(() => !!q("sprechen-summary"), "ملخص التقييم");
+    expect(q("sprechen-summary")!.textContent).toContain("16/21");
+    await click(q("sprechen-confirm"), "اعتمد");
+    await waitFor(() => !!q("finished-note"), "ملاحظة النهاية");
+    expect(q("finished-note")!.textContent).toContain("قسم التحدث تم (19/25 نقطة)");
+    const saved = await store.load();
+    const g = saved!.progress.gateResults.find((x) => x.gateId === "a1-modelltest-1/sprechen")!;
+    expect(g.kind).toBe("level-exam");
+    expect(g.passed).toBe(true);
+    const gold = saved!.errors.filter((e) => e.payload.source === "a1-modelltest-1/sprechen");
+    expect(gold).toHaveLength(7);
+    const entry = saved!.sessions.find((s) => s.date === localDay())!;
+    expect(entry.durationMinutes).toBeGreaterThanOrEqual(1);
   });
 });

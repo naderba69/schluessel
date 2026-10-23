@@ -235,3 +235,60 @@ export function modellSchreibenQuiz(examId: string, passingScore: number, parts:
     },
   };
 }
+
+/** D287: جزء تحدث بالشكل الأدنى الذي يحتاجه المهايئ */
+export type ModellSprechenPart = {
+  readonly prompt: { readonly ar: string };
+  readonly items: ReadonlyArray<{ readonly q: string; readonly a: string }>;
+};
+
+/** D287: موجّه تحدث مسطّح — السؤال ونموذجه وعنوان جزئه */
+export type SprechenPrompt = { readonly partAr: string; readonly q: string; readonly model: string };
+
+/** D287: مهايئ التحدث — 21 موجهاً بنماذجها (التقييم ذاتي موجَّه — بلا حكم آلي على اللسان) */
+export function modellSprechenRun(
+  examId: string,
+  passingScore: number,
+  parts: readonly ModellSprechenPart[],
+): { id: string; passingScore: number; prompts: SprechenPrompt[] } {
+  return {
+    id: `${examId}/sprechen`,
+    passingScore,
+    prompts: parts.flatMap((p) => p.items.map((it) => ({ partAr: p.prompt.ar, q: it.q, model: it.a }))),
+  };
+}
+
+/** D287: درجة التحدث الذاتية — كاملة 1 · نصف 0.5 · تعثّر 0 */
+export type SprechenGrade = 0 | 0.5 | 1;
+
+/** D287: نتيجة التحدث من الدرجات الذاتية */
+export function sprechenOutcome(
+  id: string,
+  passingScore: number,
+  prompts: readonly SprechenPrompt[],
+  grades: readonly SprechenGrade[],
+): QuizOutcome {
+  const total = prompts.length;
+  const credit = grades.reduce<number>((a, g) => a + g, 0);
+  const score = total === 0 ? 0 : credit / total;
+  const full = grades.filter((g) => g === 1).length;
+  const half = grades.filter((g) => g === 0.5).length;
+  const miss = grades.filter((g) => g === 0).length;
+  return {
+    lessonId: id,
+    variantIndex: 0,
+    total,
+    credit,
+    score,
+    percent: score * 100,
+    passed: score >= passingScore,
+    passingScore,
+    correct: full,
+    close: half,
+    wrong: miss,
+    predicted: null,
+    selfCorrect: full,
+    selfWrong: miss,
+    weakItems: prompts.filter((_, i) => (grades[i] ?? 0) < 1).map((p) => p.q),
+  };
+}

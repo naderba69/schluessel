@@ -11,6 +11,8 @@ import {
   modellHoerenQuiz,
   modellLesenQuiz,
   modellSchreibenQuiz,
+  modellSprechenRun,
+  sprechenOutcome,
   modellTotal,
   playsLeft,
   recordLevelSection,
@@ -202,5 +204,48 @@ describe("D286: مهايئ الكتابة على المحتوى الحي", () =>
   it("المحاولة تبدأ من 8 بنود", () => {
     const a = startQuizAttempt(quiz, 0);
     expect(a.items).toHaveLength(8);
+  });
+});
+
+describe("D287: مهايئ التحدث على المحتوى الحي", () => {
+  const modell = ALL_MODELLTESTS.find((m) => m.id === "a1-modelltest-1")!;
+  const sprechen = modell.sections.find((s) => s.skill === "sprechen")!;
+  const run = modellSprechenRun(modell.id, modell.passingScore, sprechen.parts);
+
+  it("21 موجهاً بنماذجها وعناوين أجزائها", () => {
+    expect(run.prompts).toHaveLength(21);
+    expect(run.passingScore).toBe(0.6);
+    for (const p of run.prompts) {
+      expect(p.q.length).toBeGreaterThan(0);
+      expect(p.model.length).toBeGreaterThan(0);
+      expect(p.partAr.length).toBeGreaterThan(0);
+    }
+    expect(run.prompts[0]!.model).toContain("Ich heiße");
+  });
+});
+
+describe("D287: نتيجة التحدث الذاتية", () => {
+  const prompts = [
+    { partAr: "ج1", q: "q1", model: "m1" },
+    { partAr: "ج1", q: "q2", model: "m2" },
+    { partAr: "ج1", q: "q3", model: "m3" },
+    { partAr: "ج1", q: "q4", model: "m4" },
+  ];
+
+  it("كاملة 1 ونصف 0.5 ومتعثرة 0 — والضعيف للمراجعة", () => {
+    const o = sprechenOutcome("m1/sprechen", 0.6, prompts, [1, 0.5, 0, 1]);
+    expect(o.credit).toBe(2.5);
+    expect(o.score).toBe(0.625);
+    expect(o.passed).toBe(true);
+    expect([o.correct, o.close, o.wrong]).toEqual([2, 1, 1]);
+    expect([o.selfCorrect, o.selfWrong]).toEqual([2, 1]);
+    expect(o.weakItems).toEqual(["q2", "q3"]);
+  });
+
+  it("الرسوب والفراغ", () => {
+    expect(sprechenOutcome("x", 0.6, prompts, [0, 0, 0, 0]).passed).toBe(false);
+    const e = sprechenOutcome("x", 0.6, [], []);
+    expect(e.score).toBe(0);
+    expect(e.passed).toBe(false);
   });
 });
