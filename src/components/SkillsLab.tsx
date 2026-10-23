@@ -22,6 +22,8 @@ import { PlayButton } from "./LessonSession.js";
 import { CHARACTER_NAME_AR } from "../lib/story.js";
 import { AudioScript } from "../../content/schemas/index.js";
 import alphabetJson from "../../content/audio-scripts/a1-alphabet.json";
+import zahlenJson from "../../content/audio-scripts/a1-zahlen.json";
+import uhrzeitJson from "../../content/audio-scripts/a1-uhrzeit.json";
 
 /* ══════════ E09 — الاستماع المتقدم ══════════ */
 export function ListeningLab() {
@@ -313,6 +315,15 @@ export function alphabetLetters(): { id: string; text: string }[] {
   return AudioScript.parse(alphabetJson)
     .lines.filter((ln) => !ln.id.startsWith("abc-spell-"))
     .map((ln) => ({ id: ln.id, text: ln.text }));
+}
+
+/** سطور الأرقام والساعة لمهارة اليوم (D300 · F007): المعرّف = معرّف المقطع مباشرة */
+export function numberLines(): { id: string; text: string }[] {
+  return AudioScript.parse(zahlenJson).lines.map((ln) => ({ id: ln.id, text: ln.text }));
+}
+
+export function timeLines(): { id: string; text: string }[] {
+  return AudioScript.parse(uhrzeitJson).lines.map((ln) => ({ id: ln.id, text: ln.text }));
 }
 
 export function AlphabetLab() {

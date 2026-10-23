@@ -4,16 +4,18 @@ import { useMemo, useState } from "react";
 import type { CoachWindow, ErrorEntry, Word } from "../../content/schemas/index.js";
 import {
   DEFAULT_WINDOWS,
+  SKILL_OF_DAY_HINT_AR,
   WINDOW_LABELS_AR,
   WEEKLY_CHALLENGE_DONE_AR,
   dayIndexOfYear,
   isRestDay,
   pickCoachDrill,
+  skillOfDay,
   weeklyChallenge,
 } from "../lib/coach-engine.js";
 import { sentenceOfTheDay } from "../lib/writing.js";
 import { tomorrowPreview } from "../lib/warmth-engine.js";
-import { alphabetLetters } from "./SkillsLab.js";
+import { alphabetLetters, numberLines, timeLines } from "./SkillsLab.js";
 import { PlayButton } from "./LessonSession.js";
 
 export function CoachBlock({
@@ -39,6 +41,9 @@ export function CoachBlock({
   const drill = useMemo(() => pickCoachDrill(errors), [errors]);
   const letters = useMemo(alphabetLetters, []);
   const letter = letters.length > 0 ? letters[dayIndexOfYear() % letters.length]! : null;
+  const numbers = useMemo(numberLines, []);
+  const times = useMemo(timeLines, []);
+  const skill = skillOfDay(dayIndexOfYear(), { letter: letters, number: numbers, time: times });
   const evening = new Date().getHours() >= 21;
   const phrase = words.length > 0 ? sentenceOfTheDay(words.map((w) => ({ de: w.de, ar: w.ar[0]! })), dayIndexOfYear()) : null;
   const close = () => {
@@ -58,6 +63,13 @@ export function CoachBlock({
           ☀️ عبارة اليوم (10 ثوانٍ — اسمع وردّد): <span dir="ltr">«{phrase.de}»</span>{" "}
           <span dir="rtl">— {phrase.ar}</span>{" "}
           <PlayButton speakText={phrase.de} label={`استمع لعبارة اليوم: ${phrase.de}`} />
+        </p>
+      )}
+      {skill && !rest && (
+        <p data-testid="skill-of-day">
+          🎯 مهارة اليوم — {skill.labelAr}: <span dir="ltr">«{skill.line.text}»</span>{" "}
+          <PlayButton audioId={skill.line.id} speakText={skill.line.text} label={`استمع لمهارة اليوم: ${skill.line.text}`} />{" "}
+          <small>{SKILL_OF_DAY_HINT_AR}</small>
         </p>
       )}
       {challenge && !challengeDone && (

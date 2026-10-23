@@ -204,3 +204,28 @@ export function weeklyChallenge(date: Date): WeeklyChallenge | null {
   if (!(CHALLENGE_DAYS as readonly number[]).includes(date.getDay())) return null;
   return { titleAr: WEEKLY_CHALLENGE_TITLE_AR, taskAr: WEEKLY_CHALLENGE_TASK_AR, durationSec: WEEKLY_CHALLENGE_SEC };
 }
+
+/** F007 — مهارة اليوم (D300 · N-156/3): تناوب حتمي على 3 مهارات مصغرة معلنة — اسمع وردّد (30 ثانية) */
+export const SKILL_OF_DAY_KINDS = ["letter", "number", "time"] as const;
+export type SkillOfDayKind = (typeof SKILL_OF_DAY_KINDS)[number];
+export const SKILL_OF_DAY_LABEL_AR: Record<SkillOfDayKind, string> = {
+  letter: "حرف اليوم",
+  number: "رقم اليوم",
+  time: "وقت اليوم",
+};
+export const SKILL_OF_DAY_HINT_AR = "اسمع وردّد بصوت عالٍ — دقيقة واحدة تكفي 🌱";
+
+export type SkillLine = { id: string; text: string };
+export type SkillOfDay = { kind: SkillOfDayKind; labelAr: string; line: SkillLine; durationSec: number };
+
+/** مهارة اليوم من فهرس اليوم: تناوب حتمي (حرف ← رقم ← وقت) والبند داخل المهارة بالفهرس أيضاً */
+export function skillOfDay(
+  dayIndex: number,
+  pools: Record<SkillOfDayKind, readonly SkillLine[]>,
+): SkillOfDay | null {
+  const kind = SKILL_OF_DAY_KINDS[((dayIndex % SKILL_OF_DAY_KINDS.length) + SKILL_OF_DAY_KINDS.length) % SKILL_OF_DAY_KINDS.length]!;
+  const pool = pools[kind];
+  if (pool.length === 0) return null;
+  const line = pool[Math.floor(dayIndex / SKILL_OF_DAY_KINDS.length) % pool.length]!;
+  return { kind, labelAr: SKILL_OF_DAY_LABEL_AR[kind], line, durationSec: 30 };
+}
