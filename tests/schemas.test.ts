@@ -176,6 +176,7 @@ const validState = {
     canDoTicks: [{ statement: "يحيي", done: true }],
     wordsNew: 12, wordsPlanned: 12, srsMinutes: 10,
     srsDueRemaining: 0, listeningMinutes: 10, shadowingMinutes: 5,
+    readingMinutes: 0,
     reflection: { learned: "الأرقام", tomorrow: "الوقت" },
   }],
   errors: [],

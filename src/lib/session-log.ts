@@ -69,6 +69,8 @@ export type SessionInput = {
   srsDueRemaining?: number;
   listeningMinutes?: number;
   shadowingMinutes?: number;
+  /** D281: دقائق القراءة الحرة — تتراكم كأخواتها */
+  readingMinutes?: number;
   /** D275: سطر التأمل — يُدمَج مع القديم (الفارغ يُتجاهَل ولا يمحو) */
   reflection?: { learned?: string; tomorrow?: string };
   /** D276: توقيعات Can-do — تُدمَج بالنص (الجديد يُلحَق والقديم يُحدَّث) */
@@ -126,6 +128,7 @@ export function recordSession(sessions: readonly SessionLog[], input: SessionInp
         srsDueRemaining: Math.max(0, input.srsDueRemaining ?? 0),
         listeningMinutes: Math.max(0, input.listeningMinutes ?? 0),
         shadowingMinutes: Math.max(0, input.shadowingMinutes ?? 0),
+        readingMinutes: Math.max(0, input.readingMinutes ?? 0),
         ...(cleanReflection(input.reflection) ? { reflection: cleanReflection(input.reflection)! } : {}),
       },
     ];
@@ -139,6 +142,7 @@ export function recordSession(sessions: readonly SessionLog[], input: SessionInp
     srsMinutes: prev.srsMinutes + Math.max(0, input.srsMinutes ?? 0),
     listeningMinutes: prev.listeningMinutes + Math.max(0, input.listeningMinutes ?? 0),
     shadowingMinutes: prev.shadowingMinutes + Math.max(0, input.shadowingMinutes ?? 0),
+    readingMinutes: prev.readingMinutes + Math.max(0, input.readingMinutes ?? 0),
   };
   if (input.srsDueRemaining !== undefined) next.srsDueRemaining = input.srsDueRemaining; // رصيد لحظي: آخر قراءة
   const refl = cleanReflection(input.reflection);

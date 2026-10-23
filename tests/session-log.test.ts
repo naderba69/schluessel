@@ -151,3 +151,18 @@ describe("D276 — توقيعات Can-do تُدمَج بالنص", () => {
     expect(once[0]!.canDoTicks).toEqual([]);
   });
 });
+
+describe("D281 — دقائق القراءة تتراكم", () => {
+  it("تُزرَع مع الجديد وتتراكم مع القديم", () => {
+    const once = recordSession([], { date: "2026-10-22", durationMinutes: 10, readingMinutes: 4 });
+    expect(once[0]!.readingMinutes).toBe(4);
+    const twice = recordSession(once, { date: "2026-10-22", durationMinutes: 5, readingMinutes: 3 });
+    expect(twice[0]!.readingMinutes).toBe(7);
+    expect(twice[0]!.durationMinutes).toBe(15);
+  });
+
+  it("الغائب = صفر لا undefined", () => {
+    const once = recordSession([], { date: "2026-10-22", durationMinutes: 10 });
+    expect(once[0]!.readingMinutes).toBe(0);
+  });
+});

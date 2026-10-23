@@ -44,6 +44,8 @@ export const SessionLog = z.object({
   srsDueRemaining: z.number().nonnegative().default(0),
   listeningMinutes: z.number().nonnegative().default(0),
   shadowingMinutes: z.number().nonnegative().default(0),
+  /** D281: دقائق القراءة الحرة (نص الخميس — ب-19) */
+  readingMinutes: z.number().nonnegative().default(0),
   /** سطر التأمل (Zimmerman — ب‑12) */
   reflection: z.object({ learned: z.string().optional(), tomorrow: z.string().optional() }).optional(),
 });

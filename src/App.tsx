@@ -19,6 +19,8 @@ import { MeasureStrip } from "./components/MeasureStrip.js";
 import { UnitDebriefCard } from "./components/UnitDebrief.js";
 import { CalibrationReportCard } from "./components/CalibrationReport.js";
 import { WeeklyGoalCard } from "./components/WeeklyGoal.js";
+import { FreeReading } from "./components/FreeReading.js";
+import { readingPick, toEngineText } from "./lib/reading.js";
 import { ShadowingRun } from "./components/ShadowingRun.js";
 import { BorrowedProvider } from "./components/StruckText.js";
 import { planLessonStations, type SrsDuePair } from "./lib/lesson-runner.js";
@@ -27,6 +29,7 @@ import { cardsForEvent, loadUnit0Deck } from "./lib/unit0.js";
 import { eveningReport, tomorrowPreview, muellerMessage } from "./lib/warmth-engine.js";
 import {
   PATH,
+  ALL_LESETEXTS,
   LESSON_INDEX,
   LESSON_ORDER,
   indexEntry,
@@ -294,9 +297,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [deferred, setDeferred] = useState<{ unitKey: string; lessonId: string; bundle: SessionBundle | null } | null>(null); // D277: المعركة المؤجلة الجارية
   const [weeklyGoal, setWeeklyGoal] = useState<{ unitKey: string; goal: string } | null>(null); // D279: هدف الأسبوع (canDo السادس)
   const [shadow, setShadow] = useState<{ lessonId: string; script: AudioScript | null } | null>(null); // D280: الشادوينغ الجاري
+  const [reading, setReading] = useState<{ textId: string } | null>(null); // D281: نص الخميس الجاري (النصوص حاضرة — بلا تحميل)
   const microStart = useRef<number>(0);
   const deferredStart = useRef<number>(0); // D277: بداية المؤجلة لقياس مدتها
   const shadowStart = useRef<number>(0); // D280: بداية الشادوينغ لقياس دقائقه
+  const readingStart = useRef<number>(0); // D281: بداية القراءة لقياس دقائقها
   const [finishedNote, setFinishedNote] = useState<string | null>(null);
   /** N-155 (D269): التبويب الحالي — اليوم افتراضياً (قالب ثابت، قانون 16) */
   const [tab, setTab] = useState<MainTab>("today");
@@ -554,6 +559,19 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const shadowLesson =
     new Date().getDay() === 0 ? undefined : shadowingLessonId(state.progress.completedLessons);
   const shadowDoneToday = (todayEntry?.shadowingMinutes ?? 0) >= 3;
+  /** D281: نص الخميس الحر — نص أحدث وحدة مكتملة (i-1) · يُخفَى بعد إتمامه */
+  const thursdayPick =
+    new Date().getDay() === 4
+      ? readingPick(ALL_LESETEXTS, state.progress.completedLessons, (id) => {
+          const e = indexEntry(id);
+          return e ? { level: e.level, unit: e.unit } : undefined;
+        })
+      : undefined;
+  const thursdayEngine =
+    thursdayPick && thursdayPick.level !== "B2"
+      ? toEngineText({ id: thursdayPick.id, level: thursdayPick.level, title: thursdayPick.title, text: thursdayPick.text })
+      : undefined;
+  const readingDoneToday = (todayEntry?.readingMinutes ?? 0) > 0;
   /** D279: هدف الأسبوع — canDo الأول لاختبار السادس في الوحدة الحالية (يُحمَّل مرة لكل وحدة) */
   const curKey = current ? unitKeyOf(current.level, current.unit) : undefined;
   const goalState =
@@ -722,6 +740,32 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     setFinishedNote("ظللت حواراً متقناً بصوتك 🎙️ — النطق عضلة وهذه حركتها اليومية.");
   };
 
+  /** D281: بدء نص الخميس — حاضر فوراً (النصوص eager) */
+  const startReading = () => {
+    if (!thursdayPick || !thursdayEngine) return;
+    readingStart.current = Date.now();
+    setFinishedNote(null);
+    setReading({ textId: thursdayPick.id });
+  };
+
+  /** D281: تسجيل القراءة — دقائقها الحقيقية في سجل اليوم */
+  const finishReading = () => {
+    const s = stateRef.current;
+    if (s) {
+      const minutes = Math.max(1, Math.round((Date.now() - readingStart.current) / 60000));
+      try {
+        commit({
+          ...s,
+          sessions: recordSession(s.sessions, { date: localDay(), durationMinutes: minutes, readingMinutes: minutes }),
+        });
+      } catch (e) {
+        setSaveError(errText(e));
+      }
+    }
+    setReading(null);
+    setFinishedNote("قرأت نصاً كاملاً بالألمانية 📖 — القراءة الحرة تبني المعجم بصمت.");
+  };
+
   const rateSrs = (id: string, rating: import("./lib/review-engine.js").RecallRating) => {
     const st = stateRef.current;
     if (st) commit({ ...st, srsCards: applySrsRating(st.srsCards, id, rating) });
@@ -869,12 +913,17 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       <p data-testid="week-dots">
         <span dir="ltr">{week.dots.map((d) => (d ? "●" : "○")).join("")}</span> أسبوعك ({week.studied}/7)
       </p>
-      {!micro && !session && !deferred && !shadow && dueCount > 0 && (
+      {!micro && !session && !deferred && !shadow && !reading && dueCount > 0 && (
         <button data-testid="start-micro" onClick={startMicro}>
           ⚡ جلسة مصغّرة — {dueCount} مستحقة (نحو 10 دقائق)
         </button>
       )}
-      {shadow ? (
+      {reading && thursdayEngine && thursdayPick ? (
+        <>
+          <p data-testid="reading-title">نص القراءة الحر 📖 — {thursdayEngine.titleAr}</p>
+          <FreeReading text={thursdayEngine} questions={thursdayPick.questions} onFinish={finishReading} />
+        </>
+      ) : shadow ? (
         shadow.script ? (
           <>
             <p data-testid="shadow-title">الشادوينغ اليومي 🎙️ — ظل حوار {shadow.lessonId} (نحو 3 دقائق)</p>
@@ -981,7 +1030,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         <p data-testid="path-complete">أكملت كل ما نُشر من الدروس ✓ — الدروس التالية قيد الإنتاج.</p>
       )}
 
-      {!micro && !session && !deferred && !shadow && (
+      {!micro && !session && !deferred && !shadow && !reading && (
         <>
           {battleNow && current && (
             <p data-testid="battle-banner">
@@ -1013,6 +1062,15 @@ export function App({ store: injected }: { store?: LearnerStore }) {
             </>
           )}
           {shadowDoneToday && <p data-testid="shadow-done">الشادوينغ اليومي تم ✓ — 3 دقائق بصوتك</p>}
+          {thursdayEngine && thursdayPick && !readingDoneToday && (
+            <>
+              <p data-testid="reading-banner">نص القراءة الحر 📖 — {thursdayEngine.titleAr} (من الوحدة {thursdayPick.unit})</p>
+              <button data-testid="start-reading" onClick={startReading}>
+                📖 اقرأ النص
+              </button>
+            </>
+          )}
+          {readingDoneToday && <p data-testid="reading-done">قراءة الخميس تمت ✓ — نص كامل بفهمك</p>}
           {todayEntry && todayEntry.durationMinutes > 0 && (
             <MeasureStrip entry={todayEntry} dueCount={dueCount} />
           )}
