@@ -1,6 +1,6 @@
 // src/App.tsx — القشرة: أول تشغيل → تبويبات خمسة (اليوم · الخريطة · المدرب · الدفتر · الإعدادات) + حصة الدرس الحالي + بوابة Quiz + حفظ التقدّم (S0.6/S0.7/S0.8 + M1 + D117 + N-155/D269)
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { CoachWindow, LearnerState, OpenSession, SrsCardState, Unit0Card } from "./../content/schemas/index.js";
+import type { AudioScript, CoachWindow, LearnerState, OpenSession, SrsCardState, Unit0Card } from "./../content/schemas/index.js";
 import { FirstRun } from "./components/FirstRun.js";
 import { LessonSession } from "./components/LessonSession.js";
 import {
@@ -19,6 +19,7 @@ import { MeasureStrip } from "./components/MeasureStrip.js";
 import { UnitDebriefCard } from "./components/UnitDebrief.js";
 import { CalibrationReportCard } from "./components/CalibrationReport.js";
 import { WeeklyGoalCard } from "./components/WeeklyGoal.js";
+import { ShadowingRun } from "./components/ShadowingRun.js";
 import { BorrowedProvider } from "./components/StruckText.js";
 import { planLessonStations, type SrsDuePair } from "./lib/lesson-runner.js";
 import type { Station } from "./lib/lesson-engine.js";
@@ -31,8 +32,10 @@ import {
   indexEntry,
   levelOfWord,
   loadLesson,
+  loadScriptsForLesson,
   loadSessionBundle,
   loadWords,
+  shadowingLessonId,
   loadFirstSession,
   type SessionBundle,
 } from "./lesson-packs.js";
@@ -290,8 +293,10 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [micro, setMicro] = useState<{ pairs: SrsDuePair[] | null } | null>(null);
   const [deferred, setDeferred] = useState<{ unitKey: string; lessonId: string; bundle: SessionBundle | null } | null>(null); // D277: المعركة المؤجلة الجارية
   const [weeklyGoal, setWeeklyGoal] = useState<{ unitKey: string; goal: string } | null>(null); // D279: هدف الأسبوع (canDo السادس)
+  const [shadow, setShadow] = useState<{ lessonId: string; script: AudioScript | null } | null>(null); // D280: الشادوينغ الجاري
   const microStart = useRef<number>(0);
   const deferredStart = useRef<number>(0); // D277: بداية المؤجلة لقياس مدتها
+  const shadowStart = useRef<number>(0); // D280: بداية الشادوينغ لقياس دقائقه
   const [finishedNote, setFinishedNote] = useState<string | null>(null);
   /** N-155 (D269): التبويب الحالي — اليوم افتراضياً (قالب ثابت، قانون 16) */
   const [tab, setTab] = useState<MainTab>("today");
@@ -545,6 +550,10 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   /** D278: تقرير المعايرة — كل وحدتين مجتازتين */
   const passedUnits = passedBattleUnits(state.progress);
   const showCalibration = passedUnits.length >= 2 && passedUnits.length % 2 === 0;
+  /** D280: الشادوينغ اليومي — أحدث حوار متقن · يُخفى الأحد ومتى تمّ (3 دقائق) */
+  const shadowLesson =
+    new Date().getDay() === 0 ? undefined : shadowingLessonId(state.progress.completedLessons);
+  const shadowDoneToday = (todayEntry?.shadowingMinutes ?? 0) >= 3;
   /** D279: هدف الأسبوع — canDo الأول لاختبار السادس في الوحدة الحالية (يُحمَّل مرة لكل وحدة) */
   const curKey = current ? unitKeyOf(current.level, current.unit) : undefined;
   const goalState =
@@ -665,6 +674,52 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         ? `المؤجلة تمت (${o.percent}%) ✓ — ذاكرتك أثبتت بعد أسبوع.`
         : `المؤجلة تمت (${o.percent}%) — «ليس بعد» تُراجَع في حصصك القادمة، لا بأس.`,
     );
+  };
+
+  /** D280: بدء الشادوينغ — حوار الدرس المتقن (حواري أولاً) */
+  const startShadow = () => {
+    if (!state || !shadowLesson) return;
+    const entry = indexEntry(shadowLesson);
+    if (!entry) return;
+    shadowStart.current = Date.now();
+    setFinishedNote(null);
+    setShadow({ lessonId: shadowLesson, script: null });
+    const t = ++openToken.current;
+    void loadScriptsForLesson(shadowLesson, entry.level).then(
+      (scripts) => {
+        if (openToken.current !== t) return;
+        const pick = scripts.find((s) => s.kind === "dialogue") ?? scripts[0];
+        if (!pick) {
+          setShadow(null);
+          setFinishedNote(`لا حوار في ${shadowLesson} بعد — أُبلغت الإدارة.`);
+          return;
+        }
+        setShadow((d) => (d && d.lessonId === shadowLesson ? { ...d, script: pick } : d));
+      },
+      (e) => {
+        if (openToken.current !== t) return;
+        setShadow(null);
+        setFinishedNote(`تعذّر فتح الشادوينغ (${errText(e)}) — تحقق من الاتصال وأعد المحاولة.`);
+      },
+    );
+  };
+
+  /** D280: تسجيل الشادوينغ — دقائقه الحقيقية في سجل اليوم (ظل + مدة) */
+  const finishShadow = () => {
+    const s = stateRef.current;
+    if (s) {
+      const minutes = Math.max(1, Math.round((Date.now() - shadowStart.current) / 60000));
+      try {
+        commit({
+          ...s,
+          sessions: recordSession(s.sessions, { date: localDay(), durationMinutes: minutes, shadowingMinutes: minutes }),
+        });
+      } catch (e) {
+        setSaveError(errText(e));
+      }
+    }
+    setShadow(null);
+    setFinishedNote("ظللت حواراً متقناً بصوتك 🎙️ — النطق عضلة وهذه حركتها اليومية.");
   };
 
   const rateSrs = (id: string, rating: import("./lib/review-engine.js").RecallRating) => {
@@ -814,12 +869,21 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       <p data-testid="week-dots">
         <span dir="ltr">{week.dots.map((d) => (d ? "●" : "○")).join("")}</span> أسبوعك ({week.studied}/7)
       </p>
-      {!micro && !session && !deferred && dueCount > 0 && (
+      {!micro && !session && !deferred && !shadow && dueCount > 0 && (
         <button data-testid="start-micro" onClick={startMicro}>
           ⚡ جلسة مصغّرة — {dueCount} مستحقة (نحو 10 دقائق)
         </button>
       )}
-      {deferred ? (
+      {shadow ? (
+        shadow.script ? (
+          <>
+            <p data-testid="shadow-title">الشادوينغ اليومي 🎙️ — ظل حوار {shadow.lessonId} (نحو 3 دقائق)</p>
+            <ShadowingRun script={shadow.script} onFinish={finishShadow} />
+          </>
+        ) : (
+          <p data-testid="shadow-loading">جارٍ فتح حوار الظل {shadow.lessonId}…</p>
+        )
+      ) : deferred ? (
         deferred.bundle ? (
           <>
             <p data-testid="deferred-title">المعركة المؤجلة ⚔️ — {deferred.unitKey} (25 دقيقة — خذ وقتك)</p>
@@ -917,7 +981,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         <p data-testid="path-complete">أكملت كل ما نُشر من الدروس ✓ — الدروس التالية قيد الإنتاج.</p>
       )}
 
-      {!micro && !session && !deferred && (
+      {!micro && !session && !deferred && !shadow && (
         <>
           {battleNow && current && (
             <p data-testid="battle-banner">
@@ -940,6 +1004,15 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           {weeklyGoal && curKey && weeklyGoal.unitKey === curKey && goalState !== "hidden" && (
             <WeeklyGoalCard goal={weeklyGoal.goal} state={goalState} />
           )}
+          {shadowLesson && !shadowDoneToday && (
+            <>
+              <p data-testid="shadow-banner">الشادوينغ اليومي 🎙️ — 3 دقائق ظلٌّ لحوار متقن ({shadowLesson})</p>
+              <button data-testid="start-shadow" onClick={startShadow}>
+                🎙️ ابدأ الظل
+              </button>
+            </>
+          )}
+          {shadowDoneToday && <p data-testid="shadow-done">الشادوينغ اليومي تم ✓ — 3 دقائق بصوتك</p>}
           {todayEntry && todayEntry.durationMinutes > 0 && (
             <MeasureStrip entry={todayEntry} dueCount={dueCount} />
           )}

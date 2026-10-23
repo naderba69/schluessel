@@ -213,6 +213,19 @@ export async function loadScriptsForLesson(lessonId: string, level: string): Pro
   return Promise.all(keys.map((k) => loadJson(SCRIPT_MODS, k, AudioScript)));
 }
 
+/** D280: هل للدرس سكربت مباشر؟ (فحص متزامن على مفاتيح الـglob — بلا تحميل) */
+export function hasDirectScript(lessonId: string): boolean {
+  return Object.keys(SCRIPT_MODS).some((k) => {
+    const base = k.slice(k.lastIndexOf("/") + 1);
+    return base.startsWith(`${lessonId}-`);
+  });
+}
+
+/** D280: درس الظل اليومي — أحدث درس مكتمل له حوار مباشر («ظل حواراً متقناً» ب-20) */
+export function shadowingLessonId(completedIds: readonly string[]): string | undefined {
+  return [...completedIds].reverse().find((id) => hasDirectScript(id));
+}
+
 /** كل السكربتات — للاختبارات الشاملة فقط */
 export function loadAllScripts(): Promise<import("../content/schemas/index.js").AudioScript[]> {
   return Promise.all(Object.keys(SCRIPT_MODS).sort().map((k) => loadJson(SCRIPT_MODS, k, AudioScript)));
