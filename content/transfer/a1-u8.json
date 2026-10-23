@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-transfer-u8",
+  "level": "A1",
+  "unit": 8,
+  "items": [
+    {
+      "q": "«هذه السترة زرقاء»؟",
+      "a": "Diese Jacke ist blau.",
+      "choices": ["Diese Jacke ist blau.", "Dieser Jacke ist blau.", "Dieses Jacke ist blau."],
+      "why": "Jacke مؤنثة ⇐ diese. وdieser للمذكر وdieses للمحايد."
+    },
+    {
+      "q": "«هذا الكنزة يعجبني!»؟",
+      "a": "Dieser Pullover gefällt mir!",
+      "choices": ["Dieser Pullover gefällt mir!", "Diese Pullover gefällt mir!", "Dieser Pullover gefallt mir!"],
+      "why": "Pullover مذكر ⇐ dieser. وgefällt (بـä) من gefallen."
+    },
+    {
+      "q": "«هل أستطيع تجربة السترة؟»؟",
+      "a": "Kann ich die Jacke anprobieren?",
+      "choices": ["Kann ich die Jacke anprobieren?", "Kann ich der Jacke anprobieren?", "Kann ich die Jacke anprobiere?"],
+      "why": "السترة مفعول به مؤنث ⇐ die (تبقى die). والمصدر anprobieren بـn."
+    },
+    {
+      "q": "«أسافر بالقطار»؟",
+      "a": "Ich fahre mit der Bahn.",
+      "choices": ["Ich fahre mit der Bahn.", "Ich fahre mit die Bahn.", "Ich fahre mit den Bahn."],
+      "why": "mit تجرّ دائماً: Bahn مؤنثة ⇐ der. وdie للنصب وden للجمع."
+    }
+  ]
+}
