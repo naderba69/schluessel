@@ -13,7 +13,7 @@ import {
 } from "../src/components/SystemLab.js";
 import { createInitialState } from "../src/lib/state-factory.js";
 import { BLAME_WORDS } from "../src/lib/warmth-engine.js";
-import { loadFirstSession } from "../src/lesson-packs.js";
+import { LESSON_INDEX, loadFirstSession } from "../src/lesson-packs.js";
 
 const FIRST_WORDS = (await loadFirstSession()).direct;
 
@@ -101,14 +101,14 @@ describe("E22 — شاشة الإعدادات", () => {
 });
 
 describe("تبويب المسار الكامل (N-149 · D249)", () => {
-  it("يعرض العدّاد والقائمة الـ91 بحالاتها (من التطبيق)", () => {
+  it("يعرض العدّاد والقائمة الكاملة بحالاتها (من التطبيق)", () => {
     const html = renderToStaticMarkup(<PathScreen progress={createInitialState("س").progress} />);
     expect(html).toContain('data-testid="path-list"');
-    expect(html).toContain("أكملت 0 من 91 درساً منشوراً");
+    expect(html).toContain(`أكملت 0 من ${LESSON_INDEX.length} درساً منشوراً`);
     expect(html).toContain("a1-u1-d1");
     expect(html).toContain("● الدرس الحالي");
     expect(html).toContain("🔒 مقفل");
-    expect(html.match(/data-lesson-id=/g)!.length).toBe(91);
+    expect(html.match(/data-lesson-id=/g)!.length).toBe(LESSON_INDEX.length);
   });
 
   it("بلا حالة: رسالة صريحة لا قائمة فارغة", () => {

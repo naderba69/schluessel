@@ -14,6 +14,7 @@ import { taughtUpTo, frontViolations } from "../tools/lib/lesson-upgrade.js";
 import { knownStems, knownForms, contentTokens, CLOSED } from "../tools/lib/vocab-forms.js";
 import { slugify } from "../tools/lib/word-entry.js";
 import { planLessonStations, fullForm } from "../src/lib/lesson-runner.js";
+import { cyclicTestFor } from "../src/lib/lesson-path.js";
 
 describe("سجل المحتوى — الوحدة 1 كاملة + بداية الوحدة 2", () => {
   it("الدروس مرتّبة والسجل مطابق للملفات", () => {
@@ -1363,8 +1364,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(ALL_WORDS.find((w) => w.id === "loeffel")?.de).toBe("Löffel");
   });
 
-  it("بطاقات الثقافة (Landeskunde): 12 بطاقة — كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {
-    expect(ALL_LANDESKUNDE.length).toBe(12);
+  it("بطاقات الثقافة (Landeskunde): كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {
     const units = ALL_LANDESKUNDE.map((c) => c.unit).sort((a, b) => a - b);
     expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
     for (const card of ALL_LANDESKUNDE) {
@@ -1375,11 +1375,13 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     }
   });
 
-  it("الاختبارات الدورية: 7 Kurztest + 3 Monatsprüfung — تراكمية وبحدود الحجم", () => {
-    const kurz = ALL_PRUEFUNGEN.filter((t) => t.kind === "kurztest");
-    const monat = ALL_PRUEFUNGEN.filter((t) => t.kind === "monatspruefung");
-    expect(kurz.length).toBe(7);
-    expect(monat.length).toBe(3);
+  it("الاختبارات الدورية: تغطية الجدول A1 (قصير 2..14 + شهرية 4/8/12) — تراكمية وبحدود الحجم", () => {
+    const kurz = ALL_PRUEFUNGEN.filter((t) => t.kind === "kurztest" && t.level === "A1");
+    const monat = ALL_PRUEFUNGEN.filter((t) => t.kind === "monatspruefung" && t.level === "A1");
+    expect(kurz.map((x) => x.week).sort((x, y) => x - y)).toEqual([2, 4, 6, 8, 10, 12, 14]); // w4/w8/w12 احتياط الشهرية (D290)
+    expect(monat.map((x) => x.week).sort((x, y) => x - y)).toEqual([4, 8, 12]);
+    const sat = new Date(2026, 9, 17); // سبت ثابت — رقم الأسبوع صريح
+    for (let w = 2; w <= 14; w += 2) expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", w, sat)?.id, `الأسبوع ${w}`).toBeTruthy();
     for (const t of kurz) {
       expect(t.items.length).toBeLessThanOrEqual(12);
       expect(t.timeBudgetMin).toBe(15);
@@ -1423,7 +1425,6 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
   });
 
   it("نصوص القراءة: نص لكل وحدة + أسئلة + مسرد (قد يفرغ — النص النظيف بلا مسرد N-023) + حدود الصدق", () => {
-    expect(ALL_LESETEXTS.length).toBe(12);
     const units = ALL_LESETEXTS.map((t) => t.unit).sort((a, b) => a - b);
     expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
     for (const t of ALL_LESETEXTS) {

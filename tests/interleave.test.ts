@@ -18,8 +18,10 @@ const word = (id: string) => { const w = byId.get(id); if (!w) throw new Error(`
 
 describe("interleavedWith — الاستدعاء المعلن كلمةُ درسٍ سابق تظهر فعلاً في المحطة (N-102/N-110)", () => {
   const declared = lessons.flatMap((l) => l.uebung.stations.flatMap((s) => s.interleavedWith.map((r) => ({ l, s, r }))));
-  it("كل دروس A1 الـ90 (12×6 + u13-d1..d6 + u14-d1..d6 + u15×6 — D204–D215) تُعلن استدعاءً (≥ 1 محطة من اليوم 3) وكلها مرجعيّة", () => {
-    expect(lessons.length).toBe(90);
+  it("كل دروس A1 (15 وحدة × 6 أيام — D204–D215) تُعلن استدعاءً (≥ 1 محطة من اليوم 3) وكلها مرجعيّة", () => {
+    const units = [...new Set(lessons.map((l) => l.unit))].sort((x, y) => x - y);
+    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
+    for (const u of units) expect(lessons.filter((l) => l.unit === u).map((l) => l.day).sort(), `الوحدة ${u}`).toEqual([1, 2, 3, 4, 5, 6]);
     expect(declared.length).toBeGreaterThan(300);
     for (const { l, r } of declared) expect(byId.has(r), `${l.id}: «${r}» بلا ملف كلمة`).toBe(true);
   });
