@@ -6,7 +6,14 @@
 // («ترجم: اسمي يوسف» ← Ich heiße Yusuf. / Ich bin Yusuf.) أو إجابة بصيغة لا يعرفها المتعلم مسبقاً («يصل» ← ankommen → er kommt an.).
 // المطابقة الحرفية وحدها تُسقط من أجاب صواباً — وبوابة تقفل المسار لا تُبنى على مصحِّح معروف الخطأ. فيرى المتعلم النموذج
 // ويحكم (كحكم «self» في الإنتاج الحر — practice-session)، ويُحتسب حكمه ويُعلَن عدده في النتيجة وفي السجل (selfJudged).
-import type { Lesson, QuizAnswer, QuizItem } from "../../content/schemas/index.js";
+import type { CyclicTest, Lesson, QuizAnswer, QuizItem } from "../../content/schemas/index.js";
+
+/** D283: أدنى ما تحتاجه المحطة — نسخة واحدة على الأقل (الدروس 3 بموجب القانون 21 · الدوري نسخة واحدة) */
+export type QuizForms = {
+  id: string;
+  quiz: { variants: readonly { items: QuizItem[]; passingScore: number }[] };
+  slider: { questionDe: string; questionAr: string; min: number; max: number };
+};
 import { normalizeAnswer } from "./practice-session.js";
 
 /** نصف درجة: الفرق في حالة الأحرف أو في كتابة ß/ä/ö/ü فقط — خطأ إملائي حقيقي في الألمانية لا يمحو المعرفة */
@@ -75,7 +82,7 @@ export const creditOf = (v: QuizVerdict): number =>
 export const variantFor = (priorAttempts: number, variantCount: number): number =>
   ((priorAttempts % variantCount) + variantCount) % variantCount;
 
-export function startQuizAttempt(lesson: Pick<Lesson, "id" | "quiz">, priorAttempts: number): QuizAttempt {
+export function startQuizAttempt(lesson: Pick<QuizForms, "id" | "quiz">, priorAttempts: number): QuizAttempt {
   if (!Number.isInteger(priorAttempts) || priorAttempts < 0) throw new Error(`عدد محاولات غير صالح: ${priorAttempts}`);
   const variantIndex = variantFor(priorAttempts, lesson.quiz.variants.length);
   const v = lesson.quiz.variants[variantIndex]!;
@@ -87,7 +94,7 @@ export function startQuizAttempt(lesson: Pick<Lesson, "id" | "quiz">, priorAttem
  * fail-safe: نسخة/بنود تغيّرت في المحتوى بعد الحفظ ← تقليم صامت للمؤشر والإجابات، ونسخة خارج النطاق ← محاولة جديدة (لا عطل أبداً).
  */
 export function restoreQuizAttempt(
-  lesson: Pick<Lesson, "id" | "quiz">,
+  lesson: Pick<QuizForms, "id" | "quiz">,
   snap: { variantIndex: number; predicted: number | null; answers: readonly QuizAnswer[]; cursor: number },
 ): QuizAttempt {
   const v = lesson.quiz.variants[snap.variantIndex];
@@ -233,3 +240,20 @@ export function outcomeHeadlineAr(o: QuizOutcome): string {
 }
 
 const fmtCredit = (c: number) => (Number.isInteger(c) ? String(c) : c.toFixed(1));
+
+/* ══════════ D283 — الاختبار الدوري على محطة Quiz نفسها (Kurztest/الشهري) ══════════ */
+/** مهايئ الاختبار الدوري: بنوده المفتوحة ← نسخة Quiz واحدة (التصحيح والحكم الذاتي والمعايرة كما هي) */
+export function cyclicQuizLesson(test: Pick<CyclicTest, "id" | "passingScore" | "items">): QuizForms {
+  return {
+    id: test.id,
+    quiz: {
+      variants: [
+        {
+          items: test.items.map(({ q, a }) => ({ q, a })),
+          passingScore: test.passingScore,
+        },
+      ],
+    },
+    slider: { questionDe: "Wie viel Prozent wirst du schaffen?", questionAr: "كم بالمئة ستحقق؟", min: 0, max: 100 },
+  };
+}

@@ -2,7 +2,7 @@
 // القانون 3/§3: مسار خطّي — لا قفز ولا ارتجاع؛ يُفتح الدرس التالي بـ≥75% في Quiz سابقه فقط (routes.ts يعرض الحالة).
 // الحقيقة المخزَّنة = completedLessons (تاريخ لا يُمحى) · availableLessons مشتقّة منها ومن ترتيب المحتوى الحالي
 // (reconcileProgress) — فتغيير المحتوى (مثل نقل الوحدة 17 ← 15 في D113) لا يترك متعلماً معلَّقاً بمعرّف اختفى.
-import type { CalibrationEntry, ErrorEntry, GateResult, LearnerProgress, LearnerState, Level, OpenSession } from "../../content/schemas/index.js";
+import type { CalibrationEntry, CyclicTest, ErrorEntry, GateResult, LearnerProgress, LearnerState, Level, OpenSession } from "../../content/schemas/index.js";
 import type { QuizOutcome } from "./quiz-session.js";
 import { enrollSrsCards } from "./review-engine.js";
 
@@ -130,6 +130,77 @@ export function unitDebrief(
     goldenResolved: fromUnit.filter((e) => e.resolved).length,
     calibrations: cal.length,
     bias: cal.length > 0 ? cal.reduce((s, c) => s + (c.predicted - c.actual), 0) / cal.length : null,
+  };
+}
+
+/** D283: أسبوع الرحلة (1-based) — أسابيع اثنينية منذ اثنين أسبوع الإنشاء */
+export function journeyWeek(createdAtISO: string, today = new Date()): number {
+  const [y, m, d] = createdAtISO.split("-").map(Number);
+  if (!y || !m || !d) return 1;
+  const created = new Date(y, m - 1, d);
+  const mondayOf = (x: Date) => new Date(x.getFullYear(), x.getMonth(), x.getDate() - ((x.getDay() + 6) % 7));
+  const start = mondayOf(created).getTime();
+  const now = mondayOf(today).getTime();
+  return Math.max(1, Math.round((now - start) / 604800000) + 1);
+}
+
+/** D283: محاولات اختبار دوري (Kurztest/الشهري) */
+export function cyclicAttempts(progress: Pick<LearnerProgress, "gateResults">, testId: string): number {
+  return progress.gateResults.filter(
+    (g) => (g.kind === "kurztest" || g.kind === "monthly") && g.gateId === testId,
+  ).length;
+}
+
+/** D283: اختبار الأسبوع الدوري — سبت + أسبوع زوجي (الشهرية في أسابيعها بدل القصير) */
+export function cyclicTestFor(
+  tests: readonly CyclicTest[],
+  level: string,
+  weekNumber: number,
+  today: Date,
+): CyclicTest | undefined {
+  if (today.getDay() !== 6 || weekNumber < 2 || weekNumber % 2 !== 0) return undefined;
+  const kind = weekNumber % 4 === 0 ? "monatspruefung" : "kurztest";
+  return tests.find((t) => t.level === level && t.kind === kind && t.week === weekNumber);
+}
+
+/** D283: الاختبار الدوري المستحق — موجود + بلا تسجيل */
+export function cyclicDue(
+  tests: readonly CyclicTest[],
+  level: string,
+  weekNumber: number,
+  today: Date,
+  progress: Pick<LearnerProgress, "gateResults">,
+): CyclicTest | undefined {
+  const hit = cyclicTestFor(tests, level, weekNumber, today);
+  if (!hit) return undefined;
+  return cyclicAttempts(progress, hit.id) === 0 ? hit : undefined;
+}
+
+/** D283: تسجيل الاختبار الدوري — بلا قفل مسار ولا إكمال (تراكمي تشخيصي، والمعايرة تُحفَظ) */
+export function recordCyclicTest(
+  state: LearnerState,
+  test: Pick<CyclicTest, "id" | "kind">,
+  outcome: QuizOutcome,
+  date: string,
+): LearnerState {
+  const result: GateResult = {
+    gateId: test.id,
+    kind: test.kind === "monatspruefung" ? "monthly" : "kurztest",
+    score: outcome.score,
+    passed: outcome.passed,
+    attempts: cyclicAttempts(state.progress, test.id) + 1,
+    weakSections: outcome.weakItems,
+    ...(outcome.selfCorrect > 0 ? { selfJudged: outcome.selfCorrect } : {}),
+    date,
+  };
+  const calibration =
+    outcome.predicted === null
+      ? state.profile.calibration
+      : [...state.profile.calibration, { date, predicted: outcome.predicted, actual: outcome.percent }];
+  return {
+    ...state,
+    profile: { ...state.profile, calibration },
+    progress: { ...state.progress, gateResults: [...state.progress.gateResults, result] },
   };
 }
 

@@ -2,17 +2,17 @@
 // تشريح الدرس (§3): 6 Slider ← 7 Quiz ← 8 Zusammenfassung — فتُعرض الخلاصة بعد أول محاولة (للمراجعة عند «ليس بعد»).
 // القانون 13 (الجبهة): سؤال الـSlider يُعرض بالعربية فقط — «Wie viel Prozent wirst du schaffen?» فيها ما لم يُتعلَّم بعد.
 import { useRef, useState } from "react";
-import type { Lesson, OpenQuiz, QuizAnswer, QuizItem } from "../../content/schemas/index.js";
+import type { OpenQuiz, QuizAnswer, QuizItem } from "../../content/schemas/index.js";
 import { displayOrder } from "../lib/practice-session.js";
 import {
   advanceQuiz, answerQuizItem, calibrationNoteAr, canRetryInSession, creditOf, currentQuizItem, isAnswered, isComplete,
   judgeQuizItem, needsJudgment, outcomeHeadlineAr, predictScore, quizOutcome, restoreQuizAttempt, startQuizAttempt, verdictNoteAr,
-  type QuizAttempt, type QuizOutcome,
+  type QuizAttempt, type QuizForms, type QuizOutcome,
 } from "../lib/quiz-session.js";
 import { UmlautKeys, insertAtCursor } from "./LessonContent.js";
 import { StruckText } from "./StruckText.js";
 
-export type QuizLesson = Pick<Lesson, "id" | "quiz" | "slider">;
+export type QuizLesson = QuizForms;
 
 export function QuizStation({
   lesson,

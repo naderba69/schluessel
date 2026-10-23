@@ -30,6 +30,7 @@ import { eveningReport, tomorrowPreview, muellerMessage } from "./lib/warmth-eng
 import {
   PATH,
   ALL_LESETEXTS,
+  ALL_PRUEFUNGEN,
   LESSON_INDEX,
   LESSON_ORDER,
   indexEntry,
@@ -43,9 +44,9 @@ import {
   type SessionBundle,
 } from "./lesson-packs.js";
 import { phrasesAvailable } from "./lib/phrase-bank.js";
-import { battleAttempts, currentLessonId, deferredDue, delayedAttempts, lessonAfter, openSessionFor, passedBattleUnits, passedUnitBattle, quizAttempts, reconcileState, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitDebrief, unitKeyOf } from "./lib/lesson-path.js";
+import { battleAttempts, currentLessonId, cyclicAttempts, cyclicDue, cyclicTestFor, deferredDue, delayedAttempts, journeyWeek, lessonAfter, openSessionFor, passedBattleUnits, passedUnitBattle, quizAttempts, reconcileState, recordCyclicTest, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitDebrief, unitKeyOf } from "./lib/lesson-path.js";
 import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, type DoseChoice } from "./lib/session-log.js";
-import type { QuizOutcome } from "./lib/quiz-session.js";
+import { cyclicQuizLesson, type QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
 import { DAY_FOCUS_AR, dayFocus, flexWeek, weekDots, weeklyGoalState } from "./lib/day-engine.js";
@@ -298,10 +299,12 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [weeklyGoal, setWeeklyGoal] = useState<{ unitKey: string; goal: string } | null>(null); // D279: هدف الأسبوع (canDo السادس)
   const [shadow, setShadow] = useState<{ lessonId: string; script: AudioScript | null } | null>(null); // D280: الشادوينغ الجاري
   const [reading, setReading] = useState<{ textId: string } | null>(null); // D281: نص الخميس الجاري (النصوص حاضرة — بلا تحميل)
+  const [cyclic, setCyclic] = useState<{ testId: string } | null>(null); // D283: الاختبار الدوري الجاري (حاضر — بلا تحميل)
   const microStart = useRef<number>(0);
   const deferredStart = useRef<number>(0); // D277: بداية المؤجلة لقياس مدتها
   const shadowStart = useRef<number>(0); // D280: بداية الشادوينغ لقياس دقائقه
   const readingStart = useRef<number>(0); // D281: بداية القراءة لقياس دقائقها
+  const cyclicStart = useRef<number>(0); // D283: بداية الدوري لقياس دقائقه
   const [finishedNote, setFinishedNote] = useState<string | null>(null);
   /** N-155 (D269): التبويب الحالي — اليوم افتراضياً (قالب ثابت، قانون 16) */
   const [tab, setTab] = useState<MainTab>("today");
@@ -584,6 +587,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       ? toEngineText({ id: thursdayPick.id, level: thursdayPick.level, title: thursdayPick.title, text: thursdayPick.text })
       : undefined;
   const readingDoneToday = (todayEntry?.readingMinutes ?? 0) > 0;
+  /** D283: الاختبار الدوري — سبت الأسبوع الزوجي (القصير 15 د · الشهرية 45 د) */
+  const weekNo = journeyWeek(state.profile.createdAt);
+  const weekTest = cyclicTestFor(ALL_PRUEFUNGEN, state.profile.level, weekNo, new Date());
+  const dueTest = weekTest && cyclicAttempts(state.progress, weekTest.id) === 0 ? weekTest : undefined;
+  const cyclicDone = weekTest !== undefined && cyclicAttempts(state.progress, weekTest.id) > 0;
   /** D279: هدف الأسبوع — canDo الأول لاختبار السادس في الوحدة الحالية (يُحمَّل مرة لكل وحدة) */
   const curKey = current ? unitKeyOf(current.level, current.unit) : undefined;
   const goalState =
@@ -778,6 +786,37 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     setFinishedNote("قرأت نصاً كاملاً بالألمانية 📖 — القراءة الحرة تبني المعجم بصمت.");
   };
 
+  /** D283: بدء الاختبار الدوري — حاضر فوراً */
+  const startCyclic = () => {
+    if (!dueTest) return;
+    cyclicStart.current = Date.now();
+    setFinishedNote(null);
+    setCyclic({ testId: dueTest.id });
+  };
+
+  /** D283: اكتمال الدوري — يُسجَّل بلا قفل مسار + دقائقه في سجل اليوم */
+  const finishCyclic = (o: QuizOutcome) => {
+    const c = cyclic;
+    const test = weekTest && cyclic?.testId === weekTest.id ? weekTest : undefined;
+    if (!c || !test) return;
+    const s = stateRef.current;
+    if (s) {
+      const minutes = Math.max(1, Math.round((Date.now() - cyclicStart.current) / 60000));
+      try {
+        const s1 = recordCyclicTest(s, test, o, localDay());
+        commit({ ...s1, sessions: recordSession(s1.sessions, { date: localDay(), durationMinutes: minutes }) });
+      } catch (e) {
+        setSaveError(errText(e));
+      }
+    }
+    setCyclic(null);
+    setFinishedNote(
+      o.passed
+        ? `الاختبار الدوري تم (${o.percent}%) ✓ — التراكمي يثبت.`
+        : `الاختبار الدوري تم (${o.percent}%) — الفجوات وقود المراجعة، لا بأس.`,
+    );
+  };
+
   const rateSrs = (id: string, rating: import("./lib/review-engine.js").RecallRating) => {
     const st = stateRef.current;
     if (st) commit({ ...st, srsCards: applySrsRating(st.srsCards, id, rating) });
@@ -938,12 +977,38 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       {returnKind === "back" && (
         <p data-testid="flex-return">عدت — وهذا أهم شيء. نبدأ بخفة، بلا ديون 🌱</p>
       )}
-      {!micro && !session && !deferred && !shadow && !reading && dueCount > 0 && (
+      {!micro && !session && !deferred && !shadow && !reading && !cyclic && dueCount > 0 && (
         <button data-testid="start-micro" onClick={startMicro}>
           ⚡ جلسة مصغّرة — {dueCount} مستحقة (نحو 10 دقائق)
         </button>
       )}
-      {reading && thursdayEngine && thursdayPick ? (
+      {cyclic && weekTest && cyclic.testId === weekTest.id ? (
+        <>
+          <p data-testid="cyclic-title">
+            {weekTest.kind === "monatspruefung" ? "المعركة الشهرية 🏆" : "الاختبار القصير 📝"} — {weekTest.id} ({weekTest.timeBudgetMin} دقيقة)
+          </p>
+          <QuizStation
+            lesson={cyclicQuizLesson(weekTest)}
+            priorAttempts={cyclicAttempts(state.progress, weekTest.id)}
+            onAttemptComplete={finishCyclic}
+            onGrade={({ item, given, verdict }) => {
+              const s = stateRef.current;
+              if (s)
+                commit({
+                  ...s,
+                  errors: upsertGoldenError(s.errors, {
+                    skill: item.choices ? "lesen" : "schreiben",
+                    wrong: given || "—",
+                    correct: item.a,
+                    explanation: item.why ?? "قارن إجابتك بالتصحيح واستنتج الفرق.",
+                    source: `${weekTest.id}/cyclic`,
+                    closeSlip: verdict === "close",
+                  }),
+                });
+            }}
+          />
+        </>
+      ) : reading && thursdayEngine && thursdayPick ? (
         <>
           <p data-testid="reading-title">نص القراءة الحر 📖 — {thursdayEngine.titleAr}</p>
           <FreeReading text={thursdayEngine} questions={thursdayPick.questions} onFinish={finishReading} />
@@ -1055,7 +1120,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         <p data-testid="path-complete">أكملت كل ما نُشر من الدروس ✓ — الدروس التالية قيد الإنتاج.</p>
       )}
 
-      {!micro && !session && !deferred && !shadow && !reading && (
+      {!micro && !session && !deferred && !shadow && !reading && !cyclic && (
         <>
           {battleNow && current && (
             <p data-testid="battle-banner">
@@ -1096,6 +1161,19 @@ export function App({ store: injected }: { store?: LearnerStore }) {
             </>
           )}
           {readingDoneToday && <p data-testid="reading-done">قراءة الخميس تمت ✓ — نص كامل بفهمك</p>}
+          {dueTest && (
+            <>
+              <p data-testid="cyclic-banner">
+                {dueTest.kind === "monatspruefung"
+                  ? `اليوم المعركة الشهرية 🏆 — تراكمي الشهر (الوحدات ${dueTest.coversUnits.join("، ")}) — ${dueTest.timeBudgetMin} دقيقة`
+                  : `اليوم الاختبار القصير 📝 — تراكمي الأسبوعين (الوحدات ${dueTest.coversUnits.join("، ")}) — ${dueTest.timeBudgetMin} دقيقة`}
+              </p>
+              <button data-testid="start-cyclic" onClick={startCyclic}>
+                ابدأ الاختبار
+              </button>
+            </>
+          )}
+          {cyclicDone && <p data-testid="cyclic-done">الاختبار الدوري تم ✓ — نتيجته في سجلك</p>}
           {todayEntry && todayEntry.durationMinutes > 0 && (
             <MeasureStrip entry={todayEntry} dueCount={dueCount} />
           )}

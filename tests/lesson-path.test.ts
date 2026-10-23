@@ -5,8 +5,9 @@ import { LearnerState as LearnerStateSchema, type LearnerState } from "../conten
 import { createInitialState } from "../src/lib/state-factory.js";
 import { lessonStatus } from "../src/lib/routes.js";
 import {
-  battleAttempts, currentLessonId, deferredDue, deferredUnits, delayedAttempts, lessonAfter, openSessionFor, passedUnitBattle,
-  quizAttempts, reconcileProgress, reconcileState, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitKeyOf,
+  battleAttempts, currentLessonId, cyclicAttempts, cyclicDue, cyclicTestFor, deferredDue, deferredUnits, delayedAttempts,
+  journeyWeek, lessonAfter, openSessionFor, passedUnitBattle,
+  quizAttempts, reconcileProgress, reconcileState, recordCyclicTest, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitKeyOf,
   type PathLesson,
 } from "../src/lib/lesson-path.js";
 import {
@@ -14,6 +15,7 @@ import {
 } from "../src/lib/quiz-session.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
 import { LESSON_ORDER, loadAllGrammarRules, loadAllLessons, runtimeWordsForLesson } from "../src/lesson-packs.js";
+import { ALL_PRUEFUNGEN } from "../src/lesson-packs.js";
 const ALL_GRAMMAR_RULES = await loadAllGrammarRules();
 const ALL_LESSONS = await loadAllLessons();
 
@@ -220,5 +222,69 @@ describe("D277: المعركة المؤجلة", () => {
     expect(deferredDue(s.progress, "A1-u1", "2026-10-21")).toBe(false); // أربعاء
     expect(deferredDue(s.progress, "A1-u2", "2026-10-19")).toBe(false); // بلا اجتياز
     expect(deferredDue(s.progress, "A1-u1", "not-a-date")).toBe(false);
+  });
+});
+
+describe("D283: أسبوع الرحلة", () => {
+  it("أسابيع اثنينية منذ أسبوع الإنشاء — 1-based", () => {
+    expect(journeyWeek("2026-10-05", new Date(2026, 9, 10))).toBe(1); // سبت الأسبوع نفسه
+    expect(journeyWeek("2026-10-05", new Date(2026, 9, 11))).toBe(1); // الأحد يتبع اثنينه
+    expect(journeyWeek("2026-10-05", new Date(2026, 9, 12))).toBe(2); // الاثنين التالي
+    expect(journeyWeek("2026-10-05", new Date(2026, 9, 31))).toBe(4);
+    expect(journeyWeek("2026-10-07", new Date(2026, 9, 17))).toBe(2); // إنشاء أربعاء ← أسبوعه يبدأ 10-05
+    expect(journeyWeek("not-a-date")).toBe(1);
+  });
+});
+
+describe("D283: استحقاق الدوري", () => {
+  const SAT2 = new Date(2026, 9, 17); // سبت الأسبوع 2 (من 10-05)
+  const SAT4 = new Date(2026, 9, 31); // سبت الأسبوع 4
+  const FRI2 = new Date(2026, 9, 16);
+  const empty = { gateResults: [] };
+
+  it("سبت زوجي ← القصير · والشهرية في أسابيعها بدل القصير", () => {
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 2, SAT2)?.id).toBe("a1-kurztest-w2");
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 4, SAT4)?.id).toBe("a1-monatspruefung-w4");
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 6, new Date(2026, 10, 14))?.id).toBe("a1-kurztest-w6");
+  });
+
+  it("غير السبت والفردي والغائب والمستوى الخاطئ ← لا شيء", () => {
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 2, FRI2)).toBeUndefined();
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 3, new Date(2026, 9, 24))).toBeUndefined();
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 14, new Date(2026, 11, 5))).toBeUndefined(); // بلا محتوى
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "B1", 2, SAT2)).toBeUndefined();
+  });
+
+  it("المسجَّل لا يُستحَق ثانية", () => {
+    expect(cyclicDue(ALL_PRUEFUNGEN, "A1", 2, SAT2, empty)?.id).toBe("a1-kurztest-w2");
+    const done = {
+      gateResults: [{ gateId: "a1-kurztest-w2", kind: "kurztest" as const, score: 0.8, passed: true, attempts: 1, weakSections: [], date: "2026-10-17" }],
+    };
+    expect(cyclicDue(ALL_PRUEFUNGEN, "A1", 2, SAT2, done)).toBeUndefined();
+    expect(cyclicAttempts(done, "a1-kurztest-w2")).toBe(1);
+  });
+});
+
+describe("D283: تسجيل الدوري", () => {
+  const kurz = { id: "a1-kurztest-w2", kind: "kurztest" } as const;
+  const monat = { id: "a1-monatspruefung-w4", kind: "monatspruefung" } as const;
+
+  it("النوع يُحفَظ (kurztest/monthly) — بلا قفل ولا إكمال", () => {
+    const s = recordCyclicTest(fresh(), kurz, outcome("x", 0.8), "2026-10-17");
+    expect(s.progress.gateResults[0]).toMatchObject({ gateId: "a1-kurztest-w2", kind: "kurztest", attempts: 1 });
+    expect(s.progress.completedLessons).toEqual([]);
+    expect(currentLessonId(s.progress, PATH)).toBe("a1-u1-d1");
+    const m = recordCyclicTest(fresh(), monat, outcome("x", 0.6), "2026-10-31");
+    expect(m.progress.gateResults[0]).toMatchObject({ gateId: "a1-monatspruefung-w4", kind: "monthly", passed: false });
+  });
+
+  it("المحاولات تتراكم والمعايرة تُحفَظ", () => {
+    let s = fresh();
+    s = recordCyclicTest(s, kurz, outcome("x", 0.5), "2026-10-17");
+    s = recordCyclicTest(s, kurz, outcome("x", 0.8), "2026-10-17");
+    expect(s.progress.gateResults.map((g) => g.attempts)).toEqual([1, 2]);
+    expect(s.profile.calibration).toHaveLength(2);
+    const n = recordCyclicTest(fresh(), kurz, outcome("x", 0.8, { predicted: null }), "2026-10-17");
+    expect(n.profile.calibration).toEqual([]);
   });
 });
