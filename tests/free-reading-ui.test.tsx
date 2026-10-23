@@ -100,9 +100,11 @@ describe("التطبيق — نص الخميس", () => {
     expect(q("reading-banner")).toBeNull();
   });
 
-  it("المكتمل بلا نص (u13) ← بلا نص", async () => {
+  it("المكتمل u13 ← نصه حاضر (D292)", async () => {
     await renderSeeded(THU, ["a1-u13-d1"], 0);
-    expect(q("reading-banner")).toBeNull();
+    const b = q("reading-banner")!;
+    expect(b.textContent).toContain("حفلة يوم السبت");
+    expect(b.textContent).toContain("الوحدة 13");
   });
 
   it("تمّ اليوم ← سطر الإنجاز بلا زر", async () => {

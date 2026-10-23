@@ -1366,7 +1366,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
 
   it("بطاقات الثقافة (Landeskunde): كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {
     const units = ALL_LANDESKUNDE.map((c) => c.unit).sort((a, b) => a - b);
-    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
     for (const card of ALL_LANDESKUNDE) {
       expect(card.facts.length).toBeGreaterThanOrEqual(2);
       expect(card.title.de.length).toBeGreaterThan(0);
@@ -1426,7 +1426,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
 
   it("نصوص القراءة: نص لكل وحدة + أسئلة + مسرد (قد يفرغ — النص النظيف بلا مسرد N-023) + حدود الصدق", () => {
     const units = ALL_LESETEXTS.map((t) => t.unit).sort((a, b) => a - b);
-    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
     for (const t of ALL_LESETEXTS) {
       expect(t.text.de.length).toBeGreaterThanOrEqual(40);
       expect(t.glossary.length).toBeGreaterThanOrEqual(0); // N-023 (D222): النص النظيف تماماً بلا مسرد (u7/u10/u12) — وصدق المسرد يفحصه حارس N-023 (لا مدخل ميت)
@@ -1514,7 +1514,7 @@ describe("N-048 (D221) — الخطأ البعيد الوحيد محصور في 
   });
 });
 
-describe("N-023 (D223) — نصوص القراءة الـ12 كلها تحت حارس الجبهة (الثقافة لحقت في D224)", () => {
+describe("N-023 (D223) — نصوص القراءة الـ15 كلها تحت حارس الجبهة (الثقافة لحقت في D224)", () => {
   // الأفق: آخر درس في وحدة النص (شاملاً كلماته) · المسرد يمنح جذوعه كالمدروس (lernen تغطي lerne/lernt) · الأعلام معلنة · التعجب الصرف مسموح
   const INTERJECTIONS = new Set(["ah"]); // D223: صوت بلا معنى معجمي (Ah!) — يُوسَّع عند الحاجة لا استباقاً
   // المسرد الميت: كل رموزه معروفة-الأفق حرفياً بلا جذوع (schön ≠ schon — تصادم مقصود يُبقي مسرد u1 صادقاً)
@@ -1532,7 +1532,7 @@ describe("N-023 (D223) — نصوص القراءة الـ12 كلها تحت حا
     const unusedPropers = (d.properNouns ?? []).filter((n) => !contentTokens(n).every((t) => seen.has(t)));
     return { bad, dead, unusedPropers };
   };
-  for (const id of ["a1-lese-u1", "a1-lese-u2", "a1-lese-u3", "a1-lese-u4", "a1-lese-u5", "a1-lese-u6", "a1-lese-u7", "a1-lese-u8", "a1-lese-u9", "a1-lese-u10", "a1-lese-u11", "a1-lese-u12"]) {
+  for (const id of ["a1-lese-u1", "a1-lese-u2", "a1-lese-u3", "a1-lese-u4", "a1-lese-u5", "a1-lese-u6", "a1-lese-u7", "a1-lese-u8", "a1-lese-u9", "a1-lese-u10", "a1-lese-u11", "a1-lese-u12", "a1-lese-u13", "a1-lese-u14", "a1-lese-u15"]) {
     it(`${id} نظيف: صفر مخالفات · صفر مسرد ميت · كل علم مستعمل`, () => {
       expect(auditLese(id)).toEqual({ bad: [], dead: [], unusedPropers: [] });
     });
@@ -1540,7 +1540,7 @@ describe("N-023 (D223) — نصوص القراءة الـ12 كلها تحت حا
 });
 
 // N-023 (D224): بطاقات الثقافة الـ12 تحت نفس الحارس — الأفق آخر درس في وحدة البطاقة · المسرد بصيغة المفرد ما لم يرد الجمع (das Geschäft, die Geschäfte) · العربية تُستثنى في germanOnly
-describe("N-023 (D224) — بطاقات الثقافة الـ12 تحت حارس الجبهة (تُغلق N-023)", () => {
+describe("N-023 (D224) — بطاقات الثقافة الـ15 تحت حارس الجبهة (تُغلق N-023)", () => {
   const INTERJECTIONS = new Set(["ah"]);
   const lastOfUnit = (u: number) => ALL_LESSONS.filter((l) => l.level === "A1" && l.unit === u).sort((a, b) => a.day - b.day).at(-1)!;
   const auditLK = (id: string) => {
@@ -1556,7 +1556,7 @@ describe("N-023 (D224) — بطاقات الثقافة الـ12 تحت حارس 
     const unusedPropers = (d.properNouns ?? []).filter((n) => !contentTokens(n).every((t) => seen.has(t)));
     return { bad, dead, unusedPropers };
   };
-  for (const id of ["a1-landeskunde-u1", "a1-landeskunde-u2", "a1-landeskunde-u3", "a1-landeskunde-u4", "a1-landeskunde-u5", "a1-landeskunde-u6", "a1-landeskunde-u7", "a1-landeskunde-u8", "a1-landeskunde-u9", "a1-landeskunde-u10", "a1-landeskunde-u11", "a1-landeskunde-u12"]) {
+  for (const id of ["a1-landeskunde-u1", "a1-landeskunde-u2", "a1-landeskunde-u3", "a1-landeskunde-u4", "a1-landeskunde-u5", "a1-landeskunde-u6", "a1-landeskunde-u7", "a1-landeskunde-u8", "a1-landeskunde-u9", "a1-landeskunde-u10", "a1-landeskunde-u11", "a1-landeskunde-u12", "a1-landeskunde-u13", "a1-landeskunde-u14", "a1-landeskunde-u15"]) {
     it(`${id} نظيف: صفر مخالفات · صفر مسرد ميت · كل علم مستعمل`, () => {
       expect(auditLK(id)).toEqual({ bad: [], dead: [], unusedPropers: [] });
     });

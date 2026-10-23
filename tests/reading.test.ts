@@ -101,8 +101,8 @@ describe("D281: نص الخميس الحر (ب-19)", () => {
     expect(short.segments).toHaveLength(1);
   });
 
-  it("النصوص الاثنا عشر كلها متوازية الجمل (قفل)", () => {
-    expect(ALL_LESETEXTS).toHaveLength(12);
+  it("النصوص الخمسة عشر كلها متوازية الجمل (قفل)", () => {
+    expect(ALL_LESETEXTS).toHaveLength(15);
     for (const t of ALL_LESETEXTS) {
       const de = splitSentences(t.text.de);
       const ar = splitSentences(t.text.ar);
@@ -115,8 +115,10 @@ describe("D281: نص الخميس الحر (ب-19)", () => {
     const texts = ALL_LESETEXTS.map((t) => ({ id: t.id, level: t.level, unit: t.unit }));
     expect(readingPick(texts, ["a1-u1-d1", "a1-u1-d6"], unitOf)?.id).toBe("a1-lese-u1");
     expect(readingPick(texts, ["a1-u1-d6", "a1-u2-d3"], unitOf)?.id).toBe("a1-lese-u2");
-    expect(readingPick(texts, ["a1-u2-d3", "a1-u13-d1"], unitOf)?.id).toBe("a1-lese-u2"); // u13 بلا نص فيُتخطى
-    expect(readingPick(texts, ["a1-u13-d1"], unitOf)).toBeUndefined();
+    expect(readingPick(texts, ["a1-u12-d6", "a1-u13-d1"], unitOf)?.id).toBe("a1-lese-u13"); // D292: u13 صار له نص
+    const partial = texts.filter((t) => t.unit <= 12); // التخطي يُختبَر بقائمة ناقصة مصنوعة
+    expect(readingPick(partial, ["a1-u12-d6", "a1-u13-d1"], unitOf)?.id).toBe("a1-lese-u12");
+    expect(readingPick(partial, ["a1-u13-d1"], unitOf)).toBeUndefined();
     expect(readingPick(texts, [], unitOf)).toBeUndefined();
   });
 });
