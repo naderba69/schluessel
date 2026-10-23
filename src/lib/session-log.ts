@@ -71,7 +71,26 @@ export type SessionInput = {
   shadowingMinutes?: number;
   /** D275: سطر التأمل — يُدمَج مع القديم (الفارغ يُتجاهَل ولا يمحو) */
   reflection?: { learned?: string; tomorrow?: string };
+  /** D276: توقيعات Can-do — تُدمَج بالنص (الجديد يُلحَق والقديم يُحدَّث) */
+  canDoTicks?: { statement: string; done: boolean }[];
 };
+
+/** دمج التوقيعات بالنص: الجديد يُلحَق (مشذَّباً غير فارغ) والقديم تُحدَّث حالته */
+function mergeTicks(
+  prev: readonly { statement: string; done: boolean }[],
+  next?: readonly { statement: string; done: boolean }[],
+): { statement: string; done: boolean }[] {
+  if (!next) return [...prev];
+  const out = prev.map((x) => ({ ...x }));
+  for (const n of next) {
+    const s = n.statement.trim();
+    if (!s) continue;
+    const at = out.findIndex((x) => x.statement === s);
+    if (at < 0) out.push({ statement: s, done: n.done });
+    else out[at] = { statement: s, done: n.done };
+  }
+  return out;
+}
 
 /** تنظيف سطر التأمل: تشذيب + إسقاط الفارغ — الفراغ الكامل = لا كتابة */
 function cleanReflection(r?: { learned?: string; tomorrow?: string }): { learned?: string; tomorrow?: string } | undefined {
@@ -100,7 +119,7 @@ export function recordSession(sessions: readonly SessionLog[], input: SessionInp
         date: input.date,
         dose,
         durationMinutes: input.durationMinutes,
-        canDoTicks: [],
+        canDoTicks: mergeTicks([], input.canDoTicks),
         wordsNew: Math.max(0, input.wordsNew ?? 0),
         wordsPlanned: Math.max(0, input.wordsPlanned ?? 0),
         srsMinutes: Math.max(0, input.srsMinutes ?? 0),
@@ -124,5 +143,6 @@ export function recordSession(sessions: readonly SessionLog[], input: SessionInp
   if (input.srsDueRemaining !== undefined) next.srsDueRemaining = input.srsDueRemaining; // رصيد لحظي: آخر قراءة
   const refl = cleanReflection(input.reflection);
   if (refl) next.reflection = { ...prev.reflection, ...refl };
+  if (input.canDoTicks) next.canDoTicks = mergeTicks(prev.canDoTicks, input.canDoTicks);
   return [...sessions.slice(0, at), next, ...sessions.slice(at + 1)];
 }

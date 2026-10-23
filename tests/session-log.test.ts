@@ -100,3 +100,54 @@ describe("D275 — سطر التأمل", () => {
     expect(fresh[0]!.reflection).toBeUndefined();
   });
 });
+
+describe("D276 — توقيعات Can-do تُدمَج بالنص", () => {
+  it("الجديد يُزرَع مع التوقيع", () => {
+    const once = recordSession([], {
+      date: "2026-10-23",
+      durationMinutes: 45,
+      canDoTicks: [{ statement: "أحيي", done: true }],
+    });
+    expect(once[0]!.canDoTicks).toEqual([{ statement: "أحيي", done: true }]);
+  });
+
+  it("توقيع ثانٍ يُلحَق ولا يمحو الأول", () => {
+    const once = recordSession([], {
+      date: "2026-10-23",
+      durationMinutes: 45,
+      canDoTicks: [{ statement: "أحيي", done: true }],
+    });
+    const twice = recordSession(once, {
+      date: "2026-10-23",
+      durationMinutes: 0,
+      canDoTicks: [{ statement: "أودع", done: false }],
+    });
+    expect(twice[0]!.canDoTicks).toEqual([
+      { statement: "أحيي", done: true },
+      { statement: "أودع", done: false },
+    ]);
+  });
+
+  it("إعادة التوقيع على النص نفسه تُحدِّث الحالة", () => {
+    const once = recordSession([], {
+      date: "2026-10-23",
+      durationMinutes: 45,
+      canDoTicks: [{ statement: "أحيي", done: true }],
+    });
+    const twice = recordSession(once, {
+      date: "2026-10-23",
+      durationMinutes: 0,
+      canDoTicks: [{ statement: "  أحيي  ", done: false }],
+    });
+    expect(twice[0]!.canDoTicks).toEqual([{ statement: "أحيي", done: false }]);
+  });
+
+  it("الفارغ يُتجاهَل", () => {
+    const once = recordSession([], {
+      date: "2026-10-23",
+      durationMinutes: 45,
+      canDoTicks: [{ statement: "   ", done: true }],
+    });
+    expect(once[0]!.canDoTicks).toEqual([]);
+  });
+});

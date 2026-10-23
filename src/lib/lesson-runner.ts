@@ -75,6 +75,8 @@ export type CloseData = {
   storyLine: StoryLine | null;
   /** D193: آخر سطور القصة قبل هذا الدرس — الخيط لا يُقطع */
   storySoFar: StoryLine[];
+  /** D276: أهداف اليوم السلوكية (1–2) — تُوقَّع في التفريغ الختامي (ب-5) */
+  canDos: string[];
 };
 
 export type LessonStationPlan = {
@@ -218,6 +220,7 @@ export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: 
       srsBundleWordIds: lesson.zusammenfassung.srsBundleWordIds,
       storyLine: storyLineFor(lesson.id, story),
       storySoFar: storySoFar(lesson.id, story),
+      canDos: [...lesson.canDoDaily],
     },
   };
 }

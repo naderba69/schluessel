@@ -651,11 +651,16 @@ export function CloseStation({
   report,
   preview,
   muellerLine,
+  ticks = [],
+  onTick,
 }: {
   data: CloseData;
   report: string;
   preview: string;
   muellerLine: string;
+  /** D276: توقيعات Can-do المحفوظة + الحفظ — بلا onTick القراءة فقط */
+  ticks?: readonly { statement: string; done: boolean }[];
+  onTick?: (statement: string, done: boolean) => void;
 }) {
   return (
     <section data-testid="close-station">
@@ -663,6 +668,24 @@ export function CloseStation({
       <p data-testid="lesson-summary">
         {data.summaryDe} — {data.summaryAr}
       </p>
+      <div data-testid="cando-signoff">
+        <h4>وقّع إنجازك ✍️ — بصدق: ما أتقنته فعلاً</h4>
+        <ul>
+          {data.canDos.map((s, i) => {
+            const done = ticks.some((x) => x.statement === s && x.done);
+            return (
+              <li key={i} data-testid={`cando-state-${i}`} data-done={done ? "yes" : "no"}>
+                {done ? "✓" : "○"} {s}{" "}
+                {onTick && (
+                  <button data-testid={`cando-sign-${i}`} onClick={() => onTick(s, !done)}>
+                    {done ? "إلغاء التوقيع" : "أوقّع ✓"}
+                  </button>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
       <h4>مصائد ذهبية (أخطاؤك هي كنزك)</h4>
       <ul data-testid="warning-cards">
         {data.warningCards.map((card, i) => (

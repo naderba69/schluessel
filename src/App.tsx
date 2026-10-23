@@ -15,6 +15,7 @@ import { CoachPulse } from "./components/CoachPulse.js";
 import { DosePicker } from "./components/DosePicker.js";
 import { MicroSession } from "./components/MicroSession.js";
 import { ReflectionCard } from "./components/ReflectionCard.js";
+import { MeasureStrip } from "./components/MeasureStrip.js";
 import { BorrowedProvider } from "./components/StruckText.js";
 import { planLessonStations, type SrsDuePair } from "./lib/lesson-runner.js";
 import type { Station } from "./lib/lesson-engine.js";
@@ -77,6 +78,8 @@ function LessonRun({
   onResolveError,
   srsCards,
   onSrsRated,
+  ticks,
+  onTick,
 }: {
   bundle: SessionBundle;
   /** N-150 (D250): أخطاء الدفتر + الالتقاط + الحل */
@@ -86,6 +89,9 @@ function LessonRun({
   /** D273: بطاقات SRS + حفظ التقييم — المستحق يُراجَع ويُجدوَل */
   srsCards: readonly SrsCardState[];
   onSrsRated: (srsCardId: string, rating: import("./lib/review-engine.js").RecallRating) => void;
+  /** D276: توقيعات Can-do + الحفظ — التفريغ الختامي (ب-5) */
+  ticks: readonly { statement: string; done: boolean }[];
+  onTick: (statement: string, done: boolean) => void;
   priorAttempts: number;
   hasNext: boolean;
   onAttempt: (o: QuizOutcome) => void;
@@ -246,6 +252,8 @@ function LessonRun({
                     : tomorrowPreview({ hasNewContent: last.passed, dueCount: due })
                 }
                 muellerLine={muellerMessage(0)}
+                ticks={ticks}
+                onTick={onTick}
               />
             )}
           </>
@@ -722,6 +730,15 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           }}
           srsCards={state.srsCards}
           onSrsRated={rateSrs}
+          ticks={todayEntry?.canDoTicks ?? []}
+          onTick={(statement, done) => {
+            const s = stateRef.current;
+            if (s)
+              commit({
+                ...s,
+                sessions: recordSession(s.sessions, { date: localDay(), durationMinutes: 0, canDoTicks: [{ statement, done }] }),
+              });
+          }}
           onUnit0Show={(id) => {
             if (!stateRef.current!.profile.unit0Shown.includes(id))
               commit({ ...stateRef.current!, profile: { ...stateRef.current!.profile, unit0Shown: [...stateRef.current!.profile.unit0Shown, id] } });
@@ -759,6 +776,9 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           <p data-testid="day-focus">
             تركيز اليوم: {focus.label} — {focus.tip}
           </p>
+          {todayEntry && todayEntry.durationMinutes > 0 && (
+            <MeasureStrip entry={todayEntry} dueCount={dueCount} />
+          )}
           {todayEntry && todayEntry.durationMinutes > 0 && (
             <ReflectionCard
               key={todayEntry.date}
