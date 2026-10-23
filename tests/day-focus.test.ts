@@ -1,6 +1,6 @@
 // tests/day-focus.test.ts — D275: تخصص الأيام (ب-4/ب-13) — عادة ثابتة بلا لوم
 import { describe, it, expect } from "vitest";
-import { DAY_FOCUS_AR, dayFocus, type DayFocus } from "../src/lib/day-engine.js";
+import { DAY_FOCUS_AR, dayFocus, weeklyGoalState, type DayFocus } from "../src/lib/day-engine.js";
 import { BLAME_WORDS } from "../src/lib/coach-engine.js";
 
 const D = (y: number, m: number, d: number, h = 10) => new Date(y, m, d, h);
@@ -31,5 +31,29 @@ describe("dayFocus — خريطة الأسبوع", () => {
         expect(DAY_FOCUS_AR[k]!.tip).not.toContain(b);
       }
     }
+  });
+});
+
+describe("D279: حالة الهدف الأسبوعي (ب-18)", () => {
+  it("الأحد صمت دائماً — حتى بعد التحقق", () => {
+    expect(weeklyGoalState(false, 0, false)).toBe("hidden");
+    expect(weeklyGoalState(true, 0, false)).toBe("hidden");
+  });
+
+  it("الاثنين: قبل المساء مخفي · مساءً إعلان", () => {
+    expect(weeklyGoalState(false, 1, false)).toBe("hidden");
+    expect(weeklyGoalState(false, 1, true)).toBe("announce");
+  });
+
+  it("الثلاثاء–الجمعة تذكير · السبت قياس", () => {
+    for (const w of [2, 3, 4, 5]) expect(weeklyGoalState(false, w, false)).toBe("reminder");
+    expect(weeklyGoalState(false, 6, false)).toBe("measure");
+  });
+
+  it("المجتاز متحقق — في أي يوم معلن", () => {
+    expect(weeklyGoalState(true, 6, false)).toBe("achieved");
+    expect(weeklyGoalState(true, 3, false)).toBe("achieved");
+    expect(weeklyGoalState(true, 1, true)).toBe("achieved");
+    expect(weeklyGoalState(true, 1, false)).toBe("hidden"); // الإعلان لم يحن
   });
 });

@@ -83,3 +83,16 @@ export const DAY_FOCUS_AR: Record<DayFocus, { label: string; tip: string }> = {
   battle: { label: "المعركة ⚔️", tip: "يوم المراجعة الأسبوعية — أظهر ما ثبت بهدوء." },
   rest: { label: "الراحة 🌿", tip: "لا شيء مطلوب منك — النوم شريكك في التثبيت." },
 };
+
+/* ══════════ D279 — الهدف الأسبوعي (ب-18): إعلان الاثنين وقياس المعركة ══════════ */
+/** حالة الهدف الأسبوعي: إعلان مساء الاثنين · تذكير أيام العمل · قياس السبت · تحقق بعد المعركة */
+export type WeeklyGoalState = "hidden" | "announce" | "reminder" | "measure" | "achieved";
+
+export function weeklyGoalState(passed: boolean, weekday: number, evening: boolean): WeeklyGoalState {
+  if (weekday === 0) return "hidden"; // الأحد راحة — صمت
+  if (weekday === 1 && !evening) return "hidden"; // قبل إعلان المساء
+  if (passed) return "achieved";
+  if (weekday === 1) return "announce";
+  if (weekday === 6) return "measure";
+  return "reminder";
+}

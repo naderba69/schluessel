@@ -18,6 +18,7 @@ import { ReflectionCard } from "./components/ReflectionCard.js";
 import { MeasureStrip } from "./components/MeasureStrip.js";
 import { UnitDebriefCard } from "./components/UnitDebrief.js";
 import { CalibrationReportCard } from "./components/CalibrationReport.js";
+import { WeeklyGoalCard } from "./components/WeeklyGoal.js";
 import { BorrowedProvider } from "./components/StruckText.js";
 import { planLessonStations, type SrsDuePair } from "./lib/lesson-runner.js";
 import type { Station } from "./lib/lesson-engine.js";
@@ -29,6 +30,7 @@ import {
   LESSON_ORDER,
   indexEntry,
   levelOfWord,
+  loadLesson,
   loadSessionBundle,
   loadWords,
   loadFirstSession,
@@ -40,7 +42,7 @@ import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, t
 import type { QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
-import { DAY_FOCUS_AR, dayFocus, weekDots } from "./lib/day-engine.js";
+import { DAY_FOCUS_AR, dayFocus, weekDots, weeklyGoalState } from "./lib/day-engine.js";
 import { PULSE_BODY_AR, PULSE_TITLE_AR, SNOOZE_MIN, isRestDay, pulseKey, readPulseStore, shouldPulse, writePulseStore } from "./lib/coach-engine.js";
 import { CoachBlock } from "./components/CoachBlock.js";
 import { GoldenBook } from "./components/GoldenBook.js";
@@ -287,6 +289,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [plannedDose, setPlannedDose] = useState<DoseChoice>(() => readPlannedDose(localDay()));
   const [micro, setMicro] = useState<{ pairs: SrsDuePair[] | null } | null>(null);
   const [deferred, setDeferred] = useState<{ unitKey: string; lessonId: string; bundle: SessionBundle | null } | null>(null); // D277: المعركة المؤجلة الجارية
+  const [weeklyGoal, setWeeklyGoal] = useState<{ unitKey: string; goal: string } | null>(null); // D279: هدف الأسبوع (canDo السادس)
   const microStart = useRef<number>(0);
   const deferredStart = useRef<number>(0); // D277: بداية المؤجلة لقياس مدتها
   const [finishedNote, setFinishedNote] = useState<string | null>(null);
@@ -383,6 +386,29 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       (e) => setSaveError(errText(e)),
     );
   };
+
+  // D279: هدف الأسبوع — يُحمَّل مرة لكل وحدة حين يُعلَن (قبل الإرجاع المبكر — قانون الخطافات)
+  useEffect(() => {
+    const cid = state ? currentLessonId(state.progress, PATH) : null;
+    const cur = cid ? indexEntry(cid) : null;
+    if (!cur || !state) return;
+    const key = unitKeyOf(cur.level, cur.unit);
+    const now = new Date();
+    const gs = weeklyGoalState(passedUnitBattle(state.progress, key), now.getDay(), now.getHours() >= 21);
+    if (gs === "hidden" || weeklyGoal?.unitKey === key) return;
+    const d6 = LESSON_INDEX.find((x) => x.day === 6 && unitKeyOf(x.level, x.unit) === key);
+    if (!d6) return;
+    let live = true;
+    void loadLesson(d6.id).then(
+      (l) => {
+        if (live && l.canDoDaily[0]) setWeeklyGoal({ unitKey: key, goal: l.canDoDaily[0] });
+      },
+      () => {}, // الفشل = غياب البطاقة لا كسر الشاشة
+    );
+    return () => {
+      live = false;
+    };
+  });
 
   if (boot.phase === "loading") {
     return (
@@ -519,6 +545,10 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   /** D278: تقرير المعايرة — كل وحدتين مجتازتين */
   const passedUnits = passedBattleUnits(state.progress);
   const showCalibration = passedUnits.length >= 2 && passedUnits.length % 2 === 0;
+  /** D279: هدف الأسبوع — canDo الأول لاختبار السادس في الوحدة الحالية (يُحمَّل مرة لكل وحدة) */
+  const curKey = current ? unitKeyOf(current.level, current.unit) : undefined;
+  const goalState =
+    current && curKey ? weeklyGoalState(passedUnitBattle(state.progress, curKey), new Date().getDay(), evening) : "hidden";
   /** D277: مؤجلة اليوم؟ — أول وحدة مستحقة يوم الاثنين */
   const deferredKey =
     new Date().getDay() === 1
@@ -907,6 +937,9 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           <p data-testid="day-focus">
             تركيز اليوم: {focus.label} — {focus.tip}
           </p>
+          {weeklyGoal && curKey && weeklyGoal.unitKey === curKey && goalState !== "hidden" && (
+            <WeeklyGoalCard goal={weeklyGoal.goal} state={goalState} />
+          )}
           {todayEntry && todayEntry.durationMinutes > 0 && (
             <MeasureStrip entry={todayEntry} dueCount={dueCount} />
           )}
