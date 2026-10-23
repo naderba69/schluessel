@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-transfer-u5",
+  "level": "A1",
+  "unit": 5,
+  "items": [
+    {
+      "q": "«لحم من فضلك!»؟",
+      "a": "Fleisch, bitte!",
+      "choices": ["Fleisch, bitte!", "Fleisch, danke!", "Fleisch, gern!"],
+      "why": "الطلب بلباقة = الاسم + bitte. الخياران الآخران ردّان لا طلب."
+    },
+    {
+      "q": "«أريد خبزة»؟",
+      "a": "Ich möchte ein Brötchen.",
+      "choices": ["Ich möchte ein Brötchen.", "Ich möchte eine Brötchen.", "Ich möchte ein Brötchen?"],
+      "why": "Brötchen محايد (das) ⇐ ein. والطلب خبر لطيف لا سؤال."
+    },
+    {
+      "q": "«لا أريد حساءً»؟",
+      "a": "Ich möchte keine Suppe.",
+      "choices": ["Ich möchte keine Suppe.", "Ich möchte kein Suppe.", "Ich möchte nicht Suppe."],
+      "why": "نفي الاسم المؤنث بـkeine (kein + e). وnicht تنفي الفعل لا الاسم."
+    },
+    {
+      "q": "«أي سمك؟»؟",
+      "a": "Was für einen Fisch?",
+      "choices": ["Was für einen Fisch?", "Was für ein Fisch?", "Was für eine Fisch?"],
+      "why": "Fisch مذكر مفعول به ⇐ einen. ein للمحايد وeine للمؤنث."
+    }
+  ]
+}

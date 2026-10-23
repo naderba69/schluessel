@@ -126,15 +126,19 @@ describe("D277: المؤجلة (الاثنين)", () => {
   });
 
   it("التدفق الكامل: بدء ← اختبار ← تسجيل delayed-battle + دقائق اليوم", async () => {
-    // الوحدة 2 بلا حزمة تحويل (D293: الأولى وحدها رائدة) — التدفق نقي وtransferShare غائب
-    const { lesson } = await loadSessionBundle("a1-u2-d6");
+    // أول وحدة بلا حزمة تحويل (D294: يتقدم تلقائياً مع دفعات الحزم) — التدفق نقي وtransferShare غائب
+    const pureUnit = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].find(
+      (u) => !ALL_TRANSFER.some((p) => p.level === "A1" && p.unit === u),
+    )!;
+    const pureKey = `A1-u${pureUnit}`;
+    const { lesson } = await loadSessionBundle(`a1-u${pureUnit}-d6`);
     const items: readonly QuizItem[] = startQuizAttempt(lesson, 1).items;
-    const U2_6 = ["a1-u2-d1", "a1-u2-d2", "a1-u2-d3", "a1-u2-d4", "a1-u2-d5", "a1-u2-d6"];
-    const store = await renderSeeded(MON, U2_6, [battleWin("A1-u2", "2026-10-17")]);
+    const pure6 = [1, 2, 3, 4, 5, 6].map((d) => `a1-u${pureUnit}-d${d}`);
+    const store = await renderSeeded(MON, pure6, [battleWin(pureKey, "2026-10-17")]);
     await click(q("start-deferred"), "ابدأ المؤجلة");
     vi.useRealTimers(); // الاستيراد الديناميكي لا يكتمل تحت التزييف — تحميل حقيقي
     await waitForReal(() => !!q("deferred-title"), "فتح المؤجلة");
-    expect(q("deferred-title")!.textContent).toContain("A1-u2");
+    expect(q("deferred-title")!.textContent).toContain(pureKey);
     vi.useFakeTimers({ toFake: [...FAKE.toFake] });
     vi.setSystemTime(MON); // عودة للاثنين قبل الإجابة — التسجيل بتاريخ الاثنين
     expect(q("quiz-station")!.getAttribute("data-variant")).toBe("1");
@@ -156,7 +160,7 @@ describe("D277: المؤجلة (الاثنين)", () => {
 
     const saved = await store.load();
     const delayed = saved!.progress.gateResults.find((g) => g.kind === "delayed-battle")!;
-    expect(delayed.gateId).toBe("A1-u2");
+    expect(delayed.gateId).toBe(pureKey);
     expect(delayed.passed).toBe(true);
     expect("transferShare" in delayed).toBe(false);
     const entry = saved!.sessions.find((s) => s.date === "2026-10-19")!;

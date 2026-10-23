@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-transfer-u3",
+  "level": "A1",
+  "unit": 3,
+  "items": [
+    {
+      "q": "«الساعة الخامسة والنصف»؟",
+      "a": "Es ist halb sechs.",
+      "choices": ["Es ist halb sechs.", "Es sind halb sechs.", "Es ist halbe sechs."],
+      "why": "halb + العدد: halb sechs. لا تختصر sechs ولا تؤنث halb."
+    },
+    {
+      "q": "«الموعد يوم الاثنين الساعة الرابعة»؟",
+      "a": "Am Montag um vier Uhr.",
+      "choices": ["Am Montag um vier Uhr.", "Im Montag um vier Uhr.", "Am Montag an vier Uhr."],
+      "why": "am لليوم وum للساعة — القاعدة نفسها بيوم ووقت جديدين."
+    },
+    {
+      "q": "«كم سعر الهاتف المحمول؟»؟",
+      "a": "Wie viel kostet das Handy?",
+      "choices": ["Wie viel kostet das Handy?", "Wie viel kostet der Handy?", "Wie viel kost das Handy?"],
+      "why": "Handy محايد (das). والسؤال يعكس الترتيب: الفعل بعد Wie viel."
+    },
+    {
+      "q": "«الرقم مئة»؟",
+      "a": "Die Nummer ist hundert.",
+      "choices": ["Die Nummer ist hundert.", "Die Nummer sind hundert.", "Das Nummer ist hundert."],
+      "why": "Nummer مؤنثة (die) وhundert تُكتَب بـt واحدة في الوسط."
+    }
+  ]
+}
