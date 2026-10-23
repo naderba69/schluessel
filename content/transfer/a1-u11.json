@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-transfer-u11",
+  "level": "A1",
+  "unit": 11,
+  "items": [
+    {
+      "q": "«يدي تؤلمني»؟",
+      "a": "Mir tut die Hand weh.",
+      "choices": ["Mir tut die Hand weh.", "Mir tun die Hand weh.", "Mich tut die Hand weh."],
+      "why": "اليد مفردة ⇐ tut. والمتألم بـDativ: mir لا mich."
+    },
+    {
+      "q": "«ماذا ينقصك؟ — عندي حمى»؟",
+      "a": "Was fehlt dir? — Ich habe Fieber.",
+      "choices": ["Was fehlt dir? — Ich habe Fieber.", "Was fehlt dich? — Ich habe Fieber.", "Was fehlst dir? — Ich habe Fieber."],
+      "why": "fehlen مع Dativ: dir. والفاعل (الحمى) مفرد ⇐ fehlt."
+    },
+    {
+      "q": "«كان يومي جيداً»؟",
+      "a": "Mein Tag war gut.",
+      "choices": ["Mein Tag war gut.", "Mein Tag war gute.", "Meine Tag war gut."],
+      "why": "war ماضٍ بسيط يُستعمَل وحده بلا haben. والصفة بعدها بلا نهاية."
+    },
+    {
+      "q": "«يجب أن آخذ مرهماً»؟",
+      "a": "Ich muss eine Salbe nehmen.",
+      "choices": ["Ich muss eine Salbe nehmen.", "Ich muss ein Salbe nehmen.", "Ich muss eine Salbe nehme."],
+      "why": "Salbe مؤنثة منصوبة ⇐ eine. وبعد muss يأتي المصدر: nehmen."
+    }
+  ]
+}
