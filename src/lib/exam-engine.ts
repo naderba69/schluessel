@@ -193,3 +193,45 @@ export function modellHoerenQuiz(
     plays,
   };
 }
+
+/** D286: جزء كتابة بالشكل الأدنى الذي يحتاجه المهايئ */
+export type ModellSchreibenPart = {
+  readonly taskType: string;
+  readonly texts?: ReadonlyArray<{ readonly id: string; readonly de: string }>;
+  readonly items: ReadonlyArray<{
+    readonly q: string;
+    readonly a: string;
+    readonly textRefs?: readonly string[];
+    readonly evidence?: string;
+  }>;
+};
+
+/** D286: مهايئ الكتابة — الاستمارة (نصها مضمَّن) + الرسالة الحرة (نموذجها للحكم الذاتي) */
+export function modellSchreibenQuiz(examId: string, passingScore: number, parts: readonly ModellSchreibenPart[]): QuizForms {
+  const items = parts.flatMap((p) => {
+    const byId = new Map((p.texts ?? []).map((t) => [t.id, t.de]));
+    const free = p.taskType === "freies-schreiben";
+    return p.items.map((it) => {
+      if (free)
+        return {
+          q: `✍️ رسالة (نحو 30 كلمة) — ${it.q}`,
+          a: it.a,
+          why: "قارن معناك بالنموذج: هل الفكرة نفسها بكلمات صحيحة؟ احكم بصدق.",
+        };
+      const refs = (it.textRefs ?? []).map((r) => byId.get(r)).filter((x): x is string => !!x);
+      const reading = refs.length > 0 ? `✍️ استمارة — «${refs.join(" / ")}» — ` : "✍️ استمارة — ";
+      const why = it.evidence ? `الدليل في النص: «${it.evidence}»` : undefined;
+      return { q: `${reading}${it.q}`, a: it.a, why };
+    });
+  });
+  return {
+    id: `${examId}/schreiben`,
+    quiz: { variants: [{ items, passingScore }] },
+    slider: {
+      questionDe: "Wie gut kannst du auf Deutsch schreiben?",
+      questionAr: "قبل الكتابة: كيف تقيّم كتابتك بالألمانية؟",
+      min: 0,
+      max: 100,
+    },
+  };
+}

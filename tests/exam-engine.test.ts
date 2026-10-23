@@ -10,6 +10,7 @@ import {
   levelUnits,
   modellHoerenQuiz,
   modellLesenQuiz,
+  modellSchreibenQuiz,
   modellTotal,
   playsLeft,
   recordLevelSection,
@@ -174,5 +175,32 @@ describe("D285: مهايئ الاستماع على المحتوى الحي", () 
   it("الغائب playCount = مرتان", () => {
     const { plays: p } = modellHoerenQuiz("m", 0.6, [{ items: [{ q: "q", a: "a" }] }]);
     expect(p).toEqual([2]);
+  });
+});
+
+describe("D286: مهايئ الكتابة على المحتوى الحي", () => {
+  const modell = ALL_MODELLTESTS.find((m) => m.id === "a1-modelltest-1")!;
+  const schreiben = modell.sections.find((s) => s.skill === "schreiben")!;
+  const quiz = modellSchreibenQuiz(modell.id, modell.passingScore, schreiben.parts);
+  const items = quiz.quiz.variants[0]!.items;
+
+  it("8 بنود مفتوحة صالحة — 5 استمارة + 3 رسالة", () => {
+    expect(items).toHaveLength(8);
+    for (const it of items) expect(() => QuizItemSchema.parse(it)).not.toThrow();
+    expect(items.every((it) => !it.choices)).toBe(true);
+    expect(quiz.quiz.variants[0]!.passingScore).toBe(0.6);
+  });
+
+  it("الاستمارة تضمِّن الموقف — والرسالة نموذجها حاضر للتوجيه", () => {
+    expect(items[0]!.q).toContain("Haddad");
+    expect(items[0]!.q).toContain("Vorname:");
+    expect(items[5]!.q).toContain("✍️ رسالة");
+    expect(items[5]!.a.length).toBeGreaterThan(20);
+    expect(items[5]!.why).toContain("احكم بصدق");
+  });
+
+  it("المحاولة تبدأ من 8 بنود", () => {
+    const a = startQuizAttempt(quiz, 0);
+    expect(a.items).toHaveLength(8);
   });
 });

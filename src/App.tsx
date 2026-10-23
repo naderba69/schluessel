@@ -48,7 +48,7 @@ import { phrasesAvailable } from "./lib/phrase-bank.js";
 import { battleAttempts, currentLessonId, cyclicAttempts, cyclicDue, cyclicTestFor, deferredDue, delayedAttempts, journeyWeek, lessonAfter, openSessionFor, passedBattleUnits, passedUnitBattle, quizAttempts, reconcileState, recordCyclicTest, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitDebrief, unitKeyOf } from "./lib/lesson-path.js";
 import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, type DoseChoice } from "./lib/session-log.js";
 import { cyclicQuizLesson, type QuizOutcome } from "./lib/quiz-session.js";
-import { examSkillAr, levelExamProgress, levelExamReady, levelUnits, modellHoerenQuiz, modellLesenQuiz, modellTotal, recordLevelSection, sectionAttempts, EXAM_SKILLS } from "./lib/exam-engine.js";
+import { examSkillAr, levelExamProgress, levelExamReady, levelUnits, modellHoerenQuiz, modellLesenQuiz, modellSchreibenQuiz, modellTotal, recordLevelSection, sectionAttempts, EXAM_SKILLS } from "./lib/exam-engine.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
 import { DAY_FOCUS_AR, dayFocus, flexWeek, weekDots, weeklyGoalState } from "./lib/day-engine.js";
@@ -302,7 +302,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [shadow, setShadow] = useState<{ lessonId: string; script: AudioScript | null } | null>(null); // D280: الشادوينغ الجاري
   const [reading, setReading] = useState<{ textId: string } | null>(null); // D281: نص الخميس الجاري (النصوص حاضرة — بلا تحميل)
   const [cyclic, setCyclic] = useState<{ testId: string } | null>(null); // D283: الاختبار الدوري الجاري (حاضر — بلا تحميل)
-  const [examRun, setExamRun] = useState<false | "lesen" | "hoeren">(false); // D285: قسم الامتحان الجاري (حاضر — بلا تحميل)
+  const [examRun, setExamRun] = useState<false | "lesen" | "hoeren" | "schreiben">(false); // D286: قسم الامتحان الجاري (حاضر — بلا تحميل)
   const microStart = useRef<number>(0);
   const deferredStart = useRef<number>(0); // D277: بداية المؤجلة لقياس مدتها
   const shadowStart = useRef<number>(0); // D280: بداية الشادوينغ لقياس دقائقه
@@ -605,6 +605,8 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const lesenParts = modell?.sections.find((s) => s.skill === "lesen")?.parts;
   const hoerenParts = modell?.sections.find((s) => s.skill === "hoeren")?.parts;
   const hoerenQuiz = modell && hoerenParts ? modellHoerenQuiz(modell.id, modell.passingScore, hoerenParts) : null;
+  const schreibenParts = modell?.sections.find((s) => s.skill === "schreiben")?.parts;
+  const schreibenQuiz = modell && schreibenParts ? modellSchreibenQuiz(modell.id, modell.passingScore, schreibenParts) : null;
   /** D279: هدف الأسبوع — canDo الأول لاختبار السادس في الوحدة الحالية (يُحمَّل مرة لكل وحدة) */
   const curKey = current ? unitKeyOf(current.level, current.unit) : undefined;
   const goalState =
@@ -884,6 +886,33 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     setFinishedNote(`قسم الاستماع تم (${points}/25 نقطة) — المجموع الرسمي يكتمل بالأقسام الأربعة.`);
   };
 
+  /** D286: بدء قسم الكتابة — حاضر فوراً */
+  const startExamSchreiben = () => {
+    if (!schreibenQuiz || !examReady) return;
+    examStart.current = Date.now();
+    setFinishedNote(null);
+    setExamRun("schreiben");
+  };
+
+  /** D286: اكتمال الكتابة — تُسجَّل قسماً + دقائقها في سجل اليوم */
+  const finishExamSchreiben = (o: QuizOutcome) => {
+    if (!modell || examRun !== "schreiben") return;
+    const points = Math.floor(o.score * 25);
+    const s = stateRef.current;
+    if (s) {
+      const minutes = Math.max(1, Math.round((Date.now() - examStart.current) / 60000));
+      try {
+        const s1 = recordLevelSection(s, modell.id, s.profile.level, "schreiben", o, localDay());
+        commit({ ...s1, sessions: recordSession(s1.sessions, { date: localDay(), durationMinutes: minutes }) });
+      } catch (e) {
+        setSaveError(errText(e));
+      }
+    }
+    setExamRun(false);
+    setTab("today");
+    setFinishedNote(`قسم الكتابة تم (${points}/25 نقطة) — المجموع الرسمي يكتمل بالأقسام الأربعة.`);
+  };
+
   const rateSrs = (id: string, rating: import("./lib/review-engine.js").RecallRating) => {
     const st = stateRef.current;
     if (st) commit({ ...st, srsCards: applySrsRating(st.srsCards, id, rating) });
@@ -997,7 +1026,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       ) : tab === "map" ? (
         <>
           <MapView map={map} />
-          {modell && lesenParts && examTotal && !examRun && hoerenQuiz && (
+          {modell && lesenParts && examTotal && !examRun && hoerenQuiz && schreibenQuiz && (
             <section data-testid="exam-card">
               <h2>🎓 امتحان المستوى التجريبي</h2>
               {!examReady ? (
@@ -1027,8 +1056,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
                   </button>{" "}
                   <button data-testid="start-exam-hoeren" onClick={startExamHoeren}>
                     ابدأ قسم الاستماع 🔊 (15 بنداً — 25 نقطة)
+                  </button>{" "}
+                  <button data-testid="start-exam-schreiben" onClick={startExamSchreiben}>
+                    ابدأ قسم الكتابة ✍️ (8 بنود — 25 نقطة)
                   </button>
-                  <p data-testid="exam-roadmap">الكتابة والتحدث: قسمان قادمان</p>
+                  <p data-testid="exam-roadmap">التحدث: القسم الأخير قادم</p>
                 </>
               )}
             </section>
@@ -1080,6 +1112,31 @@ export function App({ store: injected }: { store?: LearnerStore }) {
                         correct: item.a,
                         explanation: item.why ?? "قارن إجابتك بالتصحيح واستنتج الفرق.",
                         source: `${modell.id}/hoeren`,
+                        closeSlip: verdict === "close",
+                      }),
+                    });
+                }}
+              />
+            </>
+          )}
+          {modell && schreibenQuiz && examRun === "schreiben" && (
+            <>
+              <p data-testid="exam-schreiben-title">قسم الكتابة ✍️ — {modell.id} (8 بنود — 25 نقطة)</p>
+              <QuizStation
+                lesson={schreibenQuiz}
+                priorAttempts={sectionAttempts(state.progress, modell.id, "schreiben")}
+                onAttemptComplete={finishExamSchreiben}
+                onGrade={({ item, given, verdict }) => {
+                  const s = stateRef.current;
+                  if (s)
+                    commit({
+                      ...s,
+                      errors: upsertGoldenError(s.errors, {
+                        skill: "schreiben",
+                        wrong: given || "—",
+                        correct: item.a,
+                        explanation: item.why ?? "قارن إجابتك بالتصحيح واستنتج الفرق.",
+                        source: `${modell.id}/schreiben`,
                         closeSlip: verdict === "close",
                       }),
                     });

@@ -7,7 +7,7 @@ import { App, localDay } from "../src/App.js";
 import { memoryLearnerStore } from "../src/stores/learner-store.js";
 import { createInitialState } from "../src/lib/state-factory.js";
 import { ALL_MODELLTESTS, PATH } from "../src/lesson-packs.js";
-import { levelUnits, modellHoerenQuiz, modellLesenQuiz, type ExamSkill } from "../src/lib/exam-engine.js";
+import { levelUnits, modellHoerenQuiz, modellLesenQuiz, modellSchreibenQuiz, type ExamSkill } from "../src/lib/exam-engine.js";
 import type { GateResult } from "../content/schemas/index.js";
 import { createAudioPlayer, setAudioPlayer, type AudioBackend } from "../src/lib/audio-player.js";
 
@@ -64,6 +64,16 @@ async function renderSeeded(gates: GateResult[] = []) {
   await waitFor(() => !q("boot-loading") && !q("first-loading"), "انتهاء التحميل");
   await click(q("tab-map"), "الخريطة");
   return store;
+}
+
+async function typeInto(input: Element | null, value: string) {
+  if (!input) throw new Error("حقل غير موجود");
+  const el = input as HTMLInputElement;
+  const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value")!.set!;
+  await act(async () => {
+    setter.call(el, value);
+    el.dispatchEvent(new Event("input", { bubbles: true }));
+  });
 }
 
 function clickChoice(answer: string) {
@@ -152,7 +162,7 @@ describe("D285: قسم الاستماع", () => {
   it("البطاقة تعرض زر الاستماع وخارطة الأقسام الباقية", async () => {
     await renderSeeded(READY);
     expect(q("start-exam-hoeren")!.textContent).toContain("🔊");
-    expect(q("exam-roadmap")!.textContent).toContain("قسمان قادمان");
+    expect(q("exam-roadmap")!.textContent).toContain("قادم");
   });
 
   it("التشغيل يستهلك من السماح — والفاشل لا يُحسَب", async () => {
@@ -214,5 +224,49 @@ describe("D285: قسم الاستماع", () => {
     await click(q("quiz-next"), "النتيجة");
     await waitFor(() => !!q("quiz-no-retry"), "نص اللاإعادة");
     expect(q("quiz-no-retry")!.textContent).toContain("النسخة الوحيدة");
+  });
+});
+
+describe("D286: قسم الكتابة", () => {
+  it("البطاقة تعرض زر الكتابة والقسم الأخير المتبقي", async () => {
+    await renderSeeded(READY);
+    expect(q("start-exam-schreiben")!.textContent).toContain("8 بنود");
+    expect(q("exam-roadmap")!.textContent).toContain("التحدث");
+  });
+
+  it("التدفق الكامل — استمارة آلية + رسالة بحكم ذاتي + دفتر ذهبي", async () => {
+    const store = await renderSeeded(READY);
+    await click(q("start-exam-schreiben"), "ابدأ الكتابة");
+    expect(q("exam-schreiben-title")!.textContent).toContain("a1-modelltest-1");
+    const schreibenParts = MODELL.sections.find((s) => s.skill === "schreiben")!.parts;
+    const items = modellSchreibenQuiz(MODELL.id, MODELL.passingScore, schreibenParts).quiz.variants[0]!.items;
+    expect(items).toHaveLength(8);
+    await click(q("quiz-start"), "ابدأ الاختبار");
+    // الاستمارة (5): إجابات مطابقة ← صحيحة آلياً
+    for (const it of items.slice(0, 5)) {
+      await typeInto(q("quiz-input"), it.a);
+      await click(q("quiz-check"), "تحقّق");
+      await click(q("quiz-next"), "التالي");
+    }
+    // الرسالة (3): الأولى مطابقة للنموذج ← صحيحة · والأخريان حكم ذاتي صادق ← خاطئة
+    await typeInto(q("quiz-input"), items[5]!.a);
+    await click(q("quiz-check"), "تحقّق");
+    await click(q("quiz-next"), "التالي");
+    for (const it of items.slice(6)) {
+      await typeInto(q("quiz-input"), "نص ناقص لا يطابق النموذج");
+      await click(q("quiz-check"), "تحقّق");
+      expect(q("quiz-judge-no")).not.toBeNull(); // النموذج عُرض والحكم للمتعلم
+      await click(q("quiz-judge-no"), "أخطأت");
+      await click(q("quiz-next"), "التالي/النتيجة");
+    }
+    await waitFor(() => !!q("finished-note"), "ملاحظة النهاية");
+    expect(q("finished-note")!.textContent).toContain("قسم الكتابة تم (18/25 نقطة)"); // 6/8 = 0.75 ← 18
+    const saved = await store.load();
+    const g = saved!.progress.gateResults.find((x) => x.gateId === "a1-modelltest-1/schreiben")!;
+    expect(g.kind).toBe("level-exam");
+    expect(g.passed).toBe(true);
+    const gold = saved!.errors.filter((e) => e.payload.source === "a1-modelltest-1/schreiben");
+    expect(gold).toHaveLength(2);
+    expect(gold.every((e) => e.skill === "schreiben")).toBe(true);
   });
 });
