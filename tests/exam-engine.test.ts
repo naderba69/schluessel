@@ -13,10 +13,12 @@ import {
   modellSchreibenQuiz,
   modellSprechenRun,
   sprechenOutcome,
+  certificateDate,
   modellTotal,
   playsLeft,
   recordLevelSection,
   sectionAttempts,
+  weakExamSections,
   type ExamSkill,
 } from "../src/lib/exam-engine.js";
 import { clipUrl } from "../src/lib/audio-assets.js";
@@ -247,5 +249,22 @@ describe("D287: نتيجة التحدث الذاتية", () => {
     const e = sprechenOutcome("x", 0.6, [], []);
     expect(e.score).toBe(0);
     expect(e.passed).toBe(false);
+  });
+});
+
+describe("D288: التوصية والشهادة", () => {
+  it("الضعيف تحت 15 — مرتب من الأضعف والغائب يُتجاهَل", () => {
+    expect(weakExamSections({ hoeren: 20, lesen: 10, schreiben: 14, sprechen: 25 })).toEqual(["lesen", "schreiben"]);
+    expect(weakExamSections({ hoeren: null, lesen: 15, schreiben: 25, sprechen: 25 })).toEqual([]);
+    expect(weakExamSections({ hoeren: null, lesen: null, schreiben: null, sprechen: null })).toEqual([]);
+  });
+
+  it("تاريخ الشهادة = آخر قسم — وبلا أقسام لا تاريخ", () => {
+    const g = (skill: string, date: string): GateResult => ({
+      gateId: `m1/${skill}`, kind: "level-exam", score: 0.8, passed: true, attempts: 1, weakSections: [], date,
+    });
+    expect(certificateDate(gates([g("lesen", "2026-10-20"), g("hoeren", "2026-10-22")]), "m1")).toBe("2026-10-22");
+    expect(certificateDate(gates([]), "m1")).toBeNull();
+    expect(certificateDate(gates([battle("A1-u1")]), "m1")).toBeNull();
   });
 });

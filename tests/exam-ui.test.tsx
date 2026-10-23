@@ -47,8 +47,8 @@ async function waitFor(cond: () => boolean, what: string) {
 const battle = (unitKey: string): GateResult => ({
   gateId: unitKey, kind: "unit-battle", score: 0.8, passed: true, attempts: 1, weakSections: [], date: "2026-10-20",
 });
-const section = (examId: string, skill: string, score: number): GateResult => ({
-  gateId: `${examId}/${skill}`, kind: "level-exam", score, passed: score >= 0.6, attempts: 1, weakSections: [], date: "2026-10-20",
+const section = (examId: string, skill: string, score: number, date = "2026-10-20"): GateResult => ({
+  gateId: `${examId}/${skill}`, kind: "level-exam", score, passed: score >= 0.6, attempts: 1, weakSections: [], date,
 });
 const UNITS = levelUnits(PATH, "A1");
 const READY = UNITS.map(battle);
@@ -303,5 +303,40 @@ describe("D287: قسم التحدث", () => {
     expect(gold).toHaveLength(7);
     const entry = saved!.sessions.find((s) => s.date === localDay())!;
     expect(entry.durationMinutes).toBeGreaterThanOrEqual(1);
+  });
+});
+
+describe("D288: الشهادة والتوصية", () => {
+  const SKILLS: ExamSkill[] = ["hoeren", "lesen", "schreiben", "sprechen"];
+
+  it("الناجح القوي ← شهادة باسمه وتاريخها + توصية بالحجز", async () => {
+    const gates = [...READY, ...SKILLS.map((sk, i) => section(MODELL.id, sk, 0.8, `2026-10-2${i}`))];
+    await renderSeeded(gates);
+    expect(q("exam-verdict")!.textContent).toContain("80/100");
+    expect(q("exam-cert")!.textContent).toContain("شهادة إتمام داخلية");
+    expect(q("exam-cert")!.textContent).toContain("ضياء");
+    expect(q("exam-cert")!.textContent).toContain("2026-10-23"); // آخر قسم
+    expect(q("exam-advice")!.textContent).toContain("احجز بثقة");
+    expect(q("exam-advice")!.textContent).toContain("لا يمنح شهادة رسمية");
+  });
+
+  it("الناجح بقسم ضعيف ← توصية بالتقوية قبل الحجز", async () => {
+    const scores: Record<string, number> = { hoeren: 1, lesen: 1, schreiben: 0.4, sprechen: 1 };
+    const gates = [...READY, ...SKILLS.map((sk) => section(MODELL.id, sk, scores[sk]!))];
+    await renderSeeded(gates);
+    expect(q("exam-cert")).not.toBeNull(); // 85 — ناجح
+    expect(q("exam-advice")!.textContent).toContain("قوِّ قبل الحجز");
+    expect(q("exam-advice")!.textContent).toContain("الكتابة (10/25)");
+  });
+
+  it("الراسب ← بلا شهادة + توصية بالإعادة مرتبة من الأضعف", async () => {
+    const scores: Record<string, number> = { hoeren: 0.4, lesen: 0.8, schreiben: 0.2, sprechen: 0.8 };
+    const gates = [...READY, ...SKILLS.map((sk) => section(MODELL.id, sk, scores[sk]!))];
+    await renderSeeded(gates);
+    expect(q("exam-verdict")!.textContent).toContain("55/100"); // راسب
+    expect(q("exam-cert")).toBeNull();
+    const advice = q("exam-advice")!.textContent!;
+    expect(advice).toContain("أعد");
+    expect(advice.indexOf("الكتابة")).toBeLessThan(advice.indexOf("الاستماع")); // 5 قبل 10
   });
 });

@@ -48,7 +48,7 @@ import { phrasesAvailable } from "./lib/phrase-bank.js";
 import { battleAttempts, currentLessonId, cyclicAttempts, cyclicDue, cyclicTestFor, deferredDue, delayedAttempts, journeyWeek, lessonAfter, openSessionFor, passedBattleUnits, passedUnitBattle, quizAttempts, reconcileState, recordCyclicTest, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitDebrief, unitKeyOf } from "./lib/lesson-path.js";
 import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, type DoseChoice } from "./lib/session-log.js";
 import { cyclicQuizLesson, type QuizOutcome } from "./lib/quiz-session.js";
-import { examSkillAr, levelExamProgress, levelExamReady, levelUnits, modellHoerenQuiz, modellLesenQuiz, modellSchreibenQuiz, modellSprechenRun, modellTotal, recordLevelSection, sectionAttempts, EXAM_SKILLS, type SprechenGrade } from "./lib/exam-engine.js";
+import { certificateDate, examSkillAr, levelExamProgress, levelExamReady, levelUnits, modellHoerenQuiz, modellLesenQuiz, modellSchreibenQuiz, modellSprechenRun, modellTotal, recordLevelSection, sectionAttempts, weakExamSections, EXAM_SKILLS, type SprechenGrade } from "./lib/exam-engine.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
 import { DAY_FOCUS_AR, dayFocus, flexWeek, weekDots, weeklyGoalState } from "./lib/day-engine.js";
@@ -603,6 +603,8 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const examProg = levelExamProgress(state.progress, examUnits);
   const examReady = levelExamReady(state.progress, examUnits);
   const examTotal = modell ? modellTotal(state.progress, modell.id) : null;
+  const certDate = modell ? certificateDate(state.progress, modell.id) : null;
+  const examWeak = examTotal ? weakExamSections(examTotal.points) : [];
   const lesenParts = modell?.sections.find((s) => s.skill === "lesen")?.parts;
   const hoerenParts = modell?.sections.find((s) => s.skill === "hoeren")?.parts;
   const hoerenQuiz = modell && hoerenParts ? modellHoerenQuiz(modell.id, modell.passingScore, hoerenParts) : null;
@@ -1084,11 +1086,31 @@ export function App({ store: injected }: { store?: LearnerStore }) {
                     }).join(" · ")}
                   </p>
                   {examTotal.complete ? (
-                    <p data-testid="exam-verdict">
-                      {examTotal.passed
-                        ? `المجموع الرسمي ${examTotal.total}/100 — ناجح 🎓`
-                        : `المجموع الرسمي ${examTotal.total}/100 — أعد الأقسام الضعيفة`}
-                    </p>
+                    <>
+                      <p data-testid="exam-verdict">
+                        {examTotal.passed
+                          ? `المجموع الرسمي ${examTotal.total}/100 — ناجح 🎓`
+                          : `المجموع الرسمي ${examTotal.total}/100 — أعد الأقسام الضعيفة`}
+                      </p>
+                      {examTotal.passed ? (
+                        <section data-testid="exam-cert">
+                          <p>
+                            🎓 شهادة إتمام داخلية — {state.profile.name} — مستوى {state.profile.level}
+                            {certDate ? ` — ${certDate}` : ""}
+                          </p>
+                          <p data-testid="exam-advice">
+                            {examWeak.length === 0
+                              ? `توصية: مستواك يؤهلك لامتحان Goethe-Zertifikat ${state.profile.level} الرسمي — احجز بثقة. (تدريبنا داخلي ولا يمنح شهادة رسمية.)`
+                              : `توصية: ناجح — لكن قوِّ قبل الحجز الرسمي: ${examWeak.map((s) => `${examSkillAr(s)} (${examTotal.points[s]}/25)`).join(" · ")}. (تدريبنا داخلي ولا يمنح شهادة رسمية.)`}
+                          </p>
+                        </section>
+                      ) : (
+                        <p data-testid="exam-advice">
+                          توصية: أعد {examWeak.map((s) => `${examSkillAr(s)} (${examTotal.points[s]}/25)`).join(" · ")} ثم
+                          أعد الحساب — المجموع يُبنى من آخر نتيجة لكل قسم.
+                        </p>
+                      )}
+                    </>
                   ) : (
                     <p data-testid="exam-total">المجموع الرسمي يكتمل بالأقسام الأربعة</p>
                   )}

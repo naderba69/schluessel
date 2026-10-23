@@ -292,3 +292,24 @@ export function sprechenOutcome(
     weakItems: prompts.filter((_, i) => (grades[i] ?? 0) < 1).map((p) => p.q),
   };
 }
+
+/** D288: عتبة القسم الاستشارية (60% من 25 — للتوجيه فقط، الرسمي المجموع وحده) */
+export const SECTION_ADVICE_AT = 15;
+
+/** D288: الأقسام المحتاجة إعادة — تحت العتبة الاستشارية مرتبة من الأضعف */
+export function weakExamSections(points: Record<ExamSkill, number | null>): ExamSkill[] {
+  return EXAM_SKILLS.filter((s) => points[s] !== null && (points[s] as number) < SECTION_ADVICE_AT).sort(
+    (a, b) => (points[a] as number) - (points[b] as number),
+  );
+}
+
+/** D288: تاريخ الشهادة — آخر قسم أُنجز (الأحدث يحددها) */
+export function certificateDate(
+  progress: Pick<import("../../content/schemas/index.js").LearnerProgress, "gateResults">,
+  examId: string,
+): string | null {
+  const dates = progress.gateResults
+    .filter((g) => g.kind === "level-exam" && g.gateId.startsWith(`${examId}/`))
+    .map((g) => g.date);
+  return dates.length === 0 ? null : dates.sort().at(-1)!;
+}
