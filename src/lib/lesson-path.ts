@@ -2,7 +2,7 @@
 // القانون 3/§3: مسار خطّي — لا قفز ولا ارتجاع؛ يُفتح الدرس التالي بـ≥75% في Quiz سابقه فقط (routes.ts يعرض الحالة).
 // الحقيقة المخزَّنة = completedLessons (تاريخ لا يُمحى) · availableLessons مشتقّة منها ومن ترتيب المحتوى الحالي
 // (reconcileProgress) — فتغيير المحتوى (مثل نقل الوحدة 17 ← 15 في D113) لا يترك متعلماً معلَّقاً بمعرّف اختفى.
-import type { GateResult, LearnerProgress, LearnerState, Level, OpenSession } from "../../content/schemas/index.js";
+import type { CalibrationEntry, ErrorEntry, GateResult, LearnerProgress, LearnerState, Level, OpenSession } from "../../content/schemas/index.js";
 import type { QuizOutcome } from "./quiz-session.js";
 import { enrollSrsCards } from "./review-engine.js";
 
@@ -67,6 +67,70 @@ export function deferredUnits(progress: Pick<LearnerProgress, "gateResults">): s
     if (g.kind === "delayed-battle") delayed.add(g.gateId);
   }
   return [...passed].filter((u) => !delayed.has(u));
+}
+
+/** D278: وحدات معاركها مجتازة — بترتيب أول اجتياز (تقرير المعايرة كل وحدتين) */
+export function passedBattleUnits(progress: Pick<LearnerProgress, "gateResults">): string[] {
+  const out: string[] = [];
+  for (const g of progress.gateResults) {
+    if (g.kind === "unit-battle" && g.passed && !out.includes(g.gateId)) out.push(g.gateId);
+  }
+  return out;
+}
+
+/** D278: إحصاء معارك وحدة: محاولات المعركة + أفضل نتيجة + أفضل مؤجلة */
+export function unitBattleStats(
+  progress: Pick<LearnerProgress, "gateResults">,
+  unitKey: string,
+): { battles: number; best: number | null; delayedBest: number | null } {
+  const scores = progress.gateResults.filter((g) => g.kind === "unit-battle" && g.gateId === unitKey).map((g) => g.score);
+  const delayed = progress.gateResults.filter((g) => g.kind === "delayed-battle" && g.gateId === unitKey).map((g) => g.score);
+  return {
+    battles: scores.length,
+    best: scores.length > 0 ? Math.max(...scores) : null,
+    delayedBest: delayed.length > 0 ? Math.max(...delayed) : null,
+  };
+}
+
+/** D278: تفريغ الوحدة — مشتق من السجل وحده (بلا حالة جديدة) */
+export type UnitDebrief = {
+  unitKey: string;
+  battles: number;
+  /** أفضل نتيجة معركة (0–1) — null بلا معركة */
+  best: number | null;
+  /** أفضل مؤجلة — null لم تُؤدَّ بعد */
+  delayedBest: number | null;
+  goldenOpen: number;
+  goldenResolved: number;
+  calibrations: number;
+  /** متوسط (التوقع − النتيجة) — null بلا معايرة */
+  bias: number | null;
+};
+
+export function unitDebrief(
+  progress: Pick<LearnerProgress, "gateResults">,
+  errors: readonly ErrorEntry[],
+  calibration: readonly CalibrationEntry[],
+  unitKey: string,
+  unitLessonIds: readonly string[],
+): UnitDebrief {
+  const st = unitBattleStats(progress, unitKey);
+  const inUnit = (lessonId: string) => unitLessonIds.includes(lessonId);
+  const fromUnit = errors.filter((e) => {
+    const src = e.payload.source;
+    return unitLessonIds.some((id) => src === id || src.startsWith(`${id}/`));
+  });
+  const cal = calibration.filter((c) => c.lessonId !== undefined && inUnit(c.lessonId));
+  return {
+    unitKey,
+    battles: st.battles,
+    best: st.best,
+    delayedBest: st.delayedBest,
+    goldenOpen: fromUnit.filter((e) => !e.resolved).length,
+    goldenResolved: fromUnit.filter((e) => e.resolved).length,
+    calibrations: cal.length,
+    bias: cal.length > 0 ? cal.reduce((s, c) => s + (c.predicted - c.actual), 0) / cal.length : null,
+  };
 }
 
 /** D277: المؤجلة اليوم؟ — اثنين + مستحقة (الخطة: أول 25 د من الاثنين) */

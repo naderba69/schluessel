@@ -16,6 +16,8 @@ import { DosePicker } from "./components/DosePicker.js";
 import { MicroSession } from "./components/MicroSession.js";
 import { ReflectionCard } from "./components/ReflectionCard.js";
 import { MeasureStrip } from "./components/MeasureStrip.js";
+import { UnitDebriefCard } from "./components/UnitDebrief.js";
+import { CalibrationReportCard } from "./components/CalibrationReport.js";
 import { BorrowedProvider } from "./components/StruckText.js";
 import { planLessonStations, type SrsDuePair } from "./lib/lesson-runner.js";
 import type { Station } from "./lib/lesson-engine.js";
@@ -33,7 +35,7 @@ import {
   type SessionBundle,
 } from "./lesson-packs.js";
 import { phrasesAvailable } from "./lib/phrase-bank.js";
-import { battleAttempts, currentLessonId, deferredDue, delayedAttempts, lessonAfter, openSessionFor, passedUnitBattle, quizAttempts, reconcileState, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitKeyOf } from "./lib/lesson-path.js";
+import { battleAttempts, currentLessonId, deferredDue, delayedAttempts, lessonAfter, openSessionFor, passedBattleUnits, passedUnitBattle, quizAttempts, reconcileState, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitDebrief, unitKeyOf } from "./lib/lesson-path.js";
 import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, type DoseChoice } from "./lib/session-log.js";
 import type { QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
@@ -495,6 +497,28 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const battleNow =
     new Date().getDay() === 6 && !!current && current.day === 6 &&
     !passedUnitBattle(state.progress, unitKeyOf(current.level, current.unit));
+  /** D278: تفريغ الوحدة السابقة — يُعرض أول أيام الوحدة التالية وحدها (لحظة التفريغ) */
+  const curIdx = current ? LESSON_INDEX.findIndex((x) => x.id === current.id) : -1;
+  const prevEntry =
+    curIdx > 0 && current
+      ? [...LESSON_INDEX.slice(0, curIdx)]
+          .reverse()
+          .find((x) => unitKeyOf(x.level, x.unit) !== unitKeyOf(current.level, current.unit))
+      : undefined;
+  const prevKey = prevEntry ? unitKeyOf(prevEntry.level, prevEntry.unit) : undefined;
+  const debrief =
+    current?.day === 1 && prevKey && passedUnitBattle(state.progress, prevKey)
+      ? unitDebrief(
+          state.progress,
+          state.errors,
+          state.profile.calibration,
+          prevKey,
+          LESSON_INDEX.filter((x) => unitKeyOf(x.level, x.unit) === prevKey).map((x) => x.id),
+        )
+      : null;
+  /** D278: تقرير المعايرة — كل وحدتين مجتازتين */
+  const passedUnits = passedBattleUnits(state.progress);
+  const showCalibration = passedUnits.length >= 2 && passedUnits.length % 2 === 0;
   /** D277: مؤجلة اليوم؟ — أول وحدة مستحقة يوم الاثنين */
   const deferredKey =
     new Date().getDay() === 1
@@ -885,6 +909,10 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           </p>
           {todayEntry && todayEntry.durationMinutes > 0 && (
             <MeasureStrip entry={todayEntry} dueCount={dueCount} />
+          )}
+          {debrief && <UnitDebriefCard debrief={debrief} muellerLine={muellerMessage(passedUnits.length)} />}
+          {showCalibration && !micro && !session && !deferred && (
+            <CalibrationReportCard entries={state.profile.calibration} />
           )}
           {todayEntry && todayEntry.durationMinutes > 0 && (
             <ReflectionCard

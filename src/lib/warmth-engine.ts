@@ -67,3 +67,34 @@ export function muellerMessage(dayIndex: number): string {
   const i = ((dayIndex % MULLER_MESSAGES.length) + MULLER_MESSAGES.length) % MULLER_MESSAGES.length;
   return MULLER_MESSAGES[i];
 }
+
+/** D278: تقرير المعايرة (slider ↔ نتيجة — كل وحدتين): تجميع + حكم لطيف بلا لوم */
+export type CalibrationReport = {
+  count: number;
+  meanPred: number;
+  meanAct: number;
+  /** متوسط (التوقع − النتيجة): موجب = طموح فوق الأداء */
+  bias: number;
+  verdict: string;
+};
+
+export function calibrationReport(entries: readonly { predicted: number; actual: number }[]): CalibrationReport {
+  if (entries.length === 0)
+    return {
+      count: 0,
+      meanPred: 0,
+      meanAct: 0,
+      bias: 0,
+      verdict: "لا توقعات بعد — توقّع نتيجتك قبل كل اختبار وسترى صورتك هنا.",
+    };
+  const meanPred = Math.round(entries.reduce((s, e) => s + e.predicted, 0) / entries.length);
+  const meanAct = Math.round(entries.reduce((s, e) => s + e.actual, 0) / entries.length);
+  const bias = meanPred - meanAct;
+  const verdict =
+    Math.abs(bias) <= 10
+      ? `توقّعك دقيق — تعرف مستواك، وهذه مهارة بحد ذاتها.`
+      : bias > 0
+        ? `تتوقع أعلى من نتيجتك عادة — الطموح وقود، والمراجعة القصيرة تقرّب الصورة.`
+        : `نتائجك أعلى من توقعك عادة — أنت أفضل مما تظن 🌟`;
+  return { count: entries.length, meanPred, meanAct, bias, verdict };
+}
