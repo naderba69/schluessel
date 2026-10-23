@@ -17,6 +17,7 @@ import {
   AudioScript,
   type Lesson,
   type Word,
+  type ImageAsset,
 } from "../content/schemas/index.js";
 import imageManifest from "../content/manifests/image-manifest.json";
 import lessonIndexJson from "../content/manifests/lesson-index.json";
@@ -82,6 +83,11 @@ export const ALL_MODELLTESTS = json(import.meta.glob("../content/modelltest/*.js
 
 /** مانيفست الصور — الترميز المزدوج (D96) */
 export const ALL_IMAGES = ImageManifest.parse(imageManifest).assets;
+
+/** صور الدرس (D298 · N-156/1): أصول المانيفست التي يضمّها usedInLessons — [] = بلا صورة (وبلا بديل — أمر المالك) */
+export function lessonImages(lessonId: string): readonly ImageAsset[] {
+  return ALL_IMAGES.filter((a) => a.usedInLessons.includes(lessonId));
+}
 
 /** نصوص القراءة (D97) */
 export const ALL_LESETEXTS = json(import.meta.glob("../content/lese/*.json", { eager: true, import: "default" }))

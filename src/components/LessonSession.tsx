@@ -2,6 +2,8 @@
 // قفل الاتجاه من E01 (لا ارتجاع — قانون 3) · محاولة قبل كشف (F121) · §2.5 (أظهر الإجابة ثم قيّم)
 // E05: التسجيل «لأذنك أنت» (D16) · E07: تصحيح لطيف (F077) · E08: تقرير مسائي + معاينة الغد (D23)
 import { useState } from "react";
+import { lessonImages } from "../lesson-packs.js";
+import { imageUrlForFile } from "../lib/image-assets.js";
 import type { Station } from "../lib/lesson-engine.js";
 import { STATIONS, STATION_MINUTES, BREAKS_AFTER, canMove } from "../lib/lesson-engine.js";
 import { RATING_LABELS_AR, type RecallRating } from "../lib/review-engine.js";
@@ -60,6 +62,22 @@ export function PlayButton({ audioId, speakText, label }: { audioId?: string; sp
     >
       🔊
     </button>
+  );
+}
+
+/**
+ * رسم الدرس (D298 · N-156/1 — الترميز المزدوج): صور المانيفست المربوطة بالدرس وحده —
+ * لا شيء لدرس بلا صورة (وبلا بديل مرسوم — أمر المالك: ننتظر الصور الحقيقية).
+ */
+export function LessonIllustration({ lessonId }: { lessonId: string }) {
+  const assets = lessonImages(lessonId).filter((a) => imageUrlForFile(a.file) !== undefined);
+  if (assets.length === 0) return null;
+  return (
+    <figure data-testid="lesson-illustration">
+      {assets.map((a) => (
+        <img key={a.id} data-image-id={a.id} src={imageUrlForFile(a.file)} alt={a.alt} />
+      ))}
+    </figure>
   );
 }
 
@@ -230,10 +248,13 @@ export function LessonSession({
   onFinish,
   initialStation,
   onStationChange,
+  illustration,
 }: {
   content?: StationContent;
   done?: Partial<Record<Station, boolean>>;
   onFinish?: () => void;
+  /** D298: رسم الدرس — يُعرَض تحت شريط المحطات (غيابه = بلا رسم) */
+  illustration?: React.ReactNode;
   /** N-006: محطة الاستئناف (حالة أولية — لا كسر لقفل الاتجاه فالتنقل بعده تقدمي وحده) */
   initialStation?: Station;
   /** N-006: يُنادى عند كل انتقال لمحطة تالية (مباشرةً أو بعد الاستراحة) */
@@ -265,6 +286,7 @@ export function LessonSession({
     return (
       <section data-testid="lesson-session" data-station={station}>
         <SessionProgress current={station} />
+        {illustration}
         <BreakPrompt
           after={station}
           onContinue={() => {
@@ -280,6 +302,7 @@ export function LessonSession({
   return (
     <section data-testid="lesson-session" data-station={station}>
       <SessionProgress current={station} />
+      {illustration}
       {content?.[station] ?? (
         <p data-testid="station-placeholder">محطة: {STATION_LABELS_AR[station]}</p>
       )}

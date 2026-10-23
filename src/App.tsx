@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { AudioScript, CoachWindow, LearnerState, OpenSession, SrsCardState, Unit0Card } from "./../content/schemas/index.js";
 import { FirstRun } from "./components/FirstRun.js";
-import { LessonSession } from "./components/LessonSession.js";
+import { LessonIllustration, LessonSession } from "./components/LessonSession.js";
 import {
   RecallStation,
   LearnStation,
@@ -183,6 +183,7 @@ function LessonRun({
     <LessonSession
       done={done}
       onFinish={() => onFinish(last)}
+      illustration={<LessonIllustration lessonId={lesson.id} />}
       initialStation={initialOpen?.station}
       onStationChange={(st) => {
         snap.current.station = st;
