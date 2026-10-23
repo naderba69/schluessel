@@ -8,12 +8,15 @@ import {
   levelExamProgress,
   levelExamReady,
   levelUnits,
+  modellHoerenQuiz,
   modellLesenQuiz,
   modellTotal,
+  playsLeft,
   recordLevelSection,
   sectionAttempts,
   type ExamSkill,
 } from "../src/lib/exam-engine.js";
+import { clipUrl } from "../src/lib/audio-assets.js";
 import { createInitialState } from "../src/lib/state-factory.js";
 
 const fresh = () => createInitialState("ضياء");
@@ -135,5 +138,41 @@ describe("D284: مهايئ القراءة على المحتوى الحي", () =>
     const a = startQuizAttempt(quiz, 0);
     expect(a.items).toHaveLength(15);
     expect(a.passingScore).toBe(0.6);
+  });
+});
+
+describe("D285: السماح بالسماع", () => {
+  it("المتبقي — بلا سالب", () => {
+    expect(playsLeft(2, 0)).toBe(2);
+    expect(playsLeft(2, 1)).toBe(1);
+    expect(playsLeft(1, 1)).toBe(0);
+    expect(playsLeft(1, 5)).toBe(0);
+  });
+});
+
+describe("D285: مهايئ الاستماع على المحتوى الحي", () => {
+  const modell = ALL_MODELLTESTS.find((m) => m.id === "a1-modelltest-1")!;
+  const hoeren = modell.sections.find((s) => s.skill === "hoeren")!;
+  const { quiz, tracks, plays } = modellHoerenQuiz(modell.id, modell.passingScore, hoeren.parts);
+  const items = quiz.quiz.variants[0]!.items;
+
+  it("15 بنداً صالحاً — والمسارات والسماح بمحاذاة الفهرس", () => {
+    expect(items).toHaveLength(15);
+    for (const it of items) expect(() => QuizItemSchema.parse(it)).not.toThrow();
+    expect(tracks).toHaveLength(15);
+    expect(plays).toHaveLength(15);
+    expect(plays).toEqual([2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2]); // الرسمي: 2/1/2
+    expect(items[0]!.q).toContain("🔊");
+  });
+
+  it("كل مسار مذكور له مقطع ملتزم", () => {
+    const refs = tracks.flat();
+    expect(refs.length).toBeGreaterThan(15); // الحوارات متعددة الأسطر
+    for (const r of refs) expect(clipUrl(r), r).toBeTruthy();
+  });
+
+  it("الغائب playCount = مرتان", () => {
+    const { plays: p } = modellHoerenQuiz("m", 0.6, [{ items: [{ q: "q", a: "a" }] }]);
+    expect(p).toEqual([2]);
   });
 });

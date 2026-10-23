@@ -7,8 +7,9 @@ import { App, localDay } from "../src/App.js";
 import { memoryLearnerStore } from "../src/stores/learner-store.js";
 import { createInitialState } from "../src/lib/state-factory.js";
 import { ALL_MODELLTESTS, PATH } from "../src/lesson-packs.js";
-import { levelUnits, modellLesenQuiz, type ExamSkill } from "../src/lib/exam-engine.js";
+import { levelUnits, modellHoerenQuiz, modellLesenQuiz, type ExamSkill } from "../src/lib/exam-engine.js";
 import type { GateResult } from "../content/schemas/index.js";
+import { createAudioPlayer, setAudioPlayer, type AudioBackend } from "../src/lib/audio-player.js";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
 
@@ -24,6 +25,7 @@ beforeEach(() => {
   root = createRoot(container);
 });
 afterEach(async () => {
+  setAudioPlayer(null);
   vi.useRealTimers();
   await act(async () => root.unmount());
   container.remove();
@@ -85,7 +87,7 @@ describe("D284: بطاقة الامتحان", () => {
     expect(q("exam-ready")!.textContent).toContain("مفتوح");
     expect(q("exam-points")!.textContent).toContain("القراءة —");
     expect(q("start-exam-lesen")!.textContent).toContain("15 بنداً");
-    expect(q("exam-roadmap")!.textContent).toContain("قادمة");
+    expect(q("exam-roadmap")!.textContent).toContain("قادم");
     expect(q("exam-total")!.textContent).toContain("يكتمل بالأقسام الأربعة");
   });
 
@@ -121,5 +123,96 @@ describe("D284: التدفق الكامل للقراءة", () => {
     expect(saved!.progress.levelExams["A1"]).toHaveLength(1);
     const entry = saved!.sessions.find((s) => s.date === localDay())!;
     expect(entry.durationMinutes).toBeGreaterThanOrEqual(1);
+  });
+});
+
+describe("D285: قسم الاستماع", () => {
+  function fakePlayer(opts: { failClip?: boolean; speech?: boolean } = {}) {
+    const played: string[] = [];
+    const backend: AudioBackend = {
+      async playUrl(url) {
+        if (opts.failClip) throw new Error("autoplay blocked");
+        played.push(url);
+      },
+      async speak() {},
+      canSpeak: () => opts.speech !== false,
+    };
+    setAudioPlayer(createAudioPlayer(backend, (id) => `clip://${id}`));
+    return played;
+  }
+
+  async function startHoeren(store_gates: GateResult[] = READY) {
+    const store = await renderSeeded(store_gates);
+    await click(q("start-exam-hoeren"), "ابدأ الاستماع");
+    expect(q("exam-hoeren-title")!.textContent).toContain("a1-modelltest-1");
+    await click(q("quiz-start"), "ابدأ الاختبار");
+    return store;
+  }
+
+  it("البطاقة تعرض زر الاستماع وخارطة الأقسام الباقية", async () => {
+    await renderSeeded(READY);
+    expect(q("start-exam-hoeren")!.textContent).toContain("🔊");
+    expect(q("exam-roadmap")!.textContent).toContain("قسمان قادمان");
+  });
+
+  it("التشغيل يستهلك من السماح — والفاشل لا يُحسَب", async () => {
+    fakePlayer();
+    await startHoeren();
+    expect(q("quiz-play")!.textContent).toContain("متبقٍ 2"); // القسم 1: مرتان
+    await click(q("quiz-play"), "استمع");
+    await waitFor(() => q("quiz-play")!.textContent!.includes("متبقٍ 1"), "نقص العداد");
+    await click(q("quiz-play"), "استمع ثانية");
+    await waitFor(
+      () => q("quiz-play")!.textContent!.includes("متبقٍ 0") && (q("quiz-play") as HTMLButtonElement).disabled,
+      "نفاد السماح وتعطّل الزر",
+    );
+  });
+
+  it("الفشل الصوتي لا يستهلك السماح", async () => {
+    fakePlayer({ failClip: true, speech: false });
+    await startHoeren();
+    await click(q("quiz-play"), "استمع");
+    await waitFor(() => q("quiz-play")!.textContent!.includes("استمع (متبقٍ"), "انتهاء المحاولة الفاشلة");
+    expect(q("quiz-play")!.textContent).toContain("متبقٍ 2");
+    expect((q("quiz-play") as HTMLButtonElement).disabled).toBe(false);
+  });
+
+  it("التدفق الكامل — المسارات تُشغَّل والقسم يُسجَّل ودقائقه استماع", async () => {
+    const played = fakePlayer();
+    const store = await startHoeren();
+    const hoerenParts = MODELL.sections.find((s) => s.skill === "hoeren")!.parts;
+    const items = modellHoerenQuiz(MODELL.id, MODELL.passingScore, hoerenParts).quiz.quiz.variants[0]!.items;
+    expect(items).toHaveLength(15);
+    await click(q("quiz-play"), "استمع");
+    await waitFor(() => played.length > 0, "تشغيل مسارات البند الأول");
+    expect(played[0]).toContain("mt1-h1-d1-l1");
+    for (const it of items) {
+      await clickChoice(it.a);
+      await click(q("quiz-next"), "التالي/النتيجة");
+    }
+    await waitFor(() => !!q("finished-note"), "ملاحظة النهاية");
+    expect(q("finished-note")!.textContent).toContain("قسم الاستماع تم (25/25 نقطة)");
+    const saved = await store.load();
+    const g = saved!.progress.gateResults.find((x) => x.gateId === "a1-modelltest-1/hoeren")!;
+    expect(g.kind).toBe("level-exam");
+    const entry = saved!.sessions.find((s) => s.date === localDay())!;
+    expect(entry.durationMinutes).toBeGreaterThanOrEqual(1);
+    expect(entry.listeningMinutes).toBeGreaterThanOrEqual(1);
+  });
+
+  it("الراسب في النسخة الوحيدة يرى نصها الصادق", async () => {
+    // مباشر على المحطة (التطبيق ينتقل لليوم عند الاكتمال فلا يبقي طور النتيجة)
+    const { QuizStation } = await import("../src/components/QuizStation.js");
+    const one = {
+      id: "t1",
+      quiz: { variants: [{ items: [{ q: "q1", a: "a", choices: ["a", "b"] }], passingScore: 0.75 }] },
+      slider: { questionDe: "x", questionAr: "توقع؟", min: 0, max: 100 },
+    };
+    await act(async () => root.render(<QuizStation lesson={one} priorAttempts={0} onAttemptComplete={() => {}} />));
+    await click(q("quiz-start"), "ابدأ");
+    await clickChoice("b");
+    await click(q("quiz-next"), "النتيجة");
+    await waitFor(() => !!q("quiz-no-retry"), "نص اللاإعادة");
+    expect(q("quiz-no-retry")!.textContent).toContain("النسخة الوحيدة");
   });
 });

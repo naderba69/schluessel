@@ -143,3 +143,53 @@ export function modellLesenQuiz(examId: string, passingScore: number, parts: rea
     },
   };
 }
+
+/** D285: المتبقي من السماع — لا يُحسَب الفاشل (يُمرَّر used الناجح فقط) */
+export function playsLeft(allowed: number, used: number): number {
+  return Math.max(0, allowed - used);
+}
+
+/** D285: جزء استماع بالشكل الأدنى الذي يحتاجه المهايئ */
+export type ModellHoerenPart = {
+  readonly playCount?: number;
+  readonly items: ReadonlyArray<{
+    readonly q: string;
+    readonly a: string;
+    readonly choices?: readonly string[];
+    readonly audioRefs?: readonly string[];
+    readonly evidence?: string;
+  }>;
+};
+
+/** D285: مهايئ الاستماع — البنود على المحطة + مسارات الصوت والسماح بمحاذاة الفهرس */
+export function modellHoerenQuiz(
+  examId: string,
+  passingScore: number,
+  parts: readonly ModellHoerenPart[],
+): { quiz: QuizForms; tracks: string[][]; plays: number[] } {
+  const items: QuizForms["quiz"]["variants"][number]["items"] = [];
+  const tracks: string[][] = [];
+  const plays: number[] = [];
+  for (const p of parts) {
+    for (const it of p.items) {
+      const why = it.evidence ? `الدليل في المسموع: «${it.evidence}»` : undefined;
+      items.push({ q: `🔊 استمع ثم أجب — ${it.q}`, a: it.a, choices: it.choices ? [...it.choices] : undefined, why });
+      tracks.push([...(it.audioRefs ?? [])]);
+      plays.push(p.playCount ?? 2); // الغائب = مرتان (الأصل الرسمي الغالب)
+    }
+  }
+  return {
+    quiz: {
+      id: `${examId}/hoeren`,
+      quiz: { variants: [{ items, passingScore }] },
+      slider: {
+        questionDe: "Wie gut verstehst du gesprochenes Deutsch?",
+        questionAr: "قبل الاستماع: كيف تقيّم فهمك للألمانية المسموعة؟",
+        min: 0,
+        max: 100,
+      },
+    },
+    tracks,
+    plays,
+  };
+}

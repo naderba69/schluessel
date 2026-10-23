@@ -9,6 +9,7 @@ import {
   judgeQuizItem, needsJudgment, outcomeHeadlineAr, predictScore, quizOutcome, restoreQuizAttempt, startQuizAttempt, verdictNoteAr,
   type QuizAttempt, type QuizForms, type QuizOutcome,
 } from "../lib/quiz-session.js";
+import { audioPlayer } from "../lib/audio-player.js";
 import { UmlautKeys, insertAtCursor } from "./LessonContent.js";
 import { StruckText } from "./StruckText.js";
 
@@ -21,6 +22,7 @@ export function QuizStation({
   initialQuiz,
   onQuizProgress,
   onGrade,
+  audio,
 }: {
   lesson: QuizLesson;
   /** محاولات مسجّلة قبل هذه الحصة — تحدد النسخة (قانون 21) */
@@ -33,12 +35,20 @@ export function QuizStation({
   onQuizProgress?: (snap: OpenQuiz) => void;
   /** N-150 (D250): يُنادى عند كل إجابة غير كاملة (للدفتر الذهبي — close/wrong/self-wrong) */
   onGrade?: (g: { item: QuizItem; given: string; verdict: QuizAnswer["verdict"] }) => void;
+  /** D285: صوت البند (الاستماع) — المسارات والسماح لكل فهرس · زر 🔊 بعدّاد */
+  audio?: {
+    tracksFor: (item: QuizLesson["quiz"]["variants"][number]["items"][number], index: number) => readonly string[];
+    textFor?: (item: QuizLesson["quiz"]["variants"][number]["items"][number], index: number) => string;
+    playsFor: (item: QuizLesson["quiz"]["variants"][number]["items"][number], index: number) => number;
+  };
 }) {
   const variantCount = lesson.quiz.variants.length;
   const [base] = useState(priorAttempts);
   const [sessionAttempts, setSessionAttempts] = useState(0);
   // N-006: نسخ أُكملت في هذا الجلوس — الإعادة تتخطاها (حافة: استئناف محاولة ثانية مقطوعة ثم إكمالها ثم الإعادة)
   const [sittingVariants, setSittingVariants] = useState<number[]>([]);
+  const [usedPlays, setUsedPlays] = useState<Record<string, number>>({}); // D285: السماع المستهلَك لكل بند (نسخة:فهرس)
+  const [playing, setPlaying] = useState(false); // D285: تشغيل جارٍ (منع التداخل)
   const nextVariant = (from: number): number => {
     let c = from % variantCount;
     while (sittingVariants.includes(c)) c = (c + 1) % variantCount;
@@ -142,8 +152,9 @@ export function QuizStation({
         )}
         {!outcome.passed && !retry && (
           <p data-testid="quiz-no-retry">
-            استعملت النسخ الثلاث في هذه الحصة — الإعادة الآن تختبر حفظ الإجابات لا الإتقان. راجع الخلاصة والمصائد أدناه؛ الدرس يبقى
-            مفتوحاً لحصتك القادمة.
+            {variantCount === 1
+              ? "هذه النسخة الوحيدة في هذه الحصة — الإعادة الآن تختبر حفظ الإجابات لا الإتقان. راجع المصائد أدناه؛ والقسم مفتوح لحصتك القادمة."
+              : "استعملت النسخ الثلاث في هذه الحصة — الإعادة الآن تختبر حفظ الإجابات لا الإتقان. راجع الخلاصة والمصائد أدناه؛ الدرس يبقى مفتوحاً لحصتك القادمة."}
           </p>
         )}
       </section>
@@ -183,6 +194,33 @@ export function QuizStation({
       <p dir="auto" data-testid="quiz-question">
         <StruckText text={item.q} />
       </p>
+      {audio && audio.tracksFor(item, attempt.cursor).length > 0 && (
+        <p>
+          <button
+            data-testid="quiz-play"
+            disabled={playing || audio.playsFor(item, attempt.cursor) - (usedPlays[`${attempt.variantIndex}:${attempt.cursor}`] ?? 0) <= 0}
+            onClick={() => {
+              const key = `${attempt.variantIndex}:${attempt.cursor}`;
+              const tracks = audio.tracksFor(item, attempt.cursor);
+              const text = audio.textFor?.(item, attempt.cursor) ?? item.q;
+              setPlaying(true);
+              void (async () => {
+                let ok = true;
+                for (const trackId of tracks) {
+                  const out = await audioPlayer().play({ trackId, text });
+                  if (out !== "clip" && out !== "speech") ok = false;
+                }
+                if (ok) setUsedPlays((u) => ({ ...u, [key]: (u[key] ?? 0) + 1 }));
+                setPlaying(false);
+              })();
+            }}
+          >
+            {playing
+              ? "جارٍ التشغيل…"
+              : `🔊 استمع (متبقٍ ${Math.max(0, audio.playsFor(item, attempt.cursor) - (usedPlays[`${attempt.variantIndex}:${attempt.cursor}`] ?? 0))})`}
+          </button>
+        </p>
+      )}
       {item.choices ? (
         <p>
           {displayOrder(item.choices, `${lesson.id}|${attempt.variantIndex}|${item.q}`).map((c, i) => (
