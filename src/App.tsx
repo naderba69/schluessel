@@ -12,6 +12,8 @@ import {
 } from "./components/LessonContent.js";
 import { QuizStation } from "./components/QuizStation.js";
 import { CoachPulse } from "./components/CoachPulse.js";
+import { DosePicker } from "./components/DosePicker.js";
+import { MicroSession } from "./components/MicroSession.js";
 import { BorrowedProvider } from "./components/StruckText.js";
 import { planLessonStations, type SrsDuePair } from "./lib/lesson-runner.js";
 import type { Station } from "./lib/lesson-engine.js";
@@ -30,7 +32,7 @@ import {
 } from "./lesson-packs.js";
 import { phrasesAvailable } from "./lib/phrase-bank.js";
 import { currentLessonId, lessonAfter, openSessionFor, quizAttempts, reconcileState, recordQuizAttempt, setOpenSession } from "./lib/lesson-path.js";
-import { recordSession } from "./lib/session-log.js";
+import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, type DoseChoice } from "./lib/session-log.js";
 import type { QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
@@ -270,6 +272,10 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [firstBundle, setFirstBundle] = useState<SessionBundle | null>(null);
   const [firstError, setFirstError] = useState<string | null>(null);
   const sessionStart = useRef<number>(0); // N-007: بداية الحصة لقياس مدتها عند النهاية
+  /** D274: جرعة اليوم المخططة (45/90/120) + الجلسة المصغّرة */
+  const [plannedDose, setPlannedDose] = useState<DoseChoice>(() => readPlannedDose(localDay()));
+  const [micro, setMicro] = useState<{ pairs: SrsDuePair[] | null } | null>(null);
+  const microStart = useRef<number>(0);
   const [finishedNote, setFinishedNote] = useState<string | null>(null);
   /** N-155 (D269): التبويب الحالي — اليوم افتراضياً (قالب ثابت، قانون 16) */
   const [tab, setTab] = useState<MainTab>("today");
@@ -505,6 +511,38 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     openSession();
   };
 
+  /** D274: الجلسة المصغّرة — المستحق الأقدم أولاً (بسقف الحصة)؛ الكلمة الغائبة تُتخطى بلا كسر */
+  const startMicro = () => {
+    if (!state) return;
+    const due = dueSrsCards(state.srsCards).slice(0, MAX_DUE_PER_SESSION);
+    if (due.length === 0) return;
+    microStart.current = Date.now();
+    setMicro({ pairs: null });
+    void Promise.all(due.map((c) => loadWords([c.cardId]).then((ws) => ws[0], () => undefined))).then((words) => {
+      const byId = new Map(words.flatMap((w) => (w ? [[w.id, w]] : [])));
+      setMicro({ pairs: due.flatMap((card) => { const word = byId.get(card.cardId); return word ? [{ card, word }] : []; }) });
+    });
+  };
+
+  const finishMicro = () => {
+    const s = stateRef.current;
+    if (s) {
+      const minutes = Math.max(1, Math.round((Date.now() - microStart.current) / 60000));
+      try {
+        commit({ ...s, sessions: recordSession(s.sessions, { date: localDay(), durationMinutes: minutes, srsMinutes: minutes }) });
+      } catch (e) {
+        setSaveError(errText(e));
+      }
+    }
+    setMicro(null);
+    setFinishedNote("أحسنت — جلسة مصغّرة كاملة 🌱 كل مراجعة تثبّت.");
+  };
+
+  const rateSrs = (id: string, rating: import("./lib/review-engine.js").RecallRating) => {
+    const st = stateRef.current;
+    if (st) commit({ ...st, srsCards: applySrsRating(st.srsCards, id, rating) });
+  };
+
   const onAttempt = (o: QuizOutcome) => {
     const s = stateRef.current;
     if (!s) return;
@@ -533,7 +571,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     if (s) {
       const minutes = Math.max(1, Math.round((Date.now() - sessionStart.current) / 60000));
       try {
-        commit({ ...s, sessions: recordSession(s.sessions, { date: localDay(), durationMinutes: minutes, wordsNew: session.bundle?.lesson.praesentation.wordIds.length ?? 0 }) });
+        commit({ ...s, sessions: recordSession(s.sessions, { date: localDay(), dose: dailyDoseForChoice(plannedDose), durationMinutes: minutes, wordsNew: session.bundle?.lesson.praesentation.wordIds.length ?? 0 }) });
       } catch (e) {
         setSaveError(errText(e));
       }
@@ -633,6 +671,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
               () => {
                 setState(null);
                 setSession(null);
+                setMicro(null);
                 setTab("today");
               },
               (e) => setSaveError(errText(e)),
@@ -644,7 +683,18 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       <p data-testid="week-dots">
         <span dir="ltr">{week.dots.map((d) => (d ? "●" : "○")).join("")}</span> أسبوعك ({week.studied}/7)
       </p>
-      {session ? (
+      {!micro && !session && dueCount > 0 && (
+        <button data-testid="start-micro" onClick={startMicro}>
+          ⚡ جلسة مصغّرة — {dueCount} مستحقة (نحو 10 دقائق)
+        </button>
+      )}
+      {micro ? (
+        micro.pairs ? (
+          <MicroSession pairs={micro.pairs} onRated={rateSrs} onFinish={finishMicro} />
+        ) : (
+          <p data-testid="micro-loading">جارٍ تجهيز الجلسة المصغّرة…</p>
+        )
+      ) : session ? (
         session.bundle ? (
         <LessonRun
           key={`${session.lessonId}-${session.priorAttempts}`}
@@ -666,10 +716,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
             if (s) commit({ ...s, errors: s.errors.map((e) => (e.id === id ? { ...e, resolved: true } : e)) });
           }}
           srsCards={state.srsCards}
-          onSrsRated={(id, rating) => {
-            const st = stateRef.current;
-            if (st) commit({ ...st, srsCards: applySrsRating(st.srsCards, id, rating) });
-          }}
+          onSrsRated={rateSrs}
           onUnit0Show={(id) => {
             if (!stateRef.current!.profile.unit0Shown.includes(id))
               commit({ ...stateRef.current!, profile: { ...stateRef.current!.profile, unit0Shown: [...stateRef.current!.profile.unit0Shown, id] } });
@@ -683,8 +730,15 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           <p data-testid="current-lesson" data-lesson-id={current.id}>
             <span dir="ltr">{current.id}</span> — {current.zielAr}
           </p>
+          <DosePicker
+            value={plannedDose}
+            onChange={(d) => {
+              setPlannedDose(d);
+              writePlannedDose(localDay(), d);
+            }}
+          />
           <button data-testid="start-session" onClick={startSession}>
-            ▶ ابدأ جلسة اليوم (120 دقيقة)
+            ▶ ابدأ جلسة اليوم ({plannedDose} دقيقة)
           </button>
           <ul data-testid="today-counts">
             <li data-testid="due-count">مراجعات مستحقة اليوم: {dueCount} بطاقة</li>
@@ -700,7 +754,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       )}
         </>
       )}
-      {!session && !labsMode && <BottomNav tab={tab} onTab={setTab} />}
+      {!session && !micro && !labsMode && <BottomNav tab={tab} onTab={setTab} />}
     </main>
   );
 }

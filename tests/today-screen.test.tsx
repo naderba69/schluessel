@@ -101,7 +101,7 @@ describe("شاشة اليوم §2.2 (N-147)", () => {
   it("زر واحد كبير لجلسة اليوم + الباقي في تبويبات (لا تكديس — N-155)", async () => {
     await renderSeeded();
     const btn = q("start-session")!;
-    expect(btn.textContent).toContain("120 دقيقة");
+    expect(btn.textContent).toContain("90 دقيقة"); // D274: الافتراضي = المستهدف 90 (الجرعة تُختار)
     expect(btn.closest("details")).toBeNull(); // الزر ظاهر لا مطوي
     expect(q("current-lesson")!.closest("details")).toBeNull(); // الهدف ظاهر
     // اليوم وحده ظاهر: لا خريطة ولا مدرب ولا دفتر ولا مخابر ولا ترميز
