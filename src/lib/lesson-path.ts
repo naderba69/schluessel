@@ -40,6 +40,43 @@ export function quizAttempts(progress: Pick<LearnerProgress, "gateResults">, les
   return progress.gateResults.filter((g) => g.kind === "lesson-quiz" && g.gateId === lessonId).length;
 }
 
+/** D277: مفتاح الوحدة للمعارك — «A1-u1» */
+export const unitKeyOf = (level: Level, unit: number): string => `${level}-u${unit}`;
+
+/** D277: محاولات معركة الوحدة (تدوير النسخ — قانون 21) */
+export function battleAttempts(progress: Pick<LearnerProgress, "gateResults">, unitKey: string): number {
+  return progress.gateResults.filter((g) => g.kind === "unit-battle" && g.gateId === unitKey).length;
+}
+
+/** D277: محاولات المعركة المؤجلة */
+export function delayedAttempts(progress: Pick<LearnerProgress, "gateResults">, unitKey: string): number {
+  return progress.gateResults.filter((g) => g.kind === "delayed-battle" && g.gateId === unitKey).length;
+}
+
+/** D277: هل اجتاز معركة الوحدة؟ (شرط المؤجلة) */
+export function passedUnitBattle(progress: Pick<LearnerProgress, "gateResults">, unitKey: string): boolean {
+  return progress.gateResults.some((g) => g.kind === "unit-battle" && g.gateId === unitKey && g.passed);
+}
+
+/** D277: وحدات مؤجلتها مستحقة — معركة مجتازة وبلا مؤجلة مسجلة */
+export function deferredUnits(progress: Pick<LearnerProgress, "gateResults">): string[] {
+  const passed = new Set<string>();
+  const delayed = new Set<string>();
+  for (const g of progress.gateResults) {
+    if (g.kind === "unit-battle" && g.passed) passed.add(g.gateId);
+    if (g.kind === "delayed-battle") delayed.add(g.gateId);
+  }
+  return [...passed].filter((u) => !delayed.has(u));
+}
+
+/** D277: المؤجلة اليوم؟ — اثنين + مستحقة (الخطة: أول 25 د من الاثنين) */
+export function deferredDue(progress: Pick<LearnerProgress, "gateResults">, unitKey: string, dayISO: string): boolean {
+  const [y, m, d] = dayISO.split("-").map(Number);
+  if (!y || !m || !d) return false;
+  if (new Date(y, m - 1, d).getDay() !== 1) return false; // الاثنين وحده
+  return deferredUnits(progress).includes(unitKey);
+}
+
 /**
  * تسجيل محاولة Quiz للدرس الحالي: نتيجة البوابة + سطر المعايرة (§14) + الإكمال عند النجاح وحده.
  * قفل المسار: محاولة لدرس غير الحالي (قفز للأمام أو عودة لمكتمل) خطأ برمجي يُرمى — لا يُسجَّل بصمت.
@@ -50,16 +87,18 @@ export function recordQuizAttempt(
   path: readonly PathLesson[],
   date: string,
   srsBundle: readonly string[] = [], // N-005 (D227): حزمة الدرس — تدخل SRS عند النجاح وحده
+  unitKey?: string, // D277: حاضر = اختبار اليوم السادس معركةُ وحدة (unit-battle)
 ): LearnerState {
   const cur = currentLessonId(state.progress, path);
   if (outcome.lessonId !== cur)
     throw new Error(`قفل المسار: ${outcome.lessonId} ليس الدرس الحالي (${cur ?? "اكتمل المسار"}) — لا قفز ولا ارتجاع`);
+  const isBattle = unitKey !== undefined;
   const result: GateResult = {
-    gateId: cur,
-    kind: "lesson-quiz",
+    gateId: isBattle ? unitKey : cur,
+    kind: isBattle ? "unit-battle" : "lesson-quiz",
     score: outcome.score,
     passed: outcome.passed,
-    attempts: quizAttempts(state.progress, cur) + 1,
+    attempts: (isBattle ? battleAttempts(state.progress, unitKey) : quizAttempts(state.progress, cur)) + 1,
     weakSections: outcome.weakItems,
     ...(outcome.selfCorrect > 0 ? { selfJudged: outcome.selfCorrect } : {}),
     date,
@@ -81,6 +120,35 @@ export function recordQuizAttempt(
     ...(outcome.passed && srsBundle.length > 0
       ? { srsCards: [...state.srsCards, ...enrollSrsCards(state.srsCards, srsBundle, new Date(date))] }
       : {}),
+  };
+}
+
+/** D277: تسجيل المعركة المؤجلة — بلا قفل مسار ولا إكمال (استرجاع متباعد، والمعايرة تُحفَظ)
+ * transferShare تُحجَب عمداً: لا سياقات تحويل بعدُ (N-158) — الصدق أولاً. */
+export function recordDelayedBattle(
+  state: LearnerState,
+  unitKey: string,
+  outcome: QuizOutcome,
+  date: string,
+): LearnerState {
+  const result: GateResult = {
+    gateId: unitKey,
+    kind: "delayed-battle",
+    score: outcome.score,
+    passed: outcome.passed,
+    attempts: delayedAttempts(state.progress, unitKey) + 1,
+    weakSections: outcome.weakItems,
+    ...(outcome.selfCorrect > 0 ? { selfJudged: outcome.selfCorrect } : {}),
+    date,
+  };
+  const calibration =
+    outcome.predicted === null
+      ? state.profile.calibration
+      : [...state.profile.calibration, { date, predicted: outcome.predicted, actual: outcome.percent }];
+  return {
+    ...state,
+    profile: { ...state.profile, calibration },
+    progress: { ...state.progress, gateResults: [...state.progress.gateResults, result] },
   };
 }
 

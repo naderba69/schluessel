@@ -33,7 +33,7 @@ import {
   type SessionBundle,
 } from "./lesson-packs.js";
 import { phrasesAvailable } from "./lib/phrase-bank.js";
-import { currentLessonId, lessonAfter, openSessionFor, quizAttempts, reconcileState, recordQuizAttempt, setOpenSession } from "./lib/lesson-path.js";
+import { battleAttempts, currentLessonId, deferredDue, delayedAttempts, lessonAfter, openSessionFor, passedUnitBattle, quizAttempts, reconcileState, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitKeyOf } from "./lib/lesson-path.js";
 import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, type DoseChoice } from "./lib/session-log.js";
 import type { QuizOutcome } from "./lib/quiz-session.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
@@ -284,7 +284,9 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   /** D274: جرعة اليوم المخططة (45/90/120) + الجلسة المصغّرة */
   const [plannedDose, setPlannedDose] = useState<DoseChoice>(() => readPlannedDose(localDay()));
   const [micro, setMicro] = useState<{ pairs: SrsDuePair[] | null } | null>(null);
+  const [deferred, setDeferred] = useState<{ unitKey: string; lessonId: string; bundle: SessionBundle | null } | null>(null); // D277: المعركة المؤجلة الجارية
   const microStart = useRef<number>(0);
+  const deferredStart = useRef<number>(0); // D277: بداية المؤجلة لقياس مدتها
   const [finishedNote, setFinishedNote] = useState<string | null>(null);
   /** N-155 (D269): التبويب الحالي — اليوم افتراضياً (قالب ثابت، قانون 16) */
   const [tab, setTab] = useState<MainTab>("today");
@@ -489,6 +491,18 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const focus = DAY_FOCUS_AR[dayFocus(new Date())];
   const todayEntry = state.sessions.find((s) => s.date === localDay());
   const evening = new Date().getHours() >= 21;
+  /** D277: اليوم معركة؟ — سبت + الحالي يوم سادس + معركته لم تُجتَز */
+  const battleNow =
+    new Date().getDay() === 6 && !!current && current.day === 6 &&
+    !passedUnitBattle(state.progress, unitKeyOf(current.level, current.unit));
+  /** D277: مؤجلة اليوم؟ — أول وحدة مستحقة يوم الاثنين */
+  const deferredKey =
+    new Date().getDay() === 1
+      ? state.progress.gateResults
+        .filter((x) => x.kind === "unit-battle" && x.passed)
+        .map((x) => x.gateId)
+        .find((u) => deferredDue(state.progress, u, localDay()))
+      : undefined;
 
   const openSession = () => {
     if (!currentId) return;
@@ -496,7 +510,9 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     const t = ++openToken.current;
     setFinishedNote(null);
     sessionStart.current = Date.now();
-    setSession({ lessonId: id, bundle: null, priorAttempts: quizAttempts(state.progress, id) });
+    const idx = indexEntry(id);
+    const prior = idx && idx.day === 6 ? battleAttempts(state.progress, unitKeyOf(idx.level, idx.unit)) : quizAttempts(state.progress, id);
+    setSession({ lessonId: id, bundle: null, priorAttempts: prior });
     void loadSessionBundle(id).then(
       (bundle) => {
         if (openToken.current === t) setSession((s) => (s && s.lessonId === id ? { ...s, bundle } : s));
@@ -551,6 +567,52 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     setFinishedNote("أحسنت — جلسة مصغّرة كاملة 🌱 كل مراجعة تثبّت.");
   };
 
+  /** D277: بدء المعركة المؤجلة — اختبار السادس بنسخة جديدة (25 د) */
+  const startDeferred = () => {
+    if (!state || !deferredKey) return;
+    const d6 = LESSON_INDEX.find((e) => e.day === 6 && unitKeyOf(e.level, e.unit) === deferredKey);
+    if (!d6) {
+      setFinishedNote(`تعذّر إيجاد اختبار ${deferredKey} — أُبلغت الإدارة (N-158).`);
+      return;
+    }
+    deferredStart.current = Date.now();
+    setFinishedNote(null);
+    setDeferred({ unitKey: deferredKey, lessonId: d6.id, bundle: null });
+    const t = ++openToken.current;
+    void loadSessionBundle(d6.id).then(
+      (bundle) => {
+        if (openToken.current === t) setDeferred((d) => (d && d.lessonId === d6.id ? { ...d, bundle } : d));
+      },
+      (e) => {
+        if (openToken.current !== t) return;
+        setDeferred(null);
+        setFinishedNote(`تعذّر فتح المؤجلة (${errText(e)}) — تحقق من الاتصال وأعد المحاولة.`);
+      },
+    );
+  };
+
+  /** D277: اكتمال المؤجلة — تُسجَّل بلا قفل مسار + دقائقها في سجل اليوم */
+  const finishDeferred = (o: QuizOutcome) => {
+    const d = deferred;
+    if (!d) return;
+    const s = stateRef.current;
+    if (s) {
+      const minutes = Math.max(1, Math.round((Date.now() - deferredStart.current) / 60000));
+      try {
+        const s1 = recordDelayedBattle(s, d.unitKey, o, localDay());
+        commit({ ...s1, sessions: recordSession(s1.sessions, { date: localDay(), durationMinutes: minutes }) });
+      } catch (e) {
+        setSaveError(errText(e));
+      }
+    }
+    setDeferred(null);
+    setFinishedNote(
+      o.passed
+        ? `المؤجلة تمت (${o.percent}%) ✓ — ذاكرتك أثبتت بعد أسبوع.`
+        : `المؤجلة تمت (${o.percent}%) — «ليس بعد» تُراجَع في حصصك القادمة، لا بأس.`,
+    );
+  };
+
   const rateSrs = (id: string, rating: import("./lib/review-engine.js").RecallRating) => {
     const st = stateRef.current;
     if (st) commit({ ...st, srsCards: applySrsRating(st.srsCards, id, rating) });
@@ -559,8 +621,10 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const onAttempt = (o: QuizOutcome) => {
     const s = stateRef.current;
     if (!s) return;
+    const bl = session?.bundle?.lesson;
+    const bKey = bl && bl.day === 6 ? unitKeyOf(bl.level, bl.unit) : undefined; // D277: اختبار السادس معركة وحدة
     try {
-      commit(recordQuizAttempt(s, o, PATH, localDay(), session?.bundle?.lesson.zusammenfassung.srsBundleWordIds ?? [])); // N-005 (D227)
+      commit(recordQuizAttempt(s, o, PATH, localDay(), session?.bundle?.lesson.zusammenfassung.srsBundleWordIds ?? [], bKey)); // N-005 (D227)
     } catch (e) {
       setSaveError(errText(e)); // قفل المسار لا يُتجاوز بصمت — يُعلن
     }
@@ -696,12 +760,40 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       <p data-testid="week-dots">
         <span dir="ltr">{week.dots.map((d) => (d ? "●" : "○")).join("")}</span> أسبوعك ({week.studied}/7)
       </p>
-      {!micro && !session && dueCount > 0 && (
+      {!micro && !session && !deferred && dueCount > 0 && (
         <button data-testid="start-micro" onClick={startMicro}>
           ⚡ جلسة مصغّرة — {dueCount} مستحقة (نحو 10 دقائق)
         </button>
       )}
-      {micro ? (
+      {deferred ? (
+        deferred.bundle ? (
+          <>
+            <p data-testid="deferred-title">المعركة المؤجلة ⚔️ — {deferred.unitKey} (25 دقيقة — خذ وقتك)</p>
+            <QuizStation
+              lesson={deferred.bundle.lesson}
+              priorAttempts={battleAttempts(state.progress, deferred.unitKey) + delayedAttempts(state.progress, deferred.unitKey)}
+              onAttemptComplete={finishDeferred}
+              onGrade={({ item, given, verdict }) => {
+                const s = stateRef.current;
+                if (s)
+                  commit({
+                    ...s,
+                    errors: upsertGoldenError(s.errors, {
+                      skill: item.choices ? "lesen" : "schreiben",
+                      wrong: given || "—",
+                      correct: item.a,
+                      explanation: item.why ?? "قارن إجابتك بالتصحيح واستنتج الفرق.",
+                      source: `${deferred.lessonId}/deferred`,
+                      closeSlip: verdict === "close",
+                    }),
+                  });
+              }}
+            />
+          </>
+        ) : (
+          <p data-testid="deferred-loading">جارٍ فتح المؤجلة {deferred.lessonId}…</p>
+        )
+      ) : micro ? (
         micro.pairs ? (
           <MicroSession pairs={micro.pairs} onRated={rateSrs} onFinish={finishMicro} />
         ) : (
@@ -771,8 +863,23 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         <p data-testid="path-complete">أكملت كل ما نُشر من الدروس ✓ — الدروس التالية قيد الإنتاج.</p>
       )}
 
-      {!micro && !session && (
+      {!micro && !session && !deferred && (
         <>
+          {battleNow && current && (
+            <p data-testid="battle-banner">
+              اليوم المعركة ⚔️ — معركة الوحدة {current.unit} (النجاح من 75% — خذ وقتك ولا تستعجل)
+            </p>
+          )}
+          {deferredKey && (
+            <>
+              <p data-testid="deferred-banner">
+                موعد المؤجلة ⏳ — معركة {deferredKey} المؤجلة أولاً (25 دقيقة) ثم درس جديد
+              </p>
+              <button data-testid="start-deferred" onClick={startDeferred}>
+                ⚔️ ابدأ المؤجلة
+              </button>
+            </>
+          )}
           <p data-testid="day-focus">
             تركيز اليوم: {focus.label} — {focus.tip}
           </p>

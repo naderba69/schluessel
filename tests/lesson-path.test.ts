@@ -5,7 +5,8 @@ import { LearnerState as LearnerStateSchema, type LearnerState } from "../conten
 import { createInitialState } from "../src/lib/state-factory.js";
 import { lessonStatus } from "../src/lib/routes.js";
 import {
-  currentLessonId, lessonAfter, openSessionFor, quizAttempts, reconcileProgress, reconcileState, recordQuizAttempt, setOpenSession,
+  battleAttempts, currentLessonId, deferredDue, deferredUnits, delayedAttempts, lessonAfter, openSessionFor, passedUnitBattle,
+  quizAttempts, reconcileProgress, reconcileState, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitKeyOf,
   type PathLesson,
 } from "../src/lib/lesson-path.js";
 import {
@@ -157,5 +158,67 @@ describe("N-006 (D228) — الحصة المفتوحة: حفظ/مطابقة/مس
     expect(passed.progress.openSession).toBeUndefined();
     const failed = recordQuizAttempt(withOpen, outcome("a1-u1-d1", 0.5), PATH, DAY);
     expect(failed.progress.openSession).toMatchObject({ lessonId: "a1-u1-d1" });
+  });
+});
+
+describe("D277: معركة الوحدة", () => {
+  it("unitKey حاضر ← kind=unit-battle وبوابة الوحدة وعدّاد مستقل", () => {
+    let s = fresh();
+    s = recordQuizAttempt(s, outcome("a1-u1-d1", 0.5), PATH, DAY, [], "A1-u1");
+    s = recordQuizAttempt(s, outcome("a1-u1-d1", 0.5), PATH, DAY, [], "A1-u1");
+    const battles = s.progress.gateResults.filter((g) => g.kind === "unit-battle");
+    expect(battles.map((g) => [g.gateId, g.attempts])).toEqual([["A1-u1", 1], ["A1-u1", 2]]);
+    expect(battleAttempts(s.progress, "A1-u1")).toBe(2);
+    expect(quizAttempts(s.progress, "a1-u1-d1")).toBe(0); // عدّاد الاختبار لم يُمسّ
+  });
+
+  it("المعركة الناجحة تُكمل الدرس وتفتح التالي (المسار كما هو)", () => {
+    const s = recordQuizAttempt(fresh(), outcome("a1-u1-d1", 0.8), PATH, DAY, [], "A1-u1");
+    expect(s.progress.completedLessons).toContain("a1-u1-d1");
+    expect(currentLessonId(s.progress, PATH)).toBe("a1-u1-d2");
+    expect(passedUnitBattle(s.progress, "A1-u1")).toBe(true);
+    expect(passedUnitBattle(s.progress, "A1-u2")).toBe(false);
+  });
+
+  it("unitKeyOf: «A1-u1»", () => {
+    expect(unitKeyOf("A1", 1)).toBe("A1-u1");
+  });
+});
+
+describe("D277: المعركة المؤجلة", () => {
+  it("بلا قفل ولا إكمال — والمعايرة تُحفَظ وtransferShare غائب", () => {
+    const s = recordDelayedBattle(fresh(), "A1-u9", outcome("a1-u9-d6", 0.8), "2026-10-19");
+    const g = s.progress.gateResults.find((x) => x.kind === "delayed-battle")!;
+    expect(g.gateId).toBe("A1-u9");
+    expect(g.attempts).toBe(1);
+    expect("transferShare" in g).toBe(false); // الصدق: لا سياقات تحويل بعدُ (N-158)
+    expect(s.progress.completedLessons).toEqual([]);
+    expect(currentLessonId(s.progress, PATH)).toBe("a1-u1-d1");
+    expect(s.profile.calibration.at(-1)).toMatchObject({ predicted: 70, actual: 80 });
+    expect(delayedAttempts(s.progress, "A1-u9")).toBe(1);
+  });
+
+  it("توقّع فارغ ← بلا سطر معايرة", () => {
+    const s = recordDelayedBattle(fresh(), "A1-u9", outcome("a1-u9-d6", 0.8, { predicted: null }), "2026-10-19");
+    expect(s.profile.calibration).toEqual([]);
+  });
+
+  it("deferredUnits: المجتازة بلا مؤجلة وحدها", () => {
+    let s = fresh();
+    s = recordQuizAttempt(s, outcome("a1-u1-d1", 0.8), PATH, DAY, [], "A1-u1");
+    s = recordQuizAttempt(s, outcome("a1-u1-d2", 0.5), PATH, DAY, [], "A1-u1"); // رسوب لاحق لا يمحو الاجتياز
+    expect(deferredUnits(s.progress)).toEqual(["A1-u1"]);
+    s = recordDelayedBattle(s, "A1-u1", outcome("a1-u1-d6", 0.8), "2026-10-19");
+    expect(deferredUnits(s.progress)).toEqual([]);
+  });
+
+  it("deferredDue: الاثنين وحده + شرط الاجتياز", () => {
+    let s = fresh();
+    s = recordQuizAttempt(s, outcome("a1-u1-d1", 0.8), PATH, DAY, [], "A1-u1");
+    expect(deferredDue(s.progress, "A1-u1", "2026-10-19")).toBe(true); // اثنين
+    expect(deferredDue(s.progress, "A1-u1", "2026-10-18")).toBe(false); // أحد
+    expect(deferredDue(s.progress, "A1-u1", "2026-10-21")).toBe(false); // أربعاء
+    expect(deferredDue(s.progress, "A1-u2", "2026-10-19")).toBe(false); // بلا اجتياز
+    expect(deferredDue(s.progress, "A1-u1", "not-a-date")).toBe(false);
   });
 });
