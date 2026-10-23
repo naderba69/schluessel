@@ -24,6 +24,7 @@ import { AudioScript } from "../../content/schemas/index.js";
 import alphabetJson from "../../content/audio-scripts/a1-alphabet.json";
 import zahlenJson from "../../content/audio-scripts/a1-zahlen.json";
 import uhrzeitJson from "../../content/audio-scripts/a1-uhrzeit.json";
+import werIstDasJson from "../../content/audio-scripts/a1-u1-d5-wer-ist-das.json";
 
 /* ══════════ E09 — الاستماع المتقدم ══════════ */
 export function ListeningLab() {
@@ -324,6 +325,18 @@ export function numberLines(): { id: string; text: string }[] {
 
 export function timeLines(): { id: string; text: string }[] {
   return AudioScript.parse(uhrzeitJson).lines.map((ln) => ({ id: ln.id, text: ln.text }));
+}
+
+/** أزواج سؤال/جواب من حوار u1-d5 لمحادثة الدقيقة (D301 · F004): البحث بالمعرّف لا بالترتيب */
+export function dialoguePairs(): { q: { id: string; text: string }; a: { id: string; text: string } }[] {
+  const byId = new Map(AudioScript.parse(werIstDasJson).lines.map((ln) => [ln.id, ln.text]));
+  const pair = (qid: string, aid: string) => {
+    const q = byId.get(qid);
+    const a = byId.get(aid);
+    if (!q || !a) throw new Error(`سطر حوار مفقود: ${qid}/${aid}`);
+    return { q: { id: qid, text: q }, a: { id: aid, text: a } };
+  };
+  return [pair("wer-1", "wer-2"), pair("wer-3", "wer-4"), pair("wer-5", "wer-6"), pair("wer-7", "wer-8")];
 }
 
 export function AlphabetLab() {

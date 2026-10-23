@@ -4,18 +4,23 @@ import { useMemo, useState } from "react";
 import type { CoachWindow, ErrorEntry, Word } from "../../content/schemas/index.js";
 import {
   DEFAULT_WINDOWS,
+  MINUTE_CONVERSATION_ASK_AR,
+  MINUTE_CONVERSATION_REVEAL_AR,
+  MINUTE_CONVERSATION_TITLE_AR,
+  MINUTE_CONVERSATION_YOU_AR,
   SKILL_OF_DAY_HINT_AR,
   WINDOW_LABELS_AR,
   WEEKLY_CHALLENGE_DONE_AR,
   dayIndexOfYear,
   isRestDay,
+  minuteConversation,
   pickCoachDrill,
   skillOfDay,
   weeklyChallenge,
 } from "../lib/coach-engine.js";
 import { sentenceOfTheDay } from "../lib/writing.js";
 import { tomorrowPreview } from "../lib/warmth-engine.js";
-import { alphabetLetters, numberLines, timeLines } from "./SkillsLab.js";
+import { alphabetLetters, dialoguePairs, numberLines, timeLines } from "./SkillsLab.js";
 import { PlayButton } from "./LessonSession.js";
 
 export function CoachBlock({
@@ -36,8 +41,11 @@ export function CoachBlock({
   const [open, setOpen] = useState(false);
   const [revealed, setRevealed] = useState(false);
   const [challengeDone, setChallengeDone] = useState(false);
+  const [dialogueRevealed, setDialogueRevealed] = useState(false);
   const rest = isRestDay(new Date());
   const challenge = weeklyChallenge(new Date());
+  const dialogue = useMemo(dialoguePairs, []);
+  const convo = minuteConversation(dayIndexOfYear(), dialogue);
   const drill = useMemo(() => pickCoachDrill(errors), [errors]);
   const letters = useMemo(alphabetLetters, []);
   const letter = letters.length > 0 ? letters[dayIndexOfYear() % letters.length]! : null;
@@ -71,6 +79,26 @@ export function CoachBlock({
           <PlayButton audioId={skill.line.id} speakText={skill.line.text} label={`استمع لمهارة اليوم: ${skill.line.text}`} />{" "}
           <small>{SKILL_OF_DAY_HINT_AR}</small>
         </p>
+      )}
+      {convo && !rest && (
+        <div data-testid="minute-conversation">
+          <p>
+            {MINUTE_CONVERSATION_TITLE_AR}: <span dir="ltr">«{convo.pair.q.text}»</span>{" "}
+            <PlayButton audioId={convo.pair.q.id} speakText={convo.pair.q.text} label={`استمع لسؤال مولر: ${convo.pair.q.text}`} />
+          </p>
+          <p><small>{MINUTE_CONVERSATION_ASK_AR}</small></p>
+          {!dialogueRevealed ? (
+            <button data-testid="convo-reveal" onClick={() => setDialogueRevealed(true)}>
+              {MINUTE_CONVERSATION_REVEAL_AR}
+            </button>
+          ) : (
+            <p data-testid="convo-answer">
+              <span dir="ltr">«{convo.pair.a.text}»</span>{" "}
+              <PlayButton audioId={convo.pair.a.id} speakText={convo.pair.a.text} label={`استمع لجواب مولر: ${convo.pair.a.text}`} />{" "}
+              <small>{MINUTE_CONVERSATION_YOU_AR}</small>
+            </p>
+          )}
+        </div>
       )}
       {challenge && !challengeDone && (
         <div data-testid="weekly-challenge">

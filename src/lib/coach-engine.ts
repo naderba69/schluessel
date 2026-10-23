@@ -229,3 +229,19 @@ export function skillOfDay(
   const line = pool[Math.floor(dayIndex / SKILL_OF_DAY_KINDS.length) % pool.length]!;
   return { kind, labelAr: SKILL_OF_DAY_LABEL_AR[kind], line, durationSec: 30 };
 }
+
+/** F004 — محادثة الدقيقة (D301 · N-156/4): مولر يسأل صوتياً وأنت تجيب بصوت عالٍ ثم تكشف جوابه — بلا تسجيل وبلا تقييم */
+export const MINUTE_CONVERSATION_TITLE_AR = "💬 محادثة الدقيقة";
+export const MINUTE_CONVERSATION_ASK_AR = "اسمع سؤال مولر وأجب بصوت عالٍ — ثم اكشف جوابه وقارن بنفسك 🌱";
+export const MINUTE_CONVERSATION_REVEAL_AR = "أظهر جواب مولر";
+export const MINUTE_CONVERSATION_YOU_AR = "وأنت؟ أجب عن نفسك بصوت عالٍ أيضاً.";
+
+export type DialoguePair = { q: SkillLine; a: SkillLine };
+export type MinuteConversation = { pair: DialoguePair; durationSec: number };
+
+/** حوار اليوم من فهرس اليوم: تناوب حتمي على الأزواج */
+export function minuteConversation(dayIndex: number, pairs: readonly DialoguePair[]): MinuteConversation | null {
+  if (pairs.length === 0) return null;
+  const pair = pairs[((dayIndex % pairs.length) + pairs.length) % pairs.length]!;
+  return { pair, durationSec: 60 };
+}
