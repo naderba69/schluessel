@@ -259,13 +259,35 @@ export function recordQuizAttempt(
   };
 }
 
+/** D293: خلط التحويل في المؤجلة — 20% من المواضع الموزعة + تناوب الحزمة + وسم 🔀 (حاضر = حزمة الوحدة موجودة) */
+export function mixTransferItems<T extends { q: string }>(
+  items: readonly T[],
+  pool: readonly T[],
+  salt: number,
+  share = 0.2,
+): { items: T[]; transferShare: number } {
+  const n = items.length;
+  const k = pool.length === 0 || n === 0 ? 0 : Math.max(1, Math.round(n * share));
+  if (k === 0) return { items: [...items], transferShare: 0 };
+  const positions = new Set<number>();
+  for (let i = 0; i < k; i++) positions.add(Math.min(n - 1, Math.floor(((i + 1) * n) / (k + 1))));
+  let pi = salt % pool.length;
+  const mixed = items.map((it, idx) => {
+    if (!positions.has(idx)) return it;
+    const pick = pool[((pi++ % pool.length) + pool.length) % pool.length]!;
+    return { ...pick, q: `🔀 ${pick.q}` };
+  });
+  return { items: mixed, transferShare: positions.size / n };
+}
+
 /** D277: تسجيل المعركة المؤجلة — بلا قفل مسار ولا إكمال (استرجاع متباعد، والمعايرة تُحفَظ)
- * transferShare تُحجَب عمداً: لا سياقات تحويل بعدُ (N-158) — الصدق أولاً. */
+ * transferShare حاضر = حصة التحويل المقدمة فعلاً (D293) · غائب = بلا حزمة للوحدة (الصدق أولاً). */
 export function recordDelayedBattle(
   state: LearnerState,
   unitKey: string,
   outcome: QuizOutcome,
   date: string,
+  transferShare?: number,
 ): LearnerState {
   const result: GateResult = {
     gateId: unitKey,
@@ -275,6 +297,7 @@ export function recordDelayedBattle(
     attempts: delayedAttempts(state.progress, unitKey) + 1,
     weakSections: outcome.weakItems,
     ...(outcome.selfCorrect > 0 ? { selfJudged: outcome.selfCorrect } : {}),
+    ...(transferShare !== undefined ? { transferShare } : {}),
     date,
   };
   const calibration =

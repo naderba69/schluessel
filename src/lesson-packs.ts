@@ -10,6 +10,7 @@ import {
   CyclicTest,
   Modelltest,
   ReadingText,
+  TransferPack,
   ImageManifest,
   GrammarRuleFile,
   StoryBook,
@@ -85,6 +86,10 @@ export const ALL_IMAGES = ImageManifest.parse(imageManifest).assets;
 /** نصوص القراءة (D97) */
 export const ALL_LESETEXTS = json(import.meta.glob("../content/lese/*.json", { eager: true, import: "default" }))
   .map((j) => ReadingText.parse(j));
+
+/** حزم التحويل للمؤجلة (D293) */
+export const ALL_TRANSFER = json(import.meta.glob("../content/transfer/*.json", { eager: true, import: "default" }))
+  .map((j) => TransferPack.parse(j));
 
 // ---------- لوادر كسولة (الحصة تحمل درسها وحده) ----------
 type LazyMods = Record<string, () => Promise<unknown>>;

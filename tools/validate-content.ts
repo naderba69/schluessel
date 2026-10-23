@@ -7,7 +7,7 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile, BARE_ARTICLE_IDS,
-  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, StoryBook, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, TransferPack, AudioScript, StoryBook, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
   GrammarRuleFile, LessonUpgradePlan,
 } from "../content/schemas/index.js";
 import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
@@ -52,7 +52,7 @@ const SPEECH_RATE_MAX_WPM = 200;
 const SPEECH_RATE_MIN_WORDS = 3;
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "audio-script" | "story" | "exam-format" | "wordlist" | "plan" | "derived" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "transfer" | "audio-script" | "story" | "exam-format" | "wordlist" | "plan" | "derived" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -67,6 +67,7 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("pruefungen/")) return "pruefungen";
   if (p.startsWith("modelltest/")) return "modelltest";
   if (p.startsWith("lese/")) return "lese";
+  if (p.startsWith("transfer/")) return "transfer";
   if (p.startsWith("audio-scripts/")) return "audio-script";
   if (p.startsWith("story/")) return "story";
   if (p.startsWith("exam-formats/")) return "exam-format";
@@ -253,6 +254,10 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         case "modelltest": {
           // D95: الامتحان التجريبي الكامل — المخطط يفرض المهارات الأربع مرة واحدة لكلٍّ (D109)
           modelltests.push({ path: entry.path, test: Modelltest.parse(entry.data) });
+          break;
+        }
+        case "transfer": {
+          TransferPack.parse(entry.data); // D293: حزم التحويل (المخطط يفرض ≥2 بند QuizItem)
           break;
         }
         case "lese": {

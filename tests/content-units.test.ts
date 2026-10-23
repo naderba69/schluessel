@@ -2,7 +2,7 @@
 import { describe, it, expect } from "vitest";
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, LEVEL_ORDER, loadAllLessons, loadAllWords, wordsForLesson, runtimeWordsForLesson, loadFirstSession } from "../src/lesson-packs.js";
+import { ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, ALL_TRANSFER, LEVEL_ORDER, loadAllLessons, loadAllWords, wordsForLesson, runtimeWordsForLesson, loadFirstSession } from "../src/lesson-packs.js";
 const __FIRST = await loadFirstSession();
 const firstLesson = __FIRST.lesson;
 const ALL_LESSONS = await loadAllLessons();
@@ -1611,5 +1611,22 @@ describe("N-137 (D230) — البلدان واللغات عارية الاستع
     }
     const wde = ALL_WORDS.find((w) => w.id === "deutsch")!;
     expect(wde.article).toBeUndefined(); // لغة بموضوع Begrüßung — خارج القاعدة الموضوعية فيُثبَّت بالاسم
+  });
+});
+
+// D293: حزم التحويل تحت حارس الجبهة — المهارة نفسها تُختبَر بكلمات وحدتها (الأفق: آخر درس في الوحدة)
+describe("D293 — حزم التحويل نظيفة (صفر مخالفات)", () => {
+  const lastOfUnit = (u: number) => ALL_LESSONS.filter((l) => l.level === "A1" && l.unit === u).sort((a, b) => a.day - b.day).at(-1)!;
+  it("كل حزمة: أسئلتها وأجوبتها وخياراتها ضمن الأفق", () => {
+    const bad: string[] = [];
+    for (const pack of ALL_TRANSFER.filter((p) => p.level === "A1")) {
+      const taught = taughtUpTo(lastOfUnit(pack.unit), ALL_LESSONS, ALL_WORDS);
+      const stems = new Set(knownStems(taught));
+      for (const item of pack.items) {
+        const v = frontViolations([item.q, item.a, ...(item.choices ?? [])], stems, new Set());
+        if (v.length) bad.push(`${pack.id} «${item.q}» -> ${v.join(",")}`);
+      }
+    }
+    expect(bad).toEqual([]);
   });
 });

@@ -6,7 +6,7 @@ import { createInitialState } from "../src/lib/state-factory.js";
 import { lessonStatus } from "../src/lib/routes.js";
 import {
   battleAttempts, currentLessonId, cyclicAttempts, cyclicDue, cyclicTestFor, deferredDue, deferredUnits, delayedAttempts,
-  journeyWeek, lessonAfter, openSessionFor, passedUnitBattle,
+  journeyWeek, lessonAfter, mixTransferItems, openSessionFor, passedUnitBattle,
   quizAttempts, reconcileProgress, reconcileState, recordCyclicTest, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitKeyOf,
   type PathLesson,
 } from "../src/lib/lesson-path.js";
@@ -298,5 +298,42 @@ describe("D283: تسجيل الدوري", () => {
     expect(s.profile.calibration).toHaveLength(2);
     const n = recordCyclicTest(fresh(), kurz, outcome("x", 0.8, { predicted: null }), "2026-10-17");
     expect(n.profile.calibration).toEqual([]);
+  });
+});
+
+describe("D293: خلط التحويل", () => {
+  const items = [{ q: "q0" }, { q: "q1" }, { q: "q2" }, { q: "q3" }, { q: "q4" }, { q: "q5" }];
+  const pool = [{ q: "t0" }, { q: "t1" }, { q: "t2" }, { q: "t3" }];
+
+  it("20% من 6 = بند واحد موسوم 🔀 في موضع موزع", () => {
+    const { items: mixed, transferShare } = mixTransferItems(items, pool, 0);
+    expect(transferShare).toBeCloseTo(1 / 6);
+    const flagged = mixed.filter((m) => m.q.startsWith("🔀 "));
+    expect(flagged).toHaveLength(1);
+    expect(flagged[0]!.q).toBe("🔀 t0");
+    expect(mixed.filter((m) => !m.q.startsWith("🔀 "))).toHaveLength(5);
+  });
+
+  it("الملح يناوب الحزمة — والمواضع تنتشر مع الكثرة", () => {
+    expect(mixTransferItems(items, pool, 1).items.find((m) => m.q.startsWith("🔀 "))!.q).toBe("🔀 t1");
+    expect(mixTransferItems(items, pool, 5).items.find((m) => m.q.startsWith("🔀 "))!.q).toBe("🔀 t1"); // 5 % 4
+    const ten = Array.from({ length: 10 }, (_, i) => ({ q: `q${i}` }));
+    const m = mixTransferItems(ten, pool, 0);
+    expect(m.transferShare).toBeCloseTo(0.2);
+    expect(m.items.filter((x) => x.q.startsWith("🔀 "))).toHaveLength(2);
+  });
+
+  it("بلا حزمة أو بلا بنود = بلا خلط وحصة صفر", () => {
+    expect(mixTransferItems(items, [], 0)).toEqual({ items, transferShare: 0 });
+    expect(mixTransferItems([], pool, 0)).toEqual({ items: [], transferShare: 0 });
+  });
+});
+
+describe("D293: تسجيل حصة التحويل", () => {
+  it("الحاضرة تُسجَّل والغائبة تُحجَب", () => {
+    const s = recordDelayedBattle(fresh(), "A1-u1", outcome("a1-u1-d6", 0.8), "2026-10-19", 1 / 6);
+    expect(s.progress.gateResults[0]).toMatchObject({ kind: "delayed-battle", transferShare: 1 / 6 });
+    const n = recordDelayedBattle(fresh(), "A1-u2", outcome("a1-u2-d6", 0.8), "2026-10-19");
+    expect("transferShare" in n.progress.gateResults[0]!).toBe(false);
   });
 });

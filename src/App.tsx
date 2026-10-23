@@ -32,6 +32,7 @@ import {
   ALL_LESETEXTS,
   ALL_PRUEFUNGEN,
   ALL_MODELLTESTS,
+  ALL_TRANSFER,
   LESSON_INDEX,
   LESSON_ORDER,
   indexEntry,
@@ -45,7 +46,7 @@ import {
   type SessionBundle,
 } from "./lesson-packs.js";
 import { phrasesAvailable } from "./lib/phrase-bank.js";
-import { battleAttempts, currentLessonId, cyclicAttempts, cyclicDue, cyclicTestFor, deferredDue, delayedAttempts, journeyWeek, lessonAfter, openSessionFor, passedBattleUnits, passedUnitBattle, quizAttempts, reconcileState, recordCyclicTest, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitDebrief, unitKeyOf } from "./lib/lesson-path.js";
+import { battleAttempts, currentLessonId, cyclicAttempts, cyclicDue, cyclicTestFor, deferredDue, delayedAttempts, journeyWeek, lessonAfter, mixTransferItems, openSessionFor, passedBattleUnits, passedUnitBattle, quizAttempts, reconcileState, recordCyclicTest, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitDebrief, unitKeyOf } from "./lib/lesson-path.js";
 import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, type DoseChoice } from "./lib/session-log.js";
 import { cyclicQuizLesson, type QuizOutcome } from "./lib/quiz-session.js";
 import { certificateDate, examSkillAr, levelExamProgress, levelExamReady, levelUnits, modellHoerenQuiz, modellLesenQuiz, modellSchreibenQuiz, modellSprechenRun, modellTotal, recordLevelSection, sectionAttempts, weakExamSections, EXAM_SKILLS, type SprechenGrade } from "./lib/exam-engine.js";
@@ -712,15 +713,33 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     );
   };
 
+  /** D293: درس المؤجلة — كل نسخه مخلوطة بالتحويل عند وجود حزمة الوحدة (الملح = المحاولات: تناوب عبر الحصص) */
+  const deferredLesson = (lesson: SessionBundle["lesson"], unitKey: string) => {
+    const pack = ALL_TRANSFER.find((p) => p.level === lesson.level && p.unit === lesson.unit);
+    if (!pack) return lesson;
+    const salt = battleAttempts(state.progress, unitKey) + delayedAttempts(state.progress, unitKey);
+    return {
+      ...lesson,
+      quiz: {
+        ...lesson.quiz,
+        variants: lesson.quiz.variants.map((v) => ({ ...v, items: mixTransferItems(v.items, pack.items, salt).items })),
+      },
+    };
+  };
+
   /** D277: اكتمال المؤجلة — تُسجَّل بلا قفل مسار + دقائقها في سجل اليوم */
   const finishDeferred = (o: QuizOutcome) => {
     const d = deferred;
     if (!d) return;
+    // D293: حصة التحويل = حصة النسخة المقدَّمة فعلاً (بلا حزمة = غائبة بصدق)
+    const pack = d.bundle ? ALL_TRANSFER.find((p) => p.level === d.bundle!.lesson.level && p.unit === d.bundle!.lesson.unit) : undefined;
+    const served = d.bundle?.lesson.quiz.variants[o.variantIndex];
+    const share = pack && served ? mixTransferItems(served.items, pack.items, 0).transferShare : undefined;
     const s = stateRef.current;
     if (s) {
       const minutes = Math.max(1, Math.round((Date.now() - deferredStart.current) / 60000));
       try {
-        const s1 = recordDelayedBattle(s, d.unitKey, o, localDay());
+        const s1 = recordDelayedBattle(s, d.unitKey, o, localDay(), share);
         commit({ ...s1, sessions: recordSession(s1.sessions, { date: localDay(), durationMinutes: minutes }) });
       } catch (e) {
         setSaveError(errText(e));
@@ -1320,7 +1339,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           <>
             <p data-testid="deferred-title">المعركة المؤجلة ⚔️ — {deferred.unitKey} (25 دقيقة — خذ وقتك)</p>
             <QuizStation
-              lesson={deferred.bundle.lesson}
+              lesson={deferredLesson(deferred.bundle.lesson, deferred.unitKey)}
               priorAttempts={battleAttempts(state.progress, deferred.unitKey) + delayedAttempts(state.progress, deferred.unitKey)}
               onAttemptComplete={finishDeferred}
               onGrade={({ item, given, verdict }) => {

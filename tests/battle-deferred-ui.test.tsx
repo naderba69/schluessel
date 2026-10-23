@@ -6,8 +6,9 @@ import { createRoot, type Root } from "react-dom/client";
 import { App } from "../src/App.js";
 import { memoryLearnerStore, type LearnerStore } from "../src/stores/learner-store.js";
 import { createInitialState } from "../src/lib/state-factory.js";
-import { loadSessionBundle } from "../src/lesson-packs.js";
+import { ALL_TRANSFER, loadSessionBundle } from "../src/lesson-packs.js";
 import { startQuizAttempt } from "../src/lib/quiz-session.js";
+import { mixTransferItems } from "../src/lib/lesson-path.js";
 import type { GateResult, QuizItem } from "../content/schemas/index.js";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
@@ -125,14 +126,15 @@ describe("D277: المؤجلة (الاثنين)", () => {
   });
 
   it("التدفق الكامل: بدء ← اختبار ← تسجيل delayed-battle + دقائق اليوم", async () => {
-    // البنود من تحميل حقيقي مسبق (المؤقت الحقيقي) — النسخة 1 (محاولة معركة واحدة قبلها)
-    const { lesson } = await loadSessionBundle("a1-u1-d6");
+    // الوحدة 2 بلا حزمة تحويل (D293: الأولى وحدها رائدة) — التدفق نقي وtransferShare غائب
+    const { lesson } = await loadSessionBundle("a1-u2-d6");
     const items: readonly QuizItem[] = startQuizAttempt(lesson, 1).items;
-    const store = await renderSeeded(MON, U1_6, [battleWin("A1-u1", "2026-10-17")]);
+    const U2_6 = ["a1-u2-d1", "a1-u2-d2", "a1-u2-d3", "a1-u2-d4", "a1-u2-d5", "a1-u2-d6"];
+    const store = await renderSeeded(MON, U2_6, [battleWin("A1-u2", "2026-10-17")]);
     await click(q("start-deferred"), "ابدأ المؤجلة");
     vi.useRealTimers(); // الاستيراد الديناميكي لا يكتمل تحت التزييف — تحميل حقيقي
     await waitForReal(() => !!q("deferred-title"), "فتح المؤجلة");
-    expect(q("deferred-title")!.textContent).toContain("A1-u1");
+    expect(q("deferred-title")!.textContent).toContain("A1-u2");
     vi.useFakeTimers({ toFake: [...FAKE.toFake] });
     vi.setSystemTime(MON); // عودة للاثنين قبل الإجابة — التسجيل بتاريخ الاثنين
     expect(q("quiz-station")!.getAttribute("data-variant")).toBe("1");
@@ -154,10 +156,45 @@ describe("D277: المؤجلة (الاثنين)", () => {
 
     const saved = await store.load();
     const delayed = saved!.progress.gateResults.find((g) => g.kind === "delayed-battle")!;
-    expect(delayed.gateId).toBe("A1-u1");
+    expect(delayed.gateId).toBe("A1-u2");
     expect(delayed.passed).toBe(true);
     expect("transferShare" in delayed).toBe(false);
     const entry = saved!.sessions.find((s) => s.date === "2026-10-19")!;
     expect(entry.durationMinutes).toBeGreaterThanOrEqual(1);
+  });
+});
+
+describe("D293: المؤجلة بالتحويل (الوحدة الرائدة u1)", () => {
+  it("بند 🔀 واحد مخلوط + transferShare مسجلة", async () => {
+    const { lesson } = await loadSessionBundle("a1-u1-d6");
+    const pack = ALL_TRANSFER.find((p) => p.level === "A1" && p.unit === 1)!;
+    const items = mixTransferItems(startQuizAttempt(lesson, 1).items, pack.items, 1).items; // الملح = محاولة المعركة الواحدة
+    expect(items.filter((i) => i.q.startsWith("🔀 "))).toHaveLength(1);
+    const store = await renderSeeded(MON, U1_6, [battleWin("A1-u1", "2026-10-17")]);
+    await click(q("start-deferred"), "ابدأ المؤجلة");
+    vi.useRealTimers();
+    await waitForReal(() => !!q("deferred-title"), "فتح المؤجلة");
+    vi.useFakeTimers({ toFake: [...FAKE.toFake] });
+    vi.setSystemTime(MON);
+    await click(q("quiz-start"), "ابدأ الاختبار");
+    let sawTransfer = false;
+    for (const it of items) {
+      if (q("quiz-question")!.textContent!.includes("🔀")) sawTransfer = true;
+      if (it.choices) {
+        const btn = [...container.querySelectorAll('[data-testid^="quiz-choice-"]')].find((b) => b.textContent === it.a) ?? null;
+        await click(btn, `خيار ${it.a}`);
+      } else {
+        await typeInto(q("quiz-input"), it.a);
+        await click(q("quiz-check"), "تحقّق");
+        if (q("quiz-judge-yes")) await click(q("quiz-judge-yes"), "صحيحة");
+      }
+      await click(q("quiz-next"), "التالي/النتيجة");
+    }
+    expect(sawTransfer).toBe(true);
+    await waitFor(() => !!q("finished-note"), "ملاحظة النهاية");
+    const saved = await store.load();
+    const delayed = saved!.progress.gateResults.find((g) => g.kind === "delayed-battle")!;
+    expect(delayed.passed).toBe(true);
+    expect(delayed.transferShare).toBeCloseTo(1 / 6);
   });
 });
