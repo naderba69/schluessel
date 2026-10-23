@@ -5,9 +5,11 @@ import type { CoachWindow, ErrorEntry, Word } from "../../content/schemas/index.
 import {
   DEFAULT_WINDOWS,
   WINDOW_LABELS_AR,
+  WEEKLY_CHALLENGE_DONE_AR,
   dayIndexOfYear,
   isRestDay,
   pickCoachDrill,
+  weeklyChallenge,
 } from "../lib/coach-engine.js";
 import { sentenceOfTheDay } from "../lib/writing.js";
 import { tomorrowPreview } from "../lib/warmth-engine.js";
@@ -31,7 +33,9 @@ export function CoachBlock({
 }) {
   const [open, setOpen] = useState(false);
   const [revealed, setRevealed] = useState(false);
+  const [challengeDone, setChallengeDone] = useState(false);
   const rest = isRestDay(new Date());
+  const challenge = weeklyChallenge(new Date());
   const drill = useMemo(() => pickCoachDrill(errors), [errors]);
   const letters = useMemo(alphabetLetters, []);
   const letter = letters.length > 0 ? letters[dayIndexOfYear() % letters.length]! : null;
@@ -56,6 +60,17 @@ export function CoachBlock({
           <PlayButton speakText={phrase.de} label={`استمع لعبارة اليوم: ${phrase.de}`} />
         </p>
       )}
+      {challenge && !challengeDone && (
+        <div data-testid="weekly-challenge">
+          <p>
+            {challenge.titleAr} (دعوة لا امتحان — {challenge.durationSec} ثانية): {challenge.taskAr}
+          </p>
+          <button data-testid="challenge-done" onClick={() => setChallengeDone(true)}>
+            قدّمتها بصوت عالٍ ✓
+          </button>
+        </div>
+      )}
+      {challenge && challengeDone && <p data-testid="challenge-praise">{WEEKLY_CHALLENGE_DONE_AR}</p>}
       {rest ? (
         <p data-testid="coach-rest">🌿 اليوم راحة — المدرب صامت. نم جيداً، فالنوم شريكك.</p>
       ) : !open ? (

@@ -188,3 +188,19 @@ export const PULSE_BODY_AR: Record<CoachWindow, string> = {
 };
 /** كلمات اللوم الممنوعة في أي نص مدرب — يفحصها الاختبار (D23) */
 export const BLAME_WORDS = ["فاتك", "خسرت", "لم تتدرب", "تأخرت", "كسل", "عقاب", "متأخر"];
+
+/** F009 — التحدي الأسبوعي (D299 · N-156/2): مهمة مهارية الجمعة/السبت فقط — بلا سلسلة وبلا لوم (D23) */
+export const CHALLENGE_DAYS = [5, 6] as const; // الجمعة = 5 · السبت = 6
+export const WEEKLY_CHALLENGE_TITLE_AR = "🏆 تحدي الأسبوع";
+export const WEEKLY_CHALLENGE_TASK_AR =
+  "قدّم نفسك بصوت عالٍ في 30 ثانية: اسمك، عمرك، من أين أنت — لأذنك أنت، بلا تسجيل وبلا تقييم.";
+export const WEEKLY_CHALLENGE_DONE_AR = "أحسنت! 🌟 التقديم بصوت عالٍ يثبّت ما تعلمته.";
+export const WEEKLY_CHALLENGE_SEC = 30;
+
+export type WeeklyChallenge = { titleAr: string; taskAr: string; durationSec: number };
+
+/** تحدي اليوم — null في غير الجمعة/السبت (ومنها الأحد: الراحة فوق التحدي) */
+export function weeklyChallenge(date: Date): WeeklyChallenge | null {
+  if (!(CHALLENGE_DAYS as readonly number[]).includes(date.getDay())) return null;
+  return { titleAr: WEEKLY_CHALLENGE_TITLE_AR, taskAr: WEEKLY_CHALLENGE_TASK_AR, durationSec: WEEKLY_CHALLENGE_SEC };
+}
