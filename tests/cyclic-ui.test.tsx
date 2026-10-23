@@ -105,6 +105,13 @@ describe("D283: شارة الدوري", () => {
     await renderSeeded(SAT2, "2026-10-12");
     expect(q("cyclic-banner")).toBeNull();
   });
+
+  it("سبت الأسبوع 14 ← آخر القصير (تراكمي الوحدات 1–14)", async () => {
+    await renderSeeded(new Date(2027, 0, 9, 10, 0), "2026-10-05");
+    expect(q("cyclic-banner")!.textContent).toContain("الاختبار القصير");
+    expect(q("cyclic-banner")!.textContent).toContain("14");
+    expect(q("start-cyclic")).not.toBeNull();
+  });
 });
 
 describe("D283: التدفق الكامل للقصير", () => {

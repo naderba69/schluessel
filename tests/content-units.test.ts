@@ -1375,10 +1375,10 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     }
   });
 
-  it("الاختبارات الدورية: 6 Kurztest + 3 Monatsprüfung — تراكمية وبحدود الحجم", () => {
+  it("الاختبارات الدورية: 7 Kurztest + 3 Monatsprüfung — تراكمية وبحدود الحجم", () => {
     const kurz = ALL_PRUEFUNGEN.filter((t) => t.kind === "kurztest");
     const monat = ALL_PRUEFUNGEN.filter((t) => t.kind === "monatspruefung");
-    expect(kurz.length).toBe(6);
+    expect(kurz.length).toBe(7);
     expect(monat.length).toBe(3);
     for (const t of kurz) {
       expect(t.items.length).toBeLessThanOrEqual(12);

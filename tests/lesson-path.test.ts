@@ -251,7 +251,7 @@ describe("D283: استحقاق الدوري", () => {
   it("غير السبت والفردي والغائب والمستوى الخاطئ ← لا شيء", () => {
     expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 2, FRI2)).toBeUndefined();
     expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 3, new Date(2026, 9, 24))).toBeUndefined();
-    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 14, new Date(2026, 11, 5))).toBeUndefined(); // بلا محتوى
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 16, new Date(2027, 0, 23))).toBeUndefined(); // فوق سقف المخطط (14)
     expect(cyclicTestFor(ALL_PRUEFUNGEN, "B1", 2, SAT2)).toBeUndefined();
   });
 
