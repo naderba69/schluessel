@@ -31,6 +31,7 @@ import {
   PATH,
   ALL_LESETEXTS,
   ALL_PRUEFUNGEN,
+  ALL_MODELLTESTS,
   LESSON_INDEX,
   LESSON_ORDER,
   indexEntry,
@@ -47,6 +48,7 @@ import { phrasesAvailable } from "./lib/phrase-bank.js";
 import { battleAttempts, currentLessonId, cyclicAttempts, cyclicDue, cyclicTestFor, deferredDue, delayedAttempts, journeyWeek, lessonAfter, openSessionFor, passedBattleUnits, passedUnitBattle, quizAttempts, reconcileState, recordCyclicTest, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitDebrief, unitKeyOf } from "./lib/lesson-path.js";
 import { dailyDoseForChoice, readPlannedDose, recordSession, writePlannedDose, type DoseChoice } from "./lib/session-log.js";
 import { cyclicQuizLesson, type QuizOutcome } from "./lib/quiz-session.js";
+import { examSkillAr, levelExamProgress, levelExamReady, levelUnits, modellLesenQuiz, modellTotal, recordLevelSection, sectionAttempts, EXAM_SKILLS } from "./lib/exam-engine.js";
 import { browserLearnerStore, type LearnerStore } from "./stores/learner-store.js";
 import { SkillsLab } from "./components/SkillsLab.js";
 import { DAY_FOCUS_AR, dayFocus, flexWeek, weekDots, weeklyGoalState } from "./lib/day-engine.js";
@@ -300,11 +302,13 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const [shadow, setShadow] = useState<{ lessonId: string; script: AudioScript | null } | null>(null); // D280: الشادوينغ الجاري
   const [reading, setReading] = useState<{ textId: string } | null>(null); // D281: نص الخميس الجاري (النصوص حاضرة — بلا تحميل)
   const [cyclic, setCyclic] = useState<{ testId: string } | null>(null); // D283: الاختبار الدوري الجاري (حاضر — بلا تحميل)
+  const [examRun, setExamRun] = useState(false); // D284: قسم القراءة الجاري (حاضر — بلا تحميل)
   const microStart = useRef<number>(0);
   const deferredStart = useRef<number>(0); // D277: بداية المؤجلة لقياس مدتها
   const shadowStart = useRef<number>(0); // D280: بداية الشادوينغ لقياس دقائقه
   const readingStart = useRef<number>(0); // D281: بداية القراءة لقياس دقائقها
   const cyclicStart = useRef<number>(0); // D283: بداية الدوري لقياس دقائقه
+  const examStart = useRef<number>(0); // D284: بداية قسم القراءة لقياس دقائقه
   const [finishedNote, setFinishedNote] = useState<string | null>(null);
   /** N-155 (D269): التبويب الحالي — اليوم افتراضياً (قالب ثابت، قانون 16) */
   const [tab, setTab] = useState<MainTab>("today");
@@ -592,6 +596,13 @@ export function App({ store: injected }: { store?: LearnerStore }) {
   const weekTest = cyclicTestFor(ALL_PRUEFUNGEN, state.profile.level, weekNo, new Date());
   const dueTest = weekTest && cyclicAttempts(state.progress, weekTest.id) === 0 ? weekTest : undefined;
   const cyclicDone = weekTest !== undefined && cyclicAttempts(state.progress, weekTest.id) > 0;
+  /** D284: امتحان المستوى — الأهلية بإتمام معارك الوحدات · القراءة أول الأقسام الحية */
+  const modell = ALL_MODELLTESTS.find((m) => m.level === state.profile.level);
+  const examUnits = levelUnits(PATH, state.profile.level);
+  const examProg = levelExamProgress(state.progress, examUnits);
+  const examReady = levelExamReady(state.progress, examUnits);
+  const examTotal = modell ? modellTotal(state.progress, modell.id) : null;
+  const lesenParts = modell?.sections.find((s) => s.skill === "lesen")?.parts;
   /** D279: هدف الأسبوع — canDo الأول لاختبار السادس في الوحدة الحالية (يُحمَّل مرة لكل وحدة) */
   const curKey = current ? unitKeyOf(current.level, current.unit) : undefined;
   const goalState =
@@ -817,6 +828,33 @@ export function App({ store: injected }: { store?: LearnerStore }) {
     );
   };
 
+  /** D284: بدء قسم القراءة — حاضر فوراً */
+  const startExamLesen = () => {
+    if (!modell || !lesenParts || !examReady) return;
+    examStart.current = Date.now();
+    setFinishedNote(null);
+    setExamRun(true);
+  };
+
+  /** D284: اكتمال القراءة — تُسجَّل قسماً + دقائقها في سجل اليوم */
+  const finishExamLesen = (o: QuizOutcome) => {
+    if (!modell || !examRun) return;
+    const points = Math.round(o.score * 25);
+    const s = stateRef.current;
+    if (s) {
+      const minutes = Math.max(1, Math.round((Date.now() - examStart.current) / 60000));
+      try {
+        const s1 = recordLevelSection(s, modell.id, s.profile.level, "lesen", o, localDay());
+        commit({ ...s1, sessions: recordSession(s1.sessions, { date: localDay(), durationMinutes: minutes }) });
+      } catch (e) {
+        setSaveError(errText(e));
+      }
+    }
+    setExamRun(false);
+    setTab("today"); // D284: الملاحظة في تبويب اليوم — نعيده إليه ليراها
+    setFinishedNote(`قسم القراءة تم (${points}/25 نقطة) — المجموع الرسمي يكتمل بالأقسام الأربعة.`);
+  };
+
   const rateSrs = (id: string, rating: import("./lib/review-engine.js").RecallRating) => {
     const st = stateRef.current;
     if (st) commit({ ...st, srsCards: applySrsRating(st.srsCards, id, rating) });
@@ -928,7 +966,67 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           )}
         </div>
       ) : tab === "map" ? (
-        <MapView map={map} />
+        <>
+          <MapView map={map} />
+          {modell && lesenParts && examTotal && !examRun && (
+            <section data-testid="exam-card">
+              <h2>🎓 امتحان المستوى التجريبي</h2>
+              {!examReady ? (
+                <p data-testid="exam-progress">
+                  يفتح بعد إتمام معارك الوحدات ({examProg.done}/{examProg.total})
+                </p>
+              ) : (
+                <>
+                  <p data-testid="exam-ready">أنهيت المنهج — الامتحان مفتوح ✓</p>
+                  <p data-testid="exam-points">
+                    {EXAM_SKILLS.map((sk) => {
+                      const v = examTotal.points[sk];
+                      return `${examSkillAr(sk)} ${v === null ? "—" : `${v}/25`}`;
+                    }).join(" · ")}
+                  </p>
+                  {examTotal.complete ? (
+                    <p data-testid="exam-verdict">
+                      {examTotal.passed
+                        ? `المجموع الرسمي ${examTotal.total}/100 — ناجح 🎓`
+                        : `المجموع الرسمي ${examTotal.total}/100 — أعد الأقسام الضعيفة`}
+                    </p>
+                  ) : (
+                    <p data-testid="exam-total">المجموع الرسمي يكتمل بالأقسام الأربعة</p>
+                  )}
+                  <button data-testid="start-exam-lesen" onClick={startExamLesen}>
+                    ابدأ قسم القراءة (15 بنداً — 25 نقطة)
+                  </button>
+                  <p data-testid="exam-roadmap">الاستماع والكتابة والتحدث: أقسامها قادمة</p>
+                </>
+              )}
+            </section>
+          )}
+          {modell && lesenParts && examRun && (
+            <>
+              <p data-testid="exam-lesen-title">قسم القراءة 📖 — {modell.id} (15 بنداً — 25 نقطة)</p>
+              <QuizStation
+                lesson={modellLesenQuiz(modell.id, modell.passingScore, lesenParts)}
+                priorAttempts={sectionAttempts(state.progress, modell.id, "lesen")}
+                onAttemptComplete={finishExamLesen}
+                onGrade={({ item, given, verdict }) => {
+                  const s = stateRef.current;
+                  if (s)
+                    commit({
+                      ...s,
+                      errors: upsertGoldenError(s.errors, {
+                        skill: "lesen",
+                        wrong: given || "—",
+                        correct: item.a,
+                        explanation: item.why ?? "قارن إجابتك بالتصحيح واستنتج الفرق.",
+                        source: `${modell.id}/lesen`,
+                        closeSlip: verdict === "close",
+                      }),
+                    });
+                }}
+              />
+            </>
+          )}
+        </>
       ) : tab === "coach" ? (
         <CoachBlock
           errors={state.errors}
