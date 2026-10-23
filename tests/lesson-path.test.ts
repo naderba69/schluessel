@@ -246,6 +246,18 @@ describe("D283: استحقاق الدوري", () => {
     expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 2, SAT2)?.id).toBe("a1-kurztest-w2");
     expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 4, SAT4)?.id).toBe("a1-monatspruefung-w4");
     expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 6, new Date(2026, 10, 14))?.id).toBe("a1-kurztest-w6");
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 14, new Date(2027, 0, 9))?.id).toBe("a1-kurztest-w14"); // D289: آخر الدوري
+  });
+
+  it("D290: غياب الشهرية ← القصير احتياطها الحي (N-161)", () => {
+    const SAT4 = new Date(2026, 9, 31);
+    const noMonat = ALL_PRUEFUNGEN.filter((t) => t.id !== "a1-monatspruefung-w4");
+    expect(cyclicTestFor(noMonat, "A1", 4, SAT4)?.id).toBe("a1-kurztest-w4");
+    const neither = noMonat.filter((t) => t.id !== "a1-kurztest-w4");
+    expect(cyclicTestFor(neither, "A1", 4, SAT4)).toBeUndefined();
+    // وغير أسابيع الشهرية: لا احتياط معاكس (غياب القصير لا يستدعي الشهرية)
+    const noKurz = ALL_PRUEFUNGEN.filter((t) => t.id !== "a1-kurztest-w2");
+    expect(cyclicTestFor(noKurz, "A1", 2, new Date(2026, 9, 17))).toBeUndefined();
   });
 
   it("غير السبت والفردي والغائب والمستوى الخاطئ ← لا شيء", () => {

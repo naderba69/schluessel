@@ -159,8 +159,9 @@ export function cyclicTestFor(
   today: Date,
 ): CyclicTest | undefined {
   if (today.getDay() !== 6 || weekNumber < 2 || weekNumber % 2 !== 0) return undefined;
-  const kind = weekNumber % 4 === 0 ? "monatspruefung" : "kurztest";
-  return tests.find((t) => t.level === level && t.kind === kind && t.week === weekNumber);
+  const pick = (kind: string) => tests.find((t) => t.level === level && t.kind === kind && t.week === weekNumber);
+  if (weekNumber % 4 === 0) return pick("monatspruefung") ?? pick("kurztest"); // D290: الشهرية أولاً والقصير احتياطها الحي (N-161)
+  return pick("kurztest");
 }
 
 /** D283: الاختبار الدوري المستحق — موجود + بلا تسجيل */
