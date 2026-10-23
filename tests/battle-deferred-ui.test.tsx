@@ -126,13 +126,17 @@ describe("D277: المؤجلة (الاثنين)", () => {
   });
 
   it("التدفق الكامل: بدء ← اختبار ← تسجيل delayed-battle + دقائق اليوم", async () => {
-    // أول وحدة بلا حزمة تحويل (D294: يتقدم تلقائياً مع دفعات الحزم) — التدفق نقي وtransferShare غائب
-    const pureUnit = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].find(
+    // أول وحدة بلا حزمة تحويل — وإن اكتملت الحزم (D297: كل A1) فالتدفق على u15 مخلوطاً
+    const packless = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].find(
       (u) => !ALL_TRANSFER.some((p) => p.level === "A1" && p.unit === u),
-    )!;
+    );
+    const pureUnit = packless ?? 15;
+    const expectPure = packless !== undefined;
     const pureKey = `A1-u${pureUnit}`;
     const { lesson } = await loadSessionBundle(`a1-u${pureUnit}-d6`);
-    const items: readonly QuizItem[] = startQuizAttempt(lesson, 1).items;
+    const base = startQuizAttempt(lesson, 1).items;
+    const flowPack = ALL_TRANSFER.find((p) => p.level === "A1" && p.unit === pureUnit);
+    const items: readonly QuizItem[] = flowPack ? mixTransferItems(base, flowPack.items, 1).items : base; // الملح = المعركة الواحدة
     const pure6 = [1, 2, 3, 4, 5, 6].map((d) => `a1-u${pureUnit}-d${d}`);
     const store = await renderSeeded(MON, pure6, [battleWin(pureKey, "2026-10-17")]);
     await click(q("start-deferred"), "ابدأ المؤجلة");
@@ -162,7 +166,8 @@ describe("D277: المؤجلة (الاثنين)", () => {
     const delayed = saved!.progress.gateResults.find((g) => g.kind === "delayed-battle")!;
     expect(delayed.gateId).toBe(pureKey);
     expect(delayed.passed).toBe(true);
-    expect("transferShare" in delayed).toBe(false);
+    if (expectPure) expect("transferShare" in delayed).toBe(false);
+    else expect(delayed.transferShare).toBeGreaterThan(0); // كل الوحدات بحزم: خلط متوقع
     const entry = saved!.sessions.find((s) => s.date === "2026-10-19")!;
     expect(entry.durationMinutes).toBeGreaterThanOrEqual(1);
   });
