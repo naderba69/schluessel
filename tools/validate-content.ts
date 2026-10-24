@@ -7,7 +7,7 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile, BARE_ARTICLE_IDS,
-  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, TransferPack, AudioScript, StoryBook, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, TransferPack, VideoShelf, AudioScript, StoryBook, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
   GrammarRuleFile, LessonUpgradePlan,
 } from "../content/schemas/index.js";
 import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
@@ -52,7 +52,7 @@ const SPEECH_RATE_MAX_WPM = 200;
 const SPEECH_RATE_MIN_WORDS = 3;
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "transfer" | "audio-script" | "story" | "exam-format" | "wordlist" | "plan" | "derived" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "transfer" | "audio-script" | "story" | "exam-format" | "wordlist" | "plan" | "derived" | "video" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -73,6 +73,7 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("exam-formats/")) return "exam-format";
   if (p.startsWith("wordlists/")) return "wordlist";
   if (p.startsWith("plans/")) return "plan";
+  if (p.startsWith("video/")) return "video";
   if (p.startsWith("upgrades/")) return "upgrade";
   return "unknown";
 }
@@ -258,6 +259,13 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         }
         case "transfer": {
           TransferPack.parse(entry.data); // D293: حزم التحويل (المخطط يفرض ≥2 بند QuizItem)
+          break;
+        }
+        case "video": {
+          const shelf = VideoShelf.parse(entry.data); // D308: رف الفيديو (المخطط يفرض تلازم الرابط والتحقق §34)
+          const ids = shelf.entries.map((e) => e.id);
+          if (new Set(ids).size !== ids.length)
+            push("error", "e-video-dup", entry.path, "معرّف فيديو مكرر في الرف");
           break;
         }
         case "lese": {

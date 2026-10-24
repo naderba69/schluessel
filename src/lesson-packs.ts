@@ -11,6 +11,7 @@ import {
   Modelltest,
   ReadingText,
   TransferPack,
+  VideoShelf,
   ImageManifest,
   GrammarRuleFile,
   StoryBook,
@@ -96,6 +97,10 @@ export const ALL_LESETEXTS = json(import.meta.glob("../content/lese/*.json", { e
 /** حزم التحويل للمؤجلة (D293) */
 export const ALL_TRANSFER = json(import.meta.glob("../content/transfer/*.json", { eager: true, import: "default" }))
   .map((j) => TransferPack.parse(j));
+
+/** رفوف الفيديو (D308 · §2.12) */
+export const ALL_VIDEO = json(import.meta.glob("../content/video/*.json", { eager: true, import: "default" }))
+  .map((j) => VideoShelf.parse(j));
 
 // ---------- لوادر كسولة (الحصة تحمل درسها وحده) ----------
 type LazyMods = Record<string, () => Promise<unknown>>;

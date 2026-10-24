@@ -30,6 +30,7 @@ import {
 import { sentenceOfTheDay } from "../lib/writing.js";
 import { coachEveningReport, tomorrowPreview } from "../lib/warmth-engine.js";
 import { alphabetLetters, dialoguePairs, numberLines, timeLines } from "./SkillsLab.js";
+import { VideoCorner } from "./VideoCorner.js";
 import { PlayButton } from "./LessonSession.js";
 
 export function CoachBlock({
@@ -244,6 +245,7 @@ export function CoachBlock({
           <p data-testid="tomorrow-preview">{tomorrowPreview({ hasNewContent, dueCount })}</p>
         </div>
       )}
+      <VideoCorner />
     </section>
   );
 }
