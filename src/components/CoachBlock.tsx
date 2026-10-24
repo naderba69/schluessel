@@ -13,6 +13,7 @@ import {
   ON_THE_GO_REPEAT_AR,
   ON_THE_GO_SAFETY_AR,
   ON_THE_GO_TITLE_AR,
+  RECURRING_TITLE_AR,
   SKILL_OF_DAY_HINT_AR,
   WINDOW_LABELS_AR,
   WEEKLY_CHALLENGE_DONE_AR,
@@ -21,6 +22,7 @@ import {
   minuteConversation,
   onTheGoQueue,
   pickCoachDrill,
+  pickRecurringDrill,
   playOnTheGo,
   skillOfDay,
   weeklyChallenge,
@@ -57,6 +59,9 @@ export function CoachBlock({
   const dialogue = useMemo(dialoguePairs, []);
   const convo = minuteConversation(dayIndexOfYear(), dialogue);
   const drill = useMemo(() => pickCoachDrill(errors), [errors]);
+  const recurring = useMemo(() => pickRecurringDrill(errors), [errors]);
+  const [recurringRevealed, setRecurringRevealed] = useState(false);
+  const showRecurring = recurring !== null && recurring.id !== drill?.id;
   const letters = useMemo(alphabetLetters, []);
   const letter = letters.length > 0 ? letters[dayIndexOfYear() % letters.length]! : null;
   const numbers = useMemo(numberLines, []);
@@ -193,6 +198,26 @@ export function CoachBlock({
           <button data-testid="coach-done" onClick={close}>
             تم ✓
           </button>
+        </div>
+      )}
+      {showRecurring && !rest && recurring && (
+        <div data-testid="recurring-error">
+          <p>
+            {RECURRING_TITLE_AR} (تكرر {recurring.occurrences} مرات):{" "}
+            <span dir="ltr">«{recurring.payload.wrong}»</span>
+          </p>
+          {!recurringRevealed ? (
+            <button data-testid="recurring-reveal" onClick={() => setRecurringRevealed(true)}>
+              أظهر التصحيح
+            </button>
+          ) : (
+            <>
+              <p data-testid="recurring-answer" dir="ltr">
+                ✓ {recurring.payload.correct}
+              </p>
+              <p>{recurring.payload.explanation}</p>
+            </>
+          )}
         </div>
       )}
       {evening && !rest && (

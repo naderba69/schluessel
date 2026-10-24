@@ -320,3 +320,16 @@ export function windowTask(
   if (letterText) return { titleAr: `${WINDOW_TASK_PREFIX_AR} — ${label}`, taskAr: `استمع وردّد حرف اليوم: ${letterText}` };
   return { titleAr: `${WINDOW_TASK_PREFIX_AR} — ${label}`, taskAr: WINDOW_TASK_SKILL_FALLBACK_AR };
 }
+
+/** F008 — الخطأ الذهبي العابر (D305 · N-156/8): تمرين واحد لخطئك *المتكرر* — الأكثر تكرراً لا الأحدث */
+export const RECURRING_MIN_OCCURRENCES = 2; // تكرر مرتين فأكثر = متكرر
+export const RECURRING_TITLE_AR = "🔁 خطأك العنيد";
+
+/** الخطأ المتكرر: أعلى occurrences بين غير المحلولة — التعادل يُحسَم بالأحدث */
+export function pickRecurringDrill(errors: readonly ErrorEntry[]): ErrorEntry | null {
+  const open = errors.filter((e) => !e.resolved && e.occurrences >= RECURRING_MIN_OCCURRENCES);
+  if (open.length === 0) return null;
+  return [...open].sort(
+    (a, b) => b.occurrences - a.occurrences || b.createdAt.localeCompare(a.createdAt),
+  )[0]!;
+}
