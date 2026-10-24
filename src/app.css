@@ -409,7 +409,8 @@ label { display: inline-block; margin: 0.4rem 0; }
 [data-testid="start-session"] { font-size: 1.2rem; padding: 0.85rem 1.6rem; }
 details[data-testid="more-labs"],
 details[data-testid="more-path"],
-details[data-testid="more-gender"] {
+details[data-testid="more-gender"],
+details[data-testid="more-today"] {
   margin-top: 1rem;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -418,7 +419,8 @@ details[data-testid="more-gender"] {
 }
 details[data-testid="more-labs"] summary,
 details[data-testid="more-path"] summary,
-details[data-testid="more-gender"] summary {
+details[data-testid="more-gender"] summary,
+details[data-testid="more-today"] summary {
   cursor: pointer;
   font-weight: 700;
   font-size: 1.05rem;

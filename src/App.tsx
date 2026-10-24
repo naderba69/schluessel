@@ -1297,11 +1297,6 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       {returnKind === "back" && (
         <p data-testid="flex-return">عدت — وهذا أهم شيء. نبدأ بخفة، بلا ديون 🌱</p>
       )}
-      {!micro && !session && !deferred && !shadow && !reading && !cyclic && dueCount > 0 && (
-        <button data-testid="start-micro" onClick={startMicro}>
-          ⚡ جلسة مصغّرة — {dueCount} مستحقة (نحو 10 دقائق)
-        </button>
-      )}
       {cyclic && weekTest && cyclic.testId === weekTest.id ? (
         <>
           <p data-testid="cyclic-title">
@@ -1463,23 +1458,33 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           {weeklyGoal && curKey && weeklyGoal.unitKey === curKey && goalState !== "hidden" && (
             <WeeklyGoalCard goal={weeklyGoal.goal} state={goalState} />
           )}
+          {(dueCount > 0 || (shadowLesson && !shadowDoneToday) || (thursdayEngine && thursdayPick && !readingDoneToday)) && (
+            <details data-testid="more-today">
+              <summary>المزيد اليوم 🌱 — اختياريات تثبيت (10 دقائق وأقل)</summary>
+              {dueCount > 0 && (
+                <button data-testid="start-micro" onClick={startMicro}>
+                  ⚡ جلسة مصغّرة — {dueCount} مستحقة (نحو 10 دقائق)
+                </button>
+              )}
           {shadowLesson && !shadowDoneToday && (
-            <>
-              <p data-testid="shadow-banner">الشادوينغ اليومي 🎙️ — 3 دقائق ظلٌّ لحوار متقن ({shadowLesson})</p>
-              <button data-testid="start-shadow" onClick={startShadow}>
-                🎙️ ابدأ الظل
-              </button>
-            </>
+              <>
+                <p data-testid="shadow-banner">الشادوينغ اليومي 🎙️ — 3 دقائق ظلٌّ لحوار متقن ({shadowLesson})</p>
+                <button data-testid="start-shadow" onClick={startShadow}>
+                  🎙️ ابدأ الظل
+                </button>
+              </>
+            )}
+            {thursdayEngine && thursdayPick && !readingDoneToday && (
+              <>
+                <p data-testid="reading-banner">نص القراءة الحر 📖 — {thursdayEngine.titleAr} (من الوحدة {thursdayPick.unit})</p>
+                <button data-testid="start-reading" onClick={startReading}>
+                  📖 اقرأ النص
+                </button>
+              </>
+            )}
+            </details>
           )}
           {shadowDoneToday && <p data-testid="shadow-done">الشادوينغ اليومي تم ✓ — 3 دقائق بصوتك</p>}
-          {thursdayEngine && thursdayPick && !readingDoneToday && (
-            <>
-              <p data-testid="reading-banner">نص القراءة الحر 📖 — {thursdayEngine.titleAr} (من الوحدة {thursdayPick.unit})</p>
-              <button data-testid="start-reading" onClick={startReading}>
-                📖 اقرأ النص
-              </button>
-            </>
-          )}
           {readingDoneToday && <p data-testid="reading-done">قراءة الخميس تمت ✓ — نص كامل بفهمك</p>}
           {dueTest && (
             <>

@@ -32,6 +32,7 @@ const STYLED = [
   "coach-pulse-task",
   "coach-evening-report",
   "coach-phrase",
+  "more-today",
 ];
 
 const PRIMARY = [
