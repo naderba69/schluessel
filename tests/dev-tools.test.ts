@@ -128,7 +128,7 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
     const lines = out.trim().split("\n");
     expect(lines[0]).toMatch(/duden-links: (\d+) رابطاً فريداً/u);
     const urls = lines.slice(1);
-    expect(urls.length).toBe(273); // D312: +3 (werden_Vollverb · weggehen · Erfahrung — متحقق حياً) // D238: 270 بعد حذف الميت — مثبت بدقة: أي رابط جديد يُحدّثه عمداً
+    expect(urls.length).toBe(276); // D313: +3 (Unterkunft · reiten · Zelt_Konstruktion — متحقق حياً) // D312: +3 (werden_Vollverb · weggehen · Erfahrung) // D238: 270 بعد حذف الميت — مثبت بدقة: أي رابط جديد يُحدّثه عمداً
     expect(new Set(urls).size).toBe(urls.length); // فريدة
     for (const u of urls) expect(u).toMatch(/^https:\/\/www\.duden\.de\/rechtschreibung\/(?:[A-Za-zÄÖÜäöüß_-]|%[0-9A-F]{2})+$/u);
   }, 60_000);

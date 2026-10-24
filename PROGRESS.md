@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 268 (2026-10-24) — D313: a2-u1-d3 «يحكي عطلته» — الماضي الانعكاسي + reiten + رابطا الحكي (المرحلة ج)
+- **الخلاصة:** الدرس 93 (A2-U1-D3): 13 كلمة جديدة تحكي العطلة في 6 جمل (Zelt · Jugendherberge · sich unterhalten · Unterkunft · aufregend · sich ärgern · sich beschweren · sich bedanken · bequem · praktisch · sogar · außerdem · reiten) — والمحور الثلاثي: الانعكاسي hat sich (الضمير بعد المساعد) ↔ reiten بـsein وتصريف قوي (reitet · ritt · geritten) ↔ sogar/außerdem (في الوسط لا يقلبان، وفي الصدارة V2). 13 مقطعاً صوتياً، صُحّح منها نبر Unterkunft (أولي لا نهائي).
+- **التالي:** a2-u1-d4 (كلمات 40–52) — وتأكيد المالك: N-154 (الأذن) · N-155 (العين).
+
 ## الدفعة 267 (2026-10-24) — D312: a2-u1-d2 «يروي يومه» — قرار haben/sein (المرحلة ج)
 - **الخلاصة:** الدرس 92 (A2-U1-D2): 13 كلمة جديدة تروي اليوم كاملاً (werden · weggehen · erreichen · vorbereiten · verschieben · liefern · wegwerfen · sonst · unterwegs · Feierabend · Erfahrung · fleißig · faul) — والزوج المحوري weggeworfen (haben — رميتُ شيئاً) ↔ weggegangen (sein — غادرتُ). 13 مقطعاً صوتياً، 5 منها صُحّح نطقها (werden الطويلة · همس g في weggehen/wegwerfen · unterwegs الطويلة · Feierabend بلا مقطع زائد).
 - **التالي:** a2-u1-d3 (كلمات 27–39 · حكي ماضٍ مطوّل — «يحكي عطلته») — وتأكيد المالك: N-154 (الأذن) · N-155 (العين).

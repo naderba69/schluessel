@@ -2058,6 +2058,16 @@
 - **البوابة:** vitest 1556/1556 (127 · +1) · tsc 0 · validate-content 1382/0/0 · build · docs-sync 127 · speech ناعم 1/2804.
 - **التالي:** a2-u1-d3 (كلمات 27–39 · حكي ماضٍ مطوّل — «يحكي عطلته») — وتأكيد المالك: N-154 (الأذن) · N-155 (العين).
 
+## D313 (2026-10-24): a2-u1-d3 «يحكي عطلته» — الماضي الانعكاسي + reiten + رابطا الحكي (المرحلة ج)
+- **الدفعة:** 268 · **الموجّه:** 4.70
+- **للقارئ:** الدرس 93 (A2-U1-D3): 13 كلمة جديدة تحكي العطلة في 6 جمل (Zelt · Jugendherberge · sich unterhalten · Unterkunft · aufregend · sich ärgern · sich beschweren · sich bedanken · bequem · praktisch · sogar · außerdem · reiten) — والمحور الثلاثي: الانعكاسي hat sich (الضمير بعد المساعد) ↔ reiten بـsein وتصريف قوي (reitet · ritt · geritten) ↔ sogar/außerdem (في الوسط لا يقلبان، وفي الصدارة V2). 13 مقطعاً صوتياً، صُحّح منها نبر Unterkunft (أولي لا نهائي).
+- **بطاقة قرار (قانون 8 — الصدق قبل الإكمال):** روابط دودن تحققت حياً (Zelt القانوني Zelt_Konstruktion — /Zelt وحده لا وجود له)؛ وUnterkunft بنبر أولي مثبت من صفحة Duden (Betonung _U_nterkunft)؛ وreiten مدخل رئيسي في Fit1 (A1 ص17) وA2 (ص24 «reitet · ist geritten» — فوسمه [A1,A2] اشتقاقٌ صحيح)؛ وما غاب عن مرآة A2 استُبعِد (~70 مرشحاً بينها verbringen/genießen/entspannen/schließlich/während/bevor/nachdem). ولا ملف ترسانة للانعكاسي — أُعيد استعمال ars-perfekt (N-164).
+- **الفهرس العكسي:** content/lessons/a2/a2-u1-d3.json (جديد) · content/words (13 جديداً) · 13 مقطعاً + المانيفست (2851) + قائمة gen-audio · tools/pronunciation-lexicon.json (+1 Unterkunft = 130) · lesson-index (93) + phrase-bank (2843) · ars-perfekt (الفهرس العكسي) · tests (+1 · دبابيس 93/590/276).
+- **الاختبارات:** +1 (d3: الوسوم · hat sich للانعكاسي · الأصوات · overlap).
+- **الأرقام:** ملاحظات 0/9/157 (166 — N-166 تُفتح وتُغلق: سباق كتابة) · تغطية A2 الرئيسية 766/1159.
+- **البوابة:** vitest 1557/1557 (127 · +1) · tsc 0 · validate-content 1396/0/0 · build · docs-sync 128 · speech ناعم 1/2817.
+- **التالي:** a2-u1-d4 (كلمات 40–52) — وتأكيد المالك: N-154 (الأذن) · N-155 (العين).
+
 
 ## D243 (2026-10-21): صيانة (د) — الدفعة 27: تحقق إنتاجي من كسل N-050 (المعاينة تخدم + 1298/1298 مقطعاً تُحلّ) + تنظيف استيراد
 - **الدفعة:** 198 · **الموجّه:** 4.00

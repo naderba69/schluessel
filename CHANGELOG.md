@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-24 — الدفعة 268: D313 — a2-u1-d3 «يحكي عطلته» — الماضي الانعكاسي + reiten + رابطا الحكي (المرحلة ج)
+الدرس 93 (A2-U1-D3): 13 كلمة جديدة تحكي العطلة في 6 جمل (Zelt · Jugendherberge · sich unterhalten · Unterkunft · aufregend · sich ärgern · sich beschweren · sich bedanken · bequem · praktisch · sogar · außerdem · reiten) — والمحور الثلاثي: الانعكاسي hat sich (الضمير بعد المساعد) ↔ reiten بـsein وتصريف قوي (reitet · ritt · geritten) ↔ sogar/außerdem (في الوسط لا يقلبان، وفي الصدارة V2). 13 مقطعاً صوتياً، صُحّح منها نبر Unterkunft (أولي لا نهائي).
+- **البوابة:** vitest 1557/1557 (127 · +1) · tsc 0 · validate-content 1396/0/0 · build · docs-sync 128 · speech ناعم 1/2817.
+
 ## 2026-10-24 — الدفعة 267: D312 — a2-u1-d2 «يروي يومه» — قرار haben/sein (المرحلة ج)
 الدرس 92 (A2-U1-D2): 13 كلمة جديدة تروي اليوم كاملاً (werden · weggehen · erreichen · vorbereiten · verschieben · liefern · wegwerfen · sonst · unterwegs · Feierabend · Erfahrung · fleißig · faul) — والزوج المحوري weggeworfen (haben — رميتُ شيئاً) ↔ weggegangen (sein — غادرتُ). 13 مقطعاً صوتياً، 5 منها صُحّح نطقها (werden الطويلة · همس g في weggehen/wegwerfen · unterwegs الطويلة · Feierabend بلا مقطع زائد).
 - **البوابة:** vitest 1556/1556 (127 · +1) · tsc 0 · validate-content 1382/0/0 · build · docs-sync 127 · speech ناعم 1/2804.

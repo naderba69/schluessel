@@ -1,0 +1,403 @@
+{
+  "audioManifestRefs": [
+    "word-zelt",
+    "word-jugendherberge",
+    "word-unterhalten",
+    "word-unterkunft",
+    "word-aufregend",
+    "word-aergern",
+    "word-beschweren",
+    "word-bedanken",
+    "word-bequem",
+    "word-praktisch",
+    "word-sogar",
+    "word-ausserdem",
+    "word-reiten"
+  ],
+  "canDoDaily": [
+    "يحكي عطلته في 6 جمل ماضٍ مرتبة برابطين على الأقل (sogar · außerdem · zuerst/dann)",
+    "يصرف الانعكاسي في الماضي صحيحاً (hat sich + التصريف آخر الجملة وحده) ويميز reiten (sein + تصريف قوي)"
+  ],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "zelt",
+      "jugendherberge",
+      "unterhalten",
+      "unterkunft",
+      "aufregend",
+      "aergern",
+      "beschweren",
+      "bedanken",
+      "bequem",
+      "praktisch",
+      "sogar",
+      "ausserdem",
+      "reiten"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 1 «Und was machst du?» — über Vergangenes berichten (فهرس Klett الرسمي — D108)"
+  },
+  "day": 3,
+  "einstieg": {
+    "guidedRetrieval": [
+      "من d2: weggehen ← ist weggegangen (حركة = sein) · wegwerfen ← hat weggeworfen (مفعول = haben)",
+      "من A1: sich freuen ← hat sich gefreut (انعكاسي = haben دائماً — والقاعدة تتوسع اليوم)"
+    ],
+    "pretestItems": [
+      {
+        "answer": "Wir haben uns gut unterhalten.",
+        "choices": [
+          "Wir haben uns gut unterhalten.",
+          "Wir haben gut unterhalten uns.",
+          "Wir sind uns gut unterhalten."
+        ],
+        "prompt": {
+          "ar": "«تسامرنا بودّ» — أين الضمير؟"
+        },
+        "revealNextSession": true
+      },
+      {
+        "answer": "Ich bin am Strand geritten.",
+        "choices": [
+          "Ich bin am Strand geritten.",
+          "Ich habe am Strand geritten.",
+          "Ich bin am Strand gereitet."
+        ],
+        "prompt": {
+          "ar": "«ركبتُ الخيل» — haben أم sein؟"
+        },
+        "revealNextSession": true
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Unterkunft",
+      "https://www.duden.de/rechtschreibung/reiten",
+      "https://www.duden.de/rechtschreibung/Zelt_Konstruktion"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/außerdem"
+    ]
+  },
+  "id": "a2-u1-d3",
+  "imageManifestRefs": [],
+  "kind": "content",
+  "level": "A2",
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-perfekt"
+    ],
+    "riskFlagsShown": [
+      "reflexive",
+      "needs-ist",
+      "v2-order",
+      "feste-praep",
+      "adjective-decl"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "zelt",
+      "jugendherberge",
+      "unterhalten",
+      "unterkunft",
+      "aufregend",
+      "aergern",
+      "beschweren",
+      "bedanken",
+      "bequem",
+      "praktisch",
+      "sogar",
+      "ausserdem",
+      "reiten"
+    ]
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "a": "Wir haben uns gut unterhalten.",
+            "q": "«تسامرنا بودّ»؟"
+          },
+          {
+            "a": "Ich bin am Strand geritten.",
+            "q": "«ركبتُ الخيل على الشاطئ»؟"
+          },
+          {
+            "a": "Es hat sogar geregnet!",
+            "q": "«بل أمطرت أيضاً!»؟"
+          },
+          {
+            "a": "das Zelt → die Zelte",
+            "q": "«خيمة» — الأداة والجمع؟"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "Ich habe mich geärgert.",
+            "q": "«انزعجتُ»؟"
+          },
+          {
+            "a": "Wir haben eine billige Unterkunft gefunden.",
+            "q": "«وجدنا مبيتاً رخيصاً»؟"
+          },
+          {
+            "a": "Der Rucksack ist praktisch.",
+            "q": "«حقيبة الظهر عملية»؟"
+          },
+          {
+            "a": "die Jugendherberge → die Jugendherbergen",
+            "q": "«بيت الشباب» — الأداة والجمع؟"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "Wir haben uns beschwert.",
+            "q": "«اشتكينا»؟"
+          },
+          {
+            "a": "Ich habe mich bedankt.",
+            "q": "«شكرتُ»؟"
+          },
+          {
+            "a": "Außerdem haben wir Eis gegessen.",
+            "q": "«وفضلاً عن ذلك أكلنا مثلجات»؟"
+          },
+          {
+            "a": "bequem",
+            "q": "«مريح» — الصفة؟"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "ar": "حكي العطلة في 6 جمل",
+        "de": "Den Urlaub in 6 Sätzen erzählen"
+      },
+      "situation": {
+        "ar": "صديقتك تسأل: «احكِ لي: ماذا فعلتَ في العطلة؟»",
+        "de": "Deine Freundin fragt: »Erzähl mal: Was hast du im Urlaub gemacht?«"
+      },
+      "successCriteria": [
+        "6 جمل ماضٍ على الأقل بترتيب زمني (zuerst · dann · zuletzt · außerdem)",
+        "انعكاسيان على الأقل (sich ärgern/beschweren/bedanken/unterhalten) بصيغة hat sich صحيحة",
+        "sogar مرة على الأقل — وreiten صحيح (ist geritten) إن ركبتَ الخيل"
+      ]
+    },
+    "stations": [
+      {
+        "explanationRequired": true,
+        "hints": [
+          "sich تتبع الفاعل: ich ← mich · wir ← uns — وتجلس بعد المساعد مباشرة",
+          "reitet · ritt · geritten: قوي كـfahren (fährt · fuhr · gefahren) وحركي مثله",
+          "sogar/außerdem لا يغيّران المساعد — انسَ الرابط وركّز على الفعل"
+        ],
+        "interleavedWith": [
+          "freuen",
+          "fahren",
+          "strand"
+        ],
+        "items": [
+          {
+            "a": "habe · mich — الانعكاسي haben دائماً، والضمير ملتصق بالمساعد",
+            "q": "sich ärgern ← Ich ___ ___ geärgert (الضمير بعد المساعد)"
+          },
+          {
+            "a": "haben · uns — الجمع: uns (قارن: Wir haben uns gefreut)",
+            "q": "sich beschweren ← Wir ___ ___ beschwert"
+          },
+          {
+            "a": "bin · geritten — كـgefahren: حركة بـsein وتصريف قوي (ei ← i)",
+            "q": "reiten ← Ich ___ am Strand ___ (حركة = ؟)"
+          },
+          {
+            "a": "habe · mich — والشكر يحتاج bei/für (يأتي في المصيدة)",
+            "q": "sich bedanken ← Ich ___ ___ bedankt"
+          },
+          {
+            "a": "haben · uns · unterhalten — القاعدة: بلا ge (كـvergessen في d1)",
+            "q": "sich unterhalten ← Wir ___ ___ gut ___"
+          }
+        ],
+        "type": "verb-bank"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "ابحث عن sich: وجدتها = haben مؤكد — ثم رتّب الباقي",
+          "sogar/außerdem في الوسط لا يقلبان شيئاً — القلب فقط حين يبدآن الجملة"
+        ],
+        "interleavedWith": [
+          "schlafen",
+          "schmecken",
+          "finden"
+        ],
+        "items": [
+          {
+            "a": "haben · geschlafen · haben · unterhalten — نمنا (haben) وتسامرنا (انعكاسي = haben)",
+            "q": "Wir ___ in einem Zelt ___ und ___ uns gut ___."
+          },
+          {
+            "a": "bin · geritten · hat · geschmeckt — ركبتُ (sein) والمثلجات أعجبتنا (haben)",
+            "q": "Ich ___ am Strand ___. Sogar das Eis ___ gut ___."
+          },
+          {
+            "a": "haben · geärgert · haben · gemacht — انزعجنا من الطقس (über+Akk) وصوّرنا أيضاً",
+            "q": "Wir ___ uns über das Wetter ___. Außerdem ___ wir Fotos ___."
+          },
+          {
+            "a": "haben · gefunden · haben · bedankt — وجدنا المبيت وشكرنا (bedanken + bei)",
+            "q": "Wir ___ eine billige Unterkunft ___. Wir ___ uns beim Kellner ___."
+          }
+        ],
+        "type": "gap-fill"
+      },
+      {
+        "explanationRequired": true,
+        "interleavedWith": [
+          "fahrer",
+          "foto",
+          "machen"
+        ],
+        "items": [
+          {
+            "a": "Wir haben uns gut unterhalten. — الضمير بعد المساعد مباشرة لا آخر الجملة",
+            "q": "Wir haben gut unterhalten uns."
+          },
+          {
+            "a": "Ich habe mich beim Fahrer bedankt. — الشكر بـbei (عند الشخص) وfür (عن الشيء) لا مفعول مباشر",
+            "q": "Ich habe mich den Fahrer bedankt."
+          },
+          {
+            "a": "Ich bin am Strand geritten. — حركة = sein + تصريف قوي (reitet · ritt · geritten)",
+            "q": "Ich habe am Strand gereitet."
+          },
+          {
+            "a": "Außerdem habe ich Fotos gemacht. — الصدارة تدفع الفعل للثانية (V2 كـsonst في d2)",
+            "q": "Außerdem ich habe Fotos gemacht."
+          }
+        ],
+        "type": "error-hunt"
+      },
+      {
+        "explanationRequired": true,
+        "interleavedWith": [
+          "urlaub",
+          "meer",
+          "schwimmen"
+        ],
+        "items": [
+          {
+            "a": "Wir haben in einem Zelt geschlafen. Ich bin am Strand geritten. Wir haben uns gut unterhalten. Wir haben uns über das Wetter geärgert. Außerdem haben wir Fotos gemacht. Wir haben sogar im Meer geschwommen!",
+            "q": "احكِ عطلتك (Urlaub) في 6 جمل (سجّل صوتك): المبيت ← نشاط ← تسامر ← مشكلة صغيرة ← صورة ← مفاجأة"
+          }
+        ],
+        "type": "speaking"
+      }
+    ]
+  },
+  "unit": 1,
+  "usedArsenalIds": [
+    "ars-perfekt"
+  ],
+  "ziel": {
+    "ar": "تحكي عطلتك في 6 جمل: الماضي الانعكاسي (hat sich) + رابطا الحكي (sogar · außerdem) + حركة reiten",
+    "de": "Du kannst deinen Urlaub in 6 Sätzen erzählen — mit Reflexiv-Perfekt (hat sich …), Konnektoren (sogar · außerdem) und ist geritten."
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "zelt",
+      "jugendherberge",
+      "unterhalten",
+      "unterkunft",
+      "aufregend",
+      "aergern",
+      "beschweren",
+      "bedanken",
+      "bequem",
+      "praktisch",
+      "sogar",
+      "ausserdem",
+      "reiten"
+    ],
+    "summary": {
+      "ar": "عطلتنا: نمنا في خيمة. ركبتُ الخيل على الشاطئ. تسامرنا بودّ. انزعجنا من الطقس. وصوّرنا أيضاً. بل سبحنا في البحر! النظام: hat sich (انعكاسي) · ist geritten (sein) · sogar/außerdem (رابطان).",
+      "de": "Unser Urlaub: Wir haben in einem Zelt geschlafen. Ich bin am Strand geritten. Wir haben uns gut unterhalten. Wir haben uns über das Wetter geärgert. Außerdem haben wir Fotos gemacht. Wir haben sogar im Meer geschwommen. Das System: hat sich (Reflexiv) · ist geritten (sein) · sogar/außerdem (Konnektoren)."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "الضمير الانعكاسي يجلس بعد المساعد مباشرة (haben uns/mich) — والتصريف آخر الجملة وحده",
+          "de": "~~Wir haben gut unterhalten uns.~~ · ~~Ich habe geärgert mich.~~"
+        },
+        "correct": {
+          "ar": "تسامرنا بودّ. · انزعجتُ.",
+          "de": "Wir haben uns gut unterhalten. · Ich habe mich geärgert."
+        },
+        "exercise": {
+          "a": "Ich habe mich über das Wetter geärgert.",
+          "q": "رتّب: geärgert / habe / über das Wetter / mich / Ich"
+        },
+        "whyArabicSpeakerFails": "العربية تلصق الضمير بالفعل (تسامرْنا · انزعجتُ)، فيرميه المتعلم آخر الجملة الألمانية — بينما الألمانية تضعه بعد المساعد مباشرة والتصريف ينفرد بالنهاية (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "الشكر الألماني بحرفين لازمين: bedanken bei الشخص für الشيء — لا مفعول مباشر أبداً",
+          "de": "~~Ich habe mich den Fahrer bedankt.~~"
+        },
+        "correct": {
+          "ar": "شكرتُ السائق على المساعدة.",
+          "de": "Ich habe mich beim Fahrer für die Hilfe bedankt."
+        },
+        "exercise": {
+          "a": "beim · für die (beim = bei+dem)",
+          "q": "أكمل: Ich habe mich ___ Fahrer ___ Hilfe bedankt."
+        },
+        "whyArabicSpeakerFails": "العربية تشكر بمفعول مباشر (شكرتُ السائقَ)، فينقل المتعلم المفعول (den Fahrer) — بينما الألمانية: الشخص بـbei (عنده) والشيء بـfür (عنه) (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "reiten قوي (reitet · ritt · geritten — لا ge-reitet) وحركي (sein لا haben)",
+          "de": "~~Ich habe am Strand gereitet.~~"
+        },
+        "correct": {
+          "ar": "ركبتُ الخيل على الشاطئ.",
+          "de": "Ich bin am Strand geritten."
+        },
+        "exercise": {
+          "a": "ist · geritten",
+          "q": "haben أم sein؟ Er ___ sehr schnell ___. (reiten)"
+        },
+        "whyArabicSpeakerFails": "قالب -t المحفوظ (gelacht/gemacht) يُعمَّم على كل فعل، وhaben يُختار تلقائياً — بينما reiten من عائلة fahren: تصريف قوي بـi ومساعد sein (خريطة التداخل 10‑ي)"
+      }
+    ]
+  },
+  "warmup": {
+    "cardIds": [
+      "unterwegs",
+      "sonst",
+      "urlaub"
+    ]
+  }
+}
