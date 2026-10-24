@@ -245,3 +245,59 @@ export function minuteConversation(dayIndex: number, pairs: readonly DialoguePai
   const pair = pairs[((dayIndex % pairs.length) + pairs.length) % pairs.length]!;
   return { pair, durationSec: 60 };
 }
+
+/** F006 — وضع الطريق (D302 · N-156/5): تدريب صوتي بلا شاشة — 5 مقاطع معروفة بفجوات ترديد، والأمان أولاً */
+export const ON_THE_GO_TITLE_AR = "🎧 وضع الطريق";
+export const ON_THE_GO_SAFETY_AR =
+  "للأمان: ابدأ ثم ضع الهاتف في جيبك — لا تنظر إلى الشاشة أثناء المشي أو القيادة.";
+export const ON_THE_GO_REPEAT_AR = "ردّد بصوت عالٍ بعد كل مقطع.";
+export const ON_THE_GO_GAP_MS = 3000; // فجوة الترديد بين المقاطع
+export const ON_THE_GO_COUNT = 5;
+
+export type OnTheGoItem = { trackId: string; text: string };
+
+/** قائمة اليوم: مهارة اليوم + سؤالين وجوابيهما من الحوار — تناوب حتمي بفهرس اليوم */
+export function onTheGoQueue(
+  dayIndex: number,
+  skill: SkillLine,
+  pairs: readonly DialoguePair[],
+): OnTheGoItem[] {
+  if (pairs.length === 0) return [{ trackId: skill.id, text: skill.text }];
+  const at = (i: number) => pairs[((dayIndex + i) % pairs.length + pairs.length) % pairs.length]!;
+  const p1 = at(0);
+  const p2 = at(1);
+  return [
+    { trackId: skill.id, text: skill.text },
+    { trackId: p1.q.id, text: p1.q.text },
+    { trackId: p1.a.id, text: p1.a.text },
+    { trackId: p2.q.id, text: p2.q.text },
+    { trackId: p2.a.id, text: p2.a.text },
+  ];
+}
+
+const wait = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
+
+/**
+ * تشغيل القائمة مقطعاً مقطعاً مع فجوة ترديد — يُعيد عدد ما عُزِف فعلاً.
+ * الإلغاء تعاوني بين المقاطع (isCancelled) — بلا قطع لمقطع بدأ (أمان السمع).
+ */
+export async function playOnTheGo(
+  player: { play(req: { trackId?: string; text: string }): Promise<unknown> },
+  queue: readonly OnTheGoItem[],
+  gapMs: number,
+  onProgress: (played: number, total: number) => void,
+  isCancelled: () => boolean,
+): Promise<number> {
+  let played = 0;
+  for (const [i, item] of queue.entries()) {
+    if (isCancelled()) break;
+    await player.play({ trackId: item.trackId, text: item.text });
+    played = i + 1;
+    onProgress(played, queue.length);
+    if (i < queue.length - 1) {
+      await wait(gapMs);
+      if (isCancelled()) break;
+    }
+  }
+  return played;
+}

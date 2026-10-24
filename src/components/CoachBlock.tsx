@@ -1,6 +1,7 @@
 // src/components/CoachBlock.tsx — حضور المدرب اليومي (N-148 · D248 — §2.10): درّبني + النوافذ + إغلاق اليوم
 // الحارس: تثبيت ومهارات فقط (أخطاؤك وحروفك — لا جديد) · الأحد صمت (isRestDay) · بلا لوم (D23)
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import { audioPlayer } from "../lib/audio-player.js";
 import type { CoachWindow, ErrorEntry, Word } from "../../content/schemas/index.js";
 import {
   DEFAULT_WINDOWS,
@@ -8,13 +9,19 @@ import {
   MINUTE_CONVERSATION_REVEAL_AR,
   MINUTE_CONVERSATION_TITLE_AR,
   MINUTE_CONVERSATION_YOU_AR,
+  ON_THE_GO_GAP_MS,
+  ON_THE_GO_REPEAT_AR,
+  ON_THE_GO_SAFETY_AR,
+  ON_THE_GO_TITLE_AR,
   SKILL_OF_DAY_HINT_AR,
   WINDOW_LABELS_AR,
   WEEKLY_CHALLENGE_DONE_AR,
   dayIndexOfYear,
   isRestDay,
   minuteConversation,
+  onTheGoQueue,
   pickCoachDrill,
+  playOnTheGo,
   skillOfDay,
   weeklyChallenge,
 } from "../lib/coach-engine.js";
@@ -52,6 +59,22 @@ export function CoachBlock({
   const numbers = useMemo(numberLines, []);
   const times = useMemo(timeLines, []);
   const skill = skillOfDay(dayIndexOfYear(), { letter: letters, number: numbers, time: times });
+  const [goRunning, setGoRunning] = useState(false);
+  const [goPlayed, setGoPlayed] = useState(0);
+  const goQueue = skill ? onTheGoQueue(dayIndexOfYear(), skill.line, dialogue) : [];
+  const goCancel = useRef(false);
+  const startOnTheGo = () => {
+    goCancel.current = false;
+    setGoRunning(true);
+    setGoPlayed(0);
+    void playOnTheGo(
+      audioPlayer(),
+      goQueue,
+      ON_THE_GO_GAP_MS,
+      (played) => setGoPlayed(played),
+      () => goCancel.current,
+    ).finally(() => setGoRunning(false));
+  };
   const evening = new Date().getHours() >= 21;
   const phrase = words.length > 0 ? sentenceOfTheDay(words.map((w) => ({ de: w.de, ar: w.ar[0]! })), dayIndexOfYear()) : null;
   const close = () => {
@@ -97,6 +120,26 @@ export function CoachBlock({
               <PlayButton audioId={convo.pair.a.id} speakText={convo.pair.a.text} label={`استمع لجواب مولر: ${convo.pair.a.text}`} />{" "}
               <small>{MINUTE_CONVERSATION_YOU_AR}</small>
             </p>
+          )}
+        </div>
+      )}
+      {goQueue.length > 0 && !rest && (
+        <div data-testid="on-the-go">
+          <p>{ON_THE_GO_TITLE_AR} ({goQueue.length} مقاطع — {ON_THE_GO_REPEAT_AR})</p>
+          <p><small>{ON_THE_GO_SAFETY_AR}</small></p>
+          {!goRunning ? (
+            <button data-testid="go-start" onClick={startOnTheGo}>
+              ابدأ وضع الطريق ▶
+            </button>
+          ) : (
+            <>
+              <p data-testid="go-progress" aria-live="polite">
+                عُزِف {goPlayed} من {goQueue.length}…
+              </p>
+              <button data-testid="go-stop" onClick={() => { goCancel.current = true; }}>
+                أوقف ⏹
+              </button>
+            </>
           )}
         </div>
       )}
