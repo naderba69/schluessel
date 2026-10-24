@@ -1463,7 +1463,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
               <summary>المزيد اليوم 🌱 — اختياريات تثبيت (10 دقائق وأقل)</summary>
               {dueCount > 0 && (
                 <button data-testid="start-micro" onClick={startMicro}>
-                  ⚡ جلسة مصغّرة — {dueCount} مستحقة (نحو 10 دقائق)
+                  ⚡ جلسة مصغّرة (نحو 10 دقائق)
                 </button>
               )}
           {shadowLesson && !shadowDoneToday && (

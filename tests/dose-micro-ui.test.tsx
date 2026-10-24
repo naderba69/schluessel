@@ -94,10 +94,11 @@ describe("التطبيق — تدفق المصغّرة الكامل", () => {
     });
     await store.save({ ...base, srsCards: [card("hallo")] });
     await act(async () => root.render(<App store={store} />));
-    // زر المصغّرة ظاهر (مستحق واحد) — والجرعة الافتراضية 90
+    // زر المصغّرة ظاهر — بلا عدّ (العدّ مرة واحدة في due-count · D311)
     const micro = q("start-micro");
     expect(micro).not.toBeNull();
-    expect(micro!.textContent).toContain("1 مستحقة");
+    expect(micro!.textContent).toContain("جلسة مصغّرة");
+    expect(micro!.textContent).not.toContain("مستحقة");
     expect(q("start-session")!.textContent).toContain("90 دقيقة");
     // تغيير الجرعة ينعكس على الزر ويُحفَظ
     await click(q("dose-45"));
