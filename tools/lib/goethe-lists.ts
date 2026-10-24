@@ -19,7 +19,7 @@
 import type { Level } from "../../content/schemas/common.js";
 import type { OfficialWordlist, WordlistEntry } from "../../content/schemas/wordlist.js";
 
-export type EvidenceKind = "entry" | "sub" | "group" | "feminine" | "plural" | "contraction" | "stem" | "herkunft" | "composed";
+export type EvidenceKind = "entry" | "sub" | "group" | "feminine" | "plural" | "contraction" | "stem" | "herkunft" | "composed" | "example";
 export interface Evidence {
   list: string;
   level: Level;
@@ -209,6 +209,11 @@ const isNoun = (w: WordLike) => w.wordClass === "noun";
 const articleOk = (entry: WordlistEntry, article?: string) =>
   !article || !entry.article || entry.article.split("/").includes(article);
 
+/** D312 (N-165): الضربة على مثال مطبوع لا على الأصل — الصيغة المطابقة ليست الصيغة الأولى للمدخل */
+function isExampleHit(h: Hit): boolean {
+  return normKey(h.lemma) !== normKey(h.entry.lemmas[0] ?? "");
+}
+
 /** بحث صيغة واحدة: الاسم يطابق صيغة بحرف كبير (وأداة متوافقة)؛ غير الاسم يقبل اختلاف حالة الحرف الأول */
 function lookup(ix: ListIndex, lemma: string, noun: boolean, article?: string): Hit[] {
   const k0 = normKey(lemma);
@@ -221,7 +226,8 @@ function lookup(ix: ListIndex, lemma: string, noun: boolean, article?: string): 
     if (low.length) hits = low;
   }
   if (hits.length === 0) hits = ix.squash.get(squashOf(k)) ?? [];
-  if (noun) hits = hits.filter((h) => isCap(h.lemma) && articleOk(h.entry, article));
+  // D312 (N-165): أداة المدخل لأصله لا لمثاله — «die Feier (z. B. Feierabend)» أصلها die لكن المثال der Feierabend
+  if (noun) hits = hits.filter((h) => isCap(h.lemma) && (isExampleHit(h) || articleOk(h.entry, article)));
   // غير الاسم لا يُثبته اسم: الأداة «mal» ليست «das Mal» — إلا اسماً مُدرجاً بحرفه الكبير نفسه (قطعة «Danke» تطابق danke أعلاه)
   else hits = hits.filter((h) => !isCap(h.lemma) || (isCap(k) && h.lemma === k && !h.entry.article));
   return hits;
@@ -302,6 +308,7 @@ export function evidenceIn(w: WordLike, ix: ListIndex): Evidence | null {
   const hits = lookup(ix, lemma, noun, w.article);
   if (hits.length) {
     const best = hits.find((h) => h.entry.kind === "main") ?? hits.find((h) => h.entry.kind === "sub") ?? hits[0]!;
+    if (noun && isExampleHit(best)) return ev(ix, "example", best.entry, `${lemma} ← مثال مطبوع`);
     return ev(ix, kindOf(best.entry), best.entry);
   }
   if (noun && /in$/.test(lemma) && lemma.length >= 5 && (!w.article || w.article === "die")) {
