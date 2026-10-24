@@ -39,12 +39,17 @@ export function CoachBlock({
   windows = DEFAULT_WINDOWS,
   words = [],
   studiedToday = false,
+  shadowLessonId = null,
+  onStartShadow,
 }: {
   errors: readonly ErrorEntry[];
   dueCount: number;
   hasNewContent: boolean;
   /** D304: هل درس المتعلم اليوم (من جلسة اليوم) — لسطر التقرير المسائي فقط */
   studiedToday?: boolean;
+  /** D306: حوار الظل اليوم (null = لا ظل) + بدئه — تبويب المدرب يدل على الشادوينغ */
+  shadowLessonId?: string | null;
+  onStartShadow?: () => void;
   /** N-151 (D251): نوافذ المتعلم من طقس البداية/الإعدادات — الافتراضي الثلاث */
   windows?: readonly CoachWindow[];
   /** N-148 (D252): كلمات الدرس لعبارة اليوم — تصل مع الحزمة؛ القائمة لا تنتظرها (تعزيز تدريجي) */
@@ -218,6 +223,16 @@ export function CoachBlock({
               <p>{recurring.payload.explanation}</p>
             </>
           )}
+        </div>
+      )}
+      {shadowLessonId && !rest && (
+        <div data-testid="shadow-entry">
+          <p>
+            🎙️ ظل اليوم: حوار <span dir="ltr">{shadowLessonId}</span> (3 دقائق)
+          </p>
+          <button data-testid="shadow-entry-start" onClick={onStartShadow}>
+            ابدأ الظل
+          </button>
         </div>
       )}
       {evening && !rest && (

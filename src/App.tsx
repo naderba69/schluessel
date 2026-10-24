@@ -1251,6 +1251,11 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           windows={state.profile.coachWindows}
           words={firstBundle?.direct ?? []}
           studiedToday={(todayEntry?.durationMinutes ?? 0) > 0}
+          shadowLessonId={shadowLesson ?? null}
+          onStartShadow={() => {
+            setTab("today");
+            startShadow();
+          }}
         />
       ) : tab === "golden" ? (
         <GoldenBook errors={state.errors} />
