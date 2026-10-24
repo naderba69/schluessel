@@ -26,7 +26,7 @@ import {
   weeklyChallenge,
 } from "../lib/coach-engine.js";
 import { sentenceOfTheDay } from "../lib/writing.js";
-import { tomorrowPreview } from "../lib/warmth-engine.js";
+import { coachEveningReport, tomorrowPreview } from "../lib/warmth-engine.js";
 import { alphabetLetters, dialoguePairs, numberLines, timeLines } from "./SkillsLab.js";
 import { PlayButton } from "./LessonSession.js";
 
@@ -36,10 +36,13 @@ export function CoachBlock({
   hasNewContent,
   windows = DEFAULT_WINDOWS,
   words = [],
+  studiedToday = false,
 }: {
   errors: readonly ErrorEntry[];
   dueCount: number;
   hasNewContent: boolean;
+  /** D304: هل درس المتعلم اليوم (من جلسة اليوم) — لسطر التقرير المسائي فقط */
+  studiedToday?: boolean;
   /** N-151 (D251): نوافذ المتعلم من طقس البداية/الإعدادات — الافتراضي الثلاث */
   windows?: readonly CoachWindow[];
   /** N-148 (D252): كلمات الدرس لعبارة اليوم — تصل مع الحزمة؛ القائمة لا تنتظرها (تعزيز تدريجي) */
@@ -194,6 +197,9 @@ export function CoachBlock({
       )}
       {evening && !rest && (
         <div data-testid="day-closing">
+          <p data-testid="coach-evening-report">
+            {coachEveningReport({ resolvedCount: errors.filter((e) => e.resolved).length, studiedToday })}
+          </p>
           <p>🌙 ماذا تتذكر من اليوم؟ قلها بصوت عالٍ — النوم يثبّتها.</p>
           <p data-testid="tomorrow-preview">{tomorrowPreview({ hasNewContent, dueCount })}</p>
         </div>

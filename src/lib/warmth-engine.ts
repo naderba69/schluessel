@@ -40,6 +40,20 @@ export function eveningReport(input: {
   return `يوم جميل: ${review}${traps} — تقدم حقيقي. النوم شريكك في التثبيت. 🌙`;
 }
 
+/** التقرير المسائي للمدرب (F011 · D304 · N-156/7): سطر واحد هادئ في تبويب المدرب — بلا أرقام مخيفة وبلا لوم */
+export function coachEveningReport(input: {
+  resolvedCount: number;
+  studiedToday: boolean;
+}): string {
+  const studied = input.studiedToday
+    ? "درستَ اليوم — والقليل المتصل يغلب الكثير المنقطع"
+    : "حتى بلا دراسة اليوم، الباب مفتوح دائماً";
+  const resolved = input.resolvedCount > 0
+    ? `، وحللتَ ${input.resolvedCount} من أخطائك الذهبية 💛`
+    : "";
+  return `مساء الخير 🌙: ${studied}${resolved}. نم جيداً — النوم يثبّت ما تعلمته.`;
+}
+
 /** معاينة الغد (F12): جملة واحدة — تُقال دائماً بإطار اختياري هادئ */
 export function tomorrowPreview(input: { hasNewContent: boolean; dueCount: number }): string {
   const due = input.dueCount > 0

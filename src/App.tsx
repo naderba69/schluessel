@@ -1250,6 +1250,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           hasNewContent={!!current}
           windows={state.profile.coachWindows}
           words={firstBundle?.direct ?? []}
+          studiedToday={(todayEntry?.durationMinutes ?? 0) > 0}
         />
       ) : tab === "golden" ? (
         <GoldenBook errors={state.errors} />
