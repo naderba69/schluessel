@@ -301,3 +301,22 @@ export async function playOnTheGo(
   }
   return played;
 }
+
+/** F002 — مهمة النافذة (D303 · N-156/6): النبض يحمل مهمة محددة لا دعوة عامة — نفس تدريب «درّبني» مسمّى سلفاً */
+export const WINDOW_TASK_PREFIX_AR = "🎯 مهمة النافذة";
+export const WINDOW_TASK_SKILL_FALLBACK_AR = "استمع لمهارة اليوم وردّدها.";
+
+export type WindowTask = { titleAr: string; taskAr: string };
+
+/** مهمة النافذة: أحدث خطأ ذهبي غير محلول ← حرف اليوم ← مهارة اليوم (نفس ترتيب «درّبني») */
+export function windowTask(
+  window: CoachWindow,
+  errors: readonly ErrorEntry[],
+  letterText: string | null,
+): WindowTask {
+  const label = WINDOW_LABELS_AR[window];
+  const drill = pickCoachDrill(errors);
+  if (drill) return { titleAr: `${WINDOW_TASK_PREFIX_AR} — ${label}`, taskAr: `أصلح خطأك الذهبي 💛: «${drill.payload.wrong}»` };
+  if (letterText) return { titleAr: `${WINDOW_TASK_PREFIX_AR} — ${label}`, taskAr: `استمع وردّد حرف اليوم: ${letterText}` };
+  return { titleAr: `${WINDOW_TASK_PREFIX_AR} — ${label}`, taskAr: WINDOW_TASK_SKILL_FALLBACK_AR };
+}

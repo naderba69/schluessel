@@ -1037,6 +1037,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       {pulse && !session && !labsMode && (
         <CoachPulse
           window={pulse}
+          errors={state.errors}
           onTrain={() => {
             setTab("coach");
             setPulse(null);
