@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-25 — الدفعة 285: D330 — a2-u3-d3 «في الصيدلية» — حوار الشكوى والاستفسار (المرحلة د · خطة D326)
+الدرس 105 (A2-U3-D3 — حوار الصيدلية): 13 كلمة للشكوى والاستفسار (Sprechstunde · Krankenschwester · schwanger · nützlich · Zitrone · Süßigkeiten · fett · sauer · eintragen · Schere · Orange · sportlich · Schokolade) — والمحور: نقلٌ خالص (Akk+Dat مراجعة: Tragen Sie sich ein!) بلا قاعدة جديدة. 13 مقطعاً صوتياً؛ 3 تصحيحات نطق يقينية (Sprechstunde: حدّ التركيب · Krankenschwester: إدغام الـng · Orange: النبر والـ[ʒ]).
+- **البوابة:** GATE_LINE
+
 ## 2026-10-25 — الدفعة 284: D329 — إصلاح CI — رابط Creme الصحيح (تفريق duden: ß→sz!) + إغلاق N-185
 CI (بشبكة حية) رفض D328: رابط .../Creme مكسور (404) — duden يفرّق المتجانسات (الكريم ≠ اللون) فاستُبدل بـCreme_Salbe_Sueszspeise متحققاً حياً (مؤنث · die Cremes · [ˈkreːmə]). وCI ذاته أكّد سلامة 304 روابط (منها Parfuem/Kosmetik — تحققا حياً هناك!) — فأُغلقت N-185.
 - **البوابة:** vitest 1608/1608 (129) · tsc 0 · validate-content 1531/0/0 · build · docs-sync 144 · speech ناعم 1/2938.

@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 285 (2026-10-25) — D330: a2-u3-d3 «في الصيدلية» — حوار الشكوى والاستفسار (المرحلة د · خطة D326)
+- **الخلاصة:** الدرس 105 (A2-U3-D3 — حوار الصيدلية): 13 كلمة للشكوى والاستفسار (Sprechstunde · Krankenschwester · schwanger · nützlich · Zitrone · Süßigkeiten · fett · sauer · eintragen · Schere · Orange · sportlich · Schokolade) — والمحور: نقلٌ خالص (Akk+Dat مراجعة: Tragen Sie sich ein!) بلا قاعدة جديدة. 13 مقطعاً صوتياً؛ 3 تصحيحات نطق يقينية (Sprechstunde: حدّ التركيب · Krankenschwester: إدغام الـng · Orange: النبر والـ[ʒ]).
+- **التالي:** a2-u3-d4 «نصيحة صحية» (كتابة — نقل sollen).
+
 ## الدفعة 284 (2026-10-25) — D329: إصلاح CI — رابط Creme الصحيح (تفريق duden: ß→sz!) + إغلاق N-185
 - **الخلاصة:** CI (بشبكة حية) رفض D328: رابط .../Creme مكسور (404) — duden يفرّق المتجانسات (الكريم ≠ اللون) فاستُبدل بـCreme_Salbe_Sueszspeise متحققاً حياً (مؤنث · die Cremes · [ˈkreːmə]). وCI ذاته أكّد سلامة 304 روابط (منها Parfuem/Kosmetik — تحققا حياً هناك!) — فأُغلقت N-185.
 - **التالي:** a2-u3-d3 «في الصيدلية» (كلام — نقل خالص).
