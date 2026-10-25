@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-25 — الدفعة 278: D323 — إصلاح CI — رابط Zettel الصحيح (تفريق duden) + ملاحظتان
+CI (بشبكة حية) رفض D322: رابط .../Zettel مكسور (404) — duden يفرّق المتجانسات (الورقة ≠ النسيج) فاستُبدل بـZettel_Blatt_Papier_Notiz متحققاً حياً (مذكر · die Zettel · [ˈtsɛtl̩]). وCI ذاته أكّد سلامة 297 رابطاً (منها روابط d2–d5 المشتقة نمطياً — تحققت حياً هناك!).
+- **البوابة:** vitest 1565/1565 (127) · tsc 0 · validate-content 1498/0/0 · build · docs-sync 138 · speech ناعم 1/2910.
+
 ## 2026-10-25 — الدفعة 277: D322 — a2-u2-d5 «ممنوع/لا حاجة» — تمييز النفي (المرحلة ج · خطة D317)
 الدرس 101 (A2-U2-D5 — تمييز النفي): 13 كلمة لقواعد العمل (aufmachen · beenden · deutlich · erkältet sein · Führerschein · gefährlich · Krankheit · sauber · schimpfen · streng · vorsichtig · Zettel · zumachen) — والمحور: نقلٌ لا جديد (darf-nicht للمنع ≠ muss-nicht لعدم الحاجة + منفصلان + ge- في الوسط + nicht قبل الصفة). 13 مقطعاً صوتياً؛ تصحيح نطق يقيني واحد (zumachen: النبر على zu).
 - **البوابة:** vitest 1565/1565 (127 · +1) · tsc 0 · validate-content 1498/0/0 · build · docs-sync 137 · speech ناعم 1/2910.
