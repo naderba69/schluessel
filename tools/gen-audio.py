@@ -1114,6 +1114,9 @@ def build_all() -> None:
     ("word-schimpfen", "schimpfen.", "schimpfen", ["a2-u2-d5"]),
     ("word-sauber", "sauber.", "sauber", ["a2-u2-d5"]),
     ("word-deutlich", "deutlich.", "deutlich", ["a2-u2-d5"]),
+    # A2 — الوحدة 2 «العمل والمهنة» (D324 · d6)
+    ("word-berichten", "berichten.", "berichten", ["a2-u2-d6"]),
+    ("word-beraten", "beraten.", "beraten", ["a2-u2-d6"]),
     ("word-neu", "neu.", "neu", ["a1-u1-d1"]),
     ("word-wie-viel", "wie viel.", "wie-viel", ["a1-u1-d1"]),
     ("word-heute", "heute.", "heute", ["a1-u1-d2"]),
