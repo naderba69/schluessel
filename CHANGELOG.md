@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-25 — الدفعة 287: D332 — إصلاح CI — رابط Orange الصحيح (تفريق duden: Frucht ≠ Farbe!) + إغلاق N-190
+CI (بشبكة حية) رفض D331: رابط .../Orange مكسور (404) — duden يفرّق المتجانسات (الفاكهة المؤنثة ≠ اللون المحايد) فاستُبدل بـOrange_Frucht متحققاً حياً (مؤنث · die Orangen · [oˈraŋʒə] — تطابق مع #145!). وCI ذاته أكّد سلامة Sprechstunde/Krankenschwester — فأُغلقت N-190 (تحقق حيّ كامل للثلاثة).
+- **البوابة:** vitest ✓ 1609/1609 (129 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1545/0/0 · build ✓ 2.44s · docs-sync --check ✓ 147 قراراً مهيكلاً · آخرها D332 · الدفعة 287 · الموجّه 4.89 · notes check ✓ 0/21/171 (192) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 145 · duden-links ✓ تُخطّي (309 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2951
+
 ## 2026-10-25 — الدفعة 286: D331 — إصلاح تزامن الأقسام المولَّدة بعد D330 (CHANGELOG/STATE فقط)
 بعد دفع D330 تبيّن أن تحرير كتلته (الأرقام + سطر البوابة) بعد --write أبطل الأقسام المولَّدة في CHANGELOG.md وSTATE.md — أُعيد التوليد ولا شيء غيره (لا محتوى ولا اختبارات ولا أصوات).
 - **البوابة:** vitest ✓ 1609/1609 (129 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1545/0/0 · build ✓ 2.67s · docs-sync --check ✓ 146 قراراً مهيكلاً · آخرها D331 · الدفعة 286 · الموجّه 4.88 · notes check ✓ 0/22/170 (192) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 145 · duden-links ✓ تُخطّي (309 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2951
