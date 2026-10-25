@@ -61014,6 +61014,46 @@
       "hash": "sha256:2c47670ed6e9e84fc44101e6b59b62dda4e974137b1b3f04a2b31fcf370c1652",
       "pcmSha256": "961e7fac0a966e9ef58ecb4ff5e3b22f1fd5f63657508cd6d94cf55785511c1d",
       "rmsDb": -17.15
+    },
+    {
+      "id": "word-stift",
+      "file": "words/audio/de-DE/word-stift.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Stift.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u1-d6"
+      ],
+      "durationMs": 850,
+      "sizeBytes": 4043,
+      "hash": "sha256:daef07090caaa46275a68e52ae1ad05915242252285d378c018a758f4780df0b",
+      "pcmSha256": "e557afc339c9fcd3d4a7fd98851d98891cf027da1474226798285aff3bd7c46b",
+      "rmsDb": -17.29
+    },
+    {
+      "id": "word-zeugnis",
+      "file": "words/audio/de-DE/word-zeugnis.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Zeugnis.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u1-d6"
+      ],
+      "durationMs": 1303,
+      "sizeBytes": 5967,
+      "hash": "sha256:607ae853666600361935b42c233d731a42e76a3f7242faa58e32c3b7b728b801",
+      "pcmSha256": "cf8584d17e53e3916057d564dd3ee4485c57305fe8be0eb87abc546ab06a660c",
+      "rmsDb": -17.28
     }
   ],
   "characterVoices": {

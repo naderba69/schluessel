@@ -1042,6 +1042,9 @@ def build_all() -> None:
     ("word-erst", "erst.", "erst", ["a2-u1-d5"]),
     ("word-fast", "fast.", "fast", ["a2-u1-d5"]),
     ("word-ganz", "ganz.", "ganz", ["a2-u1-d5"]),
+    # A2 — الوحدة 1 «العودة والماضي» (D316 · d6 توليف)
+    ("word-stift", "der Stift.", "stift", ["a2-u1-d6"]),
+    ("word-zeugnis", "das Zeugnis.", "zeugnis", ["a2-u1-d6"]),
     ("word-neu", "neu.", "neu", ["a1-u1-d1"]),
     ("word-wie-viel", "wie viel.", "wie-viel", ["a1-u1-d1"]),
     ("word-heute", "heute.", "heute", ["a1-u1-d2"]),
