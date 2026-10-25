@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-25 — الدفعة 275: D320 — a2-u2-d3 «مقابلة عمل» — Perfekt التجربة + dass التبرير (المرحلة ج · خطة D317)
+الدرس 99 (A2-U2-D3 — يوم الكلام): 13 كلمة للمقابلة (Anzug · beantworten · begründen · Bescheid · sich informieren · Interview · Kenntnisse · nennen · nervös · sammeln · stattfinden · sympathisch · Vertrag) — والمحور: مراجعة بلا جديد (Perfekt للخبرة + dass للتبرير + منفصل stattfindet + انعكاسي informieren). 13 مقطعاً صوتياً جديداً؛ تصحيحا نطق يقينيان (Interview دخيلة [vjuː] · nervös نبر أخير).
+- **البوابة:** vitest 1563/1563 (127 · +1) · tsc 0 · validate-content 1470/0/0 · build · docs-sync 135 · speech ناعم 1/2884.
+
 ## 2026-10-25 — الدفعة 274: D319 — a2-u2-d2 «يفسر سبب قراره» — dass بعد الرأي (المرحلة ج · خطة D317)
 الدرس 98 (A2-U2-D2): 13 كلمة للرأي والقرار (wählen · lügen · Erlaubnis · verbieten · Team · Wettbewerb · sicher · froh · einverstanden · vergleichen · raten · Lüge · wahr) — والمحور: dass بعد الرأي والقول والشعور (قانون weil نفسه: الفعل آخراً) + فخ dass/das + raten بالداتيف. 13 مقطعاً صوتياً؛ تصحيحا نطق (Erlaubnis إجهار b←p «تحت التحقق السمعي» · Wettbewerb شوا be- يقيني).
 - **البوابة:** vitest 1562/1562 (127 · +1) · tsc 0 · validate-content 1456/0/0 · build · docs-sync 134 · speech ناعم 1/2871.

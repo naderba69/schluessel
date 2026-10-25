@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 275 (2026-10-25) — D320: a2-u2-d3 «مقابلة عمل» — Perfekt التجربة + dass التبرير (المرحلة ج · خطة D317)
+- **الخلاصة:** الدرس 99 (A2-U2-D3 — يوم الكلام): 13 كلمة للمقابلة (Anzug · beantworten · begründen · Bescheid · sich informieren · Interview · Kenntnisse · nennen · nervös · sammeln · stattfinden · sympathisch · Vertrag) — والمحور: مراجعة بلا جديد (Perfekt للخبرة + dass للتبرير + منفصل stattfindet + انعكاسي informieren). 13 مقطعاً صوتياً جديداً؛ تصحيحا نطق يقينيان (Interview دخيلة [vjuː] · nervös نبر أخير).
+- **التالي:** a2-u2-d4 (الإيميل: كتابة رسمية + schriftlich).
+
 ## الدفعة 274 (2026-10-25) — D319: a2-u2-d2 «يفسر سبب قراره» — dass بعد الرأي (المرحلة ج · خطة D317)
 - **الخلاصة:** الدرس 98 (A2-U2-D2): 13 كلمة للرأي والقرار (wählen · lügen · Erlaubnis · verbieten · Team · Wettbewerb · sicher · froh · einverstanden · vergleichen · raten · Lüge · wahr) — والمحور: dass بعد الرأي والقول والشعور (قانون weil نفسه: الفعل آخراً) + فخ dass/das + raten بالداتيف. 13 مقطعاً صوتياً؛ تصحيحا نطق (Erlaubnis إجهار b←p «تحت التحقق السمعي» · Wettbewerb شوا be- يقيني).
 - **التالي:** a2-u2-d3 (المقابلة: أسئلة ernst + مراجعة Perfekt).
