@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-25 — الدفعة 284: D329 — إصلاح CI — رابط Creme الصحيح (تفريق duden: ß→sz!) + إغلاق N-185
+CI (بشبكة حية) رفض D328: رابط .../Creme مكسور (404) — duden يفرّق المتجانسات (الكريم ≠ اللون) فاستُبدل بـCreme_Salbe_Sueszspeise متحققاً حياً (مؤنث · die Cremes · [ˈkreːmə]). وCI ذاته أكّد سلامة 304 روابط (منها Parfuem/Kosmetik — تحققا حياً هناك!) — فأُغلقت N-185.
+- **البوابة:** vitest 1608/1608 (129) · tsc 0 · validate-content 1531/0/0 · build · docs-sync 144 · speech ناعم 1/2938.
+
 ## 2026-10-25 — الدفعة 283: D328 — a2-u3-d2 «يصف روتينه» — الانعكاسي Dat منهجياً (المرحلة د · خطة D326)
 الدرس 104 (A2-U3-D2 — يصف روتينه): 13 كلمة للخط الزمني والعناية (täglich · morgens · vormittags · mittags · nachmittags · abends · nachts · manchmal · trocken · schmutzig · Creme · Parfüm · Kosmetik) — والمحور: مع الجزء الضمير داتيف (ars-reflexiv-dat الجديد: mir/dir/sich — mich→mir · dich→dir · sich ثابتة!) + مراجعة Akk. 13 مقطعاً صوتياً؛ تصحيحا نطق يقينيان (nachmittags: طول الـa · Parfüm: النبر أخيراً).
 - **البوابة:** vitest 1608/1608 (129 · +1) · tsc 0 · validate-content 1531/0/0 · build · docs-sync 143 · speech ناعم 1/2938.

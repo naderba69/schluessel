@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 284 (2026-10-25) — D329: إصلاح CI — رابط Creme الصحيح (تفريق duden: ß→sz!) + إغلاق N-185
+- **الخلاصة:** CI (بشبكة حية) رفض D328: رابط .../Creme مكسور (404) — duden يفرّق المتجانسات (الكريم ≠ اللون) فاستُبدل بـCreme_Salbe_Sueszspeise متحققاً حياً (مؤنث · die Cremes · [ˈkreːmə]). وCI ذاته أكّد سلامة 304 روابط (منها Parfuem/Kosmetik — تحققا حياً هناك!) — فأُغلقت N-185.
+- **التالي:** a2-u3-d3 «في الصيدلية» (كلام — نقل خالص).
+
 ## الدفعة 283 (2026-10-25) — D328: a2-u3-d2 «يصف روتينه» — الانعكاسي Dat منهجياً (المرحلة د · خطة D326)
 - **الخلاصة:** الدرس 104 (A2-U3-D2 — يصف روتينه): 13 كلمة للخط الزمني والعناية (täglich · morgens · vormittags · mittags · nachmittags · abends · nachts · manchmal · trocken · schmutzig · Creme · Parfüm · Kosmetik) — والمحور: مع الجزء الضمير داتيف (ars-reflexiv-dat الجديد: mir/dir/sich — mich→mir · dich→dir · sich ثابتة!) + مراجعة Akk. 13 مقطعاً صوتياً؛ تصحيحا نطق يقينيان (nachmittags: طول الـa · Parfüm: النبر أخيراً).
 - **التالي:** a2-u3-d3 «في الصيدلية» (كلام — نقل خالص).
