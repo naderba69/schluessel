@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-25 — الدفعة 282: D327 — a2-u3-d1 «يصف عاداته» — الانعكاسي Akk منهجياً (المرحلة د · خطة D326)
+الدرس 103 (A2-U3-D1 — يصف صباحه): 13 كلمة للعادات والجسم (interessieren · setzen · joggen · trainieren · üben · Körper · Magen · aktiv · stark · wach · dick · dünn · schädlich) — والمحور: النظام وراء أفعال معروفة (ars-reflexiv-akk الجديد: الفاعل = المفعول ← mich/dich/sich/uns/euch/sich بعد الفعل). 13 مقطعاً صوتياً؛ تصحيح نطق يقيني واحد (joggen: الـj إنجليزية dʒ — سابقة Job).
+- **البوابة:** vitest 1607/1607 (129 · +1) · tsc 0 · validate-content 1516/0/0 · build · docs-sync 142 · speech ناعم 1/2925.
+
 ## 2026-10-25 — الدفعة 281: D326 — مسودة خطة A2-U3 «الجسم والصحة» — تُعرض على المالك قبل الإنتاج
 خطة الوحدة الثالثة (الجسم بعد العمل): d1 «يصف عاداته» (Reflexive-Akk منهجي: mich/dich/sich — النظام وراء أفعال معروفة) · d2 «يصف روتينه» (Reflexive-Dat: mir/dir/sich — العناية اليومية) · d3 (كلام) «في الصيدلية» (يشتكي بـweh tun ويستفسر بـsich informieren — نقلٌ خالص) · d4 (كتابة) «نصيحة صحية» (sollen-transfer من U2) · d5 «mich أم mir؟» (خلط وتمييز) · d6 توليف + كلمتان · D7 برهان a2-unit3-proof (النمط + حارس D325). الميزانية 67 كلمة (13×5 + 2) ← التغطية 926/1159. ملفا ترسانة جديدان (ars-reflexiv-akk + ars-reflexiv-dat). التوصية: اعتمادها كما هي.
 - **البوابة:** vitest 1606/1606 (129) · tsc 0 · validate-content 1501/0/0 · build · docs-sync 141 · speech ناعم 1/2912.

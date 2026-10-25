@@ -23,14 +23,14 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       "a1-u13-d1", "a1-u13-d2", "a1-u13-d3", "a1-u13-d4", "a1-u13-d5", "a1-u13-d6", // D204 · D205 · D206 · D207 · D208 · D209:
       "a1-u14-d1", "a1-u14-d2", "a1-u14-d3", "a1-u14-d4", "a1-u14-d5", "a1-u14-d6", // D210 · D211 · D212 · D213 · D214 · D215: تكملة SD1 للفهم (D113) — الوحدة 14 بين 13 وأسبوع الامتحان 15
       "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6", // D113: أسبوع الامتحان 13 → 17 (D112) → 15 (13–14 تكملة للفهم)
-      "a2-u1-d1", "a2-u1-d2", "a2-u1-d3", "a2-u1-d4", "a2-u1-d5", "a2-u1-d6", "a2-u2-d1", "a2-u2-d2", "a2-u2-d3", "a2-u2-d4", "a2-u2-d5", "a2-u2-d6", // D324: يوم d6 — توليف الوحدة (نكتب تقرير الأسبوع) · D322: يوم d5 — تمييز النفي (muss-nicht ≠ darf-nicht) · D321: يوم d4 — الإيميل (Sie-Imperativ + dass) · D320: يوم d3 — المقابلة (Perfekt + dass) · D319: يوم d2 — يفسر قراره (dass + مراجعة weil) · D318: يوم d1 — يصف مهامه (Modal دلالة) · D316: يوم d6 — توليف الأسبوع (نكتب شهادة الأسبوع) · D315: يوم d5 — خلط/تثبيت (يروي قصة مختلطة) · D312: يوم d2 — يروي يومه (haben/sein) · D313: يوم d3 — يحكي عطلته (انعكاسي + reiten) · D314: يوم d4 — يوميات war/hatte
+      "a2-u1-d1", "a2-u1-d2", "a2-u1-d3", "a2-u1-d4", "a2-u1-d5", "a2-u1-d6", "a2-u2-d1", "a2-u2-d2", "a2-u2-d3", "a2-u2-d4", "a2-u2-d5", "a2-u2-d6", "a2-u3-d1", // D327: يوم d1 — يصف عاداته (الانعكاسي Akk) · D324: يوم d6 — توليف الوحدة (نكتب تقرير الأسبوع) · D322: يوم d5 — تمييز النفي (muss-nicht ≠ darf-nicht) · D321: يوم d4 — الإيميل (Sie-Imperativ + dass) · D320: يوم d3 — المقابلة (Perfekt + dass) · D319: يوم d2 — يفسر قراره (dass + مراجعة weil) · D318: يوم d1 — يصف مهامه (Modal دلالة) · D316: يوم d6 — توليف الأسبوع (نكتب شهادة الأسبوع) · D315: يوم d5 — خلط/تثبيت (يروي قصة مختلطة) · D312: يوم d2 — يروي يومه (haben/sein) · D313: يوم d3 — يحكي عطلته (انعكاسي + reiten) · D314: يوم d4 — يوميات war/hatte
     ]);
     expect(ALL_LESSONS.map((l) => [l.unit, l.day])).toEqual([
       [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [3, 6], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [4, 6], [5, 1], [5, 2], [5, 3], [5, 4], [5, 5], [5, 6], [6, 1], [6, 2], [6, 3], [6, 4], [6, 5], [6, 6], [7, 1], [7, 2], [7, 3], [7, 4], [7, 5], [7, 6], [8, 1], [8, 2], [8, 3], [8, 4], [8, 5], [8, 6], [9, 1], [9, 2], [9, 3], [9, 4], [9, 5], [9, 6], [10, 1], [10, 2], [10, 3], [10, 4], [10, 5], [10, 6], [11, 1], [11, 2], [11, 3], [11, 4], [11, 5], [11, 6], [12, 1], [12, 2], [12, 3], [12, 4], [12, 5], [12, 6],
       [13, 1], [13, 2], [13, 3], [13, 4], [13, 5], [13, 6],
       [14, 1], [14, 2], [14, 3], [14, 4], [14, 5], [14, 6],
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
-      [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], // D324: +u2-d6 // D322: +u2-d5 // D321: +u2-d4 // D320: +u2-d3 // D319: +u2-d2 // D318: +u2-d1 // D316: +d6 // D315: +d5
+      [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], [3, 1], // D327: +u3-d1 // D324: +u2-d6 // D322: +u2-d5 // D321: +u2-d4 // D320: +u2-d3 // D319: +u2-d2 // D318: +u2-d1 // D316: +d6 // D315: +d5
     ]);
     expect(ALL_WORDS.length).toBe(readdirSync(join(__dirname, "..", "content", "words")).filter((f) => f.endsWith(".json")).length); // ثابت مشتقّ (D188): السجل = ملفات القرص · كان 884 + + zum Beispiel · der Satz · glauben (نواة a1-u12-d4 — D179) + der Blick · das Internet · die Information (نواة a1-u12-d2 — D177) + das Ergebnis (نواة a1-u11-d5 — D175) + fehlen (نواة a1-u11-d2 — D172) + der Teil · tun · weh tun (نواة a1-u11-d1 — D171) + normal · der Job · verdienen (نواة a1-u10-d5 — D170) + der Anfang · der Verein (نواة a1-u10-d4 — D169) + früher · gewinnen (نواة a1-u10-d3 — D168) + lieb · der Moment · enden (نواة a1-u10-d2 — D167) + andere · weiter · halten · die Polizei · die Stelle (نواة a1-u9-d5 — D165) + auf sein · zu sein (نواة a1-u9-d4 — D164) + bitten · erklären · die Hilfe (نواة a1-u9-d3 — D163) + kriegen (نواة a1-u8-d3 — D158) + beste · circa (نواة a1-u8-d2 — D157) + dieser · gefallen (نواة a1-u8-d1 — D156) + gleich · ab · Achtung (نواة a1-u7-d4 — D154) + die Hausaufgabe · nie · einfach (نواة a1-u7-d3 — D153) + der Film · mehr · wandern (نواة a1-u7-d2 — D152) + die Firma · immer · die meisten (نواة a1-u7-d1 — D151) + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
@@ -1672,6 +1672,26 @@ describe("A2 يبدأ (D101) — الترتيب بالمستوى + قواعد A2
       expect(w.goetheList).toContain("A2"); // berichten ص10 · beraten ص10 — مداخل رئيسية
       expect(a1Ids.has(w.id)).toBe(false);
       expect(w.sampleSentence?.sourceLesson).toBe("a2-u2-d6");
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u3-d1 (D327): الانعكاسي Akk — 13 كلمة + نظام الضمير الجديد + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u3-d1")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("الضمير");
+    expect(l.usedArsenalIds).toEqual(["ars-reflexiv-akk"]); // جديد الوحدة (D326)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(3);
+      expect(w.goetheList).toContain("A2"); // ومنها dick/üben بـ[A1,A2] — في SD1/A2 ولم تُدرَّس (سابقة sehr/bis)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u3-d1");
+      if (w.grammarRisks.includes("reflexive")) expect(w.forms!.perfekt, w.id).toMatch(/^hat sich /);
+      if (w.grammarRisks.includes("needs-ist")) expect(w.forms!.perfekt, w.id).toMatch(/^ist /);
     }
     expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
     expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
