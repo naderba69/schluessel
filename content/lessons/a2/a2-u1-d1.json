@@ -86,23 +86,28 @@
         "items": [
           {
             "q": "lachen → Ich habe ___ (القالب 1)",
-            "a": "gelacht — ge + الجذر + t"
+            "a": "gelacht",
+            "why": "القالب 1 (ضعيف): ge + الجذر + t."
           },
           {
             "q": "fallen → Es ist ___ (القالب 2)",
-            "a": "gefallen — ge + الجذر + en"
+            "a": "gefallen",
+            "why": "القالب 2 (قوي): ge + الجذر + en — والسقوط بـsein!"
           },
           {
             "q": "anmachen → Ich habe das Licht ___ (القالب 3)",
-            "a": "angemacht — البادئة المنفصلة + ge + الجذر + t"
+            "a": "angemacht",
+            "why": "القالب 3 (منفصل): البادئة + ge + الجذر + t."
           },
           {
             "q": "vergessen → Ich habe ___ (القالب 4)",
-            "a": "vergessen — ver- ملتصقة: بلا ge"
+            "a": "vergessen",
+            "why": "القالب 4: ver- ملتصقة — بلا ge (وقوي: vergessen)."
           },
           {
             "q": "passieren → Was ist ___? (القالب 5)",
-            "a": "passiert — -ieren: بلا ge"
+            "a": "passiert",
+            "why": "القالب 5: -ieren بلا ge — وpassieren دائماً مع sein!"
           }
         ],
         "interleavedWith": [
@@ -121,23 +126,28 @@
         "items": [
           {
             "q": "Mein Handy ___ auf den Boden gefallen.",
-            "a": "ist — السقوط تغيّر مكان"
+            "a": "ist",
+            "why": "السقوط تغيّر مكان = sein."
           },
           {
             "q": "Ich ___ das Licht ausgemacht.",
-            "a": "habe — فعل متعدٍّ: أطفأتُ شيئاً"
+            "a": "habe",
+            "why": "فعل متعدٍّ (أطفأتُ شيئاً) = haben."
           },
           {
             "q": "Das Licht ___ plötzlich ausgegangen.",
-            "a": "ist — لازم: انطفأ وحده"
+            "a": "ist",
+            "why": "لازم (انطفأ وحده بلا مفعول) = sein."
           },
           {
             "q": "Was ___ gestern passiert?",
-            "a": "ist — passieren دائماً مع sein"
+            "a": "ist",
+            "why": "passieren دائماً مع sein (قاعدة تحفظ!)."
           },
           {
             "q": "Ich ___ mich sehr beeilt.",
-            "a": "habe — الانعكاسي دائماً مع haben"
+            "a": "habe",
+            "why": "الانعكاسي (sich) دائماً مع haben."
           }
         ],
         "interleavedWith": [
@@ -156,19 +166,23 @@
         "items": [
           {
             "q": "Ich habe meine Brille geverloren.",
-            "a": "Ich habe meine Brille verloren. — ver- بلا ge"
+            "a": "Ich habe meine Brille verloren.",
+            "why": "ver- ملتصقة: بلا ge — verloren لا geverloren!"
           },
           {
             "q": "Das Spiel hat schon gebeginnt.",
-            "a": "Das Spiel hat schon begonnen. — be- بلا ge + تصريف قوي"
+            "a": "Das Spiel hat schon begonnen.",
+            "why": "be- بلا ge + تصريف قوي"
           },
           {
             "q": "Hast du schon gefrühstückt? — Nein, schon nicht.",
-            "a": "Nein, noch nicht. — نفي schon هو noch nicht"
+            "a": "Nein, noch nicht.",
+            "why": "نفي schon هو noch nicht"
           },
           {
             "q": "Gestern ich bin spät ausgegangen.",
-            "a": "Gestern bin ich spät ausgegangen. — الفعل المساعد في الخانة الثانية (V2)"
+            "a": "Gestern bin ich spät ausgegangen.",
+            "why": "الفعل المساعد في الخانة الثانية (V2)"
           }
         ],
         "interleavedWith": [
@@ -183,7 +197,8 @@
         "items": [
           {
             "q": "احكِ صباح أمس في 3 جمل (سجّل صوتك): الاستيقاظ ← الضوء ← مشكلة صغيرة",
-            "a": "Gestern bin ich um sieben aufgestanden. Ich habe das Licht angemacht und mich beeilt. Dann habe ich meinen Schlüssel vergessen!"
+            "a": "Gestern bin ich um sieben aufgestanden. Ich habe das Licht angemacht und mich beeilt. Dann habe ich meinen Schlüssel vergessen!",
+            "why": "قارن تسجيلك بالنموذج: aufgestanden (منفصل!) + angemacht + beeilt (انعكاسي!) — والمساعد الصحيح لكل فعل."
           }
         ],
         "interleavedWith": [

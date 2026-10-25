@@ -219,24 +219,29 @@
         ],
         "items": [
           {
-            "a": "war — الوصف والحال بـwar لا Perfekt",
-            "q": "sein ← Es ___ sehr schön (وصف = ؟)"
+            "q": "sein ← Es ___ sehr schön. (وصف = ؟)",
+            "a": "war",
+            "why": "الوصف والحال بـwar — لا Perfekt للأوصاف!"
           },
           {
-            "a": "hatte — الحال الدائم بـhatte (كـwar)",
-            "q": "haben ← Ich ___ Angst (حال = ؟)"
+            "q": "haben ← Ich ___ Angst. (حال = ؟)",
+            "a": "hatte",
+            "why": "الحال الدائم بـhatte (كـwar)."
           },
           {
-            "a": "habe · mich · erinnert — الحدث انعكاسي: haben + sich بعد المساعد",
-            "q": "sich erinnern ← Ich ___ ___ an den Urlaub ___"
+            "q": "sich erinnern ← Ich habe ___ an den Urlaub erinnert.",
+            "a": "mich",
+            "why": "الحدث انعكاسي: haben + الضمير mich بعد المساعد."
           },
           {
-            "a": "haben · uns · gestritten — قوي بـi (كـgeritten في d3) + sich",
-            "q": "sich streiten ← Wir ___ ___ ___ (قوي!)"
+            "q": "sich streiten ← Wir haben ___ gestritten. (قوي!)",
+            "a": "uns",
+            "why": "الضمير uns + القوي بـi (كـgeritten في d3!)."
           },
           {
-            "a": "habe · geweint — البكاء حدث: Perfekt كامل",
-            "q": "weinen ← Ich ___ ___ (حدث)"
+            "q": "weinen ← Ich ___ geweint. (حدث)",
+            "a": "habe",
+            "why": "البكاء حدث (وقع وانتهى): haben + geweint."
           }
         ],
         "type": "verb-bank"
@@ -254,20 +259,24 @@
         ],
         "items": [
           {
-            "a": "waren · habe · geschwommen — الوصف war (جمع: waren) والسباحة حدث",
-            "q": "Meine Ferien ___ sehr schön. Ich ___ jeden Tag im Meer ___."
+            "q": "Meine Ferien ___ sehr schön. Ich habe jeden Tag im Meer geschwommen.",
+            "a": "waren",
+            "why": "الوصف war (والجمع: waren) — والسباحة حدث (Perfekt)."
           },
           {
-            "a": "habe · erinnert · haben · unterhalten — تذكرتُ العطلة وتسامرنا (d3 يعود!)",
-            "q": "Ich ___ mich an den Urlaub ___. Wir ___ uns gut ___."
+            "q": "Ich ___ mich an den Urlaub erinnert. Wir haben uns gut unterhalten.",
+            "a": "habe",
+            "why": "تذكرتُ العطلة (habe + mich!) وتسامرنا (d3 يعود!)."
           },
           {
-            "a": "haben · gestritten · war · habe · geweint — تشاجرنا (حدث) فكنتُ حزيناً (حال) وبكيتُ (حدث)",
-            "q": "Einmal ___ wir uns ___. Ich ___ traurig und ___ ___."
+            "q": "Einmal haben wir uns ___. Ich war traurig und habe geweint. (streiten)",
+            "a": "gestritten",
+            "why": "تشاجرنا (حدث!) فكنتُ حزيناً (حال) وبكيتُ (حدث)."
           },
           {
-            "a": "war · habe · geträumt — الأمنية حال (war) والحلم حدث ليلي (träumen von)",
-            "q": "Mein Wunsch ___ ein Hund. Ich ___ vom Meer ___."
+            "q": "Mein Wunsch ___ ein Hund. Ich habe vom Meer geträumt.",
+            "a": "war",
+            "why": "الأمنية حال (war) — والحلم حدث ليلي (träumen von + داتيف!)."
           }
         ],
         "type": "gap-fill"
@@ -281,20 +290,24 @@
         ],
         "items": [
           {
-            "a": "Es war sehr schön. — الوصف بـwar: لا Perfekt للحال",
-            "q": "Es hat sehr schön gewesen."
+            "a": "Es war sehr schön.",
+            "q": "Es hat sehr schön gewesen.",
+            "why": "الوصف بـwar: لا Perfekt للحال"
           },
           {
-            "a": "Ich habe mich an den Urlaub erinnert. — sich لا تسقط من الانعكاسي أبداً",
-            "q": "Ich habe an den Urlaub erinnert."
+            "a": "Ich habe mich an den Urlaub erinnert.",
+            "q": "Ich habe an den Urlaub erinnert.",
+            "why": "sich لا تسقط من الانعكاسي أبداً"
           },
           {
-            "a": "Wir haben uns gestritten. — قوي: streiten · stritt · gestritten (كـreiten · ritt · geritten)",
-            "q": "Gestern haben wir uns gestreitet."
+            "a": "Wir haben uns gestritten.",
+            "q": "Gestern haben wir uns gestreitet.",
+            "why": "قوي: streiten · stritt · gestritten (كـreiten · ritt · geritten)"
           },
           {
-            "a": "Wirklich war ich traurig. — الصدارة تدفع الفعل للثانية (V2 كـsonst/außerdem)",
-            "q": "Wirklich ich war traurig."
+            "a": "Wirklich war ich traurig.",
+            "q": "Wirklich ich war traurig.",
+            "why": "الصدارة تدفع الفعل للثانية (V2 كـsonst/außerdem)"
           }
         ],
         "type": "error-hunt"
@@ -309,7 +322,8 @@
         "items": [
           {
             "a": "Meine Ferien waren sehr schön. Ich habe jeden Tag im Meer geschwommen. Ich hatte Angst vor Hunden. Wir haben uns einmal gestritten. Ich war traurig und habe geweint. Mein Wunsch war ein Hund — wirklich!",
-            "q": "اقرأ صفحة يومياتك بصوت عالٍ (سجّل): 3 أحداث (Perfekt) + 3 أوصاف (war/hatte) — ابدأ بـ«Meine Ferien…»"
+            "q": "اقرأ صفحة يومياتك بصوت عالٍ (سجّل): 3 أحداث (Perfekt) + 3 أوصاف (war/hatte) — ابدأ بـ«Meine Ferien…»",
+            "why": "قارن تسجيلك: 3 أحداث Perfekt (geschwommen/…) + 3 أوصاف war/hatte — الحدث يُحكى والحال يُوصف."
           }
         ],
         "type": "speaking"

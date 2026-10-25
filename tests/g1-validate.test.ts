@@ -27,9 +27,10 @@ const sampleLesson = JSON.parse(
     },
     uebung: {
       stations: [
-        { type: "choice", items: [{ q: 1 }], interleavedWith: ["a1-u2-d3"], explanationRequired: true },
-        { type: "gap-fill", items: [{ q: 1 }], interleavedWith: ["a1-u1-d5"], explanationRequired: true },
-        { type: "match", items: [{ q: 1 }], interleavedWith: ["a1-u3-d2"], explanationRequired: true },
+        // D325: بنود المحاكاة بأشكال المحرك (e-practice-item-shape يرفض الدمى)
+        { type: "choice", items: [{ q: "«شكراً»؟", choices: ["Danke", "Bitte"], a: "Danke", why: "كلمة الشكر الأساسية بالألمانية." }], interleavedWith: ["a1-u2-d3"], explanationRequired: true },
+        { type: "gap-fill", items: [{ q: "Ich ___ Yusuf.", a: "heiße", why: "التعارف: heißen مع ich ← heiße." }], interleavedWith: ["a1-u1-d5"], explanationRequired: true },
+        { type: "match", items: [{ pairs: [{ de: "die Wohnung", ar: "شقة" }, { de: "der Tisch", ar: "طاولة" }, { de: "das Buch", ar: "كتاب" }], why: "كلمات السكن الثلاث في هذا الدرس." }], interleavedWith: ["a1-u3-d2"], explanationRequired: true },
       ],
       communicativeTask: {
         goal: { de: "Familie vorstellen", ar: "تقديم الأسرة" },

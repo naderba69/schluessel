@@ -8,7 +8,7 @@ import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile, BARE_ARTICLE_IDS,
   Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, TransferPack, VideoShelf, AudioScript, StoryBook, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
-  GrammarRuleFile, LessonUpgradePlan,
+  GrammarRuleFile, LessonUpgradePlan, PRACTICE_ITEM_SHAPES,
 } from "../content/schemas/index.js";
 import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
 import { evidenceIn } from "../content/schemas/answer-key.js";
@@ -139,6 +139,17 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         case "lesson": {
           const l = Lesson.parse(entry.data);
           lessons.set(l.id, { path: entry.path, lesson: l });
+          // D325 (معركة المحرك D7): بنود التدريب تُفحص بأشكال المحرك نفسها (PRACTICE_ITEM_SHAPES)
+          // — فالمخطط يقبل أي مفاتيح (z.record) وكان يمرر بنوداً لا يستطيع المحرك تنميطها (A2 كلها قبل D325).
+          l.uebung.stations.forEach((st, si) => {
+            const shape = PRACTICE_ITEM_SHAPES[st.type];
+            st.items.forEach((it, ii) => {
+              const r = shape.safeParse(it);
+              if (!r.success)
+                push("error", "e-practice-item-shape", entry.path,
+                  `${l.id} s${si}-i${ii} (${st.type}): ${r.error.issues[0]?.message ?? "شكل مرفوض"}`);
+            });
+          });
           break;
         }
         case "audio-manifest": {

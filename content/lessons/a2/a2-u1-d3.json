@@ -220,24 +220,29 @@
         ],
         "items": [
           {
-            "a": "habe · mich — الانعكاسي haben دائماً، والضمير ملتصق بالمساعد",
-            "q": "sich ärgern ← Ich ___ ___ geärgert (الضمير بعد المساعد)"
+            "q": "sich ärgern ← Ich habe ___ geärgert. (الضمير بعد المساعد)",
+            "a": "mich",
+            "why": "الانعكاسي haben دائماً — والضمير mich ملتصق بالمساعد!"
           },
           {
-            "a": "haben · uns — الجمع: uns (قارن: Wir haben uns gefreut)",
-            "q": "sich beschweren ← Wir ___ ___ beschwert"
+            "q": "sich beschweren ← Wir haben ___ beschwert.",
+            "a": "uns",
+            "why": "مع الجمع: uns (قارن: Wir haben uns gefreut)."
           },
           {
-            "a": "bin · geritten — كـgefahren: حركة بـsein وتصريف قوي (ei ← i)",
-            "q": "reiten ← Ich ___ am Strand ___ (حركة = ؟)"
+            "q": "reiten ← Ich ___ am Strand geritten. (حركة = ؟)",
+            "a": "bin",
+            "why": "كـgefahren: حركة = sein — وتصريف قوي (ei←i)."
           },
           {
-            "a": "habe · mich — والشكر يحتاج bei/für (يأتي في المصيدة)",
-            "q": "sich bedanken ← Ich ___ ___ bedankt"
+            "q": "sich bedanken ← Ich habe ___ bedankt.",
+            "a": "mich",
+            "why": "الضمير mich — والشكر يحتاج bei/für (يأتي في المصيدة!)."
           },
           {
-            "a": "haben · uns · unterhalten — القاعدة: بلا ge (كـvergessen في d1)",
-            "q": "sich unterhalten ← Wir ___ ___ gut ___"
+            "q": "sich unterhalten ← Wir haben ___ gut unterhalten.",
+            "a": "uns",
+            "why": "الضمير uns — والفعل بلا ge (كـvergessen في d1!)."
           }
         ],
         "type": "verb-bank"
@@ -255,20 +260,24 @@
         ],
         "items": [
           {
-            "a": "haben · geschlafen · haben · unterhalten — نمنا (haben) وتسامرنا (انعكاسي = haben)",
-            "q": "Wir ___ in einem Zelt ___ und ___ uns gut ___."
+            "q": "Wir haben in einem Zelt ___ und haben uns gut unterhalten. (schlafen)",
+            "a": "geschlafen",
+            "why": "نمنا (haben — لا حركة!) وتسامرنا (انعكاسي = haben)."
           },
           {
-            "a": "bin · geritten · hat · geschmeckt — ركبتُ (sein) والمثلجات أعجبتنا (haben)",
-            "q": "Ich ___ am Strand ___. Sogar das Eis ___ gut ___."
+            "q": "Ich bin am Strand ___. Sogar das Eis hat gut geschmeckt. (reiten)",
+            "a": "geritten",
+            "why": "ركبتُ (sein — حركة!) والمثلجات أعجبتنا (haben)."
           },
           {
-            "a": "haben · geärgert · haben · gemacht — انزعجنا من الطقس (über+Akk) وصوّرنا أيضاً",
-            "q": "Wir ___ uns über das Wetter ___. Außerdem ___ wir Fotos ___."
+            "q": "Wir haben uns über das Wetter ___. Außerdem haben wir Fotos gemacht. (ärgern)",
+            "a": "geärgert",
+            "why": "انزعجنا من الطقس (ärgern über + أكوزاتيف!) وصوّرنا أيضاً."
           },
           {
-            "a": "haben · gefunden · haben · bedankt — وجدنا المبيت وشكرنا (bedanken + bei)",
-            "q": "Wir ___ eine billige Unterkunft ___. Wir ___ uns beim Kellner ___."
+            "q": "Wir haben eine billige Unterkunft ___. Wir haben uns beim Kellner bedankt. (finden)",
+            "a": "gefunden",
+            "why": "وجدنا المبيت (finden←gefunden قوي!) وشكرنا (bedanken + bei)."
           }
         ],
         "type": "gap-fill"
@@ -282,20 +291,24 @@
         ],
         "items": [
           {
-            "a": "Wir haben uns gut unterhalten. — الضمير بعد المساعد مباشرة لا آخر الجملة",
-            "q": "Wir haben gut unterhalten uns."
+            "a": "Wir haben uns gut unterhalten.",
+            "q": "Wir haben gut unterhalten uns.",
+            "why": "الضمير بعد المساعد مباشرة لا آخر الجملة"
           },
           {
-            "a": "Ich habe mich beim Fahrer bedankt. — الشكر بـbei (عند الشخص) وfür (عن الشيء) لا مفعول مباشر",
-            "q": "Ich habe mich den Fahrer bedankt."
+            "a": "Ich habe mich beim Fahrer bedankt.",
+            "q": "Ich habe mich den Fahrer bedankt.",
+            "why": "الشكر بـbei (عند الشخص) وfür (عن الشيء) لا مفعول مباشر"
           },
           {
-            "a": "Ich bin am Strand geritten. — حركة = sein + تصريف قوي (reitet · ritt · geritten)",
-            "q": "Ich habe am Strand gereitet."
+            "a": "Ich bin am Strand geritten.",
+            "q": "Ich habe am Strand gereitet.",
+            "why": "حركة = sein + تصريف قوي (reitet · ritt · geritten)"
           },
           {
-            "a": "Außerdem habe ich Fotos gemacht. — الصدارة تدفع الفعل للثانية (V2 كـsonst في d2)",
-            "q": "Außerdem ich habe Fotos gemacht."
+            "a": "Außerdem habe ich Fotos gemacht.",
+            "q": "Außerdem ich habe Fotos gemacht.",
+            "why": "الصدارة تدفع الفعل للثانية (V2 كـsonst في d2)"
           }
         ],
         "type": "error-hunt"
@@ -310,7 +323,8 @@
         "items": [
           {
             "a": "Wir haben in einem Zelt geschlafen. Ich bin am Strand geritten. Wir haben uns gut unterhalten. Wir haben uns über das Wetter geärgert. Außerdem haben wir Fotos gemacht. Wir haben sogar im Meer geschwommen!",
-            "q": "احكِ عطلتك (Urlaub) في 6 جمل (سجّل صوتك): المبيت ← نشاط ← تسامر ← مشكلة صغيرة ← صورة ← مفاجأة"
+            "q": "احكِ عطلتك (Urlaub) في 6 جمل (سجّل صوتك): المبيت ← نشاط ← تسامر ← مشكلة صغيرة ← صورة ← مفاجأة",
+            "why": "قارن تسجيلك: geschlafen + geritten (حركة!) + unterhalten/geärgert (انعكاسي!) + gemacht — المساعد والضمير في مكانيهما."
           }
         ],
         "type": "speaking"

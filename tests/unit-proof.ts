@@ -47,7 +47,7 @@ function wrongAttempt(item: TypedItem): string | readonly string[] | Readonly<Re
   }
 }
 
-export async function proveUnit(opts: { unit: string; ids: readonly string[]; nextId: string; prefixIds: readonly string[] }) {
+export async function proveUnit(opts: { unit: string; ids: readonly string[]; nextId: string | null; prefixIds: readonly string[] }) {
   const { unit, ids, nextId, prefixIds } = opts;
   const bundles: SessionBundle[] = [];
   for (const id of [...prefixIds, ...ids]) bundles.push(await loadSessionBundle(id));

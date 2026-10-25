@@ -86,24 +86,29 @@
         "type": "verb-bank",
         "items": [
           {
-            "q": "weggehen → Ich ___ um acht ___ (حركة = ؟)",
-            "a": "bin … weggegangen — الحركة بـsein، وge في المنتصف (قارن: angekommen)"
+            "q": "weggehen → Ich ___ um acht weggegangen. (حركة = ؟)",
+            "a": "bin",
+            "why": "الحركة (غادرتُ) = sein — وge في المنتصف (قارن: angekommen)."
           },
           {
-            "q": "wegwerfen → Ich ___ den Müll ___ (مفعول = ؟)",
-            "a": "habe … weggeworfen — المفعول به بـhaben (قارن: verpasst)"
+            "q": "wegwerfen → Ich ___ den Müll weggeworfen. (مفعول = ؟)",
+            "a": "habe",
+            "why": "المفعول به (رميتُ شيئاً) = haben (قارن: verpasst)."
           },
           {
-            "q": "werden → Es ___ spät ___ (تحوّل = ؟)",
-            "a": "ist … geworden — التحوّل تغيّر حال = sein (قارن: passiert)"
+            "q": "werden → Es ___ spät geworden. (تحوّل = ؟)",
+            "a": "ist",
+            "why": "التحوّل (تغيّر حال) = sein (قارن: passiert)."
           },
           {
-            "q": "erreichen → Ich ___ den Bus ___ (لحقتُ به = ؟)",
-            "a": "habe … erreicht — er- ملتصقة: بلا ge، والمفعول haben"
+            "q": "erreichen → Ich ___ den Bus erreicht. (لحقتُ به = ؟)",
+            "a": "habe",
+            "why": "لحقتُ بالحافلة (مفعول!) = haben — وer- ملتصقة بلا ge."
           },
           {
-            "q": "verschieben → Ich ___ den Termin ___",
-            "a": "habe … verschoben — ver- بلا ge + تصريف قوي (ie → o)"
+            "q": "verschieben → Ich ___ den Termin verschoben.",
+            "a": "habe",
+            "why": "أجّلتُ الموعد (مفعول) = haben — وver- بلا ge + تصريف قوي (ie←o)."
           }
         ],
         "interleavedWith": [
@@ -122,24 +127,29 @@
         "type": "gap-fill",
         "items": [
           {
-            "q": "Ich ___ um sieben aufgestanden, ___ gefrühstückt und ___ das Essen vorbereitet.",
-            "a": "bin · habe · habe — نهوض (حركة) ثم فطور وتجهيز (مفعولان)"
+            "q": "Ich ___ um sieben aufgestanden, habe gefrühstückt und habe das Essen vorbereitet.",
+            "a": "bin",
+            "why": "نهضتُ (حركة) = sein — ثم فطرتُ وجهّزتُ (مفعولان) = haben."
           },
           {
-            "q": "Der Fahrer ___ das Paket geliefert, dann ___ ich weggegangen.",
-            "a": "hat · bin — أوصل (مفعول) ثم غادرتُ (حركة)"
+            "q": "Der Fahrer ___ das Paket geliefert, dann bin ich weggegangen.",
+            "a": "hat",
+            "why": "أوصل (مفعول) = haben — ثم غادرتُ (حركة) = sein."
           },
           {
-            "q": "Ich ___ den Bus noch erreicht, sonst ___ ich den Termin verschoben.",
-            "a": "habe · habe — لحقتُ (مفعول) وإلا أجّلتُ (مفعول)"
+            "q": "Ich ___ den Bus noch erreicht, sonst habe ich den Termin verschoben.",
+            "a": "habe",
+            "why": "لحقتُ (مفعول) = haben — وإلا أجّلتُ (مفعول) = haben."
           },
           {
-            "q": "Es ___ spät geworden. Ich ___ müde geworden.",
-            "a": "ist · bin — تحوّل الوقت وتحوّل الحال: sein"
+            "q": "Es ___ spät geworden. Ich bin müde geworden.",
+            "a": "ist",
+            "why": "تحوّل الوقت وتحوّل الحال: sein للاثنين."
           },
           {
-            "q": "Um sechs ___ ich Feierabend gemacht, sonst ___ ich länger geblieben.",
-            "a": "habe · bin — أنهيتُ (مفعول) وإلا بقيتُ (bleiben لازم = sein)"
+            "q": "Um sechs ___ ich Feierabend gemacht, sonst bin ich länger geblieben.",
+            "a": "habe",
+            "why": "أنهيتُ الدوام (مفعول) = haben — وإلا بقيتُ (bleiben لازم!) = sein."
           }
         ],
         "interleavedWith": [
@@ -158,19 +168,23 @@
         "items": [
           {
             "q": "Ich habe den Müll weggegangen.",
-            "a": "Ich habe den Müll weggeworfen. — القمامة تُرمى (wegwerfen + haben)؛ أنت الذي تغادر (weggehen + sein)"
+            "a": "Ich habe den Müll weggeworfen.",
+            "why": "القمامة تُرمى (wegwerfen + haben)؛ أنت الذي تغادر (weggehen + sein)"
           },
           {
             "q": "Sonst ich bleibe zu Hause.",
-            "a": "Sonst bleibe ich zu Hause. — الظرف في الصدارة يدفع الفعل للخانة الثانية (V2)"
+            "a": "Sonst bleibe ich zu Hause.",
+            "why": "الظرف في الصدارة يدفع الفعل للخانة الثانية (V2)"
           },
           {
             "q": "Ich bin schon um acht gewegegangen.",
-            "a": "Ich bin schon um acht weggegangen. — المنفصل: weg-ge-gangen (ge في المنتصف)"
+            "a": "Ich bin schon um acht weggegangen.",
+            "why": "المنفصل: weg-ge-gangen (ge في المنتصف)"
           },
           {
             "q": "Es hat spät geworden.",
-            "a": "Es ist spät geworden. — التحوّل تغيّر حال = sein (قارن: passiert)"
+            "a": "Es ist spät geworden.",
+            "why": "التحوّل تغيّر حال = sein (قارن: passiert)"
           }
         ],
         "interleavedWith": [
@@ -185,7 +199,8 @@
         "items": [
           {
             "q": "احكِ يومك (heute) في 5 جمل (سجّل صوتك): المغادرة ← المواصلات ← الإنجاز ← الضوء ← نهاية الدوام",
-            "a": "Ich bin um acht weggegangen. Unterwegs habe ich den Bus noch erreicht. Ich habe das Essen vorbereitet. Ich habe das Licht ausgemacht. Um sechs habe ich Feierabend gemacht. Ich bin fleißig!"
+            "a": "Ich bin um acht weggegangen. Unterwegs habe ich den Bus noch erreicht. Ich habe das Essen vorbereitet. Ich habe das Licht ausgemacht. Um sechs habe ich Feierabend gemacht. Ich bin fleißig!",
+            "why": "قارن تسجيلك: weggegangen (حركة=sein!) + erreicht/vorbereitet (مفعول=haben) + ausgemacht + Feierabend gemacht — كل مساعد في مكانه."
           }
         ],
         "interleavedWith": [
