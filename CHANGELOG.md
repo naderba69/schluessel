@@ -3,9 +3,13 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-25 — الدفعة 286: D331 — إصلاح تزامن الأقسام المولَّدة بعد D330 (CHANGELOG/STATE فقط)
+بعد دفع D330 تبيّن أن تحرير كتلته (الأرقام + سطر البوابة) بعد --write أبطل الأقسام المولَّدة في CHANGELOG.md وSTATE.md — أُعيد التوليد ولا شيء غيره (لا محتوى ولا اختبارات ولا أصوات).
+- **البوابة:** vitest ✓ 1609/1609 (129 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1545/0/0 · build ✓ 2.67s · docs-sync --check ✓ 146 قراراً مهيكلاً · آخرها D331 · الدفعة 286 · الموجّه 4.88 · notes check ✓ 0/22/170 (192) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 145 · duden-links ✓ تُخطّي (309 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2951
+
 ## 2026-10-25 — الدفعة 285: D330 — a2-u3-d3 «في الصيدلية» — حوار الشكوى والاستفسار (المرحلة د · خطة D326)
 الدرس 105 (A2-U3-D3 — حوار الصيدلية): 13 كلمة للشكوى والاستفسار (Sprechstunde · Krankenschwester · schwanger · nützlich · Zitrone · Süßigkeiten · fett · sauer · eintragen · Schere · Orange · sportlich · Schokolade) — والمحور: نقلٌ خالص (Akk+Dat مراجعة: Tragen Sie sich ein!) بلا قاعدة جديدة. 13 مقطعاً صوتياً؛ 3 تصحيحات نطق يقينية (Sprechstunde: حدّ التركيب · Krankenschwester: إدغام الـng · Orange: النبر والـ[ʒ]).
-- **البوابة:** GATE_LINE
+- **البوابة:** vitest ✓ 1609/1609 (129 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1545/0/0 · build ✓ 2.53s · docs-sync --check ✓ 145 قراراً مهيكلاً · آخرها D330 · الدفعة 285 · الموجّه 4.87 · notes check ✓ 0/22/169 (191) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 145 · duden-links ✓ تُخطّي (309 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2951
 
 ## 2026-10-25 — الدفعة 284: D329 — إصلاح CI — رابط Creme الصحيح (تفريق duden: ß→sz!) + إغلاق N-185
 CI (بشبكة حية) رفض D328: رابط .../Creme مكسور (404) — duden يفرّق المتجانسات (الكريم ≠ اللون) فاستُبدل بـCreme_Salbe_Sueszspeise متحققاً حياً (مؤنث · die Cremes · [ˈkreːmə]). وCI ذاته أكّد سلامة 304 روابط (منها Parfuem/Kosmetik — تحققا حياً هناك!) — فأُغلقت N-185.
