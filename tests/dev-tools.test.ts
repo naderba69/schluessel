@@ -128,7 +128,7 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
     const lines = out.trim().split("\n");
     expect(lines[0]).toMatch(/duden-links: (\d+) رابطاً فريداً/u);
     const urls = lines.slice(1);
-    expect(urls.length).toBe(293); // D320: +3 (Vertrag · Anzug · Interview — مشتق نمطياً، تحقق حيّ مؤجل N-171) // D319: +3 (Erlaubnis · Wettbewerb · Luege — مشتق نمطياً، تحقق حيّ مؤجل N-169) // D318: +3 (Bewerbung · Gehalt_Lohn · Buero — متحقق حياً) // D316: +2 (Stift_Schreibgeraet · Zeugnis — متحقق حياً) // D315: +3 (verreisen · singen · Witz — متحقق حياً) // D314: +3 (Ferien · streiten · Angst — متحقق حياً) // D313: +3 (Unterkunft · reiten · Zelt_Konstruktion) // D312: +3 (werden_Vollverb · weggehen · Erfahrung) // D238: 270 بعد حذف الميت — مثبت بدقة: أي رابط جديد يُحدّثه عمداً
+    expect(urls.length).toBe(296); // D321: +3 (versuchen · Passwort · Mailbox — مشتق نمطياً، تحقق حيّ مؤجل N-172 — Termin سقطت: مكررة من a1-u3-d4) // D320: +3 (Vertrag · Anzug · Interview — مشتق نمطياً، تحقق حيّ مؤجل N-171) // D319: +3 (Erlaubnis · Wettbewerb · Luege — مشتق نمطياً، تحقق حيّ مؤجل N-169) // D318: +3 (Bewerbung · Gehalt_Lohn · Buero — متحقق حياً) // D316: +2 (Stift_Schreibgeraet · Zeugnis — متحقق حياً) // D315: +3 (verreisen · singen · Witz — متحقق حياً) // D314: +3 (Ferien · streiten · Angst — متحقق حياً) // D313: +3 (Unterkunft · reiten · Zelt_Konstruktion) // D312: +3 (werden_Vollverb · weggehen · Erfahrung) // D238: 270 بعد حذف الميت — مثبت بدقة: أي رابط جديد يُحدّثه عمداً
     expect(new Set(urls).size).toBe(urls.length); // فريدة
     for (const u of urls) expect(u).toMatch(/^https:\/\/www\.duden\.de\/rechtschreibung\/(?:[A-Za-zÄÖÜäöüß_-]|%[0-9A-F]{2})+$/u);
   }, 60_000);

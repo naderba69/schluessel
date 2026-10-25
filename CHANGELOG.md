@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-25 — الدفعة 276: D321 — a2-u2-d4 «إيميل عن العمل» — Sie-Imperativ + dass التمني/الاعتذار (المرحلة ج · خطة D317)
+الدرس 100 (A2-U2-D4 — يوم الكتابة): 13 كلمة للإيميل الرسمي (bestätigen · hoffentlich · klappen · leidtun · Mailbox · notwendig · Passwort · schaffen · schriftlich · speichern · Tipp · versuchen · wünschen) — والمحور: مراجعة بلا جديد (Sie-Imperativ للطلب الرسمي + dass بعد hoffen/leidtun + ver- بلا ge- + منفصل tut … leid). 13 مقطعاً صوتياً؛ صفر تصحيحات نطق (الـ13 ناجحة — أول مرة).
+- **البوابة:** vitest 1564/1564 (127 · +1) · tsc 0 · validate-content 1484/0/0 · build · docs-sync 136 · speech ناعم 1/2897.
+
 ## 2026-10-25 — الدفعة 275: D320 — a2-u2-d3 «مقابلة عمل» — Perfekt التجربة + dass التبرير (المرحلة ج · خطة D317)
 الدرس 99 (A2-U2-D3 — يوم الكلام): 13 كلمة للمقابلة (Anzug · beantworten · begründen · Bescheid · sich informieren · Interview · Kenntnisse · nennen · nervös · sammeln · stattfinden · sympathisch · Vertrag) — والمحور: مراجعة بلا جديد (Perfekt للخبرة + dass للتبرير + منفصل stattfindet + انعكاسي informieren). 13 مقطعاً صوتياً جديداً؛ تصحيحا نطق يقينيان (Interview دخيلة [vjuː] · nervös نبر أخير).
 - **البوابة:** vitest 1563/1563 (127 · +1) · tsc 0 · validate-content 1470/0/0 · build · docs-sync 135 · speech ناعم 1/2884.

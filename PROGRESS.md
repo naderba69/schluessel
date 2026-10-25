@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 276 (2026-10-25) — D321: a2-u2-d4 «إيميل عن العمل» — Sie-Imperativ + dass التمني/الاعتذار (المرحلة ج · خطة D317)
+- **الخلاصة:** الدرس 100 (A2-U2-D4 — يوم الكتابة): 13 كلمة للإيميل الرسمي (bestätigen · hoffentlich · klappen · leidtun · Mailbox · notwendig · Passwort · schaffen · schriftlich · speichern · Tipp · versuchen · wünschen) — والمحور: مراجعة بلا جديد (Sie-Imperativ للطلب الرسمي + dass بعد hoffen/leidtun + ver- بلا ge- + منفصل tut … leid). 13 مقطعاً صوتياً؛ صفر تصحيحات نطق (الـ13 ناجحة — أول مرة).
+- **التالي:** a2-u2-d5 (muss nicht/darf nicht — تمييز النفي).
+
 ## الدفعة 275 (2026-10-25) — D320: a2-u2-d3 «مقابلة عمل» — Perfekt التجربة + dass التبرير (المرحلة ج · خطة D317)
 - **الخلاصة:** الدرس 99 (A2-U2-D3 — يوم الكلام): 13 كلمة للمقابلة (Anzug · beantworten · begründen · Bescheid · sich informieren · Interview · Kenntnisse · nennen · nervös · sammeln · stattfinden · sympathisch · Vertrag) — والمحور: مراجعة بلا جديد (Perfekt للخبرة + dass للتبرير + منفصل stattfindet + انعكاسي informieren). 13 مقطعاً صوتياً جديداً؛ تصحيحا نطق يقينيان (Interview دخيلة [vjuː] · nervös نبر أخير).
 - **التالي:** a2-u2-d4 (الإيميل: كتابة رسمية + schriftlich).
