@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-25 — الدفعة 277: D322 — a2-u2-d5 «ممنوع/لا حاجة» — تمييز النفي (المرحلة ج · خطة D317)
+الدرس 101 (A2-U2-D5 — تمييز النفي): 13 كلمة لقواعد العمل (aufmachen · beenden · deutlich · erkältet sein · Führerschein · gefährlich · Krankheit · sauber · schimpfen · streng · vorsichtig · Zettel · zumachen) — والمحور: نقلٌ لا جديد (darf-nicht للمنع ≠ muss-nicht لعدم الحاجة + منفصلان + ge- في الوسط + nicht قبل الصفة). 13 مقطعاً صوتياً؛ تصحيح نطق يقيني واحد (zumachen: النبر على zu).
+- **البوابة:** vitest 1565/1565 (127 · +1) · tsc 0 · validate-content 1498/0/0 · build · docs-sync 137 · speech ناعم 1/2910.
+
 ## 2026-10-25 — الدفعة 276: D321 — a2-u2-d4 «إيميل عن العمل» — Sie-Imperativ + dass التمني/الاعتذار (المرحلة ج · خطة D317)
 الدرس 100 (A2-U2-D4 — يوم الكتابة): 13 كلمة للإيميل الرسمي (bestätigen · hoffentlich · klappen · leidtun · Mailbox · notwendig · Passwort · schaffen · schriftlich · speichern · Tipp · versuchen · wünschen) — والمحور: مراجعة بلا جديد (Sie-Imperativ للطلب الرسمي + dass بعد hoffen/leidtun + ver- بلا ge- + منفصل tut … leid). 13 مقطعاً صوتياً؛ صفر تصحيحات نطق (الـ13 ناجحة — أول مرة).
 - **البوابة:** vitest 1564/1564 (127 · +1) · tsc 0 · validate-content 1484/0/0 · build · docs-sync 136 · speech ناعم 1/2897.

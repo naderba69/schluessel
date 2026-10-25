@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 277 (2026-10-25) — D322: a2-u2-d5 «ممنوع/لا حاجة» — تمييز النفي (المرحلة ج · خطة D317)
+- **الخلاصة:** الدرس 101 (A2-U2-D5 — تمييز النفي): 13 كلمة لقواعد العمل (aufmachen · beenden · deutlich · erkältet sein · Führerschein · gefährlich · Krankheit · sauber · schimpfen · streng · vorsichtig · Zettel · zumachen) — والمحور: نقلٌ لا جديد (darf-nicht للمنع ≠ muss-nicht لعدم الحاجة + منفصلان + ge- في الوسط + nicht قبل الصفة). 13 مقطعاً صوتياً؛ تصحيح نطق يقيني واحد (zumachen: النبر على zu).
+- **التالي:** a2-u2-d6 (توليف + كلمتان).
+
 ## الدفعة 276 (2026-10-25) — D321: a2-u2-d4 «إيميل عن العمل» — Sie-Imperativ + dass التمني/الاعتذار (المرحلة ج · خطة D317)
 - **الخلاصة:** الدرس 100 (A2-U2-D4 — يوم الكتابة): 13 كلمة للإيميل الرسمي (bestätigen · hoffentlich · klappen · leidtun · Mailbox · notwendig · Passwort · schaffen · schriftlich · speichern · Tipp · versuchen · wünschen) — والمحور: مراجعة بلا جديد (Sie-Imperativ للطلب الرسمي + dass بعد hoffen/leidtun + ver- بلا ge- + منفصل tut … leid). 13 مقطعاً صوتياً؛ صفر تصحيحات نطق (الـ13 ناجحة — أول مرة).
 - **التالي:** a2-u2-d5 (muss nicht/darf nicht — تمييز النفي).
