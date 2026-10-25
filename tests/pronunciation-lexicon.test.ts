@@ -237,16 +237,16 @@ describe("D121/D122 — معجم النطق", () => {
     for (const [voice, chars] of Object.entries(missing)) expect(chars, voice).toEqual([]);
   });
   it("D189 (N-101): قائمة «تحت التحقق السمعي» معلنة ومثبَّتة — إجهار النهاية داخل المركّبات + Bäckerei (‑erei) + فئة الطول الخمسة (N-039/N-012 · D239) + الإطباق النهائي (Job · D241)", () => {
-    // الثمانية عشر مدخلاً مقيسة بالمرجع (كاشف devoicing في pronunciation-audit.py) لا بالأذن؛ المالك يحكم قبل الإطلاق
+    // التسعة عشر مدخلاً مقيسة بالمرجع (كاشف devoicing في pronunciation-audit.py) لا بالأذن؛ المالك يحكم قبل الإطلاق
     // (Q24). تغيير القائمة (حكم سمعي · مدخل جديد من الكاشف) يغيّر هذا الاختبار عمداً — لا قبول صامت.
     const pending = lex.entries.filter((e) => e.earReview).map((e) => e.word).sort();
     expect(pending).toEqual(
-      ["Arabisch", "Bäckerei", "Datum", "Ergebnis", "Flughafen", "Freundschaft", "Job", "Landschaft", "Mädchen", "Portugal", "Spanien", "Zeugnis", "damals", "dreiundsechzig", "dreiundsiebzig", "neunhundertneunundneunzig", "neunundneunzig", "zweihundertneunundsiebzig"].sort(), // D316: +Zeugnis (إجهار g←k)
+      ["Arabisch", "Bäckerei", "Datum", "Ergebnis", "Flughafen", "Freundschaft", "Job", "Landschaft", "Mädchen", "Portugal", "Spanien", "Zeugnis", "Projekt", "damals", "dreiundsechzig", "dreiundsiebzig", "neunhundertneunundneunzig", "neunundneunzig", "zweihundertneunundsiebzig"].sort(), // D318: +Projekt (طول o — فئة الطول) // D316: +Zeugnis (إجهار g←k)
     );
     // كل مدخل منها يهمس صامتاً واحداً (b/d/ɡ ← p/t/k) أو يعيد شوا ‑erei (eː ← ə) — لا يغيّر شيئاً آخر في الكلمة
     // فئة الطول (D239): الفرق الوحيد علامة الطول ː تُضاف/تُحذف — وDatum وحده يبدّل uː ← ʊ معها (سابقة Badezimmer)
     const dev: Record<string, string> = { b: "p", d: "t", "\u0261": "k" };
-    const lengthClass = new Set(["Portugal", "Arabisch", "damals", "Datum", "Spanien"]);
+    const lengthClass = new Set(["Portugal", "Arabisch", "damals", "Datum", "Spanien", "Projekt"]) // D318: +Projekt;
     for (const e of lex.entries.filter((x) => x.earReview))
       for (const f of e.forms) {
         if (e.word === "Bäckerei") {

@@ -2321,7 +2321,7 @@ describe("D115 — أدوات القياس", () => {
     expect(l.audioManifestRefs).toContain("word-ergebnis");
     // القاعدة الجديدة ars-modal-fix: كانت بلا ملف ومُشار إليها من أربعة دروس (u11-d5 · u11-d6 · u12-d2 · u12-d6) — تضيف dürfen وsollen (أُجّلتا في ars-koennen-muessen «لاحقاً») وتجمع الخمسة
     const mf = rules.get("ars-modal-fix")!;
-    expect(mf.usedInLessons).toEqual(["a1-u11-d5", "a1-u11-d6", "a1-u12-d2", "a1-u12-d6", "a1-u15-d6"]); // D203
+    expect(mf.usedInLessons).toEqual(["a1-u11-d5", "a1-u11-d6", "a1-u12-d2", "a1-u12-d6", "a1-u15-d6", "a2-u2-d1"]); // D318: +u2-d1 (نقل المعنى للعمل) // D203
     expect(mf.payload.ruleDe).toContain("ich darf · du darfst · er/sie/es darf · wir/sie/Sie dürfen — ich soll · du sollst · er/sie/es soll · wir/sie/Sie sollen");
     expect(mf.payload.ruleDe).toContain("Sie dürfen nicht rauchen. · Du musst nicht kommen.");
     expect(mf.payload.beads).toEqual(["Sie", "dürfen", "nicht", "rauchen."]);
@@ -5018,7 +5018,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-koennen-muessen) — تشاركها u8-d6 (توليف) فـusedInLessons يضمّهما (§10‑ح)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-koennen-muessen"]);
     const rule = rules.get("ars-koennen-muessen")!;
-    expect(rule.usedInLessons).toEqual(["a1-u8-d3", "a1-u8-d6", "a1-u15-d4"]); // D202
+    expect(rule.usedInLessons).toEqual(["a1-u8-d3", "a1-u8-d6", "a1-u15-d4", "a2-u2-d1"]); // D318: +u2-d1 (نقل القنطرة للعمل) // D202
     expect(rule.payload.ruleDe).toBe("ich kann · du kannst · er/sie/es kann · wir/sie/Sie können — ich muss · du musst · er/sie/es muss · wir/sie/Sie müssen — Ich muss einen Rucksack kaufen. · Kann ich den Rucksack anprobieren? · Was musst du kaufen? · Du musst nicht viel bezahlen.");
     // ثلاث خطوات: الصيغ (ich=er بلا ‑t · تغيّر الحركة kann/können · muss/müssen) · القنطرة (الناقص ثانياً والمصدر آخراً بلا zu · المنفصل متصلاً · الحذف حين يُفهم) · المعنى (قدرة/إمكان/طلب مهذب · وجوب · nicht müssen = لا حاجة)
     for (const x of ["ich kann · du kannst · er/sie/es kann · wir können", "ich muss · du musst · er/sie/es muss · wir müssen", "ich وer/sie/es سواء بلا ‑t", "kann ← können · muss ← müssen", "لا يتصرّف ولا تسبقه zu", "Kann ich den Rucksack anprobieren?", "يبقى متصلاً في الآخر (anprobieren · einkaufen)", "Er kann gut Deutsch (= sprechen)", "الطلب المهذب في السؤال (Kann ich …? · Können Sie …?)", "müssen + nicht = لا حاجة ولا ضرورة، لا «ممنوع»", "Du musst nicht viel bezahlen"])

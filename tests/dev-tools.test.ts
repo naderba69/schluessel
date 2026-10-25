@@ -128,21 +128,21 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
     const lines = out.trim().split("\n");
     expect(lines[0]).toMatch(/duden-links: (\d+) رابطاً فريداً/u);
     const urls = lines.slice(1);
-    expect(urls.length).toBe(284); // D316: +2 (Stift_Schreibgeraet · Zeugnis — متحقق حياً) // D315: +3 (verreisen · singen · Witz — متحقق حياً) // D314: +3 (Ferien · streiten · Angst — متحقق حياً) // D313: +3 (Unterkunft · reiten · Zelt_Konstruktion) // D312: +3 (werden_Vollverb · weggehen · Erfahrung) // D238: 270 بعد حذف الميت — مثبت بدقة: أي رابط جديد يُحدّثه عمداً
+    expect(urls.length).toBe(287); // D318: +3 (Bewerbung · Gehalt_Lohn · Buero — متحقق حياً) // D316: +2 (Stift_Schreibgeraet · Zeugnis — متحقق حياً) // D315: +3 (verreisen · singen · Witz — متحقق حياً) // D314: +3 (Ferien · streiten · Angst — متحقق حياً) // D313: +3 (Unterkunft · reiten · Zelt_Konstruktion) // D312: +3 (werden_Vollverb · weggehen · Erfahrung) // D238: 270 بعد حذف الميت — مثبت بدقة: أي رابط جديد يُحدّثه عمداً
     expect(new Set(urls).size).toBe(urls.length); // فريدة
     for (const u of urls) expect(u).toMatch(/^https:\/\/www\.duden\.de\/rechtschreibung\/(?:[A-Za-zÄÖÜäöüß_-]|%[0-9A-F]{2})+$/u);
   }, 60_000);
 
-  it("D234 (N-011/N-122): listening-sample.py تشتق 27 مقطعاً حتمياً وتكتب وثيقة العينة", () => {
+  it("D234 (N-011/N-122): listening-sample.py تشتق 28 مقطعاً حتمياً وتكتب وثيقة العينة", () => {
     const out = execFileSync("python3", ["tools/dev/listening-sample.py"], { cwd: ROOT, encoding: "utf8", timeout: 60_000 });
-    expect(out.split("\n").filter((l) => /^\s*\d+\. \S+ /u.test(l))).toHaveLength(27); // D316: +Zeugnis (العينة 27)
+    expect(out.split("\n").filter((l) => /^\s*\d+\. \S+ /u.test(l))).toHaveLength(28); // D318: +Projekt (العينة 28)
     expect(out).toContain("fc-11");
     expect(out).toContain("word-circa");
     expect(out).toContain("word-datum"); // D239: فئة الطول في العينة
     expect(out).toContain("word-job"); // D241: الإطباق النهائي في العينة
     const doc = readFileSync(join(ROOT, "docs/reports/listening-sample.md"), "utf8");
     expect(doc).toContain("fc-11");
-    expect(doc.match(/☐ سليم/g)).toHaveLength(27); // D316: +Zeugnis
+    expect(doc.match(/☐ سليم/g)).toHaveLength(28); // D318: +Projekt
   }, 60_000);
 
   it("content-diff.ts --json بين التزامين: ملخّص + تقارير بنصوص قبل/بعد", () => {

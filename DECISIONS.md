@@ -2109,6 +2109,16 @@
 - **البوابة:** vitest 1560/1560 (127) · tsc 0 · validate-content 1427/0/0 · build · docs-sync 132 · speech ناعم 1/2845.
 - **التالي:** اعتماد المالك للخطة ← ثم a2-u2-d1.
 
+## D318 (2026-10-25): a2-u2-d1 «يصف مهامه» — Modal دلالة (المرحلة ج · خطة D317 معتمدة بـ«واصل»)
+- **الدفعة:** 273 · **الموجّه:** 4.75
+- **للقارئ:** الدرس 97 (A2-U2-D1 — أول الوحدة الثانية): 13 كلمة تصف مهام العمل (Ausbildung · sich bewerben · Bewerbung · Büro · Gehalt · kündigen · Mitarbeiter · Projekt · teilnehmen · organisieren · Werkstatt · bis · pro) — والمحور: müssen (واجب) ≠ sollen (نصيحة) — نقلُ معنى معروف إلى العمل (الصيغ من U8/U11). 13 مقطعاً صوتياً؛ 3 تصحيحات نطق (Projekt طول o «تحت التحقق السمعي» · Werkstatt st←ʃt يقيني · Büro نبر يقيني).
+- **بطاقة قرار (قانون 8 — الصدق قبل الإكمال):** روابط دودن تحققت حياً (Bewerbung مؤنث · Gehalt_Lohn محايد/مذكر — das Gehalt سليم · Buero محايد)؛ وbis بـ[A1,A2] (في SD1 ص12/Fit1 ص10 ولم تُدرَّس — سابقة sehr)؛ وWettbewerb أُجّلت لـd3 (منافسة المقابلة) وBaustelle/herstellen خارج الحزمة (بناء/مصنع ≠ مكتب)؛ وEntscheidung/erledigen/kopieren/Überstunden/Schicht/Lohn غائبة عن المرآة فاستُبعِدت؛ والترسانة نقلٌ لا جديد (modal-fix + koennen-muessen — الصيغ والمعاني من U8/U11).
+- **الفهرس العكسي:** content/lessons/a2/a2-u2-d1.json (جديد) · content/words (13 جديداً) · 13 مقطعاً (+2 أُعيدا: werkstatt/buero) + المانيفست (2892) + قائمة gen-audio · المعجم +3 (134 — Projekt «تحت التحقق» + Werkstatt/Büro يقينيان) · lesson-index (97) + phrase-bank (2929) · modal-fix + koennen-muessen (الفهرس العكسي) · tests (+1 · دبابيس 97/607/287 · العينة 28).
+- **الاختبارات:** +1 (d1: الترسانة المنقولة · a1Ids · overlap · انعكاسي hat sich).
+- **الأرقام:** ملاحظات 0/10/158 (168 — بلا جديد) · تغطية A2 الرئيسية 807/1159.
+- **البوابة:** vitest 1561/1561 (127 · +1) · tsc 0 · validate-content 1441/0/0 · build · docs-sync 133 · speech ناعم 1/2858.
+- **التالي:** a2-u2-d2 (dass بعد أفعال الرأي + ملف ars-dass-satz جديد).
+
 
 ## D243 (2026-10-21): صيانة (د) — الدفعة 27: تحقق إنتاجي من كسل N-050 (المعاينة تخدم + 1298/1298 مقطعاً تُحلّ) + تنظيف استيراد
 - **الدفعة:** 198 · **الموجّه:** 4.00
