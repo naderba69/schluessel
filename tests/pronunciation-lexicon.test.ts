@@ -241,7 +241,7 @@ describe("D121/D122 — معجم النطق", () => {
     // (Q24). تغيير القائمة (حكم سمعي · مدخل جديد من الكاشف) يغيّر هذا الاختبار عمداً — لا قبول صامت.
     const pending = lex.entries.filter((e) => e.earReview).map((e) => e.word).sort();
     expect(pending).toEqual(
-      ["Arabisch", "Bäckerei", "Datum", "Ergebnis", "Flughafen", "Freundschaft", "Job", "Landschaft", "Mädchen", "Portugal", "Spanien", "Zeugnis", "Projekt", "damals", "dreiundsechzig", "dreiundsiebzig", "neunhundertneunundneunzig", "neunundneunzig", "zweihundertneunundsiebzig"].sort(), // D318: +Projekt (طول o — فئة الطول) // D316: +Zeugnis (إجهار g←k)
+      ["Arabisch", "Bäckerei", "Datum", "Ergebnis", "Erlaubnis", "Flughafen", "Freundschaft", "Job", "Landschaft", "Mädchen", "Portugal", "Spanien", "Zeugnis", "Projekt", "damals", "dreiundsechzig", "dreiundsiebzig", "neunhundertneunundneunzig", "neunundneunzig", "zweihundertneunundsiebzig"].sort(), // D319: +Erlaubnis (إجهار b←p) // D318: +Projekt (طول o — فئة الطول) // D316: +Zeugnis (إجهار g←k)
     );
     // كل مدخل منها يهمس صامتاً واحداً (b/d/ɡ ← p/t/k) أو يعيد شوا ‑erei (eː ← ə) — لا يغيّر شيئاً آخر في الكلمة
     // فئة الطول (D239): الفرق الوحيد علامة الطول ː تُضاف/تُحذف — وDatum وحده يبدّل uː ← ʊ معها (سابقة Badezimmer)

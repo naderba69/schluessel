@@ -537,7 +537,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-dativ-fix: «الداتيف الثابت mit/nach/aus/zu» في خطة v6.1) — تشاركها ستة دروس لاحقة فـusedInLessons يضمّها كلها (§10‑ح)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-dativ-fix"]);
     const rule = rules.get("ars-dativ-fix")!;
-    expect(rule.usedInLessons).toEqual(["a1-u8-d4", "a1-u8-d6", "a1-u9-d1", "a1-u11-d2", "a1-u11-d5", "a1-u11-d6", "a1-u12-d6", "a1-u15-d4"]); // D202: أسبوع المراجعة
+    expect(rule.usedInLessons).toEqual(["a1-u8-d4", "a1-u8-d6", "a1-u9-d1", "a1-u11-d2", "a1-u11-d5", "a1-u11-d6", "a1-u12-d6", "a1-u15-d4", "a2-u2-d2"]); // D319: دعم raten (dass-day) // D202: أسبوع المراجعة
     expect(rule.payload.ruleDe).toBe("mit · nach · aus · zu: der/das → dem · die → der — zu dem = zum · zu der = zur — mit dem Bus · mit der Bahn · mit dem Auto · zum Flughafen · zur Schule · nach Berlin · nach Tunesien · nach Hause · aus Tunis · aus der Schweiz");
     // ثلاث خطوات: الحالة (الداتيف دائماً · dem/der · zum/zur) · nach أم zu (المدن والبلدان وHause بلا أداة · zu لما له أداة وللأشخاص) · aus للأصل (بلا أداة إلا die Schweiz)
     for (const x of ["يأتي الداتيف دائماً", "der ← dem · das ← dem · die ← der", "zu dem = zum", "zu der = zur", "nach للمدن والبلدان والقارات بلا أداة", "nach Hause = إلى البيت (حركة) · zu Hause = في البيت (مكان)", "zu لكل مكانٍ له أداة ولكل شخص", "die Schweiz ← aus der Schweiz", "Woher kommst du? — Aus Tunesien.", "abholen (يستقبل/يأخذ: Mein Vater holt mich ab"])
@@ -2872,7 +2872,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدة اليوم جديدة: ars-weil-satz (كانت مُشاراً إليها بلا ملف — تشاركها u10-d6 وu12-d4 وu12-d6)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-weil-satz"]);
     const ws = rules.get("ars-weil-satz")!;
-    expect(ws.usedInLessons).toEqual(["a1-u10-d5", "a1-u10-d6", "a1-u12-d4", "a1-u12-d6", "a1-u15-d6"]); // D203
+    expect(ws.usedInLessons).toEqual(["a1-u10-d5", "a1-u10-d6", "a1-u12-d4", "a1-u12-d6", "a1-u15-d6", "a2-u2-d2"]); // D319: مراجعة weil في dass-day // D203
     expect(ws.payload.ruleDe).toContain("Ich brauche einen Termin, weil ich krank bin.");
     expect(ws.payload.ruleDe).toContain("Yusuf kann nicht kommen, weil er lernen muss.");
     expect(ws.payload.ruleDe).toContain("Weil ich krank bin, brauche ich einen Termin.");

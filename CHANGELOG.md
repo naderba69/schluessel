@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-25 — الدفعة 274: D319 — a2-u2-d2 «يفسر سبب قراره» — dass بعد الرأي (المرحلة ج · خطة D317)
+الدرس 98 (A2-U2-D2): 13 كلمة للرأي والقرار (wählen · lügen · Erlaubnis · verbieten · Team · Wettbewerb · sicher · froh · einverstanden · vergleichen · raten · Lüge · wahr) — والمحور: dass بعد الرأي والقول والشعور (قانون weil نفسه: الفعل آخراً) + فخ dass/das + raten بالداتيف. 13 مقطعاً صوتياً؛ تصحيحا نطق (Erlaubnis إجهار b←p «تحت التحقق السمعي» · Wettbewerb شوا be- يقيني).
+- **البوابة:** vitest 1562/1562 (127 · +1) · tsc 0 · validate-content 1456/0/0 · build · docs-sync 134 · speech ناعم 1/2871.
+
 ## 2026-10-25 — الدفعة 273: D318 — a2-u2-d1 «يصف مهامه» — Modal دلالة (المرحلة ج · خطة D317 معتمدة بـ«واصل»)
 الدرس 97 (A2-U2-D1 — أول الوحدة الثانية): 13 كلمة تصف مهام العمل (Ausbildung · sich bewerben · Bewerbung · Büro · Gehalt · kündigen · Mitarbeiter · Projekt · teilnehmen · organisieren · Werkstatt · bis · pro) — والمحور: müssen (واجب) ≠ sollen (نصيحة) — نقلُ معنى معروف إلى العمل (الصيغ من U8/U11). 13 مقطعاً صوتياً؛ 3 تصحيحات نطق (Projekt طول o «تحت التحقق السمعي» · Werkstatt st←ʃt يقيني · Büro نبر يقيني).
 - **البوابة:** vitest 1561/1561 (127 · +1) · tsc 0 · validate-content 1441/0/0 · build · docs-sync 133 · speech ناعم 1/2858.

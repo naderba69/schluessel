@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 274 (2026-10-25) — D319: a2-u2-d2 «يفسر سبب قراره» — dass بعد الرأي (المرحلة ج · خطة D317)
+- **الخلاصة:** الدرس 98 (A2-U2-D2): 13 كلمة للرأي والقرار (wählen · lügen · Erlaubnis · verbieten · Team · Wettbewerb · sicher · froh · einverstanden · vergleichen · raten · Lüge · wahr) — والمحور: dass بعد الرأي والقول والشعور (قانون weil نفسه: الفعل آخراً) + فخ dass/das + raten بالداتيف. 13 مقطعاً صوتياً؛ تصحيحا نطق (Erlaubnis إجهار b←p «تحت التحقق السمعي» · Wettbewerb شوا be- يقيني).
+- **التالي:** a2-u2-d3 (المقابلة: أسئلة ernst + مراجعة Perfekt).
+
 ## الدفعة 273 (2026-10-25) — D318: a2-u2-d1 «يصف مهامه» — Modal دلالة (المرحلة ج · خطة D317 معتمدة بـ«واصل»)
 - **الخلاصة:** الدرس 97 (A2-U2-D1 — أول الوحدة الثانية): 13 كلمة تصف مهام العمل (Ausbildung · sich bewerben · Bewerbung · Büro · Gehalt · kündigen · Mitarbeiter · Projekt · teilnehmen · organisieren · Werkstatt · bis · pro) — والمحور: müssen (واجب) ≠ sollen (نصيحة) — نقلُ معنى معروف إلى العمل (الصيغ من U8/U11). 13 مقطعاً صوتياً؛ 3 تصحيحات نطق (Projekt طول o «تحت التحقق السمعي» · Werkstatt st←ʃt يقيني · Büro نبر يقيني).
 - **التالي:** a2-u2-d2 (dass بعد أفعال الرأي + ملف ars-dass-satz جديد).
