@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 269 (2026-10-24) — D314: a2-u1-d4 «يوميات مكتوبة» — war/hatte للحال + انعكاسي قوي (المرحلة ج)
+- **الخلاصة:** الدرس 94 (A2-U1-D4): 13 كلمة تكتب 6 جمل يوميات (Ferien · sich streiten · sich erinnern · hoffen · Wunsch · Traum · träumen · Angst · weinen · traurig · Heft · sehr · wirklich) — والمحور: الحدث Perfekt والحال war/hatte (مغلقتا الجبهة منذ A1) + انعكاسيان جديدان أحدهما قوي (gestritten). 13 مقطعاً صوتياً بلا أي تصحيح نطق (أول دفعة نظيفة).
+- **التالي:** a2-u1-d5 (كلمات 53–65 · خلط/تثبيت) — وتأكيد المالك: N-154 (الأذن) · N-155 (العين).
+
 ## الدفعة 268 (2026-10-24) — D313: a2-u1-d3 «يحكي عطلته» — الماضي الانعكاسي + reiten + رابطا الحكي (المرحلة ج)
 - **الخلاصة:** الدرس 93 (A2-U1-D3): 13 كلمة جديدة تحكي العطلة في 6 جمل (Zelt · Jugendherberge · sich unterhalten · Unterkunft · aufregend · sich ärgern · sich beschweren · sich bedanken · bequem · praktisch · sogar · außerdem · reiten) — والمحور الثلاثي: الانعكاسي hat sich (الضمير بعد المساعد) ↔ reiten بـsein وتصريف قوي (reitet · ritt · geritten) ↔ sogar/außerdem (في الوسط لا يقلبان، وفي الصدارة V2). 13 مقطعاً صوتياً، صُحّح منها نبر Unterkunft (أولي لا نهائي).
 - **التالي:** a2-u1-d4 (كلمات 40–52) — وتأكيد المالك: N-154 (الأذن) · N-155 (العين).

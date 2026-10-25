@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-24 — الدفعة 269: D314 — a2-u1-d4 «يوميات مكتوبة» — war/hatte للحال + انعكاسي قوي (المرحلة ج)
+الدرس 94 (A2-U1-D4): 13 كلمة تكتب 6 جمل يوميات (Ferien · sich streiten · sich erinnern · hoffen · Wunsch · Traum · träumen · Angst · weinen · traurig · Heft · sehr · wirklich) — والمحور: الحدث Perfekt والحال war/hatte (مغلقتا الجبهة منذ A1) + انعكاسيان جديدان أحدهما قوي (gestritten). 13 مقطعاً صوتياً بلا أي تصحيح نطق (أول دفعة نظيفة).
+- **البوابة:** vitest 1558/1558 (127 · +1) · tsc 0 · validate-content 1410/0/0 · build · docs-sync 129 · speech ناعم 1/2830.
+
 ## 2026-10-24 — الدفعة 268: D313 — a2-u1-d3 «يحكي عطلته» — الماضي الانعكاسي + reiten + رابطا الحكي (المرحلة ج)
 الدرس 93 (A2-U1-D3): 13 كلمة جديدة تحكي العطلة في 6 جمل (Zelt · Jugendherberge · sich unterhalten · Unterkunft · aufregend · sich ärgern · sich beschweren · sich bedanken · bequem · praktisch · sogar · außerdem · reiten) — والمحور الثلاثي: الانعكاسي hat sich (الضمير بعد المساعد) ↔ reiten بـsein وتصريف قوي (reitet · ritt · geritten) ↔ sogar/außerdem (في الوسط لا يقلبان، وفي الصدارة V2). 13 مقطعاً صوتياً، صُحّح منها نبر Unterkunft (أولي لا نهائي).
 - **البوابة:** vitest 1557/1557 (127 · +1) · tsc 0 · validate-content 1396/0/0 · build · docs-sync 128 · speech ناعم 1/2817.
