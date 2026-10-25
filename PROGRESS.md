@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 283 (2026-10-25) — D328: a2-u3-d2 «يصف روتينه» — الانعكاسي Dat منهجياً (المرحلة د · خطة D326)
+- **الخلاصة:** الدرس 104 (A2-U3-D2 — يصف روتينه): 13 كلمة للخط الزمني والعناية (täglich · morgens · vormittags · mittags · nachmittags · abends · nachts · manchmal · trocken · schmutzig · Creme · Parfüm · Kosmetik) — والمحور: مع الجزء الضمير داتيف (ars-reflexiv-dat الجديد: mir/dir/sich — mich→mir · dich→dir · sich ثابتة!) + مراجعة Akk. 13 مقطعاً صوتياً؛ تصحيحا نطق يقينيان (nachmittags: طول الـa · Parfüm: النبر أخيراً).
+- **التالي:** a2-u3-d3 «في الصيدلية» (كلام — نقل خالص).
+
 ## الدفعة 282 (2026-10-25) — D327: a2-u3-d1 «يصف عاداته» — الانعكاسي Akk منهجياً (المرحلة د · خطة D326)
 - **الخلاصة:** الدرس 103 (A2-U3-D1 — يصف صباحه): 13 كلمة للعادات والجسم (interessieren · setzen · joggen · trainieren · üben · Körper · Magen · aktiv · stark · wach · dick · dünn · schädlich) — والمحور: النظام وراء أفعال معروفة (ars-reflexiv-akk الجديد: الفاعل = المفعول ← mich/dich/sich/uns/euch/sich بعد الفعل). 13 مقطعاً صوتياً؛ تصحيح نطق يقيني واحد (joggen: الـj إنجليزية dʒ — سابقة Job).
 - **التالي:** a2-u3-d2 «يصف روتينه» (Reflexive-Dat + ars-reflexiv-dat).
