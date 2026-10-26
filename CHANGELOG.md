@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-26 — الدفعة 293: D338 — a2-u4-d1 «يصف مكاناً» — نقل Wechsel-DAT إلى أماكن جديدة (المرحلة د · خطة D337)
+الدرس 109 (A2-U4-D1 — يصف مكاناً): 13 كلمة للأماكن والوصف (Ampel/Flohmarkt/Theater/Zoo/Zirkus/Rathaus/Garage/Bibliothek + eng/leer/hässlich/voll/rund) تُنقَل عبر قاعدة Wechsel-DAT المعروفة (بلا ترسانة جديدة!) — أول يوم بلا أفعال (محطة match بدل verb-bank). 13 مقطعاً صوتياً؛ تصحيحا طول يقينيان (Garage/Rathaus — a قصيرة ← طويلة + إعادة توليد) + Bibliothek أثرٌ ثانوي مقبول. الرابطان متحققان حياً قبل الدفع (Flohmarkt + Bibliothek).
+- **البوابة:** vitest ✓ 1632/1632 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1590/0/0 · build ✓ 3.19s · docs-sync --check ✓ 153 قراراً مهيكلاً · آخرها D338 · الدفعة 293 · الموجّه 4.95 · notes check ✓ 0/22/175 (197) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 150 · duden-links ✓ تُخطّي (317 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2992
+
 ## 2026-10-26 — الدفعة 292: D337 — مسودة خطة A2-U4 «المدينة والمواصلات» (بأمر المالك — سابقة D326)
 خطة الوحدة الرابعة (§7: المدينة والمواصلات — Wechselpräpositionen كاملة + da-/wo-Komposita): سبعة أيام d1-d6 + برهان، بميزانية 67 (سابقة U1=U2=U3) وصلاحية تنقيب مُثبتة قبل الوعد (10 كلمات حرة في دفعتين) وتباعد شبكي مُعلن (K4 مشاعر ≠ المدينة — §7 يغلب). مسودة تنتظر موافقة المالك — لا إنتاج قبل «واصل».
 - **البوابة:** vitest ✓ 1632/1632 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1576/0/0 · build ✓ 3.14s · docs-sync --check ✓ 152 قراراً مهيكلاً · آخرها D337 · الدفعة 292 · الموجّه 4.94 · notes check ✓ 0/22/174 (196) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 148 · duden-links ✓ تُخطّي (315 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2979

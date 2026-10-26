@@ -3201,7 +3201,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدتا اليوم: ars-wechselpraep (الجديدة — تشاركها u9-d6) + ars-imperativ-sie (من D163)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-wechselpraep", "ars-imperativ-sie"]);
     const rule = rules.get("ars-wechselpraep")!;
-    expect(rule.usedInLessons).toEqual(["a1-u9-d4", "a1-u9-d6", "a1-u12-d1"]); // D176: u12-d1 يراجعها بـim Hotel/ins Ausland
+    expect(rule.usedInLessons).toEqual(["a1-u9-d4", "a1-u9-d6", "a1-u12-d1", "a2-u4-d1"]); // D338: u4-d1 تنقلها (Wo-Dativ) // D176: u12-d1 يراجعها بـim Hotel/ins Ausland
     expect(rule.payload.ruleDe).toBe("Wo? — vor der Kirche · im Tunnel · am Ufer · auf der linken Seite · hinter dem Haus · in der Nähe · an der Ecke — Wohin? — vor die Kirche · in den Tunnel · ans Ufer · auf die Brücke · über die Brücke · auf den Parkplatz · in die Stadt — gegen: gegen die Wand · gegen den Tisch · gegen zehn Uhr — hundert Meter · zweihundert Meter geradeaus — Die Apotheke ist zu. · Die Bank ist auf.");
     // أربع خطوات: التسعة باسمها · Wo? الداتيف · Wohin? الأكوزاتيف (vor جديد · ans) · gegen أكوزاتيف دائماً + Meter + auf/zu sein
     for (const x of ["Wechselpräpositionen", "an · in · auf · vor (جديد: أمام) · hinter · über · unter · neben · zwischen", "Wo? → الداتيف", "Wohin? → الأكوزاتيف", "vor der Kirche", "vor die Kirche", "an das = ans", "gegen (ضد/نحو) + الأكوزاتيف دائماً", "gegen zehn Uhr", "وبعد الرقم بلا نهاية: zweihundert Meter", "auf sein (مفتوح) ≠ zu sein (مغلق)"])

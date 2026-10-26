@@ -3266,3 +3266,12 @@
 - **الأرقام:** ملاحظات 0/22/174 (196 — +N-196 مغلقة) · تغطية A2 الرئيسية 912/1159 (بلا تغيير — خطة).
 - **البوابة:** vitest ✓ 1632/1632 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1576/0/0 · build ✓ 3.14s · docs-sync --check ✓ 152 قراراً مهيكلاً · آخرها D337 · الدفعة 292 · الموجّه 4.94 · notes check ✓ 0/22/174 (196) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 148 · duden-links ✓ تُخطّي (315 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2979
 - **التالي:** موافقة المالك على الخطة ← ثم إنتاج d1 (الوصف المكاني + Wechsel-DAT).
+## D338 (2026-10-26): a2-u4-d1 «يصف مكاناً» — نقل Wechsel-DAT إلى أماكن جديدة (المرحلة د · خطة D337)
+- **الدفعة:** 293 · **الموجّه:** 4.95
+- **للقارئ:** الدرس 109 (A2-U4-D1 — يصف مكاناً): 13 كلمة للأماكن والوصف (Ampel/Flohmarkt/Theater/Zoo/Zirkus/Rathaus/Garage/Bibliothek + eng/leer/hässlich/voll/rund) تُنقَل عبر قاعدة Wechsel-DAT المعروفة (بلا ترسانة جديدة!) — أول يوم بلا أفعال (محطة match بدل verb-bank). 13 مقطعاً صوتياً؛ تصحيحا طول يقينيان (Garage/Rathaus — a قصيرة ← طويلة + إعادة توليد) + Bibliothek أثرٌ ثانوي مقبول. الرابطان متحققان حياً قبل الدفع (Flohmarkt + Bibliothek).
+- **بطاقة قرار (قانون 8 — الصدق قبل الإكمال):** تصحيح الخطة (N-197): D337 وعدت بترسانتين جديدتين — الواقع: صفر (ars-wechselpraep منذ A1-U9 يعلّم القاعدة كاملة مسماة بالتسعة + ars-da-komposita منذ A1-U6) — U4 وحدة تثبيت/نقل خالص («الاستقرار» بحسب اسم A2 في الدستور). التغطية +13 كاملة (925/1159 — كل الكلمات بدليل رئيسي، بلا خصم مجموعة/جذع).
+- **الفهرس العكسي:** content/lessons/a2/a2-u4-d1.json (جديد) + 13 content/words + lexicon (Garage/Rathaus) + reviewed (Bibliothek).
+- **الاختبارات:** pins (content-units ×2 + duden 315←317 + voice 638←646 + u3-proof-next ←u4-d1 + wechsel-usedInLessons) — بلا ملف جديد.
+- **الأرقام:** ملاحظات 0/22/175 (197 — +N-197 مغلقة) · تغطية A2 الرئيسية 925/1159 (+13) · معجم 150 · duden 317 · درس 109 · بنك 3088.
+- **البوابة:** vitest ✓ 1632/1632 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1590/0/0 · build ✓ 3.19s · docs-sync --check ✓ 153 قراراً مهيكلاً · آخرها D338 · الدفعة 293 · الموجّه 4.95 · notes check ✓ 0/22/175 (197) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 150 · duden-links ✓ تُخطّي (317 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2992
+- **التالي:** d2 (يصف اتجاهاً + Wechsel-AKK — نقل عبر ars-wechselpraep نفسها).

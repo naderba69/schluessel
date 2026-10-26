@@ -5,7 +5,7 @@ import { proveUnit } from "./unit-proof.js";
 await proveUnit({
   unit: "الوحدة A2-U3",
   ids: ["a2-u3-d1", "a2-u3-d2", "a2-u3-d3", "a2-u3-d4", "a2-u3-d5", "a2-u3-d6"],
-  nextId: null,
+  nextId: "a2-u4-d1", // D338: U4 بدأت — التالي u4-d1 (كان null في D336)
   prefixIds: [
     "a1-u1-d1", "a1-u1-d2", "a1-u1-d3", "a1-u1-d4", "a1-u1-d5", "a1-u1-d6",
     "a1-u2-d1", "a1-u2-d2", "a1-u2-d3", "a1-u2-d4", "a1-u2-d5", "a1-u2-d6",
