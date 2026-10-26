@@ -1902,24 +1902,28 @@ describe("N-021+N-053 (D225) — أمثلة البطاقات ومتلازمات�
   const DECLARED_PLACES = new Set(["berlin", "tunis"]);
   it("كل مثال نظيف في درس مصدره (بلا أعلام إلا المعلنين)", () => {
     const bad: string[] = [];
+    const taughtCache = new Map<string, ReturnType<typeof taughtUpTo>>(); // D340 (N-203): taughtUpTo مُكلف ويُستدعى لكل كلمة — تخزينه لكل درس (111) بدل كل كلمة (1280) يُبقي الثابت ويُسقط المهلة على CI
     for (const w of ALL_WORDS.filter((w) => w.sampleSentence)) {
       const l = ALL_LESSONS.find((x) => x.id === w.sampleSentence!.sourceLesson)!;
-      const taught = taughtUpTo(l, ALL_LESSONS, ALL_WORDS);
+      let taught = taughtCache.get(l.id);
+      if (!taught) { taught = taughtUpTo(l, ALL_LESSONS, ALL_WORDS); taughtCache.set(l.id, taught); }
       const v = frontViolations([w.sampleSentence!.de], knownStems(taught), DECLARED_PLACES);
       if (v.length) bad.push(`${w.id} [${l.id}] «${w.sampleSentence!.de}» -> ${v.join(",")}`);
     }
     expect(bad).toEqual([]);
-  });
+  }, 30_000);
   it("كل متلازمة نظيفة في أول درس لمالكها (صرامة كاملة — بلا سماح)", () => {
     const bad: string[] = [];
+    const taughtCache = new Map<string, ReturnType<typeof taughtUpTo>>(); // D340 (N-203): التخزين نفسه — المتلازمات على الطريق نفسه للمهلة
     for (const w of ALL_WORDS.filter((w) => w.kollocation)) {
       const l = ALL_LESSONS.find((x) => x.id === w.usedInLessons[0])!;
-      const taught = taughtUpTo(l, ALL_LESSONS, ALL_WORDS);
+      let taught = taughtCache.get(l.id);
+      if (!taught) { taught = taughtUpTo(l, ALL_LESSONS, ALL_WORDS); taughtCache.set(l.id, taught); }
       const v = frontViolations([w.kollocation!.de], knownStems(taught), new Set());
       if (v.length) bad.push(`${w.id} [${l.id}] «${w.kollocation!.de}» -> ${v.join(",")}`);
     }
     expect(bad).toEqual([]);
-  });
+  }, 30_000);
 });
 
 describe("N-137 (D230) — البلدان واللغات عارية الاستعمال (بلا article — والجنس النحوي باقٍ)", () => {
