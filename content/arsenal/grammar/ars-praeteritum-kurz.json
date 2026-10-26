@@ -32,6 +32,10 @@
       {
         "ar": "يا ليت عندي بيتزا!",
         "de": "Ich hätte gern Pizza."
+      },
+      {
+        "de": "Wir hatten Spaß.",
+        "ar": "استمتعنا (كان عندنا مرح)."
       }
     ],
     "inferencePromptAr": "قارن Ist ↔ war: أي كلمة تتغيّر مع gestern؟ وقارن Ich habe ↔ Ich hatte: ماذا حدث؟ اكتشف: الماضي القصير كلمة واحدة (war/hatte/musste) — بلا ge- ولا تصريف ثالث!",
@@ -54,6 +58,7 @@
     "de": "war/hatte/musste: Die Party war gut. · Ich hätte gern Pizza."
   },
   "usedInLessons": [
-    "a2-u5-d1"
+    "a2-u5-d1",
+    "a2-u5-d2"
   ]
 }

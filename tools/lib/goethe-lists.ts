@@ -126,6 +126,12 @@ function allMarkers(headword: string): string[] {
     const m2s = m2.split("/").map((s) => s.trim()).filter(Boolean);
     if (m2s.length && m2s.every((p) => /^-?[a-zäöüß]*$/.test(p) && !/^(der|die|das)\b/.test(p))) return m2s.map((p) => `${m1}, ${p}`);
   }
+  // D347: خيار مزدوج بشرطة أولى («der Ski, -, -er»): لا تغيّر أو ‎-er — يُقبل الاثنان (Skier!). الأزواج الاسمية
+  // («Prüfer, -, Prüferin, -nen») لا تطابق الحارس (m2 بلا شرطة) فتبقى كما هي — صفر انحدار بالبناء
+  if (m1 === "-" && m2 !== undefined) {
+    const m2s = m2.split("/").map((s) => s.trim()).filter(Boolean);
+    if (m2s.length && m2s.every((p) => /^-[a-zäöüß]+$/.test(p))) return ["-", ...m2s];
+  }
   return m1.split("/").map((s) => s.trim()).filter(Boolean);
 }
 

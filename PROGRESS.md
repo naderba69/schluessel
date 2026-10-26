@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 302 (2026-10-26) — D347: a2-u5-d2 «يهنئ بالأعياد» — تعرُّض hatte + إصلاح المحلل m3 (المرحلة د · خطة D345)
+- **الخلاصة:** الدرس 116 (A2-U5-D2 — يهنئ بالأعياد): 13 كلمة للأعياد (Weihnachten/Ostern/Silvester/Neujahr + Karneval/Umzug/Mitternacht + Kamera/Rose/romantisch + schneien/Kultur/Ski) في تهنئة بعيدين (Frohe Weihnachten! Frohe Ostern!) + حكاية ماضٍ (hatte/hatten!) عبر ترسانة الماضي القصير (تعرُّض hatte: Ich hatte Urlaub!). 5 تصحيحات نطق (Silvester-النبر-ثانياً!/Karneval-ə/Kamera-ə/romantisch-o-قصيرة/schneien-النبر-أولاً! + Neujahr قبله التدقيق — نصف الحركة ø خريطةٌ لا خطأ!) + إعادة توليد 5. الروابط الثلاثة متحققة حياً قبل الدفع (Weihnachten: das + die-Weihnachten-بلا-أداة! + Umzug: موكب-معنى-2! + Karneval: Karnevale-قبل-Karnevals!).
+- **التالي:** d3 (القصة المضحكة + hätte/gern!).
+
 ## الدفعة 301 (2026-10-26) — D346: a2-u5-d1 «يحتفل بعيد ميلاد» — الماضي القصير يولد (المرحلة د · خطة D345)
 - **الخلاصة:** الدرس 115 (A2-U5-D1 — يحتفل بعيد ميلاد): 13 كلمة للحفلة (Band/Instrument/Radio + Rätsel/Ball + Plakat/bunt + Pizza + packen/malen + Kontakt/Programm/kostenlos) في حكاية 7 جمل (أمس + موسيقى + لعبة + طعام + زينة + تواصل!) عبر ترسانة الماضي القصير الجديدة (تعرُّض war: Die Party war gestern!). 5 تصحيحات نطق (Instrument/Radio/Pizza/Programm + Rätsel-̩ أمسكه اختبار الصوت!) + إعادة توليد 5. الرابطان متحققان حياً قبل الدفع (Ball_Spielgeraet بعد 404 مزدوج! + Rätsel).
 - **التالي:** d2 (الأعياد الأربعة + hatte!).
