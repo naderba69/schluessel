@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-26 — الدفعة 297: D342 — a2-u4-d4 «يعبّر عن رأيه» — المعنى المجرّد لـda + أسئلة wo (المرحلة د · خطة D337)
+الدرس 112 (A2-U4-D4 — يعبّر عن رأيه): 13 كلمة للرأي (dafür/dagegen/dabei + bestehen + besonders + echt/fantastisch/furchtbar/beliebt/berühmt + Fan/Ahnung/Hauptstadt) في حوار من 7 جمل (سؤال + رأي + مشاركة + تعجّب) عبر ترسانة da-komposita المنقولة (وفاءً بوعد A1-U6: المعنى المجرّد + أسئلة wo الست أمثلةَ قاعدة — وقَبِل الفاحص!). تصحيحا نطق (Fan دخيلة [fɛn] + Hauptstadt st←ʃt داخل المركّب) + إعادة توليد 2. الرابطان متحققان حياً قبل الدفع (Fan + Hauptstadt — وDuden يؤكد [fɛn]!).
+- **البوابة:** vitest ✓ 1632/1632 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1632/0/0 · build ✓ 2.46s · docs-sync --check ✓ 157 قراراً مهيكلاً · آخرها D342 · الدفعة 297 · الموجّه 4.99 · notes check ✓ 0/23/184 (207) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 156 · duden-links ✓ تُخطّي (323 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 3031 · scratch-front (N-204) ✓ d1–d4 صفر مخالفات
+
 ## 2026-10-26 — الدفعة 296: D341 — إصلاح مهلة CI — تخزين taughtUpTo في حارس الأمثلة (المرحلة د)
 CI رسب D340 بـ1631/1632 — حارس أمثلة البطاقات (N-021+N-053) تجاوز مهلة 5 ثوانٍ: taughtUpTo يُستدعى لكل كلمة (1280×111×1280 عملية). الإصلاح: تخزين لكل درس (111 استدعاءً) + مهلة معلنة 30 ثانية للاختبارين — الثابت نفسه (كل مثال/متلازمة نظيفة)، بلا تغيير محتوى.
 - **البوابة:** vitest ✓ 1632/1632 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1618/0/0 · build ✓ 2.50s · docs-sync --check ✓ 156 قراراً مهيكلاً · آخرها D341 · الدفعة 296 · الموجّه 4.98 · notes check ✓ 0/22/181 (203) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 154 · duden-links ✓ تُخطّي (321 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 3018

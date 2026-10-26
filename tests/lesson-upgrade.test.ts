@@ -4231,7 +4231,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-da-komposita — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u6-d6 يشير إليها أيضاً (سابقة ars-wo-wohin)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-da-komposita"]);
     const rule = rules.get("ars-da-komposita")!;
-    expect(rule.usedInLessons).toEqual(["a1-u6-d5", "a1-u6-d6", "a1-u15-d3"]); // D202
+    expect(rule.usedInLessons).toEqual(["a1-u6-d5", "a1-u6-d6", "a1-u15-d3", "a2-u4-d4"]); // D342: u4-d4 تنقلها (المعنى المجرّد + أسئلة wo) // D202
     expect(rule.payload.ruleDe).toBe("Da ist der Tisch. Darauf steht eine Vase. · Da ist der Schrank. Darin sind zwei Handtücher. · Da ist die Tür. Dahinter ist das Badezimmer.");
     // «da أول لقاء» كما في الخطة اليومية (والنظام كله مع الأفعال وwo-Komposita في A2 — لا سحب): للمكان · dar- قبل الحركة · لا تتغيّر · الفعل يطابق فاعله · وللوضع أيضاً
     for (const x of ["dar- قبل الحركة وda- قبل الساكن", "الكلمة لا تتغيّر أبداً", "والفعل يطابق الفاعل الذي بعده", "وللوضع (Wohin?) أيضاً"])
@@ -4257,7 +4257,7 @@ describe("D115 — أدوات القياس", () => {
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
     // darauf بالمولِّد (goetheList [A2] مشتقة من مدخل A2 «da(r) (Bsp. darauf, darüber)») — وبقية الصيغ بالقاعدة في الحارس لا بمداخل
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("darauf").wordClass, w("darauf").goetheList, w("darauf").usedInLessons]).toEqual(["adverb", ["A2"], ["a1-u6-d5"]]);
+    expect([w("darauf").wordClass, w("darauf").goetheList, w("darauf").usedInLessons]).toEqual(["adverb", ["A2"], ["a1-u6-d5", "a2-u4-d4"]]); // D342: تُستعمل في تمارين bestehen (Er besteht darauf)
     expect(tracks.get("word-darauf")?.textDe).toBe("darauf.");
     // N-070: Möbel جمعاً عادةً — بلا جنس مفرد ولا بطاقة جنس (اصطلاح Lebensmittel) فيشملها اختبار الجمع الدائم
     expect([w("moebel").gender, w("moebel").srsCardTypes.includes("gender")]).toEqual(["none", false]);

@@ -23306,7 +23306,7 @@
       "sizeBytes": 4961,
       "hash": "sha256:7e03e79de15b29d52ae2e3a7928869a77bcd6d226476150fd21cb86608b88507",
       "pcmSha256": "3aabf849734c0126e2b9972b9c02bcda15ee6849bfd29b66f56011cc913bb594",
-      "rmsDb": -17.0
+      "rmsDb": -17
     },
     {
       "id": "word-tour",
@@ -23447,6 +23447,266 @@
       "hash": "sha256:5a4e675ec20679566c2de74d4ce47f24100a179c44b4d45f13c13e1163d97296",
       "pcmSha256": "a2fc4bb6e04a6c7b72aca564a12d9b2e24abe30d92805190b9f6d5b9e1b61c1c",
       "rmsDb": -17.25
+    },
+    {
+      "id": "word-dafuer",
+      "file": "words/audio/de-DE/word-dafuer.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "dafür.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 850,
+      "sizeBytes": 4097,
+      "hash": "sha256:4f4bc3a2f1062f987d34e36d0664b73dcbb2d490047d1754a5a58c5f0c4e462d",
+      "pcmSha256": "e3d3fc85299c394ab51d9146c718a353a48eb492d862a297e709bee9883505b0",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "word-dagegen",
+      "file": "words/audio/de-DE/word-dagegen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "dagegen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 1094,
+      "sizeBytes": 4890,
+      "hash": "sha256:c0cc63b76e597ba139db38e459d927f65093fbac57389195e7467b1d0912899a",
+      "pcmSha256": "19d0b221f96c2301c39692393a7f04f73346aca4b02fcf132f48bdfcce973252",
+      "rmsDb": -17.07
+    },
+    {
+      "id": "word-dabei",
+      "file": "words/audio/de-DE/word-dabei.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "dabei.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 943,
+      "sizeBytes": 4921,
+      "hash": "sha256:26376a502709ea78bf95c22e31672b335b1c62fea31b9eabb8c17a6e1bd6585c",
+      "pcmSha256": "93f796a2b0c1ca7c1a552ca303868526869a71c21ad4a5eaf69423d4d4fc9d3a",
+      "rmsDb": -17.22
+    },
+    {
+      "id": "word-bestehen",
+      "file": "words/audio/de-DE/word-bestehen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "bestehen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 885,
+      "sizeBytes": 4230,
+      "hash": "sha256:2bed1119a4c6c120d88d32967408710eff60c3b3353b98e6a060eea149880681",
+      "pcmSha256": "121f217f574a80ce9159e4365f92c050e7ae82ac5a605009c6b9114ceb463664",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "word-besonders",
+      "file": "words/audio/de-DE/word-besonders.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "besonders.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 966,
+      "sizeBytes": 4685,
+      "hash": "sha256:b26f95cee5e6652ee057843dc9c25e1db283dc855e8b9556172ec9cb57cd9e15",
+      "pcmSha256": "02bd4b496badf43ce44eb951ce3dede33891961acaf32879acf4db82377e93f4",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "word-echt",
+      "file": "words/audio/de-DE/word-echt.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "echt.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 769,
+      "sizeBytes": 3651,
+      "hash": "sha256:395dda15f820675ddc9c48703dbb3a364d138ad0fbad54ef9b5e4a52f1579f6e",
+      "pcmSha256": "530ba16b20fc6dd12d948eee89217e906cf7803ab2910f27331257ac1a547702",
+      "rmsDb": -17.16
+    },
+    {
+      "id": "word-fantastisch",
+      "file": "words/audio/de-DE/word-fantastisch.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "fantastisch.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 1268,
+      "sizeBytes": 5796,
+      "hash": "sha256:dda6b48b6a1f63bdb9cad5d3bd6799d5f7dc81710bf36da9b7cf3d80a376f6e9",
+      "pcmSha256": "b1ad6309b6776164f2cf1a0a24725d8299e785c87b5fab205a8d46f93d4b52ef",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "word-furchtbar",
+      "file": "words/audio/de-DE/word-furchtbar.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "furchtbar.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 885,
+      "sizeBytes": 4233,
+      "hash": "sha256:fd2c75a389b2be412fb28380e79a2530254fbfc83c2106d489f6f2899ccb59cd",
+      "pcmSha256": "de7b8565ce671fdcbf6cad34194e1c9cb20b81ea92d69e3f44b805263bbca003",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "word-beliebt",
+      "file": "words/audio/de-DE/word-beliebt.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "beliebt.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 746,
+      "sizeBytes": 3565,
+      "hash": "sha256:7318af0fae9ca55ba7b4c21f403eb28f6fc3a9cb0dbe7946f1c51dc0f5579df6",
+      "pcmSha256": "ac47ffc471bc58cdd69896a7be1db87b9bc9d76fd26a0bb01bf7c151e4768325",
+      "rmsDb": -17.04
+    },
+    {
+      "id": "word-beruehmt",
+      "file": "words/audio/de-DE/word-beruehmt.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "berühmt.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 885,
+      "sizeBytes": 4317,
+      "hash": "sha256:f6f29cdd7ea5256fd392d5237a226bc07cab997ee64484516b0ffce4194a0425",
+      "pcmSha256": "5fd3b2ef9676f8b9f36c7590d4fd8562033ba7a6fd846befacd1f83b2033d52c",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-fan",
+      "file": "words/audio/de-DE/word-fan.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Fan.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 862,
+      "sizeBytes": 4220,
+      "hash": "sha256:6d5ffb1ad5fb736ad93560c1765f1f3cbff8959b4fb092e48be4450c1631dc91",
+      "pcmSha256": "a16841ca16fcc090269c32873668bb44404acbc93fba12d99df5073fa699bd23",
+      "rmsDb": -17.08
+    },
+    {
+      "id": "word-ahnung",
+      "file": "words/audio/de-DE/word-ahnung.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Ahnung.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 908,
+      "sizeBytes": 4376,
+      "hash": "sha256:a832456e5b0474211282e895f9e5702034cb5836ce118f302b643023e666bbff",
+      "pcmSha256": "896cdf89400c0061b8745a9dc2448714ae33997ed6211f21244f1bfe9c3c08a7",
+      "rmsDb": -16.98
+    },
+    {
+      "id": "word-hauptstadt",
+      "file": "words/audio/de-DE/word-hauptstadt.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Hauptstadt.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u4-d4"
+      ],
+      "durationMs": 1175,
+      "sizeBytes": 5565,
+      "hash": "sha256:e3519a5aea53a3e9e55d57a20aa2f41a714e4bf281da93ab63dc3392d185cb44",
+      "pcmSha256": "b14457f59239eea7829d4498dee1f1c4cdd5307b0a3d5cd6c0735ced7bdc104e",
+      "rmsDb": -17.04
     },
     {
       "id": "mueller-announce-01",

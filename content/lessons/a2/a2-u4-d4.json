@@ -1,0 +1,419 @@
+{
+  "audioManifestRefs": [
+    "word-dafuer",
+    "word-dagegen",
+    "word-dabei",
+    "word-bestehen",
+    "word-besonders",
+    "word-echt",
+    "word-fantastisch",
+    "word-furchtbar",
+    "word-beliebt",
+    "word-beruehmt",
+    "word-fan",
+    "word-ahnung",
+    "word-hauptstadt"
+  ],
+  "canDoDaily": [
+    "يعبّر عن رأيه في حوار من 6 جمل (سؤال + رأي + مشاركة + تعجّب)",
+    "يضع الظرف أولاً والفعل ثانياً (Dafür bin ich) ويعلل (الفعل دائماً ثانٍ)"
+  ],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "dafuer",
+      "dagegen",
+      "dabei",
+      "bestehen",
+      "besonders",
+      "echt",
+      "fantastisch",
+      "furchtbar",
+      "beliebt",
+      "beruehmt",
+      "fan",
+      "ahnung",
+      "hauptstadt"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 4 «Große und kleine Gefühle» — تباعد ثانٍ موثق: الموضوع من §7 (المدينة والمواصلات) والفصل K4 للدعم (D337)"
+  },
+  "day": 4,
+  "einstieg": {
+    "guidedRetrieval": [
+      "من d3: Wo ist das Konzert؟ + Danke! — واليوم رأيك فيه: Das Konzert ist besonders gut!",
+      "من A1-U6: Darauf steht eine Vase (المكان) — واليوم المعنى المجرّد: dafür/dagegen/dabei (الرأي)!"
+    ],
+    "pretestItems": [
+      {
+        "answer": "Ich bin dafür.",
+        "choices": [
+          "Ich bin dafür.",
+          "Ich bin für das.",
+          "Ich dafür bin."
+        ],
+        "prompt": {
+          "ar": "«أنا موافق» — كيف تقول؟"
+        },
+        "revealNextSession": true
+      },
+      {
+        "answer": "Dafür bin ich.",
+        "choices": [
+          "Dafür bin ich.",
+          "Dafür ich bin.",
+          "Ich dafür bin."
+        ],
+        "prompt": {
+          "ar": "«لذلك أنا مع» — أين الفعل؟"
+        },
+        "revealNextSession": true
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Fan",
+      "https://www.duden.de/rechtschreibung/Hauptstadt"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/bestehen"
+    ]
+  },
+  "id": "a2-u4-d4",
+  "imageManifestRefs": [],
+  "kind": "content",
+  "level": "A2",
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-da-komposita"
+    ],
+    "riskFlagsShown": [
+      "v2-order",
+      "needs-ein",
+      "plural-irregular"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "dafuer",
+      "dagegen",
+      "dabei",
+      "bestehen",
+      "besonders",
+      "echt",
+      "fantastisch",
+      "furchtbar",
+      "beliebt",
+      "beruehmt",
+      "fan",
+      "ahnung",
+      "hauptstadt"
+    ]
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "a": "der Fan → die Fans",
+            "q": "«مشجّع» — الأداة والجمع؟"
+          },
+          {
+            "a": "besteht",
+            "q": "Er ___ darauf. (bestehen)"
+          },
+          {
+            "a": "bin",
+            "q": "Ich ___ dafür. (sein)"
+          },
+          {
+            "a": "fantastisch",
+            "q": "Das Konzert ist ___. (fantastisch)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "die Ahnung → die Ahnungen",
+            "q": "«فكرة/علم» — الأداة والجمع؟"
+          },
+          {
+            "a": "bin",
+            "q": "Dafür ___ ich. (sein)"
+          },
+          {
+            "a": "furchtbar",
+            "q": "Das Wetter ist ___. (furchtbar)"
+          },
+          {
+            "a": "keine",
+            "q": "Ich habe ___ Ahnung. (kein)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "die Hauptstadt → die Hauptstädte",
+            "q": "«عاصمة» — الأداة والجمع؟"
+          },
+          {
+            "a": "sind",
+            "q": "Wir ___ dabei. (sein)"
+          },
+          {
+            "a": "berühmt",
+            "q": "Der Club ist ___. (berühmt)"
+          },
+          {
+            "a": "echt",
+            "q": "Das ist ___ gut. (echt)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "ar": "تعبّر عن رأيك",
+        "de": "Deine Meinung sagen"
+      },
+      "situation": {
+        "ar": "صديق يسألك: هل أنت مع الحفلة؟",
+        "de": "Ein Freund fragt: Bist du dafür?"
+      },
+      "successCriteria": [
+        "يعبّر عن رأيين على الأقل (dafür/dagegen/fantastisch...)",
+        "يضع الظرف أولاً والفعل ثانياً (V2!)",
+        "يختم بمشاركة أو تعجّب (dabei/Keine Ahnung!)"
+      ]
+    },
+    "stations": [
+      {
+        "explanationRequired": true,
+        "hints": [
+          "bestehen + darauf = يُصرّ على (الفعل مع da!)",
+          "Ich bin · du bist · wir sind (sein!)",
+          "dafür/dagegen/dabei بعد sein مباشرة"
+        ],
+        "interleavedWith": [
+          "darauf",
+          "gut"
+        ],
+        "items": [
+          {
+            "a": "besteht",
+            "q": "هو يُصرّ على ذلك: Er ___ darauf. (bestehen)",
+            "why": "Er besteht darauf! bestehen + darauf (يُصرّ على ذلك) — الفعل مع da!"
+          },
+          {
+            "a": "bin",
+            "q": "الحفلة جيّدة. أنا موافق: Das Konzert ist gut. Ich ___ dafür. (sein)",
+            "why": "Ich bin dafür (أنا موافق!) — Ich ← bin!"
+          },
+          {
+            "a": "bist",
+            "q": "أنت معارض: Du ___ dagegen. (sein)",
+            "why": "Du bist dagegen (أنت معارض!) — du ← bist!"
+          },
+          {
+            "a": "sind",
+            "q": "نحن مشاركون: Wir ___ dabei. (sein)",
+            "why": "Wir sind dabei (نحن مشاركون!) — wir ← sind!"
+          },
+          {
+            "a": "bestehen",
+            "q": "أنتم تُصرّون على ذلك (رسمي): Sie ___ darauf. (bestehen)",
+            "why": "Sie ← bestehen (المصدر نفسه — رسمي/جمع!) + darauf."
+          }
+        ],
+        "type": "verb-bank"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الصفة بعد ist بلا نهاية (fantastisch!)",
+          "finde = أجد/أرى (رأي!)",
+          "Wetter/Meinung كلمات A1 — استرجعها!"
+        ],
+        "interleavedWith": [
+          "finden",
+          "wetter",
+          "gross"
+        ],
+        "items": [
+          {
+            "a": "fantastisch",
+            "q": "الحفلة رائعة: Das Konzert ist ___. Ich finde es echt gut. (fantastisch)",
+            "why": "Das Konzert ist fantastisch! (الحفلة رائعة!) — الصفة بعد ist بلا نهاية."
+          },
+          {
+            "a": "furchtbar",
+            "q": "الطقس فظيع: Das Wetter ist ___. (furchtbar)",
+            "why": "Das Wetter ist furchtbar! (الطقس فظيع!) — Wetter مذكّر؟ لا! das Wetter!"
+          },
+          {
+            "a": "beliebt",
+            "q": "الجولة محبوبة: Die Tour ist ___. Sie ist besonders gut. (beliebt)",
+            "why": "Die Tour ist beliebt! (الجولة محبوبة!) — sie = die Tour."
+          },
+          {
+            "a": "berühmt",
+            "q": "النادي مشهور: Der Club ist ___. Er ist sehr groß. (berühmt)",
+            "why": "Der Club ist berühmt! (النادي مشهور!) — er = der Club."
+          }
+        ],
+        "type": "gap-fill"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الخطأ كلمة واحدة (أو موضع واحد) — الباقي صحيح",
+          "الظرف أولاً ← الفعل ثانياً (V2!)",
+          "لا es بعد الحرف للشيء — da أولاً!"
+        ],
+        "interleavedWith": [
+          "auch"
+        ],
+        "items": [
+          {
+            "a": "Dafür bin ich auch.",
+            "q": "Dafür ich bin auch.",
+            "why": "الفعل ثانياً دائماً (V2)! الظرف أولاً ← الفعل بعده مباشرةً: bin."
+          },
+          {
+            "a": "Ich bin dafür.",
+            "q": "Ich bin für es.",
+            "why": "لا es بعد الحرف للشيء! da أولاً ثم الحرف: dafür (قاعدة u6-d5 نفسها!)."
+          },
+          {
+            "a": "Ich habe keine Ahnung.",
+            "q": "Ich habe kein Ahnung.",
+            "why": "Ahnung مؤنث (die!) وفي المفعول ← keine (kein تتصرف!)."
+          },
+          {
+            "a": "Die Hauptstadt ist berühmt.",
+            "q": "Die Hauptstadt ist berühmt gut.",
+            "why": "صفتان متتاليتان بلا und خطأ — berühmt وحدها تكفي!"
+          }
+        ],
+        "type": "error-hunt"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "ابدأ بالسؤال وأنهِ بالتعجّب",
+          "الرأي: Ich bin dafür/dagegen + Das ist fantastisch!"
+        ],
+        "interleavedWith": [
+          "gut"
+        ],
+        "items": [
+          {
+            "a": "Bist du dafür? Nein, ich bin dagegen. Ist das Konzert gut? Ja, es ist fantastisch. Ich bin Fan. Ich bin dabei. Keine Ahnung!",
+            "q": "مثّل حوار الرأي (سجّل): صديق يسأل وأنت تجيب — 7 جمل (سؤال + رأي + سؤال + رأي + مشاركة + تعجّب)",
+            "why": "قارن تسجيلك: سؤالان (Bist du...؟ Ist...؟) + رأيان (dagegen/fantastisch!) + مشاركة (Fan/dabei!) + Keine Ahnung!"
+          }
+        ],
+        "type": "speaking"
+      }
+    ]
+  },
+  "unit": 4,
+  "usedArsenalIds": [
+    "ars-da-komposita"
+  ],
+  "warmup": {
+    "cardIds": [
+      "konzert",
+      "club",
+      "meinung"
+    ]
+  },
+  "ziel": {
+    "ar": "تعبّر عن رأيك: موافق أو معارض أو مشارك",
+    "de": "Du kannst deine Meinung sagen: Ich bin dafür."
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "dafuer",
+      "dagegen",
+      "dabei",
+      "bestehen",
+      "besonders",
+      "echt",
+      "fantastisch",
+      "furchtbar",
+      "beliebt",
+      "beruehmt",
+      "fan",
+      "ahnung",
+      "hauptstadt"
+    ],
+    "summary": {
+      "ar": "رأيي: أنا موافق. الحفلة رائعة. أنا مشارك. الجولة محبوبة. نحن مشاركون. لا علم لي!",
+      "de": "Meine Meinung: Ich bin dafür. Das Konzert ist fantastisch. Ich bin dabei. Die Tour ist beliebt. Wir sind dabei. Keine Ahnung!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "الفعل ثالثاً بعد الظرف",
+          "de": "~~Dafür ich bin.~~"
+        },
+        "correct": {
+          "ar": "لذلك أنا موافق.",
+          "de": "Dafür bin ich."
+        },
+        "exercise": {
+          "a": "bin",
+          "q": "Dafür ___ ich."
+        },
+        "whyArabicSpeakerFails": "العربية (لذلك أنا موافق) الفاعل بعد الظرف، فيُؤخَّر الفعل — بينما الألمانية V2: الفعل ثانياً دائماً (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "الضمير بعد الحرف",
+          "de": "~~Ich bin für es.~~"
+        },
+        "correct": {
+          "ar": "أنا موافق.",
+          "de": "Ich bin dafür."
+        },
+        "exercise": {
+          "a": "dafür",
+          "q": "Ich bin ___. (dafür)"
+        },
+        "whyArabicSpeakerFails": "العربية («معه») والإنجليزية (for it) تضعان الضمير بعد الحرف — بينما الألمانية للشيء: da أولاً ثم الحرف (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "kein بلا نهاية مع المؤنث",
+          "de": "~~Ich habe kein Ahnung.~~"
+        },
+        "correct": {
+          "ar": "لا علم لي!",
+          "de": "Ich habe keine Ahnung."
+        },
+        "exercise": {
+          "a": "keine",
+          "q": "Ich habe ___ Ahnung."
+        },
+        "whyArabicSpeakerFails": "العربية (لا علم لي) بلا أداة، فيُنسى تصريف kein — بينما الألمانية: المؤنث المفعول ← keine (خريطة التداخل 10‑ي)"
+      }
+    ]
+  }
+}
