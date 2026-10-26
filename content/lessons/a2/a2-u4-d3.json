@@ -1,0 +1,424 @@
+{
+  "audioManifestRefs": [
+    "word-zuhoeren",
+    "word-wechseln",
+    "word-unternehmen",
+    "word-leihen",
+    "word-verkehrsmittel",
+    "word-rundgang",
+    "word-tour",
+    "word-messe",
+    "word-club",
+    "word-konzert",
+    "word-kaufhaus",
+    "word-vorn",
+    "word-schade"
+  ],
+  "canDoDaily": [
+    "يسأل عن الطريق ويوجه غيره في حوار من 6 جمل (سؤال + توجيه + شكر)",
+    "يستعمل ظروف الاتجاه في موضعها (vorn/links + الفعل ثانياً) ويعلل (الفعل دائماً ثانٍ)"
+  ],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "zuhoeren",
+      "wechseln",
+      "unternehmen",
+      "leihen",
+      "verkehrsmittel",
+      "rundgang",
+      "tour",
+      "messe",
+      "club",
+      "konzert",
+      "kaufhaus",
+      "vorn",
+      "schade"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 4 «Große und kleine Gefühle» — تباعد ثانٍ موثق: الموضوع من §7 (المدينة والمواصلات) والفصل K4 للدعم (D337)"
+  },
+  "day": 3,
+  "einstieg": {
+    "guidedRetrieval": [
+      "من d2: Wohin? in den Club (الأكوزاتيف للاتجاه) — واليوم تسأل: Wo ist der Club?",
+      "من A1-U9: Geradeaus zur Kreuzung, dort links (التوجيه) — واليوم حوار كامل"
+    ],
+    "pretestItems": [
+      {
+        "answer": "Wo ist das Konzert?",
+        "choices": [
+          "Wo ist das Konzert?",
+          "Wo bist das Konzert?",
+          "Wo sind das Konzert?"
+        ],
+        "prompt": {
+          "ar": "«أين الحفلة؟» — كيف تسأل؟"
+        },
+        "revealNextSession": true
+      },
+      {
+        "answer": "Vorn links ist das Kino.",
+        "choices": [
+          "Vorn links ist das Kino.",
+          "Vorn links das Kino ist.",
+          "Vorn links sein das Kino."
+        ],
+        "prompt": {
+          "ar": "«في الأمام يساراً» — أين الفعل؟"
+        },
+        "revealNextSession": true
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Verkehrsmittel",
+      "https://www.duden.de/rechtschreibung/Rundgang"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/zuhören"
+    ]
+  },
+  "id": "a2-u4-d3",
+  "imageManifestRefs": [],
+  "kind": "content",
+  "level": "A2",
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-wechselpraep",
+      "ars-weg-verkehr"
+    ],
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order",
+      "needs-ein"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "zuhoeren",
+      "wechseln",
+      "unternehmen",
+      "leihen",
+      "verkehrsmittel",
+      "rundgang",
+      "tour",
+      "messe",
+      "club",
+      "konzert",
+      "kaufhaus",
+      "vorn",
+      "schade"
+    ]
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "a": "das Verkehrsmittel → die Verkehrsmittel",
+            "q": "«وسيلة مواصلات» — الأداة والجمع؟"
+          },
+          {
+            "a": "hören",
+            "q": "Wir ___ zu. (zuhören)"
+          },
+          {
+            "a": "ist",
+            "q": "Wo ___ das Konzert?"
+          },
+          {
+            "a": "vorn",
+            "q": "Wir sitzen ___. (vorn)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "die Tour → die Touren",
+            "q": "«جولة» — الأداة والجمع؟"
+          },
+          {
+            "a": "leihe",
+            "q": "Ich ___ ein Buch. (leihen)"
+          },
+          {
+            "a": "schade",
+            "q": "Das ist ___. (schade)"
+          },
+          {
+            "a": "Verkehrsmittel",
+            "q": "Der Bus ist ein ___."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "der Club → die Clubs",
+            "q": "«نادي» — الأداة والجمع؟"
+          },
+          {
+            "a": "wechseln",
+            "q": "Wir ___ Geld. (wechseln)"
+          },
+          {
+            "a": "unternehmen",
+            "q": "Wir ___ eine Tour. (unternehmen)"
+          },
+          {
+            "a": "ist",
+            "q": "Vorn links ___ das Kino."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "ar": "تسأل عن الطريق",
+        "de": "Nach dem Weg fragen"
+      },
+      "situation": {
+        "ar": "تسأل رجلاً: أين المعرض؟",
+        "de": "Du fragst einen Mann: Wo ist die Messe?"
+      },
+      "successCriteria": [
+        "يسأل سؤالين على الأقل (Wo ist...؟)",
+        "يوجّه بظرفين (vorn/links/rechts...)",
+        "يختم بشكر (Danke!)"
+      ]
+    },
+    "stations": [
+      {
+        "explanationRequired": true,
+        "hints": [
+          "المنفصل: الجذر يتصرف والجزء في الآخر (hören ... zu)",
+          "أمر Sie: المصدر + Sie",
+          "unternehmen + أكوزاتيف: eine Tour · einen Rundgang"
+        ],
+        "interleavedWith": [
+          "geld",
+          "buch",
+          "kino"
+        ],
+        "items": [
+          {
+            "a": "hören",
+            "q": "نستمع: Wir ___ zu. (zuhören)",
+            "why": "zuhören منفصل: hören يتصرف (wir ← hören) وzu في الآخر!"
+          },
+          {
+            "a": "Hören",
+            "q": "استمع! (رسمي): ___ Sie zu! (zuhören)",
+            "why": "أمر Sie: المصدر + Sie — Hören Sie zu! (والمنفصل: zu في الآخر!)"
+          },
+          {
+            "a": "wechseln",
+            "q": "نبدّل النقود: Wir ___ Geld. (wechseln)",
+            "why": "wir تأخذ المصدر نفسه: wechseln — نبدّل النقود (wie Wechselgeld)!"
+          },
+          {
+            "a": "leihe",
+            "q": "أستعير كتاباً: Ich ___ ein Buch. (leihen)",
+            "why": "Ich ← leihe + ein Buch (أكوزاتيف: das ← ein!)."
+          },
+          {
+            "a": "unternehmen",
+            "q": "نقوم بجولة: Wir ___ eine Tour. (unternehmen)",
+            "why": "wir ← unternehmen + eine Tour — unternehmen يأخذ مفعولاً!"
+          }
+        ],
+        "type": "verb-bank"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "Wo ist ...؟ للسؤال عن المكان",
+          "der/die/das ← ein الصنف نفسه",
+          "schade! = يا خسارة (تعاطف)"
+        ],
+        "interleavedWith": [
+          "stadt",
+          "strasse",
+          "haus"
+        ],
+        "items": [
+          {
+            "a": "ist",
+            "q": "أين الحفلة؟ Wo ___ das Konzert? (sein)",
+            "why": "Wo ist ...؟ (أين) — das Konzert مفرد ← ist."
+          },
+          {
+            "a": "vorn",
+            "q": "في الأمام: Wir sitzen ___. (vorn)",
+            "why": "ظرف المكان vorn (في الأمام): Wir sitzen vorn."
+          },
+          {
+            "a": "Verkehrsmittel",
+            "q": "الباص وسيلة مواصلات: Der Bus ist ein ___. (Verkehrsmittel)",
+            "why": "Der Bus ist ein Verkehrsmittel — محايد: ein بلا نهاية!"
+          },
+          {
+            "a": "schade",
+            "q": "يا خسارة! Das ist ___. (schade)",
+            "why": "Das ist schade! (يا خسارة!) — تعاطف في الحوار."
+          }
+        ],
+        "type": "gap-fill"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الخطأ كلمة واحدة (أو موضع واحد) — الباقي صحيح",
+          "مفرد ← ist · جمع ← sind",
+          "الفعل ثانياً — احفظ V2!"
+        ],
+        "interleavedWith": [
+          "neu",
+          "schoen",
+          "gut"
+        ],
+        "items": [
+          {
+            "a": "Wo ist das Konzert?",
+            "q": "Wo sind das Konzert?",
+            "why": "das Konzert مفرد ← ist — sind للجمع!"
+          },
+          {
+            "a": "Vorn links ist das Kino.",
+            "q": "Vorn links das Kino ist.",
+            "why": "الفعل ثانياً دائماً (V2)! الظرف أولاً ← الفعل بعده مباشرةً: ist."
+          },
+          {
+            "a": "Wir hören zu.",
+            "q": "Wir zuhören.",
+            "why": "المنفصل ينفصل! hören ثانياً وzu آخراً — Wir zuhören خطأ!"
+          },
+          {
+            "a": "Ich leihe ein Buch.",
+            "q": "Ich leihe ein Bücher.",
+            "why": "ein للمفرد! Bücher جمع (بلا ein) — Ich leihe ein Buch."
+          }
+        ],
+        "type": "error-hunt"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "ابدأ بالسؤال وأنهِ بالشكر",
+          "التوجيه: ظرف أولاً ثم الفعل (V2!)"
+        ],
+        "interleavedWith": [
+          "stadt"
+        ],
+        "items": [
+          {
+            "a": "Wo ist die Messe? Vorn links ist die Messe. Wo ist der Club? Der Club ist rechts. Danke! Bitte!",
+            "q": "مثّل حوار الطريق (سجّل): سائح يسأل وأنت توجّه — 6 جمل (سؤال + توجيه + سؤال + توجيه + شكر + عفو)",
+            "why": "قارن تسجيلك: سؤالان (Wo ist...؟) + توجيهان (vorn links / rechts + V2!) + Danke/Bitte!"
+          }
+        ],
+        "type": "speaking"
+      }
+    ]
+  },
+  "unit": 4,
+  "usedArsenalIds": [
+    "ars-wechselpraep",
+    "ars-weg-verkehr"
+  ],
+  "warmup": {
+    "cardIds": [
+      "strasse",
+      "weg",
+      "ziel"
+    ]
+  },
+  "ziel": {
+    "ar": "تسأل عن الطريق وتوجّه غيرك (حوار: سؤال + توجيه + شكر)",
+    "de": "Du kannst nach dem Weg fragen: Wo ist das Konzert?"
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "zuhoeren",
+      "wechseln",
+      "unternehmen",
+      "leihen",
+      "verkehrsmittel",
+      "rundgang",
+      "tour",
+      "messe",
+      "club",
+      "konzert",
+      "kaufhaus",
+      "vorn",
+      "schade"
+    ],
+    "summary": {
+      "ar": "طريقي: أين المعرض؟ المعرض في الأمام يساراً. أين النادي؟ النادي يميناً. شكراً! عفواً! والاتجاه: in die Messe · in den Club.",
+      "de": "Mein Weg: Wo ist die Messe? Vorn links ist die Messe. Wo ist der Club? Der Club ist rechts. Danke! Bitte! Wohin? — in die Messe · in den Club."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "فعل الجمع مع مفرد",
+          "de": "~~Wo sind das Konzert?~~"
+        },
+        "correct": {
+          "ar": "أين الحفلة؟",
+          "de": "Wo ist das Konzert?"
+        },
+        "exercise": {
+          "a": "ist",
+          "q": "Wo ___ das Konzert?"
+        },
+        "whyArabicSpeakerFails": "العربية «أين» بلا فعل، فيُخلط ist/sind — بينما الألمانية توجب الفعل مطابقاً: مفرد ← ist (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "الفعل آخراً بدل ثانياً",
+          "de": "~~Vorn links das Kino ist.~~"
+        },
+        "correct": {
+          "ar": "السينما في الأمام يساراً.",
+          "de": "Vorn links ist das Kino."
+        },
+        "exercise": {
+          "a": "ist",
+          "q": "Vorn links ___ das Kino."
+        },
+        "whyArabicSpeakerFails": "العربية (السينما في الأمام) بلا فعل أو الفعل آخراً، فيُؤخَّر ist — بينما الألمانية V2: الفعل ثانياً دائماً (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "فعل متصل بدل المنفصل المشطور",
+          "de": "~~Wir zuhören.~~"
+        },
+        "correct": {
+          "ar": "نستمع.",
+          "de": "Wir hören zu."
+        },
+        "exercise": {
+          "a": "hören",
+          "q": "Wir ___ zu. (zuhören)"
+        },
+        "whyArabicSpeakerFails": "العربية فعلٌ واحد («نستمع»)، فيُنسى الانفصال — بينما الألمانية تشطر المنفصل: الجذر ثانياً والجزء آخراً (خريطة التداخل 10‑ي)"
+      }
+    ]
+  }
+}

@@ -1507,6 +1507,19 @@ def build_all() -> None:
     ("word-ausstellung", "die Ausstellung.", "ausstellung", ["a2-u4-d2"]),
     ("word-friseur", "der Friseur.", "friseur", ["a2-u4-d2"]),
     ("word-krimi", "der Krimi.", "krimi", ["a2-u4-d2"]),
+    ("word-zuhoeren", "zuhören.", "zuhoeren", ["a2-u4-d3"]),
+    ("word-wechseln", "wechseln.", "wechseln", ["a2-u4-d3"]),
+    ("word-unternehmen", "unternehmen.", "unternehmen", ["a2-u4-d3"]),
+    ("word-leihen", "leihen.", "leihen", ["a2-u4-d3"]),
+    ("word-verkehrsmittel", "das Verkehrsmittel.", "verkehrsmittel", ["a2-u4-d3"]),
+    ("word-rundgang", "der Rundgang.", "rundgang", ["a2-u4-d3"]),
+    ("word-tour", "die Tour.", "tour", ["a2-u4-d3"]),
+    ("word-messe", "die Messe.", "messe", ["a2-u4-d3"]),
+    ("word-club", "der Club.", "club", ["a2-u4-d3"]),
+    ("word-konzert", "das Konzert.", "konzert", ["a2-u4-d3"]),
+    ("word-kaufhaus", "das Kaufhaus.", "kaufhaus", ["a2-u4-d3"]),
+    ("word-vorn", "vorn.", "vorn", ["a2-u4-d3"]),
+    ("word-schade", "schade.", "schade", ["a2-u4-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

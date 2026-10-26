@@ -1359,7 +1359,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-weg-verkehr) — تشاركها u9-d3 (الأمر Sie + الطريق) وu9-d6 (توليف) · بلا نواة (الخطة: الإسناد المعلّق التالي a1-u9-d3)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-weg-verkehr"]);
     const rule = rules.get("ars-weg-verkehr")!;
-    expect(rule.usedInLessons).toEqual(["a1-u9-d2", "a1-u9-d3", "a1-u9-d6", "a1-u15-d5"]); // D203
+    expect(rule.usedInLessons).toEqual(["a1-u9-d2", "a1-u9-d3", "a1-u9-d6", "a1-u15-d5", "a2-u4-d3"]); // D340: u4-d3 تنقلها (حوار الطريق: Wo ist die Haltestelle؟) // D203
     expect(rule.payload.ruleDe).toBe("einsteigen · umsteigen · aussteigen: Ich steige … ein / um / aus. — Am Hauptbahnhof steige ich um. · Wo steigst du aus? — Am Flughafen. · Musst du umsteigen? — Nein, ich steige nicht um. — Wohin fährst du? — Zum Hauptbahnhof. · Wo ist die Haltestelle? — Gegenüber der Post. — Linie 5 · Bahnsteig 3 · von Bahnsteig 3 ab · in Richtung Flughafen · Die Abfahrt ist um acht Uhr. · Die Ankunft ist um neun Uhr. · weit ≠ nah · hin und zurück · am Park vorbei · Überall ist Verkehr.");
     // أربع خطوات: الأفعال المنفصلة الثلاثة (+ muss + الفعل كاملاً · nicht قبل الجزء) · Wohin ≠ Wo · أرقام الرحلة بلا أداة + um … Uhr · weit/nah · hin und zurück · vorbei · überall
     for (const x of ["einsteigen (يركب) · umsteigen (يغيّر وسيلة النقل) · aussteigen (ينزل)", "ich steige · du steigst · er steigt", "Am Hauptbahnhof steige ich um.", "Ich muss am Hauptbahnhof umsteigen.", "Ich steige nicht um.", "Wohin? (إلى أين) للاتجاه", "Wo? (أين) للموقع", "Linie 5 (الخط 5) · Bahnsteig 3 (الرصيف 3)", "in Richtung Flughafen", "Die Abfahrt ist um acht Uhr.", "weit (بعيد) ≠ nah (قريب)", "hin und zurück (ذهاباً وإياباً — بهذا الترتيب دائماً", "Der Zug fährt am Park vorbei.", "Überall ist Verkehr."])
@@ -3201,7 +3201,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدتا اليوم: ars-wechselpraep (الجديدة — تشاركها u9-d6) + ars-imperativ-sie (من D163)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-wechselpraep", "ars-imperativ-sie"]);
     const rule = rules.get("ars-wechselpraep")!;
-    expect(rule.usedInLessons).toEqual(["a1-u9-d4", "a1-u9-d6", "a1-u12-d1", "a2-u4-d1", "a2-u4-d2"]); // D339: u4-d2 تنقلها (Wohin-Akk) // D338: u4-d1 تنقلها (Wo-Dativ) // D176: u12-d1 يراجعها بـim Hotel/ins Ausland
+    expect(rule.usedInLessons).toEqual(["a1-u9-d4", "a1-u9-d6", "a1-u12-d1", "a2-u4-d1", "a2-u4-d2", "a2-u4-d3"]); // D340: u4-d3 تنقلها (حوار الطريق) // D339: u4-d2 تنقلها (Wohin-Akk) // D338: u4-d1 تنقلها (Wo-Dativ) // D176: u12-d1 يراجعها بـim Hotel/ins Ausland
     expect(rule.payload.ruleDe).toBe("Wo? — vor der Kirche · im Tunnel · am Ufer · auf der linken Seite · hinter dem Haus · in der Nähe · an der Ecke — Wohin? — vor die Kirche · in den Tunnel · ans Ufer · auf die Brücke · über die Brücke · auf den Parkplatz · in die Stadt — gegen: gegen die Wand · gegen den Tisch · gegen zehn Uhr — hundert Meter · zweihundert Meter geradeaus — Die Apotheke ist zu. · Die Bank ist auf.");
     // أربع خطوات: التسعة باسمها · Wo? الداتيف · Wohin? الأكوزاتيف (vor جديد · ans) · gegen أكوزاتيف دائماً + Meter + auf/zu sein
     for (const x of ["Wechselpräpositionen", "an · in · auf · vor (جديد: أمام) · hinter · über · unter · neben · zwischen", "Wo? → الداتيف", "Wohin? → الأكوزاتيف", "vor der Kirche", "vor die Kirche", "an das = ans", "gegen (ضد/نحو) + الأكوزاتيف دائماً", "gegen zehn Uhr", "وبعد الرقم بلا نهاية: zweihundert Meter", "auf sein (مفتوح) ≠ zu sein (مغلق)"])
