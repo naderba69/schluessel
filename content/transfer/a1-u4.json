@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-transfer-u4",
+  "level": "A1",
+  "unit": 4,
+  "items": [
+    {
+      "q": "«هذه أختي»؟",
+      "a": "Das ist meine Schwester.",
+      "choices": ["Das ist meine Schwester.", "Das ist mein Schwester.", "Das ist meine Schwester?"],
+      "why": "Schwester مؤنثة ⇐ meine. والجملة خبرية لا استفهامية."
+    },
+    {
+      "q": "«أرى أبي»؟",
+      "a": "Ich sehe meinen Vater.",
+      "choices": ["Ich sehe meinen Vater.", "Ich sehe mein Vater.", "Ich sehe meine Vater."],
+      "why": "الأب مفعول به مذكر ⇐ meinen (mein + en). -e للمؤنث لا المذكر."
+    },
+    {
+      "q": "«أختي معلمة»؟",
+      "a": "Meine Schwester ist Lehrerin.",
+      "choices": ["Meine Schwester ist Lehrerin.", "Mein Schwester ist Lehrerin.", "Meine Schwester ist Lehrer."],
+      "why": "الأخت مؤنثة: meine + Lehrerin (بـ-in). Lehrer للمذكر."
+    },
+    {
+      "q": "«هل تراها؟ — نعم»؟",
+      "a": "Siehst du sie? — Ja.",
+      "choices": ["Siehst du sie? — Ja.", "Siehst du ihr? — Ja.", "Siehst du sie? — Nein."],
+      "why": "المفعول به المؤنث sie (كما ihn للمذكر). والجواب Ja يطابق السؤال."
+    }
+  ]
+}

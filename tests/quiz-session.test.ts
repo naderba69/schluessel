@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 import type { Lesson, OpenStation, QuizItem } from "../content/schemas/index.js";
 import { OpenStation as OpenStationSchema, OpenSession, QuizAnswer as QuizAnswerSchema, QuizItem as QuizItemSchema } from "../content/schemas/index.js";
 import {
-  advanceQuiz, answerQuizItem, calibrationNoteAr, canRetryInSession, CLOSE_CREDIT, currentQuizItem, gradeQuizAnswer,
+  advanceQuiz, answerQuizItem, calibrationNoteAr, canRetryInSession, CLOSE_CREDIT, currentQuizItem, cyclicQuizLesson, gradeQuizAnswer,
   isComplete, judgeQuizItem, needsJudgment, outcomeHeadlineAr, predictScore, quizNormal, quizOutcome, restoreQuizAttempt,
   startQuizAttempt, variantFor, verdictNoteAr, type QuizAttempt,
 } from "../src/lib/quiz-session.js";
@@ -249,5 +249,35 @@ describe("N-006 (D228) — المخطط: محطات الاستئناف مرآة 
     };
     expect(OpenSession.safeParse(good).success).toBe(true);
     expect(OpenSession.safeParse({ ...good, station: "nope" }).success).toBe(false);
+  });
+});
+
+describe("D283: مهايئ الدوري على المحطة", () => {
+  const test = {
+    id: "a1-kurztest-w2",
+    passingScore: 0.75,
+    items: [
+      { q: "«مرحباً»؟", a: "hallo" },
+      { q: "«شكراً»؟", a: "danke" },
+      { q: "«من فضلك»؟", a: "bitte" },
+    ],
+  };
+
+  it("نسخة واحدة صالحة بمخطط QuizItem — وسلايدر 0..100", () => {
+    const lesson = cyclicQuizLesson(test);
+    expect(lesson.id).toBe("a1-kurztest-w2");
+    expect(lesson.quiz.variants).toHaveLength(1);
+    const v = lesson.quiz.variants[0]!;
+    expect(v.passingScore).toBe(0.75);
+    for (const it of v.items) expect(() => QuizItemSchema.parse(it)).not.toThrow();
+    expect([lesson.slider.min, lesson.slider.max]).toEqual([0, 100]);
+  });
+
+  it("المحاولة تبدأ من النسخة الوحيدة دائماً", () => {
+    const lesson = cyclicQuizLesson(test);
+    const a = startQuizAttempt(lesson, 5);
+    expect(a.variantIndex).toBe(0);
+    expect(a.items).toHaveLength(3);
+    expect(a.passingScore).toBe(0.75);
   });
 });

@@ -41,6 +41,15 @@ export function MapView({ map }: { map: ProgressMap }) {
           ? "🚪 هذا أسبوع بوابة — اختبار مفصلي للتثبيت (ليس تموضعاً أبداً)"
           : `🚪 البوابة القادمة: الأسبوع ${map.nextGateWeek}`}
       </p>
+      {map.mastery && map.mastery.length > 0 && (
+        <ul data-testid="map-mastery">
+          {map.mastery.map((m) => (
+            <li key={m.level} data-level={m.level}>
+              📊 {m.lineAr}
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 }

@@ -178,3 +178,29 @@ export function recallFlowValid(steps: ReadonlyArray<RecallStep>): boolean {
 export function countDueSrs(cards: readonly SrsCardState[], todayDay: string): number {
   return cards.filter((c) => c.due.slice(0, 10) <= todayDay).length;
 }
+
+/* ══════════ D273 — إغلاق حلقة SRS: المستحق يُراجَع والتقييم يُحفَظ ══════════ */
+/** أ-9: سقف SRS داخل الحصة ≈ 12 دقيقة — الفائض للجلسات المصغّرة (D274) */
+export const MAX_DUE_PER_SESSION = 15;
+
+/** البطاقات المستحقة الآن أو قبله — الأقدم استحقاقاً أولاً (تشمل New: أول مراجعة في جلسة الغد — ب-11) */
+export function dueSrsCards(cards: readonly SrsCardState[], now: Date = new Date()): SrsCardState[] {
+  return [...cards]
+    .filter((c) => new Date(c.due) <= now)
+    .sort((a, b) => a.due.localeCompare(b.due));
+}
+
+/** اتجاه السؤال بالتناوب على التكرارات (F039: تدوير مواضع السؤال — لا حفظ السؤال نفسه) */
+export function srsDirection(card: Pick<SrsCardState, "reps">): "production" | "comprehension" {
+  return card.reps % 2 === 0 ? "production" : "comprehension";
+}
+
+/** تطبيق تقييم واحد على الحالة — خالص للاختبار والواجهة */
+export function applySrsRating(
+  cards: readonly SrsCardState[],
+  cardId: string,
+  rating: RecallRating,
+  now: Date = new Date(),
+): SrsCardState[] {
+  return cards.map((c) => (c.cardId === cardId ? scheduleRecall(c, rating, now) : c));
+}

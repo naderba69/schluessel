@@ -99,8 +99,9 @@ body {
   line-height: 1.8;
 }
 
-/* الحاوية (تتعايش مع MAIN_STYLE الخامل: 720px) */
+/* الحاوية (العرض من MAIN_STYLE · الحشوة هنا: 24 ← 16 للضيقة) */
 main {
+  padding: 24px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -108,7 +109,7 @@ main {
   min-height: 60vh;
 }
 @media (max-width: 760px) {
-  main { border-radius: 0; border-inline: 0; border-top: 0; }
+  main { border-radius: 0; border-inline: 0; border-top: 0; padding: 16px; }
 }
 
 h1 { font-size: 1.5rem; line-height: 1.5; margin: 0 0 0.6rem; }
@@ -408,7 +409,8 @@ label { display: inline-block; margin: 0.4rem 0; }
 [data-testid="start-session"] { font-size: 1.2rem; padding: 0.85rem 1.6rem; }
 details[data-testid="more-labs"],
 details[data-testid="more-path"],
-details[data-testid="more-gender"] {
+details[data-testid="more-gender"],
+details[data-testid="more-today"] {
   margin-top: 1rem;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -417,7 +419,8 @@ details[data-testid="more-gender"] {
 }
 details[data-testid="more-labs"] summary,
 details[data-testid="more-path"] summary,
-details[data-testid="more-gender"] summary {
+details[data-testid="more-gender"] summary,
+details[data-testid="more-today"] summary {
   cursor: pointer;
   font-weight: 700;
   font-size: 1.05rem;
@@ -759,4 +762,203 @@ span[dir="ltr"] {
   border-radius: 10px;
   padding: 0.6rem 0.9rem;
   font-weight: 700;
+}
+
+/* ═══════ 15 · الشريط السفلي (N-155 · D269) ═══════ */
+/* 5 أقسام ثابتة — قالب لا يتغير (قانون 16) · هاتف أولاً · منطقة آمنة */
+[data-testid="bottom-nav"] {
+  position: sticky;
+  bottom: 0;
+  z-index: 30;
+  display: flex;
+  background: var(--surface);
+  border-top: 1.5px solid var(--border);
+  box-shadow: 0 -2px 12px rgb(30 40 60 / 0.08);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  margin: 1rem -24px -24px;
+}
+[data-testid="bottom-nav"] button {
+  flex: 1 1 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  min-height: 56px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  padding: 0.5rem 0.1rem;
+}
+[data-testid="bottom-nav"] button[data-active="yes"] {
+  color: var(--primary);
+  box-shadow: inset 0 3px 0 var(--primary);
+}
+[data-testid="bottom-nav"] button:hover:not(:disabled) {
+  box-shadow: none;
+  transform: none;
+}
+[data-testid="bottom-nav"] button[data-active="yes"]:hover:not(:disabled) {
+  box-shadow: inset 0 3px 0 var(--primary);
+}
+/* تبويب الإعدادات: أقسامه كبطاقات */
+[data-testid="settings-view"] h2 { margin-top: 0; }
+[data-testid="wipe-screen"],
+[data-testid="about-screen"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+}
+[data-testid="wipe-screen"] h3,
+[data-testid="about-screen"] h3 { margin-top: 0; }
+[data-testid="wipe-confirm"] {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+/* وضع المطوّر: شارة تحذير */
+[data-testid="labs-note"] {
+  background: var(--warn-bg);
+  border: 1.5px dashed var(--warn-border);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.9rem;
+  font-weight: 700;
+}
+
+/* ═══════ 16 · إصلاحات الشاشة الصغيرة (N-155 · D270) ═══════ */
+/* عناوين الشريط لا تلتف أبداً + تصغير مدروس للشاشات الضيقة */
+[data-testid="bottom-nav"] button {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 380px) {
+  [data-testid="bottom-nav"] button { font-size: 0.72rem; }
+}
+/* جداول المخابر (مطوّر): تمرير أفقي بدل الكسر */
+[data-testid="skills-lab"] table,
+[data-testid="system-lab"] table {
+  display: block;
+  overflow-x: auto;
+}
+
+/* ═══════ 17 · أنماط المنسيين (N-155/1 · D309) ═══════ */
+/* مكوّنات D298–D308 بلا نمط — تُلبَس بأسلوب البطاقات نفسه (لا أسلوب جديد) */
+
+/* رسم الدرس: إطار دافئ والصورة لا تكسر العرض */
+[data-testid="lesson-illustration"] {
+  margin: 0 0 0.8rem;
+  padding: 0.6rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+[data-testid="lesson-illustration"] img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+/* بطاقات المدرب التفاعلية (التحدي · المحادثة · الطريق · العنيد · الظل): أسلوب coach-drill */
+[data-testid="weekly-challenge"],
+[data-testid="minute-conversation"],
+[data-testid="on-the-go"],
+[data-testid="recurring-error"],
+[data-testid="shadow-entry"] {
+  background: var(--accent-soft);
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+  margin: 0.7rem 0;
+}
+[data-testid="weekly-challenge"] p,
+[data-testid="minute-conversation"] p,
+[data-testid="on-the-go"] p,
+[data-testid="recurring-error"] p,
+[data-testid="shadow-entry"] p { margin: 0.35rem 0; }
+[data-testid="challenge-praise"] { font-weight: 800; }
+[data-testid="convo-answer"],
+[data-testid="recurring-answer"] { font-weight: 800; font-size: 1.1rem; }
+[data-testid="go-progress"] { font-weight: 800; }
+
+/* سطرا المدرب اليوميان (العبارة · المهارة): صندوقان هادئان */
+[data-testid="coach-phrase"],
+[data-testid="skill-of-day"] {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.5rem 0.8rem;
+}
+
+/* سطر المهمة في النبض + سطر المساء: تمييز بلا صراخ */
+[data-testid="coach-pulse-task"] { font-weight: 800; }
+[data-testid="coach-evening-report"] {
+  background: var(--mueller-bg);
+  color: var(--mueller-ink);
+  border-radius: 10px;
+  padding: 0.5rem 0.8rem;
+}
+
+/* مسجّل السطر: أزرار بلا ضجيج + حياة التسجيل */
+[data-testid="line-recorder"] { margin: 0.5rem 0; }
+[data-testid="rec-live"] { color: var(--danger); font-weight: 800; }
+[data-testid="rec-note"] { color: var(--muted); }
+[data-testid="rec-play-mine"] {
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 12px;
+}
+
+/* ركن الفيديو: بطاقة + قائمة القادم + روابط صريحة */
+[data-testid="video-corner"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  margin-top: 1rem;
+}
+[data-testid="video-corner"] h2 { margin-top: 0; }
+[data-testid="video-of-day"] {
+  background: var(--accent-soft);
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+}
+[data-testid="video-day-link"] {
+  display: inline-block;
+  font-weight: 800;
+  background: var(--primary);
+  color: var(--on-primary);
+  border-radius: 999px;
+  padding: 0.55rem 1.15rem;
+  min-height: 44px;
+  text-decoration: none;
+}
+[data-testid="video-coming"] {
+  list-style: none;
+  padding: 0;
+}
+[data-testid="video-coming"] > li {
+  background: var(--surface-2);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 0.45rem 0.8rem;
+  margin: 0.35rem 0;
+  color: var(--muted);
+}
+[data-testid="video-internet-note"] { font-weight: 700; }
+[data-testid="video-offline"] { color: var(--muted); }
+
+/* أفعال الدعوة الجديدة: زر رئيسي واحد في كل بطاقة */
+[data-testid="go-start"],
+[data-testid="challenge-done"],
+[data-testid="shadow-entry-start"],
+[data-testid="convo-reveal"],
+[data-testid="recurring-reveal"],
+[data-testid="video-fix-reveal"] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--on-primary);
 }

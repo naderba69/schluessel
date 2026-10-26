@@ -7,8 +7,8 @@ import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile, BARE_ARTICLE_IDS,
-  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, StoryBook, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
-  GrammarRuleFile, LessonUpgradePlan,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, TransferPack, VideoShelf, AudioScript, StoryBook, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
+  GrammarRuleFile, LessonUpgradePlan, PRACTICE_ITEM_SHAPES,
 } from "../content/schemas/index.js";
 import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
 import { evidenceIn } from "../content/schemas/answer-key.js";
@@ -52,7 +52,7 @@ const SPEECH_RATE_MAX_WPM = 200;
 const SPEECH_RATE_MIN_WORDS = 3;
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "audio-script" | "story" | "exam-format" | "wordlist" | "plan" | "derived" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "transfer" | "audio-script" | "story" | "exam-format" | "wordlist" | "plan" | "derived" | "video" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
@@ -67,11 +67,13 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("pruefungen/")) return "pruefungen";
   if (p.startsWith("modelltest/")) return "modelltest";
   if (p.startsWith("lese/")) return "lese";
+  if (p.startsWith("transfer/")) return "transfer";
   if (p.startsWith("audio-scripts/")) return "audio-script";
   if (p.startsWith("story/")) return "story";
   if (p.startsWith("exam-formats/")) return "exam-format";
   if (p.startsWith("wordlists/")) return "wordlist";
   if (p.startsWith("plans/")) return "plan";
+  if (p.startsWith("video/")) return "video";
   if (p.startsWith("upgrades/")) return "upgrade";
   return "unknown";
 }
@@ -137,6 +139,17 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         case "lesson": {
           const l = Lesson.parse(entry.data);
           lessons.set(l.id, { path: entry.path, lesson: l });
+          // D325 (معركة المحرك D7): بنود التدريب تُفحص بأشكال المحرك نفسها (PRACTICE_ITEM_SHAPES)
+          // — فالمخطط يقبل أي مفاتيح (z.record) وكان يمرر بنوداً لا يستطيع المحرك تنميطها (A2 كلها قبل D325).
+          l.uebung.stations.forEach((st, si) => {
+            const shape = PRACTICE_ITEM_SHAPES[st.type];
+            st.items.forEach((it, ii) => {
+              const r = shape.safeParse(it);
+              if (!r.success)
+                push("error", "e-practice-item-shape", entry.path,
+                  `${l.id} s${si}-i${ii} (${st.type}): ${r.error.issues[0]?.message ?? "شكل مرفوض"}`);
+            });
+          });
           break;
         }
         case "audio-manifest": {
@@ -253,6 +266,17 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         case "modelltest": {
           // D95: الامتحان التجريبي الكامل — المخطط يفرض المهارات الأربع مرة واحدة لكلٍّ (D109)
           modelltests.push({ path: entry.path, test: Modelltest.parse(entry.data) });
+          break;
+        }
+        case "transfer": {
+          TransferPack.parse(entry.data); // D293: حزم التحويل (المخطط يفرض ≥2 بند QuizItem)
+          break;
+        }
+        case "video": {
+          const shelf = VideoShelf.parse(entry.data); // D308: رف الفيديو (المخطط يفرض تلازم الرابط والتحقق §34)
+          const ids = shelf.entries.map((e) => e.id);
+          if (new Set(ids).size !== ids.length)
+            push("error", "e-video-dup", entry.path, "معرّف فيديو مكرر في الرف");
           break;
         }
         case "lese": {

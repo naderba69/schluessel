@@ -537,7 +537,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-dativ-fix: «الداتيف الثابت mit/nach/aus/zu» في خطة v6.1) — تشاركها ستة دروس لاحقة فـusedInLessons يضمّها كلها (§10‑ح)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-dativ-fix"]);
     const rule = rules.get("ars-dativ-fix")!;
-    expect(rule.usedInLessons).toEqual(["a1-u8-d4", "a1-u8-d6", "a1-u9-d1", "a1-u11-d2", "a1-u11-d5", "a1-u11-d6", "a1-u12-d6", "a1-u15-d4"]); // D202: أسبوع المراجعة
+    expect(rule.usedInLessons).toEqual(["a1-u8-d4", "a1-u8-d6", "a1-u9-d1", "a1-u11-d2", "a1-u11-d5", "a1-u11-d6", "a1-u12-d6", "a1-u15-d4", "a2-u2-d2"]); // D319: دعم raten (dass-day) // D202: أسبوع المراجعة
     expect(rule.payload.ruleDe).toBe("mit · nach · aus · zu: der/das → dem · die → der — zu dem = zum · zu der = zur — mit dem Bus · mit der Bahn · mit dem Auto · zum Flughafen · zur Schule · nach Berlin · nach Tunesien · nach Hause · aus Tunis · aus der Schweiz");
     // ثلاث خطوات: الحالة (الداتيف دائماً · dem/der · zum/zur) · nach أم zu (المدن والبلدان وHause بلا أداة · zu لما له أداة وللأشخاص) · aus للأصل (بلا أداة إلا die Schweiz)
     for (const x of ["يأتي الداتيف دائماً", "der ← dem · das ← dem · die ← der", "zu dem = zum", "zu der = zur", "nach للمدن والبلدان والقارات بلا أداة", "nach Hause = إلى البيت (حركة) · zu Hause = في البيت (مكان)", "zu لكل مكانٍ له أداة ولكل شخص", "die Schweiz ← aus der Schweiz", "Woher kommst du? — Aus Tunesien.", "abholen (يستقبل/يأخذ: Mein Vater holt mich ab"])
@@ -2321,7 +2321,7 @@ describe("D115 — أدوات القياس", () => {
     expect(l.audioManifestRefs).toContain("word-ergebnis");
     // القاعدة الجديدة ars-modal-fix: كانت بلا ملف ومُشار إليها من أربعة دروس (u11-d5 · u11-d6 · u12-d2 · u12-d6) — تضيف dürfen وsollen (أُجّلتا في ars-koennen-muessen «لاحقاً») وتجمع الخمسة
     const mf = rules.get("ars-modal-fix")!;
-    expect(mf.usedInLessons).toEqual(["a1-u11-d5", "a1-u11-d6", "a1-u12-d2", "a1-u12-d6", "a1-u15-d6"]); // D203
+    expect(mf.usedInLessons).toEqual(["a1-u11-d5", "a1-u11-d6", "a1-u12-d2", "a1-u12-d6", "a1-u15-d6", "a2-u2-d1", "a2-u2-d5"]); // D322: +u2-d5 (تمييز النفي) // D318: +u2-d1 (نقل المعنى للعمل) // D203
     expect(mf.payload.ruleDe).toContain("ich darf · du darfst · er/sie/es darf · wir/sie/Sie dürfen — ich soll · du sollst · er/sie/es soll · wir/sie/Sie sollen");
     expect(mf.payload.ruleDe).toContain("Sie dürfen nicht rauchen. · Du musst nicht kommen.");
     expect(mf.payload.beads).toEqual(["Sie", "dürfen", "nicht", "rauchen."]);
@@ -2527,7 +2527,7 @@ describe("D115 — أدوات القياس", () => {
     expect(rules.has("ars-praeteritum")).toBe(false);
     expect(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-praeteritum"))).toEqual([]);
     const pf = rules.get("ars-perfekt")!;
-    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u13-d1", "a1-u13-d6", "a1-u14-d1", "a1-u14-d6", "a1-u15-d6", "a2-u1-d1"]); // D215: توليف u14-d6 // D210: u14-d1 (geboren + sein في نصوص الفهم) // D209: توليف u13-d6 // D204: u13-d1 (ist gestorben · hat geheiratet في نصوص الفهم) // D201–D203: من أسبوع المراجعة يبقى u15-d6 وحده (الأسبوعان 11–12)
+    expect(pf.usedInLessons).toEqual(["a1-u11-d3", "a1-u11-d4", "a1-u11-d6", "a1-u12-d3", "a1-u12-d5", "a1-u12-d6", "a1-u13-d1", "a1-u13-d6", "a1-u14-d1", "a1-u14-d6", "a1-u15-d6", "a2-u1-d1", "a2-u1-d2", "a2-u1-d3", "a2-u1-d4", "a2-u1-d5", "a2-u1-d6", "a2-u2-d3"]); // D320: +u2-d3 (المقابلة: Perfekt التجربة) // D316: +d6 (توليف الأسبوع) // D315: +d5 (خلط/تثبيت) // D314: +d4 (يوميات war/hatte) // D313: +d3 (انعكاسي + reiten) // D312: +d2 (قرار haben/sein) // D215: توليف u14-d6 // D210: u14-d1 (geboren + sein في نصوص الفهم) // D209: توليف u13-d6 // D204: u13-d1 (ist gestorben · hat geheiratet في نصوص الفهم) // D201–D203: من أسبوع المراجعة يبقى u15-d6 وحده (الأسبوعان 11–12)
     expect(pf.usedInLessons).toEqual(realLessons.filter((x) => x.praesentation.grammarArsenalIds.includes("ars-perfekt")).map((x) => x.id).sort((a, b) => a.localeCompare(b, "en", { numeric: true })));
     for (const x of ["Ich bin heute zu Hause geblieben.", "Ich bin nach Hause gefahren.", "Das Fieber ist verschwunden.", "Ich bin um sieben aufgestanden.", "Ich habe im Bett gelegen.", "Ich habe gehustet und geniest.", "Mein Hals hat gebrannt.", "Die Erkältung hat eine Woche gedauert.", "Wie war dein Tag?", "Warst du auch krank?", "Wir waren eine Woche zu Hause.", "Ich hatte Fieber.", "Hattest du auch Schwindel?", "Wir hatten keine Zeit.", "Jetzt geht es besser.", "Meine Nase juckt."])
       expect(pf.payload.ruleDe).toContain(x);
@@ -2872,7 +2872,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدة اليوم جديدة: ars-weil-satz (كانت مُشاراً إليها بلا ملف — تشاركها u10-d6 وu12-d4 وu12-d6)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-weil-satz"]);
     const ws = rules.get("ars-weil-satz")!;
-    expect(ws.usedInLessons).toEqual(["a1-u10-d5", "a1-u10-d6", "a1-u12-d4", "a1-u12-d6", "a1-u15-d6"]); // D203
+    expect(ws.usedInLessons).toEqual(["a1-u10-d5", "a1-u10-d6", "a1-u12-d4", "a1-u12-d6", "a1-u15-d6", "a2-u2-d2"]); // D319: مراجعة weil في dass-day // D203
     expect(ws.payload.ruleDe).toContain("Ich brauche einen Termin, weil ich krank bin.");
     expect(ws.payload.ruleDe).toContain("Yusuf kann nicht kommen, weil er lernen muss.");
     expect(ws.payload.ruleDe).toContain("Weil ich krank bin, brauche ich einen Termin.");
@@ -3201,7 +3201,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدتا اليوم: ars-wechselpraep (الجديدة — تشاركها u9-d6) + ars-imperativ-sie (من D163)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-wechselpraep", "ars-imperativ-sie"]);
     const rule = rules.get("ars-wechselpraep")!;
-    expect(rule.usedInLessons).toEqual(["a1-u9-d4", "a1-u9-d6", "a1-u12-d1"]); // D176: u12-d1 يراجعها بـim Hotel/ins Ausland
+    expect(rule.usedInLessons).toEqual(["a1-u9-d4", "a1-u9-d6", "a1-u12-d1", "a2-u4-d1", "a2-u4-d2"]); // D339: u4-d2 تنقلها (Wohin-Akk) // D338: u4-d1 تنقلها (Wo-Dativ) // D176: u12-d1 يراجعها بـim Hotel/ins Ausland
     expect(rule.payload.ruleDe).toBe("Wo? — vor der Kirche · im Tunnel · am Ufer · auf der linken Seite · hinter dem Haus · in der Nähe · an der Ecke — Wohin? — vor die Kirche · in den Tunnel · ans Ufer · auf die Brücke · über die Brücke · auf den Parkplatz · in die Stadt — gegen: gegen die Wand · gegen den Tisch · gegen zehn Uhr — hundert Meter · zweihundert Meter geradeaus — Die Apotheke ist zu. · Die Bank ist auf.");
     // أربع خطوات: التسعة باسمها · Wo? الداتيف · Wohin? الأكوزاتيف (vor جديد · ans) · gegen أكوزاتيف دائماً + Meter + auf/zu sein
     for (const x of ["Wechselpräpositionen", "an · in · auf · vor (جديد: أمام) · hinter · über · unter · neben · zwischen", "Wo? → الداتيف", "Wohin? → الأكوزاتيف", "vor der Kirche", "vor die Kirche", "an das = ans", "gegen (ضد/نحو) + الأكوزاتيف دائماً", "gegen zehn Uhr", "وبعد الرقم بلا نهاية: zweihundert Meter", "auf sein (مفتوح) ≠ zu sein (مغلق)"])
@@ -3294,7 +3294,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدتا اليوم: ars-imperativ-sie (الجديدة — تشاركها u9-d4 وu9-d6) + ars-weg-verkehr (من D162)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-imperativ-sie", "ars-weg-verkehr"]);
     const rule = rules.get("ars-imperativ-sie")!;
-    expect(rule.usedInLessons).toEqual(["a1-u9-d3", "a1-u9-d4", "a1-u9-d6", "a1-u15-d5"]); // D203
+    expect(rule.usedInLessons).toEqual(["a1-u9-d3", "a1-u9-d4", "a1-u9-d6", "a1-u15-d5", "a2-u2-d4"]); // D321: +u2-d4 (الإيميل: Sie-Imperativ للطلب الرسمي) // D203
     expect(rule.payload.ruleDe).toBe("Gehen Sie geradeaus! · Nehmen Sie den Bus! · Warten Sie hier, bitte! · Kommen Sie sofort! — Biegen Sie links ab! · Steigen Sie hier aus! — Helfen Sie mir, bitte! · Entschuldigung, können Sie mir helfen? — Gerne! / Kein Problem. · Ich helfe dir. — Gehen Sie zuerst geradeaus, danach biegen Sie links ab. — Können Sie mir den Weg erklären? · Ich bitte um Hilfe. · Danke für die Hilfe! — Entschuldigung, wo ist die Auskunft? — Am Eingang, links. · Der Ausgang ist dort. · Haben Sie auch einen Stadtplan?");
     // أربع خطوات: الفعل أولاً ثم Sie · الجزء المنفصل في الآخر · helfen + الداتيف والطلب بـkönnen · zuerst/danach + um Hilfe bitten + die Hilfe + erklären
     for (const x of ["الفعل أولاً كما في المصدر ثم Sie مباشرة", "Sie gehen geradeaus. (خبر) → Gehen Sie geradeaus! (أمر)", "nehmen يبقى Nehmen Sie — لا nimmt", "Biegen Sie links ab! · Steigen Sie am Hauptbahnhof aus!", "Gehen Sie nicht links!", "Helfen Sie mir! · Hilfst du mir? · Ich helfe dir. · Er hilft mir. (mir/dir — لا mich/dich)", "ich helfe · du hilfst · er hilft · Sie helfen", "Entschuldigung, können Sie mir helfen?", "zuerst (أولاً) … danach (بعد ذلك) …", "Ich bitte um Hilfe. · Ich bitte dich um Hilfe. (um + الأكوزاتيف)", "Danke für die Hilfe!", "der Eingang (المدخل) ≠ der Ausgang (المخرج)"])
@@ -5018,7 +5018,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-koennen-muessen) — تشاركها u8-d6 (توليف) فـusedInLessons يضمّهما (§10‑ح)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-koennen-muessen"]);
     const rule = rules.get("ars-koennen-muessen")!;
-    expect(rule.usedInLessons).toEqual(["a1-u8-d3", "a1-u8-d6", "a1-u15-d4"]); // D202
+    expect(rule.usedInLessons).toEqual(["a1-u8-d3", "a1-u8-d6", "a1-u15-d4", "a2-u2-d1", "a2-u2-d5", "a2-u3-d4"]); // D333: +u3-d4 (نصيحة صحية — نقل sollen) // D322: +u2-d5 (تمييز النفي) // D318: +u2-d1 (نقل القنطرة للعمل) // D202
     expect(rule.payload.ruleDe).toBe("ich kann · du kannst · er/sie/es kann · wir/sie/Sie können — ich muss · du musst · er/sie/es muss · wir/sie/Sie müssen — Ich muss einen Rucksack kaufen. · Kann ich den Rucksack anprobieren? · Was musst du kaufen? · Du musst nicht viel bezahlen.");
     // ثلاث خطوات: الصيغ (ich=er بلا ‑t · تغيّر الحركة kann/können · muss/müssen) · القنطرة (الناقص ثانياً والمصدر آخراً بلا zu · المنفصل متصلاً · الحذف حين يُفهم) · المعنى (قدرة/إمكان/طلب مهذب · وجوب · nicht müssen = لا حاجة)
     for (const x of ["ich kann · du kannst · er/sie/es kann · wir können", "ich muss · du musst · er/sie/es muss · wir müssen", "ich وer/sie/es سواء بلا ‑t", "kann ← können · muss ← müssen", "لا يتصرّف ولا تسبقه zu", "Kann ich den Rucksack anprobieren?", "يبقى متصلاً في الآخر (anprobieren · einkaufen)", "Er kann gut Deutsch (= sprechen)", "الطلب المهذب في السؤال (Kann ich …? · Können Sie …?)", "müssen + nicht = لا حاجة ولا ضرورة، لا «ممنوع»", "Du musst nicht viel bezahlen"])

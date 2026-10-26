@@ -2,7 +2,7 @@
 import { describe, it, expect } from "vitest";
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, LEVEL_ORDER, loadAllLessons, loadAllWords, wordsForLesson, runtimeWordsForLesson, loadFirstSession } from "../src/lesson-packs.js";
+import { ALL_LANDESKUNDE, ALL_PRUEFUNGEN, ALL_MODELLTESTS, ALL_IMAGES, ALL_LESETEXTS, ALL_TRANSFER, LEVEL_ORDER, loadAllLessons, loadAllWords, wordsForLesson, runtimeWordsForLesson, loadFirstSession } from "../src/lesson-packs.js";
 const __FIRST = await loadFirstSession();
 const firstLesson = __FIRST.lesson;
 const ALL_LESSONS = await loadAllLessons();
@@ -14,6 +14,7 @@ import { taughtUpTo, frontViolations } from "../tools/lib/lesson-upgrade.js";
 import { knownStems, knownForms, contentTokens, CLOSED } from "../tools/lib/vocab-forms.js";
 import { slugify } from "../tools/lib/word-entry.js";
 import { planLessonStations, fullForm } from "../src/lib/lesson-runner.js";
+import { cyclicTestFor } from "../src/lib/lesson-path.js";
 
 describe("سجل المحتوى — الوحدة 1 كاملة + بداية الوحدة 2", () => {
   it("الدروس مرتّبة والسجل مطابق للملفات", () => {
@@ -22,14 +23,14 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       "a1-u13-d1", "a1-u13-d2", "a1-u13-d3", "a1-u13-d4", "a1-u13-d5", "a1-u13-d6", // D204 · D205 · D206 · D207 · D208 · D209:
       "a1-u14-d1", "a1-u14-d2", "a1-u14-d3", "a1-u14-d4", "a1-u14-d5", "a1-u14-d6", // D210 · D211 · D212 · D213 · D214 · D215: تكملة SD1 للفهم (D113) — الوحدة 14 بين 13 وأسبوع الامتحان 15
       "a1-u15-d1", "a1-u15-d2", "a1-u15-d3", "a1-u15-d4", "a1-u15-d5", "a1-u15-d6", // D113: أسبوع الامتحان 13 → 17 (D112) → 15 (13–14 تكملة للفهم)
-      "a2-u1-d1",
+      "a2-u1-d1", "a2-u1-d2", "a2-u1-d3", "a2-u1-d4", "a2-u1-d5", "a2-u1-d6", "a2-u2-d1", "a2-u2-d2", "a2-u2-d3", "a2-u2-d4", "a2-u2-d5", "a2-u2-d6", "a2-u3-d1", "a2-u3-d2", "a2-u3-d3", "a2-u3-d4", "a2-u3-d5", "a2-u3-d6", "a2-u4-d1", "a2-u4-d2", // D339: يوم d2 — يصف اتجاهاً (نقل Wechsel-AKK + Krimi بدل Bäcker) · D338: يوم d1 — يصف مكاناً (نقل Wechsel-DAT + match بلا أفعال) · D335: يوم d6 — توليف الوحدة (تقرير الأسبوع + كلمتان) · D334: يوم d5 — mich أم mir (خلط وتمييز) · D333: يوم d4 — نصيحة صحية (نقل sollen) · D330: يوم d3 — في الصيدلية (نقل خالص) · D328: يوم d2 — يصف روتينه (الانعكاسي Dat) · D327: يوم d1 — يصف عاداته (الانعكاسي Akk) · D324: يوم d6 — توليف الوحدة (نكتب تقرير الأسبوع) · D322: يوم d5 — تمييز النفي (muss-nicht ≠ darf-nicht) · D321: يوم d4 — الإيميل (Sie-Imperativ + dass) · D320: يوم d3 — المقابلة (Perfekt + dass) · D319: يوم d2 — يفسر قراره (dass + مراجعة weil) · D318: يوم d1 — يصف مهامه (Modal دلالة) · D316: يوم d6 — توليف الأسبوع (نكتب شهادة الأسبوع) · D315: يوم d5 — خلط/تثبيت (يروي قصة مختلطة) · D312: يوم d2 — يروي يومه (haben/sein) · D313: يوم d3 — يحكي عطلته (انعكاسي + reiten) · D314: يوم d4 — يوميات war/hatte
     ]);
     expect(ALL_LESSONS.map((l) => [l.unit, l.day])).toEqual([
       [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [3, 6], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [4, 6], [5, 1], [5, 2], [5, 3], [5, 4], [5, 5], [5, 6], [6, 1], [6, 2], [6, 3], [6, 4], [6, 5], [6, 6], [7, 1], [7, 2], [7, 3], [7, 4], [7, 5], [7, 6], [8, 1], [8, 2], [8, 3], [8, 4], [8, 5], [8, 6], [9, 1], [9, 2], [9, 3], [9, 4], [9, 5], [9, 6], [10, 1], [10, 2], [10, 3], [10, 4], [10, 5], [10, 6], [11, 1], [11, 2], [11, 3], [11, 4], [11, 5], [11, 6], [12, 1], [12, 2], [12, 3], [12, 4], [12, 5], [12, 6],
       [13, 1], [13, 2], [13, 3], [13, 4], [13, 5], [13, 6],
       [14, 1], [14, 2], [14, 3], [14, 4], [14, 5], [14, 6],
       [15, 1], [15, 2], [15, 3], [15, 4], [15, 5], [15, 6],
-      [1, 1],
+      [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [3, 6], [4, 1], [4, 2], // D339: +u4-d2 // D338: +u4-d1 // D335: +u3-d6 // D334: +u3-d5 // D333: +u3-d4 // D330: +u3-d3 // D328: +u3-d2 // D327: +u3-d1 // D324: +u2-d6 // D322: +u2-d5 // D321: +u2-d4 // D320: +u2-d3 // D319: +u2-d2 // D318: +u2-d1 // D316: +d6 // D315: +d5
     ]);
     expect(ALL_WORDS.length).toBe(readdirSync(join(__dirname, "..", "content", "words")).filter((f) => f.endsWith(".json")).length); // ثابت مشتقّ (D188): السجل = ملفات القرص · كان 884 + + zum Beispiel · der Satz · glauben (نواة a1-u12-d4 — D179) + der Blick · das Internet · die Information (نواة a1-u12-d2 — D177) + das Ergebnis (نواة a1-u11-d5 — D175) + fehlen (نواة a1-u11-d2 — D172) + der Teil · tun · weh tun (نواة a1-u11-d1 — D171) + normal · der Job · verdienen (نواة a1-u10-d5 — D170) + der Anfang · der Verein (نواة a1-u10-d4 — D169) + früher · gewinnen (نواة a1-u10-d3 — D168) + lieb · der Moment · enden (نواة a1-u10-d2 — D167) + andere · weiter · halten · die Polizei · die Stelle (نواة a1-u9-d5 — D165) + auf sein · zu sein (نواة a1-u9-d4 — D164) + bitten · erklären · die Hilfe (نواة a1-u9-d3 — D163) + kriegen (نواة a1-u8-d3 — D158) + beste · circa (نواة a1-u8-d2 — D157) + dieser · gefallen (نواة a1-u8-d1 — D156) + gleich · ab · Achtung (نواة a1-u7-d4 — D154) + die Hausaufgabe · nie · einfach (نواة a1-u7-d3 — D153) + der Film · mehr · wandern (نواة a1-u7-d2 — D152) + die Firma · immer · die meisten (نواة a1-u7-d1 — D151) + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
@@ -1363,10 +1364,9 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     expect(ALL_WORDS.find((w) => w.id === "loeffel")?.de).toBe("Löffel");
   });
 
-  it("بطاقات الثقافة (Landeskunde): 12 بطاقة — كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {
-    expect(ALL_LANDESKUNDE.length).toBe(12);
+  it("بطاقات الثقافة (Landeskunde): كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {
     const units = ALL_LANDESKUNDE.map((c) => c.unit).sort((a, b) => a - b);
-    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
     for (const card of ALL_LANDESKUNDE) {
       expect(card.facts.length).toBeGreaterThanOrEqual(2);
       expect(card.title.de.length).toBeGreaterThan(0);
@@ -1375,11 +1375,13 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     }
   });
 
-  it("الاختبارات الدورية: 6 Kurztest + 3 Monatsprüfung — تراكمية وبحدود الحجم", () => {
-    const kurz = ALL_PRUEFUNGEN.filter((t) => t.kind === "kurztest");
-    const monat = ALL_PRUEFUNGEN.filter((t) => t.kind === "monatspruefung");
-    expect(kurz.length).toBe(6);
-    expect(monat.length).toBe(3);
+  it("الاختبارات الدورية: تغطية الجدول A1 (قصير 2..14 + شهرية 4/8/12) — تراكمية وبحدود الحجم", () => {
+    const kurz = ALL_PRUEFUNGEN.filter((t) => t.kind === "kurztest" && t.level === "A1");
+    const monat = ALL_PRUEFUNGEN.filter((t) => t.kind === "monatspruefung" && t.level === "A1");
+    expect(kurz.map((x) => x.week).sort((x, y) => x - y)).toEqual([2, 4, 6, 8, 10, 12, 14]); // w4/w8/w12 احتياط الشهرية (D290)
+    expect(monat.map((x) => x.week).sort((x, y) => x - y)).toEqual([4, 8, 12]);
+    const sat = new Date(2026, 9, 17); // سبت ثابت — رقم الأسبوع صريح
+    for (let w = 2; w <= 14; w += 2) expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", w, sat)?.id, `الأسبوع ${w}`).toBeTruthy();
     for (const t of kurz) {
       expect(t.items.length).toBeLessThanOrEqual(12);
       expect(t.timeBudgetMin).toBe(15);
@@ -1423,9 +1425,8 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
   });
 
   it("نصوص القراءة: نص لكل وحدة + أسئلة + مسرد (قد يفرغ — النص النظيف بلا مسرد N-023) + حدود الصدق", () => {
-    expect(ALL_LESETEXTS.length).toBe(12);
     const units = ALL_LESETEXTS.map((t) => t.unit).sort((a, b) => a - b);
-    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
     for (const t of ALL_LESETEXTS) {
       expect(t.text.de.length).toBeGreaterThanOrEqual(40);
       expect(t.glossary.length).toBeGreaterThanOrEqual(0); // N-023 (D222): النص النظيف تماماً بلا مسرد (u7/u10/u12) — وصدق المسرد يفحصه حارس N-023 (لا مدخل ميت)
@@ -1457,6 +1458,339 @@ describe("A2 يبدأ (D101) — الترتيب بالمستوى + قواعد A2
       expect(w.goetheList).toContain("A2");
       expect(a1Ids.has(w.id)).toBe(false);
       expect(w.sampleSentence?.sourceLesson).toBe("a2-u1-d1");
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u1-d2 (D312): قرار haben/sein — 13 كلمة جديدة + الزوج weggeworfen↔weggegangen + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u1-d2")!;
+    expect(l.ziel.ar).toContain("haben/sein");
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(1);
+      expect(w.goetheList).toContain("A2"); // ومنها feierabend: مثال مطبوع ص14 (kind=example · N-165)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u1-d2");
+      if (w.wordClass === "verb") {
+        expect(w.forms?.perfekt, w.id).toMatch(/^(hat|ist) /);
+        expect(w.forms!.perfekt!.startsWith("ist ")).toBe(w.grammarRisks.includes("needs-ist"));
+      }
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u1-d3 (D313): انعكاسي + reiten — 13 كلمة جديدة + sich بعد المساعد + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u1-d3")!;
+    expect(l.ziel.ar).toContain("الانعكاسي");
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(1);
+      expect(w.goetheList).toContain("A2"); // ومنها reiten: [A1,A2] — مدخل رئيسي في Fit1 (A1 ص17) وA2 (ص24 «reitet · ist geritten»)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u1-d3");
+      if (w.wordClass === "verb") {
+        expect(w.forms?.perfekt, w.id).toMatch(/^(hat|ist) /);
+        expect(w.forms!.perfekt!.startsWith("ist ")).toBe(w.grammarRisks.includes("needs-ist"));
+        if (w.grammarRisks.includes("reflexive")) expect(w.forms!.perfekt, w.id).toMatch(/^hat sich /);
+      }
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u1-d4 (D314): يوميات war/hatte — 13 كلمة جديدة + انعكاسي قوي + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u1-d4")!;
+    expect(l.ziel.ar).toContain("war/hatte");
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(1);
+      expect(w.goetheList).toContain("A2"); // ومنها 7 بـ[A1,A2] — مداخل رئيسية في SD1/Fit1 (sehr في SD1 ص23)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u1-d4");
+      if (w.wordClass === "verb") {
+        expect(w.forms?.perfekt, w.id).toMatch(/^(hat|ist) /);
+        expect(w.forms!.perfekt!.startsWith("ist ")).toBe(w.grammarRisks.includes("needs-ist"));
+        if (w.grammarRisks.includes("reflexive")) expect(w.forms!.perfekt, w.id).toMatch(/^hat sich /);
+      }
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u1-d5 (D315): خلط/تثبيت — 13 كلمة جديدة + انعكاسي ضعيف/داتيف + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u1-d5")!;
+    expect(l.ziel.ar).toContain("مختلطة");
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(1);
+      expect(w.goetheList).toContain("A2"); // مداخل رئيسية (erst·Feier ص14، ganz ص15، Geschichte ص16+مجموعة ص6، verletzen ص29)
+      expect(a1Ids.has(w.id)).toBe(false); // D315/N-167: hängen+erzählen سقطتا (A1!) — الفحص بـslugify لا norm
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u1-d5");
+      if (w.wordClass === "verb") {
+        expect(w.forms?.perfekt, w.id).toMatch(/^(hat|ist) /);
+        expect(w.forms!.perfekt!.startsWith("ist ")).toBe(w.grammarRisks.includes("needs-ist"));
+        if (w.grammarRisks.includes("reflexive")) expect(w.forms!.perfekt, w.id).toMatch(/^hat sich /);
+      }
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u1-d6 (D316): توليف الأسبوع — integration + كلمتا شهادة + تدوير الأيام الخمسة", async () => {
+    const l = a2.find((x) => x.id === "a2-u1-d6")!;
+    expect(l.kind).toBe("integration");
+    expect(l.ziel.ar).toContain("شهادة");
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(2); // d6 توليف: جسيمان فقط (Stift/Zeugnis)
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(1);
+      expect(w.goetheList).toContain("A2"); // Stift ص26 · Zeugnis ص31 — مداخل رئيسية
+      expect(a1Ids.has(w.id)).toBe(false); // D316: Notiz سقطت (A1!) — الفحص بـslugify (N-167)
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u1-d6");
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u2-d1 (D318): Modal دلالة — 13 كلمة + نقل المعنى (müssen/sollen) + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u2-d1")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("müssen");
+    expect(l.usedArsenalIds).toEqual(["ars-modal-fix", "ars-koennen-muessen"]); // نقلٌ لا جديد (D317)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(2);
+      expect(w.goetheList).toContain("A2"); // ومنها bis بـ[A1,A2] — في SD1/Fit1 ولم تُدرَّس (سابقة sehr)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u2-d1");
+      if (w.grammarRisks.includes("reflexive")) expect(w.forms!.perfekt, w.id).toMatch(/^hat sich /);
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u2-d2 (D319): dass بعد الرأي — 13 كلمة + مراجعة weil + دعم dativ-fix + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u2-d2")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("dass");
+    expect(l.usedArsenalIds).toEqual(["ars-dass-satz", "ars-weil-satz", "ars-dativ-fix"]); // جديد + مراجعة + دعم raten (D317/D319)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(2);
+      expect(w.goetheList).toContain("A2"); // ومنها خمسٌ بـ[A1,A2] — في Fit1/A2 ولم تُدرَّس (سابقة sehr/bis)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u2-d2");
+      if (w.grammarRisks.includes("dative-verb")) expect(w.sampleSentence!.de, w.id).toContain("dir");
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u2-d3 (D320): المقابلة — 13 كلمة + Perfekt/dass مراجعة + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u2-d3")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("مقابلة");
+    expect(l.usedArsenalIds).toEqual(["ars-perfekt", "ars-dass-satz"]); // مراجعة بلا جديد (D317)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(2);
+      expect(w.goetheList).toContain("A2"); // ومنها sympathisch بـ[A1,A2] — في Fit1/A2 ولم تُدرَّس (سابقة sehr/bis)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u2-d3");
+      if (w.grammarRisks.includes("reflexive")) expect(w.forms!.perfekt, w.id).toMatch(/^hat sich /);
+      if (w.grammarRisks.includes("trennbar")) expect(w.forms!.praesens3s, w.id).toContain(" ");
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u2-d4 (D321): الإيميل — 13 كلمة + Sie-Imperativ/dass مراجعة + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u2-d4")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("إيميل");
+    expect(l.usedArsenalIds).toEqual(["ars-imperativ-sie", "ars-dass-satz"]); // مراجعة بلا جديد (D317)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(2);
+      expect(w.goetheList).toContain("A2"); // ومنها 3 بـ[A1,A2] — في Fit1/A2 ولم تُدرَّس (سابقة sehr/bis)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u2-d4");
+      if (w.grammarRisks.includes("trennbar")) expect(w.forms!.praesens3s, w.id).toContain(" ");
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u2-d5 (D322): تمييز النفي — 13 كلمة + Modal/koennen نقل + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u2-d5")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("المنع");
+    expect(l.usedArsenalIds).toEqual(["ars-modal-fix", "ars-koennen-muessen"]); // نقلٌ لا جديد (D317)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(2);
+      expect(w.goetheList).toContain("A2"); // ومنها 2 بـ[A1,A2] — في Fit1/A2 ولم تُدرَّس (سابقة sehr/bis)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u2-d5");
+      if (w.grammarRisks.includes("trennbar")) expect(w.forms!.praesens3s, w.id).toContain(" ");
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u2-d6 (D324): توليف الوحدة — integration + كلمتا تقرير + تدوير الأيام الخمسة", async () => {
+    const l = a2.find((x) => x.id === "a2-u2-d6")!;
+    expect(l.kind).toBe("integration");
+    expect(l.ziel.ar).toContain("تقرير");
+    expect(l.usedArsenalIds).toEqual(["ars-dass-satz"]); // عمود الأسبوع الجديد (D317)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(2); // d6 توليف: فعلان فقط (berichten/beraten)
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(2);
+      expect(w.goetheList).toContain("A2"); // berichten ص10 · beraten ص10 — مداخل رئيسية
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u2-d6");
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u3-d1 (D327): الانعكاسي Akk — 13 كلمة + نظام الضمير الجديد + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u3-d1")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("الضمير");
+    expect(l.usedArsenalIds).toEqual(["ars-reflexiv-akk"]); // جديد الوحدة (D326)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(3);
+      expect(w.goetheList).toContain("A2"); // ومنها dick/üben بـ[A1,A2] — في SD1/A2 ولم تُدرَّس (سابقة sehr/bis)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u3-d1");
+      if (w.grammarRisks.includes("reflexive")) expect(w.forms!.perfekt, w.id).toMatch(/^hat sich /);
+      if (w.grammarRisks.includes("needs-ist")) expect(w.forms!.perfekt, w.id).toMatch(/^ist /);
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u3-d2 (D328): الانعكاسي Dat — 13 كلمة + mir/dir الجديد + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u3-d2")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("mir/dir");
+    expect(l.usedArsenalIds).toEqual(["ars-reflexiv-dat", "ars-reflexiv-akk"]); // جديد + مراجعة d1 (D326)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(3);
+      expect(w.goetheList).toContain("A2"); // ومنها manchmal بـ[A1,A2] — في SD1/A2 ولم تُدرَّس (سابقة sehr/bis)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u3-d2");
+      if (w.wordClass === "adverb") expect(w.grammarRisks, w.id).toContain("v2-order");
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u3-d3 (D330): حوار الصيدلية — 13 كلمة + نقل خالص (Akk+Dat مراجعة) + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u3-d3")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("الصيدلية");
+    expect(l.usedArsenalIds).toEqual(["ars-reflexiv-akk", "ars-reflexiv-dat"]); // نقل خالص بلا جديد (D326)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(3);
+      expect(w.goetheList).toContain("A2"); // ومنها Süßigkeiten/Schokolade بـ[A1,A2] — في SD1/A2 ولم تُدرَّس (سابقة sehr/bis)
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u3-d3");
+      if (w.grammarRisks.includes("reflexive")) expect(w.forms!.perfekt, w.id).toMatch(/^hat sich /);
+      if (w.grammarRisks.includes("trennbar")) expect(w.forms!.perfekt, w.id).toContain("eingetragen");
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u3-d4 (D333): نصيحة صحية — 13 كلمة + نقل sollen (koennen) + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u3-d4")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("نصيحة");
+    expect(l.usedArsenalIds).toEqual(["ars-koennen-muessen"]); // نقل خالص بلا جديد (D326)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(3);
+      expect(w.goetheList).toContain("A2"); // ومنها erstens..viertens/markieren بدليل مجموعة — تُحسب A2 ولا ترفع عدّاد الرئيسية
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u3-d4");
+      if (w.id === "mittel") expect([w.gender, w.plural]).toEqual(["das", "die Mittel"]);
+      if (w.id === "menge") expect([w.gender, w.plural]).toEqual(["die", "die Mengen"]);
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u3-d5 (D334): mich أم mir — 13 كلمة + تمييز Akk/Dat + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u3-d5")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("mich");
+    expect(l.usedArsenalIds).toEqual(["ars-reflexiv-akk", "ars-reflexiv-dat"]); // خلط وتمييز بلا جديد (D326)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(13);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(3);
+      expect(w.goetheList).toContain("A2");
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u3-d5");
+      if (w.id === "unterschied") expect([w.gender, w.plural]).toEqual(["der", "die Unterschiede"]);
+      if (w.id === "gegenteil") expect([w.gender, w.plural]).toEqual(["das", "die Gegenteile"]);
+      if (w.id === "hinlegen") expect(w.grammarRisks).toEqual(["reflexive"]); // الأدوات لا تعرف hin- منفصلاً — الجملة تُظهر الفصل (D334)
+    }
+    expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
+    expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
+  });
+
+  it("a2-u3-d6 (D335): توليف الوحدة — كلمتان + تقرير الأسبوع + أصوات مطابقة", async () => {
+    const l = a2.find((x) => x.id === "a2-u3-d6")!;
+    expect(l.kind).toBe("content");
+    expect(l.ziel.ar).toContain("تقرير");
+    expect(l.usedArsenalIds).toEqual(["ars-reflexiv-akk", "ars-reflexiv-dat"]); // توليف بلا جديد (D326)
+    const words = await wordsForLesson(l);
+    expect(words).toHaveLength(2);
+    expect(words.map((w) => w.id).sort()).toEqual(["einig", "modern"]);
+    for (const w of words) {
+      expect(w.level).toBe("A2");
+      expect(w.unit).toBe(3);
+      expect(w.goetheList).toContain("A2");
+      expect(a1Ids.has(w.id)).toBe(false);
+      expect(w.sampleSentence?.sourceLesson).toBe("a2-u3-d6");
     }
     expect(l.audioManifestRefs).toEqual(l.praesentation.wordIds.map((id) => `word-${id}`));
     expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
@@ -1513,7 +1847,7 @@ describe("N-048 (D221) — الخطأ البعيد الوحيد محصور في 
   });
 });
 
-describe("N-023 (D223) — نصوص القراءة الـ12 كلها تحت حارس الجبهة (الثقافة لحقت في D224)", () => {
+describe("N-023 (D223) — نصوص القراءة الـ15 كلها تحت حارس الجبهة (الثقافة لحقت في D224)", () => {
   // الأفق: آخر درس في وحدة النص (شاملاً كلماته) · المسرد يمنح جذوعه كالمدروس (lernen تغطي lerne/lernt) · الأعلام معلنة · التعجب الصرف مسموح
   const INTERJECTIONS = new Set(["ah"]); // D223: صوت بلا معنى معجمي (Ah!) — يُوسَّع عند الحاجة لا استباقاً
   // المسرد الميت: كل رموزه معروفة-الأفق حرفياً بلا جذوع (schön ≠ schon — تصادم مقصود يُبقي مسرد u1 صادقاً)
@@ -1531,7 +1865,7 @@ describe("N-023 (D223) — نصوص القراءة الـ12 كلها تحت حا
     const unusedPropers = (d.properNouns ?? []).filter((n) => !contentTokens(n).every((t) => seen.has(t)));
     return { bad, dead, unusedPropers };
   };
-  for (const id of ["a1-lese-u1", "a1-lese-u2", "a1-lese-u3", "a1-lese-u4", "a1-lese-u5", "a1-lese-u6", "a1-lese-u7", "a1-lese-u8", "a1-lese-u9", "a1-lese-u10", "a1-lese-u11", "a1-lese-u12"]) {
+  for (const id of ["a1-lese-u1", "a1-lese-u2", "a1-lese-u3", "a1-lese-u4", "a1-lese-u5", "a1-lese-u6", "a1-lese-u7", "a1-lese-u8", "a1-lese-u9", "a1-lese-u10", "a1-lese-u11", "a1-lese-u12", "a1-lese-u13", "a1-lese-u14", "a1-lese-u15"]) {
     it(`${id} نظيف: صفر مخالفات · صفر مسرد ميت · كل علم مستعمل`, () => {
       expect(auditLese(id)).toEqual({ bad: [], dead: [], unusedPropers: [] });
     });
@@ -1539,7 +1873,7 @@ describe("N-023 (D223) — نصوص القراءة الـ12 كلها تحت حا
 });
 
 // N-023 (D224): بطاقات الثقافة الـ12 تحت نفس الحارس — الأفق آخر درس في وحدة البطاقة · المسرد بصيغة المفرد ما لم يرد الجمع (das Geschäft, die Geschäfte) · العربية تُستثنى في germanOnly
-describe("N-023 (D224) — بطاقات الثقافة الـ12 تحت حارس الجبهة (تُغلق N-023)", () => {
+describe("N-023 (D224) — بطاقات الثقافة الـ15 تحت حارس الجبهة (تُغلق N-023)", () => {
   const INTERJECTIONS = new Set(["ah"]);
   const lastOfUnit = (u: number) => ALL_LESSONS.filter((l) => l.level === "A1" && l.unit === u).sort((a, b) => a.day - b.day).at(-1)!;
   const auditLK = (id: string) => {
@@ -1555,7 +1889,7 @@ describe("N-023 (D224) — بطاقات الثقافة الـ12 تحت حارس 
     const unusedPropers = (d.properNouns ?? []).filter((n) => !contentTokens(n).every((t) => seen.has(t)));
     return { bad, dead, unusedPropers };
   };
-  for (const id of ["a1-landeskunde-u1", "a1-landeskunde-u2", "a1-landeskunde-u3", "a1-landeskunde-u4", "a1-landeskunde-u5", "a1-landeskunde-u6", "a1-landeskunde-u7", "a1-landeskunde-u8", "a1-landeskunde-u9", "a1-landeskunde-u10", "a1-landeskunde-u11", "a1-landeskunde-u12"]) {
+  for (const id of ["a1-landeskunde-u1", "a1-landeskunde-u2", "a1-landeskunde-u3", "a1-landeskunde-u4", "a1-landeskunde-u5", "a1-landeskunde-u6", "a1-landeskunde-u7", "a1-landeskunde-u8", "a1-landeskunde-u9", "a1-landeskunde-u10", "a1-landeskunde-u11", "a1-landeskunde-u12", "a1-landeskunde-u13", "a1-landeskunde-u14", "a1-landeskunde-u15"]) {
     it(`${id} نظيف: صفر مخالفات · صفر مسرد ميت · كل علم مستعمل`, () => {
       expect(auditLK(id)).toEqual({ bad: [], dead: [], unusedPropers: [] });
     });
@@ -1610,5 +1944,22 @@ describe("N-137 (D230) — البلدان واللغات عارية الاستع
     }
     const wde = ALL_WORDS.find((w) => w.id === "deutsch")!;
     expect(wde.article).toBeUndefined(); // لغة بموضوع Begrüßung — خارج القاعدة الموضوعية فيُثبَّت بالاسم
+  });
+});
+
+// D293: حزم التحويل تحت حارس الجبهة — المهارة نفسها تُختبَر بكلمات وحدتها (الأفق: آخر درس في الوحدة)
+describe("D293 — حزم التحويل نظيفة (صفر مخالفات)", () => {
+  const lastOfUnit = (u: number) => ALL_LESSONS.filter((l) => l.level === "A1" && l.unit === u).sort((a, b) => a.day - b.day).at(-1)!;
+  it("كل حزمة: أسئلتها وأجوبتها وخياراتها ضمن الأفق", () => {
+    const bad: string[] = [];
+    for (const pack of ALL_TRANSFER.filter((p) => p.level === "A1")) {
+      const taught = taughtUpTo(lastOfUnit(pack.unit), ALL_LESSONS, ALL_WORDS);
+      const stems = new Set(knownStems(taught));
+      for (const item of pack.items) {
+        const v = frontViolations([item.q, item.a, ...(item.choices ?? [])], stems, new Set());
+        if (v.length) bad.push(`${pack.id} «${item.q}» -> ${v.join(",")}`);
+      }
+    }
+    expect(bad).toEqual([]);
   });
 });

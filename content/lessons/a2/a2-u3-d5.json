@@ -1,0 +1,424 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u3-d5",
+  "level": "A2",
+  "unit": 3,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "mich oder mir? — richtig wählen",
+    "ar": "تميّز mich من mir (أكوزاتيف/داتيف) وتصحح الخلط"
+  },
+  "canDoDaily": [
+    "تميّز mich من mir في ست جمل (ثلاث + ثلاث)",
+    "تشرح الفرق (Unterschied) لزميل: العضو ← mir"
+  ],
+  "warmup": {
+    "cardIds": [
+      "duschen",
+      "waschen",
+      "anziehen"
+    ]
+  },
+  "einstieg": {
+    "guidedRetrieval": [
+      "من d1: الانعكاسي Akk معروف (Ich wasche mich) — واليوم نميّزه",
+      "من d2: الانعكاسي Dat معروف (Ich wasche mir die Hände) — واليوم نخلط ونميّز"
+    ],
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«أغسل نفسي» — كيف؟"
+        },
+        "answer": "Ich wasche mich.",
+        "choices": [
+          "Ich wasche mich.",
+          "Ich wasche mir.",
+          "Ich wasche sich."
+        ],
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«أغسل يديّ» — كيف؟"
+        },
+        "answer": "Ich wasche mir die Hände.",
+        "choices": [
+          "Ich wasche mir die Hände.",
+          "Ich wasche mich die Hände.",
+          "Ich wasche mir die Hand."
+        ],
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-reflexiv-akk",
+      "ars-reflexiv-dat"
+    ],
+    "riskFlagsShown": [
+      "reflexive",
+      "needs-ein",
+      "v2-order"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "hinlegen",
+      "unterschied",
+      "verschieden",
+      "gegenteil",
+      "eigentlich",
+      "aendern",
+      "stressig",
+      "schlimm",
+      "schwierig",
+      "stoeren",
+      "pruefen",
+      "wahrscheinlich",
+      "braten"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "mich oder mir — richtig antworten",
+        "ar": "تميّز الضمير الصحيح"
+      },
+      "situation": {
+        "de": "Beim Arzt und zu Hause",
+        "ar": "عند الطبيب وفي البيت"
+      },
+      "successCriteria": [
+        "ثلاث جمل بـmich صحيحة",
+        "ثلاث جمل بـmir + عضو",
+        "يشرح الفرق (Unterschied!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "verb-bank",
+        "explanationRequired": true,
+        "hints": [
+          "hinlegen منعكس: الضمير وسط (lege…mich…hin)",
+          "غيّر (ändern) واشوِ (braten) — أفعال جديدة",
+          "stören/prüfen تأخذان mich (أكوزاتيف!)"
+        ],
+        "interleavedWith": [
+          "lehrer",
+          "fleisch",
+          "bett"
+        ],
+        "items": [
+          {
+            "q": "أستلقي (Bett!): Ich lege ___ hin. (mich)",
+            "a": "mich",
+            "why": "أستلقي — hinlegen منعكس (mich وسط!)!"
+          },
+          {
+            "q": "يغيّر: Das ___ alles. (ändern)",
+            "a": "ändert",
+            "why": "يغيّر كل شيء — ändern جديد!"
+          },
+          {
+            "q": "تزعج: Du ___ mich. (stören)",
+            "a": "störst",
+            "why": "تزعجني — stören + أكوزاتيف (mich!)!"
+          },
+          {
+            "q": "يختبر: Der Lehrer ___ mich. (prüfen)",
+            "a": "prüft",
+            "why": "يختبرني المعلم — prüfen + أكوزاتيف!"
+          },
+          {
+            "q": "أشوي: Ich ___ das Fleisch. (braten)",
+            "a": "brate",
+            "why": "أشوي اللحم — braten جديد!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الفرق مذكر (der Unterschied) والعكس محايد (das Gegenteil)",
+          "Hände (اليدان) → mir!",
+          "hin بلا mich خطأ!"
+        ],
+        "interleavedWith": [
+          "hand",
+          "gross",
+          "heute"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist groß. (Unterschied)",
+            "a": "Unterschied",
+            "why": "الفرق كبير — der Unterschied مذكر!"
+          },
+          {
+            "q": "Das ist das ___ heute. (Gegenteil)",
+            "a": "Gegenteil",
+            "why": "هذا هو العكس — das Gegenteil محايد!"
+          },
+          {
+            "q": "Ich wasche ___ die Hände. (mir)",
+            "a": "mir",
+            "why": "أغسل يديّ — مع العضو mir!"
+          },
+          {
+            "q": "Ich lege ___ hin. (mich)",
+            "a": "mich",
+            "why": "أستلقي — بلا عضو mich!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "mich مع عضو؟ خطأ! mir بلا عضو؟ خطأ!",
+          "Gegenteil محايد (das)!",
+          "stören + mich دائماً"
+        ],
+        "interleavedWith": [
+          "hand",
+          "neu",
+          "heute"
+        ],
+        "items": [
+          {
+            "q": "Ich wasche mich die Hände.",
+            "a": "Ich wasche mir die Hände.",
+            "why": "مع العضو (Hände) الضمير mir!"
+          },
+          {
+            "q": "Ich lege mir hin.",
+            "a": "Ich lege mich hin.",
+            "why": "بلا عضو الضمير mich!"
+          },
+          {
+            "q": "Die Gegenteil ist neu.",
+            "a": "Das Gegenteil ist neu.",
+            "why": "Gegenteil محايد — das لا die!"
+          },
+          {
+            "q": "Du störst mir heute.",
+            "a": "Du störst mich heute.",
+            "why": "stören أكوزاتيف — mich لا mir!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاث جمل بـmich (waschen/hinlegen/stören!)",
+          "ثلاث بـmir (Hände/Haare/Zähne!)"
+        ],
+        "interleavedWith": [
+          "hand",
+          "haar",
+          "zahn"
+        ],
+        "items": [
+          {
+            "q": "مثّل التمييز (mich أم mir؟): ثلاث جمل بـmich وثلاث بـmir مع الأعضاء (Hände/Haare/Zähne!) — ثم اشرح الفرق (Unterschied!)",
+            "a": "Ich wasche mich. Ich lege mich hin. Du störst mich. Ich wasche mir die Hände. Ich wasche mir die Haare. Ich putze mir die Zähne. Der Unterschied: mit Händen mir!",
+            "why": "قارن تمييزك: mich بلا عضو × mir مع عضو (Hände/Haare/Zähne) — والفرق (Unterschied) واضح!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "quiz": {
+    "variants": [
+      {
+        "passingScore": 0.75,
+        "items": [
+          {
+            "q": "«مختلف»؟",
+            "a": "verschieden"
+          },
+          {
+            "q": "«صعب»؟",
+            "a": "schwierig"
+          },
+          {
+            "q": "Die Arbeit ist ___. (stressig)",
+            "a": "stressig"
+          },
+          {
+            "q": "Die Grippe ist ___. (schlimm)",
+            "a": "schlimm"
+          }
+        ]
+      },
+      {
+        "passingScore": 0.75,
+        "items": [
+          {
+            "q": "«في الحقيقة»؟",
+            "a": "eigentlich"
+          },
+          {
+            "q": "«على الأرجح»؟",
+            "a": "wahrscheinlich"
+          },
+          {
+            "q": "Ich bin ___ müde. (eigentlich)",
+            "a": "eigentlich"
+          },
+          {
+            "q": "Du bist ___ müde. (wahrscheinlich)",
+            "a": "wahrscheinlich"
+          }
+        ]
+      },
+      {
+        "passingScore": 0.75,
+        "items": [
+          {
+            "q": "der Unterschied → ___",
+            "a": "die Unterschiede"
+          },
+          {
+            "q": "das Gegenteil → ___",
+            "a": "die Gegenteile"
+          },
+          {
+            "q": "Ich lege ___ hin. (mich)",
+            "a": "mich"
+          },
+          {
+            "q": "Ich wasche ___ die Hände. (mir)",
+            "a": "mir"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "hinlegen",
+      "unterschied",
+      "verschieden",
+      "gegenteil",
+      "eigentlich",
+      "aendern",
+      "stressig",
+      "schlimm",
+      "schwierig",
+      "stoeren",
+      "pruefen",
+      "wahrscheinlich",
+      "braten"
+    ],
+    "summary": {
+      "de": "mich oder mir? Ich wasche mich. Ich lege mich hin. Du störst mich. Ich wasche mir die Hände. Der Unterschied: Hände brauchen mir!",
+      "ar": "الفرق (Unterschied): بلا عضو = mich (أغسل نفسي/أستلقي/تزعجني) ومع عضو = mir (أغسل يديّ). القاعدة: العضو يأخذ mir!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich wasche mich die Hände.~~",
+          "ar": "mich مع العضو"
+        },
+        "correct": {
+          "de": "Ich wasche mir die Hände.",
+          "ar": "أغسل يديّ."
+        },
+        "exercise": {
+          "q": "Ich wasche ___ die Hände. (mir)",
+          "a": "mir"
+        },
+        "whyArabicSpeakerFails": "مع العضو (Hände) الضمير داتيف (mir) — mich بلا عضو فقط (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "de": "~~Ich lege mir hin.~~",
+          "ar": "mir بلا عضو"
+        },
+        "correct": {
+          "de": "Ich lege mich hin.",
+          "ar": "أستلقي."
+        },
+        "exercise": {
+          "q": "Ich lege ___ hin. (mich)",
+          "a": "mich"
+        },
+        "whyArabicSpeakerFails": "hinlegen بلا عضو فالضمير أكوزاتيف (mich) — mir تحتاج عضواً (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "de": "~~Du störst mir.~~",
+          "ar": "الداتيف مع stören"
+        },
+        "correct": {
+          "de": "Du störst mich.",
+          "ar": "أنت تزعجني."
+        },
+        "exercise": {
+          "q": "Du störst ___. (mich)",
+          "a": "mich"
+        },
+        "whyArabicSpeakerFails": "stören فعل أكوزاتيف (يزعجني = mich) وليس انعكاسياً أصلاً (خريطة التداخل 10‑ي)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Unterschied",
+      "https://www.duden.de/rechtschreibung/Gegenteil"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": []
+  },
+  "usedArsenalIds": [
+    "ars-reflexiv-akk",
+    "ars-reflexiv-dat"
+  ],
+  "audioManifestRefs": [
+    "word-hinlegen",
+    "word-unterschied",
+    "word-verschieden",
+    "word-gegenteil",
+    "word-eigentlich",
+    "word-aendern",
+    "word-stressig",
+    "word-schlimm",
+    "word-schwierig",
+    "word-stoeren",
+    "word-pruefen",
+    "word-wahrscheinlich",
+    "word-braten"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "hinlegen",
+      "unterschied",
+      "verschieden",
+      "gegenteil",
+      "eigentlich",
+      "aendern",
+      "stressig",
+      "schlimm",
+      "schwierig",
+      "stoeren",
+      "pruefen",
+      "wahrscheinlich",
+      "braten"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 3 «Immer online?» — أول تباعد موثق: الموضوع من §7 (الجسم والصحة) والفصل K3 للدعم (D326)"
+  }
+}

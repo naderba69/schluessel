@@ -15,7 +15,8 @@ import {
   auditPalette,
   type ThemePrefs,
 } from "../lib/ui-accessibility.js";
-import type { LearnerProgress, Word } from "../../content/schemas/index.js";
+import type { CoachWindow, LearnerProgress, Word } from "../../content/schemas/index.js";
+import { COACH_WINDOWS, WINDOW_LABELS_AR } from "../lib/coach-engine.js";
 import { LESSON_INDEX } from "../lesson-packs.js";
 import { lessonStatus } from "../lib/routes.js";
 
@@ -183,8 +184,67 @@ export function DataScreen() {
   );
 }
 
+/* ══════════ N-151 (D251) — بياناتك في الإعدادات (§2.11: تعديل الاسم + الرحلة + النوافذ) ══════════ */
+export type ProfilePatch = { name?: string; journeyName?: string; coachWindows?: CoachWindow[] };
+
+export function ProfileEditors({
+  profile,
+  onSave,
+}: {
+  profile: { name: string; journeyName: string; coachWindows: readonly CoachWindow[] };
+  onSave: (patch: ProfilePatch) => void;
+}) {
+  const [name, setName] = useState(profile.name);
+  const [journey, setJourney] = useState(profile.journeyName);
+  const [pick, setPick] = useState<CoachWindow[]>([...profile.coachWindows]);
+  const toggle = (w: CoachWindow) =>
+    setPick((prev) => (prev.includes(w) ? prev.filter((x) => x !== w) : [...prev, w]));
+  return (
+    <div data-testid="profile-editors">
+      <h4>📝 بياناتك</h4>
+      <label>
+        اسمك:{" "}
+        <input data-testid="settings-name-input" aria-label="اسمك" value={name} onChange={(e) => setName(e.target.value)} dir="rtl" />
+      </label>
+      <button data-testid="settings-name-save" onClick={() => onSave({ name: name.trim() })} disabled={!name.trim()}>
+        حفظ الاسم
+      </button>
+      <label>
+        اسم الرحلة (اختياري):{" "}
+        <input data-testid="settings-journey-input" aria-label="اسم الرحلة" value={journey} onChange={(e) => setJourney(e.target.value)} dir="rtl" />
+      </label>
+      <button data-testid="settings-journey-save" onClick={() => onSave({ journeyName: journey.trim() })}>
+        حفظ اسم الرحلة
+      </button>
+      <fieldset>
+        <legend>نوافذ المدرب (نافذتان على الأقل)</legend>
+        {COACH_WINDOWS.map((w) => (
+          <label key={w}>
+            <input
+              data-testid={`settings-window-${w}`}
+              type="checkbox"
+              checked={pick.includes(w)}
+              onChange={() => toggle(w)}
+            />
+            {WINDOW_LABELS_AR[w]}
+          </label>
+        ))}
+        <button data-testid="settings-windows-save" onClick={() => onSave({ coachWindows: pick })} disabled={pick.length < 2}>
+          حفظ النوافذ
+        </button>
+      </fieldset>
+    </div>
+  );
+}
+
 /* ══════════ E22 — الإعدادات/الوصولية ══════════ */
-export function SettingsScreen() {
+export function SettingsScreen({
+  profile,
+  onSaveProfile,
+}: {
+  profile?: { name: string; journeyName: string; coachWindows: readonly CoachWindow[] };
+  onSaveProfile?: (patch: ProfilePatch) => void;
+}) {
   const [prefs, setPrefs] = useState<ThemePrefs>(() => {
     // N-144 (D244): تفضيل محفوظ — الزر كان شكلياً (يبدّل حالة لا تُطبَّق)
     try {
@@ -203,7 +263,8 @@ export function SettingsScreen() {
   const audit = auditPalette();
   return (
     <section data-testid="settings-screen">
-      <h3>⚙️ الإعدادات — الوضع الليلي والوصولية</h3>
+      <h3>⚙️ الإعدادات — بياناتك والمظهر والوصولية</h3>
+      {profile && onSaveProfile && <ProfileEditors profile={profile} onSave={onSaveProfile} />}
       <p data-testid="dir-note">الاتجاه العربي (RTL) ثابت في كل الشاشات — لا يُلغى.</p>
       <div data-testid="settings-controls">
         <button data-testid="toggle-mode" onClick={() => setPrefs(toggleMode(prefs))}>
@@ -277,7 +338,17 @@ const TABS = [
   { id: "settings", label: "⚙️ إعدادات" },
 ] as const;
 
-export function SystemLab({ words, progress }: { words: Word[]; progress?: LearnerProgress | null }) {
+export function SystemLab({
+  words,
+  progress,
+  profile,
+  onSaveProfile,
+}: {
+  words: Word[];
+  progress?: LearnerProgress | null;
+  profile?: { name: string; journeyName: string; coachWindows: readonly CoachWindow[] };
+  onSaveProfile?: (patch: ProfilePatch) => void;
+}) {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("gate");
   return (
     <div data-testid="system-lab">
@@ -295,7 +366,7 @@ export function SystemLab({ words, progress }: { words: Word[]; progress?: Learn
       {tab === "adapt" && <AdaptationScreen />}
       {tab === "play" && <PlayScreen words={words} />}
       {tab === "data" && <DataScreen />}
-      {tab === "settings" && <SettingsScreen />}
+      {tab === "settings" && <SettingsScreen profile={profile} onSaveProfile={onSaveProfile} />}
     </div>
   );
 }

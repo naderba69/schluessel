@@ -10,12 +10,15 @@ import {
   CyclicTest,
   Modelltest,
   ReadingText,
+  TransferPack,
+  VideoShelf,
   ImageManifest,
   GrammarRuleFile,
   StoryBook,
   AudioScript,
   type Lesson,
   type Word,
+  type ImageAsset,
 } from "../content/schemas/index.js";
 import imageManifest from "../content/manifests/image-manifest.json";
 import lessonIndexJson from "../content/manifests/lesson-index.json";
@@ -53,6 +56,12 @@ export const FIRST_TAUGHT: Record<string, number> = (() => {
   return m;
 })();
 
+/** D271: مستوى أول درس يدرّس الكلمة — undefined للكلمة الغريبة عن الفهرس (تُستبعد من M بصدق) */
+export function levelOfWord(wordId: string): LessonIndexEntry["level"] | undefined {
+  const i = FIRST_TAUGHT[wordId];
+  return i === undefined ? undefined : LESSON_INDEX[i].level;
+}
+
 /** صف الفهرس لدرس — غيابه يعني درساً محذوفاً من git والمسار يشير إليه (D3: خطأ صريح) */
 export function indexEntry(lessonId: string): LessonIndexEntry {
   const e = LESSON_INDEX.find((x) => x.id === lessonId);
@@ -76,9 +85,22 @@ export const ALL_MODELLTESTS = json(import.meta.glob("../content/modelltest/*.js
 /** مانيفست الصور — الترميز المزدوج (D96) */
 export const ALL_IMAGES = ImageManifest.parse(imageManifest).assets;
 
+/** صور الدرس (D298 · N-156/1): أصول المانيفست التي يضمّها usedInLessons — [] = بلا صورة (وبلا بديل — أمر المالك) */
+export function lessonImages(lessonId: string): readonly ImageAsset[] {
+  return ALL_IMAGES.filter((a) => a.usedInLessons.includes(lessonId));
+}
+
 /** نصوص القراءة (D97) */
 export const ALL_LESETEXTS = json(import.meta.glob("../content/lese/*.json", { eager: true, import: "default" }))
   .map((j) => ReadingText.parse(j));
+
+/** حزم التحويل للمؤجلة (D293) */
+export const ALL_TRANSFER = json(import.meta.glob("../content/transfer/*.json", { eager: true, import: "default" }))
+  .map((j) => TransferPack.parse(j));
+
+/** رفوف الفيديو (D308 · §2.12) */
+export const ALL_VIDEO = json(import.meta.glob("../content/video/*.json", { eager: true, import: "default" }))
+  .map((j) => VideoShelf.parse(j));
 
 // ---------- لوادر كسولة (الحصة تحمل درسها وحده) ----------
 type LazyMods = Record<string, () => Promise<unknown>>;
@@ -205,6 +227,19 @@ export async function loadScriptsForLesson(lessonId: string, level: string): Pro
     return true;
   });
   return Promise.all(keys.map((k) => loadJson(SCRIPT_MODS, k, AudioScript)));
+}
+
+/** D280: هل للدرس سكربت مباشر؟ (فحص متزامن على مفاتيح الـglob — بلا تحميل) */
+export function hasDirectScript(lessonId: string): boolean {
+  return Object.keys(SCRIPT_MODS).some((k) => {
+    const base = k.slice(k.lastIndexOf("/") + 1);
+    return base.startsWith(`${lessonId}-`);
+  });
+}
+
+/** D280: درس الظل اليومي — أحدث درس مكتمل له حوار مباشر («ظل حواراً متقناً» ب-20) */
+export function shadowingLessonId(completedIds: readonly string[]): string | undefined {
+  return [...completedIds].reverse().find((id) => hasDirectScript(id));
 }
 
 /** كل السكربتات — للاختبارات الشاملة فقط */

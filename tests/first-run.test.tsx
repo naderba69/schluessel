@@ -3,13 +3,15 @@ import { describe, it, expect } from "vitest";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import {
-  FIRST_RUN_STEPS, firstRunNext, completeFirstRun,
+  FIRST_RUN_STEPS, firstRunNext, completeFirstRun, normalizeWindows,
 } from "../src/lib/first-run.js";
+import { COACH_WINDOWS, DEFAULT_WINDOWS } from "../src/lib/coach-engine.js";
+import { CoachWindow as CoachWindowSchema, LearnerProfile as LearnerProfileSchema } from "../content/schemas/index.js";
 import {
   loadUnit0Deck, dayOneCards, jitCards, shouldShowCard, cardsForEvent, answerNeedsSpecialChar,
 } from "../src/lib/unit0.js";
 import {
-  WelcomeScreen, NameScreen, Unit0CardView, FirstLessonScreen, KeyboardCard, HandwritingExercise,
+  WelcomeScreen, NameScreen, JourneyNameScreen, WindowsScreen, Unit0CardView, FirstLessonScreen, KeyboardCard, HandwritingExercise,
 } from "../src/components/FirstRun.js";
 import { PracticeStation } from "../src/components/LessonContent.js";
 import { Lesson as LessonSchema, Word as WordSchema } from "../content/schemas/index.js";
@@ -19,8 +21,8 @@ import wordHeissen from "../content/words/heissen.json";
 import wordGutenTag from "../content/words/guten-tag.json";
 
 describe("أول تشغيل (test-first-run-flow)", () => {
-  it("المسار: ترحيب → اسم → وحدة صفر → أول درس — بلا اختبار تموضع إطلاقاً", () => {
-    expect([...FIRST_RUN_STEPS]).toEqual(["welcome", "ask-name", "unit0-day1", "first-lesson"]);
+  it("المسار: ترحيب → اسم → رحلة → نوافذ → وحدة صفر → أول درس — بلا اختبار تموضع إطلاقاً", () => {
+    expect([...FIRST_RUN_STEPS]).toEqual(["welcome", "ask-name", "journey-name", "coach-windows", "unit0-day1", "first-lesson"]);
     const flow: string[] = [];
     let s: string | null = FIRST_RUN_STEPS[0];
     while (s) { flow.push(s); s = firstRunNext(s as never); }
@@ -41,12 +43,55 @@ describe("أول تشغيل (test-first-run-flow)", () => {
     expect(state.srsCards).toEqual([]);
   });
 
+  it("N-151: الاسم وحده ⇒ رحلة فارغة + النوافذ الثلاث (توافق)", () => {
+    const state = completeFirstRun("يوسف");
+    expect(state.profile.journeyName).toBe("");
+    expect(state.profile.coachWindows).toEqual([...DEFAULT_WINDOWS]);
+  });
+
+  it("N-151: الرحلة والنوافذ تُحفظان — والترتيب قانوني بلا تكرار", () => {
+    const state = completeFirstRun("  يوسف  ", { journeyName: "  ألمانيتي  ", coachWindows: ["evening", "midday", "evening"] });
+    expect(state.profile.name).toBe("يوسف");
+    expect(state.profile.journeyName).toBe("ألمانيتي");
+    expect(state.profile.coachWindows).toEqual(["midday", "evening"]);
+  });
+
+  it("N-151: تطبيع النوافذ — المؤجَّل والأقل من نافذتين ⇒ الافتراضي", () => {
+    expect(normalizeWindows(null)).toEqual([...DEFAULT_WINDOWS]);
+    expect(normalizeWindows(undefined)).toEqual([...DEFAULT_WINDOWS]);
+    expect(normalizeWindows(["evening"])).toEqual([...DEFAULT_WINDOWS]);
+    expect(normalizeWindows(["afternoon", "midday"])).toEqual(["midday", "afternoon"]);
+  });
+
+  it("N-151: مخطط الملف — الحقول الجديدة افتراضية (الحالات القديمة تُقرأ بلا هجرة)", () => {
+    const parsed = LearnerProfileSchema.parse({
+      schemaVersion: "1.0.0", name: "قديم", createdAt: "2026-10-01", level: "A1",
+      streak: { current: 1, freezesUsedThisMonth: 0 },
+    });
+    expect(parsed.journeyName).toBe("");
+    expect(parsed.coachWindows).toEqual(["midday", "afternoon", "evening"]);
+  });
+
+  it("N-151: نافذة المخطط = نافذة المحرك (تطابق)", () => {
+    expect(CoachWindowSchema.options).toEqual([...COACH_WINDOWS]);
+  });
+
   it("شاشات الترحيب والاسم تُعرضان فعلياً (بلا شاشة فارغة)", () => {
     const welcome = renderToStaticMarkup(<WelcomeScreen onNext={() => {}} />);
     expect(welcome).toContain("مولر");
     expect(welcome).toContain("data-screen=\"welcome\"");
     const name = renderToStaticMarkup(<NameScreen onSubmit={() => {}} />);
     expect(name).toContain("اسم المتعلم");
+  });
+
+  it("N-151: شاشتا الرحلة والنوافذ تُعرضان (حقل + خيارات + تأجيل)", () => {
+    const journey = renderToStaticMarkup(<JourneyNameScreen onSubmit={() => {}} />);
+    expect(journey).toContain('data-screen="journey-name"');
+    expect(journey).toContain('data-testid="journey-input"');
+    const windows = renderToStaticMarkup(<WindowsScreen onSubmit={() => {}} />);
+    expect(windows).toContain('data-screen="coach-windows"');
+    expect(windows).toContain('data-testid="window-midday"');
+    expect(windows).toContain('data-testid="windows-defer"');
   });
 
   it("شاشة أول درس تعرض الهدف والكلمات بترميز الجنس", () => {

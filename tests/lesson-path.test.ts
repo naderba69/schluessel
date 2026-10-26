@@ -5,7 +5,9 @@ import { LearnerState as LearnerStateSchema, type LearnerState } from "../conten
 import { createInitialState } from "../src/lib/state-factory.js";
 import { lessonStatus } from "../src/lib/routes.js";
 import {
-  currentLessonId, lessonAfter, openSessionFor, quizAttempts, reconcileProgress, reconcileState, recordQuizAttempt, setOpenSession,
+  battleAttempts, currentLessonId, cyclicAttempts, cyclicDue, cyclicTestFor, deferredDue, deferredUnits, delayedAttempts,
+  journeyWeek, lessonAfter, mixTransferItems, openSessionFor, passedUnitBattle,
+  quizAttempts, reconcileProgress, reconcileState, recordCyclicTest, recordDelayedBattle, recordQuizAttempt, setOpenSession, unitKeyOf,
   type PathLesson,
 } from "../src/lib/lesson-path.js";
 import {
@@ -13,6 +15,7 @@ import {
 } from "../src/lib/quiz-session.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
 import { LESSON_ORDER, loadAllGrammarRules, loadAllLessons, runtimeWordsForLesson } from "../src/lesson-packs.js";
+import { ALL_PRUEFUNGEN } from "../src/lesson-packs.js";
 const ALL_GRAMMAR_RULES = await loadAllGrammarRules();
 const ALL_LESSONS = await loadAllLessons();
 
@@ -157,5 +160,180 @@ describe("N-006 (D228) — الحصة المفتوحة: حفظ/مطابقة/مس
     expect(passed.progress.openSession).toBeUndefined();
     const failed = recordQuizAttempt(withOpen, outcome("a1-u1-d1", 0.5), PATH, DAY);
     expect(failed.progress.openSession).toMatchObject({ lessonId: "a1-u1-d1" });
+  });
+});
+
+describe("D277: معركة الوحدة", () => {
+  it("unitKey حاضر ← kind=unit-battle وبوابة الوحدة وعدّاد مستقل", () => {
+    let s = fresh();
+    s = recordQuizAttempt(s, outcome("a1-u1-d1", 0.5), PATH, DAY, [], "A1-u1");
+    s = recordQuizAttempt(s, outcome("a1-u1-d1", 0.5), PATH, DAY, [], "A1-u1");
+    const battles = s.progress.gateResults.filter((g) => g.kind === "unit-battle");
+    expect(battles.map((g) => [g.gateId, g.attempts])).toEqual([["A1-u1", 1], ["A1-u1", 2]]);
+    expect(battleAttempts(s.progress, "A1-u1")).toBe(2);
+    expect(quizAttempts(s.progress, "a1-u1-d1")).toBe(0); // عدّاد الاختبار لم يُمسّ
+  });
+
+  it("المعركة الناجحة تُكمل الدرس وتفتح التالي (المسار كما هو)", () => {
+    const s = recordQuizAttempt(fresh(), outcome("a1-u1-d1", 0.8), PATH, DAY, [], "A1-u1");
+    expect(s.progress.completedLessons).toContain("a1-u1-d1");
+    expect(currentLessonId(s.progress, PATH)).toBe("a1-u1-d2");
+    expect(passedUnitBattle(s.progress, "A1-u1")).toBe(true);
+    expect(passedUnitBattle(s.progress, "A1-u2")).toBe(false);
+  });
+
+  it("unitKeyOf: «A1-u1»", () => {
+    expect(unitKeyOf("A1", 1)).toBe("A1-u1");
+  });
+});
+
+describe("D277: المعركة المؤجلة", () => {
+  it("بلا قفل ولا إكمال — والمعايرة تُحفَظ وtransferShare غائب", () => {
+    const s = recordDelayedBattle(fresh(), "A1-u9", outcome("a1-u9-d6", 0.8), "2026-10-19");
+    const g = s.progress.gateResults.find((x) => x.kind === "delayed-battle")!;
+    expect(g.gateId).toBe("A1-u9");
+    expect(g.attempts).toBe(1);
+    expect("transferShare" in g).toBe(false); // الصدق: لا سياقات تحويل بعدُ (N-158)
+    expect(s.progress.completedLessons).toEqual([]);
+    expect(currentLessonId(s.progress, PATH)).toBe("a1-u1-d1");
+    expect(s.profile.calibration.at(-1)).toMatchObject({ predicted: 70, actual: 80 });
+    expect(delayedAttempts(s.progress, "A1-u9")).toBe(1);
+  });
+
+  it("توقّع فارغ ← بلا سطر معايرة", () => {
+    const s = recordDelayedBattle(fresh(), "A1-u9", outcome("a1-u9-d6", 0.8, { predicted: null }), "2026-10-19");
+    expect(s.profile.calibration).toEqual([]);
+  });
+
+  it("deferredUnits: المجتازة بلا مؤجلة وحدها", () => {
+    let s = fresh();
+    s = recordQuizAttempt(s, outcome("a1-u1-d1", 0.8), PATH, DAY, [], "A1-u1");
+    s = recordQuizAttempt(s, outcome("a1-u1-d2", 0.5), PATH, DAY, [], "A1-u1"); // رسوب لاحق لا يمحو الاجتياز
+    expect(deferredUnits(s.progress)).toEqual(["A1-u1"]);
+    s = recordDelayedBattle(s, "A1-u1", outcome("a1-u1-d6", 0.8), "2026-10-19");
+    expect(deferredUnits(s.progress)).toEqual([]);
+  });
+
+  it("deferredDue: الاثنين وحده + شرط الاجتياز", () => {
+    let s = fresh();
+    s = recordQuizAttempt(s, outcome("a1-u1-d1", 0.8), PATH, DAY, [], "A1-u1");
+    expect(deferredDue(s.progress, "A1-u1", "2026-10-19")).toBe(true); // اثنين
+    expect(deferredDue(s.progress, "A1-u1", "2026-10-18")).toBe(false); // أحد
+    expect(deferredDue(s.progress, "A1-u1", "2026-10-21")).toBe(false); // أربعاء
+    expect(deferredDue(s.progress, "A1-u2", "2026-10-19")).toBe(false); // بلا اجتياز
+    expect(deferredDue(s.progress, "A1-u1", "not-a-date")).toBe(false);
+  });
+});
+
+describe("D283: أسبوع الرحلة", () => {
+  it("أسابيع اثنينية منذ أسبوع الإنشاء — 1-based", () => {
+    expect(journeyWeek("2026-10-05", new Date(2026, 9, 10))).toBe(1); // سبت الأسبوع نفسه
+    expect(journeyWeek("2026-10-05", new Date(2026, 9, 11))).toBe(1); // الأحد يتبع اثنينه
+    expect(journeyWeek("2026-10-05", new Date(2026, 9, 12))).toBe(2); // الاثنين التالي
+    expect(journeyWeek("2026-10-05", new Date(2026, 9, 31))).toBe(4);
+    expect(journeyWeek("2026-10-07", new Date(2026, 9, 17))).toBe(2); // إنشاء أربعاء ← أسبوعه يبدأ 10-05
+    expect(journeyWeek("not-a-date")).toBe(1);
+  });
+});
+
+describe("D283: استحقاق الدوري", () => {
+  const SAT2 = new Date(2026, 9, 17); // سبت الأسبوع 2 (من 10-05)
+  const SAT4 = new Date(2026, 9, 31); // سبت الأسبوع 4
+  const FRI2 = new Date(2026, 9, 16);
+  const empty = { gateResults: [] };
+
+  it("سبت زوجي ← القصير · والشهرية في أسابيعها بدل القصير", () => {
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 2, SAT2)?.id).toBe("a1-kurztest-w2");
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 4, SAT4)?.id).toBe("a1-monatspruefung-w4");
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 6, new Date(2026, 10, 14))?.id).toBe("a1-kurztest-w6");
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 14, new Date(2027, 0, 9))?.id).toBe("a1-kurztest-w14"); // D289: آخر الدوري
+  });
+
+  it("D290: غياب الشهرية ← القصير احتياطها الحي (N-161)", () => {
+    const SAT4 = new Date(2026, 9, 31);
+    const noMonat = ALL_PRUEFUNGEN.filter((t) => t.id !== "a1-monatspruefung-w4");
+    expect(cyclicTestFor(noMonat, "A1", 4, SAT4)?.id).toBe("a1-kurztest-w4");
+    const neither = noMonat.filter((t) => t.id !== "a1-kurztest-w4");
+    expect(cyclicTestFor(neither, "A1", 4, SAT4)).toBeUndefined();
+    // وغير أسابيع الشهرية: لا احتياط معاكس (غياب القصير لا يستدعي الشهرية)
+    const noKurz = ALL_PRUEFUNGEN.filter((t) => t.id !== "a1-kurztest-w2");
+    expect(cyclicTestFor(noKurz, "A1", 2, new Date(2026, 9, 17))).toBeUndefined();
+  });
+
+  it("غير السبت والفردي والغائب والمستوى الخاطئ ← لا شيء", () => {
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 2, FRI2)).toBeUndefined();
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 3, new Date(2026, 9, 24))).toBeUndefined();
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 16, new Date(2027, 0, 23))).toBeUndefined(); // فوق سقف المخطط (14)
+    expect(cyclicTestFor(ALL_PRUEFUNGEN, "B1", 2, SAT2)).toBeUndefined();
+  });
+
+  it("المسجَّل لا يُستحَق ثانية", () => {
+    expect(cyclicDue(ALL_PRUEFUNGEN, "A1", 2, SAT2, empty)?.id).toBe("a1-kurztest-w2");
+    const done = {
+      gateResults: [{ gateId: "a1-kurztest-w2", kind: "kurztest" as const, score: 0.8, passed: true, attempts: 1, weakSections: [], date: "2026-10-17" }],
+    };
+    expect(cyclicDue(ALL_PRUEFUNGEN, "A1", 2, SAT2, done)).toBeUndefined();
+    expect(cyclicAttempts(done, "a1-kurztest-w2")).toBe(1);
+  });
+});
+
+describe("D283: تسجيل الدوري", () => {
+  const kurz = { id: "a1-kurztest-w2", kind: "kurztest" } as const;
+  const monat = { id: "a1-monatspruefung-w4", kind: "monatspruefung" } as const;
+
+  it("النوع يُحفَظ (kurztest/monthly) — بلا قفل ولا إكمال", () => {
+    const s = recordCyclicTest(fresh(), kurz, outcome("x", 0.8), "2026-10-17");
+    expect(s.progress.gateResults[0]).toMatchObject({ gateId: "a1-kurztest-w2", kind: "kurztest", attempts: 1 });
+    expect(s.progress.completedLessons).toEqual([]);
+    expect(currentLessonId(s.progress, PATH)).toBe("a1-u1-d1");
+    const m = recordCyclicTest(fresh(), monat, outcome("x", 0.6), "2026-10-31");
+    expect(m.progress.gateResults[0]).toMatchObject({ gateId: "a1-monatspruefung-w4", kind: "monthly", passed: false });
+  });
+
+  it("المحاولات تتراكم والمعايرة تُحفَظ", () => {
+    let s = fresh();
+    s = recordCyclicTest(s, kurz, outcome("x", 0.5), "2026-10-17");
+    s = recordCyclicTest(s, kurz, outcome("x", 0.8), "2026-10-17");
+    expect(s.progress.gateResults.map((g) => g.attempts)).toEqual([1, 2]);
+    expect(s.profile.calibration).toHaveLength(2);
+    const n = recordCyclicTest(fresh(), kurz, outcome("x", 0.8, { predicted: null }), "2026-10-17");
+    expect(n.profile.calibration).toEqual([]);
+  });
+});
+
+describe("D293: خلط التحويل", () => {
+  const items = [{ q: "q0" }, { q: "q1" }, { q: "q2" }, { q: "q3" }, { q: "q4" }, { q: "q5" }];
+  const pool = [{ q: "t0" }, { q: "t1" }, { q: "t2" }, { q: "t3" }];
+
+  it("20% من 6 = بند واحد موسوم 🔀 في موضع موزع", () => {
+    const { items: mixed, transferShare } = mixTransferItems(items, pool, 0);
+    expect(transferShare).toBeCloseTo(1 / 6);
+    const flagged = mixed.filter((m) => m.q.startsWith("🔀 "));
+    expect(flagged).toHaveLength(1);
+    expect(flagged[0]!.q).toBe("🔀 t0");
+    expect(mixed.filter((m) => !m.q.startsWith("🔀 "))).toHaveLength(5);
+  });
+
+  it("الملح يناوب الحزمة — والمواضع تنتشر مع الكثرة", () => {
+    expect(mixTransferItems(items, pool, 1).items.find((m) => m.q.startsWith("🔀 "))!.q).toBe("🔀 t1");
+    expect(mixTransferItems(items, pool, 5).items.find((m) => m.q.startsWith("🔀 "))!.q).toBe("🔀 t1"); // 5 % 4
+    const ten = Array.from({ length: 10 }, (_, i) => ({ q: `q${i}` }));
+    const m = mixTransferItems(ten, pool, 0);
+    expect(m.transferShare).toBeCloseTo(0.2);
+    expect(m.items.filter((x) => x.q.startsWith("🔀 "))).toHaveLength(2);
+  });
+
+  it("بلا حزمة أو بلا بنود = بلا خلط وحصة صفر", () => {
+    expect(mixTransferItems(items, [], 0)).toEqual({ items, transferShare: 0 });
+    expect(mixTransferItems([], pool, 0)).toEqual({ items: [], transferShare: 0 });
+  });
+});
+
+describe("D293: تسجيل حصة التحويل", () => {
+  it("الحاضرة تُسجَّل والغائبة تُحجَب", () => {
+    const s = recordDelayedBattle(fresh(), "A1-u1", outcome("a1-u1-d6", 0.8), "2026-10-19", 1 / 6);
+    expect(s.progress.gateResults[0]).toMatchObject({ kind: "delayed-battle", transferShare: 1 / 6 });
+    const n = recordDelayedBattle(fresh(), "A1-u2", outcome("a1-u2-d6", 0.8), "2026-10-19");
+    expect("transferShare" in n.progress.gateResults[0]!).toBe(false);
   });
 });

@@ -87,3 +87,51 @@ export function highlightAt(segments: ReadingSegment[], progress: number): Readi
   const i = Math.min(segments.length - 1, Math.floor(progress * segments.length));
   return segments[i] ?? null;
 }
+
+/* ══════════ D281 — نص القراءة الحر الأسبوعي (ب-19: مستوى i-1 يوم الخميس) ══════════ */
+/** تقسيم النص جملاً (ألماني/عربي) — يُقابَل الترتيب بالترتيب */
+export function splitSentences(text: string): string[] {
+  return text
+    .split(/(?<=[.!?؟])\s+/)
+    .map((s) => s.trim())
+    .filter((s) => s.length > 0);
+}
+
+/** تكييف نص المحتوى {de, ar} إلى مقاطع المحرك — يُقابَل حتى الأقصر (لا كسر أبداً) */
+export function toEngineText(content: {
+  id: string;
+  level: "A1" | "A2" | "B1";
+  title: { de: string; ar: string };
+  text: { de: string; ar: string };
+}): ReadingText {
+  const de = splitSentences(content.text.de);
+  const ar = splitSentences(content.text.ar);
+  const n = Math.min(de.length, ar.length);
+  return {
+    id: content.id,
+    level: content.level,
+    titleDe: content.title.de,
+    titleAr: content.title.ar,
+    segments: Array.from({ length: n }, (_, i) => ({
+      id: `${content.id}-s${i + 1}`,
+      de: de[i]!,
+      ar: ar[i]!,
+      focusWordIds: [],
+    })),
+  };
+}
+
+/** اختيار نص الخميس: نص أحدث وحدة مكتملة (مفردات متقنة = قراءة سلسة i-1) */
+export function readingPick<T extends { id: string; level: string; unit: number }>(
+  texts: readonly T[],
+  completedIds: readonly string[],
+  unitOf: (lessonId: string) => { level: string; unit: number } | undefined,
+): T | undefined {
+  for (let i = completedIds.length - 1; i >= 0; i--) {
+    const u = unitOf(completedIds[i]!);
+    if (!u) continue;
+    const hit = texts.find((t) => t.level === u.level && t.unit === u.unit);
+    if (hit) return hit;
+  }
+  return undefined;
+}

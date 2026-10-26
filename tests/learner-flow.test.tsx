@@ -27,6 +27,7 @@ const lesson = (id: string): Lesson => ALL_LESSONS.find((l) => l.id === id)!;
 
 beforeEach(() => {
   setAudioPlayer({ play: async () => "none" });
+  window.location.hash = ""; // N-155: عزل وضع المطوّر بين الاختبارات
   container = document.createElement("div");
   document.body.appendChild(container);
   root = createRoot(container);
@@ -175,17 +176,25 @@ describe("الرحلة كاملة — أول تشغيل ← درس كامل ← 
     const store = dexieLearnerStore(openDb(name));
     await boot(store);
 
-    // أول تشغيل: الترحيب ← الاسم ← بطاقات اليوم الأول ← شاشة أول درس (كانت تُتخطّى) ← اللوحة
+    // أول تشغيل: الترحيب ← الاسم ← الرحلة (تخطٍّ) ← النوافذ (تأجيل) ← بطاقات اليوم الأول ← شاشة أول درس ← اللوحة
     await click(byText("لنبدأ"), "لنبدأ");
     await type(container.querySelector('input[aria-label="اسم المتعلم"]'), "يوسف");
     await click(byText("أنا جاهز"), "أنا جاهز");
-    expect(container.querySelector('[data-screen="ask-name"]')).toBeNull();
+    expect(container.querySelector('[data-screen="journey-name"]')).not.toBeNull(); // N-151: خطوة الرحلة
+    await click(q("journey-next"), "تابع بلا اسم رحلة");
+    expect(container.querySelector('[data-screen="coach-windows"]')).not.toBeNull(); // N-151: خطوة النوافذ
+    await click(q("windows-defer"), "تأجيل النوافذ");
     while (byText("التالية")) await click(byText("التالية"), "التالية");
     await click(byText("إلى أول درس"), "إلى أول درس");
     expect(container.querySelector('[data-screen="first-lesson"]')).not.toBeNull();
     await click(q("first-lesson-start"), "إلى حصة اليوم");
     expect(q("current-lesson")!.getAttribute("data-lesson-id")).toBe("a1-u1-d1");
     await waitFor(async () => (await store.load())?.profile.name === "يوسف", "حفظ الاسم");
+    // N-148 (D252): عبارة اليوم في تبويب المدرب (§2.10 · N-155) — تظهر مع وصول الحزمة
+    await click(q("tab-coach"), "تبويب المدرب");
+    await waitFor(() => !!q("coach-phrase"), "عبارة اليوم على القائمة");
+    expect(q("coach-phrase")!.textContent).toContain("Heute:");
+    await click(q("tab-today"), "عودة لليوم");
 
     await startSession();
     const l = await throughStations("a1-u1-d1");
@@ -213,8 +222,11 @@ describe("الرحلة كاملة — أول تشغيل ← درس كامل ← 
     await boot(dexieLearnerStore(openDb(name)));
     expect(byText("لنبدأ")).toBeNull();
     expect(q("current-lesson")!.getAttribute("data-lesson-id")).toBe(next);
-    // القائمة الكاملة في لوحة النظام (تبويب المسار — N-149): تُفتح وتُفحص حالات الدروس
-    await click(q("open-system-lab"), "لوحة النظام");
+    // القائمة الكاملة في لوحة النظام (تبويب المسار — N-149 · خلف #labs منذ N-155): تُفتح وتُفحص حالات الدروس
+    await act(async () => {
+      window.location.hash = "#labs";
+      window.dispatchEvent(new Event("hashchange"));
+    });
     await waitFor(() => !!q("stab-path"), "تبويبات اللوحة");
     await click(q("stab-path"), "تبويب المسار");
     expect(container.querySelector('[data-lesson-id="a1-u1-d1"][data-status="completed"]')).not.toBeNull();

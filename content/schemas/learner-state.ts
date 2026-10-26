@@ -44,6 +44,8 @@ export const SessionLog = z.object({
   srsDueRemaining: z.number().nonnegative().default(0),
   listeningMinutes: z.number().nonnegative().default(0),
   shadowingMinutes: z.number().nonnegative().default(0),
+  /** D281: دقائق القراءة الحرة (نص الخميس — ب-19) */
+  readingMinutes: z.number().nonnegative().default(0),
   /** سطر التأمل (Zimmerman — ب‑12) */
   reflection: z.object({ learned: z.string().optional(), tomorrow: z.string().optional() }).optional(),
 });
@@ -74,8 +76,16 @@ export const GateResult = z.object({
 });
 export type GateResult = z.infer<typeof GateResult>;
 
+/** N-151 (D251): نوافذ المدرب — مرآة COACH_WINDOWS (coach-engine)؛ المحتوى لا يستورد من src فيُعاد التعريف هنا والاختبار يثبّت التطابق */
+export const CoachWindow = z.enum(["midday", "afternoon", "evening"]);
+export type CoachWindow = z.infer<typeof CoachWindow>;
+
 export const LearnerProfile = SchemaVersioned.extend({
   name: z.string().min(1),
+  /** N-151 (D251): اسم الرحلة الاختياري (§2.11 — يظهر أعلى الشاشة طوال الرحلة) */
+  journeyName: z.string().default(""),
+  /** N-151 (D251): نوافذ المدرب المختارة (§2.11 — 2 على الأقل، الافتراضي الثلاث) */
+  coachWindows: z.array(CoachWindow).default(["midday", "afternoon", "evening"]),
   createdAt: z.string(),
   level: Level,
   /** الطقوس المكتملة (الوحدة صفر — Just-In-Time) */

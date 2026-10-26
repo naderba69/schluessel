@@ -2,6 +2,7 @@
 // المصادر: قياس مهاري معياري (CEFR — أشرطة مهارات) · منحنى النسيان (Ebbinghaus: R = e^−t/S)
 // القاعدة الحديدية: **الأرقام من بياناتك الحقيقية فقط** — لا نسبة بلا ممارسة، لا تقدير من العدم.
 import { GATE_INTERVAL_WEEKS, isGateWeek } from "./gate-engine.js";
+import { computeMastery, type Level, type SrsCardState } from "../../content/schemas/index.js";
 
 export type Skill = "hoeren" | "lesen" | "schreiben" | "sprechen";
 
@@ -94,6 +95,8 @@ export type ProgressMap = {
   gateWeek: boolean;
   nextGateWeek: number;
   pathComplete: boolean;
+  /** D271: إتقان M لكل مستوى له بطاقات — اختياري (البناة القدامى بلا SRS) */
+  mastery?: LevelMastery[];
 };
 
 const dayMs = (isoDay: string) => Date.parse(`${isoDay}T00:00:00Z`);
@@ -106,6 +109,9 @@ export function buildProgressMap(opts: {
   currentId: string | null;
   createdAtDay: string;
   todayDay: string;
+  /** D271: معهما يُحسب إتقان M — بدونهما لا حقل إتقان (لا أرقام من العدم) */
+  srsCards?: readonly SrsCardState[];
+  cardLevelOf?: (cardId: string) => Level | undefined;
 }): ProgressMap {
   const done = new Set(opts.completedIds);
   const open = new Set(opts.availableIds);
@@ -127,7 +133,23 @@ export function buildProgressMap(opts: {
   const weekNumber = Math.max(1, Math.floor((dayMs(opts.todayDay) - dayMs(opts.createdAtDay)) / 604800000) + 1);
   const gateWeek = isGateWeek(weekNumber);
   const nextGateWeek = Math.ceil(weekNumber / GATE_INTERVAL_WEEKS) * GATE_INTERVAL_WEEKS;
-  return { levels, unit, unitDays, weekNumber, gateWeek, nextGateWeek, pathComplete: opts.currentId === null };
+  const mastery =
+    opts.srsCards && opts.cardLevelOf
+      ? MAP_LEVELS.map((level) => {
+          const m = masteryForLevel(opts.srsCards!, level, opts.cardLevelOf!);
+          return { level, ratio: m.ratio, counted: m.counted, total: m.total, lineAr: masteryLineAr(level, m) };
+        }).filter((e) => e.total > 0)
+      : undefined;
+  return {
+    levels,
+    unit,
+    unitDays,
+    weekNumber,
+    gateWeek,
+    nextGateWeek,
+    pathComplete: opts.currentId === null,
+    ...(mastery ? { mastery } : {}),
+  };
 }
 
 /** شريط مستوى بعرض ثابت (▓ للمكتمل و░ للباقي) — null للمستوى غير المنشور */
@@ -136,3 +158,28 @@ export function levelBar(level: MapLevel): string | null {
   const fill = Math.round((level.done / level.total) * MAP_BAR_WIDTH);
   return "▓".repeat(fill) + "░".repeat(MAP_BAR_WIDTH - fill);
 }
+
+/* ══════════ D271 — الإتقان M من البيانات الحقيقية (D18) ══════════ */
+/** M = نسبة بطاقات المستوى ذات S ≥ العتبة (21 يوماً A1 / 30 فوقه) — البطاقة مجهولة المستوى تُستبعد (لا تُخترع لها نسبة) */
+export function masteryForLevel(
+  srsCards: readonly SrsCardState[],
+  level: Level,
+  cardLevelOf: (cardId: string) => Level | undefined,
+): { ratio: number; thresholdDays: number; counted: number; total: number } {
+  return computeMastery(
+    srsCards.filter((c) => cardLevelOf(c.cardId) === level),
+    level,
+  );
+}
+
+/** سطر العرض العربي — هادئ (D23): بلا بيانات = دعوة للبدء لا صفر مخيف */
+export function masteryLineAr(
+  level: Level,
+  m: { ratio: number; thresholdDays: number; counted: number; total: number },
+): string {
+  if (m.total === 0) return `لا بطاقات مراجعة في ${level} بعد — تبدأ مع أول درس تنجح فيه.`;
+  const pct = Math.round(m.ratio * 100);
+  return `إتقان ${level}: ${pct}% (${m.counted} من ${m.total} بطاقة ثابتة ≥${m.thresholdDays} يوماً)`;
+}
+
+export type LevelMastery = { level: Level; ratio: number; counted: number; total: number; lineAr: string };
