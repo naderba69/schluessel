@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 304 (2026-10-26) — D349: a2-u5-d4 «يتواصل مع أصدقاء» — تعرُّض musste + musste للمغلقة (المرحلة د · خطة D345)
+- **الخلاصة:** الدرس 118 (A2-U5-D4 — يتواصل مع أصدقاء): 13 اسماً للتواصل (SMS/Geschirr/Topf + Reifen/Motor/Baustelle + Gewitter/Mütze/Sekunde + Nachmittag/Vormittag/Note + Stundenplan) في رسائل لصديق (Ich schicke eine SMS! Ich helfe gern!) + حكاية الواجب (Ich musste helfen!) عبر ترسانة الماضي القصير. 3 تصحيحات نطق (Sekunde-تقصير-e!/Nachmittag-تطويل-a-الأولى!/Stundenplan-النبر-أولاً!) + إعادة توليد 3. الروابط الثلاثة متحققة حياً قبل الدفع (SMS_Kurzmitteilung: مؤنث-أو-محايد/جمعها-كمفردها-والعامية-SMSen! + Topf: مذكر/Töpfe! + Stundenplan: مذكر/Stundenpläne!).
+- **التالي:** d5 (اللعب الجماعي + تمييز الماضي!).
+
 ## الدفعة 303 (2026-10-26) — D348: a2-u5-d3 «يروي قصة مضحكة» — تعرُّض hätte/gern + إعادة الإنشاء 4 و5 (المرحلة د · خطة D345)
 - **الخلاصة:** الدرس 117 (A2-U5-D3 — يروي قصة مضحكة): 13 كلمة للقصة (Klavier/Sänger + reden/chatten/online + spannend/witzig/komisch/interessant + Tennis/Training/Mannschaft + Paar) في قصة مضحكة من 7 جمل (فريق + مغنٍّ + بيانو + مفاجأة!) + تمنٍّ مهذب (Ich hätte gern ein Klavier!). تصحيحا نطق (chatten: [ʃ] ← [tʃ] الإنجليزية! + Training: [ɛ] ← [eː] الطويلة!) + إعادة توليد 2. الروابط الثلاثة متحققة حياً قبل الدفع (Saenger: مذكر وجمعه كمفرده! + Paar: محايد/Paare! + Mannschaft: مؤنث/Mannschaften!).
 - **التالي:** d4 (يتواصل مع أصدقاء + musste!).

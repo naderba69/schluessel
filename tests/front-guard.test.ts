@@ -40,6 +40,9 @@ describe("N-112 — الأفعال القصيرة والمساعدة", () => {
   it("hattest/hattet/warst/wart مغلقة كأخواتها war/hatte", () => {
     for (const f of ["hattest", "hattet", "warst", "wart", "hatten", "waren"]) expect(CLOSED.has(f), f).toBe(true);
   });
+  it("D349: musste/musstest/musstet/mussten مغلقة (تعرُّض Präteritum-d4 كأخواتها war/hatte)", () => {
+    for (const f of ["musste", "musstest", "musstet", "mussten"]) expect(CLOSED.has(f), f).toBe(true);
+  });
   it("D188: لا قائمة ضمنية في الكود — gut بطاقة في u1-d1 · تصريف jeder معلن في بطاقته (forms.declined) · جذع tun في forms.stem", () => {
     expect(words.find((x) => x.id === "gut")?.usedInLessons).toEqual(["a1-u1-d1"]);
     expect(w("jeder").forms?.declined).toEqual(["jede", "jedes", "jeden", "jedem"]);

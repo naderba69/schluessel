@@ -13,7 +13,7 @@ export const CLOSED: ReadonlySet<string> = new Set(`der die das den dem des ein 
 ich du er sie es wir ihr mich dich ihn uns euch mir dir ihm ihnen sich man mein meine meinen meinem meiner dein deine deinen deinem
 sein seine seinen seinem ihre ihren ihrem unser unsere euer eure bin bist ist sind seid war warst wart waren habe hast hat haben habt hatte hattest hattet hatten
 werde wirst wird werden kann kannst können könnt muss musst müssen will willst wollen möchte möchtest möchten darf darfst dürfen
-soll sollst sollen in im ins an am ans auf aus bei mit nach von vom zu zum zur für um ohne gegen durch bis seit über unter vor
+soll sollst sollen musste musstest musstet mussten in im ins an am ans auf aus bei mit nach von vom zu zum zur für um ohne gegen durch bis seit über unter vor
 hinter neben zwischen beim und oder aber denn sondern weil dass wenn als ob nicht auch noch schon nur sehr ja nein doch mal so wie was
 wer wo wann warum welche welcher welches null eins zwei drei vier fünf sechs sieben acht neun zehn elf zwölf
 dreizehn vierzehn fünfzehn sechzehn siebzehn achtzehn neunzehn zwanzig hundert es gibt`.split(/\s+/));
