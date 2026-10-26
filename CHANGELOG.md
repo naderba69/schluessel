@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-26 — الدفعة 288: D333 — a2-u3-d4 «نصيحة صحية» — كتابة النصيحة (المرحلة د · خطة D326)
+الدرس 106 (A2-U3-D4 — نصيحة صحية): 13 كلمة لكتابة النصيحة (erstens…viertens · markieren · notieren · kontrollieren · diskutieren · genug · unbedingt · egal · Mittel · Menge) — والمحور: نقلُ sollen من U2 (Du sollst…!) في نصيحة من أربع خطوات تُكتب ثم تُقرأ. 13 مقطعاً صوتياً بلا أي تصحيح (أول اكتساح نظيف)؛ الرابطان متحققان حياً قبل الدفع (Mittel_Arznei + Menge — بلا N مفتوحة!).
+- **البوابة:** vitest ✓ 1610/1610 (129 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1559/0/0 · build ✓ 3.38s · docs-sync --check ✓ 148 قراراً مهيكلاً · آخرها D333 · الدفعة 288 · الموجّه 4.90 · notes check ✓ 0/21/172 (193) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 145 · duden-links ✓ تُخطّي (311 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2964
+
 ## 2026-10-25 — الدفعة 287: D332 — إصلاح CI — رابط Orange الصحيح (تفريق duden: Frucht ≠ Farbe!) + إغلاق N-190
 CI (بشبكة حية) رفض D331: رابط .../Orange مكسور (404) — duden يفرّق المتجانسات (الفاكهة المؤنثة ≠ اللون المحايد) فاستُبدل بـOrange_Frucht متحققاً حياً (مؤنث · die Orangen · [oˈraŋʒə] — تطابق مع #145!). وCI ذاته أكّد سلامة Sprechstunde/Krankenschwester — فأُغلقت N-190 (تحقق حيّ كامل للثلاثة).
 - **البوابة:** vitest ✓ 1609/1609 (129 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1545/0/0 · build ✓ 2.44s · docs-sync --check ✓ 147 قراراً مهيكلاً · آخرها D332 · الدفعة 287 · الموجّه 4.89 · notes check ✓ 0/21/171 (192) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 145 · duden-links ✓ تُخطّي (309 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2951
