@@ -1,0 +1,417 @@
+{
+  "audioManifestRefs": [
+    "word-drinnen",
+    "word-drueben"
+  ],
+  "canDoDaily": [
+    "يكتب تقرير أسبوع المدينة في 8 جمل (مكان + اتجاه + رأي + احتفال)",
+    "يميز Wo+الداتيف من Wohin+الأكوزاتيف (im Zoo/ins Kino!) ويعلل (سكون أم حركة!)"
+  ],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "drinnen",
+      "drueben"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 4 «Große und kleine Gefühle» — تباعد ثانٍ موثق: الموضوع من §7 (المدينة والمواصلات) والفصل K4 للدعم (D337)"
+  },
+  "day": 6,
+  "einstieg": {
+    "guidedRetrieval": [
+      "من d1–d3: Wo؟ + داتيف (im Zoo!) وWohin؟ + أكوزاتيف (ins Kino!) — واليوم التوليف: Drinnen/Drüben!",
+      "من d4–d5: Ich bin dafür + Übermorgen ist das Fest — واليوم: تقرير الأسبوع كاملاً!"
+    ],
+    "pretestItems": [
+      {
+        "answer": "Ich bin im Zoo.",
+        "choices": [
+          "Ich bin im Zoo.",
+          "Ich bin in den Zoo.",
+          "Ich bin in Zoo."
+        ],
+        "prompt": {
+          "ar": "«أنا في حديقة الحيوانات» — wo أم wohin؟"
+        },
+        "revealNextSession": true
+      },
+      {
+        "answer": "Ich bin dafür.",
+        "choices": [
+          "Ich bin dafür.",
+          "Ich bin für es.",
+          "Ich dafür bin."
+        ],
+        "prompt": {
+          "ar": "«أنا موافق» — كيف تقول؟"
+        },
+        "revealNextSession": true
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/drinnen",
+      "https://www.duden.de/rechtschreibung/drueben"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": []
+  },
+  "id": "a2-u4-d6",
+  "imageManifestRefs": [],
+  "kind": "content",
+  "level": "A2",
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-wechselpraep",
+      "ars-da-komposita"
+    ],
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order",
+      "needs-ein"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "drinnen",
+      "drueben"
+    ]
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "a": "Drinnen",
+            "q": "«في الداخل»؟"
+          },
+          {
+            "a": "Drüben",
+            "q": "«هناك»؟"
+          },
+          {
+            "a": "Drinnen",
+            "q": "___ ist die Party. (drinnen)"
+          },
+          {
+            "a": "Drüben",
+            "q": "___ ist das Kino. (drüben)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "Rundgang",
+            "q": "Der ___ ist gut. (Rundgang)"
+          },
+          {
+            "a": "Schloss",
+            "q": "Das ___ ist neu. (Schloss)"
+          },
+          {
+            "a": "dafür",
+            "q": "Ich bin ___. (dafür)"
+          },
+          {
+            "a": "die Party",
+            "q": "Drinnen ist ___. (Party)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "Bibliothek",
+            "q": "Die ___ ist groß. (Bibliothek)"
+          },
+          {
+            "a": "fantastisch",
+            "q": "Das Konzert ist ___. (fantastisch)"
+          },
+          {
+            "a": "das Fest",
+            "q": "Übermorgen ist ___. (Fest)"
+          },
+          {
+            "a": "schenke",
+            "q": "Ich ___ dir etwas. (schenken)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "ar": "تعرض أسبوعك",
+        "de": "Deine Woche zeigen"
+      },
+      "situation": {
+        "ar": "صديق يسأل: كيف كان أسبوعك في المدينة؟",
+        "de": "Ein Freund fragt: Wie war deine Woche in der Stadt?"
+      },
+      "successCriteria": [
+        "يذكر مكاناً واتجاهاً (im Zoo/ins Kino!)",
+        "يعبّر عن رأي ويدعو (dafür/schenke dir!)",
+        "يختم بالكلمتين (drinnen/drüben!)"
+      ]
+    },
+    "stations": [
+      {
+        "explanationRequired": true,
+        "hints": [
+          "المنفصل: الجذع ثانياً والجزء في الآخر (fahren...zurück!)",
+          "zuhören + داتيف (der Musik!)",
+          "schenken + dir (d5!) · verabredet + sein (d5!)"
+        ],
+        "interleavedWith": [
+          "zug",
+          "musik",
+          "wohnung"
+        ],
+        "items": [
+          {
+            "a": "fahren",
+            "q": "نعود بالقطار (d2): Wir ___ mit dem Zug zurück. (zurückfahren)",
+            "why": "Wir fahren mit dem Zug zurück! (نعود بالقطار!) — fahren...zurück (منفصل!)."
+          },
+          {
+            "a": "höre",
+            "q": "أستمع للموسيقى (d3): Ich ___ der Musik zu. (zuhören)",
+            "why": "Ich höre der Musik zu! — zuhören + داتيف (der Musik!) + zu في الآخر!"
+          },
+          {
+            "a": "besteht",
+            "q": "هو يُصرّ على ذلك (d4): Er ___ darauf. (bestehen)",
+            "why": "Er besteht darauf! (d4!) — الفعل مع da!"
+          },
+          {
+            "a": "schenke",
+            "q": "أُهديك شيئاً (d5): Ich ___ dir etwas. (schenken)",
+            "why": "Ich schenke dir etwas! (أُهديك شيئاً! d5!) — Ich ← schenke + dir!"
+          },
+          {
+            "a": "bist",
+            "q": "أنت مرتبط بموعد (d5): Du ___ verabredet. (sein)",
+            "why": "Du bist verabredet! (أنت مرتبط! d5!) — du ← bist!"
+          },
+          {
+            "a": "ziehen",
+            "q": "ننتقل للشقة الجديدة (d2): Wir ___ in die Wohnung ein. (einziehen)",
+            "why": "Wir ziehen in die Wohnung ein! — ziehen...ein + in+الأكوزاتيف (wohin! d2!)."
+          }
+        ],
+        "type": "verb-bank"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الجديد أولاً والفعل ثانياً (Drinnen ist...!)",
+          "Wo؟ + داتيف (in der Stadt!)",
+          "Schloss محايد (das!) · Rundgang مذكّر (der!)"
+        ],
+        "interleavedWith": [
+          "stadt",
+          "strasse"
+        ],
+        "items": [
+          {
+            "a": "Drinnen",
+            "q": "الحفلة في الداخل: ___ ist die Party. (drinnen)",
+            "why": "Drinnen ist die Party! — الجديد أولاً ← الفعل ثانياً!"
+          },
+          {
+            "a": "Drüben",
+            "q": "السينما هناك: ___ ist das Kino. (drüben)",
+            "why": "Drüben ist das Kino! — Drüben = في الجهة المقابلة!"
+          },
+          {
+            "a": "Bibliothek",
+            "q": "المكتبة في المدينة كبيرة (d1): Die ___ in der Stadt ist groß. (Bibliothek)",
+            "why": "Die Bibliothek in der Stadt ist groß! — in+الداتيف (Wo؟ d1!)."
+          },
+          {
+            "a": "Schloss",
+            "q": "القصر جديد (d2): Das ___ ist neu. (Schloss)",
+            "why": "Das Schloss ist neu! — Schloss محايد (das!)."
+          },
+          {
+            "a": "Rundgang",
+            "q": "الجولة في الشارع طيّبة (d3): Der ___ in der Straße ist gut. (Rundgang)",
+            "why": "Der Rundgang in der Straße ist gut! — Rundgang مذكّر (der!)."
+          },
+          {
+            "a": "fantastisch",
+            "q": "الحفلة رائعة (d4): Das Konzert ist ___. (fantastisch)",
+            "why": "Das Konzert ist fantastisch! (d4!) — الصفة بلا نهاية."
+          },
+          {
+            "a": "Gitarre",
+            "q": "النجم يعزف (d5): Der Star spielt ___. (Gitarre)",
+            "why": "Der Star spielt Gitarre! (d5!) — spielt + آلة = يعزف!"
+          },
+          {
+            "a": "das Fest",
+            "q": "بعد غد الاحتفال (d5): Übermorgen ist ___. (Fest)",
+            "why": "Übermorgen ist das Fest! (d5!) — الزمن أولاً!"
+          }
+        ],
+        "type": "gap-fill"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الخطأ كلمة واحدة — الباقي صحيح",
+          "Wo؟ + داتيف (im!) · Wohin؟ + أكوزاتيف (ins!)",
+          "dafür/dabei/sein/dir — مراجعة d4–d5!"
+        ],
+        "interleavedWith": [
+          "kino"
+        ],
+        "items": [
+          {
+            "a": "Ich bin im Zoo.",
+            "q": "Ich bin in den Zoo.",
+            "why": "Wo؟ + داتيف! im Zoo لا in den (d1!)."
+          },
+          {
+            "a": "Ich gehe ins Kino.",
+            "q": "Ich gehe im Kino.",
+            "why": "Wohin؟ + أكوزاتيف! ins Kino لا im (d2!)."
+          },
+          {
+            "a": "Ich bin dafür.",
+            "q": "Ich bin für es.",
+            "why": "لا es بعد الحرف! dafür (d4!)."
+          },
+          {
+            "a": "Übermorgen ist das Fest.",
+            "q": "Übermorgen das Fest ist.",
+            "why": "الفعل ثانياً (V2! d5!)."
+          },
+          {
+            "a": "Ich bin verabredet.",
+            "q": "Ich habe verabredet.",
+            "why": "verabredet + sein لا haben (d5!)."
+          },
+          {
+            "a": "Ich schenke dir etwas.",
+            "q": "Ich schenke dich etwas.",
+            "why": "المُهدى إليه dir لا dich (d5!)."
+          }
+        ],
+        "type": "error-hunt"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "التقرير: مكان + اتجاه + طريق + رأي + احتفال + كلمتان",
+          "الدعوة: أربع خطوات (Erstens…Viertens!)"
+        ],
+        "interleavedWith": [
+          "party",
+          "kino",
+          "gut"
+        ],
+        "items": [
+          {
+            "a": "Im Zoo ist der Flohmarkt. Ich fahre in die Stadt. Wir gehen zu Fuß. Ich bin dafür. Übermorgen ist das Fest. Drinnen ist die Party. Drüben ist das Kino. Bis dann!",
+            "q": "اكتب تقرير أسبوع المدينة (سجّل): 8 جمل — مكان (d1!) + اتجاه (d2!) + طريق (d3!) + رأي (d4!) + احتفال (d5!) + كلمتان (drinnen/drüben!)",
+            "why": "قارن تقريرك: مكان (im Zoo!) + اتجاه (in die Stadt!) + طريق (zu Fuß!) + رأي (dafür!) + احتفال (Fest!) + drinnen/drüben + Bis dann!"
+          },
+          {
+            "a": "Erstens kommst du ins Zimmer. Zweitens ist die Party drinnen. Drittens ist das Quiz neu. Viertens ist die Torte gut.",
+            "q": "ادعُ صديقك للحفلة (سجّل): أربع خطوات (Erstens…Viertens!) — (kommen/drinnen/Quiz/Torte!)",
+            "why": "قارن دعوتك: أربع خطوات — الحضور (kommst!) + المكان (drinnen!) + البرنامج (Quiz!) + الحلو (Torte!)."
+          }
+        ],
+        "type": "speaking"
+      }
+    ]
+  },
+  "unit": 4,
+  "usedArsenalIds": [
+    "ars-wechselpraep",
+    "ars-da-komposita"
+  ],
+  "warmup": {
+    "cardIds": [
+      "stadt",
+      "kino",
+      "konzert"
+    ]
+  },
+  "ziel": {
+    "ar": "تكتب تقرير أسبوع المدينة: 8 جمل من الأيام الخمسة — مكان + اتجاه + رأي + احتفال",
+    "de": "Du kannst deine Stadt-Woche zeigen: Im Zoo ist der Flohmarkt."
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "drinnen",
+      "drueben"
+    ],
+    "summary": {
+      "ar": "أسبوعي: السوق في حديقة الحيوانات. أسافر للمدينة. أنا موافق. بعد غد الاحتفال. الحفلة في الداخل والسينما هناك!",
+      "de": "Meine Woche: Im Zoo ist der Flohmarkt. Ich bin dafür. Übermorgen ist das Fest. Drinnen ist die Party. Drüben ist das Kino!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "أكوزاتيف مع Wo",
+          "de": "~~Ich bin in den Zoo.~~"
+        },
+        "correct": {
+          "ar": "أنا في حديقة الحيوانات.",
+          "de": "Ich bin im Zoo."
+        },
+        "exercise": {
+          "a": "im",
+          "q": "Ich bin ___ Zoo."
+        },
+        "whyArabicSpeakerFails": "العربية (في الحديقة) حرف واحد بلا حالة، فيُخلط in/den/im — بينما Wo؟ + سكون = داتيف: im Zoo (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "es بعد الحرف",
+          "de": "~~Ich bin für es.~~"
+        },
+        "correct": {
+          "ar": "أنا موافق.",
+          "de": "Ich bin dafür."
+        },
+        "exercise": {
+          "a": "dafür",
+          "q": "Ich bin ___."
+        },
+        "whyArabicSpeakerFails": "العربية (موافق عليه) ضمير بعد الحرف، فيُقال für es — بينما الشيء: da أولاً ثم الحرف: dafür (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "الفعل ثالثاً بعد الظرف",
+          "de": "~~Drinnen die Party ist.~~"
+        },
+        "correct": {
+          "ar": "الحفلة في الداخل.",
+          "de": "Drinnen ist die Party."
+        },
+        "exercise": {
+          "a": "ist",
+          "q": "Drinnen ___ die Party."
+        },
+        "whyArabicSpeakerFails": "العربية (الحفلة في الداخل) الفاعل أولاً، فيُؤخَّر الفعل — بينما الألمانية V2: الفعل ثانياً دائماً (خريطة التداخل 10‑ي)"
+      }
+    ]
+  }
+}

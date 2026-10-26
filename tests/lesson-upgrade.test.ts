@@ -3201,7 +3201,7 @@ describe("D115 — أدوات القياس", () => {
     // قاعدتا اليوم: ars-wechselpraep (الجديدة — تشاركها u9-d6) + ars-imperativ-sie (من D163)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-wechselpraep", "ars-imperativ-sie"]);
     const rule = rules.get("ars-wechselpraep")!;
-    expect(rule.usedInLessons).toEqual(["a1-u9-d4", "a1-u9-d6", "a1-u12-d1", "a2-u4-d1", "a2-u4-d2", "a2-u4-d3"]); // D340: u4-d3 تنقلها (حوار الطريق) // D339: u4-d2 تنقلها (Wohin-Akk) // D338: u4-d1 تنقلها (Wo-Dativ) // D176: u12-d1 يراجعها بـim Hotel/ins Ausland
+    expect(rule.usedInLessons).toEqual(["a1-u9-d4", "a1-u9-d6", "a1-u12-d1", "a2-u4-d1", "a2-u4-d2", "a2-u4-d3", "a2-u4-d6"]); // D344: u4-d6 يولّفها (تقرير الأسبوع: im Zoo/ins Kino!) // D340: u4-d3 تنقلها (حوار الطريق) // D339: u4-d2 تنقلها (Wohin-Akk) // D338: u4-d1 تنقلها (Wo-Dativ) // D176: u12-d1 يراجعها بـim Hotel/ins Ausland
     expect(rule.payload.ruleDe).toBe("Wo? — vor der Kirche · im Tunnel · am Ufer · auf der linken Seite · hinter dem Haus · in der Nähe · an der Ecke — Wohin? — vor die Kirche · in den Tunnel · ans Ufer · auf die Brücke · über die Brücke · auf den Parkplatz · in die Stadt — gegen: gegen die Wand · gegen den Tisch · gegen zehn Uhr — hundert Meter · zweihundert Meter geradeaus — Die Apotheke ist zu. · Die Bank ist auf.");
     // أربع خطوات: التسعة باسمها · Wo? الداتيف · Wohin? الأكوزاتيف (vor جديد · ans) · gegen أكوزاتيف دائماً + Meter + auf/zu sein
     for (const x of ["Wechselpräpositionen", "an · in · auf · vor (جديد: أمام) · hinter · über · unter · neben · zwischen", "Wo? → الداتيف", "Wohin? → الأكوزاتيف", "vor der Kirche", "vor die Kirche", "an das = ans", "gegen (ضد/نحو) + الأكوزاتيف دائماً", "gegen zehn Uhr", "وبعد الرقم بلا نهاية: zweihundert Meter", "auf sein (مفتوح) ≠ zu sein (مغلق)"])
@@ -4231,7 +4231,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-da-komposita — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u6-d6 يشير إليها أيضاً (سابقة ars-wo-wohin)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-da-komposita"]);
     const rule = rules.get("ars-da-komposita")!;
-    expect(rule.usedInLessons).toEqual(["a1-u6-d5", "a1-u6-d6", "a1-u15-d3", "a2-u4-d4"]); // D342: u4-d4 تنقلها (المعنى المجرّد + أسئلة wo) // D202
+    expect(rule.usedInLessons).toEqual(["a1-u6-d5", "a1-u6-d6", "a1-u15-d3", "a2-u4-d4", "a2-u4-d6"]); // D344: u4-d6 يراجعها (dafür في التقرير!) // D342: u4-d4 تنقلها (المعنى المجرّد + أسئلة wo) // D202
     expect(rule.payload.ruleDe).toBe("Da ist der Tisch. Darauf steht eine Vase. · Da ist der Schrank. Darin sind zwei Handtücher. · Da ist die Tür. Dahinter ist das Badezimmer.");
     // «da أول لقاء» كما في الخطة اليومية (والنظام كله مع الأفعال وwo-Komposita في A2 — لا سحب): للمكان · dar- قبل الحركة · لا تتغيّر · الفعل يطابق فاعله · وللوضع أيضاً
     for (const x of ["dar- قبل الحركة وda- قبل الساكن", "الكلمة لا تتغيّر أبداً", "والفعل يطابق الفاعل الذي بعده", "وللوضع (Wohin?) أيضاً"])

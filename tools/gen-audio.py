@@ -1546,6 +1546,8 @@ def build_all() -> None:
     ("word-gitarre", "die Gitarre.", "gitarre", ["a2-u4-d5"]),
     ("word-freiwillig", "freiwillig.", "freiwillig", ["a2-u4-d5"]),
     ("word-bloed", "blöd.", "bloed", ["a2-u4-d5"]),
+    ("word-drinnen", "drinnen.", "drinnen", ["a2-u4-d6"]),
+    ("word-drueben", "drüben.", "drueben", ["a2-u4-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
