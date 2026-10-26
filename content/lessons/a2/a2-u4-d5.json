@@ -1,0 +1,420 @@
+{
+  "audioManifestRefs": [
+    "word-tafel",
+    "word-fest",
+    "word-festival",
+    "word-etwas",
+    "word-schenken",
+    "word-torte",
+    "word-star",
+    "word-verabredet",
+    "word-uebermorgen",
+    "word-quiz",
+    "word-gitarre",
+    "word-freiwillig",
+    "word-bloed"
+  ],
+  "canDoDaily": [
+    "يخطط لاحتفال في حوار من 7 جمل (خبر + سؤال + هدية + وداع)",
+    "يبدأ بالزمن والفعل ثانياً (Übermorgen ist...) ويعلل (الفعل دائماً ثانٍ)"
+  ],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "tafel",
+      "fest",
+      "festival",
+      "etwas",
+      "schenken",
+      "torte",
+      "star",
+      "verabredet",
+      "uebermorgen",
+      "quiz",
+      "gitarre",
+      "freiwillig",
+      "bloed"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 4 «Große und kleine Gefühle» — تباعد ثانٍ موثق: الموضوع من §7 (المدينة والمواصلات) والفصل K4 للدعم (D337)"
+  },
+  "day": 5,
+  "einstieg": {
+    "guidedRetrieval": [
+      "من d4: Ich bin dabei! — واليوم: Ich bin freiwillig dabei. (مشارك تطوعاً!)",
+      "من A1-U9: الزمن أولاً (Heute/Morgen...!) — واليوم: Übermorgen ist das Fest! ومن U8: الداتيف للشخص (schenke dir!)"
+    ],
+    "pretestItems": [
+      {
+        "answer": "Übermorgen ist das Fest.",
+        "choices": [
+          "Übermorgen ist das Fest.",
+          "Übermorgen das Fest ist.",
+          "Ist Übermorgen das Fest."
+        ],
+        "prompt": {
+          "ar": "«بعد غد الاحتفال» — أين الفعل؟"
+        },
+        "revealNextSession": true
+      },
+      {
+        "answer": "Ich bin verabredet.",
+        "choices": [
+          "Ich bin verabredet.",
+          "Ich habe verabredet.",
+          "Ich verabrede."
+        ],
+        "prompt": {
+          "ar": "«أنا مرتبط بموعد» — sein أم haben؟"
+        },
+        "revealNextSession": true
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Quiz",
+      "https://www.duden.de/rechtschreibung/Tafel"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/schenken"
+    ]
+  },
+  "id": "a2-u4-d5",
+  "imageManifestRefs": [],
+  "kind": "content",
+  "level": "A2",
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-tekamolo",
+      "ars-akkusativ-2"
+    ],
+    "riskFlagsShown": [
+      "v2-order",
+      "needs-ein",
+      "needs-ist"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "tafel",
+      "fest",
+      "festival",
+      "etwas",
+      "schenken",
+      "torte",
+      "star",
+      "verabredet",
+      "uebermorgen",
+      "quiz",
+      "gitarre",
+      "freiwillig",
+      "bloed"
+    ]
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "a": "die Tafel → die Tafeln",
+            "q": "«لوحة» — الأداة والجمع؟"
+          },
+          {
+            "a": "ist",
+            "q": "Übermorgen ___ das Fest."
+          },
+          {
+            "a": "schenke",
+            "q": "Ich ___ dir etwas. (schenken)"
+          },
+          {
+            "a": "Gitarre",
+            "q": "Der Star spielt ___. (Gitarre)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "das Fest → die Feste",
+            "q": "«احتفال/عيد» — الأداة والجمع؟"
+          },
+          {
+            "a": "bin",
+            "q": "Ich ___ verabredet. (sein)"
+          },
+          {
+            "a": "gut",
+            "q": "Das Quiz ist ___. (gut)"
+          },
+          {
+            "a": "etwas",
+            "q": "Ich habe ___ für dich. (etwas)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "das Quiz → die Quiz",
+            "q": "«مسابقة» — الأداة والجمع؟"
+          },
+          {
+            "a": "bist",
+            "q": "Du ___ verabredet. (sein)"
+          },
+          {
+            "a": "gut",
+            "q": "Die Torte ist ___. (gut)"
+          },
+          {
+            "a": "blöd",
+            "q": "Das ist ___. (blöd)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "ar": "تخطط لاحتفال",
+        "de": "Ein Fest planen"
+      },
+      "situation": {
+        "ar": "صديق يقترح احتفالاً بعد غد",
+        "de": "Ein Freund plant ein Fest für übermorgen"
+      },
+      "successCriteria": [
+        "يخبر بالموعد والفعل ثانياً (Übermorgen ist...!)",
+        "يدعو ويُهدي (verabredet/schenke dir!)",
+        "يختم ببرنامج ووداع (Quiz/Torte/Bis dann!)"
+      ]
+    },
+    "stations": [
+      {
+        "explanationRequired": true,
+        "hints": [
+          "schenken + dir = أُهديك (الداتيف للشخص!)",
+          "verabredet مع sein دائماً (bin/bist!)",
+          "Was schenke ich؟ — etwas! (Was للشيء!)"
+        ],
+        "interleavedWith": [
+          "geburtstag",
+          "gern"
+        ],
+        "items": [
+          {
+            "a": "schenke",
+            "q": "أُهديك شيئاً لعيد الميلاد: Ich ___ dir etwas zum Geburtstag. (schenken)",
+            "why": "Ich schenke dir etwas! (أُهديك شيئاً!) — Ich ← schenke + dir (للمُهدى إليه!) + etwas (Was؟ الشيء!)."
+          },
+          {
+            "a": "schenkt",
+            "q": "هو يُهديك شيئاً للحفلة: Er ___ dir etwas zum Fest. (schenken)",
+            "why": "Er schenkt dir etwas! (هو يُهديك!) — er ← schenkt!"
+          },
+          {
+            "a": "schenken",
+            "q": "نحن نُهديك شيئاً بسرور: Wir ___ dir gern etwas. (schenken)",
+            "why": "Wir schenken dir gern etwas! (نحن نُهديك!) — wir ← المصدر نفسه!"
+          },
+          {
+            "a": "bin",
+            "q": "أنا مرتبط بموعد: Ich ___ verabredet. (sein)",
+            "why": "Ich bin verabredet! (أنا مرتبط بموعد!) — sein لا haben!"
+          },
+          {
+            "a": "bist",
+            "q": "أنت مرتبط بموعد: Du ___ verabredet. (sein)",
+            "why": "Du bist verabredet! (أنت مرتبط بموعد!) — du ← bist!"
+          }
+        ],
+        "type": "verb-bank"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الزمن أولاً ← الفعل ثانياً (Übermorgen ist...!)",
+          "spielt = يعزف/يلعب (حسب السياق!)",
+          "freiwillig = اختياري (ضدّ إجباري!)"
+        ],
+        "interleavedWith": [
+          "spielen",
+          "gut"
+        ],
+        "items": [
+          {
+            "a": "das Fest",
+            "q": "بعد غد الاحتفال: Übermorgen ist ___. (Fest)",
+            "why": "Übermorgen ist das Fest! (بعد غد الاحتفال!) — الزمن أولاً ← الفعل ثانياً!"
+          },
+          {
+            "a": "blöd",
+            "q": "المهرجان سيّئ. إنه ليس جيّداً: Das Festival ist ___. Es ist nicht gut. (blöd)",
+            "why": "Das Festival ist blöd! (المهرجان سيّئ!) — blöd ≈ nicht gut."
+          },
+          {
+            "a": "Gitarre",
+            "q": "النجم يعزف على الجيتار: Der Star spielt ___. (Gitarre)",
+            "why": "Der Star spielt Gitarre! (النجم يعزف!) — spielt + آلة = يعزف!"
+          },
+          {
+            "a": "freiwillig",
+            "q": "المشاركة في المسابقة اختيارية: Das Quiz ist ___. (freiwillig)",
+            "why": "Das Quiz ist freiwillig! — المشاركة اختيارية!"
+          }
+        ],
+        "type": "gap-fill"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الخطأ كلمة واحدة — الباقي صحيح",
+          "verabredet مع sein (ضدّ العربية «عندي»!)",
+          "الجنس بالألمانية لا بالعربية (Quiz محايد!)"
+        ],
+        "interleavedWith": [
+          "gut"
+        ],
+        "items": [
+          {
+            "a": "Übermorgen ist das Fest.",
+            "q": "Übermorgen das Fest ist.",
+            "why": "الزمن أولاً ← الفعل ثانياً (V2)! ist بعد Übermorgen مباشرةً."
+          },
+          {
+            "a": "Ich bin verabredet.",
+            "q": "Ich habe verabredet.",
+            "why": "verabredet حالة مع sein دائماً! لا haben (ضدّ «عندي موعد»!)."
+          },
+          {
+            "a": "Ich schenke dir etwas.",
+            "q": "Ich schenke dich etwas.",
+            "why": "المُهدى إليه داتيف: dir لا dich! (ضمير واحد بالعربية «أُهديك»!)."
+          },
+          {
+            "a": "Das Quiz ist gut.",
+            "q": "Die Quiz ist gut.",
+            "why": "Quiz محايد (das!) رغم «المسابقة» المؤنثة — die وحدها هي الخطأ!"
+          }
+        ],
+        "type": "error-hunt"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "ابدأ بالخبر وأنهِ بالوداع",
+          "الهدية: Ich schenke dir etwas!"
+        ],
+        "interleavedWith": [
+          "gut"
+        ],
+        "items": [
+          {
+            "a": "Übermorgen ist das Fest. Bist du verabredet? Nein, ich bin freiwillig dabei. Ich schenke dir etwas. Das Quiz ist neu. Die Torte ist gut. Bis dann!",
+            "q": "مثّل حوار التخطيط (سجّل): تخطط مع صديق لاحتفال بعد غد — 7 جمل (خبر + سؤال + ردّ + هدية + برنامج + حلو + وداع)",
+            "why": "قارن تسجيلك: خبر (Übermorgen ist...!) + سؤال (Bist du...؟) + ردّ (dabei!) + هدية (schenke dir!) + Quiz + Torte + Bis dann!"
+          }
+        ],
+        "type": "speaking"
+      }
+    ]
+  },
+  "unit": 4,
+  "usedArsenalIds": [
+    "ars-tekamolo",
+    "ars-akkusativ-2"
+  ],
+  "warmup": {
+    "cardIds": [
+      "dabei",
+      "geburtstag",
+      "musik"
+    ]
+  },
+  "ziel": {
+    "ar": "تخطط لاحتفال: تخبر بالموعد وتدعو وتُهدي",
+    "de": "Du kannst ein Fest planen: Übermorgen ist das Fest."
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "tafel",
+      "fest",
+      "festival",
+      "etwas",
+      "schenken",
+      "torte",
+      "star",
+      "verabredet",
+      "uebermorgen",
+      "quiz",
+      "gitarre",
+      "freiwillig",
+      "bloed"
+    ],
+    "summary": {
+      "ar": "احتفالي: بعد غد الاحتفال. أنا مرتبط بموعد. أُهديك شيئاً. المسابقة جديدة. الكعكة طيّبة. إلى اللقاء!",
+      "de": "Mein Fest: Übermorgen ist das Fest. Ich bin verabredet. Ich schenke dir etwas. Das Quiz ist neu. Die Torte ist gut. Bis dann!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "الفعل ثالثاً بعد الزمن",
+          "de": "~~Übermorgen das Fest ist.~~"
+        },
+        "correct": {
+          "ar": "بعد غد الاحتفال.",
+          "de": "Übermorgen ist das Fest."
+        },
+        "exercise": {
+          "a": "ist",
+          "q": "Übermorgen ___ das Fest."
+        },
+        "whyArabicSpeakerFails": "العربية (بعد غد الاحتفال) بلا فعل، فيُؤخَّر ist — بينما الألمانية V2: الفعل ثانياً دائماً (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "haben مع verabredet",
+          "de": "~~Ich habe verabredet.~~"
+        },
+        "correct": {
+          "ar": "أنا مرتبط بموعد.",
+          "de": "Ich bin verabredet."
+        },
+        "exercise": {
+          "a": "bin",
+          "q": "Ich ___ verabredet."
+        },
+        "whyArabicSpeakerFails": "العربية (عندي موعد) بـ«عند» ≈ haben، فيُختار habe — بينما verabredet حالة مع sein دائماً (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "dich بدل dir",
+          "de": "~~Ich schenke dich etwas.~~"
+        },
+        "correct": {
+          "ar": "أُهديك شيئاً.",
+          "de": "Ich schenke dir etwas."
+        },
+        "exercise": {
+          "a": "dir",
+          "q": "Ich schenke ___ etwas."
+        },
+        "whyArabicSpeakerFails": "العربية (أُهديك) ضمير واحد بلا حالة، فيُخلط dich/dir — بينما المُهدى إليه داتيف: dir (خريطة التداخل 10‑ي)"
+      }
+    ]
+  }
+}

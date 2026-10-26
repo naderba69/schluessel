@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 298 (2026-10-26) — D343: a2-u4-d5 «يخطط لاحتفال» — الزمن أولاً + الشيء-المُهدى (المرحلة د · خطة D337)
+- **الخلاصة:** الدرس 113 (A2-U4-D5 — يخطط لاحتفال): 13 كلمة للاحتفال (Tafel/Fest/Festival + etwas/schenken + Torte/Star/Quiz/Gitarre + verabredet/übermorgen/freiwillig/blöd) في حوار تخطيط من 7 جمل (خبر + سؤال + هدية + وداع) عبر ترسانتين منقولتين (TEKAMOLO: الزمن أولاً — Übermorgen ist das Fest! + Akkusativ-2: Was؟ للشيء-المُهدى — etwas!). 6 تصحيحات نطق (Festival/etwas/übermorgen/Quiz/Gitarre + Tafel أمسكها التدقيق: [ɑ] بلا علامة طول!) + إعادة توليد 6. الرابطان متحققان حياً قبل الدفع (Quiz: das/die Quiz/[kvɪs] + Tafel: لوحة-الكتابة!).
+- **التالي:** d6 توليف الوحدة (تقرير الأسبوع + كلمتان — الميزانية 7).
+
 ## الدفعة 297 (2026-10-26) — D342: a2-u4-d4 «يعبّر عن رأيه» — المعنى المجرّد لـda + أسئلة wo (المرحلة د · خطة D337)
 - **الخلاصة:** الدرس 112 (A2-U4-D4 — يعبّر عن رأيه): 13 كلمة للرأي (dafür/dagegen/dabei + bestehen + besonders + echt/fantastisch/furchtbar/beliebt/berühmt + Fan/Ahnung/Hauptstadt) في حوار من 7 جمل (سؤال + رأي + مشاركة + تعجّب) عبر ترسانة da-komposita المنقولة (وفاءً بوعد A1-U6: المعنى المجرّد + أسئلة wo الست أمثلةَ قاعدة — وقَبِل الفاحص!). تصحيحا نطق (Fan دخيلة [fɛn] + Hauptstadt st←ʃt داخل المركّب) + إعادة توليد 2. الرابطان متحققان حياً قبل الدفع (Fan + Hauptstadt — وDuden يؤكد [fɛn]!).
 - **التالي:** d5 (جيب Tafel/Fest + حقل جديد — التنقيب من العاري أولاً).
