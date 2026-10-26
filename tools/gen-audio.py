@@ -725,7 +725,6 @@ def build_all() -> None:
         ("word-geschenk", "das Geschenk.", "geschenk", ["a1-u8-d5"]),
         ("word-sparen", "sparen.", "sparen", ["a1-u8-d5"]),
         ("word-sonnenbrille", "die Sonnenbrille.", "sonnenbrille", ["a1-u8-d5"]),
-        ("word-baeckerei", "die Bäckerei.", "baeckerei", ["a1-u8-d5"]),
         ("word-schalter", "der Schalter.", "schalter", ["a1-u8-d5"]),
     ("word-kirche", "die Kirche.", "kirche", ["a1-u9-d1"]),
     ("word-krankenhaus", "das Krankenhaus.", "krankenhaus", ["a1-u9-d1"]),
@@ -1495,6 +1494,19 @@ def build_all() -> None:
     ("word-haesslich", "hässlich.", "haesslich", ["a2-u4-d1"]),
     ("word-voll", "voll.", "voll", ["a2-u4-d1"]),
     ("word-rund", "rund.", "rund", ["a2-u4-d1"]),
+    ("word-zurueckfahren", "zurückfahren.", "zurueckfahren", ["a2-u4-d2"]),
+    ("word-einziehen", "einziehen.", "einziehen", ["a2-u4-d2"]),
+    ("word-vorwaerts", "vorwärts.", "vorwaerts", ["a2-u4-d2"]),
+    ("word-heraus", "heraus.", "heraus", ["a2-u4-d2"]),
+    ("word-herein", "herein.", "herein", ["a2-u4-d2"]),
+    ("word-hindurch", "hindurch.", "hindurch", ["a2-u4-d2"]),
+    ("word-direkt", "direkt.", "direkt", ["a2-u4-d2"]),
+    ("word-disko", "die Disko.", "disko", ["a2-u4-d2"]),
+    ("word-schloss", "das Schloss.", "schloss", ["a2-u4-d2"]),
+    ("word-einkaufszentrum", "das Einkaufszentrum.", "einkaufszentrum", ["a2-u4-d2"]),
+    ("word-ausstellung", "die Ausstellung.", "ausstellung", ["a2-u4-d2"]),
+    ("word-friseur", "der Friseur.", "friseur", ["a2-u4-d2"]),
+    ("word-krimi", "der Krimi.", "krimi", ["a2-u4-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

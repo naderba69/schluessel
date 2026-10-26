@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 294 (2026-10-26) — D339: a2-u4-d2 «يصف اتجاهاً» — نقل Wechsel-AKK إلى وجهات جديدة (المرحلة د · خطة D337)
+- **الخلاصة:** الدرس 110 (A2-U4-D2 — يصف اتجاهاً): 13 كلمة للاتجاه والوجهات (zurückfahren/einziehen + vorwärts/heraus/herein/hindurch/direkt + Disko/Schloss/Einkaufszentrum/Ausstellung/Friseur/Krimi) تُنقَل عبر Wechsel-AKK المعروفة (إعادة استعمال ثانية — بلا ترسانة جديدة). مقايضة إجبارية: Bäcker ← Krimi (التسرب الخلفي N-103!). 13 مقطعاً صوتياً؛ تصحيح نبر يقيني واحد (hindurch: HINdurch ← hinDURCH + إعادة توليد). الرابطان متحققان حياً قبل الدفع (Einkaufszentrum + Schloss — والصفحة تكشف معنى القفل!).
+- **التالي:** d3 (يسأل عن الطريق — كلام/نقل + بوابة grep للتنقيب).
+
 ## الدفعة 293 (2026-10-26) — D338: a2-u4-d1 «يصف مكاناً» — نقل Wechsel-DAT إلى أماكن جديدة (المرحلة د · خطة D337)
 - **الخلاصة:** الدرس 109 (A2-U4-D1 — يصف مكاناً): 13 كلمة للأماكن والوصف (Ampel/Flohmarkt/Theater/Zoo/Zirkus/Rathaus/Garage/Bibliothek + eng/leer/hässlich/voll/rund) تُنقَل عبر قاعدة Wechsel-DAT المعروفة (بلا ترسانة جديدة!) — أول يوم بلا أفعال (محطة match بدل verb-bank). 13 مقطعاً صوتياً؛ تصحيحا طول يقينيان (Garage/Rathaus — a قصيرة ← طويلة + إعادة توليد) + Bibliothek أثرٌ ثانوي مقبول. الرابطان متحققان حياً قبل الدفع (Flohmarkt + Bibliothek).
 - **التالي:** d2 (يصف اتجاهاً + Wechsel-AKK — نقل عبر ars-wechselpraep نفسها).

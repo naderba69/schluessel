@@ -3275,3 +3275,12 @@
 - **الأرقام:** ملاحظات 0/22/175 (197 — +N-197 مغلقة) · تغطية A2 الرئيسية 925/1159 (+13) · معجم 150 · duden 317 · درس 109 · بنك 3088.
 - **البوابة:** vitest ✓ 1632/1632 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1590/0/0 · build ✓ 3.19s · docs-sync --check ✓ 153 قراراً مهيكلاً · آخرها D338 · الدفعة 293 · الموجّه 4.95 · notes check ✓ 0/22/175 (197) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 150 · duden-links ✓ تُخطّي (317 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2992
 - **التالي:** d2 (يصف اتجاهاً + Wechsel-AKK — نقل عبر ars-wechselpraep نفسها).
+## D339 (2026-10-26): a2-u4-d2 «يصف اتجاهاً» — نقل Wechsel-AKK إلى وجهات جديدة (المرحلة د · خطة D337)
+- **الدفعة:** 294 · **الموجّه:** 4.96
+- **للقارئ:** الدرس 110 (A2-U4-D2 — يصف اتجاهاً): 13 كلمة للاتجاه والوجهات (zurückfahren/einziehen + vorwärts/heraus/herein/hindurch/direkt + Disko/Schloss/Einkaufszentrum/Ausstellung/Friseur/Krimi) تُنقَل عبر Wechsel-AKK المعروفة (إعادة استعمال ثانية — بلا ترسانة جديدة). مقايضة إجبارية: Bäcker ← Krimi (التسرب الخلفي N-103!). 13 مقطعاً صوتياً؛ تصحيح نبر يقيني واحد (hindurch: HINdurch ← hinDURCH + إعادة توليد). الرابطان متحققان حياً قبل الدفع (Einkaufszentrum + Schloss — والصفحة تكشف معنى القفل!).
+- **بطاقة قرار (قانون 8 — الصدق قبل الإكمال):** التسوية: +9 (لا +11): zurückfahren شاركت عنوان zurückkommen (31|zurück-) + Disko شاركت عنوان Disco-A1 — القاعدة المُحسّنة (D336): الدليل يغطي العناوين العذراء فقط. Bäcker محظورة رابعاً (مقفلة-A1 للأبد — تُدرَّس أبداً). التنقيب أعمى عن التسرب الخلفي والعناوين المشتركة (N-198 — بوابة grep يدوية قبل كل توليد d3-d6).
+- **الفهرس العكسي:** content/lessons/a2/a2-u4-d2.json (جديد) + 13 content/words + lexicon (hindurch).
+- **الاختبارات:** pins (content-units ×2 + duden 317←319 + voice 646←652 + wechsel-usedInLessons) — بلا ملف جديد.
+- **الأرقام:** ملاحظات 0/22/176 (198 — +N-198 مغلقة) · تغطية A2 الرئيسية 934/1159 (+9) · مجموعات 107/247 · معجم 151 · duden 319 · درس 110 · بنك 3106.
+- **البوابة:** vitest ✓ 1632/1632 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1604/0/0 · build ✓ 3.46s · docs-sync --check ✓ 154 قراراً مهيكلاً · آخرها D339 · الدفعة 294 · الموجّه 4.96 · notes check ✓ 0/22/176 (198) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 151 · duden-links ✓ تُخطّي (319 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 3005
+- **التالي:** d3 (يسأل عن الطريق — كلام/نقل + بوابة grep للتنقيب).
