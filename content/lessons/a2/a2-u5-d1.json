@@ -1,0 +1,430 @@
+{
+  "audioManifestRefs": [
+    "word-band",
+    "word-instrument",
+    "word-radio",
+    "word-raetsel",
+    "word-ball",
+    "word-plakat",
+    "word-pizza",
+    "word-kontakt",
+    "word-programm",
+    "word-packen",
+    "word-malen",
+    "word-bunt",
+    "word-kostenlos"
+  ],
+  "canDoDaily": [
+    "يحكي عن عيد ميلاد في 7 جمل (أمس + موسيقى + لعبة + طعام)",
+    "يميز war من ist (gestern ← war!) ويعلل (ماضٍ أم حاضر!)"
+  ],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "band",
+      "instrument",
+      "radio",
+      "raetsel",
+      "ball",
+      "plakat",
+      "pizza",
+      "kontakt",
+      "programm",
+      "packen",
+      "malen",
+      "bunt",
+      "kostenlos"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 11+12 «Wie die Zeit vergeht!/Gute Unterhaltung!» — تباعد مُعلن: الموضوع من الدستور (الأصدقاء والأعياد) والفصول للدعم (D345)"
+  },
+  "day": 1,
+  "einstieg": {
+    "guidedRetrieval": [
+      "من U4: Übermorgen ist das Fest! (مستقبل) — واليوم الماضي: Die Party war gut! (كانت!)",
+      "من A1-U10: gestern + Perfekt (habe gemacht!) — واليوم الماضي القصير: war (كلمة واحدة!)"
+    ],
+    "pretestItems": [
+      {
+        "answer": "Die Party war gut.",
+        "choices": [
+          "Die Party war gut.",
+          "Die Party ist gut.",
+          "Die Party hat gut."
+        ],
+        "prompt": {
+          "ar": "«الحفلة كانت طيّبة» — كيف تقول؟"
+        },
+        "revealNextSession": true
+      },
+      {
+        "answer": "die Bälle",
+        "choices": [
+          "die Bälle",
+          "die Balls",
+          "die Bällen"
+        ],
+        "prompt": {
+          "ar": "«كرات» — ما الجمع؟"
+        },
+        "revealNextSession": true
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Ball_Spielgeraet",
+      "https://www.duden.de/rechtschreibung/Raetsel"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/packen"
+    ]
+  },
+  "id": "a2-u5-d1",
+  "imageManifestRefs": [],
+  "kind": "content",
+  "level": "A2",
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-praeteritum-kurz"
+    ],
+    "riskFlagsShown": [
+      "needs-ein",
+      "plural-irregular",
+      "v2-order"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "band",
+      "instrument",
+      "radio",
+      "raetsel",
+      "ball",
+      "plakat",
+      "pizza",
+      "kontakt",
+      "programm",
+      "packen",
+      "malen",
+      "bunt",
+      "kostenlos"
+    ]
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "a": "die Band → die Bands",
+            "q": "«فرقة موسيقية» — الأداة والجمع؟"
+          },
+          {
+            "a": "war",
+            "q": "Die Party ___ gestern gut. (war)"
+          },
+          {
+            "a": "Instrument",
+            "q": "Das ___ ist neu. (Instrument)"
+          },
+          {
+            "a": "Radio",
+            "q": "Das ___ spielt Musik. (Radio)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "der Ball → die Bälle",
+            "q": "«كرة» — الأداة والجمع؟"
+          },
+          {
+            "a": "packen",
+            "q": "Wir ___ Geschenke. (packen)"
+          },
+          {
+            "a": "Kontakt",
+            "q": "Wir halten ___. (Kontakt)"
+          },
+          {
+            "a": "kostenlos",
+            "q": "Das Konzert ist ___. (kostenlos)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "das Rätsel → die Rätsel",
+            "q": "«لغز» — الأداة والجمع؟"
+          },
+          {
+            "a": "malen",
+            "q": "Wir ___ Karten. (malen)"
+          },
+          {
+            "a": "Programm",
+            "q": "Das ___ ist gut. (Programm)"
+          },
+          {
+            "a": "Plakat",
+            "q": "Das ___ ist bunt. (Plakat)"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "ar": "تحتفل بعيد ميلاد",
+        "de": "Geburtstag feiern"
+      },
+      "situation": {
+        "ar": "صديق يدعوك لعيد ميلاده",
+        "de": "Ein Freund lädt dich zum Geburtstag ein"
+      },
+      "successCriteria": [
+        "يذكر الموسيقى واللعبة (Band/Rätsel!)",
+        "يحكي بالماضي (war gestern!)",
+        "يختم بالتواصل (Kontakt!)"
+      ]
+    },
+    "stations": [
+      {
+        "explanationRequired": true,
+        "hints": [
+          "packen/malen منتظمان (packt/malt · packen/malen!)",
+          "war = ماضي ist (جديد — تعرُّض فقط!)",
+          "الأكوزاتيف بعد الفعل (den Koffer/ein Bild!)"
+        ],
+        "interleavedWith": [
+          "koffer",
+          "bild"
+        ],
+        "items": [
+          {
+            "a": "packen",
+            "q": "نحزم الهدايا: Wir ___ Geschenke. (packen)",
+            "why": "Wir packen Geschenke! (نحزم الهدايا!) — wir ← المصدر نفسه!"
+          },
+          {
+            "a": "packt",
+            "q": "هو يحزم الحقيبة: Er ___ den Koffer. (packen)",
+            "why": "Er packt den Koffer! (هو يحزم الحقيبة!) — er ← packt + مفعول!"
+          },
+          {
+            "a": "malen",
+            "q": "نرسم بطاقات: Wir ___ Karten. (malen)",
+            "why": "Wir malen Karten! (نرسم بطاقات!) — wir ← المصدر نفسه!"
+          },
+          {
+            "a": "malt",
+            "q": "هي ترسم صورة: Sie ___ ein Bild. (malen)",
+            "why": "Sie malt ein Bild! (هي ترسم صورة!) — sie ← malt!"
+          },
+          {
+            "a": "war",
+            "q": "الحفلة كانت طيّبة (جديد!): Die Party ___ gut. (sein ← war)",
+            "why": "Die Party war gut! (الحفلة كانت طيّبة!) — war = ماضي ist (تعرُّض!)."
+          }
+        ],
+        "type": "verb-bank"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الأداة + الجمع (die Band/Bands!)",
+          "raten + مفعول (ein Rätsel!)",
+          "bunt = ملوّن (وصف!)"
+        ],
+        "interleavedWith": [
+          "musik",
+          "party"
+        ],
+        "items": [
+          {
+            "a": "Band",
+            "q": "الفرقة تعزف الموسيقى: Die ___ spielt Musik. (Band)",
+            "why": "Die Band spielt Musik! (الفرقة تعزف!) — die Band (مؤنث!)."
+          },
+          {
+            "a": "Ball",
+            "q": "الكرة ملوّنة: Der ___ ist bunt. (Ball)",
+            "why": "Der Ball ist bunt! (الكرة ملوّنة!) — der Ball (مذكّر!)."
+          },
+          {
+            "a": "Plakat",
+            "q": "الملصق ملوّن: Das ___ ist bunt. (Plakat)",
+            "why": "Das Plakat ist bunt! (الملصق ملوّن!) — das Plakat (محايد!)."
+          },
+          {
+            "a": "Pizza",
+            "q": "بيتزا الحفلة طيّبة: Die ___ für die Party ist gut. (Pizza)",
+            "why": "Die Pizza für die Party ist gut! — die Pizza (مؤنث!)."
+          },
+          {
+            "a": "Rätsel",
+            "q": "نخمّن لغزاً: Wir raten ein ___. (Rätsel)",
+            "why": "Wir raten ein Rätsel! (نخمّن لغزاً!) — raten + مفعول!"
+          },
+          {
+            "a": "Programm",
+            "q": "البرنامج جيّد: Das ___ ist gut. (Programm)",
+            "why": "Das Programm ist gut! (البرنامج جيّد!) — das Programm!"
+          }
+        ],
+        "type": "gap-fill"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الخطأ كلمة واحدة — الباقي صحيح",
+          "gestern ← war (ماضٍ!)",
+          "الجمع: Bälle/Rätsel (بلا s!)"
+        ],
+        "interleavedWith": [
+          "gestern"
+        ],
+        "items": [
+          {
+            "a": "Die Party war gestern gut.",
+            "q": "Die Party ist gestern gut.",
+            "why": "gestern = ماضٍ ← war لا ist!"
+          },
+          {
+            "a": "Die Bälle sind bunt.",
+            "q": "Die Balls sind bunt.",
+            "why": "Ball مذكّر + Umlaut: الجمع die Bälle (بلا s الإنجليزية!)"
+          },
+          {
+            "a": "Wir raten ein Rätsel.",
+            "q": "Wir raten ein Rätsels.",
+            "why": "Rätsel جمعه كالمفرد: ein Rätsel (بلا زيادة!)"
+          },
+          {
+            "a": "Das Programm ist gut.",
+            "q": "Das Programm sind gut.",
+            "why": "Programm مفرد (das!) ← ist لا sind!"
+          }
+        ],
+        "type": "error-hunt"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "ابدأ بأمس (war!) وانهِ بالتواصل",
+          "الموسيقى + اللعبة + الطعام + الزينة"
+        ],
+        "interleavedWith": [
+          "musik",
+          "party",
+          "gestern"
+        ],
+        "items": [
+          {
+            "a": "Die Party war gestern. Die Band spielt Musik. Wir raten ein Rätsel. Die Pizza ist gut. Das Plakat ist bunt. Wir halten Kontakt. Das Konzert ist kostenlos!",
+            "q": "احكِ عن عيد الميلاد (سجّل): 7 جمل — أمس (war!) + موسيقى + لعبة + طعام + زينة + تواصل + مفاجأة",
+            "why": "قارن حكايتك: أمس (war gestern!) + موسيقى (Band!) + لعبة (Rätsel!) + طعام (Pizza!) + زينة (Plakat!) + تواصل (Kontakt!) + مفاجأة (kostenlos!)."
+          }
+        ],
+        "type": "speaking"
+      }
+    ]
+  },
+  "unit": 5,
+  "usedArsenalIds": [
+    "ars-praeteritum-kurz"
+  ],
+  "warmup": {
+    "cardIds": [
+      "geburtstag",
+      "party",
+      "musik"
+    ]
+  },
+  "ziel": {
+    "ar": "تحتفل بعيد ميلاد: تحكي بالماضي (war!) وتذكر الموسيقى واللعبة",
+    "de": "Du kannst Geburtstag feiern: Die Party war gut."
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "band",
+      "instrument",
+      "radio",
+      "raetsel",
+      "ball",
+      "plakat",
+      "pizza",
+      "kontakt",
+      "programm",
+      "packen",
+      "malen",
+      "bunt",
+      "kostenlos"
+    ],
+    "summary": {
+      "ar": "عيد الميلاد: الحفلة كانت أمس. الفرقة تعزف. الكرة والملصق ملوّنان. نتواصل دائماً!",
+      "de": "Mein Geburtstag: Die Party war gestern. Die Band spielt. Der Ball ist bunt. Das Plakat ist bunt. Wir halten Kontakt!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "ist مع gestern",
+          "de": "~~Die Party ist gestern gut.~~"
+        },
+        "correct": {
+          "ar": "الحفلة أمس كانت طيّبة.",
+          "de": "Die Party war gestern gut."
+        },
+        "exercise": {
+          "a": "war",
+          "q": "Die Party ___ gestern gut."
+        },
+        "whyArabicSpeakerFails": "العربية (الحفلة أمس طيّبة) بلا فعل ماضٍ ظاهر، فيُبقى ist — بينما gestern ← war (ماضي ist! خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "s الإنجليزية",
+          "de": "~~Die Balls sind bunt.~~"
+        },
+        "correct": {
+          "ar": "الكرات ملوّنة.",
+          "de": "Die Bälle sind bunt."
+        },
+        "exercise": {
+          "a": "Bälle",
+          "q": "Die ___ sind bunt."
+        },
+        "whyArabicSpeakerFails": "الإنجليزية (Balls) تُلحق s، فيُقال Balls — بينما Ball: Umlaut + e (die Bälle! خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "زيادة s على المفرد-الجمع",
+          "de": "~~Wir raten ein Rätsels.~~"
+        },
+        "correct": {
+          "ar": "نخمّن لغزاً.",
+          "de": "Wir raten ein Rätsel."
+        },
+        "exercise": {
+          "a": "Rätsel",
+          "q": "Wir raten ein ___."
+        },
+        "whyArabicSpeakerFails": "العربية (لغزاً/ألغازاً) تغيّر الجمع دائماً، فيُزاد s — بينما Rätsel: المفرد = الجمع (خريطة التداخل 10‑ي)"
+      }
+    ]
+  }
+}

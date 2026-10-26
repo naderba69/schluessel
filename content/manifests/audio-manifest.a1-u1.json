@@ -23986,7 +23986,7 @@
       "sizeBytes": 4233,
       "hash": "sha256:23f186d86f0ab94667b2a6fd8dab5ddc81e867f3631df360efa629847e0a0487",
       "pcmSha256": "7456af6069ee74a81c51e6c5d425eac93527f3eee4a0184922befbac94646e3c",
-      "rmsDb": -17.0
+      "rmsDb": -17
     },
     {
       "id": "word-drueben",
@@ -24007,6 +24007,266 @@
       "hash": "sha256:3545f3598dd1aa9c2862e09b2b8207d42745c25af196d40e5060c610889c1a92",
       "pcmSha256": "4c729c7a0b34113e5f51e22c4b7ada5094dd0c58db13ae06fe860462fd2b3ab0",
       "rmsDb": -17.03
+    },
+    {
+      "id": "word-band",
+      "file": "words/audio/de-DE/word-band.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Band.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 839,
+      "sizeBytes": 4087,
+      "hash": "sha256:bf03ba07748317a26369480a09097eed74a887b1755214d7dfa8446602ae0233",
+      "pcmSha256": "17dde1c90c046a996fe122455525a5bbccd1abf8bfa8b24dd0b1a29696244039",
+      "rmsDb": -17
+    },
+    {
+      "id": "word-instrument",
+      "file": "words/audio/de-DE/word-instrument.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Instrument.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 1106,
+      "sizeBytes": 5367,
+      "hash": "sha256:ad1c58a80ff80a2af2231a46aa75556e9c05e4892b7a9726751f5f1f6f45bb9b",
+      "pcmSha256": "a3091ee70aeaa7d61ca3177d46471e2fa4067a230b26fc69ad762b73e902ac7f",
+      "rmsDb": -17.01
+    },
+    {
+      "id": "word-radio",
+      "file": "words/audio/de-DE/word-radio.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Radio.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 1291,
+      "sizeBytes": 5745,
+      "hash": "sha256:ef29717c10340a40f0a3080ad29e3c0bcdb023894eaccfbe7f37284c127547db",
+      "pcmSha256": "728b9f72635a67bd867ef50f605e12c4ba78e248392f29de0d6309d44d4df1e9",
+      "rmsDb": -17.13
+    },
+    {
+      "id": "word-raetsel",
+      "file": "words/audio/de-DE/word-raetsel.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Rätsel.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 1106,
+      "sizeBytes": 5297,
+      "hash": "sha256:38a6fcb5c8b3d966804ce78be366329e960580e21222b82deebaa07323dad2e8",
+      "pcmSha256": "9876b1134c4447975a068f21aef94be2762bcd9284b94d11dfad53d89c0fb4d8",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "word-ball",
+      "file": "words/audio/de-DE/word-ball.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Ball.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 827,
+      "sizeBytes": 4003,
+      "hash": "sha256:f3045c41d16da9f5cad22d792c9f47fed19abbf80560b59cbe5853cd5a6198c1",
+      "pcmSha256": "69d32e9317c2f8f23ac0b46628fa38868c8a59225400c67a17487c082bd21592",
+      "rmsDb": -17.18
+    },
+    {
+      "id": "word-plakat",
+      "file": "words/audio/de-DE/word-plakat.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Plakat.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 1164,
+      "sizeBytes": 5427,
+      "hash": "sha256:d9308f627463eb0a4d0c7626c800a10931ea498a968dbe796fbb3c5e5bfa3e24",
+      "pcmSha256": "d48bebc43444e570fb932fd7135dbda0a65f92073a0e8dae4d13f24033368157",
+      "rmsDb": -17.14
+    },
+    {
+      "id": "word-pizza",
+      "file": "words/audio/de-DE/word-pizza.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Pizza.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 1164,
+      "sizeBytes": 5116,
+      "hash": "sha256:602abf6a586b82607b6df31364dbc70c556ff8ff2b3a47cb9eb8e20d2451bf04",
+      "pcmSha256": "4867246c3c6d292d574baafe12a6600e146a4276ea9f57bc1ad073dcd7111079",
+      "rmsDb": -17.17
+    },
+    {
+      "id": "word-kontakt",
+      "file": "words/audio/de-DE/word-kontakt.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Kontakt.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 1280,
+      "sizeBytes": 5781,
+      "hash": "sha256:834489faaa9fbd4761d9217e459511fe463d071d40aa5a202544af2840ab7b1e",
+      "pcmSha256": "a8249b496a706b750a50e28ce648156534c0352f676c8269a1deb96006b9b412",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "word-programm",
+      "file": "words/audio/de-DE/word-programm.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Programm.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 1210,
+      "sizeBytes": 5558,
+      "hash": "sha256:e412ac52a2a616b59c4966ff926d6d9f5edec003d483a66d4ce19e5d6d834d71",
+      "pcmSha256": "f32c361e4a20aa39890f09424a3bcbd2e5a8c507f1d34e7769fd14877d0d2973",
+      "rmsDb": -17.21
+    },
+    {
+      "id": "word-packen",
+      "file": "words/audio/de-DE/word-packen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "packen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 769,
+      "sizeBytes": 3694,
+      "hash": "sha256:feae9a34f4f95a7d3ee4362fc3d0a5753899059b95a2845aaa898151f7c669ce",
+      "pcmSha256": "16b787e3dffcf9abda4265456ced9f3ae0fe3084d337c715c023411b653fdfde",
+      "rmsDb": -17.38
+    },
+    {
+      "id": "word-malen",
+      "file": "words/audio/de-DE/word-malen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "malen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 873,
+      "sizeBytes": 4201,
+      "hash": "sha256:3747964b5a9ae87214a20b22edf98d6f7e063a7743ff2bd8b9d2101bc05b2e7a",
+      "pcmSha256": "a4a11fc216b78d21b82dcea8d83d4173731fddfd44053e85688c898d754c67a6",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "word-bunt",
+      "file": "words/audio/de-DE/word-bunt.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "bunt.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 827,
+      "sizeBytes": 3731,
+      "hash": "sha256:4fa863a46081f23494264e8ca47221bafe3b0ce68da20fa6f2dbd8a5b5b55687",
+      "pcmSha256": "19b008e966fd1a1cb477c76da69074afbf615fbce4e8a4356a10b779c49ff0bd",
+      "rmsDb": -17
+    },
+    {
+      "id": "word-kostenlos",
+      "file": "words/audio/de-DE/word-kostenlos.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "kostenlos.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d1"
+      ],
+      "durationMs": 1117,
+      "sizeBytes": 5353,
+      "hash": "sha256:28c9d6b75e5831e00dd37033b346a9a7068be5a7234a021b7480fde97bd4cd14",
+      "pcmSha256": "2e03b19e1d3ac0896aed994ec6d498f8dc0e7de012cd5ea9fbd8fff2a3cee193",
+      "rmsDb": -17.08
     },
     {
       "id": "mueller-announce-01",

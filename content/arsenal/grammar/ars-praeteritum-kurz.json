@@ -1,0 +1,59 @@
+{
+  "constitutionSection": "10‑ي",
+  "id": "ars-praeteritum-kurz",
+  "kind": "shufra",
+  "levelIntroduced": "A2",
+  "payload": {
+    "beads": [
+      "Die",
+      "Party",
+      "war",
+      "gestern",
+      "gut."
+    ],
+    "contrastAr": "العربية (الحفلة أمس طيّبة) بلا فعل ماضٍ ظاهر، فيُبقى ist مع gestern — بينما gestern تُحوّل ist إلى war (خريطة التداخل 10‑ي). والعربية (يا ليت!) تمنٍّ بلا فعل، فيُجهل hätte — بينما التمني المهذب hätte/gern (Ich hätte gern = يا ليت عندي!).",
+    "examples": [
+      {
+        "ar": "الحفلة أمس كانت طيّبة.",
+        "de": "Die Party war gestern gut."
+      },
+      {
+        "ar": "كان عندي إجازة.",
+        "de": "Ich hatte Urlaub."
+      },
+      {
+        "de": "Wir waren froh.",
+        "ar": "كنا فرحين."
+      },
+      {
+        "de": "Ich war müde.",
+        "ar": "كنت متعباً."
+      },
+      {
+        "ar": "يا ليت عندي بيتزا!",
+        "de": "Ich hätte gern Pizza."
+      }
+    ],
+    "inferencePromptAr": "قارن Ist ↔ war: أي كلمة تتغيّر مع gestern؟ وقارن Ich habe ↔ Ich hatte: ماذا حدث؟ اكتشف: الماضي القصير كلمة واحدة (war/hatte/musste) — بلا ge- ولا تصريف ثالث!",
+    "limitsAr": [
+      "تعرُّض فقط: تقابل war/hatte/musste في القصص وتميّزها من الحاضر — والتصريف الكامل لاحقاً (B1!).",
+      "war مع جمل sein (ist ← war!) وhatte مع جمل haben (habe ← hatte!) — لا خلط بينهما!",
+      "hätte/gern = تمنٍّ مهذب (يا ليت!) لا ماضٍ حقيقياً — أول لقاء فقط، والتوسّع لاحقاً.",
+      "Perfekt الطويل (ist gewesen) مرادف متأخر — اليوم الماضي القصير وحده."
+    ],
+    "properNouns": [],
+    "ruleAr": "الماضي القصير كلمة واحدة: war (ماضي ist!) · hatte (ماضي habe!) · musste/wollte (ماضي müssen/wollen!) — تُلقى في القصص مع gestern. والتمني المهذب hätte/gern (يا ليت!). تعرُّض: تمييز لا تدريب!",
+    "ruleDe": "Die Party war gut. · Ich hatte Urlaub. · Wir waren froh. · Ich war müde. · Ich hätte gern Pizza.",
+    "sceneAr": "عيد ميلاد يوسف أمس: يحكي لينا كيف كانت الحفلة (Die Party war gut!) وما تمنّاه (Ich hätte gern Pizza!).",
+    "topicAr": "الماضي القصير تعرُّضاً (war/hatte/musste) + hätte/gern أول لقاء"
+  },
+  "riskLevel": "orange",
+  "schemaVersion": "1.0.0",
+  "title": {
+    "ar": "الماضي القصير تعرُّضاً — «كانت» تُلقى في القصص (war/hatte/musste) + hätte/gern أول لقاء",
+    "de": "war/hatte/musste: Die Party war gut. · Ich hätte gern Pizza."
+  },
+  "usedInLessons": [
+    "a2-u5-d1"
+  ]
+}

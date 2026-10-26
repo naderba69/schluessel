@@ -116,6 +116,19 @@ function firstMarker(headword: string): string | null {
   return m1;
 }
 
+// D346: توأم firstMarker يحتفظ ببدائل «/» (علامات الجمع لا الأسماء — «;» للأزواج الاسمية ويبقى مقصياً)
+function allMarkers(headword: string): string[] {
+  const parts = headword.replace(/\s*\([^()]*\)/g, "").split(",").map((x) => x.trim());
+  if (parts.length < 2 || !parts[1]) return [];
+  const [m1, m2] = [parts[1], parts[2]];
+  // زوج الإبدال («-ö, er/-e»): كل بديل في m2 يقترن بإبدال m1 — وإلا فبدائل m1 نفسها («-s/-en»)
+  if (/^-?[äöüÄÖÜ]$/.test(m1) && m2 !== undefined) {
+    const m2s = m2.split("/").map((s) => s.trim()).filter(Boolean);
+    if (m2s.length && m2s.every((p) => /^-?[a-zäöüß]*$/.test(p) && !/^(der|die|das)\b/.test(p))) return m2s.map((p) => `${m1}, ${p}`);
+  }
+  return m1.split("/").map((s) => s.trim()).filter(Boolean);
+}
+
 const hasPairs = (headword: string) => /\/|;|,\s*(der|die|das)\s/.test(headword);
 
 /**
@@ -141,25 +154,31 @@ export function pluralsFor(entry: WordlistEntry, lemma: string): string[] {
   if (!/^[A-ZÄÖÜ]/.test(lemma) || !entry.lemmas.includes(lemma)) return [];
   if (hasPairs(entry.headword) && lemma !== entry.lemmas[0]) return [];
   if (onlyInDetachedParens(entry.headword, lemma)) return [];
-  const marker = firstMarker(entry.headword);
-  if (!marker) return [];
-  if (/^[A-ZÄÖÜ][a-zäöüß]+$/.test(marker)) return lemma === entry.lemmas[0] ? [marker] : []; // Themen · Ärzte
-  if (!/^[-¨äöüÄÖÜ=]/.test(marker)) return [];
-  const um = /¨/.test(marker) || /^-?[äöüÄÖÜ](?:$|[\s,-])/.test(marker);
-  const suffix = (marker.replace(/¨/g, "").match(/([a-zäöüß]*)\s*$/)?.[1] ?? "").replace(/^[äöü]$/, "");
-  if (suffix.length > 3) return []; // D208: لاحقة صغيرة بأكثر من 3 أحرف ليست لاحقة جمع (أطولها nen) بل اختصار إبدال ذيل («- männer» ← Hausmänner · «-ücher» ← Wörterbücher) — لا تُقرأ بيقين فلا تُدَّعى (لا تخمين)
-  if (/um$/.test(lemma) && /^(e?en|a)$/.test(suffix)) { // Datum → Daten · Museum, -een → Museen · Praktikum, -a
-    const stem = lemma.slice(0, -2);
-    return [stem + (stem.endsWith("e") && suffix.startsWith("e") ? suffix.slice(1) : suffix).replace(/^een$/, "en")];
+  // D346: علامة مزدوجة («die Pizza, -s/-en») تُقرأ كلها لا أولها — إسقاط البديل الثاني يُخطّئ جمعاً صحيحاً (Pizzen!)
+  const markers = allMarkers(entry.headword);
+  if (!markers.length) return [];
+  const out: string[] = [];
+  for (const mk of markers) {
+    if (/^[A-ZÄÖÜ][a-zäöüß]+$/.test(mk)) { if (lemma === entry.lemmas[0]) out.push(mk); continue; } // Themen · Ärzte
+    if (!/^[-¨äöüÄÖÜ=]/.test(mk)) continue;
+    const um = /¨/.test(mk) || /^-?[äöüÄÖÜ](?:$|[\s,-])/.test(mk);
+    const suffix = (mk.replace(/¨/g, "").match(/([a-zäöüß]*)\s*$/)?.[1] ?? "").replace(/^[äöü]$/, "");
+    if (suffix.length > 3) continue; // D208: لاحقة صغيرة بأكثر من 3 أحرف ليست لاحقة جمع (أطولها nen) بل اختصار إبدال ذيل («- männer» ← Hausmänner · «-ücher» ← Wörterbücher) — لا تُقرأ بيقين فلا تُدَّعى (لا تخمين)
+    if (/um$/.test(lemma) && /^(e?en|a)$/.test(suffix)) { // Datum → Daten · Museum, -een → Museen · Praktikum, -a
+      const stem = lemma.slice(0, -2);
+      out.push(stem + (stem.endsWith("e") && suffix.startsWith("e") ? suffix.slice(1) : suffix).replace(/^een$/, "en"));
+      continue;
+    }
+    // D151: الدخيلة المنتهية بـ‑a تُسقطها قبل ‑en (A2 «die Firma, -en» ← Firmen · كـThema ← Themen · Villa ← Villen) —
+    // لا جمع ألمانياً بـ‑aen، وكان الإلحاق الحرفي يقرأ «Firmaen» فيخطّئ جمعنا الصحيح
+    if (/a$/.test(lemma) && suffix === "en" && !um) { out.push(lemma.slice(0, -1) + "en"); continue; }
+    if (lemma.endsWith("e") && suffix === "e") continue; // «die Woche, -e»: مستحيل صرفياً — لا ادعاء
+    const suf = lemma.endsWith("e") && suffix.startsWith("e") ? suffix.slice(1) : suffix; // Adresse, -en → Adressen
+    const base = um ? umlautLast(lemma) : lemma;
+    if (um && base === lemma) continue;
+    out.push(base + suf);
   }
-  // D151: الدخيلة المنتهية بـ‑a تُسقطها قبل ‑en (A2 «die Firma, -en» ← Firmen · كـThema ← Themen · Villa ← Villen) —
-  // لا جمع ألمانياً بـ‑aen، وكان الإلحاق الحرفي يقرأ «Firmaen» فيخطّئ جمعنا الصحيح
-  if (/a$/.test(lemma) && suffix === "en" && !um) return [lemma.slice(0, -1) + "en"];
-  if (lemma.endsWith("e") && suffix === "e") return []; // «die Woche, -e»: مستحيل صرفياً — لا ادعاء
-  const suf = lemma.endsWith("e") && suffix.startsWith("e") ? suffix.slice(1) : suffix; // Adresse, -en → Adressen
-  const base = um ? umlautLast(lemma) : lemma;
-  if (um && base === lemma) return [];
-  return [base + suf];
+  return [...new Set(out)];
 }
 
 export const pluralsOf = (entry: WordlistEntry): string[] => pluralsFor(entry, entry.lemmas[0]!);
