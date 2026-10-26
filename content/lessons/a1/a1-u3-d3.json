@@ -58,7 +58,7 @@
       "ars-uhrzeit"
     ],
     "storySentenceIds": [
-      "story-a3-u3-s3"
+      "story-a1-u3-s3"
     ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
@@ -119,9 +119,9 @@
           }
         ],
         "interleavedWith": [
-          "zwanzig",
           "dreissig",
-          "neunzig"
+          "restaurant",
+          "achso"
         ],
         "explanationRequired": true
       },
@@ -363,9 +363,9 @@
           }
         ],
         "interleavedWith": [
-          "jetzt",
-          "also",
-          "kurs"
+          "restaurant",
+          "heute",
+          "achso"
         ],
         "explanationRequired": true
       },
@@ -416,16 +416,16 @@
           }
         ],
         "interleavedWith": [
-          "tausend",
-          "leicht",
-          "bis-morgen"
+          "bis-morgen",
+          "restaurant",
+          "neu"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Uhrzeit sagen und eine Zeit für das Essen nennen",
+        "de": "Wie spät ist es? — Es ist halb acht. Das Essen ist um sieben.",
         "ar": "قول الوقت وتحديد موعد ومواعيد فتح"
       },
       "situation": {
@@ -684,9 +684,7 @@
   },
   "gReferences": {
     "duden": [
-      "https://www.duden.de/rechtschreibung/halb",
-      "https://www.duden.de/rechtschreibung/Uhr",
-      "https://www.duden.de/rechtschreibung/Morgen"
+      "https://www.duden.de/rechtschreibung/Uhr"
     ],
     "wiktionary": [
       "https://de.wiktionary.org/wiki/halb"

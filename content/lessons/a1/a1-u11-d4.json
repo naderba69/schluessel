@@ -6,11 +6,12 @@
   "day": 4,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst den richtigen Helfer wählen: Krankheit/Symptom = haben (Ich habe 38 Grad Fieber), Bewegung/Veränderung = sein (Ich bin geblieben) — und dich fühlen.",
-    "ar": "تفرّق بين haben وsein في الماضي: عَرَض = haben · حركة/تغيّر = sein"
+    "de": "Wie fühlst du dich? — Ich fühle mich viel besser. · Der Finger hat geblutet, eine Frau hat die Wunde verbunden. · Ich bin zum Arzt gegangen: eine Impfung. · Ich kann nicht gut schlucken. · Rauchen Sie nicht!",
+    "ar": "تسأل عن الشعور وتجيب بـsich fühlen (mich · dich · sich · uns) · تختار المساعد الصحيح في الماضي (haben لـbluten/verbinden/schlucken/rauchen/erlauben/bekommen — وsein لـgehen/bleiben/kommen) · القوس مع kann/muss والأمر بـSie (Rauchen Sie nicht! · Schlucken Sie …!) — ومعها die Wunde · das Blut · die Spritze · die Impfung · das Thermometer · das Pflaster"
   },
   "canDoDaily": [
-    "يختار المساعد الصحيح في 3 جمل ماضٍ ويصف إحساسه بجملة sich fühlen"
+    "يسأل «كيف تشعر؟» ويجيب بثلاث صيغ منعكسة صحيحة (Wie fühlst du dich? · Ich fühle mich besser. · Sie fühlt sich gut.) ويحكي جرحاً صغيراً بجملتي ماضٍ بـhaben (Der Finger hat geblutet. · Eine Frau hat die Wunde verbunden.) وجملة بـsein (Ich bin zum Arzt gegangen.).",
+    "يقرأ الميزان ويطلب اللاصقة ويفهم أمر الطبيب بـSie (Das Thermometer zeigt 37 Grad. · Ich brauche ein Pflaster. · Rauchen Sie nicht! · Schlucken Sie die Tablette!) ويقول ما لا يستطيعه بالقوس (Ich kann nicht gut schlucken.)."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«عندي 38 درجة حمّى» — haben أم sein؟"
+          "de": "«أشعر بتحسّن» — أين الضمير؟ (تخمين فقط)"
         },
         "choices": [
-          "Ich habe 38 Grad Fieber (العَرَض = haben)",
-          "Ich bin 38 Grad Fieber",
-          "Ich habe 38 Grad Fieber gehabt"
+          "Ich fühle mich besser.",
+          "Ich fühle besser.",
+          "Ich fühle mir besser."
         ],
-        "answer": "Ich habe 38 Grad Fieber (العَرَض = haben)",
+        "answer": "Ich fühle mich besser.",
         "revealNextSession": true
       }
     ],
@@ -56,81 +57,627 @@
       "ars-satzklammer"
     ],
     "storySentenceIds": [
-      "story-a11-u11-s4"
+      "story-a1-u11-s4"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "umlaut-u",
+      "sp-st-initial",
+      "auslaut-d",
+      "v-f"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أشعر بتحسن»؟",
-            "a": "Ich fühle mich besser."
+            "q": "Wie fühlst du ___? (sich fühlen — du)",
+            "a": "dich",
+            "why": "sich fühlen منعكس: du → dich (كـmich في Ich freue mich)."
           },
           {
-            "q": "«الجرح ينزف»؟",
-            "a": "Die Wunde blutet."
+            "q": "Ich fühle ___ viel besser. (sich fühlen — ich)",
+            "a": "mich",
+            "why": "ich → mich — الضمير المنعكس للمتكلم."
+          },
+          {
+            "q": "Lena fühlt ___ heute gut. (sich fühlen — sie)",
+            "a": "sich",
+            "why": "er/sie/es → sich — الضمير المنعكس للغائب."
+          },
+          {
+            "q": "Wir fühlen ___ nicht fit. (sich fühlen — wir)",
+            "a": "uns",
+            "why": "wir → uns (كـWir treffen uns)."
+          },
+          {
+            "q": "Ich ___ mich heute nicht gut. (sich fühlen — ich)",
+            "a": "fühle",
+            "why": "ich fühle mich — الفعل مصرَّف والمنعكس بعده."
+          },
+          {
+            "q": "Der Finger ___ geblutet. (sein/haben — er)",
+            "a": "hat",
+            "why": "bluten بلا حركة ⇒ haben: hat geblutet."
+          },
+          {
+            "q": "Eine Frau ___ die Wunde verbunden. (sein/haben — sie)",
+            "a": "hat",
+            "why": "verbinden ⇒ haben: hat verbunden (بلا ge‑: ver‑)."
+          },
+          {
+            "q": "Meine Mutter ___ eine Spritze bekommen. (sein/haben — sie)",
+            "a": "hat",
+            "why": "bekommen ⇒ haben: hat bekommen (بلا ge‑: be‑)."
+          },
+          {
+            "q": "Ich ___ gestern zum Arzt gegangen. (sein/haben — ich)",
+            "a": "bin",
+            "why": "gehen حركة ⇒ sein: bin gegangen."
+          },
+          {
+            "q": "Lena ___ heute im Bett geblieben. (sein/haben — sie)",
+            "a": "ist",
+            "why": "bleiben ⇒ sein (استثناء يُحفظ): ist geblieben."
+          },
+          {
+            "q": "Mein Vater ___ viel geraucht. (sein/haben — er)",
+            "a": "hat",
+            "why": "rauchen بلا حركة ⇒ haben: hat geraucht."
+          },
+          {
+            "q": "Ich habe die Tablette ___. (schlucken — التصريف الثالث)",
+            "a": "geschluckt",
+            "why": "منتظم: ge‑ + schluck + ‑t."
+          },
+          {
+            "q": "Der Finger hat ___. (bluten — التصريف الثالث)",
+            "a": "geblutet",
+            "why": "منتظم: ge‑ + blut + ‑et (بعد t)."
+          },
+          {
+            "q": "Die Ärztin hat die Wunde ___. (verbinden — التصريف الثالث)",
+            "a": "verbunden",
+            "why": "قوي بلا ge‑: verbinden → verbunden (i → u)."
+          },
+          {
+            "q": "Die Ärztin hat es nicht ___. (erlauben — التصريف الثالث)",
+            "a": "erlaubt",
+            "why": "منتظم بلا ge‑ (er‑): erlaubt."
+          },
+          {
+            "q": "Die Wunde ___ nicht mehr. (bluten — sie · الحاضر)",
+            "a": "blutet",
+            "why": "bluten → blutet (‑et بعد t)."
+          },
+          {
+            "q": "Der Arzt ___ die Wunde. (verbinden — er · الحاضر)",
+            "a": "verbindet",
+            "why": "verbinden → verbindet (‑et بعد d)."
+          },
+          {
+            "q": "Die Ärztin ___ es nicht. (erlauben — sie · الحاضر)",
+            "a": "erlaubt",
+            "why": "erlauben → erlaubt — لا تسمح به."
+          },
+          {
+            "q": "___ Sie nicht! (rauchen — الأمر بـSie)",
+            "a": "Rauchen",
+            "why": "الأمر بـSie (u9-d3): الفعل أولاً + Sie — Rauchen Sie nicht!"
+          },
+          {
+            "q": "___ Sie die Tablette mit Wasser! (schlucken — الأمر بـSie)",
+            "a": "Schlucken",
+            "why": "Schlucken Sie …! — الفعل أولاً ثم Sie."
+          },
+          {
+            "q": "Ich kann nicht gut ___. (schlucken — المصدر في آخر القوس)",
+            "a": "schlucken",
+            "why": "القوس: kann ثانياً والمصدر آخراً."
+          },
+          {
+            "q": "Morgen muss ich zum Arzt ___. (gehen — المصدر في آخر القوس)",
+            "a": "gehen",
+            "why": "muss … gehen — المصدر يغلق القوس."
+          },
+          {
+            "q": "Das Thermometer zeigt 37 ___. (درجة)",
+            "a": "Grad",
+            "why": "Grad = درجة — 37 Grad = لا حمّى."
+          },
+          {
+            "q": "Das ___ zeigt 38 Grad. (ميزان الحرارة)",
+            "a": "Thermometer",
+            "why": "das Thermometer — يُظهر (zeigt) الدرجة."
+          },
+          {
+            "q": "Ich habe eine ___ am Finger. (جرح)",
+            "a": "Wunde",
+            "why": "die Wunde = الجرح — am Finger."
+          },
+          {
+            "q": "Viel ___! Der Finger blutet. (دم)",
+            "a": "Blut",
+            "why": "das Blut — الاسم، وbluten الفعل."
+          },
+          {
+            "q": "Ich brauche ein ___ für den Finger. (لاصقة)",
+            "a": "Pflaster",
+            "why": "das Pflaster — للجروح الصغيرة."
+          },
+          {
+            "q": "Morgen bekomme ich eine ___. (تطعيم)",
+            "a": "Impfung",
+            "why": "die Impfung — التطعيم؛ تُعطى بـSpritze."
+          },
+          {
+            "q": "Die ___ tut nicht lange weh. (حقنة)",
+            "a": "Spritze",
+            "why": "die Spritze — الحقنة."
+          },
+          {
+            "q": "Rauchen ist nicht ___. (صحّي)",
+            "a": "gesund",
+            "why": "gesund ↔ krank — التدخين غير صحّي."
           }
         ],
         "interleavedWith": [
-          "fuehlen",
-          "bluten"
+          "finger",
+          "arzt",
+          "tablette",
+          "wasser",
+          "vater",
+          "mutter",
+          "bett",
+          "gesund",
+          "morgen",
+          "gestern",
+          "gehen",
+          "aerztin",
+          "bleiben"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«الطبيب يضمّد الجرح»؟",
-            "a": "Der Arzt verbindet die Wunde."
+            "audioId": "kc-1",
+            "speakText": "Hallo Lena! Wie fühlst du dich heute?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "كيف تشعر لينا اليوم",
+              "أين لينا اليوم",
+              "ماذا تأكل لينا"
+            ],
+            "a": "كيف تشعر لينا اليوم",
+            "why": "Wie fühlst du dich heute? — sich fühlen بـdich."
           },
           {
-            "q": "«ابلعوا الحبة!»؟",
-            "a": "Schlucken Sie die Tablette!"
+            "audioId": "kc-3",
+            "speakText": "Super! Und schluckst du deine Tabletten?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل تبلع حبوبها",
+              "هل تشرب الشاي",
+              "هل تنام جيداً"
+            ],
+            "a": "هل تبلع حبوبها",
+            "why": "Schluckst du deine Tabletten? — schlucken = يبلع."
+          },
+          {
+            "audioId": "kc-4",
+            "speakText": "Ja, aber das ist nicht leicht. Mein Hals tut noch weh. Ich kann nicht gut schlucken.",
+            "q": "استمع: لماذا البلع ليس سهلاً؟",
+            "choices": [
+              "حلقها ما زال يؤلمها",
+              "الحبوب كبيرة",
+              "ليس عندها ماء"
+            ],
+            "a": "حلقها ما زال يؤلمها",
+            "why": "Mein Hals tut noch weh. Ich kann nicht gut schlucken — القوس مع kann."
+          },
+          {
+            "audioId": "kc-5",
+            "speakText": "Trink viel Wasser! Bei mir war heute nicht alles gut: Ich habe eine Wunde am Finger.",
+            "q": "استمع: ماذا حدث ليوسف اليوم؟",
+            "choices": [
+              "عنده جرح في الإصبع",
+              "عنده حمّى",
+              "عنده صداع"
+            ],
+            "a": "عنده جرح في الإصبع",
+            "why": "Ich habe eine Wunde am Finger — جرح في الإصبع."
+          },
+          {
+            "audioId": "kc-7",
+            "speakText": "Ich habe in der Küche Brot gemacht — mit dem Messer. Und der Finger hat geblutet. Viel Blut!",
+            "q": "استمع: كيف جُرح يوسف؟",
+            "choices": [
+              "بالسكين وهو يُعدّ الخبز — ونزف الإصبع",
+              "في كرة القدم",
+              "في السيارة"
+            ],
+            "a": "بالسكين وهو يُعدّ الخبز — ونزف الإصبع",
+            "why": "mit dem Messer · der Finger hat geblutet — نزف (haben)."
+          },
+          {
+            "audioId": "kc-8",
+            "speakText": "Nein! Hat es sehr weh getan?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل آلمه كثيراً",
+              "هل أكل الخبز",
+              "هل ذهب إلى المدرسة"
+            ],
+            "a": "هل آلمه كثيراً",
+            "why": "Hat es sehr weh getan? — weh tun بالماضي (haben)."
+          },
+          {
+            "audioId": "kc-9",
+            "speakText": "Ja, ein bisschen. Eine Frau aus dem Kurs hat die Wunde verbunden. Jetzt habe ich ein Pflaster.",
+            "q": "استمع: من ضمّد الجرح وماذا عند يوسف الآن؟",
+            "choices": [
+              "امرأة من الدورة — وعنده لاصقة",
+              "الطبيب — وعنده حقنة",
+              "لينا — وعنده حبوب"
+            ],
+            "a": "امرأة من الدورة — وعنده لاصقة",
+            "why": "Eine Frau aus dem Kurs hat die Wunde verbunden — ضمّدت · ein Pflaster."
+          },
+          {
+            "audioId": "kc-10",
+            "speakText": "Gut, dass die Wunde nicht groß ist. Fühlst du dich jetzt gut?",
+            "q": "استمع: ماذا تسأل لينا في الآخر؟",
+            "choices": [
+              "هل يشعر بخير الآن",
+              "هل عنده وقت",
+              "هل سيأتي غداً"
+            ],
+            "a": "هل يشعر بخير الآن",
+            "why": "Fühlst du dich jetzt gut? — sich fühlen في السؤال."
+          },
+          {
+            "audioId": "kc-11",
+            "speakText": "Ja, der Finger blutet nicht mehr. Aber morgen muss ich zum Arzt: Ich bekomme eine Impfung.",
+            "q": "استمع: لماذا يذهب يوسف غداً إلى الطبيب؟",
+            "choices": [
+              "ليأخذ تطعيماً",
+              "لأن الإصبع ينزف",
+              "لأن عنده حمّى"
+            ],
+            "a": "ليأخذ تطعيماً",
+            "why": "Ich bekomme eine Impfung — تطعيم؛ der Finger blutet nicht mehr."
+          },
+          {
+            "audioId": "kc-12",
+            "speakText": "Eine Spritze? Tut das weh?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل الحقنة تؤلم",
+              "هل الطبيب لطيف",
+              "هل التطعيم غالٍ"
+            ],
+            "a": "هل الحقنة تؤلم",
+            "why": "Eine Spritze? Tut das weh? — هل يؤلم؟"
+          },
+          {
+            "audioId": "kc-13",
+            "speakText": "Nur ein bisschen. Eine Spritze tut nicht lange weh. Die Impfung ist wichtig.",
+            "q": "استمع: ماذا يقول يوسف عن الحقنة والتطعيم؟",
+            "choices": [
+              "الحقنة لا تؤلم طويلاً — والتطعيم مهم",
+              "الحقنة تؤلم كثيراً — والتطعيم غير مهم",
+              "لا يريد التطعيم"
+            ],
+            "a": "الحقنة لا تؤلم طويلاً — والتطعيم مهم",
+            "why": "Eine Spritze tut nicht lange weh. Die Impfung ist wichtig — مهم."
+          },
+          {
+            "audioId": "kc-14",
+            "speakText": "Das ist gut! Meine Mutter hat heute Morgen auch eine Spritze bekommen.",
+            "q": "استمع: من أخذ حقنة أيضاً اليوم؟",
+            "choices": [
+              "أم لينا، صباح اليوم",
+              "أبو لينا، مساءً",
+              "معلّم يوسف"
+            ],
+            "a": "أم لينا، صباح اليوم",
+            "why": "Meine Mutter hat heute Morgen auch eine Spritze bekommen — أخذت (haben)."
+          },
+          {
+            "audioId": "kc-16",
+            "speakText": "Nein, nur eine Impfung. Und sie hat mit der Ärztin gesprochen: Mein Vater raucht.",
+            "q": "استمع: ماذا أخبرت الأم الطبيبة؟",
+            "choices": [
+              "أن أبا لينا يدخّن",
+              "أن لينا لا تأكل",
+              "أن البيت بارد"
+            ],
+            "a": "أن أبا لينا يدخّن",
+            "why": "Mein Vater raucht — rauchen = يدخّن."
+          },
+          {
+            "audioId": "kc-18",
+            "speakText": "Ja, sehr viel. Die Ärztin sagt: Rauchen Sie nicht! Das ist nicht gesund. Sie erlaubt es nicht.",
+            "q": "استمع: ماذا تقول الطبيبة؟",
+            "choices": [
+              "لا تدخّنوا! هذا غير صحّي — لا تسمح به",
+              "دخّنوا قليلاً",
+              "اشربوا القهوة"
+            ],
+            "a": "لا تدخّنوا! هذا غير صحّي — لا تسمح به",
+            "why": "Rauchen Sie nicht! · Sie erlaubt es nicht — الأمر بـSie وerlauben."
+          },
+          {
+            "audioId": "kc-19",
+            "speakText": "Die Ärztin hat recht. Rauchen ist nicht gut. Wann bist du wieder in der Schule?",
+            "q": "استمع: ماذا يسأل يوسف في الختام؟",
+            "choices": [
+              "متى تعود لينا إلى المدرسة",
+              "متى تنام لينا",
+              "متى يأتي الطبيب"
+            ],
+            "a": "متى تعود لينا إلى المدرسة",
+            "why": "Wann bist du wieder in der Schule? — متى تعودين؟"
+          },
+          {
+            "audioId": "kc-20",
+            "speakText": "Am Montag. Die Ärztin erlaubt es ab Montag. Und du? Erzähl mir morgen von der Spritze!",
+            "q": "استمع: متى تعود لينا وماذا تطلب من يوسف؟",
+            "choices": [
+              "الاثنين — وأن يحكي لها غداً عن الحقنة",
+              "غداً — وأن يرسل صورة",
+              "الجمعة — وأن يتصل بأمها"
+            ],
+            "a": "الاثنين — وأن يحكي لها غداً عن الحقنة",
+            "why": "Am Montag · Erzähl mir morgen von der Spritze! — موعد الغد."
           }
         ],
         "interleavedWith": [
-          "verbinden",
-          "schlucken"
+          "finger",
+          "hals",
+          "kurs",
+          "arzt",
+          "tablette",
+          "brot",
+          "messer",
+          "mutter",
+          "vater",
+          "schule",
+          "morgen",
+          "heute",
+          "aerztin",
+          "kueche"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«لا تدخّنوا!»؟",
-            "a": "Rauchen Sie nicht!"
+            "tokens": [
+              "mich",
+              "fühle",
+              "besser.",
+              "viel",
+              "Ich"
+            ],
+            "a": "Ich fühle mich viel besser.",
+            "why": "fühle ثانياً ← mich المنعكس ← viel besser."
           },
           {
-            "q": "«الميزان يُظهر 38 درجة»؟",
-            "a": "Das Thermometer zeigt 38 Grad."
+            "tokens": [
+              "fühlst",
+              "heute?",
+              "dich",
+              "Wie",
+              "du"
+            ],
+            "a": "Wie fühlst du dich heute?",
+            "why": "Wie ← fühlst ← du ← dich — المنعكس بعد الفاعل."
+          },
+          {
+            "tokens": [
+              "geblutet.",
+              "viel",
+              "Finger",
+              "hat",
+              "Der"
+            ],
+            "a": "Der Finger hat viel geblutet.",
+            "why": "hat ثانياً ← viel ← geblutet آخراً (haben)."
+          },
+          {
+            "tokens": [
+              "die",
+              "Frau",
+              "hat",
+              "Eine",
+              "Wunde",
+              "verbunden."
+            ],
+            "a": "Eine Frau hat die Wunde verbunden.",
+            "why": "hat ← die Wunde ← verbunden آخراً."
+          },
+          {
+            "tokens": [
+              "Ich",
+              "kann",
+              "gut",
+              "schlucken.",
+              "nicht"
+            ],
+            "a": "Ich kann nicht gut schlucken.",
+            "why": "kann ثانياً ← nicht gut ← schlucken آخراً (القوس)."
+          },
+          {
+            "tokens": [
+              "muss",
+              "zum",
+              "ich",
+              "gehen.",
+              "Arzt",
+              "Morgen"
+            ],
+            "a": "Morgen muss ich zum Arzt gehen.",
+            "why": "Morgen أولاً ← muss ثانياً ← ich ← zum Arzt ← gehen."
+          },
+          {
+            "tokens": [
+              "Rauchen",
+              "nicht!",
+              "Sie",
+              "bitte"
+            ],
+            "a": "Rauchen Sie bitte nicht!",
+            "why": "الأمر بـSie: Rauchen أولاً ← Sie ← bitte nicht."
+          },
+          {
+            "tokens": [
+              "37",
+              "Grad.",
+              "Thermometer",
+              "Das",
+              "zeigt"
+            ],
+            "a": "Das Thermometer zeigt 37 Grad.",
+            "why": "Das Thermometer فاعل ← zeigt ← 37 Grad."
+          },
+          {
+            "tokens": [
+              "erlaubt",
+              "nicht.",
+              "Ärztin",
+              "Die",
+              "es"
+            ],
+            "a": "Die Ärztin erlaubt es nicht.",
+            "why": "erlaubt ثانياً ← es ← nicht آخراً."
+          },
+          {
+            "tokens": [
+              "sehr",
+              "wichtig.",
+              "ist",
+              "Impfung",
+              "Die"
+            ],
+            "a": "Die Impfung ist sehr wichtig.",
+            "why": "ist ثانياً ← sehr wichtig."
           }
         ],
         "interleavedWith": [
-          "rauchen",
-          "thermometer"
+          "finger",
+          "arzt",
+          "grad",
+          "morgen",
+          "heute",
+          "aerztin"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "kc-2",
+            "speakText": "Ich fühle mich viel besser, danke! Das Thermometer zeigt 37 Grad. Kein Fieber mehr!",
+            "a": "Ich fühle mich viel besser, danke! Das Thermometer zeigt 37 Grad. Kein Fieber mehr!",
+            "why": "fühle بـü وh صامتة · mich بـch · Thermometer بـTh · Grad بـd آخراً تُنطق t."
+          },
+          {
+            "audioId": "kc-6",
+            "speakText": "Eine Wunde? Was hast du gemacht?",
+            "a": "Eine Wunde? Was hast du gemacht?",
+            "why": "Wunde بحرف كبير · Was بحرف كبير أول السؤال · gemacht بـch."
+          },
+          {
+            "audioId": "kc-15",
+            "speakText": "Warum? Ist sie krank?",
+            "a": "Warum? Ist sie krank?",
+            "why": "Warum بحرف كبير · krank بـk في الآخر."
+          },
+          {
+            "audioId": "kc-17",
+            "speakText": "Raucht er viel?",
+            "a": "Raucht er viel?",
+            "why": "Raucht بـau وcht · er · viel بـie."
+          },
+          {
+            "audioId": "word-fuehlen",
+            "speakText": "sich fühlen.",
+            "a": "sich fühlen.",
+            "why": "fühlen — ü طويلة · h صامتة تطيل الحركة."
+          },
+          {
+            "audioId": "word-verbinden",
+            "speakText": "verbinden.",
+            "a": "verbinden.",
+            "why": "verbinden — ver‑ تُنطق fer · i قصيرة."
+          },
+          {
+            "audioId": "word-wunde",
+            "speakText": "die Wunde.",
+            "a": "die Wunde.",
+            "why": "Wunde — W تُنطق v · u قصيرة · ‑e آخراً."
+          },
+          {
+            "audioId": "word-bluten",
+            "speakText": "bluten.",
+            "a": "bluten.",
+            "why": "bluten — u طويلة · t واحدة."
+          },
+          {
+            "audioId": "word-spritze",
+            "speakText": "die Spritze.",
+            "a": "die Spritze.",
+            "why": "Spritze — Sp أول الكلمة تُنطق schp · tz تُنطق ts."
+          },
+          {
+            "audioId": "word-impfung",
+            "speakText": "die Impfung.",
+            "a": "die Impfung.",
+            "why": "Impfung — pf صوتان معاً · ‑ung."
+          },
+          {
+            "audioId": "word-schlucken",
+            "speakText": "schlucken.",
+            "a": "schlucken.",
+            "why": "schlucken — sch ثم l · u قصيرة · ck."
+          },
+          {
+            "audioId": "word-pflaster",
+            "speakText": "das Pflaster.",
+            "a": "das Pflaster.",
+            "why": "Pflaster — pf أول الكلمة · a قصيرة · ‑er."
+          }
+        ],
+        "interleavedWith": [
+          "grad",
+          "krank",
+          "fieber",
+          "viel"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Helfer wählen (haben/sein) und den Zustand beschreiben",
-        "a": "x",
-        "ar": "اختيار المساعد ووصف الحالة"
+        "de": "Wie fühlst du dich? — Ich fühle mich besser, aber ich habe eine Wunde am Finger. · Was hast du gemacht? — Der Finger hat geblutet. Eine Frau hat die Wunde verbunden. · Bist du zum Arzt gegangen? — Ja, und ich habe eine Impfung bekommen. · Rauchen Sie nicht!",
+        "ar": "زميلك يسأل كيف تشعر — تجيب بـsich fühlen وتحكي جرحاً صغيراً بثلاث جمل ماضٍ (اثنتان بـhaben وواحدة بـsein) وتنقل أمر الطبيب بـSie — ثم تعكسان الأدوار"
       },
       "situation": {
-        "de": "Erzähle deinen Tag: Was war gestern? Wie fühlst du dich heute?",
-        "a": "x",
-        "ar": "إحكي يومك: ماذا كان أمس؟ كيف تشعر اليوم؟"
+        "de": "Am Handy, am Abend: Wie fühlst du dich? — Besser, danke. Das Thermometer zeigt 37 Grad. Aber der Finger hat geblutet. — Hast du ein Pflaster? — Ja, eine Frau hat die Wunde verbunden. — Bist du zum Arzt gegangen? — Ja. Ich habe eine Spritze bekommen. Der Arzt sagt: Rauchen Sie nicht!",
+        "ar": "مكالمة مسائية: زميلك مريض منذ أيام وجرح إصبعه اليوم — تسأله كيف يشعر وماذا حدث وهل ذهب إلى الطبيب وماذا قال الطبيب"
       },
       "successCriteria": [
-        "جملتان بالماضي (واحدة haben وأخرى sein — الاختيار مبرَّر) + جملة sich fühlen + جملة نصيحة (Imperativ)"
+        "سؤال وجواب بـsich fühlen بالضمير الصحيح (Wie fühlst du dich? · Ich fühle mich besser. · Sie fühlt sich gut.)",
+        "جملتان بـhaben (hat geblutet · hat verbunden · habe geschluckt · hat geraucht · habe bekommen) وجملة بـsein (bin gegangen · ist geblieben · ist gekommen) — المساعد ثانياً والتصريف الثالث آخراً",
+        "أمر بـSie من الطبيب (Rauchen Sie nicht! · Schlucken Sie die Tablette!) أو قوس مع kann/muss (Ich kann nicht gut schlucken. · Ich muss Tabletten nehmen.)",
+        "كلمتان من اليوم على الأقل: Wunde · Blut · Pflaster · Thermometer · Grad · Spritze · Impfung"
       ]
     }
   },
@@ -145,20 +692,64 @@
       {
         "items": [
           {
-            "q": "«أشعر بتحسن»؟",
-            "a": "Ich fühle mich besser."
+            "q": "«أشعر بخير»؟",
+            "choices": [
+              "Ich fühle mich gut.",
+              "Ich fühle gut.",
+              "Ich fühle mir gut."
+            ],
+            "a": "Ich fühle mich gut.",
+            "why": "sich fühlen منعكس بالأكوزاتيف: mich."
           },
           {
-            "q": "«الجرح»؟",
-            "a": "die Wunde"
+            "q": "«نزف الجرح»؟",
+            "choices": [
+              "Die Wunde hat geblutet.",
+              "Die Wunde ist geblutet.",
+              "Die Wunde hat gebluten."
+            ],
+            "a": "Die Wunde hat geblutet.",
+            "why": "bluten ⇒ haben · geblutet منتظم."
           },
           {
-            "q": "«الدم»؟",
-            "a": "das Blut"
+            "q": "«ذهب أبي إلى الطبيب»؟",
+            "choices": [
+              "Mein Vater ist zum Arzt gegangen.",
+              "Mein Vater hat zum Arzt gegangen.",
+              "Mein Vater ist zum Arzt gehen."
+            ],
+            "a": "Mein Vater ist zum Arzt gegangen.",
+            "why": "gehen حركة ⇒ sein."
           },
           {
-            "q": "«ينزف»؟",
-            "a": "bluten (die Wunde blutet)"
+            "q": "«لا تدخّنوا هنا!» (رسمي)؟",
+            "choices": [
+              "Rauchen Sie hier nicht!",
+              "Sie rauchen hier nicht!",
+              "Nicht rauchen Sie hier!"
+            ],
+            "a": "Rauchen Sie hier nicht!",
+            "why": "الأمر بـSie: الفعل أولاً ثم Sie."
+          },
+          {
+            "q": "«هل عندك لاصقة؟»؟",
+            "choices": [
+              "Hast du ein Pflaster?",
+              "Hast du eine Pflaster?",
+              "Hast du einen Pflaster?"
+            ],
+            "a": "Hast du ein Pflaster?",
+            "why": "das Pflaster محايد ⇒ ein."
+          },
+          {
+            "q": "«أين ميزان الحرارة؟»؟",
+            "choices": [
+              "Wo ist das Thermometer?",
+              "Wo ist der Thermometer?",
+              "Wo ist die Thermometer?"
+            ],
+            "a": "Wo ist das Thermometer?",
+            "why": "das Thermometer محايد — ‑meter محايد."
           }
         ],
         "passingScore": 0.75
@@ -166,20 +757,64 @@
       {
         "items": [
           {
-            "q": "«حقنة» و«تطعيم»؟",
-            "a": "die Spritze / die Impfung"
+            "q": "«هل تشعرون بتحسّن؟» (رسمي)؟",
+            "choices": [
+              "Fühlen Sie sich besser?",
+              "Fühlen Sie Ihnen besser?",
+              "Fühlen Sie mich besser?"
+            ],
+            "a": "Fühlen Sie sich besser?",
+            "why": "Sie → sich — المنعكس للمخاطَب الرسمي."
           },
           {
-            "q": "«يبلع»؟",
-            "a": "schlucken"
+            "q": "«ضمّد الطبيب الجرح»؟",
+            "choices": [
+              "Der Arzt hat die Wunde verbunden.",
+              "Der Arzt ist die Wunde verbunden.",
+              "Der Arzt hat die Wunde verbinden."
+            ],
+            "a": "Der Arzt hat die Wunde verbunden.",
+            "why": "verbinden ⇒ haben · بلا ge‑."
           },
           {
-            "q": "«لا تدخّنوا!»؟",
-            "a": "Rauchen Sie nicht!"
+            "q": "«أخذتُ حقنة»؟",
+            "choices": [
+              "Ich habe eine Spritze bekommen.",
+              "Ich bin eine Spritze bekommen.",
+              "Ich habe eine Spritze bekomme."
+            ],
+            "a": "Ich habe eine Spritze bekommen.",
+            "why": "bekommen ⇒ haben · بلا ge‑ (be‑)."
           },
           {
-            "q": "«الطبيب لا يسمح»؟",
-            "a": "Der Arzt erlaubt es nicht."
+            "q": "«لا تستطيع لينا البلع جيداً»؟",
+            "choices": [
+              "Lena kann nicht gut schlucken.",
+              "Lena kann schlucken nicht gut.",
+              "Lena schluckt nicht gut kann."
+            ],
+            "a": "Lena kann nicht gut schlucken.",
+            "why": "القوس: kann ثانياً والمصدر آخراً."
+          },
+          {
+            "q": "«أمي لا تسمح به»؟",
+            "choices": [
+              "Meine Mutter erlaubt es nicht.",
+              "Meine Mutter erlaubt nicht es.",
+              "Meine Mutter erlauben es nicht."
+            ],
+            "a": "Meine Mutter erlaubt es nicht.",
+            "why": "erlaubt ثانياً · es قبل nicht."
+          },
+          {
+            "q": "«التطعيم مهم»؟",
+            "choices": [
+              "Die Impfung ist wichtig.",
+              "Der Impfung ist wichtig.",
+              "Das Impfung ist wichtig."
+            ],
+            "a": "Die Impfung ist wichtig.",
+            "why": "die Impfung — ‑ung مؤنث دائماً."
           }
         ],
         "passingScore": 0.75
@@ -187,20 +822,64 @@
       {
         "items": [
           {
-            "q": "«عندي 38 درجة»؟",
-            "a": "Ich habe 38 Grad (Fieber)."
+            "q": "«هي تشعر بتحسّن»؟",
+            "choices": [
+              "Sie fühlt sich besser.",
+              "Sie fühlt mich besser.",
+              "Sie fühlt besser."
+            ],
+            "a": "Sie fühlt sich besser.",
+            "why": "sie → sich — المنعكس للغائبة."
           },
           {
-            "q": "«ميزان الحرارة»؟",
-            "a": "das Thermometer"
+            "q": "«دخّن أمس»؟",
+            "choices": [
+              "Er hat gestern geraucht.",
+              "Er ist gestern geraucht.",
+              "Er hat gestern rauchen."
+            ],
+            "a": "Er hat gestern geraucht.",
+            "why": "rauchen بلا حركة ⇒ haben · geraucht."
           },
           {
-            "q": "«لاصقة»؟",
-            "a": "das Pflaster"
+            "q": "«بقينا في البيت»؟",
+            "choices": [
+              "Wir sind zu Hause geblieben.",
+              "Wir haben zu Hause geblieben.",
+              "Wir sind zu Hause bleiben."
+            ],
+            "a": "Wir sind zu Hause geblieben.",
+            "why": "bleiben ⇒ sein (استثناء يُحفظ)."
           },
           {
-            "q": "«بقيتُ في البيت» — أي مساعد؟ ولماذا؟",
-            "a": "bin geblieben — تغيّر حالة (sein)"
+            "q": "«ابلعوا الدواء!» (رسمي)؟",
+            "choices": [
+              "Schlucken Sie das Medikament!",
+              "Sie schlucken das Medikament!",
+              "Schluckt Sie das Medikament!"
+            ],
+            "a": "Schlucken Sie das Medikament!",
+            "why": "الأمر بـSie: Schlucken Sie …!"
+          },
+          {
+            "q": "«الجرح صغير»؟",
+            "choices": [
+              "Die Wunde ist klein.",
+              "Der Wunde ist klein.",
+              "Das Wunde ist klein."
+            ],
+            "a": "Die Wunde ist klein.",
+            "why": "die Wunde — مؤنث."
+          },
+          {
+            "q": "«اليوم يجب أن تذهب إلى الطبيبة»؟",
+            "choices": [
+              "Heute musst du zur Ärztin gehen.",
+              "Heute du musst zur Ärztin gehen.",
+              "Heute musst du gehen zur Ärztin."
+            ],
+            "a": "Heute musst du zur Ärztin gehen.",
+            "why": "Heute أولاً ⇒ musst ثانياً · gehen آخراً."
           }
         ],
         "passingScore": 0.75
@@ -209,53 +888,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die goldene Regel: Symptom/Krankheit = haben (38 Grad Fieber), Bewegung/Veränderung = sein (geblieben, verschwunden). Ich fühle mich besser — und: Rauchen Sie nicht!",
-      "ar": "القاعدة الذهبية: عَرَض/مرض = haben (38 درجة) · حركة/تغيّر = sein (بقيتُ · اختفى). أشعر بتحسن — ولا تدخّنوا!"
+      "de": "sich fühlen: Wie fühlst du dich? · Ich fühle mich besser. · Sie fühlt sich gut. · Wir fühlen uns fit. — haben: Der Finger hat geblutet. · Eine Frau hat die Wunde verbunden. · Ich habe eine Spritze bekommen. · Er hat geraucht. — sein: Ich bin zum Arzt gegangen. · Lena ist im Bett geblieben. — Ich kann nicht gut schlucken. · Morgen muss ich zum Arzt gehen. · Rauchen Sie nicht! · Das Thermometer zeigt 37 Grad. · Ich brauche ein Pflaster. · Die Impfung ist wichtig.",
+      "ar": "sich fühlen فعل منعكس: الضمير بالأكوزاتيف بعد الفعل (mich · dich · sich · uns) · المساعد في الماضي من معنى الفعل: haben لما بلا حركة (bluten · verbinden · schlucken · rauchen · erlauben · bekommen — وver‑/be‑/er‑ بلا ge‑) وsein للحركة وbleiben · القوس: kann/muss ثانياً والمصدر آخراً · الأمر بـSie: الفعل أولاً · كلمات اليوم: die Wunde · das Blut · bluten · die Spritze · die Impfung · das Thermometer · das Pflaster · Grad"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich bin 38 Grad Fieber~~ / ~~Ich habe zu Hause geblieben~~",
-          "ar": "قاعدة القرار: **العَرَض = haben** · **الحركة/التغيّر = sein** — القلنسوة للـ«كيف» والثانية للـ«أين»"
+          "de": "~~Ich fühle besser.~~ · ~~Ich fühle gut.~~ · ~~Ich fühle mir gut.~~ · ~~Wie fühlst du?~~",
+          "ar": "sich fühlen لا يأتي بلا ضمير منعكس — وبالأكوزاتيف: mich · dich · sich · uns"
         },
-        "whyArabicSpeakerFails": "«عندي 38» ملكية بالعربية (لها = haben) — لكن «بقيتُ» حركة بالعربية والالماني يعاملها تغيّر حالة = sein — القاعدة أولاً: هل تغيّر شيء (مَكان/حالة)؟ = bin · هل كان عَرَضاً أو فعلاً في مكانه؟ = habe (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أشعر بتحسّن» في العربية بلا ضمير عائد على الفاعل، فيترجم المتعلم fühlen وحدها: ~~Ich fühle besser~~ — أو يضع الداتيف قياساً على Es geht mir gut. والألمانية تجعل fühlen بهذا المعنى منعكساً دائماً وبالأكوزاتيف: Ich fühle mich · du fühlst dich · er/sie fühlt sich · wir fühlen uns · Sie fühlen sich — كما mich في Ich freue mich وIch ziehe mich an (الوحدتان 2 و7) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich habe 38 Grad Fieber. · Ich bin zu Hause geblieben.",
-          "ar": "عندي 38 درجة. · بقيتُ في البيت."
+          "de": "Ich fühle mich besser. · Ich fühle mich gut. · Wie fühlst du dich?",
+          "ar": "أشعر بتحسّن · أشعر بخير · كيف تشعر؟"
         },
         "exercise": {
-          "q": "أكمل: Ich ___ gehustet (haben/sein) · Ich ___ verschwunden.",
-          "a": "habe / bin"
+          "q": "Meine Mutter fühlt ___ heute nicht gut. (mich/dich/sich)",
+          "a": "sich"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich fühle besser~~ / ~~Ich fühle gut~~",
-          "ar": "sich fühlen = يشعر **بنفسه** — ضمير الانعكاس إجباري (mich/dich/sich)"
+          "de": "~~Der Finger ist geblutet.~~ · ~~Der Arzt ist die Wunde verbunden.~~ · ~~Ich bin eine Spritze bekommen.~~",
+          "ar": "bluten وverbinden وbekommen بلا حركة ⇒ haben — وsein لـgehen/kommen/bleiben فقط"
         },
+        "whyArabicSpeakerFails": "بعد درس أمس (sein للحركة وتغيّر الحال) يعمّم المتعلم sein على كل ما «يحدث» للجسم: نزف · ضُمّد · أخذ حقنة. والألمانية تسأل سؤالاً واحداً: هل انتقل الفاعل من مكان إلى مكان أو تغيّرت حاله؟ bluten وverbinden وschlucken وrauchen وerlauben وbekommen — لا ⇒ haben: Der Finger hat geblutet. · Ich habe eine Spritze bekommen. — وما بـver‑/be‑/er‑ بلا ge‑ (verbunden · bekommen · erlaubt) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich fühle mich besser.",
-          "ar": "أشعر بتحسن."
+          "de": "Der Finger hat geblutet. · Der Arzt hat die Wunde verbunden. · Ich habe eine Spritze bekommen.",
+          "ar": "نزف الإصبع · ضمّد الطبيب الجرح · أخذتُ حقنة"
         },
         "exercise": {
-          "q": "أكمل: Er fühlt ___ (sich) gut.",
-          "a": "sich"
-        },
-        "whyArabicSpeakerFails": "«أشعر بتحسن» للاسم بدل الضمير بالعربية؛ الألماني يشطر الإحساس: **sich** fühlen (أنا = mich) — بدون mich الجملة ناقصة — ضمير الانعكاس إجباري (خريطة التداخل 10‑ي)"
+          "q": "Mein Vater ___ gestern viel geraucht. (hat/ist)",
+          "a": "hat"
+        }
       },
       {
         "commonError": {
-          "de": "~~Rauchen nicht Sie!~~ / ~~Rauchen Sie kein!~~",
-          "ar": "النفي في الأمر: Verb + **Sie** + **nicht** (nicht آخر — لا kein ولا قبل Sie)"
+          "de": "~~Sie rauchen nicht!~~ · ~~Nicht rauchen Sie!~~ · ~~Rauchen Sie kein!~~ · ~~Ich kann schlucken nicht gut.~~",
+          "ar": "الأمر بـSie: الفعل أولاً ثم Sie ثم nicht آخراً — والقوس: kann ثانياً والمصدر آخراً"
         },
-        "whyArabicSpeakerFails": "«لا تدخّنوا» نفي قبل الفعل بالعربية؛ الألماني ينفي آخر الجملة: Rauchen Sie **nicht** — الترتيب: فعل + أنتم + نفي — مصيدة النفي-آخر تتكرر في شكل الأمر (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«لا تدخّنوا!» بالعربية تبدأ بـ«لا»، فيبدأ المتعلم بـnicht أو يبقي ترتيب الخبر (Sie rauchen …) — ويستعمل kein مع الفعل. والألمانية في الأمر بـSie تضع الفعل أولاً وSie بعده وnicht في آخر الجملة (u9-d3): Rauchen Sie nicht! · Schlucken Sie die Tablette! — وفي القوس (u9-d5) يبقى المصدر في الآخر مهما طالت الجملة: Ich kann nicht gut schlucken. · Morgen muss ich zum Arzt gehen. — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Rauchen Sie nicht!",
-          "ar": "لا تدخّنوا!"
+          "de": "Rauchen Sie nicht! · Schlucken Sie die Tablette! · Ich kann nicht gut schlucken.",
+          "ar": "لا تدخّنوا! · ابلعوا الحبة! · لا أستطيع البلع جيداً"
         },
         "exercise": {
-          "q": "حوّل: Nehmen Sie die Tablette! → النفي",
-          "a": "Nehmen Sie die Tablette nicht!"
+          "q": "___ Sie viel Wasser! (trinken — الأمر بـSie)",
+          "a": "Trinken"
         }
       }
     ],
@@ -276,12 +955,12 @@
   },
   "gReferences": {
     "duden": [
-      "https://www.duden.de/rechtschreibung/f%C3%BChlen",
+      "https://www.duden.de/rechtschreibung/fuehlen",
       "https://www.duden.de/rechtschreibung/verbinden",
       "https://www.duden.de/rechtschreibung/rauchen"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/f%C3%BChlen"
+      "https://de.wiktionary.org/wiki/fuehlen"
     ],
     "goethe": []
   },

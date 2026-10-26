@@ -2,34 +2,70 @@
 // تشريح الدرس (§3): 6 Slider ← 7 Quiz ← 8 Zusammenfassung — فتُعرض الخلاصة بعد أول محاولة (للمراجعة عند «ليس بعد»).
 // القانون 13 (الجبهة): سؤال الـSlider يُعرض بالعربية فقط — «Wie viel Prozent wirst du schaffen?» فيها ما لم يُتعلَّم بعد.
 import { useRef, useState } from "react";
-import type { Lesson } from "../../content/schemas/index.js";
+import type { OpenQuiz, QuizAnswer, QuizItem } from "../../content/schemas/index.js";
 import { displayOrder } from "../lib/practice-session.js";
 import {
   advanceQuiz, answerQuizItem, calibrationNoteAr, canRetryInSession, creditOf, currentQuizItem, isAnswered, isComplete,
-  judgeQuizItem, needsJudgment, outcomeHeadlineAr, predictScore, quizOutcome, startQuizAttempt, verdictNoteAr,
-  type QuizAttempt, type QuizOutcome,
+  judgeQuizItem, needsJudgment, outcomeHeadlineAr, predictScore, quizOutcome, restoreQuizAttempt, startQuizAttempt, verdictNoteAr,
+  type QuizAttempt, type QuizForms, type QuizOutcome,
 } from "../lib/quiz-session.js";
+import { audioPlayer } from "../lib/audio-player.js";
 import { UmlautKeys, insertAtCursor } from "./LessonContent.js";
 import { StruckText } from "./StruckText.js";
 
-export type QuizLesson = Pick<Lesson, "id" | "quiz" | "slider">;
+export type QuizLesson = QuizForms;
 
 export function QuizStation({
   lesson,
   priorAttempts,
   onAttemptComplete,
+  initialQuiz,
+  onQuizProgress,
+  onGrade,
+  audio,
 }: {
   lesson: QuizLesson;
   /** محاولات مسجّلة قبل هذه الحصة — تحدد النسخة (قانون 21) */
   priorAttempts: number;
   /** يُنادى مرة واحدة عند اكتمال كل محاولة (نجاحاً أو «ليس بعد») */
   onAttemptComplete: (outcome: QuizOutcome) => void;
+  /** N-006: لقطة محاولة سابقة تُستأنف (fail-safe داخل restoreQuizAttempt) */
+  initialQuiz?: OpenQuiz;
+  /** N-006: يُنادى عند كل تغيّر في المحاولة (توقّع/إجابة/حكم/انتقال/إعادة) */
+  onQuizProgress?: (snap: OpenQuiz) => void;
+  /** N-150 (D250): يُنادى عند كل إجابة غير كاملة (للدفتر الذهبي — close/wrong/self-wrong) */
+  onGrade?: (g: { item: QuizItem; given: string; verdict: QuizAnswer["verdict"] }) => void;
+  /** D285: صوت البند (الاستماع) — المسارات والسماح لكل فهرس · زر 🔊 بعدّاد */
+  audio?: {
+    tracksFor: (item: QuizLesson["quiz"]["variants"][number]["items"][number], index: number) => readonly string[];
+    textFor?: (item: QuizLesson["quiz"]["variants"][number]["items"][number], index: number) => string;
+    playsFor: (item: QuizLesson["quiz"]["variants"][number]["items"][number], index: number) => number;
+  };
 }) {
   const variantCount = lesson.quiz.variants.length;
   const [base] = useState(priorAttempts);
   const [sessionAttempts, setSessionAttempts] = useState(0);
-  const [attempt, setAttempt] = useState<QuizAttempt>(() => startQuizAttempt(lesson, priorAttempts));
-  const [outcome, setOutcome] = useState<QuizOutcome | null>(null);
+  // N-006: نسخ أُكملت في هذا الجلوس — الإعادة تتخطاها (حافة: استئناف محاولة ثانية مقطوعة ثم إكمالها ثم الإعادة)
+  const [sittingVariants, setSittingVariants] = useState<number[]>([]);
+  const [usedPlays, setUsedPlays] = useState<Record<string, number>>({}); // D285: السماع المستهلَك لكل بند (نسخة:فهرس)
+  const [playing, setPlaying] = useState(false); // D285: تشغيل جارٍ (منع التداخل)
+  const nextVariant = (from: number): number => {
+    let c = from % variantCount;
+    while (sittingVariants.includes(c)) c = (c + 1) % variantCount;
+    return c;
+  };
+  const [attempt, setAttempt] = useState<QuizAttempt>(() =>
+    initialQuiz ? restoreQuizAttempt(lesson, initialQuiz) : startQuizAttempt(lesson, priorAttempts),
+  );
+  const [outcome, setOutcome] = useState<QuizOutcome | null>(() =>
+    // N-006: محاولة مكتملة مستعادة ← نتيجتها حاضرة (مع زر الإعادة عند «ليس بعد»)
+    initialQuiz && isComplete(restoreQuizAttempt(lesson, initialQuiz)) ? quizOutcome(restoreQuizAttempt(lesson, initialQuiz)) : null,
+  );
+  /** N-006: تغيير المحاولة + دفع اللقطة للحفظ */
+  const push = (a: QuizAttempt) => {
+    setAttempt(a);
+    onQuizProgress?.({ variantIndex: a.variantIndex, predicted: a.predicted, answers: [...a.answers], cursor: a.cursor });
+  };
   const lo = Math.max(0, lesson.slider.min);
   const hi = Math.min(100, lesson.slider.max);
   const [prediction, setPrediction] = useState(Math.round((lo + hi) / 2 / 5) * 5);
@@ -61,7 +97,7 @@ export function QuizStation({
           <output data-testid="quiz-prediction">{prediction}%</output>
         </label>
         <p>
-          <button data-testid="quiz-start" onClick={() => setAttempt(predictScore(attempt, prediction))}>
+          <button data-testid="quiz-start" onClick={() => push(predictScore(attempt, prediction))}>
             ابدأ الاختبار
           </button>
         </p>
@@ -106,7 +142,7 @@ export function QuizStation({
           <button
             data-testid="quiz-retry"
             onClick={() => {
-              setAttempt(startQuizAttempt(lesson, base + sessionAttempts));
+              push(startQuizAttempt(lesson, nextVariant(base + sessionAttempts)));
               setOutcome(null);
               setText("");
             }}
@@ -116,8 +152,9 @@ export function QuizStation({
         )}
         {!outcome.passed && !retry && (
           <p data-testid="quiz-no-retry">
-            استعملت النسخ الثلاث في هذه الحصة — الإعادة الآن تختبر حفظ الإجابات لا الإتقان. راجع الخلاصة والمصائد أدناه؛ الدرس يبقى
-            مفتوحاً لحصتك القادمة.
+            {variantCount === 1
+              ? "هذه النسخة الوحيدة في هذه الحصة — الإعادة الآن تختبر حفظ الإجابات لا الإتقان. راجع المصائد أدناه؛ والقسم مفتوح لحصتك القادمة."
+              : "استعملت النسخ الثلاث في هذه الحصة — الإعادة الآن تختبر حفظ الإجابات لا الإتقان. راجع الخلاصة والمصائد أدناه؛ الدرس يبقى مفتوحاً لحصتك القادمة."}
           </p>
         )}
       </section>
@@ -127,16 +164,25 @@ export function QuizStation({
   const item = currentQuizItem(attempt)!;
   const answered = isAnswered(attempt);
   const answer = answered ? attempt.answers[attempt.cursor]! : null;
-  const submit = (given: string) => setAttempt(answerQuizItem(attempt, given));
+  const submit = (given: string) => {
+    const na = answerQuizItem(attempt, given);
+    push(na);
+    const ans = na.answers[attempt.cursor];
+    if (ans && ans.verdict !== "correct" && ans.verdict !== "judge")
+      onGrade?.({ item, given, verdict: ans.verdict });
+  };
   const next = () => {
     const after = advanceQuiz(attempt);
     setText("");
-    setAttempt(after);
     if (isComplete(after)) {
       const o = quizOutcome(after);
       setOutcome(o);
       setSessionAttempts(sessionAttempts + 1);
+      setSittingVariants((sv) => (sv.includes(after.variantIndex) ? sv : [...sv, after.variantIndex]));
+      push(after);
       onAttemptComplete(o);
+    } else {
+      push(after);
     }
   };
 
@@ -148,6 +194,33 @@ export function QuizStation({
       <p dir="auto" data-testid="quiz-question">
         <StruckText text={item.q} />
       </p>
+      {audio && audio.tracksFor(item, attempt.cursor).length > 0 && (
+        <p>
+          <button
+            data-testid="quiz-play"
+            disabled={playing || audio.playsFor(item, attempt.cursor) - (usedPlays[`${attempt.variantIndex}:${attempt.cursor}`] ?? 0) <= 0}
+            onClick={() => {
+              const key = `${attempt.variantIndex}:${attempt.cursor}`;
+              const tracks = audio.tracksFor(item, attempt.cursor);
+              const text = audio.textFor?.(item, attempt.cursor) ?? item.q;
+              setPlaying(true);
+              void (async () => {
+                let ok = true;
+                for (const trackId of tracks) {
+                  const out = await audioPlayer().play({ trackId, text });
+                  if (out !== "clip" && out !== "speech") ok = false;
+                }
+                if (ok) setUsedPlays((u) => ({ ...u, [key]: (u[key] ?? 0) + 1 }));
+                setPlaying(false);
+              })();
+            }}
+          >
+            {playing
+              ? "جارٍ التشغيل…"
+              : `🔊 استمع (متبقٍ ${Math.max(0, audio.playsFor(item, attempt.cursor) - (usedPlays[`${attempt.variantIndex}:${attempt.cursor}`] ?? 0))})`}
+          </button>
+        </p>
+      )}
       {item.choices ? (
         <p>
           {displayOrder(item.choices, `${lesson.id}|${attempt.variantIndex}|${item.q}`).map((c, i) => (
@@ -192,10 +265,14 @@ export function QuizStation({
           )}
           {needsJudgment(attempt) ? (
             <p>
-              <button data-testid="quiz-judge-yes" onClick={() => setAttempt(judgeQuizItem(attempt, true))}>
+              <button data-testid="quiz-judge-yes" onClick={() => push(judgeQuizItem(attempt, true))}>
                 إجابتي صحيحة بصيغة أخرى
               </button>{" "}
-              <button data-testid="quiz-judge-no" onClick={() => setAttempt(judgeQuizItem(attempt, false))}>
+              <button data-testid="quiz-judge-no" onClick={() => {
+                const prev = attempt.answers[attempt.cursor]?.given ?? "";
+                push(judgeQuizItem(attempt, false));
+                onGrade?.({ item, given: prev, verdict: "self-wrong" });
+              }}>
                 أخطأت
               </button>
             </p>

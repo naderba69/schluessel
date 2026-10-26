@@ -5,12 +5,12 @@
 // المبادئ: (1) المانيفست مصدر الحقيقة لصوت كل شخصية (القانون 11) · (2) لا إعادة توليد لسطر لم يتغير
 // (VITS عشوائي — فخ موثَّق) · (3) أسطر محذوفة من السكربت ← مساراتها وملفاتها تُزال · (4) المانيفست
 // يُتحقق منه بـzod قبل الكتابة — لا يُكتب مانيفست مكسور أبداً · (5) القياسات كلها من الملف الفعلي.
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { AudioManifest, AudioScript } from "../content/schemas/index.js";
+import { AudioManifest, AudioScript, lineLengthScale } from "../content/schemas/index.js";
 import {
   buildTrack, expectedVoice, planScript, scriptTrackFile,
   type ClipMeasurement, type TrackLike,
@@ -77,6 +77,11 @@ export function runSplitter(opts: {
   if (unknown.length > 0) throw new Error(`أسطر غير موجودة في السكربتات المعطاة: ${unknown.join(", ")} — لا تجاهل صامت`);
 
   for (const script of scripts) {
+    // D196: معرّف سطر يملكه سكربت آخر (بادئة مكرّرة — ws-/wf- في u8-d2/u9-d3) يُرفض قبل أي توليد؛ وإلا استُبدلت مسارات درس آخر صامتةً
+    const dir = scriptTrackFile(script.id, "x").replace(/x\.opus$/, "");
+    const byId = tracksById();
+    const stolen = script.lines.map((l) => byId.get(l.id)).filter((t): t is TrackLike => !!t && !t.file.startsWith(dir));
+    if (stolen.length > 0) throw new Error(`بادئة مكرّرة: ${stolen.map((t) => `${t.id} ← ${t.file}`).slice(0, 3).join(" · ")} — اختر بادئة أسطر أخرى للسكربت ${script.id}`);
     const base = opts.force
       ? { generate: script.lines, keep: [] }
       : planScript(script, tracksById(), raw.characterVoices, fileHashOk);
@@ -90,7 +95,7 @@ export function runSplitter(opts: {
       const voice = expectedVoice(line.speaker, raw.characterVoices);
       report.generated.push(line.id);
       if (opts.dryRun) continue;
-      const m = generate(voice, line.text, join(contentRoot, scriptTrackFile(script.id, line.id)), script.lengthScale);
+      const m = generate(voice, line.text, join(contentRoot, scriptTrackFile(script.id, line.id)), lineLengthScale(script, line));
       const track = buildTrack(script, line, voice, m);
       const i = raw.tracks.findIndex((t) => t.id === line.id);
       if (i >= 0) raw.tracks[i] = track;
@@ -137,4 +142,13 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   console.log(`سكربتات: ${files.length} | وُلّد: ${r.generated.length} | بقي كما هو: ${r.kept.length} | أُزيل: ${r.pruned.length}${r.written ? " | المانيفست حُدِّث" : ""}`);
   for (const id of r.generated) console.log(`  + ${id}`);
   for (const id of r.pruned) console.log(`  − ${id}`);
+  // D197: ما كان يُنسى بعد كل حوار جديد (N-099) يجري هنا آلياً — مزامنة معجم النطق ودفتر القصة؛ فشلهما يُرى لا يُبلع
+  if (r.written) {
+    for (const [cmd, argv] of [["python3", ["tools/dev/lexicon-sync.py", "--write"]], ["npx", ["tsx", "tools/dev/story-sentences.ts", "--write"]]] as const) {
+      const p = spawnSync(cmd, [...argv], { cwd: ROOT, encoding: "utf8" });
+      const last = (p.stdout + p.stderr).trim().split("\n").filter(Boolean).pop() ?? "";
+      console.log(`  ${p.status === 0 ? "↻" : "✗"} ${last}`);
+      if (p.status !== 0) process.exitCode = 1;
+    }
+  }
 }

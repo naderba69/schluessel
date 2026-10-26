@@ -41,7 +41,7 @@ function main() {
     const count = (k: "rule" | "practice" | "quiz") => st.filter((s) => s[k] === "done").length;
     const full = st.filter((s) => s.rule === "done" && s.practice === "done" && s.quiz === "done").length;
     const next = st.find((s) => !(s.rule === "done" && s.practice === "done" && s.quiz === "done"));
-    console.log(`${plan.id} (${plan.decision}) — ${st.length} درس محتوى · الوحدات ${plan.scope.fromUnit}–${plan.scope.toUnit}`);
+    console.log(`${plan.id} (${plan.decision}) — ${st.length} درساً في الخطة · الوحدات ${plan.scope.fromUnit}–${plan.scope.toUnit}`);
     console.log(`  القاعدة ${count("rule")}/${st.length} · التطبيق ${count("practice")}/${st.length} · Quiz ${count("quiz")}/${st.length} · مكتمل ${full}/${st.length}`);
     if (next) console.log(`  التالي: ${next.lessonId} (npx tsx tools/upgrade-status.ts --lesson ${next.lessonId})`);
     const issues = checkUpgrade(plan, ctx);

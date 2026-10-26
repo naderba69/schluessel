@@ -1,0 +1,416 @@
+{
+  "audioManifestRefs": [
+    "word-ferien",
+    "word-streiten",
+    "word-erinnern",
+    "word-hoffen",
+    "word-wunsch",
+    "word-traum",
+    "word-traeumen",
+    "word-angst",
+    "word-weinen",
+    "word-traurig",
+    "word-heft",
+    "word-sehr",
+    "word-wirklich"
+  ],
+  "canDoDaily": [
+    "يكتب 6 جمل ماضٍ في كراسه (3 أحداث Perfekt + 3 أوصاف war/hatte) بترتيب زمني",
+    "يميز war/hatte (الحال والوصف) من Perfekt (الحدث) ويصرف الانعكاسي الجديد (sich erinnern/streiten)"
+  ],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "ferien",
+      "streiten",
+      "erinnern",
+      "hoffen",
+      "wunsch",
+      "traum",
+      "traeumen",
+      "angst",
+      "weinen",
+      "traurig",
+      "heft",
+      "sehr",
+      "wirklich"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 1 «Und was machst du?» — über Vergangenes berichten (فهرس Klett الرسمي — D108)"
+  },
+  "day": 4,
+  "einstieg": {
+    "guidedRetrieval": [
+      "من d3: sich ärgern ← hat sich geärgert (sich بعد المساعد) · sogar/außerdem (ترتيب الحكي)",
+      "من A1: war/hatte في ars-perfekt (u11: Hattest du…؟) — واليوم نستعملها في الكتابة"
+    ],
+    "pretestItems": [
+      {
+        "answer": "Ich war traurig.",
+        "choices": [
+          "Ich war traurig.",
+          "Ich habe traurig gewesen.",
+          "Ich habe traurig gehabt."
+        ],
+        "prompt": {
+          "ar": "«كنتُ حزيناً» — war أم Perfekt؟"
+        },
+        "revealNextSession": true
+      },
+      {
+        "answer": "Ich habe mich an den Urlaub erinnert.",
+        "choices": [
+          "Ich habe mich an den Urlaub erinnert.",
+          "Ich habe an den Urlaub mich erinnert.",
+          "Ich habe an den Urlaub erinnert."
+        ],
+        "prompt": {
+          "ar": "«تذكرتُ العطلة» — أين sich؟"
+        },
+        "revealNextSession": true
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Ferien",
+      "https://www.duden.de/rechtschreibung/streiten",
+      "https://www.duden.de/rechtschreibung/Angst"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/wirklich"
+    ]
+  },
+  "id": "a2-u1-d4",
+  "imageManifestRefs": [],
+  "kind": "content",
+  "level": "A2",
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-perfekt"
+    ],
+    "riskFlagsShown": [
+      "reflexive",
+      "feste-praep",
+      "v2-order",
+      "adjective-decl"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "ferien",
+      "streiten",
+      "erinnern",
+      "hoffen",
+      "wunsch",
+      "traum",
+      "traeumen",
+      "angst",
+      "weinen",
+      "traurig",
+      "heft",
+      "sehr",
+      "wirklich"
+    ]
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "a": "Ich habe mich an den Urlaub erinnert.",
+            "q": "«تذكرتُ العطلة»؟"
+          },
+          {
+            "a": "Ich war traurig.",
+            "q": "«كنتُ حزيناً»؟"
+          },
+          {
+            "a": "Es war sehr schön.",
+            "q": "«كان جميلاً جداً»؟"
+          },
+          {
+            "a": "die Ferien (جمع فقط — بلا مفرد)",
+            "q": "«العطلة المدرسية» — الجمع؟"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "Wir haben uns gestritten.",
+            "q": "«تشاجرنا»؟"
+          },
+          {
+            "a": "Ich hatte Angst.",
+            "q": "«كنتُ خائفاً»؟"
+          },
+          {
+            "a": "Mein Wunsch war ein Hund.",
+            "q": "«أمنيتي كانت كلباً»؟"
+          },
+          {
+            "a": "das Heft → die Hefte",
+            "q": "«كراس» — الأداة والجمع؟"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "Ich habe geweint.",
+            "q": "«بكيتُ»؟"
+          },
+          {
+            "a": "Ich habe vom Meer geträumt.",
+            "q": "«حلمتُ بالبحر»؟"
+          },
+          {
+            "a": "Es war wirklich schön.",
+            "q": "«كان جميلاً فعلاً»؟"
+          },
+          {
+            "a": "der Traum → die Träume",
+            "q": "«حلم» — الأداة والجمع؟"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "ar": "كتابة 6 جمل يوميات",
+        "de": "6 Tagebuch-Sätze schreiben"
+      },
+      "situation": {
+        "ar": "كراسك مفتوح: «اكتب 6 جمل عن عطلتك — 3 بالماضي المركب و3 بـwar/hatte»",
+        "de": "Dein Heft liegt offen: »Schreib 6 Sätze über deine Ferien — 3 mit Perfekt, 3 mit war/hatte.«"
+      },
+      "successCriteria": [
+        "6 جمل ماضٍ: 3 أحداث (Perfekt كامل) + 3 أوصاف (war/hatte)",
+        "انعكاسي واحد على الأقل (sich erinnern/streiten) بـsich صحيحة",
+        "sehr/wirklich مرة على الأقل — وترتيب زمني (zuerst · dann · danach)"
+      ]
+    },
+    "stations": [
+      {
+        "explanationRequired": true,
+        "hints": [
+          "وصف أو حال دائم (schön · Angst · traurig) = war/hatte — حدث وقع وانتهى = Perfekt",
+          "sich تتبع الفاعل بعد المساعد: ich ← mich · wir ← uns",
+          "gestritten قوي (ei ← i) كـgeritten — لا -t"
+        ],
+        "interleavedWith": [
+          "sein",
+          "urlaub",
+          "schoen"
+        ],
+        "items": [
+          {
+            "q": "sein ← Es ___ sehr schön. (وصف = ؟)",
+            "a": "war",
+            "why": "الوصف والحال بـwar — لا Perfekt للأوصاف!"
+          },
+          {
+            "q": "haben ← Ich ___ Angst. (حال = ؟)",
+            "a": "hatte",
+            "why": "الحال الدائم بـhatte (كـwar)."
+          },
+          {
+            "q": "sich erinnern ← Ich habe ___ an den Urlaub erinnert.",
+            "a": "mich",
+            "why": "الحدث انعكاسي: haben + الضمير mich بعد المساعد."
+          },
+          {
+            "q": "sich streiten ← Wir haben ___ gestritten. (قوي!)",
+            "a": "uns",
+            "why": "الضمير uns + القوي بـi (كـgeritten في d3!)."
+          },
+          {
+            "q": "weinen ← Ich ___ geweint. (حدث)",
+            "a": "habe",
+            "why": "البكاء حدث (وقع وانتهى): haben + geweint."
+          }
+        ],
+        "type": "verb-bank"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "كل جملة: حدث أم وصف؟ الحدث Perfekt والوصف war/hatte",
+          "an den Urlaub / vom Meer: الحرف جزء من الفعل (erinnern an · träumen von)"
+        ],
+        "interleavedWith": [
+          "schwimmen",
+          "meer",
+          "urlaub"
+        ],
+        "items": [
+          {
+            "q": "Meine Ferien ___ sehr schön. Ich habe jeden Tag im Meer geschwommen.",
+            "a": "waren",
+            "why": "الوصف war (والجمع: waren) — والسباحة حدث (Perfekt)."
+          },
+          {
+            "q": "Ich ___ mich an den Urlaub erinnert. Wir haben uns gut unterhalten.",
+            "a": "habe",
+            "why": "تذكرتُ العطلة (habe + mich!) وتسامرنا (d3 يعود!)."
+          },
+          {
+            "q": "Einmal haben wir uns ___. Ich war traurig und habe geweint. (streiten)",
+            "a": "gestritten",
+            "why": "تشاجرنا (حدث!) فكنتُ حزيناً (حال) وبكيتُ (حدث)."
+          },
+          {
+            "q": "Mein Wunsch ___ ein Hund. Ich habe vom Meer geträumt.",
+            "a": "war",
+            "why": "الأمنية حال (war) — والحلم حدث ليلي (träumen von + داتيف!)."
+          }
+        ],
+        "type": "gap-fill"
+      },
+      {
+        "explanationRequired": true,
+        "interleavedWith": [
+          "urlaub",
+          "schoen",
+          "gestern"
+        ],
+        "items": [
+          {
+            "a": "Es war sehr schön.",
+            "q": "Es hat sehr schön gewesen.",
+            "why": "الوصف بـwar: لا Perfekt للحال"
+          },
+          {
+            "a": "Ich habe mich an den Urlaub erinnert.",
+            "q": "Ich habe an den Urlaub erinnert.",
+            "why": "sich لا تسقط من الانعكاسي أبداً"
+          },
+          {
+            "a": "Wir haben uns gestritten.",
+            "q": "Gestern haben wir uns gestreitet.",
+            "why": "قوي: streiten · stritt · gestritten (كـreiten · ritt · geritten)"
+          },
+          {
+            "a": "Wirklich war ich traurig.",
+            "q": "Wirklich ich war traurig.",
+            "why": "الصدارة تدفع الفعل للثانية (V2 كـsonst/außerdem)"
+          }
+        ],
+        "type": "error-hunt"
+      },
+      {
+        "explanationRequired": true,
+        "interleavedWith": [
+          "hund",
+          "meer",
+          "schwimmen"
+        ],
+        "items": [
+          {
+            "a": "Meine Ferien waren sehr schön. Ich habe jeden Tag im Meer geschwommen. Ich hatte Angst vor Hunden. Wir haben uns einmal gestritten. Ich war traurig und habe geweint. Mein Wunsch war ein Hund — wirklich!",
+            "q": "اقرأ صفحة يومياتك بصوت عالٍ (سجّل): 3 أحداث (Perfekt) + 3 أوصاف (war/hatte) — ابدأ بـ«Meine Ferien…»",
+            "why": "قارن تسجيلك: 3 أحداث Perfekt (geschwommen/…) + 3 أوصاف war/hatte — الحدث يُحكى والحال يُوصف."
+          }
+        ],
+        "type": "speaking"
+      }
+    ]
+  },
+  "unit": 1,
+  "usedArsenalIds": [
+    "ars-perfekt"
+  ],
+  "warmup": {
+    "cardIds": [
+      "urlaub",
+      "schon",
+      "feierabend"
+    ]
+  },
+  "ziel": {
+    "ar": "تكتب 6 جمل يوميات: الماضي للأحداث وwar/hatte للوصف والحال",
+    "de": "Du kannst 6 Tagebuch-Sätze schreiben — Perfekt für Ereignisse, war/hatte für Zustände."
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "ferien",
+      "streiten",
+      "erinnern",
+      "hoffen",
+      "wunsch",
+      "traum",
+      "traeumen",
+      "angst",
+      "weinen",
+      "traurig",
+      "heft",
+      "sehr",
+      "wirklich"
+    ],
+    "summary": {
+      "ar": "كراسي: عطلتي كانت جميلة جداً. تذكرتُ العطلة. تشاجرنا مرة. كنتُ حزيناً وبكيتُ. كنتُ خائفاً من الكلاب. أمنيتي كانت كلباً. النظام: Perfekt (حدث) · war/hatte (حال) · sich (انعكاسي).",
+      "de": "Mein Heft: Meine Ferien waren sehr schön. Ich habe mich an den Urlaub erinnert. Wir haben uns einmal gestritten. Ich war traurig und habe geweint. Ich hatte Angst vor Hunden. Mein Wunsch war ein Hund. Das System: Perfekt (Ereignis) · war/hatte (Zustand) · sich erinnert/gestritten (Reflexiv)."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "الوصف والحال (schön · traurig · Angst) بـwar/hatte — لا Perfekt لهما أبداً",
+          "de": "~~Es hat sehr schön gewesen.~~ · ~~Ich habe traurig gehabt.~~"
+        },
+        "correct": {
+          "ar": "كان جميلاً جداً. · كنتُ خائفاً.",
+          "de": "Es war sehr schön. · Ich hatte Angst."
+        },
+        "exercise": {
+          "a": "war · habe · geschwommen",
+          "q": "war أم Perfekt؟ Es ___ kalt. / Ich ___ im Meer ___. (schwimmen)"
+        },
+        "whyArabicSpeakerFails": "العربية ماضٍ واحد (كان/كنتُ)، فيعمّم المتعلم Perfekt على كل ماضٍ — بينما الألمانية: الحدث المنتهي Perfekt، والحال والوصف war/hatte (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "sich جزء من الفعل لا يسقط: sich erinnern (an) — بدونه الجملة ناقصة",
+          "de": "~~Ich habe an den Urlaub erinnert.~~"
+        },
+        "correct": {
+          "ar": "تذكرتُ العطلة.",
+          "de": "Ich habe mich an den Urlaub erinnert."
+        },
+        "exercise": {
+          "a": "mich",
+          "q": "أكمل: Ich habe ___ an den Urlaub erinnert."
+        },
+        "whyArabicSpeakerFails": "العربية «تذكرتُ» بلا ضمير منفصل، فيسقط المتعلم sich — بينما الألمانية تطلبها بعد المساعد دائماً (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "streiten قوي (streitet · stritt · gestritten — لا -t) وانعكاسي (sich)",
+          "de": "~~Wir haben uns gestreitet.~~"
+        },
+        "correct": {
+          "ar": "تشاجرنا.",
+          "de": "Wir haben uns gestritten."
+        },
+        "exercise": {
+          "a": "gestritten",
+          "q": "gestritten أم gestreitet؟ Wir haben uns ___."
+        },
+        "whyArabicSpeakerFails": "قالب -t المحفوظ (gelacht/gemacht) يُعمَّم، وsich تُنسى — بينما streiten من عائلة reiten: تصريف قوي بـi + sich بعد المساعد (خريطة التداخل 10‑ي)"
+      }
+    ]
+  }
+}

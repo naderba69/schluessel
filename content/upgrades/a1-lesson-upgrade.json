@@ -1,589 +1,1235 @@
 {
-  "schemaVersion": "1.0.0",
-  "id": "a1-lesson-upgrade",
-  "level": "A1",
-  "decision": "D114",
-  "title": {
-    "de": "Ausbau der Lektionen: Regel, Übung, Quiz",
-    "ar": "ترقية شروحات الدروس: قاعدة اليوم والتطبيق والاختبار"
-  },
-  "report": "docs/reports/lesson-explanations-audit.md",
-  "scope": {
-    "fromUnit": 1,
-    "toUnit": 12
-  },
-  "lessons": [
-    {
-      "lessonId": "a1-u1-d1",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena",
-        "Tunis"
-      ]
-    },
-    {
-      "lessonId": "a1-u1-d2",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena"
-      ]
-    },
-    {
-      "lessonId": "a1-u1-d3",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Haddad",
-        "Lena",
-        "Müller"
-      ]
-    },
-    {
-      "lessonId": "a1-u1-d4",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Haddad",
-        "Lena",
-        "Gartenstraße"
-      ]
-    },
-    {
-      "lessonId": "a1-u1-d5",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena",
-        "Nabil"
-      ]
-    },
-    {
-      "lessonId": "a1-u2-d1",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena",
-        "Nabil",
-        "Berlin"
-      ]
-    },
-    {
-      "lessonId": "a1-u2-d2",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena",
-        "Berlin"
-      ]
-    },
-    {
-      "lessonId": "a1-u2-d3",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena",
-        "Berlin"
-      ]
-    },
-    {
-      "lessonId": "a1-u2-d4",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena",
-        "Berlin"
-      ],
-      "misspellings": [
-        {
-          "wrong": "Strasse",
-          "right": "Straße"
-        },
-        {
-          "wrong": "gross",
-          "right": "groß"
-        },
-        {
-          "wrong": "Fuss",
-          "right": "Fuß"
-        },
-        {
-          "wrong": "Tase",
-          "right": "Tasse"
-        },
-        {
-          "wrong": "Kafee",
-          "right": "Kaffee"
-        },
-        {
-          "wrong": "komen",
-          "right": "kommen"
-        },
-        {
-          "wrong": "Wei",
-          "right": "Wie"
-        },
-        {
-          "wrong": "drie",
-          "right": "drei"
-        }
-      ]
-    },
-    {
-      "lessonId": "a1-u2-d5",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Ayşe",
-        "Berlin"
-      ]
-    },
-    {
-      "lessonId": "a1-u3-d1",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena"
-      ],
-      "misspellings": [
-        {
-          "wrong": "einsundzwanzig",
-          "right": "einundzwanzig"
-        },
-        {
-          "wrong": "dreizig",
-          "right": "dreißig"
-        },
-        {
-          "wrong": "sechszig",
-          "right": "sechzig"
-        },
-        {
-          "wrong": "siebenzig",
-          "right": "siebzig"
-        }
-      ]
-    },
-    {
-      "lessonId": "a1-u3-d2",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Yusuf"
-      ]
-    },
-    {
-      "lessonId": "a1-u3-d3",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Ayşe"
-      ]
-    },
-    {
-      "lessonId": "a1-u3-d4",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena",
-        "Berlin"
-      ]
-    },
-    {
-      "lessonId": "a1-u3-d5",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Ayşe"
-      ]
-    },
-    {
-      "lessonId": "a1-u4-d1",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": []
-    },
-    {
-      "lessonId": "a1-u4-d2",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Mia",
-        "Bruno",
-        "Yusuf"
-      ]
-    },
-    {
-      "lessonId": "a1-u4-d3",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Yusuf",
-        "Nabil",
-        "Bruno"
-      ]
-    },
-    {
-      "lessonId": "a1-u4-d4",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Yusuf"
-      ]
-    },
-    {
-      "lessonId": "a1-u4-d5",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Yusuf",
-        "Mia",
-        "Berlin"
-      ]
-    },
-    {
-      "lessonId": "a1-u5-d1",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Yusuf",
-        "Berlin"
-      ]
-    },
-    {
-      "lessonId": "a1-u5-d2",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Yusuf"
-      ]
-    },
-    {
-      "lessonId": "a1-u5-d3",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Yusuf"
-      ]
-    },
-    {
-      "lessonId": "a1-u5-d4",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Yusuf"
-      ]
-    },
-    {
-      "lessonId": "a1-u5-d5",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Yusuf"
-      ]
-    },
-    {
-      "lessonId": "a1-u6-d1",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Yusuf"
-      ]
-    },
-    {
-      "lessonId": "a1-u6-d2",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf"
-      ]
-    },
-    {
-      "lessonId": "a1-u6-d3",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Lena",
-        "Yusuf"
-      ]
-    },
-    {
-      "lessonId": "a1-u6-d4",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf"
-      ]
-    },
-    {
-      "lessonId": "a1-u6-d5",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Berlin"
-      ]
-    },
-    {
-      "lessonId": "a1-u7-d1",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena"
-      ]
-    },
-    {
-      "lessonId": "a1-u7-d2",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena"
-      ]
-    },
-    {
-      "lessonId": "a1-u7-d3",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena",
-        "Berlin"
-      ]
-    },
-    {
-      "lessonId": "a1-u7-d4",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena",
-        "Berlin"
-      ]
-    },
-    {
-      "lessonId": "a1-u7-d5",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena"
-      ]
-    },
-    {
-      "lessonId": "a1-u8-d1",
-      "rule": "done",
-      "practice": "done",
-      "quiz": "done",
-      "properNouns": [
-        "Yusuf",
-        "Lena",
-        "Berlin"
-      ]
-    },
-    {
-      "lessonId": "a1-u8-d2",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u8-d3",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u8-d4",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u8-d5",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u9-d1",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u9-d2",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u9-d3",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u9-d4",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u9-d5",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u10-d1",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u10-d2",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u10-d3",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u10-d4",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u10-d5",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u11-d1",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u11-d2",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u11-d3",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u11-d4",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u11-d5",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u12-d1",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u12-d2",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u12-d3",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u12-d4",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    },
-    {
-      "lessonId": "a1-u12-d5",
-      "rule": "pending",
-      "practice": "pending",
-      "quiz": "pending"
-    }
+ "schemaVersion": "1.0.0",
+ "id": "a1-lesson-upgrade",
+ "level": "A1",
+ "decision": "D114",
+ "title": {
+  "de": "Ausbau der Lektionen: Regel, Übung, Quiz",
+  "ar": "ترقية شروحات الدروس: قاعدة اليوم والتطبيق والاختبار"
+ },
+ "report": "docs/reports/lesson-explanations-audit.md",
+ "scope": {
+  "fromUnit": 1,
+  "toUnit": 15,
+  "kinds": [
+   "content",
+   "integration"
   ]
+ },
+ "lessons": [
+  {
+   "lessonId": "a1-u1-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunis"
+   ]
+  },
+  {
+   "lessonId": "a1-u1-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena"
+   ]
+  },
+  {
+   "lessonId": "a1-u1-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Haddad",
+    "Lena",
+    "Müller"
+   ]
+  },
+  {
+   "lessonId": "a1-u1-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Haddad",
+    "Lena"
+   ]
+  },
+  {
+   "lessonId": "a1-u1-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Nabil"
+   ],
+   "fixedPhrases": [
+    {
+     "de": "Woher kommen Sie?",
+     "whyAr": "صيغة سؤال الأصل الثابتة — ذكر كلمة الدرس woher في قالبها؛ لا تُدرَّس woher بدونها"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u2-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Nabil",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u2-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u2-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u2-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin"
+   ],
+   "misspellings": [
+    {
+     "wrong": "Strasse",
+     "right": "Straße"
+    },
+    {
+     "wrong": "gross",
+     "right": "groß"
+    },
+    {
+     "wrong": "Fuss",
+     "right": "Fuß"
+    },
+    {
+     "wrong": "Tase",
+     "right": "Tasse"
+    },
+    {
+     "wrong": "Kafee",
+     "right": "Kaffee"
+    },
+    {
+     "wrong": "komen",
+     "right": "kommen"
+    },
+    {
+     "wrong": "Wei",
+     "right": "Wie"
+    },
+    {
+     "wrong": "drie",
+     "right": "drei"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u2-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Ayşe",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u3-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena"
+   ],
+   "misspellings": [
+    {
+     "wrong": "einsundzwanzig",
+     "right": "einundzwanzig"
+    },
+    {
+     "wrong": "dreizig",
+     "right": "dreißig"
+    },
+    {
+     "wrong": "sechszig",
+     "right": "sechzig"
+    },
+    {
+     "wrong": "siebenzig",
+     "right": "siebzig"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u3-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Yusuf"
+   ]
+  },
+  {
+   "lessonId": "a1-u3-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Ayşe"
+   ],
+   "fixedPhrases": [
+    {
+     "de": "Wie spät ist es?",
+     "whyAr": "صيغة سؤال الساعة الثابتة — هدف الدرس نفسه (ars-uhrzeit)؛ تُدرَّس كما هي"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u3-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u3-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Ayşe"
+   ],
+   "fixedPhrases": [
+    {
+     "de": "Bitte nicht so schnell!",
+     "whyAr": "صيغة طلب التمهل الثابتة — ذكر كلمة الدرس schnell في تمرين الاستماع؛ لا بديل طبيعي"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u4-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": []
+  },
+  {
+   "lessonId": "a1-u4-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Mia",
+    "Bruno",
+    "Yusuf"
+   ]
+  },
+  {
+   "lessonId": "a1-u4-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Yusuf",
+    "Nabil",
+    "Bruno"
+   ]
+  },
+  {
+   "lessonId": "a1-u4-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Yusuf"
+   ]
+  },
+  {
+   "lessonId": "a1-u4-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Yusuf",
+    "Mia",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u5-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Yusuf",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u5-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Yusuf"
+   ]
+  },
+  {
+   "lessonId": "a1-u5-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Yusuf"
+   ]
+  },
+  {
+   "lessonId": "a1-u5-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Yusuf"
+   ]
+  },
+  {
+   "lessonId": "a1-u5-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Yusuf"
+   ]
+  },
+  {
+   "lessonId": "a1-u6-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Yusuf"
+   ]
+  },
+  {
+   "lessonId": "a1-u6-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf"
+   ]
+  },
+  {
+   "lessonId": "a1-u6-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena",
+    "Yusuf"
+   ]
+  },
+  {
+   "lessonId": "a1-u6-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf"
+   ]
+  },
+  {
+   "lessonId": "a1-u6-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u7-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena"
+   ]
+  },
+  {
+   "lessonId": "a1-u7-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena"
+   ]
+  },
+  {
+   "lessonId": "a1-u7-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u7-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u7-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena"
+   ]
+  },
+  {
+   "lessonId": "a1-u8-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u8-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena"
+   ]
+  },
+  {
+   "lessonId": "a1-u8-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u8-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin",
+    "Tunis"
+   ]
+  },
+  {
+   "lessonId": "a1-u8-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunesien"
+   ]
+  },
+  {
+   "lessonId": "a1-u9-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin",
+    "Tunesien",
+    "Tunis"
+   ]
+  },
+  {
+   "lessonId": "a1-u9-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin",
+    "Tunesien",
+    "Tunis"
+   ]
+  },
+  {
+   "lessonId": "a1-u9-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunesien",
+    "Tunis"
+   ],
+   "fixedPhrases": [
+    {
+     "de": "Können Sie mir helfen?",
+     "whyAr": "صيغة طلب المساعدة الثابتة بـSie — هدف الدرس نفسه (ars-imperativ-sie)؛ تُدرَّس كما هي"
+    },
+    {
+     "de": "Können Sie mir bitte helfen?",
+     "whyAr": "تنويعة bitte للصيغة نفسها — تُدرَّس معها"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u9-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunis"
+   ]
+  },
+  {
+   "lessonId": "a1-u9-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u10-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin",
+    "Tunis"
+   ]
+  },
+  {
+   "lessonId": "a1-u10-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunis",
+    "Mia"
+   ]
+  },
+  {
+   "lessonId": "a1-u10-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunis",
+    "Mia",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u10-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunis",
+    "Berlin"
+   ],
+   "misspellings": [
+    {
+     "wrong": "getelefoniert",
+     "right": "telefoniert"
+    },
+    {
+     "wrong": "gebesucht",
+     "right": "besucht"
+    },
+    {
+     "wrong": "gevereinbart",
+     "right": "vereinbart"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u10-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin",
+    "Deutschland",
+    "Tunesien"
+   ],
+   "misspellings": [],
+   "fixedPhrases": [
+    {
+     "de": "Ich bin zu Hause.",
+     "whyAr": "الصيغة الثابتة مركبةً لتعليم weil — تبدأ بها جمل الدرس كما هي ولا تُلوى"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u11-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u11-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u11-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u11-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u11-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Lena"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u12-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin",
+    "Tunis",
+    "Rom"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u12-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin",
+    "Rom"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u12-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunis"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u12-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Rom",
+    "Italien"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u12-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunis"
+   ],
+   "misspellings": [
+    {
+     "wrong": "gefotografiert",
+     "right": "fotografiert"
+    },
+    {
+     "wrong": "getelefoniert",
+     "right": "telefoniert"
+    },
+    {
+     "wrong": "gestudiert",
+     "right": "studiert"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u13-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Jonas",
+    "Maria",
+    "Ayşe",
+    "Müller",
+    "Braun",
+    "Hamburg"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u13-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Nabil",
+    "Ayşe",
+    "Tunesien",
+    "Blue",
+    "Berlin"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u13-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Nabil",
+    "Ayşe",
+    "Berlin",
+    "Berliner"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u13-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Ayşe",
+    "Tunis",
+    "Schweiz",
+    "Keller",
+    "Schmidt",
+    "Yılmaz"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u13-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Nabil",
+    "Ayşe",
+    "Berlin",
+    "Schmidt"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u14-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Ayşe",
+    "Tunis",
+    "Haddad",
+    "Berlin"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u14-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Oma",
+    "Tunis",
+    "Haddad",
+    "Nabil",
+    "Lena"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u14-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u14-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u14-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u1-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Nabil",
+    "Haddad"
+   ]
+  },
+  {
+   "lessonId": "a1-u2-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Ayşe",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u3-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Ayşe",
+    "Lena",
+    "Berlin"
+   ],
+   "fixedPhrases": [
+    {
+     "de": "Wie spät ist es?",
+     "whyAr": "صيغة سؤال الساعة الثابتة — هدف u3-d3 نفسه (ars-uhrzeit)؛ التوليف يستدعيها كما هي ولا يلويها"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u4-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena"
+   ]
+  },
+  {
+   "lessonId": "a1-u5-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Ayşe"
+   ]
+  },
+  {
+   "lessonId": "a1-u6-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin"
+   ]
+  },
+  {
+   "lessonId": "a1-u7-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Nabil",
+    "Oma"
+   ]
+  },
+  {
+   "lessonId": "a1-u8-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Oma",
+    "Tunesien",
+    "Tunis"
+   ]
+  },
+  {
+   "lessonId": "a1-u9-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunis",
+    "Berlin"
+   ],
+   "fixedPhrases": [
+    {
+     "de": "Können Sie mir helfen?",
+     "whyAr": "صيغة طلب المساعدة الثابتة بـSie — هدف u9-d3 نفسه (ars-imperativ-sie)؛ لعب الأدوار في التوليف يستدعيها كما هي ولا يلويها"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u10-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin",
+    "April",
+    "Tunis"
+   ],
+   "misspellings": [
+    {
+     "wrong": "gebesucht",
+     "right": "besucht"
+    }
+   ],
+   "fixedPhrases": [
+    {
+     "de": "Ich bin zu Hause.",
+     "whyAr": "صيغة «أنا في البيت» الثابتة — لا بديل طبيعي لها (zu Hause ظرف مقفل منذ u6)؛ جملة weil في التوليف (u10-d5) تبدأ بها كما هي ولا تُلوى"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u11-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunis",
+    "Berlin",
+    "April"
+   ],
+   "misspellings": [
+    {
+     "wrong": "geliegen",
+     "right": "gelegen"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u12-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin",
+    "April",
+    "Italien"
+   ],
+   "misspellings": [
+    {
+     "wrong": "gefotografiert",
+     "right": "fotografiert"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u13-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Nabil",
+    "Ayşe",
+    "Berlin"
+   ],
+   "misspellings": [],
+   "fixedPhrases": [
+    {
+     "de": "Das ist sehr nett von dir!",
+     "whyAr": "صيغة الرد على الدعوة في حوار مسجل (eb-18 له مقطع ملتزم) — تُعلن ولا يُعاد تسجيل الصوت"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u14-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Oma",
+    "Berlin"
+   ],
+   "misspellings": []
+  },
+  {
+   "lessonId": "a1-u15-d1",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Haddad",
+    "Nabil",
+    "Ayşe",
+    "Tunesien",
+    "Berlin",
+    "April",
+    "Januar"
+   ]
+  },
+  {
+   "lessonId": "a1-u15-d2",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Bruno",
+    "Mia",
+    "Berlin",
+    "April"
+   ]
+  },
+  {
+   "lessonId": "a1-u15-d3",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Tunesien",
+    "April"
+   ]
+  },
+  {
+   "lessonId": "a1-u15-d4",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Nabil",
+    "April"
+   ]
+  },
+  {
+   "lessonId": "a1-u15-d5",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin",
+    "April"
+   ],
+   "misspellings": [
+    {
+     "wrong": "getelefoniert",
+     "right": "telefoniert"
+    }
+   ]
+  },
+  {
+   "lessonId": "a1-u15-d6",
+   "rule": "done",
+   "practice": "done",
+   "quiz": "done",
+   "properNouns": [
+    "Yusuf",
+    "Lena",
+    "Berlin",
+    "April",
+    "Tunesien",
+    "Italien"
+   ]
+  }
+ ]
 }

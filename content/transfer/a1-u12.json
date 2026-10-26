@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-transfer-u12",
+  "level": "A1",
+  "unit": 12,
+  "items": [
+    {
+      "q": "«أسافر إلى إيطاليا»؟",
+      "a": "Ich reise nach Italien.",
+      "choices": ["Ich reise nach Italien.", "Ich reise in Italien.", "Ich reise nach Italien an."],
+      "why": "البلد بلا أداة ⇐ nach (لا in). وreisen فعل كامل بلا جزء منفصل."
+    },
+    {
+      "q": "«أحضرت الحقيبة»؟",
+      "a": "Ich habe den Rucksack mitgebracht.",
+      "choices": ["Ich habe den Rucksack mitgebracht.", "Ich habe der Rucksack mitgebracht.", "Ich bin den Rucksack mitgebracht."],
+      "why": "Rucksack مذكر منصوب ⇐ den. وmitbringen بـhaben: habe … mitgebracht."
+    },
+    {
+      "q": "«أبقى في البيت لأنني مريض»؟",
+      "a": "Ich bleibe zu Hause, weil ich krank bin.",
+      "choices": ["Ich bleibe zu Hause, weil ich krank bin.", "Ich bleibe zu Hause, weil ich bin krank.", "Ich bleibe zu Hause, denn ich krank bin."],
+      "why": "weil تدفع الفعل إلى الآخر: krank bin. وdenn تُبقي الترتيب الطبيعي."
+    },
+    {
+      "q": "«هاتفت كثيراً»؟",
+      "a": "Ich habe viel telefoniert.",
+      "choices": ["Ich habe viel telefoniert.", "Ich bin viel telefoniert.", "Ich habe viel telefonieren."],
+      "why": "telefonieren بـhaben: habe … telefoniert. وbin لأفعال الحركة والتغيّر."
+    }
+  ]
+}

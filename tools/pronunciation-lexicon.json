@@ -1,7 +1,7 @@
 {
   "schemaVersion": "2.0.0",
   "decision": "D122",
-  "about": "كلمات يخطئ espeak-ng (محرك الفونيمات تحت Piper) طول حركتها المنبورة أو موضع نبرها — مقيسة مقابل مرجع حر (D121 · D122). تُصحَّح على مستوى الفونيمات قبل النموذج (tools/gen-audio.py: synth_phonemes ← apply_lexicon) وفي الـIPA المقيس (tools/phonemize.py)، فيتطابق ما يُقاس وما يُنطق دائماً. لكل كلمة صيغ espeak كما تظهر فعلاً (معزولة بنبر أولي ˈ · في الجملة بنبر ثانوي ˌ) ولكل صيغة تصحيحها. الرمز الصحيح يُكتب بأعراف espeak نفسها (analogy) ليصل النموذجَ تسلسلٌ رآه في تدريبه. ما فحصه التدقيق وقُبل كما هو مسجَّل في reviewed بسببه.",
+  "about": "كلمات يخطئ espeak-ng (محرك الفونيمات تحت Piper) طول حركتها المنبورة أو موضع نبرها — مقيسة مقابل مرجع حر (D121 · D122). تُصحَّح على مستوى الفونيمات قبل النموذج (tools/gen-audio.py: synth_phonemes ← apply_lexicon) وفي الـIPA المقيس (tools/phonemize.py)، فيتطابق ما يُقاس وما يُنطق دائماً. لكل كلمة صيغ espeak كما تظهر فعلاً (معزولة بنبر أولي ˈ · في الجملة بنبر ثانوي ˌ) ولكل صيغة تصحيحها. الرمز الصحيح يُكتب بأعراف espeak نفسها (analogy) ليصل النموذجَ تسلسلٌ رآه في تدريبه. ما فحصه التدقيق وقُبل كما هو مسجَّل في reviewed بسببه. حقل earReview (D189 · N-101): مدخل مقيس بالمرجع لكنّ الأذن لم تحكم فيه بعد — قائمة «تحت التحقق السمعي» يراجعها المالك قبل الإطلاق (Q24).",
   "reference": {
     "name": "open-dict-data/ipa-dict — data/de.txt ← devio-at/german-ipa-dict ← Wiktionary",
     "license": "CC-BY-SA",
@@ -33,7 +33,32 @@
         "wo-1",
         "ab-9",
         "mo-17",
-        "fz-7"
+        "fz-7",
+        "sk-1",
+        "sk-2",
+        "sk-3",
+        "sk-20",
+        "wf-1",
+        "tn-8",
+        "za-3",
+        "za-4",
+        "ew-12",
+        "wk-10",
+        "wk-11",
+        "kw-8",
+        "ka-15",
+        "kb-15",
+        "kb-18",
+        "kc-9",
+        "kg-14",
+        "sb-7",
+        "zh-10",
+        "zh-9",
+        "zf-1",
+        "zf-20",
+        "wh-1",
+        "wp-2",
+        "wn-11"
       ]
     },
     {
@@ -52,7 +77,8 @@
       ],
       "regeneratedTracks": [
         "word-durst",
-        "ko-2"
+        "ko-2",
+        "wu-2"
       ]
     },
     {
@@ -72,7 +98,9 @@
       ],
       "regeneratedTracks": [
         "word-wurst",
-        "ff-4"
+        "ff-4",
+        "es-6",
+        "eb-6"
       ]
     },
     {
@@ -110,7 +138,10 @@
       ],
       "regeneratedTracks": [
         "num-tel-yusuf",
-        "word-telefonnummer"
+        "word-telefonnummer",
+        "wm-9",
+        "wd-15",
+        "wh-9"
       ]
     },
     {
@@ -146,7 +177,10 @@
         "Ich bin fit."
       ],
       "regeneratedTracks": [
-        "word-fit"
+        "word-fit",
+        "kb-19",
+        "kb-20",
+        "kd-20"
       ]
     },
     {
@@ -166,7 +200,19 @@
       ],
       "regeneratedTracks": [
         "word-wohin",
-        "ww-2"
+        "ww-2",
+        "tn-7",
+        "st-2",
+        "st-13",
+        "st-14",
+        "we-9",
+        "we-11",
+        "we-12",
+        "nz-13",
+        "nz-15",
+        "nz-17",
+        "wr-15",
+        "wr-17"
       ]
     },
     {
@@ -184,7 +230,38 @@
         "Im April habe ich Geburtstag."
       ],
       "regeneratedTracks": [
-        "word-april"
+        "word-april",
+        "za-2",
+        "za-3",
+        "za-4",
+        "za-5",
+        "za-6",
+        "za-8",
+        "za-19",
+        "za-20",
+        "ew-4",
+        "ew-19",
+        "kh-8",
+        "wd-13",
+        "tm-11",
+        "tm-12",
+        "zh-1",
+        "zh-10",
+        "zh-11",
+        "zh-12",
+        "zh-2",
+        "ez-1",
+        "ez-2",
+        "zf-1",
+        "wh-1",
+        "wz-1",
+        "wz-12",
+        "wr-1",
+        "wp-1",
+        "wn-1",
+        "wn-12",
+        "wn-14",
+        "wl-1"
       ]
     },
     {
@@ -210,7 +287,14 @@
         "mt1-h3-m1",
         "word-vor",
         "uz-4",
-        "uz-6"
+        "uz-6",
+        "tn-3",
+        "st-5",
+        "kf-16",
+        "nz-10",
+        "nz-8",
+        "wz-9",
+        "fs-14"
       ]
     },
     {
@@ -228,7 +312,13 @@
         "Er ist vierzig Jahre alt."
       ],
       "regeneratedTracks": [
-        "word-vierzig"
+        "word-vierzig",
+        "ws-4",
+        "ws-5",
+        "fh-6",
+        "hb-7",
+        "ke-3",
+        "ac-10"
       ]
     },
     {
@@ -246,7 +336,9 @@
         "Das ist ein Notfall!"
       ],
       "regeneratedTracks": [
-        "word-notfall"
+        "word-notfall",
+        "wk-1",
+        "wk-2"
       ]
     },
     {
@@ -286,7 +378,8 @@
       ],
       "regeneratedTracks": [
         "word-schublade",
-        "mw-20"
+        "mw-20",
+        "we-20"
       ]
     },
     {
@@ -310,7 +403,8 @@
       ],
       "regeneratedTracks": [
         "word-nachbar",
-        "mw-8"
+        "mw-8",
+        "ek-10"
       ]
     },
     {
@@ -333,7 +427,9 @@
         "word-nachricht",
         "h5-2",
         "na-1",
-        "na-2"
+        "na-2",
+        "ke-18",
+        "kf-19"
       ]
     },
     {
@@ -388,7 +484,17 @@
         "Mein Hals tut weh."
       ],
       "regeneratedTracks": [
-        "word-hals"
+        "word-hals",
+        "kw-2",
+        "kw-3",
+        "kw-16",
+        "ka-6",
+        "ka-10",
+        "kb-5",
+        "kb-6",
+        "kc-4",
+        "ez-4",
+        "ez-5"
       ]
     },
     {
@@ -414,7 +520,19 @@
         "fz-2",
         "fz-3",
         "fz-4",
-        "pr-14"
+        "pr-14",
+        "wg-9",
+        "wg-10",
+        "ew-14",
+        "wk-5",
+        "kw-4",
+        "kw-6",
+        "kd-9",
+        "kd-10",
+        "zh-14",
+        "ez-10",
+        "fr-3",
+        "eb-14"
       ]
     },
     {
@@ -452,7 +570,15 @@
       ],
       "regeneratedTracks": [
         "mt1-h3-m3",
-        "word-danach"
+        "word-danach",
+        "wf-3",
+        "wf-4",
+        "wf-14",
+        "tn-14",
+        "st-13",
+        "nz-12",
+        "wn-12",
+        "ek-14"
       ]
     },
     {
@@ -470,7 +596,12 @@
         "Wir sehen uns nachher."
       ],
       "regeneratedTracks": [
-        "word-nachher"
+        "word-nachher",
+        "ew-3",
+        "ew-4",
+        "ew-10",
+        "ew-11",
+        "zh-8"
       ]
     },
     {
@@ -490,7 +621,12 @@
       "regeneratedTracks": [
         "mt1-h1-d6-l4",
         "mt1-h3-m5",
-        "word-hotel"
+        "word-hotel",
+        "ke-12",
+        "kf-6",
+        "kf-7",
+        "kf-13",
+        "kf-14"
       ]
     },
     {
@@ -509,7 +645,8 @@
       ],
       "regeneratedTracks": [
         "word-marmelade",
-        "me-20"
+        "me-20",
+        "wu-4"
       ]
     },
     {
@@ -565,7 +702,9 @@
         "Wir machen einen Spaziergang."
       ],
       "regeneratedTracks": [
-        "word-spaziergang"
+        "word-spaziergang",
+        "wg-19",
+        "wg-20"
       ]
     },
     {
@@ -583,7 +722,9 @@
         "Hast du einen Stadtplan?"
       ],
       "regeneratedTracks": [
-        "word-stadtplan"
+        "word-stadtplan",
+        "wf-9",
+        "wf-10"
       ]
     },
     {
@@ -639,7 +780,9 @@
         "Wo ist der Fahrplan?"
       ],
       "regeneratedTracks": [
-        "word-fahrplan"
+        "word-fahrplan",
+        "st-10",
+        "st-11"
       ]
     },
     {
@@ -658,7 +801,17 @@
       ],
       "regeneratedTracks": [
         "mt1-h1-d3-l2",
-        "word-geradeaus"
+        "word-geradeaus",
+        "sk-4",
+        "sk-16",
+        "hb-17",
+        "wf-3",
+        "wf-4",
+        "wf-9",
+        "wf-14",
+        "tn-14",
+        "nz-12",
+        "wn-8"
       ]
     },
     {
@@ -676,7 +829,9 @@
         "Kann ich mit Kreditkarte bezahlen?"
       ],
       "regeneratedTracks": [
-        "word-kreditkarte"
+        "word-kreditkarte",
+        "km-17",
+        "km-18"
       ]
     },
     {
@@ -713,7 +868,9 @@
         "Ich mache eine Notiz."
       ],
       "regeneratedTracks": [
-        "word-notiz"
+        "word-notiz",
+        "ew-6",
+        "ew-18"
       ]
     },
     {
@@ -744,7 +901,15 @@
         "me-14",
         "ww-3",
         "mw-2",
-        "pr-18"
+        "pr-18",
+        "km-10",
+        "km-19",
+        "wf-12",
+        "tn-18",
+        "wk-19",
+        "kw-6",
+        "zw-2",
+        "zw-20"
       ]
     },
     {
@@ -763,7 +928,11 @@
       ],
       "regeneratedTracks": [
         "mt1-h2-a2",
-        "word-rabatt"
+        "word-rabatt",
+        "ws-6",
+        "ws-7",
+        "ac-17",
+        "wp-19"
       ]
     },
     {
@@ -781,7 +950,8 @@
         "Nehmen Sie eine Tablette."
       ],
       "regeneratedTracks": [
-        "word-tablette"
+        "word-tablette",
+        "ka-12"
       ]
     },
     {
@@ -810,7 +980,12 @@
         "Meine Oma wohnt in Tunesien. Ich telefoniere jeden Sonntag lange.",
         "Ich rufe meine Familie in Tunesien an.",
         "Ach, der ist ja hübsch! Ein Besuch in Tunesien — gute Reise!",
-        "Nein, in Tunesien ist es heiß. Aber diese Jacke nehme ich — für den Abend."
+        "Nein, in Tunesien ist es heiß. Aber diese Jacke nehme ich — für den Abend.",
+        "Wir haben über Berge, Wälder und Flüsse gesprochen. Und ich habe sechs Sätze geschrieben — über das Meer in Tunesien.",
+        "Das Meer! Warst du in Tunesien am Meer?",
+        "Ich habe in Tunesien auch viel fotografiert. Am Samstag zeige ich dir die Fotos.",
+        "Super! Hast du auch ein Andenken aus Tunesien?",
+        "Berge, Wälder, Flüsse und Seen — Deutschland hat viel Natur! Und Tunesien hat das Meer, die Strände und eine Insel."
       ],
       "regeneratedTracks": [
         "gr-5",
@@ -831,7 +1006,38 @@
         "pr-11",
         "hh-16",
         "hh-19",
-        "kl-4"
+        "kl-4",
+        "km-1",
+        "km-20",
+        "fh-1",
+        "vb-2",
+        "vb-6",
+        "vb-20",
+        "sk-13",
+        "sk-14",
+        "wf-20",
+        "wk-15",
+        "ki-3",
+        "ki-4",
+        "ki-13",
+        "ki-14",
+        "ki-17",
+        "wm-6",
+        "wm-14",
+        "zw-4",
+        "we-15",
+        "ac-11",
+        "ac-14",
+        "ac-18",
+        "ac-19",
+        "ac-20",
+        "wh-18",
+        "wh-6",
+        "wh-7",
+        "wr-18",
+        "wl-16",
+        "fs-12",
+        "fr-12"
       ]
     },
     {
@@ -932,7 +1138,26 @@
       "regeneratedTracks": [
         "gr-15",
         "gr-4",
-        "ab-14"
+        "ab-14",
+        "zw-2",
+        "zw-16",
+        "zw-18",
+        "zw-20",
+        "wd-2",
+        "wd-20",
+        "wu-20",
+        "fr-10",
+        "fr-4",
+        "ek-12",
+        "es-18",
+        "es-20",
+        "es-3",
+        "fb-12",
+        "fb-13",
+        "eb-11",
+        "eb-15",
+        "eb-8",
+        "ec-14"
       ]
     },
     {
@@ -1025,7 +1250,25 @@
       ],
       "regeneratedTracks": [
         "tm-2",
-        "tr-3"
+        "tr-3",
+        "km-11",
+        "fh-14",
+        "vb-19",
+        "wt-4",
+        "wt-5",
+        "wt-11",
+        "wt-15",
+        "wg-13",
+        "kh-7",
+        "wd-12",
+        "wd-13",
+        "zh-19",
+        "zh-2",
+        "zh-3",
+        "zf-12",
+        "wz-11",
+        "wz-12",
+        "wn-3"
       ]
     },
     {
@@ -1047,7 +1290,11 @@
       "regeneratedTracks": [
         "word-onkel",
         "be-6",
-        "wb-10"
+        "wb-10",
+        "za-12",
+        "wg-7",
+        "wz-16",
+        "fs-5"
       ]
     },
     {
@@ -1065,7 +1312,9 @@
         "Das Auto gehört mir."
       ],
       "regeneratedTracks": [
-        "be-11"
+        "be-11",
+        "wn-16",
+        "wn-17"
       ]
     },
     {
@@ -1085,7 +1334,8 @@
       ],
       "regeneratedTracks": [
         "word-speisekarte",
-        "et-2"
+        "et-2",
+        "wu-2"
       ]
     },
     {
@@ -1105,7 +1355,8 @@
       ],
       "regeneratedTracks": [
         "word-mittagessen",
-        "me-2"
+        "me-2",
+        "wu-20"
       ]
     },
     {
@@ -1170,7 +1421,8 @@
       "regeneratedTracks": [
         "word-dunkel",
         "mw-4",
-        "zg-16"
+        "zg-16",
+        "tn-15"
       ]
     },
     {
@@ -1265,7 +1517,11 @@
         "Und die Nachbarn? Sind sie nett?"
       ],
       "regeneratedTracks": [
-        "mw-7"
+        "mw-7",
+        "we-17",
+        "we-18",
+        "es-8",
+        "es-9"
       ]
     },
     {
@@ -1305,7 +1561,8 @@
       ],
       "regeneratedTracks": [
         "pr-15",
-        "zg-9"
+        "zg-9",
+        "fd-13"
       ]
     },
     {
@@ -1323,35 +1580,1777 @@
         "Mein Opa schläft nach dem Essen."
       ],
       "regeneratedTracks": [
-        "zg-3"
+        "zg-3",
+        "fs-7"
+      ]
+    },
+    {
+      "word": "circa",
+      "forms": [
+        {
+          "espeak": "kˈɪɾkɑː",
+          "ipa": "tsˈɪɾkɑː"
+        }
+      ],
+      "referenceIpa": "/ˈt͡sɪʁka/",
+      "referenceNote": "خطأ صامت لا حركة (D157): النبر والحركة المنبورة صحيحان، لكن espeak يقرأ c اللاتينية كافاً [k] في circa وحدها — والمرجع /ˈt͡sɪʁka/ بـ[ts] كما يقرأ espeak نفسه الرسم البديل zirka وZirkus. التصحيح يمسّ الصامت الأول وحده.",
+      "analogy": "zirka [tsˈɪɾkɑː] · Zirkus [tsˈɪɾkʊs] · Zitrone [tsɪtrˈoːnə] — c قبل i تُنطق [ts] كما z",
+      "contexts": [
+        "circa.",
+        "Ja, ein Buch. Im Supermarkt kostet es circa zwölf Euro.",
+        "Die Jacke kostet circa zwanzig Euro."
+      ],
+      "regeneratedTracks": [
+        "word-circa",
+        "ws-4",
+        "ws-5",
+        "ws-17"
+      ]
+    },
+    {
+      "word": "Abteilung",
+      "forms": [
+        {
+          "espeak": "ˈaptˌaɪlʊŋ",
+          "ipa": "aptˈaɪlʊŋ"
+        }
+      ],
+      "referenceIpa": "/apˈtaɪ̯lʊŋ/, /ˈaptaɪ̯lʊŋ/",
+      "referenceNote": "نبرٌ لا حركة (D158): المرجع يذكر صيغتين — الأولى /apˈtaɪ̯lʊŋ/ لـ«القسم» في المتجر أو المؤسسة (معنى الدرس)، والثانية /ˈaptaɪ̯lʊŋ/ لـ«الفصل/التقسيم» (اسم الفعل من abteilen بنبر الجزء المنفصل). espeak يعطي الثانية دائماً فيمرّ على التدقيق (يقبل أي صيغة في المرجع) وهو خطأ معنى — التصحيح ينقل النبر إلى tei.",
+      "analogy": "Verteilung [fɛɾtˈaɪlʊŋ] · Bedeutung [bədˈɔøtʊŋ] (espeak نفسه) — النبر على المقطع قبل ‑ung في المشتقات المسبوقة بسابقة غير منبورة",
+      "contexts": [
+        "Abteilung.",
+        "Die Rucksäcke sind dort, in der Abteilung für Taschen.",
+        "Gürtel findest du in der Abteilung für Kleidung."
+      ],
+      "regeneratedTracks": [
+        "word-abteilung",
+        "km-3",
+        "km-7"
+      ]
+    },
+    {
+      "word": "holt",
+      "forms": [
+        {
+          "espeak": "hˈɔlt",
+          "ipa": "hˈoːlt"
+        }
+      ],
+      "referenceIpa": "/hoːlt/",
+      "referenceNote": "حركةٌ لا نبر (D159): holt (من holen · abholen) بـo طويلة [oː] — espeak يقصّرها [ɔ] كأنها Holz/Gold، والمرجع يثبت /hoːlt/ وhole [hˈoːlə] وabholen [ˈaphoːlən] عند espeak نفسه صحيحتان — الخطأ في الصيغة المصرّفة وحدها.",
+      "analogy": "hole [hˈoːlə] · abholen [ˈaphˌoːlən] · wohnt [vˈoːnt] (espeak نفسه) — الجذر لا يقصّر حركته بالتصريف",
+      "contexts": [
+        "holt.",
+        "Wer holt dich in Tunis ab?",
+        "Mein Vater holt mich ab — mit dem Auto."
+      ],
+      "regeneratedTracks": [
+        "fh-7",
+        "fh-8",
+        "hb-20",
+        "ka-12",
+        "ac-12"
+      ]
+    },
+    {
+      "word": "Bahnsteig",
+      "forms": [
+        {
+          "espeak": "bˈɑːnstaɪk",
+          "ipa": "bˈɑːnʃtˌaɪk"
+        }
+      ],
+      "referenceIpa": "/ˈbaːnˌʃtaɪ̯k/",
+      "referenceNote": "فونيمٌ لا نبر (D162): Bahnsteig مركّب Bahn + Steig، وst في أول الجزء الثاني تُنطق [ʃt] كـSteig/Stelle/steigen (ʃtˈaɪɡə عند espeak نفسه) — espeak يقرؤها [st] كأنها داخل كلمة واحدة (Fenster)، والمرجع يثبت /ˈbaːnˌʃtaɪ̯k/. الخطأ في المفرد وحده هنا؛ الجمع Bahnsteige لم يُستعمل في أي مقطع منشور.",
+      "analogy": "Steig [ʃtˈaɪk] · steigen [ʃtˈaɪɡən] · Haltestelle [ʃt] · Stadtplan [ʃtˈat] (espeak نفسه) — st في أول جزء المركّب = [ʃt] دائماً",
+      "contexts": [
+        "der Bahnsteig.",
+        "Weißt du schon den Bahnsteig?",
+        "Bahnsteig drei, Richtung Flughafen. Am Montag ist überall Verkehr — ich fahre früh."
+      ],
+      "regeneratedTracks": [
+        "word-bahnsteig",
+        "hb-9",
+        "hb-10"
+      ]
+    },
+    {
+      "word": "Haltestelle",
+      "forms": [
+        {
+          "espeak": "hˈaltɛʃtˌɛlə",
+          "ipa": "hˈaltəʃtˌɛlə"
+        }
+      ],
+      "referenceIpa": "/ˈhaltəˌʃtɛlə/",
+      "referenceNote": "حركةٌ لا نبر (D162): Haltestelle = Halte + Stelle، وe الوصل في Halte‑ شوا [ə] كـhalte (hˈaltə عند espeak نفسه في Ich halte) — espeak يفتحها [ɛ] كأنها منبورة ثانوياً، والمرجع يثبت /ˈhaltəˌʃtɛlə/. النبر والفونيمات الأخرى صحيحة؛ الجمع Haltestellen لم يُستعمل في أي مقطع منشور؛ والمسار القديم mt1-h1-d6-l3 (نموذج الامتحان) أُعيد معها.",
+      "analogy": "halte [hˈaltə] · Tasche [tˈaʃə] · Speisekarte [ʃpˈaɪzəkˌaɾtə] (المدخل 53) — e الوصل داخل المركّب شوا لا [ɛ]",
+      "contexts": [
+        "die Haltestelle.",
+        "Ja. Die Haltestelle ist gegenüber der Bäckerei. Dort steige ich ein — Linie 5.",
+        "Und von der Haltestelle zur Oma — ist das weit?"
+      ],
+      "regeneratedTracks": [
+        "word-haltestelle",
+        "mt1-h1-d6-l3",
+        "hb-2",
+        "hb-16",
+        "st-9",
+        "wn-3",
+        "wn-4"
+      ]
+    },
+    {
+      "word": "erklärt",
+      "forms": [
+        {
+          "espeak": "ɛɾklˈɛɾt",
+          "ipa": "ɛɾklˈɛːɾt"
+        }
+      ],
+      "referenceIpa": "/ɛɐ̯ˈklɛːɐ̯t/",
+      "referenceNote": "كمّية الحركة (D163): erklärt (هو يشرح / مشروح) فيها ä طويلة [ɛː] كالمصدر erklären [ɛɾklˈɛːrən] وكـerklärst [ɛɾklˈɛːɾst] وfährt [fˈɛːɾt] عند espeak نفسه — لكن espeak يقصّرها في erklärt وحدها [ɛɾklˈɛɾt] كأنها «ert» قصيرة، والمرجع يثبت /ɛɐ̯ˈklɛːɐ̯t/. النبر والفونيمات الأخرى صحيحة؛ الخطأ في هذه الصيغة وحدها.",
+      "analogy": "erklären [ɛɾklˈɛːrən] · erklärst [ɛɾklˈɛːɾst] · fährt [fˈɛːɾt] · spät [ʃpˈɛːt] (espeak نفسه) — ä + r + t بحركة طويلة",
+      "contexts": [
+        "Danke für die Hilfe! Sehr gut erklärt!",
+        "Bitte, gerne! In Tunis hilft mir mein Vater — er erklärt mir alles."
+      ],
+      "regeneratedTracks": [
+        "wf-15",
+        "wf-16"
+      ]
+    },
+    {
+      "word": "nächsten",
+      "forms": [
+        {
+          "espeak": "nˈɛçstən",
+          "ipa": "nˈɛːçstən"
+        }
+      ],
+      "referenceIpa": "/ˈnɛːçstən/",
+      "referenceNote": "كمّية الحركة (D165): nächsten (الصفة المصرَّفة في الداتيف: an der nächsten Stelle) فيها ä طويلة [ɛː] كـnächste (المدخل القائم) — espeak يقصّرها قبل chst في كل صيغ الكلمة، والمرجع /ˈnɛːçstən/. النبر والفونيمات الأخرى صحيحة.",
+      "analogy": "nächste [nˈɛːçstə] (المدخل القائم) · Nähe [nˈɛːə] · spät [ʃpˈɛːt] — ä المنبورة طويلة",
+      "contexts": [
+        "nächsten.",
+        "An der nächsten Stelle steige ich aus."
+      ],
+      "regeneratedTracks": [
+        "st-19"
+      ]
+    },
+    {
+      "word": "geregnet",
+      "forms": [
+        {
+          "espeak": "ɡərˈɛɡnət",
+          "ipa": "ɡərˈeːɡnət"
+        }
+      ],
+      "referenceIpa": "/ɡəˈʁeːɡnət/",
+      "referenceNote": "كمّية الحركة (D168): geregnet (Partizip II من regnen) فيها e طويلة [eː] كجذرها Regen/regnet (المدخلان القائمان) — espeak يقصّرها قبل gn في كل صيغ الفعل، والمرجع /ɡəˈʁeːɡnət/. النبر على الجذر صحيح.",
+      "analogy": "Regen [rˈeːɡən] · regnet [rˈeːɡnət] (المدخل القائم) — الجذر بطوله في التصريف الثالث",
+      "contexts": [
+        "geregnet.",
+        "Da hat es geregnet."
+      ],
+      "regeneratedTracks": [
+        "wg-9",
+        "wg-12",
+        "ew-16",
+        "ew-17",
+        "kg-13"
+      ]
+    },
+    {
+      "word": "geholt",
+      "forms": [
+        {
+          "espeak": "ɡəhˈɔlt",
+          "ipa": "ɡəhˈoːlt"
+        }
+      ],
+      "referenceIpa": "/ɡəˈhoːlt/",
+      "referenceNote": "كمّية الحركة (D168): geholt (Partizip II من holen) فيها o طويلة [oː] كجذرها holen/holt — espeak ينطقها قصيرة [ɔ] قياساً على geholfen، والمرجع /ɡəˈhoːlt/. النبر على الجذر صحيح.",
+      "analogy": "holen [hˈoːlən] · holt [hˈoːlt] · gewohnt [ɡəvˈoːnt] — الجذر بطوله في التصريف الثالث",
+      "contexts": [
+        "geholt.",
+        "Ich habe das Paket geholt."
+      ],
+      "regeneratedTracks": [
+        "wg-15"
+      ]
+    },
+    {
+      "word": "gehustet",
+      "forms": [
+        {
+          "espeak": "ɡəhˈʊstət",
+          "ipa": "ɡəhˈuːstət"
+        }
+      ],
+      "referenceIpa": "/ɡəˈhuːstət/",
+      "referenceNote": "كمّية الحركة (D173): gehustet (Partizip II من husten) فيها u طويلة [uː] كجذرها husten [hˈuːstən] (espeak نفسه) — espeak يقصّرها [ʊ] في الصيغ المصرّفة (hustet · gehustet) قياساً على Hast/Lust، والمرجع /ɡəˈhuːstət/. النبر على الجذر صحيح.",
+      "analogy": "husten [hˈuːstən] · Husten [hˈuːstən] (espeak نفسه) · gesucht [ɡəzˈuːxt] — الجذر بطوله في التصريف الثالث",
+      "contexts": [
+        "gehustet.",
+        "Aber ich habe die Nacht viel gehustet und geniest."
+      ],
+      "regeneratedTracks": [
+        "kb-4"
+      ]
+    },
+    {
+      "word": "wehgetan",
+      "forms": [
+        {
+          "espeak": "vˌeːɡeːtˈɑːn",
+          "ipa": "vˈeːɡətˌɑːn"
+        }
+      ],
+      "referenceIpa": "/ˈveːɡəˌtaːn/",
+      "referenceNote": "موضع النبر وحركة البادئة (D175): wehgetan (Partizip II من weh tun — فعل منفصل) يُنبر على الجزء المنفصل weh كسائر الأفعال المنفصلة (aufgestanden · eingekauft)، والبادئة ge- فيه شوا [ə] كما في getan [ɡətˈɑːn] (espeak نفسه) — espeak يقرأ المركّب غير المألوف wehgetan بنبر أولي على tan وبـge طويلة [ɡeː] كأنها مقطع مستقل. المرجع /ˈveːɡəˌtaːn/. التصحيح يعيد النبر إلى weh ويُبقي نبراً ثانوياً على tan.",
+      "analogy": "weh [vˈeː] · getan [ɡətˈɑːn] (espeak نفسه، مفصولين) · aufgestanden — النبر على الجزء المنفصل والبادئة ge- شوا",
+      "contexts": [
+        "wehgetan.",
+        "Die Spritze hat nur kurz wehgetan!"
+      ],
+      "regeneratedTracks": [
+        "kd-1"
+      ]
+    },
+    {
+      "word": "losgefahren",
+      "forms": [
+        {
+          "espeak": "lˈɔsɡeːfˌɑːrən",
+          "ipa": "lˈoːsɡəfˌɑːrən"
+        }
+      ],
+      "referenceIpa": "/ˈloːsɡəˌfaːʁən/",
+      "referenceNote": "طول الحركة والبادئة (D178): losgefahren (Partizip II من losfahren — فعل منفصل) يُنبر على الجزء المنفصل los بـo طويلة [oː] كما ينطق espeak نفسه los منفردة [lˈoːs]، والبادئة ge- فيه شوا [ə] كما في gefahren [ɡəfˈɑːrən] (espeak نفسه) — espeak يقرأ المركّب غير المألوف losgefahren بـo قصيرة [ɔ] وبـge طويلة [ɡeː] كأنها مقطع مستقل. المرجع /ˈloːsɡəˌfaːʁən/. التصحيح يعيد طول o ويُرجع ge- إلى شوا مع إبقاء النبر الثانوي على fah.",
+      "analogy": "los [lˈoːs] · gefahren [ɡəfˈɑːrən] (espeak نفسه، مفصولين) · wehgetan — النبر على الجزء المنفصل والبادئة ge- شوا",
+      "contexts": [
+        "losgefahren.",
+        "Bist du pünktlich losgefahren?",
+        "Der Bus ist um sieben Uhr losgefahren."
+      ],
+      "regeneratedTracks": [
+        "kg-2",
+        "kg-3",
+        "zf-6",
+        "zf-7",
+        "wl-10",
+        "wl-11"
+      ]
+    },
+    {
+      "word": "geplant",
+      "forms": [
+        {
+          "espeak": "ɡəplˈant",
+          "ipa": "ɡəplˈɑːnt"
+        }
+      ],
+      "referenceIpa": "/ɡəˈplaːnt/",
+      "referenceNote": "طول الحركة (D178): geplant (Partizip II من planen) تُنطق بـa طويلة [ɑː] كما في planen [plˈɑːnən] وPlan [plˈɑːn] (espeak نفسه) — espeak يقصّرها قبل nt كما يقصّر plant [plˈant] (المرجع /plaːnt/). المرجع /ɡəˈplaːnt/. التصحيح يعيد طول a فقط.",
+      "analogy": "planen [plˈɑːnən] · Plan [plˈɑːn] (espeak نفسه) — a طويلة لا تقصر قبل nt",
+      "contexts": [
+        "geplant.",
+        "Habt ihr Ausflüge geplant?"
+      ],
+      "regeneratedTracks": [
+        "kg-12",
+        "kg-13"
+      ]
+    },
+    {
+      "word": "Flughafen",
+      "forms": [
+        {
+          "espeak": "flˈuːɡhɑːfən",
+          "ipa": "flˈuːkhɑːfən"
+        }
+      ],
+      "referenceIpa": "/ˈfluːkˌhaːfn̩/",
+      "referenceNote": "إجهار النهاية (D189): Flug‑ آخره g تُهمس [k] قبل h كما في المرجع /ˈfluːkˌhaːfn̩/ — espeak يُبقيها [ɡ] لأنه يلصق flˈuːɡ بـhɑːfən دون قاعدة الهمس. التصحيح يهمس الصامت فقط.",
+      "analogy": "Rückhand [rˈʏkhant] (espeak نفسه: k قبل h داخل المركّب) · Flug [flˈuːk] معزولة",
+      "contexts": [
+        "Flughafen.",
+        "Wie kommst du zum Flughafen?"
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "fh-3",
+        "fh-6",
+        "fh-8",
+        "hb-1",
+        "hb-10",
+        "hb-3",
+        "hb-4",
+        "hb-6",
+        "hb-8",
+        "ke-19",
+        "ke-2",
+        "kf-2",
+        "kf-3",
+        "mt1-h1-d6-l1",
+        "mt1-h1-d6-l2",
+        "word-flughafen",
+        "ac-11",
+        "ac-9",
+        "ez-20",
+        "zf-4",
+        "ee-1",
+        "ee-10"
+      ]
+    },
+    {
+      "word": "Mädchen",
+      "forms": [
+        {
+          "espeak": "mˈɛːdçən",
+          "ipa": "mˈɛːtçən"
+        }
+      ],
+      "referenceIpa": "/ˈmɛːtçən/",
+      "referenceNote": "إجهار النهاية (D189): d قبل لاحقة ‑chen تُهمس [t] — المرجع /ˈmɛːtçən/ (وصيغة /ˈmeːtçən/). espeak يُبقي [d]. التصحيح يهمس الصامت فقط؛ طول ɛː كما هو.",
+      "analogy": "Brötchen [brˈøːtçən] (espeak نفسه: t قبل ç) · Mäd‑ من Magd/Maid",
+      "contexts": [
+        "Mädchen.",
+        "Es heißt das Mädchen; wie das Brötchen."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "fe-5",
+        "fe-6",
+        "word-maedchen",
+        "zw-8",
+        "zw-9",
+        "wh-13",
+        "wh-14"
+      ]
+    },
+    {
+      "word": "Freundschaft",
+      "forms": [
+        {
+          "espeak": "frˈɔøndʃaft",
+          "ipa": "frˈɔøntʃaft"
+        }
+      ],
+      "referenceIpa": "/ˈfʁɔɪ̯ntʃaft/",
+      "referenceNote": "إجهار النهاية (D189): Freund آخره d تُهمس [t] قبل لاحقة ‑schaft — المرجع /ˈfʁɔɪ̯ntʃaft/. espeak يُبقي [d].",
+      "analogy": "Wirtschaft [vˈɪɾtʃaft] (espeak نفسه: t قبل ʃ) · Freund [frˈɔønt] معزولة",
+      "contexts": [
+        "Freundschaft.",
+        "Was bedeutet Freundschaft?"
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "fe-10",
+        "fe-11",
+        "fe-9",
+        "word-freundschaft",
+        "wh-13",
+        "wh-14"
+      ]
+    },
+    {
+      "word": "Landschaft",
+      "forms": [
+        {
+          "espeak": "lˈandʃaft",
+          "ipa": "lˈantʃaft"
+        }
+      ],
+      "referenceIpa": "/ˈlantʃaft/",
+      "referenceNote": "إجهار النهاية (D189): Land آخره d تُهمس [t] قبل ‑schaft — المرجع /ˈlantʃaft/. espeak يُبقي [d].",
+      "analogy": "Wirtschaft [vˈɪɾtʃaft] (espeak نفسه) · Land [lˈant] معزولة",
+      "contexts": [
+        "Landschaft.",
+        "Die Landschaft ist so schön!"
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "ki-12",
+        "ki-16",
+        "word-landschaft"
+      ]
+    },
+    {
+      "word": "Ergebnis",
+      "forms": [
+        {
+          "espeak": "ɛɾɡˈeːbnɪs",
+          "ipa": "ɛɾɡˈeːpnɪs"
+        }
+      ],
+      "referenceIpa": "/ɛɐ̯ˈɡeːpnɪs/",
+      "referenceNote": "إجهار النهاية (D189): b قبل n داخل الكلمة تُهمس [p] — المرجع /ɛɐ̯ˈɡeːpnɪs/. espeak يُبقي [b]. وجدها كاشف الإجهار الجديد (لم تكن في مسح N-101 اليدوي).",
+      "analogy": "Abnahme [ˈapnˌɑːmə] · abnehmen [ˈapnˌeːmən] (espeak نفسه: p قبل n)",
+      "contexts": [
+        "Ergebnis.",
+        "Das Ergebnis ist gut!"
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "kd-7",
+        "word-ergebnis",
+        "ez-14"
+      ]
+    },
+    {
+      "word": "dreiundsechzig",
+      "forms": [
+        {
+          "espeak": "drˈaɪʊndzˌɛçtsɪç",
+          "ipa": "drˈaɪʊntzˌɛçtsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈdʁaɪ̯ʔʊntˌzɛçt͡sɪç/",
+      "referenceNote": "إجهار النهاية (D189): und داخل العدد المركّب [ʊnt] لا [ʊnd] — المرجع /ˈdʁaɪ̯ʔʊntˌzɛçt͡sɪç/. espeak يُجهر d قبل z (مماثلة لا يعرفها الألماني). التصحيح يهمس d فقط؛ z في sechzig تبقى كما في المرجع.",
+      "analogy": "und sie [ʊnt ziː] (espeak نفسه عبر حد الكلمة) · dreiundfünfzig [drˈaɪʊntfˌʏnftsɪç] · zweiundvierzig (مدخل في هذا المعجم)",
+      "contexts": [
+        "dreiundsechzig.",
+        "Er ist dreiundsechzig."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "num-63"
+      ]
+    },
+    {
+      "word": "dreiundsiebzig",
+      "forms": [
+        {
+          "espeak": "drˈaɪʊndzˌiːptsɪç",
+          "ipa": "drˈaɪʊntzˌiːptsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈdʁaɪ̯ʊntˌziːpt͡sɪç/",
+      "referenceNote": "إجهار النهاية (D189): und في العدد المركّب [ʊnt] — المرجع /ˈdʁaɪ̯ʊntˌziːpt͡sɪç/. espeak يُجهر d قبل z. التصحيح يهمس d فقط.",
+      "analogy": "und sie [ʊnt ziː] (espeak نفسه) · dreiundfünfzig [drˈaɪʊntfˌʏnftsɪç]",
+      "contexts": [
+        "dreiundsiebzig.",
+        "Opa ist dreiundsiebzig."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "om-4"
+      ]
+    },
+    {
+      "word": "neunundneunzig",
+      "forms": [
+        {
+          "espeak": "nˈɔønʊndnˌɔøntsɪç",
+          "ipa": "nˈɔønʊntnˌɔøntsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈnɔɪ̯nʔʊntˈnɔɪ̯nt͡sɪç/",
+      "referenceNote": "إجهار النهاية (D189): und في العدد المركّب [ʊnt] — المرجع /ˈnɔɪ̯nʔʊntˈnɔɪ̯nt͡sɪç/. espeak يُجهر d قبل n. التصحيح يهمس d فقط.",
+      "analogy": "und nein [ʊnt nˈaɪn] (espeak نفسه) · neunundzwanzig [nˈɔønʊnttsvˌantsɪç]",
+      "contexts": [
+        "neunundneunzig.",
+        "Das kostet neunundneunzig Euro."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "eur-19-99",
+        "num-99",
+        "ws-6",
+        "ws-8"
+      ]
+    },
+    {
+      "word": "neunhundertneunundneunzig",
+      "forms": [
+        {
+          "espeak": "nˈɔønhʊndɜtnˌɔønʊndnˌɔøntsɪç",
+          "ipa": "nˈɔønhʊndɜtnˌɔønʊntnˌɔøntsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈnɔɪ̯nˌhʊndɐtnɔɪ̯nʔʊntˈnɔɪ̯nt͡sɪç/",
+      "referenceNote": "عدد مركّب غائب عن المرجع (D132) — مركّب من جزأيه: neunhundert /ˈnɔɪ̯nˌhʊndɐt/ + neunundneunzig /ˈnɔɪ̯nʔʊntˈnɔɪ̯nt͡sɪç/. إجهار النهاية (D189): und [ʊnt] لا [ʊnd] كما في neunundneunzig (مدخل). كان في reviewed بلا مرجع (D132) ونُقل إلى المداخل لاتساقه مع جزئه.",
+      "analogy": "neunundneunzig (مدخل في هذا المعجم) · und nein [ʊnt nˈaɪn] (espeak نفسه)",
+      "contexts": [
+        "neunhundertneunundneunzig.",
+        "Es kostet neunhundertneunundneunzig Euro."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "hd-3",
+        "hd-4"
+      ]
+    },
+    {
+      "word": "zweihundertneunundsiebzig",
+      "forms": [
+        {
+          "espeak": "tsvˈaɪhʊndɜtnˌɔønʊndzˌiːptsɪç",
+          "ipa": "tsvˈaɪhʊndɜtnˌɔønʊntzˌiːptsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈt͡svaɪ̯ˌhʊndɐtnɔɪ̯nʔʊntˈziːpt͡sɪç/",
+      "referenceNote": "عدد مركّب غائب عن المرجع (D132) — مركّب من جزأيه: zweihundert /ˈt͡svaɪ̯ˌhʊndɐt/ + neunundsiebzig (siebzig /ˈziːpt͡sɪç/ · dreiundsiebzig /ˈdʁaɪ̯ʊntˌziːpt͡sɪç/). إجهار النهاية (D189): und [ʊnt] لا [ʊnd]. كان في reviewed بلا مرجع (D132) ونُقل إلى المداخل.",
+      "analogy": "dreiundsiebzig (مدخل في هذا المعجم) · und sie [ʊnt ziː] (espeak نفسه)",
+      "contexts": [
+        "zweihundertneunundsiebzig.",
+        "Das kostet zweihundertneunundsiebzig Euro."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "hd-5",
+        "wd-6",
+        "wz-6"
+      ]
+    },
+    {
+      "word": "Bäckerei",
+      "forms": [
+        {
+          "espeak": "bˌɛkeːrˈaɪ",
+          "ipa": "bˌɛkərˈaɪ"
+        }
+      ],
+      "referenceIpa": "/ˌbɛkəˈʁaɪ̯/",
+      "referenceNote": "الحركة غير المنبورة قبل r في ‑erei (D160 · N-101 تمدّدها): المرجع شوا /ˌbɛkəˈʁaɪ̯/، وespeak يقرؤها e طويلة مشدودة [eː] (اصطلاحه المنهجي في ‑erei). التصحيح يعيدها شوا فقط. الوحيدة من صنفها في المحتوى (Metzgerei لا تُنطق في مسار · Polizei تحتاج o/i قصيرتين غير منبورتين لا قياس لهما في خرج espeak — تُركت).",
+      "analogy": "andere [ˈandərə] (espeak نفسه: ə قبل r) · Bäcker [bˈɛkɜ] — ‑er غير منبورة لا تُشدّ",
+      "contexts": [
+        "Bäckerei.",
+        "Die Haltestelle ist gegenüber der Bäckerei."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "hb-2",
+        "vb-17",
+        "vb-18",
+        "vb-8",
+        "word-baeckerei",
+        "ac-15",
+        "ac-6",
+        "ac-7",
+        "wp-12",
+        "wp-13"
+      ]
+    },
+    {
+      "word": "dreiundvierzig",
+      "forms": [
+        {
+          "espeak": "drˈaɪʊndvˌiːɾtsɪç",
+          "ipa": "drˈaɪʊntfˌɪɾtsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈdʁaɪ̯ʔʊntˌfɪʁt͡sɪç/",
+      "analogy": "zweiundvierzig [tsvˈaɪʊntfˌɪɾtsɪç] (مدخل في هذا المعجم) · vierzig [fˈɪɾtsɪç] — v في vierzig تبقى [f] بعد und، وie فيها قصيرة",
+      "contexts": [
+        "dreiundvierzig.",
+        "Null eins sieben sechs — dreiundvierzig — neunzig."
+      ],
+      "regeneratedTracks": [
+        "wd-15",
+        "wd-17",
+        "wd-18"
+      ]
+    },
+    {
+      "word": "fünfundvierzig",
+      "forms": [
+        {
+          "espeak": "fˈʏnfʊndvˌiːɾtsɪç",
+          "ipa": "fˈʏnfʊntfˌɪɾtsɪç"
+        }
+      ],
+      "referenceIpa": "/ˈfʏnfʔʊntˌfɪʁt͡sɪç/",
+      "analogy": "dreiundvierzig [drˈaɪʊntfˌɪɾtsɪç] · zweiundvierzig — v في vierzig تبقى [f] بعد und، وie فيها قصيرة (D201)",
+      "contexts": [
+        "fünfundvierzig.",
+        "Sieben Uhr fünfzehn und sieben Uhr fünfundvierzig."
+      ],
+      "regeneratedTracks": [
+        "wz-10"
+      ]
+    },
+    {
+      "word": "sechste",
+      "forms": [
+        {
+          "espeak": "zˈɛkstˌeː",
+          "ipa": "zˈɛkstə"
+        }
+      ],
+      "referenceIpa": "/ˈzɛkstə/",
+      "referenceNote": "D199: espeak يقرأ sechste كأنها مركّب (sechs + te) فينبر النهاية ويطيلها [ˌeː] — بينما ‑e الأخيرة غير المنبورة ə دائماً كما في zweite [tsvˈaɪtə] وzwölfte [tsvˈœlftə] اللتين ينطقهما espeak صحيحاً",
+      "analogy": "zweite [tsvˈaɪtə] · nächste [nˈɛçstə] — ‑ste/‑te الترتيبية بشفا ə، والنبر على الجذر وحده",
+      "contexts": [
+        "sechste.",
+        "Heute ist Montag, der sechste April."
+      ],
+      "regeneratedTracks": [
+        "zh-1",
+        "zh-2"
+      ]
+    },
+    {
+      "word": "heiraten",
+      "forms": [
+        {
+          "espeak": "haɪrˈɑːtən",
+          "ipa": "hˈaɪrɑːtən"
+        }
+      ],
+      "referenceIpa": "/ˈhaɪ̯ʁaːtn̩/",
+      "analogy": "verheiratet [fɛɾhˈaɪrɑːtət] (مدخل D121) — النبر على الجذر hei لا على ra؛ espeak ينبر heiraten على المقطع الثاني وحده",
+      "contexts": [
+        "heiraten.",
+        "Einladung! Wir heiraten am ersten Mai."
+      ],
+      "regeneratedTracks": [
+        "word-heiraten"
+      ]
+    },
+    {
+      "word": "heiratet",
+      "forms": [
+        {
+          "espeak": "haɪrˈɑːtət",
+          "ipa": "hˈaɪrɑːtət"
+        }
+      ],
+      "referenceIpa": "/ˈhaɪ̯ʁaːtət/",
+      "analogy": "verheiratet [fɛɾhˈaɪrɑːtət] — النبر على hei",
+      "contexts": [
+        "Hallo, Yusuf! Meine Tante heiratet im Mai — hier ist die Einladung zur Hochzeit.",
+        "Deine Tante heiratet? Glückwunsch! Und wer ist der Ehemann?"
+      ],
+      "regeneratedTracks": [
+        "fs-1",
+        "fs-2"
+      ]
+    },
+    {
+      "word": "Baby",
+      "forms": [
+        {
+          "espeak": "bˈeɪbi",
+          "ipa": "bˈeːbi"
+        }
+      ],
+      "referenceIpa": "/ˈbeːbi/",
+      "analogy": "leben [lˈeːbən] · Tee [tˈeː] — الألمانية تنطق الكلمة الإنجليزية بـe طويلة لا بالمزدوج eɪ",
+      "contexts": [
+        "das Baby.",
+        "Ja, alle Verwandten: die Großeltern, mein Onkel und seine Ehefrau — und ein Baby!",
+        "Ein Baby auf der Hochzeit? Wie alt ist es?"
+      ],
+      "regeneratedTracks": [
+        "fs-5",
+        "fs-6",
+        "word-baby"
+      ]
+    },
+    {
+      "word": "lädt",
+      "forms": [
+        {
+          "espeak": "lˈɛt",
+          "ipa": "lˈɛːt"
+        }
+      ],
+      "referenceIpa": "/lɛːt/",
+      "analogy": "schläft [ʃlˈɛːft] (مدخل D160) · laden [lˈɑːdən] — ä طويلة كطول a في المصدر؛ espeak يقصّرها",
+      "contexts": [
+        "Mache ich! Und Jonas lädt dich auch ein — zur Party am Abend.",
+        "Er lädt mich ein? Super! Dann komme ich im Mai zur Hochzeit. Bis bald, Lena!"
+      ],
+      "regeneratedTracks": [
+        "fs-19",
+        "fs-20"
+      ]
+    },
+    {
+      "word": "hört",
+      "forms": [
+        {
+          "espeak": "hˈœɾt",
+          "ipa": "hˈøːɾt"
+        }
+      ],
+      "referenceIpa": "/høːɐ̯t/",
+      "analogy": "gehört [ɡəhˈøːɾt] (مدخل D137) · hören [hˈøːrən] — ö طويلة كما في المصدر، وespeak يقصّرها قبل rt وحدها",
+      "contexts": [
+        "Um zwei Uhr. Dann hört die Musik auf, und alle gehen nach Hause.",
+        "Die Musik hört um elf Uhr auf."
+      ],
+      "regeneratedTracks": [
+        "fr-16"
+      ]
+    },
+    {
+      "word": "Lieblingslied",
+      "forms": [
+        {
+          "espeak": "lˈiːblɪŋslˌiːt",
+          "ipa": "lˈiːplɪŋslˌiːt"
+        }
+      ],
+      "referenceIpa": "/ˈliːplɪŋsˌliːt/",
+      "analogy": "lieb [lˈiːp] · Liebling — b في آخر الجذع قبل l تُهمس p (D189: إجهار النهاية داخل الكلمة)، وespeak يُبقيها مجهورة",
+      "contexts": [
+        "das Lieblingslied.",
+        "Super! Und die Musik? Hast du ein Lieblingslied?"
+      ],
+      "regeneratedTracks": [
+        "fr-11",
+        "word-lieblingslied"
+      ]
+    },
+    {
+      "word": "Kiosk",
+      "forms": [
+        {
+          "espeak": "kˈɪʲoːsk",
+          "ipa": "kˈiːɔsk"
+        }
+      ],
+      "referenceIpa": "/ˈkiːɔsk/",
+      "analogy": "Kino [kˈiːno] — i طويلة ثم o قصيرة مفتوحة [ɔ] كما في Kopf؛ espeak يُدخل انزلاقاً ويطيل o",
+      "contexts": [
+        "Pommes frites vom Kiosk. Jeden Tag Pommes frites!",
+        "der Kiosk."
+      ],
+      "regeneratedTracks": [
+        "ek-4",
+        "word-kiosk",
+        "es-15"
+      ]
+    },
+    {
+      "word": "frites",
+      "forms": [
+        {
+          "espeak": "frˈiːtəs",
+          "ipa": "frˈɪt"
+        }
+      ],
+      "referenceIpa": "/pɔm ˈfʁɪt/",
+      "analogy": "كلمة فرنسية: Pommes frites تُنطق پوم فريت — frites بـi قصيرة [ɪ] و-es صامتة؛ espeak يقرؤها ألمانياً فيُطيل i ويلفظ -es",
+      "contexts": [
+        "Pommes frites vom Kiosk. Jeden Tag Pommes frites!",
+        "die Pommes frites."
+      ],
+      "regeneratedTracks": [
+        "ek-4",
+        "word-pommes-frites"
+      ]
+    },
+    {
+      "word": "kaputt",
+      "forms": [
+        {
+          "espeak": "kˈɑpʊt",
+          "ipa": "kapˈʊt"
+        }
+      ],
+      "referenceIpa": "/kaˈpʊt/",
+      "analogy": "النبر على المقطع الثاني كما في Kartoffel وKaffee — ka-PUTT؛ espeak ينبر المقطع الأول",
+      "contexts": [
+        "Ja, ja. Aber unser Herd ist kaputt — ich kann nicht kochen.",
+        "Bei uns ist heute auch der Fernseher kaputt. Mein Vater ist böse."
+      ],
+      "regeneratedTracks": [
+        "ek-15",
+        "ek-2",
+        "word-kaputt",
+        "fb-19"
+      ]
+    },
+    {
+      "word": "Blume",
+      "forms": [
+        {
+          "espeak": "blˈʊmə",
+          "ipa": "blˈuːmə"
+        }
+      ],
+      "referenceIpa": "/ˈbluːmə/",
+      "analogy": "u طويلة كما في gut [ɡˈuːt] وBlut — espeak يقصّرها [ʊ]",
+      "contexts": [
+        "die Blume.",
+        "Die Blume ist schön."
+      ],
+      "regeneratedTracks": [
+        "word-blume"
+      ]
+    },
+    {
+      "word": "Zigarette",
+      "forms": [
+        {
+          "espeak": "tsˈiːɡarˌɛtə",
+          "ipa": "tsɪɡarˈɛtə"
+        }
+      ],
+      "referenceIpa": "/t͡siɡaˈʁɛtə/",
+      "analogy": "النبر على المقطع الثالث (تسيغارِتّه) كما في Hotel (ho-TEL) — espeak ينبر الأول ويُطيل i",
+      "contexts": [
+        "die Zigarette.",
+        "Die Zigarette ist teuer."
+      ],
+      "regeneratedTracks": [
+        "word-zigarette"
+      ]
+    },
+    {
+      "word": "Blumen",
+      "forms": [
+        {
+          "espeak": "blˈʊmən",
+          "ipa": "blˈuːmən"
+        }
+      ],
+      "referenceIpa": "/ˈbluːmən/",
+      "analogy": "جمع Blume: u طويلة كما في المفرد — espeak يقصّرها [ʊ] في الجمع أيضاً",
+      "contexts": [
+        "Bringt Blumen aus dem Garten.",
+        "Die Blumen sind schön."
+      ],
+      "regeneratedTracks": [
+        "es-10",
+        "es-9",
+        "eb-16"
+      ]
+    },
+    {
+      "word": "Unterricht",
+      "forms": [
+        {
+          "espeak": "ˌʊntɜrˈɪçt",
+          "ipa": "ˈʊntɜrˌɪçt"
+        }
+      ],
+      "referenceIpa": "/ˈʊntɐˌʁɪçt/",
+      "analogy": "النبر على المقطع الأول (UN-ter-richt) كما في Urlaub — espeak ينبر -richt",
+      "contexts": [
+        "Morgen habe ich Unterricht.",
+        "Der Unterricht ist gut."
+      ],
+      "regeneratedTracks": [
+        "fb-16",
+        "word-unterricht"
+      ]
+    },
+    {
+      "word": "Geburtsort",
+      "forms": [
+        {
+          "espeak": "ɡəbˈʊɐtsɔɾt",
+          "ipa": "ɡəˈbuːɐtsˌɔɾt"
+        }
+      ],
+      "referenceIpa": "/ɡəˈbuːɐ̯t͡sˌʔɔʁt/",
+      "analogy": "الـu في Ge-BURT طويلة (buː) مع نبر ثانوي على Ort — espeak يقصّرها وينبر مرة واحدة",
+      "contexts": [
+        "Der Geburtsort ist Tunis.",
+        "Richtig! Geburtsort: Tunis. Und dein Geburtsjahr?",
+        "Mein Geburtsjahr und mein Geburtsort. Wo steht das? Im Ausweis?"
+      ],
+      "regeneratedTracks": [
+        "word-geburtsort",
+        "ec-6",
+        "ec-7"
+      ]
+    },
+    {
+      "word": "Fax",
+      "forms": [
+        {
+          "espeak": "fˈɑːks",
+          "ipa": "fˈaks"
+        }
+      ],
+      "referenceIpa": "/faks/",
+      "analogy": "الألف في Fax قصيرة (faks — كـTax) — espeak يطيلها (fɑːks)",
+      "contexts": [
+        "Das Fax ist neu.",
+        "Oder E-Mail? Oder Fax? Nein — Oma hat kein Internet!",
+        "Ein Fax? Nein — ein Brief!"
+      ],
+      "regeneratedTracks": [
+        "word-fax",
+        "ed-9",
+        "ed-10"
+      ]
+    },
+    {
+      "word": "Wiederhören",
+      "forms": [
+        {
+          "espeak": "viːdɜhˈøːrən",
+          "ipa": "ˈviːdɜˌhøːrən"
+        }
+      ],
+      "referenceIpa": "/ˈviːdɐˌhøːʁən/",
+      "analogy": "النبر على WIE (WIE-der-hören) مع نبر ثانوي على hö — espeak ينبر hö وحده",
+      "contexts": [
+        "Auf Wiederhören!",
+        "Hallo Oma! Der Brief kommt bald. Auf Wiederhören!",
+        "Tschüss, Oma! Auf Wiederhören!"
+      ],
+      "regeneratedTracks": [
+        "word-wiederhoeren",
+        "ed-17",
+        "ed-18"
+      ]
+    },
+    {
+      "word": "Flugzeug",
+      "forms": [
+        {
+          "espeak": "flˈuːɡtsɔøk",
+          "ipa": "flˈuːktsɔøk"
+        }
+      ],
+      "referenceIpa": "/ˈfluːkˌt͡sɔɪ̯k/",
+      "analogy": "الـg قبل t مهموسة (k) — Auslautverhärtung: FLUK-tsøyk — espeak يبقيها مجهورة (ɡ)",
+      "contexts": [
+        "das Flugzeug.",
+        "Kein Anschluss! Das Flugzeug fliegt ab!",
+        "Da! Das Flugzeug ist groß!"
+      ],
+      "regeneratedTracks": [
+        "ee-13",
+        "ee-14",
+        "word-flugzeug"
+      ]
+    },
+    {
+      "word": "Straßenbahn",
+      "forms": [
+        {
+          "espeak": "ʃtrˈɑsənbˌɑːn",
+          "ipa": "ʃtrˈɑːsənbˌɑːn"
+        }
+      ],
+      "referenceIpa": "/ˈʃtʁaːsn̩ˌbaːn/",
+      "analogy": "الـa في Stra- طويلة (ʃtraː — كـBahn) — espeak يقصّرها (ʃtra)",
+      "contexts": [
+        "die Straßenbahn.",
+        "Ja! S-Bahn oder Straßenbahn?"
+      ],
+      "regeneratedTracks": [
+        "ee-2",
+        "word-strassenbahn"
+      ]
+    },
+    {
+      "word": "Halbpension",
+      "forms": [
+        {
+          "espeak": "hˌalppɛnzjˈoːn",
+          "ipa": "hˈalppɛnzˌjoːn"
+        }
+      ],
+      "referenceIpa": "/ˈhalppaŋˌzi̯oːn/",
+      "analogy": "النبر على HALB (HẠLB-pension) مع نبر ثانوي على sion — espeak ينبر الأخير على الطريقة الفرنسية",
+      "contexts": [
+        "die Halbpension.",
+        "Mit Halbpension! Das Apartment ist groß."
+      ],
+      "regeneratedTracks": [
+        "ef-5",
+        "word-halbpension"
+      ]
+    },
+    {
+      "word": "Portugal",
+      "forms": [
+        {
+          "espeak": "pˈɔɾtuːɡˌal",
+          "ipa": "pˈɔɾtuɡˌal"
+        }
+      ],
+      "referenceIpa": "/ˈpɔʁtuɡal/",
+      "referenceNote": "طولٌ لا نبر (D239 · N-039): النبر على -tu- صحيح، لكن espeak يطوّلها [uː] والمرجع /ˈpɔʁtuɡal/ بـu قصيرة — فئة circa اليقينية (D189): الطول الخاطئ يُنطق خطأً. التصحيح يقصّر الحركة وحدها ويُبقي النبر والـɾ كما هما.",
+      "analogy": "und [ˈʊnt] · Mutter [mˈʊtɜ] (espeak نفسه) — غير المنبورة قصيرة؛ الكيفيّة u تُبقى (قرض برتغالي) والطول وحده يُصحَّح",
+      "contexts": [
+        "Portugal.",
+        "Aus Portugal. Und er wohnt auch dort.",
+        "Mein Freund kommt aus Portugal."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "wo-4",
+        "word-portugal"
+      ]
+    },
+    {
+      "word": "Arabisch",
+      "forms": [
+        {
+          "espeak": "arˈɑbɪʃ",
+          "ipa": "arˈɑːbɪʃ"
+        }
+      ],
+      "referenceIpa": "/aˈʁaːbɪʃ/",
+      "referenceNote": "طولٌ لا نبر (D239 · N-012): المنبورة في مقطع مفتوح بـɑ بلا علامة والمرجع /aˈʁaːbɪʃ/ بـaː — فئة circa اليقينية (D189) لا الغامضة: كانت «ambiguous» في reviewed منذ D121 تنتظر قياس المدة، والقاعدة الجديدة تحسمها بالمرجع. التصحيح يطوّل المنبورة وحدها.",
+      "analogy": "Vater [fˈɑːtɜ] · Name [nˈɑːmə] · Abend [ˈɑːbənt] (espeak نفسه) — المنبورة في مقطع مفتوح طويلة",
+      "contexts": [
+        "Arabisch.",
+        "Ich spreche Arabisch, Französisch und ein bisschen Deutsch.",
+        "Deine Muttersprache ist Arabisch, und Deutsch ist eine Fremdsprache für dich."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "ha-10",
+        "ha-7",
+        "wh-16",
+        "wm-6",
+        "word-arabisch",
+        "zw-6"
+      ]
+    },
+    {
+      "word": "damals",
+      "forms": [
+        {
+          "espeak": "dˈɑmɑːls",
+          "ipa": "dˈɑːmɑːls"
+        }
+      ],
+      "referenceIpa": "/ˈdaːmaːls/",
+      "referenceNote": "طولٌ معكوس (D239 · N-012): espeak نبَر الأولى وقصّرها وطوّل الثانية غير المنبورة، والمرجع /ˈdaːmaːls/ طويلتاه معاً — فئة circa اليقينية؛ كانت «ambiguous» منذ D121 وخرجت من reviewed. التصحيح يطوّل المنبورة وحدها ويُبقي الثانية.",
+      "analogy": "Vater [fˈɑːtɜ] · Tag [tˈɑːk] (espeak نفسه) — المنبورة طويلة؛ هنا طوّل espeak المقطع الخاطئ",
+      "contexts": [
+        "damals.",
+        "Damals in Tunis habe ich auch im Verein gespielt."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "ew-15",
+        "word-damals"
+      ]
+    },
+    {
+      "word": "Datum",
+      "forms": [
+        {
+          "espeak": "dˈɑtuːm",
+          "ipa": "dˈɑːtʊm"
+        }
+      ],
+      "referenceIpa": "/ˈdaːtʊm/",
+      "referenceNote": "طولان معكوسان (D239 · N-012): المنبورة قصيرة [ɑ] والمرجع aː، وغير المنبورة طويلة [uː] والمرجع ʊ — فئة circa اليقينية (سابقة Badezimmer D147: تصحيحان في مدخل واحد)؛ كانت «ambiguous» منذ D121 وخرجت من reviewed. (Daten [dˈɑːtən] عند espeak صحيحة أصلاً فلا تمسّها الصيغة.)",
+      "analogy": "Vater [fˈɑːtɜ] · Mutter [mˈʊtɜ] (espeak نفسه) — المنبورة طويلة وغير المنبورة ʊ قصيرة",
+      "contexts": [
+        "Datum.",
+        "Super! Frage drei — das Datum: Wann war der Kurs zu Ende?",
+        "Welches Datum ist heute? — Der zwölfte April."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "wn-11",
+        "word-datum"
+      ]
+    },
+    {
+      "word": "Spanien",
+      "forms": [
+        {
+          "espeak": "ʃpˈɑnɪʲən",
+          "ipa": "ʃpˈɑːnɪʲən"
+        }
+      ],
+      "referenceIpa": "/ˈʃpaːni̯ən/",
+      "referenceNote": "طولٌ لا نبر (D239 · N-012): المنبورة في مقطع مفتوح بـɑ بلا علامة والمرجع /ˈʃpaːni̯ən/ بـaː — فئة circa اليقينية؛ كانت «ambiguous» منذ D121 وخرجت من reviewed. التصحيح يطوّل المنبورة وحدها ويُبقي الانزلاق ɪʲ كما هو.",
+      "analogy": "Jahr [jˈɑːɾ] · Name [nˈɑːmə] (espeak نفسه) — المنبورة في مقطع مفتوح طويلة",
+      "contexts": [
+        "Spanien.",
+        "Kommen Sie aus Spanien?",
+        "Ich komme aus Spanien."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "word-spanien"
+      ]
+    },
+    {
+      "word": "Bleistift",
+      "forms": [
+        {
+          "espeak": "blˈaɪstɪft",
+          "ipa": "blˈaɪʃtɪft"
+        }
+      ],
+      "referenceIpa": "/ˈblaɪ̯ˌʃtɪft/",
+      "referenceNote": "صامت لا حركة (D240 · N-013): st أول المقطع تُنطق [ʃt] — espeak يقرؤها [st] في Blei|stift (يكسر حدّ المقطع)، والمرجع /ˈblaɪ̯ˌʃtɪft/ — فئة circa الصامتة اليقينية (D157): التدقيق لا يفحص الصوامت فلم يرها.",
+      "analogy": "Stehen [ʃtˈeːən] · Stuhl [ʃtˈuːl] (espeak نفسه) — st أول المقطع [ʃt]",
+      "contexts": [
+        "Bleistift.",
+        "Schreibst du mit Kugelschreiber oder Bleistift?",
+        "Mit dem Kugelschreiber. Der Bleistift ist zu kurz."
+      ],
+      "regeneratedTracks": [
+        "fb-8",
+        "fb-9",
+        "word-bleistift"
+      ]
+    },
+    {
+      "word": "Familienstand",
+      "forms": [
+        {
+          "espeak": "famˈiːlɪʲənstˌant",
+          "ipa": "famˈiːlɪʲənʃtˌant"
+        }
+      ],
+      "referenceIpa": "/faˈmiːliənʃtant/",
+      "referenceNote": "صامت لا حركة (D240 · N-013): st أول المقطع [ʃt] — espeak [st] في Familien|stand، والمرجع /faˈmiːliənʃtant/ — الفئة نفسها (Bleistift).",
+      "analogy": "Stehen [ʃtˈeːən] · Stuhl [ʃtˈuːl] (espeak نفسه) — st أول المقطع [ʃt]",
+      "contexts": [
+        "Familienstand.",
+        "Ja! Ich muss es ausfüllen. Was heißt Familienstand?"
+      ],
+      "regeneratedTracks": [
+        "ec-3",
+        "word-familienstand"
+      ]
+    },
+    {
+      "word": "Krankenhaus",
+      "forms": [
+        {
+          "espeak": "krˈankənhˌaʊs",
+          "ipa": "krˈaŋkənhˌaʊs"
+        }
+      ],
+      "referenceIpa": "/ˈkʁaŋkn̩ˌhaʊ̯s/",
+      "referenceNote": "صامت لا حركة (D240 · N-013): n قبل k تُنطق [ŋ] (فئة Onkel D137) — espeak [n]، والمرجع /ˈkʁaŋkn̩ˌhaʊ̯s/.",
+      "analogy": "denken [dˈɛŋkən] · trinken [trˈɪŋkən] (espeak نفسه) — n قبل k تُنطق [ŋ]",
+      "contexts": [
+        "Krankenhaus.",
+        "Die Apotheke ist gegenüber der Kirche. Und das Krankenhaus ist im Süden — zwanzig Minuten mit dem Bus.",
+        "In Berlin ist das Krankenhaus im Westen. Gibt es bei dir ein Museum?"
+      ],
+      "regeneratedTracks": [
+        "hb-13",
+        "sk-7",
+        "sk-8",
+        "word-krankenhaus"
+      ]
+    },
+    {
+      "word": "Krankenwagen",
+      "forms": [
+        {
+          "espeak": "krˈankənvˌɑːɡən",
+          "ipa": "krˈaŋkənvˌɑːɡən"
+        }
+      ],
+      "referenceIpa": "/ˈkʁaŋkn̩ˌvaːɡn̩/",
+      "referenceNote": "صامت لا حركة (D240 · N-013): n قبل k [ŋ] (فئة Onkel) — espeak [n]، والمرجع /ˈkʁaŋkn̩ˌvaːɡn̩/.",
+      "analogy": "denken [dˈɛŋkən] · trinken [trˈɪŋkən] (espeak نفسه) — n قبل k تُنطق [ŋ]",
+      "contexts": [
+        "Krankenwagen.",
+        "Der Hausarzt hat gesagt: Das kann ich nicht machen. Sie müssen in die Notaufnahme. Der Krankenwagen ist gekommen."
+      ],
+      "regeneratedTracks": [
+        "kd-5",
+        "word-krankenwagen"
+      ]
+    },
+    {
+      "word": "Erwachsene",
+      "forms": [
+        {
+          "espeak": "ɛɾvˈaxzənə",
+          "ipa": "ɛɾvˈaksənə"
+        }
+      ],
+      "referenceIpa": "/ɛɐ̯ˈvaksənə/",
+      "referenceNote": "صامتان (D240 · N-013): chs تُنطق [ks] لا [x] (wachsen [vaksən]) والسين بعدها مهموسة [s] لا [z] — espeak [ɛɾvˈaxzənə] والمرجع /ɛɐ̯ˈvaksənə/ — والجمع مدخل مستقل (Erwachsenen — بسابقة Hobbys D152).",
+      "analogy": "sechs [zˈɛks] (espeak نفسه) — chs تُنطق [ks]؛ wachsen يشاركها الخطأ ولا مسار يمسّه فلا مدخل له (قاعدة N-057)",
+      "contexts": [
+        "Erwachsene.",
+        "Museum am Park — Preise: Erwachsene 12 Euro · Jugendliche von 14 bis 17 Jahren 6 Euro · Kinder bis 6 Jahre und Babys frei."
+      ],
+      "regeneratedTracks": [
+        "word-erwachsene"
+      ]
+    },
+    {
+      "word": "sprichst",
+      "forms": [
+        {
+          "espeak": "ʃprˈɪkst",
+          "ipa": "ʃprˈɪçst"
+        }
+      ],
+      "referenceIpa": "/ʃpʁɪçst/",
+      "referenceNote": "صامت لا حركة (D240 · N-013): ch بعد i تُنطق [ç] (ich-Laut) — espeak يقرؤها [k] في عنقود chst، والمرجع /ʃpʁɪçst/.",
+      "analogy": "ich [ɪç] · möchte [mˈœçtə] (espeak نفسه) — ch بعد حركة أمامية [ç]",
+      "contexts": [
+        "sprichst.",
+        "Du sprichst wie meine Mutter! Okay, ich ruhe mich jetzt aus. Gute Nacht!"
+      ],
+      "regeneratedTracks": [
+        "wk-19"
+      ]
+    },
+    {
+      "word": "Job",
+      "forms": [
+        {
+          "espeak": "dʒˈɒb",
+          "ipa": "dʒˈɒp"
+        }
+      ],
+      "referenceIpa": "/d͡ʒɔp/",
+      "referenceNote": "صامت أخير (D240 · N-013): الإطباق النهائي يُهمس (Job [dʒɔp]) — espeak يُبقي [b] في هذا القرض وحده (Tag/Abend/Kind عنده مهموسة)، والمرجع /d͡ʒɔp/ — والحركة ɒ تُبقى (لا سياسة لكيفيّة الحركة).",
+      "analogy": "Tag [tˈɑːk] · Abend [ˈɑːbənt] · Kind [kˈɪnt] (espeak نفسه) — الصامت الأخير يُهمس؛ Job وحده أفلت",
+      "contexts": [
+        "Job.",
+        "Weil ich in Berlin arbeiten möchte. Ich brauche Deutsch für einen Job.",
+        "Ein Job in Berlin! Was möchtest du machen?"
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "wk-12",
+        "wk-13",
+        "wk-14",
+        "wk-17",
+        "word-job",
+        "zh-16"
+      ]
+    },
+    {
+      "word": "Erwachsenen",
+      "forms": [
+        {
+          "espeak": "ɛɾvˈaxzənən",
+          "ipa": "ɛɾvˈaksənən"
+        }
+      ],
+      "referenceIpa": "/ɛɐ̯ˈvaksənən/",
+      "referenceNote": "صامتان (D240 · N-013): جمع Erwachsene بالخطأ نفسه ([ks] لا [x] · [s] لا [z]) — مدخل مستقل بسابقة Hobbys D152 (السياق يجب أن يحوي الكلمة كاملة).",
+      "analogy": "sechs [zˈɛks] (espeak نفسه) — chs تُنطق [ks]",
+      "contexts": [
+        "Erwachsenen.",
+        "Ja, zwei Freundinnen. Die Erwachsenen essen im Restaurant, die Jugendlichen machen am Abend eine Party."
+      ],
+      "regeneratedTracks": [
+        "fs-9"
+      ]
+    },
+    {
+      "word": "werden",
+      "forms": [
+        {
+          "espeak": "vˌɛɾdən",
+          "ipa": "vˈeːɐdən"
+        }
+      ],
+      "referenceIpa": "/ˈveːɐ̯dn̩/",
+      "referenceNote": "طول الحركة المنبورة (D312): espeak يقصّر e المنبورة [ɛ] ويضع نبراً ثانوياً — والمرجع /ˈveːɐ̯dn̩/ بـeː طويلة ونبر أولي.",
+      "analogy": "سابقة ruft (D153): تصحيح طول الحركة المنبورة وحده؛ والقراءة القانونية Duden werden_Vollverb (مُتحقق حياً D312).",
+      "contexts": [
+        "werden → Es ist spät geworden.",
+        "werden (wird · wurde · geworden): التحوّل دائماً sein"
+      ],
+      "regeneratedTracks": [
+        "word-werden"
+      ]
+    },
+    {
+      "word": "weggehen",
+      "forms": [
+        {
+          "espeak": "vˈɛɡeːən",
+          "ipa": "vˈɛkeːən"
+        }
+      ],
+      "referenceIpa": "/ˈvɛkˌɡeːən/",
+      "referenceNote": "خطأ صامت لا يراه التدقيق (D312 · N-013): espeak يجهر آخر الجزء الأول [ɡ] — والمرجع /ˈvɛkˌɡeːən/ بهمسه [k] (همس آخر المقطع في المركّب weg+gehen).",
+      "analogy": "سابقة Mittagessen (D143): ɡ→k في آخر الجزء الأول؛ وAbendessen (D143): d→t.",
+      "contexts": [
+        "weggehen → Ich bin um acht weggegangen.",
+        "weggehen · wegwerfen: ge في المنتصف"
+      ],
+      "regeneratedTracks": [
+        "word-weggehen"
+      ]
+    },
+    {
+      "word": "wegwerfen",
+      "forms": [
+        {
+          "espeak": "vˈɛɡvɜfən",
+          "ipa": "vˈɛkvɜfən"
+        }
+      ],
+      "referenceIpa": "/ˈvɛkˌvɛʁfn̩/",
+      "referenceNote": "إجهار النهاية قبل صامت (D312 · N-101): espeak يُبقي [ɡv] — والمرجع /ˈvɛkˌvɛʁfn̩/ بـ[kv] المهموسة.",
+      "analogy": "سابقة D189 (N-101): Flughafen [ɡh]→[kh] — الزوج المجهور+التالي غائب عن كل صيغ المرجع.",
+      "contexts": [
+        "wegwerfen → Ich habe den Müll weggeworfen.",
+        "weggehen · wegwerfen: ge في المنتصف"
+      ],
+      "regeneratedTracks": [
+        "word-wegwerfen"
+      ]
+    },
+    {
+      "word": "unterwegs",
+      "forms": [
+        {
+          "espeak": "ˌʊntɜvˈɛks",
+          "ipa": "ˌʊntɜvˈeːks"
+        }
+      ],
+      "referenceIpa": "/ʊntɐˈveːks/",
+      "referenceNote": "طول الحركة المنبورة (D312): espeak يقصّر e المنبورة [ɛ] في المركّب — والمرجع /ʊntɐˈveːks/ بـeː طويلة.",
+      "analogy": "سابقة ruft (D153)؛ وWeg وحده [vˈeːk] كما يقرؤه espeak نفسه — الطول يُحفظ في المركّب.",
+      "contexts": [
+        "unterwegs.",
+        "Ich bin schon unterwegs."
+      ],
+      "regeneratedTracks": [
+        "word-unterwegs"
+      ]
+    },
+    {
+      "word": "Feierabend",
+      "forms": [
+        {
+          "espeak": "fˈaɪeːrˌɑːbənt",
+          "ipa": "fˈaɪɜˌɑːbənt"
+        }
+      ],
+      "referenceIpa": "/ˈfaɪ̯ɐˌʔaːbn̩t/",
+      "referenceNote": "خطأ صامت لا يراه التدقيق (D312 · N-013): espeak يقرأ er في Feier مقطعاً إضافياً [eːr] — والمرجع /ˈfaɪ̯ɐˌʔaːbn̩t/ بالصائت المحايد [ɐ].",
+      "analogy": "سابقة Speisekarte (D142): e الوصل تُصحَّح كما يقرأ espeak نفسه الجزءَ وحده — Feier [fˈaɪɜ] · Abend [ˈɑːbənt].",
+      "contexts": [
+        "Um sechs habe ich Feierabend gemacht.",
+        "der Feierabend → die Feierabende"
+      ],
+      "regeneratedTracks": [
+        "word-feierabend"
+      ]
+    },
+    {
+      "word": "Unterkunft",
+      "forms": [
+        {
+          "espeak": "ˌʊntɜkˈʊnft",
+          "ipa": "ˈʊntɜkˌʊnft"
+        }
+      ],
+      "referenceIpa": "/ˈʊntɐˌkʊnft/",
+      "referenceNote": "موضع النبر (D313): espeak ينبر الجزء الثاني [ˌʊntɜkˈʊnft] (تعميم نمط Unterricht) — والمرجع /ˈʊntɐˌkʊnft/ بنبر أولي.",
+      "analogy": "Duden (Unterkunft، مُتحقق حياً D313): Betonung _U_nterkunft + Plural die Unterkünfte — النبر الأولي مثبت قاموسياً.",
+      "contexts": [
+        "die Unterkunft.",
+        "Wir haben eine billige Unterkunft gefunden."
+      ],
+      "regeneratedTracks": [
+        "word-unterkunft"
+      ]
+    },
+    {
+      "word": "Zeugnis",
+      "forms": [
+        {
+          "espeak": "tsˈɔøɡnɪs",
+          "ipa": "tsˈɔøknɪs"
+        }
+      ],
+      "referenceIpa": "/ˈt͡sɔɪ̯knɪs/",
+      "referenceNote": "إجهار النهاية (D189): g قبل n تُهمس [k] — المرجع /ˈt͡sɔɪ̯knɪs/. espeak يُبقي [ɡ] (كـFlughafen). التصحيح يهمس الصامت فقط؛ [ɔø] صيغة espeak الثابتة لـeu (heute/Freund بلا مدخل).",
+      "analogy": "Mädchen (d←t قبل ç) · Ergebnis (b←p): الإجهار يُهمس قبل الصامت",
+      "contexts": [
+        "das Zeugnis.",
+        "Das Zeugnis ist gut."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "word-zeugnis"
+      ]
+    },
+    {
+      "word": "Projekt",
+      "forms": [
+        {
+          "espeak": "proːjˈɛkt",
+          "ipa": "projˈɛkt"
+        }
+      ],
+      "referenceIpa": "/pʁoˈjɛkt/",
+      "referenceNote": "طول الحركة غير المنبورة (D239): o في Pro- قصيرة — المرجع /pʁoˈjɛkt/. espeak يمدّها [oː] (بينما Objekt/Subjekt قصيرتان عنده). التصحيح يقصّر الحركة فقط.",
+      "analogy": "Objekt [ɔpjˈɛkt] · Subjekt [zˈʊbjɛkt] (espeak نفسه: قصيرة قبل jekt)",
+      "contexts": [
+        "das Projekt.",
+        "Das Projekt ist neu."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "word-projekt"
+      ]
+    },
+    {
+      "word": "Werkstatt",
+      "forms": [
+        {
+          "espeak": "vˈɛɾkstat",
+          "ipa": "vˈɛɾkʃtat"
+        }
+      ],
+      "referenceIpa": "/ˈvɛʁkˌʃtat/",
+      "referenceNote": "خطأ صامت لا حركة: st في أول مقطع (Werk-statt) تُنطق [ʃt] — المرجع /ˈvɛʁkˌʃtat/. espeak يُبقي [st] بعد k. التصحيح يمسّ الصامت وحده.",
+      "analogy": "Stadt [ʃtat] · verstehen [fɛɾʃtˈeːən] (espeak نفسه: ʃ في أول المقطع)",
+      "contexts": [
+        "die Werkstatt.",
+        "Die Werkstatt ist neu."
+      ],
+      "regeneratedTracks": [
+        "word-werkstatt"
+      ]
+    },
+    {
+      "word": "Büro",
+      "forms": [
+        {
+          "espeak": "bˈyːroː",
+          "ipa": "byːˈroː"
+        }
+      ],
+      "referenceIpa": "/byˈʁoː/",
+      "referenceNote": "خطأ نبر (سابقة Abteilung): كلمة فرنسية الأصل يُنبر مقطعها الثاني — المرجع /byˈʁoː/. espeak ينبر الأول. التصحيح يحرك النبر وحده.",
+      "analogy": "Hotel [hoːtˈɛl] (espeak نفسه: النبر على الثاني في الكلمات الفرنسية) · Abteilung [aptˈaɪlʊŋ]",
+      "contexts": [
+        "das Büro.",
+        "Das Büro ist neu."
+      ],
+      "regeneratedTracks": [
+        "word-buero"
+      ]
+    },
+    {
+      "word": "Erlaubnis",
+      "forms": [
+        {
+          "espeak": "ɛɾlˈaʊbnɪs",
+          "ipa": "ɛɾlˈaʊpnɪs"
+        }
+      ],
+      "referenceIpa": "/ɛɐ̯ˈlaʊ̯pnɪs/",
+      "referenceNote": "إجهار النهاية (D189): b قبل n تُهمس [p] — المرجع /ɛɐ̯ˈlaʊ̯pnɪs/. espeak يُبقي [b]. التصحيح يهمس الصامت فقط.",
+      "analogy": "Ergebnis (b←p قبل n: البيئة نفسها)",
+      "contexts": [
+        "die Erlaubnis.",
+        "Ich habe eine Erlaubnis."
+      ],
+      "earReview": "تحت التحقق السمعي",
+      "regeneratedTracks": [
+        "word-erlaubnis"
+      ]
+    },
+    {
+      "word": "Wettbewerb",
+      "forms": [
+        {
+          "espeak": "vˈɛtbeːvɜp",
+          "ipa": "vˈɛtbəvɜp"
+        }
+      ],
+      "referenceIpa": "/ˈvɛtbəˌvɛʁp/",
+      "referenceNote": "خطأ حركة لا طول فقط: be- غير المنبورة شوا [bə] — المرجع /ˈvɛtbəˌvɛʁp/. espeak يمدّها [beː] (بينما bewerben/beginnen شوا عنده). التصحيح يقصّرها ويُشوِيها.",
+      "analogy": "bewerben [bəvˈɛɾbən] (espeak نفسه: be- شوا) · bekommen",
+      "contexts": [
+        "der Wettbewerb.",
+        "Der Wettbewerb ist neu."
+      ],
+      "regeneratedTracks": [
+        "word-wettbewerb"
+      ]
+    },
+    {
+      "word": "nervös",
+      "forms": [
+        {
+          "espeak": "nˈɛɾvøːs",
+          "ipa": "nɛɾvˈøːs"
+        }
+      ],
+      "referenceIpa": "/nɛʁˈvøːs/",
+      "referenceNote": "خطأ نبر (سابقة Büro): لاحقة -ös الفرنسية تُنبر أخيراً — المرجع /nɛʁˈvøːs/. espeak ينبر الأول. التصحيح يحرك النبر وحده.",
+      "analogy": "Büro [byːˈroː] (النبر على الثاني في الفرنسي) · Hotel",
+      "contexts": [
+        "nervös.",
+        "Ich bin nervös."
+      ],
+      "regeneratedTracks": [
+        "word-nervoes"
+      ]
+    },
+    {
+      "word": "Interview",
+      "forms": [
+        {
+          "espeak": "ˈɪntɜvˌiːf",
+          "ipa": "ˈɪntɜvjuː"
+        }
+      ],
+      "referenceIpa": "/ˈɪntɐvjuː/",
+      "referenceNote": "دخيلة تُقرأ [vjuː] — المرجع /ˈɪntɐvjuː/. espeak يقرأ «iew» ألمانيةً: [iː] + w مهموسة [f] ([ɜ] صيغة espeak الثابتة لـer فأُبقيت). التصحيح يعيد [vjuː] وحده.",
+      "analogy": "Projekt ([j] عند espeak في الدخيل)",
+      "contexts": [
+        "das Interview.",
+        "Das Interview ist am Montag."
+      ],
+      "regeneratedTracks": [
+        "word-interview"
+      ]
+    },
+    {
+      "word": "zumachen",
+      "forms": [
+        {
+          "espeak": "tsuːmˈaxən",
+          "ipa": "ˈtsuːmˌaxən"
+        }
+      ],
+      "referenceIpa": "/ˈt͡suːˌmaxn̩/",
+      "referenceNote": "خطأ نبر: المنفصل يُنبر على الجزء الأول — المرجع /ˈt͡suːˌmaxn̩/. espeak ينبر «machen». التصحيح يحرك النبر وحده (كالتوأم aufmachen [ˈaʊfmˌaxən]).",
+      "analogy": "aufmachen [ˈaʊfmˌaxən] (التوأم المنفصل — espeak أصابه)",
+      "contexts": [
+        "zumachen.",
+        "zumachen → Ich mache die Tür zu."
+      ],
+      "regeneratedTracks": [
+        "word-zumachen"
+      ]
+    },
+    {
+      "word": "joggen",
+      "forms": [
+        {
+          "espeak": "jˈɔɡən",
+          "ipa": "dʒˈɔɡən"
+        }
+      ],
+      "referenceIpa": "/ˈdʒɔɡn̩/",
+      "analogy": "Job [dʒˈɒp] (مدخل المعجم نفسه): حرف j الأول في القروض الإنجليزية يُنطق dʒ لا j — وespeak ينطق joggen الألمانية [j] كأنها كلمة ألمانية.",
+      "contexts": [
+        "joggen.",
+        "Ich gehe gern joggen."
+      ],
+      "regeneratedTracks": [
+        "word-joggen"
+      ]
+    },
+    {
+      "word": "nachmittags",
+      "forms": [
+        {
+          "espeak": "nˈaxmɪtˌɑːks",
+          "ipa": "nˈaːxmɪtˌɑːks"
+        }
+      ],
+      "referenceIpa": "/ˈnaːxmɪˌtaːks/",
+      "analogy": "حرف الجر nach [naːx] طويل دائماً — وnachmittags مركبة منه (nach + Mittag + s) فيبقى الطول؛ espeak يقصّر المقطع الأول.",
+      "contexts": [
+        "nachmittags.",
+        "Ich lerne nachmittags Deutsch."
+      ],
+      "regeneratedTracks": [
+        "word-nachmittags"
+      ]
+    },
+    {
+      "word": "Parfüm",
+      "forms": [
+        {
+          "espeak": "pˈaɾfyːm",
+          "ipa": "paɾfˈyːm"
+        }
+      ],
+      "referenceIpa": "/paʁˈfyːm/",
+      "analogy": "zumachen (النبر على المقطع الصحيح): الدخيل الفرنسي يُنبَر أخيراً (Parfǘm)؛ espeak يجرّ النبر ألمانياً إلى الأول.",
+      "contexts": [
+        "das Parfüm.",
+        "Das Parfüm ist neu."
+      ],
+      "regeneratedTracks": [
+        "word-parfuem"
+      ]
+    },
+    {
+      "word": "Sprechstunde",
+      "forms": [
+        {
+          "espeak": "ʃprˈɛkstʊndə",
+          "ipa": "ʃprˈɛçʃtʊndə"
+        }
+      ],
+      "referenceIpa": "/ˈʃpʁɛçˌʃtʊndə/",
+      "analogy": "مركبة من Sprech + Stunde — حدّ التركيب يُبقي ch على [ç] (سابقة Flughafen في N-101: النهاية داخل المركبات)؛ espeak يقرأ chs كأنها sechs [ks].",
+      "contexts": [
+        "die Sprechstunde.",
+        "Die Sprechstunde ist morgens."
+      ],
+      "regeneratedTracks": [
+        "word-sprechstunde"
+      ]
+    },
+    {
+      "word": "Krankenschwester",
+      "forms": [
+        {
+          "espeak": "krˈankɛnʃvəstɜ",
+          "ipa": "krˈaŋkɛnʃvəstɜ"
+        }
+      ],
+      "referenceIpa": "/ˈkʁaŋkn̩ˌʃvɛstɐ/",
+      "analogy": "الإدغام أمام k إجباري: krank [kʁaŋk] (وسchwanger في اليوم نفسه نطقها espeak صحيحة [ʃvˈaŋɜ])؛ espeak يفكّها [nk] هنا.",
+      "contexts": [
+        "die Krankenschwester.",
+        "Die Krankenschwester hilft mir."
+      ],
+      "regeneratedTracks": [
+        "word-krankenschwester"
+      ]
+    },
+    {
+      "word": "Orange",
+      "forms": [
+        {
+          "espeak": "ˈoːraŋə",
+          "ipa": "oːrˈanʒə"
+        }
+      ],
+      "referenceIpa": "/oˈʁanʒə/",
+      "analogy": "Parfüm (النبر أخيراً في الدخيل): الدخيل الفرنسي يُنبَر ثانياً مع [ʒ]؛ espeak يجرّ النبر ألمانياً إلى الأول ويحذف الاحتكاكي.",
+      "contexts": [
+        "die Orange.",
+        "Die Orange ist süß."
+      ],
+      "regeneratedTracks": [
+        "word-orange"
+      ]
+    },
+    {
+      "word": "hinlegen",
+      "forms": [
+        {
+          "espeak": "hɪnlˈeːɡən",
+          "ipa": "hˈɪnleːɡən"
+        }
+      ],
+      "referenceIpa": "/ˈhɪnˌleːɡn̩/",
+      "analogy": "eintragen (المنفصل يُنبَر على البادئة): espeak يجرّ النبر إلى الجذر -legen؛ الصحيح HIN-legen.",
+      "contexts": [
+        "sich hinlegen.",
+        "Ich will mich hinlegen."
+      ],
+      "regeneratedTracks": [
+        "word-hinlegen"
+      ]
+    },
+    {
+      "word": "Unterschied",
+      "forms": [
+        {
+          "espeak": "ˌʊntɜʃˈiːt",
+          "ipa": "ˈʊntɜʃˌiːt"
+        }
+      ],
+      "referenceIpa": "/ˈʊntɐˌʃiːt/",
+      "analogy": "Gegenteil (المركب يُنبَر أولاً): espeak يجعل -schied نبراً أولياً؛ الصحيح UN-ter-schied (ɜ تُحتمل — سابقة #144).",
+      "contexts": [
+        "der Unterschied.",
+        "Der Unterschied ist groß."
+      ],
+      "regeneratedTracks": [
+        "word-unterschied"
+      ]
+    },
+    {
+      "word": "Gegenteil",
+      "forms": [
+        {
+          "espeak": "ɡeːɡəntˈaɪl",
+          "ipa": "ɡˈeːɡəntaɪl"
+        }
+      ],
+      "referenceIpa": "/ˈɡeːɡn̩taɪ̯l/",
+      "analogy": "Unterschied (المركب يُنبَر أولاً): espeak يجعل -teil نبراً أولياً؛ الصحيح GE-gen-teil.",
+      "contexts": [
+        "das Gegenteil.",
+        "Das ist das Gegenteil."
+      ],
+      "regeneratedTracks": [
+        "word-gegenteil"
+      ]
+    },
+    {
+      "word": "Garage",
+      "forms": [
+        {
+          "espeak": "ɡarˈɑʒə",
+          "ipa": "ɡarˈɑːʒə"
+        }
+      ],
+      "referenceIpa": "/ɡaˈʁaːʒə/",
+      "analogy": "Jahr [jˈɑːɾ] · fahren [fˈɑːʁən] — a طويلة قبل r",
+      "contexts": [
+        "die Garage.",
+        "Die Garage ist klein."
+      ],
+      "regeneratedTracks": [
+        "word-garage"
+      ]
+    },
+    {
+      "word": "Rathaus",
+      "forms": [
+        {
+          "espeak": "rˈataʊs",
+          "ipa": "rˈɑːthaʊs"
+        }
+      ],
+      "referenceIpa": "/ˈʁaːtˌhaʊ̯s/",
+      "analogy": "Straße [ʃtrˈɑːsə] — a طويلة قبل ساكن",
+      "contexts": [
+        "das Rathaus.",
+        "Das Rathaus ist alt."
+      ],
+      "regeneratedTracks": [
+        "word-rathaus"
+      ]
+    },
+    {
+      "word": "hindurch",
+      "forms": [
+        {
+          "espeak": "hˈɪndʊɐç",
+          "ipa": "hɪndˈʊɐç"
+        }
+      ],
+      "referenceIpa": "/hɪnˈdʊʁç/",
+      "analogy": "heraus [hɛrˈaʊs] · herein [hɛrˈaɪn] — النبر على الجزء الثاني في ظروف الاتجاه",
+      "contexts": [
+        "hindurch.",
+        "Wir fahren hindurch."
+      ],
+      "regeneratedTracks": [
+        "word-hindurch"
       ]
     }
   ],
   "reviewed": [
-    {
-      "word": "Arabisch",
-      "verdict": "ambiguous",
-      "espeak": "arˈɑbɪʃ",
-      "note": "espeak يكتب الحركة المنبورة ɑ بلا علامة طول في مقطع مفتوح والمرجع aː. النموذج تدرّب على تسجيلات قارئها نطق [aː] مع هذا الرمز نفسه، فطول ما يُنطق فعلاً لا يُحسم من الرمز — يحتاج قياس مدة الحركة في المقطع المولَّد. مفتوح منذ D121."
-    },
-    {
-      "word": "damals",
-      "verdict": "ambiguous",
-      "espeak": "dˈɑmɑːls",
-      "note": "espeak يكتب الحركة المنبورة ɑ بلا علامة طول في مقطع مفتوح والمرجع aː. النموذج تدرّب على تسجيلات قارئها نطق [aː] مع هذا الرمز نفسه، فطول ما يُنطق فعلاً لا يُحسم من الرمز — يحتاج قياس مدة الحركة في المقطع المولَّد. مفتوح منذ D121."
-    },
-    {
-      "word": "Datum",
-      "verdict": "ambiguous",
-      "espeak": "dˈɑtuːm",
-      "note": "espeak يكتب الحركة المنبورة ɑ بلا علامة طول في مقطع مفتوح والمرجع aː. النموذج تدرّب على تسجيلات قارئها نطق [aː] مع هذا الرمز نفسه، فطول ما يُنطق فعلاً لا يُحسم من الرمز — يحتاج قياس مدة الحركة في المقطع المولَّد. مفتوح منذ D121."
-    },
-    {
-      "word": "Spanien",
-      "verdict": "ambiguous",
-      "espeak": "ʃpˈɑnɪʲən",
-      "note": "espeak يكتب الحركة المنبورة ɑ بلا علامة طول في مقطع مفتوح والمرجع aː. النموذج تدرّب على تسجيلات قارئها نطق [aː] مع هذا الرمز نفسه، فطول ما يُنطق فعلاً لا يُحسم من الرمز — يحتاج قياس مدة الحركة في المقطع المولَّد. مفتوح منذ D121."
-    },
     {
       "word": "der",
       "verdict": "weak-form",
@@ -1431,22 +3430,46 @@
       "note": "اسم علم لا يورده المرجع — فُحص يدوياً: النبر والحركة الأولى الطويلة صحيحان وs بين حركتين تُجهر [z] كما يقرؤها الألمان؛ طول الحركة الثانية غير المنبورة فرقٌ طفيف."
     },
     {
-      "word": "neunhundertneunundneunzig",
-      "verdict": "no-reference",
-      "espeak": "nˈɔønhʊndɜtnˌɔønʊndnˌɔøntsɪç",
-      "note": "عدد مركّب غائب عن المرجع (D132) — فُحص بأجزائه: neunhundert /ˈnɔɪ̯nˌhʊndɐt/ + neunundneunzig /ˈnɔɪ̯nʔʊntˈnɔɪ̯nt͡sɪç/؛ espeak يقرأ الجزأين كمرجعيهما والنبر الأول على أول المركّب كما في neunhundert، والحركات المنبورة بطولها."
-    },
-    {
-      "word": "zweihundertneunundsiebzig",
-      "verdict": "no-reference",
-      "espeak": "tsvˈaɪhʊndɜtnˌɔønʊndzˌiːptsɪç",
-      "note": "عدد مركّب غائب عن المرجع (D132) — فُحص بأجزائه: zweihundert /ˈt͡svaɪ̯ˌhʊndɐt/ + neunundsiebzig /nɔɪ̯nʔʊntˈziːpt͡sɪç/ · /ˈnɔɪ̯nʔʊntˌzɪpt͡sɪç/؛ espeak يقرأ siebzig بـiː الطويلة (الصيغة الأولى في المرجع) والنبر الأول على zwei كما في zweihundert."
-    },
-    {
       "word": "hunderteinundzwanzig",
       "verdict": "no-reference",
       "espeak": "hˈʊndɜtˌaɪnʊnttsvˌantsɪç",
       "note": "عدد مركّب غائب عن المرجع (D132) — فُحص بأجزائه: hundert /ˈhʊndɐt/ + einundzwanzig /ˈaɪ̯nʊntˌt͡svant͡sɪç/؛ espeak يقرأ الجزأين كمرجعيهما (ʊ القصيرة في hundert) والنبر الأول على hun ونبر ثانوي على ein وzwan."
+    },
+    {
+      "word": "neunundachtzig",
+      "verdict": "variant",
+      "espeak": "nˈɔønʊndˌaxtsɪç",
+      "note": "عدد مركّب (D157): المرجع نفسه غير متسق في موضع النبر الأول بين الأعداد المركّبة — achtunddreißig وachtundvierzig وdreiundfünfzig بنبرٍ أول على الآحاد /ˈaxtʔʊntˌdʁaɪ̯sɪç/، وachtundachtzig وachtundneunzig على العشرات، وdreiunddreißig بالصيغتين معاً. espeak ينبر الآحاد أولاً ثم العشرات ثانوياً كما في einundzwanzig /ˈaɪ̯nʊntˌt͡svant͡sɪç/ وكما في كل أعداد المحتوى المركّبة (D131 · D132) — والنبر في العدد المركّب يتنقّل بالمقابلة في الكلام الحي، فالصيغتان مسموعتان."
+    },
+    {
+      "word": "Spezialisten",
+      "verdict": "artifact",
+      "espeak": "ʃpˌeːtsiːalˈɪstən",
+      "note": "كـSpezialist (مراجَع): النبر على list في الصيغتين؛ espeak يقطّع zia مقطعين [tsiː.a] والمرجع نصف حركة [t͡si̯a] — فرق في العدّ لا في موضع النبر (D175)."
+    },
+    {
+      "word": "vierundzwanzigste",
+      "verdict": "variant",
+      "espeak": "fˈiːrʊnttsvˌantsɪçstə",
+      "note": "ترتيبي مركّب (D203): espeak ينبر العنصر الأول (vier/fünf) ونبراً ثانوياً على zwan — وهو النمط نفسه الذي يذكره المرجع أولاً للعدد الأصلي vierundzwanzig /ˈfiːɐ̯ʊntˌt͡svant͡sɪç/ وfünfundzwanzig /ˈfʏnfʊntˌt͡svant͡sɪç/ (المرجع يذكر النمطين معاً)؛ المرجع للترتيبي يكتب النمط الثاني وحده، وeinundzwanzigste بنبرين أوليين. «length» في vierundzwanzigste نتيجة اختلاف موضع النبر فقط (iː المنبورة في vier مقابل a في zwan) لا خطأ في طول حركة — vier وحدها /fiːɐ̯/ وespeak [fˈiːr] مقبولة في المعجم كله. لا مدخل تصحيحي: dreiundzwanzigste/zweiundzwanzigste (D202) بالنمط نفسه ولم تُعلَّما لغياب المرجع."
+    },
+    {
+      "word": "fünfundzwanzigste",
+      "verdict": "variant",
+      "espeak": "fˈʏnfʊnttsvˌantsɪçstə",
+      "note": "ترتيبي مركّب (D203): espeak ينبر العنصر الأول (vier/fünf) ونبراً ثانوياً على zwan — وهو النمط نفسه الذي يذكره المرجع أولاً للعدد الأصلي vierundzwanzig /ˈfiːɐ̯ʊntˌt͡svant͡sɪç/ وfünfundzwanzig /ˈfʏnfʊntˌt͡svant͡sɪç/ (المرجع يذكر النمطين معاً)؛ المرجع للترتيبي يكتب النمط الثاني وحده، وeinundzwanzigste بنبرين أوليين. «length» في vierundzwanzigste نتيجة اختلاف موضع النبر فقط (iː المنبورة في vier مقابل a في zwan) لا خطأ في طول حركة — vier وحدها /fiːɐ̯/ وespeak [fˈiːr] مقبولة في المعجم كله. لا مدخل تصحيحي: dreiundzwanzigste/zweiundzwanzigste (D202) بالنمط نفسه ولم تُعلَّما لغياب المرجع."
+    },
+    {
+      "word": "Apartment",
+      "verdict": "variant",
+      "espeak": "ˌɑpaɾtmˈɛnt",
+      "note": "نبرٌ مزدوج موثّق: Duden ينبر الأخير [apaʁtˈmɛnt] والمرجع (Wiktionary) الثاني [aˈpaʁtmənt]؛ espeak يعطي صيغة Duden (D213)."
+    },
+    {
+      "word": "Bibliothek",
+      "verdict": "artifact",
+      "espeak": "bˌɪblɪʲoːtˈeːk",
+      "note": "النبر الرئيسي على thek في الصيغتين (espeak ˈ = المرجع ˈ)؛ ˌ الثانوية على bli تقطيعٌ زائد من espeak — فرق في العدّ لا في النبر المسموع (D338)."
     }
   ]
 }

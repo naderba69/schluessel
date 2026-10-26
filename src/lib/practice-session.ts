@@ -13,7 +13,7 @@ export type AudioRef = { audioId: string; speakText: string };
 export type TypedItem =
   | { kind: "choice"; prompt: string; choices: string[]; answer: string; why: string; audio?: AudioRef; text?: string }
   | { kind: "input"; mode: "gap" | "correct" | "dictation" | "short"; prompt: string; answer: string; accept: string[]; why: string; audio?: AudioRef; text?: string }
-  | { kind: "order"; prompt?: string; tokens: string[]; answer: string; why: string }
+  | { kind: "order"; prompt?: string; tokens: string[]; answer: string; accept: string[]; why: string }
   | { kind: "production"; prompt: string; model: string; why: string }
   | { kind: "match"; prompt?: string; pairs: { de: string; ar: string }[]; why: string };
 
@@ -64,7 +64,7 @@ export function toTypedItem(type: StationType, raw: unknown): TypedItem | null {
     }
     case "build-sentence": {
       const r = BuildSentenceItem.safeParse(raw);
-      return r.success ? { kind: "order", prompt: r.data.q, tokens: r.data.tokens, answer: r.data.a, why: r.data.why } : null;
+      return r.success ? { kind: "order", prompt: r.data.q, tokens: r.data.tokens, answer: r.data.a, accept: r.data.accept ?? [], why: r.data.why } : null;
     }
     case "speaking":
     case "writing": {
@@ -132,7 +132,7 @@ export function checkAttempt(item: TypedItem, attempt: Attempt): Verdict {
     }
     case "order": {
       const got = Array.isArray(attempt) ? attempt.join(" ") : "";
-      const ok = got === item.answer.trim();
+      const ok = [item.answer, ...item.accept].some((x) => got === x.trim()); // N-055: الترتيب الثاني المصرَّح به مقبول
       return { ...base, status: ok ? "correct" : "retry", expected: item.answer, noteAr: ok ? "✓ ترتيب صحيح" : `الترتيب الصحيح: ${item.answer}` };
     }
     case "production":

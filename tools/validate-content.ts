@@ -6,9 +6,9 @@ import { createHash } from "node:crypto";
 import { join, relative, resolve as resolvePath } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
-  Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile,
-  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, AudioScript, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
-  GrammarRuleFile, LessonUpgradePlan,
+  Word, Lesson, AudioManifest, ImageManifest, CurriculumReference, ArsenalFile, BARE_ARTICLE_IDS,
+  Unit0Deck, CultureCard, CyclicTest, Modelltest, ReadingText, TransferPack, VideoShelf, AudioScript, StoryBook, ExamFormat, OfficialWordlist, CurriculumPlan, SCHEMA_VERSION,
+  GrammarRuleFile, LessonUpgradePlan, PRACTICE_ITEM_SHAPES,
 } from "../content/schemas/index.js";
 import { answerSupported, checkScriptAgainstManifest, type TrackLike } from "./lib/script-audio.js";
 import { evidenceIn } from "../content/schemas/answer-key.js";
@@ -33,6 +33,8 @@ export interface ContentEntry {
 export interface ValidationReport {
   errors: Issue[];
   warnings: Issue[];
+  /** D214: بلاغات ناعمة (report-only) — تُطبع ولا تُحسب ولا توقف البوابة */
+  notes: Issue[];
   fileCount: number;
 }
 
@@ -44,12 +46,18 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
   B2: { production: 0.7, comprehension: 0.2, audio: 0.1 },
 };
 
+/** D184: حارس السرعة (مطابق لـtools/dev/speech-rate.py: الكلمة ≥ حرفين · الحدّ 200 · ≥3 كلمات) */
+const SPEECH_WORD_RE = /[A-Za-zÄÖÜäöüß]{2,}(?:[-'][A-Za-zÄÖÜäöüß]+)*/g;
+const SPEECH_RATE_MAX_WPM = 200;
+const SPEECH_RATE_MIN_WORDS = 3;
 const BADGE = "🚧 فوق مستواك الحالي — تحدٍّ اختياري";
 
-function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "audio-script" | "exam-format" | "wordlist" | "plan" | "unknown" {
+function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-manifest" | "curriculum" | "arsenal" | "unit0" | "landeskunde" | "pruefungen" | "modelltest" | "upgrade" | "lese" | "transfer" | "audio-script" | "story" | "exam-format" | "wordlist" | "plan" | "derived" | "video" | "unknown" {
   const p = path.replace(/\\/g, "/");
   if (p.startsWith("manifests/audio-manifest")) return "audio-manifest";
   if (p.startsWith("manifests/image-manifest")) return "image-manifest";
+  // N-050 (D242): ملفات مولَّدة (الفهرس الخفيف + بنك العبارات) — حداثتها يثبتها --check في dev-tools.test.ts
+  if (p === "manifests/lesson-index.json" || p === "manifests/phrase-bank.json") return "derived";
   if (p.startsWith("arsenal/curriculum-reference")) return "curriculum";
   if (p.startsWith("arsenal/")) return "arsenal";
   if (p.startsWith("words/")) return "word";
@@ -59,10 +67,13 @@ function classify(path: string): "word" | "lesson" | "audio-manifest" | "image-m
   if (p.startsWith("pruefungen/")) return "pruefungen";
   if (p.startsWith("modelltest/")) return "modelltest";
   if (p.startsWith("lese/")) return "lese";
+  if (p.startsWith("transfer/")) return "transfer";
   if (p.startsWith("audio-scripts/")) return "audio-script";
+  if (p.startsWith("story/")) return "story";
   if (p.startsWith("exam-formats/")) return "exam-format";
   if (p.startsWith("wordlists/")) return "wordlist";
   if (p.startsWith("plans/")) return "plan";
+  if (p.startsWith("video/")) return "video";
   if (p.startsWith("upgrades/")) return "upgrade";
   return "unknown";
 }
@@ -94,6 +105,7 @@ export function probeAudioFiles(files: readonly string[]): Map<string, { duratio
 export function validateContentTree(entries: ContentEntry[], opts: { contentRoot?: string } = {}): ValidationReport {
   const errors: Issue[] = [];
   const warnings: Issue[] = [];
+  const notes: Issue[] = [];
   const push = (level: "error" | "warning", code: string, path: string, message: string) =>
     (level === "error" ? errors : warnings).push({ level, code, path, message });
 
@@ -112,6 +124,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
   const plans: { path: string; plan: CurriculumPlan }[] = []; // D112: خطط التوزيع المنهجية المُلزِمة
   const grammarRules = new Map<string, { path: string; rule: GrammarRuleFile }>(); // D115: قواعد اليوم (الشفرات)
   const upgradePlans: { path: string; plan: LessonUpgradePlan }[] = []; // D115: خطط ترقية الدروس (D114)
+  const storyBooks: { path: string; book: StoryBook }[] = []; // D193: جمل القصة المولَّدة من الحوارات (N-003)
   let curriculum: CurriculumReference | null = null;
 
   for (const entry of entries) {
@@ -126,6 +139,17 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
         case "lesson": {
           const l = Lesson.parse(entry.data);
           lessons.set(l.id, { path: entry.path, lesson: l });
+          // D325 (معركة المحرك D7): بنود التدريب تُفحص بأشكال المحرك نفسها (PRACTICE_ITEM_SHAPES)
+          // — فالمخطط يقبل أي مفاتيح (z.record) وكان يمرر بنوداً لا يستطيع المحرك تنميطها (A2 كلها قبل D325).
+          l.uebung.stations.forEach((st, si) => {
+            const shape = PRACTICE_ITEM_SHAPES[st.type];
+            st.items.forEach((it, ii) => {
+              const r = shape.safeParse(it);
+              if (!r.success)
+                push("error", "e-practice-item-shape", entry.path,
+                  `${l.id} s${si}-i${ii} (${st.type}): ${r.error.issues[0]?.message ?? "شكل مرفوض"}`);
+            });
+          });
           break;
         }
         case "audio-manifest": {
@@ -187,6 +211,15 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
               } catch {
                 push("error", "e-audio-missing", entry.path, `تعذّر تحليل الملف الصوتي: ${t.file}`);
               }
+              // D214: حارس السرعة ناعم (report-only) تنفيذاً لأمر المالك (D185: لا ضبط lengthScale ولا إعادة توليد) — كان warning يوقف البوابة وينصح بما مُنع
+              // D184 (Q24/Q25 — بأمر المالك): حارس السرعة الآلي — مساعد الأذن البشرية قبل الإطلاق، لا بديلها (الحدّ 200 كلمة/دقيقة · ≥3 كلمات — speech-rate.py نفسه)
+              if (typeof t.durationMs === "number" && t.durationMs > 0 && typeof t.textDe === "string") {
+                const n = (t.textDe.match(SPEECH_WORD_RE) ?? []).length;
+                const wpm = (n * 60_000) / t.durationMs;
+                if (n >= SPEECH_RATE_MIN_WORDS && wpm > SPEECH_RATE_MAX_WPM)
+                  notes.push({ level: "warning", code: "w-audio-speech-rate", path: entry.path,
+                    message: `سرعة نطق مشبوهة ${wpm.toFixed(0)} كلمة/دقيقة > ${SPEECH_RATE_MAX_WPM} (${n} كلمات في ${t.durationMs}ms): ${t.id} «${t.textDe}» — ناعم: يُراجع بالأذن البشرية قبل الإطلاق (D214 · N-015)` });
+              }
               if (t.role === "word") {
                 const wid = t.id.replace(/^word-/, "");
                 if (!entryPaths.has(`words/${wid}.json`))
@@ -235,6 +268,17 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
           modelltests.push({ path: entry.path, test: Modelltest.parse(entry.data) });
           break;
         }
+        case "transfer": {
+          TransferPack.parse(entry.data); // D293: حزم التحويل (المخطط يفرض ≥2 بند QuizItem)
+          break;
+        }
+        case "video": {
+          const shelf = VideoShelf.parse(entry.data); // D308: رف الفيديو (المخطط يفرض تلازم الرابط والتحقق §34)
+          const ids = shelf.entries.map((e) => e.id);
+          if (new Set(ids).size !== ids.length)
+            push("error", "e-video-dup", entry.path, "معرّف فيديو مكرر في الرف");
+          break;
+        }
         case "lese": {
           const r = ReadingText.parse(entry.data); // D97: نصوص القراءة
           if (r.questions.length < 2)
@@ -279,6 +323,14 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
           scripts.set(sc.id, { path: entry.path, script: sc });
           break;
         }
+        case "story": {
+          storyBooks.push({ path: entry.path, book: StoryBook.parse(entry.data) }); // D193
+          break;
+        }
+        case "derived": {
+          // مولَّد آلياً — يُقبل كما هو (الشكل يتحقق عند التحميل في lesson-packs.ts)
+          break;
+        }
         default:
           push("warning", "w-unknown-file", entry.path, "ملف غير معروف في شجرة المحتوى");
       }
@@ -301,6 +353,34 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
     for (const t of manifestTracks.values())
       if (t.file.startsWith("audio/scripts/") && !scriptLineIds.has(t.id))
         push("error", "e-audio-script-orphan", manifestPath, `مسار سكربت يتيم بلا سطر في أي سكربت: ${t.id}`);
+  }
+
+  // ——— D193 (N-003): جمل القصة ⇔ أول سطر في حوار الدرس — مولَّدة لا مكتوبة؛ أي انحراف = أعد التوليد ———
+  // كل معرّف في storySentenceIds له جملة · كل جملة تطابق سطرها الأول في سكربتها (نصاً ومتحدثاً) ودرسها موجود ·
+  // درس له حوار بلا جملة قصة = حقل لم يُحدَّث (tools/dev/story-sentences.ts --write).
+  {
+    const sentences = new Map<string, { path: string; s: StoryBook["sentences"][number] }>();
+    for (const { path, book } of storyBooks)
+      for (const s of book.sentences) {
+        if (sentences.has(s.id)) push("error", "e-story-dup", path, `جملة قصة مكررة عبر الدفاتر: ${s.id}`);
+        sentences.set(s.id, { path, s });
+        const sc = scripts.get(s.scriptId)?.script;
+        if (!sc) { push("error", "e-story-script", path, `${s.id}: سكربت غير موجود ${s.scriptId}`); continue; }
+        const first = sc.lines[0];
+        if (!first || first.id !== s.lineId || first.text !== s.de || first.speaker !== s.speaker)
+          push("error", "e-story-stale", path, `${s.id}: لا تطابق أول سطر في ${s.scriptId} — شغّل story-sentences --write`);
+        if (!lessons.has(s.lessonId)) push("error", "e-story-lesson", path, `${s.id}: درس غير موجود ${s.lessonId}`);
+        else if (!lessons.get(s.lessonId)!.lesson.praesentation.storySentenceIds.includes(s.id))
+          push("error", "e-story-unlinked", path, `${s.id}: درسه ${s.lessonId} لا يشير إليها`);
+      }
+    const dialogueByLesson = new Map<string, string>();
+    for (const { script } of scripts.values()) if (script.kind === "dialogue") for (const u of script.usedIn) dialogueByLesson.set(u, script.id);
+    for (const { path, lesson } of lessons.values()) {
+      for (const id of lesson.praesentation.storySentenceIds)
+        if (!sentences.has(id)) push("error", "e-story-missing", path, `جملة قصة غير موجودة: ${id}`);
+      if (dialogueByLesson.has(lesson.id) && lesson.praesentation.storySentenceIds.length === 0)
+        push("error", "e-story-unlinked", path, `الدرس له حوار (${dialogueByLesson.get(lesson.id)}) بلا جملة قصة — شغّل story-sentences --write`);
+    }
   }
 
   // ——— D108 + D109: الامتحان التجريبي مقابل الصيغة الرسمية لمستواه ———
@@ -461,8 +541,9 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
   for (const [wordId, { path, word }] of words) {
     // R10: بطاقة الجنس إلزامية لكل اسم ذي جنس (§4)
     if (word.gender !== "none") {
-      if (!word.article) push("error", "e-article", path, `كلمة ${wordId} ذات جنس بلا article كامل (§4/§15‑هـ)`);
-      else if (!word.article.startsWith(word.gender))
+      // N-137: العارية الاستعمال المعلنة (بلدان/لغات) بلا article عمداً — الجنس للبطاقة النحوية والنعت
+      if (!word.article && !BARE_ARTICLE_IDS.has(wordId)) push("error", "e-article", path, `كلمة ${wordId} ذات جنس بلا article كامل (§4/§15‑هـ)`);
+      else if (word.article && !word.article.startsWith(word.gender))
         push("error", "e-article-gender", path, `article «${word.article}» لا يطابق gender «${word.gender}»`);
       if (!word.srsCardTypes.includes("gender"))
         push("error", "e-gender-card", path, `كلمة ${wordId} ذات جنس بلا بطاقة gender (§4)`);
@@ -519,6 +600,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
       words: [...words.values()].map((w) => w.word),
       rules: new Map([...grammarRules].map(([id, r]) => [id, r.rule] as const)),
       tracks: manifestTracks,
+      scripts: [...scripts.values()].map((s) => s.script), // N-010 (D231): الحوار المعروض تحت قانون الجبهة
     };
     const where = (i: { lessonId?: string; ruleId?: string }, fallback: string) =>
       (i.ruleId && grammarRules.get(i.ruleId)?.path) || (i.lessonId && lessons.get(i.lessonId)?.path) || fallback;
@@ -543,7 +625,7 @@ export function validateContentTree(entries: ContentEntry[], opts: { contentRoot
       push("warning", "w-schema-major", entry.path, `schemaVersion ${v} يختلف في الإصدار الرئيسي عن ${SCHEMA_VERSION}`);
   }
 
-  return { errors, warnings, fileCount: entries.length };
+  return { errors, warnings, notes, fileCount: entries.length };
 }
 
 /** قراءة شجرة المحتوى من القرص */
@@ -572,6 +654,8 @@ function main() {
   const report = validateContentDirSafe(root);
   for (const i of [...report.errors, ...report.warnings])
     console.log(`[${i.level === "error" ? "ERROR" : "WARN "}] ${i.code} @ ${i.path}: ${i.message}`);
+  for (const i of report.notes)
+    console.log(`[NOTE ] ${i.code} @ ${i.path}: ${i.message}`);
   console.log(`\nfiles: ${report.fileCount} | errors: ${report.errors.length} | warnings: ${report.warnings.length}`);
   if (report.errors.length > 0) process.exit(1);
 }
@@ -580,7 +664,7 @@ function validateContentDirSafe(root: string): ValidationReport {
   try {
     return validateContentTree(loadContentDir(root), { contentRoot: root });
   } catch (err) {
-    return { errors: [{ level: "error", code: "e-io", path: root, message: String(err) }], warnings: [], fileCount: 0 };
+    return { errors: [{ level: "error", code: "e-io", path: root, message: String(err) }], warnings: [], notes: [], fileCount: 0 };
   }
 }
 

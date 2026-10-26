@@ -6,11 +6,12 @@
   "day": 1,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst über dein Reiseziel sprechen: Mein Ziel ist Berlin, das Hotel ist im Zentrum, und der Zug fährt um 8 Uhr ab.",
-    "ar": "تتحدث عن وجهتك ورحلتك (مع أول فعل منفصل!)"
+    "de": "Mein Ziel ist Berlin. · Der Zug fährt um acht Uhr ab. · Wann kommst du an? · Das Hotel ist im Zentrum. · Wir reisen ins Ausland, nach Italien. · Ich brauche meinen Pass — ein Visum brauche ich nicht.",
+    "ar": "تتحدث عن وجهتك ورحلتك: الفعلان المنفصلان abfahren وankommen (fährt … ab · kommt … an — في الخبر والسؤال والأمر وبعد möchte متصلاً) · Wo? (im Hotel · im Zentrum) ≠ Wohin? (ins Ausland · in die Stadt) وnach للمدن والبلدان · besichtigt بلا ge‑ — ومعها das Ziel · das Hotel · die Reservierung · die Fahrt · die Sehenswürdigkeit · das Ausland · der Pass · das Visum · der Ausflug · der Tourist"
   },
   "canDoDaily": [
-    "يخبر عن وجهته وفندقه ووقت مغادرة القطار بجملة فعل منفصل"
+    "يخبر عن وجهته ومغادرته ووصوله بجملتي فعل منفصل (Der Zug fährt um acht Uhr ab. · Ich komme um dreizehn Uhr an.) ويسأل عنهما (Wann fährst du ab? · Wann kommst du an?).",
+    "يقول أين يسكن وإلى أين يسافر بالحرف الصحيح (Das Hotel ist im Zentrum. · Wir reisen ins Ausland. · Wir fahren nach Italien.) ويذكر وثائقه (Ich brauche meinen Pass und mein Visum.) وما زاره (Wir haben die Sehenswürdigkeiten besichtigt.)."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«القطار يغادر الساعة الثامنة» — أين يذهب ab؟"
+          "de": "«القطار يغادر الساعة الثامنة» — أين يذهب ab؟ (تخمين فقط)"
         },
         "choices": [
-          "Der Zug fährt um 8 Uhr ab (ab آخر الجملة)",
-          "Der Zug ab fährt um 8 Uhr",
-          "Der Zug fährt ab um 8 Uhr"
+          "Der Zug fährt um 8 Uhr ab.",
+          "Der Zug ab fährt um 8 Uhr.",
+          "Der Zug fährt ab um 8 Uhr."
         ],
-        "answer": "Der Zug fährt um 8 Uhr ab (ab آخر الجملة)",
+        "answer": "Der Zug fährt um 8 Uhr ab.",
         "revealNextSession": true
       }
     ],
@@ -52,85 +53,625 @@
       "tourist"
     ],
     "grammarArsenalIds": [
-      "ars-trennbar",
-      "ars-wechselprae-dat"
+      "ars-trennbare",
+      "ars-wechselpraep"
     ],
     "storySentenceIds": [
-      "story-a12-u12-s1"
+      "story-a1-u12-s1"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "z",
+      "v-f",
+      "umlaut-u",
+      "ig-ending",
+      "auslaut-g"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«وجهتي برلين»؟",
-            "a": "Mein Ziel ist Berlin."
+            "q": "Der Zug fährt um acht Uhr ___. (abfahren — الجزء المنفصل)",
+            "a": "ab",
+            "why": "الفعل المنفصل: fährt ثانياً وab في آخر الجملة."
           },
           {
-            "q": "«الفندق في الوسط»؟",
-            "a": "Das Hotel ist im Zentrum."
+            "q": "Wann ___ du zum Flughafen ab? (abfahren — du)",
+            "a": "fährst",
+            "why": "du fährst … ab — تغيّر الحركة a → ä كـfahren."
+          },
+          {
+            "q": "Wir ___ morgen um sieben Uhr ab. (abfahren — wir)",
+            "a": "fahren",
+            "why": "wir fahren … ab — الجزء ab يبقى في الآخر."
+          },
+          {
+            "q": "Ich komme um dreizehn Uhr in Berlin ___. (ankommen — الجزء المنفصل)",
+            "a": "an",
+            "why": "ankommen: komme … an — الجزء an يغلق الجملة."
+          },
+          {
+            "q": "Wann ___ du in Berlin an? (ankommen — du)",
+            "a": "kommst",
+            "why": "du kommst … an — الفعل ثانياً في سؤال W."
+          },
+          {
+            "q": "___ du morgen früh ab? (abfahren — سؤال نعم/لا)",
+            "a": "Fährst",
+            "why": "سؤال نعم/لا: الفعل أولاً والجزء ab في الآخر."
+          },
+          {
+            "q": "Ich möchte heute um zehn Uhr ___. (abfahren — بعد möchte متصلاً)",
+            "a": "abfahren",
+            "why": "بعد möchte يبقى المنفصل متصلاً في آخر الجملة."
+          },
+          {
+            "q": "Komm gut ___! (ankommen — الأمر)",
+            "a": "an",
+            "why": "الأمر: Komm … an! — الجزء في الآخر أيضاً."
+          },
+          {
+            "q": "Euer Hotel ist ___ Zentrum von Rom? (in + dem — Wo?)",
+            "a": "im",
+            "why": "Wo? → الداتيف: in dem = im."
+          },
+          {
+            "q": "Lena wohnt ___ Hotel. (in + dem — Wo?)",
+            "a": "im",
+            "why": "wohnen = مكان (Wo?) → im Hotel."
+          },
+          {
+            "q": "Wir reisen im Juni ___ Ausland. (in + das — Wohin?)",
+            "a": "ins",
+            "why": "Wohin? → الأكوزاتيف: in das = ins Ausland."
+          },
+          {
+            "q": "Wir machen morgen einen Ausflug ___ Stadt. (in + die — Wohin?)",
+            "a": "in die",
+            "why": "Wohin? → die Stadt تبقى die (مؤنث)."
+          },
+          {
+            "q": "Der Pass ist ___ Rucksack. (in + dem — Wo?)",
+            "a": "im",
+            "why": "Wo? → im Rucksack (der Rucksack → dem) — مكان ثابت."
+          },
+          {
+            "q": "Wir fahren im Juni ___ Italien. (إلى بلد بلا أداة)",
+            "a": "nach",
+            "why": "البلدان بلا أداة: nach Italien · nach Berlin."
+          },
+          {
+            "q": "Ich fliege zurück ___ Berlin. (إلى مدينة)",
+            "a": "nach",
+            "why": "المدن: nach Berlin — لا in/ins."
+          },
+          {
+            "q": "Ich habe gestern die Sehenswürdigkeiten ___. (besichtigen — التصريف الثالث)",
+            "a": "besichtigt",
+            "why": "be‑ لا تأخذ ge‑: besichtigt."
+          },
+          {
+            "q": "Wir ___ heute die Stadt. (besichtigen — wir · الحاضر)",
+            "a": "besichtigen",
+            "why": "besichtigen = يزور المعالم (لا besuchen للأشخاص)."
+          },
+          {
+            "q": "Unser ___ ist Rom. (الوجهة)",
+            "a": "Ziel",
+            "why": "das Ziel — الوجهة؛ Mein Ziel ist …"
+          },
+          {
+            "q": "Das ___ ist neu und im Zentrum. (فندق)",
+            "a": "Hotel",
+            "why": "das Hotel — محايد؛ الجمع die Hotels."
+          },
+          {
+            "q": "Meine Mutter hat eine ___ für Juni gemacht. (حجز)",
+            "a": "Reservierung",
+            "why": "die Reservierung — ‑ung مؤنث دائماً."
+          },
+          {
+            "q": "Die ___ zum Flughafen dauert vierzig Minuten. (الرحلة بالمركبة)",
+            "a": "Fahrt",
+            "why": "die Fahrt — الرحلة بالمركبة (من fahren)."
+          },
+          {
+            "q": "Rom hat sehr viele ___. (معالم سياحية — جمعاً)",
+            "a": "Sehenswürdigkeiten",
+            "why": "die Sehenswürdigkeit → ‑en في الجمع."
+          },
+          {
+            "q": "Wir reisen ins ___. (الخارج)",
+            "a": "Ausland",
+            "why": "das Ausland — ins Ausland = إلى الخارج."
+          },
+          {
+            "q": "Hast du deinen ___ und das Gepäck? (جواز السفر)",
+            "a": "Pass",
+            "why": "der Pass — مذكر: deinen Pass (أكوزاتيف)."
+          },
+          {
+            "q": "Ein ___ brauche ich nicht. (تأشيرة)",
+            "a": "Visum",
+            "why": "das Visum — محايد؛ الجمع die Visa."
+          },
+          {
+            "q": "Wir haben heute einen ___ in die Stadt gemacht. (نزهة)",
+            "a": "Ausflug",
+            "why": "der Ausflug — einen Ausflug machen = يقوم بنزهة."
+          },
+          {
+            "q": "Viele ___ machen Fotos. (سياح — جمعاً)",
+            "a": "Touristen",
+            "why": "der Tourist → die Touristen (اسم ضعيف: ‑en)."
+          },
+          {
+            "q": "Der ___ fragt nach dem Weg. (سائح)",
+            "a": "Tourist",
+            "why": "der Tourist — مفرد؛ fragt nach + الداتيف."
+          },
+          {
+            "q": "Der Zug fährt um acht Uhr ab — und kommt um zehn Uhr ___. (ankommen)",
+            "a": "an",
+            "why": "fährt … ab ↔ kommt … an — الجزءان في الآخر."
+          },
+          {
+            "q": "Ich brauche meinen Pass und mein ___. (تأشيرة)",
+            "a": "Visum",
+            "why": "mein Visum — محايد بلا نهاية في الأكوزاتيف."
           }
         ],
         "interleavedWith": [
-          "ziel",
-          "hotel"
+          "zug",
+          "flughafen",
+          "rucksack",
+          "stadt",
+          "zentrum",
+          "foto",
+          "weg",
+          "mutter",
+          "minute",
+          "morgen",
+          "ankommen",
+          "reisen",
+          "wohnen",
+          "gepaeck"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«القطار يغادر الساعة الثامنة»؟",
-            "a": "Der Zug fährt um 8 Uhr ab."
+            "audioId": "ke-1",
+            "speakText": "Hallo Lena! Heute ist mein letzter Tag in Tunis. Morgen fliege ich zurück nach Berlin.",
+            "q": "استمع: ماذا يقول يوسف عن اليوم وغداً؟",
+            "choices": [
+              "آخر يوم في تونس — غداً يطير عائداً إلى برلين",
+              "أول يوم في تونس — غداً يزور جدّته",
+              "يبقى أسبوعاً آخر"
+            ],
+            "a": "آخر يوم في تونس — غداً يطير عائداً إلى برلين",
+            "why": "mein letzter Tag in Tunis · Morgen fliege ich zurück nach Berlin — آخر يوم."
           },
           {
-            "q": "«الرحلة تستغرق ساعتين»؟",
-            "a": "Die Fahrt dauert zwei Stunden."
+            "audioId": "ke-2",
+            "speakText": "Schon morgen? Wann fährst du zum Flughafen ab?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "متى ينطلق إلى المطار",
+              "متى ينام",
+              "أين الفندق"
+            ],
+            "a": "متى ينطلق إلى المطار",
+            "why": "Wann fährst du zum Flughafen ab? — fährst … ab (المنفصل في السؤال)."
+          },
+          {
+            "audioId": "ke-3",
+            "speakText": "Wir fahren um sieben Uhr ab. Mein Vater fährt mich. Die Fahrt dauert vierzig Minuten.",
+            "q": "استمع: متى ينطلقون ومن يوصله وكم تستغرق الرحلة؟",
+            "choices": [
+              "السابعة — أبوه — أربعون دقيقة",
+              "العاشرة — أمه — ساعة",
+              "السادسة — بالتاكسي — عشرون دقيقة"
+            ],
+            "a": "السابعة — أبوه — أربعون دقيقة",
+            "why": "um sieben Uhr ab · Mein Vater fährt mich · Die Fahrt dauert vierzig Minuten — الرحلة."
+          },
+          {
+            "audioId": "ke-4",
+            "speakText": "Und wann kommst du in Berlin an?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "متى يصل إلى برلين",
+              "متى يأكل",
+              "هل الطائرة كبيرة"
+            ],
+            "a": "متى يصل إلى برلين",
+            "why": "Wann kommst du in Berlin an? — kommst … an (الوصول)."
+          },
+          {
+            "audioId": "ke-5",
+            "speakText": "Der Flug geht um zehn Uhr, und ich komme um dreizehn Uhr in Berlin an.",
+            "q": "استمع: متى الطائرة ومتى الوصول؟",
+            "choices": [
+              "العاشرة — والوصول الواحدة ظهراً",
+              "التاسعة — والوصول الثانية عشرة",
+              "الثامنة — والوصول الثالثة"
+            ],
+            "a": "العاشرة — والوصول الواحدة ظهراً",
+            "why": "Der Flug geht um zehn Uhr · ich komme um dreizehn Uhr in Berlin an — الواحدة ظهراً."
+          },
+          {
+            "audioId": "ke-6",
+            "speakText": "Hast du schon alles? Deinen Pass?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل معه كل شيء — جواز السفر؟",
+              "هل معه طعام",
+              "هل اتصل بجدّته"
+            ],
+            "a": "هل معه كل شيء — جواز السفر؟",
+            "why": "Hast du schon alles? Deinen Pass? — جواز السفر."
+          },
+          {
+            "audioId": "ke-7",
+            "speakText": "Ja, der Pass ist im Rucksack. Ein Visum brauche ich nicht. Und das Gepäck ist fertig.",
+            "q": "استمع: أين الجواز وماذا عن التأشيرة والأمتعة؟",
+            "choices": [
+              "في حقيبة الظهر — لا يحتاج تأشيرة — الأمتعة جاهزة",
+              "في الحقيبة — يحتاج تأشيرة — الأمتعة ليست جاهزة",
+              "ضاع الجواز"
+            ],
+            "a": "في حقيبة الظهر — لا يحتاج تأشيرة — الأمتعة جاهزة",
+            "why": "der Pass ist im Rucksack (Wo? — im) · Ein Visum brauche ich nicht · das Gepäck ist fertig — جاهز."
+          },
+          {
+            "audioId": "ke-8",
+            "speakText": "Was hast du heute gemacht?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "ماذا فعل اليوم",
+              "ماذا أكل اليوم",
+              "ماذا يفعل غداً"
+            ],
+            "a": "ماذا فعل اليوم",
+            "why": "Was hast du heute gemacht? — ماذا فعلت؟"
+          },
+          {
+            "audioId": "ke-9",
+            "speakText": "Wir haben einen Ausflug in die Stadt gemacht. Ich habe mit meiner Mutter die Sehenswürdigkeiten besichtigt.",
+            "q": "استمع: ماذا فعل يوسف اليوم؟",
+            "choices": [
+              "نزهة في المدينة — زار المعالم مع أمه",
+              "بقي في البيت",
+              "ذهب إلى المطار"
+            ],
+            "a": "نزهة في المدينة — زار المعالم مع أمه",
+            "why": "einen Ausflug in die Stadt gemacht (Wohin? — in die) · die Sehenswürdigkeiten besichtigt — زار المعالم."
+          },
+          {
+            "audioId": "ke-10",
+            "speakText": "Schön! Waren viele Leute da?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل كان هناك ناس كثيرون",
+              "هل كان الجو حاراً",
+              "هل كان غالياً"
+            ],
+            "a": "هل كان هناك ناس كثيرون",
+            "why": "Waren viele Leute da? — هل كان هناك ناس كثيرون؟"
+          },
+          {
+            "audioId": "ke-11",
+            "speakText": "Ja, sehr viele Touristen! Alle machen Fotos. Und du? Was macht ihr im Urlaub?",
+            "q": "استمع: ماذا رأى يوسف وماذا يسأل؟",
+            "choices": [
+              "سياحاً كثيرين يصوّرون — ويسأل عن عطلة لينا",
+              "لا أحد — ويسأل عن المدرسة",
+              "مطراً — ويسأل عن الطقس"
+            ],
+            "a": "سياحاً كثيرين يصوّرون — ويسأل عن عطلة لينا",
+            "why": "sehr viele Touristen! Alle machen Fotos · Was macht ihr im Urlaub? — العطلة."
+          },
+          {
+            "audioId": "ke-13",
+            "speakText": "Habt ihr schon eine Reservierung?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل عندهم حجز",
+              "هل عندهم سيارة",
+              "هل الفندق غالٍ"
+            ],
+            "a": "هل عندهم حجز",
+            "why": "Habt ihr schon eine Reservierung? — حجز."
+          },
+          {
+            "audioId": "ke-16",
+            "speakText": "Das Ziel ist Rom. Wir fahren mit dem Zug — ich fliege nicht so gern.",
+            "q": "استمع: ما الوجهة وكيف يسافرون ولماذا؟",
+            "choices": [
+              "روما — بالقطار — لينا لا تحب الطيران كثيراً",
+              "برلين — بالطائرة — القطار بطيء",
+              "تونس — بالسيارة — رخيص"
+            ],
+            "a": "روما — بالقطار — لينا لا تحب الطيران كثيراً",
+            "why": "Das Ziel ist Rom · mit dem Zug — ich fliege nicht so gern (لا تحب الطيران)."
+          },
+          {
+            "audioId": "ke-18",
+            "speakText": "Klar! Und du schickst mir morgen eine Nachricht aus Berlin, ja?",
+            "q": "استمع: ماذا تطلب لينا؟",
+            "choices": [
+              "رسالة غداً من برلين",
+              "صورة من الطائرة",
+              "اتصالاً من المطار الليلة"
+            ],
+            "a": "رسالة غداً من برلين",
+            "why": "du schickst mir morgen eine Nachricht aus Berlin — رسالة."
+          },
+          {
+            "audioId": "ke-19",
+            "speakText": "Natürlich. Ich schreibe dir vom Flughafen. Und am Montag bist du wieder in der Schule!",
+            "q": "استمع: من أين يكتب يوسف ومتى تعود لينا إلى المدرسة؟",
+            "choices": [
+              "من المطار — الاثنين",
+              "من البيت — الثلاثاء",
+              "من الطائرة — الجمعة"
+            ],
+            "a": "من المطار — الاثنين",
+            "why": "Ich schreibe dir vom Flughafen · am Montag bist du wieder in der Schule — الاثنين."
           }
         ],
         "interleavedWith": [
-          "abfahren",
-          "fahrt"
+          "flughafen",
+          "rucksack",
+          "vater",
+          "mutter",
+          "stadt",
+          "zug",
+          "urlaub",
+          "schule",
+          "montag",
+          "foto",
+          "gepaeck"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«أحتاج جواز سفري»؟",
-            "a": "Ich brauche meinen Pass."
+            "tokens": [
+              "um",
+              "fährt",
+              "acht",
+              "Uhr",
+              "Zug",
+              "ab.",
+              "Der"
+            ],
+            "a": "Der Zug fährt um acht Uhr ab.",
+            "why": "fährt ثانياً ← um acht Uhr ← ab آخراً."
           },
           {
-            "q": "«أسافر إلى الخارج»؟",
-            "a": "Ich reise ins Ausland."
+            "tokens": [
+              "kommst",
+              "du",
+              "Wann",
+              "in",
+              "Berlin",
+              "an?"
+            ],
+            "a": "Wann kommst du in Berlin an?",
+            "why": "Wann ← kommst ← du ← in Berlin ← an آخراً."
+          },
+          {
+            "tokens": [
+              "ab.",
+              "fahren",
+              "früh",
+              "morgen",
+              "Wir"
+            ],
+            "a": "Wir fahren morgen früh ab.",
+            "why": "fahren ثانياً ← morgen früh ← ab."
+          },
+          {
+            "tokens": [
+              "Ich",
+              "abfahren.",
+              "möchte",
+              "früh",
+              "morgen"
+            ],
+            "a": "Ich möchte morgen früh abfahren.",
+            "why": "بعد möchte: abfahren متصلاً في الآخر."
+          },
+          {
+            "tokens": [
+              "Zentrum.",
+              "Unser",
+              "Hotel",
+              "im",
+              "ist"
+            ],
+            "a": "Unser Hotel ist im Zentrum.",
+            "why": "Wo? → im Zentrum — مكان ثابت."
+          },
+          {
+            "tokens": [
+              "Wir",
+              "ins",
+              "im",
+              "Ausland.",
+              "Juni",
+              "reisen"
+            ],
+            "a": "Wir reisen im Juni ins Ausland.",
+            "why": "Wohin? → ins Ausland · im Juni للشهر."
+          },
+          {
+            "tokens": [
+              "im",
+              "Pass",
+              "habe",
+              "meinen",
+              "Rucksack.",
+              "Ich"
+            ],
+            "a": "Ich habe meinen Pass im Rucksack.",
+            "why": "meinen Pass (أكوزاتيف) · im Rucksack (Wo?)."
+          },
+          {
+            "tokens": [
+              "Wir",
+              "haben",
+              "Stadt",
+              "besichtigt.",
+              "die"
+            ],
+            "a": "Wir haben die Stadt besichtigt.",
+            "why": "haben ثانياً ← die Stadt ← besichtigt (بلا ge‑)."
+          },
+          {
+            "tokens": [
+              "Minuten.",
+              "vierzig",
+              "Fahrt",
+              "Die",
+              "dauert",
+              "nur"
+            ],
+            "a": "Die Fahrt dauert nur vierzig Minuten.",
+            "why": "Die Fahrt فاعل ← dauert ← nur vierzig Minuten."
+          },
+          {
+            "tokens": [
+              "machen",
+              "Fotos.",
+              "Touristen",
+              "heute",
+              "Viele"
+            ],
+            "a": "Viele Touristen machen heute Fotos.",
+            "why": "Viele Touristen (‑en جمع الاسم الضعيف) ← machen ← heute ← Fotos."
           }
         ],
         "interleavedWith": [
-          "pass",
-          "ausland"
+          "zug",
+          "zentrum",
+          "rucksack",
+          "stadt",
+          "juni",
+          "minute",
+          "foto"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "ke-12",
+            "speakText": "Ja! Wir reisen ins Ausland: nach Italien. Mein Vater hat ein Hotel im Zentrum gefunden.",
+            "a": "Ja! Wir reisen ins Ausland: nach Italien. Mein Vater hat ein Hotel im Zentrum gefunden.",
+            "why": "Ausland بحرف كبير · Italien بحرف كبير · Hotel بـH · Zentrum بـZ تُنطق ts."
+          },
+          {
+            "audioId": "ke-14",
+            "speakText": "Ja, meine Mutter hat heute die Reservierung gemacht. Zwei Wochen im Juni!",
+            "a": "Ja, meine Mutter hat heute die Reservierung gemacht. Zwei Wochen im Juni!",
+            "why": "Reservierung بـv تُنطق f وie طويلة · Wochen بـch · Juni بحرف كبير."
+          },
+          {
+            "audioId": "ke-15",
+            "speakText": "Toll! Was ist das Ziel? Welche Stadt?",
+            "a": "Toll! Was ist das Ziel? Welche Stadt?",
+            "why": "Toll بـll · Ziel بـie طويلة · Welche بـch · Stadt بـdt."
+          },
+          {
+            "audioId": "ke-17",
+            "speakText": "Rom hat viele Sehenswürdigkeiten. Du musst viele Fotos machen!",
+            "a": "Rom hat viele Sehenswürdigkeiten. Du musst viele Fotos machen!",
+            "why": "Rom بحرف كبير · Sehenswürdigkeiten بـü وk · Fotos بـF."
+          },
+          {
+            "audioId": "ke-20",
+            "speakText": "Ja, endlich! Gute Reise, Yusuf — und komm gut an!",
+            "a": "Ja, endlich! Gute Reise, Yusuf — und komm gut an!",
+            "why": "Ja · endlich بـch · Gute Reise بحرفين كبيرين · komm بـmm · an."
+          },
+          {
+            "audioId": "word-ziel",
+            "speakText": "das Ziel.",
+            "a": "das Ziel.",
+            "why": "Ziel — Z تُنطق ts · ie طويلة."
+          },
+          {
+            "audioId": "word-reservierung",
+            "speakText": "die Reservierung.",
+            "a": "die Reservierung.",
+            "why": "Reservierung — s بين حركتين تُنطق z · v تُنطق f · ‑ung."
+          },
+          {
+            "audioId": "word-abfahren",
+            "speakText": "abfahren.",
+            "a": "abfahren.",
+            "why": "abfahren — ab + fahren · النبر على ab."
+          },
+          {
+            "audioId": "word-sehenswuerdigkeit",
+            "speakText": "die Sehenswürdigkeit.",
+            "a": "die Sehenswürdigkeit.",
+            "why": "Sehenswürdigkeit — Sehens + würdig + keit · ü · ig تُنطق ich."
+          },
+          {
+            "audioId": "word-pass",
+            "speakText": "der Pass.",
+            "a": "der Pass.",
+            "why": "Pass — a قصيرة · ss."
+          },
+          {
+            "audioId": "word-visum",
+            "speakText": "das Visum.",
+            "a": "das Visum.",
+            "why": "Visum — V تُنطق v هنا (كلمة أجنبية) · i طويلة."
+          },
+          {
+            "audioId": "word-ausflug",
+            "speakText": "der Ausflug.",
+            "a": "der Ausflug.",
+            "why": "Ausflug — au · g آخراً تُنطق k."
+          }
+        ],
+        "interleavedWith": [
+          "zentrum",
+          "woche",
+          "juni",
+          "stadt",
+          "foto"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Über das Reiseziel sprechen",
-        "a": "x",
-        "ar": "الحديث عن الوجهة"
+        "de": "Wohin fährst du im Urlaub? — Mein Ziel ist Rom. · Wann fährst du ab? — Der Zug fährt um acht Uhr ab, und ich komme um zwölf Uhr an. · Wo wohnst du? — Im Hotel im Zentrum, ich habe eine Reservierung. · Hast du deinen Pass? — Ja, und ein Visum brauche ich nicht.",
+        "ar": "زميلك يسأل عن رحلتك: الوجهة (Ziel) · المغادرة والوصول بفعلين منفصلين (fährt … ab · komme … an) · السكن بـim · الوثائق (Pass/Visum) — ثم تعكسان الأدوار"
       },
       "situation": {
-        "de": "Wohin fährst du? Wo wohnst du? Wann fährt der Zug?",
-        "a": "x",
-        "ar": "إلى أين تسافر؟ أين تسكن؟ متى يغادر القطار؟"
+        "de": "Am Handy, am Abend vor der Reise: Wohin fährst du? — Nach Italien, ins Ausland! Mein Ziel ist Rom. — Wann fährst du ab? — Um sieben Uhr. Die Fahrt dauert fünf Stunden, ich komme um zwölf Uhr an. — Wo wohnst du? — Im Hotel im Zentrum. Meine Mutter hat die Reservierung gemacht. — Hast du den Pass? — Ja, im Rucksack. Morgen besichtigen wir die Sehenswürdigkeiten!",
+        "ar": "مكالمة مساء ما قبل السفر: زميلك يسأل إلى أين ومتى تنطلق ومتى تصل وأين تسكن وهل الوثائق معك — وأنت تجيب بجمل اليوم"
       },
       "successCriteria": [
-        "جملة وجهة (Ziel ist …) + جملة فندق (im Hotel) + جملة مغادرة بفعل منفصل (fährt … ab) + جملة وثائق (Pass/Visum)"
+        "جملة وجهة (Mein Ziel ist … · Wir fahren nach … / ins Ausland)",
+        "جملتان بفعل منفصل: مغادرة ووصول (fährt/fahre … ab · komme/kommt … an) — الجزء في آخر الجملة، أو متصلاً بعد möchte (Ich möchte früh abfahren.)",
+        "جملة سكن بـWo? (im Hotel · im Zentrum) وجملة اتجاه بـWohin? (ins Ausland · in die Stadt · nach Italien)",
+        "كلمتان من اليوم على الأقل: Reservierung · Fahrt · Sehenswürdigkeit · Pass · Visum · Ausflug · Tourist"
       ]
     }
   },
@@ -145,20 +686,64 @@
       {
         "items": [
           {
-            "q": "«وجهة»؟",
-            "a": "das Ziel"
+            "q": "«القطار يغادر الساعة التاسعة»؟",
+            "choices": [
+              "Der Zug fährt um neun Uhr ab.",
+              "Der Zug fährt ab um neun Uhr.",
+              "Der Zug abfährt um neun Uhr."
+            ],
+            "a": "Der Zug fährt um neun Uhr ab.",
+            "why": "الجزء المنفصل ab في آخر الجملة."
           },
           {
-            "q": "«فندق» والجمع؟",
-            "a": "das Hotel → die Hotels"
+            "q": "«متى تصلين؟»؟",
+            "choices": [
+              "Wann kommst du an?",
+              "Wann ankommst du?",
+              "Wann kommst an du?"
+            ],
+            "a": "Wann kommst du an?",
+            "why": "kommst ثانياً · an آخراً."
           },
           {
-            "q": "«حجز»؟",
-            "a": "die Reservierung"
+            "q": "«أسافر إلى الخارج»؟",
+            "choices": [
+              "Ich reise ins Ausland.",
+              "Ich reise im Ausland.",
+              "Ich reise nach Ausland."
+            ],
+            "a": "Ich reise ins Ausland.",
+            "why": "Wohin? → ins Ausland — اتجاه."
           },
           {
-            "q": "«رحلة (بالمركبة)»؟",
-            "a": "die Fahrt"
+            "q": "«أسكن في الفندق»؟",
+            "choices": [
+              "Ich wohne im Hotel.",
+              "Ich wohne ins Hotel.",
+              "Ich wohne in Hotel."
+            ],
+            "a": "Ich wohne im Hotel.",
+            "why": "Wo? → im Hotel — مكان ثابت."
+          },
+          {
+            "q": "«جواز السفر» والجمع؟",
+            "choices": [
+              "der Pass → die Pässe",
+              "die Pass → die Passe",
+              "das Pass → die Pässe"
+            ],
+            "a": "der Pass → die Pässe",
+            "why": "der Pass — مذكر · الجمع بـumlaut."
+          },
+          {
+            "q": "«وجهتي روما»؟",
+            "choices": [
+              "Mein Ziel ist Rom.",
+              "Meine Ziel ist Rom.",
+              "Mein Ziel ist nach Rom."
+            ],
+            "a": "Mein Ziel ist Rom.",
+            "why": "das Ziel محايد → mein · بلا nach بعد ist."
           }
         ],
         "passingScore": 0.75
@@ -166,41 +751,129 @@
       {
         "items": [
           {
-            "q": "«يغادر» — والآن؟",
-            "a": "abfahren — der Zug fährt ab"
+            "q": "«ننطلق الساعة السابعة»؟",
+            "choices": [
+              "Wir fahren um sieben Uhr ab.",
+              "Wir abfahren um sieben Uhr.",
+              "Wir fahren ab um sieben Uhr."
+            ],
+            "a": "Wir fahren um sieben Uhr ab.",
+            "why": "fahren ثانياً · ab آخراً."
           },
           {
-            "q": "«يزور المعالم»؟",
-            "a": "besichtigen (wir besichtigen die Stadt)"
+            "q": "«أريد أن أنطلق مبكراً»؟",
+            "choices": [
+              "Ich möchte früh abfahren.",
+              "Ich möchte früh fahren ab.",
+              "Ich möchte ab früh fahren."
+            ],
+            "a": "Ich möchte früh abfahren.",
+            "why": "بعد möchte: abfahren متصلاً."
           },
           {
-            "q": "«معلم سياحي»؟",
-            "a": "die Sehenswürdigkeit"
+            "q": "«نسافر إلى إيطاليا»؟",
+            "choices": [
+              "Wir fahren nach Italien.",
+              "Wir fahren in Italien.",
+              "Wir fahren ins Italien."
+            ],
+            "a": "Wir fahren nach Italien.",
+            "why": "البلدان بلا أداة: nach Italien."
           },
           {
-            "q": "«الخارج»؟",
-            "a": "das Ausland (ins Ausland)"
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "«جواز سفر» والجمع؟",
-            "a": "der Pass → die Pässe"
+            "q": "«زرنا المعالم»؟",
+            "choices": [
+              "Wir haben die Sehenswürdigkeiten besichtigt.",
+              "Wir haben die Sehenswürdigkeiten besichtigen.",
+              "Wir sind die Sehenswürdigkeiten besichtigt."
+            ],
+            "a": "Wir haben die Sehenswürdigkeiten besichtigt.",
+            "why": "be‑ بلا ge‑ · haben."
           },
           {
             "q": "«تأشيرة» والجمع؟",
-            "a": "das Visum → die Visa"
+            "choices": [
+              "das Visum → die Visa",
+              "der Visum → die Visums",
+              "die Visum → die Visum"
+            ],
+            "a": "das Visum → die Visa",
+            "why": "das Visum — محايد · الجمع die Visa."
           },
           {
-            "q": "«نزهة»؟",
-            "a": "der Ausflug"
+            "q": "«عندي حجز»؟",
+            "choices": [
+              "Ich habe eine Reservierung.",
+              "Ich habe ein Reservierung.",
+              "Ich habe einen Reservierung."
+            ],
+            "a": "Ich habe eine Reservierung.",
+            "why": "die Reservierung (‑ung مؤنث) → eine."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«هل تنطلقين غداً؟»؟",
+            "choices": [
+              "Fährst du morgen ab?",
+              "Abfährst du morgen?",
+              "Fährst ab du morgen?"
+            ],
+            "a": "Fährst du morgen ab?",
+            "why": "سؤال نعم/لا: Fährst أولاً · ab آخراً."
+          },
+          {
+            "q": "«أصل الساعة الواحدة ظهراً»؟",
+            "choices": [
+              "Ich komme um dreizehn Uhr an.",
+              "Ich ankomme um dreizehn Uhr.",
+              "Ich komme an um dreizehn Uhr."
+            ],
+            "a": "Ich komme um dreizehn Uhr an.",
+            "why": "komme … an — القوس."
+          },
+          {
+            "q": "«نقوم بنزهة إلى المدينة»؟",
+            "choices": [
+              "Wir machen einen Ausflug in die Stadt.",
+              "Wir machen einen Ausflug in der Stadt.",
+              "Wir machen ein Ausflug in die Stadt."
+            ],
+            "a": "Wir machen einen Ausflug in die Stadt.",
+            "why": "der Ausflug → einen (أكوزاتيف) · Wohin? → in die Stadt."
+          },
+          {
+            "q": "«الفندق في الوسط»؟",
+            "choices": [
+              "Das Hotel ist im Zentrum.",
+              "Das Hotel ist ins Zentrum.",
+              "Die Hotel ist im Zentrum."
+            ],
+            "a": "Das Hotel ist im Zentrum.",
+            "why": "das Hotel محايد · Wo? → im."
           },
           {
             "q": "«سائح» والجمع؟",
-            "a": "der Tourist → die Touristen"
+            "choices": [
+              "der Tourist → die Touristen",
+              "der Tourist → die Tourists",
+              "das Tourist → die Touristen"
+            ],
+            "a": "der Tourist → die Touristen",
+            "why": "der Tourist — اسم ضعيف: ‑en."
+          },
+          {
+            "q": "«الرحلة تستغرق ساعة»؟",
+            "choices": [
+              "Die Fahrt dauert eine Stunde.",
+              "Der Fahrt dauert eine Stunde.",
+              "Die Fahrt dauern eine Stunde."
+            ],
+            "a": "Die Fahrt dauert eine Stunde.",
+            "why": "die Fahrt — مؤنث · dauert."
           }
         ],
         "passingScore": 0.75
@@ -209,53 +882,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Mein Ziel ist Berlin. Das Hotel ist im Zentrum, ich habe eine Reservierung. Der Zug fährt um 8 Uhr ab — die Fahrt dauert zwei Stunden. Ich brauche meinen Pass und das Visum, und besichtige die Sehenswürdigkeiten!",
-      "ar": "وجهتي برلين. الفندق في الوسط وعندي حجز. القطار يغادر الساعة الثامنة — الرحلة تستغرق ساعتين. أحتاج جواز السفر والتأشيرة وسأزور المعالم!"
+      "de": "Mein Ziel ist Berlin. · Der Zug fährt um acht Uhr ab. · Wann kommst du an? — Ich komme um dreizehn Uhr an. · Ich möchte früh abfahren. · Komm gut an! — Wo? Das Hotel ist im Zentrum. · Ich wohne im Hotel. · Der Pass ist im Rucksack. — Wohin? Wir reisen ins Ausland. · Ein Ausflug in die Stadt. · Wir fahren nach Italien. — Ich habe eine Reservierung. · Die Fahrt dauert vierzig Minuten. · Wir haben die Sehenswürdigkeiten besichtigt. · Viele Touristen machen Fotos. · Ich brauche meinen Pass, kein Visum.",
+      "ar": "الفعلان المنفصلان في الرحلة: abfahren (fährt … ab) وankommen (kommt … an) — الجزء في آخر الجملة في الخبر والسؤال والأمر، ومتصلاً بعد möchte (الوحدة 7) · Wo? → الداتيف (im Hotel · im Zentrum · im Rucksack) وWohin? → الأكوزاتيف (ins Ausland · in die Stadt) (الوحدتان 6 و9) · المدن والبلدان بـnach بلا أداة · besichtigen بلا ge‑ (hat besichtigt) · الاسم الضعيف: der Tourist → die Touristen · كلمات اليوم: das Ziel · das Hotel (die Hotels) · die Reservierung · die Fahrt · die Sehenswürdigkeit · das Ausland · der Pass (die Pässe) · das Visum (die Visa) · der Ausflug"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Der Zug fährt ab um 8 Uhr~~ / ~~Der Zug ab fährt um 8 Uhr~~",
-          "ar": "الفعل المنفصل (trennbar): البادئة **ab** تُقال **آخر** الجملة — القلنسوة الثالثة!"
+          "de": "~~Der Zug fährt ab um acht Uhr.~~ · ~~Der Zug abfährt um acht Uhr.~~ · ~~Ich komme an in Berlin.~~ · ~~Ich möchte früh fahren ab.~~",
+          "ar": "الجزء المنفصل (ab · an) في آخر الجملة — وبعد möchte يبقى الفعل متصلاً"
         },
-        "whyArabicSpeakerFails": "«يغادر» فعل واحد بالعربية؛ الألماني يشطره: **fährt** (ثاني الكلمة) + **ab** (آخرها) — مثل القلنسوة بالفعلين لكن ببادئة واحدة — مصيدة جديدة لنفس القاعدة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«يغادر» و«يصل» في العربية كلمةٌ واحدة لا تنقسم، فيُبقي المتعلم abfahren/ankommen كتلةً واحدة (~~abfährt~~) أو يضع الجزء بعد الفعل مباشرة كأنه حرف جر (~~fährt ab um acht~~). والألمانية تقسم الفعل المنفصل قوسين (الوحدة 7): الفعل المصرّف ثانياً والجزء في آخر الجملة مهما طالت — Der Zug fährt um acht Uhr ab. · Ich komme um dreizehn Uhr in Berlin an. · Wann kommst du an? · Komm gut an! — وبعد möchte/muss/kann يعود متصلاً في الآخر: Ich möchte früh abfahren. — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Der Zug fährt um 8 Uhr ab.",
-          "ar": "القطار يغادر الساعة الثامنة."
+          "de": "Der Zug fährt um acht Uhr ab. · Ich komme um dreizehn Uhr in Berlin an. · Ich möchte früh abfahren.",
+          "ar": "القطار يغادر الساعة الثامنة · أصل إلى برلين الساعة الواحدة ظهراً · أريد أن أنطلق مبكراً"
         },
         "exercise": {
-          "q": "أكمل: Das Hotel ___ um 12 Uhr ___ (aufstehen مركّب؟ لا — anfangen: fängt … an)",
-          "a": "Das Hotel fängt um 12 Uhr an? لا — التمرين: Der Tag fängt früh an."
+          "q": "Der Bus fährt um neun Uhr ___. (abfahren)",
+          "a": "ab"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich reise in das Ausland~~ (مقبول لكن الأخف) / ~~Ich reise im Ausland~~ (للوجهة خطأ)",
-          "ar": "الوجهة: **ins** Ausland (in + das = ins) · المكان: **im** Zentrum — مراجعة Wechselpräp في السياق!"
+          "de": "~~Ich reise im Ausland.~~ (للوجهة) · ~~Ich wohne ins Hotel.~~ · ~~Wir fahren in Italien.~~ · ~~Wir fahren nach dem Zentrum.~~",
+          "ar": "Wohin? → ins Ausland · in die Stadt (الأكوزاتيف) · Wo? → im Hotel · im Zentrum (الداتيف) · المدن والبلدان بـnach بلا أداة"
         },
+        "whyArabicSpeakerFails": "«في الخارج» و«إلى الخارج» في العربية حرفان مختلفان لكن «في» تُستعمل للاثنين في الكلام («سافر في الخارج»)، والفرنسية تقول en Italie للسكن والسفر معاً — فيخلط المتعلم im وins. والألمانية تسأل سؤالاً واحداً (الوحدتان 6 و9): Wo? (مكان ثابت) → الداتيف: im Hotel · im Zentrum · im Rucksack — Wohin? (اتجاه) → الأكوزاتيف: ins Ausland · in die Stadt — والمدن والبلدان بلا أداة تأخذ nach: nach Italien · nach Berlin (لا ~~in Italien~~ للسفر) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich reise ins Ausland. · Das Hotel ist im Zentrum.",
-          "ar": "أسافر إلى الخارج. · الفندق في الوسط."
+          "de": "Ich reise ins Ausland. · Ich wohne im Hotel. · Wir fahren nach Italien.",
+          "ar": "أسافر إلى الخارج · أسكن في الفندق · نسافر إلى إيطاليا"
         },
         "exercise": {
-          "q": "أكمل: Ich fahre ___ (in+das) Hotel? لا — Ich wohne ___ (in+das) Hotel.",
-          "a": "im Hotel"
-        },
-        "whyArabicSpeakerFails": "«أسافر إلى الخارج» و«الفندق في الوسط» نفس حرف الجر بالعربية (في)؛ الألماني يفرّق: الوجهة = **ins** (accusative) · المكان = **im** (dative) — القاعدة القديمة (الميناء) تعود في أهم سياق سياحي (خريطة التداخل 10‑ي)"
+          "q": "Wir machen am Sonntag einen Ausflug ___ Stadt. (in die / in der)",
+          "a": "in die"
+        }
       },
       {
         "commonError": {
-          "de": "~~die Pass~~ / ~~der Visum~~ / ~~die Hotel~~",
-          "ar": "أجناس الوثائق: der **Pass** (Pässe) · das **Visum** (Visa) · das **Hotel** (Hotels -s)"
+          "de": "~~die Pass~~ · ~~der Visum~~ · ~~die Hotel~~ · ~~die Visums~~ · ~~der Tourists~~",
+          "ar": "der Pass (die Pässe) · das Visum (die Visa) · das Hotel (die Hotels) · der Tourist (die Touristen) — الجنس يُحفظ مع الكلمة والجمع الأجنبي يُحفظ أيضاً"
         },
-        "whyArabicSpeakerFails": "كلمات مستعارة (Hotel/Visum) تخلط القاعدة: Hotel = das (محايد) لكن جمعها -s — Pass جمعه بالوملاوت — ثلاثة أنماط جمع في ثلاثة أسماء فقط (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«جواز» و«فندق» مذكران و«تأشيرة» مؤنثة في العربية، فينقل المتعلم جنس الترجمة (~~die Visum~~ لأن التأشيرة مؤنثة) — وفي الألمانية الجنس صفةٌ للكلمة لا للمعنى (الوحدة 2): der Pass · das Visum · das Hotel. والجمع في الكلمات الأجنبية لا يتبع ‑e/‑en دائماً: die Hotels (‑s) · die Visa (جمع لاتيني) · die Pässe (umlaut + e) — وder Tourist اسم ضعيف: die Touristen، وفي الأكوزاتيف den Touristen (كـden Patienten من الوحدة 11) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "der Pass · das Visum · das Hotel",
-          "ar": "الجواز · التأشيرة · الفندق (بأجنستها)"
+          "de": "der Pass → die Pässe · das Visum → die Visa · das Hotel → die Hotels · der Tourist → die Touristen",
+          "ar": "جواز السفر → جوازات · تأشيرة → تأشيرات · فندق → فنادق · سائح → سياح"
         },
         "exercise": {
-          "q": "أكمل: ___ Pass (der/die/das) ___ Visum ___ Hotel.",
-          "a": "der / das / das"
+          "q": "___ Visum (der/die/das)",
+          "a": "das"
         }
       }
     ],
@@ -277,7 +950,6 @@
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/abfahren",
-      "https://www.duden.de/rechtschreibung/Pass",
       "https://www.duden.de/rechtschreibung/Sehenswuerdigkeit"
     ],
     "wiktionary": [
@@ -286,8 +958,8 @@
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-trennbar",
-    "ars-wechselprae-dat"
+    "ars-trennbare",
+    "ars-wechselpraep"
   ],
   "audioManifestRefs": [
     "word-ziel",

@@ -1,0 +1,421 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u3-d4",
+  "level": "A2",
+  "unit": 3,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Einen Tipp schreiben und lesen",
+    "ar": "تكتب نصيحة من أربع خطوات (Erstens…Viertens) وتقرأها"
+  },
+  "canDoDaily": [
+    "تكتب نصيحة صحية من أربع خطوات (Erstens…Viertens) مع sollen",
+    "تستعمل Mittel/Menge بالأداة الصحيحة (das/die)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "stress",
+      "arzt",
+      "schlafen"
+    ]
+  },
+  "einstieg": {
+    "guidedRetrieval": [
+      "من U2: النصيحة معروفة (Du sollst…!) — واليوم نكتبها (Erstens…)",
+      "من U3: الصحة معروفة (Arzt/Stress/Tee) — واليوم أربع خطوات"
+    ],
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«يجب أن تنام» (sollen!) — كيف؟"
+        },
+        "answer": "Du sollst schlafen.",
+        "choices": [
+          "Du sollst schlafen.",
+          "Du musst schlafen.",
+          "Du sollen schlafen."
+        ],
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«لا يجب أن تدخن» — كيف؟"
+        },
+        "answer": "Du sollst nicht rauchen.",
+        "choices": [
+          "Du sollst nicht rauchen.",
+          "Du musst nicht rauchen.",
+          "Du nicht sollst rauchen."
+        ],
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-koennen-muessen"
+    ],
+    "riskFlagsShown": [
+      "needs-ein",
+      "v2-order"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "erstens",
+      "zweitens",
+      "drittens",
+      "viertens",
+      "markieren",
+      "notieren",
+      "kontrollieren",
+      "diskutieren",
+      "genug",
+      "unbedingt",
+      "egal",
+      "mittel",
+      "menge"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Einen Tipp schreiben",
+        "ar": "تكتب نصيحة صحية"
+      },
+      "situation": {
+        "de": "Für einen Freund",
+        "ar": "لصديق يحتاج نصيحة"
+      },
+      "successCriteria": [
+        "أربع خطوات (Erstens…Viertens)",
+        "sollen في كل خطوة (sollst/soll)",
+        "كلمتان جديدتان (Mittel/Menge)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "verb-bank",
+        "explanationRequired": true,
+        "hints": [
+          "دوّن = اكتب الملاحظة (notieren)",
+          "أبرز الكلمة المهمة (markieren)",
+          "الطبيب يفحص (kontrollieren) — ونناقش معه (diskutieren)"
+        ],
+        "interleavedWith": [
+          "arzt",
+          "wort",
+          "schlafen"
+        ],
+        "items": [
+          {
+            "q": "أدوّن: Ich ___ alles. (notieren)",
+            "a": "notiere",
+            "why": "أدوّن كل شيء — notieren للملاحظة!"
+          },
+          {
+            "q": "أُبرز: Ich ___ das Wort. (markieren)",
+            "a": "markiere",
+            "why": "أبرز الكلمة — markieren للإبراز!"
+          },
+          {
+            "q": "يفحص: Der Arzt ___ mich. (kontrollieren)",
+            "a": "kontrolliert",
+            "why": "يفحصني الطبيب — kontrollieren للفحص!"
+          },
+          {
+            "q": "نناقش: Wir ___ viel. (diskutieren)",
+            "a": "diskutieren",
+            "why": "نناقش كثيراً — diskutieren للنقاش!"
+          },
+          {
+            "q": "دوّن (احترام)! ___ Sie alles. (notieren)",
+            "a": "Notieren",
+            "why": "أمر الاحترام = المصدر + Sie — Notieren Sie alles!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الوسيلة محايدة (das Mittel) والكمية مؤنثة (die Menge)",
+          "Erstens أولاً — ثم الفعل!",
+          "egal = سيّان"
+        ],
+        "interleavedWith": [
+          "wasser",
+          "trinken",
+          "helfen"
+        ],
+        "items": [
+          {
+            "q": "Das ___ hilft. (Mittel)",
+            "a": "Mittel",
+            "why": "الوسيلة تساعد — das Mittel محايد!"
+          },
+          {
+            "q": "Ich trinke eine ___ Wasser. (Menge)",
+            "a": "Menge",
+            "why": "كمية من الماء — die Menge مؤنثة!"
+          },
+          {
+            "q": "___ trinke ich Wasser. (Erstens)",
+            "a": "Erstens",
+            "why": "أولاً أشرب الماء — الترتيب أولاً!"
+          },
+          {
+            "q": "Das ist ___. (egal)",
+            "a": "egal",
+            "why": "هذا سيّان — egal للامبالاة!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الفعل ثانياً دائماً — الظرف ليس أولاً وحده",
+          "Mittel محايد (das)!",
+          "unbedingt قبل الفعل الأخير"
+        ],
+        "interleavedWith": [
+          "wasser",
+          "viel",
+          "schlafen"
+        ],
+        "items": [
+          {
+            "q": "Ich erstens trinke Wasser.",
+            "a": "Ich trinke erstens Wasser.",
+            "why": "الفعل ثانٍ — trinke قبل erstens!"
+          },
+          {
+            "q": "Wir viel diskutieren.",
+            "a": "Wir diskutieren viel.",
+            "why": "الفعل ثانٍ — diskutieren قبل viel!"
+          },
+          {
+            "q": "Die Mittel hilft.",
+            "a": "Das Mittel hilft.",
+            "why": "Mittel محايد — das لا die!"
+          },
+          {
+            "q": "Ich muss schlafen unbedingt.",
+            "a": "Ich muss unbedingt schlafen.",
+            "why": "unbedingt قبل الفعل الأخير — muss…schlafen!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "اكتب أربع خطوات (Erstens…Viertens)",
+          "كل خطوة بـsollen (soll…!)"
+        ],
+        "interleavedWith": [
+          "freund",
+          "gut",
+          "tee"
+        ],
+        "items": [
+          {
+            "q": "اكتب نصيحة لصديق (Freund!) من 4 خطوات ثم اقرأها: Erstens… Zweitens… (Tee! gut!) Drittens… Viertens…",
+            "a": "Der Freund soll Tee trinken. Erstens soll er Wasser trinken. Zweitens soll er gut schlafen. Drittens soll er Tee trinken. Viertens soll er lesen.",
+            "why": "قارن نصيحتك: أربع خطوات (Erstens…Viertens) وكلها بـsollen — والشاي (Tee) والنوم (gut schlafen)!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "quiz": {
+    "variants": [
+      {
+        "passingScore": 0.75,
+        "items": [
+          {
+            "q": "«ثانياً»؟",
+            "a": "zweitens"
+          },
+          {
+            "q": "«ثالثاً»؟",
+            "a": "drittens"
+          },
+          {
+            "q": "Ich schlafe ___. (genug)",
+            "a": "genug"
+          },
+          {
+            "q": "Ich muss ___ schlafen. (unbedingt)",
+            "a": "unbedingt"
+          }
+        ]
+      },
+      {
+        "passingScore": 0.75,
+        "items": [
+          {
+            "q": "«رابعاً»؟",
+            "a": "viertens"
+          },
+          {
+            "q": "Ich trinke eine ___ Wasser. (Menge)",
+            "a": "Menge"
+          },
+          {
+            "q": "Das ___ hilft. (Mittel)",
+            "a": "Mittel"
+          },
+          {
+            "q": "«سيّان»؟",
+            "a": "egal"
+          }
+        ]
+      },
+      {
+        "passingScore": 0.75,
+        "items": [
+          {
+            "q": "die Menge → ___",
+            "a": "die Mengen"
+          },
+          {
+            "q": "das Mittel → ___",
+            "a": "die Mittel"
+          },
+          {
+            "q": "Ich ___ alles. (notieren)",
+            "a": "notiere"
+          },
+          {
+            "q": "Der Arzt ___ mich. (kontrollieren)",
+            "a": "kontrolliert"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "erstens",
+      "zweitens",
+      "drittens",
+      "viertens",
+      "markieren",
+      "notieren",
+      "kontrollieren",
+      "diskutieren",
+      "genug",
+      "unbedingt",
+      "egal",
+      "mittel",
+      "menge"
+    ],
+    "summary": {
+      "de": "Der Tipp: Erstens sollst du genug Wasser trinken. Zweitens sollst du gut schlafen. Drittens sollst du Tee trinken. Viertens sollst du alles notieren.",
+      "ar": "نصيحتي: أولاً اشرب ما يكفي من الماء. ثانياً نم جيداً. ثالثاً اشرب الشاي. رابعاً دوّن كل شيء. النظام: الترتيب أولاً (Erstens…) ثم sollen ثم الفعل آخراً."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich erstens trinke Wasser.~~",
+          "ar": "الظرف قبل الفعل"
+        },
+        "correct": {
+          "de": "Ich trinke erstens Wasser.",
+          "ar": "أشرب الماء أولاً."
+        },
+        "exercise": {
+          "q": "Ich ___ erstens Wasser. (trinken)",
+          "a": "trinke"
+        },
+        "whyArabicSpeakerFails": "العربية تضع الظرف آخراً أحياناً — والألمانية: الفعل ثانياً دائماً (trinke قبل erstens) (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "de": "~~Die Mittel hilft.~~",
+          "ar": "المحايد بلا das"
+        },
+        "correct": {
+          "de": "Das Mittel hilft.",
+          "ar": "الوسيلة تساعد."
+        },
+        "exercise": {
+          "q": "___ Mittel hilft. (das)",
+          "a": "Das"
+        },
+        "whyArabicSpeakerFails": "Mittel محايد (das) — احفظ الأداة مع الكلمة (das Mittel) (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "de": "~~Ich markiere alles.~~",
+          "ar": "خلط التدوين بالإبراز"
+        },
+        "correct": {
+          "de": "Ich notiere alles.",
+          "ar": "أدوّن كل شيء."
+        },
+        "exercise": {
+          "q": "Ich ___ alles. (notieren)",
+          "a": "notiere"
+        },
+        "whyArabicSpeakerFails": "notieren = تدوين الملاحظة، وmarkieren = إبراز كلمة (Wort) — سياقان مختلفان (خريطة التداخل 10‑ي)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Mittel_Arznei",
+      "https://www.duden.de/rechtschreibung/Menge"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": []
+  },
+  "usedArsenalIds": [
+    "ars-koennen-muessen"
+  ],
+  "audioManifestRefs": [
+    "word-erstens",
+    "word-zweitens",
+    "word-drittens",
+    "word-viertens",
+    "word-markieren",
+    "word-notieren",
+    "word-kontrollieren",
+    "word-diskutieren",
+    "word-genug",
+    "word-unbedingt",
+    "word-egal",
+    "word-mittel",
+    "word-menge"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "erstens",
+      "zweitens",
+      "drittens",
+      "viertens",
+      "markieren",
+      "notieren",
+      "kontrollieren",
+      "diskutieren",
+      "genug",
+      "unbedingt",
+      "egal",
+      "mittel",
+      "menge"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 3 «Immer online?» — أول تباعد موثق: الموضوع من §7 (الجسم والصحة) والفصل K3 للدعم (D326)"
+  }
+}

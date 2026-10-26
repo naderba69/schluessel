@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-von-seit-bei",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Eine Tüte vom Markt? · Ich spare seit zwei Monaten. · Bei mir in Tunesien verhandeln wir immer.",
+    "ar": "von · seit · bei + الداتيف: von = من (المصدر والمرسل والملكية: vom Markt · von mir · die Jacke von Lena) ≠ aus (الأصل) · seit = منذ مع المضارع (seit zwei Monaten · seit einem Jahr) · bei = عند (beim Bäcker · bei der Bäckerei · bei mir)"
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u8-d5",
+    "a1-u8-d6",
+    "a1-u15-d4"
+  ],
+  "payload": {
+    "topicAr": "اليوم ثلاثة حروف جر أخرى يأتي بعدها الداتيف دائماً — كأخواتها mit/nach/aus/zu من الدرس السابق: von (من: المصدر والمرسل والملكية) · seit (منذ) · bei (عند): Eine Tüte vom Markt? · Ein Geschenk von mir. · Ich spare seit zwei Monaten für die Geschenke. · Ich bin seit einem Jahr nicht zu Hause. · Bei mir in Tunesien verhandeln wir immer. · Ich kaufe den Kuchen bei der Bäckerei. ومعها كلمات المتجر والهدايا: verhandeln · die Quittung · der Umtausch · der Schmuck · der Ring · die Kette · die Stiefel · die Mode · die Tüte · das Geschenk · sparen · die Sonnenbrille · die Bäckerei · der Schalter.",
+    "sceneAr": "مهمة الوحدة الثامنة على الشاشة: «في المتجر — يشتري ويتفاوض». مكالمة الدورة: يوسف يعرض على لينا كيساً من السوق فيه هدايا تونس — قلادة لأخته ونظارة شمسية لأبيه وخاتم لأمه. البائع أراد خمسة وعشرين يورو للقلادة فتفاوض يوسف ودفع عشرين — في سويسرا لا يتفاوضون، وعند يوسف في تونس يتفاوض الجميع في السوق. النظارة من المحل عند المخبز، ثلاثون يورو مع إيصال — للاستبدال خلال أسبوع. يوسف يدّخر منذ شهرين للهدايا، وهو منذ سنة لم يزر البيت. ولينا تشتري هدية جدّتها — كعكة — عند المخبز، وتذكرة الأحد من شباك المحطة، وجزمة لنفسها لأن المطر كثير في سويسرا — وفي تونس الجزمة ليست موضة: الشمس دائماً!",
+    "examples": [
+      {
+        "de": "Eine Tüte vom Markt? · Der Ring ist auch vom Markt.",
+        "ar": "كيس من السوق؟ · الخاتم أيضاً من السوق — von + dem = vom (der Markt) — von = من: المصدر الذي جاء منه الشيء"
+      },
+      {
+        "de": "Ein Geschenk von mir. · Das ist die Jacke von Lena.",
+        "ar": "هدية مني · هذه سترة لينا — von + ضمير الداتيف (mir · dir) للمرسل، وvon + اسم علم للملكية (= «سترة لينا»)"
+      },
+      {
+        "de": "Ich spare seit zwei Monaten für die Geschenke. · Ich bin seit einem Jahr nicht zu Hause.",
+        "ar": "أدّخر منذ شهرين للهدايا · أنا منذ سنة لست في البيت — seit + الداتيف: zwei Monaten (الجمع + n) · einem Jahr — والفعل مضارع: ما بدأ في الماضي ومستمر الآن"
+      },
+      {
+        "de": "Seit wann lernst du Deutsch? — Seit einem Jahr.",
+        "ar": "منذ متى تتعلم الألمانية؟ — منذ سنة — السؤال Seit wann؟ والجواب بـseit + الداتيف وحده"
+      },
+      {
+        "de": "Bei mir in Tunesien verhandeln wir immer. · Ich kaufe den Kuchen bei der Bäckerei.",
+        "ar": "عندي (عندنا) في تونس نتفاوض دائماً · أشتري الكعكة عند المخبز — bei + الداتيف: bei mir (عندي/في بلدي) · bei der Bäckerei (die ← der) · bei dem = beim (beim Bäcker · beim Verkäufer)"
+      },
+      {
+        "de": "Die Sonnenbrille ist aus dem Geschäft bei der Bäckerei — nicht vom Markt.",
+        "ar": "النظارة الشمسية من المحل الذي عند المخبز — لا من السوق — aus = من داخل مكان (الخروج/الأصل) · bei = عند/بجوار · von = من (المصدر)"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأول: vom — من أي كلمتين جاءت؟ وقارن بـzum وbeim: ما القاعدة؟ (2) في الثاني: von mir وvon Lena — هل بعد von أداة هنا؟ وماذا تعني «die Jacke von Lena» بالعربية؟ (3) في الثالث: seit zwei Monaten — لماذا Monaten بـn وليس Monate؟ وفي أي زمن الفعل spare؟ (4) في الثالث والرابع: einem Jahr — ما أداة das Jahr في الداتيف؟ (5) في الخامس: bei mir — هل تعني «معي» أم «عندي/في بلدي»؟ وbei der Bäckerei — لماذا der؟ (6) في الأخير: aus dem Geschäft وvom Markt — كلاهما «من» بالعربية، فما الفرق؟ (7) في كل الأمثلة: هل رأيت den أو einen أو die بعد von أو seit أو bei؟",
+    "ruleDe": "von · seit · bei: der/das → dem · die → der · die Monate → den Monaten — von dem = vom · bei dem = beim — vom Markt · von mir · die Jacke von Lena · seit zwei Monaten · seit einem Jahr · Seit wann? · bei mir · bei der Bäckerei · beim Bäcker",
+    "ruleAr": "ثلاثة حروف أخرى بالداتيف دائماً — القاعدة نفسها التي تعرفها من mit/nach/aus/zu: der/das ← dem · die ← der · الجمع ← den + ‑n — ولكلٍّ معناه: (1) von = «من» للمصدر والمرسل والملكية: من أين جاء الشيء أو ممّن (Eine Tüte vom Markt · ein Geschenk von mir · die Kette vom Verkäufer) — وvon + dem تُدمج دائماً: vom (vom Markt · vom Bahnhof · vom Verkäufer)؛ وvon + اسم علم = الإضافة العربية: die Jacke von Lena = سترة لينا · das Auto von Yusuf = سيارة يوسف. والفرق عن aus: aus للأصل والخروج من داخل مكان (Ich komme aus Tunesien · die Sonnenbrille aus dem Geschäft)، وvon للمصدر والمرسل (vom Markt · von mir). (2) seit = «منذ» للمدة التي بدأت في الماضي وما زالت: seit + الداتيف — seit zwei Monaten (الجمع بـn) · seit zwei Wochen · seit einem Jahr (das Jahr ← einem) · seit Montag (بلا أداة مع أسماء الأيام) — والفعل بعدها مضارعٌ دائماً: Ich spare seit zwei Monaten (= بدأتُ قبل شهرين وما زلت) · Ich bin seit einem Jahr nicht zu Hause · والسؤال: Seit wann …? — Seit einem Jahr. (3) bei = «عند»: عند شخصٍ أو محلٍّ أو مكان عمل — bei mir · bei dir (عندي/عندك: في بيتي، وفي كلام يوسف: bei mir in Tunesien = عندنا في تونس) · beim Bäcker · beim Verkäufer (bei + dem = beim دائماً) · bei der Bäckerei (die ← der) · bei der Schule (عند المدرسة). ومعها كلمات التفاوض: Wir verhandeln über den Preis (über + أكوزاتيف عبارةً ثابتة) · Der Umtausch ist eine Woche möglich — mit Quittung · Ich spare für die Geschenke.",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «منذ» العربية تأتي مع المضارع أيضاً: «أدّخر منذ شهرين» = Ich spare seit zwei Monaten — الزمن نفسه، عون. (2) «عند» العربية = bei في معنييها: «عند الخبّاز» beim Bäcker · «عندي» bei mir — عون. (3) «سترة لينا» إضافةٌ بلا حرف، والألمانية الدارجة تقولها بـvon: die Jacke von Lena — بنيةٌ قريبة من «السترة التي للينا» — عون. وما يختلف ثلاثة: (1) «من» العربية واحدة لـaus وvon، فيقول المتعلم ~~Ich komme von Tunesien.~~ أو ~~Die Tüte ist aus dem Markt.~~ — والألمانية: aus للأصل والخروج من داخل مكان (aus Tunesien · aus dem Geschäft)، وvon للمصدر والمرسل والملكية (vom Markt · von mir · von Lena). (2) «منذ» العربية لا تغيّر ما بعدها («منذ شهرين»)، فيُبقي المتعلم الجمع كما هو ~~seit zwei Monate~~ أو يضع الأكوزاتيف ~~seit ein Jahr~~ — والألمانية: الداتيف دائماً: seit zwei Monaten · seit einem Jahr. (3) «عند» تجرّ الاسم بلا أداة متغيّرة، فيقول المتعلم ~~bei die Bäckerei~~ أو ~~bei den Bäcker~~ — والألمانية: bei der Bäckerei · beim Bäcker (bei + dem تُدمج دائماً كـzum/vom) — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "اليوم von وseit وbei بالأداة المعرّفة والنكرة (dem · der · vom · beim · einem · einer) وبضميري mir/dir وبأسماء الأعلام — وأدوات الملكية في الداتيف (von meiner Familie · bei meiner Oma) في الوحدة 11 مع الداتيف الكامل؛ فإن أردت اليوم قل: ein Geschenk von mir · bei mir zu Hause.",
+      "seit مع المضارع وحده (Ich spare seit zwei Monaten) — و«قبل شهرين» (vor zwei Monaten) و«من الاثنين إلى الجمعة» (von … bis …) والماضي (Perfekt) في وحدات لاحقة.",
+      "bei للمكان والشخص وجهة العمل — وbei بمعنى «في حال» وbei + شركة باسمها ليست اليوم؛ وwohnen bei (أسكن عند) تأتي مع الملكية في الوحدة 11.",
+      "verhandeln über + أكوزاتيف عبارةٌ ثابتة اليوم (über den Preis) — وحرف über نفسه (فوق/عن) قاعدة لاحقة؛ وUmtausch وQuittung وSonnenbrille وTüte كلمات A2/حياة يومية خارج قائمة SD1 — تُحفظ للمتجر لا للامتحان."
+    ],
+    "beads": [
+      "Ich",
+      "spare",
+      "seit",
+      "zwei",
+      "Monaten",
+      "für",
+      "die",
+      "Geschenke."
+    ],
+    "properNouns": [
+      "Tunesien",
+      "Lena"
+    ]
+  }
+}

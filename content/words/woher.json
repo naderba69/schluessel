@@ -1,9 +1,12 @@
 {
   "schemaVersion": "1.0.0",
   "phoneticRisks": [
-    "r-uvular"
+    "r-uvular",
+    "w-v"
   ],
-  "grammarRisks": [],
+  "grammarRisks": [
+    "v2-order"
+  ],
   "wordFamily": [
     "wo",
     "kommen"
@@ -18,7 +21,7 @@
   "wordClass": "adverb",
   "sampleSentence": {
     "de": "Woher kommen Sie?",
-    "ar": "من أين أنتم؟",
+    "ar": "من أين حضرتك؟",
     "sourceLesson": "a1-u1-d5"
   },
   "unit": 1,
@@ -29,7 +32,8 @@
   "thema": "Kennenlernen",
   "usedInLessons": [
     "a1-u1-d5",
-    "a1-u2-d1"
+    "a1-u2-d1",
+    "a1-u15-d1"
   ],
   "srsCardTypes": [
     "chunk",

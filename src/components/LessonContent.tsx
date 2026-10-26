@@ -4,17 +4,21 @@ import { useEffect, useRef, useState } from "react";
 import { audioPlayer } from "../lib/audio-player.js";
 import { FUNCTION_LABELS_AR, type Phrase } from "../lib/phrase-bank.js";
 import { PlayButton } from "./LessonSession.js";
-import { StruckText } from "./StruckText.js";
-import type { Unit0Card } from "../../content/schemas/index.js";
+import { BorrowedWordsBox, StruckText } from "./StruckText.js";
+import type { AudioScript, Unit0Card } from "../../content/schemas/index.js";
+import { CHARACTER_NAME_AR } from "../lib/story.js";
+import { answerNeedsSpecialChar, cardsForEvent, loadUnit0Deck } from "../lib/unit0.js";
+import { KeyboardCard } from "./FirstRun.js";
 import type { LearnCardData, RecallCardData, PracticeData, CloseData } from "../lib/lesson-runner.js";
 import { RecallCardView, LearnCardView, CloseView } from "./LessonSession.js";
 import type { RecallRating } from "../lib/review-engine.js";
+import type { ErrorSkill } from "../lib/errors-engine.js";
 import {
   checkBeads, revealRule, shuffledBeads, startDiscovery, submitInference, viewExamples,
   type DiscoverySession, type GrammarRule,
 } from "../lib/grammar-discovery.js";
 import {
-  displayOrder, initialPractice, nextItem, submitAttempt, toTypedItem, type Attempt, type PracticeState, type TypedItem, type Verdict,
+  displayOrder, initialPractice, nextItem, normalizeAnswer, submitAttempt, toTypedItem, type Attempt, type PracticeState, type TypedItem, type Verdict,
 } from "../lib/practice-session.js";
 
 /** أحرف ألمانية خاصة (D117): لوحة مفاتيح عربية/إنجليزية لا تملك ä ö ü ß — بلا هذه الأزرار يُعاقَب المتعلم على لوحته لا على معرفته */
@@ -41,8 +45,8 @@ export function insertAtCursor(el: HTMLInputElement | null, text: string, ch: st
 }
 
 /** محطة 1 — الاسترجاع: بطاقة بعد بطاقة، والتقييم يمرّر للتالية */
-export function RecallStation({ cards, onDone }: { cards: RecallCardData[]; onDone?: () => void }) {
-  const [index, setIndex] = useState(0);
+export function RecallStation({ cards, onDone, initialIndex = 0, onProgress, onErrorResolved, onSrsRated }: { cards: RecallCardData[]; onDone?: () => void; initialIndex?: number; onProgress?: (index: number) => void; /** N-150 (D250): بطاقة خطأ قُيّمت جيد/سهل في الجولة ← تُحلّ */ onErrorResolved?: (errorId: string, rating: RecallRating) => void; /** D273: بطاقة SRS قُيّمت ← تُجدوَل (scheduleRecall) */ onSrsRated?: (srsCardId: string, rating: RecallRating) => void }) {
+  const [index, setIndex] = useState(Math.max(0, Math.min(initialIndex, Math.max(0, cards.length - 1))));
   const [revealed, setRevealed] = useState(false);
   const card = cards[index];
   if (!card) return <p data-testid="recall-done">انتهت جولة الاسترجاع — إلى الجديد! 💪</p>;
@@ -58,9 +62,12 @@ export function RecallStation({ cards, onDone }: { cards: RecallCardData[]; onDo
         speakText={card.speakText}
         revealed={revealed}
         onReveal={() => setRevealed(true)}
-        onRate={(_r: RecallRating) => {
+        onRate={(r: RecallRating) => {
+          if (card.kind === "error" && card.errorId && (r === "good" || r === "easy")) onErrorResolved?.(card.errorId, r);
+          if (card.kind === "srs" && card.srsCardId) onSrsRated?.(card.srsCardId, r); // D273: كل تقييم يُجدوِل
           setRevealed(false);
           setIndex(index + 1);
+          onProgress?.(index + 1); // N-006
           if (index + 1 >= cards.length) onDone?.(); // D117: اكتملت المحطة ← يُفتح «التالي»
         }}
       />
@@ -73,13 +80,19 @@ export function LearnStation({
   cards,
   rules = [],
   onDone,
+  initialIndex = 0,
+  initialRuleIndex = 0,
+  onProgress,
 }: {
   cards: LearnCardData[];
   rules?: readonly GrammarRule[];
   onDone?: () => void;
+  initialIndex?: number;
+  initialRuleIndex?: number;
+  onProgress?: (index: number, ruleIndex: number) => void;
 }) {
-  const [index, setIndex] = useState(0);
-  const [ruleIndex, setRuleIndex] = useState(0);
+  const [index, setIndex] = useState(Math.max(0, initialIndex));
+  const [ruleIndex, setRuleIndex] = useState(Math.max(0, initialRuleIndex));
   const [attempted, setAttempted] = useState(false);
   const [revealed, setRevealed] = useState(false);
   const card = cards[index];
@@ -96,6 +109,7 @@ export function LearnStation({
           rule={rule}
           onDone={() => {
             setRuleIndex(ruleIndex + 1);
+            onProgress?.(index, ruleIndex + 1); // N-006
             if (ruleIndex + 1 >= rules.length) onDone?.(); // D117: آخر قاعدة ← اكتملت المحطة
           }}
         />
@@ -126,6 +140,7 @@ export function LearnStation({
             setRevealed(false);
             setAttempted(false);
             setIndex(index + 1);
+            onProgress?.(index + 1, ruleIndex); // N-006
             if (index + 1 >= cards.length && rules.length === 0) onDone?.(); // D117: بلا قاعدة ← آخر بطاقة تُكمل المحطة
           }}
         >
@@ -417,12 +432,31 @@ export function PracticeStation({
   data,
   redemittel = [],
   onDone,
+  initial,
+  onProgress,
+  unit0Shown,
+  onUnit0Show,
+  lessonId,
+  onGrade,
 }: {
   data: PracticeData;
+  /** N-150 (D250): معرّف الدرس للدفتر — بلا توصيل لا التقاط (توافق الاختبارات القديمة) */
+  lessonId?: string;
+  /** N-150 (D250): كل محاولة غير كاملة (retry/close — والإنتاج الحر self لا يُلتقط: الحكم للمتعلم) */
+  onGrade?: (g: { skill: ErrorSkill; wrong: string; correct: string; explanation: string; source: string; closeSlip: boolean }) => void;
   redemittel?: Phrase[];
   onDone?: () => void;
+  initial?: { station: number; item: number };
+  onProgress?: (station: number, item: number) => void;
+  /** N-049 (D233): بطاقات الوحدة صفر المعروضة + إبلاغ العرض — بلا توصيل لا بطاقة (توافق الاختبارات القديمة) */
+  unit0Shown?: readonly string[];
+  onUnit0Show?: (id: string) => void;
 }) {
-  const [state, setState] = useState<PracticeState>(initialPractice);
+  const [state, setState] = useState<PracticeState>(() => ({
+    ...initialPractice(),
+    station: Math.max(0, initial?.station ?? 0),
+    item: Math.max(0, initial?.item ?? 0),
+  }));
   const station = data.stations[state.station];
   const item = station?.items[state.item] as { q?: string; a?: string } | undefined;
 
@@ -454,9 +488,18 @@ export function PracticeStation({
   }
 
   const typed = toTypedItem(station.type, item);
+  // N-049 (D233): أول بند كتابة (input) إجابته بحرف خاص ← بطاقة لوحة المفاتيح (مرة واحدة أبداً)
+  const keyboardDue = typed?.kind === "input" && unit0Shown !== undefined && answerNeedsSpecialChar(typed.answer, typed.accept)
+    ? cardsForEvent(loadUnit0Deck(), [...unit0Shown], "first-special-char")[0]
+    : undefined;
+  // N-010 (D231): حوار محطة الاستماع هذه — يُعرض كاملاً قبل بندها الأول وحده (بقية البنود: زر سطرها يكفي)
+  const dialogue = station.type === "listening" && state.item === 0
+    ? data.dialogues.find((d) => d.station === state.station)?.script
+    : undefined;
   const next = () => {
     const after = nextItem(state, data.stations);
     setState(after);
+    onProgress?.(after.station, after.item); // N-006
     if (!data.stations[after.station]) onDone?.(); // D117: آخر بند ← اكتملت المحطة (ثم المهمة التواصلية)
   };
   const counter = (
@@ -468,12 +511,40 @@ export function PracticeStation({
   if (typed) {
     return (
       <section data-testid="practice-station" data-type={station.type}>
+        {state.station === 0 && state.item === 0 && !state.verdict && <BorrowedWordsBox words={data.borrowed ?? []} />}
+        {dialogue && <DialogueView script={dialogue} />}
+        {keyboardDue && <KeyboardCard card={keyboardDue} onDismiss={() => onUnit0Show?.(keyboardDue.id)} />}
         {counter}
         <TypedItemView
           key={`${state.station}-${state.item}`}
           item={typed}
           verdict={state.verdict}
-          onAttempt={(a) => setState(submitAttempt(state, typed, a))}
+          onAttempt={(a) => {
+            const ns = submitAttempt(state, typed, a);
+            setState(ns);
+            // N-150 (D250): التقاط تلقائي للدفتر الذهبي (§2.7 — كل خطأ يُسجَّل)
+            if (lessonId && onGrade && ns.verdict && (ns.verdict.status === "retry" || ns.verdict.status === "close") && typed.kind !== "production") {
+              const wrong =
+                typed.kind === "order"
+                  ? (Array.isArray(a) ? a.join(" ") : "") || "—"
+                  : typed.kind === "match"
+                    ? (typed.pairs
+                        .filter((pr) => (a as Readonly<Record<string, string>>)[pr.de] !== pr.ar)
+                        .map((pr) => `${pr.de}↔${(a as Readonly<Record<string, string>>)[pr.de] ?? "؟"}`)
+                        .join("، ") || "—")
+                    : (typeof a === "string" ? a : "") || "—";
+              const skill: ErrorSkill =
+                typed.kind === "choice" ? "lesen" : typed.kind === "order" ? "grammar" : typed.kind === "match" ? "vocab" : typed.mode === "dictation" ? "hoeren" : "schreiben";
+              onGrade({
+                skill,
+                wrong,
+                correct: ns.verdict.expected,
+                explanation: typed.why,
+                source: `${lessonId}/practice-s${state.station}-i${state.item}`,
+                closeSlip: ns.verdict.status === "close",
+              });
+            }
+          }}
         />
         {state.verdict && <FeedbackView verdict={state.verdict} onNext={next} />}
       </section>
@@ -484,6 +555,7 @@ export function PracticeStation({
   const legacy: TypedItem = { kind: "production", prompt: item.q ?? "", model: item.a ?? "", why: "" };
   return (
     <section data-testid="practice-station" data-type={station.type}>
+      {dialogue && <DialogueView script={dialogue} />}
       {counter}
       <p dir="ltr">
         <StruckText text={item.q ?? ""} />
@@ -506,17 +578,89 @@ export function PracticeStation({
   );
 }
 
+/**
+ * N-010 (D231): الحوار الكامل قبل بنود الاستماع — المتعلم يرى المشهد كله أولاً ثم يجيب؛ كل سطر بزر صوته المسجل.
+ */
+export function DialogueView({ script }: { script: AudioScript }) {
+  return (
+    <div data-testid="station-dialogue">
+      <h4>الحوار كاملاً 🎭 — اقرأ واستمع أولاً، ثم أجب عن الأسئلة</h4>
+      <ol>
+        {script.lines.map((ln) => (
+          <li key={ln.id}>
+            <strong>{ln.speaker === "announcer" ? "المذيع" : CHARACTER_NAME_AR[ln.speaker]}:</strong>{" "}
+            <span dir="ltr">{ln.text}</span>{" "}
+            <PlayButton audioId={ln.id} speakText={ln.text} />
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 /** محطة 4 — الخلاصة: التلخيص + المصائد الذهبية + تقرير مولر المسائي (E08) */
+/**
+ * N-047 (D229): تمرين بطاقة المصيدة — محاولة قبل الكشف (F121): إدخال أو اختيار ← تحقق ← الكشف بعد المحاولة وحدها.
+ * بلا درجات (خلاصة هادئة) — والقيمة أن المتعلم ينتج الصحيح بنفسه لا أن يقرأه.
+ */
+export function WarningExerciseView({ q, a, choices }: { q: string; a: string; choices?: readonly string[] }) {
+  const [given, setGiven] = useState("");
+  const [tried, setTried] = useState(false);
+  const [revealed, setRevealed] = useState(false);
+  const ok = tried && normalizeAnswer(given) === normalizeAnswer(a);
+  return (
+    <div data-testid="warning-exercise">
+      <p>
+        تمرينها: <span dir="auto"><StruckText text={q} /></span>
+      </p>
+      {choices ? (
+        <p>
+          {choices.map((c) => (
+            <button key={c} data-testid={`warning-choice-${c}`} onClick={() => { setGiven(c); setTried(true); }}>
+              <span dir="ltr">{c}</span>
+            </button>
+          ))}
+        </p>
+      ) : (
+        !revealed && (
+          <p>
+            <input data-testid="warning-input" aria-label="إجابة التمرين" value={given} onChange={(e) => setGiven(e.target.value)} dir="ltr" />
+            <button data-testid="warning-check" onClick={() => setTried(true)}>
+              تحقق
+            </button>
+          </p>
+        )
+      )}
+      {tried && (ok ? <p data-testid="warning-verdict">✓ صحيح — هكذا تُكتب دائماً.</p> : <p data-testid="warning-verdict">ليس بعد — حاول مرة أخرى أو اكشف الصحيح.</p>)}
+      {tried && !ok && !revealed && (
+        <button data-testid="warning-reveal" onClick={() => setRevealed(true)}>
+          اكشف الصحيح
+        </button>
+      )}
+      {revealed && (
+        <p data-testid="warning-answer">
+          الصحيح: <span dir="ltr">{a}</span>
+        </p>
+      )}
+    </div>
+  );
+}
+
 export function CloseStation({
   data,
   report,
   preview,
   muellerLine,
+  ticks = [],
+  onTick,
 }: {
   data: CloseData;
   report: string;
   preview: string;
   muellerLine: string;
+  /** D276: توقيعات Can-do المحفوظة + الحفظ — بلا onTick القراءة فقط */
+  ticks?: readonly { statement: string; done: boolean }[];
+  onTick?: (statement: string, done: boolean) => void;
 }) {
   return (
     <section data-testid="close-station">
@@ -524,6 +668,24 @@ export function CloseStation({
       <p data-testid="lesson-summary">
         {data.summaryDe} — {data.summaryAr}
       </p>
+      <div data-testid="cando-signoff">
+        <h4>وقّع إنجازك ✍️ — بصدق: ما أتقنته فعلاً</h4>
+        <ul>
+          {data.canDos.map((s, i) => {
+            const done = ticks.some((x) => x.statement === s && x.done);
+            return (
+              <li key={i} data-testid={`cando-state-${i}`} data-done={done ? "yes" : "no"}>
+                {done ? "✓" : "○"} {s}{" "}
+                {onTick && (
+                  <button data-testid={`cando-sign-${i}`} onClick={() => onTick(s, !done)}>
+                    {done ? "إلغاء التوقيع" : "أوقّع ✓"}
+                  </button>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
       <h4>مصائد ذهبية (أخطاؤك هي كنزك)</h4>
       <ul data-testid="warning-cards">
         {data.warningCards.map((card, i) => (
@@ -535,9 +697,23 @@ export function CloseStation({
             <span dir="ltr">
               <StruckText text={card.correct.de} />
             </span>
+            <WarningExerciseView q={card.exercise.q} a={card.exercise.a} choices={card.exercise.choices} />
           </li>
         ))}
       </ul>
+      {data.storyLine && (
+        <div data-testid="story-line" data-story-id={data.storyLine.id}>
+          <h4>سطر القصة اليوم 📖</h4>
+          {data.storySoFar.length > 0 && (
+            <p data-testid="story-so-far">
+              القصة حتى الآن: {data.storySoFar.map((l) => `${l.speakerAr}: «${l.de}»`).join(" · ")}
+            </p>
+          )}
+          <p>
+            {data.storyLine.speakerAr}: <span dir="ltr">«{data.storyLine.de}»</span> — {data.storyLine.contextAr}
+          </p>
+        </div>
+      )}
       <CloseView report={report} preview={preview} muellerLine={muellerLine} />
     </section>
   );

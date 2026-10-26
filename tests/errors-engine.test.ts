@@ -17,6 +17,8 @@ import {
   sessionIncludesMandatoryRound,
   reshowAt,
   canReshow,
+  upsertGoldenError,
+  KIND_LABELS_AR,
 } from "../src/lib/errors-engine.js";
 
 function entry(over: Partial<ErrorEntry> = {}): ErrorEntry {
@@ -185,5 +187,51 @@ describe("التصحيح ثم التكرار = تصلّب (§4)", () => {
     for (let i = 0; i < 5; i++) e = registerRecurrence(e, { correctedBefore: false });
     expect(e.kind).toBe("systematic");
     expect(e.occurrences).toBe(6);
+  });
+});
+
+describe("الالتقاط التلقائي من الحصص (N-150 · D250)", () => {
+  const input = {
+    skill: "schreiben" as const, wrong: "Ich heisse Yusuf", correct: "Ich heiße Yusuf",
+    explanation: "ß لا s", source: "a1-u1-d1/quiz", closeSlip: false,
+  };
+  const SLUG = /^[a-z0-9][a-z0-9-]*$/;
+
+  it("خطأ جديد = قيد نظامي بمعرّف صالح", () => {
+    const out = upsertGoldenError([], input);
+    expect(out).toHaveLength(1);
+    expect(out[0]!.kind).toBe("systematic");
+    expect(out[0]!.occurrences).toBe(1);
+    expect(out[0]!.resolved).toBe(false);
+    expect(out[0]!.id).toMatch(SLUG);
+  });
+
+  it("القريب الشكلي = هفوة صريحة", () => {
+    const out = upsertGoldenError([], { ...input, closeSlip: true });
+    expect(out[0]!.kind).toBe("slip");
+  });
+
+  it("نفس الخطأ مجدداً = تكرار (والثالث = تحجّر) — لا قيد مكرر", () => {
+    const once = upsertGoldenError([], input);
+    const twice = upsertGoldenError(once, input);
+    expect(twice).toHaveLength(1);
+    expect(twice[0]!.occurrences).toBe(2);
+    expect(twice[0]!.kind).toBe("systematic");
+    const thrice = upsertGoldenError(twice, input);
+    expect(thrice[0]!.occurrences).toBe(3);
+    expect(thrice[0]!.kind).toBe("fossilized");
+  });
+
+  it("خطأ مختلف = قيد جديد بمعرّف مختلف", () => {
+    const once = upsertGoldenError([], input);
+    const twice = upsertGoldenError(once, { ...input, wrong: "anderer Fehler" });
+    expect(twice).toHaveLength(2);
+    expect(twice[0]!.id).not.toBe(twice[1]!.id);
+  });
+
+  it("أسماء الأنواع عربية وبلا لوم", () => {
+    expect(KIND_LABELS_AR.systematic).toContain("نظامي");
+    expect(KIND_LABELS_AR.slip).toContain("هفوة");
+    expect(KIND_LABELS_AR.fossilized).toContain("متحجّر");
   });
 });

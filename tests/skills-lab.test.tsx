@@ -14,11 +14,14 @@ import {
   DEMO_TEXT,
 } from "../src/components/SkillsLab.js";
 import { BLAME_WORDS } from "../src/lib/warmth-engine.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+
+const FIRST_WORDS = (await loadFirstSession()).direct;
 import { A1_RULES } from "../src/lib/grammar-discovery.js";
 
 describe("الصدفة — مختبر المهارات بثماني محطات", () => {
   it("التبويبات الثمانية كلها ظاهرة (E09–E16)", () => {
-    const html = renderToStaticMarkup(<SkillsLab />);
+    const html = renderToStaticMarkup(<SkillsLab words={FIRST_WORDS} />);
     expect(html).toContain('data-testid="skills-lab"');
     for (const t of ["hoeren", "sprechen", "lesen", "schreiben", "grammatik", "netzwerk", "aufgaben", "kultur"]) {
       expect(html).toContain(`tab-${t}`);
@@ -64,7 +67,7 @@ describe("E11 — شاشة القراءة: الترجمة مقفلة قبل ال
 
 describe("E12 — شاشة الكتابة", () => {
   it("جملة اليوم + اليوميات + التصحيح يشرح «لماذا» — بلا لوم", () => {
-    const html = renderToStaticMarkup(<WritingLab initialText="Ich komme von Tunesien." />);
+    const html = renderToStaticMarkup(<WritingLab initialText="Ich komme von Tunesien." words={FIRST_WORDS} />);
     expect(html).toContain("Heute:");
     expect(html).toContain("Mein Tag");
     expect(html).toContain("Ich komme aus Tunesien.");
@@ -77,17 +80,45 @@ describe("E12 — شاشة الكتابة", () => {
 describe("E13 — شاشة القواعد: القفل قبل المحاولة", () => {
   it("الأمثلة ظاهرة — والقاعدة مخفية والكشف مقفل في الحالة الأولى", () => {
     const html = renderToStaticMarkup(<GrammarLab />);
-    expect(html).toContain("Ich komme aus Tunesien.");
+    expect(html).toContain("Hier wohne ich."); // N-009: مثال v2 الجديد عند a1-u2-d1
     expect(html).toContain("استنتج القاعدة");
     expect(html).toContain('data-testid="reveal-rule" data-locked="true"');
     // نص القاعدة نفسه لا يظهر في الحالة الأولى (لا كشف قبل المحاولة)
     expect(html).not.toContain(A1_RULES[0]!.ruleAr);
   });
+
+  it("N-009: بلا تقدّم معلوم — القواعد الثلاث متاحة والافتراضي أولها", () => {
+    const html = renderToStaticMarkup(<GrammarLab />);
+    expect(html).toContain('data-testid="rule-v2-position"');
+    expect(html).toContain('data-testid="rule-aus-vs-von"');
+    expect(html).toContain('data-testid="rule-heissen-du"');
+  });
+
+  it("N-009: البوابة — تلميذ u1-d1 لا يرى إلا heißen (لا v2 ولا aus/von)", () => {
+    const html = renderToStaticMarkup(<GrammarLab currentLessonId="a1-u1-d1" />);
+    expect(html).toContain('data-testid="rule-heissen-du"');
+    expect(html).not.toContain('data-testid="rule-v2-position"');
+    expect(html).not.toContain('data-testid="rule-aus-vs-von"');
+    expect(html).toContain("Er heißt Yusuf.");
+  });
+
+  it("N-009: البوابة — تلميذ u2-d1 يرى قاعدتين مرتبتين (heißen أولاً) ولا يرى aus/von", () => {
+    const html = renderToStaticMarkup(<GrammarLab currentLessonId="a1-u2-d1" />);
+    expect(html).toContain('data-testid="rule-heissen-du"');
+    expect(html).toContain('data-testid="rule-v2-position"');
+    expect(html).not.toContain('data-testid="rule-aus-vs-von"');
+    expect(html.indexOf("rule-heissen-du")).toBeLessThan(html.indexOf("rule-v2-position"));
+  });
+
+  it("N-009: البوابة — معرّف مجهول يُغلق (fail-closed) لا يُظهر شيئاً", () => {
+    const html = renderToStaticMarkup(<GrammarLab currentLessonId="nope" />);
+    expect(html).toContain("لا قواعد متاحة بعد");
+  });
 });
 
 describe("E14 — شاشة الشبكة", () => {
   it("العارات والكبائش في الشاشة + القصر بغرفه", () => {
-    const html = renderToStaticMarkup(<NetworkLab />);
+    const html = renderToStaticMarkup(<NetworkLab words={FIRST_WORDS} />);
     expect(html).toContain('data-testid="kol-kommen"');
     expect(html).toContain("aus Tunesien kommen");
     expect(html).toContain("المدخل");

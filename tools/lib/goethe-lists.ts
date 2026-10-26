@@ -19,7 +19,7 @@
 import type { Level } from "../../content/schemas/common.js";
 import type { OfficialWordlist, WordlistEntry } from "../../content/schemas/wordlist.js";
 
-export type EvidenceKind = "entry" | "sub" | "group" | "feminine" | "plural" | "contraction" | "stem" | "herkunft" | "composed";
+export type EvidenceKind = "entry" | "sub" | "group" | "feminine" | "plural" | "contraction" | "stem" | "herkunft" | "composed" | "example";
 export interface Evidence {
   list: string;
   level: Level;
@@ -147,6 +147,7 @@ export function pluralsFor(entry: WordlistEntry, lemma: string): string[] {
   if (!/^[-¨äöüÄÖÜ=]/.test(marker)) return [];
   const um = /¨/.test(marker) || /^-?[äöüÄÖÜ](?:$|[\s,-])/.test(marker);
   const suffix = (marker.replace(/¨/g, "").match(/([a-zäöüß]*)\s*$/)?.[1] ?? "").replace(/^[äöü]$/, "");
+  if (suffix.length > 3) return []; // D208: لاحقة صغيرة بأكثر من 3 أحرف ليست لاحقة جمع (أطولها nen) بل اختصار إبدال ذيل («- männer» ← Hausmänner · «-ücher» ← Wörterbücher) — لا تُقرأ بيقين فلا تُدَّعى (لا تخمين)
   if (/um$/.test(lemma) && /^(e?en|a)$/.test(suffix)) { // Datum → Daten · Museum, -een → Museen · Praktikum, -a
     const stem = lemma.slice(0, -2);
     return [stem + (stem.endsWith("e") && suffix.startsWith("e") ? suffix.slice(1) : suffix).replace(/^een$/, "en")];
@@ -208,6 +209,11 @@ const isNoun = (w: WordLike) => w.wordClass === "noun";
 const articleOk = (entry: WordlistEntry, article?: string) =>
   !article || !entry.article || entry.article.split("/").includes(article);
 
+/** D312 (N-165): الضربة على مثال مطبوع لا على الأصل — الصيغة المطابقة ليست الصيغة الأولى للمدخل */
+function isExampleHit(h: Hit): boolean {
+  return normKey(h.lemma) !== normKey(h.entry.lemmas[0] ?? "");
+}
+
 /** بحث صيغة واحدة: الاسم يطابق صيغة بحرف كبير (وأداة متوافقة)؛ غير الاسم يقبل اختلاف حالة الحرف الأول */
 function lookup(ix: ListIndex, lemma: string, noun: boolean, article?: string): Hit[] {
   const k0 = normKey(lemma);
@@ -220,7 +226,8 @@ function lookup(ix: ListIndex, lemma: string, noun: boolean, article?: string): 
     if (low.length) hits = low;
   }
   if (hits.length === 0) hits = ix.squash.get(squashOf(k)) ?? [];
-  if (noun) hits = hits.filter((h) => isCap(h.lemma) && articleOk(h.entry, article));
+  // D312 (N-165): أداة المدخل لأصله لا لمثاله — «die Feier (z. B. Feierabend)» أصلها die لكن المثال der Feierabend
+  if (noun) hits = hits.filter((h) => isCap(h.lemma) && (isExampleHit(h) || articleOk(h.entry, article)));
   // غير الاسم لا يُثبته اسم: الأداة «mal» ليست «das Mal» — إلا اسماً مُدرجاً بحرفه الكبير نفسه (قطعة «Danke» تطابق danke أعلاه)
   else hits = hits.filter((h) => !isCap(h.lemma) || (isCap(k) && h.lemma === k && !h.entry.article));
   return hits;
@@ -275,6 +282,11 @@ function deinflect(t: string): string[] {
   return [...out];
 }
 
+/** N-026: الفئات المغلقة — أدوات · حروف (ومدمجاتها) · ضمائر · نفي. ليست كلمات رئيسية في الفهارس لكنها مدروسة فلا تحجب دليل القطعة. */
+const CLOSED_CLASS = new Set(
+  "der die das den dem des ein eine einer einen einem eines und oder aber denn sondern zu zum zur vom von bei mit nach aus für gegen ohne um an auf hinter neben über unter vor zwischen im ins am ans bis ich du er sie es wir ihr mich dich sich uns euch mein meine meinen meiner meinem meines dein deine deinen deiner deinem deines sein seine seinen seiner seinem seines unser unsere unseren unserer unserem unseres euer eure euren eurer eurem eures ihr ihre ihren ihrer ihrem ihres nicht kein keine keinen keiner keinem keines wer wen wem was welcher welche welches".split(" "),
+);
+
 function tokenEvidence(ix: ListIndex, token: string, initial: boolean): Evidence | null {
   for (const cand of deinflect(token)) {
     // داخل القطعة: الكلمة الكبيرة اسمٌ (Tag · Wiedersehen) — والأولى قد تكون كبيرة لبداية الجملة فقط (Guten · Auf · Wie)
@@ -296,6 +308,7 @@ export function evidenceIn(w: WordLike, ix: ListIndex): Evidence | null {
   const hits = lookup(ix, lemma, noun, w.article);
   if (hits.length) {
     const best = hits.find((h) => h.entry.kind === "main") ?? hits.find((h) => h.entry.kind === "sub") ?? hits[0]!;
+    if (noun && isExampleHit(best)) return ev(ix, "example", best.entry, `${lemma} ← مثال مطبوع`);
     return ev(ix, kindOf(best.entry), best.entry);
   }
   if (noun && /in$/.test(lemma) && lemma.length >= 5 && (!w.article || w.article === "die")) {
@@ -331,9 +344,12 @@ export function evidenceIn(w: WordLike, ix: ListIndex): Evidence | null {
     const tokens = lemma.split(" ").map((t) => t.replace(/[^\p{L}'-]/gu, "")).filter(Boolean);
     if (tokens.length > 1) {
       const parts = tokens.map((t, i) => tokenEvidence(ix, t, i === 0));
-      if (parts.every(Boolean)) {
-        const first = parts[0]!;
-        return { list: ix.id, level: ix.level, kind: "composed", headword: first.headword, page: first.page, via: parts.map((p) => p!.headword).join(" + ") };
+      // N-026 (D219): جزء القطعة من كلمة مغلقة (أداة · حرف · ضمير · نفي) لا يحجب الدليل — الفهارس لا تُدرجها ككلمات رئيسية لكنها مدروسة.
+      // والحارس: جزءٌ مُدرَج واحد على الأقل — فلا دليل من فراغ («ach so» تبقى بلا دليل: الصوت والتعجب ليسا فئة مغلقة).
+      const eff = parts.map((evd, i) => evd ?? (CLOSED_CLASS.has(tokens[i]!.toLowerCase()) ? { headword: tokens[i]!, page: -1 } : null));
+      if (eff.every(Boolean) && parts.some(Boolean)) {
+        const first = parts.find(Boolean)!;
+        return { list: ix.id, level: ix.level, kind: "composed", headword: first.headword, page: first.page, via: eff.map((p) => p!.headword).join(" + ") };
       }
     }
   }

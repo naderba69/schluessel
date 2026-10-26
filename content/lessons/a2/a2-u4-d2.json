@@ -1,0 +1,421 @@
+{
+  "audioManifestRefs": [
+    "word-zurueckfahren",
+    "word-einziehen",
+    "word-vorwaerts",
+    "word-heraus",
+    "word-herein",
+    "word-hindurch",
+    "word-direkt",
+    "word-disko",
+    "word-schloss",
+    "word-einkaufszentrum",
+    "word-ausstellung",
+    "word-friseur",
+    "word-krimi"
+  ],
+  "canDoDaily": [
+    "يصف اتجاهاً في 5 جمل (فعل حركة + وجهة بالأكوزاتيف صحيح)",
+    "يميز Wohin (أكوزاتيف: in die Stadt) من Wo (داتيف: in der Stadt) ويعلل (سؤال الاتجاه ≠ سؤال المكان)"
+  ],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "zurueckfahren",
+      "einziehen",
+      "vorwaerts",
+      "heraus",
+      "herein",
+      "hindurch",
+      "direkt",
+      "disko",
+      "schloss",
+      "einkaufszentrum",
+      "ausstellung",
+      "friseur",
+      "krimi"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 4 «Große und kleine Gefühle» — تباعد ثانٍ موثق: الموضوع من §7 (المدينة والمواصلات) والفصل K4 للدعم (D337)"
+  },
+  "day": 2,
+  "einstieg": {
+    "guidedRetrieval": [
+      "من أمس (d1): Wo? im Zoo (الداتيف للمكان) — واليوم Wohin? in den Zoo (الأكوزاتيف للاتجاه)",
+      "من A1-U9: in den Tunnel (اتجاه) ≠ im Tunnel (مكان) — واليوم وجهات جديدة"
+    ],
+    "pretestItems": [
+      {
+        "answer": "Ich gehe in die Disko.",
+        "choices": [
+          "Ich gehe in die Disko.",
+          "Ich gehe in der Disko.",
+          "Ich gehe in das Disko."
+        ],
+        "prompt": {
+          "ar": "«أذهب إلى الديسكو» — أي أداة؟"
+        },
+        "revealNextSession": true
+      },
+      {
+        "answer": "Ich gehe ins Schloss.",
+        "choices": [
+          "Ich gehe ins Schloss.",
+          "Ich gehe im Schloss.",
+          "Ich gehe in den Schloss."
+        ],
+        "prompt": {
+          "ar": "«أذهب إلى القصر» — والقصر محايد؟"
+        },
+        "revealNextSession": true
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Einkaufszentrum",
+      "https://www.duden.de/rechtschreibung/Schloss"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/hindurch"
+    ]
+  },
+  "id": "a2-u4-d2",
+  "imageManifestRefs": [],
+  "kind": "content",
+  "level": "A2",
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-wechselpraep"
+    ],
+    "riskFlagsShown": [
+      "trennbar",
+      "needs-ein"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "zurueckfahren",
+      "einziehen",
+      "vorwaerts",
+      "heraus",
+      "herein",
+      "hindurch",
+      "direkt",
+      "disko",
+      "schloss",
+      "einkaufszentrum",
+      "ausstellung",
+      "friseur",
+      "krimi"
+    ]
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "a": "die Ausstellung → die Ausstellungen",
+            "q": "«معرض» — الأداة والجمع؟"
+          },
+          {
+            "a": "ziehen",
+            "q": "Wir ___ ein. (einziehen)"
+          },
+          {
+            "a": "die",
+            "q": "Ich gehe in ___ Disko."
+          },
+          {
+            "a": "ins",
+            "q": "Wir gehen ___ Schloss."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "das Schloss → die Schlösser",
+            "q": "«قصر» — الأداة والجمع؟"
+          },
+          {
+            "a": "fahren",
+            "q": "Wir ___ zurück. (zurückfahren)"
+          },
+          {
+            "a": "zum",
+            "q": "Ich gehe ___ Friseur."
+          },
+          {
+            "a": "hindurch",
+            "q": "Wir fahren ___. (hindurch)"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "das Einkaufszentrum → die Einkaufszentren",
+            "q": "«مركز تجاري» — الأداة والجمع؟"
+          },
+          {
+            "a": "Kommen",
+            "q": "___ Sie herein! (kommen)"
+          },
+          {
+            "a": "die",
+            "q": "Wir gehen in ___ Ausstellung."
+          },
+          {
+            "a": "das",
+            "q": "Ich gehe in ___ Schloss."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "ar": "تقول إلى أين تسير",
+        "de": "Sagen, wohin du fährst"
+      },
+      "situation": {
+        "ar": "صديق يسأل: إلى أين؟",
+        "de": "Ein Freund fragt: Wohin fährst du?"
+      },
+      "successCriteria": [
+        "يذكر 3 وجهات على الأقل",
+        "يستعمل الأكوزاتيف بعد حرف الاتجاه صحيحاً (in die/ins...)",
+        "يستعمل ظرف اتجاه (vorwärts/heraus/herein...)"
+      ]
+    },
+    "stations": [
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الفعل المنفصل: الجذر يتصرف والجزء في الآخر (fahren ... zurück)",
+          "zu + الداتيف دائماً: zum Friseur · zur Disko",
+          "أمر Sie: المصدر + Sie (Kommen Sie!)"
+        ],
+        "interleavedWith": [
+          "auto",
+          "bus",
+          "bahnhof"
+        ],
+        "items": [
+          {
+            "a": "fahren",
+            "q": "نعود بالسيارة: Wir ___ zurück. (zurückfahren)",
+            "why": "zurückfahren منفصل: الجذر fahren يتصرف (wir ← fahren) وzurück في آخر الجملة!"
+          },
+          {
+            "a": "ziehen",
+            "q": "ننتقل للسكن: Wir ___ ein. (einziehen)",
+            "why": "einziehen منفصل: ziehen يتصرف (wir ← ziehen) وein في الآخر!"
+          },
+          {
+            "a": "gehe",
+            "q": "أذهب إلى فيلم الجريمة: Ich ___ in den Krimi. (gehen)",
+            "why": "Ich ← gehe + in den Krimi (Wohin? ← الأكوزاتيف: der ← den!)."
+          },
+          {
+            "a": "Kommen",
+            "q": "تفضل بالدخول: ___ Sie herein! (kommen)",
+            "why": "أمر Sie (تعرفه من A1): المصدر أولاً + Sie — Kommen Sie herein!"
+          },
+          {
+            "a": "fahre",
+            "q": "أسير مباشرة: Ich ___ direkt. (fahren)",
+            "why": "Ich ← fahre + direkt (ظرف بلا تغيير — يصف كيف أسير)."
+          }
+        ],
+        "type": "verb-bank"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "Wohin? (إلى أين) ← الأكوزاتيف: den · die · das",
+          "in das = ins (اختصار تحفظه)",
+          "zu وحدها داتيف: zum Friseur · zum Bäcker"
+        ],
+        "interleavedWith": [
+          "stadt",
+          "kino",
+          "markt"
+        ],
+        "items": [
+          {
+            "a": "die",
+            "q": "أذهب إلى المعرض: Ich gehe in ___ Ausstellung.",
+            "why": "Wohin? (إلى أين) ← الأكوزاتيف: die Ausstellung ← in die Ausstellung."
+          },
+          {
+            "a": "ins",
+            "q": "نذهب إلى المركز: Wir gehen ___ Einkaufszentrum.",
+            "why": "Wohin? ← الأكوزاتيف: das Einkaufszentrum ← in das = ins (اختصار تحفظه)."
+          },
+          {
+            "a": "hindurch",
+            "q": "نمرّ من خلال: Wir fahren ___. (hindurch)",
+            "why": "ظرف الاتجاه hindurch (عبْر): Wir fahren hindurch — والنبر على durch (hin-DURCH)!"
+          },
+          {
+            "a": "zum",
+            "q": "أذهب إلى الحلاق: Ich gehe ___ Friseur.",
+            "why": "zu + الداتيف (استثناء الاتجاه!): der Friseur ← zu dem = zum — gehen (حركة) + zu (داتيف)."
+          }
+        ],
+        "type": "gap-fill"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الخطأ كلمة واحدة (أو موضع واحد) — الباقي صحيح",
+          "اسأل: حركة أم مكان؟ (Wohin? أم Wo?)",
+          "المنفصل: الجذر ثانياً والجزء آخراً"
+        ],
+        "interleavedWith": [
+          "klein",
+          "neu",
+          "gut"
+        ],
+        "items": [
+          {
+            "a": "Ich gehe in die Disko.",
+            "q": "Ich gehe in der Disko.",
+            "why": "Wohin? (إلى أين أذهب) ← الأكوزاتيف: in die — in der (داتيف) تعني أنا داخلها أصلاً!"
+          },
+          {
+            "a": "Wir gehen ins Einkaufszentrum.",
+            "q": "Wir gehen im Einkaufszentrum.",
+            "why": "نذهب (حركة!) ← اتجاه: ins — im تعني نتجول داخله (مكان)!"
+          },
+          {
+            "a": "Wir ziehen in die Stadt ein.",
+            "q": "Wir einziehen in die Stadt.",
+            "why": "المنفصل ينفصل! الجذر ziehen في موضع الفعل وein في آخر الجملة!"
+          },
+          {
+            "a": "Kommen Sie herein!",
+            "q": "Kommen herein Sie!",
+            "why": "أمر Sie: المصدر + Sie مباشرةً ثم الباقي — Sie لا تتأخر!"
+          }
+        ],
+        "type": "error-hunt"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "ابدأ بالديسكو وانتهِ بالمرور",
+          "كل in للاتجاه تريد الأكوزاتيف (die/das)"
+        ],
+        "interleavedWith": [
+          "stadt"
+        ],
+        "items": [
+          {
+            "a": "Ich gehe in die Disko. Wir gehen ins Schloss. Wir fahren zurück. Wir gehen heraus. Wir fahren hindurch.",
+            "q": "صِف رحلتك (سجّل): 5 جمل — إلى أين تذهب؟ (وجهتان + عودة + دخول + مرور: in die/ins/zurück/heraus/hindurch)",
+            "why": "قارن تسجيلك: وجهتان بالأكوزاتيف (die/ins!) + zurück + heraus + hindurch — كلها اتجاه!"
+          }
+        ],
+        "type": "speaking"
+      }
+    ]
+  },
+  "unit": 4,
+  "usedArsenalIds": [
+    "ars-wechselpraep"
+  ],
+  "warmup": {
+    "cardIds": [
+      "auto",
+      "bus",
+      "bahnhof"
+    ]
+  },
+  "ziel": {
+    "ar": "تصف اتجاهاً: إلى أين؟ (الأكوزاتيف بعد حروف الاتجاه)",
+    "de": "Du kannst sagen, wohin du fährst: Ich fahre in die Stadt."
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "zurueckfahren",
+      "einziehen",
+      "vorwaerts",
+      "heraus",
+      "herein",
+      "hindurch",
+      "direkt",
+      "disko",
+      "schloss",
+      "einkaufszentrum",
+      "ausstellung",
+      "friseur",
+      "krimi"
+    ],
+    "summary": {
+      "ar": "رحلتي: أذهب إلى الديسكو. نذهب إلى القصر. نعود بالسيارة. نخرج. نمرّ من خلال. القاعدة: Wohin? (إلى أين) ← الأكوزاتيف: in die Disko · ins Schloss · zum Friseur.",
+      "de": "Meine Fahrt: Ich gehe in die Disko. Wir gehen ins Schloss. Wir fahren zurück. Wir gehen heraus. Wir fahren hindurch. Wohin? — in die Disko · ins Schloss · zum Friseur."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "داتيف المكان بدل أكوزاتيف الاتجاه",
+          "de": "~~Ich gehe in der Disko.~~"
+        },
+        "correct": {
+          "ar": "أذهب إلى الديسكو.",
+          "de": "Ich gehe in die Disko."
+        },
+        "exercise": {
+          "a": "die",
+          "q": "Ich gehe in ___ Disko."
+        },
+        "whyArabicSpeakerFails": "العربية «في/إلى» تُخلط (أذهب في الديسكو!)، فيُستعمل الداتيف للاتجاه — بينما الألمانية تفرّق: Wohin? ← الأكوزاتيف دائماً (die!) (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "فعل متصل بدل المنفصل المشطور",
+          "de": "~~Wir einziehen in die Stadt.~~"
+        },
+        "correct": {
+          "ar": "ننتقل إلى المدينة.",
+          "de": "Wir ziehen in die Stadt ein."
+        },
+        "exercise": {
+          "a": "ziehen",
+          "q": "Wir ___ in die Stadt ein. (einziehen)"
+        },
+        "whyArabicSpeakerFails": "العربية فعلٌ واحد متصل («ننتقل»)، فيُنسى الانفصال — بينما الألمانية تشطر المنفصل: الجذر ثانياً والجزء آخراً (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "حرف المكان مع شخص + حالة خطأ",
+          "de": "~~Ich gehe in den Friseur.~~"
+        },
+        "correct": {
+          "ar": "أذهب إلى الحلاق.",
+          "de": "Ich gehe zum Friseur."
+        },
+        "exercise": {
+          "a": "zum",
+          "q": "Ich gehe ___ Friseur."
+        },
+        "whyArabicSpeakerFails": "للأشخاص zu لا in (لا «تدخل» في الحلاق!) + zu داتيف دائماً: zu dem = zum (خريطة التداخل 10‑ي)"
+      }
+    ]
+  }
+}

@@ -58,7 +58,7 @@
       "ars-preis-1000"
     ],
     "storySentenceIds": [
-      "story-a3-u3-s2"
+      "story-a1-u3-s2"
     ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
@@ -120,8 +120,7 @@
         ],
         "interleavedWith": [
           "zwanzig",
-          "hundert",
-          "zaehlen"
+          "wie-viel"
         ],
         "explanationRequired": true
       },
@@ -288,7 +287,7 @@
         "interleavedWith": [
           "handy",
           "das-essen",
-          "zahl"
+          "essen"
         ],
         "explanationRequired": true
       },
@@ -350,9 +349,8 @@
           }
         ],
         "interleavedWith": [
-          "rechnung",
-          "super",
-          "also"
+          "handy",
+          "wie-viel"
         ],
         "explanationRequired": true
       },
@@ -409,16 +407,16 @@
           }
         ],
         "interleavedWith": [
-          "bitte",
-          "danke",
-          "gern"
+          "gern",
+          "handy",
+          "super"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Preise fragen, nennen und bezahlen",
+        "de": "Wie viel kostet das? — Ich bezahle mit Karte.",
         "ar": "السؤال عن السعر وقوله والدفع"
       },
       "situation": {
@@ -662,8 +660,7 @@
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/tausend",
-      "https://www.duden.de/rechtschreibung/Euro",
-      "https://www.duden.de/rechtschreibung/kosten"
+      "https://www.duden.de/rechtschreibung/Euro_Waehrung"
     ],
     "wiktionary": [
       "https://de.wiktionary.org/wiki/kosten"

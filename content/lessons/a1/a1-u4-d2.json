@@ -57,7 +57,7 @@
       "ars-possessiv"
     ],
     "storySentenceIds": [
-      "story-a4-u4-s2"
+      "story-a1-u4-s2"
     ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
@@ -274,7 +274,7 @@
           },
           {
             "audioId": "word-onkel",
-            "speakText": "Onkel.",
+            "speakText": "der Onkel.",
             "q": "استمع: أي كلمة تسمع؟",
             "choices": [
               "Onkel",
@@ -286,9 +286,9 @@
           }
         ],
         "interleavedWith": [
-          "eltern",
           "oma",
-          "suess"
+          "suess",
+          "heissen"
         ],
         "explanationRequired": true
       },
@@ -400,8 +400,8 @@
           },
           {
             "audioId": "word-schluessel",
-            "speakText": "Schlüssel.",
-            "a": "Schlüssel",
+            "speakText": "der Schlüssel.",
+            "a": "der Schlüssel",
             "why": "ü بشفتين مضمومتين ولسان على «ي»، وss بعد ü القصيرة — وSchlüssel اسم بحرف كبير، وجمعه مثله: die Schlüssel."
           },
           {
@@ -693,8 +693,7 @@
   },
   "gReferences": {
     "duden": [
-      "https://www.duden.de/rechtschreibung/mein",
-      "https://www.duden.de/rechtschreibung/geh%C3%B6ren",
+      "https://www.duden.de/rechtschreibung/gehoeren",
       "https://www.duden.de/rechtschreibung/Familie",
       "https://www.duden.de/rechtschreibung/lieben"
     ],

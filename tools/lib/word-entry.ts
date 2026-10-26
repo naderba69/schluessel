@@ -22,6 +22,7 @@ export function slugify(de: string): string {
     .replace(/^sich /, "")
     .toLowerCase()
     .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // D207: Café → cafe (الحروف المستعارة بعلامات)
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 }
@@ -51,6 +52,9 @@ export function lemmaOf(de: string): string {
  * vowel-long-short: علامة إطالة مكتوبة (aa/ee/oo · ie · حركة+h · ß بعد حركة غير ثنائية) + «ː» منطوقة؛
  *   وh بين حركتين تُعدّ علامة فقط إن لم تُنطق ([h] غائبة من IPA: gehen=[ɡeːən] نعم · behalten لا)
  * r-uvular: r مُصوَّتة: آخر الكلمة (‎-er / ‎-r = [ɐ]) أو في البوادئ ver-/er-/zer-/her- قبل ساكن — العربي يكررها [r]
+ * D191 (N-002): w-v: «w» مكتوبة + [v] منطوقة (wer · Wort · schwer — العربي يقرؤها [w]) · ie-short: «ie» مكتوبة
+ *   ولا [iː] منطوقة (vierzig · vierzehn — تقصّر خلافاً لقاعدة ie) · ng-velar: [ŋ] منطوقة (‎-ng · n قبل k: Onkel/danke)
+ *   — العربية بلا [ŋ] صوتاً مستقلاً فيُضاف [g]/[k] («لانغ»)
  */
 export function detectPhoneticRisks(de: string, rawIpa: string, _forms: string[] = []): PhoneticRisk[] {
   // espeak يُخرج ç مفككة (c+U+0327) — بلا NFC لا يُطابَق «ç» أبداً (كان ich-Laut لا يُكشف إطلاقاً — قياس D105)
@@ -88,6 +92,10 @@ export function detectPhoneticRisks(de: string, rawIpa: string, _forms: string[]
   if (lengthMark && ipa.includes("ː")) out.add("vowel-long-short");
   if (tokens.some((t) => /er$/.test(t) || (/r$/.test(t) && !/rr$/.test(t))) || /^(ver|zer|her|er)(?![aeiouäöü])/.test(lemma))
     out.add("r-uvular");
+  if (lemma.includes("w") && ipa.includes("v")) out.add("w-v");
+  // «ie» الثنائية فقط: لا «eie» (feiern = ei+e) ولا فصل المقطعين i‑e (Spanien/Familie = [ɪʲə] — انزلاق لا حركة قصيرة)
+  if (/(?<![aeo])ie/.test(lemma) && !ipa.includes("iː") && /[ɪi]/.test(ipa) && !/[ɪi]ʲ/.test(ipa)) out.add("ie-short");
+  if (ipa.includes("ŋ")) out.add("ng-velar");
   return [...out].sort();
 }
 
@@ -129,8 +137,9 @@ export function detectGrammarRisks(spec: {
 /** أخطار صوتية تستحق بطاقة سماع (§4): الحركات المدوَّرة/الطول/الاحتكاكيان/r المُصوَّتة */
 const AUDIO_WORTHY: readonly PhoneticRisk[] = ["umlaut-u", "umlaut-o", "ch-ich-laut", "ch-ach-laut", "vowel-long-short", "r-uvular"];
 
-export function cardTypesFor(spec: { wordClass: string; gender: string; chunk?: boolean; kollocation?: unknown }, risks: PhoneticRisk[]): CardType[] {
-  const out: CardType[] = ["production", "comprehension"];
+export function cardTypesFor(spec: { wordClass: string; gender: string; chunk?: boolean; kollocation?: unknown; receptive?: boolean }, risks: PhoneticRisk[]): CardType[] {
+  // D204: الكلمة الاستقبالية (تكملة SD1) تُفهم ولا تُنتَج — بطاقة فهم بلا إنتاج
+  const out: CardType[] = spec.receptive ? ["comprehension"] : ["production", "comprehension"];
   if (spec.gender !== "none") out.push("gender");
   if (risks.some((r) => AUDIO_WORTHY.includes(r))) out.push("audio");
   if (spec.chunk) out.push("chunk");
@@ -198,6 +207,9 @@ export function plausibleRisk(risk: PhoneticRisk, de: string, rawIpa: string): b
     case "double-consonant": return /(bb|dd|ff|gg|kk|ll|mm|nn|pp|rr|ss|tt|ck)/.test(lemma);
     case "vowel-long-short": return ipa.includes("ː");
     case "r-uvular": return lemma.includes("r");
+    case "w-v": return lemma.includes("w") && ipa.includes("v");
+    case "ie-short": return /(?<![aeo])ie/.test(lemma) && !ipa.includes("iː") && !/[ɪi]ʲ/.test(ipa);
+    case "ng-velar": return ipa.includes("ŋ");
     default: return true;
   }
 }

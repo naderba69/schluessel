@@ -3,7 +3,7 @@ import { describe, it, expect, beforeEach } from "vitest";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { AudioScript, AudioManifest, Modelltest, A1_LENGTH_SCALE, evidenceIn } from "../content/schemas/index.js";
+import { AudioScript, AudioManifest, Modelltest, A1_LENGTH_SCALE, evidenceIn, lineLengthScale } from "../content/schemas/index.js";
 import {
   ROLE_FOR_KIND, PRIORITY_FOR_KIND, expectedVoice, measuredWpm, buildTrack, planScript,
   checkScriptAgainstManifest, answerSupported, scriptTrackFile, type TrackLike,
@@ -16,7 +16,7 @@ const VOICES = {
   yusuf: VOICE_ID, mueller: VOICE_ID, lena: VOICE_ID_FEMALE, ayse: VOICE_ID_FEMALE,
   "frau-berg": VOICE_ID_FEMALE, thomas: VOICE_ID, "frau-schmidt": VOICE_ID_FEMALE, "dr-weber": VOICE_ID,
 };
-const dialog = (lines: { id: string; speaker: string; text: string }[], extra: Record<string, unknown> = {}) =>
+const dialog = (lines: { id: string; speaker: string; text: string; lengthScale?: number }[], extra: Record<string, unknown> = {}) =>
   AudioScript.parse({
     schemaVersion: "1.0.0", id: "t-dialog", kind: "dialogue", level: "A2", title: { de: "T", ar: "ت" },
     usedIn: ["a2-u1-d3"], lines, ...extra,
@@ -165,6 +165,21 @@ describe("D103 — مقسِّم الحوار على شجرة مؤقتة (مول�
     const r = runSplitter({ scriptFiles: [scriptFile()], contentRoot: root, generate: fake, lines: ["t-l1"] });
     expect(r.generated).toEqual(["t-l1", "t-l2"]); // t-l2 تغيّر نصه فيُعاد بالخطة العادية — لا يُترك قديماً
     expect(r.kept).toEqual([]);
+  });
+
+  it("D196: بادئة أسطر يملكها سكربت آخر ← رفض قبل أي توليد أو كتابة (كاد يستبدل ws-/wf- لدرسين قائمين)", () => {
+    runSplitter({ scriptFiles: [scriptFile()], contentRoot: root, generate: fake });
+    const before = readFileSync(join(root, MANIFEST_REL), "utf8");
+    const other = join(root, "audio-scripts/t-other.json");
+    writeFileSync(other, JSON.stringify({
+      schemaVersion: "1.0.0", id: "t-other", kind: "dialogue", level: "A2", title: { de: "O", ar: "أ" },
+      usedIn: ["a2-u1-d4"], lines: [{ id: "t-l1", speaker: "lena", text: "Moin!" }, { id: "t-l2", speaker: "thomas", text: "Servus!" }],
+    }));
+    calls = [];
+    expect(() => runSplitter({ scriptFiles: [other], contentRoot: root, generate: fake })).toThrow(/بادئة مكرّرة.*t-l1 ← audio\/scripts\/t-dialog\//u);
+    expect(calls).toEqual([]);
+    expect(readFileSync(join(root, MANIFEST_REL), "utf8")).toBe(before);
+    expect(readFileSync(join(root, "audio/scripts/t-dialog/t-l1.opus"), "utf8")).toBe("de_DE-kerstin-low:Hallo!"); // ملف الدرس الأول سليم
   });
 
   it("--dry-run لا يكتب شيئاً ولا يولّد", () => {

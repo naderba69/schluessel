@@ -6,16 +6,17 @@
   "day": 5,
   "kind": "integration",
   "ziel": {
-    "de": "Wiederholung Einheiten 9–10: Beruf und Termine — Perfekt und weil/deshalb.",
-    "ar": "مراجعة الوحدتين 9–10: المهن والمواعيد (الماضي + weil/deshalb)"
+    "de": "Woche neun und zehn noch einmal: Heute ist Freitag, der vierundzwanzigste April · Es regnet, es sind zwanzig Grad · Die Haltestelle ist gegenüber der Post · Ich steige am Bahnhof aus, ich muss nicht umsteigen · Gehen Sie geradeaus, biegen Sie rechts ab · Der Kurs war am siebzehnten April zu Ende · Wir haben Kuchen gegessen, ich habe fotografiert.",
+    "ar": "أسبوع المراجعة، اليوم الخامس (الجمعة 24 أبريل): الأسبوعان 9–10 من جديد — الطقس بـes (es regnet · es sind zwanzig Grad) · أماكن المدينة بـgegenüber/neben + داتيف · einsteigen/aussteigen/umsteigen · الأمر المهذب بـSie (Gehen Sie · biegen Sie ab · nehmen Sie) · التاريخ (der vierundzwanzigste · am siebzehnten) · الماضي بـhaben (gegessen · gehört · fotografiert · getanzt · eingekauft · telefoniert) — ثم معركة اليوم (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (die Haltestelle · das Wetter) من الأسبوعين نفسيهما."
   },
   "canDoDaily": [
-    "يعرّف بمهنته ويحكي ماضياً ويعطي سبباً"
+    "يصف الطقس ويسأل عنه ويشرح الطريق كما في الجزء الشفوي (Es regnet · es sind acht Grad · gegenüber der Post · Gehen Sie geradeaus · steigen Sie am Platz aus) ويفرّق der/die بعد gegenüber",
+    "يقول التاريخ بـder/am (der vierundzwanzigste · am siebzehnten) ويروي أمسه بـhaben والفعل في الآخر (Gestern habe ich eingekauft) ويجتاز معركة اليوم الخامس من أسبوع المراجعة بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
-      "arzt",
-      "termin",
+      "haltestelle",
+      "wetter",
       "gestern"
     ]
   },
@@ -23,14 +24,26 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "المراجعة التراكمية: أصلح الخطأ في الجملة"
+          "de": "«إنها تمطر» — تخمين فقط"
         },
         "choices": [
-          "التصحيح بالقلنسوة/القاعدة الصحيحة",
-          "تصحيح آخر خاطئ",
-          "تصحيح ثالث خاطئ"
+          "Es regnet.",
+          "Regnet.",
+          "Das regnet."
         ],
-        "answer": "التصحيح بالقلنسوة/القاعدة الصحيحة",
+        "answer": "Es regnet.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«البارحة تسوّقتُ» — تخمين فقط"
+        },
+        "choices": [
+          "Gestern habe ich eingekauft.",
+          "Gestern ich habe eingekauft.",
+          "Gestern habe ich einkaufen."
+        ],
+        "answer": "Gestern habe ich eingekauft.",
         "revealNextSession": true
       }
     ],
@@ -38,15 +51,19 @@
   },
   "praesentation": {
     "wordIds": [
-      "arzt",
-      "termin"
+      "haltestelle",
+      "wetter"
     ],
     "grammarArsenalIds": [
-      "ars-satzklammer",
-      "ars-perfekt"
+      "ars-stadt-ort",
+      "ars-weg-verkehr",
+      "ars-imperativ-sie",
+      "ars-wetter-es",
+      "ars-termin-datum",
+      "ars-perfekt-haben"
     ],
     "storySentenceIds": [
-      "story-a13-u13-s5"
+      "story-a1-u15-s5"
     ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
@@ -54,73 +71,292 @@
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أين تعمل؟»؟",
-            "a": "Wo arbeiten Sie?"
+            "q": "Wie ist das Wetter? — ___ regnet, und es ist kalt. (ضمير الطقس)",
+            "a": "Es",
+            "why": "الطقس دائماً بـes: es regnet · es ist kalt · es ist sonnig (u10-d1)."
           },
           {
-            "q": "«أمس اتصلتُ»؟",
-            "a": "Gestern habe ich angerufen."
+            "q": "Hier scheint die Sonne, und es ___ zwanzig Grad. (sein)",
+            "a": "sind",
+            "why": "الدرجات جمع: es sind zwanzig Grad — لا es ist."
+          },
+          {
+            "q": "Die Haltestelle ist gegenüber ___ Post. (die)",
+            "a": "der",
+            "why": "gegenüber + داتيف: die Post ⇐ der Post (u9-d1)."
+          },
+          {
+            "q": "Am Bahnhof steige ich ___. (aussteigen)",
+            "a": "aus",
+            "why": "الفعل المنفصل: aus في آخر الجملة (u9-d2)."
+          },
+          {
+            "q": "Ich muss nicht ___. (umsteigen)",
+            "a": "umsteigen",
+            "why": "بعد muss يأتي المصدر كاملاً غير منفصل في الآخر."
+          },
+          {
+            "q": "___ Sie geradeaus bis zur Kreuzung! (gehen: الأمر مع Sie)",
+            "a": "Gehen",
+            "why": "الأمر المهذب: الفعل أولاً ثم Sie (u9-d3)."
+          },
+          {
+            "q": "Dann biegen Sie rechts ___. (abbiegen)",
+            "a": "ab",
+            "why": "abbiegen منفصل: biegen Sie … ab."
+          },
+          {
+            "q": "Der Kurs war am ___ April zu Ende. (17.)",
+            "a": "siebzehnten",
+            "why": "بعد am النهاية ‑ten: am siebzehnten (u10-d2)."
+          },
+          {
+            "q": "Heute ist der ___ April. (24.)",
+            "a": "vierundzwanzigste",
+            "why": "بعد der النهاية ‑ste: der vierundzwanzigste."
+          },
+          {
+            "q": "Gestern habe ich zwei Stunden ___. (lernen)",
+            "a": "gelernt",
+            "why": "الماضي المنتظم: ge‑ + الجذع + ‑t، في آخر الجملة (u10-d3)."
           }
         ],
         "interleavedWith": [
-          "arbeiten",
-          "anrufen"
+          "wetter",
+          "sonne",
+          "grad",
+          "haltestelle",
+          "post",
+          "bahnhof",
+          "kreuzung",
+          "kurs",
+          "stunde"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«لأنني كنت مريضاً»؟",
-            "a": "…, weil ich krank war."
+            "audioId": "wn-2",
+            "speakText": "Hallo, Lena! Zuerst das Wetter: Hier scheint die Sonne, und es sind zwanzig Grad. Und bei dir?",
+            "q": "استمع: كيف الطقس عند يوسف؟",
+            "choices": [
+              "مشمس وعشرون درجة",
+              "ممطر وبارد",
+              "ثلج"
+            ],
+            "a": "مشمس وعشرون درجة",
+            "why": "scheint die Sonne = الشمس مشرقة · es sind zwanzig Grad = عشرون درجة."
           },
           {
-            "q": "«الموعد يوم الثلاثاء»؟",
-            "a": "Der Termin ist am Dienstag."
+            "audioId": "wn-4",
+            "speakText": "Die Haltestelle ist gegenüber der Post, in der Nähe vom Park. Da steige ich jeden Tag ein.",
+            "q": "استمع: أين الموقف؟",
+            "choices": [
+              "مقابل البريد",
+              "مقابل المتحف",
+              "عند الكنيسة"
+            ],
+            "a": "مقابل البريد",
+            "why": "gegenüber der Post = مقابل البريد · in der Nähe vom Park = قرب الحديقة."
+          },
+          {
+            "audioId": "wn-6",
+            "speakText": "Am Bahnhof steige ich aus. Ich muss nicht umsteigen — der Bus fährt bis zum Bahnhof.",
+            "q": "استمع: هل يغيّر يوسف الحافلة؟",
+            "choices": [
+              "لا، الحافلة تصل إلى المحطة",
+              "نعم، مرة واحدة",
+              "نعم، مرتين"
+            ],
+            "a": "لا، الحافلة تصل إلى المحطة",
+            "why": "Ich muss nicht umsteigen = لا أحتاج إلى التغيير · fährt bis zum Bahnhof."
+          },
+          {
+            "audioId": "wn-8",
+            "speakText": "Gehen Sie geradeaus bis zur Kreuzung. Dann biegen Sie rechts ab — das Museum ist neben der Kirche.",
+            "q": "استمع: أين المتحف؟",
+            "choices": [
+              "بجانب الكنيسة",
+              "مقابل البريد",
+              "عند المحطة"
+            ],
+            "a": "بجانب الكنيسة",
+            "why": "neben der Kirche = بجانب الكنيسة · geradeaus ثم rechts."
+          },
+          {
+            "audioId": "wn-10",
+            "speakText": "Nein, fünf Minuten zu Fuß. Oder nehmen Sie den Bus und steigen Sie am Platz aus!",
+            "q": "استمع: كم دقيقة مشياً؟",
+            "choices": [
+              "خمس",
+              "عشر",
+              "خمس عشرة"
+            ],
+            "a": "خمس",
+            "why": "fünf Minuten zu Fuß = خمس دقائق مشياً · steigen Sie am Platz aus (الأمر مع Sie)."
+          },
+          {
+            "audioId": "wn-12",
+            "speakText": "Am siebzehnten April — ein Freitag. Heute ist der vierundzwanzigste: eine Woche danach.",
+            "q": "استمع: متى انتهت الدورة؟",
+            "choices": [
+              "17 أبريل",
+              "24 أبريل",
+              "18 أبريل"
+            ],
+            "a": "17 أبريل",
+            "why": "am siebzehnten April = في 17 أبريل · اليوم der vierundzwanzigste = 24."
+          },
+          {
+            "audioId": "wn-16",
+            "speakText": "Wir haben Kuchen gegessen und Musik gehört. Ich habe fotografiert — und du hast getanzt!",
+            "q": "استمع: ماذا فعلت لينا في عيد ميلادها؟",
+            "choices": [
+              "رقصت",
+              "صوّرت",
+              "طبخت"
+            ],
+            "a": "رقصت",
+            "why": "du hast getanzt = أنتِ رقصتِ · ich habe fotografiert = أنا صوّرت."
+          },
+          {
+            "audioId": "wn-18",
+            "speakText": "Gestern habe ich eingekauft und zwei Stunden gelernt. Vorher habe ich mit meiner Oma telefoniert.",
+            "q": "استمع: ماذا فعل يوسف قبل التسوّق؟",
+            "choices": [
+              "هاتف جدّته",
+              "درس ساعتين",
+              "أكل كعكة"
+            ],
+            "a": "هاتف جدّته",
+            "why": "Vorher habe ich mit meiner Oma telefoniert = قبل ذلك هاتفتُ جدّتي."
           }
         ],
         "interleavedWith": [
-          "weil",
-          "dienstag"
+          "park",
+          "bus",
+          "museum",
+          "kirche",
+          "minute",
+          "platz",
+          "freitag",
+          "kuchen",
+          "musik",
+          "oma"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "error-hunt",
         "items": [
           {
-            "q": "«لذلك أنا متأخر»؟",
-            "a": "Deshalb bin ich spät."
+            "q": "صحّح: ~~Heute regnet.~~",
+            "a": "Heute regnet es.",
+            "why": "الطقس لا يستغني عن es."
           },
           {
-            "q": "«الدكتور/المهندس»؟",
-            "a": "der Arzt / der Ingenieur"
+            "q": "صحّح: ~~Die Haltestelle ist gegenüber die Post.~~",
+            "a": "Die Haltestelle ist gegenüber der Post.",
+            "why": "gegenüber + داتيف: der Post."
+          },
+          {
+            "q": "صحّح: ~~Ich aussteige am Bahnhof.~~",
+            "a": "Ich steige am Bahnhof aus.",
+            "why": "الفعل المنفصل ينقسم: steige ثانياً وaus في الآخر."
+          },
+          {
+            "q": "صحّح: ~~Sie gehen geradeaus bis zur Kreuzung!~~",
+            "a": "Gehen Sie geradeaus bis zur Kreuzung!",
+            "why": "الأمر المهذب يبدأ بالفعل: Gehen Sie."
+          },
+          {
+            "q": "صحّح: ~~Der Kurs war am siebzehnte April zu Ende.~~",
+            "a": "Der Kurs war am siebzehnten April zu Ende.",
+            "why": "بعد am النهاية ‑ten."
+          },
+          {
+            "q": "صحّح: ~~Ich habe mit meiner Oma getelefoniert.~~",
+            "a": "Ich habe mit meiner Oma telefoniert.",
+            "why": "أفعال ‑ieren بلا ge‑: telefoniert · fotografiert."
           }
         ],
         "interleavedWith": [
-          "deshalb",
-          "krank"
+          "post",
+          "bahnhof",
+          "kreuzung",
+          "kurs",
+          "oma"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wn-1",
+            "speakText": "Hallo, Yusuf! Heute ist Freitag, der vierundzwanzigste April. Woche neun und zehn: die Stadt und das Wetter!",
+            "a": "Hallo, Yusuf! Heute ist Freitag, der vierundzwanzigste April. Woche neun und zehn: die Stadt und das Wetter!",
+            "why": "der vierundzwanzigste (‑ste) · Freitag بـei · Wetter بـtt."
+          },
+          {
+            "audioId": "wn-5",
+            "speakText": "Gegenüber der Post — der, nicht die! Und wo steigst du aus? Musst du umsteigen?",
+            "a": "Gegenüber der Post — der, nicht die! Und wo steigst du aus? Musst du umsteigen?",
+            "why": "gegenüber بـü · steigst … aus منفصل · umsteigen مصدر كامل بعد musst."
+          },
+          {
+            "audioId": "wn-9",
+            "speakText": "Gehen Sie, biegen Sie ab — zuerst gehen, dann Sie! Ist das weit?",
+            "a": "Gehen Sie, biegen Sie ab — zuerst gehen, dann Sie! Ist das weit?",
+            "why": "Sie بحرف كبير دائماً · biegen … ab · weit بـei."
+          },
+          {
+            "audioId": "wn-11",
+            "speakText": "Super! Frage drei — das Datum: Wann war der Kurs zu Ende?",
+            "a": "Super! Frage drei — das Datum: Wann war der Kurs zu Ende?",
+            "why": "Datum بحرف كبير · war = الماضي من sein · zu Ende."
+          },
+          {
+            "audioId": "wn-13",
+            "speakText": "Der siebzehnte — am siebzehnten! Und mein Geburtstag?",
+            "a": "Der siebzehnte — am siebzehnten! Und mein Geburtstag?",
+            "why": "der siebzehnte (‑te) · am siebzehnten (‑ten) · Geburtstag بـts."
+          },
+          {
+            "audioId": "wn-19",
+            "speakText": "Eingekauft — lang, telefoniert — kurz! Und morgen? Wie ist das Wetter morgen?",
+            "a": "Eingekauft — lang, telefoniert — kurz! Und morgen? Wie ist das Wetter morgen?",
+            "why": "eingekauft (ge في الوسط) · telefoniert (بلا ge) · Wetter بحرف كبير."
+          }
+        ],
+        "interleavedWith": [
+          "freitag",
+          "stadt",
+          "datum",
+          "geburtstag",
+          "wetter"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die kumulative Wiederholung meistern",
-        "a": "x",
-        "ar": "إتقان المراجعة التراكمية"
+        "de": "Meine Stadt und mein Wetter: Heute ist Freitag, der vierundzwanzigste April. Es regnet, und es sind acht Grad. Die Haltestelle ist gegenüber der Post. Ich steige am Bahnhof aus, ich muss nicht umsteigen. Zum Museum? Gehen Sie geradeaus und biegen Sie rechts ab. Gestern habe ich eingekauft und mit meiner Oma telefoniert.",
+        "ar": "أن يصف طقسه ومدينته وأمسه كما في الجزء الشفوي: جملتا طقس بـes · مكان واحد بـgegenüber أو neben + داتيف · فعل منفصل واحد (steige … aus) · أمر مهذب واحد بـSie · تاريخ واحد بـder أو am · فعلان في الماضي بـhaben أحدهما بـ‑ieren بلا ge‑"
       },
       "situation": {
-        "de": "Mischung aus den Einheiten der Woche",
-        "a": "x",
-        "ar": "خليط من وحدات الأسبوع"
+        "de": "Das Ende der Woche: Freitag, der vierundzwanzigste April — Lena und Yusuf wiederholen Woche neun und zehn: die Stadt und das Wetter. Und jetzt du: Wie ist das Wetter, und wie komme ich zum Bahnhof?",
+        "ar": "أسبوع المراجعة: مساء الجمعة 24 أبريل — لينا ويوسف يعيدان الأسبوعين 9 و10: المدينة (gegenüber · ein-/aus-/umsteigen · الأمر مع Sie) والطقس والتاريخ والماضي بـhaben — ثم أنت: كيف الطقس وكيف أصل إلى المحطة"
       },
       "successCriteria": [
-        "جملة مهنة + جملة ماضٍ منفصل + جملة weil"
+        "يصف الطقس بـes صحيحاً (Es regnet · es sind acht Grad) ويسأل عنه (Wie ist das Wetter bei dir?)",
+        "يشرح طريقاً بأمر مهذب واحد على الأقل وبمكان بالداتيف (Gehen Sie geradeaus · gegenüber der Post · steigen Sie am Platz aus)",
+        "يقول تاريخاً بـder/am ويروي أمسه بـhaben والفعل الثالث في الآخر وبلا بادئة في telefoniert"
       ]
     }
   },
@@ -135,20 +371,59 @@
       {
         "items": [
           {
-            "q": "«أين تعمل؟»؟",
-            "a": "Wo arbeiten Sie?"
+            "q": "Wie ist das Wetter in Berlin? — Es ___ die Sonne. (scheinen)",
+            "a": "scheint",
+            "choices": [
+              "scheint",
+              "scheinen",
+              "scheine"
+            ],
+            "why": "die Sonne مفرد ⇐ scheint (u10-d1)."
           },
           {
-            "q": "«أمس اتصلتُ»؟",
-            "a": "Gestern habe ich angerufen."
+            "q": "Bei Lena regnet es, und es ist ___. (بارد)",
+            "a": "kalt",
+            "choices": [
+              "kalt",
+              "heiß",
+              "sonnig"
+            ],
+            "why": "es ist kalt = الجو بارد · heiß = حار · sonnig = مشمس."
           },
           {
-            "q": "«الموعد»؟",
-            "a": "der Termin"
+            "q": "Der Bus kommt um neun ___. (ankommen)",
+            "a": "an",
+            "why": "ankommen منفصل: kommt … an (u9-d2).",
+            "choices": [
+              "an",
+              "ab",
+              "aus"
+            ]
           },
           {
-            "q": "«يوم الثلاثاء»؟",
-            "a": "am Dienstag"
+            "q": "___ Sie den Bus! (nehmen: الأمر مع Sie)",
+            "a": "Nehmen",
+            "choices": [
+              "Nehmen",
+              "Nimm",
+              "Nehmt"
+            ],
+            "why": "الأمر المهذب: المصدر + Sie: Nehmen Sie (u9-d3)."
+          },
+          {
+            "q": "Der Geburtstag von Lena war am ___ April. (18.)",
+            "a": "achtzehnten",
+            "choices": [
+              "achtzehnten",
+              "achtzehnte",
+              "achtzehn"
+            ],
+            "why": "بعد am النهاية ‑ten: am achtzehnten (u10-d2)."
+          },
+          {
+            "q": "الترتيب: gegessen. / Wir / Kuchen / haben",
+            "a": "Wir haben Kuchen gegessen.",
+            "why": "haben ثانياً والفعل الثالث (gegessen) في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -156,20 +431,59 @@
       {
         "items": [
           {
-            "q": "«لأن» — الفعل أين؟",
-            "a": "weil + الفعل آخر (…, weil ich krank war)"
+            "q": "In der Schweiz ___ es heute. (regnen)",
+            "a": "regnet",
+            "choices": [
+              "regnet",
+              "regnen",
+              "regne"
+            ],
+            "why": "es + regnet: الطقس بالمفرد الغائب."
           },
           {
-            "q": "«لذلك»؟",
-            "a": "deshalb + فعل ثانٍ"
+            "q": "Die Post ist in der ___ vom Park. (قرب)",
+            "a": "Nähe",
+            "choices": [
+              "Nähe",
+              "Ecke",
+              "Stadt"
+            ],
+            "why": "in der Nähe von = قرب (u9-d1)."
           },
           {
-            "q": "«أنا مهندس»؟",
-            "a": "Ich bin Ingenieur."
+            "q": "Ich steige vor dem Haus ___. (einsteigen)",
+            "a": "ein",
+            "choices": [
+              "ein",
+              "aus",
+              "um"
+            ],
+            "why": "einsteigen = أركب · aussteigen = أنزل · umsteigen = أغيّر."
           },
           {
-            "q": "«المدرسة/الجامعة»؟",
-            "a": "die Schule / die Universität"
+            "q": "Entschuldigung, wie ___ ich zum Museum? (kommen: ich)",
+            "a": "komme",
+            "choices": [
+              "komme",
+              "kommen",
+              "kommt"
+            ],
+            "why": "السؤال عن الطريق: Wie komme ich zum …? (u9-d3)."
+          },
+          {
+            "q": "Morgen ist Samstag, der ___ April. (25.)",
+            "a": "fünfundzwanzigste",
+            "choices": [
+              "fünfundzwanzigste",
+              "fünfundzwanzigsten",
+              "fünfundzwanzig"
+            ],
+            "why": "der + ‑ste للتاريخ بعد ist."
+          },
+          {
+            "q": "«كيف الطقس عندك؟» — بالألمانية؟",
+            "a": "Wie ist das Wetter bei dir?",
+            "why": "السؤال عن الطقس بـWie ist das Wetter (u10-d1) · bei dir = عندك."
           }
         ],
         "passingScore": 0.75
@@ -177,20 +491,59 @@
       {
         "items": [
           {
-            "q": "«اتصل» — والماضي؟",
-            "a": "anrufen — hat angerufen (منفصل!)"
+            "q": "Vorgestern habe ich meine Oma ___. (besuchen)",
+            "a": "besucht",
+            "choices": [
+              "besucht",
+              "besuchen",
+              "besuche"
+            ],
+            "why": "be‑ لا تأخذ ge‑: besucht (u10-d3)."
           },
           {
-            "q": "«الثالث من يونيو»؟",
-            "a": "der dritte Juni"
+            "q": "Ich habe gestern ___. (einkaufen)",
+            "a": "eingekauft",
+            "choices": [
+              "eingekauft",
+              "einkaufen",
+              "kaufe ein"
+            ],
+            "why": "المنفصل في الماضي: ge في الوسط — eingekauft (u10-d4)."
           },
           {
-            "q": "«الساعة الثامنة صباحاً»؟",
-            "a": "acht Uhr morgens"
+            "q": "Das Museum ist ___ der Kirche. (بجانب)",
+            "a": "neben",
+            "choices": [
+              "neben",
+              "gegenüber",
+              "vor"
+            ],
+            "why": "neben = بجانب · gegenüber = مقابل · vor = أمام."
           },
           {
-            "q": "«مهم/عاجل»؟",
-            "a": "wichtig / dringend"
+            "q": "___ Sie am Platz aus! (aussteigen: الأمر مع Sie)",
+            "a": "Steigen",
+            "choices": [
+              "Steigen",
+              "Steig",
+              "Steigt"
+            ],
+            "why": "الأمر مع Sie: Steigen Sie … aus — البادئة في الآخر."
+          },
+          {
+            "q": "Der Kurs war am siebzehnten April zu Ende — das war ein ___. (يوم)",
+            "a": "Freitag",
+            "choices": [
+              "Freitag",
+              "Samstag",
+              "Montag"
+            ],
+            "why": "17 أبريل كان جمعة · 18 أبريل (عيد ميلاد لينا) سبت (u10-d2)."
+          },
+          {
+            "q": "«هل المتحف بعيد؟» — بالألمانية؟",
+            "a": "Ist das Museum weit?",
+            "why": "السؤال بـIst … weit? (u9-d2) · الجواب: Nein, fünf Minuten zu Fuß."
           }
         ],
         "passingScore": 0.75
@@ -199,79 +552,83 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einheiten 9–10: Beruf, Termin, Perfekt (anrufen), weil (Endstellung) und deshalb (V2).",
-      "ar": "الوحدتان 9–10: المهنة والموعد والماضي المنفصل وweil↔deshalb."
+      "de": "Woche neun und zehn noch einmal: Heute ist Freitag, der vierundzwanzigste April. Bei Yusuf scheint die Sonne, es sind zwanzig Grad — bei Lena regnet es. Die Haltestelle ist gegenüber der Post, Yusuf steigt am Bahnhof aus und muss nicht umsteigen. Zum Museum: Gehen Sie geradeaus, dann biegen Sie rechts ab. Der Kurs war am siebzehnten April zu Ende, der Geburtstag von Lena war am achtzehnten. Sie haben Kuchen gegessen und Musik gehört, Yusuf hat fotografiert, Lena hat getanzt. Gestern hat Yusuf eingekauft und mit seiner Oma telefoniert.",
+      "ar": "اليوم الخامس من أسبوع المراجعة اكتمل: تصف الطقس بـes، وتحدّد الأماكن بـgegenüber/neben + داتيف، وتفصل ein-/aus-/umsteigen، وتأمر بأدب بـSie، وتقول التاريخ بـder/am، وتروي الأمس بـhaben والفعل في الآخر."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~weil ich war krank~~ / ~~deshalb ich bin spät~~",
-          "ar": "weil ترسل الفعل · deshalt b تبدأ وتقفز"
+          "de": "~~Heute regnet.~~ · ~~Es ist zwanzig Grad.~~ · ~~Ist kalt.~~",
+          "ar": "الطقس بـes"
         },
-        "whyArabicSpeakerFails": "«لأنني كنت» فعل في النهاية (weil … war) · «لذلك أنا» فعل ثانٍ (deswegen bin) — الوحدة 10 كاملة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تقول «تمطر» و«الجو بارد» بلا ضمير فارغ، فيحذف المتعلم es — والألمانية لا تسمح بجملة بلا فاعل: Es regnet · Es ist kalt، والدرجات جمع: Es sind zwanzig Grad (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "…, weil ich krank war. · Deshalb bin ich spät.",
-          "ar": "… لأنني كنت مريضاً. · لذلك أنا متأخر."
+          "de": "Heute regnet es. · Es sind zwanzig Grad. · Es ist kalt.",
+          "ar": "اليوم تمطر · الحرارة عشرون درجة · الجو بارد"
         },
         "exercise": {
-          "q": "أكمل: …, weil ich müde ___ (bin — الترتيب)",
-          "a": "bin (آخر)"
+          "q": "أكمل: Morgen ___ die Sonne (scheinen), und es ___ dreißig Grad (sein).",
+          "a": "scheint / sind"
         }
       },
       {
         "commonError": {
-          "de": "~~Gestern habe angerufen ich~~ / ~~Gestern ich habe angerufen~~",
-          "ar": "الماضي: haben ثانٍ + المفعول + الفعل المنفصل آخر"
+          "de": "~~gegenüber die Post~~ · ~~Sie gehen geradeaus!~~ · ~~Ich aussteige am Bahnhof.~~",
+          "ar": "الداتيف بعد gegenüber · الأمر مع Sie · الفعل المنفصل"
         },
-        "whyArabicSpeakerFails": "«أمس اتصلت» ثلاث أجزاء: Gestern + habe + angerufen — القلنسوة بالماضي المنفصل (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«مقابل البريد» العربية لا تغيّر الاسم، فيترك المتعلم die — والألمانية تضع الداتيف بعد gegenüber/neben (der Post · der Kirche)؛ والأمر العربي صيغة خاصة فيترجمه المتعلم جملة خبرية (Sie gehen) — والألمانية تقدّم الفعل (Gehen Sie)؛ والفعل العربي لا ينقسم فيبقي aussteigen كتلة — والألمانية تفصل: steige … aus (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Gestern habe ich angerufen.",
-          "ar": "أمس اتصلتُ."
+          "de": "gegenüber der Post · Gehen Sie geradeaus! · Ich steige am Bahnhof aus.",
+          "ar": "مقابل البريد · امشِ مستقيماً (بأدب) · أنزل في المحطة"
         },
         "exercise": {
-          "q": "أكمل: Gestern ___ ich ___ (anrufen)",
-          "a": "habe … angerufen"
+          "q": "أكمل: Das Museum ist neben ___ Kirche (die). ___ Sie rechts ab (abbiegen)!",
+          "a": "der / Biegen"
         }
       },
       {
         "commonError": {
-          "de": "~~am Dienstag Termin ist~~ / ~~der Termin am Dienstag ist~~",
-          "ar": "الموعد + زمان المكان الأول: am Dienstag أولاً أو آخر — لا وسط"
+          "de": "~~Ich habe gestern gekauft ein.~~ · ~~Ich habe getelefoniert.~~ · ~~Gestern ich habe gelernt.~~",
+          "ar": "الماضي بـhaben"
         },
-        "whyArabicSpeakerFails": "«الموعد يوم الثلاثاء» ترتيب حر لكن الفعل ثانٍ دائماً — Der Termin ist am Dienstag (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الماضي العربي كلمة واحدة في أول الجملة («تسوّقتُ أمس»)، فيضع المتعلم الفعل الثالث مبكراً أو يترك habe بعد الفاعل بعد Gestern — والألمانية تجعل habe ثانياً دائماً والفعل الثالث في الآخر (Gestern habe ich eingekauft)، وأفعال ‑ieren بلا ge‑ (telefoniert · fotografiert) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Der Termin ist am Dienstag.",
-          "ar": "الموعد يوم الثلاثاء."
+          "de": "Ich habe gestern eingekauft. · Ich habe telefoniert. · Gestern habe ich gelernt.",
+          "ar": "تسوّقتُ أمس · هاتفتُ · أمس درستُ"
         },
         "exercise": {
-          "q": "أكمل: ___ ist am Dienstag.",
-          "a": "Der Termin"
+          "q": "رتّب: fotografiert / am Samstag / Ich / habe",
+          "a": "Ich habe am Samstag fotografiert."
         }
       }
     ],
     "srsBundleWordIds": [
-      "arzt",
-      "termin"
+      "haltestelle",
+      "wetter"
     ]
   },
   "gReferences": {
-    "duden": [
-      "https://www.duden.de/rechtschreibung/ueben"
+    "duden": [],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/%C3%BCben"
     ],
-    "wiktionary": [],
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-satzklammer",
-    "ars-perfekt"
+    "ars-stadt-ort",
+    "ars-weg-verkehr",
+    "ars-imperativ-sie",
+    "ars-wetter-es",
+    "ars-termin-datum",
+    "ars-perfekt-haben"
   ],
   "audioManifestRefs": [
-    "word-arzt",
-    "word-termin"
+    "word-haltestelle",
+    "word-wetter"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung)",
+    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung) — اليوم 5: الأسبوعان 9–10 — الجمعة 24 أبريل",
     "goetheWordListOverlap": []
   }
 }

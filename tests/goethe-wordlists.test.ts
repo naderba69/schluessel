@@ -204,6 +204,9 @@ describe("D110 — الجمع من علامة القائمة (الأساليب �
     const pair: WordlistEntry = { headword: "der Freund, -e, die Freundin, -nen", lemmas: ["Freund", "Freundin"], article: "der", page: 1, kind: "main" };
     expect(pluralsFor(pair, "Freund")).toEqual(["Freunde"]);
     expect(pluralsFor(pair, "Freundin")).toEqual([]);
+    // D208: اختصار إبدال الذيل لا يُقرأ بيقين («- männer» كانت تُنتج «Hausmannmänner»)
+    expect(pluralsFor(e("r Hausmann, - männer / e Hausfrau, -en", "Hausmann"), "Hausmann")).toEqual([]);
+    expect(pluralsFor(e("s Wörterbuch, -ücher", "Wörterbuch", "das"), "Wörterbuch")).toEqual([]);
   });
   it("D131: الصيغة في قوسين منفصلين كلمةٌ أخرى لا تُحمَّل علامة الأولى («Großmutter, ¨- (Oma)») — والقوس الملتصق جزء من الكلمة («(Fahr)Rad»)", () => {
     const oma: WordlistEntry = { headword: "Großmutter, ¨- (Oma)", lemmas: ["Großmutter", "Oma"], article: "die", page: 5, kind: "group" };
@@ -224,6 +227,14 @@ describe("D110 — الحارس الدائم على المحتوى الحقيق�
   it("كل goetheList في المحتوى = الدليل بالضبط (لا وسم بلا دليل ولا دليل بلا وسم)", () => {
     const bad = words.filter((w) => !sameLevels(w.goetheList, deriveGoetheList(w, IXS))).map((w) => w.id);
     expect(bad).toEqual([]);
+  });
+
+  it("N-026 (D219): جزء القطعة المغلق (أداة·حرف·ضمير) لا يحجب الدليل — بشرط جزء مُدرَج واحد: ein-bisschen وwas-fuer-ein صارتا A1+A2 · وachso بلا دليل (لا دليل من فراغ)", () => {
+    const byId = Object.fromEntries(words.map((w) => [w.id, w]));
+    expect(deriveGoetheList(byId["ein-bisschen"]!, IXS).sort()).toEqual(["A1", "A2"]);
+    expect(deriveGoetheList(byId["was-fuer-ein"]!, IXS).sort()).toEqual(["A1", "A2"]);
+    expect(deriveGoetheList(byId["achso"]!, IXS)).toEqual([]);
+    expect(evidenceFor(byId["ein-bisschen"]!, IXS).find((e) => e.level === "A2")!.kind).toBe("composed");
   });
 
   it("كلمات A2 كلها في قائمة A2 الرسمية · وجمعنا لا يخالف أي جمع مطبوع قابل للقراءة", () => {

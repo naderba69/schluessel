@@ -6,16 +6,17 @@
   "day": 6,
   "kind": "integration",
   "ziel": {
-    "de": "Die Einheit 9 zusammenfassen und die Wochen-Meisterschaft bestehen (≥75%): Stadt, Weg, Verkehr, Imperativ, Wechselpräpositionen, Satzklammer.",
-    "ar": "توليف الوحدة 9 واجتياز المعركة (75%+): المدينة والطريق والمواصلات والأمر وحروف الجر والقلنسوة"
+    "de": "Woche neun ist zu Ende: Das Haus ist gegenüber der Post · Die Apotheke ist zu, die Bank ist auf · Ich steige vor dem Haus ein und am Bahnhof aus · Gehen Sie über die Brücke, biegen Sie links ab! · Am Ufer (wo) — ans Ufer (wohin) · Morgen gehen wir um zehn zu Fuß ans Ufer.",
+    "ar": "توليف الأسبوع التاسع في تونس: gegenüber + der/dem · auf/zu · einsteigen/aussteigen/umsteigen والبادئة في الآخر · kommt … an · الأمر بـSie (Gehen Sie · biegen Sie ab · steigen Sie aus) · über die Brücke (wohin) مقابل vor der Brücke (wo) · am Ufer/ans Ufer · ترتيب wann · wie · wohin — ثم معركة الوحدة (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (gegenüber · umsteigen) تعودان من الأسبوع نفسه."
   },
   "canDoDaily": [
-    "يجتاز معركة الوحدة 9 بعتبة 0.75"
+    "يصف مكاناً في مدينته بـgegenüber + der/dem وauf/zu ويحكي رحلة بالحافلة بالأفعال المنفصلة (steige … ein · steige … aus · kommt … an)",
+    "يشرح الطريق لغريب بصيغة Sie (Gehen Sie geradeaus · Biegen Sie links ab) ويرتّب wann · wie · wohin ويجتاز معركة الوحدة 9 بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
-      "hauptbahnhof",
       "gegenueber",
+      "umsteigen",
       "abbiegen"
     ]
   },
@@ -23,14 +24,26 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "المعركة الأخيرة: «المتحف مقابل الكنيسة» — أكمل: gegenüber ___ (die Kirche)"
+          "de": "«البيت مقابل البريد» — تخمين فقط"
         },
         "choices": [
-          "der Kirche",
-          "die Kirche",
-          "den Kirche"
+          "Das Haus ist gegenüber der Post.",
+          "Das Haus ist gegenüber die Post.",
+          "Das Haus ist gegenüber den Post."
         ],
-        "answer": "der Kirche",
+        "answer": "Das Haus ist gegenüber der Post.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«انعطفوا يساراً!» (بصيغة Sie) — تخمين فقط"
+        },
+        "choices": [
+          "Biegen Sie links ab!",
+          "Abbiegen Sie links!",
+          "Sie biegen links ab."
+        ],
+        "answer": "Biegen Sie links ab!",
         "revealNextSession": true
       }
     ],
@@ -50,7 +63,7 @@
       "ars-tekamolo"
     ],
     "storySentenceIds": [
-      "story-a9-u9-s6"
+      "story-a1-u9-s6"
     ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
@@ -58,71 +71,290 @@
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«المتحف مقابل الكنيسة» (المصيدة!)؟",
-            "a": "Das Museum ist gegenüber der Kirche."
+            "q": "Das Haus ist gegenüber ___ Post. (die Post)",
+            "a": "der",
+            "why": "gegenüber يأخذ الداتيف دائماً: die Post ⇐ der Post · das Museum ⇐ dem Museum."
           },
           {
-            "q": "«عند المحطة أغيّر الحافلة» (القلنسوة!)؟",
-            "a": "Am Bahnhof steige ich in den Bus um."
+            "q": "Die Bank ist auf, die Apotheke ist heute ___. (مغلقة)",
+            "a": "zu",
+            "why": "zu = مغلق، auf = مفتوح — كلمتان قصيرتان بعد ist (u9-d4): Die Bank ist bis vier Uhr auf."
+          },
+          {
+            "q": "Ich steige vor dem Haus ___. (einsteigen)",
+            "a": "ein",
+            "why": "einsteigen منفصل: steige … ein — البادئة ein في آخر الجملة."
+          },
+          {
+            "q": "Am Bahnhof steige ich ___. (aussteigen)",
+            "a": "aus",
+            "why": "بعد Am Bahnhof يأتي الفعل ثانياً (steige) ثم ich، والبادئة aus في الآخر."
+          },
+          {
+            "q": "Der Bus kommt um neun ___. (ankommen)",
+            "a": "an",
+            "why": "ankommen منفصل: kommt … an. الوقت (um neun) قبل البادئة."
+          },
+          {
+            "q": "Entschuldigung, können Sie ___ helfen? (لي)",
+            "a": "mir",
+            "why": "helfen يأخذ الداتيف: mir / dir / Ihnen — لا ~~mich~~ (u9-d3)."
+          },
+          {
+            "q": "___ Sie zuerst geradeaus, danach links! (gehen)",
+            "a": "Gehen",
+            "why": "الأمر بـSie: الفعل أولاً بصيغة ‑en ثم Sie: Gehen Sie! · Nehmen Sie! · Biegen Sie ab!"
+          },
+          {
+            "q": "Gehen Sie über ___ Brücke! (die Brücke — wohin)",
+            "a": "die",
+            "why": "über مع حركة (wohin) ⇐ Akkusativ: über die Brücke. ومع المكان الثابت (wo): vor der Brücke."
+          },
+          {
+            "q": "Am Abend sitzen wir ___ Ufer. (wo)",
+            "a": "am",
+            "why": "sitzen = مكان ثابت ⇐ Wo? ⇐ an dem = am Ufer. ومع gehen: ans Ufer (an das)."
+          },
+          {
+            "q": "Morgen gehen wir ___ zehn zu Fuß ans Ufer. (الساعة)",
+            "a": "um",
+            "why": "الترتيب: wann (um zehn) · wie (zu Fuß) · wohin (ans Ufer) — الزمن أولاً بعد الفعل."
           }
         ],
         "interleavedWith": [
-          "gegenueber",
-          "umsteigen"
+          "post",
+          "apotheke",
+          "bank",
+          "haus",
+          "bahnhof",
+          "bruecke",
+          "ufer",
+          "helfen"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«انعطفوا يساراً من فضلكم!»؟",
-            "a": "Biegen Sie links ab, bitte!"
+            "audioId": "nz-2",
+            "speakText": "Ja, seit einer Stunde. Der Bus im Stau — du weißt es!",
+            "q": "استمع: منذ متى يوسف في البيت؟",
+            "choices": [
+              "منذ ساعة",
+              "منذ ساعتين",
+              "منذ دقيقتين"
+            ],
+            "a": "منذ ساعة",
+            "why": "seit einer Stunde = منذ ساعة (die Stunde ⇐ einer في الداتيف) · Stau = ازدحام (u9-d5)."
           },
           {
-            "q": "«الصورة على الجدار» ↔ «أعلّق الصورة على الجدار»؟",
-            "a": "an der Wand ↔ an die Wand"
+            "audioId": "nz-4",
+            "speakText": "Im Zentrum, gegenüber der Post — nicht «gegenüber die Post»! Und in der Nähe vom Park.",
+            "q": "استمع: أين بيت عائلة يوسف؟",
+            "choices": [
+              "في المركز مقابل البريد",
+              "في الشمال مقابل الجامعة",
+              "عند المحطة"
+            ],
+            "a": "في المركز مقابل البريد",
+            "why": "im Zentrum · gegenüber der Post (الداتيف) · in der Nähe vom Park = قرب الحديقة."
+          },
+          {
+            "audioId": "nz-6",
+            "speakText": "Nein, die Apotheke gegenüber ist heute zu. Aber die Bank an der Ecke ist bis vier Uhr auf.",
+            "q": "استمع: ما المفتوح اليوم؟",
+            "choices": [
+              "البنك حتى الرابعة",
+              "الصيدلية",
+              "لا شيء"
+            ],
+            "a": "البنك حتى الرابعة",
+            "why": "die Apotheke ist zu (مغلقة) · die Bank ist bis vier Uhr auf (مفتوحة حتى الرابعة)."
+          },
+          {
+            "audioId": "nz-8",
+            "speakText": "Ich steige vor dem Haus ein. Am Bahnhof steige ich aus — ich muss nicht umsteigen.",
+            "q": "استمع: هل يغيّر يوسف الحافلة؟",
+            "choices": [
+              "لا — لا يحتاج إلى التغيير",
+              "نعم، عند المحطة",
+              "نعم، أمام البيت"
+            ],
+            "a": "لا — لا يحتاج إلى التغيير",
+            "why": "ich muss nicht umsteigen — بعد muss يبقى umsteigen كلمة واحدة في الآخر. steige … ein / steige … aus منفصلان."
+          },
+          {
+            "audioId": "nz-10",
+            "speakText": "Genau. Der Bus kommt um neun an — aber heute nicht pünktlich! Stau an der Kreuzung vor der Brücke.",
+            "q": "استمع: أين الازدحام؟",
+            "choices": [
+              "عند التقاطع أمام الجسر",
+              "في النفق",
+              "عند الضفة"
+            ],
+            "a": "عند التقاطع أمام الجسر",
+            "why": "an der Kreuzung vor der Brücke — مكان ثابت (wo) ⇐ der/der. وkommt … an منفصل."
+          },
+          {
+            "audioId": "nz-12",
+            "speakText": "Gerne! Gehen Sie zuerst über die Brücke, danach geradeaus. Am Platz biegen Sie links ab — der Bahnhof ist gegenüber dem Museum.",
+            "q": "استمع: أين المحطة؟",
+            "choices": [
+              "مقابل المتحف",
+              "مقابل البريد",
+              "مقابل الكنيسة"
+            ],
+            "a": "مقابل المتحف",
+            "why": "gegenüber dem Museum (das ⇐ dem) · الطريق: über die Brücke · geradeaus · am Platz links ab."
+          },
+          {
+            "audioId": "nz-14",
+            "speakText": "Nein, nicht weit — zehn Minuten zu Fuß. Oder nehmen Sie den Bus und steigen Sie am Bahnhof aus!",
+            "q": "استمع: كم المسافة سيراً؟",
+            "choices": [
+              "عشر دقائق",
+              "عشرون دقيقة",
+              "دقيقتان"
+            ],
+            "a": "عشر دقائق",
+            "why": "zehn Minuten zu Fuß · nehmen Sie den Bus · steigen Sie … aus — الأمر بـSie مع فعل منفصل: البادئة في الآخر."
+          },
+          {
+            "audioId": "nz-16",
+            "speakText": "Am Abend sitzen wir am Ufer. Und morgen gehen wir um zehn zu Fuß ans Ufer.",
+            "q": "استمع: متى وكيف يذهبون إلى الضفة غداً؟",
+            "choices": [
+              "في العاشرة سيراً",
+              "في التاسعة بالحافلة",
+              "في العاشرة بالسيارة"
+            ],
+            "a": "في العاشرة سيراً",
+            "why": "um zehn (wann) · zu Fuß (wie) · ans Ufer (wohin) — وam Ufer للجلوس (wo)."
           }
         ],
         "interleavedWith": [
-          "abbiegen",
-          "an"
+          "stau",
+          "zentrum",
+          "park",
+          "ecke",
+          "kreuzung",
+          "museum",
+          "platz",
+          "weit"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "error-hunt",
         "items": [
           {
-            "q": "«غداً أسافر بالحافلة إلى المحطة» (TEKAMOLO)؟",
-            "a": "Morgen fahre ich mit dem Bus zum Hauptbahnhof."
+            "q": "صحّح: ~~Das Museum ist gegenüber die Kirche.~~",
+            "a": "Das Museum ist gegenüber der Kirche.",
+            "why": "gegenüber + الداتيف: die Kirche ⇐ der Kirche."
           },
           {
-            "q": "«أين المخرج؟ — هناك»؟",
-            "a": "Wo ist der Ausgang? — Dort."
+            "q": "صحّح: ~~Ich umsteige am Hauptbahnhof.~~",
+            "a": "Ich steige am Hauptbahnhof um.",
+            "why": "umsteigen منفصل: steige … um — البادئة في الآخر."
+          },
+          {
+            "q": "صحّح: ~~Helfen Sie mich, bitte!~~",
+            "a": "Helfen Sie mir, bitte!",
+            "why": "helfen + الداتيف: mir (لا mich)."
+          },
+          {
+            "q": "صحّح: ~~Biegen links Sie ab!~~",
+            "a": "Biegen Sie links ab!",
+            "why": "الأمر بـSie: الفعل ثم Sie مباشرة، والبادئة ab في الآخر."
+          },
+          {
+            "q": "صحّح: ~~Wir gehen über der Brücke.~~",
+            "a": "Wir gehen über die Brücke.",
+            "why": "gehen über = حركة (wohin) ⇐ Akkusativ: über die Brücke."
+          },
+          {
+            "q": "صحّح: ~~Morgen ich gehe um zehn zu Fuß ans Ufer.~~",
+            "a": "Morgen gehe ich um zehn zu Fuß ans Ufer.",
+            "why": "بعد Morgen الفعل ثانياً (gehe ich)، ثم wann (um zehn) · wie (zu Fuß) · wohin (ans Ufer)."
           }
         ],
         "interleavedWith": [
-          "ausgang",
-          "zuerst"
+          "museum",
+          "kirche",
+          "hauptbahnhof",
+          "bruecke",
+          "ufer"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "nz-1",
+            "speakText": "Hallo, Yusuf! Woche neun ist zu Ende. Bist du zu Hause in Tunis?",
+            "a": "Hallo, Yusuf! Woche neun ist zu Ende. Bist du zu Hause in Tunis?",
+            "why": "neun بـeu تُسمع «وي» · zu Hause كلمتان بحرف كبير في Hause · Tunis بـs واحدة."
+          },
+          {
+            "audioId": "nz-3",
+            "speakText": "Frage eins: Wo ist das Haus von deiner Familie?",
+            "a": "Frage eins: Wo ist das Haus von deiner Familie?",
+            "why": "von + الداتيف: deine Familie ⇐ von deiner Familie · Wo للمكان الثابت."
+          },
+          {
+            "audioId": "nz-7",
+            "speakText": "Frage zwei: Wie fährst du in die Stadt? Steigst du um?",
+            "a": "Frage zwei: Wie fährst du in die Stadt? Steigst du um?",
+            "why": "fährst بـä و‑st · in die Stadt (wohin ⇐ die) · Steigst du um? — البادئة um في الآخر حتى في السؤال."
+          },
+          {
+            "audioId": "nz-11",
+            "speakText": "Frage drei — mit Sie. Ich bin jetzt in Tunis: Entschuldigung, können Sie mir helfen? Ich suche den Bahnhof.",
+            "a": "Frage drei — mit Sie. Ich bin jetzt in Tunis: Entschuldigung, können Sie mir helfen? Ich suche den Bahnhof.",
+            "why": "Entschuldigung بـsch وng · können Sie mir helfen — mir لا mich · den Bahnhof مفعول مذكر."
+          },
+          {
+            "audioId": "nz-15",
+            "speakText": "Danke für die Hilfe! Jetzt du: Wo sitzt ihr am Abend? Und wohin geht ihr morgen?",
+            "a": "Danke für die Hilfe! Jetzt du: Wo sitzt ihr am Abend? Und wohin geht ihr morgen?",
+            "why": "Danke für + Akkusativ (die Hilfe) · sitzt/geht مع ihr بـ‑t · Wo للجلوس وWohin للذهاب."
+          },
+          {
+            "audioId": "nz-19",
+            "speakText": "Ja, jeden Tag um sieben mit dem Zug zur Schule. Und wann kommst du nach Berlin zurück?",
+            "a": "Ja, jeden Tag um sieben mit dem Zug zur Schule. Und wann kommst du nach Berlin zurück?",
+            "why": "jeden Tag (wann) · mit dem Zug (wie) · zur Schule (wohin) — وkommst … zurück: zurück في الآخر."
+          }
+        ],
+        "interleavedWith": [
+          "familie",
+          "stadt",
+          "entschuldigung",
+          "hilfe",
+          "schule",
+          "zurueck"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die Wochen-Meisterschaft: Weg + Verkehr + Höflichkeit + Kasus",
-        "ar": "معركة الأسبوع: الطريق + المواصلات + الأدب + الإعراب"
+        "de": "Meine Stadt: Die Apotheke ist gegenüber der Kirche. Ich steige am Platz ein und am Bahnhof aus. Gehen Sie geradeaus und biegen Sie links ab! Morgen fahre ich um acht mit dem Bus in die Stadt.",
+        "ar": "أن يصف مدينته لزميل ويشرح له الطريق: مكان بـgegenüber + der/dem وauf/zu · رحلة بـeinsteigen/aussteigen/umsteigen والبادئة في الآخر · ثلاث جمل أمر بـSie · وجملة واحدة بترتيب wann · wie · wohin"
       },
       "situation": {
-        "de": "Am Hauptbahnhof: nach der Auskunft fragen, den Weg bekommen, losfahren",
-        "ar": "عند المحطة المركزية: اسأل الاستعلامات، خذ الطريق، وانطلق"
+        "de": "Das Ende der Woche: Yusuf ist in Tunis und erklärt Stadt und Weg — und jetzt deine Stadt.",
+        "ar": "نهاية الأسبوع التاسع: يوسف في تونس يصف المدينة والطريق والحافلة ولينا تلعب دور الغريب الذي يسأل بـSie — ثم مدينتك أنت"
       },
       "successCriteria": [
-        "3 جمل طريق صحيحة (قلنسوة + TEKAMOLO) + أمران مؤدَّبان + جملتا مكان/حركة + نسبة ≥ 75%"
+        "يذكر مكانين بـgegenüber + der/dem وحالة auf/zu لأحدهما (Die Apotheke gegenüber der Kirche ist zu)",
+        "يحكي رحلة بثلاثة أفعال منفصلة في مكانها (Ich steige am Platz ein · Am Bahnhof steige ich aus · Der Bus kommt um neun an)",
+        "يشرح الطريق بجملتي أمر بـSie على الأقل (Gehen Sie geradeaus! · Biegen Sie links ab!) ويقول جملة بترتيب wann · wie · wohin"
       ]
     }
   },
@@ -137,20 +369,59 @@
       {
         "items": [
           {
-            "q": "«أين الصيدلية؟ — مقابل الكنيسة»؟",
-            "a": "Wo ist die Apotheke? — Gegenüber der Kirche."
+            "q": "Die Apotheke ist gegenüber ___ Kirche.",
+            "a": "der",
+            "choices": [
+              "der",
+              "die",
+              "den"
+            ],
+            "why": "gegenüber + الداتيف: die Kirche ⇐ der Kirche."
           },
           {
-            "q": "«إلى النفق» ↔ «في النفق»؟",
-            "a": "in den Tunnel ↔ im Tunnel"
+            "q": "Ich ___ am Hauptbahnhof um. (umsteigen)",
+            "a": "steige",
+            "choices": [
+              "steige",
+              "umsteige",
+              "steigt"
+            ],
+            "why": "ich steige … um — الجزء المصرَّف وحده ثانياً."
           },
           {
-            "q": "«خذوا الشارع الثاني!»؟",
-            "a": "Nehmen Sie die zweite Straße!"
+            "q": "Können Sie ___ helfen?",
+            "a": "mir",
+            "choices": [
+              "mir",
+              "mich",
+              "ich"
+            ],
+            "why": "helfen + الداتيف ⇐ mir."
           },
           {
-            "q": "«المحطة المركزية»؟",
-            "a": "der Hauptbahnhof"
+            "q": "___ Sie links ab!",
+            "a": "Biegen",
+            "choices": [
+              "Biegen",
+              "Abbiegen",
+              "Biegt"
+            ],
+            "why": "الأمر بـSie: Biegen Sie … ab! — البادئة منفصلة في الآخر."
+          },
+          {
+            "q": "Wir gehen über ___ Brücke. (wohin)",
+            "a": "die",
+            "choices": [
+              "die",
+              "der",
+              "dem"
+            ],
+            "why": "حركة ⇐ Akkusativ: über die Brücke."
+          },
+          {
+            "q": "الترتيب: an. / um neun / Der Bus / kommt",
+            "a": "Der Bus kommt um neun an.",
+            "why": "الفاعل ثم kommt ثم الوقت ثم البادئة an في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -158,20 +429,59 @@
       {
         "items": [
           {
-            "q": "«غيّر الحافلة عند المحطة» (القلنسوة)؟",
-            "a": "Am Bahnhof steige ich in den Bus um."
+            "q": "Das Museum ist gegenüber ___ Park. (der Park)",
+            "a": "dem",
+            "choices": [
+              "dem",
+              "den",
+              "der"
+            ],
+            "why": "gegenüber + الداتيف المذكر: dem Park."
           },
           {
-            "q": "«ساعدوني!» (helfen + Dativ)؟",
-            "a": "Helfen Sie mir!"
+            "q": "Die Bank ist bis vier Uhr ___. (مفتوحة)",
+            "a": "auf",
+            "choices": [
+              "auf",
+              "zu",
+              "an"
+            ],
+            "why": "auf = مفتوح · zu = مغلق."
           },
           {
-            "q": "«ذهاباً وإياباً»؟",
-            "a": "hin und zurück"
+            "q": "Am Bahnhof ___ ich aus.",
+            "a": "steige",
+            "choices": [
+              "steige",
+              "aussteige",
+              "steigen"
+            ],
+            "why": "بعد Am Bahnhof الفعل ثانياً: steige ich … aus."
           },
           {
-            "q": "«غداً بالحافلة إلى المحطة» (TEKAMOLO)؟",
-            "a": "Morgen fahre ich mit dem Bus zum Bahnhof."
+            "q": "___ Sie den Bus! (nehmen)",
+            "a": "Nehmen",
+            "choices": [
+              "Nehmen",
+              "Nimm",
+              "Nehmt"
+            ],
+            "why": "الأمر بـSie بصيغة ‑en: Nehmen Sie!"
+          },
+          {
+            "q": "Der Bus steht an der Kreuzung vor ___ Brücke. (wo)",
+            "a": "der",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "why": "steht = مكان ثابت ⇐ الداتيف: vor der Brücke."
+          },
+          {
+            "q": "الترتيب: ans Ufer. / zu Fuß / Morgen gehen wir / um zehn",
+            "a": "Morgen gehen wir um zehn zu Fuß ans Ufer.",
+            "why": "الترتيب: متى (um zehn) · كيف (zu Fuß) · إلى أين (ans Ufer)."
           }
         ],
         "passingScore": 0.75
@@ -179,20 +489,59 @@
       {
         "items": [
           {
-            "q": "«الصورة على الجدار» (مكان) ↔ «أعلّقها على الجدار» (حركة)؟",
-            "a": "an der Wand ↔ an die Wand"
+            "q": "Ich steige vor dem Haus ___. (einsteigen)",
+            "a": "ein",
+            "choices": [
+              "ein",
+              "aus",
+              "um"
+            ],
+            "why": "einsteigen = يركب: steige … ein."
           },
           {
-            "q": "«انعطفوا يساراً!» (أمر + منفصل)؟",
-            "a": "Biegen Sie links ab!"
+            "q": "Lena: Wo sitzt ihr am Abend? — Yusuf: ___ Ufer.",
+            "a": "am",
+            "choices": [
+              "am",
+              "ans",
+              "im"
+            ],
+            "why": "sitzen = ثابت ⇐ am Ufer (an dem)."
           },
           {
-            "q": "«في القرب» و«موقف السيارات»؟",
-            "a": "in der Nähe / der Parkplatz"
+            "q": "Gehen Sie zuerst geradeaus, ___ links!",
+            "a": "danach",
+            "choices": [
+              "danach",
+              "zuerst",
+              "sofort"
+            ],
+            "why": "zuerst … danach = أولاً … بعد ذلك (u9-d3)."
           },
           {
-            "q": "«القطار يغادر الساعة 8 بالموعد»؟",
-            "a": "Der Zug fährt um 8 Uhr pünktlich ab."
+            "q": "Der Bus kommt heute nicht ___ an. (في الوقت)",
+            "a": "pünktlich",
+            "choices": [
+              "pünktlich",
+              "weit",
+              "nah"
+            ],
+            "why": "pünktlich = في الوقت المحدد (u9-d5)."
+          },
+          {
+            "q": "Ich muss nicht ___. (umsteigen)",
+            "a": "umsteigen",
+            "choices": [
+              "umsteigen",
+              "steige um",
+              "um steigen"
+            ],
+            "why": "بعد muss يبقى الفعل المنفصل كلمة واحدة في الآخر."
+          },
+          {
+            "q": "«المحطة مقابل المتحف» — بالألمانية؟",
+            "a": "Der Bahnhof ist gegenüber dem Museum.",
+            "why": "gegenüber + الداتيف المحايد: dem Museum."
           }
         ],
         "passingScore": 0.75
@@ -201,53 +550,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einheit 9: Wo ist das Museum? — Gegenüber der Kirche! Biegen Sie links ab, steigen Sie um, und fahren Sie morgen mit dem Bus zum Hauptbahnhof — pünktlich!",
-      "ar": "الوحدة 9: أين المتحف؟ — مقابل الكنيسة! انعطفوا يساراً، غيّروا الحافلة، وسافروا غداً بالحافلة إلى المحطة المركزية — بالموعد!"
+      "de": "Woche neun ist zu Ende: Das Haus ist gegenüber der Post, die Apotheke ist zu, die Bank ist auf. Ich steige vor dem Haus ein und am Bahnhof aus — der Bus kommt um neun an. Gehen Sie über die Brücke und biegen Sie links ab! Am Abend sitzen wir am Ufer, morgen gehen wir um zehn zu Fuß ans Ufer.",
+      "ar": "الوحدة التاسعة اكتملت: تضع der/dem بعد gegenüber، وتقول auf/zu، وتفصل ein/aus/um/an إلى آخر الجملة، وتأمر بـSie (Gehen Sie · Biegen Sie ab)، وتفرّق über die (wohin) عن vor der (wo)، وترتّب wann · wie · wohin."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~gegenüber die Kirche~~ / ~~an die Wand hängt das Bild~~ (لمكان)",
-          "ar": "خريطة الوحدة: gegenüber+Dativ · Wo?→Dativ ↔ Wohin?→Akk"
+          "de": "~~gegenüber die Kirche~~ · ~~Wir gehen über der Brücke.~~ · ~~Wir sitzen ans Ufer.~~",
+          "ar": "الداتيف مع gegenüber · wo/wohin مع über وan"
         },
-        "whyArabicSpeakerFails": "«مقابل» و«على» لا تغيّران ما بعدهما بالعربية؛ الألماني يجرّ ويركّب: gegenüber **der** Kirche · hängt an **der** Wand ↔ an **die** Wand — مصيدتا الوحدة الأكبر (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«مقابل الكنيسة» و«فوق الجسر» و«على الضفة» لا تغيّر الاسم بالعربية، والألمانية تفرض الداتيف بعد gegenüber دائماً (der Kirche · dem Museum) وتفصل مع über/an/vor بين الحركة (wohin ⇐ die/den/das: über die Brücke · ans Ufer) والمكان الثابت (wo ⇐ der/dem: vor der Brücke · am Ufer) — وتجتمع الثلاثة في وصف طريق واحد (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "gegenüber der Kirche · an der Wand (Wo) · an die Wand (Wohin)",
-          "ar": "مقابل الكنيسة · على الجدار (مكان) · إلى الجدار (حركة)"
+          "de": "gegenüber der Kirche · Wir gehen über die Brücke. · Wir sitzen am Ufer.",
+          "ar": "مقابل الكنيسة · نعبر الجسر · نجلس على الضفة"
         },
         "exercise": {
-          "q": "أكمل: Das Museum ist gegenüber ___ (die) Kirche — Ich hänge das Bild an ___ (die) Wand.",
-          "a": "der / die"
+          "q": "أكمل: Die Post ist gegenüber ___ Bahnhof, und wir gehen ___ Ufer. (der Bahnhof · an das)",
+          "a": "dem / ans"
         }
       },
       {
         "commonError": {
-          "de": "~~Biegen links Sie ab!~~ / ~~Helfen Sie mich!~~",
-          "ar": "Imperativ Sie + المنفصل + helfen (Dativ)"
+          "de": "~~Ich umsteige am Hauptbahnhof.~~ · ~~Abbiegen Sie links!~~ · ~~Helfen Sie mich, bitte!~~",
+          "ar": "البادئة في غير مكانها · helfen + mich"
         },
-        "whyArabicSpeakerFails": "الأمر بالعربية بلا ضمير ظاهر؛ الألماني: **Biegen Sie** links **ab**! (فعل + Sie + بادئة آخر الجملة) و **Helfen Sie mir**! (داتيف) — ثلاث طبقات من الوحدة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الفعل العربي كلمة واحدة («أغيّر» · «انعطفوا» · «ساعدني»)، والألماني يفصل البادئة إلى آخر الجملة في الخبر والأمر معاً (steige … um · Biegen Sie … ab!) ويجعل مفعول helfen داتيفاً (mir/Ihnen) لأنه «أساعد لك» — فيلصق المتعلم البادئة ويضع mich (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Biegen Sie links ab! · Helfen Sie mir, bitte!",
-          "ar": "انعطفوا يساراً! · ساعدوني من فضلكم!"
+          "de": "Ich steige am Hauptbahnhof um. · Biegen Sie links ab! · Helfen Sie mir, bitte!",
+          "ar": "أغيّر في المحطة المركزية · انعطفوا يساراً · ساعدوني"
         },
         "exercise": {
-          "q": "أكمل: ___ Sie links ___ (abbiegen) und ___ Sie ___ (helfen, ich)!",
-          "a": "Biegen / ab / Helfen / mir"
+          "q": "أكمل: ___ Sie am Platz ___! (aussteigen)",
+          "a": "Steigen / aus"
         }
       },
       {
         "commonError": {
-          "de": "~~Morgen ich fahre mit dem Bus zum Bahnhof~~",
-          "ar": "Satzklammer + TEKAMOLO: فعل ثانٍ · Zeit→Art→Ort"
+          "de": "~~Morgen ich gehe ans Ufer.~~ · ~~Ich gehe ans Ufer um zehn zu Fuß.~~",
+          "ar": "الفعل ثانياً · wann قبل wie قبل wohin"
         },
-        "whyArabicSpeakerFails": "الجملة الكاملة تجمع كل القواعد: بعد morgen يقلب الترتيب (**fahre ich**) وتُرتَّب الظروف (Zeit→Art→Ort) والبادئة آخر شيء (fährt … ab) — قمة الوحدة 9 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تقدّم الفاعل بعد الظرف («غداً أنا أذهب») وتضع الزمان والكيفية حيث شاءت، والألمانية تثبّت الفعل في المكان الثاني مهما بدأت الجملة (Morgen gehe ich) وترتّب ما بعده: wann ثم wie ثم wohin (um zehn · zu Fuß · ans Ufer) — فيُعاد ترتيب كل جملة طويلة (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Morgen fahre ich mit dem Bus zum Bahnhof.",
-          "ar": "غداً أسافر بالحافلة إلى المحطة."
+          "de": "Morgen gehe ich um zehn zu Fuß ans Ufer. · Ich fahre jeden Tag um sieben mit dem Zug zur Schule.",
+          "ar": "غداً أذهب في العاشرة سيراً إلى الضفة · أذهب كل يوم في السابعة بالقطار إلى المدرسة"
         },
         "exercise": {
-          "q": "رتّب: (zum Hauptbahnhof) (morgen) (mit dem Bus) (fahre ich) →",
-          "a": "Morgen fahre ich mit dem Bus zum Hauptbahnhof."
+          "q": "رتّب: in die Stadt / heute / Ich fahre / mit dem Bus",
+          "a": "Ich fahre heute mit dem Bus in die Stadt."
         }
       }
     ],
@@ -258,7 +607,6 @@
   },
   "gReferences": {
     "duden": [
-      "https://www.duden.de/rechtschreibung/gegenueber",
       "https://www.duden.de/rechtschreibung/umsteigen"
     ],
     "wiktionary": [
@@ -280,7 +628,7 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Wochen-Meisterschaft",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 — توليف الوحدة 9: يوسف في تونس — المدينة والطريق والحافلة",
     "goetheWordListOverlap": []
   }
 }

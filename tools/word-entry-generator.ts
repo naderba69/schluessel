@@ -10,6 +10,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { z } from "zod";
 import { Word, WordClass, Level, AudioManifest } from "../content/schemas/index.js";
+import { UNIT_MAX } from "../content/schemas/common.js";
 import { VOICE_ID, WORD_CLIP_MAX_SEC } from "../src/lib/audio.js";
 import { SRS_TARGETS } from "./validate-content.js";
 import {
@@ -30,7 +31,8 @@ export const WordSpec = z.object({
   ar: z.array(z.string().min(1)).min(1),
   wordClass: WordClass,
   level: Level,
-  unit: z.number().int().min(1).max(12),
+  /** D204: 1–12 الخطة الأساسية · 13–14 تكملة SD1 للفهم (D113) — لا كلمة جديدة في 15 */
+  unit: z.number().int().min(1).max(UNIT_MAX),
   lesson: z.string().regex(/^[ab][12]-u\d+-d\d+$/),
   thema: z.string().min(1),
   sample: z.object({ de: z.string().min(1), ar: z.string().min(1) }),
@@ -45,6 +47,11 @@ export const WordSpec = z.object({
   grammarRisks: RiskList.optional(),
   phoneticRisks: PhonList.optional(),
   chunk: z.boolean().default(false),
+  /**
+   * D204: كلمة استقبالية (تكملة SD1 — الوحدتان 13–14، D113): بطاقة فهم بلا بطاقة إنتاج —
+   * المتعلم يفهمها في اللافتة/الإعلان/الاستمارة ولا يُطالَب بإنتاجها (قاعدة e-plan-receptive).
+   */
+  receptive: z.boolean().default(false),
   functionWord: z.boolean().default(false),
   wordFamily: z.array(z.string()).default([]),
   /**
@@ -104,7 +111,7 @@ export function planWord(spec: WordSpec, ipa: string): Planned {
     thema: spec.thema,
     isFunctionWord: isFunctionWord(spec.wordClass, spec.functionWord),
     usedInLessons: [spec.lesson],
-    srsCardTypes: cardTypesFor({ wordClass: spec.wordClass, gender, chunk: spec.chunk }, phoneticRisks),
+    srsCardTypes: cardTypesFor({ wordClass: spec.wordClass, gender, chunk: spec.chunk, receptive: spec.receptive }, phoneticRisks),
   };
   return { word: Word.parse(draft), ipa, clipText: clipText(spoken) };
 }

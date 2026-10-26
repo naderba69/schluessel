@@ -6,11 +6,12 @@
   "day": 2,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst deinen Schmerz beschreiben: Ich habe seit zwei Tagen Kopfschmerzen — und zum Arzt gehen.",
-    "ar": "تصف ألمك بجملة كاملة (seit + منذ) وتذهب إلى الطبيب"
+    "de": "Was fehlt dir? — Ich habe Fieber und Kopfschmerzen seit gestern. · Ich habe eine Erkältung, keine Grippe. · Du musst zur Ärztin. · Die Ärztin untersucht mich und gibt mir ein Rezept. · Nehmen Sie eine Tablette am Morgen!",
+    "ar": "تسأل «ما بك؟» بـfehlen والداتيف (Was fehlt dir? · Was fehlt Ihnen?) وتجيب بالمرض بـhaben (Fieber · Kopfschmerzen جمعاً · eine Erkältung · die Grippe · Schwindel) ومنذ متى بـseit، وتذهب zum Arzt / zur Ärztin فتفحصك (untersucht mich) وتعطيك وصفة (gibt mir ein Rezept) وتأخذ الدواء (Nehmen Sie eine Tablette!) — وfehlen أيضاً «يغيب»: Der Lehrer fehlt heute."
   },
   "canDoDaily": [
-    "يصف شكواه بجملتين (habe + seit-مدة) ويسأل الطبيب بجملة واحدة"
+    "يسأل Was fehlt dir/Ihnen? ويجيب بثلاث شكاوى صحيحة البناء (Ich habe Fieber. · Ich habe Kopfschmerzen. · Ich habe eine Erkältung.) مع seit + مدة واحدة (seit zwei Tagen).",
+    "يقول zum Arzt / zur Ärztin بالداتيف المدمج، ويصف الفحص والوصفة بالضميرين الصحيحين (untersucht mich · gibt mir ein Rezept) ويعطي أمراً بالدواء (Nehmen Sie eine Tablette! · Nimm deine Tabletten!)."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«عندي صداع» — أين يذهب الجمع في الألم؟"
+          "de": "«ما بك؟» — أي بناء؟ (تخمين فقط)"
         },
         "choices": [
-          "Ich habe Kopfschmerzen (جمع -en دائماً)",
-          "Ich habe Kopfschmerz",
-          "Ich habe der Kopfschmerz"
+          "Was fehlt dir?",
+          "Was fehlst du?",
+          "Was bist du?"
         ],
-        "answer": "Ich habe Kopfschmerzen (جمع -en دائماً)",
+        "answer": "Was fehlt dir?",
         "revealNextSession": true
       }
     ],
@@ -43,93 +44,638 @@
       "schmerz",
       "kopfschmerz",
       "fieber",
-      "erkaltung",
+      "erkaeltung",
       "grippe",
       "schwindel",
       "medikament",
       "tablette",
       "rezept",
-      "untersuchen"
+      "untersuchen",
+      "fehlen"
     ],
     "grammarArsenalIds": [
       "ars-gesundheit",
       "ars-dativ-fix"
     ],
     "storySentenceIds": [
-      "story-a11-u11-s2"
+      "story-a1-u11-s2"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "umlaut-a",
+      "z",
+      "vowel-long-short",
+      "ch-ich-laut"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«عندي صداع»؟",
-            "a": "Ich habe Kopfschmerzen."
+            "q": "Ich habe seit heute ___. (حمّى)",
+            "a": "Fieber",
+            "why": "das Fieber بلا أداة بعد habe — كـIch habe Zeit."
           },
           {
-            "q": "«عندي حمّى»؟",
-            "a": "Ich habe Fieber."
+            "q": "Ich habe ___. (صداع — جمع!)",
+            "a": "Kopfschmerzen",
+            "why": "الألم في الجمع دائماً: der Kopfschmerz → die Kopfschmerzen."
+          },
+          {
+            "q": "Ich habe eine ___. (نزلة برد)",
+            "a": "Erkältung",
+            "why": "die Erkältung أنثى ← eine · أومالوت ä."
+          },
+          {
+            "q": "Ich habe die ___. (الإنفلونزا)",
+            "a": "Grippe",
+            "why": "die Grippe بالأداة المعرّفة — pp مضاعفة."
+          },
+          {
+            "q": "Ich habe ein bisschen ___. (دوخة)",
+            "a": "Schwindel",
+            "why": "der Schwindel بلا أداة بعد habe — كـFieber."
+          },
+          {
+            "q": "Ich habe Fieber ___ gestern Abend. (منذ)",
+            "a": "seit",
+            "why": "seit = منذ (u8-d5) — والزمن بعده بالداتيف."
+          },
+          {
+            "q": "Ich habe seit drei ___ Fieber. (يوم — داتيف جمع)",
+            "a": "Tagen",
+            "why": "seit + داتيف جمع: Tage → Tagen (‑n)."
+          },
+          {
+            "q": "Was ___ dir? (fehlen — ما بك؟)",
+            "a": "fehlt",
+            "why": "fehlen → es/was fehlt — الفاعل was، وصاحب الشكوى بالداتيف."
+          },
+          {
+            "q": "Was fehlt ___? (أنت — داتيف)",
+            "a": "dir",
+            "why": "dir داتيف du — لا dich ولا du."
+          },
+          {
+            "q": "Guten Tag! Was fehlt ___? (حضرتكم — داتيف Sie)",
+            "a": "Ihnen",
+            "why": "Ihnen داتيف Sie بحرف كبير — سؤال الطبيب."
+          },
+          {
+            "q": "___ fehlt nichts. (أنا — داتيف)",
+            "a": "Mir",
+            "why": "Mir داتيف ich أولاً — كـMir tut der Kopf weh."
+          },
+          {
+            "q": "Der Lehrer ___ heute. (fehlen — يغيب)",
+            "a": "fehlt",
+            "why": "fehlen بلا داتيف = يغيب — er fehlt."
+          },
+          {
+            "q": "Morgen ___ ich in der Schule. (fehlen — ich)",
+            "a": "fehle",
+            "why": "ich fehle — نهاية ‑e · الفعل ثانياً بعد Morgen."
+          },
+          {
+            "q": "Hier fehlt ein ___. (الكلمة)",
+            "a": "Wort",
+            "why": "fehlen = ينقص — das Wort (u1-d5)."
+          },
+          {
+            "q": "Ich gehe heute ___ Arzt. (zu + dem)",
+            "a": "zum",
+            "why": "zu + dem = zum — der Arzt مذكر (ars-dativ-fix)."
+          },
+          {
+            "q": "Du musst ___ Ärztin. (zu + der)",
+            "a": "zur",
+            "why": "zu + der = zur — die Ärztin أنثى."
+          },
+          {
+            "q": "Die Ärztin untersucht ___. (أنا — أكوزاتيف)",
+            "a": "mich",
+            "why": "untersuchen + أكوزاتيف: mich (المفعول المباشر)."
+          },
+          {
+            "q": "Der Arzt gibt ___ ein Rezept. (أنا — داتيف)",
+            "a": "mir",
+            "why": "geben: لمن؟ mir بالداتيف · ماذا؟ ein Rezept."
+          },
+          {
+            "q": "Die Ärztin ___ mich. (untersuchen — sie)",
+            "a": "untersucht",
+            "why": "untersuchen → sie untersucht — غير منفصل (unter‑ ثابتة)."
+          },
+          {
+            "q": "Ich habe ein Rezept ___. (bekommen — الماضي المركّب)",
+            "a": "bekommen",
+            "why": "bekommen → hat bekommen بلا ge‑ (be‑ لا تأخذ ge‑)."
+          },
+          {
+            "q": "___ Sie eine Tablette! (nehmen — الأمر Sie)",
+            "a": "Nehmen",
+            "why": "الأمر Sie = المصدر + Sie (u9-d3)."
+          },
+          {
+            "q": "___ deine Tabletten! (nehmen — الأمر du)",
+            "a": "Nimm",
+            "why": "الأمر du من nehmen شاذّ: Nimm! (e → i)."
+          },
+          {
+            "q": "Eine Tablette ___ Morgen und eine am Abend. (an + dem)",
+            "a": "am",
+            "why": "am = an dem — am Morgen · am Abend (صباحاً · مساءً)."
+          },
+          {
+            "q": "Das Medikament ist ___ den Hals. (لـ)",
+            "a": "für",
+            "why": "für + أكوزاتيف: den Hals."
+          },
+          {
+            "q": "Meine Mutter holt das Medikament aus der ___. (الصيدلية)",
+            "a": "Apotheke",
+            "why": "die Apotheke (u9-d1) · aus + داتيف: aus der."
+          },
+          {
+            "q": "der Arzt → die ___ (الطبيبة)",
+            "a": "Ärztin",
+            "why": "‑in للأنثى مع أومالوت: Arzt → Ärztin."
+          },
+          {
+            "q": "ein Arzt, zwei ___ (الجمع)",
+            "a": "Ärzte",
+            "why": "أومالوت + e: der Arzt → die Ärzte."
+          },
+          {
+            "q": "eine Tablette, drei ___ (الجمع)",
+            "a": "Tabletten",
+            "why": "الجمع بـ‑n: die Tablette → die Tabletten."
+          },
+          {
+            "q": "Drei Tage im ___! (السرير)",
+            "a": "Bett",
+            "why": "das Bett (u6-d1) · im = in dem — السرير."
+          },
+          {
+            "q": "Hast du einen ___ bekommen? (الموعد)",
+            "a": "Termin",
+            "why": "der Termin (u3-d4) مذكر ← einen بالأكوزاتيف."
           }
         ],
         "interleavedWith": [
-          "kopfschmerz",
-          "fieber"
+          "seit",
+          "termin",
+          "apotheke",
+          "bett",
+          "lehrer",
+          "schule",
+          "mutter",
+          "wort",
+          "hals"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«يجب أن أذهب إلى الطبيب»؟",
-            "a": "Ich muss zum Arzt."
+            "audioId": "ka-1",
+            "speakText": "Hallo Lena! Heute Morgen hast du nicht geantwortet. Was fehlt dir?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "لماذا لم تردّ لينا صباحاً وما بها",
+              "أين تسكن لينا",
+              "متى تنام لينا"
+            ],
+            "a": "لماذا لم تردّ لينا صباحاً وما بها",
+            "why": "Heute Morgen hast du nicht geantwortet. Was fehlt dir? — fehlen بالداتيف."
           },
           {
-            "q": "«الطبيبة تفحصني»؟",
-            "a": "Die Ärztin untersucht mich."
+            "audioId": "ka-3",
+            "speakText": "Nicht gut! Hast du auch Schwindel?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل عندها دوخة أيضاً",
+              "هل عندها حمّى",
+              "هل تريد شاياً"
+            ],
+            "a": "هل عندها دوخة أيضاً",
+            "why": "Hast du auch Schwindel? — Schwindel = الدوخة."
+          },
+          {
+            "audioId": "ka-5",
+            "speakText": "Und? Hast du einen Termin bekommen?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل حصلت على موعد",
+              "هل حصلت على وصفة",
+              "هل ذهبت إلى المدرسة"
+            ],
+            "a": "هل حصلت على موعد",
+            "why": "Hast du einen Termin bekommen? — Termin من u3-d4."
+          },
+          {
+            "audioId": "ka-6",
+            "speakText": "Ja, heute um elf. Die Ärztin hat mich untersucht: Hals, Ohren, Bauch.",
+            "q": "استمع: متى الموعد وماذا فحصت الطبيبة؟",
+            "choices": [
+              "في الحادية عشرة — الحلق والأذنين والبطن",
+              "في التاسعة — الرأس",
+              "في الثانية — الساقين"
+            ],
+            "a": "في الحادية عشرة — الحلق والأذنين والبطن",
+            "why": "um elf · hat mich untersucht: Hals, Ohren, Bauch — أجزاء من أمس."
+          },
+          {
+            "audioId": "ka-7",
+            "speakText": "Was sagt sie? Ist es die Grippe?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "ماذا تقول الطبيبة — هل هي الإنفلونزا",
+              "أين الطبيبة",
+              "كم يكلّف الدواء"
+            ],
+            "a": "ماذا تقول الطبيبة — هل هي الإنفلونزا",
+            "why": "Was sagt sie? Ist es die Grippe? — الإنفلونزا بالأداة die."
+          },
+          {
+            "audioId": "ka-9",
+            "speakText": "Hast du ein Rezept bekommen?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل حصلت على وصفة",
+              "هل حصلت على موعد",
+              "هل أخذت حبة"
+            ],
+            "a": "هل حصلت على وصفة",
+            "why": "Hast du ein Rezept bekommen? — الوصفة das Rezept."
+          },
+          {
+            "audioId": "ka-10",
+            "speakText": "Ja. Sie hat mir ein Rezept gegeben: Tabletten für das Fieber und ein Medikament für den Hals.",
+            "q": "استمع: ماذا أعطتها الطبيبة؟",
+            "choices": [
+              "وصفة: حبوباً للحمّى ودواءً للحلق",
+              "حقنة",
+              "لا شيء"
+            ],
+            "a": "وصفة: حبوباً للحمّى ودواءً للحلق",
+            "why": "Sie hat mir ein Rezept gegeben: Tabletten für das Fieber und ein Medikament für den Hals. — الوصفة والدواء."
+          },
+          {
+            "audioId": "ka-11",
+            "speakText": "Nimmst du die Tabletten schon?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل تأخذ الحبوب بالفعل",
+              "هل تشرب الشاي",
+              "هل تنام"
+            ],
+            "a": "هل تأخذ الحبوب بالفعل",
+            "why": "Nimmst du die Tabletten schon? — nehmen: du nimmst (تغيّر e → i)."
+          },
+          {
+            "audioId": "ka-12",
+            "speakText": "Ja, eine Tablette am Morgen und eine am Abend, nach dem Essen. Meine Mutter holt das Medikament aus der Apotheke.",
+            "q": "استمع: متى تأخذ الحبة ومن يحضر الدواء؟",
+            "choices": [
+              "صباحاً ومساءً بعد الأكل — أمها من الصيدلية",
+              "ظهراً — أبوها من السوبرماركت",
+              "ليلاً — هي من الطبيبة"
+            ],
+            "a": "صباحاً ومساءً بعد الأكل — أمها من الصيدلية",
+            "why": "am Morgen und am Abend, nach dem Essen · Meine Mutter holt das Medikament aus der Apotheke. — الأم تحضر الدواء."
+          },
+          {
+            "audioId": "ka-13",
+            "speakText": "Und die Schule? Gehst du morgen?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل تذهب غداً إلى المدرسة",
+              "هل تذهب غداً إلى الطبيب",
+              "هل تلعب غداً"
+            ],
+            "a": "هل تذهب غداً إلى المدرسة",
+            "why": "Und die Schule? Gehst du morgen? — سؤال عن الغد."
+          },
+          {
+            "audioId": "ka-14",
+            "speakText": "Nein, morgen fehle ich in der Schule. Die Ärztin sagt: drei Tage im Bett.",
+            "q": "استمع: ماذا تقول لينا عن غد؟",
+            "choices": [
+              "تغيب عن المدرسة — ثلاثة أيام في السرير",
+              "تذهب إلى المدرسة",
+              "تذهب إلى الطبيبة مرة أخرى"
+            ],
+            "a": "تغيب عن المدرسة — ثلاثة أيام في السرير",
+            "why": "morgen fehle ich in der Schule · drei Tage im Bett — fehlen = يغيب."
+          },
+          {
+            "audioId": "ka-15",
+            "speakText": "Bei uns im Kurs fehlt heute der Lehrer. Er ist auch krank.",
+            "q": "استمع: من يغيب في دورة يوسف ولماذا؟",
+            "choices": [
+              "المعلّم — لأنه مريض أيضاً",
+              "يوسف — لأنه متعب",
+              "لا أحد"
+            ],
+            "a": "المعلّم — لأنه مريض أيضاً",
+            "why": "im Kurs fehlt heute der Lehrer. Er ist auch krank. — المعلّم غائب."
+          },
+          {
+            "audioId": "ka-16",
+            "speakText": "Und was macht ihr jetzt?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "ماذا يفعلون الآن بلا معلّم",
+              "أين الدورة",
+              "كم الساعة"
+            ],
+            "a": "ماذا يفعلون الآن بلا معلّم",
+            "why": "Und was macht ihr jetzt? — ihr للجمع المخاطب."
+          },
+          {
+            "audioId": "ka-17",
+            "speakText": "Eine Lehrerin kommt und wir lernen Wörter: der Arzt, die Ärztin, das Fieber, der Schmerz. Wie bei dir!",
+            "q": "استمع: من جاء وماذا تعلّموا؟",
+            "choices": [
+              "معلّمة — كلمات الطبيب والطبيبة والحمّى والألم",
+              "طبيب — الأرقام",
+              "لا أحد — عادوا إلى البيت"
+            ],
+            "a": "معلّمة — كلمات الطبيب والطبيبة والحمّى والألم",
+            "why": "Eine Lehrerin kommt · der Arzt, die Ärztin, das Fieber, der Schmerz — كلمات اليوم."
+          },
+          {
+            "audioId": "ka-18",
+            "speakText": "Also kann ich dir helfen: Ich habe alles — Kopfschmerzen, Fieber, Schwindel!",
+            "q": "استمع: لماذا تستطيع لينا أن تساعد؟",
+            "choices": [
+              "لأن عندها كل شيء: صداع وحمّى ودوخة",
+              "لأنها طبيبة",
+              "لأنها في المدرسة"
+            ],
+            "a": "لأن عندها كل شيء: صداع وحمّى ودوخة",
+            "why": "Ich habe alles — Kopfschmerzen, Fieber, Schwindel! — مزاح."
+          },
+          {
+            "audioId": "ka-19",
+            "speakText": "Du bist meine Ärztin! Trink viel Wasser und nimm deine Tabletten.",
+            "q": "استمع: ماذا يقول يوسف في الختام؟",
+            "choices": [
+              "أنت طبيبتي — اشربي ماء كثيراً وخذي حبوبك",
+              "نامي الآن",
+              "تعالي إلى تونس"
+            ],
+            "a": "أنت طبيبتي — اشربي ماء كثيراً وخذي حبوبك",
+            "why": "Trink viel Wasser und nimm deine Tabletten — أمران بصيغة du."
           }
         ],
         "interleavedWith": [
-          "arzt",
-          "untersuchen"
+          "termin",
+          "mutter",
+          "apotheke",
+          "bett",
+          "lehrer",
+          "lehrerin",
+          "kurs",
+          "schule",
+          "wasser",
+          "hals",
+          "ohr",
+          "bauch"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«الدواء للألم»؟",
-            "a": "Das Medikament ist für den Schmerz."
+            "tokens": [
+              "fehlt",
+              "heute?",
+              "Was",
+              "dir"
+            ],
+            "a": "Was fehlt dir heute?",
+            "why": "Was أولاً ← fehlt ثانياً ← dir بالداتيف ← heute."
           },
           {
-            "q": "«تناولوا حبة دواء!»؟",
-            "a": "Nehmen Sie eine Tablette!"
+            "tokens": [
+              "gestern",
+              "Abend",
+              "habe",
+              "Ich",
+              "Kopfschmerzen.",
+              "seit"
+            ],
+            "a": "Ich habe seit gestern Abend Kopfschmerzen.",
+            "why": "Ich habe ← seit gestern Abend ← Kopfschmerzen (الجمع) في الآخر."
+          },
+          {
+            "tokens": [
+              "Ärztin",
+              "hat",
+              "Die",
+              "mich",
+              "untersucht."
+            ],
+            "a": "Die Ärztin hat mich untersucht.",
+            "why": "Perfekt: hat ثانياً ← mich ← untersucht آخراً (بلا ge‑)."
+          },
+          {
+            "tokens": [
+              "Rezept",
+              "gegeben.",
+              "hat",
+              "Sie",
+              "mir",
+              "ein"
+            ],
+            "a": "Sie hat mir ein Rezept gegeben.",
+            "why": "hat ← mir (داتيف) ← ein Rezept (أكوزاتيف) ← gegeben آخراً."
+          },
+          {
+            "tokens": [
+              "zur",
+              "Ärztin.",
+              "Du",
+              "musst"
+            ],
+            "a": "Du musst zur Ärztin.",
+            "why": "musst ثانياً ← zur Ärztin — بلا gehen (كـIch muss zum Kurs)."
+          },
+          {
+            "tokens": [
+              "Sie",
+              "Tablette",
+              "Nehmen",
+              "am",
+              "Morgen!",
+              "eine"
+            ],
+            "a": "Nehmen Sie eine Tablette am Morgen!",
+            "why": "الأمر Sie: Nehmen Sie ← eine Tablette ← am Morgen."
+          },
+          {
+            "tokens": [
+              "Lehrer",
+              "Der",
+              "fehlt",
+              "heute."
+            ],
+            "a": "Der Lehrer fehlt heute.",
+            "why": "Der Lehrer فاعل ← fehlt ← heute — fehlen = يغيب."
+          },
+          {
+            "tokens": [
+              "Meine",
+              "Mutter",
+              "holt",
+              "der",
+              "Medikament",
+              "das",
+              "aus",
+              "Apotheke."
+            ],
+            "a": "Meine Mutter holt das Medikament aus der Apotheke.",
+            "why": "holt ثانياً ← das Medikament ← aus der Apotheke (aus + داتيف)."
+          },
+          {
+            "tokens": [
+              "Grippe.",
+              "Erkältung,",
+              "habe",
+              "Ich",
+              "keine",
+              "eine",
+              "aber"
+            ],
+            "a": "Ich habe eine Erkältung, aber keine Grippe.",
+            "why": "eine Erkältung ← فاصلة aber ← keine Grippe — kein لنفي الاسم."
+          },
+          {
+            "tokens": [
+              "Morgen",
+              "fehle",
+              "ich",
+              "der",
+              "Schule.",
+              "in"
+            ],
+            "a": "Morgen fehle ich in der Schule.",
+            "why": "Morgen أولاً ← fehle ثانياً ← ich ← in der Schule (داتيف)."
           }
         ],
         "interleavedWith": [
-          "medikament",
-          "tablette"
+          "lehrer",
+          "schule",
+          "apotheke",
+          "mutter",
+          "gestern"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "ka-2",
+            "speakText": "Ich habe Fieber, Yusuf — und Kopfschmerzen seit gestern Abend.",
+            "a": "Ich habe Fieber, Yusuf — und Kopfschmerzen seit gestern Abend.",
+            "why": "Fieber بـie طويلة · Yusuf اسم علم · Kopfschmerzen كلمة واحدة بحرف كبير · seit بـei."
+          },
+          {
+            "audioId": "ka-4",
+            "speakText": "Ja, ein bisschen. Meine Mutter sagt: Du musst zur Ärztin.",
+            "a": "Ja, ein bisschen. Meine Mutter sagt: Du musst zur Ärztin.",
+            "why": "bisschen بـss ثم ch · Mutter بـtt · zur كلمة واحدة · Ärztin بـÄ كبيرة بنقطتين."
+          },
+          {
+            "audioId": "ka-8",
+            "speakText": "Nein, keine Grippe. Nur eine Erkältung — aber mit Fieber.",
+            "a": "Nein, keine Grippe. Nur eine Erkältung — aber mit Fieber.",
+            "why": "keine Grippe بـpp · Erkältung بـä وung · Fieber بحرف كبير."
+          },
+          {
+            "audioId": "ka-20",
+            "speakText": "Ja, ja. Danke, Yusuf. Ich rufe dich morgen an!",
+            "a": "Ja, ja. Danke, Yusuf. Ich rufe dich morgen an!",
+            "why": "Danke, Yusuf بفاصلة · rufe … an — الجزء المنفصل an في الآخر."
+          },
+          {
+            "audioId": "word-fehlen",
+            "speakText": "fehlen.",
+            "a": "fehlen.",
+            "why": "fehlen — eh طويلة (h تطيل ولا تُنطق) · ‑en."
+          },
+          {
+            "audioId": "word-arzt",
+            "speakText": "der Arzt.",
+            "a": "der Arzt.",
+            "why": "der Arzt — z تُنطق ts · ثلاثة سواكن rzt."
+          },
+          {
+            "audioId": "word-aerztin",
+            "speakText": "die Ärztin.",
+            "a": "die Ärztin.",
+            "why": "die Ärztin — Ä بنقطتين · ‑in للأنثى."
+          },
+          {
+            "audioId": "word-fieber",
+            "speakText": "das Fieber.",
+            "a": "das Fieber.",
+            "why": "das Fieber — ie «إي» طويلة · b بين حركتين."
+          },
+          {
+            "audioId": "word-rezept",
+            "speakText": "das Rezept.",
+            "a": "das Rezept.",
+            "why": "das Rezept — z تُنطق ts · النبر على zept."
+          },
+          {
+            "audioId": "word-tablette",
+            "speakText": "die Tablette.",
+            "a": "die Tablette.",
+            "why": "die Tablette — tt مضاعفة · النبر على let."
+          },
+          {
+            "audioId": "word-grippe",
+            "speakText": "die Grippe.",
+            "a": "die Grippe.",
+            "why": "die Grippe — pp مضاعفة بعد i قصيرة."
+          },
+          {
+            "audioId": "word-schwindel",
+            "speakText": "der Schwindel.",
+            "a": "der Schwindel.",
+            "why": "der Schwindel — sch ثم w تُنطق v · ‑el."
+          }
+        ],
+        "interleavedWith": [
+          "mutter",
+          "gestern",
+          "morgen"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Dem Arzt die Beschwerden erklären",
-        "a": "x",
-        "ar": "شرح الشكوى للطبيب"
+        "de": "Was fehlt dir? — Ich habe Fieber und Kopfschmerzen. · Seit wann? — Seit gestern Abend. · Du musst zur Ärztin! — Ja, die Ärztin untersucht mich und gibt mir ein Rezept. · Nimm eine Tablette am Morgen und eine am Abend!",
+        "ar": "زميلك يسأل Was fehlt dir? وتجيب بشكويين (واحدة بالجمع Kopfschmerzen وواحدة بـeine/die) وبـseit — ثم ينصحك بالطبيب/الطبيبة (zum/zur) وتصف الفحص والوصفة والدواء — ثم تعكسان الأدوار"
       },
       "situation": {
-        "de": "Beim Arzt: seit wann? was tut weh?",
-        "ar": "عند الطبيب: منذ متى؟ وما المؤلم؟"
+        "de": "Am Handy, am Abend: Was fehlt dir? — Ich habe Fieber und Kopfschmerzen seit gestern. — Hast du einen Termin? — Ja, die Ärztin hat mich untersucht: eine Erkältung, keine Grippe. Sie hat mir ein Rezept gegeben. — Nimmst du die Tabletten? — Ja, eine am Morgen und eine am Abend.",
+        "ar": "مكالمة مسائية: زميلك مريض — تسأله ما به ومنذ متى وهل عنده موعد، وماذا قالت الطبيبة وماذا يأخذ من دواء"
       },
       "successCriteria": [
-        "جملتا شكوا (habe + منذ-mدة + ألم) + سؤال للطبيب + جملة دواء/وصفة"
+        "سؤال Was fehlt dir? أو Was fehlt Ihnen? وثلاث شكاوى بـIch habe … (Fieber بلا أداة · Kopfschmerzen جمعاً · eine Erkältung/die Grippe)",
+        "seit + مدة واحدة صحيحة (seit gestern · seit zwei Tagen) وzum Arzt أو zur Ärztin",
+        "الفحص والوصفة بالضميرين: untersucht mich · gibt mir ein Rezept",
+        "أمر دواء واحد: Nehmen Sie eine Tablette! أو Nimm deine Tabletten! — وfehlen بمعنى «يغيب» في جملة: Der Lehrer fehlt heute."
       ]
     }
   },
@@ -144,20 +690,64 @@
       {
         "items": [
           {
-            "q": "«الطبيب» والجمع؟",
-            "a": "der Arzt → die Ärzte"
+            "q": "«عندي صداع منذ يومين»؟",
+            "choices": [
+              "Ich habe seit zwei Tagen Kopfschmerzen.",
+              "Ich habe seit zwei Tage Kopfschmerz.",
+              "Ich habe Kopfschmerzen seit zwei Tag."
+            ],
+            "a": "Ich habe seit zwei Tagen Kopfschmerzen.",
+            "why": "seit + داتيف جمع Tagen · Kopfschmerzen جمعاً."
           },
           {
-            "q": "«عندي صداع»؟",
-            "a": "Ich habe Kopfschmerzen."
+            "q": "«لا شيء بي، أنا سليم»؟",
+            "choices": [
+              "Mir fehlt nichts, ich bin gesund.",
+              "Ich fehle nichts, ich bin gesund.",
+              "Mich fehlt nichts, ich bin gesund."
+            ],
+            "a": "Mir fehlt nichts, ich bin gesund.",
+            "why": "fehlen بالداتيف: Mir fehlt nichts."
           },
           {
-            "q": "«الطبيبة»؟",
-            "a": "die Ärztin"
+            "q": "«الطبيب يفحصك»؟",
+            "choices": [
+              "Der Arzt untersucht dich.",
+              "Der Arzt untersucht dir.",
+              "Der Arzt untersucht du."
+            ],
+            "a": "Der Arzt untersucht dich.",
+            "why": "untersuchen + أكوزاتيف: dich."
           },
           {
-            "q": "«حمّى»؟",
-            "a": "das Fieber"
+            "q": "«الطبيب» — والجمع؟",
+            "choices": [
+              "der Arzt, die Ärzte",
+              "der Arzt, die Arzte",
+              "die Arzt, die Ärzte"
+            ],
+            "a": "der Arzt, die Ärzte",
+            "why": "der Arzt مذكر · أومالوت + e."
+          },
+          {
+            "q": "«أذهب غداً إلى الطبيب»؟",
+            "choices": [
+              "Ich gehe morgen zum Arzt.",
+              "Ich gehe morgen zu Arzt.",
+              "Ich gehe morgen nach dem Arzt."
+            ],
+            "a": "Ich gehe morgen zum Arzt.",
+            "why": "zu + dem = zum — لا nach للأشخاص."
+          },
+          {
+            "q": "«اشربي ماء كثيراً!»؟",
+            "choices": [
+              "Trink viel Wasser!",
+              "Trinkst viel Wasser!",
+              "Trinken viel Wasser!"
+            ],
+            "a": "Trink viel Wasser!",
+            "why": "الأمر du: الجذع بلا ‑st: Trink!"
           }
         ],
         "passingScore": 0.75
@@ -165,20 +755,64 @@
       {
         "items": [
           {
-            "q": "«نزلة برد» و«الإنفلونزا»؟",
-            "a": "die Erkältung / die Grippe"
+            "q": "«عندي حمّى وصداع»؟",
+            "choices": [
+              "Ich habe Fieber und Kopfschmerzen.",
+              "Ich habe ein Fieber und Kopfschmerz.",
+              "Ich bin Fieber und Kopfschmerzen."
+            ],
+            "a": "Ich habe Fieber und Kopfschmerzen.",
+            "why": "habe + Fieber بلا أداة + Kopfschmerzen جمعاً."
           },
           {
-            "q": "«دوخة»؟",
-            "a": "der Schwindel"
+            "q": "«المعلّمة غائبة اليوم»؟",
+            "choices": [
+              "Die Lehrerin fehlt heute.",
+              "Die Lehrerin fehlt mir heute.",
+              "Die Lehrerin ist fehlt heute."
+            ],
+            "a": "Die Lehrerin fehlt heute.",
+            "why": "fehlen بلا داتيف = يغيب — بلا ist."
           },
           {
-            "q": "«وصفة (طبية)»؟",
-            "a": "das Rezept"
+            "q": "«نذهب إلى الطبيبة»؟",
+            "choices": [
+              "Wir gehen zur Ärztin.",
+              "Wir gehen zum Ärztin.",
+              "Wir gehen zu die Ärztin."
+            ],
+            "a": "Wir gehen zur Ärztin.",
+            "why": "zu + der = zur — die Ärztin أنثى."
           },
           {
-            "q": "«يفحص» — والماضي؟",
-            "a": "untersuchen — hat untersucht"
+            "q": "«الطبيبة تعطيني وصفة»؟",
+            "choices": [
+              "Die Ärztin gibt mir ein Rezept.",
+              "Die Ärztin gibt mich ein Rezept.",
+              "Die Ärztin gibt ich ein Rezept."
+            ],
+            "a": "Die Ärztin gibt mir ein Rezept.",
+            "why": "geben + داتيف mir."
+          },
+          {
+            "q": "«الحبة» — والجمع؟",
+            "choices": [
+              "die Tablette, die Tabletten",
+              "die Tablette, die Tablettes",
+              "das Tablette, die Tabletten"
+            ],
+            "a": "die Tablette, die Tabletten",
+            "why": "die Tablette أنثى · ‑n."
+          },
+          {
+            "q": "«عندي نزلة برد، لا إنفلونزا»؟",
+            "choices": [
+              "Ich habe eine Erkältung, keine Grippe.",
+              "Ich habe ein Erkältung, nicht Grippe.",
+              "Ich habe eine Erkältung, keine die Grippe."
+            ],
+            "a": "Ich habe eine Erkältung, keine Grippe.",
+            "why": "eine Erkältung · النفي بـkeine قبل الاسم."
           }
         ],
         "passingScore": 0.75
@@ -186,20 +820,64 @@
       {
         "items": [
           {
-            "q": "«عندي منذ يومين صداع»؟",
-            "a": "Ich habe seit zwei Tagen Kopfschmerzen."
+            "q": "«عندي دوخة منذ أمس»؟",
+            "choices": [
+              "Ich habe seit gestern Schwindel.",
+              "Ich habe seit gestern ein Schwindel.",
+              "Ich bin seit gestern Schwindel."
+            ],
+            "a": "Ich habe seit gestern Schwindel.",
+            "why": "habe + Schwindel بلا أداة · seit gestern."
           },
           {
-            "q": "«الدواء» و«الحبة»؟",
-            "a": "das Medikament / die Tablette"
+            "q": "«ماذا ينقص هنا؟»؟",
+            "choices": [
+              "Was fehlt hier?",
+              "Was fehlst hier?",
+              "Was fehlen hier?"
+            ],
+            "a": "Was fehlt hier?",
+            "why": "was مفرد ← fehlt."
           },
           {
-            "q": "«الألم شديد»؟",
-            "a": "Der Schmerz ist stark."
+            "q": "«يجب أن تذهبوا (Sie) إلى الطبيب»؟",
+            "choices": [
+              "Sie müssen zum Arzt.",
+              "Sie müssen zu Arzt.",
+              "Sie müssen zur Arzt."
+            ],
+            "a": "Sie müssen zum Arzt.",
+            "why": "zum للمذكر der Arzt · Sie müssen."
           },
           {
-            "q": "«يجب أن أذهب إلى الطبيب»؟",
-            "a": "Ich muss zum Arzt."
+            "q": "«الطبيبة فحصتني اليوم»؟",
+            "choices": [
+              "Die Ärztin hat mich heute untersucht.",
+              "Die Ärztin hat mich heute untersuchen.",
+              "Die Ärztin hat mir heute untersucht."
+            ],
+            "a": "Die Ärztin hat mich heute untersucht.",
+            "why": "untersucht بلا ge‑ · mich أكوزاتيف."
+          },
+          {
+            "q": "«الدواء للحمّى»؟",
+            "choices": [
+              "Das Medikament ist für das Fieber.",
+              "Das Medikament ist für dem Fieber.",
+              "Das Medikament ist zu das Fieber."
+            ],
+            "a": "Das Medikament ist für das Fieber.",
+            "why": "für + أكوزاتيف: das Fieber (محايد لا يتغيّر)."
+          },
+          {
+            "q": "«تناولوا حبة مساءً!»؟",
+            "choices": [
+              "Nehmen Sie eine Tablette am Abend!",
+              "Nehmen Sie ein Tablette am Abend!",
+              "Nimm Sie eine Tablette am Abend!"
+            ],
+            "a": "Nehmen Sie eine Tablette am Abend!",
+            "why": "الأمر Sie: Nehmen Sie · eine Tablette أنثى."
           }
         ],
         "passingScore": 0.75
@@ -208,53 +886,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Beim Arzt: Ich habe seit zwei Tagen Kopfschmerzen, Fieber und Schwindel. Die Ärztin untersucht mich und gibt mir ein Rezept: Nehmen Sie eine Tablette!",
-      "ar": "عند الطبيب: عندي منذ يومين صداع وحمّى ودوخة. الطبيبة تفحصني وتعطيني وصفة: تناولوا حبة دواء!"
+      "de": "Ich habe Fieber. · Ich habe Kopfschmerzen. · Ich habe eine Erkältung. · Ich habe die Grippe. · Ich habe Schwindel. · seit gestern · seit zwei Tagen — Was fehlt dir? · Was fehlt Ihnen? · Mir fehlt nichts. · Der Lehrer fehlt heute. — zum Arzt · zur Ärztin · Die Ärztin untersucht mich. · Der Arzt gibt mir ein Rezept. — Nehmen Sie eine Tablette! · Nimm deine Tabletten! · das Medikament aus der Apotheke",
+      "ar": "المرض بـhaben: Fieber وSchwindel بلا أداة · Kopfschmerzen جمعاً دائماً · eine Erkältung · die Grippe · ومنذ متى بـseit (+ داتيف) · fehlen بالداتيف = ما بك؟ (dir · Ihnen · mir) وبلا داتيف = يغيب/ينقص · zum Arzt / zur Ärztin (zu + داتيف) · untersucht mich (أكوزاتيف) · gibt mir ein Rezept (داتيف) · الأمر: Nehmen Sie! · Nimm! · das Rezept ← das Medikament ← die Tablette"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich habe Kopfschmerz~~ / ~~Ich habe der Schmerz~~",
-          "ar": "الألم بالأسماء: habe + جمع (Kopfschmerzen/Schmerzen) أو اسم جماعي (Fieber/Schwindel)"
+          "de": "~~Ich habe Kopfschmerz~~ · ~~Ich habe der Schmerz~~ · ~~Ich habe ein Fieber~~",
+          "ar": "الألم في الجمع دائماً (Kopfschmerzen) · Fieber وSchwindel بلا أداة · eine Erkältung · die Grippe"
         },
-        "whyArabicSpeakerFails": "«عندي صداع» مفرد بالعربية؛ الألماني يجمع الألم: Kopfschmerz**en** دائماً — أما Fieber/Schwindel فبلا جمع — التمييز بالحفظ (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«عندي صداع» مفرد بالعربية، فيقول المتعلم Kopfschmerz مفرداً أو يضيف أداة كما يضيفها لأي اسم. والألمانية تجمع الألم دائماً (die Kopfschmerzen — ‑en) وتترك Fieber وSchwindel بلا أداة كـZeit وHunger، بينما Erkältung تأخذ eine وGrippe تأخذ die — التمييز بالحفظ مع الكلمة — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich habe Kopfschmerzen. · Ich habe Fieber.",
-          "ar": "عندي صداع. · عندي حمّى."
+          "de": "Ich habe Kopfschmerzen. · Ich habe Fieber. · Ich habe eine Erkältung. · Ich habe die Grippe.",
+          "ar": "عندي صداع · عندي حمّى · عندي نزلة برد · عندي الإنفلونزا"
         },
         "exercise": {
-          "q": "أكمل: Ich habe ___ (der Kopfschmerz) und ___ (das Fieber).",
-          "a": "Kopfschmerzen / Fieber"
+          "q": "Ich habe ___. (der Kopfschmerz — في الجمع)",
+          "a": "Kopfschmerzen"
         }
       },
       {
         "commonError": {
-          "de": "~~seit zwei Tag~~ / ~~seit den zwei Tagen~~",
-          "ar": "seit + Dativ (منذ) — مراجعة u8-d5 في سياق الطبيب"
+          "de": "~~Was fehlst du?~~ · ~~Was fehlt dich?~~ · ~~Was bist du?~~",
+          "ar": "fehlen بالداتيف: Was fehlt dir? · Was fehlt Ihnen? · Mir fehlt nichts. — الفاعل was/nichts والفعل fehlt ثابت"
         },
-        "whyArabicSpeakerFails": "«منذ يومين» بالجمع وبلا حرف جر ظاهر؛ الألماني: seit **zwei Tagen** (Dativ جمع بلا مقال) — مصيدة seit تتكرر في أهم سياق عملي (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«ما بك؟» جملة اسمية بلا فعل، فينقلها المتعلم بـsein (~~Was bist du?~~) أو يظن المخاطب فاعلاً فيصرّف الفعل عليه (~~fehlst du~~) أو يجعله مفعولاً مباشراً (~~dich~~). والألمانية تجعل «ما» فاعلاً وfehlt ثابتاً، وصاحب الشكوى بالداتيف dir/Ihnen/mir — كـMir tut der Kopf weh. أمس — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "seit zwei Tagen · seit drei Wochen",
-          "ar": "منذ يومين · منذ ثلاثة أسابيع"
+          "de": "Was fehlt dir? · Was fehlt Ihnen? · Mir fehlt nichts.",
+          "ar": "ما بك؟ · ما بكم؟ (رسمي) · لا شيء بي"
         },
         "exercise": {
-          "q": "أكمل: seit ___ Tag (eins → Dativ جمع)",
-          "a": "einem Tag / Tagen"
+          "q": "Die Ärztin fragt: Was fehlt ___? (Sie — داتيف)",
+          "a": "Ihnen"
         }
       },
       {
         "commonError": {
-          "de": "~~die Arztin~~ / ~~der Ärztin~~ (العكس) / ~~die Arzt~~",
-          "ar": "الأنثى بلاحقة -in: der Arzt → die Ärztin (والجمع Ärztinnen)"
+          "de": "~~zu der Arzt~~ · ~~zu Arzt~~ · ~~nach dem Arzt~~ · ~~Der Arzt gibt mich ein Rezept.~~",
+          "ar": "zu + داتيف مدمج: zum Arzt · zur Ärztin — وgeben بالداتيف: gibt mir"
         },
-        "whyArabicSpeakerFails": "«الطبيبة» كلمة مستقلة بالعربية؛ الألماني يشتقها: Arzt + **in** = Ärztin (أنثى die) — اللاحقة تكسر الجذر أحياناً (Ärz-tin بالوملاوت) (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«إلى الطبيب» حرف + اسم بلا أداة وبلا حالة، فيترك المتعلم الأداة (~~zu Arzt~~) أو ينسى الدمج (~~zu der Arzt~~) أو ينقل nach من المدن إلى الأشخاص. والألمانية: zu للأشخاص والأماكن المحددة + داتيف مدمج (zum/zur)، وnach للمدن والبلدان وHause فقط (ars-dativ-fix). و«يعطيني» ← الضمير الملتصق يبدو مفعولاً مباشراً فيقول mich، والألمانية تعطي المُعطى له الداتيف mir — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "der Arzt · die Ärztin",
-          "ar": "الطبيب · الطبيبة"
+          "de": "Ich gehe zum Arzt. · Du musst zur Ärztin. · Der Arzt gibt mir ein Rezept.",
+          "ar": "أذهب إلى الطبيب · يجب أن تذهب إلى الطبيبة · الطبيب يعطيني وصفة"
         },
         "exercise": {
-          "q": "حوّل: der Lehrer → die ___",
-          "a": "Lehrerin"
+          "q": "Du musst ___ Arzt. (zu + dem)",
+          "a": "zum"
         }
       }
     ],
@@ -264,13 +942,14 @@
       "schmerz",
       "kopfschmerz",
       "fieber",
-      "erkaltung",
+      "erkaeltung",
       "grippe",
       "schwindel",
       "medikament",
       "tablette",
       "rezept",
-      "untersuchen"
+      "untersuchen",
+      "fehlen"
     ]
   },
   "gReferences": {
@@ -294,13 +973,14 @@
     "word-schmerz",
     "word-kopfschmerz",
     "word-fieber",
-    "word-erkaltung",
+    "word-erkaeltung",
     "word-grippe",
     "word-schwindel",
     "word-medikament",
     "word-tablette",
     "word-rezept",
-    "word-untersuchen"
+    "word-untersuchen",
+    "word-fehlen"
   ],
   "imageManifestRefs": [
     "img-arzt"

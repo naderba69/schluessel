@@ -6,31 +6,44 @@
   "day": 6,
   "kind": "integration",
   "ziel": {
-    "de": "Die Einheit zusammenfassen und die Wochen-Meisterschaft bestehen (≥75%).",
-    "ar": "تجميع مادة الأسبوع واجتياز معركة الوحدة (75% فأكثر)."
+    "de": "Die Woche ist zu Ende: Wer bist du? Woher kommst du? Wie alt bist du? Wie ist deine Telefonnummer? — Alles klar? Bis morgen!",
+    "ar": "توليف الأسبوع الأول: تعرّف بنفسك كاملاً (الاسم · الأصل · اللغات · العمر · رقم الهاتف) وتسأل غيرك — ثم معركة الوحدة (75% فأكثر). لا جديد إلا قطعتا الوداع: Alles klar? · Bis morgen!"
   },
   "canDoDaily": [
+    "يعرّف بنفسه في خمس جمل كاملة ويسأل زميله الأسئلة الخمسة نفسها (wer · woher · wie alt · wie ist deine Telefonnummer · wer ist …)",
     "يجتاز معركة الوحدة 1 بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
-      "hallo",
       "heissen",
-      "kommen"
+      "woher",
+      "alt"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«إلى الغد» بالألمانية؟ (التوليف — بلا جديد)"
+          "de": "«تمام؟» (هل فهمت؟) بالألمانية — تخمين فقط"
         },
         "choices": [
-          "bis morgen",
-          "bis Tag",
-          "bis gestern"
+          "Alles klar?",
+          "Alle klar?",
+          "Alles gut?"
         ],
-        "answer": "bis morgen",
+        "answer": "Alles klar?",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«إلى الغد!» بالألمانية — تخمين فقط"
+        },
+        "choices": [
+          "Bis morgen!",
+          "Bis Morgen!",
+          "Zu morgen!"
+        ],
+        "answer": "Bis morgen!",
         "revealNextSession": true
       }
     ],
@@ -42,10 +55,11 @@
       "bis-morgen"
     ],
     "grammarArsenalIds": [
-      "ars-unit1-review"
+      "ars-sein",
+      "ars-wer-woher"
     ],
     "storySentenceIds": [
-      "story-a1-u1-battle"
+      "story-a1-u1-s6"
     ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
@@ -53,72 +67,270 @@
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "توليف: قدّم نفسك في جملة واحدة كاملة.",
-            "a": "Ich heiße Yusuf und ich bin aus Tunesien."
+            "q": "Ich ___ Yusuf Haddad.",
+            "a": "heiße",
+            "why": "heißen مع ich: heiße (بلا ‑t). والاسم بعد الفعل مباشرة — «اسمي يوسف» جملة اسمية في العربية لكنها جملة فعلية في الألمانية."
           },
           {
-            "q": "«تمام!» بألمانية؟",
-            "a": "Alles klar!"
+            "q": "Wer ___ das? — Das ist Nabil.",
+            "a": "ist",
+            "why": "السؤال عن شخص بـwer، ولا سؤال بلا فعل: ist بعد كلمة السؤال مباشرة (العربية تسأل «مَن هذا؟» بلا فعل — الألمانية لا)."
+          },
+          {
+            "q": "___ kommst du? — Aus Tunesien.",
+            "a": "Woher",
+            "why": "الجواب بـaus ⇐ السؤال woher (من أين) كلمة واحدة بحرف كبير في أول الجملة — لا Aus wo."
+          },
+          {
+            "q": "Lena ___ sechzehn Jahre alt.",
+            "a": "ist",
+            "why": "العمر بفعل الكينونة sein: Lena ist … Jahre alt — لا hat. «عندها 16 سنة» بالعربية لكن الألمانية «هي 16 سنة قديمة»."
+          },
+          {
+            "q": "Wir ___ oft zusammen Deutsch.",
+            "a": "sprechen",
+            "why": "sprechen مع wir بصيغة المصدر نفسها: wir sprechen. واللغة بلا أداة: Deutsch لا das Deutsch."
+          },
+          {
+            "q": "Meine Telefonnummer ist null, eins, sieben, drei, neun, acht, ___. (2)",
+            "a": "zwei",
+            "why": "رقم الهاتف يُقرأ رقماً رقماً: … acht, zwei. وdie Telefonnummer مؤنثة ⇐ meine بـ‑e."
+          },
+          {
+            "q": "Wie ___ bist du? — Neunzehn.",
+            "a": "alt",
+            "why": "السؤال عن العمر: Wie alt bist du? — wie + alt ثم الفعل. والجواب بالعدد وحده يكفي في الكلام."
+          },
+          {
+            "q": "Das ___ ich nicht. (wissen)",
+            "a": "weiß",
+            "why": "wissen مع ich: weiß (بلا ‑e وبـß). لمعلومة نجهلها: Das weiß ich nicht — أما الشخص فنعرفه بـkennen: Ich kenne Nabil."
           }
         ],
         "interleavedWith": [
           "heissen",
           "kommen",
-          "sein"
+          "alt",
+          "sprechen",
+          "telefonnummer",
+          "wissen"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "توليف: عمر + هاتف في جملتين.",
-            "a": "Ich bin 15 Jahre alt. Meine Telefonnummer ist ..."
+            "audioId": "wm-3",
+            "speakText": "Alles klar. Frage eins: Wer bist du?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "مَن أنت؟",
+              "من أين أنت؟",
+              "كم عمرك؟"
+            ],
+            "a": "مَن أنت؟",
+            "why": "Wer bist du? = مَن أنت؟ — wer للشخص، والفعل bist مع du. وAlles klar هنا = «تمام، نبدأ»."
           },
           {
-            "q": "«إلى الغد»؟",
-            "a": "bis morgen"
+            "audioId": "wm-4",
+            "speakText": "Ich heiße Yusuf Haddad. Ich bin Student, und ich bin neu.",
+            "q": "استمع: ماذا يقول يوسف عن نفسه؟",
+            "choices": [
+              "هو طالب جامعي وجديد",
+              "هو تلميذ وليس جديداً",
+              "هو معلّم وجديد"
+            ],
+            "a": "هو طالب جامعي وجديد",
+            "why": "Student = طالب جامعي (Schüler = تلميذ مدرسة). وneu = جديد. لاحظ bin في كل جملة — لا جملة بلا فعل."
+          },
+          {
+            "audioId": "wm-6",
+            "speakText": "Aus Tunesien. Ich spreche Arabisch, Französisch und ein bisschen Deutsch.",
+            "q": "استمع: كم لغة يذكر يوسف؟",
+            "choices": [
+              "ثلاث لغات",
+              "لغتين",
+              "لغة واحدة"
+            ],
+            "a": "ثلاث لغات",
+            "why": "Arabisch · Französisch · Deutsch = ثلاث. وein bisschen Deutsch = قليل من الألمانية — التواضع المعتاد في الأسبوع الأول."
+          },
+          {
+            "audioId": "wm-8",
+            "speakText": "Ich bin neunzehn Jahre alt. Das ist nicht schwer!",
+            "q": "استمع: كم عمر يوسف؟",
+            "choices": [
+              "تسعة عشر",
+              "تسعون",
+              "تسعة"
+            ],
+            "a": "تسعة عشر",
+            "why": "neunzehn = 19 (neun + zehn). وIch bin … Jahre alt — العمر بـsein. وDas ist nicht schwer = هذا ليس صعباً."
+          },
+          {
+            "audioId": "wm-10",
+            "speakText": "Meine Nummer ist null, eins, sieben, drei, neun, acht, zwei.",
+            "q": "استمع: ما رقم يوسف؟",
+            "choices": [
+              "0173982",
+              "0137982",
+              "0173892"
+            ],
+            "a": "0173982",
+            "why": "null, eins, sieben, drei, neun, acht, zwei — رقماً رقماً. الفخ: drei/neun/acht متقاربة في الأذن؛ اسمع ثانية إن ترددت."
+          },
+          {
+            "audioId": "wm-14",
+            "speakText": "Nabil ist ein Freund aus Tunesien. Er ist Schüler, und wir sprechen oft zusammen Deutsch.",
+            "q": "استمع: مَن نبيل؟",
+            "choices": [
+              "صديق من تونس، تلميذ",
+              "صديق من ألمانيا، طالب جامعي",
+              "أخو يوسف"
+            ],
+            "a": "صديق من تونس، تلميذ",
+            "why": "ein Freund aus Tunesien · Schüler = تلميذ. وoft zusammen = كثيراً معاً."
+          },
+          {
+            "audioId": "wm-15",
+            "speakText": "Und wie alt ist er? Das weißt du nicht!",
+            "q": "استمع: ماذا تقول لينا؟",
+            "choices": [
+              "تسأل عن عمره وتقول إن يوسف لا يعرفه",
+              "تسأل عن اسمه",
+              "تقول إنها لا تعرف عمره"
+            ],
+            "a": "تسأل عن عمره وتقول إن يوسف لا يعرفه",
+            "why": "Wie alt ist er? = كم عمره؟ وDas weißt du nicht! = أنت لا تعرف ذلك (weißt مع du). صدى لحوار الأمس: Das weiß ich nicht."
+          },
+          {
+            "audioId": "wm-18",
+            "speakText": "Danke! Und jetzt du: Wie heißt du, woher kommst du, wie alt bist du?",
+            "q": "استمع: كم سؤالاً يطرح يوسف على لينا؟",
+            "choices": [
+              "ثلاثة",
+              "سؤالين",
+              "أربعة"
+            ],
+            "a": "ثلاثة",
+            "why": "Wie heißt du? · Woher kommst du? · Wie alt bist du? — الأسئلة الثلاثة الأساسية للأسبوع، وفي كلٍّ منها كلمة السؤال أولاً ثم الفعل ثم du."
           }
         ],
         "interleavedWith": [
-          "zahl",
-          "alt"
+          "student",
+          "neu",
+          "freund",
+          "schueler"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "error-hunt",
         "items": [
           {
-            "q": "توليف: سؤال + جواب كاملان.",
-            "a": "Woher kommen Sie? — Ich komme aus Tunesien."
+            "q": "صحّح: ~~Ich neunzehn Jahre alt.~~",
+            "a": "Ich bin neunzehn Jahre alt.",
+            "why": "لا جملة ألمانية بلا فعل: العربية تقول «أنا 19 سنة» بلا فعل، والألمانية تحتاج bin (sein) — أشهر خطأ في الأسبوع الأول."
           },
           {
-            "q": "من أين؟ + من؟ (أي أداة)؟",
-            "a": "woher + wer"
+            "q": "صحّح: ~~Ich komme von Tunesien.~~",
+            "a": "Ich komme aus Tunesien.",
+            "why": "بلد الأصل بعد kommen يأخذ aus دائماً. von = «من» شخص أو جهة، لا بلد المنشأ."
+          },
+          {
+            "q": "صحّح: ~~Wer das?~~",
+            "a": "Wer ist das?",
+            "why": "«مَن هذا؟» بلا فعل في العربية، لكن الألمانية تضع ist بعد كلمة السؤال: Wer ist das?"
+          },
+          {
+            "q": "صحّح: ~~Aus wo kommst du?~~",
+            "a": "Woher kommst du?",
+            "why": "«من أين» كلمتان في العربية وكلمة واحدة في الألمانية: woher. ولا aus قبلها في السؤال — aus تأتي في الجواب."
+          },
+          {
+            "q": "صحّح: ~~Du heiße Lena.~~",
+            "a": "Du heißt Lena.",
+            "why": "heißen مع du: heißt (بـ‑t). heiße لـich وحدها — التصريف يتغيّر مع الشخص كما يتغيّر «أنا أسمّى/أنت تُسمّى»."
+          },
+          {
+            "q": "صحّح: ~~Ich habe neunzehn Jahre.~~",
+            "a": "Ich bin neunzehn Jahre alt.",
+            "why": "العمر بـsein + Jahre alt، لا haben: «عندي 19 سنة» و j'ai 19 ans كلتاهما تخدعان. وalt في آخر الجملة لا تسقط."
           }
         ],
         "interleavedWith": [
-          "woher",
-          "wer"
+          "kommen",
+          "heissen",
+          "jahr"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wm-1",
+            "speakText": "Yusuf, die Woche ist zu Ende!",
+            "a": "Yusuf, die Woche ist zu Ende!",
+            "why": "die Woche (مؤنثة، حرف كبير) · zu Ende = انتهى (Ende اسم ⇐ حرف كبير). وفاصلة بعد النداء Yusuf."
+          },
+          {
+            "audioId": "wm-5",
+            "speakText": "Gut! Frage zwei: Woher kommst du?",
+            "a": "Gut! Frage zwei: Woher kommst du?",
+            "why": "Frage اسم بحرف كبير · Woher كلمة واحدة بحرف كبير بعد النقطتين · kommst مع du بـ‑st."
+          },
+          {
+            "audioId": "wm-9",
+            "speakText": "Frage vier: Wie ist deine Telefonnummer?",
+            "a": "Frage vier: Wie ist deine Telefonnummer?",
+            "why": "Telefonnummer كلمة واحدة طويلة بحرفَي n (Telefon + Nummer) — مؤنثة ⇐ deine بـ‑e."
+          },
+          {
+            "audioId": "wm-11",
+            "speakText": "Wie bitte? Bitte langsam!",
+            "a": "Wie bitte? Bitte langsam!",
+            "why": "Wie bitte? = «عفواً، ماذا؟» · bitte صغيرة في وسط الجملة وكبيرة في أولها (Bitte langsam!) — القاعدة: أول كلمة في الجملة كبيرة دائماً."
+          },
+          {
+            "audioId": "wm-16",
+            "speakText": "Doch, jetzt weiß ich das: Er ist sechzehn.",
+            "a": "Doch, jetzt weiß ich das: Er ist sechzehn.",
+            "why": "weiß بـß بعد الحركة الطويلة ei · sechzehn = 16 (sechs تفقد s قبل zehn). وDoch = «بلى» رداً على نفي."
+          },
+          {
+            "audioId": "wm-20",
+            "speakText": "Tschüss, Lena! Bis morgen!",
+            "a": "Tschüss, Lena! Bis morgen!",
+            "why": "Tschüss بـü وss · bis morgen: morgen (غداً) بحرف صغير — أما der Morgen (الصباح) فبحرف كبير: Guten Morgen!"
+          }
+        ],
+        "interleavedWith": [
+          "woche",
+          "frage",
+          "telefonnummer",
+          "langsam"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die Woche in einem Dialog anwenden",
-        "ar": "تطبيق مادة الأسبوع في حوار"
+        "de": "Sechs Fragen, sechs Antworten: Wer bist du? Woher kommst du? Wie alt bist du? Wie ist deine Telefonnummer? Wer ist dein Freund? — Alles klar? Bis morgen!",
+        "ar": "أن يلعب «ستة أسئلة وستة أجوبة» مع زميل: يسأل الأسئلة الخمسة ويجيب عنها كاملة"
       },
       "situation": {
-        "de": "Das Abschlussgespräch der ersten Woche",
-        "ar": "الحوار الختامي للأسبوع الأول"
+        "de": "Das Ende der Woche im Kurs: Die Partner wiederholen zusammen.",
+        "ar": "نهاية الأسبوع الأول في الدورة: الشريكان يراجعان معاً كما فعلت لينا ويوسف"
       },
       "successCriteria": [
-        "يستخدم 4 هياكل مختلفة من الأسبوع في حوار واحد (توليف — لا تكرار آلي)"
+        "يجيب عن الأسئلة الخمسة بجمل كاملة فيها فعل: Ich heiße … · Ich komme aus … · Ich spreche … · Ich bin … Jahre alt · Meine Telefonnummer ist …",
+        "يسأل الأسئلة نفسها بكلمة السؤال أولاً ثم الفعل: Wer bist du? · Woher kommst du? · Wie alt bist du? — لا Aus wo ولا Wer du",
+        "يطلب الإعادة ببطء حين لا يفهم (Wie bitte? Bitte langsam!) ويؤكد بـAlles klar! ويودّع بـBis morgen!"
       ]
     }
   },
@@ -133,24 +345,54 @@
       {
         "items": [
           {
-            "q": "المعركة (قصة): يوسف قدم نفسه — ما قاله؟",
+            "q": "«تمام؟» (هل فهمت؟) — بالألمانية؟",
+            "a": "Alles klar?",
             "choices": [
-              "Ich heiße Yusuf und bin aus Tunesien.",
-              "Ich bin Yusuf von Tunesien."
+              "Alles klar?",
+              "Alle klar?",
+              "Alles gut?"
             ],
-            "a": "Ich heiße Yusuf und bin aus Tunesien."
+            "why": "alles (كل شيء) + klar (واضح) = «كل شيء واضح؟». alle = الجميع (أشخاص)."
           },
           {
-            "q": "المعركة (قصة): كم عمر يوسف في القصة؟ (15)",
-            "a": "Ich bin 15 Jahre alt."
+            "q": "Nabil ___ Schüler.",
+            "a": "ist",
+            "choices": [
+              "ist",
+              "bin",
+              "bist"
+            ],
+            "why": "نبيل = er ⇐ ist. bin لـich وbist لـdu."
           },
           {
-            "q": "توليف: سؤال عن الأصل؟",
-            "a": "Woher kommen Sie?"
+            "q": "Woher kommt Lena? — ___ Deutschland.",
+            "a": "Aus",
+            "choices": [
+              "Aus",
+              "Von",
+              "In"
+            ],
+            "why": "بلد الأصل بعد kommen: aus. in للمكان الذي يسكن فيه المرء، وليس للأصل."
           },
           {
-            "q": "«إلى الغد»؟",
-            "a": "bis morgen"
+            "q": "Wie alt ist Lena? — Sie ist ___.",
+            "a": "sechzehn",
+            "choices": [
+              "sechzehn",
+              "sechs",
+              "zehn"
+            ],
+            "why": "16 = sechzehn: sechs تفقد s قبل zehn. sechs وحدها = 6 وzehn = 10."
+          },
+          {
+            "q": "الترتيب: du / Wie / heißt",
+            "a": "Wie heißt du?",
+            "why": "كلمة السؤال أولاً، ثم الفعل heißt، ثم du."
+          },
+          {
+            "q": "«إلى الغد!» — بالألمانية؟",
+            "a": "Bis morgen!",
+            "why": "bis + morgen (غداً، بحرف صغير). Guten Morgen بحرف كبير = صباح الخير."
           }
         ],
         "passingScore": 0.75
@@ -158,20 +400,54 @@
       {
         "items": [
           {
-            "q": "المعركة (قصة): أي لغة يتحدث يوسف؟",
-            "a": "Ich spreche Arabisch."
+            "q": "«إلى الغد!» — ماذا يقول يوسف في آخر الحوار؟",
+            "a": "Bis morgen!",
+            "choices": [
+              "Bis morgen!",
+              "Guten Morgen!",
+              "Bis Ende!"
+            ],
+            "why": "Bis morgen! = إلى الغد. Guten Morgen! = صباح الخير (تحية الصباح)."
           },
           {
-            "q": "المعركة (قصة): أين يسكن؟",
-            "a": "Ich wohne in Tunesien."
+            "q": "Ich ___ aus Tunesien.",
+            "a": "komme",
+            "choices": [
+              "komme",
+              "kommst",
+              "kommen"
+            ],
+            "why": "kommen مع ich: komme. kommst لـdu وkommen لـwir/Sie."
           },
           {
-            "q": "توليف: الملكية مع die Nummer؟",
-            "a": "Meine Nummer"
+            "q": "Wie alt ___ du?",
+            "a": "bist",
+            "choices": [
+              "bist",
+              "ist",
+              "hast"
+            ],
+            "why": "العمر بـsein، ومع du: bist. hast (haben) خطأ الفرنسية والعربية معاً."
           },
           {
-            "q": "«تمام، أفهم»؟",
-            "a": "Alles klar!"
+            "q": "«مَن هذا؟» بالألمانية — مع الفعل!",
+            "a": "Wer ist das?",
+            "why": "wer للشخص + ist — لا Wer das؟ العربية بلا فعل، الألمانية لا."
+          },
+          {
+            "q": "Yusuf spricht Arabisch, Französisch und ein bisschen ___.",
+            "a": "Deutsch",
+            "choices": [
+              "Deutsch",
+              "Deutschland",
+              "deutsch"
+            ],
+            "why": "اسم اللغة Deutsch بحرف كبير وبلا أداة. Deutschland = البلد."
+          },
+          {
+            "q": "«تمام!» (فهمت) — بالألمانية؟",
+            "a": "Alles klar!",
+            "why": "القطعة الجاهزة Alles klar! تؤكد الفهم — سمعتها من لينا ويوسف مرتين."
           }
         ],
         "passingScore": 0.75
@@ -179,20 +455,54 @@
       {
         "items": [
           {
-            "q": "المعركة (قصة): كيف يتهجى يوسف اسمه؟",
-            "a": "Ich buchstabiere: Y-U-S-U-F."
+            "q": "Yusuf ist ___ Jahre alt.",
+            "a": "neunzehn",
+            "choices": [
+              "neunzehn",
+              "neun",
+              "zehn"
+            ],
+            "why": "19 = neunzehn (neun + zehn) كلمة واحدة. neun وحدها = 9 وzehn = 10."
           },
           {
-            "q": "توليف: wer أم was لشخص؟",
-            "a": "Wer"
+            "q": "Wer ___ Nabil? — Yusuf kennt Nabil.",
+            "a": "kennt",
+            "choices": [
+              "kennt",
+              "weiß",
+              "wisst"
+            ],
+            "why": "شخص ⇐ kennen (kennt مع wer/er). wissen لمعلومة: Das weiß ich nicht."
           },
           {
-            "q": "توليف: kennen أم wissen لصديق؟",
-            "a": "kennen"
+            "q": "«من أين أنت؟» بالألمانية — كلمة سؤال واحدة!",
+            "a": "Woher kommst du?",
+            "why": "woher = من أين، كلمة واحدة أولاً ثم الفعل. لا Aus wo."
           },
           {
-            "q": "الترتيب: alt / 15 / Jahre / bin / Ich",
-            "a": "Ich bin 15 Jahre alt."
+            "q": "Lena: Wie bitte? Bitte ___!",
+            "a": "langsam",
+            "choices": [
+              "langsam",
+              "schwer",
+              "genau"
+            ],
+            "why": "Bitte langsam! = ببطء من فضلك — طلب الإعادة ببطء. genau = بالضبط، schwer = صعب."
+          },
+          {
+            "q": "الترتيب: ist / Telefonnummer? / deine / Wie",
+            "a": "Wie ist deine Telefonnummer?",
+            "why": "Wie أولاً ثم ist ثم deine Telefonnummer (مؤنثة ⇐ deine)."
+          },
+          {
+            "q": "Nabil kommt aus Tunesien, ___ Yusuf.",
+            "a": "wie",
+            "choices": [
+              "wie",
+              "wer",
+              "was"
+            ],
+            "why": "wie هنا = مثل (wie ich = مثلي). wer = مَن، was = ما."
           }
         ],
         "passingScore": 0.75
@@ -201,53 +511,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die erste Einheit ist geschafft: 55 Wörter, sechs Tage — und du kannst dich vorstellen!",
-      "ar": "الوحدة الأولى اكتملت: 55 كلمة وستة أيام — وتستطيع تعريف نفسك كاملاً!"
+      "de": "Die Woche ist zu Ende: Ich heiße … · Ich komme aus … · Ich spreche … · Ich bin … Jahre alt · Meine Telefonnummer ist … — Alles klar? Bis morgen!",
+      "ar": "الوحدة الأولى اكتملت: تعرّف بنفسك في خمس جمل كاملة وتسأل غيرك الأسئلة نفسها — وتودّع بـAlles klar? Bis morgen!"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich bin von Tunesien~~",
-          "ar": "von لا aus للمنشأ"
+          "de": "~~Ich neunzehn Jahre alt.~~",
+          "ar": "جملة العمر بلا فعل"
         },
-        "whyArabicSpeakerFails": "«من» العربية واحدة؛ الانتماء للبلد aus دائماً — حتى في التوليف لا تعود لـvon (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تقول «أنا 19 سنة» و«أنا من تونس» جملاً اسمية بلا فعل، فيُسقط المتعلم bin/ist في التوليف حين يسرع — والألمانية لا تبني جملة بلا فعل أبداً (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich bin aus Tunesien.",
-          "ar": "أنا من تونس."
+          "de": "Ich bin neunzehn Jahre alt.",
+          "ar": "عمري 19 سنة."
         },
         "exercise": {
-          "q": "صحّح: ~~Er ist von Polen~~",
-          "a": "Er ist aus Polen."
+          "q": "صحّح: ~~Lena sechzehn Jahre alt.~~",
+          "a": "Lena ist sechzehn Jahre alt."
         }
       },
       {
         "commonError": {
-          "de": "~~Ich habe 15 Jahre~~",
-          "ar": "haben لا يُستخدم للعمر"
+          "de": "~~Woher kommst du? — Von Tunesien.~~",
+          "ar": "von للأصل"
         },
-        "whyArabicSpeakerFails": "«عندي 15» بالعربية؛ الألمانية: sein + Jahre alt (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«من» العربية واحدة لكل شيء، فتُترجم von حرفياً — لكن بلد المنشأ بعد kommen/woher يأخذ aus دائماً، في السؤال وفي الجواب (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich bin 15 Jahre alt.",
-          "ar": "عمري 15 سنة."
+          "de": "Woher kommst du? — Aus Tunesien.",
+          "ar": "من أين أنت؟ — من تونس."
         },
         "exercise": {
-          "q": "صحّح: ~~Sie hat 20 Jahre~~",
-          "a": "Sie ist 20 Jahre alt."
+          "q": "أكمل: Nabil kommt ___ Tunesien.",
+          "a": "aus"
         }
       },
       {
         "commonError": {
-          "de": "~~Wo kommen Sie?~~ (للأصل)",
-          "ar": "woher للمنشأ وwo للمكان"
+          "de": "~~Wie heiße du? — Ich heißt Lena.~~",
+          "ar": "تصريفا ich/du مقلوبان"
         },
-        "whyArabicSpeakerFails": "العربية تفكّك «من أين تأتي»؛ الألمانية woher مدمجة — الأداة أولاً (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية تصرّف بالبادئة (أسمّى/تُسمّى) والألمانية باللاحقة (heiße/heißt)، فيخلط المتعلم النهايتين حين يسأل ويجيب بسرعة في الحوار نفسه (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Woher kommen Sie?",
-          "ar": "من أين أنتم؟"
+          "de": "Wie heißt du? — Ich heiße Lena.",
+          "ar": "ما اسمك؟ — اسمي لينا."
         },
         "exercise": {
-          "q": "صحّح: ~~Wo kommen Sie?~~ (للأصل)",
-          "a": "Woher kommen Sie?"
+          "q": "صحّح: ~~Du heiße Nabil.~~",
+          "a": "Du heißt Nabil."
         }
       }
     ],
@@ -257,16 +567,15 @@
     ]
   },
   "gReferences": {
-    "duden": [
-      "https://www.duden.de/rechtschreibung/bis"
-    ],
+    "duden": [],
     "wiktionary": [
       "https://de.wiktionary.org/wiki/klar"
     ],
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-unit1-review"
+    "ars-sein",
+    "ars-wer-woher"
   ],
   "audioManifestRefs": [
     "word-alles-klar",
@@ -274,7 +583,7 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?) — توليف الوحدة",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 1 (Hallo! Wie geht's?) — توليف الوحدة: ستة أسئلة وستة أجوبة",
     "goetheWordListOverlap": [
       "alles-klar",
       "bis-morgen"

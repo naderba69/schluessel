@@ -6,11 +6,12 @@
   "day": 4,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst deine Sätze verbinden: und, aber, oder, denn — und den Unterschied zwischen denn und weil verstehen.",
-    "ar": "تربط جملك بالروابط (denn ≠ weil!) وتعبر عن رأيك"
+    "de": "Ich komme nicht, denn ich bin krank. · Ich komme nicht, weil ich krank bin. · Es regnet, deswegen bleiben wir zu Hause. · Nicht im Park, sondern zu Hause. · Leider habe ich keine Zeit. · Vielleicht kommt mein Bruder. · Wir essen, dann spielen wir, und zuletzt sehen wir einen Film. · Meiner Meinung nach ist das ein guter Plan. · Ich glaube, das ist eine gute Idee. · Ich habe zehn Sätze geschrieben — zum Beispiel über meine Reise.",
+    "ar": "تربط جملك وتعبّر عن رأيك: السبب بثلاثة ترتيبات (denn لا يغيّر شيئاً · weil الفعل آخراً · deswegen الفعل بعده مباشرة) · التصحيح بعد النفي nicht … sondern مقابل aber · الظرف أولاً فالفعل ثانياً (Leider · Vielleicht · Dann · Zuletzt · Meiner Meinung nach) · Ich glaube, + جملة رئيسية · zum Beispiel — ومعها denn · sondern · deswegen · leider · vielleicht · dann · zuletzt · das Beispiel · die Meinung · der Vorschlag · die Idee · der Plan · zum Beispiel · der Satz · glauben"
   },
   "canDoDaily": [
-    "يربط جملتين بـ3 روابط مختلفة (denn/sondern/deswegen) + جملة رأي"
+    "يعلّل بثلاث صيغ ويصحّح بعد النفي (Ich komme nicht, denn ich bin krank. · …, weil ich krank bin. · Es regnet, deswegen bleiben wir zu Hause. · Nicht im Park, sondern zu Hause.).",
+    "يبدي رأيه ويرتّب خطة (Meiner Meinung nach ist das ein guter Plan. · Ich glaube, das ist eine gute Idee. · Leider habe ich keine Zeit. · Vielleicht kommt mein Bruder. · Wir essen, dann spielen wir, und zuletzt sehen wir einen Film. · zum Beispiel …)."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«بقيتُ في البيت لأنني متعب» — denn أم weil؟ وأين الفعل؟"
+          "de": "«أبقى في البيت لأنني متعب» بـdenn — أين الفعل؟ (تخمين فقط)"
         },
         "choices": [
-          "Ich bleibe hier, denn ich bin müde (denn + فعل ثانٍ!)",
-          "Ich bleibe hier, denn ich müde bin",
-          "Ich bleibe hier, weil ich bin müde"
+          "Ich bleibe zu Hause, denn ich bin müde.",
+          "Ich bleibe zu Hause, denn ich müde bin.",
+          "Ich bleibe zu Hause, denn bin ich müde."
         ],
-        "answer": "Ich bleibe hier, denn ich bin müde (denn + فعل ثانٍ!)",
+        "answer": "Ich bleibe zu Hause, denn ich bin müde.",
         "revealNextSession": true
       }
     ],
@@ -49,88 +50,595 @@
       "meinung",
       "vorschlag",
       "idee",
-      "plan"
+      "plan",
+      "zum-beispiel",
+      "satz",
+      "glauben"
     ],
     "grammarArsenalIds": [
       "ars-weil-satz",
       "ars-satzklammer"
     ],
     "storySentenceIds": [
-      "story-a12-u12-s4"
+      "story-a1-u12-s4"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "z",
+      "sp-st-initial",
+      "v-f",
+      "auslaut-g",
+      "vowel-long-short"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أبقى هنا لأنني متعب» (denn)؟",
-            "a": "Ich bleibe hier, denn ich bin müde."
+            "q": "Ich bleibe zu Hause, ___ ich bin müde. (denn/weil — الفعل ثانياً)",
+            "a": "denn",
+            "why": "بعد denn الفعل يبقى ثانياً (ich bin) — مع weil لكان في الآخر."
           },
           {
-            "q": "«ليس القطار بل الحافلة»؟",
-            "a": "Nicht der Zug, sondern der Bus fährt ab."
+            "q": "Ich bleibe zu Hause, ___ ich müde bin. (denn/weil — الفعل آخراً)",
+            "a": "weil",
+            "why": "الفعل bin في الآخر ⇒ weil: الجملة التابعة (الوحدة 10)."
+          },
+          {
+            "q": "Es regnet, ___ bleiben wir zu Hause. (لذلك)",
+            "a": "deswegen",
+            "why": "deswegen يبدأ الجملة الثانية والفعل bleiben مباشرة بعده."
+          },
+          {
+            "q": "Es regnet, deswegen ___ wir zu Hause. (bleiben — الموضع)",
+            "a": "bleiben",
+            "why": "بعد deswegen الفعل ثانياً ثم الفاعل: deswegen bleiben wir."
+          },
+          {
+            "q": "Wir feiern nicht zu Hause, ___ im Park. (بل)",
+            "a": "sondern",
+            "why": "بعد النفي nicht يأتي sondern للتصحيح — لا aber."
+          },
+          {
+            "q": "Das Hotel ist alt, ___ schön. (لكن — بلا نفي قبله)",
+            "a": "aber",
+            "why": "بلا نفي قبله: aber للتناقض الحرّ — sondern تحتاج nicht/kein."
+          },
+          {
+            "q": "___ ist das Wetter im April oft schlecht. (للأسف)",
+            "a": "Leider",
+            "why": "Leider في الأول والفعل ist ثانياً."
+          },
+          {
+            "q": "Leider ___ ich keinen Film über Italien. (haben — ich)",
+            "a": "habe",
+            "why": "بعد Leider الفعل ثانياً ثم ich: Leider habe ich …"
+          },
+          {
+            "q": "___ regnet es am Samstag. (ربما)",
+            "a": "Vielleicht",
+            "why": "Vielleicht في الأول ⇒ الفعل regnet ثانياً."
+          },
+          {
+            "q": "Wir essen Kuchen, ___ hören wir Musik. (ثم)",
+            "a": "dann",
+            "why": "dann يبدأ الجملة الثانية والفعل hören بعده مباشرة."
+          },
+          {
+            "q": "___ sehen wir einen Film. (أخيراً)",
+            "a": "Zuletzt",
+            "why": "Zuletzt في الأول والفعل sehen ثانياً."
+          },
+          {
+            "q": "Ich mag Obst, ___ Äpfel. (مثلاً)",
+            "a": "zum Beispiel",
+            "why": "zum Beispiel قبل المثال — ويُكتب مختصراً z. B."
+          },
+          {
+            "q": "Das ist nur ein ___. (مثال)",
+            "a": "Beispiel",
+            "why": "das Beispiel — محايد · الجمع die Beispiele."
+          },
+          {
+            "q": "Meiner ___ nach ist das ein guter Plan. (رأي)",
+            "a": "Meinung",
+            "why": "التعبير الثابت Meiner Meinung nach — ثم الفعل ist ثانياً."
+          },
+          {
+            "q": "Meiner Meinung nach ___ das ein guter Plan. (sein — es/das)",
+            "a": "ist",
+            "why": "Meiner Meinung nach يشغل الموضع الأول ⇒ ist ثانياً."
+          },
+          {
+            "q": "Ich ___, das ist eine gute Idee. (glauben — ich)",
+            "a": "glaube",
+            "why": "ich glaube + فاصلة + جملة رئيسية (الفعل ثانياً) — بلا dass اليوم."
+          },
+          {
+            "q": "Was ___ du: Kuchen oder Eis? (glauben — du)",
+            "a": "glaubst",
+            "why": "du glaubst — نهاية ‑st للمخاطب."
+          },
+          {
+            "q": "Ich habe zehn ___ geschrieben. (Satz — الجمع)",
+            "a": "Sätze",
+            "why": "der Satz → die Sätze: أوملاوت + ‑e (كـder Platz → die Plätze)."
+          },
+          {
+            "q": "Der ___ ist zu lang. (جملة)",
+            "a": "Satz",
+            "why": "der Satz — مذكر."
+          },
+          {
+            "q": "Ich habe noch einen ___. (اقتراح)",
+            "a": "Vorschlag",
+            "why": "der Vorschlag → einen Vorschlag (أكوزاتيف) · الجمع die Vorschläge."
+          },
+          {
+            "q": "Hast du zwei ___? (Idee — الجمع)",
+            "a": "Ideen",
+            "why": "die Idee → die Ideen: الجمع بـ‑n."
+          },
+          {
+            "q": "Wir haben viele ___ für Samstag. (Plan — الجمع)",
+            "a": "Pläne",
+            "why": "der Plan → die Pläne: أوملاوت + ‑e."
           }
         ],
         "interleavedWith": [
-          "denn",
-          "sondern"
+          "hotel",
+          "wetter",
+          "april",
+          "film",
+          "kuchen",
+          "musik",
+          "obst",
+          "park",
+          "samstag",
+          "weil"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«القطار متأخر، لذلك أنا متأخر»؟",
-            "a": "Der Zug hat Verspätung, deswegen bin ich spät."
+            "audioId": "kh-1",
+            "speakText": "Hallo Lena! Wie war dein zweiter Tag in der Schule?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "عن اليوم الثاني في المدرسة",
+              "عن عيد ميلاد لينا",
+              "عن الطقس في برلين"
+            ],
+            "a": "عن اليوم الثاني في المدرسة",
+            "why": "Wie war dein zweiter Tag in der Schule? — اليوم الثاني."
           },
           {
-            "q": "«للأسف الغرفة مشغولة»؟",
-            "a": "Leider ist das Zimmer besetzt."
+            "audioId": "kh-2",
+            "speakText": "Gut, aber lang. Wir hatten Deutsch, dann Englisch, und zuletzt Musik. Und du?",
+            "q": "استمع: ما ترتيب حصص لينا؟",
+            "choices": [
+              "ألمانية ثم إنجليزية وأخيراً موسيقى",
+              "موسيقى ثم ألمانية وأخيراً رياضة",
+              "إنجليزية ثم موسيقى وأخيراً ألمانية"
+            ],
+            "a": "ألمانية ثم إنجليزية وأخيراً موسيقى",
+            "why": "Deutsch, dann Englisch, und zuletzt Musik — الترتيب بـdann/zuletzt."
+          },
+          {
+            "audioId": "kh-3",
+            "speakText": "Auch gut. Ich habe in der Schule zehn Sätze geschrieben — zum Beispiel über meine Reise.",
+            "q": "استمع: ماذا كتب يوسف في المدرسة؟",
+            "choices": [
+              "عشر جمل — مثلاً عن رحلته",
+              "رسالة إلى لينا",
+              "خطة للسبت"
+            ],
+            "a": "عشر جمل — مثلاً عن رحلته",
+            "why": "zehn Sätze geschrieben — zum Beispiel über meine Reise — عشر جمل."
+          },
+          {
+            "audioId": "kh-4",
+            "speakText": "Super! Und jetzt mein Plan für Samstag: Ich habe eine Idee. Was ist deine Meinung?",
+            "q": "استمع: ماذا تريد لينا من يوسف؟",
+            "choices": [
+              "رأيه في خطتها للسبت",
+              "صور تونس",
+              "واجباته"
+            ],
+            "a": "رأيه في خطتها للسبت",
+            "why": "mein Plan für Samstag … Was ist deine Meinung? — الرأي."
+          },
+          {
+            "audioId": "kh-6",
+            "speakText": "Wir feiern nicht zu Hause, sondern im Park — denn mein Zimmer ist zu klein.",
+            "q": "استمع: أين تريد لينا الاحتفال ولماذا؟",
+            "choices": [
+              "في المتنزّه لا في البيت — لأن غرفتها صغيرة",
+              "في البيت — لأن الطقس سيّئ",
+              "في المدرسة — لأن الأصدقاء هناك"
+            ],
+            "a": "في المتنزّه لا في البيت — لأن غرفتها صغيرة",
+            "why": "nicht zu Hause, sondern im Park — denn mein Zimmer ist zu klein — الغرفة صغيرة."
+          },
+          {
+            "audioId": "kh-7",
+            "speakText": "Eine gute Idee! Aber vielleicht regnet es. Dann ist der Park keine gute Idee.",
+            "q": "استمع: ما مشكلة المتنزّه برأي يوسف؟",
+            "choices": [
+              "ربما تمطر",
+              "بعيد جداً",
+              "مغلق يوم السبت"
+            ],
+            "a": "ربما تمطر",
+            "why": "vielleicht regnet es. Dann ist der Park keine gute Idee — المطر."
+          },
+          {
+            "audioId": "kh-8",
+            "speakText": "Das stimmt. Leider ist das Wetter im April oft schlecht. Deswegen habe ich noch einen Vorschlag.",
+            "q": "استمع: لماذا عند لينا اقتراح آخر؟",
+            "choices": [
+              "لأن طقس أبريل سيّئ غالباً للأسف",
+              "لأن أمها لا تريد",
+              "لأن المتنزّه مغلق"
+            ],
+            "a": "لأن طقس أبريل سيّئ غالباً للأسف",
+            "why": "Leider ist das Wetter im April oft schlecht. Deswegen … — الطقس."
+          },
+          {
+            "audioId": "kh-9",
+            "speakText": "Und was ist der Vorschlag?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "ما الاقتراح",
+              "كم الساعة",
+              "أين المتنزّه"
+            ],
+            "a": "ما الاقتراح",
+            "why": "Und was ist der Vorschlag? — الاقتراح."
+          },
+          {
+            "audioId": "kh-10",
+            "speakText": "Wir feiern bei mir, denn meine Mutter macht einen Kuchen. Meiner Meinung nach ist das ein guter Plan.",
+            "q": "استمع: أين يحتفلون الآن ولماذا؟",
+            "choices": [
+              "عند لينا — لأن أمها تصنع كعكة",
+              "في المتنزّه — لأن الطقس جميل",
+              "عند يوسف — لأن بيته كبير"
+            ],
+            "a": "عند لينا — لأن أمها تصنع كعكة",
+            "why": "bei mir, denn meine Mutter macht einen Kuchen — الكعكة."
+          },
+          {
+            "audioId": "kh-11",
+            "speakText": "Ich glaube, das ist ein guter Plan. Kommen viele Freunde?",
+            "q": "استمع: ما رأي يوسف وماذا يسأل؟",
+            "choices": [
+              "خطة جيدة — هل يأتي أصدقاء كثيرون",
+              "خطة سيّئة — هل تمطر",
+              "لا رأي له — متى العيد"
+            ],
+            "a": "خطة جيدة — هل يأتي أصدقاء كثيرون",
+            "why": "Ich glaube, das ist ein guter Plan. Kommen viele Freunde? — خطة جيدة."
+          },
+          {
+            "audioId": "kh-13",
+            "speakText": "Und was machen wir? Essen wir, und dann hören wir Musik?",
+            "q": "استمع: ماذا يقترح يوسف للبرنامج؟",
+            "choices": [
+              "الأكل ثم الموسيقى",
+              "الفيلم ثم النوم",
+              "اللعب ثم الرقص"
+            ],
+            "a": "الأكل ثم الموسيقى",
+            "why": "Essen wir, und dann hören wir Musik? — الأكل ثم الموسيقى."
+          },
+          {
+            "audioId": "kh-14",
+            "speakText": "Ja! Wir essen Kuchen, dann spielen wir ein Spiel, und zuletzt sehen wir einen Film.",
+            "q": "استمع: ما برنامج لينا بالترتيب؟",
+            "choices": [
+              "كعك ثم لعبة وأخيراً فيلم",
+              "فيلم ثم كعك وأخيراً موسيقى",
+              "لعبة ثم فيلم وأخيراً كعك"
+            ],
+            "a": "كعك ثم لعبة وأخيراً فيلم",
+            "why": "Kuchen, dann … ein Spiel, und zuletzt … einen Film — الترتيب."
+          },
+          {
+            "audioId": "kh-15",
+            "speakText": "Einen Film? Vielleicht einen Film über Italien — denn du fährst im Juni nach Rom!",
+            "q": "استمع: أي فيلم يقترح يوسف ولماذا؟",
+            "choices": [
+              "عن إيطاليا — لأنها تسافر إلى روما في يونيو",
+              "عن تونس — لأنه كان هناك",
+              "عن برلين — لأنهما يسكنان فيها"
+            ],
+            "a": "عن إيطاليا — لأنها تسافر إلى روما في يونيو",
+            "why": "einen Film über Italien — denn du fährst im Juni nach Rom! — روما."
+          },
+          {
+            "audioId": "kh-16",
+            "speakText": "Das ist eine gute Idee! Leider habe ich keinen Film über Italien. Hast du einen?",
+            "q": "استمع: ما مشكلة لينا؟",
+            "choices": [
+              "للأسف لا فيلم عندها عن إيطاليا",
+              "لا تحبّ الأفلام",
+              "ليس عندها وقت"
+            ],
+            "a": "للأسف لا فيلم عندها عن إيطاليا",
+            "why": "Leider habe ich keinen Film über Italien. — لا فيلم."
+          },
+          {
+            "audioId": "kh-17",
+            "speakText": "Nein, aber mein Vater hat vielleicht einen. Ich frage ihn, und dann schreibe ich dir.",
+            "q": "استمع: عند من ربما فيلم؟ وماذا يفعل يوسف؟",
+            "choices": [
+              "عند أبيه — يسأله ثم يكتب لها",
+              "عند أخيها — يتصل به",
+              "عند المعلمة — يسألها غداً"
+            ],
+            "a": "عند أبيه — يسأله ثم يكتب لها",
+            "why": "mein Vater hat vielleicht einen. Ich frage ihn, und dann schreibe ich dir — الأب."
+          },
+          {
+            "audioId": "kh-18",
+            "speakText": "Danke! Und was glaubst du: Kuchen oder Eis? Was ist deine Meinung?",
+            "q": "استمع: بين ماذا تختار لينا؟",
+            "choices": [
+              "كعك أم آيس كريم",
+              "موسيقى أم فيلم",
+              "متنزّه أم بيت"
+            ],
+            "a": "كعك أم آيس كريم",
+            "why": "Kuchen oder Eis? Was ist deine Meinung? — كعك أم آيس كريم."
           }
         ],
         "interleavedWith": [
-          "deswegen",
-          "leider"
+          "schule",
+          "reise",
+          "park",
+          "zimmer",
+          "wetter",
+          "april",
+          "mutter",
+          "kuchen",
+          "musik",
+          "spiel",
+          "film",
+          "juni",
+          "vater",
+          "eis"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«برأيي الفندق جيد»؟",
-            "a": "Meiner Meinung nach ist das Hotel gut."
+            "tokens": [
+              "komme",
+              "denn",
+              "krank.",
+              "Ich",
+              "nicht,",
+              "bin",
+              "ich"
+            ],
+            "a": "Ich komme nicht, denn ich bin krank.",
+            "why": "denn ← ich ← bin ثانياً ← krank (لا تغيير في الترتيب)."
           },
           {
-            "q": "«هذه فكرة جيدة»؟",
-            "a": "Das ist eine gute Idee."
+            "tokens": [
+              "ich",
+              "krank",
+              "komme",
+              "Ich",
+              "weil",
+              "bin.",
+              "nicht,"
+            ],
+            "a": "Ich komme nicht, weil ich krank bin.",
+            "why": "weil ← ich ← krank ← bin آخراً (الجملة التابعة)."
+          },
+          {
+            "tokens": [
+              "wir",
+              "bleiben",
+              "deswegen",
+              "regnet,",
+              "zu",
+              "Hause.",
+              "Es"
+            ],
+            "a": "Es regnet, deswegen bleiben wir zu Hause.",
+            "why": "deswegen ← bleiben مباشرة ← wir ← zu Hause."
+          },
+          {
+            "tokens": [
+              "Park,",
+              "nicht",
+              "feiern",
+              "Hause.",
+              "sondern",
+              "im",
+              "zu",
+              "Wir"
+            ],
+            "a": "Wir feiern nicht im Park, sondern zu Hause.",
+            "why": "النفي nicht im Park ← sondern ← التصحيح zu Hause."
+          },
+          {
+            "tokens": [
+              "ich",
+              "keinen",
+              "habe",
+              "Film.",
+              "Leider"
+            ],
+            "a": "Leider habe ich keinen Film.",
+            "why": "Leider أولاً ← habe ثانياً ← ich ← keinen Film."
+          },
+          {
+            "tokens": [
+              "regnet",
+              "Vielleicht",
+              "am",
+              "es",
+              "Samstag."
+            ],
+            "a": "Vielleicht regnet es am Samstag.",
+            "why": "Vielleicht أولاً ← regnet ثانياً ← es ← am Samstag."
+          },
+          {
+            "tokens": [
+              "Film.",
+              "Zuletzt",
+              "einen",
+              "wir",
+              "sehen"
+            ],
+            "a": "Zuletzt sehen wir einen Film.",
+            "why": "Zuletzt أولاً ← sehen ثانياً ← wir ← einen Film."
+          },
+          {
+            "tokens": [
+              "nach",
+              "das",
+              "guter",
+              "ein",
+              "ist",
+              "Plan.",
+              "Meiner",
+              "Meinung"
+            ],
+            "a": "Meiner Meinung nach ist das ein guter Plan.",
+            "why": "Meiner Meinung nach (الموضع الأول) ← ist ثانياً ← das ← ein guter Plan."
+          },
+          {
+            "tokens": [
+              "Idee.",
+              "Ich",
+              "glaube,",
+              "das",
+              "eine",
+              "gute",
+              "ist"
+            ],
+            "a": "Ich glaube, das ist eine gute Idee.",
+            "why": "Ich glaube ← فاصلة ← das ← ist ثانياً ← eine gute Idee."
+          },
+          {
+            "tokens": [
+              "Ich",
+              "habe",
+              "Sätze",
+              "geschrieben.",
+              "zehn"
+            ],
+            "a": "Ich habe zehn Sätze geschrieben.",
+            "why": "habe ثانياً ← zehn Sätze ← geschrieben آخراً."
           }
         ],
         "interleavedWith": [
-          "meinung",
-          "idee"
+          "krank",
+          "park",
+          "film",
+          "samstag",
+          "weil"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "kh-5",
+            "speakText": "Ja, gern. Was ist deine Idee?",
+            "a": "Ja, gern. Was ist deine Idee?",
+            "why": "Ja بحرف كبير · gern بـg · Idee بـI كبيرة وee مضاعفة."
+          },
+          {
+            "audioId": "kh-12",
+            "speakText": "Nicht viele, sondern nur sechs — zum Beispiel zwei Freundinnen aus meiner Klasse.",
+            "a": "Nicht viele, sondern nur sechs — zum Beispiel zwei Freundinnen aus meiner Klasse.",
+            "why": "Nicht بحرف كبير · sondern بـd · sechs بـchs · Beispiel بحرف كبير بعد zum · Freundinnen بـnn · Klasse بـss."
+          },
+          {
+            "audioId": "kh-19",
+            "speakText": "Nicht Kuchen oder Eis, sondern Kuchen und Eis! Das ist mein Vorschlag.",
+            "a": "Nicht Kuchen oder Eis, sondern Kuchen und Eis! Das ist mein Vorschlag.",
+            "why": "Nicht … sondern — فاصلة قبل sondern · Kuchen وEis بحرف كبير · Vorschlag بـV تُنطق f وch."
+          },
+          {
+            "audioId": "kh-20",
+            "speakText": "Sehr gut! Dann bis morgen, Yusuf!",
+            "a": "Sehr gut! Dann bis morgen, Yusuf!",
+            "why": "Sehr بـh صامتة · Dann بـnn مضاعفة (لا denn) · Yusuf بحرف كبير."
+          },
+          {
+            "audioId": "word-satz",
+            "speakText": "der Satz.",
+            "a": "der Satz",
+            "why": "Satz بـS تُنطق z وtz."
+          },
+          {
+            "audioId": "word-glauben",
+            "speakText": "glauben.",
+            "a": "glauben",
+            "why": "glauben بـau وb — المصدر."
+          },
+          {
+            "audioId": "word-zum-beispiel",
+            "speakText": "zum Beispiel.",
+            "a": "zum Beispiel",
+            "why": "zum Beispiel — كلمتان · Beispiel بحرف كبير وei وsp تُنطق schp."
+          },
+          {
+            "audioId": "word-vorschlag",
+            "speakText": "der Vorschlag.",
+            "a": "der Vorschlag",
+            "why": "Vorschlag بـV تُنطق f · sch · g آخراً تُنطق k."
+          },
+          {
+            "audioId": "word-meinung",
+            "speakText": "die Meinung.",
+            "a": "die Meinung",
+            "why": "Meinung بـei و‑ung مؤنث."
+          },
+          {
+            "audioId": "word-deswegen",
+            "speakText": "deswegen.",
+            "a": "deswegen",
+            "why": "deswegen بـs ثم w — كلمة واحدة."
+          }
+        ],
+        "interleavedWith": [
+          "klasse",
+          "kuchen",
+          "eis",
+          "freundin"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Sätze verbinden und Meinung sagen",
-        "a": "x",
-        "ar": "ربط الجمل وإبداء الرأي"
+        "de": "Was machen wir am Samstag? — Ich habe eine Idee: Wir feiern im Park. — Vielleicht regnet es. Deswegen feiern wir nicht im Park, sondern zu Hause. — Gut! Meiner Meinung nach ist das ein guter Plan. — Und dann? — Wir essen, dann hören wir Musik, und zuletzt sehen wir einen Film, zum Beispiel über Italien. — Ich glaube, das ist super. Leider habe ich keinen Film. — Ich frage meinen Vater, denn er hat viele Filme.",
+        "ar": "زميلك وأنت تخطّطان ليوم السبت: فكرة واقتراح ورأي (Ich habe eine Idee · Meiner Meinung nach · Ich glaube) · السبب بـdenn/weil/deswegen · التصحيح بـnicht … sondern · الترتيب dann/zuletzt · وleider/vielleicht في أول الجملة — ثم تعكسان الأدوار"
       },
       "situation": {
-        "de": "Verbinde deine Reise-Sätze: erst … dann …, denn …, aber …, deswegen …",
-        "a": "x",
-        "ar": "اربط جمل رحلتك: أولاً … ثم …، لأن …، لكن …، لذلك …"
+        "de": "Am Telefon: Hast du einen Plan für Samstag? — Ja, ich habe einen Vorschlag: Wir gehen ins Kino, denn der Film über Italien ist gut. — Leider habe ich am Samstag keine Zeit, weil ich lernen muss. — Dann gehen wir am Sonntag. — Gute Idee! Meiner Meinung nach ist der Sonntag besser. — Nicht um drei Uhr, sondern um fünf Uhr. — Ich glaube, das ist gut. Und zuletzt essen wir ein Eis!",
+        "ar": "على الهاتف: زميلك يقترح خطة لعطلة الأسبوع وأنت توافق أو تصحّح (nicht … sondern) وتعلّل (denn/weil) وتعطي رأيك (Meiner Meinung nach · Ich glaube) — وترتّبان البرنامج بـdann/zuletzt"
       },
       "successCriteria": [
-        "جملة denn (V2!) + جملة sondern + جملة deswegen/leider (V2!) + جملة رأي (Meiner Meinung nach)"
+        "جملة سبب بـdenn (الفعل ثانياً) وجملة بـweil (الفعل آخراً) أو deswegen (الفعل بعده)",
+        "جملة تصحيح nicht … sondern",
+        "جملة رأي (Meiner Meinung nach … · Ich glaube, …)",
+        "ظرف في الأول والفعل ثانياً (Leider · Vielleicht · Dann · Zuletzt) وكلمتان من اليوم (Idee · Vorschlag · Plan · Beispiel · Satz)"
       ]
     }
   },
@@ -145,20 +653,64 @@
       {
         "items": [
           {
-            "q": "«لأنّ» — والفرق عن weil؟",
-            "a": "denn + فعل ثانٍ (weil ترسله للنهاية)"
+            "q": "«لا آتي لأنه ليس عندي وقت» (denn)؟",
+            "choices": [
+              "Ich komme nicht, denn ich habe keine Zeit.",
+              "Ich komme nicht, denn ich keine Zeit habe.",
+              "Ich komme nicht, denn habe ich keine Zeit."
+            ],
+            "a": "Ich komme nicht, denn ich habe keine Zeit.",
+            "why": "denn لا يغيّر الترتيب: ich bin krank."
           },
           {
-            "q": "«بل (لكن بعد النفي)»؟",
-            "a": "sondern"
+            "q": "«لا آتي لأنه ليس عندي وقت» (weil)؟",
+            "choices": [
+              "Ich komme nicht, weil ich keine Zeit habe.",
+              "Ich komme nicht, weil ich habe keine Zeit.",
+              "Ich komme nicht, weil habe ich keine Zeit."
+            ],
+            "a": "Ich komme nicht, weil ich keine Zeit habe.",
+            "why": "weil يرسل الفعل إلى الآخر."
           },
           {
-            "q": "«لذلك»؟",
-            "a": "deswegen"
+            "q": "«الجو بارد، لذلك نبقى في البيت»؟",
+            "choices": [
+              "Es ist kalt, deswegen bleiben wir zu Hause.",
+              "Es ist kalt, deswegen wir bleiben zu Hause.",
+              "Es ist kalt, deswegen wir zu Hause bleiben."
+            ],
+            "a": "Es ist kalt, deswegen bleiben wir zu Hause.",
+            "why": "بعد deswegen الفعل مباشرة ثم الفاعل."
           },
           {
-            "q": "«للأسف»؟",
-            "a": "leider"
+            "q": "«ليس في المتنزّه بل في البيت»؟",
+            "choices": [
+              "Nicht im Kino, sondern zu Hause.",
+              "Nicht im Kino, aber zu Hause.",
+              "Nicht im Kino, oder zu Hause."
+            ],
+            "a": "Nicht im Kino, sondern zu Hause.",
+            "why": "بعد النفي: sondern."
+          },
+          {
+            "q": "«للأسف ليس عندي مال»؟",
+            "choices": [
+              "Leider habe ich kein Geld.",
+              "Leider ich habe kein Geld.",
+              "Leider kein Geld ich habe."
+            ],
+            "a": "Leider habe ich kein Geld.",
+            "why": "Leider أولاً ⇒ الفعل ثانياً ثم ich."
+          },
+          {
+            "q": "«برأيي الفيلم جيد»؟",
+            "choices": [
+              "Meiner Meinung nach ist der Film gut.",
+              "Meiner Meinung nach der Film ist gut.",
+              "Meine Meinung nach ist der Film gut."
+            ],
+            "a": "Meiner Meinung nach ist der Film gut.",
+            "why": "Meiner Meinung nach ثم الفعل ثانياً — بالداتيف Meiner."
           }
         ],
         "passingScore": 0.75
@@ -166,20 +718,64 @@
       {
         "items": [
           {
-            "q": "«ربما»؟",
-            "a": "vielleicht"
+            "q": "«ربما تأتي أختي»؟",
+            "choices": [
+              "Vielleicht kommt meine Schwester.",
+              "Vielleicht meine Schwester kommt.",
+              "Vielleicht kommt meiner Schwester."
+            ],
+            "a": "Vielleicht kommt meine Schwester.",
+            "why": "Vielleicht أولاً ⇒ kommt ثانياً · الفاعل mein Bruder."
           },
           {
-            "q": "«ثم»؟",
-            "a": "dann"
+            "q": "«نأكل، ثم نلعب»؟",
+            "choices": [
+              "Wir essen, dann spielen wir.",
+              "Wir essen, dann wir spielen.",
+              "Wir essen, denn spielen wir."
+            ],
+            "a": "Wir essen, dann spielen wir.",
+            "why": "dann ثم الفعل مباشرة — وليس denn."
           },
           {
-            "q": "«أخيراً»؟",
-            "a": "zuletzt"
+            "q": "«أخيراً نسمع الموسيقى»؟",
+            "choices": [
+              "Zuletzt hören wir Musik.",
+              "Zuletzt wir hören Musik.",
+              "Zuletzt hören Musik wir."
+            ],
+            "a": "Zuletzt hören wir Musik.",
+            "why": "Zuletzt أولاً ⇒ hören ثانياً ثم wir."
           },
           {
-            "q": "«مثال» — «مثلاً»؟",
-            "a": "das Beispiel — zum Beispiel"
+            "q": "«أعتقد أنّ الكعكة جيدة»؟",
+            "choices": [
+              "Ich glaube, der Kuchen ist gut.",
+              "Ich glaube, der Kuchen gut ist.",
+              "Ich glaube, ist der Kuchen gut."
+            ],
+            "a": "Ich glaube, der Kuchen ist gut.",
+            "why": "بعد glaube فاصلة وجملة رئيسية: الفعل ثانياً."
+          },
+          {
+            "q": "«أحب المدن، مثلاً روما»؟",
+            "choices": [
+              "Ich mag Städte, zum Beispiel Rom.",
+              "Ich mag Städte, zum Beispiele Rom.",
+              "Ich mag Städte, zu Beispiel Rom."
+            ],
+            "a": "Ich mag Städte, zum Beispiel Rom.",
+            "why": "zum Beispiel — zum (= zu dem) + Beispiel مفرداً."
+          },
+          {
+            "q": "«هذه الجملة طويلة جداً»؟",
+            "choices": [
+              "Dieser Satz ist zu lang.",
+              "Diese Satz ist zu lang.",
+              "Dieses Satz ist zu lang."
+            ],
+            "a": "Dieser Satz ist zu lang.",
+            "why": "der Satz مذكر ⇒ dieser."
           }
         ],
         "passingScore": 0.75
@@ -187,20 +783,64 @@
       {
         "items": [
           {
-            "q": "«رأي»؟",
-            "a": "die Meinung (Meiner Meinung nach)"
+            "q": "«الفندق ليس رخيصاً بل غالياً»؟",
+            "choices": [
+              "Das Hotel ist nicht billig, sondern teuer.",
+              "Das Hotel ist nicht billig, aber teuer.",
+              "Das Hotel ist nicht billig, denn teuer."
+            ],
+            "a": "Das Hotel ist nicht billig, sondern teuer.",
+            "why": "nicht … sondern — التصحيح بعد النفي."
           },
           {
-            "q": "«اقتراح» والجمع؟",
-            "a": "der Vorschlag → die Vorschläge"
+            "q": "«أنا متعب، لذلك أنام مبكراً»؟",
+            "choices": [
+              "Ich bin müde, deswegen gehe ich früh ins Bett.",
+              "Ich bin müde, deswegen ich gehe früh ins Bett.",
+              "Ich bin müde, deswegen ich früh ins Bett gehe."
+            ],
+            "a": "Ich bin müde, deswegen gehe ich früh ins Bett.",
+            "why": "deswegen ⇒ الفعل ثانياً ثم ich."
           },
           {
-            "q": "«فكرة»؟",
-            "a": "die Idee"
+            "q": "«هل عندك اقتراح؟»؟",
+            "choices": [
+              "Hast du einen Vorschlag?",
+              "Hast du eine Vorschlag?",
+              "Hast du ein Vorschlag?"
+            ],
+            "a": "Hast du einen Vorschlag?",
+            "why": "der Vorschlag → einen (أكوزاتيف مذكر)."
           },
           {
-            "q": "«خطة» والجمع؟",
-            "a": "der Plan → die Pläne"
+            "q": "«هذه خطط جيدة»؟",
+            "choices": [
+              "Das sind gute Pläne.",
+              "Das sind gute Plane.",
+              "Das sind gute Plans."
+            ],
+            "a": "Das sind gute Pläne.",
+            "why": "der Plan → die Pläne (أوملاوت + e)."
+          },
+          {
+            "q": "«ما رأيكم؟» (رسمي)",
+            "choices": [
+              "Was ist Ihre Meinung?",
+              "Was ist Ihr Meinung?",
+              "Was ist Ihre Meinungen?"
+            ],
+            "a": "Was ist Ihre Meinung?",
+            "why": "die Meinung مؤنث ⇒ Ihre · المفرد."
+          },
+          {
+            "q": "«هل صدّقتَ ذلك؟» (du)",
+            "choices": [
+              "Hast du das geglaubt?",
+              "Hast du das glauben?",
+              "Bist du das geglaubt?"
+            ],
+            "a": "Hast du das geglaubt?",
+            "why": "glauben منتظم: hat geglaubt."
           }
         ],
         "passingScore": 0.75
@@ -209,53 +849,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Meine Meinung: Nicht der Zug, sondern der Bus war besser, denn er war pünktlich. Deswegen bin ich froh. Leider war das Hotel voll — zum Beispiel das in Berlin. Aber das ist nur meine Meinung!",
-      "ar": "رأيي: ليس القطار بل الحافلة كانت أفضل، لأنها كانت في موعدها. لذلك أنا سعيد. للأسف كان الفندق ممتلئاً — مثلاً الذي في برلين. لكن هذا رأيي فقط!"
+      "de": "Der Plan für Samstag: Wir feiern nicht im Park, sondern zu Hause, denn mein Zimmer ist klein und das Wetter ist im April oft schlecht. · Leider habe ich keinen Film über Italien — vielleicht hat mein Vater einen. · Wir essen Kuchen, dann spielen wir ein Spiel, und zuletzt sehen wir einen Film. · Meiner Meinung nach ist das ein guter Plan. · Ich glaube, das ist eine gute Idee! · Ich habe heute zehn Sätze geschrieben, zum Beispiel über meine Reise.",
+      "ar": "السبب بثلاثة ترتيبات: denn رابط رئيسي لا يغيّر شيئاً (denn ich bin krank) · weil تابعة والفعل آخراً (weil ich krank bin — الوحدة 10) · deswegen ظرف أولاً والفعل بعده (deswegen bleiben wir — كـdeshalb) · التصحيح بعد النفي nicht X, sondern Y مقابل aber بلا نفي · الظرف في الموضع الأول يقفز بالفعل إلى الثاني (Leider habe ich … · Vielleicht kommt … · Dann/Zuletzt sehen wir … · Meiner Meinung nach ist …) — القوس الجملي (الوحدة 9) · Ich glaube, + جملة رئيسية (لا dass اليوم) · zum Beispiel (z. B.) قبل المثال · كلمات اليوم: denn · sondern · deswegen · leider · vielleicht · dann (لا denn!) · zuletzt · das Beispiel (die Beispiele) · die Meinung (die Meinungen) · der Vorschlag (die Vorschläge) · die Idee (die Ideen) · der Plan (die Pläne) · zum Beispiel · der Satz (die Sätze) · glauben (hat geglaubt)"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich bleibe hier, denn ich müde bin~~ / ~~denn ich bin müde~~ (صحيح!) / الخلط: denn = weil",
-          "ar": "الفروق الثلاثة: **weil** يرسل الفعل للنهاية · **denn** يتركه ثانياً (V2) · **deswegen** يبدأ الجملة ويقفز الفعل!"
+          "de": "~~Ich komme nicht, denn ich krank bin.~~ · ~~Ich komme nicht, weil ich bin krank.~~ · ~~Es regnet, deswegen wir bleiben zu Hause.~~",
+          "ar": "ثلاثة روابط للسبب وثلاثة ترتيبات: denn لا يغيّر شيئاً (denn ich bin krank) · weil يرسل الفعل إلى الآخر (weil ich krank bin) · deswegen يجرّ الفعل بعده مباشرة (deswegen bleiben wir)"
         },
-        "whyArabicSpeakerFails": "العربية «لأن» واحدة؛ الألماني ثلاث: weil (الفعل آخر) · denn (الفعل ثانٍ — مثل und) · deswegen (ظرف يقفز به الفعل) — اختيار الرابط يحدد ترتيب الفعل (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«لأنّ» و«لذلك» بالعربية لا تغيّران ترتيب الجملة، فيكتب المتعلم بعد الثلاثة الترتيب نفسه — أو يعمّم قاعدة weil (الوحدة 10) على denn فيرمي الفعل إلى الآخر. والألمانية تفرّق: denn رابط بين جملتين رئيسيتين (كـund/aber) فلا يغيّر شيئاً: …, denn ich bin krank · weil يفتح جملة تابعة فالفعل في الآخر: …, weil ich krank bin · deswegen ظرف يشغل الموضع الأول فيأتي الفعل ثانياً ثم الفاعل: …, deswegen bleiben wir zu Hause (كـdeshalb في الوحدة 10) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "…, weil ich müde bin. · …, denn ich bin müde. · …, deswegen bin ich müde.",
-          "ar": "… لأنني متعب. (ثلاث صيغ)"
+          "de": "Ich komme nicht, denn ich bin krank. · Ich komme nicht, weil ich krank bin. · Es regnet, deswegen bleiben wir zu Hause.",
+          "ar": "لا آتي لأنني مريض (denn) · لا آتي لأنني مريض (weil) · تمطر، لذلك نبقى في البيت"
         },
         "exercise": {
-          "q": "أكمل بالترتيب: Ich bleibe hier, denn ich ___ müde ___ (bin — الترتيب).",
-          "a": "Ich bleibe hier, denn ich bin müde."
+          "q": "Ich bleibe zu Hause, denn ich ___ müde. (sein — ich)",
+          "a": "bin"
         }
       },
       {
         "commonError": {
-          "de": "~~Nicht der Zug, aber der Bus~~ / ~~sondern der Zug~~",
-          "ar": "**sondern** فقط بعد النفي (nicht/kein) — «ليس X بل Y» · أما **aber** فللتناقض الحر (X، لكن Y)"
+          "de": "~~Nicht im Park, aber zu Hause.~~ · ~~Der Zug ist nicht billig, aber teuer.~~ · ~~Das Hotel ist alt, sondern schön.~~",
+          "ar": "بعد النفي (nicht/kein) التصحيح بـsondern: nicht X, sondern Y — وبلا نفي التناقض الحرّ بـaber: X, aber Y"
         },
-        "whyArabicSpeakerFails": "«لكن» و«بل» كلمة واحدة غالباً بالعربية؛ الألماني يفرّق: **aber** تناقض حر · **sondern** تصحيح بعد النفي — «ليس X بل Y» = nicht X, sondern Y (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«لكن» بالعربية تخدم الحالتين («ليس في المتنزّه لكن في البيت» · «قديم لكن جميل»)، فيضع المتعلم aber دائماً. والألمانية تخصّص sondern لتصحيح نفيٍ سبق: Nicht im Park, sondern zu Hause · nicht billig, sondern teuer — وتترك aber للتناقض الذي لا نفي قبله: Das Hotel ist alt, aber schön. السؤال: هل قبلها nicht أو kein وأنا أصحّح؟ نعم → sondern — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Nicht der Zug, sondern der Bus. · Der Zug ist spät, aber der Bus nicht.",
-          "ar": "ليس القطار بل الحافلة. · القطار متأخر لكن الحافلة لا."
+          "de": "Nicht im Park, sondern zu Hause. · Der Zug ist nicht billig, sondern teuer. · Das Hotel ist alt, aber schön.",
+          "ar": "ليس في المتنزّه بل في البيت · القطار ليس رخيصاً بل غالياً · الفندق قديم لكنه جميل"
         },
         "exercise": {
-          "q": "أكمل: Nicht Berlin, ___ München.",
+          "q": "Ich trinke keinen Kaffee, ___ Tee. (aber/sondern)",
           "a": "sondern"
         }
       },
       {
         "commonError": {
-          "de": "~~Meiner Meinung der Hotel ist gut~~ / ~~Meinung nach ist…~~",
-          "ar": "التعبير الثابت: **Meiner Meinung nach** + **الفعل ثانٍ** (nach آخر التعبير — لا يُترك)"
+          "de": "~~Leider ich habe keine Zeit.~~ · ~~Vielleicht mein Bruder kommt.~~ · ~~Meiner Meinung nach das Hotel ist gut.~~ · ~~Ich glaube, das Wetter gut ist.~~",
+          "ar": "Leider · Vielleicht · Dann · Zuletzt · Meiner Meinung nach تشغل الموضع الأول ⇒ الفعل ثانياً ثم الفاعل — وبعد Ich glaube, جملة رئيسية عادية (الفعل ثانياً)"
         },
-        "whyArabicSpeakerFails": "«برأيي» كلمة واحدة تسبق الجملة؛ الألماني يشطرها: Meiner Meinung + **nach** (آخر التعبير) + فعل ثانٍ — مصيدة الظرف-آخر (nach) + القلنسوة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«للأسف أنا لا أملك وقتاً» — الظرف بالعربية يسبق الجملة ولا يمسّها، فيبقي المتعلم الفاعل قبل الفعل بعد Leider/Vielleicht (~~Leider ich habe~~). والألمانية تعدّ الظرف موضعاً أولاً فيقفز الفعل إلى الثاني: Leider habe ich keine Zeit · Vielleicht kommt mein Bruder · Zuletzt sehen wir einen Film · Meiner Meinung nach ist das Hotel gut (القوس الجملي — الوحدة 9). وبعد Ich glaube, تأتي جملة رئيسية كاملة لا تابعة: Ich glaube, das Wetter ist gut — الفعل ثانياً لا آخراً (لا dass اليوم) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Meiner Meinung nach ist das Hotel gut.",
-          "ar": "برأيي الفندق جيد."
+          "de": "Leider habe ich keine Zeit. · Vielleicht kommt mein Bruder. · Meiner Meinung nach ist das Hotel gut. · Ich glaube, das Wetter ist gut.",
+          "ar": "للأسف ليس عندي وقت · ربما يأتي أخي · برأيي الفندق جيد · أعتقد أنّ الطقس جيد"
         },
         "exercise": {
-          "q": "أكمل: Meiner Meinung ___ ist das Hotel gut.",
-          "a": "nach"
+          "q": "Vielleicht ___ wir morgen ins Kino. (gehen — wir)",
+          "a": "gehen"
         }
       }
     ],
@@ -271,13 +911,14 @@
       "meinung",
       "vorschlag",
       "idee",
-      "plan"
+      "plan",
+      "zum-beispiel",
+      "satz",
+      "glauben"
     ]
   },
   "gReferences": {
     "duden": [
-      "https://www.duden.de/rechtschreibung/denn",
-      "https://www.duden.de/rechtschreibung/sondern",
       "https://www.duden.de/rechtschreibung/Meinung"
     ],
     "wiktionary": [
@@ -301,11 +942,14 @@
     "word-meinung",
     "word-vorschlag",
     "word-idee",
-    "word-plan"
+    "word-plan",
+    "word-zum-beispiel",
+    "word-satz",
+    "word-glauben"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 12 (Reise) — Sätze verbinden (Konnektoren)",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 12 (Reise) — Sätze verbinden: denn · sondern · deswegen · Meinung",
     "goetheWordListOverlap": []
   }
 }

@@ -15,7 +15,16 @@ import { buildNetwork, memoryPalace, networkReviewFlow } from "../lib/vocab-netw
 import { familyForms } from "../lib/lesson-runner.js";
 import { A1_TASKS, taskFlow, type RealTask } from "../lib/real-tasks.js";
 import { CULTURE_FACTS, songOfTheWeek, factsNeedingWebVerify } from "../lib/culture.js";
-import { firstLessonWords } from "../lesson-packs.js";
+import { dayIndexOfYear } from "../lib/coach-engine.js";
+import { LESSON_ORDER } from "../lesson-packs.js";
+import type { Word } from "../../content/schemas/index.js";
+import { PlayButton } from "./LessonSession.js";
+import { CHARACTER_NAME_AR } from "../lib/story.js";
+import { AudioScript } from "../../content/schemas/index.js";
+import alphabetJson from "../../content/audio-scripts/a1-alphabet.json";
+import zahlenJson from "../../content/audio-scripts/a1-zahlen.json";
+import uhrzeitJson from "../../content/audio-scripts/a1-uhrzeit.json";
+import werIstDasJson from "../../content/audio-scripts/a1-u1-d5-wer-ist-das.json";
 
 /* ══════════ E09 — الاستماع المتقدم ══════════ */
 export function ListeningLab() {
@@ -118,10 +127,10 @@ export function ReadingLab({ text }: { text: ReadingText }) {
 }
 
 /* ══════════ E12 — الكتابة ══════════ */
-export function WritingLab({ initialText = "" }: { initialText?: string }) {
+export function WritingLab({ initialText = "", words }: { initialText?: string; words: Word[] }) {
   const [text, setText] = useState(initialText);
   const [submitted, setSubmitted] = useState(initialText.length > 0);
-  const sotd = sentenceOfTheDay(firstLessonWords.map((w) => ({ de: w.de, ar: w.ar[0]! })), 0);
+  const sotd = sentenceOfTheDay(words.map((w) => ({ de: w.de, ar: w.ar[0]! })), dayIndexOfYear()); // N-148 (D248): تدوير حقيقي كل يوم (كان 0 ثابتاً)
   const diary = diaryPrompt("A1");
   const correction = submitted ? correctSentence(text) : null;
   return (
@@ -153,19 +162,44 @@ export function WritingLab({ initialText = "" }: { initialText?: string }) {
  * مختبر القواعد (خارج المسار): القواعد الثلاث المكتوبة في الكود — بالمكوّن نفسه الذي تعرض به محطة «الجديد»
  * قواعد المحتوى (D115). كانت نسخة مستقلة لا تستدعي viewExamples فيرمي «سجّل استنتاجي» خطأ عند الضغط.
  */
-export function GrammarLab({ ruleId = A1_RULES[0]!.id }: { ruleId?: string }) {
-  const rule = A1_RULES.find((r) => r.id === ruleId)!;
+export function unlockedLabRules(currentLessonId?: string | null) {
+  if (currentLessonId === undefined || currentLessonId === null) return [...A1_RULES];
+  const rank = new Map(LESSON_ORDER.map((id, i) => [id, i] as const));
+  const at = rank.get(currentLessonId);
+  if (at === undefined) return [];
+  return A1_RULES.filter((r) => !r.lesson || (rank.get(r.lesson) ?? Infinity) <= at).sort(
+    (x, y) => (rank.get(x.lesson ?? "") ?? -1) - (rank.get(y.lesson ?? "") ?? -1),
+  );
+}
+
+export function GrammarLab({ ruleId, currentLessonId }: { ruleId?: string; currentLessonId?: string | null }) {
+  const unlocked = unlockedLabRules(currentLessonId);
+  const [chosenId, setChosenId] = useState<string | undefined>(ruleId);
+  const rule = unlocked.find((r) => r.id === chosenId) ?? unlocked[0];
+  if (!rule)
+    return (
+      <section data-testid="grammar-lab">
+        <p>لا قواعد متاحة بعد — أكمل الدرس الحالي أولاً.</p>
+      </section>
+    );
   return (
     <section data-testid="grammar-lab">
+      <nav data-testid="grammar-rules">
+        {unlocked.map((r) => (
+          <button key={r.id} data-testid={`rule-${r.id}`} onClick={() => setChosenId(r.id)}>
+            {r.topicAr}
+          </button>
+        ))}
+      </nav>
       <RuleDiscoveryView rule={rule} />
     </section>
   );
 }
 
 /* ══════════ E14 — المفردات الشبكية ══════════ */
-export function NetworkLab() {
-  const { nodes } = buildNetwork(firstLessonWords);
-  const knownFirst = new Map(firstLessonWords.map((w) => [w.id, w])); // D118: العائلة بصيغتها ومن المدروس وحده
+export function NetworkLab({ words }: { words: Word[] }) {
+  const { nodes } = buildNetwork(words);
+  const knownFirst = new Map(words.map((w) => [w.id, w])); // D118: العائلة بصيغتها ومن المدروس وحده
   const { stations } = memoryPalace(nodes, ["المدخل", "المطبخ", "الغرفة", "الشرفة"]);
   return (
     <section data-testid="network-lab">
@@ -260,6 +294,7 @@ const TABS = [
   { id: "netzwerk", label: "🕸️ شبكة" },
   { id: "aufgaben", label: "🎯 مهام" },
   { id: "kultur", label: "🇩🇪 ثقافة" },
+  { id: "alphabet", label: "🔤 الأبجدية" },
 ] as const;
 
 export const DEMO_TEXT: ReadingText = {
@@ -274,7 +309,64 @@ export const DEMO_TEXT: ReadingText = {
   ],
 };
 
-export function SkillsLab() {
+/* ══════════ N-008 (D231) — جدول الأبجدية ══════════ */
+/** جدول الحروف الثلاثين + 3 تهجيات مسجلة (سكربت a1-alphabet) — كل حرف بزر صوته */
+/** N-148 (D248): حروف الأبجدية — مصدر واحد للجدول وتدريب المدرب */
+export function alphabetLetters(): { id: string; text: string }[] {
+  return AudioScript.parse(alphabetJson)
+    .lines.filter((ln) => !ln.id.startsWith("abc-spell-"))
+    .map((ln) => ({ id: ln.id, text: ln.text }));
+}
+
+/** سطور الأرقام والساعة لمهارة اليوم (D300 · F007): المعرّف = معرّف المقطع مباشرة */
+export function numberLines(): { id: string; text: string }[] {
+  return AudioScript.parse(zahlenJson).lines.map((ln) => ({ id: ln.id, text: ln.text }));
+}
+
+export function timeLines(): { id: string; text: string }[] {
+  return AudioScript.parse(uhrzeitJson).lines.map((ln) => ({ id: ln.id, text: ln.text }));
+}
+
+/** أزواج سؤال/جواب من حوار u1-d5 لمحادثة الدقيقة (D301 · F004): البحث بالمعرّف لا بالترتيب */
+export function dialoguePairs(): { q: { id: string; text: string }; a: { id: string; text: string } }[] {
+  const byId = new Map(AudioScript.parse(werIstDasJson).lines.map((ln) => [ln.id, ln.text]));
+  const pair = (qid: string, aid: string) => {
+    const q = byId.get(qid);
+    const a = byId.get(aid);
+    if (!q || !a) throw new Error(`سطر حوار مفقود: ${qid}/${aid}`);
+    return { q: { id: qid, text: q }, a: { id: aid, text: a } };
+  };
+  return [pair("wer-1", "wer-2"), pair("wer-3", "wer-4"), pair("wer-5", "wer-6"), pair("wer-7", "wer-8")];
+}
+
+export function AlphabetLab() {
+  const script = AudioScript.parse(alphabetJson);
+  const letters = alphabetLetters();
+  const spells = script.lines.filter((ln) => ln.id.startsWith("abc-spell-"));
+  return (
+    <section data-testid="alphabet-lab">
+      <h3>الأبجدية الألمانية 🔤 — اضغط الحرف لتسمع اسمه</h3>
+      <ol data-testid="alphabet-letters">
+        {letters.map((ln) => (
+          <li key={ln.id}>
+            <strong dir="ltr">{ln.text.replace(/\.$/, "")}</strong> <PlayButton audioId={ln.id} speakText={ln.text} />
+          </li>
+        ))}
+      </ol>
+      <h4>تهجية الأسماء — كما تُقال حرفاً حرفاً</h4>
+      <ul data-testid="alphabet-spells">
+        {spells.map((ln) => (
+          <li key={ln.id}>
+            {ln.speaker === "announcer" ? "المذيع" : CHARACTER_NAME_AR[ln.speaker]} يتهجى:{" "}
+            <span dir="ltr">{ln.text}</span> <PlayButton audioId={ln.id} speakText={ln.text} />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+export function SkillsLab({ currentLessonId, words }: { currentLessonId?: string | null; words: Word[] }) {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("hoeren");
   return (
     <div data-testid="skills-lab">
@@ -289,11 +381,12 @@ export function SkillsLab() {
       {tab === "hoeren" && <ListeningLab />}
       {tab === "sprechen" && <PronunciationLab />}
       {tab === "lesen" && <ReadingLab text={DEMO_TEXT} />}
-      {tab === "schreiben" && <WritingLab />}
-      {tab === "grammatik" && <GrammarLab />}
-      {tab === "netzwerk" && <NetworkLab />}
+      {tab === "schreiben" && <WritingLab words={words} />}
+      {tab === "grammatik" && <GrammarLab currentLessonId={currentLessonId} />}
+      {tab === "netzwerk" && <NetworkLab words={words} />}
       {tab === "aufgaben" && <TasksLab />}
       {tab === "kultur" && <CultureLab />}
+      {tab === "alphabet" && <AlphabetLab />}
     </div>
   );
 }

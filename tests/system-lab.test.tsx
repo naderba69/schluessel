@@ -9,12 +9,17 @@ import {
   PlayScreen,
   DataScreen,
   SettingsScreen,
+  PathScreen,
 } from "../src/components/SystemLab.js";
+import { createInitialState } from "../src/lib/state-factory.js";
 import { BLAME_WORDS } from "../src/lib/warmth-engine.js";
+import { LESSON_INDEX, loadFirstSession } from "../src/lesson-packs.js";
+
+const FIRST_WORDS = (await loadFirstSession()).direct;
 
 describe("الصدفة — لوحة النظام بست شاشات", () => {
   it("التبويبات الستة ظاهرة (E17–E22)", () => {
-    const html = renderToStaticMarkup(<SystemLab />);
+    const html = renderToStaticMarkup(<SystemLab words={FIRST_WORDS} />);
     expect(html).toContain('data-testid="system-lab"');
     for (const t of ["gate", "progress", "adapt", "play", "data", "settings"]) {
       expect(html).toContain(`stab-${t}`);
@@ -26,9 +31,9 @@ describe("الصدفة — لوحة النظام بست شاشات", () => {
 describe("E17 — شاشة البوابات", () => {
   it("تحذير صيغة Goethe ظاهر دائماً — والبوابة تظهر في أسبوع البوابة", () => {
     const html = renderToStaticMarkup(<GateScreen week={6} />);
-    expect(html).toContain("تُتحقق من موقع المعهد عند النشر");
+    expect(html).toContain("متحقق منها من وثائق Goethe الرسمية");
     expect(html).toContain('data-testid="gate-view"');
-    expect(html).toContain('data-format="needs-web-verify"');
+    expect(html).toContain('data-format="goethe-verifiziert"');
     expect(html).toContain("عتبتنا الداخلية"); // العتبة معلنة لا مخفية
   });
 
@@ -66,7 +71,7 @@ describe("E19 — شاشة التكيّف", () => {
 
 describe("E20 — شاشة اللعب", () => {
   it("القواعد بلا ضغط + الكلمة من مفرداتي", () => {
-    const html = renderToStaticMarkup(<PlayScreen />);
+    const html = renderToStaticMarkup(<PlayScreen words={FIRST_WORDS} />);
     expect(html).toContain("بلا مؤقت");
     expect(html).toContain("من مفرداتك المدروسة أنت");
     for (const w of ["أسرع", "سريع", "عاجل"]) expect(html).not.toContain(w);
@@ -92,5 +97,28 @@ describe("E22 — شاشة الإعدادات", () => {
     expect(html).not.toContain('data-pass="fail"');
     expect(html).toContain('data-pass="aa"');
     expect(html).toContain("WCAG AA");
+  });
+});
+
+describe("تبويب المسار الكامل (N-149 · D249)", () => {
+  it("يعرض العدّاد والقائمة الكاملة بحالاتها (من التطبيق)", () => {
+    const html = renderToStaticMarkup(<PathScreen progress={createInitialState("س").progress} />);
+    expect(html).toContain('data-testid="path-list"');
+    expect(html).toContain(`أكملت 0 من ${LESSON_INDEX.length} درساً منشوراً`);
+    expect(html).toContain("a1-u1-d1");
+    expect(html).toContain("● الدرس الحالي");
+    expect(html).toContain("🔒 مقفل");
+    expect(html.match(/data-lesson-id=/g)!.length).toBe(LESSON_INDEX.length);
+  });
+
+  it("بلا حالة: رسالة صريحة لا قائمة فارغة", () => {
+    const html = renderToStaticMarkup(<PathScreen progress={null} />);
+    expect(html).toContain('data-testid="path-needs-state"');
+    expect(html).not.toContain('data-testid="path-list"');
+  });
+
+  it("تبويب المسار ظاهر في اللوحة", () => {
+    const html = renderToStaticMarkup(<SystemLab words={FIRST_WORDS} />);
+    expect(html).toContain("stab-path");
   });
 });

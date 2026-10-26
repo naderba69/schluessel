@@ -2,6 +2,7 @@
 import { z } from "zod";
 import { Level, SchemaVersioned, Slug, UnitNumber } from "./common.js";
 import { SrsCardState } from "./card.js";
+import { QuizAnswer } from "./lesson.js";
 
 /** جرعة اليوم (study-plan §3‑ب) */
 export const DailyDose = z.enum(["minimum-45", "target-90", "ideal-120", "emergency-10"]);
@@ -43,6 +44,8 @@ export const SessionLog = z.object({
   srsDueRemaining: z.number().nonnegative().default(0),
   listeningMinutes: z.number().nonnegative().default(0),
   shadowingMinutes: z.number().nonnegative().default(0),
+  /** D281: دقائق القراءة الحرة (نص الخميس — ب-19) */
+  readingMinutes: z.number().nonnegative().default(0),
   /** سطر التأمل (Zimmerman — ب‑12) */
   reflection: z.object({ learned: z.string().optional(), tomorrow: z.string().optional() }).optional(),
 });
@@ -73,8 +76,16 @@ export const GateResult = z.object({
 });
 export type GateResult = z.infer<typeof GateResult>;
 
+/** N-151 (D251): نوافذ المدرب — مرآة COACH_WINDOWS (coach-engine)؛ المحتوى لا يستورد من src فيُعاد التعريف هنا والاختبار يثبّت التطابق */
+export const CoachWindow = z.enum(["midday", "afternoon", "evening"]);
+export type CoachWindow = z.infer<typeof CoachWindow>;
+
 export const LearnerProfile = SchemaVersioned.extend({
   name: z.string().min(1),
+  /** N-151 (D251): اسم الرحلة الاختياري (§2.11 — يظهر أعلى الشاشة طوال الرحلة) */
+  journeyName: z.string().default(""),
+  /** N-151 (D251): نوافذ المدرب المختارة (§2.11 — 2 على الأقل، الافتراضي الثلاث) */
+  coachWindows: z.array(CoachWindow).default(["midday", "afternoon", "evening"]),
   createdAt: z.string(),
   level: Level,
   /** الطقوس المكتملة (الوحدة صفر — Just-In-Time) */
@@ -89,6 +100,34 @@ export const LearnerProfile = SchemaVersioned.extend({
 });
 export type LearnerProfile = z.infer<typeof LearnerProfile>;
 
+/** N-006 (D228): محطات المسار الأربع — مرآة STATIONS (lesson-engine)؛ المحتوى لا يستورد من src فيُعاد التعريف هنا والاختبار يثبّت التطابق */
+export const OpenStation = z.enum(["recall", "learn", "practice", "close"]);
+export type OpenStation = z.infer<typeof OpenStation>;
+
+/** N-006: لقطة محاولة الاختبار — البنود تُشتق من الدرس+variantIndex عند الاستعادة (لا تُخزَّن) */
+export const OpenQuiz = z.object({
+  variantIndex: z.number().int().nonnegative(),
+  predicted: z.number().min(0).max(100).nullable(),
+  answers: z.array(QuizAnswer),
+  cursor: z.number().int().nonnegative(),
+  // N-006: بلا sessionAttempts — السقف والتناوب لكل جلوس جديد («الدرس يبقى مفتوحاً لحصتك القادمة»)، والمحاولة المقطوعة وحدها تُستأنف
+});
+export type OpenQuiz = z.infer<typeof OpenQuiz>;
+
+/** N-006: حصة مفتوحة تُستأنف بعد إعادة التحميل — المحطة والبند ( Recall/Learn بطاقة+قاعدة · Practice محطة+بند · Quiz لقطة) */
+export const OpenSession = z.object({
+  lessonId: z.string(),
+  station: OpenStation,
+  done: z.array(OpenStation).default([]),
+  pos: z.object({
+    recall: z.number().int().nonnegative().optional(),
+    learn: z.object({ index: z.number().int().nonnegative(), ruleIndex: z.number().int().nonnegative() }).optional(),
+    practice: z.object({ station: z.number().int().nonnegative(), item: z.number().int().nonnegative() }).optional(),
+  }).default({}),
+  quiz: OpenQuiz.optional(),
+});
+export type OpenSession = z.infer<typeof OpenSession>;
+
 export const LearnerProgress = SchemaVersioned.extend({
   completedLessons: z.array(z.string()).default([]),
   availableLessons: z.array(z.string()).default([]),
@@ -98,6 +137,8 @@ export const LearnerProgress = SchemaVersioned.extend({
   currentUnit: z.object({ level: Level, unit: UnitNumber }),
   /** نتيجة Niveauprüfung لكل مستوى */
   levelExams: z.record(z.string(), z.array(GateResult)).default({}),
+  /** N-006 (D228): الحصة المفتوحة — تُمسح بنجاح الاختبار، وتبقى بـ«ليس بعد» للاستئناف */
+  openSession: OpenSession.optional(),
 });
 export type LearnerProgress = z.infer<typeof LearnerProgress>;
 

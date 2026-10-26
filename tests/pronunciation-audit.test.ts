@@ -59,6 +59,13 @@ describe("D122 — بوابة تدقيق النطق", () => {
         "  'Kreditkarte': ('kreːdˈɪtkˌaɾtə', ['kʁeˈdiːtˌkaʁtə', 'kʁeˈdɪtˌkaʁtə']),",
         "  'Tunesien': ('tˌuːneːzˈiːən', ['tuˈneːzi̯ən']),",
         "  'Tunesien-fixed': ('tuːnˈeːzɪʲən', ['tuˈneːzi̯ən']),",
+        "  'Job-raw': ('dʒˈɒb', ['d͡ʒɔp']),",
+        "  'Bleistift-raw': ('blˈaɪstɪft', ['ˈblaɪ̯ˌʃtɪft']),",
+        "  'Krankenhaus-raw': ('krˈankənhˌaʊs', ['ˈkʁaŋkn̩ˌhaʊ̯s']),",
+        "  'Erwachsene-raw': ('ɛɾvˈaxzənə', ['ɛɐ̯ˈvaksənə']),",
+        "  'sprichst-raw': ('ʃprˈɪkst', ['ʃpʁɪçst']),",
+        "  'ankommen': ('ˈankɔmən', ['ˈankɔmən']),",
+        "  'Buch': ('bˈuːx', ['buːx']),",
         "}",
         "print(json.dumps({k: pa.compare(e, r) for k, (e, r) in cases.items()}))",
       ].join("\n"),
@@ -72,6 +79,13 @@ describe("D122 — بوابة تدقيق النطق", () => {
       Kreditkarte: [], // يكفي أن توافق صيغةٌ واحدة من صيغ المرجع
       Tunesien: ["stress"],
       "Tunesien-fixed": [],
+      "Job-raw": ["final-devoicing"],
+      "Bleistift-raw": ["st-sh"],
+      "Krankenhaus-raw": ["n-ng"],
+      "Erwachsene-raw": ["chs-ks"],
+      "sprichst-raw": ["ch-ich"],
+      ankommen: [], // حدّ المقطع الحقيقي an|kommen بلا ŋ في المرجع
+      Buch: [], // الـ[x] الحقيقية حاضرة في المرجع
     });
   });
 

@@ -6,8 +6,13 @@ import { join } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import { clipUrl, clipUrlForFile, CLIP_FILE_COUNT, CLIP_ID_COUNT } from "../src/lib/audio-assets.js";
 import { createAudioPlayer, setAudioPlayer, type AudioBackend, type AudioPlayer } from "../src/lib/audio-player.js";
-import { ALL_LESSONS, wordsForLesson, runtimeWordsForLesson, firstLesson, firstLessonWords } from "../src/lesson-packs.js";
-import { planLessonStations, fullForm } from "../src/lib/lesson-runner.js";
+import { loadAllLessons, wordsForLesson, runtimeWordsForLesson, loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const ALL_LESSONS = await loadAllLessons();
+const firstLessonWords = __FIRST.direct;
+
+import { planLessonStations } from "../src/lib/lesson-runner.js";
 import { LearnStation, RecallStation } from "../src/components/LessonContent.js";
 
 const CONTENT = join(process.cwd(), "content");
@@ -36,9 +41,9 @@ describe("D104 — كل مقطع ملتزم يُضمَّن في البناء و�
     }
   });
 
-  it("كل كلمة في كل درس لها مقطعها — المتعلم لا يرى كلمة بلا صوت", () => {
+  it("كل كلمة في كل درس لها مقطعها — المتعلم لا يرى كلمة بلا صوت", async () => {
     for (const l of ALL_LESSONS)
-      for (const w of runtimeWordsForLesson(l)) expect(clipUrl(`word-${w.id}`), `${l.id}/${w.id}`).toBeTruthy();
+      for (const w of await runtimeWordsForLesson(l)) expect(clipUrl(`word-${w.id}`), `${l.id}/${w.id}`).toBeTruthy();
   });
 });
 
@@ -93,17 +98,18 @@ describe("D104 — المشغّل: المقطع أولاً ← Web Speech احت
 describe("D104 — البطاقات تحمل هوية صوتها والواجهة تعرض زر الاستماع", () => {
   afterEach(() => setAudioPlayer(null));
 
-  it("بطاقات الجديد والاسترجاع: audioId = word-<id> وspeakText = الشكل الكامل (الأداة مرة واحدة)", () => {
+  it("بطاقات الجديد تنطق ما تعرض (الجملة بلا مقطع كلمة — N-154) · الاسترجاع: مقطع الكلمة", async () => {
     for (const l of ALL_LESSONS) {
-      const plan = planLessonStations(l, runtimeWordsForLesson(l));
-      const words = new Map(runtimeWordsForLesson(l).map((w) => [w.id, w]));
+      const plan = planLessonStations(l, await runtimeWordsForLesson(l));
+      const words = new Map((await runtimeWordsForLesson(l)).map((w) => [w.id, w]));
       for (const c of plan.learn) {
-        expect(c.audioId).toBe(`word-${c.wordId}`);
-        expect(c.speakText).toBe(fullForm(words.get(c.wordId)!));
+        const w = words.get(c.wordId)!;
+        expect(c.speakText).toBe(c.promptDe);
+        expect(c.audioId).toBe(w.sampleSentence ? undefined : `word-${c.wordId}`);
       }
       for (const c of plan.recall) expect(c.audioId).toBe(`word-${c.id}`);
     }
-    expect(wordsForLesson(firstLesson).length).toBeGreaterThan(0);
+    expect((await wordsForLesson(firstLesson)).length).toBeGreaterThan(0);
   });
 
   it("محطة الجديد والاسترجاع تعرضان 🔊 بمعرّف المقطع الصحيح", () => {
@@ -113,7 +119,10 @@ describe("D104 — البطاقات تحمل هوية صوتها والواجه�
     const plan = planLessonStations(firstLesson, firstLessonWords);
     const learn = renderToStaticMarkup(<LearnStation cards={plan.learn} />);
     expect(learn).toContain('data-testid="play-audio"');
-    expect(learn).toContain(`data-audio-id="${plan.learn[0]!.audioId}"`);
+    // N-154 (D270): بطاقة الجملة تنطق جملتها (بلا مقطع كلمة) — الزر يتكلم بما يُعرَض
+    expect(plan.learn[0]!.audioId).toBeUndefined();
+    expect(learn).toContain(`استمع: ${plan.learn[0]!.speakText}`);
+    expect(plan.learn[0]!.speakText).toBe(plan.learn[0]!.promptDe);
     const recall = renderToStaticMarkup(<RecallStation cards={plan.recall} />);
     expect(recall).toContain(`data-audio-id="${plan.recall[0]!.audioId}"`);
   });
@@ -123,7 +132,7 @@ describe("D104 — عامل الخدمة: اسم المنتج + GET فقط", () 
   const sw = readFileSync(join(process.cwd(), "public/sw.js"), "utf8");
   it("لا اسم داخلي في الأصل المنشور (D31) + الإصدار رُفع + لا تخزين لغير GET", () => {
     expect(sw).not.toMatch(/reise-yusuf/i);
-    expect(sw).toContain('const CACHE = "schluessel-v2"');
+    expect(sw).toContain('const CACHE = "schluessel-v3"'); // N-154 (D268): رُفع مع إصلاح المدى
     expect(sw).toContain('req.method !== "GET"');
   });
 });

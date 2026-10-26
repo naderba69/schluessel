@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u6-d6-woche-sechs-ist-zu-ende",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Woche sechs ist zu Ende! — Yusufs Zimmer ist fertig",
+    "ar": "الأسبوع السادس انتهى! — لينا تسأل عن غرفة يوسف المكتملة في برلين: الجمع (Stühle · Regale) · es gibt + einen/keinen · Wo? (dem/der) وWohin? (den/die/das) · darauf/darin/darüber · الجيران والإيجار · المفتاح"
+  },
+  "usedIn": [
+    "a1-u6-d6"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "we-1",
+      "speaker": "lena",
+      "text": "Hallo, Yusuf! Woche sechs ist zu Ende. Ist dein Zimmer jetzt fertig?",
+      "direction": "لينا تفتح — الغرفة (u6-d2) جاهزة؟"
+    },
+    {
+      "id": "we-2",
+      "speaker": "yusuf",
+      "text": "Ja! Die Einrichtung ist fertig, und die Möbel sind da.",
+      "direction": "Einrichtung · Möbel sind (جمع، مصيدة u6-d5)"
+    },
+    {
+      "id": "we-3",
+      "speaker": "lena",
+      "text": "Frage eins: Wie viele Stühle hast du?",
+      "direction": "السؤال الأول: الجمع (u6-d1)"
+    },
+    {
+      "id": "we-4",
+      "speaker": "yusuf",
+      "text": "Ich habe vier Stühle — nicht «vier Stuhl»! Und zwei Regale.",
+      "direction": "vier Stühle لا vier Stuhl (مصيدة u6-d1) · Regale"
+    },
+    {
+      "id": "we-5",
+      "speaker": "lena",
+      "text": "Prima! Frage zwei: Gibt es einen Fernseher?",
+      "direction": "Gibt es …? (u6-d3)"
+    },
+    {
+      "id": "we-6",
+      "speaker": "yusuf",
+      "text": "Nein, es gibt keinen Fernseher. Aber es gibt einen Computer und einen Schreibtisch.",
+      "direction": "es gibt keinen / einen — مفعول (u6-d3)"
+    },
+    {
+      "id": "we-7",
+      "speaker": "lena",
+      "text": "Wo steht der Schreibtisch?",
+      "direction": "Wo? مع steht (u6-d4)"
+    },
+    {
+      "id": "we-8",
+      "speaker": "yusuf",
+      "text": "Er steht an der Wand, unter dem Fenster. Das Bett steht daneben.",
+      "direction": "an der Wand · unter dem Fenster (Wo = dem/der) · daneben (u6-d4)"
+    },
+    {
+      "id": "we-9",
+      "speaker": "lena",
+      "text": "Und wohin stellst du die Lampe?",
+      "direction": "Wohin? مع stellen (u6-d4)"
+    },
+    {
+      "id": "we-10",
+      "speaker": "yusuf",
+      "text": "Ich stelle die Lampe in die Ecke — neben das Sofa.",
+      "direction": "in die Ecke · neben das Sofa (Wohin = die/das)"
+    },
+    {
+      "id": "we-11",
+      "speaker": "lena",
+      "text": "Wo oder wohin? Das ist schwer!",
+      "direction": "لينا تعترف بالصعوبة"
+    },
+    {
+      "id": "we-12",
+      "speaker": "yusuf",
+      "text": "Wo? — an der Wand, in der Ecke. Wohin? — in die Ecke, auf den Tisch.",
+      "direction": "التقابل الصريح: Wo (der/dem) مقابل Wohin (die/den)"
+    },
+    {
+      "id": "we-13",
+      "speaker": "lena",
+      "text": "Super! Frage drei: Da ist der Tisch. Was steht darauf?",
+      "direction": "Da … darauf (u6-d5)"
+    },
+    {
+      "id": "we-14",
+      "speaker": "yusuf",
+      "text": "Darauf steht die Vase. Und darin ist jetzt eine Pflanze!",
+      "direction": "darauf · darin (u6-d5) · Pflanze"
+    },
+    {
+      "id": "we-15",
+      "speaker": "lena",
+      "text": "Und das Foto aus Tunesien? Hängt es noch über dem Bett?",
+      "direction": "über dem Bett (Wo) — الصورة من u6-d4"
+    },
+    {
+      "id": "we-16",
+      "speaker": "yusuf",
+      "text": "Ja, es hängt darüber, mit Rahmen. Das Zimmer ist hell und gemütlich.",
+      "direction": "darüber · Rahmen (u6-d5) · hell وgemütlich (u6-d2)"
+    },
+    {
+      "id": "we-17",
+      "speaker": "lena",
+      "text": "Und die Nachbarn? Ist es noch laut?",
+      "direction": "Nachbarn (u6-d5) · laut"
+    },
+    {
+      "id": "we-18",
+      "speaker": "yusuf",
+      "text": "Rechts ist es laut, aber die Nachbarn sind nett. Die Miete ist hoch — das ist Berlin!",
+      "direction": "Nachbarn sind nett (جمع) · Miete hoch (u6-d5)"
+    },
+    {
+      "id": "we-19",
+      "speaker": "lena",
+      "text": "Und dein Schlüssel? Wo ist er heute?",
+      "direction": "المفتاح (u6-d4) — Wo ist er?"
+    },
+    {
+      "id": "we-20",
+      "speaker": "yusuf",
+      "text": "In der Schublade, im Schreibtisch. Alles klar — die Woche ist zu Ende!",
+      "direction": "in der Schublade (u6-d5) · Alles klar · نهاية الأسبوع"
+    }
+  ]
+}

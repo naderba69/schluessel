@@ -9,6 +9,7 @@ export const PhoneticRisk = z.enum([
   "ch-ich-laut", "ch-ach-laut", "umlaut-u", "umlaut-o", "umlaut-a",
   "vowel-long-short", "auslaut-d", "auslaut-b", "auslaut-g",
   "r-uvular", "sp-st-initial", "ig-ending", "double-consonant", "z", "v-f",
+  "w-v", "ie-short", "ng-velar", // D191 (N-002 — قرار المالك D182): w=[v] · «ie» قصيرة · [ŋ] في ‑ng وقبل k
 ]);
 export type PhoneticRisk = z.infer<typeof PhoneticRisk>;
 
@@ -39,6 +40,7 @@ export const Word = SchemaVersioned.extend({
   /** التحديد الكامل عند الاسم: der Tisch (لا الجنس مفرداً — بطاقة الجنس v6.1) */
   article: z.string().optional(),
   gender: Gender.default("none"),
+
   /** الجمع (German plural) */
   plural: z.string().optional(),
   /** ملاحظة الجمع الاحتمالية (شفرة الجمع) */
@@ -53,6 +55,10 @@ export const Word = SchemaVersioned.extend({
       perfekt: z.string().optional(),
       imperative: z.string().optional(),
       konjunktivII: z.string().optional(),
+      /** D188: جذع صريح للفعل القصير الذي لا يُشتق جذعه بقصّ ‑en (tun ⇒ tu) — حارس الجبهة يقبل عليه نهايات الفعل */
+      stem: z.string().regex(/^\p{Ll}+$/u).optional(),
+      /** D188: صيغ التصريف المعلنة لأدوات/ضمائر (jeder ⇒ jede · jedes · jeden · jedem) — بدل قائمة ضمنية في الكود */
+      declined: z.array(z.string().regex(/^\p{Ll}+$/u)).optional(),
     })
     .optional(),
   /** أعلام الخطر */
@@ -90,3 +96,14 @@ export const Word = SchemaVersioned.extend({
   cefr: CefrTag.optional(),
 });
 export type Word = z.infer<typeof Word>;
+
+/**
+ * N-137 (D230): أسماء عارية الاستعمال بجنس نحوي — البلدان بلا أداة (aus Frankreich) واللغات (Ich spreche
+ * Deutsch) ما عدا المؤنث/الجمع (die Türkei · die Schweiz · die Niederlande). بلا article عمداً (البطاقة
+ * والصوت عاريان) مع إبقاء gender النحوي (das — حقيقة يحتاجها النعت: das schöne Frankreich). النمو حصراً
+ * بإعلان هنا (الحارس والاختبار يقرآنه).
+ */
+export const BARE_ARTICLE_IDS: ReadonlySet<string> = new Set([
+  "aegypten", "arabisch", "deutsch", "englisch", "europa", "frankreich", "franzoesisch", "griechenland",
+  "italien", "marokko", "oesterreich", "polen", "portugal", "russland", "spanien",
+]);

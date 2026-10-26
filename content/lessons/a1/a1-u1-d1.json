@@ -6,7 +6,7 @@
   "day": 1,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst dich vorstellen: Name, Herkunft, Begrüßung.",
+    "de": "Hallo! Ich heiße Yusuf. Ich komme aus Tunesien. — Guten Tag, Lena!",
     "ar": "تستطيع تقديم نفسك: الاسم، الأصل، التحية."
   },
   "canDoDaily": [
@@ -54,14 +54,13 @@
       "tunesien",
       "deutschland",
       "neu",
-      "wie-viel"
+      "wie-viel",
+      "gut"
     ],
     "grammarArsenalIds": [
       "ars-sein"
     ],
-    "storySentenceIds": [
-      "story-a1-u1-s1"
-    ],
+    "storySentenceIds": [],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "auslaut-g",
@@ -95,6 +94,11 @@
             "q": "Sie ___ aus Tunesien. (حضرتك)",
             "a": "sind",
             "why": "Sie بحرف كبير = حضرتك (احترام) وفعلها sind. لا تخلطها بـ sie الصغيرة (هي) التي فعلها ist."
+          },
+          {
+            "q": "Wie geht's? — Danke, ___.",
+            "a": "gut",
+            "why": "الجواب القصير على «كيف الحال؟» هو gut وحدها بعد Danke — لا تحتاج جملة كاملة. العربية تقول «بخير» والألمانية gut (الحرف u طويل: «غوت»)."
           }
         ],
         "interleavedWith": [],
@@ -218,11 +222,11 @@
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Sich vorstellen",
+        "de": "Hallo! Ich heiße … Ich komme aus …",
         "ar": "تقديم النفس"
       },
       "situation": {
-        "de": "Am ersten Arbeitstag",
+        "de": "Yusuf ist neu: Guten Tag! Wie geht's?",
         "ar": "في أول يوم عمل"
       },
       "successCriteria": [
@@ -406,7 +410,7 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Du hast dich vorgestellt: Begrüßung, Name, Herkunft.",
+      "de": "Hallo! · Ich heiße Yusuf. · Ich komme aus Tunesien. · Ich wohne in Tunis. · Tschüss!",
       "ar": "قدمت نفسك: تحية، اسم، أصل."
     },
     "warningCards": [
@@ -473,13 +477,13 @@
       "tunesien",
       "deutschland",
       "neu",
-      "wie-viel"
+      "wie-viel",
+      "gut"
     ]
   },
   "gReferences": {
     "duden": [
-      "https://www.duden.de/rechtschreibung/hallo",
-      "https://www.duden.de/rechtschreibung/heissen"
+      "https://www.duden.de/rechtschreibung/hallo"
     ],
     "wiktionary": [
       "https://de.wiktionary.org/wiki/hei%C3%9Fen"
@@ -506,7 +510,8 @@
     "word-tunesien",
     "word-deutschland",
     "word-neu",
-    "word-wie-viel"
+    "word-wie-viel",
+    "word-gut"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {

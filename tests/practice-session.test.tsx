@@ -2,7 +2,7 @@
 // المنطق خالص (Node) + رسم ثابت للواجهة: لا «لماذا» ولا إجابة قبل المحاولة (F121) · بلا لوم (D23).
 import { describe, it, expect } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
-import { GrammarRuleFile, type Lesson } from "../content/schemas/index.js";
+import { BuildSentenceItem, GrammarRuleFile, type Lesson } from "../content/schemas/index.js";
 import {
   checkAttempt, initialPractice, nextItem, normalizeAnswer, submitAttempt, toTypedItem, type TypedItem,
 } from "../src/lib/practice-session.js";
@@ -10,7 +10,11 @@ import { ruleFromShufra, startDiscovery, viewExamples, submitInference, revealRu
 import { hasBlame } from "../src/lib/warmth-engine.js";
 import { LearnStation, PracticeStation, RuleDiscoveryView } from "../src/components/LessonContent.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
-import { firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const firstLessonWords = __FIRST.direct;
+
 
 const WHY = "لأن الفعل مع ich ينتهي بـ ‑e";
 const typed = (type: Parameters<typeof toTypedItem>[0], raw: unknown) => {
@@ -140,6 +144,7 @@ describe("محطة التدريب في الواجهة", () => {
   const practice = (items: unknown[], type: Lesson["uebung"]["stations"][number]["type"]) => ({
     stations: [{ type, items: items as Record<string, unknown>[], interleavedWith: [], explanationRequired: true }],
     communicativeTask: firstLesson.uebung.communicativeTask,
+    dialogues: [],
   });
   it("بند مُنمَّط: السؤال وطريقة الإجابة ظاهران — لا why ولا الإجابة قبل المحاولة (F121)", () => {
     const html = renderToStaticMarkup(<PracticeStation data={practice([{ q: "Ich ___ Yusuf.", a: "heiße", why: WHY }], "gap-fill")} />);
@@ -161,5 +166,30 @@ describe("محطة التدريب في الواجهة", () => {
     const html = renderToStaticMarkup(<PracticeStation data={practice([{ q: "«طاب يومك»؟", a: "Guten Tag" }], "choice")} />);
     expect(html).toContain('data-testid="practice-reveal"');
     expect(html).not.toContain("Guten Tag");
+  });
+});
+
+describe("N-055 (D229) — الترتيب الثاني المصرَّح به مقبول (accept)", () => {
+  it("المحرّك: الترتيبان صحيحان · وغيرهما ليس بعد", () => {
+    // تبديل وسطي بالبطاقات نفسها حرفياً (TEKAMOLO) — الحرف الكبير يمنع عادةً ترتيباً ثانياً في الأول (D130)
+    const o = typed("build-sentence", {
+      tokens: ["Stadt.", "heute", "Ich", "in", "mit", "die", "dem", "Bus", "fahre"], // غير مرتبة سلفاً (شرط المخطط)
+      a: "Ich fahre heute mit dem Bus in die Stadt.",
+      accept: ["Ich fahre mit dem Bus heute in die Stadt."],
+      why: WHY,
+    });
+    expect(o).toMatchObject({ kind: "order", accept: ["Ich fahre mit dem Bus heute in die Stadt."] });
+    expect(checkAttempt(o, ["Ich", "fahre", "heute", "mit", "dem", "Bus", "in", "die", "Stadt."]).status).toBe("correct");
+    expect(checkAttempt(o, ["Ich", "fahre", "mit", "dem", "Bus", "heute", "in", "die", "Stadt."]).status).toBe("correct");
+    expect(checkAttempt(o, ["Heute", "fahre", "ich", "mit", "dem", "Bus", "in", "die", "Stadt."]).status).toBe("retry"); // ليست من البطاقات
+  });
+
+  it("المخطط: accept من البطاقات نفسها حرفياً · ولا يكرر الإجابة · ولا يكرر نفسه", () => {
+    const base = { tokens: ["bin", "Ich", "neu."], a: "Ich bin neu.", why: WHY };
+    expect(BuildSentenceItem.safeParse({ ...base, accept: ["Ich neu. bin"] }).success).toBe(true);
+    expect(BuildSentenceItem.safeParse({ ...base, accept: ["Ich bin müde."] }).success).toBe(false); // ليست من البطاقات
+    expect(BuildSentenceItem.safeParse({ ...base, accept: ["Ich bin neu."] }).success).toBe(false); // تكرار الإجابة
+    expect(BuildSentenceItem.safeParse({ ...base, accept: ["Ich neu. bin", "Ich neu. bin"] }).success).toBe(false); // تكرار نفسه
+    expect(BuildSentenceItem.safeParse(base).success).toBe(true); // اختياري — الـ390 بنداً بلا accept صالحة
   });
 });

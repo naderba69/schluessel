@@ -5,7 +5,11 @@ import { QuizStation } from "../src/components/QuizStation.js";
 import { LessonSession } from "../src/components/LessonSession.js";
 import { FirstLessonScreen } from "../src/components/FirstRun.js";
 import { GERMAN_KEYS, UmlautKeys } from "../src/components/LessonContent.js";
-import { firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const firstLessonWords = __FIRST.direct;
+
 
 const noop = () => {};
 
@@ -71,5 +75,43 @@ describe("التهيئة والأحرف الخاصة", () => {
     const html = renderToStaticMarkup(<UmlautKeys onInsert={noop} />);
     for (const ch of GERMAN_KEYS) expect(html).toContain(`>${ch}</button>`);
     expect(GERMAN_KEYS).toHaveLength(7);
+  });
+});
+
+describe("N-006 (D228) — الاستئناف: الاختبار من لقطته والمحطة من موضعها", () => {
+  const v0 = firstLesson.quiz.variants[0]!;
+
+  it("QuizStation: لقطة وسط المحاولة ← شاشة الإجابة عند البند المحفوظ لا من الأول", () => {
+    const html = renderToStaticMarkup(
+      <QuizStation
+        lesson={firstLesson}
+        priorAttempts={0}
+        onAttemptComplete={noop}
+        initialQuiz={{ variantIndex: 0, predicted: 80, answers: [{ given: "x", verdict: "wrong" }], cursor: 1 }}
+      />,
+    );
+    expect(html).toContain('data-phase="answer"');
+    expect(html).toContain(v0.items[1]!.q);
+    expect(html).not.toContain(v0.items[0]!.q);
+  });
+
+  it("QuizStation: لقطة محاولة مكتملة راسبة ← النتيجة مع زر الإعادة (لا عطل على بند معدوم)", () => {
+    const answers = v0.items.map(() => ({ given: "", verdict: "wrong" as const }));
+    const html = renderToStaticMarkup(
+      <QuizStation
+        lesson={firstLesson}
+        priorAttempts={0}
+        onAttemptComplete={noop}
+        initialQuiz={{ variantIndex: 0, predicted: 90, answers, cursor: v0.items.length }}
+      />,
+    );
+    expect(html).toContain('data-phase="result"');
+    expect(html).toContain('data-passed="no"');
+    expect(html).toContain('data-testid="quiz-retry"');
+  });
+
+  it("LessonSession: initialStation تقفز للاستئناف (حالة أولية — لا كسر لقفل الاتجاه بعده)", () => {
+    const html = renderToStaticMarkup(<LessonSession done={{ recall: true, learn: true }} initialStation="practice" />);
+    expect(html).toContain('data-station="practice"');
   });
 });

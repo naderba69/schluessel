@@ -1,0 +1,711 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "a1-u13-d4",
+ "level": "A1",
+ "unit": 13,
+ "day": 4,
+ "kind": "content",
+ "ziel": {
+  "de": "Du verstehst das Café, das Lokal und die Einladung zum Grillen: Kaffee und Kuchen draußen · der Kellner empfiehlt · Zigaretten und Feuer. · Herzlich willkommen! · Was empfiehlst du mir?",
+  "ar": "تفهم المقهى والمطعم الصغير ودعوة الشواء: القهوة والكعكة في الخارج · النادل يوصي بالطبق · الفطور حتى ساعة معينة · السجائر والولّاعة · «أهلاً وسهلاً» و«عفواً» و«أشكرك» — ولا يُطلب منك إنتاج هذه الكلمات (تكملة SD1 للفهم)."
+ },
+ "canDoDaily": [
+  "يفهم نص مقهى أو مطعم (Café · Lokal · Kaffee und Kuchen · Frühstück bis …) ويعرف المطلوب.",
+  "يتعرّف على empfehlen وanbieten وgrillen وdanken وentschuldigen وHerzlich willkommen في مكالمة أو رسالة."
+ ],
+ "warmup": {
+  "cardIds": [
+   "garten",
+   "kuchen",
+   "nachbar"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "de": "«Herzlich willkommen!» — ماذا يعني؟ (تخمين فقط)"
+    },
+    "choices": [
+     "أهلاً وسهلاً",
+     "مع السلامة",
+     "شكراً"
+    ],
+    "answer": "أهلاً وسهلاً",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "ما كلمات المقهى التي تعرفها؟ (Kaffee · Tee · Kuchen · Kellner · bitte · danke)",
+   "أين تجلس في الصيف — في الداخل أم في الخارج؟ اليوم تضيف للفهم: draußen."
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "cafe",
+   "lokal",
+   "empfehlen",
+   "anbieten",
+   "grillen",
+   "draussen",
+   "blume",
+   "baum",
+   "zigarette",
+   "feuer",
+   "danken",
+   "entschuldigen",
+   "willkommen",
+   "herzlich"
+  ],
+  "grammarArsenalIds": [
+   "ars-praesens-unregelm"
+  ],
+  "storySentenceIds": [
+   "story-a1-u13-s4"
+  ],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "ch-ich-laut",
+   "double-consonant",
+   "ng-velar",
+   "r-uvular",
+   "vowel-long-short",
+   "w-v",
+   "z"
+  ]
+ },
+ "uebung": {
+  "stations": [
+   {
+    "type": "reading",
+    "items": [
+     {
+      "text": "Café Sonne: Kaffee und Kuchen · Tee 2 Euro · Frühstück bis 11 Uhr · Montag geschlossen",
+      "q": "Richtig oder falsch? Am Montag ist das Café geschlossen.",
+      "choices": [
+       "Richtig",
+       "Falsch"
+      ],
+      "a": "Richtig",
+      "why": "Montag geschlossen — المقهى مغلق يوم الاثنين؛ الفطور حتى الساعة 11 فقط."
+     },
+     {
+      "text": "Lokal Schmidt: Fisch mit Kartoffeln 9 Euro · Wurst mit Brot 5 Euro · Salat 4 Euro",
+      "q": "Was kostet 9 Euro?",
+      "choices": [
+       "Fisch mit Kartoffeln",
+       "Wurst mit Brot",
+       "Salat"
+      ],
+      "a": "Fisch mit Kartoffeln",
+      "why": "Fisch mit Kartoffeln = 9 Euro — السمك مع البطاطا هو الطبق الأغلى."
+     },
+     {
+      "text": "Hallo Yusuf, danke für die Blumen! Die Blumen sind sehr schön. Lena",
+      "q": "Was ist sehr schön?",
+      "choices": [
+       "die Blumen",
+       "der Kuchen",
+       "die Bäume"
+      ],
+      "a": "die Blumen",
+      "why": "Die Blumen sind sehr schön — الزهور جميلة؛ لينا تشكر يوسف عليها."
+     },
+     {
+      "text": "Bitte nicht rauchen! Zigaretten und Feuer — nur draußen, bitte.",
+      "q": "Was ist hier nicht gut?",
+      "choices": [
+       "Rauchen",
+       "Essen",
+       "Trinken"
+      ],
+      "a": "Rauchen",
+      "why": "Bitte nicht rauchen — التدخين ممنوع هنا؛ السجائر والولّاعة (Feuer) في الخارج فقط."
+     },
+     {
+      "text": "Wir grillen am Samstag im Garten! Kommt alle — Wurst und Gemüse sind da. Herzlich willkommen! Familie Yılmaz",
+      "q": "Was machen sie am Samstag?",
+      "choices": [
+       "Sie grillen im Garten",
+       "Sie essen im Lokal",
+       "Sie trinken Kaffee"
+      ],
+      "a": "Sie grillen im Garten",
+      "why": "Wir grillen am Samstag im Garten — شواء يوم السبت في الحديقة؛ الجميع مرحَّب به."
+     },
+     {
+      "text": "Hallo Ayşe, ich danke dir für deine Hilfe! Der Kuchen war super. Bis bald, Lena",
+      "q": "Warum dankt Lena?",
+      "choices": [
+       "للمساعدة",
+       "للنقود",
+       "للدعوة"
+      ],
+      "a": "للمساعدة",
+      "why": "Ich danke dir für deine Hilfe — لينا تشكر عائشة على المساعدة (وليس على الكعكة)."
+     },
+     {
+      "text": "Im Park: Bitte keine Blumen aus dem Garten nehmen! Die Bäume sind alt. Danke!",
+      "q": "Richtig oder falsch? Die Blumen aus dem Garten sind für alle.",
+      "choices": [
+       "Falsch",
+       "Richtig"
+      ],
+      "a": "Falsch",
+      "why": "Bitte keine Blumen nehmen — لا تأخذ الزهور من الحديقة؛ الأشجار (Bäume) قديمة."
+     }
+    ],
+    "interleavedWith": [
+     "sonne",
+     "kaffee",
+     "kuchen",
+     "fruehstueck",
+     "fisch",
+     "kartoffel",
+     "wurst",
+     "brot",
+     "salat",
+     "euro",
+     "garten",
+     "samstag",
+     "familie",
+     "hilfe",
+     "park",
+     "rauchen"
+    ]
+   },
+   {
+    "type": "listening",
+    "items": [
+     {
+      "audioId": "es-1",
+      "speakText": "Hallo, Lena! Ich sitze im Café — draußen, die Sonne scheint.",
+      "q": "أين يجلس يوسف؟",
+      "choices": [
+       "في المقهى في الخارج",
+       "في البيت",
+       "في الحديقة"
+      ],
+      "a": "في المقهى في الخارج",
+      "why": "Ich sitze im Café — draußen — يجلس في المقهى في الخارج والشمس مشرقة."
+     },
+     {
+      "audioId": "es-3",
+      "speakText": "Nein, mit Ayşe. Das Café ist neu, und der Kellner hat uns den Kuchen empfohlen.",
+      "q": "ماذا أوصى به النادل؟",
+      "choices": [
+       "الكعكة",
+       "السمك",
+       "القهوة"
+      ],
+      "a": "الكعكة",
+      "why": "hat uns den Kuchen empfohlen — النادل أوصى بالكعكة (empfehlen)."
+     },
+     {
+      "audioId": "es-5",
+      "speakText": "Sehr gut! Sie bieten auch Frühstück an — bis 14 Uhr.",
+      "q": "حتى أي ساعة يقدّمون الفطور؟",
+      "choices": [
+       "حتى الثانية",
+       "حتى العاشرة",
+       "حتى السادسة"
+      ],
+      "a": "حتى الثانية",
+      "why": "bieten … an = يقدّمون؛ Frühstück bis 14 Uhr — الفطور حتى الثانية ظهراً."
+     },
+     {
+      "audioId": "es-7",
+      "speakText": "Grillen! Das machen wir in Tunis auch oft — draußen, unter den Bäumen.",
+      "q": "أين يشوون في تونس؟",
+      "choices": [
+       "في الخارج تحت الأشجار",
+       "في المطبخ",
+       "في المطعم"
+      ],
+      "a": "في الخارج تحت الأشجار",
+      "why": "draußen, unter den Bäumen — في الخارج تحت الأشجار."
+     },
+     {
+      "audioId": "es-10",
+      "speakText": "Ja, Frau Keller bringt immer Blumen aus ihrem Garten. Meine Mutter dankt ihr jedes Mal.",
+      "q": "ماذا تحضر السيدة كيلر؟",
+      "choices": [
+       "زهوراً من حديقتها",
+       "كعكة",
+       "سمكاً"
+      ],
+      "a": "زهوراً من حديقتها",
+      "why": "bringt immer Blumen — تحضر الزهور دائماً؛ الأم تشكرها (dankt ihr) كل مرة."
+     },
+     {
+      "audioId": "es-13",
+      "speakText": "Er hat gefragt: Entschuldigen Sie, haben Sie Feuer? Ich habe gesagt: Nein, ich rauche nicht.",
+      "q": "ماذا سأل الرجل؟",
+      "choices": [
+       "هل معك ولّاعة؟",
+       "كم الساعة؟",
+       "أين المقهى؟"
+      ],
+      "a": "هل معك ولّاعة؟",
+      "why": "Haben Sie Feuer؟ — هل معك ولّاعة؟ (Feuer هنا = ولّاعة)؛ يوسف لا يدخّن."
+     },
+     {
+      "audioId": "es-17",
+      "speakText": "Genau. Und was empfiehlst du mir für heute Abend? Ein Lokal?",
+      "q": "ماذا يسأل يوسف لينا؟",
+      "choices": [
+       "بماذا تنصحينه للمساء",
+       "أين تسكن",
+       "ماذا تأكل"
+      ],
+      "a": "بماذا تنصحينه للمساء",
+      "why": "Was empfiehlst du mir؟ — بماذا تنصحينني؟ (empfiehlst: e ← ie مع du)."
+     }
+    ],
+    "interleavedWith": [
+     "sonne",
+     "kellner",
+     "kuchen",
+     "garten",
+     "rauchen",
+     "abend"
+    ]
+   },
+   {
+    "type": "match",
+    "items": [
+     {
+      "pairs": [
+       {
+        "de": "das Café",
+        "ar": "المقهى"
+       },
+       {
+        "de": "das Lokal",
+        "ar": "المطعم الصغير"
+       },
+       {
+        "de": "draußen",
+        "ar": "في الخارج"
+       },
+       {
+        "de": "der Baum",
+        "ar": "الشجرة"
+       },
+       {
+        "de": "die Blume",
+        "ar": "الزهرة"
+       }
+      ],
+      "why": "الأماكن: Café مقهى (das) · Lokal مطعم صغير · draußen في الخارج (بلا أداة) · Baum شجرة (جمع Bäume) · Blume زهرة."
+     },
+     {
+      "pairs": [
+       {
+        "de": "empfehlen",
+        "ar": "ينصح بـ"
+       },
+       {
+        "de": "anbieten",
+        "ar": "يعرض"
+       },
+       {
+        "de": "grillen",
+        "ar": "يشوي"
+       },
+       {
+        "de": "danken",
+        "ar": "يشكر"
+       },
+       {
+        "de": "entschuldigen",
+        "ar": "يعتذر (عفواً)"
+       }
+      ],
+      "why": "الأفعال: empfehlen يوصي (empfiehlst!) · anbieten يعرض (bieten … an) · grillen يشوي · danken يشكر (+Dativ) · entschuldigen يعتذر."
+     },
+     {
+      "pairs": [
+       {
+        "de": "die Zigarette",
+        "ar": "السيجارة"
+       },
+       {
+        "de": "das Feuer",
+        "ar": "النار (الولّاعة)"
+       },
+       {
+        "de": "willkommen",
+        "ar": "أهلاً وسهلاً"
+       },
+       {
+        "de": "herzlich",
+        "ar": "من القلب"
+       }
+      ],
+      "why": "أربع للمواقف: Zigarette سيجارة · Feuer نار — و«Haben Sie Feuer؟» = هل معك ولّاعة؟ · Herzlich willkommen = أهلاً وسهلاً."
+     }
+    ],
+    "interleavedWith": []
+   },
+   {
+    "type": "dictation",
+    "items": [
+     {
+      "audioId": "es-9",
+      "speakText": "Bringen die Nachbarn Blumen mit?",
+      "a": "Bringen die Nachbarn Blumen mit?",
+      "why": "Bringen وNachbarn وBlumen بحرف كبير (أول الجملة أسماء) · Blumen بـBl ثم men."
+     },
+     {
+      "audioId": "es-15",
+      "speakText": "Sehr teuer! Am Kiosk kosten Zigaretten acht Euro.",
+      "a": "Sehr teuer! Am Kiosk kosten Zigaretten acht Euro.",
+      "why": "Zigaretten بـZ كبيرة وtt في الوسط · Kiosk بـK · acht بـch."
+     },
+     {
+      "audioId": "es-16",
+      "speakText": "Acht Euro! Für acht Euro bekommst du vier Stück Kuchen.",
+      "a": "Acht Euro! Für acht Euro bekommst du vier Stück Kuchen.",
+      "why": "Für بـF كبيرة أول الجملة وü · Stück بـü وck · Kuchen بـK."
+     },
+     {
+      "audioId": "es-20",
+      "speakText": "Danke! Und Ayşe ist bei uns herzlich willkommen — im Sommer, in der Schweiz!",
+      "a": "Danke! Und Ayşe ist bei uns herzlich willkommen — im Sommer, in der Schweiz!",
+      "why": "Schweiz بـSch وz · willkommen بلامين · Sommer بميمين."
+     }
+    ],
+    "interleavedWith": [
+     "nachbar",
+     "kiosk",
+     "euro",
+     "kuchen",
+     "stueck",
+     "sommer"
+    ]
+   }
+  ],
+  "communicativeTask": {
+   "goal": {
+    "de": "Lies den Text vom Lokal und die Nachricht von Lena und sag: Was kostet der Fisch? Was bringt Frau Keller mit? — Fisch mit Kartoffeln 9 Euro. Blumen aus dem Garten.",
+    "ar": "اقرأ نص المطعم ورسالة لينا وأجب بالعربية أو بألمانية بسيطة: كم سعر السمك؟ ماذا تحضر السيدة كيلر؟ — هدفك أن تفهم، لا أن تكتب بنفسك."
+   },
+   "situation": {
+    "de": "Du bist im Café. Ein Freund fragt: Was kostet das? Was empfiehlt der Kellner? Du hast den Text gelesen und antwortest kurz.",
+    "ar": "أنت في المقهى. صديق يسأل: كم هذا؟ بماذا يوصي النادل؟ قرأت النص وتجيب باختصار."
+   },
+   "successCriteria": [
+    "يقرأ السعر والوقت من نص مقهى أو مطعم",
+    "يعرف أن «Haben Sie Feuer؟» سؤال عن الولّاعة",
+    "يميّز empfehlen (يوصي) من anbieten (يعرض) وdanken (شكر) من entschuldigen (اعتذار)"
+   ]
+  }
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«Das Café ist neu.» — Wie ist das Café?",
+      "choices": [
+       "جديد",
+       "قديم",
+       "غالٍ"
+      ],
+      "a": "جديد",
+      "why": "neu = جديد؛ das Café = المقهى."
+     },
+     {
+      "q": "«Sie bieten Frühstück an.» — Was bieten sie an?",
+      "choices": [
+       "الفطور",
+       "الغداء",
+       "العشاء"
+      ],
+      "a": "الفطور",
+      "why": "bieten … an = يقدّمون؛ Frühstück = الفطور."
+     },
+     {
+      "q": "«Zigaretten sind teuer.» — Was ist teuer?",
+      "choices": [
+       "السجائر",
+       "الزهور",
+       "الكعك"
+      ],
+      "a": "السجائر",
+      "why": "Zigaretten sind teuer — السجائر غالية."
+     },
+     {
+      "q": "«Der Kellner empfiehlt den Fisch.» — Was empfiehlt er?",
+      "choices": [
+       "السمك",
+       "اللحم",
+       "السلطة"
+      ],
+      "a": "السمك",
+      "why": "empfiehlt (er: e ← ie) — يوصي؛ den Fisch = السمك."
+     },
+     {
+      "q": "«Kommt in den Garten!» — Wer kommt?",
+      "choices": [
+       "أنتم (الضيوف)",
+       "أنا",
+       "هو"
+      ],
+      "a": "أنتم (الضيوف)",
+      "why": "Kommt! = تعالوا — أمر موجَّه للجمع (ihr)."
+     },
+     {
+      "q": "«Herzlich willkommen!» — Was sagt sie?",
+      "choices": [
+       "أهلاً وسهلاً من القلب",
+       "مع السلامة",
+       "عفواً"
+      ],
+      "a": "أهلاً وسهلاً من القلب",
+      "why": "Herzlich willkommen = أهلاً وسهلاً — ترحيب حار."
+     }
+    ]
+   },
+   {
+    "items": [
+     {
+      "q": "«Wir essen draußen.» — Wo essen sie nicht?",
+      "choices": [
+       "في البيت",
+       "في الخارج",
+       "في الحديقة"
+      ],
+      "a": "في البيت",
+      "why": "draußen = في الخارج — فهم لا يأكلون في البيت."
+     },
+     {
+      "q": "«Die Bäume sind alt.» — Was ist alt?",
+      "choices": [
+       "الأشجار",
+       "الزهور",
+       "البيوت"
+      ],
+      "a": "الأشجار",
+      "why": "die Bäume (جمع Baum) = الأشجار؛ alt = قديم."
+     },
+     {
+      "q": "«Ich danke dir.» — Was sagt er?",
+      "choices": [
+       "أشكرك",
+       "أراك لاحقاً",
+       "أنا آسف"
+      ],
+      "a": "أشكرك",
+      "why": "Ich danke dir — أشكرك (danken + Dativ: dir)."
+     },
+     {
+      "q": "«Entschuldigen Sie!» — Was sagt er?",
+      "choices": [
+       "عفواً (اعتذار)",
+       "صباح الخير",
+       "مساء الخير"
+      ],
+      "a": "عفواً (اعتذار)",
+      "why": "Entschuldigen Sie = عفواً/المعذرة."
+     },
+     {
+      "q": "«Das Lokal ist gut.» — Wie ist das Lokal?",
+      "choices": [
+       "جيد",
+       "سيئ",
+       "بعيد"
+      ],
+      "a": "جيد",
+      "why": "gut = جيد؛ das Lokal = المطعم الصغير."
+     },
+     {
+      "q": "«Wir grillen Wurst.» — Was grillen sie?",
+      "choices": [
+       "النقانق",
+       "الخبز",
+       "الجبن"
+      ],
+      "a": "النقانق",
+      "why": "grillen = يشوي؛ Wurst = نقانق/سجق."
+     }
+    ]
+   },
+   {
+    "items": [
+     {
+      "q": "«Die Blumen sind schön.» — Was ist schön?",
+      "choices": [
+       "الزهور",
+       "الأشجار",
+       "الغيوم"
+      ],
+      "a": "الزهور",
+      "why": "die Blumen = الزهور."
+     },
+     {
+      "q": "«Haben Sie Feuer?» — Was will der Mann?",
+      "choices": [
+       "ولّاعة لسيجارته",
+       "سيجارة",
+       "قهوة"
+      ],
+      "a": "ولّاعة لسيجارته",
+      "why": "Feuer هنا = ولّاعة (وليس حريقاً)."
+     },
+     {
+      "q": "«Ich rauche nicht.» — Was sagt er?",
+      "choices": [
+       "أنا لا أدخّن",
+       "أنا أدخّن كثيراً",
+       "أنا جائع"
+      ],
+      "a": "أنا لا أدخّن",
+      "why": "rauchen = يدخّن؛ nicht = النفي."
+     },
+     {
+      "q": "«Meine Mutter dankt ihr.» — الأم تشكر مَن؟",
+      "choices": [
+       "لها (للجارة)",
+       "له (للجار)",
+       "لي"
+      ],
+      "a": "لها (للجارة)",
+      "why": "dankt ihr — تشكرها (Dativ: ihr = لها)."
+     },
+     {
+      "q": "«Was empfiehlst du?» — Was fragt er?",
+      "choices": [
+       "بماذا تنصح",
+       "ماذا تأكل",
+       "أين تسكن"
+      ],
+      "a": "بماذا تنصح",
+      "why": "empfiehlst (e ← ie مع du) — تنصح/توصي."
+     },
+     {
+      "q": "«Viel Spaß beim Grillen!» — Was sagt er?",
+      "choices": [
+       "أتمنى لك وقتاً ممتعاً في الشواء",
+       "حظاً سعيداً في الامتحان",
+       "شفاك الله"
+      ],
+      "a": "أتمنى لك وقتاً ممتعاً في الشواء",
+      "why": "Viel Spaß! = أتمنى لك المتعة؛ beim Grillen = في الشواء."
+     }
+    ]
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Im Café und draußen — zum Verstehen: das Café · das Lokal · empfehlen (empfiehlst · empfiehlt) · anbieten (bieten … an) · grillen · draußen · die Blume (die Blumen) · der Baum (die Bäume) · die Zigarette · das Feuer (Haben Sie Feuer?) · danken (danke dir) · entschuldigen (Entschuldigen Sie!) · willkommen · herzlich (Herzlich willkommen!).",
+   "ar": "درس للفهم لا للإنتاج (تكملة SD1): المقهى والمطعم · يوصي ويعرض ويشوي · في الخارج · الزهرة والشجرة · السيجارة والنار/الولّاعة · يشكر ويعتذر · أهلاً وسهلاً من القلب."
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "de": "~~Was du mir empfiehlst?~~ · ~~Für heute Abend du empfiehlst was?~~",
+     "ar": "الفعل ثانياً دائماً — لا ترتّب ألمانيتك عربياً."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: في العربية الفعل قد يتأخر («بماذا تنصحني» الفعل آخراً) فيرتّب المتعلم الألمانية عربياً. القاعدة: الفعل المصريف ثانياً دائماً — Was empfiehlst du mir؟",
+    "correct": {
+     "de": "Was empfiehlst du mir? · Für heute Abend: ein Lokal?",
+     "ar": "بماذا تنصحني؟ · للمساء: مطعم صغير؟"
+    },
+    "exercise": {
+     "q": "Was ___ du mir? (empfiehlst / empfehlen)",
+     "a": "empfiehlst"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Haben Sie Feuer? = هل عندكم حريق؟~~",
+     "ar": "Feuer = نار، لكن «Haben Sie Feuer؟» سؤال عن الولّاعة."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: المتعلم يحفظ Feuer = نار فيسمع السؤال ويفهم حريقاً! في الحياة: المدخّن يسأل عن ولّاعة لسيجارته — والجواب «Nein, ich rauche nicht» يكفي.",
+    "correct": {
+     "de": "Haben Sie Feuer? — Nein, ich rauche nicht.",
+     "ar": "هل معك ولّاعة؟ — لا، أنا لا أدخّن."
+    },
+    "exercise": {
+     "q": "«Haben Sie Feuer?» — Was will der Mann? (eine Zigarette / Feuer für die Zigarette)",
+     "a": "Feuer für die Zigarette"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Ich danke dich.~~ · ~~Ich danke Sie.~~",
+     "ar": "danken يأخذ Dativ: dir · Ihnen — لا dich · Sie."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية «أشكرك» بلا حالة ظاهرة، والألمانية تفرض Dativ مع danken: dich تنقلب إلى dir وSie إلى Ihnen. في الفهم: سمعت danke dir أو danke Ihnen فاعرف أنه شكر.",
+    "correct": {
+     "de": "Ich danke dir für deine Hilfe. · Ich danke Ihnen.",
+     "ar": "أشكرك على مساعدتك. · أشكركم."
+    },
+    "exercise": {
+     "q": "Ich danke ___ für die Hilfe. (dir / dich)",
+     "a": "dir"
+    }
+   }
+  ],
+  "srsBundleWordIds": [
+   "cafe",
+   "lokal",
+   "empfehlen",
+   "anbieten",
+   "grillen",
+   "draussen",
+   "blume",
+   "baum",
+   "zigarette",
+   "feuer",
+   "danken",
+   "entschuldigen",
+   "willkommen",
+   "herzlich"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-praesens-unregelm"
+ ],
+ "audioManifestRefs": [
+  "word-cafe",
+  "word-lokal",
+  "word-empfehlen",
+  "word-anbieten",
+  "word-grillen",
+  "word-draussen",
+  "word-blume",
+  "word-baum",
+  "word-zigarette",
+  "word-feuer",
+  "word-danken",
+  "word-entschuldigen",
+  "word-willkommen",
+  "word-herzlich"
+ ],
+ "imageManifestRefs": [],
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Zigarette",
+   "https://www.duden.de/rechtschreibung/empfehlen",
+   "https://www.duden.de/rechtschreibung/grillen"
+  ],
+  "wiktionary": [
+   "https://de.wiktionary.org/wiki/draußen"
+  ],
+  "goethe": []
+ },
+ "curriculumRef": {
+  "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Café · Draußen) — Ergänzung zum Verstehen, Einheit 13 (D113)",
+  "goetheWordListOverlap": []
+ }
+}

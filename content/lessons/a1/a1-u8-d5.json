@@ -6,31 +6,32 @@
   "day": 5,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst im Geschäft einkaufen und über den Preis verhandeln (von/seit/bei).",
-    "ar": "تشتري وتتفاوض على السعر بجمل الداتيف"
+    "de": "Eine Tüte vom Markt? — Ja, Geschenke! Ich spare seit zwei Monaten. · Bei mir in Tunesien verhandeln wir immer.",
+    "ar": "تقول من أين الشيء وممّن (vom Markt · von mir · die Jacke von Lena) ومنذ متى (seit zwei Monaten · seit einem Jahr) وعند من (bei mir · bei der Bäckerei · beim Bäcker) — ثلاثة حروف جر أخرى بالداتيف دائماً — ومعها كلمات المتجر والهدايا: تتفاوض على السعر، الإيصال والاستبدال، المجوهرات والخاتم والقلادة، الجزمة والموضة، الكيس والهدية، تدّخر، النظارة الشمسية، المخبز والشباك."
   },
   "canDoDaily": [
-    "يشتري ويتفاوض بجمل von/seit/bei + Dativ صحيحة"
+    "يقول من أين وممّن ومنذ متى وعند من: Eine Tüte vom Markt. · Ein Geschenk von mir. · Das ist die Jacke von Lena. · Ich spare seit zwei Monaten. · Ich bin seit einem Jahr nicht zu Hause. · Seit wann lernst du Deutsch? · Ich kaufe den Kuchen bei der Bäckerei. · Bei mir in Tunesien verhandeln wir immer.",
+    "يشتري ويتفاوض في المتجر: Der Verkäufer möchte fünfundzwanzig Euro — ich möchte zwanzig bezahlen. Wir verhandeln. · Der Umtausch ist eine Woche möglich — nur mit Quittung. · Die Kette ist für meine Schwester, der Ring für meine Mutter. · Stiefel sind jetzt Mode. · Die Fahrkarte kaufe ich am Schalter."
   ],
   "warmup": {
     "cardIds": [
-      "preis",
-      "zahlen",
-      "verkaeufer"
+      "markt",
+      "verkaeufer",
+      "bezahlen"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«عند الخبّاز» — beim Bäcker أم bei dem Bäcker? (أيهما صيغة الاندماج؟)"
+          "de": "«منذ شهرين» بالألمانية — أي صيغة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
-          "beim Bäcker (bei + dem = beim)",
-          "bei dem Bäcker فقط (لا اندماج)",
-          "beim Bäckers"
+          "seit zwei Monaten",
+          "seit zwei Monate",
+          "seit zwei Monat"
         ],
-        "answer": "beim Bäcker (bei + dem = beim)",
+        "answer": "seit zwei Monaten",
         "revealNextSession": true
       }
     ],
@@ -60,79 +61,582 @@
       "ars-von-seit-bei"
     ],
     "storySentenceIds": [
-      "story-a8-u8-s5"
+      "story-a1-u8-s5"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "double-consonant",
+      "r-uvular",
+      "sp-st-initial",
+      "umlaut-a",
+      "umlaut-u",
+      "v-f",
+      "vowel-long-short"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أشتري الخبز عند الخبّاز»؟",
-            "a": "Ich kaufe beim Bäcker Brot."
+            "q": "Eine Tüte ___ Markt? (من الـ — كلمة واحدة)",
+            "a": "vom",
+            "why": "von + dem = vom (der Markt) — تُدمج دائماً كـzum وbeim — von = من: المصدر الذي جاء منه الشيء."
           },
           {
-            "q": "«الهدية من عائلتي»؟",
-            "a": "Das Geschenk ist von meiner Familie."
+            "q": "Ein Geschenk ___ mir. (من)",
+            "a": "von",
+            "why": "von + ضمير الداتيف mir = منّي — المرسل والمُهدي."
+          },
+          {
+            "q": "Das ist die Jacke ___ Lena. (سترة لينا)",
+            "a": "von",
+            "why": "von + اسم علم = الإضافة العربية: die Jacke von Lena = سترة لينا."
+          },
+          {
+            "q": "Ich spare ___ zwei Monaten. (منذ)",
+            "a": "seit",
+            "why": "seit = منذ — ما بدأ في الماضي وما زال، والفعل مضارع: spare."
+          },
+          {
+            "q": "Ich bin seit ___ Jahr nicht zu Hause. (الأداة — das Jahr)",
+            "a": "einem",
+            "why": "das Jahr ← seit einem Jahr — النكرة في الداتيف: ein ← einem (المذكر والمحايد)."
+          },
+          {
+            "q": "Ich spare seit zwei ___. (شهرين)",
+            "a": "Monaten",
+            "why": "الجمع في الداتيف يأخذ ‑n: die Monate ← seit zwei Monaten (كـmit den Freunden)."
+          },
+          {
+            "q": "___ wann lernst du Deutsch? (منذ متى)",
+            "a": "Seit",
+            "why": "السؤال عن المدة: Seit wann …? — والجواب بـseit + الداتيف: Seit einem Jahr."
+          },
+          {
+            "q": "Ich kaufe den Kuchen ___ der Bäckerei. (عند)",
+            "a": "bei",
+            "why": "bei = عند (محل/شخص) — وبعدها الداتيف: die Bäckerei ← bei der Bäckerei."
+          },
+          {
+            "q": "Ich kaufe Brot ___ Bäcker. (عند الـ — كلمة واحدة)",
+            "a": "beim",
+            "why": "bei + dem = beim (der Bäcker) — تُدمج دائماً."
+          },
+          {
+            "q": "___ mir in Tunesien verhandeln wir immer. (عندي/عندنا)",
+            "a": "Bei",
+            "why": "bei mir = عندي (في بيتي/في بلدي) — bei + ضمير الداتيف mir."
+          },
+          {
+            "q": "Lena kommt ___ der Schweiz. (من — الأصل)",
+            "a": "aus",
+            "why": "الأصل والخروج من مكان = aus (الدرس السابق: aus der Schweiz) — لا von: von للمصدر والمرسل (vom Markt · von mir)."
+          },
+          {
+            "q": "Wir ___ über den Preis. (نتفاوض)",
+            "a": "verhandeln",
+            "why": "verhandeln = يتفاوض — wir verhandeln · du verhandelst · er verhandelt — وüber den Preis عبارة ثابتة."
+          },
+          {
+            "q": "Der Umtausch ist möglich — nur mit ___. (إيصال)",
+            "a": "Quittung",
+            "why": "die Quittung = الإيصال — ‑ung دائماً die، والجمع ‑en."
+          },
+          {
+            "q": "Die Sonnenbrille passt nicht? Der ___ ist eine Woche möglich. (الاستبدال)",
+            "a": "Umtausch",
+            "why": "der Umtausch = الاستبدال — من um + tauschen (يبدّل)."
+          },
+          {
+            "q": "Eine Kette und ein Ring — der ___ ist vom Markt. (المجوهرات)",
+            "a": "Schmuck",
+            "why": "der Schmuck = المجوهرات — اسم جامد بلا جمع: فعلٌ مفرد ist."
+          },
+          {
+            "q": "Die ___ für meine Schwester kostet zwanzig Euro. (القلادة)",
+            "a": "Kette",
+            "why": "die Kette = القلادة — الجمع die Ketten بـ‑n."
+          },
+          {
+            "q": "Der ___ ist für meine Mutter. (الخاتم)",
+            "a": "Ring",
+            "why": "der Ring = الخاتم — الجمع die Ringe بـ‑e."
+          },
+          {
+            "q": "Es regnet so viel — ich kaufe ___. (جزمة)",
+            "a": "Stiefel",
+            "why": "der Stiefel ← die Stiefel بلا نهاية (‑el) — الزوج بالجمع كـSchuhe."
+          },
+          {
+            "q": "In Tunesien sind Stiefel keine ___. (موضة)",
+            "a": "Mode",
+            "why": "die Mode = الموضة — keine Mode = ليست موضة."
+          },
+          {
+            "q": "Die Fahrkarte kaufe ich am ___ im Bahnhof. (الشباك)",
+            "a": "Schalter",
+            "why": "der Schalter = الشباك (المحطة · البريد · البنك) — am Schalter = عند الشباك — الجمع die Schalter بلا نهاية."
+          },
+          {
+            "q": "Ich ___ seit zwei Monaten für die Geschenke. (أدّخر)",
+            "a": "spare",
+            "why": "sparen = يدّخر — ich spare · du sparst · er spart — وfür + الشيء المدّخر له."
+          },
+          {
+            "q": "Eine ___ für meinen Vater — die Sonne in Tunesien! (نظارة شمسية)",
+            "a": "Sonnenbrille",
+            "why": "die Sonnenbrille — مركّب من Sonne + Brille، والجنس من آخر جزء: die Brille."
+          },
+          {
+            "q": "Den Kuchen für meine Oma kaufe ich bei der ___. (المخبز)",
+            "a": "Bäckerei",
+            "why": "die Bäckerei = المخبز — ‑ei للمحل دائماً die، والنبر على ‑rei — الجمع ‑en."
+          },
+          {
+            "q": "Das ___ für meine Mutter ist ein Ring. (الهدية)",
+            "a": "Geschenk",
+            "why": "das Geschenk = الهدية — الجمع die Geschenke بـ‑e."
+          },
+          {
+            "q": "Eine ___ vom Markt — mit drei Geschenken! (كيس)",
+            "a": "Tüte",
+            "why": "die Tüte = الكيس — الجمع die Tüten — وmit drei Geschenken: الجمع في الداتيف بـ‑n."
           }
         ],
         "interleavedWith": [
-          "baeckerei",
-          "geschenk"
+          "markt",
+          "kaufen",
+          "kuchen",
+          "fahrkarte",
+          "sonne",
+          "regnen",
+          "monat",
+          "jahr",
+          "woche",
+          "brot",
+          "schwester",
+          "mutter",
+          "vater",
+          "oma",
+          "euro",
+          "preis",
+          "passen",
+          "bahnhof",
+          "immer",
+          "nur",
+          "viel",
+          "jacke",
+          "deutsch",
+          "tunesien",
+          "schweiz"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«أسكن هنا منذ ثلاث سنوات»؟",
-            "a": "Ich wohne seit drei Jahren hier."
+            "audioId": "vb-1",
+            "speakText": "Yusuf, was ist das? Eine Tüte vom Markt?",
+            "q": "استمع: ماذا ترى لينا؟",
+            "choices": [
+              "كيساً من السوق",
+              "كيساً من المخبز",
+              "هدية من لينا"
+            ],
+            "a": "كيساً من السوق",
+            "why": "Eine Tüte vom Markt? = كيس من السوق؟ — vom = von dem."
           },
           {
-            "q": "«نتفاوض على السعر»؟",
-            "a": "Wir verhandeln über den Preis."
+            "audioId": "vb-2",
+            "speakText": "Ja! Geschenke für Tunesien. Eine Kette für meine Schwester und eine Sonnenbrille für meinen Vater.",
+            "q": "استمع: ما الهدايا؟ ولمن؟",
+            "choices": [
+              "قلادة لأخته ونظارة شمسية لأبيه",
+              "خاتم لأخته وقلادة لأمه",
+              "نظارة شمسية لأخته وكيس لأبيه"
+            ],
+            "a": "قلادة لأخته ونظارة شمسية لأبيه",
+            "why": "Eine Kette für meine Schwester und eine Sonnenbrille für meinen Vater — für + أكوزاتيف."
+          },
+          {
+            "audioId": "vb-3",
+            "speakText": "Schmuck vom Markt? Ist die Kette teuer?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "هل القلادة غالية",
+              "هل الخاتم غالٍ",
+              "هل السوق بعيد"
+            ],
+            "a": "هل القلادة غالية",
+            "why": "Schmuck vom Markt? Ist die Kette teuer? — der Schmuck = المجوهرات."
+          },
+          {
+            "audioId": "vb-5",
+            "speakText": "Du verhandelst? In der Schweiz verhandeln wir nicht — der Preis ist der Preis.",
+            "q": "استمع: ماذا تقول لينا عن سويسرا؟",
+            "choices": [
+              "لا يتفاوضون — السعر هو السعر",
+              "يتفاوضون دائماً",
+              "يتفاوضون في السوق فقط"
+            ],
+            "a": "لا يتفاوضون — السعر هو السعر",
+            "why": "In der Schweiz verhandeln wir nicht — der Preis ist der Preis. = لا نتفاوض."
+          },
+          {
+            "audioId": "vb-6",
+            "speakText": "Bei mir in Tunesien verhandeln wir immer! Auf dem Markt macht das jeder so.",
+            "q": "استمع: وعند يوسف في تونس؟",
+            "choices": [
+              "يتفاوضون دائماً — في السوق يفعل ذلك الجميع",
+              "لا يتفاوضون أبداً",
+              "يتفاوضون في المحل فقط"
+            ],
+            "a": "يتفاوضون دائماً — في السوق يفعل ذلك الجميع",
+            "why": "Bei mir in Tunesien verhandeln wir immer! = عندنا في تونس نتفاوض دائماً — bei mir = عندي/عندنا."
+          },
+          {
+            "audioId": "vb-7",
+            "speakText": "Und die Sonnenbrille? Ist sie auch vom Markt?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل النظارة أيضاً من السوق",
+              "هل النظارة غالية",
+              "هل النظارة لأمه"
+            ],
+            "a": "هل النظارة أيضاً من السوق",
+            "why": "Ist sie auch vom Markt? = هل هي أيضاً من السوق؟ — vom Markt."
+          },
+          {
+            "audioId": "vb-8",
+            "speakText": "Nein, die ist aus dem Geschäft bei der Bäckerei. Sie kostet dreißig Euro — mit Quittung.",
+            "q": "استمع: من أين النظارة؟ وبكم؟",
+            "choices": [
+              "من المحل عند المخبز — 30 يورو مع إيصال",
+              "من السوق — 30 يورو بلا إيصال",
+              "من المخبز — 13 يورو"
+            ],
+            "a": "من المحل عند المخبز — 30 يورو مع إيصال",
+            "why": "aus dem Geschäft bei der Bäckerei = من المحل عند المخبز · dreißig = 30 · mit Quittung = مع إيصال."
+          },
+          {
+            "audioId": "vb-9",
+            "speakText": "Mit Quittung? Warum?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "لماذا مع إيصال؟",
+              "لماذا من المحل؟",
+              "لماذا 30 يورو؟"
+            ],
+            "a": "لماذا مع إيصال؟",
+            "why": "Mit Quittung? Warum? — die Quittung = الإيصال."
+          },
+          {
+            "audioId": "vb-10",
+            "speakText": "Für den Umtausch. Der Umtausch ist eine Woche möglich — aber nur mit Quittung.",
+            "q": "استمع: لماذا الإيصال؟ وكم مدة الاستبدال؟",
+            "choices": [
+              "للاستبدال — أسبوع، مع الإيصال فقط",
+              "للخصم — أسبوعان",
+              "للاستبدال — شهر، بلا إيصال"
+            ],
+            "a": "للاستبدال — أسبوع، مع الإيصال فقط",
+            "why": "Für den Umtausch. Der Umtausch ist eine Woche möglich — aber nur mit Quittung. — der Umtausch = الاستبدال."
+          },
+          {
+            "audioId": "vb-11",
+            "speakText": "Gut. Und der Ring? Für wen ist der Ring?",
+            "q": "استمع: عمّ يسأل الآن؟",
+            "choices": [
+              "لمن الخاتم",
+              "لمن القلادة",
+              "بكم الخاتم"
+            ],
+            "a": "لمن الخاتم",
+            "why": "Für wen ist der Ring? = لمن الخاتم؟ — wen = مَن (مفعول)."
+          },
+          {
+            "audioId": "vb-12",
+            "speakText": "Für meine Mutter — ein Geschenk von mir. Der Ring ist auch vom Markt.",
+            "q": "استمع: لمن الخاتم؟ ومن أين؟",
+            "choices": [
+              "لأمه — هدية منه، من السوق",
+              "لأخته — هدية من لينا",
+              "لأمه — من المحل"
+            ],
+            "a": "لأمه — هدية منه، من السوق",
+            "why": "Für meine Mutter — ein Geschenk von mir. Der Ring ist auch vom Markt. — von mir = منّي."
+          },
+          {
+            "audioId": "vb-13",
+            "speakText": "Du kaufst viel! Sparst du nicht?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "ألا يدّخر؟",
+              "ألا يدفع؟",
+              "ألا يتفاوض؟"
+            ],
+            "a": "ألا يدّخر؟",
+            "why": "Sparst du nicht? = ألا تدّخر؟ — sparen = يدّخر."
+          },
+          {
+            "audioId": "vb-14",
+            "speakText": "Doch! Ich spare seit zwei Monaten für die Geschenke.",
+            "q": "استمع: منذ متى يدّخر؟ ولماذا؟",
+            "choices": [
+              "منذ شهرين — للهدايا",
+              "منذ سنتين — للرحلة",
+              "منذ أسبوعين — للخاتم"
+            ],
+            "a": "منذ شهرين — للهدايا",
+            "why": "Doch! Ich spare seit zwei Monaten für die Geschenke. — seit zwei Monaten = منذ شهرين (الجمع + n) · Doch! = بلى."
+          },
+          {
+            "audioId": "vb-15",
+            "speakText": "Seit zwei Monaten? Und jetzt ist das Geld weg!",
+            "q": "استمع: ماذا تقول لينا عن المال؟",
+            "choices": [
+              "ذهب الآن",
+              "كثير الآن",
+              "عند أبيه"
+            ],
+            "a": "ذهب الآن",
+            "why": "Und jetzt ist das Geld weg! — weg = ذهب/انتهى."
+          },
+          {
+            "audioId": "vb-16",
+            "speakText": "Nicht alles. Aber ich bin seit einem Jahr nicht zu Hause — die Geschenke sind für meine Familie.",
+            "q": "استمع: منذ متى لم يكن يوسف في البيت؟",
+            "choices": [
+              "منذ سنة",
+              "منذ شهرين",
+              "منذ أسبوع"
+            ],
+            "a": "منذ سنة",
+            "why": "ich bin seit einem Jahr nicht zu Hause = أنا منذ سنة لست في البيت — seit einem Jahr (das Jahr ← einem)."
+          },
+          {
+            "audioId": "vb-17",
+            "speakText": "Stimmt. Und ich kaufe das Geschenk für meine Oma bei der Bäckerei: einen Kuchen.",
+            "q": "استمع: أين تشتري لينا هدية جدّتها؟ وما هي؟",
+            "choices": [
+              "عند المخبز — كعكة",
+              "في السوق — قلادة",
+              "عند الشباك — تذكرة"
+            ],
+            "a": "عند المخبز — كعكة",
+            "why": "bei der Bäckerei: einen Kuchen — bei der Bäckerei = عند المخبز (die ← der)."
+          },
+          {
+            "audioId": "vb-19",
+            "speakText": "Die kaufe ich am Schalter im Bahnhof. Und für mich kaufe ich Stiefel — es regnet so viel in der Schweiz.",
+            "q": "استمع: أين تشتري التذكرة؟ وماذا تشتري لنفسها؟",
+            "choices": [
+              "من الشباك في المحطة — جزمة",
+              "من المخبز — جزمة",
+              "من الشباك — نظارة شمسية"
+            ],
+            "a": "من الشباك في المحطة — جزمة",
+            "why": "am Schalter im Bahnhof = من الشباك في المحطة · Stiefel = جزمة — es regnet so viel = تمطر كثيراً."
           }
         ],
         "interleavedWith": [
-          "seit",
-          "verhandeln"
+          "markt",
+          "kaufen",
+          "kuchen",
+          "regnen",
+          "monat",
+          "jahr",
+          "woche",
+          "schwester",
+          "mutter",
+          "vater",
+          "oma",
+          "euro",
+          "teuer",
+          "preis",
+          "jeder",
+          "weg",
+          "geld",
+          "bahnhof",
+          "immer",
+          "jetzt",
+          "nur",
+          "auch",
+          "viel",
+          "tunesien",
+          "schweiz",
+          "haus"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«هذا غالٍ جداً!»؟",
-            "a": "Das ist zu teuer!"
+            "tokens": [
+              "Monaten.",
+              "seit",
+              "Ich",
+              "zwei",
+              "spare"
+            ],
+            "a": "Ich spare seit zwei Monaten.",
+            "why": "الفعل spare ثانياً — ثم seit + الداتيف: zwei Monaten (الجمع + n)."
           },
           {
-            "q": "«الإيصال والاستبدال»؟",
-            "a": "die Quittung und der Umtausch"
+            "tokens": [
+              "immer.",
+              "wir",
+              "Bei",
+              "Tunesien",
+              "verhandeln",
+              "mir",
+              "in"
+            ],
+            "a": "Bei mir in Tunesien verhandeln wir immer.",
+            "why": "Bei mir in Tunesien في الموضع الأول ← الفعل verhandeln ثانياً ← الفاعل wir بعده."
+          },
+          {
+            "tokens": [
+              "Bäckerei.",
+              "bei",
+              "Ich",
+              "Kuchen",
+              "kaufe",
+              "der",
+              "den"
+            ],
+            "a": "Ich kaufe den Kuchen bei der Bäckerei.",
+            "why": "kaufe ثانياً، المفعول den Kuchen، ثم المكان bei der Bäckerei (bei + داتيف المؤنث der)."
+          },
+          {
+            "tokens": [
+              "Deutsch?",
+              "du",
+              "Seit",
+              "lernst",
+              "wann"
+            ],
+            "a": "Seit wann lernst du Deutsch?",
+            "why": "Seit wann كلمة سؤال مركّبة أولاً ← الفعل lernst ← du."
+          },
+          {
+            "tokens": [
+              "mir.",
+              "Geschenk",
+              "Der",
+              "von",
+              "ist",
+              "Ring",
+              "ein"
+            ],
+            "a": "Der Ring ist ein Geschenk von mir.",
+            "why": "ist ثانياً — وvon mir في الآخر: von + ضمير الداتيف."
+          },
+          {
+            "tokens": [
+              "Lena.",
+              "Jacke",
+              "Das",
+              "von",
+              "ist",
+              "die"
+            ],
+            "a": "Das ist die Jacke von Lena.",
+            "why": "die Jacke von Lena = سترة لينا — von + اسم علم للملكية."
           }
         ],
         "interleavedWith": [
-          "quittung",
-          "umtausch"
+          "kaufen",
+          "kuchen",
+          "monat",
+          "immer",
+          "jacke",
+          "deutsch",
+          "tunesien"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "vb-4",
+            "speakText": "Nein. Der Verkäufer möchte fünfundzwanzig Euro. Ich möchte zwanzig bezahlen. Wir verhandeln — und ich bezahle zwanzig!",
+            "a": "Nein. Der Verkäufer möchte fünfundzwanzig Euro. Ich möchte zwanzig bezahlen. Wir verhandeln — und ich bezahle zwanzig!",
+            "why": "Verkäufer بحرف كبير وä وV تُنطق [f] · fünfundzwanzig كلمة واحدة بـü · verhandeln بـh بعد ver."
+          },
+          {
+            "audioId": "vb-18",
+            "speakText": "Bei der Bäckerei? Und die Fahrkarte für Sonntag?",
+            "a": "Bei der Bäckerei? Und die Fahrkarte für Sonntag?",
+            "why": "Bäckerei بـä وck و‑ei في الآخر · Fahrkarte بحرف كبير وh تطيل a · Sonntag بحرف كبير."
+          },
+          {
+            "audioId": "vb-20",
+            "speakText": "Stiefel? In Tunesien sind Stiefel keine Mode — wir haben immer Sonne!",
+            "a": "Stiefel? In Tunesien sind Stiefel keine Mode — wir haben immer Sonne!",
+            "why": "Stiefel بـSt تُنطق [ʃt] وie طويلة · Tunesien بحرف كبير · Mode بحرف كبير و‑e في الآخر · Sonne بـnn مزدوجة."
+          },
+          {
+            "audioId": "word-quittung",
+            "speakText": "die Quittung.",
+            "a": "die Quittung.",
+            "why": "Quittung: Qu تُنطق [kv] · tt مزدوجة بعد i القصيرة · ‑ung."
+          },
+          {
+            "audioId": "word-baeckerei",
+            "speakText": "die Bäckerei.",
+            "a": "die Bäckerei.",
+            "why": "Bäckerei: ä بنقطتين · ck · ‑ei في الآخر — والنبر على ‑rei."
+          },
+          {
+            "audioId": "word-schmuck",
+            "speakText": "der Schmuck.",
+            "a": "der Schmuck.",
+            "why": "Schmuck: sch + m · ck في الآخر بعد u القصيرة."
+          },
+          {
+            "audioId": "word-tuete",
+            "speakText": "die Tüte.",
+            "a": "die Tüte.",
+            "why": "Tüte: ü بنقطتين طويلة · ‑e في الآخر."
+          },
+          {
+            "audioId": "word-sonnenbrille",
+            "speakText": "die Sonnenbrille.",
+            "a": "die Sonnenbrille.",
+            "why": "Sonnenbrille: nn مزدوجة · ‑en‑ في الوسط · ll مزدوجة · ‑e في الآخر."
+          }
+        ],
+        "interleavedWith": [
+          "bezahlen",
+          "fahrkarte",
+          "sonne",
+          "euro",
+          "sonntag",
+          "immer",
+          "tunesien",
+          "verkaufen"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Im Geschäft kaufen und verhandeln",
-        "ar": "الشراء والتفاوض في المتجر"
+        "de": "Ist die Kette vom Markt? — Ja. Der Verkäufer möchte dreißig Euro, ich möchte zwanzig bezahlen.",
+        "ar": "تعرض على زميلك هدية وتقول من أين هي ومنذ متى تدّخر — وتتفاوضان على السعر"
       },
       "situation": {
-        "de": "Im Geschäft: Preis verhandeln",
-        "ar": "في المتجر: التفاوض على السعر"
+        "de": "Im Kurs: Was ist das? Ist das Geschenk vom Markt? Seit wann sparst du? Wo kaufst du das — beim Bäcker oder im Geschäft? Und der Preis?",
+        "ar": "في الدورة: كلٌّ منكما يعرض هديةً (صورة أو شيئاً معه) ويقول من أين هي وممّن (Die Kette ist vom Markt. · Das Geschenk ist von mir.) ومنذ متى يدّخر لها (Ich spare seit zwei Monaten.) وأين يشتري (bei der Bäckerei · beim Bäcker · im Geschäft) — ثم تتفاوضان: أحدكما البائع (Die Kette kostet dreißig Euro.) والآخر المشتري (Das ist zu teuer. Ich bezahle zwanzig.) — وتتبادلان."
       },
       "successCriteria": [
-        "جملتان bei/von + جملة seit + جملتا تفاوض (zu teuer / Rabatt) + الدفع"
+        "جملتان بـvon (vom Markt · von mir · die Jacke von …) وجملة بـseit + الداتيف مع المضارع (seit zwei Monaten · seit einem Jahr) وجملة بـbei (bei der Bäckerei · beim Bäcker · bei mir) — لا den ولا die بعدها.",
+        "تفاوض من ثلاث جمل: السعر (… kostet … Euro.) · الاعتراض (Das ist zu teuer.) · العرض (Ich bezahle … Euro.) — وكلمة من كلمات اليوم: Quittung · Umtausch · Schmuck · Tüte · Geschenk."
       ]
     }
   },
@@ -147,20 +651,64 @@
       {
         "items": [
           {
-            "q": "«إيصال»؟",
-            "a": "die Quittung"
+            "q": "«القلادة من السوق»؟",
+            "choices": [
+              "Die Kette ist vom Markt.",
+              "Die Kette ist von den Markt.",
+              "Die Kette ist aus dem Markt."
+            ],
+            "a": "Die Kette ist vom Markt.",
+            "why": "der Markt ← von dem = vom — von للمصدر (من أين جاءت)، وaus للخروج من داخل مكان أو الأصل."
           },
           {
-            "q": "«عند الخبّاز»؟",
-            "a": "beim Bäcker"
+            "q": "«منذ متى تدّخر؟»؟",
+            "choices": [
+              "Seit wann sparst du?",
+              "Seit wenn sparst du?",
+              "Von wann sparst du?"
+            ],
+            "a": "Seit wann sparst du?",
+            "why": "Seit wann …? = منذ متى؟ — wann للزمن (لا wenn)، وvon لا تسأل عن المدة."
           },
           {
-            "q": "«قلادة وخاتم»؟",
-            "a": "die Kette und der Ring"
+            "q": "die Quittung = ؟",
+            "choices": [
+              "الإيصال",
+              "الاستبدال",
+              "الكيس"
+            ],
+            "a": "الإيصال",
+            "why": "die Quittung = الإيصال · der Umtausch = الاستبدال · die Tüte = الكيس."
           },
           {
-            "q": "«أستدير المال»؟",
-            "a": "Ich spare Geld."
+            "q": "«أنا هنا منذ سنة»؟",
+            "choices": [
+              "Ich bin seit einem Jahr hier.",
+              "Ich bin seit ein Jahr hier.",
+              "Ich bin seit einem Jahren hier."
+            ],
+            "a": "Ich bin seit einem Jahr hier.",
+            "why": "das Jahr ← seit einem Jahr — النكرة في الداتيف einem، والمفرد بلا ‑n."
+          },
+          {
+            "q": "«نشتري الكعكة عند الخبّاز»؟",
+            "choices": [
+              "Wir kaufen den Kuchen beim Bäcker.",
+              "Wir kaufen den Kuchen bei den Bäcker.",
+              "Wir kaufen den Kuchen bei die Bäcker."
+            ],
+            "a": "Wir kaufen den Kuchen beim Bäcker.",
+            "why": "der Bäcker ← bei dem = beim — bei + الداتيف دائماً (لا den ولا die)."
+          },
+          {
+            "q": "verhandeln = ؟",
+            "choices": [
+              "يتفاوض",
+              "يدّخر",
+              "يستبدل"
+            ],
+            "a": "يتفاوض",
+            "why": "verhandeln = يتفاوض · sparen = يدّخر · der Umtausch = الاستبدال."
           }
         ],
         "passingScore": 0.75
@@ -168,20 +716,64 @@
       {
         "items": [
           {
-            "q": "«استبدال»؟",
-            "a": "der Umtausch"
+            "q": "«هدية منك»؟",
+            "choices": [
+              "ein Geschenk von dir",
+              "ein Geschenk von dich",
+              "ein Geschenk aus dir"
+            ],
+            "a": "ein Geschenk von dir",
+            "why": "von + ضمير الداتيف dir (لا dich الأكوزاتيف) — والمرسل بـvon لا aus."
           },
           {
-            "q": "«منذ أسبوعين»؟",
-            "a": "seit zwei Wochen"
+            "q": "«سيارة يوسف»؟",
+            "choices": [
+              "das Auto von Yusuf",
+              "das Auto aus Yusuf",
+              "das Auto bei Yusuf"
+            ],
+            "a": "das Auto von Yusuf",
+            "why": "von + اسم علم = الإضافة: das Auto von Yusuf = سيارة يوسف."
           },
           {
-            "q": "«كيس من فضلك»؟",
-            "a": "Die Tüte, bitte."
+            "q": "der Umtausch = ؟",
+            "choices": [
+              "الاستبدال",
+              "الإيصال",
+              "الخصم"
+            ],
+            "a": "الاستبدال",
+            "why": "der Umtausch = الاستبدال · die Quittung = الإيصال · der Rabatt = الخصم."
           },
           {
-            "q": "«الهدية من عائلتي»؟",
-            "a": "Das Geschenk ist von meiner Familie."
+            "q": "«أنا من تونس»؟",
+            "choices": [
+              "Ich komme aus Tunesien.",
+              "Ich komme von Tunesien.",
+              "Ich komme bei Tunesien."
+            ],
+            "a": "Ich komme aus Tunesien.",
+            "why": "الأصل = aus (aus Tunesien) — von للمصدر والمرسل (vom Markt · von mir)، وbei = عند."
+          },
+          {
+            "q": "«أدّخر منذ أسبوعين»؟",
+            "choices": [
+              "Ich spare seit zwei Wochen.",
+              "Ich spare seit zwei Woche.",
+              "Ich spare seit zwei Wochenen."
+            ],
+            "a": "Ich spare seit zwei Wochen.",
+            "why": "die Wochen جمعٌ ينتهي بـn أصلاً ← seit zwei Wochen — الداتيف لا يضيف n ثانية."
+          },
+          {
+            "q": "die Stiefel = ؟",
+            "choices": [
+              "الجزمة",
+              "النظارة الشمسية",
+              "القلادة"
+            ],
+            "a": "الجزمة",
+            "why": "die Stiefel = الجزمة (الزوج بالجمع) · die Sonnenbrille = النظارة الشمسية · die Kette = القلادة."
           }
         ],
         "passingScore": 0.75
@@ -189,20 +781,64 @@
       {
         "items": [
           {
-            "q": "«مجوهرات»؟",
-            "a": "der Schmuck (بلا جمع)"
+            "q": "«عندنا في تونس الشمس دائماً»؟",
+            "choices": [
+              "Bei mir in Tunesien ist immer Sonne.",
+              "Bei mich in Tunesien ist immer Sonne.",
+              "Von mir in Tunesien ist immer Sonne."
+            ],
+            "a": "Bei mir in Tunesien ist immer Sonne.",
+            "why": "bei mir = عندي/عندنا — bei + ضمير الداتيف mir (لا mich)."
           },
           {
-            "q": "«نظارة شمسية»؟",
-            "a": "die Sonnenbrille"
+            "q": "«لينا تشتري الكعكة عند المخبز»؟",
+            "choices": [
+              "Lena kauft den Kuchen bei der Bäckerei.",
+              "Lena kauft den Kuchen bei die Bäckerei.",
+              "Lena kauft den Kuchen beim Bäckerei."
+            ],
+            "a": "Lena kauft den Kuchen bei der Bäckerei.",
+            "why": "die Bäckerei مؤنث ← bei der Bäckerei — beim للمذكر والمحايد فقط (beim Bäcker)."
           },
           {
-            "q": "«أتفاوض على السعر»؟",
-            "a": "Ich verhandele über den Preis."
+            "q": "sparen = ؟",
+            "choices": [
+              "يدّخر",
+              "يتفاوض",
+              "يشتري"
+            ],
+            "a": "يدّخر",
+            "why": "sparen = يدّخر · verhandeln = يتفاوض · kaufen = يشتري."
           },
           {
-            "q": "«هذا غالٍ جداً!»؟",
-            "a": "Das ist zu teuer!"
+            "q": "«الخاتم من البائع»؟",
+            "choices": [
+              "Der Ring ist vom Verkäufer.",
+              "Der Ring ist von Verkäufer.",
+              "Der Ring ist aus dem Verkäufer."
+            ],
+            "a": "Der Ring ist vom Verkäufer.",
+            "why": "der Verkäufer ← vom Verkäufer (von + dem) — الشخص المصدر بـvon لا aus."
+          },
+          {
+            "q": "«منذ شهر»؟",
+            "choices": [
+              "seit einem Monat",
+              "seit ein Monat",
+              "seit einen Monat"
+            ],
+            "a": "seit einem Monat",
+            "why": "der Monat ← seit einem Monat — الداتيف einem (لا ein ولا einen الأكوزاتيف)."
+          },
+          {
+            "q": "die Mode = ؟",
+            "choices": [
+              "الموضة",
+              "المجوهرات",
+              "الهدية"
+            ],
+            "a": "الموضة",
+            "why": "die Mode = الموضة · der Schmuck = المجوهرات · das Geschenk = الهدية."
           }
         ],
         "passingScore": 0.75
@@ -211,53 +847,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Im Geschäft: beim Bäcker, von der Familie, seit zwei Wochen — und dann: „Das ist zu teuer!“ und verhandeln!",
-      "ar": "في المتجر: عند الخبّاز ومن العائلة ومنذ أسبوعين — ثم: «هذا غالٍ جداً!» والتفاوض!"
+      "de": "Eine Tüte vom Markt? · Ein Geschenk von mir. · Das ist die Jacke von Lena. · Ich spare seit zwei Monaten. · Ich bin seit einem Jahr nicht zu Hause. · Seit wann lernst du Deutsch? · Ich kaufe den Kuchen bei der Bäckerei. · Ich kaufe Brot beim Bäcker. · Bei mir in Tunesien verhandeln wir immer. · Der Umtausch ist eine Woche möglich — nur mit Quittung. · Stiefel sind jetzt Mode. · Die Fahrkarte kaufe ich am Schalter.",
+      "ar": "ثلاثة حروف جر أخرى بالداتيف دائماً (كـmit/nach/aus/zu): von = من للمصدر والمرسل والملكية (vom Markt · von mir · die Jacke von Lena) — وتختلف عن aus (الأصل والخروج من داخل مكان: aus Tunesien · aus dem Geschäft) · seit = منذ مع المضارع (seit zwei Monaten — الجمع + n · seit einem Jahr · Seit wann?) · bei = عند (bei mir · bei der Bäckerei · beim Bäcker). الاندماج: von dem = vom · bei dem = beim (كـzum/zur). الكلمات: verhandeln (über den Preis) · die Quittung · der Umtausch · der Schmuck (بلا جمع) · der Ring (‑e) · die Kette (‑n) · die Stiefel (بلا نهاية) · die Mode · die Tüte (‑n) · das Geschenk (‑e) · sparen (für) · die Sonnenbrille · die Bäckerei (‑en) · der Schalter (بلا نهاية)."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~von Tunesien~~ (للمنشأ) / ~~aus der Familie~~",
-          "ar": "von (شخص/شيء) ↔ aus (منشأ/مكان)"
+          "de": "~~Ich komme von Tunesien.~~ · ~~Die Tüte ist aus dem Markt.~~",
+          "ar": "aus للأصل والخروج من داخل مكان · von للمصدر والمرسل: aus Tunesien · vom Markt"
         },
-        "whyArabicSpeakerFails": "«من» واحدة بالعربية للمنشأ وللأشخاص؛ الألماني يفصل: aus Tunesien (المنشأ) ↔ von meiner Familie (الانتماء) — تكميل بطاقة d4 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«من» العربية واحدة: «من تونس» و«من السوق» و«منّي» — فيختار المتعلم حرفاً واحداً للكل. والألمانية تفرّق: aus للأصل والخروج من داخل مكان (Ich komme aus Tunesien. · aus dem Geschäft)، وvon للمصدر الذي جاء منه الشيء وللمرسل وللملكية (Die Tüte ist vom Markt. · ein Geschenk von mir · die Jacke von Lena) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "aus Tunesien · von meiner Familie",
-          "ar": "aus للمنشأ · von للانتماء"
+          "de": "Ich komme aus Tunesien. · Die Tüte ist vom Markt.",
+          "ar": "أنا من تونس · الكيس من السوق"
         },
         "exercise": {
-          "q": "أكمل: Ich komme ___ Tunesien. Das ist ___ meiner Familie.",
-          "a": "aus / von"
+          "q": "صحّح: ~~Die Sonnenbrille ist aus dem Markt.~~",
+          "a": "Die Sonnenbrille ist vom Markt."
         }
       },
       {
         "commonError": {
-          "de": "~~seit zwei Wochen~~؟ نعم، لكن ~~seit die zwei Wochen~~ / ~~für zwei Wochen~~ (للماضي)",
-          "ar": "seit + Dativ (منذ — للحاضر)"
+          "de": "~~seit zwei Monate~~ · ~~seit ein Jahr~~",
+          "ar": "بعد seit الداتيف: seit zwei Monaten · seit einem Jahr"
         },
-        "whyArabicSpeakerFails": "«منذ» تجرّ بالعربية؛ الألماني seit يفرض الداتيف ويختص بالزمن المستمر حتى الآن — سؤال u3 عن المدة يتكرر (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«منذ» العربية لا تغيّر ما بعدها («منذ شهرين · منذ سنة»)، فيُبقي المتعلم الاسم كما يعرفه: الجمع بلا ‑n (Monate) أو النكرة كما في الأكوزاتيف (ein Jahr). والألمانية تضع بعد seit الداتيف دائماً: الجمع + ‑n (seit zwei Monaten) والنكرة einem/einer (seit einem Jahr · seit einer Woche) — والفعل مضارع — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich wohne seit drei Jahren hier.",
-          "ar": "أسكن هنا منذ ثلاث سنوات."
+          "de": "seit zwei Monaten · seit einem Jahr",
+          "ar": "منذ شهرين · منذ سنة"
         },
         "exercise": {
-          "q": "أكمل: Ich lerne Deutsch ___ einem Jahr.",
-          "a": "seit"
+          "q": "صحّح: ~~Ich spreche seit ein Jahr Deutsch.~~",
+          "a": "Ich spreche seit einem Jahr Deutsch."
         }
       },
       {
         "commonError": {
-          "de": "~~bei dem Bäcker~~ دائماً / ~~beim Bäckers~~",
-          "ar": "bei + dem = beim (اندماج)"
+          "de": "~~bei die Bäckerei~~ · ~~bei den Bäcker~~",
+          "ar": "bei + الداتيف: bei der Bäckerei · beim Bäcker (bei + dem)"
         },
-        "whyArabicSpeakerFails": "الاندماج beim/zum/vom اختصار ألماني خالص؛ العربي يسمع «عند» واحدة — الحفظ بالصيغة المندمجة أسرع (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«عند» العربية تجرّ ما بعدها بلا أداة متغيّرة («عند المخبز · عند الخبّاز»)، فيضع المتعلم الأداة التي يعرفها (die) أو أكوزاتيف المفعول (den). والألمانية بعد bei الداتيف دائماً: die ← der (bei der Bäckerei) · der/das ← dem وتُدمج: beim Bäcker · beim Verkäufer (كـzum وvom) — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "beim Bäcker (bei + dem) · zum Arzt (zu + dem) · vom Verkäufer (von + dem)",
-          "ar": "اندماجات الثلاثة الكبيرة"
+          "de": "bei der Bäckerei · beim Bäcker",
+          "ar": "عند المخبز · عند الخبّاز"
         },
         "exercise": {
-          "q": "أعد الصياغة: bei dem Verkäufer → ___",
-          "a": "beim Verkäufer"
+          "q": "صحّح: ~~Wir kaufen Brot bei den Bäcker.~~",
+          "a": "Wir kaufen Brot beim Bäcker."
         }
       }
     ],
@@ -283,14 +919,22 @@
   },
   "gReferences": {
     "duden": [
-      "https://www.duden.de/rechtschreibung/bei",
       "https://www.duden.de/rechtschreibung/seit",
-      "https://www.duden.de/rechtschreibung/Quittung"
+      "https://www.duden.de/rechtschreibung/bei",
+      "https://www.duden.de/rechtschreibung/Quittung",
+      "https://www.duden.de/rechtschreibung/Umtausch",
+      "https://www.duden.de/rechtschreibung/verhandeln"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/bei"
+      "https://de.wiktionary.org/wiki/von",
+      "https://de.wiktionary.org/wiki/seit",
+      "https://de.wiktionary.org/wiki/bei",
+      "https://de.wiktionary.org/wiki/B%C3%A4ckerei"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-von-seit-bei"
@@ -316,10 +960,19 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Im Geschäft verhandeln",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 8 (Einkaufen) — Im Geschäft verhandeln · von/seit/bei",
     "goetheWordListOverlap": [
       "von",
-      "bei"
+      "seit",
+      "bei",
+      "ring",
+      "kette",
+      "stiefel",
+      "mode",
+      "geschenk",
+      "sparen",
+      "baeckerei",
+      "schalter"
     ]
   }
 }

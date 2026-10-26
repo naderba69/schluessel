@@ -26,12 +26,14 @@
 //   e-upgrade-misspelling    D128: خطأ مقصود معلن غير صالح — تصحيحه غير مدروس · أو هو كلمة حقيقية في المقرر · أو يعرفه
 //                            الحارس أصلاً · أو بعيد عن تصحيحه (> MISSPELLING_DISTANCE_MAX) · أو معلن مرتين
 //   w-upgrade-misspelling    خطأ مقصود معلن لا يظهر مشطوباً (~~…~~) في نصوص الدرس المُرقّاة
+//   e-upgrade-borrowed       كلمة مستعارة معلنة (D188) غير مستعملة · أو مدروسة أصلاً حتى الدرس · أو ليست صيغة للكلمة المذكورة · أو بلا بطاقة
 //   e-rule-index · e-rule-level · e-rule-front · w-rule-proper-noun   فحوص ملفات القواعد نفسها (checkGrammarRules)
 import {
   AUDIO_STATION_TYPES,
   PRACTICE_ITEM_SHAPES,
   QuizItem,
   dictationForm,
+  type AudioScript,
   type GrammarRuleFile,
   type Lesson,
   type LessonUpgradeEntry,
@@ -39,7 +41,7 @@ import {
   type Word,
 } from "../../content/schemas/index.js";
 import {
-  CLOSED, contentTokens, deumlaut, knownForms, knownStems, stem, stripGraphemeNotation, stripMorphemeNotation, unknownTokens,
+  CLOSED, FULL, contentTokens, deumlaut, knownForms, knownStems, stem, stemKnown, stripGraphemeNotation, stripMorphemeNotation, unknownTokens, withLaterForms,
 } from "./vocab-forms.js";
 
 export const PRACTICE_ITEMS_MIN = 12;
@@ -62,6 +64,8 @@ export type UpgradeContext = {
   rules: ReadonlyMap<string, GrammarRuleFile>;
   /** مسارات المانيفست الصوتي: المعرّف ← النص المنطوق */
   tracks: ReadonlyMap<string, { textDe: string }>;
+  /** N-010 (D231): سكربتات الصوت — الحوار الكامل معروض في التدريب فيخضع لقانون الجبهة (اختياري لتوافق الاختبارات) */
+  scripts?: readonly AudioScript[];
 };
 
 const LEVEL_ORDER: Record<Lesson["level"], number> = { A1: 0, A2: 1, B1: 2, B2: 3 };
@@ -155,6 +159,13 @@ export function frontViolations(
 
 const allowSet = (names: readonly string[]) => new Set(names.flatMap((n) => contentTokens(n)));
 const tokenSet = (texts: readonly string[]) => new Set(contentTokens(germanOnly(texts.join("\n"))).map(deumlaut));
+/** كل النصوص في ملف الدرس (D188 — لفحص أن المستعارة المعلنة تُستعمل فعلاً في أي موضع) */
+function allLessonTexts(v: unknown, out: string[] = []): string[] {
+  if (typeof v === "string") out.push(v);
+  else if (Array.isArray(v)) for (const x of v) allLessonTexts(x, out);
+  else if (v && typeof v === "object") for (const x of Object.values(v)) allLessonTexts(x, out);
+  return out;
+}
 
 /**
  * D137: الشرح بين القوسين في حقل de ليس جزءاً من الكلمة — «sein (ملكيته)» · «am (an + dem)»؛ الاصطلاح نفسه في
@@ -172,6 +183,33 @@ export function wordAppears(w: Word, tokens: ReadonlySet<string>): boolean {
   return need.every((t) => {
     const mine = new Set(stem(t));
     return stemsOf.some((ss) => ss.some((s) => mine.has(s)));
+  });
+}
+
+
+/**
+ * N-102/N-110 (D184 — بإذن المالك): الاستدعاء المعلن في المحطة (interleavedWith) يُقبل فقط إن ظهرت الكلمة في نصوص
+ * بنود المحطة (speakText ضمنها) **رمزاً كاملاً** أو صيغةً مسجَّلة لها في ملفها (praesens3s · perfekt بلا hat/ist ·
+ * praeteritum · imperative · الجمع) أو جذعَها + نهاية تصريف/جمع/نعت مغلقة (e · st · t · en · et · te · ten · est · n · s · er · es · em · nen · innen).
+ * المقارنة عبر Word.de (بأومالوته الحقيقي) مطويّاً بـdeumlaut على الطرفين — لا عبر المعرّف ASCII (muede/aerztin: حالة N-110).
+ * كان الفحص القديم في الكتل يقبل أول أربعة أحرف (geschaeft ≈ Geschenk · schweiz ≈ Schwester) — N-102.
+ */
+export const INFLECTION_SUFFIX = /^(?:e|st|t|en|et|te|ten|est|n|s|er|es|em|nen|innen)?$/u;
+export function interleaveSupported(w: Word, texts: readonly string[]): boolean {
+  const toks = new Set(contentTokens(germanOnly(texts.join("\n"))).map(deumlaut));
+  const aux = new Set(["hat", "ist", "sich", "sind", "haben"]);
+  const forms = knownForms(w).map(deumlaut).filter((f) => !CLOSED.has(f) && !aux.has(f));
+  if (forms.some((f) => toks.has(f))) return true;
+  const base = contentTokens(withoutGloss(w.de).replace(/^(der|die|das) /, "").replace(/^sich /, "")).map(deumlaut);
+  const open = base.filter((t) => !CLOSED.has(t));
+  // الفعل المنفصل في المضارع (stehe … auf): رأس الصيغة الثالثة المسجَّلة (steht) جذعٌ أيضاً — والجزء المنفصل يُشترط ظهوره
+  const p3 = contentTokens(w.forms?.praesens3s ?? "").map(deumlaut);
+  const particle = p3.length > 1 ? p3.slice(1) : [];
+  if (particle.some((pt) => !toks.has(pt))) return false;
+  const heads = [...(open.length ? open : base), ...(p3.length > 1 && !aux.has(p3[0]) ? [p3[0]] : [])];
+  return heads.some((h) => {
+    const stems = new Set([h.replace(/(?:en|n)$/u, ""), h.replace(/(?:et|t)$/u, "")]);
+    return [...stems].some((st) => st.length >= 3 && [...toks].some((t) => t.startsWith(st) && INFLECTION_SUFFIX.test(t.slice(st.length))));
   });
 }
 
@@ -215,6 +253,25 @@ function checkRulePart(lesson: Lesson, ctx: UpgradeContext, stems: ReadonlySet<s
   return { issues, texts };
 }
 
+/**
+ * N-010 (D231): حوارات الدرس — سكربت الحوار الذي تستعمل بنود محطة الاستماع سطوره (مقاطع الكلمات word- ليست
+ * سطوراً). العلاقة 1:1 في المحتوى كله (لا سكربت حوار بأكثر من usedIn) — المرآة الحارسة للمشغِّل في lesson-runner.
+ */
+export function dialogueScriptsFor(lesson: Lesson, scripts: readonly AudioScript[] | undefined): AudioScript[] {
+  if (!scripts) return [];
+  const out: AudioScript[] = [];
+  for (const st of lesson.uebung.stations) {
+    if (st.type !== "listening") continue;
+    const lineIds = new Set<string>();
+    for (const item of st.items)
+      if ("audioId" in item && typeof item.audioId === "string" && !item.audioId.startsWith("word-")) lineIds.add(item.audioId);
+    if (lineIds.size === 0) continue;
+    const script = scripts.find((sc) => sc.kind === "dialogue" && sc.lines.some((ln) => lineIds.has(ln.id)));
+    if (script && !out.includes(script)) out.push(script);
+  }
+  return out;
+}
+
 function checkPracticePart(
   lesson: Lesson, ctx: UpgradeContext, stems: ReadonlySet<string>, allow: ReadonlySet<string>, wrong: ReadonlySet<string>,
 ): PartResult {
@@ -254,12 +311,30 @@ function checkPracticePart(
   for (const c of lesson.zusammenfassung.warningCards) texts.push(c.commonError.de, c.correct.de, ...itemTexts(c.exercise));
   const unknown = frontViolations(texts, stems, allow, wrong);
   if (unknown.length) err("e-upgrade-front", `${lesson.id} (تدريب/مصائد): غير مدروسة حتى الدرس: ${unknown.join("، ")}`);
+  // N-010 (D231): الحوار الكامل معروض قبل بنود الاستماع — كل سطر فيه (حتى غير المُبنَّد) تحت قانون الجبهة
+  for (const sc of dialogueScriptsFor(lesson, ctx.scripts))
+    for (const ln of sc.lines) {
+      const lineUnknown = frontViolations([ln.text], stems, allow, wrong);
+      if (lineUnknown.length)
+        err("e-dialogue-front", `${lesson.id}: حوار ${sc.id} سطر ${ln.id} «${ln.text}» — غير مدروسة حتى الدرس: ${lineUnknown.join("، ")}`);
+    }
   // D121: الاستدعاء لما سبق تعلمه — بطاقة أول تدريسها اليوم (أو لاحقاً) ليست استدعاءً بل عرضٌ قبل الشرح
   const earlier = ctx.lessons.filter((l) => pathOrder(l) < pathOrder(lesson));
   if (earlier.length > 0) {
     const before = new Set(earlier.flatMap((l) => l.praesentation.wordIds));
     const notYet = lesson.warmup.cardIds.filter((id) => !before.has(id));
     if (notYet.length) err("e-upgrade-warmup", `${lesson.id}: بطاقات الاستدعاء لم تُدرَّس قبل هذا الدرس: ${notYet.join("، ")} — الاستدعاء لما سبق (F121)`);
+    // N-102/N-110 (D184): الاستدعاء المعلن في كل محطة كلمةُ درسٍ سابق وتظهر فعلاً في بنودها (رمزاً كاملاً أو صيغة مسجَّلة)
+    const byId = new Map(ctx.words.map((w) => [w.id, w]));
+    lesson.uebung.stations.forEach((st, si) => {
+      const stationTexts = st.items.flatMap((item) => itemTexts(item));
+      for (const ref of st.interleavedWith) {
+        const w = byId.get(ref);
+        if (!w || !before.has(ref)) { err("e-upgrade-interleave", `${lesson.id} محطة ${si + 1} (${st.type}): الاستدعاء المعلن «${ref}» ليس كلمة درس سابق`); continue; }
+        if (!interleaveSupported(w, stationTexts))
+          err("e-upgrade-interleave", `${lesson.id} محطة ${si + 1} (${st.type}): الاستدعاء المعلن «${ref}» لا يظهر في بنود المحطة كلمةً كاملة أو صيغةً مسجَّلة (N-102/N-110)`);
+      }
+    });
   }
   return { issues, texts };
 }
@@ -292,6 +367,10 @@ function checkQuizPart(lesson: Lesson, stems: ReadonlySet<string>, allow: Readon
 
 export type LessonPartsReport = Record<UpgradePart, UpgradeIssue[]> & {
   coverage: UpgradeIssue[]; practiceItems: number; practiceTypes: string[]; quizMin: number;
+  /** N-022 (D185): الهدف/المهمة/الخلاصة تحت قانون الجبهة (تُحتسب حين يكون التدريب done) */
+  meta: UpgradeIssue[];
+  /** D188: الكلمات المستعارة المعلنة — غير المستعملة أو المدروسة أصلاً أو غير المطابقة لبطاقتها */
+  borrowed: UpgradeIssue[];
   /** D128: صلاحية الأخطاء المقصودة المعلنة (تُحتسب حين يكون التدريب أو Quiz done) */
   misspellings: UpgradeIssue[];
   /** نصوص كل جزء (لفحص استعمال أسماء العلم المعلنة) */
@@ -328,16 +407,53 @@ function checkMisspellings(
 }
 
 /** كل فحوص الدرس كأن أجزاءه كلها done — أساس الحارس وأداة الحالة (ما الذي ينقص بالضبط) */
+/** النصوص الوصفية الألمانية للدرس: هدف الدرس · هدف المهمة التواصلية وموقفها · خلاصة اليوم */
+export const metaOf = (l: Lesson): string[] =>
+  [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
+
+/**
+ * D188: الكلمة المستعارة المعلنة (praesentation.borrowedWords) — صادقة بأربعة شروط:
+ * بطاقتها موجودة · ليست مدروسة أصلاً حتى هذا الدرس (وإلا فلا حاجة للاستعارة) · الصيغة المعلنة صيغة حقيقية لتلك الكلمة
+ * (جذعاً أو صيغة مسجَّلة) · وتُستعمل فعلاً في نصوص الدرس (وإلا فهي إعلان ميّت).
+ */
+export function checkBorrowed(lesson: Lesson, taught: readonly Word[], all: readonly Word[]): UpgradeIssue[] {
+  const issues: UpgradeIssue[] = [];
+  if (lesson.praesentation.borrowedWords.length === 0) return issues;
+  const taughtIds = new Set(taught.map((w) => w.id));
+  const texts = tokenSet(allLessonTexts({ ...lesson, praesentation: { ...lesson.praesentation, borrowedWords: [] } })); // الإعلان نفسه ليس استعمالاً
+  for (const b of lesson.praesentation.borrowedWords) {
+    const label = `${lesson.id}: المستعارة «${b.form}» (${b.wordId})`;
+    const w = all.find((x) => x.id === b.wordId);
+    const f = deumlaut(b.form.toLowerCase());
+    if (!w) issues.push({ level: "error", code: "e-upgrade-borrowed", lessonId: lesson.id, message: `${label}: لا بطاقة بهذا المعرّف` });
+    else if (taughtIds.has(w.id)) issues.push({ level: "error", code: "e-upgrade-borrowed", lessonId: lesson.id, message: `${label}: مدروسة أصلاً حتى هذا الدرس — لا استعارة` });
+    else if (!stemKnown(f, knownStems([w]))) issues.push({ level: "error", code: "e-upgrade-borrowed", lessonId: lesson.id, message: `${label}: ليست صيغة لبطاقة «${w.de}»` });
+    if (!texts.has(f)) issues.push({ level: "error", code: "e-upgrade-borrowed", lessonId: lesson.id, message: `${label}: لا تظهر في نصوص الدرس — إعلان بلا استعمال` });
+  }
+  return issues;
+}
+
 export function inspectLesson(
   lesson: Lesson, entry: Pick<LessonUpgradeEntry, "properNouns"> & Partial<Pick<LessonUpgradeEntry, "misspellings">>, ctx: UpgradeContext,
 ): LessonPartsReport {
-  const stems = knownStems(taughtUpTo(lesson, ctx.lessons, ctx.words));
+  const taught = taughtUpTo(lesson, ctx.lessons, ctx.words);
+  // N-103 (D185): صيغ كلمات الدروس اللاحقة تُرفض ولو طابقت جذعاً (علامة «<» في المجموعة نفسها)
+  const stems = withLaterForms(knownStems(taught), taught, ctx.words);
+  // D188: الكلمات المستعارة المعلنة تُقبل بصيغتها المعلنة وحدها (كصيغة كاملة) — بعد التحقق منها في checkBorrowed
+  const borrowed = checkBorrowed(lesson, taught, ctx.words);
+  for (const b of lesson.praesentation.borrowedWords) { const f = deumlaut(b.form.toLowerCase()); stems.add(f); stems.add(FULL + f); }
   const allow = allowSet(entry.properNouns);
   const declared = entry.misspellings ?? [];
   const wrong = new Set(declared.map((m) => m.wrong.toLowerCase()));
   const rule = checkRulePart(lesson, ctx, stems, allow);
   const practice = checkPracticePart(lesson, ctx, stems, allow, wrong);
   const quiz = checkQuizPart(lesson, stems, allow, wrong);
+  // N-022 (D185): نصوص الدرس الوصفية (meta) — هدف الدرس · هدف المهمة وموقفها · الخلاصة — تحت قانون الجبهة أيضاً
+  const metaTexts = metaOf(lesson);
+  const metaUnknown = frontViolations(metaTexts, stems, allow, wrong);
+  const meta: UpgradeIssue[] = metaUnknown.length
+    ? [{ level: "error", code: "e-upgrade-meta", lessonId: lesson.id, message: `${lesson.id} (الهدف/المهمة/الخلاصة): غير مدروسة حتى الدرس: ${metaUnknown.join("، ")}` }]
+    : [];
   const tokens = tokenSet([...practice.texts, ...quiz.texts]);
   const byId = new Map(ctx.words.map((w) => [w.id, w]));
   const unpracticed = lesson.praesentation.wordIds.filter((id) => {
@@ -352,6 +468,8 @@ export function inspectLesson(
     practice: practice.issues,
     quiz: quiz.issues,
     coverage,
+    meta,
+    borrowed,
     misspellings: checkMisspellings(lesson, declared, ctx, stems, allow),
     practiceItems: lesson.uebung.stations.reduce((n, s) => n + s.items.length, 0),
     practiceTypes: [...new Set(lesson.uebung.stations.map((s) => s.type))],
@@ -382,18 +500,18 @@ export function checkUpgrade(plan: LessonUpgradePlan, ctx: UpgradeContext): Upgr
   const issues: UpgradeIssue[] = [];
   const err = (code: string, message: string) => issues.push({ level: "error", code, message });
   const inScope = (l: Lesson) =>
-    l.level === plan.level && l.kind === "content" && l.unit >= plan.scope.fromUnit && l.unit <= plan.scope.toUnit;
+    l.level === plan.level && plan.scope.kinds.includes(l.kind) && l.unit >= plan.scope.fromUnit && l.unit <= plan.scope.toUnit; // D194: kinds
   const byId = new Map(ctx.lessons.map((l) => [l.id, l]));
 
   for (const e of plan.lessons) {
     const lesson = byId.get(e.lessonId);
     if (!lesson) err("e-upgrade-lesson", `${e.lessonId}: درس غير موجود`);
     else if (!inScope(lesson))
-      err("e-upgrade-lesson", `${e.lessonId}: الخطة لدروس محتوى ${plan.level} في الوحدات ${plan.scope.fromUnit}–${plan.scope.toUnit} فقط`);
+      err("e-upgrade-lesson", `${e.lessonId}: الخطة لدروس ${plan.scope.kinds.join("/")} من ${plan.level} في الوحدات ${plan.scope.fromUnit}–${plan.scope.toUnit} فقط`);
   }
   const listed = new Set(plan.lessons.map((e) => e.lessonId));
   const absent = ctx.lessons.filter((l) => inScope(l) && !listed.has(l.id)).map((l) => l.id);
-  if (absent.length) err("e-upgrade-complete", `${absent.length} درس محتوى داخل النطاق غائب عن الخطة: ${absent.slice(0, 10).join("، ")}${absent.length > 10 ? "…" : ""}`);
+  if (absent.length) err("e-upgrade-complete", `${absent.length} درس ${plan.scope.kinds.includes("integration") ? "" : "محتوى "}داخل النطاق غائب عن الخطة: ${absent.slice(0, 10).join("، ")}${absent.length > 10 ? "…" : ""}`);
 
   for (const s of upgradeStatus(plan, ctx)) {
     if (!s.report) continue;
@@ -404,10 +522,16 @@ export function checkUpgrade(plan: LessonUpgradePlan, ctx: UpgradeContext): Upgr
         issues.push({ level: "warning", code: "w-upgrade-mark-done", lessonId: s.lessonId, message: `${s.lessonId}: ${part} (pending) يستوفي معايير done — علِّمه done` });
     }
     if (s.practice === "done" && s.quiz === "done") issues.push(...r.coverage);
+    if (s.practice === "done") issues.push(...r.meta);
+    issues.push(...r.borrowed);
     // أسماء العلم المعلنة يجب أن تُستعمل فعلاً في نصوص الدرس المُرقّاة (أمثلة البطاقات · التدريب والمصائد · Quiz)
     if (s.rule === "done" || s.practice === "done" || s.quiz === "done") {
       const entry = plan.lessons.find((e) => e.lessonId === s.lessonId)!;
       const texts = (["rule", "practice", "quiz"] as const).flatMap((p) => (s[p] === "done" ? r.texts[p] : []));
+      // N-010 (D231): الحوار المعروض نصٌّ من نصوص الدرس — اسم العلم المستعمل في سطوره مستعملٌ فعلاً
+      const dialogueLesson = byId.get(s.lessonId);
+      if (dialogueLesson)
+        for (const sc of dialogueScriptsFor(dialogueLesson, ctx.scripts)) for (const ln of sc.lines) texts.push(ln.text);
       const seen = new Set(contentTokens(germanOnly(texts.join("\n"))));
       for (const n of entry.properNouns)
         if (!contentTokens(n).every((t) => seen.has(t)))
@@ -457,3 +581,20 @@ export function checkGrammarRules(ctx: UpgradeContext): UpgradeIssue[] {
   }
   return issues;
 }
+
+/** النصوص الألمانية المفحوصة في درس (تستثنى الترجمة والتعليل والربط) — مشتركة: check-lesson · measure-stems (N-060 · D226) */
+export function lessonGermanStrings(l: unknown): string[] {
+  const out: string[] = [];
+  // تُستثنى حقول الترجمة والتعليل (عربية) وحقول الربط (معرّفات · أنواع · مراجع) — الاختبار الحقيقي للمعرّفات عند المدقّق
+  const skip = new Set(["why", "ar", "whyArabicSpeakerFails", "tokens", "speakText", "type", "kind", "station", "interleavedWith", "riskFlagsShown"]);
+  const skipKey = (k: string): boolean => skip.has(k) || /Ids?$|Refs?$|^id$/.test(k);
+  const walk = (x: unknown): void => {
+    if (Array.isArray(x)) x.forEach(walk);
+    else if (x && typeof x === "object") for (const [k, v] of Object.entries(x as Record<string, unknown>)) { if (!skipKey(k)) walk(v); }
+    else if (typeof x === "string" && /[A-Za-zÄÖÜäöüß]{3}/.test(x) && !/^[a-z0-9]+(-[a-z0-9]+)+$/.test(x)) out.push(x);
+  };
+  const L = l as Record<string, unknown>;
+  walk(Object.fromEntries(["ziel", "einstieg", "uebung", "quiz", "zusammenfassung"].filter((k) => k in L).map((k) => [k, L[k]])));
+  return [...new Set(out)];
+}
+

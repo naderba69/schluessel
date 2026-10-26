@@ -6,11 +6,12 @@
   "day": 2,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst mit Bus und Bahn fahren: einsteigen, umsteigen, aussteigen — und den Weg zum Hauptbahnhof beschreiben.",
-    "ar": "تستقل الحافلة والقطار (ركوب/تغيير/نزول) وتوصّل الطريق إلى المحطة المركزية"
+    "de": "Ich steige am Bahnhof ein. · Am Hauptbahnhof steige ich um. · Wo steigst du aus? — Am Flughafen. · Die Abfahrt ist um acht Uhr. · Eine Fahrkarte hin und zurück, bitte.",
+    "ar": "تصف رحلة واحدة بالحافلة والقطار بجمل صحيحة: ثلاثة أفعال منفصلة من steigen (einsteigen أركب · umsteigen أغيّر · aussteigen أنزل — الجزء في آخر الجملة، وبعد muss الفعل كاملاً) · Wo? للموقع (am Flughafen) ≠ Wohin? للاتجاه (zum Hauptbahnhof) · الخط والرصيف بلا أداة (Linie 5 · Bahnsteig 3) · الانطلاق والوصول بـum … Uhr · in Richtung … · weit ≠ nah · hin und zurück · am Park vorbei · überall — ومعها كلمات المواصلات: الموقف والمحطة المركزية والرصيف والانطلاق والوصول وحركة المرور والخط والتقاطع والاتجاه."
   },
   "canDoDaily": [
-    "يصف رحلة مواصلات واحدة بجمل صحيحة (steige ein/um/aus + mit + Dativ + hin und zurück)"
+    "يصف رحلة واحدة بثلاثة أفعال منفصلة: Ich steige am Bahnhof ein. · Am Hauptbahnhof steige ich um. · Ich steige am Flughafen aus. · Musst du umsteigen? — Nein, ich steige nicht um.",
+    "يسأل عن الرحلة ويجيب: Wohin fährst du? — Zum Hauptbahnhof. · Wo steigst du aus? — Am Flughafen. · Wann ist die Abfahrt? — Um acht Uhr. · Ist es weit? — Nein, es ist nah. · Eine Fahrkarte hin und zurück, bitte."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«أغيّر الحافلة عند المحطة» — كيف تقولها مع الفعل المنفصل umsteigen?"
+          "de": "«في المحطة المركزية أغيّر (وسيلة النقل)» — أي صيغة صحيحة؟ (تخمين فقط)"
         },
         "choices": [
-          "Am Bahnhof steige ich in den Bus um.",
-          "Am Bahnhof ich umsteige in den Bus.",
-          "Am Bahnhof umsteige ich in den Bus."
+          "Am Hauptbahnhof steige ich um.",
+          "Am Hauptbahnhof ich umsteige.",
+          "Am Hauptbahnhof umsteige ich."
         ],
-        "answer": "Am Bahnhof steige ich in den Bus um.",
+        "answer": "Am Hauptbahnhof steige ich um.",
         "revealNextSession": true
       }
     ],
@@ -60,79 +61,530 @@
       "ars-weg-verkehr"
     ],
     "storySentenceIds": [
-      "story-a9-u9-s2"
+      "story-a1-u9-s2"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "auslaut-b",
+      "auslaut-g",
+      "ch-ich-laut",
+      "double-consonant",
+      "r-uvular",
+      "sp-st-initial",
+      "umlaut-u",
+      "v-f",
+      "vowel-long-short",
+      "z"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«من فضلك اركب!»؟",
-            "a": "Bitte steigen Sie ein!"
+            "q": "Ich steige am Bahnhof ___. (أركب)",
+            "a": "ein",
+            "why": "einsteigen فعل منفصل: steige ثانياً والجزء ein في آخر الجملة — كـIch hole dich ab."
           },
           {
-            "q": "«هنا أنزل»؟",
-            "a": "Hier steige ich aus."
+            "q": "Am Hauptbahnhof ___ ich um. (أغيّر)",
+            "a": "steige",
+            "why": "الفعل المصرَّف ثانياً بعد Am Hauptbahnhof، والجزء um يبقى في الآخر."
+          },
+          {
+            "q": "Wo steigst du ___? (تنزل)",
+            "a": "aus",
+            "why": "في السؤال أيضاً يبقى الجزء المنفصل في آخر الجملة: steigst … aus."
+          },
+          {
+            "q": "Ich muss am Hauptbahnhof ___. (أغيّر)",
+            "a": "umsteigen",
+            "why": "بعد muss يعود الفعل كاملاً (um + steigen) إلى آخر الجملة."
+          },
+          {
+            "q": "Nein, ich steige ___ um. (لا)",
+            "a": "nicht",
+            "why": "النفي nicht قبل الجزء المنفصل مباشرة: nicht um."
+          },
+          {
+            "q": "___ fährt er? — Zum Hauptbahnhof. (إلى أين)",
+            "a": "Wohin",
+            "why": "الجواب zum = اتجاه ← السؤال Wohin (إلى أين؟)."
+          },
+          {
+            "q": "___ steigst du aus? — Am Flughafen. (أين)",
+            "a": "Wo",
+            "why": "الجواب am Flughafen = موقع ← السؤال Wo (أين؟)."
+          },
+          {
+            "q": "Die ___ ist um acht Uhr. (الانطلاق)",
+            "a": "Abfahrt",
+            "why": "die Abfahrt = الانطلاق (ab = بعيداً عن) · die Ankunft = الوصول."
+          },
+          {
+            "q": "Die Abfahrt ist ___ sieben Uhr. (الساعة)",
+            "a": "um",
+            "why": "الوقت بـum … Uhr دائماً — كما تعرف من الوحدة 3."
+          },
+          {
+            "q": "___ 5 fährt zum Hauptbahnhof. (الخط)",
+            "a": "Linie",
+            "why": "Linie + رقم بلا أداة — كـZimmer 12."
+          },
+          {
+            "q": "Der Zug fährt von ___ 3 ab. (الرصيف)",
+            "a": "Bahnsteig",
+            "why": "Bahnsteig + رقم بلا أداة · von … ab = ينطلق من."
+          },
+          {
+            "q": "Die Bahn fährt in ___ Flughafen. (باتجاه)",
+            "a": "Richtung",
+            "why": "in Richtung + المكان بلا أداة = باتجاه."
+          },
+          {
+            "q": "Ist es weit? — Nein, es ist ___. (قريب)",
+            "a": "nah",
+            "why": "weit ≠ nah — صفتان بعد ist بلا نهاية."
+          },
+          {
+            "q": "Ich fahre ___ und zurück. (ذهاباً)",
+            "a": "hin",
+            "why": "hin und zurück = ذهاباً وإياباً — بهذا الترتيب دائماً."
+          },
+          {
+            "q": "Der Zug fährt am Park ___. (يمرّ بـ)",
+            "a": "vorbei",
+            "why": "vorbei في آخر الجملة بعد am + المكان: fährt am Park vorbei."
+          },
+          {
+            "q": "___ ist Verkehr. (في كل الأماكن)",
+            "a": "Überall",
+            "why": "überall كلمة مكان تقف أول الجملة بحرف كبير، والفعل ist ثانياً."
+          },
+          {
+            "q": "Die ___ ist gegenüber der Post. (الموقف)",
+            "a": "Haltestelle",
+            "why": "die Haltestelle = الموقف · gegenüber der Post من اليوم الأول."
+          },
+          {
+            "q": "Geradeaus zur ___, dort links. (التقاطع)",
+            "a": "Kreuzung",
+            "why": "die Kreuzung = التقاطع · zur = zu der (مؤنث)."
+          },
+          {
+            "q": "Der ___ ist heute langsam. (حركة المرور)",
+            "a": "Verkehr",
+            "why": "der Verkehr = حركة المرور — مذكر بلا جمع."
+          },
+          {
+            "q": "Der ___ ist im Zentrum. (المحطة المركزية)",
+            "a": "Hauptbahnhof",
+            "why": "der Hauptbahnhof = Haupt (رئيسي) + Bahnhof — مذكر كـder Bahnhof."
+          },
+          {
+            "q": "Die ___ ist um zehn Uhr. (الوصول)",
+            "a": "Ankunft",
+            "why": "die Ankunft = الوصول (an = إلى) — والانطلاق die Abfahrt."
+          },
+          {
+            "q": "Ist es ___? — Nein, nur zehn Minuten. (بعيد)",
+            "a": "weit",
+            "why": "Ist es weit? = هل هو بعيد؟ — الجواب بالدقائق."
           }
         ],
         "interleavedWith": [
-          "einsteigen",
-          "aussteigen"
+          "bahnhof",
+          "flughafen",
+          "post",
+          "park",
+          "zug",
+          "bahn",
+          "uhr",
+          "zentrum",
+          "langsam",
+          "heute",
+          "links",
+          "geradeaus",
+          "minute",
+          "fahren"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«المغادرة الساعة 8 والوصول الساعة 10»؟",
-            "a": "Die Abfahrt ist um 8 Uhr, die Ankunft um 10 Uhr."
+            "audioId": "hb-1",
+            "speakText": "Hallo Yusuf! Am Montag fliegst du. Wie kommst du zum Flughafen — mit der Bahn?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "كيف يصل يوسف إلى المطار",
+              "متى يطير يوسف",
+              "أين المطار في برلين"
+            ],
+            "a": "كيف يصل يوسف إلى المطار",
+            "why": "Wie kommst du zum Flughafen? = كيف تصل إلى المطار؟ — وmit der Bahn? اقتراح."
           },
           {
-            "q": "«القطار يغادر من الرصيف 3»؟",
-            "a": "Der Zug fährt von Bahnsteig 3 ab."
+            "audioId": "hb-4",
+            "speakText": "Nein, zum Hauptbahnhof. Am Hauptbahnhof steige ich um. Die Bahn fährt zum Flughafen.",
+            "q": "استمع: أين يغيّر يوسف؟",
+            "choices": [
+              "في المحطة المركزية",
+              "في المطار",
+              "عند الموقف"
+            ],
+            "a": "في المحطة المركزية",
+            "why": "Am Hauptbahnhof steige ich um — umsteigen منفصل: um في آخر الجملة."
+          },
+          {
+            "audioId": "hb-6",
+            "speakText": "Die Abfahrt ist um sechs Uhr zehn, die Ankunft am Flughafen um sechs Uhr fünfzig.",
+            "q": "استمع: متى الانطلاق؟",
+            "choices": [
+              "السادسة وعشر دقائق",
+              "السادسة وخمسون دقيقة",
+              "السابعة وعشر دقائق"
+            ],
+            "a": "السادسة وعشر دقائق",
+            "why": "die Abfahrt um sechs Uhr zehn = الانطلاق · die Ankunft um sechs Uhr fünfzig = الوصول."
+          },
+          {
+            "audioId": "hb-7",
+            "speakText": "Vierzig Minuten — das ist nicht weit. Und wo steigst du aus?",
+            "q": "استمع: ماذا تقول لينا عن الأربعين دقيقة؟",
+            "choices": [
+              "ليست بعيدة",
+              "بعيدة جداً",
+              "طويلة جداً"
+            ],
+            "a": "ليست بعيدة",
+            "why": "das ist nicht weit = ليس بعيداً — ثم Wo steigst du aus? (أين تنزل؟)."
+          },
+          {
+            "audioId": "hb-8",
+            "speakText": "Ich steige am Flughafen aus. Von dort sind es fünf Minuten zu Fuß.",
+            "q": "استمع: أين ينزل يوسف، وكم يمشي؟",
+            "choices": [
+              "في المطار — خمس دقائق مشياً",
+              "في المحطة المركزية — خمس دقائق مشياً",
+              "في المطار — خمس عشرة دقيقة مشياً"
+            ],
+            "a": "في المطار — خمس دقائق مشياً",
+            "why": "Ich steige am Flughafen aus = أنزل في المطار · fünf Minuten zu Fuß = خمس دقائق مشياً."
+          },
+          {
+            "audioId": "hb-10",
+            "speakText": "Bahnsteig drei, Richtung Flughafen. Am Montag ist überall Verkehr — ich fahre früh.",
+            "q": "استمع: من أي رصيف، ولماذا يسافر مبكراً؟",
+            "choices": [
+              "الرصيف 3 — زحام في كل مكان يوم الاثنين",
+              "الرصيف 2 — القطار بطيء",
+              "الرصيف 3 — الطقس سيئ"
+            ],
+            "a": "الرصيف 3 — زحام في كل مكان يوم الاثنين",
+            "why": "Bahnsteig drei = الرصيف 3 · überall Verkehr = زحام في كل مكان · ich fahre früh = أسافر مبكراً."
+          },
+          {
+            "audioId": "hb-11",
+            "speakText": "Bei mir: Am Sonntag fahre ich mit dem Zug zur Oma — eine Stunde.",
+            "q": "استمع: كيف تسافر لينا إلى جدتها؟",
+            "choices": [
+              "بالقطار — ساعة",
+              "بالحافلة — ساعة",
+              "بالدراجة — عشر دقائق"
+            ],
+            "a": "بالقطار — ساعة",
+            "why": "mit dem Zug zur Oma = بالقطار إلى الجدة · eine Stunde = ساعة."
+          },
+          {
+            "audioId": "hb-12",
+            "speakText": "Musst du umsteigen?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل يجب أن تغيّري؟",
+              "أين تنزلين؟",
+              "متى الانطلاق؟"
+            ],
+            "a": "هل يجب أن تغيّري؟",
+            "why": "Musst du umsteigen? — بعد muss الفعل كاملاً في الآخر."
+          },
+          {
+            "audioId": "hb-13",
+            "speakText": "Nein, ich steige nicht um. Der Zug fährt am Park vorbei, am Krankenhaus vorbei — und ich lese.",
+            "q": "استمع: هل تغيّر لينا؟ وبماذا يمرّ القطار؟",
+            "choices": [
+              "لا — بالحديقة والمستشفى",
+              "نعم — بالمحطة المركزية",
+              "لا — بالكنيسة والبنك"
+            ],
+            "a": "لا — بالحديقة والمستشفى",
+            "why": "ich steige nicht um = لا أغيّر · am Park vorbei, am Krankenhaus vorbei = يمرّ بالحديقة وبالمستشفى."
+          },
+          {
+            "audioId": "hb-14",
+            "speakText": "Hin und zurück — wie viel kostet das?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "سعر التذكرة ذهاباً وإياباً",
+              "وقت الوصول",
+              "رقم الرصيف"
+            ],
+            "a": "سعر التذكرة ذهاباً وإياباً",
+            "why": "Hin und zurück — wie viel kostet das? = ذهاباً وإياباً — كم يكلّف؟"
+          },
+          {
+            "audioId": "hb-15",
+            "speakText": "Hin und zurück zwölf Euro. Die Fahrkarte kaufe ich am Schalter.",
+            "q": "استمع: كم تكلّف التذكرة، ومن أين تشتريها لينا؟",
+            "choices": [
+              "اثنا عشر يورو — من الشباك",
+              "عشرون يورو — من الشباك",
+              "اثنا عشر يورو — من الحافلة"
+            ],
+            "a": "اثنا عشر يورو — من الشباك",
+            "why": "zwölf Euro = اثنا عشر يورو · am Schalter = من الشباك."
+          },
+          {
+            "audioId": "hb-16",
+            "speakText": "Und von der Haltestelle zur Oma — ist das weit?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل الطريق من الموقف إلى الجدة بعيد",
+              "هل الموقف مقابل بيت الجدة",
+              "كم يكلّف القطار إلى الجدة"
+            ],
+            "a": "هل الطريق من الموقف إلى الجدة بعيد",
+            "why": "von der Haltestelle zur Oma — ist das weit? = هل هو بعيد؟"
+          },
+          {
+            "audioId": "hb-18",
+            "speakText": "In Berlin ist überall Verkehr — aber die Bahn ist schnell.",
+            "q": "استمع: ماذا يقول يوسف عن برلين؟",
+            "choices": [
+              "زحام في كل مكان، لكن القطار سريع",
+              "لا زحام، والقطار بطيء",
+              "زحام في المركز فقط"
+            ],
+            "a": "زحام في كل مكان، لكن القطار سريع",
+            "why": "überall Verkehr = زحام في كل مكان · aber die Bahn ist schnell = لكن القطار سريع."
+          },
+          {
+            "audioId": "hb-19",
+            "speakText": "Und in Tunis? Steigst du dort auch um?",
+            "q": "استمع: عمّ تسأل لينا؟",
+            "choices": [
+              "هل يغيّر يوسف في تونس أيضاً",
+              "هل تونس بعيدة",
+              "هل في تونس قطار"
+            ],
+            "a": "هل يغيّر يوسف في تونس أيضاً",
+            "why": "Steigst du dort auch um? — السؤال بالفعل المنفصل: um في الآخر."
+          },
+          {
+            "audioId": "hb-20",
+            "speakText": "Nein — mein Vater holt mich ab. Hin und zurück mit dem Auto! Bis morgen, Lena!",
+            "q": "استمع: كيف يتنقل يوسف في تونس؟",
+            "choices": [
+              "أبوه يأخذه بالسيارة — ذهاباً وإياباً",
+              "بالحافلة والقطار",
+              "بسيارة أجرة من المطار"
+            ],
+            "a": "أبوه يأخذه بالسيارة — ذهاباً وإياباً",
+            "why": "mein Vater holt mich ab = أبي يأخذني · hin und zurück mit dem Auto = ذهاباً وإياباً بالسيارة."
           }
         ],
         "interleavedWith": [
-          "abfahrt",
-          "bahnsteig"
+          "flughafen",
+          "montag",
+          "sonntag",
+          "bahn",
+          "zug",
+          "auto",
+          "oma",
+          "vater",
+          "park",
+          "krankenhaus",
+          "schalter",
+          "fahrkarte",
+          "euro",
+          "minute",
+          "stunde",
+          "fuss",
+          "schnell",
+          "fliegen",
+          "fahren",
+          "kommen",
+          "kosten",
+          "abholen"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«هل هو بعيد؟»؟",
-            "a": "Ist es weit?"
+            "tokens": [
+              "um.",
+              "ich",
+              "Am",
+              "steige",
+              "Hauptbahnhof"
+            ],
+            "a": "Am Hauptbahnhof steige ich um.",
+            "why": "Am Hauptbahnhof أولاً ← steige ثانياً ← ich ← um في الآخر."
           },
           {
-            "q": "«عند التقاطع يميناً»؟",
-            "a": "An der Kreuzung rechts."
+            "tokens": [
+              "aus?",
+              "du",
+              "Wo",
+              "steigst"
+            ],
+            "a": "Wo steigst du aus?",
+            "why": "كلمة السؤال Wo ← steigst ← du ← الجزء aus في الآخر."
+          },
+          {
+            "tokens": [
+              "Uhr.",
+              "ist",
+              "Die",
+              "acht",
+              "Abfahrt",
+              "um"
+            ],
+            "a": "Die Abfahrt ist um acht Uhr.",
+            "why": "Die Abfahrt ← ist ← um acht Uhr (الوقت بـum)."
+          },
+          {
+            "tokens": [
+              "vorbei.",
+              "Park",
+              "Der",
+              "fährt",
+              "am",
+              "Zug"
+            ],
+            "a": "Der Zug fährt am Park vorbei.",
+            "why": "fährt ثانياً ← am Park ← vorbei في الآخر."
+          },
+          {
+            "tokens": [
+              "umsteigen?",
+              "du",
+              "Hauptbahnhof",
+              "Musst",
+              "am"
+            ],
+            "a": "Musst du am Hauptbahnhof umsteigen?",
+            "why": "Musst أولاً (سؤال نعم/لا) ← du ← am Hauptbahnhof ← umsteigen كاملاً في الآخر."
+          },
+          {
+            "tokens": [
+              "Flughafen.",
+              "fährt",
+              "Bahn",
+              "Richtung",
+              "Die",
+              "in"
+            ],
+            "a": "Die Bahn fährt in Richtung Flughafen.",
+            "why": "fährt ثانياً ← in Richtung + المكان بلا أداة."
           }
         ],
         "interleavedWith": [
-          "weit",
-          "kreuzung"
+          "uhr",
+          "park",
+          "zug",
+          "bahn",
+          "flughafen",
+          "fahren"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "hb-3",
+            "speakText": "Linie 5 fährt zum Flughafen?",
+            "a": "Linie 5 fährt zum Flughafen?",
+            "why": "Linie بحرف كبير · fährt بـä · Flughafen بحرف كبير — وعلامة استفهام في الآخر."
+          },
+          {
+            "audioId": "hb-5",
+            "speakText": "Und wann ist die Abfahrt?",
+            "a": "Und wann ist die Abfahrt?",
+            "why": "Abfahrt بحرف كبير وhr بعد fa (a طويلة) — Und بحرف كبير أول الجملة."
+          },
+          {
+            "audioId": "hb-9",
+            "speakText": "Weißt du schon den Bahnsteig?",
+            "a": "Weißt du schon den Bahnsteig?",
+            "why": "Weißt بـß · schon بـsch · Bahnsteig بحرف كبير وg في الآخر (تُنطق k)."
+          },
+          {
+            "audioId": "hb-2",
+            "speakText": "Ja. Die Haltestelle ist gegenüber der Bäckerei. Dort steige ich ein — Linie 5.",
+            "a": "Ja. Die Haltestelle ist gegenüber der Bäckerei. Dort steige ich ein — Linie 5.",
+            "why": "Haltestelle بحرف كبير وll مضاعفة · gegenüber بـü · Bäckerei بـä وck · Linie بحرف كبير — والرقم 5 رقماً."
+          },
+          {
+            "audioId": "hb-17",
+            "speakText": "Nein, sehr nah: geradeaus zur Kreuzung, dort links — zwei Minuten.",
+            "a": "Nein, sehr nah: geradeaus zur Kreuzung, dort links — zwei Minuten.",
+            "why": "nah بـh صامتة · geradeaus كلمة واحدة · Kreuzung بحرف كبير وz · Minuten بحرف كبير."
+          },
+          {
+            "audioId": "word-umsteigen",
+            "speakText": "umsteigen.",
+            "a": "umsteigen.",
+            "why": "كلمة واحدة في المصدر: um + steigen — وst تُنطق [ʃt]."
+          },
+          {
+            "audioId": "word-haltestelle",
+            "speakText": "die Haltestelle.",
+            "a": "die Haltestelle.",
+            "why": "die Haltestelle: Halte + Stelle — ll مضاعفة وst تُنطق [ʃt]."
+          },
+          {
+            "audioId": "word-bahnsteig",
+            "speakText": "der Bahnsteig.",
+            "a": "der Bahnsteig.",
+            "why": "der Bahnsteig: Bahn + Steig — h تطيل a، وg في الآخر تُنطق k."
+          },
+          {
+            "audioId": "word-richtung",
+            "speakText": "die Richtung.",
+            "a": "die Richtung.",
+            "why": "die Richtung: ch ثم t · ‑ung مؤنث دائماً."
+          }
+        ],
+        "interleavedWith": [
+          "flughafen",
+          "geradeaus",
+          "links",
+          "minute",
+          "fahren",
+          "baeckerei",
+          "dort"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die Fahrt zum Hauptbahnhof planen und beschreiben",
-        "ar": "تخطيط ووصف رحلة إلى المحطة المركزية"
+        "de": "Wohin fährst du? — Zum Flughafen. Wo steigst du um? — Am Hauptbahnhof. Die Abfahrt ist um acht Uhr — hin und zurück.",
+        "ar": "تصف لزميلك رحلة واحدة بالحافلة والقطار (من الموقف إلى الوجهة) وتسأله عن رحلته — بأفعال الركوب والتغيير والنزول في موضعها"
       },
       "situation": {
-        "de": "An der Haltestelle: mit dem Bus zum Hauptbahnhof, dort umsteigen",
-        "ar": "عند الموقف: بالحافلة إلى المحطة المركزية ثم تغيير الوسيلة"
+        "de": "Im Kurs: Wie kommst du zum Flughafen? Wo steigst du ein? Musst du umsteigen? Wann ist die Abfahrt? Ist es weit? Hin und zurück?",
+        "ar": "في الدورة: كلٌّ منكما يصف رحلة حقيقية على الشاشة — يسأل الآخر: Wohin fährst du? · Wo steigst du ein? · Musst du umsteigen? · Wann ist die Abfahrt? · Ist es weit? ويجيب بجمل كاملة: Ich steige am Bahnhof ein. · Am Hauptbahnhof steige ich um. · Die Abfahrt ist um acht Uhr, die Ankunft um neun Uhr. · Linie 5, Bahnsteig 3, in Richtung Flughafen. · Nein, es ist nah — und hin und zurück zwölf Euro. — ثم تتبادلان."
       },
       "successCriteria": [
-        "جملتا ركوب/نزول + جملة umsteigen (البادئة في النهاية) + mit + Dativ + hin und zurück"
+        "ثلاث جمل بالأفعال المنفصلة الثلاثة (ein · um · aus في آخر الجملة) وجملة واحدة بـmuss + umsteigen كاملاً في الآخر — لا Ich umsteige (خطأ).",
+        "سؤالان صحيحان: Wohin fährst du? (الجواب zum/zur أو nach) وWo steigst du aus? (الجواب am … أو hier/dort) — والوقت بـum … Uhr، والخط والرصيف بلا أداة (Linie 5 · Bahnsteig 3)، وhin und zurück بهذا الترتيب."
       ]
     }
   },
@@ -147,20 +599,64 @@
       {
         "items": [
           {
-            "q": "«موقف الحافلة»؟",
-            "a": "die Haltestelle"
+            "q": "«في المحطة المركزية يغيّر»؟",
+            "choices": [
+              "Er steigt am Hauptbahnhof um.",
+              "Er umsteigt am Hauptbahnhof.",
+              "Am Hauptbahnhof er steigt um."
+            ],
+            "a": "Er steigt am Hauptbahnhof um.",
+            "why": "umsteigen منفصل: steigt ثانياً وum في آخر الجملة — والفعل لا يبقى كلمة واحدة في الجملة الخبرية."
           },
           {
-            "q": "«أغيّر (وسيلة النقل)»؟",
-            "a": "umsteigen"
+            "q": "«إلى أين تسافر؟»؟",
+            "choices": [
+              "Wohin fährst du?",
+              "Wo fährst du?",
+              "Woher fährst du?"
+            ],
+            "a": "Wohin fährst du?",
+            "why": "الاتجاه (إلى أين) بـWohin — Wo للموقع وWoher لـ«من أين»."
           },
           {
-            "q": "«الوصول»؟",
-            "a": "die Ankunft"
+            "q": "die Abfahrt = ؟",
+            "choices": [
+              "الانطلاق",
+              "الوصول",
+              "الاتجاه"
+            ],
+            "a": "الانطلاق",
+            "why": "die Abfahrt = الانطلاق · die Ankunft = الوصول · die Richtung = الاتجاه."
           },
           {
-            "q": "«قريب» و«بعيد»؟",
-            "a": "nah / weit"
+            "q": "«الوصول الساعة التاسعة»؟",
+            "choices": [
+              "Die Ankunft ist um neun Uhr.",
+              "Die Ankunft ist neun Uhr.",
+              "Die Ankunft ist am neun Uhr."
+            ],
+            "a": "Die Ankunft ist um neun Uhr.",
+            "why": "الوقت بـum … Uhr دائماً — لا بلا حرف ولا بـam (am للأيام: am Montag)."
+          },
+          {
+            "q": "«ذهاباً وإياباً، من فضلك»؟",
+            "choices": [
+              "Hin und zurück, bitte.",
+              "Zurück und hin, bitte.",
+              "Hin und weit, bitte."
+            ],
+            "a": "Hin und zurück, bitte.",
+            "why": "hin und zurück بهذا الترتيب — hin ذهاباً ثم zurück إياباً؛ وweit = بعيد."
+          },
+          {
+            "q": "«يجب أن أنزل هنا»؟",
+            "choices": [
+              "Ich muss hier aussteigen.",
+              "Ich muss hier steige aus.",
+              "Ich aussteige hier muss."
+            ],
+            "a": "Ich muss hier aussteigen.",
+            "why": "بعد muss يعود الفعل كاملاً (aussteigen) إلى آخر الجملة — وmuss ثانياً."
           }
         ],
         "passingScore": 0.75
@@ -168,20 +664,64 @@
       {
         "items": [
           {
-            "q": "«المحطة المركزية»؟",
-            "a": "der Hauptbahnhof"
+            "q": "«أركب هنا»؟",
+            "choices": [
+              "Ich steige hier ein.",
+              "Ich einsteige hier.",
+              "Hier ich steige ein."
+            ],
+            "a": "Ich steige hier ein.",
+            "why": "einsteigen منفصل: steige ثانياً وein في الآخر — وبعد Hier يأتي الفعل مباشرة."
           },
           {
-            "q": "«يركب» و«ينزل»؟",
-            "a": "einsteigen / aussteigen"
+            "q": "«أين ينزل؟»؟",
+            "choices": [
+              "Wo steigt er aus?",
+              "Wohin steigt er aus?",
+              "Wo steigt er ab?"
+            ],
+            "a": "Wo steigt er aus?",
+            "why": "النزول موقع ← Wo (لا Wohin) — والجزء المنفصل aus (aussteigen) لا ab."
           },
           {
-            "q": "«الانطلاق»؟",
-            "a": "die Abfahrt"
+            "q": "der Bahnsteig = ؟",
+            "choices": [
+              "رصيف القطار",
+              "الموقف",
+              "التقاطع"
+            ],
+            "a": "رصيف القطار",
+            "why": "der Bahnsteig = رصيف القطار · die Haltestelle = الموقف · die Kreuzung = التقاطع."
           },
           {
-            "q": "«ذهاباً وإياباً»؟",
-            "a": "hin und zurück"
+            "q": "«الخط 7 يذهب إلى المطار»؟",
+            "choices": [
+              "Linie 7 fährt zum Flughafen.",
+              "Die Linie 7 fährt zu Flughafen.",
+              "Linie 7 fährt nach Flughafen."
+            ],
+            "a": "Linie 7 fährt zum Flughafen.",
+            "why": "Linie + رقم بلا أداة · «إلى المطار» بـzum (zu + dem) — nach للمدن والبلدان والجهات."
+          },
+          {
+            "q": "«القطار يمرّ بالمستشفى»؟",
+            "choices": [
+              "Der Zug fährt am Krankenhaus vorbei.",
+              "Der Zug fährt am Krankenhaus hin.",
+              "Der Zug fährt am Krankenhaus zurück."
+            ],
+            "a": "Der Zug fährt am Krankenhaus vorbei.",
+            "why": "vorbei في آخر الجملة بعد am + المكان — وhin/zurück معناهما ذهاباً/إياباً لا مروراً."
+          },
+          {
+            "q": "«ليس بعيداً — قريب جداً»؟",
+            "choices": [
+              "Nicht weit — sehr nah.",
+              "Nicht nah — sehr weit.",
+              "Nicht weit — sehr vorbei."
+            ],
+            "a": "Nicht weit — sehr nah.",
+            "why": "weit = بعيد · nah = قريب — وvorbei ليست صفة قرب."
           }
         ],
         "passingScore": 0.75
@@ -189,20 +729,64 @@
       {
         "items": [
           {
-            "q": "«تقاطع الطرق»؟",
-            "a": "die Kreuzung"
+            "q": "«في المطار أنزل»؟",
+            "choices": [
+              "Am Flughafen steige ich aus.",
+              "Am Flughafen ich steige aus.",
+              "Am Flughafen aussteige ich."
+            ],
+            "a": "Am Flughafen steige ich aus.",
+            "why": "بعد Am Flughafen يأتي الفعل ثانياً (steige) ثم ich، والجزء aus في الآخر."
           },
           {
-            "q": "«في اتجاه الشمال»؟",
-            "a": "in Richtung Norden"
+            "q": "«أين الموقف؟ — مقابل البنك»؟",
+            "choices": [
+              "Wo ist die Haltestelle? — Gegenüber der Bank.",
+              "Wohin ist die Haltestelle? — Gegenüber der Bank.",
+              "Wo ist die Haltestelle? — Gegenüber die Bank."
+            ],
+            "a": "Wo ist die Haltestelle? — Gegenüber der Bank.",
+            "why": "الموقع بـWo (لا Wohin) — وgegenüber + الداتيف: die Bank ← der Bank."
           },
           {
-            "q": "«في كل مكان»؟",
-            "a": "überall"
+            "q": "die Richtung = ؟",
+            "choices": [
+              "الاتجاه",
+              "الوصول",
+              "التقاطع"
+            ],
+            "a": "الاتجاه",
+            "why": "die Richtung = الاتجاه (in Richtung Flughafen) · die Ankunft = الوصول · die Kreuzung = التقاطع."
           },
           {
-            "q": "«الخط 5 يذهب إلى المحطة المركزية»؟",
-            "a": "Die Linie 5 fährt zum Hauptbahnhof."
+            "q": "«قطارك ينطلق من الرصيف 2»؟",
+            "choices": [
+              "Dein Zug fährt von Bahnsteig 2 ab.",
+              "Dein Zug fährt von Bahnsteig 2 um.",
+              "Dein Zug fährt ab von Bahnsteig 2."
+            ],
+            "a": "Dein Zug fährt von Bahnsteig 2 ab.",
+            "why": "von Bahnsteig 2 ab — الجزء ab في آخر الجملة (ينطلق) · um = يغيّر."
+          },
+          {
+            "q": "überall = ؟",
+            "choices": [
+              "في كل مكان",
+              "هناك",
+              "إلى هناك"
+            ],
+            "a": "في كل مكان",
+            "why": "überall = في كل مكان · dort = هناك · hin = إلى هناك."
+          },
+          {
+            "q": "«تذكرة ذهاباً وإياباً من فضلك»؟",
+            "choices": [
+              "Eine Fahrkarte hin und zurück, bitte.",
+              "Eine Fahrkarte zurück und hin, bitte.",
+              "Eine Fahrkarte hin und weit, bitte."
+            ],
+            "a": "Eine Fahrkarte hin und zurück, bitte.",
+            "why": "hin und zurück بهذا الترتيب — وweit = بعيد لا إياباً."
           }
         ],
         "passingScore": 0.75
@@ -211,53 +795,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einsteigen, umsteigen, aussteigen — und dann: „An der Kreuzung rechts, geradeaus bis zum Hauptbahnhof!“ Hin und zurück.",
-      "ar": "اركب، غيّر، انزل — ثم: «عند التقاطع يميناً، إلى الأمام حتى المحطة المركزية!» ذهاباً وإياباً."
+      "de": "Ich steige am Bahnhof ein. · Am Hauptbahnhof steige ich um. · Wo steigst du aus? — Am Flughafen. · Musst du umsteigen? — Nein, ich steige nicht um. · Wohin fährst du? — Zum Hauptbahnhof. · Linie 5 fährt zum Hauptbahnhof. · Der Zug fährt von Bahnsteig 3 ab. · Die Bahn fährt in Richtung Flughafen. · Die Abfahrt ist um acht Uhr, die Ankunft um neun Uhr. · Ist es weit? — Nein, es ist nah. · Eine Fahrkarte hin und zurück, bitte. · Der Zug fährt am Park vorbei. · Überall ist Verkehr.",
+      "ar": "رحلة واحدة بأربع خطوات: (1) ثلاثة أفعال منفصلة من steigen — einsteigen (أركب) · umsteigen (أغيّر) · aussteigen (أنزل): الفعل ثانياً والجزء (ein · um · aus) في آخر الجملة، وبعد muss/kann الفعل كاملاً في الآخر، وnicht قبل الجزء. (2) Wohin? للاتجاه (zum/zur · nach) وWo? للموقع (am … · gegenüber der … · hier/dort). (3) أرقام الرحلة بلا أداة: Linie 5 · Bahnsteig 3 · von Bahnsteig 3 ab · in Richtung Flughafen — والوقت بـum … Uhr: die Abfahrt (الانطلاق) · die Ankunft (الوصول). (4) weit ≠ nah · hin und zurück (بهذا الترتيب) · vorbei في الآخر بعد am + المكان · überall. الكلمات: die Haltestelle (‑n) · der Hauptbahnhof (Hauptbahnhöfe) · der Bahnsteig (‑e) · die Abfahrt (‑en) · die Ankunft (Ankünfte) · der Verkehr (بلا جمع) · die Linie (‑n) · die Kreuzung (‑en) · die Richtung (‑en)."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich umsteige am Bahnhof~~ / ~~Am Bahnhof umsteige ich in den Bus~~",
-          "ar": "الفعل المنفصل: البادئة تذهب إلى نهاية الجملة"
+          "de": "~~Ich umsteige am Hauptbahnhof.~~ · ~~Am Hauptbahnhof ich steige um.~~",
+          "ar": "الفعل ثانياً والجزء المنفصل um في آخر الجملة"
         },
-        "whyArabicSpeakerFails": "العربية لا تفصل البادئة عن الفعل؛ الألماني umsteigen منفصل — في الجملة الرئيسية يصعد الفعل للموضع الثاني وتنتهي البادئة بالجملة: steige … um (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أغيّر في المحطة المركزية» فعلٌ واحد لا ينقسم في العربية، فيُبقي المتعلم umsteigen كلمةً واحدة (~~Ich umsteige~~) أو يضع الفاعل قبل الفعل بعد الظرف (~~Am Hauptbahnhof ich steige um~~). والألمانية: الفعل المصرَّف ثانياً دائماً (steige) والجزء المنفصل في آخر الجملة (um) — القاعدة نفسها التي تعرفها من Ich hole dich ab وIch kaufe ein — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Am Bahnhof steige ich in den Bus um.",
-          "ar": "عند المحطة أستقل الحافلة (أغيّر الوسيلة)."
+          "de": "Am Hauptbahnhof steige ich um. · Ich steige am Hauptbahnhof um.",
+          "ar": "في المحطة المركزية أغيّر · أغيّر في المحطة المركزية"
         },
         "exercise": {
-          "q": "أعد الصياغة: umsteigen + Am Bahnhof + ich → الجملة الصحيحة.",
-          "a": "Am Bahnhof steige ich um."
+          "q": "رتّب: aus / ich / Hier / steige",
+          "a": "Hier steige ich aus."
         }
       },
       {
         "commonError": {
-          "de": "~~in den Bus fahren~~ (للركوب نفسه) / ~~im Bus steigen~~",
-          "ar": "in + Akkusatif (حركة إلى داخل) ↔ in + Dativ (داخل أثناء السير)"
+          "de": "~~Wo fährst du?~~ · ~~Wohin steigst du aus?~~",
+          "ar": "Wohin للاتجاه (fahren → zum) · Wo للموقع (aussteigen → am)"
         },
-        "whyArabicSpeakerFails": "«في الحافلة» و«إلى الحافلة» تتشابهان بالعربية؛ الألماني يفصل: ich steige in den Bus (Akk — إلى داخل) ↔ ich sitze im Bus (Dativ — داخل) — مصيدة الحالتين منذ الوحدة 2 (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«أين تذهب؟» تستعمل «أين» وحدها للاتجاه والموقع معاً، فيقول المتعلم ~~Wo fährst du?~~ للرحلة. والألمانية تفصل السؤالين: Wohin fährst du? — Zum Hauptbahnhof. · Nach Tunesien. (إلى أين — اتجاه) · Wo steigst du aus? — Am Flughafen. (أين — موقع) — كـim Norden ↔ nach Norden من اليوم الأول — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich steige in den Bus. · Ich fahre im Bus.",
-          "ar": "أركب الحافلة (إلى داخل). · أسافر داخل الحافلة."
+          "de": "Wohin fährst du? — Zum Hauptbahnhof. · Wo steigst du aus? — Am Flughafen.",
+          "ar": "إلى أين تسافر؟ — إلى المحطة المركزية · أين تنزل؟ — في المطار"
         },
         "exercise": {
-          "q": "أكمل: Ich steige in ___ Bus (der). Ich fahre in___ Bus (der).",
-          "a": "den / im"
+          "q": "أكمل: ___ fährst du? — Nach Tunesien.",
+          "a": "Wohin"
         }
       },
       {
         "commonError": {
-          "de": "~~Wo fährst du?~~ (حين السؤال عن الوجهة)",
-          "ar": "wo (موقع) ↔ wohin (وجهة) — و hin ↔ zurück"
+          "de": "~~Die Abfahrt ist acht Uhr.~~ · ~~Die Ankunft ist am neun Uhr.~~",
+          "ar": "الوقت بـum … Uhr دائماً"
         },
-        "whyArabicSpeakerFails": "«أين تذهب؟» بالعربية تحتمل الموقع والوجهة؛ الألماني يفصل: Wo bist du? ↔ Wohin fährst du? — و hin (ذهاب) ≠ zurück (إياب) (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«الانطلاق الساعة الثامنة» بلا حرف قبل الساعة في العربية، فيحذف المتعلم um (~~Die Abfahrt ist acht Uhr~~) أو يستعير am من الأيام (~~am neun Uhr~~). والألمانية: الساعة بـum دائماً (Die Abfahrt ist um acht Uhr. · Die Ankunft ist um neun Uhr. · Um wie viel Uhr?) وam للأيام وأجزاء اليوم (am Montag · am Morgen) — كما تعرف من الوحدة 3 — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Wohin fährst du? — Zum Hauptbahnhof. Hin und zurück.",
-          "ar": "إلى أين تسافر؟ — إلى المحطة المركزية. ذهاباً وإياباً."
+          "de": "Die Abfahrt ist um acht Uhr. · Die Ankunft ist um neun Uhr.",
+          "ar": "الانطلاق الساعة الثامنة · الوصول الساعة التاسعة"
         },
         "exercise": {
-          "q": "أكمل: ___ ist die Haltestelle? (الموقع) — ___ fährst du? (الوجهة)",
-          "a": "Wo / Wohin"
+          "q": "أكمل: Die Ankunft ist ___ zehn Uhr.",
+          "a": "um"
         }
       }
     ],
@@ -284,13 +868,25 @@
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/umsteigen",
+      "https://www.duden.de/rechtschreibung/einsteigen",
+      "https://www.duden.de/rechtschreibung/aussteigen",
       "https://www.duden.de/rechtschreibung/Hauptbahnhof",
-      "https://www.duden.de/rechtschreibung/Abfahrt"
+      "https://www.duden.de/rechtschreibung/Haltestelle",
+      "https://www.duden.de/rechtschreibung/Bahnsteig",
+      "https://www.duden.de/rechtschreibung/Abfahrt",
+      "https://www.duden.de/rechtschreibung/Ankunft",
+      "https://www.duden.de/rechtschreibung/Richtung"
     ],
     "wiktionary": [
-      "https://de.wiktionary.org/wiki/umsteigen"
+      "https://de.wiktionary.org/wiki/umsteigen",
+      "https://de.wiktionary.org/wiki/einsteigen",
+      "https://de.wiktionary.org/wiki/aussteigen",
+      "https://de.wiktionary.org/wiki/Haltestelle",
+      "https://de.wiktionary.org/wiki/vorbei"
     ],
-    "goethe": []
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf"
+    ]
   },
   "usedArsenalIds": [
     "ars-weg-verkehr"
@@ -316,7 +912,21 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Unterwegs mit Bus und Bahn",
-    "goetheWordListOverlap": []
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 9 (In der Stadt) — Mit Bus und Bahn: einsteigen · umsteigen · aussteigen · Wo/Wohin · Abfahrt/Ankunft",
+    "goetheWordListOverlap": [
+      "haltestelle",
+      "bahnsteig",
+      "abfahrt",
+      "ankunft",
+      "verkehr",
+      "kreuzung",
+      "umsteigen",
+      "einsteigen",
+      "aussteigen",
+      "weit",
+      "ueberall",
+      "vorbei",
+      "hin"
+    ]
   }
 }

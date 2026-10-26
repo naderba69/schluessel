@@ -7,13 +7,16 @@ import {
   networkReviewFlow,
   toNode,
 } from "../src/lib/vocab-network.js";
-import { firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLessonWords = __FIRST.direct;
+
 import { loadUnit0Deck } from "../src/lib/unit0.js";
 
 describe("E14 — الشبكة الدلالية: كل كلمة بروابطها", () => {
-  it("كل كلمات الدرس الـ17 لها روابط (عائلة أو كولوكيشن) — validator أخضر", () => {
+  it("كل كلمات الدرس الأول لها روابط (عائلة أو كولوكيشن) — validator أخضر", () => {
     const { nodes, edges } = buildNetwork(firstLessonWords);
-    expect(nodes.length).toBe(17);
+    expect(nodes.length).toBe(firstLessonWords.length); // ثابت مشتقّ (D188)
     expect(missingLinks(nodes)).toEqual([]);
     expect(edges.length).toBeGreaterThan(10);
   });

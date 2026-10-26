@@ -30,6 +30,12 @@ export const AudioScriptLine = z.object({
   text: DeText,
   /** توجيه الأداء بالعربية (النبرة/المقصد) — «سطر موجَّه» للمراجع البشري */
   direction: z.string().min(1).optional(),
+  /**
+   * D182 (قرار المالك على N-015): إبطاء سطرٍ بعينه فوق lengthScale السكربت — لسطر قاسه tools/dev/speech-rate.py
+   * فوق 200 كلمة/دقيقة. لا يقلّ عن قيمة السكربت (لا تسريع سطر منفرد) — يحرسه superRefine. الحدّ الأعلى 2.0 (القياس:
+   * 1.32 → 1.5 أبطأت الأسئلة القصيرة 5–10% فقط؛ الأسطر الأقصر تحتاج 1.8).
+   */
+  lengthScale: z.number().min(0.8).max(2).optional(),
 });
 export type AudioScriptLine = z.infer<typeof AudioScriptLine>;
 
@@ -55,6 +61,8 @@ export const AudioScript = SchemaVersioned.extend({
       ctx.addIssue({ code: "custom", path: ["lines", i, "speaker"], message: "الإعلانات بصوت المذيع المحايد فقط (announcer)" });
     if (s.kind !== "announcement" && l.speaker === "announcer")
       ctx.addIssue({ code: "custom", path: ["lines", i, "speaker"], message: "announcer للإعلانات فقط — الحوار والكلمات بأصوات الشخصيات" });
+    if (l.lengthScale !== undefined && l.lengthScale < s.lengthScale)
+      ctx.addIssue({ code: "custom", path: ["lines", i, "lengthScale"], message: `lengthScale السطر (${l.lengthScale}) أسرع من السكربت (${s.lengthScale}) — الإبطاء وحده مسموح (D182)` });
   }
   if (s.level === "A1" && s.lengthScale < A1_LENGTH_SCALE)
     ctx.addIssue({ code: "custom", path: ["lengthScale"], message: `مواد A1 لا تتجاوز سرعة 0.85× (lengthScale ≥ ${A1_LENGTH_SCALE})` });
@@ -65,3 +73,8 @@ export const AudioScript = SchemaVersioned.extend({
   }
 });
 export type AudioScript = z.infer<typeof AudioScript>;
+
+/** طول الفونيم الفعلي لسطر: السطر إن حُدّد (أبطأ) وإلا السكربت (D182) */
+export function lineLengthScale(script: Pick<AudioScript, "lengthScale">, line: Pick<AudioScriptLine, "lengthScale">): number {
+  return line.lengthScale ?? script.lengthScale;
+}

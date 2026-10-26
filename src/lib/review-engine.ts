@@ -2,6 +2,7 @@
 // المصادر: retrieval practice (Roediger & Karpicke 2006) · D6 (ts-fsrs بمعاملات افتراضية) · F121 · §2.5
 // الحارس الحاسم: لا جلسة بلا استرجاع أولاً (اختبار يقفله) — الجديد لا يدخل محطة الاسترجاع أبداً
 import {
+  createEmptyCard,
   fsrs,
   generatorParameters,
   Rating,
@@ -84,6 +85,22 @@ export function scheduleRecall(
   return fromFsrsCard(result.card, prev);
 }
 
+/**
+ * N-005 (D227 — دورة ربط SRS): حزمة الدرس تدخل مجموعة المراجعة عند النجاح.
+ * البطاقة الجديدة = مصنع ts-fsrs نفسه (New · مستحقة الآن · معاملات D6 الافتراضية) + L0 — لا أرقام يدوية.
+ * المعرّف المسجَّل لا يتكرر (خمولية صريحة).
+ */
+export function enrollSrsCards(existing: readonly SrsCardState[], wordIds: readonly string[], now: Date = new Date()): SrsCardState[] {
+  const have = new Set(existing.map((c) => c.cardId));
+  const fresh: SrsCardState[] = [];
+  for (const id of wordIds) {
+    if (have.has(id)) continue;
+    have.add(id);
+    fresh.push({ ...fromFsrsCard(createEmptyCard(now), { cardId: id } as SrsCardState), cardId: id, masteryLevel: "L0" });
+  }
+  return fresh;
+}
+
 /** عناصر محطة الاسترجاع — لا «new» هنا إطلاقاً (الجديد محطة 2 فقط) */
 export const RECALL_ITEM_KINDS = ["error-round", "srs", "skill"] as const;
 export type RecallItemKind = (typeof RECALL_ITEM_KINDS)[number];
@@ -155,4 +172,35 @@ export function recallFlowValid(steps: ReadonlyArray<RecallStep>): boolean {
     }
   }
   return true;
+}
+
+/** N-147 (D247): عدد بطاقات SRS المستحقة اليوم أو قبله — لشاشة اليوم (§2.2) */
+export function countDueSrs(cards: readonly SrsCardState[], todayDay: string): number {
+  return cards.filter((c) => c.due.slice(0, 10) <= todayDay).length;
+}
+
+/* ══════════ D273 — إغلاق حلقة SRS: المستحق يُراجَع والتقييم يُحفَظ ══════════ */
+/** أ-9: سقف SRS داخل الحصة ≈ 12 دقيقة — الفائض للجلسات المصغّرة (D274) */
+export const MAX_DUE_PER_SESSION = 15;
+
+/** البطاقات المستحقة الآن أو قبله — الأقدم استحقاقاً أولاً (تشمل New: أول مراجعة في جلسة الغد — ب-11) */
+export function dueSrsCards(cards: readonly SrsCardState[], now: Date = new Date()): SrsCardState[] {
+  return [...cards]
+    .filter((c) => new Date(c.due) <= now)
+    .sort((a, b) => a.due.localeCompare(b.due));
+}
+
+/** اتجاه السؤال بالتناوب على التكرارات (F039: تدوير مواضع السؤال — لا حفظ السؤال نفسه) */
+export function srsDirection(card: Pick<SrsCardState, "reps">): "production" | "comprehension" {
+  return card.reps % 2 === 0 ? "production" : "comprehension";
+}
+
+/** تطبيق تقييم واحد على الحالة — خالص للاختبار والواجهة */
+export function applySrsRating(
+  cards: readonly SrsCardState[],
+  cardId: string,
+  rating: RecallRating,
+  now: Date = new Date(),
+): SrsCardState[] {
+  return cards.map((c) => (c.cardId === cardId ? scheduleRecall(c, rating, now) : c));
 }

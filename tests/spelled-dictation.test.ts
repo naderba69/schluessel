@@ -6,7 +6,9 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { DictationItem, spelledLetters, type Lesson } from "../content/schemas/index.js";
 import { checkAttempt, SPELLED_DICTATION_AR, toTypedItem } from "../src/lib/practice-session.js";
 import { PracticeStation } from "../src/components/LessonContent.js";
-import { ALL_LESSONS } from "../src/lesson-packs.js";
+import { loadAllLessons } from "../src/lesson-packs.js";
+const ALL_LESSONS = await loadAllLessons();
+
 
 const item = (speakText: string, a: string, spelled?: true) => ({ audioId: "abc-spell-lena", speakText, a, ...(spelled ? { spelled } : {}), why: "سبب واضح بما يكفي للبند." });
 
@@ -42,7 +44,7 @@ describe("D120 — إملاء الحروف", () => {
   it("الواجهة: بند إملاء الحروف يعرض تعليمته (لا «اكتب ما تسمعه بالضبط»)", () => {
     const d3 = ALL_LESSONS.find((l) => l.id === "a1-u1-d3")!;
     const station = d3.uebung.stations.find((s) => s.type === "dictation")!;
-    const data = { stations: [station] as Lesson["uebung"]["stations"], communicativeTask: d3.uebung.communicativeTask };
+    const data = { stations: [station] as Lesson["uebung"]["stations"], communicativeTask: d3.uebung.communicativeTask, dialogues: [] };
     const html = renderToStaticMarkup(createElement(PracticeStation, { data }));
     expect(html).toContain(SPELLED_DICTATION_AR);
     expect(html).not.toContain("اكتب ما تسمعه بالضبط");

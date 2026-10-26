@@ -1,6 +1,9 @@
 // tools/lib/vocab-forms.ts — صيغ المفردات المدروسة (مشترك: حاصد العبارات D107 + قفل مفردات الامتحان D109)
 // تقدير مُعلن بحدوده: جذوع تصريف بسيطة (لا محلل صرفي) — قد يقبل كلمة غير مدروسة تشارك جذعاً،
 // لكنه لا يرفض كلمة مدروسة بصيغها المسجلة (الجمع/المضارع/Perfekt/Präteritum/الأمر).
+// N-060 (D226 — قرار): استثناء جذوع القطع — الرمز المقبول بجذع قطعة مدروسة وحده (alle ⇐ Alles-klar · viele ⇐ wie-viel)
+// مقبولٌ معلنٌ لا ثقب: القطع تُحفظ كلاًّ فيُقرأ قريبها. والجذر المركّب المشترك (lernen ⇐ kennenlernen) حدٌّ بنيوي
+// للجذوع البسيطة (لا فاصل مركّبات) — مواضعه الحية معلنة في لقطة الاختبار. الفحص: tools/dev/measure-stems.ts + اختبار N-060.
 import type { Word } from "../../content/schemas/index.js";
 
 /** الكلمات الوظيفية المغلقة (أدوات/ضمائر/مساعدة/جر/ربط/أعداد) — تُعرف دون درس.
@@ -8,7 +11,7 @@ import type { Word } from "../../content/schemas/index.js";
  * في درس الأعداد نفسه (a1-u1-d4)، وnull لا غنى عنها لرقم الهاتف. */
 export const CLOSED: ReadonlySet<string> = new Set(`der die das den dem des ein eine einen einem einer eines kein keine keinen keinem keiner
 ich du er sie es wir ihr mich dich ihn uns euch mir dir ihm ihnen sich man mein meine meinen meinem meiner dein deine deinen deinem
-sein seine seinen seinem ihre ihren ihrem unser unsere euer eure bin bist ist sind seid war waren habe hast hat haben habt hatte
+sein seine seinen seinem ihre ihren ihrem unser unsere euer eure bin bist ist sind seid war warst wart waren habe hast hat haben habt hatte hattest hattet hatten
 werde wirst wird werden kann kannst können könnt muss musst müssen will willst wollen möchte möchtest möchten darf darfst dürfen
 soll sollst sollen in im ins an am ans auf aus bei mit nach von vom zu zum zur für um ohne gegen durch bis seit über unter vor
 hinter neben zwischen beim und oder aber denn sondern weil dass wenn als ob nicht auch noch schon nur sehr ja nein doch mal so wie was
@@ -24,21 +27,90 @@ export const deumlaut = (s: string) => s.replace(/ä/g, "a").replace(/ö/g, "o")
  */
 export function knownForms(w: Word): string[] {
   const base = w.de.replace(/^(der|die|das) /, "").replace(/^sich /, "").toLowerCase();
-  const parts = [base, w.plural?.replace(/^die /, ""), w.forms?.praesens3s, w.forms?.perfekt, w.forms?.praeteritum, w.forms?.imperative]
+  const parts = [base, w.plural?.replace(/^die /, ""), w.forms?.praesens3s, w.forms?.perfekt, w.forms?.praeteritum, w.forms?.imperative, ...(w.forms?.declined ?? [])]
     .filter((x): x is string => !!x).flatMap((x) => contentTokens(x));
   return parts;
 }
 
+export const STEM_SUFFIXES = ["en", "st", "et", "te", "ten", "e", "t", "n", "s", "er", "es"] as const;
+/** نهايات تصريف الفعل وحدها (N-103 — الجذع القصير لا يقبل غيرها) */
+export const VERB_SUFFIXES: ReadonlySet<string> = new Set(["e", "st", "t", "en", "et", "te", "ten", "est"]);
 export function stem(t: string): string[] {
-  const out = [t];
-  for (const suf of ["en", "st", "et", "te", "ten", "e", "t", "n", "s", "er", "es"]) if (t.length > suf.length + 2 && t.endsWith(suf)) out.push(t.slice(0, -suf.length));
+  return stemmed(t).map((x) => x.base);
+}
+/** الجذوع المحتملة مع النهاية المقصوصة ("" للرمز نفسه) */
+export function stemmed(t: string, minBase = 3): { base: string; suffix: string }[] {
+  const out = [{ base: t, suffix: "" }];
+  for (const suf of STEM_SUFFIXES) if (t.length - suf.length >= minBase && t.endsWith(suf)) out.push({ base: t.slice(0, -suf.length), suffix: suf });
   return out;
 }
 
-/** كل جذوع الصيغ المعروفة لمجموعة كلمات */
+/** علامتا المجموعة: «=» صيغة مسجَّلة كاملة · «~» جذع مشتق من صيغة فعل (D185 — N-103) */
+export const FULL = "=";
+export const VERB = "~";
+/** علامة صيغة كلمة درسٍ لاحق (تُضاف بـwithLaterForms) */
+export const LATER = "<";
+/**
+ * كل جذوع الصيغ المعروفة لمجموعة كلمات.
+ * N-103 (D185 — بإذن المالك): الجذع المشتق القصير (≤3 أحرف) لا يدخل إلا من صيغة فعل وبقصّ نهاية فعل — كان «wei» يُشتق من
+ * Wein بقصّ n فيمرّ weit (كلمة درس لاحق)، و«bei» من Bein و«dan» من dann … (128 جذعاً قصيراً من أسماء وظروف).
+ * الصيغة الكاملة تُسجَّل كما هي (وبعلامة «=») مهما قصرت (Tag · gut · neu · Oma · ab) ويُقبل عليها أي نهاية (neues · guter · Tage).
+ * N-112/D188: الفعل القصير (tun) يعلن جذعه في بطاقته `forms.stem` (tu) فتُسجَّل صيغه التامة — لا استنتاج ولا حدّ خاص.
+ */
 export function knownStems(words: readonly Word[]): Set<string> {
   const out = new Set<string>();
-  for (const w of words) for (const f of knownForms(w)) for (const s of stem(deumlaut(f))) out.add(s);
+  for (const w of words) {
+    const verb = w.wordClass === "verb" || !!(w.forms?.praesens3s || w.forms?.perfekt || w.forms?.praeteritum);
+    // D188: الجذع الصريح للفعل القصير (tun ⇒ tu) يُسجَّل بصيغه التامة (tue · tust · tut …) — فلا حدّ خاص للجذوع القصيرة في الفحص
+    if (w.forms?.stem) { const b = deumlaut(w.forms.stem); out.add(VERB + b); for (const suf of VERB_SUFFIXES) out.add(b + suf); }
+    for (const f0 of knownForms(w)) {
+      const f = deumlaut(f0);
+      out.add(f);
+      out.add(FULL + f);
+      for (const { base, suffix } of stemmed(f)) {
+        if (base === f) continue;
+        if (verb && VERB_SUFFIXES.has(suffix)) { out.add(VERB + base); out.add(base); continue; }
+        if (base.length >= 4) out.add(base);
+      }
+    }
+  }
+  return out;
+}
+/** هل يُقبل الرمز على الصيغ المعروفة؟ (الكاملة · أو كاملة + نهاية · أو جذع ≥4 · أو جذع فعل قصير + نهاية فعل) */
+export function stemKnown(d: string, stems: ReadonlySet<string>): boolean {
+  if (stems.has(d)) return true;
+  for (const { base, suffix } of stemmed(d)) {
+    if (base === d) continue;
+    if (stems.has(FULL + base)) return true;
+    if (base.length >= 4 && stems.has(base)) return true;
+    if (stems.has(VERB + base) && VERB_SUFFIXES.has(suffix)) return true;
+  }
+  return false;
+}
+/**
+ * N-103 (1): الرمز الذي هو صيغة مسجَّلة لكلمة درسٍ لاحق يُرفض ولو طابق جذعاً — إلا أن يكون صيغة كاملة مدروسة،
+ * أو صيغة كاملة مدروسة + نهاية (große ⇐ groß · lernen ⇐ lern من kennenlernen)، أو جذع فعل مدروس + نهاية فعل (wasche ⇐ waschen).
+ * (fragt من Frage قبل fragen · weit من Wein قبل weit ⇒ مرفوضان.)
+ */
+export function laterWordLeak(d: string, stems: ReadonlySet<string>): boolean {
+  if (!stems.has(LATER + d)) return false;
+  if (stems.has(FULL + d)) return false;
+  for (const { base, suffix } of stemmed(d)) {
+    if (base === d) continue;
+    if (stems.has(FULL + base)) return false;
+    if (stems.has(VERB + base) && VERB_SUFFIXES.has(suffix)) return false;
+  }
+  return true;
+}
+/** يضيف إلى مجموعة الجذوع صيغ كلمات الدروس اللاحقة (بعلامة «<») — ما ليس صيغةً مدروسة ولا مغلقة */
+export function withLaterForms(stems: ReadonlySet<string>, taught: readonly Word[], all: readonly Word[]): Set<string> {
+  const ids = new Set(taught.map((w) => w.id));
+  const earlier = new Set(taught.flatMap((w) => knownForms(w)).map(deumlaut));
+  const out = new Set(stems);
+  for (const w of all) {
+    if (ids.has(w.id)) continue;
+    for (const f0 of knownForms(w)) { const f = deumlaut(f0); if (f.length > 2 && !earlier.has(f) && !CLOSED.has(f0) && !CLOSED.has(f)) out.add(LATER + f); }
+  }
   return out;
 }
 
@@ -98,10 +170,14 @@ const TENS = "zwanzig|dreißig|vierzig|fünfzig|sechzig|siebzig|achtzig|neunzig"
  * أو عشرات أو مركّب (zweihundert · hunderteins · hundertzwanzig · dreihundertfünfundsechzig) — أو (ein)tausend.
  * eins في آخر العدد تبقى بـs (hunderteins لا hundertein) · ولا und بعد المئات (hundertundeins صيغة قديمة أقل شيوعاً —
  * لا تُقبل حتى يُقرَّر تدريسها) · وما فوق الألف (zweitausend) خارج النطاق حتى يُدرَّس.
+ * N-059 (D233 — قرار Duden): ein آخر العدد تُصرَّف قبل الاسم (Duden «ein» Zahlwort: ein Mann · eine Frau · ein Kind ·
+ * «ein Euro achtzig»؛ Dudengrammatik §455: آخر المركّب ein يُصرَّف والاسم مفرد) — hundertundein Euro (مذكّر/محايد) ·
+ * hundertundeine (مؤنّث، كـTausendundeine Nacht). تُقبل الصيغتان المسمّاتان وحدهما: الميل (undeinen/undeinem/undeiner)
+ * مرفوض حتى يُدرَّس · وموضعية الصحة (وحده eins · قبل الاسم ein) لا يفحصها الحارس الرمزي — شأنها شأن نهايات الصفة.
  */
 export const HUNDREDS_NUMBER = new RegExp(
   `^(?:(?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)?hundert((?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)und(?:${TENS})|${TENS}|` +
-    "eins|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|dreizehn|vierzehn|fünfzehn|sechzehn|siebzehn|achtzehn|neunzehn)?|(?:ein)?tausend)$",
+    "eins|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|dreizehn|vierzehn|fünfzehn|sechzehn|siebzehn|achtzehn|neunzehn|undein|undeine)?|(?:ein)?tausend)$",
   "u",
 );
 const TENS_ONLY = new RegExp(`^(?:${TENS})$`, "u");
@@ -136,16 +212,40 @@ export function daCompoundKnown(t: string, stems: ReadonlySet<string>): boolean 
 }
 
 /**
+ * D167: العدد الترتيبي كلمةٌ واحدة تُركَّب بالقاعدة (ars-termin-datum — «التاريخ» في الخطة اليومية): الأصلي + ‑t من 1 إلى 19
+ * (مع الشواذ الثلاثة: erst · dritt · siebt — وacht تبقى achte) و+ ‑st من 20 فصاعداً (zwanzigst · einunddreißigst · hundertst)
+ * — ثم نهاية الصفة (der zwölfte · am zwölften · des zwölften · ein zwölfter · das zwölfte). صيغٌ لا تُكتب مدخلاً لكلٍّ منها
+ * (سابقة الأعداد D131 · D132 وda-Komposita D150). تُعرف من الدرس الذي يُدرِّس das Datum (a1-u10-d2) لا قبله — والعشرات
+ * والمئات داخلها تتبع قاعدتها (einundzwanzigste تحتاج zwanzig · dreißigste تحتاج dreißig).
+ */
+const ORDINAL_SMALL = "erst|zweit|dritt|viert|fünft|sechst|siebt|acht|neunt|zehnt|elft|zwölft|(?:drei|vier|fünf|sech|sieb|acht|neun)zehnt";
+export const ORDINAL_NUMBER = new RegExp(`^(?:(${ORDINAL_SMALL})|((?:(?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)und)?(?:${TENS})|(?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun)?hundert|(?:ein)?tausend)st)(?:e|en|em|er|es)$`, "u");
+export const ORDINAL_ANCHOR = "datum";
+export function ordinalKnown(t: string, stems: ReadonlySet<string>): boolean {
+  const m = ORDINAL_NUMBER.exec(t);
+  if (m === null || !stems.has(ORDINAL_ANCHOR)) return false;
+  if (m[1] !== undefined) return true; // 1–19: آحاد ومراهقات مغلقة
+  const base = m[2]!;
+  if (TENS_ONLY.test(base)) return stems.has(deumlaut(base));
+  if (COMPOUND_NUMBER.test(base)) return compoundNumberKnown(base, stems);
+  return numberWordKnown(base, stems); // المئات والألف من درس tausend
+}
+
+/**
  * الكلمات غير المدروسة في نص (مرتبة، بلا تكرار): ليست مغلقة · ليست اسم علم مُعلناً · ولا جذع لها
- * يطابق جذع صيغة مدروسة · ولا هي عدد من كلمة واحدة أجزاؤه مدروسة (D131 · D132) · ولا ظرف مكان da(r)+حرف بعد درسه (D150).
+ * يطابق جذع صيغة مدروسة · ولا هي عدد من كلمة واحدة أجزاؤه مدروسة (D131 · D132) · ولا ظرف مكان da(r)+حرف بعد درسه (D150)
+ * · ولا عدد ترتيبي بعد درس التاريخ (D167).
  */
 export function unknownTokens(text: string, stems: ReadonlySet<string>, allow: ReadonlySet<string> = new Set()): string[] {
   const out = new Set<string>();
   for (const t of contentTokens(text)) {
     if (CLOSED.has(t) || allow.has(t)) continue;
-    if (stem(deumlaut(t)).some((s) => stems.has(s))) continue;
+    const d = deumlaut(t);
+    if (laterWordLeak(d, stems)) { out.add(t); continue; }
+    if (stemKnown(d, stems)) continue;
     if (numberWordKnown(t, stems)) continue;
     if (daCompoundKnown(t, stems)) continue;
+    if (ordinalKnown(t, stems)) continue;
     out.add(t);
   }
   return [...out].sort();

@@ -10,7 +10,11 @@ import {
 } from "../src/components/LessonContent.js";
 import { LessonSession } from "../src/components/LessonSession.js";
 import { planLessonStations } from "../src/lib/lesson-runner.js";
-import { firstLesson, firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLesson = __FIRST.lesson;
+const firstLessonWords = __FIRST.direct;
+
 import { loadUnit0Deck, jitCards } from "../src/lib/unit0.js";
 import { eveningReport, tomorrowPreview, muellerMessage, BLAME_WORDS } from "../src/lib/warmth-engine.js";
 
@@ -24,10 +28,15 @@ describe("تشغيل الدرس الحقيقي على الواجهة", () => {
     expect(html).toContain("حاول تذكر");
   });
 
-  it("محطة الجديد: أول عنصر من 17 — بجملة الدرس الحقيقية · ثم قاعدة اليوم (D116)", () => {
+  it("N-006: initialIndex يستأنف من البطاقة المحفوظة (مع تقليم خارج النطاق)", () => {
+    expect(renderToStaticMarkup(<RecallStation cards={plan.recall} initialIndex={2} />)).toContain("بطاقة 3 من 3");
+    expect(renderToStaticMarkup(<RecallStation cards={plan.recall} initialIndex={99} />)).toContain("بطاقة 3 من 3");
+  });
+
+  it("محطة الجديد: أول عنصر من كل كلمات الدرس — بجملة الدرس الحقيقية · ثم قاعدة اليوم (D116 · ثابت مشتقّ D188)", () => {
     const html = renderToStaticMarkup(<LearnStation cards={plan.learn} />);
-    expect(html).toContain("عنصر 1 من 17");
-    expect(html).toContain("Hallo! Ich heiße Yusuf.");
+    expect(html).toContain(`عنصر 1 من ${plan.learn.length}`);
+    expect(html).toContain("Hallo! Wie heißt du?"); // N-021 (D225): مثال hallo بلا اسم شخصية
   });
 
   it("محطة التدريب (الدرس المُرقّى — D116): أول بند فراغ قاعدة اليوم · لا إجابة ولا «لماذا» قبل المحاولة", () => {

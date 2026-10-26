@@ -1,0 +1,706 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u13-d3",
+  "level": "A1",
+  "unit": 13,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Du verstehst Preise, Speisekarten und kurze Nachrichten: Bananen, Birnen, Schinken, Öl, Pommes frites. · Der Laden ist geschlossen. · Der Herd ist kaputt. · Du siehst müde aus.",
+    "ar": "تفهم لوحة الأسعار وقائمة الطعام والرسالة القصيرة: الفاكهة والشينكن والزيت والبطاطا المقلية، والمتجر والكشك والموقد — وأربع صفات تسمعها كثيراً: مرّ، غاضب، معطّل، غريب — و«يبدو» و«تفوح رائحته». تقرأ وتسمع وتعرف المطلوب، ولا يُطلب منك إنتاج هذه الكلمات (تكملة SD1 للفهم)."
+  },
+  "canDoDaily": [
+    "يفهم لوحة أسعار أو قائمة طعام (Bananen · Birnen · Schinken · Öl · Pommes frites) ويعرف ما فيها وما ليس فيها.",
+    "يتعرّف على kaputt وböse وfremd وbitter وsieht … aus وriecht في رسالة أو مكالمة."
+  ],
+  "warmup": {
+    "cardIds": [
+      "obst",
+      "kueche",
+      "nachbar"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "de": "«Der Herd ist kaputt.» — ماذا يعني؟ (تخمين فقط)"
+        },
+        "choices": [
+          "الموقد معطّل",
+          "الموقد جديد",
+          "الموقد غالٍ"
+        ],
+        "answer": "الموقد معطّل",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "ما كلمات الطعام التي تعرفها من الوحدة 5؟ (Brot · Käse · Apfel · Salat · Salz · Kaffee)",
+      "أين تشتري في ألمانيا؟ (Supermarkt · Markt · Bäckerei) — اليوم تضيف للفهم: Laden وKiosk."
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "banane",
+      "birne",
+      "schinken",
+      "oel",
+      "pommes-frites",
+      "bitter",
+      "riechen",
+      "laden",
+      "kiosk",
+      "herd",
+      "boese",
+      "kaputt",
+      "fremd",
+      "aussehen"
+    ],
+    "grammarArsenalIds": [
+      "ars-perfekt-haben"
+    ],
+    "storySentenceIds": [
+      "story-a1-u13-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-o",
+      "ch-ich-laut",
+      "auslaut-d",
+      "ng-velar",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "reading",
+        "items": [
+          {
+            "text": "Obst und Gemüse — heute billig! Bananen 1 Euro · Birnen 2 Euro · Äpfel 2 Euro · Tomaten 3 Euro",
+            "q": "Was kostet 1 Euro?",
+            "choices": [
+              "Bananen",
+              "Birnen",
+              "Tomaten"
+            ],
+            "a": "Bananen",
+            "why": "Bananen 1 Euro — الموز بيورو واحد، الأرخص. Birnen = كمّثرى بيورو اثنين، والطماطم ثلاثة."
+          },
+          {
+            "text": "Kiosk am Bahnhof — Zeitungen · Kaffee · Pommes frites · Getränke — jeden Tag von 6 bis 24 Uhr",
+            "q": "Richtig oder falsch? Am Kiosk gibt es Pommes frites.",
+            "choices": [
+              "Richtig",
+              "Falsch"
+            ],
+            "a": "Richtig",
+            "why": "في القائمة Pommes frites — بطاطا مقلية. Kiosk = كشك صغير قرب المحطة."
+          },
+          {
+            "text": "Hallo Nabil, der Herd ist kaputt! Der Nachbar kommt morgen um 10 Uhr. Bitte bleib zu Hause. Yusuf",
+            "q": "Was ist kaputt?",
+            "choices": [
+              "der Herd",
+              "der Fernseher",
+              "die Tür"
+            ],
+            "a": "der Herd",
+            "why": "der Herd ist kaputt — الموقد معطّل؛ الجار يأتي غداً في العاشرة."
+          },
+          {
+            "text": "Salat mit Käse: Salat, Tomaten, Käse, Öl, Salz und Pfeffer — kein Fleisch, kein Schinken.",
+            "q": "Richtig oder falsch? Im Salat ist Schinken.",
+            "choices": [
+              "Falsch",
+              "Richtig"
+            ],
+            "a": "Falsch",
+            "why": "kein Schinken — لا شينكن (لحم خنزير مقدّد) ولا لحم؛ فيه زيت (Öl) وملح وفلفل."
+          },
+          {
+            "text": "Laden an der Ecke — Montag bis Samstag 8 bis 20 Uhr · Sonntag geschlossen · Neu: frisches Brot ab 7 Uhr!",
+            "q": "Wann ist der Laden geschlossen?",
+            "choices": [
+              "am Sonntag",
+              "am Samstag",
+              "um 7 Uhr"
+            ],
+            "a": "am Sonntag",
+            "why": "Sonntag geschlossen — المتجر (der Laden) مغلق يوم الأحد؛ السبت مفتوح حتى الثامنة."
+          },
+          {
+            "text": "Liebe Lena, Berlin war am Anfang sehr fremd: Ich habe die Leute nicht verstanden, und das Essen hat anders gerochen. Jetzt ist alles gut. Yusuf",
+            "q": "Wie war Berlin am Anfang für Yusuf?",
+            "choices": [
+              "fremd",
+              "schön",
+              "langweilig"
+            ],
+            "a": "fremd",
+            "why": "sehr fremd = غريبة جداً في البداية؛ الآن كل شيء بخير (Jetzt ist alles gut)."
+          },
+          {
+            "text": "Restaurant Sonne: Unser Kaffee ist nicht bitter — und der Kuchen sieht nicht nur gut aus, er schmeckt auch gut!",
+            "q": "Richtig oder falsch? Der Kaffee im Restaurant Sonne ist bitter.",
+            "choices": [
+              "Falsch",
+              "Richtig"
+            ],
+            "a": "Falsch",
+            "why": "nicht bitter = ليس مرّاً؛ sieht gut aus = يبدو جيداً (aussehen)."
+          }
+        ],
+        "interleavedWith": [
+          "tomate",
+          "zeitung",
+          "kaffee",
+          "salz",
+          "pfeffer",
+          "brot",
+          "kuchen",
+          "bahnhof"
+        ],
+        "hints": [
+          "اقرأ السؤال أولاً، ثم ابحث عن الكلمة أو الرقم في النص — لا تترجم كل شيء."
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "items": [
+          {
+            "audioId": "ek-1",
+            "speakText": "Hallo, Yusuf! Du siehst müde aus. Geht es dir gut?",
+            "q": "استمع: كيف يبدو يوسف؟",
+            "choices": [
+              "متعباً",
+              "سعيداً",
+              "غاضباً"
+            ],
+            "a": "متعباً",
+            "why": "Du siehst müde aus — تبدو متعباً (aussehen)."
+          },
+          {
+            "audioId": "ek-2",
+            "speakText": "Ja, ja. Aber unser Herd ist kaputt — ich kann nicht kochen.",
+            "q": "استمع: ما المعطّل عند يوسف؟",
+            "choices": [
+              "الموقد",
+              "التلفاز",
+              "الثلاجة"
+            ],
+            "a": "الموقد",
+            "why": "unser Herd ist kaputt — الموقد معطّل، فلا يستطيع الطبخ."
+          },
+          {
+            "audioId": "ek-4",
+            "speakText": "Pommes frites vom Kiosk. Jeden Tag Pommes frites!",
+            "q": "استمع: ماذا يأكل يوسف كل يوم؟",
+            "choices": [
+              "بطاطا مقلية من الكشك",
+              "خبزاً بالجبن",
+              "فاكهة"
+            ],
+            "a": "بطاطا مقلية من الكشك",
+            "why": "Pommes frites vom Kiosk — بطاطا مقلية من الكشك، كل يوم!"
+          },
+          {
+            "audioId": "ek-8",
+            "speakText": "Käse, ja. Schinken esse ich nicht.",
+            "q": "استمع: ماذا لا يأكل يوسف؟",
+            "choices": [
+              "الشينكن",
+              "الجبن",
+              "الخبز"
+            ],
+            "a": "الشينكن",
+            "why": "Schinken esse ich nicht — لا يأكل الشينكن (لحم خنزير مقدّد)؛ الجبن نعم."
+          },
+          {
+            "audioId": "ek-10",
+            "speakText": "Der Nachbar hilft uns morgen. Aber er ist böse — wir waren gestern zu laut.",
+            "q": "استمع: لماذا الجار غاضب؟",
+            "choices": [
+              "كانوا صاخبين أمس",
+              "الموقد معطّل",
+              "لم يدفعوا"
+            ],
+            "a": "كانوا صاخبين أمس",
+            "why": "wir waren gestern zu laut — كانوا صاخبين جداً أمس؛ böse = غاضب."
+          },
+          {
+            "audioId": "ek-12",
+            "speakText": "Ja, Ayşe hat Musik gemacht. Und Nabil hat gekocht — mit viel Öl. Die Wohnung hat nach Öl gerochen!",
+            "q": "استمع: كيف صارت رائحة الشقة؟",
+            "choices": [
+              "رائحة زيت",
+              "رائحة قهوة",
+              "رائحة خبز"
+            ],
+            "a": "رائحة زيت",
+            "why": "Die Wohnung hat nach Öl gerochen — فاحت منها رائحة الزيت (riechen)."
+          },
+          {
+            "audioId": "ek-18",
+            "speakText": "Nein, nicht mehr. Am Anfang war alles fremd — die Straßen, die Läden, die Leute.",
+            "q": "استمع: ماذا كان غريباً على يوسف في البداية؟",
+            "choices": [
+              "الشوارع والمتاجر والناس",
+              "الطعام فقط",
+              "اللغة فقط"
+            ],
+            "a": "الشوارع والمتاجر والناس",
+            "why": "die Straßen, die Läden, die Leute — الشوارع والمتاجر (جمع Laden) والناس."
+          }
+        ],
+        "interleavedWith": [
+          "muede",
+          "kochen",
+          "gestern",
+          "wohnung",
+          "strasse"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "match",
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Banane",
+                "ar": "الموزة"
+              },
+              {
+                "de": "die Birne",
+                "ar": "الكمّثرى"
+              },
+              {
+                "de": "der Schinken",
+                "ar": "لحم الخنزير المقدّد"
+              },
+              {
+                "de": "das Öl",
+                "ar": "الزيت"
+              },
+              {
+                "de": "die Pommes frites",
+                "ar": "البطاطا المقلية"
+              }
+            ],
+            "why": "الطعام: Banane موز · Birne كمّثرى · Schinken لحم خنزير مقدّد (انتبه في القوائم) · Öl زيت · Pommes frites بطاطا مقلية (تُنطق پوم فريت)."
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Laden",
+                "ar": "المتجر"
+              },
+              {
+                "de": "der Kiosk",
+                "ar": "الكشك"
+              },
+              {
+                "de": "der Herd",
+                "ar": "الموقد"
+              },
+              {
+                "de": "riechen",
+                "ar": "تفوح رائحته"
+              },
+              {
+                "de": "aussehen",
+                "ar": "يبدو"
+              }
+            ],
+            "why": "الأماكن والأفعال: Laden متجر صغير · Kiosk كشك · Herd موقد الطبخ · riechen يشمّ/تفوح رائحته · aussehen يبدو (sieht … aus)."
+          },
+          {
+            "pairs": [
+              {
+                "de": "bitter",
+                "ar": "مرّ"
+              },
+              {
+                "de": "böse",
+                "ar": "غاضب"
+              },
+              {
+                "de": "kaputt",
+                "ar": "معطّل"
+              },
+              {
+                "de": "fremd",
+                "ar": "غريب"
+              }
+            ],
+            "why": "أربع صفات بعد ist: bitter مرّ (الطعم) · böse غاضب · kaputt معطّل · fremd غريب (مكان أو شخص لا تعرفه)."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "ek-7",
+            "speakText": "Gut! Und Brot mit Käse oder Schinken?",
+            "a": "Gut! Und Brot mit Käse oder Schinken?",
+            "why": "Brot وKäse وSchinken بحرف كبير (أسماء) · Käse بـä · Schinken بـsch ثم nk."
+          },
+          {
+            "audioId": "ek-13",
+            "speakText": "Und wie hat es geschmeckt?",
+            "a": "Und wie hat es geschmeckt?",
+            "why": "geschmeckt: ge- ثم schm ثم -ckt (ck بعد e القصيرة)."
+          },
+          {
+            "audioId": "ek-11",
+            "speakText": "Zu laut? Habt ihr gefeiert?",
+            "a": "Zu laut? Habt ihr gefeiert?",
+            "why": "Zu laut بـZ كبيرة أول الجملة · gefeiert: ge- و-ei- و-ert."
+          },
+          {
+            "audioId": "ek-3",
+            "speakText": "Ach nein! Und was isst du dann?",
+            "a": "Ach nein! Und was isst du dann?",
+            "why": "Ach nein! بعلامة تعجب · isst بـss (من essen) · dann بـnn."
+          }
+        ],
+        "interleavedWith": [
+          "kaese",
+          "schmecken",
+          "feiern"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Lies die Preise im Laden und die Nachricht von Yusuf und sag: Was kostet das Obst? Was ist kaputt? Wann kommt der Nachbar? — Bananen 1 Euro, Birnen 2 Euro. Der Herd ist kaputt. Morgen um 10 Uhr.",
+        "ar": "اقرأ لوحة الأسعار ورسالة يوسف وأجب بالعربية أو بألمانية بسيطة: كم الفاكهة؟ ما المعطّل؟ متى يأتي الجار؟ — هدفك أن تفهم، لا أن تكتب الرسالة بنفسك."
+      },
+      "situation": {
+        "de": "Du bist im Laden an der Ecke. Ein Freund fragt: Was kostet das? Ist Schinken im Salat? Du hast die Preise und die Speisekarte gelesen und antwortest kurz.",
+        "ar": "أنت في المتجر عند الزاوية. صديق يسأل: كم هذا؟ هل في السلطة شينكن؟ — قرأت الأسعار والقائمة وتجيب باختصار مما فهمت."
+      },
+      "successCriteria": [
+        "يقرأ السعر والوقت من لوحة أو إعلان",
+        "يعرف أن Schinken لحم خنزير ويسأل عنه في القائمة",
+        "يميّز kaputt (معطّل) من böse (غاضب) وriecht (رائحة) من schmeckt (طعم)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«Pommes frites 3 Euro» — Was kostet 3 Euro?",
+            "choices": [
+              "البطاطا المقلية",
+              "الموز",
+              "القهوة"
+            ],
+            "a": "البطاطا المقلية",
+            "why": "Pommes frites = بطاطا مقلية."
+          },
+          {
+            "q": "«Der Laden ist am Sonntag geschlossen.» — Wann ist er geschlossen?",
+            "choices": [
+              "يوم الأحد",
+              "يوم السبت",
+              "كل يوم"
+            ],
+            "a": "يوم الأحد",
+            "why": "Laden = متجر · am Sonntag geschlossen = مغلق الأحد."
+          },
+          {
+            "q": "«Der Kaffee ist bitter.» — Wie schmeckt der Kaffee?",
+            "choices": [
+              "مرّ",
+              "حلو",
+              "مالح"
+            ],
+            "a": "مرّ",
+            "why": "bitter = مرّ؛ süß حلو، salzig مالح."
+          },
+          {
+            "q": "«Mein Fernseher ist kaputt.» — Was ist das Problem?",
+            "choices": [
+              "التلفاز معطّل",
+              "التلفاز صغير",
+              "التلفاز غالٍ"
+            ],
+            "a": "التلفاز معطّل",
+            "why": "kaputt = معطّل/مكسور."
+          },
+          {
+            "q": "«Du siehst gut aus!» — Was sagt sie?",
+            "choices": [
+              "تبدو بمظهر جيد",
+              "أنت ترى جيداً",
+              "أنت تنظر إلينا"
+            ],
+            "a": "تبدو بمظهر جيد",
+            "why": "aussehen = يبدو (المظهر)، لا sehen يرى."
+          },
+          {
+            "q": "«Ich bin hier fremd.» — Was bedeutet das?",
+            "choices": [
+              "لا أعرف هذا المكان",
+              "أنا أعيش هنا",
+              "أنا غاضب"
+            ],
+            "a": "لا أعرف هذا المكان",
+            "why": "fremd = غريب — لا يعرف المكان."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«Bananen 1 Euro, Birnen 2 Euro» — Was kostet 2 Euro?",
+            "choices": [
+              "الكمّثرى",
+              "الموز",
+              "التفاح"
+            ],
+            "a": "الكمّثرى",
+            "why": "Birne = كمّثرى (إجاصة)."
+          },
+          {
+            "q": "«Salat mit Schinken» — Was ist im Salat?",
+            "choices": [
+              "لحم خنزير مقدّد",
+              "جبن",
+              "سمك"
+            ],
+            "a": "لحم خنزير مقدّد",
+            "why": "Schinken = لحم خنزير مقدّد — انتبه في القوائم."
+          },
+          {
+            "q": "«Der Nachbar ist böse.» — Wie geht es dem Nachbarn?",
+            "choices": [
+              "غاضب",
+              "مريض",
+              "سعيد"
+            ],
+            "a": "غاضب",
+            "why": "böse = غاضب."
+          },
+          {
+            "q": "«Das Essen riecht gut.» — Was ist gut?",
+            "choices": [
+              "الرائحة",
+              "الطعم",
+              "السعر"
+            ],
+            "a": "الرائحة",
+            "why": "riechen = تفوح رائحته — الرائحة لا الطعم (schmecken)."
+          },
+          {
+            "q": "«Am Kiosk gibt es Zeitungen.» — Wo gibt es Zeitungen?",
+            "choices": [
+              "في الكشك",
+              "في المطعم",
+              "في المسبح"
+            ],
+            "a": "في الكشك",
+            "why": "Kiosk = كشك صغير يبيع الجرائد والمشروبات."
+          },
+          {
+            "q": "«Der Herd ist neu.» — Was ist neu?",
+            "choices": [
+              "الموقد",
+              "الثلاجة",
+              "الطاولة"
+            ],
+            "a": "الموقد",
+            "why": "Herd = موقد الطبخ في المطبخ."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«Salat mit Öl und Salz» — Was ist im Salat?",
+            "choices": [
+              "زيت وملح",
+              "زيت وسكر",
+              "ماء وملح"
+            ],
+            "a": "زيت وملح",
+            "why": "Öl = زيت · Salz = ملح."
+          },
+          {
+            "q": "«Die Läden sind heute geschlossen.» — Was ist geschlossen?",
+            "choices": [
+              "المتاجر",
+              "المدارس",
+              "المطاعم"
+            ],
+            "a": "المتاجر",
+            "why": "Läden = جمع Laden (متجر)."
+          },
+          {
+            "q": "«Das Obst sieht frisch aus.» — Was sagt sie über das Obst?",
+            "choices": [
+              "يبدو طازجاً",
+              "طعمه حلو",
+              "رخيص"
+            ],
+            "a": "يبدو طازجاً",
+            "why": "sieht … aus = يبدو؛ frisch طازج."
+          },
+          {
+            "q": "«Die Stadt ist mir fremd.» — Kennt sie die Stadt?",
+            "choices": [
+              "لا",
+              "نعم، جيداً",
+              "قليلاً"
+            ],
+            "a": "لا",
+            "why": "fremd = غريب = لا يعرفها."
+          },
+          {
+            "q": "«Mein Handy ist kaputt.» — Geht das Handy?",
+            "choices": [
+              "لا، معطّل",
+              "نعم",
+              "أحياناً"
+            ],
+            "a": "لا، معطّل",
+            "why": "kaputt = معطّل."
+          },
+          {
+            "q": "«Das Essen riecht bitter.» — Wie riecht es?",
+            "choices": [
+              "مرّ",
+              "حلو",
+              "طيب"
+            ],
+            "a": "مرّ",
+            "why": "bitter = مرّ · riechen = الرائحة."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Einkaufen und Essen — zum Verstehen: die Banane · die Birne · der Schinken · das Öl · die Pommes frites · bitter · riechen (riecht gut) · der Laden (die Läden) · der Kiosk · der Herd · böse · kaputt · fremd · aussehen (sieht müde aus).",
+      "ar": "درس للفهم لا للإنتاج (تكملة SD1): الفاكهة والشينكن والزيت والبطاطا المقلية على لوحة الأسعار وقائمة الطعام · المتجر الصغير والكشك والموقد · أربع صفات بعد ist: مرّ وغاضب ومعطّل وغريب · وفعلان: تفوح رائحته (riechen — بالأنف، لا schmecken بالفم) ويبدو (aussehen — بـaus في آخر الجملة). تقرأها في المتجر وتسمعها في المكالمة وتعرف: كم وماذا وما المشكلة."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Du siehst müde.~~ · ~~Du siehst gut aus — also du siehst alles.~~",
+          "ar": "aussehen (يبدو) فعل منفصل: Du siehst müde aus. — وsehen (يرى) بلا aus: Ich sehe dich."
+        },
+        "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: «يبدو» و«يرى» في العربية جذران مختلفان، وفي الألمانية الفرق هو aus في آخر الجملة فقط — فيُسقطه المتعلم فيصير «ترى متعباً»، أو يسمع sieht … aus ويفهم «يرى». في الفهم: sieht + صفة + aus = يبدو.",
+        "correct": {
+          "de": "Du siehst müde aus. · Der Kuchen sieht gut aus.",
+          "ar": "تبدو متعباً. · الكعكة تبدو شهية."
+        },
+        "exercise": {
+          "q": "Das Obst sieht frisch ___. (aus / an)",
+          "a": "aus"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Schinken = Käse.~~ · ~~Schinken = Fisch.~~",
+          "ar": "Schinken = لحم خنزير مقدّد — في القوائم والسندويشات كثيراً: Brot mit Schinken · Pizza mit Schinken."
+        },
+        "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: لا كلمة عربية يومية للشينكن، فيحفظه المتعلم «لحم مقدّد» عاماً ويظنه كاللحم المجفف العربي — بينما هو في ألمانيا لحم خنزير إلا إن كُتب غير ذلك (Putenschinken). للفهم وللاختيار الواعي في المطعم.",
+        "correct": {
+          "de": "Ist Schinken im Salat? — Ja. — Dann bitte ohne Schinken.",
+          "ar": "هل في السلطة شينكن؟ — نعم. — إذن من فضلك بدونه."
+        },
+        "exercise": {
+          "q": "Schinken ist Fleisch — ja oder nein?",
+          "a": "ja"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Das Essen riecht gut. = Das Essen schmeckt gut.~~",
+          "ar": "riechen = الرائحة (بالأنف) · schmecken = الطعم (باللسان) — Es riecht gut, aber es schmeckt bitter."
+        },
+        "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: «طيّب» في العربية تصف الرائحة والطعم معاً، فيسمع المتعلم riecht gut ويظن أن الطعام لذيذ — والجملة الألمانية قد تتبعها aber es schmeckt bitter. في الفهم: riechen أنف، schmecken فم.",
+        "correct": {
+          "de": "Der Kaffee riecht gut, aber er schmeckt bitter.",
+          "ar": "القهوة رائحتها طيبة لكن طعمها مرّ."
+        },
+        "exercise": {
+          "q": "Der Kuchen ___ nach Äpfeln. (riecht / schmeckt — بالأنف)",
+          "a": "riecht"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "banane",
+      "birne",
+      "schinken",
+      "oel",
+      "pommes-frites",
+      "bitter",
+      "riechen",
+      "laden",
+      "kiosk",
+      "herd",
+      "boese",
+      "kaputt",
+      "fremd",
+      "aussehen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Schinken",
+      "https://www.duden.de/rechtschreibung/aussehen",
+      "https://www.duden.de/rechtschreibung/kaputt"
+    ],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/Pommes_frites"
+    ],
+    "goethe": []
+  },
+  "usedArsenalIds": [
+    "ars-perfekt-haben"
+  ],
+  "audioManifestRefs": [
+    "word-banane",
+    "word-birne",
+    "word-schinken",
+    "word-oel",
+    "word-pommes-frites",
+    "word-bitter",
+    "word-riechen",
+    "word-laden",
+    "word-kiosk",
+    "word-herd",
+    "word-boese",
+    "word-kaputt",
+    "word-fremd",
+    "word-aussehen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Einkaufen · Essen) — Ergänzung zum Verstehen, Einheit 13 (D113)",
+    "goetheWordListOverlap": []
+  }
+}

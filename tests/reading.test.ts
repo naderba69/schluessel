@@ -7,11 +7,18 @@ import {
   readingFlow,
   tapTranslate,
   highlightAt,
+  readingPick,
+  splitSentences,
+  toEngineText,
   tokenize,
   FUNCTION_WORD_FORMS,
   type ReadingText,
 } from "../src/lib/reading.js";
-import { firstLessonWords } from "../src/lesson-packs.js";
+import { loadFirstSession } from "../src/lesson-packs.js";
+import { ALL_LESETEXTS } from "../src/lesson-packs.js";
+const __FIRST = await loadFirstSession();
+const firstLessonWords = __FIRST.direct;
+
 
 const text: ReadingText = {
   id: "a1-text-1",
@@ -66,5 +73,52 @@ describe("E11 — الترجمة بعد المحاولة + الإضاءة الم
     expect(highlightAt(text.segments, 0.9)?.id).toBe("s2");
     expect(highlightAt(text.segments, 1.5)).toBeNull();
     expect(highlightAt([], 0.5)).toBeNull();
+  });
+});
+
+describe("D281: نص الخميس الحر (ب-19)", () => {
+  const unitOf = (id: string) => {
+    const m = id.match(/^(A\d)-u(\d+)-d\d+$/i);
+    return m ? { level: m[1]!.toUpperCase(), unit: Number(m[2]) } : undefined;
+  };
+
+  it("splitSentences: ألماني وعربي", () => {
+    expect(splitSentences("Hallo! Wie geht es? Gut.")).toEqual(["Hallo!", "Wie geht es?", "Gut."]);
+    expect(splitSentences("مرحباً! كيف حالك؟ بخير.")).toEqual(["مرحباً!", "كيف حالك؟", "بخير."]);
+  });
+
+  it("toEngineText: مقابلة الترتيب بالترتيب — والزائد يُسقَط بلا كسر", () => {
+    const full = toEngineText({
+      id: "t1", level: "A1", title: { de: "T", ar: "ت" }, text: { de: "Hallo! Tschüss.", ar: "مرحباً! وداعاً." },
+    });
+    expect(full.segments.map((s) => [s.de, s.ar])).toEqual([
+      ["Hallo!", "مرحباً!"],
+      ["Tschüss.", "وداعاً."],
+    ]);
+    const short = toEngineText({
+      id: "t2", level: "A1", title: { de: "T", ar: "ت" }, text: { de: "Hallo! Tschüss. Danke.", ar: "مرحباً!" },
+    });
+    expect(short.segments).toHaveLength(1);
+  });
+
+  it("النصوص الخمسة عشر كلها متوازية الجمل (قفل)", () => {
+    expect(ALL_LESETEXTS).toHaveLength(15);
+    for (const t of ALL_LESETEXTS) {
+      const de = splitSentences(t.text.de);
+      const ar = splitSentences(t.text.ar);
+      expect([t.id, de.length, ar.length]).toEqual([t.id, de.length, de.length]);
+      expect(de.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("readingPick: نص أحدث وحدة مكتملة — ويتخطى بلا نص", () => {
+    const texts = ALL_LESETEXTS.map((t) => ({ id: t.id, level: t.level, unit: t.unit }));
+    expect(readingPick(texts, ["a1-u1-d1", "a1-u1-d6"], unitOf)?.id).toBe("a1-lese-u1");
+    expect(readingPick(texts, ["a1-u1-d6", "a1-u2-d3"], unitOf)?.id).toBe("a1-lese-u2");
+    expect(readingPick(texts, ["a1-u12-d6", "a1-u13-d1"], unitOf)?.id).toBe("a1-lese-u13"); // D292: u13 صار له نص
+    const partial = texts.filter((t) => t.unit <= 12); // التخطي يُختبَر بقائمة ناقصة مصنوعة
+    expect(readingPick(partial, ["a1-u12-d6", "a1-u13-d1"], unitOf)?.id).toBe("a1-lese-u12");
+    expect(readingPick(partial, ["a1-u13-d1"], unitOf)).toBeUndefined();
+    expect(readingPick(texts, [], unitOf)).toBeUndefined();
   });
 });

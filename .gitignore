@@ -11,3 +11,6 @@ tools/models/
 # Python bytecode (أدوات الصوت — لا تُلتزم أبداً)
 __pycache__/
 *.pyc
+
+# أدوات الفحص (tools/dev — N-104): النصوص الرسمية تُجلب محلياً ولا تُلتزم (حقوق Goethe)
+.dev-cache/

@@ -6,11 +6,12 @@
   "day": 3,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst über die Vergangenheit mit sein erzählen: Ich bin zu Hause geblieben, ich war krank, und jetzt bin ich wieder fit.",
-    "ar": "تحكي الماضي بـ sein (بقيتُ/كنتُ) وتتحدث عن تعافيك"
+    "de": "Wie war dein Tag? — Ich bin im Bett geblieben. · Ich habe viel gelegen und gehustet. · Das Fieber ist verschwunden. · Ich war sehr schwach, jetzt geht es besser. · Bist du morgen wieder fit?",
+    "ar": "تحكي يومك المريض بالماضي: الماضي المركّب بـsein للحركة وتغيّر الحال وbleiben (bin geblieben · bin gefahren · ist verschwunden) مقابل haben (habe gelegen · habe gehustet · hat gebrannt · hat gedauert)، والماضي البسيط war/hatte لـsein وhaben وحدهما (Ich war schwach. · Ich hatte Fieber.) — ومعها wieder · besser · fit · schwach · jucken · dauern"
   },
   "canDoDaily": [
-    "يحكي يومه المريض بـ3 جمل ماضٍ (bin/war) وينتهي بجملة تعافٍ (wieder fit)"
+    "يحكي يومه المريض بأربع جمل ماضٍ صحيحة المساعد: اثنتان بـsein (Ich bin im Bett geblieben. · Das Fieber ist verschwunden.) واثنتان بـhaben (Ich habe gehustet. · Mein Hals hat gebrannt.) — والتصريف الثالث في الآخر.",
+    "يسأل ويجيب بـwar/hatte بلا تصريف ثالث (Wie war dein Tag? · Ich war schwach. · Warst du krank? · Ich hatte Fieber.) ويختم بحاله الآن: Jetzt geht es besser. · Noch nicht fit."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«بقيتُ في البيت» — haben أم sein؟"
+          "de": "«بقيتُ في البيت» — haben أم sein؟ (تخمين فقط)"
         },
         "choices": [
-          "Ich bin zu Hause geblieben (sein)",
-          "Ich habe zu Hause geblieben",
-          "Ich habe zu Hause gebliebt"
+          "Ich bin heute zu Hause geblieben.",
+          "Ich habe heute zu Hause geblieben.",
+          "Ich habe heute zu Hause gebleibt."
         ],
-        "answer": "Ich bin zu Hause geblieben (sein)",
+        "answer": "Ich bin heute zu Hause geblieben.",
         "revealNextSession": true
       }
     ],
@@ -52,85 +53,633 @@
       "dauern"
     ],
     "grammarArsenalIds": [
-      "ars-perfekt",
-      "ars-praeteritum"
+      "ars-perfekt"
     ],
     "storySentenceIds": [
-      "story-a11-u11-s3"
+      "story-a1-u11-s3"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "vowel-long-short",
+      "sp-st-initial",
+      "ch-ach-laut",
+      "v-f"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«بقيتُ في البيت»؟",
-            "a": "Ich bin zu Hause geblieben."
+            "q": "Ich ___ heute im Bett geblieben. (sein/haben — ich)",
+            "a": "bin",
+            "why": "bleiben يأخذ sein (استثناء يُحفظ): ich bin geblieben."
           },
           {
-            "q": "«كنتُ أمس ضعيفاً»؟",
-            "a": "Ich war gestern schwach."
+            "q": "Ich ___ viel gelegen. (sein/haben — ich)",
+            "a": "habe",
+            "why": "liegen بلا انتقال من مكان ⇒ haben: habe gelegen."
+          },
+          {
+            "q": "Das Fieber ___ verschwunden. (sein/haben — es)",
+            "a": "ist",
+            "why": "تغيّر الحال ⇒ sein: ist verschwunden."
+          },
+          {
+            "q": "Er ___ wieder gekommen. (sein/haben — er)",
+            "a": "ist",
+            "why": "kommen حركة ⇒ sein: ist gekommen."
+          },
+          {
+            "q": "Ich ___ nach Hause gefahren. (sein/haben — ich)",
+            "a": "bin",
+            "why": "fahren حركة من مكان إلى مكان ⇒ sein."
+          },
+          {
+            "q": "Ich ___ gehustet und geniest. (sein/haben — ich)",
+            "a": "habe",
+            "why": "husten وniesen بلا حركة ⇒ haben."
+          },
+          {
+            "q": "Mein Hals ___ gebrannt. (sein/haben — er)",
+            "a": "hat",
+            "why": "brennen ⇒ haben: hat gebrannt (مختلط)."
+          },
+          {
+            "q": "Die Erkältung ___ eine Woche gedauert. (sein/haben — sie)",
+            "a": "hat",
+            "why": "dauern بلا حركة ⇒ haben: hat gedauert."
+          },
+          {
+            "q": "Ich bin heute zu Hause ___. (bleiben — التصريف الثالث)",
+            "a": "geblieben",
+            "why": "bleiben → geblieben (قوي: ei → ie)."
+          },
+          {
+            "q": "Ich habe die Nacht im Bett ___. (liegen — التصريف الثالث)",
+            "a": "gelegen",
+            "why": "liegen → gelegen (قوي: ie → e)."
+          },
+          {
+            "q": "Der Schmerz ist ___. (verschwinden — التصريف الثالث)",
+            "a": "verschwunden",
+            "why": "verschwinden → verschwunden بلا ge‑ (ver‑) · i → u."
+          },
+          {
+            "q": "Ich habe die Nacht viel ___. (husten — التصريف الثالث)",
+            "a": "gehustet",
+            "why": "منتظم: ge‑ + hust + ‑et (بعد t)."
+          },
+          {
+            "q": "Ich habe heute viel ___. (niesen — التصريف الثالث)",
+            "a": "geniest",
+            "why": "منتظم: ge‑ + nies + ‑t."
+          },
+          {
+            "q": "Mein Hals hat gestern ___. (brennen — التصريف الثالث)",
+            "a": "gebrannt",
+            "why": "مختلط: brenn → gebrannt (e → a)."
+          },
+          {
+            "q": "Wie lange hat die Erkältung ___? (dauern — التصريف الثالث)",
+            "a": "gedauert",
+            "why": "منتظم: ge‑ + dauer + ‑t."
+          },
+          {
+            "q": "Wie ___ dein Tag? (sein — الماضي البسيط · er)",
+            "a": "war",
+            "why": "sein → war (الماضي البسيط بلا تصريف ثالث)."
+          },
+          {
+            "q": "Ich ___ gestern sehr schwach. (sein — الماضي البسيط · ich)",
+            "a": "war",
+            "why": "ich war — كـer war."
+          },
+          {
+            "q": "___ du auch krank? (sein — الماضي البسيط · du)",
+            "a": "Warst",
+            "why": "du warst — نهاية ‑st."
+          },
+          {
+            "q": "Wir ___ eine Woche zu Hause. (sein — الماضي البسيط · wir)",
+            "a": "waren",
+            "why": "wir waren — نهاية ‑en."
+          },
+          {
+            "q": "Ich ___ Fieber und Kopfschmerzen. (haben — الماضي البسيط · ich)",
+            "a": "hatte",
+            "why": "haben → hatte: كان عندي."
+          },
+          {
+            "q": "Wir ___ keine Zeit. (haben — الماضي البسيط · wir)",
+            "a": "hatten",
+            "why": "wir hatten — نهاية ‑n."
+          },
+          {
+            "q": "Jetzt geht es ___. (أفضل)",
+            "a": "besser",
+            "why": "besser = أفضل — Es geht besser."
+          },
+          {
+            "q": "Bist du morgen ___ fit? (مجدداً)",
+            "a": "wieder",
+            "why": "wieder = مجدداً — wieder fit."
+          },
+          {
+            "q": "Ich bin noch nicht ___, aber besser. (بخير/لائق)",
+            "a": "fit",
+            "why": "fit = لائق/بخير ↔ schwach."
+          },
+          {
+            "q": "Heute Morgen war ich sehr ___. (ضعيف)",
+            "a": "schwach",
+            "why": "schwach = ضعيف — عكس fit."
+          },
+          {
+            "q": "Meine Nase ___. (jucken — sie)",
+            "a": "juckt",
+            "why": "jucken → juckt — الأنف يحكّ."
+          },
+          {
+            "q": "Mein Hals ___ nicht mehr. (brennen — er)",
+            "a": "brennt",
+            "why": "brennen → brennt — nicht mehr = لم يعد."
+          },
+          {
+            "q": "Wie lange ___ so eine Erkältung? (dauern — sie)",
+            "a": "dauert",
+            "why": "dauern → dauert — Wie lange? = كم تدوم؟"
+          },
+          {
+            "q": "Morgen ___ ich noch zu Hause. (bleiben — ich · الحاضر)",
+            "a": "bleibe",
+            "why": "bleiben → ich bleibe — الحاضر للغد."
+          },
+          {
+            "q": "Um neun Uhr ___ Lena noch im Bett. (liegen — sie · الحاضر)",
+            "a": "liegt",
+            "why": "liegen → liegt — الحاضر."
           }
         ],
         "interleavedWith": [
-          "bleiben",
-          "schwach"
+          "bett",
+          "fieber",
+          "erkaeltung",
+          "hals",
+          "nase",
+          "woche",
+          "nacht",
+          "zeit",
+          "kopfschmerz",
+          "gestern",
+          "heute",
+          "morgen"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«سعلتُ طوال الليل»؟",
-            "a": "Ich habe die ganze Nacht gehustet."
+            "audioId": "kb-1",
+            "speakText": "Hallo Lena! Wie war dein Tag? Bist du noch im Bett?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "كيف كان يومها وهل ما زالت في السرير",
+              "أين تسكن",
+              "متى موعدها"
+            ],
+            "a": "كيف كان يومها وهل ما زالت في السرير",
+            "why": "Wie war dein Tag? Bist du noch im Bett? — war الماضي البسيط."
           },
           {
-            "q": "«اختفى الألم»؟",
-            "a": "Der Schmerz ist verschwunden."
+            "audioId": "kb-2",
+            "speakText": "Ja. Ich bin heute im Bett geblieben. Ich habe viel gelegen und geschlafen.",
+            "q": "استمع: ماذا فعلت لينا اليوم؟",
+            "choices": [
+              "بقيت في السرير ورقدت ونامت كثيراً",
+              "ذهبت إلى المدرسة",
+              "لعبت كرة القدم"
+            ],
+            "a": "بقيت في السرير ورقدت ونامت كثيراً",
+            "why": "bin im Bett geblieben · habe viel gelegen und geschlafen — sein ثم haben."
+          },
+          {
+            "audioId": "kb-3",
+            "speakText": "Hast du noch Fieber?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "هل ما زالت عندها حمّى",
+              "هل عندها صداع",
+              "هل تريد شاياً"
+            ],
+            "a": "هل ما زالت عندها حمّى",
+            "why": "Hast du noch Fieber? — noch = ما زال."
+          },
+          {
+            "audioId": "kb-4",
+            "speakText": "Nein! Das Fieber ist verschwunden. Aber ich habe die Nacht viel gehustet und geniest.",
+            "q": "استمع: ماذا حدث للحمّى وماذا فعلت لينا ليلاً؟",
+            "choices": [
+              "اختفت — وسعلت وعطست كثيراً",
+              "ارتفعت — ونامت",
+              "بقيت — ولعبت"
+            ],
+            "a": "اختفت — وسعلت وعطست كثيراً",
+            "why": "Das Fieber ist verschwunden · habe … gehustet und geniest — تغيّر الحال بـsein."
+          },
+          {
+            "audioId": "kb-5",
+            "speakText": "Und dein Hals?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "عن حلقها",
+              "عن أنفها",
+              "عن ساقها"
+            ],
+            "a": "عن حلقها",
+            "why": "Und dein Hals? — سؤال قصير بلا فعل."
+          },
+          {
+            "audioId": "kb-7",
+            "speakText": "Warst du heute Morgen sehr schwach?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "هل كانت ضعيفة جداً صباح اليوم",
+              "هل كانت في المدرسة",
+              "هل كانت عند الطبيبة"
+            ],
+            "a": "هل كانت ضعيفة جداً صباح اليوم",
+            "why": "Warst du heute Morgen sehr schwach? — du warst (الماضي البسيط)."
+          },
+          {
+            "audioId": "kb-8",
+            "speakText": "Ja, ich war sehr schwach. Jetzt geht es besser.",
+            "q": "استمع: كيف كانت وكيف هي الآن؟",
+            "choices": [
+              "كانت ضعيفة جداً — والآن أفضل",
+              "كانت بخير — والآن أسوأ",
+              "كانت نائمة — والآن تأكل"
+            ],
+            "a": "كانت ضعيفة جداً — والآن أفضل",
+            "why": "ich war sehr schwach · Jetzt geht es besser — كان ↔ الآن."
+          },
+          {
+            "audioId": "kb-9",
+            "speakText": "Wie lange dauert so eine Erkältung?",
+            "q": "استمع: ماذا يسأل يوسف؟",
+            "choices": [
+              "كم تدوم نزلة البرد",
+              "كم تكلّف الحبوب",
+              "متى تنام"
+            ],
+            "a": "كم تدوم نزلة البرد",
+            "why": "Wie lange dauert so eine Erkältung? — dauern = يدوم."
+          },
+          {
+            "audioId": "kb-11",
+            "speakText": "Eine Woche! Ich war eine Woche zu Hause und habe nichts gemacht.",
+            "q": "استمع: كم دامت نزلة يوسف وماذا فعل؟",
+            "choices": [
+              "أسبوعاً — كان في البيت ولم يفعل شيئاً",
+              "يوماً — ذهب إلى الدورة",
+              "شهراً — كان في المستشفى"
+            ],
+            "a": "أسبوعاً — كان في البيت ولم يفعل شيئاً",
+            "why": "Eine Woche! Ich war eine Woche zu Hause und habe nichts gemacht — أسبوع كامل."
+          },
+          {
+            "audioId": "kb-12",
+            "speakText": "Und was hast du heute gemacht? Ist der Lehrer wieder da?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "ماذا فعل اليوم وهل عاد المعلّم",
+              "أين الدورة",
+              "كم الساعة"
+            ],
+            "a": "ماذا فعل اليوم وهل عاد المعلّم",
+            "why": "Was hast du heute gemacht? · Ist der Lehrer wieder da? — wieder = مجدداً."
+          },
+          {
+            "audioId": "kb-13",
+            "speakText": "Ja, er ist heute wieder gekommen. Wir haben heute gelernt: Ich bin gegangen, ich bin gekommen, ich bin geblieben.",
+            "q": "استمع: ماذا تعلّموا اليوم؟",
+            "choices": [
+              "الماضي بـsein: bin gegangen · bin gekommen · bin geblieben",
+              "الأرقام",
+              "أجزاء الجسم"
+            ],
+            "a": "الماضي بـsein: bin gegangen · bin gekommen · bin geblieben",
+            "why": "Ich bin gegangen, ich bin gekommen, ich bin geblieben — ثلاثة أفعال بـsein."
+          },
+          {
+            "audioId": "kb-14",
+            "speakText": "Und ich bin im Bett geblieben!",
+            "q": "استمع: ماذا تقول لينا مازحة؟",
+            "choices": [
+              "وأنا بقيتُ في السرير!",
+              "وأنا ذهبتُ إلى المدرسة!",
+              "وأنا جئتُ إلى تونس!"
+            ],
+            "a": "وأنا بقيتُ في السرير!",
+            "why": "Und ich bin im Bett geblieben! — bleiben بـsein."
+          },
+          {
+            "audioId": "kb-15",
+            "speakText": "Genau! Und nach dem Kurs bin ich nach Hause gefahren und habe zwei Stunden geschlafen.",
+            "q": "استمع: ماذا فعل يوسف بعد الدورة؟",
+            "choices": [
+              "عاد إلى البيت بالسيارة ونام ساعتين",
+              "لعب كرة القدم",
+              "ذهب إلى الطبيب"
+            ],
+            "a": "عاد إلى البيت بالسيارة ونام ساعتين",
+            "why": "bin nach Hause gefahren (sein للحركة) · habe zwei Stunden geschlafen (haben)."
+          },
+          {
+            "audioId": "kb-17",
+            "speakText": "Nein, nur müde. Das Lernen dauert lange!",
+            "q": "استمع: هل كان يوسف مريضاً؟",
+            "choices": [
+              "لا، متعباً فقط — التعلّم يدوم طويلاً",
+              "نعم، عنده حمّى",
+              "نعم، حلقه يؤلمه"
+            ],
+            "a": "لا، متعباً فقط — التعلّم يدوم طويلاً",
+            "why": "Nein, nur müde. Das Lernen dauert lange! — متعب لا مريض."
+          },
+          {
+            "audioId": "kb-18",
+            "speakText": "Das Lernen ist auch Arbeit! Und morgen? Kommst du wieder zum Kurs?",
+            "q": "استمع: ماذا تسأل لينا عن الغد؟",
+            "choices": [
+              "هل يعود يوسف إلى الدورة",
+              "هل يسافر يوسف",
+              "هل ينام يوسف"
+            ],
+            "a": "هل يعود يوسف إلى الدورة",
+            "why": "Kommst du wieder zum Kurs? — wieder = مجدداً."
+          },
+          {
+            "audioId": "kb-19",
+            "speakText": "Ja, natürlich. Und du? Bist du morgen wieder fit?",
+            "q": "استمع: ماذا يسأل يوسف في الختام؟",
+            "choices": [
+              "هل ستكون لينا بخير مجدداً غداً",
+              "هل تأكل لينا",
+              "هل تتعلّم لينا"
+            ],
+            "a": "هل ستكون لينا بخير مجدداً غداً",
+            "why": "Bist du morgen wieder fit? — fit = بخير/لائق."
           }
         ],
         "interleavedWith": [
-          "husten",
-          "verschwinden"
+          "bett",
+          "fieber",
+          "erkaeltung",
+          "hals",
+          "lehrer",
+          "kurs",
+          "woche",
+          "nacht",
+          "heute",
+          "morgen",
+          "muede"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«اليوم أنا أفضل»؟",
-            "a": "Heute bin ich besser."
+            "tokens": [
+              "Bett",
+              "bin",
+              "Ich",
+              "geblieben.",
+              "im",
+              "heute"
+            ],
+            "a": "Ich bin heute im Bett geblieben.",
+            "why": "bin ثانياً ← heute ← im Bett ← geblieben آخراً (القوس)."
           },
           {
-            "q": "«يستغرق ثلاثة أيام»؟",
-            "a": "Es dauert drei Tage."
+            "tokens": [
+              "ist",
+              "verschwunden.",
+              "Fieber",
+              "Das"
+            ],
+            "a": "Das Fieber ist verschwunden.",
+            "why": "Das Fieber فاعل ← ist ← verschwunden — تغيّر الحال بـsein."
+          },
+          {
+            "tokens": [
+              "viel",
+              "Ich",
+              "und",
+              "geschlafen.",
+              "gelegen",
+              "habe"
+            ],
+            "a": "Ich habe viel gelegen und geschlafen.",
+            "why": "habe ← viel ← gelegen und geschlafen (كلاهما بـhaben)."
+          },
+          {
+            "tokens": [
+              "gebrannt.",
+              "gestern",
+              "hat",
+              "Mein",
+              "Hals"
+            ],
+            "a": "Mein Hals hat gestern gebrannt.",
+            "why": "hat ثانياً ← gestern ← gebrannt آخراً."
+          },
+          {
+            "tokens": [
+              "auch",
+              "du",
+              "Warst",
+              "krank?"
+            ],
+            "a": "Warst du auch krank?",
+            "why": "سؤال نعم/لا: Warst أولاً ← du ← auch krank."
+          },
+          {
+            "tokens": [
+              "eine",
+              "war",
+              "zu",
+              "Hause.",
+              "Ich",
+              "Woche"
+            ],
+            "a": "Ich war eine Woche zu Hause.",
+            "why": "war ثانياً ← eine Woche ← zu Hause."
+          },
+          {
+            "tokens": [
+              "Erkältung",
+              "gedauert?",
+              "lange",
+              "deine",
+              "hat",
+              "Wie"
+            ],
+            "a": "Wie lange hat deine Erkältung gedauert?",
+            "why": "Wie lange ← hat ← deine Erkältung ← gedauert آخراً."
+          },
+          {
+            "tokens": [
+              "Er",
+              "heute",
+              "wieder",
+              "ist",
+              "gekommen."
+            ],
+            "a": "Er ist heute wieder gekommen.",
+            "why": "ist ثانياً ← heute wieder ← gekommen — kommen بـsein."
+          },
+          {
+            "tokens": [
+              "Nach",
+              "ich",
+              "Kurs",
+              "nach",
+              "bin",
+              "Hause",
+              "gefahren.",
+              "dem"
+            ],
+            "a": "Nach dem Kurs bin ich nach Hause gefahren.",
+            "why": "Nach dem Kurs أولاً ← bin ثانياً ← ich ← nach Hause ← gefahren."
+          },
+          {
+            "tokens": [
+              "Noch",
+              "besser.",
+              "fit,",
+              "nicht",
+              "aber"
+            ],
+            "a": "Noch nicht fit, aber besser.",
+            "why": "جواب قصير: Noch nicht fit ← aber besser."
           }
         ],
         "interleavedWith": [
-          "besser",
-          "dauern"
+          "bett",
+          "fieber",
+          "erkaeltung",
+          "hals",
+          "kurs",
+          "woche",
+          "gestern",
+          "heute"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "kb-6",
+            "speakText": "Mein Hals hat gestern gebrannt. Heute brennt er nicht mehr, aber meine Nase juckt.",
+            "a": "Mein Hals hat gestern gebrannt. Heute brennt er nicht mehr, aber meine Nase juckt.",
+            "why": "Hals بحرف كبير · gebrannt بـnn وt · brennt بـnn · juckt بـck."
+          },
+          {
+            "audioId": "kb-10",
+            "speakText": "Drei Tage, sagt die Ärztin. Wie lange hat deine Erkältung im Januar gedauert?",
+            "a": "Drei Tage, sagt die Ärztin. Wie lange hat deine Erkältung im Januar gedauert?",
+            "why": "Drei Tage بحروف كبيرة للاسم · Ärztin بـÄ · Januar بحرف كبير · gedauert بـau."
+          },
+          {
+            "audioId": "kb-16",
+            "speakText": "Du hast geschlafen? Warst du auch krank?",
+            "a": "Du hast geschlafen? Warst du auch krank?",
+            "why": "geschlafen بـsch · Warst بحرف كبير أول السؤال وبـst."
+          },
+          {
+            "audioId": "kb-20",
+            "speakText": "Noch nicht fit, aber besser. Morgen bleibe ich noch zu Hause. Gute Nacht, Yusuf!",
+            "a": "Noch nicht fit, aber besser. Morgen bleibe ich noch zu Hause. Gute Nacht, Yusuf!",
+            "why": "Noch nicht بـch · fit بـt واحدة · bleibe بـei · Hause بحرف كبير."
+          },
+          {
+            "audioId": "word-bleiben",
+            "speakText": "bleiben.",
+            "a": "bleiben.",
+            "why": "bleiben — ei «آي» · b في الوسط."
+          },
+          {
+            "audioId": "word-liegen",
+            "speakText": "liegen.",
+            "a": "liegen.",
+            "why": "liegen — ie «إي» طويلة."
+          },
+          {
+            "audioId": "word-wieder",
+            "speakText": "wieder.",
+            "a": "wieder.",
+            "why": "wieder — ie طويلة · ‑er في الآخر."
+          },
+          {
+            "audioId": "word-schwach",
+            "speakText": "schwach.",
+            "a": "schwach.",
+            "why": "schwach — sch ثم w تُنطق v · ch حلقية بعد a."
+          },
+          {
+            "audioId": "word-husten",
+            "speakText": "husten.",
+            "a": "husten.",
+            "why": "husten — u طويلة · st في الوسط تُنطق st لا scht."
+          },
+          {
+            "audioId": "word-niesen",
+            "speakText": "niesen.",
+            "a": "niesen.",
+            "why": "niesen — ie طويلة · s بين حركتين تُنطق z."
+          },
+          {
+            "audioId": "word-verschwinden",
+            "speakText": "verschwinden.",
+            "a": "verschwinden.",
+            "why": "verschwinden — ver‑ ثم schw · i قصيرة."
+          },
+          {
+            "audioId": "word-dauern",
+            "speakText": "dauern.",
+            "a": "dauern.",
+            "why": "dauern — au «آو» · ‑ern."
+          }
+        ],
+        "interleavedWith": [
+          "hals",
+          "erkaeltung",
+          "januar",
+          "gestern",
+          "aerztin"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Den kranken Tag erzählen — Vergangenheit mit bin/war",
-        "a": "x",
-        "ar": "إحكي يومك المريض بالماضي"
+        "de": "Wie war dein Tag? — Ich bin im Bett geblieben und habe viel geschlafen. · Hast du noch Fieber? — Nein, das Fieber ist verschwunden. · Warst du schwach? — Ja, aber jetzt geht es besser. · Wie lange hat es gedauert? — Drei Tage.",
+        "ar": "زميلك يسأل Wie war dein Tag? وتحكي يومك المريض بأربع جمل ماضٍ (اثنتان بـsein واثنتان بـhaben) وجملة بـwar أو hatte — ثم تعكسان الأدوار"
       },
       "situation": {
-        "de": "Was hast du gestern gemacht? Was ist passiert?",
-        "a": "x",
-        "ar": "ماذا فعلتَ أمس؟ ماذا حدث؟"
+        "de": "Am Handy, am Abend: Wie war dein Tag? — Ich bin im Bett geblieben. Ich habe gelegen und geschlafen. — Hast du gehustet? — Ja, die Nacht. Aber das Fieber ist verschwunden. — Warst du schwach? — Heute Morgen, ja. Jetzt geht es besser. — Bist du morgen wieder fit? — Noch nicht, aber besser.",
+        "ar": "مكالمة مسائية: زميلك مريض منذ أمس — تسأله كيف كان يومه وماذا فعل وهل ما زالت عنده حمّى وهل سيكون بخير غداً"
       },
       "successCriteria": [
-        "جملتا ماضٍ بـ sein (bin/war) + جملة ماضٍ بـ haben (أعراض) + جملة تعافٍ (wieder fit)"
+        "جملتان بـsein (bin geblieben · bin gefahren · ist verschwunden · ist gekommen) — المساعد ثانياً والتصريف الثالث آخراً",
+        "جملتان بـhaben (habe gelegen · habe gehustet · habe geschlafen · hat gebrannt · hat gedauert)",
+        "سؤال وجواب بـwar/hatte بلا تصريف ثالث (Wie war dein Tag? · Ich war schwach. · Ich hatte Fieber.)",
+        "الحال الآن بكلمة من اليوم: besser · wieder fit · noch nicht fit · Es dauert drei Tage."
       ]
     }
   },
@@ -145,62 +694,194 @@
       {
         "items": [
           {
-            "q": "«بقيتُ في البيت»؟",
-            "a": "Ich bin zu Hause geblieben."
+            "q": "«بقيتُ أمس في البيت»؟",
+            "choices": [
+              "Ich bin gestern zu Hause geblieben.",
+              "Ich habe gestern zu Hause geblieben.",
+              "Ich bin gestern zu Hause bleiben."
+            ],
+            "a": "Ich bin gestern zu Hause geblieben.",
+            "why": "bleiben بـsein · التصريف الثالث geblieben آخراً."
           },
           {
-            "q": "«كنتُ أمس ضعيفاً»؟",
-            "a": "Ich war gestern schwach."
+            "q": "«نمتُ عشر ساعات»؟",
+            "choices": [
+              "Ich habe zehn Stunden geschlafen.",
+              "Ich bin zehn Stunden geschlafen.",
+              "Ich habe zehn Stunden schlafen."
+            ],
+            "a": "Ich habe zehn Stunden geschlafen.",
+            "why": "schlafen بلا حركة ⇒ haben."
           },
           {
-            "q": "«مجداً»؟",
-            "a": "wieder"
+            "q": "«كنتُ مريضاً»؟",
+            "choices": [
+              "Ich war krank.",
+              "Ich bin krank war.",
+              "Ich hatte krank."
+            ],
+            "a": "Ich war krank.",
+            "why": "sein → war مباشرة — بلا تصريف ثالث."
           },
           {
-            "q": "«سعلتُ»؟",
-            "a": "Ich habe gehustet."
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "«عطستُ»؟",
-            "a": "Ich habe geniest."
+            "q": "«اختفى الصداع»؟",
+            "choices": [
+              "Die Kopfschmerzen sind verschwunden.",
+              "Die Kopfschmerzen haben verschwunden.",
+              "Die Kopfschmerzen ist verschwunden."
+            ],
+            "a": "Die Kopfschmerzen sind verschwunden.",
+            "why": "تغيّر الحال ⇒ sein · الفاعل جمع ⇒ sind."
           },
           {
-            "q": "«يحكّ»؟",
-            "a": "Es juckt."
-          },
-          {
-            "q": "«حلقي يلتهب»؟",
-            "a": "Mein Hals brennt."
-          },
-          {
-            "q": "«اختفى الألم»؟",
-            "a": "Der Schmerz ist verschwunden."
-          }
-        ],
-        "passingScore": 0.75
-      },
-      {
-        "items": [
-          {
-            "q": "«اليوم أنا أفضل»؟",
-            "a": "Heute bin ich besser."
+            "q": "«كم دام الفيلم؟»؟",
+            "choices": [
+              "Wie lange hat der Film gedauert?",
+              "Wie lange ist der Film gedauert?",
+              "Wie lange hat der Film dauern?"
+            ],
+            "a": "Wie lange hat der Film gedauert?",
+            "why": "dauern ⇒ haben · gedauert آخراً."
           },
           {
             "q": "«أنا مجدداً بخير»؟",
-            "a": "Ich bin wieder fit."
+            "choices": [
+              "Ich bin wieder fit.",
+              "Ich habe wieder fit.",
+              "Ich bin fit wieder."
+            ],
+            "a": "Ich bin wieder fit.",
+            "why": "wieder قبل fit · sein."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«هل عدتَ إلى البيت بالسيارة؟»؟",
+            "choices": [
+              "Bist du nach Hause gefahren?",
+              "Hast du nach Hause gefahren?",
+              "Bist du nach Hause fahren?"
+            ],
+            "a": "Bist du nach Hause gefahren?",
+            "why": "fahren حركة ⇒ sein: Bist du … gefahren?"
           },
           {
-            "q": "«استلقيتُ في السرير»؟",
-            "a": "Ich habe im Bett gelegen."
+            "q": "«سعلتُ كثيراً»؟",
+            "choices": [
+              "Ich habe viel gehustet.",
+              "Ich bin viel gehustet.",
+              "Ich habe viel husten."
+            ],
+            "a": "Ich habe viel gehustet.",
+            "why": "husten ⇒ haben · منتظم gehustet."
           },
           {
-            "q": "«يستغرق ثلاثة أيام»؟",
-            "a": "Es dauert drei Tage."
+            "q": "«كان عندنا وقت»؟",
+            "choices": [
+              "Wir hatten Zeit.",
+              "Wir haben Zeit hatten.",
+              "Wir waren Zeit."
+            ],
+            "a": "Wir hatten Zeit.",
+            "why": "haben → hatten — بلا تصريف ثالث."
+          },
+          {
+            "q": "«رقدتُ في السرير»؟",
+            "choices": [
+              "Ich habe im Bett gelegen.",
+              "Ich bin im Bett gelegen.",
+              "Ich habe im Bett liegen."
+            ],
+            "a": "Ich habe im Bett gelegen.",
+            "why": "liegen بلا حركة ⇒ haben · gelegen."
+          },
+          {
+            "q": "«عيناي تلتهبان»؟",
+            "choices": [
+              "Meine Augen brennen.",
+              "Meine Augen brennt.",
+              "Meine Augen sind brennen."
+            ],
+            "a": "Meine Augen brennen.",
+            "why": "Augen جمع ⇒ brennen — الحاضر بلا sind."
+          },
+          {
+            "q": "«كنتَ ضعيفاً جداً»؟",
+            "choices": [
+              "Du warst sehr schwach.",
+              "Du war sehr schwach.",
+              "Du bist sehr schwach war."
+            ],
+            "a": "Du warst sehr schwach.",
+            "why": "du warst — نهاية ‑st."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«جاء المعلّم مجدداً»؟",
+            "choices": [
+              "Der Lehrer ist wieder gekommen.",
+              "Der Lehrer hat wieder gekommen.",
+              "Der Lehrer ist wieder kommen."
+            ],
+            "a": "Der Lehrer ist wieder gekommen.",
+            "why": "kommen حركة ⇒ sein · gekommen."
+          },
+          {
+            "q": "«عطسَت كثيراً»؟",
+            "choices": [
+              "Sie hat viel geniest.",
+              "Sie ist viel geniest.",
+              "Sie hat viel niesen."
+            ],
+            "a": "Sie hat viel geniest.",
+            "why": "niesen بلا حركة ⇒ haben · geniest."
+          },
+          {
+            "q": "«كنّا في البيت»؟",
+            "choices": [
+              "Wir waren zu Hause.",
+              "Wir sind zu Hause waren.",
+              "Wir hatten zu Hause."
+            ],
+            "a": "Wir waren zu Hause.",
+            "why": "wir waren — بلا تصريف ثالث."
+          },
+          {
+            "q": "«الآن الأمر أفضل»؟",
+            "choices": [
+              "Jetzt ist es besser.",
+              "Jetzt ist es gut besser.",
+              "Jetzt es ist besser."
+            ],
+            "a": "Jetzt ist es besser.",
+            "why": "ist ثانياً بعد Jetzt · besser."
+          },
+          {
+            "q": "«هل كان عندك حمّى؟» (رسمي)؟",
+            "choices": [
+              "Hatten Sie Fieber?",
+              "Haben Sie Fieber hatten?",
+              "Waren Sie Fieber?"
+            ],
+            "a": "Hatten Sie Fieber?",
+            "why": "haben → Hatten Sie …? — بلا تصريف ثالث."
+          },
+          {
+            "q": "«عيني تحكّ»؟",
+            "choices": [
+              "Mein Auge juckt.",
+              "Mein Auge jucken.",
+              "Mein Auge ist juckt."
+            ],
+            "a": "Mein Auge juckt.",
+            "why": "jucken → juckt — الحاضر."
           }
         ],
         "passingScore": 0.75
@@ -209,53 +890,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Gestern: Ich war krank, bin zu Hause geblieben, habe gehustet und geniest. Mein Hals hat gebrannt. Heute: Der Schmerz ist verschwunden, ich bin wieder fit!",
-      "ar": "أمس: كنتُ مريضاً وبقيتُ في البيت وسعلتُ وعطستُ. حلقي التهب. اليوم: اختفى الألم وأنا مجدداً بخير!"
+      "de": "sein: Ich bin im Bett geblieben. · Ich bin nach Hause gefahren. · Er ist wieder gekommen. · Das Fieber ist verschwunden. — haben: Ich habe gelegen. · Ich habe gehustet und geniest. · Mein Hals hat gebrannt. · Es hat drei Tage gedauert. — war/hatte: Ich war schwach. · Warst du krank? · Ich hatte Fieber. — Jetzt geht es besser. · Noch nicht fit, aber besser. · Meine Nase juckt.",
+      "ar": "الماضي المركّب بـsein للحركة (gefahren · gekommen · gegangen) وتغيّر الحال (verschwunden) وbleiben (geblieben) — وبـhaben لما سواها (gelegen · geschlafen · gehustet · geniest · gebrannt · gedauert) · المساعد ثانياً والتصريف الثالث آخراً · الماضي البسيط war/hatte لـsein وhaben وحدهما بلا تصريف ثالث · wieder · besser · fit ↔ schwach · jucken · brennen · dauern"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich habe zu Hause geblieben~~ / ~~Der Schmerz hat verschwunden~~",
-          "ar": "الحركة والتغيّر: **sein** (bin geblieben · ist verschwunden) — الأعراض: **haben** (habe gehustet)"
+          "de": "~~Ich habe heute zu Hause geblieben.~~ · ~~Ich habe nach Hause gefahren.~~ · ~~Der Schmerz hat verschwunden.~~",
+          "ar": "الحركة من مكان إلى مكان وتغيّر الحال وbleiben بـsein: bin geblieben · bin gefahren · ist verschwunden"
         },
-        "whyArabicSpeakerFails": "العربية فعل واحد بلا مساعدين؛ الألماني يفرّق: الحركة/التغيّر (بقي · اختفى · ذهب · جاء) = **ist** — الفعل في مكانه (سعل · عطس · استلقى) = **hat** — «القلنسوة» = الأحداث والانتقالات (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "العربية بلا مساعد للماضي، فينقل المتعلم المساعد الوحيد الذي عرفه (haben من u10-d3) إلى كل الأفعال. والألمانية تختار المساعد من معنى الفعل: الانتقال من مكان إلى مكان (gehen · kommen · fahren · fliegen · aufstehen) وتغيّر الحال (verschwinden) وbleiben — بـsein؛ وما سواها بـhaben — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich bin geblieben. · Der Schmerz ist verschwunden. · Ich habe gehustet.",
-          "ar": "بقيتُ · اختفى الألم · سعلتُ."
+          "de": "Ich bin heute zu Hause geblieben. · Ich bin nach Hause gefahren. · Der Schmerz ist verschwunden.",
+          "ar": "بقيتُ اليوم في البيت · عدتُ إلى البيت بالسيارة · اختفى الألم"
         },
         "exercise": {
-          "q": "أكمل: Ich ___ geblieben (sein/haben) · Ich ___ gehustet.",
-          "a": "bin / habe"
+          "q": "Er ___ um sieben aufgestanden. (ist/hat)",
+          "a": "ist"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich habe krank gewesen~~ / ~~Ich bin krank gewesen~~ (بدل war)",
-          "ar": "كان (الماضي) = **war** مباشرة (Präsens ist → Präteritum war) — لا حاجة للمساعد"
+          "de": "~~Ich bin gestern krank.~~ · ~~Ich habe gestern Fieber.~~ · ~~Gestern bin ich krank.~~",
+          "ar": "«كنتُ/كان عندي» بالماضي البسيط مباشرة: war · hatte — بلا تصريف ثالث ولا مساعد"
         },
-        "whyArabicSpeakerFails": "«كنتُ» فعل مساعد واحد بالعربية؛ الألماني يبني الماضي مباشرة: ist→**war** (مثل Umlaut يوم الاستعادة) — البناء المباشر أسهل: لا haben ولا participle (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«كنتُ مريضاً» و«كان عندي حمّى» — يبقي المتعلم الحاضر (bin · habe) ويكتفي بـgestern، أو يبحث عن تصريف ثالث لـsein كما فعل مع الأفعال. والألمانية تعطي sein وhaben ماضياً بسيطاً خاصاً: ich war · du warst · wir waren — ich hatte · wir hatten — يحلّ محلّ الحاضر بلا أي زيادة — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Ich war krank. · Er war zu Hause.",
-          "ar": "كنتُ مريضاً. · كان في البيت."
+          "de": "Ich war gestern krank. · Ich hatte gestern Fieber. · Warst du auch krank?",
+          "ar": "كنتُ أمس مريضاً · كان عندي أمس حمّى · هل كنتَ مريضاً أيضاً؟"
         },
         "exercise": {
-          "q": "حوّل: Ich bin schwach → gestern: Ich ___ schwach.",
+          "q": "Gestern ___ ich sehr müde. (bin → الماضي البسيط)",
           "a": "war"
         }
       },
       {
         "commonError": {
-          "de": "~~Mein Haut juckt~~ / ~~Ich jucke~~",
-          "ar": "الحكّ والحكة: **Es juckt** (Es الفاعل الصوري — يعود من الوحدة 10!)"
+          "de": "~~Ich bin im Bett gelegen.~~ · ~~Ich bin zehn Stunden geschlafen.~~ · ~~Ich bin gehustet.~~",
+          "ar": "liegen وschlafen وhusten بلا انتقال من مكان ⇒ haben: habe gelegen · habe geschlafen · habe gehustet"
         },
-        "whyArabicSpeakerFails": "«يحكّ» فعل بلا فاعل محسوس بالعربية؛ الألماني يفرض **Es** الفاعل الصوري (مثل Es regnet في الوحدة 10) — والحكّ بنفسه: Es juckt (لا «أنا أحكّ») — مصيدة Es تعود في سياق الجسم (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "بعد أن يتعلّم المتعلم sein للحركة يعمّمه على كل ما يفعله الجسم (رقد · نام · سعل) لأنها «أحداث جسدية». والألمانية الفصحى تسأل: هل انتقل الفاعل من مكان إلى مكان أو تغيّرت حاله؟ liegen وschlafen وhusten وniesen لا — فـhaben: Ich habe gelegen. · Ich habe geschlafen. — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Es juckt. · Es brennt.",
-          "ar": "يحكّ. · يلتهب."
+          "de": "Ich habe im Bett gelegen. · Ich habe zehn Stunden geschlafen. · Ich habe gehustet.",
+          "ar": "رقدتُ في السرير · نمتُ عشر ساعات · سعلتُ"
         },
         "exercise": {
-          "q": "ترجم: «يحكّ» (بـ Es).",
-          "a": "Es juckt."
+          "q": "Ich ___ die Nacht gehustet. (bin/habe)",
+          "a": "habe"
         }
       }
     ],
@@ -286,8 +967,7 @@
     "goethe": []
   },
   "usedArsenalIds": [
-    "ars-perfekt",
-    "ars-praeteritum"
+    "ars-perfekt"
   ],
   "audioManifestRefs": [
     "word-bleiben",

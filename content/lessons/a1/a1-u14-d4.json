@@ -1,0 +1,730 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "a1-u14-d4",
+ "level": "A1",
+ "unit": 14,
+ "day": 4,
+ "kind": "content",
+ "ziel": {
+  "de": "Du bist im Reisebüro: Prospekt oder Reiseführer? Du verstehst: Führung und Dorf · übernachten im Apartment · Halbpension · kulturell · Zoll · hinten und Praxis · Schild und Vorsicht · verboten · automatisch!",
+  "ar": "في مكتب السفر (تكملة SD1 للفهم — بلا تاريخ): تفهم السفر واللافتات: النشرة والمرشد · الجولة والقرية · المبيت في الشقة · نصف الإقامة · الثقافي · الجمارك · الخلف والعيادة · اللافتة والحذر · الممنوع والتلقائي — ولا يُطلب منك إنتاج هذه الكلمات."
+ },
+ "canDoDaily": [
+  "يفهم إجراءات السفر (Prospekt · Führung · Apartment · Halbpension) ويعرف أين يبيت.",
+  "يميز اللافتات والتحذيرات: Schild يُقرَأ وVorsicht للانتباه · والجمع الشاذ Dörfer."
+ ],
+ "warmup": {
+  "cardIds": [
+   "museum",
+   "tuer",
+   "foto"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "de": "«Das Foto ist verboten» — ماذا يعني؟ (تخمين فقط)"
+    },
+    "choices": [
+     "ممنوع",
+     "مسموح",
+     "مجاني"
+    ],
+    "answer": "ممنوع",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "de": "«Vorsicht!» — ماذا يطلب؟ (تخمين فقط)"
+    },
+    "choices": [
+     "أن ينتبه",
+     "أن يجلس",
+     "أن يخرج"
+    ],
+    "answer": "أن ينتبه",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "ما كلمات المكتب؟ (Reisebüro · Reiseführer · Prospekt · Führung)",
+   "ما كلمات المكان؟ (Apartment · Dorf · Praxis · Schild · Zoll)"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "reisebuero",
+   "reisefuehrer",
+   "prospekt",
+   "fuehrung",
+   "uebernachten",
+   "halbpension",
+   "apartment",
+   "kulturell",
+   "zoll",
+   "dorf",
+   "hinten",
+   "schild",
+   "verboten",
+   "vorsicht",
+   "praxis",
+   "automatisch"
+  ],
+  "grammarArsenalIds": [
+   "ars-plural-umlaut"
+  ],
+  "storySentenceIds": [
+   "story-a1-u14-s4"
+  ],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "auslaut-b",
+   "auslaut-d",
+   "ch-ach-laut",
+   "ch-ich-laut",
+   "double-consonant",
+   "ng-velar",
+   "r-uvular",
+   "umlaut-u",
+   "v-f",
+   "vowel-long-short",
+   "z"
+  ]
+ },
+ "uebung": {
+  "stations": [
+   {
+    "type": "reading",
+    "items": [
+     {
+      "text": "Ein Prospekt, bitte! Oder ein Reiseführer?",
+      "q": "Was will Lena?",
+      "choices": [
+       "einen Prospekt",
+       "ein Ticket",
+       "ein Foto"
+      ],
+      "a": "einen Prospekt",
+      "why": "Ein Prospekt, bitte — نشرة من فضلك (oder = أو · Reiseführer = مرشد سياحي)."
+     },
+     {
+      "text": "Der Prospekt ist neu. Die Führung ist kulturell!",
+      "q": "Wie ist die Führung?",
+      "choices": [
+       "kulturell",
+       "neu",
+       "gut"
+      ],
+      "a": "kulturell",
+      "why": "Die Führung ist kulturell — الجولة ثقافية (neu = جديد)."
+     },
+     {
+      "text": "Wo übernachten wir? Im Apartment?",
+      "q": "Wo übernachten sie?",
+      "choices": [
+       "im Apartment",
+       "im Kino",
+       "im Park"
+      ],
+      "a": "im Apartment",
+      "why": "Im Apartment — في الشقة الفندقية (übernachten = يبيت)."
+     },
+     {
+      "text": "Mit Halbpension! Das Apartment ist groß.",
+      "q": "Wie ist das Apartment?",
+      "choices": [
+       "groß",
+       "klein",
+       "neu"
+      ],
+      "a": "groß",
+      "why": "Das Apartment ist groß — الشقة كبيرة (Halbpension = نصف إقامة)."
+     },
+     {
+      "text": "Hinten ist die Praxis. Wo ist der Zoll?",
+      "q": "Wo ist die Praxis?",
+      "choices": [
+       "hinten",
+       "hier",
+       "da"
+      ],
+      "a": "hinten",
+      "why": "Hinten ist die Praxis — العيادة في الخلف (der Zoll = الجمارك)."
+     },
+     {
+      "text": "Da! Ein Schild: Vorsicht!",
+      "q": "Was ist da?",
+      "choices": [
+       "ein Schild",
+       "ein Foto",
+       "ein Brief"
+      ],
+      "a": "ein Schild",
+      "why": "Ein Schild: Vorsicht — لافتة: انتبه! (da = هناك)."
+     },
+     {
+      "text": "Verboten! Das Foto ist verboten!",
+      "q": "Was ist verboten?",
+      "choices": [
+       "das Foto",
+       "das Dorf",
+       "das Ticket"
+      ],
+      "a": "das Foto",
+      "why": "Das Foto ist verboten — التصوير ممنوع (das Dorf = القرية)."
+     }
+    ],
+    "interleavedWith": [
+     "bitte",
+     "neu",
+     "kino",
+     "park",
+     "foto",
+     "brief"
+    ]
+   },
+   {
+    "type": "listening",
+    "items": [
+     {
+      "audioId": "ef-2",
+      "speakText": "Ja! Ein Prospekt, bitte! Oder ein Reiseführer?",
+      "q": "ماذا تطلب لينا؟",
+      "choices": [
+       "نشرة أو مرشداً سياحياً",
+       "تذكرتين",
+       "قهوة وكعكة"
+      ],
+      "a": "نشرة أو مرشداً سياحياً",
+      "why": "Ein Prospekt oder ein Reiseführer — نشرة أو مرشد سياحي."
+     },
+     {
+      "audioId": "ef-4",
+      "speakText": "Wo übernachten wir? Im Apartment?",
+      "q": "أين سيبيتون؟",
+      "choices": [
+       "في الشقة الفندقية",
+       "في الفندق الكبير",
+       "عند الجدة"
+      ],
+      "a": "في الشقة الفندقية",
+      "why": "Wo übernachten wir؟ Im Apartment — أين نبيت؟ في الشقة."
+     },
+     {
+      "audioId": "ef-6",
+      "speakText": "Eine Führung: Das Dorf ist kulturell!",
+      "q": "كيف هي القرية؟",
+      "choices": [
+       "ثقافية",
+       "صناعية",
+       "مهجورة"
+      ],
+      "a": "ثقافية",
+      "why": "Das Dorf ist kulturell — القرية ثقافية (Führung = جولة)."
+     },
+     {
+      "audioId": "ef-8",
+      "speakText": "Da! Ein Schild: Vorsicht!",
+      "q": "ماذا ترى لينا؟",
+      "choices": [
+       "لافتة تحذير",
+       "قطاراً سريعاً",
+       "طائرة كبيرة"
+      ],
+      "a": "لافتة تحذير",
+      "why": "Ein Schild: Vorsicht — لافتة: انتبه!"
+     },
+     {
+      "audioId": "ef-11",
+      "speakText": "Wo ist der Zoll? Da ist das Schild!",
+      "q": "أين يجد يوسف الجمارك؟",
+      "choices": [
+       "عند اللافتة هناك",
+       "في جيبه",
+       "خلف الباب"
+      ],
+      "a": "عند اللافتة هناك",
+      "why": "Da ist das Schild — اللافتة هناك (der Zoll = الجمارك)."
+     },
+     {
+      "audioId": "ef-13",
+      "speakText": "Verboten! Das Foto ist verboten!",
+      "q": "هل التصوير مسموح؟",
+      "choices": [
+       "لا، ممنوع",
+       "نعم، مسموح",
+       "نعم، ليلاً فقط"
+      ],
+      "a": "لا، ممنوع",
+      "why": "Verboten! Das Foto ist verboten — ممنوع! التصوير ممنوع."
+     },
+     {
+      "audioId": "ef-17",
+      "speakText": "Mein Reiseführer! Wo ist mein Reiseführer?",
+      "q": "ما مشكلة يوسف؟",
+      "choices": [
+       "لا يجد مرشده",
+       "لا يجد نقوده",
+       "لا يجد هاتفه"
+      ],
+      "a": "لا يجد مرشده",
+      "why": "Wo ist mein Reiseführer — أين مرشدي (suchen = يبحث)."
+     }
+    ],
+    "interleavedWith": [
+     "bitte",
+     "da",
+     "foto"
+    ]
+   },
+   {
+    "type": "match",
+    "items": [
+     {
+      "pairs": [
+       {
+        "de": "das Reisebüro",
+        "ar": "مكتب السفر"
+       },
+       {
+        "de": "der Reiseführer",
+        "ar": "مرشد سياحي"
+       },
+       {
+        "de": "der Prospekt",
+        "ar": "نشرة"
+       },
+       {
+        "de": "die Führung",
+        "ar": "جولة إرشادية"
+       },
+       {
+        "de": "die Halbpension",
+        "ar": "نصف إقامة"
+       },
+       {
+        "de": "das Apartment",
+        "ar": "شقة فندقية"
+       }
+      ],
+      "why": "المكتب: Reisebüro مكتب سفر · Reiseführer مرشد (Führer بـü!) · Prospekt نشرة · Führung جولة · Halbpension نصف إقامة · Apartment شقة."
+     },
+     {
+      "pairs": [
+       {
+        "de": "übernachten",
+        "ar": "يبيت"
+       },
+       {
+        "de": "kulturell",
+        "ar": "ثقافي"
+       },
+       {
+        "de": "der Zoll",
+        "ar": "جمارك"
+       },
+       {
+        "de": "das Dorf",
+        "ar": "قرية"
+       },
+       {
+        "de": "hinten",
+        "ar": "في الخلف"
+       }
+      ],
+      "why": "الرحلة: übernachten يبيت (لا ينفصل!) · kulturell ثقافي · Zoll جمارك (Z تُنطق تس!) · Dorf قرية (جمعها Dörfer!) · hinten في الخلف."
+     },
+     {
+      "pairs": [
+       {
+        "de": "das Schild",
+        "ar": "لافتة"
+       },
+       {
+        "de": "verboten",
+        "ar": "ممنوع"
+       },
+       {
+        "de": "die Vorsicht",
+        "ar": "حذر"
+       },
+       {
+        "de": "die Praxis",
+        "ar": "عيادة"
+       },
+       {
+        "de": "automatisch",
+        "ar": "تلقائي"
+       }
+      ],
+      "why": "اللافتات: Schild لافتة (محايد das!) · verboten ممنوع · Vorsicht حذر · Praxis عيادة · automatisch تلقائي."
+     }
+    ]
+   },
+   {
+    "type": "dictation",
+    "items": [
+     {
+      "audioId": "ef-3",
+      "speakText": "Der Prospekt ist neu. Die Führung ist kulturell!",
+      "a": "Der Prospekt ist neu. Die Führung ist kulturell!",
+      "why": "Prospekt بـPr وsp · neu بـeu · Führung بـü وh صامتة · kulturell بـk وll."
+     },
+     {
+      "audioId": "ef-9",
+      "speakText": "Das Schild ist neu. Und wichtig!",
+      "a": "Das Schild ist neu. Und wichtig!",
+      "why": "Schild بـSch · neu · wichtig بـw تُنطق v وch."
+     },
+     {
+      "audioId": "ef-14",
+      "speakText": "Da! Das Dorf ist klein!",
+      "a": "Da! Das Dorf ist klein!",
+      "why": "Da بـD كبيرة · Dorf بـD · klein بـk وei."
+     },
+     {
+      "audioId": "ef-20",
+      "speakText": "Gern! Tschüss, Yusuf!",
+      "a": "Gern! Tschüss, Yusuf!",
+      "why": "Gern بـG وr · Tschüss بـtsch وss · Yusuf."
+     }
+    ],
+    "interleavedWith": [
+     "neu",
+     "wichtig",
+     "da",
+     "klein",
+     "gern",
+     "tschuess"
+    ]
+   }
+  ],
+  "communicativeTask": {
+   "goal": {
+    "de": "Du bist im Reisebüro: Lies den Prospekt! Wo übernachtest du? Such das Schild! Ist das Foto verboten?",
+    "ar": "أنت في مكتب السفر: اقرأ النشرة! أين تبيت؟ ابحث عن اللافتة! هل التصوير ممنوع؟"
+   },
+   "situation": {
+    "de": "Du bist im Reisebüro. Der Reiseführer wartet. Schnell: Prospekt, Schild, Zoll!",
+    "ar": "أنت في مكتب السفر والمرشد ينتظر: بسرعة — النشرة واللافتة والجمارك!"
+   },
+   "successCriteria": [
+    "يذكر عناصر السفر الثلاثة (Prospekt · Schild · Zoll) في مواضعها",
+    "يفرّق بين Schild (تُقرَأ) وVorsicht (للانتباه)",
+    "يجمع Dorf جمعاً شاذاً (Dörfer)"
+   ]
+  }
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«Der Prospekt ist neu.» — Wie ist der Prospekt?",
+      "choices": [
+       "جديد",
+       "قديم",
+       "ممزق"
+      ],
+      "a": "جديد",
+      "why": "neu = جديد (der Prospekt = النشرة)."
+     },
+     {
+      "q": "«Wo übernachten wir?» — Was will sie?",
+      "choices": [
+       "أين نبيت",
+       "ماذا نأكل",
+       "متى نعود"
+      ],
+      "a": "أين نبيت",
+      "why": "Wo übernachten wir = أين نبيت (wir = نحن)."
+     },
+     {
+      "q": "«Mit Halbpension!» — Was will er?",
+      "choices": [
+       "إقامة مع وجبتين",
+       "إقامة بلا طعام",
+       "غرفة بسريرين"
+      ],
+      "a": "إقامة مع وجبتين",
+      "why": "Mit Halbpension = بنصف إقامة (mit = مع)."
+     },
+     {
+      "q": "«Das Dorf ist kulturell!» — Wie ist das Dorf?",
+      "choices": [
+       "مليء بالثقافة",
+       "مليء بالمصانع",
+       "مليء بالضجيج"
+      ],
+      "a": "مليء بالثقافة",
+      "why": "kulturell = ثقافي (das Dorf = القرية)."
+     },
+     {
+      "q": "«Hinten ist die Praxis.» — Wo ist die Praxis?",
+      "choices": [
+       "في المؤخرة",
+       "في المقدمة",
+       "في الطابق العلوي"
+      ],
+      "a": "في المؤخرة",
+      "why": "hinten = في الخلف (die Praxis = العيادة)."
+     },
+     {
+      "q": "«Da! Ein Schild!» — Was ist da?",
+      "choices": [
+       "لافتة إرشادية",
+       "ساعة حائط",
+       "خريطة ورقية"
+      ],
+      "a": "لافتة إرشادية",
+      "why": "Ein Schild = لافتة (da = هناك)."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Verboten!» — Darf er das?",
+      "choices": [
+       "غير مسموح",
+       "مسموح تماماً",
+       "مسموح أحياناً"
+      ],
+      "a": "غير مسموح",
+      "why": "Verboten = ممنوع (dürfen = يُسمح)."
+     },
+     {
+      "q": "«Vorsicht!» — Was soll er machen?",
+      "choices": [
+       "ينتبه ويحذر",
+       "يجري بسرعة",
+       "ينام قليلاً"
+      ],
+      "a": "ينتبه ويحذر",
+      "why": "Vorsicht = انتبه! (sollen = ينبغي)."
+     },
+     {
+      "q": "«Die Tür ist automatisch!» — Wie ist die Tür?",
+      "choices": [
+       "تفتح وحدها",
+       "تُفتح بمفتاح",
+       "مغلقة دائماً"
+      ],
+      "a": "تفتح وحدها",
+      "why": "automatisch = تلقائي (die Tür = الباب)."
+     },
+     {
+      "q": "«Der Zoll ist bald.» — Wann ist der Zoll?",
+      "choices": [
+       "بعد قليل",
+       "أمس",
+       "السنة الماضية"
+      ],
+      "a": "بعد قليل",
+      "why": "bald = قريباً (der Zoll = الجمارك)."
+     },
+     {
+      "q": "«Wo ist der Zoll?» — Was sucht er?",
+      "choices": [
+       "مكتب الجمارك",
+       "مكتب البريد",
+       "مكتب التذاكر"
+      ],
+      "a": "مكتب الجمارك",
+      "why": "der Zoll = الجمارك (suchen = يبحث)."
+     },
+     {
+      "q": "«Lies den Prospekt!» — Was soll er machen?",
+      "choices": [
+       "يقرأ النشرة",
+       "يكتب رسالة",
+       "يرسم خريطة"
+      ],
+      "a": "يقرأ النشرة",
+      "why": "Lies den Prospekt = اقرأ النشرة (lesen = يقرأ)."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«Eine Führung: Das Dorf ist kulturell!» — Was ist kulturell?",
+      "choices": [
+       "القرية في الجولة",
+       "المدينة في الليل",
+       "الرحلة إلى الشاطئ"
+      ],
+      "a": "القرية في الجولة",
+      "why": "Das Dorf ist kulturell = القرية ثقافية (Führung = جولة)."
+     },
+     {
+      "q": "«Mein Reiseführer! Wo ist mein Reiseführer?» — Was sucht er?",
+      "choices": [
+       "كتاب المرشد",
+       "حقيبة السفر",
+       "تذكرة العودة"
+      ],
+      "a": "كتاب المرشد",
+      "why": "mein Reiseführer = مرشدي (suchen = يبحث)."
+     },
+     {
+      "q": "«Das Apartment ist groß.» — Wie ist das Apartment?",
+      "choices": [
+       "واسع وكبير",
+       "صغير وضيق",
+       "قديم ومظلم"
+      ],
+      "a": "واسع وكبير",
+      "why": "groß = كبير (das Apartment = الشقة)."
+     },
+     {
+      "q": "«Da! Das Dorf ist klein!» — Wie ist das Dorf?",
+      "choices": [
+       "صغير ولطيف",
+       "كبير ومزدحم",
+       "بعيد وجبلي"
+      ],
+      "a": "صغير ولطيف",
+      "why": "klein = صغير (das Dorf = القرية)."
+     },
+     {
+      "q": "«Danke, Lena! Bis bald!» — Was sagt er?",
+      "choices": [
+       "شكراً وإلى اللقاء",
+       "صباح الخير",
+       "ليلة سعيدة"
+      ],
+      "a": "شكراً وإلى اللقاء",
+      "why": "Danke, bis bald = شكراً، إلى اللقاء (sagen = يقول)."
+     },
+     {
+      "q": "«Gern! Tschüss, Yusuf!» — Was sagt sie?",
+      "choices": [
+       "عفواً ووداعاً",
+       "أهلاً وسهلاً",
+       "حظاً سعيداً"
+      ],
+      "a": "عفواً ووداعاً",
+      "why": "Gern, Tschüss = عفواً، وداعاً."
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Yusuf ist im Reisebüro: Prospekt und Reiseführer · Führung im Dorf · Apartment mit Halbpension · Zoll und Schild · Vorsicht! Das Foto ist verboten. Die Tür ist automatisch. Gute Reise, Yusuf!",
+   "ar": "في مكتب السفر (16 رأساً للفهم): السفر واللافتات — تفهم ولا تُنتج؛ والقاعدة: الجمع الشاذ Dörfer (ars-plural-umlaut)."
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "de": "~~Die Dorfs sind klein.~~",
+     "ar": "Dorf شاذ: الجمع Dörfer بأوملاوت — لا s."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: العربية تجمع بزيادة (قرى) فيضيف المتعلم s الإنجليزية. القاعدة (ars-plural-umlaut): das Dorf ← die Dörfer — الجمع يُحفظ مع الكلمة.",
+    "correct": {
+     "de": "Die Dörfer sind klein.",
+     "ar": "القرى صغيرة."
+    },
+    "exercise": {
+     "q": "Die ___ sind klein. (Dörfer / Dorfs)",
+     "a": "Dörfer"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Der Schild ist neu.~~",
+     "ar": "Schild محايد (das) لا مذكر — المقالة تُحفظ مع الكلمة."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: «لافتة» مؤنثة في العربية فيخمّن المتعلم die أو der. القاعدة: das Schild محايد — die Schilder في الجمع فقط.",
+    "correct": {
+     "de": "Das Schild ist neu.",
+     "ar": "اللافتة جديدة."
+    },
+    "exercise": {
+     "q": "___ Schild ist neu. (Das / Der)",
+     "a": "Das"
+    }
+   },
+   {
+    "commonError": {
+     "de": "~~Wir nachten über im Apartment.~~",
+     "ar": "übernachten لا ينفصل: über تبقى في الأول دائماً."
+    },
+    "whyArabicSpeakerFails": "خريطة التداخل 10‑ي: بعد abfliegen يظن المتعلم كل über بادئة منفصلة. القاعدة: übernachten غير منفصل — Wir übernachten (النبر على nacht).",
+    "correct": {
+     "de": "Wir übernachten im Apartment.",
+     "ar": "نبيت في الشقة."
+    },
+    "exercise": {
+     "q": "Wir ___ im Apartment. (übernachten / wohnen)",
+     "a": "übernachten"
+    }
+   }
+  ],
+  "srsBundleWordIds": [
+   "reisebuero",
+   "reisefuehrer",
+   "prospekt",
+   "fuehrung",
+   "uebernachten",
+   "halbpension",
+   "apartment",
+   "kulturell",
+   "zoll",
+   "dorf",
+   "hinten",
+   "schild",
+   "verboten",
+   "vorsicht",
+   "praxis",
+   "automatisch"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-plural-umlaut"
+ ],
+ "audioManifestRefs": [
+  "word-reisebuero",
+  "word-reisefuehrer",
+  "word-prospekt",
+  "word-fuehrung",
+  "word-uebernachten",
+  "word-halbpension",
+  "word-apartment",
+  "word-kulturell",
+  "word-zoll",
+  "word-dorf",
+  "word-hinten",
+  "word-schild",
+  "word-verboten",
+  "word-vorsicht",
+  "word-praxis",
+  "word-automatisch"
+ ],
+ "imageManifestRefs": [],
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Dorf"
+  ],
+  "wiktionary": [
+   "https://de.wiktionary.org/wiki/übernachten"
+  ],
+  "goethe": []
+ },
+ "curriculumRef": {
+  "netzwerkChapter": "Goethe-Zertifikat A1 Start Deutsch 1 — Wortliste (Museum · Tür · Foto) — الدرس الرابع من الوحدة 14 (D113)",
+  "goetheWordListOverlap": []
+ }
+}

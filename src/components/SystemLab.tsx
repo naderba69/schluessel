@@ -1,6 +1,6 @@
 // SystemLab.tsx — واجهات M3: بوابة · تقدّم · تكيّف · ألعاب · نسخ احتياطي · إعدادات | D44
 // كل شاشة تعكس قواعد محركها: حدود صدق Goethe ظاهرة · لا أرقام من العدم · بلا لوم · بلا ضغط · بصمة سلامة.
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { buildGate, gateSchedule, isGateWeek, INTERNAL_PASS_PERCENT } from "../lib/gate-engine.js";
 import { skillBars, retention, monthlyEstimate, type SkillStat } from "../lib/progress-engine.js";
 import { freezePlan, resumePlan, REASON_AR, type FreezeReason, type ScheduledCard } from "../lib/adaptation-engine.js";
@@ -15,7 +15,10 @@ import {
   auditPalette,
   type ThemePrefs,
 } from "../lib/ui-accessibility.js";
-import { firstLessonWords } from "../lesson-packs.js";
+import type { CoachWindow, LearnerProgress, Word } from "../../content/schemas/index.js";
+import { COACH_WINDOWS, WINDOW_LABELS_AR } from "../lib/coach-engine.js";
+import { LESSON_INDEX } from "../lesson-packs.js";
+import { lessonStatus } from "../lib/routes.js";
 
 /* ══════════ E17 — البوابات ══════════ */
 export function GateScreen({ week = 6 }: { week?: number }) {
@@ -34,7 +37,7 @@ export function GateScreen({ week = 6 }: { week?: number }) {
         />
       </label>
       <p data-testid="goethe-honesty">
-        ⚠️ صيغة نماذج Goethe الرسمية الدقيقة (الأجزاء والدرجات) تُتحقق من موقع المعهد عند النشر — المعروض هنا بنية عامة فقط (§4).
+        ⚠️ صيغة Sprechen متحقق منها من وثائق Goethe الرسمية (أكتوبر 2026) — وتُعاد مراجعتها عند النشر إن حدّث المعهد نماذجه (§4).
       </p>
       {gate ? (
         <div data-testid="gate-view">
@@ -121,8 +124,8 @@ export function AdaptationScreen() {
 }
 
 /* ══════════ E20 — الألعاب ══════════ */
-export function PlayScreen() {
-  const studied = firstLessonWords.map((w) => w.de.toLowerCase());
+export function PlayScreen({ words }: { words: Word[] }) {
+  const studied = words.map((w) => w.de.toLowerCase());
   const wordle = makeWordle(studied);
   const sample = guessFeedback(wordle.word, wordle.word);
   const anagram = makeAnagram(studied);
@@ -181,13 +184,87 @@ export function DataScreen() {
   );
 }
 
+/* ══════════ N-151 (D251) — بياناتك في الإعدادات (§2.11: تعديل الاسم + الرحلة + النوافذ) ══════════ */
+export type ProfilePatch = { name?: string; journeyName?: string; coachWindows?: CoachWindow[] };
+
+export function ProfileEditors({
+  profile,
+  onSave,
+}: {
+  profile: { name: string; journeyName: string; coachWindows: readonly CoachWindow[] };
+  onSave: (patch: ProfilePatch) => void;
+}) {
+  const [name, setName] = useState(profile.name);
+  const [journey, setJourney] = useState(profile.journeyName);
+  const [pick, setPick] = useState<CoachWindow[]>([...profile.coachWindows]);
+  const toggle = (w: CoachWindow) =>
+    setPick((prev) => (prev.includes(w) ? prev.filter((x) => x !== w) : [...prev, w]));
+  return (
+    <div data-testid="profile-editors">
+      <h4>📝 بياناتك</h4>
+      <label>
+        اسمك:{" "}
+        <input data-testid="settings-name-input" aria-label="اسمك" value={name} onChange={(e) => setName(e.target.value)} dir="rtl" />
+      </label>
+      <button data-testid="settings-name-save" onClick={() => onSave({ name: name.trim() })} disabled={!name.trim()}>
+        حفظ الاسم
+      </button>
+      <label>
+        اسم الرحلة (اختياري):{" "}
+        <input data-testid="settings-journey-input" aria-label="اسم الرحلة" value={journey} onChange={(e) => setJourney(e.target.value)} dir="rtl" />
+      </label>
+      <button data-testid="settings-journey-save" onClick={() => onSave({ journeyName: journey.trim() })}>
+        حفظ اسم الرحلة
+      </button>
+      <fieldset>
+        <legend>نوافذ المدرب (نافذتان على الأقل)</legend>
+        {COACH_WINDOWS.map((w) => (
+          <label key={w}>
+            <input
+              data-testid={`settings-window-${w}`}
+              type="checkbox"
+              checked={pick.includes(w)}
+              onChange={() => toggle(w)}
+            />
+            {WINDOW_LABELS_AR[w]}
+          </label>
+        ))}
+        <button data-testid="settings-windows-save" onClick={() => onSave({ coachWindows: pick })} disabled={pick.length < 2}>
+          حفظ النوافذ
+        </button>
+      </fieldset>
+    </div>
+  );
+}
+
 /* ══════════ E22 — الإعدادات/الوصولية ══════════ */
-export function SettingsScreen() {
-  const [prefs, setPrefs] = useState<ThemePrefs>(DEFAULT_PREFS);
+export function SettingsScreen({
+  profile,
+  onSaveProfile,
+}: {
+  profile?: { name: string; journeyName: string; coachWindows: readonly CoachWindow[] };
+  onSaveProfile?: (patch: ProfilePatch) => void;
+}) {
+  const [prefs, setPrefs] = useState<ThemePrefs>(() => {
+    // N-144 (D244): تفضيل محفوظ — الزر كان شكلياً (يبدّل حالة لا تُطبَّق)
+    try {
+      const raw = localStorage.getItem("schluessel-theme");
+      if (raw) return { ...DEFAULT_PREFS, ...(JSON.parse(raw) as Partial<ThemePrefs>) };
+    } catch { /* تخزين معطّل — الافتراضي */ }
+    return DEFAULT_PREFS;
+  });
+  useEffect(() => {
+    document.documentElement.dataset.theme = prefs.mode;
+    document.documentElement.style.fontSize = `${prefs.zoom * 100}%`;
+    try {
+      localStorage.setItem("schluessel-theme", JSON.stringify({ mode: prefs.mode, zoom: prefs.zoom }));
+    } catch { /* تخزين معطّل — يُطبَّق للجلسة فقط */ }
+  }, [prefs]);
   const audit = auditPalette();
   return (
     <section data-testid="settings-screen">
-      <h3>⚙️ الإعدادات — الوضع الليلي والوصولية</h3>
+      <h3>⚙️ الإعدادات — بياناتك والمظهر والوصولية</h3>
+      {profile && onSaveProfile && <ProfileEditors profile={profile} onSave={onSaveProfile} />}
       <p data-testid="dir-note">الاتجاه العربي (RTL) ثابت في كل الشاشات — لا يُلغى.</p>
       <div data-testid="settings-controls">
         <button data-testid="toggle-mode" onClick={() => setPrefs(toggleMode(prefs))}>
@@ -219,7 +296,40 @@ export function SettingsScreen() {
 }
 
 /* ══════════ الصدفة: لوحة النظام ══════════ */
+const STATUS_LABEL: Record<string, string> = {
+  completed: "✓ مكتمل",
+  available: "● الدرس الحالي",
+  locked: "🔒 مقفل",
+};
+
+/* ══════════ N-149 (D249) — المسار الكامل (انتقل من القائمة اليومية إلى هنا) ══════════ */
+export function PathScreen({ progress }: { progress: LearnerProgress | null }) {
+  if (!progress) return <p data-testid="path-needs-state">افتح اللوحة من التطبيق لرؤية مسارك الكامل.</p>;
+  const done = progress.completedLessons.length;
+  const current = progress.availableLessons.find((id) => !progress.lockedLessons.includes(id)) ?? null;
+  return (
+    <section data-testid="full-path-screen">
+      <h3>🗺️ المسار الكامل</h3>
+      <p data-testid="post-first-run">
+        أكملت {done} من {LESSON_INDEX.length} درساً منشوراً
+        {current ? ` · الدرس الحالي: ${current}` : " · أكملت كل ما نُشر حتى الآن"}
+      </p>
+      <ul data-testid="path-list">
+        {LESSON_INDEX.map((l) => {
+          const status = lessonStatus(l.id, progress);
+          return (
+            <li key={l.id} data-status={status} data-lesson-id={l.id}>
+              <span dir="ltr">{l.id}</span> — {l.zielAr} — {STATUS_LABEL[status]}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
 const TABS = [
+  { id: "path", label: "🗺️ المسار" },
   { id: "gate", label: "🚪 بوابة" },
   { id: "progress", label: "📈 تقدّم" },
   { id: "adapt", label: "🤝 تكيّف" },
@@ -228,7 +338,17 @@ const TABS = [
   { id: "settings", label: "⚙️ إعدادات" },
 ] as const;
 
-export function SystemLab() {
+export function SystemLab({
+  words,
+  progress,
+  profile,
+  onSaveProfile,
+}: {
+  words: Word[];
+  progress?: LearnerProgress | null;
+  profile?: { name: string; journeyName: string; coachWindows: readonly CoachWindow[] };
+  onSaveProfile?: (patch: ProfilePatch) => void;
+}) {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("gate");
   return (
     <div data-testid="system-lab">
@@ -240,12 +360,13 @@ export function SystemLab() {
           </button>
         ))}
       </nav>
+      {tab === "path" && <PathScreen progress={progress ?? null} />}
       {tab === "gate" && <GateScreen />}
       {tab === "progress" && <ProgressScreen />}
       {tab === "adapt" && <AdaptationScreen />}
-      {tab === "play" && <PlayScreen />}
+      {tab === "play" && <PlayScreen words={words} />}
       {tab === "data" && <DataScreen />}
-      {tab === "settings" && <SettingsScreen />}
+      {tab === "settings" && <SettingsScreen profile={profile} onSaveProfile={onSaveProfile} />}
     </div>
   );
 }

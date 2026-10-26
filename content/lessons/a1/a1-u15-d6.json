@@ -6,31 +6,44 @@
   "day": 6,
   "kind": "integration",
   "ziel": {
-    "de": "Das große Finale: Gesundheit und Reise — plus Modelltest (alle 4 Fertigkeiten). Du bist A1-bereit!",
-    "ar": "الختام: الصحة والسفر + امتحان تجريبي (المهارات الأربع) — أنت جاهز لـA1!"
+    "de": "Woche elf und zwölf noch einmal — der letzte Tag: Heute ist Samstag, der fünfundzwanzigste April · Der Kopf tut weh, die Augen tun weh · Wasser hilft dir · Du sollst im Bett bleiben, du darfst nicht in die Schule gehen · Ich bin mit dem Zug gekommen, ich habe den Kuchen nicht verpasst · Der Zug hatte Verspätung, weil ein Mann krank war — deshalb haben wir gewartet.",
+    "ar": "أسبوع المراجعة، اليوم السادس والأخير (السبت 25 أبريل): الأسبوعان 11–12 من جديد — الجسم (tut weh / tun weh · zwei Augen) · الصحة (hilft mir/dir · kein Fieber) · sollst/darfst والفعل في الآخر · الماضي بـsein للحركة (bin gekommen · ist losgefahren · bin angekommen) مقابل haben (habe verpasst · mitgebracht · gesehen) · weil (الفعل في الآخر) مقابل deshalb (الفعل ثانياً) — ثم معركة اليوم الأخير (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (der Kopfschmerz · die Verspätung) من الأسبوعين نفسيهما."
   },
   "canDoDaily": [
-    "يجتاز المعركة النهائية ويعرف بنية الامتحان التجريبي"
+    "يصف ما يؤلمه وما يساعده وما يجب وما لا يجوز كما في الجزء الشفوي (Der Kopf tut weh · Wasser hilft mir · Ich soll im Bett bleiben · Ich darf nicht in die Schule gehen) بالفعل في الآخر",
+    "يروي رحلة بالماضي مفرّقاً sein عن haben (Ich bin um sieben angekommen · Ich habe die Fotos mitgebracht) ويعلّل بـweil وdeshalb ويجتاز معركة اليوم الأخير من أسبوع المراجعة بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
       "kopfschmerz",
-      "reise",
-      "ziel"
+      "verspaetung",
+      "fieber"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "المراجعة التراكمية: أصلح الخطأ في الجملة"
+          "de": "«الماء يساعدني» — تخمين فقط"
         },
         "choices": [
-          "التصحيح بالقلنسوة/القاعدة الصحيحة",
-          "تصحيح آخر خاطئ",
-          "تصحيح ثالث خاطئ"
+          "Wasser hilft mir.",
+          "Wasser hilft mich.",
+          "Wasser hilft ich."
         ],
-        "answer": "التصحيح بالقلنسوة/القاعدة الصحيحة",
+        "answer": "Wasser hilft mir.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«جئتُ بالقطار» — تخمين فقط"
+        },
+        "choices": [
+          "Ich bin mit dem Zug gekommen.",
+          "Ich habe mit dem Zug gekommen.",
+          "Ich bin mit dem Zug kommen."
+        ],
+        "answer": "Ich bin mit dem Zug gekommen.",
         "revealNextSession": true
       }
     ],
@@ -39,14 +52,18 @@
   "praesentation": {
     "wordIds": [
       "kopfschmerz",
-      "reise"
+      "verspaetung"
     ],
     "grammarArsenalIds": [
+      "ars-koerper",
+      "ars-gesundheit",
+      "ars-perfekt",
       "ars-satzklammer",
-      "ars-perfekt"
+      "ars-modal-fix",
+      "ars-weil-satz"
     ],
     "storySentenceIds": [
-      "story-a13-u13-s6"
+      "story-a1-u15-s6"
     ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
@@ -54,73 +71,292 @@
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«عندي صداع منذ يومين»؟",
-            "a": "Ich habe seit zwei Tagen Kopfschmerzen."
+            "q": "Der Kopf ___ weh — ich habe Kopfschmerzen. (tun: مفرد)",
+            "a": "tut",
+            "why": "عضو واحد: tut weh · أعضاء كثيرة: tun weh (u11-d1)."
           },
           {
-            "q": "«القطار يغادر الساعة الثامنة»؟",
-            "a": "Der Zug fährt um 8 Uhr ab."
+            "q": "Die Augen ___ weh. (tun: جمع)",
+            "a": "tun",
+            "why": "die Augen جمع ⇐ tun weh."
+          },
+          {
+            "q": "Eine Pause hilft ___. (du: داتيف)",
+            "a": "dir",
+            "why": "helfen + داتيف: hilft mir · hilft dir · hilft dem Patienten (u11-d2)."
+          },
+          {
+            "q": "Du ___ viel trinken. (sollen: du)",
+            "a": "sollst",
+            "why": "sollen مع du: sollst — والمصدر trinken في الآخر (u11-d5)."
+          },
+          {
+            "q": "Du darfst drei Tage nicht in die Schule ___. (gehen)",
+            "a": "gehen",
+            "why": "القوس الفعلي: darfst ثانياً والمصدر gehen في آخر الجملة (u9-d5)."
+          },
+          {
+            "q": "Ich ___ mit dem Zug gekommen. (sein/haben: ich)",
+            "a": "bin",
+            "why": "الحركة من مكان إلى مكان بـsein: bin gekommen (u11-d3)."
+          },
+          {
+            "q": "Der Zug ___ um neun losgefahren. (sein/haben: er)",
+            "a": "ist",
+            "why": "losfahren حركة ⇐ ist losgefahren (u12-d3)."
+          },
+          {
+            "q": "Ich ___ den Kuchen nicht verpasst. (sein/haben: ich)",
+            "a": "habe",
+            "why": "verpassen ليس حركة ⇐ habe verpasst (u12-d2)."
+          },
+          {
+            "q": "Der Zug hatte Verspätung, weil ein Mann krank ___. (sein: الماضي)",
+            "a": "war",
+            "why": "بعد weil الفعل في آخر الجملة الفرعية (u10-d5)."
+          },
+          {
+            "q": "Ich habe keine Kopfschmerzen mehr — ___ gehe ich heute in die Schule. (لذلك)",
+            "a": "deshalb",
+            "why": "deshalb في الأول ثم الفعل مباشرة: deshalb gehe ich (u12-d4)."
           }
         ],
         "interleavedWith": [
-          "kopfschmerz",
-          "abfahren"
+          "kopf",
+          "auge",
+          "pause",
+          "schule",
+          "zug",
+          "kuchen",
+          "mann",
+          "kopfschmerz"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«بقيتُ في البيت»؟",
-            "a": "Ich bin zu Hause geblieben."
+            "audioId": "wl-2",
+            "speakText": "Hallo, Lena! Der letzte Tag — und ich bin gesund: kein Fieber, keine Kopfschmerzen!",
+            "q": "استمع: كيف حال يوسف؟",
+            "choices": [
+              "سليم، بلا حمّى ولا صداع",
+              "عنده حمّى",
+              "عنده صداع"
+            ],
+            "a": "سليم، بلا حمّى ولا صداع",
+            "why": "ich bin gesund = أنا سليم · kein Fieber, keine Kopfschmerzen (kein للاسم)."
           },
           {
-            "q": "«صوّرتُ صوراً»؟",
-            "a": "Ich habe fotografiert (بلا ge)."
+            "audioId": "wl-4",
+            "speakText": "Der Kopf tut weh — du hast Kopfschmerzen. Und die Augen tun weh: zwei Augen, zwei Hände, zwei Beine!",
+            "q": "استمع: ما الذي يؤلم بعد الجلوس الطويل أمام الحاسوب؟",
+            "choices": [
+              "الرأس والعينان",
+              "اليدان",
+              "الساقان"
+            ],
+            "a": "الرأس والعينان",
+            "why": "Der Kopf tut weh (مفرد) · die Augen tun weh (جمع)."
+          },
+          {
+            "audioId": "wl-6",
+            "speakText": "Eine Pause hilft dir. Und Wasser hilft dir auch — hilft mir, hilft dir, nicht «hilft mich»!",
+            "q": "استمع: ما الذي يساعد؟",
+            "choices": [
+              "استراحة وماء",
+              "دواء",
+              "نوم"
+            ],
+            "a": "استراحة وماء",
+            "why": "Eine Pause hilft dir · Wasser hilft dir auch — helfen + داتيف."
+          },
+          {
+            "audioId": "wl-8",
+            "speakText": "Du sollst viel trinken und im Bett bleiben. Und du darfst drei Tage nicht in die Schule gehen.",
+            "q": "استمع: كم يوماً لا يجوز للينا الذهاب إلى المدرسة؟",
+            "choices": [
+              "ثلاثة",
+              "يومين",
+              "أسبوعاً"
+            ],
+            "a": "ثلاثة",
+            "why": "drei Tage nicht in die Schule gehen = ثلاثة أيام · sollst … bleiben · darfst … gehen."
+          },
+          {
+            "audioId": "wl-10",
+            "speakText": "Ich bin mit dem Zug gekommen. Der Zug ist um neun losgefahren — und er hatte eine Stunde Verspätung!",
+            "q": "استمع: كم كان تأخير القطار؟",
+            "choices": [
+              "ساعة",
+              "عشرين دقيقة",
+              "ساعتين"
+            ],
+            "a": "ساعة",
+            "why": "eine Stunde Verspätung = تأخير ساعة · ist um neun losgefahren (sein)."
+          },
+          {
+            "audioId": "wl-12",
+            "speakText": "Ich bin um sieben angekommen, nicht um sechs. Aber ich habe den Kuchen nicht verpasst!",
+            "q": "استمع: متى وصل يوسف؟",
+            "choices": [
+              "في السابعة",
+              "في السادسة",
+              "في التاسعة"
+            ],
+            "a": "في السابعة",
+            "why": "bin um sieben angekommen = وصلتُ في السابعة · nicht um sechs."
+          },
+          {
+            "audioId": "wl-14",
+            "speakText": "Der Zug hatte Verspätung, weil ein Mann krank war. Der Arzt ist gekommen — deshalb haben wir eine Stunde gewartet.",
+            "q": "استمع: لماذا تأخر القطار؟",
+            "choices": [
+              "رجل مرض",
+              "ثلج",
+              "عطل"
+            ],
+            "a": "رجل مرض",
+            "why": "weil ein Mann krank war (war في الآخر) · deshalb haben wir gewartet (haben ثانياً)."
+          },
+          {
+            "audioId": "wl-16",
+            "speakText": "Ich habe die Fotos vom Meer mitgebracht und ein Andenken aus Tunesien. Und wir haben den Film über Italien gesehen!",
+            "q": "استمع: ماذا أحضر يوسف؟",
+            "choices": [
+              "صوراً من البحر وتذكاراً",
+              "كعكة",
+              "فيلماً"
+            ],
+            "a": "صوراً من البحر وتذكاراً",
+            "why": "die Fotos vom Meer mitgebracht · ein Andenken aus Tunesien · الفيلم شاهدوه (gesehen) ولم يحضره."
           }
         ],
         "interleavedWith": [
-          "bleiben",
-          "fotografieren"
+          "fieber",
+          "hand",
+          "bein",
+          "wasser",
+          "stunde",
+          "arzt",
+          "foto",
+          "meer",
+          "andenken",
+          "film"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "error-hunt",
         "items": [
           {
-            "q": "«ذلك يساعدني»؟",
-            "a": "Das hilft mir (Dativ)."
+            "q": "صحّح: ~~Die Augen tut weh.~~",
+            "a": "Die Augen tun weh.",
+            "why": "الجمع يأخذ tun."
           },
           {
-            "q": "«بحيرة» — والبحر؟",
-            "a": "der See (بحيرة) · die See/das Meer (بحر)"
+            "q": "صحّح: ~~Das Wasser hilft mich.~~",
+            "a": "Das Wasser hilft mir.",
+            "why": "helfen + داتيف: mir لا mich."
+          },
+          {
+            "q": "صحّح: ~~Du sollst bleiben im Bett.~~",
+            "a": "Du sollst im Bett bleiben.",
+            "why": "المصدر في آخر الجملة — القوس الفعلي."
+          },
+          {
+            "q": "صحّح: ~~Ich habe mit dem Zug gekommen.~~",
+            "a": "Ich bin mit dem Zug gekommen.",
+            "why": "kommen حركة ⇐ sein."
+          },
+          {
+            "q": "صحّح: ~~Der Zug hatte Verspätung, weil ein Mann war krank.~~",
+            "a": "Der Zug hatte Verspätung, weil ein Mann krank war.",
+            "why": "بعد weil الفعل في الآخر: krank war."
+          },
+          {
+            "q": "صحّح: ~~Ich bin die Fotos mitgebracht.~~",
+            "a": "Ich habe die Fotos mitgebracht.",
+            "why": "mitbringen مع مفعول ⇐ haben."
           }
         ],
         "interleavedWith": [
-          "helfen",
-          "see"
+          "auge",
+          "wasser",
+          "bett",
+          "zug",
+          "mann",
+          "foto"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wl-1",
+            "speakText": "Hallo, Yusuf! Heute ist Samstag, der fünfundzwanzigste April — der letzte Tag: Woche elf und zwölf, der Arzt und die Reise!",
+            "a": "Hallo, Yusuf! Heute ist Samstag, der fünfundzwanzigste April — der letzte Tag: Woche elf und zwölf, der Arzt und die Reise!",
+            "why": "der fünfundzwanzigste (‑ste) · zwölf بـö · Reise بـei."
+          },
+          {
+            "audioId": "wl-3",
+            "speakText": "Frage eins: Ich sitze zu lange am Computer. Was tut dann weh?",
+            "a": "Frage eins: Ich sitze zu lange am Computer. Was tut dann weh?",
+            "why": "sitze بـtz · zu lange = أكثر من اللازم · tut weh."
+          },
+          {
+            "audioId": "wl-5",
+            "speakText": "Tut weh, tun weh — eins oder zwei! Und was hilft?",
+            "a": "Tut weh, tun weh — eins oder zwei! Und was hilft?",
+            "why": "tut/tun · weh بـh صامتة · hilft (e ⇐ i)."
+          },
+          {
+            "audioId": "wl-7",
+            "speakText": "Frage zwei — beim Arzt: Was soll ich machen, und was darf ich nicht machen?",
+            "a": "Frage zwei — beim Arzt: Was soll ich machen, und was darf ich nicht machen?",
+            "why": "beim = bei + dem · soll/darf بلا نهاية مع ich · machen في الآخر."
+          },
+          {
+            "audioId": "wl-11",
+            "speakText": "Bist gekommen, ist losgefahren — mit sein! Und wann bist du angekommen?",
+            "a": "Bist gekommen, ist losgefahren — mit sein! Und wann bist du angekommen?",
+            "why": "gekommen بـmm · losgefahren وangekommen: ge في الوسط."
+          },
+          {
+            "audioId": "wl-13",
+            "speakText": "Angekommen mit sein, verpasst mit haben! Frage vier — weil: Warum hatte der Zug Verspätung?",
+            "a": "Angekommen mit sein, verpasst mit haben! Frage vier — weil: Warum hatte der Zug Verspätung?",
+            "why": "verpasst بلا ge (ver‑) · hatte = الماضي من haben · Verspätung بـä وng."
+          }
+        ],
+        "interleavedWith": [
+          "samstag",
+          "reise",
+          "computer",
+          "arzt",
+          "verspaetung"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Die kumulative Wiederholung meistern",
-        "a": "x",
-        "ar": "إتقان المراجعة التراكمية"
+        "de": "Mein Kopf und meine Reise: Ich habe Kopfschmerzen, und die Augen tun weh. Eine Pause hilft mir. Ich soll viel trinken, und ich darf heute nicht lange am Computer sitzen. Am Samstag bin ich mit dem Zug zu Lena gefahren. Der Zug hatte eine Stunde Verspätung, weil ein Mann krank war — deshalb bin ich um sieben angekommen. Ich habe Fotos und ein Andenken mitgebracht.",
+        "ar": "أن يصف صحته ورحلته كما في الجزء الشفوي: عضو واحد بـtut weh وجمع بـtun weh · hilft mir مرة · جملة بـsoll وجملة بـdarf nicht والمصدر في الآخر · فعلان في الماضي أحدهما بـsein والآخر بـhaben · سبب واحد بـweil (الفعل في الآخر) ونتيجة بـdeshalb (الفعل ثانياً)"
       },
       "situation": {
-        "de": "Mischung aus den Einheiten der Woche",
-        "a": "x",
-        "ar": "خليط من وحدات الأسبوع"
+        "de": "Das Ende der Woche: Samstag, der fünfundzwanzigste April — der letzte Tag. Lena und Yusuf wiederholen Woche elf und zwölf: der Arzt und die Reise. Und jetzt du: Was tut weh, und wie bist du gekommen?",
+        "ar": "أسبوع المراجعة: مساء السبت 25 أبريل — اليوم الأخير. لينا ويوسف يعيدان الأسبوعين 11 و12: الجسم والطبيب (tut/tun weh · hilft mir · soll/darf) والرحلة (sein/haben في الماضي · weil/deshalb · Verspätung) — ثم أنت: ما الذي يؤلمك وكيف جئت"
       },
       "successCriteria": [
-        "اختبار نهائي شامل + إرشادات الامتحان التجريبي (4 مهارات)"
+        "يفرّق tut weh عن tun weh ويستعمل hilft mir/dir بالداتيف بلا mich",
+        "يضع المصدر في آخر الجملة بعد soll/darf وبعد weil يضع الفعل المصرَّف في الآخر وبعد deshalb ثانياً",
+        "يروي رحلة بفعلين في الماضي: حركة بـsein (bin gekommen · bin angekommen) وغير حركة بـhaben (habe mitgebracht · habe verpasst)"
       ]
     }
   },
@@ -135,20 +371,59 @@
       {
         "items": [
           {
-            "q": "«رأسي يؤلمني»؟",
-            "a": "Mein Kopf tut weh."
+            "q": "Zwei Hände, zwei ___. (Bein: جمع)",
+            "a": "Beine",
+            "choices": [
+              "Beine",
+              "Beinen",
+              "Bein"
+            ],
+            "why": "الجمع بـ‑e: das Bein ⇐ die Beine (u11-d1)."
           },
           {
-            "q": "«عندي حمّى»؟",
-            "a": "Ich habe Fieber."
+            "q": "Das Pflaster hilft ___. (ich: داتيف)",
+            "a": "mir",
+            "choices": [
+              "mir",
+              "mich",
+              "ich"
+            ],
+            "why": "helfen + داتيف: mir."
           },
           {
-            "q": "«الطبيبة»؟",
-            "a": "die Ärztin"
+            "q": "Ich ___ nicht in die Schule gehen. (dürfen: ich)",
+            "a": "darf",
+            "choices": [
+              "darf",
+              "darfst",
+              "dürfen"
+            ],
+            "why": "dürfen مع ich: darf — والمصدر gehen في الآخر (u11-d5)."
           },
           {
-            "q": "«يجب أن أذهب»؟",
-            "a": "Ich muss zum Arzt gehen."
+            "q": "Yusuf ___ um sieben angekommen. (sein: er)",
+            "a": "ist",
+            "choices": [
+              "ist",
+              "hat",
+              "bin"
+            ],
+            "why": "ankommen حركة ⇐ sein: ist angekommen (u12-d3)."
+          },
+          {
+            "q": "Wir haben lange gewartet, ___ der Arzt gekommen ist. (لأن)",
+            "a": "weil",
+            "choices": [
+              "weil",
+              "deshalb",
+              "denn"
+            ],
+            "why": "weil يرسل الفعل إلى الآخر: gekommen ist (u12-d4)."
+          },
+          {
+            "q": "الترتيب: angekommen. / um sieben / Ich / bin",
+            "a": "Ich bin um sieben angekommen.",
+            "why": "bin ثانياً والفعل الثالث angekommen في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -156,20 +431,59 @@
       {
         "items": [
           {
-            "q": "«وجهتي برلين»؟",
-            "a": "Mein Ziel ist Berlin."
+            "q": "Ich habe kein ___ mehr. (حمّى)",
+            "a": "Fieber",
+            "choices": [
+              "Fieber",
+              "Wasser",
+              "Pflaster"
+            ],
+            "why": "Fieber = حمّى · kein للاسم المحايد (u11-d2)."
           },
           {
-            "q": "«فاتني القطار»؟",
-            "a": "Ich habe den Zug verpasst."
+            "q": "Lena ___ noch nicht schwimmen. (sollen: sie)",
+            "a": "soll",
+            "choices": [
+              "soll",
+              "sollst",
+              "sollen"
+            ],
+            "why": "sollen مع sie/er: soll."
           },
           {
-            "q": "«التأخير»؟",
-            "a": "Der Zug hat Verspätung."
+            "q": "Wir ___ eine Stunde gewartet. (haben: wir)",
+            "a": "haben",
+            "choices": [
+              "haben",
+              "sind",
+              "hatten"
+            ],
+            "why": "warten ليس حركة ⇐ haben gewartet."
           },
           {
-            "q": "«شاطئ/غابة»؟",
-            "a": "der Strand / der Wald"
+            "q": "Ich habe ein Andenken ___ Tunesien mitgebracht. (من)",
+            "a": "aus",
+            "choices": [
+              "aus",
+              "von",
+              "bei"
+            ],
+            "why": "aus + بلد = من (المصدر)."
+          },
+          {
+            "q": "Am Sonntag bin ich nach Berlin ___. (zurückkommen)",
+            "a": "zurückgekommen",
+            "choices": [
+              "zurückgekommen",
+              "zurückkommen",
+              "komme zurück"
+            ],
+            "why": "المنفصل في الماضي: ge في الوسط — zurückgekommen، وبـsein لأنه حركة (u12-d3)."
+          },
+          {
+            "q": "«لماذا تأخر القطار؟» — بالألمانية؟",
+            "a": "Warum hatte der Zug Verspätung?",
+            "why": "السؤال عن السبب بـWarum (u10-d5) · hatte Verspätung = كان متأخراً."
           }
         ],
         "passingScore": 0.75
@@ -177,20 +491,59 @@
       {
         "items": [
           {
-            "q": "«لأنني متعب» — denn (الترتيب)؟",
-            "a": "…, denn ich bin müde."
+            "q": "Zwei Augen, eine ___. (أنف)",
+            "a": "Nase",
+            "choices": [
+              "Nase",
+              "Hand",
+              "Zahn"
+            ],
+            "why": "die Nase = الأنف (u11-d1)."
           },
           {
-            "q": "«ليس X بل Y»؟",
-            "a": "nicht X, sondern Y"
+            "q": "Der Arzt hilft ___ Patienten. (der: داتيف)",
+            "a": "dem",
+            "choices": [
+              "dem",
+              "den",
+              "der"
+            ],
+            "why": "helfen + داتيف: dem Patienten (u11-d5)."
           },
           {
-            "q": "«برأيي»؟",
-            "a": "Meiner Meinung nach"
+            "q": "Was ___ ich machen? — Viel trinken! (sollen: ich)",
+            "a": "soll",
+            "choices": [
+              "soll",
+              "sollst",
+              "sollen"
+            ],
+            "why": "sollen مع ich: soll بلا نهاية."
           },
           {
-            "q": "«صوّرتُ» — ge؟",
-            "a": "Ich habe fotografiert (لا ge)."
+            "q": "Yusuf ___ den Film über Italien gesehen. (haben: er)",
+            "a": "hat",
+            "choices": [
+              "hat",
+              "ist",
+              "habe"
+            ],
+            "why": "sehen ليس حركة ⇐ hat gesehen."
+          },
+          {
+            "q": "Ich habe Fieber, ___ bleibe ich im Bett. (لذلك)",
+            "a": "deshalb",
+            "choices": [
+              "deshalb",
+              "weil",
+              "denn"
+            ],
+            "why": "deshalb = لذلك، ثم الفعل مباشرة: deshalb bleibe ich."
+          },
+          {
+            "q": "«ماذا يجب أن أفعل؟» — بالألمانية؟",
+            "a": "Was soll ich machen?",
+            "why": "السؤال بـWas soll ich (u11-d5) · machen في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -199,79 +552,83 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Das große Finale: Gesundheit (tut weh/bin/hat) und Reise (trennbar/-ieren) plus Modelltest-Hinweise. Du bist A1-bereit!",
-      "ar": "الختام الكبير: الصحة والسفر + إرشادات الامتحان التجريبي — أنت جاهز لـA1!"
+      "de": "Woche elf und zwölf noch einmal — der letzte Tag: Heute ist Samstag, der fünfundzwanzigste April. Yusuf ist gesund: kein Fieber, keine Kopfschmerzen. Am Computer tut der Kopf weh, und die Augen tun weh — eine Pause hilft. Lena soll viel trinken und darf drei Tage nicht in die Schule gehen. Am Samstag ist Yusuf mit dem Zug zu Lena gekommen: Der Zug ist um neun losgefahren und hatte eine Stunde Verspätung, weil ein Mann krank war — deshalb ist Yusuf um sieben angekommen. Er hat den Kuchen nicht verpasst, er hat Fotos und ein Andenken mitgebracht. Am Sonntag ist er zurückgekommen — und jetzt sind alle zwölf Wochen zu Ende.",
+      "ar": "اليوم الأخير من أسبوع المراجعة اكتمل: تفرّق tut عن tun weh، وتضع الداتيف بعد helfen، وتضع المصدر في الآخر بعد soll/darf، وتختار sein للحركة وhaben لغيرها في الماضي، وتعلّل بـweil (الفعل في الآخر) وdeshalb (الفعل ثانياً) — الأسابيع الاثنا عشر كلها بين يديك."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich habe geblieben~~ / ~~gefotografiert~~ / ~~denn ich müde bin~~",
-          "ar": "الثلاثية النهائية: bin/hat · -ieren · denn"
+          "de": "~~Die Augen tut weh.~~ · ~~Das hilft mich.~~ · ~~Ich habe Kopfschmerz.~~",
+          "ar": "tut/tun weh · hilft mir · Kopfschmerzen"
         },
-        "whyArabicSpeakerFails": "الست مصائد الخطرة تتجمع: bin للحركة · -ieren بلا ge · denn يترك الفعل ثانياً — المراجعة النهائية (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«يؤلمني» العربية فعل واحد لكل الأعضاء، فيثبّت المتعلم tut — والألمانية تطابق الفاعل: der Kopf tut weh / die Augen tun weh؛ و«يساعدني» مفعول به مباشر فيكتب mich — والألمانية تضع الداتيف بعد helfen (mir)؛ و«صداع» مفرد فيكتب Kopfschmerz — والألمانية تقوله جمعاً: Kopfschmerzen (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Ich bin geblieben. · fotografiert. · denn ich bin müde.",
-          "ar": "بقيتُ · صوّرتُ · لأنني متعب."
+          "de": "Die Augen tun weh. · Das hilft mir. · Ich habe Kopfschmerzen.",
+          "ar": "العينان تؤلمان · هذا يساعدني · عندي صداع"
         },
         "exercise": {
-          "q": "أصلح: Ich habe geblieben und gefotografiert.",
-          "a": "Ich bin geblieben und habe fotografiert."
+          "q": "أكمل: Der Hals ___ weh (tun), die Beine ___ weh (tun), und die Salbe hilft ___ (du).",
+          "a": "tut / tun / dir"
         }
       },
       {
         "commonError": {
-          "de": "~~Das hilft mich~~ / ~~seit zwei Tag~~",
-          "ar": "Dativ المفيد + seit الجمع"
+          "de": "~~Ich habe mit dem Zug gekommen.~~ · ~~Ich bin die Fotos mitgebracht.~~ · ~~Du sollst bleiben im Bett.~~",
+          "ar": "sein أم haben · المصدر في الآخر"
         },
-        "whyArabicSpeakerFails": "«يساعدني» Dativ (mir) · «منذ يومين» seit zwei Tagen — المصيدتان معاً في جملة واحدة (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الماضي العربي لا يحتاج إلى فعل مساعد، فيختار المتعلم haben لكل شيء أو يخلط — والألمانية تختار sein للحركة من مكان إلى مكان ولتغيّر الحال (bin gekommen · ist losgefahren · bin angekommen) وhaben لما عداه (habe verpasst · habe mitgebracht)؛ والفعل العربي يأتي أولاً فيكتب المتعلم sollst bleiben متجاورين — والألمانية تفتح قوساً: sollst … bleiben في الآخر (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Das hilft mir seit zwei Tagen.",
-          "ar": "ذلك يساعدني منذ يومين."
+          "de": "Ich bin mit dem Zug gekommen. · Ich habe die Fotos mitgebracht. · Du sollst im Bett bleiben.",
+          "ar": "جئتُ بالقطار · أحضرتُ الصور · عليك أن تبقى في السرير"
         },
         "exercise": {
-          "q": "أكمل: Das hilft ___ (ich) seit zwei ___ (Tag).",
-          "a": "mir / Tagen"
+          "q": "أكمل: Der Zug ___ um neun losgefahren (sein/haben), und ich ___ den Kuchen nicht verpasst (sein/haben).",
+          "a": "ist / habe"
         }
       },
       {
         "commonError": {
-          "de": "~~Modelltest: hören/lesen/schreiben/sprechen بترتيب خاطئ~~",
-          "ar": "الامتحان التجريبي: أربع مهارات — كل قسم بوقته"
+          "de": "~~weil ein Mann war krank~~ · ~~deshalb wir haben gewartet~~",
+          "ar": "weil أم deshalb"
         },
-        "whyArabicSpeakerFails": "الامتحان الألماني يقيس 4 مهارات منفصلة: Hören · Lesen · Schreiben · Sprechen — التدريب بالترتيب الصحيح جزء من الاستعداد (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "«لأنّ» و«لذلك» العربيتان لا تغيّران ترتيب الجملة، فيكتب المتعلم بعدهما الترتيب العادي — والألمانية تفرّق: بعد weil يذهب الفعل المصرَّف إلى آخر الجملة (weil ein Mann krank war)، وبعد deshalb يأتي الفعل مباشرة في المكان الثاني (deshalb haben wir gewartet) (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Hören → Lesen → Schreiben → Sprechen",
-          "ar": "الاستماع → القراءة → الكتابة → التحدث"
+          "de": "Der Zug hatte Verspätung, weil ein Mann krank war. · Deshalb haben wir eine Stunde gewartet.",
+          "ar": "تأخر القطار لأن رجلاً مرض · لذلك انتظرنا ساعة"
         },
         "exercise": {
-          "q": "ما ترتيب المهارات الأربع؟",
-          "a": "Hören, Lesen, Schreiben, Sprechen"
+          "q": "رتّب: ich / weil / habe / Fieber / Ich bleibe im Bett,",
+          "a": "Ich bleibe im Bett, weil ich Fieber habe."
         }
       }
     ],
     "srsBundleWordIds": [
       "kopfschmerz",
-      "reise"
+      "verspaetung"
     ]
   },
   "gReferences": {
-    "duden": [
-      "https://www.duden.de/rechtschreibung/ueben"
+    "duden": [],
+    "wiktionary": [
+      "https://de.wiktionary.org/wiki/%C3%BCben"
     ],
-    "wiktionary": [],
     "goethe": []
   },
   "usedArsenalIds": [
+    "ars-koerper",
+    "ars-gesundheit",
+    "ars-perfekt",
     "ars-satzklammer",
-    "ars-perfekt"
+    "ars-modal-fix",
+    "ars-weil-satz"
   ],
   "audioManifestRefs": [
     "word-kopfschmerz",
-    "word-reise"
+    "word-verspaetung"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung)",
+    "netzwerkChapter": "A1-Wiederholungswoche (Modelltest-Vorbereitung) — اليوم 6 والأخير: الأسبوعان 11–12 — السبت 25 أبريل",
     "goetheWordListOverlap": []
   }
 }

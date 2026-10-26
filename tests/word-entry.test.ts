@@ -8,8 +8,11 @@ import {
   slugify, nounGender, detectPhoneticRisks, detectGrammarRisks, cardTypesFor, clipText, srsDistance,
   plausibleRisk, reannotate, citationForm, lemmaOf,
 } from "../tools/lib/word-entry.js";
-import { planWord, runGenerator, phonemizeAll, auditRisks, spokenForm, type WordSpec } from "../tools/word-entry-generator.js";
-import { ALL_WORDS, ALL_LESSONS } from "../src/lesson-packs.js";
+import { planWord, runGenerator, phonemizeAll, auditRisks, spokenForm, WordSpec } from "../tools/word-entry-generator.js";
+import { loadAllWords, loadAllLessons } from "../src/lesson-packs.js";
+const ALL_WORDS = await loadAllWords();
+const ALL_LESSONS = await loadAllLessons();
+
 
 // espeak يُخرج ç مفككة — الاختبار يستعمل الشكل نفسه
 const C = "c\u0327";
@@ -101,6 +104,7 @@ describe("D105 — الكشف النحوي + المعرّف + البطاقات",
     expect(slugify("Auf Wiedersehen")).toBe("auf-wiedersehen");
     expect(slugify("die Straße")).toBe("strasse");
     expect(slugify("der Schlüssel")).toBe("schluessel");
+    expect(slugify("das Café")).toBe("cafe"); // D207: الحروف المستعارة بعلامات (é ← NFD)
     expect(nounGender("die Wohnung")).toEqual({ article: "die", gender: "die", lemma: "Wohnung" });
     expect(nounGender("lachen")).toBeNull();
     expect(clipText("das Licht")).toBe("das Licht.");
@@ -118,8 +122,17 @@ describe("D105 — planWord: مواصفة ← كلمة كاملة صالحة", (
   const base: WordSpec = {
     de: "das Erlebnis", ar: ["تجربة"], wordClass: "noun", level: "A2", unit: 1, lesson: "a2-u1-d3", thema: "Vergangenheit",
     sample: { de: "Das war ein tolles Erlebnis!", ar: "كانت تجربة رائعة!" }, plural: "die Erlebnisse",
-    goetheList: [], chunk: false, functionWord: false, wordFamily: [],
+    goetheList: [], chunk: false, receptive: false, functionWord: false, wordFamily: [],
   };
+  it("D204: receptive ⇒ بطاقة فهم بلا إنتاج (تكملة SD1 للوحدتين 13–14) — والوحدة حتى 15 لا 12", () => {
+    expect(cardTypesFor({ wordClass: "noun", gender: "das", receptive: true }, [])).toEqual(["comprehension", "gender"]);
+    expect(cardTypesFor({ wordClass: "verb", gender: "none", receptive: true }, ["umlaut-u"])).toEqual(["comprehension", "audio"]);
+    const p = planWord({ ...base, level: "A1", unit: 13, lesson: "a1-u13-d1", receptive: true }, "ɛɾlˈeːpnɪs");
+    expect(p.word.srsCardTypes).toContain("comprehension");
+    expect(p.word.srsCardTypes).not.toContain("production");
+    expect(p.word.unit).toBe(13);
+    expect(WordSpec.safeParse({ ...base, unit: 16 }).success).toBe(false);
+  });
   it("اسم: أداة/جنس/بطاقة جنس/فهرس الاستخدام — ويمر من zod", () => {
     const p = planWord(base, "ɛɾlˈeːpnɪs");
     expect(Word.parse(p.word)).toBeTruthy();
@@ -286,4 +299,65 @@ describe("D106 — إعادة وسم أعلام الخطر: المكتشَف ∪
       expect(lemmaOf(citationForm(w.de)).length).toBeGreaterThan(0);
     }
   }, 60_000);
+});
+
+describe("D191 (N-002) — ثلاثة أعلام نطق جديدة في القائمة المقفلة: w-v · ie-short · ng-velar", () => {
+  it("الكشف من الرسم + النطق المقيس: wer/Wort/schwer ⇒ w-v · vierzig/vielleicht ⇒ ie-short · lang/Wohnung/Onkel ⇒ ng-velar", () => {
+    expect(detectPhoneticRisks("wer", "vˈeːɾ")).toContain("w-v");
+    expect(detectPhoneticRisks("das Wort", "vˈɔɾt")).toContain("w-v");
+    expect(detectPhoneticRisks("schwer", "ʃvˈeːɾ")).toContain("w-v");
+    expect(detectPhoneticRisks("vierzig", "fˈɪɾtsɪç")).toContain("ie-short");
+    expect(detectPhoneticRisks("vielleicht", "fɪlˈaɪçt")).toContain("ie-short");
+    expect(detectPhoneticRisks("lang", "lˈaŋ")).toContain("ng-velar");
+    expect(detectPhoneticRisks("die Wohnung", "vˈoːnʊŋ")).toContain("ng-velar");
+    expect(detectPhoneticRisks("der Onkel", "ˈɔŋkəl")).toContain("ng-velar");
+  });
+  it("لا إنذار كاذب: vier (ie طويلة) · feiern (ei+e لا ie) · Spanien/Familie (i‑e مقطعان) · Vase (v لا w) · Anna (n لا ŋ)", () => {
+    expect(detectPhoneticRisks("vier", "fˈiːɾ")).not.toContain("ie-short");
+    expect(detectPhoneticRisks("feiern", "fˈaɪɜn")).not.toContain("ie-short");
+    expect(detectPhoneticRisks("Spanien", "ʃpˈɑnɪʲən")).not.toContain("ie-short");
+    expect(detectPhoneticRisks("die Familie", "famˈiːlɪʲə")).not.toContain("ie-short");
+    expect(detectPhoneticRisks("die Vase", "vˈɑːzə")).not.toContain("w-v");
+    expect(detectPhoneticRisks("Anna", "ˈanɑː")).not.toContain("ng-velar");
+    expect(plausibleRisk("ie-short", "feiern", "fˈaɪɜn")).toBe(false);
+    expect(plausibleRisk("w-v", "vier", "fˈiːɾ")).toBe(false);
+    expect(plausibleRisk("ng-velar", "der Onkel", "ˈɔŋkəl")).toBe(true);
+  });
+  it("كل علَم في القائمة المقفلة له تنبيه عربي يصل إلى بطاقة العرض (القانون 12) — ولا نص إنجليزي", async () => {
+    const { PhoneticRisk } = await import("../content/schemas/index.js");
+    const { PHONETIC_RISK_HINT, pronunciationHint } = await import("../src/lib/phonetic-risks.js");
+    for (const r of PhoneticRisk.options) expect(PHONETIC_RISK_HINT[r], r).toMatch(/\p{Script=Arabic}/u);
+    expect(Object.keys(PHONETIC_RISK_HINT).sort()).toEqual([...PhoneticRisk.options].sort());
+    expect(pronunciationHint([])).toBe("");
+    expect(pronunciationHint(["w-v", "ng-velar"])).toContain("ڤ");
+  });
+});
+
+describe("D192 (N-045) — وسم «خارج A1» مشتق من goetheList ويصل إلى بطاقة العرض", () => {
+  it("التصنيف: A1 · A2-only · outside — والنص فارغ للكلمات من قائمة A1 ولغير مستوى A1", async () => {
+    const { goetheTag, goetheTagLabel } = await import("../src/lib/goethe-tag.js");
+    expect(goetheTag({ goetheList: ["A1", "A2"] })).toBe("A1");
+    expect(goetheTag({ goetheList: ["A2"] })).toBe("A2-only");
+    expect(goetheTag({ goetheList: [] })).toBe("outside");
+    expect(goetheTagLabel({ goetheList: ["A1"], level: "A1" })).toBe("");
+    expect(goetheTagLabel({ goetheList: [], level: "A2" })).toBe("");
+    expect(goetheTagLabel({ goetheList: ["A2"], level: "A1" })).toContain("A2");
+    expect(goetheTagLabel({ goetheList: [], level: "A1" })).toContain("خارج قائمتي");
+  });
+  it("المحتوى الحقيقي: كل كلمة A1 خارج القائمة الرسمية تحمل الوسم في شرح بطاقتها — والمعدود معلن (لا وسم صامت)", async () => {
+    const { planLessonStations } = await import("../src/lib/lesson-runner.js");
+    const { goetheTag } = await import("../src/lib/goethe-tag.js");
+    const a1 = ALL_WORDS.filter((w) => w.level === "A1");
+    const outside = a1.filter((w) => goetheTag(w) !== "A1");
+    // 2026-10-18 (D192): 883 كلمة بمستوى A1 — 254 منها خارج قائمة A1 الرسمية (124 من قائمة A2 وحدها · 130 خارج القائمتين) = 28.8%؛ السقف 30% حارس لا هدف.
+    expect(outside.length / a1.length).toBeLessThan(0.3);
+    for (const l of ALL_LESSONS.filter((x) => x.level === "A1")) {
+      const words = ALL_WORDS.filter((w) => l.praesentation.wordIds.includes(w.id) || l.warmup.cardIds.includes(w.id) || l.zusammenfassung.srsBundleWordIds.includes(w.id));
+      const plan = planLessonStations(l, words);
+      for (const c of plan.learn) {
+        const w = ALL_WORDS.find((x) => x.id === c.wordId)!;
+        expect(c.explanation.includes("خارج قائم"), `${l.id}/${w.id}`).toBe(goetheTag(w) !== "A1");
+      }
+    }
+  });
 });

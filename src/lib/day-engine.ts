@@ -44,3 +44,90 @@ export function recallBeforeNew(plan: DayPlan): boolean {
 
 /** حدود اليوم الأول: 4 بطاقات فقط (الوحدة صفر §9) — لا إغراق */
 export const DAY_ONE_MAX_CARDS = 4;
+
+/** N-147 (D247): نقاط الأسبوع لشاشة اليوم (§2.2) — الاثنين أولاً · محايد بلا لوم (D23) */
+export function weekDots(sessions: readonly { date: string }[], today = new Date()): { dots: readonly boolean[]; studied: number } {
+  const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const monday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - ((today.getDay() + 6) % 7));
+  const studiedDays = new Set(sessions.map((x) => x.date));
+  const dots = Array.from({ length: 7 }, (_, i) => {
+    const d = new Date(monday.getFullYear(), monday.getMonth(), monday.getDate() + i);
+    return studiedDays.has(iso(d));
+  });
+  return { dots, studied: dots.filter(Boolean).length };
+}
+
+/* ══════════ D275 — تخصص الأيام (ب-4/ب-13): عادة معرفية ثابتة ══════════ */
+/** تركيز اليوم — ثقل إضافي لا إلغاء للتشريح (الاثنين استماع … السبت معركة · الأحد راحة) */
+export type DayFocus = "listening" | "grammar" | "speaking" | "writing" | "culture" | "battle" | "rest";
+
+export function dayFocus(date: Date): DayFocus {
+  switch (date.getDay()) {
+    case 1: return "listening";
+    case 2: return "grammar";
+    case 3: return "speaking";
+    case 4: return "writing";
+    case 5: return "culture";
+    case 6: return "battle";
+    default: return "rest";
+  }
+}
+
+/** التسمية + سطر التوجيه اللطيف (D23 — تشجيع لا أمر ولا لوم) */
+export const DAY_FOCUS_AR: Record<DayFocus, { label: string; tip: string }> = {
+  listening: { label: "الاستماع 🎧", tip: "اليوم أذنك أولاً — استمع كل جملة مرتين قبل أن تقرأها." },
+  grammar: { label: "القواعد 🧩", tip: "الثلاثاء يوم القواعد — قاعدة اليوم تستحق التمهل." },
+  speaking: { label: "الكلام 🗣️", tip: "تحدث بصوت عالٍ اليوم — مهمتك التواصلية تستحق وقتاً أطول." },
+  writing: { label: "الكتابة ✍️", tip: "اكتب بيدك أو بلوحتك — الإملاء اليوم بتركيز خاص." },
+  culture: { label: "التوليف والثقافة 🌍", tip: "نجمع خيوط الأسبوع — ولا تنسَ بطاقة ثقافة الجمعة." },
+  battle: { label: "المعركة ⚔️", tip: "يوم المراجعة الأسبوعية — أظهر ما ثبت بهدوء." },
+  rest: { label: "الراحة 🌿", tip: "لا شيء مطلوب منك — النوم شريكك في التثبيت." },
+};
+
+/* ══════════ D279 — الهدف الأسبوعي (ب-18): إعلان الاثنين وقياس المعركة ══════════ */
+/** حالة الهدف الأسبوعي: إعلان مساء الاثنين · تذكير أيام العمل · قياس السبت · تحقق بعد المعركة */
+export type WeeklyGoalState = "hidden" | "announce" | "reminder" | "measure" | "achieved";
+
+export function weeklyGoalState(passed: boolean, weekday: number, evening: boolean): WeeklyGoalState {
+  if (weekday === 0) return "hidden"; // الأحد راحة — صمت
+  if (weekday === 1 && !evening) return "hidden"; // قبل إعلان المساء
+  if (passed) return "achieved";
+  if (weekday === 1) return "announce";
+  if (weekday === 6) return "measure";
+  return "reminder";
+}
+
+/* ══════════ D282 — الأسبوع المرن (ب-16): 3×45 أسبوع ناجح + عودة بلا ديون ══════════ */
+/** الحد الأدنى للأسبوع الناجح: 3 أيام × 45 دقيقة */
+export const FLEX_DAYS = 3;
+export const FLEX_MINUTES = 45;
+
+export type FlexWeek = {
+  /** أيام ≥45 دقيقة */
+  days45: number;
+  /** أيام الدراسة (أي مدة) */
+  studied: number;
+  success: boolean;
+  /** اثنين الأسبوع (ISO) — لاكتشاف العودة بعد انقطاع */
+  monday: string;
+};
+
+/** أسبوع مرن: الحالي (0) أو الماضي (1...) — الاثنين أولاً */
+export function flexWeek(
+  sessions: readonly { date: string; durationMinutes: number }[],
+  today = new Date(),
+  back = 0,
+): FlexWeek {
+  const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const monday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - ((today.getDay() + 6) % 7) - back * 7);
+  const byDate = new Map(sessions.map((x) => [x.date, x.durationMinutes]));
+  let days45 = 0;
+  let studied = 0;
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(monday.getFullYear(), monday.getMonth(), monday.getDate() + i);
+    const mins = byDate.get(iso(d)) ?? 0;
+    if (mins > 0) studied++;
+    if (mins >= FLEX_MINUTES) days45++;
+  }
+  return { days45, studied, success: days45 >= FLEX_DAYS, monday: iso(monday) };
+}

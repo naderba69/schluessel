@@ -21,6 +21,8 @@ export type GrammarRule = {
   sceneAr?: string;
   /** D115: ما لا تغطيه القاعدة اليوم — يُكشف مع القاعدة */
   limitsAr?: readonly string[];
+  /** N-009 (D228): أفق القاعدة — تُعرض في المختبر بعد بلوغه وتُفحص ألمانيتها عنده (قواعد المحتوى بلا أفق: درسها يعرفها) */
+  lesson?: string;
 };
 
 /** ملف القاعدة (بعد تحقق zod) ← قاعدة المحرك — بلا إعادة صياغة: المحتوى يُعرض كما كُتب */
@@ -37,27 +39,29 @@ export const A1_RULES: readonly GrammarRule[] = Object.freeze([
   {
     id: "v2-position",
     topicAr: "مكان الفعل",
+    lesson: "a1-u2-d1", // N-009: التقديم مفهوم «Hier wohne ich» — والأمثلة بلا aus (u8) وبلا lerne (u10)
     examples: Object.freeze([
-      { de: "Ich komme aus Tunesien.", ar: "أنا آتي من تونس." },
-      { de: "Heute lerne ich Deutsch.", ar: "اليوم أتعلّم الألمانية." },
-      { de: "Am Abend wohne ich zu Hause.", ar: "في المساء أكون في البيت." },
+      { de: "Ich heiße Yusuf.", ar: "اسمي يوسف." },
+      { de: "Hier wohne ich.", ar: "هنا أسكن." },
+      { de: "Heute komme ich.", ar: "اليوم آتي." },
     ]),
-    inferencePromptAr: "أين يقف الفعل (komme/lerne/wohne) في الجملة؟ عدّ مواضع الكلمات.",
-    ruleDe: "Das Verb steht an Position 2.",
+    inferencePromptAr: "أين يقف الفعل (heiße/wohne/komme) في الجمل؟ عدّ مواضع الكلمات.",
+    ruleDe: "Nummer 2.",
     ruleAr: "الفعل دائماً في المرتبة الثانية — مهما بدأت الجملة (اسم، ظرف، سؤال).",
     contrastAr: "العربية تحرّك الفعل بالسياق والتقدمة («آتي أنا» / «أنا آتي»)؛ الألمانية تثبّته في المرتبة 2.",
-    beads: Object.freeze(["Heute", "lerne", "ich", "Deutsch"]),
+    beads: Object.freeze(["Hier", "wohne", "ich"]),
   },
   {
     id: "aus-vs-von",
     topicAr: "«من»: aus أم von؟",
+    lesson: "a1-u8-d5", // N-009: von تُدرَّس في u8-d5 — الأمثلة سليمة عنده
     examples: Object.freeze([
       { de: "Ich komme aus Tunesien.", ar: "أنا من تونس (المنشأ)." },
       { de: "Ich komme von der Arbeit.", ar: "آتي من العمل (المكان قادم منه)." },
       { de: "Das ist von Yusuf.", ar: "هذا ليوسف (امتلاك/جهة)." },
     ]),
     inferencePromptAr: "متى تقول aus ومتى von؟ قارن الأمثلة الثلاثة.",
-    ruleDe: "aus = Herkunft (Land/Stadt) · von = Richtung/Quelle/Person",
+    ruleDe: "aus Tunesien · von Lena.",
     ruleAr: "aus للمنشأ والانتماء (البلد/المدينة)، وvon للجهة والاتجاه والامتلاك.",
     contrastAr: "العربية تقول «من» للحالتين؛ لذلك الخطأ الشائع «Ich komme von Tunesien».",
     beads: Object.freeze(["Ich", "komme", "aus", "Tunesien"]),
@@ -65,10 +69,11 @@ export const A1_RULES: readonly GrammarRule[] = Object.freeze([
   {
     id: "heissen-du",
     topicAr: "تصريف heißen مع du",
+    lesson: "a1-u1-d1",
     examples: Object.freeze([
       { de: "Ich heiße Yusuf.", ar: "اسمي يوسف." },
       { de: "Wie heißt du?", ar: "ما اسمك؟" },
-      { de: "Er heißt Ahmad.", ar: "اسمه أحمد." },
+      { de: "Er heißt Yusuf.", ar: "اسمه يوسف." },
     ]),
     inferencePromptAr: "لاحظ: heiße / heißt / heißt — ماذا يجري مع du وer؟",
     ruleDe: "ich heiße · du heißt · er/sie/es heißt",

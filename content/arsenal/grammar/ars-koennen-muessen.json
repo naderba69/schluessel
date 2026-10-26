@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-koennen-muessen",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "title": {
+    "de": "Ich muss einen Rucksack kaufen. · Kann ich ihn anprobieren?",
+    "ar": "الاستطاعة والوجوب: können وmüssen — الفعل الناقص في المكان الثاني والمصدر في آخر الجملة بلا zu · ich وer سواء · nicht müssen = لا حاجة"
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "A1",
+  "usedInLessons": [
+    "a1-u8-d3",
+    "a1-u8-d6",
+    "a1-u15-d4",
+    "a2-u2-d1",
+    "a2-u2-d5",
+    "a2-u3-d4"
+  ],
+  "payload": {
+    "topicAr": "اليوم تقول ما تستطيع وما يجب عليك: Ich muss einen Rucksack kaufen. · Kann ich den Rucksack anprobieren? · Du musst einen Verkäufer fragen. · Wir können jetzt bezahlen. · Du musst nicht viel bezahlen. ومعه كلمات اليوم: passen · das Stück · der Korb · der Wagen · die Kleidung · die Kreditkarte · der Regenschirm · der Rucksack · der Gürtel · die Abteilung · finden · möglich — والنواة kriegen.",
+    "sceneAr": "مهمة الوحدة الثامنة على الشاشة: «التسوّق — ما يجب وما يمكن». يوسف يجهّز رحلته إلى تونس: يجب أن يشتري حقيبة ظهر وحزاماً — بنطاله واسع. في قسم الحقائب يسأل: هل يمكنني أن أقيس حقيبة الظهر؟ — ممكن، وهي تناسبه بخمسة وعشرين يورو. في قسم الملابس لا يجد حزاماً مناسباً فيجب أن يسأل بائعاً. ولينا يجب أن تشتري مظلة — في برلين تمطر كثيراً — وتحصل عليها في السوبرماركت بخمسة يورو مع قطعتي كعك. بطاقة يوسف ليست معه فيجب أن يدفع نقداً — ولا يجب أن يدفع كثيراً.",
+    "examples": [
+      {
+        "de": "Ich muss einen Rucksack kaufen. · Du musst einen Verkäufer fragen.",
+        "ar": "يجب أن أشتري حقيبة ظهر · يجب أن تسأل بائعاً — muss/musst في المكان الثاني، والمفعول بينهما، والفعل الثاني مصدراً في الآخر بلا zu"
+      },
+      {
+        "de": "Kann ich den Rucksack anprobieren? — Ja, das ist möglich.",
+        "ar": "هل يمكنني أن أقيس حقيبة الظهر؟ — نعم، ممكن — سؤال نعم/لا: الفعل الناقص أولاً · والفعل المنفصل يبقى متصلاً في الآخر: anprobieren"
+      },
+      {
+        "de": "Was musst du kaufen? — Ich muss einen Regenschirm kaufen.",
+        "ar": "ماذا يجب أن تشتري؟ — يجب أن أشتري مظلة — سؤال W: كلمة السؤال ثم الفعل الناقص ثم الفاعل … والمصدر في الآخر"
+      },
+      {
+        "de": "Er kann gut Deutsch. · Ich kann das nicht finden.",
+        "ar": "هو يجيد الألمانية · لا أستطيع أن أجد هذا — kann بلا فعل ثانٍ حين يُفهم (sprechen) · والنفي بـnicht قبل المصدر"
+      },
+      {
+        "de": "Wir können jetzt bezahlen. · Sie müssen bar bezahlen.",
+        "ar": "يمكننا أن ندفع الآن · يجب أن تدفعوا نقداً (أو: حضرتك) — wir/sie/Sie: können · müssen كالمصدر — وفي المفرد تتغيّر الحركة: kann · muss"
+      },
+      {
+        "de": "Du musst nicht viel bezahlen. · Du musst nicht bar bezahlen.",
+        "ar": "لا يجب أن تدفع كثيراً (= لا حاجة) · لست مضطراً للدفع نقداً — nicht müssen = «لا حاجة» لا «ممنوع»"
+      }
+    ],
+    "inferencePromptAr": "قارن الأمثلة: (1) في الأول: أين muss وأين kaufen؟ وهل بينهما zu؟ (2) في الأول: ich muss وdu musst — ما الذي تغيّر؟ وقارن بـer kann وich kann في الرابع: هل لـer نهاية ‑t؟ (3) في الثاني: السؤال بلا كلمة سؤال — بم بدأ؟ وهل انفصل an من anprobieren؟ (4) في الثالث: أين الفاعل du بعد كلمة السؤال؟ (5) في الرابع: Er kann gut Deutsch — أين الفعل الثاني؟ (6) في الخامس: wir können وsie müssen — بم تشبه صيغة القاموس؟ وقارن الحركة بـkann/muss (7) في الأخير: Du musst nicht viel bezahlen — هل معناها «ممنوع» أم «لا حاجة»؟",
+    "ruleDe": "ich kann · du kannst · er/sie/es kann · wir/sie/Sie können — ich muss · du musst · er/sie/es muss · wir/sie/Sie müssen — Ich muss einen Rucksack kaufen. · Kann ich den Rucksack anprobieren? · Was musst du kaufen? · Du musst nicht viel bezahlen.",
+    "ruleAr": "قل ما تستطيع وما يجب بثلاث خطوات: (1) الصيغ: können (يستطيع/يمكن): ich kann · du kannst · er/sie/es kann · wir können · sie/Sie können — وmüssen (يجب): ich muss · du musst · er/sie/es muss · wir müssen · sie/Sie müssen. لاحظ: ich وer/sie/es سواء بلا ‑t (كـmöchte وwill في الوحدة 5)، والحركة تتغيّر بين المفرد والجمع: kann ← können · muss ← müssen — والجمع كصيغة القاموس. (2) الموقع: الفعل الناقص في المكان الثاني (أو الأول في سؤال نعم/لا)، والفعل الثاني في آخر الجملة بصيغة المصدر كما في القاموس — لا يتصرّف ولا تسبقه zu — وكل شيء آخر (المفعول · nicht · jetzt · bar) بينهما: Ich muss einen Rucksack kaufen. · Kann ich den Rucksack anprobieren? · Was musst du kaufen? — والفعل المنفصل يبقى متصلاً في الآخر (anprobieren · einkaufen) كما تعلّمت في الوحدة 7 مع möchte. وحين يُفهم الفعل الثاني يُحذف: Er kann gut Deutsch (= sprechen) · Ich kann das nicht (= machen). (3) المعنى: können = القدرة (Ich kann gut kochen) أو الإمكان (Hier kann man bezahlen — الفعل ممكن) أو الطلب المهذب في السؤال (Kann ich …? · Können Sie …?) — وmüssen = الوجوب والضرورة (Ich muss bar bezahlen) — وmüssen + nicht = لا حاجة ولا ضرورة، لا «ممنوع»: Du musst nicht viel bezahlen = لا داعي لأن تدفع كثيراً — ومعها möglich = ممكن: Das ist möglich. · Ist das möglich?",
+    "contrastAr": "ما يساعدك ثلاثة: (1) «أستطيع أن أدفع» — فعلٌ ناقص ثم الفعل الأصلي في العربية أيضاً، والترتيب نفسه: Ich kann bezahlen — عون. (2) «يجب أن» و«يمكن أن» تقولهما العربية قبل الفعل كما تقول الألمانية muss/kann في المكان الثاني — عون. (3) «ممكن؟» سؤالاً قصيراً = Ist das möglich? / Kann ich? — عون. وما يختلف ثلاثة: (1) «أن» العربية قبل الفعل الثاني يبحث لها المتعلم عن مقابل فيضع zu: ~~Ich muss zu bezahlen.~~ — وفي الألمانية لا شيء قبل المصدر: Ich muss bezahlen. (2) العربية تصرّف الفعلين معاً («أستطيعُ أن أدفعَ» — الثاني مضارعٌ منصوب للمتكلم) ويضع الثاني مباشرةً بعد الأول، فيقول المتعلم: ~~Ich muss kaufe einen Gürtel.~~ — والألمانية تُبقي الثاني مصدراً جامداً وتؤخّره إلى الآخر: Ich muss einen Gürtel kaufen. (3) «يجب» في العربية كلمةٌ واحدة لا تتغيّر مع الفاعل («يجب أن أدفع · يجب أن تدفع · يجب أن ندفع»)، فيُبقي المتعلم muss لكل فاعل: ~~Du muss bezahlen.~~ · ~~Wir muss bezahlen.~~ — وmüssen يتصرّف: du musst · wir müssen (وكذلك kann: du kannst · wir können) — خريطة التداخل 10‑ي.",
+    "limitsAr": [
+      "اليوم können وmüssen وحدهما (مع möchte وwollen من الوحدة 5) — وdürfen (الإذن والمنع) وsollen (النصيحة) لاحقاً؛ و«ممنوع» ليست nicht müssen بل nicht dürfen — فإن أردت المنع اليوم قل: Das ist nicht möglich.",
+      "الطلب المهذب الكامل بـKönnen Sie …? مع mir/dir يأتي مع helfen والداتيف في الوحدة 9 — اليوم Kann ich …? وKannst du …? بمفعول به أو بلا.",
+      "«بالبطاقة» بحرف الجر (mit der Kreditkarte · mit Karte) قاعدة الدرس القادم (الداتيف الثابت mit/nach/aus/zu) — اليوم: Geht hier die Kreditkarte? · Ich habe meine Kreditkarte nicht hier. · Ich muss bar bezahlen.",
+      "kriegen = bekommen في الكلام اليومي (Einen Regenschirm kriegst du im Supermarkt) — في الكتابة الرسمية والامتحان الكتابي bekommen أوضح؛ وStück بعد العدد بلا نهاية (zwei Stück Kuchen) كـEuro وCent، والجمع die Stücke للقطع المعدودة وحدها (die Stücke sind groß)."
+    ],
+    "beads": [
+      "Ich",
+      "muss",
+      "einen",
+      "Rucksack",
+      "kaufen."
+    ],
+    "properNouns": []
+  }
+}

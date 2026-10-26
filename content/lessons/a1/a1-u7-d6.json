@@ -6,31 +6,44 @@
   "day": 6,
   "kind": "integration",
   "ziel": {
-    "de": "Die Einheit 7 zusammenfassen und die Wochen-Meisterschaft bestehen.",
-    "ar": "تلخيص الوحدة 7 واجتياز معركة الأسبوع"
+    "de": "Woche sieben ist zu Ende: Ich stehe um halb acht auf · du machst, er macht · ich fahre, du fährst, er nimmt · Nabil isst nichts — er ist müde · Ich rufe an, ich kaufe ein · Ich möchte früh aufstehen.",
+    "ar": "توليف الأسبوع السابع: الأفعال المنفصلة (stehe … auf · rufe … an · kaufe … ein) · نهايات الفعل المنتظم (machst · macht · wartest) · الأوملاوت في du/er (fährst · nimmt · isst) · isst مقابل ist · möchte + الفعل المنفصل كاملاً في الآخر — ثم معركة الوحدة (75% فأكثر). لا كلمة جديدة: كلمتا اليوم (aufwachen · machen) تعودان من الأسبوع نفسه."
   },
   "canDoDaily": [
-    "يجتاز معركة الوحدة 7 بعتبة 0.75"
+    "يحكي يومه من الصباح إلى المساء بأفعال منفصلة صحيحة (Ich stehe um sieben auf) وبنهايات du/er الصحيحة (du machst · er fährt · er nimmt)",
+    "يفرّق isst عن ist ويضع الفعل المنفصل كاملاً بعد möchte (Ich möchte früh aufstehen) ويجتاز معركة الوحدة 7 بنتيجة 75% فأكثر"
   ],
   "warmup": {
     "cardIds": [
       "aufstehen",
-      "kochen",
-      "buch"
+      "fahren",
+      "machen"
     ]
   },
   "einstieg": {
     "pretestItems": [
       {
         "prompt": {
-          "de": "«هو ينهض متأخراً ويقود كثيراً» — الصيغة الصحيحة؟ (تخمين فقط)"
+          "de": "«أنهض في السابعة» — تخمين فقط"
         },
         "choices": [
-          "Er steht spät auf und fährt viel.",
-          "Er aufsteht spät und er fahrt viel.",
-          "Er steht spät und er fährt viel auf."
+          "Ich stehe um sieben auf.",
+          "Ich aufstehe um sieben.",
+          "Ich stehe auf um sieben."
         ],
-        "answer": "Er steht spät auf und fährt viel.",
+        "answer": "Ich stehe um sieben auf.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "de": "«نبيل يذهب بالدراجة» — تخمين فقط"
+        },
+        "choices": [
+          "Nabil fährt mit dem Fahrrad.",
+          "Nabil fahrt mit dem Fahrrad.",
+          "Nabil fahre mit dem Fahrrad."
+        ],
+        "answer": "Nabil fährt mit dem Fahrrad.",
         "revealNextSession": true
       }
     ],
@@ -47,7 +60,7 @@
       "ars-praesens-regelm"
     ],
     "storySentenceIds": [
-      "story-a7-u7-s6"
+      "story-a1-u7-s6"
     ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
@@ -55,71 +68,288 @@
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أنا أنهض وأتناول الفطور»؟",
-            "a": "Ich stehe auf und frühstücke."
+            "q": "Ich stehe um halb acht ___. (أنهض)",
+            "a": "auf",
+            "why": "aufstehen فعل منفصل: الجزء المصرَّف stehe في المكان الثاني، والبادئة auf في آخر الجملة — لا ~~Ich aufstehe~~."
           },
           {
-            "q": "«أنا أفعل واجبي»؟",
-            "a": "Ich mache meine Hausaufgaben."
+            "q": "Wann ___ du auf? — Um sieben. (aufwachen)",
+            "a": "wachst",
+            "why": "aufwachen منفصل أيضاً: في السؤال wachst أولاً وauf في الآخر — ومع du النهاية ‑st."
+          },
+          {
+            "q": "Ich mache Kaffee, du ___ Tee. (machen)",
+            "a": "machst",
+            "why": "الفعل المنتظم مع du ينتهي بـ‑st: du machst · du kaufst · du lernst."
+          },
+          {
+            "q": "Nabil ___ nichts — er wartet auf den Bus. (machen)",
+            "a": "macht",
+            "why": "مع er/sie/es النهاية ‑t: er macht. وwarten يأخذ ‑et: er wartet (لا ~~er wartt~~)."
+          },
+          {
+            "q": "Wie ___ du zum Kurs? (fahren)",
+            "a": "fährst",
+            "why": "fahren شاذ: a تصير ä مع du وer فقط — du fährst · er fährt. مع ich وwir تبقى a."
+          },
+          {
+            "q": "Du ___ am Sonntag den Zug. (nehmen)",
+            "a": "nimmst",
+            "why": "nehmen شاذ: e تصير i مع du/er: du nimmst · er nimmt — ومع ich: ich nehme."
+          },
+          {
+            "q": "Nabil ___ nichts am Mittag — er ist müde. (essen)",
+            "a": "isst",
+            "why": "essen شاذ: er isst (يأكل) بـss — وتُنطق مثل er ist (يكون)؛ المعنى يفصل بينهما لا الصوت."
+          },
+          {
+            "q": "Ich rufe meine Familie ___. (anrufen)",
+            "a": "an",
+            "why": "anrufen منفصل: rufe … an. البادئة an تذهب إلى آخر الجملة بعد المفعول."
+          },
+          {
+            "q": "Am Abend ___ ich auf und wasche ab. (aufräumen)",
+            "a": "räume",
+            "why": "إذا بدأت الجملة بـAm Abend جاء الفعل المصرَّف ثانياً (räume) ثم الفاعل (ich) — والبادئة auf في الآخر."
+          },
+          {
+            "q": "Ich möchte am Sonntag früh ___. (aufstehen)",
+            "a": "aufstehen",
+            "why": "بعد möchte يأتي الفعل المنفصل كاملاً في آخر الجملة: aufstehen كلمة واحدة — لا ~~Ich möchte stehen auf~~."
           }
         ],
         "interleavedWith": [
-          "aufstehen",
-          "machen"
+          "kaffee",
+          "tee",
+          "bus",
+          "kurs",
+          "zug",
+          "familie",
+          "abend"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«هو يقود إلى برلين»؟",
-            "a": "Er fährt nach Berlin."
+            "audioId": "sb-2",
+            "speakText": "Gut! Ich wache um sieben auf. Mein Wecker ist das Handy.",
+            "q": "استمع: متى يستيقظ يوسف؟",
+            "choices": [
+              "في السابعة",
+              "في الثامنة",
+              "في التاسعة"
+            ],
+            "a": "في السابعة",
+            "why": "Ich wache um sieben auf = أستيقظ في السابعة — aufwachen منفصل: wache … auf."
           },
           {
-            "q": "«هي تأخذ وتتحدث»؟",
-            "a": "Sie nimmt und spricht."
+            "audioId": "sb-4",
+            "speakText": "Nein, ich stehe um halb acht auf. Ich dusche, und um acht frühstücke ich.",
+            "q": "استمع: متى ينهض يوسف من السرير؟",
+            "choices": [
+              "في السابعة والنصف",
+              "في السابعة",
+              "في الثامنة"
+            ],
+            "a": "في السابعة والنصف",
+            "why": "halb acht = السابعة والنصف (نصف الطريق إلى الثامنة!) · stehe … auf منفصل · um acht frühstücke ich: الفعل ثانياً."
+          },
+          {
+            "audioId": "sb-6",
+            "speakText": "Ja! Ich mache Kaffee, du machst Tee, und Nabil macht nichts — er wartet auf den Bus!",
+            "q": "استمع: ماذا يفعل نبيل في الصباح؟",
+            "choices": [
+              "لا شيء — ينتظر الحافلة",
+              "يصنع الشاي",
+              "يصنع القهوة"
+            ],
+            "a": "لا شيء — ينتظر الحافلة",
+            "why": "Nabil macht nichts · er wartet auf den Bus — ثلاث نهايات في سطر: mache · machst · macht."
+          },
+          {
+            "audioId": "sb-8",
+            "speakText": "Ich fahre mit dem Bus. Nabil fährt mit dem Fahrrad — und du nimmst am Sonntag den Zug!",
+            "q": "استمع: بماذا يذهب نبيل؟",
+            "choices": [
+              "بالدراجة",
+              "بالحافلة",
+              "بالقطار"
+            ],
+            "a": "بالدراجة",
+            "why": "Nabil fährt mit dem Fahrrad (ä مع er) · ich fahre بالحافلة (a مع ich) · du nimmst den Zug (i مع du)."
+          },
+          {
+            "audioId": "sb-10",
+            "speakText": "Ich esse Brot und Käse. Nabil isst nichts am Mittag — er ist müde!",
+            "q": "استمع: لماذا لا يأكل نبيل عند الظهر؟",
+            "choices": [
+              "لأنه متعب",
+              "لأنه شبعان",
+              "لأنه في الحافلة"
+            ],
+            "a": "لأنه متعب",
+            "why": "er ist müde = هو متعب. السطر يجمع isst (يأكل) وist (يكون) — صوت واحد ومعنيان."
+          },
+          {
+            "audioId": "sb-12",
+            "speakText": "Ich mache Hausaufgaben, ich rufe meine Familie an, und ich kaufe ein.",
+            "q": "استمع: كم فعلاً منفصلاً سمعت؟",
+            "choices": [
+              "اثنين: rufe … an وkaufe … ein",
+              "واحداً: mache",
+              "ثلاثة: mache وrufe وkaufe"
+            ],
+            "a": "اثنين: rufe … an وkaufe … ein",
+            "why": "machen ليس منفصلاً. المنفصلان: anrufen (rufe … an) وeinkaufen (kaufe … ein) — البادئة في الآخر."
+          },
+          {
+            "audioId": "sb-14",
+            "speakText": "Am Abend räume ich auf und wasche ab. Ich sehe nicht fern — ich lese ein Buch.",
+            "q": "استمع: ماذا لا يفعل يوسف في المساء؟",
+            "choices": [
+              "لا يشاهد التلفاز",
+              "لا يرتّب",
+              "لا يقرأ"
+            ],
+            "a": "لا يشاهد التلفاز",
+            "why": "Ich sehe nicht fern — النفي nicht قبل البادئة fern في الآخر · räume … auf · wasche … ab."
+          },
+          {
+            "audioId": "sb-16",
+            "speakText": "Um elf. Ich bin immer müde. Morgen schlafe ich lange!",
+            "q": "استمع: متى يذهب يوسف إلى النوم؟",
+            "choices": [
+              "في الحادية عشرة",
+              "في التاسعة",
+              "في السابعة"
+            ],
+            "a": "في الحادية عشرة",
+            "why": "Um elf = في الحادية عشرة · Morgen schlafe ich lange: الفعل ثانياً بعد Morgen."
           }
         ],
         "interleavedWith": [
-          "fahren",
-          "nehmen"
+          "wecker",
+          "handy",
+          "fahrrad",
+          "brot",
+          "kaese",
+          "hausaufgabe",
+          "buch",
+          "muede"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "error-hunt",
         "items": [
           {
-            "q": "«أتصل وأشاهد التلفاز»؟",
-            "a": "Ich rufe an und sehe fern."
+            "q": "صحّح: ~~Ich aufstehe um sieben.~~",
+            "a": "Ich stehe um sieben auf.",
+            "why": "الفعل المنفصل ينفصل في الجملة الرئيسية: stehe ثانياً وauf في الآخر."
           },
           {
-            "q": "«أنت تفعل ↔ هو يفعل»؟",
-            "a": "du machst ↔ er macht"
+            "q": "صحّح: ~~Nabil fahrt mit dem Fahrrad.~~",
+            "a": "Nabil fährt mit dem Fahrrad.",
+            "why": "fahren شاذ: er fährt بالأوملاوت (مثل du fährst)."
+          },
+          {
+            "q": "صحّح: ~~Du macht Tee.~~",
+            "a": "Du machst Tee.",
+            "why": "du تأخذ ‑st دائماً: du machst. (macht لـer وihr.)"
+          },
+          {
+            "q": "صحّح: ~~Er nehmt den Zug.~~",
+            "a": "Er nimmt den Zug.",
+            "why": "nehmen شاذ: e تصير i مع du/er — er nimmt، du nimmst."
+          },
+          {
+            "q": "صحّح: ~~Nabil ist Brot und Käse.~~",
+            "a": "Nabil isst Brot und Käse.",
+            "why": "يأكل = isst بـss. ist = يكون (Nabil ist müde)."
+          },
+          {
+            "q": "صحّح: ~~Ich möchte stehen früh auf.~~",
+            "a": "Ich möchte früh aufstehen.",
+            "why": "بعد möchte لا ينفصل الفعل: aufstehen كاملاً في الآخر."
           }
         ],
         "interleavedWith": [
-          "anrufen",
-          "fernsehen"
+          "fahrrad",
+          "tee",
+          "zug",
+          "brot",
+          "kaese"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "sb-1",
+            "speakText": "Hallo, Yusuf! Woche sieben ist zu Ende. Unsere Aufgabe heute: dein Tag, vom Morgen bis zum Abend!",
+            "a": "Hallo, Yusuf! Woche sieben ist zu Ende. Unsere Aufgabe heute: dein Tag, vom Morgen bis zum Abend!",
+            "why": "sieben بـie · Aufgabe بحرف كبير (اسم) · vom = von dem وzum = zu dem."
+          },
+          {
+            "audioId": "sb-3",
+            "speakText": "Und stehst du auch um sieben auf?",
+            "a": "Und stehst du auch um sieben auf?",
+            "why": "في السؤال يأتي stehst أولاً وauf في الآخر — المنفصل ينفصل في السؤال أيضاً."
+          },
+          {
+            "audioId": "sb-9",
+            "speakText": "Genau: ich nehme, du nimmst, er nimmt. Und was isst du am Mittag?",
+            "a": "Genau: ich nehme, du nimmst, er nimmt. Und was isst du am Mittag?",
+            "why": "nehme بـh صامتة · nimmst/nimmt بـmm · isst بـss (يأكل)."
+          },
+          {
+            "audioId": "sb-15",
+            "speakText": "Ich sehe lieber fern! Und wann gehst du schlafen?",
+            "a": "Ich sehe lieber fern! Und wann gehst du schlafen?",
+            "why": "sehe … fern منفصل · lieber (أفضّل) بين الفعل والبادئة · gehst بـ‑st."
+          },
+          {
+            "audioId": "sb-17",
+            "speakText": "Ich schlafe auch gern lange — aber nicht am Sonntag. Am Sonntag stehe ich früh auf: Oma hat Geburtstag!",
+            "a": "Ich schlafe auch gern lange — aber nicht am Sonntag. Am Sonntag stehe ich früh auf: Oma hat Geburtstag!",
+            "why": "Am Sonntag stehe ich … auf: الفعل ثانياً والفاعل بعده · früh بـü وh · Geburtstag بحرف كبير."
+          },
+          {
+            "audioId": "sb-19",
+            "speakText": "Nein! Ich möchte Oma besuchen. Wir nehmen den Zug um neun — und wir feiern.",
+            "a": "Nein! Ich möchte Oma besuchen. Wir nehmen den Zug um neun — und wir feiern.",
+            "why": "möchte + besuchen في الآخر · wir nehmen (مع wir لا تغيّر) · den Zug مفعول مذكر."
+          }
+        ],
+        "interleavedWith": [
+          "aufgabe",
+          "mittag",
+          "lieber",
+          "geburtstag",
+          "feiern"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Wochen-Meisterschaft: Alltag",
-        "ar": "معركة الأسبوع: اليوميات"
+        "de": "Mein Tag: Ich stehe um sieben auf. Ich fahre mit dem Bus zum Kurs. Am Mittag esse ich Brot. Am Abend rufe ich meine Familie an — und ich möchte früh schlafen gehen.",
+        "ar": "أن يحكي يومه لزميل من الصباح إلى المساء: أفعال منفصلة في مكانها (stehe … auf · rufe … an) · نهايات du/er صحيحة (fährst · nimmt · isst) · وجملة بـmöchte والفعل كاملاً في الآخر"
       },
       "situation": {
-        "de": "Abschlussprüfung der Einheit 7",
-        "ar": "اختبار ختام الوحدة 7"
+        "de": "Das Ende der Woche: Der Tag von Yusuf ist fertig — und jetzt dein Tag.",
+        "ar": "نهاية الأسبوع السابع: لينا سألت يوسف عن يومه كاملاً وأجاب بكل أفعال الأسبوع — ثم يومك أنت"
       },
       "successCriteria": [
-        "اجتياز المعركة بـ ≥ 0.75 مع الأفعال المنتظمة والشاذة والمنفصلة صحيحة"
+        "يذكر أربعة أفعال منفصلة في جمل صحيحة (البادئة في الآخر: Ich stehe um sieben auf · Ich kaufe am Montag ein)",
+        "يصرّف فعلين شاذين مع er صحيحاً (er fährt · er nimmt أو er isst) وفعلاً منتظماً مع du (du machst)",
+        "يستعمل möchte مرة واحدة مع الفعل المنفصل كاملاً في الآخر (Ich möchte früh aufstehen)"
       ]
     }
   },
@@ -134,20 +364,59 @@
       {
         "items": [
           {
-            "q": "«أنا أنهض في السابعة»؟",
-            "a": "Ich stehe um sieben auf."
+            "q": "Ich ___ um sieben auf. (aufstehen)",
+            "a": "stehe",
+            "choices": [
+              "stehe",
+              "aufstehe",
+              "steht"
+            ],
+            "why": "ich stehe … auf — الجزء المصرَّف وحده في المكان الثاني."
           },
           {
-            "q": "«هو يقود»؟",
-            "a": "er fährt"
+            "q": "Du ___ Tee. (machen)",
+            "a": "machst",
+            "choices": [
+              "machst",
+              "macht",
+              "mache"
+            ],
+            "why": "مع du النهاية ‑st: du machst."
           },
           {
-            "q": "«أنت تفعل»؟",
-            "a": "du machst"
+            "q": "Nabil ___ mit dem Fahrrad. (fahren)",
+            "a": "fährt",
+            "choices": [
+              "fährt",
+              "fahrt",
+              "fahre"
+            ],
+            "why": "fahren شاذ: er fährt بالأوملاوت."
           },
           {
-            "q": "«هي تتحدث»؟",
-            "a": "sie spricht"
+            "q": "Er ___ müde. (sein)",
+            "a": "ist",
+            "choices": [
+              "ist",
+              "isst",
+              "esse"
+            ],
+            "why": "متعب = حالة ⇐ ist (يكون). isst = يأكل."
+          },
+          {
+            "q": "Ich möchte früh ___.",
+            "a": "aufstehen",
+            "choices": [
+              "aufstehen",
+              "stehen auf",
+              "auf stehen"
+            ],
+            "why": "بعد möchte الفعل المنفصل كلمة واحدة في الآخر."
+          },
+          {
+            "q": "الترتيب: an. / rufe / Ich / meine Familie",
+            "a": "Ich rufe meine Familie an.",
+            "why": "الفاعل ثم الفعل المصرَّف ثم المفعول ثم البادئة an في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -155,20 +424,59 @@
       {
         "items": [
           {
-            "q": "«أنا أرتب غرفتي»؟",
-            "a": "Ich räume mein Zimmer auf."
+            "q": "Du ___ den Zug. (nehmen)",
+            "a": "nimmst",
+            "choices": [
+              "nimmst",
+              "nehmst",
+              "nimmt"
+            ],
+            "why": "nehmen شاذ: du nimmst (e ⇐ i + ‑st)."
           },
           {
-            "q": "«هو يأكل ↔ هو يكون»؟",
-            "a": "er isst ↔ er ist"
+            "q": "Nabil ___ auf den Bus. (warten)",
+            "a": "wartet",
+            "choices": [
+              "wartet",
+              "wartt",
+              "warte"
+            ],
+            "why": "الجذر ينتهي بـt ⇐ ‑et: er wartet."
           },
           {
-            "q": "«أنا أتصل بأمي»؟",
-            "a": "Ich rufe meine Mutter an."
+            "q": "Am Abend ___ ich fern. (fernsehen)",
+            "a": "sehe",
+            "choices": [
+              "sehe",
+              "fernsehe",
+              "sieht"
+            ],
+            "why": "بعد Am Abend الفعل ثانياً: sehe … fern. وsieht لـer."
           },
           {
-            "q": "«أنا متعب»؟",
-            "a": "Ich bin müde."
+            "q": "Nabil ___ Brot und Käse. (essen)",
+            "a": "isst",
+            "choices": [
+              "isst",
+              "ist",
+              "esse"
+            ],
+            "why": "يأكل ⇐ isst بـss."
+          },
+          {
+            "q": "Ich ___ am Montag ein. (einkaufen)",
+            "a": "kaufe",
+            "choices": [
+              "kaufe",
+              "einkaufe",
+              "kauft"
+            ],
+            "why": "ich kaufe … ein — البادئة ein تبقى في الآخر."
+          },
+          {
+            "q": "الترتيب: auf. / Wir / um neun / stehen",
+            "a": "Wir stehen um neun auf.",
+            "why": "الفاعل والفعل المصرَّف ثم الوقت ثم البادئة auf."
           }
         ],
         "passingScore": 0.75
@@ -176,20 +484,59 @@
       {
         "items": [
           {
-            "q": "«قطار وتذكرة»؟",
-            "a": "der Zug und die Fahrkarte"
+            "q": "Wann ___ du schlafen? (gehen)",
+            "a": "gehst",
+            "choices": [
+              "gehst",
+              "geht",
+              "gehe"
+            ],
+            "why": "مع du النهاية ‑st: du gehst."
           },
           {
-            "q": "«أنا أتسوّق»؟",
-            "a": "Ich kaufe ein."
+            "q": "Ich fahre, du fährst, er ___.",
+            "a": "fährt",
+            "choices": [
+              "fährt",
+              "fahrt",
+              "fähre"
+            ],
+            "why": "er fährt — الأوملاوت مع du وer فقط."
           },
           {
-            "q": "«هو يأخذ»؟",
-            "a": "er nimmt"
+            "q": "Er ___ nichts — er ist müde. (essen)",
+            "a": "isst",
+            "choices": [
+              "isst",
+              "ist",
+              "esst"
+            ],
+            "why": "لا يأكل شيئاً ⇐ isst. وist بعدها = يكون."
           },
           {
-            "q": "«العطلة»؟",
-            "a": "der Urlaub"
+            "q": "Ich ___ mein Zimmer auf. (aufräumen)",
+            "a": "räume",
+            "choices": [
+              "räume",
+              "aufräume",
+              "räumt"
+            ],
+            "why": "ich räume … auf — البادئة في الآخر."
+          },
+          {
+            "q": "Möchtest du lange ___?",
+            "a": "schlafen",
+            "choices": [
+              "schlafen",
+              "schläfst",
+              "schlafe"
+            ],
+            "why": "بعد möchtest يأتي المصدر schlafen في الآخر."
+          },
+          {
+            "q": "«نبيل يأخذ الحافلة» — بالألمانية؟",
+            "a": "Nabil nimmt den Bus.",
+            "why": "nehmen مع er ⇐ nimmt، وden Bus مفعول مذكر."
           }
         ],
         "passingScore": 0.75
@@ -198,53 +545,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einheit 7 gemeistert: Du konjugierst regelmäßig und unregelmäßig, trennst die Verben richtig — und dein Tag läuft perfekt!",
-      "ar": "الوحدة 7 متقنة: تصرّف المنتظم والشاذ وتفصل الأفعال بمكانها الصحيح — ويومك يسير مثالياً!"
+      "de": "Woche sieben ist zu Ende: Ich stehe um halb acht auf, du machst Tee, Nabil fährt mit dem Fahrrad und nimmt den Bus. Er isst nichts — er ist müde. Am Abend rufe ich an und kaufe ein. Am Sonntag möchte Lena früh aufstehen.",
+      "ar": "الوحدة السابعة اكتملت: تفصل البادئة إلى آخر الجملة، وتضع ‑st مع du و‑t مع er، وتغيّر الحركة في الشاذ (fährt · nimmt · isst)، وتفرّق isst عن ist، وتضع الفعل كاملاً بعد möchte."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich aufstehe.~~ / ~~er fahrt~~ / ~~du macht~~",
-          "ar": "الوحدة 7 في ثلاث جمل"
+          "de": "~~Ich aufstehe um sieben.~~ · ~~Ich möchte stehen früh auf.~~",
+          "ar": "البادئة في غير مكانها"
         },
-        "whyArabicSpeakerFails": "ثلاثة أنماط: انفصال البادئة، وumlaut في du/er، ونهايات -st/-t — كلها تغييرات داخل الكلمة لا تُنطق بالعربية (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الفعل العربي كلمة واحدة لا تنقسم («أنهض»)، والألماني يفصل البادئة إلى آخر الجملة الرئيسية (stehe … auf) ويعيد جمعها بعد möchte (aufstehen) — والخلط يعود في التوليف حين يجتمع الفعلان في سطر واحد (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "stehe auf · fährt · machst",
-          "ar": "النهاية · الـumlaut · النهايات"
+          "de": "Ich stehe um sieben auf. · Ich möchte früh aufstehen.",
+          "ar": "أنهض في السابعة · أريد أن أنهض باكراً"
         },
         "exercise": {
-          "q": "صحّح: ~~Ich aufstehe und du macht und er fahrt.~~",
-          "a": "Ich stehe auf, und du machst, und er fährt."
+          "q": "أكمل: Am Montag ___ ich ein, und ich möchte am Sonntag ___. (einkaufen)",
+          "a": "kaufe / einkaufen"
         }
       },
       {
         "commonError": {
-          "de": "~~Er isst müde.~~ / ~~Er ist Brot.~~",
-          "ar": "isst ↔ ist متشابهان"
+          "de": "~~er fahrt~~ · ~~du nehmst~~ · ~~du macht~~",
+          "ar": "النهاية بلا تغيير الحركة"
         },
-        "whyArabicSpeakerFails": "«يأكل» و«يكون» متماثلان صوتياً بالألماني؛ العربي يخلط بالسياق — اقرأ المعنى لا الصوت (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "المضارع العربي يغيّر البداية («يـ/تـ») لا داخل الكلمة، والألماني يغيّر النهاية (‑st/‑t) وفي الشاذ الحركة أيضاً مع du وer فقط (a⇐ä · e⇐i) — فيكتب المتعلم النهاية وينسى الحركة (خريطة التداخل 10‑ي)",
         "correct": {
-          "de": "Er isst Brot. / Er ist müde.",
-          "ar": "يأكل خبزاً. / هو متعب."
+          "de": "du machst · er macht · du fährst · er fährt · du nimmst · er nimmt",
+          "ar": "نهاية du ‑st ونهاية er ‑t، ومع الشاذ تتغيّر الحركة"
         },
         "exercise": {
-          "q": "أكمل: Er ___ Kuchen und ___ satt.",
+          "q": "أكمل: Lena ___ den Zug, und du ___ das Fahrrad. (nehmen)",
+          "a": "nimmt / nimmst"
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Nabil ist Brot.~~ · ~~Er isst müde.~~",
+          "ar": "isst وist صوت واحد"
+        },
+        "whyArabicSpeakerFails": "«يأكل» و«يكون» مختلفان تماماً بالعربية، وفي الألمانية يُنطقان سواء (isst/ist) — الأذن لا تميّز فيحسم المعنى: بعدها طعام ⇐ isst، بعدها صفة أو اسم ⇐ ist (خريطة التداخل 10‑ي)",
+        "correct": {
+          "de": "Nabil isst Brot. · Er ist müde.",
+          "ar": "نبيل يأكل خبزاً · هو متعب"
+        },
+        "exercise": {
+          "q": "أكمل: Lena ___ Käse, und sie ___ satt.",
           "a": "isst / ist"
-        }
-      },
-      {
-        "commonError": {
-          "de": "~~Ich möchte stehen auf.~~",
-          "ar": "möchte + infinitive مركّب في النهاية"
-        },
-        "whyArabicSpeakerFails": "«أريد أن أنهض» بـ«أن»؛ الألماني يجمع الفعل المنفصل في النهاية مع möchten — الوحدة 5 والوحدة 7 تلتقيان هنا (خريطة التداخل 10‑ي)",
-        "correct": {
-          "de": "Ich möchte aufstehen.",
-          "ar": "أريد أن أنهض."
-        },
-        "exercise": {
-          "q": "أكمل: Ich möchte am Samstag ___ (einkaufen).",
-          "a": "einkaufen"
         }
       }
     ],
@@ -275,7 +622,7 @@
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 (Alltag) — Wiederholung & Test",
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 7 — توليف الوحدة 7: يوم يوسف بكل أفعال الأسبوع",
     "goetheWordListOverlap": [
       "aufwachen",
       "machen"

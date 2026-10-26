@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-transfer-u14",
+  "level": "A1",
+  "unit": 14,
+  "items": [
+    {
+      "q": "«الحالة العائلية: أعزب»؟",
+      "a": "Familienstand: ledig.",
+      "choices": ["Familienstand: ledig.", "Familienstand: ledige.", "Familienstand: ledigen."],
+      "why": "ledig صفة محمولة بلا نهاية بعد النقطتين. والنهايات للأسماء الموصوفة."
+    },
+    {
+      "q": "«الرسالة طويلة»؟",
+      "a": "Der Brief ist lang.",
+      "choices": ["Der Brief ist lang.", "Der Brief ist lange.", "Das Brief ist lang."],
+      "why": "Brief مذكر ⇐ der. والصفة بعد ist بلا نهاية: lang."
+    },
+    {
+      "q": "«اضغط هنا!»؟",
+      "a": "Drücken Sie hier!",
+      "choices": ["Drücken Sie hier!", "Drücke Sie hier!", "Drücken Sie da!"],
+      "why": "الأمر المحترم بـSie ⇐ المصدر + Sie. وهنا = hier."
+    },
+    {
+      "q": "«المالك يصلح»؟",
+      "a": "Der Vermieter repariert.",
+      "choices": ["Der Vermieter repariert.", "Der Vermieter reparieren.", "Der Vermieter reparierst."],
+      "why": "الفاعل المفرد الغائب ⇐ t-: repariert. وreparieren للجمع."
+    }
+  ]
+}

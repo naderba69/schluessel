@@ -57,7 +57,7 @@
       "ars-zahlen-100"
     ],
     "storySentenceIds": [
-      "story-a3-u3-s1"
+      "story-a1-u3-s1"
     ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
@@ -113,9 +113,7 @@
           }
         ],
         "interleavedWith": [
-          "zahl",
-          "jahr",
-          "alt"
+          "zahl"
         ],
         "explanationRequired": true
       },
@@ -354,9 +352,9 @@
           }
         ],
         "interleavedWith": [
-          "gruppe",
-          "natuerlich",
-          "essen"
+          "essen",
+          "kommen",
+          "zahl"
         ],
         "explanationRequired": true
       },
@@ -413,9 +411,7 @@
           }
         ],
         "interleavedWith": [
-          "nummer",
-          "telefonnummer",
-          "wiederholen"
+          "leute"
         ],
         "explanationRequired": true
       }
@@ -426,7 +422,7 @@
         "ar": "العدّ حتى 100 وكتابة الأعداد حروفاً وأرقاماً"
       },
       "situation": {
-        "de": "Im Kurs: Lena und Yusuf sprechen über Oma.",
+        "de": "Im Kurs: Lena spricht über Oma. Wie alt ist sie?",
         "ar": "قبل الدرس عبر الإنترنت: يوسف يخبر لينا عن عيد ميلاد جدته الثمانين"
       },
       "successCriteria": [
@@ -666,7 +662,6 @@
   "gReferences": {
     "duden": [
       "https://www.duden.de/rechtschreibung/zwanzig",
-      "https://www.duden.de/rechtschreibung/drei%C3%9Fig",
       "https://www.duden.de/rechtschreibung/sechzig"
     ],
     "wiktionary": [

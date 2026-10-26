@@ -26,6 +26,7 @@ const Entry = z
     analogy: z.string().min(10),
     contexts: z.array(z.string().min(1)).min(2),
     regeneratedTracks: z.array(z.string().min(1)).min(1),
+    earReview: z.literal("تحت التحقق السمعي").optional(), // D189 (N-101 · Q24): مقيس بالمرجع، والأذن لم تحكم بعد
   })
   .strict();
 const Reviewed = z
@@ -81,6 +82,9 @@ const py = (body: string): unknown =>
     ),
   );
 
+const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+/** حدّ الكلمة في IPA كما في apply_lexicon (gen-audio.py: _IPA_EDGE) — مسافة/ترقيم/طرف */
+const wholeForm = (espeak: string) => new RegExp(`(?<![^\\s.,;:!?])${esc(nfd(espeak))}(?![^\\s.,;:!?])`, "gu");
 const wholeWordCI = (word: string) => new RegExp(`(?<![\\p{L}])${word}(?![\\p{L}])`, "iu");
 /** (5) مسارات تذكر الكلمة نصاً ولا يمسّها المعجم = الكلمة تُنطق فيها بصيغة لا يعرفها المعجم (تبقى خاطئة بصمت) */
 const unknownForm = (word: string, tracks: { id: string; textDe: string }[], touched: readonly string[]) =>
@@ -108,8 +112,8 @@ describe("D121/D122 — معجم النطق", () => {
       const present = e.forms.filter((f) => raw[i]!.includes(nfd(f.espeak)));
       expect(present.length, `espeak لم يعد يخطئ في «${c}» — احذف الصيغة أو المدخل ${e.word}`).toBeGreaterThan(0);
       present.forEach((f) => exercised.add(`${e.word}|${f.espeak}`));
-      let expected = raw[i]!;
-      for (const f of e.forms) expected = expected.replaceAll(nfd(f.espeak), nfd(f.ipa));
+      let expected = raw[i]!; // لا يتغير في الجملة إلا كلمات المعجم (سياق Bahnsteig يحوي Flughafen — مدخل آخر منذ D189)
+      for (const f of lex.entries.flatMap((x) => x.forms)) expected = expected.replace(wholeForm(f.espeak), nfd(f.ipa));
       expect(fixed[i], c).toBe(expected);
       for (const f of e.forms) expect(fixed[i]).not.toContain(nfd(f.espeak));
     });
@@ -148,7 +152,7 @@ describe("D121/D122 — معجم النطق", () => {
       [
         "out = {}",
         "for vid, onnx in ga.VOICES.items():",
-        "    v = ga.load_voice(onnx); m = v.config.phoneme_id_map",
+        "    v = ga.load_phonemizer(onnx); m = v.config.phoneme_id_map",
         "    s = ''.join(''.join(x) for x in ga.synth_phonemes(v, 'Er ist vierzig.'))",
         "    out[vid] = {'ipa': s, 'missing': sorted({c for c in s if c not in m})}",
         "print(json.dumps(out, ensure_ascii=False))",
@@ -174,7 +178,7 @@ describe("D121/D122 — معجم النطق", () => {
       // (5) كل مسار يذكر الكلمة نصاً يحويها بصيغة يعرفها المعجم — وإلا فصيغة سياق جديدة تُنطق خطأً بصمت
       expect(unknownForm(e.word, manifest.tracks, touched), `«${e.word}» بصيغة غير معروفة`).toEqual([]);
     }
-  });
+  }, 120_000); // D208: فونمة 2600+ نص في عملية واحدة — مهلة vitest الافتراضية (5s) انفجرت على CI (فشل مؤقت لا ادعاء)
 
   it("D131 · D132: كل عدد من كلمة واحدة في مسار منشور يُنطق صحيحاً — v في ‑vierzig [f] وie قصيرة · لا نبر ثانوي على ‑zig (sieben‑) · h في achthundert", () => {
     // قياس D131 على الصيغ الاثنتين والسبعين: espeak يقرأ ‑undvierzig بـ[v] وiː طويلة (9/9) ويضع نبر sieben‑ الثانوي على ‑zig (8/8)
@@ -208,7 +212,7 @@ describe("D121/D122 — معجم النطق", () => {
         "    if e['word'] == 'vor': e['forms'] = e['forms'][:1]",
         "p = pathlib.Path(tempfile.mkdtemp()) / 'lex.json'; p.write_text(json.dumps(lex, ensure_ascii=False), encoding='utf-8')",
         "ga.PRON_LEXICON = p; ga._LEXICON = None",
-        "v = ga.load_voice(ga.VOICE_ONNX)",
+        "v = ga.load_phonemizer(ga.VOICE_ONNX)",
         `print(json.dumps({t: sorted({w for s in v.phonemize(t) for w in ga.lexicon_hits(s)}) for t in ${JSON.stringify(tracks.map((t) => t.textDe))}}))`,
       ].join("\n"),
     ) as Record<string, string[]>;
@@ -224,12 +228,45 @@ describe("D121/D122 — معجم النطق", () => {
         "lex = json.load(open(ga.PRON_LEXICON, encoding='utf-8'))['entries']",
         "out = {}",
         "for vid, onnx in ga.VOICES.items():",
-        "    m = ga.load_voice(onnx).config.phoneme_id_map",
+        "    m = ga.load_phonemizer(onnx).config.phoneme_id_map",
         "    out[vid] = sorted({ch for e in lex for f in ga.lexicon_forms(e) for ch in ga.fit_phonemes(list(f['ipa']), m)[0] if ch not in m})",
         "print(json.dumps(out, ensure_ascii=False))",
       ].join("\n"),
     ) as Record<string, string[]>;
     expect(Object.keys(missing)).toHaveLength(2);
     for (const [voice, chars] of Object.entries(missing)) expect(chars, voice).toEqual([]);
+  });
+  it("D189 (N-101): قائمة «تحت التحقق السمعي» معلنة ومثبَّتة — إجهار النهاية داخل المركّبات + Bäckerei (‑erei) + فئة الطول الخمسة (N-039/N-012 · D239) + الإطباق النهائي (Job · D241)", () => {
+    // التسعة عشر مدخلاً مقيسة بالمرجع (كاشف devoicing في pronunciation-audit.py) لا بالأذن؛ المالك يحكم قبل الإطلاق
+    // (Q24). تغيير القائمة (حكم سمعي · مدخل جديد من الكاشف) يغيّر هذا الاختبار عمداً — لا قبول صامت.
+    const pending = lex.entries.filter((e) => e.earReview).map((e) => e.word).sort();
+    expect(pending).toEqual(
+      ["Arabisch", "Bäckerei", "Datum", "Ergebnis", "Erlaubnis", "Flughafen", "Freundschaft", "Job", "Landschaft", "Mädchen", "Portugal", "Spanien", "Zeugnis", "Projekt", "damals", "dreiundsechzig", "dreiundsiebzig", "neunhundertneunundneunzig", "neunundneunzig", "zweihundertneunundsiebzig"].sort(), // D319: +Erlaubnis (إجهار b←p) // D318: +Projekt (طول o — فئة الطول) // D316: +Zeugnis (إجهار g←k)
+    );
+    // كل مدخل منها يهمس صامتاً واحداً (b/d/ɡ ← p/t/k) أو يعيد شوا ‑erei (eː ← ə) — لا يغيّر شيئاً آخر في الكلمة
+    // فئة الطول (D239): الفرق الوحيد علامة الطول ː تُضاف/تُحذف — وDatum وحده يبدّل uː ← ʊ معها (سابقة Badezimmer)
+    const dev: Record<string, string> = { b: "p", d: "t", "\u0261": "k" };
+    const lengthClass = new Set(["Portugal", "Arabisch", "damals", "Datum", "Spanien", "Projekt"]) // D318: +Projekt;
+    for (const e of lex.entries.filter((x) => x.earReview))
+      for (const f of e.forms) {
+        if (e.word === "Bäckerei") {
+          expect(f.ipa).toBe(f.espeak.replace("eː", "ə"));
+          continue;
+        }
+        if (lengthClass.has(e.word)) {
+          const strip = (s: string) => [...nfd(s)].filter((c) => c !== "ː").join("");
+          const sa = strip(f.espeak), sb = [...strip(f.ipa)];
+          if (e.word === "Datum") {
+            expect(sb.length, e.word).toBe(sa.length);
+            expect([...sa].map((c, i) => [c, sb[i]] as const).filter(([x, y]) => x !== y)).toEqual([["u", "ʊ"]]);
+          } else expect(strip(f.ipa), e.word).toBe(sa);
+          continue;
+        }
+        const a = [...nfd(f.espeak)], b = [...nfd(f.ipa)];
+        expect(b.length, e.word).toBe(a.length);
+        const diff = a.map((c, i) => [c, b[i]!] as const).filter(([x, y]) => x !== y);
+        expect(diff.length, `${e.word}: صامت واحد فقط`).toBe(1);
+        expect(dev[diff[0]![0]], e.word).toBe(diff[0]![1]);
+      }
   });
 });

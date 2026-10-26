@@ -12,7 +12,10 @@ import { dexieLearnerStore, type LearnerStore } from "../src/stores/learner-stor
 import { setAudioPlayer } from "../src/lib/audio-player.js";
 import { createInitialState } from "../src/lib/state-factory.js";
 import { reconcileState } from "../src/lib/lesson-path.js";
-import { ALL_GRAMMAR_RULES, ALL_LESSONS, LESSON_ORDER } from "../src/lesson-packs.js";
+import { LESSON_ORDER, loadAllGrammarRules, loadAllLessons } from "../src/lesson-packs.js";
+const ALL_GRAMMAR_RULES = await loadAllGrammarRules();
+const ALL_LESSONS = await loadAllLessons();
+
 import { visibleText } from "../src/lib/struck-text.js";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
@@ -24,6 +27,7 @@ const lesson = (id: string): Lesson => ALL_LESSONS.find((l) => l.id === id)!;
 
 beforeEach(() => {
   setAudioPlayer({ play: async () => "none" });
+  window.location.hash = ""; // N-155: عزل وضع المطوّر بين الاختبارات
   container = document.createElement("div");
   document.body.appendChild(container);
   root = createRoot(container);
@@ -63,7 +67,7 @@ const station = () => q("lesson-session")?.getAttribute("data-station");
 
 async function boot(store: LearnerStore) {
   await act(async () => root.render(<App store={store} />));
-  await waitFor(() => !q("boot-loading"), "انتهاء التحميل");
+  await waitFor(() => !q("boot-loading") && !q("first-loading"), "انتهاء التحميل");
 }
 
 /** محطة تلو محطة: «التالي» معطَّل قبل الإكمال ثم يعمل — والاستراحة بين المحطات */
@@ -151,7 +155,7 @@ const wrongOf = (it: QuizItem) => (it.choices ? it.choices.find((c) => c !== it.
 async function startSession() {
   await click(q("start-session"), "ابدأ الحصة");
   if (q("jit-overlay")) await click(q("jit-dismiss"), "فهمت");
-  expect(q("lesson-session")).not.toBeNull();
+  await waitFor(() => !!q("lesson-session"), "فتح الحصة");
 }
 
 async function throughStations(id: string) {
@@ -172,17 +176,25 @@ describe("الرحلة كاملة — أول تشغيل ← درس كامل ← 
     const store = dexieLearnerStore(openDb(name));
     await boot(store);
 
-    // أول تشغيل: الترحيب ← الاسم ← بطاقات اليوم الأول ← شاشة أول درس (كانت تُتخطّى) ← اللوحة
+    // أول تشغيل: الترحيب ← الاسم ← الرحلة (تخطٍّ) ← النوافذ (تأجيل) ← بطاقات اليوم الأول ← شاشة أول درس ← اللوحة
     await click(byText("لنبدأ"), "لنبدأ");
     await type(container.querySelector('input[aria-label="اسم المتعلم"]'), "يوسف");
     await click(byText("أنا جاهز"), "أنا جاهز");
-    expect(container.querySelector('[data-screen="ask-name"]')).toBeNull();
+    expect(container.querySelector('[data-screen="journey-name"]')).not.toBeNull(); // N-151: خطوة الرحلة
+    await click(q("journey-next"), "تابع بلا اسم رحلة");
+    expect(container.querySelector('[data-screen="coach-windows"]')).not.toBeNull(); // N-151: خطوة النوافذ
+    await click(q("windows-defer"), "تأجيل النوافذ");
     while (byText("التالية")) await click(byText("التالية"), "التالية");
     await click(byText("إلى أول درس"), "إلى أول درس");
     expect(container.querySelector('[data-screen="first-lesson"]')).not.toBeNull();
     await click(q("first-lesson-start"), "إلى حصة اليوم");
     expect(q("current-lesson")!.getAttribute("data-lesson-id")).toBe("a1-u1-d1");
     await waitFor(async () => (await store.load())?.profile.name === "يوسف", "حفظ الاسم");
+    // N-148 (D252): عبارة اليوم في تبويب المدرب (§2.10 · N-155) — تظهر مع وصول الحزمة
+    await click(q("tab-coach"), "تبويب المدرب");
+    await waitFor(() => !!q("coach-phrase"), "عبارة اليوم على القائمة");
+    expect(q("coach-phrase")!.textContent).toContain("Heute:");
+    await click(q("tab-today"), "عودة لليوم");
 
     await startSession();
     const l = await throughStations("a1-u1-d1");
@@ -210,6 +222,13 @@ describe("الرحلة كاملة — أول تشغيل ← درس كامل ← 
     await boot(dexieLearnerStore(openDb(name)));
     expect(byText("لنبدأ")).toBeNull();
     expect(q("current-lesson")!.getAttribute("data-lesson-id")).toBe(next);
+    // القائمة الكاملة في لوحة النظام (تبويب المسار — N-149 · خلف #labs منذ N-155): تُفتح وتُفحص حالات الدروس
+    await act(async () => {
+      window.location.hash = "#labs";
+      window.dispatchEvent(new Event("hashchange"));
+    });
+    await waitFor(() => !!q("stab-path"), "تبويبات اللوحة");
+    await click(q("stab-path"), "تبويب المسار");
     expect(container.querySelector('[data-lesson-id="a1-u1-d1"][data-status="completed"]')).not.toBeNull();
     expect(container.querySelector(`li[data-lesson-id="${next}"][data-status="available"]`)).not.toBeNull();
     expect(container.querySelector(`li[data-lesson-id="${LESSON_ORDER[2]}"][data-status="locked"]`)).not.toBeNull();
@@ -239,11 +258,13 @@ describe("«ليس بعد» — مراجعة ثم نسخة أخرى · النس�
     expect(q("finished-note")!.textContent).toContain("الدرس يبقى مفتوحاً");
     expect(q("current-lesson")!.getAttribute("data-lesson-id")).toBe("a1-u1-d1");
 
-    // حصة 2: تبدأ بالنسخة 2 (محاولة سابقة واحدة) ← 3 ← 1 ← السقف (3 محاولات في هذه الحصة)
+    // حصة 2 (N-006: استئناف): تبدأ من close بنتيجة الحصة 1 + زر الإعادة ← النسخ 2←3←1 ← السقف
     await startSession();
-    await throughStations("a1-u1-d1");
-    for (const [i, v] of [1, 2, 0].entries()) {
-      if (i > 0) await click(q("quiz-retry"), "النسخة التالية");
+    expect(station()).toBe("close");
+    expect(q("quiz-station")!.getAttribute("data-phase")).toBe("result");
+    expect(q("quiz-station")!.getAttribute("data-passed")).toBe("no");
+    for (const v of [1, 2, 0]) {
+      await click(q("quiz-retry"), "النسخة التالية");
       expect(version()).toBe(String(v + 1));
       await doQuiz(l.quiz.variants[v]!.items, wrongOf);
       expect(q("quiz-station")!.getAttribute("data-passed")).toBe("no");
@@ -255,10 +276,18 @@ describe("«ليس بعد» — مراجعة ثم نسخة أخرى · النس�
     const saved = (await store.load())!;
     expect(saved.progress.completedLessons).toEqual([]);
     expect(saved.progress.gateResults.map((g) => [g.passed, g.attempts])).toEqual([[false, 1], [false, 2], [false, 3], [false, 4]]);
+    // N-150 (D250): الإجابات الخاطئة التُقطت في الدفتر الذهبي تلقائياً (§2.7)
+    const sources = saved.errors.map((e) => e.payload.source);
+    expect(sources.some((x) => x.includes("a1-u1-d1/quiz"))).toBe(true);
+    expect(sources.some((x) => x.includes("a1-u1-d1/practice"))).toBe(true);
+    expect(saved.errors[0]!.kind).toBe("systematic");
+    expect(saved.errors.every((e) => !e.resolved)).toBe(true);
 
-    // حصة 3: المحاولة الخامسة = النسخة 2 (4 mod 3) — وبالإجابات الصحيحة تُفتح a1-u1-d2
+    // حصة 3 (N-006: استئناف): نتيجة الحصة 2 حاضرة والسقف جلوسٌ جديد ← الإعادة = النسخة 2 (4 mod 3) ← نجاح
     await startSession();
-    await throughStations("a1-u1-d1");
+    expect(station()).toBe("close");
+    expect(q("quiz-station")!.getAttribute("data-phase")).toBe("result");
+    await click(q("quiz-retry"), "النسخة التالية");
     expect(version()).toBe("2");
     await doQuiz(l.quiz.variants[1].items, (it) => it.a);
     expect(q("quiz-station")!.getAttribute("data-passed")).toBe("yes");

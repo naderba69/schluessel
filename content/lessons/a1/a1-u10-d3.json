@@ -6,11 +6,12 @@
   "day": 3,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst über gestern erzählen (Perfekt mit haben): Gestern habe ich einen Brief geschrieben.",
-    "ar": "تحكي ماذا فعلت أمس بالماضي المركب (haben + التصريف الثالث)"
+    "de": "Was hast du gestern gemacht? — Gestern habe ich Deutsch gelernt. · Ich habe einen Brief geschrieben. · Wir haben das Spiel gewonnen. · Vorgestern hat es geregnet. · Früher habe ich viel Fußball gespielt.",
+    "ar": "تحكي ما فعلتَ أمس بالماضي المركّب مع haben: haben مصرَّفاً في الموضع الثاني (habe · hast · hat · haben) والتصريف الثالث في آخر الجملة — المنتظم ge‑ + الجذع + ‑t (gemacht · gelernt · gesagt · gefragt · geholt · gearbeitet) والقوي ge‑ + جذع قد يتغيّر + ‑en يُحفظ (gegessen · geschrieben · genommen · gelesen · geschlafen · gewonnen) والمختلط gebracht · gedacht — مع ظروف الزمن gestern · vorgestern · letzte Woche · früher والسؤال Was hast du gestern gemacht? — ومعها der Brief · das Paket · der Spaziergang."
   },
   "canDoDaily": [
-    "يحكي 3 أفعال أمس بصيغة Perfekt (habe + التصريف في النهاية)"
+    "يسأل ويجيب عن الأمس بثلاث جمل Perfekt صحيحة: Was hast du gestern gemacht? — Gestern habe ich Deutsch gelernt. · Ich habe einen Brief geschrieben. · Am Abend habe ich einen Spaziergang gemacht.",
+    "يقدّم ظرف الزمن ويقلب الفاعل ويترك التصريف في الآخر: Vorgestern hat es geregnet. · Letzte Woche habe ich viel gearbeitet. · Früher habe ich viel Fußball gespielt. — ويفرّق المنتظم (gemacht) من القوي (gegessen · genommen) والمختلط (gebracht · gedacht)."
   ],
   "warmup": {
     "cardIds": [
@@ -23,14 +24,14 @@
     "pretestItems": [
       {
         "prompt": {
-          "de": "«أمس كتبت رسالة» — أين يذهب geschrieben؟"
+          "de": "«أمس كتبتُ رسالة» — أين يذهب geschrieben؟ (تخمين فقط)"
         },
         "choices": [
-          "Gestern habe ich einen Brief geschrieben (آخر الجملة)",
-          "Gestern habe ich geschrieben einen Brief",
-          "Gestern geschrieben habe ich einen Brief"
+          "Gestern habe ich einen Brief geschrieben.",
+          "Gestern habe ich geschrieben einen Brief.",
+          "Gestern ich habe einen Brief geschrieben."
         ],
-        "answer": "Gestern habe ich einen Brief geschrieben (آخر الجملة)",
+        "answer": "Gestern habe ich einen Brief geschrieben.",
         "revealNextSession": true
       }
     ],
@@ -49,85 +50,611 @@
       "denken",
       "brief",
       "paket",
-      "spaziergang"
+      "spaziergang",
+      "frueher",
+      "gewinnen"
     ],
     "grammarArsenalIds": [
       "ars-perfekt-haben"
     ],
     "storySentenceIds": [
-      "story-a10-u10-s3"
+      "story-a1-u10-s3"
     ],
     "dualCodingRequired": true,
-    "riskFlagsShown": []
+    "riskFlagsShown": [
+      "sp-st-initial",
+      "v-f",
+      "umlaut-u",
+      "r-uvular",
+      "double-consonant"
+    ]
   },
   "uebung": {
     "stations": [
       {
-        "type": "choice",
+        "type": "gap-fill",
         "items": [
           {
-            "q": "«أمس تعلمت الألمانية»؟",
-            "a": "Gestern habe ich Deutsch gelernt."
+            "q": "Gestern ___ ich Deutsch gelernt. (haben — ich)",
+            "a": "habe",
+            "why": "haben مصرَّفاً في الموضع الثاني: ich habe — والتصريف الثالث gelernt في الآخر."
           },
           {
-            "q": "«أول أمس كنت في البيت»؟",
-            "a": "Vorgestern war ich zu Hause."
+            "q": "Was ___ du gestern gemacht? (haben — du)",
+            "a": "hast",
+            "why": "السؤال: Was + hast + du + … + gemacht? — du hast."
+          },
+          {
+            "q": "Mein Onkel hat ___: Ich komme nicht. (sagen)",
+            "a": "gesagt",
+            "why": "منتظم: ge‑ + sag + ‑t = gesagt — والقول بعد النقطتين (hat ثانياً)."
+          },
+          {
+            "q": "Wir ___ Fisch gekocht. (haben — wir)",
+            "a": "haben",
+            "why": "wir haben — الجمع بلا تغيير، والتصريف gekocht في الآخر."
+          },
+          {
+            "q": "Yusuf ___ in Tunis Deutsch gelernt. (haben — er)",
+            "a": "hat",
+            "why": "er hat — يوسف في تونس (u10-d1) والتصريف gelernt في الآخر."
+          },
+          {
+            "q": "Ihr ___ gestern gewonnen? (haben — ihr)",
+            "a": "habt",
+            "why": "ihr habt — gewonnen (قوي: gewinnen → gewonnen) في الآخر."
+          },
+          {
+            "q": "Ich habe Hausaufgaben ___. (machen)",
+            "a": "gemacht",
+            "why": "المنتظم: ge‑ + mach + ‑t = gemacht."
+          },
+          {
+            "q": "Gestern habe ich Deutsch ___. (lernen)",
+            "a": "gelernt",
+            "why": "ge‑ + lern + ‑t = gelernt — في آخر الجملة."
+          },
+          {
+            "q": "Ich habe den Mann ___. (fragen)",
+            "a": "gefragt",
+            "why": "منتظم: ge‑ + frag + ‑t = gefragt — den Mann مفعولاً."
+          },
+          {
+            "q": "Sie hat ein Paket ___. (holen)",
+            "a": "geholt",
+            "why": "منتظم: ge‑ + hol + ‑t = geholt."
+          },
+          {
+            "q": "Letzte Woche habe ich viel ___. (arbeiten — بعد t تأتي ‑et)",
+            "a": "gearbeitet",
+            "why": "الجذع ينتهي بـt فالنهاية ‑et: gearbeitet (كـer arbeitet)."
+          },
+          {
+            "q": "Vorgestern hat es ___. (regnen)",
+            "a": "geregnet",
+            "why": "ge‑ + regn + ‑et (بعد n+g الثقيلة ‑et كـes regnet) = geregnet — مع es الشكلي (u10-d1)."
+          },
+          {
+            "q": "Ich habe einen Brief ___. (schreiben)",
+            "a": "geschrieben",
+            "why": "القوي: ge‑ + جذع متغيّر schrieb + ‑en = geschrieben — يُحفظ."
+          },
+          {
+            "q": "Ich habe den Zug ___. (nehmen)",
+            "a": "genommen",
+            "why": "القوي: nehmen → genommen (الجذع يتغيّر) — يُحفظ."
+          },
+          {
+            "q": "Wir haben das Spiel ___. (gewinnen)",
+            "a": "gewonnen",
+            "why": "القوي: gewinnen → gewonnen — i تصير o."
+          },
+          {
+            "q": "Hast du den Brief ___? (lesen)",
+            "a": "gelesen",
+            "why": "القوي: lesen → gelesen — الجذع كما هو والنهاية ‑en."
+          },
+          {
+            "q": "Wir haben Fisch ___. (essen)",
+            "a": "gegessen",
+            "why": "القوي: essen → gegessen (بـg مضاعفة: ge‑ + gessen)."
+          },
+          {
+            "q": "Mia hat ___. (schlafen)",
+            "a": "geschlafen",
+            "why": "القوي: schlafen → geschlafen — الجذع كما هو والنهاية ‑en."
+          },
+          {
+            "q": "Meine Mutter hat das Paket ___. (bringen)",
+            "a": "gebracht",
+            "why": "المختلط: bringen → gebracht — الجذع يتغيّر والنهاية ‑t."
+          },
+          {
+            "q": "Ich habe an dich ___. (denken)",
+            "a": "gedacht",
+            "why": "المختلط: denken → gedacht — الجذع يتغيّر والنهاية ‑t."
+          },
+          {
+            "q": "Heute ist Freitag. ___ habe ich Deutsch gelernt — am Donnerstag. (أمس)",
+            "a": "Gestern",
+            "why": "gestern = أمس — اليوم الجمعة فأمس الخميس؛ وبعده habe ich (القلب)."
+          },
+          {
+            "q": "Gestern habe ich gelernt und ___ Fußball gespielt. (أول أمس — الأربعاء)",
+            "a": "vorgestern",
+            "why": "vorgestern = أول أمس (vor + gestern) — الأربعاء."
+          },
+          {
+            "q": "___ Woche habe ich viel gearbeitet. (الأسبوع الماضي)",
+            "a": "Letzte",
+            "why": "letzte Woche = الأسبوع الماضي — letzt- بـ‑e مع die Woche."
+          },
+          {
+            "q": "___ habe ich viel Fußball gespielt — jetzt nicht mehr. (سابقاً)",
+            "a": "Früher",
+            "why": "früher = سابقاً (من früh) — ظرف زمن أولاً فينقلب الفاعل: habe ich."
+          },
+          {
+            "q": "Ich habe einen ___ geschrieben — an meine Lehrerin. (رسالة)",
+            "a": "Brief",
+            "why": "der Brief = الرسالة البريدية — einen Brief مفعولاً."
+          },
+          {
+            "q": "Meine Oma hat ein ___ geschickt — ein Buch. (طرد)",
+            "a": "Paket",
+            "why": "das Paket = الطرد — ein Paket (محايد)."
+          },
+          {
+            "q": "Am Abend habe ich einen ___ gemacht. (نزهة)",
+            "a": "Spaziergang",
+            "why": "einen Spaziergang machen = يتنزّه — der Spaziergang مذكر."
           }
         ],
         "interleavedWith": [
-          "gestern",
-          "lernen"
+          "deutsch",
+          "fisch",
+          "mutter",
+          "mann",
+          "zug",
+          "spiel",
+          "woche",
+          "abend",
+          "fussball",
+          "lehrerin",
+          "oma",
+          "buch",
+          "machen",
+          "arbeiten",
+          "regnen",
+          "schreiben",
+          "nehmen",
+          "lesen",
+          "essen",
+          "schlafen"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "listening",
         "items": [
           {
-            "q": "«سألت الطبيب»؟",
-            "a": "Ich habe den Arzt gefragt."
+            "audioId": "wg-4",
+            "speakText": "Am Abend habe ich mit meiner Mutter gekocht. Wir haben Fisch gemacht.",
+            "q": "استمع: ماذا فعل يوسف أمس في المساء؟",
+            "choices": [
+              "طبخ مع أمه — سمكاً",
+              "تعلّم الألمانية ساعتين",
+              "كتب رسالة"
+            ],
+            "a": "طبخ مع أمه — سمكاً",
+            "why": "Am Abend habe ich mit meiner Mutter gekocht. Wir haben Fisch gemacht. — gekocht وgemacht في الآخر."
           },
           {
-            "q": "«هذا قلته»؟",
-            "a": "Das habe ich gesagt."
+            "audioId": "wg-5",
+            "speakText": "Gut! Ich habe gestern Hausaufgaben gemacht — und ich habe im Restaurant gefragt: Haben Sie am Samstag einen Tisch?",
+            "q": "استمع: ماذا سألت لينا في المطعم؟",
+            "choices": [
+              "هل عندكم طاولة يوم السبت؟",
+              "هل الطعام جاهز؟",
+              "كم الساعة؟"
+            ],
+            "a": "هل عندكم طاولة يوم السبت؟",
+            "why": "ich habe im Restaurant gefragt: Haben Sie am Samstag einen Tisch? — طاولة عيد الميلاد (u10-d2)."
+          },
+          {
+            "audioId": "wg-6",
+            "speakText": "Und? Was hat der Mann gesagt?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "ماذا قال الرجل في المطعم",
+              "ماذا أكلت لينا",
+              "أين المطعم"
+            ],
+            "a": "ماذا قال الرجل في المطعم",
+            "why": "Was hat der Mann gesagt? — hat ثانياً وgesagt في الآخر."
+          },
+          {
+            "audioId": "wg-7",
+            "speakText": "Er hat gesagt: Ja, am Samstag ist ein Tisch frei. Und mein Onkel hat gesagt: Ich komme nicht.",
+            "q": "استمع: ماذا قال العم؟",
+            "choices": [
+              "لا آتي",
+              "آتي بالقطار",
+              "أعمل يوم الأحد"
+            ],
+            "a": "لا آتي",
+            "why": "mein Onkel hat gesagt: Ich komme nicht. — الاعتذار الأول (u10-d2)."
+          },
+          {
+            "audioId": "wg-8",
+            "speakText": "Die erste Absage — ich weiß. Und was hast du vorgestern gemacht?",
+            "q": "استمع: عمّ يسأل يوسف الآن؟",
+            "choices": [
+              "عمّا فعلته لينا أول أمس",
+              "عن عيد الميلاد",
+              "عن الطقس"
+            ],
+            "a": "عمّا فعلته لينا أول أمس",
+            "why": "Und was hast du vorgestern gemacht? — vorgestern = أول أمس."
+          },
+          {
+            "audioId": "wg-9",
+            "speakText": "Vorgestern? Da hat es geregnet. Ich habe den Bus genommen und in der Schule Fußball gespielt — und wir haben gewonnen!",
+            "q": "استمع: ماذا فعلت لينا أول أمس؟",
+            "choices": [
+              "أخذت الحافلة ولعبت كرة القدم في المدرسة — وفازوا",
+              "ذهبت بالدراجة إلى المدرسة",
+              "قرأت كتاباً في البيت"
+            ],
+            "a": "أخذت الحافلة ولعبت كرة القدم في المدرسة — وفازوا",
+            "why": "Da hat es geregnet. Ich habe den Bus genommen und … Fußball gespielt — und wir haben gewonnen! — ثلاث جمل ماضٍ متتالية."
+          },
+          {
+            "audioId": "wg-11",
+            "speakText": "Und du? Was hast du vorgestern gemacht?",
+            "q": "استمع: ماذا تسأل لينا؟",
+            "choices": [
+              "ماذا فعل يوسف أول أمس",
+              "ماذا يفعل يوسف غداً",
+              "أين يوسف الآن"
+            ],
+            "a": "ماذا فعل يوسف أول أمس",
+            "why": "Und du? Was hast du vorgestern gemacht? — السؤال نفسه يعود إلى يوسف."
+          },
+          {
+            "audioId": "wg-12",
+            "speakText": "Vorgestern habe ich mit meiner Schwester am Ufer Fotos gemacht. Ich habe an dich gedacht — bei dir hat es geregnet.",
+            "q": "استمع: ماذا فعل يوسف أول أمس؟",
+            "choices": [
+              "صوّر مع أخته على الضفة وفكّر في لينا",
+              "لعب كرة القدم",
+              "طبخ مع أبيه"
+            ],
+            "a": "صوّر مع أخته على الضفة وفكّر في لينا",
+            "why": "mit meiner Schwester am Ufer Fotos gemacht · Ich habe an dich gedacht — الضفة كما وعد (u10-d1)."
+          },
+          {
+            "audioId": "wg-14",
+            "speakText": "Ja! Ich habe gestern einen Brief geschrieben — an meine Lehrerin in Berlin.",
+            "q": "استمع: لمن كتب يوسف الرسالة؟",
+            "choices": [
+              "لمعلّمته في برلين",
+              "لجدّته",
+              "لأخته"
+            ],
+            "a": "لمعلّمته في برلين",
+            "why": "einen Brief geschrieben — an meine Lehrerin in Berlin (المعلّمة في برلين)."
+          },
+          {
+            "audioId": "wg-15",
+            "speakText": "Schön. Und ich habe heute ein Paket geholt — von meiner Oma.",
+            "q": "استمع: ماذا أخذت لينا اليوم؟",
+            "choices": [
+              "طرداً من جدّتها",
+              "رسالة من يوسف",
+              "كتاباً من المدرسة"
+            ],
+            "a": "طرداً من جدّتها",
+            "why": "ich habe heute ein Paket geholt — von meiner Oma (من الجدّة)."
+          },
+          {
+            "audioId": "wg-16",
+            "speakText": "Ein Paket? Was hat sie geschickt?",
+            "q": "استمع: ماذا يسأل يوسف عن الطرد؟",
+            "choices": [
+              "ماذا أرسلت الجدة",
+              "كم ثمن الطرد",
+              "متى وصل الطرد"
+            ],
+            "a": "ماذا أرسلت الجدة",
+            "why": "Was hat sie geschickt? — hat ثانياً وgeschickt في الآخر (schicken u7-d3)."
+          },
+          {
+            "audioId": "wg-17",
+            "speakText": "Ein Buch. Meine Mutter hat das Paket von der Post gebracht.",
+            "q": "استمع: ما في الطرد ومن جلبه؟",
+            "choices": [
+              "كتاب — أمها جلبته من البريد",
+              "فستان — جدتها جلبته",
+              "كتاب — يوسف أرسله"
+            ],
+            "a": "كتاب — أمها جلبته من البريد",
+            "why": "Ein Buch. Meine Mutter hat das Paket von der Post gebracht. — gebracht مختلط."
+          },
+          {
+            "audioId": "wg-18",
+            "speakText": "Und was hast du heute noch gemacht?",
+            "q": "استمع: عمّ يسأل يوسف؟",
+            "choices": [
+              "ماذا فعلت لينا اليوم أيضاً",
+              "ماذا تفعل لينا غداً",
+              "ماذا أكلت لينا اليوم"
+            ],
+            "a": "ماذا فعلت لينا اليوم أيضاً",
+            "why": "Und was hast du heute noch gemacht? — heute noch = اليوم أيضاً."
+          },
+          {
+            "audioId": "wg-20",
+            "speakText": "Und ich habe mit meinem Vater einen Spaziergang gemacht. Bis morgen, Lena!",
+            "q": "استمع: مع من تنزّه يوسف؟",
+            "choices": [
+              "مع أبيه",
+              "مع أخته",
+              "مع أمه"
+            ],
+            "a": "مع أبيه",
+            "why": "mit meinem Vater einen Spaziergang gemacht — مع الأب (einen Spaziergang machen)."
           }
         ],
         "interleavedWith": [
-          "fragen",
-          "sagen"
+          "mutter",
+          "fisch",
+          "restaurant",
+          "tisch",
+          "onkel",
+          "bus",
+          "schule",
+          "schwester",
+          "ufer",
+          "foto",
+          "lehrerin",
+          "oma",
+          "buch",
+          "post",
+          "vater"
         ],
         "explanationRequired": true
       },
       {
-        "type": "choice",
+        "type": "build-sentence",
         "items": [
           {
-            "q": "«جلبت الطرد»؟",
-            "a": "Ich habe das Paket gebracht."
+            "tokens": [
+              "gelernt.",
+              "Deutsch",
+              "ich",
+              "habe",
+              "Gestern"
+            ],
+            "a": "Gestern habe ich Deutsch gelernt.",
+            "why": "Gestern أولاً ← habe ثانياً ← ich ← Deutsch ← gelernt يغلق القوس."
           },
           {
-            "q": "«خرجت في نزهة»؟",
-            "a": "Ich habe einen Spaziergang gemacht."
+            "tokens": [
+              "gemacht?",
+              "gestern",
+              "du",
+              "hast",
+              "Was"
+            ],
+            "a": "Was hast du gestern gemacht?",
+            "why": "Was ← hast ← du ← gestern ← gemacht في الآخر — سؤال الماضي."
+          },
+          {
+            "tokens": [
+              "geschrieben.",
+              "Brief",
+              "einen",
+              "habe",
+              "Ich"
+            ],
+            "a": "Ich habe einen Brief geschrieben.",
+            "why": "Ich habe ← einen Brief ← geschrieben (قوي) في الآخر."
+          },
+          {
+            "tokens": [
+              "gewonnen!",
+              "Spiel",
+              "das",
+              "haben",
+              "Wir"
+            ],
+            "a": "Wir haben das Spiel gewonnen!",
+            "why": "Wir haben ← das Spiel ← gewonnen — القوي: i تصير o."
+          },
+          {
+            "tokens": [
+              "gebracht.",
+              "Paket",
+              "das",
+              "hat",
+              "Mutter",
+              "Meine"
+            ],
+            "a": "Meine Mutter hat das Paket gebracht.",
+            "why": "الفاعل ← hat ← das Paket ← gebracht (مختلط)."
+          },
+          {
+            "tokens": [
+              "geregnet.",
+              "es",
+              "hat",
+              "Vorgestern"
+            ],
+            "a": "Vorgestern hat es geregnet.",
+            "why": "Vorgestern أولاً ← hat ← es (لا يسقط — u10-d1) ← geregnet."
+          },
+          {
+            "tokens": [
+              "gearbeitet.",
+              "viel",
+              "ich",
+              "habe",
+              "Woche",
+              "Letzte"
+            ],
+            "a": "Letzte Woche habe ich viel gearbeitet.",
+            "why": "Letzte Woche ظرف أولاً ← habe ich ← viel ← gearbeitet (‑et)."
+          },
+          {
+            "tokens": [
+              "gespielt.",
+              "Fußball",
+              "viel",
+              "ich",
+              "habe",
+              "Früher"
+            ],
+            "a": "Früher habe ich viel Fußball gespielt.",
+            "why": "Früher أولاً ← habe ich ← viel Fußball ← gespielt."
+          },
+          {
+            "tokens": [
+              "gefragt.",
+              "Lehrerin",
+              "meine",
+              "habe",
+              "Ich"
+            ],
+            "a": "Ich habe meine Lehrerin gefragt.",
+            "why": "Ich habe ← meine Lehrerin (مفعول) ← gefragt."
+          },
+          {
+            "tokens": [
+              "gemacht.",
+              "Spaziergang",
+              "einen",
+              "ich",
+              "habe",
+              "Abend",
+              "Am"
+            ],
+            "a": "Am Abend habe ich einen Spaziergang gemacht.",
+            "why": "Am Abend أولاً ← habe ich ← einen Spaziergang ← gemacht."
           }
         ],
         "interleavedWith": [
-          "paket",
-          "spaziergang"
+          "deutsch",
+          "woche",
+          "abend",
+          "mutter",
+          "lehrerin",
+          "fussball",
+          "spiel"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "dictation",
+        "items": [
+          {
+            "audioId": "wg-1",
+            "speakText": "Hallo Yusuf! Was hast du gestern gemacht?",
+            "a": "Hallo Yusuf! Was hast du gestern gemacht?",
+            "why": "Yusuf اسم علم · gestern بحرف صغير (ظرف) · gemacht في الآخر وعلامة استفهام."
+          },
+          {
+            "audioId": "wg-2",
+            "speakText": "Gestern? Am Morgen habe ich Deutsch gelernt — zwei Stunden!",
+            "a": "Gestern? Am Morgen habe ich Deutsch gelernt — zwei Stunden!",
+            "why": "Gestern? بحرف كبير في أول الجملة · Am Morgen · Deutsch بحرف كبير · gelernt · Stunden بحرف كبير وعلامة تعجب."
+          },
+          {
+            "audioId": "wg-3",
+            "speakText": "Zwei Stunden! Und am Abend?",
+            "a": "Zwei Stunden! Und am Abend?",
+            "why": "Zwei بحرف كبير في الأول · Stunden · Abend بحرف كبير · علامة استفهام."
+          },
+          {
+            "audioId": "wg-10",
+            "speakText": "Gewonnen? Super! Früher habe ich auch viel Fußball gespielt.",
+            "a": "Gewonnen? Super! Früher habe ich auch viel Fußball gespielt.",
+            "why": "Gewonnen? بحرف كبير في الأول · Super! · Früher بـü · Fußball بـß · gespielt."
+          },
+          {
+            "audioId": "wg-13",
+            "speakText": "Ja, hier regnet es viel. Hast du einen Brief geschrieben? Du hast es letzte Woche gesagt.",
+            "a": "Ja, hier regnet es viel. Hast du einen Brief geschrieben? Du hast es letzte Woche gesagt.",
+            "why": "regnet بحرف صغير · Brief بحرف كبير · geschrieben بـie · letzte Woche بحرف صغير ثم كبير · gesagt."
+          },
+          {
+            "audioId": "wg-19",
+            "speakText": "Nicht viel. Am Abend habe ich einen Spaziergang gemacht — Mia hat geschlafen.",
+            "a": "Nicht viel. Am Abend habe ich einen Spaziergang gemacht — Mia hat geschlafen.",
+            "why": "Nicht viel. · Am Abend · Spaziergang بحرف كبير وz بعد a · Mia اسم علم · geschlafen."
+          },
+          {
+            "audioId": "word-gestern",
+            "speakText": "gestern.",
+            "a": "gestern.",
+            "why": "gestern — ظرف بحرف صغير · st تُنطق [ʃt] في الأول."
+          },
+          {
+            "audioId": "word-vorgestern",
+            "speakText": "vorgestern.",
+            "a": "vorgestern.",
+            "why": "vorgestern — vor + gestern كلمة واحدة · v تُنطق f."
+          },
+          {
+            "audioId": "word-brief",
+            "speakText": "der Brief.",
+            "a": "der Brief.",
+            "why": "der Brief — B كبيرة · ie طويلة · f في الآخر."
+          },
+          {
+            "audioId": "word-paket",
+            "speakText": "das Paket.",
+            "a": "das Paket.",
+            "why": "das Paket — P كبيرة · النبر على ‑ket · t في الآخر."
+          },
+          {
+            "audioId": "word-frueher",
+            "speakText": "früher.",
+            "a": "früher.",
+            "why": "früher — ü ثم h صامتة تطيل الحركة · er في الآخر."
+          },
+          {
+            "audioId": "word-gewinnen",
+            "speakText": "gewinnen.",
+            "a": "gewinnen.",
+            "why": "gewinnen — nn مضاعفة (i قصيرة) · ge‑ غير منبورة."
+          }
+        ],
+        "interleavedWith": [
+          "morgen",
+          "stunde",
+          "abend",
+          "fussball",
+          "deutsch",
+          "woche"
         ],
         "explanationRequired": true
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Erzählen, was du gestern gemacht hast",
-        "ar": "الحكي: ماذا فعلت أمس؟"
+        "de": "Was hast du gestern gemacht? — Gestern habe ich Deutsch gelernt und Fisch gekocht. Am Abend habe ich einen Spaziergang gemacht. — Und vorgestern? — Vorgestern habe ich Fußball gespielt. Wir haben gewonnen!",
+        "ar": "تسأل زميلك ماذا فعل أمس وأول أمس وتجيب أنت: ثلاث جمل Perfekt على الأقل (منتظم وقوي) وظرف زمن واحد مقدَّم (gestern · vorgestern · letzte Woche · am Abend) — ثم تتبادلان"
       },
       "situation": {
-        "de": "Am Abend: Was hast du gestern gemacht?",
-        "ar": "مساءً: ماذا فعلت أمس؟"
+        "de": "Im Kurs in Tunis, auf dem Handy: Was hast du gestern gemacht? — Gestern habe ich zwei Stunden Deutsch gelernt. Am Abend habe ich mit meiner Mutter gekocht. Und du? — Ich habe Hausaufgaben gemacht und ein Buch gelesen. Vorgestern habe ich Fußball gespielt — wir haben gewonnen! — Super! Und letzte Woche? — Letzte Woche habe ich viel gearbeitet.",
+        "ar": "في الدورة في تونس على الهاتف: زميلك يسألك عن أمس — تحكي ثلاثة أشياء بالماضي المركّب وتسأله أنت عن أول أمس والأسبوع الماضي"
       },
       "successCriteria": [
-        "3 جمل Perfekt (habe + مفعول + التصريف في النهاية) + ظرف واحد (gestern/vorgestern/letzte Woche)"
+        "ثلاث جمل Perfekt على الأقل: haben مصرَّفاً ثانياً والتصريف الثالث في الآخر — Gestern habe ich Deutsch gelernt.",
+        "منتظم وقوي معاً: gemacht أو gelernt أو gekocht مع gegessen أو gelesen أو genommen أو gewonnen — لا قالب واحد للكل",
+        "ظرف زمن مقدَّم مرة واحدة على الأقل مع قلب الفاعل: Vorgestern habe ich … · Letzte Woche habe ich …",
+        "السؤال بالقوس نفسه: Was hast du gestern gemacht? — لا الحاضر مع gestern"
       ]
     }
   },
@@ -142,20 +669,64 @@
       {
         "items": [
           {
-            "q": "«أمس» و«أول أمس»؟",
-            "a": "gestern / vorgestern"
+            "q": "«أمس طبختُ سمكاً» — أي جملة صحيحة؟",
+            "choices": [
+              "Gestern habe ich Fisch gekocht.",
+              "Gestern habe ich gekocht Fisch.",
+              "Gestern ich habe Fisch gekocht."
+            ],
+            "a": "Gestern habe ich Fisch gekocht.",
+            "why": "Gestern ← habe ثانياً ← ich ← Fisch ← gekocht في الآخر — لا قبل المفعول ولا الفاعل قبل haben."
           },
           {
-            "q": "«أمس أكلت بيتزا»؟",
-            "a": "Gestern habe ich Pizza gegessen."
+            "q": "«هل قرأتَ الكتاب؟» — أي جملة صحيحة؟",
+            "choices": [
+              "Hast du das Buch gelesen?",
+              "Hast du das Buch lesen?",
+              "Hast du gelesen das Buch?"
+            ],
+            "a": "Hast du das Buch gelesen?",
+            "why": "التصريف الثالث gelesen (لا المصدر lesen) وفي الآخر."
           },
           {
-            "q": "«يجلب» — والماضي؟",
-            "a": "bringen — hat gebracht"
+            "q": "«نمتُ كثيراً» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe viel geschlafen.",
+              "Ich habe viel schlafen.",
+              "Ich habe geschlafen viel."
+            ],
+            "a": "Ich habe viel geschlafen.",
+            "why": "geschlafen قوي بـ‑en — في آخر الجملة بعد viel."
           },
           {
-            "q": "«رسالة بريدية»؟",
-            "a": "der Brief"
+            "q": "«الشهر الماضي» — أي صيغة صحيحة؟",
+            "choices": [
+              "letzten Monat",
+              "letzte Monat",
+              "letzt Monat"
+            ],
+            "a": "letzten Monat",
+            "why": "der Monat مذكر في موضع المفعول الزمني ← letzten Monat (بـ‑en) — كـletzte Woche · letztes Jahr بلا حرف جر."
+          },
+          {
+            "q": "«أخذتُ الحافلة» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe den Bus genommen.",
+              "Ich habe den Bus nehmen.",
+              "Ich habe genommen den Bus."
+            ],
+            "a": "Ich habe den Bus genommen.",
+            "why": "nehmen → genommen (قوي، الجذع يتغيّر) وفي الآخر."
+          },
+          {
+            "q": "«أبي جلب الطرد» — أي جملة صحيحة؟",
+            "choices": [
+              "Mein Vater hat das Paket gebracht.",
+              "Mein Vater hat das Paket bringen.",
+              "Mein Vater hat gebracht das Paket."
+            ],
+            "a": "Mein Vater hat das Paket gebracht.",
+            "why": "bringen → gebracht (مختلط) — بعد المفعول في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -163,20 +734,64 @@
       {
         "items": [
           {
-            "q": "«سألت الطبيب»؟",
-            "a": "Ich habe den Arzt gefragt."
+            "q": "«ماذا فعلتَ أول أمس؟» — أي جملة صحيحة؟",
+            "choices": [
+              "Was hast du vorgestern gemacht?",
+              "Was hast du vorgestern machen?",
+              "Was du hast vorgestern gemacht?"
+            ],
+            "a": "Was hast du vorgestern gemacht?",
+            "why": "Was ← hast ← du ← vorgestern ← gemacht — السؤال يحفظ القوس."
           },
           {
-            "q": "«يفكر» — والماضي؟",
-            "a": "denken — hat gedacht"
+            "q": "«سابقاً عملتُ كثيراً» — أي جملة صحيحة؟",
+            "choices": [
+              "Früher habe ich viel gearbeitet.",
+              "Früher ich habe viel gearbeitet.",
+              "Früher habe ich viel arbeiten."
+            ],
+            "a": "Früher habe ich viel gearbeitet.",
+            "why": "Früher أولاً ← habe ich (القلب) ← gearbeitet بـ‑et."
           },
           {
-            "q": "«طرد»؟",
-            "a": "das Paket"
+            "q": "«فزنا!» — أي جملة صحيحة؟",
+            "choices": [
+              "Wir haben gewonnen!",
+              "Wir haben gewinnen!",
+              "Wir haben gewinnt!"
+            ],
+            "a": "Wir haben gewonnen!",
+            "why": "gewinnen → gewonnen (قوي: i → o) — لا المصدر ولا الحاضر gewinnt."
           },
           {
-            "q": "«الأسبوع الماضي»؟",
-            "a": "letzte Woche"
+            "q": "«قال: لا آتي» — أي جملة صحيحة؟",
+            "choices": [
+              "Er hat gesagt: Ich komme nicht.",
+              "Er hat gesagt: Ich kommen nicht.",
+              "Er gesagt hat: Ich komme nicht."
+            ],
+            "a": "Er hat gesagt: Ich komme nicht.",
+            "why": "hat ثانياً ← gesagt ثم القول بعد النقطتين بالحاضر الصحيح (komme)."
+          },
+          {
+            "q": "«أمس أمطرت كثيراً» — أي جملة صحيحة؟",
+            "choices": [
+              "Gestern hat es viel geregnet.",
+              "Gestern hat viel geregnet.",
+              "Gestern es hat viel geregnet."
+            ],
+            "a": "Gestern hat es viel geregnet.",
+            "why": "es الشكلي لا يسقط (u10-d1) ويأتي بعد hat — geregnet في الآخر."
+          },
+          {
+            "q": "«أرسلتُ طرداً» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe ein Paket geschickt.",
+              "Ich habe ein Paket schicken.",
+              "Ich habe geschickt ein Paket."
+            ],
+            "a": "Ich habe ein Paket geschickt.",
+            "why": "schicken → geschickt (منتظم) — بعد المفعول في الآخر."
           }
         ],
         "passingScore": 0.75
@@ -184,20 +799,64 @@
       {
         "items": [
           {
-            "q": "«ذهبت وجلبت الرسالة»؟",
-            "a": "Ich habe den Brief geholt."
+            "q": "«ماذا أرسلَت؟» — أي جملة صحيحة؟",
+            "choices": [
+              "Was hat sie geschickt?",
+              "Was sie hat geschickt?",
+              "Was hat sie schicken?"
+            ],
+            "a": "Was hat sie geschickt?",
+            "why": "Was ← hat ← sie ← geschickt — الفعل المصرَّف ثانياً حتى في السؤال."
           },
           {
-            "q": "«يتعلم» — والماضي؟",
-            "a": "lernen — hat gelernt"
+            "q": "«فكّرتُ في لينا» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe an Lena gedacht.",
+              "Ich habe an Lena denken.",
+              "Ich habe gedacht an Lena."
+            ],
+            "a": "Ich habe an Lena gedacht.",
+            "why": "denken → gedacht (مختلط) — an + الاسم قبله."
           },
           {
-            "q": "«نزهة»؟",
-            "a": "der Spaziergang"
+            "q": "«أمس عملتُ الواجبات» — أي جملة صحيحة؟",
+            "choices": [
+              "Gestern habe ich Hausaufgaben gemacht.",
+              "Gestern habe ich Hausaufgaben machen.",
+              "Gestern mache ich Hausaufgaben."
+            ],
+            "a": "Gestern habe ich Hausaufgaben gemacht.",
+            "why": "الماضي جزءان: habe + gemacht — لا المصدر ولا الحاضر مع gestern."
           },
           {
-            "q": "«في ذلك فكّرت كثيراً»؟",
-            "a": "Darüber habe ich viel gedacht."
+            "q": "«سألتُ أمي» — أي جملة صحيحة؟",
+            "choices": [
+              "Ich habe meine Mutter gefragt.",
+              "Ich habe meine Mutter fragen.",
+              "Ich habe gefragt meine Mutter."
+            ],
+            "a": "Ich habe meine Mutter gefragt.",
+            "why": "fragen → gefragt (منتظم) — بعد المفعول."
+          },
+          {
+            "q": "«الأسبوع الماضي تعلّمتُ كثيراً» — أي جملة صحيحة؟",
+            "choices": [
+              "Letzte Woche habe ich viel gelernt.",
+              "Letzte Woche ich habe gelernt.",
+              "Letzte Woche habe ich viel lernen."
+            ],
+            "a": "Letzte Woche habe ich viel gelernt.",
+            "why": "Letzte Woche أولاً ← habe ich ← gelernt في الآخر."
+          },
+          {
+            "q": "«يوسف أخذ القطار» — أي جملة صحيحة؟",
+            "choices": [
+              "Yusuf hat den Zug genommen.",
+              "Yusuf hat den Zug nehmen.",
+              "Yusuf hat genommen den Zug."
+            ],
+            "a": "Yusuf hat den Zug genommen.",
+            "why": "hat + genommen — القوي يُحفظ وفي الآخر."
           }
         ],
         "passingScore": 0.75
@@ -206,53 +865,53 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Gestern habe ich einen Brief geschrieben, das Paket geholt und viel gelernt. Das Perfekt: haben in Position 2 — das Partizip am Ende!",
-      "ar": "أمس كتبت رسالة، وجلبت الطرد، وتعلمت كثيراً. الماضي المركب: haben في الموضع الثاني — والتصريف في النهاية!"
+      "de": "Was hast du gestern gemacht? — Gestern habe ich Deutsch gelernt. · Ich habe einen Brief geschrieben. · Wir haben das Spiel gewonnen. · Meine Mutter hat das Paket gebracht. · Vorgestern hat es geregnet. · Letzte Woche habe ich viel gearbeitet. · Früher habe ich viel Fußball gespielt.",
+      "ar": "الماضي المركّب مع haben: haben ثانياً (habe · hast · hat · haben) والتصريف الثالث في الآخر — المنتظم ge‑…‑t (gemacht · gelernt · gesagt · gefragt · geholt · gearbeitet بـ‑et) · القوي ge‑…‑en يُحفظ (gegessen · geschrieben · genommen · gelesen · geschlafen · gewonnen) · المختلط gebracht · gedacht · ظرف الزمن أولاً فينقلب الفاعل (gestern · vorgestern · letzte Woche · früher · am Abend) · السؤال Was hast du gestern gemacht?"
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Gestern habe ich gegessen Pizza~~ / ~~Gestern habe ich Pizza gemacht~~ (أي فعل)",
-          "ar": "التصريف الثالث يُغلق القلنسوة: آخر الجملة دائماً"
+          "de": "~~Gestern ich habe Deutsch gelernt.~~ · ~~Gestern lerne ich Deutsch.~~",
+          "ar": "الماضي جزءان: haben ثانياً — لا يسقط ولا يُستبدل بالحاضر"
         },
-        "whyArabicSpeakerFails": "العربية تضع الفعل الماضي قريباً من مكانه الأصلي؛ الألماني يرسل التصريف (geschrieben/gegessen) إلى أقصى اليمين — قلنسوة u9 تتضخم بالماضي (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الماضي العربي كلمة واحدة (تعلّمتُ)، فيُسقط المتعلم المساعد أو يضعه بعد الفاعل كما في الجملة الاسمية (~~Gestern ich habe …~~) أو يكتفي بالحاضر مع «أمس» (~~Gestern lerne ich Deutsch.~~). والألمانية جزءان دائماً: haben مصرَّفاً في الموضع الثاني — بعد gestern مباشرة فينقلب الفاعل — والتصريف الثالث في الآخر: Gestern habe ich Deutsch gelernt. — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Gestern habe ich Pizza gegessen.",
-          "ar": "أمس أكلت بيتزا."
+          "de": "Gestern habe ich Deutsch gelernt. · Was hast du gestern gemacht?",
+          "ar": "أمس تعلّمتُ الألمانية · ماذا فعلتَ أمس؟"
         },
         "exercise": {
-          "q": "أكمل: Ich habe einen Brief ___ (schreiben).",
-          "a": "geschrieben"
+          "q": "أكمل: Gestern ___ ich Fisch gegessen. (haben)",
+          "a": "habe"
         }
       },
       {
         "commonError": {
-          "de": "~~Ich habe gemachet~~ / ~~Ich habe machte~~ / ~~Ich habe gegeessen~~",
-          "ar": "التصريف: ge- + الجذر + t (أو الجذور القوية تُحفظ)"
+          "de": "~~Ich habe gegessen Fisch.~~ · ~~Gestern habe ich gelernt Deutsch.~~",
+          "ar": "التصريف الثالث يغلق القوس: آخر الجملة دائماً"
         },
-        "whyArabicSpeakerFails": "لا ge- ولا t في العربية؛ القاعدة المنتظمة gemacht/gelernt/gewünscht والجذور القوية gebracht/gedacht/geschrieben تُحفظ كبطاقات — لا تركيب حر (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "الفعل العربي يأتي حيث يأتي معناه («أكلتُ سمكاً» — الفعل ثم المفعول)، فيضع المتعلم التصريف الثالث بعد haben مباشرة والمفعول بعده. والألمانية ترسل التصريف إلى أقصى الآخر وما بينهما كل شيء (المفعول · الزمان · المكان): Ich habe Fisch gegessen. · Gestern habe ich zwei Stunden Deutsch gelernt. — قوس الجملة (u9-d5) بالماضي — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "gemacht · gelernt · gebracht · geschrieben",
-          "ar": "عمل · تعلّم · جلب · كتب (تصريفات)"
+          "de": "Ich habe Fisch gegessen. · Gestern habe ich zwei Stunden Deutsch gelernt.",
+          "ar": "أكلتُ سمكاً · أمس تعلّمتُ الألمانية ساعتين"
         },
         "exercise": {
-          "q": "كوّن التصريف: machen → ___ · bringen → ___",
-          "a": "gemacht / gebracht"
+          "q": "رتّب: habe · ich · den Brief · geholt",
+          "a": "Ich habe den Brief geholt."
         }
       },
       {
         "commonError": {
-          "de": "~~Gestern ich habe Zeit gehabt~~",
-          "ar": "القلنسوة بالماضي: بعد gestern يقلب (habe ich) والتصريف آخر شيء"
+          "de": "~~gegesst~~ · ~~gelest~~ · ~~geschlaft~~",
+          "ar": "القالب المنتظم ge‑…‑t لا يعمّ القوي: gegessen · gelesen · geschlafen تُحفظ"
         },
-        "whyArabicSpeakerFails": "مصيدة u9-d5/u10-d2 تكتمل هنا: كل مقدمة (gestern · letzte Woche) تدفع haben للموضع الثاني — والتذكير: hab**e** وليس hab**t** للمتكلم (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "أوزان العربية تنطبق على كل فعل، فيعمّم المتعلم القالب المنتظم (ge‑ + الجذع + ‑t) على الأفعال القوية: ~~gegesst~~ · ~~gelest~~ · ~~geschlaft~~. والألمانية تفرّق: المنتظم gemacht · gelernt · gesagt — والقوي بـ‑en وجذع قد يتغيّر يُحفظ مع الفعل كبطاقة: gegessen · gelesen · geschlafen · geschrieben · genommen · gewonnen — والمختلط gebracht · gedacht — خريطة التداخل 10‑ي",
         "correct": {
-          "de": "Gestern habe ich Zeit gehabt.",
-          "ar": "أمس كان عندي وقت."
+          "de": "gegessen · gelesen · geschlafen · geschrieben · genommen · gewonnen — gemacht · gelernt · gesagt",
+          "ar": "أكل · قرأ · نام · كتب · أخذ · فاز (قوية) — عمل · تعلّم · قال (منتظمة)"
         },
         "exercise": {
-          "q": "رتّب: gestern · habe · ich · gelernt",
-          "a": "Gestern habe ich gelernt."
+          "q": "كوّن التصريف الثالث: essen → ___ · lernen → ___",
+          "a": "gegessen / gelernt"
         }
       }
     ],
@@ -268,16 +927,25 @@
       "denken",
       "brief",
       "paket",
-      "spaziergang"
+      "spaziergang",
+      "frueher",
+      "gewinnen"
     ]
   },
   "gReferences": {
     "duden": [
+      "https://www.duden.de/rechtschreibung/gestern",
+      "https://www.duden.de/rechtschreibung/vorgestern",
       "https://www.duden.de/rechtschreibung/bringen",
       "https://www.duden.de/rechtschreibung/denken",
-      "https://www.duden.de/rechtschreibung/gestern"
+      "https://www.duden.de/rechtschreibung/holen",
+      "https://www.duden.de/rechtschreibung/gewinnen",
+      "https://www.duden.de/rechtschreibung/Spaziergang"
     ],
     "wiktionary": [
+      "https://de.wiktionary.org/wiki/Partizip_II",
+      "https://de.wiktionary.org/wiki/haben",
+      "https://de.wiktionary.org/wiki/gewinnen",
       "https://de.wiktionary.org/wiki/bringen"
     ],
     "goethe": []
@@ -297,11 +965,28 @@
     "word-denken",
     "word-brief",
     "word-paket",
-    "word-spaziergang"
+    "word-spaziergang",
+    "word-frueher",
+    "word-gewinnen"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
-    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Was hast du gestern gemacht? (Perfekt)",
-    "goetheWordListOverlap": []
+    "netzwerkChapter": "Netzwerk neu A1 – Kapitel 10 (Wetter und Termine) — Was hast du gestern gemacht? · Perfekt mit haben",
+    "goetheWordListOverlap": [
+      "gestern",
+      "vorgestern",
+      "letzt",
+      "bringen",
+      "holen",
+      "lernen",
+      "sagen",
+      "fragen",
+      "denken",
+      "brief",
+      "paket",
+      "spaziergang",
+      "frueher",
+      "gewinnen"
+    ]
   }
 }
