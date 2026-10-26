@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 289 (2026-10-26) — D334: a2-u3-d5 «mich أم mir؟» — خلط وتمييز الانعكاسي (المرحلة د · خطة D326)
+- **الخلاصة:** الدرس 107 (A2-U3-D5 — mich أم mir؟): 13 كلمة للتمييز (sich hinlegen · Unterschied · verschieden · Gegenteil · eigentlich · ändern · stressig · schlimm · schwierig · stören · prüfen · wahrscheinlich · braten) — والمحور: خلط وتمييز الضميرين (mich بلا عضو × mir مع عضو) بلا قاعدة جديدة. 13 مقطعاً صوتياً؛ 3 تصحيحات إجهاد يقينية (hinlegen/Unterschied/Gegenteil — espeak يجرّ النبر عن الأول). الرابطان متحققان حياً قبل الدفع (وduden يؤكد النبر!).
+- **التالي:** a2-u3-d6 «توليف الوحدة» (توليف + كلمتان: modern/einig).
+
 ## الدفعة 288 (2026-10-26) — D333: a2-u3-d4 «نصيحة صحية» — كتابة النصيحة (المرحلة د · خطة D326)
 - **الخلاصة:** الدرس 106 (A2-U3-D4 — نصيحة صحية): 13 كلمة لكتابة النصيحة (erstens…viertens · markieren · notieren · kontrollieren · diskutieren · genug · unbedingt · egal · Mittel · Menge) — والمحور: نقلُ sollen من U2 (Du sollst…!) في نصيحة من أربع خطوات تُكتب ثم تُقرأ. 13 مقطعاً صوتياً بلا أي تصحيح (أول اكتساح نظيف)؛ الرابطان متحققان حياً قبل الدفع (Mittel_Arznei + Menge — بلا N مفتوحة!).
 - **التالي:** a2-u3-d5 «mich أم mir؟» (خلط وتمييز الانعكاسي).
