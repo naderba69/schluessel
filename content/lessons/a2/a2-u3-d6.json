@@ -1,0 +1,420 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u3-d6",
+  "level": "A2",
+  "unit": 3,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Deine gesunde Woche zeigen",
+    "ar": "تكتب تقرير أسبوعك الصحي: 8 جمل من الأيام الخمسة — انعكاسي + نصيحة"
+  },
+  "canDoDaily": [
+    "تكتب تقرير أسبوعك الصحي (8 جمل من 5 دروس)",
+    "تستعمل modern/einig بمعنييهما (موضة/رأي)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "duschen",
+      "termin",
+      "genug"
+    ]
+  },
+  "einstieg": {
+    "guidedRetrieval": [
+      "من d1/d5: الانعكاسي معروف (mich/mir!) — واليوم نجمعه",
+      "من d3/d4: الصحة والنصيحة معروفة (Sollen/Erstens!) — واليوم التقرير"
+    ],
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«أستحم يومياً» — كيف؟"
+        },
+        "answer": "Ich dusche mich täglich.",
+        "choices": [
+          "Ich dusche mich täglich.",
+          "Ich dusche mir täglich.",
+          "Ich dusche sich täglich."
+        ],
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«يجب أن تشرب الماء» — كيف؟"
+        },
+        "answer": "Du sollst Wasser trinken.",
+        "choices": [
+          "Du sollst Wasser trinken.",
+          "Du musst Wasser trinken.",
+          "Du sollst Wasser trinkst."
+        ],
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-reflexiv-akk",
+      "ars-reflexiv-dat"
+    ],
+    "riskFlagsShown": [
+      "reflexive",
+      "trennbar",
+      "needs-ein"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "modern",
+      "einig"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Deine Woche zeigen",
+        "ar": "تعرض أسبوعك الصحي"
+      },
+      "situation": {
+        "de": "Dein Freund fragt",
+        "ar": "صديقك يسأل: كيف كان أسبوعك؟"
+      },
+      "successCriteria": [
+        "8 جمل من 5 دروس (d1+d2+d3+d4+d5)",
+        "mich/mir صحيحان (d5!)",
+        "modern/einig في المتن"
+      ]
+    },
+    "stations": [
+      {
+        "type": "verb-bank",
+        "explanationRequired": true,
+        "hints": [
+          "d2: duschen/waschen — mich أم mir؟",
+          "d3: eintragen — mich + ein!",
+          "d4/d5: notieren/diskutieren/hinlegen — الجديد يُستعمل"
+        ],
+        "interleavedWith": [
+          "hand",
+          "viel",
+          "heute"
+        ],
+        "items": [
+          {
+            "q": "أستحم (d2): Ich dusche ___. (mich)",
+            "a": "mich",
+            "why": "أستحم — duschen بلا عضو (mich)!"
+          },
+          {
+            "q": "أغسل يدي (d2): Ich wasche ___ die Hände. (mir)",
+            "a": "mir",
+            "why": "أغسل يديّ — مع العضو (mir)!"
+          },
+          {
+            "q": "أسجل نفسي (d3): Ich trage ___ ein. (mich)",
+            "a": "mich",
+            "why": "أسجل نفسي — mich + ein (d3)!"
+          },
+          {
+            "q": "أدوّن (d4): Ich ___ alles heute. (notieren)",
+            "a": "notiere",
+            "why": "أدوّن اليوم — notieren (d4)!"
+          },
+          {
+            "q": "أستلقي (d5): Ich lege ___ hin. (mich)",
+            "a": "mich",
+            "why": "أستلقي — hinlegen منعكس (mich)!"
+          },
+          {
+            "q": "نناقش (d4): Wir ___ viel. (diskutieren)",
+            "a": "diskutieren",
+            "why": "نناقش كثيراً — diskutieren (d4)!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الكلمتان الجديدتان أولاً (modern/einig)",
+          "d5/d4/d3/d2/d1 — كلمة من كل يوم!",
+          "Sport بالأداة؟ بلا أداة (رياضة عامة!)"
+        ],
+        "interleavedWith": [
+          "gruppe",
+          "wasser",
+          "sport"
+        ],
+        "items": [
+          {
+            "q": "Das ist ___. (modern)",
+            "a": "modern",
+            "why": "هذا عصري — modern الجديدة!"
+          },
+          {
+            "q": "Die Gruppe ist ___. (einig)",
+            "a": "einig",
+            "why": "المجموعة متفقة — einig الجديدة!"
+          },
+          {
+            "q": "Der ___ ist groß. (Unterschied)",
+            "a": "Unterschied",
+            "why": "الفرق كبير — Unterschied (d5)!"
+          },
+          {
+            "q": "Ich trinke eine ___ Wasser. (Menge)",
+            "a": "Menge",
+            "why": "كمية الماء — Menge (d4)!"
+          },
+          {
+            "q": "Die ___ ist morgens. (Sprechstunde)",
+            "a": "Sprechstunde",
+            "why": "صباحاً — Sprechstunde (d3)!"
+          },
+          {
+            "q": "Ich dusche ___. (täglich)",
+            "a": "täglich",
+            "why": "يومياً — täglich (d2)!"
+          },
+          {
+            "q": "Ich ___ mich für Sport. (interessiere)",
+            "a": "interessiere",
+            "why": "أهتم بالرياضة — interessieren (d1)!"
+          },
+          {
+            "q": "Du sollst ___ schlafen. (genug)",
+            "a": "genug",
+            "why": "نم ما يكفي — genug (d4)!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "d2: mir بلا عضو؟ خطأ!",
+          "d3: المنفصل بلا ein؟ خطأ!",
+          "d4: الظرف قبل الفعل؟ خطأ!"
+        ],
+        "interleavedWith": [
+          "wasser",
+          "schlafen",
+          "gut"
+        ],
+        "items": [
+          {
+            "q": "Ich dusche mir täglich.",
+            "a": "Ich dusche mich täglich.",
+            "why": "duschen بلا عضو — mich (d2)!"
+          },
+          {
+            "q": "Ich trage mich.",
+            "a": "Ich trage mich ein.",
+            "why": "المنفصل يحتاج ein — في الآخر (d3)!"
+          },
+          {
+            "q": "Die Mittel hilft gut.",
+            "a": "Das Mittel hilft gut.",
+            "why": "Mittel محايد — das (d4)!"
+          },
+          {
+            "q": "Ich erstens trinke Wasser.",
+            "a": "Ich trinke erstens Wasser.",
+            "why": "الفعل ثانٍ — trinke أولاً (d4)!"
+          },
+          {
+            "q": "Du täglich sollst schlafen.",
+            "a": "Du sollst täglich schlafen.",
+            "why": "sollen ثانياً — täglich بعده!"
+          },
+          {
+            "q": "Die Gruppe ist modern.",
+            "a": "Die Gruppe ist einig.",
+            "why": "متفقة (رأي!) لا عصرية (موضة!) — einig!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "التقرير: 8 جمل من 5 دروس (d1+d2+d3+d4+d5!)",
+          "النصيحة: 4 خطوات بـsollen (Erstens…Viertens!)"
+        ],
+        "interleavedWith": [
+          "sport",
+          "wasser",
+          "gut"
+        ],
+        "items": [
+          {
+            "q": "اكتب تقرير أسبوعك الصحي (سجّل): 8 جمل — عادة (d1!) + روتين (d2!) + صيدلية (d3!) + نصيحة (d4!) + تمييز (d5!) + كلمتان (modern/einig!)",
+            "a": "Ich interessiere mich für Sport. Ich dusche mich täglich. Die Sprechstunde ist morgens. Du sollst genug Wasser trinken. Ich wasche mir die Hände. Die Gruppe ist einig. Der Tipp ist modern. Die Woche war gut!",
+            "why": "قارن تقريرك: 8 جمل من 6 دروس (عادة + روتين + صيدلية + نصيحة + تمييز + modern/einig!) — الأسبوع كاملاً."
+          },
+          {
+            "q": "انصح زميلك (sollen!): أربع خطوات (Erstens…Viertens!) — (Wasser/Tee/schlafen/notieren!)",
+            "a": "Erstens sollst du Wasser trinken. Zweitens sollst du Tee trinken. Drittens sollst du gut schlafen. Viertens sollst du alles notieren.",
+            "why": "قارن نصيحتك: أربع خطوات (Erstens…Viertens) وكلها بـsollen — الماء والشاي والنوم والتدوين!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "quiz": {
+    "variants": [
+      {
+        "passingScore": 0.75,
+        "items": [
+          {
+            "q": "«عصري»؟",
+            "a": "modern"
+          },
+          {
+            "q": "«متفق»؟",
+            "a": "einig"
+          },
+          {
+            "q": "Das ist ___. (modern)",
+            "a": "modern"
+          },
+          {
+            "q": "Die Gruppe ist ___. (einig)",
+            "a": "einig"
+          }
+        ]
+      },
+      {
+        "passingScore": 0.75,
+        "items": [
+          {
+            "q": "Der ___ ist groß. (Unterschied)",
+            "a": "Unterschied"
+          },
+          {
+            "q": "Ich lege ___ hin. (mich)",
+            "a": "mich"
+          },
+          {
+            "q": "Ich wasche ___ die Hände. (mir)",
+            "a": "mir"
+          },
+          {
+            "q": "Du sollst ___ Wasser trinken. (genug)",
+            "a": "genug"
+          }
+        ]
+      },
+      {
+        "passingScore": 0.75,
+        "items": [
+          {
+            "q": "Die ___ ist morgens. (Sprechstunde)",
+            "a": "Sprechstunde"
+          },
+          {
+            "q": "Ich dusche ___. (täglich)",
+            "a": "täglich"
+          },
+          {
+            "q": "Ich ___ mich für Sport. (interessiere)",
+            "a": "interessiere"
+          },
+          {
+            "q": "Das ___ hilft. (Mittel)",
+            "a": "Mittel"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "modern",
+      "einig"
+    ],
+    "summary": {
+      "de": "Meine Woche: Ich dusche mich täglich. Ich trage mich ein. Du sollst genug schlafen. Ich wasche mir die Hände. Die Gruppe ist einig. Der Tipp ist modern!",
+      "ar": "أسبوعي: أستحم يومياً وأسجل نفسي وأنصح (sollen) وأميز (mir!). المجموعة متفقة (einig) والنصيحة عصرية (modern). النظام: الانعكاسي (mich/mir) + الترتيب (Erstens…) + الفعل آخراً."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich dusche mir täglich.~~",
+          "ar": "mir بلا عضو"
+        },
+        "correct": {
+          "de": "Ich dusche mich täglich.",
+          "ar": "أستحم يومياً."
+        },
+        "exercise": {
+          "q": "Ich dusche ___ täglich. (mich)",
+          "a": "mich"
+        },
+        "whyArabicSpeakerFails": "duschen بلا عضو = mich (d2!) — mir تحتاج عضواً (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "de": "~~Ich trage mich.~~",
+          "ar": "المنفصل بلا ein"
+        },
+        "correct": {
+          "de": "Ich trage mich ein.",
+          "ar": "أسجل نفسي."
+        },
+        "exercise": {
+          "q": "Ich trage mich ___. (ein)",
+          "a": "ein"
+        },
+        "whyArabicSpeakerFails": "المنفصل جزآن (d3!) — ein في الآخر دائماً (خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "de": "~~Die Gruppe ist modern.~~",
+          "ar": "خلط الرأي بالموضة"
+        },
+        "correct": {
+          "de": "Die Gruppe ist einig.",
+          "ar": "المجموعة متفقة."
+        },
+        "exercise": {
+          "q": "Die Gruppe ist ___. (einig)",
+          "a": "einig"
+        },
+        "whyArabicSpeakerFails": "einig = متفقة (رأي!) وmodern = عصرية (موضة!) — سياقان مختلفان (خريطة التداخل 10‑ي)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/modern_neu_modisch",
+      "https://www.duden.de/rechtschreibung/einig"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": []
+  },
+  "usedArsenalIds": [
+    "ars-reflexiv-akk",
+    "ars-reflexiv-dat"
+  ],
+  "audioManifestRefs": [
+    "word-modern",
+    "word-einig"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "modern",
+      "einig"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 – Kapitel 3 «Immer online?» — أول تباعد موثق: الموضوع من §7 (الجسم والصحة) والفصل K3 للدعم (D326)"
+  }
+}

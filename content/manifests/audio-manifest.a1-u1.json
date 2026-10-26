@@ -22629,6 +22629,46 @@
       "rmsDb": -17.12
     },
     {
+      "id": "word-modern",
+      "file": "words/audio/de-DE/word-modern.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "modern.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u3-d6"
+      ],
+      "durationMs": 931,
+      "sizeBytes": 4523,
+      "hash": "sha256:b5f61d337e4cf9f60e45f1b8e0b0877dd7503eeefb811507ff5ea7bb1f0e6b98",
+      "pcmSha256": "4c3780a913c9ed5ceea482132a1bc429e77d591d1601177e7c52b7896a29b427",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "word-einig",
+      "file": "words/audio/de-DE/word-einig.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "einig.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u3-d6"
+      ],
+      "durationMs": 827,
+      "sizeBytes": 3938,
+      "hash": "sha256:e5f585ca620adf54459cef4acfab8146e441492de276396fc5302fe419d9f734",
+      "pcmSha256": "dc63a17e3a32fb580d4b5c03aa6d33472a829e767fe7fbd7837be0b8ebcf6838",
+      "rmsDb": -17.02
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",

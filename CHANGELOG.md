@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-26 — الدفعة 290: D335 — a2-u3-d6 «توليف الوحدة» — تقرير الأسبوع الصحي (المرحلة د · خطة D326)
+الدرس 108 (A2-U3-D6 — توليف الوحدة): كلمتان (modern · einig — من الجيب، بلا تنقيب!) + تقرير من 8 جمل يجمع الأيام الخمسة (عادة + روتين + صيدلية + نصيحة + تمييز). مقطعان صوتيان بلا تصحيح (espeak أصاب نبر modern الدخيل!)؛ الرابطان متحققان حياً قبل الدفع (modern العاري 404 → modern_neu_modisch + einig).
+- **البوابة:** vitest ✓ 1612/1612 (129 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1576/0/0 · build ✓ 2.93s · docs-sync --check ✓ 150 قراراً مهيكلاً · آخرها D335 · الدفعة 290 · الموجّه 4.92 · notes check ✓ 0/22/173 (195) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 148 · duden-links ✓ تُخطّي (315 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2979
+
 ## 2026-10-26 — الدفعة 289: D334 — a2-u3-d5 «mich أم mir؟» — خلط وتمييز الانعكاسي (المرحلة د · خطة D326)
 الدرس 107 (A2-U3-D5 — mich أم mir؟): 13 كلمة للتمييز (sich hinlegen · Unterschied · verschieden · Gegenteil · eigentlich · ändern · stressig · schlimm · schwierig · stören · prüfen · wahrscheinlich · braten) — والمحور: خلط وتمييز الضميرين (mich بلا عضو × mir مع عضو) بلا قاعدة جديدة. 13 مقطعاً صوتياً؛ 3 تصحيحات إجهاد يقينية (hinlegen/Unterschied/Gegenteil — espeak يجرّ النبر عن الأول). الرابطان متحققان حياً قبل الدفع (وduden يؤكد النبر!).
 - **البوابة:** vitest ✓ 1611/1611 (129 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1573/0/0 · build ✓ 3.02s · docs-sync --check ✓ 149 قراراً مهيكلاً · آخرها D334 · الدفعة 289 · الموجّه 4.91 · notes check ✓ 0/22/173 (195) · pronunciation-audit ✓ بلا قرار 0 · قديم 0 · تغيّر 0 · lexicon-sync --check ✓ ناقص 0 · زائد 0 · مدخلات 148 · duden-links ✓ تُخطّي (313 · URLError: <urlopen error TLS/SSL connect) · speech-rate (ناعم) ⚠ 1 فوق 200 من 2977
