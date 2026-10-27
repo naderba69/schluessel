@@ -25086,7 +25086,7 @@
       "sizeBytes": 5516,
       "hash": "sha256:4ceafe413512f5b1a2a0712926b523ff42ba5a6d6b99768ff342bdb8d2c80e3e",
       "pcmSha256": "6453e2d09c1aa227de067fb36cdc0c4d2f025501fcefb6ce822f8bf4537f6872",
-      "rmsDb": -17.0
+      "rmsDb": -17
     },
     {
       "id": "word-sportplatz",
@@ -25307,6 +25307,46 @@
       "hash": "sha256:89618f7b02d00051d2c3aca14b72f5a23e495a2afd54a8919eb597462d5238d8",
       "pcmSha256": "d0f76bb244454e81de20226984725dab47947ce8430da81dc60041d1acc91a57",
       "rmsDb": -17.21
+    },
+    {
+      "id": "word-ein-paar",
+      "file": "words/audio/de-DE/word-ein-paar.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "ein paar.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d6"
+      ],
+      "durationMs": 885,
+      "sizeBytes": 4367,
+      "hash": "sha256:f40b8903b837c3c855e1df2ce760dc11cdbad2b1e42d572307bea19244ce3735",
+      "pcmSha256": "931e34fbd1b922db4738ef979fd43a54d863c69cd447670f01a9cacb81ddcafe",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "word-wenigstens",
+      "file": "words/audio/de-DE/word-wenigstens.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "wenigstens.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u5-d6"
+      ],
+      "durationMs": 1349,
+      "sizeBytes": 5880,
+      "hash": "sha256:fe7eabfe9524573e24673815ddac43e0410b9ff06a9ea7a04c18e18c55805430",
+      "pcmSha256": "1feb14261d61be83b8961211a07ca916444843ee29d57b2d34187e1b41da7ab2",
+      "rmsDb": -16.99
     },
     {
       "id": "mueller-announce-01",
