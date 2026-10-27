@@ -1621,6 +1621,12 @@ def build_all() -> None:
     ("word-rind", "das Rind.", "rind", ["a2-u6-d1"]),
     ("word-schwein", "das Schwein.", "schwein", ["a2-u6-d1"]),
     ("word-mineralwasser", "das Mineralwasser.", "mineralwasser", ["a2-u6-d1"]),
+    ("word-cafeteria", "die Cafeteria.", "cafeteria", ["a2-u6-d2"]),
+    ("word-service", "der Service.", "service", ["a2-u6-d2"]),
+    ("word-lust", "die Lust.", "lust", ["a2-u6-d2"]),
+    ("word-preiswert", "preiswert.", "preiswert", ["a2-u6-d2"]),
+    ("word-qualitaet", "die Qualität.", "qualitaet", ["a2-u6-d2"]),
+    ("word-selbst", "selbst.", "selbst", ["a2-u6-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

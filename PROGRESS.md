@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 309 (2026-10-27) — D354: a2-u6-d2 «يجمع الثنائيات» — 6 ثنائيات + الأمر حياً + Bäcker سقطت (المرحلة د · خطة D352)
+- **الخلاصة:** الدرس 122 (A2-U6-D2 — يجمع الثنائيات): 6 كلمات داخل ثنائياتها الثابتة (in-der-Cafeteria/guter-Service/Lust-auf-Pizza/preiswert-kochen/gute-Qualität/selbst-الفعل!) + الأمر حياً من d1 (iss/koch/backe/Essen-Sie — لولبة ars-imperativ بلا ترسانة جديدة!). Bäcker سقطت (مسربة في 6 دروس A1!) وعُوّضت بـselbst (Duden: selbst backen/machen!). تصحيح نطق واحد (Cafeteria: النبر على ri لا Ca-! + معجم 183 + إعادة توليد). الروابط الستة متحققة حياً قبل الدفع (Cafeteria: مؤنث/Cafeterias-أولاً! + Service_Dienstleistung: مذكر/بلا-جمع! + Lust: مؤنث/بلا-جمع-شهية! + preiswert: صفة! + Qualitaet: مؤنث/Qualitäten! + selbst_selber: حرف!).
+- **التالي:** إنتاج d3 (يعلّم وصفة شفوياً — التنقيب الصحيح أولاً: grep -rw!).
+
 ## الدفعة 308 (2026-10-27) — D353: a2-u6-d1 «يطبخ بالأمر» — 6 أطعمة + Imperativ كامل + ترسانة ars-imperativ (المرحلة د · خطة D352)
 - **الخلاصة:** الدرس 121 (A2-U6-D1 — يطبخ بالأمر): 6 أطعمة (Gericht/Hamburger/Bohne/Rind/Schwein/Mineralwasser) تُعلَّم بالأمر (Koch! Iss! Essen-Sie! Kocht! Trink! Backe!) + Imperativ كامل (du/ihr/Sie) على 4 أفعال معروفة (kochen/backen/essen/trinken — schneiden/braten بلا أمر محفوظ فسقطا من الأمر!) عبر ترسانة ars-imperativ الجديدة. تصحيح نطق واحد (Mineralwasser: النبر على ral لا Mi-! + aː طويلة + معجم 182 + إعادة توليد + قص صمت!). الروابط الستة متحققة حياً قبل الدفع (Gericht_Essen: محايد/Gerichte! + Hamburger_Speise: مذكر/ثابت-أولاً! + Bohne: مؤنث/Bohnen! + Rind: بلا-جمع-طعام! + Schwein: محايد/Schweine! + Mineralwasser: (Sg.)-بلا-جمع!).
 - **التالي:** إنتاج d2 (يجمع الثنائيات + Kollokationen — التنقيب من الحرّ المثبت أولاً).
