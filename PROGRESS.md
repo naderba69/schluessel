@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 313 (2026-10-27) — D358: a2-u6-d6 «توليف الوحدة» — أسبوع الطبخ 8 جمل + Sache/Ding (المرحلة د · خطة D352)
+- **الخلاصة:** الدرس 126 (A2-U6-D6 — توليف الوحدة): أسبوع الطبخ في 8 جمل من الأيام الخمسة (koch/Qualität/weich/Produkte/isst/Zeitschrift/Sache/Ding!) — تُروى ثم تُخلط! + الجديد (eine-gute-Sache/das-Ding!) + خلط الأمر مع الشواذ (kauf/isst/lässt!) عبر ars-imperativ (لولبة خامسة!). بلا تصحيحات نطق (2/2 من أول مرة!). الرابطان متحققان حياً قبل الدفع (Sache: مؤنث/Sachen! + Ding_Gegenstand: محايد/Dinge-لا-Dinger!).
+- **التالي:** مسودة خطة A2-U7 (بموجب «واصل» العام — سابقة D352/D345) ثم إنتاج d1.
+
 ## الدفعة 312 (2026-10-27) — D357: a2-u6-d5 «يخلط الشواذ» — خلطة Ablaut الستة + Zeitschrift بدل recht! (المرحلة د · خطة D352)
 - **الخلاصة:** الدرس 125 (A2-U6-D5 — يخلط الشواذ): خلطة 6 أفعال (isst/trinkst/hilfst/lässt/rätst/renovierst!) — المتغيّر (e←i · a←ä!) ضد الثابت (trinkst/renovierst!) + الوصف (Tier-isst/nebenan/in-der-Zeitschrift!) عبر ترسانة ars-praesens-unregelm (لولبة A1 بلا ترسانة جديدة!). recht-haben سقطت (مسربة في a1-u11-d4 حواراً وتدريباً + كلمة A1-Fit1! — N-225) وعُوّضت بـZeitschrift (in-der + جمع -en!). تصحيح نطق واحد (nebenan: النبر على an لا ne-! + صيغتان ˈ/ˌ + إعادة توليد). الروابط الأربعة متحققة حياً قبل الدفع (Tier: محايد/Tiere! + renovieren: ضعيف -ieren/renoviert! + Zeitschrift: مؤنث/Zeitschriften! + nebenan: ظرف/الجوار!).
 - **التالي:** إنتاج d6 (توليف الوحدة — Sache + Ding منقبتان نظيفتان!).

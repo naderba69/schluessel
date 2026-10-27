@@ -1641,6 +1641,8 @@ def build_all() -> None:
     ("word-renovieren", "renovieren.", "renovieren", ["a2-u6-d5"]),
     ("word-tier", "das Tier.", "tier", ["a2-u6-d5"]),
     ("word-zeitschrift", "die Zeitschrift.", "zeitschrift", ["a2-u6-d5"]),
+    ("word-ding", "das Ding.", "ding", ["a2-u6-d6"]),
+    ("word-sache", "die Sache.", "sache", ["a2-u6-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
