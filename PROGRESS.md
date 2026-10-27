@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 312 (2026-10-27) — D357: a2-u6-d5 «يخلط الشواذ» — خلطة Ablaut الستة + Zeitschrift بدل recht! (المرحلة د · خطة D352)
+- **الخلاصة:** الدرس 125 (A2-U6-D5 — يخلط الشواذ): خلطة 6 أفعال (isst/trinkst/hilfst/lässt/rätst/renovierst!) — المتغيّر (e←i · a←ä!) ضد الثابت (trinkst/renovierst!) + الوصف (Tier-isst/nebenan/in-der-Zeitschrift!) عبر ترسانة ars-praesens-unregelm (لولبة A1 بلا ترسانة جديدة!). recht-haben سقطت (مسربة في a1-u11-d4 حواراً وتدريباً + كلمة A1-Fit1! — N-225) وعُوّضت بـZeitschrift (in-der + جمع -en!). تصحيح نطق واحد (nebenan: النبر على an لا ne-! + صيغتان ˈ/ˌ + إعادة توليد). الروابط الأربعة متحققة حياً قبل الدفع (Tier: محايد/Tiere! + renovieren: ضعيف -ieren/renoviert! + Zeitschrift: مؤنث/Zeitschriften! + nebenan: ظرف/الجوار!).
+- **التالي:** إنتاج d6 (توليف الوحدة — Sache + Ding منقبتان نظيفتان!).
+
 ## الدفعة 311 (2026-10-27) — D356: a2-u6-d4 «يكتب وصفة» — وصفة مكتوبة + تسوق + Geldbörse-t (المرحلة د · خطة D352)
 - **الخلاصة:** الدرس 124 (A2-U6-D4 — يكتب وصفة): وصفة مكتوبة من 5 جمل + قائمة تسوق (Produkte/aktuelle-Preise/mit-Ermäßigung/Geldbörse-voll/Zum-Schluss-Reinigung!) — تُكتب ثم تُقرأ! + schreiben (Sie للأمر! + er للخبر!). تصحيح نطق واحد (Geldbörse: الـd تُهمس [t]! + معجم 184 + إعادة توليد). الروابط الخمسة متحققة حياً قبل الدفع (Produkt: محايد/Produkte! + aktuell: صفة/حالي! + Ermaeszigung: مؤنث/Ermäßigungen! + Geldboerse: مؤنث/Geldbörsen! + Reinigung: مؤنث/Plural-selten-لكن-Goethe-en!).
 - **التالي:** إنتاج d5 (يخلط الشواذ + Ablaut — من البركة + تنقيب!).

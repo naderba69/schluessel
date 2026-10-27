@@ -4630,7 +4630,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-praesens-unregelm) · وتوليف u7-d6 يشير إليها فهي في usedInLessons
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-praesens-unregelm"]);
     const rule = rules.get("ars-praesens-unregelm")!;
-    expect(rule.usedInLessons).toEqual(["a1-u7-d4", "a1-u7-d6", "a1-u13-d4", "a1-u13-d6", "a1-u15-d4"]); // D209: توليف u13-d6 // D207
+    expect(rule.usedInLessons).toEqual(["a1-u7-d4", "a1-u7-d6", "a1-u13-d4", "a1-u13-d6", "a1-u15-d4", "a2-u6-d5"]); // D357: خلط الشواذ d5 // D209: توليف u13-d6 // D207
     expect(realLessons.find((x) => x.id === "a1-u7-d6")!.usedArsenalIds).toContain("ars-praesens-unregelm");
     expect(rule.payload.ruleDe).toBe("ich fahre · du fährst · er/sie/es fährt · wir fahren · ihr fahrt · sie/Sie fahren — du läufst · er läuft — du nimmst · er nimmt · du gibst · er gibt — du isst · er isst · du liest · er liest");
     // قاعدة اليوم في الخطة اليومية («Präsens شاذ (fährt/isst)»): التغيير مع du وer/sie/es وحدهما · a ← ä · au ← äu · e ← i · e ← ie · nimmt
