@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 311 (2026-10-27) — D356: a2-u6-d4 «يكتب وصفة» — وصفة مكتوبة + تسوق + Geldbörse-t (المرحلة د · خطة D352)
+- **الخلاصة:** الدرس 124 (A2-U6-D4 — يكتب وصفة): وصفة مكتوبة من 5 جمل + قائمة تسوق (Produkte/aktuelle-Preise/mit-Ermäßigung/Geldbörse-voll/Zum-Schluss-Reinigung!) — تُكتب ثم تُقرأ! + schreiben (Sie للأمر! + er للخبر!). تصحيح نطق واحد (Geldbörse: الـd تُهمس [t]! + معجم 184 + إعادة توليد). الروابط الخمسة متحققة حياً قبل الدفع (Produkt: محايد/Produkte! + aktuell: صفة/حالي! + Ermaeszigung: مؤنث/Ermäßigungen! + Geldboerse: مؤنث/Geldbörsen! + Reinigung: مؤنث/Plural-selten-لكن-Goethe-en!).
+- **التالي:** إنتاج d5 (يخلط الشواذ + Ablaut — من البركة + تنقيب!).
+
 ## الدفعة 310 (2026-10-27) — D355: a2-u6-d3 «يعلّم وصفة شفوياً» — وصفة الفاصولياء + lassen + V2 (المرحلة د · خطة D352)
 - **الخلاصة:** الدرس 123 (A2-U6-D3 — يعلّم وصفة شفوياً): وصفة الفاصولياء من 5 جمل تُعلَّم شفوياً (Lass-uns/weich/mindestens/meistens/schrecklich!) + lassen ثلاثي الأمر (Lass!/Lasst!/Lassen-Sie! + lässt!) + الظرف أولاً ← الفعل ثانياً (meistens/mindestens + V2!). بلا تصحيحات نطق (5/5 من أول مرة!). الروابط الخمسة متحققة حياً قبل الدفع (mindestens: ظرف/على-الأقل! + weich: صفة/Eier-weich-kochen! + meistens: ظرف/غالباً! + lassen: قوي/lässt-gelassen-lass! + schrecklich: صفة/فظيع!).
 - **التالي:** إنتاج d4 (يكتب وصفة — التنقيب الصحيح أولاً!).
