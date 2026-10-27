@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 305 (2026-10-26) — D350: a2-u5-d5 «يلعب مع فريق» — تمييز war/hatte/musste + إسقاط v-f (المرحلة د · خطة D345)
+- **الخلاصة:** الدرس 119 (A2-U5-D5 — يلعب مع فريق): 13 كلمة للمباراة (Basketball/Volleyball/Sportplatz + Titel/Punkt/Reihe + Veranstaltung/Sendung + total/typisch + Rest/hart + rechnen) في يوم مباراة من 7 جمل (ملعب + لعب + قوة + نقاط + حساب + لقب + واجب!) + تمييز الماضي الثلاثي (war=يكون/hatte=يملك/musste=يجب!). تصحيحا نطق (Basketball: [ɛ] ← شوا [ə] — كانت إنجليزية! + Volleyball: [f] ← ‏[v] صوتية!) + إعادة توليد 2. الروابط الثلاثة متحققة حياً قبل الدفع (Basketball: مذكر/Basketbälle! + Sportplatz: مذكر/Sportplätze! + Titel: مذكر/جمعه-كمفرده-لقب-البطولة!).
+- **التالي:** d6 (توليف الوحدة + كلمتان!).
+
 ## الدفعة 304 (2026-10-26) — D349: a2-u5-d4 «يتواصل مع أصدقاء» — تعرُّض musste + musste للمغلقة (المرحلة د · خطة D345)
 - **الخلاصة:** الدرس 118 (A2-U5-D4 — يتواصل مع أصدقاء): 13 اسماً للتواصل (SMS/Geschirr/Topf + Reifen/Motor/Baustelle + Gewitter/Mütze/Sekunde + Nachmittag/Vormittag/Note + Stundenplan) في رسائل لصديق (Ich schicke eine SMS! Ich helfe gern!) + حكاية الواجب (Ich musste helfen!) عبر ترسانة الماضي القصير. 3 تصحيحات نطق (Sekunde-تقصير-e!/Nachmittag-تطويل-a-الأولى!/Stundenplan-النبر-أولاً!) + إعادة توليد 3. الروابط الثلاثة متحققة حياً قبل الدفع (SMS_Kurzmitteilung: مؤنث-أو-محايد/جمعها-كمفردها-والعامية-SMSen! + Topf: مذكر/Töpfe! + Stundenplan: مذكر/Stundenpläne!).
 - **التالي:** d5 (اللعب الجماعي + تمييز الماضي!).
