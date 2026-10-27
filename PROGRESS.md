@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 310 (2026-10-27) — D355: a2-u6-d3 «يعلّم وصفة شفوياً» — وصفة الفاصولياء + lassen + V2 (المرحلة د · خطة D352)
+- **الخلاصة:** الدرس 123 (A2-U6-D3 — يعلّم وصفة شفوياً): وصفة الفاصولياء من 5 جمل تُعلَّم شفوياً (Lass-uns/weich/mindestens/meistens/schrecklich!) + lassen ثلاثي الأمر (Lass!/Lasst!/Lassen-Sie! + lässt!) + الظرف أولاً ← الفعل ثانياً (meistens/mindestens + V2!). بلا تصحيحات نطق (5/5 من أول مرة!). الروابط الخمسة متحققة حياً قبل الدفع (mindestens: ظرف/على-الأقل! + weich: صفة/Eier-weich-kochen! + meistens: ظرف/غالباً! + lassen: قوي/lässt-gelassen-lass! + schrecklich: صفة/فظيع!).
+- **التالي:** إنتاج d4 (يكتب وصفة — التنقيب الصحيح أولاً!).
+
 ## الدفعة 309 (2026-10-27) — D354: a2-u6-d2 «يجمع الثنائيات» — 6 ثنائيات + الأمر حياً + Bäcker سقطت (المرحلة د · خطة D352)
 - **الخلاصة:** الدرس 122 (A2-U6-D2 — يجمع الثنائيات): 6 كلمات داخل ثنائياتها الثابتة (in-der-Cafeteria/guter-Service/Lust-auf-Pizza/preiswert-kochen/gute-Qualität/selbst-الفعل!) + الأمر حياً من d1 (iss/koch/backe/Essen-Sie — لولبة ars-imperativ بلا ترسانة جديدة!). Bäcker سقطت (مسربة في 6 دروس A1!) وعُوّضت بـselbst (Duden: selbst backen/machen!). تصحيح نطق واحد (Cafeteria: النبر على ri لا Ca-! + معجم 183 + إعادة توليد). الروابط الستة متحققة حياً قبل الدفع (Cafeteria: مؤنث/Cafeterias-أولاً! + Service_Dienstleistung: مذكر/بلا-جمع! + Lust: مؤنث/بلا-جمع-شهية! + preiswert: صفة! + Qualitaet: مؤنث/Qualitäten! + selbst_selber: حرف!).
 - **التالي:** إنتاج d3 (يعلّم وصفة شفوياً — التنقيب الصحيح أولاً: grep -rw!).

@@ -1627,6 +1627,11 @@ def build_all() -> None:
     ("word-preiswert", "preiswert.", "preiswert", ["a2-u6-d2"]),
     ("word-qualitaet", "die Qualität.", "qualitaet", ["a2-u6-d2"]),
     ("word-selbst", "selbst.", "selbst", ["a2-u6-d2"]),
+    ("word-mindestens", "mindestens.", "mindestens", ["a2-u6-d3"]),
+    ("word-weich", "weich.", "weich", ["a2-u6-d3"]),
+    ("word-meistens", "meistens.", "meistens", ["a2-u6-d3"]),
+    ("word-lassen", "lassen.", "lassen", ["a2-u6-d3"]),
+    ("word-schrecklich", "schrecklich.", "schrecklich", ["a2-u6-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
