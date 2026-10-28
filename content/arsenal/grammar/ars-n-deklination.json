@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ars-n-deklination",
+  "kind": "shufra",
+  "constitutionSection": "10‑ي",
+  "riskLevel": "red",
+  "levelIntroduced": "A2",
+  "title": {
+    "de": "der Student → den Studenten · der Angestellte → den Angestellten",
+    "ar": "أسماء-n: المذكر يأخذ -n إلا في الفاعل!"
+  },
+  "payload": {
+    "topicAr": "أسماء-n: المذكر (Student/Kollege/Polizist/Angestellte/Name/Herr!) يأخذ -n في كل الحالات إلا الفاعل (den Studenten!) — والجمع -n (die Studenten!).",
+    "ruleDe": "der Student → den Studenten · der Angestellte → den Angestellten · die Studenten",
+    "ruleAr": "اسم-n = مذكر يأخذ -(e)n في المنصوب والمجرور والمضاف (den/dem/des + -n!) — الفاعل وحده بلا -n (der Student!) — والجمع -n (die Studenten!).",
+    "examples": [
+      {
+        "de": "Ich sehe den Studenten.",
+        "ar": "أرى الطالب."
+      },
+      {
+        "de": "Der Polizist hilft dem Kunden.",
+        "ar": "الشرطي يساعد الزبون."
+      },
+      {
+        "de": "Das ist der Name des Studenten.",
+        "ar": "هذا اسم الطالب."
+      },
+      {
+        "de": "Die Kollegen arbeiten viel.",
+        "ar": "الزملاء يعملون كثيراً."
+      },
+      {
+        "de": "Der Kunde fragt den Polizisten.",
+        "ar": "الزبون يسأل الشرطي."
+      }
+    ],
+    "contrastAr": "العربية بلا إعراب ظاهر على الاسم (الطالبُ/الطالبَ واحد!) فيُنسى الـ-n — بينما الألمانية تطلب -n في كل الحالات إلا الفاعل (den Studenten لا den Student!) (خريطة التداخل 10‑ي). وفخّ الخلط: Direktor/Kaufmann/Mann بـ-s لا -n (des Direktors!) — غداً!",
+    "inferencePromptAr": "قارن: der Student/den Studenten/die Studenten — متى تظهر الـ-n ومتى تختفي؟ اكتشف: الفاعل وحده بلا -n!",
+    "limitsAr": [
+      "ein-Angestellter/ein-Auszubildender (نكرة!) لاحقاً — اليوم der/die/den فقط.",
+      "Name/Herr شاذان (des Namens/des Herrn! — تُحفظ كما هي).",
+      "Direktor/Kaufmann/Mann ليست أسماء-n (des Direktors!) — غداً (Genitiv-s!)."
+    ],
+    "beads": [
+      "Ich",
+      "sehe",
+      "den",
+      "Studenten."
+    ],
+    "properNouns": [],
+    "sceneAr": "في المصلحة: الزبون يسأل الشرطي (Der Kunde fragt den Polizisten!) والموظف يساعد الطالب — كل مذكر-n يأخذ -n إلا الفاعل."
+  },
+  "usedInLessons": [
+    "a2-u10-d1"
+  ]
+}
