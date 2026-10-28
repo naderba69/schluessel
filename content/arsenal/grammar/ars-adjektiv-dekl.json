@@ -1,1 +1,65 @@
-{"constitutionSection": "10‑ي", "id": "ars-adjektiv-dekl", "kind": "shufra", "levelIntroduced": "A2", "payload": {"beads": ["der", "kühle", "Abend", "·", "ein", "kühler"], "contrastAr": "العربية الصفة تطابق الموصوف (المساء البارد/مساءٌ بارد) بلا نهايات إعرابية على الصفة نفسها — فيُعمَّم (ein kühl Abend!) بلا نهاية. بينما الألمانية: الصفة قبل الاسم تلبس نهاية دائماً، والذي قبلها (der أم ein) يحدد أي نهاية! (خريطة التداخل 10‑ي).", "examples": [{"ar": "المساء البارد (der تحمل -r فالصفة -e!)", "de": "der kühle Abend"}, {"ar": "مساءٌ بارد (ein بلا نهاية فالصفة تأخذ -r!)", "de": "ein kühler Abend"}, {"ar": "المرأة الشقراء.", "de": "die blonde Frau"}, {"ar": "امرأة شقراء.", "de": "eine blonde Frau"}, {"ar": "الطقس العاصف.", "de": "das windige Wetter"}, {"ar": "طقس عاصف.", "de": "ein windiges Wetter"}], "inferencePromptAr": "قارن der kühle ↔ ein kühler: أين ذهبت -r؟ اكتشف: النهاية القوية (-r/-s) تظهر مرة واحدة — إن حملها der سقطت عن الصفة (ضعيف!) وإن غابت عن ein لبستها الصفة (قوي!) — واحدة تكفي!", "limitsAr": ["تعرُّض فقط: الرفع (Nominativ) مع der/ein — والمختلط (kein/mein) في d5 والحالات الكاملة لاحقاً (B1!).", "الصفة بعد الفعل عارية دائماً (Der Abend ist kühl!) — النهايات قبل الاسم فقط!", "ein-الكلمات (ein/eine/mein/kein) بلا نهاية في المذكر والمحايد — فالصفة قوية هناك!"], "properNouns": [], "ruleAr": "الصفة قبل الاسم تلبس نهاية: der-كلمة (der/die/das) تحمل العلامة فالصفة ضعيفة (-e!) · ein-كلمة (ein/eine) بلا علامة في المذكر والمحايد فالصفة قوية (-r/-s!) — تعرُّض: تمييز لا تدريب!", "ruleDe": "der kühle Abend · ein kühler Abend · die blonde Frau · eine blonde Frau · das windige Wetter · ein windiges Wetter", "sceneAr": "نافذة الطقس: تصف المساء والسماء والطقس — والصفة تلبس نهايتها قبل الاسم.", "topicAr": "Adjektiv-Deklination: stark/schwach في الرفع — تعرُّض وتمييز."}, "riskLevel": "orange", "schemaVersion": "1.0.0", "title": {"ar": "إعراب الصفة — «der kühle» أم «ein kühler»؟ (قوي/ضعيف)", "de": "der kühle Abend · ein kühler Abend: stark/schwach im Nominativ"}, "usedInLessons": ["a2-u7-d1", "a2-u7-d2"]}
+{
+  "constitutionSection": "10‑ي",
+  "id": "ars-adjektiv-dekl",
+  "kind": "shufra",
+  "levelIntroduced": "A2",
+  "payload": {
+    "beads": [
+      "der",
+      "kühle",
+      "Abend",
+      "·",
+      "ein",
+      "kühler"
+    ],
+    "contrastAr": "العربية الصفة تطابق الموصوف (المساء البارد/مساءٌ بارد) بلا نهايات إعرابية على الصفة نفسها — فيُعمَّم (ein kühl Abend!) بلا نهاية. بينما الألمانية: الصفة قبل الاسم تلبس نهاية دائماً، والذي قبلها (der أم ein) يحدد أي نهاية! (خريطة التداخل 10‑ي).",
+    "examples": [
+      {
+        "ar": "المساء البارد (der تحمل -r فالصفة -e!)",
+        "de": "der kühle Abend"
+      },
+      {
+        "ar": "مساءٌ بارد (ein بلا نهاية فالصفة تأخذ -r!)",
+        "de": "ein kühler Abend"
+      },
+      {
+        "ar": "المرأة الشقراء.",
+        "de": "die blonde Frau"
+      },
+      {
+        "ar": "امرأة شقراء.",
+        "de": "eine blonde Frau"
+      },
+      {
+        "ar": "الطقس العاصف.",
+        "de": "das windige Wetter"
+      },
+      {
+        "ar": "طقس عاصف.",
+        "de": "ein windiges Wetter"
+      }
+    ],
+    "inferencePromptAr": "قارن der kühle ↔ ein kühler: أين ذهبت -r؟ اكتشف: النهاية القوية (-r/-s) تظهر مرة واحدة — إن حملها der سقطت عن الصفة (ضعيف!) وإن غابت عن ein لبستها الصفة (قوي!) — واحدة تكفي!",
+    "limitsAr": [
+      "تعرُّض فقط: الرفع (Nominativ) مع der/ein — والمختلط (kein/mein) في d5 والحالات الكاملة لاحقاً (B1!).",
+      "الصفة بعد الفعل عارية دائماً (Der Abend ist kühl!) — النهايات قبل الاسم فقط!",
+      "ein-الكلمات (ein/eine/mein/kein) بلا نهاية في المذكر والمحايد — فالصفة قوية هناك!"
+    ],
+    "properNouns": [],
+    "ruleAr": "الصفة قبل الاسم تلبس نهاية: der-كلمة (der/die/das) تحمل العلامة فالصفة ضعيفة (-e!) · ein-كلمة (ein/eine) بلا علامة في المذكر والمحايد فالصفة قوية (-r/-s!) — تعرُّض: تمييز لا تدريب!",
+    "ruleDe": "der kühle Abend · ein kühler Abend · die blonde Frau · eine blonde Frau · das windige Wetter · ein windiges Wetter",
+    "sceneAr": "نافذة الطقس: تصف المساء والسماء والطقس — والصفة تلبس نهايتها قبل الاسم.",
+    "topicAr": "Adjektiv-Deklination: stark/schwach في الرفع — تعرُّض وتمييز."
+  },
+  "riskLevel": "orange",
+  "schemaVersion": "1.0.0",
+  "title": {
+    "ar": "إعراب الصفة — «der kühle» أم «ein kühler»؟ (قوي/ضعيف)",
+    "de": "der kühle Abend · ein kühler Abend: stark/schwach im Nominativ"
+  },
+  "usedInLessons": [
+    "a2-u7-d1",
+    "a2-u7-d2",
+    "a2-u7-d6"
+  ]
+}
