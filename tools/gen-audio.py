@@ -1724,6 +1724,8 @@ def build_all() -> None:
     ("word-viertel-vor", "viertel vor.", "viertel-vor", ["a2-u9-d5"]),
     ("word-samstags", "samstags.", "samstags", ["a2-u9-d5"]),
     ("word-sonntags", "sonntags.", "sonntags", ["a2-u9-d5"]),
+    ("word-europaeer", "der Europäer.", "europaeer", ["a2-u9-d6"]),
+    ("word-europaeisch", "europäisch.", "europaeisch", ["a2-u9-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
