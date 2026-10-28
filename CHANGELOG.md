@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-28 — الدفعة 326: D371 — a2-u8-d4 «الثقافة والناس» — يوم الأسماء: الجمع مع المفرد (Künste!) + أول n-نصب (den Journalisten!) (الدرس 136)
+رابع دروس الوحدة الثامنة: خمسة أسماء ثقافية (Kunst/Journalist/Autor/Workshop/Comic — ثلاثة رئيسية + مجموعتا-Berufe!) في خبر ثقافي (8 جمل: ورشة! + مؤلف! + صحفي! + فن! + يحب! + اشترت! + مضحكة! + doch!) — الجمع مع المفرد (Künste/Autoren/Comics!) + أول n-نصب (den Journalisten!) + الماضي المحكي ≠ المكتوب (war×4/hat…gekauft!) + doch (تقوية!). الكاشف 76/0/0/0 بعد إصلاح الأعلام وحده.
+- **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1820/0/0 · build ✓ 3.39s · docs-sync --check ✓ 186 قراراً مهيكلاً · آخرها D371 · الدفعة 326 · الموجّه 5.28 · notes check ✓ 0/23/209 (232)
+
 ## 2026-10-28 — الدفعة 325: D370 — a2-u8-d3 «يفهم وينقل» — اللاصق بلا ge! (übersetzt≠übergesetzt!) + القوي-المنفصل يُميل (spricht! lädt!) (الدرس 135)
 ثالث دروس الوحدة الثامنة: خمس كلمات الترجمة والنقل (übersetzen/Übersetzung/aussprechen/herunterladen/Datei — كلها Goethe-A2 رئيسية!) في يوم الفهم والنقل (نص إخباري ثالث في 8 جمل: übersetze! + übersetzt! + war! + spricht! + sprichst! + lade! + heruntergeladen! + ja!) — اللاصقة über- بلا ge أبداً (hat…übersetzt! ≠ عبّارة-übergesetzt!) مقابل المنفصلة ge-في-الوسط (heruntergeladen!) + القوي يُميل مع du/er (spricht-aus! lädt-herunter! — امتداد D368!) + ja الحشو استماعاً. الكاشف 74/0/0/0 بعد 4 إصلاحات.
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1814/0/0 · build ✓ 3.33s · docs-sync --check ✓ 185 قراراً مهيكلاً · آخرها D370 · الدفعة 325 · الموجّه 5.27 · notes check ✓ 0/23/207 (230)

@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 326 (2026-10-28) — D371: a2-u8-d4 «الثقافة والناس» — يوم الأسماء: الجمع مع المفرد (Künste!) + أول n-نصب (den Journalisten!) (الدرس 136)
+- **الخلاصة:** رابع دروس الوحدة الثامنة: خمسة أسماء ثقافية (Kunst/Journalist/Autor/Workshop/Comic — ثلاثة رئيسية + مجموعتا-Berufe!) في خبر ثقافي (8 جمل: ورشة! + مؤلف! + صحفي! + فن! + يحب! + اشترت! + مضحكة! + doch!) — الجمع مع المفرد (Künste/Autoren/Comics!) + أول n-نصب (den Journalisten!) + الماضي المحكي ≠ المكتوب (war×4/hat…gekauft!) + doch (تقوية!). الكاشف 76/0/0/0 بعد إصلاح الأعلام وحده.
+- **التالي:** إنتاج d5 (المجتمع: Sterben/Krankenkasse/Stipendium/Rentner△!).
+
 ## الدفعة 325 (2026-10-28) — D370: a2-u8-d3 «يفهم وينقل» — اللاصق بلا ge! (übersetzt≠übergesetzt!) + القوي-المنفصل يُميل (spricht! lädt!) (الدرس 135)
 - **الخلاصة:** ثالث دروس الوحدة الثامنة: خمس كلمات الترجمة والنقل (übersetzen/Übersetzung/aussprechen/herunterladen/Datei — كلها Goethe-A2 رئيسية!) في يوم الفهم والنقل (نص إخباري ثالث في 8 جمل: übersetze! + übersetzt! + war! + spricht! + sprichst! + lade! + heruntergeladen! + ja!) — اللاصقة über- بلا ge أبداً (hat…übersetzt! ≠ عبّارة-übergesetzt!) مقابل المنفصلة ge-في-الوسط (heruntergeladen!) + القوي يُميل مع du/er (spricht-aus! lädt-herunter! — امتداد D368!) + ja الحشو استماعاً. الكاشف 74/0/0/0 بعد 4 إصلاحات.
 - **التالي:** إنتاج d4 (الثقافة والناس: Kunst/Journalist/Autor/Workshop/Comic!).
