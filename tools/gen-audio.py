@@ -1665,6 +1665,10 @@ def build_all() -> None:
     ("word-fundsachen", "die Fundsachen.", "fundsachen", ["a2-u7-d4"]),
     ("word-fotoapparat", "der Fotoapparat.", "fotoapparat", ["a2-u7-d4"]),
     ("word-erdgeschoss", "das Erdgeschoss.", "erdgeschoss", ["a2-u7-d4"]),
+    ("word-austauschen", "austauschen.", "austauschen", ["a2-u7-d5"]),
+    ("word-herstellen", "herstellen.", "herstellen", ["a2-u7-d5"]),
+    ("word-einzeln", "einzeln.", "einzeln", ["a2-u7-d5"]),
+    ("word-einige", "einige.", "einige", ["a2-u7-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

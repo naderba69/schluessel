@@ -80,7 +80,7 @@ const VERB_PREFIX_STEMS: ReadonlySet<string> = new Set(["her", "hin", "weg", "zu
  * jed- …) أدوات تُصرَّف فلا تُركَّب: «Einkauf» ليس ein- + Kauf.
  */
 const COMPOUND_STEMS: ReadonlySet<string> = new Set(["einzel"]);
-const STEM_ENDINGS: readonly string[] = ["", "e", "er", "es", "en", "em", "s"];
+const STEM_ENDINGS: readonly string[] = ["", "e", "er", "es", "en", "em", "s", "n"]; // D365 (N-227): جذع «einzel-» ص13 + «n» = الظرف/الصفة «einzeln» (بلا «n» لا دليل — الكلمة الوحيدة المتأثرة)
 
 export function normKey(s: string): string {
   return s.normalize("NFC").replace(/[’‘]/g, "'").replace(/\s+/g, " ").trim().replace(/[!?;:,]+$/, "").trim();

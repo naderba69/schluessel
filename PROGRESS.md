@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 320 (2026-10-28) — D365: a2-u7-d5 «خدمة الزبائن» — trennbare استعمال 13 + فجوة المطابق «n» (الدرس 131)
+- **الخلاصة:** خامس دروس الوحدة السابعة: أربع كلمات خدمة (austauschen/herstellen/einzeln/einige — الفعلان Goethe-A2 رئيسيان، einige/einzeln بجذعين مطبوعين!) في يوم الزبائن (يبدّل! يصنع!) — المنفصلة تُفصل للثاني (tauschst aus/stellst her!) باستعمال ثالث عشر للترسانة (ars-trennbare!). الكاشف 71/0/0/0 من أول محاولة والمطابق أُصلح (نهاية «n» الناقصة!).
+- **التالي:** إنتاج d6 (يكتشف بالإنترنت + surfen/eigen — eigen=جذع+«» والمطابق يعالجها!).
+
 ## الدفعة 319 (2026-10-28) — D364: a2-u7-d4 «في المتجر الكبير» — Komposita-Genus استعمال ثانٍ + der-Kredit ≠ das-Kredit (الدرس 130)
 - **الخلاصة:** رابع دروس الوحدة السابعة: خمس كلمات تسوق (der Kredit/das Taschengeld/die Fundsachen/der Fotoapparat/das Erdgeschoss — كلها Goethe-A2 رئيسية، Taschengeld وFotoapparat على-A1 أيضاً!) في يوم المتجر الكبير (تشتري! تسأل عن المفقودات!) — الأداة من آخر المركّب (das GELD ← das Taschengeld! die SACHE ← die Fundsachen!) باستعمال ثانٍ للترسانة (ars-komposita-genus!). الكاشف 77/0/0/0 والتدقيق أمسك 3 (نبر المركّب الفرنسي! + إجهار d!) فصُححت في المعجم.
 - **التالي:** إنتاج d5 (من الحرّ المتبقي 6: الأفعال austauschen/herstellen/surfen + المحددات eigen/einzelne/manche!).
