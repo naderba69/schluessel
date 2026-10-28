@@ -3954,7 +3954,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-komposita-genus — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط): آخر جزء هو الأصل
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-komposita-genus"]);
     const rule = rules.get("ars-komposita-genus")!;
-    expect(rule.usedInLessons).toEqual(["a1-u6-d2"]);
+    expect(rule.usedInLessons).toEqual(["a1-u6-d2", "a2-u7-d4"]); // D364: استعمال ثانٍ (Komposita-Genus للمتجر: das GELD ← das Taschengeld!)
     expect(rule.payload.ruleDe).toMatch(/wohnen \+ das Zimmer → das Wohnzimmer · das Telefon \+ die Nummer → die Telefonnummer · die Familie \+ der Name → der Familienname/);
     expect(rule.payload.ruleAr).toContain("الأداة من الآخر دائماً");
     expect(rule.payload.ruleAr).toContain("die Familie لكن der Familienname");

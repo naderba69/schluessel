@@ -1660,6 +1660,11 @@ def build_all() -> None:
     ("word-dumm", "dumm.", "dumm", ["a2-u7-d3"]),
     ("word-tief", "tief.", "tief", ["a2-u7-d3"]),
     ("word-privat", "privat.", "privat", ["a2-u7-d3"]),
+    ("word-kredit", "der Kredit.", "kredit", ["a2-u7-d4"]),
+    ("word-taschengeld", "das Taschengeld.", "taschengeld", ["a2-u7-d4"]),
+    ("word-fundsachen", "die Fundsachen.", "fundsachen", ["a2-u7-d4"]),
+    ("word-fotoapparat", "der Fotoapparat.", "fotoapparat", ["a2-u7-d4"]),
+    ("word-erdgeschoss", "das Erdgeschoss.", "erdgeschoss", ["a2-u7-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

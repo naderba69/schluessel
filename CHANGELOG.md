@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-28 — الدفعة 319: D364 — a2-u7-d4 «في المتجر الكبير» — Komposita-Genus استعمال ثانٍ + der-Kredit ≠ das-Kredit (الدرس 130)
+رابع دروس الوحدة السابعة: خمس كلمات تسوق (der Kredit/das Taschengeld/die Fundsachen/der Fotoapparat/das Erdgeschoss — كلها Goethe-A2 رئيسية، Taschengeld وFotoapparat على-A1 أيضاً!) في يوم المتجر الكبير (تشتري! تسأل عن المفقودات!) — الأداة من آخر المركّب (das GELD ← das Taschengeld! die SACHE ← die Fundsachen!) باستعمال ثانٍ للترسانة (ars-komposita-genus!). الكاشف 77/0/0/0 والتدقيق أمسك 3 (نبر المركّب الفرنسي! + إجهار d!) فصُححت في المعجم.
+- **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1786/0/0 · build ✓ 3.30s · docs-sync --check ✓ 179 قراراً مهيكلاً · آخرها D364 · الدفعة 319 · الموجّه 5.21 · notes check ✓ 0/23/203 (226)
+
 ## 2026-10-28 — الدفعة 318: D363 — a2-u7-d3 «يقارن ويختار» — Komparativ (+er/الإمالة/als) + تعرُّض Superlativ (الدرس 129)
 ثالث دروس الوحدة السابعة: خمس صفات جديدة (klug/intelligent/dumm/tief/privat — كلها Goethe-A2 رئيسية، dumm على-A1 أيضاً!) تُقارن بثلاث درجات (klug ← klüger ← am klügsten!) — المقارنة +er (بعضها بالإمالة: klug←klüger! dumm←dümmer!) + als للمختلف + so-wie للمتساوي + تعرُّض am-sten (معلن في declined! D188!) + ترسانة جديدة (ars-komparativ!). الكاشف 77/0/0/0 والتدقيق الصوتي نظيف 5/5 من أول محاولة.
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1780/0/0 · build ✓ 3.29s · docs-sync --check ✓ 178 قراراً مهيكلاً · آخرها D363 · الدفعة 318 · الموجّه 5.20 · notes check ✓ 0/23/203 (226)

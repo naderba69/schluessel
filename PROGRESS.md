@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 319 (2026-10-28) — D364: a2-u7-d4 «في المتجر الكبير» — Komposita-Genus استعمال ثانٍ + der-Kredit ≠ das-Kredit (الدرس 130)
+- **الخلاصة:** رابع دروس الوحدة السابعة: خمس كلمات تسوق (der Kredit/das Taschengeld/die Fundsachen/der Fotoapparat/das Erdgeschoss — كلها Goethe-A2 رئيسية، Taschengeld وFotoapparat على-A1 أيضاً!) في يوم المتجر الكبير (تشتري! تسأل عن المفقودات!) — الأداة من آخر المركّب (das GELD ← das Taschengeld! die SACHE ← die Fundsachen!) باستعمال ثانٍ للترسانة (ars-komposita-genus!). الكاشف 77/0/0/0 والتدقيق أمسك 3 (نبر المركّب الفرنسي! + إجهار d!) فصُححت في المعجم.
+- **التالي:** إنتاج d5 (من الحرّ المتبقي 6: الأفعال austauschen/herstellen/surfen + المحددات eigen/einzelne/manche!).
+
 ## الدفعة 318 (2026-10-28) — D363: a2-u7-d3 «يقارن ويختار» — Komparativ (+er/الإمالة/als) + تعرُّض Superlativ (الدرس 129)
 - **الخلاصة:** ثالث دروس الوحدة السابعة: خمس صفات جديدة (klug/intelligent/dumm/tief/privat — كلها Goethe-A2 رئيسية، dumm على-A1 أيضاً!) تُقارن بثلاث درجات (klug ← klüger ← am klügsten!) — المقارنة +er (بعضها بالإمالة: klug←klüger! dumm←dümmer!) + als للمختلف + so-wie للمتساوي + تعرُّض am-sten (معلن في declined! D188!) + ترسانة جديدة (ars-komparativ!). الكاشف 77/0/0/0 والتدقيق الصوتي نظيف 5/5 من أول محاولة.
 - **التالي:** إنتاج d4 (d4/d5/d6 — من الحرّ الـ28 بالمنهج المصلَّح!).
