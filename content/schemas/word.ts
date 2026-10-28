@@ -105,5 +105,5 @@ export type Word = z.infer<typeof Word>;
  */
 export const BARE_ARTICLE_IDS: ReadonlySet<string> = new Set([
   "aegypten", "arabisch", "deutsch", "englisch", "europa", "frankreich", "franzoesisch", "griechenland",
-  "italien", "marokko", "oesterreich", "polen", "portugal", "russland", "spanien",
+  "italien", "luxemburg", "marokko", "oesterreich", "polen", "portugal", "russland", "spanien",
 ]);

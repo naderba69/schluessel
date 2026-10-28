@@ -1711,6 +1711,11 @@ def build_all() -> None:
     ("word-schweizerisch", "schweizerisch.", "schweizerisch", ["a2-u9-d2"]),
     ("word-franke", "der Franke.", "franke", ["a2-u9-d2"]),
     ("word-rappen", "der Rappen.", "rappen", ["a2-u9-d2"]),
+    ("word-klassenfahrt", "die Klassenfahrt.", "klassenfahrt", ["a2-u9-d3"]),
+    ("word-recht-haben", "recht haben.", "recht-haben", ["a2-u9-d3"]),
+    ("word-auf-keinen-fall", "auf keinen Fall.", "auf-keinen-fall", ["a2-u9-d3"]),
+    ("word-ausser", "außer.", "ausser", ["a2-u9-d3"]),
+    ("word-luxemburg", "Luxemburg.", "luxemburg", ["a2-u9-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

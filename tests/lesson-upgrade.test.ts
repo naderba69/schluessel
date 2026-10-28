@@ -537,7 +537,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-dativ-fix: «الداتيف الثابت mit/nach/aus/zu» في خطة v6.1) — تشاركها ستة دروس لاحقة فـusedInLessons يضمّها كلها (§10‑ح)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-dativ-fix"]);
     const rule = rules.get("ars-dativ-fix")!;
-    expect(rule.usedInLessons).toEqual(["a1-u8-d4", "a1-u8-d6", "a1-u9-d1", "a1-u11-d2", "a1-u11-d5", "a1-u11-d6", "a1-u12-d6", "a1-u15-d4", "a2-u2-d2"]); // D319: دعم raten (dass-day) // D202: أسبوع المراجعة
+    expect(rule.usedInLessons).toEqual(["a1-u8-d4", "a1-u8-d6", "a1-u9-d1", "a1-u11-d2", "a1-u11-d5", "a1-u11-d6", "a1-u12-d6", "a1-u15-d4", "a2-u2-d2", "a2-u9-d3"]); // D377: +u9-d3 (نخطط!: nach-Luxemburg/mit-dem-Schiff/außer-mir!) // D319: دعم raten (dass-day) // D202: أسبوع المراجعة
     expect(rule.payload.ruleDe).toBe("mit · nach · aus · zu: der/das → dem · die → der — zu dem = zum · zu der = zur — mit dem Bus · mit der Bahn · mit dem Auto · zum Flughafen · zur Schule · nach Berlin · nach Tunesien · nach Hause · aus Tunis · aus der Schweiz");
     // ثلاث خطوات: الحالة (الداتيف دائماً · dem/der · zum/zur) · nach أم zu (المدن والبلدان وHause بلا أداة · zu لما له أداة وللأشخاص) · aus للأصل (بلا أداة إلا die Schweiz)
     for (const x of ["يأتي الداتيف دائماً", "der ← dem · das ← dem · die ← der", "zu dem = zum", "zu der = zur", "nach للمدن والبلدان والقارات بلا أداة", "nach Hause = إلى البيت (حركة) · zu Hause = في البيت (مكان)", "zu لكل مكانٍ له أداة ولكل شخص", "die Schweiz ← aus der Schweiz", "Woher kommst du? — Aus Tunesien.", "abholen (يستقبل/يأخذ: Mein Vater holt mich ab"])
@@ -3737,7 +3737,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-kein-nicht — أشار إليها grammarArsenalIds في d4 وd5 وd6 ولم يُكتب لها ملف قط) فتُفهرس في الثلاثة
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-kein-nicht"]);
     const rule = rules.get("ars-kein-nicht")!;
-    expect(rule.usedInLessons).toEqual(["a1-u5-d4", "a1-u5-d6", "a1-u15-d3"]); // D202: أسبوع المراجعة · D145: d5 صار بقاعدة يومه الخاصة ars-kein-nicht-2
+    expect(rule.usedInLessons).toEqual(["a1-u5-d4", "a1-u5-d6", "a1-u15-d3", "a2-u9-d3"]); // D377: +u9-d3 (نخطط!: auf-keinen-Fall!) // D202: أسبوع المراجعة · D145: d5 صار بقاعدة يومه الخاصة ars-kein-nicht-2
     expect(rule.payload.ruleDe).toMatch(/ein Glas → kein Glas · eine Gabel → keine Gabel · einen Löffel → keinen Löffel · Fleisch → kein Fleisch · Eier → keine Eier — Die Suppe ist nicht scharf\./);
     expect(rule.payload.ruleAr).toContain("وهي ein بحرف k في أولها، فتتصرّف مثلها تماماً");
     // النقل الإيجابي يُسمّى عوناً: «لا» النافية للجنس ≈ kein · «لا شيء» = nichts · الفرنسية pas de · والفروق بمبررها: النفي على «عند» والاسم كما هو
