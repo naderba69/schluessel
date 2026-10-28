@@ -26349,6 +26349,46 @@
       "rmsDb": -17
     },
     {
+      "id": "word-blog",
+      "file": "words/audio/de-DE/word-blog.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Blog.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u8-d6"
+      ],
+      "durationMs": 873,
+      "sizeBytes": 4215,
+      "hash": "sha256:d0aa7086e7c462482479d037d4ecfe19e16b8da14693d535b9918100742d241c",
+      "pcmSha256": "7de882eea9a13fa5edb95a9238c36d3e367943603e3a0f53ff2dd6c94852f1e9",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "word-e-book",
+      "file": "words/audio/de-DE/word-e-book.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das E-Book.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u8-d6"
+      ],
+      "durationMs": 989,
+      "sizeBytes": 4780,
+      "hash": "sha256:e4c9b79f073c93781f6178eac0c79692762a84351bfb3234ecf76ec5051182c4",
+      "pcmSha256": "9afe2acb51ad119d05473959eecd3bd7f3e46273ee93df4cd4f2eaf6ce09a1b9",
+      "rmsDb": -17.03
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",

@@ -1697,6 +1697,8 @@ def build_all() -> None:
     ("word-krankenkasse", "die Krankenkasse.", "krankenkasse", ["a2-u8-d5"]),
     ("word-stipendium", "das Stipendium.", "stipendium", ["a2-u8-d5"]),
     ("word-rentner", "der Rentner.", "rentner", ["a2-u8-d5"]),
+    ("word-blog", "der Blog.", "blog", ["a2-u8-d6"]),
+    ("word-e-book", "das E-Book.", "e-book", ["a2-u8-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
