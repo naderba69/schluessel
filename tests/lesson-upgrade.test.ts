@@ -4921,7 +4921,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-preise) — لا تكرار لقاعدة الأسعار حتى الألف (ars-preis-1000 · u3-d2): هذه عن السؤال والحكم والسنتات
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-preise"]);
     const rule = rules.get("ars-preise")!;
-    expect(rule.usedInLessons).toEqual(["a1-u8-d2"]);
+    expect(rule.usedInLessons).toEqual(["a1-u8-d2", "a2-u9-d2"]); // D376: +u9-d2 (Grüezi!: kostet…Franken!)
     expect(rule.payload.ruleDe).toBe("Was kostet der Hut? — Er kostet fünf Euro fünfzig. · Was kosten die Schuhe? — Sie kosten neununddreißig Euro neunundneunzig. · neunundneunzig Cent · circa vierzig Euro · Das macht zwanzig Euro. · Das ist günstig! · Der Markt ist am besten.");
     // ثلاث خطوات: الشيء فاعل والفعل يتبعه (kostet/kosten) والجواب بضمير جنس الكلمة · السنتات بلا Cent بعد Euro وما دون اليورو بـCent · الحكم (günstig/billig/teuer/zu teuer · Rabatt · am besten)
     for (const x of ["(مفرد ← kostet)", "(جمع ← kosten)", "Wie viel kostet …? بالمعنى نفسه", "Er kostet … (der Hut)", "Sie kosten … (die Schuhe)", "عدد السنتات بلا كلمة Cent", "neunundzwanzig Euro neunundneunzig", "neunundneunzig Cent", "بلا نهاية جمع بعد العدد", "Das macht …", "circa (مختصرةً ca.)", "günstig = مناسب السعر", "zu teuer = أغلى من اللازم", "am besten = «الأفضل»", "Am besten kaufe ich die Schuhe dort."])

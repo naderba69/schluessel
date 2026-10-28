@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 331 (2026-10-28) — D376: a2-u9-d2 «Grüezi!» — يوم الجيران + الفرنك (الدرس 140)
+- **الخلاصة:** ثاني دروس U9 (الجيران!): ست كلمات مجموعات (Österreicher/Schweizer/österreichisch/schweizerisch/Franke/Rappen — +0 رئيسية! + مذكر-فقط!) في يوم الجيران (8 جمل: نمساوي! + من-النمسا! + مال-نمساوي! + سويسري! + من-سويسرا! + مال-سويسري! + فرنك-مئة! + بخمسة!) — من-أين (aus-Österreich/aus-der-Schweiz!) + السعر (kostet…Franken!) بلا ترسانة جديدة. الكاشف 65/0/0/0 بعد إصلاح Dativ.
+- **التالي:** إنتاج d3 (نخطط: Luxemburg/Klassenfahrt/recht-haben/auf-keinen-Fall/außer!).
+
 ## الدفعة 330 (2026-10-28) — D375: a2-u9-d1 «ننطلق صباحاً» — افتتاح U9 + ترسانة Futur (werden…fahren!) (الدرس 139)
 - **الخلاصة:** أول دروس الوحدة التاسعة (السفر!): ست كلمات انطلاق (am-Morgen/ICE/Motorroller/Schiff/abschließen/auf-jeden-Fall — 4 رئيسية + مجموعتان!) في صباح السفر (8 جمل: نقفل! + سنركب! + سيكون! + حتماً! + يقود! + سنركب-السفينة! + قفلت! + انطلقنا!) — المستقبل بـwerden (ترسانة ars-futur-i الجديدة! + المصدر آخراً!) + المنفصل-بلا-إمالة (schließe/schließt!) + القلب V2. الكاشف 70/0/0/0 بعد إصلاح الفخ.
 - **التالي:** إنتاج d2 (Grüezi: Österreicher/Schweizer/österreichisch/schweizerisch/Franke/Rappen!).
