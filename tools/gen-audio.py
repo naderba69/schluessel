@@ -1677,6 +1677,12 @@ def build_all() -> None:
     ("word-situation", "die Situation.", "situation", ["a2-u8-d1"]),
     ("word-interesse", "das Interesse.", "interesse", ["a2-u8-d1"]),
     ("word-teilen", "teilen.", "teilen", ["a2-u8-d1"]),
+    ("word-tablet", "das Tablet.", "tablet", ["a2-u8-d2"]),
+    ("word-laptop", "der Laptop.", "laptop", ["a2-u8-d2"]),
+    ("word-mobiltelefon", "das Mobiltelefon.", "mobiltelefon", ["a2-u8-d2"]),
+    ("word-apparat", "der Apparat.", "apparat", ["a2-u8-d2"]),
+    ("word-homepage", "die Homepage.", "homepage", ["a2-u8-d2"]),
+    ("word-link", "der Link.", "link", ["a2-u8-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

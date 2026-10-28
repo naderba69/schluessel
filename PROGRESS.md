@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 324 (2026-10-28) — D369: a2-u8-d2 «على الشاشة» — 6 أجهزة + الحالات (einen/der/mir!) (الدرس 134)
+- **الخلاصة:** ثاني دروس الوحدة الثامنة: ستة أجهزة (Tablet/Laptop/Mobiltelefon/Apparat/Homepage/Link — كلها Goethe-A2 رئيسية، ثلاثة على-A1 أيضاً!) في يوم الشاشة (خبر مصغّر 8 جمل: war×3! + gekauft! + mal!) — تدريب الحالات (einen المذكر! + auf-der الساكن! + mir المرسَل!) على أفعال معروفة (kaufen/schicken!) + رصد الماضي. الكاشف 80/0/0/0 بعد 4 إصلاحات معدن-لغة.
+- **التالي:** إنتاج d3 (يفهم وينقل: übersetzen/Übersetzung/aussprechen/herunterladen/Datei!).
+
 ## الدفعة 323 (2026-10-28) — D368: a2-u8-d1 «يقرأ الخبر» — افتتاح U8 + القوي يُميل (trägt≠trage!) (الدرس 133)
 - **الخلاصة:** أول دروس الوحدة الثامنة (الإعلام!): ست كلمات ورقية (Blatt/austragen/Person/Situation/Interesse/teilen — كلها Goethe-A2 رئيسية!) في يوم قراءة الخبر (خبر مصغّر في 8 جمل: يوزع! + وزّع! + كان! + لكل شخص! + اهتمامات! + أقسم! + الورقة! + doch!) — الماضي المحكي (hat…ausgetragen!) ≠ المكتوب (war!) بتقابل الترسانتين (ars-perfekt + ars-praeteritum-kurz!) + doch استماعاً (تقوية!). الكاشف 79/0/0/0 بعد إصلاح ASCII واحد.
 - **التالي:** إنتاج d2 (على الشاشة: Tablet/Laptop/Mobiltelefon/Apparat/Homepage/Link!).
