@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-28 — الدفعة 317: D362 — a2-u7-d2 «يرتّب بالأرقام» — Ordinalzahlen erste–sechste + نهاية الصفة (الدرس 128)
+ثاني دروس الوحدة السابعة: ستة أسماء جديدة (der Artikel/die Bluse/die Jeans/das Poster/das T-Shirt/die Webseite — خمسة على-A1 أيضاً!) تُرتَّب بالترتيبية (der erste Artikel/die sechsten Jeans!) — الترتيبية قاعدة بلا مداخل (D167: تُعرف من درس التاريخ!) تلبس نهاية الصفة (ars-adjektiv-dekl استعمال ثانٍ!). الكاشف 74/0/0/0 والتدقيق الصوتي صفر بعد 4 تصحيحات نطق + توثيق Shirt.
+- **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1773/0/0 · build ✓ 3.68s · docs-sync --check ✓ 177 قراراً مهيكلاً · آخرها D362 · الدفعة 317 · الموجّه 5.19 · notes check ✓ 0/23/203 (226)
+
 ## 2026-10-27 — الدفعة 316: D361 — a2-u7-d1 «يصف بالطقس والمظهر» — Adjektiv stark/schwach + ترسانة ars-adjektiv-dekl (الدرس 127)
 أول دروس الوحدة السابعة (المنهج المصلَّح بعد N-226!): ست صفات جديدة (blond/kühl/bewölkt/neblig/windig/reich — كلها Goethe-A2 رئيسية، blond على-A1 أيضاً!) تُلبس نهاياتها قبل أسماء معروفة (der kühle Abend/ein kühler Abend!) — تعرُّض stark/schwach في الرفع (تمييز لا تدريب!) + ترسانة صغرى جديدة (ars-adjektiv-dekl: النهاية القوية تظهر مرة واحدة!). الكاشف 72/0/0/0 (official بنصوص مستخرجة!) والتدقيق الصوتي نظيف 6/6 من أول محاولة.
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1766/0/0 · build ✓ 3.85s · docs-sync --check ✓ 176 قراراً مهيكلاً · آخرها D361 · الدفعة 316 · الموجّه 5.18 · notes check ✓ 0/23/203 (226)

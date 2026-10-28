@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 317 (2026-10-28) — D362: a2-u7-d2 «يرتّب بالأرقام» — Ordinalzahlen erste–sechste + نهاية الصفة (الدرس 128)
+- **الخلاصة:** ثاني دروس الوحدة السابعة: ستة أسماء جديدة (der Artikel/die Bluse/die Jeans/das Poster/das T-Shirt/die Webseite — خمسة على-A1 أيضاً!) تُرتَّب بالترتيبية (der erste Artikel/die sechsten Jeans!) — الترتيبية قاعدة بلا مداخل (D167: تُعرف من درس التاريخ!) تلبس نهاية الصفة (ars-adjektiv-dekl استعمال ثانٍ!). الكاشف 74/0/0/0 والتدقيق الصوتي صفر بعد 4 تصحيحات نطق + توثيق Shirt.
+- **التالي:** إنتاج d3 (يقارن ويختار + Komparativ — klug/intelligent/dumm/tief/privat!).
+
 ## الدفعة 316 (2026-10-27) — D361: a2-u7-d1 «يصف بالطقس والمظهر» — Adjektiv stark/schwach + ترسانة ars-adjektiv-dekl (الدرس 127)
 - **الخلاصة:** أول دروس الوحدة السابعة (المنهج المصلَّح بعد N-226!): ست صفات جديدة (blond/kühl/bewölkt/neblig/windig/reich — كلها Goethe-A2 رئيسية، blond على-A1 أيضاً!) تُلبس نهاياتها قبل أسماء معروفة (der kühle Abend/ein kühler Abend!) — تعرُّض stark/schwach في الرفع (تمييز لا تدريب!) + ترسانة صغرى جديدة (ars-adjektiv-dekl: النهاية القوية تظهر مرة واحدة!). الكاشف 72/0/0/0 (official بنصوص مستخرجة!) والتدقيق الصوتي نظيف 6/6 من أول محاولة.
 - **التالي:** إنتاج d2 (يرتّب بالأرقام + Ordinalzahlen — Jeans/T-Shirt/Bluse/Poster/Webseite/Artikel!).
