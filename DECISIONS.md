@@ -3535,5 +3535,5 @@
 - **الفهرس العكسي:** N-229 (مغلقة ← D367) + D360 (المنهج المصلَّح!) + D350 (أزال تسريب-teilen!) + D188 (الصيغ المعلنة!) + دستور-جدول §7 (A2-U8: الإعلام والأخبار!) + content/arsenal/curriculum-reference.json (K5 صدى — §7 يغلب).
 - **الأيام:** d1 يقرأ الخبر (Blatt/austragen/Person/Situation/Interesse/teilen!) · d2 على الشاشة (Tablet/Laptop/Mobiltelefon/Apparat/Homepage/Link!) · d3 يفهم وينقل (übersetzen/Übersetzung/aussprechen/herunterladen/Datei!) · d4 الثقافة والناس (Kunst/Journalist/Autor/Workshop/Comic!) · d5 المجتمع (Sterben/Krankenkasse/Stipendium/Rentner△!) · d6 نشرتي الإخبارية (Blog/E-Book + النشرة!).
 - **الأرقام:** ملاحظات 0/23/206 (229 — N-229 مغلقة!) · تغطية A2 الرئيسية 1082/1159 (بلا تغيير — خطة) · مجموعات 119/247 (بلا تغيير — خطة).
-- **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1794/0/0 · build ✓ 2.78s · docs-sync --check ✓ 182 قراراً مهيكلاً · آخرها D367 · الدفعة 322 · الموجّه 5.24 · notes check ✓ 0/23/206 (229)
+- **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1794/0/0 · build ✓ 2.44s · docs-sync --check ✓ 182 قراراً مهيكلاً · آخرها D367 · الدفعة 322 · الموجّه 5.24 · notes check ✓ 0/23/206 (229)
 - **التالي:** إنتاج d1 (يقرأ الخبر: Blatt/austragen/Person/Situation/Interesse/teilen!).
