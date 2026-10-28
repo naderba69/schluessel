@@ -1716,6 +1716,10 @@ def build_all() -> None:
     ("word-auf-keinen-fall", "auf keinen Fall.", "auf-keinen-fall", ["a2-u9-d3"]),
     ("word-ausser", "außer.", "ausser", ["a2-u9-d3"]),
     ("word-luxemburg", "Luxemburg.", "luxemburg", ["a2-u9-d3"]),
+    ("word-schirm", "der Schirm.", "schirm", ["a2-u9-d4"]),
+    ("word-jemand", "jemand.", "jemand", ["a2-u9-d4"]),
+    ("word-niemand", "niemand.", "niemand", ["a2-u9-d4"]),
+    ("word-nirgends", "nirgends.", "nirgends", ["a2-u9-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
