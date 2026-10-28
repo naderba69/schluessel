@@ -1683,6 +1683,11 @@ def build_all() -> None:
     ("word-apparat", "der Apparat.", "apparat", ["a2-u8-d2"]),
     ("word-homepage", "die Homepage.", "homepage", ["a2-u8-d2"]),
     ("word-link", "der Link.", "link", ["a2-u8-d2"]),
+    ("word-uebersetzen", "übersetzen.", "uebersetzen", ["a2-u8-d3"]),
+    ("word-uebersetzung", "die Übersetzung.", "uebersetzung", ["a2-u8-d3"]),
+    ("word-aussprechen", "aussprechen.", "aussprechen", ["a2-u8-d3"]),
+    ("word-herunterladen", "herunterladen.", "herunterladen", ["a2-u8-d3"]),
+    ("word-datei", "die Datei.", "datei", ["a2-u8-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

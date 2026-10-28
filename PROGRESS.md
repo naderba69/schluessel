@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 325 (2026-10-28) — D370: a2-u8-d3 «يفهم وينقل» — اللاصق بلا ge! (übersetzt≠übergesetzt!) + القوي-المنفصل يُميل (spricht! lädt!) (الدرس 135)
+- **الخلاصة:** ثالث دروس الوحدة الثامنة: خمس كلمات الترجمة والنقل (übersetzen/Übersetzung/aussprechen/herunterladen/Datei — كلها Goethe-A2 رئيسية!) في يوم الفهم والنقل (نص إخباري ثالث في 8 جمل: übersetze! + übersetzt! + war! + spricht! + sprichst! + lade! + heruntergeladen! + ja!) — اللاصقة über- بلا ge أبداً (hat…übersetzt! ≠ عبّارة-übergesetzt!) مقابل المنفصلة ge-في-الوسط (heruntergeladen!) + القوي يُميل مع du/er (spricht-aus! lädt-herunter! — امتداد D368!) + ja الحشو استماعاً. الكاشف 74/0/0/0 بعد 4 إصلاحات.
+- **التالي:** إنتاج d4 (الثقافة والناس: Kunst/Journalist/Autor/Workshop/Comic!).
+
 ## الدفعة 324 (2026-10-28) — D369: a2-u8-d2 «على الشاشة» — 6 أجهزة + الحالات (einen/der/mir!) (الدرس 134)
 - **الخلاصة:** ثاني دروس الوحدة الثامنة: ستة أجهزة (Tablet/Laptop/Mobiltelefon/Apparat/Homepage/Link — كلها Goethe-A2 رئيسية، ثلاثة على-A1 أيضاً!) في يوم الشاشة (خبر مصغّر 8 جمل: war×3! + gekauft! + mal!) — تدريب الحالات (einen المذكر! + auf-der الساكن! + mir المرسَل!) على أفعال معروفة (kaufen/schicken!) + رصد الماضي. الكاشف 80/0/0/0 بعد 4 إصلاحات معدن-لغة.
 - **التالي:** إنتاج d3 (يفهم وينقل: übersetzen/Übersetzung/aussprechen/herunterladen/Datei!).
