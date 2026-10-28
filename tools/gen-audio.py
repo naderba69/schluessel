@@ -1655,6 +1655,11 @@ def build_all() -> None:
     ("word-poster", "das Poster.", "poster", ["a2-u7-d2"]),
     ("word-t-shirt", "das T-Shirt.", "t-shirt", ["a2-u7-d2"]),
     ("word-webseite", "die Webseite.", "webseite", ["a2-u7-d2"]),
+    ("word-klug", "klug.", "klug", ["a2-u7-d3"]),
+    ("word-intelligent", "intelligent.", "intelligent", ["a2-u7-d3"]),
+    ("word-dumm", "dumm.", "dumm", ["a2-u7-d3"]),
+    ("word-tief", "tief.", "tief", ["a2-u7-d3"]),
+    ("word-privat", "privat.", "privat", ["a2-u7-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

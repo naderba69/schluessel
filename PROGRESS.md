@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 318 (2026-10-28) — D363: a2-u7-d3 «يقارن ويختار» — Komparativ (+er/الإمالة/als) + تعرُّض Superlativ (الدرس 129)
+- **الخلاصة:** ثالث دروس الوحدة السابعة: خمس صفات جديدة (klug/intelligent/dumm/tief/privat — كلها Goethe-A2 رئيسية، dumm على-A1 أيضاً!) تُقارن بثلاث درجات (klug ← klüger ← am klügsten!) — المقارنة +er (بعضها بالإمالة: klug←klüger! dumm←dümmer!) + als للمختلف + so-wie للمتساوي + تعرُّض am-sten (معلن في declined! D188!) + ترسانة جديدة (ars-komparativ!). الكاشف 77/0/0/0 والتدقيق الصوتي نظيف 5/5 من أول محاولة.
+- **التالي:** إنتاج d4 (d4/d5/d6 — من الحرّ الـ28 بالمنهج المصلَّح!).
+
 ## الدفعة 317 (2026-10-28) — D362: a2-u7-d2 «يرتّب بالأرقام» — Ordinalzahlen erste–sechste + نهاية الصفة (الدرس 128)
 - **الخلاصة:** ثاني دروس الوحدة السابعة: ستة أسماء جديدة (der Artikel/die Bluse/die Jeans/das Poster/das T-Shirt/die Webseite — خمسة على-A1 أيضاً!) تُرتَّب بالترتيبية (der erste Artikel/die sechsten Jeans!) — الترتيبية قاعدة بلا مداخل (D167: تُعرف من درس التاريخ!) تلبس نهاية الصفة (ars-adjektiv-dekl استعمال ثانٍ!). الكاشف 74/0/0/0 والتدقيق الصوتي صفر بعد 4 تصحيحات نطق + توثيق Shirt.
 - **التالي:** إنتاج d3 (يقارن ويختار + Komparativ — klug/intelligent/dumm/tief/privat!).
