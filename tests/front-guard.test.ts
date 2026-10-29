@@ -127,7 +127,7 @@ describe("D188 — الكلمات المستعارة المعلنة (borrowedWor
     console.log("borrowedWords:", JSON.stringify(all));
     for (const l of lessons) expect(l.praesentation.borrowedWords.length, l.id).toBeLessThanOrEqual(2);
     for (const l of lessons) for (const b of l.praesentation.borrowedWords) expect(b.whyAr, `${l.id} ${b.form}`).toMatch(/\p{Script=Arabic}/u);
-    expect(all).toEqual([["a1-u8-d2", "fragt", "fragen"], ["a1-u8-d3", "hinten", "hinten"], ["a1-u8-d5", "Bäcker", "baecker"]]); // D213: hinten · D383: Bäcker (beim-Bäcker في u8-d5 — تُدرَّس a2-u10-d2!)
+    expect(all).toEqual([["a1-u8-d2", "fragt", "fragen"], ["a1-u8-d3", "hinten", "hinten"], ["a1-u8-d5", "Bäcker", "baecker"], ["a2-u2-d4", "geehrter", "geehrte"]]); // D213: hinten · D383: Bäcker (beim-Bäcker في u8-d5 — تُدرَّس a2-u10-d2!) · D385: geehrter (Sehr-geehrter-Herr-Chef في u2-d4 — تُدرَّس a2-u10-d4!)
   });
 });
 
