@@ -1745,6 +1745,11 @@ def build_all() -> None:
     ("word-z-b", "z. B.", "z-b", ["a2-u10-d4"]),
     ("word-usw", "usw.", "usw", ["a2-u10-d4"]),
     ("word-pc", "der PC.", "pc", ["a2-u10-d4"]),
+    ("word-ca", "ca.", "ca", ["a2-u10-d5"]),
+    ("word-d-h", "d. h.", "d-h", ["a2-u10-d5"]),
+    ("word-getrennt", "getrennt.", "getrennt", ["a2-u10-d5"]),
+    ("word-geschieden", "geschieden.", "geschieden", ["a2-u10-d5"]),
+    ("word-tagsueber", "tagsüber.", "tagsueber", ["a2-u10-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
