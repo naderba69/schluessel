@@ -27789,6 +27789,46 @@
       "rmsDb": -17.01
     },
     {
+      "id": "word-arbeitstag",
+      "file": "words/audio/de-DE/word-arbeitstag.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Arbeitstag.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u11-d6"
+      ],
+      "durationMs": 1245,
+      "sizeBytes": 5985,
+      "hash": "sha256:503517be90510b4bfd25504f3d5215046d8af8863a7736f1e9559be59bacd535",
+      "pcmSha256": "84f677b74658dd3d8837a4f767864cbd0a353182346b08cb7952d7b8394e1249",
+      "rmsDb": -17.15
+    },
+    {
+      "id": "word-werktag",
+      "file": "words/audio/de-DE/word-werktag.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Werktag.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u11-d6"
+      ],
+      "durationMs": 1013,
+      "sizeBytes": 4827,
+      "hash": "sha256:c5d96376e9a6ffce27aaded9fc30cf5714dfcc09eaaaf96532df6ec8bc464406",
+      "pcmSha256": "4f2d1764c504db67fdc3bc489694431ca13af3d970269066ab0cab404f87f1a8",
+      "rmsDb": -17.09
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",

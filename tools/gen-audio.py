@@ -1769,6 +1769,8 @@ def build_all() -> None:
     ("word-oktober", "der Oktober.", "oktober", ["a2-u11-d5"]),
     ("word-november", "der November.", "november", ["a2-u11-d5"]),
     ("word-dezember", "der Dezember.", "dezember", ["a2-u11-d5"]),
+    ("word-arbeitstag", "der Arbeitstag.", "arbeitstag", ["a2-u11-d6"]),
+    ("word-werktag", "der Werktag.", "werktag", ["a2-u11-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
