@@ -1750,6 +1750,8 @@ def build_all() -> None:
     ("word-getrennt", "getrennt.", "getrennt", ["a2-u10-d5"]),
     ("word-geschieden", "geschieden.", "geschieden", ["a2-u10-d5"]),
     ("word-tagsueber", "tagsüber.", "tagsueber", ["a2-u10-d5"]),
+    ("word-erlaubt", "erlaubt.", "erlaubt", ["a2-u10-d6"]),
+    ("word-wc", "das WC.", "wc", ["a2-u10-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

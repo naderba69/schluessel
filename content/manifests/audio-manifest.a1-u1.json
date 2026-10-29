@@ -27409,6 +27409,46 @@
       "rmsDb": -17.28
     },
     {
+      "id": "word-erlaubt",
+      "file": "words/audio/de-DE/word-erlaubt.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "erlaubt.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u10-d6"
+      ],
+      "durationMs": 897,
+      "sizeBytes": 4350,
+      "hash": "sha256:4bf91cdf3887c33a87d4238a56f293492950c37cf00432e9f3aa12535cac171a",
+      "pcmSha256": "44cff37e680b96f16d6fd3f24e8420a49635733d316d3693c787a72215705e07",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "word-wc",
+      "file": "words/audio/de-DE/word-wc.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das WC.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u10-d6"
+      ],
+      "durationMs": 1129,
+      "sizeBytes": 5329,
+      "hash": "sha256:099f2edd68f93c6d321aa8387c76ff38dfc5a9b3e85ad22e39ec3ed0a27c5d3a",
+      "pcmSha256": "1e29d47250583095cdad0787b937e392418b03b0d7b3b38038831a2de7a1ce85",
+      "rmsDb": -17.1
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
