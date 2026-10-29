@@ -3653,7 +3653,7 @@ describe("D115 — أدوات القياس", () => {
     // القاعدة المخططة نفسها (ars-moechte-wollen — أشار إليها grammarArsenalIds في d3 وd5 وd6 ولم يُكتب لها ملف قط) فتُفهرس في الثلاثة
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-moechte-wollen"]);
     const rule = rules.get("ars-moechte-wollen")!;
-    expect(rule.usedInLessons).toEqual(["a1-u5-d3", "a1-u5-d6", "a1-u15-d3"]); // D202: أسبوع المراجعة · D145: d5 صار بقاعدة يومه الخاصة ars-kein-nicht-2
+    expect(rule.usedInLessons).toEqual(["a1-u5-d3", "a1-u5-d6", "a1-u15-d3", "a2-u11-d1"]); // D389: +u11-d1 (أمنيات!: will-vs-würde! — أول-A2!) // D202: أسبوع المراجعة · D145: d5 صار بقاعدة يومه الخاصة ars-kein-nicht-2
     expect(rule.payload.ruleDe).toMatch(/ich möchte · du möchtest · er\/sie möchte · wir\/Sie möchten — ich will · du willst · er\/sie will · wir\/Sie wollen/);
     expect(rule.payload.ruleDe).toMatch(/Was für einen Kuchen\? · Was für eine Suppe\? · Was für ein Eis\?/);
     // möchte من mögen ومعناها غيره (Ich mag Kaffee ≠ Ich möchte einen Kaffee) — وmögen في بطاقات الاستدعاء
