@@ -1758,6 +1758,11 @@ def build_all() -> None:
     ("word-kuenstlerin", "die Künstlerin.", "kuenstlerin", ["a2-u11-d2"]),
     ("word-schauspielerin", "die Schauspielerin.", "schauspielerin", ["a2-u11-d2"]),
     ("word-handwerkerin", "die Handwerkerin.", "handwerkerin", ["a2-u11-d2"]),
+    ("word-model", "das Model.", "model", ["a2-u11-d3"]),
+    ("word-babysitter", "der Babysitter.", "babysitter", ["a2-u11-d3"]),
+    ("word-fach", "das Fach.", "fach", ["a2-u11-d3"]),
+    ("word-lieblings", "Lieblings-.", "lieblings", ["a2-u11-d3"]),
+    ("word-zukunft", "die Zukunft.", "zukunft", ["a2-u11-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

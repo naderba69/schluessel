@@ -238,7 +238,9 @@ describe("D110 — الحارس الدائم على المحتوى الحقيق�
   });
 
   it("كلمات A2 كلها في قائمة A2 الرسمية · وجمعنا لا يخالف أي جمع مطبوع قابل للقراءة", () => {
-    for (const w of words.filter((x) => x.level === "A2")) expect(w.goetheList, w.id).toContain("A2");
+    // D391 (D185): المستعارة-المعلنة خارج القوائم — lieblings (سابقة-Lieblings-X-الرسمية بلا مدخل-Duden!) · zukunft (خارج-A2!) — معلنة-في-الدرس (خارج-القوائم-معلنة!) ومُثبتة هنا عمداً
+    const DECLARED_OUTSIDE_A2 = new Set(["lieblings", "zukunft"]);
+    for (const w of words.filter((x) => x.level === "A2" && !DECLARED_OUTSIDE_A2.has(x.id))) expect(w.goetheList, w.id).toContain("A2");
     const { plurals } = auditGoethe(words, LISTS);
     expect(plurals).toEqual([]);
   });
