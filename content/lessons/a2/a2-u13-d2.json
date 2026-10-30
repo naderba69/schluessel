@@ -1,0 +1,468 @@
+{
+ "audioManifestRefs": [
+  "word-erste",
+  "word-zweite",
+  "word-dritte",
+  "word-vierte"
+ ],
+ "canDoDaily": [
+  "يرتب بالترتيبيات (أول! + ثانٍ! + ثالث! + رابع!)",
+  "يميز (der-erste-بلا-n! + الترتيبي-ضد-الظرف!) ويسترجع (dass/wenn/würde!)"
+ ],
+ "curriculumRef": {
+  "goetheWordListOverlap": [
+   "erste",
+   "zweite",
+   "dritte",
+   "vierte"
+  ],
+  "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
+ },
+ "day": 2,
+ "einstieg": {
+  "guidedRetrieval": [
+   "من d1: Am Vormittag lerne ich Deutsch! + Am Abend lese ich ein Buch! (في-الصباح-أتعلم! + في-المساء-أقرأ!) — اليوم-المنظم يُتوَّج اليوم بالترتيب-الفائز!",
+   "واليوم: ترتيبي! Der erste Tag ist schön! (اليوم-الأول-جميل!) + Die zweite Stunde ist kurz! (الحصة-الثانية-قصيرة!) + Das dritte Buch ist gut! (الكتاب-الثالث-جيد!) + Die vierte Woche ist lang! (الأسبوع-الرابع-طويل!) + Ich weiß, dass du anders bist! + Wenn ich komme, ist die Schule offen! + Ich würde gern anders sein! + Am Vormittag lerne ich Deutsch und am Abend lese ich ein Buch! — بأربع ترتيبيات وفوز!"
+  ],
+  "pretestItems": [
+   {
+    "answer": "erste",
+    "choices": [
+     "erste",
+     "zweite",
+     "dritte"
+    ],
+    "prompt": {
+     "ar": "«الأول» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   },
+   {
+    "answer": "dritte",
+    "choices": [
+     "dritte",
+     "zweite",
+     "vierte"
+    ],
+    "prompt": {
+     "ar": "«الثالث» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/erste",
+   "https://www.duden.de/rechtschreibung/zweite",
+   "https://www.duden.de/rechtschreibung/dritte",
+   "https://www.duden.de/rechtschreibung/vierte"
+  ],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+  ],
+  "wiktionary": []
+ },
+ "id": "a2-u13-d2",
+ "imageManifestRefs": [],
+ "kind": "content",
+ "level": "A2",
+ "praesentation": {
+  "dualCodingRequired": true,
+  "grammarArsenalIds": [
+   "ars-dass-satz",
+   "ars-wuerde"
+  ],
+  "riskFlagsShown": [
+   "v2-order"
+  ],
+  "storySentenceIds": [],
+  "wordIds": [
+   "erste",
+   "zweite",
+   "dritte",
+   "vierte"
+  ]
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "a": "Der erste Tag ist schön!",
+      "q": "«اليوم الأول جميل!»؟"
+     },
+     {
+      "a": "Die zweite Stunde ist kurz!",
+      "q": "«الحصة الثانية قصيرة!»؟"
+     },
+     {
+      "a": "Das dritte Buch ist gut!",
+      "q": "«الكتاب الثالث جيد!»؟"
+     },
+     {
+      "a": "Die vierte Woche ist lang!",
+      "q": "«الأسبوع الرابع طويل!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Ich weiß, dass du anders bist!",
+      "q": "«أعرف أنك مختلف!»؟"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "«لو آتي المدرسة مفتوحة!»؟"
+     },
+     {
+      "a": "Ich würde gern anders sein!",
+      "q": "«أودّ لو أكون مختلفاً!»؟"
+     },
+     {
+      "a": "Am Vormittag lerne ich Deutsch und am Abend lese ich ein Buch!",
+      "q": "«في الصباح أتعلم الألمانية وفي المساء أقرأ كتاباً!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Der erste Tag ist schön! Die zweite Stunde ist kurz!",
+      "q": "«اليوم الأول جميل والحصة الثانية قصيرة!»؟"
+     },
+     {
+      "a": "Das dritte Buch ist gut! Die vierte Woche ist lang!",
+      "q": "«الكتاب الثالث جيد والأسبوع الرابع طويل!»؟"
+     },
+     {
+      "a": "Ich weiß, dass du anders bist!",
+      "q": "«أعرف أنك مختلف!»؟"
+     },
+     {
+      "a": "Am Vormittag lerne ich Deutsch und am Abend lese ich ein Buch!",
+      "q": "«في الصباح أتعلم الألمانية وفي المساء أقرأ كتاباً!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "schemaVersion": "1.0.0",
+ "slider": {
+  "max": 100,
+  "min": 0,
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "questionDe": "Wie viel Prozent wirst du schaffen?"
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "ar": "يرتب بالترتيبيات (أول! + ثانٍ! + ثالث! + رابع!)",
+    "de": "Der erste Tag ist schön! Die vierte Woche ist lang!"
+   },
+   "situation": {
+    "ar": "مسابقة-الترتيب الكبرى",
+    "de": "Am Vormittag lerne ich Deutsch und am Abend lese ich ein Buch!"
+   },
+   "successCriteria": [
+    "يروي 8 جمل (4-ترتيبيات! + محتوى! + شرط! + حلم! + استرجاع-d1!)",
+    "يستخدم الجديد (erste/zweite/dritte/vierte!)",
+    "يميز (der-erste-بلا-n! + الترتيبي-ضد-الظرف-erstens!) ويسترجع (dass/wenn/würde!)"
+   ]
+  },
+  "stations": [
+   {
+    "explanationRequired": true,
+    "interleavedWith": [
+     "schwester",
+     "bruder",
+     "fussball"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "الأول",
+        "de": "erste"
+       },
+       {
+        "ar": "الثاني",
+        "de": "zweite"
+       },
+       {
+        "ar": "الثالث",
+        "de": "dritte"
+       },
+       {
+        "ar": "الرابع",
+        "de": "vierte"
+       },
+       {
+        "ar": "أولاً",
+        "de": "erstens"
+       }
+      ],
+      "why": "ترتيبي: erste الأول! · zweite الثاني! · dritte الثالث! · vierte الرابع! · erstens أولاً-ظرف! — الترتيبي-صفة-ضد-الظرف-erstens!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "اليوم",
+        "de": "der Tag"
+       },
+       {
+        "ar": "الحصة",
+        "de": "die Stunde"
+       },
+       {
+        "ar": "الكتاب",
+        "de": "das Buch"
+       },
+       {
+        "ar": "الأسبوع",
+        "de": "die Woche"
+       },
+       {
+        "ar": "الشهر",
+        "de": "der Monat"
+       }
+      ],
+      "why": "أسماء-الترتيب: der-Tag اليوم! · die-Stunde الحصة! · das-Buch الكتاب! · die-Woche الأسبوع! · der-Monat الشهر!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "في الصباح",
+        "de": "am Vormittag"
+       },
+       {
+        "ar": "في الظهر",
+        "de": "am Mittag"
+       },
+       {
+        "ar": "بعد الظهر",
+        "de": "am Nachmittag"
+       },
+       {
+        "ar": "في المساء",
+        "de": "am Abend"
+       },
+       {
+        "ar": "مختلف",
+        "de": "anders"
+       }
+      ],
+      "why": "استرجاع-d1: am-Vormittag! · am-Mittag! · am-Nachmittag! · am-Abend! · anders مختلف!"
+     }
+    ],
+    "type": "match"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الجديد (erste/zweite/dritte/vierte!)",
+     "الترتيبي-بعد-الأداة (der-erste!)",
+     "الاسترجاع (dass/wenn/würde!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "gap-fill",
+    "items": [
+     {
+      "a": "erste",
+      "q": "Der ___ Tag ist schön! (erste!)",
+      "why": "الأول! — der-Tag (مذكر!)."
+     },
+     {
+      "a": "zweite",
+      "q": "Die ___ Stunde ist kurz! (zweite!)",
+      "why": "الثانية! — die-Stunde (مؤنثة!)."
+     },
+     {
+      "a": "dritte",
+      "q": "Das ___ Buch ist gut! (dritte!)",
+      "why": "الثالث! — das-Buch (محايد!)."
+     },
+     {
+      "a": "vierte",
+      "q": "Die ___ Woche ist lang! (vierte!)",
+      "why": "الرابع! — die-Woche (طويلة!)."
+     },
+     {
+      "a": "dass",
+      "q": "Ich weiß, ___ du anders bist! (dass!)",
+      "why": "أعرف-أن! — dass-محتوى!"
+     },
+     {
+      "a": "komme",
+      "q": "Wenn ich ___, ist die Schule offen! (komme!)",
+      "why": "آتي! — wenn-شرط!"
+     },
+     {
+      "a": "anders",
+      "q": "Ich würde gern ___ sein! (anders!)",
+      "why": "مختلفاً! — würde-sein (أودّ-أكون!)."
+     },
+     {
+      "a": "Vormittag",
+      "q": "Am ___ lerne ich Deutsch und am Abend lese ich ein Buch! (Vormittag!)",
+      "why": "في-الصباح! — Am-ثابتة (استرجاع-d1!)."
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ كلمة واحدة — الباقي صحيح",
+     "الترتيبي-الاسمي (der-erste-بلا-n!)",
+     "التصريف (ist/bist/sein!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "error-hunt",
+    "items": [
+     {
+      "a": "Der erste Tag ist schön!",
+      "q": "~~Der ersten Tag ist schön!~~",
+      "why": "الاسمي-بلا-n (der-erste!) — ersten-منصوب خطأ!"
+     },
+     {
+      "a": "Die zweite Stunde ist kurz!",
+      "q": "~~Die zweiter Stunde ist kurz!~~",
+      "why": "المؤنث-بلا-r (die-zweite!) — zweiter-مذكر خطأ!"
+     },
+     {
+      "a": "Das dritte Buch ist gut!",
+      "q": "~~Das dritten Buch ist gut!~~",
+      "why": "المحايد-بلا-n (das-dritte!) — dritten-منصوب خطأ!"
+     },
+     {
+      "a": "Die vierte Woche ist lang!",
+      "q": "~~Die viertes Woche ist lang!~~",
+      "why": "المؤنث-بلا-s (die-vierte!) — viertes-محايد خطأ!"
+     },
+     {
+      "a": "Am Vormittag lerne ich Deutsch!",
+      "q": "~~Am Vormittag ich lerne Deutsch!~~",
+      "why": "V2-بعد-الظرف (lerne-ich!) — ich-lerne خطأ!"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "~~Wenn ich komme, die Schule ist offen!~~",
+      "why": "V2-بعد-الفاصلة (ist-die!) — die-ist خطأ!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بيومك-الأول (erste-Tag!) وانهِ بمسائك (Abend-Buch!)",
+     "8 جمل: 4-ترتيبيات! + محتوى! + شرط! + حلم! + استرجاع-d1!"
+    ],
+    "interleavedWith": [
+     "spielen",
+     "gut",
+     "gern"
+    ],
+    "type": "speaking",
+    "items": [
+     {
+      "a": "Der erste Tag ist schön! Die zweite Stunde ist kurz! Das dritte Buch ist gut! Die vierte Woche ist lang! Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Am Vormittag lerne ich Deutsch und am Abend lese ich ein Buch!",
+      "q": "احكِ ترتيبك (سجّل): 8 جمل — اليوم-الأول-جميل! + الحصة-الثانية-قصيرة! + الكتاب-الثالث-جيد! + الأسبوع-الرابع-طويل! + أعرف-أنك-مختلف! + لو-آتي-المدرسة-مفتوحة! + أودّ-لو-أكون-مختلفاً! + في-الصباح-أتعلم-وفي-المساء-أقرأ!",
+      "why": "قارن حكايتك: erste! + zweite! + dritte! + vierte! + dass! + wenn! + würde! + Vormittag!"
+     },
+     {
+      "a": "Der erste Tag ist schön! Die vierte Woche ist lang!",
+      "q": "جهّز للترتيب (سجّل): 2 جمل — اليوم-الأول-جميل! + الأسبوع-الرابع-طويل!",
+      "why": "قارن تجهيزك: erste! + vierte!"
+     }
+    ]
+   }
+  ]
+ },
+ "unit": 13,
+ "usedArsenalIds": [
+  "ars-dass-satz",
+  "ars-wuerde"
+ ],
+ "warmup": {
+  "cardIds": [
+   "am-vormittag",
+   "am-nachmittag",
+   "am-abend"
+  ]
+ },
+ "ziel": {
+  "ar": "ترتيبي-الفائز: أول! + ثانٍ! + ثالث! + رابع! — والاسمي (der-erste-بلا-n!) والظرف (erstens-أولاً!)",
+  "de": "Der erste Tag ist schön! — Die vierte Woche ist lang!"
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "erste",
+   "zweite",
+   "dritte",
+   "vierte"
+  ],
+  "summary": {
+   "ar": "ترتيبي-الفائز: اليوم الأول جميل. الحصة الثانية قصيرة. الكتاب الثالث جيد. الأسبوع الرابع طويل. أعرف أنك مختلف. لو آتي المدرسة مفتوحة. أودّ لو أكون مختلفاً. في الصباح أتعلم الألمانية وفي المساء أقرأ كتاباً. النظام: الاسمي-بلا-n (der-erste!) + الترتيبي-صفة-ضد-الظرف (erstens!) + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
+   "de": "Der erste Tag ist schön! Die zweite Stunde ist kurz! Das dritte Buch ist gut! Die vierte Woche ist lang! Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Am Vormittag lerne ich Deutsch und am Abend lese ich ein Buch!"
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "نصب-للمبتدأ-المذكر",
+     "de": "~~Der ersten Tag ist schön!~~"
+    },
+    "correct": {
+     "ar": "اليوم الأول جميل!",
+     "de": "Der erste Tag ist schön!"
+    },
+    "exercise": {
+     "a": "erste",
+     "q": "Der ___ Tag ist schön! (erste!)"
+    },
+    "whyArabicSpeakerFails": "الاسمي-der-erste-بلا-n (erste! — العربية-الأول-واحد-دائماً!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "مذكر-للمؤنث",
+     "de": "~~Die zweiter Stunde ist kurz!~~"
+    },
+    "correct": {
+     "ar": "الحصة الثانية قصيرة!",
+     "de": "Die zweite Stunde ist kurz!"
+    },
+    "exercise": {
+     "a": "zweite",
+     "q": "Die ___ Stunde ist kurz! (zweite!)"
+    },
+    "whyArabicSpeakerFails": "المؤنث-die-zweite-بلا-r (zweite! — العربية-الثانية-واحدة-دائماً!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "فاعل-قبل-الفعل-بعد-الفاصلة",
+     "de": "~~Wenn ich komme, die Schule ist offen!~~"
+    },
+    "correct": {
+     "ar": "لو آتي المدرسة مفتوحة!",
+     "de": "Wenn ich komme, ist die Schule offen!"
+    },
+    "exercise": {
+     "a": "ist",
+     "q": "komme, ___ die Schule offen! (ist!)"
+    },
+    "whyArabicSpeakerFails": "V2-بعد-الفاصلة (ist-die! — العربية-بلا-عكس-بعد-لو!) (خريطة التداخل 10‑ي)."
+   }
+  ]
+ }
+}

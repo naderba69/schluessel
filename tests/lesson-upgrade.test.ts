@@ -316,9 +316,10 @@ describe("D167 — العدد الترتيبي بالقاعدة (قانون ال
     expect(probe.filter((p) => ORDINAL_NUMBER.test(p))).toEqual([]);
     expect(frontViolations([probe.join(" · ")], u10d2, none).length).toBeGreaterThan(0);
   });
-  it("الصيغ بالقاعدة لا بمدخل: لا كلمة ترتيبية في ملفات الكلمات — وzuerst (u9-d3) ليست ترتيبياً", () => {
+  it("الصيغ بالقاعدة لا بمدخل: لا كلمة ترتيبية في ملفات الكلمات — إلا erste/zweite/dritte/vierte (D404) — وzuerst (u9-d3) ليست ترتيبياً", () => {
     const forms = new Set(words.flatMap((w) => knownForms(w)));
-    expect(FORMS.filter((f) => forms.has(f))).toEqual([]);
+    // D404: القاعدة تبقى للخامس-فما-فوق (fünfte/sechste/zwölfte-بلا-مداخل!) — والأول-للرابع مداخل-A2 (a2-u13-d2!) لدليل-المجموعات (D402/D110!) — vierte-خارج-FORMS-أصلاً (مجموعة-الاختبار-لا-شاملة!)
+    expect(FORMS.filter((f) => forms.has(f))).toEqual(["erste", "zweite", "dritte"]);
     expect(ORDINAL_NUMBER.test("zuerst")).toBe(false);
   });
 });
