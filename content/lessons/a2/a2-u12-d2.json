@@ -1,0 +1,473 @@
+{
+ "audioManifestRefs": [
+  "word-biologie",
+  "word-chemie",
+  "word-physik",
+  "word-basteln",
+  "word-bauen"
+ ],
+ "canDoDaily": [
+  "يدير يومه المدرسي (يظن! + يعمل-يدوياً! + يودّ! + يحب! + يبني!)",
+  "يسترجع (dass/wenn/würde!) ويميز المواد (die-كلها!)"
+ ],
+ "curriculumRef": {
+  "goetheWordListOverlap": [
+   "biologie",
+   "chemie",
+   "physik",
+   "basteln",
+   "bauen"
+  ],
+  "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
+ },
+ "day": 2,
+ "einstieg": {
+  "guidedRetrieval": [
+   "من d1: Ich schreibe auf den Antwortbogen! + Das Abitur ist schwer! (أكتب-على-الورقة! + البكالوريا-صعبة!) — يوم-الامتحان يُتوَّج اليوم بيوم-المدرسة!",
+   "واليوم: مدرستي! Ich denke, dass Chemie schwer ist! (أظن-الكيمياء-صعبة!) + Wenn es regnet, basteln wir! (لو-تمطر-نعمل!) + Ich würde gern Physik lernen! (أودّ-الفيزياء!) + Magst du Biologie؟ (تحب-الأحياء؟) + Wir bauen gern! (نبني-بسرور!) — بخمس كلمات ومواد!"
+  ],
+  "pretestItems": [
+   {
+    "answer": "Chemie",
+    "choices": [
+     "Chemie",
+     "Schule",
+     "Lehrer"
+    ],
+    "prompt": {
+     "ar": "«كيمياء» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   },
+   {
+    "answer": "Biologie",
+    "choices": [
+     "Biologie",
+     "Haus",
+     "Fach"
+    ],
+    "prompt": {
+     "ar": "«أحياء» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Biologie",
+   "https://www.duden.de/rechtschreibung/Chemie",
+   "https://www.duden.de/rechtschreibung/Physik",
+   "https://www.duden.de/rechtschreibung/basteln",
+   "https://www.duden.de/rechtschreibung/bauen"
+  ],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+  ],
+  "wiktionary": []
+ },
+ "id": "a2-u12-d2",
+ "imageManifestRefs": [],
+ "kind": "content",
+ "level": "A2",
+ "praesentation": {
+  "dualCodingRequired": true,
+  "grammarArsenalIds": [
+   "ars-dass-satz",
+   "ars-wuerde"
+  ],
+  "riskFlagsShown": [
+   "v2-order"
+  ],
+  "storySentenceIds": [],
+  "wordIds": [
+   "biologie",
+   "chemie",
+   "physik",
+   "basteln",
+   "bauen"
+  ]
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "a": "Magst du Biologie?",
+      "q": "«هل تحب الأحياء؟»؟"
+     },
+     {
+      "a": "Wir bauen gern!",
+      "q": "«نبني بسرور!»؟"
+     },
+     {
+      "a": "Biologie ist mein Fach!",
+      "q": "«الأحياء مادتي!»؟"
+     },
+     {
+      "a": "Chemie ist schwer, Physik macht Spaß!",
+      "q": "«الكيمياء صعبة والفيزياء ممتعة!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Ich denke, dass Chemie schwer ist!",
+      "q": "«أظن أن الكيمياء صعبة!»؟"
+     },
+     {
+      "a": "Wenn es regnet, basteln wir!",
+      "q": "«لو تمطر نعمل يدوياً!»؟"
+     },
+     {
+      "a": "Ich würde gern Physik lernen!",
+      "q": "«أودّ لو أتعلم الفيزياء!»؟"
+     },
+     {
+      "a": "Wir basteln gern und bauen gern!",
+      "q": "«نعمل يدوياً ونبني بسرور!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Magst du Biologie?",
+      "q": "«هل تحب الأحياء؟»؟"
+     },
+     {
+      "a": "Chemie ist schwer, Physik macht Spaß!",
+      "q": "«الكيمياء صعبة والفيزياء ممتعة!»؟"
+     },
+     {
+      "a": "Wenn es regnet, basteln wir!",
+      "q": "«لو تمطر نعمل يدوياً!»؟"
+     },
+     {
+      "a": "Biologie ist mein Fach!",
+      "q": "«الأحياء مادتي!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "schemaVersion": "1.0.0",
+ "slider": {
+  "max": 100,
+  "min": 0,
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "questionDe": "Wie viel Prozent wirst du schaffen?"
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "ar": "يدير يومه المدرسي (يظن! + يعمل-يدوياً! + يودّ! + يحب! + يبني!)",
+    "de": "Magst du Biologie? Wir bauen gern!"
+   },
+   "situation": {
+    "ar": "يوم-ممطر في المدرسة",
+    "de": "Wenn es regnet, basteln wir!"
+   },
+   "successCriteria": [
+    "يروي 8 جمل (5-جدد! + محتوى! + شرط! + حلم!)",
+    "يستخدم الجديد (Biologie/Chemie/Physik/basteln/bauen!)",
+    "يميز (die-للمواد! + المفرد-بلا-n!) ويسترجع (dass/wenn/würde!)"
+   ]
+  },
+  "stations": [
+   {
+    "explanationRequired": true,
+    "interleavedWith": [
+     "schwester",
+     "bruder",
+     "fussball"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "أحياء",
+        "de": "die Biologie"
+       },
+       {
+        "ar": "كيمياء",
+        "de": "die Chemie"
+       },
+       {
+        "ar": "فيزياء",
+        "de": "die Physik"
+       },
+       {
+        "ar": "يعمل يدوياً",
+        "de": "basteln"
+       },
+       {
+        "ar": "يبني",
+        "de": "bauen"
+       }
+      ],
+      "why": "أدوات-المدرسة: die-Biologie أحياء (مادتي!) · die-Chemie كيمياء (صعبة!) · die-Physik فيزياء (ممتعة!) · basteln يعمل-يدوياً (نهواها!) · bauen يبني (بيتاً!) — المواد-كلها-die!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "أظن",
+        "de": "denke"
+       },
+       {
+        "ar": "تمطر",
+        "de": "regnet"
+       },
+       {
+        "ar": "أودّ",
+        "de": "würde"
+       },
+       {
+        "ar": "تحب",
+        "de": "magst"
+       },
+       {
+        "ar": "نتعلم",
+        "de": "lernen"
+       }
+      ],
+      "why": "أفعال-المدرسة: denke أظن! · regnet تمطر! · würde أودّ! · magst تحب! · lernen نتعلم!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "ورقة إجابة",
+        "de": "der Antwortbogen"
+       },
+       {
+        "ar": "قاموس",
+        "de": "das Wörterbuch"
+       },
+       {
+        "ar": "بكالوريا",
+        "de": "das Abitur"
+       },
+       {
+        "ar": "لو",
+        "de": "wenn"
+       },
+       {
+        "ar": "أن",
+        "de": "dass"
+       }
+      ],
+      "why": "استرجاع-d1: der-Antwortbogen! · das-Wörterbuch! · das-Abitur! · wenn لو! · dass أن!"
+     }
+    ],
+    "type": "match"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الجديد (Biologie/Chemie/Physik/basteln/bauen!)",
+     "المواد (die-كلها!)",
+     "الاسترجاع (dass/wenn/würde!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "items": [
+     {
+      "a": "Chemie",
+      "q": "Ich denke, dass ___ schwer ist! (Chemie!)",
+      "why": "الكيمياء-صعبة! — denke-dass (أظن-أن!)."
+     },
+     {
+      "a": "basteln",
+      "q": "Wenn es regnet, ___ wir! (basteln!)",
+      "why": "نعمل-يدوياً! — regnet-wenn (لو-تمطر!)."
+     },
+     {
+      "a": "Physik",
+      "q": "Ich würde gern ___ lernen! (Physik!)",
+      "why": "الفيزياء! — würde-lernen (أودّ-أتعلم!)."
+     },
+     {
+      "a": "Biologie",
+      "q": "Magst du ___? (Biologie!)",
+      "why": "الأحياء! — Magst-du (هل-تحب؟)."
+     },
+     {
+      "a": "bauen",
+      "q": "Wir ___ gern! (bauen!)",
+      "why": "نبني! — Wir-gern (بسرور!)."
+     },
+     {
+      "a": "dass",
+      "q": "Ich denke, ___ Chemie schwer ist! (dass!)",
+      "why": "أظن-أن! — dass-محتوى!"
+     },
+     {
+      "a": "regnet",
+      "q": "Wenn es ___, basteln wir! (regnet!)",
+      "why": "تمطر! — wenn-شرط!"
+     },
+     {
+      "a": "würde",
+      "q": "Ich ___ gern Physik lernen! (würde!)",
+      "why": "أودّ! — würde-حلم!"
+     }
+    ],
+    "type": "gap-fill"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ كلمة واحدة — الباقي صحيح",
+     "التصريف (ist/würde/macht!)",
+     "الصيغ (dass-آخراً! + V2-بعد-الفاصلة!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "items": [
+     {
+      "a": "Ich denke, dass Chemie schwer ist!",
+      "q": "~~Ich denke, dass Chemie schwer sind!~~",
+      "why": "المفرد-يكون (ist!) — sind-جمع خطأ!"
+     },
+     {
+      "a": "Wenn es regnet, basteln wir!",
+      "q": "~~Wenn es regnet, wir basteln!~~",
+      "why": "V2-بعد-الفاصلة (basteln-wir!) — wir-basteln خطأ!"
+     },
+     {
+      "a": "Ich würde gern Physik lernen!",
+      "q": "~~Du würde gern Physik lernen!~~",
+      "why": "المتكلم-يودّ (Ich-würde!) — Du-مخاطب خطأ!"
+     },
+     {
+      "a": "Magst du Biologie?",
+      "q": "~~Magst dir Biologie?~~",
+      "why": "المخاطب-أنت (du!) — dir-مفعول خطأ!"
+     },
+     {
+      "a": "Wir bauen gern!",
+      "q": "~~Ihr bauen gern!~~",
+      "why": "الجمع-نحن (Wir-bauen!) — Ihr-مخاطب خطأ!"
+     },
+     {
+      "a": "Chemie ist schwer, Physik macht Spaß!",
+      "q": "~~Chemie ist schwer, Physik machen Spaß!~~",
+      "why": "المفرد-بلا-n (macht!) — machen-جمع خطأ!"
+     }
+    ],
+    "type": "error-hunt"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بظنك (denke-dass!) وانهِ بحلمك (würde-Physik!)",
+     "8 جمل: 5-جدد! + محتوى! + شرط! + حلم!"
+    ],
+    "interleavedWith": [
+     "spielen",
+     "gut",
+     "gern"
+    ],
+    "items": [
+     {
+      "a": "Ich denke, dass Chemie schwer ist! Wenn es regnet, basteln wir! Ich würde gern Physik lernen! Magst du Biologie? Wir bauen gern! Biologie ist mein Fach! Chemie ist schwer, Physik macht Spaß! Wir basteln gern und bauen gern!",
+      "q": "احكِ مدرستك (سجّل): 8 جمل — أظن-الكيمياء-صعبة! + لو-تمطر-نعمل! + أودّ-الفيزياء! + تحب-الأحياء؟! + نبني-بسرور! + الأحياء-مادتي! + الكيمياء-صعبة-الفيزياء-ممتعة! + نعمل-ونبني!",
+      "why": "قارن حكايتك: Chemie! + basteln! + Physik! + Biologie! + bauen! + Fach! + Spaß! + gern!"
+     },
+     {
+      "a": "Magst du Biologie? Wir bauen gern! Biologie ist mein Fach!",
+      "q": "جهّز للمواد (سجّل): 3 جمل — تحب-الأحياء؟! + نبني-بسرور! + الأحياء-مادتي!",
+      "why": "قارن تجهيزك: Biologie! + bauen! + Fach!"
+     }
+    ],
+    "type": "speaking"
+   }
+  ]
+ },
+ "unit": 12,
+ "usedArsenalIds": [
+  "ars-dass-satz",
+  "ars-wuerde"
+ ],
+ "warmup": {
+  "cardIds": [
+   "antwortbogen",
+   "woerterbuch",
+   "abitur"
+  ]
+ },
+ "ziel": {
+  "ar": "يوم مدرستي: أحياء! + كيمياء! + فيزياء! + يدوي! + بناء! — والمواد (die-كلها!)",
+  "de": "Ich denke, dass Chemie schwer ist! — Magst du Biologie?"
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "biologie",
+   "chemie",
+   "physik",
+   "basteln",
+   "bauen"
+  ],
+  "summary": {
+   "ar": "يوم مدرستي: أظن أن الكيمياء صعبة. لو تمطر نعمل يدوياً. أودّ لو أتعلم الفيزياء. هل تحب الأحياء؟ نبني بسرور. الأحياء مادتي. الكيمياء صعبة والفيزياء ممتعة. نعمل يدوياً ونبني بسرور. النظام: المواد-die! + المفرد-بلا-n! + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
+   "de": "Ich denke, dass Chemie schwer ist! Wenn es regnet, basteln wir! Ich würde gern Physik lernen! Magst du Biologie? Wir bauen gern! Biologie ist mein Fach! Chemie ist schwer, Physik macht Spaß! Wir basteln gern und bauen gern!"
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "جمع-للمتكلم",
+     "de": "~~Ich denken, dass Chemie schwer ist!~~"
+    },
+    "correct": {
+     "ar": "أظن أن الكيمياء صعبة!",
+     "de": "Ich denke, dass Chemie schwer ist!"
+    },
+    "exercise": {
+     "a": "denke",
+     "q": "Ich ___ , dass Chemie schwer ist! (denke!)"
+    },
+    "whyArabicSpeakerFails": "المفرد-بلا-n (denke! — العربية-الفعل-بلا-n-جمع!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "e-زائدة-في-الجمع",
+     "de": "~~Wir bastelen gern!~~"
+    },
+    "correct": {
+     "ar": "نعمل يدوياً بسرور!",
+     "de": "Wir basteln gern!"
+    },
+    "exercise": {
+     "a": "basteln",
+     "q": "Wir ___ gern! (basteln!)"
+    },
+    "whyArabicSpeakerFails": "بلا-e-زائدة (basteln! — العربية-بلا-تصريف-للجمع!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "فاعل-قبل-الفعل-بعد-الفاصلة",
+     "de": "~~Wenn es regnet, wir basteln!~~"
+    },
+    "correct": {
+     "ar": "لو تمطر نعمل يدوياً!",
+     "de": "Wenn es regnet, basteln wir!"
+    },
+    "exercise": {
+     "a": "basteln",
+     "q": "regnet, ___ wir! (basteln!)"
+    },
+    "whyArabicSpeakerFails": "V2-بعد-الفاصلة (basteln-wir! — العربية-بلا-عكس-بعد-لو!) (خريطة التداخل 10‑ي)."
+   }
+  ]
+ }
+}

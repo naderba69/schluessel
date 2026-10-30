@@ -1776,6 +1776,11 @@ def build_all() -> None:
     ("word-woerterbuch", "das Wörterbuch.", "woerterbuch", ["a2-u12-d1"]),
     ("word-auf-deutsch", "auf Deutsch.", "auf-deutsch", ["a2-u12-d1"]),
     ("word-abitur", "das Abitur.", "abitur", ["a2-u12-d1"]),
+    ("word-biologie", "die Biologie.", "biologie", ["a2-u12-d2"]),
+    ("word-chemie", "die Chemie.", "chemie", ["a2-u12-d2"]),
+    ("word-physik", "die Physik.", "physik", ["a2-u12-d2"]),
+    ("word-basteln", "basteln.", "basteln", ["a2-u12-d2"]),
+    ("word-bauen", "bauen.", "bauen", ["a2-u12-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

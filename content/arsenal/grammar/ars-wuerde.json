@@ -1,1 +1,64 @@
-{"constitutionSection": "10‑ي", "id": "ars-wuerde", "kind": "shufra", "levelIntroduced": "A2", "payload": {"beads": ["Ich", "würde", "gern", "Koch", "werden."], "contrastAr": "العربية (أودّ أن أكون طباخاً) تضع «أن» + المضارع، فيُنسى المصدر الأخير — بينما الألمانية würde…werden (أودّ…أصبح!) تضع المصدر في النهاية. والعربية «أودّ» واحدة للكل، فيُعمَّم würde — بينما würde تتصرّف (ich-würde/er-würde/wir-würden!). وmöchte-المعروفة (طلب-مهذب-الآن!) ≠ würde (حلم-لو!) — möchte قهوة الآن، würde طباخاً في الحلم! (خريطة التداخل 10‑ي).", "examples": [{"ar": "أودّ أن أصبح طباخاً.", "de": "Ich würde gern Koch werden."}, {"ar": "هو يودّ أن يصبح موسيقياً.", "de": "Er würde gern Musiker werden."}, {"ar": "نودّ أن نصبح تقنيين.", "de": "Wir würden gern Techniker werden."}, {"ar": "أودّ أن أساعد.", "de": "Ich würde gern helfen."}, {"ar": "هو يودّ أن يطبخ.", "de": "Er würde gern kochen."}], "inferencePromptAr": "قارن: würde/würde/würden — ما الذي يتغيّر مع ich/er/wir؟ وأين يقف المصدر (werden/helfen/kochen) دائماً؟ وأين تقف gern؟ اكتشف: würde تتصرّف ثانياً + gern بعدها + المصدر أخيراً!", "limitsAr": ["du/ihr (würdest/würdet!) لاحقاً — اليوم ich/er/wir وحسب!", "wäre/hätte + würde-in-wenn (لو-كنت-لفعلت!) لاحقاً — d2-wenn-حقيقي! + d5-Hätte!", "الطلب-المهذب (Würden-Sie-mir-helfen؟!) لاحقاً — möchte-تكفي-الآن!", "المصدر-إلزامي (~~Ich würde Koch~~! مرفوضة — werden/helfen/kochen!)!"], "properNouns": [], "ruleAr": "التمني = würde مصرّفة ثانياً (ich-würde/er-würde/wir-würden!) + gern بعدها + المصدر آخر الجملة (werden/helfen/kochen!) — للأحلام (أودّ-لو!).", "ruleDe": "Ich würde gern Koch werden. · Er würde gern Musiker werden. · Wir würden gern Techniker werden.", "sceneAr": "أحلام المهن — ماذا تودّ أن تصبح؟ (طباخ! موسيقي! تقني!)", "topicAr": "würde — التمني والأحلام"}, "riskLevel": "red", "schemaVersion": "1.0.0", "title": {"ar": "التمني بـwürde — «أودّ أن أصبح طباخاً» (würde + gern + المصدر آخر الجملة!)", "de": "würde + gern + Infinitiv: Ich würde gern Koch werden. · Wir würden gern Techniker werden."}, "usedInLessons": ["a2-u11-d1", "a2-u11-d3", "a2-u11-d4", "a2-u11-d6", "a2-u12-d1"]}
+{
+ "constitutionSection": "10‑ي",
+ "id": "ars-wuerde",
+ "kind": "shufra",
+ "levelIntroduced": "A2",
+ "payload": {
+  "beads": [
+   "Ich",
+   "würde",
+   "gern",
+   "Koch",
+   "werden."
+  ],
+  "contrastAr": "العربية (أودّ أن أكون طباخاً) تضع «أن» + المضارع، فيُنسى المصدر الأخير — بينما الألمانية würde…werden (أودّ…أصبح!) تضع المصدر في النهاية. والعربية «أودّ» واحدة للكل، فيُعمَّم würde — بينما würde تتصرّف (ich-würde/er-würde/wir-würden!). وmöchte-المعروفة (طلب-مهذب-الآن!) ≠ würde (حلم-لو!) — möchte قهوة الآن، würde طباخاً في الحلم! (خريطة التداخل 10‑ي).",
+  "examples": [
+   {
+    "ar": "أودّ أن أصبح طباخاً.",
+    "de": "Ich würde gern Koch werden."
+   },
+   {
+    "ar": "هو يودّ أن يصبح موسيقياً.",
+    "de": "Er würde gern Musiker werden."
+   },
+   {
+    "ar": "نودّ أن نصبح تقنيين.",
+    "de": "Wir würden gern Techniker werden."
+   },
+   {
+    "ar": "أودّ أن أساعد.",
+    "de": "Ich würde gern helfen."
+   },
+   {
+    "ar": "هو يودّ أن يطبخ.",
+    "de": "Er würde gern kochen."
+   }
+  ],
+  "inferencePromptAr": "قارن: würde/würde/würden — ما الذي يتغيّر مع ich/er/wir؟ وأين يقف المصدر (werden/helfen/kochen) دائماً؟ وأين تقف gern؟ اكتشف: würde تتصرّف ثانياً + gern بعدها + المصدر أخيراً!",
+  "limitsAr": [
+   "du/ihr (würdest/würdet!) لاحقاً — اليوم ich/er/wir وحسب!",
+   "wäre/hätte + würde-in-wenn (لو-كنت-لفعلت!) لاحقاً — d2-wenn-حقيقي! + d5-Hätte!",
+   "الطلب-المهذب (Würden-Sie-mir-helfen؟!) لاحقاً — möchte-تكفي-الآن!",
+   "المصدر-إلزامي (~~Ich würde Koch~~! مرفوضة — werden/helfen/kochen!)!"
+  ],
+  "properNouns": [],
+  "ruleAr": "التمني = würde مصرّفة ثانياً (ich-würde/er-würde/wir-würden!) + gern بعدها + المصدر آخر الجملة (werden/helfen/kochen!) — للأحلام (أودّ-لو!).",
+  "ruleDe": "Ich würde gern Koch werden. · Er würde gern Musiker werden. · Wir würden gern Techniker werden.",
+  "sceneAr": "أحلام المهن — ماذا تودّ أن تصبح؟ (طباخ! موسيقي! تقني!)",
+  "topicAr": "würde — التمني والأحلام"
+ },
+ "riskLevel": "red",
+ "schemaVersion": "1.0.0",
+ "title": {
+  "ar": "التمني بـwürde — «أودّ أن أصبح طباخاً» (würde + gern + المصدر آخر الجملة!)",
+  "de": "würde + gern + Infinitiv: Ich würde gern Koch werden. · Wir würden gern Techniker werden."
+ },
+ "usedInLessons": [
+  "a2-u11-d1",
+  "a2-u11-d3",
+  "a2-u11-d4",
+  "a2-u11-d6",
+  "a2-u12-d1",
+  "a2-u12-d2"
+ ]
+}
