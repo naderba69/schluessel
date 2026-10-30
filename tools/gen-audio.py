@@ -1792,6 +1792,11 @@ def build_all() -> None:
     ("word-enkelin", "die Enkelin.", "enkelin", ["a2-u12-d4"]),
     ("word-mancher", "mancher.", "mancher", ["a2-u12-d4"]),
     ("word-her", "her.", "her", ["a2-u12-d4"]),
+    ("word-grau", "grau.", "grau", ["a2-u12-d5"]),
+    ("word-lila", "lila.", "lila", ["a2-u12-d5"]),
+    ("word-rosa", "rosa.", "rosa", ["a2-u12-d5"]),
+    ("word-anders", "anders.", "anders", ["a2-u12-d5"]),
+    ("word-offen", "offen.", "offen", ["a2-u12-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

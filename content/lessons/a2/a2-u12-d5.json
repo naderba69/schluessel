@@ -1,0 +1,473 @@
+{
+ "audioManifestRefs": [
+  "word-grau",
+  "word-lila",
+  "word-rosa",
+  "word-anders",
+  "word-offen"
+ ],
+ "canDoDaily": [
+  "يصف كيفه (يعرف! + يأتي! + يودّ! + يلوّن! + يفتح!)",
+  "يسترجع (dass/wenn/würde!) ويميز (lila/rosa-ثابتتان!)"
+ ],
+ "curriculumRef": {
+  "goetheWordListOverlap": [
+   "grau",
+   "lila",
+   "rosa",
+   "anders",
+   "offen"
+  ],
+  "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
+ },
+ "day": 5,
+ "einstieg": {
+  "guidedRetrieval": [
+   "من d4: Ich weiß, dass mein Cousin nett ist! + Komm her, Enkel! (أعرف-ابن-عمي-لطيف! + تعال-حفيدي!) — يوم-العائلة يُتوَّج اليوم بيوم-الكيف!",
+   "واليوم: كيفي! Ich weiß, dass du anders bist! (أعرف-أنك-مختلف!) + Wenn ich komme, ist die Schule offen! (لو-آتي-المدرسة-مفتوحة!) + Ich würde gern anders sein! (أودّ-لو-أكون-مختلفاً!) + Das Haus ist grau! (البيت-رمادي!) + Die Blume ist lila! (الوردة-بنفسجية!) — بخمس صفات وكيف!"
+  ],
+  "pretestItems": [
+   {
+    "answer": "grau",
+    "choices": [
+     "grau",
+     "Haus",
+     "Schule"
+    ],
+    "prompt": {
+     "ar": "«رمادي» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   },
+   {
+    "answer": "offen",
+    "choices": [
+     "offen",
+     "Haus",
+     "Fach"
+    ],
+    "prompt": {
+     "ar": "«مفتوح» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/grau",
+   "https://www.duden.de/rechtschreibung/lila",
+   "https://www.duden.de/rechtschreibung/rosa",
+   "https://www.duden.de/rechtschreibung/anders",
+   "https://www.duden.de/rechtschreibung/offen"
+  ],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+  ],
+  "wiktionary": []
+ },
+ "id": "a2-u12-d5",
+ "imageManifestRefs": [],
+ "kind": "content",
+ "level": "A2",
+ "praesentation": {
+  "dualCodingRequired": true,
+  "grammarArsenalIds": [
+   "ars-dass-satz",
+   "ars-wuerde"
+  ],
+  "riskFlagsShown": [
+   "v2-order"
+  ],
+  "storySentenceIds": [],
+  "wordIds": [
+   "grau",
+   "lila",
+   "rosa",
+   "anders",
+   "offen"
+  ]
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "a": "Das Haus ist grau!",
+      "q": "«البيت رمادي!»؟"
+     },
+     {
+      "a": "Die Blume ist lila, die Rose ist rosa!",
+      "q": "«الوردة بنفسجية والوردة وردية!»؟"
+     },
+     {
+      "a": "Die Schule ist offen!",
+      "q": "«المدرسة مفتوحة!»؟"
+     },
+     {
+      "a": "Du bist anders!",
+      "q": "«أنت مختلف!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Ich weiß, dass du anders bist!",
+      "q": "«أعرف أنك مختلف!»؟"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "«لو آتي المدرسة مفتوحة!»؟"
+     },
+     {
+      "a": "Ich würde gern anders sein!",
+      "q": "«أودّ لو أكون مختلفاً!»؟"
+     },
+     {
+      "a": "Das Haus ist grau und die Schule ist offen!",
+      "q": "«البيت رمادي والمدرسة مفتوحة!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Das Haus ist grau!",
+      "q": "«البيت رمادي!»؟"
+     },
+     {
+      "a": "Die Blume ist lila, die Rose ist rosa!",
+      "q": "«الوردة بنفسجية والوردة وردية!»؟"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "«لو آتي المدرسة مفتوحة!»؟"
+     },
+     {
+      "a": "Du bist anders!",
+      "q": "«أنت مختلف!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "schemaVersion": "1.0.0",
+ "slider": {
+  "max": 100,
+  "min": 0,
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "questionDe": "Wie viel Prozent wirst du schaffen?"
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "ar": "يصف كيفه (يعرف! + يأتي! + يودّ! + يلوّن! + يفتح!)",
+    "de": "Das Haus ist grau! Die Schule ist offen!"
+   },
+   "situation": {
+    "ar": "يوم-مفتوح في المدرسة",
+    "de": "Wenn ich komme, ist die Schule offen!"
+   },
+   "successCriteria": [
+    "يروي 8 جمل (5-جدد! + محتوى! + شرط! + حلم!)",
+    "يستخدم الجديد (grau/lila/rosa/anders/offen!)",
+    "يميز (lila/rosa-بلا-تصريف! + الخبر-بلا-نهاية!) ويسترجع (dass/wenn/würde!)"
+   ]
+  },
+  "stations": [
+   {
+    "explanationRequired": true,
+    "interleavedWith": [
+     "schwester",
+     "bruder",
+     "fussball"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "رمادي",
+        "de": "grau"
+       },
+       {
+        "ar": "بنفسجي",
+        "de": "lila"
+       },
+       {
+        "ar": "وردي",
+        "de": "rosa"
+       },
+       {
+        "ar": "مختلف",
+        "de": "anders"
+       },
+       {
+        "ar": "مفتوح",
+        "de": "offen"
+       }
+      ],
+      "why": "كيفي: grau رمادي (بيت!) · lila بنفسجي (بلا-تصريف!) · rosa وردي (بلا-تصريف!) · anders مختلف (أنت!) · offen مفتوح (مدرسة!) — lila/rosa-ثابتتان!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "أعرف",
+        "de": "weiß"
+       },
+       {
+        "ar": "آتي",
+        "de": "komme"
+       },
+       {
+        "ar": "أودّ",
+        "de": "würde"
+       },
+       {
+        "ar": "يكون",
+        "de": "sein"
+       },
+       {
+        "ar": "تكون",
+        "de": "bist"
+       }
+      ],
+      "why": "أفعال-الكيف: weiß أعرف! · komme آتي! · würde أودّ! · sein يكون! · bist تكون!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "ابن عم",
+        "de": "der Cousin"
+       },
+       {
+        "ar": "حفيد",
+        "de": "der Enkel"
+       },
+       {
+        "ar": "إلى هنا",
+        "de": "her"
+       },
+       {
+        "ar": "لو",
+        "de": "wenn"
+       },
+       {
+        "ar": "أن",
+        "de": "dass"
+       }
+      ],
+      "why": "استرجاع-d4: der-Cousin! · der-Enkel! · her إلى-هنا! · wenn لو! · dass أن!"
+     }
+    ],
+    "type": "match"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الجديد (grau/lila/rosa/anders/offen!)",
+     "الصفات (lila/rosa-ثابتتان!)",
+     "الاسترجاع (dass/wenn/würde!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "gap-fill",
+    "items": [
+     {
+      "a": "anders",
+      "q": "Ich weiß, dass du ___ bist! (anders!)",
+      "why": "مختلف! — weiß-dass (أعرف-أن!)."
+     },
+     {
+      "a": "offen",
+      "q": "Wenn ich komme, ist die Schule ___! (offen!)",
+      "why": "مفتوحة! — komme-wenn (لو-آتي!)."
+     },
+     {
+      "a": "anders",
+      "q": "Ich würde gern ___ sein! (anders!)",
+      "why": "مختلفاً! — würde-sein (أودّ-أكون!)."
+     },
+     {
+      "a": "grau",
+      "q": "Das Haus ist ___! (grau!)",
+      "why": "رمادي! — Haus-ist (البيت!)."
+     },
+     {
+      "a": "lila",
+      "q": "Die Blume ist ___! (lila!)",
+      "why": "بنفسجية! — Blume-ist (الوردة!)."
+     },
+     {
+      "a": "rosa",
+      "q": "Die Rose ist ___! (rosa!)",
+      "why": "وردية! — Rose-Rose (وردة-وردية!)."
+     },
+     {
+      "a": "dass",
+      "q": "Ich weiß, ___ du anders bist! (dass!)",
+      "why": "أعرف-أن! — dass-محتوى!"
+     },
+     {
+      "a": "komme",
+      "q": "Wenn ich ___, ist die Schule offen! (komme!)",
+      "why": "آتي! — wenn-شرط!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ كلمة واحدة — الباقي صحيح",
+     "التصريف (ist/bist/sein!)",
+     "الصيغ (dass-آخراً! + V2-بعد-الفاصلة!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "error-hunt",
+    "items": [
+     {
+      "a": "Ich weiß, dass du anders bist!",
+      "q": "~~Ich weiß, dass du anders sind!~~",
+      "why": "المفرد-يكون (bist!) — sind-جمع خطأ!"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "~~Wenn ich komme, die Schule ist offen!~~",
+      "why": "V2-بعد-الفاصلة (ist-die!) — die-ist خطأ!"
+     },
+     {
+      "a": "Ich würde gern anders sein!",
+      "q": "~~Du würde gern anders sein!~~",
+      "why": "المتكلم-يودّ (Ich-würde!) — Du-مخاطب خطأ!"
+     },
+     {
+      "a": "Die Blume ist lila, die Rose ist rosa!",
+      "q": "~~Die Blume ist lila, die Rose sind rosa!~~",
+      "why": "المفرد-يكون (ist!) — sind-جمع خطأ!"
+     },
+     {
+      "a": "Das Haus ist grau!",
+      "q": "~~Das Haus ist graue!~~",
+      "why": "الخبر-بلا-نهاية (grau!) — graue-صفة خطأ!"
+     },
+     {
+      "a": "Du bist anders!",
+      "q": "~~Du bist anderen!~~",
+      "why": "الحال-anders (anders!) — anderen-مصرفة خطأ!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بعلمك (weiß-dass!) وانهِ ببيتك (Haus-grau!)",
+     "8 جمل: 5-جدد! + محتوى! + شرط! + حلم!"
+    ],
+    "interleavedWith": [
+     "spielen",
+     "gut",
+     "gern"
+    ],
+    "type": "speaking",
+    "items": [
+     {
+      "a": "Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Das Haus ist grau! Die Blume ist lila, die Rose ist rosa! Die Schule ist offen! Du bist anders! Das Haus ist grau und die Schule ist offen!",
+      "q": "احكِ كيفك (سجّل): 8 جمل — أعرف-أنك-مختلف! + لو-آتي-المدرسة-مفتوحة! + أودّ-لو-أكون-مختلفاً! + البيت-رمادي! + الوردة-بنفسجية-والوردة-وردية! + المدرسة-مفتوحة! + أنت-مختلف! + البيت-رمادي-والمدرسة-مفتوحة!",
+      "why": "قارن حكايتك: anders! + offen! + würde! + grau! + lila! + rosa! + bist! + und!"
+     },
+     {
+      "a": "Das Haus ist grau! Die Blume ist lila! Die Rose ist rosa!",
+      "q": "جهّز للألوان (سجّل): 3 جمل — البيت-رمادي! + الوردة-بنفسجية! + الوردة-وردية!",
+      "why": "قارن تجهيزك: grau! + lila! + rosa!"
+     }
+    ]
+   }
+  ]
+ },
+ "unit": 12,
+ "usedArsenalIds": [
+  "ars-dass-satz",
+  "ars-wuerde"
+ ],
+ "warmup": {
+  "cardIds": [
+   "cousin",
+   "enkel",
+   "her"
+  ]
+ },
+ "ziel": {
+  "ar": "يوم كيفي: رمادي! + بنفسجي! + وردي! + مختلف! + مفتوح! — والصفات (lila/rosa-بلا-تصريف!)",
+  "de": "Ich weiß, dass du anders bist! — Die Schule ist offen!"
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "grau",
+   "lila",
+   "rosa",
+   "anders",
+   "offen"
+  ],
+  "summary": {
+   "ar": "يوم كيفي: أعرف أنك مختلف. لو آتي المدرسة مفتوحة. أودّ لو أكون مختلفاً. البيت رمادي. الوردة بنفسجية والوردة وردية. المدرسة مفتوحة. أنت مختلف. البيت رمادي والمدرسة مفتوحة. النظام: lila/rosa-ثابتتان! + الخبر-بلا-نهاية! + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
+   "de": "Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Das Haus ist grau! Die Blume ist lila, die Rose ist rosa! Die Schule ist offen! Du bist anders! Das Haus ist grau und die Schule ist offen!"
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "مصرفة-للحال",
+     "de": "~~Du bist anderen!~~"
+    },
+    "correct": {
+     "ar": "أنت مختلف!",
+     "de": "Du bist anders!"
+    },
+    "exercise": {
+     "a": "anders",
+     "q": "Du bist ___! (anders!)"
+    },
+    "whyArabicSpeakerFails": "الحال-anders-ثابت (anders! — anderen-لغير-الحال! — العربية-مختلف-واحدة!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "نهاية-للخبر",
+     "de": "~~Das Haus ist graues!~~"
+    },
+    "correct": {
+     "ar": "البيت رمادي!",
+     "de": "Das Haus ist grau!"
+    },
+    "exercise": {
+     "a": "grau",
+     "q": "Das Haus ist ___! (grau!)"
+    },
+    "whyArabicSpeakerFails": "الخبر-بلا-نهاية (grau! — العربية-الخبر-مطابق!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "فاعل-قبل-الفعل-بعد-الفاصلة",
+     "de": "~~Wenn ich komme, die Schule ist offen!~~"
+    },
+    "correct": {
+     "ar": "لو آتي المدرسة مفتوحة!",
+     "de": "Wenn ich komme, ist die Schule offen!"
+    },
+    "exercise": {
+     "a": "ist",
+     "q": "komme, ___ die Schule offen! (ist!)"
+    },
+    "whyArabicSpeakerFails": "V2-بعد-الفاصلة (ist-die! — العربية-بلا-عكس-بعد-لو!) (خريطة التداخل 10‑ي)."
+   }
+  ]
+ }
+}
