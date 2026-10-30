@@ -1,0 +1,468 @@
+{
+ "audioManifestRefs": [
+  "word-pferd",
+  "word-vogel",
+  "word-arm-adj",
+  "word-die-see"
+ ],
+ "canDoDaily": [
+  "يصف عالمه (حصان! + عصفور! + فقير! + بحر!)",
+  "يولّف U12 (امتحان! + مدرسة! + كيف! + عائلة!) ويسترجع (dass/wenn/würde!)"
+ ],
+ "curriculumRef": {
+  "goetheWordListOverlap": [
+   "pferd",
+   "vogel",
+   "arm-adj",
+   "die-see"
+  ],
+  "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
+ },
+ "day": 6,
+ "einstieg": {
+  "guidedRetrieval": [
+   "من d5: Das Haus ist grau! + Die Schule ist offen! (البيت-رمادي! + المدرسة-مفتوحة!) — يوم-الكيف يُتوَّج اليوم بتوليف-مدرستي!",
+   "واليوم: توليفي! Der Vogel ist klein! (العصفور-صغير!) + Das Pferd ist groß! (الحصان-كبير!) + Der Mann ist arm! (الرجل-فقير!) + Die See ist blau! (البحر-أزرق!) + Ich weiß, dass du anders bist! + Wenn ich komme, ist die Schule offen! + Ich würde gern anders sein! + Die Prüfung ist schwer und das Zeugnis ist gut! — بأربع كلمات وتوليف-U12!"
+  ],
+  "pretestItems": [
+   {
+    "answer": "Pferd",
+    "choices": [
+     "Pferd",
+     "Vogel",
+     "See"
+    ],
+    "prompt": {
+     "ar": "«حصان» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   },
+   {
+    "answer": "See",
+    "choices": [
+     "See",
+     "Vogel",
+     "Pferd"
+    ],
+    "prompt": {
+     "ar": "«بحر» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Pferd",
+   "https://www.duden.de/rechtschreibung/Vogel",
+   "https://www.duden.de/rechtschreibung/arm",
+   "https://www.duden.de/rechtschreibung/See_Meer"
+  ],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+  ],
+  "wiktionary": []
+ },
+ "id": "a2-u12-d6",
+ "imageManifestRefs": [],
+ "kind": "content",
+ "level": "A2",
+ "praesentation": {
+  "dualCodingRequired": true,
+  "grammarArsenalIds": [
+   "ars-dass-satz",
+   "ars-wuerde"
+  ],
+  "riskFlagsShown": [
+   "v2-order"
+  ],
+  "storySentenceIds": [],
+  "wordIds": [
+   "pferd",
+   "vogel",
+   "arm-adj",
+   "die-see"
+  ]
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "a": "Der Vogel ist klein!",
+      "q": "«العصفور صغير!»؟"
+     },
+     {
+      "a": "Das Pferd ist groß!",
+      "q": "«الحصان كبير!»؟"
+     },
+     {
+      "a": "Der Mann ist arm!",
+      "q": "«الرجل فقير!»؟"
+     },
+     {
+      "a": "Die See ist blau!",
+      "q": "«البحر أزرق!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Ich weiß, dass du anders bist!",
+      "q": "«أعرف أنك مختلف!»؟"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "«لو آتي المدرسة مفتوحة!»؟"
+     },
+     {
+      "a": "Ich würde gern anders sein!",
+      "q": "«أودّ لو أكون مختلفاً!»؟"
+     },
+     {
+      "a": "Die Prüfung ist schwer und das Zeugnis ist gut!",
+      "q": "«الامتحان صعب والشهادة جيدة!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Der Vogel ist klein! Das Pferd ist groß!",
+      "q": "«العصفور صغير والحصان كبير!»؟"
+     },
+     {
+      "a": "Der Mann ist arm! Die See ist blau!",
+      "q": "«الرجل فقير والبحر أزرق!»؟"
+     },
+     {
+      "a": "Ich weiß, dass du anders bist!",
+      "q": "«أعرف أنك مختلف!»؟"
+     },
+     {
+      "a": "Die Prüfung ist schwer und das Zeugnis ist gut!",
+      "q": "«الامتحان صعب والشهادة جيدة!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "schemaVersion": "1.0.0",
+ "slider": {
+  "max": 100,
+  "min": 0,
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "questionDe": "Wie viel Prozent wirst du schaffen?"
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "ar": "يصف عالمه (حصان! + عصفور! + فقير! + بحر!)",
+    "de": "Der Vogel ist klein! Das Pferd ist groß!"
+   },
+   "situation": {
+    "ar": "رحلة-مدرسية إلى البحر",
+    "de": "Die Prüfung ist schwer und das Zeugnis ist gut!"
+   },
+   "successCriteria": [
+    "يروي 8 جمل (4-جدد! + محتوى! + شرط! + حلم! + ختام-U12!)",
+    "يستخدم الجديد (Pferd/Vogel/arm/See!)",
+    "يميز (die-See-بحر-مؤنثة! + der-See-بحيرة-مذكر! + الخبر-بلا-نهاية!) ويسترجع (dass/wenn/würde!)"
+   ]
+  },
+  "stations": [
+   {
+    "explanationRequired": true,
+    "interleavedWith": [
+     "schwester",
+     "bruder",
+     "fussball"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "حصان",
+        "de": "das Pferd"
+       },
+       {
+        "ar": "عصفور",
+        "de": "der Vogel"
+       },
+       {
+        "ar": "فقير",
+        "de": "arm"
+       },
+       {
+        "ar": "بحر",
+        "de": "die See"
+       },
+       {
+        "ar": "شهادة",
+        "de": "das Zeugnis"
+       }
+      ],
+      "why": "توليفي: das-Pferd حصان (كبير!) · der-Vogel عصفور (صغير!) · arm فقير (رجل!) · die-See بحر (أزرق!) · das-Zeugnis شهادة (جيدة!) — die-See-بحر-مؤنثة!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "أعرف",
+        "de": "weiß"
+       },
+       {
+        "ar": "آتي",
+        "de": "komme"
+       },
+       {
+        "ar": "أودّ",
+        "de": "würde"
+       },
+       {
+        "ar": "يكون",
+        "de": "sein"
+       },
+       {
+        "ar": "تكون",
+        "de": "bist"
+       }
+      ],
+      "why": "أفعال-التوليف: weiß أعرف! · komme آتي! · würde أودّ! · sein يكون! · bist تكون!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "رمادي",
+        "de": "grau"
+       },
+       {
+        "ar": "بنفسجي",
+        "de": "lila"
+       },
+       {
+        "ar": "وردي",
+        "de": "rosa"
+       },
+       {
+        "ar": "مختلف",
+        "de": "anders"
+       },
+       {
+        "ar": "مفتوح",
+        "de": "offen"
+       }
+      ],
+      "why": "استرجاع-d5: grau رمادي! · lila بنفسجي! · rosa وردي! · anders مختلف! · offen مفتوح!"
+     }
+    ],
+    "type": "match"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الجديد (Pferd/Vogel/arm/See!)",
+     "الأدوات (das-Pferd! + der-Vogel! + die-See-بحر!)",
+     "الاسترجاع (dass/wenn/würde!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "gap-fill",
+    "items": [
+     {
+      "a": "Vogel",
+      "q": "Der ___ ist klein! (Vogel!)",
+      "why": "عصفور! — der-ist (مذكر!)."
+     },
+     {
+      "a": "Pferd",
+      "q": "Das ___ ist groß! (Pferd!)",
+      "why": "حصان! — das-ist (محايد!)."
+     },
+     {
+      "a": "arm",
+      "q": "Der Mann ist ___! (arm!)",
+      "why": "فقير! — Mann-ist (الرجل!)."
+     },
+     {
+      "a": "See",
+      "q": "Die ___ ist blau! (See!)",
+      "why": "بحر! — die-ist (مؤنثة!)."
+     },
+     {
+      "a": "dass",
+      "q": "Ich weiß, ___ du anders bist! (dass!)",
+      "why": "أعرف-أن! — dass-محتوى!"
+     },
+     {
+      "a": "komme",
+      "q": "Wenn ich ___, ist die Schule offen! (komme!)",
+      "why": "آتي! — wenn-شرط!"
+     },
+     {
+      "a": "anders",
+      "q": "Ich würde gern ___ sein! (anders!)",
+      "why": "مختلفاً! — würde-sein (أودّ-أكون!)."
+     },
+     {
+      "a": "Zeugnis",
+      "q": "Die Prüfung ist schwer und das ___ ist gut! (Zeugnis!)",
+      "why": "شهادة! — Prüfung-Zeugnis (ختام-U12!)."
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ كلمة واحدة — الباقي صحيح",
+     "الأدوات (der-Vogel! + das-Pferd! + die-See!)",
+     "التصريف (ist/bist/sein!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "error-hunt",
+    "items": [
+     {
+      "a": "Der Vogel ist klein!",
+      "q": "~~Das Vogel ist klein!~~",
+      "why": "المذكر-العصفور (der-Vogel!) — das-محايد خطأ!"
+     },
+     {
+      "a": "Das Pferd ist groß!",
+      "q": "~~Der Pferd ist groß!~~",
+      "why": "المحايد-الحصان (das-Pferd!) — der-مذكر خطأ!"
+     },
+     {
+      "a": "Der Mann ist arm!",
+      "q": "~~Der Mann sind arm!~~",
+      "why": "المفرد-يكون (ist!) — sind-جمع خطأ!"
+     },
+     {
+      "a": "Die See ist blau!",
+      "q": "~~Die See sind blau!~~",
+      "why": "المفرد-يكون (ist!) — sind-جمع خطأ!"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "~~Wenn ich komme, die Schule ist offen!~~",
+      "why": "V2-بعد-الفاصلة (ist-die!) — die-ist خطأ!"
+     },
+     {
+      "a": "Die Prüfung ist schwer und das Zeugnis ist gut!",
+      "q": "~~Die Prüfung ist schwer und das Zeugnis sind gut!~~",
+      "why": "المفرد-يكون (ist!) — sind-جمع خطأ!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بعصفورك (Vogel-klein!) وانهِ بشهادتك (Zeugnis-gut!)",
+     "8 جمل: 4-جدد! + محتوى! + شرط! + حلم! + ختام-U12!"
+    ],
+    "interleavedWith": [
+     "spielen",
+     "gut",
+     "gern"
+    ],
+    "type": "speaking",
+    "items": [
+     {
+      "a": "Der Vogel ist klein! Das Pferd ist groß! Der Mann ist arm! Die See ist blau! Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Die Prüfung ist schwer und das Zeugnis ist gut!",
+      "q": "احكِ عالمك (سجّل): 8 جمل — العصفور-صغير! + الحصان-كبير! + الرجل-فقير! + البحر-أزرق! + أعرف-أنك-مختلف! + لو-آتي-المدرسة-مفتوحة! + أودّ-لو-أكون-مختلفاً! + الامتحان-صعب-والشهادة-جيدة!",
+      "why": "قارن حكايتك: Vogel! + Pferd! + arm! + See! + dass! + wenn! + würde! + Zeugnis!"
+     },
+     {
+      "a": "Die Prüfung ist schwer! Das Zeugnis ist gut!",
+      "q": "جهّز للختام (سجّل): 2 جمل — الامتحان-صعب! + الشهادة-جيدة!",
+      "why": "قارن تجهيزك: Prüfung! + Zeugnis!"
+     }
+    ]
+   }
+  ]
+ },
+ "unit": 12,
+ "usedArsenalIds": [
+  "ars-dass-satz",
+  "ars-wuerde"
+ ],
+ "warmup": {
+  "cardIds": [
+   "grau",
+   "anders",
+   "offen"
+  ]
+ },
+ "ziel": {
+  "ar": "توليف-مدرستي: حصان! + عصفور! + فقير! + بحر! — والأدوات (das-Pferd! + der-Vogel! + die-See-بحر!) وختام-U12 (امتحان! + شهادة!)",
+  "de": "Der Vogel ist klein! Das Pferd ist groß! — Die See ist blau!"
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "pferd",
+   "vogel",
+   "arm-adj",
+   "die-see"
+  ],
+  "summary": {
+   "ar": "توليف-مدرستي: العصفور صغير. الحصان كبير. الرجل فقير. البحر أزرق. أعرف أنك مختلف. لو آتي المدرسة مفتوحة. أودّ لو أكون مختلفاً. الامتحان صعب والشهادة جيدة. النظام: die-See-بحر-مؤنثة-بلا-جمع! + der-See-بحيرة-مذكر! + الخبر-بلا-نهاية! + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
+   "de": "Der Vogel ist klein! Das Pferd ist groß! Der Mann ist arm! Die See ist blau! Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Die Prüfung ist schwer und das Zeugnis ist gut!"
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "أداة-محايدة-للعصفور",
+     "de": "~~Das Vogel ist klein!~~"
+    },
+    "correct": {
+     "ar": "العصفور صغير!",
+     "de": "Der Vogel ist klein!"
+    },
+    "exercise": {
+     "a": "Vogel",
+     "q": "Der ___ ist klein! (Vogel!)"
+    },
+    "whyArabicSpeakerFails": "المذكر-der-Vogel (der! — العربية-العصفور-مذكر!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "بحيرة-بدل-البحر",
+     "de": "~~Der See ist blau!~~"
+    },
+    "correct": {
+     "ar": "البحر أزرق!",
+     "de": "Die See ist blau!"
+    },
+    "exercise": {
+     "a": "See",
+     "q": "Die ___ ist blau! (See!)"
+    },
+    "whyArabicSpeakerFails": "المتجانسان-der-See-بحيرة-مذكر-ضد-die-See-بحر-مؤنثة (die! — العربية-بحر-مذكر!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "فاعل-قبل-الفعل-بعد-الفاصلة",
+     "de": "~~Wenn ich komme, die Schule ist offen!~~"
+    },
+    "correct": {
+     "ar": "لو آتي المدرسة مفتوحة!",
+     "de": "Wenn ich komme, ist die Schule offen!"
+    },
+    "exercise": {
+     "a": "ist",
+     "q": "komme, ___ die Schule offen! (ist!)"
+    },
+    "whyArabicSpeakerFails": "V2-بعد-الفاصلة (ist-die! — العربية-بلا-عكس-بعد-لو!) (خريطة التداخل 10‑ي)."
+   }
+  ]
+ }
+}
