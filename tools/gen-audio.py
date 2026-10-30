@@ -1801,6 +1801,10 @@ def build_all() -> None:
     ("word-vogel", "der Vogel.", "vogel", ["a2-u12-d6"]),
     ("word-arm-adj", "arm.", "arm-adj", ["a2-u12-d6"]),
     ("word-die-see", "die See.", "die-see", ["a2-u12-d6"]),
+    ("word-am-vormittag", "am Vormittag.", "am-vormittag", ["a2-u13-d1"]),
+    ("word-am-mittag", "am Mittag.", "am-mittag", ["a2-u13-d1"]),
+    ("word-am-nachmittag", "am Nachmittag.", "am-nachmittag", ["a2-u13-d1"]),
+    ("word-am-abend", "am Abend.", "am-abend", ["a2-u13-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

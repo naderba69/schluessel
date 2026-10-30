@@ -1,0 +1,463 @@
+{
+ "audioManifestRefs": [
+  "word-am-vormittag",
+  "word-am-mittag",
+  "word-am-nachmittag",
+  "word-am-abend"
+ ],
+ "canDoDaily": [
+  "يرتب نهاره (صباح! + ظهر! + بعد-ظهر! + مساء!)",
+  "يميز (القطعة-am-! + الظرف-بلا-am!) ويسترجع (dass/wenn/würde!)"
+ ],
+ "curriculumRef": {
+  "goetheWordListOverlap": [
+   "am-vormittag",
+   "am-mittag",
+   "am-nachmittag",
+   "am-abend"
+  ],
+  "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
+ },
+ "day": 1,
+ "einstieg": {
+  "guidedRetrieval": [
+   "من U12: Die Prüfung ist schwer und das Zeugnis ist gut! (الامتحان-صعب-والشهادة-جيدة!) — ختام-الوحدة يُتوَّج اليوم بيوم-منظم!",
+   "واليوم: نهاري! Am Vormittag lerne ich Deutsch! (في-الصباح-أتعلم-الألمانية!) + Am Mittag esse ich Brot! (في-الظهر-آكل-خبزاً!) + Am Nachmittag spiele ich Fußball! (بعد-الظهر-ألعب-كرة!) + Am Abend lese ich ein Buch! (في-المساء-أقرأ-كتاباً!) + Ich weiß, dass du anders bist! + Wenn ich komme, ist die Schule offen! + Ich würde gern anders sein! + Die Prüfung ist schwer und das Zeugnis ist gut! — بأربع قطع ويوم-منظم!"
+  ],
+  "pretestItems": [
+   {
+    "answer": "am Vormittag",
+    "choices": [
+     "am Vormittag",
+     "am Mittag",
+     "am Abend"
+    ],
+    "prompt": {
+     "ar": "«في الصباح» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   },
+   {
+    "answer": "am Abend",
+    "choices": [
+     "am Abend",
+     "am Mittag",
+     "am Nachmittag"
+    ],
+    "prompt": {
+     "ar": "«في المساء» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+  ],
+  "wiktionary": []
+ },
+ "id": "a2-u13-d1",
+ "imageManifestRefs": [],
+ "kind": "content",
+ "level": "A2",
+ "praesentation": {
+  "dualCodingRequired": true,
+  "grammarArsenalIds": [
+   "ars-dass-satz",
+   "ars-wuerde"
+  ],
+  "riskFlagsShown": [
+   "v2-order"
+  ],
+  "storySentenceIds": [],
+  "wordIds": [
+   "am-vormittag",
+   "am-mittag",
+   "am-nachmittag",
+   "am-abend"
+  ]
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "a": "Am Vormittag lerne ich Deutsch!",
+      "q": "«في الصباح أتعلم الألمانية!»؟"
+     },
+     {
+      "a": "Am Mittag esse ich Brot!",
+      "q": "«في الظهر آكل خبزاً!»؟"
+     },
+     {
+      "a": "Am Nachmittag spiele ich Fußball!",
+      "q": "«بعد الظهر ألعب كرة القدم!»؟"
+     },
+     {
+      "a": "Am Abend lese ich ein Buch!",
+      "q": "«في المساء أقرأ كتاباً!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Ich weiß, dass du anders bist!",
+      "q": "«أعرف أنك مختلف!»؟"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "«لو آتي المدرسة مفتوحة!»؟"
+     },
+     {
+      "a": "Ich würde gern anders sein!",
+      "q": "«أودّ لو أكون مختلفاً!»؟"
+     },
+     {
+      "a": "Die Prüfung ist schwer und das Zeugnis ist gut!",
+      "q": "«الامتحان صعب والشهادة جيدة!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Am Vormittag lerne ich Deutsch! Am Mittag esse ich Brot!",
+      "q": "«في الصباح أتعلم الألمانية وفي الظهر آكل خبزاً!»؟"
+     },
+     {
+      "a": "Am Nachmittag spiele ich Fußball! Am Abend lese ich ein Buch!",
+      "q": "«بعد الظهر ألعب كرة القدم وفي المساء أقرأ كتاباً!»؟"
+     },
+     {
+      "a": "Ich weiß, dass du anders bist!",
+      "q": "«أعرف أنك مختلف!»؟"
+     },
+     {
+      "a": "Die Prüfung ist schwer und das Zeugnis ist gut!",
+      "q": "«الامتحان صعب والشهادة جيدة!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "schemaVersion": "1.0.0",
+ "slider": {
+  "max": 100,
+  "min": 0,
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "questionDe": "Wie viel Prozent wirst du schaffen?"
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "ar": "يرتب نهاره (صباح! + ظهر! + بعد-ظهر! + مساء!)",
+    "de": "Am Vormittag lerne ich Deutsch! Am Abend lese ich ein Buch!"
+   },
+   "situation": {
+    "ar": "يوم-منظم من الصباح للمساء",
+    "de": "Die Prüfung ist schwer und das Zeugnis ist gut!"
+   },
+   "successCriteria": [
+    "يروي 8 جمل (4-قطع! + محتوى! + شرط! + حلم! + ختام-U12!)",
+    "يستخدم الجديد (am-Vormittag/am-Mittag/am-Nachmittag/am-Abend!)",
+    "يميز (القطعة-am-! + الظرف-بلا-am! + V2-بعد-الظرف!) ويسترجع (dass/wenn/würde!)"
+   ]
+  },
+  "stations": [
+   {
+    "explanationRequired": true,
+    "interleavedWith": [
+     "schwester",
+     "bruder",
+     "fussball"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "في الصباح",
+        "de": "am Vormittag"
+       },
+       {
+        "ar": "في الظهر",
+        "de": "am Mittag"
+       },
+       {
+        "ar": "بعد الظهر",
+        "de": "am Nachmittag"
+       },
+       {
+        "ar": "في المساء",
+        "de": "am Abend"
+       },
+       {
+        "ar": "صباحاً",
+        "de": "vormittags"
+       }
+      ],
+      "why": "نهاري: am-Vormittag في-الصباح! · am-Mittag في-الظهر! · am-Nachmittag بعد-الظهر! · am-Abend في-المساء! · vormittags صباحاً-ظرف! — القطعة-am-ضد-الظرف-بلا-am!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "أتعلم",
+        "de": "lerne"
+       },
+       {
+        "ar": "آكل",
+        "de": "esse"
+       },
+       {
+        "ar": "ألعب",
+        "de": "spiele"
+       },
+       {
+        "ar": "أقرأ",
+        "de": "lese"
+       },
+       {
+        "ar": "أعرف",
+        "de": "weiß"
+       }
+      ],
+      "why": "أفعال-النهار: lerne أتعلم! · esse آكل! · spiele ألعب! · lese أقرأ! · weiß أعرف!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "عصفور",
+        "de": "der Vogel"
+       },
+       {
+        "ar": "حصان",
+        "de": "das Pferd"
+       },
+       {
+        "ar": "فقير",
+        "de": "arm"
+       },
+       {
+        "ar": "بحر",
+        "de": "die See"
+       },
+       {
+        "ar": "مختلف",
+        "de": "anders"
+       }
+      ],
+      "why": "استرجاع-U12: der-Vogel! · das-Pferd! · arm فقير! · die-See بحر! · anders مختلف!"
+     }
+    ],
+    "type": "match"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "القطع (am-Vormittag/am-Mittag/am-Nachmittag/am-Abend!)",
+     "الفراغ-الاسم (Am-ثابتة!)",
+     "الاسترجاع (dass/wenn/würde!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "gap-fill",
+    "items": [
+     {
+      "a": "Vormittag",
+      "q": "Am ___ lerne ich Deutsch! (Vormittag!)",
+      "why": "في-الصباح! — Am-ثابتة (an-dem!)."
+     },
+     {
+      "a": "Mittag",
+      "q": "Am ___ esse ich Brot! (Mittag!)",
+      "why": "في-الظهر! — Am-ثابتة (an-dem!)."
+     },
+     {
+      "a": "Nachmittag",
+      "q": "Am ___ spiele ich Fußball! (Nachmittag!)",
+      "why": "بعد-الظهر! — Am-ثابتة (an-dem!)."
+     },
+     {
+      "a": "Abend",
+      "q": "Am ___ lese ich ein Buch! (Abend!)",
+      "why": "في-المساء! — Am-ثابتة (an-dem!)."
+     },
+     {
+      "a": "dass",
+      "q": "Ich weiß, ___ du anders bist! (dass!)",
+      "why": "أعرف-أن! — dass-محتوى!"
+     },
+     {
+      "a": "komme",
+      "q": "Wenn ich ___, ist die Schule offen! (komme!)",
+      "why": "آتي! — wenn-شرط!"
+     },
+     {
+      "a": "anders",
+      "q": "Ich würde gern ___ sein! (anders!)",
+      "why": "مختلفاً! — würde-sein (أودّ-أكون!)."
+     },
+     {
+      "a": "Zeugnis",
+      "q": "Die Prüfung ist schwer und das ___ ist gut! (Zeugnis!)",
+      "why": "شهادة! — Prüfung-Zeugnis (ختام-U12!)."
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ كلمة واحدة — الباقي صحيح",
+     "القطعة (am-ثابتة!)",
+     "الترتيب (V2-بعد-الظرف!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "error-hunt",
+    "items": [
+     {
+      "a": "Am Vormittag lerne ich Deutsch!",
+      "q": "~~An Vormittag lerne ich Deutsch!~~",
+      "why": "المدمجة-am (an-dem!) — an-عارية خطأ!"
+     },
+     {
+      "a": "Am Mittag esse ich Brot!",
+      "q": "~~Am Mittag esst ich Brot!~~",
+      "why": "المتكلم-يأكل (esse!) — esst-مخاطب خطأ!"
+     },
+     {
+      "a": "Am Nachmittag spiele ich Fußball!",
+      "q": "~~Am Nachmittag spiele ich Fußballe!~~",
+      "why": "المفرد-الكرة (Fußball!) — Fußballe-جمع خطأ!"
+     },
+     {
+      "a": "Am Abend lese ich ein Buch!",
+      "q": "~~Am Abend lese ich einen Buch!~~",
+      "why": "المحايد-الكتاب (ein-Buch!) — einen-مذكر خطأ!"
+     },
+     {
+      "a": "Am Vormittag lerne ich Deutsch!",
+      "q": "~~Am Vormittag ich lerne Deutsch!~~",
+      "why": "V2-بعد-الظرف (lerne-ich!) — ich-lerne خطأ!"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "~~Wenn ich komme, die Schule ist offen!~~",
+      "why": "V2-بعد-الفاصلة (ist-die!) — die-ist خطأ!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بصباحك (Vormittag-lerne!) وانهِ بشهادتك (Zeugnis-gut!)",
+     "8 جمل: 4-قطع! + محتوى! + شرط! + حلم! + ختام-U12!"
+    ],
+    "interleavedWith": [
+     "spielen",
+     "gut",
+     "gern"
+    ],
+    "type": "speaking",
+    "items": [
+     {
+      "a": "Am Vormittag lerne ich Deutsch! Am Mittag esse ich Brot! Am Nachmittag spiele ich Fußball! Am Abend lese ich ein Buch! Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Die Prüfung ist schwer und das Zeugnis ist gut!",
+      "q": "احكِ نهارك (سجّل): 8 جمل — في-الصباح-أتعلم-الألمانية! + في-الظهر-آكل-خبزاً! + بعد-الظهر-ألعب-كرة! + في-المساء-أقرأ-كتاباً! + أعرف-أنك-مختلف! + لو-آتي-المدرسة-مفتوحة! + أودّ-لو-أكون-مختلفاً! + الامتحان-صعب-والشهادة-جيدة!",
+      "why": "قارن حكايتك: Vormittag! + Mittag! + Nachmittag! + Abend! + dass! + wenn! + würde! + Zeugnis!"
+     },
+     {
+      "a": "Am Vormittag lerne ich Deutsch! Am Abend lese ich ein Buch!",
+      "q": "جهّز للنهار (سجّل): 2 جمل — في-الصباح-أتعلم! + في-المساء-أقرأ!",
+      "why": "قارن تجهيزك: Vormittag! + Abend!"
+     }
+    ]
+   }
+  ]
+ },
+ "unit": 13,
+ "usedArsenalIds": [
+  "ars-dass-satz",
+  "ars-wuerde"
+ ],
+ "warmup": {
+  "cardIds": [
+   "vogel",
+   "arm-adj",
+   "die-see"
+  ]
+ },
+ "ziel": {
+  "ar": "نهاري-المنظم: صباح! + ظهر! + بعد-ظهر! + مساء! — والقطع (am-ثابتة!) والظرف (vormittags-بلا-am!) وV2-بعد-الظرف!",
+  "de": "Am Vormittag lerne ich Deutsch! — Am Abend lese ich ein Buch!"
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "am-vormittag",
+   "am-mittag",
+   "am-nachmittag",
+   "am-abend"
+  ],
+  "summary": {
+   "ar": "نهاري-المنظم: في الصباح أتعلم الألمانية. في الظهر آكل خبزاً. بعد الظهر ألعب كرة القدم. في المساء أقرأ كتاباً. أعرف أنك مختلف. لو آتي المدرسة مفتوحة. أودّ لو أكون مختلفاً. الامتحان صعب والشهادة جيدة. النظام: القطعة-am-ثابتة (an-dem!) + الظرف-بلا-am (vormittags!) + V2-بعد-الظرف (lerne-ich!) + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
+   "de": "Am Vormittag lerne ich Deutsch! Am Mittag esse ich Brot! Am Nachmittag spiele ich Fußball! Am Abend lese ich ein Buch! Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Die Prüfung ist schwer und das Zeugnis ist gut!"
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "حرف-عارٍ-بلا-دمج",
+     "de": "~~An Vormittag lerne ich Deutsch!~~"
+    },
+    "correct": {
+     "ar": "في الصباح أتعلم الألمانية!",
+     "de": "Am Vormittag lerne ich Deutsch!"
+    },
+    "exercise": {
+     "a": "Vormittag",
+     "q": "Am ___ lerne ich Deutsch! (Vormittag!)"
+    },
+    "whyArabicSpeakerFails": "المدمجة-am-an-dem (am! — العربية-في-واحدة-بلا-دمج!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "فاعل-قبل-الفعل-بعد-الظرف",
+     "de": "~~Am Vormittag ich lerne Deutsch!~~"
+    },
+    "correct": {
+     "ar": "في الصباح أتعلم الألمانية!",
+     "de": "Am Vormittag lerne ich Deutsch!"
+    },
+    "exercise": {
+     "a": "lerne",
+     "q": "Am Vormittag ___ ich Deutsch! (lerne!)"
+    },
+    "whyArabicSpeakerFails": "V2-بعد-الظرف (lerne-ich! — العربية-الفاعل-أولاً-دائماً!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "مذكر-للكتاب-المحايد",
+     "de": "~~Am Abend lese ich einen Buch!~~"
+    },
+    "correct": {
+     "ar": "في المساء أقرأ كتاباً!",
+     "de": "Am Abend lese ich ein Buch!"
+    },
+    "exercise": {
+     "a": "ein",
+     "q": "lese ich ___ Buch! (ein!)"
+    },
+    "whyArabicSpeakerFails": "المحايد-ein-Buch (ein! — العربية-الكتاب-مذكر!) (خريطة التداخل 10‑ي)."
+   }
+  ]
+ }
+}

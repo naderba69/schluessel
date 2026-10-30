@@ -96,6 +96,8 @@ if (flag("script")) {
 }
 
 type Hit = { line: string; front: string[]; later: string[]; official: string[] };
+// D403: رؤوس المدروسة نفسها (de) — تُعفى من official (الليمة في سطر-قائمتها ليست نسخاً — am-Vormittag/a2:199!)
+const headDe = new Set(taughtWords.map((w) => norm(w.de)));
 const hits: Hit[] = [];
 for (const line of lines) {
   const de = germanOnly(line).replace(/~~/g, " ").replace(/___/g, " ");
@@ -108,7 +110,8 @@ for (const line of lines) {
   }
   const n = norm(de);
   const declared = fixedPhrases.some((p) => n === norm(p.de) || n.includes(norm(p.de)));
-  const off = declared ? [] : official
+  // D403: سطر-الرأس نفسه (مساواة-تامة-مع-de وحده — الجمل-والسياقات تُفحص!) ليس «نسخاً»
+  const off = declared || headDe.has(n) ? [] : official
     // D195: كلمة واحدة طويلة (dreiundzwanzig · Telefonnummer) ليست «نسخاً» ولو وردت داخل جملة رسمية — فرع الاحتواء يتطلّب كلمتين فأكثر
     .filter((o) => n.length >= 12 && (o.text === n || (o.text.includes(n) && n.split(" ").length >= 2) || (n.includes(o.text) && o.text.split(" ").length >= 4)))
     .slice(0, 2)
