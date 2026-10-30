@@ -1,0 +1,463 @@
+{
+ "audioManifestRefs": [
+  "word-zweimal",
+  "word-dreimal",
+  "word-viermal"
+ ],
+ "canDoDaily": [
+  "يعد مراته (مرتين! + ثلاثاً! + أربعاً!)",
+  "يميز (الظرف-mal-ثابت! + V2-بعد-الظرف!) ويسترجع (dass/wenn/würde!)"
+ ],
+ "curriculumRef": {
+  "goetheWordListOverlap": [
+   "zweimal",
+   "dreimal",
+   "viermal"
+  ],
+  "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
+ },
+ "day": 3,
+ "einstieg": {
+  "guidedRetrieval": [
+   "من d2: Der erste Tag ist schön! + Die vierte Woche ist lang! (اليوم-الأول-جميل! + الأسبوع-الرابع-طويل!) — الترتيب-الفائز يُتوَّج اليوم بالمرات-المحظوظة!",
+   "واليوم: مراتي! Ich trinke zweimal Kaffee! (أشرب-القهوة-مرتين!) + Ich esse dreimal Brot! (آكل-الخبز-ثلاث-مرات!) + Ich spiele viermal Fußball! (ألعب-الكرة-أربع-مرات!) + Noch einmal, bitte! (مرة-أخرى-من-فضلك!) + Ich weiß, dass du anders bist! + Wenn ich komme, ist die Schule offen! + Ich würde gern anders sein! + Der erste Tag ist schön und die vierte Woche ist lang! — بثلاث مرات وحظ!"
+  ],
+  "pretestItems": [
+   {
+    "answer": "zweimal",
+    "choices": [
+     "zweimal",
+     "dreimal",
+     "viermal"
+    ],
+    "prompt": {
+     "ar": "«مرتين» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   },
+   {
+    "answer": "viermal",
+    "choices": [
+     "viermal",
+     "zweimal",
+     "dreimal"
+    ],
+    "prompt": {
+     "ar": "«أربع مرات» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/zweimal",
+   "https://www.duden.de/rechtschreibung/dreimal",
+   "https://www.duden.de/rechtschreibung/viermal"
+  ],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+  ],
+  "wiktionary": []
+ },
+ "id": "a2-u13-d3",
+ "imageManifestRefs": [],
+ "kind": "content",
+ "level": "A2",
+ "praesentation": {
+  "dualCodingRequired": true,
+  "grammarArsenalIds": [
+   "ars-dass-satz",
+   "ars-wuerde"
+  ],
+  "riskFlagsShown": [
+   "v2-order"
+  ],
+  "storySentenceIds": [],
+  "wordIds": [
+   "zweimal",
+   "dreimal",
+   "viermal"
+  ]
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "a": "Ich trinke zweimal Kaffee!",
+      "q": "«أشرب القهوة مرتين!»؟"
+     },
+     {
+      "a": "Ich esse dreimal Brot!",
+      "q": "«آكل الخبز ثلاث مرات!»؟"
+     },
+     {
+      "a": "Ich spiele viermal Fußball!",
+      "q": "«ألعب الكرة أربع مرات!»؟"
+     },
+     {
+      "a": "Noch einmal, bitte!",
+      "q": "«مرة أخرى من فضلك!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Ich weiß, dass du anders bist!",
+      "q": "«أعرف أنك مختلف!»؟"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "«لو آتي المدرسة مفتوحة!»؟"
+     },
+     {
+      "a": "Ich würde gern anders sein!",
+      "q": "«أودّ لو أكون مختلفاً!»؟"
+     },
+     {
+      "a": "Der erste Tag ist schön und die vierte Woche ist lang!",
+      "q": "«اليوم الأول جميل والأسبوع الرابع طويل!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Ich trinke zweimal Kaffee! Ich esse dreimal Brot!",
+      "q": "«أشرب القهوة مرتين وآكل الخبز ثلاث مرات!»؟"
+     },
+     {
+      "a": "Ich spiele viermal Fußball! Noch einmal, bitte!",
+      "q": "«ألعب الكرة أربع مرات! مرة أخرى من فضلك!»؟"
+     },
+     {
+      "a": "Ich weiß, dass du anders bist!",
+      "q": "«أعرف أنك مختلف!»؟"
+     },
+     {
+      "a": "Der erste Tag ist schön und die vierte Woche ist lang!",
+      "q": "«اليوم الأول جميل والأسبوع الرابع طويل!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "schemaVersion": "1.0.0",
+ "slider": {
+  "max": 100,
+  "min": 0,
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "questionDe": "Wie viel Prozent wirst du schaffen?"
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "ar": "يعد مراته (مرتين! + ثلاثاً! + أربعاً!)",
+    "de": "Ich trinke zweimal Kaffee! Noch einmal, bitte!"
+   },
+   "situation": {
+    "ar": "يوم-الحظ المضاعف",
+    "de": "Der erste Tag ist schön und die vierte Woche ist lang!"
+   },
+   "successCriteria": [
+    "يروي 8 جمل (3-مرات! + مرة-استرجاع! + محتوى! + شرط! + حلم! + استرجاع-d2!)",
+    "يستخدم الجديد (zweimal/dreimal/viermal!)",
+    "يميز (الظرف-mal-ثابت! + V2-بعد-الظرف!) ويسترجع (dass/wenn/würde!)"
+   ]
+  },
+  "stations": [
+   {
+    "explanationRequired": true,
+    "interleavedWith": [
+     "schwester",
+     "bruder",
+     "fussball"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "مرتين",
+        "de": "zweimal"
+       },
+       {
+        "ar": "ثلاث مرات",
+        "de": "dreimal"
+       },
+       {
+        "ar": "أربع مرات",
+        "de": "viermal"
+       },
+       {
+        "ar": "مرة واحدة",
+        "de": "einmal"
+       },
+       {
+        "ar": "مختلف",
+        "de": "anders"
+       }
+      ],
+      "why": "مراتي: zweimal مرتين! · dreimal ثلاث-مرات! · viermal أربع-مرات! · einmal مرة-واحدة! · anders مختلف! — العدد+mal-تركيب!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "أشرب",
+        "de": "trinke"
+       },
+       {
+        "ar": "آكل",
+        "de": "esse"
+       },
+       {
+        "ar": "ألعب",
+        "de": "spiele"
+       },
+       {
+        "ar": "أتعلم",
+        "de": "lerne"
+       },
+       {
+        "ar": "أقرأ",
+        "de": "lese"
+       }
+      ],
+      "why": "أفعال-المرات: trinke أشرب! · esse آكل! · spiele ألعب! · lerne أتعلم! · lese أقرأ!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "الأول",
+        "de": "erste"
+       },
+       {
+        "ar": "الثاني",
+        "de": "zweite"
+       },
+       {
+        "ar": "الثالث",
+        "de": "dritte"
+       },
+       {
+        "ar": "الرابع",
+        "de": "vierte"
+       },
+       {
+        "ar": "أولاً",
+        "de": "erstens"
+       }
+      ],
+      "why": "استرجاع-d2: erste الأول! · zweite الثاني! · dritte الثالث! · vierte الرابع! · erstens أولاً!"
+     }
+    ],
+    "type": "match"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الجديد (zweimal/dreimal/viermal!)",
+     "الظرف-بعد-الفعل (trinke-zweimal!)",
+     "الاسترجاع (dass/wenn/würde!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "gap-fill",
+    "items": [
+     {
+      "a": "zweimal",
+      "q": "Ich trinke ___ Kaffee! (zweimal!)",
+      "why": "مرتين! — trinke-Kaffee (أشرب-القهوة!)."
+     },
+     {
+      "a": "dreimal",
+      "q": "Ich esse ___ Brot! (dreimal!)",
+      "why": "ثلاث-مرات! — esse-Brot (آكل-الخبز!)."
+     },
+     {
+      "a": "viermal",
+      "q": "Ich spiele ___ Fußball! (viermal!)",
+      "why": "أربع-مرات! — spiele-Fußball (ألعب-الكرة!)."
+     },
+     {
+      "a": "einmal",
+      "q": "Noch ___, bitte! (einmal!)",
+      "why": "مرة-أخرى! — Noch-bitte (استرجاع!)."
+     },
+     {
+      "a": "dass",
+      "q": "Ich weiß, ___ du anders bist! (dass!)",
+      "why": "أعرف-أن! — dass-محتوى!"
+     },
+     {
+      "a": "komme",
+      "q": "Wenn ich ___, ist die Schule offen! (komme!)",
+      "why": "آتي! — wenn-شرط!"
+     },
+     {
+      "a": "anders",
+      "q": "Ich würde gern ___ sein! (anders!)",
+      "why": "مختلفاً! — würde-sein (أودّ-أكون!)."
+     },
+     {
+      "a": "erste",
+      "q": "Der ___ Tag ist schön und die vierte Woche ist lang! (erste!)",
+      "why": "الأول! — erste-Tag (استرجاع-d2!)."
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ كلمة واحدة — الباقي صحيح",
+     "التصريف (trinke/esst/spielt!)",
+     "الترتيب (V2-بعد-الظرف!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "error-hunt",
+    "items": [
+     {
+      "a": "Ich trinke zweimal Kaffee!",
+      "q": "~~Ich trinkst zweimal Kaffee!~~",
+      "why": "المتكلم-يشرب (trinke!) — trinkst-مخاطب خطأ!"
+     },
+     {
+      "a": "Ich esse dreimal Brot!",
+      "q": "~~Ich esst dreimal Brot!~~",
+      "why": "المتكلم-يأكل (esse!) — esst-مخاطب خطأ!"
+     },
+     {
+      "a": "Ich spiele viermal Fußball!",
+      "q": "~~Ich spielt viermal Fußball!~~",
+      "why": "المتكلم-يلعب (spiele!) — spielt-غائب خطأ!"
+     },
+     {
+      "a": "Zweimal trinke ich Kaffee!",
+      "q": "~~Zweimal ich trinke Kaffee!~~",
+      "why": "V2-بعد-الظرف (trinke-ich!) — ich-trinke خطأ!"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "~~Wenn ich komme, die Schule ist offen!~~",
+      "why": "V2-بعد-الفاصلة (ist-die!) — die-ist خطأ!"
+     },
+     {
+      "a": "Der erste Tag ist schön!",
+      "q": "~~Der erste Tag sind schön!~~",
+      "why": "المفرد-يكون (ist!) — sind-جمع خطأ!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بقهوتك (zweimal-Kaffee!) وانهِ بأسبوعك (vierte-Woche!)",
+     "8 جمل: 3-مرات! + مرة-استرجاع! + محتوى! + شرط! + حلم! + استرجاع-d2!"
+    ],
+    "interleavedWith": [
+     "spielen",
+     "gut",
+     "gern"
+    ],
+    "type": "speaking",
+    "items": [
+     {
+      "a": "Ich trinke zweimal Kaffee! Ich esse dreimal Brot! Ich spiele viermal Fußball! Noch einmal, bitte! Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Der erste Tag ist schön und die vierte Woche ist lang!",
+      "q": "احكِ مراتك (سجّل): 8 جمل — أشرب-القهوة-مرتين! + آكل-الخبز-ثلاث-مرات! + ألعب-الكرة-أربع-مرات! + مرة-أخرى-من-فضلك! + أعرف-أنك-مختلف! + لو-آتي-المدرسة-مفتوحة! + أودّ-لو-أكون-مختلفاً! + اليوم-الأول-جميل-والأسبوع-الرابع-طويل!",
+      "why": "قارن حكايتك: zweimal! + dreimal! + viermal! + einmal! + dass! + wenn! + würde! + erste!"
+     },
+     {
+      "a": "Ich trinke zweimal Kaffee! Noch einmal, bitte!",
+      "q": "جهّز للمرات (سجّل): 2 جمل — أشرب-القهوة-مرتين! + مرة-أخرى-من-فضلك!",
+      "why": "قارن تجهيزك: zweimal! + einmal!"
+     }
+    ]
+   }
+  ]
+ },
+ "unit": 13,
+ "usedArsenalIds": [
+  "ars-dass-satz",
+  "ars-wuerde"
+ ],
+ "warmup": {
+  "cardIds": [
+   "erste",
+   "dritte",
+   "vierte"
+  ]
+ },
+ "ziel": {
+  "ar": "مراتي-المحظوظة: مرتين! + ثلاثاً! + أربعاً! — والظرف (العدد+mal!) وV2-بعد-الظرف!",
+  "de": "Ich trinke zweimal Kaffee! — Noch einmal, bitte!"
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "zweimal",
+   "dreimal",
+   "viermal"
+  ],
+  "summary": {
+   "ar": "مراتي-المحظوظة: أشرب القهوة مرتين. آكل الخبز ثلاث مرات. ألعب الكرة أربع مرات. مرة أخرى من فضلك. أعرف أنك مختلف. لو آتي المدرسة مفتوحة. أودّ لو أكون مختلفاً. اليوم الأول جميل والأسبوع الرابع طويل. النظام: الظرف-mal-ثابت (العدد+mal!) + V2-بعد-الظرف (trinke-ich!) + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
+   "de": "Ich trinke zweimal Kaffee! Ich esse dreimal Brot! Ich spiele viermal Fußball! Noch einmal, bitte! Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Der erste Tag ist schön und die vierte Woche ist lang!"
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "مخاطب-للمتكلم",
+     "de": "~~Ich trinkst zweimal Kaffee!~~"
+    },
+    "correct": {
+     "ar": "أشرب القهوة مرتين!",
+     "de": "Ich trinke zweimal Kaffee!"
+    },
+    "exercise": {
+     "a": "trinke",
+     "q": "Ich ___ zweimal Kaffee! (trinke!)"
+    },
+    "whyArabicSpeakerFails": "المتكلم-أشرب-trinke (trinke! — العربية-أشرب-واحدة-بلا-تصريف-ظاهر!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "فاعل-قبل-الفعل-بعد-الظرف",
+     "de": "~~Zweimal ich trinke Kaffee!~~"
+    },
+    "correct": {
+     "ar": "مرتين أشرب القهوة!",
+     "de": "Zweimal trinke ich Kaffee!"
+    },
+    "exercise": {
+     "a": "trinke",
+     "q": "Zweimal ___ ich Kaffee! (trinke!)"
+    },
+    "whyArabicSpeakerFails": "V2-بعد-الظرف (trinke-ich! — العربية-الفاعل-أولاً-دائماً!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "جمع-للمفرد",
+     "de": "~~Der erste Tag sind schön!~~"
+    },
+    "correct": {
+     "ar": "اليوم الأول جميل!",
+     "de": "Der erste Tag ist schön!"
+    },
+    "exercise": {
+     "a": "ist",
+     "q": "Der erste Tag ___ schön! (ist!)"
+    },
+    "whyArabicSpeakerFails": "المفرد-يكون-ist (ist! — العربية-يكون-واحد-بلا-جمع-هنا!) (خريطة التداخل 10‑ي)."
+   }
+  ]
+ }
+}

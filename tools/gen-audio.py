@@ -1809,6 +1809,9 @@ def build_all() -> None:
     ("word-zweite", "zweite.", "zweite", ["a2-u13-d2"]),
     ("word-dritte", "dritte.", "dritte", ["a2-u13-d2"]),
     ("word-vierte", "vierte.", "vierte", ["a2-u13-d2"]),
+    ("word-zweimal", "zweimal.", "zweimal", ["a2-u13-d3"]),
+    ("word-dreimal", "dreimal.", "dreimal", ["a2-u13-d3"]),
+    ("word-viermal", "viermal.", "viermal", ["a2-u13-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
