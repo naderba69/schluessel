@@ -1,0 +1,473 @@
+{
+ "audioManifestRefs": [
+  "word-mathematik",
+  "word-latein",
+  "word-geografie",
+  "word-religion",
+  "word-sozialkunde"
+ ],
+ "canDoDaily": [
+  "يدير يومه المدرسي-2 (يعرف! + يتعلم! + يودّ! + يحب! + يستمتع!)",
+  "يسترجع (dass/wenn/würde!) ويميز (das-Latein-وحده!)"
+ ],
+ "curriculumRef": {
+  "goetheWordListOverlap": [
+   "mathematik",
+   "latein",
+   "geografie",
+   "religion",
+   "sozialkunde"
+  ],
+  "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
+ },
+ "day": 3,
+ "einstieg": {
+  "guidedRetrieval": [
+   "من d2: Ich denke, dass Chemie schwer ist! + Magst du Biologie؟ (أظن-الكيمياء-صعبة! + تحب-الأحياء؟!) — يوم-المدرسة يُتوَّج اليوم بيوم-المدرسة-2!",
+   "واليوم: مدرستي-2! Ich weiß, dass Mathematik schwer ist! (أعرف-الرياضيات-صعبة!) + Wenn es regnet, lerne ich Latein! (لو-تمطر-أتعلم-اللاتينية!) + Ich würde gern Sozialkunde lernen! (أودّ-المدنية!) + Magst du Religion؟ (تحب-الدينية؟) + Geografie macht Spaß! (الجغرافيا-ممتعة!) — بخمس مواد جديدة!"
+  ],
+  "pretestItems": [
+   {
+    "answer": "Mathematik",
+    "choices": [
+     "Mathematik",
+     "Schule",
+     "Lehrer"
+    ],
+    "prompt": {
+     "ar": "«رياضيات» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   },
+   {
+    "answer": "Religion",
+    "choices": [
+     "Religion",
+     "Haus",
+     "Fach"
+    ],
+    "prompt": {
+     "ar": "«تربية دينية» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Mathematik",
+   "https://www.duden.de/rechtschreibung/Latein",
+   "https://www.duden.de/rechtschreibung/Geografie",
+   "https://www.duden.de/rechtschreibung/Religion",
+   "https://www.duden.de/rechtschreibung/Sozialkunde"
+  ],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+  ],
+  "wiktionary": []
+ },
+ "id": "a2-u12-d3",
+ "imageManifestRefs": [],
+ "kind": "content",
+ "level": "A2",
+ "praesentation": {
+  "dualCodingRequired": true,
+  "grammarArsenalIds": [
+   "ars-dass-satz",
+   "ars-wuerde"
+  ],
+  "riskFlagsShown": [
+   "v2-order"
+  ],
+  "storySentenceIds": [],
+  "wordIds": [
+   "mathematik",
+   "latein",
+   "geografie",
+   "religion",
+   "sozialkunde"
+  ]
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "a": "Magst du Religion?",
+      "q": "«هل تحب التربية الدينية؟»؟"
+     },
+     {
+      "a": "Geografie macht Spaß!",
+      "q": "«الجغرافيا ممتعة!»؟"
+     },
+     {
+      "a": "Religion ist mein Fach!",
+      "q": "«التربية الدينية مادتي!»؟"
+     },
+     {
+      "a": "Mathematik ist schwer, Latein ist alt!",
+      "q": "«الرياضيات صعبة واللاتينية قديمة!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Ich weiß, dass Mathematik schwer ist!",
+      "q": "«أعرف أن الرياضيات صعبة!»؟"
+     },
+     {
+      "a": "Wenn es regnet, lerne ich Latein!",
+      "q": "«لو تمطر أتعلم اللاتينية!»؟"
+     },
+     {
+      "a": "Ich würde gern Sozialkunde lernen!",
+      "q": "«أودّ لو أتعلم التربية المدنية!»؟"
+     },
+     {
+      "a": "Geografie macht Spaß und Sozialkunde ist interessant!",
+      "q": "«الجغرافيا ممتعة والتربية المدنية شيقة!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Magst du Religion?",
+      "q": "«هل تحب التربية الدينية؟»؟"
+     },
+     {
+      "a": "Mathematik ist schwer, Latein ist alt!",
+      "q": "«الرياضيات صعبة واللاتينية قديمة!»؟"
+     },
+     {
+      "a": "Wenn es regnet, lerne ich Latein!",
+      "q": "«لو تمطر أتعلم اللاتينية!»؟"
+     },
+     {
+      "a": "Religion ist mein Fach!",
+      "q": "«التربية الدينية مادتي!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "schemaVersion": "1.0.0",
+ "slider": {
+  "max": 100,
+  "min": 0,
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "questionDe": "Wie viel Prozent wirst du schaffen?"
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "ar": "يدير يومه المدرسي-2 (يعرف! + يتعلم! + يودّ! + يحب! + يستمتع!)",
+    "de": "Magst du Religion? Geografie macht Spaß!"
+   },
+   "situation": {
+    "ar": "يوم-ممطر في المدرسة-2",
+    "de": "Wenn es regnet, lerne ich Latein!"
+   },
+   "successCriteria": [
+    "يروي 8 جمل (5-جدد! + محتوى! + شرط! + حلم!)",
+    "يستخدم الجديد (Mathematik/Latein/Geografie/Religion/Sozialkunde!)",
+    "يميز (das-Latein-وحده! + المفرد-بلا-n!) ويسترجع (dass/wenn/würde!)"
+   ]
+  },
+  "stations": [
+   {
+    "explanationRequired": true,
+    "interleavedWith": [
+     "schwester",
+     "bruder",
+     "fussball"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "رياضيات",
+        "de": "die Mathematik"
+       },
+       {
+        "ar": "لاتينية",
+        "de": "das Latein"
+       },
+       {
+        "ar": "جغرافيا",
+        "de": "die Geografie"
+       },
+       {
+        "ar": "تربية دينية",
+        "de": "die Religion"
+       },
+       {
+        "ar": "تربية مدنية",
+        "de": "die Sozialkunde"
+       }
+      ],
+      "why": "مواد-المدرسة-2: die-Mathematik رياضيات (صعبة!) · das-Latein لاتينية (قديمة!) · die-Geografie جغرافيا (ممتعة!) · die-Religion دينية (مادتي!) · die-Sozialkunde مدنية (شيقة!) — das-Latein-وحده-محايد!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "أعرف",
+        "de": "weiß"
+       },
+       {
+        "ar": "أتعلم",
+        "de": "lerne"
+       },
+       {
+        "ar": "أودّ",
+        "de": "würde"
+       },
+       {
+        "ar": "تحب",
+        "de": "magst"
+       },
+       {
+        "ar": "نتعلم",
+        "de": "lernen"
+       }
+      ],
+      "why": "أفعال-المدرسة-2: weiß أعرف! · lerne أتعلم! · würde أودّ! · magst تحب! · lernen نتعلم!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "أحياء",
+        "de": "die Biologie"
+       },
+       {
+        "ar": "كيمياء",
+        "de": "die Chemie"
+       },
+       {
+        "ar": "فيزياء",
+        "de": "die Physik"
+       },
+       {
+        "ar": "لو",
+        "de": "wenn"
+       },
+       {
+        "ar": "أن",
+        "de": "dass"
+       }
+      ],
+      "why": "استرجاع-d2: die-Biologie! · die-Chemie! · die-Physik! · wenn لو! · dass أن!"
+     }
+    ],
+    "type": "match"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الجديد (Mathematik/Latein/Geografie/Religion/Sozialkunde!)",
+     "الأدوات (das-Latein-وحده!)",
+     "الاسترجاع (dass/wenn/würde!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "gap-fill",
+    "items": [
+     {
+      "a": "Mathematik",
+      "q": "Ich weiß, dass ___ schwer ist! (Mathematik!)",
+      "why": "الرياضيات-صعبة! — weiß-dass (أعرف-أن!)."
+     },
+     {
+      "a": "Latein",
+      "q": "Wenn es regnet, lerne ich ___! (Latein!)",
+      "why": "اللاتينية! — lerne-ich (أتعلم!)."
+     },
+     {
+      "a": "Sozialkunde",
+      "q": "Ich würde gern ___ lernen! (Sozialkunde!)",
+      "why": "المدنية! — würde-lernen (أودّ-أتعلم!)."
+     },
+     {
+      "a": "Religion",
+      "q": "Magst du ___? (Religion!)",
+      "why": "الدينية! — Magst-du (هل-تحب؟)."
+     },
+     {
+      "a": "Geografie",
+      "q": "___ macht Spaß! (Geografie!)",
+      "why": "الجغرافيا! — macht-Spaß (ممتعة!)."
+     },
+     {
+      "a": "dass",
+      "q": "Ich weiß, ___ Mathematik schwer ist! (dass!)",
+      "why": "أعرف-أن! — dass-محتوى!"
+     },
+     {
+      "a": "lerne",
+      "q": "Wenn es regnet, ___ ich Latein! (lerne!)",
+      "why": "أتعلم! — wenn-شرط!"
+     },
+     {
+      "a": "würde",
+      "q": "Ich ___ gern Sozialkunde lernen! (würde!)",
+      "why": "أودّ! — würde-حلم!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ كلمة واحدة — الباقي صحيح",
+     "التصريف (ist/lerne/macht!)",
+     "الصيغ (dass-آخراً! + V2-بعد-الفاصلة!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "error-hunt",
+    "items": [
+     {
+      "a": "Ich weiß, dass Mathematik schwer ist!",
+      "q": "~~Ich weiß, dass Mathematik schwer sind!~~",
+      "why": "المفرد-يكون (ist!) — sind-جمع خطأ!"
+     },
+     {
+      "a": "Wenn es regnet, lerne ich Latein!",
+      "q": "~~Wenn es regnet, ich lerne Latein!~~",
+      "why": "V2-بعد-الفاصلة (lerne-ich!) — ich-lerne خطأ!"
+     },
+     {
+      "a": "Ich würde gern Sozialkunde lernen!",
+      "q": "~~Du würde gern Sozialkunde lernen!~~",
+      "why": "المتكلم-يودّ (Ich-würde!) — Du-مخاطب خطأ!"
+     },
+     {
+      "a": "Magst du Religion?",
+      "q": "~~Magst dir Religion?~~",
+      "why": "المخاطب-أنت (du!) — dir-مفعول خطأ!"
+     },
+     {
+      "a": "Geografie macht Spaß!",
+      "q": "~~Geografie machen Spaß!~~",
+      "why": "المفرد-بلا-n (macht!) — machen-جمع خطأ!"
+     },
+     {
+      "a": "Mathematik ist schwer, Latein ist alt!",
+      "q": "~~Mathematik ist schwer, Latein ist alte!~~",
+      "why": "الخبر-بلا-نهاية (alt!) — alte-صفة خطأ!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بعلمك (weiß-dass!) وانهِ بحلمك (würde-Sozialkunde!)",
+     "8 جمل: 5-جدد! + محتوى! + شرط! + حلم!"
+    ],
+    "interleavedWith": [
+     "spielen",
+     "gut",
+     "gern"
+    ],
+    "type": "speaking",
+    "items": [
+     {
+      "a": "Ich weiß, dass Mathematik schwer ist! Wenn es regnet, lerne ich Latein! Ich würde gern Sozialkunde lernen! Magst du Religion? Geografie macht Spaß! Mathematik ist schwer, Latein ist alt! Religion ist mein Fach! Geografie macht Spaß und Sozialkunde ist interessant!",
+      "q": "احكِ مدرستك-2 (سجّل): 8 جمل — أعرف-الرياضيات-صعبة! + لو-تمطر-أتعلم! + أودّ-المدنية! + تحب-الدينية؟! + الجغرافيا-ممتعة! + الرياضيات-صعبة-اللاتينية-قديمة! + الدينية-مادتي! + الجغرافيا-ممتعة-المدنية-شيقة!",
+      "why": "قارن حكايتك: Mathematik! + Latein! + Sozialkunde! + Religion! + Geografie! + alt! + Fach! + interessant!"
+     },
+     {
+      "a": "Magst du Religion? Geografie macht Spaß! Religion ist mein Fach!",
+      "q": "جهّز للمواد-2 (سجّل): 3 جمل — تحب-الدينية؟! + الجغرافيا-ممتعة! + الدينية-مادتي!",
+      "why": "قارن تجهيزك: Religion! + Geografie! + Fach!"
+     }
+    ]
+   }
+  ]
+ },
+ "unit": 12,
+ "usedArsenalIds": [
+  "ars-dass-satz",
+  "ars-wuerde"
+ ],
+ "warmup": {
+  "cardIds": [
+   "biologie",
+   "chemie",
+   "physik"
+  ]
+ },
+ "ziel": {
+  "ar": "يوم مدرستي-2: رياضيات! + لاتينية! + جغرافيا! + دينية! + مدنية! — والمواد (die-إلا-das-Latein!)",
+  "de": "Ich weiß, dass Mathematik schwer ist! — Magst du Religion?"
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "mathematik",
+   "latein",
+   "geografie",
+   "religion",
+   "sozialkunde"
+  ],
+  "summary": {
+   "ar": "يوم مدرستي-2: أعرف أن الرياضيات صعبة. لو تمطر أتعلم اللاتينية. أودّ لو أتعلم التربية المدنية. هل تحب التربية الدينية؟ الجغرافيا ممتعة. الرياضيات صعبة واللاتينية قديمة. التربية الدينية مادتي. الجغرافيا ممتعة والتربية المدنية شيقة. النظام: das-Latein-وحده! + الخبر-بلا-نهاية! + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
+   "de": "Ich weiß, dass Mathematik schwer ist! Wenn es regnet, lerne ich Latein! Ich würde gern Sozialkunde lernen! Magst du Religion? Geografie macht Spaß! Mathematik ist schwer, Latein ist alt! Religion ist mein Fach! Geografie macht Spaß und Sozialkunde ist interessant!"
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "جمع-للمتكلم",
+     "de": "~~Ich wissen, dass Mathematik schwer ist!~~"
+    },
+    "correct": {
+     "ar": "أعرف أن الرياضيات صعبة!",
+     "de": "Ich weiß, dass Mathematik schwer ist!"
+    },
+    "exercise": {
+     "a": "weiß",
+     "q": "Ich ___ , dass Mathematik schwer ist! (weiß!)"
+    },
+    "whyArabicSpeakerFails": "الشاذ-يحفظ (weiß! — wissen-شاذ-بلا-n!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "أداة-خاطئة-للاتينية",
+     "de": "~~die Latein ist alt!~~"
+    },
+    "correct": {
+     "ar": "اللاتينية قديمة!",
+     "de": "Latein ist alt!"
+    },
+    "exercise": {
+     "a": "Latein",
+     "q": "___ ist alt! (Latein!)"
+    },
+    "whyArabicSpeakerFails": "اللاتينية-محايدة (das-Latein! — العربية-اللاتينية-مؤنثة!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "فاعل-قبل-الفعل-بعد-الفاصلة",
+     "de": "~~Wenn es regnet, ich lerne Latein!~~"
+    },
+    "correct": {
+     "ar": "لو تمطر أتعلم اللاتينية!",
+     "de": "Wenn es regnet, lerne ich Latein!"
+    },
+    "exercise": {
+     "a": "lerne",
+     "q": "regnet, ___ ich Latein! (lerne!)"
+    },
+    "whyArabicSpeakerFails": "V2-بعد-الفاصلة (lerne-ich! — العربية-بلا-عكس-بعد-لو!) (خريطة التداخل 10‑ي)."
+   }
+  ]
+ }
+}

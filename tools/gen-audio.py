@@ -1781,6 +1781,11 @@ def build_all() -> None:
     ("word-physik", "die Physik.", "physik", ["a2-u12-d2"]),
     ("word-basteln", "basteln.", "basteln", ["a2-u12-d2"]),
     ("word-bauen", "bauen.", "bauen", ["a2-u12-d2"]),
+    ("word-mathematik", "die Mathematik.", "mathematik", ["a2-u12-d3"]),
+    ("word-latein", "das Latein.", "latein", ["a2-u12-d3"]),
+    ("word-geografie", "die Geografie.", "geografie", ["a2-u12-d3"]),
+    ("word-religion", "die Religion.", "religion", ["a2-u12-d3"]),
+    ("word-sozialkunde", "die Sozialkunde.", "sozialkunde", ["a2-u12-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
