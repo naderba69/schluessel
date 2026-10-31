@@ -1,0 +1,491 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u14-d1",
+  "level": "A2",
+  "unit": 14,
+  "day": 1,
+  "kind": "integration",
+  "ziel": {
+    "de": "Woche eins und zwei noch einmal: Du kannst deinen Morgen von gestern erzählen — gelacht · vergessen · passiert · ist ausgegangen · hat sich beeilt. Du kannst deine Aufgaben beschreiben: du musst oder du sollst. Und du kannst deine erste Bewerbung schreiben.",
+    "ar": "أسبوع المراجعة، اليوم الأول (الوحدتان 1–2): الماضي (gelacht · vergessen · passiert · ist ausgegangen · hat sich beeilt) والواجب (müssen أم sollen — Pflicht أم Rat) والتماس (Bewerbung)."
+  },
+  "canDoDaily": [
+    "يروي صباح أمس بالماضي (gelacht · vergessen · passiert · ist ausgegangen · hat sich beeilt) في جمل صحيحة haben/sein وsich وwar/hatte",
+    "يفرّق الواجب (müssen) عن النصيحة (sollen) في مواقف العمل ويجتاز معركة اليوم الأول من أسبوع المراجعة بنتيجة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "vergessen",
+      "ausgehen",
+      "bewerbung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«أمس ضحكتُ ونسيتُ» — أي جملة ماضٍ صحيحة؟"
+        },
+        "choices": [
+          "Ich habe gestern gelacht und vergessen.",
+          "Ich habe gestern gelacht und vergess.",
+          "Ich bin gestern gelacht und vergessen."
+        ],
+        "answer": "Ich habe gestern gelacht und vergessen.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«عليك أن تتعلم» — أي جملة واجب (Pflicht)؟"
+        },
+        "choices": [
+          "Du musst lernen.",
+          "Du sollst lernen.",
+          "Du lernen musst."
+        ],
+        "answer": "Du musst lernen.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u1: الماضي كاملاً — haben/sein والقوي والضعيف وsich وwar/hatte! gelacht · gefallen · ist ausgegangen · hat sich beeilt · war müde · hatte Zeit!",
+      "من u2: الواجب والنصيحة — müssen أم sollen (واجب أم نصيحة)! + dass-الجملة (التصريف آخراً!) + Bewerbung: Ich bewerbe mich um eine Ausbildung!"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "stift",
+      "zeugnis"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-perfekt",
+      "ars-koennen-muessen",
+      "ars-modal-fix",
+      "ars-dass-satz",
+      "ars-weil-satz"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "reflexive",
+      "needs-ist",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Gestern habe ich viel ___ und vergessen, was passiert ist. (lachen)",
+            "a": "gelacht",
+            "why": "gelacht ← lachen (ge-…-t ضعيف!) مع habe gelacht."
+          },
+          {
+            "q": "Ich bin spät ___, weil ich mich beeilt habe. (ausgehen)",
+            "a": "ausgegangen",
+            "why": "ausgegangen ← ausgehen (قوي ge-…-en!) مع sein: bin ausgegangen."
+          },
+          {
+            "q": "Was ist gestern ___? (passieren)",
+            "a": "passiert",
+            "why": "passiert ← passieren (‑ieren بلا ge-!) مع sein: ist passiert."
+          },
+          {
+            "q": "Ich habe ___ für die Prüfung, aber ich war zu spät. (sich beeilen)",
+            "a": "mich beeilt",
+            "why": "hat sich beeilt — الانعكاسي sich يتغير (mich/dir/sich) والتصريف beeilt."
+          },
+          {
+            "q": "Du ___ heute nicht lange bleiben — es ist nicht notwendig. (müssen)",
+            "a": "musst",
+            "why": "nicht müssen = لا حاجة: du musst nicht bleiben (الواجب!)."
+          },
+          {
+            "q": "Du bist krank — du ___ im Bett bleiben. (sollen)",
+            "a": "sollst",
+            "why": "sollen نصيحة: du sollst im Bett bleiben (المصرَّف ثانياً والمصدر آخراً)."
+          },
+          {
+            "q": "Ich ___ mich um eine Ausbildung im Büro. (bewerben)",
+            "a": "bewerbe",
+            "why": "sich bewerben um + Akkusativ (مفعول): ich bewerbe mich um eine Ausbildung."
+          },
+          {
+            "q": "Er hat gesagt, dass er eine ___ schreibt. (التماس)",
+            "a": "Bewerbung",
+            "why": "die Bewerbung ← bewerben (التماس!) — بعد dass الفعل آخراً: dass er eine Bewerbung schreibt."
+          },
+          {
+            "q": "Am Samstag habe ich mich im Zelt ___. (unterhalten)",
+            "a": "unterhalten",
+            "why": "hat sich unterhalten — قوي (unterhält/unterhalten!) مع sich."
+          }
+        ],
+        "interleavedWith": [
+          "aufstehen",
+          "fruehstuecken",
+          "gestern",
+          "kurs"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "verb-bank",
+        "items": [
+          {
+            "q": "Die Lampe? Ich habe sie am Abend ___. (anmachen)",
+            "a": "angemacht",
+            "why": "angemacht ← anmachen (ge-…-t ضعيف!)."
+          },
+          {
+            "q": "Das Handy? Ich habe es auf dem Tisch ___. (vergessen)",
+            "a": "vergessen",
+            "why": "vergessen قوي: vergessen/vergessen! مع habe."
+          },
+          {
+            "q": "Der Müll? Ich habe ihn gestern ___. (wegwerfen)",
+            "a": "weggeworfen",
+            "why": "weggeworfen ← wegwerfen (قوي: wirft/worfen!)."
+          },
+          {
+            "q": "Die Party? Ich bin um acht ___. (weggehen)",
+            "a": "weggegangen",
+            "why": "weggegangen ← weggehen (قوي + sein!)."
+          },
+          {
+            "q": "Die Zeitung? Ich habe sie dem Team ___. (liefern)",
+            "a": "geliefert",
+            "why": "geliefert ← liefern (ge-…-t بلا e إضافي!)."
+          },
+          {
+            "q": "Der Film? Er hat mich sehr ___. (ärgern)",
+            "a": "geärgert",
+            "why": "geärgert ← ärgern (hat mich geärgert — المفعول Akkusativ!)."
+          }
+        ],
+        "interleavedWith": [
+          "fotografieren",
+          "bleiben",
+          "fahren",
+          "haus"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "~~Ich habe gestern vergessen bin.~~",
+            "a": "Ich habe gestern vergessen.",
+            "why": "الماضي مرة واحدة: haben + التصريف الثالث فقط (لا bin إضافي!)."
+          },
+          {
+            "q": "~~Gestern ich habe gelacht und viel Spaß.~~",
+            "a": "Gestern habe ich gelacht und viel Spaß gehabt.",
+            "why": "ظرف أول الجملة ← المصرَّف ثانياً: Gestern habe ich… (V2!)."
+          },
+          {
+            "q": "~~Ich soll zu Hause bleiben zu.~~",
+            "a": "Ich soll zu Hause bleiben.",
+            "why": "المصدر آخراً بلا zu مع المودال: soll … bleiben."
+          },
+          {
+            "q": "~~Ich bewerbe mich für eine Ausbildung.~~",
+            "a": "Ich bewerbe mich um eine Ausbildung.",
+            "why": "sich bewerben um + Akkusativ (لا für!)."
+          },
+          {
+            "q": "~~Er hat gesagt, dass er ist müde.~~",
+            "a": "Er hat gesagt, dass er müde ist.",
+            "why": "بعد dass الفعل المصرَّف آخراً: dass er müde ist."
+          },
+          {
+            "q": "~~Sie hat nicht sich beeilt.~~",
+            "a": "Sie hat sich nicht beeilt.",
+            "why": "sich قبل nicht: hat sich nicht beeilt (الانعكاسي أولاً!)."
+          }
+        ],
+        "interleavedWith": [
+          "schluessel",
+          "brille",
+          "frage",
+          "danke"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "speaking",
+        "items": [
+          {
+            "q": "احكِ صباحك أمس بالماضي (جملتان: gelacht/vergessen + ausgegangen/sich beeilt + war/hatte)",
+            "a": "Gestern bin ich früh aufgestanden. Ich habe gelacht und vergessen, was passiert ist. Ich bin ausgegangen und ich habe mich beeilt. Ich war müde, aber ich hatte Zeit.",
+            "why": "الصيغ كلها: habe + التصريف الثالث · ist + التصريف الثالث · sich + التصريف الثالث · war · hatte."
+          },
+          {
+            "q": "صف مهامك: واجب أم نصيحة؟ (مجلدان: müssen/sollen + جملة Bewerbung)",
+            "a": "Ich muss arbeiten, aber ich soll mich beeilen. Ich bewerbe mich um eine Ausbildung im Büro. Ich soll viel lernen, und ich muss die Bewerbung schreiben.",
+            "why": "الفرق: müssen واجب (Pflicht) · sollen نصيحة (Rat) — والمصدر آخراً بلا zu."
+          }
+        ],
+        "interleavedWith": [
+          "schwester",
+          "bruder",
+          "fussball",
+          "montag"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Mein Morgen von gestern und meine Aufgaben: Ich habe gelacht und vergessen. Ich muss arbeiten, aber ich soll mich beeilen. Ich bewerbe mich um eine Ausbildung im Büro.",
+        "ar": "صباح أمس ومهامي: أروي بالماضي وأفرّق الواجب عن النصيحة وأكتب تماساً."
+      },
+      "situation": {
+        "de": "Der erste Tag nach dem Kurs — alles noch einmal.",
+        "ar": "اليوم الأول من أسبوع المراجعة — بعد نهاية الدورة."
+      },
+      "successCriteria": [
+        "يروي 6 جمل ماضٍ (haben/sein + sich + war/hatte — واحد على الأقل من كل قالب)",
+        "يفرّق الواجب (müssen) عن النصيحة (sollen) في مثالين",
+        "يكتب جملة تماس: Ich bewerbe mich um eine Ausbildung",
+        "يجتاز معركة اليوم الأول (75% فأكثر)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أمس نسيتُ»؟",
+            "a": "Ich habe gestern vergessen.",
+            "choices": [
+              "Ich habe gestern vergessen.",
+              "Ich bin gestern vergessen.",
+              "Ich habe gestern vergess."
+            ],
+            "why": "vergessen مع habe (لا sein!)."
+          },
+          {
+            "q": "«عليك أن تعمل» (واجب)؟",
+            "a": "Du musst arbeiten.",
+            "choices": [
+              "Du musst arbeiten.",
+              "Du sollst arbeiten.",
+              "Du arbeitest musst."
+            ],
+            "why": "الواجب müssen · النصيحة sollen."
+          },
+          {
+            "q": "«قال إنه متعب»؟",
+            "a": "Er hat gesagt, dass er müde ist.",
+            "choices": [
+              "Er hat gesagt, dass er müde ist.",
+              "Er hat gesagt, dass er ist müde.",
+              "Er gesagt hat, dass er müde ist."
+            ],
+            "why": "بعد dass الفعل آخراً — والفعل المصرَّف ثانياً في الرئيسية."
+          },
+          {
+            "q": "«أقدّم طلب التحاق»؟",
+            "a": "Ich bewerbe mich um eine Ausbildung.",
+            "accept": [
+              "Ich bewerbe mich um eine Stelle."
+            ],
+            "why": "sich bewerben um + Akkusativ (um + لا für!)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«خرجت»؟",
+            "a": "Ich bin ausgegangen.",
+            "choices": [
+              "Ich bin ausgegangen.",
+              "Ich habe ausgegangen.",
+              "Ich bin am Abend ausgegangen."
+            ],
+            "why": "ausgehen متحرك ← sein + قوي: ausgegangen."
+          },
+          {
+            "q": "«ينبغي أن تبقى في السرير» (نصيحة)؟",
+            "a": "Du sollst im Bett bleiben.",
+            "choices": [
+              "Du sollst im Bett bleiben.",
+              "Du musst im Bett bleiben.",
+              "Du sollst im Bett zu bleiben."
+            ],
+            "why": "sollen نصيحة — والمصدر آخراً بلا zu."
+          },
+          {
+            "q": "«هو يقدّم طلباً»؟",
+            "a": "Er bewirbt sich um eine Ausbildung.",
+            "choices": [
+              "Er bewirbt sich um eine Ausbildung.",
+              "Er bewerbt sich um eine Ausbildung.",
+              "Er bewirbt um eine Ausbildung."
+            ],
+            "why": "bewerben قوي (bewirbt!) + sich + um."
+          },
+          {
+            "q": "«كان متعباً أمس»؟",
+            "a": "Er war gestern müde.",
+            "accept": [
+              "Gestern war er müde."
+            ],
+            "why": "war لحالة الماضي (الحالات بلا Perfekt!)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أمس حدث شيء»؟",
+            "a": "Gestern ist etwas passiert.",
+            "choices": [
+              "Gestern ist etwas passiert.",
+              "Gestern hat etwas passiert.",
+              "Gestern ist etwas passiert hat."
+            ],
+            "why": "passieren ← sein: ist passiert (‑ieren بلا ge-!)."
+          },
+          {
+            "q": "«لا يجوز لك أن تدخن» (منع)؟",
+            "a": "Du darfst nicht rauchen.",
+            "choices": [
+              "Du darfst nicht rauchen.",
+              "Du musst nicht rauchen.",
+              "Du sollst nicht rauchen."
+            ],
+            "why": "المنع dürfen nicht · nicht müssen = لا حاجة!"
+          },
+          {
+            "q": "«قالت إنها سعيدة»؟",
+            "a": "Sie hat gesagt, dass sie froh ist.",
+            "choices": [
+              "Sie hat gesagt, dass sie froh ist.",
+              "Sie hat gesagt, dass sie ist froh.",
+              "Sie gesagt hat, dass sie froh ist."
+            ],
+            "why": "dass + التصريف آخراً (froh!)."
+          },
+          {
+            "q": "«تسرّعتُ ونسيتُ الورقة»؟",
+            "a": "Ich habe mich beeilt und den Zettel vergessen.",
+            "accept": [
+              "Ich habe mich beeilt und den Zettel vergessen!"
+            ],
+            "why": "hat sich beeilt + hat vergessen — التصريفان الثالثان! · der Zettel ← den Zettel (مفعول Akkusativ)."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Woche eins und zwei noch einmal — der erste Tag: Gestern habe ich gelacht und vergessen, was passiert ist. Ich bin ausgegangen und ich habe mich beeilt. Ich war müde, aber ich hatte Zeit. Ich muss arbeiten, aber ich soll mich beeilen. Ich bewerbe mich um eine Ausbildung im Büro, und ich schreibe die Bewerbung mit dem Stift. Am Ende bekomme ich ein Zeugnis.",
+      "ar": "اليوم الأول من أسبوع المراجعة اكتمل: رويت صباح أمس بالماضي (haben/sein والقوي والضعيف وsich وwar/hatte)، وفرّقت الواجب (müssen) عن النصيحة (sollen)، وكتبت تماساً بـBewerbung — والقلم والشهادة يفتتحان أسبوع التثبيت."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich bin gestern vergessen.~~ · ~~Ich habe ausgegangen.~~",
+          "ar": "haben/sein في الماضي"
+        },
+        "whyArabicSpeakerFails": "العربية لا تغيّر العون («ذهبتُ ونسيتُ» بالواو!) — والألمانية تختار haben أو sein مع كل فعل: النسيان haben والحركة sein (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Ich habe gestern vergessen. · Ich bin ausgegangen.",
+          "ar": "أمس نسيتُ · خرجتُ"
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ ausgegangen, aber ich ___ meinen Schlüssel vergessen. (sein/haben)",
+          "a": "bin / habe",
+          "choices": [
+            "bin / habe",
+            "habe / bin",
+            "bin / bin"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich soll zu Hause bleiben zu.~~ · ~~Du musst arbeiten nicht.~~",
+          "ar": "المصدر آخراً بلا zu"
+        },
+        "whyArabicSpeakerFails": "العربية تقول «يجب أن أعمل» بأن + مضارع فيتقدم الفعل — والألمانية تضع المصرَّف ثانياً والمصدر آخراً بلا zu مع المودال (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Ich soll zu Hause bleiben. · Du musst nicht arbeiten.",
+          "ar": "ينبغي أن أبقى في البيت · لا يجب أن تعمل"
+        },
+        "exercise": {
+          "q": "أكمل: Du ___ nicht lange ___. (müssen/bleiben)",
+          "a": "musst / bleiben",
+          "choices": [
+            "musst / bleiben",
+            "bleibst / musst",
+            "musst / zu bleiben"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Er hat gesagt, dass er ist müde.~~ · ~~Ich weiß, dass ich habe recht.~~",
+          "ar": "dass والتصريف آخراً"
+        },
+        "whyArabicSpeakerFails": "الجملة الاسمية العربية بلا فعل فلا موضع للتصريف — والـdass تأخذ التصريف إلى آخرها: dass er müde ist · dass ich recht habe (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Er hat gesagt, dass er müde ist. · Ich weiß, dass ich recht habe.",
+          "ar": "قال إنه متعب · أعرف أنني محقّ"
+        },
+        "exercise": {
+          "q": "أكمل: Ich weiß, dass du ___ ___. (haben/recht)",
+          "a": "recht hast"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "stift",
+      "zeugnis"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Stift_Schreibgeraet",
+      "https://www.duden.de/rechtschreibung/Zeugnis"
+    ],
+    "wiktionary": [],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-perfekt",
+    "ars-koennen-muessen",
+    "ars-modal-fix",
+    "ars-dass-satz",
+    "ars-weil-satz"
+  ],
+  "audioManifestRefs": [
+    "word-stift",
+    "word-zeugnis"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "A2-Wiederholungswoche (Prüfungsvorbereitung) — اليوم 1: الوحدتان 1–2",
+    "goetheWordListOverlap": []
+  }
+}
