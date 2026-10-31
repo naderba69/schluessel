@@ -28649,6 +28649,46 @@
       "rmsDb": -16.98
     },
     {
+      "id": "word-gramm",
+      "file": "words/audio/de-DE/word-gramm.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Gramm.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u13-d4"
+      ],
+      "durationMs": 1024,
+      "sizeBytes": 4900,
+      "hash": "sha256:4b99ed0b1a41bc10427e9fd7351aa0f155d79bfa31bf6ce41a3be388bf0e076b",
+      "pcmSha256": "c8a7368d54c99097bd06095565bd40d15e41ae84a15172c7bc0681736a3d607d",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "word-kilogramm",
+      "file": "words/audio/de-DE/word-kilogramm.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Kilogramm.",
+      "priority": "P2",
+      "lessonRefs": [
+        "a2-u13-d4"
+      ],
+      "durationMs": 1233,
+      "sizeBytes": 5873,
+      "hash": "sha256:ab757deb43575f098b308ef3909946d149d2eca04fdba48edf391c4391fcf398",
+      "pcmSha256": "76a126e0e41b987bdbd4d65fff8f2a0ce9e0059b3fff0150ec06280359b9073d",
+      "rmsDb": -17.06
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",

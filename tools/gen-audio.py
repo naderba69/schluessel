@@ -1812,6 +1812,8 @@ def build_all() -> None:
     ("word-zweimal", "zweimal.", "zweimal", ["a2-u13-d3"]),
     ("word-dreimal", "dreimal.", "dreimal", ["a2-u13-d3"]),
     ("word-viermal", "viermal.", "viermal", ["a2-u13-d3"]),
+    ("word-gramm", "das Gramm.", "gramm", ["a2-u13-d4"]),
+    ("word-kilogramm", "das Kilogramm.", "kilogramm", ["a2-u13-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

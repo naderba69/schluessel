@@ -1,0 +1,458 @@
+{
+ "audioManifestRefs": [
+  "word-gramm",
+  "word-kilogramm"
+ ],
+ "canDoDaily": [
+  "يزن مقاييسه (غرام! + كيلوغرام!)",
+  "يميز (المقياس-يبقى-بعد-العدد! + das-جنس!) ويسترجع (dass/wenn/würde!)"
+ ],
+ "curriculumRef": {
+  "goetheWordListOverlap": [
+   "gramm",
+   "kilogramm"
+  ],
+  "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
+ },
+ "day": 4,
+ "einstieg": {
+  "guidedRetrieval": [
+   "من d3: Ich esse zweimal Brot! + Noch einmal, bitte! (آكل-الخبز-مرتين! + مرة-أخرى-من-فضلك!) — المرات-المحظوظة تُوزن اليوم بالمقاييس-الدقيقة!",
+   "واليوم: مقاييسي! Ein Gramm Salz ist genug! (غرام-ملح-يكفي!) + Ich kaufe ein Kilogramm Äpfel! (أشتري-كيلو-تفاح!) + Ich esse zweimal Brot! (آكل-الخبز-مرتين!) + Ich weiß, dass Zucker gut ist! + Wenn ich koche, ist die Küche warm! + Ich würde gern Kuchen essen! + Der erste Kuchen ist gut und die vierte Woche ist lang! + Noch einmal, bitte! — بمقياسين وطبخة!"
+  ],
+  "pretestItems": [
+   {
+    "answer": "Gramm",
+    "choices": [
+     "Gramm",
+     "Kilogramm",
+     "Kuchen"
+    ],
+    "prompt": {
+     "ar": "«غرام» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   },
+   {
+    "answer": "Kilogramm",
+    "choices": [
+     "Kilogramm",
+     "Gramm",
+     "Kuchen"
+    ],
+    "prompt": {
+     "ar": "«كيلوغرام» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Gramm",
+   "https://www.duden.de/rechtschreibung/Kilogramm"
+  ],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+  ],
+  "wiktionary": []
+ },
+ "id": "a2-u13-d4",
+ "imageManifestRefs": [],
+ "kind": "content",
+ "level": "A2",
+ "praesentation": {
+  "dualCodingRequired": true,
+  "grammarArsenalIds": [
+   "ars-dass-satz",
+   "ars-wuerde"
+  ],
+  "riskFlagsShown": [
+   "needs-ein"
+  ],
+  "storySentenceIds": [],
+  "wordIds": [
+   "gramm",
+   "kilogramm"
+  ]
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "a": "Ein Gramm Salz ist genug!",
+      "q": "«غرام ملح يكفي!»؟"
+     },
+     {
+      "a": "Ich kaufe ein Kilogramm Äpfel!",
+      "q": "«أشتري كيلو تفاح!»؟"
+     },
+     {
+      "a": "Ich esse zweimal Brot!",
+      "q": "«آكل الخبز مرتين!»؟"
+     },
+     {
+      "a": "Ich weiß, dass Zucker gut ist!",
+      "q": "«أعرف أن السكر جيد!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Wenn ich koche, ist die Küche warm!",
+      "q": "«لو أطبخ المطبخ دافئ!»؟"
+     },
+     {
+      "a": "Ich würde gern Kuchen essen!",
+      "q": "«أودّ لو آكل الكعك!»؟"
+     },
+     {
+      "a": "Der erste Kuchen ist gut und die vierte Woche ist lang!",
+      "q": "«الكعكة الأولى جيدة والأسبوع الرابع طويل!»؟"
+     },
+     {
+      "a": "Noch einmal, bitte!",
+      "q": "«مرة أخرى من فضلك!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Ein Gramm Salz ist genug! Ich kaufe ein Kilogramm Äpfel!",
+      "q": "«غرام ملح يكفي وأشتري كيلو تفاح!»؟"
+     },
+     {
+      "a": "Ich esse zweimal Brot! Noch einmal, bitte!",
+      "q": "«آكل الخبز مرتين! مرة أخرى من فضلك!»؟"
+     },
+     {
+      "a": "Wenn ich koche, ist die Küche warm!",
+      "q": "«لو أطبخ المطبخ دافئ!»؟"
+     },
+     {
+      "a": "Ich würde gern Kuchen essen!",
+      "q": "«أودّ لو آكل الكعك!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "schemaVersion": "1.0.0",
+ "slider": {
+  "max": 100,
+  "min": 0,
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "questionDe": "Wie viel Prozent wirst du schaffen?"
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "ar": "يزن مقاييسه (غرام! + كيلوغرام!)",
+    "de": "Ein Gramm Salz ist genug! Ich kaufe ein Kilogramm Äpfel!"
+   },
+   "situation": {
+    "ar": "يوم-السوق الدقيق",
+    "de": "Der erste Kuchen ist gut und die vierte Woche ist lang!"
+   },
+   "successCriteria": [
+    "يروي 8 جمل (مقياس! + كيلو! + مرة-استرجاع! + محتوى! + شرط! + حلم! + استرجاع-d2! + استرجاع-einmal!)",
+    "يستخدم الجديد (Gramm/Kilogramm!)",
+    "يميز (المقياس-يبقى-بعد-العدد! + das-جنس!) ويسترجع (dass/wenn/würde!)"
+   ]
+  },
+  "stations": [
+   {
+    "explanationRequired": true,
+    "interleavedWith": [
+     "schwester",
+     "bruder",
+     "fussball"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "الغرام",
+        "de": "Gramm"
+       },
+       {
+        "ar": "الكيلوغرام",
+        "de": "Kilogramm"
+       },
+       {
+        "ar": "الملح",
+        "de": "Salz"
+       },
+       {
+        "ar": "السكر",
+        "de": "Zucker"
+       },
+       {
+        "ar": "الزبدة",
+        "de": "Butter"
+       }
+      ],
+      "why": "مقاييسي: Gramm الغرام! · Kilogramm الكيلوغرام! · Salz الملح! · Zucker السكر! · Butter الزبدة! — das-جنس-المقياسين!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "أشتري",
+        "de": "kaufe"
+       },
+       {
+        "ar": "آكل",
+        "de": "esse"
+       },
+       {
+        "ar": "أطبخ",
+        "de": "koche"
+       },
+       {
+        "ar": "أشرب",
+        "de": "trinke"
+       },
+       {
+        "ar": "أتعلم",
+        "de": "lerne"
+       }
+      ],
+      "why": "أفعال-السوق: kaufe أشتري! · esse آكل! · koche أطبخ! · trinke أشرب! · lerne أتعلم!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "مرتين",
+        "de": "zweimal"
+       },
+       {
+        "ar": "ثلاث مرات",
+        "de": "dreimal"
+       },
+       {
+        "ar": "أربع مرات",
+        "de": "viermal"
+       },
+       {
+        "ar": "مرة واحدة",
+        "de": "einmal"
+       },
+       {
+        "ar": "مختلف",
+        "de": "anders"
+       }
+      ],
+      "why": "استرجاع-d3: zweimal مرتين! · dreimal ثلاث-مرات! · viermal أربع-مرات! · einmal مرة-واحدة! · anders مختلف!"
+     }
+    ],
+    "type": "match"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الجديد (Gramm/Kilogramm!)",
+     "المقياس-بعد-العدد-يبقى (zwei-Gramm!)",
+     "الاسترجاع (dass/wenn/würde!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "gap-fill",
+    "items": [
+     {
+      "a": "Gramm",
+      "q": "Ein ___ Salz ist genug! (Gramm!)",
+      "why": "غرام! — Ein-Salz (ملح-يكفي!)."
+     },
+     {
+      "a": "Kilogramm",
+      "q": "Ich kaufe ein ___ Äpfel! (Kilogramm!)",
+      "why": "كيلوغرام! — kaufe-Äpfel (أشتري-التفاح!)."
+     },
+     {
+      "a": "zweimal",
+      "q": "Ich esse ___ Brot! (zweimal!)",
+      "why": "مرتين! — esse-Brot (استرجاع-d3!)."
+     },
+     {
+      "a": "dass",
+      "q": "Ich weiß, ___ Zucker gut ist! (dass!)",
+      "why": "أعرف-أن! — dass-محتوى!"
+     },
+     {
+      "a": "koche",
+      "q": "Wenn ich ___, ist die Küche warm! (koche!)",
+      "why": "أطبخ! — wenn-شرط!"
+     },
+     {
+      "a": "gern",
+      "q": "Ich würde ___ Kuchen essen! (gern!)",
+      "why": "بودّ! — würde-essen (أودّ-آكل!)."
+     },
+     {
+      "a": "erste",
+      "q": "Der ___ Kuchen ist gut und die vierte Woche ist lang! (erste!)",
+      "why": "الأولى! — erste-Kuchen (استرجاع-d2!)."
+     },
+     {
+      "a": "einmal",
+      "q": "Noch ___, bitte! (einmal!)",
+      "why": "مرة-أخرى! — Noch-bitte (استرجاع!)."
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ كلمة واحدة — الباقي صحيح",
+     "التصريف (kaufst/esst!)",
+     "المقياس-بعد-العدد (Gramm-بلا-e!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "error-hunt",
+    "items": [
+     {
+      "a": "Ich kaufe ein Kilogramm Äpfel!",
+      "q": "~~Ich kaufst ein Kilogramm Äpfel!~~",
+      "why": "المتكلم-يشتري (kaufe!) — kaufst-مخاطب خطأ!"
+     },
+     {
+      "a": "Ein Gramm Salz ist genug!",
+      "q": "~~Ein Gramm Salz sind genug!~~",
+      "why": "المفرد-يكفي (ist!) — sind-جمع خطأ!"
+     },
+     {
+      "a": "Ich kaufe zwei Gramm Äpfel!",
+      "q": "~~Ich kaufe zwei Gramme Äpfel!~~",
+      "why": "المقياس-يبقى (zwei-Gramm!) — Gramme-بعد-العدد خطأ!"
+     },
+     {
+      "a": "Wenn ich koche, ist die Küche warm!",
+      "q": "~~Wenn ich koche, die Küche ist warm!~~",
+      "why": "V2-بعد-الفاصلة (ist-die!) — die-ist خطأ!"
+     },
+     {
+      "a": "Ich esse zweimal Brot!",
+      "q": "~~Ich esst zweimal Brot!~~",
+      "why": "المتكلم-يأكل (esse!) — esst-مخاطب خطأ!"
+     },
+     {
+      "a": "Die vierte Woche ist lang!",
+      "q": "~~Die vierte Woche sind lang!~~",
+      "why": "المفرد-يطول (ist!) — sind-جمع خطأ!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بغرامك (Gramm-Salz!) وانهِ بكيلوك (Kilogramm-Äpfel!)",
+     "8 جمل: مقياس! + كيلو! + مرة-استرجاع! + محتوى! + شرط! + حلم! + استرجاع-d2! + استرجاع-einmal!"
+    ],
+    "interleavedWith": [
+     "spielen",
+     "gut",
+     "gern"
+    ],
+    "type": "speaking",
+    "items": [
+     {
+      "a": "Ein Gramm Salz ist genug! Ich kaufe ein Kilogramm Äpfel! Ich esse zweimal Brot! Ich weiß, dass Zucker gut ist! Wenn ich koche, ist die Küche warm! Ich würde gern Kuchen essen! Der erste Kuchen ist gut und die vierte Woche ist lang! Noch einmal, bitte!",
+      "q": "احكِ مقاييسك (سجّل): 8 جمل — غرام-ملح-يكفي! + أشتري-كيلو-تفاح! + آكل-الخبز-مرتين! + أعرف-أن-السكر-جيد! + لو-أطبخ-المطبخ-دافئ! + أودّ-لو-آكل-الكعك! + الكعكة-الأولى-جيدة-والأسبوع-الرابع-طويل! + مرة-أخرى-من-فضلك!",
+      "why": "قارن حكايتك: Gramm! + Kilogramm! + zweimal! + dass! + wenn! + würde! + erste! + einmal!"
+     },
+     {
+      "a": "Ein Gramm Salz ist genug! Noch einmal, bitte!",
+      "q": "جهّز للمقاييس (سجّل): 2 جمل — غرام-ملح-يكفي! + مرة-أخرى-من-فضلك!",
+      "why": "قارن تجهيزك: Gramm! + einmal!"
+     }
+    ]
+   }
+  ]
+ },
+ "unit": 13,
+ "usedArsenalIds": [
+  "ars-dass-satz",
+  "ars-wuerde"
+ ],
+ "warmup": {
+  "cardIds": [
+   "zweimal",
+   "dreimal",
+   "viermal"
+  ]
+ },
+ "ziel": {
+  "ar": "مقاييسي-الدقيقة: غرام! + كيلوغرام! — والمقياس (يبقى-بعد-العدد!) والجنس (das-للمقياسين!)",
+  "de": "Ein Gramm Salz ist genug! — Ich kaufe ein Kilogramm Äpfel!"
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "gramm",
+   "kilogramm"
+  ],
+  "summary": {
+   "ar": "مقاييسي-الدقيقة: غرام ملح يكفي. أشتري كيلو تفاح. آكل الخبز مرتين. أعرف أن السكر جيد. لو أطبخ المطبخ دافئ. أودّ لو آكل الكعك. الكعكة الأولى جيدة والأسبوع الرابع طويل. مرة أخرى من فضلك. النظام: المقياس-يبقى-بعد-العدد (zwei-Gramm!) + الجنس (das-المقياسين!) + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
+   "de": "Ein Gramm Salz ist genug! Ich kaufe ein Kilogramm Äpfel! Ich esse zweimal Brot! Ich weiß, dass Zucker gut ist! Wenn ich koche, ist die Küche warm! Ich würde gern Kuchen essen! Der erste Kuchen ist gut und die vierte Woche ist lang! Noch einmal, bitte!"
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "مخاطب-للمتكلم",
+     "de": "~~Ich kaufst ein Kilogramm Äpfel!~~"
+    },
+    "correct": {
+     "ar": "أشتري كيلو تفاح!",
+     "de": "Ich kaufe ein Kilogramm Äpfel!"
+    },
+    "exercise": {
+     "a": "kaufe",
+     "q": "Ich ___ ein Kilogramm Äpfel! (kaufe!)"
+    },
+    "whyArabicSpeakerFails": "المتكلم-أشتري-kaufe (kaufe! — العربية-أشتري-واحدة-بلا-تصريف-ظاهر!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "جمع-المقياس-بعد-العدد",
+     "de": "~~Ich kaufe zwei Gramme Äpfel!~~"
+    },
+    "correct": {
+     "ar": "أشتري غرامين من التفاح!",
+     "de": "Ich kaufe zwei Gramm Äpfel!"
+    },
+    "exercise": {
+     "a": "Gramm",
+     "q": "Ich kaufe zwei ___ Äpfel! (Gramm!)"
+    },
+    "whyArabicSpeakerFails": "المقياس-يبقى-بعد-العدد (Gramm! — العربية-تجمع-المقياس-غرامان!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "جمع-للمفرد",
+     "de": "~~Die vierte Woche sind lang!~~"
+    },
+    "correct": {
+     "ar": "الأسبوع الرابع طويل!",
+     "de": "Die vierte Woche ist lang!"
+    },
+    "exercise": {
+     "a": "ist",
+     "q": "Die vierte Woche ___ lang! (ist!)"
+    },
+    "whyArabicSpeakerFails": "المفرد-يطول-ist (ist! — العربية-يكون-واحد-بلا-جمع-هنا!) (خريطة التداخل 10‑ي)."
+   }
+  ]
+ }
+}
