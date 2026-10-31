@@ -1814,6 +1814,9 @@ def build_all() -> None:
     ("word-viermal", "viermal.", "viermal", ["a2-u13-d3"]),
     ("word-gramm", "das Gramm.", "gramm", ["a2-u13-d4"]),
     ("word-kilogramm", "das Kilogramm.", "kilogramm", ["a2-u13-d4"]),
+    ("word-luxemburger", "der Luxemburger.", "luxemburger", ["a2-u13-d5"]),
+    ("word-luxemburgisch", "luxemburgisch.", "luxemburgisch", ["a2-u13-d5"]),
+    ("word-deutsche", "die Deutsche.", "deutsche", ["a2-u13-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
