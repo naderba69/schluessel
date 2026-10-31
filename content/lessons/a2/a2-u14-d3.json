@@ -1,0 +1,498 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u14-d3",
+  "level": "A2",
+  "unit": 14,
+  "day": 3,
+  "kind": "integration",
+  "ziel": {
+    "de": "Woche fünf und sechs noch einmal: Du kannst erzählen — Die Party war gut, ich hatte Spaß. Und du kannst kochen: Koch das Gericht! Iss die Bohnen!",
+    "ar": "أسبوع المراجعة، اليوم الثالث (الوحدتان 5–6): الماضي القصير (كان! كان لديه! كان عليه!) والأمر في المطبخ (Koch das! Iss das!) والمضارع الشاذ (isst/fährst!) — مع الحكاية والوصفة!"
+  },
+  "canDoDaily": [
+    "يحكي بالماضي القصير (Die Party war gut · ich hatte Spaß · wir waren froh) ويفرّق الشيء عن الملكية",
+    "يأمر في المطبخ بثلاث صيغ (Koch das! · Esst das! · Essen Sie das!) ويجتاز معركة اليوم الثالث من أسبوع المراجعة بنتيجة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "ding",
+      "ein-paar",
+      "feiern"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الحفلة كانت جميلة» (الماضي) — أي جملة صحيحة؟"
+        },
+        "choices": [
+          "Die Party war gut.",
+          "Die Party ist gut.",
+          "Die Party hatte gut."
+        ],
+        "answer": "Die Party war gut.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«كل الفاصولياء!» (الأمر للـdu) — أي جملة صحيحة؟"
+        },
+        "choices": [
+          "Iss die Bohnen!",
+          "Isst die Bohnen!",
+          "Esst die Bohnen!"
+        ],
+        "answer": "Iss die Bohnen!",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u5: الماضي القصير كلمة واحدة: war (كان!) · hatte (كان لديّ!) · musste (كان عليه!) + الحكاية والموسيقى (erzählen! · die Party war laut!) + التمني المهذب (Ich hätte gern Pizza!).",
+      "من u6: الأمر الثلاثي (du=الجذع: koch/iss! · ihr=+t: esst! · Sie=الصدر+Sie: Essen Sie!) + المضارع الشاذ (isst/fährst/nimmst!) + المطبخ والوصفة (das Gericht/die Bohnen/das Messer!)."
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "wenigstens",
+      "sache"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praeteritum-kurz",
+      "ars-imperativ",
+      "ars-praesens-unregelm"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "vowel-long-short",
+      "v2-order",
+      "plural-irregular"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Gestern ___ die Musik laut. (sein)",
+            "a": "war",
+            "why": "الماضي القصير: gestern + war (الموسيقى كانت صاخبة!)."
+          },
+          {
+            "q": "Ich ___ eine Party. (haben)",
+            "a": "hatte",
+            "why": "hatte = كان لديّ! حفلةً واحدة!"
+          },
+          {
+            "q": "Wir ___ froh. (sein)",
+            "a": "waren",
+            "why": "الجمع: waren! كنا سعداء!"
+          },
+          {
+            "q": "___ die Bohnen! (essen — du)",
+            "a": "Iss",
+            "why": "الأمر للـdu: الجذع + تحويل e→i: iss!"
+          },
+          {
+            "q": "___ das Fleisch! (kochen — ihr)",
+            "a": "Kocht",
+            "why": "الأمر لـihr: الجذع + t!"
+          },
+          {
+            "q": "Essen ___ das Rind!",
+            "a": "Sie",
+            "why": "الأمر المهذب: Essen Sie! (الصدر + Sie!)."
+          },
+          {
+            "q": "Du ___ schnell. (fahren)",
+            "a": "fährst",
+            "why": "a→ä مع du: fährst (النهاية ‑st!)."
+          },
+          {
+            "q": "Er ___ das Buch. (lesen)",
+            "a": "liest",
+            "why": "e→i مع er: liest (النهاية ‑t!)."
+          },
+          {
+            "q": "Das Essen ___ gut. (sein)",
+            "a": "war",
+            "why": "الشيء كان: war (وليس hatte!) — الأصل: ist!"
+          }
+        ],
+        "interleavedWith": [
+          "brot",
+          "milch",
+          "wasser",
+          "tee"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "verb-bank",
+        "items": [
+          {
+            "q": "Die Party ___ super. (sein)",
+            "a": "war",
+            "why": "الماضي القصير war — الحفلة كانت رائعة!"
+          },
+          {
+            "q": "Ich ___ gestern Hunger. (haben)",
+            "a": "hatte",
+            "why": "Hunger يُمتلك لا يُكون: hatte Hunger!"
+          },
+          {
+            "q": "___ das Messer! (nehmen — du)",
+            "a": "Nimm",
+            "why": "الأمر الشاذ: nimm (a→ä مثل المضارع!)."
+          },
+          {
+            "q": "Wir ___ nach Hause. (fahren)",
+            "a": "fahren",
+            "why": "الجمع بلا تحويل: wir fahren."
+          },
+          {
+            "q": "Er ___ die Zeitung. (lesen)",
+            "a": "liest",
+            "why": "المضارع الشاذ e→i: er liest."
+          },
+          {
+            "q": "___ Sie Platz! (nehmen)",
+            "a": "Nehmen",
+            "why": "الأمر المهذب: المصدر + Sie!"
+          }
+        ],
+        "interleavedWith": [
+          "kuchen",
+          "musik",
+          "hunger",
+          "kochen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "~~Ich war Hunger.~~",
+            "a": "Ich hatte Hunger.",
+            "why": "Hunger يُمتلك (hatte!) لا يُكون (war!) — «كان لديّ جوع»!"
+          },
+          {
+            "q": "~~Machst das!~~",
+            "a": "Mach das!",
+            "why": "الأمر للـdu: الجذع بلا ‑st! (وليس جملة خبر!)."
+          },
+          {
+            "q": "~~Du fahrt nach Hause.~~",
+            "a": "Du fährst nach Hause.",
+            "why": "a→ä مع du: fährst — fahrt هي صيغة ihr!"
+          },
+          {
+            "q": "~~Er iss ein Brot.~~",
+            "a": "Er isst ein Brot.",
+            "why": "الشيء/الشخص er ← isst (e→i + t) — وiss أمر فقط!"
+          },
+          {
+            "q": "~~Nehm das Messer!~~",
+            "a": "Nimm das Messer.",
+            "why": "الأمر الشاذ: nimm (a→ä!) — nehmt للجمع!"
+          },
+          {
+            "q": "~~Essen das Rind!~~",
+            "a": "Essen Sie das Rind.",
+            "why": "الأمر المهذب يذكر Sie بعد الفعل: Essen Sie!"
+          }
+        ],
+        "interleavedWith": [
+          "heute",
+          "gestern",
+          "essen",
+          "nehmen"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "speaking",
+        "items": [
+          {
+            "q": "احكِ حكاية الحفلة بالماضي القصير (جملتان: war + hatte/waren!)",
+            "a": "Gestern war die Party super. Ich hatte Spaß und wir waren froh. Die Musik war laut!",
+            "why": "war (الشيء!) · hatte (الملكية!) · waren (الجمع!) — الماضي القصير!"
+          },
+          {
+            "q": "اطبخ وصفتك بالأمر الثلاثي (جملتان: du + ihr/Sie!)",
+            "a": "Koch das Gericht! Iss die Bohnen! Kocht das Fleisch — oder: Essen Sie das Rind!",
+            "why": "du=الجذع (koch/iss!) · ihr=+t (kocht!) · Sie=الصدر+Sie!"
+          }
+        ],
+        "interleavedWith": [
+          "fahren",
+          "helfen",
+          "lernen",
+          "feiern"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Meine Party und mein Essen: Die Party war gut, ich hatte Spaß. Jetzt koche ich: Koch das Gericht! Iss die Bohnen! Kocht das Fleisch — danke schön!",
+        "ar": "حفلتي وطعامي: أحكي بالماضي القصير وأأمر في المطبخ وأطبخ مع الآخرين."
+      },
+      "situation": {
+        "de": "Der dritte Tag — Party und Küche.",
+        "ar": "اليوم الثالث من أسبوع المراجعة — الحفلة والمطبخ."
+      },
+      "successCriteria": [
+        "يحكي بالماضي القصير بكلماته (كان · كان لديه · كان عليه!) في جملتين",
+        "يأمر في المطبخ بثلاث صيغ (للمفرد وللجمع وللمهذب!)",
+        "يستعمل المضارع الشاذ (الحركة تتغيّر مع du وer!)",
+        "يجتاز معركة اليوم الثالث (75% فأكثر)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أمس كنت متعباً»؟",
+            "a": "Gestern war ich müde.",
+            "choices": [
+              "Gestern war ich müde.",
+              "Gestern bin ich müde.",
+              "Gestern hatte ich müde."
+            ],
+            "why": "الماضي القصير: ich ← war (وليس bin!)."
+          },
+          {
+            "q": "«الحفلة كانت جميلة»؟",
+            "a": "Die Party war gut.",
+            "choices": [
+              "Die Party war gut.",
+              "Die Party ist gut.",
+              "Die Party hatte gut."
+            ],
+            "why": "war = ماضي ist — للشيء والحفلة!"
+          },
+          {
+            "q": "«كان لديّ وقت»؟",
+            "a": "Ich hatte Zeit.",
+            "choices": [
+              "Ich hatte Zeit.",
+              "Ich war Zeit.",
+              "Ich bin Zeit."
+            ],
+            "why": "hatte = ماضي haben — الملكية!"
+          },
+          {
+            "q": "«اطبخ الحساء!» (du)؟",
+            "a": "Koch die Suppe!",
+            "choices": [
+              "Koch die Suppe!",
+              "Kochst die Suppe!",
+              "Kocht die Suppe!"
+            ],
+            "why": "الأمر للـdu: الجذع وحده (koch!) بلا ‑st."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«كل الخبز!» (du — essen)؟",
+            "a": "Iss das Brot!",
+            "choices": [
+              "Iss das Brot!",
+              "Isst das Brot!",
+              "Esst das Brot!"
+            ],
+            "why": "الأمر للـdu: iss (e→i مثل er isst!)."
+          },
+          {
+            "q": "«أنتَ تقود بسرعة»؟",
+            "a": "Du fährst schnell.",
+            "choices": [
+              "Du fährst schnell.",
+              "Du fahrt schnell.",
+              "Du fahren schnell."
+            ],
+            "why": "a→ä مع du: fährst!"
+          },
+          {
+            "q": "«هو يقرأ الكتاب»؟",
+            "a": "Er liest das Buch.",
+            "choices": [
+              "Er liest das Buch.",
+              "Er lest das Buch.",
+              "Er lesen das Buch."
+            ],
+            "why": "e→i مع er: liest (وليس lest — تلك صيغة ihr!)."
+          },
+          {
+            "q": "«خذ السكين!» (du — nehmen)؟",
+            "a": "Nimm das Messer!",
+            "choices": [
+              "Nimm das Messer!",
+              "Nimmst das Messer!",
+              "Nehmen das Messer!"
+            ],
+            "why": "الأمر الشاذ: nimm (a→ä!) — بلا ‑st!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«كنا سعداء»؟",
+            "a": "Wir waren froh.",
+            "choices": [
+              "Wir waren froh.",
+              "Wir war froh.",
+              "Wir hatten froh."
+            ],
+            "why": "الجمع: waren (وليس war — مفرد!)."
+          },
+          {
+            "q": "«كلوا سيادتكم!» (Sie — essen)؟",
+            "a": "Essen Sie das!",
+            "choices": [
+              "Essen Sie das!",
+              "Sie essen das!",
+              "Essen das Sie!"
+            ],
+            "why": "الأمر المهذب: المصدر + Sie — وSie بعد الفعل!"
+          },
+          {
+            "q": "«كان عليه أن يطبخ»؟",
+            "a": "Er musste kochen.",
+            "choices": [
+              "Er musste kochen.",
+              "Er muss kochen.",
+              "Er war kochen."
+            ],
+            "why": "musste = ماضي muss (كان عليه!)."
+          },
+          {
+            "q": "«يا ليت لديّ بيتزا» (التمني المهذب)؟",
+            "a": "Ich hätte gern Pizza.",
+            "choices": [
+              "Ich hätte gern Pizza.",
+              "Ich hatte gern Pizza.",
+              "Ich war gern Pizza."
+            ],
+            "why": "التمني المهذب: hätte gern (وليس hatte/war!)."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Woche fünf und sechs noch einmal — der dritte Tag: Die Party war gut, ich hatte Spaß und wir waren froh. Dann in die Küche: Koch das Gericht! Iss die Bohnen! Nimm das Messer! Ich koche, du kochst. Wenigstens eine Sache: Die Party war gut!",
+      "ar": "اليوم الثالث من أسبوع المراجعة اكتمل: حكيت بالماضي القصير (war! hatte! waren!) وأمرت في المطبخ (Koch das! Iss das! Nimm das Messer!) واستعملت المضارع الشاذ (isst/fährst!) — والمفردتان (wenigstens! + sache!) جسيما اليوم."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich war Hunger.~~ · ~~Die Party hatte gut.~~",
+          "ar": "war أم hatte"
+        },
+        "whyArabicSpeakerFails": "العربية تقول «كان لديّ جوع» بكلمة واحدة (كان!) فتظنّ كلمة واحدة تصلح — والألمانية تفرّق: war للشيء والمكان (Die Party war gut!) وhatte للملكية (Ich hatte Hunger!) (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Ich hatte Hunger. · Die Party war gut.",
+          "ar": "كان لديّ جوع · الحفلة كانت جميلة"
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ Hunger, und die Party ___ gut. (hatte/war)",
+          "a": "hatte / war",
+          "choices": [
+            "hatte / war",
+            "war / hatte",
+            "war / war"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Machst das!~~ · ~~Kochst das Gericht!~~",
+          "ar": "الأمر للـdu بلا النهاية"
+        },
+        "whyArabicSpeakerFails": "العربية تأمر بالفعل وحده («اطبخ!») فتنتظر الجذع — والألمانية تعرب du بالـ‑st في الخبر فتلتبس: الأمر يرفض النهاية (Mach das! وليس Machst!) (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Mach das! · Koch das Gericht!",
+          "ar": "افعل! · اطبخ الطبق!"
+        },
+        "exercise": {
+          "q": "أكمل: ___ das Brot! (nehmen — du)",
+          "a": "Nimm",
+          "choices": [
+            "Nimm",
+            "Nimmst",
+            "Nehmen"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Du fahrt nach Hause.~~ · ~~Er lest das Buch.~~",
+          "ar": "الحركة تتغيّر مع du وer"
+        },
+        "whyArabicSpeakerFails": "العربية لا تغيّر حروف الجذر أبداً («تقود» بـ«ق» دائماً!) فتثبّت الجذع — والألمانية تغيّر الحركة مع du وer وحدهما: fährst (a→ä!) وliest (e→i!) — والجمع يبقى fahren/lesen (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Du fährst nach Hause. · Er liest das Buch.",
+          "ar": "أنتَ تقود إلى البيت · هو يقرأ الكتاب"
+        },
+        "exercise": {
+          "q": "أكمل: Du ___ schnell, und wir ___ langsam. (fahren)",
+          "a": "fährst / fahren",
+          "choices": [
+            "fährst / fahren",
+            "fahrt / fahren",
+            "fährst / fährst"
+          ]
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "wenigstens",
+      "sache"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/wenigstens",
+      "https://www.duden.de/rechtschreibung/Sache"
+    ],
+    "wiktionary": [],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praeteritum-kurz",
+    "ars-imperativ",
+    "ars-praesens-unregelm"
+  ],
+  "audioManifestRefs": [
+    "word-wenigstens",
+    "word-sache"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "A2-Wiederholungswoche (Prüfungsvorbereitung) — اليوم 3: الوحدتان 5–6",
+    "goetheWordListOverlap": []
+  }
+}
