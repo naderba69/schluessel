@@ -1,0 +1,458 @@
+{
+ "audioManifestRefs": [
+  "word-in-der-nacht",
+  "word-um-mitternacht"
+ ],
+ "canDoDaily": [
+  "يصف ليله (في الليل! + عند منتصف الليل!)",
+  "يتوّج U13 (d1! + d2! + d3! + d4! + d5!) ويسترجع (dass/wenn/würde!)"
+ ],
+ "curriculumRef": {
+  "goetheWordListOverlap": [
+   "in-der-nacht",
+   "um-mitternacht"
+  ],
+  "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
+ },
+ "day": 6,
+ "einstieg": {
+  "guidedRetrieval": [
+   "من d5: Er ist Luxemburger und sie ist Deutsche! (هو-لوكسمبورغي-وهي-ألمانية!) — الهوية-تُتوَّج اليوم بالليل-الجامع!",
+   "واليوم: ليلي-ويتوج! In der Nacht schlafe ich! (في-الليل-أنام!) + Ich schlafe um Mitternacht! (أنام-عند-منتصف-الليل!) + Am Abend lerne ich Deutsch! + Der erste Tag ist schön und ich esse zweimal Brot! + Ein Gramm Salz ist genug! + Er ist Luxemburger und sie ist Deutsche! + Ich weiß, dass du anders bist! + Wenn ich komme, ist die Schule offen! — بليل وتتويج!"
+  ],
+  "pretestItems": [
+   {
+    "answer": "in der Nacht",
+    "choices": [
+     "in der Nacht",
+     "um Mitternacht",
+     "am Abend"
+    ],
+    "prompt": {
+     "ar": "«في الليل» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   },
+   {
+    "answer": "um Mitternacht",
+    "choices": [
+     "um Mitternacht",
+     "in der Nacht",
+     "am Abend"
+    ],
+    "prompt": {
+     "ar": "«عند منتصف الليل» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Nacht",
+   "https://www.duden.de/rechtschreibung/Mitternacht"
+  ],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+  ],
+  "wiktionary": []
+ },
+ "id": "a2-u13-d6",
+ "imageManifestRefs": [],
+ "kind": "content",
+ "level": "A2",
+ "praesentation": {
+  "dualCodingRequired": true,
+  "grammarArsenalIds": [
+   "ars-dass-satz",
+   "ars-wuerde"
+  ],
+  "riskFlagsShown": [
+   "v2-order"
+  ],
+  "storySentenceIds": [],
+  "wordIds": [
+   "in-der-nacht",
+   "um-mitternacht"
+  ]
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "a": "In der Nacht schlafe ich!",
+      "q": "«في الليل أنام!»؟"
+     },
+     {
+      "a": "Ich schlafe um Mitternacht!",
+      "q": "«أنام عند منتصف الليل!»؟"
+     },
+     {
+      "a": "Am Abend lerne ich Deutsch!",
+      "q": "«في المساء أتعلم الألمانية!»؟"
+     },
+     {
+      "a": "Der erste Tag ist schön und ich esse zweimal Brot!",
+      "q": "«اليوم الأول جميل وآكل الخبز مرتين!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Ein Gramm Salz ist genug!",
+      "q": "«غرام ملح يكفي!»؟"
+     },
+     {
+      "a": "Er ist Luxemburger und sie ist Deutsche!",
+      "q": "«هو لوكسمبورغي وهي ألمانية!»؟"
+     },
+     {
+      "a": "Ich weiß, dass du anders bist!",
+      "q": "«أعرف أنك مختلف!»؟"
+     },
+     {
+      "a": "Ich würde gern anders sein!",
+      "q": "«أودّ لو أكون مختلفاً!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "In der Nacht schlafe ich! Ich schlafe um Mitternacht!",
+      "q": "«في الليل أنام وأنام عند منتصف الليل!»؟"
+     },
+     {
+      "a": "Am Abend lerne ich Deutsch! Der erste Tag ist schön und ich esse zweimal Brot!",
+      "q": "«في المساء أتعلم الألمانية! اليوم الأول جميل وآكل الخبز مرتين!»؟"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "«لو آتي المدرسة مفتوحة!»؟"
+     },
+     {
+      "a": "Ich würde gern anders sein!",
+      "q": "«أودّ لو أكون مختلفاً!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "schemaVersion": "1.0.0",
+ "slider": {
+  "max": 100,
+  "min": 0,
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "questionDe": "Wie viel Prozent wirst du schaffen?"
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "ar": "يصف ليله (في الليل! + عند منتصف الليل!)",
+    "de": "In der Nacht schlafe ich! Ich schlafe um Mitternacht!"
+   },
+   "situation": {
+    "ar": "ليلة-التتويج الجامعة",
+    "de": "Der erste Tag ist schön und ich esse zweimal Brot!"
+   },
+   "successCriteria": [
+    "يروي 8 جمل (ليل! + منتصف! + d1! + d2+d3! + d4! + d5! + محتوى! + شرط!)",
+    "يستخدم الجديد (in-der-Nacht/um-Mitternacht!)",
+    "يتوّج U13 (d1! + d2! + d3! + d4! + d5!) ويسترجع (dass/wenn/würde!)"
+   ]
+  },
+  "stations": [
+   {
+    "explanationRequired": true,
+    "interleavedWith": [
+     "schwester",
+     "bruder",
+     "fussball"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "في الليل",
+        "de": "in der Nacht"
+       },
+       {
+        "ar": "عند منتصف الليل",
+        "de": "um Mitternacht"
+       },
+       {
+        "ar": "في المساء",
+        "de": "am Abend"
+       },
+       {
+        "ar": "الليل",
+        "de": "Nacht"
+       },
+       {
+        "ar": "منتصف الليل",
+        "de": "Mitternacht"
+       }
+      ],
+      "why": "ليلي: in-der-Nacht في-الليل! · um-Mitternacht عند-منتصف-الليل! · am-Abend في-المساء! · Nacht الليل! · Mitternacht منتصف-الليل! — القطعة-ثابتة!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "أنام",
+        "de": "schlafe"
+       },
+       {
+        "ar": "أتعلم",
+        "de": "lerne"
+       },
+       {
+        "ar": "آكل",
+        "de": "esse"
+       },
+       {
+        "ar": "أشرب",
+        "de": "trinke"
+       },
+       {
+        "ar": "أشتري",
+        "de": "kaufe"
+       }
+      ],
+      "why": "أفعال-التتويج: schlafe أنام! · lerne أتعلم! · esse آكل! · trinke أشرب! · kaufe أشتري!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "الأول",
+        "de": "erste"
+       },
+       {
+        "ar": "مرتين",
+        "de": "zweimal"
+       },
+       {
+        "ar": "الغرام",
+        "de": "Gramm"
+       },
+       {
+        "ar": "اللوكسمبورغي",
+        "de": "Luxemburger"
+       },
+       {
+        "ar": "الألمانية",
+        "de": "Deutsche"
+       }
+      ],
+      "why": "تاج-U13: erste الأول-d2! · zweimal مرتين-d3! · Gramm الغرام-d4! · Luxemburger اللوكسمبورغي-d5! · Deutsche الألمانية-d5!"
+     }
+    ],
+    "type": "match"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الجديد (in-der-Nacht/um-Mitternacht!)",
+     "التتويج (d1! + d2! + d3! + d4! + d5!)",
+     "الاسترجاع (dass/wenn/würde!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "gap-fill",
+    "items": [
+     {
+      "a": "Nacht",
+      "q": "In der ___ schlafe ich! (Nacht!)",
+      "why": "الليل! — In-der-schlafe (أنام!)."
+     },
+     {
+      "a": "Mitternacht",
+      "q": "Ich schlafe um ___! (Mitternacht!)",
+      "why": "منتصف-الليل! — schlafe-um (أنام-عند!)."
+     },
+     {
+      "a": "Abend",
+      "q": "Am ___ lerne ich Deutsch! (Abend!)",
+      "why": "المساء! — Am-lerne (استرجاع-d1!)."
+     },
+     {
+      "a": "erste",
+      "q": "Der ___ Tag ist schön und ich esse zweimal Brot! (erste!)",
+      "why": "الأول! — erste-Tag (استرجاع-d2!)."
+     },
+     {
+      "a": "zweimal",
+      "q": "Der erste Tag ist schön und ich esse ___ Brot! (zweimal!)",
+      "why": "مرتين! — esse-Brot (استرجاع-d3!)."
+     },
+     {
+      "a": "Gramm",
+      "q": "Ein ___ Salz ist genug! (Gramm!)",
+      "why": "غرام! — Ein-Salz (استرجاع-d4!)."
+     },
+     {
+      "a": "Luxemburger",
+      "q": "Er ist ___ und sie ist Deutsche! (Luxemburger!)",
+      "why": "لوكسمبورغي! — Er-ist (استرجاع-d5!)."
+     },
+     {
+      "a": "dass",
+      "q": "Ich weiß, ___ du anders bist! (dass!)",
+      "why": "أعرف-أن! — dass-محتوى!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ كلمة واحدة — الباقي صحيح",
+     "الضمير (du/ich!)",
+     "الترتيب (V2-بعد-الظرفية!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "error-hunt",
+    "items": [
+     {
+      "a": "In der Nacht schlafe ich!",
+      "q": "~~In der Nacht schlafe du!~~",
+      "why": "المتكلم-ينام (ich!) — du-مخاطب خطأ!"
+     },
+     {
+      "a": "Ich schlafe um Mitternacht!",
+      "q": "~~Ich schlafen um Mitternacht!~~",
+      "why": "المتكلم-أنام (schlafe!) — schlafen-مصدر خطأ!"
+     },
+     {
+      "a": "Am Abend lerne ich Deutsch!",
+      "q": "~~Am Abend lerne ich Deutscher!~~",
+      "why": "اللغة-تُتعلم (Deutsch!) — Deutscher-شخص خطأ!"
+     },
+     {
+      "a": "Wenn ich komme, ist die Schule offen!",
+      "q": "~~Wenn ich komme, die Schule ist offen!~~",
+      "why": "V2-بعد-الفاصلة (ist-die!) — die-ist خطأ!"
+     },
+     {
+      "a": "Der erste Tag ist schön!",
+      "q": "~~Der erste Tag sind schön!~~",
+      "why": "المفرد-يكون (ist!) — sind-جمع خطأ!"
+     },
+     {
+      "a": "Ich esse zweimal Brot!",
+      "q": "~~Ich esst zweimal Brot!~~",
+      "why": "المتكلم-يأكل (esse!) — esst-مخاطب خطأ!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بليلك (Nacht-schlafe!) وانهِ بتتويجك (d1+d2+d3+d4+d5!)",
+     "8 جمل: ليل! + منتصف! + d1! + d2+d3! + d4! + d5! + محتوى! + شرط!"
+    ],
+    "interleavedWith": [
+     "spielen",
+     "gut",
+     "gern"
+    ],
+    "type": "speaking",
+    "items": [
+     {
+      "a": "In der Nacht schlafe ich! Ich schlafe um Mitternacht! Am Abend lerne ich Deutsch! Der erste Tag ist schön und ich esse zweimal Brot! Ein Gramm Salz ist genug! Er ist Luxemburger und sie ist Deutsche! Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen!",
+      "q": "احكِ ليلك وتتويجك (سجّل): 8 جمل — في-الليل-أنام! + أنام-عند-منتصف-الليل! + في-المساء-أتعلم-الألمانية! + اليوم-الأول-جميل-وآكل-الخبز-مرتين! + غرام-ملح-يكفي! + هو-لوكسمبورغي-وهي-ألمانية! + أعرف-أنك-مختلف! + لو-آتي-المدرسة-مفتوحة!",
+      "why": "قارن حكايتك: Nacht! + Mitternacht! + Abend! + erste+zweimal! + Gramm! + Luxemburger! + dass! + wenn!"
+     },
+     {
+      "a": "Ich würde gern anders sein! Am Abend lerne ich Deutsch!",
+      "q": "جهّز للتتويج (سجّل): 2 جمل — أودّ-لو-أكون-مختلفاً! + في-المساء-أتعلم-الألمانية!",
+      "why": "قارن تجهيزك: würde! + Abend!"
+     }
+    ]
+   }
+  ]
+ },
+ "unit": 13,
+ "usedArsenalIds": [
+  "ars-dass-satz",
+  "ars-wuerde"
+ ],
+ "warmup": {
+  "cardIds": [
+   "luxemburger",
+   "luxemburgisch",
+   "deutsche"
+  ]
+ },
+ "ziel": {
+  "ar": "ليلي-ويتوج: في الليل! + عند منتصف الليل! — والقطعة (ثابتة-لا-تُصرف!) وتاج-U13 (الأيام-الخمسة!)",
+  "de": "In der Nacht schlafe ich! — Der erste Tag ist schön und ich esse zweimal Brot!"
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "in-der-nacht",
+   "um-mitternacht"
+  ],
+  "summary": {
+   "ar": "ليلي-ويتوج: في الليل أنام. أنام عند منتصف الليل. في المساء أتعلم الألمانية. اليوم الأول جميل وآكل الخبز مرتين. غرام ملح يكفي. هو لوكسمبورغي وهي ألمانية. أعرف أنك مختلف. لو آتي المدرسة مفتوحة. النظام: القطعة-ثابتة (in-der-Nacht/um-Mitternacht!) + التتويج (d1+d2+d3+d4+d5!) + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
+   "de": "In der Nacht schlafe ich! Ich schlafe um Mitternacht! Am Abend lerne ich Deutsch! Der erste Tag ist schön und ich esse zweimal Brot! Ein Gramm Salz ist genug! Er ist Luxemburger und sie ist Deutsche! Ich weiß, dass du anders bist! Wenn ich komme, ist die Schule offen!"
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "مخاطب-للمتكلم",
+     "de": "~~In der Nacht schlafe du!~~"
+    },
+    "correct": {
+     "ar": "في الليل أنام!",
+     "de": "In der Nacht schlafe ich!"
+    },
+    "exercise": {
+     "a": "ich",
+     "q": "In der Nacht schlafe ___! (ich!)"
+    },
+    "whyArabicSpeakerFails": "المتكلم-ينام-ich (ich! — العربية-أنام-بلا-ضمير-ظاهر!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "مصدر-للمتكلم",
+     "de": "~~Ich schlafen um Mitternacht!~~"
+    },
+    "correct": {
+     "ar": "أنام عند منتصف الليل!",
+     "de": "Ich schlafe um Mitternacht!"
+    },
+    "exercise": {
+     "a": "schlafe",
+     "q": "Ich ___ um Mitternacht! (schlafe!)"
+    },
+    "whyArabicSpeakerFails": "المتكلم-أنام-schlafe (schlafe! — العربية-أنام-واحدة-بلا-مصدر-منفصل!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "شخص-بدل-لغة",
+     "de": "~~Am Abend lerne ich Deutscher!~~"
+    },
+    "correct": {
+     "ar": "في المساء أتعلم الألمانية!",
+     "de": "Am Abend lerne ich Deutsch!"
+    },
+    "exercise": {
+     "a": "Deutsch",
+     "q": "Am Abend lerne ich ___! (Deutsch!)"
+    },
+    "whyArabicSpeakerFails": "اللغة-تُتعلم-Deutsch (Deutsch! — العربية-الألمانية-واحدة-للغة-والشخص!) (خريطة التداخل 10‑ي)."
+   }
+  ]
+ }
+}

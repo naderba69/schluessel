@@ -1817,6 +1817,8 @@ def build_all() -> None:
     ("word-luxemburger", "der Luxemburger.", "luxemburger", ["a2-u13-d5"]),
     ("word-luxemburgisch", "luxemburgisch.", "luxemburgisch", ["a2-u13-d5"]),
     ("word-deutsche", "die Deutsche.", "deutsche", ["a2-u13-d5"]),
+    ("word-in-der-nacht", "in der Nacht.", "in-der-nacht", ["a2-u13-d6"]),
+    ("word-um-mitternacht", "um Mitternacht.", "um-mitternacht", ["a2-u13-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
