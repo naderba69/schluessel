@@ -40,7 +40,7 @@
 | 27 | `vb-12` (a1-u8-d5) | «Für meine Mutter — ein Geschenk von mir. Der Ring ist auch vom Markt.» | من أسرع الحوارات: 198.6 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
 | 28 | `zf-9` (a1-u12-d6) | «Und bei mir: Ich darf wieder in die Schule gehen, aber ich soll noch nicht schwimmen.» | من أسرع الحوارات: 197.7 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
 | 29 | `mo-14` (a1-u7-d1) | «Und wann ziehst du dich an?» | من أسرع الحوارات: 197.3 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
-| 30 | `wp-12` (a1-u15-d4) | «Die Jacke ist aus dem Geschäft bei der Bäckerei, und ich habe sie seit zwei Monaten. Die Kette für Oma war vom Markt.» | من أسرع الحوارات: 196.7 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
+| 30 | `a2mt1-h2-d1-l8` (—) | «Am Sonntag bin ich zu Hause. Da koche ich eine Suppe.» | من أسرع الحوارات: 197.3 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
 
 ## بعد الحكم
 

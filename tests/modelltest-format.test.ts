@@ -217,3 +217,57 @@ describe("D109 — المحتوى الحقيقي: a1-modelltest-1 = صيغة Sta
     expect(test.properNouns.length).toBeLessThanOrEqual(20);
   });
 });
+
+describe("D415 — المحتوى الحقيقي: a2-modelltest-1 = صيغة Goethe-Zertifikat A2 بنداً بنداً", () => {
+  const test = Modelltest.parse(read("modelltest/a2-modelltest-1.json"));
+  const fmt = ExamFormat.parse(read("exam-formats/goethe-a2.json"));
+  const parts = (skill: string) => test.sections.find((s) => s.skill === skill)!.parts;
+
+  it("لكل مهارة: المدة وعدد الأجزاء ونوع كل مهمة وعدد بنودها ومرات سماعها = الوثيقة الرسمية", () => {
+    for (const official of fmt.skills) {
+      const ours = test.sections.find((s) => s.skill === official.skill)!;
+      expect(ours.timeBudgetMin, official.skill).toBe(official.minutes);
+      expect(ours.parts.map((p) => p.taskType)).toEqual(official.parts.map((p) => p.kind));
+      official.parts.forEach((op, i) => {
+        if (op.items) expect(ours.parts[i]!.items.length, `${official.skill} ${op.part}`).toBe(op.items);
+        if (op.playCount) expect(ours.parts[i]!.playCount, `${official.skill} ${op.part}`).toBe(op.playCount);
+      });
+    }
+    expect(parts("hoeren").map((p) => p.items.length)).toEqual([5, 5, 5, 5]);
+    expect(parts("lesen").map((p) => p.items.length)).toEqual([5, 5, 5, 5]);
+    expect(test.passingScore).toBe(fmt.passRule.passAt / fmt.passRule.totalPoints);
+  });
+
+  it("مفتاح متوازن: Richtig/Falsch فيه الجوابان · مواضع mc3 موزعة (كلٌّ ≥3) · إجابات المطابقة على الإعلانات كلها", () => {
+    for (const p of [...parts("hoeren"), ...parts("lesen")].filter((x) => x.taskType === "richtig-falsch"))
+      expect(new Set(p.items.map((i) => i.a)), p.id).toEqual(new Set(RF));
+    for (const skill of ["hoeren", "lesen"] as const) {
+      const mc = parts(skill).filter((p) => p.taskType === "mc3").flatMap((p) => p.items);
+      const pos = [0, 1, 2].map((k) => mc.filter((i) => i.choices!.indexOf(i.a) === k).length);
+      expect(Math.min(...pos), skill).toBeGreaterThanOrEqual(3);
+    }
+    expect(new Set(parts("lesen")[3]!.items.map((i) => i.a)).size).toBe(5);
+  });
+
+  it("الاستماع: Teil 1 إعلانات بالمذيع · بقية الأجزاء حوارات بصوتين مختلفين (ذكر وأنثى)", () => {
+    const manifest = AudioManifest.parse(read("manifests/audio-manifest.a1-u1.json"));
+    const kinds = parts("hoeren").map((p) => AudioScript.parse(read(`audio-scripts/${p.audioScriptRef}.json`)));
+    expect(kinds.map((s) => s.kind)).toEqual(["announcement", "dialogue", "dialogue", "dialogue"]);
+    for (const l of kinds[0]!.lines) expect(l.speaker).toBe("announcer");
+    for (const it of parts("hoeren")[2]!.items) {
+      const speakers = new Set(it.audioRefs!.map((id) => kinds[2]!.lines.find((l) => l.id === id)!.speaker));
+      expect(speakers.size, it.q).toBe(2);
+      const voices = new Set([...speakers].map((s) => manifest.characterVoices[s as keyof typeof manifest.characterVoices]));
+      expect(voices.size, `${it.q}: صوتان مختلفان`).toBe(2);
+      expect(voices.has(VOICE_ID_FEMALE)).toBe(true);
+    }
+    const lines = parts("hoeren").map((p) => AudioScript.parse(read(`audio-scripts/${p.audioScriptRef}.json`)).lines.length);
+    expect(lines.reduce((a, b) => a + b, 0)).toBeGreaterThanOrEqual(20);
+  });
+
+  it("الصدق: ملاحظة المصدر تعلن الأصالة وحدود التدريب · أسماء العلم ≤20 وكلها مستعملة", () => {
+    expect(test.sourceNote).toContain("أصلي");
+    expect(test.sourceNote).toContain("ليس امتحاناً رسمياً");
+    expect(test.properNouns.length).toBeLessThanOrEqual(20);
+  });
+});
