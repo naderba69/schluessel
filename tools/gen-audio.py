@@ -1819,6 +1819,19 @@ def build_all() -> None:
     ("word-deutsche", "die Deutsche.", "deutsche", ["a2-u13-d5"]),
     ("word-in-der-nacht", "in der Nacht.", "in-der-nacht", ["a2-u13-d6"]),
     ("word-um-mitternacht", "um Mitternacht.", "um-mitternacht", ["a2-u13-d6"]),
+    ("word-trotzdem", "trotzdem.", "trotzdem", ["b1-u1-d1"]),
+    ("word-rechtzeitig", "rechtzeitig.", "rechtzeitig", ["b1-u1-d1"]),
+    ("word-ausfallen", "ausfallen.", "ausfallen", ["b1-u1-d1"]),
+    ("word-umleitung", "die Umleitung.", "umleitung", ["b1-u1-d1"]),
+    ("word-streik", "der Streik.", "streik", ["b1-u1-d1"]),
+    ("word-stoerung", "die Störung.", "stoerung", ["b1-u1-d1"]),
+    ("word-ursache", "die Ursache.", "ursache", ["b1-u1-d1"]),
+    ("word-melden", "sich melden.", "melden", ["b1-u1-d1"]),
+    ("word-geduld", "die Geduld.", "geduld", ["b1-u1-d1"]),
+    ("word-verstaendnis", "das Verständnis.", "verstaendnis", ["b1-u1-d1"]),
+    ("word-strecke", "die Strecke.", "strecke", ["b1-u1-d1"]),
+    ("word-hoeflich", "höflich.", "hoeflich", ["b1-u1-d1"]),
+    ("word-muehe", "die Mühe.", "muehe", ["b1-u1-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

@@ -216,7 +216,8 @@ describe("الخريطة الهادئة §2.8 (N-149 · D249)", () => {
     const levels = q("map-levels")!.textContent!;
     expect(levels).toContain("A1");
     expect(levels).toContain("░░░░░░░░░░"); // A1: صفر من 90
-    expect(q("map-unpublished-B1")!.textContent).toContain("قيد الإنتاج");
+    expect(q("map-levels")!.textContent).toContain("B1"); // D419: B1 صار له محتوى (b1-u1-d1)!
+    expect(q("map-unpublished-B1")).toBeNull(); // لم يعد «قيد الإنتاج» — شريطه ظاهر كبقية المستويات
     expect(q("map-unpublished-B2")!.textContent).toContain("قيد الإنتاج");
     expect(q("map-unit")!.textContent).toContain("الوحدة 1");
     expect(q("map-unit")!.textContent).toContain("◉○○○○○"); // d1 متاح والباقي مقفل
