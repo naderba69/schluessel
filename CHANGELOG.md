@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-02 — الدفعة 378: D424 — b1-u1-d5 «خلط الروابط» — خريطة المواضع الثلاث! + رمز المدّ الصامت الثاني (N-274)
+اليوم الخامس من B1: 15 كلمة الروابط والحجاج (schließlich · übrigens · zwar · einerseits · andererseits · genauso · insgesamt · Tatsache · behaupten · zusammenfassen · nachdenken · bemerken · sich einigen · Standpunkt · Streit!) + الترسانة `ars-konnektoren` (خريطة المواضع الثلاث: deshalb-تقلب! · denn-لا-تقلب! · obwohl-تؤجّل!) — والمجموعة الكاملة 1639/1639.
+- **البوابة:** vitest ✓ 1639/1639 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 2086/0/0 · build ✓ · docs-sync --check ✓ 238 قراراً مهيكلاً · آخرها D424 · الدفعة 378 · الموجّه 5.80 · notes check ✓ 0/25/249 (274)
+
 ## 2026-11-02 — الدفعة 377: D423 — b1-u1-d4 «إيميل اعتراض مهذب» — Könnten-Sie-التليين! + ثغرة جذوع المودالات (N-273)
 اليوم الرابع من B1: 14 كلمة الإيميل والاعتراض (korrigieren · überprüfen · ersetzen · enttäuschen · beweisen · beanstanden · Garantie · Mangel · Betrag · Zahlung · Anspruch · Eindruck · Enttäuschung · zuverlässig!) + الترسانة `ars-koennten-sie` («Könnten Sie…?» تليين بالفعل نفسه! مقابل Können-Sie المباشرة!) — ونموذج الإيميل الكامل (Anrede → اعتراض → Könnten-Sie → Gruß!) — والمجموعة الكاملة 1639/1639.
 - **البوابة:** vitest ✓ 1639/1639 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 2069/0/0 · build ✓ · docs-sync --check ✓ 237 قراراً مهيكلاً · آخرها D423 · الدفعة 377 · الموجّه 5.79 · notes check ✓ 0/25/248 (273)

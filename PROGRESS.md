@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 378 (2026-11-02) — D424: b1-u1-d5 «خلط الروابط» — خريطة المواضع الثلاث! + رمز المدّ الصامت الثاني (N-274)
+- **الخلاصة:** اليوم الخامس من B1: 15 كلمة الروابط والحجاج (schließlich · übrigens · zwar · einerseits · andererseits · genauso · insgesamt · Tatsache · behaupten · zusammenfassen · nachdenken · bemerken · sich einigen · Standpunkt · Streit!) + الترسانة `ars-konnektoren` (خريطة المواضع الثلاث: deshalb-تقلب! · denn-لا-تقلب! · obwohl-تؤجّل!) — والمجموعة الكاملة 1639/1639.
+- **التالي:** b1-u1-d6 «مراجعة + توليف» (يوم المراجعة الكبير!) + كلمات أخيرة — ثم D7 برهان الوحدة (المعركة!).
+
 ## الدفعة 377 (2026-11-02) — D423: b1-u1-d4 «إيميل اعتراض مهذب» — Könnten-Sie-التليين! + ثغرة جذوع المودالات (N-273)
 - **الخلاصة:** اليوم الرابع من B1: 14 كلمة الإيميل والاعتراض (korrigieren · überprüfen · ersetzen · enttäuschen · beweisen · beanstanden · Garantie · Mangel · Betrag · Zahlung · Anspruch · Eindruck · Enttäuschung · zuverlässig!) + الترسانة `ars-koennten-sie` («Könnten Sie…?» تليين بالفعل نفسه! مقابل Können-Sie المباشرة!) — ونموذج الإيميل الكامل (Anrede → اعتراض → Könnten-Sie → Gruß!) — والمجموعة الكاملة 1639/1639.
 - **التالي:** b1-u1-d5 «خلط الروابط» — كل روابط النص (deshalb/trotzdem/denn/obwohl/nämlich/allerdings في مقاربة واحدة!) + كلمات d5 — ثم d6 (توليف + كلمات أخيرة) · D7 برهان الوحدة.

@@ -1875,6 +1875,21 @@ def build_all() -> None:
     ("word-beanstanden", "beanstanden.", "beanstanden", ["b1-u1-d4"]),
     ("word-enttaeuschung", "die Enttäuschung.", "enttaeuschung", ["b1-u1-d4"]),
     ("word-koennen", "können.", "koennen", ["a1-u10-d5"]),
+    ("word-schliesslich", "schließlich.", "schliesslich", ["b1-u1-d5"]),
+    ("word-uebrigens", "übrigens.", "uebrigens", ["b1-u1-d5"]),
+    ("word-zwar", "zwar.", "zwar", ["b1-u1-d5"]),
+    ("word-tatsache", "die Tatsache.", "tatsache", ["b1-u1-d5"]),
+    ("word-behaupten", "behaupten.", "behaupten", ["b1-u1-d5"]),
+    ("word-zusammenfassen", "zusammenfassen.", "zusammenfassen", ["b1-u1-d5"]),
+    ("word-nachdenken", "nachdenken.", "nachdenken", ["b1-u1-d5"]),
+    ("word-standpunkt", "der Standpunkt.", "standpunkt", ["b1-u1-d5"]),
+    ("word-genauso", "genauso.", "genauso", ["b1-u1-d5"]),
+    ("word-bemerken", "bemerken.", "bemerken", ["b1-u1-d5"]),
+    ("word-insgesamt", "insgesamt.", "insgesamt", ["b1-u1-d5"]),
+    ("word-einigen", "sich einigen.", "einigen", ["b1-u1-d5"]),
+    ("word-streit", "der Streit.", "streit", ["b1-u1-d5"]),
+    ("word-einerseits", "einerseits.", "einerseits", ["b1-u1-d5"]),
+    ("word-andererseits", "andererseits.", "andererseits", ["b1-u1-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
