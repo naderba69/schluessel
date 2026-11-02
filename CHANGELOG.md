@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-02 — الدفعة 376: D421 — b1-u1-d3 «نقاش عمل يبرر موقفاً» — obwohl والفعل آخراً! + كشف ثغرة «Stimmt.» القديمة (N-271)
+اليوم الثالث من B1: 14 كلمة لغة النقاش والتعليل (zustimmen · ablehnen · mitteilen · erledigen · Besprechung · Regel · Zusammenarbeit · nämlich · allerdings · vorschlagen · zuständig · Begründung · absagen · obwohl!) + الترسانة `ars-obwohl` (رغم أن + المصرَّف آخراً! مقابل denn «فالـ» + ثانياً! وweil + آخراً!) — والمجموعة الكاملة 1639/1639.
+- **البوابة:** vitest ✓ 1639/1639 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 2052/0/0 · build ✓ · docs-sync --check ✓ 236 قراراً مهيكلاً · آخرها D421 · الدفعة 376 · الموجّه 5.78 · notes check ✓ 0/25/247 (272)
+
 ## 2026-11-02 — الدفعة 375: D420 — b1-u1-d2 «يصف طريقه بالتفصيل» — TEKAMOLO كامل (Te-Ka-Mo-Lo!) + كشف خلل check-lesson (N-269)
 اليوم الثاني من B1 بوصفة d1 حرفياً: 13 كلمة جديدة (u-bahn · radfahrer · entlang · rueckfahrt · gefahr · kontrolle · steigen · fahrbahn · gegend · umgebung · treten · billett · meinetwegen) + الترسانة `ars-tekamolo-voll` (الترتيب المثالي كاملاً: متى؟ ← لماذا؟ ← كيف؟ ← أين؟!) + 4 محطات + 3 مصائد + Quiz 3×4 — والمجموعة الكاملة 1639/1639 من أول جولة بعد الإصلاحات!
 - **البوابة:** vitest ✓ 1639/1639 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 2035/0/0 · build ✓ · docs-sync --check ✓ 235 قراراً مهيكلاً · آخرها D420 · الدفعة 375 · الموجّه 5.77 · notes check ✓ 0/25/245 (270)

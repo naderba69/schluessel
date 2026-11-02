@@ -1845,6 +1845,21 @@ def build_all() -> None:
     ("word-treten", "treten.", "treten", ["b1-u1-d2"]),
     ("word-billett", "das Billett.", "billett", ["b1-u1-d2"]),
     ("word-meinetwegen", "meinetwegen.", "meinetwegen", ["b1-u1-d2"]),
+    ("word-zustimmen", "zustimmen.", "zustimmen", ["b1-u1-d3"]),
+    ("word-ablehnen", "ablehnen.", "ablehnen", ["b1-u1-d3"]),
+    ("word-mitteilen", "mitteilen.", "mitteilen", ["b1-u1-d3"]),
+    ("word-erledigen", "erledigen.", "erledigen", ["b1-u1-d3"]),
+    ("word-besprechung", "die Besprechung.", "besprechung", ["b1-u1-d3"]),
+    ("word-regel", "die Regel.", "regel", ["b1-u1-d3"]),
+    ("word-zusammenarbeit", "die Zusammenarbeit.", "zusammenarbeit", ["b1-u1-d3"]),
+    ("word-naemlich", "nämlich.", "naemlich", ["b1-u1-d3"]),
+    ("word-allerdings", "allerdings.", "allerdings", ["b1-u1-d3"]),
+    ("word-vorschlagen", "vorschlagen.", "vorschlagen", ["b1-u1-d3"]),
+    ("word-zustaendig", "zuständig.", "zustaendig", ["b1-u1-d3"]),
+    ("word-begruendung", "die Begründung.", "begruendung", ["b1-u1-d3"]),
+    ("word-obwohl", "obwohl.", "obwohl", ["b1-u1-d3"]),
+    ("word-absagen", "absagen.", "absagen", ["b1-u1-d3"]),
+    ("word-stimmt", "Stimmt.", "stimmt", ["a1-u8-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

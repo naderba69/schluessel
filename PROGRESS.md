@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 376 (2026-11-02) — D421: b1-u1-d3 «نقاش عمل يبرر موقفاً» — obwohl والفعل آخراً! + كشف ثغرة «Stimmt.» القديمة (N-271)
+- **الخلاصة:** اليوم الثالث من B1: 14 كلمة لغة النقاش والتعليل (zustimmen · ablehnen · mitteilen · erledigen · Besprechung · Regel · Zusammenarbeit · nämlich · allerdings · vorschlagen · zuständig · Begründung · absagen · obwohl!) + الترسانة `ars-obwohl` (رغم أن + المصرَّف آخراً! مقابل denn «فالـ» + ثانياً! وweil + آخراً!) — والمجموعة الكاملة 1639/1639.
+- **التالي:** b1-u1-d4 «إيميل اعتراض مهذب» — كلمات d4 (mitteilen/allerdings تُراجَعان! + مرشّحو礼貌: Entschuldigung/danach/ausdrücklich?) + أدب الإيميل الألماني (Anrede/Gruß!) — ثم d5 (خلط الروابط) · d6 (توليف + كلمات أخيرة) · D7 برهان الوحدة.
+
 ## الدفعة 375 (2026-11-02) — D420: b1-u1-d2 «يصف طريقه بالتفصيل» — TEKAMOLO كامل (Te-Ka-Mo-Lo!) + كشف خلل check-lesson (N-269)
 - **الخلاصة:** اليوم الثاني من B1 بوصفة d1 حرفياً: 13 كلمة جديدة (u-bahn · radfahrer · entlang · rueckfahrt · gefahr · kontrolle · steigen · fahrbahn · gegend · umgebung · treten · billett · meinetwegen) + الترسانة `ars-tekamolo-voll` (الترتيب المثالي كاملاً: متى؟ ← لماذا؟ ← كيف؟ ← أين؟!) + 4 محطات + 3 مصائد + Quiz 3×4 — والمجموعة الكاملة 1639/1639 من أول جولة بعد الإصلاحات!
 - **التالي:** b1-u1-d3 «نقاش عمل يبرر موقفاً» — كلمات d3 من التنقيب (zustimmen/ablehnen/nämlich/allerdings/mitteilen …) + روابط التبرير (denn · obwohl?) — ثم d4 (إيمل الاعتراض) · d5 (خلط الروابط) · d6 (توليف + كلمات أخيرة) · D7 برهان الوحدة.

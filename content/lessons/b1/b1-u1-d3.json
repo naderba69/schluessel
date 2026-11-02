@@ -1,0 +1,489 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b1-u1-d3",
+ "level": "B1",
+ "unit": 1,
+ "day": 3,
+ "kind": "content",
+ "ziel": {
+  "de": "Ich stimme zu, obwohl die Besprechung lang ist. · Ich lehne das ab, obwohl ich zuständig bin.",
+  "ar": "يوم نقاش العمل: تبرير الموقف! رغم أن (obwohl!) والفعل آخراً! والتعليل: denn «فالـ» والفعل ثانياً!"
+ },
+ "canDoDaily": [
+  "يبرّر موقفه في نقاش العمل بـobwohl (رغم أن! + فعل آخراً!) وdenn (فالـ! + فعل ثانياً!)",
+  "يستخدم nämlich/allerdings/vorschlagen في نقاش طبيعي!"
+ ],
+ "warmup": {
+  "cardIds": [
+   "deshalb",
+   "trotzdem",
+   "verstaendnis"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "ar": "«يقترح» — كيف تقول بالألمانية؟"
+    },
+    "choices": [
+     "vorschlagen",
+     "ablehnen",
+     "zustimmen"
+    ],
+    "answer": "vorschlagen",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "ar": "«الاجتماع» — كيف تقول؟"
+    },
+    "choices": [
+     "die Besprechung",
+     "die Begründung",
+     "die Zusammenarbeit"
+    ],
+    "answer": "die Besprechung",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "من d1: deshalb «لذلك»! trotzdem «رغم ذلك»! — واليوم نبرّر موقفنا في نقاش العمل!",
+   "من d2: «متى؟ لماذا؟ كيف؟ أين؟» بالترتيب! — واليوم نضيف «رغم أن» (obwohl!) و«فالـ» (denn!) ونعلّل!"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "zustimmen",
+   "ablehnen",
+   "mitteilen",
+   "erledigen",
+   "besprechung",
+   "regel",
+   "zusammenarbeit",
+   "naemlich",
+   "allerdings",
+   "vorschlagen",
+   "zustaendig",
+   "begruendung",
+   "absagen",
+   "obwohl"
+  ],
+  "borrowedWords": [],
+  "grammarArsenalIds": [
+   "ars-obwohl"
+  ],
+  "storySentenceIds": [],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "v2-order"
+  ]
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "de": "Ich stimme zu, obwohl die Besprechung lang ist.",
+    "ar": "يبرّر موقفه في نقاش العمل — رغم أن + التعليل!"
+   },
+   "situation": {
+    "de": "In der Besprechung: Warum stimmst du zu oder lehnst du ab?",
+    "ar": "في الاجتماع: لماذا توافق أو ترفض؟"
+   },
+   "successCriteria": [
+    "يبرّر بـ8 جمل (obwohl! + denn! + Begründung! + nämlich! + allerdings! + vorschlagen! + erledigen! + Zusammenarbeit!)",
+    "يستخدم الجديد (14 كلمة! + obwohl بفعل آخراً!)",
+    "يفرّق (obwohl-آخراً! ≠ denn-ثانياً! ≠ weil-آخراً!) ويسترجع (deshalb/trotzdem من d1! + TEKAMOLO من d2!)"
+   ]
+  },
+  "stations": [
+   {
+    "type": "match",
+    "explanationRequired": true,
+    "hints": [
+     "الأسماء مع أدواتها: die! / der! / das!",
+     "المفردات الجديدة أولاً ثم المألوفة"
+    ],
+    "interleavedWith": [
+     "trotzdem",
+     "deshalb",
+     "verstaendnis"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "يُوافق (على)",
+        "de": "zustimmen"
+       },
+       {
+        "ar": "يرفض",
+        "de": "ablehnen"
+       },
+       {
+        "ar": "يُبلِّغ",
+        "de": "mitteilen"
+       },
+       {
+        "ar": "ينهِي / يُنجز",
+        "de": "erledigen"
+       },
+       {
+        "ar": "اجتماع",
+        "de": "die Besprechung"
+       }
+      ],
+      "why": "اليوم-الجديد-الأول: zustimmen يوافق (stimmt zu! trennbar!) · ablehnen يرفض (lehnt ab!) · mitteilen يبلِّغ (teilt mit!) · erledigen ينجز · Besprechung اجتماع (die!) · vorschlagen يقترح (schlägt vor!) · obwohl رغم-أن (فعل آخراً!)"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "يقترح",
+        "de": "vorschlagen"
+       },
+       {
+        "ar": "رغم أنّ",
+        "de": "obwohl"
+       },
+       {
+        "ar": "قاعدة",
+        "de": "die Regel"
+       },
+       {
+        "ar": "التعاون",
+        "de": "die Zusammenarbeit"
+       },
+       {
+        "ar": "أي / وذلك لأنّ",
+        "de": "nämlich"
+       }
+      ],
+      "why": "vorschlagen يقترح (schlägt vor! trennbar!) · obwohl رغم-أن (فعل آخراً!) · Regel قاعدة (die! + Regeln!) · Zusammenarbeit التعاون (die!) · nämlich أي/وذلك-لأن (ظرف! + V2!)"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "صحيح لكن",
+        "de": "allerdings"
+       },
+       {
+        "ar": "مُختصّ / المسؤول عن",
+        "de": "zuständig"
+       },
+       {
+        "ar": "التبرير / الحجّة",
+        "de": "die Begründung"
+       },
+       {
+        "ar": "يُلغي (الموعد)",
+        "de": "absagen"
+       }
+      ],
+      "why": "allerdings صحيح-لكن · zuständig مسؤول-عن (dafür zuständig!) · Begründung التبرير (die! + Begründungen!) · absagen يلغي (sagt ab! trennbar!)"
+     }
+    ]
+   },
+   {
+    "type": "gap-fill",
+    "explanationRequired": true,
+    "hints": [
+     "obwohl: المصرَّف آخراً!",
+     "الفعل المنفصل: البادئة بعد الفاعل!",
+     "التمييز: obwohl-آخراً ≠ denn-ثانياً"
+    ],
+    "interleavedWith": [
+     "kommen",
+     "arbeiten",
+     "zug"
+    ],
+    "items": [
+     {
+      "q": "Ich stimme zu, obwohl die Besprechung lang ___.",
+      "a": "ist",
+      "why": "obwohl تؤجّل المصرَّف آخراً! — «obwohl die Besprechung lang ist» — مثل weil!"
+     },
+     {
+      "q": "Ich lehne das ab, obwohl ich eine Begründung ___.",
+      "a": "habe",
+      "why": "الجملة التابعة: المصرَّف آخراً! — «obwohl ich eine Begründung habe» — لا «obwohl ich habe»!"
+     },
+     {
+      "q": "Ich ___ das ab. (أرفض!)",
+      "a": "lehne",
+      "why": "الفعل المنفصل: البادئة ab آخراً! — «Ich lehne das ab» — لا «Ich ablehne das»!"
+     },
+     {
+      "q": "Ich stimme zu, denn ich ___ eine Begründung. (لديّ!)",
+      "a": "habe",
+      "why": "denn «فالـ» تفتح جملة مستقلة: الفعل ثانياً! — «denn ich habe» — بخلاف weil (آخراً!)"
+     },
+     {
+      "q": "Nämlich ___ die U-Bahn heute Verspätung.",
+      "a": "hat",
+      "why": "nämlich «وذلك لأن» تُبقي الفعل ثانياً: «nämlich hat die U-Bahn …» — مثل deshalb!"
+     },
+     {
+      "q": "Ich stimme zu, ___ nur heute.",
+      "a": "allerdings",
+      "why": "allerdings «صحيح لكن» — الظرف بعد الفعل: «stimme zu, allerdings nur heute»!"
+     }
+    ]
+   },
+   {
+    "type": "error-hunt",
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ في موقع الفعل أو في الرابط الزائد",
+     "obwohl: المصرَّف آخراً!",
+     "لا aber مع obwohl!"
+    ],
+    "interleavedWith": [
+     "trotzdem",
+     "kennen",
+     "danke"
+    ],
+    "items": [
+     {
+      "q": "~~Obwohl die Besprechung ist lang, stimme ich zu.~~",
+      "a": "Obwohl die Besprechung lang ist, stimme ich zu.",
+      "why": "obwohl تؤجّل المصرَّف آخراً! — «die Besprechung lang ist» — لا «ist lang»!"
+     },
+     {
+      "q": "~~Ich lehne das ab, obwohl ich habe eine Begründung.~~",
+      "a": "Ich lehne das ab, obwohl ich eine Begründung habe.",
+      "why": "مثل weil! المصرَّف آخراً في جملة obwohl: «eine Begründung habe»!"
+     },
+     {
+      "q": "~~Ich stimme zu, weil ich habe eine Begründung.~~",
+      "a": "Ich stimme zu, weil ich eine Begründung habe. / Ich stimme zu, denn ich habe eine Begründung.",
+      "why": "weil تؤجّل المصرَّف آخراً! وdenn تُبقيه ثانياً! — لا تخلط: «weil … habe» أو «denn ich habe» — لا «weil ich habe»!"
+     }
+    ]
+   },
+   {
+    "type": "speaking",
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بموقفك (Ich stimme zu! / Ich lehne das ab!) وعلّل (denn! + obwohl!)",
+     "8 جمل: موقف! + Begründung! + obwohl! + vorschlagen! + allerdings! + nämlich! + mitteilen! + erledigen!"
+    ],
+    "interleavedWith": [
+     "chef",
+     "arbeit",
+     "entschuldigung"
+    ],
+    "items": [
+     {
+      "q": "احكِ في الاجتماع (سجّل): 8 جمل — موقفك! + تبريرك! + obwohl! + اقتراحك! + allerdings! + nämlich! + تُبلِّغ! + تُنجز!",
+      "a": "Ich stimme zu, obwohl die Besprechung lang ist. Ich habe eine Begründung: Die Regel ist wichtig. Ich schlage das vor. Allerdings ist die Zeit heute kurz. Ich lehne das ab, denn ich habe eine Begründung. Nämlich ist die Zusammenarbeit wichtig. Ich teile das dem Team mit. Das erledige ich heute.",
+      "why": "نقاش العمل (B1): موقف + تبرير! + obwohl (الرغم!) + denn (التعليل!) + nämlich (التفصيل!) + allerdings (الاستثناء!) — 8 جمل تُقنع زميلك!"
+     }
+    ]
+   }
+  ]
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«أوافق رغم أن الاجتماع طويل.»؟",
+      "a": "Ich stimme zu, obwohl die Besprechung lang ist."
+     },
+     {
+      "q": "«يرفض»؟",
+      "a": "ablehnen"
+     },
+     {
+      "q": "«صحيح لكن»؟",
+      "a": "allerdings"
+     },
+     {
+      "q": "«هذا تبريري.»؟",
+      "a": "Das ist meine Begründung."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«أنا المسؤول عن ذلك.»؟",
+      "a": "Ich bin dafür zuständig."
+     },
+     {
+      "q": "«أقترح ذلك.»؟",
+      "a": "Ich schlage das vor."
+     },
+     {
+      "q": "«أي — التعاون مهم.»؟",
+      "a": "Nämlich ist die Zusammenarbeit wichtig."
+     },
+     {
+      "q": "«سأنجز ذلك اليوم.»؟",
+      "a": "Das erledige ich heute."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«أُعلمك بها.»؟",
+      "a": "Ich teile es dir mit."
+     },
+     {
+      "q": "«أوافق، لكن اليوم فحسب.»؟",
+      "a": "Ich stimme zu, allerdings nur heute."
+     },
+     {
+      "q": "«هذه هي القاعدة.»؟",
+      "a": "Das ist die Regel."
+     },
+     {
+      "q": "«أرفض ذلك رغم أنني المسؤول.»؟",
+      "a": "Ich lehne das ab, obwohl ich zuständig bin."
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Ich stimme zu, obwohl die Besprechung lang ist. Ich habe eine Begründung: Die Regel ist wichtig. Ich schlage das vor. Allerdings ist die Zeit heute kurz. Ich lehne das ab, denn ich habe eine Begründung. Nämlich ist die Zusammenarbeit wichtig. Ich teile das dem Team mit. Das erledige ich heute.",
+   "ar": "يوم نقاش العمل: أوافق رغم أن الاجتماع طويل. لديّ تبرير: القاعدة مهمة. أقترح ذلك. صحيح لكن الوقت اليوم قصير. أرفض ذلك، فالعندي حجة. أي أن التعاون مهم. أُعلم الفريق بذلك. أُنجز ذلك اليوم."
+  },
+  "srsBundleWordIds": [
+   "zustimmen",
+   "ablehnen",
+   "mitteilen",
+   "erledigen",
+   "besprechung",
+   "regel",
+   "zusammenarbeit",
+   "naemlich",
+   "allerdings",
+   "vorschlagen",
+   "zustaendig",
+   "begruendung",
+   "absagen",
+   "obwohl"
+  ],
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "الفعل-وسط-جملة-obwohl",
+     "de": "~~Obwohl die Besprechung ist lang …~~"
+    },
+    "correct": {
+     "ar": "رغم أن الاجتماع طويل.",
+     "de": "Obwohl die Besprechung lang ist …"
+    },
+    "exercise": {
+     "q": "Obwohl die Besprechung lang ___. (ist!)",
+     "a": "ist"
+    },
+    "whyArabicSpeakerFails": "«رغم أن الاجتماع طويل»-العربية-جملة-اسمية-بلا-فعل — فيُنسى الفعل الألماني آخراً: obwohl … lang ist! (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "obwohl-مع-aber",
+     "de": "~~Obwohl die Besprechung lang ist, aber stimme ich zu.~~"
+    },
+    "correct": {
+     "ar": "رغم أن الاجتماع طويل، أوافق.",
+     "de": "Obwohl die Besprechung lang ist, stimme ich zu."
+    },
+    "exercise": {
+     "q": "Obwohl die Besprechung lang ist, ___ ich zu. (stimme!)",
+     "a": "stimme"
+    },
+    "whyArabicSpeakerFails": "العربية تجمع «وإن» مع «لكن»! والألمانية: obwohl واحدة كافية — لا aber معها أبداً! (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "weil-بفعل-ثانياً",
+     "de": "~~Ich stimme zu, weil ich habe eine Begründung.~~"
+    },
+    "correct": {
+     "ar": "أوافق، لأن لديّ حجة.",
+     "de": "Ich stimme zu, weil ich eine Begründung habe."
+    },
+    "exercise": {
+     "q": "Ich stimme zu, weil ich eine Begründung ___. (habe!)",
+     "a": "habe"
+    },
+    "whyArabicSpeakerFails": "«لأن عندي حجة»-العربية-فعلها-وسط-الجملة — والألمانية: weil تؤجّل المصرَّف آخراً (مثل obwohl!) بخلاف denn (ثانياً!) — الخلط يُسقط الجملة! (خريطة التداخل 10‑ي)."
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/zustimmen",
+   "https://www.duden.de/rechtschreibung/ablehnen",
+   "https://www.duden.de/rechtschreibung/mitteilen",
+   "https://www.duden.de/rechtschreibung/erledigen",
+   "https://www.duden.de/rechtschreibung/Besprechung",
+   "https://www.duden.de/rechtschreibung/Regel",
+   "https://www.duden.de/rechtschreibung/Zusammenarbeit",
+   "https://www.duden.de/rechtschreibung/naemlich",
+   "https://www.duden.de/rechtschreibung/allerdings",
+   "https://www.duden.de/rechtschreibung/vorschlagen",
+   "https://www.duden.de/rechtschreibung/zustaendig",
+   "https://www.duden.de/rechtschreibung/Begruendung",
+   "https://www.duden.de/rechtschreibung/absagen",
+   "https://www.duden.de/rechtschreibung/obwohl"
+  ],
+  "wiktionary": [],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/materialien/Goethe-Zertifikat_B1_Wortlist"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-obwohl",
+  "ars-weil-satz",
+  "ars-deshalb-trotzdem"
+ ],
+ "audioManifestRefs": [
+  "word-zustimmen",
+  "word-ablehnen",
+  "word-mitteilen",
+  "word-erledigen",
+  "word-besprechung",
+  "word-regel",
+  "word-zusammenarbeit",
+  "word-naemlich",
+  "word-allerdings",
+  "word-vorschlagen",
+  "word-zustaendig",
+  "word-begruendung",
+  "word-absagen",
+  "word-obwohl"
+ ],
+ "imageManifestRefs": [],
+ "curriculumRef": {
+  "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوصول للعمل)",
+  "goetheWordListOverlap": [
+   "zustimmen",
+   "ablehnen",
+   "mitteilen",
+   "erledigen",
+   "besprechung",
+   "regel",
+   "zusammenarbeit",
+   "naemlich",
+   "allerdings",
+   "vorschlagen",
+   "zustaendig",
+   "begruendung",
+   "absagen",
+   "obwohl"
+  ]
+ }
+}
