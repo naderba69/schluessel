@@ -1832,6 +1832,19 @@ def build_all() -> None:
     ("word-strecke", "die Strecke.", "strecke", ["b1-u1-d1"]),
     ("word-hoeflich", "höflich.", "hoeflich", ["b1-u1-d1"]),
     ("word-muehe", "die Mühe.", "muehe", ["b1-u1-d1"]),
+    ("word-u-bahn", "die U-Bahn.", "u-bahn", ["b1-u1-d2"]),
+    ("word-radfahrer", "der Radfahrer.", "radfahrer", ["b1-u1-d2"]),
+    ("word-entlang", "entlang.", "entlang", ["b1-u1-d2"]),
+    ("word-rueckfahrt", "die Rückfahrt.", "rueckfahrt", ["b1-u1-d2"]),
+    ("word-gefahr", "die Gefahr.", "gefahr", ["b1-u1-d2"]),
+    ("word-kontrolle", "die Kontrolle.", "kontrolle", ["b1-u1-d2"]),
+    ("word-steigen", "steigen.", "steigen", ["b1-u1-d2"]),
+    ("word-fahrbahn", "die Fahrbahn.", "fahrbahn", ["b1-u1-d2"]),
+    ("word-gegend", "die Gegend.", "gegend", ["b1-u1-d2"]),
+    ("word-umgebung", "die Umgebung.", "umgebung", ["b1-u1-d2"]),
+    ("word-treten", "treten.", "treten", ["b1-u1-d2"]),
+    ("word-billett", "das Billett.", "billett", ["b1-u1-d2"]),
+    ("word-meinetwegen", "meinetwegen.", "meinetwegen", ["b1-u1-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

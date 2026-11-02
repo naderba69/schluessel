@@ -85,7 +85,7 @@ for (const [src, f] of [["SD1", resolve(CACHE, "sd1.txt")], ["A2", resolve(CACHE
 let lines: string[];
 const file = opt("file");
 if (file) lines = readFileSync(file, "utf8").split("\n").map((l) => l.split("|")[0]!.trim()).filter(Boolean);
-else lines = lessonGermanStrings(JSON.parse(readFileSync(resolve(CONTENT, "lessons/a1", `${lessonId}.json`), "utf8")));
+else lines = lessonGermanStrings(JSON.parse(readFileSync(resolve(CONTENT, "lessons", lessonId.split("-")[0]!, `${lessonId}.json`), "utf8")));
 if (flag("script")) {
   const dir = resolve(CONTENT, "audio-scripts");
   for (const f of readdirSync(dir)) {

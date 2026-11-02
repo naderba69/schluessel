@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 375 (2026-11-02) — D420: b1-u1-d2 «يصف طريقه بالتفصيل» — TEKAMOLO كامل (Te-Ka-Mo-Lo!) + كشف خلل check-lesson (N-269)
+- **الخلاصة:** اليوم الثاني من B1 بوصفة d1 حرفياً: 13 كلمة جديدة (u-bahn · radfahrer · entlang · rueckfahrt · gefahr · kontrolle · steigen · fahrbahn · gegend · umgebung · treten · billett · meinetwegen) + الترسانة `ars-tekamolo-voll` (الترتيب المثالي كاملاً: متى؟ ← لماذا؟ ← كيف؟ ← أين؟!) + 4 محطات + 3 مصائد + Quiz 3×4 — والمجموعة الكاملة 1639/1639 من أول جولة بعد الإصلاحات!
+- **التالي:** b1-u1-d3 «نقاش عمل يبرر موقفاً» — كلمات d3 من التنقيب (zustimmen/ablehnen/nämlich/allerdings/mitteilen …) + روابط التبرير (denn · obwohl?) — ثم d4 (إيمل الاعتراض) · d5 (خلط الروابط) · d6 (توليف + كلمات أخيرة) · D7 برهان الوحدة.
+
 ## الدفعة 374 (2026-10-31) — D419: b1-u1-d1 «يتحجّج بالتأخير بلباقة» — أول درس B1 فعلي! (13 كلمة + ars-deshalb-trotzdem + تصحيحا نطق)
 - **الخلاصة:** أول درس في فازة B1 كاملاً بالوصفة: 13 كلمة من قائمة B1 (كلها بدليلها! +13 تغطية!) + ترسانة جديدة `ars-deshalb-trotzdem` (deshalb/trotzdem والفعل ثانياً V2!) + 4 محطات (match · gap-fill · error-hunt · speaking) + 3 مصائد على خريطة التداخل + Quiz 3×4 — والمدقِّق صامت من أول جولة (front 0/later 0/official 0 — 61 سطراً)!
 - **التالي:** b1-u1-d2 «يصف طريقه بالتفصيل» — TEKAMOLO كامل (§8!) · ~13 كلمة (Strecke/Arbeitsweg مُنجزة — مرشّحو d2: Fahrzeit/unterwegs/الاسترجاع!) — ثم d3..d6 وبرهان الوحدة D7.
