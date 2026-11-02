@@ -1022,7 +1022,7 @@ describe("D115 — أدوات القياس", () => {
     // النواة D113 (lieben) بالمولِّد · وأمثلة البطاقات القديمة الأربعة صُحّحت إلى الجبهة (Berlin · Omar · Rex · unser · schläft)
     expect(l.praesentation.wordIds).toContain("lieben");
     const lieben = words.find((w) => w.id === "lieben")!;
-    expect([lieben.forms?.praesens3s, lieben.goetheList, lieben.sampleSentence?.de]).toEqual(["liebt", ["A1", "A2"], "Ich liebe meine Familie."]);
+    expect([lieben.forms?.praesens3s, lieben.goetheList, lieben.sampleSentence?.de]).toEqual(["liebt", ["A1", "A2", "B1"], "Ich liebe meine Familie."]);
     const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
     expect(["tante", "onkel", "hund", "katze"].map(sample).join(" ")).not.toMatch(/Berlin|Omar|Rex|Unser|schläft/);
     expect(l.warmup.cardIds).toEqual(["bruder", "mutter", "kind"]);
@@ -1076,9 +1076,9 @@ describe("D115 — أدوات القياس", () => {
     // النواة D113 (beide · die Lösung) بالمولِّد · وأمثلة البطاقات القديمة صُحّحت: hängt/Wand · siehst · Genitiv «meiner Familie» · نصا SD1/A2 الحرفيان
     expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["beide", "loesung"]));
     const loesung = words.find((w) => w.id === "loesung")!;
-    expect([loesung.de, loesung.plural, loesung.goetheList, loesung.sampleSentence?.de]).toEqual(["die Lösung", "die Lösungen", ["A1", "A2"], "Weißt du die Lösung?"]);
+    expect([loesung.de, loesung.plural, loesung.goetheList, loesung.sampleSentence?.de]).toEqual(["die Lösung", "die Lösungen", ["A1", "A2", "B1"], "Weißt du die Lösung?"]);
     const beide = words.find((w) => w.id === "beide")!;
-    expect([beide.wordClass, beide.goetheList, beide.sampleSentence?.de]).toEqual(["pronoun", ["A1", "A2"], "Wir sind beide neu hier."]);
+    expect([beide.wordClass, beide.goetheList, beide.sampleSentence?.de]).toEqual(["pronoun", ["A1", "A2", "B1"], "Wir sind beide neu hier."]);
     const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
     expect(["bild", "foto", "haar", "wen", "schoen"].map(sample).join(" ")).not.toMatch(/hängt|Wand|meiner|siehst|lange Haare|Bild ist sehr schön|schönes/);
     expect(l.warmup.cardIds).toEqual(["hund", "katze", "auto"]);
@@ -1143,7 +1143,7 @@ describe("D115 — أدوات القياس", () => {
     const bekannte = words.find((w) => w.id === "bekannte")!;
     expect([bekannte.de, bekannte.plural, bekannte.goetheList, bekannte.grammarRisks]).toEqual(["die Bekannte", "die Bekannten", ["A1", "A2"], ["adjective-decl", "needs-ein"]]);
     const tot = words.find((w) => w.id === "tot")!;
-    expect([tot.wordClass, tot.goetheList]).toEqual(["adjective", ["A1", "A2"]]);
+    expect([tot.wordClass, tot.goetheList]).toEqual(["adjective", ["A1", "A2", "B1"]]);
     // أمثلة البطاقات القديمة: Stuhl/auf dem (Dativ) · Zeig mir (أمر + Dativ) · meiner (Dativ) · «Wir sind gemeinsam» (غير اصطلاحية)
     const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
     expect(["zeigen", "sitzen", "laecheln", "neben", "gemeinsam"].map(sample).join(" ")).not.toMatch(/Stuhl|auf dem|Zeig mir|meiner|sind gemeinsam/);
@@ -1208,7 +1208,7 @@ describe("D115 — أدوات القياس", () => {
     const ihr = words.find((w) => w.id === "ihr")!;
     expect([ihr.de, ihr.wordClass, ihr.isFunctionWord, ihr.sampleSentence?.de]).toEqual(["ihr (ملكيتها)", "pronoun", true, "Ihr Mann ist Lehrer."]);
     const glueck = words.find((w) => w.id === "glueck")!;
-    expect([glueck.de, glueck.plural, glueck.goetheList]).toEqual(["das Glück", undefined, ["A1", "A2"]]);
+    expect([glueck.de, glueck.plural, glueck.goetheList]).toEqual(["das Glück", undefined, ["A1", "A2", "B1"]]);
     expect(tracks.get("word-ihr")?.textDe).toBe("ihr.");
     // kurz مُدرَّسة في a1-u2-d4 (D128) ⇒ لم تعد «جديدة» هنا (N-018) وتبقى استرجاعاً في التدريب
     expect(l.praesentation.wordIds).not.toContain("kurz");
@@ -1578,7 +1578,7 @@ describe("D115 — أدوات القياس", () => {
     expect([sample("datum"), sample("einladung"), sample("lieb"), sample("moment"), sample("enden")]).toEqual(["Das Datum steht im Kalender.", "Die Einladung ist für Samstag.", "Liebe Oma, ich komme am Sonntag!", "Hast du einen Moment Zeit?", "Der Kurs endet um zwölf."]);
     expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|wichtig/);
     for (const id of ["datum", "einladung", "lieb", "moment", "enden"]) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u10-d2");
-    for (const id of ["lieb", "moment", "enden"]) expect(w(id).goetheList).toEqual(["A1", "A2"]);
+    for (const id of ["lieb", "moment", "enden"]) expect(w(id).goetheList).toEqual(["A1", "A2", "B1"]);
     expect(w("absage").goetheList).toEqual([]); // ليست في قائمة SD1 — تبقى [] (D110: لا تُكتب يدوياً)
     // الحوار (za-1..20) مكالمة فيديو في اليوم الرابع بتونس (N-037/N-100): الخميس 2 أبريل · الدورة تنتهي 17 · يوسف يعود 12 · عيد لينا 18 (سبت) في المطعم — لا لقاء في مكان واحد
     const script = JSON.parse(readFileSync(join(CONTENT, "audio-scripts/a1-u10-d2-der-zweite-april.json"), "utf8")) as { lines: { id: string; speaker: string; text: string }[] };
@@ -1681,7 +1681,7 @@ describe("D115 — أدوات القياس", () => {
     ]);
     expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|Pizza|Arzt|gearbeiten/);
     for (const id of ["gestern", "vorgestern", "letzt", "fragen", "paket", "denken", "frueher", "gewinnen"]) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u10-d3");
-    for (const id of ["frueher", "gewinnen"]) expect(w(id).goetheList).toEqual(["A1", "A2"]);
+    for (const id of ["frueher", "gewinnen"]) expect(w(id).goetheList).toEqual(["A1", "A2", "B1"]);
     expect(w("frueher").wordFamily).toEqual(["frueh"]);
     expect(w("gewinnen").forms).toMatchObject({ praesens3s: "gewinnt", perfekt: "hat gewonnen" });
     // الحوار (wg-1..20) مكالمة فيديو في اليوم الخامس بتونس (N-037/N-100): الجمعة 3 أبريل · «Was hast du gestern gemacht?» — لا sein-Perfekt ولا war/hatte ولا gehabt ولا كلمات غير مدروسة
@@ -1763,7 +1763,7 @@ describe("D115 — أدوات القياس", () => {
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(l.praesentation.wordIds).toEqual(["landschaft", "natur", "see", "berg", "meer", "strand", "insel", "fluss", "wald", "andenken", "fotografieren", "postkarte", "thema"]);
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("thema").de, w("thema").gender, w("thema").plural, w("thema").goetheList, w("thema").grammarRisks, w("thema").srsCardTypes, w("thema").usedInLessons]).toEqual(["das Thema", "das", "die Themen", ["A1", "A2"], ["needs-ein"], ["production", "comprehension", "gender"], ["a1-u12-d5"]]);
+    expect([w("thema").de, w("thema").gender, w("thema").plural, w("thema").goetheList, w("thema").grammarRisks, w("thema").srsCardTypes, w("thema").usedInLessons]).toEqual(["das Thema", "das", "die Themen", ["A1", "A2", "B1"], ["needs-ein"], ["production", "comprehension", "gender"], ["a1-u12-d5"]]);
     // قرار نطاق D180: لا ملف جديد — ‑ieren بلا ge مذكورة في ars-zeitangaben (u10-d4) والماضي المركّب في ars-perfekt (u11-d3) — مرجعا الدرس القديم نفسهما
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-perfekt", "ars-zeitangaben"]);
     expect(l.usedArsenalIds).toEqual(["ars-perfekt", "ars-zeitangaben"]);
@@ -1877,9 +1877,9 @@ describe("D115 — أدوات القياس", () => {
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(l.praesentation.wordIds).toEqual(["denn", "sondern", "deswegen", "leider", "vielleicht", "dann", "zuletzt", "beispiel", "meinung", "vorschlag", "idee", "plan", "zum-beispiel", "satz", "glauben"]);
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("zum-beispiel").de, w("zum-beispiel").wordClass, w("zum-beispiel").chunk, w("zum-beispiel").goetheList, w("zum-beispiel").srsCardTypes]).toEqual(["zum Beispiel", "chunk", true, ["A1", "A2"], ["production", "comprehension", "audio", "chunk"]]);
-    expect([w("satz").de, w("satz").plural, w("satz").goetheList, w("satz").grammarRisks]).toEqual(["der Satz", "die Sätze", ["A1", "A2"], ["needs-ein", "plural-irregular"]]);
-    expect([w("glauben").de, w("glauben").forms, w("glauben").goetheList]).toEqual(["glauben", { praesens3s: "glaubt", perfekt: "hat geglaubt" }, ["A1", "A2"]]);
+    expect([w("zum-beispiel").de, w("zum-beispiel").wordClass, w("zum-beispiel").chunk, w("zum-beispiel").goetheList, w("zum-beispiel").srsCardTypes]).toEqual(["zum Beispiel", "chunk", true, ["A1", "A2", "B1"], ["production", "comprehension", "audio", "chunk"]]);
+    expect([w("satz").de, w("satz").plural, w("satz").goetheList, w("satz").grammarRisks]).toEqual(["der Satz", "die Sätze", ["A1", "A2", "B1"], ["needs-ein", "plural-irregular"]]);
+    expect([w("glauben").de, w("glauben").forms, w("glauben").goetheList]).toEqual(["glauben", { praesens3s: "glaubt", perfekt: "hat geglaubt" }, ["A1", "A2", "B1"]]);
     for (const id of ["zum-beispiel", "satz", "glauben"]) expect(w(id).usedInLessons).toEqual(["a1-u12-d4"]);
     // قرار نطاق D179: لا ملف جديد — denn/deswegen/sondern والظرف أولاً تطبيقٌ لقوس الجملة الرئيسية (ars-satzklammer — u9-d5) مقابل weil (ars-weil-satz — u10-d5 التي وعدت بـdenn في u12-d4)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-weil-satz", "ars-satzklammer"]);
@@ -2113,9 +2113,9 @@ describe("D115 — أدوات القياس", () => {
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(l.praesentation.wordIds).toEqual(["gleis", "rezeption", "doppelzimmer", "einzelzimmer", "aussicht", "bad", "buchen", "empfang", "halle", "verspaetung", "verpassen", "zurueckgeben", "blick", "internet", "information"]);
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("blick").de, w("blick").plural, w("blick").goetheList, w("blick").grammarRisks]).toEqual(["der Blick", "die Blicke", ["A1"], ["feste-praep", "needs-ein"]]);
-    expect([w("internet").de, w("internet").plural, w("internet").goetheList]).toEqual(["das Internet", undefined, ["A1", "A2"]]); // في قائمتي SD1 وA2 (D110 — مشتقة لا مكتوبة)
-    expect([w("information").de, w("information").plural, w("information").goetheList]).toEqual(["die Information", "die Informationen", ["A1", "A2"]]);
+    expect([w("blick").de, w("blick").plural, w("blick").goetheList, w("blick").grammarRisks]).toEqual(["der Blick", "die Blicke", ["A1", "B1"], ["feste-praep", "needs-ein"]]);
+    expect([w("internet").de, w("internet").plural, w("internet").goetheList]).toEqual(["das Internet", undefined, ["A1", "A2", "B1"]]); // في قائمتي SD1 وA2 (D110 — مشتقة لا مكتوبة)
+    expect([w("information").de, w("information").plural, w("information").goetheList]).toEqual(["die Information", "die Informationen", ["A1", "A2", "B1"]]);
     for (const id of ["blick", "internet", "information"]) expect(w(id).usedInLessons).toEqual(["a1-u12-d2"]);
     // قرار D177 (N-117 مؤقتاً): ars-trennbar بلا ملف ⇒ ars-trennbare (الأمر Steh auf! وبعد möchte) + ars-modal-fix القائمة — لا ملف جديد
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-trennbare", "ars-modal-fix"]);
@@ -2317,7 +2317,7 @@ describe("D115 — أدوات القياس", () => {
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(l.praesentation.wordIds).toEqual(["patient", "hausarzt", "spezialist", "notaufnahme", "krankenwagen", "unfall", "schnupfen", "zahnschmerz", "bauchschmerz", "schmerzen", "tropfen", "salbe", "ergebnis"]);
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect(w("ergebnis")).toMatchObject({ de: "das Ergebnis", plural: "die Ergebnisse", goetheList: ["A1"], usedInLessons: ["a1-u11-d5"] });
+    expect(w("ergebnis")).toMatchObject({ de: "das Ergebnis", plural: "die Ergebnisse", goetheList: ["A1", "B1"], usedInLessons: ["a1-u11-d5"] });
     expect(w("ergebnis").sampleSentence?.de).toBe("Das Ergebnis ist gut: nur eine Erkältung.");
     expect(l.audioManifestRefs).toContain("word-ergebnis");
     // القاعدة الجديدة ars-modal-fix: كانت بلا ملف ومُشار إليها من أربعة دروس (u11-d5 · u11-d6 · u12-d2 · u12-d6) — تضيف dürfen وsollen (أُجّلتا في ars-koennen-muessen «لاحقاً») وتجمع الخمسة
@@ -2673,7 +2673,7 @@ describe("D115 — أدوات القياس", () => {
     ]);
     expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|stark|bleib|lieg|fühl|Ich muss zum Arzt\.|Was fehlt Ihnen\?/);
     for (const id of l.praesentation.wordIds) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u11-d2");
-    expect(w("fehlen").goetheList).toEqual(["A1", "A2"]);
+    expect(w("fehlen").goetheList).toEqual(["A1", "A2", "B1"]);
     expect(w("fehlen").forms).toMatchObject({ praesens3s: "fehlt", perfekt: "hat gefehlt" });
     expect(w("fehlen").grammarRisks).toEqual(["dative-verb"]);
     // الحوار (ka-1..20) مكالمة فيديو مساء اليوم التاسع بتونس (N-037/N-100): الثلاثاء 7 أبريل · «Hallo Lena! Heute Morgen hast du nicht geantwortet. Was fehlt dir?» — لا bleiben/liegen/fühlen/dann/Oh ولا war/hatte
@@ -2790,7 +2790,7 @@ describe("D115 — أدوات القياس", () => {
     ]);
     expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|rot|blau|Arzt|Körper|Mein Kopf tut weh\.|Mir tut der Hals weh\./);
     for (const id of l.praesentation.wordIds) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u11-d1");
-    for (const id of ["teil", "tun", "weh-tun"]) expect(w(id).goetheList).toEqual(["A1", "A2"]);
+    for (const id of ["teil", "tun", "weh-tun"]) expect(w(id).goetheList).toEqual(["A1", "A2", "B1"]);
     expect([w("teil").gender, w("teil").plural]).toEqual(["der", "die Teile"]);
     expect(w("tun").forms).toMatchObject({ praesens3s: "tut", perfekt: "hat getan" });
     expect(w("weh-tun").forms).toMatchObject({ praesens3s: "tut weh", perfekt: "hat wehgetan" });
@@ -2905,7 +2905,7 @@ describe("D115 — أدوات القياس", () => {
     ]);
     expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|fühle|Arzt|Es ist dringend\./);
     for (const id of l.praesentation.wordIds) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u10-d5");
-    for (const id of ["normal", "job", "verdienen"]) expect(w(id).goetheList).toEqual(["A1", "A2"]);
+    for (const id of ["normal", "job", "verdienen"]) expect(w(id).goetheList).toEqual(["A1", "A2", "B1"]);
     expect([w("job").gender, w("job").plural]).toEqual(["der", "die Jobs"]);
     expect(w("verdienen").forms).toMatchObject({ praesens3s: "verdient", perfekt: "hat verdient" });
     // الحوار (wk-1..20) مكالمة فيديو متأخرة في اليوم السابع بتونس (N-037/N-100): الأحد 5 أبريل · «Warum rufst du so spät an? Ist das ein Notfall?» — لا denn/dass/wenn ولا bleiben ولا fühlen ولا war/hatte
@@ -3016,7 +3016,7 @@ describe("D115 — أدوات القياس", () => {
     ]);
     expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|Arzt|dann|schon|Das ist (richtig|falsch)/);
     for (const id of l.praesentation.wordIds) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u10-d4");
-    for (const id of ["anfang", "verein"]) expect(w(id).goetheList).toEqual(["A1", "A2"]);
+    for (const id of ["anfang", "verein"]) expect(w(id).goetheList).toEqual(["A1", "A2", "B1"]);
     expect(w("anfang").wordFamily).toEqual(["anfangen"]);
     expect([w("anfang").gender, w("verein").gender]).toEqual(["der", "der"]);
     // الحوار (ew-1..20) مكالمة فيديو في اليوم السادس بتونس (N-037/N-100): السبت 4 أبريل · «Endlich Wochenende!» — لا sein-Perfekt ولا war/hatte ولا gehabt ولا كلمات غير مدروسة
@@ -3125,7 +3125,7 @@ describe("D115 — أدوات القياس", () => {
     const sample = (id: string) => w(id).sampleSentence!.de;
     expect([sample("andere"), sample("weiter"), sample("halten"), sample("polizei"), sample("stelle"), sample("puenktlich")]).toEqual(["Die Haltestelle ist auf der anderen Seite.", "Bald fahren wir weiter.", "Der Bus hält hier nicht.", "Die Polizei steht an der Kreuzung.", "An dieser Stelle hält der Bus nicht.", "Der Bus kommt pünktlich an."]);
     expect(w("halten").forms).toMatchObject({ praesens3s: "hält", perfekt: "hat gehalten" });
-    expect(w("polizei")).toMatchObject({ gender: "die", plural: "die Polizei", goetheList: ["A1", "A2"], usedInLessons: ["a1-u9-d5"] });
+    expect(w("polizei")).toMatchObject({ gender: "die", plural: "die Polizei", goetheList: ["A1", "A2", "B1"], usedInLessons: ["a1-u9-d5"] });
     expect(w("stelle")).toMatchObject({ gender: "die", plural: "die Stellen" });
     expect(w("andere").grammarRisks).toContain("adjective-decl");
     expect(w("weiter").grammarRisks).toContain("v2-order");
@@ -3222,8 +3222,8 @@ describe("D115 — أدوات القياس", () => {
     const w = (id: string) => words.find((x) => x.id === id)!;
     const sample = (id: string) => w(id).sampleSentence!.de;
     expect([sample("auf-sein"), sample("zu-sein"), sample("an"), sample("bruecke"), sample("naehe"), sample("vor"), sample("gegen")]).toEqual(["Die Bank ist bis vier Uhr auf.", "Die Apotheke ist heute zu.", "Die Haltestelle ist an der Ecke.", "Wir gehen über die Brücke.", "In der Nähe ist eine Apotheke.", "Die Bank ist vor der Kirche.", "Das Auto fährt gegen die Wand."]);
-    expect(w("auf-sein")).toMatchObject({ wordClass: "chunk", chunk: true, wordFamily: ["an-sein", "aus-sein", "zu-sein"], goetheList: ["A1", "A2"], usedInLessons: ["a1-u9-d4"] });
-    expect(w("zu-sein")).toMatchObject({ wordClass: "chunk", chunk: true, goetheList: ["A1", "A2"], usedInLessons: ["a1-u9-d4"] });
+    expect(w("auf-sein")).toMatchObject({ wordClass: "chunk", chunk: true, wordFamily: ["an-sein", "aus-sein", "zu-sein"], goetheList: ["A1", "A2", "B1"], usedInLessons: ["a1-u9-d4"] });
+    expect(w("zu-sein")).toMatchObject({ wordClass: "chunk", chunk: true, goetheList: ["A1", "A2", "B1"], usedInLessons: ["a1-u9-d4"] });
     expect(w("naehe").plural).toBe("die Nähe");
     expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|\bdann\b|Ampel|Fluss/);
     for (const id of l.praesentation.wordIds) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u9-d4");
@@ -3323,7 +3323,7 @@ describe("D115 — أدوات القياس", () => {
     expect([sample("bitten"), sample("erklaeren"), sample("hilfe"), sample("zuerst"), sample("danach")]).toEqual(["Ich bitte um Hilfe.", "Können Sie mir den Weg erklären?", "Danke für die Hilfe!", "Zuerst geradeaus, danach links.", "Danach biegen Sie rechts ab."]);
     expect(w("bitten").forms).toMatchObject({ praesens3s: "bittet", perfekt: "hat gebeten" });
     expect(w("bitten").grammarRisks).toContain("feste-praep");
-    expect(w("hilfe")).toMatchObject({ gender: "die", goetheList: ["A1", "A2"], usedInLessons: ["a1-u9-d3"] });
+    expect(w("hilfe")).toMatchObject({ gender: "die", goetheList: ["A1", "A2", "B1"], usedInLessons: ["a1-u9-d3"] });
     expect(w("hilfe").srsCardTypes).toContain("gender");
     expect(l.praesentation.wordIds.map(sample).join(" ")).not.toMatch(/Lena|Yusuf|Berlin|\bdann\b|zweite/);
     for (const id of l.praesentation.wordIds) expect(w(id).sampleSentence?.sourceLesson).toBe("a1-u9-d3");
@@ -3504,7 +3504,7 @@ describe("D115 — أدوات القياس", () => {
     // النواة D113 (die Lebensmittel · der Apfel · mögen) بالمولِّد — Lebensmittel جمع بلا جنس مفرد ولا بطاقة جنس (اصطلاح D136)
     expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["lebensmittel", "apfel", "moegen"]));
     const lm = words.find((w) => w.id === "lebensmittel")!;
-    expect([lm.de, lm.gender, lm.plural, lm.srsCardTypes.includes("gender"), lm.goetheList]).toEqual(["die Lebensmittel", "none", "die Lebensmittel", false, ["A1", "A2"]]);
+    expect([lm.de, lm.gender, lm.plural, lm.srsCardTypes.includes("gender"), lm.goetheList]).toEqual(["die Lebensmittel", "none", "die Lebensmittel", false, ["A1", "A2", "B1"]]);
     const apfel = words.find((w) => w.id === "apfel")!;
     expect([apfel.de, apfel.gender, apfel.plural, apfel.grammarRisks]).toEqual(["der Apfel", "der", "die Äpfel", ["needs-ein", "plural-irregular"]]);
     const moegen = words.find((w) => w.id === "moegen")!;
@@ -3588,7 +3588,7 @@ describe("D115 — أدوات القياس", () => {
     // النواة D113 (bar · bekommen · die Bitte) بالمولِّد — die Bitte بمعرّف صريح لأن bitte «من فضلك» موجودة (D126)
     expect(l.praesentation.wordIds).toEqual(expect.arrayContaining(["bar", "bekommen", "die-bitte"]));
     const bitte = words.find((w) => w.id === "die-bitte")!;
-    expect([bitte.de, bitte.gender, bitte.plural, bitte.wordFamily, bitte.goetheList]).toEqual(["die Bitte", "die", "die Bitten", ["bitte"], ["A1", "A2"]]);
+    expect([bitte.de, bitte.gender, bitte.plural, bitte.wordFamily, bitte.goetheList]).toEqual(["die Bitte", "die", "die Bitten", ["bitte"], ["A1", "A2", "B1"]]);
     const bek = words.find((w) => w.id === "bekommen")!;
     expect([bek.wordClass, bek.forms?.praesens3s, bek.forms?.perfekt, bek.forms?.praeteritum]).toEqual(["verb", "bekommt", "hat bekommen", undefined]);
     expect(words.find((w) => w.id === "bar")!.sampleSentence?.de).toBe("Ich zahle bar.");
@@ -3676,7 +3676,7 @@ describe("D115 — أدوات القياس", () => {
     // النواة D113 (was für ein) بالمولِّد — قطعة chunk بمعرّف was-fuer-ein ودليل SD1
     expect(l.praesentation.wordIds).toContain("was-fuer-ein");
     const wfe = words.find((w) => w.id === "was-fuer-ein")!;
-    expect([wfe.de, wfe.wordClass, wfe.chunk, wfe.goetheList, wfe.usedInLessons]).toEqual(["was für ein", "chunk", true, ["A1", "A2"], ["a1-u5-d3"]]); // N-026 (D219): القطعة بدليل A2 أيضاً (was+für مُدرجتان في A2 وein مغلقة لا تحجب)
+    expect([wfe.de, wfe.wordClass, wfe.chunk, wfe.goetheList, wfe.usedInLessons]).toEqual(["was für ein", "chunk", true, ["A1", "A2", "B1"], ["a1-u5-d3"]]); // N-026 (D219): القطعة بدليل A2 أيضاً (was+für مُدرجتان في A2 وein مغلقة لا تحجب)
     expect(wfe.sampleSentence?.de).toBe("Was für ein Eis isst du gern?"); // لا نسخ لمثال SD1 «Was für eine Farbe möchten Sie?»
     expect(tracks.get("word-was-fuer-ein")?.textDe).toBe("was für ein.");
     // أمثلة البطاقات القديمة: es gibt (u6-d3) · gleichfalls · frisch (الدرس الرابع) — وبلا أسماء علم (N-021)
@@ -3756,8 +3756,8 @@ describe("D115 — أدوات القياس", () => {
     // النواة D113 (nichts · wenig) بالمولِّد — goetheList [A1, A2] مشتقة
     const nichts = words.find((w) => w.id === "nichts")!;
     const wenig = words.find((w) => w.id === "wenig")!;
-    expect([nichts.wordClass, nichts.goetheList, nichts.usedInLessons]).toEqual(["pronoun", ["A1", "A2"], ["a1-u5-d4"]]);
-    expect([wenig.wordClass, wenig.goetheList, wenig.usedInLessons]).toEqual(["adverb", ["A1", "A2"], ["a1-u5-d4"]]);
+    expect([nichts.wordClass, nichts.goetheList, nichts.usedInLessons]).toEqual(["pronoun", ["A1", "A2", "B1"], ["a1-u5-d4"]]);
+    expect([wenig.wordClass, wenig.goetheList, wenig.usedInLessons]).toEqual(["adverb", ["A1", "A2", "B1"], ["a1-u5-d4"]]);
     expect([tracks.get("word-nichts")?.textDe, tracks.get("word-wenig")?.textDe]).toEqual(["nichts.", "wenig."]);
     // معرّف Löffel صُحّح (laeffel ← loeffel) مع مساره وكل إحالاته
     expect(l.praesentation.wordIds).toContain("loeffel");
@@ -3896,7 +3896,7 @@ describe("D115 — أدوات القياس", () => {
     expect(e.properNouns).toEqual(["Lena", "Yusuf"]);
     // النواة D113 (breit) بالمولِّد — goetheList [A1] مشتقة
     const breit = words.find((w) => w.id === "breit")!;
-    expect([breit.wordClass, breit.goetheList, breit.usedInLessons]).toEqual(["adjective", ["A1"], ["a1-u6-d1"]]);
+    expect([breit.wordClass, breit.goetheList, breit.usedInLessons]).toEqual(["adjective", ["A1", "B1"], ["a1-u6-d1"]]);
     expect(tracks.get("word-breit")?.textDe).toBe("breit.");
     // أمثلة البطاقات القديمة: «… ist neu/groß» الرتيبة · voll (غير مدروسة) · «Das Sofa ist groß.» قرب مثال SD1 «Das Sofa ist neu.» — وبلا أسماء علم
     const sample = (id: string) => words.find((w) => w.id === id)!.sampleSentence!.de;
@@ -3977,9 +3977,9 @@ describe("D115 — أدوات القياس", () => {
     expect(e.properNouns).toEqual(["Yusuf"]);
     // النواة D113 (hoch · allein · der Raum) بالمولِّد — goetheList مشتقة
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("hoch").wordClass, w("hoch").goetheList, w("hoch").usedInLessons]).toEqual(["adjective", ["A1", "A2"], ["a1-u6-d2"]]);
-    expect([w("allein").wordClass, w("allein").goetheList, w("allein").usedInLessons]).toEqual(["adverb", ["A1", "A2"], ["a1-u6-d2"]]);
-    expect([w("raum").de, w("raum").plural, w("raum").goetheList, w("raum").usedInLessons]).toEqual(["der Raum", "die Räume", ["A1", "A2"], ["a1-u6-d2"]]);
+    expect([w("hoch").wordClass, w("hoch").goetheList, w("hoch").usedInLessons]).toEqual(["adjective", ["A1", "A2", "B1"], ["a1-u6-d2"]]);
+    expect([w("allein").wordClass, w("allein").goetheList, w("allein").usedInLessons]).toEqual(["adverb", ["A1", "A2", "B1"], ["a1-u6-d2"]]);
+    expect([w("raum").de, w("raum").plural, w("raum").goetheList, w("raum").usedInLessons]).toEqual(["der Raum", "die Räume", ["A1", "A2", "B1"], ["a1-u6-d2"]]);
     expect(["word-hoch", "word-allein", "word-raum"].map((id) => tracks.get(id)?.textDe)).toEqual(["hoch.", "allein.", "der Raum."]);
     // المعجم (N-013): Badezimmer من فئة Speisekarte — e الوصل [eː] ← شوا [ə] · وɑ المنبورة المفتوحة ← ɑː (كانت reviewed «ambiguous» منذ D121 فخرجت منها)
     // · وSchlafzimmer سُجّل عليه سطر zi-18 الجديد (كل مسار يمسّه المعجم مسجّل)
@@ -4073,8 +4073,8 @@ describe("D115 — أدوات القياس", () => {
     expect(e.properNouns).toEqual(["Lena", "Yusuf"]);
     // النواة D113 (jed- ⇒ jeder · an sein · aus sein) بالمولِّد — goetheList مشتقة (jed- جذعٌ تطابقه jeder)
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("jeder").wordClass, w("jeder").goetheList, w("jeder").usedInLessons]).toEqual(["pronoun", ["A1", "A2"], ["a1-u6-d3"]]);
-    for (const id of ["an-sein", "aus-sein"]) expect([w(id).wordClass, w(id).chunk, w(id).goetheList, w(id).usedInLessons]).toEqual(["chunk", true, ["A1", "A2"], ["a1-u6-d3"]]);
+    expect([w("jeder").wordClass, w("jeder").goetheList, w("jeder").usedInLessons]).toEqual(["pronoun", ["A1", "A2", "B1"], ["a1-u6-d3"]]);
+    for (const id of ["an-sein", "aus-sein"]) expect([w(id).wordClass, w(id).chunk, w(id).goetheList, w(id).usedInLessons]).toEqual(["chunk", true, ["A1", "A2", "B1"], ["a1-u6-d3"]]);
     expect(["word-jeder", "word-an-sein", "word-aus-sein"].map((id) => tracks.get(id)?.textDe)).toEqual(["jeder.", "an sein.", "aus sein."]);
     // أمثلة البطاقات القديمة الاثنا عشر كلها «… ist neu/hell/groß/alt.» — صارت جملاً متنوعة تُظهر es gibt؛ ويبقى النمط في مثالَي an sein وaus sein (الخبر هو الكلمة نفسها)
     const sample = (id: string) => w(id).sampleSentence!.de;
@@ -4164,8 +4164,8 @@ describe("D115 — أدوات القياس", () => {
     expect(e.properNouns).toEqual(["Yusuf"]); // Lena متكلمة لا اسماً في نص ألماني (D147)
     // النواة D113 (da · daneben · weg sein) بالمولِّد — goetheList مشتقة · weg-sein قطعة بجانب der Weg (u7-d1)
     const w = (id: string) => words.find((x) => x.id === id)!;
-    for (const id of ["da", "daneben"]) expect([w(id).wordClass, w(id).goetheList, w(id).usedInLessons]).toEqual(["adverb", ["A1", "A2"], ["a1-u6-d4"]]);
-    expect([w("weg-sein").wordClass, w("weg-sein").chunk, w("weg-sein").goetheList, w("weg-sein").phoneticRisks]).toEqual(["chunk", true, ["A1", "A2"], ["auslaut-g", "w-v"]]); // +w-v منذ D191 (weg = [vɛk])
+    for (const id of ["da", "daneben"]) expect([w(id).wordClass, w(id).goetheList, w(id).usedInLessons]).toEqual(["adverb", ["A1", "A2", "B1"], ["a1-u6-d4"]]);
+    expect([w("weg-sein").wordClass, w("weg-sein").chunk, w("weg-sein").goetheList, w("weg-sein").phoneticRisks]).toEqual(["chunk", true, ["A1", "A2", "B1"], ["auslaut-g", "w-v"]]); // +w-v منذ D191 (weg = [vɛk])
     expect(w("weg").de).toBe("Weg");
     expect(["word-da", "word-daneben", "word-weg-sein"].map((id) => tracks.get(id)?.textDe)).toEqual(["da.", "daneben.", "weg sein."]);
     // أمثلة البطاقات القديمة الاثنا عشر «… ist PREP dem/der …» رتيبة («Das Bild ist oben.» · «Der Keller ist unten.») — صارت جملاً متنوعة: المكان بـsteht/hängt/ist والوضع بـstellen/legen/hängen
@@ -4357,9 +4357,9 @@ describe("D115 — أدوات القياس", () => {
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
     // النواة D113 (die Firma · immer · meist-) بالمولِّد — meist- بالكلمة die meisten (دليل «جذع» D110 كـjed- ⇒ jeder) بلا جنس ولا بطاقة جنس
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("firma").de, w("firma").plural, w("firma").goetheList, w("firma").gender]).toEqual(["die Firma", "die Firmen", ["A1", "A2"], "die"]);
-    expect([w("immer").wordClass, w("immer").goetheList]).toEqual(["adverb", ["A1", "A2"]]);
-    expect([w("meisten").de, w("meisten").wordClass, w("meisten").gender, w("meisten").srsCardTypes.includes("gender"), w("meisten").goetheList]).toEqual(["die meisten", "pronoun", "none", false, ["A1", "A2"]]);
+    expect([w("firma").de, w("firma").plural, w("firma").goetheList, w("firma").gender]).toEqual(["die Firma", "die Firmen", ["A1", "A2", "B1"], "die"]);
+    expect([w("immer").wordClass, w("immer").goetheList]).toEqual(["adverb", ["A1", "A2", "B1"]]);
+    expect([w("meisten").de, w("meisten").wordClass, w("meisten").gender, w("meisten").srsCardTypes.includes("gender"), w("meisten").goetheList]).toEqual(["die meisten", "pronoun", "none", false, ["A1", "A2", "B1"]]);
     expect(["word-firma", "word-immer", "word-meisten"].map((id) => tracks.get(id)?.textDe)).toEqual(["die Firma.", "immer.", "die meisten."]);
     // أمثلة البطاقات: pause «Ich mache eine Pause.» (machen u7-d3) · wecker «Der Wecker klingelt.» · muede «Ich bin müde.» (نص SD1/A2 حرفي) — صارت جملاً بالمدروس
     const sample = (id: string) => w(id).sampleSentence!.de;
@@ -4451,9 +4451,9 @@ describe("D115 — أدوات القياس", () => {
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
     // النواة D113 (der Film, -e · mehr · wandern) بالمولِّد
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("film").de, w("film").plural, w("film").goetheList, w("film").gender]).toEqual(["der Film", "die Filme", ["A1", "A2"], "der"]);
-    expect([w("mehr").wordClass, w("mehr").goetheList, w("mehr").wordFamily]).toEqual(["adverb", ["A1", "A2"], ["viel"]]);
-    expect([w("wandern").wordClass, w("wandern").forms, w("wandern").goetheList]).toEqual(["verb", { praesens3s: "wandert", perfekt: "ist gewandert", imperative: "wandere!" }, ["A1", "A2"]]);
+    expect([w("film").de, w("film").plural, w("film").goetheList, w("film").gender]).toEqual(["der Film", "die Filme", ["A1", "A2", "B1"], "der"]);
+    expect([w("mehr").wordClass, w("mehr").goetheList, w("mehr").wordFamily]).toEqual(["adverb", ["A1", "A2", "B1"], ["viel"]]);
+    expect([w("wandern").wordClass, w("wandern").forms, w("wandern").goetheList]).toEqual(["verb", { praesens3s: "wandert", perfekt: "ist gewandert", imperative: "wandere!" }, ["A1", "A2", "B1"]]);
     expect(["word-film", "word-mehr", "word-wandern"].map((id) => tracks.get(id)?.textDe)).toEqual(["der Film.", "mehr.", "wandern."]);
     // أمثلة البطاقات: reisen «Wir reisen nach Berlin.» · spass «Das macht Spaß!» (machen u7-d3) · langweilig «Der Film ist langweilig.» (Film قبل النواة — ونصٌّ يبدأ بـ«Der Film ist» حرفيّ في A2)
     // · kino «Ich gehe ins Kino.» — صارت جملاً بالمدروس
@@ -4554,10 +4554,10 @@ describe("D115 — أدوات القياس", () => {
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
     // النواة D113 (die Hausaufgabe, -n · nie · einfach) بالمولِّد
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("hausaufgabe").de, w("hausaufgabe").plural, w("hausaufgabe").goetheList, w("hausaufgabe").gender]).toEqual(["die Hausaufgabe", "die Hausaufgaben", ["A1", "A2"], "die"]);
+    expect([w("hausaufgabe").de, w("hausaufgabe").plural, w("hausaufgabe").goetheList, w("hausaufgabe").gender]).toEqual(["die Hausaufgabe", "die Hausaufgaben", ["A1", "A2", "B1"], "die"]);
     expect(w("hausaufgabe").pluralRuleNote).toBe("‑n: die Hausaufgabe ← die Hausaufgaben (كـdie Aufgabe ← die Aufgaben)");
-    expect([w("nie").wordClass, w("nie").goetheList]).toEqual(["adverb", ["A1", "A2"]]);
-    expect([w("einfach").wordClass, w("einfach").goetheList]).toEqual(["adjective", ["A1", "A2"]]);
+    expect([w("nie").wordClass, w("nie").goetheList]).toEqual(["adverb", ["A1", "A2", "B1"]]);
+    expect([w("einfach").wordClass, w("einfach").goetheList]).toEqual(["adjective", ["A1", "A2", "B1"]]);
     expect(["word-hausaufgabe", "word-nie", "word-einfach"].map((id) => tracks.get(id)?.textDe)).toEqual(["die Hausaufgabe.", "nie.", "einfach."]);
     // أمثلة البطاقات: machen «Hausaufgaben» (قبل النواة) · schicken «Mail» · warten «Bus» (u7-d4) · telefonieren «mit meiner Familie» (الوحدة 8)
     // · rufen «Das Essen ist fertig» (نصٌّ حرفيّ في A2) — صارت جملاً بالمدروس، وأكثرها بغير ich (du machst · er öffnet · sie schließt · wir putzen)
@@ -4660,8 +4660,8 @@ describe("D115 — أدوات القياس", () => {
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
     // النواة D113 (gleich · ab · Achtung) بالمولِّد
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("gleich").wordClass, w("gleich").goetheList]).toEqual(["adverb", ["A1", "A2"]]);
-    expect([w("ab").wordClass, w("ab").goetheList]).toEqual(["preposition", ["A1", "A2"]]);
+    expect([w("gleich").wordClass, w("gleich").goetheList]).toEqual(["adverb", ["A1", "A2", "B1"]]);
+    expect([w("ab").wordClass, w("ab").goetheList]).toEqual(["preposition", ["A1", "A2", "B1"]]);
     expect([w("achtung").de, w("achtung").wordClass, w("achtung").srsCardTypes]).toEqual(["Achtung", "expression", ["production", "comprehension", "audio", "chunk"]]);
     expect(["word-gleich", "word-ab", "word-achtung"].map((id) => tracks.get(id)?.textDe)).toEqual(["gleich.", "ab.", "Achtung."]);
     // أمثلة البطاقات: fahren «Wir fahren nach Berlin.» · geben «Er gibt mir das Buch.» · laufen «Ich laufe im Park.» · bus «Der Bus kommt gleich.» (gleich قبل النواة — صارت مدروسة اليوم)
@@ -4854,8 +4854,8 @@ describe("D115 — أدوات القياس", () => {
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
     // النواة D113 (dies- ⇒ dieser · gefallen) بالمولِّد — gefallen فعلٌ داتيفي (dative-verb) بصيغة gefällt
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("dieser").wordClass, w("dieser").goetheList]).toEqual(["pronoun", ["A1"]]);
-    expect([w("gefallen").wordClass, w("gefallen").forms?.praesens3s, w("gefallen").grammarRisks, w("gefallen").goetheList]).toEqual(["verb", "gefällt", ["dative-verb"], ["A1", "A2"]]);
+    expect([w("dieser").wordClass, w("dieser").goetheList]).toEqual(["pronoun", ["A1", "B1"]]);
+    expect([w("gefallen").wordClass, w("gefallen").forms?.praesens3s, w("gefallen").grammarRisks, w("gefallen").goetheList]).toEqual(["verb", "gefällt", ["dative-verb"], ["A1", "A2", "B1"]]);
     expect(["word-dieser", "word-gefallen"].map((id) => tracks.get(id)?.textDe)).toEqual(["dieser.", "gefallen."]);
     // أمثلة البطاقات الرتيبة كلها («Die Hose ist neu.» · «Das Hemd ist neu.» · «Der Rock ist neu.» …) ومثال Pullover بـwarm (غير مدروسة) — صارت جملاً بالمدروس وأكثرها بـdies‑ وtragen
     const sample = (id: string) => w(id).sampleSentence!.de;
@@ -5043,7 +5043,7 @@ describe("D115 — أدوات القياس", () => {
     expect(JSON.stringify([l.uebung.communicativeTask, l.zusammenfassung.summary])).not.toContain("~~");
     // النواة D113 (kriegen) بالمولِّد — فعل بصيغتيه، ومثاله بالمدروس وبلا نص رسمي
     const w = (id: string) => words.find((x) => x.id === id)!;
-    expect([w("kriegen").wordClass, w("kriegen").forms, w("kriegen").goetheList, w("kriegen").usedInLessons]).toEqual(["verb", { praesens3s: "kriegt", perfekt: "hat gekriegt" }, ["A1", "A2"], ["a1-u8-d3"]]);
+    expect([w("kriegen").wordClass, w("kriegen").forms, w("kriegen").goetheList, w("kriegen").usedInLessons]).toEqual(["verb", { praesens3s: "kriegt", perfekt: "hat gekriegt" }, ["A1", "A2", "B1"], ["a1-u8-d3"]]);
     expect(tracks.get("word-kriegen")?.textDe).toBe("kriegen.");
     // المعجم: espeak ينبر Abteilung على Ab‑ [ˈaptˌaɪlʊŋ] والمرجع يذكر الصيغتين فمرّ التدقيق — مدخل D158 يثبّت نبر الاسم الشائع [aptˈaɪlʊŋ] (القسم) · ومسارا الحوار سُجّلا يدوياً (N-099) كـTunesien/okay/Kreditkarte/regnet
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; regeneratedTracks: string[] }[] };

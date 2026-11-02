@@ -108,7 +108,8 @@ export function umlautLast(s: string): string {
 
 /** علامة الجمع للمتغيّر الأول: «-n» · «¨-e» · «-ä, e» (SD1) · «ö, -e» (Fit1) · «Themen» — أو null */
 function firstMarker(headword: string): string | null {
-  const parts = headword.replace(/\s*\([^()]*\)/g, "").split(/[/;]/)[0]!.split(",").map((x) => x.trim());
+  // B1: ذيل renvoi («das Abitur (D) → A, CH: Matura») ليس من علامة الجمع المطبوعة
+  const parts = headword.split("→")[0]!.replace(/\s*\([^()]*\)/g, "").split(/[/;]/)[0]!.split(",").map((x) => x.trim());
   if (parts.length < 2 || !parts[1]) return null;
   const [m1, m2] = [parts[1], parts[2]];
   // SD1 «-ä, e» · Fit1 «ä, -e» · «ü, er»: إبدال ثم لاحقة في جزأين
@@ -118,7 +119,7 @@ function firstMarker(headword: string): string | null {
 
 // D346: توأم firstMarker يحتفظ ببدائل «/» (علامات الجمع لا الأسماء — «;» للأزواج الاسمية ويبقى مقصياً)
 function allMarkers(headword: string): string[] {
-  const parts = headword.replace(/\s*\([^()]*\)/g, "").split(",").map((x) => x.trim());
+  const parts = headword.split("→")[0]!.replace(/\s*\([^()]*\)/g, "").split(",").map((x) => x.trim());
   if (parts.length < 2 || !parts[1]) return [];
   const [m1, m2] = [parts[1], parts[2]];
   // زوج الإبدال («-ö, er/-e»): كل بديل في m2 يقترن بإبدال m1 — وإلا فبدائل m1 نفسها («-s/-en»)
@@ -175,9 +176,10 @@ export function pluralsFor(entry: WordlistEntry, lemma: string): string[] {
       out.push(stem + (stem.endsWith("e") && suffix.startsWith("e") ? suffix.slice(1) : suffix).replace(/^een$/, "en"));
       continue;
     }
-    // D151: الدخيلة المنتهية بـ‑a تُسقطها قبل ‑en (A2 «die Firma, -en» ← Firmen · كـThema ← Themen · Villa ← Villen) —
-    // لا جمع ألمانياً بـ‑aen، وكان الإلحاق الحرفي يقرأ «Firmaen» فيخطّئ جمعنا الصحيح
-    if (/a$/.test(lemma) && suffix === "en" && !um) { out.push(lemma.slice(0, -1) + "en"); continue; }
+    // D151: الدخيلة المنتهية بـ‑a/‑o تُسقط حرفها الأخير قبل ‑en (A2 «die Firma, -en» ← Firmen · كـThema ← Themen ·
+    // Villa ← Villen · D417: «das Konto, -en» ← Konten لا «Kontoen»!) — لا جمع ألمانياً بـ‑aen/‑oen،
+    // وكان الإلحاق الحرفي يقرأ «Firmaen»/«Kontoen» فيخطّئ جمعنا الصحيح — قائمة B1 («das Konto, Konten») كشفت الوجه الثاني
+    if (/[ao]$/.test(lemma) && suffix === "en" && !um) { out.push(lemma.slice(0, -1) + "en"); continue; }
     if (lemma.endsWith("e") && suffix === "e") continue; // «die Woche, -e»: مستحيل صرفياً — لا ادعاء
     const suf = lemma.endsWith("e") && suffix.startsWith("e") ? suffix.slice(1) : suffix; // Adresse, -en → Adressen
     const base = um ? umlautLast(lemma) : lemma;

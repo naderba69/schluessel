@@ -21,6 +21,7 @@ describe("tools/dev — N-104: أدوات الفحص لا تضيع مع الصن
     const sh = readFileSync(join(ROOT, "tools/dev/fetch-official.sh"), "utf8");
     expect(sh).toContain("content/wordlists/goethe-a1-sd1.json");
     expect(sh).toContain("content/wordlists/goethe-a2.json");
+    expect(sh).toContain("content/wordlists/goethe-b1.json");
     expect(sh).toContain("tools/pronunciation-reference.de.json");
     expect(sh).toContain("sha256sum");
     expect(sh).not.toMatch(/\b[0-9a-f]{40}\b/); // لا blob مكتوب يدوياً
@@ -148,7 +149,8 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
   }, 60_000);
 
   it("content-diff.ts --json بين التزامين: ملخّص + تقارير بنصوص قبل/بعد", () => {
-    const out = execFileSync("npx", ["tsx", "tools/dev/content-diff.ts", "HEAD~1", "HEAD", "--json"], { cwd: ROOT, encoding: "utf8", timeout: 120_000 });
+    // D417: دفعات التوسّع (1412 ملف كلمة!) تتجاوز حد الإخراج الافتراضي 1MB — 64MB هامش آمن
+    const out = execFileSync("npx", ["tsx", "tools/dev/content-diff.ts", "HEAD~1", "HEAD", "--json"], { cwd: ROOT, encoding: "utf8", timeout: 120_000, maxBuffer: 64 * 1024 * 1024 });
     const r = JSON.parse(out) as { summary: { from: string; to: string; files: number; texts: number }; reports: { file: string; texts: { path: string }[] }[] };
     expect(r.summary.from).toBe("HEAD~1");
     expect(r.reports.length).toBe(r.summary.files);
