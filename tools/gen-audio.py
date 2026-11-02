@@ -1860,6 +1860,21 @@ def build_all() -> None:
     ("word-obwohl", "obwohl.", "obwohl", ["b1-u1-d3"]),
     ("word-absagen", "absagen.", "absagen", ["b1-u1-d3"]),
     ("word-stimmt", "Stimmt.", "stimmt", ["a1-u8-d5"]),
+    ("word-korrigieren", "korrigieren.", "korrigieren", ["b1-u1-d4"]),
+    ("word-ueberpruefen", "überprüfen.", "ueberpruefen", ["b1-u1-d4"]),
+    ("word-ersetzen", "ersetzen.", "ersetzen", ["b1-u1-d4"]),
+    ("word-enttaeuschen", "enttäuschen.", "enttaeuschen", ["b1-u1-d4"]),
+    ("word-beweisen", "beweisen.", "beweisen", ["b1-u1-d4"]),
+    ("word-garantie", "die Garantie.", "garantie", ["b1-u1-d4"]),
+    ("word-mangel", "der Mangel.", "mangel", ["b1-u1-d4"]),
+    ("word-betrag", "der Betrag.", "betrag", ["b1-u1-d4"]),
+    ("word-zahlung", "die Zahlung.", "zahlung", ["b1-u1-d4"]),
+    ("word-anspruch", "der Anspruch.", "anspruch", ["b1-u1-d4"]),
+    ("word-eindruck", "der Eindruck.", "eindruck", ["b1-u1-d4"]),
+    ("word-zuverlaessig", "zuverlässig.", "zuverlaessig", ["b1-u1-d4"]),
+    ("word-beanstanden", "beanstanden.", "beanstanden", ["b1-u1-d4"]),
+    ("word-enttaeuschung", "die Enttäuschung.", "enttaeuschung", ["b1-u1-d4"]),
+    ("word-koennen", "können.", "koennen", ["a1-u10-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

@@ -265,7 +265,7 @@ describe("D113 — الخطة الحقيقية: النواة مبكراً · ا�
     });
     // D170: normal · der Job · verdienen فوق كلماته الاثنتي عشرة ⇒ 15 كلمة
     expect(cs.find((c) => c.lessonId === "a1-u10-d5")).toMatchObject({
-      status: "done", missing: [], headwords: ["normal", "der Job, -s", "verdienen"], size: 15,
+      status: "done", missing: [], headwords: ["normal", "der Job, -s", "verdienen"], size: 16,
     });
     // D171: der Teil · tun · weh tun فوق كلماته الاثنتي عشرة ⇒ 15 كلمة
     expect(cs.find((c) => c.lessonId === "a1-u11-d1")).toMatchObject({

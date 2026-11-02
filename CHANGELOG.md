@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-02 — الدفعة 377: D423 — b1-u1-d4 «إيميل اعتراض مهذب» — Könnten-Sie-التليين! + ثغرة جذوع المودالات (N-273)
+اليوم الرابع من B1: 14 كلمة الإيميل والاعتراض (korrigieren · überprüfen · ersetzen · enttäuschen · beweisen · beanstanden · Garantie · Mangel · Betrag · Zahlung · Anspruch · Eindruck · Enttäuschung · zuverlässig!) + الترسانة `ars-koennten-sie` («Könnten Sie…?» تليين بالفعل نفسه! مقابل Können-Sie المباشرة!) — ونموذج الإيميل الكامل (Anrede → اعتراض → Könnten-Sie → Gruß!) — والمجموعة الكاملة 1639/1639.
+- **البوابة:** vitest ✓ 1639/1639 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 2069/0/0 · build ✓ · docs-sync --check ✓ 237 قراراً مهيكلاً · آخرها D423 · الدفعة 377 · الموجّه 5.79 · notes check ✓ 0/25/248 (273)
+
 ## 2026-11-02 — الدفعة 376: D421 — b1-u1-d3 «نقاش عمل يبرر موقفاً» — obwohl والفعل آخراً! + كشف ثغرة «Stimmt.» القديمة (N-271)
 اليوم الثالث من B1: 14 كلمة لغة النقاش والتعليل (zustimmen · ablehnen · mitteilen · erledigen · Besprechung · Regel · Zusammenarbeit · nämlich · allerdings · vorschlagen · zuständig · Begründung · absagen · obwohl!) + الترسانة `ars-obwohl` (رغم أن + المصرَّف آخراً! مقابل denn «فالـ» + ثانياً! وweil + آخراً!) — والمجموعة الكاملة 1639/1639.
 - **البوابة:** vitest ✓ 1639/1639 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 2052/0/0 · build ✓ · docs-sync --check ✓ 236 قراراً مهيكلاً · آخرها D421 · الدفعة 376 · الموجّه 5.78 · notes check ✓ 0/25/247 (272)

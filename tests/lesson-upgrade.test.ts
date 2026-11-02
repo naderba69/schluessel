@@ -1547,7 +1547,7 @@ describe("D115 — أدوات القياس", () => {
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
     expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([61, 4, 6, 15]);
-    // الكلمات الخمس عشرة كلها جديدة (لا تكرار من الوحدات 1–9 ولا من u10-d1) — والنواة الثلاث (D113: lieb- · der Moment · enden) في آخر القائمة
+    // الكلمات الست عشرة كلها جديدة (لا تكرار من الوحدات 1–9 ولا من u10-d1) — والنواة الثلاث (D113: lieb- · der Moment · enden) في آخر القائمة
     const earlier = new Set(realLessons.filter((x) => x.unit <= 9 || (x.unit === 10 && x.day <= 1)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(l.praesentation.wordIds).toEqual(["kalender", "datum", "dienstag", "mittwoch", "donnerstag", "freitag", "samstag", "einladung", "absage", "frei", "besetzt", "wochenende", "lieb", "moment", "enden"]);
@@ -1872,7 +1872,7 @@ describe("D115 — أدوات القياس", () => {
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
     expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([58, 4, 6, 15]);
-    // الكلمات الخمس عشرة كلها جديدة (لا تكرار من الوحدات 1–11 ولا من u12-d1..d3) — والنواة الثلاث آخراً
+    // الكلمات الست عشرة كلها جديدة (لا تكرار من الوحدات 1–11 ولا من u12-d1..d3) — والنواة الثلاث آخراً
     const earlier = new Set(realLessons.filter((x) => x.unit <= 11 || ["a1-u12-d1", "a1-u12-d2", "a1-u12-d3"].includes(x.id)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(l.praesentation.wordIds).toEqual(["denn", "sondern", "deswegen", "leider", "vielleicht", "dann", "zuletzt", "beispiel", "meinung", "vorschlag", "idee", "plan", "zum-beispiel", "satz", "glauben"]);
@@ -2108,7 +2108,7 @@ describe("D115 — أدوات القياس", () => {
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
     expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([67, 4, 6, 15]);
-    // الكلمات الخمس عشرة كلها جديدة (لا تكرار من الوحدات 1–11 ولا من u12-d1) — والنواة الثلاث آخراً
+    // الكلمات الست عشرة كلها جديدة (لا تكرار من الوحدات 1–11 ولا من u12-d1) — والنواة الثلاث آخراً
     const earlier = new Set(realLessons.filter((x) => x.unit <= 11 || x.id === "a1-u12-d1").flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(l.praesentation.wordIds).toEqual(["gleis", "rezeption", "doppelzimmer", "einzelzimmer", "aussicht", "bad", "buchen", "empfang", "halle", "verspaetung", "verpassen", "zurueckgeben", "blick", "internet", "information"]);
@@ -2749,7 +2749,7 @@ describe("D115 — أدوات القياس", () => {
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
     expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([71, 4, 6, 15]); // D185 (N-112): +tust/tue في الفراغات
-    // الكلمات الخمس عشرة كلها جديدة (لا تكرار من الوحدات 1–10) — والنواة (D113: der Teil · tun · weh tun) في آخر القائمة
+    // الكلمات الست عشرة كلها جديدة (لا تكرار من الوحدات 1–10) — والنواة (D113: der Teil · tun · weh tun) في آخر القائمة
     const earlier = new Set(realLessons.filter((x) => x.unit <= 10).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(l.praesentation.wordIds).toEqual(["kopf", "hand", "arm", "bein", "ruecken", "bauch", "hals", "auge", "nase", "mund", "zahn", "finger", "teil", "tun", "weh-tun"]);
@@ -2858,18 +2858,18 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u10-d5 مُرقّى (D170): صفر نقص — 66 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-weil-satz (جديدة) · نواة normal/der Job/verdienen · ثلاثة أمثلة صُحّحت · كل 20 سطراً وستة مقاطع كلمات مستخدمة — الوحدة 10 مكتملة", () => {
+  it("a1-u10-d5 مُرقّى (D170): صفر نقص — 66 بنداً · 4 أنواع · Quiz 6 · 16 كلمة · ars-weil-satz (و+koennen توثيقياً في D423 — مودال مُعلَّم بالقاعدة!) (جديدة) · نواة normal/der Job/verdienen · ثلاثة أمثلة صُحّحت · كل 20 سطراً وستة مقاطع كلمات مستخدمة — الوحدة 10 مكتملة", () => {
     const l = realLessons.find((x) => x.id === "a1-u10-d5")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u10-d5")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([66, 4, 6, 15]);
-    // الكلمات الخمس عشرة كلها جديدة (لا تكرار من الوحدات 1–9 ولا من u10-d1..d4) — والنواة (D113: normal · der Job · verdienen) في آخر القائمة
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([66, 4, 6, 16]); // D423: +koennen (توثيق مودال a1-u10-d5 — لجذع Konjunktiv konnte/könnte!)
+    // الكلمات الست عشرة كلها جديدة (لا تكرار من الوحدات 1–9 ولا من u10-d1..d4) — والنواة (D113: normal · der Job · verdienen) في آخر القائمة
     const earlier = new Set(realLessons.filter((x) => x.unit <= 9 || (x.unit === 10 && x.day <= 4)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
-    expect(l.praesentation.wordIds).toEqual(["weil", "warum", "deshalb", "darum", "wichtig", "dringend", "krank", "unwohl", "ruhe", "stress", "notfall", "ausruhen", "normal", "job", "verdienen"]);
+    expect(l.praesentation.wordIds).toEqual(["weil", "warum", "deshalb", "darum", "wichtig", "dringend", "krank", "unwohl", "ruhe", "stress", "notfall", "ausruhen", "normal", "job", "verdienen", "koennen"]); // D423: +koennen
     // قاعدة اليوم جديدة: ars-weil-satz (كانت مُشاراً إليها بلا ملف — تشاركها u10-d6 وu12-d4 وu12-d6)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-weil-satz"]);
     const ws = rules.get("ars-weil-satz")!;
@@ -3288,7 +3288,7 @@ describe("D115 — أدوات القياس", () => {
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
     expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([53, 4, 6, 15]);
-    // الكلمات الخمس عشرة كلها جديدة (لا تكرار من الوحدات 1–8 ولا من u9-d1..d2) — والنواة الثلاث (D113) في آخر القائمة
+    // الكلمات الست عشرة كلها جديدة (لا تكرار من الوحدات 1–8 ولا من u9-d1..d2) — والنواة الثلاث (D113) في آخر القائمة
     const earlier = new Set(realLessons.filter((x) => x.unit <= 8 || (x.unit === 9 && x.day <= 2)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     expect(l.praesentation.wordIds.slice(-3)).toEqual(["bitten", "erklaeren", "hilfe"]);

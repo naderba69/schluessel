@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 377 (2026-11-02) — D423: b1-u1-d4 «إيميل اعتراض مهذب» — Könnten-Sie-التليين! + ثغرة جذوع المودالات (N-273)
+- **الخلاصة:** اليوم الرابع من B1: 14 كلمة الإيميل والاعتراض (korrigieren · überprüfen · ersetzen · enttäuschen · beweisen · beanstanden · Garantie · Mangel · Betrag · Zahlung · Anspruch · Eindruck · Enttäuschung · zuverlässig!) + الترسانة `ars-koennten-sie` («Könnten Sie…?» تليين بالفعل نفسه! مقابل Können-Sie المباشرة!) — ونموذج الإيميل الكامل (Anrede → اعتراض → Könnten-Sie → Gruß!) — والمجموعة الكاملة 1639/1639.
+- **التالي:** b1-u1-d5 «خلط الروابط» — كل روابط النص (deshalb/trotzdem/denn/obwohl/nämlich/allerdings في مقاربة واحدة!) + كلمات d5 — ثم d6 (توليف + كلمات أخيرة) · D7 برهان الوحدة.
+
 ## الدفعة 376 (2026-11-02) — D421: b1-u1-d3 «نقاش عمل يبرر موقفاً» — obwohl والفعل آخراً! + كشف ثغرة «Stimmt.» القديمة (N-271)
 - **الخلاصة:** اليوم الثالث من B1: 14 كلمة لغة النقاش والتعليل (zustimmen · ablehnen · mitteilen · erledigen · Besprechung · Regel · Zusammenarbeit · nämlich · allerdings · vorschlagen · zuständig · Begründung · absagen · obwohl!) + الترسانة `ars-obwohl` (رغم أن + المصرَّف آخراً! مقابل denn «فالـ» + ثانياً! وweil + آخراً!) — والمجموعة الكاملة 1639/1639.
 - **التالي:** b1-u1-d4 «إيميل اعتراض مهذب» — كلمات d4 (mitteilen/allerdings تُراجَعان! + مرشّحو礼貌: Entschuldigung/danach/ausdrücklich?) + أدب الإيميل الألماني (Anrede/Gruß!) — ثم d5 (خلط الروابط) · d6 (توليف + كلمات أخيرة) · D7 برهان الوحدة.
