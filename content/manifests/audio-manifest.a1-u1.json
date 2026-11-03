@@ -30209,6 +30209,46 @@
       "rmsDb": -17.03
     },
     {
+      "id": "word-abschluss",
+      "file": "words/audio/de-DE/word-abschluss.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Abschluss.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u1-d6"
+      ],
+      "durationMs": 1164,
+      "sizeBytes": 5555,
+      "hash": "sha256:5294ba64308ed33694e483d59a96723bb0b30ce8864735cb1d9e06a3868d6099",
+      "pcmSha256": "e1cfb2454a36595612ad0d213e3580b613c4815f721bb4c0fc2e13b5dfcc89b7",
+      "rmsDb": -17.33
+    },
+    {
+      "id": "word-planung",
+      "file": "words/audio/de-DE/word-planung.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Planung.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u1-d6"
+      ],
+      "durationMs": 873,
+      "sizeBytes": 4283,
+      "hash": "sha256:eb2f5d112b0b0323d9da9e1cfb1ec4ac2b2148b7800cf9768743a411ecd9213f",
+      "pcmSha256": "8ed610e6058c5733c99122d9e2ff46a07393f3081c3e16061c2c1d1af8fe819c",
+      "rmsDb": -16.99
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",

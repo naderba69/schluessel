@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-26 — الدفعة 379: D425 — b1-u1-d6 «توليف: ملخص أسبوعك» — 2 كلمة (integration!) + معركة الوحدة 1 عند 75%!
+درس التكامل «Die Woche ist zu Ende: dein Abschluss und deine Planung!» — **der Abschluss** «الختام/الإنجاز» + **die Planung** «التخطيط» (نهاية الأسبوع: ملخّصك وخطّتك!). المحطات الأربع = توليف الأيام الخمسة: **match** كلمات الأسبوع كلها! · **gap-fill** مواضع الروابط الستة! (wegen/obwohl/denn/Deshalb/Könnten/Schließlich!) · **error-hunt** أخطاء الأسبوع الثلاثة! (Genitiv/verb-last/inversion!) · **speaking** = الملخص الثماني بكل روابط الأسبوع: Abschluss! + TEKAMOLO! + obwohl! + zwar! + denn! + deshalb! + Könnten! + Planung! **الاختبار 3×4 عتبة 75%** («معركة الوحدة 1»!) + canDo «يجتاز معركة الوحدة 1 بنتيجة 75% فأكثر!» — قاعدة الأسبوع كاملة في نص واحد!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-02 — الدفعة 378: D424 — b1-u1-d5 «خلط الروابط» — خريطة المواضع الثلاث! + رمز المدّ الصامت الثاني (N-274)
 اليوم الخامس من B1: 15 كلمة الروابط والحجاج (schließlich · übrigens · zwar · einerseits · andererseits · genauso · insgesamt · Tatsache · behaupten · zusammenfassen · nachdenken · bemerken · sich einigen · Standpunkt · Streit!) + الترسانة `ars-konnektoren` (خريطة المواضع الثلاث: deshalb-تقلب! · denn-لا-تقلب! · obwohl-تؤجّل!) — والمجموعة الكاملة 1639/1639.
 - **البوابة:** vitest ✓ 1639/1639 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 2086/0/0 · build ✓ · docs-sync --check ✓ 238 قراراً مهيكلاً · آخرها D424 · الدفعة 378 · الموجّه 5.80 · notes check ✓ 0/25/249 (274)

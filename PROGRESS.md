@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 379 (2026-10-26) — D425: b1-u1-d6 «توليف: ملخص أسبوعك» — 2 كلمة (integration!) + معركة الوحدة 1 عند 75%!
+- **الخلاصة:** درس التكامل «Die Woche ist zu Ende: dein Abschluss und deine Planung!» — **der Abschluss** «الختام/الإنجاز» + **die Planung** «التخطيط» (نهاية الأسبوع: ملخّصك وخطّتك!). المحطات الأربع = توليف الأيام الخمسة: **match** كلمات الأسبوع كلها! · **gap-fill** مواضع الروابط الستة! (wegen/obwohl/denn/Deshalb/Könnten/Schließlich!) · **error-hunt** أخطاء الأسبوع الثلاثة! (Genitiv/verb-last/inversion!) · **speaking** = الملخص الثماني بكل روابط الأسبوع: Abschluss! + TEKAMOLO! + obwohl! + zwar! + denn! + deshalb! + Könnten! + Planung! **الاختبار 3×4 عتبة 75%** («معركة الوحدة 1»!) + canDo «يجتاز معركة الوحدة 1 بنتيجة 75% فأكثر!» — قاعدة الأسبوع كاملة في نص واحد!
+- **التالي:** D7 «معركة الوحدة 1» (اختبار الوحدة — عتبة 75%!) ثم u2!
+
 ## الدفعة 378 (2026-11-02) — D424: b1-u1-d5 «خلط الروابط» — خريطة المواضع الثلاث! + رمز المدّ الصامت الثاني (N-274)
 - **الخلاصة:** اليوم الخامس من B1: 15 كلمة الروابط والحجاج (schließlich · übrigens · zwar · einerseits · andererseits · genauso · insgesamt · Tatsache · behaupten · zusammenfassen · nachdenken · bemerken · sich einigen · Standpunkt · Streit!) + الترسانة `ars-konnektoren` (خريطة المواضع الثلاث: deshalb-تقلب! · denn-لا-تقلب! · obwohl-تؤجّل!) — والمجموعة الكاملة 1639/1639.
 - **التالي:** b1-u1-d6 «مراجعة + توليف» (يوم المراجعة الكبير!) + كلمات أخيرة — ثم D7 برهان الوحدة (المعركة!).

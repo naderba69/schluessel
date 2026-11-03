@@ -1890,6 +1890,8 @@ def build_all() -> None:
     ("word-streit", "der Streit.", "streit", ["b1-u1-d5"]),
     ("word-einerseits", "einerseits.", "einerseits", ["b1-u1-d5"]),
     ("word-andererseits", "andererseits.", "andererseits", ["b1-u1-d5"]),
+    ("word-abschluss", "der Abschluss.", "abschluss", ["b1-u1-d6"]),
+    ("word-planung", "die Planung.", "planung", ["b1-u1-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
