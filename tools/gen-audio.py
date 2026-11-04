@@ -2061,6 +2061,19 @@ def build_all() -> None:
     ("word-leim", "der Leim.", "leim", ["b1-u4-d1"]),
     ("word-holz", "das Holz.", "holz", ["b1-u4-d1"]),
     ("word-anstatt", "anstatt.", "anstatt", ["b1-u4-d1"]),
+    ("word-hoehe", "die Höhe.", "hoehe", ["b1-u4-d2"]),
+    ("word-breite", "die Breite.", "breite", ["b1-u4-d2"]),
+    ("word-laenge", "die Länge.", "laenge", ["b1-u4-d2"]),
+    ("word-semester", "das Semester.", "semester", ["b1-u4-d2"]),
+    ("word-generation", "die Generation.", "generation", ["b1-u4-d2"]),
+    ("word-jahrhundert", "das Jahrhundert.", "jahrhundert", ["b1-u4-d2"]),
+    ("word-bereich", "der Bereich.", "bereich", ["b1-u4-d2"]),
+    ("word-gebiet", "das Gebiet.", "gebiet", ["b1-u4-d2"]),
+    ("word-dauer", "die Dauer.", "dauer", ["b1-u4-d2"]),
+    ("word-methode", "die Methode.", "methode", ["b1-u4-d2"]),
+    ("word-theorie", "die Theorie.", "theorie", ["b1-u4-d2"]),
+    ("word-system", "das System.", "system", ["b1-u4-d2"]),
+    ("word-organisation", "die Organisation.", "organisation", ["b1-u4-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

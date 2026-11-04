@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-04 — الدفعة 396: D442 — b1-u4-d2 «Genitiv كامل» — 13 كلمة + ars-genitiv-voll (الإضافة الكاملة!)
+يوم الإضافة! — **13 كلمة** (Höhe «الارتفاع» · Breite «العرض» · Länge «الطول» · Semester «الفصل الدراسي» · Generation «الجيل» · Jahrhundert «القرن» · Bereich «المجال» · Gebiet «الميدان» · Dauer «المدة» · Methode «الطريقة» · Theorie «النظرية» · System «النظام» · Organisation «التنظيم») + **ars-genitiv-voll**: des + s للمذكر/المحايد! (des Studiums!) + der بلا s للمؤنث! (der Hochschule!) + der للجمع! (der Professoren!) + von + م.غ البديل المنطوق! — «Die Dauer des Studiums ist lang!»
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-04 — الدفعة 395: D441 — b1-u4-d1 «التكوين والدراسة» — 19 كلمة + ars-um-zu (um/ohne/anstatt zu!)
 بداية الوحدة 4 «التكوين والدراسة»! — **19 كلمة** (Zweck «الغرض» · Versuch «المحاولة» · erfolgreich «ناجح» · Erfolg · Vorbereitung · Wiederholung · Fähigkeit · unterstützen · fortsetzen · versäumen · Seminar · Professor · Hochschule + **anstatt «بدلاً»** (أداة القاعدة نفسها! كلمة قيد!) + **النظائف الخمس للتوازن**: Tinte «الحبر»! Mappe «المجلد»! Sack «الكيس»! Leim «الغراء»! Holz «الخشب»!) + **ars-um-zu**: um zu للغرض! ohne zu للبدون! anstatt zu للبدل! (الفاصلة قبلها! والمصدر آخراً!)
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.

@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 396 (2026-11-04) — D442: b1-u4-d2 «Genitiv كامل» — 13 كلمة + ars-genitiv-voll (الإضافة الكاملة!)
+- **الخلاصة:** يوم الإضافة! — **13 كلمة** (Höhe «الارتفاع» · Breite «العرض» · Länge «الطول» · Semester «الفصل الدراسي» · Generation «الجيل» · Jahrhundert «القرن» · Bereich «المجال» · Gebiet «الميدان» · Dauer «المدة» · Methode «الطريقة» · Theorie «النظرية» · System «النظام» · Organisation «التنظيم») + **ars-genitiv-voll**: des + s للمذكر/المحايد! (des Studiums!) + der بلا s للمؤنث! (der Hochschule!) + der للجمع! (der Professoren!) + von + م.غ البديل المنطوق! — «Die Dauer des Studiums ist lang!»
+- **التالي:** b1-u4-d3 «مقابلة دراسية — يقارن مسارات» (كلام!) — كلمات + مقابلة!
+
 ## الدفعة 395 (2026-11-04) — D441: b1-u4-d1 «التكوين والدراسة» — 19 كلمة + ars-um-zu (um/ohne/anstatt zu!)
 - **الخلاصة:** بداية الوحدة 4 «التكوين والدراسة»! — **19 كلمة** (Zweck «الغرض» · Versuch «المحاولة» · erfolgreich «ناجح» · Erfolg · Vorbereitung · Wiederholung · Fähigkeit · unterstützen · fortsetzen · versäumen · Seminar · Professor · Hochschule + **anstatt «بدلاً»** (أداة القاعدة نفسها! كلمة قيد!) + **النظائف الخمس للتوازن**: Tinte «الحبر»! Mappe «المجلد»! Sack «الكيس»! Leim «الغراء»! Holz «الخشب»!) + **ars-um-zu**: um zu للغرض! ohne zu للبدون! anstatt zu للبدل! (الفاصلة قبلها! والمصدر آخراً!)
 - **التالي:** b1-u4-d2 «Genitiv كامل» — كلمات + الإضافة!
