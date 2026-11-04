@@ -1974,6 +1974,21 @@ def build_all() -> None:
     ("word-leistung", "die Leistung.", "leistung", ["b1-u3-d1"]),
     ("word-therapie", "die Therapie.", "therapie", ["b1-u3-d1"]),
     ("word-beratung", "die Beratung.", "beratung", ["b1-u3-d1"]),
+    ("word-verzichten", "verzichten.", "verzichten", ["b1-u3-d2"]),
+    ("word-gewoehnen", "sich gewöhnen.", "gewoehnen", ["b1-u3-d2"]),
+    ("word-achten", "achten.", "achten", ["b1-u3-d2"]),
+    ("word-leiden", "leiden.", "leiden", ["b1-u3-d2"]),
+    ("word-bemuehen", "sich bemühen.", "bemuehen", ["b1-u3-d2"]),
+    ("word-handeln", "handeln.", "handeln", ["b1-u3-d2"]),
+    ("word-zweifeln", "zweifeln.", "zweifeln", ["b1-u3-d2"]),
+    ("word-fuehren", "führen.", "fuehren", ["b1-u3-d2"]),
+    ("word-schauen", "schauen.", "schauen", ["b1-u3-d2"]),
+    ("word-patientin", "die Patientin.", "patientin", ["b1-u3-d2"]),
+    ("word-uebung", "die Übung.", "uebung", ["b1-u3-d2"]),
+    ("word-bewegung", "die Bewegung.", "bewegung", ["b1-u3-d2"]),
+    ("word-schlaf", "der Schlaf.", "schlaf", ["b1-u3-d2"]),
+    ("word-haut", "die Haut.", "haut", ["b1-u3-d2"]),
+    ("word-muskel", "der Muskel.", "muskel", ["b1-u3-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

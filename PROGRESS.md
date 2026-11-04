@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 389 (2026-11-04) — D435: b1-u3-d2 «feste Verben (البداية!)» — 15 كلمة + ars-feste-verben + قائمة 10‑ك الأولى (FesteVerbenEntry!)
+- **الخلاصة:** يوم الأفعال الجامدة! — **15 كلمة** (9 أفعال جامدة: verzichten «يتخلى عن» + sich gewöhnen «يتعوّد على» + achten «ينتبه إلى» + leiden «يتألم من» + sich bemühen «يسعى لـ» + handeln «يتعلق بـ» + zweifeln «يشكّ في» + führen «يؤدي إلى» + schauen «ينظر إلى» + 6 صحّية: Patientin · Übung · Bewegung · Schlaf · Haut · Muskel) + **ars-feste-verben** (shufra!): الفعل + الحرف جزء واحد محفوظ! (verzichten auf! leiden an! sich gewöhnen an!) + **قائمة 10‑ك الأولى** (`arsenal/lists/ars-feste-verben-10k.json` — FesteVerbenEntry: فعل + حرف + حالة + مثال!).
+- **التالي:** b1-u3-d3 «حوار عيادة — يصف إجراءً» (كلام!) — كلمات + حوار!
+
 ## الدفعة 388 (2026-11-04) — D434: b1-u3-d1 «الصحة والتأمين» — 13 كلمة + ars-passiv (المجهول التجريبي Vorgangspassiv!)
 - **الخلاصة:** بداية الوحدة 3 «الصحة والتأمين»! — **13 كلمة** (behandeln «يعالج» · verschreiben «يصف دواءً» · Versicherung «التأمين» · versichern «يؤمّن» · Untersuchung «الفحص» · Klinik «العيادة» · Medizin «الطب» · Verletzung «الإصابة» · Überweisung «التحويل» · Beitrag «الاشتراك» · Leistung «الخدمة» · Therapie «العلاج» · Beratung «الاستشارة») + **ars-passiv**: المجهول التجريبي! (werden + التصريف الثاني! + von + م.غ للفاعل!) — «Der Patient wird behandelt!» «Das Medikament wird verschrieben!» — اليوم في العيادة كله بالمجهول!
 - **التالي:** b1-u3-d2 «feste Verben (البداية!)» — كلمات + الأفعال الجامدة!

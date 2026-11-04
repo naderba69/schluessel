@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D435 (2026-11-04): b1-u3-d2 «feste Verben (البداية!)» — 15 كلمة + ars-feste-verben + قائمة 10‑ك الأولى (FesteVerbenEntry!)
+- **الدفعة:** 389 · **الموجّه:** 5.91
+- **للقارئ:** يوم الأفعال الجامدة! — **15 كلمة** (9 أفعال جامدة: verzichten «يتخلى عن» + sich gewöhnen «يتعوّد على» + achten «ينتبه إلى» + leiden «يتألم من» + sich bemühen «يسعى لـ» + handeln «يتعلق بـ» + zweifeln «يشكّ في» + führen «يؤدي إلى» + schauen «ينظر إلى» + 6 صحّية: Patientin · Übung · Bewegung · Schlaf · Haut · Muskel) + **ars-feste-verben** (shufra!): الفعل + الحرف جزء واحد محفوظ! (verzichten auf! leiden an! sich gewöhnen an!) + **قائمة 10‑ك الأولى** (`arsenal/lists/ars-feste-verben-10k.json` — FesteVerbenEntry: فعل + حرف + حالة + مثال!).
+- **بطاقة قرار:** الفعل الجامد = الخطأ في الحرف لا الفعل! («verzichten über» ✗ → «verzichten auf»!) + الانعكاسي إلزامي (sich gewöhnen an!) + «es handelt sich um» صيغة كاملة! + leiden قوي (litt/gelitten!). **كشفت البوابة 3 أمور فأُصلحت**: (1) مثال zweifeln بصيغة ich غير مسجَّلة ← «Er zweifelt»! (2) كمين «Akkusativ/Dativ» في التلميحات! (3) **مُحمِّل التطبيق يقرأ arsenal/grammar/* كـ shufra حصراً** — فقائمة 10‑ك انتقلت إلى `arsenal/lists/` + إعادة وسم D106 (Patientin: ie-short لا vowel-long-short!). النطق: Patientin (النبر الثاني!) = معجم (241).
+- **الفهرس العكسي:** §10: N-277 (بلا دَين جديد!) · §22.9 الدفعة 389 (v5.91) · ars-feste-verben (shufra) + ars-feste-verben-10k (list! 10‑ك!) · b1-lesson-upgrade (14 درساً!).
+- **الأيام والاختبارات:** **u3-d2 15 كلمة** — المسار B1: u1 71 + u2 69 + u3 28 = **168 كلمة** · u3: d1 Passiv ✓ · **d2 feste Verben ✓** · d3 حوار عيادة · d4 استمارة تأمين · d5 Landeskunde: Krankenkasse · d6 توليف · D7 معركة.
+- **الاختبارات:** npm test **1679/1679 ✓ (132 ملفاً)** · tsc ✓ · validate-content **2203 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u3-d2 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** (2668 كلمة) · goethe-b1 **1406/2893 (49%)**.
+- **الأرقام:** كلمة **1749** · دروس **188** · مسارات **3558** · معجم **241** · عبارات **4160** · صوت **911** · duden **705**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u3-d3 «حوار عيادة — يصف إجراءً» (كلام!) — كلمات + حوار!
+
 ## D434 (2026-11-04): b1-u3-d1 «الصحة والتأمين» — 13 كلمة + ars-passiv (المجهول التجريبي Vorgangspassiv!)
 - **الدفعة:** 388 · **الموجّه:** 5.90
 - **للقارئ:** بداية الوحدة 3 «الصحة والتأمين»! — **13 كلمة** (behandeln «يعالج» · verschreiben «يصف دواءً» · Versicherung «التأمين» · versichern «يؤمّن» · Untersuchung «الفحص» · Klinik «العيادة» · Medizin «الطب» · Verletzung «الإصابة» · Überweisung «التحويل» · Beitrag «الاشتراك» · Leistung «الخدمة» · Therapie «العلاج» · Beratung «الاستشارة») + **ars-passiv**: المجهول التجريبي! (werden + التصريف الثاني! + von + م.غ للفاعل!) — «Der Patient wird behandelt!» «Das Medikament wird verschrieben!» — اليوم في العيادة كله بالمجهول!
