@@ -1,0 +1,458 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u1-d1",
+  "level": "B1",
+  "unit": 1,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Zug fällt aus. Deshalb komme ich mit dem Bus. · Der Streik ist schlimm. Trotzdem komme ich rechtzeitig zur Arbeit.",
+    "ar": "يوم الوصول للعمل: التأخير والاعتذار المهذب! deshalb «لذلك» وtrotzdem «رغم ذلك» — والفعل ثانياً (V2)!"
+  },
+  "canDoDaily": [
+    "يتحجّج بالتأخير بلباقة (السبب! + deshalb! + trotzdem! + شكر!)",
+    "يفرق النتيجة (deshalb-لذلك!) من الرُّغم (trotzdem-رغم ذلك!) — وكلاهما V2!"
+  ],
+  "warmup": {
+    "cardIds": [
+      "verspaetung",
+      "stau",
+      "fahrplan"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«رغم ذلك» — كيف تقول بالألمانية؟"
+        },
+        "choices": [
+          "trotzdem",
+          "deshalb",
+          "weil"
+        ],
+        "answer": "trotzdem",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التأخير» — كيف تقول؟"
+        },
+        "choices": [
+          "die Verspätung",
+          "die Störung",
+          "der Streik"
+        ],
+        "answer": "die Verspätung",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من A1: die Verspätung · der Stau · der Fahrplan — التأخير معروف من أيام القطار! واليوم نتعلّم الاعتذار المهذب عنه!",
+      "واليوم: Der Zug fällt aus! (القطار يُلغى!) — والمهذب: trotzdem «رغم ذلك أصل في الوقت المحدد!» (الفعل ثانياً!)"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "trotzdem",
+      "rechtzeitig",
+      "ausfallen",
+      "umleitung",
+      "streik",
+      "stoerung",
+      "ursache",
+      "melden",
+      "geduld",
+      "verstaendnis",
+      "strecke",
+      "hoeflich",
+      "muehe"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-deshalb-trotzdem"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Trotzdem komme ich rechtzeitig zur Arbeit.",
+        "ar": "يصل رغم التأخير إلى العمل في الوقت المحدد — بلباقة!"
+      },
+      "situation": {
+        "de": "Der Zug fällt aus. Was sagst du dem Chef?",
+        "ar": "القطار يُلغى — ماذا تقول للرئيس بلباقة؟"
+      },
+      "successCriteria": [
+        "يروي 8 جمل (سبب! + deshalb! + trotzdem! + اعتذار! + وعد! + شكر!)",
+        "يستخدم الجديد (13 كلمة! + trotzdem/deshalb بـV2!)",
+        "يفرق (deshalb-لذلك! ≠ trotzdem-رغم ذلك!) و(الروابط-V2! ≠ weil-آخراً!) ويسترجع (A1: Verspätung/Stau! + A2: krank!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "verspaetung",
+          "stau",
+          "fahrplan"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "رغم ذلك",
+                "de": "trotzdem"
+              },
+              {
+                "ar": "في الوقت المحدد",
+                "de": "rechtzeitig"
+              },
+              {
+                "ar": "يُلغى",
+                "de": "ausfallen"
+              },
+              {
+                "ar": "طريق بديل",
+                "de": "die Umleitung"
+              },
+              {
+                "ar": "إضراب",
+                "de": "der Streik"
+              }
+            ],
+            "why": "اليوم-الجديد-الأول: trotzdem رغم-ذلك (ظرف! + V2!) · rechtzeitig في-الوقت-المحدد · ausfallen يُلغى (fällt aus! منفصل!) · Umleitung طريق-بديل (die!) · Streik إضراب (der! + Streiks!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "عطل",
+                "de": "die Störung"
+              },
+              {
+                "ar": "سبب",
+                "de": "die Ursache"
+              },
+              {
+                "ar": "صبر",
+                "de": "die Geduld"
+              },
+              {
+                "ar": "مهذب",
+                "de": "höflich"
+              },
+              {
+                "ar": "تأخير",
+                "de": "die Verspätung"
+              }
+            ],
+            "why": "Störung عطل (die! + Störungen!) · Ursache سبب (die! + Ursachen!) · Geduld صبر (die! بلا-جمع!) · höflich مهذب (صفة!) · Verspätung تأخير (استرجاع A1! die!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الجديد (trotzdem/rechtzeitig/ausfallen! + Störung/Streik/Verständnis!)",
+          "V2 (الفعل ثانياً بعد deshalb/trotzdem!)",
+          "الاسترجاع (Verspätung/fällt/krank! + العبارة-المهذبة!)"
+        ],
+        "interleavedWith": [
+          "verspaetung",
+          "krank",
+          "zug"
+        ],
+        "items": [
+          {
+            "q": "Der Zug ___ heute aus. (fällt!)",
+            "a": "fällt",
+            "why": "المنفصل aus-fallen! — ich falle / er fällt (ä!) / wir fallen — والبادئة آخراً: fällt … aus!"
+          },
+          {
+            "q": "Es gibt eine ___. Der Zug kommt nicht. (Störung!)",
+            "a": "Störung",
+            "why": "عطل! — die Störung (Störungen!) — العطل يُغيّر الجدول كله!"
+          },
+          {
+            "q": "Der Zug fällt aus. ___ komme ich mit dem Bus. (Deshalb!)",
+            "a": "Deshalb",
+            "why": "«لذلك»! — deshalb يتصدّر فيأتي الفعل ثانياً: Deshalb + komme + ich!"
+          },
+          {
+            "q": "Der Streik ist schlimm. ___ komme ich rechtzeitig zur Arbeit. (Trotzdem!)",
+            "a": "Trotzdem",
+            "why": "«رغم ذلك»! — trotzdem + الفعل ثانياً: Trotzdem + komme + ich — رغم السبب ومع ذلك!"
+          },
+          {
+            "q": "Ich ___ mich beim Chef. (melde!)",
+            "a": "melde",
+            "why": "يُبلِّغ! — sich melden: ich melde mich (meldet/melden!) — reflexive!"
+          },
+          {
+            "q": "Vielen Dank für Ihr ___. (Verständnis!)",
+            "a": "Verständnis",
+            "why": "تفهّم! — das Verständnis — العبارة المهذبة الجاهزة للاعتذار!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الخطأ في موقع الفعل أو في المعنى — والباقي صحيح",
+          "V2 (deshalb/trotzdem + الفعل ثانياً! ≠ weil-آخراً!)",
+          "المعنى (deshalb-لذلك! ≠ trotzdem-رغم ذلك!)"
+        ],
+        "interleavedWith": [
+          "kommen",
+          "arbeiten",
+          "danke"
+        ],
+        "items": [
+          {
+            "q": "~~Trotzdem ich komme rechtzeitig zur Arbeit.~~",
+            "a": "Trotzdem komme ich rechtzeitig zur Arbeit.",
+            "why": "V2! — trotzdem يتصدّر فيأتي الفعل ثانياً: trotzdem + komme + ich!"
+          },
+          {
+            "q": "~~Weil der Zug fällt aus, deshalb komme ich mit dem Bus.~~",
+            "a": "Der Zug fällt aus. Deshalb komme ich mit dem Bus.",
+            "why": "weil تفتح جملة تابعة (المصرَّف آخراً!) فلا يُعاد الربط بـdeshalb — رابط واحد لكل جملة!"
+          },
+          {
+            "q": "~~Der Zug fällt aus. Deshalb komme ich rechtzeitig zur Arbeit.~~",
+            "a": "Der Zug fällt aus. Trotzdem komme ich rechtzeitig zur Arbeit.",
+            "why": "المعنى! — deshalb «لذلك» (النتيجة!) وtrotzdem «رغم ذلك» (رغم السبب!) — العربية «مع ذلك/لذلك» أقوى تشابهاً!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "ابدأ بالسبب (Der Zug fällt aus!) وانهِ بالشكر (Vielen Dank!)",
+          "8 جمل: سبب! + Störung! + deshalb! + trotzdem! + ملدن! + اعتذار! + Geduld! + شكر!"
+        ],
+        "interleavedWith": [
+          "chef",
+          "arbeit",
+          "entschuldigung"
+        ],
+        "items": [
+          {
+            "q": "احكِ للرئيس (سجّل): 8 جمل — التأخير! + السبب! + deshalb! + رغم ذلك! + تُبلِّغ! + اعتذار! + صبر! + شكر!",
+            "a": "Der Zug fällt heute aus. Es gibt eine Störung. Deshalb komme ich mit dem Bus. Der Streik ist schlimm. Trotzdem komme ich rechtzeitig zur Arbeit. Ich melde mich beim Chef. Entschuldigung! Bitte haben Sie Geduld! Vielen Dank für Ihr Verständnis!",
+            "why": "الاعتذار المهذب (B1): سبب محدَّد! + deshalb للنتيجة! + trotzdem للرغم! + sich melden! + Entschuldigung + شكر — لا اعتذار بلا سبب!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«رغم ذلك»؟",
+            "a": "trotzdem"
+          },
+          {
+            "q": "«في الوقت المحدد»؟",
+            "a": "rechtzeitig"
+          },
+          {
+            "q": "«هناك عطل.»؟",
+            "a": "Es gibt eine Störung."
+          },
+          {
+            "q": "«أُعلم الرئيس بوصولي.»؟",
+            "a": "Ich melde mich beim Chef."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«القطار يُلغى. لذلك أصل مع الحافلة.»؟",
+            "a": "Der Zug fällt aus. Deshalb komme ich mit dem Bus."
+          },
+          {
+            "q": "«الإضراب اليوم. رغم ذلك أعمل.»؟",
+            "a": "Der Streik ist heute. Trotzdem arbeite ich."
+          },
+          {
+            "q": "«أنا مريض. لذلك أبقى في البيت.»؟",
+            "a": "Ich bin krank. Deshalb bleibe ich zu Hause."
+          },
+          {
+            "q": "«رجاءً كونوا صبورين!»؟",
+            "a": "Bitte haben Sie Geduld!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«شكراً جزيلاً لتفهّمكم.»؟",
+            "a": "Vielen Dank für Ihr Verständnis."
+          },
+          {
+            "q": "«الرئيس مهذب جداً.»؟",
+            "a": "Der Chef ist sehr höflich."
+          },
+          {
+            "q": "«المسافة إلى العمل طويلة.»؟",
+            "a": "Die Strecke zur Arbeit ist lang."
+          },
+          {
+            "q": "«هناك طريق بديل.»؟",
+            "a": "Es gibt eine Umleitung."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Zug fällt heute aus. Es gibt eine Störung. Deshalb komme ich mit dem Bus. Der Streik ist schlimm. Trotzdem komme ich rechtzeitig zur Arbeit. Ich melde mich beim Chef. Bitte haben Sie Geduld! Vielen Dank für Ihr Verständnis!",
+      "ar": "يوم الوصول للعمل: القطار يُلغى اليوم. هناك عطل. لذلك أصل مع الحافلة. الإضراب سيّئ. رغم ذلك أصل في الوقت المحدد. أُعلم الرئيس بوصولي. رجاءً اصبروا! شكراً جزيلاً لتفهّمكم!"
+    },
+    "srsBundleWordIds": [
+      "trotzdem",
+      "rechtzeitig",
+      "ausfallen",
+      "umleitung",
+      "streik",
+      "stoerung",
+      "ursache",
+      "melden",
+      "geduld",
+      "verstaendnis",
+      "strecke",
+      "hoeflich",
+      "muehe"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "فعل-ثالث-بعد-الرغم",
+          "de": "~~Trotzdem ich komme rechtzeitig.~~"
+        },
+        "correct": {
+          "ar": "رغم ذلك أصل في الوقت المحدد.",
+          "de": "Trotzdem komme ich rechtzeitig."
+        },
+        "exercise": {
+          "q": "Trotzdem ___ ich rechtzeitig! (komme!)",
+          "a": "komme"
+        },
+        "whyArabicSpeakerFails": "«رغم ذلك»-العربية-ظرف-بلا-قاعدة-فعل — فيُنسى V2 (الفعل ثانياً!) فيُكتب ~~Trotzdem ich komme~~ — والألمانية: trotzdem + الفعل ثانياً! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "رابطان-في-جملة-واحدة",
+          "de": "~~Weil der Zug fällt aus, deshalb komme ich mit dem Bus.~~"
+        },
+        "correct": {
+          "ar": "القطار يُلغى. لذلك أصل مع الحافلة.",
+          "de": "Der Zug fällt aus. Deshalb komme ich mit dem Bus."
+        },
+        "exercise": {
+          "q": "Der Zug fällt aus. ___ komme ich mit dem Bus. (Deshalb!)",
+          "a": "Deshalb"
+        },
+        "whyArabicSpeakerFails": "العربية-تسمح-«بسبب-ذلك»-معاً (لأن... لذلك!) — والألمانية: weil تفتح تابعة (المصرَّف آخراً!) فلا يُعاد الربط بـdeshalb — رابط واحد! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "لذلك-بدل-رغم-ذلك",
+          "de": "~~Der Zug fällt aus. Deshalb komme ich rechtzeitig zur Arbeit.~~"
+        },
+        "correct": {
+          "ar": "القطار يُلغى. رغم ذلك أصل إلى العمل في الوقت المحدد.",
+          "de": "Der Zug fällt aus. Trotzdem komme ich rechtzeitig zur Arbeit."
+        },
+        "exercise": {
+          "q": "Der Zug fällt aus. ___ komme ich rechtzeitig zur Arbeit. (Trotzdem!)",
+          "a": "Trotzdem"
+        },
+        "whyArabicSpeakerFails": "«مع ذلك»-العربية-أضعف-من-«رغم ذلك» فتُخلط مع «لذلك» — والألمانية: deshalb «لذلك» (السبب ← النتيجة!) وtrotzdem «رغم ذلك» (رغم السبب حدث!) — المعنى يقلب الجملة! (خريطة التداخل 10‑ي)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/trotzdem",
+      "https://www.duden.de/rechtschreibung/rechtzeitig",
+      "https://www.duden.de/rechtschreibung/ausfallen",
+      "https://www.duden.de/rechtschreibung/Umleitung",
+      "https://www.duden.de/rechtschreibung/Streik",
+      "https://www.duden.de/rechtschreibung/Stoerung",
+      "https://www.duden.de/rechtschreibung/Ursache",
+      "https://www.duden.de/rechtschreibung/melden",
+      "https://www.duden.de/rechtschreibung/Geduld",
+      "https://www.duden.de/rechtschreibung/Verstaendnis",
+      "https://www.duden.de/rechtschreibung/Strecke",
+      "https://www.duden.de/rechtschreibung/hoeflich",
+      "https://www.duden.de/rechtschreibung/Muehe"
+    ],
+    "wiktionary": [],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/materialien/Goethe-Zertifikat_B1_Wortlist"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-deshalb-trotzdem",
+    "ars-weil-satz"
+  ],
+  "audioManifestRefs": [
+    "word-trotzdem",
+    "word-rechtzeitig",
+    "word-ausfallen",
+    "word-umleitung",
+    "word-streik",
+    "word-stoerung",
+    "word-ursache",
+    "word-melden",
+    "word-geduld",
+    "word-verstaendnis",
+    "word-strecke",
+    "word-hoeflich",
+    "word-muehe"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوصول للعمل)",
+    "goetheWordListOverlap": [
+      "trotzdem",
+      "rechtzeitig",
+      "ausfallen",
+      "umleitung",
+      "streik",
+      "stoerung",
+      "ursache",
+      "melden",
+      "geduld",
+      "verstaendnis",
+      "strecke",
+      "hoeflich",
+      "muehe"
+    ]
+  }
+}

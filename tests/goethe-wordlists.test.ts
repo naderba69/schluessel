@@ -1,4 +1,4 @@
-// tests/goethe-wordlists.test.ts — D110: goetheList دليلٌ لا رأي (قوائم Goethe الرسمية الثلاث)
+// tests/goethe-wordlists.test.ts — D110: goetheList دليلٌ لا رأي (قوائم Goethe الرسمية: SD1 · Fit1 · A2 · B1)
 import { describe, it, expect } from "vitest";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
@@ -19,12 +19,13 @@ const LISTS = loadWordlists(C);
 const byId = Object.fromEntries(LISTS.map((l) => [l.id, l]));
 const IXS = indexWordlists(LISTS);
 
-describe("D110 — الفهارس الثلاثة: مصدر موثَّق وكلمات رئيسية فقط", () => {
-  it("SD1 + Fit1 (A1) + A2 — بأعداد الاستخراج المثبَّتة (أي تغيير في المستخرِج يظهر هنا)", () => {
-    expect(LISTS.map((l) => [l.id, l.level])).toEqual([["goethe-a1-fit1", "A1"], ["goethe-a1-sd1", "A1"], ["goethe-a2", "A2"]]);
+describe("D110 — الفهارس الرسمية: مصدر موثَّق وكلمات رئيسية فقط", () => {
+  it("SD1 + Fit1 (A1) + A2 + B1 — بأعداد الاستخراج المثبَّتة (أي تغيير في المستخرِج يظهر هنا)", () => {
+    expect(LISTS.map((l) => [l.id, l.level])).toEqual([["goethe-a1-fit1", "A1"], ["goethe-a1-sd1", "A1"], ["goethe-a2", "A2"], ["goethe-b1", "B1"]]);
     expect(byId["goethe-a1-sd1"]!.counts).toEqual({ main: 626, sub: 58, group: 127 });
     expect(byId["goethe-a2"]!.counts).toEqual({ main: 1159, sub: 0, group: 247 });
     expect(byId["goethe-a1-fit1"]!.counts).toEqual({ main: 531, sub: 0, group: 170 });
+    expect(byId["goethe-b1"]!.counts).toEqual({ main: 2893, sub: 0, group: 435 });
     for (const l of LISTS) expect(new URL(l.officialUrl).hostname).toBe("www.goethe.de");
   });
 
@@ -37,6 +38,11 @@ describe("D110 — الفهارس الثلاثة: مصدر موثَّق وكلم
     const a2 = byId["goethe-a2"]!.source;
     expect([a2.method, a2.gitBlob, a2.pages, a2.pdfTitle]).toEqual([
       "pdf-extract", "c4f7e2bf15e8045b903559668840d6d2d6d75e16", 32, "Goethe-Zertifikat_A2_Wortliste_2016_03.qxp_A2_2015",
+    ]);
+    const b1 = byId["goethe-b1"]!.source;
+    expect([b1.method, b1.gitBlob, b1.sha256, b1.pages, b1.pdfTitle]).toEqual([
+      "pdf-extract", "c0a20d6b8f52aa3a8915b39a5c85604b813f53f2",
+      "8860f7f0c916831b2365f66239a3ceba3be81ddba28e1224846ca8420807fe42", 104, "B1_Wortliste_2016_02.qxp_B1 Wort",
     ]);
     const fit1 = byId["goethe-a1-fit1"]!.source;
     expect(fit1.method).toBe("manual-transcription");
@@ -231,27 +237,32 @@ describe("D110 — الحارس الدائم على المحتوى الحقيق�
 
   it("N-026 (D219): جزء القطعة المغلق (أداة·حرف·ضمير) لا يحجب الدليل — بشرط جزء مُدرَج واحد: ein-bisschen وwas-fuer-ein صارتا A1+A2 · وachso بلا دليل (لا دليل من فراغ)", () => {
     const byId = Object.fromEntries(words.map((w) => [w.id, w]));
-    expect(deriveGoetheList(byId["ein-bisschen"]!, IXS).sort()).toEqual(["A1", "A2"]);
-    expect(deriveGoetheList(byId["was-fuer-ein"]!, IXS).sort()).toEqual(["A1", "A2"]);
+    expect(deriveGoetheList(byId["ein-bisschen"]!, IXS).sort()).toEqual(["A1", "A2", "B1"]);
+    expect(deriveGoetheList(byId["was-fuer-ein"]!, IXS).sort()).toEqual(["A1", "A2", "B1"]);
     expect(deriveGoetheList(byId["achso"]!, IXS)).toEqual([]);
     expect(evidenceFor(byId["ein-bisschen"]!, IXS).find((e) => e.level === "A2")!.kind).toBe("composed");
   });
 
   it("كلمات A2 كلها في قائمة A2 الرسمية · وجمعنا لا يخالف أي جمع مطبوع قابل للقراءة", () => {
-    for (const w of words.filter((x) => x.level === "A2")) expect(w.goetheList, w.id).toContain("A2");
+    // D391 (D185): المستعارة-المعلنة خارج القوائم — lieblings (سابقة-Lieblings-X-الرسمية بلا مدخل-Duden!) · zukunft (خارج-A2!) — معلنة-في-الدرس (خارج-القوائم-معلنة!) ومُثبتة هنا عمداً
+    const DECLARED_OUTSIDE_A2 = new Set(["lieblings", "zukunft"]);
+    // D417: مترادف معلَن — «die Bank» مالٌ في محتوانا (Banken) ومقعد في قائمة B1 («die Bank, ¨-e» ← Bänke) — كلا الجمعين صحيح لمعناه
+    // D430 (N-278): zeitpunkt — الرسم المطبعي «der Zeitpunkt, -» مختصر (لا جمع مقروء!) والصحيح Duden = die Zeitpunkte
+    const DECLARED_HOMONYM_PLURALS = new Set(["bank", "zeitpunkt"]);
+    for (const w of words.filter((x) => x.level === "A2" && !DECLARED_OUTSIDE_A2.has(x.id))) expect(w.goetheList, w.id).toContain("A2");
     const { plurals } = auditGoethe(words, LISTS);
-    expect(plurals).toEqual([]);
+    expect(plurals.filter((x) => !DECLARED_HOMONYM_PLURALS.has(x.id))).toEqual([]);
   });
 
   it("أمثلة مرجعية: Abend [A1,A2] · Abendessen [] (مركّب) · Nudeln [A2] · Tschüss [A1,A2] (tschüs) · Arabisch [A1]", () => {
     const g = (id: string) => words.find((w) => w.id === id)!.goetheList;
-    expect(g("abend")).toEqual(["A1", "A2"]);
+    expect(g("abend")).toEqual(["A1", "A2", "B1"]);
     expect(g("abendessen")).toEqual([]);
-    expect(g("nudeln")).toEqual(["A2"]);
+    expect(g("nudeln")).toEqual(["A2", "B1"]);
     expect(g("tschuess")).toEqual(["A1", "A2"]);
     expect(g("arabisch")).toEqual(["A1"]);
-    expect(g("mal")).toEqual(["A2"]); // A2 «mal / das Mal» — Fit1 «s Mal» اسمٌ لا يُثبت الأداة
-    expect(g("einzelzimmer")).toEqual(["A1", "A2"]); // D111: SD1 مدخل · A2 «einzel-» (أمثلته الرسمية مركّبات)
+    expect(g("mal")).toEqual(["A2", "B1"]); // A2 «mal / das Mal» — Fit1 «s Mal» اسمٌ لا يُثبت الأداة
+    expect(g("einzelzimmer")).toEqual(["A1", "A2", "B1"]); // D111: SD1 مدخل · A2 «einzel-» (أمثلته الرسمية مركّبات)
     expect(evidenceFor(words.find((w) => w.id === "aerztin")!, IXS).map((e) => e.kind)).toContain("feminine");
   });
 });

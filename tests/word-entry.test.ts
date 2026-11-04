@@ -264,7 +264,7 @@ describe("D105 — تكامل حقيقي + السجل التلقائي", () => {
   it("السجل تلقائي: كل ملف كلمة/درس مُسجَّل — لا أكثر ولا أقل", () => {
     const words = readdirSync(join(process.cwd(), "content/words")).filter((f) => f.endsWith(".json"));
     expect(ALL_WORDS.map((w) => `${w.id}.json`).sort()).toEqual(words.sort());
-    const lessonFiles = ["a1", "a2"].flatMap((lvl) => {
+    const lessonFiles = ["a1", "a2", "b1"].flatMap((lvl) => { // D419: مستوى B1!
       const d = join(process.cwd(), "content/lessons", lvl);
       return existsSync(d) ? readdirSync(d).filter((f) => f.endsWith(".json")) : [];
     });

@@ -1,0 +1,462 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b1-u1-d2",
+ "level": "B1",
+ "unit": 1,
+ "day": 2,
+ "kind": "content",
+ "ziel": {
+  "de": "Heute fahre ich wegen der Gefahr langsam entlang der Fahrbahn zurück. · Morgen fahre ich entlang der Straße mit dem Rad zur Arbeit.",
+  "ar": "يوم وصف الطريق بالتفصيل! أجب: متى؟ / لماذا؟ / كيف؟ / أين؟ — بالترتيب الألماني أولاً!"
+ },
+ "canDoDaily": [
+  "يصف طريقه إلى العمل بالتفصيل (متى؟! + لماذا؟! + كيف؟! + أين؟! بالترتيب!)",
+  "يستخدم entlang (Genitiv!) وwegen (Genitiv!) وmeinetwegen في جملة صحيحة!"
+ ],
+ "warmup": {
+  "cardIds": [
+   "kennen",
+   "hin",
+   "zurueck"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "ar": "«رحلة العودة» — كيف تقول بالألمانية؟"
+    },
+    "choices": [
+     "die Rückfahrt",
+     "die Fahrt",
+     "die Strecke"
+    ],
+    "answer": "die Rückfahrt",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "ar": "«على طول» — كيف تقول؟"
+    },
+    "choices": [
+     "entlang",
+     "gegen",
+     "ohne"
+    ],
+    "answer": "entlang",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "من A1: kennen · hin · zurück — نعرف كيف نسأل «أين؟»! واليوم نصف الطريق كله!",
+   "من d1: deshalb «لذلك»! وtrotzdem «رغم ذلك»! — واليوم نرتّب كل شيء: متى؟ / لماذا؟ / كيف؟ / أين؟"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "u-bahn",
+   "radfahrer",
+   "entlang",
+   "rueckfahrt",
+   "gefahr",
+   "kontrolle",
+   "steigen",
+   "fahrbahn",
+   "gegend",
+   "umgebung",
+   "treten",
+   "billett",
+   "meinetwegen"
+  ],
+  "borrowedWords": [],
+  "grammarArsenalIds": [
+   "ars-tekamolo-voll"
+  ],
+  "storySentenceIds": [],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "v2-order"
+  ]
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "de": "Morgen fahre ich entlang der Straße mit dem Rad zur Arbeit.",
+    "ar": "يصف طريقه إلى العمل بالتفصيل — بالترتيب الألماني المثالي!"
+   },
+   "situation": {
+    "de": "Erzähl deinem Kollegen: Wie fährst du morgen zur Arbeit?",
+    "ar": "احكِ لزميلك: كيف ستذهب غداً إلى العمل؟"
+   },
+   "successCriteria": [
+    "يصف الطريق بـ8 جمل (متى؟! + لماذا؟! + كيف؟! + أين؟! + entlang! + Rückfahrt! + Gefahr! + Billett!)",
+    "يستخدم الجديد (13 كلمة! + TeKaMoLo بـV2!)",
+    "يرتّب (Te-Ka-Mo-Lo!) ويسترجع (deshalb/trotzdem من d1! + kennen/hin/zurück من A1!)"
+   ]
+  },
+  "stations": [
+   {
+    "type": "match",
+    "explanationRequired": true,
+    "hints": [
+     "الأسماء مع أدواتها: die! / der! / das!",
+     "المفردات الجديدة أولاً ثم المألوفة"
+    ],
+    "interleavedWith": [
+     "verspaetung",
+     "stau",
+     "fahrplan"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "مترو الأنفاق",
+        "de": "die U-Bahn"
+       },
+       {
+        "ar": "راكب الدراجة",
+        "de": "der Radfahrer"
+       },
+       {
+        "ar": "على طول",
+        "de": "entlang"
+       },
+       {
+        "ar": "رحلة العودة",
+        "de": "die Rückfahrt"
+       },
+       {
+        "ar": "خطر",
+        "de": "die Gefahr"
+       }
+      ],
+      "why": "اليوم-الجديد-الأول: U-Bahn مترو-الأنفاق (die!) · Radfahrer راكب-الدراجة (der!) · entlang على-طول (ظرف!) · Rückfahrt رحلة-العودة (die!) · Gefahr خطر (die!)"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "فحص التذاكر",
+        "de": "die Kontrolle"
+       },
+       {
+        "ar": "يصعد",
+        "de": "steigen"
+       },
+       {
+        "ar": "مسار المركبات",
+        "de": "die Fahrbahn"
+       },
+       {
+        "ar": "يدوس / يَخطو",
+        "de": "treten"
+       },
+       {
+        "ar": "من أجلي",
+        "de": "meinetwegen"
+       }
+      ],
+      "why": "Kontrolle فحص (die! + Kontrollen!) · steigen يصعد (ist gestiegen!) · Fahrbahn مسار-المركبات (die!) · treten يدوس (tritt! trat!) · meinetwegen من-أجلي (ظرف!)"
+     }
+    ]
+   },
+   {
+    "type": "gap-fill",
+    "explanationRequired": true,
+    "hints": [
+     "Genitiv بعد entlang وwegen (der! / des!)",
+     "الفعل ثانياً بعد الزمن!",
+     "الأدوات: die! / der! / das!"
+    ],
+    "interleavedWith": [
+     "verspaetung",
+     "krank",
+     "zug"
+    ],
+    "items": [
+     {
+      "q": "Ich fahre entlang ___ Straße zur Arbeit. (Genitiv!)",
+      "a": "der",
+      "why": "بعد entlang مباشرة Genitiv! — entlang der Straße (الشارع مفرد مؤنث: die → der!)"
+     },
+     {
+      "q": "Wegen ___ Staus nehme ich die U-Bahn. (Genitiv!)",
+      "a": "des",
+      "why": "wegen + Genitiv! — المذكر المحايد: des Staus (وليس der Stau!)"
+     },
+     {
+      "q": "Morgen ___ ich wegen des Staus früh los. (V2!)",
+      "a": "fahre",
+      "why": "الفعل ثانياً! — Morgen + fahre + ich — الزمن أولاً ثم الفعل مباشرة!"
+     },
+     {
+      "q": "Die Rückfahrt ___ heute eine Stunde. (يستمرّ!)",
+      "a": "dauert",
+      "why": "يستمرّ! — dauern: ich dauere / er dauert — الرحلة تستمرّ ساعة!"
+     },
+     {
+      "q": "Wir ___ in die U-Bahn. (نصعد!)",
+      "a": "steigen",
+      "why": "نصعد! — steigen: ich steige / wir steigen — ist gestiegen!"
+     },
+     {
+      "q": "In der Schweiz sagt man ___ für Fahrkarte. (تذكرة!)",
+      "a": "Billett",
+      "why": "السويسرية! — das Billett = die Fahrkarte — كلمة معتمدة في ألمانيا وسويسرا!"
+     }
+    ]
+   },
+   {
+    "type": "error-hunt",
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ في ترتيب الكلمات أو في الحالة — والباقي صحيح",
+     "الترتيب: متى؟ ثم لماذا؟!",
+     "entlang: Genitiv بعدها أو Akkusativ بعد الاسم!"
+    ],
+    "interleavedWith": [
+     "kommen",
+     "arbeiten",
+     "danke"
+    ],
+    "items": [
+     {
+      "q": "~~Wegen des Staus fahre ich morgen früh mit dem Bus.~~",
+      "a": "Morgen fahre ich wegen des Staus früh mit dem Bus.",
+      "why": "الترتيب! — «متى؟» أولاً ثم «لماذا؟»! العربية تقدّم السبب أحياناً — الألمانية لا: Te ثم Ka!"
+     },
+     {
+      "q": "~~Ich fahre entlang die Straße.~~",
+      "a": "Ich fahre entlang der Straße. / Ich fahre die Straße entlang.",
+      "why": "entlang: إما Genitiv بعدها (entlang der Straße) أو Akkusativ بعد الاسم (die Straße entlang) — لا خيار ثالث!"
+     },
+     {
+      "q": "~~Morgen ich fahre mit der U-Bahn zurück.~~",
+      "a": "Morgen fahre ich mit der U-Bahn zurück.",
+      "why": "V2! — الفعل ثانياً بعد الزمن: Morgen + fahre + ich!"
+     }
+    ]
+   },
+   {
+    "type": "speaking",
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بـ«متى؟» (Morgen!) وانهِ بالمكان (zurück!)",
+     "8 جمل: متى؟! + U-Bahn! + entlang! + Rückfahrt! + Gefahr! + Billett! + Kontrolle! + meinetwegen!"
+    ],
+    "interleavedWith": [
+     "chef",
+     "arbeit",
+     "entschuldigung"
+    ],
+    "items": [
+     {
+      "q": "احكِ لزميلك (سجّل): 8 جمل — متى؟! + U-Bahn! + entlang! + Rückfahrt! + Gefahr! + Billett! + Kontrolle! + meinetwegen!",
+      "a": "Morgen fahre ich entlang der Straße mit dem Rad zur Arbeit. Meinetwegen steigst du in die U-Bahn. Die Rückfahrt dauert heute länger: Die U-Bahn hat Verspätung. Es gibt eine Kontrolle. Heute fahre ich wegen der Gefahr langsam entlang der Fahrbahn zurück. In der Schweiz sagt man Billett. Die Gegend ist ruhig. Die Umgebung gefällt mir.",
+      "why": "الوصف التفصيلي (B1): متى؟ أولاً! + entlang (Genitiv!) + القصة كاملة (Rückfahrt! Gefahr! Billett!) — 8 جمل متسلسلة كأنك تروي رحلتك!"
+     }
+    ]
+   }
+  ]
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«رحلة العودة»؟",
+      "a": "die Rückfahrt"
+     },
+     {
+      "q": "«على طول»؟",
+      "a": "entlang"
+     },
+     {
+      "q": "«مترو الأنفاق متأخر.»؟",
+      "a": "Die U-Bahn hat Verspätung."
+     },
+     {
+      "q": "«من أجلي تركب الدراجة.»؟",
+      "a": "Meinetwegen fährst du mit dem Rad."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«اليوم أعود ببطء بسبب الخطر.»؟",
+      "a": "Heute fahre ich wegen der Gefahr langsam zurück."
+     },
+     {
+      "q": "«غداً أذهب على طول الشارع بالدراجة إلى العمل.»؟",
+      "a": "Morgen fahre ich entlang der Straße mit dem Rad zur Arbeit."
+     },
+     {
+      "q": "«فحص التذاكر»؟",
+      "a": "die Kontrolle"
+     },
+     {
+      "q": "«مسار المركبات مبلل.»؟",
+      "a": "Die Fahrbahn ist nass."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«رحلة العودة تستغرق ساعة.»؟",
+      "a": "Die Rückfahrt dauert eine Stunde."
+     },
+     {
+      "q": "«في سويسرا يقال: التذكرة Billett.»؟",
+      "a": "In der Schweiz sagt man Billett."
+     },
+     {
+      "q": "«أنا أعرف هذا الحي.»؟",
+      "a": "Ich kenne diese Gegend."
+     },
+     {
+      "q": "«نصعد إلى مترو الأنفاق.»؟",
+      "a": "Wir steigen in die U-Bahn."
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Morgen fahre ich entlang der Straße mit dem Rad zur Arbeit. Die Rückfahrt dauert heute länger: Die U-Bahn hat Verspätung. Es gibt eine Kontrolle. Heute fahre ich wegen der Gefahr langsam entlang der Fahrbahn zurück. In der Schweiz sagt man Billett. Meinetwegen fährst du mit dem Rad. Ich kenne diese Gegend. Meine Umgebung ist ruhig.",
+   "ar": "يوم وصف الطريق: غداً أذهب بالدراجة على طول الشارع إلى العمل. رحلة العودة اليوم أطول: مترو الأنفاق متأخر. هناك فحص تذاكر. اليوم أعود ببطء على طول مسار المركبات بسبب الخطر. في سويسرا يقال: التذكرة Billett. من أجلي تركب الدراجة. أنا أعرف هذا الحي. جواري هادئ."
+  },
+  "srsBundleWordIds": [
+   "u-bahn",
+   "radfahrer",
+   "entlang",
+   "rueckfahrt",
+   "gefahr",
+   "kontrolle",
+   "steigen",
+   "fahrbahn",
+   "gegend",
+   "umgebung",
+   "treten",
+   "billett",
+   "meinetwegen"
+  ],
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "السبب-قبل-الزمن",
+     "de": "~~Wegen des Staus fahre ich morgen früh.~~"
+    },
+    "correct": {
+     "ar": "غداً أذهب مبكراً بسبب الزحام.",
+     "de": "Morgen fahre ich wegen des Staus früh."
+    },
+    "exercise": {
+     "q": "Morgen ___ ich wegen des Staus früh. (fahre!)",
+     "a": "fahre"
+    },
+    "whyArabicSpeakerFails": "«بسبب الزحام ذهبت اليوم»-العربية-تقدم-السبب — والألمانية: «متى؟» أولاً ثم «لماذا؟» — الترتيب أولاً! (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "entlang-بلا-Genitiv",
+     "de": "~~Ich fahre entlang die Straße.~~"
+    },
+    "correct": {
+     "ar": "أذهب على طول الشارع.",
+     "de": "Ich fahre entlang der Straße."
+    },
+    "exercise": {
+     "q": "Ich fahre entlang ___ Straße. (der!)",
+     "a": "der"
+    },
+    "whyArabicSpeakerFails": "«على طول الشارع»-العربية-مضاف-إلى-بلا-حالة — والألمانية: entlang + Genitiv (der Straße!) أو الاسم أولاً + Akkusativ (die Straße entlang!) — لا خلط! (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "الفعل-ثالثاً-بعد-الزمن",
+     "de": "~~Morgen ich fahre mit der U-Bahn.~~"
+    },
+    "correct": {
+     "ar": "غداً أذهب بمترو الأنفاق.",
+     "de": "Morgen fahre ich mit der U-Bahn."
+    },
+    "exercise": {
+     "q": "Morgen ___ ich mit der U-Bahn. (fahre!)",
+     "a": "fahre"
+    },
+    "whyArabicSpeakerFails": "«غداً أنا أذهب»-العربية-الضمير-مع-الفعل-متعاقبان — والألمانية: V2! الفعل ثانياً بعد الزمن: Morgen + fahre + ich! (خريطة التداخل 10‑ي)."
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/U-Bahn",
+   "https://www.duden.de/rechtschreibung/Radfahrer",
+   "https://www.duden.de/rechtschreibung/entlang",
+   "https://www.duden.de/rechtschreibung/Rueckfahrt",
+   "https://www.duden.de/rechtschreibung/Gefahr",
+   "https://www.duden.de/rechtschreibung/Kontrolle",
+   "https://www.duden.de/rechtschreibung/steigen",
+   "https://www.duden.de/rechtschreibung/Fahrbahn",
+   "https://www.duden.de/rechtschreibung/Gegend",
+   "https://www.duden.de/rechtschreibung/Umgebung",
+   "https://www.duden.de/rechtschreibung/treten",
+   "https://www.duden.de/rechtschreibung/Billett",
+   "https://www.duden.de/rechtschreibung/meinetwegen"
+  ],
+  "wiktionary": [],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/materialien/Goethe-Zertifikat_B1_Wortlist"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-tekamolo-voll",
+  "ars-tekamolo"
+ ],
+ "audioManifestRefs": [
+  "word-u-bahn",
+  "word-radfahrer",
+  "word-entlang",
+  "word-rueckfahrt",
+  "word-gefahr",
+  "word-kontrolle",
+  "word-steigen",
+  "word-fahrbahn",
+  "word-gegend",
+  "word-umgebung",
+  "word-treten",
+  "word-billett",
+  "word-meinetwegen"
+ ],
+ "imageManifestRefs": [],
+ "curriculumRef": {
+  "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوصول للعمل)",
+  "goetheWordListOverlap": [
+   "u-bahn",
+   "radfahrer",
+   "entlang",
+   "rueckfahrt",
+   "gefahr",
+   "kontrolle",
+   "steigen",
+   "fahrbahn",
+   "gegend",
+   "umgebung",
+   "treten",
+   "billett",
+   "meinetwegen"
+  ]
+ }
+}

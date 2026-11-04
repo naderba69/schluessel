@@ -1,0 +1,482 @@
+{
+ "audioManifestRefs": [
+  "word-cousin",
+  "word-cousine",
+  "word-enkel",
+  "word-enkelin",
+  "word-mancher",
+  "word-her"
+ ],
+ "canDoDaily": [
+  "يدير عائلته الكبيرة (يعرف! + يأتي! + يودّ! + ينادي! + يحتمل!)",
+  "يسترجع (dass/wenn/würde!) ويميز (der/die-مزدوجة! + mancher-مذكر!)"
+ ],
+ "curriculumRef": {
+  "goetheWordListOverlap": [
+   "cousin",
+   "cousine",
+   "enkel",
+   "enkelin",
+   "mancher",
+   "her"
+  ],
+  "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
+ },
+ "day": 4,
+ "einstieg": {
+  "guidedRetrieval": [
+   "من d3: Ich weiß, dass Mathematik schwer ist! + Magst du Religion؟ (أعرف-الرياضيات-صعبة! + تحب-الدينية؟!) — يوم-المدرسة-2 يُتوَّج اليوم بيوم-العائلة!",
+   "واليوم: عائلتي! Ich weiß, dass mein Cousin nett ist! (أعرف-ابن-عمي-لطيف!) + Wenn Oma ruft, kommt der Enkel! (لو-الجدة-تنادي-يأتي-الحفيد!) + Ich würde gern meine Cousine sehen! (أودّ-بنت-عمي!) + Komm her, Enkel! (تعال-حفيدي!) + Mancher Tag ist schwer! (بعض-الأيام-صعبة!) — بست كلمات وعائلة!"
+  ],
+  "pretestItems": [
+   {
+    "answer": "Cousin",
+    "choices": [
+     "Cousin",
+     "Oma",
+     "Haus"
+    ],
+    "prompt": {
+     "ar": "«ابن عم» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   },
+   {
+    "answer": "Enkelin",
+    "choices": [
+     "Enkelin",
+     "Schule",
+     "Fach"
+    ],
+    "prompt": {
+     "ar": "«حفيدة» — كيف تقول؟"
+    },
+    "revealNextSession": true
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Cousin",
+   "https://www.duden.de/rechtschreibung/Cousine",
+   "https://www.duden.de/rechtschreibung/Enkel_Nachfahre",
+   "https://www.duden.de/rechtschreibung/Enkelin",
+   "https://www.duden.de/rechtschreibung/her",
+   "https://www.duden.de/rechtschreibung/manch"
+  ],
+  "goethe": [
+   "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+  ],
+  "wiktionary": []
+ },
+ "id": "a2-u12-d4",
+ "imageManifestRefs": [],
+ "kind": "content",
+ "level": "A2",
+ "praesentation": {
+  "dualCodingRequired": true,
+  "grammarArsenalIds": [
+   "ars-dass-satz",
+   "ars-wuerde"
+  ],
+  "riskFlagsShown": [
+   "v2-order"
+  ],
+  "storySentenceIds": [],
+  "wordIds": [
+   "cousin",
+   "cousine",
+   "enkel",
+   "enkelin",
+   "mancher",
+   "her"
+  ]
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "a": "Die Enkelin ist klein!",
+      "q": "«الحفيدة صغيرة!»؟"
+     },
+     {
+      "a": "Mancher Tag ist schwer!",
+      "q": "«بعض الأيام صعبة!»؟"
+     },
+     {
+      "a": "Komm her, Enkel!",
+      "q": "«تعال هنا يا حفيدي!»؟"
+     },
+     {
+      "a": "Mein Cousin ist nett und meine Cousine ist nett!",
+      "q": "«ابن عمي لطيف وبنت عمي لطيفة!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Ich weiß, dass mein Cousin nett ist!",
+      "q": "«أعرف أن ابن عمي لطيف!»؟"
+     },
+     {
+      "a": "Wenn Oma ruft, kommt der Enkel!",
+      "q": "«لو تنادي الجدة يأتي الحفيد!»؟"
+     },
+     {
+      "a": "Ich würde gern meine Cousine sehen!",
+      "q": "«أودّ لو أرى بنت عمي!»؟"
+     },
+     {
+      "a": "Der Enkel ist klein, die Enkelin ist klein!",
+      "q": "«الحفيد صغير والحفيدة صغيرة!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "a": "Die Enkelin ist klein!",
+      "q": "«الحفيدة صغيرة!»؟"
+     },
+     {
+      "a": "Mein Cousin ist nett und meine Cousine ist nett!",
+      "q": "«ابن عمي لطيف وبنت عمي لطيفة!»؟"
+     },
+     {
+      "a": "Wenn Oma ruft, kommt der Enkel!",
+      "q": "«لو تنادي الجدة يأتي الحفيد!»؟"
+     },
+     {
+      "a": "Komm her, Enkel!",
+      "q": "«تعال هنا يا حفيدي!»؟"
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "schemaVersion": "1.0.0",
+ "slider": {
+  "max": 100,
+  "min": 0,
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "questionDe": "Wie viel Prozent wirst du schaffen?"
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "ar": "يدير عائلته الكبيرة (يعرف! + يأتي! + يودّ! + ينادي! + يحتمل!)",
+    "de": "Komm her, Enkel! Die Enkelin ist klein!"
+   },
+   "situation": {
+    "ar": "عزومة-العائلة عند الجدة",
+    "de": "Wenn Oma ruft, kommt der Enkel!"
+   },
+   "successCriteria": [
+    "يروي 8 جمل (6-جدد! + محتوى! + شرط! + حلم!)",
+    "يستخدم الجديد (Cousin/Cousine/Enkel/Enkelin/mancher/her!)",
+    "يميز (der-Cousin/Enkel + die-Cousine/Enkelin!) ويسترجع (dass/wenn/würde!)"
+   ]
+  },
+  "stations": [
+   {
+    "explanationRequired": true,
+    "interleavedWith": [
+     "schwester",
+     "bruder",
+     "fussball"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "ابن عم",
+        "de": "der Cousin"
+       },
+       {
+        "ar": "بنت عم",
+        "de": "die Cousine"
+       },
+       {
+        "ar": "حفيد",
+        "de": "der Enkel"
+       },
+       {
+        "ar": "حفيدة",
+        "de": "die Enkelin"
+       },
+       {
+        "ar": "بعض",
+        "de": "mancher"
+       },
+       {
+        "ar": "إلى هنا",
+        "de": "her"
+       }
+      ],
+      "why": "عائلتي-الكبيرة: der-Cousin ابن-عم (لطيف!) · die-Cousine بنت-عم (لطيفة!) · der-Enkel حفيد (صغير!) · die-Enkelin حفيدة (صغيرة!) · mancher بعض (أيام!) · her إلى-هنا (تعال!) — der/die-مزدوجة!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "أعرف",
+        "de": "weiß"
+       },
+       {
+        "ar": "تنادي",
+        "de": "ruft"
+       },
+       {
+        "ar": "يأتي",
+        "de": "kommt"
+       },
+       {
+        "ar": "أودّ",
+        "de": "würde"
+       },
+       {
+        "ar": "أرى",
+        "de": "sehe"
+       }
+      ],
+      "why": "أفعال-العائلة: weiß أعرف! · ruft تنادي! · kommt يأتي! · würde أودّ! · sehe أرى!"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "رياضيات",
+        "de": "die Mathematik"
+       },
+       {
+        "ar": "لاتينية",
+        "de": "das Latein"
+       },
+       {
+        "ar": "جغرافيا",
+        "de": "die Geografie"
+       },
+       {
+        "ar": "لو",
+        "de": "wenn"
+       },
+       {
+        "ar": "أن",
+        "de": "dass"
+       }
+      ],
+      "why": "استرجاع-d3: die-Mathematik! · das-Latein! · die-Geografie! · wenn لو! · dass أن!"
+     }
+    ],
+    "type": "match"
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الجديد (Cousin/Cousine/Enkel/Enkelin/mancher/her!)",
+     "الأدوات (der/die-مزدوجة!)",
+     "الاسترجاع (dass/wenn/würde!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "gap-fill",
+    "items": [
+     {
+      "a": "Cousin",
+      "q": "Ich weiß, dass mein ___ nett ist! (Cousin!)",
+      "why": "ابن-عمي-لطيف! — weiß-dass (أعرف-أن!)."
+     },
+     {
+      "a": "Enkel",
+      "q": "Wenn Oma ruft, kommt der ___! (Enkel!)",
+      "why": "الحفيد-يأتي! — ruft-kommt (تنادي-يأتي!)."
+     },
+     {
+      "a": "Cousine",
+      "q": "Ich würde gern meine ___ sehen! (Cousine!)",
+      "why": "بنت-عمي! — würde-sehen (أودّ-أرى!)."
+     },
+     {
+      "a": "Enkelin",
+      "q": "Die ___ ist klein! (Enkelin!)",
+      "why": "الحفيدة-صغيرة! — Die-klein (صغيرة!)."
+     },
+     {
+      "a": "her",
+      "q": "Komm ___, Enkel! (her!)",
+      "why": "تعال! — Komm-her (إلى-هنا!)."
+     },
+     {
+      "a": "mancher",
+      "q": "___ Tag ist schwer! (Mancher!)",
+      "why": "بعض-الأيام! — mancher-Tag (يوم!)."
+     },
+     {
+      "a": "dass",
+      "q": "Ich weiß, ___ mein Cousin nett ist! (dass!)",
+      "why": "أعرف-أن! — dass-محتوى!"
+     },
+     {
+      "a": "kommt",
+      "q": "Wenn Oma ruft, ___ der Enkel! (kommt!)",
+      "why": "يأتي! — wenn-شرط!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "الخطأ كلمة واحدة — الباقي صحيح",
+     "التصريف (ist/ruft/kommt!)",
+     "الصيغ (dass-آخراً! + V2-بعد-الفاصلة!)"
+    ],
+    "interleavedWith": [
+     "gut",
+     "neu",
+     "schoen"
+    ],
+    "type": "error-hunt",
+    "items": [
+     {
+      "a": "Ich weiß, dass mein Cousin nett ist!",
+      "q": "~~Ich weiß, dass mein Cousin nett sind!~~",
+      "why": "المفرد-يكون (ist!) — sind-جمع خطأ!"
+     },
+     {
+      "a": "Wenn Oma ruft, kommt der Enkel!",
+      "q": "~~Wenn Oma ruft, der Enkel kommt!~~",
+      "why": "V2-بعد-الفاصلة (kommt-der!) — der-kommt خطأ!"
+     },
+     {
+      "a": "Ich würde gern meine Cousine sehen!",
+      "q": "~~Du würde gern meine Cousine sehen!~~",
+      "why": "المتكلم-يودّ (Ich-würde!) — Du-مخاطب خطأ!"
+     },
+     {
+      "a": "Komm her, Enkel!",
+      "q": "~~Komm hier, Enkel!~~",
+      "why": "الاتجاه-her (her!) — hier-مكان خطأ!"
+     },
+     {
+      "a": "Mancher Tag ist schwer!",
+      "q": "~~Manche Tag ist schwer!~~",
+      "why": "المذكر-mancher (mancher-Tag!) — manche-مؤنث خطأ!"
+     },
+     {
+      "a": "Der Enkel ist klein, die Enkelin ist klein!",
+      "q": "~~Der Enkel ist klein, die Enkelin ist kleine!~~",
+      "why": "الخبر-بلا-نهاية (klein!) — kleine-صفة خطأ!"
+     }
+    ]
+   },
+   {
+    "explanationRequired": true,
+    "hints": [
+     "ابدأ بعلمك (weiß-dass!) وانهِ بحفيديك (Enkel/Enkelin!)",
+     "8 جمل: 6-جدد! + محتوى! + شرط! + حلم!"
+    ],
+    "interleavedWith": [
+     "spielen",
+     "gut",
+     "gern"
+    ],
+    "type": "speaking",
+    "items": [
+     {
+      "a": "Ich weiß, dass mein Cousin nett ist! Wenn Oma ruft, kommt der Enkel! Ich würde gern meine Cousine sehen! Die Enkelin ist klein! Mancher Tag ist schwer! Komm her, Enkel! Mein Cousin ist nett und meine Cousine ist nett! Der Enkel ist klein, die Enkelin ist klein!",
+      "q": "احكِ عائلتك (سجّل): 8 جمل — أعرف-ابن-عمي-لطيف! + لو-الجدة-تنادي-يأتي! + أودّ-بنت-عمي! + الحفيدة-صغيرة! + بعض-الأيام-صعبة! + تعال-حفيدي! + ابن-عمي-وبنت-عمي-لطيفان! + الحفيد-والحفيدة-صغيران!",
+      "why": "قارن حكايتك: Cousin! + Enkel! + Cousine! + Enkelin! + mancher! + her! + nett! + klein!"
+     },
+     {
+      "a": "Komm her, Enkel! Die Enkelin ist klein! Der Enkel ist klein!",
+      "q": "جهّز للحفيدين (سجّل): 3 جمل — تعال-حفيدي! + الحفيدة-صغيرة! + الحفيد-صغير!",
+      "why": "قارن تجهيزك: her! + Enkelin! + Enkel!"
+     }
+    ]
+   }
+  ]
+ },
+ "unit": 12,
+ "usedArsenalIds": [
+  "ars-dass-satz",
+  "ars-wuerde"
+ ],
+ "warmup": {
+  "cardIds": [
+   "mathematik",
+   "latein",
+   "religion"
+  ]
+ },
+ "ziel": {
+  "ar": "يوم عائلتي: ابن-عم! + بنت-عم! + حفيد! + حفيدة! + بعض! + تعال! — والعائلة-الكبيرة (der/die-مزدوجة!)",
+  "de": "Ich weiß, dass mein Cousin nett ist! — Komm her, Enkel!"
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "cousin",
+   "cousine",
+   "enkel",
+   "enkelin",
+   "mancher",
+   "her"
+  ],
+  "summary": {
+   "ar": "يوم عائلتي: أعرف أن ابن عمي لطيف. لو تنادي الجدة يأتي الحفيد. أودّ لو أرى بنت عمي. الحفيدة صغيرة. بعض الأيام صعبة. تعال هنا يا حفيدي. ابن عمي لطيف وبنت عمي لطيفة. الحفيد صغير والحفيدة صغيرة. النظام: der/die-مزدوجة! + mancher-للمذكر! + her-اتجاه! + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
+   "de": "Ich weiß, dass mein Cousin nett ist! Wenn Oma ruft, kommt der Enkel! Ich würde gern meine Cousine sehen! Die Enkelin ist klein! Mancher Tag ist schwer! Komm her, Enkel! Mein Cousin ist nett und meine Cousine ist nett! Der Enkel ist klein, die Enkelin ist klein!"
+  },
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "محايد-للمذكر",
+     "de": "~~Manches Tag ist schwer!~~"
+    },
+    "correct": {
+     "ar": "بعض الأيام صعبة!",
+     "de": "Mancher Tag ist schwer!"
+    },
+    "exercise": {
+     "a": "mancher",
+     "q": "___ Tag ist schwer! (Mancher!)"
+    },
+    "whyArabicSpeakerFails": "mancher-يتصرف (mancher/manche/manches! — العربية-بعض-ثابتة!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "n-واحدة",
+     "de": "~~die Enkelinen sind klein!~~"
+    },
+    "correct": {
+     "ar": "الحفيدات صغيرات!",
+     "de": "Die Enkelinnen sind klein!"
+    },
+    "exercise": {
+     "a": "Enkelinnen",
+     "q": "Die ___ sind klein! (Enkelinnen!)"
+    },
+    "whyArabicSpeakerFails": "n-مضاعفة (Enkelinnen! — العربية-بلا-تضعيف-مكتوب!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "فاعل-قبل-الفعل-بعد-الفاصلة",
+     "de": "~~Wenn Oma ruft, der Enkel kommt!~~"
+    },
+    "correct": {
+     "ar": "لو تنادي الجدة يأتي الحفيد!",
+     "de": "Wenn Oma ruft, kommt der Enkel!"
+    },
+    "exercise": {
+     "a": "kommt",
+     "q": "ruft, ___ der Enkel! (kommt!)"
+    },
+    "whyArabicSpeakerFails": "V2-بعد-الفاصلة (kommt-der! — العربية-بلا-عكس-بعد-لو!) (خريطة التداخل 10‑ي)."
+   }
+  ]
+ }
+}

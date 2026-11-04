@@ -1,0 +1,493 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u14-d2",
+  "level": "A2",
+  "unit": 14,
+  "day": 2,
+  "kind": "integration",
+  "ziel": {
+    "de": "Woche drei und vier noch einmal: Du kannst deinen Morgen beschreiben — ich freue mich, du freust dich. Und du kannst sagen, wo es ist: Das Theater ist in der Stadt. Drinnen oder drüben — und mich oder mir: Ich wasche mir die Hände.",
+    "ar": "أسبوع المراجعة، اليوم الثاني (الوحدتان 3–4): الضمير بعد الفعل (freuen mich! + mich أم mir مع العضو!) والمكان (in der Stadt — داتيف!) والاتجاه (in die Stadt — أكوزاتيف!) وda-المركّبات (dafür/dagegen/dabei!) والاتجاهات (drinnen/drüben!)."
+  },
+  "canDoDaily": [
+    "يصف صباحه بالضمير الصحيح بعد الفعل (Ich freue mich · du freust dich) ويفرّق mich عن mir مع جزء الجسم (Ich wasche mir die Hände)",
+    "يصف مكاناً واتجاهاً (Das Theater ist in der Stadt · Ich fahre in die Stadt) ويجتاز معركة اليوم الثاني من أسبوع المراجعة بنتيجة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "interessieren",
+      "joggen",
+      "theater"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«أنا أفرّح» (الضمير بعد الفعل) — أي جملة صحيحة؟"
+        },
+        "choices": [
+          "Heute freue ich mich.",
+          "Ich freue mir.",
+          "Ich freue dich."
+        ],
+        "answer": "Heute freue ich mich.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«المسرح في المدينة» (المكان) — أي جملة صحيحة؟"
+        },
+        "choices": [
+          "Das Theater ist in der Stadt.",
+          "Das Theater ist in die Stadt.",
+          "Das Theater ist an die Stadt."
+        ],
+        "answer": "Das Theater ist in der Stadt.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u3: الضمير بعد الفعل — ich freue mich · du freust dich · er freut sich! + mich أم mir: مع جزء الجسم (die Hände) الضمير mir! + الصحة واليوم (Körper/aktiv/stark! · morgens/abends!).",
+      "من u4: أين (wo؟) أم إلى أين (wohin؟) — Das Theater ist in der Stadt (داتيف!) · Ich fahre in die Stadt (أكوزاتيف!) + da-المركّبات (dafür/dagegen/dabei!) + drinnen/drüben/vorn!"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "modern",
+      "drinnen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-reflexiv-akk",
+      "ars-reflexiv-dat",
+      "ars-wechselpraep",
+      "ars-da-komposita",
+      "ars-tekamolo",
+      "ars-akkusativ-2"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "reflexive",
+      "v2-order",
+      "needs-ein"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Ich ___ mich über den Morgen. (freuen)",
+            "a": "freue",
+            "why": "sich freuen: ich freue mich (الضمير mich مع ich!)."
+          },
+          {
+            "q": "Du ___ dich für Sport. (interessieren)",
+            "a": "interessierst",
+            "why": "interessieren + sich + für: du interessierst dich (النهاية ‑st)."
+          },
+          {
+            "q": "Er ___ sich auf das Sofa. (setzen)",
+            "a": "setzt",
+            "why": "sich setzen auf + Akkusativ: er setzt sich (النهاية ‑t)."
+          },
+          {
+            "q": "Ich wasche ___ die Hände. (الضمير: mich أم mir؟)",
+            "a": "mir",
+            "why": "مع جزء الجسم (die Hände) الضمير داتيف mir — لا mich!"
+          },
+          {
+            "q": "Das Theater ist in ___. (المدينة — أين؟)",
+            "a": "der Stadt",
+            "why": "wo؟ + Dativ: in der Stadt (die Stadt ← der Stadt!)."
+          },
+          {
+            "q": "Ich fahre in ___. (المدينة — إلى أين؟)",
+            "a": "die Stadt",
+            "why": "wohin؟ + Akkusativ: in die Stadt (die Stadt تبقى die!)."
+          },
+          {
+            "q": "Ich bin ___ für das Konzert. (معني: أوافق)",
+            "a": "dafür",
+            "why": "dafür = أوافق-معه! (da-المركّب + für!) — Ich bin dafür."
+          },
+          {
+            "q": "Drinnen oder ___? — Das Konzert ist draußen. (الخارج — هناك)",
+            "a": "drüben",
+            "why": "drüben = هناك-بالخارج! مقابل drinnen في الداخل!"
+          },
+          {
+            "q": "Übermorgen ist das ___. (الحفلة)",
+            "a": "Fest",
+            "why": "das Fest (الحفلة!) — übermorgen بعد الغد!"
+          }
+        ],
+        "interleavedWith": [
+          "familie",
+          "haus",
+          "wohnung",
+          "kurs"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "verb-bank",
+        "items": [
+          {
+            "q": "Ich ___ mich jeden Morgen. (freuen)",
+            "a": "freue",
+            "why": "freuen + sich + ich ← freue (النهاية ‑e)."
+          },
+          {
+            "q": "Du ___ dich um deine Schwester. (kümmern)",
+            "a": "kümmerst",
+            "why": "sich kümmern um + Akkusativ (مفعول): du kümmerst dich (النهاية ‑st)."
+          },
+          {
+            "q": "Wir ___ uns auf das Fest. (freuen)",
+            "a": "freuen",
+            "why": "wir freuen uns (النهاية ‑en + uns)."
+          },
+          {
+            "q": "Er ___ zurück nach Hause. (zurückfahren)",
+            "a": "fährt zurück",
+            "why": "zurückfahren منفصل: er fährt … zurück (fahr ← fährt!)."
+          },
+          {
+            "q": "Ich ___ mir das Gesicht. (waschen)",
+            "a": "wasche",
+            "why": "waschen + mir + العضو: ich wasche mir das Gesicht."
+          },
+          {
+            "q": "Ihr ___ ein Konzert? (unternehmen)",
+            "a": "unternehmt",
+            "why": "unternehmen قوي (unternimmt!) مع ihr: unternehmt."
+          }
+        ],
+        "interleavedWith": [
+          "aufstehen",
+          "fruehstuecken",
+          "fahren",
+          "bleiben"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "~~Ich freue mir über das Fest.~~",
+            "a": "Ich freue mich über das Fest.",
+            "why": "sich freuen الضمير Akkusativ: ich freue mich — mir مع العضو فقط!"
+          },
+          {
+            "q": "~~Ich wasche mich die Hände.~~",
+            "a": "Ich wasche mir die Hände.",
+            "why": "مع جزء الجسم (die Hände) الضمير داتيف mir!"
+          },
+          {
+            "q": "~~Das Theater ist in die Stadt.~~",
+            "a": "Das Theater ist in der Stadt.",
+            "why": "المكان wo؟ + Dativ: in der Stadt — والاتجاه wohin؟ + Akkusativ!"
+          },
+          {
+            "q": "~~Ich fahre in der Stadt.~~",
+            "a": "Ich fahre in die Stadt.",
+            "why": "الاتجاه wohin؟ + Akkusativ: in die Stadt (الحركة!)."
+          },
+          {
+            "q": "~~Dafür ich bin.~~",
+            "a": "Dafür bin ich.",
+            "why": "V2: المصرَّف ثانياً حتى مع da-المركّب: Dafür bin ich."
+          },
+          {
+            "q": "~~Das Konzert ist drüben drinnen.~~",
+            "a": "Das Konzert ist drüben.",
+            "why": "drinnen في الداخل · drüben هناك بالخارج — لا يجتمعان!"
+          }
+        ],
+        "interleavedWith": [
+          "brille",
+          "schluessel",
+          "frage",
+          "danke"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "speaking",
+        "items": [
+          {
+            "q": "صف صباحك بالضمير الصحيح (جملتان: freuen mich + waschen mir العضو)",
+            "a": "Ich freue mich über den Morgen. Ich wasche mir die Hände und frühstücke. Danach interessiere ich mich für Sport.",
+            "why": "freuen mich (Akkusativ!) · waschen mir (Dativ مع العضو!) · interessieren sich für!"
+          },
+          {
+            "q": "صف مكان الحفلة واتجاهك إليها (جملتان: ist in der Stadt + fahre in die Stadt + dafür)",
+            "a": "Das Fest ist in der Stadt. Ich fahre in die Stadt und bin dafür. Drinnen oder drüben? — Drinnen!",
+            "why": "wo؟ + Dativ (ist in der Stadt!) · wohin؟ + Akkusativ (fahre in die Stadt!) · dafür!"
+          }
+        ],
+        "interleavedWith": [
+          "montag",
+          "kurs",
+          "schwester",
+          "bruder"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Mein Morgen und mein Weg: Ich freue mich. Ich wasche mir die Hände. Das Theater ist in der Stadt, und ich fahre in die Stadt. Ich bin dafür!",
+        "ar": "صباحي وطريقي: أصف بالضمير الصحيح وأحدد المكان والاتجاه وأبدي رأيي."
+      },
+      "situation": {
+        "de": "Der zweite Tag — Morgen und Stadt.",
+        "ar": "اليوم الثاني من أسبوع المراجعة — الصباح والمدينة."
+      },
+      "successCriteria": [
+        "يصف صباحه بجملتين بالضمير الصحيح (mich/mir)",
+        "يحدد مكاناً واتجاهاً (الداتيف والأكوزاتيف بعد الحرف)",
+        "يبدّي رأياً بـ dafür أو dagegen",
+        "يجتاز معركة اليوم الثاني (75% فأكثر)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أنا أفرّح»؟",
+            "a": "Heute freue ich mich.",
+            "choices": [
+              "Heute freue ich mich.",
+              "Ich freue mir.",
+              "Ich freue dich."
+            ],
+            "why": "sich freuen: ich freue mich — الضمير mich (أكوزاتيف!)."
+          },
+          {
+            "q": "«أغسل يديّ»؟",
+            "a": "Ich wasche mir die Hände.",
+            "choices": [
+              "Ich wasche mir die Hände.",
+              "Ich wasche mich die Hände.",
+              "Ich wasche mir meinen Hände."
+            ],
+            "why": "مع العضو الضمير mir (الداتيف)."
+          },
+          {
+            "q": "«المسرح في المدينة»؟",
+            "a": "Das Theater ist in der Stadt.",
+            "choices": [
+              "Das Theater ist in der Stadt.",
+              "Das Theater ist in die Stadt.",
+              "Das Theater ist auf der Stadt."
+            ],
+            "why": "wo؟ + Dativ: in der Stadt."
+          },
+          {
+            "q": "«أنا مع ذلك»؟",
+            "a": "Ich bin dafür.",
+            "accept": [
+              "Dafür bin ich."
+            ],
+            "why": "da-المركّب dafür = مع ذلك."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أنتَ تهتم بالرياضة»؟",
+            "a": "Du interessierst dich für Sport.",
+            "choices": [
+              "Du interessierst dich für Sport.",
+              "Du interessierst dir für Sport.",
+              "Du interessierst dich über Sport."
+            ],
+            "why": "interessieren sich für + Akkusativ (مفعول): dich für Sport."
+          },
+          {
+            "q": "«إلى المدينة بالسيارة»؟",
+            "a": "Ich fahre in die Stadt.",
+            "choices": [
+              "Ich fahre in die Stadt.",
+              "Ich fahre in der Stadt.",
+              "Ich fahre an die Stadt."
+            ],
+            "why": "wohin؟ + Akkusativ: in die Stadt."
+          },
+          {
+            "q": "«أنا ضده»؟",
+            "a": "Ich bin dagegen.",
+            "choices": [
+              "Ich bin dagegen.",
+              "Ich bin dafür.",
+              "Ich bin dabei."
+            ],
+            "why": "dagegen ضده · dafür معه · dabei حاضر!"
+          },
+          {
+            "q": "«الحفلة هناك بالخارج»؟",
+            "a": "Das Fest ist drüben.",
+            "accept": [
+              "Das Konzert ist drüben."
+            ],
+            "why": "drüben هناك بالخارج (مقابل drinnen!)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«هو يجلس على الأريكة»؟",
+            "a": "Er setzt sich auf das Sofa.",
+            "choices": [
+              "Er setzt sich auf das Sofa.",
+              "Er setzt sich in das Sofa.",
+              "Er setzt ihm auf das Sofa."
+            ],
+            "why": "sich setzen auf + Akkusativ (الحركة!)."
+          },
+          {
+            "q": "«نحن نغسل أيدينا»؟",
+            "a": "Wir waschen uns die Hände.",
+            "choices": [
+              "Wir waschen uns die Hände.",
+              "Wir waschen sich die Hände.",
+              "Wir waschen uns zu die Hände."
+            ],
+            "why": "مع العضو: uns (الداتيف الجمع)."
+          },
+          {
+            "q": "«أين المكتبة؟ — في المدينة»؟",
+            "a": "Die Bibliothek ist in der Stadt.",
+            "choices": [
+              "Die Bibliothek ist in der Stadt.",
+              "Die Bibliothek ist in die Stadt.",
+              "Die Bibliothek ist zur Stadt."
+            ],
+            "why": "wo؟ + Dativ: in der Stadt."
+          },
+          {
+            "q": "«بعد الغد الحفلة»؟",
+            "a": "Übermorgen ist das Fest.",
+            "accept": [
+              "Übermorgen ist das Festival."
+            ],
+            "why": "übermorgen بعد الغد + das Fest."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Woche drei und vier noch einmal — der zweite Tag: Ich freue mich über den Morgen. Ich wasche mir die Hände und frühstücke. Das Theater ist in der Stadt, und ich fahre in die Stadt. Ich bin dafür, und das Fest ist drinnen. Übermorgen ist das Fest — wir sind einig: die Stadt ist modern.",
+      "ar": "اليوم الثاني من أسبوع المراجعة اكتمل: وصفت صباحي بالضمير الصحيح (mich!) وفرّقت mich عن mir مع جزء الجسم، وحدّدت المكان (in der Stadt — داتيف!) والاتجاه (in die Stadt — أكوزاتيف!)، وأبدأت رأيي (dafür/dagegen!) — والمدينة الحديثة (modern!) والداخل (drinnen!) جسيما اليوم."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich wasche mich die Hände.~~ · ~~Ich freue mir.~~",
+          "ar": "mich أم mir"
+        },
+        "whyArabicSpeakerFails": "العربية تعرب الضمير بحالته («أغسل يديّ» بالياء!) فتثبّت صورة واحدة — والألمانية تفرّق: mich للانعكاسي وmir مع جزء الجسم (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Ich wasche mir die Hände. · Ich freue mich.",
+          "ar": "أغسل يديّ · أنا أفرّح"
+        },
+        "exercise": {
+          "q": "أكمل: Ich wasche ___ das Gesicht und freue ___ . (mir/mich)",
+          "a": "mir / mich",
+          "choices": [
+            "mir / mich",
+            "mich / mir",
+            "mich / mich"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Das Theater ist in die Stadt.~~ · ~~Ich fahre in der Stadt.~~",
+          "ar": "المكان Dativ والاتجاه Akkusativ"
+        },
+        "whyArabicSpeakerFails": "«في» العربية تصلح للمكان والاتجاه معاً («أنا في المدينة» و«أذهب إلى المدينة»!) — والألمانية تفرّق: ist in der Stadt (Dativ!) وfahre in die Stadt (Akkusativ!) (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Das Theater ist in der Stadt. · Ich fahre in die Stadt.",
+          "ar": "المسرح في المدينة · أسافر إلى المدينة"
+        },
+        "exercise": {
+          "q": "أكمل: Die Bibliothek ist in ___ Stadt, und ich fahre in ___ Stadt. (der/die)",
+          "a": "der / die",
+          "choices": [
+            "der / die",
+            "die / der",
+            "der / der"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Dafür ich bin.~~ · ~~Dafür bin dafür.~~",
+          "ar": "da-المركّب ظرف فيبدأ الجملة"
+        },
+        "whyArabicSpeakerFails": "العربية تضع الجار والمجرور بعد الفعل («أنا مع ذلك») فتؤخر الظرف — والمركب الألماني dafür يبدأ الجملة فيأخذ الفعل المصرَّف بعده مباشرةً: Dafür bin ich (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Dafür bin ich. · Dagegen bin ich.",
+          "ar": "أنا مع ذلك · أنا ضده"
+        },
+        "exercise": {
+          "q": "أكمل: Dafür ___ ich. (sein)",
+          "a": "bin"
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "modern",
+      "drinnen"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/modern_neu_modisch",
+      "https://www.duden.de/rechtschreibung/drinnen"
+    ],
+    "wiktionary": [],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-reflexiv-akk",
+    "ars-reflexiv-dat",
+    "ars-wechselpraep",
+    "ars-da-komposita",
+    "ars-tekamolo",
+    "ars-akkusativ-2"
+  ],
+  "audioManifestRefs": [
+    "word-modern",
+    "word-drinnen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "A2-Wiederholungswoche (Prüfungsvorbereitung) — اليوم 2: الوحدتان 3–4",
+    "goetheWordListOverlap": []
+  }
+}

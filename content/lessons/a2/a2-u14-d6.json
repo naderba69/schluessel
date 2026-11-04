@@ -1,0 +1,506 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u14-d6",
+  "level": "A2",
+  "unit": 14,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Woche elf bis dreizehn noch einmal — der letzte Tag: Ich würde gern Koch werden! Ich weiß, dass die Prüfung leicht ist! Wenn ich Zeit habe, lerne ich. Und: In der Nacht schlafe ich!",
+    "ar": "أسبوع المراجعة، اليوم السادس والأخير (الوحدات 11–13): التمني (würde gern!) والشرط (wenn!) والمحتوى (dass!) واليوم والوقت (in der Nacht! um Mitternacht! der erste Tag!) — التوليف والشهادة!"
+  },
+  "canDoDaily": [
+    "يتمنى ويشترط ويُخبر بالمحتوى (Ich würde gern Koch werden · Wenn ich Zeit habe, lerne ich · Ich weiß, dass die Prüfung leicht ist)",
+    "يصف يومه (Am Arbeitstag arbeite ich · in der Nacht schlafe ich · um Mitternacht) ويجتاز معركة اليوم السادس من أسبوع المراجعة بنتيجة 75% فأكثر وينال شهادة أسبوع الامتحان"
+  ],
+  "warmup": {
+    "cardIds": [
+      "werktag",
+      "vogel",
+      "um-mitternacht"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«أودّ أن أصير طاهياً» (التمني) — أي جملة صحيحة؟"
+        },
+        "choices": [
+          "Ich würde gern Koch werden.",
+          "Ich würde gern Koch.",
+          "Ich will gern werde Koch."
+        ],
+        "answer": "Ich würde gern Koch werden.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«أعلم أن الامتحان سهل» (المحتوى) — أي جملة صحيحة؟"
+        },
+        "choices": [
+          "Ich weiß, dass die Prüfung leicht ist.",
+          "Ich weiß, dass die Prüfung ist leicht.",
+          "Ich weiß das die Prüfung leicht ist."
+        ],
+        "answer": "Ich weiß, dass die Prüfung leicht ist.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u11: التمني: würde + gern + المصدر آخر (Ich würde gern Koch werden!) + الطلب (möchte/will!) + الشرط: wenn + الفعل-آخراً + فاصلة + V2-معكوس (Wenn ich Zeit habe, spiele ich!).",
+      "من u12 وu13: المحتوى: dass + الفعل-آخراً (Ich weiß, dass die Prüfung leicht ist!) + اليوم والوقت (in der Nacht! um Mitternacht! am Vormittag!) والترتيب (der erste Tag!) والوحدات (ein Kilogramm!) والجنسية (Deutscher/Deutsche!)."
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "arbeitstag",
+      "pferd",
+      "in-der-nacht"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-wuerde",
+      "ars-moechte-wollen",
+      "ars-wenn-satz",
+      "ars-dass-satz",
+      "ars-termin-datum"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order",
+      "plural-irregular",
+      "needs-ein"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Ich ___ gern Koch werden. (التمني!)",
+            "a": "würde",
+            "why": "التمني: würde + gern + المصدر آخر!"
+          },
+          {
+            "q": "Er ___ gern Musiker werden. (التمني!)",
+            "a": "würde",
+            "why": "er würde (الصيغة واحدة: würde!)."
+          },
+          {
+            "q": "Wenn ich Zeit ___, lerne ich. (haben — آخر!)",
+            "a": "habe",
+            "why": "wenn تفتح جملة فرعية: الفعل آخر!"
+          },
+          {
+            "q": "Ich weiß, dass die Prüfung leicht ___. (sein — آخر!)",
+            "a": "ist",
+            "why": "dass + الفعل آخر: ist!"
+          },
+          {
+            "q": "Ich ___ einen Kuchen. (möchten — الطلب المهذب!)",
+            "a": "möchte",
+            "why": "الطلب المهذب: ich möchte (وليس will!)."
+          },
+          {
+            "q": "Er ___ Musiker werden. (wollen — القوي!)",
+            "a": "will",
+            "why": "المتطلّب القوي: er will (وليس wollt!)."
+          },
+          {
+            "q": "In der ___ schlafe ich. (الليل!)",
+            "a": "Nacht",
+            "why": "in der Nacht (المؤنث die Nacht ← der!)."
+          },
+          {
+            "q": "Der ___ Tag ist schön. (الترتيب — eins!)",
+            "a": "erste",
+            "why": "الترتيب: der erste Tag (وليس eins!)."
+          },
+          {
+            "q": "Ich trinke ___ Kaffee. (مرتين!)",
+            "a": "zweimal",
+            "why": "zweimal = مرتين (كلمة واحدة: zwei+mal!)."
+          }
+        ],
+        "interleavedWith": [
+          "familie",
+          "haus",
+          "wohnung",
+          "kurs"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "verb-bank",
+        "items": [
+          {
+            "q": "Ich ___ gern helfen. (würde)",
+            "a": "würde",
+            "why": "würde … helfen (المصدر آخر!)."
+          },
+          {
+            "q": "Wir ___ gern Techniker werden. (würde — الجمع!)",
+            "a": "würden",
+            "why": "الجمع: wir würden (‑en!)."
+          },
+          {
+            "q": "Ich meine, dass das Team gut ___. (sein — آخر!)",
+            "a": "ist",
+            "why": "dass … ist (الفعل المصرَّف آخر!)."
+          },
+          {
+            "q": "Wenn sie Zeit ___, malt sie. (haben)",
+            "a": "hat",
+            "why": "wenn + hat (آخر!) + الفعل الثاني ثانياً (malt!)."
+          },
+          {
+            "q": "Ich ___ ein Eis essen. (möchten)",
+            "a": "möchte",
+            "why": "möchte + المصدر آخر (essen!)."
+          },
+          {
+            "q": "___ du gern Musik? (mögen — الشاذ!)",
+            "a": "Magst",
+            "why": "mögen ← magst (e→a!) — وليس möchten!"
+          }
+        ],
+        "interleavedWith": [
+          "aufstehen",
+          "fruehstuecken",
+          "fahren",
+          "bleiben"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "~~Ich würde gern Koch.~~",
+            "a": "Ich würde gern Koch werden.",
+            "why": "würde + gern + المصدر (werden!) آخر الجملة!"
+          },
+          {
+            "q": "~~Wenn ich Zeit habe ich spiele.~~",
+            "a": "Wenn ich Zeit habe, spiele ich.",
+            "why": "فاصلة + V2 معكوس (spiele ich!)."
+          },
+          {
+            "q": "~~Ich weiß das die Prüfung leicht ist.~~",
+            "a": "Ich weiß, dass die Prüfung leicht ist.",
+            "why": "dass (ss) للربط — وليس das الأداة!"
+          },
+          {
+            "q": "~~Ich weiß, dass die Prüfung ist leicht.~~",
+            "a": "Ich weiß, dass die Prüfung leicht ist.",
+            "why": "الفعل المصرَّف آخر جملة dass!"
+          },
+          {
+            "q": "~~In die Nacht schlafe ich.~~",
+            "a": "In der Nacht schlafe ich.",
+            "why": "in der Nacht (داتيف — المكان!)."
+          },
+          {
+            "q": "~~Der eins Tag ist schön.~~",
+            "a": "Der erste Tag ist schön.",
+            "why": "الترتيب: erste (وليس eins!)."
+          }
+        ],
+        "interleavedWith": [
+          "brille",
+          "schluessel",
+          "frage",
+          "danke"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "speaking",
+        "items": [
+          {
+            "q": "احكِ أمنيتك وشرطك (جملتان: würde gern + wenn!)",
+            "a": "Ich würde gern Koch werden! Wenn ich Zeit habe, koche ich.",
+            "why": "würde + gern + Infinitiv! · wenn + الفعل-آخراً!"
+          },
+          {
+            "q": "لخّص أسبوعك وشهادتك (جملتان: dass + in der Nacht!)",
+            "a": "Ich weiß, dass die Woche gut war. Am Arbeitstag habe ich gelernt — und in der Nacht habe ich geschlafen!",
+            "why": "dass + آخر! · am Arbeitstag! · in der Nacht!"
+          }
+        ],
+        "interleavedWith": [
+          "montag",
+          "kurs",
+          "schwester",
+          "bruder"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wünsche und Prüfung: Ich würde gern Koch werden. Wenn ich Zeit habe, lerne ich. Ich weiß, dass die Prüfung leicht ist. Am Arbeitstag arbeite ich — und in der Nacht schlafe ich!",
+        "ar": "الأمنيات والامتحان: أتمنى (würde gern!) وأشرط (wenn!) وأُخبر بالمحتوى (dass!) وأصف يومي (am Arbeitstag! in der Nacht!)."
+      },
+      "situation": {
+        "de": "Das Ende der Woche: Der sechste Tag — Wünsche, Prüfung und Zeit. Und jetzt du: Was wünschst du dir?",
+        "ar": "نهاية الأسبوع: اليوم السادس والأخير — الأمنيات والامتحان والوقت. والآن أنت: ماذا تتمنى؟"
+      },
+      "successCriteria": [
+        "يتمنى بـwürde gern (والمصدر آخر!) في جملتين",
+        "يربط الشرط والمحتوى (wenn وdass — والفعل آخر!)",
+        "يصف يومه (العمل والليل والترتيب!)",
+        "يجتاز معركة اليوم السادس (75% فأكثر) وينال شهادة أسبوع الامتحان"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أودّ أن أصير طاهياً»؟",
+            "a": "Ich würde gern Koch werden.",
+            "choices": [
+              "Ich würde gern Koch werden.",
+              "Ich würde gern Koch.",
+              "Ich will gern werde Koch."
+            ],
+            "why": "würde + gern + المصدر آخر!"
+          },
+          {
+            "q": "«أودّ كعكة»؟",
+            "a": "Ich möchte einen Kuchen.",
+            "choices": [
+              "Ich möchte einen Kuchen.",
+              "Ich möchtest einen Kuchen.",
+              "Ich will einen Kuchen."
+            ],
+            "why": "الطلب المهذب: ich möchte (وليس will القوي!)."
+          },
+          {
+            "q": "«لو عندي وقت ألعب»؟",
+            "a": "Wenn ich Zeit habe, spiele ich.",
+            "choices": [
+              "Wenn ich Zeit habe, spiele ich.",
+              "Wenn ich Zeit habe spiele ich.",
+              "Wenn ich Zeit habe, ich spiele."
+            ],
+            "why": "فاصلة + V2 معكوس!"
+          },
+          {
+            "q": "«أعلم أن ذلك صحيح»؟",
+            "a": "Ich weiß, dass das wahr ist.",
+            "choices": [
+              "Ich weiß, dass das wahr ist.",
+              "Ich weiß, dass das ist wahr.",
+              "Ich weiß das das wahr ist."
+            ],
+            "why": "dass + الفعل آخر!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«في الليل أنام»؟",
+            "a": "In der Nacht schlafe ich.",
+            "choices": [
+              "In der Nacht schlafe ich.",
+              "In die Nacht schlafe ich.",
+              "In der Nacht ich schlafe."
+            ],
+            "why": "in der Nacht (داتيف!) + V2!"
+          },
+          {
+            "q": "«اليوم الأول جميل»؟",
+            "a": "Der erste Tag ist schön.",
+            "choices": [
+              "Der erste Tag ist schön.",
+              "Der eins Tag ist schön.",
+              "Der erste Tag sind schön."
+            ],
+            "why": "الترتيب: erste!"
+          },
+          {
+            "q": "«هو يريد أن يصير موسيقياً»؟",
+            "a": "Er will Musiker werden.",
+            "choices": [
+              "Er will Musiker werden.",
+              "Er möchte Musiker werden.",
+              "Er würde Musiker werden."
+            ],
+            "why": "er will القوي (وليس möchten المهذب!) — willt ليست صيغة!"
+          },
+          {
+            "q": "«أشرب قهوة مرتين»؟",
+            "a": "Ich trinke zweimal Kaffee.",
+            "choices": [
+              "Ich trinke zweimal Kaffee.",
+              "Ich trinke zweimal Kaffees.",
+              "Ich trinke zweiter Kaffee."
+            ],
+            "why": "zweimal = مرتين (كلمة واحدة!)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«هل تحبّ الموسيقى؟»؟",
+            "a": "Magst du Musik?",
+            "choices": [
+              "Magst du Musik?",
+              "Magst Musik du?",
+              "Möchtest du Musik?"
+            ],
+            "why": "mögen←magst (الشاذ!) — وليس möchten!"
+          },
+          {
+            "q": "«الحصان كبير والعصفور صغير»؟",
+            "a": "Das Pferd ist groß, und der Vogel ist klein.",
+            "choices": [
+              "Das Pferd ist groß, und der Vogel ist klein.",
+              "Der Pferd ist groß, und der Vogel ist klein.",
+              "Das Pferd ist groß, und das Vogel ist klein."
+            ],
+            "why": "das Pferd (محايد!) · der Vogel (مذكر!) — الأداة من الآخر!"
+          },
+          {
+            "q": "«عند منتصف الليل»؟",
+            "a": "Um Mitternacht!",
+            "choices": [
+              "Um Mitternacht!",
+              "An Mitternacht!",
+              "In Mitternacht!"
+            ],
+            "why": "um + نقطة-الوقت (um Mitternacht!) — in der للفترة!"
+          },
+          {
+            "q": "«أودّ أن أساعد»؟",
+            "a": "Ich würde gern helfen.",
+            "choices": [
+              "Ich würde gern helfen.",
+              "Ich würde gern zu helfen.",
+              "Ich wünsche gern helfen."
+            ],
+            "why": "würde + gern + المصدر بلا zu!"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Woche elf bis dreizehn noch einmal — der letzte Tag: Ich würde gern Koch werden. Wenn ich Zeit habe, lerne ich. Ich weiß, dass die Prüfung leicht ist. Am Arbeitstag arbeite ich, und in der Nacht schlafe ich. Das Pferd ist groß, der Vogel ist klein — die Woche war gut! Und jetzt du: Was wünschst du dir?",
+      "ar": "اليوم الأخير من أسبوع الامتحان اكتمل: تمنيت (würde gern!) وشرطت (wenn!) وأعلنت المحتوى (dass!) وصفت يومي (am Arbeitstag! in der Nacht! um Mitternacht!) — والمفردتان (Arbeitstag! + Pferd! + in-der-Nacht!) تيجان اليوم. وشهادة أسبوع الامتحان لك: أكملت الأسبوع كاملاً!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Ich würde gern Koch.~~ · ~~Ich weiß, dass die Prüfung ist leicht.~~",
+          "ar": "المصدر والفعل في الآخر"
+        },
+        "whyArabicSpeakerFails": "العربية تضع الفعل بعد الفاعل مباشرة («أودّ أن أصير طاهياً»!) فتؤخر الجملة الفرعية — والألمانية: würde/wenn/dass تفتح جملة فرعية والفعل المصرَّف آخرها (Ich würde gern Koch werden! · dass die Prüfung leicht ist!) (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Ich würde gern Koch werden. · Ich weiß, dass die Prüfung leicht ist.",
+          "ar": "أودّ أن أصير طاهياً · أعلم أن الامتحان سهل"
+        },
+        "exercise": {
+          "q": "أكمل: Ich weiß, dass die Prüfung leicht ___. (sein)",
+          "a": "ist",
+          "choices": [
+            "ist",
+            "ist leicht",
+            "sein"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich weiß das die Prüfung leicht ist.~~",
+          "ar": "dass الرابط ≠ das الأداة"
+        },
+        "whyArabicSpeakerFails": "العربية لا تكتب «أنّ» بحرفين مختلفين للمعنى والربط — والألمانية: dass بـss للربط (Ich weiß, dass…) وdas بأداة واحدة للمعرفة (das Pferd!) (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Ich weiß, dass die Prüfung leicht ist. · Das Pferd ist groß.",
+          "ar": "أعلم أن الامتحان سهل · الحصان كبير"
+        },
+        "exercise": {
+          "q": "أكمل: Ich weiß, ___ das Pferd groß ist. (dass/das)",
+          "a": "dass",
+          "choices": [
+            "dass",
+            "das",
+            "des"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~An Mitternacht schlafe ich in die Nacht.~~",
+          "ar": "um لنقطة الوقت · in der للفترة"
+        },
+        "whyArabicSpeakerFails": "العربية تقول «في منتصف الليل» بـ«في» للمعنى الواحد فتستعمل in لكل وقت — والألمانية: um لنقطة (um Mitternacht! um sieben!) وin der للفترة (in der Nacht!) (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Um Mitternacht wache ich auf. · In der Nacht schlafe ich.",
+          "ar": "عند منتصف الليل أستيقظ · في الليل أنام"
+        },
+        "exercise": {
+          "q": "أكمل: ___ Mitternacht und ___ der Nacht. (um/in)",
+          "a": "um / in",
+          "choices": [
+            "um / in",
+            "in / um",
+            "um / um"
+          ]
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "arbeitstag",
+      "pferd",
+      "in-der-nacht"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Arbeitstag",
+      "https://www.duden.de/rechtschreibung/Pferd",
+      "https://www.duden.de/rechtschreibung/Nacht"
+    ],
+    "wiktionary": [],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-wuerde",
+    "ars-moechte-wollen",
+    "ars-wenn-satz",
+    "ars-dass-satz",
+    "ars-termin-datum"
+  ],
+  "audioManifestRefs": [
+    "word-arbeitstag",
+    "word-pferd",
+    "word-in-der-nacht"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "A2-Wiederholungswoche (Prüfungsvorbereitung) — اليوم 6: الوحدات 11–13 — التوليف والشهادة",
+    "goetheWordListOverlap": []
+  }
+}

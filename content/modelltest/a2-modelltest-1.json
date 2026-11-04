@@ -1,0 +1,906 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-modelltest-1",
+  "level": "A2",
+  "title": {
+    "de": "Goethe-Zertifikat A2 — Modelltest 1",
+    "ar": "امتحان A2 التجريبي — النموذج 1"
+  },
+  "passingScore": 0.6,
+  "sections": [
+    {
+      "skill": "hoeren",
+      "timeBudgetMin": 30,
+      "instructions": {
+        "de": "Der Test Hören hat vier Teile. Lesen Sie zuerst die Aufgabe, dann hören Sie den Text.",
+        "ar": "الاختبار الاستماعي أربعة أجزاء. اقرأ المهمة أولاً ثم استمع إلى النص."
+      },
+      "parts": [
+        {
+          "id": "hoeren-teil1",
+          "prompt": {
+            "de": "Teil 1: Fünf Durchsagen. Was ist richtig? Kreuzen Sie an: a, b oder c. Sie hören jeden Text zweimal.",
+            "ar": "القسم 1: خمس مناشير. ما الصحيح؟ اختر a أو b أو c. تسمع كل نص مرتين."
+          },
+          "taskType": "mc3",
+          "playCount": 2,
+          "audioScriptRef": "a2-mt1-hoeren-teil1",
+          "items": [
+            {
+              "q": "Wann fährt der Zug nach Hamburg?",
+              "a": "um zehn Uhr",
+              "choices": [
+                "um zehn Uhr",
+                "um neun Uhr",
+                "um elf Uhr"
+              ],
+              "audioRefs": [
+                "a2mt1-h1-d1-l1"
+              ],
+              "evidence": "fährt um zehn Uhr"
+            },
+            {
+              "q": "Wann ist das Kaufhaus geschlossen?",
+              "a": "am Montag",
+              "choices": [
+                "am Sonntag",
+                "am Montag",
+                "am Dienstag"
+              ],
+              "audioRefs": [
+                "a2mt1-h1-d2-l1"
+              ],
+              "evidence": "am Montag geschlossen"
+            },
+            {
+              "q": "Wann beginnt der Kurs?",
+              "a": "um neun Uhr",
+              "choices": [
+                "um acht Uhr",
+                "um zehn Uhr",
+                "um neun Uhr"
+              ],
+              "audioRefs": [
+                "a2mt1-h1-d3-l2"
+              ],
+              "evidence": "Der Kurs ist um neun Uhr"
+            },
+            {
+              "q": "Wie ist das Wetter heute?",
+              "a": "kalt und windig",
+              "choices": [
+                "kalt und windig",
+                "warm und schön",
+                "heiß"
+              ],
+              "audioRefs": [
+                "a2mt1-h1-d4-l1"
+              ],
+              "evidence": "kalt und windig"
+            },
+            {
+              "q": "Wann ist das Fest?",
+              "a": "am Samstag",
+              "choices": [
+                "am Freitag",
+                "am Samstag",
+                "am Sonntag"
+              ],
+              "audioRefs": [
+                "a2mt1-h1-d5-l1"
+              ],
+              "evidence": "Das Fest ist am Samstag"
+            }
+          ]
+        },
+        {
+          "id": "hoeren-teil2",
+          "prompt": {
+            "de": "Teil 2: Ein Gespräch. Was passt? Kreuzen Sie an: a, b oder c. Sie hören das Gespräch einmal.",
+            "ar": "القسم 2: حديث واحد. ما المناسب؟ اختر a أو b أو c. تسمع الحديث مرة واحدة."
+          },
+          "taskType": "zuordnung",
+          "playCount": 1,
+          "audioScriptRef": "a2-mt1-hoeren-teil2",
+          "items": [
+            {
+              "q": "Was macht Yusuf am Samstag?",
+              "a": "Ich möchte in die Stadt fahren.",
+              "choices": [
+                "Ich möchte in die Stadt fahren.",
+                "Ich bleibe zu Hause.",
+                "Ich gehe zur Arbeit."
+              ],
+              "textRefs": [
+                "a2mt1-h2-d1-l2"
+              ],
+              "evidence": "Ich möchte in die Stadt fahren",
+              "audioRefs": [
+                "a2mt1-h2-d1-l2"
+              ]
+            },
+            {
+              "q": "Was braucht Yusuf?",
+              "a": "neue Schuhe",
+              "choices": [
+                "neue Schuhe",
+                "ein Buch",
+                "einen Kuchen"
+              ],
+              "textRefs": [
+                "a2mt1-h2-d1-l4"
+              ],
+              "evidence": "Ich brauche neue Schuhe",
+              "audioRefs": [
+                "a2mt1-h2-d1-l4"
+              ]
+            },
+            {
+              "q": "Wann treffen sie sich?",
+              "a": "um zehn Uhr",
+              "choices": [
+                "um neun Uhr",
+                "um zehn Uhr",
+                "um elf Uhr"
+              ],
+              "textRefs": [
+                "a2mt1-h2-d1-l6"
+              ],
+              "evidence": "Ja, um zehn Uhr am Markt",
+              "audioRefs": [
+                "a2mt1-h2-d1-l6"
+              ]
+            },
+            {
+              "q": "Wo trinken sie Kaffee?",
+              "a": "am Markt",
+              "choices": [
+                "im Kaufhaus",
+                "am Markt",
+                "zu Hause"
+              ],
+              "textRefs": [
+                "a2mt1-h2-d1-l6"
+              ],
+              "evidence": "Ja, um zehn Uhr am Markt",
+              "audioRefs": [
+                "a2mt1-h2-d1-l6"
+              ]
+            },
+            {
+              "q": "Was machen sie am Sonntag?",
+              "a": "Ich koche eine Suppe.",
+              "choices": [
+                "Ich kaufe Schuhe.",
+                "Ich fahre in die Stadt.",
+                "Ich koche eine Suppe."
+              ],
+              "textRefs": [
+                "a2mt1-h2-d1-l8"
+              ],
+              "evidence": "Da koche ich eine Suppe",
+              "audioRefs": [
+                "a2mt1-h2-d1-l8"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hoeren-teil3",
+          "prompt": {
+            "de": "Teil 3: Fünf kurze Gespräche. Was ist richtig? Kreuzen Sie an: a, b oder c. Sie hören jedes Gespräch einmal.",
+            "ar": "القسم 3: خمسة حوارات قصيرة. ما الصحيح؟ اختر a أو b أو c. تسمع كل حديث مرة واحدة."
+          },
+          "taskType": "mc3",
+          "playCount": 1,
+          "audioScriptRef": "a2-mt1-hoeren-teil3",
+          "items": [
+            {
+              "q": "Was kauft der Mann?",
+              "a": "Brot",
+              "choices": [
+                "Kuchen",
+                "Milch",
+                "Brot"
+              ],
+              "audioRefs": [
+                "a2mt1-h3-d1-l1",
+                "a2mt1-h3-d1-l2"
+              ],
+              "evidence": "Ein Brot, bitte"
+            },
+            {
+              "q": "Wie spät ist es?",
+              "a": "halb neun",
+              "choices": [
+                "halb acht",
+                "halb neun",
+                "halb zehn"
+              ],
+              "audioRefs": [
+                "a2mt1-h3-d2-l1",
+                "a2mt1-h3-d2-l2"
+              ],
+              "evidence": "Es ist halb neun"
+            },
+            {
+              "q": "Wann hat die Frau Zeit?",
+              "a": "am Mittwoch",
+              "choices": [
+                "am Mittwoch",
+                "am Dienstag",
+                "am Donnerstag"
+              ],
+              "audioRefs": [
+                "a2mt1-h3-d3-l1",
+                "a2mt1-h3-d3-l2"
+              ],
+              "evidence": "Aber am Mittwoch"
+            },
+            {
+              "q": "Wie wird das Wetter morgen?",
+              "a": "wärmer",
+              "choices": [
+                "kälter",
+                "gleich",
+                "wärmer"
+              ],
+              "audioRefs": [
+                "a2mt1-h3-d4-l1",
+                "a2mt1-h3-d4-l2"
+              ],
+              "evidence": "morgen wird es wärmer"
+            },
+            {
+              "q": "Wie war die Party?",
+              "a": "gut",
+              "choices": [
+                "gut",
+                "schlecht",
+                "langweilig"
+              ],
+              "audioRefs": [
+                "a2mt1-h3-d5-l1",
+                "a2mt1-h3-d5-l2"
+              ],
+              "evidence": "Ja, sehr gut"
+            }
+          ]
+        },
+        {
+          "id": "hoeren-teil4",
+          "prompt": {
+            "de": "Teil 4: Ein Radiointerview. Richtig oder Falsch? Sie hören das Interview zweimal.",
+            "ar": "القسم 4: مقابلة إذاعية. صحيح أم خطأ؟ تسمع المقابلة مرتين."
+          },
+          "taskType": "richtig-falsch",
+          "playCount": 2,
+          "audioScriptRef": "a2-mt1-hoeren-teil4",
+          "items": [
+            {
+              "q": "Frau Berg arbeitet in einer Bäckerei.",
+              "a": "Richtig",
+              "choices": [
+                "Richtig",
+                "Falsch"
+              ],
+              "audioRefs": [
+                "a2mt1-h4-d1-l2"
+              ],
+              "evidence": "Ich arbeite in einer Bäckerei"
+            },
+            {
+              "q": "Am Samstag hat Frau Berg frei.",
+              "a": "Falsch",
+              "choices": [
+                "Richtig",
+                "Falsch"
+              ],
+              "audioRefs": [
+                "a2mt1-h4-d1-l2"
+              ],
+              "evidence": "Am Samstag arbeite ich immer"
+            },
+            {
+              "q": "Am Montag macht Frau Berg nichts.",
+              "a": "Falsch",
+              "choices": [
+                "Richtig",
+                "Falsch"
+              ],
+              "audioRefs": [
+                "a2mt1-h4-d1-l4"
+              ],
+              "evidence": "Da koche ich und lese"
+            },
+            {
+              "q": "Frau Berg kocht gern Suppe.",
+              "a": "Richtig",
+              "choices": [
+                "Richtig",
+                "Falsch"
+              ],
+              "audioRefs": [
+                "a2mt1-h4-d1-l6"
+              ],
+              "evidence": "Ich koche gern Suppe"
+            },
+            {
+              "q": "Die Kinder essen gern Kuchen.",
+              "a": "Richtig",
+              "choices": [
+                "Richtig",
+                "Falsch"
+              ],
+              "audioRefs": [
+                "a2mt1-h4-d1-l6"
+              ],
+              "evidence": "die Kinder essen gern Kuchen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "skill": "lesen",
+      "timeBudgetMin": 30,
+      "instructions": {
+        "de": "Der Test Lesen hat vier Teile. Lesen Sie die Texte und die Aufgaben.",
+        "ar": "الاختبار القرائي أربعة أجزاء. اقرأ النصوص والمهام."
+      },
+      "parts": [
+        {
+          "id": "lesen-teil1",
+          "prompt": {
+            "de": "Teil 1: Ein Text aus den Medien. Was ist richtig? Kreuzen Sie an: a, b oder c.",
+            "ar": "القسم 1: نص من الإعلام. ما الصحيح؟ اختر a أو b أو c."
+          },
+          "taskType": "mc3",
+          "texts": [
+            {
+              "id": "l1-t1",
+              "kind": "nachricht",
+              "title": "Nachrichten",
+              "de": "Am Samstag ist das Fest in Tunis. Ab acht Uhr gibt es Musik und Tanz. Die Kinder können malen. Ein Brot kostet einen Euro. Bei Regen ist das Fest in der Schule."
+            }
+          ],
+          "items": [
+            {
+              "q": "Wann ist das Fest?",
+              "a": "am Samstag",
+              "choices": [
+                "am Samstag",
+                "am Freitag",
+                "am Sonntag"
+              ],
+              "textRefs": [
+                "l1-t1"
+              ],
+              "evidence": "Am Samstag ist das Fest"
+            },
+            {
+              "q": "Was gibt es ab acht Uhr?",
+              "a": "Musik und Tanz",
+              "choices": [
+                "Essen und Trinken",
+                "Musik und Tanz",
+                "Kino und Theater"
+              ],
+              "textRefs": [
+                "l1-t1"
+              ],
+              "evidence": "gibt es Musik und Tanz"
+            },
+            {
+              "q": "Was können die Kinder?",
+              "a": "malen",
+              "choices": [
+                "singen",
+                "tanzen",
+                "malen"
+              ],
+              "textRefs": [
+                "l1-t1"
+              ],
+              "evidence": "Die Kinder können malen"
+            },
+            {
+              "q": "Was kostet ein Brot?",
+              "a": "einen Euro",
+              "choices": [
+                "einen Euro",
+                "zwei Euro",
+                "drei Euro"
+              ],
+              "textRefs": [
+                "l1-t1"
+              ],
+              "evidence": "Ein Brot kostet einen Euro"
+            },
+            {
+              "q": "Wo ist das Fest bei Regen?",
+              "a": "in der Schule",
+              "choices": [
+                "im Kaufhaus",
+                "in der Schule",
+                "zu Hause"
+              ],
+              "textRefs": [
+                "l1-t1"
+              ],
+              "evidence": "Bei Regen ist das Fest in der Schule"
+            }
+          ]
+        },
+        {
+          "id": "lesen-teil2",
+          "prompt": {
+            "de": "Teil 2: Ein Programm. Was ist richtig? Kreuzen Sie an: a, b oder c.",
+            "ar": "القسم 2: برنامج. ما الصحيح؟ اختر a أو b أو c."
+          },
+          "taskType": "mc3",
+          "texts": [
+            {
+              "id": "l2-t1",
+              "kind": "aushang",
+              "title": "Der Kurs",
+              "de": "Am Montag lernen wir Deutsch. Am Dienstag hören wir Musik. Am Mittwoch lesen wir ein Buch. Am Donnerstag kochen wir zusammen. Am Freitag haben wir einen Test. Am Samstag ist Party!"
+            }
+          ],
+          "items": [
+            {
+              "q": "Was machen wir am Dienstag?",
+              "a": "hören Musik",
+              "choices": [
+                "lesen ein Buch",
+                "kochen zusammen",
+                "hören Musik"
+              ],
+              "textRefs": [
+                "l2-t1"
+              ],
+              "evidence": "Am Dienstag hören wir Musik"
+            },
+            {
+              "q": "Was machen wir am Mittwoch?",
+              "a": "lesen ein Buch",
+              "choices": [
+                "lesen ein Buch",
+                "lernen Deutsch",
+                "einen Test"
+              ],
+              "textRefs": [
+                "l2-t1"
+              ],
+              "evidence": "Am Mittwoch lesen wir ein Buch"
+            },
+            {
+              "q": "Wann kochen wir?",
+              "a": "am Donnerstag",
+              "choices": [
+                "am Dienstag",
+                "am Donnerstag",
+                "am Freitag"
+              ],
+              "textRefs": [
+                "l2-t1"
+              ],
+              "evidence": "Am Donnerstag kochen wir zusammen"
+            },
+            {
+              "q": "Wann haben wir einen Test?",
+              "a": "am Freitag",
+              "choices": [
+                "am Donnerstag",
+                "am Samstag",
+                "am Freitag"
+              ],
+              "textRefs": [
+                "l2-t1"
+              ],
+              "evidence": "Am Freitag haben wir einen Test"
+            },
+            {
+              "q": "Was ist am Samstag?",
+              "a": "Party",
+              "choices": [
+                "ein Test",
+                "Party",
+                "Musik"
+              ],
+              "textRefs": [
+                "l2-t1"
+              ],
+              "evidence": "Am Samstag ist Party"
+            }
+          ]
+        },
+        {
+          "id": "lesen-teil3",
+          "prompt": {
+            "de": "Teil 3: Zwei E-Mails. Was ist richtig? Kreuzen Sie an: a, b oder c.",
+            "ar": "القسم 3: بريدان إلكترونيان. ما الصحيح؟ اختر a أو b أو c."
+          },
+          "taskType": "mc3",
+          "texts": [
+            {
+              "id": "l3-t1",
+              "kind": "email",
+              "title": "E-Mail von Lena",
+              "de": "Lieber Karim, am Samstag ist meine Party. Sie ist um acht Uhr. Komm bitte! Liebe Grüße, Lena"
+            },
+            {
+              "id": "l3-t2",
+              "kind": "email",
+              "title": "Antwort von Karim",
+              "de": "Liebe Lena, ja, ich komme um acht Uhr. Ich kaufe einen Kuchen. Danke für die Einladung! Viele Grüße, Karim"
+            }
+          ],
+          "items": [
+            {
+              "q": "Wann ist die Party?",
+              "a": "um acht Uhr",
+              "choices": [
+                "um acht Uhr",
+                "um sieben Uhr",
+                "um neun Uhr"
+              ],
+              "textRefs": [
+                "l3-t1"
+              ],
+              "evidence": "Sie ist um acht Uhr"
+            },
+            {
+              "q": "Wer hat die Party?",
+              "a": "Lena",
+              "choices": [
+                "Karim",
+                "Lena",
+                "Thomas"
+              ],
+              "textRefs": [
+                "l3-t1"
+              ],
+              "evidence": "Liebe Grüße, Lena"
+            },
+            {
+              "q": "Was bringt Karim?",
+              "a": "einen Kuchen",
+              "choices": [
+                "Brot",
+                "Musik",
+                "einen Kuchen"
+              ],
+              "textRefs": [
+                "l3-t2"
+              ],
+              "evidence": "Ich kaufe einen Kuchen"
+            },
+            {
+              "q": "Wann kommt Karim?",
+              "a": "um acht Uhr",
+              "choices": [
+                "um acht Uhr",
+                "um sieben Uhr",
+                "um neun Uhr"
+              ],
+              "textRefs": [
+                "l3-t2"
+              ],
+              "evidence": "ja, ich komme um acht Uhr"
+            },
+            {
+              "q": "Was sagt Karim am Ende?",
+              "a": "Danke für die Einladung",
+              "choices": [
+                "Danke für die Einladung",
+                "Danke für den Kuchen",
+                "Tschüss"
+              ],
+              "textRefs": [
+                "l3-t2"
+              ],
+              "evidence": "Danke für die Einladung"
+            }
+          ]
+        },
+        {
+          "id": "lesen-teil4",
+          "prompt": {
+            "de": "Teil 4: Fünf Anzeigen. Welche Anzeige passt? Kreuzen Sie an.",
+            "ar": "القسم 4: خمسة إعلانات. أي إعلان يناسب؟ اختر."
+          },
+          "taskType": "zuordnung",
+          "texts": [
+            {
+              "id": "l4-t1",
+              "kind": "anzeige",
+              "title": "Bäckerei Krause",
+              "de": "Brot und Kuchen. Montag bis Samstag von 7 bis 18 Uhr. Am Sonntag von 8 bis 11 Uhr geöffnet."
+            },
+            {
+              "id": "l4-t2",
+              "kind": "anzeige",
+              "title": "Kino",
+              "de": "Heute und morgen: ein Film über Musik. Ab 20 Uhr."
+            },
+            {
+              "id": "l4-t3",
+              "kind": "anzeige",
+              "title": "Kaufhaus",
+              "de": "Alles billiger! Neue Schuhe und schöne Kleider. Am Samstag geöffnet."
+            },
+            {
+              "id": "l4-t4",
+              "kind": "anzeige",
+              "title": "Markt",
+              "de": "Samstag: Markt am See. Obst, Gemüse und Blumen von 8 bis 14 Uhr."
+            },
+            {
+              "id": "l4-t5",
+              "kind": "anzeige",
+              "title": "Kurs",
+              "de": "Kurs am Abend. Montag bis Donnerstag von 18 bis 20 Uhr. Wir lernen Deutsch."
+            }
+          ],
+          "items": [
+            {
+              "q": "Herr Thomas möchte am Sonntag Brot kaufen.",
+              "a": "Anzeige 1",
+              "choices": [
+                "Anzeige 1",
+                "Anzeige 2",
+                "Anzeige 3",
+                "Anzeige 4",
+                "Anzeige 5"
+              ],
+              "textRefs": [
+                "l4-t1"
+              ],
+              "evidence": "Am Sonntag von 8 bis 11 Uhr geöffnet"
+            },
+            {
+              "q": "Die Familie sucht einen Film heute Abend.",
+              "a": "Anzeige 2",
+              "choices": [
+                "Anzeige 1",
+                "Anzeige 2",
+                "Anzeige 3",
+                "Anzeige 4",
+                "Anzeige 5"
+              ],
+              "textRefs": [
+                "l4-t2"
+              ],
+              "evidence": "Heute und morgen: ein Film über Musik"
+            },
+            {
+              "q": "Ayse sucht billige Schuhe.",
+              "a": "Anzeige 3",
+              "choices": [
+                "Anzeige 1",
+                "Anzeige 2",
+                "Anzeige 3",
+                "Anzeige 4",
+                "Anzeige 5"
+              ],
+              "textRefs": [
+                "l4-t3"
+              ],
+              "evidence": "Alles billiger! Neue Schuhe"
+            },
+            {
+              "q": "Karim kauft gern Obst und Gemüse.",
+              "a": "Anzeige 4",
+              "choices": [
+                "Anzeige 1",
+                "Anzeige 2",
+                "Anzeige 3",
+                "Anzeige 4",
+                "Anzeige 5"
+              ],
+              "textRefs": [
+                "l4-t4"
+              ],
+              "evidence": "Obst, Gemüse und Blumen"
+            },
+            {
+              "q": "Lena möchte am Abend Deutsch lernen.",
+              "a": "Anzeige 5",
+              "choices": [
+                "Anzeige 1",
+                "Anzeige 2",
+                "Anzeige 3",
+                "Anzeige 4",
+                "Anzeige 5"
+              ],
+              "textRefs": [
+                "l4-t5"
+              ],
+              "evidence": "Kurs am Abend"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "skill": "schreiben",
+      "timeBudgetMin": 30,
+      "instructions": {
+        "de": "Der Test Schreiben hat zwei Teile. Schreiben Sie zu jedem Punkt einen Text.",
+        "ar": "الاختبار الكتابي جزءان. اكتب نصاً لكل نقطة."
+      },
+      "parts": [
+        {
+          "id": "schreiben-teil1",
+          "prompt": {
+            "de": "Teil 1: Schreiben Sie eine SMS an Ihre Freundin / Ihren Freund (20–30 Wörter). Punkte: Sie können am Samstag nicht kommen. Warum? Wann treffen Sie sich? Gruß.",
+            "ar": "القسم 1: اكتب رسالة قصيرة إلى صديقك (20–30 كلمة): لا تستطيع الحضور يوم السبت. لماذا؟ متى تلتقيان؟ تحية."
+          },
+          "taskType": "freies-schreiben",
+          "items": [
+            {
+              "q": "Warum können Sie am Samstag nicht kommen?",
+              "a": "Ich habe leider keine Zeit. Ich muss arbeiten."
+            },
+            {
+              "q": "Wann treffen Sie sich?",
+              "a": "Treffen wir uns am Sonntag?"
+            },
+            {
+              "q": "Schreiben Sie einen Gruß.",
+              "a": "Liebe Grüße, Lena"
+            }
+          ]
+        },
+        {
+          "id": "schreiben-teil2",
+          "prompt": {
+            "de": "Teil 2: Schreiben Sie eine E-Mail an Ihren Lehrer / Ihre Lehrerin (30–40 Wörter). Punkte: Sie können am Dienstag nicht zum Kurs kommen. Warum? Frage nach einem anderen Termin. Gruß.",
+            "ar": "القسم 2: اكتب بريداً إلكترونياً إلى معلّمك (30–40 كلمة): لا تستطيع الحضور إلى الدورة يوم الثلاثاء. لماذا؟ اسأل عن موعد آخر. تحية."
+          },
+          "taskType": "freies-schreiben",
+          "items": [
+            {
+              "q": "Schreiben Sie: Warum können Sie am Dienstag nicht kommen?",
+              "a": "Lieber Herr Weber, am Dienstag kann ich nicht zum Kurs kommen. Ich bin krank."
+            },
+            {
+              "q": "Fragen Sie nach einem anderen Termin.",
+              "a": "Kann ich am Mittwoch kommen?"
+            },
+            {
+              "q": "Schreiben Sie einen Gruß.",
+              "a": "Viele Grüße, Karim"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "skill": "sprechen",
+      "timeBudgetMin": 15,
+      "instructions": {
+        "de": "Der Test Sprechen hat drei Teile. Sprechen Sie mit Ihrem Partner / Ihrer Partnerin.",
+        "ar": "الاختبار الشفهي ثلاثة أجزاء. تحدّث مع زميلك."
+      },
+      "parts": [
+        {
+          "id": "sprechen-teil1",
+          "prompt": {
+            "de": "Teil 1: Sprechen Sie mit Ihrem Partner / Ihrer Partnerin. Tauschen Sie Informationen aus.",
+            "ar": "القسم 1: تحدّث مع زميلك وتبادلا المعلومات."
+          },
+          "taskType": "freies-sprechen",
+          "items": [
+            {
+              "q": "Name?",
+              "a": "Ich heiße Karim. Und Sie?"
+            },
+            {
+              "q": "Wohnen? Stadt?",
+              "a": "Ich wohne in Tunis. Und Sie?"
+            },
+            {
+              "q": "Arbeit?",
+              "a": "Ich arbeite in einer Schule. Und Sie?"
+            },
+            {
+              "q": "Freizeit? Hobbys?",
+              "a": "Ich lese gern und höre Musik. Und Sie?"
+            },
+            {
+              "q": "Deutsch? Kurs?",
+              "a": "Ich lerne Deutsch im Kurs. Und Sie?"
+            },
+            {
+              "q": "Wochenende?",
+              "a": "Am Wochenende koche ich und höre Musik."
+            }
+          ]
+        },
+        {
+          "id": "sprechen-teil2",
+          "prompt": {
+            "de": "Teil 2: Erzählen Sie ausführlich: Ihr Leben.",
+            "ar": "القسم 2: احكي بإسهاب عن حياتك."
+          },
+          "taskType": "freies-sprechen",
+          "items": [
+            {
+              "q": "Familie?",
+              "a": "Ich habe zwei Geschwister. Meine Familie wohnt in Tunis."
+            },
+            {
+              "q": "Arbeit?",
+              "a": "Ich arbeite als Koch."
+            },
+            {
+              "q": "Essen? Was kochen Sie gern?",
+              "a": "Ich koche gern Suppe und Fleisch."
+            },
+            {
+              "q": "Reise? Urlaub?",
+              "a": "Im Urlaub fahre ich an die See."
+            },
+            {
+              "q": "Zukunft? Wünsche?",
+              "a": "Ich würde gern eine Wohnung kaufen."
+            },
+            {
+              "q": "Tag? Morgen?",
+              "a": "Am Morgen stehe ich um sieben Uhr auf."
+            }
+          ]
+        },
+        {
+          "id": "sprechen-teil3",
+          "prompt": {
+            "de": "Teil 3: Planen Sie mit Ihrem Partner / Ihrer Partnerin eine Unternehmung.",
+            "ar": "القسم 3: خطّط مع زميلك لنشاط مشترك."
+          },
+          "taskType": "freies-sprechen",
+          "items": [
+            {
+              "q": "Treffen? Wann?",
+              "a": "Wann treffen wir uns? — Am Samstag um zehn Uhr?"
+            },
+            {
+              "q": "Wo?",
+              "a": "Wo treffen wir uns? — Am Markt."
+            },
+            {
+              "q": "Was?",
+              "a": "Was machen wir? — Wir gehen ins Kino."
+            },
+            {
+              "q": "Essen?",
+              "a": "Was essen wir? — Wir kaufen Brot und Obst."
+            },
+            {
+              "q": "Geld? Preis?",
+              "a": "Wie viel kostet das? — Nicht viel."
+            },
+            {
+              "q": "Nach Hause? Wann?",
+              "a": "Wann fahren wir nach Hause? — Um sechs Uhr."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "properNouns": [
+    "Karim",
+    "Lena",
+    "Yusuf",
+    "Ayse",
+    "Thomas",
+    "Berg",
+    "Weber",
+    "Krause",
+    "Tunis",
+    "Hamburg"
+  ],
+  "sourceNote": "D415: البنية = صيغة «Goethe-Zertifikat A2 Modellsatz Erwachsene» الرسمية بنداً بنداً (exam-formats/goethe-a2.json من وثيقتي goethe.de المجانيتين — D108): Hören 5/5/5/5 (سماع 2/1/1/2) · Lesen 5/5/5/5 (mc3×3 + Zuordnung) · Schreiben SMS 20–30 كلمة + E-Mail 30–40 كلمة بثلاث نقاط · Sprechen ثلاثة أجزاء. كل النصوص أصليّة مكتوبة لهذا المشروع (ليس امتحاناً رسمياً — تدريب لا شهادة!)؛ المفردات كلها مدروسة (A1+A2) أو أسماء علم مُعلنة هنا."
+}

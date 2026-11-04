@@ -74,6 +74,19 @@ META = {
         "verifiedAgainst": "goethe.de 2026-10-14 (قراءة مباشرة): العنوان نفسه · Impressum (© 2016، 1. Auflage) · "
                            "Vorwort · Wortgruppen مطابقة · الكلمات الرئيسية E–F وS–U مطابقة بالعيّنة",
     },
+    "goethe-b1": {
+        "level": "B1",
+        "exam": "Goethe-Zertifikat B1",
+        "title": "Goethe-Zertifikat B1 — Wortliste (Goethe-Institut / ÖSD, Hueber 2013)",
+        "officialUrl": "https://www.goethe.de/pro/relaunch/prf/materialien/Goethe-Zertifikat_B1_Wortliste.pdf",
+        "file": "Goethe-Zertifikat_B1_Wortliste.pdf",
+        "alphaPages": list(range(16, 104)),
+        "statedEntries": "Auszug aus: Zertifikat B1, Prüfungsziele Testbeschreibung (Hueber 2013) — Wortgruppenliste + alphabetische Liste",
+        "obtainedVia": "GitHub (goethe.de محجوب في بيئة البناء): greatmusicians/Goethe_B1_Wortliste — git blob c0a20d6b… (النسخة الكاملة للوثيقة الرسمية؛ الأدوات المرافقة في المستودع مستقلة عنها)",
+        "verifiedAgainst": "الصفحة الأولى: «GOETHE · ÖSD · GOETHE-ZERTIFIKAT B1 · DEUTSCHPRÜFUNG FÜR JUGENDLICHE UND ERWACHSENE · WORTLISTE» · "
+                           "Impressum: Gesamtkoordination Michaela Perlmann-Balme, Goethe-Institut · مقدمة WORTLISTE (S. 5) نصها الرسمي · "
+                           "المجموعات 1.1–1.14 والقائمة الأبجدية A–Z بالعيّنة",
+    },
     "goethe-a1-fit1": {
         "level": "A1",
         "exam": "Goethe-Zertifikat A1: Fit in Deutsch 1",
@@ -122,6 +135,107 @@ GROUPS: dict[str, list[tuple[str, int, list[str]]]] = {
                                                  "Mexikaner/Mexikanerin", "mexikanisch"]),
         ("Farben", 8, ["schwarz", "grau", "blau", "grün", "weiß", "rot", "gelb", "braun"]),
         ("Himmelsrichtungen", 8, ["der Norden", "der Süden", "der Westen", "der Osten"]),
+    ],
+    "goethe-b1": [
+        ("Abkürzungen", 8, ["das Abo, -s", "der Akku, -s", "der Azubi, -s", "bzw.", "ca.", "d. h.", "die DVD, -s",
+                            "das EG, OG, UG", "etc.", "der ICE", "das Kfz, -s", "der Lkw, -s", "der PC, -s", "der Pkw, -s",
+                            "die (D, A)/das (CH) SMS, -", "das TV, -", "usw.", "vgl.", "das WC, -s", "die WG, -s", "z. B."]),
+        ("Anglizismen", 8, ["das Baby, -s", "der Babysitter, -/die Babysitterin, -nen", "die Band, -s", "die Bar, -s",
+                            "der Bikini, -s", "der Blog, -s", "bloggen, bloggt, bloggte, hat gebloggt", "das Camp, -s",
+                            "campen, campt, campte, hat gecampt", "die Castingshow, -s", "der CD-Player, -",
+                            "der Chat(room), -s", "chatten, chattet, chattete, hat gechattet",
+                            "checken, checkt, checkte, hat gecheckt", "der Chip, -s", "die City, -s", "der Club, -s",
+                            "die/das Cola, -s", "der/das Comic, -s", "der Computer, -", "cool", "das E-Bike, -s",
+                            "das E-Book, -s", "der Fan, -s", "das Fax, -e", "faxen, faxt, faxte, hat gefaxt",
+                            "das Festival, -s", "fit", "die Fitness, -", "global", "googeln, googelt, googelte, hat gegoogelt",
+                            "der Hamburger, -", "der Hit, -s", "die Homepage, -s", "das Internet", "der Jazz", "der Job, -s",
+                            "jobben, jobbt, jobbte, hat gejobbt", "joggen, joggt, joggte, ist/hat gejoggt",
+                            "der/das Ketchup/Ketschup, -s", "der Killer, -/die Killerin, -nen", "der Laptop, -s", "der Link, -s",
+                            "live", "die (D, A)/das (A, CH) (E-)Mail, -s", "die Mailbox, -en", "mailen, mailt, mailte, hat gemailt",
+                            "der Manager, -/die Managerin, -nen", "die Mobilbox, -en", "das Mountainbike, -s", "o.k./O.K./okay",
+                            "online", "die Plattform, -en", "das Poster, -", "das Puzzle, -s", "das/der Sandwich, -(e)s/-e",
+]),
+        ("Anglizismen", 9, ["die Show, -s", "das Smartphone, -s", "der Snack, -s", "die Software, -s", "der Song, -s",
+                            "der Spot, -s", "das Steak, -s", "surfen, surft, surfte, ist/hat gesurft", "der Swimmingpool, -s",
+                            "das Taxi, -s", "das Team, -s", "der Terminal, -s", "die Tour, -en", "der Trend, -s", "das T-Shirt, -s",
+                            "twittern, twittert, twitterte, hat getwittert", "der User, -/die Userin, -nen"]),
+        ("Anweisungssprache Zertifikat B1", 9, ["die Aufgabe, -n", "ankreuzen, kreuzt an, kreuzte an, hat angekreuzt",
+                            "der Antwortbogen", "die Anzeige, -n", "die Aussage, -n", "die Durchsage, -n", "die Einleitung, -en",
+                            "die Folie, -n", "das Hilfsmittel, -", "der Kommentar, -e", "lösen, löst, löste, hat gelöst",
+                            "die Lösung, -en", "der Moderator, -en", "die Moderatorin, -nen", "das Modul, -e",
+                            "die Präsentation, -en", "der Punkt, -e", "die Rückmeldung, -en", "die Struktur, -en",
+                            "der Textaufbau", "übertragen, überträgt, übertrug, hat übertragen",
+                            "zuordnen, ordnet zu, ordnete zu, hat zugeordnet"]),
+        ("Bildungseinrichtungen", 10, ["die Krippe", "der Kindergarten", "die Kindertagesstätte (Kita)", "die Grundschule",
+                            "die Mittelschule", "die Realschule", "die Gesamtschule", "die Berufsschule", "die Sonderschule",
+                            "das Gymnasium", "die (Fach-)Hochschule", "die Universität (Uni)", "die Volkshochschule",
+                            "die Volksschule", "die Hauptschule", "die Neue Mittelschule",
+                            "die Allgemeinbildende Höhere Schule (AHS)", "die Berufsbildende Höhere Schule (BHS)",
+                            "die Akademie", "die Pädagogische Hochschule", "die Spielgruppe", "die Primarschule",
+                            "die Sekundarschule", "die Bezirksschule", "die Orientierungsstufe", "Sekundarstufe I",
+                            "Sekundarstufe II", "die Berufsmittelschule", "die Diplommittelschule"]),
+        ("Bildung: Schulfächer", 10, ["Biologie", "Chemie", "Geografie", "Geschichte", "Mathe(matik)", "Musik",
+                            "Philosophie", "Physik", "Sport"]),
+        ("Bildung: Schulnoten", 11, ["sehr gut", "gut", "befriedigend", "ausreichend", "mangelhaft", "ungenügend",
+                            "genügend", "nicht genügend", "schlecht", "sehr schlecht", "die/eine Eins", "die/eine Zwei",
+                            "die/eine Drei", "die/eine Vier", "die/eine Fünf", "die/eine Sechs", "der/ein Einser",
+                            "der/ein Zweier", "der/ein Dreier", "der/ein Vierer", "der/ein Fünfer", "der/ein Sechser"]),
+        ("Farben", 11, ["hell-", "dunkel", "blau", "braun", "gelb", "grau", "grün", "lila", "orange", "rosa", "rot",
+                        "schwarz", "violett", "weiß"]),
+        ("Himmelsrichtungen", 11, ["der Norden", "der Osten", "der Süden", "der Westen", "Nord-/nördlich", "Ost-/östlich",
+                            "Süd-/südlich", "West-/westlich"]),
+        ("Länder, Kontinente, Nationalitäten (Staatsangehörigkeiten), Sprachen", 12, ["Deutschland", "der Deutsche, -n",
+                            "die Deutsche, -n", "deutsch", "Deutsch", "Europa", "der Europäer, -", "die Europäerin, -nen",
+                            "europäisch", "Österreich", "der Österreicher, -", "die Österreicherin, -nen", "österreichisch",
+                            "die Schweiz", "der Schweizer, -", "die Schweizerin, -nen", "schweizerisch", "Schweizer",
+                            "Griechenland", "der Grieche, -n", "die Griechin, -nen", "griechisch", "Griechisch", "die Ukraine",
+                            "der Ukrainer", "die Ukrainerin, -nen", "ukrainisch", "Ukrainisch", "die Türkei", "der Türke, -n",
+                            "die Türkin, -nen", "türkisch", "Türkisch"]),
+        ("Politische Begriffe", 12, ["der Bund, Bundes-", "das Bundesland", "der Bundeskanzler, -", "die Bundeskanzlerin, -nen",
+                            "Bundesrepublik Deutschland", "der Bundestag", "der Bundespräsident, -", "die Bundespräsidentin, -nen",
+                            "der Bürgermeister, -", "die Bürgermeisterin, -nen", "der Nationalrat", "Republik Österreich",
+                            "die Demokratie, -n, demokratisch", "die Europäische Union, die EU", "die Gemeinde", "konservativ",
+                            "Confoederatio Helvetica (CH), die Schweizerische Eidgenossenschaft", "liberal", "der Minister, -",
+                            "die Ministerin, -nen", "das Parlament", "das Europäische Parlament", "die Partei, -en",
+                            "die Regierung, -en", "der Staat, -en; staatlich", "der Ammann", "die Ammännin, -nen",
+                            "der Bundesrat", "die Bundesrätin, -nen", "der Kanton", "der Regierungsrat", "die Regierungsrätin, -nen",
+                            "der Stadtpräsident, -en", "die Stadtpräsidentin, -nen", "der Ständerat"]),
+        ("Tiere", 13, ["der Affe, -n", "der Bär, -en", "die Biene, -n", "der Elefant, -en", "die Ente, -n", "der Fisch, -e",
+                       "die Fliege, -n", "die Giraffe, -n", "der Hase, -n", "der Hund, -e", "das Insekt, -en", "die Katze, -n",
+                       "das Krokodil, -e", "die Kuh, ¨-e", "der Löwe, -n", "die Maus, ¨-e", "die Mücke, -n", "das Pferd, -e",
+                       "der Pinguin, -e", "das Schaf, -e", "die Schildkröte, -n", "die Schlange, -n", "das Schwein, -e",
+                       "der Vogel, ¨-"]),
+        ("Währungen, Maße und Gewichte", 13, ["1 Euro, -s", "1 Cent", "1 Franken, -", "1 Rappen, -", "ein Meter",
+                       "ein Zentimeter", "ein Meter fünfzehn", "zweihundert Kilometer", "ein Quadratmeter",
+                       "ein Grad unter Null/minus ein Grad", "vier Grad über Null/plus vier Grad", "ein Prozent",
+                       "ein Liter", "ein Gramm", "ein Pfund/ein halbes Kilo", "ein Kilo(gramm)", "ein Deka(gramm)",
+                       "ein Kilometer pro Stunde"]),
+        ("Zahlen, Bruchzahlen", 13, ["eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn",
+                       "elf", "zwölf", "dreizehn", "einundzwanzig", "dreißig", "(ein)hundert", "hundert(und)eins",
+                       "zweihundert", "(ein)tausend", "eine Million, -en", "eine Milliarde, -n", "der/die/das erste",
+                       "zweite", "dritte", "vierte", "erstens", "zweitens", "drittens", "viertens", "einmal", "zweimal",
+                       "dreimal", "viermal", "einfach", "zweifach/doppelt", "plus", "minus", "ein halb; halb",
+                       "ein Drittel", "ein Viertel; Viertel"]),
+        ("Zeit: Datum", 14, ["neunzehnhundertneunundneunzig", "zweitausend(und)vier", "der erste März", "zehnter April",
+                       "zweitausendundzwölf"]),
+        ("Zeit: Feiertage", 14, ["Neujahr", "Ostern", "Pfingsten", "Weihnachten", "Silvester", "Nationalfeiertag"]),
+        ("Zeit: Jahreszeiten", 14, ["der Frühling/das Frühjahr", "der Sommer", "der Herbst", "der Winter"]),
+        ("Zeit: Monatsnamen", 14, ["der Januar", "der Jänner", "der Februar", "der Feber", "der März", "der April", "der Mai",
+                       "der Juni", "der Juli", "der August", "der September", "der Oktober", "der November", "der Dezember"]),
+        ("Zeit: Tageszeiten", 14, ["der Tag, -e", "täglich, tagsüber", "der Morgen", "in der Früh", "morgens, am Morgen",
+                       "der Vormittag, -e", "vormittags, am Vormittag", "der Mittag, -e", "mittags, zu Mittag, am Mittag",
+                       "der Nachmittag, -e", "nachmittags, am Nachmittag", "der Abend, -e", "abends, am Abend",
+                       "die Nacht, ¨-e", "nachts, in der Nacht", "die Mitternacht", "um Mitternacht"]),
+        ("Zeit: Uhrzeit", 15, ["null Uhr drei", "sieben Uhr fünfzehn", "dreizehn Uhr siebzehn", "vierundzwanzig Uhr",
+                       "ein Uhr", "fünf Minuten vor/nach eins", "viertel vor/nach zwei", "halb drei"]),
+        ("Zeit: Wochentage", 15, ["der Wochentag, -e", "wochentags, werktags", "das Wochenende, -n", "am Wochenende",
+                       "der Montag", "montags, am Montag", "der Dienstag", "dienstags, am Dienstag", "der Mittwoch",
+                       "mittwochs, am Mittwoch", "der Donnerstag", "donnerstags, am Donnerstag", "der Freitag",
+                       "freitags, am Freitag", "der Samstag", "der Sonnabend", "samstags, am Samstag", "der Sonntag",
+                       "sonntags, am Sonntag"]),
+        ("Zeit: Zeitangaben", 15, ["die Sekunde, -n", "die Minute, -n", "die Stunde, -n", "der Tag, -e", "täglich",
+                       "die Woche, -n", "wöchentlich", "der Monat, -e", "monatlich", "das Jahr, -e", "jährlich",
+                       "das Jahrzehnt, -e", "das Jahrhundert, -e", "das Jahrtausend, -e"]),
     ],
     "goethe-a2": [
         ("Abkürzungen", 5, ["ca.", "d.h.", "ICE", "Lkw, -s", "PC, -s", "SMS", "usw.", "WC, -s", "z. B."]),
@@ -198,6 +312,8 @@ OPEN_CATEGORIES = {
 # ——————————————————————————————————————— تحليل الكلمة الرئيسية ———
 # حالات غير منتظمة تُحلّ صراحة (المطبوع → الأداة + الصيغ). كل ما عداها يُحلَّل بالقواعد العامة.
 OVERRIDES: dict[str, tuple[str | None, list[str]]] = {
+    # B1
+    "-weise": (None, ["-weise"]),  # لاحقة رسمية (Suffix) في قائمة B1 — جذر مُعلَن
     # SD1
     "das Hähnchen, die Halbpension": ("das", ["Hähnchen"]),
     "dort, -her, -hin": (None, ["dort", "dorther", "dorthin"]),
@@ -305,7 +421,8 @@ OVERRIDES: dict[str, tuple[str | None, list[str]]] = {
 
 ABBREV = {"z. B.", "ca.", "usw.", "d.h.", "z.B."}
 FIT1_ART = {"r": "der", "e": "die", "s": "das", "r/e": "der/die", "e/s": "die/das", "r/s": "der/das"}
-ANNOT = re.compile(r"\s*\((?:Sg|Pl|pl|Sing|sg)\.?\)")
+ANNOT = re.compile(r"\s*\((?:Sg|Pl|pl|Sing|sg|Plural|Singular)\.?\)|\s*\(siehe auch [^()]*\)")
+REGION_ANNOT = re.compile(r"\s*\((?:A|D|CH)(?:\s*,\s*(?:A|D|CH))*\)")  # «(A, CH)» تعليق منطقة
 
 
 def norm_ws(s: str) -> str:
@@ -369,7 +486,7 @@ def expand_parens(lemma: str) -> list[str]:
 
 
 def clean_lemma(s: str) -> str:
-    s = s.strip()
+    s = REGION_ANNOT.sub("", s.strip())
     s = re.sub(r"^\(sich\)\s*", "", s)
     s = re.sub(r"\s*\(sich\)$", "", s)
     s = re.sub(r"^sich\s+", "", s)
@@ -380,6 +497,7 @@ def clean_lemma(s: str) -> str:
 
 def parse_headword(raw: str, notation: str = "std") -> tuple[str | None, list[str]]:
     h = norm_ws(raw)
+    h = re.split(r"\s*→", h)[0].strip()  # renvoi/صيغة منطقة بعد السهم ليست من الكلمة الرئيسية
     if h in OVERRIDES:
         art, lem = OVERRIDES[h]
         return art, list(lem)
@@ -392,6 +510,7 @@ def parse_headword(raw: str, notation: str = "std") -> tuple[str | None, list[st
     # أزواج بأداة: «der Freund, -e, die Freundin, -nen» · «der Partner, -/ die Partnerin, -nen»
     variants = []
     for v in split_top(h2, r"\s*/\s+|\s+/\s*|\s*;\s*|,\s+(?=(?:der|die|das)\s)"):
+        v = re.sub(r"^[A-ZÄÖÜ](?:,\s*[A-ZÄÖÜ]+)*:\s*", "", v).strip()  # «A: Marille» → «Marille»
         # «hat gehangen/ gehängt»: الشرطة المائلة بعد فاصلة وأمام كلمة صغيرة = صيغة بديلة لا كلمة رئيسية
         if variants and "," in variants[-1] and re.match(r"^[a-zäöüß]", v) and not re.match(r"^(der|die|das|r|e|s)\s", v):
             variants[-1] = variants[-1] + "/" + v
@@ -437,6 +556,9 @@ def parse_headword(raw: str, notation: str = "std") -> tuple[str | None, list[st
                     for f in forms:
                         if f and not f.startswith("-") and f not in lemmas:
                             lemmas.append(f)
+    m = re.search(r"[,/]\s*\S*\s+([a-zäöüß]{4,})$", h)
+    if m and re.search(r"(isch|lich|bar|haft|sam|los|ig)$", m.group(1)) and m.group(1) not in lemmas:
+        lemmas.append(m.group(1))  # صفة ذيل كتلة الأسماء: «der Ausländer … -nen ausländisch»
     return article_main, lemmas
 
 
@@ -468,7 +590,7 @@ def page_lines(page, xmin: float, xmax: float, hx: float):
             ex.append({**w, "text": "".join(c["text"] for c in ec), "x0": ec[0]["x0"]})
     rows: list[dict] = []
     for w, kind in sorted([(w, "head") for w in head] + [(w, "ex") for w in ex], key=lambda t: (t[0]["top"], t[0]["x0"])):
-        if rows and abs(rows[-1]["top"] - w["top"]) < 2.0:
+        if rows and abs(rows[-1]["top"] - w["top"]) < 3.5:
             rows[-1][kind].append(w)
         else:
             rows.append({"top": w["top"], "head": [], "ex": []})
@@ -478,6 +600,14 @@ def page_lines(page, xmin: float, xmax: float, hx: float):
         r["ex"].sort(key=lambda w: w["x0"])
         # D111: علامة جمع على حدّ العمود تماماً تتبع كلمتها الرئيسية المنتهية بفاصلة — لا مثال يبدأ بعلامة جمع.
         # (A2 ص12: «das Doppelzimmer,» ثم «-» عند x0=374.1 والحدّ 374.1 ← كانت العلامة تسقط في عمود الأمثلة)
+        # B1: رقم مثال معلّق («1.» و«6.») يبدأ نص المثال — من الرقم فصاعداً كله عمود أمثلة
+        # (الأمثلة الأولى تبدأ عند موضع الرقم نفسه: «das Urteil, -e 1. Dein Urteil…»).
+        if r["head"]:
+            idx = next((i for i, w in enumerate(r["head"]) if re.fullmatch(r"\d+\.", w["text"])), None)
+            if idx is not None and r["head"][idx]["x0"] >= ex_col - 16:
+                moved = r["head"][idx:]
+                r["head"] = r["head"][:idx]
+                r["ex"] = sorted(moved + r["ex"], key=lambda w: w["x0"])
         if (r["head"] and len(r["ex"]) > 1 and r["head"][-1]["text"].endswith(",")
                 and PLURAL_MARK.fullmatch(r["ex"][0]["text"]) and abs(r["ex"][0]["x0"] - ex_col) < 2.0):
             r["head"].append(r["ex"].pop(0))
@@ -486,7 +616,7 @@ def page_lines(page, xmin: float, xmax: float, hx: float):
 
 LETTER = re.compile(r"^[A-Za-zÄÖÜäöü]$")
 PLURAL_MARK = re.compile(r"[-¨=]{1,2}[a-zäöü]{0,4}")
-HEADING = re.compile(r"^(ALPHABETISCHER|WORTSCHATZ|ALPHABETISCHER WORTSCHATZ)$")
+HEADING = re.compile(r"^(ALPHABETISCHER|WORTSCHATZ|ALPHABETISCHER WORTSCHATZ|[12] Alphabetischer Wortschatz|\d+ Wortgruppen)$")
 
 
 def segment(rows, page_no: int, mode: str, main_x: float | None, carry):
@@ -497,6 +627,13 @@ def segment(rows, page_no: int, mode: str, main_x: float | None, carry):
     prev_had_head = False
     for ln in rows:
         htxt = norm_ws(" ".join(w["text"] for w in ln["head"]))
+        if mode == "b1":
+            htxt = re.sub(r"(?<=[a-zäöüß,)])\d+\.$", "", htxt).strip()  # «politisch1.» الملتصقة
+            if " " in htxt:
+                htxt = re.sub(r"(?<=[a-zäöüß])\.$", "", htxt).strip()  # نقطة مثال متسربة: «hat festgenommen.»
+            m = re.search(r"[-¨=][a-zäöü]{0,4}\s+(?=[A-ZÄÖÜ][a-zäöüß])", htxt)  # «die Vase, -n Hast du…»: أول كلمة مثال بلا رقم
+            if m and " / " not in htxt:
+                htxt = htxt[:m.end()].strip()
         if not htxt:
             prev_had_head = False
             prev_top = ln["top"]
@@ -510,23 +647,34 @@ def segment(rows, page_no: int, mode: str, main_x: float | None, carry):
         if cur is not None:
             r = cur["headword"]
             noun = re.match(r"^\(?(der|die|das|de)\s", r) is not None
+            ex_txt = norm_ws(" ".join(w["text"] for w in ln["ex"]))
+            if (mode == "b1" and gap < 12.5 and prev_had_head and not LETTER.match(htxt)
+                    and not re.match(r"^[-¨=(]", htxt)
+                    and not re.match(r"^\((sich|jdn\.?|jdm\.?|etw\.?|es)\)", htxt)
+                    and not re.match(r"^\([a-zäöüß]+\)[a-zäöüß]", htxt)
+                    and not re.match(r"^\d+\.\s", ex_txt)
+                    and not (re.search(r"\b(?:hat|ist|war)\s+\S+$", r) and re.match(r"^[a-zäöüß]+,", htxt))) \
+                    or (mode == "b1" and cur is not None and htxt.startswith("→")):
+                cont = True  # B1: السطر التالي بلا فجوة فقرة = تتمة (صيغة ملتفة · صيغة منطقة «A: Marille» · هدف renvoi «→ Lift») —
+                # إلا: فعل جديد («(sich) ärgern» · «(ab)fahren») أو مثال مرقّم جديد («1. …») = مدخل مستقل
             if re.fullmatch(r"[-¨=]{1,2}[a-zäöü]{0,4}", htxt) and prev_had_head:
                 cont = True  # das Hähnchen, / -  (علامة جمع وحيدة على سطر)
             elif r.endswith(("/", "(")) or r.count("(") > r.count(")"):
                 cont = True  # die Ehefrau, -en/ / der Ehemann · die Feier, -n (z. B. Feierabend, / Feiertag)
             elif (prev_had_head and re.search(r"[A-Za-zÄÖÜäöüß]-$", r) and htxt[:1].islower()
                     and not re.match(r"^(der|die|das)\b", htxt)
-                    and (noun or r.count("(") > r.count(")"))):
-                cont = True  # der Kühl- / schrank  (سطران متتاليان فقط)
-            elif mode == "a2":
+                    and (noun or r.count("(") > r.count(")") or (mode == "b1" and r[:1].islower()))):
+                cont = True  # der Kühl- / schrank · B1: unterschreiben, unter- / schreibt (فعل يلتف بشرطة)
+            elif mode in ("a2", "b1"):
                 pair = re.match(r"^(?:der|die|das)\s+(\S{4})", htxt)
                 same_stem = pair is not None and re.search(r"\s" + re.escape(pair.group(1)), " " + r) is not None
                 if r.endswith(",") and (not noun or re.match(r"^[-¨(]", htxt) or same_stem):
                     cont = True  # abgeben, / gibt ab, / hat abgegeben · der Freund, -e, / die Freundin  (لا: das Doppelzimmer, / das Dorf)
                 elif re.fullmatch(r"(der|die|das)(/(der|die|das))*", r):
                     cont = True  # der/die / Bekannte, -n
-                elif re.match(r"^\([^()]*\)(?:[,;]|\s|$)", htxt) or re.match(r"^\([^()]*$", htxt):
-                    cont = True  # (Sg.) · (z. B. …) · (bekommen/ … · (sich), entschuldigt, …  (لا: (ab)fahren مدخل جديد)
+                elif (re.match(r"^\([^()]*\)(?:[,;]|\s|$)", htxt) or re.match(r"^\([^()]*$", htxt)) \
+                        and not (mode == "b1" and re.match(r"^\((sich|jdn\.?|jdm\.?|etw\.?|es)\)", htxt)):
+                    cont = True  # (Sg.) · (z. B. …) · (bekommen/ … · (sich), entschuldigt, …  (لا: (ab)fahren مدخل جديد — ولا B1: «(sich) ärgern» فعل)
                 elif re.search(r"(?:^|\s)(hat|ist|hat/ist|war)$", r):
                     cont = True  # … hat/ist / (an/aus)gezogen
                 elif prev_had_head and ((htxt.startswith("sein,") and re.fullmatch(r"[a-zäöüß]+", r))
@@ -535,6 +683,8 @@ def segment(rows, page_no: int, mode: str, main_x: float | None, carry):
         if cont:
             if cur["headword"].endswith("-") and htxt[:1].islower() and re.search(r"[A-Za-zÄÖÜäöüß]-$", cur["headword"]):
                 cur["headword"] = cur["headword"][:-1] + htxt
+            elif mode == "b1" and re.match(r"^(der|die|das|[A-ZÄÖÜ])", htxt):
+                cur["headword"] = cur["headword"] + " / " + htxt  # صيغة كتلة مستقلة: «der Ausländer, - / die Ausländerin, -nen»
             else:
                 cur["headword"] = cur["headword"] + " " + htxt
         else:
@@ -563,6 +713,10 @@ def extract_pdf(list_id: str, pdf_path: Path):
             if list_id == "goethe-a1-sd1":
                 cols = [(100.0, 600.0, 230.0, 143.0)]
                 mode = "sd1"
+            elif list_id == "goethe-b1":
+                # B1: رأس الكلمة عند 35/315 · أرقام الأمثلة المعلّقة 132/411 · نص الأمثلة 142/421
+                cols = [(25.0, 297.0, 130.0, None), (297.0, 600.0, 405.0, None)]
+                mode = "b1"
             else:
                 cols = [(25.0, 297.0, 100.0, None), (297.0, 600.0, 370.0, None)]
                 mode = "a2"
@@ -704,13 +858,14 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--sd1", type=Path, help="A1_SD1_Wortliste_02.pdf")
     ap.add_argument("--a2", type=Path, help="Goethe-Zertifikat_A2_Wortliste.pdf")
+    ap.add_argument("--b1", type=Path, help="Goethe-Zertifikat_B1_Wortliste.pdf")
     ap.add_argument("--fit1", action="store_true", help="من النسخ المكتوب sources/goethe-a1-fit1-headwords.txt")
     ap.add_argument("--obtained-via", default="", help="يستبدل source.obtainedVia (إن وصل الملف بطريق آخر)")
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--dump-raw", type=Path, help="يكتب المداخل الخام (تشخيص) بدل JSON")
     args = ap.parse_args()
     ok = True
-    for list_id, pdf in (("goethe-a1-sd1", args.sd1), ("goethe-a2", args.a2)):
+    for list_id, pdf in (("goethe-a1-sd1", args.sd1), ("goethe-a2", args.a2), ("goethe-b1", args.b1)):
         if not pdf:
             continue
         alpha, page_texts, info = extract_pdf(list_id, pdf)

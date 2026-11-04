@@ -1,0 +1,502 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u14-d5",
+  "level": "A2",
+  "unit": 14,
+  "day": 5,
+  "kind": "integration",
+  "ziel": {
+    "de": "Woche neun und zehn noch einmal: Wir werden fahren — auf jeden Fall! Der Kunde fragt den Polizisten. Wegen des Wetters bleiben wir zu Hause. Und kein oder nicht: kein Fleisch! Die Suppe ist nicht scharf!",
+    "ar": "أسبوع المراجعة، اليوم الخامس (الوحدتان 9–10): المستقبل (werden + المصدر!) واسم-n (der Kunde → den Kunden!) والمضاف (des Wetters!) والنفي (kein! nicht!) والمواعيد (am Montag! Welches Datum؟!) — مع الرحلة والموعد!"
+  },
+  "canDoDaily": [
+    "يخطّط رحلته بالمستقبل (Wir werden fahren · der ICE wird schnell sein) ويحجز موعداً (Am Dienstag habe ich Zeit)",
+    "يستعمل اسم-n في المفعول (den Polizisten!) والمضاف (wegen des Wetters!) وينفي الاسم والخبر (kein Fleisch · nicht scharf) ويجتاز معركة اليوم الخامس من أسبوع المراجعة بنتيجة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "europaeisch",
+      "erlaubt",
+      "kunde"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«سنسافر» (المستقبل) — أي جملة صحيحة؟"
+        },
+        "choices": [
+          "Wir werden fahren.",
+          "Wir fahren werden.",
+          "Wir werden fahrt."
+        ],
+        "answer": "Wir werden fahren.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الزبون يسأل الشرطي» (اسم-n في المفعول) — أي جملة صحيحة؟"
+        },
+        "choices": [
+          "Der Kunde fragt den Polizisten.",
+          "Der Kunde fragt den Polizist.",
+          "Der Kunde fragt der Polizisten."
+        ],
+        "answer": "Der Kunde fragt den Polizisten.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u9: المستقبل: werden مصرّفة ثانياً + المصدر آخر الجملة (Wir werden fahren! Er wird schnell sein!) + الرحلة والبلدان (der Europäer! europäisch! nach Luxemburg!) + kein/nicht + المواعيد (am Montag! Wie spät؟!).",
+      "من u10: اسم-n يأخذ ‑(e)n مع den/dem/des (der Kunde → den Kunden!) + المضاف (wegen des Wetters! außerhalb der Stadt!) + الصفات (ledig/verheiratet!) + الاتصال (Rufen Sie an! Das WC!)."
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "europaeer",
+      "wc"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-futur-i",
+      "ars-n-deklination",
+      "ars-kein-nicht",
+      "ars-genitiv-s",
+      "ars-termin-datum"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "needs-ein",
+      "v2-order",
+      "plural-irregular"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Wir ___ morgen fahren. (werden)",
+            "a": "werden",
+            "why": "المستقبل: werden ثانياً + المصدر آخر الجملة!"
+          },
+          {
+            "q": "Er ___ schnell sein. (werden)",
+            "a": "wird",
+            "why": "er wird (وليس werden!) + sein آخر!"
+          },
+          {
+            "q": "Der Kunde fragt den ___. (Polizist — اسم-n!)",
+            "a": "Polizisten",
+            "why": "اسم-n: den + ‑n (den Polizisten!)."
+          },
+          {
+            "q": "Die ___ helfen gern. (Student — الجمع!)",
+            "a": "Studenten",
+            "why": "الجمع ‑n: die Studenten!"
+          },
+          {
+            "q": "Wegen des ___ bleiben wir zu Hause. (Wetter — المضاف!)",
+            "a": "Wetters",
+            "why": "المضاف المحوّط: des + ‑s (des Wetters!)."
+          },
+          {
+            "q": "Ich möchte ___ Fleisch. (النفي!)",
+            "a": "kein",
+            "why": "نفي الاسم: kein (وهي ein بحرف k!)."
+          },
+          {
+            "q": "Die Suppe ist ___ scharf. (النفي!)",
+            "a": "nicht",
+            "why": "نفي الخبر: nicht!"
+          },
+          {
+            "q": "Am ___ habe ich Zeit. (Montag!)",
+            "a": "Montag",
+            "why": "أيام الأسبوع مع am (am Montag!)."
+          },
+          {
+            "q": "Heute ist der zweite ___. (الشهر!)",
+            "a": "April",
+            "why": "التاريخ: der zweite April (الترتيب + الشهر!)."
+          }
+        ],
+        "interleavedWith": [
+          "familie",
+          "haus",
+          "wohnung",
+          "kurs"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "verb-bank",
+        "items": [
+          {
+            "q": "Ich ___ das Brot kaufen. (werden)",
+            "a": "werde",
+            "why": "ich werde … kaufen (المصدر آخر!)."
+          },
+          {
+            "q": "Ihr ___ nach Hause fahren. (werden)",
+            "a": "werdet",
+            "why": "ihr werdet … fahren (النهاية ‑t مع ihr!)."
+          },
+          {
+            "q": "Der Angestellte fragt den ___. (Kunde — اسم-n!)",
+            "a": "Kunden",
+            "why": "اسم-n: der Kunde → den Kunden (النهاية ‑n مع den!)."
+          },
+          {
+            "q": "Außerhalb der ___ ist es ruhig. (Stadt — المضاف!)",
+            "a": "Stadt",
+            "why": "المضاف المؤنث/الجمع بلا ‑s: der Stadt!"
+          },
+          {
+            "q": "Ich trinke ___ Kaffee. (النفي — der Kaffee!)",
+            "a": "keinen",
+            "why": "نفي الاسم المفعول: keinen Kaffee (kein تتصرف كـein!)."
+          },
+          {
+            "q": "Ich ___ nicht kommen. (werden — نفي!)",
+            "a": "werde",
+            "why": "نفي المستقبل: werde … nicht kommen (nicht قبل المصدر!)."
+          }
+        ],
+        "interleavedWith": [
+          "aufstehen",
+          "fruehstuecken",
+          "fahren",
+          "bleiben"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "~~Wir fahren werden morgen.~~",
+            "a": "Wir werden morgen fahren.",
+            "why": "werden ثانياً + المصدر آخر الجملة!"
+          },
+          {
+            "q": "~~Der Kunde fragt den Polizist.~~",
+            "a": "Der Kunde fragt den Polizisten.",
+            "why": "اسم-n: den Polizisten (‑n لا يُحذف!)."
+          },
+          {
+            "q": "~~Wegen des Wetter bleiben wir.~~",
+            "a": "Wegen des Wetters bleiben wir.",
+            "why": "المضاف: des Wetters (‑s!)."
+          },
+          {
+            "q": "~~Ich möchte nicht Fleisch.~~",
+            "a": "Ich möchte kein Fleisch.",
+            "why": "نفي الاسم: kein (وليس nicht!)."
+          },
+          {
+            "q": "~~Die Suppe ist kein scharf.~~",
+            "a": "Die Suppe ist nicht scharf.",
+            "why": "نفي الخبر: nicht (وليس kein!)."
+          },
+          {
+            "q": "~~Am Montag ich habe Zeit.~~",
+            "a": "Am Montag habe ich Zeit.",
+            "why": "V2: المصرَّف ثانياً حتى بعد الظرف (am Montag!)."
+          }
+        ],
+        "interleavedWith": [
+          "brille",
+          "schluessel",
+          "frage",
+          "danke"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "speaking",
+        "items": [
+          {
+            "q": "خطّط رحلتك بالمستقبل (جملتان: werden + مصدر!)",
+            "a": "Wir werden morgen fahren. Der ICE wird schnell sein!",
+            "why": "werden ثانياً + المصدر آخر (fahren/sein!)."
+          },
+          {
+            "q": "احجز موعدك واسأل عن المكان (جملتان: am + اسم-n!)",
+            "a": "Am Dienstag habe ich Zeit. Der Kunde fragt den Polizisten: Wo ist das WC?",
+            "why": "am + اليوم! · den Polizisten (‑n!) · das WC!"
+          }
+        ],
+        "interleavedWith": [
+          "montag",
+          "kurs",
+          "schwester",
+          "bruder"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Reise und Termine: Wir werden morgen fahren. Wegen des Wetters bleiben wir zu Hause. Am Dienstag habe ich Zeit. Der Kunde fragt den Polizisten: Wo ist das WC?",
+        "ar": "الرحلة والمواعيد: أخطط بالمستقبل (werden!) وأذكر السبب (wegen des Wetters!) وأنفي (kein/nicht!) وأسأل عن المكان (Wo ist das WC؟!)."
+      },
+      "situation": {
+        "de": "Der fünfte Tag — Reise und Termine.",
+        "ar": "اليوم الخامس من أسبوع المراجعة — الرحلة والمواعيد."
+      },
+      "successCriteria": [
+        "يخطّط رحلته بالمستقبل (werden + المصدر!) في جملتين",
+        "يستعمل اسم-n في المفعول (مع den!) والمضاف (مع des!)",
+        "ينفي الاسم والخبر (kein وليس nicht والعكس!)",
+        "يجتاز معركة اليوم الخامس (75% فأكثر)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«سنسافر»؟",
+            "a": "Wir werden fahren.",
+            "choices": [
+              "Wir werden fahren.",
+              "Wir fahren werden.",
+              "Wir werden fahrt."
+            ],
+            "why": "werden ثانياً + المصدر آخر!"
+          },
+          {
+            "q": "«الزبون يسأل الشرطي»؟",
+            "a": "Der Kunde fragt den Polizisten.",
+            "choices": [
+              "Der Kunde fragt den Polizisten.",
+              "Der Kunde fragt den Polizist.",
+              "Der Kunde fragt dem Polizisten."
+            ],
+            "why": "اسم-n: den + ‑n!"
+          },
+          {
+            "q": "«بسبب الطقس»؟",
+            "a": "Wegen des Wetters.",
+            "choices": [
+              "Wegen des Wetters.",
+              "Wegen des Wetter.",
+              "Wegen der Wetters."
+            ],
+            "why": "المضاف: des Wetters!"
+          },
+          {
+            "q": "«لا لحماً»؟",
+            "a": "kein Fleisch",
+            "choices": [
+              "kein Fleisch",
+              "nicht Fleisch",
+              "keines Fleisch"
+            ],
+            "why": "نفي الاسم: kein!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الحساء ليس حاراً»؟",
+            "a": "Die Suppe ist nicht scharf.",
+            "choices": [
+              "Die Suppe ist nicht scharf.",
+              "Die Suppe ist kein scharf.",
+              "Die Suppe nicht ist scharf."
+            ],
+            "why": "نفي الخبر: nicht!"
+          },
+          {
+            "q": "«الطلاب يساعدون»؟",
+            "a": "Die Studenten helfen gern.",
+            "choices": [
+              "Die Studenten helfen gern.",
+              "Die Studenten hilft gern.",
+              "Die Studenten helfen nicht."
+            ],
+            "why": "الجمع ‑n: die Studenten + الفعل جمع (helfen!)."
+          },
+          {
+            "q": "«يوم الثلاثاء لديّ وقت»؟",
+            "a": "Am Dienstag habe ich Zeit.",
+            "choices": [
+              "Am Dienstag habe ich Zeit.",
+              "Am Dienstag ich habe Zeit.",
+              "An Dienstag habe ich Zeit."
+            ],
+            "why": "am + اليوم + V2!"
+          },
+          {
+            "q": "«سأشتري الخبز»؟",
+            "a": "Ich werde das Brot kaufen.",
+            "choices": [
+              "Ich werde das Brot kaufen.",
+              "Ich werde das Brot kaufe.",
+              "Ich werde kaufen das Brot."
+            ],
+            "why": "werde + المفعول + المصدر آخر!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الموظف يسأل السيد»؟",
+            "a": "Der Angestellte fragt den Herrn.",
+            "choices": [
+              "Der Angestellte fragt den Herrn.",
+              "Der Angestellte fragt den Herr.",
+              "Der Angestellte fragt dem Herrn."
+            ],
+            "why": "Herr اسم-n: den Herrn!"
+          },
+          {
+            "q": "«بسبب الطقس لا نسافر»؟",
+            "a": "Wegen des Wetters fahren wir nicht.",
+            "choices": [
+              "Wegen des Wetters fahren wir nicht.",
+              "Wegen des Wetter fahren wir nicht.",
+              "Wegen des Wetters fahren wir kein."
+            ],
+            "why": "des Wetters (‑s!) + nicht للفعل!"
+          },
+          {
+            "q": "«مسموح ذلك؟»؟",
+            "a": "Ist das erlaubt?",
+            "choices": [
+              "Ist das erlaubt?",
+              "Das ist erlaubt?",
+              "Ist erlaubt das?"
+            ],
+            "why": "السؤال V1: Ist … erlaubt?"
+          },
+          {
+            "q": "«أين دورة المياه؟»؟",
+            "a": "Wo ist das WC?",
+            "choices": [
+              "Wo ist das WC?",
+              "Wo ist der WC?",
+              "Wo das ist WC?"
+            ],
+            "why": "das WC (محايد!) + V2!"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Woche neun und zehn noch einmal — der fünfte Tag: Wir werden morgen fahren! Der Kunde fragt den Polizisten. Wegen des Wetters bleiben wir zu Hause — kein Fleisch, nicht scharf! Am Dienstag habe ich Zeit. Wo ist das WC? Ist das erlaubt?",
+      "ar": "اليوم الخامس من أسبوع المراجعة اكتمل: خطّطت بالمستقبل (werden fahren!) واستعملت اسم-n (den Polizisten!) والمضاف (des Wetters!) ونفيت الاسم والخبر (kein Fleisch! nicht scharf!) وحدّدت الموعد (am Dienstag!) — والمفردتان (Europäer! + WC!) جسيما اليوم."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Wir fahren werden morgen.~~ · ~~Wir werden morgen fahrt.~~",
+          "ar": "المستقبل: werden ثانياً والمصدر آخر"
+        },
+        "whyArabicSpeakerFails": "العربية تضع «سوف» قبل الفعل فتؤخر المصدر («سوف نسافر غداً»!) — والألمانية: werden المصرَّف ثانياً والمصدر آخر الجملة (Wir werden morgen fahren!) (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Wir werden morgen fahren. · Der ICE wird schnell sein.",
+          "ar": "سنسافر غداً · القطار سيكون سريعاً"
+        },
+        "exercise": {
+          "q": "أكمل: Wir ___ morgen ___. (werden/fahren)",
+          "a": "werden / fahren",
+          "choices": [
+            "werden / fahren",
+            "fahren / werden",
+            "werdet / fahren"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich möchte nicht Fleisch.~~ · ~~Die Suppe ist kein scharf.~~",
+          "ar": "نفي الاسم أم الخبر"
+        },
+        "whyArabicSpeakerFails": "العربية تنفي بـ«لا» واحدة («لا أريد لحماً»!) فتثبّت أداة نفي واحدة — والألمانية: kein للاسم (kein Fleisch — كـein بحرف k!) وnicht للخبر (nicht scharf!) (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Ich möchte kein Fleisch. · Die Suppe ist nicht scharf.",
+          "ar": "لا أريد لحماً · الحساء ليس حاراً"
+        },
+        "exercise": {
+          "q": "أكمل: Ich möchte ___ Fleisch, und die Suppe ist ___ scharf. (kein/nicht)",
+          "a": "kein / nicht",
+          "choices": [
+            "kein / nicht",
+            "nicht / kein",
+            "kein / kein"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Der Kunde fragt den Polizist.~~ · ~~Wegen des Wetter.~~",
+          "ar": "اسم-n والمضاف: ‑n و‑s!"
+        },
+        "whyArabicSpeakerFails": "العربية لا تُغيّر آخر الاسم بحالته («الشرطي» واحدة!) فتثبّت الكلمة — والألمانية: اسم-n يأخذ ‑n مع den/dem/des (den Polizisten!) والمضاف المذكر/المحايد ‑s (des Wetters!) (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Der Kunde fragt den Polizisten. · Wegen des Wetters.",
+          "ar": "الزبون يسأل الشرطي · بسبب الطقس"
+        },
+        "exercise": {
+          "q": "أكمل: Der Kunde fragt den Polizist___, und wegen des Wetter___.",
+          "a": "en / s",
+          "choices": [
+            "en / s",
+            "s / en",
+            "n / n"
+          ]
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "europaeer",
+      "wc"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Europaeer",
+      "https://www.duden.de/rechtschreibung/WC"
+    ],
+    "wiktionary": [],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-futur-i",
+    "ars-n-deklination",
+    "ars-kein-nicht",
+    "ars-genitiv-s",
+    "ars-termin-datum"
+  ],
+  "audioManifestRefs": [
+    "word-europaeer",
+    "word-wc"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "A2-Wiederholungswoche (Prüfungsvorbereitung) — اليوم 5: الوحدتان 9–10",
+    "goetheWordListOverlap": []
+  }
+}

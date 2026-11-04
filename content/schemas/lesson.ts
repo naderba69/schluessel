@@ -122,7 +122,7 @@ export const Lesson = SchemaVersioned.extend({
     /**
      * D188 (قرار المالك 2026-10-18 — «الأمانة قبل الطبيعية»): كلمة مستعارة من درس لاحق تُعلَن للمتعلم بدل ليّ الجملة.
      * تصل إلى الشاشة (ترجمة على الكلمة + صندوق «كلمات مستعارة» قبل التدريب) ويقبلها حارس الجبهة بصيغتها هذه وحدها.
-     * ≤2 لكل درس — والحارس يرفض المستعارة غير المستعملة أو المدروسة أصلاً أو التي ليست صيغة للكلمة المذكورة.
+     * ≤3 لكل درس (D404: أول-درس-3-مستعارات — u10-d2-نمط-التاريخ erste/zweite/dritte!) — والحارس يرفض المستعارة غير المستعملة أو المدروسة أصلاً أو التي ليست صيغة للكلمة المذكورة.
      */
     borrowedWords: z.array(z.object({
       /** الصيغة كما تظهر في النص (fragt) */
@@ -132,7 +132,7 @@ export const Lesson = SchemaVersioned.extend({
       ar: ArText,
       /** لماذا استُعيرت هنا — للمتعلم بالعربية */
       whyAr: ArText,
-    })).max(2).default([]),
+    })).max(3).default([]),
     grammarArsenalIds: z.array(z.string()).default([]),
     storySentenceIds: z.array(z.string()).default([]),
     dualCodingRequired: z.literal(true), // §15‑هـ إلزامي

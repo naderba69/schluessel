@@ -1,0 +1,504 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u14-d4",
+  "level": "A2",
+  "unit": 14,
+  "day": 4,
+  "kind": "integration",
+  "ziel": {
+    "de": "Woche sieben und acht noch einmal: Du beschreibst Wetter und Aussehen: der kühle Abend! das windige Wetter! Und du vergleichst: klüger als! am klügsten! Dann die Nachrichten: Ich habe gekauft — es war neu!",
+    "ar": "أسبوع المراجعة، اليوم الرابع (الوحدتان 7–8): الصفة قبل الاسم (der kühle Abend · ein kühler Abend!) والمقارنة (klüger! am klügsten!) والمركّب (das Wohnzimmer!) والماضي (hat gekauft! ist gefahren! war!) — مع الطقس والخبر!"
+  },
+  "canDoDaily": [
+    "يصف بالصفة قبل الاسم (der kühle Abend · ein kühler Abend · das windige Wetter) ويقارن (kühler als gestern · am klügsten!)",
+    "يحكي الخبر بالماضي المركّب والقصير (Ich habe gekauft · Ich bin gefahren · es war neu) ويجتاز معركة اليوم الرابع من أسبوع المراجعة بنتيجة 75% فأكثر"
+  ],
+  "warmup": {
+    "cardIds": [
+      "surfen",
+      "e-book",
+      "wetter"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«المساء البارد» (الصفة بعد der) — أي جملة صحيحة؟"
+        },
+        "choices": [
+          "der kühle Abend",
+          "der kühler Abend",
+          "der kühl Abend"
+        ],
+        "answer": "der kühle Abend",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«اشتريتُ — وكان جديداً» (الماضي المركّب) — أي جملة صحيحة؟"
+        },
+        "choices": [
+          "Ich habe gekauft — es war neu.",
+          "Ich habe kaufte — es war neu.",
+          "Ich bin gekauft — es war neu."
+        ],
+        "answer": "Ich habe gekauft — es war neu.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u7: الصفة قبل الاسم تلبس نهاية! der-كلمة ← الصفة ‑e (der kühle Abend!) · ein-كلمة مذكر/محايد ← الصفة ‑r/‑s (ein kühler Abend! ein windiges Wetter!) + المقارنة (klüger! am klügsten! als للمختلف!) + المركّب كلمة واحدة (das Wohnzimmer!).",
+      "من u8: الماضي المركّب: haben للعمل والملك (Ich habe gekauft!) · sein للحركة (Ich bin gefahren!) — والماضي القصير (war/hatte!) + الخبر والنشرة (die Nachrichten! der Journalist!)."
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "eigen",
+      "blog"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-adjektiv-dekl",
+      "ars-komparativ",
+      "ars-komposita-genus",
+      "ars-trennbare",
+      "ars-perfekt",
+      "ars-praeteritum-kurz"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "needs-ein",
+      "v2-order",
+      "plural-irregular"
+    ]
+  },
+  "uebung": {
+    "stations": [
+      {
+        "type": "gap-fill",
+        "items": [
+          {
+            "q": "Das ist der ___ Abend. (kühl)",
+            "a": "kühle",
+            "why": "der-كلمة تحمل العلامة: الصفة ‑e!"
+          },
+          {
+            "q": "Das ist ein ___ Abend. (kühl)",
+            "a": "kühler",
+            "why": "ein مذكر بلا علامة: الصفة ‑r!"
+          },
+          {
+            "q": "Das ist ein ___ Wetter. (windig)",
+            "a": "windiges",
+            "why": "المحايد ein: الصفة ‑s (ein windiges Wetter!)."
+          },
+          {
+            "q": "Das ___ ist groß und neu. (المركّب: Wohnen+Zimmer!)",
+            "a": "Wohnzimmer",
+            "why": "المركّب كلمة واحدة بحرف كبير واحد: das Wohnzimmer!"
+          },
+          {
+            "q": "Ich ___ das Brot gekauft. (haben — الماضي!)",
+            "a": "habe",
+            "why": "الم الماضي المركّب: ich habe … gekauft!"
+          },
+          {
+            "q": "Er ___ nach Hause gefahren. (sein — الماضي!)",
+            "a": "ist",
+            "why": "الحركة في الماضي: er ist … gefahren!"
+          },
+          {
+            "q": "Ich ___ um sieben auf. (aufstehen)",
+            "a": "stehe",
+            "why": "الفعل المنفصل: ich stehe … auf (الجزء الأخير في النهاية!)."
+          },
+          {
+            "q": "Das Wetter ist ___ als gestern. (kalt — المقارنة!)",
+            "a": "kälter",
+            "why": "المقارنة +Umlaut: kalt → kälter (als gestern!)."
+          },
+          {
+            "q": "Zum Vergleich: klug → ___ (الدرجة الثانية!)",
+            "a": "klüger",
+            "why": "klug → klüger (+Umlaut!) — والتفضيل am klügsten!"
+          }
+        ],
+        "interleavedWith": [
+          "familie",
+          "haus",
+          "wohnung",
+          "kurs"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "verb-bank",
+        "items": [
+          {
+            "q": "Ich ___ das Brot gekauft. (haben)",
+            "a": "habe",
+            "why": "العمل والملك: haben + Partizip (gekauft!)."
+          },
+          {
+            "q": "Wir ___ zur Party gefahren. (sein)",
+            "a": "sind",
+            "why": "الحركة: sein + Partizip (gefahren!)."
+          },
+          {
+            "q": "Er ___ früh aufgestanden. (sein)",
+            "a": "ist",
+            "why": "التغيّر: ist aufgestanden (المنفصل في آخر الجملة!)."
+          },
+          {
+            "q": "Du ___ Kaffee getrunken. (haben)",
+            "a": "hast",
+            "why": "du hast … getrunken (النهاية ‑st مع المساعد!)."
+          },
+          {
+            "q": "Das ___ gestern kalt. (sein — الماضي القصير!)",
+            "a": "war",
+            "why": "الم الماضي القصير: war (الشيء كان!)."
+          },
+          {
+            "q": "Ich ___ die Nachrichten gelesen. (haben)",
+            "a": "habe",
+            "why": "habe gelesen — Partizip في آخر الجملة!"
+          }
+        ],
+        "interleavedWith": [
+          "aufstehen",
+          "fruehstuecken",
+          "fahren",
+          "bleiben"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "error-hunt",
+        "items": [
+          {
+            "q": "~~Der kühler Abend ist schön.~~",
+            "a": "Der kühle Abend ist schön.",
+            "why": "der-كلمة: الصفة ‑e (وليس ‑r!)."
+          },
+          {
+            "q": "~~Ein kühle Abend ist schön.~~",
+            "a": "Ein kühler Abend ist schön.",
+            "why": "ein مذكر بلا علامة: الصفة ‑r!"
+          },
+          {
+            "q": "~~Ich bin das Brot gekauft.~~",
+            "a": "Ich habe das Brot gekauft.",
+            "why": "kaufen عمل: haben + gekauft (وليس sein!)."
+          },
+          {
+            "q": "~~Ich habe nach Hause gefahren.~~",
+            "a": "Ich bin nach Hause gefahren.",
+            "why": "الحركة: sein + gefahren (وليس haben!)."
+          },
+          {
+            "q": "~~Das Wohn Zimmer ist neu.~~",
+            "a": "Das Wohnzimmer ist neu.",
+            "why": "المركّب كلمة واحدة بحرف كبير واحد!"
+          },
+          {
+            "q": "~~Es ist kälter dann gestern.~~",
+            "a": "Es ist kälter als gestern.",
+            "why": "المقارنة: als للمختلف (وليس dann!) — so…wie للمتساوي!"
+          }
+        ],
+        "interleavedWith": [
+          "brille",
+          "schluessel",
+          "frage",
+          "danke"
+        ],
+        "explanationRequired": true
+      },
+      {
+        "type": "speaking",
+        "items": [
+          {
+            "q": "صفّ الطقس وقارن بيومين (جملتان: der kühle Abend + kälter als!)",
+            "a": "Das Wetter ist heute windig und kalt. Der Abend ist kühler als gestern!",
+            "why": "الصفة ‑e مع der! + المقارنة ‑er + als!"
+          },
+          {
+            "q": "قدّم خبر الأسبوع بالماضي (جملتان: habe gekauft + war/ist gefahren!)",
+            "a": "Ich habe gestern eingekauft. Die Sachen waren neu! Und ich bin nach Hause gefahren.",
+            "why": "habe eingekauft (عمل!) · waren (الم الماضي القصير!) · bin gefahren (حركة!)"
+          }
+        ],
+        "interleavedWith": [
+          "montag",
+          "kurs",
+          "schwester",
+          "bruder"
+        ],
+        "explanationRequired": true
+      }
+    ],
+    "communicativeTask": {
+      "goal": {
+        "de": "Wetter und Nachrichten: Der Abend ist kühler als gestern. Ich habe eingekauft — die Sachen waren neu. Und ich bin nach Hause gefahren!",
+        "ar": "الطقس والأخبار: أصف وأقارن (kühler als!) وأحكي بالماضي (habe gekauft! bin gefahren! war!)."
+      },
+      "situation": {
+        "de": "Der vierte Tag — Wetter und Nachrichten.",
+        "ar": "اليوم الرابع من أسبوع المراجعة — الطقس والأخبار."
+      },
+      "successCriteria": [
+        "يصف بالصفة قبل الاسم في جملتين (مع der ومع ein!)",
+        "يقارن بين يومين (بالدرجة الثانية والتفضيل!)",
+        "يحكي الخبر بالماضي (المُركَّب والقصير!) في جملتين",
+        "يجتاز معركة اليوم الرابع (75% فأكثر)"
+      ]
+    }
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المساء البارد» (der)؟",
+            "a": "der kühle Abend",
+            "choices": [
+              "der kühle Abend",
+              "der kühler Abend",
+              "der kühl Abend"
+            ],
+            "why": "der-كلمة: الصفة ‑e!"
+          },
+          {
+            "q": "«مساء بارد» (ein — مذكر)؟",
+            "a": "ein kühler Abend",
+            "choices": [
+              "ein kühler Abend",
+              "ein kühle Abend",
+              "ein kühles Abend"
+            ],
+            "why": "المذكر ein: الصفة ‑r!"
+          },
+          {
+            "q": "«اشتريتُ الخبز»؟",
+            "a": "Ich habe das Brot gekauft.",
+            "choices": [
+              "Ich habe das Brot gekauft.",
+              "Ich bin das Brot gekauft.",
+              "Ich habe das Brot kaufte."
+            ],
+            "why": "kaufen عمل: haben + gekauft!"
+          },
+          {
+            "q": "«الجو أمس كان بارداً»؟",
+            "a": "Das Wetter war gestern kalt.",
+            "choices": [
+              "Das Wetter war gestern kalt.",
+              "Das Wetter hatte gestern kalt.",
+              "Das Wetter ist gestern kalt."
+            ],
+            "why": "الم الماضي القصير: war!"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المساء أبرد من أمس»؟",
+            "a": "Der Abend ist kälter als gestern.",
+            "choices": [
+              "Der Abend ist kälter als gestern.",
+              "Der Abend ist kälter dann gestern.",
+              "Der Abend ist kalt als gestern."
+            ],
+            "why": "المقارنة: kälter (+Umlaut!) + als!"
+          },
+          {
+            "q": "«غرفة المعيشة» (المركّب)؟",
+            "a": "Das Wohnzimmer ist groß.",
+            "choices": [
+              "Das Wohnzimmer ist groß.",
+              "Das Wohn Zimmer ist groß.",
+              "Der Wohnzimmer ist groß."
+            ],
+            "why": "المركّب كلمة واحدة بحرف كبير واحد — والجنس من آخرها (das Zimmer!)."
+          },
+          {
+            "q": "«سافرتُ إلى البيت»؟",
+            "a": "Ich bin nach Hause gefahren.",
+            "choices": [
+              "Ich bin nach Hause gefahren.",
+              "Ich habe nach Hause gefahren.",
+              "Ich bin nach Hause fahren."
+            ],
+            "why": "الحركة: sein + Partizip!"
+          },
+          {
+            "q": "«هو نهض مبكراً»؟",
+            "a": "Er ist früh aufgestanden.",
+            "choices": [
+              "Er ist früh aufgestanden.",
+              "Er hat früh aufgestanden.",
+              "Er ist früh aufstehen."
+            ],
+            "why": "التغيّر: ist aufgestanden (المنفصل!)."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«أذكى» (الدرجة الثانية من klug)؟",
+            "a": "klüger",
+            "choices": [
+              "klüger",
+              "kluger",
+              "am klügsten"
+            ],
+            "why": "klug → klüger (+Umlaut!) — والتفضيل am klügsten!"
+          },
+          {
+            "q": "«أنا أتصفّح الإنترنت»؟",
+            "a": "Ich surfe im Internet.",
+            "choices": [
+              "Ich surfe im Internet.",
+              "Ich surfe in das Internet.",
+              "Ich surfe an das Internet."
+            ],
+            "why": "im = in + dem (الداتيف — المكان!)."
+          },
+          {
+            "q": "«هذا غرفة نومي الخاصة»؟",
+            "a": "Das ist mein eigenes Schlafzimmer.",
+            "choices": [
+              "Das ist mein eigenes Schlafzimmer.",
+              "Das ist mein eigen Schlafzimmer.",
+              "Das ist meine eigenes Schlafzimmer."
+            ],
+            "why": "الصفة eigenes مع mein (محايد!) — النهاية ‑s!"
+          },
+          {
+            "q": "«قرأتُ الأخبار»؟",
+            "a": "Ich habe die Nachrichten gelesen.",
+            "choices": [
+              "Ich habe die Nachrichten gelesen.",
+              "Ich bin die Nachrichten gelesen.",
+              "Ich habe die Nachrichten lesen."
+            ],
+            "why": "lesen عمل: haben + gelesen!"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Woche sieben und acht noch einmal — der vierte Tag: Der Abend ist kühler als gestern, und das Wetter ist windig. Dann die Nachrichten: Ich habe eingekauft — die Sachen waren neu! Ich bin nach Hause gefahren. Mein eigenes Zimmer, mein neues Blog!",
+      "ar": "اليوم الرابع من أسبوع المراجعة اكتمل: وصفت بالصفة المُعرَّبة (der kühle Abend! ein kühler Abend!) وقارنت (kühler als! am klügsten!) وحدّدت المركّب (Wohnzimmer!) وحكيت بالماضي (habe gekauft! bin gefahren! war!) — والمفردتان (eigen! + blog!) جسيما اليوم."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "de": "~~Der kühler Abend.~~ · ~~Ein kühle Abend.~~",
+          "ar": "نهاية الصفة قبل الاسم"
+        },
+        "whyArabicSpeakerFails": "العربية تصف بلا نهاية («المساء البارد» — البارد بلا تغيير!) فتثبّت الصفة — والألمانية تعربها: der تحمل العلامة فالصفة ‑e (der kühle Abend!) وein مذكر/محايد بلا علامة فالصفة ‑r/‑s (ein kühler Abend!) (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Der kühle Abend. · Ein kühler Abend.",
+          "ar": "المساء البارد · مساء بارد"
+        },
+        "exercise": {
+          "q": "أكمل: der ___ Abend · ein ___ Abend (kühl)",
+          "a": "kühle / kühler",
+          "choices": [
+            "kühle / kühler",
+            "kühler / kühle",
+            "kühle / kühle"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Ich bin das Brot gekauft.~~ · ~~Ich habe nach Hause gefahren.~~",
+          "ar": "المُساعِد: haben أم sein"
+        },
+        "whyArabicSpeakerFails": "العربية تمرّر الماضي بكلمة واحدة («اشتريتُ»!) فتلتبس المساعدات — والألمانية تفرّق: haben للعمل والملك (habe gekauft!) وsein للحركة والتغيّر (bin gefahren!) (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Ich habe das Brot gekauft. · Ich bin nach Hause gefahren.",
+          "ar": "اشتريتُ الخبز · سافرتُ إلى البيت"
+        },
+        "exercise": {
+          "q": "أكمل: Ich ___ das Brot gekauft, und ich ___ nach Hause gefahren. (habe/bin)",
+          "a": "habe / bin",
+          "choices": [
+            "habe / bin",
+            "bin / habe",
+            "habe / habe"
+          ]
+        }
+      },
+      {
+        "commonError": {
+          "de": "~~Es ist kälter dann gestern.~~ · ~~Es ist kalt als gestern.~~",
+          "ar": "المقارنة: als لا dann"
+        },
+        "whyArabicSpeakerFails": "العربية تقول «أبرد من» بحرف جر واحد (من!) فتُترجمها بـdann — والألمانية: الدرجة الثانية +er/‑r + als للمختلف (kälter als gestern!) وso…wie للمتساوي (خريطة التداخل 10‑ي).",
+        "correct": {
+          "de": "Es ist kälter als gestern. · Es ist so kalt wie gestern.",
+          "ar": "أبرد من أمس · بارد كأمس"
+        },
+        "exercise": {
+          "q": "أكمل: Der Abend ist kühler ___ gestern. (als/wie)",
+          "a": "als",
+          "choices": [
+            "als",
+            "wie",
+            "dann"
+          ]
+        }
+      }
+    ],
+    "srsBundleWordIds": [
+      "eigen",
+      "blog"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/eigen",
+      "https://www.duden.de/rechtschreibung/Blog"
+    ],
+    "wiktionary": [],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-adjektiv-dekl",
+    "ars-komparativ",
+    "ars-komposita-genus",
+    "ars-trennbare",
+    "ars-perfekt",
+    "ars-praeteritum-kurz"
+  ],
+  "audioManifestRefs": [
+    "word-eigen",
+    "word-blog"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "A2-Wiederholungswoche (Prüfungsvorbereitung) — اليوم 4: الوحدتان 7–8",
+    "goetheWordListOverlap": []
+  }
+}
