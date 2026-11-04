@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 383 (2026-10-26) — D429: b1-u2-d3 «مكالمة سماسرة — يسأل ويتفاوض» — 13 كلمة + ars-verhandeln (لغة التفاوض!)
+- **الخلاصة:** يوم الكلام (§8 d3)! مكالمة السمسار: تسأل وتتفاوض! — **13 كلمة** (hinterlassen «يترك رسالة» · interessiert «مهتم» · bieten «يعرض» · übernehmen «يتنازل» · Summe «المبلغ» · ungefähr «تقريباً» · höchstens «على الأكثر» · endgültig «نهائياً» · pauschal «بمبلغ مقطوع» · erhöhen «يرفع» · Unterlagen «الأوراق» · Strom «الكهرباء» · abstimmen «يتناسق») + **ars-verhandeln**: أسئلة مباشرة + تليين! («Das ist mir zu teuer!») + حدود! (höchstens/ungefähr!) + Könnten-Sie! المحطات: match بأزواج المراجعة داخلها! + gap-fill جمل المكالمة! + error-hunt مصائد التفاوض! + **speaking = المكالمة المسجَّلة كاملة (8 جمل!)**!
+- **التالي:** b1-u2-d4 «رد على إعلان سكن» (كتابة!) — كلمات + ردّ رسمي!
+
 ## الدفعة 382 (2026-10-26) — D428: b1-u2-d2 «Briefstil formell» — 13 كلمة + ars-briefstil (الصيغ الرسمية!) + خطة ترقية B1 (N-276)
 - **الخلاصة:** يوم الخطاب الرسمي! — **13 كلمة** (Empfehlung · Rückmeldung · Antrag · beantragen · Behörde · Amt · Anlage · Zustimmung · zusagen · Mahnung · Gebühr · regelmäßig · Gelegenheit) + **ars-briefstil**: Anrede مهذب! («Sehr geehrte Damen und Herren»!) + Gruß ثابت! («Mit freundlichen Grüßen»!) + جمل قصيرة مباشرة! التنقيب المثبت: 83 مرشحاً = 24 جديدة + 59 مُدرَّسة. المحطات تدرّب الصيغ الرسمية كاملة + الخطاب المسجَّل (8 جمل!) + Quiz 3×4 عتبة 75%.
 - **التالي:** b1-u2-d3 «مكالمة سماسرة — يسأل ويتفاوض» — كلمات + تفاوض!
