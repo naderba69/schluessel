@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D437 (2026-11-04): b1-u3-d4 «استمارة تأمين» — 15 كلمة + ars-formular (لغة الاستمارة الحاسمة!)
+- **الدفعة:** 391 · **الموجّه:** 5.93
+- **للقارئ:** يوم الكتابة! استمارة التأمين تُملأ! — **15 كلمة** (Angabe «البيان» · Feld «الحقل» · Zeile «السطر» · Geburt «الميلاد» · Geschlecht «الجنس» · Beleg «الإثبات» · Versichertenkarte «بطاقة التأمين» · vertreten «يُمثّل» · erforderlich «مطلوب» · nötig «لازم» · Pflicht «الواجب» · Angehörige «القريب» · Voraussetzung «الشرط» + **النظيفتان للتوازن**: Kasten «المربّع»! Spalte «العمود»!) + **ars-formular**: لغة الاستمارة الحاسمة! (erforderlich للإلزام! nötig للّازم العملي! der Beleg يُرفق! die Pflicht لا تُتجاهل!)
+- **بطاقة قرار:** الفرق الحاسم: erforderlich ≠ nötig! (الإلزام vs اللازم العملي!) — المصائد في error-hunt + warningCards! والجمع: die Angaben (‑en لا «Angabes»!). التوازن: اسمان نظيفان (Kasten/Spalte!) فأُعيد للميزان (0.349!). كشفت البوابة: خيار pretest بصيغة مركّبة غير مُدرَّسة («Versicherungskarte»!) + «mitschicken» غير مُدرَّس + مركّب Versichertenkarte بلا مرجع ← وصفة Telefonnummer (تحليل الأجزاء!) + علامة ɐ̯ المركّبة في IPA (نفس N-274!) فأُصلحت. النطق: Versichertenkarte (النبر على SICH!) = معجم (244).
+- **الفهرس العكسي:** §10: N-277 (بلا دَين جديد!) · §22.9 الدفعة 391 (v5.93) · ars-formular (shufra) · b1-lesson-upgrade (16 درساً!).
+- **الأيام والاختبارات:** **u3-d4 15 كلمة** — المسار B1: u1 71 + u2 69 + u3 59 = **199 كلمة** · u3: d1 Passiv ✓ · d2 feste Verben ✓ · d3 حوار عيادة ✓ · **d4 استمارة تأمين ✓** · d5 Landeskunde: Krankenkasse · d6 توليف · D7 معركة.
+- **الاختبارات:** npm test **1679/1679 ✓ (132 ملفاً)** · tsc ✓ · validate-content **2238 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u3-d4 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** (2699 كلمة) · goethe-b1 **1415/2893 (49%) + 31 = 50%**.
+- **الأرقام:** كلمة **1780** · دروس **190** · مسارات **3589** · معجم **244** · عبارات **4201** · صوت **928** · duden **736**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u3-d5 «Landeskunde: Krankenkasse» — كلمات + ثقافة التأمين الصحي!
+
 ## D436 (2026-11-04): b1-u3-d3 «حوار عيادة — يصف إجراءً» — 16 كلمة + ars-ablauf (وصف الإجراء!)
 - **الدفعة:** 390 · **الموجّه:** 5.92
 - **للقارئ:** يوم الكلام! حوار العيادة كإجراء متسلسل! — **16 كلمة** (messen «يقيس» · wiegen «يزن» · testen «يختبر» · abnehmen «ينحف» · zunehmen «يزداد» · sich erholen «يتعافى» · körperlich · Erholung · Diät · Schritt · während · Luft · Folge + **الثلاث النظائف للتوازن**: blass «شاحب» · nicken «يُومئ» · tasten «يتحسّس»!) + **ars-ablauf**: وصف الإجراء بأدوات الترتيب الأربع! (zuerst! dann! danach! schließlich!) + المراحل بالمجهول (wird gewogen! wird getestet!) — الزيارة كاملة خطوة بخطوة!

@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-04 — الدفعة 391: D437 — b1-u3-d4 «استمارة تأمين» — 15 كلمة + ars-formular (لغة الاستمارة الحاسمة!)
+يوم الكتابة! استمارة التأمين تُملأ! — **15 كلمة** (Angabe «البيان» · Feld «الحقل» · Zeile «السطر» · Geburt «الميلاد» · Geschlecht «الجنس» · Beleg «الإثبات» · Versichertenkarte «بطاقة التأمين» · vertreten «يُمثّل» · erforderlich «مطلوب» · nötig «لازم» · Pflicht «الواجب» · Angehörige «القريب» · Voraussetzung «الشرط» + **النظيفتان للتوازن**: Kasten «المربّع»! Spalte «العمود»!) + **ars-formular**: لغة الاستمارة الحاسمة! (erforderlich للإلزام! nötig للّازم العملي! der Beleg يُرفق! die Pflicht لا تُتجاهل!)
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-04 — الدفعة 390: D436 — b1-u3-d3 «حوار عيادة — يصف إجراءً» — 16 كلمة + ars-ablauf (وصف الإجراء!)
 يوم الكلام! حوار العيادة كإجراء متسلسل! — **16 كلمة** (messen «يقيس» · wiegen «يزن» · testen «يختبر» · abnehmen «ينحف» · zunehmen «يزداد» · sich erholen «يتعافى» · körperlich · Erholung · Diät · Schritt · während · Luft · Folge + **الثلاث النظائف للتوازن**: blass «شاحب» · nicken «يُومئ» · tasten «يتحسّس»!) + **ars-ablauf**: وصف الإجراء بأدوات الترتيب الأربع! (zuerst! dann! danach! schließlich!) + المراحل بالمجهول (wird gewogen! wird getestet!) — الزيارة كاملة خطوة بخطوة!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.

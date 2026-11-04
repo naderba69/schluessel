@@ -2007,6 +2007,21 @@ def build_all() -> None:
     ("word-blass", "blass.", "blass", ["b1-u3-d3"]),
     ("word-nicken", "nicken.", "nicken", ["b1-u3-d3"]),
     ("word-tasten", "tasten.", "tasten", ["b1-u3-d3"]),
+    ("word-angabe", "die Angabe.", "angabe", ["b1-u3-d4"]),
+    ("word-feld", "das Feld.", "feld", ["b1-u3-d4"]),
+    ("word-zeile", "die Zeile.", "zeile", ["b1-u3-d4"]),
+    ("word-geburt", "die Geburt.", "geburt", ["b1-u3-d4"]),
+    ("word-geschlecht", "das Geschlecht.", "geschlecht", ["b1-u3-d4"]),
+    ("word-beleg", "der Beleg.", "beleg", ["b1-u3-d4"]),
+    ("word-versichertenkarte", "die Versichertenkarte.", "versichertenkarte", ["b1-u3-d4"]),
+    ("word-vertreten", "vertreten.", "vertreten", ["b1-u3-d4"]),
+    ("word-erforderlich", "erforderlich.", "erforderlich", ["b1-u3-d4"]),
+    ("word-noetig", "nötig.", "noetig", ["b1-u3-d4"]),
+    ("word-pflicht", "die Pflicht.", "pflicht", ["b1-u3-d4"]),
+    ("word-angehoerige", "die Angehörige.", "angehoerige", ["b1-u3-d4"]),
+    ("word-voraussetzung", "die Voraussetzung.", "voraussetzung", ["b1-u3-d4"]),
+    ("word-kasten", "der Kasten.", "kasten", ["b1-u3-d4"]),
+    ("word-spalte", "die Spalte.", "spalte", ["b1-u3-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
