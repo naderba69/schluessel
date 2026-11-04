@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 393 (2026-11-04) — D439: b1-u3-d6 «توليف: نهاية أسبوع الصحة» — Herz/Knochen! + الوحدة 3 كاملة!
+- **الخلاصة:** نهاية أسبوع الصحة والتأمين! — كلمتان ختاميتان: **das Herz «القلب»** + **der Knochen «العظم»** (مقابل Beginn/Aufenthalt في u2!) — ودرس توليف (integration!) يجمع خيوط الأسبوع الخمس في قصة واحدة: العيادة! + المجهول! + الجامدة! + الإجراء! + الاستمارة! + النظام! المحطات (قالب D425): match(2×5) + gap-fill(6 — كل فجوة بقاعدة!) + error-hunt(3 — مصائد الأسبوع!) + speaking(8 جمل — القصة كاملة!) + Quiz 3×4 عتبة 75%!
+- **التالي:** **معركة الوحدة 3 (b1-unit3-proof)** — برهان مثل D426/D433! (nextId ← b1-u3-d6 ثم u4 عند بدايتها!) — ثم b1-u4 «التكوين والدراسة» (um zu! Genitiv!).
+
 ## الدفعة 392 (2026-11-04) — D438: b1-u3-d5 «Landeskunde: Krankenkasse» — 15 كلمة + ars-krankenkasse + أول ملف ثقافة B1!
 - **الخلاصة:** يوم الثقافة! نظام التأمين الصحي الألماني! — **15 كلمة** (Grenze «الحد» · Beschäftigung «التوظيف» · Prozent «بالمئة» · Anbieter «المزوّد» · staatlich «حكومي» · Regierung «الحكومة» · Gesetz «القانون» · Schutz «الحماية» · einzahlen «يدفع» · Steuer «الضريبة» · Liste «القائمة» · Wahl «الاختيار» + **النظائف الثلاث للتوازن**: Kittel «العباءة»! Knopf «الزر»! Fleck «البقعة»!) + **ars-krankenkasse**: النظام بلغته! (das Gesetz يفرض! die Kasse ist Pflicht! der Schutz staatlich! der Beitrag = Prozent!) + **b1-landeskunde-u3.json** (أول ملف ثقافة B1 — الحقائق + المفردات!).
 - **التالي:** b1-u3-d6 «مراجعة + توليف» (integration + كلمتان ختاميتان!) — ثم معركة الوحدة 3!

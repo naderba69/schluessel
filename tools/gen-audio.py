@@ -2040,6 +2040,8 @@ def build_all() -> None:
     ("word-kittel", "der Kittel.", "kittel", ["b1-u3-d5"]),
     ("word-knopf", "der Knopf.", "knopf", ["b1-u3-d5"]),
     ("word-fleck", "der Fleck.", "fleck", ["b1-u3-d5"]),
+    ("word-herz", "das Herz.", "herz", ["b1-u3-d6"]),
+    ("word-knochen", "der Knochen.", "knochen", ["b1-u3-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
