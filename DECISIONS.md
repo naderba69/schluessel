@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D443 (2026-11-04): b1-u4-d3 «مقابلة دراسية — يقارن مسارات» — 15 كلمة + ars-als-wie (als للفرق! wie للتشبيه!)
+- **الدفعة:** 397 · **الموجّه:** 5.99
+- **للقارئ:** يوم الكلام والمقارنة! — **15 كلمة** (Vergleich «المقارنة» · unterschiedlich «مختلف» · unterscheiden «يُميّز» · ähnlich «مشابه» · Gegensatz «النقيض» · Vorteil «الميزة» · Nachteil «العيب» · beobachten «يلاحظ» · schätzen «يُقدّر» · Entwicklung · Fortschritt · Änderung · Art + **als/wie** (أداة المقارنة نفسها! كلمتا قيد!)) + **ars-als-wie**: als للفرق! (besser als!) · wie للتشبيه! (ist wie!) — والخطأ الشائع «besser wie»!
+- **بطاقة قرار:** المقارنة = als للفرق وwie للتشبيه — لا يُخلطان! («besser wie» خطأ شائع!) · ähnlich wie! · anders als! المصائد الثلاثة في error-hunt + warningCards! **als/wie أُضيفتا كلمةَي قيد** (نمط anstatt في d1!) — والأداة تُدرَّس كما تُدرَّس! النطق: Gegensatz/Nachteil/unterschiedlich (النبر الأول!) = معجم (252).
+- **الفهرس العكسي:** §10: N-277 (بلا دَين جديد!) · §22.9 الدفعة 397 (v5.99) · ars-als-wie (shufra) · b1-lesson-upgrade (21 درساً!).
+- **الأيام والاختبارات:** **u4-d3 15 كلمة** — المسار B1: u1 71 + u2 69 + u3 76 + u4 47 = **263 كلمة** · u4: d1 um zu ✓ · d2 Genitiv ✓ · **d3 المقارنة ✓** · d4 خطاب دافع · d5 أفعال جر أكثر · d6 توليف · D7 معركة.
+- **الاختبارات:** npm test **1699/1699 ✓ (133 ملفاً)** · tsc ✓ · validate-content **2312 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u4-d3 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** (2761 كلمة) · goethe-b1 **1470/2893 (51%) + 29 = 52%**.
+- **الأرقام:** كلمة **1844** · دروس **195** · مسارات **3653** · معجم **252** · عبارات **4285** · صوت **977** · duden **800**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u4-d4 «خطاب دافع» (كتابة!) — كلمات + خطاب!
+
 ## D442 (2026-11-04): b1-u4-d2 «Genitiv كامل» — 13 كلمة + ars-genitiv-voll (الإضافة الكاملة!)
 - **الدفعة:** 396 · **الموجّه:** 5.98
 - **للقارئ:** يوم الإضافة! — **13 كلمة** (Höhe «الارتفاع» · Breite «العرض» · Länge «الطول» · Semester «الفصل الدراسي» · Generation «الجيل» · Jahrhundert «القرن» · Bereich «المجال» · Gebiet «الميدان» · Dauer «المدة» · Methode «الطريقة» · Theorie «النظرية» · System «النظام» · Organisation «التنظيم») + **ars-genitiv-voll**: des + s للمذكر/المحايد! (des Studiums!) + der بلا s للمؤنث! (der Hochschule!) + der للجمع! (der Professoren!) + von + م.غ البديل المنطوق! — «Die Dauer des Studiums ist lang!»

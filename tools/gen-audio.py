@@ -2074,6 +2074,21 @@ def build_all() -> None:
     ("word-theorie", "die Theorie.", "theorie", ["b1-u4-d2"]),
     ("word-system", "das System.", "system", ["b1-u4-d2"]),
     ("word-organisation", "die Organisation.", "organisation", ["b1-u4-d2"]),
+    ("word-vergleich", "der Vergleich.", "vergleich", ["b1-u4-d3"]),
+    ("word-unterschiedlich", "unterschiedlich.", "unterschiedlich", ["b1-u4-d3"]),
+    ("word-unterscheiden", "unterscheiden.", "unterscheiden", ["b1-u4-d3"]),
+    ("word-aehnlich", "ähnlich.", "aehnlich", ["b1-u4-d3"]),
+    ("word-gegensatz", "der Gegensatz.", "gegensatz", ["b1-u4-d3"]),
+    ("word-vorteil", "der Vorteil.", "vorteil", ["b1-u4-d3"]),
+    ("word-nachteil", "der Nachteil.", "nachteil", ["b1-u4-d3"]),
+    ("word-beobachten", "beobachten.", "beobachten", ["b1-u4-d3"]),
+    ("word-schaetzen", "schätzen.", "schaetzen", ["b1-u4-d3"]),
+    ("word-entwicklung", "die Entwicklung.", "entwicklung", ["b1-u4-d3"]),
+    ("word-fortschritt", "der Fortschritt.", "fortschritt", ["b1-u4-d3"]),
+    ("word-aenderung", "die Änderung.", "aenderung", ["b1-u4-d3"]),
+    ("word-art", "die Art.", "art", ["b1-u4-d3"]),
+    ("word-als", "als.", "als", ["b1-u4-d3"]),
+    ("word-wie", "wie.", "wie", ["b1-u4-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

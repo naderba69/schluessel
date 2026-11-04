@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 397 (2026-11-04) — D443: b1-u4-d3 «مقابلة دراسية — يقارن مسارات» — 15 كلمة + ars-als-wie (als للفرق! wie للتشبيه!)
+- **الخلاصة:** يوم الكلام والمقارنة! — **15 كلمة** (Vergleich «المقارنة» · unterschiedlich «مختلف» · unterscheiden «يُميّز» · ähnlich «مشابه» · Gegensatz «النقيض» · Vorteil «الميزة» · Nachteil «العيب» · beobachten «يلاحظ» · schätzen «يُقدّر» · Entwicklung · Fortschritt · Änderung · Art + **als/wie** (أداة المقارنة نفسها! كلمتا قيد!)) + **ars-als-wie**: als للفرق! (besser als!) · wie للتشبيه! (ist wie!) — والخطأ الشائع «besser wie»!
+- **التالي:** b1-u4-d4 «خطاب دافع» (كتابة!) — كلمات + خطاب!
+
 ## الدفعة 396 (2026-11-04) — D442: b1-u4-d2 «Genitiv كامل» — 13 كلمة + ars-genitiv-voll (الإضافة الكاملة!)
 - **الخلاصة:** يوم الإضافة! — **13 كلمة** (Höhe «الارتفاع» · Breite «العرض» · Länge «الطول» · Semester «الفصل الدراسي» · Generation «الجيل» · Jahrhundert «القرن» · Bereich «المجال» · Gebiet «الميدان» · Dauer «المدة» · Methode «الطريقة» · Theorie «النظرية» · System «النظام» · Organisation «التنظيم») + **ars-genitiv-voll**: des + s للمذكر/المحايد! (des Studiums!) + der بلا s للمؤنث! (der Hochschule!) + der للجمع! (der Professoren!) + von + م.غ البديل المنطوق! — «Die Dauer des Studiums ist lang!»
 - **التالي:** b1-u4-d3 «مقابلة دراسية — يقارن مسارات» (كلام!) — كلمات + مقابلة!

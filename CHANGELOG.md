@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-04 — الدفعة 397: D443 — b1-u4-d3 «مقابلة دراسية — يقارن مسارات» — 15 كلمة + ars-als-wie (als للفرق! wie للتشبيه!)
+يوم الكلام والمقارنة! — **15 كلمة** (Vergleich «المقارنة» · unterschiedlich «مختلف» · unterscheiden «يُميّز» · ähnlich «مشابه» · Gegensatz «النقيض» · Vorteil «الميزة» · Nachteil «العيب» · beobachten «يلاحظ» · schätzen «يُقدّر» · Entwicklung · Fortschritt · Änderung · Art + **als/wie** (أداة المقارنة نفسها! كلمتا قيد!)) + **ars-als-wie**: als للفرق! (besser als!) · wie للتشبيه! (ist wie!) — والخطأ الشائع «besser wie»!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-04 — الدفعة 396: D442 — b1-u4-d2 «Genitiv كامل» — 13 كلمة + ars-genitiv-voll (الإضافة الكاملة!)
 يوم الإضافة! — **13 كلمة** (Höhe «الارتفاع» · Breite «العرض» · Länge «الطول» · Semester «الفصل الدراسي» · Generation «الجيل» · Jahrhundert «القرن» · Bereich «المجال» · Gebiet «الميدان» · Dauer «المدة» · Methode «الطريقة» · Theorie «النظرية» · System «النظام» · Organisation «التنظيم») + **ars-genitiv-voll**: des + s للمذكر/المحايد! (des Studiums!) + der بلا s للمؤنث! (der Hochschule!) + der للجمع! (der Professoren!) + von + م.غ البديل المنطوق! — «Die Dauer des Studiums ist lang!»
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
