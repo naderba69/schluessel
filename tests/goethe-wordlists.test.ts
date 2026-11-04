@@ -247,7 +247,8 @@ describe("D110 — الحارس الدائم على المحتوى الحقيق�
     // D391 (D185): المستعارة-المعلنة خارج القوائم — lieblings (سابقة-Lieblings-X-الرسمية بلا مدخل-Duden!) · zukunft (خارج-A2!) — معلنة-في-الدرس (خارج-القوائم-معلنة!) ومُثبتة هنا عمداً
     const DECLARED_OUTSIDE_A2 = new Set(["lieblings", "zukunft"]);
     // D417: مترادف معلَن — «die Bank» مالٌ في محتوانا (Banken) ومقعد في قائمة B1 («die Bank, ¨-e» ← Bänke) — كلا الجمعين صحيح لمعناه
-    const DECLARED_HOMONYM_PLURALS = new Set(["bank"]);
+    // D430 (N-278): zeitpunkt — الرسم المطبعي «der Zeitpunkt, -» مختصر (لا جمع مقروء!) والصحيح Duden = die Zeitpunkte
+    const DECLARED_HOMONYM_PLURALS = new Set(["bank", "zeitpunkt"]);
     for (const w of words.filter((x) => x.level === "A2" && !DECLARED_OUTSIDE_A2.has(x.id))) expect(w.goetheList, w.id).toContain("A2");
     const { plurals } = auditGoethe(words, LISTS);
     expect(plurals.filter((x) => !DECLARED_HOMONYM_PLURALS.has(x.id))).toEqual([]);

@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 384 (2026-10-26) — D430: b1-u2-d4 «رد على إعلان سكن» — 13 كلمة + ars-anzeige-antwort (ترتيب الردّ الثابت!)
+- **الخلاصة:** يوم الكتابة (§8 d4)! الردّ على إعلان السكن: **13 كلمة** (Vorstellung «التعريف» · Zeitpunkt «التوقيت» · spätestens «في أبعد تقدير» · zunächst «أولاً» · angeben «يوضّح» · tatsächlich «في الواقع» · daher «لذلك» · Zustand «الحالة» · Entscheidung «القرار» · Auswahl «الاختيار» · auswählen «يختار» · entscheiden «يقرر» · eventuell «ربما») + **ars-anzeige-antwort**: أربع خطوات ثابتة! (الرجوع للإعلان! + التعريف! + الطلب! + الختام!) — الردّ المسجَّل كامل (8 جمل!) بـAnrede و Gruß الثابتين!
+- **التالي:** b1-u2-d5 «Kollokationen» (يوم الكلمات المصاحبة!) — ثم d6 التوليف ومعركة الوحدة 2!
+
 ## الدفعة 383 (2026-10-26) — D429: b1-u2-d3 «مكالمة سماسرة — يسأل ويتفاوض» — 13 كلمة + ars-verhandeln (لغة التفاوض!)
 - **الخلاصة:** يوم الكلام (§8 d3)! مكالمة السمسار: تسأل وتتفاوض! — **13 كلمة** (hinterlassen «يترك رسالة» · interessiert «مهتم» · bieten «يعرض» · übernehmen «يتنازل» · Summe «المبلغ» · ungefähr «تقريباً» · höchstens «على الأكثر» · endgültig «نهائياً» · pauschal «بمبلغ مقطوع» · erhöhen «يرفع» · Unterlagen «الأوراق» · Strom «الكهرباء» · abstimmen «يتناسق») + **ars-verhandeln**: أسئلة مباشرة + تليين! («Das ist mir zu teuer!») + حدود! (höchstens/ungefähr!) + Könnten-Sie! المحطات: match بأزواج المراجعة داخلها! + gap-fill جمل المكالمة! + error-hunt مصائد التفاوض! + **speaking = المكالمة المسجَّلة كاملة (8 جمل!)**!
 - **التالي:** b1-u2-d4 «رد على إعلان سكن» (كتابة!) — كلمات + ردّ رسمي!

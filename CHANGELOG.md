@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-26 — الدفعة 384: D430 — b1-u2-d4 «رد على إعلان سكن» — 13 كلمة + ars-anzeige-antwort (ترتيب الردّ الثابت!)
+يوم الكتابة (§8 d4)! الردّ على إعلان السكن: **13 كلمة** (Vorstellung «التعريف» · Zeitpunkt «التوقيت» · spätestens «في أبعد تقدير» · zunächst «أولاً» · angeben «يوضّح» · tatsächlich «في الواقع» · daher «لذلك» · Zustand «الحالة» · Entscheidung «القرار» · Auswahl «الاختيار» · auswählen «يختار» · entscheiden «يقرر» · eventuell «ربما») + **ars-anzeige-antwort**: أربع خطوات ثابتة! (الرجوع للإعلان! + التعريف! + الطلب! + الختام!) — الردّ المسجَّل كامل (8 جمل!) بـAnrede و Gruß الثابتين!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-10-26 — الدفعة 383: D429 — b1-u2-d3 «مكالمة سماسرة — يسأل ويتفاوض» — 13 كلمة + ars-verhandeln (لغة التفاوض!)
 يوم الكلام (§8 d3)! مكالمة السمسار: تسأل وتتفاوض! — **13 كلمة** (hinterlassen «يترك رسالة» · interessiert «مهتم» · bieten «يعرض» · übernehmen «يتنازل» · Summe «المبلغ» · ungefähr «تقريباً» · höchstens «على الأكثر» · endgültig «نهائياً» · pauschal «بمبلغ مقطوع» · erhöhen «يرفع» · Unterlagen «الأوراق» · Strom «الكهرباء» · abstimmen «يتناسق») + **ars-verhandeln**: أسئلة مباشرة + تليين! («Das ist mir zu teuer!») + حدود! (höchstens/ungefähr!) + Könnten-Sie! المحطات: match بأزواج المراجعة داخلها! + gap-fill جمل المكالمة! + error-hunt مصائد التفاوض! + **speaking = المكالمة المسجَّلة كاملة (8 جمل!)**!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
