@@ -1944,6 +1944,21 @@ def build_all() -> None:
     ("word-auswaehlen", "auswählen.", "auswaehlen", ["b1-u2-d4"]),
     ("word-entscheiden", "entscheiden.", "entscheiden", ["b1-u2-d4"]),
     ("word-eventuell", "eventuell.", "eventuell", ["b1-u2-d4"]),
+    ("word-vermeiden", "vermeiden.", "vermeiden", ["b1-u2-d5"]),
+    ("word-brechen", "brechen.", "brechen", ["b1-u2-d5"]),
+    ("word-ziehen", "ziehen.", "ziehen", ["b1-u2-d5"]),
+    ("word-gelten", "gelten.", "gelten", ["b1-u2-d5"]),
+    ("word-leisten", "leisten.", "leisten", ["b1-u2-d5"]),
+    ("word-erfahren", "erfahren.", "erfahren", ["b1-u2-d5"]),
+    ("word-garantieren", "garantieren.", "garantieren", ["b1-u2-d5"]),
+    ("word-aufgeben", "aufgeben.", "aufgeben", ["b1-u2-d5"]),
+    ("word-verbessern", "verbessern.", "verbessern", ["b1-u2-d5"]),
+    ("word-empfangen", "empfangen.", "empfangen", ["b1-u2-d5"]),
+    ("word-ergaenzen", "ergänzen.", "ergaenzen", ["b1-u2-d5"]),
+    ("word-wenden", "sich wenden.", "wenden", ["b1-u2-d5"]),
+    ("word-verlassen", "verlassen.", "verlassen", ["b1-u2-d5"]),
+    ("word-schulden", "die Schulden.", "schulden", ["b1-u2-d5"]),
+    ("word-einkauf", "der Einkauf.", "einkauf", ["b1-u2-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 385 (2026-10-26) — D431: b1-u2-d5 «Kollokationen» — 15 كلمة (13 فعلاً مصاحباً!) + ars-kollokationen (الشراكات الثابتة!)
+- **الخلاصة:** يوم الكلمات المصاحبة! كل فعل بشركائه المحفوظين: **13 فعلاً** (vermeiden «يتجنّب» · brechen «يكسر» · ziehen «ينتقل» · gelten «يسري» · leisten «يُقدّم» · erfahren «يعلم» · garantieren «يضمن» · aufgeben «يتخلى» · verbessern «يُحسّن» · empfangen «يستلم» · ergänzen «يُكمل» · sich wenden «يتجه» · verlassen «يغادر») + **اسمان للتوازن** (Schulden «الديون»! Einkauf «التسوّق»!) = **15 كلمة** (سابقة u1-d5!) + **ars-kollokationen**: «in die Wohnung ziehen!» (in محفوظ!) · «Das Angebot gilt!» (بلا جار!) · «sich an die Behörde wenden!» (sich + an!) · «die Wohnung verlassen!» (+Akk!) — الشريك والإعراب محفوظان!
+- **التالي:** b1-u2-d6 «مراجعة + توليف» (integration! + كلمتان ختاميتان!) — ثم معركة الوحدة 2 (b1-unit2-proof)!
+
 ## الدفعة 384 (2026-10-26) — D430: b1-u2-d4 «رد على إعلان سكن» — 13 كلمة + ars-anzeige-antwort (ترتيب الردّ الثابت!)
 - **الخلاصة:** يوم الكتابة (§8 d4)! الردّ على إعلان السكن: **13 كلمة** (Vorstellung «التعريف» · Zeitpunkt «التوقيت» · spätestens «في أبعد تقدير» · zunächst «أولاً» · angeben «يوضّح» · tatsächlich «في الواقع» · daher «لذلك» · Zustand «الحالة» · Entscheidung «القرار» · Auswahl «الاختيار» · auswählen «يختار» · entscheiden «يقرر» · eventuell «ربما») + **ars-anzeige-antwort**: أربع خطوات ثابتة! (الرجوع للإعلان! + التعريف! + الطلب! + الختام!) — الردّ المسجَّل كامل (8 جمل!) بـAnrede و Gruß الثابتين!
 - **التالي:** b1-u2-d5 «Kollokationen» (يوم الكلمات المصاحبة!) — ثم d6 التوليف ومعركة الوحدة 2!

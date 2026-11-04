@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-26 — الدفعة 385: D431 — b1-u2-d5 «Kollokationen» — 15 كلمة (13 فعلاً مصاحباً!) + ars-kollokationen (الشراكات الثابتة!)
+يوم الكلمات المصاحبة! كل فعل بشركائه المحفوظين: **13 فعلاً** (vermeiden «يتجنّب» · brechen «يكسر» · ziehen «ينتقل» · gelten «يسري» · leisten «يُقدّم» · erfahren «يعلم» · garantieren «يضمن» · aufgeben «يتخلى» · verbessern «يُحسّن» · empfangen «يستلم» · ergänzen «يُكمل» · sich wenden «يتجه» · verlassen «يغادر») + **اسمان للتوازن** (Schulden «الديون»! Einkauf «التسوّق»!) = **15 كلمة** (سابقة u1-d5!) + **ars-kollokationen**: «in die Wohnung ziehen!» (in محفوظ!) · «Das Angebot gilt!» (بلا جار!) · «sich an die Behörde wenden!» (sich + an!) · «die Wohnung verlassen!» (+Akk!) — الشريك والإعراب محفوظان!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-10-26 — الدفعة 384: D430 — b1-u2-d4 «رد على إعلان سكن» — 13 كلمة + ars-anzeige-antwort (ترتيب الردّ الثابت!)
 يوم الكتابة (§8 d4)! الردّ على إعلان السكن: **13 كلمة** (Vorstellung «التعريف» · Zeitpunkt «التوقيت» · spätestens «في أبعد تقدير» · zunächst «أولاً» · angeben «يوضّح» · tatsächlich «في الواقع» · daher «لذلك» · Zustand «الحالة» · Entscheidung «القرار» · Auswahl «الاختيار» · auswählen «يختار» · entscheiden «يقرر» · eventuell «ربما») + **ars-anzeige-antwort**: أربع خطوات ثابتة! (الرجوع للإعلان! + التعريف! + الطلب! + الختام!) — الردّ المسجَّل كامل (8 جمل!) بـAnrede و Gruß الثابتين!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
