@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 392 (2026-11-04) — D438: b1-u3-d5 «Landeskunde: Krankenkasse» — 15 كلمة + ars-krankenkasse + أول ملف ثقافة B1!
+- **الخلاصة:** يوم الثقافة! نظام التأمين الصحي الألماني! — **15 كلمة** (Grenze «الحد» · Beschäftigung «التوظيف» · Prozent «بالمئة» · Anbieter «المزوّد» · staatlich «حكومي» · Regierung «الحكومة» · Gesetz «القانون» · Schutz «الحماية» · einzahlen «يدفع» · Steuer «الضريبة» · Liste «القائمة» · Wahl «الاختيار» + **النظائف الثلاث للتوازن**: Kittel «العباءة»! Knopf «الزر»! Fleck «البقعة»!) + **ars-krankenkasse**: النظام بلغته! (das Gesetz يفرض! die Kasse ist Pflicht! der Schutz staatlich! der Beitrag = Prozent!) + **b1-landeskunde-u3.json** (أول ملف ثقافة B1 — الحقائق + المفردات!).
+- **التالي:** b1-u3-d6 «مراجعة + توليف» (integration + كلمتان ختاميتان!) — ثم معركة الوحدة 3!
+
 ## الدفعة 391 (2026-11-04) — D437: b1-u3-d4 «استمارة تأمين» — 15 كلمة + ars-formular (لغة الاستمارة الحاسمة!)
 - **الخلاصة:** يوم الكتابة! استمارة التأمين تُملأ! — **15 كلمة** (Angabe «البيان» · Feld «الحقل» · Zeile «السطر» · Geburt «الميلاد» · Geschlecht «الجنس» · Beleg «الإثبات» · Versichertenkarte «بطاقة التأمين» · vertreten «يُمثّل» · erforderlich «مطلوب» · nötig «لازم» · Pflicht «الواجب» · Angehörige «القريب» · Voraussetzung «الشرط» + **النظيفتان للتوازن**: Kasten «المربّع»! Spalte «العمود»!) + **ars-formular**: لغة الاستمارة الحاسمة! (erforderlich للإلزام! nötig للّازم العملي! der Beleg يُرفق! die Pflicht لا تُتجاهل!)
 - **التالي:** b1-u3-d5 «Landeskunde: Krankenkasse» — كلمات + ثقافة التأمين الصحي!

@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D438 (2026-11-04): b1-u3-d5 «Landeskunde: Krankenkasse» — 15 كلمة + ars-krankenkasse + أول ملف ثقافة B1!
+- **الدفعة:** 392 · **الموجّه:** 5.94
+- **للقارئ:** يوم الثقافة! نظام التأمين الصحي الألماني! — **15 كلمة** (Grenze «الحد» · Beschäftigung «التوظيف» · Prozent «بالمئة» · Anbieter «المزوّد» · staatlich «حكومي» · Regierung «الحكومة» · Gesetz «القانون» · Schutz «الحماية» · einzahlen «يدفع» · Steuer «الضريبة» · Liste «القائمة» · Wahl «الاختيار» + **النظائف الثلاث للتوازن**: Kittel «العباءة»! Knopf «الزر»! Fleck «البقعة»!) + **ars-krankenkasse**: النظام بلغته! (das Gesetz يفرض! die Kasse ist Pflicht! der Schutz staatlich! der Beitrag = Prozent!) + **b1-landeskunde-u3.json** (أول ملف ثقافة B1 — الحقائق + المفردات!).
+- **بطاقة قرار:** التأمين إلزامي بالقانون! (Pflicht لا nötig!) والاشتراك نسبة (acht Prozent لا Prozente!) — المصائب في error-hunt! **N-198 رابعاً**: «das Recht» أُجِّل (تسرب خلفي لـ«rechten» في a1-u9-d4 — النمط نفسه Bäcker!) + sichern/finanzieren استُبدلا (التوازن!). وفجر ملف الثقافة أمرين: sourceNote إلزامي في CultureCard! + حارس «كل وحدة ببطاقة» كان مستوىً واحداً فصار مستوىً مستوى! وجمع Fleck التزم بالرسم الرسمي (die Flecken لا Flecke!).
+- **الفهرس العكسي:** §10: N-277 (بلا دَين جديد!) · §22.9 الدفعة 392 (v5.94) · ars-krankenkasse (shufra) · b1-landeskunde-u3 (أول ثقافة B1!) · b1-lesson-upgrade (17 درساً!).
+- **الأيام والاختبارات:** **u3-d5 15 كلمة** — المسار B1: u1 71 + u2 69 + u3 74 = **214 كلمة** · u3: d1 Passiv ✓ · d2 feste Verben ✓ · d3 حوار عيادة ✓ · d4 استمارة تأمين ✓ · **d5 Landeskunde ✓** · d6 التوليف! · D7 معركة الوحدة 3!
+- **الاختبارات:** npm test **1679/1679 ✓ (132 ملفاً)** · tsc ✓ · validate-content **2256 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u3-d5 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** (2714 كلمة) · goethe-b1 **1427/2893 (49%) + 30 = 50%**.
+- **الأرقام:** كلمة **1795** · دروس **191** · مسارات **3604** · معجم **244** · عبارات **4218** · صوت **940** · duden **751** · ثقافة B1: 1 ملف.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u3-d6 «مراجعة + توليف» (integration + كلمتان ختاميتان!) — ثم معركة الوحدة 3!
+
 ## D437 (2026-11-04): b1-u3-d4 «استمارة تأمين» — 15 كلمة + ars-formular (لغة الاستمارة الحاسمة!)
 - **الدفعة:** 391 · **الموجّه:** 5.93
 - **للقارئ:** يوم الكتابة! استمارة التأمين تُملأ! — **15 كلمة** (Angabe «البيان» · Feld «الحقل» · Zeile «السطر» · Geburt «الميلاد» · Geschlecht «الجنس» · Beleg «الإثبات» · Versichertenkarte «بطاقة التأمين» · vertreten «يُمثّل» · erforderlich «مطلوب» · nötig «لازم» · Pflicht «الواجب» · Angehörige «القريب» · Voraussetzung «الشرط» + **النظيفتان للتوازن**: Kasten «المربّع»! Spalte «العمود»!) + **ars-formular**: لغة الاستمارة الحاسمة! (erforderlich للإلزام! nötig للّازم العملي! der Beleg يُرفق! die Pflicht لا تُتجاهل!)
