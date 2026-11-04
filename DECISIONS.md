@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D445 (2026-11-04): b1-u4-d5 «أفعال جر أكثر» — 13 كلمة + ars-feste-verben-2 + قائمة 10‑ك تنمو (14 دخلاً!)
+- **الدفعة:** 399 · **الموجّه:** 6.1
+- **للقارئ:** الجُمدة الثانية! — **13 كلمة** (sorgen «يقلق/يعتني» · sich konzentrieren «يركّز» · stimmen «يصحّ/يصوّت» · sich entschließen «يُقرّر» · sich verabreden «يتوعّد» + Karriere · Förderung · starten · Diplom · Sinn · Wert · Bedeutung · Vertrauen) + **ars-feste-verben-2**: sich sorgen um! sich konzentrieren auf! sich entschließen zu! sich verabreden mit! — الحروف محفوظة والانعكاسي إلزامي! وقائمة 10‑ك نمت إلى **14 دخلاً**!
+- **بطاقة قرار:** الجُمدة = الحرف محفوظ + sich إلزامي + zum = zu + dem! («entschließe mich zum Studium»!) — المصائد الثلاثة في error-hunt! و«Vertrauen» عادت طبيعياً (الكلمة المؤجَّلة في u3!) بعد أن صارت موضعها هنا. النطق: Karriere (النبر على RIE!) + إعادة وسم D106 (ie-short!) = معجم (254).
+- **الفهرس العكسي:** §10: N-277 (بلا دَين جديد!) · §22.9 الدفعة 399 (v6.1) · ars-feste-verben-2 (shufra!) + ars-feste-verben-10k (14 دخلاً!) · b1-lesson-upgrade (23 درساً!).
+- **الأيام والاختبارات:** **u4-d5 13 كلمة** — المسار B1: u1 71 + u2 69 + u3 76 + u4 73 = **289 كلمة** · u4: d1 um zu ✓ · d2 Genitiv ✓ · d3 المقارنة ✓ · d4 خطاب دافع ✓ · **d5 أفعال جر أكثر ✓** · d6 التوليف! · D7 معركة الوحدة 4!
+- **الاختبارات:** npm test **1699/1699 ✓ (133 ملفاً)** · tsc ✓ · validate-content **2342 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u4-d5 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** (2787 كلمة) · goethe-b1 **1495/2893 (52%) + 29 = 53%**.
+- **الأرقام:** كلمة **1870** · دروس **197** · مسارات **3679** · معجم **254** · عبارات **4317** · صوت **991** · duden **826**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u4-d6 «مراجعة + توليف» (integration + كلمتان ختاميتان!) — ثم معركة الوحدة 4!
+
 ## D444 (2026-11-04): b1-u4-d4 «خطاب دافع» — 13 كلمة + ars-motivation (بنية الخطاب!)
 - **الدفعة:** 398 · **الموجّه:** 6.0
 - **للقارئ:** يوم الكتابة! خطاب الدافع! — **13 كلمة** (überzeugen «يُقنع» · Überzeugung · geeignet «مناسب» · Hoffnung «الأمل» · begeistert «متحمّس» · verantwortlich «مسؤول» · Verantwortung · flexibel «مرن» · kreativ «مبدع» · Talent «الموهبة» · Lebenslauf «السيرة الذاتية» · Absicht «النية» · Chance «الفرصة») + **ars-motivation**: بنية الخطاب الثابتة! (الملاءمة geeignet für! + القوى begeistert/verantwortlich! + الأمل Hoffnung/Chance! + المرفق Lebenslauf!) مع Anrede و Gruß!

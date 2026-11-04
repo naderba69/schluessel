@@ -2102,6 +2102,19 @@ def build_all() -> None:
     ("word-lebenslauf", "der Lebenslauf.", "lebenslauf", ["b1-u4-d4"]),
     ("word-absicht", "die Absicht.", "absicht", ["b1-u4-d4"]),
     ("word-chance", "die Chance.", "chance", ["b1-u4-d4"]),
+    ("word-sorgen", "sorgen.", "sorgen", ["b1-u4-d5"]),
+    ("word-konzentrieren", "sich konzentrieren.", "konzentrieren", ["b1-u4-d5"]),
+    ("word-stimmen", "stimmen.", "stimmen", ["b1-u4-d5"]),
+    ("word-entschliessen", "sich entschließen.", "entschliessen", ["b1-u4-d5"]),
+    ("word-verabreden", "sich verabreden.", "verabreden", ["b1-u4-d5"]),
+    ("word-karriere", "die Karriere.", "karriere", ["b1-u4-d5"]),
+    ("word-foerderung", "die Förderung.", "foerderung", ["b1-u4-d5"]),
+    ("word-starten", "starten.", "starten", ["b1-u4-d5"]),
+    ("word-diplom", "das Diplom.", "diplom", ["b1-u4-d5"]),
+    ("word-sinn", "der Sinn.", "sinn", ["b1-u4-d5"]),
+    ("word-wert", "der Wert.", "wert", ["b1-u4-d5"]),
+    ("word-bedeutung", "die Bedeutung.", "bedeutung", ["b1-u4-d5"]),
+    ("word-vertrauen", "das Vertrauen.", "vertrauen", ["b1-u4-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

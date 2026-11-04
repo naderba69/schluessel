@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-04 — الدفعة 399: D445 — b1-u4-d5 «أفعال جر أكثر» — 13 كلمة + ars-feste-verben-2 + قائمة 10‑ك تنمو (14 دخلاً!)
+الجُمدة الثانية! — **13 كلمة** (sorgen «يقلق/يعتني» · sich konzentrieren «يركّز» · stimmen «يصحّ/يصوّت» · sich entschließen «يُقرّر» · sich verabreden «يتوعّد» + Karriere · Förderung · starten · Diplom · Sinn · Wert · Bedeutung · Vertrauen) + **ars-feste-verben-2**: sich sorgen um! sich konzentrieren auf! sich entschließen zu! sich verabreden mit! — الحروف محفوظة والانعكاسي إلزامي! وقائمة 10‑ك نمت إلى **14 دخلاً**!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-04 — الدفعة 398: D444 — b1-u4-d4 «خطاب دافع» — 13 كلمة + ars-motivation (بنية الخطاب!)
 يوم الكتابة! خطاب الدافع! — **13 كلمة** (überzeugen «يُقنع» · Überzeugung · geeignet «مناسب» · Hoffnung «الأمل» · begeistert «متحمّس» · verantwortlich «مسؤول» · Verantwortung · flexibel «مرن» · kreativ «مبدع» · Talent «الموهبة» · Lebenslauf «السيرة الذاتية» · Absicht «النية» · Chance «الفرصة») + **ars-motivation**: بنية الخطاب الثابتة! (الملاءمة geeignet für! + القوى begeistert/verantwortlich! + الأمل Hoffnung/Chance! + المرفق Lebenslauf!) مع Anrede و Gruß!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.

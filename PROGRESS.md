@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 399 (2026-11-04) — D445: b1-u4-d5 «أفعال جر أكثر» — 13 كلمة + ars-feste-verben-2 + قائمة 10‑ك تنمو (14 دخلاً!)
+- **الخلاصة:** الجُمدة الثانية! — **13 كلمة** (sorgen «يقلق/يعتني» · sich konzentrieren «يركّز» · stimmen «يصحّ/يصوّت» · sich entschließen «يُقرّر» · sich verabreden «يتوعّد» + Karriere · Förderung · starten · Diplom · Sinn · Wert · Bedeutung · Vertrauen) + **ars-feste-verben-2**: sich sorgen um! sich konzentrieren auf! sich entschließen zu! sich verabreden mit! — الحروف محفوظة والانعكاسي إلزامي! وقائمة 10‑ك نمت إلى **14 دخلاً**!
+- **التالي:** b1-u4-d6 «مراجعة + توليف» (integration + كلمتان ختاميتان!) — ثم معركة الوحدة 4!
+
 ## الدفعة 398 (2026-11-04) — D444: b1-u4-d4 «خطاب دافع» — 13 كلمة + ars-motivation (بنية الخطاب!)
 - **الخلاصة:** يوم الكتابة! خطاب الدافع! — **13 كلمة** (überzeugen «يُقنع» · Überzeugung · geeignet «مناسب» · Hoffnung «الأمل» · begeistert «متحمّس» · verantwortlich «مسؤول» · Verantwortung · flexibel «مرن» · kreativ «مبدع» · Talent «الموهبة» · Lebenslauf «السيرة الذاتية» · Absicht «النية» · Chance «الفرصة») + **ars-motivation**: بنية الخطاب الثابتة! (الملاءمة geeignet für! + القوى begeistert/verantwortlich! + الأمل Hoffnung/Chance! + المرفق Lebenslauf!) مع Anrede و Gruß!
 - **التالي:** b1-u4-d5 «أفعال جر أكثر» — كلمات + أفعال الجر!
