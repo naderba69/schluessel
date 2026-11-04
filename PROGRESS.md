@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 390 (2026-11-04) — D436: b1-u3-d3 «حوار عيادة — يصف إجراءً» — 16 كلمة + ars-ablauf (وصف الإجراء!)
+- **الخلاصة:** يوم الكلام! حوار العيادة كإجراء متسلسل! — **16 كلمة** (messen «يقيس» · wiegen «يزن» · testen «يختبر» · abnehmen «ينحف» · zunehmen «يزداد» · sich erholen «يتعافى» · körperlich · Erholung · Diät · Schritt · während · Luft · Folge + **الثلاث النظائف للتوازن**: blass «شاحب» · nicken «يُومئ» · tasten «يتحسّس»!) + **ars-ablauf**: وصف الإجراء بأدوات الترتيب الأربع! (zuerst! dann! danach! schließlich!) + المراحل بالمجهول (wird gewogen! wird getestet!) — الزيارة كاملة خطوة بخطوة!
+- **التالي:** b1-u3-d4 «استمارة تأمين» (كتابة!) — كلمات + استمارة!
+
 ## الدفعة 389 (2026-11-04) — D435: b1-u3-d2 «feste Verben (البداية!)» — 15 كلمة + ars-feste-verben + قائمة 10‑ك الأولى (FesteVerbenEntry!)
 - **الخلاصة:** يوم الأفعال الجامدة! — **15 كلمة** (9 أفعال جامدة: verzichten «يتخلى عن» + sich gewöhnen «يتعوّد على» + achten «ينتبه إلى» + leiden «يتألم من» + sich bemühen «يسعى لـ» + handeln «يتعلق بـ» + zweifeln «يشكّ في» + führen «يؤدي إلى» + schauen «ينظر إلى» + 6 صحّية: Patientin · Übung · Bewegung · Schlaf · Haut · Muskel) + **ars-feste-verben** (shufra!): الفعل + الحرف جزء واحد محفوظ! (verzichten auf! leiden an! sich gewöhnen an!) + **قائمة 10‑ك الأولى** (`arsenal/lists/ars-feste-verben-10k.json` — FesteVerbenEntry: فعل + حرف + حالة + مثال!).
 - **التالي:** b1-u3-d3 «حوار عيادة — يصف إجراءً» (كلام!) — كلمات + حوار!
