@@ -2089,6 +2089,19 @@ def build_all() -> None:
     ("word-art", "die Art.", "art", ["b1-u4-d3"]),
     ("word-als", "als.", "als", ["b1-u4-d3"]),
     ("word-wie", "wie.", "wie", ["b1-u4-d3"]),
+    ("word-ueberzeugen", "überzeugen.", "ueberzeugen", ["b1-u4-d4"]),
+    ("word-ueberzeugung", "die Überzeugung.", "ueberzeugung", ["b1-u4-d4"]),
+    ("word-geeignet", "geeignet.", "geeignet", ["b1-u4-d4"]),
+    ("word-hoffnung", "die Hoffnung.", "hoffnung", ["b1-u4-d4"]),
+    ("word-begeistert", "begeistert.", "begeistert", ["b1-u4-d4"]),
+    ("word-verantwortlich", "verantwortlich.", "verantwortlich", ["b1-u4-d4"]),
+    ("word-verantwortung", "die Verantwortung.", "verantwortung", ["b1-u4-d4"]),
+    ("word-flexibel", "flexibel.", "flexibel", ["b1-u4-d4"]),
+    ("word-kreativ", "kreativ.", "kreativ", ["b1-u4-d4"]),
+    ("word-talent", "das Talent.", "talent", ["b1-u4-d4"]),
+    ("word-lebenslauf", "der Lebenslauf.", "lebenslauf", ["b1-u4-d4"]),
+    ("word-absicht", "die Absicht.", "absicht", ["b1-u4-d4"]),
+    ("word-chance", "die Chance.", "chance", ["b1-u4-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

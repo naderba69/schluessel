@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 398 (2026-11-04) — D444: b1-u4-d4 «خطاب دافع» — 13 كلمة + ars-motivation (بنية الخطاب!)
+- **الخلاصة:** يوم الكتابة! خطاب الدافع! — **13 كلمة** (überzeugen «يُقنع» · Überzeugung · geeignet «مناسب» · Hoffnung «الأمل» · begeistert «متحمّس» · verantwortlich «مسؤول» · Verantwortung · flexibel «مرن» · kreativ «مبدع» · Talent «الموهبة» · Lebenslauf «السيرة الذاتية» · Absicht «النية» · Chance «الفرصة») + **ars-motivation**: بنية الخطاب الثابتة! (الملاءمة geeignet für! + القوى begeistert/verantwortlich! + الأمل Hoffnung/Chance! + المرفق Lebenslauf!) مع Anrede و Gruß!
+- **التالي:** b1-u4-d5 «أفعال جر أكثر» — كلمات + أفعال الجر!
+
 ## الدفعة 397 (2026-11-04) — D443: b1-u4-d3 «مقابلة دراسية — يقارن مسارات» — 15 كلمة + ars-als-wie (als للفرق! wie للتشبيه!)
 - **الخلاصة:** يوم الكلام والمقارنة! — **15 كلمة** (Vergleich «المقارنة» · unterschiedlich «مختلف» · unterscheiden «يُميّز» · ähnlich «مشابه» · Gegensatz «النقيض» · Vorteil «الميزة» · Nachteil «العيب» · beobachten «يلاحظ» · schätzen «يُقدّر» · Entwicklung · Fortschritt · Änderung · Art + **als/wie** (أداة المقارنة نفسها! كلمتا قيد!)) + **ars-als-wie**: als للفرق! (besser als!) · wie للتشبيه! (ist wie!) — والخطأ الشائع «besser wie»!
 - **التالي:** b1-u4-d4 «خطاب دافع» (كتابة!) — كلمات + خطاب!

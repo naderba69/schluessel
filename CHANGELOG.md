@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-04 — الدفعة 398: D444 — b1-u4-d4 «خطاب دافع» — 13 كلمة + ars-motivation (بنية الخطاب!)
+يوم الكتابة! خطاب الدافع! — **13 كلمة** (überzeugen «يُقنع» · Überzeugung · geeignet «مناسب» · Hoffnung «الأمل» · begeistert «متحمّس» · verantwortlich «مسؤول» · Verantwortung · flexibel «مرن» · kreativ «مبدع» · Talent «الموهبة» · Lebenslauf «السيرة الذاتية» · Absicht «النية» · Chance «الفرصة») + **ars-motivation**: بنية الخطاب الثابتة! (الملاءمة geeignet für! + القوى begeistert/verantwortlich! + الأمل Hoffnung/Chance! + المرفق Lebenslauf!) مع Anrede و Gruß!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-04 — الدفعة 397: D443 — b1-u4-d3 «مقابلة دراسية — يقارن مسارات» — 15 كلمة + ars-als-wie (als للفرق! wie للتشبيه!)
 يوم الكلام والمقارنة! — **15 كلمة** (Vergleich «المقارنة» · unterschiedlich «مختلف» · unterscheiden «يُميّز» · ähnlich «مشابه» · Gegensatz «النقيض» · Vorteil «الميزة» · Nachteil «العيب» · beobachten «يلاحظ» · schätzen «يُقدّر» · Entwicklung · Fortschritt · Änderung · Art + **als/wie** (أداة المقارنة نفسها! كلمتا قيد!)) + **ars-als-wie**: als للفرق! (besser als!) · wie للتشبيه! (ist wie!) — والخطأ الشائع «besser wie»!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
