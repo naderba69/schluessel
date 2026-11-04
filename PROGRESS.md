@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 382 (2026-10-26) — D428: b1-u2-d2 «Briefstil formell» — 13 كلمة + ars-briefstil (الصيغ الرسمية!) + خطة ترقية B1 (N-276)
+- **الخلاصة:** يوم الخطاب الرسمي! — **13 كلمة** (Empfehlung · Rückmeldung · Antrag · beantragen · Behörde · Amt · Anlage · Zustimmung · zusagen · Mahnung · Gebühr · regelmäßig · Gelegenheit) + **ars-briefstil**: Anrede مهذب! («Sehr geehrte Damen und Herren»!) + Gruß ثابت! («Mit freundlichen Grüßen»!) + جمل قصيرة مباشرة! التنقيب المثبت: 83 مرشحاً = 24 جديدة + 59 مُدرَّسة. المحطات تدرّب الصيغ الرسمية كاملة + الخطاب المسجَّل (8 جمل!) + Quiz 3×4 عتبة 75%.
+- **التالي:** b1-u2-d3 «مكالمة سماسرة — يسأل ويتفاوض» — كلمات + تفاوض!
+
 ## الدفعة 381 (2026-10-26) — D427: b1-u2-d1 «البحث عن سكن» — 13 كلمة + ars-relativsaetze (الجمل الموصولة!)
 - **الخلاصة:** بداية الوحدة 2 «البحث عن سكن»! — **13 كلمة** (Mieter «المستأجر» · Inserat «الإعلان» · Lage «الموقع» · möbliert «مفروش» · Bestätigung · Kündigung · Frist · Einkommen · Wohnsitz · Quadratmeter · Badewanne · Vorort · sich erkundigen) + **ars-relativsaetze**: الجمل الموصولة! (الموصوف يحدد الجنس der/die/das! + الموقع يغيّره der/den/dem! + الفعل آخراً!) — التنقيب المثبت N-225: 79 مرشحاً في القائمة = 19 جديدة + 60 مُدرَّسة (مراجعة!). أجناس الثلاثة كلها في الجمل الموصولة: «der Mieter, der…» «das Inserat, das…» «die Wohnung, die…»!
 - **التالي:** b1-u2-d2 «Briefstil formell» (خطاب رسمي!) — كلمات + أسلوب الخطاب!

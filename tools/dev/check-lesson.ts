@@ -42,14 +42,19 @@ if (!lesson) {
 }
 
 // الأعلام المسموحة: من السطر أو من إدخال الترقية (properNouns)
-const upgradeFile = resolve(CONTENT, "upgrades/a1-lesson-upgrade.json");
+// D428 (N-276): كل خطط content/upgrades/*.json تُقرأ — لا ملف a1 وحده (الخطط متعددة المستويات!)
+const upgradeDir = resolve(CONTENT, "upgrades");
 let autoNames: string[] = [];
 let fixedPhrases: { de: string; whyAr: string }[] = [];
-if (existsSync(upgradeFile)) {
-  const up = JSON.parse(readFileSync(upgradeFile, "utf8")) as { lessons?: { lessonId: string; properNouns?: string[]; fixedPhrases?: { de: string; whyAr: string }[] }[] };
-  const e = up.lessons?.find((x) => x.lessonId === lessonId);
-  autoNames = e?.properNouns ?? [];
-  fixedPhrases = e?.fixedPhrases ?? []; // D188: الصيغ الثابتة المعلنة من SD1 — تُسقط إصابة official المطابقة لها وحدها
+if (existsSync(upgradeDir)) {
+  for (const f of readdirSync(upgradeDir).filter((x) => x.endsWith(".json"))) {
+    const up = JSON.parse(readFileSync(resolve(upgradeDir, f), "utf8")) as { lessons?: { lessonId: string; properNouns?: string[]; fixedPhrases?: { de: string; whyAr: string }[] }[] };
+    const e = up.lessons?.find((x) => x.lessonId === lessonId);
+    if (e) {
+      autoNames = e.properNouns ?? [];
+      fixedPhrases = e.fixedPhrases ?? []; // D188: الصيغ الثابتة المعلنة من SD1 — تُسقط إصابة official المطابقة لها وحدها
+    }
+  }
 }
 const names = (opt("names") ?? autoNames.join(",")).split(",").map((s) => s.trim()).filter(Boolean);
 const allow = new Set(names.flatMap((n) => contentTokens(n)));

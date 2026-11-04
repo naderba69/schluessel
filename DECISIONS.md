@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D428 (2026-10-26): b1-u2-d2 «Briefstil formell» — 13 كلمة + ars-briefstil (الصيغ الرسمية!) + خطة ترقية B1 (N-276)
+- **الدفعة:** 382 · **الموجّه:** 5.84
+- **للقارئ:** يوم الخطاب الرسمي! — **13 كلمة** (Empfehlung · Rückmeldung · Antrag · beantragen · Behörde · Amt · Anlage · Zustimmung · zusagen · Mahnung · Gebühr · regelmäßig · Gelegenheit) + **ars-briefstil**: Anrede مهذب! («Sehr geehrte Damen und Herren»!) + Gruß ثابت! («Mit freundlichen Grüßen»!) + جمل قصيرة مباشرة! التنقيب المثبت: 83 مرشحاً = 24 جديدة + 59 مُدرَّسة. المحطات تدرّب الصيغ الرسمية كاملة + الخطاب المسجَّل (8 جمل!) + Quiz 3×4 عتبة 75%.
+- **بطاقة قرار:** الخطاب الرسمي = صيغ ثابتة حرفياً (D188: «تُعلن لا تُلوى»!). كشف خللان فأُصلحا: (1) N-276: check-lesson كان يقرأ خطة a1 وحدها فتضيّع إعلانات B1 — صار يقرأ كل `content/upgrades/*.json` + أُنشئت **خطة b1-lesson-upgrade** (8 دروس: rule:done · practice/quiz:pending — معيار D114 للـA1 لا ينطبق على وصفة A2/B1!). (2) 3 أخطاء أمثلة حقيقية: Berlin اسم علم يُعلن · Bescheinigung/per غير مُدرَّستان في مثالَي beantragen/zustimmung. والصيغتان تُعلنان في fixedPhrases (شظايا التمرين «Sehr geehrte»/«Mit freundlichen» تغطي كل السطور). N-277: دَين التداخل المعلن (84 موضعاً!) مُسجَّل للمناقشة آخر المشروع (أمر المالك 2026-10-22).
+- **الفهرس العكسي:** §10: N-276 (مغلقة ← D428) · N-277 (مفتوحة!) · §22.9 الدفعة 382 (v5.84) · content/upgrades/b1-lesson-upgrade.json · docs/reports/b1-lesson-upgrade.md.
+- **الأيام والاختبارات:** **u2-d2 13 كلمة** — المسار B1: u1 71 + u2 26 = **97 كلمة** · u2: d1 Relativsätze ✓ · **d2 Briefstil ✓** · d3 مكالمة سماسرة · d4 رد إعلان · d5 Kollokationen · d6 توليف · D7 معركة.
+- **الاختبارات:** npm test ✓ (التشغيل الكامل أدناه) · tsc ✓ · validate-content **2120 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u2-d2 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** · goethe-b1 **1335/2893 (46%)**.
+- **الأرقام:** كلمة **1678** · دروس **182** · مسارات **3487** · معجم **231** · عبارات **4067** · صوت **883** · duden **634**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u2-d3 «مكالمة سماسرة — يسأل ويتفاوض» — كلمات + تفاوض!
+
 ## D427 (2026-10-26): b1-u2-d1 «البحث عن سكن» — 13 كلمة + ars-relativsaetze (الجمل الموصولة!)
 - **الدفعة:** 381 · **الموجّه:** 5.83
 - **للقارئ:** بداية الوحدة 2 «البحث عن سكن»! — **13 كلمة** (Mieter «المستأجر» · Inserat «الإعلان» · Lage «الموقع» · möbliert «مفروش» · Bestätigung · Kündigung · Frist · Einkommen · Wohnsitz · Quadratmeter · Badewanne · Vorort · sich erkundigen) + **ars-relativsaetze**: الجمل الموصولة! (الموصوف يحدد الجنس der/die/das! + الموقع يغيّره der/den/dem! + الفعل آخراً!) — التنقيب المثبت N-225: 79 مرشحاً في القائمة = 19 جديدة + 60 مُدرَّسة (مراجعة!). أجناس الثلاثة كلها في الجمل الموصولة: «der Mieter, der…» «das Inserat, das…» «die Wohnung, die…»!
