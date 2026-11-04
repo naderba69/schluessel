@@ -31589,6 +31589,46 @@
       "rmsDb": -17.05
     },
     {
+      "id": "word-beginn",
+      "file": "words/audio/de-DE/word-beginn.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Beginn.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u2-d6"
+      ],
+      "durationMs": 943,
+      "sizeBytes": 4510,
+      "hash": "sha256:16e9b8c46a3c3489feae7c4b91fa0035b1fb988c071e3ed8513c71d28036eeec",
+      "pcmSha256": "18318ac9904a71830f5ee8e5f50201a413b453b345096b3b8f4f9c195893a464",
+      "rmsDb": -16.99
+    },
+    {
+      "id": "word-aufenthalt",
+      "file": "words/audio/de-DE/word-aufenthalt.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Aufenthalt.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u2-d6"
+      ],
+      "durationMs": 1245,
+      "sizeBytes": 5867,
+      "hash": "sha256:4ae6275d940a4aeebe8998137e8192240f40e3f654673e605d01b4cf7c1b0b16",
+      "pcmSha256": "d01dc0fec33f3ece500ab96e2190f0782cb7edb0d9fb7f1a56138e0e8cb301e4",
+      "rmsDb": -17.04
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",

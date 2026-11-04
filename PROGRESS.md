@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 386 (2026-11-04) — D432: b1-u2-d6 «توليف: نهاية البحث عن سكن» — كلمتان ختاميتان (Beginn/Aufenthalt!) + الوحدة 2 كاملة!
+- **الخلاصة:** نهاية أسبوع البحث عن سكن! — كلمتان ختاميتان: **der Beginn «البداية»** (مقابل Abschluss في u1!) + **der Aufenthalt «الإقامة»** — ودرس توليف (integration!) يجمع خيوط الأسبوع الخمس في قصة واحدة: الإعلان! + الردّ! + المكالمة! + العقد! + الانتقال! المحطات (قالب D425): match(2×5) + gap-fill(6 — كل فجوة بقاعدة!) + error-hunt(3 — مصائد الأسبوع!) + speaking(8 جمل — القصة كاملة!) + Quiz 3×4 عتبة 75%!
+- **التالي:** **معركة الوحدة 2 (b1-unit2-proof)** — برهان وحدة مثل D426! (nextId ← b1-u2-d6 ثم u3 عند بدايتها!) — ثم b1-u3 «الصحة والتأمين» (Passiv! feste Verben!).
+
 ## الدفعة 385 (2026-10-26) — D431: b1-u2-d5 «Kollokationen» — 15 كلمة (13 فعلاً مصاحباً!) + ars-kollokationen (الشراكات الثابتة!)
 - **الخلاصة:** يوم الكلمات المصاحبة! كل فعل بشركائه المحفوظين: **13 فعلاً** (vermeiden «يتجنّب» · brechen «يكسر» · ziehen «ينتقل» · gelten «يسري» · leisten «يُقدّم» · erfahren «يعلم» · garantieren «يضمن» · aufgeben «يتخلى» · verbessern «يُحسّن» · empfangen «يستلم» · ergänzen «يُكمل» · sich wenden «يتجه» · verlassen «يغادر») + **اسمان للتوازن** (Schulden «الديون»! Einkauf «التسوّق»!) = **15 كلمة** (سابقة u1-d5!) + **ars-kollokationen**: «in die Wohnung ziehen!» (in محفوظ!) · «Das Angebot gilt!» (بلا جار!) · «sich an die Behörde wenden!» (sich + an!) · «die Wohnung verlassen!» (+Akk!) — الشريك والإعراب محفوظان!
 - **التالي:** b1-u2-d6 «مراجعة + توليف» (integration! + كلمتان ختاميتان!) — ثم معركة الوحدة 2 (b1-unit2-proof)!
