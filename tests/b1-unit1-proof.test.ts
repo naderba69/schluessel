@@ -1,12 +1,12 @@
 // tests/b1-unit1-proof.test.ts — معركة الوحدة B1-U1 (D426 — برهان D7): دروسها الستة تُلعَب آلياً عبر المساعد المشترك.
 // النمط نفسه من D325/D336 (a2-unitN-proof) + حارس البنود e-practice-item-shape.
-// nextId = null: u2 لم تبدأ بعد (يُحدَّث إلى "b1-u2-d1" عند بدئها — سَبَق a2-u3 في D336→D338).
+// nextId يُحدَّث عند بدء الوحدة التالية (سَبَق a2-u3 في D336→D338).
 import { proveUnit } from "./unit-proof.js";
 
 await proveUnit({
   unit: "الوحدة B1-U1",
   ids: ["b1-u1-d1", "b1-u1-d2", "b1-u1-d3", "b1-u1-d4", "b1-u1-d5", "b1-u1-d6"],
-  nextId: null,
+  nextId: "b1-u2-d1", // D427: U2 بدأت — التالي b1-u2-d1 (كان null في D426)
   prefixIds: [
     "a1-u1-d1",
     "a1-u1-d2",
