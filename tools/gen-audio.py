@@ -2115,6 +2115,8 @@ def build_all() -> None:
     ("word-wert", "der Wert.", "wert", ["b1-u4-d5"]),
     ("word-bedeutung", "die Bedeutung.", "bedeutung", ["b1-u4-d5"]),
     ("word-vertrauen", "das Vertrauen.", "vertrauen", ["b1-u4-d5"]),
+    ("word-betrieb", "der Betrieb.", "betrieb", ["b1-u4-d6"]),
+    ("word-herausforderung", "die Herausforderung.", "herausforderung", ["b1-u4-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

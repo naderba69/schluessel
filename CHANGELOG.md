@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-05 — الدفعة 400: D446 — b1-u4-d6 «توليف: نهاية أسبوع التكوين» — Betrieb/Herausforderung! + الوحدة 4 كاملة!
+نهاية أسبوع التكوين والمسار المهني! — كلمتان ختاميتان: **der Betrieb «المؤسسة»** + **die Herausforderung «التحدي»** (مقابل Herz/Knochen في u3!) — ودرس توليف (integration!) يجمع خيوط الأسبوع الخمس في قصة واحدة: الخطاب! + الغرض! + الإضافة! + المقارنة! + الدافع! + الجامدة! + الختام! المحطات (قالب D432/D439): match(2×5) + gap-fill(6 — كل فجوة بقاعدة!) + error-hunt(3 — مصائد الأسبوع!) + speaking(8 جمل — القصة كاملة!) + Quiz 3×4 عتبة 75%!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-04 — الدفعة 399: D445 — b1-u4-d5 «أفعال جر أكثر» — 13 كلمة + ars-feste-verben-2 + قائمة 10‑ك تنمو (14 دخلاً!)
 الجُمدة الثانية! — **13 كلمة** (sorgen «يقلق/يعتني» · sich konzentrieren «يركّز» · stimmen «يصحّ/يصوّت» · sich entschließen «يُقرّر» · sich verabreden «يتوعّد» + Karriere · Förderung · starten · Diplom · Sinn · Wert · Bedeutung · Vertrauen) + **ars-feste-verben-2**: sich sorgen um! sich konzentrieren auf! sich entschließen zu! sich verabreden mit! — الحروف محفوظة والانعكاسي إلزامي! وقائمة 10‑ك نمت إلى **14 دخلاً**!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.

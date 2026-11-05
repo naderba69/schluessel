@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 400 (2026-11-05) — D446: b1-u4-d6 «توليف: نهاية أسبوع التكوين» — Betrieb/Herausforderung! + الوحدة 4 كاملة!
+- **الخلاصة:** نهاية أسبوع التكوين والمسار المهني! — كلمتان ختاميتان: **der Betrieb «المؤسسة»** + **die Herausforderung «التحدي»** (مقابل Herz/Knochen في u3!) — ودرس توليف (integration!) يجمع خيوط الأسبوع الخمس في قصة واحدة: الخطاب! + الغرض! + الإضافة! + المقارنة! + الدافع! + الجامدة! + الختام! المحطات (قالب D432/D439): match(2×5) + gap-fill(6 — كل فجوة بقاعدة!) + error-hunt(3 — مصائد الأسبوع!) + speaking(8 جمل — القصة كاملة!) + Quiz 3×4 عتبة 75%!
+- **التالي:** معركة الوحدة 4 (b1-unit4-proof! prefix 192!) — ثم u5!
+
 ## الدفعة 399 (2026-11-04) — D445: b1-u4-d5 «أفعال جر أكثر» — 13 كلمة + ars-feste-verben-2 + قائمة 10‑ك تنمو (14 دخلاً!)
 - **الخلاصة:** الجُمدة الثانية! — **13 كلمة** (sorgen «يقلق/يعتني» · sich konzentrieren «يركّز» · stimmen «يصحّ/يصوّت» · sich entschließen «يُقرّر» · sich verabreden «يتوعّد» + Karriere · Förderung · starten · Diplom · Sinn · Wert · Bedeutung · Vertrauen) + **ars-feste-verben-2**: sich sorgen um! sich konzentrieren auf! sich entschließen zu! sich verabreden mit! — الحروف محفوظة والانعكاسي إلزامي! وقائمة 10‑ك نمت إلى **14 دخلاً**!
 - **التالي:** b1-u4-d6 «مراجعة + توليف» (integration + كلمتان ختاميتان!) — ثم معركة الوحدة 4!
