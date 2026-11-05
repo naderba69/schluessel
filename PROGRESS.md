@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 406 (2026-11-05) — D452: b1-u5-d5 «نبرة السخرية/الجدية» — 13 كلمة + ars-ironie-ernst! (يوم النبرة الثاني!)
+- **الخلاصة:** النبرة تصنع المعنى! — **13 كلمة** (ehrlich «صادق» · ernst «جادّ» · ernsthaft «جدّي» · Humor «الفكاهة» · Laune «المزاج» · Stimmung «الجوّ» · Vorwurf «اللوم» · wirken «يبدو/يُحدث أثراً» · frech «وقح» · wunderschön «بديع» · Wunder «المعجزة» · überhaupt «أصلاً» · **ironisch «ساخر» — بلا وسم غوته (مُعلنة D452: «الأمانة قبل الطبيعية» D185!)**) + **ars-ironie-ernst**: «Toll!» ساخراً = المعنى عكسي! و«Ganz im Ernst!» + «Ehrlich gesagt» = جادّ! و«Das wirkt …» لوصف النبرة!
+- **التالي:** b1-u5-d6 «التوليف + المراجعة» (يوم التكامل!) — ثم معركة الوحدة 5!
+
 ## الدفعة 405 (2026-11-05) — D451: b1-u5-d4 «تعليق مكتوب» — 13 كلمة + ars-kommentar-schreiben! (يوم الكتابة!)
 - **الخلاصة:** يوم الكتابة! — **13 كلمة** (weshalb «ومن ثمّ» · jedoch «لكن» · trotz «رغم» · hinweisen «يشير إلى» · festhalten «يثبّت» · Vorschrift «اللائحة» · Rücksicht «المراعاة» · beeinflussen «يؤثّر في» · Verhalten «السلوك» · regeln «ينظّم» · positiv «إيجابي» · negativ «سلبي» · offiziell «رسمي») + **ars-kommentar-schreiben**: التعليق المكتوب! (مقدّمة Sehr geehrte …! + الرأي Meiner Meinung nach … weshalb …! + النقيض Jedoch/Trotz! + التثبيت Ich möchte Folgendes festhalten! + الختام Zum Abschluss … + Gruß!)
 - **التالي:** b1-u5-d5 «نبرة السخرية/الجدية» — ثم d6 التوليف ومعركة الوحدة 5!

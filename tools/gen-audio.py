@@ -2169,6 +2169,20 @@ def build_all() -> None:
     ("word-positiv", "positiv.", "positiv", ["b1-u5-d4"]),
     ("word-negativ", "negativ.", "negativ", ["b1-u5-d4"]),
     ("word-offiziell", "offiziell.", "offiziell", ["b1-u5-d4"]),
+    ("word-ehrlich", "ehrlich.", "ehrlich", ["b1-u5-d5"]),
+    ("word-ernst", "ernst.", "ernst", ["b1-u5-d5"]),
+    ("word-ernsthaft", "ernsthaft.", "ernsthaft", ["b1-u5-d5"]),
+    ("word-humor", "der Humor.", "humor", ["b1-u5-d5"]),
+    ("word-laune", "die Laune.", "laune", ["b1-u5-d5"]),
+    ("word-stimmung", "die Stimmung.", "stimmung", ["b1-u5-d5"]),
+    ("word-vorwurf", "der Vorwurf.", "vorwurf", ["b1-u5-d5"]),
+    ("word-wirken", "wirken.", "wirken", ["b1-u5-d5"]),
+    ("word-frech", "frech.", "frech", ["b1-u5-d5"]),
+    ("word-wunderschoen", "wunderschön.", "wunderschoen", ["b1-u5-d5"]),
+    ("word-wunder", "das Wunder.", "wunder", ["b1-u5-d5"]),
+    ("word-ueberhaupt", "überhaupt.", "ueberhaupt", ["b1-u5-d5"]),
+    ("word-bestimmt", "bestimmt.", "bestimmt", ["b1-u5-d5"]),
+    ("word-ironisch", "ironisch.", "ironisch", ["b1-u5-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
