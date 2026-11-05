@@ -2185,6 +2185,21 @@ def build_all() -> None:
     ("word-ironisch", "ironisch.", "ironisch", ["b1-u5-d5"]),
     ("word-medien", "die Medien.", "medien", ["b1-u5-d6"]),
     ("word-publikum", "das Publikum.", "publikum", ["b1-u5-d6"]),
+    ("word-abschied", "der Abschied.", "abschied", ["b1-u6-d1"]),
+    ("word-verabschieden", "verabschieden.", "verabschieden", ["b1-u6-d1"]),
+    ("word-erlebnis", "das Erlebnis.", "erlebnis", ["b1-u6-d1"]),
+    ("word-erleben", "erleben.", "erleben", ["b1-u6-d1"]),
+    ("word-interkulturell", "interkulturell.", "interkulturell", ["b1-u6-d1"]),
+    ("word-tradition", "die Tradition.", "tradition", ["b1-u6-d1"]),
+    ("word-traditionell", "traditionell.", "traditionell", ["b1-u6-d1"]),
+    ("word-heimweh", "das Heimweh.", "heimweh", ["b1-u6-d1"]),
+    ("word-passagier", "der Passagier.", "passagier", ["b1-u6-d1"]),
+    ("word-tal", "das Tal.", "tal", ["b1-u6-d1"]),
+    ("word-gasthaus", "das Gasthaus.", "gasthaus", ["b1-u6-d1"]),
+    ("word-denkmal", "das Denkmal.", "denkmal", ["b1-u6-d1"]),
+    ("word-galerie", "die Galerie.", "galerie", ["b1-u6-d1"]),
+    ("word-neugierig", "neugierig.", "neugierig", ["b1-u6-d1"]),
+    ("word-katalog", "der Katalog.", "katalog", ["b1-u6-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
