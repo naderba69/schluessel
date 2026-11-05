@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-05 — الدفعة 403: D449 — b1-u5-d2 «نبرة الرأي — Modalpartikeln تعرّض» — 13 كلمة + ars-modalpartikeln!
+يوم النبرة! — **13 كلمة** (Ausdruck «التعبير» · Erzählung «الحكاية» · Hörer «المستمع» · Leser «القارئ» · Kritik «النقد» · kritisch «نقدي» · Ratschlag «النصيحة» · Schrift «الخط» · überraschen «يُفاجئ» · verursachen «يسبب» · warnen «يحذّر» · widersprechen «يعترض» · Zweifel «الشك») + **ars-modalpartikeln** (تعرّض!): doch للإصرار! ja للتأكيد! mal للتلطيف! schon للتوكيد! — الجسيم يغيّر النبرة لا المعنى!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-05 — الدفعة 402: D448 — b1-u5-d1 «الإعلام والرأي — أسئلة غير مباشرة» — 13 كلمة + ars-indirekte-fragen! + الوحدة 5 تبدأ!
 بداية الوحدة 5 «الإعلام والرأي» (study-plan §8!)! — **13 كلمة** (Meldung «الخبر» · Bericht «التقرير» · Überschrift «العنوان» · Kommentar «التعليق» · Quelle «المصدر» · Wahrheit «الحقيقة» · Diskussion «النقاش» · veröffentlichen «ينشر» · Presse «الصحافة» · Umfrage «استطلاع الرأي» · Erklärung «الشرح» · Zuschauer «المشاهد» · Wirkung «الأثر») + **ars-indirekte-fragen**: السؤال بلباقة! («Ich möchte wissen, woher die Nachricht **kommt**»! الفعل آخراً! + ob للسؤال بنعم/لا!)
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.

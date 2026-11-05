@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 403 (2026-11-05) — D449: b1-u5-d2 «نبرة الرأي — Modalpartikeln تعرّض» — 13 كلمة + ars-modalpartikeln!
+- **الخلاصة:** يوم النبرة! — **13 كلمة** (Ausdruck «التعبير» · Erzählung «الحكاية» · Hörer «المستمع» · Leser «القارئ» · Kritik «النقد» · kritisch «نقدي» · Ratschlag «النصيحة» · Schrift «الخط» · überraschen «يُفاجئ» · verursachen «يسبب» · warnen «يحذّر» · widersprechen «يعترض» · Zweifel «الشك») + **ars-modalpartikeln** (تعرّض!): doch للإصرار! ja للتأكيد! mal للتلطيف! schon للتوكيد! — الجسيم يغيّر النبرة لا المعنى!
+- **التالي:** b1-u5-d3 «رأي بأسباب» (يوم الكلام!) — ثم d4..d6 ومعركة الوحدة 5!
+
 ## الدفعة 402 (2026-11-05) — D448: b1-u5-d1 «الإعلام والرأي — أسئلة غير مباشرة» — 13 كلمة + ars-indirekte-fragen! + الوحدة 5 تبدأ!
 - **الخلاصة:** بداية الوحدة 5 «الإعلام والرأي» (study-plan §8!)! — **13 كلمة** (Meldung «الخبر» · Bericht «التقرير» · Überschrift «العنوان» · Kommentar «التعليق» · Quelle «المصدر» · Wahrheit «الحقيقة» · Diskussion «النقاش» · veröffentlichen «ينشر» · Presse «الصحافة» · Umfrage «استطلاع الرأي» · Erklärung «الشرح» · Zuschauer «المشاهد» · Wirkung «الأثر») + **ars-indirekte-fragen**: السؤال بلباقة! («Ich möchte wissen, woher die Nachricht **kommt**»! الفعل آخراً! + ob للسؤال بنعم/لا!)
 - **التالي:** b1-u5-d2 «Modalpartikeln (تعرّض)» — ثم d3..d6 ومعركة الوحدة 5!

@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D449 (2026-11-05): b1-u5-d2 «نبرة الرأي — Modalpartikeln تعرّض» — 13 كلمة + ars-modalpartikeln!
+- **الدفعة:** 403 · **الموجّه:** 6.5
+- **للقارئ:** يوم النبرة! — **13 كلمة** (Ausdruck «التعبير» · Erzählung «الحكاية» · Hörer «المستمع» · Leser «القارئ» · Kritik «النقد» · kritisch «نقدي» · Ratschlag «النصيحة» · Schrift «الخط» · überraschen «يُفاجئ» · verursachen «يسبب» · warnen «يحذّر» · widersprechen «يعترض» · Zweifel «الشك») + **ars-modalpartikeln** (تعرّض!): doch للإصرار! ja للتأكيد! mal للتلطيف! schon للتوكيد! — الجسيم يغيّر النبرة لا المعنى!
+- **بطاقة قرار:** التعرُّض = الجسيمات الأربعة المغلقة (ja/doch/mal/schon — في CLOSED!) تُفهم من السياق لا تُنتَج قاعدةً! ومكانها ثابت: بعد الفعل الأول («Das ist **doch** klar!»)! مصيدة «widersprechen + م.غ» («dem Kommentar» لا «den»!) في error-hunt + warningCard. النطق: أربعة تصحيحات (Kritik النبر الثاني! + Ratschlag مدّ الأول! + verursachen النبر UR! + widersprechen النبر spre!) = معجم (259) + إعادة توليد 4.
+- **الفهرس العكسي:** §22.9 الدفعة 403 (v6.5) · ars-modalpartikeln (shufra — تعرّض!) · b1-lesson-upgrade (26 درساً!).
+- **الأيام والاختبارات:** **u5-d2 13 كلمة** — المسار B1: u1 71 + u2 69 + u3 76 + u4 75 + u5 26 = **317 كلمة** · u5: d1 أسئلة غير مباشرة ✓ · **d2 Modalpartikeln ✓** · d3 رأي بأسباب · d4 تعليق مكتوب · d5 نبرة السخرية/الجدية · d6 التوليف · D7 المعركة.
+- **الاختبارات:** npm test **1719/1719 ✓ (134 ملفاً)** · tsc ✓ · validate-content **2375 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u5-d2 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** (2815 كلمة) · goethe-b1 **1521/2893 (53%) + 29 = 54%**.
+- **الأرقام:** كلمة **1898** · دروس **200** · مسارات **3707** · معجم **259** · عبارات **4358** · صوت **1013** · duden **854** · w-srs **0.347 ≤ 0.35**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u5-d3 «رأي بأسباب» (يوم الكلام!) — ثم d4..d6 ومعركة الوحدة 5!
+
 ## D448 (2026-11-05): b1-u5-d1 «الإعلام والرأي — أسئلة غير مباشرة» — 13 كلمة + ars-indirekte-fragen! + الوحدة 5 تبدأ!
 - **الدفعة:** 402 · **الموجّه:** 6.4
 - **للقارئ:** بداية الوحدة 5 «الإعلام والرأي» (study-plan §8!)! — **13 كلمة** (Meldung «الخبر» · Bericht «التقرير» · Überschrift «العنوان» · Kommentar «التعليق» · Quelle «المصدر» · Wahrheit «الحقيقة» · Diskussion «النقاش» · veröffentlichen «ينشر» · Presse «الصحافة» · Umfrage «استطلاع الرأي» · Erklärung «الشرح» · Zuschauer «المشاهد» · Wirkung «الأثر») + **ars-indirekte-fragen**: السؤال بلباقة! («Ich möchte wissen, woher die Nachricht **kommt**»! الفعل آخراً! + ob للسؤال بنعم/لا!)
