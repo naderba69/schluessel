@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D451 (2026-11-05): b1-u5-d4 «تعليق مكتوب» — 13 كلمة + ars-kommentar-schreiben! (يوم الكتابة!)
+- **الدفعة:** 405 · **الموجّه:** 6.7
+- **للقارئ:** يوم الكتابة! — **13 كلمة** (weshalb «ومن ثمّ» · jedoch «لكن» · trotz «رغم» · hinweisen «يشير إلى» · festhalten «يثبّت» · Vorschrift «اللائحة» · Rücksicht «المراعاة» · beeinflussen «يؤثّر في» · Verhalten «السلوك» · regeln «ينظّم» · positiv «إيجابي» · negativ «سلبي» · offiziell «رسمي») + **ars-kommentar-schreiben**: التعليق المكتوب! (مقدّمة Sehr geehrte …! + الرأي Meiner Meinung nach … weshalb …! + النقيض Jedoch/Trotz! + التثبيت Ich möchte Folgendes festhalten! + الختام Zum Abschluss … + Gruß!)
+- **بطاقة قرار:** التعليق = بناء ثابت: التحية أولاً والخاتمة آخراً! و«trotz» تتبعها كلمة مضاف («Trotz der Kritik» لا «Trotz die Kritik»!) في المصيد الثلاثي + و«weshalb» يربط الجملة (الفعل آخراً كـweil!) و«möchte» + الفعل بلا zu. تصحيحا نطق (jedoch النبر الثاني + weshalb النبر halb!) = معجم (261) + إعادة توليد 2. و«الإعلان» لم تكن مُدرَّسة قط! (استُبدلت بالصحافة/Kritik — البوابة أمسكتها!).
+- **الفهرس العكسي:** §22.9 الدفعة 405 (v6.7) · ars-kommentar-schreiben (shufra!) · b1-lesson-upgrade (28 درساً!).
+- **الأيام والاختبارات:** **u5-d4 13 كلمة** — المسار B1: u1 71 + u2 69 + u3 76 + u4 75 + u5 52 = **343 كلمة** · u5: d1 أسئلة غير مباشرة ✓ · d2 Modalpartikeln ✓ · d3 رأي بأسباب ✓ · **d4 تعليق مكتوب ✓** · d5 نبرة السخرية/الجدية · d6 التوليف · D7 المعركة.
+- **الاختبارات:** npm test **1719/1719 ✓ (134 ملفاً)** · tsc ✓ · validate-content **2405 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u5-d4 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** (2841 كلمة) · goethe-b1 **1547/2893 (53%) + 29 = 54%**.
+- **الأرقام:** كلمة **1924** · دروس **202** · مسارات **3733** · معجم **261** · عبارات **4392** · صوت **1020** · duden **880** · w-srs **0.347 ≤ 0.35**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u5-d5 «نبرة السخرية/الجدية» — ثم d6 التوليف ومعركة الوحدة 5!
+
 ## D450 (2026-11-05): b1-u5-d3 «الرأي بأسباب» — 13 كلمة + ars-meinung-gruende! (يوم الحجاج!)
 - **الدفعة:** 404 · **الموجّه:** 6.6
 - **للقارئ:** يوم الحجاج! — **13 كلمة** (Beweis «البرهان» · eindeutig «قاطع» · fair «عادل» · folgen «يتبع» · sinnvoll «ذو معنى» · sinnlos «بلا معنى» · vernünftig «المعقول» · Wirklichkeit «الواقع» · Sicherheit «اليقين» · ausreichend «كافٍ» · folgend «التالي» · überlegen «يتفكّر» · Reihenfolge «الترتيب») + **ars-meinung-gruende**: الرأي أولاً ثم السبب! («Ich finde …, weil …»! + «Meiner Meinung nach …»!)

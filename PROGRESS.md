@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 405 (2026-11-05) — D451: b1-u5-d4 «تعليق مكتوب» — 13 كلمة + ars-kommentar-schreiben! (يوم الكتابة!)
+- **الخلاصة:** يوم الكتابة! — **13 كلمة** (weshalb «ومن ثمّ» · jedoch «لكن» · trotz «رغم» · hinweisen «يشير إلى» · festhalten «يثبّت» · Vorschrift «اللائحة» · Rücksicht «المراعاة» · beeinflussen «يؤثّر في» · Verhalten «السلوك» · regeln «ينظّم» · positiv «إيجابي» · negativ «سلبي» · offiziell «رسمي») + **ars-kommentar-schreiben**: التعليق المكتوب! (مقدّمة Sehr geehrte …! + الرأي Meiner Meinung nach … weshalb …! + النقيض Jedoch/Trotz! + التثبيت Ich möchte Folgendes festhalten! + الختام Zum Abschluss … + Gruß!)
+- **التالي:** b1-u5-d5 «نبرة السخرية/الجدية» — ثم d6 التوليف ومعركة الوحدة 5!
+
 ## الدفعة 404 (2026-11-05) — D450: b1-u5-d3 «الرأي بأسباب» — 13 كلمة + ars-meinung-gruende! (يوم الحجاج!)
 - **الخلاصة:** يوم الحجاج! — **13 كلمة** (Beweis «البرهان» · eindeutig «قاطع» · fair «عادل» · folgen «يتبع» · sinnvoll «ذو معنى» · sinnlos «بلا معنى» · vernünftig «المعقول» · Wirklichkeit «الواقع» · Sicherheit «اليقين» · ausreichend «كافٍ» · folgend «التالي» · überlegen «يتفكّر» · Reihenfolge «الترتيب») + **ars-meinung-gruende**: الرأي أولاً ثم السبب! («Ich finde …, weil …»! + «Meiner Meinung nach …»!)
 - **التالي:** b1-u5-d4 «تعليق مكتوب» (يوم الكتابة!) — ثم d5..d6 ومعركة الوحدة 5!
