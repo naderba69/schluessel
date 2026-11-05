@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 410 (2026-11-05) — D456: b1-u6-d2 «سلالم التهذيب» — 13 كلمة + ars-hoeflich-stufen! (أربع درجات!)
+- **الخلاصة:** سلّم التهذيب! — **13 كلمة** (dankbar «ممتن» · angenehm «لطيف» · Freude «الفرح» · Respekt «الاحترام» · entgegenkommen «يتساهل» · Kellnerin «النادلة» · Menü «القائمة» · Nachspeise «الحلوى» · bedienen «يخدم» · Übernachtung «المبيت» · verlangen «يطالب» · auffordern «يطلب من» · Kompromiss «التسوية») + **ars-hoeflich-stufen**: أربع درجات! (**…, bitte!** ← **Könnte ich …?** ← **Hätten Sie …?** ← **Wären Sie so freundlich …?**) والطلب المباشر («Geben Sie …!») بلا تهذيب!
+- **التالي:** b1-u6-d3 — ثم d4..d6 ومعركة الوحدة 6!
+
 ## الدفعة 409 (2026-11-05) — D455: b1-u6-d1 «السفر والثقافة — Konj II» — 13 كلمة + ars-konj-ii! (الوحدة 6 تبدأ!)
 - **الخلاصة:** الوحدة 6 تبدأ! — **13 كلمة** (Abschied «الوداع» · verabschieden «يودّع» · Erlebnis «التجربة» · erleben «يعيش» · Tradition «التقاليد» · traditionell «تقليدي» · Heimweh «الحنين إلى الوطن» · Passagier «الراكب» · Tal «الوادي» · Gasthaus «بيت الضيافة» · Denkmal «النصب التذكاري» · Galerie «المعرض» · Katalog «الكتالوج») + **ars-konj-ii**: حروف كان الثلاثة! (**hätte gern** للطلب! **Könnte ich …?** للسؤال المهذّب! **Wäre …?** للافتراض!) — التهذيب بالزمن نفسه!
 - **التالي:** b1-u6-d2 «سلالم التهذيب» — ثم d3..d6 ومعركة الوحدة 6!

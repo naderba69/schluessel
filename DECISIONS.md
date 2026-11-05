@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D456 (2026-11-05): b1-u6-d2 «سلالم التهذيب» — 13 كلمة + ars-hoeflich-stufen! (أربع درجات!)
+- **الدفعة:** 410 · **الموجّه:** 7.2
+- **للقارئ:** سلّم التهذيب! — **13 كلمة** (dankbar «ممتن» · angenehm «لطيف» · Freude «الفرح» · Respekt «الاحترام» · entgegenkommen «يتساهل» · Kellnerin «النادلة» · Menü «القائمة» · Nachspeise «الحلوى» · bedienen «يخدم» · Übernachtung «المبيت» · verlangen «يطالب» · auffordern «يطلب من» · Kompromiss «التسوية») + **ars-hoeflich-stufen**: أربع درجات! (**…, bitte!** ← **Könnte ich …?** ← **Hätten Sie …?** ← **Wären Sie so freundlich …?**) والطلب المباشر («Geben Sie …!») بلا تهذيب!
+- **بطاقة قرار:** الدرجات الأربع بلا «würde» (كان سيخترق الحارس!) — «Wären Sie so freundlich, mir zu helfen?» القمة بـ«zu + الفعل آخراً»! و«entgegenkommen» trennbar («Er kommt mir entgegen» لا «entgegenkommt»!). تصحيح نطق **3** (Kompromiss: النبر الأخير · Nachspeise: النبر الأول ومدّ a · entgegenkommen: النبر الثاني!) = معجم **266** + إعادة توليد 3 — وتصحيح [ʃp] في Nachspeise ولّد علَم **sp-st-initial** (الحارس يقيس من النطق المصحَّح!). بنية الدرس الرسمية (ziel/einstieg/praesentation/uebung/zusammenfassung) استُنسخت من d1 (لا شكل مسطّح! N-293).
+- **الفهرس العكسي:** §22.9 الدفعة 410 (v7.2) · ars-hoeflich-stufen (shufra!) · b1-lesson-upgrade (32 درساً!).
+- **الأيام والاختبارات:** **u6-d2 13 كلمة** — المسار B1: u1 71 + u2 69 + u3 76 + u4 75 + u5 67 + u6 26 = **384 كلمة** · u6: d1 Konj II ✓ · **d2 سلالم التهذيب ✓** · d3..d6 · المعركة.
+- **الاختبارات:** npm test **1739/1739 ✓** · tsc ✓ · validate-content **2453 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u6-d2 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** (2882 كلمة) · goethe-b1 **1586/2893 (55%) + 13**.
+- **الأرقام:** كلمة **1965** · دروس **206** · مسارات **3774** · معجم **266** · عبارات **4457** · صوت **1044** · duden **921** · w-srs **0.35 ≤ 0.35**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u6-d3 — ثم d4..d6 ومعركة الوحدة 6!
+
 ## D455 (2026-11-05): b1-u6-d1 «السفر والثقافة — Konj II» — 13 كلمة + ars-konj-ii! (الوحدة 6 تبدأ!)
 - **الدفعة:** 409 · **الموجّه:** 7.1
 - **للقارئ:** الوحدة 6 تبدأ! — **13 كلمة** (Abschied «الوداع» · verabschieden «يودّع» · Erlebnis «التجربة» · erleben «يعيش» · Tradition «التقاليد» · traditionell «تقليدي» · Heimweh «الحنين إلى الوطن» · Passagier «الراكب» · Tal «الوادي» · Gasthaus «بيت الضيافة» · Denkmal «النصب التذكاري» · Galerie «المعرض» · Katalog «الكتالوج») + **ars-konj-ii**: حروف كان الثلاثة! (**hätte gern** للطلب! **Könnte ich …?** للسؤال المهذّب! **Wäre …?** للافتراض!) — التهذيب بالزمن نفسه!
