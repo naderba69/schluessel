@@ -2117,6 +2117,19 @@ def build_all() -> None:
     ("word-vertrauen", "das Vertrauen.", "vertrauen", ["b1-u4-d5"]),
     ("word-betrieb", "der Betrieb.", "betrieb", ["b1-u4-d6"]),
     ("word-herausforderung", "die Herausforderung.", "herausforderung", ["b1-u4-d6"]),
+    ("word-meldung", "die Meldung.", "meldung", ["b1-u5-d1"]),
+    ("word-bericht", "der Bericht.", "bericht", ["b1-u5-d1"]),
+    ("word-ueberschrift", "die Überschrift.", "ueberschrift", ["b1-u5-d1"]),
+    ("word-kommentar", "der Kommentar.", "kommentar", ["b1-u5-d1"]),
+    ("word-quelle", "die Quelle.", "quelle", ["b1-u5-d1"]),
+    ("word-wahrheit", "die Wahrheit.", "wahrheit", ["b1-u5-d1"]),
+    ("word-diskussion", "die Diskussion.", "diskussion", ["b1-u5-d1"]),
+    ("word-veroeffentlichen", "veröffentlichen.", "veroeffentlichen", ["b1-u5-d1"]),
+    ("word-presse", "die Presse.", "presse", ["b1-u5-d1"]),
+    ("word-umfrage", "die Umfrage.", "umfrage", ["b1-u5-d1"]),
+    ("word-erklaerung", "die Erklärung.", "erklaerung", ["b1-u5-d1"]),
+    ("word-zuschauer", "der Zuschauer.", "zuschauer", ["b1-u5-d1"]),
+    ("word-wirkung", "die Wirkung.", "wirkung", ["b1-u5-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
