@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 404 (2026-11-05) — D450: b1-u5-d3 «الرأي بأسباب» — 13 كلمة + ars-meinung-gruende! (يوم الحجاج!)
+- **الخلاصة:** يوم الحجاج! — **13 كلمة** (Beweis «البرهان» · eindeutig «قاطع» · fair «عادل» · folgen «يتبع» · sinnvoll «ذو معنى» · sinnlos «بلا معنى» · vernünftig «المعقول» · Wirklichkeit «الواقع» · Sicherheit «اليقين» · ausreichend «كافٍ» · folgend «التالي» · überlegen «يتفكّر» · Reihenfolge «الترتيب») + **ars-meinung-gruende**: الرأي أولاً ثم السبب! («Ich finde …, weil …»! + «Meiner Meinung nach …»!)
+- **التالي:** b1-u5-d4 «تعليق مكتوب» (يوم الكتابة!) — ثم d5..d6 ومعركة الوحدة 5!
+
 ## الدفعة 403 (2026-11-05) — D449: b1-u5-d2 «نبرة الرأي — Modalpartikeln تعرّض» — 13 كلمة + ars-modalpartikeln!
 - **الخلاصة:** يوم النبرة! — **13 كلمة** (Ausdruck «التعبير» · Erzählung «الحكاية» · Hörer «المستمع» · Leser «القارئ» · Kritik «النقد» · kritisch «نقدي» · Ratschlag «النصيحة» · Schrift «الخط» · überraschen «يُفاجئ» · verursachen «يسبب» · warnen «يحذّر» · widersprechen «يعترض» · Zweifel «الشك») + **ars-modalpartikeln** (تعرّض!): doch للإصرار! ja للتأكيد! mal للتلطيف! schon للتوكيد! — الجسيم يغيّر النبرة لا المعنى!
 - **التالي:** b1-u5-d3 «رأي بأسباب» (يوم الكلام!) — ثم d4..d6 ومعركة الوحدة 5!

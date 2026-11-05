@@ -2143,6 +2143,19 @@ def build_all() -> None:
     ("word-warnen", "warnen.", "warnen", ["b1-u5-d2"]),
     ("word-widersprechen", "widersprechen.", "widersprechen", ["b1-u5-d2"]),
     ("word-zweifel", "der Zweifel.", "zweifel", ["b1-u5-d2"]),
+    ("word-beweis", "der Beweis.", "beweis", ["b1-u5-d3"]),
+    ("word-eindeutig", "eindeutig.", "eindeutig", ["b1-u5-d3"]),
+    ("word-fair", "fair.", "fair", ["b1-u5-d3"]),
+    ("word-folgen", "folgen.", "folgen", ["b1-u5-d3"]),
+    ("word-sinnvoll", "sinnvoll.", "sinnvoll", ["b1-u5-d3"]),
+    ("word-sinnlos", "sinnlos.", "sinnlos", ["b1-u5-d3"]),
+    ("word-vernuenftig", "vernünftig.", "vernuenftig", ["b1-u5-d3"]),
+    ("word-wirklichkeit", "die Wirklichkeit.", "wirklichkeit", ["b1-u5-d3"]),
+    ("word-sicherheit", "die Sicherheit.", "sicherheit", ["b1-u5-d3"]),
+    ("word-ausreichend", "ausreichend.", "ausreichend", ["b1-u5-d3"]),
+    ("word-folgend", "folgend.", "folgend", ["b1-u5-d3"]),
+    ("word-ueberlegen", "überlegen.", "ueberlegen", ["b1-u5-d3"]),
+    ("word-reihenfolge", "die Reihenfolge.", "reihenfolge", ["b1-u5-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
