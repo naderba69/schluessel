@@ -3,6 +3,14 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-05 — الدفعة 408: D454 — معركة الوحدة B1-U5 — 20/20 من المحاولة الأولى! (المعركة الخامسة!)
+المعركة الخامسة! — `tests/b1-unit5-proof.test.ts`: دروس الوحدة الستة (b1-u5-d1..d6) تُلعَب آلياً عبر المساعد المشترك = **20/20 من المحاولة الأولى** (النمط نفسه ×5!).
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
+## 2026-11-05 — الدفعة 407: D453 — b1-u5-d6 «التوليف + المراجعة» — 2 كلمة + أسبوع الإعلام والرأي يكتمل! (يوم التكامل!)
+يوم التكامل! — **كلمتان** (Medien «الإعلام» · Publikum «الجمهور») + توليف الأسبوع كاملاً في نصٍّ واحد: «Ganz im Ernst: Die Medien sind wichtig. … Ich möchte wissen, ob die Zeitung das veröffentlicht. Das ist doch klar! Ach, toll! Zum Abschluss … Mit freundlichen Grüßen» — كل خيوط الوحدة الخمس معاً!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-05 — الدفعة 406: D452 — b1-u5-d5 «نبرة السخرية/الجدية» — 13 كلمة + ars-ironie-ernst! (يوم النبرة الثاني!)
 النبرة تصنع المعنى! — **13 كلمة** (ehrlich «صادق» · ernst «جادّ» · ernsthaft «جدّي» · Humor «الفكاهة» · Laune «المزاج» · Stimmung «الجوّ» · Vorwurf «اللوم» · wirken «يبدو/يُحدث أثراً» · frech «وقح» · wunderschön «بديع» · Wunder «المعجزة» · überhaupt «أصلاً» · **ironisch «ساخر» — بلا وسم غوته (مُعلنة D452: «الأمانة قبل الطبيعية» D185!)**) + **ars-ironie-ernst**: «Toll!» ساخراً = المعنى عكسي! و«Ganz im Ernst!» + «Ehrlich gesagt» = جادّ! و«Das wirkt …» لوصف النبرة!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
