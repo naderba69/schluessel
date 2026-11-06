@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-06 — الدفعة 421: D467 — b1-u7-d6 «البيئة — التوليف!» — ختام الوحدة 7! (الدفعة 421 · v7.13)
+يوم التوليف! — **كلمتان** (die Sorge القلق · zerstören يُدمّر «Wir zerstören nichts — die Sorge bleibt!») + كل خيوط الوحدة الخمس مرساةً (nachdem+hatte+PII! فعل+حرفّه! als/wenn/bevor! zu+المصدر! الأزواج!) — و**معركة الوحدة 7: 20/20** من أول تشغيل!
+- **البوابة:** vitest ✓ 1779/1779 (137 ملفاً — battle-u7 +20!) · tsc ✓ · validate-content ✓ 2574/0/0 · build ✓.
+
 ## 2026-11-06 — الدفعة 420: D466 — b1-u7-d5 «البيئة — الأزواج المتلازمة!» — 13 كلمة + ars-sowohl-als-auch (الدفعة 420 · v7.12)
 يوم الأزواج المتلازمة! — **13 كلمة** (nutzen يستفيد · Verbot الحظر · Recht الحق · Vergangenheit الماضي · Modell النموذج · Gewinn الربح · Schuld الذنب (والجمع Schulden = الديون!) · Gewissen الضمير · reif ناضج («Die Zeit ist reif»!) · vorhaben يعتزم («Ich habe vor, zu helfen» — مرساة zu!) + sowohl/weder/entweder (أدوات الأزواج — كلمات كاملة!). القاعدة: **sowohl…als auch · weder…noch · nicht nur…sondern auch · entweder…oder** — كل زوج بقريئه، والفعل بعد الثاني!
 - **البوابة:** vitest ✓ 1759/1759 (136 ملفاً) · tsc ✓ · validate-content ✓ 2571/0/0 · build ✓.

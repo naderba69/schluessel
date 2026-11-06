@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 421 (2026-11-06) — D467: b1-u7-d6 «البيئة — التوليف!» — ختام الوحدة 7! (الدفعة 421 · v7.13)
+- **الخلاصة:** يوم التوليف! — **كلمتان** (die Sorge القلق · zerstören يُدمّر «Wir zerstören nichts — die Sorge bleibt!») + كل خيوط الوحدة الخمس مرساةً (nachdem+hatte+PII! فعل+حرفّه! als/wenn/bevor! zu+المصدر! الأزواج!) — و**معركة الوحدة 7: 20/20** من أول تشغيل!
+- **التالي:** b1-u8-d1 أو تقييم المالك — حسب أمره.
+
 ## الدفعة 420 (2026-11-06) — D466: b1-u7-d5 «البيئة — الأزواج المتلازمة!» — 13 كلمة + ars-sowohl-als-auch (الدفعة 420 · v7.12)
 - **الخلاصة:** يوم الأزواج المتلازمة! — **13 كلمة** (nutzen يستفيد · Verbot الحظر · Recht الحق · Vergangenheit الماضي · Modell النموذج · Gewinn الربح · Schuld الذنب (والجمع Schulden = الديون!) · Gewissen الضمير · reif ناضج («Die Zeit ist reif»!) · vorhaben يعتزم («Ich habe vor, zu helfen» — مرساة zu!) + sowohl/weder/entweder (أدوات الأزواج — كلمات كاملة!). القاعدة: **sowohl…als auch · weder…noch · nicht nur…sondern auch · entweder…oder** — كل زوج بقريئه، والفعل بعد الثاني!
 - **التالي:** b1-u7-d6 (التوليف!) ثم battle-u7 كاملة.

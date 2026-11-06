@@ -2315,6 +2315,8 @@ def build_all() -> None:
     ("word-sowohl", "sowohl.", "sowohl", ["b1-u7-d5"]),
     ("word-weder", "weder.", "weder", ["b1-u7-d5"]),
     ("word-entweder", "entweder.", "entweder", ["b1-u7-d5"]),
+    ("word-sorge", "die Sorge.", "sorge", ["b1-u7-d6"]),
+    ("word-zerstoeren", "zerstören.", "zerstoeren", ["b1-u7-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

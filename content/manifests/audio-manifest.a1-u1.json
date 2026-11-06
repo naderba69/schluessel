@@ -38529,6 +38529,46 @@
       "rmsDb": -17.1
     },
     {
+      "id": "word-sorge",
+      "file": "words/audio/de-DE/word-sorge.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Sorge.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u7-d6"
+      ],
+      "durationMs": 920,
+      "sizeBytes": 4463,
+      "hash": "sha256:68cf94303d821d4c94e81259f860081c0dccf8cb47ec715974b7e9a0ae1b9a9d",
+      "pcmSha256": "a2f785cfc5bc00a15ec674577c417208f35c932c1b83e97e9de828a7b71adab8",
+      "rmsDb": -17.09
+    },
+    {
+      "id": "word-zerstoeren",
+      "file": "words/audio/de-DE/word-zerstoeren.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "zerstören.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u7-d6"
+      ],
+      "durationMs": 1013,
+      "sizeBytes": 4911,
+      "hash": "sha256:7100b97c7192b6151ae3d070309a54072efb35159b219720132cb1ab4975bac9",
+      "pcmSha256": "ac9ce51058939303923355428cfe97961344cbbb154e875d0431e2489d4ee1d9",
+      "rmsDb": -17.07
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
