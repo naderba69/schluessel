@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 413 (2026-11-06) — D459: b1-u6-d5 «التسوّق والأسعار — Wenn + Konj II» — 13 كلمة + ars-wenn-konj-ii!
+- **الخلاصة:** التسوّق والأسعار في السفر! — **13 كلمة** (Kauf «الشراء» · Käufer «المشتري» · Schein «الورقة النقدية» · Bargeld «النقود» · Souvenir «التذكار» · verwechseln «يخلط بين» · Anzahlung «العربون» · Geldautomat «الصرّاف الآلي» · Entfernung «المسافة» · Abenteuer «المغامرة» · entdecken «يكتشف» · verbringen «يقضي الوقت» · gering «قليل») + **ars-wenn-konj-ii**: الشرط غير الواقع! (**Wenn ich mehr Bargeld hätte, könnte ich das kaufen!**)
+- **التالي:** b1-u6-d6 «التوليف» — ثم معركة الوحدة 6!
+
 ## الدفعة 412 (2026-11-06) — D458: b1-u6-d4 «الطوارئ والمساعدة» — 13 كلمة + ars-konj-ii-modal!
 - **الخلاصة:** الطوارئ والمساعدة في السفر! — **13 كلمة** (Notruf «نداء الطوارئ» · Feuerwehr «الإطفاء» · retten «ينقذ» · Notausgang «مخرج الطوارئ» · Rettung «الإنقاذ» · Unglück «الحادث» · Dieb «اللص» · Alarm «الإنذار» · Brieftasche «المحفظة» · Besserung «التعافي» · anzeigen «يبلّغ عن» · Batterie «البطارية» · Aushilfe «المعين») + **ars-konj-ii-modal**: الماضي الافتراضي مع الأدوات! (**hätte + مصدرين آخراً**: «Hätten Sie helfen können?» / «Ich hätte den Notruf rufen sollen!»)
 - **التالي:** b1-u6-d5 — ثم d6 ومعركة الوحدة 6!

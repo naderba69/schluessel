@@ -2240,6 +2240,19 @@ def build_all() -> None:
     ("word-anzeigen", "anzeigen.", "anzeigen", ["b1-u6-d4"]),
     ("word-batterie", "die Batterie.", "batterie", ["b1-u6-d4"]),
     ("word-aushilfe", "die Aushilfe.", "aushilfe", ["b1-u6-d4"]),
+    ("word-kauf", "der Kauf.", "kauf", ["b1-u6-d5"]),
+    ("word-kaeufer", "der Käufer.", "kaeufer", ["b1-u6-d5"]),
+    ("word-schein", "der Schein.", "schein", ["b1-u6-d5"]),
+    ("word-bargeld", "das Bargeld.", "bargeld", ["b1-u6-d5"]),
+    ("word-souvenir", "das Souvenir.", "souvenir", ["b1-u6-d5"]),
+    ("word-verwechseln", "verwechseln.", "verwechseln", ["b1-u6-d5"]),
+    ("word-anzahlung", "die Anzahlung.", "anzahlung", ["b1-u6-d5"]),
+    ("word-geldautomat", "der Geldautomat.", "geldautomat", ["b1-u6-d5"]),
+    ("word-entfernung", "die Entfernung.", "entfernung", ["b1-u6-d5"]),
+    ("word-abenteuer", "das Abenteuer.", "abenteuer", ["b1-u6-d5"]),
+    ("word-entdecken", "entdecken.", "entdecken", ["b1-u6-d5"]),
+    ("word-verbringen", "verbringen.", "verbringen", ["b1-u6-d5"]),
+    ("word-gering", "gering.", "gering", ["b1-u6-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
