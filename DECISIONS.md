@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D457 (2026-11-06): b1-u6-d3 «الشكوى المهذّبة — Konj II الماضي» — 13 كلمة + ars-konj-ii-perfekt!
+- **الدفعة:** 411 · **الموجّه:** 7.3
+- **للقارئ:** الشكوى المهذّبة في السفر! — **13 كلمة** (Beschwerde «الشكوى» · Verlust «الفقد» · Ersatz «العوض» · Fundbüro «مكتب المفقودات» · Schaden «العطب» · Ware «البضاعة» · berechnen «يحسب المبلغ» · umtauschen «يستبدل» · Alternative «البديل» · Forderung «المطالبة» · wütend «غاضب» · ärgerlich «مزعج» · Dokument «الوثيقة») + **ars-konj-ii-perfekt**: الماضي الافتراضي! (**hätte/wäre + التصريف الثالث آخراً!**) — «Ich hätte den früheren Zug genommen, dann wäre der Verlust nicht passiert!»
+- **بطاقة قرار:** hätte (كلمات haben) ≠ wäre (كلمات sein/الحركة!) + التصريف الثالث آخراً! والمصائد الثلاثة: **hätte ≠ hatte** (النقطتان!) و«~~Ich hätte genommen den Zug~~» (الترتيب!) و«~~hätte … passiert~~» (passieren ← wäre!). «Verzeihung» أُسقطت (بطاقة صوت رفعت نسبة §4 إلى 33/33/15 — تحذير!) فجاء **Dokument** (بلا خطر صوتي!). تصحيح نطق **Fundbüro** (d تُهمس t في المركّب!) = معجم **267** + إعادة توليد 1 + علَم **auslaut-d** (درس N-295)!
+- **الفهرس العكسي:** §22.9 الدفعة 411 (v7.3) · ars-konj-ii-perfekt (shufra!) · b1-lesson-upgrade (33 درساً!).
+- **الأيام والاختبارات:** **u6-d3 13 كلمة** — المسار B1: u1 71 + u2 69 + u3 76 + u4 75 + u5 67 + u6 39 = **397 كلمة** · u6: d1 Konj II ✓ · d2 سلالم التهذيب ✓ · **d3 الشكوى + Konj II الماضي ✓** · d4..d6 · المعركة.
+- **الاختبارات:** npm test **1739/1739 ✓** · tsc ✓ · validate-content **2468 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u6-d3 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** (2895 كلمة) · goethe-b1 **1598/2893 (55%) + 12** (Beschwerde خارج القائمة!).
+- **الأرقام:** كلمة **1978** · دروس **207** · مسارات **3787** · معجم **267** · عبارات **4477** · صوت **1053** · duden **934** · w-srs **0.35 ≤ 0.35**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u6-d4 — ثم d5..d6 ومعركة الوحدة 6!
+
 ## D456 (2026-11-05): b1-u6-d2 «سلالم التهذيب» — 13 كلمة + ars-hoeflich-stufen! (أربع درجات!)
 - **الدفعة:** 410 · **الموجّه:** 7.2
 - **للقارئ:** سلّم التهذيب! — **13 كلمة** (dankbar «ممتن» · angenehm «لطيف» · Freude «الفرح» · Respekt «الاحترام» · entgegenkommen «يتساهل» · Kellnerin «النادلة» · Menü «القائمة» · Nachspeise «الحلوى» · bedienen «يخدم» · Übernachtung «المبيت» · verlangen «يطالب» · auffordern «يطلب من» · Kompromiss «التسوية») + **ars-hoeflich-stufen**: أربع درجات! (**…, bitte!** ← **Könnte ich …?** ← **Hätten Sie …?** ← **Wären Sie so freundlich …?**) والطلب المباشر («Geben Sie …!») بلا تهذيب!

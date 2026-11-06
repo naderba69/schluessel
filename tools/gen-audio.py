@@ -2213,6 +2213,20 @@ def build_all() -> None:
     ("word-verlangen", "verlangen.", "verlangen", ["b1-u6-d2"]),
     ("word-auffordern", "auffordern.", "auffordern", ["b1-u6-d2"]),
     ("word-kompromiss", "der Kompromiss.", "kompromiss", ["b1-u6-d2"]),
+    ("word-beschwerde", "die Beschwerde.", "beschwerde", ["b1-u6-d3"]),
+    ("word-verlust", "der Verlust.", "verlust", ["b1-u6-d3"]),
+    ("word-ersatz", "der Ersatz.", "ersatz", ["b1-u6-d3"]),
+    ("word-fundbuero", "das Fundbüro.", "fundbuero", ["b1-u6-d3"]),
+    ("word-schaden", "der Schaden.", "schaden", ["b1-u6-d3"]),
+    ("word-ware", "die Ware.", "ware", ["b1-u6-d3"]),
+    ("word-berechnen", "berechnen.", "berechnen", ["b1-u6-d3"]),
+    ("word-umtauschen", "umtauschen.", "umtauschen", ["b1-u6-d3"]),
+    ("word-alternative", "die Alternative.", "alternative", ["b1-u6-d3"]),
+    ("word-forderung", "die Forderung.", "forderung", ["b1-u6-d3"]),
+    ("word-wuetend", "wütend.", "wuetend", ["b1-u6-d3"]),
+    ("word-aergerlich", "ärgerlich.", "aergerlich", ["b1-u6-d3"]),
+    ("word-verzeihung", "die Verzeihung.", "verzeihung", ["b1-u6-d3"]),
+    ("word-dokument", "das Dokument.", "dokument", ["b1-u6-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

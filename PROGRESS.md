@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 411 (2026-11-06) — D457: b1-u6-d3 «الشكوى المهذّبة — Konj II الماضي» — 13 كلمة + ars-konj-ii-perfekt!
+- **الخلاصة:** الشكوى المهذّبة في السفر! — **13 كلمة** (Beschwerde «الشكوى» · Verlust «الفقد» · Ersatz «العوض» · Fundbüro «مكتب المفقودات» · Schaden «العطب» · Ware «البضاعة» · berechnen «يحسب المبلغ» · umtauschen «يستبدل» · Alternative «البديل» · Forderung «المطالبة» · wütend «غاضب» · ärgerlich «مزعج» · Dokument «الوثيقة») + **ars-konj-ii-perfekt**: الماضي الافتراضي! (**hätte/wäre + التصريف الثالث آخراً!**) — «Ich hätte den früheren Zug genommen, dann wäre der Verlust nicht passiert!»
+- **التالي:** b1-u6-d4 — ثم d5..d6 ومعركة الوحدة 6!
+
 ## الدفعة 410 (2026-11-05) — D456: b1-u6-d2 «سلالم التهذيب» — 13 كلمة + ars-hoeflich-stufen! (أربع درجات!)
 - **الخلاصة:** سلّم التهذيب! — **13 كلمة** (dankbar «ممتن» · angenehm «لطيف» · Freude «الفرح» · Respekt «الاحترام» · entgegenkommen «يتساهل» · Kellnerin «النادلة» · Menü «القائمة» · Nachspeise «الحلوى» · bedienen «يخدم» · Übernachtung «المبيت» · verlangen «يطالب» · auffordern «يطلب من» · Kompromiss «التسوية») + **ars-hoeflich-stufen**: أربع درجات! (**…, bitte!** ← **Könnte ich …?** ← **Hätten Sie …?** ← **Wären Sie so freundlich …?**) والطلب المباشر («Geben Sie …!») بلا تهذيب!
 - **التالي:** b1-u6-d3 — ثم d4..d6 ومعركة الوحدة 6!
