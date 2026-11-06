@@ -2255,6 +2255,20 @@ def build_all() -> None:
     ("word-gering", "gering.", "gering", ["b1-u6-d5"]),
     ("word-rueckkehr", "die Rückkehr.", "rueckkehr", ["b1-u6-d6"]),
     ("word-unvergesslich", "unvergesslich.", "unvergesslich", ["b1-u6-d6"]),
+    ("word-umwelt", "die Umwelt.", "umwelt", ["b1-u7-d1"]),
+    ("word-schuetzen", "schützen.", "schuetzen", ["b1-u7-d1"]),
+    ("word-klima", "das Klima.", "klima", ["b1-u7-d1"]),
+    ("word-geniessen", "genießen.", "geniessen", ["b1-u7-d1"]),
+    ("word-wiese", "die Wiese.", "wiese", ["b1-u7-d1"]),
+    ("word-wachsen", "wachsen.", "wachsen", ["b1-u7-d1"]),
+    ("word-pflanzen", "pflanzen.", "pflanzen", ["b1-u7-d1"]),
+    ("word-abfall", "der Abfall.", "abfall", ["b1-u7-d1"]),
+    ("word-energie", "die Energie.", "energie", ["b1-u7-d1"]),
+    ("word-giessen", "gießen.", "giessen", ["b1-u7-d1"]),
+    ("word-wanderung", "die Wanderung.", "wanderung", ["b1-u7-d1"]),
+    ("word-erde", "die Erde.", "erde", ["b1-u7-d1"]),
+    ("word-nachdem", "nachdem.", "nachdem", ["b1-u7-d1"]),
+    ("word-trennen", "trennen.", "trennen", ["b1-u7-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

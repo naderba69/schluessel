@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-06 — الدفعة 416: D462 — b1-u7-d1 «البيئة والطبيعة — nachdem + Plusquamperfekt» — بداية الوحدة 7! (الدفعة 416 · v7.8)
+الوحدة 7 «البيئة والطبيعة»! — **14 كلمة** (Umwelt البيئة · Klima المناخ · Wiese المرج · Erde الأرض · Abfall النفايات · Energie الطاقة · Wanderung الرحلة · schützen يحمي · pflanzen يزرع · gießen يسقي · wachsen ينمو · genießen يستمتع · trennen يفصل · nachdem بعد أن!) + قاعدة جديدة **ars-nachdem-plusquamperfekt**: «بعد أن… كان قد!» (Nachdem wir den Abfall getrennt hatten, wanderten wir los!) — ترتيب حدثين في الماضي!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-06 — الدفعة 415: D461 — معركة الوحدة B1-U6 — 20/20 من أول تشغيل! (الدفعة 415 · v7.7)
 المعركة السادسة! — `tests/b1-unit6-proof.test.ts` (الوصفة المجرّبة: نسخ + تبديل + prefix += 6): دروس U6 الستة تُلعَب آلياً عبر المساعد المشترك — **20 اختباراً كلّها ناجحة من أول تشغيل**. الوحدات المبرهنة: A1-U1..U9 · A2-U1..U9 · B1-U1..U6 — **24 وحدة**!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
