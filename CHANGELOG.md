@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-06 — الدفعة 418: D464 — b1-u7-d3 «البيئة — عندما: مرة أم دأب؟» — 11 كلمة + ars-als-wenn-bevor (الدفعة 418 · v7.10)
+يوم أدوات الزمان! — **11 كلمة** (Verpackung التغليف · Wertstoff مادة التدوير · Altglas الزجاج القديم · Demonstration المظاهرة · Feinstaub الجسيمات الدقيقة · Katastrophe الكارثة · Mülltrennung فرز النفايات · umweltfreundlich صديق للبيئة · Überschwemmung الفيضان · Ozon الأوزون · bevor قبل أن!) + قاعدة **ars-als-wenn-bevor**: «عندما: مرة أم دأب؟» (Als die Überschwemmung kam! ← مرة · Wenn wir Zeit haben! ← دأب · Bevor wir gingen! ← قبل أن!) — العربية «عندما» واحدة والألمانية اثنتان!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-06 — الدفعة 417: D463 — b1-u7-d2 «البيئة — كل فعل بحرفّه الثابت!» — 11 كلمة + ars-verben-praep (الدفعة 417 · v7.9)
 اليوم الثاني من البيئة! — **11 كلمة** (Dürre الجفاف · Umweltschutz حماية البيئة · Lärm الضجيج · Plastik البلاستيك · Kunststoff المادة الاصطناعية · Dose العلبة · Aktion الحملة · Forschung البحث · giftig سام · verbrauchen يستهلك · entwickeln يطوّر) + قاعدة **ars-verben-praep**: «كل فعل بحرفّه الثابت!» (sich freuen auf + Akk · sorgen für + Akk · denken an + Akk · warten auf + Akk · helfen bei + Dativ!) — الأحرف تُحفظ مع الأفعال كالظلال!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.

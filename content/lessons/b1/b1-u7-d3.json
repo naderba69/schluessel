@@ -1,0 +1,444 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u7-d3",
+  "level": "B1",
+  "unit": 7,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Als die Überschwemmung kam, sammelten wir das Altglas!",
+    "ar": "عندما: مرة أم دأب؟ (als للمرة! wenn للدأب! bevor لقبل أن!)"
+  },
+  "canDoDaily": [
+    "يميّز بين als (مرة واحدة) وwenn (دأب وتكرار)! (Als die Überschwemmung kam! / Wenn wir Zeit haben!)",
+    "يرتّب الأحداث بـbevor وnachdem! (الفعل آخراً في كليهما!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "nachdem",
+      "trennen",
+      "umwelt"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«عندما جاء الفيضان (مرة واحدة).» — بأي أداة؟"
+        },
+        "choices": [
+          "Als die Überschwemmung kam, …",
+          "Wenn die Überschwemmung kam, …",
+          "Bevor die Überschwemmung kam, …"
+        ],
+        "answer": "Als die Überschwemmung kam, …",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«المظاهرة»؟"
+        },
+        "choices": [
+          "die Demonstration",
+          "die Verpackung",
+          "die Katastrophe"
+        ],
+        "answer": "die Demonstration",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u7-d2: كل فعل بحرفّه الثابت! (freuen auf!) — اليوم: أدوات الزمان! (als/wenn/bevor!)",
+      "من u7-d1: nachdem + hatte/war (الأسبق أولاً!) — اليوم: bevor (قبل أن) + als (عندما)!"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "verpackung",
+      "wertstoff",
+      "altglas",
+      "demonstration",
+      "feinstaub",
+      "katastrophe",
+      "muelltrennung",
+      "umweltfreundlich",
+      "ueberschwemmung",
+      "ozon",
+      "bevor"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-als-wenn-bevor"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Als die Überschwemmung kam, sammelten wir das Altglas!",
+        "ar": "يروي يوم الفيضان بأدوات الزمان الثلاث!"
+      },
+      "situation": {
+        "de": "Die Überschwemmung, die Katastrophe, die Demonstration.",
+        "ar": "اليوم: الفيضان! الكارثة! المظاهرة!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الإحدى عشرة كلها!",
+        "als للمرة الماضية! (Als die Überschwemmung kam!)",
+        "wenn للدأب والتكرار! (Wenn wir Zeit haben!)",
+        "bevor + الفعل آخراً! (Bevor wir die Blumen gossen!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات الكوارث والتدوير!",
+          "die Überschwemmung! die Katastrophe! das Altglas!"
+        ],
+        "interleavedWith": [
+          "umwelt",
+          "klima",
+          "wiese"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "التغليف",
+                "de": "die Verpackung"
+              },
+              {
+                "ar": "المادة القابلة لإعادة التدوير",
+                "de": "der Wertstoff"
+              },
+              {
+                "ar": "الزجاج القديم",
+                "de": "das Altglas"
+              },
+              {
+                "ar": "فرز النفايات",
+                "de": "die Mülltrennung"
+              }
+            ],
+            "why": "die Verpackung التغليف (die!) · der Wertstoff المادة القابلة للتدوير (der! + Stoffe!) · das Altglas الزجاج القديم (das! مركّب Alt+Glas!) · die Mülltrennung فرز النفايات (die! مركّب Müll+Trennung!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الجسيمات الدقيقة",
+                "de": "der Feinstaub"
+              },
+              {
+                "ar": "الأوزون",
+                "de": "das Ozon"
+              },
+              {
+                "ar": "الفيضان",
+                "de": "die Überschwemmung"
+              },
+              {
+                "ar": "الكارثة",
+                "de": "die Katastrophe"
+              }
+            ],
+            "why": "der Feinstaub الجسيمات الدقيقة (der! مركّب Fein+Staub!) · das Ozon الأوزون (das!) · die Überschwemmung الفيضان (die! + Überschwemmungen!) · die Katastrophe الكارثة (die! + Katastrophen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "صديق للبيئة",
+                "de": "umweltfreundlich"
+              },
+              {
+                "ar": "المظاهرة",
+                "de": "die Demonstration"
+              },
+              {
+                "ar": "يجمع",
+                "de": "sammeln"
+              }
+            ],
+            "why": "umweltfreundlich صديق للبيئة (umwelt+freundlich!) · die Demonstration المظاهرة (die! + Demonstrationen!) — ومراجعة: sammeln يجمع (hat gesammelt!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "als للمرة! wenn للدأب! bevor لقبل أن!"
+        ],
+        "interleavedWith": [
+          "wald",
+          "wolke",
+          "blume"
+        ],
+        "items": [
+          {
+            "q": "___ die Überschwemmung kam, sammelten wir das Altglas. (als! مرة واحدة!)",
+            "a": "Als",
+            "why": "als + ماضٍ = عندما (مرة واحدة)! (kam — ماضٍ!)"
+          },
+          {
+            "q": "___ wir Zeit haben, wandern wir. (wenn! دأب!)",
+            "a": "Wenn",
+            "why": "wenn + الفعل الثاني = كلما/عندما (دأب وتكرار)! (Präsens: haben!)"
+          },
+          {
+            "q": "___ wir die Blumen gossen, trennten wir den Abfall. (bevor! الفعل آخراً!)",
+            "a": "Bevor",
+            "why": "bevor + الفعل آخراً! (gossen آخر الجملة الفرعية! — كـnachdem!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "als مرة! wenn دأب!",
+          "bevor: الفعل آخراً!"
+        ],
+        "interleavedWith": [
+          "natur",
+          "regen",
+          "wetter"
+        ],
+        "items": [
+          {
+            "q": "~~Wenn die Überschwemmung kam, sammelten wir das Altglas.~~",
+            "a": "Als die Überschwemmung kam, sammelten wir das Altglas.",
+            "why": "الفيضان جاء مرة واحدة! als لا wenn! (als + ماضٍ للحدث الوحيد!)"
+          },
+          {
+            "q": "~~Als wir Zeit haben, wandern wir.~~",
+            "a": "Wenn wir Zeit haben, wandern wir.",
+            "why": "التجوّل دأب وتكرار! wenn لا als! (wenn للعادة!)"
+          },
+          {
+            "q": "~~Bevor wir die Blumen hatten gegossen, trennten wir den Abfall.~~",
+            "a": "Bevor wir die Blumen gegossen hatten, trennten wir den Abfall.",
+            "why": "بعد bevor: التصريف الثالث ثم hatten آخراً! (gegossen hatten — كـnachdem!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "als للمرة! wenn للدأب!"
+        ],
+        "interleavedWith": [
+          "katze",
+          "arbeit",
+          "sommer"
+        ],
+        "items": [
+          {
+            "q": "قل بالألمانية: «عندما تجوّلنا عبر المرج، استمتعنا بالهدوء.» (als + ماضٍ — مرة واحدة!)",
+            "a": "Als wir über die Wiese wanderten, genossen wir die Ruhe.",
+            "why": "als + ماضٍ! (wanderten/genossen — ماضٍ بسيط!)"
+          },
+          {
+            "q": "قل بالألمانية: «كلما أشرقت الشمس، نتجوّل.» (wenn + دأب!)",
+            "a": "Wenn die Sonne scheint, wandern wir.",
+            "why": "wenn + دأب! (Präsens: scheint/wandern — لا ماضٍ!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المظاهرة»؟",
+            "a": "die Demonstration"
+          },
+          {
+            "q": "«عندما جاء الفيضان، جمعنا الزجاج القديم.»؟",
+            "a": "Als die Überschwemmung kam, sammelten wir das Altglas."
+          },
+          {
+            "q": "«التغليف»؟",
+            "a": "die Verpackung"
+          },
+          {
+            "q": "«صديق للبيئة»؟",
+            "a": "umweltfreundlich"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الفيضان»؟",
+            "a": "die Überschwemmung"
+          },
+          {
+            "q": "«كلما كان لدينا وقت، نتجوّل.»؟",
+            "a": "Wenn wir Zeit haben, wandern wir."
+          },
+          {
+            "q": "«الجسيمات الدقيقة»؟",
+            "a": "der Feinstaub"
+          },
+          {
+            "q": "«المادة القابلة لإعادة التدوير»؟",
+            "a": "der Wertstoff"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الزجاج القديم»؟",
+            "a": "das Altglas"
+          },
+          {
+            "q": "«قبل أن نسقي الزهور، فصلنا النفايات.»؟",
+            "a": "Bevor wir die Blumen gossen, trennten wir den Abfall."
+          },
+          {
+            "q": "«الأوزون»؟",
+            "a": "das Ozon"
+          },
+          {
+            "q": "«فرز النفايات»؟",
+            "a": "die Mülltrennung"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Guten Tag! Als die Überschwemmung kam, war das eine Katastrophe. Der Feinstaub und das Ozon sind giftig. Wenn wir die Mülltrennung machen, ist das umweltfreundlich. Wir sammeln das Altglas und die Verpackung. Der Wertstoff ist wichtig. Bevor wir die Blumen gossen, war die Demonstration.",
+      "ar": "مرحباً! عندما جاء الفيضان (مرة واحدة!)، كانت تلك كارثة. الجسيمات الدقيقة والأوزون سامّان. كلما فرزنا النفايات، كان ذلك صديقاً للبيئة. نحن نجمع الزجاج القديم والتغليف. المادة القابلة لإعادة التدوير مهمة. قبل أن نسقي الزهور، كانت المظاهرة."
+    },
+    "srsBundleWordIds": [
+      "verpackung",
+      "wertstoff",
+      "altglas",
+      "demonstration",
+      "feinstaub",
+      "katastrophe",
+      "muelltrennung",
+      "umweltfreundlich",
+      "ueberschwemmung",
+      "ozon",
+      "bevor"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "wenn للحدث الوحيد!",
+          "de": "~~Wenn die Überschwemmung kam, …~~"
+        },
+        "correct": {
+          "ar": "عندما جاء الفيضان (مرة واحدة!): als!",
+          "de": "Als die Überschwemmung kam, …"
+        },
+        "exercise": {
+          "q": "___ die Überschwemmung kam, … (als! مرة واحدة!)",
+          "a": "Als"
+        },
+        "whyArabicSpeakerFails": "العربية: «عندما» واحدة للمرتين! والألمانية: als للمرة، وwenn للعادة! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "als للعادة!",
+          "de": "~~Als wir Zeit haben, wandern wir.~~"
+        },
+        "correct": {
+          "ar": "كلما كان لدينا وقت، نتجوّل: wenn!",
+          "de": "Wenn wir Zeit haben, wandern wir."
+        },
+        "exercise": {
+          "q": "___ wir Zeit haben, wandern wir. (wenn! دأب!)",
+          "a": "Wenn"
+        },
+        "whyArabicSpeakerFails": "الدأب والتكرار = wenn دائماً! (wenn + الفعل الثاني!) — als مرة واحدة فقط (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "bevor بترتيب خاطئ!",
+          "de": "~~Bevor wir die Blumen hatten gegossen, …~~"
+        },
+        "correct": {
+          "ar": "قبل أن نسقي الزهور: التصريف الثالث ثم hatten آخراً!",
+          "de": "Bevor wir die Blumen gegossen hatten, …"
+        },
+        "exercise": {
+          "q": "Bevor wir die Blumen ___ ___ , … (gegossen dann hatten!)",
+          "a": "gegossen hatten"
+        },
+        "whyArabicSpeakerFails": "بعد bevor (كـnachdem!): التصريف الثالث ثم حرف الجارّ آخراً! (خريطة التداخل 10‑ي)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Verpackung",
+      "https://www.duden.de/rechtschreibung/Wertstoff",
+      "https://www.duden.de/rechtschreibung/Altglas",
+      "https://www.duden.de/rechtschreibung/Demonstration",
+      "https://www.duden.de/rechtschreibung/Feinstaub",
+      "https://www.duden.de/rechtschreibung/Katastrophe",
+      "https://www.duden.de/rechtschreibung/Muelltrennung",
+      "https://www.duden.de/rechtschreibung/umweltfreundlich",
+      "https://www.duden.de/rechtschreibung/Überschwemmung",
+      "https://www.duden.de/rechtschreibung/Ozon",
+      "https://www.duden.de/rechtschreibung/bevor"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-als-wenn-bevor",
+    "ars-nachdem-plusquamperfekt"
+  ],
+  "audioManifestRefs": [
+    "word-verpackung",
+    "word-wertstoff",
+    "word-altglas",
+    "word-demonstration",
+    "word-feinstaub",
+    "word-katastrophe",
+    "word-muelltrennung",
+    "word-umweltfreundlich",
+    "word-ueberschwemmung",
+    "word-ozon",
+    "word-bevor"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (البيئة والطبيعة — أدوات الزمان als/wenn/bevor!)",
+    "goetheWordListOverlap": [
+      "verpackung",
+      "wertstoff",
+      "altglas",
+      "demonstration",
+      "feinstaub",
+      "katastrophe",
+      "muelltrennung",
+      "umweltfreundlich",
+      "ueberschwemmung",
+      "ozon",
+      "bevor"
+    ]
+  }
+}

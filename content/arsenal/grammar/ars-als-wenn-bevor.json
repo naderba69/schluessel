@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-als-wenn-bevor",
+  "kind": "shufra",
+  "title": {
+    "ar": "عندما: مرة أم دأب؟",
+    "de": "als/wenn/bevor: Als die Überschwemmung kam, sammelten wir das Altglas."
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "red",
+  "payload": {
+    "topicAr": "أدوات الزمان الثلاث! (als للمرة! wenn للدأب! bevor لقبل أن!)",
+    "sceneAr": "يوم الفيضان: «عندما» جاءت مرة واحدة (als)! وكل يوم نجمع الزجاج (wenn = كلما)! وقبل أن نذهب كنّا قد فرزنا (bevor)! العربية «عندما» واحدة — والألمانية اثنتان!",
+    "examples": [
+      {
+        "de": "Als die Überschwemmung kam, sammelten wir das Altglas.",
+        "ar": "عندما جاء الفيضان (مرة واحدة!)، جمعنا الزجاج القديم. (als + الماضي!)"
+      },
+      {
+        "de": "Wenn wir Zeit haben, wandern wir.",
+        "ar": "كلما كان لدينا وقت، نتجوّل. (wenn + الدأب!)"
+      },
+      {
+        "de": "Bevor wir die Blumen gossen, trennten wir den Abfall.",
+        "ar": "قبل أن نسقي الزهور، فصلنا النفايات. (bevor + الفعل آخراً!)"
+      },
+      {
+        "de": "Wenn die Sonne scheint, wandern wir.",
+        "ar": "كلما أشرقت الشمس، نتجوّل. (دأب وتكرار!)"
+      },
+      {
+        "de": "Als wir über die Wiese wanderten, genossen wir die Ruhe.",
+        "ar": "عندما تجوّلنا عبر المرج (مرة!)، استمتعنا بالهدوء. (als + الماضي!)"
+      },
+      {
+        "de": "Bevor wir die Blumen gegossen hatten, trennten wir den Abfall.",
+        "ar": "قبل أن نكن قد سقينا الزهور، فصلنا النفايات. (bevor + الماضي التام الأسبق — كـnachdem!)"
+      }
+    ],
+    "inferencePromptAr": "لاحظ: als + ماضٍ مرة واحدة (kam/wanderten/genossen)! wenn + دأب (Präsens!)! bevor/nachdem + الفعل آخراً! — قارن: «Als die Sonne schien» (يوم بعينه) و«Wenn die Sonne scheint» (كل يوم!).",
+    "ruleDe": "Als die Überschwemmung kam, sammelten wir das Altglas. · Wenn wir Zeit haben, wandern wir. · Bevor wir die Blumen gossen, trennten wir den Abfall.",
+    "ruleAr": "(1) als + الماضي = عندما (مرة واحدة!) (2) wenn + الفعل الثاني = كلما/عندما (دأب!) (3) bevor + الفعل آخراً! (4) als مرة، وwenn دأب — لا تخلط!",
+    "contrastAr": "العربية: «عندما» واحدة للمرتين! والألمانية: als للمرة، وwenn للعادة! (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "als + ماضٍ = مرة واحدة! (Als die Überschwemmung kam!)",
+      "wenn + الفعل الثاني = دأب وتكرار! (Wenn wir Zeit haben!)",
+      "bevor + الفعل آخراً! (كـnachdem!)",
+      "als مرة، وwenn دأب — الفعل يكشف الفرق!"
+    ],
+    "beads": [
+      "Als die Überschwemmung kam, sammelten wir das Altglas.",
+      "Wenn wir Zeit haben, wandern wir.",
+      "Bevor wir die Blumen gossen, trennten wir den Abfall.",
+      "Als wir über die Wiese wanderten, genossen wir die Ruhe.",
+      "Wenn die Sonne scheint, wandern wir.",
+      "Bevor wir die Blumen gegossen hatten, trennten wir den Abfall."
+    ],
+    "properNouns": []
+  },
+  "usedInLessons": [
+    "b1-u7-d3"
+  ]
+}
