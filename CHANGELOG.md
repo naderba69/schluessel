@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-06 — الدفعة 419: D465 — b1-u7-d4 «البيئة — الأفعال + zu + المصدر» — 11 كلمة + ars-verb-zu (الدفعة 419 · v7.11)
+يوم الأفعال والمصادر! — **11 كلمة** (verwenden يستخدم · Metall المعدن · wertvoll ثمين · wertlos بلا قيمة · ordentlich مرتّب · fördern يشجّع · Unterstützung الدعم · Mitglied العضو · Versammlung التجمّع · Protest الاحتجاج · Einfluss التأثير) + قاعدة **ars-verb-zu**: «الأفعال + zu + المصدر!» (versuchen zu! anfangen zu! aufhören zu! — لكن möchte/kann بلا zu!) — مصيدة العربية: «أن» تُحذف أحياناً فتُحذف zu!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-06 — الدفعة 418: D464 — b1-u7-d3 «البيئة — عندما: مرة أم دأب؟» — 11 كلمة + ars-als-wenn-bevor (الدفعة 418 · v7.10)
 يوم أدوات الزمان! — **11 كلمة** (Verpackung التغليف · Wertstoff مادة التدوير · Altglas الزجاج القديم · Demonstration المظاهرة · Feinstaub الجسيمات الدقيقة · Katastrophe الكارثة · Mülltrennung فرز النفايات · umweltfreundlich صديق للبيئة · Überschwemmung الفيضان · Ozon الأوزون · bevor قبل أن!) + قاعدة **ars-als-wenn-bevor**: «عندما: مرة أم دأب؟» (Als die Überschwemmung kam! ← مرة · Wenn wir Zeit haben! ← دأب · Bevor wir gingen! ← قبل أن!) — العربية «عندما» واحدة والألمانية اثنتان!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.

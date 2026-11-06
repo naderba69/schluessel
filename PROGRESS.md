@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 419 (2026-11-06) — D465: b1-u7-d4 «البيئة — الأفعال + zu + المصدر» — 11 كلمة + ars-verb-zu (الدفعة 419 · v7.11)
+- **الخلاصة:** يوم الأفعال والمصادر! — **11 كلمة** (verwenden يستخدم · Metall المعدن · wertvoll ثمين · wertlos بلا قيمة · ordentlich مرتّب · fördern يشجّع · Unterstützung الدعم · Mitglied العضو · Versammlung التجمّع · Protest الاحتجاج · Einfluss التأثير) + قاعدة **ars-verb-zu**: «الأفعال + zu + المصدر!» (versuchen zu! anfangen zu! aufhören zu! — لكن möchte/kann بلا zu!) — مصيدة العربية: «أن» تُحذف أحياناً فتُحذف zu!
+- **التالي:** b1-u7-d5!
+
 ## الدفعة 418 (2026-11-06) — D464: b1-u7-d3 «البيئة — عندما: مرة أم دأب؟» — 11 كلمة + ars-als-wenn-bevor (الدفعة 418 · v7.10)
 - **الخلاصة:** يوم أدوات الزمان! — **11 كلمة** (Verpackung التغليف · Wertstoff مادة التدوير · Altglas الزجاج القديم · Demonstration المظاهرة · Feinstaub الجسيمات الدقيقة · Katastrophe الكارثة · Mülltrennung فرز النفايات · umweltfreundlich صديق للبيئة · Überschwemmung الفيضان · Ozon الأوزون · bevor قبل أن!) + قاعدة **ars-als-wenn-bevor**: «عندما: مرة أم دأب؟» (Als die Überschwemmung kam! ← مرة · Wenn wir Zeit haben! ← دأب · Bevor wir gingen! ← قبل أن!) — العربية «عندما» واحدة والألمانية اثنتان!
 - **التالي:** b1-u7-d4!
