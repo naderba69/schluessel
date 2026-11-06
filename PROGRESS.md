@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 412 (2026-11-06) — D458: b1-u6-d4 «الطوارئ والمساعدة» — 13 كلمة + ars-konj-ii-modal!
+- **الخلاصة:** الطوارئ والمساعدة في السفر! — **13 كلمة** (Notruf «نداء الطوارئ» · Feuerwehr «الإطفاء» · retten «ينقذ» · Notausgang «مخرج الطوارئ» · Rettung «الإنقاذ» · Unglück «الحادث» · Dieb «اللص» · Alarm «الإنذار» · Brieftasche «المحفظة» · Besserung «التعافي» · anzeigen «يبلّغ عن» · Batterie «البطارية» · Aushilfe «المعين») + **ars-konj-ii-modal**: الماضي الافتراضي مع الأدوات! (**hätte + مصدرين آخراً**: «Hätten Sie helfen können?» / «Ich hätte den Notruf rufen sollen!»)
+- **التالي:** b1-u6-d5 — ثم d6 ومعركة الوحدة 6!
+
 ## الدفعة 411 (2026-11-06) — D457: b1-u6-d3 «الشكوى المهذّبة — Konj II الماضي» — 13 كلمة + ars-konj-ii-perfekt!
 - **الخلاصة:** الشكوى المهذّبة في السفر! — **13 كلمة** (Beschwerde «الشكوى» · Verlust «الفقد» · Ersatz «العوض» · Fundbüro «مكتب المفقودات» · Schaden «العطب» · Ware «البضاعة» · berechnen «يحسب المبلغ» · umtauschen «يستبدل» · Alternative «البديل» · Forderung «المطالبة» · wütend «غاضب» · ärgerlich «مزعج» · Dokument «الوثيقة») + **ars-konj-ii-perfekt**: الماضي الافتراضي! (**hätte/wäre + التصريف الثالث آخراً!**) — «Ich hätte den früheren Zug genommen, dann wäre der Verlust nicht passiert!»
 - **التالي:** b1-u6-d4 — ثم d5..d6 ومعركة الوحدة 6!

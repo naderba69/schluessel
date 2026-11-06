@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D458 (2026-11-06): b1-u6-d4 «الطوارئ والمساعدة» — 13 كلمة + ars-konj-ii-modal!
+- **الدفعة:** 412 · **الموجّه:** 7.4
+- **للقارئ:** الطوارئ والمساعدة في السفر! — **13 كلمة** (Notruf «نداء الطوارئ» · Feuerwehr «الإطفاء» · retten «ينقذ» · Notausgang «مخرج الطوارئ» · Rettung «الإنقاذ» · Unglück «الحادث» · Dieb «اللص» · Alarm «الإنذار» · Brieftasche «المحفظة» · Besserung «التعافي» · anzeigen «يبلّغ عن» · Batterie «البطارية» · Aushilfe «المعين») + **ars-konj-ii-modal**: الماضي الافتراضي مع الأدوات! (**hätte + مصدرين آخراً**: «Hätten Sie helfen können?» / «Ich hätte den Notruf rufen sollen!»)
+- **بطاقة قرار:** «المصدر المزدوج» (helfen können! rufen sollen!) آخراً بعد المفعول — والمصيدة: «~~Hätten Sie können helfen?~~» (الترتيب!) و«hätte ≠ hatte» و«kann ≠ hätte … können»! كل الأدوات تأخذ hätte (haben) — تبسيط في صالح المتعلّم. «gefährlich» و«Ärztin» مسجّلتان (خطأ طيّ umlaut في التعدين — N-296!) فجاءتا Rettung/Unglück. تصحيح نطق **Notruf** (o ممدودة!) = معجم **268** + إعادة توليد 1. الـdry-run قبل الكتابة أعاد الميزانية (5 بطاقات صوت · w-srs 0.349 ✓)!
+- **الفهرس العكسي:** §22.9 الدفعة 412 (v7.4) · ars-konj-ii-modal (shufra!) · b1-lesson-upgrade (34 درساً!).
+- **الأيام والاختبارات:** **u6-d4 13 كلمة** — المسار B1: u1 71 + u2 69 + u3 76 + u4 75 + u5 67 + u6 52 = **410 كلمة** · u6: d1..d3 ✓ · **d4 الطوارئ + الأدوات ✓** · d5..d6 · المعركة.
+- **الاختبارات:** npm test **1739/1739 ✓** · tsc ✓ · validate-content **2483 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u6-d4 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** (2908 كلمة) · goethe-b1 **1610/2893 (56%) + 12** (Rettung خارج القائمة!).
+- **الأرقام:** كلمة **1991** · دروس **208** · مسارات **3800** · معجم **268** · عبارات **4495** · صوت **1064** · duden **947** · w-srs **0.349 ≤ 0.35**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u6-d5 — ثم d6 ومعركة الوحدة 6!
+
 ## D457 (2026-11-06): b1-u6-d3 «الشكوى المهذّبة — Konj II الماضي» — 13 كلمة + ars-konj-ii-perfekt!
 - **الدفعة:** 411 · **الموجّه:** 7.3
 - **للقارئ:** الشكوى المهذّبة في السفر! — **13 كلمة** (Beschwerde «الشكوى» · Verlust «الفقد» · Ersatz «العوض» · Fundbüro «مكتب المفقودات» · Schaden «العطب» · Ware «البضاعة» · berechnen «يحسب المبلغ» · umtauschen «يستبدل» · Alternative «البديل» · Forderung «المطالبة» · wütend «غاضب» · ärgerlich «مزعج» · Dokument «الوثيقة») + **ars-konj-ii-perfekt**: الماضي الافتراضي! (**hätte/wäre + التصريف الثالث آخراً!**) — «Ich hätte den früheren Zug genommen, dann wäre der Verlust nicht passiert!»

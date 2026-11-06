@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-06 — الدفعة 412: D458 — b1-u6-d4 «الطوارئ والمساعدة» — 13 كلمة + ars-konj-ii-modal!
+الطوارئ والمساعدة في السفر! — **13 كلمة** (Notruf «نداء الطوارئ» · Feuerwehr «الإطفاء» · retten «ينقذ» · Notausgang «مخرج الطوارئ» · Rettung «الإنقاذ» · Unglück «الحادث» · Dieb «اللص» · Alarm «الإنذار» · Brieftasche «المحفظة» · Besserung «التعافي» · anzeigen «يبلّغ عن» · Batterie «البطارية» · Aushilfe «المعين») + **ars-konj-ii-modal**: الماضي الافتراضي مع الأدوات! (**hätte + مصدرين آخراً**: «Hätten Sie helfen können?» / «Ich hätte den Notruf rufen sollen!»)
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-06 — الدفعة 411: D457 — b1-u6-d3 «الشكوى المهذّبة — Konj II الماضي» — 13 كلمة + ars-konj-ii-perfekt!
 الشكوى المهذّبة في السفر! — **13 كلمة** (Beschwerde «الشكوى» · Verlust «الفقد» · Ersatz «العوض» · Fundbüro «مكتب المفقودات» · Schaden «العطب» · Ware «البضاعة» · berechnen «يحسب المبلغ» · umtauschen «يستبدل» · Alternative «البديل» · Forderung «المطالبة» · wütend «غاضب» · ärgerlich «مزعج» · Dokument «الوثيقة») + **ars-konj-ii-perfekt**: الماضي الافتراضي! (**hätte/wäre + التصريف الثالث آخراً!**) — «Ich hätte den früheren Zug genommen, dann wäre der Verlust nicht passiert!»
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.

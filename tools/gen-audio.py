@@ -2227,6 +2227,19 @@ def build_all() -> None:
     ("word-aergerlich", "ärgerlich.", "aergerlich", ["b1-u6-d3"]),
     ("word-verzeihung", "die Verzeihung.", "verzeihung", ["b1-u6-d3"]),
     ("word-dokument", "das Dokument.", "dokument", ["b1-u6-d3"]),
+    ("word-notruf", "der Notruf.", "notruf", ["b1-u6-d4"]),
+    ("word-feuerwehr", "die Feuerwehr.", "feuerwehr", ["b1-u6-d4"]),
+    ("word-retten", "retten.", "retten", ["b1-u6-d4"]),
+    ("word-notausgang", "der Notausgang.", "notausgang", ["b1-u6-d4"]),
+    ("word-rettung", "die Rettung.", "rettung", ["b1-u6-d4"]),
+    ("word-unglueck", "das Unglück.", "unglueck", ["b1-u6-d4"]),
+    ("word-dieb", "der Dieb.", "dieb", ["b1-u6-d4"]),
+    ("word-alarm", "der Alarm.", "alarm", ["b1-u6-d4"]),
+    ("word-brieftasche", "die Brieftasche.", "brieftasche", ["b1-u6-d4"]),
+    ("word-besserung", "die Besserung.", "besserung", ["b1-u6-d4"]),
+    ("word-anzeigen", "anzeigen.", "anzeigen", ["b1-u6-d4"]),
+    ("word-batterie", "die Batterie.", "batterie", ["b1-u6-d4"]),
+    ("word-aushilfe", "die Aushilfe.", "aushilfe", ["b1-u6-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
