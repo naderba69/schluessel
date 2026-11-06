@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 420 (2026-11-06) — D466: b1-u7-d5 «البيئة — الأزواج المتلازمة!» — 13 كلمة + ars-sowohl-als-auch (الدفعة 420 · v7.12)
+- **الخلاصة:** يوم الأزواج المتلازمة! — **13 كلمة** (nutzen يستفيد · Verbot الحظر · Recht الحق · Vergangenheit الماضي · Modell النموذج · Gewinn الربح · Schuld الذنب (والجمع Schulden = الديون!) · Gewissen الضمير · reif ناضج («Die Zeit ist reif»!) · vorhaben يعتزم («Ich habe vor, zu helfen» — مرساة zu!) + sowohl/weder/entweder (أدوات الأزواج — كلمات كاملة!). القاعدة: **sowohl…als auch · weder…noch · nicht nur…sondern auch · entweder…oder** — كل زوج بقريئه، والفعل بعد الثاني!
+- **التالي:** b1-u7-d6 (التوليف!) ثم battle-u7 كاملة.
+
 ## الدفعة 419 (2026-11-06) — D465: b1-u7-d4 «البيئة — الأفعال + zu + المصدر» — 11 كلمة + ars-verb-zu (الدفعة 419 · v7.11)
 - **الخلاصة:** يوم الأفعال والمصادر! — **11 كلمة** (verwenden يستخدم · Metall المعدن · wertvoll ثمين · wertlos بلا قيمة · ordentlich مرتّب · fördern يشجّع · Unterstützung الدعم · Mitglied العضو · Versammlung التجمّع · Protest الاحتجاج · Einfluss التأثير) + قاعدة **ars-verb-zu**: «الأفعال + zu + المصدر!» (versuchen zu! anfangen zu! aufhören zu! — لكن möchte/kann بلا zu!) — مصيدة العربية: «أن» تُحذف أحياناً فتُحذف zu!
 - **التالي:** b1-u7-d5!

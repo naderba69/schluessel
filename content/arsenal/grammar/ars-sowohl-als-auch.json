@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-sowohl-als-auch",
+  "kind": "shufra",
+  "title": {
+    "ar": "الأزواج المتلازمة!",
+    "de": "sowohl … als auch · weder … noch · nicht nur … sondern auch · entweder … oder"
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "red",
+  "payload": {
+    "topicAr": "أدوات الربط بالأزواج! (sowohl…als auch! weder…noch! nicht nur…sondern auch! entweder…oder!)",
+    "sceneAr": "البيئة: كلاهما مهمة! لا هذا ولا ذاك! ليس فقط الربح بل الحق أيضاً! كل زوج كالقُرينين — الأول هنا والثاني هناك!",
+    "examples": [
+      {
+        "de": "Sowohl die Natur als auch die Erde sind wichtig.",
+        "ar": "كلاهما الطبيعة والأرض مهمّتان. (sowohl…als auch!)"
+      },
+      {
+        "de": "Weder der Feinstaub noch das Ozon sind gut.",
+        "ar": "لا الجسيمات الدقيقة ولا الأوزون جيّدان. (weder…noch!)"
+      },
+      {
+        "de": "Nicht nur der Gewinn, sondern auch das Recht!",
+        "ar": "ليس فقط الربح، بل الحق أيضاً! (nicht nur…sondern auch!)"
+      },
+      {
+        "de": "Entweder das Verbot oder die Aktion.",
+        "ar": "إمّا الحظر أو الحملة. (entweder…oder!)"
+      },
+      {
+        "de": "Das ist gut und wichtig.",
+        "ar": "هذا جيّد ومهم. (زوج واحد بسيط: und!)"
+      },
+      {
+        "de": "Sowohl das Modell als auch die Aktion sind gut.",
+        "ar": "كلاهما النموذج والحملة جيّدان. (sowohl…als auch!)"
+      }
+    ],
+    "inferencePromptAr": "لاحظ: كل زوج له قرينه! (sowohl ← als auch · weder ← noch · nicht nur ← sondern auch · entweder ← oder!) — ولا يُخلط: und لا تحلّ محلّ als auch! وsondern للتصحيح لا aber!",
+    "ruleDe": "Sowohl die Natur als auch die Erde sind wichtig. · Nicht nur der Gewinn, sondern auch das Recht! · Entweder das Verbot oder die Aktion.",
+    "ruleAr": "(1) sowohl … als auch = كلاهما … وأيضاً! (2) weder … noch = لا … ولا! (3) nicht nur … sondern auch = ليس فقط … بل أيضاً! (4) entweder … oder = إمّا … أو! كل زوج يُحفظ معاً!",
+    "contrastAr": "العربية: «كلاهما…و» — الواو وحدها! والألمانية: sowohl…als auch زوج كامل! (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "كل زوج يُحفظ معاً! (sowohl ← als auch! weder ← noch!)",
+      "nicht nur … sondern auch! (sondern للتصحيح — لا aber!)",
+      "entweder … oder! (لا weder…oder!)",
+      "الفعل بعد الجزء الثاني! (Sowohl die Natur als auch die Erde SIND wichtig!)"
+    ],
+    "beads": [
+      "Sowohl die Natur als auch die Erde sind wichtig.",
+      "Weder der Feinstaub noch das Ozon sind gut.",
+      "Nicht nur der Gewinn, sondern auch das Recht!",
+      "Entweder das Verbot oder die Aktion.",
+      "Das ist gut und wichtig.",
+      "Sowohl das Modell als auch die Aktion sind gut."
+    ],
+    "properNouns": []
+  },
+  "usedInLessons": [
+    "b1-u7-d5"
+  ]
+}

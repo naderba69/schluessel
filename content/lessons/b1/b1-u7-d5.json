@@ -1,0 +1,456 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u7-d5",
+  "level": "B1",
+  "unit": 7,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Sowohl die Natur als auch die Erde sind wichtig!",
+    "ar": "الأزواج المتلازمة! (sowohl…als auch! weder…noch! nicht nur…sondern auch! entweder…oder!)"
+  },
+  "canDoDaily": [
+    "يربط بالأزواج المتلازمة! (كلاهما…وأيضاً! لا هذا ولا ذاك! ليس فقط…بل أيضاً! إمّا…أو!)",
+    "يضع كل قريء في مكانه! (sowohl في الأول، وals auch في الثاني! الفعل بعد الثاني!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "verwenden",
+      "wertvoll",
+      "mitglied"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«كلاهما الطبيعة والأرض مهمّتان.» — بأي زوج؟"
+        },
+        "choices": [
+          "Sowohl die Natur als auch die Erde sind wichtig.",
+          "Sowohl die Natur und die Erde sind wichtig.",
+          "Die Natur sowohl als auch die Erde sind wichtig."
+        ],
+        "answer": "Sowohl die Natur als auch die Erde sind wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الضمير»؟"
+        },
+        "choices": [
+          "das Gewissen",
+          "die Schuld",
+          "das Recht"
+        ],
+        "answer": "das Gewissen",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u7-d4: versuchen + zu + المصدر! — اليوم: الأزواج المتلازمة! (sowohl…als auch!)",
+      "من u1-d5: أدوات الربط المفردة (deshalb/trotzdem!) — اليوم: الأزواج المتلازمة: sowohl…als auch!"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "nutzen",
+      "verbot",
+      "recht",
+      "vergangenheit",
+      "modell",
+      "gewinn",
+      "schuld",
+      "gewissen",
+      "reif",
+      "vorhaben",
+      "sowohl",
+      "weder",
+      "entweder"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-sowohl-als-auch"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Sowohl die Natur als auch die Erde sind wichtig!",
+        "ar": "يتحدّث عن البيئة بالأزواج المتلازمة!"
+      },
+      "situation": {
+        "de": "Das Recht, das Gewissen, die Aktion.",
+        "ar": "العمل: الحق! الضمير! الحملة!"
+      },
+      "successCriteria": [
+        "كلمات اليوم العشر كلها!",
+        "كل زوج بقريئه! (sowohl…als auch! weder…noch! nicht nur…sondern auch! entweder…oder!)",
+        "الفعل بعد الجزء الثاني! (Sowohl die Natur als auch die Erde SIND wichtig!)",
+        "sondern للتصحيح! (لا aber!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات الحق والضمير!",
+          "das Recht! das Gewissen! die Schuld!"
+        ],
+        "interleavedWith": [
+          "umwelt",
+          "klima",
+          "wiese"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الحظر",
+                "de": "das Verbot"
+              },
+              {
+                "ar": "الحق",
+                "de": "das Recht"
+              },
+              {
+                "ar": "الذنب",
+                "de": "die Schuld"
+              },
+              {
+                "ar": "الضمير",
+                "de": "das Gewissen"
+              }
+            ],
+            "why": "das Verbot الحظر (das! + Verbote!) · das Recht الحق (das! + Rechte!) · die Schuld الذنب (die! جمعها Schulden = الديون!) · das Gewissen الضمير (das!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "النموذج",
+                "de": "das Modell"
+              },
+              {
+                "ar": "الربح",
+                "de": "der Gewinn"
+              },
+              {
+                "ar": "الماضي",
+                "de": "die Vergangenheit"
+              },
+              {
+                "ar": "ناضج",
+                "de": "reif"
+              }
+            ],
+            "why": "das Modell النموذج (das! + Modelle!) · der Gewinn الربح (der! + Gewinne!) · die Vergangenheit الماضي (die! مركّب Vergangen+heit!) · reif ناضج («Die Zeit ist reif»!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يستفيد",
+                "de": "nutzen"
+              },
+              {
+                "ar": "يعتزم",
+                "de": "vorhaben"
+              },
+              {
+                "ar": "يستخدم",
+                "de": "verwenden"
+              }
+            ],
+            "why": "nutzen يستفيد (hat genutzt!) · vorhaben يعتزم (منفصل: habe … vor! + zu + مصدر!) — ومراجعة: verwenden يستخدم (hat verwendet!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "كل زوج بقريئه!",
+          "sowohl ← als auch! weder ← noch!"
+        ],
+        "interleavedWith": [
+          "wald",
+          "wolke",
+          "blume"
+        ],
+        "items": [
+          {
+            "q": "___ die Natur als auch die Erde sind wichtig. (sowohl! الزوج!)",
+            "a": "Sowohl",
+            "why": "sowohl … als auch = كلاهما … وأيضاً! (الزوج كامل!)"
+          },
+          {
+            "q": "Nicht nur der Gewinn, ___ auch das Recht! (sondern!)",
+            "a": "sondern",
+            "why": "nicht nur … sondern auch! (sondern للتصحيح — لا aber!)"
+          },
+          {
+            "q": "___ das Verbot oder die Aktion! (entweder!)",
+            "a": "Entweder",
+            "why": "entweder … oder = إمّا … أو! (لا weder…oder!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأزواج لا تُخلط!",
+          "als auch لا und! sondern لا aber!"
+        ],
+        "interleavedWith": [
+          "natur",
+          "regen",
+          "wetter"
+        ],
+        "items": [
+          {
+            "q": "~~Sowohl die Natur und die Erde sind wichtig.~~",
+            "a": "Sowohl die Natur als auch die Erde sind wichtig.",
+            "why": "الزوج كامل: sowohl … als auch! (und وحدها لا تكفي!)"
+          },
+          {
+            "q": "~~Nicht nur der Gewinn, aber auch das Recht.~~",
+            "a": "Nicht nur der Gewinn, sondern auch das Recht.",
+            "why": "sondern للتصحيح («بل أيضاً»!) لا aber!"
+          },
+          {
+            "q": "~~Weder das Verbot oder die Aktion.~~",
+            "a": "Weder das Verbot noch die Aktion.",
+            "why": "weder … noch = لا … ولا! (oder مع entweder فقط!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "sowohl…als auch!",
+          "vorhaben + zu + مصدر!"
+        ],
+        "interleavedWith": [
+          "katze",
+          "arbeit",
+          "sommer"
+        ],
+        "items": [
+          {
+            "q": "قل بالألمانية: «كلاهما الطبيعة والأرض مهمّتان.» (sowohl…als auch!)",
+            "a": "Sowohl die Natur als auch die Erde sind wichtig.",
+            "why": "sowohl … als auch! الفعل بعد الثاني (sind wichtig!)"
+          },
+          {
+            "q": "قل بالألمانية: «أعتزم أن أساعد.» (vorhaben + zu + مصدر!)",
+            "a": "Ich habe vor, zu helfen.",
+            "why": "vorhaben منفصل: habe … vor! + zu helfen (zu + مصدر!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الضمير»؟",
+            "a": "das Gewissen"
+          },
+          {
+            "q": "«كلاهما الطبيعة والأرض مهمّتان.»؟",
+            "a": "Sowohl die Natur als auch die Erde sind wichtig."
+          },
+          {
+            "q": "«الحظر»؟",
+            "a": "das Verbot"
+          },
+          {
+            "q": "«يستفيد»؟",
+            "a": "nutzen"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الحق»؟",
+            "a": "das Recht"
+          },
+          {
+            "q": "«ليس فقط الربح، بل الحق أيضاً!»؟",
+            "a": "Nicht nur der Gewinn, sondern auch das Recht!"
+          },
+          {
+            "q": "«النموذج»؟",
+            "a": "das Modell"
+          },
+          {
+            "q": "«يعتزم»؟",
+            "a": "vorhaben"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الربح»؟",
+            "a": "der Gewinn"
+          },
+          {
+            "q": "«أعتزم أن أساعد.»؟",
+            "a": "Ich habe vor, zu helfen."
+          },
+          {
+            "q": "«الماضي»؟",
+            "a": "die Vergangenheit"
+          },
+          {
+            "q": "«ناضج»؟",
+            "a": "reif"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Guten Tag! Sowohl die Natur als auch die Erde sind wichtig. Das Modell ist nicht nur gut, sondern auch wichtig. Nicht nur der Gewinn, sondern auch das Recht! Entweder das Verbot oder die Aktion. Das Gewissen ist wichtig: keine Schuld! Wir nutzen das Verbot. Die Vergangenheit ist wichtig. Ich habe vor, zu helfen. Die Zeit ist reif!",
+      "ar": "مرحباً! كلاهما الطبيعة والأرض مهمّتان. النموذج ليس فقط جيّداً، بل مهماً أيضاً. ليس فقط الربح، بل الحق أيضاً! إمّا الحظر أو الحملة. الضمير مهم: لا ذنب! نحن نستخدم الحظر. الماضي مهم. أنا أعتزم أن أساعد. الوقت ناضج (حان الوقت!)"
+    },
+    "srsBundleWordIds": [
+      "nutzen",
+      "verbot",
+      "recht",
+      "vergangenheit",
+      "modell",
+      "gewinn",
+      "schuld",
+      "gewissen",
+      "reif",
+      "vorhaben",
+      "sowohl",
+      "weder",
+      "entweder"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "sowohl … und!",
+          "de": "~~Sowohl die Natur und die Erde sind wichtig.~~"
+        },
+        "correct": {
+          "ar": "كلاهما…وأيضاً: sowohl … als auch!",
+          "de": "Sowohl die Natur als auch die Erde sind wichtig."
+        },
+        "exercise": {
+          "q": "Sowohl die Natur ___ die Erde sind wichtig. (als auch! الزوج!)",
+          "a": "als auch"
+        },
+        "whyArabicSpeakerFails": "العربية: «كلاهما الطبيعة والأرض» — بلا زوج! والألمانية: sowohl…als auch زوج كامل (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "aber مع nicht nur!",
+          "de": "~~Nicht nur der Gewinn, aber auch das Recht.~~"
+        },
+        "correct": {
+          "ar": "ليس فقط…بل أيضاً: sondern auch!",
+          "de": "Nicht nur der Gewinn, sondern auch das Recht."
+        },
+        "exercise": {
+          "q": "Nicht nur der Gewinn, ___ auch das Recht! (sondern!)",
+          "a": "sondern"
+        },
+        "whyArabicSpeakerFails": "sondern للتصحيح («بل»!) لا aber («لكن»!) — العربية تخلط «بل/لكن» (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "weder … oder!",
+          "de": "~~Weder das Verbot oder die Aktion.~~"
+        },
+        "correct": {
+          "ar": "لا هذا ولا ذاك: weder … noch!",
+          "de": "Weder das Verbot noch die Aktion."
+        },
+        "exercise": {
+          "q": "Weder das Verbot ___ die Aktion. (noch!)",
+          "a": "noch"
+        },
+        "whyArabicSpeakerFails": "weder قريئها noch دائماً! (oder مع entweder فقط!) — كل زوج بقريئه (خريطة التداخل 10‑ي)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/nutzen",
+      "https://www.duden.de/rechtschreibung/Verbot",
+      "https://www.duden.de/rechtschreibung/Recht",
+      "https://www.duden.de/rechtschreibung/Vergangenheit",
+      "https://www.duden.de/rechtschreibung/Modell",
+      "https://www.duden.de/rechtschreibung/Gewinn",
+      "https://www.duden.de/rechtschreibung/Schuld",
+      "https://www.duden.de/rechtschreibung/Gewissen",
+      "https://www.duden.de/rechtschreibung/reif",
+      "https://www.duden.de/rechtschreibung/vorhaben",
+      "https://www.duden.de/rechtschreibung/sowohl",
+      "https://www.duden.de/rechtschreibung/weder",
+      "https://www.duden.de/rechtschreibung/entweder"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-sowohl-als-auch",
+    "ars-verb-zu"
+  ],
+  "audioManifestRefs": [
+    "word-nutzen",
+    "word-verbot",
+    "word-recht",
+    "word-vergangenheit",
+    "word-modell",
+    "word-gewinn",
+    "word-schuld",
+    "word-gewissen",
+    "word-reif",
+    "word-vorhaben",
+    "word-sowohl",
+    "word-weder",
+    "word-entweder"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (البيئة والطبيعة — الأزواج المتلازمة!)",
+    "goetheWordListOverlap": [
+      "nutzen",
+      "verbot",
+      "recht",
+      "vergangenheit",
+      "modell",
+      "gewinn",
+      "schuld",
+      "gewissen",
+      "reif",
+      "vorhaben",
+      "sowohl",
+      "weder",
+      "entweder"
+    ]
+  }
+}

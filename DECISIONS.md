@@ -3798,6 +3798,19 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D466 (2026-11-06): b1-u7-d5 «البيئة — الأزواج المتلازمة!» — 13 كلمة + ars-sowohl-als-auch (الدفعة 420 · v7.12)
+- **الدفعة:** 420 · **الموجّه:** 7.12
+- **للقارئ:** يوم الأزواج المتلازمة! — **13 كلمة** (nutzen يستفيد · Verbot الحظر · Recht الحق · Vergangenheit الماضي · Modell النموذج · Gewinn الربح · Schuld الذنب (والجمع Schulden = الديون!) · Gewissen الضمير · reif ناضج («Die Zeit ist reif»!) · vorhaben يعتزم («Ich habe vor, zu helfen» — مرساة zu!) + sowohl/weder/entweder (أدوات الأزواج — كلمات كاملة!). القاعدة: **sowohl…als auch · weder…noch · nicht nur…sondern auch · entweder…oder** — كل زوج بقريئه، والفعل بعد الثاني!
+
+- **الدرس:** b1-u7-d5 — أزواج الربط المتلازمة (sowohl…als auch! weder…noch! nicht nur…sondern auch! entweder…oder!) · القاعدة shufra كاملة (6 خرزات — الزوج الكامل مع الفعل بعد الثاني + und/sondern/aber كتباين!) · 10 كلمات محتوى (nutzen/Verbot/Recht/Vergangenheit/Modell/Gewinn/Schuld(الجمع Schulden=الديون!)/Gewissen/reif/vorhaben(hat vor!)) + sowohl/weder/entweder (كلمات كاملة — قانون الجبهة!)
+- **الحكمة المستفادة:** «كل زوج بقريئه!» — والكلمة الواحدة تحتاج بطاقة ولو كانت أداة (sowohl رُفضت وهي عارية!) · والأزواج تُعلَّم بالثوابت لا بالتفرقة.
+- **ما أمسكته الأدوات هذه المرة:** (1) كلمة `recht` الجديدة اصطدمت بـ«rechte» في a1-u9-d4 (laterWordLeak: صيغة كلمة لاحقة في نص درس سابق!) ⇐ الحل بآليّة D188: `borrowedWords` معلنة في a1-u9-d4 («تُعلن لا تُلوى»!) — سابقة الحيّة: fragt/erste/anders/BAcker! (2) إدخال المعجم يحتاج حقول `espeak` كاملة (بلاها: KeyError في audit + انهيار regen-track!) ⇐ الإدخال بالشكل الكامل referenceIpa/forms/contexts/regeneratedTracks! (3) أداة التوليد المفردة = `tools/regen-track.ts <trackId>` (voice-female.ts غير موجودة!). (4) «rechte» في الاختيار الخاطئ ليست خطأً لغوياً — لا تُسجَّل في misspellings!
+- **الفهرس العكسي:** +u7-d5 على ars-sowohl-als-auch و13 الكلمات · a1-u9-d4 += مستعارة rechte (من recht!) · القاعدة الجديدة في سجل القواعد الأربع.
+- **الأيام:** d6 التوليف (اليوم 6!) — كلمتان + ars-konj-ii مرساة + كلمة ختامية (نفس نمط d4!) — ثم battle-u7! (nextId → b1-u7-d1 جاهز).
+- **الأرقام:** كلمات 2066 · دروس 215 · مسارات 3875 (أسماء 1111!) · بنك 4603 · goethe-b1 1668/2893 (58%) · w-srs 0.348 · قاموس 280 (entweder!) · duden 1022 · voice 1111 · الدفعة 420.
+- **البوابة:** vitest ✓ 1759/1759 (136 ملفاً) · tsc ✓ · validate-content ✓ 2571/0/0 · build ✓.
+- **التالي:** b1-u7-d6 (التوليف!) ثم battle-u7 كاملة.
+
 ## D465 (2026-11-06): b1-u7-d4 «البيئة — الأفعال + zu + المصدر» — 11 كلمة + ars-verb-zu (الدفعة 419 · v7.11)
 - **الدفعة:** 419 · **الموجّه:** 7.11
 - **للقارئ:** يوم الأفعال والمصادر! — **11 كلمة** (verwenden يستخدم · Metall المعدن · wertvoll ثمين · wertlos بلا قيمة · ordentlich مرتّب · fördern يشجّع · Unterstützung الدعم · Mitglied العضو · Versammlung التجمّع · Protest الاحتجاج · Einfluss التأثير) + قاعدة **ars-verb-zu**: «الأفعال + zu + المصدر!» (versuchen zu! anfangen zu! aufhören zu! — لكن möchte/kann بلا zu!) — مصيدة العربية: «أن» تُحذف أحياناً فتُحذف zu!
