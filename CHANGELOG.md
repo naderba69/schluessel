@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-06 — الدفعة 414: D460 — b1-u6-d6 «التوليف: العودة من الرحلة» — 2 كلمة + الوحدة 6 كاملة!
+يوم التكامل! — **كلمتان** (Rückkehr «العودة» · unvergesslich «لا يُنسى») + توليف الوحدة كاملة في نصٍّ واحد: «Ich hätte gern einen Ausflug ins Tal gemacht. Könnte ich bitte die Fahrkarte haben? Wenn ich mehr Bargeld hätte … Hätten Sie mir helfen können? … Die Reise war unvergesslich!» — كل خيوط الوحدة الخمسة معاً!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-06 — الدفعة 413: D459 — b1-u6-d5 «التسوّق والأسعار — Wenn + Konj II» — 13 كلمة + ars-wenn-konj-ii!
 التسوّق والأسعار في السفر! — **13 كلمة** (Kauf «الشراء» · Käufer «المشتري» · Schein «الورقة النقدية» · Bargeld «النقود» · Souvenir «التذكار» · verwechseln «يخلط بين» · Anzahlung «العربون» · Geldautomat «الصرّاف الآلي» · Entfernung «المسافة» · Abenteuer «المغامرة» · entdecken «يكتشف» · verbringen «يقضي الوقت» · gering «قليل») + **ars-wenn-konj-ii**: الشرط غير الواقع! (**Wenn ich mehr Bargeld hätte, könnte ich das kaufen!**)
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.

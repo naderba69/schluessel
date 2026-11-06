@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D460 (2026-11-06): b1-u6-d6 «التوليف: العودة من الرحلة» — 2 كلمة + الوحدة 6 كاملة!
+- **الدفعة:** 414 · **الموجّه:** 7.6
+- **للقارئ:** يوم التكامل! — **كلمتان** (Rückkehr «العودة» · unvergesslich «لا يُنسى») + توليف الوحدة كاملة في نصٍّ واحد: «Ich hätte gern einen Ausflug ins Tal gemacht. Könnte ich bitte die Fahrkarte haben? Wenn ich mehr Bargeld hätte … Hätten Sie mir helfen können? … Die Reise war unvergesslich!» — كل خيوط الوحدة الخمسة معاً!
+- **بطاقة قرار:** التوليف = خمس قواعد في ثماني جمل! (hätte gern · Könnte ich bitte · hätte+PII · hätte+Inf+Modal · wenn+Konj II) — usedArsenalIds الخمسة كلها (نمط D453) والمرساة ars-konj-ii أُضيف b1-u6-d6 لاستخدامها (§10‑ح). حارس المحطات: match ≥3 أزواج (زوجان في مجموعة = e-practice-item-shape!).
+- **الفهرس العكسي:** §22.9 الدفعة 414 (v7.6) · ars-konj-ii (usedInLessons +d6!) · b1-lesson-upgrade (36 درساً! الوحدة 6 كاملة!).
+- **الأيام والاختبارات:** **u6-d6 2 كلمة** — المسار B1: u1 71 + u2 69 + u3 76 + u4 75 + u5 67 + u6 67 = **425 كلمة** · u6: d1..d5 ✓ + **d6 التوليف ✓** — والوحدة 6 كاملة! (المعركة في D461).
+- **الاختبارات:** npm test **1739/1739 ✓** · tsc ✓ · validate-content **2501 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · check-lesson b1-u6-d6 **front 0 · later 0 · official 0 ✓** · pronunciation-audit **0 مخالفات** (2923 كلمة).
+- **الأرقام:** كلمة **2006** · دروس **210** · مسارات **3815** · معجم **272** · عبارات **4521** · صوت **1074** · duden **962** · w-srs **0.349 ≤ 0.35**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** معركة الوحدة B1-U6 (b1-unit6-proof) — البرهان السادس!
+
 ## D459 (2026-11-06): b1-u6-d5 «التسوّق والأسعار — Wenn + Konj II» — 13 كلمة + ars-wenn-konj-ii!
 - **الدفعة:** 413 · **الموجّه:** 7.5
 - **للقارئ:** التسوّق والأسعار في السفر! — **13 كلمة** (Kauf «الشراء» · Käufer «المشتري» · Schein «الورقة النقدية» · Bargeld «النقود» · Souvenir «التذكار» · verwechseln «يخلط بين» · Anzahlung «العربون» · Geldautomat «الصرّاف الآلي» · Entfernung «المسافة» · Abenteuer «المغامرة» · entdecken «يكتشف» · verbringen «يقضي الوقت» · gering «قليل») + **ars-wenn-konj-ii**: الشرط غير الواقع! (**Wenn ich mehr Bargeld hätte, könnte ich das kaufen!**)

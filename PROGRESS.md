@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 414 (2026-11-06) — D460: b1-u6-d6 «التوليف: العودة من الرحلة» — 2 كلمة + الوحدة 6 كاملة!
+- **الخلاصة:** يوم التكامل! — **كلمتان** (Rückkehr «العودة» · unvergesslich «لا يُنسى») + توليف الوحدة كاملة في نصٍّ واحد: «Ich hätte gern einen Ausflug ins Tal gemacht. Könnte ich bitte die Fahrkarte haben? Wenn ich mehr Bargeld hätte … Hätten Sie mir helfen können? … Die Reise war unvergesslich!» — كل خيوط الوحدة الخمسة معاً!
+- **التالي:** معركة الوحدة B1-U6 (b1-unit6-proof) — البرهان السادس!
+
 ## الدفعة 413 (2026-11-06) — D459: b1-u6-d5 «التسوّق والأسعار — Wenn + Konj II» — 13 كلمة + ars-wenn-konj-ii!
 - **الخلاصة:** التسوّق والأسعار في السفر! — **13 كلمة** (Kauf «الشراء» · Käufer «المشتري» · Schein «الورقة النقدية» · Bargeld «النقود» · Souvenir «التذكار» · verwechseln «يخلط بين» · Anzahlung «العربون» · Geldautomat «الصرّاف الآلي» · Entfernung «المسافة» · Abenteuer «المغامرة» · entdecken «يكتشف» · verbringen «يقضي الوقت» · gering «قليل») + **ars-wenn-konj-ii**: الشرط غير الواقع! (**Wenn ich mehr Bargeld hätte, könnte ich das kaufen!**)
 - **التالي:** b1-u6-d6 «التوليف» — ثم معركة الوحدة 6!
