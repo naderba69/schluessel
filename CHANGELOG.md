@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-06 — الدفعة 415: D461 — معركة الوحدة B1-U6 — 20/20 من أول تشغيل! (الدفعة 415 · v7.7)
+المعركة السادسة! — `tests/b1-unit6-proof.test.ts` (الوصفة المجرّبة: نسخ + تبديل + prefix += 6): دروس U6 الستة تُلعَب آلياً عبر المساعد المشترك — **20 اختباراً كلّها ناجحة من أول تشغيل**. الوحدات المبرهنة: A1-U1..U9 · A2-U1..U9 · B1-U1..U6 — **24 وحدة**!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-06 — الدفعة 414: D460 — b1-u6-d6 «التوليف: العودة من الرحلة» — 2 كلمة + الوحدة 6 كاملة!
 يوم التكامل! — **كلمتان** (Rückkehr «العودة» · unvergesslich «لا يُنسى») + توليف الوحدة كاملة في نصٍّ واحد: «Ich hätte gern einen Ausflug ins Tal gemacht. Könnte ich bitte die Fahrkarte haben? Wenn ich mehr Bargeld hätte … Hätten Sie mir helfen können? … Die Reise war unvergesslich!» — كل خيوط الوحدة الخمسة معاً!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
