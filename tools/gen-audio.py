@@ -2269,6 +2269,17 @@ def build_all() -> None:
     ("word-erde", "die Erde.", "erde", ["b1-u7-d1"]),
     ("word-nachdem", "nachdem.", "nachdem", ["b1-u7-d1"]),
     ("word-trennen", "trennen.", "trennen", ["b1-u7-d1"]),
+    ("word-duerre", "die Dürre.", "duerre", ["b1-u7-d2"]),
+    ("word-umweltschutz", "der Umweltschutz.", "umweltschutz", ["b1-u7-d2"]),
+    ("word-laerm", "der Lärm.", "laerm", ["b1-u7-d2"]),
+    ("word-plastik", "das Plastik.", "plastik", ["b1-u7-d2"]),
+    ("word-kunststoff", "der Kunststoff.", "kunststoff", ["b1-u7-d2"]),
+    ("word-dose", "die Dose.", "dose", ["b1-u7-d2"]),
+    ("word-verbrauchen", "verbrauchen.", "verbrauchen", ["b1-u7-d2"]),
+    ("word-aktion", "die Aktion.", "aktion", ["b1-u7-d2"]),
+    ("word-giftig", "giftig.", "giftig", ["b1-u7-d2"]),
+    ("word-forschung", "die Forschung.", "forschung", ["b1-u7-d2"]),
+    ("word-entwickeln", "entwickeln.", "entwickeln", ["b1-u7-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

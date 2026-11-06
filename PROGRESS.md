@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 417 (2026-11-06) — D463: b1-u7-d2 «البيئة — كل فعل بحرفّه الثابت!» — 11 كلمة + ars-verben-praep (الدفعة 417 · v7.9)
+- **الخلاصة:** اليوم الثاني من البيئة! — **11 كلمة** (Dürre الجفاف · Umweltschutz حماية البيئة · Lärm الضجيج · Plastik البلاستيك · Kunststoff المادة الاصطناعية · Dose العلبة · Aktion الحملة · Forschung البحث · giftig سام · verbrauchen يستهلك · entwickeln يطوّر) + قاعدة **ars-verben-praep**: «كل فعل بحرفّه الثابت!» (sich freuen auf + Akk · sorgen für + Akk · denken an + Akk · warten auf + Akk · helfen bei + Dativ!) — الأحرف تُحفظ مع الأفعال كالظلال!
+- **التالي:** b1-u7-d3!
+
 ## الدفعة 416 (2026-11-06) — D462: b1-u7-d1 «البيئة والطبيعة — nachdem + Plusquamperfekt» — بداية الوحدة 7! (الدفعة 416 · v7.8)
 - **الخلاصة:** الوحدة 7 «البيئة والطبيعة»! — **14 كلمة** (Umwelt البيئة · Klima المناخ · Wiese المرج · Erde الأرض · Abfall النفايات · Energie الطاقة · Wanderung الرحلة · schützen يحمي · pflanzen يزرع · gießen يسقي · wachsen ينمو · genießen يستمتع · trennen يفصل · nachdem بعد أن!) + قاعدة جديدة **ars-nachdem-plusquamperfekt**: «بعد أن… كان قد!» (Nachdem wir den Abfall getrennt hatten, wanderten wir los!) — ترتيب حدثين في الماضي!
 - **التالي:** b1-u7-d2 (الوحدة 7!)

@@ -3798,6 +3798,17 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D463 (2026-11-06): b1-u7-d2 «البيئة — كل فعل بحرفّه الثابت!» — 11 كلمة + ars-verben-praep (الدفعة 417 · v7.9)
+- **الدفعة:** 417 · **الموجّه:** 7.9
+- **للقارئ:** اليوم الثاني من البيئة! — **11 كلمة** (Dürre الجفاف · Umweltschutz حماية البيئة · Lärm الضجيج · Plastik البلاستيك · Kunststoff المادة الاصطناعية · Dose العلبة · Aktion الحملة · Forschung البحث · giftig سام · verbrauchen يستهلك · entwickeln يطوّر) + قاعدة **ars-verben-praep**: «كل فعل بحرفّه الثابت!» (sich freuen auf + Akk · sorgen für + Akk · denken an + Akk · warten auf + Akk · helfen bei + Dativ!) — الأحرف تُحفظ مع الأفعال كالظلال!
+- **بطاقة قرار:** الاستنساخ من درس سابق يترك بيانات قديمة خفيّة (gReferences وcurriculumRef — أُصلحت في u7-d1 وu7-d2)! ومحاولات التوليد الفاشلة تترك ملفات صوتية يتيمة (word-umweltverschmutzung.opus محذوف — حارس المانيفست كشفه).
+- **الفهرس العكسي:** §22.9 الدفعة 417 (v7.9) · ars-verben-praep (جديدة!) · b1-lesson-upgrade (38 درساً).
+- **الأيام والاختبارات:** **u7-d2 11 كلمة** — المسار B1: 439 + 11 = **450 كلمة** · u7: d1 ✓ **d2 ✓**.
+- **الاختبارات:** npm test **1759/1759 ✓** · tsc ✓ · validate-content **2530 ملفاً 0 خطأ 0 تحذير ✓** · check-lesson b1-u7-d2 **front 0 · later 0 · official 0 ✓** · build ✓ · pronunciation-audit **0 مخالفات** (2948 كلمة · معجم 274).
+- **الأرقام:** كلمة **2031** · دروس **212** · مسارات **3840** · معجم **274** · عبارات **4556** · duden **987** · w-srs **0.348 ≤ 0.35**.
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+- **التالي:** b1-u7-d3!
+
 ## D462 (2026-11-06): b1-u7-d1 «البيئة والطبيعة — nachdem + Plusquamperfekt» — بداية الوحدة 7! (الدفعة 416 · v7.8)
 - **الدفعة:** 416 · **الموجّه:** 7.8
 - **للقارئ:** الوحدة 7 «البيئة والطبيعة»! — **14 كلمة** (Umwelt البيئة · Klima المناخ · Wiese المرج · Erde الأرض · Abfall النفايات · Energie الطاقة · Wanderung الرحلة · schützen يحمي · pflanzen يزرع · gießen يسقي · wachsen ينمو · genießen يستمتع · trennen يفصل · nachdem بعد أن!) + قاعدة جديدة **ars-nachdem-plusquamperfekt**: «بعد أن… كان قد!» (Nachdem wir den Abfall getrennt hatten, wanderten wir los!) — ترتيب حدثين في الماضي!

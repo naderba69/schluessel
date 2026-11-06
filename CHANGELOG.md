@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-06 — الدفعة 417: D463 — b1-u7-d2 «البيئة — كل فعل بحرفّه الثابت!» — 11 كلمة + ars-verben-praep (الدفعة 417 · v7.9)
+اليوم الثاني من البيئة! — **11 كلمة** (Dürre الجفاف · Umweltschutz حماية البيئة · Lärm الضجيج · Plastik البلاستيك · Kunststoff المادة الاصطناعية · Dose العلبة · Aktion الحملة · Forschung البحث · giftig سام · verbrauchen يستهلك · entwickeln يطوّر) + قاعدة **ars-verben-praep**: «كل فعل بحرفّه الثابت!» (sich freuen auf + Akk · sorgen für + Akk · denken an + Akk · warten auf + Akk · helfen bei + Dativ!) — الأحرف تُحفظ مع الأفعال كالظلال!
+- **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
+
 ## 2026-11-06 — الدفعة 416: D462 — b1-u7-d1 «البيئة والطبيعة — nachdem + Plusquamperfekt» — بداية الوحدة 7! (الدفعة 416 · v7.8)
 الوحدة 7 «البيئة والطبيعة»! — **14 كلمة** (Umwelt البيئة · Klima المناخ · Wiese المرج · Erde الأرض · Abfall النفايات · Energie الطاقة · Wanderung الرحلة · schützen يحمي · pflanzen يزرع · gießen يسقي · wachsen ينمو · genießen يستمتع · trennen يفصل · nachdem بعد أن!) + قاعدة جديدة **ars-nachdem-plusquamperfekt**: «بعد أن… كان قد!» (Nachdem wir den Abfall getrennt hatten, wanderten wir los!) — ترتيب حدثين في الماضي!
 - **البوابة:** npm test ✓ + tsc ✓ + validate-content ✓ + build ✓.
