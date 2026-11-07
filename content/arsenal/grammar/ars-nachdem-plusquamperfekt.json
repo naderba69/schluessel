@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-nachdem-plusquamperfekt",
+  "kind": "shufra",
+  "title": {
+    "ar": "بعد أن… كان قد!",
+    "de": "Nachdem + Plusquamperfekt: Nachdem wir gegessen hatten, gingen wir spazieren."
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "red",
+  "payload": {
+    "topicAr": "بعد أن + الماضي التام الأسبق! (Nachdem wir den Abfall getrennt hatten, wanderten wir los!)",
+    "sceneAr": "سرد أحداث الطبيعة بالترتيب: ما حدث أولاً؟ (hatte/war + التصريف الثالث) ثم ما بعده (الماضي البسيط)!",
+    "examples": [
+      {
+        "de": "Nachdem wir den Abfall getrennt hatten, wanderten wir los.",
+        "ar": "بعد أن فصلنا النفايات، انطلقنا في جولة."
+      },
+      {
+        "de": "Nachdem wir gegessen hatten, gingen wir in den Wald.",
+        "ar": "بعد أن أكلنا، ذهبنا إلى الغابة."
+      },
+      {
+        "de": "Nachdem die Blumen gewachsen waren, genossen wir die Wiese.",
+        "ar": "بعد أن نمت الزهور، استمتعنا بالمرج."
+      },
+      {
+        "de": "Nachdem wir die Blumen gegossen hatten, wuchsen sie schnell.",
+        "ar": "بعد أن سقينا الزهور، نمت بسرعة."
+      },
+      {
+        "de": "Wir trennten den Abfall. Dann wanderten wir los.",
+        "ar": "فصلنا النفايات. ثم انطلقنا. (حدثان بالترتيب!)"
+      },
+      {
+        "de": "Nachdem wir getrennt hatten, …",
+        "ar": "بعد أن فصلنا… (الحدث الأول: hatte/war + التصريف الثالث!)"
+      }
+    ],
+    "inferencePromptAr": "لاحظ: «nachdem» + hatte/war + التصريف الثالث آخراً! والجملة الثانية: الماضي البسيط! ترتيب الأحداث: ما بعد nachdem حدث أولاً! (hatte getrennt ← wanderten) — قارن: «Nachdem ich krank gewesen war, blieb ich zu Hause.» (war + gewesen ← blieb).",
+    "ruleDe": "Nachdem wir den Abfall getrennt hatten, wanderten wir los. · Nachdem die Blumen gewachsen waren, genossen wir die Wiese. · Nachdem wir gepflanzt hatten, gossen wir die Blumen.",
+    "ruleAr": "(1) nachdem + فاعل + hatte/war + التصريف الثالث! (2) الجملة الثانية: الماضي البسيط! (3) الفرق: الأسبق (hatte/war) أولاً واللاحق (الماضي) ثانياً!",
+    "contrastAr": "العربية: «بعد أن فصلنا» — الفعل لا يتغيّر! والألمانية: الأسبق = hatte/war + التصريف الثالث! (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "«nachdem» + hatte/war + التصريف الثالث آخراً!",
+      "الجملة الثانية: الماضي البسيط (wanderten/gossen/genossen)!",
+      "hatte للفعل المتعدي، وwar للفعل الناقص (wachsen ← war gewachsen)!",
+      "الأسبق بعد nachdem — واللاحق في الجملة الرئيسية!"
+    ],
+    "beads": [
+      "Nachdem wir den Abfall getrennt hatten, wanderten wir los.",
+      "Nachdem wir gegessen hatten, gingen wir in den Wald.",
+      "Nachdem die Blumen gewachsen waren, genossen wir die Wiese.",
+      "Nachdem wir die Blumen gegossen hatten, wuchsen sie schnell.",
+      "Nachdem wir gepflanzt hatten, gossen wir die Blumen.",
+      "Nachdem wir über die Wiese gewandert waren, genossen wir die Ruhe."
+    ],
+    "properNouns": []
+  },
+  "usedInLessons": [
+    "b1-u7-d1",
+    "b1-u7-d6"
+  ]
+}

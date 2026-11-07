@@ -1,0 +1,471 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u7-d1",
+  "level": "B1",
+  "unit": 7,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Nachdem wir den Abfall getrennt hatten, wanderten wir los!",
+    "ar": "بعد أن… كان قد! (ترتيب حدثين: الأسبق nachdem + hatte/war + التصريف الثالث، واللاحق بالماضي البسيط!)"
+  },
+  "canDoDaily": [
+    "يروي حدثين بالترتيب! (بعد أن فصلنا النفايات، انطلقنا في جولة!)",
+    "يفصل بين الأسبق (hatte/war + التصريف الثالث) واللاحق (الماضي البسيط)! (Nachdem …, wanderten wir los.)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "natur",
+      "wald",
+      "wolke"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«بعد أن فصلنا النفايات…» (بالترتيب!)"
+        },
+        "choices": [
+          "Nachdem wir getrennt hatten, …",
+          "Nachdem wir getrennt haben, …",
+          "Wir trennten den Abfall."
+        ],
+        "answer": "Nachdem wir getrennt hatten, …",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«البيئة»؟"
+        },
+        "choices": [
+          "die Umwelt",
+          "die Wiese",
+          "die Energie"
+        ],
+        "answer": "die Umwelt",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u6-d6: التوليف (كل قواعد الوحدة 6 معاً) — اليوم: الوحدة 7! البيئة والطبيعة!",
+      "من u6-d1: حروف كان الثلاثة (hätte gern!) — اليوم: nachdem + hatte/war! (الترتيب في الماضي!)"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "umwelt",
+      "schuetzen",
+      "klima",
+      "geniessen",
+      "wiese",
+      "wachsen",
+      "pflanzen",
+      "abfall",
+      "energie",
+      "giessen",
+      "wanderung",
+      "erde",
+      "nachdem",
+      "trennen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-nachdem-plusquamperfekt"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Nachdem wir den Abfall getrennt hatten, wanderten wir los!",
+        "ar": "يروي أحداث الرحلة بالترتيب في 8 جمل!"
+      },
+      "situation": {
+        "de": "Die Wanderung, die Wiese, der Abfall.",
+        "ar": "الرحلة: التنزّه! المرج! النفايات!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الاثنتا عشرة كلها!",
+        "«nachdem» + hatte/war + التصريف الثالث أولاً! (الأسبق!)",
+        "الجملة الثانية بالماضي البسيط! (wanderten / gossen / genossen)",
+        "hatte للفعل المتعدي، وwar للفعل الناقص (wachsen ← war gewachsen)!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات البيئة والطبيعة!",
+          "die Umwelt! die Wiese! der Abfall!"
+        ],
+        "interleavedWith": [
+          "wald",
+          "wolke",
+          "blume"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "البيئة",
+                "de": "die Umwelt"
+              },
+              {
+                "ar": "المرج",
+                "de": "die Wiese"
+              },
+              {
+                "ar": "الأرض",
+                "de": "die Erde"
+              },
+              {
+                "ar": "النفايات",
+                "de": "der Abfall"
+              },
+              {
+                "ar": "الطاقة",
+                "de": "die Energie"
+              }
+            ],
+            "why": "die Umwelt البيئة · die Wiese المرج · die Erde الأرض · der Abfall النفايات · die Energie الطاقة — كلمات الوحدة 7 (البيئة والطبيعة)!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يحمي",
+                "de": "schützen"
+              },
+              {
+                "ar": "يزرع",
+                "de": "pflanzen"
+              },
+              {
+                "ar": "يسقي",
+                "de": "gießen"
+              },
+              {
+                "ar": "ينمو",
+                "de": "wachsen"
+              },
+              {
+                "ar": "يستمتع",
+                "de": "genießen"
+              }
+            ],
+            "why": "schützen يحمي (hat geschützt) · pflanzen يزرع (hat gepflanzt) · gießen يسقي (hat gegossen — قوي!) · wachsen ينمو (ist gewachsen — قوي وناقص!) · genießen يستمتع (hat genossen — قوي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المناخ",
+                "de": "das Klima"
+              },
+              {
+                "ar": "الرحلة التنزّهية",
+                "de": "die Wanderung"
+              },
+              {
+                "ar": "الطبيعة",
+                "de": "die Natur"
+              }
+            ],
+            "why": "das Klima المناخ · die Wanderung الرحلة التنزّهية · die Natur الطبيعة (مراجعة: natur من الوحدة 2!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "بعد أن… كان قد! (hatte/war + التصريف الثالث!)"
+        ],
+        "interleavedWith": [
+          "natur",
+          "fluss",
+          "spazieren"
+        ],
+        "items": [
+          {
+            "q": "Nachdem wir den Abfall ___ (trennen), wanderten wir los.",
+            "a": "getrennt hatten",
+            "why": "بعد أن: التصريف الثالث (getrennt) ثم hatte آخراً! (اللاحق: wanderten بالماضي البسيط!)"
+          },
+          {
+            "q": "Nachdem die Blumen ___ (wachsen), genossen wir die Wiese.",
+            "a": "gewachsen waren",
+            "why": "wachsen فعل ناقص ← war! (gewachsen waren — لا: gewachsen hatten!)"
+          },
+          {
+            "q": "Nachdem wir ___ (pflanzen), gossen wir die Blumen.",
+            "a": "gepflanzt hatten",
+            "why": "الأسبق: gepflanzt hatten! واللاحق: gossen (الماضي البسيط لـ gießen!)"
+          },
+          {
+            "q": "Nachdem wir die Umwelt ___ (schützen), wanderten wir los. (nachdem + hatten!)",
+            "a": "geschützt hatten",
+            "why": "بعد + الماضي التام: hatten + التصريف الثالث (geschützt hatten!) — wie getrennt hatten!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "hatte لا haben! التصريف الثالث لا الثاني!"
+        ],
+        "interleavedWith": [
+          "fehlen",
+          "gesund",
+          "leben"
+        ],
+        "items": [
+          {
+            "q": "~~Nachdem wir getrennt haben, wanderten wir los.~~",
+            "a": "Nachdem wir getrennt hatten, wanderten wir los.",
+            "why": "بعد أن: الأسبق بـ hatte (الماضي التام الأسبق)! لا haben (الحاضر!)"
+          },
+          {
+            "q": "~~Nachdem die Blumen wuchsen, genossen wir die Wiese.~~",
+            "a": "Nachdem die Blumen gewachsen waren, genossen wir die Wiese.",
+            "why": "التصريف الثالث (gewachsen) وليس الثاني (wuchs)! والفعل الناقص بـ war!"
+          },
+          {
+            "q": "~~Nachdem wir hatten getrennt, wanderten wir los.~~",
+            "a": "Nachdem wir getrennt hatten, wanderten wir los.",
+            "why": "بعد nachdem: التصريف الثالث ثم hatte آخراً! (لا: hatten getrennt — انتبه للترتيب!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأسبق أولاً! (hatte/war + التصريف الثالث)"
+        ],
+        "interleavedWith": [
+          "garten",
+          "meer",
+          "wind"
+        ],
+        "items": [
+          {
+            "q": "قل بالألمانية: «بعد أن سقينا الزهور، نمت بسرعة.» (nachdem + hatten gegossen)",
+            "a": "Nachdem wir die Blumen gegossen hatten, wuchsen sie schnell.",
+            "why": "الأسبق: gegossen hatten (gießen قوي!) واللاحق: wuchsen (الماضي البسيط!)"
+          },
+          {
+            "q": "قل بالألمانية: «بعد أن تجوّلنا عبر المرج، استمتعنا بالهدوء.» (wandern بـ ist — تذكّر!)",
+            "a": "Nachdem wir über die Wiese gewandert waren, genossen wir die Ruhe.",
+            "why": "wandern فعل ناقص ← waren! (gewandert waren — لا: hatten!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«البيئة»؟",
+            "a": "die Umwelt"
+          },
+          {
+            "q": "«بعد أن فصلنا النفايات، انطلقنا.»؟",
+            "a": "Nachdem wir den Abfall getrennt hatten, wanderten wir los."
+          },
+          {
+            "q": "«النفايات»؟",
+            "a": "der Abfall"
+          },
+          {
+            "q": "«ينمو»؟",
+            "a": "wachsen"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المرج»؟",
+            "a": "die Wiese"
+          },
+          {
+            "q": "«بعد أن نمت الزهور، استمتعنا بالمرج.»؟",
+            "a": "Nachdem die Blumen gewachsen waren, genossen wir die Wiese."
+          },
+          {
+            "q": "«المناخ»؟",
+            "a": "das Klima"
+          },
+          {
+            "q": "«يسقي»؟",
+            "a": "gießen"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الأرض»؟",
+            "a": "die Erde"
+          },
+          {
+            "q": "«يحمي»؟",
+            "a": "schützen"
+          },
+          {
+            "q": "«الرحلة التنزّهية»؟",
+            "a": "die Wanderung"
+          },
+          {
+            "q": "«الطاقة»؟",
+            "a": "die Energie"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Guten Tag! Die Umwelt ist wichtig. Nachdem wir den Abfall getrennt hatten, wanderten wir über die Wiese. Die Wanderung war schön. Nachdem wir gepflanzt hatten, gossen wir die Blumen. Wir leben auf der Erde. Wir sparen Energie für das Klima. Nachdem die Blumen gewachsen waren, genossen wir die Ruhe. Wir schützen die Umwelt!",
+      "ar": "مرحباً! البيئة مهمة. بعد أن فصلنا النفايات، تجوّلنا عبر المرج. الرحلة التنزّهية كانت جميلة. بعد أن زرعنا، سقينا الزهور. نحن نعيش على الأرض. نوفّر الطاقة من أجل المناخ. بعد أن نمت الزهور، استمتعنا بالهدوء. نحن نحمي البيئة!"
+    },
+    "srsBundleWordIds": [
+      "umwelt",
+      "schuetzen",
+      "klima",
+      "geniessen",
+      "wiese",
+      "wachsen",
+      "pflanzen",
+      "abfall",
+      "energie",
+      "giessen",
+      "wanderung",
+      "erde",
+      "nachdem",
+      "trennen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "haten (حاضر) مكان hatten (ماضٍ تام أسبق)!",
+          "de": "~~Nachdem wir getrennt haben, wanderten wir los.~~"
+        },
+        "correct": {
+          "ar": "بعد أن فصلنا النفايات، انطلقنا.",
+          "de": "Nachdem wir getrennt hatten, wanderten wir los."
+        },
+        "exercise": {
+          "q": "Nachdem wir getrennt ___ , wanderten wir los. (hatten! لا haben!)",
+          "a": "hatten"
+        },
+        "whyArabicSpeakerFails": "العربية: «بعد أن فصلنا» بلا تغيّر للفعل! الألمانية: الأسبق = hatte/war + التصريف الثالث! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "التصريف الثاني (wuchs) مكان الثالث (gewachsen)!",
+          "de": "~~Nachdem die Blumen wuchsen, genossen wir die Wiese.~~"
+        },
+        "correct": {
+          "ar": "بعد أن نمت الزهور، استمتعنا بالمرج.",
+          "de": "Nachdem die Blumen gewachsen waren, genossen wir die Wiese."
+        },
+        "exercise": {
+          "q": "Nachdem die Blumen ___ (wachsen) … (gewachsen! لا wuchs!)",
+          "a": "gewachsen waren"
+        },
+        "whyArabicSpeakerFails": "الماضي البسيط (wuchs) للحدث اللاحق — لكن الأسبق يأخذ التصريف الثالث + war/hatte! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "hatte في الوسط مكان الآخر!",
+          "de": "~~Nachdem wir hatten getrennt, …~~"
+        },
+        "correct": {
+          "ar": "بعد أن فصلنا… (التصريف الثالث ثم hatte!)",
+          "de": "Nachdem wir getrennt hatten, …"
+        },
+        "exercise": {
+          "q": "Nachdem wir ___ ___ , … (getrennt dann hatten!)",
+          "a": "getrennt hatten"
+        },
+        "whyArabicSpeakerFails": "بعد nachdem: التصريف الثالث أولاً ثم حرف الجارّ (hatte/war) آخراً! (لا: hatten getrennt!) (خريطة التداخل 10‑ي)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Umwelt",
+      "https://www.duden.de/rechtschreibung/schuetzen",
+      "https://www.duden.de/rechtschreibung/Klima",
+      "https://www.duden.de/rechtschreibung/geniessen",
+      "https://www.duden.de/rechtschreibung/Wiese",
+      "https://www.duden.de/rechtschreibung/wachsen",
+      "https://www.duden.de/rechtschreibung/pflanzen",
+      "https://www.duden.de/rechtschreibung/Abfall",
+      "https://www.duden.de/rechtschreibung/Energie",
+      "https://www.duden.de/rechtschreibung/giessen",
+      "https://www.duden.de/rechtschreibung/Wanderung",
+      "https://www.duden.de/rechtschreibung/Erde",
+      "https://www.duden.de/rechtschreibung/nachdem",
+      "https://www.duden.de/rechtschreibung/trennen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-nachdem-plusquamperfekt",
+    "ars-konj-ii"
+  ],
+  "audioManifestRefs": [
+    "word-umwelt",
+    "word-schuetzen",
+    "word-klima",
+    "word-geniessen",
+    "word-wiese",
+    "word-wachsen",
+    "word-pflanzen",
+    "word-abfall",
+    "word-energie",
+    "word-giessen",
+    "word-wanderung",
+    "word-erde",
+    "word-nachdem",
+    "word-trennen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (البيئة والطبيعة — nachdem + Plusquamperfekt!)",
+    "goetheWordListOverlap": [
+      "umwelt",
+      "schuetzen",
+      "klima",
+      "geniessen",
+      "wiese",
+      "wachsen",
+      "pflanzen",
+      "abfall",
+      "energie",
+      "giessen",
+      "wanderung",
+      "erde",
+      "nachdem",
+      "trennen"
+    ]
+  }
+}

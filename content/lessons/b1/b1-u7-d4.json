@@ -1,0 +1,451 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u7-d4",
+  "level": "B1",
+  "unit": 7,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Ich versuche, die Umwelt zu schützen!",
+    "ar": "الأفعال + zu + المصدر! (versuchen zu! anfangen zu! aufhören zu! — بلا zu مع الأفعال الناقصة!)"
+  },
+  "canDoDaily": [
+    "يُكمّل versuchen/anfangen/aufhören/planen بـzu + المصدر! (Ich versuche, zu schützen!)",
+    "يفصل بين zu + المصدر وبدونه! (möchte schützen بلا zu! versuchen zu schützen بـzu!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bevor",
+      "verpackung",
+      "katastrophe"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«أحاول حماية البيئة.» (zu أم بلا zu?)"
+        },
+        "choices": [
+          "Ich versuche, die Umwelt zu schützen.",
+          "Ich versuche, die Umwelt schützen.",
+          "Ich möchte die Umwelt zu schützen."
+        ],
+        "answer": "Ich versuche, die Umwelt zu schützen.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الدعم»؟"
+        },
+        "choices": [
+          "die Unterstützung",
+          "die Versammlung",
+          "der Protest"
+        ],
+        "answer": "die Unterstützung",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u7-d3: als للمرة وwenn للدأب! — اليوم: الأفعال بـzu! (versuchen zu!)",
+      "من u7-d2: كل فعل بحرفّه الثابت! (freuen auf!) — اليوم: كل فعل بمصدره! (versuchen zu + مصدر!)"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "verwenden",
+      "metall",
+      "wertvoll",
+      "wertlos",
+      "ordentlich",
+      "foerdern",
+      "unterstuetzung",
+      "mitglied",
+      "versammlung",
+      "protest",
+      "einfluss"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-verb-zu"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Ich versuche, die Umwelt zu schützen!",
+        "ar": "يتحدّث عن حماية البيئة بـzu + المصدر!"
+      },
+      "situation": {
+        "de": "Der Protest, die Versammlung, die Unterstützung.",
+        "ar": "العمل: الاحتجاج! التجمّع! الدعم!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الإحدى عشرة كلها!",
+        "versuchen/anfangen/aufhören/planen + zu + المصدر!",
+        "الفعل الناقص (möchte/kann) + المصدر بلا zu!",
+        "zu قبل المصدر مباشرة! (zu schützen!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات العمل الجماعي!",
+          "die Versammlung! der Protest! die Unterstützung!"
+        ],
+        "interleavedWith": [
+          "umwelt",
+          "klima",
+          "wiese"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الدعم",
+                "de": "die Unterstützung"
+              },
+              {
+                "ar": "العضو",
+                "de": "das Mitglied"
+              },
+              {
+                "ar": "التجمّع",
+                "de": "die Versammlung"
+              },
+              {
+                "ar": "الاحتجاج",
+                "de": "der Protest"
+              }
+            ],
+            "why": "die Unterstützung الدعم (die! + Unterstützungen!) · das Mitglied العضو (das! + Mitglieder!) · die Versammlung التجمّع (die! + Versammlungen!) · der Protest الاحتجاج (der! + Proteste!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التأثير",
+                "de": "der Einfluss"
+              },
+              {
+                "ar": "المعدن",
+                "de": "das Metall"
+              },
+              {
+                "ar": "ثمين",
+                "de": "wertvoll"
+              },
+              {
+                "ar": "بلا قيمة",
+                "de": "wertlos"
+              }
+            ],
+            "why": "der Einfluss التأثير (der! + Einflüsse!) · das Metall المعدن (das! + Metalle!) · wertvoll ثمين (wert+voll!) · wertlos بلا قيمة (wert+los! ضدّ wertvoll!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يستخدم",
+                "de": "verwenden"
+              },
+              {
+                "ar": "مرتّب",
+                "de": "ordentlich"
+              },
+              {
+                "ar": "يشجّع",
+                "de": "fördern"
+              }
+            ],
+            "why": "verwenden يستخدم (hat verwendet!) · ordentlich مرتّب (مثل fertig!) · fördern يشجّع (hat gefördert!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "versuchen + zu! möchte بلا zu!",
+          "zu قبل المصدر!"
+        ],
+        "interleavedWith": [
+          "wald",
+          "wolke",
+          "blume"
+        ],
+        "items": [
+          {
+            "q": "Ich versuche, die Umwelt ___ schützen. (zu! versuchen + zu + مصدر!)",
+            "a": "zu",
+            "why": "versuchen + zu + المصدر! (zu schützen!)"
+          },
+          {
+            "q": "Ich höre auf, Plastik ___ verwenden. (zu! aufhören + zu!)",
+            "a": "zu",
+            "why": "aufhören + zu + المصدر! (zu verwenden!)"
+          },
+          {
+            "q": "Ich möchte die Umwelt ___. (بلا zu! الفعل الناقص + المصدر!)",
+            "a": "schützen",
+            "why": "الفعل الناقص (möchte) + المصدر بلا zu! (möchte schützen!)"
+          },
+          {
+            "q": "Ich versuche, Plastik ___ verwenden. (zu! versuchen + zu + مصدر!)",
+            "a": "zu",
+            "why": "versuchen + zu + المصدر (Plastik zu verwenden!) — الفعل الثاني بعد zu!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "versuchen + zu! möchte بلا zu!",
+          "zu قبل المصدر مباشرة!"
+        ],
+        "interleavedWith": [
+          "natur",
+          "regen",
+          "wetter"
+        ],
+        "items": [
+          {
+            "q": "~~Ich versuche, die Umwelt schützen.~~",
+            "a": "Ich versuche, die Umwelt zu schützen.",
+            "why": "versuchen + zu + المصدر! (zu schützen — لا تحذف zu!)"
+          },
+          {
+            "q": "~~Ich möchte die Umwelt zu schützen.~~",
+            "a": "Ich möchte die Umwelt schützen.",
+            "why": "الفعل الناقص (möchte) + المصدر بلا zu! (möchte schützen!)"
+          },
+          {
+            "q": "~~Ich versuche zu die Umwelt schützen.~~",
+            "a": "Ich versuche, die Umwelt zu schützen.",
+            "why": "zu قبل المصدر مباشرة (zu schützen!) لا قبل الاسم!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "versuchen + zu + مصدر!",
+          "aufhören + zu + مصدر!"
+        ],
+        "interleavedWith": [
+          "katze",
+          "arbeit",
+          "sommer"
+        ],
+        "items": [
+          {
+            "q": "قل بالألمانية: «أحاول أن أحمي البيئة.» (versuchen + zu + مصدر!)",
+            "a": "Ich versuche, die Umwelt zu schützen.",
+            "why": "versuchen + zu + المصدر! (zu schützen!)"
+          },
+          {
+            "q": "قل بالألمانية: «نتوقّف عن استخدام البلاستيك.» (aufhören + zu + مصدر!)",
+            "a": "Wir hören auf, Plastik zu verwenden.",
+            "why": "aufhören منفصل: hören … auf + zu verwenden! (zu مع المصدر!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الدعم»؟",
+            "a": "die Unterstützung"
+          },
+          {
+            "q": "«أحاول أن أحمي البيئة.»؟",
+            "a": "Ich versuche, die Umwelt zu schützen."
+          },
+          {
+            "q": "«المعدن»؟",
+            "a": "das Metall"
+          },
+          {
+            "q": "«مرتّب»؟",
+            "a": "ordentlich"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«العضو»؟",
+            "a": "das Mitglied"
+          },
+          {
+            "q": "«نتوقّف عن استخدام البلاستيك.»؟",
+            "a": "Wir hören auf, Plastik zu verwenden."
+          },
+          {
+            "q": "«ثمين»؟",
+            "a": "wertvoll"
+          },
+          {
+            "q": "«يشجّع»؟",
+            "a": "fördern"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«التجمّع»؟",
+            "a": "die Versammlung"
+          },
+          {
+            "q": "«أودّ حماية البيئة.»؟",
+            "a": "Ich möchte die Umwelt schützen."
+          },
+          {
+            "q": "«الاحتجاج»؟",
+            "a": "der Protest"
+          },
+          {
+            "q": "«التأثير»؟",
+            "a": "der Einfluss"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Guten Tag! Ich versuche, die Umwelt zu schützen. Wir beginnen, das Metall ordentlich zu trennen. Der Müll ist wertvoll und nicht wertlos! Ich höre auf, Plastik zu verwenden. Wir planen eine Versammlung: Der Protest hat Einfluss! Die Unterstützung ist wichtig. Ich fördere die Aktion. Das Mitglied hilft!",
+      "ar": "مرحباً! أحاول أن أحمي البيئة. نبدأ بفصل المعدن بترتيب. النفايات ثمينة وليست بلا قيمة! أتوقّف عن استخدام البلاستيك. نخطّط لتجمّع: الاحتجاج له تأثير! الدعم مهم. أنا أشجّع الحملة. العضو يساعد!"
+    },
+    "srsBundleWordIds": [
+      "verwenden",
+      "metall",
+      "wertvoll",
+      "wertlos",
+      "ordentlich",
+      "foerdern",
+      "unterstuetzung",
+      "mitglied",
+      "versammlung",
+      "protest",
+      "einfluss"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "versuchen بلا zu!",
+          "de": "~~Ich versuche, die Umwelt schützen.~~"
+        },
+        "correct": {
+          "ar": "أحاول أن أحمي البيئة: zu schützen!",
+          "de": "Ich versuche, die Umwelt zu schützen."
+        },
+        "exercise": {
+          "q": "Ich versuche, die Umwelt ___ schützen. (zu!)",
+          "a": "zu"
+        },
+        "whyArabicSpeakerFails": "العربية: «أحاول أن أحمي» — «أن» قد تُحذف! والألمانية: versuchen + zu إلزامي (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "zu مع الفعل الناقص!",
+          "de": "~~Ich möchte die Umwelt zu schützen.~~"
+        },
+        "correct": {
+          "ar": "أودّ حماية البيئة: möchte schützen (بلا zu)!",
+          "de": "Ich möchte die Umwelt schützen."
+        },
+        "exercise": {
+          "q": "Ich möchte die Umwelt ___. (schützen! بلا zu!)",
+          "a": "schützen"
+        },
+        "whyArabicSpeakerFails": "الفعل الناقص (möchte/kann/muss) + المصدر بلا zu في الألمانية! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "zu في المكان الخاطئ!",
+          "de": "~~Ich versuche zu die Umwelt schützen.~~"
+        },
+        "correct": {
+          "ar": "zu قبل المصدر مباشرة: zu schützen!",
+          "de": "Ich versuche, die Umwelt zu schützen."
+        },
+        "exercise": {
+          "q": "Ich versuche, die Umwelt ___ schützen. (zu! قبل المصدر!)",
+          "a": "zu"
+        },
+        "whyArabicSpeakerFails": "zu قبل المصدر مباشرة (zu schützen) لا قبل الاسم! (خريطة التداخل 10‑ي)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/verwenden",
+      "https://www.duden.de/rechtschreibung/Metall",
+      "https://www.duden.de/rechtschreibung/wertvoll",
+      "https://www.duden.de/rechtschreibung/wertlos",
+      "https://www.duden.de/rechtschreibung/ordentlich",
+      "https://www.duden.de/rechtschreibung/foerdern",
+      "https://www.duden.de/rechtschreibung/Unterstuetzung",
+      "https://www.duden.de/rechtschreibung/Mitglied",
+      "https://www.duden.de/rechtschreibung/Versammlung",
+      "https://www.duden.de/rechtschreibung/Protest",
+      "https://www.duden.de/rechtschreibung/Einfluss"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-verb-zu",
+    "ars-als-wenn-bevor"
+  ],
+  "audioManifestRefs": [
+    "word-verwenden",
+    "word-metall",
+    "word-wertvoll",
+    "word-wertlos",
+    "word-ordentlich",
+    "word-foerdern",
+    "word-unterstuetzung",
+    "word-mitglied",
+    "word-versammlung",
+    "word-protest",
+    "word-einfluss"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (البيئة والطبيعة — الأفعال + zu + المصدر!)",
+    "goetheWordListOverlap": [
+      "verwenden",
+      "metall",
+      "wertvoll",
+      "wertlos",
+      "ordentlich",
+      "foerdern",
+      "unterstuetzung",
+      "mitglied",
+      "versammlung",
+      "protest",
+      "einfluss"
+    ]
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u7-d2",
+  "level": "B1",
+  "unit": 7,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Ich freue mich auf die Aktion!",
+    "ar": "كل فعل بحرفّه الثابت! (أفرح إلى! أهتمّ بـ! أفكّر في! أنتظر! أساعد في!)"
+  },
+  "canDoDaily": [
+    "يختار الحرف الثابت مع كل فعل! (أفرح إلى! أهتمّ بـ! أفكّر في! أنتظر! أساعد في!)",
+    "يحفظ الفعل والحرف معاً! (freuen auf لا freuen für! والحالة: auf/an نصب، وbei جرّ!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "umwelt",
+      "klima",
+      "wiese"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«أفرح إلى الصيف.» (بحرفّه الثابت!)"
+        },
+        "choices": [
+          "Ich freue mich auf den Sommer.",
+          "Ich freue mich für den Sommer.",
+          "Ich freue mich an den Sommer."
+        ],
+        "answer": "Ich freue mich auf den Sommer.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الجفاف»؟"
+        },
+        "choices": [
+          "die Dürre",
+          "die Dose",
+          "die Aktion"
+        ],
+        "answer": "die Dürre",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u7-d1: nachdem + hatte/war (الترتيب في الماضي!) — اليوم: أفعال بجرّاتها الثابتة!",
+      "من u6-d2: سلالم التهذيب (Wären Sie so freundlich!) — اليوم: الوحدة 7! البيئة والحماية!"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "duerre",
+      "umweltschutz",
+      "laerm",
+      "plastik",
+      "kunststoff",
+      "dose",
+      "verbrauchen",
+      "aktion",
+      "giftig",
+      "forschung",
+      "entwickeln"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-verben-praep"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Ich freue mich auf die Aktion!",
+        "ar": "يتحدّث عن البيئة بجرّات الأفعال الثابتة!"
+      },
+      "situation": {
+        "de": "Der Umweltschutz, die Dürre, die Aktion.",
+        "ar": "العمل: الحماية! الجفاف! الحملة!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الإحدى عشرة كلها!",
+        "كل فعل بحرفّه الثابت! (freuen auf! sorgen für! denken an! warten auf! helfen bei!)",
+        "الحالة: auf/an هنا نصب! وbei جرّ!",
+        "sorgen für (يهتم بـ) ≠ sich sorgen um (يقلق على)!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات البيئة والحماية!",
+          "die Dürre! der Lärm! der Umweltschutz!"
+        ],
+        "interleavedWith": [
+          "umwelt",
+          "klima",
+          "wiese"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الجفاف",
+                "de": "die Dürre"
+              },
+              {
+                "ar": "الضجيج",
+                "de": "der Lärm"
+              },
+              {
+                "ar": "العلبة المعدنية",
+                "de": "die Dose"
+              },
+              {
+                "ar": "البلاستيك",
+                "de": "das Plastik"
+              }
+            ],
+            "why": "die Dürre الجفاف (die! + Dürren!) · der Lärm الضجيج (der! بلا جمع!) · die Dose العلبة (die! + Dosen!) · das Plastik البلاستيك (das!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المادة الاصطناعية",
+                "de": "der Kunststoff"
+              },
+              {
+                "ar": "حماية البيئة",
+                "de": "der Umweltschutz"
+              },
+              {
+                "ar": "البحث العلمي",
+                "de": "die Forschung"
+              },
+              {
+                "ar": "الحملة",
+                "de": "die Aktion"
+              }
+            ],
+            "why": "der Kunststoff المادة الاصطناعية (der! + Stoffe!) · der Umweltschutz حماية البيئة (der! مركّب Umwelt+Schutz!) · die Forschung البحث (die!) · die Aktion الحملة (die! + Aktionen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "سام",
+                "de": "giftig"
+              },
+              {
+                "ar": "يستهلك",
+                "de": "verbrauchen"
+              },
+              {
+                "ar": "يطوّر",
+                "de": "entwickeln"
+              }
+            ],
+            "why": "giftig سام (مثل fertig!) · verbrauchen يستهلك (hat verbraucht!) · entwickeln يطوّر (hat entwickelt!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الحرف الثابت مع الفعل!",
+          "auf! für! an! bei!"
+        ],
+        "interleavedWith": [
+          "wald",
+          "wolke",
+          "blume"
+        ],
+        "items": [
+          {
+            "q": "Ich freue mich ___ den Sommer. (auf! لا für!)",
+            "a": "auf",
+            "why": "sich freuen auf + Akk! (لا für!) — الحرف محفوظ مع الفعل!"
+          },
+          {
+            "q": "Wir sorgen ___ die Umwelt. (für! لا um!)",
+            "a": "für",
+            "why": "sorgen für + Akk (يهتمّ بـ)! — sich sorgen um = يقلق على (شيء آخر!)"
+          },
+          {
+            "q": "Helfen Sie mir ___ der Arbeit! (bei! + جرّ!)",
+            "a": "bei",
+            "why": "helfen bei + Dativ! (der Arbeit — لا die Arbeit!)"
+          },
+          {
+            "q": "Ich sorge mich ___ die Katze. (um! sich sorgen um + نصب! لا für!)",
+            "a": "um",
+            "why": "sich sorgen um + نصب (um die Katze!) — وsorgen für مع الشيء! (الزوجان معاً!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الخطأ في الحرف الثابت!",
+          "freuen auf! warten auf! denken an!"
+        ],
+        "interleavedWith": [
+          "natur",
+          "regen",
+          "wetter"
+        ],
+        "items": [
+          {
+            "q": "~~Ich freue mich für den Sommer.~~",
+            "a": "Ich freue mich auf den Sommer.",
+            "why": "sich freuen auf + Akk! لا für! الحرف محفوظ مع الفعل!"
+          },
+          {
+            "q": "~~Wir warten für das Wetter.~~",
+            "a": "Wir warten auf das Wetter.",
+            "why": "warten auf + Akk! لا für! (الانتظار = auf دائماً!)"
+          },
+          {
+            "q": "~~Ich denke für die Natur.~~",
+            "a": "Ich denke an die Natur.",
+            "why": "denken an + Akk! لا für! (التفكير = an دائماً!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الحرف الثابت أولاً!",
+          "sorgen für ≠ sich sorgen um!"
+        ],
+        "interleavedWith": [
+          "katze",
+          "arbeit",
+          "sommer"
+        ],
+        "items": [
+          {
+            "q": "قل بالألمانية: «أنا أقلق على القطة.» (sich sorgen um + نصب! لا für!)",
+            "a": "Ich sorge mich um die Katze.",
+            "why": "sich sorgen um + Akk (يقلق على)! — لا تخلطه مع sorgen für (يهتمّ بـ)!"
+          },
+          {
+            "q": "قل بالألمانية: «نحن ننتظر الطقس.» (warten auf + نصب!)",
+            "a": "Wir warten auf das Wetter.",
+            "why": "warten auf + Akk! الحرف الثابت: auf! (لا für ولا mit!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الجفاف»؟",
+            "a": "die Dürre"
+          },
+          {
+            "q": "«أنا أتطلّع بفرح إلى الصيف.»؟",
+            "a": "Ich freue mich auf den Sommer."
+          },
+          {
+            "q": "«الضجيج»؟",
+            "a": "der Lärm"
+          },
+          {
+            "q": "«يستهلك»؟",
+            "a": "verbrauchen"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«حماية البيئة»؟",
+            "a": "der Umweltschutz"
+          },
+          {
+            "q": "«نحن نهتمّ بالبيئة.»؟",
+            "a": "Wir sorgen für die Umwelt."
+          },
+          {
+            "q": "«البلاستيك»؟",
+            "a": "das Plastik"
+          },
+          {
+            "q": "«يطوّر»؟",
+            "a": "entwickeln"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الحملة»؟",
+            "a": "die Aktion"
+          },
+          {
+            "q": "«أنا أفكّر في الطبيعة.»؟",
+            "a": "Ich denke an die Natur."
+          },
+          {
+            "q": "«سام»؟",
+            "a": "giftig"
+          },
+          {
+            "q": "«البحث العلمي»؟",
+            "a": "die Forschung"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Guten Tag! Die Dürre ist ein Problem. Der Lärm ist auch ein Problem. Wir sorgen für die Umwelt. Der Umweltschutz ist wichtig. Das Plastik und der Kunststoff sind giftig für die Natur. Die Dose ist neu. Wir verbrauchen viel Energie. Ich freue mich auf die Forschung. Wir entwickeln eine neue Aktion! Ich denke an die Blumen.",
+      "ar": "مرحباً! الجفاف مشكلة. الضجيج أيضاً مشكلة. نحن نهتمّ بالبيئة. حماية البيئة مهمة. البلاستيك والمادة الاصطناعية سامّان للطبيعة. العلبة جديدة. نحن نستهلك طاقةً كثيرة. أنا أتطلّع بفرح إلى البحث العلمي. نحن نطوّر حملةً جديدة! أنا أفكّر في الزهور."
+    },
+    "srsBundleWordIds": [
+      "duerre",
+      "umweltschutz",
+      "laerm",
+      "plastik",
+      "kunststoff",
+      "dose",
+      "verbrauchen",
+      "aktion",
+      "giftig",
+      "forschung",
+      "entwickeln"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "freuen für — حرفٌ خاطئ!",
+          "de": "~~Ich freue mich für den Sommer.~~"
+        },
+        "correct": {
+          "ar": "أنا أتطلّع بفرح إلى الصيف.",
+          "de": "Ich freue mich auf den Sommer."
+        },
+        "exercise": {
+          "q": "Ich freue mich ___ den Sommer. (auf! لا für!)",
+          "a": "auf"
+        },
+        "whyArabicSpeakerFails": "العربية: «أفرح بـ/على» — الحرف يتغيّر! والألمانية: sich freuen auf + Akk ثابت! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "helfen بالنصب!",
+          "de": "~~Helfen Sie mir bei die Arbeit!~~"
+        },
+        "correct": {
+          "ar": "ساعدني في العمل! (der Arbeit — جرّ!)",
+          "de": "Helfen Sie mir bei der Arbeit!"
+        },
+        "exercise": {
+          "q": "Helfen Sie mir bei ___ Arbeit! (der! bei يجرّ!)",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "helfen bei + Dativ! (der Arbeit لا die Arbeit!) — العربية بلا إعراب فيبدو السطر واحداً (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "sorge für — معنى آخر!",
+          "de": "~~Ich sorge mich für die Katze.~~"
+        },
+        "correct": {
+          "ar": "أنا أقلق على القطة.",
+          "de": "Ich sorge mich um die Katze."
+        },
+        "exercise": {
+          "q": "Ich sorge mich ___ die Katze. (um! لا für!)",
+          "a": "um"
+        },
+        "whyArabicSpeakerFails": "sorgen für (يهتمّ بـ) ≠ sich sorgen um (يقلق على)! حرفان لمعنيين! (خريطة التداخل 10‑ي)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Duerre",
+      "https://www.duden.de/rechtschreibung/Umweltschutz",
+      "https://www.duden.de/rechtschreibung/Laerm",
+      "https://www.duden.de/rechtschreibung/Plastik",
+      "https://www.duden.de/rechtschreibung/Kunststoff",
+      "https://www.duden.de/rechtschreibung/Dose",
+      "https://www.duden.de/rechtschreibung/verbrauchen",
+      "https://www.duden.de/rechtschreibung/Aktion",
+      "https://www.duden.de/rechtschreibung/giftig",
+      "https://www.duden.de/rechtschreibung/Forschung",
+      "https://www.duden.de/rechtschreibung/entwickeln"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-verben-praep",
+    "ars-nachdem-plusquamperfekt"
+  ],
+  "audioManifestRefs": [
+    "word-duerre",
+    "word-umweltschutz",
+    "word-laerm",
+    "word-plastik",
+    "word-kunststoff",
+    "word-dose",
+    "word-verbrauchen",
+    "word-aktion",
+    "word-giftig",
+    "word-forschung",
+    "word-entwickeln"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (البيئة والطبيعة — أفعال بجرّاتها الثابتة!)",
+    "goetheWordListOverlap": [
+      "duerre",
+      "umweltschutz",
+      "laerm",
+      "plastik",
+      "kunststoff",
+      "dose",
+      "verbrauchen",
+      "aktion",
+      "giftig",
+      "forschung",
+      "entwickeln"
+    ]
+  }
+}

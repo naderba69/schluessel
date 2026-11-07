@@ -127,7 +127,7 @@ describe("D188 — الكلمات المستعارة المعلنة (borrowedWor
     console.log("borrowedWords:", JSON.stringify(all));
     for (const l of lessons) expect(l.praesentation.borrowedWords.length, l.id).toBeLessThanOrEqual(3); // D404: 2→3 (u10-d2-نمط-التاريخ-3!)
     for (const l of lessons) for (const b of l.praesentation.borrowedWords) expect(b.whyAr, `${l.id} ${b.form}`).toMatch(/\p{Script=Arabic}/u);
-    expect(all).toEqual([["a1-u8-d2", "fragt", "fragen"], ["a1-u8-d3", "hinten", "hinten"], ["a1-u8-d5", "Bäcker", "baecker"], ["a1-u10-d2", "erste", "erste"], ["a1-u10-d2", "zweite", "zweite"], ["a1-u10-d2", "dritte", "dritte"], ["a1-u10-d3", "erste", "erste"], ["a1-u13-d3", "anders", "anders"], ["a2-u2-d4", "geehrter", "geehrte"]]); // D404: erste/zweite/dritte (نمط-التاريخ في u10-d2 — تُدرَّس a2-u13-d2!) + erste (استرجاع-Absage في u10-d3!) // D400: anders (anders-gerochen في u13-d3 — تُدرَّس a2-u12-d5!) // D213: hinten · D383: Bäcker (beim-Bäcker في u8-d5 — تُدرَّس a2-u10-d2!) · D385: geehrter (Sehr-geehrter-Herr-Chef في u2-d4 — تُدرَّس a2-u10-d4!)
+    expect(all).toEqual([["a1-u8-d2", "fragt", "fragen"], ["a1-u8-d3", "hinten", "hinten"], ["a1-u8-d5", "Bäcker", "baecker"], ["a1-u9-d4", "rechte", "recht"], ["a1-u10-d2", "erste", "erste"], ["a1-u10-d2", "zweite", "zweite"], ["a1-u10-d2", "dritte", "dritte"], ["a1-u10-d3", "erste", "erste"], ["a1-u13-d3", "anders", "anders"], ["a2-u2-d4", "geehrter", "geehrte"]]); // D404: erste/zweite/dritte (نمط-التاريخ في u10-d2 — تُدرَّس a2-u13-d2!) + erste (استرجاع-Absage في u10-d3!) // D400: anders (anders-gerochen في u13-d3 — تُدرَّس a2-u12-d5!) // D213: hinten · D383: Bäcker (beim-Bäcker في u8-d5 — تُدرَّس a2-u10-d2!) · D385: geehrter (Sehr-geehrter-Herr-Chef في u2-d4 — تُدرَّس a2-u10-d4!)
   });
 });
 

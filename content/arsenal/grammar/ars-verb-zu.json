@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-verb-zu",
+  "kind": "shufra",
+  "title": {
+    "ar": "الأفعال + zu + المصدر!",
+    "de": "Verben mit zu-Infinitiv: Ich versuche, die Umwelt zu schützen."
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "red",
+  "payload": {
+    "topicAr": "الأفعال التي تُكمَّل بـzu + المصدر! (versuchen zu! anfangen zu! aufhören zu! planen zu!)",
+    "sceneAr": "البيئة: نحاول حمايتها، ونبدأ بفرز المعدن، ونتوقّف عن البلاستيك! كل فعل يطلب zu + مصدر آخراً — إلا الأفعال الناقصة (möchte/kann) فهي بلا zu!",
+    "examples": [
+      {
+        "de": "Ich versuche, die Umwelt zu schützen.",
+        "ar": "أحاول أن أحمي البيئة. (versuchen + zu + المصدر!)"
+      },
+      {
+        "de": "Wir fangen an, das Altglas zu sammeln.",
+        "ar": "نبدأ بجمع الزجاج القديم. (anfangen + zu! المنفصل: fangen … an!)"
+      },
+      {
+        "de": "Ich höre auf, Plastik zu verwenden.",
+        "ar": "أتوقّف عن استخدام البلاستيك. (aufhören + zu! المنفصل: höre … auf!)"
+      },
+      {
+        "de": "Wir planen, eine Versammlung zu machen.",
+        "ar": "نخطّط لإقامة تجمّع. (planen + zu + المصدر!)"
+      },
+      {
+        "de": "Ich möchte die Umwelt schützen.",
+        "ar": "أودّ حماية البيئة. (الفعل الناقص + المصدر بلا zu!)"
+      },
+      {
+        "de": "Ich vergesse nicht, das Metall zu trennen.",
+        "ar": "لا أنسى فصل المعدن. (vergessen + zu + المصدر!)"
+      }
+    ],
+    "inferencePromptAr": "لاحظ: versuchen/anfangen/aufhören/planen/vergessen + zu + المصدر! والفعل الناقص (möchte/kann/muss) + المصدر بلا zu! — قارن: «Ich versuche zu schützen» و«Ich möchte schützen». zu قبل المصدر مباشرة لا قبل الاسم!",
+    "ruleDe": "Ich versuche, die Umwelt zu schützen. · Wir fangen an, das Altglas zu sammeln. · Ich höre auf, Plastik zu verwenden.",
+    "ruleAr": "(1) versuchen/anfangen/aufhören/planen/vergessen + zu + المصدر! (2) الأفعال الناقصة (möchte/kann/muss) + المصدر بلا zu! (3) zu قبل المصدر مباشرة (zu schützen!)",
+    "contrastAr": "العربية: «أحاول أن أحمي» — «أن» مع كل الأفعال! والألمانية: zu مع versuchen لا مع möchte! (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "versuchen/anfangen/aufhören/planen/vergessen + zu + المصدر!",
+      "الفعل الناقص (möchte/kann/muss) + المصدر بلا zu!",
+      "zu قبل المصدر مباشرة: zu schützen! (لا zu die Umwelt schützen!)",
+      "المنفصل: zu مع المصدر لا مع البادئة (fangen an … zu sammeln!)"
+    ],
+    "beads": [
+      "Ich versuche, die Umwelt zu schützen.",
+      "Wir fangen an, das Altglas zu sammeln.",
+      "Ich höre auf, Plastik zu verwenden.",
+      "Wir planen, eine Versammlung zu machen.",
+      "Ich möchte die Umwelt schützen.",
+      "Ich vergesse nicht, das Metall zu trennen."
+    ],
+    "properNouns": []
+  },
+  "usedInLessons": [
+    "b1-u7-d4"
+  ]
+}

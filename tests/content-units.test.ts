@@ -35,6 +35,38 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       "b1-u2-d3", // D429: مكالمة سماسرة! (ars-verhandeln! + 13 كلمة)
       "b1-u2-d4", // D430: رد على إعلان! (ars-anzeige-antwort! + 13 كلمة)
       "b1-u2-d5", // D431: Kollokationen! (ars-kollokationen! + 15 كلمة!)
+      "b1-u2-d6", // D432: توليف! (integration! + Beginn/Aufenthalt!)
+      "b1-u3-d1", // D434: الصحة والتأمين! (Passiv Vorgang! + 13 كلمة)
+      "b1-u3-d2", // D435: feste Verben! (الجُمدة الأولى! + 15 كلمة!)
+      "b1-u3-d3", // D436: حوار عيادة! (ars-ablauf! + 16 كلمة!)
+      "b1-u3-d4", // D437: استمارة تأمين! (ars-formular! + 15 كلمة!)
+      "b1-u3-d5", // D438: Landeskunde: Krankenkasse! (ars-krankenkasse! + 15 كلمة!)
+      "b1-u3-d6", // D439: توليف! (integration! + Herz/Knochen!)
+      "b1-u4-d1", // D441: التكوين والدراسة! (ars-um-zu! + 19 كلمة!)
+      "b1-u4-d2", // D442: Genitiv كامل! (ars-genitiv-voll! + 13 كلمة!)
+      "b1-u4-d3", // D443: مقابلة دراسية! (ars-als-wie! + 15 كلمة!)
+      "b1-u4-d4", // D444: خطاب دافع! (ars-motivation! + 13 كلمة!)
+      "b1-u4-d5", // D445: أفعال جر أكثر! (ars-feste-verben-2! + 13 كلمة!)
+      "b1-u4-d6", // D446: توليف! (integration! + Betrieb/Herausforderung!)
+      "b1-u5-d1", // D448: الإعلام والرأي! (ars-indirekte-fragen! + 13 كلمة)
+      "b1-u5-d2", // D449: Modalpartikeln تعرّض! (ars-modalpartikeln! + 13 كلمة)
+      "b1-u5-d3", // D450: رأي بأسباب! (ars-meinung-gruende! + 13 كلمة)
+      "b1-u5-d4", // D451: تعليق مكتوب! (ars-kommentar-schreiben! + 13 كلمة)
+      "b1-u5-d5", // D452: نبرة السخرية/الجدية! (ars-ironie-ernst! + 13 كلمة)
+      "b1-u5-d6", // D453: التوليف! (integrity! + 2 كلمة: Medien/Publikum!)
+      "b1-u6-d1", // D455: الوحدة 6 تبدأ! (ars-konj-ii! + 13 كلمة)
+      "b1-u6-d2", // D456: سلالم التهذيب! (ars-hoeflich-stufen! + 13 كلمة)
+      "b1-u6-d3", // D457: الشكوى المهذّبة! (ars-konj-ii-perfekt! + 13 كلمة)
+      "b1-u6-d4", // D458: الطوارئ والمساعدة! (ars-konj-ii-modal! + 13 كلمة)
+      "b1-u6-d5", // D459: التسوّق والأسعار! (ars-wenn-konj-ii! + 13 كلمة)
+      "b1-u6-d6", // D460
+    "b1-u7-d1", // D462
+    "b1-u7-d2", // D463
+    "b1-u7-d3", // D464
+    "b1-u7-d4", // D465: التوليف! (ars-konj-ii مرساة! + 2 كلمة)
+    "b1-u7-d5", // D466: الأزواج المتلازمة! (ars-sowohl-als-auch! + 13 كلمة)
+    "b1-u7-d6", // D467: التوليف! (ars-nachdem مرساة! + 2 كلمة)
+    "b1-u8-d1", // D468: الوحدة 8 تبدأ! (ars-adjektiv-gemischt! + 15 كلمة)
     ]);
     expect(ALL_LESSONS.map((l) => [l.unit, l.day])).toEqual([
       [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [3, 6], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [4, 6], [5, 1], [5, 2], [5, 3], [5, 4], [5, 5], [5, 6], [6, 1], [6, 2], [6, 3], [6, 4], [6, 5], [6, 6], [7, 1], [7, 2], [7, 3], [7, 4], [7, 5], [7, 6], [8, 1], [8, 2], [8, 3], [8, 4], [8, 5], [8, 6], [9, 1], [9, 2], [9, 3], [9, 4], [9, 5], [9, 6], [10, 1], [10, 2], [10, 3], [10, 4], [10, 5], [10, 6], [11, 1], [11, 2], [11, 3], [11, 4], [11, 5], [11, 6], [12, 1], [12, 2], [12, 3], [12, 4], [12, 5], [12, 6],
@@ -53,6 +85,38 @@ describe("سجل المحتوى — الوحدة 1 كاملة + بداية ال�
       [2, 3], // D429: b1-u2-d3
       [2, 4], // D430: b1-u2-d4
       [2, 5], // D431: b1-u2-d5
+      [2, 6], // D432: b1-u2-d6
+      [3, 1], // D434: b1-u3-d1
+      [3, 2], // D435: b1-u3-d2
+      [3, 3], // D436: b1-u3-d3
+      [3, 4], // D437: b1-u3-d4
+      [3, 5], // D438: b1-u3-d5
+      [3, 6], // D439: b1-u3-d6
+      [4, 1], // D441: b1-u4-d1
+      [4, 2], // D442: b1-u4-d2
+      [4, 3], // D443: b1-u4-d3
+      [4, 4], // D444: b1-u4-d4
+      [4, 5], // D445: b1-u4-d5
+      [4, 6], // D446: b1-u4-d6
+      [5, 1], // D448: b1-u5-d1
+      [5, 2], // D449: b1-u5-d2
+      [5, 3], // D450: b1-u5-d3
+      [5, 4], // D451: b1-u5-d4
+      [5, 5], // D452: b1-u5-d5
+      [5, 6], // D453: b1-u5-d6
+      [6, 1], // D455: b1-u6-d1
+      [6, 2], // D456: b1-u6-d2
+      [6, 3], // D457: b1-u6-d3
+      [6, 4], // D458: b1-u6-d4
+      [6, 5], // D459: b1-u6-d5
+      [6, 6], // D460
+    [7, 1], // D462
+    [7, 2], // D463
+    [7, 3], // D464
+    [7, 4], // D465: b1-u6-d6
+    [7, 5], // D466: b1-u7-d5
+    [7, 6], // D467: b1-u7-d6
+    [8, 1], // D468: b1-u8-d1
     ]);
     expect(ALL_WORDS.length).toBe(readdirSync(join(__dirname, "..", "content", "words")).filter((f) => f.endsWith(".json")).length); // ثابت مشتقّ (D188): السجل = ملفات القرص · كان 884 + + zum Beispiel · der Satz · glauben (نواة a1-u12-d4 — D179) + der Blick · das Internet · die Information (نواة a1-u12-d2 — D177) + das Ergebnis (نواة a1-u11-d5 — D175) + fehlen (نواة a1-u11-d2 — D172) + der Teil · tun · weh tun (نواة a1-u11-d1 — D171) + normal · der Job · verdienen (نواة a1-u10-d5 — D170) + der Anfang · der Verein (نواة a1-u10-d4 — D169) + früher · gewinnen (نواة a1-u10-d3 — D168) + lieb · der Moment · enden (نواة a1-u10-d2 — D167) + andere · weiter · halten · die Polizei · die Stelle (نواة a1-u9-d5 — D165) + auf sein · zu sein (نواة a1-u9-d4 — D164) + bitten · erklären · die Hilfe (نواة a1-u9-d3 — D163) + kriegen (نواة a1-u8-d3 — D158) + beste · circa (نواة a1-u8-d2 — D157) + dieser · gefallen (نواة a1-u8-d1 — D156) + gleich · ab · Achtung (نواة a1-u7-d4 — D154) + die Hausaufgabe · nie · einfach (نواة a1-u7-d3 — D153) + der Film · mehr · wandern (نواة a1-u7-d2 — D152) + die Firma · immer · die meisten (نواة a1-u7-d1 — D151) + darauf (مرساة ars-da-komposita في a1-u6-d5 — D150) + da · daneben · weg sein (نواة a1-u6-d4 — D149) + jeder · an sein · aus sein (نواة a1-u6-d3 — D148) + hoch · allein · der Raum (نواة a1-u6-d2 — D147) + breit (نواة a1-u6-d1 — D146) + nichts · wenig (نواة a1-u5-d4 — D144) + was für ein (نواة a1-u5-d3 — D143) + bar · bekommen · die Bitte (نواة a1-u5-d2 — D142) + die Lebensmittel · der Apfel · mögen (نواة a1-u5-d1 — D141) + das Glück · glücklich (نواة a1-u4-d5) · ihr (ملكيتها — N-063) (D140) + bekannt · die Bekannte · tot (نواة a1-u4-d4 — D139) + beide · die Lösung (نواة a1-u4-d3 — D138) + lieben (نواة a1-u4-d2 — D137) + Großeltern · Junge · Opa (نواة a1-u4-d1 — D136) + einmal · später · die Aufgabe (D135) + fertig · regnen · scheinen (D134) + nächste · geschlossen · geöffnet (D133) + Dank · leicht · Restaurant (D132) + Oma · Essen (D131) + schlecht · also · Gruppe (D130) + lang · lange (D128) + Text · Fehler · bedeuten · Lehrerin (D127) + Mensch · Ort · Leben (D126) + international (D125) + neu · wie viel (D116) + heute · jetzt · schwer (D119) + Anmeldung · Partner · Partnerin · Herr (D120) + Alter · Kurs · Klasse (D121) + Ende · wissen · Wort · oft · bisschen · Schüler · Schülerin · Student · Studentin (D123)
   });
@@ -1387,8 +1451,13 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
   });
 
   it("بطاقات الثقافة (Landeskunde): كل وحدة ببطاقة واحدة + الحقائق ≥2", () => {
-    const units = ALL_LANDESKUNDE.map((c) => c.unit).sort((a, b) => a - b);
-    expect(units).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
+    // D438: كل وحدة ببطاقة واحدة — مستوىً مستوى (A1 كاملة + b1-u3 الأولى!)
+    const a1 = ALL_LANDESKUNDE.filter((c) => c.level === "A1").map((c) => c.unit).sort((a, b) => a - b);
+    expect(a1).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
+    for (const lvl of new Set(ALL_LANDESKUNDE.map((c) => c.level))) {
+      const us = ALL_LANDESKUNDE.filter((c) => c.level === lvl).map((c) => c.unit);
+      expect(new Set(us).size, `${lvl}: وحدات مكررة`).toBe(us.length);
+    }
     for (const card of ALL_LANDESKUNDE) {
       expect(card.facts.length).toBeGreaterThanOrEqual(2);
       expect(card.title.de.length).toBeGreaterThan(0);

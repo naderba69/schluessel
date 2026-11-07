@@ -1,6 +1,154 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 422 (2026-11-07) — D468: b1-u8-d1 «العمل والترشيح — الصفة المخلوطة!» — بداية الوحدة 8! (الدفعة 422 · v7.14)
+- **الخلاصة:** الوحدة 8 «العمل والترشيح» تبدأ! — **15 كلمة** (Tätigkeit النشاط · berufstätig على رأس العمل · beruflich مهنياً · Qualifikation التأهيل · Bewerber المتقدّم · Vollzeit/Teilzeit الدوامان · Lohn الأجر · leiten يدير · einsetzen يستخدم · anerkennen يعترف بـ · ausgebildet مدرَّب · Lehre التلمذة المهنية · Lehrstelle مكانها · Kopie النسخة) + **ars-adjektiv-gemischt**: الصفة بعد ein! («eine gutE Lehrstelle!» «ein neues Zeugnis!» «ein gutER Kollege!» «mit einem gutEN Lohn!»).
+- **التالي:** b1-u8-d2 («Bewerbung قالب» — كلمات + Briefstil formell!).
+
+## الدفعة 421 (2026-11-06) — D467: b1-u7-d6 «البيئة — التوليف!» — ختام الوحدة 7! (الدفعة 421 · v7.13)
+- **الخلاصة:** يوم التوليف! — **كلمتان** (die Sorge القلق · zerstören يُدمّر «Wir zerstören nichts — die Sorge bleibt!») + كل خيوط الوحدة الخمس مرساةً (nachdem+hatte+PII! فعل+حرفّه! als/wenn/bevor! zu+المصدر! الأزواج!) — و**معركة الوحدة 7: 20/20** من أول تشغيل!
+- **التالي:** b1-u8-d1 أو تقييم المالك — حسب أمره.
+
+## الدفعة 420 (2026-11-06) — D466: b1-u7-d5 «البيئة — الأزواج المتلازمة!» — 13 كلمة + ars-sowohl-als-auch (الدفعة 420 · v7.12)
+- **الخلاصة:** يوم الأزواج المتلازمة! — **13 كلمة** (nutzen يستفيد · Verbot الحظر · Recht الحق · Vergangenheit الماضي · Modell النموذج · Gewinn الربح · Schuld الذنب (والجمع Schulden = الديون!) · Gewissen الضمير · reif ناضج («Die Zeit ist reif»!) · vorhaben يعتزم («Ich habe vor, zu helfen» — مرساة zu!) + sowohl/weder/entweder (أدوات الأزواج — كلمات كاملة!). القاعدة: **sowohl…als auch · weder…noch · nicht nur…sondern auch · entweder…oder** — كل زوج بقريئه، والفعل بعد الثاني!
+- **التالي:** b1-u7-d6 (التوليف!) ثم battle-u7 كاملة.
+
+## الدفعة 419 (2026-11-06) — D465: b1-u7-d4 «البيئة — الأفعال + zu + المصدر» — 11 كلمة + ars-verb-zu (الدفعة 419 · v7.11)
+- **الخلاصة:** يوم الأفعال والمصادر! — **11 كلمة** (verwenden يستخدم · Metall المعدن · wertvoll ثمين · wertlos بلا قيمة · ordentlich مرتّب · fördern يشجّع · Unterstützung الدعم · Mitglied العضو · Versammlung التجمّع · Protest الاحتجاج · Einfluss التأثير) + قاعدة **ars-verb-zu**: «الأفعال + zu + المصدر!» (versuchen zu! anfangen zu! aufhören zu! — لكن möchte/kann بلا zu!) — مصيدة العربية: «أن» تُحذف أحياناً فتُحذف zu!
+- **التالي:** b1-u7-d5!
+
+## الدفعة 418 (2026-11-06) — D464: b1-u7-d3 «البيئة — عندما: مرة أم دأب؟» — 11 كلمة + ars-als-wenn-bevor (الدفعة 418 · v7.10)
+- **الخلاصة:** يوم أدوات الزمان! — **11 كلمة** (Verpackung التغليف · Wertstoff مادة التدوير · Altglas الزجاج القديم · Demonstration المظاهرة · Feinstaub الجسيمات الدقيقة · Katastrophe الكارثة · Mülltrennung فرز النفايات · umweltfreundlich صديق للبيئة · Überschwemmung الفيضان · Ozon الأوزون · bevor قبل أن!) + قاعدة **ars-als-wenn-bevor**: «عندما: مرة أم دأب؟» (Als die Überschwemmung kam! ← مرة · Wenn wir Zeit haben! ← دأب · Bevor wir gingen! ← قبل أن!) — العربية «عندما» واحدة والألمانية اثنتان!
+- **التالي:** b1-u7-d4!
+
+## الدفعة 417 (2026-11-06) — D463: b1-u7-d2 «البيئة — كل فعل بحرفّه الثابت!» — 11 كلمة + ars-verben-praep (الدفعة 417 · v7.9)
+- **الخلاصة:** اليوم الثاني من البيئة! — **11 كلمة** (Dürre الجفاف · Umweltschutz حماية البيئة · Lärm الضجيج · Plastik البلاستيك · Kunststoff المادة الاصطناعية · Dose العلبة · Aktion الحملة · Forschung البحث · giftig سام · verbrauchen يستهلك · entwickeln يطوّر) + قاعدة **ars-verben-praep**: «كل فعل بحرفّه الثابت!» (sich freuen auf + Akk · sorgen für + Akk · denken an + Akk · warten auf + Akk · helfen bei + Dativ!) — الأحرف تُحفظ مع الأفعال كالظلال!
+- **التالي:** b1-u7-d3!
+
+## الدفعة 416 (2026-11-06) — D462: b1-u7-d1 «البيئة والطبيعة — nachdem + Plusquamperfekt» — بداية الوحدة 7! (الدفعة 416 · v7.8)
+- **الخلاصة:** الوحدة 7 «البيئة والطبيعة»! — **14 كلمة** (Umwelt البيئة · Klima المناخ · Wiese المرج · Erde الأرض · Abfall النفايات · Energie الطاقة · Wanderung الرحلة · schützen يحمي · pflanzen يزرع · gießen يسقي · wachsen ينمو · genießen يستمتع · trennen يفصل · nachdem بعد أن!) + قاعدة جديدة **ars-nachdem-plusquamperfekt**: «بعد أن… كان قد!» (Nachdem wir den Abfall getrennt hatten, wanderten wir los!) — ترتيب حدثين في الماضي!
+- **التالي:** b1-u7-d2 (الوحدة 7!)
+
+## الدفعة 415 (2026-11-06) — D461: معركة الوحدة B1-U6 — 20/20 من أول تشغيل! (الدفعة 415 · v7.7)
+- **الخلاصة:** المعركة السادسة! — `tests/b1-unit6-proof.test.ts` (الوصفة المجرّبة: نسخ + تبديل + prefix += 6): دروس U6 الستة تُلعَب آلياً عبر المساعد المشترك — **20 اختباراً كلّها ناجحة من أول تشغيل**. الوحدات المبرهنة: A1-U1..U9 · A2-U1..U9 · B1-U1..U6 — **24 وحدة**!
+- **التالي:** الوحدة B1-U7 (يوم جديد — درس جديد u7-d1)!
+
+## الدفعة 414 (2026-11-06) — D460: b1-u6-d6 «التوليف: العودة من الرحلة» — 2 كلمة + الوحدة 6 كاملة!
+- **الخلاصة:** يوم التكامل! — **كلمتان** (Rückkehr «العودة» · unvergesslich «لا يُنسى») + توليف الوحدة كاملة في نصٍّ واحد: «Ich hätte gern einen Ausflug ins Tal gemacht. Könnte ich bitte die Fahrkarte haben? Wenn ich mehr Bargeld hätte … Hätten Sie mir helfen können? … Die Reise war unvergesslich!» — كل خيوط الوحدة الخمسة معاً!
+- **التالي:** معركة الوحدة B1-U6 (b1-unit6-proof) — البرهان السادس!
+
+## الدفعة 413 (2026-11-06) — D459: b1-u6-d5 «التسوّق والأسعار — Wenn + Konj II» — 13 كلمة + ars-wenn-konj-ii!
+- **الخلاصة:** التسوّق والأسعار في السفر! — **13 كلمة** (Kauf «الشراء» · Käufer «المشتري» · Schein «الورقة النقدية» · Bargeld «النقود» · Souvenir «التذكار» · verwechseln «يخلط بين» · Anzahlung «العربون» · Geldautomat «الصرّاف الآلي» · Entfernung «المسافة» · Abenteuer «المغامرة» · entdecken «يكتشف» · verbringen «يقضي الوقت» · gering «قليل») + **ars-wenn-konj-ii**: الشرط غير الواقع! (**Wenn ich mehr Bargeld hätte, könnte ich das kaufen!**)
+- **التالي:** b1-u6-d6 «التوليف» — ثم معركة الوحدة 6!
+
+## الدفعة 412 (2026-11-06) — D458: b1-u6-d4 «الطوارئ والمساعدة» — 13 كلمة + ars-konj-ii-modal!
+- **الخلاصة:** الطوارئ والمساعدة في السفر! — **13 كلمة** (Notruf «نداء الطوارئ» · Feuerwehr «الإطفاء» · retten «ينقذ» · Notausgang «مخرج الطوارئ» · Rettung «الإنقاذ» · Unglück «الحادث» · Dieb «اللص» · Alarm «الإنذار» · Brieftasche «المحفظة» · Besserung «التعافي» · anzeigen «يبلّغ عن» · Batterie «البطارية» · Aushilfe «المعين») + **ars-konj-ii-modal**: الماضي الافتراضي مع الأدوات! (**hätte + مصدرين آخراً**: «Hätten Sie helfen können?» / «Ich hätte den Notruf rufen sollen!»)
+- **التالي:** b1-u6-d5 — ثم d6 ومعركة الوحدة 6!
+
+## الدفعة 411 (2026-11-06) — D457: b1-u6-d3 «الشكوى المهذّبة — Konj II الماضي» — 13 كلمة + ars-konj-ii-perfekt!
+- **الخلاصة:** الشكوى المهذّبة في السفر! — **13 كلمة** (Beschwerde «الشكوى» · Verlust «الفقد» · Ersatz «العوض» · Fundbüro «مكتب المفقودات» · Schaden «العطب» · Ware «البضاعة» · berechnen «يحسب المبلغ» · umtauschen «يستبدل» · Alternative «البديل» · Forderung «المطالبة» · wütend «غاضب» · ärgerlich «مزعج» · Dokument «الوثيقة») + **ars-konj-ii-perfekt**: الماضي الافتراضي! (**hätte/wäre + التصريف الثالث آخراً!**) — «Ich hätte den früheren Zug genommen, dann wäre der Verlust nicht passiert!»
+- **التالي:** b1-u6-d4 — ثم d5..d6 ومعركة الوحدة 6!
+
+## الدفعة 410 (2026-11-05) — D456: b1-u6-d2 «سلالم التهذيب» — 13 كلمة + ars-hoeflich-stufen! (أربع درجات!)
+- **الخلاصة:** سلّم التهذيب! — **13 كلمة** (dankbar «ممتن» · angenehm «لطيف» · Freude «الفرح» · Respekt «الاحترام» · entgegenkommen «يتساهل» · Kellnerin «النادلة» · Menü «القائمة» · Nachspeise «الحلوى» · bedienen «يخدم» · Übernachtung «المبيت» · verlangen «يطالب» · auffordern «يطلب من» · Kompromiss «التسوية») + **ars-hoeflich-stufen**: أربع درجات! (**…, bitte!** ← **Könnte ich …?** ← **Hätten Sie …?** ← **Wären Sie so freundlich …?**) والطلب المباشر («Geben Sie …!») بلا تهذيب!
+- **التالي:** b1-u6-d3 — ثم d4..d6 ومعركة الوحدة 6!
+
+## الدفعة 409 (2026-11-05) — D455: b1-u6-d1 «السفر والثقافة — Konj II» — 13 كلمة + ars-konj-ii! (الوحدة 6 تبدأ!)
+- **الخلاصة:** الوحدة 6 تبدأ! — **13 كلمة** (Abschied «الوداع» · verabschieden «يودّع» · Erlebnis «التجربة» · erleben «يعيش» · Tradition «التقاليد» · traditionell «تقليدي» · Heimweh «الحنين إلى الوطن» · Passagier «الراكب» · Tal «الوادي» · Gasthaus «بيت الضيافة» · Denkmal «النصب التذكاري» · Galerie «المعرض» · Katalog «الكتالوج») + **ars-konj-ii**: حروف كان الثلاثة! (**hätte gern** للطلب! **Könnte ich …?** للسؤال المهذّب! **Wäre …?** للافتراض!) — التهذيب بالزمن نفسه!
+- **التالي:** b1-u6-d2 «سلالم التهذيب» — ثم d3..d6 ومعركة الوحدة 6!
+
+## الدفعة 408 (2026-11-05) — D454: معركة الوحدة B1-U5 — 20/20 من المحاولة الأولى! (المعركة الخامسة!)
+- **الخلاصة:** المعركة الخامسة! — `tests/b1-unit5-proof.test.ts`: دروس الوحدة الستة (b1-u5-d1..d6) تُلعَب آلياً عبر المساعد المشترك = **20/20 من المحاولة الأولى** (النمط نفسه ×5!).
+- **التالي:** b1-u6-d1 «السفر والثقافة» — Konj II (hätte/wäre/könnte) + سلالم التهذيب!
+
+## الدفعة 407 (2026-11-05) — D453: b1-u5-d6 «التوليف + المراجعة» — 2 كلمة + أسبوع الإعلام والرأي يكتمل! (يوم التكامل!)
+- **الخلاصة:** يوم التكامل! — **كلمتان** (Medien «الإعلام» · Publikum «الجمهور») + توليف الأسبوع كاملاً في نصٍّ واحد: «Ganz im Ernst: Die Medien sind wichtig. … Ich möchte wissen, ob die Zeitung das veröffentlicht. Das ist doch klar! Ach, toll! Zum Abschluss … Mit freundlichen Grüßen» — كل خيوط الوحدة الخمس معاً!
+- **التالي:** معركة الوحدة 5 (D454) — ثم الوحدة 6 «السفر والثقافة» (Konj II hätte/wäre/könnte + سلالم التهذيب)!
+
+## الدفعة 406 (2026-11-05) — D452: b1-u5-d5 «نبرة السخرية/الجدية» — 13 كلمة + ars-ironie-ernst! (يوم النبرة الثاني!)
+- **الخلاصة:** النبرة تصنع المعنى! — **13 كلمة** (ehrlich «صادق» · ernst «جادّ» · ernsthaft «جدّي» · Humor «الفكاهة» · Laune «المزاج» · Stimmung «الجوّ» · Vorwurf «اللوم» · wirken «يبدو/يُحدث أثراً» · frech «وقح» · wunderschön «بديع» · Wunder «المعجزة» · überhaupt «أصلاً» · **ironisch «ساخر» — بلا وسم غوته (مُعلنة D452: «الأمانة قبل الطبيعية» D185!)**) + **ars-ironie-ernst**: «Toll!» ساخراً = المعنى عكسي! و«Ganz im Ernst!» + «Ehrlich gesagt» = جادّ! و«Das wirkt …» لوصف النبرة!
+- **التالي:** b1-u5-d6 «التوليف + المراجعة» (يوم التكامل!) — ثم معركة الوحدة 5!
+
+## الدفعة 405 (2026-11-05) — D451: b1-u5-d4 «تعليق مكتوب» — 13 كلمة + ars-kommentar-schreiben! (يوم الكتابة!)
+- **الخلاصة:** يوم الكتابة! — **13 كلمة** (weshalb «ومن ثمّ» · jedoch «لكن» · trotz «رغم» · hinweisen «يشير إلى» · festhalten «يثبّت» · Vorschrift «اللائحة» · Rücksicht «المراعاة» · beeinflussen «يؤثّر في» · Verhalten «السلوك» · regeln «ينظّم» · positiv «إيجابي» · negativ «سلبي» · offiziell «رسمي») + **ars-kommentar-schreiben**: التعليق المكتوب! (مقدّمة Sehr geehrte …! + الرأي Meiner Meinung nach … weshalb …! + النقيض Jedoch/Trotz! + التثبيت Ich möchte Folgendes festhalten! + الختام Zum Abschluss … + Gruß!)
+- **التالي:** b1-u5-d5 «نبرة السخرية/الجدية» — ثم d6 التوليف ومعركة الوحدة 5!
+
+## الدفعة 404 (2026-11-05) — D450: b1-u5-d3 «الرأي بأسباب» — 13 كلمة + ars-meinung-gruende! (يوم الحجاج!)
+- **الخلاصة:** يوم الحجاج! — **13 كلمة** (Beweis «البرهان» · eindeutig «قاطع» · fair «عادل» · folgen «يتبع» · sinnvoll «ذو معنى» · sinnlos «بلا معنى» · vernünftig «المعقول» · Wirklichkeit «الواقع» · Sicherheit «اليقين» · ausreichend «كافٍ» · folgend «التالي» · überlegen «يتفكّر» · Reihenfolge «الترتيب») + **ars-meinung-gruende**: الرأي أولاً ثم السبب! («Ich finde …, weil …»! + «Meiner Meinung nach …»!)
+- **التالي:** b1-u5-d4 «تعليق مكتوب» (يوم الكتابة!) — ثم d5..d6 ومعركة الوحدة 5!
+
+## الدفعة 403 (2026-11-05) — D449: b1-u5-d2 «نبرة الرأي — Modalpartikeln تعرّض» — 13 كلمة + ars-modalpartikeln!
+- **الخلاصة:** يوم النبرة! — **13 كلمة** (Ausdruck «التعبير» · Erzählung «الحكاية» · Hörer «المستمع» · Leser «القارئ» · Kritik «النقد» · kritisch «نقدي» · Ratschlag «النصيحة» · Schrift «الخط» · überraschen «يُفاجئ» · verursachen «يسبب» · warnen «يحذّر» · widersprechen «يعترض» · Zweifel «الشك») + **ars-modalpartikeln** (تعرّض!): doch للإصرار! ja للتأكيد! mal للتلطيف! schon للتوكيد! — الجسيم يغيّر النبرة لا المعنى!
+- **التالي:** b1-u5-d3 «رأي بأسباب» (يوم الكلام!) — ثم d4..d6 ومعركة الوحدة 5!
+
+## الدفعة 402 (2026-11-05) — D448: b1-u5-d1 «الإعلام والرأي — أسئلة غير مباشرة» — 13 كلمة + ars-indirekte-fragen! + الوحدة 5 تبدأ!
+- **الخلاصة:** بداية الوحدة 5 «الإعلام والرأي» (study-plan §8!)! — **13 كلمة** (Meldung «الخبر» · Bericht «التقرير» · Überschrift «العنوان» · Kommentar «التعليق» · Quelle «المصدر» · Wahrheit «الحقيقة» · Diskussion «النقاش» · veröffentlichen «ينشر» · Presse «الصحافة» · Umfrage «استطلاع الرأي» · Erklärung «الشرح» · Zuschauer «المشاهد» · Wirkung «الأثر») + **ars-indirekte-fragen**: السؤال بلباقة! («Ich möchte wissen, woher die Nachricht **kommt**»! الفعل آخراً! + ob للسؤال بنعم/لا!)
+- **التالي:** b1-u5-d2 «Modalpartikeln (تعرّض)» — ثم d3..d6 ومعركة الوحدة 5!
+
+## الدفعة 401 (2026-11-05) — D447: معركة الوحدة 4 (D7) — b1-unit4-proof: 20/20 من أول محاولة! «التكوين والمسار المهني» مغلقة!
+- **الخلاصة:** معركة الوحدة 4 = برهان عمودي يلعب «التكوين والمسار المهني» كاملة عبر المحركات الحقيقية: التخطيط (4 محطات حيّة!) · التدريب (كل بند يُنمَّط ويُصحَّح في الاتجاهين!) · الاختبار (3 نسخ × علامة كاملة عند عتبة 75%!) · المسار (الوحدة تكتمل — u5 على الجبهة!) · الصوت (لا زر صامت!). **20/20 خضراء من أول تشغيل** — الوحدة كلها سليمة رأسياً!
+- **التالي:** b1-u5-d1 — **الوحدة 5** (خطة u5: التنقيب N-225!) ثم d2..d6 ومعركة الوحدة 5!
+
+## الدفعة 400 (2026-11-05) — D446: b1-u4-d6 «توليف: نهاية أسبوع التكوين» — Betrieb/Herausforderung! + الوحدة 4 كاملة!
+- **الخلاصة:** نهاية أسبوع التكوين والمسار المهني! — كلمتان ختاميتان: **der Betrieb «المؤسسة»** + **die Herausforderung «التحدي»** (مقابل Herz/Knochen في u3!) — ودرس توليف (integration!) يجمع خيوط الأسبوع الخمس في قصة واحدة: الخطاب! + الغرض! + الإضافة! + المقارنة! + الدافع! + الجامدة! + الختام! المحطات (قالب D432/D439): match(2×5) + gap-fill(6 — كل فجوة بقاعدة!) + error-hunt(3 — مصائد الأسبوع!) + speaking(8 جمل — القصة كاملة!) + Quiz 3×4 عتبة 75%!
+- **التالي:** معركة الوحدة 4 (b1-unit4-proof! prefix 192!) — ثم u5!
+
+## الدفعة 399 (2026-11-04) — D445: b1-u4-d5 «أفعال جر أكثر» — 13 كلمة + ars-feste-verben-2 + قائمة 10‑ك تنمو (14 دخلاً!)
+- **الخلاصة:** الجُمدة الثانية! — **13 كلمة** (sorgen «يقلق/يعتني» · sich konzentrieren «يركّز» · stimmen «يصحّ/يصوّت» · sich entschließen «يُقرّر» · sich verabreden «يتوعّد» + Karriere · Förderung · starten · Diplom · Sinn · Wert · Bedeutung · Vertrauen) + **ars-feste-verben-2**: sich sorgen um! sich konzentrieren auf! sich entschließen zu! sich verabreden mit! — الحروف محفوظة والانعكاسي إلزامي! وقائمة 10‑ك نمت إلى **14 دخلاً**!
+- **التالي:** b1-u4-d6 «مراجعة + توليف» (integration + كلمتان ختاميتان!) — ثم معركة الوحدة 4!
+
+## الدفعة 398 (2026-11-04) — D444: b1-u4-d4 «خطاب دافع» — 13 كلمة + ars-motivation (بنية الخطاب!)
+- **الخلاصة:** يوم الكتابة! خطاب الدافع! — **13 كلمة** (überzeugen «يُقنع» · Überzeugung · geeignet «مناسب» · Hoffnung «الأمل» · begeistert «متحمّس» · verantwortlich «مسؤول» · Verantwortung · flexibel «مرن» · kreativ «مبدع» · Talent «الموهبة» · Lebenslauf «السيرة الذاتية» · Absicht «النية» · Chance «الفرصة») + **ars-motivation**: بنية الخطاب الثابتة! (الملاءمة geeignet für! + القوى begeistert/verantwortlich! + الأمل Hoffnung/Chance! + المرفق Lebenslauf!) مع Anrede و Gruß!
+- **التالي:** b1-u4-d5 «أفعال جر أكثر» — كلمات + أفعال الجر!
+
+## الدفعة 397 (2026-11-04) — D443: b1-u4-d3 «مقابلة دراسية — يقارن مسارات» — 15 كلمة + ars-als-wie (als للفرق! wie للتشبيه!)
+- **الخلاصة:** يوم الكلام والمقارنة! — **15 كلمة** (Vergleich «المقارنة» · unterschiedlich «مختلف» · unterscheiden «يُميّز» · ähnlich «مشابه» · Gegensatz «النقيض» · Vorteil «الميزة» · Nachteil «العيب» · beobachten «يلاحظ» · schätzen «يُقدّر» · Entwicklung · Fortschritt · Änderung · Art + **als/wie** (أداة المقارنة نفسها! كلمتا قيد!)) + **ars-als-wie**: als للفرق! (besser als!) · wie للتشبيه! (ist wie!) — والخطأ الشائع «besser wie»!
+- **التالي:** b1-u4-d4 «خطاب دافع» (كتابة!) — كلمات + خطاب!
+
+## الدفعة 396 (2026-11-04) — D442: b1-u4-d2 «Genitiv كامل» — 13 كلمة + ars-genitiv-voll (الإضافة الكاملة!)
+- **الخلاصة:** يوم الإضافة! — **13 كلمة** (Höhe «الارتفاع» · Breite «العرض» · Länge «الطول» · Semester «الفصل الدراسي» · Generation «الجيل» · Jahrhundert «القرن» · Bereich «المجال» · Gebiet «الميدان» · Dauer «المدة» · Methode «الطريقة» · Theorie «النظرية» · System «النظام» · Organisation «التنظيم») + **ars-genitiv-voll**: des + s للمذكر/المحايد! (des Studiums!) + der بلا s للمؤنث! (der Hochschule!) + der للجمع! (der Professoren!) + von + م.غ البديل المنطوق! — «Die Dauer des Studiums ist lang!»
+- **التالي:** b1-u4-d3 «مقابلة دراسية — يقارن مسارات» (كلام!) — كلمات + مقابلة!
+
+## الدفعة 395 (2026-11-04) — D441: b1-u4-d1 «التكوين والدراسة» — 19 كلمة + ars-um-zu (um/ohne/anstatt zu!)
+- **الخلاصة:** بداية الوحدة 4 «التكوين والدراسة»! — **19 كلمة** (Zweck «الغرض» · Versuch «المحاولة» · erfolgreich «ناجح» · Erfolg · Vorbereitung · Wiederholung · Fähigkeit · unterstützen · fortsetzen · versäumen · Seminar · Professor · Hochschule + **anstatt «بدلاً»** (أداة القاعدة نفسها! كلمة قيد!) + **النظائف الخمس للتوازن**: Tinte «الحبر»! Mappe «المجلد»! Sack «الكيس»! Leim «الغراء»! Holz «الخشب»!) + **ars-um-zu**: um zu للغرض! ohne zu للبدون! anstatt zu للبدل! (الفاصلة قبلها! والمصدر آخراً!)
+- **التالي:** b1-u4-d2 «Genitiv كامل» — كلمات + الإضافة!
+
+## الدفعة 394 (2026-11-04) — D440: معركة الوحدة 3 (D7) — b1-unit3-proof: 20/20 من أول محاولة! «الصحة والتأمين» مغلقة!
+- **الخلاصة:** معركة الوحدة 3 = برهان عمودي يلعب «الصحة والتأمين» كاملة عبر المحركات الحقيقية: التخطيط (4 محطات حيّة!) · التدريب (كل بند يُنمَّط ويُصحَّح في الاتجاهين!) · الاختبار (3 نسخ × علامة كاملة عند عتبة 75%!) · المسار (الوحدة تكتمل — u4 على الجبهة!) · الصوت (لا زر صامت!). **20/20 خضراء من أول تشغيل** — الوحدة كلها سليمة رأسياً!
+- **التالي:** b1-u4-d1 «التكوين والدراسة» — **um zu / ohne zu / anstatt zu!** + خطة u4 (التنقيب!) ثم d2..d6 ومعركة الوحدة 4!
+
+## الدفعة 393 (2026-11-04) — D439: b1-u3-d6 «توليف: نهاية أسبوع الصحة» — Herz/Knochen! + الوحدة 3 كاملة!
+- **الخلاصة:** نهاية أسبوع الصحة والتأمين! — كلمتان ختاميتان: **das Herz «القلب»** + **der Knochen «العظم»** (مقابل Beginn/Aufenthalt في u2!) — ودرس توليف (integration!) يجمع خيوط الأسبوع الخمس في قصة واحدة: العيادة! + المجهول! + الجامدة! + الإجراء! + الاستمارة! + النظام! المحطات (قالب D425): match(2×5) + gap-fill(6 — كل فجوة بقاعدة!) + error-hunt(3 — مصائد الأسبوع!) + speaking(8 جمل — القصة كاملة!) + Quiz 3×4 عتبة 75%!
+- **التالي:** **معركة الوحدة 3 (b1-unit3-proof)** — برهان مثل D426/D433! (nextId ← b1-u3-d6 ثم u4 عند بدايتها!) — ثم b1-u4 «التكوين والدراسة» (um zu! Genitiv!).
+
+## الدفعة 392 (2026-11-04) — D438: b1-u3-d5 «Landeskunde: Krankenkasse» — 15 كلمة + ars-krankenkasse + أول ملف ثقافة B1!
+- **الخلاصة:** يوم الثقافة! نظام التأمين الصحي الألماني! — **15 كلمة** (Grenze «الحد» · Beschäftigung «التوظيف» · Prozent «بالمئة» · Anbieter «المزوّد» · staatlich «حكومي» · Regierung «الحكومة» · Gesetz «القانون» · Schutz «الحماية» · einzahlen «يدفع» · Steuer «الضريبة» · Liste «القائمة» · Wahl «الاختيار» + **النظائف الثلاث للتوازن**: Kittel «العباءة»! Knopf «الزر»! Fleck «البقعة»!) + **ars-krankenkasse**: النظام بلغته! (das Gesetz يفرض! die Kasse ist Pflicht! der Schutz staatlich! der Beitrag = Prozent!) + **b1-landeskunde-u3.json** (أول ملف ثقافة B1 — الحقائق + المفردات!).
+- **التالي:** b1-u3-d6 «مراجعة + توليف» (integration + كلمتان ختاميتان!) — ثم معركة الوحدة 3!
+
+## الدفعة 391 (2026-11-04) — D437: b1-u3-d4 «استمارة تأمين» — 15 كلمة + ars-formular (لغة الاستمارة الحاسمة!)
+- **الخلاصة:** يوم الكتابة! استمارة التأمين تُملأ! — **15 كلمة** (Angabe «البيان» · Feld «الحقل» · Zeile «السطر» · Geburt «الميلاد» · Geschlecht «الجنس» · Beleg «الإثبات» · Versichertenkarte «بطاقة التأمين» · vertreten «يُمثّل» · erforderlich «مطلوب» · nötig «لازم» · Pflicht «الواجب» · Angehörige «القريب» · Voraussetzung «الشرط» + **النظيفتان للتوازن**: Kasten «المربّع»! Spalte «العمود»!) + **ars-formular**: لغة الاستمارة الحاسمة! (erforderlich للإلزام! nötig للّازم العملي! der Beleg يُرفق! die Pflicht لا تُتجاهل!)
+- **التالي:** b1-u3-d5 «Landeskunde: Krankenkasse» — كلمات + ثقافة التأمين الصحي!
+
+## الدفعة 390 (2026-11-04) — D436: b1-u3-d3 «حوار عيادة — يصف إجراءً» — 16 كلمة + ars-ablauf (وصف الإجراء!)
+- **الخلاصة:** يوم الكلام! حوار العيادة كإجراء متسلسل! — **16 كلمة** (messen «يقيس» · wiegen «يزن» · testen «يختبر» · abnehmen «ينحف» · zunehmen «يزداد» · sich erholen «يتعافى» · körperlich · Erholung · Diät · Schritt · während · Luft · Folge + **الثلاث النظائف للتوازن**: blass «شاحب» · nicken «يُومئ» · tasten «يتحسّس»!) + **ars-ablauf**: وصف الإجراء بأدوات الترتيب الأربع! (zuerst! dann! danach! schließlich!) + المراحل بالمجهول (wird gewogen! wird getestet!) — الزيارة كاملة خطوة بخطوة!
+- **التالي:** b1-u3-d4 «استمارة تأمين» (كتابة!) — كلمات + استمارة!
+
+## الدفعة 389 (2026-11-04) — D435: b1-u3-d2 «feste Verben (البداية!)» — 15 كلمة + ars-feste-verben + قائمة 10‑ك الأولى (FesteVerbenEntry!)
+- **الخلاصة:** يوم الأفعال الجامدة! — **15 كلمة** (9 أفعال جامدة: verzichten «يتخلى عن» + sich gewöhnen «يتعوّد على» + achten «ينتبه إلى» + leiden «يتألم من» + sich bemühen «يسعى لـ» + handeln «يتعلق بـ» + zweifeln «يشكّ في» + führen «يؤدي إلى» + schauen «ينظر إلى» + 6 صحّية: Patientin · Übung · Bewegung · Schlaf · Haut · Muskel) + **ars-feste-verben** (shufra!): الفعل + الحرف جزء واحد محفوظ! (verzichten auf! leiden an! sich gewöhnen an!) + **قائمة 10‑ك الأولى** (`arsenal/lists/ars-feste-verben-10k.json` — FesteVerbenEntry: فعل + حرف + حالة + مثال!).
+- **التالي:** b1-u3-d3 «حوار عيادة — يصف إجراءً» (كلام!) — كلمات + حوار!
+
+## الدفعة 388 (2026-11-04) — D434: b1-u3-d1 «الصحة والتأمين» — 13 كلمة + ars-passiv (المجهول التجريبي Vorgangspassiv!)
+- **الخلاصة:** بداية الوحدة 3 «الصحة والتأمين»! — **13 كلمة** (behandeln «يعالج» · verschreiben «يصف دواءً» · Versicherung «التأمين» · versichern «يؤمّن» · Untersuchung «الفحص» · Klinik «العيادة» · Medizin «الطب» · Verletzung «الإصابة» · Überweisung «التحويل» · Beitrag «الاشتراك» · Leistung «الخدمة» · Therapie «العلاج» · Beratung «الاستشارة») + **ars-passiv**: المجهول التجريبي! (werden + التصريف الثاني! + von + م.غ للفاعل!) — «Der Patient wird behandelt!» «Das Medikament wird verschrieben!» — اليوم في العيادة كله بالمجهول!
+- **التالي:** b1-u3-d2 «feste Verben (البداية!)» — كلمات + الأفعال الجامدة!
+
+## الدفعة 387 (2026-11-04) — D433: معركة الوحدة 2 (D7) — b1-unit2-proof: 20/20 من أول محاولة! «البحث عن سكن» مغلقة!
+- **الخلاصة:** معركة الوحدة 2 = برهان عمودي يلعب «البحث عن سكن» كاملة عبر المحركات الحقيقية: التخطيط (4 محطات حيّة!) · التدريب (كل بند يُنمَّط ويُصحَّح في الاتجاهين!) · الاختبار (3 نسخ × علامة كاملة عند عتبة 75%!) · المسار (الوحدة تكتمل — u3 على الجبهة!) · الصوت (لا زر صامت!). **20/20 خضراء من أول تشغيل** — الوحدة كلها سليمة رأسياً!
+- **التالي:** b1-u3-d1 «الصحة والتأمين» — **Passiv (Vorgang) فهماً وإنتاجاً!** + خطة u3 (D434!) ثم d2..d6 ومعركة الوحدة 3!
+
+## الدفعة 386 (2026-11-04) — D432: b1-u2-d6 «توليف: نهاية البحث عن سكن» — كلمتان ختاميتان (Beginn/Aufenthalt!) + الوحدة 2 كاملة!
+- **الخلاصة:** نهاية أسبوع البحث عن سكن! — كلمتان ختاميتان: **der Beginn «البداية»** (مقابل Abschluss في u1!) + **der Aufenthalt «الإقامة»** — ودرس توليف (integration!) يجمع خيوط الأسبوع الخمس في قصة واحدة: الإعلان! + الردّ! + المكالمة! + العقد! + الانتقال! المحطات (قالب D425): match(2×5) + gap-fill(6 — كل فجوة بقاعدة!) + error-hunt(3 — مصائد الأسبوع!) + speaking(8 جمل — القصة كاملة!) + Quiz 3×4 عتبة 75%!
+- **التالي:** **معركة الوحدة 2 (b1-unit2-proof)** — برهان وحدة مثل D426! (nextId ← b1-u2-d6 ثم u3 عند بدايتها!) — ثم b1-u3 «الصحة والتأمين» (Passiv! feste Verben!).
+
 ## الدفعة 385 (2026-10-26) — D431: b1-u2-d5 «Kollokationen» — 15 كلمة (13 فعلاً مصاحباً!) + ars-kollokationen (الشراكات الثابتة!)
 - **الخلاصة:** يوم الكلمات المصاحبة! كل فعل بشركائه المحفوظين: **13 فعلاً** (vermeiden «يتجنّب» · brechen «يكسر» · ziehen «ينتقل» · gelten «يسري» · leisten «يُقدّم» · erfahren «يعلم» · garantieren «يضمن» · aufgeben «يتخلى» · verbessern «يُحسّن» · empfangen «يستلم» · ergänzen «يُكمل» · sich wenden «يتجه» · verlassen «يغادر») + **اسمان للتوازن** (Schulden «الديون»! Einkauf «التسوّق»!) = **15 كلمة** (سابقة u1-d5!) + **ars-kollokationen**: «in die Wohnung ziehen!» (in محفوظ!) · «Das Angebot gilt!» (بلا جار!) · «sich an die Behörde wenden!» (sich + an!) · «die Wohnung verlassen!» (+Akk!) — الشريك والإعراب محفوظان!
 - **التالي:** b1-u2-d6 «مراجعة + توليف» (integration! + كلمتان ختاميتان!) — ثم معركة الوحدة 2 (b1-unit2-proof)!

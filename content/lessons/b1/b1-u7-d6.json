@@ -1,0 +1,406 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u7-d6",
+  "level": "B1",
+  "unit": 7,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Wir zerstören nichts — die Sorge bleibt!",
+    "ar": "توليف الوحدة 7! (لا نُدمّر شيئاً! + كل خيوط الوحدة: بعدما! الأفعال بحروفها! عندما! zu والمصدر! الأزواج!)"
+  },
+  "canDoDaily": [
+    "يلخّص الوحدة 7 كاملة في نصٍّ واحد! (البيئة! الطبيعة! التلوث! إعادة التدوير! الأزواج!)",
+    "يكتب التوليف بقواعد الوحدة الخمس وفق 10‑ي! (nachdem+hatte+PII! فعل+حرفّه! als/wenn/bevor! فعل+zu+المصدر! sowohl…als auch!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "klima",
+      "wertstoff",
+      "protest"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«بعدما رأى النموذج، تصرّف.» (بعد + الماضي التام!)"
+        },
+        "choices": [
+          "Nachdem er das Modell gesehen hatte, handelte er.",
+          "Nachdem er das Modell gesehen hat, handelte er.",
+          "Nachdem er das Modell gesehen hat, handelte er."
+        ],
+        "answer": "Nachdem er das Modell gesehen hatte, handelte er.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«القلق»؟"
+        },
+        "choices": [
+          "die Sorge",
+          "die Freude",
+          "die Ruhe"
+        ],
+        "answer": "die Sorge",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u7-d5: الأزواج المتلازمة (sowohl…als auch!) — اليوم: كل الوحدة!",
+      "من u7-d1: الوحدة 7 بدأت بالبيئة والكوارث — اليوم: القلق والتوليف!"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "sorge",
+      "zerstoeren"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-nachdem-plusquamperfekt"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Wir zerstören nichts — die Sorge bleibt!",
+        "ar": "يكتب توليف الوحدة 7 في 8 جمل!"
+      },
+      "situation": {
+        "de": "Die Sorge, die Erde, die Aktion.",
+        "ar": "الأرض: القلق! الحملة! ما لا يُدمَّر!"
+      },
+      "successCriteria": [
+        "الكلمتان الجديدتان + خيوط الوحدة الخمسة!",
+        "«nachdem + hatte + التصريف الثالث» للماضي التام!",
+        "«الفعل + حرفّه» (helfen der Umwelt!) و«als/wenn/bevor» للظرف!",
+        "«zu + المصدر» و«sowohl…als auch» للأزواج!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات القلق والتدمير!",
+          "die Sorge! zerstören!"
+        ],
+        "interleavedWith": [
+          "kunststoff",
+          "wald",
+          "wiese"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "القلق",
+                "de": "die Sorge"
+              },
+              {
+                "ar": "يُدمّر",
+                "de": "zerstören"
+              },
+              {
+                "ar": "الأرض",
+                "de": "die Erde"
+              }
+            ],
+            "why": "die Sorge القلق (die! جمعها Sorgen!) · zerstören يُدمّر (hat zerstört!) · die Erde الأرض (مراجعة: u7 كاملة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "البلاستيك",
+                "de": "der Kunststoff"
+              },
+              {
+                "ar": "القيمة",
+                "de": "der Wert"
+              },
+              {
+                "ar": "الاحتجاج",
+                "de": "der Protest"
+              }
+            ],
+            "why": "der Kunststoff البلاستيك (u7-d1!) · der Wert القيمة (u7-d4!) · der Protest الاحتجاج (u7-d4!) — (مراجعة: das Material! die Umwelt!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الجسيمات الدقيقة",
+                "de": "der Feinstaub"
+              },
+              {
+                "ar": "الأوزون",
+                "de": "das Ozon"
+              },
+              {
+                "ar": "مادة القيمة",
+                "de": "der Wertstoff"
+              }
+            ],
+            "why": "der Feinstaub الجسيمات الدقيقة (u7-d3!) · das Ozon الأوزون (u7-d3!) · der Wertstoff مادة القيمة (u7-d3!) — (مراجعة: die Katastrophe! der Wald!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "خيوط الوحدة!",
+          "hatte + التصريف الثالث!"
+        ],
+        "interleavedWith": [
+          "katze",
+          "sonne",
+          "wolke"
+        ],
+        "items": [
+          {
+            "q": "Nachdem er das Modell gesehen ___, handelte er. (بعد + الماضي التام!)",
+            "a": "hatte",
+            "why": "nachdem + hatte + التصريف الثالث (gesehen hatte!) — لا Präteritum بعد nachdem!"
+          },
+          {
+            "q": "Wir helfen ___ Umwelt. (helfen + جرّ!)",
+            "a": "der",
+            "why": "helfen يأخذ جرّاً (Dativ!): helfen der Umwelt! (u7-d2: كل فعل بحرفّه الثابت!)"
+          },
+          {
+            "q": "Sowohl die Natur ___ die Erde sind wichtig. (als auch! الزوج!)",
+            "a": "als auch",
+            "why": "sowohl … als auch = كلاهما … وأيضاً! (الزوج كامل! u7-d5!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأزواج والجوانب لا تُخلط!",
+          "hatte بعد nachdem! الداتيف مع helfen!"
+        ],
+        "interleavedWith": [
+          "natur",
+          "regen",
+          "wetter"
+        ],
+        "items": [
+          {
+            "q": "~~Nachdem er das Modell gesehen hat, handelte er.~~",
+            "a": "Nachdem er das Modell gesehen hatte, handelte er.",
+            "why": "بعد + الماضي التام (hatte + gesehen!) — لا hat! (hat = ماضٍ تام بسيط — nachdem يطلبه أتمّ!) (u7-d1!)"
+          },
+          {
+            "q": "~~Wir helfen die Natur.~~",
+            "a": "Wir helfen der Natur.",
+            "why": "helfen + Dativ (der Natur!) لا Akkusativ! (u7-d2!)"
+          },
+          {
+            "q": "~~Ich versuche helfen.~~",
+            "a": "Ich versuche zu helfen.",
+            "why": "الفعل الثاني بعد zu + مصدر (zu helfen!)! (u7-d4!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "توليف البيئة!",
+          "كل القواعد معاً!"
+        ],
+        "interleavedWith": [
+          "vogel",
+          "baum",
+          "blume"
+        ],
+        "items": [
+          {
+            "q": "افتح التوليف: القلق على الأرض كبير!",
+            "a": "Die Sorge um die Erde ist groß.",
+            "why": "die Sorge القلق! (um die Erde = على الأرض!)"
+          },
+          {
+            "q": "انطق خيط d1: بعدما رأى النموذج، تصرّف!",
+            "a": "Nachdem er das Modell gesehen hatte, handelte er.",
+            "why": "بعد + الماضي التام! (nachdem + hatte + PII!)"
+          },
+          {
+            "q": "انطق الزوج: ليس فقط الربح، بل الحق أيضاً!",
+            "a": "Nicht nur der Gewinn, sondern auch das Recht!",
+            "why": "الزوج الكامل: ليس فقط الربح، بل الحق أيضاً (nicht nur…sondern auch)! (u7-d5!)"
+          },
+          {
+            "q": "اختم: لا نُدمّر شيئاً!",
+            "a": "Wir zerstören nichts!",
+            "why": "zerstören يُدمّر! (nichts = لا شيء!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«القلق»؟",
+            "a": "die Sorge"
+          },
+          {
+            "q": "«لا نُدمّر شيئاً!»؟",
+            "a": "Wir zerstören nichts!"
+          },
+          {
+            "q": "«بعدما رأى النموذج، تصرّف.»؟",
+            "a": "Nachdem er das Modell gesehen hatte, handelte er."
+          },
+          {
+            "q": "«الجسيمات الدقيقة»؟",
+            "a": "der Feinstaub"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يُدمّر»؟",
+            "a": "zerstören"
+          },
+          {
+            "q": "«كلاهما الطبيعة والأرض مهمّتان.»؟",
+            "a": "Sowohl die Natur als auch die Erde sind wichtig."
+          },
+          {
+            "q": "«مادة القيمة»؟",
+            "a": "der Wertstoff"
+          },
+          {
+            "q": "«أعتزم أن أساعد.»؟",
+            "a": "Ich habe vor, zu helfen."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«القلق على الأرض كبير.»؟",
+            "a": "Die Sorge um die Erde ist groß."
+          },
+          {
+            "q": "«البلاستيك»؟",
+            "a": "der Kunststoff"
+          },
+          {
+            "q": "«الاحتجاج»؟",
+            "a": "der Protest"
+          },
+          {
+            "q": "«لا يجوز لنا أن نُدمّر الطبيعة.»؟",
+            "a": "Wir dürfen die Natur nicht zerstören."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Guten Tag! Die Sorge um die Erde ist groß. Nachdem der Feinstaub zugenommen hatte, kamen die Proteste. Wenn die Natur leidet, helfen wir der Umwelt. Sowohl die Natur als auch die Erde sind wichtig. Nicht nur der Gewinn, sondern auch das Recht! Ich habe vor, zu helfen. Wir nutzen die Energie. Wir zerstören nichts — die Sorge bleibt!",
+      "ar": "مرحباً! القلق على الأرض كبير. بعدما ازدادت الجسيمات الدقيقة، جاءت الاحتجاجات. عندما تعاني الطبيعة، نساعد البيئة. كلاهما الطبيعة والأرض مهمّتان. ليس فقط الربح، بل الحق أيضاً! أنا أعتزم أن أساعد. نحن نستخدم الطاقة. لا نُدمّر شيئاً — القلق يبقى!"
+    },
+    "srsBundleWordIds": [
+      "sorge",
+      "zerstoeren"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "بعدما + hat (ماضٍ تام بسيط)!",
+          "de": "~~Nachdem er das Modell gesehen hat, handelte er.~~"
+        },
+        "correct": {
+          "ar": "بعدما + الماضي التام (hatte + التصريف الثالث)!",
+          "de": "Nachdem er das Modell gesehen hatte, handelte er."
+        },
+        "exercise": {
+          "q": "Nachdem er das Modell gesehen ___, handelte er. (hatte! الماضي التام!)",
+          "a": "hatte"
+        },
+        "whyArabicSpeakerFails": "العربية: «بعدما رأى» بالماضي! والألمانية: nachdem + hatte + PII (الماضي التام الأتمّ!) — hat وحده لا يكفي! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "helfen بالنصب!",
+          "de": "~~Wir helfen die Natur.~~"
+        },
+        "correct": {
+          "ar": "helfen يأخذ جرّاً: der Natur!",
+          "de": "Wir helfen der Natur."
+        },
+        "exercise": {
+          "q": "Wir helfen ___ Natur. (der! جرّ!)",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "helfen حرفّه الجرّ (Dativ) ثابت! العربية: «نساعد الطبيعة» نصب — الكلمة نفسها مجرورة هنا! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "sowohl … und!",
+          "de": "~~Sowohl die Natur und die Erde sind wichtig.~~"
+        },
+        "correct": {
+          "ar": "كلاهما…وأيضاً: sowohl … als auch!",
+          "de": "Sowohl die Natur als auch die Erde sind wichtig."
+        },
+        "exercise": {
+          "q": "Sowohl die Natur ___ die Erde sind wichtig. (als auch! الزوج!)",
+          "a": "als auch"
+        },
+        "whyArabicSpeakerFails": "العربية: «كلاهما الطبيعة والأرض» بلا زوج! والألمانية: sowohl…als auch زوج كامل (خريطة التداخل 10‑ي)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Sorge",
+      "https://www.duden.de/rechtschreibung/zerstoeren"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-nachdem-plusquamperfekt",
+    "ars-verben-praep",
+    "ars-als-wenn-bevor",
+    "ars-verb-zu",
+    "ars-sowohl-als-auch"
+  ],
+  "audioManifestRefs": [
+    "word-sorge",
+    "word-zerstoeren"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (البيئة والطبيعة — التوليف!)",
+    "goetheWordListOverlap": [
+      "sorge",
+      "zerstoeren"
+    ]
+  }
+}

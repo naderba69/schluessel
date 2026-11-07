@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-verben-praep",
+  "kind": "shufra",
+  "title": {
+    "ar": "كل فعل بحرفّه الثابت!",
+    "de": "Verben mit Präpositionen: sich freuen auf + Akk · sorgen für + Akk · denken an + Akk"
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "red",
+  "payload": {
+    "topicAr": "الأفعال بجرّاتها الثابتة! (Ich freue mich auf den Sommer! · Wir sorgen für die Umwelt!)",
+    "sceneAr": "البيئة: نفرح بالصيف، ونهتمّ بالطبيعة، ونفكّر بالزهور! كل فعل يجرّ حرفه الثابت كالظلّ — يُحفظان معاً!",
+    "examples": [
+      {
+        "de": "Ich freue mich auf den Sommer.",
+        "ar": "أنا أتطلّع بفرح إلى الصيف. (sich freuen auf + Akk!)"
+      },
+      {
+        "de": "Wir sorgen für die Umwelt.",
+        "ar": "نحن نهتمّ بالبيئة. (sorgen für + Akk!)"
+      },
+      {
+        "de": "Ich denke an die Natur.",
+        "ar": "أنا أفكّر في الطبيعة. (denken an + Akk!)"
+      },
+      {
+        "de": "Wir warten auf das Wetter.",
+        "ar": "نحن ننتظر الطقس. (warten auf + Akk!)"
+      },
+      {
+        "de": "Helfen Sie mir bei der Arbeit!",
+        "ar": "ساعدني في العمل! (helfen bei + Dat!)"
+      },
+      {
+        "de": "Ich sorge mich um die Katze.",
+        "ar": "أنا أقلق على القطة. (sich sorgen um + Akk! ليست sorgen für!)"
+      }
+    ],
+    "inferencePromptAr": "لاحظ: الفعل والحرف يُحفظان معاً! (freuen auf لا freuen für!) — قارن: «Ich warte auf den Bus.» (warten auf + Akk) و«Ich helfe bei der Arbeit.» (helfen bei + Dat). الحالة تتبع الحرف لا العكس!",
+    "ruleDe": "Ich freue mich auf den Sommer. · Wir sorgen für die Umwelt. · Ich denke an die Natur. · Wir warten auf das Wetter.",
+    "ruleAr": "(1) الفعل يجرّ حرفه الثابت! (freuen auf · sorgen für · denken an · warten auf · helfen bei!) (2) الحرف مع كل فعل كالظلّ — يُحفظ معه لا يُختار! (3) الحالة: auf/an هنا Akk، وbei بـDativ!",
+    "contrastAr": "العربية: «أفرح بـ/على» — الحرف يتغيّر! والألمانية: لكل فعل حرفٌ ثابت يُحفظ معه! (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "كل فعل حرفه الثابت — يُحفظان معاً! (freuen auf لا freuen für!)",
+      "sich freuen auf + Akk · sorgen für + Akk · denken an + Akk · warten auf + Akk!",
+      "helfen bei + Dativ! (لا Akk!)",
+      "sorgen für (يهتم بـ) ≠ sich sorgen um (يقلق على)!"
+    ],
+    "beads": [
+      "Ich freue mich auf den Sommer.",
+      "Wir sorgen für die Umwelt.",
+      "Ich denke an die Blumen.",
+      "Wir warten auf den Regen.",
+      "Helfen Sie mir bei der Arbeit!",
+      "Ich sorge mich um die Katze."
+    ],
+    "properNouns": []
+  },
+  "usedInLessons": [
+    "b1-u7-d2"
+  ]
+}

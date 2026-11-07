@@ -1,0 +1,406 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u4-d6",
+  "level": "B1",
+  "unit": 4,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Studium oder Ausbildung: die Herausforderung ist groß!",
+    "ar": "توليف أسبوع التكوين والمسار المهني! (المؤسسة! التحدي! + كل خيوط الأسبوع!)"
+  },
+  "canDoDaily": [
+    "يلخّص أسبوع التكوين والمسار المهني كاملاً في حكاية واحدة! (الغرض! الإضافة! المقارنة! الخطاب! القرار!)",
+    "يكتب القصة بقواعد الأسبوع الخمس وفق 10‑ي! (um zu! Genitiv! Vergleich! Motivation! feste Verben!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "zweck",
+      "vergleich",
+      "sinn"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التحدي»؟"
+        },
+        "choices": [
+          "die Herausforderung",
+          "der Herausforderung",
+          "das Herausforderung"
+        ],
+        "answer": "die Herausforderung",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«أتعلّم لأنجح.»؟ (الغرض!)"
+        },
+        "choices": [
+          "Ich lerne, um erfolgreich zu sein.",
+          "Ich lerne, erfolgreich zu sein.",
+          "Ich lerne, um erfolgreich bin."
+        ],
+        "answer": "Ich lerne, um erfolgreich zu sein.",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u4-d1..d5: الغرض! + الإضافة! + المقارنة! + الخطاب! + الأفعال الجامدة! — اليوم نجمعها!",
+      "من u3-d6: نهاية الأسبوع = الملخص! — اليوم نهاية أسبوع التكوين!"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "betrieb",
+      "herausforderung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-um-zu"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Studium oder Ausbildung: die Herausforderung ist groß!",
+        "ar": "يلخّص قصة أسبوع التكوين في 8 جمل!"
+      },
+      "situation": {
+        "de": "Studium: die Hochschule, das Seminar. Beruf: der Betrieb, die Ausbildung.",
+        "ar": "الدراسة: الجامعة! الملتقى! المهنة: المؤسسة! التكوين!"
+      },
+      "successCriteria": [
+        "القصة كاملة: الغرض! المقارنة! الخطاب! القرار!",
+        "قواعد الأسبوع الخمس كلها!",
+        "كلمات اليوم + مراجعة الأسبوع!",
+        "Anrede/Gruß مهذبان!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات الأسبوع + الكلمتان الجديدتان!",
+          "der Betrieb! die Herausforderung!"
+        ],
+        "interleavedWith": [
+          "seminar",
+          "diplom",
+          "lebenslauf"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "المؤسسة",
+                "de": "der Betrieb"
+              },
+              {
+                "ar": "التحدي",
+                "de": "die Herausforderung"
+              },
+              {
+                "ar": "الغرض",
+                "de": "der Zweck"
+              },
+              {
+                "ar": "المقارنة",
+                "de": "der Vergleich"
+              },
+              {
+                "ar": "المعنى",
+                "de": "der Sinn"
+              }
+            ],
+            "why": "der Betrieb المؤسسة (der! die Betriebe!) · die Herausforderung التحدي (die! die Herausforderungen!) — ومراجعة الأسبوع: der Zweck الغرض (d1!) · der Vergleich المقارنة (d3!) · der Sinn المعنى (d5!) — كلها من أسبوع التكوين!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التحضير",
+                "de": "die Vorbereitung"
+              },
+              {
+                "ar": "الفصل الدراسي",
+                "de": "das Semester"
+              },
+              {
+                "ar": "الميزة",
+                "de": "der Vorteil"
+              },
+              {
+                "ar": "مناسب",
+                "de": "geeignet"
+              },
+              {
+                "ar": "يركّز",
+                "de": "konzentrieren"
+              }
+            ],
+            "why": "مراجعة الأسبوع: die Vorbereitung التحضير (d1!) · das Semester الفصل الدراسي (d2!) · der Vorteil الميزة (d3!) · geeignet مناسب (d4!) · konzentrieren يركّز (d5!) — كلها من أسبوع التكوين!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "قواعد الأسبوع الخمس!",
+          "الغرض! الإضافة! المقارنة! الخطاب! الأفعال الجامدة!"
+        ],
+        "interleavedWith": [
+          "erfolg",
+          "familie",
+          "arbeit"
+        ],
+        "items": [
+          {
+            "q": "Ich lerne, ___ erfolgreich zu sein. (الغرض!)",
+            "a": "um",
+            "why": "um zu (d1): um + zu! الغرض! (مراجعة: der Erfolg النجاح!)"
+          },
+          {
+            "q": "Die Dauer ___ Studiums ist lang. (الإضافة!)",
+            "a": "des",
+            "why": "Genitiv (d2): des + s! «des Studiums»! (مراجعة: die Familie العائلة!)"
+          },
+          {
+            "q": "Das Studium ist besser ___ die Ausbildung. (المقارنة!)",
+            "a": "als",
+            "why": "Vergleich (d3): besser als! لا wie! (مراجعة: die Arbeit العمل!)"
+          },
+          {
+            "q": "Ich bin ___ für die Arbeit. (الدافع!)",
+            "a": "geeignet",
+            "why": "Motivation (d4): geeignet für! مناسب للعمل!"
+          },
+          {
+            "q": "Ich sorge mich ___ die Familie. (الجامدة!)",
+            "a": "um",
+            "why": "feste Verben 2 (d5): sich sorgen um! الحرف محفوظ!"
+          },
+          {
+            "q": "Die ___ ist groß.",
+            "a": "Herausforderung",
+            "why": "die Herausforderung التحدي (die!) — اليوم! (و der Betrieb: المؤسسة!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "مصائد الأسبوع!",
+          "الغرض! الحرف! المقارنة!"
+        ],
+        "interleavedWith": [
+          "vorsicht",
+          "zeit",
+          "wohnung"
+        ],
+        "items": [
+          {
+            "q": "~~Ich lerne, erfolgreich zu sein.~~",
+            "a": "Ich lerne, um erfolgreich zu sein.",
+            "why": "um zu (d1): um إلزامي! (مراجعة: Vorsicht انتبه!)"
+          },
+          {
+            "q": "~~Die Ausbildung im Betrieb ist besser wie das Studium.~~",
+            "a": "Die Ausbildung im Betrieb ist besser als das Studium.",
+            "why": "Vergleich (d3): besser als! لا wie! (مراجعة: die Zeit الوقت!)"
+          },
+          {
+            "q": "~~Ich sorge um die Familie.~~",
+            "a": "Ich sorge mich um die Familie.",
+            "why": "feste Verben (d5): sich محفوظة! (مراجعة: die Wohnung الشقة!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "القصة كاملة (سجّل): 8 جمل — كل خيوط الأسبوع!",
+          "الخطاب! + الغرض! + الإضافة! + المقارنة! + الدافع! + الجامدة! + التحدي! + الختام!"
+        ],
+        "interleavedWith": [
+          "beginn",
+          "freundlich",
+          "danke"
+        ],
+        "items": [
+          {
+            "q": "احكِ قصة أسبوع التكوين (سجّل): 8 جمل — الخطاب! + الغرض! + الإضافة! + المقارنة! + الدافع! + الجامدة! + التحدي! + الختام!",
+            "a": "Sehr geehrte Damen und Herren, ich lerne, um erfolgreich zu sein. Die Dauer des Studiums ist lang. Die Ausbildung im Betrieb ist besser als das Studium. Ich bin geeignet für die Arbeit. Ich sorge mich um die Familie. Die Herausforderung ist groß. Mit freundlichen Grüßen",
+            "why": "توليف الأسبوع (B1): Sehr geehrte! + um erfolgreich zu sein (الغرض!) + Dauer des Studiums (الإضافة!) + besser als (المقارنة!) + geeignet für (الدافع!) + sorge mich um (الجامدة!) + Herausforderung/Betrieb! + Gruß الثابت — أسبوع كامل بلغته! (مراجعة: der Beginn البداية! freundlich ودود! danke شكراً!) (خريطة التداخل 10‑ي)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المؤسسة»؟",
+            "a": "der Betrieb"
+          },
+          {
+            "q": "«التحدي»؟",
+            "a": "die Herausforderung"
+          },
+          {
+            "q": "«الغرض»؟",
+            "a": "der Zweck"
+          },
+          {
+            "q": "«أتعلّم لأنجح.»؟ (الغرض!)",
+            "a": "Ich lerne, um erfolgreich zu sein."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الفصل الدراسي»؟",
+            "a": "das Semester"
+          },
+          {
+            "q": "«الدراسة أفضل من التكوين.»؟ (المقارنة!)",
+            "a": "Das Studium ist besser als die Ausbildung."
+          },
+          {
+            "q": "«السيرة الذاتية»؟",
+            "a": "der Lebenslauf"
+          },
+          {
+            "q": "«أنا مناسب للعمل.»؟ (الدافع!)",
+            "a": "Ich bin geeignet für die Arbeit."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المعنى»؟",
+            "a": "der Sinn"
+          },
+          {
+            "q": "«أهتمّ بالعائلة.»؟ (الجامدة!)",
+            "a": "Ich sorge mich um die Familie."
+          },
+          {
+            "q": "«التحدي كبير.»؟",
+            "a": "Die Herausforderung ist groß."
+          },
+          {
+            "q": "«التحضير»؟",
+            "a": "die Vorbereitung"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Sehr geehrte Damen und Herren, ich lerne, um erfolgreich zu sein. Die Dauer des Studiums ist lang. Die Ausbildung im Betrieb ist besser als das Studium. Ich bin geeignet für die Arbeit. Ich sorge mich um die Familie. Die Herausforderung ist groß. Mit freundlichen Grüßen",
+      "ar": "سادة أعزاء، أتعلّم لأنجح. مدة الدراسة طويلة. التكوين في المؤسسة أفضل من الدراسة. أنا مناسب للعمل. أهتمّ بالعائلة. التحدي كبير. مع تحياتي الخالصة."
+    },
+    "srsBundleWordIds": [
+      "betrieb",
+      "herausforderung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "um المنسية!",
+          "de": "~~Ich lerne, erfolgreich zu sein.~~"
+        },
+        "correct": {
+          "ar": "أتعلّم لأنجح.",
+          "de": "Ich lerne, um erfolgreich zu sein."
+        },
+        "exercise": {
+          "q": "Ich lerne, ___ erfolgreich zu sein. (um!)",
+          "a": "um"
+        },
+        "whyArabicSpeakerFails": "الغرض (d1): um + zu إلزاميان! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "wie مكان als!",
+          "de": "~~Das Studium ist besser wie die Ausbildung.~~"
+        },
+        "correct": {
+          "ar": "الدراسة أفضل من التكوين.",
+          "de": "Das Studium ist besser als die Ausbildung."
+        },
+        "exercise": {
+          "q": "Das Studium ist besser ___ die Ausbildung. (als!)",
+          "a": "als"
+        },
+        "whyArabicSpeakerFails": "المقارنة (d3): als للفرق! wie للتشبيه! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "der Herausforderung!",
+          "de": "~~der Herausforderung~~"
+        },
+        "correct": {
+          "ar": "التحدي.",
+          "de": "die Herausforderung"
+        },
+        "exercise": {
+          "q": "___ Herausforderung (die!)",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "die Herausforderung (die!) — الجنس يُحفظ! (خريطة التداخل 10‑ي)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Betrieb",
+      "https://www.duden.de/rechtschreibung/Herausforderung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-um-zu",
+    "ars-genitiv-voll",
+    "ars-als-wie",
+    "ars-motivation",
+    "ars-feste-verben-2",
+    "ars-feste-verben-10k"
+  ],
+  "audioManifestRefs": [
+    "word-betrieb",
+    "word-herausforderung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (التكوين والدراسة — التوليف)",
+    "goetheWordListOverlap": [
+      "betrieb",
+      "herausforderung"
+    ]
+  }
+}
