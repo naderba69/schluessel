@@ -3,7 +3,7 @@
 <!-- docs-sync:start -->
 ## الدفعة 422 (2026-11-07) — D468: b1-u8-d1 «العمل والترشيح — الصفة المخلوطة!» — بداية الوحدة 8! (الدفعة 422 · v7.14)
 - **الخلاصة:** الوحدة 8 «العمل والترشيح» تبدأ! — **15 كلمة** (Tätigkeit النشاط · berufstätig على رأس العمل · beruflich مهنياً · Qualifikation التأهيل · Bewerber المتقدّم · Vollzeit/Teilzeit الدوامان · Lohn الأجر · leiten يدير · einsetzen يستخدم · anerkennen يعترف بـ · ausgebildet مدرَّب · Lehre التلمذة المهنية · Lehrstelle مكانها · Kopie النسخة) + **ars-adjektiv-gemischt**: الصفة بعد ein! («eine gutE Lehrstelle!» «ein neues Zeugnis!» «ein gutER Kollege!» «mit einem gutEN Lohn!»).
-- **التالي:** b1-u8-d2 («Bewerbung قالب» — كلمات + Briefstil formell!).
+- **التالي:** b1-u8-d2 («Bewerbung قالب» — كلمات + Briefstil formell!). **[UPDATE: PR #7 (هذا الفرع → main) دُمج بأمر المالك — merge commit `2f865fc7` (2026-11-07)!]**
 
 ## الدفعة 421 (2026-11-06) — D467: b1-u7-d6 «البيئة — التوليف!» — ختام الوحدة 7! (الدفعة 421 · v7.13)
 - **الخلاصة:** يوم التوليف! — **كلمتان** (die Sorge القلق · zerstören يُدمّر «Wir zerstören nichts — die Sorge bleibt!») + كل خيوط الوحدة الخمس مرساةً (nachdem+hatte+PII! فعل+حرفّه! als/wenn/bevor! zu+المصدر! الأزواج!) — و**معركة الوحدة 7: 20/20** من أول تشغيل!
