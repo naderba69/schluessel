@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-adjektiv-gemischt",
+  "kind": "shufra",
+  "title": {
+    "ar": "الصفة المخلوطة!",
+    "de": "Gemischte Adjektivdeklination — nach ein-/kein-/mein-"
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "red",
+  "payload": {
+    "topicAr": "نهايات الصفة بعد ein/kein والضمائر! (النهايات المخلوطة: بعضها قوي وبعضها ضعيف!)",
+    "sceneAr": "العمل: أبحث عن مكان تلمذة جيد! أوراق جديدة! زميل جيد! أجر جيد! الصفة تتبع الأداة دائماً!",
+    "examples": [
+      {
+        "de": "Ich suche eine gute Lehrstelle.",
+        "ar": "أبحث عن مكان تلمذة جيد. (eine gutE — مؤنث E!)"
+      },
+      {
+        "de": "Ich habe ein neues Zeugnis.",
+        "ar": "لديّ شهادة جديدة. (ein neues — محايد ES!)"
+      },
+      {
+        "de": "Er ist ein guter Kollege.",
+        "ar": "هو زميل جيد. (ein gutER — مذكر ER! كالقوي!)"
+      },
+      {
+        "de": "Mit einem guten Lohn!",
+        "ar": "بأجر جيد! (einEM gutEN — داتيف EM+EN!)"
+      }
+    ],
+    "inferencePromptAr": "لاحظ: بعد ein يبقى المذكر gutER والمحايد gutES (كالنهايات القوية!) — لكن المنصوب gutEN والمؤنث gutE! الصفة «مخلوطة»: نصف قوي ونصف ضعيف!",
+    "ruleDe": "Ich suche eine gute Lehrstelle. · Ich habe ein neues Zeugnis. · Er ist ein guter Kollege. · Mit einem guten Lohn!",
+    "ruleAr": "بعد ein/kein/الضمائر (mein/dein/sein…): مذكر مبتدأ gutER · محايد مبتدأ gutES · مؤنث gutE · مذكر منصوب gutEN · داتيف/جرّ gutEN! (المبتدأ المذكر والمحايد يبقيان نهايته القوية — الباقي ضعيف = مخلوطة!)",
+    "contrastAr": "العربية: «رجل جيد / امرأة جيدة» — الصفة تتحرك بالهاء والواو فقط! والألمانية: النهاية تتبع الأداة×الجنس×الحالة (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "der gutE Mann (بعد der = ضعيفة! لا مخلوطة!)",
+      "gutER Mann (بلا أداة = قوية! «Guter Wein!»)",
+      "einen gutEN Mann (المنصوب المذكر EN دائماً!)",
+      "einem/einer gutEN (الداتيف والجرّ EN!)"
+    ],
+    "beads": [
+      "Ich suche eine gute Lehrstelle.",
+      "Ich habe ein neues Zeugnis.",
+      "Er ist ein guter Kollege.",
+      "Mit einem guten Lohn!",
+      "Der gute Kollege arbeitet.",
+      "Guter Lohn!"
+    ],
+    "properNouns": []
+  },
+  "usedInLessons": [
+    "b1-u8-d1"
+  ]
+}

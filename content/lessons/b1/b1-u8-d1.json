@@ -1,0 +1,490 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u8-d1",
+  "level": "B1",
+  "unit": 8,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Ich suche eine gute Lehrstelle!",
+    "ar": "الصفة المخلوطة! (بعد ein: gutE/gutER/gutES/gutEN — نصف قوي ونصف ضعيف!) + بداية الوحدة 8: العمل والترشيح!"
+  },
+  "canDoDaily": [
+    "يصف العمل والترشيح بالصفات الصحيحة! (eine gute Lehrstelle! ein neues Zeugnis! ein guter Kollege!)",
+    "يُنهي الصفة بعد ein/kein والضمائر! (المخلوطة: gutER/gutES مبتدأ! gutEN منصوباً وجرّاً!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bewerbung",
+      "lebenslauf",
+      "gehalt"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«أبحث عن مكان تلمذة جيد.» (الصفة بعد eine!)"
+        },
+        "choices": [
+          "Ich suche eine gute Lehrstelle.",
+          "Ich suche eine gut Lehrstelle.",
+          "Ich suche eine gutes Lehrstelle."
+        ],
+        "answer": "Ich suche eine gute Lehrstelle.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«المتقدّم للعمل»؟"
+        },
+        "choices": [
+          "der Bewerber",
+          "der Kollege",
+          "der Chef"
+        ],
+        "answer": "der Bewerber",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u7-d6: التوليف (كل قواعد الوحدة 7 معاً) — اليوم: الوحدة 8! العمل والترشيح!",
+      "من u7-d1: بعدما + الماضي التام (nachdem + hatte!) — اليوم: الصفة بعد ein! (النهايات تتبع الأداة!)"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "taetigkeit",
+      "berufstaetig",
+      "beruflich",
+      "qualifikation",
+      "bewerber",
+      "vollzeit",
+      "teilzeit",
+      "lohn",
+      "leiten",
+      "einsetzen",
+      "anerkennen",
+      "ausgebildet",
+      "lehre",
+      "kopie",
+      "lehrstelle"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-adjektiv-gemischt"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Ich suche eine gute Lehrstelle!",
+        "ar": "يتحدّث عن الترشح والعمل بالصفات الصحيحة!"
+      },
+      "situation": {
+        "de": "Der Bewerber, die Qualifikation, der Lohn.",
+        "ar": "المقابلة: المتقدّم! التأهيل! الأجر!"
+      },
+      "successCriteria": [
+        "الكلمات الخمس عشرة + الصفات المخلوطة!",
+        "«eine gutE» للمؤنث! «ein gutES» للمحايد! «ein gutER» للمذكر!",
+        "«einen gutEN» منصوباً! «einem gutEN» جرّاً!",
+        "كل فعل بحرفّه! (setzen … ein! erkennen … an!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات العمل!",
+          "der Bewerber! die Qualifikation!"
+        ],
+        "interleavedWith": [
+          "arbeit",
+          "chef",
+          "gehalt"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "النشاط",
+                "de": "die Tätigkeit"
+              },
+              {
+                "ar": "التأهيل",
+                "de": "die Qualifikation"
+              },
+              {
+                "ar": "المتقدّم للعمل",
+                "de": "der Bewerber"
+              },
+              {
+                "ar": "الأجر",
+                "de": "der Lohn"
+              }
+            ],
+            "why": "die Tätigkeit النشاط (die! جمعها Tätigkeiten!) · die Qualifikation التأهيل (die! + Qualifikationen!) · der Bewerber المتقدّم (der! + Bewerber!) · der Lohn الأجر (der! جمعها Löhne بالتنوين!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الدوام الكامل",
+                "de": "die Vollzeit"
+              },
+              {
+                "ar": "الدوام الجزئي",
+                "de": "die Teilzeit"
+              },
+              {
+                "ar": "التلمذة المهنية",
+                "de": "die Lehre"
+              },
+              {
+                "ar": "مكان التلمذة",
+                "de": "die Lehrstelle"
+              }
+            ],
+            "why": "die Vollzeit الدوام الكامل (die!) · die Teilzeit الدوام الجزئي (die!) · die Lehre التلمذة المهنية (die!) · die Lehrstelle مكان التلمذة (die! Lehr+Stelle!) — (مراجعة: der Beruf! die Bewerbung!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "على رأس العمل",
+                "de": "berufstätig"
+              },
+              {
+                "ar": "مدرَّب",
+                "de": "ausgebildet"
+              },
+              {
+                "ar": "يدير",
+                "de": "leiten"
+              },
+              {
+                "ar": "مهنياً",
+                "de": "beruflich"
+              }
+            ],
+            "why": "berufstätig على رأس العمل (Beruf+stätig!) · ausgebildet مدرَّب (aus+gebildet!) · leiten يدير (hat geleitet!) · beruflich مهنياً (Beruf+lich!) — (مراجعة: die Erfahrung! das Team!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "النهايات تتبع الأداة!",
+          "eine gutE! ein gutER! ein gutES!"
+        ],
+        "interleavedWith": [
+          "buch",
+          "tisch",
+          "schule"
+        ],
+        "items": [
+          {
+            "q": "Ich suche eine ___ Lehrstelle. (gut! الصففة بعد eine!)",
+            "a": "gute",
+            "why": "المؤنث بعد eine: gutE (eine gute Lehrstelle!) — النهاية E!"
+          },
+          {
+            "q": "Ich habe ein ___ Zeugnis. (neu! بعد ein محايد!)",
+            "a": "neues",
+            "why": "المحايد بعد ein: gutES/neues (ein neues Zeugnis!) — النهاية ES!"
+          },
+          {
+            "q": "Er ist ein ___ Kollege. (gut! مذكر بعد ein!)",
+            "a": "guter",
+            "why": "المذكر المبتدأ بعد ein: gutER (ein guter Kollege!) — كالنهاية القوية!"
+          },
+          {
+            "q": "Mit einem ___ Lohn! (gut! داتيف!)",
+            "a": "guten",
+            "why": "الداتيف بعد einem: gutEN (mit einem guten Lohn!) — EM + EN!"
+          },
+          {
+            "q": "Wir setzen die Energie ___. (einsetzen! المنفصل!)",
+            "a": "ein",
+            "why": "الفعل المنفصل: setzen … ein (الجذر آخراً!) — einsetzen يستخدم!"
+          },
+          {
+            "q": "Der Chef erkennt die Erfahrung ___. (anerkennen! المنفصل!)",
+            "a": "an",
+            "why": "الفعل المنفصل: erkennt … an! — anerkennen يعترف بـ!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "النهاية لا تُحذف!",
+          "الجنس يحدّد الأداة والنهاية!"
+        ],
+        "interleavedWith": [
+          "auto",
+          "brot",
+          "wasser"
+        ],
+        "items": [
+          {
+            "q": "~~Ich suche eine gut Lehrstelle.~~",
+            "a": "Ich suche eine gute Lehrstelle.",
+            "why": "الصفة لا تبقى عارية بعد الأداة! eine gutE!"
+          },
+          {
+            "q": "~~Ich habe ein neuer Zeugnis.~~",
+            "a": "Ich habe ein neues Zeugnis.",
+            "why": "المحايد: ein neues! (neuer للمذكر المبتدأ فقط!)"
+          },
+          {
+            "q": "~~Ich suche einen guten Lehrstelle.~~",
+            "a": "Ich suche eine gute Lehrstelle.",
+            "why": "die Lehrstelle مؤنث! eine gute! (einen guten للمذكر المنصوب!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "توليف العمل!",
+          "الصفات المخلوطة!"
+        ],
+        "interleavedWith": [
+          "frau",
+          "mann",
+          "kind"
+        ],
+        "items": [
+          {
+            "q": "قل بالألمانية: «أبحث عن مكان تلمذة جيد.» (eine gute!)",
+            "a": "Ich suche eine gute Lehrstelle.",
+            "why": "eine gutE Lehrstelle! (المؤنث E!)"
+          },
+          {
+            "q": "قل بالألمانية: «أنا على رأس العمل.»",
+            "a": "Ich bin berufstätig.",
+            "why": "berufstätig على رأس العمل!"
+          },
+          {
+            "q": "قل بالألمانية: «مع أجر جيد!» (mit einem guten!)",
+            "a": "Mit einem guten Lohn!",
+            "why": "الداتيف: einem gutEN! (المخلوطة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المتقدّم للعمل»؟",
+            "a": "der Bewerber"
+          },
+          {
+            "q": "«أبحث عن مكان تلمذة جيد.»؟",
+            "a": "Ich suche eine gute Lehrstelle."
+          },
+          {
+            "q": "«التأهيل»؟",
+            "a": "die Qualifikation"
+          },
+          {
+            "q": "«أنا على رأس العمل.»؟",
+            "a": "Ich bin berufstätig."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الدوام الجزئي»؟",
+            "a": "die Teilzeit"
+          },
+          {
+            "q": "«لديّ شهادة جديدة.»؟",
+            "a": "Ich habe ein neues Zeugnis."
+          },
+          {
+            "q": "«يدير»؟",
+            "a": "leiten"
+          },
+          {
+            "q": "«النشاط»؟",
+            "a": "die Tätigkeit"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«الأجر»؟",
+            "a": "der Lohn"
+          },
+          {
+            "q": "«هو مدرَّب جيداً.»؟",
+            "a": "Er ist gut ausgebildet."
+          },
+          {
+            "q": "«النسخة»؟",
+            "a": "die Kopie"
+          },
+          {
+            "q": "«التلمذة المهنية تبدأ في الصيف.»؟",
+            "a": "Die Lehre beginnt im Sommer."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Guten Tag! Ich bin berufstätig. Ich suche eine gute Lehrstelle — mit einer guten Qualifikation! Der Bewerber kommt morgen. Das ist beruflich wichtig. Ich habe ein neues Zeugnis und eine Kopie. Er ist ein guter Kollege. Er ist gut ausgebildet. Er leitet das Team. Wir setzen die Energie ein. Der Chef erkennt die Erfahrung an. Mit einem guten Lohn! Die Lehre beginnt im Sommer. Ich arbeite in Vollzeit. Sie arbeitet in Teilzeit.",
+      "ar": "مرحباً! أنا على رأس العمل. أبحث عن مكان تلمذة جيد — بتأهيل جيد! المتقدّم للعمل يأتي غداً. هذا مهم مهنياً. لديّ شهادة جديدة ونسخة. هو زميل جيد. هو مدرَّب جيداً. هو يدير الفريق. نحن نستخدم الطاقة. الرئيس يعترف بالخبرة. بأجر جيد! التلمذة المهنية تبدأ في الصيف. أنا أعمل بدوام كامل. هي تعمل بدوام جزئي."
+    },
+    "srsBundleWordIds": [
+      "taetigkeit",
+      "berufstaetig",
+      "beruflich",
+      "qualifikation",
+      "bewerber",
+      "vollzeit",
+      "teilzeit",
+      "lohn",
+      "leiten",
+      "einsetzen",
+      "anerkennen",
+      "ausgebildet",
+      "lehre",
+      "kopie",
+      "lehrstelle"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "الصفة عارية بعد الأداة!",
+          "de": "~~Ich suche eine gut Lehrstelle.~~"
+        },
+        "correct": {
+          "ar": "النهاية إجبارية: eine gutE!",
+          "de": "Ich suche eine gute Lehrstelle."
+        },
+        "exercise": {
+          "q": "Ich suche eine ___ Lehrstelle. (gut! بعد eine!)",
+          "a": "gute"
+        },
+        "whyArabicSpeakerFails": "العربية: «مكان تلمذة جيد» — الصفة بلا نهاية! والألمانية: بعد الأداة النهاية إجبارية (eine gutE!) (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "neuer للمحايد!",
+          "de": "~~Ich habe ein neuer Zeugnis.~~"
+        },
+        "correct": {
+          "ar": "المحايد: ein neues!",
+          "de": "Ich habe ein neues Zeugnis."
+        },
+        "exercise": {
+          "q": "Ich habe ein ___ Zeugnis. (neu! محايد!)",
+          "a": "neues"
+        },
+        "whyArabicSpeakerFails": "النهاية تتبع الجنس: المحايد ES (neues!) والمذكر المبتدأ ER (neuer!) — العربية لا تميّز! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "الأداة لا تتبع المعنى!",
+          "de": "~~Ich suche einen guten Lehrstelle.~~"
+        },
+        "correct": {
+          "ar": "die Lehrstelle مؤنث: eine gute!",
+          "de": "Ich suche eine gute Lehrstelle."
+        },
+        "exercise": {
+          "q": "Ich suche ___ gute Lehrstelle. (eine! مؤنث!)",
+          "a": "eine"
+        },
+        "whyArabicSpeakerFails": "الجنس من الكلمة لا من المعنى! (die Lehrstelle مؤنث!) — «مكان» مذكر بالعربية فتُخْطَئ الأداة! (خريطة التداخل 10‑ي)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Taetigkeit",
+      "https://www.duden.de/rechtschreibung/berufstaetig",
+      "https://www.duden.de/rechtschreibung/beruflich",
+      "https://www.duden.de/rechtschreibung/Qualifikation",
+      "https://www.duden.de/rechtschreibung/Bewerber",
+      "https://www.duden.de/rechtschreibung/Vollzeit",
+      "https://www.duden.de/rechtschreibung/Teilzeit",
+      "https://www.duden.de/rechtschreibung/Lohn",
+      "https://www.duden.de/rechtschreibung/leiten",
+      "https://www.duden.de/rechtschreibung/einsetzen",
+      "https://www.duden.de/rechtschreibung/anerkennen",
+      "https://www.duden.de/rechtschreibung/ausgebildet",
+      "https://www.duden.de/rechtschreibung/Lehre",
+      "https://www.duden.de/rechtschreibung/Kopie",
+      "https://www.duden.de/rechtschreibung/Lehrstelle"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-adjektiv-gemischt",
+    "ars-konj-ii"
+  ],
+  "audioManifestRefs": [
+    "word-taetigkeit",
+    "word-berufstaetig",
+    "word-beruflich",
+    "word-qualifikation",
+    "word-bewerber",
+    "word-vollzeit",
+    "word-teilzeit",
+    "word-lohn",
+    "word-leiten",
+    "word-einsetzen",
+    "word-anerkennen",
+    "word-ausgebildet",
+    "word-lehre",
+    "word-kopie",
+    "word-lehrstelle"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (العمل والترشيح — الصفة المخلوطة!)",
+    "goetheWordListOverlap": [
+      "taetigkeit",
+      "berufstaetig",
+      "beruflich",
+      "qualifikation",
+      "bewerber",
+      "vollzeit",
+      "teilzeit",
+      "lohn",
+      "leiten",
+      "einsetzen",
+      "anerkennen",
+      "ausgebildet",
+      "lehre",
+      "kopie",
+      "lehrstelle"
+    ]
+  }
+}

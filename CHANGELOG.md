@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-07 — الدفعة 422: D468 — b1-u8-d1 «العمل والترشيح — الصفة المخلوطة!» — بداية الوحدة 8! (الدفعة 422 · v7.14)
+الوحدة 8 «العمل والترشيح» تبدأ! — **15 كلمة** (Tätigkeit النشاط · berufstätig على رأس العمل · beruflich مهنياً · Qualifikation التأهيل · Bewerber المتقدّم · Vollzeit/Teilzeit الدوامان · Lohn الأجر · leiten يدير · einsetzen يستخدم · anerkennen يعترف بـ · ausgebildet مدرَّب · Lehre التلمذة المهنية · Lehrstelle مكانها · Kopie النسخة) + **ars-adjektiv-gemischt**: الصفة بعد ein! («eine gutE Lehrstelle!» «ein neues Zeugnis!» «ein gutER Kollege!» «mit einem gutEN Lohn!»).
+- **البوابة:** vitest ✓ 1779/1779 · tsc ✓ · validate-content ✓ 2591/0/0 · build ✓.
+
 ## 2026-11-06 — الدفعة 421: D467 — b1-u7-d6 «البيئة — التوليف!» — ختام الوحدة 7! (الدفعة 421 · v7.13)
 يوم التوليف! — **كلمتان** (die Sorge القلق · zerstören يُدمّر «Wir zerstören nichts — die Sorge bleibt!») + كل خيوط الوحدة الخمس مرساةً (nachdem+hatte+PII! فعل+حرفّه! als/wenn/bevor! zu+المصدر! الأزواج!) — و**معركة الوحدة 7: 20/20** من أول تشغيل!
 - **البوابة:** vitest ✓ 1779/1779 (137 ملفاً — battle-u7 +20!) · tsc ✓ · validate-content ✓ 2574/0/0 · build ✓.

@@ -2317,6 +2317,21 @@ def build_all() -> None:
     ("word-entweder", "entweder.", "entweder", ["b1-u7-d5"]),
     ("word-sorge", "die Sorge.", "sorge", ["b1-u7-d6"]),
     ("word-zerstoeren", "zerstören.", "zerstoeren", ["b1-u7-d6"]),
+    ("word-taetigkeit", "die Tätigkeit.", "taetigkeit", ["b1-u8-d1"]),
+    ("word-berufstaetig", "berufstätig.", "berufstaetig", ["b1-u8-d1"]),
+    ("word-beruflich", "beruflich.", "beruflich", ["b1-u8-d1"]),
+    ("word-qualifikation", "die Qualifikation.", "qualifikation", ["b1-u8-d1"]),
+    ("word-bewerber", "der Bewerber.", "bewerber", ["b1-u8-d1"]),
+    ("word-vollzeit", "die Vollzeit.", "vollzeit", ["b1-u8-d1"]),
+    ("word-teilzeit", "die Teilzeit.", "teilzeit", ["b1-u8-d1"]),
+    ("word-lohn", "der Lohn.", "lohn", ["b1-u8-d1"]),
+    ("word-leiten", "leiten.", "leiten", ["b1-u8-d1"]),
+    ("word-einsetzen", "einsetzen.", "einsetzen", ["b1-u8-d1"]),
+    ("word-anerkennen", "anerkennen.", "anerkennen", ["b1-u8-d1"]),
+    ("word-ausgebildet", "ausgebildet.", "ausgebildet", ["b1-u8-d1"]),
+    ("word-lehre", "die Lehre.", "lehre", ["b1-u8-d1"]),
+    ("word-kopie", "die Kopie.", "kopie", ["b1-u8-d1"]),
+    ("word-lehrstelle", "die Lehrstelle.", "lehrstelle", ["b1-u8-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
