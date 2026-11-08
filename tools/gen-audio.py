@@ -2394,6 +2394,21 @@ def build_all() -> None:
     ("word-geschickt", "geschickt.", "geschickt", ["b1-u8-d5"]),
     ("word-zusage", "die Zusage.", "zusage", ["b1-u8-d6"]),
     ("word-besetzen", "besetzen.", "besetzen", ["b1-u8-d6"]),
+    ("word-nachfragen", "nachfragen.", "nachfragen", ["b1-u9-d1"]),
+    ("word-rueckfrage", "die Rückfrage.", "rueckfrage", ["b1-u9-d1"]),
+    ("word-klaeren", "klären.", "klaeren", ["b1-u9-d1"]),
+    ("word-klaerung", "die Klärung.", "klaerung", ["b1-u9-d1"]),
+    ("word-missverstaendnis", "das Missverständnis.", "missverstaendnis", ["b1-u9-d1"]),
+    ("word-missverstehen", "missverstehen.", "missverstehen", ["b1-u9-d1"]),
+    ("word-konkret", "konkret.", "konkret", ["b1-u9-d1"]),
+    ("word-hinweis", "der Hinweis.", "hinweis", ["b1-u9-d1"]),
+    ("word-konflikt", "der Konflikt.", "konflikt", ["b1-u9-d1"]),
+    ("word-vereinbarung", "die Vereinbarung.", "vereinbarung", ["b1-u9-d1"]),
+    ("word-einigung", "die Einigung.", "einigung", ["b1-u9-d1"]),
+    ("word-verzeihen", "verzeihen.", "verzeihen", ["b1-u9-d1"]),
+    ("word-behauptung", "die Behauptung.", "behauptung", ["b1-u9-d1"]),
+    ("word-schildern", "schildern.", "schildern", ["b1-u9-d1"]),
+    ("word-bezweifeln", "bezweifeln.", "bezweifeln", ["b1-u9-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
