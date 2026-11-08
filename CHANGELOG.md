@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-08 — الدفعة 425: D471 — b1-u8-d4 «العمل والترشيح — السيرة والخطاب!» — يوم الكتابة! (الدفعة 425 · v7.17)
+يوم الكتابة (D4!) — **15 كلمة** (Geburtsdatum تاريخ الميلاد · persönlich شخصي · Daten البيانات (جمع فقط!) · Angaben المعلومات (جمع فقط!) · Wohnort مكان السكن · Grundschule الابتدائية · Einleitung المقدمة · Abschnitt القسم · Verweis الإشارة إلى الإعلان · darstellen يعرض · aufführen يورد (منفصلان!) · kopieren يُصوّر · senden يُرسل (sandte/gesandt!) · ansprechen يخاطب (Sprechen Sie mich an!) · unterschrieben موقَّع) + **ars-lebenslauf**: السيرة بالأقسام الستة الثابتة (بيانات ← تعليم ← خبرة ← مهارات ← لغات ← اهتمامات!).
+- **البوابة:** vitest ✓ 1779/1779 · tsc ✓ · validate-content ✓ 2642/0/0 · build ✓.
+
 ## 2026-11-08 — الدفعة 424: D470 — b1-u8-d3 «العمل والترشيح — تمثيلية المقابلة!» — أول تمثيلية كلامية! (الدفعة 424 · v7.16)
 أول تمثيلية كلامية (D3 = يوم كلام!) — **15 كلمة** (Arbeitnehmer العامل · Arbeitszeit ساعات العمل · Überstunden الساعات الإضافية (جمع فقط!) · Kollegin الزميلة · Chefin المديرة · Präsentation العرض · präsentieren يعرض · auftreten يظهر (ist aufgetreten!) · beschäftigen يُوظّف · verlängern يُجدّد · bearbeiten يُنجز · ausstellen يُصدر (منفصل!) · organisiert منظَّم · Mobilität التنقّل · Weiterbildung التطوير المهني) + **ars-interview**: قالب المقابلة في 6 أسطر ثابتة (التحية ← التعريف بالنفس ← العرض ← السؤال عن الشروط ← الجودات ← الشكر آخراً!).
 - **البوابة:** vitest ✓ 1779/1779 · tsc ✓ · validate-content ✓ 2625/0/0 · build ✓.

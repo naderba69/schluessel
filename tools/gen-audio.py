@@ -2362,6 +2362,21 @@ def build_all() -> None:
     ("word-organisiert", "organisiert.", "organisiert", ["b1-u8-d3"]),
     ("word-mobilitaet", "die Mobilität.", "mobilitaet", ["b1-u8-d3"]),
     ("word-weiterbildung", "die Weiterbildung.", "weiterbildung", ["b1-u8-d3"]),
+    ("word-geburtsdatum", "das Geburtsdatum.", "geburtsdatum", ["b1-u8-d4"]),
+    ("word-persoenlich", "persönlich.", "persoenlich", ["b1-u8-d4"]),
+    ("word-daten", "die Daten.", "daten", ["b1-u8-d4"]),
+    ("word-angaben", "die Angaben.", "angaben", ["b1-u8-d4"]),
+    ("word-wohnort", "der Wohnort.", "wohnort", ["b1-u8-d4"]),
+    ("word-grundschule", "die Grundschule.", "grundschule", ["b1-u8-d4"]),
+    ("word-einleitung", "die Einleitung.", "einleitung", ["b1-u8-d4"]),
+    ("word-abschnitt", "der Abschnitt.", "abschnitt", ["b1-u8-d4"]),
+    ("word-verweis", "der Verweis.", "verweis", ["b1-u8-d4"]),
+    ("word-darstellen", "darstellen.", "darstellen", ["b1-u8-d4"]),
+    ("word-auffuehren", "aufführen.", "auffuehren", ["b1-u8-d4"]),
+    ("word-kopieren", "kopieren.", "kopieren", ["b1-u8-d4"]),
+    ("word-senden", "senden.", "senden", ["b1-u8-d4"]),
+    ("word-ansprechen", "ansprechen.", "ansprechen", ["b1-u8-d4"]),
+    ("word-unterschrieben", "unterschrieben.", "unterschrieben", ["b1-u8-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

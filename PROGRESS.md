@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 425 (2026-11-08) — D471: b1-u8-d4 «العمل والترشيح — السيرة والخطاب!» — يوم الكتابة! (الدفعة 425 · v7.17)
+- **الخلاصة:** يوم الكتابة (D4!) — **15 كلمة** (Geburtsdatum تاريخ الميلاد · persönlich شخصي · Daten البيانات (جمع فقط!) · Angaben المعلومات (جمع فقط!) · Wohnort مكان السكن · Grundschule الابتدائية · Einleitung المقدمة · Abschnitt القسم · Verweis الإشارة إلى الإعلان · darstellen يعرض · aufführen يورد (منفصلان!) · kopieren يُصوّر · senden يُرسل (sandte/gesandt!) · ansprechen يخاطب (Sprechen Sie mich an!) · unterschrieben موقَّع) + **ars-lebenslauf**: السيرة بالأقسام الستة الثابتة (بيانات ← تعليم ← خبرة ← مهارات ← لغات ← اهتمامات!).
+- **التالي:** b1-u8-d5 («Kollokationen مهنية» — أزواج العمل الثابتة!).
+
 ## الدفعة 424 (2026-11-08) — D470: b1-u8-d3 «العمل والترشيح — تمثيلية المقابلة!» — أول تمثيلية كلامية! (الدفعة 424 · v7.16)
 - **الخلاصة:** أول تمثيلية كلامية (D3 = يوم كلام!) — **15 كلمة** (Arbeitnehmer العامل · Arbeitszeit ساعات العمل · Überstunden الساعات الإضافية (جمع فقط!) · Kollegin الزميلة · Chefin المديرة · Präsentation العرض · präsentieren يعرض · auftreten يظهر (ist aufgetreten!) · beschäftigen يُوظّف · verlängern يُجدّد · bearbeiten يُنجز · ausstellen يُصدر (منفصل!) · organisiert منظَّم · Mobilität التنقّل · Weiterbildung التطوير المهني) + **ars-interview**: قالب المقابلة في 6 أسطر ثابتة (التحية ← التعريف بالنفس ← العرض ← السؤال عن الشروط ← الجودات ← الشكر آخراً!).
 - **التالي:** b1-u8-d4 («Bewerbungsbrief + Lebenslauf» — يوم الكتابة!).
