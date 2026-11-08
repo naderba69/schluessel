@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "constitutionSection": "10‑ي",
+ "id": "ars-bildbeschreibung",
+ "kind": "shufra",
+ "title": {
+  "ar": "وصف الصورة بالبروتوكول!",
+  "de": "Bildbeschreibung — Vordergrund · Hintergrund · Protokoll"
+ },
+ "levelIntroduced": "B1",
+ "riskLevel": "orange",
+ "payload": {
+  "topicAr": "وصف الصورة بالبروتوكول! (المقدمة أولاً! ثم الخلفية! ثم التفاصيل! والتوقيت والملاحظات!)",
+  "sceneAr": "المكتب: صورة على الطاولة! أصفها بالترتيب (Im Vordergrund … Im Hintergrund …) وأكتب البروتوكول (Uhrzeit! Absprache! Übersicht!) — وصف منظّم لا عشوائي!",
+  "examples": [
+   {
+    "de": "Im Vordergrund steht ein Tisch.",
+    "ar": "في المقدمة طاولة. (المقدمة أولاً!)"
+   },
+   {
+    "de": "Im Hintergrund ist ein Gebäude.",
+    "ar": "في الخلفية مبنى. (الخلفية ثانياً!)"
+   },
+   {
+    "de": "Das ist der Mittelpunkt.",
+    "ar": "هذا هو المركز. (التحديد!)"
+   },
+   {
+    "de": "Er skizziert die Szene.",
+    "ar": "هو يوجز المشهد. (الإيجاز!)"
+   },
+   {
+    "de": "Bitte beachten Sie die Uhrzeit!",
+    "ar": "من فضلكم لاحظوا التوقيت! (البروتوكول!)"
+   },
+   {
+    "de": "Das ist die Übersicht.",
+    "ar": "هذه هي النظرة العامة. (الإغلاق!)"
+   }
+  ],
+  "inferencePromptAr": "لاحظ: الترتيب ثابت (Vordergrund ← Hintergrund ← Mittelpunkt!) والفعل الثاني بعد الظرف (Im Vordergrund STEHT …!) — والبروتوكول يُغلق بـ Übersicht!",
+  "ruleDe": "Im Vordergrund steht ein Tisch. · Im Hintergrund ist ein Gebäude. · Das ist der Mittelpunkt. · Er skizziert die Szene. · Bitte beachten Sie die Uhrzeit! · Das ist die Übersicht.",
+  "ruleAr": "وصف الصورة بالبروتوكول: (1) المقدمة: Im Vordergrund steht/sitzt …! (2) الخلفية: Im Hintergrund ist …! (3) المركز: Das ist der Mittelpunkt! (4) الإيجاز: die Szene skizzieren! (5) البروتوكول: die Uhrzeit beachten! (6) الإغلاق: die Übersicht!",
+  "contrastAr": "العربية: «في الصورة طاولة ومقهى ومبنى» — تعداد بلا ترتيب! والألمانية: الوصف بروتوكول مرتّب (Vordergrund أولاً!) والفعل الثاني بعد الظرف (Im Vordergrund steht …!) والموقع يحدّد الفعل (steht/sitzt/liegt!) — الترتيب جزء من المعنى (خريطة التداخل 10‑ي).",
+  "limitsAr": [
+   "الترتيب ثابت: Vordergrund ← Hintergrund ← Mittelpunkt ← التفاصيل!",
+   "الموقع يحدّد الفعل: steht/sitzt/liegt — لا ist دائماً!",
+   "البروتوكول: Uhrzeit + Absprache + Übersicht (خاتمة!)",
+   "auffallen منفصل وتمامه ist (Das ist aufgefallen! لا hat!)"
+  ],
+  "beads": [
+   "Im Vordergrund steht ein Tisch.",
+   "Im Hintergrund ist ein Gebäude.",
+   "Das ist der Mittelpunkt.",
+   "Er skizziert die Szene.",
+   "Bitte beachten Sie die Uhrzeit!",
+   "Das ist die Übersicht."
+  ],
+  "properNouns": []
+ },
+ "usedInLessons": [
+  "b1-u9-d3"
+ ]
+}

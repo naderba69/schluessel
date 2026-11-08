@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 431 (2026-11-13) — D477: b1-u9-d3 «النزاعات والحلول — Bildbeschreibung بالبروتوكول!» — يوم الترتيب! (الدفعة 431 · v7.23)
+- **الخلاصة:** يوم وصف الصورة بالبروتوكول! — **15 كلمة**: الرباعي المكاني (**der Vordergrund** المقدمة! **der Hintergrund** الخلفية! **der Mittelpunkt** المركز! **der Rand** الحافة!) · die Szene المشهد · **das Protokoll** البروتوكول (das!) · die Uhrzeit التوقيت · die Absprache الاتفاق المسبق · das Gebäude (الجمع نفسه!) · die Geste الإيماءة · die Übersicht · skizzieren يوجز · beachten يراعي · bummeln يتجوّل · **auffallen** يلفت (قويّ + **ist** aufgefallen!) + القاعدة ars-bildbeschreibung (شُفرة 6: «Im Vordergrund steht ein Tisch.» — الفعل الثاني بعد الظرف!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).
+- **التالي:** b1-u9-d4 «رسالة التسوية» ثم d5 إدارة النقاش · d6 التوليف · d7 المعركة!
+
 ## الدفعة 430 (2026-11-12) — D476: b1-u9-d2 «النزاعات والحلول — أدوات الحوار!» — يوم الإدارة! (الدفعة 430 · v7.22)
 - **الخلاصة:** يوم أدوات إدارة الحوار! — **15 كلمة**: **unterbrechen** يقاطع (قويّ: unterbricht/unterbrach/unterbrochen!) · die Unterbrechung · **einwenden** يعترض (منفصل!) · der Einwand (die Einwände!) · die Unterhaltung المحادثة (B1-رسمية!) · die Zusammenfassung الخلاصة · **jedenfalls** على أي حال · **abschweifen** يشرد (منفصل + **ist** abgeschweift!) · entscheidend حاسم · bestimmt/vermutlich/halt/wohl/etwa أدوات التليين الخمس! · erwidern يردّ + القاعدة ars-dialog (شُفرة 6: «Darf ich Sie unterbrechen?» «Das ist ein Einwand!» «Das ist halt so!»). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
 - **التالي:** b1-u9-d3 «Bildbeschreibung بالبروتوكول» ثم d4 رسالة التسوية · d5 إدارة النقاش · d6 التوليف · d7 المعركة!

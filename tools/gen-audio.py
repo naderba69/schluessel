@@ -2424,6 +2424,21 @@ def build_all() -> None:
     ("word-wohl", "wohl.", "wohl", ["b1-u9-d2"]),
     ("word-etwa", "etwa.", "etwa", ["b1-u9-d2"]),
     ("word-erwidern", "erwidern.", "erwidern", ["b1-u9-d2"]),
+    ("word-vordergrund", "der Vordergrund.", "vordergrund", ["b1-u9-d3"]),
+    ("word-hintergrund", "der Hintergrund.", "hintergrund", ["b1-u9-d3"]),
+    ("word-mittelpunkt", "der Mittelpunkt.", "mittelpunkt", ["b1-u9-d3"]),
+    ("word-rand", "der Rand.", "rand", ["b1-u9-d3"]),
+    ("word-szene", "die Szene.", "szene", ["b1-u9-d3"]),
+    ("word-protokoll", "das Protokoll.", "protokoll", ["b1-u9-d3"]),
+    ("word-uhrzeit", "die Uhrzeit.", "uhrzeit", ["b1-u9-d3"]),
+    ("word-absprache", "die Absprache.", "absprache", ["b1-u9-d3"]),
+    ("word-gebaeude", "das Gebäude.", "gebaeude", ["b1-u9-d3"]),
+    ("word-geste", "die Geste.", "geste", ["b1-u9-d3"]),
+    ("word-uebersicht", "die Übersicht.", "uebersicht", ["b1-u9-d3"]),
+    ("word-skizzieren", "skizzieren.", "skizzieren", ["b1-u9-d3"]),
+    ("word-beachten", "beachten.", "beachten", ["b1-u9-d3"]),
+    ("word-bummeln", "bummeln.", "bummeln", ["b1-u9-d3"]),
+    ("word-auffallen", "auffallen.", "auffallen", ["b1-u9-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

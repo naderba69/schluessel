@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D477 (2026-11-13): b1-u9-d3 «النزاعات والحلول — Bildbeschreibung بالبروتوكول!» — يوم الترتيب! (الدفعة 431 · v7.23)
+- **الدفعة:** 431 · **الموجّه:** 7.23
+- **للقارئ:** يوم وصف الصورة بالبروتوكول! — **15 كلمة**: الرباعي المكاني (**der Vordergrund** المقدمة! **der Hintergrund** الخلفية! **der Mittelpunkt** المركز! **der Rand** الحافة!) · die Szene المشهد · **das Protokoll** البروتوكول (das!) · die Uhrzeit التوقيت · die Absprache الاتفاق المسبق · das Gebäude (الجمع نفسه!) · die Geste الإيماءة · die Übersicht · skizzieren يوجز · beachten يراعي · bummeln يتجوّل · **auffallen** يلفت (قويّ + **ist** aufgefallen!) + القاعدة ars-bildbeschreibung (شُفرة 6: «Im Vordergrund steht ein Tisch.» — الفعل الثاني بعد الظرف!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).
+- **بطاقة قرار:** الوصف الألماني بروتوكول مرتّب لا تعداد (Vordergrund ← Hintergrund ← Mittelpunkt!) والفعل يحدّد الموقع (steht/sitzt/liegt لا ist!) · مصيدة error-hunt الثانية أُصلحت قبل الفحص (كانت ركيكة — «Übersicht geben لا machen!» أنظف!) · كلمتاهما zeigen/Café كانتا مُدرَّستين فرفضهما المولّد ⇐ والفحص اليدوي بـ é يخدع (Café→caf!) — المولّد هو الحقيقة · النطق: Hintergrund/Übersicht نبرتهما الأولى (مراجعتا 292/293) + regen من أول محاولة.
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2713/0/0 ✓** · build ✓
+- **التالي:** b1-u9-d4 «رسالة التسوية» ثم d5 إدارة النقاش · d6 التوليف · d7 المعركة!
+
 ## D476 (2026-11-12): b1-u9-d2 «النزاعات والحلول — أدوات الحوار!» — يوم الإدارة! (الدفعة 430 · v7.22)
 - **الدفعة:** 430 · **الموجّه:** 7.22
 - **للقارئ:** يوم أدوات إدارة الحوار! — **15 كلمة**: **unterbrechen** يقاطع (قويّ: unterbricht/unterbrach/unterbrochen!) · die Unterbrechung · **einwenden** يعترض (منفصل!) · der Einwand (die Einwände!) · die Unterhaltung المحادثة (B1-رسمية!) · die Zusammenfassung الخلاصة · **jedenfalls** على أي حال · **abschweifen** يشرد (منفصل + **ist** abgeschweift!) · entscheidend حاسم · bestimmt/vermutlich/halt/wohl/etwa أدوات التليين الخمس! · erwidern يردّ + القاعدة ars-dialog (شُفرة 6: «Darf ich Sie unterbrechen?» «Das ist ein Einwand!» «Das ist halt so!»). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
