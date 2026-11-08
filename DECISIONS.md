@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D473 (2026-11-09): b1-u8-d6 «العمل والترشيح — توليف الوحدة الثامنة!» — يوم التكامل! (الدفعة 427 · v7.19)
+- **الدفعة:** 427 · **الموجّه:** 7.19
+- **للقارئ:** يوم التكامل (integration!) — **كلمتان** فقط تُغلقان قصة الوحدة: **die Zusage** القبول (zu- = نحو الهدف!) و **besetzen** يشغل الوظيفة (die Stelle besetzen — المفعول وظيفة لا شخص!). كل خيوط الوحدة الخمسة في نصٍّ واحد: الصفة المُشبَع (gute Chance!) + Bewerbung بالعناصر + Interview بالتهذيب + السيرة بالأقسام + الكولوكيشنات! المحطات 13 (مطابقة 3 + gap-fill 3 + error-hunt 3 + speaking 4) و check-lesson **0/0/0** من أول مرة (51 سطراً).
+- **بطاقة قرار:** القاعدة المرساة اسمها **ars-adjektiv-gemischt** لا ars-adjektiv-deklination (الملفان يتشابهان!) — المدقّق أمسكها بـ e-upgrade-rule + §10-ح (usedInLessons!) ⇐ الدرس يُضاف للقاعدة المرساة وحدها · **Zusage** نبرتها الأولى (ˈt͡suːˌzaːɡə) لا الثانية — مراجعة 289 + regen · المسامير الثلاثة بـ assert صريح (N-317!) والـ voice pin **+1** لا +2 (besetzen فعل بلا مقطع-اسم!) — الصفر أخطاء!
+- **البوابة:** vitest 1779/1779 · tsc ✓ · validator 2662/0/0 · build ✓
+- **التالي:** b1-u8-d7 «المعركة» (battle-u8! nextId = b1-u9-d1) — آخر يوم في الوحدة 8!
+
 ## D472 (2026-11-08): b1-u8-d5 «العمل والترشيح — الكولوكيشنات المهنية!» — يوم الشُّفرة الثابتة! (الدفعة 426 · v7.18)
 - **الدفعة:** 426 · **الموجّه:** 7.18
 - **للقارئ:** يوم الشُّفرة الثابتة! كل اسم مهني بفعله الملازم: Anleitung **geben** · Betreuung **übernehmen** · Problem **lösen** · Termin **festlegen** · Arbeitsplatz **sichern** — **15 كلمة** (Auftrag/Anleitung/Betreuung/Leitung/Meister + **Azubi الشمالي** و**Lehrling الجنوبي**! + Verhältnis · betreuen · unterrichten · sichern · verhindern · lösen (hat gelöst!) · festlegen (trennbar!) · geschickt) مع القاعدة ars-kollokationen-beruf (شُفرة 6) وإثراء kollocation لثمانية أسماء (§10.7 — وبطاقاتها!).

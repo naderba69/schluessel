@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 427 (2026-11-09) — D473: b1-u8-d6 «العمل والترشيح — توليف الوحدة الثامنة!» — يوم التكامل! (الدفعة 427 · v7.19)
+- **الخلاصة:** يوم التكامل (integration!) — **كلمتان** فقط تُغلقان قصة الوحدة: **die Zusage** القبول (zu- = نحو الهدف!) و **besetzen** يشغل الوظيفة (die Stelle besetzen — المفعول وظيفة لا شخص!). كل خيوط الوحدة الخمسة في نصٍّ واحد: الصفة المُشبَع (gute Chance!) + Bewerbung بالعناصر + Interview بالتهذيب + السيرة بالأقسام + الكولوكيشنات! المحطات 13 (مطابقة 3 + gap-fill 3 + error-hunt 3 + speaking 4) و check-lesson **0/0/0** من أول مرة (51 سطراً).
+- **التالي:** b1-u8-d7 «المعركة» (battle-u8! nextId = b1-u9-d1) — آخر يوم في الوحدة 8!
+
 ## الدفعة 426 (2026-11-08) — D472: b1-u8-d5 «العمل والترشيح — الكولوكيشنات المهنية!» — يوم الشُّفرة الثابتة! (الدفعة 426 · v7.18)
 - **الخلاصة:** يوم الشُّفرة الثابتة! كل اسم مهني بفعله الملازم: Anleitung **geben** · Betreuung **übernehmen** · Problem **lösen** · Termin **festlegen** · Arbeitsplatz **sichern** — **15 كلمة** (Auftrag/Anleitung/Betreuung/Leitung/Meister + **Azubi الشمالي** و**Lehrling الجنوبي**! + Verhältnis · betreuen · unterrichten · sichern · verhindern · lösen (hat gelöst!) · festlegen (trennbar!) · geschickt) مع القاعدة ars-kollokationen-beruf (شُفرة 6) وإثراء kollocation لثمانية أسماء (§10.7 — وبطاقاتها!).
 - **التالي:** b1-u8-d6 «توليف الوحدة الثامنة» ثم u8-d7 (المعركة!) — وبعدها battle-u8 مباشرة (nextId = b1-u9-d1!).

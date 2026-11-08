@@ -40069,6 +40069,46 @@
       "rmsDb": -17.18
     },
     {
+      "id": "word-zusage",
+      "file": "words/audio/de-DE/word-zusage.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Zusage.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u8-d6"
+      ],
+      "durationMs": 1082,
+      "sizeBytes": 5193,
+      "hash": "sha256:a4a77872067d0138b5f22335e58124104ce2c5bb27340a4ed191efe84ebbf158",
+      "pcmSha256": "f6b206cb2dc4342bcca4fd2eb40da2beddc97619b4bd2428b624f75d8dc0b14a",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "word-besetzen",
+      "file": "words/audio/de-DE/word-besetzen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "besetzen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u8-d6"
+      ],
+      "durationMs": 862,
+      "sizeBytes": 4217,
+      "hash": "sha256:c92bcda22906d97bbfc2522a039268a7a2c00bc9100bdc8625f2330a185b2b84",
+      "pcmSha256": "8dab4a2f1abf2589e304712343daa98d4640da09cdf25d18ce0906ccc60d7125",
+      "rmsDb": -17.14
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
