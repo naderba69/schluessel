@@ -2409,6 +2409,21 @@ def build_all() -> None:
     ("word-behauptung", "die Behauptung.", "behauptung", ["b1-u9-d1"]),
     ("word-schildern", "schildern.", "schildern", ["b1-u9-d1"]),
     ("word-bezweifeln", "bezweifeln.", "bezweifeln", ["b1-u9-d1"]),
+    ("word-unterbrechen", "unterbrechen.", "unterbrechen", ["b1-u9-d2"]),
+    ("word-unterbrechung", "die Unterbrechung.", "unterbrechung", ["b1-u9-d2"]),
+    ("word-einwenden", "einwenden.", "einwenden", ["b1-u9-d2"]),
+    ("word-einwand", "der Einwand.", "einwand", ["b1-u9-d2"]),
+    ("word-unterhaltung", "die Unterhaltung.", "unterhaltung", ["b1-u9-d2"]),
+    ("word-zusammenfassung", "die Zusammenfassung.", "zusammenfassung", ["b1-u9-d2"]),
+    ("word-jedenfalls", "jedenfalls.", "jedenfalls", ["b1-u9-d2"]),
+    ("word-abschweifen", "abschweifen.", "abschweifen", ["b1-u9-d2"]),
+    ("word-entscheidend", "entscheidend.", "entscheidend", ["b1-u9-d2"]),
+    ("word-bestimmt", "bestimmt.", "bestimmt", ["b1-u9-d2"]),
+    ("word-vermutlich", "vermutlich.", "vermutlich", ["b1-u9-d2"]),
+    ("word-halt", "halt.", "halt", ["b1-u9-d2"]),
+    ("word-wohl", "wohl.", "wohl", ["b1-u9-d2"]),
+    ("word-etwa", "etwa.", "etwa", ["b1-u9-d2"]),
+    ("word-erwidern", "erwidern.", "erwidern", ["b1-u9-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

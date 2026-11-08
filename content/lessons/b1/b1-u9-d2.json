@@ -1,0 +1,484 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u9-d2",
+  "level": "B1",
+  "unit": 9,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Darf ich Sie unterbrechen? — Das ist ein Einwand!",
+    "ar": "يوم أدوات الحوار! (أقاطع! أعترض! أُلخّص! وتليين halt/wohl/etwa!) — الوحدة 9: النزاعات والحلول!"
+  },
+  "canDoDaily": [
+    "يقاطع ويعترض ويلخّص بأدب! (Darf ich Sie unterbrechen? Das ist ein Einwand! Das ist die Zusammenfassung!)",
+    "يلطّف الحديث بأدوات التليين! (Das ist halt so! Vermutlich richtig! Meinen Sie etwa mich?)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "nachfragen",
+      "klaeren",
+      "missverstaendnis"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«هل لي أن أقاطعكم؟» (المقاطعة المهذّبة!)"
+        },
+        "choices": [
+          "Darf ich Sie unterbrechen?",
+          "Darf ich unterbrechen Sie?",
+          "Ich unterbreche Sie bitte."
+        ],
+        "answer": "Darf ich Sie unterbrechen?",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الخلاصة»؟"
+        },
+        "choices": [
+          "die Zusammenfassung",
+          "die Unterbrechung",
+          "der Einwand"
+        ],
+        "answer": "die Zusammenfassung",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "unterbrechen",
+      "unterbrechung",
+      "einwenden",
+      "einwand",
+      "unterhaltung",
+      "zusammenfassung",
+      "jedenfalls",
+      "abschweifen",
+      "entscheidend",
+      "bestimmt",
+      "vermutlich",
+      "halt",
+      "wohl",
+      "etwa",
+      "erwidern"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-dialog"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Unterbrechen, einwenden, zusammenfassen — das Gespräch hat seine Mittel!",
+        "ar": "يكتب حواراً بأدواته في 8 جمل!"
+      },
+      "situation": {
+        "de": "Eine lange Unterhaltung. Viele Meinungen. Ein Ende.",
+        "ar": "محادثة طويلة! آراء كثيرة! ونهاية: الخلاصة!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في الحوار!",
+        "المقاطعة المهذّبة: Darf ich Sie unterbrechen?",
+        "الاعتراض والخلاصة: Das ist ein Einwand! Er fasst das zusammen!",
+        "التليين: halt/wohl/etwa/vermutlich/bestimmt — النبرة جزء من المعنى!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "unterbrechen! Einwand! Zusammenfassung!"
+        ],
+        "interleavedWith": [
+          "nachfragen",
+          "klaeren",
+          "konflikt"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "يقاطع",
+                "de": "unterbrechen"
+              },
+              {
+                "ar": "المقاطعة",
+                "de": "die Unterbrechung"
+              },
+              {
+                "ar": "يعترض",
+                "de": "einwenden"
+              },
+              {
+                "ar": "الاعتراض",
+                "de": "der Einwand"
+              }
+            ],
+            "why": "unterbrechen يقاطع (unterbricht/unterbrach/unterbrochen! قويّ!) · die Unterbrechung المقاطعة (die!) · einwenden يعترض (wendet ein! منفصل!) · der Einwand الاعتراض (der! جمعها Einwände!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المحادثة",
+                "de": "die Unterhaltung"
+              },
+              {
+                "ar": "الخلاصة",
+                "de": "die Zusammenfassung"
+              },
+              {
+                "ar": "على أي حال",
+                "de": "jedenfalls"
+              },
+              {
+                "ar": "يشرد بالحديث",
+                "de": "abschweifen"
+              }
+            ],
+            "why": "die Unterhaltung المحادثة (führen!) · die Zusammenfassung الخلاصة (schreiben!) · jedenfalls على أي حال (تحويل!) · abschweifen يشرد (schweift ab! ist abgeschweift!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "حاسم",
+                "de": "entscheidend"
+              },
+              {
+                "ar": "بالتأكيد",
+                "de": "bestimmt"
+              },
+              {
+                "ar": "على الأرجح",
+                "de": "vermutlich"
+              },
+              {
+                "ar": "يردّ (بالمقابل)",
+                "de": "erwidern"
+              }
+            ],
+            "why": "entscheidend حاسم · bestimmt بالتأكيد · vermutlich على الأرجح (تليين!) · erwidern يردّ (erwidert/erwiderte/hat erwidert!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "أدوات الحوار!"
+        ],
+        "interleavedWith": [
+          "unterbrechen",
+          "einwand",
+          "zusammenfassung"
+        ],
+        "items": [
+          {
+            "q": "Er ___ mich sogar. (يقاطع!)",
+            "a": "unterbricht",
+            "why": "unterbricht (الشخص الثالث — قويّ!) — والمقاطعة المهذّبة: Darf ich Sie unterbrechen? (ars-dialog!)"
+          },
+          {
+            "q": "Das ist ein ___. (اعتراض!)",
+            "a": "Einwand",
+            "why": "der Einwand الاعتراض (die Einwände!) — einen Einwand haben!"
+          },
+          {
+            "q": "Er fasst das ___. (يُلخّص!)",
+            "a": "zusammen",
+            "why": "zusammenfassen منفصل! Er fasst das zusammen. (الجزء آخر الجملة!)"
+          },
+          {
+            "q": "Das ist ___ so. (ببساطة! أداة تليين!)",
+            "a": "halt",
+            "why": "halt جسيمة التليين — Das ist halt so! (تُغيّر النبرة لا المعنى!)"
+          },
+          {
+            "q": "___ ist das richtig. (يُرجَّح!)",
+            "a": "Vermutlich",
+            "why": "vermutlich على الأرجح — أداة الترجيح اللطيف!"
+          },
+          {
+            "q": "Meinen Sie ___ mich? («هل تقصد…؟!»)",
+            "a": "etwa",
+            "why": "etwa في الاستفهام = التعجّب/الشكّ! Meinen Sie etwa mich?"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "التصريف! الانفصال! تمام ist!"
+        ],
+        "interleavedWith": [
+          "wohl",
+          "etwa",
+          "erwidern"
+        ],
+        "items": [
+          {
+            "q": "~~Ich habe Sie unterbrocht.~~",
+            "a": "Ich habe Sie unterbrochen.",
+            "why": "unterbrechen قويّ! التصريف الثالث unterbrochen (لا unterbrocht!) — unterbrach!"
+          },
+          {
+            "q": "~~Wir zusammenfassen das.~~",
+            "a": "Wir fassen das zusammen.",
+            "why": "zusammenfassen منفصل! الفعل fasst في موضعه والجزء zusammen آخر الجملة!"
+          },
+          {
+            "q": "~~Ich habe abgeschweift.~~",
+            "a": "Ich bin abgeschweift.",
+            "why": "abschweifen = تغيّر حالة (يجنح عن الموضوع!) — التمام ist لا habe! (u7: Bewegung!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — الحوار كلام!",
+          "unterbrechen! einwenden! zusammenfassen!"
+        ],
+        "interleavedWith": [
+          "halt",
+          "wohl",
+          "bestimmt"
+        ],
+        "items": [
+          {
+            "q": "افتح المحادثة واقطع بأدب! (جملتان!)",
+            "a": "Darf ich Sie unterbrechen? Das ist ein Einwand.",
+            "why": "المقاطعة المهذّبة أولاً! (ars-dialog!)"
+          },
+          {
+            "q": "لخّص ما قيل! (جملتان!)",
+            "a": "Er fasst das zusammen. Das ist entscheidend.",
+            "why": "zusammenfassen منفصل! entscheidend حاسم!"
+          },
+          {
+            "q": "اختم بالتليين! (3 جمل!)",
+            "a": "Das ist wohl möglich. Vermutlich ist das richtig. Das ist halt so!",
+            "why": "wohl/vermutlich/halt — أدوات التليين الثلاث! (النبرة جزء من المعنى!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«هل لي أن أقاطعكم؟»؟",
+            "a": "Darf ich Sie unterbrechen?"
+          },
+          {
+            "q": "«هذا اعتراض.»؟",
+            "a": "Das ist ein Einwand."
+          },
+          {
+            "q": "«المحادثة»؟",
+            "a": "die Unterhaltung"
+          },
+          {
+            "q": "«حاسم»؟",
+            "a": "entscheidend"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«هو يُلخّص ذلك.»؟",
+            "a": "Er fasst das zusammen."
+          },
+          {
+            "q": "«هذا صحيح بالتأكيد!»؟",
+            "a": "Das ist bestimmt richtig!"
+          },
+          {
+            "q": "«هل تقصدون أنا؟!»؟",
+            "a": "Meinen Sie etwa mich?"
+          },
+          {
+            "q": "«يشرد بالحديث»؟",
+            "a": "abschweifen"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الخلاصة»؟",
+            "a": "die Zusammenfassung"
+          },
+          {
+            "q": "«على الأرجح»؟",
+            "a": "vermutlich"
+          },
+          {
+            "q": "«يردّ بأدب»؟",
+            "a": "erwidern"
+          },
+          {
+            "q": "«على أي حال»؟",
+            "a": "jedenfalls"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Entschuldigung — darf ich Sie unterbrechen? Das ist ein Einwand. Ich stimme zu, aber: vermutlich ist das so nicht richtig. Er fasst das zusammen: Das ist entscheidend. Wir schweifen ab! Eine kurze Unterhaltung — und dann: Das ist halt so. Meinen Sie etwa mich? Er erwidert höflich. Jedenfalls: eine Zusammenfassung zum Schluss.",
+      "ar": "عذراً — هل لي أن أقاطعكم؟ هذا اعتراض. أنا أوافق، لكن: يُرجَّح أنه ليس صحيحاً هكذا. هو يُلخّص: هذا حاسم. نشرد بالحديث! محادثة قصيرة — وبعدها: الأمر ببساطة كذلك. هل تقصدون أنا؟! هو يردّ بأدب. على أي حال: خلاصة في النهاية."
+    },
+    "srsBundleWordIds": [
+      "unterbrechen",
+      "unterbrechung",
+      "einwenden",
+      "einwand",
+      "unterhaltung",
+      "zusammenfassung",
+      "jedenfalls",
+      "abschweifen",
+      "entscheidend",
+      "bestimmt",
+      "vermutlich",
+      "halt",
+      "wohl",
+      "etwa",
+      "erwidern"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "unterbrechen بالتصريف المنتظم!",
+          "de": "~~Ich habe Sie unterbrocht.~~"
+        },
+        "correct": {
+          "ar": "قويّ: unterbricht/unterbrach/unterbrochen!",
+          "de": "Ich habe Sie unterbrochen."
+        },
+        "exercise": {
+          "q": "Ich habe Sie ___. (قاطعتُ! التصريف الثالث!)",
+          "a": "unterbrochen"
+        },
+        "whyArabicSpeakerFails": "العربية: «قاطعتُ» بالزيادة فقط! والألمانية: الأفعال القويّة تغيّر حروفها (i → o!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "zusammenfassen ملاصق في الجملة!",
+          "de": "~~Wir zusammenfassen das.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Wir fassen das zusammen. (الجزء آخر الجملة!)",
+          "de": "Wir fassen das zusammen."
+        },
+        "exercise": {
+          "q": "Wir ___ das ___. (يُلخّص!)",
+          "a": "fassen … zusammen"
+        },
+        "whyArabicSpeakerFails": "العربية: «نُلخّص ذلك» — الكلمة واحدة! والألمانية: الفعل المنفصل ينفصل والجزء zusammen يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "abschweifen بتمام habe!",
+          "de": "~~Ich habe abgeschweift.~~"
+        },
+        "correct": {
+          "ar": "تغيّر حالة — التمام ist: Ich bin abgeschweift!",
+          "de": "Ich bin abgeschweift."
+        },
+        "exercise": {
+          "q": "Ich ___ abgeschweift. (التمام!)",
+          "a": "bin"
+        },
+        "whyArabicSpeakerFails": "العربية: «شردتُ» — لا فرق بين haben/sein! والألمانية: أفعال الحركة/التغيّر تستعمل sein في التمام (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/unterbrechen",
+      "https://www.duden.de/rechtschreibung/Unterbrechung",
+      "https://www.duden.de/rechtschreibung/einwenden",
+      "https://www.duden.de/rechtschreibung/Einwand",
+      "https://www.duden.de/rechtschreibung/Unterhaltung",
+      "https://www.duden.de/rechtschreibung/Zusammenfassung",
+      "https://www.duden.de/rechtschreibung/jedenfalls",
+      "https://www.duden.de/rechtschreibung/abschweifen",
+      "https://www.duden.de/rechtschreibung/entscheidend",
+      "https://www.duden.de/rechtschreibung/bestimmt",
+      "https://www.duden.de/rechtschreibung/vermutlich",
+      "https://www.duden.de/rechtschreibung/halt",
+      "https://www.duden.de/rechtschreibung/wohl",
+      "https://www.duden.de/rechtschreibung/etwa",
+      "https://www.duden.de/rechtschreibung/erwidern"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-dialog",
+    "ars-verhandeln"
+  ],
+  "audioManifestRefs": [
+    "word-unterbrechen",
+    "word-unterbrechung",
+    "word-einwenden",
+    "word-einwand",
+    "word-unterhaltung",
+    "word-zusammenfassung",
+    "word-jedenfalls",
+    "word-abschweifen",
+    "word-entscheidend",
+    "word-bestimmt",
+    "word-vermutlich",
+    "word-halt",
+    "word-wohl",
+    "word-etwa",
+    "word-erwidern"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (النزاعات والحلول — أدوات الحوار)",
+    "goetheWordListOverlap": [
+      "unterbrechen",
+      "unterbrechung",
+      "einwenden",
+      "einwand",
+      "unterhaltung",
+      "zusammenfassung",
+      "jedenfalls",
+      "abschweifen",
+      "entscheidend",
+      "bestimmt",
+      "vermutlich",
+      "halt",
+      "wohl",
+      "etwa",
+      "erwidern"
+    ]
+  }
+}

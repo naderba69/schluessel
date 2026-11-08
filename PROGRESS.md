@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 430 (2026-11-12) — D476: b1-u9-d2 «النزاعات والحلول — أدوات الحوار!» — يوم الإدارة! (الدفعة 430 · v7.22)
+- **الخلاصة:** يوم أدوات إدارة الحوار! — **15 كلمة**: **unterbrechen** يقاطع (قويّ: unterbricht/unterbrach/unterbrochen!) · die Unterbrechung · **einwenden** يعترض (منفصل!) · der Einwand (die Einwände!) · die Unterhaltung المحادثة (B1-رسمية!) · die Zusammenfassung الخلاصة · **jedenfalls** على أي حال · **abschweifen** يشرد (منفصل + **ist** abgeschweift!) · entscheidend حاسم · bestimmt/vermutlich/halt/wohl/etwa أدوات التليين الخمس! · erwidern يردّ + القاعدة ars-dialog (شُفرة 6: «Darf ich Sie unterbrechen?» «Das ist ein Einwand!» «Das ist halt so!»). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
+- **التالي:** b1-u9-d3 «Bildbeschreibung بالبروتوكول» ثم d4 رسالة التسوية · d5 إدارة النقاش · d6 التوليف · d7 المعركة!
+
 ## الدفعة 429 (2026-11-11) — D475: b1-u9-d1 «النزاعات والحلول — Nachfragen/Klärung!» — بداية الوحدة 9! (الدفعة 429 · v7.21)
 - **الخلاصة:** الوحدة 9 «النزاعات والحلول» تبدأ بيوم الاستفسار والتوضيح! — **15 كلمة** (nachfragen يسأل مجدداً (منفصل!) · die Rückfrage الاستفسار · klären يوضّح · die Klärung · das Missverständnis سوء الفهم (das!) · missverstehen يفهم خطأً (فعل قويّ!) · konkret · der Hinweis · der Konflikt النزاع! · die Vereinbarung · die Einigung · verzeihen يسامح (verzieh! قويّ!) · die Behauptung · schildern · bezweifeln) + القاعدة ars-nachfragen (شُفرة 6 صيغ مهذّبة: Darf ich nachfragen? · Das war ein Missverständnis! · Danke für die Klärung!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً) — وbattle-u8 حُدِّث nextId ← b1-u9-d1!
 - **التالي:** b1-u9-d2 «أدوات الحوار» ثم d3 Bildbeschreibung · d4 رسالة تسوية · d5 إدارة نقاش · d6 توليف · d7 المعركة!

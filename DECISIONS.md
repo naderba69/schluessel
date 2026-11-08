@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D476 (2026-11-12): b1-u9-d2 «النزاعات والحلول — أدوات الحوار!» — يوم الإدارة! (الدفعة 430 · v7.22)
+- **الدفعة:** 430 · **الموجّه:** 7.22
+- **للقارئ:** يوم أدوات إدارة الحوار! — **15 كلمة**: **unterbrechen** يقاطع (قويّ: unterbricht/unterbrach/unterbrochen!) · die Unterbrechung · **einwenden** يعترض (منفصل!) · der Einwand (die Einwände!) · die Unterhaltung المحادثة (B1-رسمية!) · die Zusammenfassung الخلاصة · **jedenfalls** على أي حال · **abschweifen** يشرد (منفصل + **ist** abgeschweift!) · entscheidend حاسم · bestimmt/vermutlich/halt/wohl/etwa أدوات التليين الخمس! · erwidern يردّ + القاعدة ars-dialog (شُفرة 6: «Darf ich Sie unterbrechen?» «Das ist ein Einwand!» «Das ist halt so!»). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
+- **بطاقة قرار:** أدوات التليين (halt/wohl/etwa) جسيمات نبرة لا كلمات معنى — الأمثلة العربية تشرح الوظيفة لا الترجمة الحرفية · abschweifen تمامه **ist** (تغيّر حالة!) = مصيدة warningCard الثالثة · مخطوطة القاعدة اكتملت من أول مرة (beads/contrastAr/limitsAr/properNouns — درس N-318 مطبَّق!) · الكلمتان zusammenfassen/wiederholung كانتا مُدرَّستين فرفضهما المولّد وحدهما ⇐ كل مرشّح يُفحص بالملف قبل المواصفات.
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2696/0/0 ✓** · build ✓ · نطق **صفر مخالفات** (بلا مراجع جديدة!)
+- **التالي:** b1-u9-d3 «Bildbeschreibung بالبروتوكول» ثم d4 رسالة التسوية · d5 إدارة النقاش · d6 التوليف · d7 المعركة!
+
 ## D475 (2026-11-11): b1-u9-d1 «النزاعات والحلول — Nachfragen/Klärung!» — بداية الوحدة 9! (الدفعة 429 · v7.21)
 - **الدفعة:** 429 · **الموجّه:** 7.21
 - **للقارئ:** الوحدة 9 «النزاعات والحلول» تبدأ بيوم الاستفسار والتوضيح! — **15 كلمة** (nachfragen يسأل مجدداً (منفصل!) · die Rückfrage الاستفسار · klären يوضّح · die Klärung · das Missverständnis سوء الفهم (das!) · missverstehen يفهم خطأً (فعل قويّ!) · konkret · der Hinweis · der Konflikt النزاع! · die Vereinbarung · die Einigung · verzeihen يسامح (verzieh! قويّ!) · die Behauptung · schildern · bezweifeln) + القاعدة ars-nachfragen (شُفرة 6 صيغ مهذّبة: Darf ich nachfragen? · Das war ein Missverständnis! · Danke für die Klärung!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً) — وbattle-u8 حُدِّث nextId ← b1-u9-d1!
