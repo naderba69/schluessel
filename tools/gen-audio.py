@@ -2347,6 +2347,21 @@ def build_all() -> None:
     ("word-praktikant", "der Praktikant.", "praktikant", ["b1-u8-d2"]),
     ("word-einstellen", "einstellen.", "einstellen", ["b1-u8-d2"]),
     ("word-gruessen", "grüßen.", "gruessen", ["b1-u8-d2"]),
+    ("word-arbeitnehmer", "der Arbeitnehmer.", "arbeitnehmer", ["b1-u8-d3"]),
+    ("word-arbeitszeit", "die Arbeitszeit.", "arbeitszeit", ["b1-u8-d3"]),
+    ("word-ueberstunden", "die Überstunden.", "ueberstunden", ["b1-u8-d3"]),
+    ("word-kollegin", "die Kollegin.", "kollegin", ["b1-u8-d3"]),
+    ("word-chefin", "die Chefin.", "chefin", ["b1-u8-d3"]),
+    ("word-praesentation", "die Präsentation.", "praesentation", ["b1-u8-d3"]),
+    ("word-praesentieren", "präsentieren.", "praesentieren", ["b1-u8-d3"]),
+    ("word-auftreten", "auftreten.", "auftreten", ["b1-u8-d3"]),
+    ("word-beschaeftigen", "beschäftigen.", "beschaeftigen", ["b1-u8-d3"]),
+    ("word-verlaengern", "verlängern.", "verlaengern", ["b1-u8-d3"]),
+    ("word-bearbeiten", "bearbeiten.", "bearbeiten", ["b1-u8-d3"]),
+    ("word-ausstellen", "ausstellen.", "ausstellen", ["b1-u8-d3"]),
+    ("word-organisiert", "organisiert.", "organisiert", ["b1-u8-d3"]),
+    ("word-mobilitaet", "die Mobilität.", "mobilitaet", ["b1-u8-d3"]),
+    ("word-weiterbildung", "die Weiterbildung.", "weiterbildung", ["b1-u8-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

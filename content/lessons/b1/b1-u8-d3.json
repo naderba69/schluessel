@@ -1,0 +1,493 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b1-u8-d3",
+ "level": "B1",
+ "unit": 8,
+ "day": 3,
+ "kind": "content",
+ "ziel": {
+  "de": "Ich möchte mich vorstellen!",
+  "ar": "مقابلة التوظيف — تمثيلية! (أُعرّف بنفسي! أعرض! أسأل عن الشروط! أشكر!) — الوحدة 8: العمل والترشيح!"
+ },
+ "canDoDaily": [
+  "يُعرّف بنفسه ويعرض خبرته في المقابلة! (Ich möchte mich vorstellen! Ich präsentiere mich!)",
+  "يسأل عن الشروط ويُنهي المقابلة بالشكر! (Wie sind die Arbeitszeit und die Überstunden? Für das Gespräch danke ich Ihnen.)"
+ ],
+ "warmup": {
+  "cardIds": [
+   "praktikant",
+   "einstellen",
+   "nachfrage"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "ar": "«أُريد أن أُعرّف بنفسي.» — كيف يقول؟"
+    },
+    "choices": [
+     "Ich möchte mich vorstellen.",
+     "Ich möchte mich bedanken.",
+     "Ich möchte mich beschäftigen."
+    ],
+    "answer": "Ich möchte mich vorstellen.",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "ar": "«الساعات الإضافية»؟"
+    },
+    "choices": [
+     "die Überstunden",
+     "die Arbeitszeit",
+     "die Weiterbildung"
+    ],
+    "answer": "die Überstunden",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "من u8-d2: قالب الترشح! (Bewerbung um die Stelle!) — اليوم: المقابلة شفاهاً!",
+   "من u2-d3: مقابلة عمل قصيرة (A2!) — اليوم: تمثيلية مقابلة التوظيف الكاملة!"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "arbeitnehmer",
+   "arbeitszeit",
+   "ueberstunden",
+   "kollegin",
+   "chefin",
+   "praesentation",
+   "praesentieren",
+   "auftreten",
+   "beschaeftigen",
+   "verlaengern",
+   "bearbeiten",
+   "ausstellen",
+   "organisiert",
+   "mobilitaet",
+   "weiterbildung"
+  ],
+  "borrowedWords": [],
+  "grammarArsenalIds": [
+   "ars-interview"
+  ],
+  "storySentenceIds": [],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "v2-order",
+   "trennbar",
+   "needs-ist"
+  ]
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "de": "Ich möchte mich vorstellen!",
+    "ar": "يُجري مقابلة توظيف تمثيلية كاملة!"
+   },
+   "situation": {
+    "de": "Die Chefin, der Bewerber, die Arbeitszeit.",
+    "ar": "المقابلة! المديرة! المتقدّم!"
+   },
+   "successCriteria": [
+    "الكلمات الخمس عشرة + صيغ المقابلة الست!",
+    "«أُعرّف بنفسي!» (Ich möchte mich vorstellen!)",
+    "«أسأل عن الشروط!» (Wie sind die Arbeitszeit und die Überstunden?)",
+    "«أُنهي بالشكر!» (Für das Gespräch danke ich Ihnen.)"
+   ]
+  },
+  "stations": [
+   {
+    "type": "match",
+    "explanationRequired": true,
+    "hints": [
+     "كلمات المقابلة!",
+     "die Arbeitszeit! der Arbeitnehmer!"
+    ],
+    "interleavedWith": [
+     "bewerber",
+     "lehrstelle",
+     "kopie"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "العامل",
+        "de": "der Arbeitnehmer"
+       },
+       {
+        "ar": "ساعات العمل",
+        "de": "die Arbeitszeit"
+       },
+       {
+        "ar": "الزميلة",
+        "de": "die Kollegin"
+       },
+       {
+        "ar": "المديرة",
+        "de": "die Chefin"
+       }
+      ],
+      "why": "der Arbeitnehmer العامل (der! + بلا تغيير في الجمع!) · die Arbeitszeit ساعات العمل (die! + Arbeitszeiten!) · die Kollegin الزميلة (die! + Kolleginnen!) · die Chefin المديرة (die! + Chefinnen!)"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "العرض التقديمي",
+        "de": "die Präsentation"
+       },
+       {
+        "ar": "التنقّل",
+        "de": "die Mobilität"
+       },
+       {
+        "ar": "التطوير المهني",
+        "de": "die Weiterbildung"
+       },
+       {
+        "ar": "الساعات الإضافية",
+        "de": "die Überstunden"
+       }
+      ],
+      "why": "die Präsentation العرض (die! + Präsentationen!) · die Mobilität التنقّل (die! بلا جمع!) · die Weiterbildung التطوير المهني (die! + Weiterbildungen!) · die Überstunden الساعات الإضافية (جمع فقط! بلا مفرد!)"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "يعرض",
+        "de": "präsentieren"
+       },
+       {
+        "ar": "يظهر (أمام الناس!)",
+        "de": "auftreten"
+       },
+       {
+        "ar": "يُجدّد (العقد)",
+        "de": "verlängern"
+       },
+       {
+        "ar": "يُنجز (المهام)",
+        "de": "bearbeiten"
+       }
+      ],
+      "why": "präsentieren يعرض (präsentiert/präsentierte/hat präsentiert!) · auftreten يظهر (tritt auf! trat auf! ist aufgetreten!) · verlängern يُجدّد (verlängert/verlängerte/hat verlängert!) · bearbeiten يُنجز (bearbeitet/bearbeitete/hat bearbeitet!)"
+     }
+    ]
+   },
+   {
+    "type": "gap-fill",
+    "explanationRequired": true,
+    "hints": [
+     "كلمات المقابلة!",
+     "الصيغ الثابتة!"
+    ],
+    "interleavedWith": [
+     "tisch",
+     "stuhl",
+     "lampe"
+    ],
+    "items": [
+     {
+      "q": "Der ___ arbeitet im Büro. (العامل!)",
+      "a": "Arbeitnehmer",
+      "why": "der Arbeitnehmer العامل (der! + بلا تغيير في الجمع!)"
+     },
+     {
+      "q": "Ich präsentiere mich und meine ___. (الخبرة!)",
+      "a": "Erfahrung",
+      "why": "die Erfahrung الخبرة — العرض في المقابلة!"
+     },
+     {
+      "q": "Ich ___ mich und meine Erfahrung. (أعرض!)",
+      "a": "präsentiere",
+      "why": "präsentieren يعرض — عارِ نفسك! (präsentiert!)"
+     },
+     {
+      "q": "Wie sind die ___ und die Überstunden? (ساعات العمل!)",
+      "a": "Arbeitszeit",
+      "why": "السؤال عن الشروط! (Wie sind die Arbeitszeit und die Überstunden?)"
+     },
+     {
+      "q": "Der Chef stellt das Zeugnis ___. (يُصدرها!)",
+      "a": "aus",
+      "why": "ausstellen فعل منفصل! (stellt … aus!)"
+     },
+     {
+      "q": "Für das ___ danke ich Ihnen. (اللقاء!)",
+      "a": "Gespräch",
+      "why": "الشكر آخراً! (Für das Gespräch danke ich Ihnen.)"
+     }
+    ]
+   },
+   {
+    "type": "error-hunt",
+    "explanationRequired": true,
+    "hints": [
+     "الفعل المنفصل آخراً!",
+     "الجمع فقط!"
+    ],
+    "interleavedWith": [
+     "brot",
+     "milch",
+     "wasser"
+    ],
+    "items": [
+     {
+      "q": "~~Der Bewerber tritt auf gut.~~",
+      "a": "Der Bewerber tritt gut auf.",
+      "why": "الفعل المنفصل: التتمة قبله! (tritt gut auf! لا tritt auf gut!)"
+     },
+     {
+      "q": "~~Ich möchte mich vorstellen für Sie.~~",
+      "a": "Ich möchte mich vorstellen.",
+      "why": "الصيغة الثابتة كاملة بلا إضافة! (Ich möchte mich vorstellen!)"
+     },
+     {
+      "q": "~~Ich mache der Überstunden.~~",
+      "a": "Ich mache die Überstunden.",
+      "why": "الساعات الإضافية جمع فقط! (die Überstunden! + أكّد!)"
+     }
+    ]
+   },
+   {
+    "type": "speaking",
+    "explanationRequired": true,
+    "hints": [
+     "توليف المقابلة!",
+     "الصيغ الثابتة!"
+    ],
+    "interleavedWith": [
+     "frau",
+     "mann",
+     "kind"
+    ],
+    "items": [
+     {
+      "q": "قل بالألمانية: «أُريد أن أُعرّف بنفسي.» (التعريف!)",
+      "a": "Ich möchte mich vorstellen.",
+      "why": "التعريف بالنفس بالصيغة الثابتة!"
+     },
+     {
+      "q": "قل بالألمانية: «كيف هي ساعات العمل والساعات الإضافية؟» (السؤال عن الشروط!)",
+      "a": "Wie sind die Arbeitszeit und die Überstunden?",
+      "why": "السؤال عن الشروط مهذّباً! (صيغة سؤال ثابتة!)"
+     },
+     {
+      "q": "قل بالألمانية: «أشكركم على اللقاء.» (الشكر!)",
+      "a": "Für das Gespräch danke ich Ihnen.",
+      "why": "الشكر آخراً دائماً! (الصيغة الثابتة!)"
+     }
+    ]
+   }
+  ]
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du im Interview schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه في المقابلة؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«العامل»؟",
+      "a": "der Arbeitnehmer"
+     },
+     {
+      "q": "«أُعرّف بنفسي.»؟",
+      "a": "Ich möchte mich vorstellen."
+     },
+     {
+      "q": "«الساعات الإضافية»؟",
+      "a": "die Überstunden"
+     },
+     {
+      "q": "«يُصدِر (شهادة)!»؟",
+      "a": "ausstellen"
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«الزميلة»؟",
+      "a": "die Kollegin"
+     },
+     {
+      "q": "«يعرض»؟",
+      "a": "präsentieren"
+     },
+     {
+      "q": "«التطوير المهني»؟",
+      "a": "die Weiterbildung"
+     },
+     {
+      "q": "«أنا منظَّم وجدير بالثقة.»؟",
+      "a": "Ich bin organisiert und zuverlässig."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«المديرة»؟",
+      "a": "die Chefin"
+     },
+     {
+      "q": "«يُجدّد»؟",
+      "a": "verlängern"
+     },
+     {
+      "q": "«ساعات العمل»؟",
+      "a": "die Arbeitszeit"
+     },
+     {
+      "q": "«أشكركم على اللقاء.»؟",
+      "a": "Für das Gespräch danke ich Ihnen."
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "summary": {
+   "de": "Guten Tag! Ich bin für das Gespräch da. Ich möchte mich vorstellen. Ich präsentiere mich und meine Erfahrung. Der Bewerber gibt die Präsentation. Die Chefin fragt den Bewerber. Der Arbeitnehmer arbeitet im Büro. Meine Kollegin ist nett. Die Arbeitszeit ist wichtig. Heute mache ich die Überstunden. Die Weiterbildung ist nach der Arbeit. Die Mobilität ist für die Stelle wichtig. Der Bewerber ist organisiert und zuverlässig. Der Bewerber tritt gut auf. Ich bin bei der Firma beschäftigt. Der Praktikant bearbeitet die Texte. Wir verlängern den Vertrag. Der Chef stellt das Zeugnis aus. Wie sind die Arbeitszeit und die Überstunden? Für das Gespräch danke ich Ihnen.",
+   "ar": "طاب يومك! أنا هنا من أجل اللقاء. أُريد أن أُعرّف بنفسي. أُعرّض نفسي وخبرتي. المتقدّم يُلقي العرض التقديمي. المديرة تسأل المتقدّم. العامل يعمل في المكتب. زميلتي لطيفة. ساعات العمل مهمة. اليوم أعمل الساعات الإضافية. التطوير المهني بعد العمل. التنقّل مهمّ للمنصب. المتقدّم منظَّم وجدير بالثقة. المتقدّم يظهر بشكل جيد. أنا موظَّف في الشركة. المتدرّب يُنجز النصوص. نُجدّد العقد. الرئيس يُصدر الشهادة. كيف هي ساعات العمل والساعات الإضافية؟ أشكركم على اللقاء."
+  },
+  "srsBundleWordIds": [
+   "arbeitnehmer",
+   "arbeitszeit",
+   "ueberstunden",
+   "kollegin",
+   "chefin",
+   "praesentation",
+   "praesentieren",
+   "auftreten",
+   "beschaeftigen",
+   "verlaengern",
+   "bearbeiten",
+   "ausstellen",
+   "organisiert",
+   "mobilitaet",
+   "weiterbildung"
+  ],
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "الفعل المنفصل مع التتمة!",
+     "de": "~~Der Bewerber tritt auf gut.~~"
+    },
+    "correct": {
+     "ar": "التتمة قبل الفعل المنفصل: Der Bewerber tritt gut auf!",
+     "de": "Der Bewerber tritt gut auf."
+    },
+    "exercise": {
+     "q": "Der Bewerber tritt gut ___. (آخراً!)",
+     "a": "auf"
+    },
+    "whyArabicSpeakerFails": "العربية: «يظهر بشكل جيد» — الفعل والتتمة معاً! والألمانية: الفعل المنفصل يُردَّم في نهاية الجملة (tritt … auf!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "إضافة على الصيغة الثابتة!",
+     "de": "~~Ich möchte mich vorstellen für Sie.~~"
+    },
+    "correct": {
+     "ar": "الصيغة الثابتة كاملة بلا إضافة: Ich möchte mich vorstellen!",
+     "de": "Ich möchte mich vorstellen."
+    },
+    "exercise": {
+     "q": "Ich möchte mich ___. (التعريف بالنفس!)",
+     "a": "vorstellen"
+    },
+    "whyArabicSpeakerFails": "العربية: «أُريد أن أُعرّف بنفسي لكم» — إضافة ممكنة بعدّاد! والألمانية: الصيغ الثابتة تُحفظ حرفياً بلا زيادة (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "الساعات الإضافية بالمفرد والمذكّر!",
+     "de": "~~Ich mache der Überstunden.~~"
+    },
+    "correct": {
+     "ar": "بالأكّد وبالجمع فقط: Ich mache die Überstunden!",
+     "de": "Ich mache die Überstunden."
+    },
+    "exercise": {
+     "q": "Ich mache ___ Überstunden. (الأكّد!)",
+     "a": "die"
+    },
+    "whyArabicSpeakerFails": "العربية: «الساعات الإضافية» — مفرد معرّف بالألف واللام! والألمانية: Überstunden جمع فقط + أكّد die لا der (خريطة التداخل 10‑ي)."
+   }
+  ]
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Arbeitnehmer",
+   "https://www.duden.de/rechtschreibung/Arbeitszeit",
+   "https://www.duden.de/rechtschreibung/Ueberstunden",
+   "https://www.duden.de/rechtschreibung/Kollegin",
+   "https://www.duden.de/rechtschreibung/Chefin",
+   "https://www.duden.de/rechtschreibung/Praesentation",
+   "https://www.duden.de/rechtschreibung/praesentieren",
+   "https://www.duden.de/rechtschreibung/auftreten",
+   "https://www.duden.de/rechtschreibung/beschaeftigen",
+   "https://www.duden.de/rechtschreibung/verlaengern",
+   "https://www.duden.de/rechtschreibung/bearbeiten",
+   "https://www.duden.de/rechtschreibung/ausstellen",
+   "https://www.duden.de/rechtschreibung/organisiert",
+   "https://www.duden.de/rechtschreibung/Mobilitaet",
+   "https://www.duden.de/rechtschreibung/Weiterbildung"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-interview",
+  "ars-bewerbung",
+  "ars-briefstil"
+ ],
+ "audioManifestRefs": [
+  "word-arbeitnehmer",
+  "word-arbeitszeit",
+  "word-ueberstunden",
+  "word-kollegin",
+  "word-chefin",
+  "word-praesentation",
+  "word-praesentieren",
+  "word-auftreten",
+  "word-beschaeftigen",
+  "word-verlaengern",
+  "word-bearbeiten",
+  "word-ausstellen",
+  "word-organisiert",
+  "word-mobilitaet",
+  "word-weiterbildung"
+ ],
+ "imageManifestRefs": [],
+ "curriculumRef": {
+  "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (العمل والترشيح — مقابلة توظيف تمثيلية)",
+  "goetheWordListOverlap": [
+   "arbeitnehmer",
+   "arbeitszeit",
+   "ueberstunden",
+   "kollegin",
+   "chefin",
+   "praesentation",
+   "praesentieren",
+   "auftreten",
+   "beschaeftigen",
+   "verlaengern",
+   "bearbeiten",
+   "ausstellen",
+   "organisiert",
+   "mobilitaet",
+   "weiterbildung"
+  ]
+ }
+}

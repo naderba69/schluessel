@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-08 — الدفعة 424: D470 — b1-u8-d3 «العمل والترشيح — تمثيلية المقابلة!» — أول تمثيلية كلامية! (الدفعة 424 · v7.16)
+أول تمثيلية كلامية (D3 = يوم كلام!) — **15 كلمة** (Arbeitnehmer العامل · Arbeitszeit ساعات العمل · Überstunden الساعات الإضافية (جمع فقط!) · Kollegin الزميلة · Chefin المديرة · Präsentation العرض · präsentieren يعرض · auftreten يظهر (ist aufgetreten!) · beschäftigen يُوظّف · verlängern يُجدّد · bearbeiten يُنجز · ausstellen يُصدر (منفصل!) · organisiert منظَّم · Mobilität التنقّل · Weiterbildung التطوير المهني) + **ars-interview**: قالب المقابلة في 6 أسطر ثابتة (التحية ← التعريف بالنفس ← العرض ← السؤال عن الشروط ← الجودات ← الشكر آخراً!).
+- **البوابة:** vitest ✓ 1779/1779 · tsc ✓ · validate-content ✓ 2625/0/0 · build ✓.
+
 ## 2026-11-08 — الدفعة 423: D469 — b1-u8-d2 «العمل والترشيح — قالب الترشح!» — أول قالب مكتوب! (الدفعة 423 · v7.15)
 أول نصّ مكتوب كامل في المنتج! — **15 كلمة** (Nachfrage الطلب · erhalten يحصل على · erwarten يتوقع · erstellen يُنشئ · erfüllen يُحقق · mündlich شفاهاً · Teilnahme المشاركة · Fortbildung التدريب المهني · Briefumschlag الظرف · Inhalt المحتوى · Beschreibung الوصف · annehmen يقبل · Praktikant المتدرّب · einstellen يوظّف · grüßen يُحيّي) + **ars-bewerbung**: قالب الترشح في 6 أسطر ثابتة (Betreff بلا فعل ← Anrede رسمية ← Einstieg ← Schluss ← Gruß ← المرفقات آخراً!).
 - **البوابة:** vitest ✓ 1779/1779 · tsc ✓ · validate-content ✓ 2608/0/0 · build ✓.
