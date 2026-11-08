@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D479 (2026-11-15): b1-u9-d5 «النزاعات والحلول — إدارة نقاش قصير!» — يوم الإدارة! (الدفعة 433 · v7.25)
+- **الدفعة:** 433 · **الموجّه:** 7.25
+- **للقارئ:** يوم إدارة النقاش بالجولات! — **15 كلمة**: **moderieren** يُدير · die Moderation · **die Runde** الجولة · der Redebeitrag المساهمة · **sich beteiligen** يشارك (AN!) · die Beteiligung · **mitreden** (منفصل!) · die Abstimmung التصويت · **die Mehrheit** الأكثرية · **die Minderheit** الأقلية · **der Beschluss** القرار (der!) · **umsetzen** يُنفّذ (منفصل!) · **übereinstimmen** (ينفصل!) · die Rolle · die These + القاعدة ars-moderation (شُفرة 6: «Die Runde ist offen.» — الترتيب الإداري!). المحطات 15 وcheck-lesson **0/0/0** (54 سطراً).
+- **بطاقة قرار:** النقاش مُدار لا فوضى (Runde ← Redebeitrag ← Abstimmung ← Beschluss umsetzen!) والحرف الثابت **an** (sich beteiligen an لا in!) · كلمات كثيرة كانت مُدرَّسة أصلاً (leiten! abstimmen! entscheiden! wahlen!) — والفحص اليدوي أكّد والرفض أتى من المولّد · «Furcht» في السطر الافتتاحي غير مُدرَّسة ← «Keine Angst» · Redebeitrag بلا مرجع في القاموس (مركّب) ← lexicon 296 يدوياً (الأمانة: أصله يدوي!).
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2747/0/0 ✓** · build ✓
+- **التالي:** b1-u9-d6 «مراجعة + توليف» ثم d7 **المعركة battle-u9**!
+
 ## D478 (2026-11-14): b1-u9-d4 «النزاعات والحلول — رسالة التسوية!» — يوم الخطاب! (الدفعة 432 · v7.24)
 - **الدفعة:** 432 · **الموجّه:** 7.24
 - **للقارئ:** يوم قالب رسالة التسوية! — **15 كلمة**: die Entschädigung التعويض · **erstatten** يُعيد المصاريف (Kosten erstatten!) · die Erstattung · **die Kulanz** التفضّل (بلا ضمان!) · der Gutschein القسيمة · **reklamieren** يشتكي · die Reklamation · die Unannehmlichkeit الإزعاج · die Ausnahme · die Regelung التسوية · **schlichten** يسوّي · die Angelegenheit · das Anliegen · **beilegen** (منفصل!) · die Zufriedenheit الرضا + القاعدة ars-schlichtung (شُفرة 6: «Ich entschuldige mich für die Unannehmlichkeit.» — الاعتذار أولاً!). المحطات 15 وcheck-lesson **0/0/0** (53 سطراً).

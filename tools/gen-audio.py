@@ -2454,6 +2454,21 @@ def build_all() -> None:
     ("word-anliegen", "das Anliegen.", "anliegen", ["b1-u9-d4"]),
     ("word-beilegen", "beilegen.", "beilegen", ["b1-u9-d4"]),
     ("word-zufriedenheit", "die Zufriedenheit.", "zufriedenheit", ["b1-u9-d4"]),
+    ("word-moderieren", "moderieren.", "moderieren", ["b1-u9-d5"]),
+    ("word-moderation", "die Moderation.", "moderation", ["b1-u9-d5"]),
+    ("word-runde", "die Runde.", "runde", ["b1-u9-d5"]),
+    ("word-redebeitrag", "der Redebeitrag.", "redebeitrag", ["b1-u9-d5"]),
+    ("word-beteiligen", "sich beteiligen.", "beteiligen", ["b1-u9-d5"]),
+    ("word-beteiligung", "die Beteiligung.", "beteiligung", ["b1-u9-d5"]),
+    ("word-mitreden", "mitreden.", "mitreden", ["b1-u9-d5"]),
+    ("word-abstimmung", "die Abstimmung.", "abstimmung", ["b1-u9-d5"]),
+    ("word-mehrheit", "die Mehrheit.", "mehrheit", ["b1-u9-d5"]),
+    ("word-minderheit", "die Minderheit.", "minderheit", ["b1-u9-d5"]),
+    ("word-beschluss", "der Beschluss.", "beschluss", ["b1-u9-d5"]),
+    ("word-umsetzen", "umsetzen.", "umsetzen", ["b1-u9-d5"]),
+    ("word-uebereinstimmen", "übereinstimmen.", "uebereinstimmen", ["b1-u9-d5"]),
+    ("word-rolle", "die Rolle.", "rolle", ["b1-u9-d5"]),
+    ("word-these", "die These.", "these", ["b1-u9-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
