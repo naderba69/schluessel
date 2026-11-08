@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-14 — الدفعة 432: D478 — b1-u9-d4 «النزاعات والحلول — رسالة التسوية!» — يوم الخطاب! (الدفعة 432 · v7.24)
+يوم قالب رسالة التسوية! — **15 كلمة**: die Entschädigung التعويض · **erstatten** يُعيد المصاريف (Kosten erstatten!) · die Erstattung · **die Kulanz** التفضّل (بلا ضمان!) · der Gutschein القسيمة · **reklamieren** يشتكي · die Reklamation · die Unannehmlichkeit الإزعاج · die Ausnahme · die Regelung التسوية · **schlichten** يسوّي · die Angelegenheit · das Anliegen · **beilegen** (منفصل!) · die Zufriedenheit الرضا + القاعدة ars-schlichtung (شُفرة 6: «Ich entschuldige mich für die Unannehmlichkeit.» — الاعتذار أولاً!). المحطات 15 وcheck-lesson **0/0/0** (53 سطراً).
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2730/0/0 ✓** · build ✓
+
 ## 2026-11-13 — الدفعة 431: D477 — b1-u9-d3 «النزاعات والحلول — Bildbeschreibung بالبروتوكول!» — يوم الترتيب! (الدفعة 431 · v7.23)
 يوم وصف الصورة بالبروتوكول! — **15 كلمة**: الرباعي المكاني (**der Vordergrund** المقدمة! **der Hintergrund** الخلفية! **der Mittelpunkt** المركز! **der Rand** الحافة!) · die Szene المشهد · **das Protokoll** البروتوكول (das!) · die Uhrzeit التوقيت · die Absprache الاتفاق المسبق · das Gebäude (الجمع نفسه!) · die Geste الإيماءة · die Übersicht · skizzieren يوجز · beachten يراعي · bummeln يتجوّل · **auffallen** يلفت (قويّ + **ist** aufgefallen!) + القاعدة ars-bildbeschreibung (شُفرة 6: «Im Vordergrund steht ein Tisch.» — الفعل الثاني بعد الظرف!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).
 - **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2713/0/0 ✓** · build ✓

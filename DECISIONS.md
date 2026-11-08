@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D478 (2026-11-14): b1-u9-d4 «النزاعات والحلول — رسالة التسوية!» — يوم الخطاب! (الدفعة 432 · v7.24)
+- **الدفعة:** 432 · **الموجّه:** 7.24
+- **للقارئ:** يوم قالب رسالة التسوية! — **15 كلمة**: die Entschädigung التعويض · **erstatten** يُعيد المصاريف (Kosten erstatten!) · die Erstattung · **die Kulanz** التفضّل (بلا ضمان!) · der Gutschein القسيمة · **reklamieren** يشتكي · die Reklamation · die Unannehmlichkeit الإزعاج · die Ausnahme · die Regelung التسوية · **schlichten** يسوّي · die Angelegenheit · das Anliegen · **beilegen** (منفصل!) · die Zufriedenheit الرضا + القاعدة ars-schlichtung (شُفرة 6: «Ich entschuldige mich für die Unannehmlichkeit.» — الاعتذار أولاً!). المحطات 15 وcheck-lesson **0/0/0** (53 سطراً).
+- **بطاقة قرار:** الترتيب ثابت كقالب الترشح (اعتذار ← مشكلة ← حلّ ← رضا!) والحرف الثابت **für** (sich entschuldigen für لا über!) · Kulanz/Gutschein = تفضّل بلا ضمان (لا حقّ!) — فرق مهمّ في التسوية · «Das ist eine» تطابق الرسمي (SD1/A2) فأُعيد صياغة الإطار إلى «Das ist wirklich eine» · النطق: Gutschein نبرته الأولى وKulanz نبرتها الثانية (المستعارة الفرنسية!) — مراجعتا 294/295 + regen من أول محاولة · unannehmlichkeit 1495ms ← regen (3 محاولات ← 1483ms!).
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2730/0/0 ✓** · build ✓
+- **التالي:** b1-u9-d5 «إدارة نقاش قصير» ثم d6 التوليف · d7 المعركة!
+
 ## D477 (2026-11-13): b1-u9-d3 «النزاعات والحلول — Bildbeschreibung بالبروتوكول!» — يوم الترتيب! (الدفعة 431 · v7.23)
 - **الدفعة:** 431 · **الموجّه:** 7.23
 - **للقارئ:** يوم وصف الصورة بالبروتوكول! — **15 كلمة**: الرباعي المكاني (**der Vordergrund** المقدمة! **der Hintergrund** الخلفية! **der Mittelpunkt** المركز! **der Rand** الحافة!) · die Szene المشهد · **das Protokoll** البروتوكول (das!) · die Uhrzeit التوقيت · die Absprache الاتفاق المسبق · das Gebäude (الجمع نفسه!) · die Geste الإيماءة · die Übersicht · skizzieren يوجز · beachten يراعي · bummeln يتجوّل · **auffallen** يلفت (قويّ + **ist** aufgefallen!) + القاعدة ars-bildbeschreibung (شُفرة 6: «Im Vordergrund steht ein Tisch.» — الفعل الثاني بعد الظرف!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).

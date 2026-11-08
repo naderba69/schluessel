@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "constitutionSection": "10‑ي",
+ "id": "ars-schlichtung",
+ "kind": "shufra",
+ "title": {
+  "ar": "رسالة التسوية!",
+  "de": "Schlichtung — entschuldigen · reklamieren · erstatten · Zufriedenheit"
+ },
+ "levelIntroduced": "B1",
+ "riskLevel": "orange",
+ "payload": {
+  "topicAr": "قالب رسالة التسوية! (اعتذار! مشكلة! حلّ! رضا!)",
+  "sceneAr": "الرسالة: أسوّي نزاعاً بالكتابة! أعتذر أولاً (Unannehmlichkeit!) ثم أذكر المشكلة (Reklamation!) ثم أُقدّم الحلّ (Erstattung! Kulanz! Gutschein!) وأختم بالرضا (Zufriedenheit!) — ترتيب ثابت كقالب الترشح!",
+  "examples": [
+   {
+    "de": "Ich entschuldige mich für die Unannehmlichkeit.",
+    "ar": "أعتذر عن الإزعاج. (أولاً!)"
+   },
+   {
+    "de": "Das ist meine Reklamation.",
+    "ar": "هذه شكواي. (المشكلة!)"
+   },
+   {
+    "de": "Wir schlichten den Streit.",
+    "ar": "نسوّي النزاع. (الحلّ!)"
+   },
+   {
+    "de": "Wir erstatten die Kosten.",
+    "ar": "نُعيد المصاريف. (التعويض!)"
+   },
+   {
+    "de": "Das ist eine Ausnahme.",
+    "ar": "هذه استثناء. (التوضيح!)"
+   },
+   {
+    "de": "Die Zufriedenheit ist wichtig.",
+    "ar": "الرضا مهم. (الخاتمة!)"
+   }
+  ],
+  "inferencePromptAr": "لاحظ: الاعتذار أولاً (für die Unannehmlichkeit!) لا الطلب! والحلّ بأفعاله الثابتة (Kosten erstatten! Streit schlichten!) والخاتمة بالرضا — الترتيب هو الرسالة!",
+  "ruleDe": "Ich entschuldige mich für die Unannehmlichkeit. · Das ist meine Reklamation. · Wir schlichten den Streit. · Wir erstatten die Kosten. · Das ist eine Ausnahme. · Die Zufriedenheit ist wichtig.",
+  "ruleAr": "قالب رسالة التسوية: (1) الاعتذار: Ich entschuldige mich für die Unannehmlichkeit! (2) المشكلة: Das ist meine Reklamation! (3) الحلّ: den Streit schlichten! (4) التعويض: die Kosten erstatten! (5) التوضيح: eine Ausnahme! (6) الخاتمة: Die Zufriedenheit ist wichtig!",
+  "contrastAr": "العربية: «أريد تعويضاً!» — الطلب أولاً صراحة! والألمانية: رسالة التسوية تبدأ بالاعتذار (Unannehmlichkeit!) ثم المشكلة ثم الحلّ — والحرف ثابت: sich entschuldigen FÜR (لا über!) والشريك الثابت: Kosten erstatten لا zurückgeben! (خريطة التداخل 10‑ي).",
+  "limitsAr": [
+   "الاعتذار أولاً: für die Unannehmlichkeit! (لا الطلب!)",
+   "Kosten erstatten! (الشريك الثابت — لا zurückgeben!)",
+   "beilegen منفصل: Er legt den Streit bei!",
+   "Kulanz/Gutschein = تفضّل بلا ضمان (لا حقّ!) — الفرق مهم!"
+  ],
+  "beads": [
+   "Ich entschuldige mich für die Unannehmlichkeit.",
+   "Das ist meine Reklamation.",
+   "Wir schlichten den Streit.",
+   "Wir erstatten die Kosten.",
+   "Das ist eine Ausnahme.",
+   "Die Zufriedenheit ist wichtig."
+  ],
+  "properNouns": []
+ },
+ "usedInLessons": [
+  "b1-u9-d4"
+ ]
+}

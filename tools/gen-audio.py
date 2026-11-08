@@ -2439,6 +2439,21 @@ def build_all() -> None:
     ("word-beachten", "beachten.", "beachten", ["b1-u9-d3"]),
     ("word-bummeln", "bummeln.", "bummeln", ["b1-u9-d3"]),
     ("word-auffallen", "auffallen.", "auffallen", ["b1-u9-d3"]),
+    ("word-entschaedigung", "die Entschädigung.", "entschaedigung", ["b1-u9-d4"]),
+    ("word-erstatten", "erstatten.", "erstatten", ["b1-u9-d4"]),
+    ("word-erstattung", "die Erstattung.", "erstattung", ["b1-u9-d4"]),
+    ("word-kulanz", "die Kulanz.", "kulanz", ["b1-u9-d4"]),
+    ("word-gutschein", "der Gutschein.", "gutschein", ["b1-u9-d4"]),
+    ("word-reklamieren", "reklamieren.", "reklamieren", ["b1-u9-d4"]),
+    ("word-reklamation", "die Reklamation.", "reklamation", ["b1-u9-d4"]),
+    ("word-unannehmlichkeit", "die Unannehmlichkeit.", "unannehmlichkeit", ["b1-u9-d4"]),
+    ("word-ausnahme", "die Ausnahme.", "ausnahme", ["b1-u9-d4"]),
+    ("word-regelung", "die Regelung.", "regelung", ["b1-u9-d4"]),
+    ("word-schlichten", "schlichten.", "schlichten", ["b1-u9-d4"]),
+    ("word-angelegenheit", "die Angelegenheit.", "angelegenheit", ["b1-u9-d4"]),
+    ("word-anliegen", "das Anliegen.", "anliegen", ["b1-u9-d4"]),
+    ("word-beilegen", "beilegen.", "beilegen", ["b1-u9-d4"]),
+    ("word-zufriedenheit", "die Zufriedenheit.", "zufriedenheit", ["b1-u9-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

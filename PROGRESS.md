@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 432 (2026-11-14) — D478: b1-u9-d4 «النزاعات والحلول — رسالة التسوية!» — يوم الخطاب! (الدفعة 432 · v7.24)
+- **الخلاصة:** يوم قالب رسالة التسوية! — **15 كلمة**: die Entschädigung التعويض · **erstatten** يُعيد المصاريف (Kosten erstatten!) · die Erstattung · **die Kulanz** التفضّل (بلا ضمان!) · der Gutschein القسيمة · **reklamieren** يشتكي · die Reklamation · die Unannehmlichkeit الإزعاج · die Ausnahme · die Regelung التسوية · **schlichten** يسوّي · die Angelegenheit · das Anliegen · **beilegen** (منفصل!) · die Zufriedenheit الرضا + القاعدة ars-schlichtung (شُفرة 6: «Ich entschuldige mich für die Unannehmlichkeit.» — الاعتذار أولاً!). المحطات 15 وcheck-lesson **0/0/0** (53 سطراً).
+- **التالي:** b1-u9-d5 «إدارة نقاش قصير» ثم d6 التوليف · d7 المعركة!
+
 ## الدفعة 431 (2026-11-13) — D477: b1-u9-d3 «النزاعات والحلول — Bildbeschreibung بالبروتوكول!» — يوم الترتيب! (الدفعة 431 · v7.23)
 - **الخلاصة:** يوم وصف الصورة بالبروتوكول! — **15 كلمة**: الرباعي المكاني (**der Vordergrund** المقدمة! **der Hintergrund** الخلفية! **der Mittelpunkt** المركز! **der Rand** الحافة!) · die Szene المشهد · **das Protokoll** البروتوكول (das!) · die Uhrzeit التوقيت · die Absprache الاتفاق المسبق · das Gebäude (الجمع نفسه!) · die Geste الإيماءة · die Übersicht · skizzieren يوجز · beachten يراعي · bummeln يتجوّل · **auffallen** يلفت (قويّ + **ist** aufgefallen!) + القاعدة ars-bildbeschreibung (شُفرة 6: «Im Vordergrund steht ein Tisch.» — الفعل الثاني بعد الظرف!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).
 - **التالي:** b1-u9-d4 «رسالة التسوية» ثم d5 إدارة النقاش · d6 التوليف · d7 المعركة!
