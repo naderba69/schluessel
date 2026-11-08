@@ -3799,12 +3799,11 @@
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
 ## D472 (2026-11-08): b1-u8-d5 «العمل والترشيح — الكولوكيشنات المهنية!» — يوم الشُّفرة الثابتة! (الدفعة 426 · v7.18)
-
-- **المحتوى:** 15 كلمة (اسم+فعله الملازم!) — der **Auftrag** bekommen · die **Anleitung** geben · die **Betreuung** übernehmen · die **Leitung** übernehmen · der **Meister** · der **Azubi** (الشمال!) · der **Lehrling** (الجنوب!) · das **Verhältnis** · betreuen · unterrichten · sichern · verhindern · **lösen (hat gelöst!)** · **festlegen (trennbar — lege den Termin fest!)** · geschickt. القاعدة ars-kollokationen-beruf (شُفرة 6) + إثراء kollocation لثمانية أسماء (§10.7 — مع بطاقات kollocation!).
-- **w-srs 0.35009 ← تسع أجزاء ألف فوق الحد!** (dry-run يقرّبها «0.35 ✓» — المدقّق صادم!). الإثراء أعادها 0.3494 ✓ — محتوى حقيقي لا تحريف.
-- **Azubi نطاقة (مراجعة 288):** المرجع صيغتان — المعلَّم [ˈaːtsuːbi] (النبر الأول) بلا شريط ربط U+0361 + إعادة توليد.
-- **البناء:** 15 محطة · check-lesson **0/0/0** (50 سطراً) · كلمات **2143** · مسارات **3952** · بطاقات 2607 · البوابة 4/4 (1779/1779 · tsc ✓ · validate 2659/0/0 · build ✓).
-- **N-317:** البنود الصامتة — str.replace يفشل بلا صوت (مسامير DAYS_IN_ORDER!) + التقريب قبل المقارنة يخفي 0.35009. والاختبار أمسك لا التحقق!
+- **الدفعة:** 426 · **الموجّه:** 7.18
+- **للقارئ:** يوم الشُّفرة الثابتة! كل اسم مهني بفعله الملازم: Anleitung **geben** · Betreuung **übernehmen** · Problem **lösen** · Termin **festlegen** · Arbeitsplatz **sichern** — **15 كلمة** (Auftrag/Anleitung/Betreuung/Leitung/Meister + **Azubi الشمالي** و**Lehrling الجنوبي**! + Verhältnis · betreuen · unterrichten · sichern · verhindern · lösen (hat gelöst!) · festlegen (trennbar!) · geschickt) مع القاعدة ars-kollokationen-beruf (شُفرة 6) وإثراء kollocation لثمانية أسماء (§10.7 — وبطاقاتها!).
+- **بطاقة قرار:** w-srs بلغت **0.35009** (تسع أجزاء ألف فوق الحدّ — وdry-run تُقرّبها «0.35 ✓» فتخدع!) ⇐ الإصلاح **بالإثراء الحقيقي** kollocation لا بالحذف — محتوى يخدم اليوم نفسه وأعادها 0.3494 ✓ · Azubi له نطاقة صيغتين فالمرجع نفسه (النبر الأول [ˈaːtsuːbi]) — بلا شريط ربط U+0361 في forms.ipa + regen · **N-317:** البنود الصامتة — str.replace يفشل بلا صوت (مسامير DAYS_IN_ORDER!) والتقريب قبل المقارنة يخفي الخرق — والاختبار أمسك لا التحقق!
+- **البوابة:** vitest 1779/1779 · tsc ✓ · validator 2659/0/0 · build ✓
+- **التالي:** b1-u8-d6 «توليف الوحدة الثامنة» ثم u8-d7 (المعركة!) — وبعدها battle-u8 مباشرة (nextId = b1-u9-d1!).
 
 ## D471 (2026-11-08): b1-u8-d4 «العمل والترشيح — السيرة والخطاب!» — يوم الكتابة! (الدفعة 425 · v7.17)
 - **الدفعة:** 425 · **الموجّه:** 7.17

@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 426 (2026-11-08) — D472: b1-u8-d5 «العمل والترشيح — الكولوكيشنات المهنية!» — يوم الشُّفرة الثابتة! (الدفعة 426 · v7.18)
+- **الخلاصة:** يوم الشُّفرة الثابتة! كل اسم مهني بفعله الملازم: Anleitung **geben** · Betreuung **übernehmen** · Problem **lösen** · Termin **festlegen** · Arbeitsplatz **sichern** — **15 كلمة** (Auftrag/Anleitung/Betreuung/Leitung/Meister + **Azubi الشمالي** و**Lehrling الجنوبي**! + Verhältnis · betreuen · unterrichten · sichern · verhindern · lösen (hat gelöst!) · festlegen (trennbar!) · geschickt) مع القاعدة ars-kollokationen-beruf (شُفرة 6) وإثراء kollocation لثمانية أسماء (§10.7 — وبطاقاتها!).
+- **التالي:** b1-u8-d6 «توليف الوحدة الثامنة» ثم u8-d7 (المعركة!) — وبعدها battle-u8 مباشرة (nextId = b1-u9-d1!).
+
 ## الدفعة 425 (2026-11-08) — D471: b1-u8-d4 «العمل والترشيح — السيرة والخطاب!» — يوم الكتابة! (الدفعة 425 · v7.17)
 - **الخلاصة:** يوم الكتابة (D4!) — **15 كلمة** (Geburtsdatum تاريخ الميلاد · persönlich شخصي · Daten البيانات (جمع فقط!) · Angaben المعلومات (جمع فقط!) · Wohnort مكان السكن · Grundschule الابتدائية · Einleitung المقدمة · Abschnitt القسم · Verweis الإشارة إلى الإعلان · darstellen يعرض · aufführen يورد (منفصلان!) · kopieren يُصوّر · senden يُرسل (sandte/gesandt!) · ansprechen يخاطب (Sprechen Sie mich an!) · unterschrieben موقَّع) + **ars-lebenslauf**: السيرة بالأقسام الستة الثابتة (بيانات ← تعليم ← خبرة ← مهارات ← لغات ← اهتمامات!).
 - **التالي:** b1-u8-d5 («Kollokationen مهنية» — أزواج العمل الثابتة!).
