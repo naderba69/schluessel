@@ -2332,6 +2332,21 @@ def build_all() -> None:
     ("word-lehre", "die Lehre.", "lehre", ["b1-u8-d1"]),
     ("word-kopie", "die Kopie.", "kopie", ["b1-u8-d1"]),
     ("word-lehrstelle", "die Lehrstelle.", "lehrstelle", ["b1-u8-d1"]),
+    ("word-nachfrage", "die Nachfrage.", "nachfrage", ["b1-u8-d2"]),
+    ("word-erhalten", "erhalten.", "erhalten", ["b1-u8-d2"]),
+    ("word-erwarten", "erwarten.", "erwarten", ["b1-u8-d2"]),
+    ("word-erstellen", "erstellen.", "erstellen", ["b1-u8-d2"]),
+    ("word-erfuellen", "erfüllen.", "erfuellen", ["b1-u8-d2"]),
+    ("word-muendlich", "mündlich.", "muendlich", ["b1-u8-d2"]),
+    ("word-teilnahme", "die Teilnahme.", "teilnahme", ["b1-u8-d2"]),
+    ("word-fortbildung", "die Fortbildung.", "fortbildung", ["b1-u8-d2"]),
+    ("word-briefumschlag", "der Briefumschlag.", "briefumschlag", ["b1-u8-d2"]),
+    ("word-inhalt", "der Inhalt.", "inhalt", ["b1-u8-d2"]),
+    ("word-beschreibung", "die Beschreibung.", "beschreibung", ["b1-u8-d2"]),
+    ("word-annehmen", "annehmen.", "annehmen", ["b1-u8-d2"]),
+    ("word-praktikant", "der Praktikant.", "praktikant", ["b1-u8-d2"]),
+    ("word-einstellen", "einstellen.", "einstellen", ["b1-u8-d2"]),
+    ("word-gruessen", "grüßen.", "gruessen", ["b1-u8-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

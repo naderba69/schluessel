@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-bewerbung",
+  "kind": "shufra",
+  "title": {
+    "ar": "قالب الترشح!",
+    "de": "Bewerbung — Betreff · Anrede · Einstieg · Schluss"
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "red",
+  "payload": {
+    "topicAr": "هيكل رسالة الترشح الألمانية! (الموضوع! التحية! الافتتاح! الخاتمة! التحية النهائية! المرفقات!)",
+    "sceneAr": "المكتب: أكتب رسالة ترشح! الموضوع أولاً! والتحية رسمية! والمرفقات في النهاية! صيغ ثابتة حرفياً!",
+    "examples": [
+      {
+        "de": "Bewerbung um die Stelle als Koch.",
+        "ar": "ترشح لمنصب طباخ. (الموضوع! بلا فعل!)"
+      },
+      {
+        "de": "Sehr geehrte Damen und Herren!",
+        "ar": "أيها السادة والسيدات المحترمون! (التحية الرسمية!)"
+      },
+      {
+        "de": "Mit Interesse habe ich Ihre Anzeige gelesen.",
+        "ar": "قرأتُ إعلانكم باهتمام. (الافتتاح!)"
+      },
+      {
+        "de": "Für Ihre Antwort danke ich Ihnen.",
+        "ar": "أشكركم على ردّكم. (الخاتمة!)"
+      },
+      {
+        "de": "Mit freundlichen Grüßen",
+        "ar": "مع تحياتي المخلصة! (التحية النهائية!)"
+      },
+      {
+        "de": "Mit Lebenslauf und Zeugnis.",
+        "ar": "مع السيرة والشهادة. (المرفقات آخراً!)"
+      }
+    ],
+    "inferencePromptAr": "لاحظ: الموضوع بلا فعل (Bewerbung um …!) والتحية رسمية دائماً (Sehr geehrte!) والمرفقات في النهاية (Mit Lebenslauf und Zeugnis!)! الصيغ ثابتة — تُحفظ كما هي!",
+    "ruleDe": "Bewerbung um die Stelle als Koch. · Sehr geehrte Damen und Herren! · Mit Interesse habe ich Ihre Anzeige gelesen. · Für Ihre Antwort danke ich Ihnen. · Mit freundlichen Grüßen · Mit Lebenslauf und Zeugnis.",
+    "ruleAr": "قالب الترشح: (1) الموضوع: Bewerbung um die Stelle als …! (بلا فعل!) (2) التحية: Sehr geehrte Damen und Herren! (رسمية!) (3) الافتتاح: Mit Interesse habe ich … gelesen. (4) الخاتمة: Für Ihre Antwort danke ich Ihnen. (5) التحية النهائية: Mit freundlichen Grüßen (6) المرفقات آخراً: Mit Lebenslauf und Zeugnis!",
+    "contrastAr": "العربية: «أكتب لكم بخصوص الترشح…» — افتتاح مرن! والألمانية: صيغ ثابتة حرفياً — الموضوع بلا فعل والتحية لا تتغيّر (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "الموضوع بلا فعل! (Bewerbung um die Stelle als Koch! لا فعل في الموضوع!)",
+      "التحية رسمية: Sehr geehrte Damen und Herren! (لا Hallo!)",
+      "Mit freundlichen Grüßen ثابت بالجمع! (لا مفرد!)",
+      "المرفقات في النهاية: Mit Lebenslauf und Zeugnis!"
+    ],
+    "beads": [
+      "Bewerbung um die Stelle als Koch.",
+      "Sehr geehrte Damen und Herren!",
+      "Mit Interesse habe ich Ihre Anzeige gelesen.",
+      "Für Ihre Antwort danke ich Ihnen.",
+      "Mit freundlichen Grüßen",
+      "Mit Lebenslauf und Zeugnis."
+    ],
+    "properNouns": []
+  },
+  "usedInLessons": [
+    "b1-u8-d2"
+  ]
+}

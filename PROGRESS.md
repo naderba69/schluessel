@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 423 (2026-11-08) — D469: b1-u8-d2 «العمل والترشيح — قالب الترشح!» — أول قالب مكتوب! (الدفعة 423 · v7.15)
+- **الخلاصة:** أول نصّ مكتوب كامل في المنتج! — **15 كلمة** (Nachfrage الطلب · erhalten يحصل على · erwarten يتوقع · erstellen يُنشئ · erfüllen يُحقق · mündlich شفاهاً · Teilnahme المشاركة · Fortbildung التدريب المهني · Briefumschlag الظرف · Inhalt المحتوى · Beschreibung الوصف · annehmen يقبل · Praktikant المتدرّب · einstellen يوظّف · grüßen يُحيّي) + **ars-bewerbung**: قالب الترشح في 6 أسطر ثابتة (Betreff بلا فعل ← Anrede رسمية ← Einstieg ← Schluss ← Gruß ← المرفقات آخراً!).
+- **التالي:** b1-u8-d3 («Vorstellungsgespräch» — كلمات + تدريب مقابله!).
+
 ## الدفعة 422 (2026-11-07) — D468: b1-u8-d1 «العمل والترشيح — الصفة المخلوطة!» — بداية الوحدة 8! (الدفعة 422 · v7.14)
 - **الخلاصة:** الوحدة 8 «العمل والترشيح» تبدأ! — **15 كلمة** (Tätigkeit النشاط · berufstätig على رأس العمل · beruflich مهنياً · Qualifikation التأهيل · Bewerber المتقدّم · Vollzeit/Teilzeit الدوامان · Lohn الأجر · leiten يدير · einsetzen يستخدم · anerkennen يعترف بـ · ausgebildet مدرَّب · Lehre التلمذة المهنية · Lehrstelle مكانها · Kopie النسخة) + **ars-adjektiv-gemischt**: الصفة بعد ein! («eine gutE Lehrstelle!» «ein neues Zeugnis!» «ein gutER Kollege!» «mit einem gutEN Lohn!»).
 - **التالي:** b1-u8-d2 («Bewerbung قالب» — كلمات + Briefstil formell!).
