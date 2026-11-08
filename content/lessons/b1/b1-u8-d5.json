@@ -1,0 +1,492 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b1-u8-d5",
+ "level": "B1",
+ "unit": 8,
+ "day": 5,
+ "kind": "content",
+ "ziel": {
+  "de": "Der Meister gibt eine Anleitung.",
+  "ar": "الكلمات المصاحبة المهنية! (Anleitung geben! Betreuung übernehmen! Problem lösen!) — الوحدة 8: العمل والترشيح!"
+ },
+ "canDoDaily": [
+  "يصف العمل بالكلمات المصاحبة الثابتة! (Anleitung geben! Problem lösen! Arbeitsplatz sichern!)",
+  "يُعطي تعليمات ويتولّى الرعاية ويميّز Azubi عن Lehrling! (Der Meister gibt eine Anleitung! Ich übernehme die Betreuung!)"
+ ],
+ "warmup": {
+  "cardIds": [
+   "darstellen",
+   "senden",
+   "geburtsdatum"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "ar": "«المشكلة» تُحلّ! — ما الزوج الثابت؟"
+    },
+    "choices": [
+     "das Problem lösen",
+     "das Problem machen",
+     "das Problem geben"
+    ],
+    "answer": "das Problem lösen",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "ar": "«المتدرّب» في جنوب ألمانيا؟"
+    },
+    "choices": [
+     "der Lehrling",
+     "der Azubi",
+     "der Praktikant"
+    ],
+    "answer": "der Lehrling",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "من u8-d4: السيرة والخطاب! (Persönliche Daten!) — اليوم: كلمات العمل المصاحبة!",
+   "من u2-d5: الكولوكاسيون! (in die Wohnung ziehen!) — اليوم: كولوكاسيونات العمل!"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "auftrag",
+   "anleitung",
+   "betreuung",
+   "leitung",
+   "meister",
+   "azubi",
+   "lehrling",
+   "verhaeltnis",
+   "betreuen",
+   "unterrichten",
+   "sichern",
+   "verhindern",
+   "loesen",
+   "festlegen",
+   "geschickt"
+  ],
+  "borrowedWords": [],
+  "grammarArsenalIds": [
+   "ars-kollokationen-beruf"
+  ],
+  "storySentenceIds": [],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "trennbar",
+   "v2-order"
+  ]
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "de": "Der Meister gibt eine Anleitung.",
+    "ar": "يصف مهنته بالكلمات المصاحبة الثابتة!"
+   },
+   "situation": {
+    "de": "Der Meister, der Azubi, die Betreuung.",
+    "ar": "الورشة! المعلّم! المتدرّب! الرعاية!"
+   },
+   "successCriteria": [
+    "الكلمات الخمس عشرة + الشراكات الثابتة!",
+    "«التعليمات تُعطى!» (Der Meister gibt eine Anleitung.)",
+    "«المشكلة تُحلّ!» (Der Lehrling löst das Problem.)",
+    "«الرعاية تُتولى!» (Ich übernehme die Betreuung.)"
+   ]
+  },
+  "stations": [
+   {
+    "type": "match",
+    "explanationRequired": true,
+    "hints": [
+     "كلمات العمل!",
+     "der Auftrag! die Anleitung!"
+    ],
+    "interleavedWith": [
+     "bewerber",
+     "lehrstelle",
+     "kopie"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "الطلب (المهمة!)",
+        "de": "der Auftrag"
+       },
+       {
+        "ar": "التعليمات",
+        "de": "die Anleitung"
+       },
+       {
+        "ar": "الرعاية",
+        "de": "die Betreuung"
+       },
+       {
+        "ar": "الإدارة",
+        "de": "die Leitung"
+       }
+      ],
+      "why": "der Auftrag الطلب (der! + Aufträge!) · die Anleitung التعليمات (die! + Anleitungen!) · die Betreuung الرعاية (die! + Betreuungen!) · die Leitung الإدارة (die! + Leitungen!)"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "المعلّم (الحرفي!)",
+        "de": "der Meister"
+       },
+       {
+        "ar": "المتدرّب (في الشمال!)",
+        "de": "der Azubi"
+       },
+       {
+        "ar": "المتدرّب (في الجنوب!)",
+        "de": "der Lehrling"
+       },
+       {
+        "ar": "العلاقة",
+        "de": "das Verhältnis"
+       }
+      ],
+      "why": "der Meister المعلّم (der! + Meister!) · der Azubi المتدرّب (der! + Azubis! — الشمال!) · der Lehrling المتدرّب (der! + Lehrlinge! — الجنوب!) · das Verhältnis العلاقة (das! + Verhältnisse!)"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "يُشرف على",
+        "de": "betreuen"
+       },
+       {
+        "ar": "يُدرّس",
+        "de": "unterrichten"
+       },
+       {
+        "ar": "يُؤمّن",
+        "de": "sichern"
+       },
+       {
+        "ar": "يمنع",
+        "de": "verhindern"
+       }
+      ],
+      "why": "betreuen يُشرف (betreut/betreute/hat betreut!) · unterrichten يُدرّس (unterrichtet/unterrichtete/hat unterrichtet!) · sichern يُؤمّن (sichert/sicherte/hat gesichert!) · verhindern يمنع (verhindert/verhinderte/hat verhindert!)"
+     }
+    ]
+   },
+   {
+    "type": "gap-fill",
+    "explanationRequired": true,
+    "hints": [
+     "الشراكات الثابتة!",
+     "الفعل المنفصل!"
+    ],
+    "interleavedWith": [
+     "tisch",
+     "stuhl",
+     "lampe"
+    ],
+    "items": [
+     {
+      "q": "Der Lehrling ___ das Problem. (يحلّ!)",
+      "a": "löst",
+      "why": "das Problem lösen! (الشريك الثابت: lösen لا machen!)"
+     },
+     {
+      "q": "Ich ___ den Termin fest. (أحدّد!)",
+      "a": "lege",
+      "why": "festlegen فعل منفصل! (Ich lege den Termin fest!)"
+     },
+     {
+      "q": "Der Azubi arbeitet ___. (بمهارة!)",
+      "a": "geschickt",
+      "why": "geschickt بمهارة — صفة العمل! (arbeitet geschickt!)"
+     },
+     {
+      "q": "Der Meister gibt eine ___. (التعليمات!)",
+      "a": "Anleitung",
+      "why": "eine Anleitung geben! (الشريك الثابت!)"
+     },
+     {
+      "q": "Ich übernehme die ___. (الرعاية!)",
+      "a": "Betreuung",
+      "why": "die Betreuung übernehmen! (الشريك الثابت!)"
+     },
+     {
+      "q": "Wir sichern den ___. (مكان العمل!)",
+      "a": "Arbeitsplatz",
+      "why": "den Arbeitsplatz sichern! (الشريك الثابت!)"
+     }
+    ]
+   },
+   {
+    "type": "error-hunt",
+    "explanationRequired": true,
+    "hints": [
+     "الشريك لا المعنى!",
+     "الفعل المنفصل آخراً!"
+    ],
+    "interleavedWith": [
+     "brot",
+     "milch",
+     "wasser"
+    ],
+    "items": [
+     {
+      "q": "~~Der Lehrling macht das Problem.~~",
+      "a": "Der Lehrling löst das Problem.",
+      "why": "الشريك الثابت: Problem lösen! (لا machen!)"
+     },
+     {
+      "q": "~~Ich lege fest den Termin.~~",
+      "a": "Ich lege den Termin fest.",
+      "why": "الفعل المنفصل: المفعول قبله! (lege den Termin fest!)"
+     },
+     {
+      "q": "~~Ich nehme die Betreuung.~~",
+      "a": "Ich übernehme die Betreuung.",
+      "why": "الشريك الثابت: Betreuung übernehmen! (übernehmen = يتولى!)"
+     }
+    ]
+   },
+   {
+    "type": "speaking",
+    "explanationRequired": true,
+    "hints": [
+     "توليف العمل!",
+     "الشراكات الثابتة!"
+    ],
+    "interleavedWith": [
+     "frau",
+     "mann",
+     "kind"
+    ],
+    "items": [
+     {
+      "q": "قل بالألمانية: «المعلّم يُعطي تعليمات.»",
+      "a": "Der Meister gibt eine Anleitung.",
+      "why": "الشريك الثابت: Anleitung geben!"
+     },
+     {
+      "q": "قل بالألمانية: «أُشرف على المتدرّبين.»",
+      "a": "Ich betreue die Azubis.",
+      "why": "betreuen يُشرف — Azubis جمع!"
+     },
+     {
+      "q": "قل بالألمانية: «أنا أمنع الخطأ.»",
+      "a": "Ich verhindere den Fehler.",
+      "why": "verhindern يمنع — der Fehler الخطأ!"
+     }
+    ]
+   }
+  ]
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«الطلب (المهمة!)»؟",
+      "a": "der Auftrag"
+     },
+     {
+      "q": "«يحلّ (مشكلة!)»؟",
+      "a": "lösen"
+     },
+     {
+      "q": "«التعليمات»؟",
+      "a": "die Anleitung"
+     },
+     {
+      "q": "«المعلّم يُعطي تعليمات.»؟",
+      "a": "Der Meister gibt eine Anleitung."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«المتدرّب (في الجنوب!)»؟",
+      "a": "der Lehrling"
+     },
+     {
+      "q": "«يُشرف على»؟",
+      "a": "betreuen"
+     },
+     {
+      "q": "«الرعاية»؟",
+      "a": "die Betreuung"
+     },
+     {
+      "q": "«أنا أمنع الخطأ.»؟",
+      "a": "Ich verhindere den Fehler."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«العلاقة»؟",
+      "a": "das Verhältnis"
+     },
+     {
+      "q": "«يُدرّس»؟",
+      "a": "unterrichten"
+     },
+     {
+      "q": "«الإدارة»؟",
+      "a": "die Leitung"
+     },
+     {
+      "q": "«المشكلة تُحلّ.»؟",
+      "a": "Der Lehrling löst das Problem."
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "auftrag",
+   "anleitung",
+   "betreuung",
+   "leitung",
+   "meister",
+   "azubi",
+   "lehrling",
+   "verhaeltnis",
+   "betreuen",
+   "unterrichten",
+   "sichern",
+   "verhindern",
+   "loesen",
+   "festlegen",
+   "geschickt"
+  ],
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "المشكلة تُصنع!",
+     "de": "~~Der Lehrling macht das Problem.~~"
+    },
+    "correct": {
+     "ar": "الشريك الثابت: Problem lösen!",
+     "de": "Der Lehrling löst das Problem."
+    },
+    "exercise": {
+     "q": "Der Lehrling ___ das Problem. (يحلّ!)",
+     "a": "löst"
+    },
+    "whyArabicSpeakerFails": "العربية: «يعمل المشكلة/يحلّها» يتبادلان! والألمانية: زوج ثابت Problem LÖSEN! (لا machen!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "الرعاية تؤخذ!",
+     "de": "~~Ich nehme die Betreuung.~~"
+    },
+    "correct": {
+     "ar": "الشريك الثابت: Betreuung übernehmen!",
+     "de": "Ich übernehme die Betreuung."
+    },
+    "exercise": {
+     "q": "Ich ___ die Betreuung. (أتولّى!)",
+     "a": "übernehme"
+    },
+    "whyArabicSpeakerFails": "العربية: «آخذ الرعاية» ممكن! والألمانية: زوج ثابت Betreuung ÜBERNEHMEN! (übernehmen = يتولى!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "الفعل المنفصل أولاً!",
+     "de": "~~Ich lege fest den Termin.~~"
+    },
+    "correct": {
+     "ar": "المفعول قبل الفعل المنفصل: Ich lege den Termin fest!",
+     "de": "Ich lege den Termin fest."
+    },
+    "exercise": {
+     "q": "Ich lege den Termin ___. (آخراً!)",
+     "a": "fest"
+    },
+    "whyArabicSpeakerFails": "العربية: «أحدّد الموعد» — الفعل أولاً! والألمانية: festlegen منفصل — fest آخر الجملة! (خريطة التداخل 10‑ي)."
+   }
+  ],
+  "summary": {
+   "de": "Der Meister gibt eine Anleitung. Der Lehrling löst das Problem. Der Azubi arbeitet geschickt. Ich lege den Termin fest. Ich übernehme die Betreuung und ich betreue die Azubis. Wir sichern den Arbeitsplatz und verhindern den Fehler. Der Auftrag ist wichtig. Die Leitung ist gut. Das Verhältnis zu den Kollegen ist gut. Der Meister unterrichtet den Lehrling. Die Betreuung ist wichtig!",
+   "ar": "المعلّم يُعطي تعليمات. المتدرّب يحلّ المشكلة. المتدرّب يعمل بمهارة. أحدّد الموعد. أتولّى الرعاية وأُشرف على المتدرّبين. نُؤمّن مكان العمل ونمنع الخطأ. الطلب مهمّ. الإدارة جيدة. العلاقة مع الزملاء جيدة. المعلّم يُدرّس المتدرّب. الرعاية مهمّة!"
+  }
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Auftrag",
+   "https://www.duden.de/rechtschreibung/Anleitung",
+   "https://www.duden.de/rechtschreibung/Betreuung",
+   "https://www.duden.de/rechtschreibung/Leitung",
+   "https://www.duden.de/rechtschreibung/Meister",
+   "https://www.duden.de/rechtschreibung/Azubi",
+   "https://www.duden.de/rechtschreibung/Lehrling",
+   "https://www.duden.de/rechtschreibung/Verhaeltnis",
+   "https://www.duden.de/rechtschreibung/betreuen",
+   "https://www.duden.de/rechtschreibung/unterrichten",
+   "https://www.duden.de/rechtschreibung/sichern",
+   "https://www.duden.de/rechtschreibung/verhindern",
+   "https://www.duden.de/rechtschreibung/loesen",
+   "https://www.duden.de/rechtschreibung/festlegen",
+   "https://www.duden.de/rechtschreibung/geschickt"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-kollokationen-beruf",
+  "ars-kollokationen",
+  "ars-bewerbung"
+ ],
+ "audioManifestRefs": [
+  "word-auftrag",
+  "word-anleitung",
+  "word-betreuung",
+  "word-leitung",
+  "word-meister",
+  "word-azubi",
+  "word-lehrling",
+  "word-verhaeltnis",
+  "word-betreuen",
+  "word-unterrichten",
+  "word-sichern",
+  "word-verhindern",
+  "word-loesen",
+  "word-festlegen",
+  "word-geschickt"
+ ],
+ "imageManifestRefs": [],
+ "curriculumRef": {
+  "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (العمل والترشيح — Kollokationen مهنية)",
+  "goetheWordListOverlap": [
+   "auftrag",
+   "anleitung",
+   "betreuung",
+   "leitung",
+   "meister",
+   "azubi",
+   "lehrling",
+   "verhaeltnis",
+   "betreuen",
+   "unterrichten",
+   "sichern",
+   "verhindern",
+   "loesen",
+   "festlegen",
+   "geschickt"
+  ]
+ }
+}

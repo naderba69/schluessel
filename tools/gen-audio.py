@@ -2377,6 +2377,21 @@ def build_all() -> None:
     ("word-senden", "senden.", "senden", ["b1-u8-d4"]),
     ("word-ansprechen", "ansprechen.", "ansprechen", ["b1-u8-d4"]),
     ("word-unterschrieben", "unterschrieben.", "unterschrieben", ["b1-u8-d4"]),
+    ("word-auftrag", "der Auftrag.", "auftrag", ["b1-u8-d5"]),
+    ("word-anleitung", "die Anleitung.", "anleitung", ["b1-u8-d5"]),
+    ("word-betreuung", "die Betreuung.", "betreuung", ["b1-u8-d5"]),
+    ("word-leitung", "die Leitung.", "leitung", ["b1-u8-d5"]),
+    ("word-meister", "der Meister.", "meister", ["b1-u8-d5"]),
+    ("word-azubi", "der Azubi.", "azubi", ["b1-u8-d5"]),
+    ("word-lehrling", "der Lehrling.", "lehrling", ["b1-u8-d5"]),
+    ("word-verhaeltnis", "das Verhältnis.", "verhaeltnis", ["b1-u8-d5"]),
+    ("word-betreuen", "betreuen.", "betreuen", ["b1-u8-d5"]),
+    ("word-unterrichten", "unterrichten.", "unterrichten", ["b1-u8-d5"]),
+    ("word-sichern", "sichern.", "sichern", ["b1-u8-d5"]),
+    ("word-verhindern", "verhindern.", "verhindern", ["b1-u8-d5"]),
+    ("word-loesen", "lösen.", "loesen", ["b1-u8-d5"]),
+    ("word-festlegen", "festlegen.", "festlegen", ["b1-u8-d5"]),
+    ("word-geschickt", "geschickt.", "geschickt", ["b1-u8-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

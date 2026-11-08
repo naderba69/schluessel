@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-kollokationen-beruf",
+  "kind": "shufra",
+  "title": {
+    "ar": "الكلمات المصاحبة المهنية!",
+    "de": "Kollokationen im Beruf"
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "red",
+  "payload": {
+    "topicAr": "كولوكاسيونات العمل: كل اسم بفعله الثابت! (التعليمات تُعطى! الرعاية تُتولى! المشكلة تُحلّ!)",
+    "sceneAr": "الورشة والמשרד: المعلّم يُعطي تعليمات! المتدرّب يعمل! المشكلة تُحلّ! الموعد يُحدَّد! مكان العمل يُؤمَّن!",
+    "examples": [
+      {
+        "de": "Der Meister gibt eine Anleitung.",
+        "ar": "المعلّم يُعطي تعليمات. (Anleitung geben!)"
+      },
+      {
+        "de": "Ich übernehme die Betreuung.",
+        "ar": "أتولّى الرعاية. (Betreuung übernehmen!)"
+      },
+      {
+        "de": "Der Lehrling löst das Problem.",
+        "ar": "المتدرّب يحلّ المشكلة. (Problem lösen!)"
+      },
+      {
+        "de": "Ich lege den Termin fest.",
+        "ar": "أحدّد الموعد. (Termin festlegen!)"
+      },
+      {
+        "de": "Der Azubi arbeitet geschickt.",
+        "ar": "المتدرّب يعمل بارعاة. (geschickt arbeiten!)"
+      },
+      {
+        "de": "Wir sichern den Arbeitsplatz.",
+        "ar": "نُؤمّن مكان العمل. (Arbeitsplatz sichern!)"
+      }
+    ],
+    "inferencePromptAr": "لاحظ: Anleitung geben (لا machen!) · Betreuung übernehmen (لا nehmen!) · Problem lösen (لا machen!) · Termin festlegen (ولا setzen!) · geschickt arbeiten · Arbeitsplatz sichern (لا halten!) — الزوج محفوظ! (نفس قاعدة u2-d5: in die Wohnung ziehen!)",
+    "ruleDe": "Der Meister gibt eine Anleitung. · Ich übernehme die Betreuung. · Der Lehrling löst das Problem. · Ich lege den Termin fest. · Der Azubi arbeitet geschickt. · Wir sichern den Arbeitsplatz.",
+    "ruleAr": "الكولوكاسيونات المهنية: (1) Anleitung geben (التعليمات تُعطى!) (2) Betreuung übernehmen (الرعاية تُتولى!) (3) Problem lösen (المشكلة تُحلّ!) (4) Termin festlegen (الموعد يُحدَّد!) (5) geschickt arbeiten (بعراة!) (6) Arbeitsplatz sichern (مكان العمل يُؤمَّن!) — الزوج محفوظ!",
+    "contrastAr": "العربية: «يعمل المشكلة» و«يأخذ الرعاية» ممكنان! والألمانية: الزوج ثابت — Problem LÖSEN! Betreuung ÜBERNEHMEN! — الخطأ في الشريك لا في المعنى (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "الشراكات الثابتة: Anleitung geben! · Betreuung übernehmen! · Problem lösen!",
+      "الفعل المنفصل مع المفعول قبله: Ich lege den Termin fest! (لا fest den Termin!)",
+      "geschickt صفة عمل: arbeitet geschickt! (بلا ist!)",
+      "der Lehrling في الجنوب وder Azubi في الشمال! (نفس المعنى! لهجتان!)"
+    ],
+    "beads": [
+      "Der Meister gibt eine Anleitung.",
+      "Ich übernehme die Betreuung.",
+      "Der Lehrling löst das Problem.",
+      "Ich lege den Termin fest.",
+      "Der Azubi arbeitet geschickt.",
+      "Wir sichern den Arbeitsplatz."
+    ],
+    "properNouns": []
+  },
+  "usedInLessons": ["b1-u8-d5"]
+}
