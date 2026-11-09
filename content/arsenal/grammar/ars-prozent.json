@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "constitutionSection": "10‑ي",
+ "id": "ars-prozent",
+ "kind": "shufra",
+ "title": {
+  "ar": "النسب والأرقام!",
+  "de": "Prozent & Statistik — Komma lesen · Anteil · Tendenz"
+ },
+ "levelIntroduced": "B1",
+ "riskLevel": "yellow",
+ "payload": {
+  "topicAr": "النسب والأرقام! (85,3%! المتوسط! الاتجاه!)",
+  "sceneAr": "الإحصاء يُقال بالألمانية: النسبة تُقرأ بالفاصلة (85,3% = Komma drei Prozent!) والرقم له اتجاه (steigt! sinkt! schwankt!) والمتوسط والاتجاه يُسمَّيان (Durchschnitt! Tendenz!) — لغة الأرقام الثابتة!",
+  "examples": [
+   {
+    "de": "Fünfundachtzig Komma drei Prozent.",
+    "ar": "خمسة وثمانون فاصلة ثلاثة بالمئة. (85,3%!)"
+   },
+   {
+    "de": "Zwanzig Prozent sind genug.",
+    "ar": "عشرون بالمئة تكفي. (العدد = جمع!)"
+   },
+   {
+    "de": "Der Anteil ist hoch.",
+    "ar": "الحصة عالية."
+   },
+   {
+    "de": "Die Zahl sinkt.",
+    "ar": "الرقم ينخفض."
+   },
+   {
+    "de": "Der Durchschnitt ist hoch.",
+    "ar": "المتوسط عالٍ."
+   },
+   {
+    "de": "Die Tendenz ist klar.",
+    "ar": "الاتجاه واضح."
+   }
+  ],
+  "inferencePromptAr": "لاحظ: النسبة بالفاصلة (Komma لا Punkt!) و20% + جمع (SIND لا ist!) والاتجاه بأفعاله الثابتة (steigt! sinkt! schwankt!) — الأرقام لغة لها قواعدها!",
+  "ruleDe": "Fünfundachtzig Komma drei Prozent. · Zwanzig Prozent sind genug. · Der Anteil ist hoch. · Die Zahl sinkt. · Der Durchschnitt ist hoch. · Die Tendenz ist klar.",
+  "ruleAr": "لغة النسب: (1) القراءة: 85,3% = fünfundachtzig Komma drei Prozent! (2) العدد جمع: Zwanzig Prozent SIND! (3) الحصة: der Anteil! (4) الاتجاه: steigt! sinkt! schwankt! (5) المتوسّط: der Durchschnitt! (6) النزعة: die Tendenz!",
+  "contrastAr": "العربية: «85,3%» تُقال بفاصلة أيضاً لكن النقّاط في الأرقام الغربية (85.3) تُقرأ Punkt! والألمانية: Komma! والفرق الثاني: «عشرون بالمئة» بالمفرد في العربية لكن 20 Prozent SIND بالجمع في الألمانية (العدد = جمع!) (خريطة التداخل 10‑ي).",
+  "limitsAr": [
+   "النسبة بالفاصلة: 85,3% = Komma drei Prozent! (لا Punkt!)",
+   "Prozent = das! والجمع die Prozente!",
+   "العدد + Prozent = جمع: Zwanzig Prozent SIND (لا ist!)",
+   "sinken/steigen بالماضي ist (الحركة!) — ist gesunken!"
+  ],
+  "beads": [
+   "Fünfundachtzig Komma drei Prozent.",
+   "Zwanzig Prozent sind genug.",
+   "Der Anteil ist hoch.",
+   "Die Zahl sinkt.",
+   "Der Durchschnitt ist hoch.",
+   "Die Tendenz ist klar."
+  ],
+  "properNouns": []
+ },
+ "usedInLessons": [
+  "b1-u10-d1"
+ ]
+}

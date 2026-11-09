@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-18 — الدفعة 436: D482 — b1-u10-d1 «الأرقام والإحصاء — النسب!» — الوحدة 10 تبدأ! (الدفعة 436 · v7.28)
+يوم النسب والإحصاء! — **16 كلمة**: das Prozent (das!) · der Anteil · die Statistik · der Durchschnitt · **sinken** (ist gesunken!) · der Anstieg · der Rückgang · die Tendenz · die Hälfte (die!) · die Zunahme · die Abnahme · **betragen** يبلغ · **schwanken** يتذبذب · stabil · die Kurve · **das Komma** الفاصلة! + القاعدة ars-prozent (شُفرة 6: «Fünfundachtzig Komma drei Prozent.» — الفاصلة لا النقطة!). المحطات 15 وcheck-lesson **0/0/0** (58 سطراً).
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2769/0/0 ✓** · build ✓
+
 ## 2026-11-17 — الدفعة 435: D481 — b1-u9-d7 «المعركة battle-u9» — الوحدة 9 أُغلقت! (الدفعة 435 · v7.27)
 معركة الوحدة 9 (النزاعات والحلول) خضراء من أول تشغيل! — **20 اختباراً**: دروسها الستة (d1-d6) تُلعَب 3 نسخ × علامة كاملة عبر proveUnit + حارس البنود الضعيفة! (الغلاف الرفيع b1-unit9-proof.test.ts — النمط نفسه من D426/D433/D440/D461/D474.)
 - **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2751/0/0 ✓** · build ✓

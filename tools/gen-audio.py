@@ -2472,6 +2472,22 @@ def build_all() -> None:
     ("word-versoehnung", "die Versöhnung.", "versoehnung", ["b1-u9-d6"]),
     ("word-versoehnen", "sich versöhnen.", "versoehnen", ["b1-u9-d6"]),
     ("word-frieden", "der Frieden.", "frieden", ["b1-u9-d6"]),
+    ("word-prozent", "das Prozent.", "prozent", ["b1-u10-d1"]),
+    ("word-anteil", "der Anteil.", "anteil", ["b1-u10-d1"]),
+    ("word-statistik", "die Statistik.", "statistik", ["b1-u10-d1"]),
+    ("word-durchschnitt", "der Durchschnitt.", "durchschnitt", ["b1-u10-d1"]),
+    ("word-sinken", "sinken.", "sinken", ["b1-u10-d1"]),
+    ("word-anstieg", "der Anstieg.", "anstieg", ["b1-u10-d1"]),
+    ("word-rueckgang", "der Rückgang.", "rueckgang", ["b1-u10-d1"]),
+    ("word-tendenz", "die Tendenz.", "tendenz", ["b1-u10-d1"]),
+    ("word-haelfte", "die Hälfte.", "haelfte", ["b1-u10-d1"]),
+    ("word-zunahme", "die Zunahme.", "zunahme", ["b1-u10-d1"]),
+    ("word-abnahme", "die Abnahme.", "abnahme", ["b1-u10-d1"]),
+    ("word-betragen", "betragen.", "betragen", ["b1-u10-d1"]),
+    ("word-schwanken", "schwanken.", "schwanken", ["b1-u10-d1"]),
+    ("word-stabil", "stabil.", "stabil", ["b1-u10-d1"]),
+    ("word-kurve", "die Kurve.", "kurve", ["b1-u10-d1"]),
+    ("word-komma", "das Komma.", "komma", ["b1-u10-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

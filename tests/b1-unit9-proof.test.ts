@@ -6,7 +6,7 @@ import { proveUnit } from "./unit-proof.js";
 await proveUnit({
   unit: "الوحدة B1-U9",
   ids: ["b1-u9-d1", "b1-u9-d2", "b1-u9-d3", "b1-u9-d4", "b1-u9-d5", "b1-u9-d6"],
-  nextId: null, // D481: U9 اكتملت — المسار مُستنفد حتى تُبنى b1-u10 (القلب التراكمي: null = «انتهت المتاح!» كما في D474 لـ battle-u8)
+  nextId: "b1-u10-d1", // D482: U10 بدأت! (النقلة كما في D475 — battle-u8) — كان null في D481
   prefixIds: [
     "a1-u1-d1",
     "a1-u1-d2",
