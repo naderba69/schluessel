@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-16 — الدفعة 434: D480 — b1-u9-d6 «النزاعات والحلول — مراجعة + توليف!» — قبل المعركة! (الدفعة 434 · v7.26)
+يوم التوليف والتصالح! — **3 كلمات**: die Versöhnung التصالح (finden!) · **sich versöhnen** يتصالح (انعكاسي — uns لازم!) · **der Frieden** السلام (der! schließen!) + مراجعة الوحدة كلها في الـ pairs والقصة (Nachfragen ← Klärung ← Bild ← Regelung ← Runde ← Versöhnung!). المحطات 15 وcheck-lesson **0/0/0** (59 سطراً).
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2751/0/0 ✓** · build ✓
+
 ## 2026-11-15 — الدفعة 433: D479 — b1-u9-d5 «النزاعات والحلول — إدارة نقاش قصير!» — يوم الإدارة! (الدفعة 433 · v7.25)
 يوم إدارة النقاش بالجولات! — **15 كلمة**: **moderieren** يُدير · die Moderation · **die Runde** الجولة · der Redebeitrag المساهمة · **sich beteiligen** يشارك (AN!) · die Beteiligung · **mitreden** (منفصل!) · die Abstimmung التصويت · **die Mehrheit** الأكثرية · **die Minderheit** الأقلية · **der Beschluss** القرار (der!) · **umsetzen** يُنفّذ (منفصل!) · **übereinstimmen** (ينفصل!) · die Rolle · die These + القاعدة ars-moderation (شُفرة 6: «Die Runde ist offen.» — الترتيب الإداري!). المحطات 15 وcheck-lesson **0/0/0** (54 سطراً).
 - **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2747/0/0 ✓** · build ✓

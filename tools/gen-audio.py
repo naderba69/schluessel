@@ -2469,6 +2469,9 @@ def build_all() -> None:
     ("word-uebereinstimmen", "übereinstimmen.", "uebereinstimmen", ["b1-u9-d5"]),
     ("word-rolle", "die Rolle.", "rolle", ["b1-u9-d5"]),
     ("word-these", "die These.", "these", ["b1-u9-d5"]),
+    ("word-versoehnung", "die Versöhnung.", "versoehnung", ["b1-u9-d6"]),
+    ("word-versoehnen", "sich versöhnen.", "versoehnen", ["b1-u9-d6"]),
+    ("word-frieden", "der Frieden.", "frieden", ["b1-u9-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

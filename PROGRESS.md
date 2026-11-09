@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 434 (2026-11-16) — D480: b1-u9-d6 «النزاعات والحلول — مراجعة + توليف!» — قبل المعركة! (الدفعة 434 · v7.26)
+- **الخلاصة:** يوم التوليف والتصالح! — **3 كلمات**: die Versöhnung التصالح (finden!) · **sich versöhnen** يتصالح (انعكاسي — uns لازم!) · **der Frieden** السلام (der! schließen!) + مراجعة الوحدة كلها في الـ pairs والقصة (Nachfragen ← Klärung ← Bild ← Regelung ← Runde ← Versöhnung!). المحطات 15 وcheck-lesson **0/0/0** (59 سطراً).
+- **التالي:** b1-u9-d7 **المعركة battle-u9**! (الوحدة 9 كاملة — ونهاية مسار b1 النحوي!)
+
 ## الدفعة 433 (2026-11-15) — D479: b1-u9-d5 «النزاعات والحلول — إدارة نقاش قصير!» — يوم الإدارة! (الدفعة 433 · v7.25)
 - **الخلاصة:** يوم إدارة النقاش بالجولات! — **15 كلمة**: **moderieren** يُدير · die Moderation · **die Runde** الجولة · der Redebeitrag المساهمة · **sich beteiligen** يشارك (AN!) · die Beteiligung · **mitreden** (منفصل!) · die Abstimmung التصويت · **die Mehrheit** الأكثرية · **die Minderheit** الأقلية · **der Beschluss** القرار (der!) · **umsetzen** يُنفّذ (منفصل!) · **übereinstimmen** (ينفصل!) · die Rolle · die These + القاعدة ars-moderation (شُفرة 6: «Die Runde ist offen.» — الترتيب الإداري!). المحطات 15 وcheck-lesson **0/0/0** (54 سطراً).
 - **التالي:** b1-u9-d6 «مراجعة + توليف» ثم d7 **المعركة battle-u9**!

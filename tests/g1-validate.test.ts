@@ -172,5 +172,5 @@ describe("G1 — content tree الحقيقي (test-g1-content-dir)", () => {
     if (report.errors.length > 0) console.error(report.errors);
     expect(report.errors).toEqual([]);
     expect(report.fileCount).toBeGreaterThan(0);
-  });
+  }, 120_000); // D480: شجرة المحتوى تكبر يومياً (2751 ملفاً!) — المهلة الصامتة 5s كانت تفشل بالحِمل المتوازي (بيئة لا محتوى!)
 });

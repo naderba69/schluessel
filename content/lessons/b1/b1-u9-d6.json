@@ -1,0 +1,426 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u9-d6",
+  "level": "B1",
+  "unit": 9,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Versöhnung kommt — und der Frieden bleibt!",
+    "ar": "يوم المراجعة والتوليف! (التصالح! السلام!) — الوحدة 9: النزاعات والحلول!"
+  },
+  "canDoDaily": [
+    "يُلخّص الوحدة كلها في قصة واحدة! (Nachfragen ← Dialog ← Bild ← Schlichtung ← Moderation ← Versöhnung!)",
+    "يتصالح ويُبرم السلام بالمفردات الثابتة! (sich versöhnen! Frieden schließen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "runde",
+      "abstimmung",
+      "mehrheit"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التصالح ممكن.»؟"
+        },
+        "choices": [
+          "Die Versöhnung ist möglich.",
+          "Die Versöhnung ist fertig.",
+          "Die Versöhnung ist offen."
+        ],
+        "answer": "Die Versöhnung ist möglich.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نتصالح.»؟"
+        },
+        "choices": [
+          "Wir versöhnen uns.",
+          "Wir versöhnen.",
+          "Wir sind versöhnen."
+        ],
+        "answer": "Wir versöhnen uns.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "versoehnung",
+      "versoehnen",
+      "frieden"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-schlichtung"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Am Ende steht die Versöhnung — der Frieden kommt!",
+        "ar": "يُلخّص الوحدة في 8 جمل وصولاً إلى التصالح!"
+      },
+      "situation": {
+        "de": "Ein Streit. Eine Lösung. Eine Versöhnung.",
+        "ar": "نزاع! حلّ! وتصالح! (الوحدة كلها في خاتمة واحدة!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث + مراجعة كلمات الوحدة كلها!",
+        "الترتيب الكامل: Nachfragen ← Klärung ← Bild ← Regelung ← Runde ← Versöhnung!",
+        "المفردات الثابتة: sich versöhnen (uns!) Frieden schließen!",
+        "الخاتمة: der Frieden kommt und bleibt!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم + مراجعة الوحدة!",
+          "التصالح! السلام!"
+        ],
+        "interleavedWith": [
+          "protokoll",
+          "absprache",
+          "uebersicht"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "التصالح",
+                "de": "die Versöhnung"
+              },
+              {
+                "ar": "يتصالح",
+                "de": "sich versöhnen"
+              },
+              {
+                "ar": "السلام",
+                "de": "der Frieden"
+              },
+              {
+                "ar": "الاتفاق",
+                "de": "die Einigung"
+              }
+            ],
+            "why": "die Versöhnung التصالح (finden!) · sich versöhnen يتصالح (Wir versöhnen uns!) · der Frieden السلام (der! schließen!) · die Einigung الاتفاق (مراجعة d1!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الاعتذار",
+                "de": "die Entschuldigung"
+              },
+              {
+                "ar": "التعويض",
+                "de": "die Entschädigung"
+              },
+              {
+                "ar": "التسوية",
+                "de": "die Regelung"
+              },
+              {
+                "ar": "الرضا",
+                "de": "die Zufriedenheit"
+              }
+            ],
+            "why": "die Entschuldigung الاعتذار (sich entschuldigen!) · die Entschädigung التعويض (bekommen!) · die Regelung التسوية (treffen!) · die Zufriedenheit الرضا (مراجعة d4!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الجولة",
+                "de": "die Runde"
+              },
+              {
+                "ar": "التصويت",
+                "de": "die Abstimmung"
+              },
+              {
+                "ar": "القرار",
+                "de": "der Beschluss"
+              },
+              {
+                "ar": "يُنفّذ",
+                "de": "umsetzen"
+              }
+            ],
+            "why": "die Runde الجولة (beginnen!) · die Abstimmung التصويت (kommen!) · der Beschluss القرار (treffen!) · umsetzen يُنفّذ (مراجعة d5!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "التصالح والسلام!"
+        ],
+        "interleavedWith": [
+          "entschaedigung",
+          "reklamation",
+          "regelung"
+        ],
+        "items": [
+          {
+            "q": "Wir ___ uns. (نتصالح!)",
+            "a": "versöhnen",
+            "why": "sich versöhnen: Wir versöhnen uns. (الضمير uns بعد الفعل!)"
+          },
+          {
+            "q": "Der ___ kommt. (السلام!)",
+            "a": "Frieden",
+            "why": "der Frieden السلام (der!) — der Frieden kommt und bleibt!"
+          },
+          {
+            "q": "Die ___ ist möglich. (التصالح!)",
+            "a": "Versöhnung",
+            "why": "die Versöhnung التصالح — die Versöhnung finden! (الشريك الثابت!)"
+          },
+          {
+            "q": "Die Einigung ist ___. (جاهزة! مراجعة!)",
+            "a": "fertig",
+            "why": "die Einigung ist fertig! (مراجعة d1 — الاتفاق جاهز!)"
+          },
+          {
+            "q": "Wir setzen den Beschluss ___. (مراجعة d5!)",
+            "a": "um",
+            "why": "umsetzen منفصل! Wir setzen den Beschluss um. (التنفيذ!)"
+          },
+          {
+            "q": "Die Zufriedenheit ist ___. (مراجعة d4!)",
+            "a": "wichtig",
+            "why": "die Zufriedenheit ist wichtig! (الخاتمة الثابتة d4!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الضمير! الأسم! الشريك!"
+        ],
+        "interleavedWith": [
+          "kulanz",
+          "gutschein",
+          "ausnahme"
+        ],
+        "items": [
+          {
+            "q": "~~Wir versöhnen.~~",
+            "a": "Wir versöhnen uns.",
+            "why": "sich versöhnen = انعكاسي! الضمير uns لازم: Wir versöhnen uns."
+          },
+          {
+            "q": "~~das Frieden kommt~~",
+            "a": "der Frieden kommt",
+            "why": "der Frieden السلام (der! لا das!) — der Frieden kommt!"
+          },
+          {
+            "q": "~~die Versöhnung machen~~",
+            "a": "die Versöhnung finden",
+            "why": "die Versöhnung finden! (الشريك الثابت — لا machen!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — الخاتمة كلام!",
+          "التصالح! السلام!"
+        ],
+        "interleavedWith": [
+          "schlichten",
+          "anliegen",
+          "beilegen"
+        ],
+        "items": [
+          {
+            "q": "لخّص النزاع! (جملتان! مراجعة d1+d4!)",
+            "a": "Das ist die Angelegenheit. Wir schlichten den Streit.",
+            "why": "المسألة والتسوية! (مراجعة d4!)"
+          },
+          {
+            "q": "لخّص الحلّ! (جملتان! مراجعة d4+d5!)",
+            "a": "Wir erstatten die Kosten. Der Beschluss ist klar.",
+            "why": "Kosten erstatten! Beschluss! (مراجعة d4+d5!)"
+          },
+          {
+            "q": "اختم بالتصالح والسلام! (3 جمل!)",
+            "a": "Die Versöhnung ist möglich. Wir versöhnen uns. Der Frieden kommt und bleibt!",
+            "why": "Versöhnung! sich versöhnen! Frieden! (خاتمة الوحدة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التصالح ممكن.»؟",
+            "a": "Die Versöhnung ist möglich."
+          },
+          {
+            "q": "«نتصالح.»؟",
+            "a": "Wir versöhnen uns."
+          },
+          {
+            "q": "«السلام قادم.»؟",
+            "a": "Der Frieden kommt."
+          },
+          {
+            "q": "«الاتفاق جاهز.»؟ (مراجعة!)",
+            "a": "Die Einigung ist fertig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نُنفّذ القرار.»؟ (مراجعة!)",
+            "a": "Wir setzen den Beschluss um."
+          },
+          {
+            "q": "«نسوّي النزاع.»؟ (مراجعة!)",
+            "a": "Wir schlichten den Streit."
+          },
+          {
+            "q": "«نُعيد المصاريف.»؟ (مراجعة!)",
+            "a": "Wir erstatten die Kosten."
+          },
+          {
+            "q": "«الرضا مهم!»؟ (مراجعة!)",
+            "a": "Die Zufriedenheit ist wichtig!"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التصالح»؟",
+            "a": "die Versöhnung"
+          },
+          {
+            "q": "«يُبرم السلام»؟",
+            "a": "Frieden schließen"
+          },
+          {
+            "q": "«الجولة مفتوحة.»؟ (مراجعة!)",
+            "a": "Die Runde ist offen."
+          },
+          {
+            "q": "«هذه شكواي.»؟ (مراجعة!)",
+            "a": "Das ist meine Reklamation."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Am Ende steht die Versöhnung! Die Einigung ist fertig, die Vereinbarung ist klar und der Kompromiss ist gut. Die Regelung ist klar: Wir erstatten die Kosten und die Zufriedenheit ist wichtig. Die Runde ist offen, der Beschluss steht und wir setzen ihn um. Jetzt versöhnen wir uns. Der Frieden kommt und bleibt!",
+      "ar": "في النهاية يقف التصالح! الاتفاق جاهز والموافقة واضحة والتنازل جيّد. التسوية واضحة: نُعيد المصاريف والرضا مهمّ. الجولة مفتوحة والقرار صار ونُنفّذه. الآن نتصالح. السلام قادم ويبقى!"
+    },
+    "srsBundleWordIds": [
+      "versoehnung",
+      "versoehnen",
+      "frieden"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "sich versöhnen بلا ضمير!",
+          "de": "~~Wir versöhnen.~~"
+        },
+        "correct": {
+          "ar": "الانعكاسي: Wir versöhnen uns!",
+          "de": "Wir versöhnen uns."
+        },
+        "exercise": {
+          "q": "Wir ___ ___. (نتصالح!)",
+          "a": "versöhnen … uns"
+        },
+        "whyArabicSpeakerFails": "العربية: «نتصالح» — فعل واحد بلا ضمير ظاهر! والألمانية: الفعل الانعكاسي يطلب ضميره (uns!) صراحة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "das Frieden!",
+          "de": "~~das Frieden kommt~~"
+        },
+        "correct": {
+          "ar": "der Frieden (der!) — السلام!",
+          "de": "der Frieden kommt"
+        },
+        "exercise": {
+          "q": "___ Frieden kommt. (أداة!)",
+          "a": "Der"
+        },
+        "whyArabicSpeakerFails": "العربية: «السلام» — بلا جنس! والألمانية: der Frieden مذكّر رغم ending ‑en المُضلِّلة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "die Versöhnung machen!",
+          "de": "~~die Versöhnung machen~~"
+        },
+        "correct": {
+          "ar": "الشريك الثابت: die Versöhnung finden!",
+          "de": "die Versöhnung finden"
+        },
+        "exercise": {
+          "q": "Wir ___ die Versöhnung. (الشريك!)",
+          "a": "finden"
+        },
+        "whyArabicSpeakerFails": "العربية: «نصنع التصالح» — الفعل حرّ! والألمانية: لكل اسم فعله الملازم (Versöhnung FINDEN لا machen!) (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Versoehnung",
+      "https://www.duden.de/rechtschreibung/versoehnen",
+      "https://www.duden.de/rechtschreibung/Frieden"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-schlichtung",
+    "ars-moderation",
+    "ars-dialog",
+    "ars-nachfragen",
+    "ars-bildbeschreibung"
+  ],
+  "audioManifestRefs": [
+    "word-versoehnung",
+    "word-versoehnen",
+    "word-frieden"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (النزاعات والحلول — مراجعة وتوليف)",
+    "goetheWordListOverlap": [
+      "versoehnung",
+      "versoehnen",
+      "frieden"
+    ]
+  }
+}
