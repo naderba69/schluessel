@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 437 (2026-11-19) — D483: b1-u10-d2 «الأرقام والإحصاء — وصف رسوم!» — يوم الرسوم! (الدفعة 437 · v7.29)
+- **الخلاصة:** يوم وصف الرسوم الإحصائية! — **15 كلمة**: das Diagramm · die Grafik · die Tabelle · **die Achse** المحور (die!) · der Balken العمود · die Skala المقياس · **die Spitze** القمة · **der Tiefpunkt** القاع · der Zeitraum المدة · der Verlauf المسار · **stagnieren** يركد · **rückläufig** متراجع (صفة!) · **ansteigen** (منفصل + ist!) · **abfallen** (منفصل + ist!) · die Schwankung + القاعدة ars-grafik (شُفرة 6: «Die Grafik zeigt den Verlauf.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).
+- **التالي:** b1-u10-d3 «عرض معطيات شفوياً» (كلام!) ثم d4 تقرير رقمي · d5 تعبيرات كمية · d6 التوليف · d7 المعركة!
+
 ## الدفعة 436 (2026-11-18) — D482: b1-u10-d1 «الأرقام والإحصاء — النسب!» — الوحدة 10 تبدأ! (الدفعة 436 · v7.28)
 - **الخلاصة:** يوم النسب والإحصاء! — **16 كلمة**: das Prozent (das!) · der Anteil · die Statistik · der Durchschnitt · **sinken** (ist gesunken!) · der Anstieg · der Rückgang · die Tendenz · die Hälfte (die!) · die Zunahme · die Abnahme · **betragen** يبلغ · **schwanken** يتذبذب · stabil · die Kurve · **das Komma** الفاصلة! + القاعدة ars-prozent (شُفرة 6: «Fünfundachtzig Komma drei Prozent.» — الفاصلة لا النقطة!). المحطات 15 وcheck-lesson **0/0/0** (58 سطراً).
 - **التالي:** b1-u10-d2 «وصف رسوم» (المنحنيات والأعمدة!) ثم d3 عرض شفهي · d4 تقرير رقمي · d5 تعبيرات كمية · d6 التوليف · d7 المعركة!

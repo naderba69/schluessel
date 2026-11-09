@@ -1,0 +1,484 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u10-d2",
+  "level": "B1",
+  "unit": 10,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Grafik zeigt den Verlauf — mit Spitze und Tiefpunkt!",
+    "ar": "يوم وصف الرسوم! (محور! عمود! قمة! قاع!) — الوحدة 10: الأرقام والإحصاء!"
+  },
+  "canDoDaily": [
+    "يصف رسماً إحصائياً بالبروتوكول! (Grafik zeigt ← Zeitraum ← Verlauf ← Spitze/Tiefpunkt!)",
+    "يسمّي أجزاء الرسم بالمفردات الثابتة! (Achse! Balken! Skala! Diagramm!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "prozent",
+      "anteil",
+      "durchschnitt"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الرسم يُظهر المسار.»؟"
+        },
+        "choices": [
+          "Die Grafik zeigt den Verlauf.",
+          "Die Grafik zeigt der Verlauf.",
+          "Die Grafik zeigt dem Verlauf."
+        ],
+        "answer": "Die Grafik zeigt den Verlauf.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«القيم ترتفع.»؟ (الانفصال!)"
+        },
+        "choices": [
+          "Die Werte steigen an.",
+          "Die Werte ansteigen.",
+          "Die Werte steigen."
+        ],
+        "answer": "Die Werte steigen an.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "diagramm",
+      "grafik",
+      "tabelle",
+      "achse",
+      "balken",
+      "skala",
+      "spitze",
+      "tiefpunkt",
+      "zeitraum",
+      "verlauf",
+      "stagnieren",
+      "ruecklaeufig",
+      "ansteigen",
+      "abfallen",
+      "schwankung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-grafik"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Grafik zeigt alles — und der Verlauf ist klar!",
+        "ar": "يصف رسماً إحصائياً في 8 جمل!"
+      },
+      "situation": {
+        "de": "Ein Diagramm: eine Achse, ein Balken, eine Spitze.",
+        "ar": "رسم! محور! عمود! وقمة واضحة!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في الوصف!",
+        "البروتوكول: Grafik zeigt ← Zeitraum ← Verlauf ← Spitze/Tiefpunkt!",
+        "الانفصال: steigen … an! fallen … ab!",
+        "الصفة الثابتة: ist rückläufig (لا تتصرّف!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Diagramm! Achse! Balken!"
+        ],
+        "interleavedWith": [
+          "prozent",
+          "anteil",
+          "durchschnitt"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الرسم البياني",
+                "de": "das Diagramm"
+              },
+              {
+                "ar": "الرسم (الإحصائي)",
+                "de": "die Grafik"
+              },
+              {
+                "ar": "الجدول",
+                "de": "die Tabelle"
+              },
+              {
+                "ar": "المحور (في الرسم)",
+                "de": "die Achse"
+              }
+            ],
+            "why": "das Diagramm الرسم البياني (die!) · die Grafik الرسم (zeigen!) · die Tabelle الجدول (lesen!) · die Achse المحور (die! Achsen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "العمود (الشريطي)",
+                "de": "der Balken"
+              },
+              {
+                "ar": "المقياس",
+                "de": "die Skala"
+              },
+              {
+                "ar": "القمة",
+                "de": "die Spitze"
+              },
+              {
+                "ar": "النقطة الدنيا",
+                "de": "der Tiefpunkt"
+              }
+            ],
+            "why": "der Balken العمود (die Balken!) · die Skala المقياس (Skalen!) · die Spitze القمة (Spitzen!) · der Tiefpunkt القاع (Tiefpunkte!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المدة (الزمنية)",
+                "de": "der Zeitraum"
+              },
+              {
+                "ar": "المسار",
+                "de": "der Verlauf"
+              },
+              {
+                "ar": "يركد",
+                "de": "stagnieren"
+              },
+              {
+                "ar": "متراجع",
+                "de": "rückläufig"
+              }
+            ],
+            "why": "der Zeitraum المدة (der! Zeiträume!) · der Verlauf المسار (die Verläufe!) · stagnieren يركد (hat stagniert!) · rückläufig متراجع (صفة!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "وصف الرسوم!"
+        ],
+        "interleavedWith": [
+          "diagramm",
+          "grafik",
+          "tabelle"
+        ],
+        "items": [
+          {
+            "q": "Die Grafik zeigt den ___. (المسار!)",
+            "a": "Verlauf",
+            "why": "der Verlauf المسار (der!) — Die Grafik zeigt den Verlauf. (ars-grafik!)"
+          },
+          {
+            "q": "Die Werte steigen ___. (ترتفع! منفصل!)",
+            "a": "an",
+            "why": "ansteigen منفصل! Die Werte steigen an. (الجزء an آخر الجملة!)"
+          },
+          {
+            "q": "Die Werte fallen ___. (تهبط! منفصل!)",
+            "a": "ab",
+            "why": "abfallen منفصل! Die Werte fallen ab."
+          },
+          {
+            "q": "Die ___ ist deutlich. (القمة!)",
+            "a": "Spitze",
+            "why": "die Spitze القمة (die Spitzen!) — Die Spitze ist deutlich."
+          },
+          {
+            "q": "Der ___ ist lang. (المدة!)",
+            "a": "Zeitraum",
+            "why": "der Zeitraum المدة (der! Zeiträume!) — der Zeitraum ist lang."
+          },
+          {
+            "q": "Die Zahl ist ___. (متراجع! صفة!)",
+            "a": "rückläufig",
+            "why": "rückläufig متراجع — Die Zahl ist rückläufig. (صفة لا تتصرّف!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الانفصال! الأداة!"
+        ],
+        "interleavedWith": [
+          "achse",
+          "balken",
+          "skala"
+        ],
+        "items": [
+          {
+            "q": "~~der Achse ist lang~~",
+            "a": "die Achse ist lang",
+            "why": "die Achse المحور (die! مؤنث — لا der!) — die Achsen!"
+          },
+          {
+            "q": "~~Die Werte ansteigen.~~",
+            "a": "Die Werte steigen an.",
+            "why": "ansteigen منفصل! الفعل steigen في موضعه والجزء an آخر الجملة! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~das Verlauf ist deutlich~~",
+            "a": "der Verlauf ist deutlich",
+            "why": "der Verlauf المسار (der! مذكّر — لا das!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — الرسم كلام!",
+          "Verlauf! Spitze! Tiefpunkt!"
+        ],
+        "interleavedWith": [
+          "spitze",
+          "tiefpunkt",
+          "stagnieren"
+        ],
+        "items": [
+          {
+            "q": "افتح الوصف! (جملتان!)",
+            "a": "Die Grafik zeigt den Verlauf. Der Zeitraum ist lang.",
+            "why": "الافتتاح بالمُظهر والمدة! (ars-grafik!)"
+          },
+          {
+            "q": "صف المسار! (جملتان!)",
+            "a": "Die Werte steigen an. Die Spitze ist deutlich.",
+            "why": "ansteigen + die Spitze! (الاتجاه والذروة!)"
+          },
+          {
+            "q": "اختم بالقاع والركود! (3 جمل!)",
+            "a": "Der Tiefpunkt ist klar. Die Werte fallen ab und stagnieren. Die Schwankung ist klein!",
+            "why": "Tiefpunkt! abfallen! stagnieren! Schwankung! (الخاتمة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الرسم يُظهر المسار.»؟",
+            "a": "Die Grafik zeigt den Verlauf."
+          },
+          {
+            "q": "«المحور»؟",
+            "a": "die Achse"
+          },
+          {
+            "q": "«القيم ترتفع.»؟",
+            "a": "Die Werte steigen an."
+          },
+          {
+            "q": "«العمود (الشريطي)»؟",
+            "a": "der Balken"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«القمة واضحة.»؟",
+            "a": "Die Spitze ist deutlich."
+          },
+          {
+            "q": "«المدة»؟",
+            "a": "der Zeitraum"
+          },
+          {
+            "q": "«القيم تهبط.»؟",
+            "a": "Die Werte fallen ab."
+          },
+          {
+            "q": "«القيم راكدة.»؟",
+            "a": "Die Werte stagnieren."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«النقطة الدنيا»؟",
+            "a": "der Tiefpunkt"
+          },
+          {
+            "q": "«الرقم متراجع.»؟",
+            "a": "Die Zahl ist rückläufig."
+          },
+          {
+            "q": "«المقياس»؟",
+            "a": "die Skala"
+          },
+          {
+            "q": "«التذبذب»؟",
+            "a": "die Schwankung"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Grafik zeigt den Verlauf. Das Diagramm ist klar und die Achse ist lang. Die Skala ist deutlich und die Balken sind hoch. Der Zeitraum ist lang. Die Werte steigen an und die Spitze ist groß. Dann fallen die Werte ab: Der Tiefpunkt ist klar und die Zahl ist rückläufig. Die Werte stagnieren. Die Schwankung ist klein und die Tabelle zeigt alles!",
+      "ar": "الرسم يُظهر المسار. الرسم البياني واضح والمحور طويل. المقياس واضح والأعمدة مرتفعة. المدة طويلة. القيم ترتفع والقمة كبيرة. ثم تهبط القيم: النقطة الدنيا واضحة والرقم متراجع. القيم راكدة. التذبذب صغير والجدول يُظهر كل شيء!"
+    },
+    "srsBundleWordIds": [
+      "diagramm",
+      "grafik",
+      "tabelle",
+      "achse",
+      "balken",
+      "skala",
+      "spitze",
+      "tiefpunkt",
+      "zeitraum",
+      "verlauf",
+      "stagnieren",
+      "ruecklaeufig",
+      "ansteigen",
+      "abfallen",
+      "schwankung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Achse!",
+          "de": "~~der Achse ist lang~~"
+        },
+        "correct": {
+          "ar": "die Achse (die! مؤنث!) — المحور!",
+          "de": "die Achse ist lang"
+        },
+        "exercise": {
+          "q": "___ Achse ist lang. (الأداة!)",
+          "a": "Die"
+        },
+        "whyArabicSpeakerFails": "العربية: «المحور» — مذكّر! والألمانية: die Achse مؤنث (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "ansteigen ملاصق!",
+          "de": "~~Die Werte ansteigen.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Die Werte steigen an!",
+          "de": "Die Werte steigen an."
+        },
+        "exercise": {
+          "q": "Die Werte ___ ___. (ترتفع!)",
+          "a": "steigen … an"
+        },
+        "whyArabicSpeakerFails": "العربية: «ترتفع» — كلمة واحدة! والألمانية: الفعل المنفصل ينفصل والجزء an يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "das Verlauf!",
+          "de": "~~das Verlauf ist deutlich~~"
+        },
+        "correct": {
+          "ar": "der Verlauf (der!) — المسار!",
+          "de": "der Verlauf ist deutlich"
+        },
+        "exercise": {
+          "q": "___ Verlauf ist deutlich. (الأداة!)",
+          "a": "Der"
+        },
+        "whyArabicSpeakerFails": "العربية: «المسار» — مذكّر لكن بلا أداة ثابتة! والألمانية: der Verlauf مذكّر رغم ‑lauf المُضلِّلة (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Diagramm",
+      "https://www.duden.de/rechtschreibung/Grafik",
+      "https://www.duden.de/rechtschreibung/Tabelle",
+      "https://www.duden.de/rechtschreibung/Achse",
+      "https://www.duden.de/rechtschreibung/Balken",
+      "https://www.duden.de/rechtschreibung/Skala",
+      "https://www.duden.de/rechtschreibung/Spitze",
+      "https://www.duden.de/rechtschreibung/Tiefpunkt",
+      "https://www.duden.de/rechtschreibung/Zeitraum",
+      "https://www.duden.de/rechtschreibung/Verlauf",
+      "https://www.duden.de/rechtschreibung/stagnieren",
+      "https://www.duden.de/rechtschreibung/ruecklaeufig",
+      "https://www.duden.de/rechtschreibung/ansteigen",
+      "https://www.duden.de/rechtschreibung/abfallen",
+      "https://www.duden.de/rechtschreibung/Schwankung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-grafik",
+    "ars-prozent"
+  ],
+  "audioManifestRefs": [
+    "word-diagramm",
+    "word-grafik",
+    "word-tabelle",
+    "word-achse",
+    "word-balken",
+    "word-skala",
+    "word-spitze",
+    "word-tiefpunkt",
+    "word-zeitraum",
+    "word-verlauf",
+    "word-stagnieren",
+    "word-ruecklaeufig",
+    "word-ansteigen",
+    "word-abfallen",
+    "word-schwankung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 10: الأرقام والإحصاء — وصف رسوم)",
+    "goetheWordListOverlap": [
+      "diagramm",
+      "grafik",
+      "tabelle",
+      "achse",
+      "balken",
+      "skala",
+      "spitze",
+      "tiefpunkt",
+      "zeitraum",
+      "verlauf",
+      "stagnieren",
+      "ruecklaeufig",
+      "ansteigen",
+      "abfallen",
+      "schwankung"
+    ]
+  }
+}

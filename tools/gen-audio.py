@@ -2488,6 +2488,21 @@ def build_all() -> None:
     ("word-stabil", "stabil.", "stabil", ["b1-u10-d1"]),
     ("word-kurve", "die Kurve.", "kurve", ["b1-u10-d1"]),
     ("word-komma", "das Komma.", "komma", ["b1-u10-d1"]),
+    ("word-diagramm", "das Diagramm.", "diagramm", ["b1-u10-d2"]),
+    ("word-grafik", "die Grafik.", "grafik", ["b1-u10-d2"]),
+    ("word-tabelle", "die Tabelle.", "tabelle", ["b1-u10-d2"]),
+    ("word-achse", "die Achse.", "achse", ["b1-u10-d2"]),
+    ("word-balken", "der Balken.", "balken", ["b1-u10-d2"]),
+    ("word-skala", "die Skala.", "skala", ["b1-u10-d2"]),
+    ("word-spitze", "die Spitze.", "spitze", ["b1-u10-d2"]),
+    ("word-tiefpunkt", "der Tiefpunkt.", "tiefpunkt", ["b1-u10-d2"]),
+    ("word-zeitraum", "der Zeitraum.", "zeitraum", ["b1-u10-d2"]),
+    ("word-verlauf", "der Verlauf.", "verlauf", ["b1-u10-d2"]),
+    ("word-stagnieren", "stagnieren.", "stagnieren", ["b1-u10-d2"]),
+    ("word-ruecklaeufig", "rückläufig.", "ruecklaeufig", ["b1-u10-d2"]),
+    ("word-ansteigen", "ansteigen.", "ansteigen", ["b1-u10-d2"]),
+    ("word-abfallen", "abfallen.", "abfallen", ["b1-u10-d2"]),
+    ("word-schwankung", "die Schwankung.", "schwankung", ["b1-u10-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

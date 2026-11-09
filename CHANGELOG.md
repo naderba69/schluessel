@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-19 — الدفعة 437: D483 — b1-u10-d2 «الأرقام والإحصاء — وصف رسوم!» — يوم الرسوم! (الدفعة 437 · v7.29)
+يوم وصف الرسوم الإحصائية! — **15 كلمة**: das Diagramm · die Grafik · die Tabelle · **die Achse** المحور (die!) · der Balken العمود · die Skala المقياس · **die Spitze** القمة · **der Tiefpunkt** القاع · der Zeitraum المدة · der Verlauf المسار · **stagnieren** يركد · **rückläufig** متراجع (صفة!) · **ansteigen** (منفصل + ist!) · **abfallen** (منفصل + ist!) · die Schwankung + القاعدة ars-grafik (شُفرة 6: «Die Grafik zeigt den Verlauf.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2786/0/0 ✓** · build ✓
+
 ## 2026-11-18 — الدفعة 436: D482 — b1-u10-d1 «الأرقام والإحصاء — النسب!» — الوحدة 10 تبدأ! (الدفعة 436 · v7.28)
 يوم النسب والإحصاء! — **16 كلمة**: das Prozent (das!) · der Anteil · die Statistik · der Durchschnitt · **sinken** (ist gesunken!) · der Anstieg · der Rückgang · die Tendenz · die Hälfte (die!) · die Zunahme · die Abnahme · **betragen** يبلغ · **schwanken** يتذبذب · stabil · die Kurve · **das Komma** الفاصلة! + القاعدة ars-prozent (شُفرة 6: «Fünfundachtzig Komma drei Prozent.» — الفاصلة لا النقطة!). المحطات 15 وcheck-lesson **0/0/0** (58 سطراً).
 - **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2769/0/0 ✓** · build ✓

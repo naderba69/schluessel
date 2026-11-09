@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "constitutionSection": "10‑ي",
+ "id": "ars-grafik",
+ "kind": "shufra",
+ "title": {
+  "ar": "وصف الرسوم!",
+  "de": "Grafik beschreiben — Zeitraum · Verlauf · Spitze · Tiefpunkt"
+ },
+ "levelIntroduced": "B1",
+ "riskLevel": "orange",
+ "payload": {
+  "topicAr": "وصف الرسوم! (محور! عمود! قمة! قاع!)",
+  "sceneAr": "الرسم يُوصف بروتوكول: ماذا يُظهر (Grafik zeigt!) ← المدة (Zeitraum!) ← المسار (Verlauf! steigt an! stagniert!) ← القمة والقاع (Spitze! Tiefpunkt!) — أجزاء الرسم لها أسماء ثابتة!",
+  "examples": [
+   {
+    "de": "Die Grafik zeigt den Verlauf.",
+    "ar": "الرسم يُظهر المسار. (الافتتاح!)"
+   },
+   {
+    "de": "Der Zeitraum ist lang.",
+    "ar": "المدة طويلة. (الإطار!)"
+   },
+   {
+    "de": "Die Werte steigen an.",
+    "ar": "القيم ترتفع. (الاتجاه!)"
+   },
+   {
+    "de": "Die Spitze ist deutlich.",
+    "ar": "القمة واضحة. (الذروة!)"
+   },
+   {
+    "de": "Der Tiefpunkt ist klar.",
+    "ar": "النقطة الدنيا واضحة. (القاع!)"
+   },
+   {
+    "de": "Die Werte stagnieren.",
+    "ar": "القيم راكدة. (الخاتمة!)"
+   }
+  ],
+  "inferencePromptAr": "لاحظ: الوصف بروتوكول لا تعداد (zeigt ← Zeitraum ← Verlauf ← Spitze/Tiefpunkt!) وأجزاء الرسم أسماء ثابتة (Achse! Balken! Skala!) والحركة أفعال منفصلة (steigen an! fallen ab!)",
+  "ruleDe": "Die Grafik zeigt den Verlauf. · Der Zeitraum ist lang. · Die Werte steigen an. · Die Spitze ist deutlich. · Der Tiefpunkt ist klar. · Die Werte stagnieren.",
+  "ruleAr": "بروتوكول وصف الرسوم: (1) الافتتاح: Die Grafik zeigt den Verlauf! (2) الإطار: der Zeitraum! (3) الاتجاه: steigen an! stagnieren! (4) الذروة: die Spitze! (5) القاع: der Tiefpunkt! (6) الخاتمة: stagnieren/rückläufig!",
+  "contrastAr": "العربية: «الرسم يبيّن ارتفاعاً» — إجمالاً بلا أجزاء مسمّاة! والألمانية: كل جزء له اسمه (Achse! Balken! Skala! Linie!) والوصف بالبروتوكول (Zeitraum أولاً!) والحركة منفصلة (steigen AN! fallen AB!) (خريطة التداخل 10‑ي).",
+  "limitsAr": [
+   "die Achse المحور (die! — die Achsen!)",
+   "ansteigen/abfallen منفصلان: steigen … an! fallen … ab!",
+   "rückläufig صفة: ist rückläufig (لا تتصرّف!)",
+   "der Zeitraum (der! Zeiträume!)"
+  ],
+  "beads": [
+   "Die Grafik zeigt den Verlauf.",
+   "Der Zeitraum ist lang.",
+   "Die Werte steigen an.",
+   "Die Spitze ist deutlich.",
+   "Der Tiefpunkt ist klar.",
+   "Die Werte stagnieren."
+  ],
+  "properNouns": []
+ },
+ "usedInLessons": [
+  "b1-u10-d2"
+ ]
+}

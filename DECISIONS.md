@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D483 (2026-11-19): b1-u10-d2 «الأرقام والإحصاء — وصف رسوم!» — يوم الرسوم! (الدفعة 437 · v7.29)
+- **الدفعة:** 437 · **الموجّه:** 7.29
+- **للقارئ:** يوم وصف الرسوم الإحصائية! — **15 كلمة**: das Diagramm · die Grafik · die Tabelle · **die Achse** المحور (die!) · der Balken العمود · die Skala المقياس · **die Spitze** القمة · **der Tiefpunkt** القاع · der Zeitraum المدة · der Verlauf المسار · **stagnieren** يركد · **rückläufig** متراجع (صفة!) · **ansteigen** (منفصل + ist!) · **abfallen** (منفصل + ist!) · die Schwankung + القاعدة ars-grafik (شُفرة 6: «Die Grafik zeigt den Verlauf.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).
+- **بطاقة قرار:** الوصف بروتوكول لا تعداد (zeigt ← Zeitraum ← Verlauf ← Spitze/Tiefpunkt!) وأجزاء الرسم أسماء ثابتة (Achse! Balken! Skala!) · «inklusive» ثم «dazu» كلاهما غير مُدرَّس في الهدف ← «mit Spitze und Tiefpunkt» (أبسط!) · النطق: Achse = ks (chs!) وDiagramm النبر الثاني! وGrafik/Skala النبر الأول — 4 مراجعات (298-301) + regen من أول محاولة للكل.
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2786/0/0 ✓** · build ✓
+- **التالي:** b1-u10-d3 «عرض معطيات شفوياً» (كلام!) ثم d4 تقرير رقمي · d5 تعبيرات كمية · d6 التوليف · d7 المعركة!
+
 ## D482 (2026-11-18): b1-u10-d1 «الأرقام والإحصاء — النسب!» — الوحدة 10 تبدأ! (الدفعة 436 · v7.28)
 - **الدفعة:** 436 · **الموجّه:** 7.28
 - **للقارئ:** يوم النسب والإحصاء! — **16 كلمة**: das Prozent (das!) · der Anteil · die Statistik · der Durchschnitt · **sinken** (ist gesunken!) · der Anstieg · der Rückgang · die Tendenz · die Hälfte (die!) · die Zunahme · die Abnahme · **betragen** يبلغ · **schwanken** يتذبذب · stabil · die Kurve · **das Komma** الفاصلة! + القاعدة ars-prozent (شُفرة 6: «Fünfundachtzig Komma drei Prozent.» — الفاصلة لا النقطة!). المحطات 15 وcheck-lesson **0/0/0** (58 سطراً).
