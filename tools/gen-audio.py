@@ -2533,6 +2533,21 @@ def build_all() -> None:
     ("word-ergeben", "ergeben.", "ergeben", ["b1-u10-d4"]),
     ("word-stand", "der Stand.", "stand", ["b1-u10-d4"]),
     ("word-anzahl", "die Anzahl.", "anzahl", ["b1-u10-d4"]),
+    ("word-drittel", "das Drittel.", "drittel", ["b1-u10-d5"]),
+    ("word-zehntel", "das Zehntel.", "zehntel", ["b1-u10-d5"]),
+    ("word-handvoll", "die Handvoll.", "handvoll", ["b1-u10-d5"]),
+    ("word-dutzend", "das Dutzend.", "dutzend", ["b1-u10-d5"]),
+    ("word-bruch", "der Bruch.", "bruch", ["b1-u10-d5"]),
+    ("word-mehrzahl", "die Mehrzahl.", "mehrzahl", ["b1-u10-d5"]),
+    ("word-teilweise", "teilweise.", "teilweise", ["b1-u10-d5"]),
+    ("word-vollstaendig", "vollständig.", "vollstaendig", ["b1-u10-d5"]),
+    ("word-ueberwiegend", "überwiegend.", "ueberwiegend", ["b1-u10-d5"]),
+    ("word-knapp", "knapp.", "knapp", ["b1-u10-d5"]),
+    ("word-reichlich", "reichlich.", "reichlich", ["b1-u10-d5"]),
+    ("word-zahlreich", "zahlreich.", "zahlreich", ["b1-u10-d5"]),
+    ("word-genuegend", "genügend.", "genuegend", ["b1-u10-d5"]),
+    ("word-million", "die Million.", "million", ["b1-u10-d5"]),
+    ("word-rate", "die Rate.", "rate", ["b1-u10-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

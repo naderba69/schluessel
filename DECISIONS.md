@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D486 (2026-11-22): b1-u10-d5 «الأرقام والإحصاء — تعبيرات كمية!» — يوم الكمّيات! (الدفعة 440 · v7.32)
+- **الدفعة:** 440 · **الموجّه:** 7.32
+- **للقارئ:** يوم التعبيرات الكمية! — **15 كلمة**: **das Drittel** الثلث · das Zehntel العُشر · **die Handvoll** الحفنة (die!) · das Dutzend الدزينة · der Bruch الكسر · die Mehrzahl · **teilweise** جزئياً · **vollständig** كاملاً · **überwiegend** في الغالب · **knapp** بالكاد · **reichlich** وفير · **zahlreich** كثير · **genügend** كافٍ · die Million · die Rate المعدل + القاعدة ars-quantitaet (شُفرة 6: «Ein Drittel ist genug.» + «Zwei Drittel SIND!»). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً) من أول مرة!
+- **بطاقة قرار:** الكسور جمعها ثابت (die Drittel!) والعدد + Drittel = جمع فعل (SIND!) كما Prozent! · knapp ≠ قليل (بالكاد تكفي!) — فخّ المعنى في error-hunt · mindestens/höchstens كانا مُدرَّسين أصلاً فوفّرت المكان للظروف (reichlich/überwiegend/teilweise!) · **النطق نظيف اليوم: صفر مخالفات!** (أول يوم منذ مدة — لا lexicon ولا regen!).
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2837/0/0 ✓** · build ✓
+- **التالي:** b1-u10-d6 «مراجعة + توليف» ثم d7 **المعركة battle-u10**!
+
 ## D485 (2026-11-21): b1-u10-d4 «الأرقام والإحصاء — تقرير رقمي!» — يوم الكتابة! (الدفعة 439 · v7.31)
 - **الدفعة:** 439 · **الموجّه:** 7.31
 - **للقارئ:** يوم التقرير الرقمي! — **15 كلمة**: **auswerten** يُحلّل (منفصل!) · die Auswertung · **erheben** يجمع (**hat erhoben** — شاذّ!) · die Erhebung · **die Stichprobe** العيّنة · **repräsentativ** مُمثِّل · die Prognose التوقّع · das Wachstum النمو · das Niveau (das!) · die Verteilung · verteilen · die Spanne · **ergeben** يُعطي · der Stand · die Anzahl + القاعدة ars-bericht (شُفرة 6: «Die Erhebung ist repräsentativ.» — مراحل التقرير!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً).

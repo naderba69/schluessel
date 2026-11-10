@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 440 (2026-11-22) — D486: b1-u10-d5 «الأرقام والإحصاء — تعبيرات كمية!» — يوم الكمّيات! (الدفعة 440 · v7.32)
+- **الخلاصة:** يوم التعبيرات الكمية! — **15 كلمة**: **das Drittel** الثلث · das Zehntel العُشر · **die Handvoll** الحفنة (die!) · das Dutzend الدزينة · der Bruch الكسر · die Mehrzahl · **teilweise** جزئياً · **vollständig** كاملاً · **überwiegend** في الغالب · **knapp** بالكاد · **reichlich** وفير · **zahlreich** كثير · **genügend** كافٍ · die Million · die Rate المعدل + القاعدة ars-quantitaet (شُفرة 6: «Ein Drittel ist genug.» + «Zwei Drittel SIND!»). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً) من أول مرة!
+- **التالي:** b1-u10-d6 «مراجعة + توليف» ثم d7 **المعركة battle-u10**!
+
 ## الدفعة 439 (2026-11-21) — D485: b1-u10-d4 «الأرقام والإحصاء — تقرير رقمي!» — يوم الكتابة! (الدفعة 439 · v7.31)
 - **الخلاصة:** يوم التقرير الرقمي! — **15 كلمة**: **auswerten** يُحلّل (منفصل!) · die Auswertung · **erheben** يجمع (**hat erhoben** — شاذّ!) · die Erhebung · **die Stichprobe** العيّنة · **repräsentativ** مُمثِّل · die Prognose التوقّع · das Wachstum النمو · das Niveau (das!) · die Verteilung · verteilen · die Spanne · **ergeben** يُعطي · der Stand · die Anzahl + القاعدة ars-bericht (شُفرة 6: «Die Erhebung ist repräsentativ.» — مراحل التقرير!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً).
 - **التالي:** b1-u10-d5 «تعبيرات كمية» (ein Drittel! النصف! الأرباع!) ثم d6 التوليف · d7 المعركة!

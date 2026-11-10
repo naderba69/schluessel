@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "constitutionSection": "10‑ي",
+ "id": "ars-quantitaet",
+ "kind": "shufra",
+ "title": {
+  "ar": "التعبيرات الكمية!",
+  "de": "Quantitäten — Drittel · Handvoll · reichlich · zahlreich"
+ },
+ "levelIntroduced": "B1",
+ "riskLevel": "yellow",
+ "payload": {
+  "topicAr": "التعبيرات الكمية! (ثلث! حفنة! في الغالب!)",
+  "sceneAr": "الكمّيات تُقال بمقاديرها: الكسور (Drittel! Zehntel! Bruch!) والجمعيات (Handvoll! Dutzend! Million!) ودرجات الكثافة (reichlich! knapp! teilweise! überwiegend! zahlreich! vollständig!)!",
+  "examples": [
+   {
+    "de": "Ein Drittel ist genug.",
+    "ar": "الثلث يكفي. (الكسر!)"
+   },
+   {
+    "de": "Zwei Drittel sind hoch.",
+    "ar": "الثلثان مرتفعان. (العدد = جمع!)"
+   },
+   {
+    "de": "Eine Handvoll ist klein.",
+    "ar": "حفنة صغيرة. (الجمعية!)"
+   },
+   {
+    "de": "Die Werte sind zahlreich.",
+    "ar": "القيم كثيرة. (الكثافة!)"
+   },
+   {
+    "de": "Die Hälfte ist genügend.",
+    "ar": "النصف كافٍ. (الحدّ!)"
+   },
+   {
+    "de": "Die Rate ist hoch.",
+    "ar": "المعدل عالٍ. (النسبة!)"
+   }
+  ],
+  "inferencePromptAr": "لاحظ: الكسور جمعها ثابت (die Drittel!) والعدد + Drittel = جمع فعل (Zwei Drittel SIND!) — كما Prozent! ودرجات الكثافة صفاتها الثابتة (reichlich! knapp! überwiegend!)",
+  "ruleDe": "Ein Drittel ist genug. · Zwei Drittel sind hoch. · Eine Handvoll ist klein. · Die Werte sind zahlreich. · Die Hälfte ist genügend. · Die Rate ist hoch.",
+  "ruleAr": "لغة الكمّيات: (1) الكسور: das Drittel/das Zehntel/der Bruch! (2) العدد جمع: Zwei Drittel SIND! (3) الجمعيات: eine Handvoll! ein Dutzend! eine Million! (4) الكثافة: reichlich! knapp! zahlreich! teilweise! überwiegend! vollständig! (5) المعدّل: die Rate!",
+  "contrastAr": "العربية: «الثلثان» مثنى و«ثلاثة أرباع» جمع تكسير!؛ والألمانية: das Drittel جمعها die Drittel (بلا تغيير!) والعدد + Drittel = جمع فعل (SIND!) — كما Prozent! والحدود مُدرَّسة (mindestens/höchstens!) والكثافة بمراتب (reichlich ≠ knapp!) (خريطة التداخل 10‑ي).",
+  "limitsAr": [
+   "das Drittel (das! die Drittel!)",
+   "العدد + Drittel = جمع: Zwei Drittel SIND!",
+   "die Handvoll (die! Handvoll!)",
+   "knapp = بالكاد/ضيّق (لا «قليل»!)"
+  ],
+  "beads": [
+   "Ein Drittel ist genug.",
+   "Zwei Drittel sind hoch.",
+   "Eine Handvoll ist klein.",
+   "Die Werte sind zahlreich.",
+   "Die Hälfte ist genügend.",
+   "Die Rate ist hoch."
+  ],
+  "properNouns": []
+ },
+ "usedInLessons": [
+  "b1-u10-d5"
+ ]
+}

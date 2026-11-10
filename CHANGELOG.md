@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-22 — الدفعة 440: D486 — b1-u10-d5 «الأرقام والإحصاء — تعبيرات كمية!» — يوم الكمّيات! (الدفعة 440 · v7.32)
+يوم التعبيرات الكمية! — **15 كلمة**: **das Drittel** الثلث · das Zehntel العُشر · **die Handvoll** الحفنة (die!) · das Dutzend الدزينة · der Bruch الكسر · die Mehrzahl · **teilweise** جزئياً · **vollständig** كاملاً · **überwiegend** في الغالب · **knapp** بالكاد · **reichlich** وفير · **zahlreich** كثير · **genügend** كافٍ · die Million · die Rate المعدل + القاعدة ars-quantitaet (شُفرة 6: «Ein Drittel ist genug.» + «Zwei Drittel SIND!»). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً) من أول مرة!
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2837/0/0 ✓** · build ✓
+
 ## 2026-11-21 — الدفعة 439: D485 — b1-u10-d4 «الأرقام والإحصاء — تقرير رقمي!» — يوم الكتابة! (الدفعة 439 · v7.31)
 يوم التقرير الرقمي! — **15 كلمة**: **auswerten** يُحلّل (منفصل!) · die Auswertung · **erheben** يجمع (**hat erhoben** — شاذّ!) · die Erhebung · **die Stichprobe** العيّنة · **repräsentativ** مُمثِّل · die Prognose التوقّع · das Wachstum النمو · das Niveau (das!) · die Verteilung · verteilen · die Spanne · **ergeben** يُعطي · der Stand · die Anzahl + القاعدة ars-bericht (شُفرة 6: «Die Erhebung ist repräsentativ.» — مراحل التقرير!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً).
 - **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2820/0/0 ✓** · build ✓
