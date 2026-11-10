@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-21 — الدفعة 439: D485 — b1-u10-d4 «الأرقام والإحصاء — تقرير رقمي!» — يوم الكتابة! (الدفعة 439 · v7.31)
+يوم التقرير الرقمي! — **15 كلمة**: **auswerten** يُحلّل (منفصل!) · die Auswertung · **erheben** يجمع (**hat erhoben** — شاذّ!) · die Erhebung · **die Stichprobe** العيّنة · **repräsentativ** مُمثِّل · die Prognose التوقّع · das Wachstum النمو · das Niveau (das!) · die Verteilung · verteilen · die Spanne · **ergeben** يُعطي · der Stand · die Anzahl + القاعدة ars-bericht (شُفرة 6: «Die Erhebung ist repräsentativ.» — مراحل التقرير!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً).
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2820/0/0 ✓** · build ✓
+
 ## 2026-11-20 — الدفعة 438: D484 — b1-u10-d3 «الأرقام والإحصاء — عرض معطيات شفوياً!» — يوم الكلام! (الدفعة 438 · v7.30)
 يوم العرض الشفهي! — **15 كلمة**: der Vortrag العرض (halten!) · die Gliederung الهيكل · das Stichwort المفتاحية · **die Folie** الشريحة (die!) · **erläutern** يشرح · die Erläuterung · **betonen** يُشدّد · die Betonung · **hervorheben** (منفصل!) · das Argument الحجة · die Argumentation · der Zuhörer المستمع · die Zuhörerschaft الجمهور · **ausführen** (منفصل!) · die Überleitung الانتقال + القاعدة ars-vortrag (شُفرة 6: «Mein Vortrag ist kurz.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً) من أول مرة!
 - **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2803/0/0 ✓** · build ✓

@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D485 (2026-11-21): b1-u10-d4 «الأرقام والإحصاء — تقرير رقمي!» — يوم الكتابة! (الدفعة 439 · v7.31)
+- **الدفعة:** 439 · **الموجّه:** 7.31
+- **للقارئ:** يوم التقرير الرقمي! — **15 كلمة**: **auswerten** يُحلّل (منفصل!) · die Auswertung · **erheben** يجمع (**hat erhoben** — شاذّ!) · die Erhebung · **die Stichprobe** العيّنة · **repräsentativ** مُمثِّل · die Prognose التوقّع · das Wachstum النمو · das Niveau (das!) · die Verteilung · verteilen · die Spanne · **ergeben** يُعطي · der Stand · die Anzahl + القاعدة ars-bericht (شُفرة 6: «Die Erhebung ist repräsentativ.» — مراحل التقرير!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً).
+- **بطاقة قرار:** التقرير مراحل مسمّاة (Erhebung ← Stichprobe ← Auswertung ← Stand ← Prognose!) والنتيجة بفعل ملازم (ergibt!) · «erhuben» كانت خياراً مصطنعاً في pretest فرفضتها الجبهة ← الخيارات صيغ مُعلَنة (erhoben/erhebt/erhob!) · «Bericht» مُدرَّس أصلاً فاستُبدل بـ Anzahl · شرح بند المجموع بدأ بألمانية فرفضه e-practice-item-shape ← يبدأ بعربي (قاعدة: الشرح عربي أولاً!).
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2820/0/0 ✓** · build ✓
+- **التالي:** b1-u10-d5 «تعبيرات كمية» (ein Drittel! النصف! الأرباع!) ثم d6 التوليف · d7 المعركة!
+
 ## D484 (2026-11-20): b1-u10-d3 «الأرقام والإحصاء — عرض معطيات شفوياً!» — يوم الكلام! (الدفعة 438 · v7.30)
 - **الدفعة:** 438 · **الموجّه:** 7.30
 - **للقارئ:** يوم العرض الشفهي! — **15 كلمة**: der Vortrag العرض (halten!) · die Gliederung الهيكل · das Stichwort المفتاحية · **die Folie** الشريحة (die!) · **erläutern** يشرح · die Erläuterung · **betonen** يُشدّد · die Betonung · **hervorheben** (منفصل!) · das Argument الحجة · die Argumentation · der Zuhörer المستمع · die Zuhörerschaft الجمهور · **ausführen** (منفصل!) · die Überleitung الانتقال + القاعدة ars-vortrag (شُفرة 6: «Mein Vortrag ist kurz.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً) من أول مرة!

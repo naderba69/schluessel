@@ -2518,6 +2518,21 @@ def build_all() -> None:
     ("word-zuhoererschaft", "die Zuhörerschaft.", "zuhoererschaft", ["b1-u10-d3"]),
     ("word-ausfuehren", "ausführen.", "ausfuehren", ["b1-u10-d3"]),
     ("word-ueberleitung", "die Überleitung.", "ueberleitung", ["b1-u10-d3"]),
+    ("word-auswerten", "auswerten.", "auswerten", ["b1-u10-d4"]),
+    ("word-auswertung", "die Auswertung.", "auswertung", ["b1-u10-d4"]),
+    ("word-erheben", "erheben.", "erheben", ["b1-u10-d4"]),
+    ("word-erhebung", "die Erhebung.", "erhebung", ["b1-u10-d4"]),
+    ("word-stichprobe", "die Stichprobe.", "stichprobe", ["b1-u10-d4"]),
+    ("word-repraesentativ", "repräsentativ.", "repraesentativ", ["b1-u10-d4"]),
+    ("word-prognose", "die Prognose.", "prognose", ["b1-u10-d4"]),
+    ("word-wachstum", "das Wachstum.", "wachstum", ["b1-u10-d4"]),
+    ("word-niveau", "das Niveau.", "niveau", ["b1-u10-d4"]),
+    ("word-verteilung", "die Verteilung.", "verteilung", ["b1-u10-d4"]),
+    ("word-verteilen", "verteilen.", "verteilen", ["b1-u10-d4"]),
+    ("word-spanne", "die Spanne.", "spanne", ["b1-u10-d4"]),
+    ("word-ergeben", "ergeben.", "ergeben", ["b1-u10-d4"]),
+    ("word-stand", "der Stand.", "stand", ["b1-u10-d4"]),
+    ("word-anzahl", "die Anzahl.", "anzahl", ["b1-u10-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

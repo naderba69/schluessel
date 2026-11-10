@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 439 (2026-11-21) — D485: b1-u10-d4 «الأرقام والإحصاء — تقرير رقمي!» — يوم الكتابة! (الدفعة 439 · v7.31)
+- **الخلاصة:** يوم التقرير الرقمي! — **15 كلمة**: **auswerten** يُحلّل (منفصل!) · die Auswertung · **erheben** يجمع (**hat erhoben** — شاذّ!) · die Erhebung · **die Stichprobe** العيّنة · **repräsentativ** مُمثِّل · die Prognose التوقّع · das Wachstum النمو · das Niveau (das!) · die Verteilung · verteilen · die Spanne · **ergeben** يُعطي · der Stand · die Anzahl + القاعدة ars-bericht (شُفرة 6: «Die Erhebung ist repräsentativ.» — مراحل التقرير!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً).
+- **التالي:** b1-u10-d5 «تعبيرات كمية» (ein Drittel! النصف! الأرباع!) ثم d6 التوليف · d7 المعركة!
+
 ## الدفعة 438 (2026-11-20) — D484: b1-u10-d3 «الأرقام والإحصاء — عرض معطيات شفوياً!» — يوم الكلام! (الدفعة 438 · v7.30)
 - **الخلاصة:** يوم العرض الشفهي! — **15 كلمة**: der Vortrag العرض (halten!) · die Gliederung الهيكل · das Stichwort المفتاحية · **die Folie** الشريحة (die!) · **erläutern** يشرح · die Erläuterung · **betonen** يُشدّد · die Betonung · **hervorheben** (منفصل!) · das Argument الحجة · die Argumentation · der Zuhörer المستمع · die Zuhörerschaft الجمهور · **ausführen** (منفصل!) · die Überleitung الانتقال + القاعدة ars-vortrag (شُفرة 6: «Mein Vortrag ist kurz.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً) من أول مرة!
 - **التالي:** b1-u10-d4 «تقرير رقمي» (كتابة!) ثم d5 تعبيرات كمية · d6 التوليف · d7 المعركة!
