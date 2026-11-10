@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-26 — الدفعة 444: D490 — b1-u11-d2 «قراءة ممتدة!» — ars-lektuere! + 15 كلمة! (رومان وتشويق! + erfinden-الماضي-المصدر! + ausleihen-الانفصال-القوي!) · انتهاك واحد (Kapitel-النبر-الثاني! + regen 972ms! + lexicon 310!) · تعديل pretest ×2 (besser→kürzer! + هل→كيف!) · الدفعة 444 · v7.36!
+يوم القراءة الممتدة! — **15 كلمة**: der Roman · das Märchen · das Kapitel · die Handlung · die Spannung · die Atmosphäre · **erfinden** (erfindet/erfand/hat erfunden!) · die Erfindung · der Genuss · neugierig · **begeistern** (begeisterte/hat begeistert!) · die Begeisterung · **ausleihen** (leiht aus/lieh aus/hat ausgeliehen — منفصل + قويّ!) · unterhaltsam · berührend + القاعدة ars-lektuere (شُفرة 4: «Er liest das Buch aus.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2875/0/0 ✓** · build ✓
+
 ## 2026-11-25 — الدفعة 443: D489 — b1-u11-d1 «الهوايات والمجتمع — استراتيجيات القراءة الأربع!» — الوحدة 11 تبدأ! (الدفعة 443 · v7.35)
 يوم استراتيجيات القراءة الأربع! — **15 كلمة**: die Strategie · **überfliegen** (منفصل + قويّ!) · gezielt موجَّهاً · die Hauptaussage · der Schlüsselbegriff · der Kontext · die Vermutung · vermuten · die Fragestellung · **erschließen** (قويّ!) · der Absatz · die Gesellschaft · **sich engagieren** (sich + FÜR!) · ehrenamtlich · die Gemeinschaft + القاعدة ars-lesestrategien (شُفرة 6: «Er fliegt den Text über.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
 - **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2858/0/0 ✓** · build ✓

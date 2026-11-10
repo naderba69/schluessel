@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 444 (2026-11-26) — D490: b1-u11-d2 «قراءة ممتدة!» — ars-lektuere! + 15 كلمة! (رومان وتشويق! + erfinden-الماضي-المصدر! + ausleihen-الانفصال-القوي!) · انتهاك واحد (Kapitel-النبر-الثاني! + regen 972ms! + lexicon 310!) · تعديل pretest ×2 (besser→kürzer! + هل→كيف!) · الدفعة 444 · v7.36!
+- **الخلاصة:** يوم القراءة الممتدة! — **15 كلمة**: der Roman · das Märchen · das Kapitel · die Handlung · die Spannung · die Atmosphäre · **erfinden** (erfindet/erfand/hat erfunden!) · die Erfindung · der Genuss · neugierig · **begeistern** (begeisterte/hat begeistert!) · die Begeisterung · **ausleihen** (leiht aus/lieh aus/hat ausgeliehen — منفصل + قويّ!) · unterhaltsam · berührend + القاعدة ars-lektuere (شُفرة 4: «Er liest das Buch aus.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
+- **التالي:** b1-u11-d3 «Präsentation أولى (2–3 د)» ثم d4 نص عرض · d5 أسئلة وأجوبة · d6 التوليف · d7 المعركة!
+
 ## الدفعة 443 (2026-11-25) — D489: b1-u11-d1 «الهوايات والمجتمع — استراتيجيات القراءة الأربع!» — الوحدة 11 تبدأ! (الدفعة 443 · v7.35)
 - **الخلاصة:** يوم استراتيجيات القراءة الأربع! — **15 كلمة**: die Strategie · **überfliegen** (منفصل + قويّ!) · gezielt موجَّهاً · die Hauptaussage · der Schlüsselbegriff · der Kontext · die Vermutung · vermuten · die Fragestellung · **erschließen** (قويّ!) · der Absatz · die Gesellschaft · **sich engagieren** (sich + FÜR!) · ehrenamtlich · die Gemeinschaft + القاعدة ars-lesestrategien (شُفرة 6: «Er fliegt den Text über.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
 - **التالي:** b1-u11-d2 «قراءة ممتدة» ثم d3 Präsentation أولى (2-3 د) · d4 نص عرض · d5 أسئلة وأجوبة · d6 التوليف · d7 المعركة!

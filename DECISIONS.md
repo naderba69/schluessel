@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D490 (2026-11-26): b1-u11-d2 «قراءة ممتدة!» — ars-lektuere! + 15 كلمة! (رومان وتشويق! + erfinden-الماضي-المصدر! + ausleihen-الانفصال-القوي!) · انتهاك واحد (Kapitel-النبر-الثاني! + regen 972ms! + lexicon 310!) · تعديل pretest ×2 (besser→kürzer! + هل→كيف!) · الدفعة 444 · v7.36!
+- **الدفعة:** 444 · **الموجّه:** 7.36
+- **للقارئ:** يوم القراءة الممتدة! — **15 كلمة**: der Roman · das Märchen · das Kapitel · die Handlung · die Spannung · die Atmosphäre · **erfinden** (erfindet/erfand/hat erfunden!) · die Erfindung · der Genuss · neugierig · **begeistern** (begeisterte/hat begeistert!) · die Begeisterung · **ausleihen** (leiht aus/lieh aus/hat ausgeliehen — منفصل + قويّ!) · unterhaltsam · berührend + القاعدة ars-lektuere (شُفرة 4: «Er liest das Buch aus.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
+- **بطاقة قرار:** القراءة الممتدة أربع مراحل (Kapitel ← Handlung ← Atmosphäre ← Genuss!) · Kapitel: النبر الثاني ka-PITEL لا الأول (مرجع! + regen 972ms + lexicon 310!) · pretest الدروس: «besser» و«Hobby» أشكال غير مُدرَّسة (taughtUpTo: besser≠gut/Bester!) ← kürzer/lesen المُدرَّستان · بناء الاستبدال-الإدراج أفسد صف [11,1] (N-320!) فأُرجع.
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2875/0/0 ✓** · build ✓
+- **التالي:** b1-u11-d3 «Präsentation أولى (2–3 د)» ثم d4 نص عرض · d5 أسئلة وأجوبة · d6 التوليف · d7 المعركة!
+
 ## D489 (2026-11-25): b1-u11-d1 «الهوايات والمجتمع — استراتيجيات القراءة الأربع!» — الوحدة 11 تبدأ! (الدفعة 443 · v7.35)
 - **الدفعة:** 443 · **الموجّه:** 7.35
 - **للقارئ:** يوم استراتيجيات القراءة الأربع! — **15 كلمة**: die Strategie · **überfliegen** (منفصل + قويّ!) · gezielt موجَّهاً · die Hauptaussage · der Schlüsselbegriff · der Kontext · die Vermutung · vermuten · die Fragestellung · **erschließen** (قويّ!) · der Absatz · die Gesellschaft · **sich engagieren** (sich + FÜR!) · ehrenamtlich · die Gemeinschaft + القاعدة ars-lesestrategien (شُفرة 6: «Er fliegt den Text über.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).

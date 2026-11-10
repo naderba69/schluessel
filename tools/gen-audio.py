@@ -2566,6 +2566,21 @@ def build_all() -> None:
     ("word-engagieren", "sich engagieren.", "engagieren", ["b1-u11-d1"]),
     ("word-ehrenamtlich", "ehrenamtlich.", "ehrenamtlich", ["b1-u11-d1"]),
     ("word-gemeinschaft", "die Gemeinschaft.", "gemeinschaft", ["b1-u11-d1"]),
+    ("word-roman", "der Roman.", "roman", ["b1-u11-d2"]),
+    ("word-maerchen", "das Märchen.", "maerchen", ["b1-u11-d2"]),
+    ("word-kapitel", "das Kapitel.", "kapitel", ["b1-u11-d2"]),
+    ("word-handlung", "die Handlung.", "handlung", ["b1-u11-d2"]),
+    ("word-spannung", "die Spannung.", "spannung", ["b1-u11-d2"]),
+    ("word-atmosphaere", "die Atmosphäre.", "atmosphaere", ["b1-u11-d2"]),
+    ("word-erfinden", "erfinden.", "erfinden", ["b1-u11-d2"]),
+    ("word-erfindung", "die Erfindung.", "erfindung", ["b1-u11-d2"]),
+    ("word-genuss", "der Genuss.", "genuss", ["b1-u11-d2"]),
+    ("word-neugierig", "neugierig.", "neugierig", ["b1-u11-d2"]),
+    ("word-begeistern", "begeistern.", "begeistern", ["b1-u11-d2"]),
+    ("word-begeisterung", "die Begeisterung.", "begeisterung", ["b1-u11-d2"]),
+    ("word-ausleihen", "ausleihen.", "ausleihen", ["b1-u11-d2"]),
+    ("word-unterhaltsam", "unterhaltsam.", "unterhaltsam", ["b1-u11-d2"]),
+    ("word-beruehrend", "berührend.", "beruehrend", ["b1-u11-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

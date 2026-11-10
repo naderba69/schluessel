@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "constitutionSection": "10‑ي",
+ "id": "ars-lektuere",
+ "kind": "shufra",
+ "title": {
+  "ar": "القراءة الممتدة!",
+  "de": "Lektüre — Roman · Kapitel · Handlung · Genuss"
+ },
+ "levelIntroduced": "B1",
+ "riskLevel": "yellow",
+ "payload": {
+  "topicAr": "القراءة الممتدة! (رواية! حكاية! حبكة! متعة!)",
+  "sceneAr": "القراءة الممتدة بالألمانية: الكتاب بأجزائه (Roman! Kapitel! Handlung!) وصفاته مراتب (spannend! unterhaltsam! berührend!) والمتعة Genuss والاستعارة ausleihen!",
+  "examples": [
+   {
+    "de": "Der Roman ist spannend.",
+    "ar": "الرواية مثيرة. (الوصف!)"
+   },
+   {
+    "de": "Die Handlung ist klar.",
+    "ar": "الحبكة واضحة. (البناء!)"
+   },
+   {
+    "de": "Das Kapitel ist lang.",
+    "ar": "الفصل طويل. (الجزء!)"
+   },
+   {
+    "de": "Die Atmosphäre ist gut.",
+    "ar": "الأجواء جيّدة. (الجوّ!)"
+   },
+   {
+    "de": "Das Buch begeistert ihn.",
+    "ar": "الكتاب يُلهِمه. (الأثر!)"
+   },
+   {
+    "de": "Die Geschichte ist berührend.",
+    "ar": "القصة مؤثّرة. (الخاتمة!)"
+   }
+  ],
+  "inferencePromptAr": "لاحظ: الـ Lektüre بأجزائها (Roman! Kapitel! Handlung!) والصفات مراتب (spannend ← unterhaltsam ← berührend!) والوصف لا التقييم المباشر — والمتعة Genuss والاستعارة ausleihen منفصلة!",
+  "ruleDe": "Der Roman ist spannend. · Die Handlung ist klar. · Das Kapitel ist lang. · Die Atmosphäre ist gut. · Das Buch begeistert ihn. · Die Geschichte ist berührend.",
+  "ruleAr": "القراءة الممتدة: (1) الكتاب: der Roman! (2) الحبكة: die Handlung! (3) الجزء: das Kapitel! (4) الجوّ: die Atmosphäre! (5) الأثر: begeistern! (6) الخاتمة: berührend! والصفات: spannend! unterhaltsam! berührend!",
+  "contrastAr": "العربية: «قرأت رواية ممتعة!» — تقييم مباشر!؛ والألمانية: البناء أولاً (Handlung! Kapitel!) والصفات مراتب (spannend! unterhaltsam! berührend!) والمتعة اسم ملازم (der Genuss!) والاستعارة منفصلة (leiht … aus!) (خريطة التداخل 10‑ي).",
+  "limitsAr": [
+   "erfinden قويّ: erfindet erfand hat erfunden!",
+   "ausleihen منفصل وقويّ: leiht … aus! hat ausgeliehen!",
+   "die Handlung الحبكة (die! لا «العمل»!)",
+   "neugierig صفة للأشخاص (Er ist neugierig!)"
+  ],
+  "beads": [
+   "Der Roman ist spannend.",
+   "Die Handlung ist klar.",
+   "Das Kapitel ist lang.",
+   "Die Atmosphäre ist gut.",
+   "Das Buch begeistert ihn.",
+   "Die Geschichte ist berührend."
+  ],
+  "properNouns": []
+ },
+ "usedInLessons": [
+  "b1-u11-d2"
+ ]
+}
