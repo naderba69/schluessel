@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-20 — الدفعة 438: D484 — b1-u10-d3 «الأرقام والإحصاء — عرض معطيات شفوياً!» — يوم الكلام! (الدفعة 438 · v7.30)
+يوم العرض الشفهي! — **15 كلمة**: der Vortrag العرض (halten!) · die Gliederung الهيكل · das Stichwort المفتاحية · **die Folie** الشريحة (die!) · **erläutern** يشرح · die Erläuterung · **betonen** يُشدّد · die Betonung · **hervorheben** (منفصل!) · das Argument الحجة · die Argumentation · der Zuhörer المستمع · die Zuhörerschaft الجمهور · **ausführen** (منفصل!) · die Überleitung الانتقال + القاعدة ars-vortrag (شُفرة 6: «Mein Vortrag ist kurz.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً) من أول مرة!
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2803/0/0 ✓** · build ✓
+
 ## 2026-11-19 — الدفعة 437: D483 — b1-u10-d2 «الأرقام والإحصاء — وصف رسوم!» — يوم الرسوم! (الدفعة 437 · v7.29)
 يوم وصف الرسوم الإحصائية! — **15 كلمة**: das Diagramm · die Grafik · die Tabelle · **die Achse** المحور (die!) · der Balken العمود · die Skala المقياس · **die Spitze** القمة · **der Tiefpunkt** القاع · der Zeitraum المدة · der Verlauf المسار · **stagnieren** يركد · **rückläufig** متراجع (صفة!) · **ansteigen** (منفصل + ist!) · **abfallen** (منفصل + ist!) · die Schwankung + القاعدة ars-grafik (شُفرة 6: «Die Grafik zeigt den Verlauf.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).
 - **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2786/0/0 ✓** · build ✓

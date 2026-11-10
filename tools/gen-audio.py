@@ -2503,6 +2503,21 @@ def build_all() -> None:
     ("word-ansteigen", "ansteigen.", "ansteigen", ["b1-u10-d2"]),
     ("word-abfallen", "abfallen.", "abfallen", ["b1-u10-d2"]),
     ("word-schwankung", "die Schwankung.", "schwankung", ["b1-u10-d2"]),
+    ("word-vortrag", "der Vortrag.", "vortrag", ["b1-u10-d3"]),
+    ("word-gliederung", "die Gliederung.", "gliederung", ["b1-u10-d3"]),
+    ("word-stichwort", "das Stichwort.", "stichwort", ["b1-u10-d3"]),
+    ("word-folie", "die Folie.", "folie", ["b1-u10-d3"]),
+    ("word-erlaeutern", "erläutern.", "erlaeutern", ["b1-u10-d3"]),
+    ("word-erlaeuterung", "die Erläuterung.", "erlaeuterung", ["b1-u10-d3"]),
+    ("word-betonen", "betonen.", "betonen", ["b1-u10-d3"]),
+    ("word-betonung", "die Betonung.", "betonung", ["b1-u10-d3"]),
+    ("word-hervorheben", "hervorheben.", "hervorheben", ["b1-u10-d3"]),
+    ("word-argument", "das Argument.", "argument", ["b1-u10-d3"]),
+    ("word-argumentation", "die Argumentation.", "argumentation", ["b1-u10-d3"]),
+    ("word-zuhoerer", "der Zuhörer.", "zuhoerer", ["b1-u10-d3"]),
+    ("word-zuhoererschaft", "die Zuhörerschaft.", "zuhoererschaft", ["b1-u10-d3"]),
+    ("word-ausfuehren", "ausführen.", "ausfuehren", ["b1-u10-d3"]),
+    ("word-ueberleitung", "die Überleitung.", "ueberleitung", ["b1-u10-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

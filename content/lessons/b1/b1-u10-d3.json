@@ -1,0 +1,484 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u10-d3",
+  "level": "B1",
+  "unit": 10,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Mein Vortrag ist kurz — und die Zuhörerschaft hört zu!",
+    "ar": "يوم العرض الشفهي! (هيكل! شرائح! أسئلة!) — الوحدة 10: الأرقام والإحصاء!"
+  },
+  "canDoDaily": [
+    "يُلقي عرضاً شفهياً بالبروتوكول! (Vortrag ← Gliederung ← Folien ← erläutern ← Fragen!)",
+    "يشرح ويُشدّد بالمفردات الثابتة! (erläutern! betonen! hervorheben! ausführen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "grafik",
+      "tabelle",
+      "verlauf"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«عرضي قصير.»؟"
+        },
+        "choices": [
+          "Mein Vortrag ist kurz.",
+          "Mein Vortrag ist klein.",
+          "Mein Vortrag ist lang."
+        ],
+        "answer": "Mein Vortrag ist kurz.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«يُبرز الحجة.»؟ (الانفصال!)"
+        },
+        "choices": [
+          "Er hebt das Argument hervor.",
+          "Er hervorhebt das Argument.",
+          "Er hebt hervor das Argument."
+        ],
+        "answer": "Er hebt das Argument hervor.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "vortrag",
+      "gliederung",
+      "stichwort",
+      "folie",
+      "erlaeutern",
+      "erlaeuterung",
+      "betonen",
+      "betonung",
+      "hervorheben",
+      "argument",
+      "argumentation",
+      "zuhoerer",
+      "zuhoererschaft",
+      "ausfuehren",
+      "ueberleitung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-vortrag"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Kein Problem — der Vortrag ist kurz und die Gliederung ist klar!",
+        "ar": "يُلقي عرضاً شفهياً في 8 جمل!"
+      },
+      "situation": {
+        "de": "Ein Vortrag: Folien, Erläuterungen, Fragen.",
+        "ar": "عرض! شرائح! شرح! وأسئلة النهاية!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في العرض!",
+        "البروتوكول: Vortrag ← Gliederung ← Folien ← erläutern ← Gibt es Fragen?",
+        "الانفصال: hebt … hervor! führt … aus!",
+        "الشرائح Stichwörter لا جُمل كاملة!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Vortrag! Gliederung! Folie!"
+        ],
+        "interleavedWith": [
+          "grafik",
+          "tabelle",
+          "verlauf"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "العرض (الشفهي)",
+                "de": "der Vortrag"
+              },
+              {
+                "ar": "الهيكل",
+                "de": "die Gliederung"
+              },
+              {
+                "ar": "الكلمة المفتاحية",
+                "de": "das Stichwort"
+              },
+              {
+                "ar": "الشريحة (في العرض)",
+                "de": "die Folie"
+              }
+            ],
+            "why": "der Vortrag العرض (halten! Vorträge!) · die Gliederung الهيكل (klar!) · das Stichwort الكلمة المفتاحية (Stichwörter!) · die Folie الشريحة (die! Folien!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يشرح (بتفصيل)",
+                "de": "erläutern"
+              },
+              {
+                "ar": "الشرح",
+                "de": "die Erläuterung"
+              },
+              {
+                "ar": "يُشدّد (على)",
+                "de": "betonen"
+              },
+              {
+                "ar": "التأكيد (اللفظي)",
+                "de": "die Betonung"
+              }
+            ],
+            "why": "erläutern يشرح (die Grafik erläutern!) · die Erläuterung الشرح (klar!) · betonen يُشدّد (das Argument!) · die Betonung التأكيد (wichtig!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يُبرز",
+                "de": "hervorheben"
+              },
+              {
+                "ar": "الحجة",
+                "de": "das Argument"
+              },
+              {
+                "ar": "المستمع",
+                "de": "der Zuhörer"
+              },
+              {
+                "ar": "الانتقال (بين الأجزاء)",
+                "de": "die Überleitung"
+              }
+            ],
+            "why": "hervorheben يُبرز (hebt … hervor! منفصل!) · das Argument الحجة (nennen!) · der Zuhörer المستمع (hört zu!) · die Überleitung الانتقال (kurz!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "العرض الشفهي!"
+        ],
+        "interleavedWith": [
+          "vortrag",
+          "gliederung",
+          "stichwort"
+        ],
+        "items": [
+          {
+            "q": "Mein ___ ist kurz. (العرض!)",
+            "a": "Vortrag",
+            "why": "der Vortrag العرض — Mein Vortrag ist kurz. (halten!)"
+          },
+          {
+            "q": "Die ___ zeigt den Verlauf. (الشريحة!)",
+            "a": "Folie",
+            "why": "die Folie الشريحة (die! Folien!) — Die Folie zeigt den Verlauf."
+          },
+          {
+            "q": "Er hebt das Argument ___. (يُبرز! منفصل!)",
+            "a": "hervor",
+            "why": "hervorheben منفصل! Er hebt das Argument hervor. (الجزء hervor آخر!)"
+          },
+          {
+            "q": "Er ___ das Argument. (يُشدّد!)",
+            "a": "betont",
+            "why": "betonen يُشدّد: Er betont das Argument. (betont = praesens3s!)"
+          },
+          {
+            "q": "Der ___ hört zu. (المستمع!)",
+            "a": "Zuhörer",
+            "why": "der Zuhörer المستمع (die Zuhörer!) — hört zu!"
+          },
+          {
+            "q": "Die ___ ist kurz. (الانتقال!)",
+            "a": "Überleitung",
+            "why": "die Überleitung الانتقال (Überleitungen!) — die Überleitung ist kurz."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الانفصال! الأداة!"
+        ],
+        "interleavedWith": [
+          "argument",
+          "argumentation",
+          "zuhoererschaft"
+        ],
+        "items": [
+          {
+            "q": "~~der Folie zeigt den Verlauf~~",
+            "a": "die Folie zeigt den Verlauf",
+            "why": "die Folie الشريحة (die! مؤنث — لا der!) — die Folien!"
+          },
+          {
+            "q": "~~Er hervorhebt das Argument.~~",
+            "a": "Er hebt das Argument hervor.",
+            "why": "hervorheben منفصل! الفعل hebt في موضعه والجزء hervor آخر الجملة! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~der Betonung ist wichtig~~",
+            "a": "die Betonung ist wichtig",
+            "why": "die Betonung التأكيد (die! مؤنث — لا der!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — العرض كلام!",
+          "Vortrag! Folien! Fragen!"
+        ],
+        "interleavedWith": [
+          "erlaeutern",
+          "betonen",
+          "ausfuehren"
+        ],
+        "items": [
+          {
+            "q": "افتح العرض! (جملتان!)",
+            "a": "Mein Vortrag ist kurz. Die Gliederung ist klar.",
+            "why": "الافتتاح بالعرض والهيكل! (ars-vortrag!)"
+          },
+          {
+            "q": "اشرح الشريحة! (جملتان!)",
+            "a": "Die Folie zeigt den Verlauf. Er erläutert die Grafik.",
+            "why": "Folie zeigt! erläutern! (الشرح!)"
+          },
+          {
+            "q": "اختم بالتأكيد والأسئلة! (3 جمل!)",
+            "a": "Er hebt das Argument hervor. Die Zuhörerschaft hört zu. Gibt es Fragen?",
+            "why": "hervorheben! Zuhörerschaft! Gibt es Fragen? (الخاتمة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«عرضي قصير.»؟",
+            "a": "Mein Vortrag ist kurz."
+          },
+          {
+            "q": "«الهيكل»؟",
+            "a": "die Gliederung"
+          },
+          {
+            "q": "«الشريحة تُظهر المسار.»؟",
+            "a": "Die Folie zeigt den Verlauf."
+          },
+          {
+            "q": "«الكلمة المفتاحية»؟",
+            "a": "das Stichwort"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يشرح الرسم.»؟",
+            "a": "Er erläutert die Grafik."
+          },
+          {
+            "q": "«يُبرز الحجة.»؟",
+            "a": "Er hebt das Argument hervor."
+          },
+          {
+            "q": "«المستمع»؟",
+            "a": "der Zuhörer"
+          },
+          {
+            "q": "«هل من أسئلة؟»؟",
+            "a": "Gibt es Fragen?"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الحجة»؟",
+            "a": "das Argument"
+          },
+          {
+            "q": "«التأكيد (اللفظي)»؟",
+            "a": "die Betonung"
+          },
+          {
+            "q": "«يشرح ذلك بالتفصيل.»؟",
+            "a": "Er führt das aus."
+          },
+          {
+            "q": "«الجمهور»؟",
+            "a": "die Zuhörerschaft"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Mein Vortrag ist kurz. Die Gliederung ist klar und die Überleitung ist kurz. Das Stichwort ist wichtig. Die Folie zeigt den Verlauf und er erläutert die Grafik. Er betont das Argument und hebt es hervor. Die Argumentation ist klar und er führt das aus. Die Zuhörerschaft ist groß und der Zuhörer hört zu. Gibt es Fragen?",
+      "ar": "عرضي قصير. الهيكل واضح والانتقال قصير. الكلمة المفتاحية مهمّة. الشريحة تُظهر المسار وهو يشرح الرسم. يُشدّد على الحجة ويُبرزها. سلسلة الحجج واضحة وهو يشرح ذلك بالتفصيل. الجمهور كبير والمستمع يُصغي. هل من أسئلة؟"
+    },
+    "srsBundleWordIds": [
+      "vortrag",
+      "gliederung",
+      "stichwort",
+      "folie",
+      "erlaeutern",
+      "erlaeuterung",
+      "betonen",
+      "betonung",
+      "hervorheben",
+      "argument",
+      "argumentation",
+      "zuhoerer",
+      "zuhoererschaft",
+      "ausfuehren",
+      "ueberleitung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Folie!",
+          "de": "~~der Folie zeigt den Verlauf~~"
+        },
+        "correct": {
+          "ar": "die Folie (die! مؤنث!) — الشريحة!",
+          "de": "die Folie zeigt den Verlauf"
+        },
+        "exercise": {
+          "q": "___ Folie zeigt den Verlauf. (الأداة!)",
+          "a": "Die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الشريحة» — مؤنث بالطبيعة! والألمانية: die Folie مؤنث أيضاً لكن الأداة تُنسى (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "hervorheben ملاصق!",
+          "de": "~~Er hervorhebt das Argument.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Er hebt das Argument hervor!",
+          "de": "Er hebt das Argument hervor."
+        },
+        "exercise": {
+          "q": "Er ___ das Argument ___. (يُبرز!)",
+          "a": "hebt … hervor"
+        },
+        "whyArabicSpeakerFails": "العربية: «يُبرز» — كلمة واحدة! والألمانية: الفعل المنفصل ينفصل والجزء hervor يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Betonung!",
+          "de": "~~der Betonung ist wichtig~~"
+        },
+        "correct": {
+          "ar": "die Betonung (die!) — التأكيد!",
+          "de": "die Betonung ist wichtig"
+        },
+        "exercise": {
+          "q": "___ Betonung ist wichtig. (الأداة!)",
+          "a": "Die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التأكيد» — مذكّر! والألمانية: die Betonung مؤنث (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Vortrag",
+      "https://www.duden.de/rechtschreibung/Gliederung",
+      "https://www.duden.de/rechtschreibung/Stichwort",
+      "https://www.duden.de/rechtschreibung/Folie",
+      "https://www.duden.de/rechtschreibung/erlaeutern",
+      "https://www.duden.de/rechtschreibung/Erlaeuterung",
+      "https://www.duden.de/rechtschreibung/betonen",
+      "https://www.duden.de/rechtschreibung/Betonung",
+      "https://www.duden.de/rechtschreibung/hervorheben",
+      "https://www.duden.de/rechtschreibung/Argument",
+      "https://www.duden.de/rechtschreibung/Argumentation",
+      "https://www.duden.de/rechtschreibung/Zuhoerer",
+      "https://www.duden.de/rechtschreibung/Zuhoererschaft",
+      "https://www.duden.de/rechtschreibung/ausfuehren",
+      "https://www.duden.de/rechtschreibung/Ueberleitung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-vortrag",
+    "ars-grafik"
+  ],
+  "audioManifestRefs": [
+    "word-vortrag",
+    "word-gliederung",
+    "word-stichwort",
+    "word-folie",
+    "word-erlaeutern",
+    "word-erlaeuterung",
+    "word-betonen",
+    "word-betonung",
+    "word-hervorheben",
+    "word-argument",
+    "word-argumentation",
+    "word-zuhoerer",
+    "word-zuhoererschaft",
+    "word-ausfuehren",
+    "word-ueberleitung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 10: الأرقام والإحصاء — عرض معطيات شفوياً)",
+    "goetheWordListOverlap": [
+      "vortrag",
+      "gliederung",
+      "stichwort",
+      "folie",
+      "erlaeutern",
+      "erlaeuterung",
+      "betonen",
+      "betonung",
+      "hervorheben",
+      "argument",
+      "argumentation",
+      "zuhoerer",
+      "zuhoererschaft",
+      "ausfuehren",
+      "ueberleitung"
+    ]
+  }
+}

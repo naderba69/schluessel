@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 438 (2026-11-20) — D484: b1-u10-d3 «الأرقام والإحصاء — عرض معطيات شفوياً!» — يوم الكلام! (الدفعة 438 · v7.30)
+- **الخلاصة:** يوم العرض الشفهي! — **15 كلمة**: der Vortrag العرض (halten!) · die Gliederung الهيكل · das Stichwort المفتاحية · **die Folie** الشريحة (die!) · **erläutern** يشرح · die Erläuterung · **betonen** يُشدّد · die Betonung · **hervorheben** (منفصل!) · das Argument الحجة · die Argumentation · der Zuhörer المستمع · die Zuhörerschaft الجمهور · **ausführen** (منفصل!) · die Überleitung الانتقال + القاعدة ars-vortrag (شُفرة 6: «Mein Vortrag ist kurz.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً) من أول مرة!
+- **التالي:** b1-u10-d4 «تقرير رقمي» (كتابة!) ثم d5 تعبيرات كمية · d6 التوليف · d7 المعركة!
+
 ## الدفعة 437 (2026-11-19) — D483: b1-u10-d2 «الأرقام والإحصاء — وصف رسوم!» — يوم الرسوم! (الدفعة 437 · v7.29)
 - **الخلاصة:** يوم وصف الرسوم الإحصائية! — **15 كلمة**: das Diagramm · die Grafik · die Tabelle · **die Achse** المحور (die!) · der Balken العمود · die Skala المقياس · **die Spitze** القمة · **der Tiefpunkt** القاع · der Zeitraum المدة · der Verlauf المسار · **stagnieren** يركد · **rückläufig** متراجع (صفة!) · **ansteigen** (منفصل + ist!) · **abfallen** (منفصل + ist!) · die Schwankung + القاعدة ars-grafik (شُفرة 6: «Die Grafik zeigt den Verlauf.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).
 - **التالي:** b1-u10-d3 «عرض معطيات شفوياً» (كلام!) ثم d4 تقرير رقمي · d5 تعبيرات كمية · d6 التوليف · d7 المعركة!
