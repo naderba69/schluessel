@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-23 — الدفعة 441: D487 — b1-u10-d6 «الأرقام والإحصاء — مراجعة + توليف!» — قبل المعركة! (الدفعة 441 · v7.33)
+يوم التوليف والحصيلة! — **3 كلمات**: **die Bilanz** الحصيلة (die! **Bilanz ziehen**!) · **das Fazit** الخلاصة (das!) · **die Genauigkeit** الدقّة + مراجعة الوحدة كلها في الـ pairs والقصة (Prozent ← Grafik ← Vortrag ← Bericht ← Drittel ← Bilanz!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً).
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2841/0/0 ✓** · build ✓
+
 ## 2026-11-22 — الدفعة 440: D486 — b1-u10-d5 «الأرقام والإحصاء — تعبيرات كمية!» — يوم الكمّيات! (الدفعة 440 · v7.32)
 يوم التعبيرات الكمية! — **15 كلمة**: **das Drittel** الثلث · das Zehntel العُشر · **die Handvoll** الحفنة (die!) · das Dutzend الدزينة · der Bruch الكسر · die Mehrzahl · **teilweise** جزئياً · **vollständig** كاملاً · **überwiegend** في الغالب · **knapp** بالكاد · **reichlich** وفير · **zahlreich** كثير · **genügend** كافٍ · die Million · die Rate المعدل + القاعدة ars-quantitaet (شُفرة 6: «Ein Drittel ist genug.» + «Zwei Drittel SIND!»). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً) من أول مرة!
 - **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2837/0/0 ✓** · build ✓

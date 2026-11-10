@@ -2548,6 +2548,9 @@ def build_all() -> None:
     ("word-genuegend", "genügend.", "genuegend", ["b1-u10-d5"]),
     ("word-million", "die Million.", "million", ["b1-u10-d5"]),
     ("word-rate", "die Rate.", "rate", ["b1-u10-d5"]),
+    ("word-bilanz", "die Bilanz.", "bilanz", ["b1-u10-d6"]),
+    ("word-fazit", "das Fazit.", "fazit", ["b1-u10-d6"]),
+    ("word-genauigkeit", "die Genauigkeit.", "genauigkeit", ["b1-u10-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

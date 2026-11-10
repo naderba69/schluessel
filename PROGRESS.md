@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 441 (2026-11-23) — D487: b1-u10-d6 «الأرقام والإحصاء — مراجعة + توليف!» — قبل المعركة! (الدفعة 441 · v7.33)
+- **الخلاصة:** يوم التوليف والحصيلة! — **3 كلمات**: **die Bilanz** الحصيلة (die! **Bilanz ziehen**!) · **das Fazit** الخلاصة (das!) · **die Genauigkeit** الدقّة + مراجعة الوحدة كلها في الـ pairs والقصة (Prozent ← Grafik ← Vortrag ← Bericht ← Drittel ← Bilanz!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً).
+- **التالي:** b1-u10-d7 **المعركة battle-u10**! (الوحدة 10 كاملة — الوحدة 11: الهوايات والمجتمع!)
+
 ## الدفعة 440 (2026-11-22) — D486: b1-u10-d5 «الأرقام والإحصاء — تعبيرات كمية!» — يوم الكمّيات! (الدفعة 440 · v7.32)
 - **الخلاصة:** يوم التعبيرات الكمية! — **15 كلمة**: **das Drittel** الثلث · das Zehntel العُشر · **die Handvoll** الحفنة (die!) · das Dutzend الدزينة · der Bruch الكسر · die Mehrzahl · **teilweise** جزئياً · **vollständig** كاملاً · **überwiegend** في الغالب · **knapp** بالكاد · **reichlich** وفير · **zahlreich** كثير · **genügend** كافٍ · die Million · die Rate المعدل + القاعدة ars-quantitaet (شُفرة 6: «Ein Drittel ist genug.» + «Zwei Drittel SIND!»). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً) من أول مرة!
 - **التالي:** b1-u10-d6 «مراجعة + توليف» ثم d7 **المعركة battle-u10**!
