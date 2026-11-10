@@ -1,0 +1,484 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u11-d1",
+  "level": "B1",
+  "unit": 11,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Er fliegt den Text über — die Strategie ist klar!",
+    "ar": "يوم استراتيجيات القراءة الأربع! (تفحّص! بحث! استنتاج!) — الوحدة 11: الهوايات والمجتمع!"
+  },
+  "canDoDaily": [
+    "يقرأ بالاستراتيجيات الأربع! (überfliegen! gezielt suchen! erschließen! vermuten!)",
+    "يتطوّع ويصف المجتمع بالمفردات الثابتة! (sich engagieren! ehrenamtlich! Gemeinschaft!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bilanz",
+      "fazit",
+      "genauigkeit"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«يفحص النص سريعاً.»؟ (الانفصال!)"
+        },
+        "choices": [
+          "Er fliegt den Text über.",
+          "Er überfliegt den Text.",
+          "Er fliegt über den Text."
+        ],
+        "answer": "Er fliegt den Text über.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«السياق يُعين.»؟"
+        },
+        "choices": [
+          "Der Kontext hilft.",
+          "Der Kontext hilft mir.",
+          "Der Kontext ist schwer."
+        ],
+        "answer": "Der Kontext hilft.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "strategie",
+      "ueberfliegen",
+      "gezielt",
+      "hauptaussage",
+      "schluesselbegriff",
+      "kontext",
+      "vermutung",
+      "vermuten",
+      "fragestellung",
+      "erschliessen",
+      "absatz",
+      "gesellschaft",
+      "engagieren",
+      "ehrenamtlich",
+      "gemeinschaft"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-lesestrategien"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Kein Problem — die Strategie ist klar und die Hauptaussage auch!",
+        "ar": "يقرأ نصاً بالاستراتيجيات الأربع في 8 جمل!"
+      },
+      "situation": {
+        "de": "Ein Text: überfliegen, suchen, erschließen, vermuten.",
+        "ar": "نص! تفحّص! بحث! استنتاج! وتحقّق!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في القراءة!",
+        "المراحل الأربع: überfliegen ← gezielt ← Kontext ← Vermutung!",
+        "الانفصال والقوة: fliegt … über! hat überflogen! erschließt erschloss!",
+        "المجتمع: sich engagieren FÜR! ehrenamtlich!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Strategie! Kontext! Gemeinschaft!"
+        ],
+        "interleavedWith": [
+          "bilanz",
+          "fazit",
+          "genauigkeit"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الاستراتيجية",
+                "de": "die Strategie"
+              },
+              {
+                "ar": "يتفحّص (بسرعة)",
+                "de": "überfliegen"
+              },
+              {
+                "ar": "موجَّهاً",
+                "de": "gezielt"
+              },
+              {
+                "ar": "الرسالة الرئيسية",
+                "de": "die Hauptaussage"
+              }
+            ],
+            "why": "die Strategie الاستراتيجية (wählen!) · überfliegen يتفحّص (fliegt … über! منفصل وقويّ!) · gezielt موجَّهاً (ظرف!) · die Hauptaussage الرسالة (klar!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المصطلح المفتاحي",
+                "de": "der Schlüsselbegriff"
+              },
+              {
+                "ar": "السياق",
+                "de": "der Kontext"
+              },
+              {
+                "ar": "الافتراض",
+                "de": "die Vermutung"
+              },
+              {
+                "ar": "يفتّرض",
+                "de": "vermuten"
+              }
+            ],
+            "why": "der Schlüsselbegriff المصطلح (Schlüsselbegriffe!) · der Kontext السياق (hilft!) · die Vermutung الافتراض (prüfen!) · vermuten يفتّرض (vermutlich مُدرَّس!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يستنتج",
+                "de": "erschließen"
+              },
+              {
+                "ar": "الفقرة (في النص)",
+                "de": "der Absatz"
+              },
+              {
+                "ar": "المجتمع",
+                "de": "die Gesellschaft"
+              },
+              {
+                "ar": "يتطوّع",
+                "de": "sich engagieren"
+              }
+            ],
+            "why": "erschließen يستنتج (erschloss! قويّ!) · der Absatz الفقرة (Absätze!) · die Gesellschaft المجتمع (leben!) · sich engagieren يتطوّع (FÜR!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "استراتيجيات القراءة!"
+        ],
+        "interleavedWith": [
+          "strategie",
+          "kontext",
+          "absatz"
+        ],
+        "items": [
+          {
+            "q": "Er fliegt den Text ___. (يفحص! منفصل!)",
+            "a": "über",
+            "why": "überfliegen منفصل! Er fliegt den Text über. (الجزء über آخر!)"
+          },
+          {
+            "q": "Die ___ ist klar. (الرسالة الرئيسية!)",
+            "a": "Hauptaussage",
+            "why": "die Hauptaussage الرسالة الرئيسية — die Hauptaussage ist klar. (ars-lesestrategien!)"
+          },
+          {
+            "q": "Er sucht ___. (موجَّهاً!)",
+            "a": "gezielt",
+            "why": "gezielt موجَّهاً — Er sucht gezielt. (المرحلة 2!)"
+          },
+          {
+            "q": "Der ___ hilft. (السياق!)",
+            "a": "Kontext",
+            "why": "der Kontext السياق (die Kontexte!) — der Kontext hilft."
+          },
+          {
+            "q": "Er ___ die Bedeutung. (يستنتج! قويّ!)",
+            "a": "erschließt",
+            "why": "erschließen يستنتج: Er erschließt die Bedeutung. (erschließt = صيغة المضارع!)"
+          },
+          {
+            "q": "Er engagiert sich ___ die Gemeinschaft. (لـ! الحرف!)",
+            "a": "für",
+            "why": "sich engagieren FÜR (لا in!) — الحرف الثابت!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الانفصال! القوة! الضمير!"
+        ],
+        "interleavedWith": [
+          "hauptaussage",
+          "schluesselbegriff",
+          "vermutung"
+        ],
+        "items": [
+          {
+            "q": "~~Er überfliegt den Text.~~",
+            "a": "Er fliegt den Text über.",
+            "why": "überfliegen منفصل! fliegt … über (الجزء آخر الجملة!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "~~Er hat die Bedeutung erschließt.~~",
+            "a": "Er hat die Bedeutung erschlossen.",
+            "why": "erschließen قويّ! hat ERSCHLOSSEN (لا erschließt!)"
+          },
+          {
+            "q": "~~Er engagiert für die Gemeinschaft.~~",
+            "a": "Er engagiert sich für die Gemeinschaft.",
+            "why": "sich engagieren انعكاسي! الضمير sich لازم!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — القراءة كلام!",
+          "überfliegen! suchen! erschließen!"
+        ],
+        "interleavedWith": [
+          "gezielt",
+          "vermuten",
+          "ehrenamtlich"
+        ],
+        "items": [
+          {
+            "q": "صف المرحلة الأولى! (جملتان!)",
+            "a": "Er fliegt den Text über. Die Hauptaussage ist klar.",
+            "why": "التفحّص والهدف! (ars-lesestrategien!)"
+          },
+          {
+            "q": "صف الاستنتاج! (جملتان!)",
+            "a": "Der Kontext hilft. Er erschließt die Bedeutung.",
+            "why": "السياق والاستنتاج! (المرحلة 3!)"
+          },
+          {
+            "q": "اختم بالتحقّق والمجتمع! (3 جمل!)",
+            "a": "Die Vermutung ist klar. Er engagiert sich für die Gemeinschaft. Die Arbeit ist ehrenamtlich!",
+            "why": "Vermutung! engagieren! ehrenamtlich! (الخاتمة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يفحص النص سريعاً.»؟",
+            "a": "Er fliegt den Text über."
+          },
+          {
+            "q": "«الرسالة الرئيسية»؟",
+            "a": "die Hauptaussage"
+          },
+          {
+            "q": "«يبحث موجَّهاً.»؟",
+            "a": "Er sucht gezielt."
+          },
+          {
+            "q": "«المصطلح المفتاحي»؟",
+            "a": "der Schlüsselbegriff"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«السياق يُعين.»؟",
+            "a": "Der Kontext hilft."
+          },
+          {
+            "q": "«يستنتج المعنى.»؟",
+            "a": "Er erschließt die Bedeutung."
+          },
+          {
+            "q": "«الافتراض»؟",
+            "a": "die Vermutung"
+          },
+          {
+            "q": "«الفقرة»؟",
+            "a": "der Absatz"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يتطوّع للمجتمع.»؟",
+            "a": "Er engagiert sich für die Gemeinschaft."
+          },
+          {
+            "q": "«تطوّعي (بلا أجر)»؟",
+            "a": "ehrenamtlich"
+          },
+          {
+            "q": "«المجتمع»؟",
+            "a": "die Gesellschaft"
+          },
+          {
+            "q": "«طريقة طرح السؤال»؟",
+            "a": "die Fragestellung"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Strategie ist klar: Er fliegt den Text über. Die Hauptaussage ist wichtig und der Schlüsselbegriff auch. Er sucht gezielt und der Kontext hilft. Er erschließt die Bedeutung und die Vermutung ist klar. Der Absatz ist kurz und die Fragestellung ist deutlich. Die Gesellschaft ist wichtig und die Gemeinschaft ist stark. Er engagiert sich für die Gemeinschaft und die Arbeit ist ehrenamtlich!",
+      "ar": "الاستراتيجية واضحة: يفحص النص سريعاً. الرسالة الرئيسية مهمّة والمصطلح المفتاحي أيضاً. يبحث موجَّهاً والسياق يُعين. يستنتج المعنى والافتراض واضح. الفقرة قصيرة وطريقة طرح السؤال واضحة. المجتمع مهمّ والجماعة قويّة. يتطوّع للمجتمع والعمل تطوّعي!"
+    },
+    "srsBundleWordIds": [
+      "strategie",
+      "ueberfliegen",
+      "gezielt",
+      "hauptaussage",
+      "schluesselbegriff",
+      "kontext",
+      "vermutung",
+      "vermuten",
+      "fragestellung",
+      "erschliessen",
+      "absatz",
+      "gesellschaft",
+      "engagieren",
+      "ehrenamtlich",
+      "gemeinschaft"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "überfliegen ملاصق!",
+          "de": "~~Er überfliegt den Text.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Er fliegt den Text über!",
+          "de": "Er fliegt den Text über."
+        },
+        "exercise": {
+          "q": "Er ___ den Text ___. (يفحص!)",
+          "a": "fliegt … über"
+        },
+        "whyArabicSpeakerFails": "العربية: «يفحص» — كلمة واحدة! والألمانية: الفعل المنفصل ينفصل والجزء über يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "hat erschließt!",
+          "de": "~~Er hat die Bedeutung erschließt.~~"
+        },
+        "correct": {
+          "ar": "القويّ: hat erschlossen!",
+          "de": "Er hat die Bedeutung erschlossen."
+        },
+        "exercise": {
+          "q": "Er hat die Bedeutung ___. (الماضي!)",
+          "a": "erschlossen"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل الماضي بالجذر! والألمانية: erschließen شاذّ (erschloss! erschlossen!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "engagieren بلا sich!",
+          "de": "~~Er engagiert für die Gemeinschaft.~~"
+        },
+        "correct": {
+          "ar": "الانعكاسي: Er engagiert sich für …!",
+          "de": "Er engagiert sich für die Gemeinschaft."
+        },
+        "exercise": {
+          "q": "Er ___ sich für die Gemeinschaft. (يتطوّع!)",
+          "a": "engagiert"
+        },
+        "whyArabicSpeakerFails": "العربية: «يتطوّع» — فعل مجرد! والألمانية: sich engagieren انعكاسي (الضمير sich لازم!) (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Strategie",
+      "https://www.duden.de/rechtschreibung/ueberfliegen",
+      "https://www.duden.de/rechtschreibung/gezielt",
+      "https://www.duden.de/rechtschreibung/Hauptaussage",
+      "https://www.duden.de/rechtschreibung/Schluesselbegriff",
+      "https://www.duden.de/rechtschreibung/Kontext",
+      "https://www.duden.de/rechtschreibung/Vermutung",
+      "https://www.duden.de/rechtschreibung/vermuten",
+      "https://www.duden.de/rechtschreibung/Fragestellung",
+      "https://www.duden.de/rechtschreibung/erschliessen",
+      "https://www.duden.de/rechtschreibung/Absatz",
+      "https://www.duden.de/rechtschreibung/Gesellschaft",
+      "https://www.duden.de/rechtschreibung/engagieren",
+      "https://www.duden.de/rechtschreibung/ehrenamtlich",
+      "https://www.duden.de/rechtschreibung/Gemeinschaft"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-lesestrategien",
+    "ars-zusammenfassen"
+  ],
+  "audioManifestRefs": [
+    "word-strategie",
+    "word-ueberfliegen",
+    "word-gezielt",
+    "word-hauptaussage",
+    "word-schluesselbegriff",
+    "word-kontext",
+    "word-vermutung",
+    "word-vermuten",
+    "word-fragestellung",
+    "word-erschliessen",
+    "word-absatz",
+    "word-gesellschaft",
+    "word-engagieren",
+    "word-ehrenamtlich",
+    "word-gemeinschaft"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 11: الهوايات والمجتمع — استراتيجيات القراءة الأربع)",
+    "goetheWordListOverlap": [
+      "strategie",
+      "ueberfliegen",
+      "gezielt",
+      "hauptaussage",
+      "schluesselbegriff",
+      "kontext",
+      "vermutung",
+      "vermuten",
+      "fragestellung",
+      "erschliessen",
+      "absatz",
+      "gesellschaft",
+      "engagieren",
+      "ehrenamtlich",
+      "gemeinschaft"
+    ]
+  }
+}

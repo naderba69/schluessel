@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-25 — الدفعة 443: D489 — b1-u11-d1 «الهوايات والمجتمع — استراتيجيات القراءة الأربع!» — الوحدة 11 تبدأ! (الدفعة 443 · v7.35)
+يوم استراتيجيات القراءة الأربع! — **15 كلمة**: die Strategie · **überfliegen** (منفصل + قويّ!) · gezielt موجَّهاً · die Hauptaussage · der Schlüsselbegriff · der Kontext · die Vermutung · vermuten · die Fragestellung · **erschließen** (قويّ!) · der Absatz · die Gesellschaft · **sich engagieren** (sich + FÜR!) · ehrenamtlich · die Gemeinschaft + القاعدة ars-lesestrategien (شُفرة 6: «Er fliegt den Text über.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2858/0/0 ✓** · build ✓
+
 ## 2026-11-24 — الدفعة 442: D488 — b1-u10-d7 «المعركة battle-u10» — الوحدة 10 أُغلقت! (الدفعة 442 · v7.34)
 معركة الوحدة 10 (الأرقام والإحصاء) خضراء! — **20 اختباراً**: دروسها الستة (d1-d6) تُلعَب 3 نسخ × علامة كاملة عبر proveUnit + حارس البنود الضعيفة! (الغلاف الرفيع b1-unit10-proof.test.ts — النمط نفسه من D426/D433/D440/D461/D474/D481.)
 - **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2841/0/0 ✓** · build ✓

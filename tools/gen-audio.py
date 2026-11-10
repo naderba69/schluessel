@@ -2551,6 +2551,21 @@ def build_all() -> None:
     ("word-bilanz", "die Bilanz.", "bilanz", ["b1-u10-d6"]),
     ("word-fazit", "das Fazit.", "fazit", ["b1-u10-d6"]),
     ("word-genauigkeit", "die Genauigkeit.", "genauigkeit", ["b1-u10-d6"]),
+    ("word-strategie", "die Strategie.", "strategie", ["b1-u11-d1"]),
+    ("word-ueberfliegen", "überfliegen.", "ueberfliegen", ["b1-u11-d1"]),
+    ("word-gezielt", "gezielt.", "gezielt", ["b1-u11-d1"]),
+    ("word-hauptaussage", "die Hauptaussage.", "hauptaussage", ["b1-u11-d1"]),
+    ("word-schluesselbegriff", "der Schlüsselbegriff.", "schluesselbegriff", ["b1-u11-d1"]),
+    ("word-kontext", "der Kontext.", "kontext", ["b1-u11-d1"]),
+    ("word-vermutung", "die Vermutung.", "vermutung", ["b1-u11-d1"]),
+    ("word-vermuten", "vermuten.", "vermuten", ["b1-u11-d1"]),
+    ("word-fragestellung", "die Fragestellung.", "fragestellung", ["b1-u11-d1"]),
+    ("word-erschliessen", "erschließen.", "erschliessen", ["b1-u11-d1"]),
+    ("word-absatz", "der Absatz.", "absatz", ["b1-u11-d1"]),
+    ("word-gesellschaft", "die Gesellschaft.", "gesellschaft", ["b1-u11-d1"]),
+    ("word-engagieren", "sich engagieren.", "engagieren", ["b1-u11-d1"]),
+    ("word-ehrenamtlich", "ehrenamtlich.", "ehrenamtlich", ["b1-u11-d1"]),
+    ("word-gemeinschaft", "die Gemeinschaft.", "gemeinschaft", ["b1-u11-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

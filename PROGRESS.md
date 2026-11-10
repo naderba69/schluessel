@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 443 (2026-11-25) — D489: b1-u11-d1 «الهوايات والمجتمع — استراتيجيات القراءة الأربع!» — الوحدة 11 تبدأ! (الدفعة 443 · v7.35)
+- **الخلاصة:** يوم استراتيجيات القراءة الأربع! — **15 كلمة**: die Strategie · **überfliegen** (منفصل + قويّ!) · gezielt موجَّهاً · die Hauptaussage · der Schlüsselbegriff · der Kontext · die Vermutung · vermuten · die Fragestellung · **erschließen** (قويّ!) · der Absatz · die Gesellschaft · **sich engagieren** (sich + FÜR!) · ehrenamtlich · die Gemeinschaft + القاعدة ars-lesestrategien (شُفرة 6: «Er fliegt den Text über.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
+- **التالي:** b1-u11-d2 «قراءة ممتدة» ثم d3 Präsentation أولى (2-3 د) · d4 نص عرض · d5 أسئلة وأجوبة · d6 التوليف · d7 المعركة!
+
 ## الدفعة 442 (2026-11-24) — D488: b1-u10-d7 «المعركة battle-u10» — الوحدة 10 أُغلقت! (الدفعة 442 · v7.34)
 - **الخلاصة:** معركة الوحدة 10 (الأرقام والإحصاء) خضراء! — **20 اختباراً**: دروسها الستة (d1-d6) تُلعَب 3 نسخ × علامة كاملة عبر proveUnit + حارس البنود الضعيفة! (الغلاف الرفيع b1-unit10-proof.test.ts — النمط نفسه من D426/D433/D440/D461/D474/D481.)
 - **التالي:** الوحدة 11: **الهوايات والمجتمع!** (u11-d1 استراتيجيات القراءة الأربع — ونقلة nextId إلى b1-u11-d1!)
