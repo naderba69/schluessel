@@ -4,14 +4,36 @@
   "kind": "shufra",
   "levelIntroduced": "B1",
   "payload": {
-    "beads": ["Trotzdem", "komme", "ich", "rechtzeitig", "zur", "Arbeit."],
+    "beads": [
+      "Trotzdem",
+      "komme",
+      "ich",
+      "rechtzeitig",
+      "zur",
+      "Arbeit."
+    ],
     "contrastAr": "العربية تربط الجملتين بـ«لذلك/رغم ذلك» من دون قاعدة موقع فعل — فيُنسى أن الألمانية تطلب الفعل في المرتبة الثانية (V2) مباشرة بعد deshalb/trotzdem (الظرفان يتصدّران!). والخطر الأكبر: «رغم ذلك» تُغري بـ«رغم أن» فتُكتب ~~Trotzdem der Zug langsam ist …~~ — «رغم أن» = obwohl (جملة تابعة والمصرَّف آخراً — لاحقاً!) و«رغم» وحدها = trotz + Genitiv (wegen des Streiks — لاحقاً!). والفرق المعنى: deshalb «لذلك» (السبب ← النتيجة) وtrotzdem «رغم ذلك» (السبب كان كافياً لمنعها ومع ذلك حدثت!) — العربية «مع ذلك» أضعف من «رغم ذلك» فلا تُعمَّم. (خريطة التداخل 10‑ي).",
     "examples": [
-      { "ar": "القطار يُلغى. لذلك أصل مع الحافلة.", "de": "Der Zug fällt aus. Deshalb komme ich mit dem Bus." },
-      { "ar": "الحافلة متأخرة. رغم ذلك أصل إلى العمل في الوقت المحدد.", "de": "Der Streik ist schlimm. Trotzdem komme ich rechtzeitig zur Arbeit." },
-      { "ar": "هناك عطل. لذلك يتأخر القطار.", "de": "Es gibt eine Störung. Deshalb kommt der Zug nicht." },
-      { "ar": "الإضراب اليوم. رغم ذلك أعمل.", "de": "Der Streik ist heute. Trotzdem arbeite ich." },
-      { "ar": "أنا مريض. لذلك أبقى في البيت.", "de": "Ich bin krank. Deshalb bleibe ich zu Hause." }
+      {
+        "ar": "القطار يُلغى. لذلك أصل مع الحافلة.",
+        "de": "Der Zug fällt aus. Deshalb komme ich mit dem Bus."
+      },
+      {
+        "ar": "الحافلة متأخرة. رغم ذلك أصل إلى العمل في الوقت المحدد.",
+        "de": "Der Streik ist schlimm. Trotzdem komme ich rechtzeitig zur Arbeit."
+      },
+      {
+        "ar": "هناك عطل. لذلك يتأخر القطار.",
+        "de": "Es gibt eine Störung. Deshalb kommt der Zug nicht."
+      },
+      {
+        "ar": "الإضراب اليوم. رغم ذلك أعمل.",
+        "de": "Der Streik ist heute. Trotzdem arbeite ich."
+      },
+      {
+        "ar": "أنا مريض. لذلك أبقى في البيت.",
+        "de": "Ich bin krank. Deshalb bleibe ich zu Hause."
+      }
     ],
     "inferencePromptAr": "قارن: Der Zug fällt aus. Deshalb komme ich … · Der Streik ist schlimm. Trotzdem komme ich … · Ich bin krank. Deshalb bleibe ich … — أين يقف الفعل المصرَّف بعد deshalb/trotzdem؟ (ثانياً!) وأين يقف بعد weil (آخراً!)? اكتشف: الروابط الظرفية (deshalb/trotzdem) تتصدّر الجملة الرئيسية فالفعل ثانياً بعدها مباشرة!",
     "limitsAr": [
@@ -32,5 +54,8 @@
     "ar": "deshalb/trotzdem — «لذلك / رغم ذلك» والفعل ثانياً (V2!)",
     "de": "deshalb/trotzdem + Verb an Position 2: Der Zug fällt aus. Deshalb komme ich mit dem Bus. · Der Streik ist schlimm. Trotzdem komme ich rechtzeitig."
   },
-  "usedInLessons": ["b1-u1-d1"]
+  "usedInLessons": [
+    "b1-u1-d1",
+    "b1-u12-d1"
+  ]
 }

@@ -6,7 +6,7 @@ import { proveUnit } from "./unit-proof.js";
 await proveUnit({
   unit: "الوحدة B1-U11",
   ids: ["b1-u11-d1", "b1-u11-d2", "b1-u11-d3", "b1-u11-d4", "b1-u11-d5", "b1-u11-d6"],
-  nextId: null, // D495: نهاية U11 — النقلة فقط عند وجود b1-u12-d1 (نمط D488!)
+  nextId: "b1-u12-d1", // D496: U12 بدأت! (النقلة كما في D489 — battle-u10) — كان null في D495
   prefixIds: [
     "a1-u1-d1",
     "a1-u1-d2",

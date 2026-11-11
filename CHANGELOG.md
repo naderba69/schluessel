@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-26 — الدفعة 450: D496 — b1-u12-d1 «مراجعة 1 — الكلمات المتراكمة!» — الوحدة 12 (الأخيرة!) تبدأ! + 3 كلمات (Wortschatz/Zertifikat/Konzentration!) + روابط الوحدة الأولى (deshalb/trotzdem!) · «Einheiten» تكرار N-324 (N-326!) · نقلة battle-u11: null ← b1-u12-d1! · الدفعة 450 · v7.42!
+يوم المراجعة الأولى! — **3 كلمات**: der Wortschatz (die Wortschätze — بمدّة!) · das Zertifikat · die Konzentration + مراجعة ١٥ كلمة متراكمة من وحدات سابقة (Weg/Arbeit/Schule/Zeit/Gesundheit/Wohnung/Reise/Geld/Sicherheit/Ergebnis/Niveau!) وروابط الوحدة الأولى (deshalb/trotzdem — المرتبة الثانية!). المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2934/0/0 ✓** · build ✓
+
 ## 2026-11-26 — الدفعة 449: D495 — b1-u11-d7 «المعركة battle-u11»! — 20 اختباراً (20/20!) · nextId null (u12 لم تبدأ!) · مهلة الاختبارات 30s (أصل «رعشة» D491 — N-325!) · الدفعة 449 · v7.41!
 يوم المعركة! — tests/b1-unit11-proof.test.ts (النمط N-300!) يلعب دروس الوحدة الستة آلياً (20 اختباراً!) · nextId = null حتى تبدأ b1-u12 (نمط D488!) · الوحدة 11 كاملة: d1 استراتيجيات ← d2 قراءة ممتدة ← d3 عرض أول ← d4 نص عرض ← d5 أسئلة ← d6 توليف ← d7 معركة!
 - **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2930/0/0 ✓** · build ✓
