@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-fragerunde",
+  "kind": "shufra",
+  "title": {
+    "ar": "جولة الأسئلة والأجوبة!",
+    "de": "Fragerunde — Frage · Antwort · Beispiel"
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "yellow",
+  "usedInLessons": ["b1-u11-d5"],
+  "payload": {
+    "topicAr": "الأسئلة والأجوبة! (سؤال! إجابة! مثال!)",
+    "sceneAr": "بعد العرض تأتي الأسئلة! الجواب الجيّد يبدأ بفهم السؤال ثم إجابة مفهومة (verständlich!) وموسّعة (ausführlich!) ومثال ملموس (beispielsweise!) — والتركيز (Schwerpunkt!) على ما يهمّ السامعين!",
+    "examples": [
+      { "de": "Was meinen Sie?", "ar": "ماذا تقصدون؟ (السؤال!)" },
+      { "de": "Die Antwort ist verständlich.", "ar": "الإجابة مفهومة. (الوضوح!)" },
+      { "de": "Er antwortet ausführlich.", "ar": "هو يجيب بالتفصيل. (التوسّع!)" },
+      { "de": "Beispielsweise liest er Romane.", "ar": "على سبيل المثال يقرأ الروايات. (المثال!)" },
+      { "de": "Selbstverständlich hilft er.", "ar": "بالتأكيد هو يساعد. (التأكيد!)" }
+    ],
+    "inferencePromptAr": "لاحظي: من أين تبدأ الإجابة الجيّدة؟ وبمَ تُدعم؟",
+    "ruleDe": "Die Antwort ist verständlich. · Er antwortet ausführlich. · Beispielsweise liest er Romane. · Der Schwerpunkt ist klar.",
+    "ruleAr": "الجولة ثلاثة أركان: سؤال مفهوم ← إجابة مفهومة (verständlich!) وموسّعة (ausführlich!) ← مثال ملموس (beispielsweise!) — والتركيز (Schwerpunkt!) على نقطة واحدة!",
+    "contrastAr": "العربية: «أجيب كما أشاء وقد أطيل بلا ترتيب!»؛ والألمانية: الإجابة تُبنى (Antwort! Verständlichkeit! Beispiel!) والتركيز Schwerpunkt واحد والتقدير Wertschätzung للسائل! (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "beeindrucken ضعيف: beeindruckt beeindruckte hat beeindruckt (بلا تغيير!)",
+      "faszinieren ضعيف: fasziniert faszinierte hat fasziniert (بلا تغيير!)",
+      "vertiefen ضعيف: vertieft vertiefte hat vertieft (بلا تغيير!)",
+      "die Wertschätzung التقدير (لا «المال»!)"
+    ],
+    "beads": [
+      "Was meinen Sie?",
+      "Die Antwort ist verständlich.",
+      "Beispielsweise liest er Romane."
+    ],
+    "properNouns": []
+  }
+}

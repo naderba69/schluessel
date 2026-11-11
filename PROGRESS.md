@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 447 (2026-11-26) — D493: b1-u11-d5 «أسئلة وأجوبة!» — ars-fragerunde! + 15 كلمة! (Sichtweise/Schwerpunkt/Wertschätzung! + verständlich/ausführlich/beispielsweise! + الأفعال الثلاثة الضعيفة!) · انتهاك واحد (Wertschätzung-المدّ! + regen 1390ms! + lexicon 318!) · الدفعة 447 · v7.39!
+- **الخلاصة:** يوم الأسئلة والأجوبة! — **15 كلمة**: die Sichtweise · der Schwerpunkt · die Wertschätzung · verständlich · ausführlich · beispielsweise · gespannt · geduldig · aufmerksam · hilfreich · selbstverständlich · präzise · **beeindrucken** (ضعيف!) · **faszinieren** (ضعيف!) · **vertiefen** (ضعيف!) + القاعدة ars-fragerunde (شُفرة 4: «Was meinen Sie?» — الركان الثلاثة!). المحطات 15 وcheck-lesson **0/0/0** (54 سطراً).
+- **التالي:** b1-u11-d6 «مراجعة + توليف» ثم d7 المعركة battle-u11!
+
 ## الدفعة 446 (2026-11-26) — D492: b1-u11-d4 «نص العرض!» — ars-vortragstext! + 15 كلمة! (Entwurf/formulieren/Überblick! + pflegen-البادئة! + Ehrenamt!) · 4 نُطُق (Darstellung/Kreativität/nachhaltig-المدّ والنبر! + Überblick-مركب-النبر-الأول!) · الدفعة 446 · v7.38!
 - **الخلاصة:** يوم نص العرض! — **15 كلمة**: der Entwurf · **formulieren** (ضعيف!) · der Überblick · die Darstellung · die Kreativität · das Handwerk · **musizieren** · **pflegen** (hat gepflegt — بالبادئة!) · wöchentlich · monatlich · selten · ziemlich · nachhaltig · das Ehrenamt (die Ehrenämter!) · die Vielfalt + القاعدة ars-vortragstext (شُفرة 4: «Der Entwurf ist kurz.» — الطبقات الثلاث!). المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).
 - **التالي:** b1-u11-d5 «أسئلة وأجوبة» ثم d6 التوليف · d7 المعركة!

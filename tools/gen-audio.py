@@ -2611,6 +2611,21 @@ def build_all() -> None:
     ("word-nachhaltig", "nachhaltig.", "nachhaltig", ["b1-u11-d4"]),
     ("word-ehrenamt", "das Ehrenamt.", "ehrenamt", ["b1-u11-d4"]),
     ("word-vielfalt", "die Vielfalt.", "vielfalt", ["b1-u11-d4"]),
+    ("word-sichtweise", "die Sichtweise.", "sichtweise", ["b1-u11-d5"]),
+    ("word-schwerpunkt", "der Schwerpunkt.", "schwerpunkt", ["b1-u11-d5"]),
+    ("word-wertschaetzung", "die Wertschätzung.", "wertschaetzung", ["b1-u11-d5"]),
+    ("word-verstaendlich", "verständlich.", "verstaendlich", ["b1-u11-d5"]),
+    ("word-ausfuehrlich", "ausführlich.", "ausfuehrlich", ["b1-u11-d5"]),
+    ("word-beispielsweise", "beispielsweise.", "beispielsweise", ["b1-u11-d5"]),
+    ("word-gespannt", "gespannt.", "gespannt", ["b1-u11-d5"]),
+    ("word-geduldig", "geduldig.", "geduldig", ["b1-u11-d5"]),
+    ("word-aufmerksam", "aufmerksam.", "aufmerksam", ["b1-u11-d5"]),
+    ("word-hilfreich", "hilfreich.", "hilfreich", ["b1-u11-d5"]),
+    ("word-selbstverstaendlich", "selbstverständlich.", "selbstverstaendlich", ["b1-u11-d5"]),
+    ("word-praezise", "präzise.", "praezise", ["b1-u11-d5"]),
+    ("word-beeindrucken", "beeindrucken.", "beeindrucken", ["b1-u11-d5"]),
+    ("word-faszinieren", "faszinieren.", "faszinieren", ["b1-u11-d5"]),
+    ("word-vertiefen", "vertiefen.", "vertiefen", ["b1-u11-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

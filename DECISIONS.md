@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D493 (2026-11-26): b1-u11-d5 «أسئلة وأجوبة!» — ars-fragerunde! + 15 كلمة! (Sichtweise/Schwerpunkt/Wertschätzung! + verständlich/ausführlich/beispielsweise! + الأفعال الثلاثة الضعيفة!) · انتهاك واحد (Wertschätzung-المدّ! + regen 1390ms! + lexicon 318!) · الدفعة 447 · v7.39!
+- **الدفعة:** 447 · **الموجّه:** 7.39
+- **للقارئ:** يوم الأسئلة والأجوبة! — **15 كلمة**: die Sichtweise · der Schwerpunkt · die Wertschätzung · verständlich · ausführlich · beispielsweise · gespannt · geduldig · aufmerksam · hilfreich · selbstverständlich · präzise · **beeindrucken** (ضعيف!) · **faszinieren** (ضعيف!) · **vertiefen** (ضعيف!) + القاعدة ars-fragerunde (شُفرة 4: «Was meinen Sie?» — الركان الثلاثة!). المحطات 15 وcheck-lesson **0/0/0** (54 سطراً).
+- **بطاقة قرار:** الإجابة الجيّدة مفهومة وموسّعة بمثال (verständlich! ausführlich! beispielsweise!) والتركيز نقطة واحدة! · Wertschätzung مدّها الطويل (veː! مرجع! + regen 1390ms + lexicon 318!) · التنقيب يفحص بالمعرّف المُطبَّع (zuhoeren لا zuhoren! — كاد يُعاد تعليم zuhören المُدرَّسة! N-323!) · «hilfreich» التي رُفضت خياراً مصطنعاً في D489 تُدرَّس الآن!
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2926/0/0 ✓** · build ✓
+- **التالي:** b1-u11-d6 «مراجعة + توليف» ثم d7 المعركة battle-u11!
+
 ## D492 (2026-11-26): b1-u11-d4 «نص العرض!» — ars-vortragstext! + 15 كلمة! (Entwurf/formulieren/Überblick! + pflegen-البادئة! + Ehrenamt!) · 4 نُطُق (Darstellung/Kreativität/nachhaltig-المدّ والنبر! + Überblick-مركب-النبر-الأول!) · الدفعة 446 · v7.38!
 - **الدفعة:** 446 · **الموجّه:** 7.38
 - **للقارئ:** يوم نص العرض! — **15 كلمة**: der Entwurf · **formulieren** (ضعيف!) · der Überblick · die Darstellung · die Kreativität · das Handwerk · **musizieren** · **pflegen** (hat gepflegt — بالبادئة!) · wöchentlich · monatlich · selten · ziemlich · nachhaltig · das Ehrenamt (die Ehrenämter!) · die Vielfalt + القاعدة ars-vortragstext (شُفرة 4: «Der Entwurf ist kurz.» — الطبقات الثلاث!). المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).
