@@ -1,64 +1,65 @@
 {
- "schemaVersion": "1.0.0",
- "constitutionSection": "10‑ي",
- "id": "ars-lesestrategien",
- "kind": "shufra",
- "title": {
-  "ar": "استراتيجيات القراءة الأربع!",
-  "de": "Lesestrategien — überfliegen · gezielt suchen · erschließen · vermuten"
- },
- "levelIntroduced": "B1",
- "riskLevel": "orange",
- "payload": {
-  "topicAr": "استراتيجيات القراءة الأربع! (تفحّص! بحث! استنتاج! تحقّق!)",
-  "sceneAr": "القراءة بالألمانية أربع مراحل: التفحّص (überfliegen!) ← البحث الموجَّه (gezielt suchen!) ← الاستنتاج من السياق (im Kontext erschließen!) ← التحقّق (Vermutung!) — والمفاتيح: Hauptaussage! Schlüsselbegriffe!",
-  "examples": [
-   {
-    "de": "Er fliegt den Text über.",
-    "ar": "يفحص النص سريعاً. (المرحلة 1!)"
-   },
-   {
-    "de": "Die Hauptaussage ist klar.",
-    "ar": "الرسالة الرئيسية واضحة. (الهدف!)"
-   },
-   {
-    "de": "Er sucht gezielt.",
-    "ar": "يبحث موجَّهاً. (المرحلة 2!)"
-   },
-   {
-    "de": "Der Kontext hilft.",
-    "ar": "السياق يُعين. (المرحلة 3!)"
-   },
-   {
-    "de": "Er erschließt die Bedeutung.",
-    "ar": "يستنتج المعنى. (الاستنتاج!)"
-   },
-   {
-    "de": "Die Vermutung ist klar.",
-    "ar": "الافتراض واضح. (المرحلة 4!)"
-   }
-  ],
-  "inferencePromptAr": "لاحظ: القراءة مراحل لا قراءة واحدة! (überfliegen ← gezielt ← Kontext ← Vermutung!) والفعل الثاني بعد الظرف والمفاتيح مسمّاة (Hauptaussage! Schlüsselbegriff! Absatz!)",
-  "ruleDe": "Er fliegt den Text über. · Die Hauptaussage ist klar. · Er sucht gezielt. · Der Kontext hilft. · Er erschließt die Bedeutung. · Die Vermutung ist klar.",
-  "ruleAr": "استراتيجيات القراءة الأربع: (1) التفحّص: den Text überfliegen! (2) البحث الموجَّه: gezielt suchen! (3) الاستنتاج: im Kontext erschließen! (4) التحقّق: die Vermutung prüfen! والمفاتيح: Hauptaussage! Schlüsselbegriffe! Absätze!",
-  "contrastAr": "العربية: «اقرأ النص كاملاً!» — قراءة واحدة!؛ والألمانية: أربع مراحل متتابعة (überfliegen! gezielt suchen! im Kontext erschließen! Vermutung prüfen!) والمصطلحات المفتاحية Schlüsselbegriffe هي المفاتيح (خريطة التداخل 10‑ي).",
-  "limitsAr": [
-   "überfliegen منفصل وقويّ: Er fliegt den Text über! (hat überflogen!)",
-   "erschließen قويّ: erschließt erschloss hat erschlossen!",
-   "sich engagieren: engagiert sich FÜR! (الضمير والحرف!)",
-   "ehrenamtlich صفة: ist ehrenamtlich (لا تتصرّف!)"
-  ],
-  "beads": [
-   "Er fliegt den Text über.",
-   "Die Hauptaussage ist klar.",
-   "Er sucht gezielt.",
-   "Der Kontext hilft.",
-   "Er erschließt die Bedeutung.",
-   "Die Vermutung ist klar."
-  ],
-  "properNouns": []
- },
- "usedInLessons": [
-  "b1-u11-d1"
- ]
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-lesestrategien",
+  "kind": "shufra",
+  "title": {
+    "ar": "استراتيجيات القراءة الأربع!",
+    "de": "Lesestrategien — überfliegen · gezielt suchen · erschließen · vermuten"
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "orange",
+  "payload": {
+    "topicAr": "استراتيجيات القراءة الأربع! (تفحّص! بحث! استنتاج! تحقّق!)",
+    "sceneAr": "القراءة بالألمانية أربع مراحل: التفحّص (überfliegen!) ← البحث الموجَّه (gezielt suchen!) ← الاستنتاج من السياق (im Kontext erschließen!) ← التحقّق (Vermutung!) — والمفاتيح: Hauptaussage! Schlüsselbegriffe!",
+    "examples": [
+      {
+        "de": "Er fliegt den Text über.",
+        "ar": "يفحص النص سريعاً. (المرحلة 1!)"
+      },
+      {
+        "de": "Die Hauptaussage ist klar.",
+        "ar": "الرسالة الرئيسية واضحة. (الهدف!)"
+      },
+      {
+        "de": "Er sucht gezielt.",
+        "ar": "يبحث موجَّهاً. (المرحلة 2!)"
+      },
+      {
+        "de": "Der Kontext hilft.",
+        "ar": "السياق يُعين. (المرحلة 3!)"
+      },
+      {
+        "de": "Er erschließt die Bedeutung.",
+        "ar": "يستنتج المعنى. (الاستنتاج!)"
+      },
+      {
+        "de": "Die Vermutung ist klar.",
+        "ar": "الافتراض واضح. (المرحلة 4!)"
+      }
+    ],
+    "inferencePromptAr": "لاحظ: القراءة مراحل لا قراءة واحدة! (überfliegen ← gezielt ← Kontext ← Vermutung!) والفعل الثاني بعد الظرف والمفاتيح مسمّاة (Hauptaussage! Schlüsselbegriff! Absatz!)",
+    "ruleDe": "Er fliegt den Text über. · Die Hauptaussage ist klar. · Er sucht gezielt. · Der Kontext hilft. · Er erschließt die Bedeutung. · Die Vermutung ist klar.",
+    "ruleAr": "استراتيجيات القراءة الأربع: (1) التفحّص: den Text überfliegen! (2) البحث الموجَّه: gezielt suchen! (3) الاستنتاج: im Kontext erschließen! (4) التحقّق: die Vermutung prüfen! والمفاتيح: Hauptaussage! Schlüsselbegriffe! Absätze!",
+    "contrastAr": "العربية: «اقرأ النص كاملاً!» — قراءة واحدة!؛ والألمانية: أربع مراحل متتابعة (überfliegen! gezielt suchen! im Kontext erschließen! Vermutung prüfen!) والمصطلحات المفتاحية Schlüsselbegriffe هي المفاتيح (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "überfliegen منفصل وقويّ: Er fliegt den Text über! (hat überflogen!)",
+      "erschließen قويّ: erschließt erschloss hat erschlossen!",
+      "sich engagieren: engagiert sich FÜR! (الضمير والحرف!)",
+      "ehrenamtlich صفة: ist ehrenamtlich (لا تتصرّف!)"
+    ],
+    "beads": [
+      "Er fliegt den Text über.",
+      "Die Hauptaussage ist klar.",
+      "Er sucht gezielt.",
+      "Der Kontext hilft.",
+      "Er erschließt die Bedeutung.",
+      "Die Vermutung ist klar."
+    ],
+    "properNouns": []
+  },
+  "usedInLessons": [
+    "b1-u11-d1",
+    "b1-u11-d6"
+  ]
 }

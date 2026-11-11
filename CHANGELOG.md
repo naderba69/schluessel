@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-26 — الدفعة 448: D494 — b1-u11-d6 «مراجعة + توليف!» — الوحدة 11 كلها! + 3 كلمات (Zusammenhalt/Erfüllung/verwirklichen!) + القواعد الخمس معاد استخدامها! · «Einheit» وأسماء القواعد في النص العربي (N-324!) · الدفعة 448 · v7.40!
+يوم المراجعة والتوليف! — **3 كلمات**: der Zusammenhalt (بلا جمع!) · die Erfüllung (die Erfüllungen!) · **verwirklichen** (ضعيف! hat verwirklicht!) + مراجعة الوحدة كلها (Strategie ← Lektüre ← Präsentation ← Text ← Fragerunde!) والقواعد الخمس معاد استخدامها (usedInLessons + d6!). المحطات 15 وcheck-lesson **0/0/0** (50 سطراً).
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2930/0/0 ✓** · build ✓
+
 ## 2026-11-26 — الدفعة 447: D493 — b1-u11-d5 «أسئلة وأجوبة!» — ars-fragerunde! + 15 كلمة! (Sichtweise/Schwerpunkt/Wertschätzung! + verständlich/ausführlich/beispielsweise! + الأفعال الثلاثة الضعيفة!) · انتهاك واحد (Wertschätzung-المدّ! + regen 1390ms! + lexicon 318!) · الدفعة 447 · v7.39!
 يوم الأسئلة والأجوبة! — **15 كلمة**: die Sichtweise · der Schwerpunkt · die Wertschätzung · verständlich · ausführlich · beispielsweise · gespannt · geduldig · aufmerksam · hilfreich · selbstverständlich · präzise · **beeindrucken** (ضعيف!) · **faszinieren** (ضعيف!) · **vertiefen** (ضعيف!) + القاعدة ars-fragerunde (شُفرة 4: «Was meinen Sie?» — الركان الثلاثة!). المحطات 15 وcheck-lesson **0/0/0** (54 سطراً).
 - **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2926/0/0 ✓** · build ✓

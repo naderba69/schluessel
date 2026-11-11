@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D494 (2026-11-26): b1-u11-d6 «مراجعة + توليف!» — الوحدة 11 كلها! + 3 كلمات (Zusammenhalt/Erfüllung/verwirklichen!) + القواعد الخمس معاد استخدامها! · «Einheit» وأسماء القواعد في النص العربي (N-324!) · الدفعة 448 · v7.40!
+- **الدفعة:** 448 · **الموجّه:** 7.40
+- **للقارئ:** يوم المراجعة والتوليف! — **3 كلمات**: der Zusammenhalt (بلا جمع!) · die Erfüllung (die Erfüllungen!) · **verwirklichen** (ضعيف! hat verwirklicht!) + مراجعة الوحدة كلها (Strategie ← Lektüre ← Präsentation ← Text ← Fragerunde!) والقواعد الخمس معاد استخدامها (usedInLessons + d6!). المحطات 15 وcheck-lesson **0/0/0** (50 سطراً).
+- **بطاقة قرار:** التوليف يربط الأيام الخمسة في قصة واحدة! · «Einheit» و«Lektüre» و«Fragerunde» في النصوص مُدرَّكة ككلمات ألمانية غير مُدرَّسة (N-324!) ← العربية الخالصة للمفاهيم · مفردات ثابتة: Zusammenhalt zeigen! Erfüllung finden! einen Traum verwirklichen!
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2930/0/0 ✓** · build ✓
+- **التالي:** b1-u11-d7 «المعركة battle-u11» (اليوم السابع!)
+
 ## D493 (2026-11-26): b1-u11-d5 «أسئلة وأجوبة!» — ars-fragerunde! + 15 كلمة! (Sichtweise/Schwerpunkt/Wertschätzung! + verständlich/ausführlich/beispielsweise! + الأفعال الثلاثة الضعيفة!) · انتهاك واحد (Wertschätzung-المدّ! + regen 1390ms! + lexicon 318!) · الدفعة 447 · v7.39!
 - **الدفعة:** 447 · **الموجّه:** 7.39
 - **للقارئ:** يوم الأسئلة والأجوبة! — **15 كلمة**: die Sichtweise · der Schwerpunkt · die Wertschätzung · verständlich · ausführlich · beispielsweise · gespannt · geduldig · aufmerksam · hilfreich · selbstverständlich · präzise · **beeindrucken** (ضعيف!) · **faszinieren** (ضعيف!) · **vertiefen** (ضعيف!) + القاعدة ars-fragerunde (شُفرة 4: «Was meinen Sie?» — الركان الثلاثة!). المحطات 15 وcheck-lesson **0/0/0** (54 سطراً).

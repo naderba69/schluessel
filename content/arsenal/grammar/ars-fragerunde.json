@@ -9,16 +9,34 @@
   },
   "levelIntroduced": "B1",
   "riskLevel": "yellow",
-  "usedInLessons": ["b1-u11-d5"],
+  "usedInLessons": [
+    "b1-u11-d5",
+    "b1-u11-d6"
+  ],
   "payload": {
     "topicAr": "الأسئلة والأجوبة! (سؤال! إجابة! مثال!)",
     "sceneAr": "بعد العرض تأتي الأسئلة! الجواب الجيّد يبدأ بفهم السؤال ثم إجابة مفهومة (verständlich!) وموسّعة (ausführlich!) ومثال ملموس (beispielsweise!) — والتركيز (Schwerpunkt!) على ما يهمّ السامعين!",
     "examples": [
-      { "de": "Was meinen Sie?", "ar": "ماذا تقصدون؟ (السؤال!)" },
-      { "de": "Die Antwort ist verständlich.", "ar": "الإجابة مفهومة. (الوضوح!)" },
-      { "de": "Er antwortet ausführlich.", "ar": "هو يجيب بالتفصيل. (التوسّع!)" },
-      { "de": "Beispielsweise liest er Romane.", "ar": "على سبيل المثال يقرأ الروايات. (المثال!)" },
-      { "de": "Selbstverständlich hilft er.", "ar": "بالتأكيد هو يساعد. (التأكيد!)" }
+      {
+        "de": "Was meinen Sie?",
+        "ar": "ماذا تقصدون؟ (السؤال!)"
+      },
+      {
+        "de": "Die Antwort ist verständlich.",
+        "ar": "الإجابة مفهومة. (الوضوح!)"
+      },
+      {
+        "de": "Er antwortet ausführlich.",
+        "ar": "هو يجيب بالتفصيل. (التوسّع!)"
+      },
+      {
+        "de": "Beispielsweise liest er Romane.",
+        "ar": "على سبيل المثال يقرأ الروايات. (المثال!)"
+      },
+      {
+        "de": "Selbstverständlich hilft er.",
+        "ar": "بالتأكيد هو يساعد. (التأكيد!)"
+      }
     ],
     "inferencePromptAr": "لاحظي: من أين تبدأ الإجابة الجيّدة؟ وبمَ تُدعم؟",
     "ruleDe": "Die Antwort ist verständlich. · Er antwortet ausführlich. · Beispielsweise liest er Romane. · Der Schwerpunkt ist klar.",

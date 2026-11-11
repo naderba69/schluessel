@@ -2626,6 +2626,9 @@ def build_all() -> None:
     ("word-beeindrucken", "beeindrucken.", "beeindrucken", ["b1-u11-d5"]),
     ("word-faszinieren", "faszinieren.", "faszinieren", ["b1-u11-d5"]),
     ("word-vertiefen", "vertiefen.", "vertiefen", ["b1-u11-d5"]),
+    ("word-zusammenhalt", "der Zusammenhalt.", "zusammenhalt", ["b1-u11-d6"]),
+    ("word-erfuellung", "die Erfüllung.", "erfuellung", ["b1-u11-d6"]),
+    ("word-verwirklichen", "verwirklichen.", "verwirklichen", ["b1-u11-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
