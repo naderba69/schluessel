@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D492 (2026-11-26): b1-u11-d4 «نص العرض!» — ars-vortragstext! + 15 كلمة! (Entwurf/formulieren/Überblick! + pflegen-البادئة! + Ehrenamt!) · 4 نُطُق (Darstellung/Kreativität/nachhaltig-المدّ والنبر! + Überblick-مركب-النبر-الأول!) · الدفعة 446 · v7.38!
+- **الدفعة:** 446 · **الموجّه:** 7.38
+- **للقارئ:** يوم نص العرض! — **15 كلمة**: der Entwurf · **formulieren** (ضعيف!) · der Überblick · die Darstellung · die Kreativität · das Handwerk · **musizieren** · **pflegen** (hat gepflegt — بالبادئة!) · wöchentlich · monatlich · selten · ziemlich · nachhaltig · das Ehrenamt (die Ehrenämter!) · die Vielfalt + القاعدة ars-vortragstext (شُفرة 4: «Der Entwurf ist kurz.» — الطبقات الثلاث!). المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).
+- **بطاقة قرار:** النص يُكتب مسودة ثم جُملاً قصيرة ثم نظرة عامة! · النطق: Darstellung وnachhaltig مدّهما الطويل (aː!) وKreativität نبرها الأخير وÜberblick مركب نبره الأول! — 4 مراجعات (314-317) + regen · «ge» العارية في النص العربي تُقرأ كلمة ألمانية فتُسقط الجبهة (N-322!) — البادئة تُذكر بالكلمة كاملة (hat gepflegt!).
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2909/0/0 ✓** · build ✓
+- **التالي:** b1-u11-d5 «أسئلة وأجوبة» ثم d6 التوليف · d7 المعركة!
+
 ## D491 (2026-11-26): b1-u11-d3 «العرض الأول (٢–٣ دقائق)!» — ars-praesentation! + 15 كلمة! (Hauptteil/Karteikarte! + vorführen-الانفصال! + V2-بعد-الظرف!) · 3 نُطُق (Karteikarte/nebenbei/sozial-النبر-الثاني! + lexicon 311-313!) · الدفعة 445 · v7.37!
 - **الدفعة:** 445 · **الموجّه:** 7.37
 - **للقارئ:** يوم العرض التقديمي الأول! — **15 كلمة**: der Hauptteil · die Karteikarte · **vorführen** (führt vor/führte vor/hat vorgeführt — منفصل + قويّ!) · die Leidenschaft · die Motivation · sozial · der Mitmensch · nebenbei · hauptsächlich · insbesondere · bereits · häufig · die Aufmerksamkeit · **erwähnen** (ضعيف!) · gestalten + القاعدة ars-praesentation (شُفرة 4: «Hauptsächlich LIEST er!» — الأقسام الثلاثة!). المحطات 15 وcheck-lesson **0/0/0** (51 سطراً).

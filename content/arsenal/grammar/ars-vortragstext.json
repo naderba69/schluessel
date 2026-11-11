@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-vortragstext",
+  "kind": "shufra",
+  "title": {
+    "ar": "نص العرض!",
+    "de": "Vortragstext — Entwurf · Formulierung · Überblick"
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "yellow",
+  "usedInLessons": ["b1-u11-d4"],
+  "payload": {
+    "topicAr": "نص العرض التقديمي! (مسودة! صياغة! نظرة عامة!)",
+    "sceneAr": "النص الجيّد للعرض يُكتب على مراحل: مسودة قصيرة (Entwurf!) ثم جُمل مصاغة بعناية (formulieren!) ثم نظرة عامة خاتمة (Überblick!) — والعرض الواضح (Darstellung!) يُبنى من جُمل قصيرة!",
+    "examples": [
+      { "de": "Der Entwurf ist kurz und klar.", "ar": "المسودة قصيرة وواضحة. (البداية!)" },
+      { "de": "Er formuliert den Satz.", "ar": "هو يصيغ الجملة. (الصياغة!)" },
+      { "de": "Der Überblick ist gut.", "ar": "النظرة العامة جيدة. (الخاتمة!)" },
+      { "de": "Die Darstellung ist klar.", "ar": "العرض واضح. (النتيجة!)" },
+      { "de": "Zuerst die Einleitung, dann der Hauptteil.", "ar": "أولاً المقدمة، ثم الجزء الرئيسي. (الترتيب!)" }
+    ],
+    "inferencePromptAr": "لاحظي: بمَ يبدأ النص؟ وبمَ ينتهي؟ وكيف تُصاغ الجملة؟",
+    "ruleDe": "Der Entwurf ist kurz. · Er formuliert den Satz. · Der Überblick ist gut. · Die Darstellung ist klar.",
+    "ruleAr": "نص العرض يُبنى من ثلاث طبقات: مسودة أولى (Entwurf!) ← جُمل قصيرة مصاغة (formulieren!) ← نظرة عامة خاتمة (Überblick!) — والجُمل القصيرة تصنع العرض الواضح (Darstellung!)",
+    "contrastAr": "العربية: «أتكلّم مباشرةً وأرتب كلامي في رأسي!»؛ والألمانية: النص يُكتب أولاً مسودة (Entwurf!) والجُمل تُصاغ كلمة كلمة (formulieren!) وتنتهي بنظرة عامة (Überblick!) — الكتابة قبل الكلام! (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "formulieren ضعيف: formuliert formulierte hat formuliert (بلا تغيير!)",
+      "pflegen مع ge- في الماضي: pflegt pflegte hat GEPFLEGT!",
+      "das Ehrenamt جمعه die Ehrenämter (Ämter — بمدّة!)",
+      "die Vielfalt مفردة (لا جمع شائع!)"
+    ],
+    "beads": [
+      "Der Entwurf ist kurz.",
+      "Er formuliert den Satz.",
+      "Der Überblick ist gut."
+    ],
+    "properNouns": []
+  }
+}

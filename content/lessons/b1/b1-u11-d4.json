@@ -1,0 +1,495 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u11-d4",
+  "level": "B1",
+  "unit": 11,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Entwurf ist kurz — und die Darstellung ist klar!",
+    "ar": "يوم نص العرض! (مسودة! صياغة! نظرة عامة!) — الوحدة 11: الهوايات والمجتمع!"
+  },
+  "canDoDaily": [
+    "يكتب مسودة نص العرض بالجُمل القصيرة! (Entwurf! formulieren! Überblick!)",
+    "يصف هواياته بالتحرير والصياغة! (Handwerk! Kreativität! musizieren!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "strategie",
+      "roman",
+      "hauptteil"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«المسودة قصيرة.»؟"
+        },
+        "choices": [
+          "Der Entwurf ist kurz.",
+          "Die Entwurf ist kurz.",
+          "Das Entwurf ist kurz."
+        ],
+        "answer": "Der Entwurf ist kurz.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«هو يعتني بالحديقة.»؟"
+        },
+        "choices": [
+          "Er pflegt den Garten.",
+          "Er pflegt nach dem Garten.",
+          "Er den Garten pflegt."
+        ],
+        "answer": "Er pflegt den Garten.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "entwurf",
+      "formulieren",
+      "ueberblick",
+      "darstellung",
+      "kreativitaet",
+      "handwerk",
+      "musizieren",
+      "pflegen",
+      "woechentlich",
+      "monatlich",
+      "selten",
+      "ziemlich",
+      "nachhaltig",
+      "ehrenamt",
+      "vielfalt"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-vortragstext"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order",
+      "partizip"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Überblick ist gut und die Darstellung ist klar!",
+        "ar": "يكتب نص عرض قصيراً (٨ جُمل) عن هوايته!"
+      },
+      "situation": {
+        "de": "Ein Entwurf, acht Sätze, ein Überblick.",
+        "ar": "مسودة! ثماني جُمل! نظرة عامة! (نص العرض!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في النص!",
+        "الطبقات الثلاث: Entwurf ← Sätze ← Überblick!",
+        "الجُمل القصيرة: الظرف أولاً والفعل ثانياً!",
+        "pflegen ماضيه hat gepflegt! وformulieren ضعيف (hat formuliert!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Entwurf! Überblick! Handwerk!"
+        ],
+        "interleavedWith": [
+          "strategie",
+          "roman",
+          "hauptteil"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "المسودة",
+                "de": "der Entwurf"
+              },
+              {
+                "ar": "نظرة عامة",
+                "de": "der Überblick"
+              },
+              {
+                "ar": "العرض (الصياغة)",
+                "de": "die Darstellung"
+              },
+              {
+                "ar": "الإبداع",
+                "de": "die Kreativität"
+              }
+            ],
+            "why": "der Entwurf المسودة (die Entwürfe — بمدّة!) · der Überblick النظرة العامة (der!) · die Darstellung العرض (die!) · die Kreativität الإبداع (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الحرفة اليدوية",
+                "de": "das Handwerk"
+              },
+              {
+                "ar": "العمل التطوعي",
+                "de": "das Ehrenamt"
+              },
+              {
+                "ar": "التنوع",
+                "de": "die Vielfalt"
+              },
+              {
+                "ar": "يصيغ",
+                "de": "formulieren"
+              }
+            ],
+            "why": "das Handwerk الحرفة (die Handwerke!) · das Ehrenamt التطوع (das! die Ehrenämter!) · die Vielfalt التنوع (die! مفردة!) · formulieren يصيغ (ضعيف!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يعزّف الموسيقى",
+                "de": "musizieren"
+              },
+              {
+                "ar": "يعتني بـ",
+                "de": "pflegen"
+              },
+              {
+                "ar": "أسبوعياً",
+                "de": "wöchentlich"
+              },
+              {
+                "ar": "شهرياً",
+                "de": "monatlich"
+              }
+            ],
+            "why": "musizieren يعزّف (hat musiziert!) · pflegen يعتني (hat gepflegt — بالبادئة!) · wöchentlich أسبوعياً · monatlich شهرياً (كلها ظروف!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "نادراً",
+                "de": "selten"
+              },
+              {
+                "ar": "إلى حد كبير",
+                "de": "ziemlich"
+              },
+              {
+                "ar": "مستدام",
+                "de": "nachhaltig"
+              }
+            ],
+            "why": "selten نادراً (ظرف!) · ziemlich إلى حد كبير (ظرف قبل الصفة!) · nachhaltig مستدام (صفة!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "نص العرض!"
+        ],
+        "interleavedWith": [
+          "entwurf",
+          "formulieren",
+          "ueberblick"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist kurz. (المسودة!)",
+            "a": "Entwurf",
+            "why": "der Entwurf المسودة (der! die Entwürfe!) — der Entwurf ist kurz. (ars-vortragstext!)"
+          },
+          {
+            "q": "Er ___ den Satz. (يصيغ!)",
+            "a": "formuliert",
+            "why": "formulieren ضعيف! Er formuliert den Satz. (hat formuliert!)"
+          },
+          {
+            "q": "Der ___ ist gut. (نظرة عامة!)",
+            "a": "Überblick",
+            "why": "der Überblick النظرة العامة (der!) — der Überblick ist gut. (الخاتمة!)"
+          },
+          {
+            "q": "Er hat den Garten ___. (يعتني! الماضي!)",
+            "a": "gepflegt",
+            "why": "pflegen الماضي: hat gepflegt (لا pflegt!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "Das Buch ist ___ lang. (إلى حد كبير!)",
+            "a": "ziemlich",
+            "why": "ziemlich قبل الصفة! Das Buch ist ziemlich lang. (ظرف + صفة!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الماضي! الأداة! الصيغة!"
+        ],
+        "interleavedWith": [
+          "kreativitaet",
+          "handwerk",
+          "musizieren"
+        ],
+        "items": [
+          {
+            "q": "~~Er hat den Garten pflegt.~~",
+            "a": "Er hat den Garten gepflegt.",
+            "why": "pflegen الماضي: hat gepflegt (لا pflegt!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "~~der Ehrenamt ist wichtig~~",
+            "a": "das Ehrenamt ist wichtig",
+            "why": "das Ehrenamt العمل التطوعي (das! لا der!) — die Ehrenämter جمعه!"
+          },
+          {
+            "q": "~~Das Buch ist lang ziemlich.~~",
+            "a": "Das Buch ist ziemlich lang.",
+            "why": "ziemlich قبل الصفة لا بعدها! (ظرف التقدير أولاً!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — النص كلام!",
+          "Entwurf! Sätze! Überblick!"
+        ],
+        "interleavedWith": [
+          "woechentlich",
+          "nachhaltig",
+          "vielfalt"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالمسودة! (جملتان!)",
+            "a": "Der Entwurf ist kurz. Die Darstellung ist klar.",
+            "why": "المسودة ثم العرض! (ars-vortragstext!)"
+          },
+          {
+            "q": "اشرح هوايتك بالتحرير! (جملتان!)",
+            "a": "Er pflegt den Garten. Er musiziert wöchentlich.",
+            "why": "الهواية بالتفصيل! pflegen! musizieren! wöchentlich!"
+          },
+          {
+            "q": "اختم بالنظرة العامة! (جملتان!)",
+            "a": "Der Überblick ist gut. Die Vielfalt ist nachhaltig.",
+            "why": "الخاتمة والنظرة العامة! (Überblick! + nachhaltig!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المسودة»؟",
+            "a": "der Entwurf"
+          },
+          {
+            "q": "«نظرة عامة»؟",
+            "a": "der Überblick"
+          },
+          {
+            "q": "«العرض (الصياغة)»؟",
+            "a": "die Darstellung"
+          },
+          {
+            "q": "«الإبداع»؟",
+            "a": "die Kreativität"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يصيغ الجملة.»؟",
+            "a": "Er formuliert den Satz."
+          },
+          {
+            "q": "«الحرفة اليدوية»؟",
+            "a": "das Handwerk"
+          },
+          {
+            "q": "«يعزّف الموسيقى»؟",
+            "a": "musizieren"
+          },
+          {
+            "q": "«يعتني بالحديقة.»؟",
+            "a": "Er pflegt den Garten."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«أسبوعياً»؟",
+            "a": "wöchentlich"
+          },
+          {
+            "q": "«نادراً»؟",
+            "a": "selten"
+          },
+          {
+            "q": "«مستدام»؟",
+            "a": "nachhaltig"
+          },
+          {
+            "q": "«العمل التطوعي»؟",
+            "a": "das Ehrenamt"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Entwurf ist kurz und die Darstellung ist klar. Er formuliert den Satz und der Überblick ist gut. Die Kreativität ist wichtig und das Handwerk ist schön. Er musiziert gern und pflegt den Garten. Er kommt wöchentlich und monatlich, aber selten liest er Romane. Das Buch ist ziemlich lang. Die Lösung ist nachhaltig. Das Ehrenamt ist wichtig und die Vielfalt ist groß!",
+      "ar": "المسودة قصيرة والعرض واضح. هو يصيغ الجملة والنظرة العامة جيدة. الإبداع مهم والحرفة جميلة. هو يعزّف بسرور ويعتني بالحديقة. يأتي أسبوعياً وشهرياً، لكنه يقرأ الروايات نادراً. الكتاب طويل إلى حد كبير. الحل مستدام. العمل التطوعي مهم والتنوع كبير!"
+    },
+    "srsBundleWordIds": [
+      "entwurf",
+      "formulieren",
+      "ueberblick",
+      "darstellung",
+      "kreativitaet",
+      "handwerk",
+      "musizieren",
+      "pflegen",
+      "woechentlich",
+      "monatlich",
+      "selten",
+      "ziemlich",
+      "nachhaltig",
+      "ehrenamt",
+      "vielfalt"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "hat pflegt خطأ!",
+          "de": "~~Er hat den Garten pflegt.~~"
+        },
+        "correct": {
+          "ar": "الصحيح: hat gepflegt!",
+          "de": "Er hat den Garten gepflegt."
+        },
+        "exercise": {
+          "q": "Er hat den Garten ___. (يعتني!)",
+          "a": "gepflegt"
+        },
+        "whyArabicSpeakerFails": "العربية: الماضي بالجذر فقط! والألمانية: pflegen يأخذ البادئة في الماضي (hat gepflegt!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Ehrenamt!",
+          "de": "~~der Ehrenamt ist wichtig~~"
+        },
+        "correct": {
+          "ar": "das Ehrenamt!",
+          "de": "das Ehrenamt ist wichtig"
+        },
+        "exercise": {
+          "q": "___ Ehrenamt ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «العمل التطوعي» بلا أداة جنس! والألمانية: das Ehrenamt محايد (das! لا der!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "ziemlich بعد الصفة!",
+          "de": "~~Das Buch ist lang ziemlich.~~"
+        },
+        "correct": {
+          "ar": "ziemlich قبل الصفة!",
+          "de": "Das Buch ist ziemlich lang."
+        },
+        "exercise": {
+          "q": "Das Buch ist ___ lang.",
+          "a": "ziemlich"
+        },
+        "whyArabicSpeakerFails": "العربية: «طويل إلى حد كبير» — التقدير بعد الصفة! والألمانية: ziemlich قبل الصفة (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Entwurf",
+      "https://www.duden.de/rechtschreibung/formulieren",
+      "https://www.duden.de/rechtschreibung/Ueberblick",
+      "https://www.duden.de/rechtschreibung/Darstellung",
+      "https://www.duden.de/rechtschreibung/Kreativitaet",
+      "https://www.duden.de/rechtschreibung/Handwerk",
+      "https://www.duden.de/rechtschreibung/musizieren",
+      "https://www.duden.de/rechtschreibung/pflegen",
+      "https://www.duden.de/rechtschreibung/woechentlich",
+      "https://www.duden.de/rechtschreibung/monatlich",
+      "https://www.duden.de/rechtschreibung/selten",
+      "https://www.duden.de/rechtschreibung/ziemlich",
+      "https://www.duden.de/rechtschreibung/nachhaltig",
+      "https://www.duden.de/rechtschreibung/Ehrenamt",
+      "https://www.duden.de/rechtschreibung/Vielfalt"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-vortragstext"
+  ],
+  "audioManifestRefs": [
+    "word-entwurf",
+    "word-formulieren",
+    "word-ueberblick",
+    "word-darstellung",
+    "word-kreativitaet",
+    "word-handwerk",
+    "word-musizieren",
+    "word-pflegen",
+    "word-woechentlich",
+    "word-monatlich",
+    "word-selten",
+    "word-ziemlich",
+    "word-nachhaltig",
+    "word-ehrenamt",
+    "word-vielfalt"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 11: الهوايات والمجتمع — نص عرض)",
+    "goetheWordListOverlap": [
+      "entwurf",
+      "formulieren",
+      "ueberblick",
+      "darstellung",
+      "kreativitaet",
+      "handwerk",
+      "musizieren",
+      "pflegen",
+      "woechentlich",
+      "monatlich",
+      "selten",
+      "ziemlich",
+      "nachhaltig",
+      "ehrenamt",
+      "vielfalt"
+    ]
+  }
+}

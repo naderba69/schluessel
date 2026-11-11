@@ -2596,6 +2596,21 @@ def build_all() -> None:
     ("word-aufmerksamkeit", "die Aufmerksamkeit.", "aufmerksamkeit", ["b1-u11-d3"]),
     ("word-erwaehnen", "erwähnen.", "erwaehnen", ["b1-u11-d3"]),
     ("word-gestalten", "gestalten.", "gestalten", ["b1-u11-d3"]),
+    ("word-entwurf", "der Entwurf.", "entwurf", ["b1-u11-d4"]),
+    ("word-formulieren", "formulieren.", "formulieren", ["b1-u11-d4"]),
+    ("word-ueberblick", "der Überblick.", "ueberblick", ["b1-u11-d4"]),
+    ("word-darstellung", "die Darstellung.", "darstellung", ["b1-u11-d4"]),
+    ("word-kreativitaet", "die Kreativität.", "kreativitaet", ["b1-u11-d4"]),
+    ("word-handwerk", "das Handwerk.", "handwerk", ["b1-u11-d4"]),
+    ("word-musizieren", "musizieren.", "musizieren", ["b1-u11-d4"]),
+    ("word-pflegen", "pflegen.", "pflegen", ["b1-u11-d4"]),
+    ("word-woechentlich", "wöchentlich.", "woechentlich", ["b1-u11-d4"]),
+    ("word-monatlich", "monatlich.", "monatlich", ["b1-u11-d4"]),
+    ("word-selten", "selten.", "selten", ["b1-u11-d4"]),
+    ("word-ziemlich", "ziemlich.", "ziemlich", ["b1-u11-d4"]),
+    ("word-nachhaltig", "nachhaltig.", "nachhaltig", ["b1-u11-d4"]),
+    ("word-ehrenamt", "das Ehrenamt.", "ehrenamt", ["b1-u11-d4"]),
+    ("word-vielfalt", "die Vielfalt.", "vielfalt", ["b1-u11-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
