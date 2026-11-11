@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-26 — الدفعة 445: D491 — b1-u11-d3 «العرض الأول (٢–٣ دقائق)!» — ars-praesentation! + 15 كلمة! (Hauptteil/Karteikarte! + vorführen-الانفصال! + V2-بعد-الظرف!) · 3 نُطُق (Karteikarte/nebenbei/sozial-النبر-الثاني! + lexicon 311-313!) · الدفعة 445 · v7.37!
+يوم العرض التقديمي الأول! — **15 كلمة**: der Hauptteil · die Karteikarte · **vorführen** (führt vor/führte vor/hat vorgeführt — منفصل + قويّ!) · die Leidenschaft · die Motivation · sozial · der Mitmensch · nebenbei · hauptsächlich · insbesondere · bereits · häufig · die Aufmerksamkeit · **erwähnen** (ضعيف!) · gestalten + القاعدة ars-praesentation (شُفرة 4: «Hauptsächlich LIEST er!» — الأقسام الثلاثة!). المحطات 15 وcheck-lesson **0/0/0** (51 سطراً).
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2892/0/0 ✓** · build ✓
+
 ## 2026-11-26 — الدفعة 444: D490 — b1-u11-d2 «قراءة ممتدة!» — ars-lektuere! + 15 كلمة! (رومان وتشويق! + erfinden-الماضي-المصدر! + ausleihen-الانفصال-القوي!) · انتهاك واحد (Kapitel-النبر-الثاني! + regen 972ms! + lexicon 310!) · تعديل pretest ×2 (besser→kürzer! + هل→كيف!) · الدفعة 444 · v7.36!
 يوم القراءة الممتدة! — **15 كلمة**: der Roman · das Märchen · das Kapitel · die Handlung · die Spannung · die Atmosphäre · **erfinden** (erfindet/erfand/hat erfunden!) · die Erfindung · der Genuss · neugierig · **begeistern** (begeisterte/hat begeistert!) · die Begeisterung · **ausleihen** (leiht aus/lieh aus/hat ausgeliehen — منفصل + قويّ!) · unterhaltsam · berührend + القاعدة ars-lektuere (شُفرة 4: «Er liest das Buch aus.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
 - **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2875/0/0 ✓** · build ✓

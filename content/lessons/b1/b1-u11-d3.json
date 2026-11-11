@@ -1,0 +1,495 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u11-d3",
+  "level": "B1",
+  "unit": 11,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Guten Tag! Ich präsentiere mein Hobby — Einleitung, Hauptteil, Schluss!",
+    "ar": "يوم العرض التقديمي الأول (٢–٣ دقائق)! — الوحدة 11: الهوايات والمجتمع!"
+  },
+  "canDoDaily": [
+    "يُبنى عرضاً قصيراً بأقسامه الثلاثة! (Einleitung! Hauptteil! Schluss!)",
+    "يضع الظرف في الصدر والفعل ثانياً! (Hauptsächlich LIEST er!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "strategie",
+      "roman",
+      "kapitel"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«يعرض النموذج.»؟ (الانفصال!)"
+        },
+        "choices": [
+          "Er führt das Modell vor.",
+          "Er vorführt das Modell.",
+          "Er führt vor das Modell."
+        ],
+        "answer": "Er führt das Modell vor.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الجزء الرئيسي مهم.»؟"
+        },
+        "choices": [
+          "Der Hauptteil ist wichtig.",
+          "Die Hauptteil ist wichtig.",
+          "Das Hauptteil ist wichtig."
+        ],
+        "answer": "Der Hauptteil ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "hauptteil",
+      "karteikarte",
+      "vorfuehren",
+      "leidenschaft",
+      "motivation",
+      "sozial",
+      "mitmensch",
+      "nebenbei",
+      "hauptsaechlich",
+      "insbesondere",
+      "bereits",
+      "haeufig",
+      "aufmerksamkeit",
+      "erwaehnen",
+      "gestalten"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Hauptteil ist wichtig und die Aufmerksamkeit der Zuhörer ist groß!",
+        "ar": "يُقدّم عرضاً قصيراً (٢–٣ دقائق) عن هوايته!"
+      },
+      "situation": {
+        "de": "Ein Thema, drei Teile, zwei Minuten.",
+        "ar": "موضوع واحد! ثلاثة أجزاء! دقيقتان! (العرض الأول!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في العرض!",
+        "الأقسام الثلاثة: Einleitung ← Hauptteil ← Schluss!",
+        "الظرف في الصدر والفعل ثانياً: Hauptsächlich LIEST er!",
+        "vorführen منفصل (führt … vor!) وerwähnen ضعيف (hat erwähnt!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Hauptteil! Karteikarte! Leidenschaft!"
+        ],
+        "interleavedWith": [
+          "strategie",
+          "roman",
+          "kapitel"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الجزء الرئيسي",
+                "de": "der Hauptteil"
+              },
+              {
+                "ar": "بطاقة الملاحظات",
+                "de": "die Karteikarte"
+              },
+              {
+                "ar": "الشغف",
+                "de": "die Leidenschaft"
+              },
+              {
+                "ar": "الدافع",
+                "de": "die Motivation"
+              }
+            ],
+            "why": "der Hauptteil الجزء الرئيسي (der! die Hauptteile!) · die Karteikarte بطاقة الملاحظات (die!) · die Leidenschaft الشغف (die!) · die Motivation الدافع (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الإنسان المحيط بنا",
+                "de": "der Mitmensch"
+              },
+              {
+                "ar": "الانتباه",
+                "de": "die Aufmerksamkeit"
+              },
+              {
+                "ar": "يُعرض أمام الناس",
+                "de": "vorführen"
+              },
+              {
+                "ar": "يذكر",
+                "de": "erwähnen"
+              }
+            ],
+            "why": "der Mitmensch الإنسان المحيط (die Mitmenschen!) · die Aufmerksamkeit الانتباه (die!) · vorführen يعرض (führt … vor!) · erwähnen يذكر (ضعيف!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يُصمّم",
+                "de": "gestalten"
+              },
+              {
+                "ar": "اجتماعي",
+                "de": "sozial"
+              },
+              {
+                "ar": "بشكل رئيسي",
+                "de": "hauptsächlich"
+              },
+              {
+                "ar": "على وجه الخصوص",
+                "de": "insbesondere"
+              }
+            ],
+            "why": "gestalten يُصمّم (hat gestaltet!) · sozial اجتماعي (صفة!) · hauptsächlich بشكل رئيسي (ظرف!) · insbesondere خصوصاً (ظرف!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "بالإضافة لذلك",
+                "de": "nebenbei"
+              },
+              {
+                "ar": "بالفعل",
+                "de": "bereits"
+              },
+              {
+                "ar": "كثيراً",
+                "de": "häufig"
+              }
+            ],
+            "why": "nebenbei بالإضافة (ظرف!) · bereits بالفعل (ظرف!) · häufig كثيراً (ظرف! ig-ending!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "العرض التقديمي!"
+        ],
+        "interleavedWith": [
+          "hauptteil",
+          "karteikarte",
+          "aufmerksamkeit"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist wichtig. (الجزء الرئيسي!)",
+            "a": "Hauptteil",
+            "why": "der Hauptteil الجزء الرئيسي (der!) — der Hauptteil ist wichtig. (ars-praesentation!)"
+          },
+          {
+            "q": "Er ___ das Modell ___. (يعرض! منفصل!)",
+            "a": "führt … vor",
+            "why": "vorführen منفصل! Er führt das Modell vor. (الجزء vor آخر!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "Hauptsächlich ___ er Romane. (يقرأ! الفعل ثانياً!)",
+            "a": "liest",
+            "why": "الظرف في الصدر ← الفعل في المرتبة الثانية! Hauptsächlich LIEST er! (ars-praesentation!)"
+          },
+          {
+            "q": "Die ___ der Zuhörer ist wichtig. (الانتباه!)",
+            "a": "Aufmerksamkeit",
+            "why": "die Aufmerksamkeit الانتباه (die! der Zuhörer المستمع!) — die Aufmerksamkeit der Zuhörer ist wichtig."
+          },
+          {
+            "q": "Das Kapitel ist ___ fertig. (بالفعل!)",
+            "a": "bereits",
+            "why": "bereits بالفعل (ظرف!) — das Kapitel ist bereits fertig."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الانفصال! الضعيف! المرتبة الثانية!"
+        ],
+        "interleavedWith": [
+          "vorfuehren",
+          "erwaehnen",
+          "sozial"
+        ],
+        "items": [
+          {
+            "q": "~~Er vorführt das Modell.~~",
+            "a": "Er führt das Modell vor.",
+            "why": "vorführen منفصل! führt … vor (الجزء آخر الجملة!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "~~Er hat das Buch erwähnte.~~",
+            "a": "Er hat das Buch erwähnt.",
+            "why": "erwähnen ضعيف! hat ERWÄHNT (لا erwähnte!) — بلا تغيير الجذر!"
+          },
+          {
+            "q": "~~Hauptsächlich er liest Romane.~~",
+            "a": "Hauptsächlich liest er Romane.",
+            "why": "الظرف في الصدر ← الفعل ثانياً لا الضمير! Hauptsächlich LIEST er! (خريطة التداخل 10‑ي!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — العرض كلام!",
+          "Einleitung! Hauptteil! Schluss!"
+        ],
+        "interleavedWith": [
+          "leidenschaft",
+          "motivation",
+          "gestalten"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالترحيب والمقدمة! (جملتان!)",
+            "a": "Guten Tag! Heute präsentiere ich mein Hobby.",
+            "why": "الترحيب ثم الموضوع! (ars-praesentation — Einleitung!)"
+          },
+          {
+            "q": "اعرض النقطتين الرئيسيتين! (جملتان!)",
+            "a": "Hauptsächlich lese ich Romane. Insbesondere die Leidenschaft ist wichtig.",
+            "why": "الأدوات في الصدر! hauptsächlich! insbesondere! (Hauptteil!)"
+          },
+          {
+            "q": "اختم بالشكر! (جملتان!)",
+            "a": "Zum Schluss danke ich Ihnen für die Aufmerksamkeit. Das war meine Präsentation.",
+            "why": "الخاتمة والشكر! (Schluss! + Aufmerksamkeit!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الجزء الرئيسي»؟",
+            "a": "der Hauptteil"
+          },
+          {
+            "q": "«بطاقة الملاحظات»؟",
+            "a": "die Karteikarte"
+          },
+          {
+            "q": "«الشغف»؟",
+            "a": "die Leidenschaft"
+          },
+          {
+            "q": "«الدافع»؟",
+            "a": "die Motivation"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يعرض النموذج.»؟ (الانفصال!)",
+            "a": "Er führt das Modell vor."
+          },
+          {
+            "q": "«الانتباه»؟",
+            "a": "die Aufmerksamkeit"
+          },
+          {
+            "q": "«يذكر»؟",
+            "a": "erwähnen"
+          },
+          {
+            "q": "«يُصمّم»؟",
+            "a": "gestalten"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«بشكل رئيسي»؟",
+            "a": "hauptsächlich"
+          },
+          {
+            "q": "«على وجه الخصوص»؟",
+            "a": "insbesondere"
+          },
+          {
+            "q": "«بالفعل»؟",
+            "a": "bereits"
+          },
+          {
+            "q": "«الإنسان المحيط بنا»؟",
+            "a": "der Mitmensch"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Hauptteil ist wichtig und die Karteikarte ist kurz. Er führt das Modell vor und erwähnt das Buch. Die Leidenschaft ist groß und die Motivation ist wichtig. Die Arbeit ist sozial und die Mitmenschen sind wichtig. Nebenbei liest er und häufig liest er Romane. Hauptsächlich liest er und insbesondere die Spannung ist wichtig. Das Kapitel ist bereits fertig. Die Aufmerksamkeit der Zuhörer ist wichtig und er gestaltet die Freizeit!",
+      "ar": "الجزء الرئيسي مهم وبطاقة الملاحظات قصيرة. هو يعرض النموذج ويذكر الكتاب. الشغف كبير والدافع مهم. العمل اجتماعي والناس المحيطون مهمون. بالإضافة لذلك يقرأ وكثيراً يقرأ الروايات. بشكل رئيسي يقرأ وخصوصاً التشويق مهم. الفصل منتهٍ بالفعل. انتباه المستمعين مهم وهو يصمّم وقت الفراغ!"
+    },
+    "srsBundleWordIds": [
+      "hauptteil",
+      "karteikarte",
+      "vorfuehren",
+      "leidenschaft",
+      "motivation",
+      "sozial",
+      "mitmensch",
+      "nebenbei",
+      "hauptsaechlich",
+      "insbesondere",
+      "bereits",
+      "haeufig",
+      "aufmerksamkeit",
+      "erwaehnen",
+      "gestalten"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "vorführen ملتصق!",
+          "de": "~~Er vorführt das Modell.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Er führt das Modell vor!",
+          "de": "Er führt das Modell vor."
+        },
+        "exercise": {
+          "q": "Er ___ das Modell ___. (يعرض!)",
+          "a": "führt … vor"
+        },
+        "whyArabicSpeakerFails": "العربية: «يعرض» — كلمة واحدة! والألمانية: الفعل المنفصل ينفصل والجزء vor يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "hat erwähnte!",
+          "de": "~~Er hat das Buch erwähnte.~~"
+        },
+        "correct": {
+          "ar": "الضعيف: hat erwähnt!",
+          "de": "Er hat das Buch erwähnt."
+        },
+        "exercise": {
+          "q": "Er hat das Buch ___. (الماضي!)",
+          "a": "erwähnt"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل الماضي بالجذر! والألمانية: erwähnen ضعيف (erwähnte! erwähnt — بلا تغيير!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "Hauptsächlich er liest!",
+          "de": "~~Hauptsächlich er liest Romane.~~"
+        },
+        "correct": {
+          "ar": "الفعل ثانياً: Hauptsächlich liest er!",
+          "de": "Hauptsächlich liest er Romane."
+        },
+        "exercise": {
+          "q": "Hauptsächlich ___ er Romane.",
+          "a": "liest"
+        },
+        "whyArabicSpeakerFails": "العربية: «بشكل رئيسي هو يقرأ» — الضمير بعد الظرف! والألمانية: الفعل في المرتبة الثانية بعد أول جزء (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Hauptteil",
+      "https://www.duden.de/rechtschreibung/Karteikarte",
+      "https://www.duden.de/rechtschreibung/vorfuehren",
+      "https://www.duden.de/rechtschreibung/Leidenschaft",
+      "https://www.duden.de/rechtschreibung/Motivation",
+      "https://www.duden.de/rechtschreibung/sozial",
+      "https://www.duden.de/rechtschreibung/Mitmensch",
+      "https://www.duden.de/rechtschreibung/nebenbei",
+      "https://www.duden.de/rechtschreibung/hauptsachlich",
+      "https://www.duden.de/rechtschreibung/insbesondere",
+      "https://www.duden.de/rechtschreibung/bereits",
+      "https://www.duden.de/rechtschreibung/haeufig",
+      "https://www.duden.de/rechtschreibung/Aufmerksamkeit",
+      "https://www.duden.de/rechtschreibung/erwaehnen",
+      "https://www.duden.de/rechtschreibung/gestalten"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation"
+  ],
+  "audioManifestRefs": [
+    "word-hauptteil",
+    "word-karteikarte",
+    "word-vorfuehren",
+    "word-leidenschaft",
+    "word-motivation",
+    "word-sozial",
+    "word-mitmensch",
+    "word-nebenbei",
+    "word-hauptsaechlich",
+    "word-insbesondere",
+    "word-bereits",
+    "word-haeufig",
+    "word-aufmerksamkeit",
+    "word-erwaehnen",
+    "word-gestalten"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 11: الهوايات والمجتمع — Präsentation أولى (٢–٣ دقائق))",
+    "goetheWordListOverlap": [
+      "hauptteil",
+      "karteikarte",
+      "vorfuehren",
+      "leidenschaft",
+      "motivation",
+      "sozial",
+      "mitmensch",
+      "nebenbei",
+      "hauptsaechlich",
+      "insbesondere",
+      "bereits",
+      "haeufig",
+      "aufmerksamkeit",
+      "erwaehnen",
+      "gestalten"
+    ]
+  }
+}

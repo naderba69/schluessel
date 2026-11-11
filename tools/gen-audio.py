@@ -2581,6 +2581,21 @@ def build_all() -> None:
     ("word-ausleihen", "ausleihen.", "ausleihen", ["b1-u11-d2"]),
     ("word-unterhaltsam", "unterhaltsam.", "unterhaltsam", ["b1-u11-d2"]),
     ("word-beruehrend", "berührend.", "beruehrend", ["b1-u11-d2"]),
+    ("word-hauptteil", "der Hauptteil.", "hauptteil", ["b1-u11-d3"]),
+    ("word-karteikarte", "die Karteikarte.", "karteikarte", ["b1-u11-d3"]),
+    ("word-vorfuehren", "vorführen.", "vorfuehren", ["b1-u11-d3"]),
+    ("word-leidenschaft", "die Leidenschaft.", "leidenschaft", ["b1-u11-d3"]),
+    ("word-motivation", "die Motivation.", "motivation", ["b1-u11-d3"]),
+    ("word-sozial", "sozial.", "sozial", ["b1-u11-d3"]),
+    ("word-mitmensch", "der Mitmensch.", "mitmensch", ["b1-u11-d3"]),
+    ("word-nebenbei", "nebenbei.", "nebenbei", ["b1-u11-d3"]),
+    ("word-hauptsaechlich", "hauptsächlich.", "hauptsaechlich", ["b1-u11-d3"]),
+    ("word-insbesondere", "insbesondere.", "insbesondere", ["b1-u11-d3"]),
+    ("word-bereits", "bereits.", "bereits", ["b1-u11-d3"]),
+    ("word-haeufig", "häufig.", "haeufig", ["b1-u11-d3"]),
+    ("word-aufmerksamkeit", "die Aufmerksamkeit.", "aufmerksamkeit", ["b1-u11-d3"]),
+    ("word-erwaehnen", "erwähnen.", "erwaehnen", ["b1-u11-d3"]),
+    ("word-gestalten", "gestalten.", "gestalten", ["b1-u11-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

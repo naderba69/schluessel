@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 445 (2026-11-26) — D491: b1-u11-d3 «العرض الأول (٢–٣ دقائق)!» — ars-praesentation! + 15 كلمة! (Hauptteil/Karteikarte! + vorführen-الانفصال! + V2-بعد-الظرف!) · 3 نُطُق (Karteikarte/nebenbei/sozial-النبر-الثاني! + lexicon 311-313!) · الدفعة 445 · v7.37!
+- **الخلاصة:** يوم العرض التقديمي الأول! — **15 كلمة**: der Hauptteil · die Karteikarte · **vorführen** (führt vor/führte vor/hat vorgeführt — منفصل + قويّ!) · die Leidenschaft · die Motivation · sozial · der Mitmensch · nebenbei · hauptsächlich · insbesondere · bereits · häufig · die Aufmerksamkeit · **erwähnen** (ضعيف!) · gestalten + القاعدة ars-praesentation (شُفرة 4: «Hauptsächlich LIEST er!» — الأقسام الثلاثة!). المحطات 15 وcheck-lesson **0/0/0** (51 سطراً).
+- **التالي:** b1-u11-d4 «نص العرض» ثم d5 أسئلة وأجوبة · d6 التوليف · d7 المعركة!
+
 ## الدفعة 444 (2026-11-26) — D490: b1-u11-d2 «قراءة ممتدة!» — ars-lektuere! + 15 كلمة! (رومان وتشويق! + erfinden-الماضي-المصدر! + ausleihen-الانفصال-القوي!) · انتهاك واحد (Kapitel-النبر-الثاني! + regen 972ms! + lexicon 310!) · تعديل pretest ×2 (besser→kürzer! + هل→كيف!) · الدفعة 444 · v7.36!
 - **الخلاصة:** يوم القراءة الممتدة! — **15 كلمة**: der Roman · das Märchen · das Kapitel · die Handlung · die Spannung · die Atmosphäre · **erfinden** (erfindet/erfand/hat erfunden!) · die Erfindung · der Genuss · neugierig · **begeistern** (begeisterte/hat begeistert!) · die Begeisterung · **ausleihen** (leiht aus/lieh aus/hat ausgeliehen — منفصل + قويّ!) · unterhaltsam · berührend + القاعدة ars-lektuere (شُفرة 4: «Er liest das Buch aus.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
 - **التالي:** b1-u11-d3 «Präsentation أولى (2–3 د)» ثم d4 نص عرض · d5 أسئلة وأجوبة · d6 التوليف · d7 المعركة!
