@@ -3,6 +3,9 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  // N-325: فحوص الشجرة كاملة (validateContentTree/loadContentDir) تتجاوز 5s الافتراضية مع نمو
+  // المحتوى وبطء الوكيل — المهلة 30s تكفي دون إخفاء التعليق الحقيقي (كانت سبب «رعشة» D491!)
+  test: { testTimeout: 30000 },
   // المعاينة الحية عبر نطاق الوكيل (e2b.app) — بدون allowedHosts يرفضها Vite بـ403
   server: { host: "0.0.0.0", port: 5173, allowedHosts: true },
   preview: { host: "0.0.0.0", port: 4173, allowedHosts: true },

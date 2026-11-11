@@ -304,5 +304,5 @@ describe("D103 — المحتوى الحقيقي: Hören الامتحان الت
     expect(items).toBe(15); // D109: 6 + 4 + 5 كالصيغة الرسمية (كانت 9)
     const errs = validateContentTree(loadContentDir(content)).errors.filter((e) => /audio|hoeren/.test(e.code));
     expect(errs).toEqual([]);
-  });
+  }, 60000); // N-325: فحص الشجرة كاملة — مهلة 5s عامة لا تكفي مع نمو المحتوى
 });

@@ -186,7 +186,7 @@ describe("D109 — المحتوى الحقيقي: a1-modelltest-1 = صيغة Sta
     const r = validateContentTree(loadContentDir(C));
     expect(r.errors.filter((e) => /modelltest|hoeren|e-schema/.test(e.code) || e.path.startsWith("modelltest/"))).toEqual([]);
     expect(r.warnings.filter((w) => w.code.startsWith("w-modelltest"))).toEqual([]);
-  });
+  }, 60000); // N-325: الشجرة تكبر — مهلة 5s عامة لا تكفي هذا الفحص الثقيل (أصل رعشة D491!)
 
   it("مفتاح متوازن: كل جزء Richtig/Falsch فيه الجوابان · مواضع mc3 موزعة (كلٌّ ≥3 من 11) · a وb كلاهما", () => {
     for (const p of [...parts("hoeren"), ...parts("lesen")].filter((x) => x.taskType === "richtig-falsch"))
