@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D499 (2026-11-26): b1-u12-d4 «محاكاة كتابة!» — 3 كلمات (Rechtschreibung/Stil/ueberarbeiten-الانفصال!) + قاعدتا النص والروابط! · الصفة بعد ist بلا تصريف! · الدفعة 453 · v7.45!
+- **الدفعة:** 453 · **الموجّه:** 7.45
+- **للقارئ:** يوم محاكاة الكتابة! — **3 كلمات**: die Rechtschreibung (die!) · der Stil (die Stile!) · **überarbeiten** (arbeitet über/arbeitete über/hat überarbeitet — منفصل!) + مراجعة بنية النص (Entwurf! Einleitung! Hauptteil! Schluss!) وأفعال الكتابة (formulieren! korrigieren! verbessern!) وقاعدة ars-vortragstext + ars-konnektoren. المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).
+- **بطاقة قرار:** المحاكاة نص ثماني جُمل من المسودة للخاتمة! · überarbeiten منفصل (arbeitet … über!) · الصفة بعد ist مجرّدة (richtig — لا richtigen!) — بطاقة جديدة للنحو العربي-الألماني! · التحقق الذاتي (N-328!) نجح من أول مرة (بلا كلمات مفقودة!).
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2946/0/0 ✓** · build ✓
+- **التالي:** b1-u12-d5 «مراجعة 3 + ثقافة» ثم d6 توليف · d7 معركة B1 مصغّرة!
+
 ## D498 (2026-11-26): b1-u12-d3 «محاكاة كلام!» — 3 كلمات (fließend/Aussprache/spontan!) + قاعدتا العرض والأسئلة! · كلمات ادّعيت تعليمها (Mut/Sprecher/Klarheit!) وخطأ إملائي ANTORTET (N-328!) · الدفعة 452 · v7.44!
 - **الدفعة:** 452 · **الموجّه:** 7.44
 - **للقارئ:** يوم محاكاة الكلام! — **3 كلمات**: fließend (ببطولة!) · die Aussprache (die Aussprachen!) · spontan (عفوياً!) + مراجعة أفعال الكلام (sprechen/antworten/erzählen/beschreiben!) وجودته (Ausdruck/Betonung!) وقواعد العرض والأسئلة. المحطات 15 وcheck-lesson **0/0/0** (50 سطراً).

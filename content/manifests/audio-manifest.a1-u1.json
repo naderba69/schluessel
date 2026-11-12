@@ -44989,6 +44989,66 @@
       "rmsDb": -17.06
     },
     {
+      "id": "word-rechtschreibung",
+      "file": "words/audio/de-DE/word-rechtschreibung.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Rechtschreibung.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u12-d4"
+      ],
+      "durationMs": 1280,
+      "sizeBytes": 6000,
+      "hash": "sha256:b4e37d44b8ae10752a848f16696d10bbbc0480e3f5353d4d7aeda093d194ccd5",
+      "pcmSha256": "27867a5eddb725e25c35dad9ea4281c1e87f891ee90a2e92aec2f144f89a0e43",
+      "rmsDb": -17.11
+    },
+    {
+      "id": "word-stil",
+      "file": "words/audio/de-DE/word-stil.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Stil.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u12-d4"
+      ],
+      "durationMs": 1164,
+      "sizeBytes": 5103,
+      "hash": "sha256:5198d897541a6ce7a5f6a29a875996efd1ff89e79ebe4c79765ad668f18967eb",
+      "pcmSha256": "478ea8cbbc7782795d75d1ea793878523e97b530447027f3b2d6c37956dc067d",
+      "rmsDb": -17
+    },
+    {
+      "id": "word-ueberarbeiten",
+      "file": "words/audio/de-DE/word-ueberarbeiten.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "überarbeiten.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u12-d4"
+      ],
+      "durationMs": 1094,
+      "sizeBytes": 5293,
+      "hash": "sha256:a0e8f8bb62c21938593ce5414b7672d85e2ca01cf5c82179256545b704fed9ac",
+      "pcmSha256": "f8dde7308ebbcc8d6e46582bfde83d50817b79db334cebc027e1ba5c0fedaff7",
+      "rmsDb": -17.06
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",

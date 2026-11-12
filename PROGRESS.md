@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 453 (2026-11-26) — D499: b1-u12-d4 «محاكاة كتابة!» — 3 كلمات (Rechtschreibung/Stil/ueberarbeiten-الانفصال!) + قاعدتا النص والروابط! · الصفة بعد ist بلا تصريف! · الدفعة 453 · v7.45!
+- **الخلاصة:** يوم محاكاة الكتابة! — **3 كلمات**: die Rechtschreibung (die!) · der Stil (die Stile!) · **überarbeiten** (arbeitet über/arbeitete über/hat überarbeitet — منفصل!) + مراجعة بنية النص (Entwurf! Einleitung! Hauptteil! Schluss!) وأفعال الكتابة (formulieren! korrigieren! verbessern!) وقاعدة ars-vortragstext + ars-konnektoren. المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).
+- **التالي:** b1-u12-d5 «مراجعة 3 + ثقافة» ثم d6 توليف · d7 معركة B1 مصغّرة!
+
 ## الدفعة 452 (2026-11-26) — D498: b1-u12-d3 «محاكاة كلام!» — 3 كلمات (fließend/Aussprache/spontan!) + قاعدتا العرض والأسئلة! · كلمات ادّعيت تعليمها (Mut/Sprecher/Klarheit!) وخطأ إملائي ANTORTET (N-328!) · الدفعة 452 · v7.44!
 - **الخلاصة:** يوم محاكاة الكلام! — **3 كلمات**: fließend (ببطولة!) · die Aussprache (die Aussprachen!) · spontan (عفوياً!) + مراجعة أفعال الكلام (sprechen/antworten/erzählen/beschreiben!) وجودته (Ausdruck/Betonung!) وقواعد العرض والأسئلة. المحطات 15 وcheck-lesson **0/0/0** (50 سطراً).
 - **التالي:** b1-u12-d4 «محاكاة كتابة» ثم d5 مراجعة 3 + ثقافة · d6 توليف · d7 معركة B1 مصغّرة!
