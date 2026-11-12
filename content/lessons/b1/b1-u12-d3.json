@@ -1,0 +1,429 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u12-d3",
+  "level": "B1",
+  "unit": 12,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Er spricht fließend — und die Aussprache ist klar!",
+    "ar": "يوم محاكاة الكلام! (بطولة! نطق! عفوية!) — الوحدة 12: التكامل!"
+  },
+  "canDoDaily": [
+    "يتحدث بطلاقة وبنطق واضح! (fließend sprechen! die Aussprache üben!)",
+    "يجيب عفوياً في المحادثة! (spontan antworten!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "zeitplan",
+      "einteilen",
+      "disziplin"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«النطق واضح.»؟"
+        },
+        "choices": [
+          "Die Aussprache ist klar.",
+          "Der Aussprache ist klar.",
+          "Das Aussprache ist klar."
+        ],
+        "answer": "Die Aussprache ist klar.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«هو يتحدث بطلاقة.»؟ (المرتبة الثانية!)"
+        },
+        "choices": [
+          "Er spricht fließend.",
+          "Er fließend spricht.",
+          "Fließend er spricht."
+        ],
+        "answer": "Er spricht fließend.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "fliessend",
+      "aussprache",
+      "spontan"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order",
+      "adjektiv"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Er spricht fließend und die Aussprache ist klar!",
+        "ar": "يجري محاكاة كلام (٣ دقائق!): وصف + رأي + خاتمة!"
+      },
+      "situation": {
+        "de": "Drei Minuten, ein Thema, freies Sprechen.",
+        "ar": "ثلاث دقائق! موضوع واحد! كلام حرّ! (محاكاة الكلام!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في المحاكاة!",
+        "المرتبة الثانية: Spontan ANTWORTET er!",
+        "مراجعة قواعد العرض والأسئلة! (Einleitung! Frage! Antwort!)",
+        "المفردات الثابتة: fließend sprechen! die Aussprache üben! spontan antworten!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "fließend! Aussprache! spontan!"
+        ],
+        "interleavedWith": [
+          "zeitplan",
+          "einteilen",
+          "disziplin"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "ببطولة",
+                "de": "fließend"
+              },
+              {
+                "ar": "النطق",
+                "de": "die Aussprache"
+              },
+              {
+                "ar": "عفوياً",
+                "de": "spontan"
+              }
+            ],
+            "why": "fließend ببطولة (صفة!) · die Aussprache النطق (die! die Aussprachen!) · spontan عفوياً (صفة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يتحدث",
+                "de": "sprechen"
+              },
+              {
+                "ar": "يجيب",
+                "de": "antworten"
+              },
+              {
+                "ar": "يروي",
+                "de": "erzählen"
+              },
+              {
+                "ar": "يصف",
+                "de": "beschreiben"
+              }
+            ],
+            "why": "مراجعة أفعال الكلام! sprechen يتحدث · antworten يجيب · erzählen يروي · beschreiben يصف"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الأداء",
+                "de": "der Ausdruck"
+              },
+              {
+                "ar": "التأكيد",
+                "de": "die Betonung"
+              },
+              {
+                "ar": "الراحة",
+                "de": "die Ruhe"
+              }
+            ],
+            "why": "مراجعة جودة الكلام! der Ausdruck الأداء (u10-d3!) · die Betonung التأكيد (u10-d3!) · die Ruhe الراحة (كلها مُدرَّسة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المستمعون",
+                "de": "das Publikum"
+              },
+              {
+                "ar": "الأمان",
+                "de": "die Sicherheit"
+              },
+              {
+                "ar": "الوقت",
+                "de": "die Zeit"
+              }
+            ],
+            "why": "المستمعون ثم الأمان ثم الوقت! das Publikum (u5-d6!) · die Sicherheit الأمان · die Zeit الوقت (كلها مُدرَّسة!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "محاكاة الكلام!"
+        ],
+        "interleavedWith": [
+          "fliessend",
+          "aussprache",
+          "spontan"
+        ],
+        "items": [
+          {
+            "q": "Er spricht ___. (ببطولة!)",
+            "a": "fließend",
+            "why": "fließend ببطولة (صفة/ظرف!) — er spricht fließend. (fließend sprechen!)"
+          },
+          {
+            "q": "Die ___ ist klar. (النطق!)",
+            "a": "Aussprache",
+            "why": "die Aussprache النطق (die!) — die Aussprache ist klar. (die Aussprache üben!)"
+          },
+          {
+            "q": "Er antwortet ___. (عفوياً!)",
+            "a": "spontan",
+            "why": "spontan عفوياً (ظرف!) — er antwortet spontan. (spontan antworten!)"
+          },
+          {
+            "q": "___ antwortet er die Frage. (عفوياً! الفعل ثانياً!)",
+            "a": "Spontan",
+            "why": "الظرف في الصدر ← الفعل ثانياً! Spontan ANTWORTET er! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "Er übt die ___ jeden Tag. (النطق!)",
+            "a": "Aussprache",
+            "why": "die Aussprache النطق (die!) — er übt die Aussprache jeden Tag. (مراجعة!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! المرتبة الثانية! النفي!"
+        ],
+        "interleavedWith": [
+          "sprechen",
+          "antworten",
+          "publikum"
+        ],
+        "items": [
+          {
+            "q": "~~der Aussprache ist klar~~",
+            "a": "die Aussprache ist klar",
+            "why": "die Aussprache النطق (die! مؤنث — لا der!)"
+          },
+          {
+            "q": "~~Spontan er antwortet.~~",
+            "a": "Spontan antwortet er.",
+            "why": "الظرف في الصدر ← الفعل ثانياً لا الضمير! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~Er spricht fließend nicht.~~",
+            "a": "Er spricht nicht fließend.",
+            "why": "nicht قبل المكمّل لا بعده! Er spricht NICHT fließend."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — المحاكاة كلام!",
+          "fließend! Aussprache! spontan!"
+        ],
+        "interleavedWith": [
+          "klar",
+          "deutlich",
+          "sicher"
+        ],
+        "items": [
+          {
+            "q": "افتح المحاكاة! (جملتان!)",
+            "a": "Die Aussprache ist klar. Er spricht fließend.",
+            "why": "الافتتاح بالجودة! (ars-praesentation — Einleitung!)"
+          },
+          {
+            "q": "عبّر عن رأيك عفوياً! (جملتان!)",
+            "a": "Spontan antwortet er. Die Antwort ist verständlich.",
+            "why": "العفوية ثم الوضوح! (spontan antworten! ars-fragerunde!)"
+          },
+          {
+            "q": "اختم المحاكاة! (جملتان!)",
+            "a": "Er spricht fließend. Die Aussprache ist gut.",
+            "why": "الخاتمة بالجودة! (Schluss!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«ببطولة»؟",
+            "a": "fließend"
+          },
+          {
+            "q": "«النطق»؟",
+            "a": "die Aussprache"
+          },
+          {
+            "q": "«عفوياً»؟",
+            "a": "spontan"
+          },
+          {
+            "q": "«يتحدث بطلاقة.»؟",
+            "a": "Er spricht fließend."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يجيب عفوياً.»؟",
+            "a": "Er antwortet spontan."
+          },
+          {
+            "q": "«الأداء»؟ (مراجعة!)",
+            "a": "der Ausdruck"
+          },
+          {
+            "q": "«التأكيد»؟ (مراجعة!)",
+            "a": "die Betonung"
+          },
+          {
+            "q": "«المستمعون»؟ (مراجعة!)",
+            "a": "das Publikum"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«عفوياً يجيب.»؟ (المرتبة الثانية!)",
+            "a": "Spontan antwortet er."
+          },
+          {
+            "q": "«يروي»؟ (مراجعة!)",
+            "a": "erzählen"
+          },
+          {
+            "q": "«الراحة»؟ (مراجعة!)",
+            "a": "die Ruhe"
+          },
+          {
+            "q": "«الأمان»؟ (مراجعة!)",
+            "a": "die Sicherheit"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Er spricht fließend und die Aussprache ist klar. Er antwortet spontan. Er spricht gut und erzählt gern. Er beschreibt die Situation und der Ausdruck ist deutlich. Die Betonung ist wichtig. Das Publikum hört zu und die Sicherheit ist da. Die Ruhe ist gut. Spontan antwortet er und die Antwort ist verständlich!",
+      "ar": "هو يتحدث ببطولة والنطق واضح. يجيب عفوياً. يتحدث جيداً ويسرد بسرور. يصف الموقف والأداء واضح. التأكيد مهم. المستمعون يصغون والأمان موجود. الراحة جيدة. عفوياً يجيب والإجابة مفهومة!"
+    },
+    "srsBundleWordIds": [
+      "fliessend",
+      "aussprache",
+      "spontan"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Aussprache!",
+          "de": "~~der Aussprache ist klar~~"
+        },
+        "correct": {
+          "ar": "die Aussprache!",
+          "de": "die Aussprache ist klar"
+        },
+        "exercise": {
+          "q": "___ Aussprache ist klar.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «النطق» مذكّر! والألمانية: die Aussprache مؤنثة (die!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الضمير قبل الفعل بعد الظرف!",
+          "de": "~~Spontan er antwortet.~~"
+        },
+        "correct": {
+          "ar": "الفعل ثانياً: Spontan antwortet er!",
+          "de": "Spontan antwortet er."
+        },
+        "exercise": {
+          "q": "Spontan ___ er.",
+          "a": "antwortet"
+        },
+        "whyArabicSpeakerFails": "العربية: «عفوياً هو يجيب» — الضمير بعد الظرف! والألمانية: الفعل في المرتبة الثانية (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "nicht بعد المكمّل!",
+          "de": "~~Er spricht fließend nicht.~~"
+        },
+        "correct": {
+          "ar": "nicht قبل المكمّل!",
+          "de": "Er spricht nicht fließend."
+        },
+        "exercise": {
+          "q": "Er spricht ___ fließend.",
+          "a": "nicht"
+        },
+        "whyArabicSpeakerFails": "العربية: «يتحدث بطلاقة لا» — النفي آخر! والألمانية: nicht قبل المكمّل (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/fliessend",
+      "https://www.duden.de/rechtschreibung/Aussprache",
+      "https://www.duden.de/rechtschreibung/spontan"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-fliessend",
+    "word-aussprache",
+    "word-spontan"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 12: التكامل — محاكاة كلام)",
+    "goetheWordListOverlap": [
+      "fliessend",
+      "aussprache",
+      "spontan"
+    ]
+  }
+}

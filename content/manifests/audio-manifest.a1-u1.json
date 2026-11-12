@@ -44929,6 +44929,66 @@
       "rmsDb": -17.03
     },
     {
+      "id": "word-fliessend",
+      "file": "words/audio/de-DE/word-fliessend.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "fließend.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u12-d3"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4590,
+      "hash": "sha256:271d4905bff27503cefd399b55147a6cca7bd80ed04eab511d6846518abf9644",
+      "pcmSha256": "3866df83f297454bc6d43cd089e3d256d821fa71dd192a1db30e2d0196bf924b",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "word-aussprache",
+      "file": "words/audio/de-DE/word-aussprache.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Aussprache.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u12-d3"
+      ],
+      "durationMs": 1164,
+      "sizeBytes": 5550,
+      "hash": "sha256:7af7fe0913f9cc8bb7e6cb2c00dddff036ae02ef7756d807ed06002b376a6171",
+      "pcmSha256": "641eba7b611a5e151aad883d55fe0c2be57fb75d48e9258b449ae0476f38e74f",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "word-spontan",
+      "file": "words/audio/de-DE/word-spontan.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "spontan.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u12-d3"
+      ],
+      "durationMs": 1106,
+      "sizeBytes": 5163,
+      "hash": "sha256:d0a4ad5cd54efe1e495a25c097e16f0b2afd30d96ec45e0bf8f478e75770d3fc",
+      "pcmSha256": "502751d802c337f9cc6f9a428d464ef719d48200dac2ac456144dfb987a98a03",
+      "rmsDb": -17.06
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",

@@ -2635,6 +2635,9 @@ def build_all() -> None:
     ("word-zeitplan", "der Zeitplan.", "zeitplan", ["b1-u12-d2"]),
     ("word-einteilen", "einteilen.", "einteilen", ["b1-u12-d2"]),
     ("word-disziplin", "die Disziplin.", "disziplin", ["b1-u12-d2"]),
+    ("word-fliessend", "fließend.", "fliessend", ["b1-u12-d3"]),
+    ("word-aussprache", "die Aussprache.", "aussprache", ["b1-u12-d3"]),
+    ("word-spontan", "spontan.", "spontan", ["b1-u12-d3"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

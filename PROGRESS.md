@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 452 (2026-11-26) — D498: b1-u12-d3 «محاكاة كلام!» — 3 كلمات (fließend/Aussprache/spontan!) + قاعدتا العرض والأسئلة! · كلمات ادّعيت تعليمها (Mut/Sprecher/Klarheit!) وخطأ إملائي ANTORTET (N-328!) · الدفعة 452 · v7.44!
+- **الخلاصة:** يوم محاكاة الكلام! — **3 كلمات**: fließend (ببطولة!) · die Aussprache (die Aussprachen!) · spontan (عفوياً!) + مراجعة أفعال الكلام (sprechen/antworten/erzählen/beschreiben!) وجودته (Ausdruck/Betonung!) وقواعد العرض والأسئلة. المحطات 15 وcheck-lesson **0/0/0** (50 سطراً).
+- **التالي:** b1-u12-d4 «محاكاة كتابة» ثم d5 مراجعة 3 + ثقافة · d6 توليف · d7 معركة B1 مصغّرة!
+
 ## الدفعة 451 (2026-11-26) — D497: b1-u12-d2 «مراجعة 2 + إدارة وقت (٥٠٪)!» — 3 كلمات (Zeitplan/einteilen-الانفصال/Disziplin!) + قواعد الوحدة الأولى (TeKaMoLo/obwohl!) · error-hunt كان بطاقات مصيدة فصار أخطاء حقيقية (N-327!) · الدفعة 451 · v7.43!
 - **الخلاصة:** يوم المراجعة الثانية + إدارة الوقت! — **3 كلمات**: der Zeitplan (die Zeitpläne — بمدّة!) · **einteilen** (teilt ein/teilte ein/hat eingeteilt — منفصل!) · die Disziplin + مراجعة الكلمات الزمنية (pünktlich! rechtzeitig! Reihenfolge! Uhr/Minute/Stunde!) وقواعد الوحدة الأولى (TeKaMoLo! obwohl!). المحطات 15 وcheck-lesson **0/0/0** (49 سطراً).
 - **التالي:** b1-u12-d3 «محاكاة كلام» ثم d4 محاكاة كتابة · d5 مراجعة 3 + ثقافة · d6 توليف · d7 معركة B1 مصغّرة!

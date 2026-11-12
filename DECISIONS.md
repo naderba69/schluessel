@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D498 (2026-11-26): b1-u12-d3 «محاكاة كلام!» — 3 كلمات (fließend/Aussprache/spontan!) + قاعدتا العرض والأسئلة! · كلمات ادّعيت تعليمها (Mut/Sprecher/Klarheit!) وخطأ إملائي ANTORTET (N-328!) · الدفعة 452 · v7.44!
+- **الدفعة:** 452 · **الموجّه:** 7.44
+- **للقارئ:** يوم محاكاة الكلام! — **3 كلمات**: fließend (ببطولة!) · die Aussprache (die Aussprachen!) · spontan (عفوياً!) + مراجعة أفعال الكلام (sprechen/antworten/erzählen/beschreiben!) وجودته (Ausdruck/Betonung!) وقواعد العرض والأسئلة. المحطات 15 وcheck-lesson **0/0/0** (50 سطراً).
+- **بطاقة قرار:** المحاكاة ثلاث دقائق كلام حرّ! · «Mut» و«Sprecher» و«Klarheit» ادّعيت أنها مُدرَّسة فلم تكن (تحقّق ذاتي قبل البناء! N-328!) ← Ruhe/Publikum/Sicherheit المُدرَّسة · «ANTORTET» خطأ إملائي قرأه الكاشف كلمة مجهولة (N-328!) · مفردات ثابتة: fließend sprechen! die Aussprache üben! spontan antworten!
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2942/0/0 ✓** · build ✓
+- **التالي:** b1-u12-d4 «محاكاة كتابة» ثم d5 مراجعة 3 + ثقافة · d6 توليف · d7 معركة B1 مصغّرة!
+
 ## D497 (2026-11-26): b1-u12-d2 «مراجعة 2 + إدارة وقت (٥٠٪)!» — 3 كلمات (Zeitplan/einteilen-الانفصال/Disziplin!) + قواعد الوحدة الأولى (TeKaMoLo/obwohl!) · error-hunt كان بطاقات مصيدة فصار أخطاء حقيقية (N-327!) · الدفعة 451 · v7.43!
 - **الدفعة:** 451 · **الموجّه:** 7.43
 - **للقارئ:** يوم المراجعة الثانية + إدارة الوقت! — **3 كلمات**: der Zeitplan (die Zeitpläne — بمدّة!) · **einteilen** (teilt ein/teilte ein/hat eingeteilt — منفصل!) · die Disziplin + مراجعة الكلمات الزمنية (pünktlich! rechtzeitig! Reihenfolge! Uhr/Minute/Stunde!) وقواعد الوحدة الأولى (TeKaMoLo! obwohl!). المحطات 15 وcheck-lesson **0/0/0** (49 سطراً).
