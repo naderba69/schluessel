@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 454 (2026-11-26) — D500: b1-u12-d5 «مراجعة 3 + ثقافة!» — 3 كلمات (Anerkennung/nachweisen/benoten!) + بطاقة الثقافة b1-landeskunde-u12 (جوته وأوسد!) + قاعدتا das والتهذيب! · أخطاء اصطناعية في التنبيهات وأعلام خارج المخطط (N-329..N-332!) · الدفعة 454 · v7.46!
+- **الخلاصة:** يوم المراجعة الثالثة والثقافة! — **3 كلمات**: die Anerkennung (die!) · **nachweisen** (weist nach/wies nach/hat nachgewiesen — منفصل!) · **benoten** (be- بلا ge-: hat benotet!) + بطاقات الثقافة b1-landeskunde-u12 (معهد جوته وأوسد!) + مراجعة كلمات الثقافة والرحلة. المحطات 16 وcheck-lesson **0/0/0** (54 سطراً).
+- **التالي:** b1-u12-d6 «توليف» ثم d7 معركة B1 مصغّرة! (نهاية الوحدة 12!)
+
 ## الدفعة 453 (2026-11-26) — D499: b1-u12-d4 «محاكاة كتابة!» — 3 كلمات (Rechtschreibung/Stil/ueberarbeiten-الانفصال!) + قاعدتا النص والروابط! · الصفة بعد ist بلا تصريف! · الدفعة 453 · v7.45!
 - **الخلاصة:** يوم محاكاة الكتابة! — **3 كلمات**: die Rechtschreibung (die!) · der Stil (die Stile!) · **überarbeiten** (arbeitet über/arbeitete über/hat überarbeitet — منفصل!) + مراجعة بنية النص (Entwurf! Einleitung! Hauptteil! Schluss!) وأفعال الكتابة (formulieren! korrigieren! verbessern!) وقاعدة ars-vortragstext + ars-konnektoren. المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).
 - **التالي:** b1-u12-d5 «مراجعة 3 + ثقافة» ثم d6 توليف · d7 معركة B1 مصغّرة!

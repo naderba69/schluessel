@@ -2641,6 +2641,9 @@ def build_all() -> None:
     ("word-rechtschreibung", "die Rechtschreibung.", "rechtschreibung", ["b1-u12-d4"]),
     ("word-stil", "der Stil.", "stil", ["b1-u12-d4"]),
     ("word-ueberarbeiten", "überarbeiten.", "ueberarbeiten", ["b1-u12-d4"]),
+    ("word-anerkennung", "die Anerkennung.", "anerkennung", ["b1-u12-d5"]),
+    ("word-nachweisen", "nachweisen.", "nachweisen", ["b1-u12-d5"]),
+    ("word-benoten", "benoten.", "benoten", ["b1-u12-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

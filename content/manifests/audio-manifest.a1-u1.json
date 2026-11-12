@@ -45049,6 +45049,66 @@
       "rmsDb": -17.06
     },
     {
+      "id": "word-anerkennung",
+      "file": "words/audio/de-DE/word-anerkennung.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Anerkennung.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u12-d5"
+      ],
+      "durationMs": 1106,
+      "sizeBytes": 5378,
+      "hash": "sha256:8a370b9b25a31ec99b76063a852a2ab90b63c3d9d25ff7e87d365d7d379c37c4",
+      "pcmSha256": "28bd1171359e7dbf7fc44008b47396035d02efbbcac9d401faf307622ecdac6c",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "word-nachweisen",
+      "file": "words/audio/de-DE/word-nachweisen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "nachweisen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u12-d5"
+      ],
+      "durationMs": 1175,
+      "sizeBytes": 5587,
+      "hash": "sha256:6f11aff1da90af5e3689bef8f4467618e65e99a4f6861bb2ae638c790fd6a824",
+      "pcmSha256": "c76efb65489fa7c83930343e55d8d2e7df6610b2cac31a9fa7f620b347b6885a",
+      "rmsDb": -17.12
+    },
+    {
+      "id": "word-benoten",
+      "file": "words/audio/de-DE/word-benoten.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "benoten.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u12-d5"
+      ],
+      "durationMs": 862,
+      "sizeBytes": 4169,
+      "hash": "sha256:316dceef4dfbd2514be3b6d0562eccc8ecad418116541aaeaba77cbbf10a6308",
+      "pcmSha256": "262801ae1e797a1a3735c31ccb329f5ac9cc60e2b141003e2afbd56f5076c947",
+      "rmsDb": -16.97
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
