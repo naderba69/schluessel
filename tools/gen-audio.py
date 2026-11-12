@@ -2646,6 +2646,9 @@ def build_all() -> None:
     ("word-benoten", "benoten.", "benoten", ["b1-u12-d5"]),
     ("word-rueckblick", "der Rückblick.", "rueckblick", ["b1-u12-d6"]),
     ("word-ausblick", "der Ausblick.", "ausblick", ["b1-u12-d6"]),
+    ("word-merkmal", "das Merkmal.", "merkmal", ["b1-u13-d1"]),
+    ("word-erkennen", "erkennen.", "erkennen", ["b1-u13-d1"]),
+    ("word-auswendig", "auswendig.", "auswendig", ["b1-u13-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

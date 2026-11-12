@@ -1,0 +1,437 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u13-d1",
+  "level": "B1",
+  "unit": 13,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Das Merkmal ist wichtig — und der Fehler ist weg!",
+    "ar": "الوحدة 13: التكثيف! يوم نقاط الضعف — ميزان الأدوات والتصريف! (السمة المميزة! التعرّف على الخطأ! الحفظ!)"
+  },
+  "canDoDaily": [
+    "يعرّف السمة المميزة للأداة ويتجنّب الخطأ! (das Merkmal erkennen! den Fehler erkennen!)",
+    "يحفظ القاعدة عن ظهر قلب! (auswendig lernen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "rueckblick",
+      "ausblick"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«السمة المميزة مهمة.»؟"
+        },
+        "choices": [
+          "Das Merkmal ist wichtig.",
+          "Der Merkmal ist wichtig.",
+          "Die Merkmal ist wichtig."
+        ],
+        "answer": "Das Merkmal ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«هي تتعلّم عن ظهر قلب.»؟"
+        },
+        "choices": [
+          "Sie lernt auswendig.",
+          "Sie lernen auswendig.",
+          "Er lernt auswendig."
+        ],
+        "answer": "Sie lernt auswendig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "merkmal",
+      "erkennen",
+      "auswendig"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-adjektiv-gemischt",
+      "ars-tekamolo-voll"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "untrennbar",
+      "ig-ending"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Das Merkmal ist wichtig und der Fehler ist weg!",
+        "ar": "يكشف نقاط الضعف ويصلحها: الأداة! التصريف! الترتيب!"
+      },
+      "situation": {
+        "de": "Drei Merkmale, drei Fehler, drei Regeln.",
+        "ar": "ثلاث سمات! ثلاثة أخطاء! ثلاثة تصحيحات! (تكثيف!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الأداة تتبع الميزان لا الترجمة: das Merkmal (das! لا der!)",
+        "البادئة er- لا تنفصل أبداً: erkennt — لا kennt … er!",
+        "المفردات الثابتة: das Merkmal erkennen! den Fehler erkennen! auswendig lernen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Merkmal! erkennen! auswendig!"
+        ],
+        "interleavedWith": [
+          "rueckblick",
+          "ausblick",
+          "wichtig"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "السمة المميزة",
+                "de": "das Merkmal"
+              },
+              {
+                "ar": "يتعرّف على",
+                "de": "erkennen"
+              },
+              {
+                "ar": "عن ظهر قلب",
+                "de": "auswendig"
+              }
+            ],
+            "why": "das Merkmal السمة (das! die Merkmale!) · erkennen يتعرّف (er- لا تنفصل! hat erkannt!) · auswendig عن ظهر قلب (ظرف بلا تصريف!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الخطأ",
+                "de": "der Fehler"
+              },
+              {
+                "ar": "القاعدة",
+                "de": "die Regel"
+              },
+              {
+                "ar": "الصحيح",
+                "de": "richtig"
+              },
+              {
+                "ar": "الخطأ (شيء)",
+                "de": "falsch"
+              }
+            ],
+            "why": "مراجعة ميزان الأدوات! der Fehler (der!) · die Regel (die!) · richtig/falsch (صفتان بعد ist بلا تصريف!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "البطيء",
+                "de": "langsam"
+              },
+              {
+                "ar": "السريع",
+                "de": "schnell"
+              },
+              {
+                "ar": "بوضوح",
+                "de": "deutlich"
+              }
+            ],
+            "why": "مراجعة أدوات السرعة والوضوح! langsam · schnell · deutlich"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يفهم",
+                "de": "verstehen"
+              },
+              {
+                "ar": "يكرر",
+                "de": "wiederholen"
+              },
+              {
+                "ar": "يلاحظ",
+                "de": "merken"
+              },
+              {
+                "ar": "يتجنّب",
+                "de": "vermeiden"
+              }
+            ],
+            "why": "مراجعة أدوات التكثيف! verstehen يفهم · wiederholen يكرر · merken يلاحظ · vermeiden يتجنّب"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "ميزان الأدوات والتصريف!"
+        ],
+        "interleavedWith": [
+          "merkmal",
+          "erkennen",
+          "auswendig"
+        ],
+        "items": [
+          {
+            "q": "Das ___ ist wichtig. (السمة المميزة!)",
+            "a": "Merkmal",
+            "why": "das Merkmal السمة (das!) — das Merkmal ist wichtig."
+          },
+          {
+            "q": "Er ___ den Fehler. (يتعرّف!)",
+            "a": "erkennt",
+            "why": "erkennen يتعرّف (er- لا تنفصل!) — er erkennt den Fehler. (hat erkannt!)"
+          },
+          {
+            "q": "Sie lernt ___. (عن ظهر قلب!)",
+            "a": "auswendig",
+            "why": "auswendig ظرف بلا تصريف! — sie lernt auswendig. (auswendig lernen!)"
+          },
+          {
+            "q": "Die ___ zeigen das Merkmal. (السمات! الجمع!)",
+            "a": "Merkmale",
+            "why": "die Merkmale السمات (جمع -e!) — die Merkmale zeigen das Merkmal."
+          },
+          {
+            "q": "Er ___ die Regel. (يكرر! مراجعة!)",
+            "a": "wiederholt",
+            "why": "wiederholen يكرر (hat wiederholt!) — er wiederholt die Regel. (التكثيف!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الجمع! البادئة!"
+        ],
+        "interleavedWith": [
+          "regel",
+          "beispiel",
+          "richtig"
+        ],
+        "items": [
+          {
+            "q": "~~Der Merkmal ist wichtig.~~",
+            "a": "Das Merkmal ist wichtig.",
+            "why": "das Merkmal السمة (das! محايد — لا der!)"
+          },
+          {
+            "q": "~~Die Merkmale ist wichtig.~~",
+            "a": "Das Merkmal ist wichtig.",
+            "why": "المفرد لا الجمع! das Merkmal (die Merkmale جمع!) — الجملة عن سمة واحدة!"
+          },
+          {
+            "q": "~~Er kennt den Fehler er.~~",
+            "a": "Er erkennt den Fehler.",
+            "why": "er- بادئة غير منفصلة! erkennen يبقى متصلاً: erkennt (لا kennt … er!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — التكثيف!",
+          "Merkmal! Fehler! Regel!"
+        ],
+        "interleavedWith": [
+          "trennen",
+          "vermeiden",
+          "merken"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالسمة! (جملتان!)",
+            "a": "Das Merkmal ist wichtig. Die Merkmale zeigen den Unterschied.",
+            "why": "السمة أولًا! (das Merkmal erkennen!)"
+          },
+          {
+            "q": "تكلّم عن الخطأ! (جملتان!)",
+            "a": "Er erkennt den Fehler. Der Fehler ist weg.",
+            "why": "التعرّف ثم الإصلاح! (den Fehler erkennen!)"
+          },
+          {
+            "q": "تكلّم عن القاعدة! (جملتان!)",
+            "a": "Die Regel ist richtig. Sie lernt die Regel auswendig.",
+            "why": "القاعدة ثم الحفظ! (auswendig lernen!)"
+          },
+          {
+            "q": "اختم بالتكثيف! (جملتان!)",
+            "a": "Er wiederholt die Regel. Er vermeidet den Fehler.",
+            "why": "التكرار ثم التجنّب! (التكثيف!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«السمة المميزة»؟",
+            "a": "das Merkmal"
+          },
+          {
+            "q": "«يتعرّف على الخطأ.»؟",
+            "a": "Er erkennt den Fehler."
+          },
+          {
+            "q": "«عن ظهر قلب»؟",
+            "a": "auswendig"
+          },
+          {
+            "q": "«السمات»؟ (الجمع!)",
+            "a": "die Merkmale"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«القاعدة»؟ (مراجعة!)",
+            "a": "die Regel"
+          },
+          {
+            "q": "«الصحيح»؟ (مراجعة!)",
+            "a": "richtig"
+          },
+          {
+            "q": "«الخطأ (شيء)»؟ (مراجعة!)",
+            "a": "falsch"
+          },
+          {
+            "q": "«يكرر القاعدة.»؟",
+            "a": "Er wiederholt die Regel."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يتجنّب الخطأ.»؟ (مراجعة!)",
+            "a": "Er vermeidet den Fehler."
+          },
+          {
+            "q": "«يلاحظ الخطأ.»؟ (مراجعة!)",
+            "a": "Er merkt den Fehler."
+          },
+          {
+            "q": "«البطيء»؟ (مراجعة!)",
+            "a": "langsam"
+          },
+          {
+            "q": "«يتعلّم عن ظهر قلب.»؟ (المفردة الثابتة!)",
+            "a": "Er lernt auswendig."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Das Merkmal ist wichtig und die Merkmale zeigen den Unterschied. Er erkennt den Fehler und der Fehler ist weg. Die Regel ist richtig und sie lernt die Regel auswendig. Er wiederholt die Regel und vermeidet den Fehler. Langsam ist gut und schnell ist auch gut. Deutlich ist wichtig!",
+      "ar": "السمة المميزة مهمة والسمات تُظهر الفرق. هو يتعرّف على الخطأ والخطأ يختفي. القاعدة صحيحة وهي تحفظ القاعدة عن ظهر قلب. هو يكرر القاعدة ويتجنّب الخطأ. البطيء جيد والسريع جيد أيضاً. الوضوح مهم!"
+    },
+    "srsBundleWordIds": [
+      "merkmal",
+      "erkennen",
+      "auswendig"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Merkmal!",
+          "de": "~~Der Merkmal ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "das Merkmal!",
+          "de": "Das Merkmal ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Merkmal ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «السمة» مؤنثة! والألمانية: das Merkmal محايد (das!) — أصل المركب neutrum (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الجمع بدل المفرد!",
+          "de": "~~Die Merkmale ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "المفرد: das Merkmal!",
+          "de": "Das Merkmal ist wichtig."
+        },
+        "exercise": {
+          "q": "Das ___ ist wichtig. (المفرد!)",
+          "a": "Merkmal"
+        },
+        "whyArabicSpeakerFails": "العربية: «السمات» جمع شائع! والألمانية: الجملة عن سمة واحدة — das Merkmal (die Merkmale جمع!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "er- تُنفصل!",
+          "de": "~~Er kennt den Fehler er.~~"
+        },
+        "correct": {
+          "ar": "لا تنفصل: er erkennt!",
+          "de": "Er erkennt den Fehler."
+        },
+        "exercise": {
+          "q": "Er ___ den Fehler. (يتعرّف!)",
+          "a": "erkennt"
+        },
+        "whyArabicSpeakerFails": "العربية: «يتعرّف» فعل واحد! والألمانية: البادئة er- غير منفصلة أبداً (erkennt — لا kennt … er!) — خلاف nach/weist (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Merkmal",
+      "https://www.duden.de/rechtschreibung/erkennen",
+      "https://www.duden.de/rechtschreibung/auswendig"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-adjektiv-gemischt",
+    "ars-tekamolo-voll"
+  ],
+  "audioManifestRefs": [
+    "word-merkmal",
+    "word-erkennen",
+    "word-auswendig"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 13: التكثيف — نقاط الضعف!)",
+    "goetheWordListOverlap": [
+      "merkmal",
+      "erkennen",
+      "auswendig"
+    ]
+  }
+}
