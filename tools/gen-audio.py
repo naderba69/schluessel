@@ -2649,6 +2649,9 @@ def build_all() -> None:
     ("word-merkmal", "das Merkmal.", "merkmal", ["b1-u13-d1"]),
     ("word-erkennen", "erkennen.", "erkennen", ["b1-u13-d1"]),
     ("word-auswendig", "auswendig.", "auswendig", ["b1-u13-d1"]),
+    ("word-logisch", "logisch.", "logisch", ["b1-u13-d2"]),
+    ("word-zusammenhang", "der Zusammenhang.", "zusammenhang", ["b1-u13-d2"]),
+    ("word-bedingung", "die Bedingung.", "bedingung", ["b1-u13-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
