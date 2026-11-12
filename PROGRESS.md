@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 451 (2026-11-26) — D497: b1-u12-d2 «مراجعة 2 + إدارة وقت (٥٠٪)!» — 3 كلمات (Zeitplan/einteilen-الانفصال/Disziplin!) + قواعد الوحدة الأولى (TeKaMoLo/obwohl!) · error-hunt كان بطاقات مصيدة فصار أخطاء حقيقية (N-327!) · الدفعة 451 · v7.43!
+- **الخلاصة:** يوم المراجعة الثانية + إدارة الوقت! — **3 كلمات**: der Zeitplan (die Zeitpläne — بمدّة!) · **einteilen** (teilt ein/teilte ein/hat eingeteilt — منفصل!) · die Disziplin + مراجعة الكلمات الزمنية (pünktlich! rechtzeitig! Reihenfolge! Uhr/Minute/Stunde!) وقواعد الوحدة الأولى (TeKaMoLo! obwohl!). المحطات 15 وcheck-lesson **0/0/0** (49 سطراً).
+- **التالي:** b1-u12-d3 «محاكاة كلام» ثم d4 محاكاة كتابة · d5 مراجعة 3 + ثقافة · d6 توليف · d7 معركة B1 مصغّرة!
+
 ## الدفعة 450 (2026-11-26) — D496: b1-u12-d1 «مراجعة 1 — الكلمات المتراكمة!» — الوحدة 12 (الأخيرة!) تبدأ! + 3 كلمات (Wortschatz/Zertifikat/Konzentration!) + روابط الوحدة الأولى (deshalb/trotzdem!) · «Einheiten» تكرار N-324 (N-326!) · نقلة battle-u11: null ← b1-u12-d1! · الدفعة 450 · v7.42!
 - **الخلاصة:** يوم المراجعة الأولى! — **3 كلمات**: der Wortschatz (die Wortschätze — بمدّة!) · das Zertifikat · die Konzentration + مراجعة ١٥ كلمة متراكمة من وحدات سابقة (Weg/Arbeit/Schule/Zeit/Gesundheit/Wohnung/Reise/Geld/Sicherheit/Ergebnis/Niveau!) وروابط الوحدة الأولى (deshalb/trotzdem — المرتبة الثانية!). المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).
 - **التالي:** b1-u12-d2 «مراجعة 2 + إدارة الوقت (٥٠٪)» ثم d3 محاكاة كلام · d4 محاكاة كتابة · d5 مراجعة 3 + ثقافة · d6 توليف · d7 معركة B1 مصغّرة!

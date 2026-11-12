@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D497 (2026-11-26): b1-u12-d2 «مراجعة 2 + إدارة وقت (٥٠٪)!» — 3 كلمات (Zeitplan/einteilen-الانفصال/Disziplin!) + قواعد الوحدة الأولى (TeKaMoLo/obwohl!) · error-hunt كان بطاقات مصيدة فصار أخطاء حقيقية (N-327!) · الدفعة 451 · v7.43!
+- **الدفعة:** 451 · **الموجّه:** 7.43
+- **للقارئ:** يوم المراجعة الثانية + إدارة الوقت! — **3 كلمات**: der Zeitplan (die Zeitpläne — بمدّة!) · **einteilen** (teilt ein/teilte ein/hat eingeteilt — منفصل!) · die Disziplin + مراجعة الكلمات الزمنية (pünktlich! rechtzeitig! Reihenfolge! Uhr/Minute/Stunde!) وقواعد الوحدة الأولى (TeKaMoLo! obwohl!). المحطات 15 وcheck-lesson **0/0/0** (49 سطراً).
+- **بطاقة قرار:** إدارة الوقت بالامتحان: الجدول ثم التقسيم ثم الانضباط! · einteilen منفصل (teilt … ein!) · محطات الكشف كانت بطاقات مصيدة («لا خطأ هنا!») فخالفت النمط (error-hunt = أخطاء البطاقات!) فأُصلحت قبل الفحص (N-327!) · مفردات ثابتة: den Zeitplan machen! die Zeit einteilen! Disziplin zeigen!
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2938/0/0 ✓** · build ✓
+- **التالي:** b1-u12-d3 «محاكاة كلام» ثم d4 محاكاة كتابة · d5 مراجعة 3 + ثقافة · d6 توليف · d7 معركة B1 مصغّرة!
+
 ## D496 (2026-11-26): b1-u12-d1 «مراجعة 1 — الكلمات المتراكمة!» — الوحدة 12 (الأخيرة!) تبدأ! + 3 كلمات (Wortschatz/Zertifikat/Konzentration!) + روابط الوحدة الأولى (deshalb/trotzdem!) · «Einheiten» تكرار N-324 (N-326!) · نقلة battle-u11: null ← b1-u12-d1! · الدفعة 450 · v7.42!
 - **الدفعة:** 450 · **الموجّه:** 7.42
 - **للقارئ:** يوم المراجعة الأولى! — **3 كلمات**: der Wortschatz (die Wortschätze — بمدّة!) · das Zertifikat · die Konzentration + مراجعة ١٥ كلمة متراكمة من وحدات سابقة (Weg/Arbeit/Schule/Zeit/Gesundheit/Wohnung/Reise/Geld/Sicherheit/Ergebnis/Niveau!) وروابط الوحدة الأولى (deshalb/trotzdem — المرتبة الثانية!). المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).

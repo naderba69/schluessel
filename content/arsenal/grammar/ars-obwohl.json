@@ -1,1 +1,54 @@
-{"schemaVersion":"1.0.0","constitutionSection":"10‑ي","id":"ars-obwohl","kind":"shufra","title":{"ar":"رغم أن — علّل موقفك!","de":"obwohl — die Position begründen"},"payload":{"topicAr":"العمل: يبرّر موقفه في النقاش","sceneAr":"نقاش العمل في الاجتماع: من يوافق؟ ومن يرفض؟ ولماذا؟","examples":[{"de":"Ich stimme zu, obwohl die Besprechung lang ist.","ar":"أوافق رغم أن الاجتماع طويل."},{"de":"Ich lehne das ab, obwohl ich zuständig bin.","ar":"أرفض ذلك رغم أنني المسؤول."},{"de":"Die Regel ist wichtig, deshalb stimme ich zu.","ar":"القاعدة مهمة، لذلك أوافق."}],"inferencePromptAr":"سمعت: «Ich stimme zu, obwohl die Besprechung lang ist.» — أين الفعل في جملة obwohl؟ ومقارنة بجملة deshalb؟","ruleDe":"Ich stimme zu, obwohl die Besprechung lang ist. · Ich lehne das ab, obwohl ich zuständig bin.","ruleAr":"obwohl «رغم أن» تفتح جملة تابعة: المصرَّف آخراً! (مثل weil!) — والجملة الرئيسية تعود بعدها بفعلها ثانياً. بخلاف deshalb/trotzdem/denn التي تُبقي الفعل ثانياً في جملة مستقلة.","contrastAr":"العربية تخلط «وإن» مع «لكن» معاً («وإن كانت طويلة، لكنني أوافق») — والألمانية: obwohl واحدة كافية! لا obwohl + aber أبداً! (خريطة التداخل 10‑ي).","limitsAr":["aber لا يأتي مع obwohl أبداً — obwohl واحدة تكفي!","denn «فالـ» تُبقي الفعل ثانياً بلا انقلاب — بخلاف obwohl التي تؤجّل المصرَّف آخراً!","جملة obwohl يمكن أن تأتي أولاً: «Obwohl die Besprechung lang ist, stimme ich zu.» — والفعل آخراً في التابعة وحدها!"],"beads":["Ich","stimme","zu,","obwohl","die","Besprechung","lang","ist."],"properNouns":[]},"riskLevel":"red","levelIntroduced":"B1","usedInLessons":["b1-u1-d3"]}
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-obwohl",
+  "kind": "shufra",
+  "title": {
+    "ar": "رغم أن — علّل موقفك!",
+    "de": "obwohl — die Position begründen"
+  },
+  "payload": {
+    "topicAr": "العمل: يبرّر موقفه في النقاش",
+    "sceneAr": "نقاش العمل في الاجتماع: من يوافق؟ ومن يرفض؟ ولماذا؟",
+    "examples": [
+      {
+        "de": "Ich stimme zu, obwohl die Besprechung lang ist.",
+        "ar": "أوافق رغم أن الاجتماع طويل."
+      },
+      {
+        "de": "Ich lehne das ab, obwohl ich zuständig bin.",
+        "ar": "أرفض ذلك رغم أنني المسؤول."
+      },
+      {
+        "de": "Die Regel ist wichtig, deshalb stimme ich zu.",
+        "ar": "القاعدة مهمة، لذلك أوافق."
+      }
+    ],
+    "inferencePromptAr": "سمعت: «Ich stimme zu, obwohl die Besprechung lang ist.» — أين الفعل في جملة obwohl؟ ومقارنة بجملة deshalb؟",
+    "ruleDe": "Ich stimme zu, obwohl die Besprechung lang ist. · Ich lehne das ab, obwohl ich zuständig bin.",
+    "ruleAr": "obwohl «رغم أن» تفتح جملة تابعة: المصرَّف آخراً! (مثل weil!) — والجملة الرئيسية تعود بعدها بفعلها ثانياً. بخلاف deshalb/trotzdem/denn التي تُبقي الفعل ثانياً في جملة مستقلة.",
+    "contrastAr": "العربية تخلط «وإن» مع «لكن» معاً («وإن كانت طويلة، لكنني أوافق») — والألمانية: obwohl واحدة كافية! لا obwohl + aber أبداً! (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "aber لا يأتي مع obwohl أبداً — obwohl واحدة تكفي!",
+      "denn «فالـ» تُبقي الفعل ثانياً بلا انقلاب — بخلاف obwohl التي تؤجّل المصرَّف آخراً!",
+      "جملة obwohl يمكن أن تأتي أولاً: «Obwohl die Besprechung lang ist, stimme ich zu.» — والفعل آخراً في التابعة وحدها!"
+    ],
+    "beads": [
+      "Ich",
+      "stimme",
+      "zu,",
+      "obwohl",
+      "die",
+      "Besprechung",
+      "lang",
+      "ist."
+    ],
+    "properNouns": []
+  },
+  "riskLevel": "red",
+  "levelIntroduced": "B1",
+  "usedInLessons": [
+    "b1-u1-d3",
+    "b1-u12-d2"
+  ]
+}
