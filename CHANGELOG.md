@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-26 — الدفعة 455: D501 — b1-u12-d6 «توليف الرحلة!» — كلمتان (Rückblick/Ausblick!) + كل قواعد الرحلة التسع في نصٍّ واحد! · أزواج المطابقة ≥3 وشظية TEKAMOLO ثانية (N-333!) · الدفعة 455 · v7.47!
+يوم التوليف! — **كلمتان**: der Rückblick (die Rückblicke!) و der Ausblick (die Ausblicke!) — مركّبان من Blick! + كل خيوط الرحلة في نص واحد (الكلام والكتابة والثقافة والشهادة!) وكل قواعد الوحدة التسع (deshalb/trotzdem! obwohl! TEKAMOLO! dass! Konj II!). المحطات 16 وcheck-lesson **0/0/0** (52 سطراً).
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2954/0/0 ✓** · build ✓
+
 ## 2026-11-26 — الدفعة 454: D500 — b1-u12-d5 «مراجعة 3 + ثقافة!» — 3 كلمات (Anerkennung/nachweisen/benoten!) + بطاقة الثقافة b1-landeskunde-u12 (جوته وأوسد!) + قاعدتا das والتهذيب! · أخطاء اصطناعية في التنبيهات وأعلام خارج المخطط (N-329..N-332!) · الدفعة 454 · v7.46!
 يوم المراجعة الثالثة والثقافة! — **3 كلمات**: die Anerkennung (die!) · **nachweisen** (weist nach/wies nach/hat nachgewiesen — منفصل!) · **benoten** (be- بلا ge-: hat benotet!) + بطاقات الثقافة b1-landeskunde-u12 (معهد جوته وأوسد!) + مراجعة كلمات الثقافة والرحلة. المحطات 16 وcheck-lesson **0/0/0** (54 سطراً).
 - **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2951/0/0 ✓** · build ✓

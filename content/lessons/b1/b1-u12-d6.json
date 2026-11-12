@@ -1,0 +1,450 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u12-d6",
+  "level": "B1",
+  "unit": 12,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Rückblick ist gut — und der Ausblick ist klar!",
+    "ar": "يوم التوليف! (الاسترجاع والنظرة المستقبلية!) — الوحدة 12: التكامل! رحلة B1 تُختَم!"
+  },
+  "canDoDaily": [
+    "يلقي نظرة استرجاعية على رحلته! (einen Rückblick machen!)",
+    "يصف نظرته المستقبلية! (den Ausblick geben!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "anerkennung",
+      "nachweisen",
+      "benoten"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الاسترجاع جيد.»؟"
+        },
+        "choices": [
+          "Der Rückblick ist gut.",
+          "Die Rückblick ist gut.",
+          "Das Rückblick ist gut."
+        ],
+        "answer": "Der Rückblick ist gut.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«النظرة المستقبلية واضحة.»؟"
+        },
+        "choices": [
+          "Der Ausblick ist klar.",
+          "Die Ausblick ist klar.",
+          "Das Ausblick ist klar."
+        ],
+        "answer": "Der Ausblick ist klar.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "rueckblick",
+      "ausblick"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-deshalb-trotzdem",
+      "ars-konnektoren",
+      "ars-tekamolo-voll",
+      "ars-obwohl",
+      "ars-praesentation",
+      "ars-fragerunde",
+      "ars-vortragstext",
+      "ars-koennten-sie",
+      "ars-dass-satz"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "needs-ein"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Rückblick ist gut und der Ausblick ist klar!",
+        "ar": "يُلخّص رحلة B1 كاملة: الاسترجاع ثم النظرة المستقبلية!"
+      },
+      "situation": {
+        "de": "Rückblick auf die Reise — Ausblick auf den Weg.",
+        "ar": "استرجاع الرحلة — ونظرة إلى الطريق! (توليف!)"
+      },
+      "successCriteria": [
+        "كلمتا اليوم كلتاهما في الختام!",
+        "كل خيوط الرحلة في نص واحد: الكلام والكتابة والثقافة والشهادة!",
+        "المفردات الثابتة: einen Rückblick machen! den Ausblick geben!",
+        "قواعد الرحلة كلها تظهر: السبب والنتيجة! والتناقض! وترتيب الظرف! والجملة المُسبَّقة بالفعل!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمتا اليوم!",
+          "Rückblick! Ausblick!"
+        ],
+        "interleavedWith": [
+          "anerkennung",
+          "nachweisen",
+          "benoten"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الاسترجاع",
+                "de": "der Rückblick"
+              },
+              {
+                "ar": "النظرة المستقبلية",
+                "de": "der Ausblick"
+              },
+              {
+                "ar": "الطريق",
+                "de": "der Weg"
+              }
+            ],
+            "why": "der Rückblick الاسترجاع (der! die Rückblicke!) · der Ausblick النظرة المستقبلية (der! die Ausblicke!) — كلاهما مركّب من Blick! · der Weg الطريق (der!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يتحدث",
+                "de": "sprechen"
+              },
+              {
+                "ar": "يكتب",
+                "de": "schreiben"
+              },
+              {
+                "ar": "الإملاء",
+                "de": "die Rechtschreibung"
+              },
+              {
+                "ar": "الأسلوب",
+                "de": "der Stil"
+              }
+            ],
+            "why": "استرجاع المحاكاة! sprechen/schreiben (d3+d4!) · die Rechtschreibung · der Stil"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الشهادة",
+                "de": "das Zertifikat"
+              },
+              {
+                "ar": "الاعتراف",
+                "de": "die Anerkennung"
+              },
+              {
+                "ar": "الثقافة",
+                "de": "die Kultur"
+              },
+              {
+                "ar": "الخبرة",
+                "de": "die Erfahrung"
+              }
+            ],
+            "why": "استرجاع الثقافة والشهادة! (d5! b1-landeskunde-u12!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الامتحان",
+                "de": "die Prüfung"
+              },
+              {
+                "ar": "المستوى",
+                "de": "das Niveau"
+              },
+              {
+                "ar": "التقليد",
+                "de": "die Tradition"
+              },
+              {
+                "ar": "دولي",
+                "de": "international"
+              }
+            ],
+            "why": "الرحلة كاملة! Prüfung/Niveau (الثقافة!) · Tradition/international (الوحدة 6!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الاسترجاع والنظرة المستقبلية!"
+        ],
+        "interleavedWith": [
+          "rueckblick",
+          "ausblick",
+          "pruefung"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist gut. (الاسترجاع!)",
+            "a": "Rückblick",
+            "why": "der Rückblick الاسترجاع (der!) — der Rückblick ist gut."
+          },
+          {
+            "q": "Der ___ ist klar. (النظرة المستقبلية!)",
+            "a": "Ausblick",
+            "why": "der Ausblick النظرة المستقبلية (der!) — der Ausblick ist klar."
+          },
+          {
+            "q": "Er macht einen ___. (نظرة استرجاعية!)",
+            "a": "Rückblick",
+            "why": "einen Rückblick machen — المفردة الثابتة! (einen! مفعول به!)"
+          },
+          {
+            "q": "Der Text gibt einen ___. (نظرة مستقبلية!)",
+            "a": "Ausblick",
+            "why": "den Ausblick geben — المفردة الثابتة! (den! مفعول به!)"
+          },
+          {
+            "q": "Die Reise war lang und der ___ ist klar. (النهاية والاستمرار!)",
+            "a": "Ausblick",
+            "why": "الرحلة تنتهي والنظرة تمضي! (der Ausblick!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداتان والجمع!"
+        ],
+        "interleavedWith": [
+          "sprechen",
+          "schreiben",
+          "kultur"
+        ],
+        "items": [
+          {
+            "q": "~~das Rückblick ist gut~~",
+            "a": "der Rückblick ist gut",
+            "why": "der Rückblick الاسترجاع (der! مذكّر — لا das!)"
+          },
+          {
+            "q": "~~die Ausblick ist klar~~",
+            "a": "der Ausblick ist klar",
+            "why": "der Ausblick النظرة المستقبلية (der! مذكّر — لا die!)"
+          },
+          {
+            "q": "~~Der Ausblicke ist klar.~~",
+            "a": "Der Ausblick ist klar.",
+            "why": "المفرد لا الجمع! der Ausblick (die Ausblicke — الجمع!) — الجملة عن نظرة واحدة!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — الختام!",
+          "Rückblick! Ausblick! Reise!"
+        ],
+        "interleavedWith": [
+          "erfahrung",
+          "ziel",
+          "weg"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالاسترجاع! (جملتان!)",
+            "a": "Der Rückblick ist gut. Die Reise war lang.",
+            "why": "الاسترجاع أولًا! (einen Rückblick machen!)"
+          },
+          {
+            "q": "لخّص الكلام والكتابة! (جملتان!)",
+            "a": "Sprechen und Schreiben sind gut. Die Rechtschreibung ist richtig.",
+            "why": "المحاكاتان! (d3+d4!)"
+          },
+          {
+            "q": "لخّص الثقافة والشهادة! (جملتان!)",
+            "a": "Die Prüfung ist offiziell. Die Anerkennung ist wichtig.",
+            "why": "يوم الثقافة! (d5! b1-landeskunde-u12!)"
+          },
+          {
+            "q": "اختم بالنظرة المستقبلية! (جملتان!)",
+            "a": "Der Ausblick ist klar. Der Weg geht weiter!",
+            "why": "النهاية بداية! (der Ausblick! den Ausblick geben!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الاسترجاع»؟",
+            "a": "der Rückblick"
+          },
+          {
+            "q": "«النظرة المستقبلية»؟",
+            "a": "der Ausblick"
+          },
+          {
+            "q": "«يُلقي نظرة استرجاعية.»؟",
+            "a": "Er macht einen Rückblick."
+          },
+          {
+            "q": "«الرحلة كانت طويلة.»؟",
+            "a": "Die Reise war lang."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الإملاء»؟ (استرجاع!)",
+            "a": "die Rechtschreibung"
+          },
+          {
+            "q": "«الأسلوب»؟ (استرجاع!)",
+            "a": "der Stil"
+          },
+          {
+            "q": "«الشهادة»؟ (استرجاع!)",
+            "a": "das Zertifikat"
+          },
+          {
+            "q": "«الاعتراف»؟ (استرجاع!)",
+            "a": "die Anerkennung"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الامتحان»؟ (استرجاع!)",
+            "a": "die Prüfung"
+          },
+          {
+            "q": "«الثقافة»؟ (استرجاع!)",
+            "a": "die Kultur"
+          },
+          {
+            "q": "«الطريق يمضي!»؟",
+            "a": "Der Weg geht weiter!"
+          },
+          {
+            "q": "«يمنح نظرة مستقبلية.»؟ (المفردة الثابتة!)",
+            "a": "Er gibt den Ausblick."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Rückblick ist gut und die Reise war lang. Sprechen und Schreiben sind wichtig: die Rechtschreibung ist richtig und der Stil ist klar. Die Prüfung ist offiziell und die Anerkennung ist da. Die Kultur ist bekannt und die Erfahrung ist gut. Der Ausblick ist klar und der Weg geht weiter. Das Niveau B1 ist erreicht!",
+      "ar": "الاسترجاع جيد والرحلة كانت طويلة. التحدث والكتابة مهمان: الإملاء صحيح والأسلوب واضح. الامتحان رسمي والاعتراف حاضر. الثقافة معروفة والخبرة جيدة. النظرة المستقبلية واضحة والطريق يمضي. المستوى B1 مُنال!"
+    },
+    "srsBundleWordIds": [
+      "rueckblick",
+      "ausblick"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das/die Rückblick!",
+          "de": "~~das Rückblick ist gut~~"
+        },
+        "correct": {
+          "ar": "der Rückblick!",
+          "de": "der Rückblick ist gut"
+        },
+        "exercise": {
+          "q": "___ Rückblick ist gut.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الاسترجاع» مذكّر بلا أداة! والألمانية: der Rückblick مذكّر بـ der (مركب من Blick!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "die Ausblick!",
+          "de": "~~die Ausblick ist klar~~"
+        },
+        "correct": {
+          "ar": "der Ausblick!",
+          "de": "der Ausblick ist klar"
+        },
+        "exercise": {
+          "q": "___ Ausblick ist klar.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «النظرة» مؤنثة! والألمانية: der Ausblick مذكّر (der!) — النظرة المستقبلية مذكّرة (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الجمع بدل المفرد!",
+          "de": "~~Der Ausblicke ist klar.~~"
+        },
+        "correct": {
+          "ar": "المفرد: der Ausblick!",
+          "de": "Der Ausblick ist klar."
+        },
+        "exercise": {
+          "q": "Der ___ ist klar. (المفرد!)",
+          "a": "Ausblick"
+        },
+        "whyArabicSpeakerFails": "العربية: جمع «النظرات» شائع! والألمانية: الجملة عن نظرة واحدة — der Ausblick (die Ausblicke جمع!) (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Rueckblick",
+      "https://www.duden.de/rechtschreibung/Ausblick"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-deshalb-trotzdem",
+    "ars-konnektoren",
+    "ars-tekamolo-voll",
+    "ars-obwohl",
+    "ars-praesentation",
+    "ars-fragerunde",
+    "ars-vortragstext",
+    "ars-koennten-sie",
+    "ars-dass-satz"
+  ],
+  "audioManifestRefs": [
+    "word-rueckblick",
+    "word-ausblick"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 12: التكامل — توليف!)",
+    "goetheWordListOverlap": [
+      "rueckblick",
+      "ausblick"
+    ]
+  }
+}
