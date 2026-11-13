@@ -2655,6 +2655,9 @@ def build_all() -> None:
     ("word-zeitdruck", "der Zeitdruck.", "zeitdruck", ["b1-u13-d3"]),
     ("word-fluessig", "flüssig.", "fluessig", ["b1-u13-d3"]),
     ("word-beschleunigen", "beschleunigen.", "beschleunigen", ["b1-u13-d3"]),
+    ("word-formulierung", "die Formulierung.", "formulierung", ["b1-u13-d4"]),
+    ("word-verfassen", "verfassen.", "verfassen", ["b1-u13-d4"]),
+    ("word-einhalten", "einhalten.", "einhalten", ["b1-u13-d4"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
