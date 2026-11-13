@@ -2661,6 +2661,8 @@ def build_all() -> None:
     ("word-muster", "das Muster.", "muster", ["b1-u13-d5"]),
     ("word-vorlage", "die Vorlage.", "vorlage", ["b1-u13-d5"]),
     ("word-format", "das Format.", "format", ["b1-u13-d5"]),
+    ("word-verfestigen", "verfestigen.", "verfestigen", ["b1-u13-d6"]),
+    ("word-uebergang", "der Übergang.", "uebergang", ["b1-u13-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
