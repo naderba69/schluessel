@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 465 (2026-10-17) — D511: b1-u14-d2 «الاستماع!» — كلمات اليوم: das Hilfsmittel (die Hilfsmittel بلا تغيير!) · der Zugang (die Zugänge!) · der Sitzplatz (die Sitzplätze!) + collocations الثلاث + قاعدتا العرض والأسئلة · خطّاف إعادة البناء الصوتي (N-339!) · الدفعة 465 · v7.57!
+- **الخلاصة:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الاستماع: **3 كلمات**: das Hilfsmittel (die Hilfsmittel! الوسائل المساعدة!) · der Zugang (die Zugänge! المدخل!) · der Sitzplatz (die Sitzplätze! المقعد!) + المفردات الثابتة (den Zugang finden! am Sitzplatz sitzen! die Hilfsmittel nutzen!). المحطات 16 وcheck-lesson **0/0/0** (41 سطراً).
+- **التالي:** b1-u14-d3 (القراءة!) ثم d4–d6 · d7 المعركة النهائية!
+
 ## الدفعة 464 (2026-11-26) — D510: b1-u14-d1 «الاستعداد للامتحان!» — الوحدة 14 (امتحان Niveauprüfung B1!) تبدأ! — 3 كلمات (Urkunde/Punktzahl/abschneiden-الانفصال!) + قاعدتا العرض والأسئلة! · كلمة عربية خاطئة في شرح (N-338!) · الدفعة 464 · v7.56!
 - **الخلاصة:** الوحدة 14 (امتحان Niveauprüfung B1!) تبدأ! — يوم الاستعداد: **3 كلمات**: die Urkunde (die Urkunden! الشهادة الرسمية!) · die Punktzahl (die Punktzahlen!) · **abschneiden** (schneidet ab/schnitt ab/hat abgeschnitten — منفصل!) + قاعدتا العرض وجولة الأسئلة. المحطات 16 وcheck-lesson **0/0/0** (54 سطراً).
 - **التالي:** b1-u14-d2 ثم d3–d6 (أيام الامتحان!) · d7 المعركة النهائية!

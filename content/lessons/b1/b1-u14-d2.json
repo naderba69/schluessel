@@ -1,0 +1,375 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u14-d2",
+  "level": "B1",
+  "unit": 14,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Zugang ist dort und der Sitzplatz ist frei!",
+    "ar": "الوحدة 14: امتحان Niveauprüfung B1! اليوم الثاني — الاستماع! (المدخل! المقعد! والوسائل المساعدة!)"
+  },
+  "canDoDaily": [
+    "يسمع التعليمات ويفهمها! (die Hilfsmittel nutzen!)",
+    "يجد مدخله ويجلس في مقعده! (den Zugang finden! am Sitzplatz sitzen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "urkunde",
+      "punktzahl"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الوسائل المساعدة مسموحة.»؟"
+        },
+        "choices": [
+          "Die Hilfsmittel sind erlaubt.",
+          "Das Hilfsmittel sind erlaubt.",
+          "Der Hilfsmittel sind erlaubt."
+        ],
+        "answer": "Die Hilfsmittel sind erlaubt.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«المدخل هناك.»؟ (الأداة!)"
+        },
+        "choices": [
+          "Der Zugang ist dort.",
+          "Die Zugang ist dort.",
+          "Das Zugang ist dort."
+        ],
+        "answer": "Der Zugang ist dort.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "hilfsmittel",
+      "zugang",
+      "sitzplatz"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Zugang ist dort und der Sitzplatz ist frei!",
+        "ar": "يوم الاستماع: يسمع التعليمات — المدخل والمقعد والوسائل المساعدة!"
+      },
+      "situation": {
+        "de": "Zugang, Sitzplatz, Hilfsmittel — hören und verstehen.",
+        "ar": "مدخل! مقعد! وسائل مساعدة! — يسمع ويفهم! (الاستماع!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الجمع: die Hilfsmittel (بلا تغيير!) die Zugänge! die Sitzplätze!",
+        "الاستماع أولًا ثم التنفيذ!",
+        "المفردات الثابتة: den Zugang finden! am Sitzplatz sitzen! die Hilfsmittel nutzen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Hilfsmittel! Zugang! Sitzplatz!"
+        ],
+        "interleavedWith": [
+          "pruefung",
+          "urkunde",
+          "punktzahl"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الوسيلة المساعدة",
+                "de": "das Hilfsmittel"
+              },
+              {
+                "ar": "الدخول · المدخل",
+                "de": "der Zugang"
+              },
+              {
+                "ar": "المقعد (المكان المخصص)",
+                "de": "der Sitzplatz"
+              }
+            ],
+            "why": "das Hilfsmittel الوسيلة المساعدة (das! die Hilfsmittel بلا تغيير!) · der Zugang المدخل (der! die Zugänge!) · der Sitzplatz المقعد (der! die Sitzplätze!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الشهادة الرسمية",
+                "de": "die Urkunde"
+              },
+              {
+                "ar": "عدد النقاط",
+                "de": "die Punktzahl"
+              },
+              {
+                "ar": "الامتحان",
+                "de": "die Prüfung"
+              }
+            ],
+            "why": "مراجعة أمس! die Urkunde الشهادة · die Punktzahl النقاط · die Prüfung الامتحان"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الاستماع للتعليمات!"
+        ],
+        "interleavedWith": [
+          "hilfsmittel",
+          "zugang",
+          "sitzplatz"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist dort. (المدخل!)",
+            "a": "Zugang",
+            "why": "der Zugang المدخل (der!) — Der Zugang ist dort."
+          },
+          {
+            "q": "Der ___ ist frei. (المقعد!)",
+            "a": "Sitzplatz",
+            "why": "der Sitzplatz المقعد (der!) — Der Sitzplatz ist frei."
+          },
+          {
+            "q": "Die ___ sind erlaubt. (الوسائل المساعدة!)",
+            "a": "Hilfsmittel",
+            "why": "die Hilfsmittel الوسائل المساعدة (das للمفرد! الجمع بلا تغيير!) — Die Hilfsmittel sind erlaubt."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الأداة! المفرد!"
+        ],
+        "interleavedWith": [
+          "hilfsmittel",
+          "zugang",
+          "sitzplatz"
+        ],
+        "items": [
+          {
+            "q": "~~Der Hilfsmittel ist erlaubt.~~",
+            "a": "Das Hilfsmittel ist erlaubt.",
+            "why": "das Hilfsmittel الوسيلة المساعدة (das! لا der!)"
+          },
+          {
+            "q": "~~Die Zugang ist dort.~~",
+            "a": "Der Zugang ist dort.",
+            "why": "der Zugang المدخل (der! لا die!)"
+          },
+          {
+            "q": "~~Der Sitzplätze ist frei.~~",
+            "a": "Der Sitzplatz ist frei.",
+            "why": "المفرد لا الجمع! der Sitzplatz (die Sitzplätze جمع!) — الجملة عن مقعد واحد!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — الاستماع!",
+          "Zugang! Sitzplatz! Hilfsmittel!"
+        ],
+        "interleavedWith": [
+          "pruefung",
+          "urkunde",
+          "beginnen"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالمدخل! (جملتان!)",
+            "a": "Der Zugang ist dort. Er findet den Zugang.",
+            "why": "المدخل أولًا! (den Zugang finden!)"
+          },
+          {
+            "q": "تكلّم عن المقعد والوسائل! (جملتان!)",
+            "a": "Der Sitzplatz ist frei. Die Hilfsmittel sind erlaubt.",
+            "why": "المقعد ثم الوسائل! (am Sitzplatz sitzen! die Hilfsmittel nutzen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الوسيلة المساعدة»؟",
+            "a": "das Hilfsmittel"
+          },
+          {
+            "q": "«الدخول · المدخل»؟",
+            "a": "der Zugang"
+          },
+          {
+            "q": "«المقعد (المكان المخصص)»؟",
+            "a": "der Sitzplatz"
+          },
+          {
+            "q": "«يجد المدخل.»؟",
+            "a": "Er findet den Zugang."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الشهادة الرسمية»؟ (مراجعة!)",
+            "a": "die Urkunde"
+          },
+          {
+            "q": "«عدد النقاط»؟ (مراجعة!)",
+            "a": "die Punktzahl"
+          },
+          {
+            "q": "«الامتحان»؟ (مراجعة!)",
+            "a": "die Prüfung"
+          },
+          {
+            "q": "«يجلس في مقعده.»؟",
+            "a": "Er sitzt am Sitzplatz."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الوسائل المساعدة مسموحة.»؟ (الجمع!)",
+            "a": "Die Hilfsmittel sind erlaubt."
+          },
+          {
+            "q": "«المدخل هناك.»؟",
+            "a": "Der Zugang ist dort."
+          },
+          {
+            "q": "«المقعد شاغر.»؟",
+            "a": "Der Sitzplatz ist frei."
+          },
+          {
+            "q": "«يسمع ويفهم.»؟",
+            "a": "Er hört und versteht."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Zugang ist dort und der Sitzplatz ist frei. Die Hilfsmittel sind erlaubt und die Prüfung beginnt. Er hört gut und findet den Zugang. Am Sitzplatz sitzt er und die Ruhe ist da. Die Prüfung beginnt und er ist ruhig.",
+      "ar": "المدخل هناك والمقعد شاغر. الوسائل المساعدة مسموحة والامتحان يبدأ. يسمع جيداً ويجد المدخل. في المقعد يجلس والهدوء حاضر. الامتحان يبدأ وهو هادئ."
+    },
+    "srsBundleWordIds": [
+      "hilfsmittel",
+      "zugang",
+      "sitzplatz"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Zugang!",
+          "de": "~~Die Zugang ist dort.~~"
+        },
+        "correct": {
+          "ar": "der Zugang!",
+          "de": "Der Zugang ist dort."
+        },
+        "exercise": {
+          "q": "___ Zugang ist dort.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «المدخل» مذكّر لكن «الدخول» مصدر فيُخلَط! والألمانية: der Zugang مذكّر (der!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "das Hilfsmittel جمع!",
+          "de": "~~Das Hilfsmittel sind erlaubt.~~"
+        },
+        "correct": {
+          "ar": "die Hilfsmittel (الجمع!)",
+          "de": "Die Hilfsmittel sind erlaubt."
+        },
+        "exercise": {
+          "q": "___ Hilfsmittel sind erlaubt.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الوسائل» جمع فيُنسى الجِرمَان! والألمانية: das Hilfsmittel للمفرد و die Hilfsmittel للجمع (بلا تغيير!) — والجمع مع sind! (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Sitzplätze!",
+          "de": "~~Der Sitzplätze ist frei.~~"
+        },
+        "correct": {
+          "ar": "der Sitzplatz (المفرد!)",
+          "de": "Der Sitzplatz ist frei."
+        },
+        "exercise": {
+          "q": "Der ___ ist frei.",
+          "a": "Sitzplatz"
+        },
+        "whyArabicSpeakerFails": "العربية: «المقاعد» جمع سهل فتُقال الجمع مكان المفرد! والألمانية: der Sitzplatz للمفرد و die Sitzplätze للجمع — الجملة عن مقعد واحد! (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Hilfsmittel",
+      "https://www.duden.de/rechtschreibung/Zugang",
+      "https://www.duden.de/rechtschreibung/Sitzplatz"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-hilfsmittel",
+    "word-zugang",
+    "word-sitzplatz"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 14: امتحان Niveauprüfung B1 — الاستماع!)",
+    "goetheWordListOverlap": [
+      "hilfsmittel",
+      "zugang",
+      "sitzplatz"
+    ]
+  }
+}

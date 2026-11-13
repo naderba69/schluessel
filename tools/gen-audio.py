@@ -2666,6 +2666,9 @@ def build_all() -> None:
     ("word-urkunde", "die Urkunde.", "urkunde", ["b1-u14-d1"]),
     ("word-punktzahl", "die Punktzahl.", "punktzahl", ["b1-u14-d1"]),
     ("word-abschneiden", "abschneiden.", "abschneiden", ["b1-u14-d1"]),
+    ("word-hilfsmittel", "das Hilfsmittel.", "hilfsmittel", ["b1-u14-d2"]),
+    ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
+    ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

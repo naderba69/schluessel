@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-17 — الدفعة 465: D511 — b1-u14-d2 «الاستماع!» — كلمات اليوم: das Hilfsmittel (die Hilfsmittel بلا تغيير!) · der Zugang (die Zugänge!) · der Sitzplatz (die Sitzplätze!) + collocations الثلاث + قاعدتا العرض والأسئلة · خطّاف إعادة البناء الصوتي (N-339!) · الدفعة 465 · v7.57!
+الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الاستماع: **3 كلمات**: das Hilfsmittel (die Hilfsmittel! الوسائل المساعدة!) · der Zugang (die Zugänge! المدخل!) · der Sitzplatz (die Sitzplätze! المقعد!) + المفردات الثابتة (den Zugang finden! am Sitzplatz sitzen! die Hilfsmittel nutzen!). المحطات 16 وcheck-lesson **0/0/0** (41 سطراً).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2985/0/0 ✓** · build ✓
+
 ## 2026-11-26 — الدفعة 464: D510 — b1-u14-d1 «الاستعداد للامتحان!» — الوحدة 14 (امتحان Niveauprüfung B1!) تبدأ! — 3 كلمات (Urkunde/Punktzahl/abschneiden-الانفصال!) + قاعدتا العرض والأسئلة! · كلمة عربية خاطئة في شرح (N-338!) · الدفعة 464 · v7.56!
 الوحدة 14 (امتحان Niveauprüfung B1!) تبدأ! — يوم الاستعداد: **3 كلمات**: die Urkunde (die Urkunden! الشهادة الرسمية!) · die Punktzahl (die Punktzahlen!) · **abschneiden** (schneidet ab/schnitt ab/hat abgeschnitten — منفصل!) + قاعدتا العرض وجولة الأسئلة. المحطات 16 وcheck-lesson **0/0/0** (54 سطراً).
 - **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2981/0/0 ✓** · build ✓
