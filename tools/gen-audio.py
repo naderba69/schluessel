@@ -2658,6 +2658,9 @@ def build_all() -> None:
     ("word-formulierung", "die Formulierung.", "formulierung", ["b1-u13-d4"]),
     ("word-verfassen", "verfassen.", "verfassen", ["b1-u13-d4"]),
     ("word-einhalten", "einhalten.", "einhalten", ["b1-u13-d4"]),
+    ("word-muster", "das Muster.", "muster", ["b1-u13-d5"]),
+    ("word-vorlage", "die Vorlage.", "vorlage", ["b1-u13-d5"]),
+    ("word-format", "das Format.", "format", ["b1-u13-d5"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-11-26 — الدفعة 461: D507 — b1-u13-d5 «نماذج الامتحان!» — 3 كلمات (Muster/Vorlage/Format!) + قاعدتا التهذيب والمضمون! · يوم نظيف من أول مرة! · الدفعة 461 · v7.53!
+يوم النماذج! — **3 كلمات**: das Muster (die Muster! سالم!) · die Vorlage (die Vorlagen!) · das Format (die Formate!) — ثلاثة أسماء! + قاعدتا التهذيب والمضمون + مراجعة أدوات الامتحان (Prüfung! Antwortbogen! Lösung! Aufgabe!). المحطات 16 وcheck-lesson **0/0/0** (52 سطراً) من أول مرة.
+- **البوابة:** vitest **1879/1879 ✓ (142 ملفاً)** · tsc ✓ · validator **2974/0/0 ✓** · build ✓
+
 ## 2026-11-26 — الدفعة 460: D506 — b1-u13-d4 «محاكاة 75% وقت — كتابة!» — 3 كلمات (Formulierung/verfassen/einhalten-الانفصال!) + قاعدتا النص والروابط! · ست دقائق بدل ثمان! · معرّف قاعدة في عربي (N-335 ثانية!) · الدفعة 460 · v7.52!
 محاكاة الكتابة بثلاثة أرباع الوقت! — **3 كلمات**: die Formulierung (die Formulierungen!) · verfassen (ver- لا ge-: hat verfasst!) · **einhalten** (hält ein/hielt ein/hat eingehalten — منفصل!) + قاعدتا بناء النص والروابط + التحدي: نص من ست جمل في ست دقائق بدل ثمان! المحطات 16 وcheck-lesson **0/0/0** (52 سطراً).
 - **البوابة:** vitest **1879/1879 ✓ (142 ملفاً)** · tsc ✓ · validator **2970/0/0 ✓** · build ✓

@@ -45389,6 +45389,66 @@
       "rmsDb": -17.01
     },
     {
+      "id": "word-muster",
+      "file": "words/audio/de-DE/word-muster.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Muster.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u13-d5"
+      ],
+      "durationMs": 1268,
+      "sizeBytes": 5505,
+      "hash": "sha256:4e0de16e852b05a82f69486674db673e4417fd9437092f03cb1b288042a3b769",
+      "pcmSha256": "3118dbbba8a8811fd183e67224d2e67b5c274d6387de6a1506cef73608125c11",
+      "rmsDb": -17.1
+    },
+    {
+      "id": "word-vorlage",
+      "file": "words/audio/de-DE/word-vorlage.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Vorlage.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u13-d5"
+      ],
+      "durationMs": 955,
+      "sizeBytes": 4687,
+      "hash": "sha256:50d187fba37ff4f608d04476aaa6f9fec11309cdcecfa1bad11d71d4ceb1e8ce",
+      "pcmSha256": "b46cc510ca360e1f7433d4ab253acc5b78025ef91396047e4afcd1d34512120d",
+      "rmsDb": -17.06
+    },
+    {
+      "id": "word-format",
+      "file": "words/audio/de-DE/word-format.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Format.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u13-d5"
+      ],
+      "durationMs": 1059,
+      "sizeBytes": 5117,
+      "hash": "sha256:18706e66b3b98b390bcdc31f6b4e72d4625d4f7b760744ed662fb04e3d9d711a",
+      "pcmSha256": "e6663fc3a055f28e9bacb1b6d1f0687cd726e1fc640770be8422f2e2162531e7",
+      "rmsDb": -17.08
+    },
+    {
       "id": "mueller-announce-01",
       "file": "audio/characters/mueller-announce-01.opus",
       "role": "announcement",
