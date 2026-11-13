@@ -2663,6 +2663,9 @@ def build_all() -> None:
     ("word-format", "das Format.", "format", ["b1-u13-d5"]),
     ("word-verfestigen", "verfestigen.", "verfestigen", ["b1-u13-d6"]),
     ("word-uebergang", "der Übergang.", "uebergang", ["b1-u13-d6"]),
+    ("word-urkunde", "die Urkunde.", "urkunde", ["b1-u14-d1"]),
+    ("word-punktzahl", "die Punktzahl.", "punktzahl", ["b1-u14-d1"]),
+    ("word-abschneiden", "abschneiden.", "abschneiden", ["b1-u14-d1"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

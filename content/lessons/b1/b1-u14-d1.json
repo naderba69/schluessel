@@ -1,0 +1,441 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u14-d1",
+  "level": "B1",
+  "unit": 14,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Urkunde ist das Ziel — und die Punktzahl ist hoch!",
+    "ar": "الوحدة 14: امتحان Niveauprüfung B1! اليوم الأول — الاستعداد! (الشهادة! النقاط! والنتيجة!)"
+  },
+  "canDoDaily": [
+    "يصف هدفه في الامتحان ونتائجه! (die Urkunde bekommen! die Punktzahl erreichen!)",
+    "يُحرز نتيجة جيدة! (gut abschneiden!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "verfestigen",
+      "uebergang"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الشهادة الرسمية مهمة.»؟"
+        },
+        "choices": [
+          "Die Urkunde ist wichtig.",
+          "Der Urkunde ist wichtig.",
+          "Das Urkunde ist wichtig."
+        ],
+        "answer": "Die Urkunde ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«هو يُحرز نتيجة جيدة.»؟ (الانفصال!)"
+        },
+        "choices": [
+          "Er schneidet gut ab.",
+          "Er schneidet ab gut.",
+          "Er abschneiden gut."
+        ],
+        "answer": "Er schneidet gut ab.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "urkunde",
+      "punktzahl",
+      "abschneiden"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "auslaut-b"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Urkunde ist das Ziel und die Punktzahl ist hoch!",
+        "ar": "يوم الاستعداد: يعرف هدفه (الشهادة!) ونتيجته (النقاط!) وأداءه (يُحرز نتيجة!)"
+      },
+      "situation": {
+        "de": "Prüfung, Punktzahl, Urkunde — das Ziel.",
+        "ar": "امتحان! نقاط! شهادة! — الهدف! (الاستعداد!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الانفصال: schneidet … ab! (الجزء ab آخر!)",
+        "الاستعداد: الهدف أولًا ثم الخطة!",
+        "المفردات الثابتة: die Urkunde bekommen! die Punktzahl erreichen! gut abschneiden!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Urkunde! Punktzahl! abschneiden!"
+        ],
+        "interleavedWith": [
+          "verfestigen",
+          "uebergang",
+          "wissen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الشهادة الرسمية",
+                "de": "die Urkunde"
+              },
+              {
+                "ar": "عدد النقاط",
+                "de": "die Punktzahl"
+              },
+              {
+                "ar": "يُحرز نتيجة",
+                "de": "abschneiden"
+              }
+            ],
+            "why": "die Urkunde الشهادة (die! die Urkunden!) · die Punktzahl النقاط (die! die Punktzahlen!) · abschneiden يُحرز (منفصل: schneidet … ab!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الامتحان",
+                "de": "die Prüfung"
+              },
+              {
+                "ar": "الشهادة",
+                "de": "das Zertifikat"
+              },
+              {
+                "ar": "النتيجة",
+                "de": "das Ergebnis"
+              },
+              {
+                "ar": "الدرجة",
+                "de": "die Note"
+              }
+            ],
+            "why": "مراجعة أدوات الامتحان! die Prüfung · das Zertifikat · das Ergebnis (das!) · die Note"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التحضير",
+                "de": "die Vorbereitung"
+              },
+              {
+                "ar": "التركيز",
+                "de": "die Konzentration"
+              },
+              {
+                "ar": "الهدوء",
+                "de": "die Ruhe"
+              },
+              {
+                "ar": "الخطة الزمنية",
+                "de": "der Zeitplan"
+              }
+            ],
+            "why": "مراجعة أدوات الاستعداد! die Vorbereitung · die Konzentration · die Ruhe · der Zeitplan"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يُجتاز",
+                "de": "bestehen"
+              },
+              {
+                "ar": "ينجح",
+                "de": "schaffen"
+              },
+              {
+                "ar": "يتسجّل",
+                "de": "anmelden"
+              },
+              {
+                "ar": "المعجم",
+                "de": "das Wörterbuch"
+              }
+            ],
+            "why": "مراجعة الأفعال والأدوات! bestehen يُجتاز · schaffen ينجح · anmelden يتسجّل · das Wörterbuch"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الاستعداد للامتحان!"
+        ],
+        "interleavedWith": [
+          "urkunde",
+          "punktzahl",
+          "abschneiden"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (الشهادة الرسمية!)",
+            "a": "Urkunde",
+            "why": "die Urkunde الشهادة الرسمية (die!) — die Urkunde ist wichtig."
+          },
+          {
+            "q": "Die ___ ist hoch. (عدد النقاط!)",
+            "a": "Punktzahl",
+            "why": "die Punktzahl النقاط (die!) — die Punktzahl ist hoch."
+          },
+          {
+            "q": "Er ___ gut ___. (يُحرز نتيجة! منفصل!)",
+            "a": "schneidet … ab",
+            "why": "abschneiden منفصل! er schneidet gut ab. (الجزء ab آخر!) — خريطة التداخل 10-ي!"
+          },
+          {
+            "q": "Er bekommt die ___. (يحصل على الشهادة!)",
+            "a": "Urkunde",
+            "why": "die Urkunde bekommen — المفردة الثابتة! (bekommt!)"
+          },
+          {
+            "q": "Die ___ zeigt das Ergebnis. (عدد النقاط!)",
+            "a": "Punktzahl",
+            "why": "die Punktzahl erreichen — المفردة الثابتة! (zeigt!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الجمع! الانفصال!"
+        ],
+        "interleavedWith": [
+          "pruefung",
+          "ergebnis",
+          "note"
+        ],
+        "items": [
+          {
+            "q": "~~Der Urkunde ist wichtig.~~",
+            "a": "Die Urkunde ist wichtig.",
+            "why": "die Urkunde الشهادة (die! مؤنثة — لا der!)"
+          },
+          {
+            "q": "~~Die Punktzahlen ist hoch.~~",
+            "a": "Die Punktzahl ist hoch.",
+            "why": "المفرد لا الجمع! die Punktzahl (die Punktzahlen جمع!) — الجملة عن عدد نقاط واحد!"
+          },
+          {
+            "q": "~~Er hat gut geschnitten ab.~~",
+            "a": "Er hat gut abgeschnitten.",
+            "why": "abschneiden منفصل! التمام: hat abgeschnitten (لا geschnitten ab!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — الاستعداد!",
+          "Urkunde! Punktzahl! Prüfung!"
+        ],
+        "interleavedWith": [
+          "vorbereitung",
+          "konzentration",
+          "ruhe"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالهدف! (جملتان!)",
+            "a": "Die Urkunde ist das Ziel. Er bekommt die Urkunde.",
+            "why": "الهدف أولًا! (die Urkunde bekommen!)"
+          },
+          {
+            "q": "تكلّم عن النقاط! (جملتان!)",
+            "a": "Die Punktzahl ist hoch. Er erreicht die Punktzahl.",
+            "why": "النقاط ثم الإحراز! (die Punktzahl erreichen!)"
+          },
+          {
+            "q": "تكلّم عن الأداء! (جملتان!)",
+            "a": "Er schneidet gut ab. Das Ergebnis ist klar.",
+            "why": "الأداء ثم النتيجة! (gut abschneiden!)"
+          },
+          {
+            "q": "اختم بالاستعداد! (جملتان!)",
+            "a": "Die Vorbereitung ist wichtig. Die Ruhe ist klar.",
+            "why": "التحضير والهدوء! (الاستعداد!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الشهادة الرسمية»؟",
+            "a": "die Urkunde"
+          },
+          {
+            "q": "«عدد النقاط»؟",
+            "a": "die Punktzahl"
+          },
+          {
+            "q": "«يُحرز نتيجة جيدة.»؟ (الانفصال!)",
+            "a": "Er schneidet gut ab."
+          },
+          {
+            "q": "«يحصل على الشهادة.»؟",
+            "a": "Er bekommt die Urkunde."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الامتحان»؟ (مراجعة!)",
+            "a": "die Prüfung"
+          },
+          {
+            "q": "«النتيجة»؟ (مراجعة!)",
+            "a": "das Ergebnis"
+          },
+          {
+            "q": "«الدرجة»؟ (مراجعة!)",
+            "a": "die Note"
+          },
+          {
+            "q": "«يُجتاز الامتحان.»؟",
+            "a": "Er besteht die Prüfung."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التحضير»؟ (مراجعة!)",
+            "a": "die Vorbereitung"
+          },
+          {
+            "q": "«التركيز»؟ (مراجعة!)",
+            "a": "die Konzentration"
+          },
+          {
+            "q": "«الهدوء»؟ (مراجعة!)",
+            "a": "die Ruhe"
+          },
+          {
+            "q": "«يُحرز عدد النقاط.»؟ (المفردة الثابتة!)",
+            "a": "Er erreicht die Punktzahl."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Urkunde ist das Ziel und die Punktzahl ist hoch. Er schneidet gut ab und das Ergebnis ist klar. Die Vorbereitung ist wichtig und die Konzentration ist da. Die Ruhe ist gut und der Zeitplan stimmt. Er besteht die Prüfung und bekommt die Urkunde. Die Punktzahl erreicht er — geschafft!",
+      "ar": "الشهادة الرسمية هي الهدف وعدد النقاط مرتفع. يُحرز نتيجة جيدة والنتيجة واضحة. التحضير مهم والتركيز حاضر. الهدوء جيد والخطة الزمنية مضبوطة. يُجتاز الامتحان ويحصل على الشهادة. عدد النقاط يُحرزه — أُنجز!"
+    },
+    "srsBundleWordIds": [
+      "urkunde",
+      "punktzahl",
+      "abschneiden"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Urkunde!",
+          "de": "~~Der Urkunde ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Urkunde!",
+          "de": "Die Urkunde ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Urkunde ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الشهادة» مؤنثة لكن «الوثيقة» مذكّرة فتختلط! والألمانية: die Urkunde مؤنثة (die!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الجمع بدل المفرد!",
+          "de": "~~Die Punktzahlen ist hoch.~~"
+        },
+        "correct": {
+          "ar": "المفرد: die Punktzahl!",
+          "de": "Die Punktzahl ist hoch."
+        },
+        "exercise": {
+          "q": "Die ___ ist hoch. (المفرد!)",
+          "a": "Punktzahl"
+        },
+        "whyArabicSpeakerFails": "العربية: «النقاط» جمع شائع! والألمانية: الجملة عن عدد نقاط واحد — die Punktzahl (die Punktzahlen جمع!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الصيغة التامة مقلوبة!",
+          "de": "~~Er hat gut geschnitten ab.~~"
+        },
+        "correct": {
+          "ar": "hat abgeschnitten!",
+          "de": "Er hat gut abgeschnitten."
+        },
+        "exercise": {
+          "q": "Er hat gut ___.",
+          "a": "abgeschnitten"
+        },
+        "whyArabicSpeakerFails": "العربية: الظرف بعد الفعل أبداً! والألمانية: التمام مع البادئة ab في البداية (hat abgeschnitten — لا geschnitten ab!) (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Urkunde",
+      "https://www.duden.de/rechtschreibung/Punktzahl",
+      "https://www.duden.de/rechtschreibung/abschneiden"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-urkunde",
+    "word-punktzahl",
+    "word-abschneiden"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 14: امتحان Niveauprüfung B1 — الاستعداد!)",
+    "goetheWordListOverlap": [
+      "urkunde",
+      "punktzahl",
+      "abschneiden"
+    ]
+  }
+}
