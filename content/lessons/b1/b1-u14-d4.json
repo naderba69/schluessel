@@ -1,0 +1,375 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u14-d4",
+  "level": "B1",
+  "unit": 14,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Handschrift ist klar und die Schreibweise ist richtig!",
+    "ar": "الوحدة 14: امتحان Niveauprüfung B1! اليوم الرابع — الكتابة! (الخط اليدوي! طريقة الكتابة! وعلامات الترقيم!)"
+  },
+  "canDoDaily": [
+    "يكتب بخط واضح وكتابة صحيحة! (die Handschrift lesen! die Schreibweise kennen!)",
+    "يكتب علامات الترقيم في جمله! (die Satzzeichen schreiben!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "pruefungsteil",
+      "einzelheit"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الخط اليدوي واضح.»؟"
+        },
+        "choices": [
+          "Die Handschrift ist klar.",
+          "Der Handschrift ist klar.",
+          "Das Handschrift ist klar."
+        ],
+        "answer": "Die Handschrift ist klar.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«علامة الترقيم مهمة.»؟ (الأداة!)"
+        },
+        "choices": [
+          "Das Satzzeichen ist wichtig.",
+          "Die Satzzeichen ist wichtig.",
+          "Der Satzzeichen ist wichtig."
+        ],
+        "answer": "Das Satzzeichen ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "handschrift",
+      "schreibweise",
+      "satzzeichen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "sp-st-initial",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Handschrift ist klar und die Schreibweise ist richtig!",
+        "ar": "يوم الكتابة: يكتب بخط واضح وكتابة صحيحة — وعلاماته!"
+      },
+      "situation": {
+        "de": "Handschrift, Schreibweise, Satzzeichen — schreiben und prüfen.",
+        "ar": "خط يدوي! طريقة كتابة! علامات ترقيم! — يكتب ويراجع! (الكتابة!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الجمع: die Handschriften (-en)! die Schreibweisen (-n)! die Satzzeichen (بلا تغيير!)!",
+        "الكتابة أولًا ثم المراجعة!",
+        "المفردات الثابتة: die Handschrift lesen! die Schreibweise kennen! die Satzzeichen schreiben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Handschrift! Schreibweise! Satzzeichen!"
+        ],
+        "interleavedWith": [
+          "pruefungsteil",
+          "einzelheit",
+          "block"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الخط اليدوي",
+                "de": "die Handschrift"
+              },
+              {
+                "ar": "طريقة الكتابة · الإملاء",
+                "de": "die Schreibweise"
+              },
+              {
+                "ar": "علامة الترقيم",
+                "de": "das Satzzeichen"
+              }
+            ],
+            "why": "die Handschrift الخط اليدوي (die! die Handschriften!) · die Schreibweise طريقة الكتابة (die! die Schreibweisen!) · das Satzzeichen علامة الترقيم (das! die Satzzeichen بلا تغيير!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "جزء الامتحان",
+                "de": "der Prüfungsteil"
+              },
+              {
+                "ar": "التفصيل · التفصيلة",
+                "de": "die Einzelheit"
+              },
+              {
+                "ar": "كراس الأسئلة · الدفتر",
+                "de": "der Block"
+              }
+            ],
+            "why": "مراجعة أمس! der Prüfungsteil الجزء · die Einzelheit التفصيل · der Block الكراس"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الكتابة في الامتحان!"
+        ],
+        "interleavedWith": [
+          "handschrift",
+          "schreibweise",
+          "satzzeichen"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist klar. (الخط اليدوي!)",
+            "a": "Handschrift",
+            "why": "die Handschrift الخط اليدوي (die!) — Die Handschrift ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig. (طريقة الكتابة!)",
+            "a": "Schreibweise",
+            "why": "die Schreibweise طريقة الكتابة (die!) — Die Schreibweise ist wichtig."
+          },
+          {
+            "q": "Das ___ ist wichtig. (علامة الترقيم!)",
+            "a": "Satzzeichen",
+            "why": "das Satzzeichen علامة الترقيم (das!) — Das Satzzeichen ist wichtig."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الأداة! الجمع!"
+        ],
+        "interleavedWith": [
+          "handschrift",
+          "schreibweise",
+          "satzzeichen"
+        ],
+        "items": [
+          {
+            "q": "~~Der Handschrift ist klar.~~",
+            "a": "Die Handschrift ist klar.",
+            "why": "die Handschrift الخط اليدوي (die! لا der!)"
+          },
+          {
+            "q": "~~Die Satzzeichen ist wichtig.~~",
+            "a": "Das Satzzeichen ist wichtig.",
+            "why": "das Satzzeichen علامة الترقيم (das! لا die!)"
+          },
+          {
+            "q": "~~Das Schreibweisen ist wichtig.~~",
+            "a": "Die Schreibweise ist wichtig.",
+            "why": "المفرد لا الجمع! die Schreibweise (die Schreibweisen جمع!) — الجملة عن طريقة واحدة!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — الكتابة!",
+          "Handschrift! Schreibweise! Satzzeichen!"
+        ],
+        "interleavedWith": [
+          "schreiben",
+          "pruefung",
+          "text"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالخط! (جملتان!)",
+            "a": "Die Handschrift ist klar. Er liest die Handschrift.",
+            "why": "الخط أولًا! (die Handschrift lesen!)"
+          },
+          {
+            "q": "تكلّم عن الكتابة والعلامات! (جملتان!)",
+            "a": "Die Schreibweise ist wichtig. Er schreibt die Satzzeichen.",
+            "why": "الكتابة ثم العلامات! (die Schreibweise kennen! die Satzzeichen schreiben!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الخط اليدوي»؟",
+            "a": "die Handschrift"
+          },
+          {
+            "q": "«طريقة الكتابة · الإملاء»؟",
+            "a": "die Schreibweise"
+          },
+          {
+            "q": "«علامة الترقيم»؟",
+            "a": "das Satzzeichen"
+          },
+          {
+            "q": "«يكتب علامات الترقيم.»؟",
+            "a": "Er schreibt die Satzzeichen."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«جزء الامتحان»؟ (مراجعة!)",
+            "a": "der Prüfungsteil"
+          },
+          {
+            "q": "«التفصيل · التفصيلة»؟ (مراجعة!)",
+            "a": "die Einzelheit"
+          },
+          {
+            "q": "«كراس الأسئلة · الدفتر»؟ (مراجعة!)",
+            "a": "der Block"
+          },
+          {
+            "q": "«يقرأ الخط اليدوي.»؟",
+            "a": "Er liest die Handschrift."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الخط اليدوي واضح.»؟",
+            "a": "Die Handschrift ist klar."
+          },
+          {
+            "q": "«طريقة الكتابة مهمة.»؟",
+            "a": "Die Schreibweise ist wichtig."
+          },
+          {
+            "q": "«علامة الترقيم مهمة.»؟",
+            "a": "Das Satzzeichen ist wichtig."
+          },
+          {
+            "q": "«يعرف طريقة الكتابة.»؟",
+            "a": "Er kennt die Schreibweise."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Handschrift ist klar und die Schreibweise ist wichtig. Das Satzzeichen ist da und die Prüfung beginnt. Er schreibt den Text und liest die Handschrift. Die Satzzeichen schreibt er und die Ruhe ist da. Die Prüfung beginnt und er ist ruhig.",
+      "ar": "الخط اليدوي واضح وطريقة الكتابة مهمة. علامة الترقيم حاضرة والامتحان يبدأ. يكتب النص ويقرأ الخط اليدوي. علامات الترقيم يكتبها والهدوء حاضر. الامتحان يبدأ وهو هادئ."
+    },
+    "srsBundleWordIds": [
+      "handschrift",
+      "schreibweise",
+      "satzzeichen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Handschrift!",
+          "de": "~~Der Handschrift ist klar.~~"
+        },
+        "correct": {
+          "ar": "die Handschrift!",
+          "de": "Die Handschrift ist klar."
+        },
+        "exercise": {
+          "q": "___ Handschrift ist klar.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الخط» مذكّر! والألمانية: die Handschrift مؤنثة (die!) — أسماء -schrift مؤنثة! (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "die Satzzeichen!",
+          "de": "~~Die Satzzeichen ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "das Satzzeichen!",
+          "de": "Das Satzzeichen ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Satzzeichen ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «علامة» مؤنثة! والألمانية: das Satzzeichen محايد (das!) — مركّب من das Zeichen المحايد! (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "das Schreibweisen!",
+          "de": "~~Das Schreibweisen ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Schreibweise (المفرد!)",
+          "de": "Die Schreibweise ist wichtig."
+        },
+        "exercise": {
+          "q": "Die ___ ist wichtig.",
+          "a": "Schreibweise"
+        },
+        "whyArabicSpeakerFails": "العربية: «الطرق» جمع فيُقال الجمع مكان المفرد! والألمانية: die Schreibweise للمفرد و die Schreibweisen للجمع — الجملة عن طريقة واحدة! (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Handschrift",
+      "https://www.duden.de/rechtschreibung/Schreibweise",
+      "https://www.duden.de/rechtschreibung/Satzzeichen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-handschrift",
+    "word-schreibweise",
+    "word-satzzeichen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 14: امتحان Niveauprüfung B1 — الكتابة!)",
+    "goetheWordListOverlap": [
+      "handschrift",
+      "schreibweise",
+      "satzzeichen"
+    ]
+  }
+}

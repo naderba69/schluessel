@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D513 (2026-10-17): b1-u14-d4 «الكتابة!» — كلمات اليوم: die Handschrift (die Handschriften! الخط اليدوي!) · die Schreibweise (die Schreibweisen! الإملاء!) · das Satzzeichen (die Satzzeichen بلا تغيير! الترقيم!) + collocations الثلاث + قاعدتا العرض والأسئلة · حكم النطق: artifact لا accept-reference (N-341!) · الدفعة 467 · v7.59!
+- **الدفعة:** 467 · **الموجّه:** 7.59
+- **للقارئ:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الكتابة: **3 كلمات**: die Handschrift (die Handschriften! الخط اليدوي!) · die Schreibweise (die Schreibweisen! طريقة الكتابة!) · das Satzzeichen (die Satzzeichen! علامة الترقيم!) + المفردات الثابتة (die Handschrift lesen! die Schreibweise kennen! die Satzzeichen schreiben!). المحطات 16 وcheck-lesson **0/0/0** (38 سطراً).
+- **بطاقة قرار:** ثلاثية الكتابة · Schreibweise اختلاف تفريع (b→p في آخر المقطع) ← reviewed بحكم artifact (المرجع أدق!) — أخطأت الحكم أولًا بـaccept-reference خارج الصيغة (N-341) · أعلام الخطر مقيسة (auslaut-d · z+ch-ich-laut · w-v).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2993/0/0 ✓** · build ✓
+- **التالي:** b1-u14-d5 (الكلام!) ثم d6 · d7 المعركة النهائية!
+
 ## D512 (2026-10-17): b1-u14-d3 «القراءة!» — كلمات اليوم: der Prüfungsteil (die Prüfungsteile! — A1 في قائمة جوته!) · die Einzelheit (die Einzelheiten! B1!) · der Block (die Blöcke — umlaut!) + collocations الثلاث + قاعدتا العرض والأسئلة · فخ ü↔ue في المطابقات (N-340!) · الدفعة 466 · v7.58!
 - **الدفعة:** 466 · **الموجّه:** 7.58
 - **للقارئ:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم القراءة: **3 كلمات**: der Prüfungsteil (die Prüfungsteile! جزء الامتحان!) · die Einzelheit (die Einzelheiten! التفصيل!) · der Block (die Blöcke! كراس الأسئلة!) + المفردات الثابتة (den Prüfungsteil lesen! die Einzelheiten finden! den Block öffnen!). المحطات 16 وcheck-lesson **0/0/0** (39 سطراً).

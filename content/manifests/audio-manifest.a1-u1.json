@@ -88104,6 +88104,66 @@
       "hash": "sha256:204e1651cf2df3baf2962cb6d7b2dc0866c904544606d975aafb2197da8259c4",
       "pcmSha256": "b1455899c60ff8419085d3b6546815a84a31752c4d4a41eb7c5df3588a5be6ee",
       "rmsDb": -17.01
+    },
+    {
+      "id": "word-handschrift",
+      "file": "words/audio/de-DE/word-handschrift.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Handschrift.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u14-d4"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4829,
+      "hash": "sha256:1c77dfb826eb55e8d37afa51baf253876a7b66a0e4ed9346c9885b3fddf754ec",
+      "pcmSha256": "e39a1609fc079fb1b7837a66ef915cf560b6a40ed1f6060b9b8ba17f0425540c",
+      "rmsDb": -17.03
+    },
+    {
+      "id": "word-schreibweise",
+      "file": "words/audio/de-DE/word-schreibweise.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Schreibweise.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u14-d4"
+      ],
+      "durationMs": 1384,
+      "sizeBytes": 6147,
+      "hash": "sha256:39f284809fd40f99a5a10cec1995df72d7badcdc501ab17d479148389f96b7a5",
+      "pcmSha256": "36c72a430434f96120cb9efb08cec700fccaeca42862e5ef914ec456558ba1c3",
+      "rmsDb": -17.24
+    },
+    {
+      "id": "word-satzzeichen",
+      "file": "words/audio/de-DE/word-satzzeichen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Satzzeichen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u14-d4"
+      ],
+      "durationMs": 1280,
+      "sizeBytes": 6145,
+      "hash": "sha256:c62f5e727fb8c865e38dbe2ca8ef29858d5cb59924bf1b86c82a66906b77a342",
+      "pcmSha256": "32009405d4803a628f2d51b2cf7fed3d6b3e6db5b4fac4bd00627027f402c95d",
+      "rmsDb": -17.27
     }
   ],
   "characterVoices": {

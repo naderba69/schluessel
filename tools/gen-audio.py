@@ -2670,6 +2670,9 @@ def build_all() -> None:
     ("word-pruefungsteil", "der Prüfungsteil.", "pruefungsteil", ["b1-u14-d3"]),
     ("word-einzelheit", "die Einzelheit.", "einzelheit", ["b1-u14-d3"]),
     ("word-block", "der Block.", "block", ["b1-u14-d3"]),
+    ("word-handschrift", "die Handschrift.", "handschrift", ["b1-u14-d4"]),
+    ("word-schreibweise", "die Schreibweise.", "schreibweise", ["b1-u14-d4"]),
+    ("word-satzzeichen", "das Satzzeichen.", "satzzeichen", ["b1-u14-d4"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
