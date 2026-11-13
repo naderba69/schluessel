@@ -2667,6 +2667,9 @@ def build_all() -> None:
     ("word-punktzahl", "die Punktzahl.", "punktzahl", ["b1-u14-d1"]),
     ("word-abschneiden", "abschneiden.", "abschneiden", ["b1-u14-d1"]),
     ("word-hilfsmittel", "das Hilfsmittel.", "hilfsmittel", ["b1-u14-d2"]),
+    ("word-pruefungsteil", "der Prüfungsteil.", "pruefungsteil", ["b1-u14-d3"]),
+    ("word-einzelheit", "die Einzelheit.", "einzelheit", ["b1-u14-d3"]),
+    ("word-block", "der Block.", "block", ["b1-u14-d3"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]

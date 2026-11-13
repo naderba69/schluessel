@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-17 — الدفعة 466: D512 — b1-u14-d3 «القراءة!» — كلمات اليوم: der Prüfungsteil (die Prüfungsteile! — A1 في قائمة جوته!) · die Einzelheit (die Einzelheiten! B1!) · der Block (die Blöcke — umlaut!) + collocations الثلاث + قاعدتا العرض والأسئلة · فخ ü↔ue في المطابقات (N-340!) · الدفعة 466 · v7.58!
+الوحدة 14 (امتحان Niveauprüfung B1!) — يوم القراءة: **3 كلمات**: der Prüfungsteil (die Prüfungsteile! جزء الامتحان!) · die Einzelheit (die Einzelheiten! التفصيل!) · der Block (die Blöcke! كراس الأسئلة!) + المفردات الثابتة (den Prüfungsteil lesen! die Einzelheiten finden! den Block öffnen!). المحطات 16 وcheck-lesson **0/0/0** (39 سطراً).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2989/0/0 ✓** · build ✓
+
 ## 2026-10-17 — الدفعة 465: D511 — b1-u14-d2 «الاستماع!» — كلمات اليوم: das Hilfsmittel (die Hilfsmittel بلا تغيير!) · der Zugang (die Zugänge!) · der Sitzplatz (die Sitzplätze!) + collocations الثلاث + قاعدتا العرض والأسئلة · خطّاف إعادة البناء الصوتي (N-339!) · الدفعة 465 · v7.57!
 الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الاستماع: **3 كلمات**: das Hilfsmittel (die Hilfsmittel! الوسائل المساعدة!) · der Zugang (die Zugänge! المدخل!) · der Sitzplatz (die Sitzplätze! المقعد!) + المفردات الثابتة (den Zugang finden! am Sitzplatz sitzen! die Hilfsmittel nutzen!). المحطات 16 وcheck-lesson **0/0/0** (41 سطراً).
 - **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2985/0/0 ✓** · build ✓

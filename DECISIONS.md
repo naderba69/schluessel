@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D512 (2026-10-17): b1-u14-d3 «القراءة!» — كلمات اليوم: der Prüfungsteil (die Prüfungsteile! — A1 في قائمة جوته!) · die Einzelheit (die Einzelheiten! B1!) · der Block (die Blöcke — umlaut!) + collocations الثلاث + قاعدتا العرض والأسئلة · فخ ü↔ue في المطابقات (N-340!) · الدفعة 466 · v7.58!
+- **الدفعة:** 466 · **الموجّه:** 7.58
+- **للقارئ:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم القراءة: **3 كلمات**: der Prüfungsteil (die Prüfungsteile! جزء الامتحان!) · die Einzelheit (die Einzelheiten! التفصيل!) · der Block (die Blöcke! كراس الأسئلة!) + المفردات الثابتة (den Prüfungsteil lesen! die Einzelheiten finden! den Block öffnen!). المحطات 16 وcheck-lesson **0/0/0** (39 سطراً).
+- **بطاقة قرار:** ثلاثية القراءة · Prüfungsteil مركّبة بلا مدخل في مرجع النطق ← reviewed بحكم no-reference بمفتاح «prüfungsteil» (N-340: المطابقة بـ lower فقط!) · Prüfungsteil أُخطئت فاتُ في قائمة A1 (الدليل يوردها!) ← goetheList A1 · أعلام الخطر مقيسة (Prüfungsteil: +ng-velar!).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2989/0/0 ✓** · build ✓
+- **التالي:** b1-u14-d4 (الكتابة!) ثم d5–d6 · d7 المعركة النهائية!
+
 ## D511 (2026-10-17): b1-u14-d2 «الاستماع!» — كلمات اليوم: das Hilfsmittel (die Hilfsmittel بلا تغيير!) · der Zugang (die Zugänge!) · der Sitzplatz (die Sitzplätze!) + collocations الثلاث + قاعدتا العرض والأسئلة · خطّاف إعادة البناء الصوتي (N-339!) · الدفعة 465 · v7.57!
 - **الدفعة:** 465 · **الموجّه:** 7.57
 - **للقارئ:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الاستماع: **3 كلمات**: das Hilfsmittel (die Hilfsmittel! الوسائل المساعدة!) · der Zugang (die Zugänge! المدخل!) · der Sitzplatz (die Sitzplätze! المقعد!) + المفردات الثابتة (den Zugang finden! am Sitzplatz sitzen! die Hilfsmittel nutzen!). المحطات 16 وcheck-lesson **0/0/0** (41 سطراً).

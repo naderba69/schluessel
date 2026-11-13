@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 466 (2026-10-17) — D512: b1-u14-d3 «القراءة!» — كلمات اليوم: der Prüfungsteil (die Prüfungsteile! — A1 في قائمة جوته!) · die Einzelheit (die Einzelheiten! B1!) · der Block (die Blöcke — umlaut!) + collocations الثلاث + قاعدتا العرض والأسئلة · فخ ü↔ue في المطابقات (N-340!) · الدفعة 466 · v7.58!
+- **الخلاصة:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم القراءة: **3 كلمات**: der Prüfungsteil (die Prüfungsteile! جزء الامتحان!) · die Einzelheit (die Einzelheiten! التفصيل!) · der Block (die Blöcke! كراس الأسئلة!) + المفردات الثابتة (den Prüfungsteil lesen! die Einzelheiten finden! den Block öffnen!). المحطات 16 وcheck-lesson **0/0/0** (39 سطراً).
+- **التالي:** b1-u14-d4 (الكتابة!) ثم d5–d6 · d7 المعركة النهائية!
+
 ## الدفعة 465 (2026-10-17) — D511: b1-u14-d2 «الاستماع!» — كلمات اليوم: das Hilfsmittel (die Hilfsmittel بلا تغيير!) · der Zugang (die Zugänge!) · der Sitzplatz (die Sitzplätze!) + collocations الثلاث + قاعدتا العرض والأسئلة · خطّاف إعادة البناء الصوتي (N-339!) · الدفعة 465 · v7.57!
 - **الخلاصة:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الاستماع: **3 كلمات**: das Hilfsmittel (die Hilfsmittel! الوسائل المساعدة!) · der Zugang (die Zugänge! المدخل!) · der Sitzplatz (die Sitzplätze! المقعد!) + المفردات الثابتة (den Zugang finden! am Sitzplatz sitzen! die Hilfsmittel nutzen!). المحطات 16 وcheck-lesson **0/0/0** (41 سطراً).
 - **التالي:** b1-u14-d3 (القراءة!) ثم d4–d6 · d7 المعركة النهائية!

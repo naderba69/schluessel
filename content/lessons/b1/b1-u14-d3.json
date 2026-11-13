@@ -1,0 +1,375 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u14-d3",
+  "level": "B1",
+  "unit": 14,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Prüfungsteil ist lang und die Einzelheiten sind wichtig!",
+    "ar": "الوحدة 14: امتحان Niveauprüfung B1! اليوم الثالث — القراءة! (جزء الامتحان! التفاصيل! وكراس الأسئلة!)"
+  },
+  "canDoDaily": [
+    "يقرأ النص ويفهم التفاصيل! (die Einzelheiten finden!)",
+    "يعرف جزء الامتحان ويستخدم كراسه! (den Prüfungsteil lesen! den Block öffnen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hilfsmittel",
+      "zugang"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التفصيل مهم.»؟"
+        },
+        "choices": [
+          "Die Einzelheit ist wichtig.",
+          "Der Einzelheit ist wichtig.",
+          "Das Einzelheit ist wichtig."
+        ],
+        "answer": "Die Einzelheit ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«جزء الامتحان طويل.»؟ (الأداة!)"
+        },
+        "choices": [
+          "Der Prüfungsteil ist lang.",
+          "Die Prüfungsteil ist lang.",
+          "Das Prüfungsteil ist lang."
+        ],
+        "answer": "Der Prüfungsteil ist lang.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "pruefungsteil",
+      "einzelheit",
+      "block"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-u",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Prüfungsteil ist lang und die Einzelheiten sind wichtig!",
+        "ar": "يوم القراءة: يقرأ جزء الامتحان ويجد التفاصيل — بكراسه!"
+      },
+      "situation": {
+        "de": "Prüfungsteil, Einzelheit, Block — lesen und verstehen.",
+        "ar": "جزء امتحان! تفاصيل! كراس أسئلة! — يقرأ ويفهم! (القراءة!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الجمع: die Prüfungsteile! die Einzelheiten (-en)! die Blöcke (umlaut!)!",
+        "القراءة أولًا ثم الإجابة!",
+        "المفردات الثابتة: den Prüfungsteil lesen! die Einzelheiten finden! den Block öffnen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Prüfungsteil! Einzelheit! Block!"
+        ],
+        "interleavedWith": [
+          "hilfsmittel",
+          "zugang",
+          "sitzplatz"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "جزء الامتحان",
+                "de": "der Prüfungsteil"
+              },
+              {
+                "ar": "التفصيل · التفصيلة",
+                "de": "die Einzelheit"
+              },
+              {
+                "ar": "كراس الأسئلة · الدفتر",
+                "de": "der Block"
+              }
+            ],
+            "why": "der Prüfungsteil جزء الامتحان (der! die Prüfungsteile!) · die Einzelheit التفصيل (die! die Einzelheiten!) · der Block كراس الأسئلة (der! die Blöcke!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الوسيلة المساعدة",
+                "de": "das Hilfsmittel"
+              },
+              {
+                "ar": "الدخول · المدخل",
+                "de": "der Zugang"
+              },
+              {
+                "ar": "المقعد (المكان المخصص)",
+                "de": "der Sitzplatz"
+              }
+            ],
+            "why": "مراجعة أمس! das Hilfsmittel الوسيلة · der Zugang المدخل · der Sitzplatz المقعد"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "القراءة في الامتحان!"
+        ],
+        "interleavedWith": [
+          "pruefungsteil",
+          "einzelheit",
+          "block"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist lang. (جزء الامتحان!)",
+            "a": "Prüfungsteil",
+            "why": "der Prüfungsteil جزء الامتحان (der!) — Der Prüfungsteil ist lang."
+          },
+          {
+            "q": "Die ___ ist wichtig. (التفصيل!)",
+            "a": "Einzelheit",
+            "why": "die Einzelheit التفصيل (die!) — Die Einzelheit ist wichtig."
+          },
+          {
+            "q": "Der ___ ist neu. (كراس الأسئلة!)",
+            "a": "Block",
+            "why": "der Block كراس الأسئلة (der!) — Der Block ist neu."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الأداة! المفرد!"
+        ],
+        "interleavedWith": [
+          "pruefungsteil",
+          "einzelheit",
+          "block"
+        ],
+        "items": [
+          {
+            "q": "~~Der Einzelheit ist wichtig.~~",
+            "a": "Die Einzelheit ist wichtig.",
+            "why": "die Einzelheit التفصيل (die! لا der!)"
+          },
+          {
+            "q": "~~Die Prüfungsteil ist lang.~~",
+            "a": "Der Prüfungsteil ist lang.",
+            "why": "der Prüfungsteil جزء الامتحان (der! لا die!)"
+          },
+          {
+            "q": "~~Der Blöcke ist neu.~~",
+            "a": "Der Block ist neu.",
+            "why": "المفرد لا الجمع! der Block (die Blöcke جمع!) — الجملة عن كراس واحد!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — القراءة!",
+          "Prüfungsteil! Einzelheiten! Block!"
+        ],
+        "interleavedWith": [
+          "pruefung",
+          "text",
+          "lesen"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بجزء الامتحان! (جملتان!)",
+            "a": "Der Prüfungsteil ist lang. Er liest den Prüfungsteil.",
+            "why": "الجزء أولًا! (den Prüfungsteil lesen!)"
+          },
+          {
+            "q": "تكلّم عن التفاصيل والكراس! (جملتان!)",
+            "a": "Er findet die Einzelheiten. Der Block ist neu.",
+            "why": "التفاصيل ثم الكراس! (die Einzelheiten finden! den Block öffnen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«جزء الامتحان»؟",
+            "a": "der Prüfungsteil"
+          },
+          {
+            "q": "«التفصيل · التفصيلة»؟",
+            "a": "die Einzelheit"
+          },
+          {
+            "q": "«كراس الأسئلة · الدفتر»؟",
+            "a": "der Block"
+          },
+          {
+            "q": "«يجد التفاصيل.»؟",
+            "a": "Er findet die Einzelheiten."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الوسيلة المساعدة»؟ (مراجعة!)",
+            "a": "das Hilfsmittel"
+          },
+          {
+            "q": "«الدخول · المدخل»؟ (مراجعة!)",
+            "a": "der Zugang"
+          },
+          {
+            "q": "«المقعد (المكان المخصص)»؟ (مراجعة!)",
+            "a": "der Sitzplatz"
+          },
+          {
+            "q": "«يقرأ جزء الامتحان.»؟",
+            "a": "Er liest den Prüfungsteil."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«جزء الامتحان طويل.»؟",
+            "a": "Der Prüfungsteil ist lang."
+          },
+          {
+            "q": "«التفصيل مهم.»؟",
+            "a": "Die Einzelheit ist wichtig."
+          },
+          {
+            "q": "«كراس الأسئلة جديد.»؟",
+            "a": "Der Block ist neu."
+          },
+          {
+            "q": "«يفتح كراس الأسئلة.»؟",
+            "a": "Er öffnet den Block."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Prüfungsteil ist lang und die Einzelheiten sind wichtig. Der Block ist neu und die Prüfung beginnt. Er liest den Text und findet die Einzelheiten. Im Block liest er und die Ruhe ist da. Die Prüfung beginnt und er ist ruhig.",
+      "ar": "جزء الامتحان طويل والتفاصيل مهمة. كراس الأسئلة جديد والامتحان يبدأ. يقرأ النص ويجد التفاصيل. في كراسه يقرأ والهدوء حاضر. الامتحان يبدأ وهو هادئ."
+    },
+    "srsBundleWordIds": [
+      "pruefungsteil",
+      "einzelheit",
+      "block"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Einzelheit!",
+          "de": "~~Der Einzelheit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Einzelheit!",
+          "de": "Die Einzelheit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Einzelheit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التفصيل» مذكّر! والألمانية: die Einzelheit مؤنثة (die!) — أسماء -heit كلها مؤنثة! (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "die Prüfungsteil!",
+          "de": "~~Die Prüfungsteil ist lang.~~"
+        },
+        "correct": {
+          "ar": "der Prüfungsteil!",
+          "de": "Der Prüfungsteil ist lang."
+        },
+        "exercise": {
+          "q": "___ Prüfungsteil ist lang.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الامتحان» مذكّر و«الجزء» مذكّر فيختلط التركيب! والألمانية: der Prüfungsteil مذكّر (der!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Blöcke!",
+          "de": "~~Der Blöcke ist neu.~~"
+        },
+        "correct": {
+          "ar": "der Block (المفرد!)",
+          "de": "Der Block ist neu."
+        },
+        "exercise": {
+          "q": "Der ___ ist neu.",
+          "a": "Block"
+        },
+        "whyArabicSpeakerFails": "العربية: «الكراسات» جمع فيُقال الجمع مكان المفرد! والألمانية: der Block للمفرد و die Blöcke للجمع (umlaut!) — الجملة عن كراس واحد! (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Pruefungsteil",
+      "https://www.duden.de/rechtschreibung/Einzelheit",
+      "https://www.duden.de/rechtschreibung/Block"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-pruefungsteil",
+    "word-einzelheit",
+    "word-block"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 14: امتحان Niveauprüfung B1 — القراءة!)",
+    "goetheWordListOverlap": [
+      "pruefungsteil",
+      "einzelheit",
+      "block"
+    ]
+  }
+}
