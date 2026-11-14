@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u1-d3",
+  "level": "B2",
+  "unit": 1,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Integration fördern, Gleichheit leben, Freunden beistehen!",
+    "ar": "الوحدة 1: مع الناس! (الاندماج! المساواة! والمساندة!)"
+  },
+  "canDoDaily": [
+    "يتحدث عن الاندماج والمساواة! (Integration! Gleichheit!)",
+    "يساند أصدقاءه! (Freunden beistehen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "einsatz",
+      "hoeflichkeit",
+      "vermitteln"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«المساواة مهمّة.»؟"
+        },
+        "choices": [
+          "Die Gleichheit ist wichtig.",
+          "Der Gleichheit ist wichtig.",
+          "Das Gleichheit ist wichtig."
+        ],
+        "answer": "Die Gleichheit ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نساند الأصدقاء.»؟"
+        },
+        "choices": [
+          "Wir stehen den Freunden bei.",
+          "Wir beistehen den Freunden.",
+          "Wir stehen die Freunde bei."
+        ],
+        "answer": "Wir stehen den Freunden bei.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "integration",
+      "gleichheit",
+      "beistehen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ich-laut",
+      "sp-st-initial"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Integration fördern, Gleichheit leben, Freunden beistehen!",
+        "ar": "يوم ثلاثة في B2: الاندماج والمساواة والمساندة — مع الناس!"
+      },
+      "situation": {
+        "de": "Integration, Gleichheit, beistehen — zusammen leben.",
+        "ar": "اندماج! مساواة! مساندة! — نعيش معًا! (مع الناس!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الفعل المنفصل: beistehen! (Wir stehen bei!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Integration fördern! Gleichheit leben! Freunden beistehen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "einsatz",
+          "hoeflichkeit",
+          "vermitteln"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Integration",
+                "ar": "الاندماج (الدمج)"
+              },
+              {
+                "de": "die Gleichheit",
+                "ar": "المساواة (العدل)"
+              },
+              {
+                "de": "beistehen",
+                "ar": "يساند (يقف مع)"
+              }
+            ],
+            "why": "die Integration الاندماج (die! die Integrationen!) · die Gleichheit المساواة (die! die Gleichheiten!) · beistehen يساند (Dativ! trennbar!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Integration fördern",
+                "ar": "يُعزّز الاندماج"
+              },
+              {
+                "de": "Gleichheit leben",
+                "ar": "يعيش المساواة"
+              },
+              {
+                "de": "Freunden beistehen",
+                "ar": "يساند الأصدقاء"
+              },
+              {
+                "de": "die Gleichheiten",
+                "ar": "المساوات (جمع -en)"
+              }
+            ],
+            "why": "Integration fördern! · Gleichheit leben! · Freunden beistehen (Dativ!) · die Gleichheiten جمع -en"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "vorbild",
+          "toleranz",
+          "begegnung"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (الاندماج!)",
+            "a": "Integration",
+            "why": "die Integration الاندماج (die!) — Die Integration ist wichtig."
+          },
+          {
+            "q": "Die ___ ist wichtig. (المساواة!)",
+            "a": "Gleichheit",
+            "why": "die Gleichheit المساواة (die!) — Die Gleichheit ist wichtig."
+          },
+          {
+            "q": "Wir ___ den Freunden ___. (نساند!)",
+            "a": "stehen … bei",
+            "why": "beistehen فعل منفصل! — Wir stehen den Freunden bei."
+          },
+          {
+            "q": "Integration braucht ___. (وقتاً!)",
+            "a": "Zeit",
+            "why": "die Zeit الوقت (die!) — Integration braucht Zeit."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "mensch",
+          "freundlich",
+          "ruhe"
+        ],
+        "items": [
+          {
+            "q": "~~Der Integration ist wichtig.~~",
+            "a": "Die Integration ist wichtig.",
+            "why": "die Integration (die! لا der! — كل -tion مؤنثة!)"
+          },
+          {
+            "q": "~~Das Gleichheit ist wichtig.~~",
+            "a": "Die Gleichheit ist wichtig.",
+            "why": "die Gleichheit (die! لا das! — كل -heit مؤنثة!)"
+          },
+          {
+            "q": "~~Wir beistehen den Freunden.~~",
+            "a": "Wir stehen den Freunden bei.",
+            "why": "الفعل المنفصل: bei للنهاية! (Wir stehen … bei!)"
+          },
+          {
+            "q": "~~Er steht die Freunde bei.~~",
+            "a": "Er steht den Freunden bei.",
+            "why": "beistehen يأخذ Dativ! (den Freunden — لا die Freunde!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "einsatz",
+          "hoeflichkeit",
+          "vermitteln"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالمساواة! (جملتان!)",
+            "a": "Die Gleichheit ist wichtig. Gleichheit ist für alle.",
+            "why": "المساواة أولًا! (Gleichheit leben!)"
+          },
+          {
+            "q": "تحدث عن الاندماج! (جملتان!)",
+            "a": "Die Integration ist wichtig. Wir fördern die Integration.",
+            "why": "الاندماج! (Integration fördern!)"
+          },
+          {
+            "q": "تحدث عن المساندة! (جملتان!)",
+            "a": "Beistehen ist gut. Ich stehe meinen Freunden bei.",
+            "why": "المساندة! (Freunden beistehen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الاندماج (الدمج)»؟",
+            "a": "die Integration"
+          },
+          {
+            "q": "«المساواة (العدل)»؟",
+            "a": "die Gleichheit"
+          },
+          {
+            "q": "«يساند (يقف مع)»؟",
+            "a": "beistehen"
+          },
+          {
+            "q": "«نحن نساند الأصدقاء.»؟",
+            "a": "Wir stehen den Freunden bei."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«المساواة مهمّة.»؟",
+            "a": "Die Gleichheit ist wichtig."
+          },
+          {
+            "q": "die Integration",
+            "a": "الاندماج"
+          },
+          {
+            "q": "«الاندماج يحتاج وقتاً.»؟",
+            "a": "Integration braucht Zeit."
+          },
+          {
+            "q": "beistehen",
+            "a": "يساند"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يُعزّز الاندماج.»؟",
+            "a": "Er fördert die Integration."
+          },
+          {
+            "q": "«يساند أصدقاءه.»؟",
+            "a": "Er steht seinen Freunden bei."
+          },
+          {
+            "q": "die Gleichheit",
+            "a": "المساواة"
+          },
+          {
+            "q": "«المساندة مهمّة!»؟",
+            "a": "Beistehen ist wichtig!"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Integration ist wichtig und die Gleichheit ist da. Wir sollen Freunden beistehen und der Tag ist schön. Er fördert die Integration und lebt Gleichheit.",
+      "ar": "الاندماج والمساواة يقوّيان المجتمع — ونساند بعضنا!"
+    },
+    "srsBundleWordIds": [
+      "integration",
+      "gleichheit",
+      "beistehen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Integration!",
+          "de": "~~Der Integration ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Integration!",
+          "de": "Die Integration ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Integration ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الاندماج» مذكّر! والألمانية: die Integration (die!) — كل اسم على -tion مؤنث دائماً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Gleichheit!",
+          "de": "~~Das Gleichheit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Gleichheit!",
+          "de": "Die Gleichheit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Gleichheit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «المساواة» مؤنثة ✓ — والألمانية: die Gleichheit (die!) — كل -heit مؤنثة دائماً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "wir beistehen!",
+          "de": "~~Wir beistehen den Freunden.~~"
+        },
+        "correct": {
+          "ar": "wir stehen bei!",
+          "de": "Wir stehen den Freunden bei."
+        },
+        "exercise": {
+          "q": "Wir ___ den Freunden ___.",
+          "a": "stehen … bei"
+        },
+        "whyArabicSpeakerFails": "العربية: «نساند» كلمة واحدة! والألمانية: beistehen فعل منفصل — bei تذهب للنهاية! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Integration",
+      "https://www.duden.de/rechtschreibung/Gleichheit",
+      "https://www.duden.de/rechtschreibung/beistehen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-integration",
+    "word-gleichheit",
+    "word-beistehen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 1 (مع الناس!)",
+    "goetheWordListOverlap": [
+      "integration",
+      "gleichheit",
+      "beistehen"
+    ]
+  }
+}

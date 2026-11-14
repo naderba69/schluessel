@@ -2684,6 +2684,9 @@ def build_all() -> None:
     ("word-einsatz", "der Einsatz.", "einsatz", ["b2-u1-d2"]),
     ("word-hoeflichkeit", "die Höflichkeit.", "hoeflichkeit", ["b2-u1-d2"]),
     ("word-vermitteln", "vermitteln.", "vermitteln", ["b2-u1-d2"]),
+    ("word-integration", "die Integration.", "integration", ["b2-u1-d3"]),
+    ("word-gleichheit", "die Gleichheit.", "gleichheit", ["b2-u1-d3"]),
+    ("word-beistehen", "beistehen.", "beistehen", ["b2-u1-d3"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
