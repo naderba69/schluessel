@@ -2687,6 +2687,9 @@ def build_all() -> None:
     ("word-integration", "die Integration.", "integration", ["b2-u1-d3"]),
     ("word-gleichheit", "die Gleichheit.", "gleichheit", ["b2-u1-d3"]),
     ("word-beistehen", "beistehen.", "beistehen", ["b2-u1-d3"]),
+    ("word-ermutigung", "die Ermutigung.", "ermutigung", ["b2-u1-d4"]),
+    ("word-warnen", "warnen.", "warnen", ["b2-u1-d4"]),
+    ("word-ablehnung", "die Ablehnung.", "ablehnung", ["b2-u1-d4"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]

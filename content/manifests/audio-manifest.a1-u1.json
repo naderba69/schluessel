@@ -35120,12 +35120,13 @@
       "textDe": "warnen.",
       "priority": "P2",
       "lessonRefs": [
-        "b1-u5-d2"
+        "b1-u5-d2",
+        "b2-u1-d4"
       ],
-      "durationMs": 827,
-      "sizeBytes": 4031,
-      "hash": "sha256:eed402fe28b5d302949481fb604e2fc3da2e0a26f73defc4412e1550e198e2db",
-      "pcmSha256": "f97baf098902d4378a1c934defd6994205e354068b4e59f6aa46b858a48b535a",
+      "durationMs": 978,
+      "sizeBytes": 4657,
+      "hash": "sha256:b5646499ea354783f709c7434b5d098350829baeccd4334083919de1aba0039c",
+      "pcmSha256": "ba6d80fb7b6501efbf97e228cfcc3f2280ad9dc32e01ecbba409aab9cd97f265",
       "rmsDb": -17.05
     },
     {
@@ -88364,6 +88365,46 @@
       "hash": "sha256:1655727b38cf2fdb7bd0e562b953343a122abd644ba9b0ff735f52992de6c41d",
       "pcmSha256": "7b4cfe8794c8b75382b7ff111de3e0427b13912d3f386047c2dca82376ad4293",
       "rmsDb": -17.12
+    },
+    {
+      "id": "word-ablehnung",
+      "file": "words/audio/de-DE/word-ablehnung.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Ablehnung.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b2-u1-d4"
+      ],
+      "durationMs": 978,
+      "sizeBytes": 4803,
+      "hash": "sha256:99c168fbbbe9ece2377003bb8ddc824a344b1747ea27d0e546b78ff905d27745",
+      "pcmSha256": "192a098e0983b7fb7ac429e7abc1c7b2368b65bb390a3d3a4a04aff81c9eaff7",
+      "rmsDb": -17.0
+    },
+    {
+      "id": "word-ermutigung",
+      "file": "words/audio/de-DE/word-ermutigung.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Ermutigung.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b2-u1-d4"
+      ],
+      "durationMs": 1048,
+      "sizeBytes": 5147,
+      "hash": "sha256:90936321fa618a6194738a622fb231289f5559be0c91435249782a055207a4b8",
+      "pcmSha256": "873bbd27fd3371fc8bfeb33c7d17cfcc3ab2f1dd72a5631a9c5b3e5bde656de0",
+      "rmsDb": -16.97
     },
     {
       "id": "word-gleichheit",
