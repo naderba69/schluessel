@@ -1,0 +1,368 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u14-d6",
+  "level": "B1",
+  "unit": 14,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Mut ist da und der Puffer ist wichtig!",
+    "ar": "الوحدة 14: امتحان Niveauprüfung B1! اليوم الأخير — التوليف! (الشجاعة! والاحتياطي!)"
+  },
+  "canDoDaily": [
+    "يُظهر شجاعته ويستخدم احتياطيه! (Mut haben! den Puffer nutzen!)",
+    "يولّف كل كلمات أسبوع الامتحان في كلام واحد!"
+  ],
+  "warmup": {
+    "cardIds": [
+      "akzent",
+      "intonation",
+      "selbstvertrauen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الشجاعة مهمة.»؟ (الأداة!)"
+        },
+        "choices": [
+          "Der Mut ist wichtig.",
+          "Die Mut ist wichtig.",
+          "Das Mut ist wichtig."
+        ],
+        "answer": "Der Mut ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الاحتياطي مهم.»؟ (الأداة!)"
+        },
+        "choices": [
+          "Der Puffer ist wichtig.",
+          "Das Puffer ist wichtig.",
+          "Die Puffer ist wichtig."
+        ],
+        "answer": "Der Puffer ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "mut",
+      "puffer"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Mut ist da und der Puffer ist wichtig!",
+        "ar": "اليوم الأخير: الشجاعة والاحتياطي — توليف كل أسبوع الامتحان!"
+      },
+      "situation": {
+        "de": "Mut, Puffer, Prüfung — alles zusammen.",
+        "ar": "شجاعة! احتياطي! امتحان! — كل شيء معًا! (التوليف!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الكلمتان في التدريب!",
+        "التوليف: كلمات الأسبوع كلها في كلامك!",
+        "الشجاعة أولًا ثم الخطة!",
+        "المفردات الثابتة: Mut haben! den Puffer nutzen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Mut! Puffer!"
+        ],
+        "interleavedWith": [
+          "akzent",
+          "intonation",
+          "selbstvertrauen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الشجاعة",
+                "de": "der Mut"
+              },
+              {
+                "ar": "الاحتياطي (الوقت الإضافي)",
+                "de": "der Puffer"
+              },
+              {
+                "ar": "الثقة بالنفس",
+                "de": "das Selbstvertrauen"
+              }
+            ],
+            "why": "der Mut الشجاعة (der! بلا جمع!) · der Puffer الاحتياطي (der! die Puffer!) · das Selbstvertrauen الثقة (das!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الشهادة الرسمية",
+                "de": "die Urkunde"
+              },
+              {
+                "ar": "عدد النقاط",
+                "de": "die Punktzahl"
+              },
+              {
+                "ar": "جزء الامتحان",
+                "de": "der Prüfungsteil"
+              }
+            ],
+            "why": "توليف الأسبوع! die Urkunde الشهادة · die Punktzahl النقاط · der Prüfungsteil الجزء"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "اليام الأخير!"
+        ],
+        "interleavedWith": [
+          "mut",
+          "puffer",
+          "urkunde"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist wichtig. (الشجاعة!)",
+            "a": "Mut",
+            "why": "der Mut الشجاعة (der!) — Der Mut ist wichtig."
+          },
+          {
+            "q": "Der ___ ist wichtig. (الاحتياطي!)",
+            "a": "Puffer",
+            "why": "der Puffer الاحتياطي (der!) — Der Puffer ist wichtig."
+          },
+          {
+            "q": "Er bekommt die ___. (الشهادة!)",
+            "a": "Urkunde",
+            "why": "die Urkunde الشهادة (die!) — Er bekommt die Urkunde. (توليف!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الأداة! الجمع!"
+        ],
+        "interleavedWith": [
+          "mut",
+          "puffer",
+          "punktzahl"
+        ],
+        "items": [
+          {
+            "q": "~~Das Mut ist wichtig.~~",
+            "a": "Der Mut ist wichtig.",
+            "why": "der Mut الشجاعة (der! لا das!)"
+          },
+          {
+            "q": "~~Die Puffer ist wichtig.~~",
+            "a": "Der Puffer ist wichtig.",
+            "why": "der Puffer الاحتياطي (der! لا die!)"
+          },
+          {
+            "q": "~~Die Punktzahlen ist hoch.~~",
+            "a": "Die Punktzahl ist hoch.",
+            "why": "المفرد لا الجمع! (توليف من d1!) die Punktzahl (die Punktzahlen جمع!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — التوليف!",
+          "Mut! Puffer! Prüfung!"
+        ],
+        "interleavedWith": [
+          "urkunde",
+          "punktzahl",
+          "sitzplatz"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالشجاعة! (جملتان!)",
+            "a": "Der Mut ist wichtig. Er hat Mut.",
+            "why": "الشجاعة أولًا! (Mut haben!)"
+          },
+          {
+            "q": "تكلّم عن أسبوعك! (ثلاث جمل!)",
+            "a": "Der Puffer ist wichtig. Er findet den Zugang. Er bekommt die Urkunde.",
+            "why": "التوليف! الاحتياطي ثم المدخل ثم الشهادة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الشجاعة»؟",
+            "a": "der Mut"
+          },
+          {
+            "q": "«الاحتياطي (الوقت الإضافي)»؟",
+            "a": "der Puffer"
+          },
+          {
+            "q": "«يملك الشجاعة.»؟",
+            "a": "Er hat Mut."
+          },
+          {
+            "q": "«يستخدم الاحتياطي.»؟",
+            "a": "Er nutzt den Puffer."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الشهادة الرسمية»؟ (توليف!)",
+            "a": "die Urkunde"
+          },
+          {
+            "q": "«عدد النقاط»؟ (توليف!)",
+            "a": "die Punktzahl"
+          },
+          {
+            "q": "«النبرة (التنغيم)»؟ (توليف!)",
+            "a": "die Intonation"
+          },
+          {
+            "q": "«الشجاعة مهمة.»؟",
+            "a": "Der Mut ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الاحتياطي مهم.»؟",
+            "a": "Der Puffer ist wichtig."
+          },
+          {
+            "q": "«الثقة بالنفس حاضرة.»؟",
+            "a": "Das Selbstvertrauen ist da."
+          },
+          {
+            "q": "«يجد المدخل.»؟ (توليف!)",
+            "a": "Er findet den Zugang."
+          },
+          {
+            "q": "«يُحرز نتيجة جيدة.»؟ (توليف!)",
+            "a": "Er schneidet gut ab."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Mut ist wichtig und der Puffer ist da. Die Prüfung beginnt und der Prüfungsteil ist lang. Er liest die Einzelheiten und findet den Zugang. Am Sitzplatz sitzt er und die Handschrift ist klar. Die Punktzahl ist hoch und er bekommt die Urkunde. Das Selbstvertrauen ist da — geschafft!",
+      "ar": "الشجاعة مهمة والاحتياطي حاضر. الامتحان يبدأ وجزء الامتحان طويل. يقرأ التفاصيل ويجد المدخل. في المقعد يجلس والخط اليدوي واضح. عدد النقاط مرتفع ويحصل على الشهادة. الثقة بالنفس حاضرة — أُنجز!"
+    },
+    "srsBundleWordIds": [
+      "mut",
+      "puffer"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das Mut!",
+          "de": "~~Das Mut ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "der Mut!",
+          "de": "Der Mut ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Mut ist wichtig.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الشجاعة» مؤنثة! والألمانية: der Mut مذكّر (der!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "die Puffer!",
+          "de": "~~Die Puffer ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "der Puffer!",
+          "de": "Der Puffer ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Puffer ist wichtig.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الاحتياطي» مذكّر — والاتجاه صحيح! لكن «السعة» مؤنثة فيختلط! والألمانية: der Puffer مذكّر (der!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Punktzahlen!",
+          "de": "~~Der Punktzahlen ist hoch.~~"
+        },
+        "correct": {
+          "ar": "die Punktzahl (المفرد!)",
+          "de": "Die Punktzahl ist hoch."
+        },
+        "exercise": {
+          "q": "Die ___ ist hoch.",
+          "a": "Punktzahl"
+        },
+        "whyArabicSpeakerFails": "العربية: «النقاط» جمع! والألمانية: die Punktzahl للمفرد (die!) — والجمع die Punktzahlen — الجملة عن عدد واحد! (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Mut",
+      "https://www.duden.de/rechtschreibung/Puffer"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-mut",
+    "word-puffer"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 14: امتحان Niveauprüfung B1 — اليوم الأخير!)",
+    "goetheWordListOverlap": [
+      "mut",
+      "puffer"
+    ]
+  }
+}

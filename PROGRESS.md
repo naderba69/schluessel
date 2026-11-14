@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 469 (2026-10-17) — D515: b1-u14-d6 «اليام الأخير!» — كلمتان: der Mut (بلا جمع! الشجاعة! — B1 في جوته!) · der Puffer (die Puffer! الاحتياطي!) + collocation + توليف أسبوع الامتحان كاملاً في الملخّص · الدفعة 469 · v7.61!
+- **الخلاصة:** الوحدة 14 (امتحان Niveauprüfung B1!) — اليوم الأخير: **كلمتان**: der Mut (الشجاعة! بلا جمع!) · der Puffer (die Puffer! الاحتياطي!) + المفردات الثابتة (Mut haben! den Puffer nutzen!). الملخّص يولّف كل أسبوع الامتحان (Urkunde! Punktzahl! Prüfungsteil! Sitzplatz! Handschrift! Selbstvertrauen!). المحطات 16 وcheck-lesson **0/0/0** (42 سطراً).
+- **التالي:** **b1-u14-d7 المعركة النهائية لـB1!** (battle recipe!)
+
 ## الدفعة 468 (2026-10-17) — D514: b1-u14-d5 «الكلام!» — كلمات اليوم: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen بلا تغيير! الثقة!) + collocations الثلاث + قاعدتا العرض والأسئلة · الدفعة 468 · v7.60!
 - **الخلاصة:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الكلام: **3 كلمات**: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen! الثقة بالنفس!) + المفردات الثابتة (einen Akzent haben! die Intonation hören! das Selbstvertrauen zeigen!). المحطات 16 وcheck-lesson **0/0/0** (38 سطراً).
 - **التالي:** b1-u14-d6 (اليوم الأخير!) ثم **d7 المعركة النهائية!**

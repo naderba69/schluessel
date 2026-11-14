@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-17 — الدفعة 469: D515 — b1-u14-d6 «اليام الأخير!» — كلمتان: der Mut (بلا جمع! الشجاعة! — B1 في جوته!) · der Puffer (die Puffer! الاحتياطي!) + collocation + توليف أسبوع الامتحان كاملاً في الملخّص · الدفعة 469 · v7.61!
+الوحدة 14 (امتحان Niveauprüfung B1!) — اليوم الأخير: **كلمتان**: der Mut (الشجاعة! بلا جمع!) · der Puffer (die Puffer! الاحتياطي!) + المفردات الثابتة (Mut haben! den Puffer nutzen!). الملخّص يولّف كل أسبوع الامتحان (Urkunde! Punktzahl! Prüfungsteil! Sitzplatz! Handschrift! Selbstvertrauen!). المحطات 16 وcheck-lesson **0/0/0** (42 سطراً).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **3000/0/0 ✓** · build ✓
+
 ## 2026-10-17 — الدفعة 468: D514 — b1-u14-d5 «الكلام!» — كلمات اليوم: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen بلا تغيير! الثقة!) + collocations الثلاث + قاعدتا العرض والأسئلة · الدفعة 468 · v7.60!
 الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الكلام: **3 كلمات**: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen! الثقة بالنفس!) + المفردات الثابتة (einen Akzent haben! die Intonation hören! das Selbstvertrauen zeigen!). المحطات 16 وcheck-lesson **0/0/0** (38 سطراً).
 - **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2997/0/0 ✓** · build ✓

@@ -88224,6 +88224,46 @@
       "hash": "sha256:d5ae2c2587a580d5a636e5ab8c62eb8f2c03493c38b2a75b4671ca2bb1a74acc",
       "pcmSha256": "9c084e1d4ce829f64af73f0292f4b67b49c69f182faf45f96f6434ccebf555fe",
       "rmsDb": -17.23
+    },
+    {
+      "id": "word-mut",
+      "file": "words/audio/de-DE/word-mut.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Mut.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u14-d6"
+      ],
+      "durationMs": 839,
+      "sizeBytes": 4064,
+      "hash": "sha256:90a84b9ad1bd47e73f2caa30e13e309a2ed5b964c67344b004f15b0ba1921a61",
+      "pcmSha256": "9efb32d72c90f10172c42b5776640253b0c9034607a101d0b14017dce0c718b6",
+      "rmsDb": -16.98
+    },
+    {
+      "id": "word-puffer",
+      "file": "words/audio/de-DE/word-puffer.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Puffer.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u14-d6"
+      ],
+      "durationMs": 989,
+      "sizeBytes": 4715,
+      "hash": "sha256:6c0c1ab80124a43d5f63d1c0e7edcf3fa6ef80ebb5b985aaf0624116eea37b7b",
+      "pcmSha256": "5b5c4842c9b87898e53041f3314886ff3d4e0bcd25008ee8908ebe10b3f7b993",
+      "rmsDb": -17.08
     }
   ],
   "characterVoices": {
