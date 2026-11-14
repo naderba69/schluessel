@@ -1,0 +1,38 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b2-lesson-upgrade",
+ "level": "B2",
+ "decision": "D517",
+ "title": {
+  "de": "Ausbau der B2-Lektionen: Regel, Übung, Quiz",
+  "ar": "ترقية دروس B2: القاعدة والتطبيق والاختبار"
+ },
+ "report": "docs/reports/b2-lesson-upgrade.md",
+ "scope": {
+  "fromUnit": 1,
+  "toUnit": 14,
+  "kinds": [
+   "content",
+   "integration"
+  ]
+ },
+ "lessons": [
+  {
+   "lessonId": "b2-u1-d1",
+   "rule": "done",
+   "practice": "pending",
+   "quiz": "pending",
+   "properNouns": [],
+   "fixedPhrases": [
+    {
+     "de": "ein Vorbild sein",
+     "whyAr": "المفردة الثابتة الأولى لبداية B2! (D517)"
+    },
+    {
+     "de": "Toleranz zeigen",
+     "whyAr": "المفردة الثابتة الثانية لبداية B2! (D517)"
+    }
+   ]
+  }
+ ]
+}

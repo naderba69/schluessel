@@ -218,7 +218,8 @@ describe("الخريطة الهادئة §2.8 (N-149 · D249)", () => {
     expect(levels).toContain("░░░░░░░░░░"); // A1: صفر من 90
     expect(q("map-levels")!.textContent).toContain("B1"); // D419: B1 صار له محتوى (b1-u1-d1)!
     expect(q("map-unpublished-B1")).toBeNull(); // لم يعد «قيد الإنتاج» — شريطه ظاهر كبقية المستويات
-    expect(q("map-unpublished-B2")!.textContent).toContain("قيد الإنتاج");
+    expect(q("map-levels")!.textContent).toContain("B2"); // D517: B2 بدأ الإنتاج (b2-u1-d1)!
+    expect(q("map-unpublished-B2")).toBeNull(); // D517: لم يعد «قيد الإنتاج» — أول درس B2 نُشر
     expect(q("map-unit")!.textContent).toContain("الوحدة 1");
     expect(q("map-unit")!.textContent).toContain("◉○○○○○"); // d1 متاح والباقي مقفل
     expect(q("map-week")!.textContent).toContain("الأسبوع 1 من 62");

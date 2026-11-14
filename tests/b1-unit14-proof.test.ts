@@ -1,6 +1,6 @@
 // tests/b1-unit14-proof.test.ts — معركة الوحدة B1-U14 (D516 — برهان D7): دروسها الستة تُلعَب آلياً عبر المساعد المشترك.
 // النمط نفسه من D426/D433/D440/D461/D495/D502/D509 (b1-unitN-proof) + حارس البنود e-practice-item-shape.
-// nextId = null — المسار استُنفد: هذه المعركة النهائية لـB1! (نمط D481/D488/D495/D502)
+// nextId = "b2-u1-d1" (D517 — النقلة: B2 بدأ!) — كان null في D516 (المسار استُنفد ثم فُتح مسار جديد!)
 import { proveUnit } from "./unit-proof.js";
 
 await proveUnit({
@@ -13,7 +13,7 @@ await proveUnit({
     "b1-u14-d5",
     "b1-u14-d6",
   ],
-  nextId: null, // D516: نهاية مسار B1 — لا يوم بعدها!
+  nextId: "b2-u1-d1", // D517: مسار B2 بدأ! (النقلة — N-298!) — كان null في D516 (نهاية B1)
   prefixIds: [
     "a1-u1-d1",
     "a1-u1-d2",

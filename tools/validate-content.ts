@@ -43,7 +43,10 @@ export const SRS_TARGETS: Record<string, { production: number; comprehension: nu
   A1: { production: 0.4, comprehension: 0.5, audio: 0.1 },
   A2: { production: 0.5, comprehension: 0.4, audio: 0.1 },
   B1: { production: 0.6, comprehension: 0.3, audio: 0.1 },
-  B2: { production: 0.7, comprehension: 0.2, audio: 0.1 },
+  // D517 (N-343): 0.7/0.2/0.1 كان مستحيلاً — كل قائمة مولَّدة فيها comprehension ≥ production
+  // (لا بطاقة إنتاج بلا بطاقة فهم)، فأي محتوى يبقى على مسافة ≥ 0.5 > حد 0.35. الهدف الجديد
+  // ضمن المدى التجريبي للأشقاء (A2: 37/37/10 · B1: 32/32/14) ويتحقق من جودة المزج لا المستحيل.
+  B2: { production: 0.35, comprehension: 0.35, audio: 0.15 },
 };
 
 /** D184: حارس السرعة (مطابق لـtools/dev/speech-rate.py: الكلمة ≥ حرفين · الحدّ 200 · ≥3 كلمات) */

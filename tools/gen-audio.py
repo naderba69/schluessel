@@ -2678,6 +2678,9 @@ def build_all() -> None:
     ("word-selbstvertrauen", "das Selbstvertrauen.", "selbstvertrauen", ["b1-u14-d5"]),
     ("word-mut", "der Mut.", "mut", ["b1-u14-d6"]),
     ("word-puffer", "der Puffer.", "puffer", ["b1-u14-d6"]),
+    ("word-vorbild", "das Vorbild.", "vorbild", ["b2-u1-d1"]),
+    ("word-toleranz", "die Toleranz.", "toleranz", ["b2-u1-d1"]),
+    ("word-begegnung", "die Begegnung.", "begegnung", ["b2-u1-d1"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
