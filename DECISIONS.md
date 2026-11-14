@@ -3798,6 +3798,13 @@
 - **الأرقام:** ملاحظات 0/24/237 (261 — بلا جديد!) · تغطية A2 الرئيسية 1124/1159 (بلا تغيير — خطة!) · مجموعات 171/247 (بلا تغيير — خطة!) · الإسقاط-بعد-U12: رئيسية 1134 (+10!) +22 = 1156 (99.7%!) · مجموعات 191 (+20!) · دروس 162 · ترسانات 68 (+0!).
 - **البوابة:** vitest ✓ 1633/1633 (130 ملفاً) · tsc ✓ 0 خطأ · validate-content ✓ 1923/0/0 · build ✓ 3.49s · docs-sync --check ✓ 210 قراراً مهيكلاً · آخرها D395 · الدفعة 350 · الموجّه 5.52 · notes check ✓ 0/24/237 (261)
 - **التالي:** إنتاج d1 (الامتحان: Antwortbogen/Prüfer/Wörterbuch/auf-Deutsch/Abitur!).
+## D514 (2026-10-17): b1-u14-d5 «الكلام!» — كلمات اليوم: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen بلا تغيير! الثقة!) + collocations الثلاث + قاعدتا العرض والأسئلة · الدفعة 468 · v7.60!
+- **الدفعة:** 468 · **الموجّه:** 7.60
+- **للقارئ:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الكلام: **3 كلمات**: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen! الثقة بالنفس!) + المفردات الثابتة (einen Akzent haben! die Intonation hören! das Selbstvertrauen zeigen!). المحطات 16 وcheck-lesson **0/0/0** (38 سطراً).
+- **بطاقة قرار:** ثلاثية الكلام · النطق الثلاثي وُجد في المرجع مباشرة · أعلام الخطر مقيسة (Akzent: z · Intonation: بلا أعلام! · Selbstvertrauen: auslaut-b + v-f).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2997/0/0 ✓** · build ✓
+- **التالي:** b1-u14-d6 (اليوم الأخير!) ثم **d7 المعركة النهائية!**
+
 ## D513 (2026-10-17): b1-u14-d4 «الكتابة!» — كلمات اليوم: die Handschrift (die Handschriften! الخط اليدوي!) · die Schreibweise (die Schreibweisen! الإملاء!) · das Satzzeichen (die Satzzeichen بلا تغيير! الترقيم!) + collocations الثلاث + قاعدتا العرض والأسئلة · حكم النطق: artifact لا accept-reference (N-341!) · الدفعة 467 · v7.59!
 - **الدفعة:** 467 · **الموجّه:** 7.59
 - **للقارئ:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الكتابة: **3 كلمات**: die Handschrift (die Handschriften! الخط اليدوي!) · die Schreibweise (die Schreibweisen! طريقة الكتابة!) · das Satzzeichen (die Satzzeichen! علامة الترقيم!) + المفردات الثابتة (die Handschrift lesen! die Schreibweise kennen! die Satzzeichen schreiben!). المحطات 16 وcheck-lesson **0/0/0** (38 سطراً).

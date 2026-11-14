@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-17 — الدفعة 468: D514 — b1-u14-d5 «الكلام!» — كلمات اليوم: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen بلا تغيير! الثقة!) + collocations الثلاث + قاعدتا العرض والأسئلة · الدفعة 468 · v7.60!
+الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الكلام: **3 كلمات**: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen! الثقة بالنفس!) + المفردات الثابتة (einen Akzent haben! die Intonation hören! das Selbstvertrauen zeigen!). المحطات 16 وcheck-lesson **0/0/0** (38 سطراً).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2997/0/0 ✓** · build ✓
+
 ## 2026-10-17 — الدفعة 467: D513 — b1-u14-d4 «الكتابة!» — كلمات اليوم: die Handschrift (die Handschriften! الخط اليدوي!) · die Schreibweise (die Schreibweisen! الإملاء!) · das Satzzeichen (die Satzzeichen بلا تغيير! الترقيم!) + collocations الثلاث + قاعدتا العرض والأسئلة · حكم النطق: artifact لا accept-reference (N-341!) · الدفعة 467 · v7.59!
 الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الكتابة: **3 كلمات**: die Handschrift (die Handschriften! الخط اليدوي!) · die Schreibweise (die Schreibweisen! طريقة الكتابة!) · das Satzzeichen (die Satzzeichen! علامة الترقيم!) + المفردات الثابتة (die Handschrift lesen! die Schreibweise kennen! die Satzzeichen schreiben!). المحطات 16 وcheck-lesson **0/0/0** (38 سطراً).
 - **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2993/0/0 ✓** · build ✓

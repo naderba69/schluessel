@@ -88164,6 +88164,66 @@
       "hash": "sha256:c62f5e727fb8c865e38dbe2ca8ef29858d5cb59924bf1b86c82a66906b77a342",
       "pcmSha256": "32009405d4803a628f2d51b2cf7fed3d6b3e6db5b4fac4bd00627027f402c95d",
       "rmsDb": -17.27
+    },
+    {
+      "id": "word-akzent",
+      "file": "words/audio/de-DE/word-akzent.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Akzent.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u14-d5"
+      ],
+      "durationMs": 1024,
+      "sizeBytes": 4937,
+      "hash": "sha256:e3bd02c2d08f89a2101322ce99da165e925979520713c17a969ec8965b6e554c",
+      "pcmSha256": "1f85e5c5f30f316eef7ed4c874c5cb3dbf9c534e5607935ac29cc3e5aa5a3c48",
+      "rmsDb": -17.19
+    },
+    {
+      "id": "word-intonation",
+      "file": "words/audio/de-DE/word-intonation.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Intonation.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u14-d5"
+      ],
+      "durationMs": 1384,
+      "sizeBytes": 6496,
+      "hash": "sha256:f1a703802f07cbafb6b5fc90c5a4393d2c795ecb498f5f39382dfd07eb7a4989",
+      "pcmSha256": "91d48bb17c3699dd2a5a8070a88f0402a204fde748d0fcb93bca547e53a74d7c",
+      "rmsDb": -17.02
+    },
+    {
+      "id": "word-selbstvertrauen",
+      "file": "words/audio/de-DE/word-selbstvertrauen.opus",
+      "role": "word",
+      "isGuest": false,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "das Selbstvertrauen.",
+      "priority": "P2",
+      "lessonRefs": [
+        "b1-u14-d5"
+      ],
+      "durationMs": 1431,
+      "sizeBytes": 6753,
+      "hash": "sha256:d5ae2c2587a580d5a636e5ab8c62eb8f2c03493c38b2a75b4671ca2bb1a74acc",
+      "pcmSha256": "9c084e1d4ce829f64af73f0292f4b67b49c69f182faf45f96f6434ccebf555fe",
+      "rmsDb": -17.23
     }
   ],
   "characterVoices": {

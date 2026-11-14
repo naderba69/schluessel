@@ -1,0 +1,376 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u14-d5",
+  "level": "B1",
+  "unit": 14,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Akzent ist klar und das Selbstvertrauen ist da!",
+    "ar": "الوحدة 14: امتحان Niveauprüfung B1! اليوم الخامس — الكلام! (اللكنة! النبرة! والثقة بالنفس!)"
+  },
+  "canDoDaily": [
+    "يتكلم بلكنة واضحة ونبرة صحيحة! (die Intonation hören!)",
+    "يظهر ثقته بالنفس في الكلام! (das Selbstvertrauen zeigen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "handschrift",
+      "schreibweise"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الثقة بالنفس مهمة.»؟"
+        },
+        "choices": [
+          "Das Selbstvertrauen ist wichtig.",
+          "Die Selbstvertrauen ist wichtig.",
+          "Der Selbstvertrauen ist wichtig."
+        ],
+        "answer": "Das Selbstvertrauen ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«اللكنة واضحة.»؟ (الأداة!)"
+        },
+        "choices": [
+          "Der Akzent ist klar.",
+          "Die Akzent ist klar.",
+          "Das Akzent ist klar."
+        ],
+        "answer": "Der Akzent ist klar.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "akzent",
+      "intonation",
+      "selbstvertrauen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "z",
+      "auslaut-b",
+      "v-f"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Akzent ist klar und das Selbstvertrauen ist da!",
+        "ar": "يوم الكلام: يتكلم بوضوح ويظهر ثقته — بنبرته!"
+      },
+      "situation": {
+        "de": "Akzent, Intonation, Selbstvertrauen — sprechen und zeigen.",
+        "ar": "لكنة! نبرة! ثقة بالنفس! — يتكلم ويُظهر! (الكلام!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الجمع: die Akzente (-e)! die Intonationen (-en)! die Selbstvertrauen (بلا تغيير!)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: einen Akzent haben! die Intonation hören! das Selbstvertrauen zeigen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Akzent! Intonation! Selbstvertrauen!"
+        ],
+        "interleavedWith": [
+          "handschrift",
+          "schreibweise",
+          "satzzeichen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "اللكنة · اللهجة",
+                "de": "der Akzent"
+              },
+              {
+                "ar": "النبرة (التنغيم)",
+                "de": "die Intonation"
+              },
+              {
+                "ar": "الثقة بالنفس",
+                "de": "das Selbstvertrauen"
+              }
+            ],
+            "why": "der Akzent اللكنة (der! die Akzente!) · die Intonation النبرة (die! die Intonationen!) · das Selbstvertrauen الثقة (das! die Selbstvertrauen بلا تغيير!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الخط اليدوي",
+                "de": "die Handschrift"
+              },
+              {
+                "ar": "طريقة الكتابة · الإملاء",
+                "de": "die Schreibweise"
+              },
+              {
+                "ar": "علامة الترقيم",
+                "de": "das Satzzeichen"
+              }
+            ],
+            "why": "مراجعة الأمس! die Handschrift الخط · die Schreibweise الإملاء · das Satzzeichen الترقيم"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الكلام في الامتحان!"
+        ],
+        "interleavedWith": [
+          "akzent",
+          "intonation",
+          "selbstvertrauen"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist klar. (اللكنة!)",
+            "a": "Akzent",
+            "why": "der Akzent اللكنة (der!) — Der Akzent ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig. (النبرة!)",
+            "a": "Intonation",
+            "why": "die Intonation النبرة (die!) — Die Intonation ist wichtig."
+          },
+          {
+            "q": "Das ___ ist wichtig. (الثقة بالنفس!)",
+            "a": "Selbstvertrauen",
+            "why": "das Selbstvertrauen الثقة بالنفس (das!) — Das Selbstvertrauen ist wichtig."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الأداة! الجمع!"
+        ],
+        "interleavedWith": [
+          "akzent",
+          "intonation",
+          "selbstvertrauen"
+        ],
+        "items": [
+          {
+            "q": "~~Die Akzent ist klar.~~",
+            "a": "Der Akzent ist klar.",
+            "why": "der Akzent اللكنة (der! لا die!)"
+          },
+          {
+            "q": "~~Der Intonation ist wichtig.~~",
+            "a": "Die Intonation ist wichtig.",
+            "why": "die Intonation النبرة (die! لا der!)"
+          },
+          {
+            "q": "~~Die Intonationen ist wichtig.~~",
+            "a": "Die Intonation ist wichtig.",
+            "why": "المفرد لا الجمع! die Intonation (die Intonationen جمع!) — الجملة عن نبرة واحدة!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — الكلام!",
+          "Akzent! Intonation! Selbstvertrauen!"
+        ],
+        "interleavedWith": [
+          "sprechen",
+          "pruefung",
+          "ruhe"
+        ],
+        "items": [
+          {
+            "q": "ابدأ باللكنة! (جملتان!)",
+            "a": "Der Akzent ist klar. Er hat einen Akzent.",
+            "why": "اللكنة أولًا! (einen Akzent haben!)"
+          },
+          {
+            "q": "تكلّم عن النبرة والثقة! (جملتان!)",
+            "a": "Die Intonation ist wichtig. Er zeigt das Selbstvertrauen.",
+            "why": "النبرة ثم الثقة! (die Intonation hören! das Selbstvertrauen zeigen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«اللكنة · اللهجة»؟",
+            "a": "der Akzent"
+          },
+          {
+            "q": "«النبرة (التنغيم)»؟",
+            "a": "die Intonation"
+          },
+          {
+            "q": "«الثقة بالنفس»؟",
+            "a": "das Selbstvertrauen"
+          },
+          {
+            "q": "«يظهر الثقة بالنفس.»؟",
+            "a": "Er zeigt das Selbstvertrauen."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الخط اليدوي»؟ (مراجعة!)",
+            "a": "die Handschrift"
+          },
+          {
+            "q": "«طريقة الكتابة · الإملاء»؟ (مراجعة!)",
+            "a": "die Schreibweise"
+          },
+          {
+            "q": "«علامة الترقيم»؟ (مراجعة!)",
+            "a": "das Satzzeichen"
+          },
+          {
+            "q": "«يسمع النبرة.»؟",
+            "a": "Er hört die Intonation."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«اللكنة واضحة.»؟",
+            "a": "Der Akzent ist klar."
+          },
+          {
+            "q": "«النبرة مهمة.»؟",
+            "a": "Die Intonation ist wichtig."
+          },
+          {
+            "q": "«الثقة بالنفس مهمة.»؟",
+            "a": "Das Selbstvertrauen ist wichtig."
+          },
+          {
+            "q": "«يملك لهجة.»؟",
+            "a": "Er hat einen Akzent."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Akzent ist klar und die Intonation ist wichtig. Das Selbstvertrauen ist da und die Prüfung beginnt. Er spricht den Text und hört die Intonation. Das Selbstvertrauen zeigt er und die Ruhe ist da. Die Prüfung beginnt und er ist ruhig.",
+      "ar": "اللكنة واضحة والنبرة مهمة. الثقة بالنفس حاضرة والامتحان يبدأ. يتكلم عن النص ويسمع النبرة. الثقة بالنفس يُظهرها والهدوء حاضر. الامتحان يبدأ وهو هادئ."
+    },
+    "srsBundleWordIds": [
+      "akzent",
+      "intonation",
+      "selbstvertrauen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Akzent!",
+          "de": "~~Die Akzent ist klar.~~"
+        },
+        "correct": {
+          "ar": "der Akzent!",
+          "de": "Der Akzent ist klar."
+        },
+        "exercise": {
+          "q": "___ Akzent ist klar.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «اللكنة» مؤنثة! والألمانية: der Akzent مذكّر (der!) — أسماء -ent مذكّرة! (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Intonation!",
+          "de": "~~Der Intonation ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Intonation!",
+          "de": "Die Intonation ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Intonation ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «النبرة» مؤنثة — والاتّجاه صحيح! لكن «التنغيم» مصدر مذكّر فيختلط! والألمانية: die Intonation مؤنثة (die!) — أسماء -tion كلها مؤنثة! (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "die Intonationen!",
+          "de": "~~Die Intonationen ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Intonation (المفرد!)",
+          "de": "Die Intonation ist wichtig."
+        },
+        "exercise": {
+          "q": "Die ___ ist wichtig.",
+          "a": "Intonation"
+        },
+        "whyArabicSpeakerFails": "العربية: «النبرات» جمع فيُقال الجمع مكان المفرد! والألمانية: die Intonation للمفرد و die Intonationen للجمع — الجملة عن نبرة واحدة! (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Akzent",
+      "https://www.duden.de/rechtschreibung/Intonation",
+      "https://www.duden.de/rechtschreibung/Selbstvertrauen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-akzent",
+    "word-intonation",
+    "word-selbstvertrauen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 14: امتحان Niveauprüfung B1 — الكلام!)",
+    "goetheWordListOverlap": [
+      "akzent",
+      "intonation",
+      "selbstvertrauen"
+    ]
+  }
+}

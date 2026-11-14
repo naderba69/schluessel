@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 468 (2026-10-17) — D514: b1-u14-d5 «الكلام!» — كلمات اليوم: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen بلا تغيير! الثقة!) + collocations الثلاث + قاعدتا العرض والأسئلة · الدفعة 468 · v7.60!
+- **الخلاصة:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الكلام: **3 كلمات**: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen! الثقة بالنفس!) + المفردات الثابتة (einen Akzent haben! die Intonation hören! das Selbstvertrauen zeigen!). المحطات 16 وcheck-lesson **0/0/0** (38 سطراً).
+- **التالي:** b1-u14-d6 (اليوم الأخير!) ثم **d7 المعركة النهائية!**
+
 ## الدفعة 467 (2026-10-17) — D513: b1-u14-d4 «الكتابة!» — كلمات اليوم: die Handschrift (die Handschriften! الخط اليدوي!) · die Schreibweise (die Schreibweisen! الإملاء!) · das Satzzeichen (die Satzzeichen بلا تغيير! الترقيم!) + collocations الثلاث + قاعدتا العرض والأسئلة · حكم النطق: artifact لا accept-reference (N-341!) · الدفعة 467 · v7.59!
 - **الخلاصة:** الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الكتابة: **3 كلمات**: die Handschrift (die Handschriften! الخط اليدوي!) · die Schreibweise (die Schreibweisen! طريقة الكتابة!) · das Satzzeichen (die Satzzeichen! علامة الترقيم!) + المفردات الثابتة (die Handschrift lesen! die Schreibweise kennen! die Satzzeichen schreiben!). المحطات 16 وcheck-lesson **0/0/0** (38 سطراً).
 - **التالي:** b1-u14-d5 (الكلام!) ثم d6 · d7 المعركة النهائية!

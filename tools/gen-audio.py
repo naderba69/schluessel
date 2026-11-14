@@ -2673,6 +2673,9 @@ def build_all() -> None:
     ("word-handschrift", "die Handschrift.", "handschrift", ["b1-u14-d4"]),
     ("word-schreibweise", "die Schreibweise.", "schreibweise", ["b1-u14-d4"]),
     ("word-satzzeichen", "das Satzzeichen.", "satzzeichen", ["b1-u14-d4"]),
+    ("word-akzent", "der Akzent.", "akzent", ["b1-u14-d5"]),
+    ("word-intonation", "die Intonation.", "intonation", ["b1-u14-d5"]),
+    ("word-selbstvertrauen", "das Selbstvertrauen.", "selbstvertrauen", ["b1-u14-d5"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
