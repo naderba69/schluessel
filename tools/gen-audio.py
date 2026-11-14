@@ -2696,6 +2696,9 @@ def build_all() -> None:
     ("word-nachbarschaft", "die Nachbarschaft.", "nachbarschaft", ["b2-u1-d6"]),
     ("word-anteilnahme", "die Anteilnahme.", "anteilnahme", ["b2-u1-d6"]),
     ("word-vergeben", "vergeben.", "vergeben", ["b2-u1-d6"]),
+    ("word-nachhaltigkeit", "die Nachhaltigkeit.", "nachhaltigkeit", ["b2-u2-d1"]),
+    ("word-auswirkung", "die Auswirkung.", "auswirkung", ["b2-u2-d1"]),
+    ("word-verschmutzen", "verschmutzen.", "verschmutzen", ["b2-u2-d1"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]

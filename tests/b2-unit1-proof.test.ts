@@ -13,7 +13,7 @@ await proveUnit({
     "b2-u1-d5",
     "b2-u1-d6",
   ],
-  nextId: null, // N-298: عند إضافة b2-u2-d1 يُنقل إلى معرّفها!
+  nextId: "b2-u2-d1", // N-298! النقلة: الوحدة 2 بدأت (D524) — كان null في D523
   prefixIds: [
     "a1-u1-d1",
     "a1-u1-d2",
