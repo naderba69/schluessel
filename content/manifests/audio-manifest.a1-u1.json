@@ -88324,6 +88324,66 @@
       "hash": "sha256:3fa2e63b653c23b7cebad9507f1731b950685fee895b4c1df5ff791b0022498c",
       "pcmSha256": "612914fe953b0ee4f9b92cdc2e27066555cb13ae4e0d4d2ed9c3d6b6e56281e2",
       "rmsDb": -16.98
+    },
+    {
+      "id": "word-vermitteln",
+      "file": "words/audio/de-DE/word-vermitteln.opus",
+      "role": "word",
+      "priority": "P2",
+      "durationMs": 908,
+      "sizeBytes": 4496,
+      "hash": "sha256:0e851f3cdf4f89b8a2d2375561f5b81f3972af490e7e42cd695b6c190fb3024d",
+      "pcmSha256": "83bde4ce104a7c2ef0ba18a0b56a0081ad5ec1fde72958801e37927f414c68c4",
+      "rmsDb": -17.0,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "vermitteln.",
+      "lessonRefs": [
+        "b2-u1-d2"
+      ],
+      "isGuest": false
+    },
+    {
+      "id": "word-hoeflichkeit",
+      "file": "words/audio/de-DE/word-hoeflichkeit.opus",
+      "role": "word",
+      "priority": "P2",
+      "durationMs": 1303,
+      "sizeBytes": 6115,
+      "hash": "sha256:117a1a6158b992c4ad9161bf4eaf9278b7ce819bf65c40ac46c87d445bfe15a2",
+      "pcmSha256": "71a4e34a57223e25fe034fe1c11336f11ccfa99edeffae7c8d1c2ef085a6d647",
+      "rmsDb": -17.01,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "die Höflichkeit.",
+      "lessonRefs": [
+        "b2-u1-d2"
+      ],
+      "isGuest": false
+    },
+    {
+      "id": "word-einsatz",
+      "file": "words/audio/de-DE/word-einsatz.opus",
+      "role": "word",
+      "priority": "P2",
+      "durationMs": 1024,
+      "sizeBytes": 4948,
+      "hash": "sha256:edd00a5099fffa7087bf76bcf9eef61e1c208887543f45220e9c6a76232a5ada",
+      "pcmSha256": "2c1d8f1de8591487e3d537617c410d5de3e63be7e4b7d11a9c4e05d7f145de02",
+      "rmsDb": -17.09,
+      "voiceParams": {
+        "speaker": "de_DE-thorsten-medium",
+        "speedWpm": 110
+      },
+      "textDe": "der Einsatz.",
+      "lessonRefs": [
+        "b2-u1-d2"
+      ],
+      "isGuest": false
     }
   ],
   "characterVoices": {
