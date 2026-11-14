@@ -109,6 +109,14 @@ function main(): void {
   else if ((entry.fixedPhrases?.length ?? 0) > 2) problems.push(`P10 الترقية: fixedPhrases ${(entry.fixedPhrases?.length)} > 2`);
   else oks.push("P10 الترقية: القيد موجود وfixedPhrases ≤2");
 
+  // P11 (D521): كل why يحوي عربية — الخطأ المتكرّر ×3 (بنود الفقرة الرابعة بلا عربية!)
+  const badWhys: string[] = [];
+  for (const s of (L.uebung?.stations ?? []) as { items: { why?: string }[] }[])
+    for (const it of s.items ?? []) if (!/[\u0600-\u06FF]/.test(String(it.why ?? ""))) badWhys.push(String(it.why ?? "(بلا why)").slice(0, 30));
+  for (const variant of (L.quiz?.variants ?? []) as { items: { q?: string; a?: string }[] }[])
+    for (const it of variant.items ?? []) if (!/[\u0600-\u06FF]/.test(String(it.q ?? "")) && !/[\u0600-\u06FF]/.test(String(it.a ?? ""))) badWhys.push("quiz: " + String(it.q ?? "").slice(0, 30));
+  if (badWhys.length === 0) oks.push("P11 العربية: كل شروح why تحوي عربية"); else problems.push(`P11 العربية: why بلا عربية: ${badWhys.join(" · ")}`);
+
   for (const o of oks) console.log("✓", o);
   for (const p of problems) console.log("✗", p);
   console.log(problems.length === 0 ? `preflight ${id}: نظيف (${oks.length} فحوصات)` : `preflight ${id}: ${problems.length} مشكلة`);
