@@ -2708,6 +2708,9 @@ def build_all() -> None:
     ("word-flut", "die Flut.", "flut", ["b2-u2-d4"]),
     ("word-trinkwasser", "das Trinkwasser.", "trinkwasser", ["b2-u2-d4"]),
     ("word-entdeckung", "die Entdeckung.", "entdeckung", ["b2-u2-d4"]),
+    ("word-hitze", "die Hitze.", "hitze", ["b2-u2-d5"]),
+    ("word-erderwaermung", "die Erderwärmung.", "erderwaermung", ["b2-u2-d5"]),
+    ("word-bewahren", "bewahren.", "bewahren", ["b2-u2-d5"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
