@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u3-d3",
+  "level": "B2",
+  "unit": 3,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Vernetzung: Der Roboter arbeitet und wir verstehen den Algorithmus!",
+    "ar": "الوحدة 3: العلم والتقنية! (الآلي! الخوارزمية! والشبكة!)"
+  },
+  "canDoDaily": [
+    "يفهم الخوارزمية! (den Algorithmus verstehen!)",
+    "يتحدّث عن الآلي والشبكة! (der Roboter! die Vernetzung!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "experiment",
+      "innovation",
+      "erkenntnis"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الآلي يعمل.»؟"
+        },
+        "choices": [
+          "Der Roboter arbeitet.",
+          "Die Roboter arbeitet.",
+          "Das Roboter arbeitet."
+        ],
+        "answer": "Der Roboter arbeitet.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نفهم الخوارزمية.»؟"
+        },
+        "choices": [
+          "Wir verstehen den Algorithmus.",
+          "Wir verstehen der Algorithmus.",
+          "Wir verstehen das Algorithmus."
+        ],
+        "answer": "Wir verstehen den Algorithmus.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "roboter",
+      "algorithmus",
+      "vernetzung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "r-uvular"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Vernetzung: Der Roboter arbeitet und wir verstehen den Algorithmus!",
+        "ar": "اليوم الثالث: الآلي والخوارزمية والشبكة!"
+      },
+      "situation": {
+        "de": "Roboter, Algorithmus, Vernetzung — zusammen lernen.",
+        "ar": "آلي! خوارزمية! شبكة! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "المذكّر في النصب: den Algorithmus! (verstehen يأخذ مفعوله مباشرة!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: der Roboter arbeitet! den Algorithmus verstehen! die Vernetzung nutzen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "experiment",
+          "innovation",
+          "erkenntnis"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "der Roboter",
+                "ar": "الآلي (الروبوت)"
+              },
+              {
+                "de": "der Algorithmus",
+                "ar": "الخوارزمية"
+              },
+              {
+                "de": "die Vernetzung",
+                "ar": "الشبكة (الربط الشبكي)"
+              }
+            ],
+            "why": "der Roboter الآلي (der! -er للفاعل!) · der Algorithmus الخوارزمية (der! -us!) · die Vernetzung الشبكة (die! -ung!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Roboter arbeitet",
+                "ar": "يعمل الآلي"
+              },
+              {
+                "de": "den Algorithmus verstehen",
+                "ar": "يفهم الخوارزمية"
+              },
+              {
+                "de": "die Vernetzung nutzen",
+                "ar": "يستخدم الشبكة"
+              },
+              {
+                "de": "der Algorithmus",
+                "ar": "الخوارزمية"
+              }
+            ],
+            "why": "der Roboter arbeitet (يعمل!) · den Algorithmus verstehen (المذكّر في النصب: den!) · die Vernetzung nutzen! · der Algorithmus (der!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bildung",
+          "technik",
+          "digitalisierung"
+        ],
+        "items": [
+          {
+            "q": "___ Algorithmus ist wichtig. (الخوارزمية!)",
+            "a": "Der",
+            "why": "der Algorithmus الخوارزمية (der! -us!) — Der Algorithmus ist wichtig."
+          },
+          {
+            "q": "Die ___ kommt. (الشبكة!)",
+            "a": "Vernetzung",
+            "why": "die Vernetzung الشبكة (die! -ung!) — Die Vernetzung kommt."
+          },
+          {
+            "q": "Der ___ arbeitet. (الآلي!)",
+            "a": "Roboter",
+            "why": "der Roboter الآلي (der! -er!) — Der Roboter arbeitet."
+          },
+          {
+            "q": "Wir verstehen ___ Algorithmus. (الخوارزمية!)",
+            "a": "den",
+            "why": "verstehen + Akkusativ: den Algorithmus! (المذكّر في النصب: den!)!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gerechtigkeit",
+          "warnen",
+          "konflikt"
+        ],
+        "items": [
+          {
+            "q": "~~Das Algorithmus ist wichtig.~~",
+            "a": "Der Algorithmus ist wichtig.",
+            "why": "der Algorithmus (der! كلمات -us مذكّرة!)!"
+          },
+          {
+            "q": "~~Der Vernetzung kommt.~~",
+            "a": "Die Vernetzung kommt.",
+            "why": "die Vernetzung (die! كل -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~Die Roboter arbeitet.~~",
+            "a": "Der Roboter arbeitet.",
+            "why": "der Roboter (der! -er للفاعل!) والمفرد: arbeitet!"
+          },
+          {
+            "q": "~~Wir verstehen auf den Algorithmus.~~",
+            "a": "Wir verstehen den Algorithmus.",
+            "why": "verstehen يتبع مفعوله مباشرة (Akkusativ: den Algorithmus!)! (لا auf!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hitze",
+          "erderwaermung",
+          "bewahren"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالآلي! (جملتان!)",
+            "a": "Der Roboter arbeitet. Der Roboter hilft.",
+            "why": "الآلي أولًا! (der Roboter!)"
+          },
+          {
+            "q": "تحدّث عن الخوارزمية! (جملتان!)",
+            "a": "Der Algorithmus ist wichtig. Wir verstehen den Algorithmus.",
+            "why": "الخوارزمية! (den Algorithmus verstehen!)"
+          },
+          {
+            "q": "تحدّث عن الشبكة! (جملتان!)",
+            "a": "Die Vernetzung kommt. Wir nutzen die Vernetzung.",
+            "why": "الشبكة! (die Vernetzung nutzen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الآلي (الروبوت)»؟",
+            "a": "der Roboter"
+          },
+          {
+            "q": "«الخوارزمية»؟",
+            "a": "der Algorithmus"
+          },
+          {
+            "q": "«الشبكة (الربط الشبكي)»؟",
+            "a": "die Vernetzung"
+          },
+          {
+            "q": "«الآلي يعمل.»؟",
+            "a": "Der Roboter arbeitet."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نفهم الخوارزمية.»؟",
+            "a": "Wir verstehen den Algorithmus."
+          },
+          {
+            "q": "die Vernetzung",
+            "a": "الشبكة"
+          },
+          {
+            "q": "«نستخدم الشبكة.»؟",
+            "a": "Wir nutzen die Vernetzung."
+          },
+          {
+            "q": "der Roboter",
+            "a": "الآلي"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الخوارزمية مهمّة.»؟",
+            "a": "Der Algorithmus ist wichtig."
+          },
+          {
+            "q": "«الشبكة آتية.»؟",
+            "a": "Die Vernetzung kommt."
+          },
+          {
+            "q": "der Algorithmus",
+            "a": "الخوارزمية"
+          },
+          {
+            "q": "«الآلي يعمل.»؟",
+            "a": "Der Roboter arbeitet."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Roboter arbeitet und der Algorithmus ist wichtig. Wir verstehen den Algorithmus und nutzen die Vernetzung. Der Tag ist gut und wir sind zusammen.",
+      "ar": "الآلي يعمل والخوارزمية تُفهم — والشبكة تجمع كل شيء!"
+    },
+    "srsBundleWordIds": [
+      "roboter",
+      "algorithmus",
+      "vernetzung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das Algorithmus!",
+          "de": "~~Das Algorithmus ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "der Algorithmus!",
+          "de": "Der Algorithmus ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Algorithmus ist wichtig.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الخوارزمية» مؤنثة! والألمانية: كلمات -us لاتينية مذكّرة — der Algorithmus (der!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Vernetzung!",
+          "de": "~~Der Vernetzung kommt.~~"
+        },
+        "correct": {
+          "ar": "die Vernetzung!",
+          "de": "Die Vernetzung kommt."
+        },
+        "exercise": {
+          "q": "___ Vernetzung kommt.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الشبكة» مؤنثة لكن الفخ يقع في الأداة! والألمانية: كل -ung مؤنثة — die Vernetzung (die!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Roboter!",
+          "de": "~~Die Roboter arbeitet.~~"
+        },
+        "correct": {
+          "ar": "der Roboter!",
+          "de": "Der Roboter arbeitet."
+        },
+        "exercise": {
+          "q": "___ Roboter arbeitet.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الآلي» مذكّر لكن الجمع يربك! والألمانية: der Roboter (der! -er للفاعل!) — والجمع die Roboter لكن المفرد يبقى der! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Roboter",
+      "https://www.duden.de/rechtschreibung/Algorithmus",
+      "https://www.duden.de/rechtschreibung/Vernetzung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-roboter",
+    "word-algorithmus",
+    "word-vernetzung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 3 (العلم والتقنية!)",
+    "goetheWordListOverlap": [
+      "roboter",
+      "algorithmus",
+      "vernetzung"
+    ]
+  }
+}

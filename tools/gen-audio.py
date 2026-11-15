@@ -2720,6 +2720,9 @@ def build_all() -> None:
     ("word-experiment", "das Experiment.", "experiment", ["b2-u3-d2"]),
     ("word-innovation", "die Innovation.", "innovation", ["b2-u3-d2"]),
     ("word-erkenntnis", "die Erkenntnis.", "erkenntnis", ["b2-u3-d2"]),
+    ("word-roboter", "der Roboter.", "roboter", ["b2-u3-d3"]),
+    ("word-algorithmus", "der Algorithmus.", "algorithmus", ["b2-u3-d3"]),
+    ("word-vernetzung", "die Vernetzung.", "vernetzung", ["b2-u3-d3"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
