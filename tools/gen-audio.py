@@ -2729,6 +2729,9 @@ def build_all() -> None:
     ("word-kenntnis", "die Kenntnis.", "kenntnis", ["b2-u3-d5"]),
     ("word-fachwissen", "das Fachwissen.", "fachwissen", ["b2-u3-d5"]),
     ("word-wandeln", "wandeln.", "wandeln", ["b2-u3-d5"]),
+    ("word-wissenschaft", "die Wissenschaft.", "wissenschaft", ["b2-u3-d6"]),
+    ("word-gedaechtnis", "das Gedächtnis.", "gedaechtnis", ["b2-u3-d6"]),
+    ("word-gehirn", "das Gehirn.", "gehirn", ["b2-u3-d6"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]

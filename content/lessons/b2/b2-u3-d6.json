@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u3-d6",
+  "level": "B2",
+  "unit": 3,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Gehirn und Gedächtnis: Die Wissenschaft ist wichtig!",
+    "ar": "الوحدة 3: العلم والتقنية! (العلم! الذاكرة! والدماغ!)"
+  },
+  "canDoDaily": [
+    "يتحدّث عن العلم والذاكرة! (die Wissenschaft! das Gedächtnis!)",
+    "يفهم أن الدماغ يعمل! (das Gehirn arbeitet!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "kenntnis",
+      "fachwissen",
+      "wandeln"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الذاكرة مهمّة.»؟"
+        },
+        "choices": [
+          "Das Gedächtnis ist wichtig.",
+          "Die Gedächtnis ist wichtig.",
+          "Der Gedächtnis ist wichtig."
+        ],
+        "answer": "Das Gedächtnis ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«العلم مهمّ.»؟"
+        },
+        "choices": [
+          "Die Wissenschaft ist wichtig.",
+          "Der Wissenschaft ist wichtig.",
+          "Das Wissenschaft ist wichtig."
+        ],
+        "answer": "Die Wissenschaft ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "wissenschaft",
+      "gedaechtnis",
+      "gehirn"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-a",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Gehirn und Gedächtnis: Die Wissenschaft ist wichtig!",
+        "ar": "اليوم السادس: العلم والذاكرة والدماغ!"
+      },
+      "situation": {
+        "de": "Wissenschaft, Gedächtnis, Gehirn — zusammen lernen.",
+        "ar": "علم! ذاكرة! دماغ! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الاستثناء: das Gedächtnis محايد (خلافاً لكلمات -nis المؤنثة!)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Wissenschaft verstehen! das Gedächtnis nutzen! das Gehirn arbeitet!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "kenntnis",
+          "fachwissen",
+          "wandeln"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Wissenschaft",
+                "ar": "العلم"
+              },
+              {
+                "de": "das Gedächtnis",
+                "ar": "الذاكرة"
+              },
+              {
+                "de": "das Gehirn",
+                "ar": "الدماغ"
+              }
+            ],
+            "why": "die Wissenschaft العلم (die! -schaft!) · das Gedächtnis الذاكرة (das! استثناء -nis!) · das Gehirn الدماغ (das!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Wissenschaft verstehen",
+                "ar": "يفهم العلم"
+              },
+              {
+                "de": "das Gedächtnis nutzen",
+                "ar": "يستخدم الذاكرة"
+              },
+              {
+                "de": "das Gehirn arbeitet",
+                "ar": "يعمل الدماغ"
+              },
+              {
+                "de": "das Gedächtnis",
+                "ar": "الذاكرة"
+              }
+            ],
+            "why": "die Wissenschaft verstehen! · das Gedächtnis nutzen! · das Gehirn arbeitet (يعمل!) · das Gedächtnis (das!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "programmieren",
+          "automatisierung",
+          "technologie"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (العلم!)",
+            "a": "Wissenschaft",
+            "why": "die Wissenschaft العلم (die! -schaft!) — Die Wissenschaft ist wichtig."
+          },
+          {
+            "q": "Das ___ ist wichtig. (الذاكرة!)",
+            "a": "Gedächtnis",
+            "why": "das Gedächtnis الذاكرة (das! استثناء -nis!) — Das Gedächtnis ist wichtig."
+          },
+          {
+            "q": "Das ___ arbeitet. (الدماغ!)",
+            "a": "Gehirn",
+            "why": "das Gehirn الدماغ (das!) — Das Gehirn arbeitet."
+          },
+          {
+            "q": "Wir ___ das Gedächtnis. (نستخدم!)",
+            "a": "nutzen",
+            "why": "nutzen يستخدم (Präsens wir: nutzen!) — Wir nutzen das Gedächtnis."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "roboter",
+          "algorithmus",
+          "vernetzung"
+        ],
+        "items": [
+          {
+            "q": "~~Der Wissenschaft ist wichtig.~~",
+            "a": "Die Wissenschaft ist wichtig.",
+            "why": "die Wissenschaft (die! كل -schaft مؤنثة!)!"
+          },
+          {
+            "q": "~~Die Gedächtnis ist wichtig.~~",
+            "a": "Das Gedächtnis ist wichtig.",
+            "why": "das Gedächtnis (das! استثناء كلمات -nis!)!"
+          },
+          {
+            "q": "~~Der Gehirn arbeitet.~~",
+            "a": "Das Gehirn arbeitet.",
+            "why": "das Gehirn (das! محايد!)!"
+          },
+          {
+            "q": "~~Wir nutzen das Gedächtnis auf.~~",
+            "a": "Wir nutzen das Gedächtnis.",
+            "why": "nutzen ليس فعلاً منفصلاً! (لا auf!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "experiment",
+          "innovation",
+          "erkenntnis"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالعلم! (جملتان!)",
+            "a": "Die Wissenschaft ist wichtig. Wir verstehen die Wissenschaft.",
+            "why": "العلم أولًا! (die Wissenschaft verstehen!)"
+          },
+          {
+            "q": "تحدّث عن الذاكرة! (جملتان!)",
+            "a": "Das Gedächtnis ist wichtig. Wir nutzen das Gedächtnis.",
+            "why": "الذاكرة! (das Gedächtnis nutzen!)"
+          },
+          {
+            "q": "تحدّث عن الدماغ! (جملتان!)",
+            "a": "Das Gehirn arbeitet. Das ist wichtig.",
+            "why": "الدماغ! (das Gehirn arbeitet!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«العلم»؟",
+            "a": "die Wissenschaft"
+          },
+          {
+            "q": "«الذاكرة»؟",
+            "a": "das Gedächtnis"
+          },
+          {
+            "q": "«الدماغ»؟",
+            "a": "das Gehirn"
+          },
+          {
+            "q": "«العلم مهمّ.»؟",
+            "a": "Die Wissenschaft ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نستخدم الذاكرة.»؟",
+            "a": "Wir nutzen das Gedächtnis."
+          },
+          {
+            "q": "das Gehirn",
+            "a": "الدماغ"
+          },
+          {
+            "q": "«الدماغ يعمل.»؟",
+            "a": "Das Gehirn arbeitet."
+          },
+          {
+            "q": "die Wissenschaft",
+            "a": "العلم"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الذاكرة مهمّة.»؟",
+            "a": "Das Gedächtnis ist wichtig."
+          },
+          {
+            "q": "«نفهم العلم.»؟",
+            "a": "Wir verstehen die Wissenschaft."
+          },
+          {
+            "q": "das Gedächtnis",
+            "a": "الذاكرة"
+          },
+          {
+            "q": "«الدماغ يعمل.»؟",
+            "a": "Das Gehirn arbeitet."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Wissenschaft ist wichtig und das Gedächtnis ist da. Das Gehirn arbeitet und wir nutzen das Gedächtnis. Der Tag ist gut und wir sind zusammen.",
+      "ar": "العلم يبدأ من الدماغ والذاكرة — ثلاثتهم معاً!"
+    },
+    "srsBundleWordIds": [
+      "wissenschaft",
+      "gedaechtnis",
+      "gehirn"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Wissenschaft!",
+          "de": "~~Der Wissenschaft ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Wissenschaft!",
+          "de": "Die Wissenschaft ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Wissenschaft ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «العلم» مذكّر! والألمانية: كل كلمات -schaft مؤنثة — die Wissenschaft (die!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Gedächtnis!",
+          "de": "~~Die Gedächtnis ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "das Gedächtnis!",
+          "de": "Das Gedächtnis ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Gedächtnis ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «الذاكرة» مؤنثة! والألمانية: كلمات -nis مؤنثة عادة (die Kenntnis!) لكن das Gedächtnis محايد استثناءً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Gehirn!",
+          "de": "~~Der Gehirn arbeitet.~~"
+        },
+        "correct": {
+          "ar": "das Gehirn!",
+          "de": "Das Gehirn arbeitet."
+        },
+        "exercise": {
+          "q": "___ Gehirn arbeitet.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «الدماغ» مذكّر! والألمانية: das Gehirn (das!) — كلمات الجسم المحايدة كثيرة! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Wissenschaft",
+      "https://www.duden.de/rechtschreibung/Gedaechtnis",
+      "https://www.duden.de/rechtschreibung/Gehirn"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-wissenschaft",
+    "word-gedaechtnis",
+    "word-gehirn"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 3 (العلم والتقنية!)",
+    "goetheWordListOverlap": [
+      "wissenschaft",
+      "gedaechtnis",
+      "gehirn"
+    ]
+  }
+}
