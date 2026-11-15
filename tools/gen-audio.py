@@ -2711,6 +2711,9 @@ def build_all() -> None:
     ("word-hitze", "die Hitze.", "hitze", ["b2-u2-d5"]),
     ("word-erderwaermung", "die Erderwärmung.", "erderwaermung", ["b2-u2-d5"]),
     ("word-bewahren", "bewahren.", "bewahren", ["b2-u2-d5"]),
+    ("word-gleichgewicht", "das Gleichgewicht.", "gleichgewicht", ["b2-u2-d6"]),
+    ("word-bewusst", "bewusst.", "bewusst", ["b2-u2-d6"]),
+    ("word-emission", "die Emission.", "emission", ["b2-u2-d6"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
