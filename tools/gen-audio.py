@@ -2717,6 +2717,9 @@ def build_all() -> None:
     ("word-bildung", "die Bildung.", "bildung", ["b2-u3-d1"]),
     ("word-technik", "die Technik.", "technik", ["b2-u3-d1"]),
     ("word-digitalisierung", "die Digitalisierung.", "digitalisierung", ["b2-u3-d1"]),
+    ("word-experiment", "das Experiment.", "experiment", ["b2-u3-d2"]),
+    ("word-innovation", "die Innovation.", "innovation", ["b2-u3-d2"]),
+    ("word-erkenntnis", "die Erkenntnis.", "erkenntnis", ["b2-u3-d2"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
