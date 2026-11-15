@@ -1,6 +1,6 @@
 // tests/b2-unit2-proof.test.ts — معركة الوحدة B2-U2 (D530 — برهان D7): دروسها الستة تُلعَب آلياً عبر المساعد المشترك.
 // النمط نفسه من D426/D433/D440/D461/D495/D502/D509/D516/D523 (battle) + حارس البنود e-practice-item-shape.
-// nextId = null (المسار يستنفد عند b2-u2-d6 حتى الآن) — عند إضافة b2-u3-d1 يجب النقل إلى معرّفها (N-298!)
+// nextId = b2-u3-d1 (N-298! النقلة في D531 عند بناء b2-u3-d1) — كان null في D530
 import { proveUnit } from "./unit-proof.js";
 
 await proveUnit({
@@ -13,7 +13,7 @@ await proveUnit({
     "b2-u2-d5",
     "b2-u2-d6",
   ],
-  nextId: null, // N-298! يبقى null حتى تُبنى b2-u3-d1 ثم يُنقل إليها
+  nextId: "b2-u3-d1", // N-298! النقلة: الوحدة 3 بدأت (D531) — كان null في D530
   prefixIds: [
     "a1-u1-d1",
     "a1-u1-d2",

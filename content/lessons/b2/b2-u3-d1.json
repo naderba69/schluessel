@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u3-d1",
+  "level": "B2",
+  "unit": 3,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Bildung und Technik: Wir verstehen die Digitalisierung!",
+    "ar": "الوحدة 3: العلم والتقنية! (التعليم! التقنية! والرقمنة!)"
+  },
+  "canDoDaily": [
+    "يتحدّث عن التعليم والتقنية! (die Bildung! die Technik!)",
+    "يفهم الرقمنة! (die Digitalisierung verstehen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "gleichgewicht",
+      "bewusst",
+      "emission"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التعليم مهمّ.»؟"
+        },
+        "choices": [
+          "Die Bildung ist wichtig.",
+          "Der Bildung ist wichtig.",
+          "Das Bildung ist wichtig."
+        ],
+        "answer": "Die Bildung ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نفهم الرقمنة.»؟"
+        },
+        "choices": [
+          "Wir verstehen die Digitalisierung.",
+          "Wir verstehen der Digitalisierung.",
+          "Wir verstehen das Digitalisierung."
+        ],
+        "answer": "Wir verstehen die Digitalisierung.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "bildung",
+      "technik",
+      "digitalisierung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "ch-ich-laut"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Bildung und Technik: Wir verstehen die Digitalisierung!",
+        "ar": "اليوم الأول: التعليم والتقنية والرقمنة!"
+      },
+      "situation": {
+        "de": "Bildung, Technik, Digitalisierung — zusammen lernen.",
+        "ar": "تعليم! تقنية! رقمنة! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "كل -ung مؤنثة: die Bildung! die Digitalisierung!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: an die Bildung glauben! die Technik nutzen! die Digitalisierung verstehen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gleichgewicht",
+          "bewusst",
+          "emission"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Bildung",
+                "ar": "التعليم (التربية)"
+              },
+              {
+                "de": "die Technik",
+                "ar": "التقنية"
+              },
+              {
+                "de": "die Digitalisierung",
+                "ar": "الرقمنة"
+              }
+            ],
+            "why": "die Bildung التعليم (die! -ung مؤنثة!) · die Technik التقنية (die! -ik!) · die Digitalisierung الرقمنة (die! -ung!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "an die Bildung glauben",
+                "ar": "يؤمن بالتعليم"
+              },
+              {
+                "de": "die Technik nutzen",
+                "ar": "يستخدم التقنية"
+              },
+              {
+                "de": "die Digitalisierung verstehen",
+                "ar": "يفهم الرقمنة"
+              },
+              {
+                "de": "die Bildung",
+                "ar": "التعليم"
+              }
+            ],
+            "why": "an die Bildung glauben (يؤمن بالتعليم — glauben an + Akkusativ!) · die Technik nutzen (يستخدم!) · die Digitalisierung verstehen (يفهم!) · die Bildung (die!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hitze",
+          "erderwaermung",
+          "bewahren"
+        ],
+        "items": [
+          {
+            "q": "___ Bildung ist wichtig. (التعليم!)",
+            "a": "Die",
+            "why": "die Bildung التعليم (die! -ung!) — Die Bildung ist wichtig."
+          },
+          {
+            "q": "Wir nutzen die ___. (التقنية!)",
+            "a": "Technik",
+            "why": "die Technik التقنية (die! -ik!) — Wir nutzen die Technik."
+          },
+          {
+            "q": "Wir verstehen die ___. (الرقمنة!)",
+            "a": "Digitalisierung",
+            "why": "die Digitalisierung الرقمنة (die! -ung!) — Wir verstehen die Digitalisierung."
+          },
+          {
+            "q": "Er ___ die Technik. (يستخدم!)",
+            "a": "nutzt",
+            "why": "nutzen يستخدم (Präsens er: nutzt!) — Er nutzt die Technik."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gerechtigkeit",
+          "warnen",
+          "konflikt"
+        ],
+        "items": [
+          {
+            "q": "~~Der Bildung ist wichtig.~~",
+            "a": "Die Bildung ist wichtig.",
+            "why": "die Bildung (die! كل -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~Die Technik sind wichtig.~~",
+            "a": "Die Technik ist wichtig.",
+            "why": "die Digitalisierung الرقمنة (die! كل -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~Das Digitalisierung kommt.~~",
+            "a": "Die Digitalisierung kommt.",
+            "why": "die Digitalisierung الرقمنة (die! كل -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~Wir verstehen auf die Digitalisierung.~~",
+            "a": "Wir verstehen die Digitalisierung.",
+            "why": "verstehen يتبع مفعوله مباشرة (Akkusativ)! (لا auf!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "klimawandel",
+          "recyceln",
+          "schonen"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالتعليم! (جملتان!)",
+            "a": "Die Bildung ist wichtig. Wir glauben an die Bildung.",
+            "why": "التعليم أولًا! (an die Bildung glauben!)"
+          },
+          {
+            "q": "تحدّث عن التقنية! (جملتان!)",
+            "a": "Die Technik ist wichtig. Wir nutzen die Technik.",
+            "why": "التقنية! (die Technik nutzen!)"
+          },
+          {
+            "q": "تحدّث عن الرقمنة! (جملتان!)",
+            "a": "Die Digitalisierung kommt. Wir verstehen die Digitalisierung.",
+            "why": "الرقمنة! (die Digitalisierung verstehen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التعليم (التربية)»؟",
+            "a": "die Bildung"
+          },
+          {
+            "q": "«التقنية»؟",
+            "a": "die Technik"
+          },
+          {
+            "q": "«الرقمنة»؟",
+            "a": "die Digitalisierung"
+          },
+          {
+            "q": "«التعليم مهمّ.»؟",
+            "a": "Die Bildung ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نفهم الرقمنة.»؟",
+            "a": "Wir verstehen die Digitalisierung."
+          },
+          {
+            "q": "die Technik",
+            "a": "التقنية"
+          },
+          {
+            "q": "«نستخدم التقنية.»؟",
+            "a": "Wir nutzen die Technik."
+          },
+          {
+            "q": "die Bildung",
+            "a": "التعليم"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«هو يؤمن بالتعليم.»؟",
+            "a": "Er glaubt an die Bildung."
+          },
+          {
+            "q": "«الرقمنة آتية.»؟",
+            "a": "Die Digitalisierung kommt."
+          },
+          {
+            "q": "die Digitalisierung",
+            "a": "الرقمنة"
+          },
+          {
+            "q": "«التعليم مهمّ.»؟",
+            "a": "Die Bildung ist wichtig."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Bildung ist wichtig und die Technik ist da. Wir verstehen die Digitalisierung und nutzen die Technik. Der Tag ist gut und wir sind zusammen.",
+      "ar": "التعليم والتقنية يفتحان باب الرقمنة!"
+    },
+    "srsBundleWordIds": [
+      "bildung",
+      "technik",
+      "digitalisierung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Bildung!",
+          "de": "~~Der Bildung ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Bildung!",
+          "de": "Die Bildung ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Bildung ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التعليم» مذكّر! والألمانية: كل -ung مؤنثة — die Bildung (die!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Technik!",
+          "de": "~~Der Technik ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Technik!",
+          "de": "Die Technik ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Technik ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التقنية» مؤنثة فتظنّ الكلمة كذلك بلا تفكير! والألمانية: كلمات -ik مؤنثة هي أيضاً (die Technik!) لكن القاعدة تُحفظ لا الترجمة! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Digitalisierung!",
+          "de": "~~Das Digitalisierung kommt.~~"
+        },
+        "correct": {
+          "ar": "die Digitalisierung!",
+          "de": "Die Digitalisierung kommt."
+        },
+        "exercise": {
+          "q": "___ Digitalisierung kommt.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الرقمنة» مؤنثة لكن الكلمة طويلة فتظنّها محايدة! والألمانية: كل -ung/-isierung مؤنثة (die!) مهما طالت! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Bildung",
+      "https://www.duden.de/rechtschreibung/Technik",
+      "https://www.duden.de/rechtschreibung/Digitalisierung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-bildung",
+    "word-technik",
+    "word-digitalisierung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 3 (العلم والتقنية!)",
+    "goetheWordListOverlap": [
+      "bildung",
+      "technik",
+      "digitalisierung"
+    ]
+  }
+}

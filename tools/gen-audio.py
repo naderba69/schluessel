@@ -2714,6 +2714,9 @@ def build_all() -> None:
     ("word-gleichgewicht", "das Gleichgewicht.", "gleichgewicht", ["b2-u2-d6"]),
     ("word-bewusst", "bewusst.", "bewusst", ["b2-u2-d6"]),
     ("word-emission", "die Emission.", "emission", ["b2-u2-d6"]),
+    ("word-bildung", "die Bildung.", "bildung", ["b2-u3-d1"]),
+    ("word-technik", "die Technik.", "technik", ["b2-u3-d1"]),
+    ("word-digitalisierung", "die Digitalisierung.", "digitalisierung", ["b2-u3-d1"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
