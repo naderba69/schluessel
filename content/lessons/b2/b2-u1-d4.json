@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u1-d4",
+  "level": "B2",
+  "unit": 1,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Ermutigung geben, warnen und Ablehnung verstehen!",
+    "ar": "الوحدة 1: مع الناس! (التشجيع! التحذير! والرفض!)"
+  },
+  "canDoDaily": [
+    "يشجّع الآخرين ويحذّرهم! (Ermutigung geben! warnen!)",
+    "يفهم الرفض! (Ablehnung verstehen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "integration",
+      "gleichheit",
+      "beistehen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التشجيع مهم.»؟"
+        },
+        "choices": [
+          "Die Ermutigung ist wichtig.",
+          "Der Ermutigung ist wichtig.",
+          "Das Ermutigung ist wichtig."
+        ],
+        "answer": "Die Ermutigung ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«أنا أحذّرك.»؟"
+        },
+        "choices": [
+          "Ich warne dich.",
+          "Ich warnen dich.",
+          "Ich warne du."
+        ],
+        "answer": "Ich warne dich.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "ermutigung",
+      "warnen",
+      "ablehnung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "r-uvular"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Ermutigung geben, warnen und Ablehnung verstehen!",
+        "ar": "يوم أربعة في B2: التشجيع والتحذير والرفض — مع الناس!"
+      },
+      "situation": {
+        "de": "Ermutigung, warnen, Ablehnung — zusammen leben.",
+        "ar": "تشجيع! تحذير! رفض! — نعيش معًا! (مع الناس!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "warnen مع vor دائماً! (vor der Gefahr!) — لا غير!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Ermutigung geben! vor Gefahr warnen! Ablehnung bekommen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "einsatz",
+          "hoeflichkeit",
+          "vermitteln"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Ermutigung",
+                "ar": "التشجيع (الحث)"
+              },
+              {
+                "de": "warnen",
+                "ar": "يحذّر (ينذر)"
+              },
+              {
+                "de": "die Ablehnung",
+                "ar": "الرفض (الامتناع)"
+              }
+            ],
+            "why": "die Ermutigung التشجيع (die! die Ermutigungen!) · warnen يحذّر (vor + Dativ!) · die Ablehnung الرفض (die! die Ablehnungen!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "Ermutigung geben",
+                "ar": "يمنح التشجيع"
+              },
+              {
+                "de": "vor Gefahr warnen",
+                "ar": "يحذّر من الخطر"
+              },
+              {
+                "de": "Ablehnung bekommen",
+                "ar": "يلقى رفضاً"
+              },
+              {
+                "de": "die Ermutigungen",
+                "ar": "التشجيعات (جمع -en)"
+              }
+            ],
+            "why": "Ermutigung geben! · vor Gefahr warnen (vor + Dativ!) · Ablehnung bekommen! · die Ermutigungen جمع -en"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "vorbild",
+          "toleranz",
+          "begegnung"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (التشجيع!)",
+            "a": "Ermutigung",
+            "why": "die Ermutigung التشجيع (die!) — Die Ermutigung ist wichtig."
+          },
+          {
+            "q": "Die ___ ist groß. (الرفض!)",
+            "a": "Ablehnung",
+            "why": "die Ablehnung الرفض (die!) — Die Ablehnung ist groß."
+          },
+          {
+            "q": "Ich ___ dich. (أحذّر!)",
+            "a": "warne",
+            "why": "الفعل warnen يحذّر (Präsens ich: warne!) — Ich warne dich."
+          },
+          {
+            "q": "Er gibt mir ___. (تشجيعاً!)",
+            "a": "Ermutigung",
+            "why": "التشجيع: Ermutigung geben! يمنح التشجيع — Er gibt mir Ermutigung."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "mensch",
+          "freundlich",
+          "ruhe"
+        ],
+        "items": [
+          {
+            "q": "~~Der Ermutigung ist wichtig.~~",
+            "a": "Die Ermutigung ist wichtig.",
+            "why": "die Ermutigung (die! لا der! — كل -ung مؤنثة!)"
+          },
+          {
+            "q": "~~Das Ablehnung ist groß.~~",
+            "a": "Die Ablehnung ist groß.",
+            "why": "die Ablehnung (die! لا das! — كل -ung مؤنثة!)"
+          },
+          {
+            "q": "~~Ich warne vor die Gefahr.~~",
+            "a": "Ich warne vor der Gefahr.",
+            "why": "التحذير: warnen مع vor دائماً! (vor der Gefahr!) — لا تحويل حرفي!"
+          },
+          {
+            "q": "~~Er gibt ich Ermutigung.~~",
+            "a": "Er gibt mir Ermutigung.",
+            "why": "geben يأخذ Dativ: mir (لا ich!) — Er gibt mir Ermutigung."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "integration",
+          "gleichheit",
+          "beistehen"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالتشجيع! (جملتان!)",
+            "a": "Die Ermutigung ist wichtig. Ich gebe Ermutigung.",
+            "why": "التشجيع أولًا! (Ermutigung geben!)"
+          },
+          {
+            "q": "تحدث عن التحذير! (جملتان!)",
+            "a": "Warnen ist gut. Ich warne vor der Gefahr.",
+            "why": "التحذير! (vor Gefahr warnen!)"
+          },
+          {
+            "q": "تحدث عن الرفض! (جملتان!)",
+            "a": "Die Ablehnung ist groß. Ich verstehe die Ablehnung.",
+            "why": "الرفض! (Ablehnung verstehen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التشجيع (الحث)»؟",
+            "a": "die Ermutigung"
+          },
+          {
+            "q": "«يحذّر (ينذر)»؟",
+            "a": "warnen"
+          },
+          {
+            "q": "«الرفض (الامتناع)»؟",
+            "a": "die Ablehnung"
+          },
+          {
+            "q": "«هو يمنحني تشجيعاً.»؟",
+            "a": "Er gibt mir Ermutigung."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التشجيع مهم.»؟",
+            "a": "Die Ermutigung ist wichtig."
+          },
+          {
+            "q": "die Ablehnung",
+            "a": "الرفض"
+          },
+          {
+            "q": "«أنا أحذّرك.»؟",
+            "a": "Ich warne dich."
+          },
+          {
+            "q": "warnen",
+            "a": "يحذّر"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يحذّر من الخطر.»؟",
+            "a": "Er warnt vor der Gefahr."
+          },
+          {
+            "q": "«الرفض كبير.»؟",
+            "a": "Die Ablehnung ist groß."
+          },
+          {
+            "q": "die Ermutigung",
+            "a": "التشجيع"
+          },
+          {
+            "q": "«أنا أفهم الرفض!»؟",
+            "a": "Ich verstehe die Ablehnung!"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Ermutigung ist wichtig und die Ablehnung ist da. Wir sollen vor der Gefahr warnen und der Tag ist schön. Er gibt Ermutigung und versteht die Ablehnung.",
+      "ar": "التشجيع والتحذير يقوّيان المجتمع — والرفض مفهوم!"
+    },
+    "srsBundleWordIds": [
+      "ermutigung",
+      "warnen",
+      "ablehnung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Ermutigung!",
+          "de": "~~Der Ermutigung ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Ermutigung!",
+          "de": "Die Ermutigung ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Ermutigung ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التشجيع» مذكّر! والألمانية: die Ermutigung (die!) — كل -ung مؤنثة دائماً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Ablehnung!",
+          "de": "~~Das Ablehnung ist groß.~~"
+        },
+        "correct": {
+          "ar": "die Ablehnung!",
+          "de": "Die Ablehnung ist groß."
+        },
+        "exercise": {
+          "q": "___ Ablehnung ist groß.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الرفض» مذكّر! والألمانية: die Ablehnung (die!) — كل -ung مؤنثة دائماً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "vor die Gefahr!",
+          "de": "~~Ich warne vor die Gefahr.~~"
+        },
+        "correct": {
+          "ar": "vor der Gefahr!",
+          "de": "Ich warne vor der Gefahr."
+        },
+        "exercise": {
+          "q": "Ich warne vor ___ Gefahr.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «أحذّر من» تفهم بـ Akkusativ! والألمانية: warnen يأخذ vor + Dativ دائماً (vor der Gefahr!) — لا تحويل حرفي! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Ermutigung",
+      "https://www.duden.de/rechtschreibung/warnen",
+      "https://www.duden.de/rechtschreibung/Ablehnung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-ermutigung",
+    "word-warnen",
+    "word-ablehnung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 1 (مع الناس!)",
+    "goetheWordListOverlap": [
+      "ermutigung",
+      "warnen",
+      "ablehnung"
+    ]
+  }
+}

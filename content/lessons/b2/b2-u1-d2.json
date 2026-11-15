@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u1-d2",
+  "level": "B2",
+  "unit": 1,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Mit Höflichkeit vermitteln und Einsatz zeigen!",
+    "ar": "الوحدة 1: مع الناس! (اللباقة! التفاني! والوساطة!)"
+  },
+  "canDoDaily": [
+    "يُظهر اللباقة ويتفانى من أجل الناس! (Höflichkeit zeigen! Einsatz zeigen!)",
+    "يتوسّط بين الناس! (zwischen Menschen vermitteln!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "vorbild",
+      "toleranz",
+      "begegnung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«اللباقة مهمّة.»؟"
+        },
+        "choices": [
+          "Die Höflichkeit ist wichtig.",
+          "Der Höflichkeit ist wichtig.",
+          "Das Höflichkeit ist wichtig."
+        ],
+        "answer": "Die Höflichkeit ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«هو يتفانى.»؟"
+        },
+        "choices": [
+          "Er zeigt Einsatz.",
+          "Er zeigt dem Einsatz.",
+          "Er zeigt Einsätze."
+        ],
+        "answer": "Er zeigt Einsatz.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "einsatz",
+      "hoeflichkeit",
+      "vermitteln"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-o",
+      "r-uvular"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Mit Höflichkeit vermitteln und Einsatz zeigen!",
+        "ar": "يومان في B2: اللباقة والتفاني والوساطة — مع الناس!"
+      },
+      "situation": {
+        "de": "Höflichkeit, Einsatz, vermitteln — zusammen leben.",
+        "ar": "لباقة! تفاني! وساطة! — نعيش معًا! (مع الناس!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الجمع: die Einsätze (قوي -ä-)! die Höflichkeiten (-en)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Einsatz zeigen! zwischen Menschen vermitteln!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "vorbild",
+          "toleranz",
+          "begegnung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "der Einsatz",
+                "ar": "التفاني (الانخراط)"
+              },
+              {
+                "de": "die Höflichkeit",
+                "ar": "اللباقة (الكياسة)"
+              },
+              {
+                "de": "vermitteln",
+                "ar": "يتوسّط (يوفّق)"
+              }
+            ],
+            "why": "der Einsatz التفاني (der! die Einsätze!) · die Höflichkeit اللباقة (die! die Höflichkeiten!) · vermitteln يتوسّط (hat vermittelt!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Einsätze",
+                "ar": "التفانيات (جمع قوي!)"
+              },
+              {
+                "de": "Höflichkeit zeigen",
+                "ar": "يظهر اللباقة"
+              },
+              {
+                "de": "zwischen Menschen vermitteln",
+                "ar": "يتوسّط بين الناس"
+              },
+              {
+                "de": "Einsatz für die Menschen",
+                "ar": "تفاني من أجل الناس"
+              }
+            ],
+            "why": "die Einsätze جمع قوي (der Einsatz ← die Einsätze!) · Höflichkeit zeigen! · zwischen Menschen vermitteln!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "vorbild",
+          "toleranz",
+          "begegnung"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist wichtig. (التفاني!)",
+            "a": "Einsatz",
+            "why": "der Einsatz التفاني (der!) — Der Einsatz ist wichtig."
+          },
+          {
+            "q": "Die ___ ist wichtig. (اللباقة!)",
+            "a": "Höflichkeit",
+            "why": "die Höflichkeit اللباقة (die!) — Die Höflichkeit ist wichtig."
+          },
+          {
+            "q": "Sie ___ zwischen den Menschen. (تتوسّط!)",
+            "a": "vermittelt",
+            "why": "vermitteln يتوسّط (Präsens: sie vermittelt!) — Sie vermittelt zwischen den Menschen."
+          },
+          {
+            "q": "Er zeigt ___. (تفانياً!)",
+            "a": "Einsatz",
+            "why": "Einsatz zeigen! يظهر تفانياً — Er zeigt Einsatz."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "mensch",
+          "freundlich",
+          "ruhe"
+        ],
+        "items": [
+          {
+            "q": "~~Die Einsatz ist wichtig.~~",
+            "a": "Der Einsatz ist wichtig.",
+            "why": "der Einsatz التفاني (der! لا die!)"
+          },
+          {
+            "q": "~~Das Höflichkeit ist wichtig.~~",
+            "a": "Die Höflichkeit ist wichtig.",
+            "why": "die Höflichkeit اللباقة (die! لا das!)"
+          },
+          {
+            "q": "~~Sie vermitteln zwischen den Menschen.~~",
+            "a": "Sie vermittelt zwischen den Menschen.",
+            "why": "Präsens sie/er/es: vermittelt (لا vermitteln!)"
+          },
+          {
+            "q": "~~Er zeigt den Einsatz.~~",
+            "a": "Er zeigt Einsatz.",
+            "why": "Einsatz zeigen — بلا أداة! (التفاني كميزة عامة)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "vorbild",
+          "toleranz",
+          "begegnung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ باللباقة! (جملتان!)",
+            "a": "Die Höflichkeit ist wichtig. Ich zeige Höflichkeit.",
+            "why": "اللباقة أولًا! (Höflichkeit zeigen!)"
+          },
+          {
+            "q": "تحدث عن التفاني! (جملتان!)",
+            "a": "Der Einsatz ist wichtig. Er zeigt Einsatz für die Menschen.",
+            "why": "التفاني للناس! (Einsatz zeigen!)"
+          },
+          {
+            "q": "تحدث عن الوساطة! (جملتان!)",
+            "a": "Sie vermittelt gut. Sie vermittelt zwischen den Menschen.",
+            "why": "الوساطة! (zwischen Menschen vermitteln!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التفاني (الانخراط)»؟",
+            "a": "der Einsatz"
+          },
+          {
+            "q": "«اللباقة (الكياسة)»؟",
+            "a": "die Höflichkeit"
+          },
+          {
+            "q": "«يتوسّط (يوفّق)»؟",
+            "a": "vermitteln"
+          },
+          {
+            "q": "«يظهر تفانياً.»؟",
+            "a": "Er zeigt Einsatz."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«اللباقة مهمّة.»؟",
+            "a": "Die Höflichkeit ist wichtig."
+          },
+          {
+            "q": "der Einsatz",
+            "a": "التفاني"
+          },
+          {
+            "q": "«هي تتوسّط بين الناس.»؟",
+            "a": "Sie vermittelt zwischen den Menschen."
+          },
+          {
+            "q": "die Höflichkeit",
+            "a": "اللباقة"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يتعامل الناس بلباقة.»؟",
+            "a": "Er behandelt die Menschen mit Höflichkeit."
+          },
+          {
+            "q": "vermitteln",
+            "a": "يتوسّط"
+          },
+          {
+            "q": "«التفاني كبير.»؟",
+            "a": "Der Einsatz ist groß."
+          },
+          {
+            "q": "«أظهر اللباقة!»؟",
+            "a": "Höflichkeit zeigen!"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Höflichkeit ist wichtig und der Einsatz ist da. Die Menschen vermitteln gut und der Tag ist schön. Er zeigt Einsatz und hat Höflichkeit.",
+      "ar": "اللباقة والتفاني يقوّيان المجتمع — بين الناس!"
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Einsatz!",
+          "de": "~~Die Einsatz ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "der Einsatz!",
+          "de": "Der Einsatz ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Einsatz ist wichtig.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «التفاني» مذكّر! والألمانية: der Einsatz مذكّر (der!) — لكن الأدوات لا علاقة لها بالعربية أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Höflichkeit!",
+          "de": "~~Das Höflichkeit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Höflichkeit!",
+          "de": "Die Höflichkeit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Höflichkeit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «اللباقة» مؤنثة ✓ — والألمانية: die Höflichkeit (die!) — كل اسم مجرّد على -keit مؤنث دائماً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "sie vermitteln!",
+          "de": "~~Sie vermitteln zwischen den Menschen.~~"
+        },
+        "correct": {
+          "ar": "sie vermittelt!",
+          "de": "Sie vermittelt zwischen den Menschen."
+        },
+        "exercise": {
+          "q": "Sie ___ zwischen den Menschen.",
+          "a": "vermittelt"
+        },
+        "whyArabicSpeakerFails": "العربية: «تتوسّط» بلا لاحقة جمع! والألمانية: sie/er/es vermittelt — لاحقة -t للغائب المفرد! (خريطة التداخل 10-ي!)"
+      }
+    ],
+    "srsBundleWordIds": [
+      "einsatz",
+      "hoeflichkeit",
+      "vermitteln"
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Einsatz",
+      "https://www.duden.de/rechtschreibung/Höflichkeit",
+      "https://www.duden.de/rechtschreibung/vermitteln"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-einsatz",
+    "word-hoeflichkeit",
+    "word-vermitteln"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 1 (مع الناس!)",
+    "goetheWordListOverlap": [
+      "einsatz",
+      "hoeflichkeit",
+      "vermitteln"
+    ]
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u2-d6",
+  "level": "B2",
+  "unit": 2,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Das Gleichgewicht bewahren, bewusst leben und die Emissionen vermeiden!",
+    "ar": "الوحدة 2: الأرض والمناخ! (التوازن! الوعي! والانبعاثات!)"
+  },
+  "canDoDaily": [
+    "يحفظ التوازن ويعيش بوعي! (das Gleichgewicht bewahren! bewusst leben!)",
+    "يتفادى الانبعاثات! (die Emissionen vermeiden!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hitze",
+      "erderwaermung",
+      "bewahren"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التوازن مهمّ.»؟"
+        },
+        "choices": [
+          "Das Gleichgewicht ist wichtig.",
+          "Der Gleichgewicht ist wichtig.",
+          "Die Gleichgewicht ist wichtig."
+        ],
+        "answer": "Das Gleichgewicht ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نعيش بوعي.»؟"
+        },
+        "choices": [
+          "Wir leben bewusst.",
+          "Wir leben bewusste.",
+          "Wir leben Bewusst."
+        ],
+        "answer": "Wir leben bewusst.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "gleichgewicht",
+      "bewusst",
+      "emission"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ich-laut",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Das Gleichgewicht bewahren, bewusst leben und die Emissionen vermeiden!",
+        "ar": "اليوم السادس: التوازن والوعي والانبعاثات — مع الأرض!"
+      },
+      "situation": {
+        "de": "Gleichgewicht, bewusst, Emissionen — zusammen die Erde schützen.",
+        "ar": "توازن! وعي! انبعاثات! — نحمي الأرض معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الصفة بعد الفعل بلا لاحقة (leben bewusst!)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: das Gleichgewicht bewahren! bewusst leben! die Emissionen vermeiden!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hitze",
+          "erderwaermung",
+          "bewahren"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "das Gleichgewicht",
+                "ar": "التوازن"
+              },
+              {
+                "de": "bewusst",
+                "ar": "واعٍ (بعوعي)"
+              },
+              {
+                "de": "die Emissionen",
+                "ar": "الانبعاثات"
+              }
+            ],
+            "why": "das Gleichgewicht التوازن (das! das Gewicht!) · bewusst واعٍ (بلا لاحقة بعد الفعل!) · die Emissionen الانبعاثات (die! جمع -en!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "das Gleichgewicht bewahren",
+                "ar": "يحفظ التوازن"
+              },
+              {
+                "de": "bewusst leben",
+                "ar": "يعيش بوعي"
+              },
+              {
+                "de": "die Emissionen vermeiden",
+                "ar": "يتفادى الانبعاثات"
+              },
+              {
+                "de": "das Gleichgewicht",
+                "ar": "التوازن"
+              }
+            ],
+            "why": "das Gleichgewicht bewahren! · bewusst leben (بعوعي!) · die Emissionen vermeiden! · das Gleichgewicht (das!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "flut",
+          "trinkwasser",
+          "entdeckung"
+        ],
+        "items": [
+          {
+            "q": "Das ___ ist wichtig. (التوازن!)",
+            "a": "Gleichgewicht",
+            "why": "das Gleichgewicht التوازن (das! das Gewicht!) — Das Gleichgewicht ist wichtig."
+          },
+          {
+            "q": "Wir leben ___. (بعوعي!)",
+            "a": "bewusst",
+            "why": "bewusst واعٍ — الصفة بعد الفعل بلا لاحقة! (Wir leben bewusst.)"
+          },
+          {
+            "q": "Wir vermeiden die ___. (الانبعاثات!)",
+            "a": "Emissionen",
+            "why": "die Emissionen الانبعاثات (die! جمع -en!) — Wir vermeiden die Emissionen."
+          },
+          {
+            "q": "Er ___ das Gleichgewicht. (يحفظ!)",
+            "a": "bewahrt",
+            "why": "bewahren يحفظ (Präsens er: bewahrt!) — Er bewahrt das Gleichgewicht."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gerechtigkeit",
+          "warnen",
+          "konflikt"
+        ],
+        "items": [
+          {
+            "q": "~~Der Gleichgewicht ist wichtig.~~",
+            "a": "Das Gleichgewicht ist wichtig.",
+            "why": "das Gleichgewicht (das! das Gewicht! والمركّب يتبع آخره!)!"
+          },
+          {
+            "q": "~~Wir leben bewusste.~~",
+            "a": "Wir leben bewusst.",
+            "why": "الصفة بعد الفعل تبقى بلا لاحقة! (leben bewusst!)!"
+          },
+          {
+            "q": "~~Der Emissionen sind gefährlich.~~",
+            "a": "Die Emissionen sind gefährlich.",
+            "why": "die Emissionen (die! جمع بالـ -en!)!"
+          },
+          {
+            "q": "~~Wir bewahren das Gleichgewicht auf.~~",
+            "a": "Wir bewahren das Gleichgewicht.",
+            "why": "bewahren ليس فعلاً منفصلاً! (لا auf!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "klimawandel",
+          "recyceln",
+          "schonen"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالتوازن! (جملتان!)",
+            "a": "Das Gleichgewicht ist wichtig. Wir bewahren das Gleichgewicht.",
+            "why": "التوازن أولًا! (das Gleichgewicht!)"
+          },
+          {
+            "q": "تحدّث عن الوعي! (جملتان!)",
+            "a": "Wir leben bewusst. Das ist wichtig.",
+            "why": "الوعي! (bewusst leben!)"
+          },
+          {
+            "q": "تحدّث عن الانبعاثات! (جملتان!)",
+            "a": "Die Emissionen sind gefährlich. Wir vermeiden die Emissionen.",
+            "why": "الانبعاثات! (die Emissionen vermeiden!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التوازن»؟",
+            "a": "das Gleichgewicht"
+          },
+          {
+            "q": "«واعٍ (بعوعي)»؟",
+            "a": "bewusst"
+          },
+          {
+            "q": "«الانبعاثات»؟",
+            "a": "die Emissionen"
+          },
+          {
+            "q": "«التوازن مهمّ.»؟",
+            "a": "Das Gleichgewicht ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نعيش بوعي.»؟",
+            "a": "Wir leben bewusst."
+          },
+          {
+            "q": "die Emissionen",
+            "a": "الانبعاثات"
+          },
+          {
+            "q": "«نتفادى الانبعاثات.»؟",
+            "a": "Wir vermeiden die Emissionen."
+          },
+          {
+            "q": "das Gleichgewicht",
+            "a": "التوازن"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نحفظ التوازن.»؟",
+            "a": "Wir bewahren das Gleichgewicht."
+          },
+          {
+            "q": "«الانبعاثات خطِرة.»؟",
+            "a": "Die Emissionen sind gefährlich."
+          },
+          {
+            "q": "bewusst",
+            "a": "واعٍ"
+          },
+          {
+            "q": "«نعيش بوعي.»؟",
+            "a": "Wir leben bewusst."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Das Gleichgewicht ist wichtig und wir leben bewusst. Wir vermeiden die Emissionen und bewahren die Erde. Der Tag ist gut und wir sind zusammen.",
+      "ar": "التوازن والوعي يحفظان الأرض — ونتفادى الانبعاثات!"
+    },
+    "srsBundleWordIds": [
+      "gleichgewicht",
+      "bewusst",
+      "emission"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Gleichgewicht!",
+          "de": "~~Der Gleichgewicht ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "das Gleichgewicht!",
+          "de": "Das Gleichgewicht ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Gleichgewicht ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «التوازن» مذكّر! والألمانية: المركّب يتبع آخر جزء — das Gewicht ← das Gleichgewicht (das!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "bewusste!",
+          "de": "~~Wir leben bewusste.~~"
+        },
+        "correct": {
+          "ar": "bewusst!",
+          "de": "Wir leben bewusst."
+        },
+        "exercise": {
+          "q": "Wir leben ___.",
+          "a": "bewusst"
+        },
+        "whyArabicSpeakerFails": "العربية: الصفة لا تتغيّر! والألمانية: الصفة بعد الفعل تبقى بلا لاحقة (leben bewusst!) — واللاحقة تظهر قبل الاسم فقط! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Emissionen!",
+          "de": "~~Der Emissionen sind gefährlich.~~"
+        },
+        "correct": {
+          "ar": "die Emissionen!",
+          "de": "Die Emissionen sind gefährlich."
+        },
+        "exercise": {
+          "q": "___ Emissionen sind gefährlich.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الانبعاثات» جمع مؤنث في الذهن! والألمانية: die Emission (die! -ion مؤنثة!) والجمع die Emissionen بالـ -en! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Gleichgewicht",
+      "https://www.duden.de/rechtschreibung/bewusst",
+      "https://www.duden.de/rechtschreibung/Emission"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-gleichgewicht",
+    "word-bewusst",
+    "word-emission"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 2 (الأرض والمناخ!)",
+    "goetheWordListOverlap": [
+      "gleichgewicht",
+      "bewusst",
+      "emission"
+    ]
+  }
+}

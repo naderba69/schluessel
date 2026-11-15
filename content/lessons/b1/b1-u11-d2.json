@@ -1,0 +1,484 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u11-d2",
+  "level": "B1",
+  "unit": 11,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Roman ist spannend — und die Geschichte ist berührend!",
+    "ar": "يوم القراءة الممتدة! (رواية! حبكة! متعة!) — الوحدة 11: الهوايات والمجتمع!"
+  },
+  "canDoDaily": [
+    "يصف كتاباً بالبناء والصفات! (Roman! Kapitel! Handlung! spannend! berührend!)",
+    "يستعير ويُلهِم بالمفردات الثابتة! (ausleihen! begeistern! Genuss!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "strategie",
+      "kontext",
+      "absatz"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الرواية مثيرة.»؟"
+        },
+        "choices": [
+          "Der Roman ist spannend.",
+          "Die Roman ist spannend.",
+          "Das Roman ist spannend."
+        ],
+        "answer": "Der Roman ist spannend.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«يستعير الكتاب.»؟ (الانفصال!)"
+        },
+        "choices": [
+          "Er leiht das Buch aus.",
+          "Er ausleiht das Buch.",
+          "Er leiht aus das Buch."
+        ],
+        "answer": "Er leiht das Buch aus.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "roman",
+      "maerchen",
+      "kapitel",
+      "handlung",
+      "spannung",
+      "atmosphaere",
+      "erfinden",
+      "erfindung",
+      "genuss",
+      "neugierig",
+      "begeistern",
+      "begeisterung",
+      "ausleihen",
+      "unterhaltsam",
+      "beruehrend"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-lektuere"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Kein Problem — der Roman ist spannend und die Begeisterung ist groß!",
+        "ar": "يصف كتاباً قرأه في 8 جمل!"
+      },
+      "situation": {
+        "de": "Ein Roman, ein Kapitel, eine Handlung.",
+        "ar": "رواية! فصل! حبكة! (القراءة الممتدة!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في الوصف!",
+        "البناء: Roman ← Kapitel ← Handlung ← Atmosphäre!",
+        "الصفات مراتب: spannend! unterhaltsam! berührend!",
+        "الانفصال والقوة: leiht … aus! hat ausgeliehen! erfand erfunden!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Roman! Kapitel! Genuss!"
+        ],
+        "interleavedWith": [
+          "strategie",
+          "kontext",
+          "absatz"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الرواية",
+                "de": "der Roman"
+              },
+              {
+                "ar": "الحكاية (الشعبية)",
+                "de": "das Märchen"
+              },
+              {
+                "ar": "الفصل (في الكتاب)",
+                "de": "das Kapitel"
+              },
+              {
+                "ar": "الحبكة (القصصية)",
+                "de": "die Handlung"
+              }
+            ],
+            "why": "der Roman الرواية (der! spannend!) · das Märchen الحكاية (die Märchen!) · das Kapitel الفصل (die Kapitel!) · die Handlung الحبكة (die! لا «العمل»!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التوتّر",
+                "de": "die Spannung"
+              },
+              {
+                "ar": "الأجواء",
+                "de": "die Atmosphäre"
+              },
+              {
+                "ar": "يبتكر",
+                "de": "erfinden"
+              },
+              {
+                "ar": "الاختراع",
+                "de": "die Erfindung"
+              }
+            ],
+            "why": "die Spannung التوتّر (groß!) · die Atmosphäre الأجواء (genießen!) · erfinden يبتكر (erfand! قويّ!) · die Erfindung الاختراع (machen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المتعة",
+                "de": "der Genuss"
+              },
+              {
+                "ar": "فضولي",
+                "de": "neugierig"
+              },
+              {
+                "ar": "يُلهِم",
+                "de": "begeistern"
+              },
+              {
+                "ar": "يستعير",
+                "de": "ausleihen"
+              }
+            ],
+            "why": "der Genuss المتعة (die Genüsse!) · neugierig فضولي (للأشخاص!) · begeistern يُلهِم (ihn!) · ausleihen يستعير (leiht … aus! منفصل وقويّ!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "القراءة الممتدة!"
+        ],
+        "interleavedWith": [
+          "roman",
+          "kapitel",
+          "handlung"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist spannend. (الرواية!)",
+            "a": "Roman",
+            "why": "der Roman الرواية (der!) — der Roman ist spannend. (ars-lektuere!)"
+          },
+          {
+            "q": "Die ___ ist klar. (الحبكة!)",
+            "a": "Handlung",
+            "why": "die Handlung الحبكة (die! لا der!) — die Handlung ist klar."
+          },
+          {
+            "q": "Er ___ das Buch aus. (يستعير! منفصل!)",
+            "a": "leiht",
+            "why": "ausleihen منفصل! Er leiht das Buch aus. (الجزء aus آخر!)"
+          },
+          {
+            "q": "Er hat die Geschichte ___. (ابتكر! قويّ!)",
+            "a": "erfunden",
+            "why": "erfinden قويّ! hat ERFUNDEN (لا erfindet!)"
+          },
+          {
+            "q": "Das Buch begeistert ___. (يُلهِمه!)",
+            "a": "ihn",
+            "why": "begeistern يتعدّى بالمفعول المباشر: Das Buch begeistert ihn."
+          },
+          {
+            "q": "Die Geschichte ist ___. (مؤثّرة!)",
+            "a": "berührend",
+            "why": "berührend مؤثّرة — die Geschichte ist berührend. (الصفة!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الانفصال! القوة! الأداة!"
+        ],
+        "interleavedWith": [
+          "spannung",
+          "atmosphaere",
+          "genuss"
+        ],
+        "items": [
+          {
+            "q": "~~Er ausleiht das Buch.~~",
+            "a": "Er leiht das Buch aus.",
+            "why": "ausleihen منفصل! leiht … aus (الجزء آخر الجملة!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "~~Er hat die Geschichte erfindet.~~",
+            "a": "Er hat die Geschichte erfunden.",
+            "why": "erfinden قويّ! hat ERFUNDEN (لا erfindet!)"
+          },
+          {
+            "q": "~~der Handlung ist klar~~",
+            "a": "die Handlung ist klar",
+            "why": "die Handlung الحبكة (die! مؤنث — لا der!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — الكتاب كلام!",
+          "Roman! Handlung! Genuss!"
+        ],
+        "interleavedWith": [
+          "erfinden",
+          "neugierig",
+          "begeistern"
+        ],
+        "items": [
+          {
+            "q": "صف الكتاب! (جملتان!)",
+            "a": "Der Roman ist spannend. Die Handlung ist klar.",
+            "why": "الوصف بالبناء! (ars-lektuere!)"
+          },
+          {
+            "q": "صف الأجواء! (جملتان!)",
+            "a": "Die Atmosphäre ist gut. Der Genuss ist groß.",
+            "why": "الأجواء والمتعة! (الجوّ!)"
+          },
+          {
+            "q": "اختم بالأثر والتوصية! (3 جمل!)",
+            "a": "Das Buch begeistert ihn. Er leiht das Buch aus. Die Geschichte ist berührend!",
+            "why": "begeistern! ausleihen! berührend! (الخاتمة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الرواية مثيرة.»؟",
+            "a": "Der Roman ist spannend."
+          },
+          {
+            "q": "«الحبكة»؟",
+            "a": "die Handlung"
+          },
+          {
+            "q": "«الفصل»؟",
+            "a": "das Kapitel"
+          },
+          {
+            "q": "«الحكاية (الشعبية)»؟",
+            "a": "das Märchen"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يستعير الكتاب.»؟",
+            "a": "Er leiht das Buch aus."
+          },
+          {
+            "q": "«يبتكر القصة.»؟",
+            "a": "Er erfindet die Geschichte."
+          },
+          {
+            "q": "«الأجواء»؟",
+            "a": "die Atmosphäre"
+          },
+          {
+            "q": "«الكتاب يُلهِمه.»؟",
+            "a": "Das Buch begeistert ihn."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«المتعة»؟",
+            "a": "der Genuss"
+          },
+          {
+            "q": "«فضولي»؟",
+            "a": "neugierig"
+          },
+          {
+            "q": "«الكتاب ممتع.»؟",
+            "a": "Das Buch ist unterhaltsam."
+          },
+          {
+            "q": "«القصة مؤثّرة.»؟",
+            "a": "Die Geschichte ist berührend."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Roman ist spannend und die Handlung ist klar. Das Kapitel ist lang und die Atmosphäre ist gut. Das Märchen ist schön und die Spannung ist groß. Er erfindet die Geschichte und die Erfindung ist wichtig. Der Genuss ist groß und er ist neugierig. Das Buch begeistert ihn und die Begeisterung ist groß. Er leiht das Buch aus. Das Buch ist unterhaltsam und die Geschichte ist berührend!",
+      "ar": "الرواية مثيرة والحبكة واضحة. الفصل طويل والأجواء جيّدة. الحكاية جميلة والإثارة كبيرة. يبتكر القصة والاختراع مهمّ. المتعة كبيرة وهو فضولي. الكتاب يُلهِمه والحماس كبير. يستعير الكتاب. الكتاب ممتع والقصة مؤثّرة!"
+    },
+    "srsBundleWordIds": [
+      "roman",
+      "maerchen",
+      "kapitel",
+      "handlung",
+      "spannung",
+      "atmosphaere",
+      "erfinden",
+      "erfindung",
+      "genuss",
+      "neugierig",
+      "begeistern",
+      "begeisterung",
+      "ausleihen",
+      "unterhaltsam",
+      "beruehrend"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "ausleihen ملاصق!",
+          "de": "~~Er ausleiht das Buch.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Er leiht das Buch aus!",
+          "de": "Er leiht das Buch aus."
+        },
+        "exercise": {
+          "q": "Er ___ das Buch ___. (يستعير!)",
+          "a": "leiht … aus"
+        },
+        "whyArabicSpeakerFails": "العربية: «يستعير» — كلمة واحدة! والألمانية: الفعل المنفصل ينفصل والجزء aus يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "hat erfindet!",
+          "de": "~~Er hat die Geschichte erfindet.~~"
+        },
+        "correct": {
+          "ar": "القويّ: hat erfunden!",
+          "de": "Er hat die Geschichte erfunden."
+        },
+        "exercise": {
+          "q": "Er hat die Geschichte ___. (الماضي!)",
+          "a": "erfunden"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل الماضي بالجذر! والألمانية: erfinden شاذّ (erfand! erfunden!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Handlung!",
+          "de": "~~der Handlung ist klar~~"
+        },
+        "correct": {
+          "ar": "die Handlung (die!) — الحبكة!",
+          "de": "die Handlung ist klar"
+        },
+        "exercise": {
+          "q": "___ Handlung ist klar. (الأداة!)",
+          "a": "Die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الحبكة» — مؤنث! والألمانية: die Handlung مؤنث رغم ‑ung المعتادة (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Roman",
+      "https://www.duden.de/rechtschreibung/Maerchen",
+      "https://www.duden.de/rechtschreibung/Kapitel",
+      "https://www.duden.de/rechtschreibung/Handlung",
+      "https://www.duden.de/rechtschreibung/Spannung",
+      "https://www.duden.de/rechtschreibung/Atmosphaere",
+      "https://www.duden.de/rechtschreibung/erfinden",
+      "https://www.duden.de/rechtschreibung/Erfindung",
+      "https://www.duden.de/rechtschreibung/Genuss",
+      "https://www.duden.de/rechtschreibung/neugierig",
+      "https://www.duden.de/rechtschreibung/begeistern",
+      "https://www.duden.de/rechtschreibung/Begeisterung",
+      "https://www.duden.de/rechtschreibung/ausleihen",
+      "https://www.duden.de/rechtschreibung/unterhaltsam",
+      "https://www.duden.de/rechtschreibung/beruehrend"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-lektuere",
+    "ars-lesestrategien"
+  ],
+  "audioManifestRefs": [
+    "word-roman",
+    "word-maerchen",
+    "word-kapitel",
+    "word-handlung",
+    "word-spannung",
+    "word-atmosphaere",
+    "word-erfinden",
+    "word-erfindung",
+    "word-genuss",
+    "word-neugierig",
+    "word-begeistern",
+    "word-begeisterung",
+    "word-ausleihen",
+    "word-unterhaltsam",
+    "word-beruehrend"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 11: الهوايات والمجتمع — قراءة ممتدة)",
+    "goetheWordListOverlap": [
+      "roman",
+      "maerchen",
+      "kapitel",
+      "handlung",
+      "spannung",
+      "atmosphaere",
+      "erfinden",
+      "erfindung",
+      "genuss",
+      "neugierig",
+      "begeistern",
+      "begeisterung",
+      "ausleihen",
+      "unterhaltsam",
+      "beruehrend"
+    ]
+  }
+}

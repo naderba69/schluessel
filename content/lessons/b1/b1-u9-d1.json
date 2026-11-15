@@ -1,0 +1,484 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u9-d1",
+  "level": "B1",
+  "unit": 9,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Darf ich nachfragen? — Die Klärung bringt die Einigung!",
+    "ar": "يوم الاستفسار والتوضيح! (Nachfragen/Klärung!) — الوحدة 9: النزاعات والحلول!"
+  },
+  "canDoDaily": [
+    "يسأل مجدداً ويستوضح بأدب! (Darf ich nachfragen? Wie genau meinen Sie das?)",
+    "يسمّي سوء الفهم ويصف الموقف ويوصل إلى اتفاق! (Das war ein Missverständnis! Schildern Sie die Situation! Vereinbarung treffen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "zusage",
+      "besetzen",
+      "auftrag"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«هل لي أن أسأل مجدداً؟» (الاستفسار المهذّب!)"
+        },
+        "choices": [
+          "Darf ich nachfragen?",
+          "Darf ich fragen nach?",
+          "Ich darf nachfrage."
+        ],
+        "answer": "Darf ich nachfragen?",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«سوء الفهم»؟ (الاسم!)"
+        },
+        "choices": [
+          "das Missverständnis",
+          "die Missverständnis",
+          "der Missverständnis"
+        ],
+        "answer": "das Missverständnis",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "nachfragen",
+      "rueckfrage",
+      "klaeren",
+      "klaerung",
+      "missverstaendnis",
+      "missverstehen",
+      "konkret",
+      "hinweis",
+      "konflikt",
+      "vereinbarung",
+      "einigung",
+      "verzeihen",
+      "behauptung",
+      "schildern",
+      "bezweifeln"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-nachfragen"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Kein Missverständnis bleibt — die Klärung bringt die Einigung!",
+        "ar": "يكتب حوار استفسار وتوضيح في 8 جمل!"
+      },
+      "situation": {
+        "de": "Ein Missverständnis im Gespräch. Nachfragen. Klären.",
+        "ar": "سوء فهم في الحديث! أسأل مجدداً! أوضّح! أوصل إلى اتفاق!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في الحوار!",
+        "الاستفسار المهذّب: Darf ich nachfragen? Wie genau meinen Sie das?",
+        "تسمية سوء الفهم: Das war ein Missverständnis! + وصف الموقف (schildern!)",
+        "الحلّ: Vereinbarung treffen! Einigung finden! Konflikt lösen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "nachfragen! klären! Konflikt!"
+        ],
+        "interleavedWith": [
+          "zusage",
+          "besetzen",
+          "auftrag"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "يسأل مجدداً",
+                "de": "nachfragen"
+              },
+              {
+                "ar": "يوضّح",
+                "de": "klären"
+              },
+              {
+                "ar": "استفسار",
+                "de": "die Rückfrage"
+              },
+              {
+                "ar": "التوضيح",
+                "de": "die Klärung"
+              }
+            ],
+            "why": "nachfragen يسأل مجدداً (fragt nach! فعل منفصل!) · klären يوضّح (hat geklärt!) · die Rückfrage الاستفسار (die! جمعها Rückfragen!) · die Klärung التوضيح (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "سوء الفهم",
+                "de": "das Missverständnis"
+              },
+              {
+                "ar": "يفهم خطأً",
+                "de": "missverstehen"
+              },
+              {
+                "ar": "محدَّد",
+                "de": "konkret"
+              },
+              {
+                "ar": "تنبيه",
+                "de": "der Hinweis"
+              }
+            ],
+            "why": "das Missverständnis سوء الفهم (das! جمعها Missverständnisse!) · missverstehen يفهم خطأً (missverstand! فعل قويّ!) · konkret محدَّد · der Hinweis التنبيه (der! جمعها Hinweise!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "النزاع",
+                "de": "der Konflikt"
+              },
+              {
+                "ar": "الاتفاقية",
+                "de": "die Vereinbarung"
+              },
+              {
+                "ar": "التوافق",
+                "de": "die Einigung"
+              },
+              {
+                "ar": "يسامح",
+                "de": "verzeihen"
+              }
+            ],
+            "why": "der Konflikt النزاع (der! جمعها Konflikte!) · die Vereinbarung الاتفاقية (treffen!) · die Einigung التوافق (finden!) · verzeihen يسامح (verzieh! فعل قويّ!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "نهايات الكلمات وحرفها!"
+        ],
+        "interleavedWith": [
+          "klaeren",
+          "konflikt",
+          "vereinbarung"
+        ],
+        "items": [
+          {
+            "q": "Darf ich ___? (أسأل مجدداً!)",
+            "a": "nachfragen",
+            "why": "nachfragen فعل منفصل — مع darf يبقى متصلاً آخراً! (Darf ich nachfragen?)"
+          },
+          {
+            "q": "Das war ein ___. (سوء فهم!)",
+            "a": "Missverständnis",
+            "why": "das Missverständnis — الأداة das والجمع Missverständnisse!"
+          },
+          {
+            "q": "Danke für die ___. (التوضيح!)",
+            "a": "Klärung",
+            "why": "die Klärung التوضيح (die Klärungen!)"
+          },
+          {
+            "q": "Ich stelle eine ___. (استفسار!)",
+            "a": "Rückfrage",
+            "why": "die Rückfrage الاستفسار — eine Rückfrage stellen!"
+          },
+          {
+            "q": "Wir finden eine ___. (اتفاق!)",
+            "a": "Einigung",
+            "why": "die Einigung التوافق — eine Einigung finden!"
+          },
+          {
+            "q": "Was meinen Sie ___? (على وجه التحديد!)",
+            "a": "konkret",
+            "why": "konkret محدَّد — Was meinen Sie konkret?"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الانفصال! الأداة! التصريف الثالث!"
+        ],
+        "interleavedWith": [
+          "hinweis",
+          "einigung",
+          "verzeihen"
+        ],
+        "items": [
+          {
+            "q": "~~Ich nachfrage das.~~",
+            "a": "Ich frage das nach.",
+            "why": "nachfragen منفصل! الفعل fragt في موضعه والجزء nach آخر الجملة! (u8-d5: festlegen!)"
+          },
+          {
+            "q": "~~die Missverständnis~~",
+            "a": "das Missverständnis",
+            "why": "das Missverständnis! (الأداة das — والجمع die Missverständnisse!)"
+          },
+          {
+            "q": "~~Ich habe dir verzeiht.~~",
+            "a": "Ich habe dir verziehen.",
+            "why": "verzeihen فعل قويّ! التصريف: verzeiht/verzieh/hat verziehen — لا verzeiht بعد haben!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — الحوار كلام!",
+          "Nachfragen! Klären!"
+        ],
+        "interleavedWith": [
+          "schildern",
+          "bezweifeln",
+          "behauptung"
+        ],
+        "items": [
+          {
+            "q": "صِف سوء فهم حصل لك! (3 جمل!)",
+            "a": "Da war ein Missverständnis. Ich habe dich missverstanden. Danke für die Klärung!",
+            "why": "das Missverständnis سوء الفهم! missverstehen يفهم خطأً! (كلمتا اليوم!)"
+          },
+          {
+            "q": "اسأل مجدداً بأدب! (جملتان!)",
+            "a": "Darf ich nachfragen? Können Sie das bitte wiederholen?",
+            "why": "nachfragen! wiederholen — الاستفسار المهذّب (ars-nachfragen!)"
+          },
+          {
+            "q": "النزاع والحلّ! (3 جمل!)",
+            "a": "Wir lösen den Konflikt und finden eine Einigung. Wir treffen eine Vereinbarung. Kannst du mir verzeihen?",
+            "why": "den Konflikt lösen! eine Einigung finden! eine Vereinbarung treffen! verzeihen يسامح!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«هل لي أن أسأل مجدداً؟»؟",
+            "a": "Darf ich nachfragen?"
+          },
+          {
+            "q": "«سوء الفهم»؟",
+            "a": "das Missverständnis"
+          },
+          {
+            "q": "«يوضّح»؟",
+            "a": "klären"
+          },
+          {
+            "q": "«النزاع»؟",
+            "a": "der Konflikt"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«أنا لديّ استفسار.»؟",
+            "a": "Ich habe eine Rückfrage."
+          },
+          {
+            "q": "«شكراً على التوضيح!»؟",
+            "a": "Danke für die Klärung!"
+          },
+          {
+            "q": "«على وجه التحديد»؟",
+            "a": "konkret"
+          },
+          {
+            "q": "«يسامح»؟",
+            "a": "verzeihen"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الاتفاقية جاهزة!»؟",
+            "a": "Die Vereinbarung ist fertig."
+          },
+          {
+            "q": "«يفهم خطأً»؟",
+            "a": "missverstehen"
+          },
+          {
+            "q": "«تنبيه»؟",
+            "a": "der Hinweis"
+          },
+          {
+            "q": "«نجد اتفاقاً!»؟",
+            "a": "Wir finden eine Einigung."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Entschuldigung! Darf ich nachfragen? Ich habe eine Rückfrage: Was meinen Sie konkret? Das war ein Missverständnis — ich habe dich missverstanden! Können Sie das bitte wiederholen? Danke für den Hinweis und für die Klärung! Schildern Sie die Situation, bitte! Ich habe Zweifel! Wir finden eine Einigung. Wir treffen eine Vereinbarung. Wir lösen den Konflikt. Kannst du mir verzeihen?",
+      "ar": "عذراً! هل لي أن أسأل مجدداً؟ لديّ استفسار: ماذا تقصد محدَّداً؟ كان ذلك سوء فهم — فهمتك خطأً! هل يمكنك إعادة ذلك من فضلك؟ شكراً على التنبيه وعلى التوضيح! صِف الموقف من فضلك! أشكّك في ذلك. نبحث عن اتفاق واتفاقية. نحلّ النزاع. هل يمكنك أن تسامحني؟"
+    },
+    "srsBundleWordIds": [
+      "nachfragen",
+      "rueckfrage",
+      "klaeren",
+      "klaerung",
+      "missverstaendnis",
+      "missverstehen",
+      "konkret",
+      "hinweis",
+      "konflikt",
+      "vereinbarung",
+      "einigung",
+      "verzeihen",
+      "behauptung",
+      "schildern",
+      "bezweifeln"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "nachfragen ملاصق في الجملة!",
+          "de": "~~Ich nachfrage das.~~"
+        },
+        "correct": {
+          "ar": "فعل منفصل: Ich frage das nach. (الجزء آخر الجملة!)",
+          "de": "Ich frage das nach."
+        },
+        "exercise": {
+          "q": "Ich ___ das ___. (يسأل مجدداً!)",
+          "a": "frage … nach"
+        },
+        "whyArabicSpeakerFails": "العربية: «أسأل مجدداً» — الكلمة واحدة! والألمانية: الفعل المنفصل ينفصل والجزء nach يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "Missverständnis بأداة مؤنثة/مذكرة!",
+          "de": "~~die Missverständnis~~ / ~~der Missverständnis~~"
+        },
+        "correct": {
+          "ar": "das Missverständnis! (das! والجمع die Missverständnisse!)",
+          "de": "das Missverständnis"
+        },
+        "exercise": {
+          "q": "Das war ein ___. Missverständnis. (الأداة!)",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «سوء فهم» — لا جنس نحوي! والألمانية: كل اسم بأداته (‑nis = das دائماً!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "verzeihen بالتصريف المنتظم!",
+          "de": "~~Ich habe dir verzeiht.~~"
+        },
+        "correct": {
+          "ar": "فعل قويّ: verzeiht/verzieh/hat verziehen!",
+          "de": "Ich habe dir verziehen."
+        },
+        "exercise": {
+          "q": "Ich habe dir ___. (سامح! التصريف الثالث!)",
+          "a": "verziehen"
+        },
+        "whyArabicSpeakerFails": "العربية: «سامحتُ» — التصريف بزيادة فقط! والألمانية: الأفعال القويّة تغيّر حروفها (ei → ie!) (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/nachfragen",
+      "https://www.duden.de/rechtschreibung/R%C3%BCckfrage",
+      "https://www.duden.de/rechtschreibung/kl%C3%A4ren",
+      "https://www.duden.de/rechtschreibung/Kl%C3%A4rung",
+      "https://www.duden.de/rechtschreibung/Missverst%C3%A4ndnis",
+      "https://www.duden.de/rechtschreibung/missverstehen",
+      "https://www.duden.de/rechtschreibung/konkret",
+      "https://www.duden.de/rechtschreibung/Hinweis",
+      "https://www.duden.de/rechtschreibung/Konflikt",
+      "https://www.duden.de/rechtschreibung/Vereinbarung",
+      "https://www.duden.de/rechtschreibung/Einigung",
+      "https://www.duden.de/rechtschreibung/verzeihen",
+      "https://www.duden.de/rechtschreibung/Behauptung",
+      "https://www.duden.de/rechtschreibung/schildern",
+      "https://www.duden.de/rechtschreibung/bezweifeln"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-nachfragen",
+    "ars-indirekte-fragen"
+  ],
+  "audioManifestRefs": [
+    "word-nachfragen",
+    "word-rueckfrage",
+    "word-klaeren",
+    "word-klaerung",
+    "word-missverstaendnis",
+    "word-missverstehen",
+    "word-konkret",
+    "word-hinweis",
+    "word-konflikt",
+    "word-vereinbarung",
+    "word-einigung",
+    "word-verzeihen",
+    "word-behauptung",
+    "word-schildern",
+    "word-bezweifeln"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (النزاعات والحلول — Nachfragen/Klärung)",
+    "goetheWordListOverlap": [
+      "nachfragen",
+      "rueckfrage",
+      "klaeren",
+      "klaerung",
+      "missverstaendnis",
+      "missverstehen",
+      "konkret",
+      "hinweis",
+      "konflikt",
+      "vereinbarung",
+      "einigung",
+      "verzeihen",
+      "behauptung",
+      "schildern",
+      "bezweifeln"
+    ]
+  }
+}

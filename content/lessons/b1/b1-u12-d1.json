@@ -1,0 +1,432 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u12-d1",
+  "level": "B1",
+  "unit": 12,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Wortschatz ist groß — und das Zertifikat ist nah!",
+    "ar": "يوم المراجعة الأولى: الكلمات المتراكمة! (المفردات! الشهادة! التركيز!) — الوحدة 12: التكامل!"
+  },
+  "canDoDaily": [
+    "يُراجع كلماته المتراكمة من كل الوحدات! (Wortschatz wiederholen!)",
+    "يضع هدفه نُصّ عينيه بالتركيز! (Zertifikat bekommen! Konzentration zeigen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "zusammenhalt",
+      "erfuellung",
+      "verwirklichen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«المفردات كبيرة.»؟"
+        },
+        "choices": [
+          "Der Wortschatz ist groß.",
+          "Die Wortschatz ist groß.",
+          "Das Wortschatz ist groß."
+        ],
+        "answer": "Der Wortschatz ist groß.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الشهادة مهمة.»؟"
+        },
+        "choices": [
+          "Das Zertifikat ist wichtig.",
+          "Der Zertifikat ist wichtig.",
+          "Die Zertifikat ist wichtig."
+        ],
+        "answer": "Das Zertifikat ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "wortschatz",
+      "zertifikat",
+      "konzentration"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-deshalb-trotzdem",
+      "ars-konnektoren"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Wortschatz ist groß und die Konzentration ist gut!",
+        "ar": "يُراجع ١٥ كلمة متراكمة من كل الوحدات في جُمل!"
+      },
+      "situation": {
+        "de": "Elf Tage, ein Wortschatz, ein Ziel.",
+        "ar": "إحدى عشرة وحدة! مفردات واحدة! هدف واحد! (المراجعة الأولى!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في المراجعة!",
+        "١٥ كلمة متراكمة من وحدات سابقة في جُمل!",
+        "الروابط من الوحدة الأولى: deshalb! trotzdem! (المرتبة الثانية!)",
+        "المفردات الثابتة: den Wortschatz wiederholen! das Zertifikat bekommen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Wortschatz! Zertifikat! Konzentration!"
+        ],
+        "interleavedWith": [
+          "zusammenhalt",
+          "erfuellung",
+          "verwirklichen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "المفردات",
+                "de": "der Wortschatz"
+              },
+              {
+                "ar": "الشهادة",
+                "de": "das Zertifikat"
+              },
+              {
+                "ar": "التركيز",
+                "de": "die Konzentration"
+              }
+            ],
+            "why": "der Wortschatz المفردات (der! die Wortschätze — بمدّة!) · das Zertifikat الشهادة (das!) · die Konzentration التركيز (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الطريق",
+                "de": "der Weg"
+              },
+              {
+                "ar": "العمل",
+                "de": "die Arbeit"
+              },
+              {
+                "ar": "المدرسة",
+                "de": "die Schule"
+              },
+              {
+                "ar": "الوقت",
+                "de": "die Zeit"
+              }
+            ],
+            "why": "مراجعة الكلمات المتراكمة! der Weg الطريق · die Arbeit العمل · die Schule المدرسة · die Zeit الوقت (كلها وحدات سابقة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الصحة",
+                "de": "die Gesundheit"
+              },
+              {
+                "ar": "السكن",
+                "de": "die Wohnung"
+              },
+              {
+                "ar": "السفر",
+                "de": "die Reise"
+              },
+              {
+                "ar": "المال",
+                "de": "das Geld"
+              }
+            ],
+            "why": "مراجعة أبعد! die Gesundheit الصحة (u3!) · die Wohnung السكن (u2!) · die Reise السفر · das Geld المال (u6!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الأمان",
+                "de": "die Sicherheit"
+              },
+              {
+                "ar": "النتيجة",
+                "de": "das Ergebnis"
+              },
+              {
+                "ar": "المستوى",
+                "de": "das Niveau"
+              }
+            ],
+            "why": "مراجعة B1! die Sicherheit الأمان · das Ergebnis النتيجة · das Niveau المستوى (die! das! das!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "المراجعة الأولى!"
+        ],
+        "interleavedWith": [
+          "wortschatz",
+          "zertifikat",
+          "konzentration"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist groß. (المفردات!)",
+            "a": "Wortschatz",
+            "why": "der Wortschatz المفردات (der!) — der Wortschatz ist groß."
+          },
+          {
+            "q": "Das ___ ist wichtig. (الشهادة!)",
+            "a": "Zertifikat",
+            "why": "das Zertifikat الشهادة (das!) — das Zertifikat ist wichtig."
+          },
+          {
+            "q": "Die ___ ist gut. (التركيز!)",
+            "a": "Konzentration",
+            "why": "die Konzentration التركيز (die!) — die Konzentration ist gut."
+          },
+          {
+            "q": "___ übt er jeden Tag. (لذلك! الفعل ثانياً!)",
+            "a": "Deshalb",
+            "why": "deshalb في الصدر ← الفعل ثانياً! Deshalb ÜBT er! (مراجعة الوحدة الأولى!)"
+          },
+          {
+            "q": "Er lernt jeden Tag, ___ ist die Prüfung schwer. (مع ذلك!)",
+            "a": "trotzdem",
+            "why": "trotzdem مع ذلك (trotzdem في الصدر ← الفعل ثانياً! مراجعة الوحدة الأولى!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الجمع! المرتبة الثانية!"
+        ],
+        "interleavedWith": [
+          "weg",
+          "arbeit",
+          "zeit"
+        ],
+        "items": [
+          {
+            "q": "~~die Wortschatz ist groß~~",
+            "a": "der Wortschatz ist groß",
+            "why": "der Wortschatz المفردات (der! لا die!)"
+          },
+          {
+            "q": "~~der Zertifikat ist wichtig~~",
+            "a": "das Zertifikat ist wichtig",
+            "why": "das Zertifikat الشهادة (das! لا der!)"
+          },
+          {
+            "q": "~~Deshalb er übt jeden Tag.~~",
+            "a": "Deshalb übt er jeden Tag.",
+            "why": "deshalb في الصدر ← الفعل ثانياً لا الضمير! (خريطة التداخل 10‑ي!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — المراجعة كلام!",
+          "Wortschatz! Zertifikat! Konzentration!"
+        ],
+        "interleavedWith": [
+          "gesundheit",
+          "wohnung",
+          "geld"
+        ],
+        "items": [
+          {
+            "q": "تكلّم عن مفرداتك المتراكمة! (جملتان!)",
+            "a": "Der Wortschatz ist groß. Er wiederholt jeden Tag.",
+            "why": "المراجعة بالكلام! (den Wortschatz wiederholen!)"
+          },
+          {
+            "q": "تكلّم عن هدفك! (جملتان!)",
+            "a": "Das Zertifikat ist wichtig. Er bekommt das Zertifikat.",
+            "why": "الهدف نُصّ العين! (das Zertifikat bekommen!)"
+          },
+          {
+            "q": "اختم بالتركيز! (جملتان!)",
+            "a": "Die Konzentration ist gut. Deshalb übt er jeden Tag.",
+            "why": "التركيز ثم الربط! (Konzentration zeigen! deshalb!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المفردات»؟",
+            "a": "der Wortschatz"
+          },
+          {
+            "q": "«الشهادة»؟",
+            "a": "das Zertifikat"
+          },
+          {
+            "q": "«التركيز»؟",
+            "a": "die Konzentration"
+          },
+          {
+            "q": "«الطريق»؟ (مراجعة!)",
+            "a": "der Weg"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الصحة»؟ (مراجعة!)",
+            "a": "die Gesundheit"
+          },
+          {
+            "q": "«السكن»؟ (مراجعة!)",
+            "a": "die Wohnung"
+          },
+          {
+            "q": "«النتيجة»؟ (مراجعة!)",
+            "a": "das Ergebnis"
+          },
+          {
+            "q": "«المال»؟ (مراجعة!)",
+            "a": "das Geld"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«لذلك يتدرب كل يوم.»؟",
+            "a": "Deshalb übt er jeden Tag."
+          },
+          {
+            "q": "«الوقت»؟ (مراجعة!)",
+            "a": "die Zeit"
+          },
+          {
+            "q": "«المستوى»؟ (مراجعة!)",
+            "a": "das Niveau"
+          },
+          {
+            "q": "«الأمان»؟ (مراجعة!)",
+            "a": "die Sicherheit"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Wortschatz ist groß und das Zertifikat ist wichtig. Die Konzentration ist gut. Der Weg ist lang und die Arbeit ist wichtig. Die Schule ist gut und die Zeit ist kurz. Die Gesundheit ist wichtig und die Wohnung ist schön. Die Reise ist lang und das Geld ist wichtig. Die Sicherheit ist da und das Ergebnis ist gut. Das Niveau ist hoch. Deshalb übt er jeden Tag!",
+      "ar": "المفردات كبيرة والشهادة مهمة. التركيز جيد. الطريق طويل والعمل مهم. المدرسة جيدة والوقت قصير. الصحة مهمة والسكن جميل. السفر طويل والمال مهم. الأمان موجود والنتيجة جيدة. المستوى عالٍ. لذلك يتدرب كل يوم!"
+    },
+    "srsBundleWordIds": [
+      "wortschatz",
+      "zertifikat",
+      "konzentration"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Wortschatz!",
+          "de": "~~die Wortschatz ist groß~~"
+        },
+        "correct": {
+          "ar": "der Wortschatz!",
+          "de": "der Wortschatz ist groß"
+        },
+        "exercise": {
+          "q": "___ Wortschatz ist groß.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «المفردات» جمع بلا أداة جنس! والألمانية: der Wortschatz مفرد مذكّر (der!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Zertifikat!",
+          "de": "~~der Zertifikat ist wichtig~~"
+        },
+        "correct": {
+          "ar": "das Zertifikat!",
+          "de": "das Zertifikat ist wichtig"
+        },
+        "exercise": {
+          "q": "___ Zertifikat ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «الشهادة» مؤنث في العربية! والألمانية: das Zertifikat محايد (das!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الضمير قبل الفعل بعد deshalb!",
+          "de": "~~Deshalb er übt jeden Tag.~~"
+        },
+        "correct": {
+          "ar": "الفعل ثانياً: Deshalb übt er!",
+          "de": "Deshalb übt er jeden Tag."
+        },
+        "exercise": {
+          "q": "Deshalb ___ er jeden Tag.",
+          "a": "übt"
+        },
+        "whyArabicSpeakerFails": "العربية: «لذلك هو يتدرب» — الضمير بعد الرابط! والألمانية: الفعل في المرتبة الثانية بعد deshalb (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Wortschatz",
+      "https://www.duden.de/rechtschreibung/Zertifikat",
+      "https://www.duden.de/rechtschreibung/Konzentration"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-deshalb-trotzdem",
+    "ars-konnektoren"
+  ],
+  "audioManifestRefs": [
+    "word-wortschatz",
+    "word-zertifikat",
+    "word-konzentration"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 12: التكامل — مراجعة 1)",
+    "goetheWordListOverlap": [
+      "wortschatz",
+      "zertifikat",
+      "konzentration"
+    ]
+  }
+}

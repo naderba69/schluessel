@@ -1,0 +1,399 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u8-d6",
+  "level": "B1",
+  "unit": 8,
+  "day": 6,
+  "kind": "integration",
+  "ziel": {
+    "de": "Wir bekommen die Zusage — die Stelle ist besetzt!",
+    "ar": "توليف الوحدة 8! (كل خيوط الوحدة: الصفة! الترشح! المقابلة! السيرة! الكولوكيشنات!)"
+  },
+  "canDoDaily": [
+    "يلخّص الوحدة 8 كاملة في نصٍّ واحد! (العمل! الترشح! المقابلة! السيرة! الكولوكيشنات!)",
+    "يكتب التوليف بقواعد الوحدة الخمس وفق 10‑ي! (الصفة بحرفها المُشبَع! Bewerbung بالعناصر! Interview بالتهذيب! السيرة بالأقسام! اسم+فعله الملازم!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bewerbung",
+      "interview",
+      "lebenslauf"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«أنا أبحث عن فرصة جيدة!» (الصفة بحرفها المُشبَع!)"
+        },
+        "choices": [
+          "Ich suche eine gute Chance.",
+          "Ich suche eine gut Chance.",
+          "Ich suche eine guten Chance."
+        ],
+        "answer": "Ich suche eine gute Chance.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«القبول»؟ (نهاية الترشح!)"
+        },
+        "choices": [
+          "die Zusage",
+          "die Absage",
+          "die Zeugnisse"
+        ],
+        "answer": "die Zusage",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "zusage",
+      "besetzen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-adjektiv-gemischt"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Das Interview war gut — und jetzt die Zusage!",
+        "ar": "يكتب توليف الوحدة 8 في 8 جمل!"
+      },
+      "situation": {
+        "de": "Die Bewerbung, das Interview, die Entscheidung.",
+        "ar": "الترشح! المقابلة! القرار: Zusage أم Absage!"
+      },
+      "successCriteria": [
+        "الكلمتان الجديدتان + خيوط الوحدة الخمسة!",
+        "الصفة بحرفها المُشبَع (eine gute Chance!) وفق 10‑ي!",
+        "الترشح بالعناصر (Lebenslauf + Zeugnisse!) والمقابلة (Ich spreche die Leitung an!).",
+        "الكولوكيشنات الثابتة: Anleitung geben! Betreuung übernehmen! Stelle besetzen! Zusage bekommen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم وخيوط الوحدة!",
+          "Zusage! besetzen!"
+        ],
+        "interleavedWith": [
+          "auftrag",
+          "betreuung",
+          "azubi"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "القبول",
+                "de": "die Zusage"
+              },
+              {
+                "ar": "يشغل الوظيفة",
+                "de": "besetzen"
+              },
+              {
+                "ar": "الترشح",
+                "de": "die Bewerbung"
+              }
+            ],
+            "why": "die Zusage القبول (die! جمعها Zusagen!) · besetzen يشغل الوظيفة (besetzt/besetzte/hat besetzt!) · die Bewerbung الترشح (مراجعة: الوحدة 8!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "السيرة الذاتية",
+                "de": "der Lebenslauf"
+              },
+              {
+                "ar": "المقابلة",
+                "de": "das Interview"
+              },
+              {
+                "ar": "الشهادات",
+                "de": "die Zeugnisse"
+              }
+            ],
+            "why": "der Lebenslauf السيرة (u8-d4!) · das Interview المقابلة (u8-d3!) · die Zeugnisse الشهادات (جمع das Zeugnis!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يُعطي تعليمات",
+                "de": "eine Anleitung geben"
+              },
+              {
+                "ar": "يتولّى الرعاية",
+                "de": "die Betreuung übernehmen"
+              },
+              {
+                "ar": "يحصل على قبول",
+                "de": "eine Zusage bekommen"
+              }
+            ],
+            "why": "الكولوكيشنات الثابتة (u8-d5!): Anleitung geben! Betreuung übernehmen! Zusage bekommen!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر: الكلمة الصحيحة!",
+          "besetzen! Zusage! Anleitung!"
+        ],
+        "interleavedWith": [
+          "anleitung",
+          "meister",
+          "lehrling"
+        ],
+        "items": [
+          {
+            "q": "Nach dem Interview bekomme ich eine ___. (القبول!)",
+            "a": "Zusage",
+            "why": "eine Zusage bekommen — الشريك الثابت! (zu- = قبول!)"
+          },
+          {
+            "q": "Die Firma ___ die Stelle. (تشغل!)",
+            "a": "besetzt",
+            "why": "besetzen يشغل الوظيفة: die Stelle besetzen! (المفعول هو الوظيفة لا الشخص!)"
+          },
+          {
+            "q": "Der Meister gibt eine ___ und ich übernehme die Betreuung. (التعليمات!)",
+            "a": "Anleitung",
+            "why": "eine Anleitung geben! (u8-d5 — اسم+فعله الملازم!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الحرف المُشبَع! الشريك الثابت! المفعول!"
+        ],
+        "interleavedWith": [
+          "leitung",
+          "verhaeltnis",
+          "loesen"
+        ],
+        "items": [
+          {
+            "q": "~~Ich suche eine gut Chance.~~",
+            "a": "Ich suche eine gute Chance.",
+            "why": "die Chance مؤنثة! الصفة بـ‑e بعد أداة التنكير: eine gute/große Chance! (u8-d1!)"
+          },
+          {
+            "q": "~~Ich mache eine Zusage.~~",
+            "a": "Ich bekomme eine Zusage.",
+            "why": "eine Zusage bekommen! (الشريك الثابت — لا machen!) (u8-d5!)"
+          },
+          {
+            "q": "~~Die Firma besetzt den Bewerber.~~",
+            "a": "Die Firma besetzt die Stelle.",
+            "why": "besetzen = يشغل الوظيفة — مفعوله die Stelle لا الشخص! (der Bewerber bekommt die Zusage!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — التوليف كلام!",
+          "Zusage أم Absage؟"
+        ],
+        "interleavedWith": [
+          "festlegen",
+          "sichern",
+          "unterrichten"
+        ],
+        "items": [
+          {
+            "q": "افتح التوليف: ترشحك للوظيفة! (3 جمل!)",
+            "a": "Meine Bewerbung für die Stelle ist fertig: der Lebenslauf und die Zeugnisse!",
+            "why": "die Bewerbung الترشح! der Lebenslauf السيرة! (u8-d2/u8-d4!)"
+          },
+          {
+            "q": "المقابلة: صِف لقاءك مع الإدارة! (جملتان!)",
+            "a": "Im Interview spreche ich die Leitung an: Ich arbeite geschickt!",
+            "why": "die Leitung الإدارة! geschickt بمهارة! (u8-d5!)"
+          },
+          {
+            "q": "الكولوكيشنات: ثلاثة أزواج اسم+فعله!",
+            "a": "Der Meister gibt eine Anleitung. Ich übernehme die Betreuung. Die Firma besetzt die Stelle.",
+            "why": "الشريك الثابت لكل اسم! (u8-d5!)"
+          },
+          {
+            "q": "النهاية: Zusage أم Absage؟ (جملتان!)",
+            "a": "Die Firma besetzt die Stelle — und ich bekomme eine Zusage, keine Absage!",
+            "why": "zu- = قبول! ab- = رفض! (كلمتا اليوم!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«القبول»؟",
+            "a": "die Zusage"
+          },
+          {
+            "q": "«الشركة تشغل الوظيفة!»؟",
+            "a": "Die Firma besetzt die Stelle."
+          },
+          {
+            "q": "«أنا أبحث عن فرصة جيدة!»؟",
+            "a": "Ich suche eine gute Chance."
+          },
+          {
+            "q": "«المعلّم يُعطي تعليمات.»؟",
+            "a": "Der Meister gibt eine Anleitung."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يشغل الوظيفة»؟",
+            "a": "besetzen"
+          },
+          {
+            "q": "«يحصل على قبول!»؟",
+            "a": "eine Zusage bekommen"
+          },
+          {
+            "q": "«السيرة بالبيانات الشخصية!»؟",
+            "a": "der Lebenslauf mit den persönlichen Daten"
+          },
+          {
+            "q": "«المقابلة مع الإدارة!»؟",
+            "a": "das Interview mit der Leitung"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«أنا متدرّب وأعمل بمهارة!»؟",
+            "a": "Ich bin Azubi und arbeite geschickt."
+          },
+          {
+            "q": "«يتولّى الرعاية»؟",
+            "a": "die Betreuung übernehmen"
+          },
+          {
+            "q": "«بعد المقابلة: قبول لا رفض!»؟",
+            "a": "Nach dem Interview: eine Zusage, keine Absage!"
+          },
+          {
+            "q": "«أحلّ المشاكل وأؤمّن مكان العمل!»؟",
+            "a": "Ich löse die Probleme und sichere den Arbeitsplatz."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Guten Tag! Meine Bewerbung für die Stelle ist fertig: der Lebenslauf mit den persönlichen Daten und die Zeugnisse. Im Interview spreche ich die Leitung an. Ich bin Azubi und arbeite geschickt: Der Meister gibt eine Anleitung, und ich übernehme die Betreuung. Ich löse die Probleme und sichere den Arbeitsplatz. Nach dem Interview besetzt die Firma die Stelle. Ich bekomme eine Zusage — und keine Absage!",
+      "ar": "مرحباً! ترشحي للوظيفة جاهز: السيرة الذاتية بالبيانات الشخصية والشهادات. في المقابلة أخاطب الإدارة. أنا متدرّب وأعمل بمهارة: المعلّم يُعطي تعليمات وأتولّى الرعاية. أحلّ المشاكل وأؤمّن مكان العمل. بعد المقابلة تشغل الشركة الوظيفة. أحصل على قبول — لا رفض!"
+    },
+    "srsBundleWordIds": [
+      "zusage",
+      "besetzen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "الصفة بلا حرفها المُشبَع!",
+          "de": "~~Ich suche eine gut Chance.~~"
+        },
+        "correct": {
+          "ar": "الصفة بـ‑e بعد eine: eine gute/große Chance!",
+          "de": "Ich suche eine gute Chance."
+        },
+        "exercise": {
+          "q": "Ich suche eine ___ Chance. (gut + die!)",
+          "a": "gute"
+        },
+        "whyArabicSpeakerFails": "العربية: «فرصة جيدة» — الصفة لا تتغيّر أبداً! والألمانية: كل صفة تتغيّر مع كل اسم (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "«يحصل على قبول» بالفعل machen!",
+          "de": "~~Ich mache eine Zusage.~~"
+        },
+        "correct": {
+          "ar": "الشريك الثابت: Zusage bekommen (يتلقّى قبولاً)!",
+          "de": "Ich bekomme eine Zusage."
+        },
+        "exercise": {
+          "q": "Ich ___ eine Zusage. (يحصل!)",
+          "a": "bekomme"
+        },
+        "whyArabicSpeakerFails": "العربية: «حصل على قبول» — الفعل حرّ! والألمانية: لكل اسم فعله الملازم الثابت (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "besetzen مفعوله الشخص?!",
+          "de": "~~Die Firma besetzt den Bewerber.~~"
+        },
+        "correct": {
+          "ar": "besetzen = يشغل الوظيفة: die Stelle besetzen!",
+          "de": "Die Firma besetzt die Stelle."
+        },
+        "exercise": {
+          "q": "Die Firma besetzt die ___. (الوظيفة!)",
+          "a": "Stelle"
+        },
+        "whyArabicSpeakerFails": "العربية: «وظّف الشخص» — المفعول هو الشخص! والألمانية: besetzen يشغل المنصب (المفعول die Stelle!) والشخص يحصل على Zusage (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Zusage",
+      "https://www.duden.de/rechtschreibung/besetzen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-adjektiv-gemischt",
+    "ars-bewerbung",
+    "ars-interview",
+    "ars-lebenslauf",
+    "ars-kollokationen-beruf"
+  ],
+  "audioManifestRefs": [
+    "word-zusage",
+    "word-besetzen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (العمل والترشيح — التوليف!)",
+    "goetheWordListOverlap": [
+      "zusage",
+      "besetzen"
+    ]
+  }
+}

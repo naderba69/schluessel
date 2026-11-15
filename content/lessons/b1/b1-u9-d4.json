@@ -1,0 +1,484 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u9-d4",
+  "level": "B1",
+  "unit": 9,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Ich entschuldige mich für die Unannehmlichkeit — und die Zufriedenheit kommt!",
+    "ar": "يوم رسالة التسوية! (اعتذار! مشكلة! حلّ! رضا!) — الوحدة 9: النزاعات والحلول!"
+  },
+  "canDoDaily": [
+    "يكتب رسالة تسوية بالترتيب الثابت! (Entschuldigung ← Reklamation ← Regelung ← Zufriedenheit!)",
+    "يعتذر ويطلب التعويض بالأفعال الثابتة! (sich entschuldigen FÜR! Kosten erstatten! Streit beilegen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "protokoll",
+      "absprache",
+      "uebersicht"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«أعتذر عن الإزعاج.» (الاعتذار أولاً!)"
+        },
+        "choices": [
+          "Ich entschuldige mich für die Unannehmlichkeit.",
+          "Ich entschuldige mich über die Unannehmlichkeit.",
+          "Ich entschuldige die Unannehmlichkeit."
+        ],
+        "answer": "Ich entschuldige mich für die Unannehmlichkeit.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التعويض»؟"
+        },
+        "choices": [
+          "die Entschädigung",
+          "die Erstattung",
+          "die Regelung"
+        ],
+        "answer": "die Entschädigung",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "entschaedigung",
+      "erstatten",
+      "erstattung",
+      "kulanz",
+      "gutschein",
+      "reklamieren",
+      "reklamation",
+      "unannehmlichkeit",
+      "ausnahme",
+      "regelung",
+      "schlichten",
+      "angelegenheit",
+      "anliegen",
+      "beilegen",
+      "zufriedenheit"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-schlichtung"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Keine Unannehmlichkeit bleibt — die Zufriedenheit kommt!",
+        "ar": "يكتب رسالة تسوية في 8 جمل!"
+      },
+      "situation": {
+        "de": "Eine Reklamation im Café. Eine Lösung. Ein Gutschein.",
+        "ar": "شكوى في المقهى! حلّ! وقسيمة! والرضا في النهاية!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في الرسالة!",
+        "الاعتذار أولاً: für die Unannehmlichkeit! (لا الطلب!)",
+        "الأفعال الثابتة: Kosten erstatten! Streit schlichten! Streit beilegen!",
+        "الخاتمة: Die Zufriedenheit ist wichtig!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Entschädigung! Reklamation! Regelung!"
+        ],
+        "interleavedWith": [
+          "protokoll",
+          "absprache",
+          "uebersicht"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "التعويض",
+                "de": "die Entschädigung"
+              },
+              {
+                "ar": "يُعيد (المصاريف)",
+                "de": "erstatten"
+              },
+              {
+                "ar": "ردّ المبلغ",
+                "de": "die Erstattung"
+              },
+              {
+                "ar": "التفضّل (بلا ضمان!)",
+                "de": "die Kulanz"
+              }
+            ],
+            "why": "die Entschädigung التعويض (bekommen!) · erstatten يُعيد المصاريف (Kosten erstatten!) · die Erstattung ردّ المبلغ (die!) · die Kulanz التفضّل (بلا ضمان! لا حقّ!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "القسيمة",
+                "de": "der Gutschein"
+              },
+              {
+                "ar": "يشتكي (من البضاعة)",
+                "de": "reklamieren"
+              },
+              {
+                "ar": "الشكوى",
+                "de": "die Reklamation"
+              },
+              {
+                "ar": "الإزعاج",
+                "de": "die Unannehmlichkeit"
+              }
+            ],
+            "why": "der Gutschein القسيمة (Gutscheine!) · reklamieren يشتكي (die Ware reklamieren!) · die Reklamation الشكوى (schreiben!) · die Unannehmlichkeit الإزعاج (für … entschuldigen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الاستثناء",
+                "de": "die Ausnahme"
+              },
+              {
+                "ar": "التسوية",
+                "de": "die Regelung"
+              },
+              {
+                "ar": "المسألة",
+                "de": "die Angelegenheit"
+              },
+              {
+                "ar": "الرضا",
+                "de": "die Zufriedenheit"
+              }
+            ],
+            "why": "die Ausnahme الاستثناء (Ausnahmen!) · die Regelung التسوية (treffen!) · die Angelegenheit المسألة (Angelegenheiten!) · die Zufriedenheit الرضا (die! — الخاتمة!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "رسالة التسوية!"
+        ],
+        "interleavedWith": [
+          "entschaedigung",
+          "reklamation",
+          "regelung"
+        ],
+        "items": [
+          {
+            "q": "Ich entschuldige mich ___ die Unannehmlichkeit. (عن! الحرف!)",
+            "a": "für",
+            "why": "sich entschuldigen FÜR (لا über!) — الحرف الثابت! (ars-schlichtung!)"
+          },
+          {
+            "q": "Wir erstatten die ___. (المصاريف!)",
+            "a": "Kosten",
+            "why": "die Kosten erstatten! (الشريك الثابت — لا zurückgeben!)"
+          },
+          {
+            "q": "Er legt den Streit ___. (يسوّي! منفصل!)",
+            "a": "bei",
+            "why": "beilegen منفصل! Er legt den Streit bei. (الجزء آخر الجملة!)"
+          },
+          {
+            "q": "Das ist wirklich eine ___. (استثناء!)",
+            "a": "Ausnahme",
+            "why": "die Ausnahme الاستثناء — Das ist eine Ausnahme!"
+          },
+          {
+            "q": "Hier ist ein ___. (قسيمة!)",
+            "a": "Gutschein",
+            "why": "der Gutschein القسيمة (die Gutscheine!) — Kulanz/Gutschein بلا ضمان!"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الرضا! الخاتمة!)",
+            "a": "Zufriedenheit",
+            "why": "die Zufriedenheit الرضا — الخاتمة الثابتة للرسالة!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الحرف! الانفصال! الشريك الثابت!"
+        ],
+        "interleavedWith": [
+          "kulanz",
+          "gutschein",
+          "ausnahme"
+        ],
+        "items": [
+          {
+            "q": "~~Ich entschuldige mich über die Unannehmlichkeit.~~",
+            "a": "Ich entschuldige mich für die Unannehmlichkeit.",
+            "why": "sich entschuldigen FÜR (لا über!) — الحرف الثابت! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~Wir beilegen den Streit.~~",
+            "a": "Wir legen den Streit bei.",
+            "why": "beilegen منفصل! الفعل legt في موضعه والجزء bei آخر الجملة!"
+          },
+          {
+            "q": "~~Wir zurückgeben die Kosten.~~",
+            "a": "Wir erstatten die Kosten.",
+            "why": "die Kosten erstatten! (الشريك الثابت — zurückgeben = يُعيد الشيء نفسه!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — الرسالة كلام!",
+          "Entschuldigung zuerst!"
+        ],
+        "interleavedWith": [
+          "schlichten",
+          "anliegen",
+          "beilegen"
+        ],
+        "items": [
+          {
+            "q": "افتح الرسالة بالاعتذار! (جملتان!)",
+            "a": "Ich entschuldige mich für die Unannehmlichkeit. Das ist meine Reklamation.",
+            "why": "الاعتذار أولاً! (ars-schlichtung!)"
+          },
+          {
+            "q": "اشرح المسألة والطلب! (جملتان!)",
+            "a": "Das ist die Angelegenheit. Das ist mein Anliegen.",
+            "why": "die Angelegenheit المسألة! das Anliegen الطلب! (كلمتا اليوم!)"
+          },
+          {
+            "q": "اختم بالحلّ والرضا! (3 جمل!)",
+            "a": "Wir schlichten den Streit und erstatten die Kosten. Das ist eine Ausnahme. Die Zufriedenheit ist wichtig!",
+            "why": "schlichten! erstatten! Ausnahme! Zufriedenheit! (الخاتمة الثابتة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«أعتذر عن الإزعاج.»؟",
+            "a": "Ich entschuldige mich für die Unannehmlichkeit."
+          },
+          {
+            "q": "«التعويض»؟",
+            "a": "die Entschädigung"
+          },
+          {
+            "q": "«هذه شكواي.»؟",
+            "a": "Das ist meine Reklamation."
+          },
+          {
+            "q": "«القسيمة»؟",
+            "a": "der Gutschein"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نُعيد المصاريف.»؟",
+            "a": "Wir erstatten die Kosten."
+          },
+          {
+            "q": "«هو يسوّي النزاع.»؟",
+            "a": "Er legt den Streit bei."
+          },
+          {
+            "q": "«الإزعاج»؟",
+            "a": "die Unannehmlichkeit"
+          },
+          {
+            "q": "«الرضا مهم!»؟",
+            "a": "Die Zufriedenheit ist wichtig!"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«هذه استثناء.»؟",
+            "a": "Das ist eine Ausnahme."
+          },
+          {
+            "q": "«التسوية»؟",
+            "a": "die Regelung"
+          },
+          {
+            "q": "«يشتكي البضاعة»؟",
+            "a": "reklamieren"
+          },
+          {
+            "q": "«هذا هو طلبي.»؟",
+            "a": "Das ist mein Anliegen."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Guten Tag! Ich entschuldige mich für die Unannehmlichkeit. Das ist meine Reklamation: Die Ware war nicht gut. Das ist die Angelegenheit — und das ist mein Anliegen. Wir schlichten den Streit und legen den Streit bei. Wir erstatten die Kosten. Das ist Kulanz — und ein Gutschein! Das ist eine Ausnahme. Die Regelung ist gut. Die Zufriedenheit ist wichtig!",
+      "ar": "مرحباً! أعتذر عن الإزعاج. هذه شكواي: البضاعة لم تكن جيّدة. هذه هي المسألة — وهذا طلبي. نسوّي النزاع ونُنهيه. نُعيد المصاريف. هذا تفضّل — وقسيمة! هذه استثناء. التسوية جيّدة. الرضا مهم!"
+    },
+    "srsBundleWordIds": [
+      "entschaedigung",
+      "erstatten",
+      "erstattung",
+      "kulanz",
+      "gutschein",
+      "reklamieren",
+      "reklamation",
+      "unannehmlichkeit",
+      "ausnahme",
+      "regelung",
+      "schlichten",
+      "angelegenheit",
+      "anliegen",
+      "beilegen",
+      "zufriedenheit"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "sich entschuldigen بحرف über!",
+          "de": "~~Ich entschuldige mich über die Unannehmlichkeit.~~"
+        },
+        "correct": {
+          "ar": "الحرف الثابت für: sich entschuldigen für …!",
+          "de": "Ich entschuldige mich für die Unannehmlichkeit."
+        },
+        "exercise": {
+          "q": "Ich entschuldige mich ___ die Unannehmlichkeit. (الحرف!)",
+          "a": "für"
+        },
+        "whyArabicSpeakerFails": "العربية: «أعتذر عن» — الحرف «عن» مرن! والألمانية: الحرف ثابت mit dem Verb (sich entschuldigen FÜR!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "beilegen ملاصق في الجملة!",
+          "de": "~~Wir beilegen den Streit.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Wir legen den Streit bei!",
+          "de": "Wir legen den Streit bei."
+        },
+        "exercise": {
+          "q": "Wir ___ den Streit ___. (يسوّي!)",
+          "a": "legen … bei"
+        },
+        "whyArabicSpeakerFails": "العربية: «نُنهي النزاع» — الكلمة واحدة! والألمانية: الفعل المنفصل ينفصل والجزء bei يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "Kosten zurückgeben!",
+          "de": "~~Wir zurückgeben die Kosten.~~"
+        },
+        "correct": {
+          "ar": "الشريك الثابت: die Kosten erstatten!",
+          "de": "Wir erstatten die Kosten."
+        },
+        "exercise": {
+          "q": "Wir ___ die Kosten. (يُعيد المصاريف!)",
+          "a": "erstatten"
+        },
+        "whyArabicSpeakerFails": "العربية: «نُعيد المال» — الفعل حرّ! والألمانية: لكل اسم فعله الملازم (Kosten ERSTATTEN لا zurückgeben!) (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Entsch%C3%A4digung",
+      "https://www.duden.de/rechtschreibung/erstatten",
+      "https://www.duden.de/rechtschreibung/Erstattung",
+      "https://www.duden.de/rechtschreibung/Kulanz",
+      "https://www.duden.de/rechtschreibung/Gutschein",
+      "https://www.duden.de/rechtschreibung/reklamieren",
+      "https://www.duden.de/rechtschreibung/Reklamation",
+      "https://www.duden.de/rechtschreibung/Unannehmlichkeit",
+      "https://www.duden.de/rechtschreibung/Ausnahme",
+      "https://www.duden.de/rechtschreibung/Regelung",
+      "https://www.duden.de/rechtschreibung/schlichten",
+      "https://www.duden.de/rechtschreibung/Angelegenheit",
+      "https://www.duden.de/rechtschreibung/Anliegen",
+      "https://www.duden.de/rechtschreibung/beilegen",
+      "https://www.duden.de/rechtschreibung/Zufriedenheit"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-schlichtung",
+    "ars-briefstil"
+  ],
+  "audioManifestRefs": [
+    "word-entschaedigung",
+    "word-erstatten",
+    "word-erstattung",
+    "word-kulanz",
+    "word-gutschein",
+    "word-reklamieren",
+    "word-reklamation",
+    "word-unannehmlichkeit",
+    "word-ausnahme",
+    "word-regelung",
+    "word-schlichten",
+    "word-angelegenheit",
+    "word-anliegen",
+    "word-beilegen",
+    "word-zufriedenheit"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (النزاعات والحلول — رسالة تسوية)",
+    "goetheWordListOverlap": [
+      "entschaedigung",
+      "erstatten",
+      "erstattung",
+      "kulanz",
+      "gutschein",
+      "reklamieren",
+      "reklamation",
+      "unannehmlichkeit",
+      "ausnahme",
+      "regelung",
+      "schlichten",
+      "angelegenheit",
+      "anliegen",
+      "beilegen",
+      "zufriedenheit"
+    ]
+  }
+}

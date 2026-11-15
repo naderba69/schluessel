@@ -1,0 +1,484 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u9-d3",
+  "level": "B1",
+  "unit": 9,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Im Vordergrund steht ein Tisch — und das ist das Protokoll!",
+    "ar": "يوم وصف الصورة بالبروتوكول! (المقدمة! الخلفية! المركز! والبروتوكول!) — الوحدة 9: النزاعات والحلول!"
+  },
+  "canDoDaily": [
+    "يصف صورة بالترتيب البروتوكولي! (Im Vordergrund … Im Hintergrund … Das ist der Mittelpunkt!)",
+    "يكتب بروتوكولاً مختصراً! (Uhrzeit beachten! Absprache treffen! Übersicht geben!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "nachfragen",
+      "unterbrechen",
+      "einwand"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«في المقدمة طاولة.» (الفعل الثاني بعد الظرف!)"
+        },
+        "choices": [
+          "Im Vordergrund steht ein Tisch.",
+          "Im Vordergrund ein Tisch steht.",
+          "Im Vordergrund steht einen Tisch."
+        ],
+        "answer": "Im Vordergrund steht ein Tisch.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«البروتوكول»؟"
+        },
+        "choices": [
+          "das Protokoll",
+          "die Absprache",
+          "die Übersicht"
+        ],
+        "answer": "das Protokoll",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "vordergrund",
+      "hintergrund",
+      "mittelpunkt",
+      "rand",
+      "szene",
+      "protokoll",
+      "uhrzeit",
+      "absprache",
+      "gebaeude",
+      "geste",
+      "uebersicht",
+      "skizzieren",
+      "beachten",
+      "bummeln",
+      "auffallen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-bildbeschreibung"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Szene hat eine Ordnung — Vordergrund, Hintergrund, Protokoll!",
+        "ar": "يصف صورة ويكتب بروتوكولاً في 8 جمل!"
+      },
+      "situation": {
+        "de": "Ein Foto im Café. Drei Leute. Ein Protokoll.",
+        "ar": "صورة في المقهى! ثلاثة أشخاص! وبروتوكول: التوقيت والاتفاق!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في الوصف والبروتوكول!",
+        "الترتيب: Vordergrund أولاً! Hintergrund ثانياً! Mittelpunkt!",
+        "الفعل بعد الظرف ثانياً: Im Vordergrund steht …!",
+        "البروتوكول: Uhrzeit beachten! Absprache treffen! Übersicht geben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Vordergrund! Hintergrund! Protokoll!"
+        ],
+        "interleavedWith": [
+          "nachfragen",
+          "unterbrechen",
+          "einwand"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "المقدمة (من الصورة)",
+                "de": "der Vordergrund"
+              },
+              {
+                "ar": "الخلفية",
+                "de": "der Hintergrund"
+              },
+              {
+                "ar": "المركز",
+                "de": "der Mittelpunkt"
+              },
+              {
+                "ar": "الحافة",
+                "de": "der Rand"
+              }
+            ],
+            "why": "der Vordergrund المقدمة (der! جمعها Vordergründe!) · der Hintergrund الخلفية (Hintergründe!) · der Mittelpunkt المركز (Mittelpunkte!) · der Rand الحافة (Ränder!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المشهد",
+                "de": "die Szene"
+              },
+              {
+                "ar": "البروتوكول",
+                "de": "das Protokoll"
+              },
+              {
+                "ar": "التوقيت",
+                "de": "die Uhrzeit"
+              },
+              {
+                "ar": "الاتفاق المسبق",
+                "de": "die Absprache"
+              }
+            ],
+            "why": "die Szene المشهد (Szenen!) · das Protokoll البروتوكول (das! Protokolle!) · die Uhrzeit التوقيت (Uhrzeiten!) · die Absprache الاتفاق (Absprachen! treffen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المبنى",
+                "de": "das Gebäude"
+              },
+              {
+                "ar": "الإيماءة",
+                "de": "die Geste"
+              },
+              {
+                "ar": "نظرة عامة",
+                "de": "die Übersicht"
+              },
+              {
+                "ar": "يلفت الانتباه",
+                "de": "auffallen"
+              }
+            ],
+            "why": "das Gebäude المبنى (das! الجمع Gebäude نفسه!) · die Geste الإيماءة (Gesten!) · die Übersicht النظرة العامة (Übersichten! geben!) · auffallen يلفت (fällt auf! ist aufgefallen!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الوصف والبروتوكول!"
+        ],
+        "interleavedWith": [
+          "vordergrund",
+          "hintergrund",
+          "protokoll"
+        ],
+        "items": [
+          {
+            "q": "Im ___ steht ein Tisch. (المقدمة!)",
+            "a": "Vordergrund",
+            "why": "der Vordergrund المقدمة — im Vordergrund! (الترتيب أولاً!)"
+          },
+          {
+            "q": "Im ___ ist ein Gebäude. (الخلفية!)",
+            "a": "Hintergrund",
+            "why": "der Hintergrund الخلفية — im Hintergrund! (ثانياً!)"
+          },
+          {
+            "q": "Das ist das ___. (البروتوكول!)",
+            "a": "Protokoll",
+            "why": "das Protokoll — das! والجمع die Protokolle!"
+          },
+          {
+            "q": "Bitte ___ Sie die Uhrzeit! (يلاحظ!)",
+            "a": "beachten",
+            "why": "beachten يلاحظ/يراعي — Bitte beachten Sie die Uhrzeit!"
+          },
+          {
+            "q": "Das ist die ___. (نظرة عامة!)",
+            "a": "Übersicht",
+            "why": "die Übersicht — eine Übersicht geben! (الإغلاق!)"
+          },
+          {
+            "q": "Er ___ die Szene. (يوجز!)",
+            "a": "skizziert",
+            "why": "skizzieren يوجز — Er skizziert die Szene. (صيغة الشخص الثالث!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الترتيب! الفعل! التمام!"
+        ],
+        "interleavedWith": [
+          "rand",
+          "szene",
+          "geste"
+        ],
+        "items": [
+          {
+            "q": "~~Im Vordergrund ein Tisch steht.~~",
+            "a": "Im Vordergrund steht ein Tisch.",
+            "why": "الفعل الثاني بعد الظرف! (Im Vordergrund STEHT …!) — لا الفعل آخر الجملة (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~Die Übersicht machen wir zum Schluss.~~",
+            "a": "Die Übersicht geben wir zum Schluss.",
+            "why": "eine Übersicht geben! (الشريك الثابت — لا machen!) (u8-d5!)"
+          },
+          {
+            "q": "~~Das hat aufgefallen.~~",
+            "a": "Das ist aufgefallen.",
+            "why": "auffallen = تغيّر حالة/لحظة — التمام ist لا hat! (مثل abschweifen — u9-d2!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — الوصف كلام!",
+          "Vordergrund zuerst!"
+        ],
+        "interleavedWith": [
+          "uhrzeit",
+          "absprache",
+          "uebersicht"
+        ],
+        "items": [
+          {
+            "q": "صف المقدمة والخلفية! (3 جمل!)",
+            "a": "Im Vordergrund steht ein Tisch. Im Hintergrund ist ein Gebäude. Das ist der Mittelpunkt.",
+            "why": "الترتيب البروتوكولي! (ars-bildbeschreibung!)"
+          },
+          {
+            "q": "صِف الشخصيات والإيماءات! (جملتان!)",
+            "a": "Am Rand ist eine Geste. Das fällt auf.",
+            "why": "die Geste الإيماءة! auffallen يلفت! (كلمتا اليوم!)"
+          },
+          {
+            "q": "اكتب البروتوكول! (3 جمل!)",
+            "a": "Bitte beachten Sie die Uhrzeit! Das war eine Absprache. Das ist die Übersicht.",
+            "why": "Uhrzeit beachten! Absprache treffen! Übersicht geben! (البروتوكول الثلاثي!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«في المقدمة طاولة.»؟",
+            "a": "Im Vordergrund steht ein Tisch."
+          },
+          {
+            "q": "«البروتوكول»؟",
+            "a": "das Protokoll"
+          },
+          {
+            "q": "«الخلفية»؟",
+            "a": "der Hintergrund"
+          },
+          {
+            "q": "«المبنى»؟",
+            "a": "das Gebäude"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«هو يوجز المشهد.»؟",
+            "a": "Er skizziert die Szene."
+          },
+          {
+            "q": "«من فضلكم لاحظوا التوقيت!»؟",
+            "a": "Bitte beachten Sie die Uhrzeit!"
+          },
+          {
+            "q": "«هذا يلفت الانتباه.»؟",
+            "a": "Das fällt auf."
+          },
+          {
+            "q": "«الحافة»؟",
+            "a": "der Rand"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نظرة عامة»؟",
+            "a": "die Übersicht"
+          },
+          {
+            "q": "«الاتفاق المسبق»؟",
+            "a": "die Absprache"
+          },
+          {
+            "q": "«المركز»؟",
+            "a": "der Mittelpunkt"
+          },
+          {
+            "q": "«نتجوّل عبر المدينة.»؟",
+            "a": "Wir bummeln durch die Stadt."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Ein Foto im Café: Im Vordergrund steht ein Tisch. Im Hintergrund ist ein Gebäude. Das ist der Mittelpunkt — und am Rand eine Geste. Das fällt auf! Wir bummeln durch die Stadt und beachten die Uhrzeit. Das war eine Absprache. Er skizziert die Szene und gibt eine Übersicht. Das ist das Protokoll!",
+      "ar": "صورة في المقهى: في المقدمة طاولة. في الخلفية مبنى. هذا المركز — وعلى الحافة إيماءة. هذا يلفت الانتباه! نتجوّل عبر المدينة ونلاحظ التوقيت. كان ذلك اتفاقاً مسبقاً. هو يوجز المشهد ويُعطي نظرة عامة. هذا هو البروتوكول!"
+    },
+    "srsBundleWordIds": [
+      "vordergrund",
+      "hintergrund",
+      "mittelpunkt",
+      "rand",
+      "szene",
+      "protokoll",
+      "uhrzeit",
+      "absprache",
+      "gebaeude",
+      "geste",
+      "uebersicht",
+      "skizzieren",
+      "beachten",
+      "bummeln",
+      "auffallen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "الفعل آخر الجملة بعد الظرف!",
+          "de": "~~Im Vordergrund ein Tisch steht.~~"
+        },
+        "correct": {
+          "ar": "الفعل الثاني: Im Vordergrund steht ein Tisch!",
+          "de": "Im Vordergrund steht ein Tisch."
+        },
+        "exercise": {
+          "q": "Im Vordergrund ___ ein Tisch. (يقف!)",
+          "a": "steht"
+        },
+        "whyArabicSpeakerFails": "العربية: «في المقدمة طاولة واقفة» — الفعل آخر الجملة ممكن! والألمانية: الفعل الثاني دائماً بعد الظرف الأول (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "Protokoll بأداة مذكرة/مؤنثة!",
+          "de": "~~der Protokoll~~ / ~~die Protokoll~~"
+        },
+        "correct": {
+          "ar": "das Protokoll! (das! والجمع die Protokolle!)",
+          "de": "das Protokoll"
+        },
+        "exercise": {
+          "q": "Das ist das ___. Protokoll. (الأداة!)",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «البروتوكول» — لا جنس نحوي! والألمانية: كل اسم بأداته (Protokoll = das!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "auffallen بتمام habe!",
+          "de": "~~Das hat aufgefallen.~~"
+        },
+        "correct": {
+          "ar": "تغيّر حالة — التمام ist: Das ist aufgefallen!",
+          "de": "Das ist aufgefallen."
+        },
+        "exercise": {
+          "q": "Das ___ aufgefallen. (التمام!)",
+          "a": "ist"
+        },
+        "whyArabicSpeakerFails": "العربية: «ظهر/برز» — لا فرق بين haben/sein! والألمانية: أفعال التغيّر تستعمل sein في التمام (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Vordergrund",
+      "https://www.duden.de/rechtschreibung/Hintergrund",
+      "https://www.duden.de/rechtschreibung/Mittelpunkt",
+      "https://www.duden.de/rechtschreibung/Rand",
+      "https://www.duden.de/rechtschreibung/Szene",
+      "https://www.duden.de/rechtschreibung/Protokoll",
+      "https://www.duden.de/rechtschreibung/Uhrzeit",
+      "https://www.duden.de/rechtschreibung/Absprache",
+      "https://www.duden.de/rechtschreibung/Geb%C3%A4ude",
+      "https://www.duden.de/rechtschreibung/Geste",
+      "https://www.duden.de/rechtschreibung/%C3%9Cbersicht",
+      "https://www.duden.de/rechtschreibung/skizzieren",
+      "https://www.duden.de/rechtschreibung/beachten",
+      "https://www.duden.de/rechtschreibung/bummeln",
+      "https://www.duden.de/rechtschreibung/auffallen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-bildbeschreibung",
+    "ars-es-gibt"
+  ],
+  "audioManifestRefs": [
+    "word-vordergrund",
+    "word-hintergrund",
+    "word-mittelpunkt",
+    "word-rand",
+    "word-szene",
+    "word-protokoll",
+    "word-uhrzeit",
+    "word-absprache",
+    "word-gebaeude",
+    "word-geste",
+    "word-uebersicht",
+    "word-skizzieren",
+    "word-beachten",
+    "word-bummeln",
+    "word-auffallen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (النزاعات والحلول — Bildbeschreibung بالبروتوكول)",
+    "goetheWordListOverlap": [
+      "vordergrund",
+      "hintergrund",
+      "mittelpunkt",
+      "rand",
+      "szene",
+      "protokoll",
+      "uhrzeit",
+      "absprache",
+      "gebaeude",
+      "geste",
+      "uebersicht",
+      "skizzieren",
+      "beachten",
+      "bummeln",
+      "auffallen"
+    ]
+  }
+}

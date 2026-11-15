@@ -1,0 +1,390 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u1-d1",
+  "level": "B2",
+  "unit": 1,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Ein Vorbild sein und Toleranz zeigen!",
+    "ar": "مسار B2 يبدأ! الوحدة 1: مع الناس! (القدوة! التسامح! واللقاء!)"
+  },
+  "canDoDaily": [
+    "يكون قدوة ويُظهر التسامح! (ein Vorbild sein! Toleranz zeigen!)",
+    "يصف لقاءه مع الناس! (eine Begegnung haben!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "mut",
+      "puffer"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التسامح مهم.»؟"
+        },
+        "choices": [
+          "Die Toleranz ist wichtig.",
+          "Der Toleranz ist wichtig.",
+          "Das Toleranz ist wichtig."
+        ],
+        "answer": "Die Toleranz ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«القدوة مهمة.»؟ (الأداة!)"
+        },
+        "choices": [
+          "Das Vorbild ist wichtig.",
+          "Die Vorbild ist wichtig.",
+          "Der Vorbild ist wichtig."
+        ],
+        "answer": "Das Vorbild ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "vorbild",
+      "toleranz",
+      "begegnung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "r-uvular",
+      "ng-velar"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Ein Vorbild sein und Toleranz zeigen!",
+        "ar": "يوم البداية في B2: القدوة والتسامح — مع الناس!"
+      },
+      "situation": {
+        "de": "Vorbild, Toleranz, Begegnung — zusammen leben.",
+        "ar": "قدوة! تسامح! لقاء! — نعيش معًا! (مع الناس!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الجمع: die Vorbilder (-er)! die Toleranzen (-en)! die Begegnungen (-en)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: ein Vorbild sein! Toleranz zeigen! eine Begegnung haben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Vorbild! Toleranz! Begegnung!"
+        ],
+        "interleavedWith": [
+          "mut",
+          "puffer",
+          "selbstvertrauen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "القدوة (النموذج المحتذى)",
+                "de": "das Vorbild"
+              },
+              {
+                "ar": "التسامح",
+                "de": "die Toleranz"
+              },
+              {
+                "ar": "اللقاء (المقابلة)",
+                "de": "die Begegnung"
+              }
+            ],
+            "why": "das Vorbild القدوة (das! die Vorbilder!) · die Toleranz التسامح (die! die Toleranzen!) · die Begegnung اللقاء (die! die Begegnungen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الشجاعة",
+                "de": "der Mut"
+              },
+              {
+                "ar": "الاحتياطي (الوقت الإضافي)",
+                "de": "der Puffer"
+              },
+              {
+                "ar": "الثقة بالنفس",
+                "de": "das Selbstvertrauen"
+              }
+            ],
+            "why": "مراجعة نهاية B1! der Mut الشجاعة · der Puffer الاحتياطي · das Selbstvertrauen الثقة"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "مع الناس!"
+        ],
+        "interleavedWith": [
+          "vorbild",
+          "toleranz",
+          "begegnung"
+        ],
+        "items": [
+          {
+            "q": "Das ___ ist wichtig. (القدوة!)",
+            "a": "Vorbild",
+            "why": "das Vorbild القدوة (das!) — Das Vorbild ist wichtig."
+          },
+          {
+            "q": "Die ___ ist wichtig. (التسامح!)",
+            "a": "Toleranz",
+            "why": "die Toleranz التسامح (die!) — Die Toleranz ist wichtig."
+          },
+          {
+            "q": "Die ___ ist gut. (اللقاء!)",
+            "a": "Begegnung",
+            "why": "die Begegnung اللقاء (die!) — Die Begegnung ist gut."
+          },
+          {
+            "q": "Er zeigt die ___. (التسامح!)",
+            "a": "Toleranz",
+            "why": "die Toleranz التسامح (die!) — Er zeigt die Toleranz. (Toleranz zeigen!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الأداة! الجمع!"
+        ],
+        "interleavedWith": [
+          "vorbild",
+          "toleranz",
+          "begegnung"
+        ],
+        "items": [
+          {
+            "q": "~~Die Vorbild ist wichtig.~~",
+            "a": "Das Vorbild ist wichtig.",
+            "why": "das Vorbild القدوة (das! لا die!)"
+          },
+          {
+            "q": "~~Das Toleranz ist wichtig.~~",
+            "a": "Die Toleranz ist wichtig.",
+            "why": "die Toleranz التسامح (die! لا das!)"
+          },
+          {
+            "q": "~~Die Begegnungen ist gut.~~",
+            "a": "Die Begegnung ist gut.",
+            "why": "المفرد لا الجمع! die Begegnung (die Begegnungen جمع!) — الجملة عن لقاء واحد!"
+          },
+          {
+            "q": "~~Der Begegnung ist gut.~~",
+            "a": "Die Begegnung ist gut.",
+            "why": "die Begegnung اللقاء (die! لا der!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — مع الناس!",
+          "Vorbild! Toleranz! Begegnung!"
+        ],
+        "interleavedWith": [
+          "mensch",
+          "freundlich",
+          "ruhe"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالقدوة! (جملتان!)",
+            "a": "Das Vorbild ist wichtig. Er ist ein Vorbild.",
+            "why": "القدوة أولًا! (ein Vorbild sein!)"
+          },
+          {
+            "q": "تكلّم عن التسامح! (جملتان!)",
+            "a": "Die Toleranz ist wichtig. Er zeigt Toleranz.",
+            "why": "التسامح! (Toleranz zeigen!)"
+          },
+          {
+            "q": "تكلّم عن لقائك! (جملتان!)",
+            "a": "Die Begegnung ist gut. Er hat eine Begegnung.",
+            "why": "اللقاء! (eine Begegnung haben!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«القدوة (النموذج المحتذى)»؟",
+            "a": "das Vorbild"
+          },
+          {
+            "q": "«التسامح»؟",
+            "a": "die Toleranz"
+          },
+          {
+            "q": "«اللقاء (المقابلة)»؟",
+            "a": "die Begegnung"
+          },
+          {
+            "q": "«يُظهر التسامح.»؟",
+            "a": "Er zeigt Toleranz."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الشجاعة»؟ (مراجعة!)",
+            "a": "der Mut"
+          },
+          {
+            "q": "«الاحتياطي (الوقت الإضافي)»؟ (مراجعة!)",
+            "a": "der Puffer"
+          },
+          {
+            "q": "«الثقة بالنفس»؟ (مراجعة!)",
+            "a": "das Selbstvertrauen"
+          },
+          {
+            "q": "«يكون قدوة.»؟",
+            "a": "Er ist ein Vorbild."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«القدوة مهمة.»؟",
+            "a": "Das Vorbild ist wichtig."
+          },
+          {
+            "q": "«التسامح مهم.»؟",
+            "a": "Die Toleranz ist wichtig."
+          },
+          {
+            "q": "«اللقاء جيد.»؟",
+            "a": "Die Begegnung ist gut."
+          },
+          {
+            "q": "«يكون لديه لقاء.»؟",
+            "a": "Er hat eine Begegnung."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Das Vorbild ist wichtig und die Toleranz ist da. Die Begegnung ist gut und der Tag ist schön. Er zeigt Toleranz und hat eine Begegnung. Das Vorbild zeigt er und die Ruhe ist da. Die Menschen sind gut — geschafft!",
+      "ar": "القدوة مهمة والتسامح حاضر. اللقاء جيد واليوم جميل. يُظهر التسامح ولديه لقاء. القدوة يُظهرها والهدوء حاضر. الناس طيّبون — أُنجز!"
+    },
+    "srsBundleWordIds": [
+      "vorbild",
+      "toleranz",
+      "begegnung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Vorbild!",
+          "de": "~~Die Vorbild ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "das Vorbild!",
+          "de": "Das Vorbild ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Vorbild ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «القدوة» مؤنثة! والألمانية: das Vorbild محايد (das!) — مركّب من das Bild المحايد! (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "das Toleranz!",
+          "de": "~~Das Toleranz ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Toleranz!",
+          "de": "Die Toleranz ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Toleranz ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التسامح» مذكّر (اسم مصدر)! والألمانية: die Toleranz مؤنثة (die!) — أسماء -anz مؤنثة! (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Begegnung!",
+          "de": "~~Der Begegnung ist gut.~~"
+        },
+        "correct": {
+          "ar": "die Begegnung!",
+          "de": "Die Begegnung ist gut."
+        },
+        "exercise": {
+          "q": "___ Begegnung ist gut.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «اللقاء» مذكّر! والألمانية: die Begegnung مؤنثة (die!) — أسماء -ung كلها مؤنثة! (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Vorbild",
+      "https://www.duden.de/rechtschreibung/Toleranz",
+      "https://www.duden.de/rechtschreibung/Begegnung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-vorbild",
+    "word-toleranz",
+    "word-begegnung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 1 (مع الناس!)",
+    "goetheWordListOverlap": [
+      "vorbild",
+      "toleranz",
+      "begegnung"
+    ]
+  }
+}

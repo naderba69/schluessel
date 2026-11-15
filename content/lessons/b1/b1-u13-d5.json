@@ -1,0 +1,441 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u13-d5",
+  "level": "B1",
+  "unit": 13,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Das Muster ist klar — und das Format stimmt!",
+    "ar": "الوحدة 13: التكثيف! يوم النماذج! (النموذج! والقالب! والتنسيق!)"
+  },
+  "canDoDaily": [
+    "يتعرّف على نموذج الامتحان ويتدرّب عليه! (das Muster erkennen! mit der Vorlage arbeiten!)",
+    "يفحص التنسيق قبل التسليم! (das Format prüfen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "formulierung",
+      "verfassen",
+      "einhalten"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«النموذج واضح.»؟"
+        },
+        "choices": [
+          "Das Muster ist klar.",
+          "Der Muster ist klar.",
+          "Die Muster ist klar."
+        ],
+        "answer": "Das Muster ist klar.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التنسيق مهم.»؟"
+        },
+        "choices": [
+          "Das Format ist wichtig.",
+          "Der Format ist wichtig.",
+          "Die Format ist wichtig."
+        ],
+        "answer": "Das Format ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "muster",
+      "vorlage",
+      "format"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-koennten-sie",
+      "ars-dass-satz"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "needs-ein"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Das Muster ist klar und das Format stimmt!",
+        "ar": "يتدرّب على نماذج الامتحان: يتعرّف على النمط ويعمل بالقالب ويفحص التنسيق!"
+      },
+      "situation": {
+        "de": "Ein Muster, eine Vorlage, ein Format — die Prüfung.",
+        "ar": "نموذج! قالب! تنسيق! — الامتحان! (نماذج!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الأدوات تتبع الميزان: das Muster و das Format محايدان و die Vorlage مؤنثة!",
+        "المقارنة بالنموذج: كل إجابة تُقاس على المثال!",
+        "المفردات الثابتة: das Muster erkennen! mit der Vorlage arbeiten! das Format prüfen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Muster! Vorlage! Format!"
+        ],
+        "interleavedWith": [
+          "formulierung",
+          "verfassen",
+          "einhalten"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "النموذج",
+                "de": "das Muster"
+              },
+              {
+                "ar": "القالب",
+                "de": "die Vorlage"
+              },
+              {
+                "ar": "التنسيق",
+                "de": "das Format"
+              }
+            ],
+            "why": "das Muster النموذج (das! die Muster!) · die Vorlage القالب (die! die Vorlagen!) · das Format التنسيق (das! die Formate!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الامتحان",
+                "de": "die Prüfung"
+              },
+              {
+                "ar": "ورقة الإجابة",
+                "de": "der Antwortbogen"
+              },
+              {
+                "ar": "الحل",
+                "de": "die Lösung"
+              },
+              {
+                "ar": "المثال",
+                "de": "das Beispiel"
+              }
+            ],
+            "why": "مراجعة أدوات الامتحان! die Prüfung · der Antwortbogen · die Lösung · das Beispiel"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المهمة",
+                "de": "die Aufgabe"
+              },
+              {
+                "ar": "الجزء",
+                "de": "der Teil"
+              },
+              {
+                "ar": "التلميح",
+                "de": "der Hinweis"
+              },
+              {
+                "ar": "البيان",
+                "de": "die Angabe"
+              }
+            ],
+            "why": "مراجعة أدوات النموذج! die Aufgabe · der Teil · der Hinweis · die Angabe"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يتعرّف على",
+                "de": "erkennen"
+              },
+              {
+                "ar": "يعمل بـ",
+                "de": "benutzen"
+              },
+              {
+                "ar": "يفحص",
+                "de": "prüfen"
+              },
+              {
+                "ar": "يُظهر",
+                "de": "zeigen"
+              }
+            ],
+            "why": "مراجعة الأفعال! erkennen · benutzen · prüfen · zeigen"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "النماذج والقوالب!"
+        ],
+        "interleavedWith": [
+          "muster",
+          "vorlage",
+          "format"
+        ],
+        "items": [
+          {
+            "q": "Das ___ ist klar. (النموذج!)",
+            "a": "Muster",
+            "why": "das Muster النموذج (das!) — das Muster ist klar."
+          },
+          {
+            "q": "Die ___ ist einfach. (القالب!)",
+            "a": "Vorlage",
+            "why": "die Vorlage القالب (die!) — die Vorlage ist einfach."
+          },
+          {
+            "q": "Das ___ ist wichtig. (التنسيق!)",
+            "a": "Format",
+            "why": "das Format التنسيق (das!) — das Format ist wichtig."
+          },
+          {
+            "q": "Er erkennt das ___. (يتعرّف على النمط!)",
+            "a": "Muster",
+            "why": "das Muster erkennen — المفردة الثابتة! (erkennt!)"
+          },
+          {
+            "q": "Er prüft das ___. (يفحص التنسيق!)",
+            "a": "Format",
+            "why": "das Format prüfen — المفردة الثابتة! (prüft!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداتان والجمع!"
+        ],
+        "interleavedWith": [
+          "pruefung",
+          "antwortbogen",
+          "loesung"
+        ],
+        "items": [
+          {
+            "q": "~~Der Muster ist klar.~~",
+            "a": "Das Muster ist klar.",
+            "why": "das Muster النموذج (das! محايد — لا der!)"
+          },
+          {
+            "q": "~~Das Vorlage ist einfach.~~",
+            "a": "Die Vorlage ist einfach.",
+            "why": "die Vorlage القالب (die! مؤنثة — لا das!)"
+          },
+          {
+            "q": "~~Die Formate ist wichtig.~~",
+            "a": "Das Format ist wichtig.",
+            "why": "المفرد لا الجمع! das Format (die Formate جمع!) — الجملة عن تنسيق واحد!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — النماذج!",
+          "Muster! Vorlage! Format!"
+        ],
+        "interleavedWith": [
+          "beispiel",
+          "teil",
+          "hinweis"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالنموذج! (جملتان!)",
+            "a": "Das Muster ist klar. Er erkennt das Muster.",
+            "why": "النموذج أولًا! (das Muster erkennen!)"
+          },
+          {
+            "q": "تكلّم عن القالب! (جملتان!)",
+            "a": "Die Vorlage ist einfach. Er arbeitet mit der Vorlage.",
+            "why": "القالب ثم العمل! (mit der Vorlage arbeiten!)"
+          },
+          {
+            "q": "تكلّم عن التنسيق! (جملتان!)",
+            "a": "Das Format ist wichtig. Er prüft das Format.",
+            "why": "التنسيق ثم الفحص! (das Format prüfen!)"
+          },
+          {
+            "q": "اختم بالامتحان! (جملتان!)",
+            "a": "Die Prüfung hat ein Muster. Die Lösung ist klar.",
+            "why": "الامتحان بالنمط! (النماذج!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«النموذج»؟",
+            "a": "das Muster"
+          },
+          {
+            "q": "«القالب»؟",
+            "a": "die Vorlage"
+          },
+          {
+            "q": "«التنسيق»؟",
+            "a": "das Format"
+          },
+          {
+            "q": "«يتعرّف على النمط.»؟",
+            "a": "Er erkennt das Muster."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«ورقة الإجابة»؟ (مراجعة!)",
+            "a": "der Antwortbogen"
+          },
+          {
+            "q": "«الحل»؟ (مراجعة!)",
+            "a": "die Lösung"
+          },
+          {
+            "q": "«المثال»؟ (مراجعة!)",
+            "a": "das Beispiel"
+          },
+          {
+            "q": "«يعمل بالقالب.»؟",
+            "a": "Er arbeitet mit der Vorlage."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«المهمة»؟ (مراجعة!)",
+            "a": "die Aufgabe"
+          },
+          {
+            "q": "«التلميح»؟ (مراجعة!)",
+            "a": "der Hinweis"
+          },
+          {
+            "q": "«يفحص التنسيق.»؟",
+            "a": "Er prüft das Format."
+          },
+          {
+            "q": "«ورقة الإجابة»؟ (المفردة الثابتة!)",
+            "a": "der Antwortbogen"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Das Muster ist klar und die Vorlage ist einfach. Das Format ist wichtig und er prüft das Format. Die Prüfung hat ein Muster und der Antwortbogen hat ein Format. Die Lösung ist klar und das Beispiel zeigt das Muster. Er erkennt das Muster und arbeitet mit der Vorlage. Das Format stimmt!",
+      "ar": "النموذج واضح والقالب بسيط. التنسيق مهم وهو يفحص التنسيق. الامتحان له نموذج وورقة الإجابة لها تنسيق. الحل واضح والمثال يُظهر النموذج. يتعرّف على النموذج ويعمل بالقالب. التنسيق مضبوط!"
+    },
+    "srsBundleWordIds": [
+      "muster",
+      "vorlage",
+      "format"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der/die Muster!",
+          "de": "~~Der Muster ist klar.~~"
+        },
+        "correct": {
+          "ar": "das Muster!",
+          "de": "Das Muster ist klar."
+        },
+        "exercise": {
+          "q": "___ Muster ist klar.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «النموذج» مذكّر! والألمانية: das Muster محايد (das!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "das Vorlage!",
+          "de": "~~Das Vorlage ist einfach.~~"
+        },
+        "correct": {
+          "ar": "die Vorlage!",
+          "de": "Die Vorlage ist einfach."
+        },
+        "exercise": {
+          "q": "___ Vorlage ist einfach.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «القالب» مذكّر! والألمانية: die Vorlage مؤنثة (die!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الجمع بدل المفرد!",
+          "de": "~~Die Formate ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "المفرد: das Format!",
+          "de": "Das Format ist wichtig."
+        },
+        "exercise": {
+          "q": "Das ___ ist wichtig. (المفرد!)",
+          "a": "Format"
+        },
+        "whyArabicSpeakerFails": "العربية: «التنسيقات» جمع شائع! والألمانية: الجملة عن تنسيق واحد — das Format (die Formate جمع!) (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Muster",
+      "https://www.duden.de/rechtschreibung/Vorlage",
+      "https://www.duden.de/rechtschreibung/Format"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-koennten-sie",
+    "ars-dass-satz"
+  ],
+  "audioManifestRefs": [
+    "word-muster",
+    "word-vorlage",
+    "word-format"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 13: التكثيف — نماذج!)",
+    "goetheWordListOverlap": [
+      "muster",
+      "vorlage",
+      "format"
+    ]
+  }
+}

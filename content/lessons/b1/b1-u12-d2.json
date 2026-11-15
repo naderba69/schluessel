@@ -1,0 +1,429 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u12-d2",
+  "level": "B1",
+  "unit": 12,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Zeitplan ist klar — und die Disziplin ist da!",
+    "ar": "يوم المراجعة الثانية + إدارة الوقت (٥٠٪)! (جدول! تقسيم! انضباط!) — الوحدة 12: التكامل!"
+  },
+  "canDoDaily": [
+    "يضع جدوله ويقسّم وقته للامتحان! (Zeitplan machen! die Zeit einteilen!)",
+    "يمارس الانضباط الزمني بالمواعيد الثابتة! (Disziplin zeigen! pünktlich!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "wortschatz",
+      "zertifikat",
+      "konzentration"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«جدول الوقت مهم.»؟"
+        },
+        "choices": [
+          "Der Zeitplan ist wichtig.",
+          "Die Zeitplan ist wichtig.",
+          "Das Zeitplan ist wichtig."
+        ],
+        "answer": "Der Zeitplan ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«هو يقسّم الوقت.»؟ (الانفصال!)"
+        },
+        "choices": [
+          "Er teilt die Zeit ein.",
+          "Er einteilt die Zeit.",
+          "Er teilt ein die Zeit."
+        ],
+        "answer": "Er teilt die Zeit ein.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "zeitplan",
+      "einteilen",
+      "disziplin"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-tekamolo-voll",
+      "ars-obwohl"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Zeitplan ist wichtig und die Disziplin ist gut!",
+        "ar": "يقسّم وقت امتحانه (٥٠٪!) في جدول ويتحدث عنه!"
+      },
+      "situation": {
+        "de": "Drei Aufgaben, ein Zeitplan, fünfzig Prozent.",
+        "ar": "ثلاث مهام! جدول واحد! خمسون بالمئة! (إدارة الوقت!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في الجدول!",
+        "الانفصال: teilt … ein! (الجزء ein آخر!)",
+        "مراجعة القواعد: trotzdem/obwohl والمرتبة الثانية!",
+        "المواعيد: pünktlich! rechtzeitig! (كلمات مُدرَّسة!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Zeitplan! einteilen! Disziplin!"
+        ],
+        "interleavedWith": [
+          "wortschatz",
+          "zertifikat",
+          "konzentration"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "جدول الوقت",
+                "de": "der Zeitplan"
+              },
+              {
+                "ar": "يقسّم",
+                "de": "einteilen"
+              },
+              {
+                "ar": "الانضباط",
+                "de": "die Disziplin"
+              }
+            ],
+            "why": "der Zeitplan جدول الوقت (der! die Zeitpläne — بمدّة!) · einteilen يقسّم (منفصل: teilt … ein!) · die Disziplin الانضباط (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "بالموعد",
+                "de": "pünktlich"
+              },
+              {
+                "ar": "في الوقت المناسب",
+                "de": "rechtzeitig"
+              },
+              {
+                "ar": "الترتيب",
+                "de": "die Reihenfolge"
+              }
+            ],
+            "why": "مراجعة الكلمات الزمنية! pünktlich بالموعد · rechtzeitig في الوقت المناسب · die Reihenfolge الترتيب (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الساعة",
+                "de": "die Uhr"
+              },
+              {
+                "ar": "الدقيقة",
+                "de": "die Minute"
+              },
+              {
+                "ar": "الساعة (الزمن)",
+                "de": "die Stunde"
+              },
+              {
+                "ar": "الأسبوع",
+                "de": "die Woche"
+              }
+            ],
+            "why": "مراجعة الوقت! die Uhr الساعة · die Minute الدقيقة · die Stunde الساعة (الزمن!) · die Woche الأسبوع"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التركيز",
+                "de": "die Konzentration"
+              },
+              {
+                "ar": "الاستراحة",
+                "de": "die Pause"
+              },
+              {
+                "ar": "الراحة",
+                "de": "die Ruhe"
+              }
+            ],
+            "why": "مراجعة d1! die Konzentration التركيز · die Pause الاستراحة · die Ruhe الراحة (كلها مُدرَّسة!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "إدارة الوقت!"
+        ],
+        "interleavedWith": [
+          "zeitplan",
+          "einteilen",
+          "disziplin"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist wichtig. (جدول الوقت!)",
+            "a": "Zeitplan",
+            "why": "der Zeitplan جدول الوقت (der!) — der Zeitplan ist wichtig."
+          },
+          {
+            "q": "Er ___ die Zeit ___. (يقسّم! منفصل!)",
+            "a": "teilt … ein",
+            "why": "einteilen منفصل! Er teilt die Zeit ein. (الجزء ein آخر!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "Die ___ ist gut. (الانضباط!)",
+            "a": "Disziplin",
+            "why": "die Disziplin الانضباط (die!) — die Disziplin ist gut."
+          },
+          {
+            "q": "Er kommt ___. (بالموعد!)",
+            "a": "pünktlich",
+            "why": "pünktlich بالموعد (ظرف!) — er kommt pünktlich."
+          },
+          {
+            "q": "Er macht den Plan, ___ ist die Zeit kurz. (مع ذلك!)",
+            "a": "trotzdem",
+            "why": "trotzdem مع ذلك (المرتبة الثانية! مراجعة الوحدة الأولى!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الانفصال! الأداة! الجدول!"
+        ],
+        "interleavedWith": [
+          "puenktlich",
+          "rechtzeitig",
+          "reihenfolge"
+        ],
+        "items": [
+          {
+            "q": "~~Er einteilt die Zeit.~~",
+            "a": "Er teilt die Zeit ein.",
+            "why": "einteilen منفصل! teilt … ein (الجزء ein آخر!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "~~die Zeitplan ist wichtig~~",
+            "a": "der Zeitplan ist wichtig",
+            "why": "der Zeitplan جدول الوقت (der! لا die!)"
+          },
+          {
+            "q": "~~Trotzdem er macht den Plan.~~",
+            "a": "Trotzdem macht er den Plan.",
+            "why": "trotzdem في الصدر ← الفعل ثانياً لا الضمير! (خريطة التداخل 10‑ي!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — الجدول كلام!",
+          "Zeitplan! einteilen! Disziplin!"
+        ],
+        "interleavedWith": [
+          "uhr",
+          "minute",
+          "pause"
+        ],
+        "items": [
+          {
+            "q": "اعرض جدولك! (جملتان!)",
+            "a": "Der Zeitplan ist wichtig. Er teilt die Zeit ein.",
+            "why": "الجدول ثم التقسيم! (Zeitplan machen! die Zeit einteilen!)"
+          },
+          {
+            "q": "تكلّم عن انضباطك! (جملتان!)",
+            "a": "Die Disziplin ist gut. Er kommt pünktlich.",
+            "why": "الانضباط ثم التنفيذ! (Disziplin zeigen! pünktlich!)"
+          },
+          {
+            "q": "اختم بالرغم! (جملتان!)",
+            "a": "Die Zeit ist kurz. Trotzdem macht er den Plan.",
+            "why": "trotzdem في الصدر ← الفعل ثانياً! (المرتبة الثانية!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«جدول الوقت»؟",
+            "a": "der Zeitplan"
+          },
+          {
+            "q": "«يقسّم الوقت.»؟ (الانفصال!)",
+            "a": "Er teilt die Zeit ein."
+          },
+          {
+            "q": "«الانضباط»؟",
+            "a": "die Disziplin"
+          },
+          {
+            "q": "«بالموعد»؟",
+            "a": "pünktlich"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«في الوقت المناسب»؟",
+            "a": "rechtzeitig"
+          },
+          {
+            "q": "«الترتيب»؟",
+            "a": "die Reihenfolge"
+          },
+          {
+            "q": "«الاستراحة»؟ (مراجعة!)",
+            "a": "die Pause"
+          },
+          {
+            "q": "«الساعة»؟ (مراجعة!)",
+            "a": "die Uhr"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«مع ذلك يضع الجدول.»؟",
+            "a": "Trotzdem macht er den Plan."
+          },
+          {
+            "q": "«الدقيقة»؟ (مراجعة!)",
+            "a": "die Minute"
+          },
+          {
+            "q": "«الراحة»؟ (مراجعة!)",
+            "a": "die Ruhe"
+          },
+          {
+            "q": "«التركيز»؟ (مراجعة!)",
+            "a": "die Konzentration"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Zeitplan ist wichtig und die Disziplin ist gut. Er teilt die Zeit ein. Er kommt pünktlich und rechtzeitig. Die Reihenfolge ist klar. Die Uhr zeigt die Zeit und die Minute ist kurz. Die Stunde ist lang und die Woche ist schnell. Die Konzentration ist gut und die Pause ist wichtig. Die Ruhe ist da. Trotzdem ist die Zeit kurz!",
+      "ar": "جدول الوقت مهم والانضباط جيد. هو يقسّم الوقت. يأتي بالموعد وفي الوقت المناسب. الترتيب واضح. الساعة تُظهر الوقت والدقيقة قصيرة. الساعة (الزمن) طويلة والأسبوع سريع. التركيز جيد والاستراحة مهمة. الراحة موجودة. ومع ذلك الوقت قصير!"
+    },
+    "srsBundleWordIds": [
+      "zeitplan",
+      "einteilen",
+      "disziplin"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "einteilen ملتصق!",
+          "de": "~~Er einteilt die Zeit.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Er teilt die Zeit ein!",
+          "de": "Er teilt die Zeit ein."
+        },
+        "exercise": {
+          "q": "Er ___ die Zeit ___. (يقسّم!)",
+          "a": "teilt … ein"
+        },
+        "whyArabicSpeakerFails": "العربية: «يقسّم» — كلمة واحدة! والألمانية: einteilen منفصل والجزء ein يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "die Zeitplan!",
+          "de": "~~die Zeitplan ist wichtig~~"
+        },
+        "correct": {
+          "ar": "der Zeitplan!",
+          "de": "der Zeitplan ist wichtig"
+        },
+        "exercise": {
+          "q": "___ Zeitplan ist wichtig.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الوقت» محايد فـ«الجدول» محايد! والألمانية: der Zeitplan مذكّر (der!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الضمير قبل الفعل بعد trotzdem!",
+          "de": "~~Trotzdem er macht den Plan.~~"
+        },
+        "correct": {
+          "ar": "الفعل ثانياً: Trotzdem macht er!",
+          "de": "Trotzdem macht er den Plan."
+        },
+        "exercise": {
+          "q": "Trotzdem ___ er den Plan.",
+          "a": "macht"
+        },
+        "whyArabicSpeakerFails": "العربية: «مع ذلك هو يضع» — الضمير بعد الرابط! والألمانية: الفعل في المرتبة الثانية بعد trotzdem (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Zeitplan",
+      "https://www.duden.de/rechtschreibung/einteilen",
+      "https://www.duden.de/rechtschreibung/Disziplin"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-tekamolo-voll",
+    "ars-obwohl"
+  ],
+  "audioManifestRefs": [
+    "word-zeitplan",
+    "word-einteilen",
+    "word-disziplin"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 12: التكامل — مراجعة 2 + إدارة وقت ٥٠٪)",
+    "goetheWordListOverlap": [
+      "zeitplan",
+      "einteilen",
+      "disziplin"
+    ]
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u1-d6",
+  "level": "B2",
+  "unit": 1,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "In der Nachbarschaft helfen, Anteilnahme zeigen und vergeben!",
+    "ar": "اليوم الأخير للوحدة 1: الحيّ! المواساة! والمسامحة! (مع الناس!)"
+  },
+  "canDoDaily": [
+    "يساعد في حيّه ويظهر المواساة! (helfen! Anteilnahme zeigen!)",
+    "يسامح الآخرين! (vergeben!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "gerechtigkeit",
+      "spenden",
+      "wuerde"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الحيّ مهم.»؟"
+        },
+        "choices": [
+          "Die Nachbarschaft ist wichtig.",
+          "Der Nachbarschaft ist wichtig.",
+          "Das Nachbarschaft ist wichtig."
+        ],
+        "answer": "Die Nachbarschaft ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«أنا أسامحك.»؟"
+        },
+        "choices": [
+          "Ich vergebe dir.",
+          "Ich vergebe dich.",
+          "Ich vergeben dir."
+        ],
+        "answer": "Ich vergebe dir.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "nachbarschaft",
+      "anteilnahme",
+      "vergeben"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ach-laut",
+      "r-uvular"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "In der Nachbarschaft helfen, Anteilnahme zeigen und vergeben!",
+        "ar": "اليوم الأخير في الوحدة 1: الحيّ والمواساة والمسامحة — مع الناس!"
+      },
+      "situation": {
+        "de": "Nachbarschaft, Anteilnahme, vergeben — zusammen leben.",
+        "ar": "حيّ! مواساة! مسامحة! — نعيش معًا! (مع الناس!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "vergeben يأخذ المجرور (jemandem)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: in der Nachbarschaft helfen! Anteilnahme zeigen! jemandem vergeben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ermutigung",
+          "warnen",
+          "ablehnung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Nachbarschaft",
+                "ar": "الحيّ (الجيرة)"
+              },
+              {
+                "de": "die Anteilnahme",
+                "ar": "المواساة (المشاركة)"
+              },
+              {
+                "de": "vergeben",
+                "ar": "يسامح (يصفح)"
+              }
+            ],
+            "why": "die Nachbarschaft الحيّ (die! die Nachbarschaften!) · die Anteilnahme المواساة (die! die Anteilnahmen!) · vergeben يسامح (المجرور! jemandem!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "in der Nachbarschaft helfen",
+                "ar": "يساعد في الحيّ"
+              },
+              {
+                "de": "Anteilnahme zeigen",
+                "ar": "يظهر المواساة"
+              },
+              {
+                "de": "jemandem vergeben",
+                "ar": "يسامح أحدهم"
+              },
+              {
+                "de": "die Nachbarschaften",
+                "ar": "الأحياء (جمع -en)"
+              }
+            ],
+            "why": "in der Nachbarschaft helfen! · Anteilnahme zeigen! · jemandem vergeben (المجرور!) · die Nachbarschaften جمع -en"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "integration",
+          "gleichheit",
+          "beistehen"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist freundlich. (الحيّ!)",
+            "a": "Nachbarschaft",
+            "why": "die Nachbarschaft الحيّ (die!) — Die Nachbarschaft ist freundlich."
+          },
+          {
+            "q": "Er zeigt ___. (مواساة!)",
+            "a": "Anteilnahme",
+            "why": "die Anteilnahme المواساة (die!) — Er zeigt Anteilnahme."
+          },
+          {
+            "q": "Ich ___ dir. (أسامح!)",
+            "a": "vergebe",
+            "why": "vergeben يسامح (Präsens ich: vergebe!) — Ich vergebe dir."
+          },
+          {
+            "q": "Wir helfen in der ___. (الحيّ!)",
+            "a": "Nachbarschaft",
+            "why": "الحيّ: in der Nachbarschaft helfen! — Wir helfen in der Nachbarschaft."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "mensch",
+          "freundlich",
+          "ruhe"
+        ],
+        "items": [
+          {
+            "q": "~~Der Nachbarschaft ist freundlich.~~",
+            "a": "Die Nachbarschaft ist freundlich.",
+            "why": "die Nachbarschaft (die! لا der! — كل -schaft مؤنثة!)"
+          },
+          {
+            "q": "~~Die Anteilnahme zeigen ist gut.~~",
+            "a": "Anteilnahme zeigen ist gut.",
+            "why": "المفردة الثابتة: Anteilnahme zeigen — بلا أداة!"
+          },
+          {
+            "q": "~~Er vergibt die Menschen.~~",
+            "a": "Er vergibt den Menschen.",
+            "why": "vergeben يأخذ المجرور! (den Menschen — لا die Menschen!)"
+          },
+          {
+            "q": "~~Ich vergebe dich.~~",
+            "a": "Ich vergebe dir.",
+            "why": "vergeben يأخذ المجرور! (dir — لا dich!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gerechtigkeit",
+          "spenden",
+          "wuerde"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالحيّ! (جملتان!)",
+            "a": "Die Nachbarschaft ist wichtig. Ich helfe in der Nachbarschaft.",
+            "why": "الحيّ أولًا! (in der Nachbarschaft helfen!)"
+          },
+          {
+            "q": "تحدث عن المواساة! (جملتان!)",
+            "a": "Die Anteilnahme ist wichtig. Ich zeige Anteilnahme.",
+            "why": "المواساة! (Anteilnahme zeigen!)"
+          },
+          {
+            "q": "تحدث عن المسامحة! (جملتان!)",
+            "a": "Vergeben ist wichtig. Ich vergebe den Menschen.",
+            "why": "المسامحة! (jemandem vergeben!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الحيّ (الجيرة)»؟",
+            "a": "die Nachbarschaft"
+          },
+          {
+            "q": "«المواساة (المشاركة)»؟",
+            "a": "die Anteilnahme"
+          },
+          {
+            "q": "«يسامح (يصفح)»؟",
+            "a": "vergeben"
+          },
+          {
+            "q": "«أنا أسامحك.»؟",
+            "a": "Ich vergebe dir."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الحيّ مهم.»؟",
+            "a": "Die Nachbarschaft ist wichtig."
+          },
+          {
+            "q": "vergeben",
+            "a": "يسامح"
+          },
+          {
+            "q": "«هو يساعد في الحيّ.»؟",
+            "a": "Er hilft in der Nachbarschaft."
+          },
+          {
+            "q": "die Anteilnahme",
+            "a": "المواساة"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يظهر المواساة.»؟",
+            "a": "Er zeigt Anteilnahme."
+          },
+          {
+            "q": "«الحيّ ودود.»؟",
+            "a": "Die Nachbarschaft ist freundlich."
+          },
+          {
+            "q": "die Nachbarschaft",
+            "a": "الحيّ"
+          },
+          {
+            "q": "«نسامح الناس!»؟",
+            "a": "Wir vergeben den Menschen!"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Nachbarschaft ist wichtig und die Anteilnahme ist da. Wir sollen den Menschen vergeben und der Tag ist schön. Er hilft in der Nachbarschaft und zeigt Anteilnahme.",
+      "ar": "الحيّ والمواساة يقوّيان المجتمع — والمسامحة أجمل!"
+    },
+    "srsBundleWordIds": [
+      "nachbarschaft",
+      "anteilnahme",
+      "vergeben"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Nachbarschaft!",
+          "de": "~~Der Nachbarschaft ist freundlich.~~"
+        },
+        "correct": {
+          "ar": "die Nachbarschaft!",
+          "de": "Die Nachbarschaft ist freundlich."
+        },
+        "exercise": {
+          "q": "___ Nachbarschaft ist freundlich.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الحيّ» مذكّر! والألمانية: die Nachbarschaft (die!) — كل -schaft مؤنثة دائماً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Anteilnahme!",
+          "de": "~~Das Anteilnahme ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Anteilnahme!",
+          "de": "Die Anteilnahme ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Anteilnahme ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «المواساة» مؤنثة ✓ — والألمانية: die Anteilnahme (die!) — كل -nahme مؤنثة! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "ich vergebe dich!",
+          "de": "~~Ich vergebe dich.~~"
+        },
+        "correct": {
+          "ar": "ich vergebe dir!",
+          "de": "Ich vergebe dir."
+        },
+        "exercise": {
+          "q": "Ich vergebe ___.",
+          "a": "dir"
+        },
+        "whyArabicSpeakerFails": "العربية: «أسامحك» بالنصب تُفهم! والألمانية: vergeben يأخذ المجرور (dir!) — لا dich! القاعدة لا علاقة لها بالعربية! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Nachbarschaft",
+      "https://www.duden.de/rechtschreibung/Anteilnahme",
+      "https://www.duden.de/rechtschreibung/vergeben"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-nachbarschaft",
+    "word-anteilnahme",
+    "word-vergeben"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 1 (مع الناس!)",
+    "goetheWordListOverlap": [
+      "nachbarschaft",
+      "anteilnahme",
+      "vergeben"
+    ]
+  }
+}

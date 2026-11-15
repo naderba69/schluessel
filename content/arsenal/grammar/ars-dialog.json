@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "constitutionSection": "10‑ي",
+ "id": "ars-dialog",
+ "kind": "shufra",
+ "title": {
+  "ar": "أدوات الحوار!",
+  "de": "Dialog — unterbrechen · Einwand · Zusammenfassung · halt/wohl/etwa"
+ },
+ "levelIntroduced": "B1",
+ "riskLevel": "orange",
+ "payload": {
+  "topicAr": "أدوات إدارة الحوار! (أقاطع! أعترض! أُلخّص! أشرد! وأدوات التليين halt/wohl/etwa!)",
+  "sceneAr": "الحوار: كلامان يتقاطعان! أقاطع بأدب (Darf ich Sie unterbrechen؟) وأعترض (Das ist ein Einwand!) وأُلخّص (Das ist die Zusammenfassung!) — وأدوات التليين تجعل الحديث لطيفاً (Das ist halt so!).",
+  "examples": [
+   {
+    "de": "Darf ich Sie unterbrechen?",
+    "ar": "هل لي أن أقاطعكم؟ (المقاطعة المهذّبة!)"
+   },
+   {
+    "de": "Das ist ein Einwand.",
+    "ar": "هذا اعتراض. (التسمية الصريحة!)"
+   },
+   {
+    "de": "Er fasst das zusammen.",
+    "ar": "هو يُلخّص ذلك. (الخلاصة!)"
+   },
+   {
+    "de": "Vermutlich ist das richtig.",
+    "ar": "يُرجَّح أن ذلك صحيح. (التليين!)"
+   },
+   {
+    "de": "Das ist halt so.",
+    "ar": "الأمر ببساطة كذلك. (تليين halt!)"
+   },
+   {
+    "de": "Meinen Sie etwa mich?",
+    "ar": "هل تقصدون أنا؟! (etwa في الاستفهام!)"
+   }
+  ],
+  "inferencePromptAr": "لاحظ: المقاطعة بالفعل الأخير (Darf ich Sie unterbrechen؟) والتسمية الصريحة (Einwand!) والخلاصة (zusammenfassen!) — وأدوات التليين (halt/wohl/etwa) تغيّر النبرة لا المعنى!",
+  "ruleDe": "Darf ich Sie unterbrechen? · Das ist ein Einwand. · Er fasst das zusammen. · Vermutlich ist das richtig. · Das ist halt so. · Meinen Sie etwa mich?",
+  "ruleAr": "أدوات الحوار: (1) المقاطعة المهذّبة: Darf ich Sie unterbrechen? (2) الاعتراض: Das ist ein Einwand! (3) الخلاصة: … zusammenfassen! (4) التليين: vermutlich/bestimmt/wohl! (5) جسيمة halt: Das ist halt so! (6) etwa في الاستفهام: Meinen Sie etwa mich?!",
+  "contrastAr": "العربية: «أعترض» و«أقاطع» بجملة مفردة تكفي! والألمانية: المقاطعة بصيغة مهذّبة ثابتة (Darf ich Sie unterbrechen؟) والاعتراض يُسمّى (Einwand!) والتليين بجسيمات (halt/wohl!) لا بالحذف — النبرة جزء من المعنى (خريطة التداخل 10‑ي).",
+  "limitsAr": [
+   "الجسيمات halt/wohl/etwa تُغيّر النبرة فقط — لا تُترجَم كلمة بكلمة!",
+   "abschweifen منفصل وتمامه ist (Ich bin abgeschweift! لا habe!)",
+   "unterbrechen قويّ: unterbricht/unterbrach/unterbrochen!",
+   "المقاطعة المهذّبة أولاً: Darf ich …؟ قبل الكلام!"
+  ],
+  "beads": [
+   "Darf ich Sie unterbrechen?",
+   "Das ist ein Einwand.",
+   "Er fasst das zusammen.",
+   "Vermutlich ist das richtig.",
+   "Das ist halt so.",
+   "Meinen Sie etwa mich?"
+  ],
+  "properNouns": []
+ },
+ "usedInLessons": [
+  "b1-u9-d2"
+ ]
+}

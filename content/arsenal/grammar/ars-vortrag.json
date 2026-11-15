@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "constitutionSection": "10‑ي",
+ "id": "ars-vortrag",
+ "kind": "shufra",
+ "title": {
+  "ar": "العرض الشفهي!",
+  "de": "Vortrag halten — Gliederung · Folien · erläutern · Fragen"
+ },
+ "levelIntroduced": "B1",
+ "riskLevel": "orange",
+ "payload": {
+  "topicAr": "العرض الشفهي! (مقدمة! هيكل! شرائح! أسئلة!)",
+  "sceneAr": "العرض الشفهي بالألمانية بروتوكول: Vortrag قصير ← Gliederung واضحة ← Folien تُظهر ← erläutern/betonen ← Gibt es Fragen? — والشرائح Stichwörter لا جُمل!",
+  "examples": [
+   {
+    "de": "Mein Vortrag ist kurz.",
+    "ar": "عرضي قصير. (الافتتاح!)"
+   },
+   {
+    "de": "Die Gliederung ist klar.",
+    "ar": "الهيكل واضح. (الجدول!)"
+   },
+   {
+    "de": "Die Folie zeigt den Verlauf.",
+    "ar": "الشريحة تُظهر المسار. (العرض!)"
+   },
+   {
+    "de": "Er erläutert die Grafik.",
+    "ar": "يشرح الرسم. (الشرح!)"
+   },
+   {
+    "de": "Er betont das Argument.",
+    "ar": "يُشدّد على الحجة. (التأكيد!)"
+   },
+   {
+    "de": "Gibt es Fragen?",
+    "ar": "هل من أسئلة؟ (الخاتمة!)"
+   }
+  ],
+  "inferencePromptAr": "لاحظ: العرض بروتوكول (Vortrag ← Gliederung ← Folien ← erläutern ← Fragen!) والشرائح كلمات مفتاحية (Stichwörter!) والانتقالات مسمّاة (Überleitung!) — والجمهور Zuhörer/Zuhörerschaft!",
+  "ruleDe": "Mein Vortrag ist kurz. · Die Gliederung ist klar. · Die Folie zeigt den Verlauf. · Er erläutert die Grafik. · Er betont das Argument. · Gibt es Fragen?",
+  "ruleAr": "بروتوكول العرض الشفهي: (1) الافتتاح: Mein Vortrag ist kurz! (2) الهيكل: die Gliederung! (3) الشرائح: die Folie zeigt! (4) الشing: erläutern! (5) التأكيد: betonen! hervorheben! (6) الخاتمة: Gibt es Fragen?",
+  "contrastAr": "العربية: «أقول لكم...» — مباشرة بلا هيكل ولا شرائح! والألمانية: العرض مُنظَّم (Gliederung! Überleitung! Hauptteil!) والشرائح Stichwörter لا جُمل كاملة! والخاتمة سؤال ثابت (Gibt es Fragen?) (خريطة التداخل 10‑ي).",
+  "limitsAr": [
+   "die Folie الشريحة (die! Folien!)",
+   "hervorheben منفصل: hebt … hervor!",
+   "die Zuhörerschaft (die!) = الجمهور المستمع!",
+   "das Argument (das! Argumente!)"
+  ],
+  "beads": [
+   "Mein Vortrag ist kurz.",
+   "Die Gliederung ist klar.",
+   "Die Folie zeigt den Verlauf.",
+   "Er erläutert die Grafik.",
+   "Er betont das Argument.",
+   "Gibt es Fragen?"
+  ],
+  "properNouns": []
+ },
+ "usedInLessons": [
+  "b1-u10-d3"
+ ]
+}

@@ -1,0 +1,484 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u9-d5",
+  "level": "B1",
+  "unit": 9,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Runde ist offen — und der Beschluss wird umgesetzt!",
+    "ar": "يوم إدارة النقاش! (جولة! مشاركة! تصويت! قرار!) — الوحدة 9: النزاعات والحلول!"
+  },
+  "canDoDaily": [
+    "يُدير نقاشاً قصيراً بالجولات! (Runde eröffnen! Redebeiträge! Abstimmung! Beschluss!)",
+    "يشارك ويصوّت بالمفردات الثابتة! (sich beteiligen AN! übereinstimmen! umsetzen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "entschaedigung",
+      "reklamation",
+      "regelung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الجولة مفتوحة.» (الافتتاح!)"
+        },
+        "choices": [
+          "Die Runde ist offen.",
+          "Die Runde ist zu.",
+          "Die Runde ist fertig."
+        ],
+        "answer": "Die Runde ist offen.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«يشارك في الجولة»؟ (الحرف!)"
+        },
+        "choices": [
+          "beteiligt sich an der Runde",
+          "beteiligt sich in der Runde",
+          "beteiligt sich für die Runde"
+        ],
+        "answer": "beteiligt sich an der Runde",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "moderieren",
+      "moderation",
+      "runde",
+      "redebeitrag",
+      "beteiligen",
+      "beteiligung",
+      "mitreden",
+      "abstimmung",
+      "mehrheit",
+      "minderheit",
+      "beschluss",
+      "umsetzen",
+      "uebereinstimmen",
+      "rolle",
+      "these"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-moderation"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Keine Angst — die Runde ist offen und der Beschluss kommt!",
+        "ar": "يُدير نقاشاً قصيراً في 8 جمل!"
+      },
+      "situation": {
+        "de": "Eine Runde. Redebeiträge. Eine Abstimmung. Ein Beschluss.",
+        "ar": "جولة! مساهمات! تصويت! وقرار!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في النقاش!",
+        "الترتيب الإداري: Runde ← Redebeitrag ← Abstimmung ← Beschluss umsetzen!",
+        "الحروف الثابتة: sich beteiligen AN! übereinstimmen (ein آخر!)",
+        "الجولة مفتوحة للجميع: mitreden!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Runde! Abstimmung! Beschluss!"
+        ],
+        "interleavedWith": [
+          "entschaedigung",
+          "reklamation",
+          "regelung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "يُدير (النقاش)",
+                "de": "moderieren"
+              },
+              {
+                "ar": "إدارة (النقاش)",
+                "de": "die Moderation"
+              },
+              {
+                "ar": "الجولة (من النقاش)",
+                "de": "die Runde"
+              },
+              {
+                "ar": "المساهمة (الكلامية)",
+                "de": "der Redebeitrag"
+              }
+            ],
+            "why": "moderieren يُدير (die Runde moderieren!) · die Moderation الإدارة (die!) · die Runde الجولة (offen!) · der Redebeitrag المساهمة (Redebeiträge!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يشارك (في)",
+                "de": "sich beteiligen"
+              },
+              {
+                "ar": "المشاركة",
+                "de": "die Beteiligung"
+              },
+              {
+                "ar": "يشارك بالكلام",
+                "de": "mitreden"
+              },
+              {
+                "ar": "التصويت",
+                "de": "die Abstimmung"
+              }
+            ],
+            "why": "sich beteiligen يشارك (AN der Runde!) · die Beteiligung المشاركة (zeigen!) · mitreden يشارك بالكلام (redet mit!) · die Abstimmung التصويت (abstimmen مُدرَّس!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الأكثرية",
+                "de": "die Mehrheit"
+              },
+              {
+                "ar": "الأقلية",
+                "de": "die Minderheit"
+              },
+              {
+                "ar": "القرار (المتّخذ)",
+                "de": "der Beschluss"
+              },
+              {
+                "ar": "يُنفّذ",
+                "de": "umsetzen"
+              }
+            ],
+            "why": "die Mehrheit الأكثرية (stimmt zu!) · die Minderheit الأقلية (wartet!) · der Beschluss القرار (der! treffen!) · umsetzen يُنفّذ (den Beschluss umsetzen! منفصل!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "إدارة النقاش!"
+        ],
+        "interleavedWith": [
+          "runde",
+          "abstimmung",
+          "mehrheit"
+        ],
+        "items": [
+          {
+            "q": "Er beteiligt sich ___ der Runde. (في! الحرف!)",
+            "a": "an",
+            "why": "sich beteiligen AN (لا in!) — الحرف الثابت! (ars-moderation!)"
+          },
+          {
+            "q": "Wir stimmen ___. (نُتفق! الجزء آخر!)",
+            "a": "überein",
+            "why": "übereinstimmen: Wir stimmen überein. (الجزء ein يهرب آخر الجملة!)"
+          },
+          {
+            "q": "Wir setzen den Beschluss ___. (نُنفّذ! منفصل!)",
+            "a": "um",
+            "why": "umsetzen منفصل! Wir setzen den Beschluss um."
+          },
+          {
+            "q": "Mein ___ ist kurz. (المساهمة!)",
+            "a": "Redebeitrag",
+            "why": "der Redebeitrag المساهمة (die Redebeiträge!) — Mein Redebeitrag ist kurz."
+          },
+          {
+            "q": "Die ___ kommt. (التصويت!)",
+            "a": "Abstimmung",
+            "why": "die Abstimmung التصويت — Die Abstimmung kommt!"
+          },
+          {
+            "q": "Die ___ stimmt zu. (الأكثرية!)",
+            "a": "Mehrheit",
+            "why": "die Mehrheit الأكثرية — stimmt zu (تُوافق!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الحرف! الانفصال! الجمع!"
+        ],
+        "interleavedWith": [
+          "moderation",
+          "beschluss",
+          "rolle"
+        ],
+        "items": [
+          {
+            "q": "~~Er beteiligt sich in der Runde.~~",
+            "a": "Er beteiligt sich an der Runde.",
+            "why": "sich beteiligen AN (لا in!) — الحرف الثابت! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~Wir übereinstimmen.~~",
+            "a": "Wir stimmen überein.",
+            "why": "übereinstimmen: الفعل stimmen في موضعه والجزء überein آخر الجملة!"
+          },
+          {
+            "q": "~~Wir setzen um den Beschluss.~~",
+            "a": "Wir setzen den Beschluss um.",
+            "why": "umsetzen منفصل: المفعول بينهما والجزء um آخر الجملة!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — النقاش كلام!",
+          "Runde! Redebeitrag! Beschluss!"
+        ],
+        "interleavedWith": [
+          "moderieren",
+          "mitreden",
+          "these"
+        ],
+        "items": [
+          {
+            "q": "افتح النقاش! (جملتان!)",
+            "a": "Die Runde ist offen. Mein Redebeitrag ist kurz.",
+            "why": "الافتتاح بالجولة والمساهمة! (ars-moderation!)"
+          },
+          {
+            "q": "اشرح المشاركة! (جملتان!)",
+            "a": "Er beteiligt sich an der Runde. Wir reden mit.",
+            "why": "sich beteiligen AN! mitreden! (المشاركة للجميع!)"
+          },
+          {
+            "q": "اختم بالتصويت والتنفيذ! (3 جمل!)",
+            "a": "Die Abstimmung kommt. Die Mehrheit stimmt zu. Wir setzen den Beschluss um!",
+            "why": "Abstimmung! Mehrheit! Beschluss umsetzen! (الترتيب الإداري!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الجولة مفتوحة.»؟",
+            "a": "Die Runde ist offen."
+          },
+          {
+            "q": "«المساهمة»؟",
+            "a": "der Redebeitrag"
+          },
+          {
+            "q": "«يشارك في الجولة»؟",
+            "a": "beteiligt sich an der Runde"
+          },
+          {
+            "q": "«التصويت»؟",
+            "a": "die Abstimmung"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نُتفق.»؟",
+            "a": "Wir stimmen überein."
+          },
+          {
+            "q": "«الأكثرية تُوافق.»؟",
+            "a": "Die Mehrheit stimmt zu."
+          },
+          {
+            "q": "«نُنفّذ القرار.»؟",
+            "a": "Wir setzen den Beschluss um."
+          },
+          {
+            "q": "«الأقلية»؟",
+            "a": "die Minderheit"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يُدير الجولة»؟",
+            "a": "moderieren"
+          },
+          {
+            "q": "«نشارك بالكلام.»؟",
+            "a": "Wir reden mit."
+          },
+          {
+            "q": "«القرار»؟",
+            "a": "der Beschluss"
+          },
+          {
+            "q": "«الفرضية»؟",
+            "a": "die These"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Runde ist offen! Die Moderation moderiert die Runde. Mein Redebeitrag ist kurz. Er beteiligt sich an der Runde — und wir reden mit. Die Beteiligung ist wichtig. Diese Rolle ist wichtig. Die Abstimmung kommt. Die Mehrheit stimmt zu — die Minderheit wartet. Der Beschluss ist klar. Wir setzen den Beschluss um. Wir stimmen überein. Die These ist klar!",
+      "ar": "الجولة مفتوحة! إدارة النقاش تُدير الجولة. مساهمتي قصيرة. هو يشارك في الجولة — ونشارك بالكلام. المشاركة مهمّة. هذا الدور مهمّ. التصويت قادم. الأكثرية تُوافق — والأقلية تنتظر. القرار واضح. نُنفّذ القرار. نُتفق. الفرضية واضحة!"
+    },
+    "srsBundleWordIds": [
+      "moderieren",
+      "moderation",
+      "runde",
+      "redebeitrag",
+      "beteiligen",
+      "beteiligung",
+      "mitreden",
+      "abstimmung",
+      "mehrheit",
+      "minderheit",
+      "beschluss",
+      "umsetzen",
+      "uebereinstimmen",
+      "rolle",
+      "these"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "sich beteiligen بحرف in!",
+          "de": "~~Er beteiligt sich in der Runde.~~"
+        },
+        "correct": {
+          "ar": "الحرف الثابت an: sich beteiligen an …!",
+          "de": "Er beteiligt sich an der Runde."
+        },
+        "exercise": {
+          "q": "Er beteiligt sich ___ der Runde. (الحرف!)",
+          "a": "an"
+        },
+        "whyArabicSpeakerFails": "العربية: «يشارك في» — الحرف «في» مرنّ! والألمانية: الحرف ثابت mit dem Verb (sich beteiligen AN!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "übereinstimmen ملاصق!",
+          "de": "~~Wir übereinstimmen.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Wir stimmen überein!",
+          "de": "Wir stimmen überein."
+        },
+        "exercise": {
+          "q": "Wir ___ ___. (نُتفق!)",
+          "a": "stimmen … überein"
+        },
+        "whyArabicSpeakerFails": "العربية: «نُتفق» — كلمة واحدة! والألمانية: الفعل ينفصل والجزء überein يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "umsetzen بمفعول آخر!",
+          "de": "~~Wir setzen um den Beschluss.~~"
+        },
+        "correct": {
+          "ar": "المفعول بينهما: Wir setzen den Beschluss um!",
+          "de": "Wir setzen den Beschluss um."
+        },
+        "exercise": {
+          "q": "Wir setzen ___ ___. (نُنفّذ القرار!)",
+          "a": "den Beschluss … um"
+        },
+        "whyArabicSpeakerFails": "العربية: «نُنفّذ القرار» — الترتيب حرّ! والألمانية: الفعل المنفصل يضمّ المفعول في المنتصف والجزء um آخر الجملة (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/moderieren",
+      "https://www.duden.de/rechtschreibung/Moderation",
+      "https://www.duden.de/rechtschreibung/Runde",
+      "https://www.duden.de/rechtschreibung/Redebeitrag",
+      "https://www.duden.de/rechtschreibung/beteiligen",
+      "https://www.duden.de/rechtschreibung/Beteiligung",
+      "https://www.duden.de/rechtschreibung/mitreden",
+      "https://www.duden.de/rechtschreibung/Abstimmung",
+      "https://www.duden.de/rechtschreibung/Mehrheit",
+      "https://www.duden.de/rechtschreibung/Minderheit",
+      "https://www.duden.de/rechtschreibung/Beschluss",
+      "https://www.duden.de/rechtschreibung/umsetzen",
+      "https://www.duden.de/rechtschreibung/uebereinstimmen",
+      "https://www.duden.de/rechtschreibung/Rolle",
+      "https://www.duden.de/rechtschreibung/These"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-moderation",
+    "ars-dialog"
+  ],
+  "audioManifestRefs": [
+    "word-moderieren",
+    "word-moderation",
+    "word-runde",
+    "word-redebeitrag",
+    "word-beteiligen",
+    "word-beteiligung",
+    "word-mitreden",
+    "word-abstimmung",
+    "word-mehrheit",
+    "word-minderheit",
+    "word-beschluss",
+    "word-umsetzen",
+    "word-uebereinstimmen",
+    "word-rolle",
+    "word-these"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (النزاعات والحلول — إدارة نقاش قصير)",
+    "goetheWordListOverlap": [
+      "moderieren",
+      "moderation",
+      "runde",
+      "redebeitrag",
+      "beteiligen",
+      "beteiligung",
+      "mitreden",
+      "abstimmung",
+      "mehrheit",
+      "minderheit",
+      "beschluss",
+      "umsetzen",
+      "uebereinstimmen",
+      "rolle",
+      "these"
+    ]
+  }
+}

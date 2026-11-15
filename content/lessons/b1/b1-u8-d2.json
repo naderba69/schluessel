@@ -1,0 +1,491 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u8-d2",
+  "level": "B1",
+  "unit": 8,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Bewerbung um die Stelle als Koch!",
+    "ar": "قالب الترشح! (الموضوع! التحية! الافتتاح! الخاتمة! التحية النهائية! المرفقات!) — الوحدة 8: العمل والترشيح!"
+  },
+  "canDoDaily": [
+    "يكتب هيكل رسالة الترشح! (الموضوع! التحية! الافتتاح! الخاتمة! المرفقات!)",
+    "يحفظ الصيغ الثابتة! (Sehr geehrte Damen und Herren! Mit freundlichen Grüßen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bewerber",
+      "lehrstelle",
+      "kopie"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«ترشح لمنصب طباخ.» — كيف يُكتب الموضوع؟ (بلا فعل!)"
+        },
+        "choices": [
+          "Bewerbung um die Stelle als Koch.",
+          "Bewerbung für die Stelle als Koch.",
+          "Bewerbung auf die Stelle als Koch."
+        ],
+        "answer": "Bewerbung um die Stelle als Koch.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الاستفسار»؟"
+        },
+        "choices": [
+          "die Nachfrage",
+          "die Frage",
+          "die Antwort"
+        ],
+        "answer": "die Nachfrage",
+        "revealNextSession": true
+      }
+    ],
+    "guidedRetrieval": [
+      "من u8-d1: الصفة المخلوطة (eine gute Lehrstelle!) — اليوم: قالب الترشح!",
+      "من u2-d2: أسلوب الخطاب الرسمي — اليوم: صيغ الترشح الثابتة!"
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "nachfrage",
+      "erhalten",
+      "erwarten",
+      "erstellen",
+      "erfuellen",
+      "muendlich",
+      "teilnahme",
+      "fortbildung",
+      "briefumschlag",
+      "inhalt",
+      "beschreibung",
+      "annehmen",
+      "praktikant",
+      "einstellen",
+      "gruessen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-bewerbung"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Bewerbung um die Stelle als Koch!",
+        "ar": "يكتب قالب الترشح كاملاً!"
+      },
+      "situation": {
+        "de": "Der Inhalt, die Nachfrage, der Praktikant.",
+        "ar": "المكتب: المحتوى! الاستفسار! المتدرّب!"
+      },
+      "successCriteria": [
+        "الكلمات الخمس عشرة + الصيغ الثابتة!",
+        "«الموضوع بلا فعل!» (Bewerbung um die Stelle als Koch!)",
+        "«التحية رسمية!» (Sehr geehrte Damen und Herren!)",
+        "«المرفقات آخراً!» (Mit Lebenslauf und Zeugnis!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات الترشح!",
+          "die Nachfrage! der Inhalt!"
+        ],
+        "interleavedWith": [
+          "bewerbung",
+          "lebenslauf",
+          "zeugnis"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الاستفسار",
+                "de": "die Nachfrage"
+              },
+              {
+                "ar": "المحتوى",
+                "de": "der Inhalt"
+              },
+              {
+                "ar": "الظرف",
+                "de": "der Briefumschlag"
+              },
+              {
+                "ar": "الوصف",
+                "de": "die Beschreibung"
+              }
+            ],
+            "why": "die Nachfrage الاستفسار (die! + Nachfragen!) · der Inhalt المحتوى (der! + Inhalte!) · der Briefumschlag الظرف (der! Brief+Umschlag!) · die Beschreibung الوصف (die! + Beschreibungen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المشاركة",
+                "de": "die Teilnahme"
+              },
+              {
+                "ar": "التدريب المستمر",
+                "de": "die Fortbildung"
+              },
+              {
+                "ar": "المتدرّب",
+                "de": "der Praktikant"
+              },
+              {
+                "ar": "شفهي",
+                "de": "mündlich"
+              }
+            ],
+            "why": "die Teilnahme المشاركة (die! + Teilnahmen!) · die Fortbildung التدريب المستمر (die! Fort+Bildung!) · der Praktikant المتدرّب (der! جمعه Praktikanten بالنون!) · mündlich شفهي (münd+lich!) — (مراجعة: das Seminar! der Test!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يستلم",
+                "de": "erhalten"
+              },
+              {
+                "ar": "يترقّب",
+                "de": "erwarten"
+              },
+              {
+                "ar": "ينشئ",
+                "de": "erstellen"
+              },
+              {
+                "ar": "يقبل",
+                "de": "annehmen"
+              }
+            ],
+            "why": "erhalten يستلم (erhält! hat erhalten!) · erwarten يترقّب (hat erwartet!) · erstellen ينشئ (hat erstellt!) · annehmen يقبل (منفصل: nimmt … an!) — (مراجعة: der Chef! der Bewerber!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الصيغ الثابتة!",
+          "Sehr geehrte Damen und Herren!"
+        ],
+        "interleavedWith": [
+          "tisch",
+          "stuhl",
+          "lampe"
+        ],
+        "items": [
+          {
+            "q": "___ um die Stelle als Koch. (الموضوع بلا فعل!)",
+            "a": "Bewerbung",
+            "why": "الموضوع بلا فعل! (Bewerbung um die Stelle als …!)"
+          },
+          {
+            "q": "Sehr geehrte ___ und Herren! (التحية الرسمية!)",
+            "a": "Damen",
+            "why": "Sehr geehrte Damen und Herren! (التحية الرسمية الثابتة!)"
+          },
+          {
+            "q": "Mit freundlichen ___",
+            "a": "Grüßen",
+            "why": "Gruß الختام: «Mit freundlichen Grüßen» — صيغة ثابتة بالجمع! (لا مفرد!)"
+          },
+          {
+            "q": "Der Chef stellt den Bewerber ___. (einstellen! المنفصل!)",
+            "a": "ein",
+            "why": "الفعل المنفصل: stellt … ein (الجذر آخراً!) — einstellen يوظّف!"
+          },
+          {
+            "q": "Der Chef nimmt den Bewerber ___. (annehmen! المنفصل!)",
+            "a": "an",
+            "why": "الفعل المنفصل: nimmt … an! — annehmen يقبل!"
+          },
+          {
+            "q": "___ Sie den Lebenslauf! (erstellen! الأمر المهذّب!)",
+            "a": "Erstellen",
+            "why": "الأمر المهذّب: Erstellen Sie …! (الفعل أولاً!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "um لا für!",
+          "التحية النهائية بالجمع!"
+        ],
+        "interleavedWith": [
+          "brot",
+          "milch",
+          "wasser"
+        ],
+        "items": [
+          {
+            "q": "~~Bewerbung für die Stelle als Koch.~~",
+            "a": "Bewerbung um die Stelle als Koch.",
+            "why": "المرادف الثابت: Bewerbung um die Stelle! (um لا für!)"
+          },
+          {
+            "q": "~~Mit freundliche Grüßen!~~",
+            "a": "Mit freundlichen Grüßen",
+            "why": "الصفة بالجرّ: freundlichen! (Mit freundlichen Grüßen!)"
+          },
+          {
+            "q": "~~Sehr geehrte Dame und Herr!~~",
+            "a": "Sehr geehrte Damen und Herren!",
+            "why": "التحية بالجمع: Damen und Herren! (الثنائي لا يُستعمل!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "توليف الترشح!",
+          "الصيغ الثابتة!"
+        ],
+        "interleavedWith": [
+          "frau",
+          "mann",
+          "kind"
+        ],
+        "items": [
+          {
+            "q": "قل بالألمانية: «ترشح لمنصب طباخ.» (الموضوع!)",
+            "a": "Bewerbung um die Stelle als Koch.",
+            "why": "الموضوع بلا فعل! (Bewerbung um die Stelle als Koch!)"
+          },
+          {
+            "q": "قل بالألمانية: «أيها السادة والسيدات المحترمون!»",
+            "a": "Sehr geehrte Damen und Herren!",
+            "why": "التحية الرسمية الثابتة!"
+          },
+          {
+            "q": "قل بالألمانية: «مع تحياتي المخلصة!»",
+            "a": "Mit freundlichen Grüßen",
+            "why": "«Mit freundlichen Grüßen» — التحية النهائية بالجمع! (بلا علامة بعد!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الاستفسار»؟",
+            "a": "die Nachfrage"
+          },
+          {
+            "q": "«ترشح لمنصب طباخ.»؟",
+            "a": "Bewerbung um die Stelle als Koch."
+          },
+          {
+            "q": "«المتقدّم يحقّق الرغبات.»؟",
+            "a": "Der Bewerber erfüllt die Wünsche."
+          },
+          {
+            "q": "«المتدرّب»؟",
+            "a": "der Praktikant"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«يوظّف»؟",
+            "a": "einstellen"
+          },
+          {
+            "q": "«المحتوى»؟",
+            "a": "der Inhalt"
+          },
+          {
+            "q": "«مع تحياتي المخلصة!»؟",
+            "a": "Mit freundlichen Grüßen"
+          },
+          {
+            "q": "«الاختبار شفهي.»؟",
+            "a": "Der Test ist mündlich."
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "q": "«المشاركة»؟",
+            "a": "die Teilnahme"
+          },
+          {
+            "q": "«أقرأ الوصف.»؟",
+            "a": "Ich lese die Beschreibung."
+          },
+          {
+            "q": "«الظرف»؟",
+            "a": "der Briefumschlag"
+          },
+          {
+            "q": "«الرئيس يقبل المتقدّم.»؟",
+            "a": "Der Chef nimmt den Bewerber an."
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Guten Tag! Bewerbung um die Stelle als Koch. Sehr geehrte Damen und Herren! Mit Interesse habe ich Ihre Anzeige gelesen. Ich erstelle den Lebenslauf. Wir erwarten den Lebenslauf. Der Chef erhält die Bewerbung. Nach der Bewerbung kommt die Nachfrage. Der Test ist mündlich. Die Teilnahme am Seminar ist gut. Nach der Lehre kommt die Fortbildung. Ich brauche einen Briefumschlag. Der Inhalt der Bewerbung ist gut. Ich lese die Beschreibung. Der Praktikant lernt viel. Der Chef erfüllt die Wünsche. Der Chef stellt den Bewerber ein. Der Chef nimmt den Bewerber an. Für Ihre Antwort danke ich Ihnen. Mit freundlichen Grüßen Mit Lebenslauf und Zeugnis.",
+      "ar": "مرحباً! ترشح لمنصب طباخ. أيها السادة والسيدات المحترمون! قرأتُ إعلانكم باهتمام. أُنشئ السيرة الذاتية. نترقّب السيرة الذاتية. الرئيس يستلم الترشح. بعد الترشح يأتي الاستفسار. الاختبار شفهي. المشاركة في الندوة جيدة. بعد التلمذة المهنية يأتي التدريب المستمر. أحتاج إلى ظرف. محتوى الترشح جيد. أقرأ الوصف. المتدرّب يتعلّم كثيراً. الرئيس يحقّق الرغبات. الرئيس يوظّف المتقدّم. الرئيس يقبل المتقدّم. أشكركم على ردّكم. مع تحياتي المخلصة! مع السيرة والشهادة."
+    },
+    "srsBundleWordIds": [
+      "nachfrage",
+      "erhalten",
+      "erwarten",
+      "erstellen",
+      "erfuellen",
+      "muendlich",
+      "teilnahme",
+      "fortbildung",
+      "briefumschlag",
+      "inhalt",
+      "beschreibung",
+      "annehmen",
+      "praktikant",
+      "einstellen",
+      "gruessen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "الموضوع بفعل!",
+          "de": "~~Bewerbung schreiben für die Stelle.~~"
+        },
+        "correct": {
+          "ar": "الموضوع بلا فعل: Bewerbung um die Stelle!",
+          "de": "Bewerbung um die Stelle als Koch."
+        },
+        "exercise": {
+          "q": "___ um die Stelle als Koch. (بلا فعل!)",
+          "a": "Bewerbung"
+        },
+        "whyArabicSpeakerFails": "العربية: «أطلب الترشح لمنصب…» بالفعل! والألمانية: الموضوع اسم فقط — بلا فعل! (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "التحية النهائية مفرد!",
+          "de": "~~Mit freundliche Grüßen!~~"
+        },
+        "correct": {
+          "ar": "بالجمع والجرّ: Mit freundlichen Grüßen!",
+          "de": "Mit freundlichen Grüßen"
+        },
+        "exercise": {
+          "q": "Mit freundlichen ___",
+          "a": "Grüßen"
+        },
+        "whyArabicSpeakerFails": "«مع خالص تحياتي» مفرد بالعربية! والألمانية: Grüßen جمع + freundlichen بالجرّ (بعد Mit!) (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "für بدل um!",
+          "de": "~~Bewerbung für die Stelle.~~"
+        },
+        "correct": {
+          "ar": "المرادف الثابت: Bewerbung um die Stelle!",
+          "de": "Bewerbung um die Stelle als Koch."
+        },
+        "exercise": {
+          "q": "Bewerbung ___ die Stelle! (um! لا für!)",
+          "a": "um"
+        },
+        "whyArabicSpeakerFails": "«ترشح لـ» — اللام! والألمانية: um (bewerben um + نصب!) لا für (خريطة التداخل 10‑ي)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Nachfrage",
+      "https://www.duden.de/rechtschreibung/erhalten",
+      "https://www.duden.de/rechtschreibung/erwarten",
+      "https://www.duden.de/rechtschreibung/erstellen",
+      "https://www.duden.de/rechtschreibung/erfuellen",
+      "https://www.duden.de/rechtschreibung/muendlich",
+      "https://www.duden.de/rechtschreibung/Teilnahme",
+      "https://www.duden.de/rechtschreibung/Fortbildung",
+      "https://www.duden.de/rechtschreibung/Briefumschlag",
+      "https://www.duden.de/rechtschreibung/Inhalt",
+      "https://www.duden.de/rechtschreibung/Beschreibung",
+      "https://www.duden.de/rechtschreibung/annehmen",
+      "https://www.duden.de/rechtschreibung/Praktikant",
+      "https://www.duden.de/rechtschreibung/einstellen",
+      "https://www.duden.de/rechtschreibung/gruessen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-bewerbung",
+    "ars-briefstil",
+    "ars-adjektiv-gemischt"
+  ],
+  "audioManifestRefs": [
+    "word-nachfrage",
+    "word-erhalten",
+    "word-erwarten",
+    "word-erstellen",
+    "word-erfuellen",
+    "word-muendlich",
+    "word-teilnahme",
+    "word-fortbildung",
+    "word-briefumschlag",
+    "word-inhalt",
+    "word-beschreibung",
+    "word-annehmen",
+    "word-praktikant",
+    "word-einstellen",
+    "word-gruessen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (العمل والترشيح — قالب الترشح!)",
+    "goetheWordListOverlap": [
+      "nachfrage",
+      "erhalten",
+      "erwarten",
+      "erstellen",
+      "erfuellen",
+      "muendlich",
+      "teilnahme",
+      "fortbildung",
+      "briefumschlag",
+      "inhalt",
+      "beschreibung",
+      "annehmen",
+      "praktikant",
+      "einstellen",
+      "gruessen"
+    ]
+  }
+}

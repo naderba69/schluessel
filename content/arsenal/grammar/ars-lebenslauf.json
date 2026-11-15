@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-lebenslauf",
+  "kind": "shufra",
+  "title": {
+    "ar": "السيرة الذاتية — الأقسام!",
+    "de": "Der Lebenslauf — Abschnitte"
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "red",
+  "payload": {
+    "topicAr": "هيكل السيرة الذاتية الألمانية! (البيانات! التعليم! الخبرة! المهارات! اللغات! الاهتمامات!)",
+    "sceneAr": "المكتب: أكتب سيرتي الذاتية! كل قسم بعنوان قصير! البيانات أولاً! والتعليم بعدها! والخبرة بالتسمية!",
+    "examples": [
+      {
+        "de": "Persönliche Daten: Name, Alter, Adresse.",
+        "ar": "البيانات الشخصية: الاسم! العمر! العنوان! (القسم الأول!)"
+      },
+      {
+        "de": "Ausbildung: Grundschule und Lehre.",
+        "ar": "التعليم: المدرسة الابتدائية والتلمذة المهنية! (القسم الثاني!)"
+      },
+      {
+        "de": "Erfahrung: Praktikum und Tätigkeit.",
+        "ar": "الخبرة: التدريب والنشاط! (القسم الثالث!)"
+      },
+      {
+        "de": "Kenntnisse und Fähigkeiten.",
+        "ar": "المعرفة والمهارات! (القسم الرابع!)"
+      },
+      {
+        "de": "Sprachen: Deutsch und Arabisch.",
+        "ar": "اللغات: الألمانية والعربية! (القسم الخامس!)"
+      },
+      {
+        "de": "Interessen: Musik und Sport.",
+        "ar": "الاهتمامات: الموسيقى والرياضة! (القسم السادس!)"
+      }
+    ],
+    "inferencePromptAr": "لاحظ: البيانات أولاً (Persönliche Daten!) ثم التعليم (Ausbildung!) ثم الخبرة (Erfahrung!) ثم المهارات (Kenntnisse!) ثم اللغات (Sprachen!) ثم الاهتمامات (Interessen!)! الأقسام قصيرة بعناوين ثابتة — تُحفظ كما هي!",
+    "ruleDe": "Persönliche Daten: Name, Alter, Adresse. · Ausbildung: Grundschule und Lehre. · Erfahrung: Praktikum und Tätigkeit. · Kenntnisse und Fähigkeiten. · Sprachen: Deutsch und Arabisch. · Interessen: Musik und Sport.",
+    "ruleAr": "قالب السيرة الذاتية: (1) البيانات الشخصية: Persönliche Daten: Name, Alter, Adresse. (2) التعليم: Ausbildung: Grundschule und Lehre. (3) الخبرة: Erfahrung: Praktikum und Tätigkeit. (4) المهارات: Kenntnisse und Fähigkeiten. (5) اللغات: Sprachen: Deutsch und Arabisch. (6) الاهتمامات: Interessen: Musik und Sport.",
+    "contrastAr": "العربية: سيرة ذاتية بجمل طويلة متصلة! والألمانية: أقسام قصيرة بعناوين ومفاتيح — البيانات أولاً والتعليم بعدها (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "البيانات الشخصية أولاً دائماً: Persönliche Daten! (الاسم! العمر! العنوان!)",
+      "التعليم بعد البيانات: Ausbildung! (المدرسة! التلمذة!)",
+      "الخبرة بالتسمية لا بالجُمل: Erfahrung: Praktikum und Tätigkeit!",
+      "اللغات بأسمائها بلا أداة: Deutsch und Arabisch! (لا die Deutsch!)"
+    ],
+    "beads": [
+      "Persönliche Daten: Name, Alter, Adresse.",
+      "Ausbildung: Grundschule und Lehre.",
+      "Erfahrung: Praktikum und Tätigkeit.",
+      "Kenntnisse und Fähigkeiten.",
+      "Sprachen: Deutsch und Arabisch.",
+      "Interessen: Musik und Sport."
+    ],
+    "properNouns": []
+  },
+  "usedInLessons": ["b1-u8-d4"]
+}

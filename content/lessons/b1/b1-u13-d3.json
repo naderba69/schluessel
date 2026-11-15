@@ -1,0 +1,442 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u13-d3",
+  "level": "B1",
+  "unit": 13,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Er spricht flüssig — auch unter Zeitdruck!",
+    "ar": "الوحدة 13: التكثيف! محاكاة الكلام بثلاثة أرباع الوقت! (ثلاث دقائق بدل أربع! بطلاقة! وبدون توقّف!)"
+  },
+  "canDoDaily": [
+    "يتحدّث بطلاقة تحت ضغط الوقت! (unter Zeitdruck sprechen! flüssig sprechen!)",
+    "يُسرّع إيقاعه دون أن يفقد وضوحه! (die Arbeit beschleunigen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "logisch",
+      "zusammenhang",
+      "bedingung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«ضغط الوقت كبير.»؟"
+        },
+        "choices": [
+          "Der Zeitdruck ist groß.",
+          "Die Zeitdruck ist groß.",
+          "Das Zeitdruck ist groß."
+        ],
+        "answer": "Der Zeitdruck ist groß.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«هو يتحدّث بطلاقة.»؟"
+        },
+        "choices": [
+          "Er spricht flüssig.",
+          "Er spricht schnell.",
+          "Sie spricht flüssig."
+        ],
+        "answer": "Er spricht flüssig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "zeitdruck",
+      "fluessig",
+      "beschleunigen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "untrennbar",
+      "needs-ein"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Er spricht flüssig — auch unter Zeitdruck!",
+        "ar": "محاكاة الكلام: ثلاث دقائق متواصلة بدل أربع! (ثلاثة أرباع الوقت!)"
+      },
+      "situation": {
+        "de": "Drei Minuten, keine Pause, flüssig sprechen.",
+        "ar": "ثلاث دقائق! بلا توقّف! كلام بطلاقة! (محاكاة السرعة!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في المحاكاة!",
+        "ثلاث دقائق بدل أربع — بلا توقّف وبلا صمت!",
+        "الإيقاع يتسارع والوضوح يبقى! (flüssig! und deutlich!)",
+        "المفردات الثابتة: unter Zeitdruck sprechen! flüssig sprechen! die Arbeit beschleunigen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Zeitdruck! flüssig! beschleunigen!"
+        ],
+        "interleavedWith": [
+          "logisch",
+          "zusammenhang",
+          "bedingung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "ضغط الوقت",
+                "de": "der Zeitdruck"
+              },
+              {
+                "ar": "بسلاسة",
+                "de": "flüssig"
+              },
+              {
+                "ar": "يسرّع",
+                "de": "beschleunigen"
+              }
+            ],
+            "why": "der Zeitdruck ضغط الوقت (der! die Zeitdrücke!) · flüssig بسلاسة (ظرف بلا تصريف!) · beschleunigen يسرّع (be- لا ge- في التمام: hat beschleunigt!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الوقت",
+                "de": "die Zeit"
+              },
+              {
+                "ar": "الدقيقة",
+                "de": "die Minute"
+              },
+              {
+                "ar": "الاستراحة",
+                "de": "die Pause"
+              },
+              {
+                "ar": "فوريًا",
+                "de": "sofort"
+              }
+            ],
+            "why": "مراجعة أدوات الوقت! die Zeit · die Minute · die Pause · sofort"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "السريع",
+                "de": "schnell"
+              },
+              {
+                "ar": "البطيء",
+                "de": "langsam"
+              },
+              {
+                "ar": "بوضوح",
+                "de": "deutlich"
+              },
+              {
+                "ar": "الآن",
+                "de": "jetzt"
+              }
+            ],
+            "why": "مراجعة أدوات الإيقاع! schnell · langsam · deutlich · jetzt"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يتحدّث",
+                "de": "sprechen"
+              },
+              {
+                "ar": "يجيب",
+                "de": "antworten"
+              },
+              {
+                "ar": "يسأل",
+                "de": "fragen"
+              },
+              {
+                "ar": "الحوار",
+                "de": "das Gespräch"
+              }
+            ],
+            "why": "مراجعة أدوات الكلام! sprechen · antworten · fragen · das Gespräch (das!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الكلام تحت الضغط!"
+        ],
+        "interleavedWith": [
+          "zeitdruck",
+          "fluessig",
+          "beschleunigen"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist groß. (ضغط الوقت!)",
+            "a": "Zeitdruck",
+            "why": "der Zeitdruck ضغط الوقت (der!) — der Zeitdruck ist groß."
+          },
+          {
+            "q": "Er spricht ___. (بطلاقة!)",
+            "a": "flüssig",
+            "why": "flüssig ظرف بلا تصريف! — er spricht flüssig. (flüssig sprechen!)"
+          },
+          {
+            "q": "Er ___ die Arbeit. (يسرّع!)",
+            "a": "beschleunigt",
+            "why": "beschleunigen يسرّع (be- غير منفصل!) — er beschleunigt die Arbeit. (hat beschleunigt!)"
+          },
+          {
+            "q": "Unter ___ spricht er schnell. (ضغط الوقت!)",
+            "a": "Zeitdruck",
+            "why": "unter Zeitdruck — المفردة الثابتة! (unter Zeitdruck sprechen!)"
+          },
+          {
+            "q": "Drei ___ statt vier! (المحاكاة!)",
+            "a": "Minuten",
+            "why": "die Minute الدقيقة (die!) — drei Minuten statt vier! (ثلاثة أرباع الوقت!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الظرف! التصريف!"
+        ],
+        "interleavedWith": [
+          "zeit",
+          "minute",
+          "pause"
+        ],
+        "items": [
+          {
+            "q": "~~Die Zeitdruck ist groß.~~",
+            "a": "Der Zeitdruck ist groß.",
+            "why": "der Zeitdruck ضغط الوقت (der! مذكّر — لا die!)"
+          },
+          {
+            "q": "~~Er spricht mit flüssig.~~",
+            "a": "Er spricht flüssig.",
+            "why": "flüssig ظرف بلا حرف جر! er spricht flüssig (لا mit flüssig!)"
+          },
+          {
+            "q": "~~Er beschleunigen die Arbeit.~~",
+            "a": "Er beschleunigt die Arbeit.",
+            "why": "المضارع لا المصدر! er beschleunigt (لا beschleunigen!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — المحاكاة! ثلاث دقائق!",
+          "Zeitdruck! flüssig! schnell!"
+        ],
+        "interleavedWith": [
+          "sprechen",
+          "antworten",
+          "sofort"
+        ],
+        "items": [
+          {
+            "q": "ابدأ فورًا! (جملتان!)",
+            "a": "Der Zeitdruck ist groß. Er spricht sofort.",
+            "why": "البداية الفورية! (unter Zeitdruck sprechen!)"
+          },
+          {
+            "q": "واصل بلا توقّف! (جملتان!)",
+            "a": "Er spricht flüssig und schnell. Die Antwort ist klar.",
+            "why": "الاستمرار! (flüssig sprechen!)"
+          },
+          {
+            "q": "أسأل نفسك وأجب! (جملتان!)",
+            "a": "Was ist die Frage? Die Antwort ist einfach.",
+            "why": "جولة الأسئلة! (ars-fragerunde!)"
+          },
+          {
+            "q": "اختم بقوة! (جملتان!)",
+            "a": "Er beschleunigt die Arbeit. Drei Minuten — geschafft!",
+            "why": "التسريع ثم الإنجاز! (die Arbeit beschleunigen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«ضغط الوقت»؟",
+            "a": "der Zeitdruck"
+          },
+          {
+            "q": "«بسلاسة/بطلاقة»؟",
+            "a": "flüssig"
+          },
+          {
+            "q": "«يسرّع العمل.»؟",
+            "a": "Er beschleunigt die Arbeit."
+          },
+          {
+            "q": "«يتحدّث تحت ضغط الوقت.»؟",
+            "a": "Er spricht unter Zeitdruck."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الدقيقة»؟ (مراجعة!)",
+            "a": "die Minute"
+          },
+          {
+            "q": "«الاستراحة»؟ (مراجعة!)",
+            "a": "die Pause"
+          },
+          {
+            "q": "«فوريًا»؟ (مراجعة!)",
+            "a": "sofort"
+          },
+          {
+            "q": "«الحوار»؟ (مراجعة!)",
+            "a": "das Gespräch"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«السريع»؟ (مراجعة!)",
+            "a": "schnell"
+          },
+          {
+            "q": "«البطيء»؟ (مراجعة!)",
+            "a": "langsam"
+          },
+          {
+            "q": "«بوضوح»؟ (مراجعة!)",
+            "a": "deutlich"
+          },
+          {
+            "q": "«يتحدّث بطلاقة.»؟ (المفردة الثابتة!)",
+            "a": "Er spricht flüssig."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Zeitdruck ist groß, aber er spricht flüssig. Er beschleunigt die Arbeit und die Antwort ist klar. Drei Minuten statt vier: schnell und deutlich. Das Gespräch ist kurz und die Pause ist klein. Er spricht sofort und jetzt. Flüssig und klar — geschafft!",
+      "ar": "ضغط الوقت كبير لكنه يتحدّث بطلاقة. يسرّع العمل والاجابة واضحة. ثلاث دقائق بدل أربع: سريع وواضح. الحوار قصير والاستراحة قصيرة. يتحدّث فورًا والآن. بطلاقة ووضوح — أُنجز!"
+    },
+    "srsBundleWordIds": [
+      "zeitdruck",
+      "fluessig",
+      "beschleunigen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Zeitdruck!",
+          "de": "~~Die Zeitdruck ist groß.~~"
+        },
+        "correct": {
+          "ar": "der Zeitdruck!",
+          "de": "Der Zeitdruck ist groß."
+        },
+        "exercise": {
+          "q": "___ Zeitdruck ist groß.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الوقت» مذكّر لكن «الضغط» يُضاف فيُقال الضغط! والألمانية: der Zeitdruck مركّب مذكّر بـ der (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "flüssig بحرف جر!",
+          "de": "~~Er spricht mit flüssig.~~"
+        },
+        "correct": {
+          "ar": "ظرف بلا حرف: spricht flüssig!",
+          "de": "Er spricht flüssig."
+        },
+        "exercise": {
+          "q": "Er spricht ___.",
+          "a": "flüssig"
+        },
+        "whyArabicSpeakerFails": "العربية: «ببطلاقة» بالباء! والألمانية: flüssig ظرف مجرّد بلا حرف جر (spricht flüssig!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "المصدر بدل المضارع!",
+          "de": "~~Er beschleunigen die Arbeit.~~"
+        },
+        "correct": {
+          "ar": "المضارع: beschleunigt!",
+          "de": "Er beschleunigt die Arbeit."
+        },
+        "exercise": {
+          "q": "Er ___ die Arbeit. (يسرّع!)",
+          "a": "beschleunigt"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل ماضٍ ومضارع بلا تصريف للفاعل! والألمانية: er beschleunigt (لا beschleunigen!) — التصريف إلزامي (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Zeitdruck",
+      "https://www.duden.de/rechtschreibung/fluessig",
+      "https://www.duden.de/rechtschreibung/beschleunigen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-zeitdruck",
+    "word-fluessig",
+    "word-beschleunigen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 13: التكثيف — محاكاة 75% وقت!)",
+    "goetheWordListOverlap": [
+      "zeitdruck",
+      "fluessig",
+      "beschleunigen"
+    ]
+  }
+}

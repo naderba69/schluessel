@@ -1,0 +1,495 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u11-d5",
+  "level": "B1",
+  "unit": 11,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Antwort ist verständlich — und die Frage ist präzise!",
+    "ar": "يوم الأسئلة والأجوبة! (سؤال! إجابة! مثال!) — الوحدة 11: الهوايات والمجتمع!"
+  },
+  "canDoDaily": [
+    "يجيب بإجابة مفهومة وموسّعة ومثال! (verständlich! ausführlich! beispielsweise!)",
+    "يركّز على نقطة واحدة ويُقدّر السائل! (Schwerpunkt! Wertschätzung!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "roman",
+      "hauptteil",
+      "entwurf"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الإجابة مفهومة.»؟"
+        },
+        "choices": [
+          "Die Antwort ist verständlich.",
+          "Der Antwort ist verständlich.",
+          "Das Antwort ist verständlich."
+        ],
+        "answer": "Die Antwort ist verständlich.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«على سبيل المثال يقرأ الروايات.»؟ (المرتبة الثانية!)"
+        },
+        "choices": [
+          "Beispielsweise liest er Romane.",
+          "Beispielsweise er liest Romane.",
+          "Er beispielsweise liest Romane."
+        ],
+        "answer": "Beispielsweise liest er Romane.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "sichtweise",
+      "schwerpunkt",
+      "wertschaetzung",
+      "verstaendlich",
+      "ausfuehrlich",
+      "beispielsweise",
+      "gespannt",
+      "geduldig",
+      "aufmerksam",
+      "hilfreich",
+      "selbstverstaendlich",
+      "praezise",
+      "beeindrucken",
+      "faszinieren",
+      "vertiefen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order",
+      "adjektiv"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Antwort ist verständlich und der Schwerpunkt ist klar!",
+        "ar": "يجيب عن ٦ أسئلة حول هوايته بإجابات مفهومة!"
+      },
+      "situation": {
+        "de": "Sechs Fragen, sechs Antworten, ein Schwerpunkt.",
+        "ar": "ستة أسئلة! ستة إجابات! محور واحد! (جولة الأسئلة!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في الإجابات!",
+        "الركان: Frage ← Antwort ← Beispiel!",
+        "المرتبة الثانية بعد الظرف: Beispielsweise LIEST er!",
+        "الأفعال الثلاثة ضعيفة (hat beeindruckt/fasziniert/vertieft!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Sichtweise! Schwerpunkt! Wertschätzung!"
+        ],
+        "interleavedWith": [
+          "roman",
+          "hauptteil",
+          "entwurf"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "زاوية النظر",
+                "de": "die Sichtweise"
+              },
+              {
+                "ar": "محور التركيز",
+                "de": "der Schwerpunkt"
+              },
+              {
+                "ar": "التقدير",
+                "de": "die Wertschätzung"
+              },
+              {
+                "ar": "مفهوم",
+                "de": "verständlich"
+              }
+            ],
+            "why": "die Sichtweise زاوية النظر (die!) · der Schwerpunkt محور التركيز (der!) · die Wertschätzung التقدير (die!) · verständlich مفهوم (صفة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "بالتفصيل",
+                "de": "ausführlich"
+              },
+              {
+                "ar": "على سبيل المثال",
+                "de": "beispielsweise"
+              },
+              {
+                "ar": "متشوّق",
+                "de": "gespannt"
+              },
+              {
+                "ar": "صبور",
+                "de": "geduldig"
+              }
+            ],
+            "why": "ausführlich بالتفصيل (ظرف!) · beispielsweise على سبيل المثال (ظرف في الصدر!) · gespannt متشوّق (صفة!) · geduldig صبور (صفة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "منتبه",
+                "de": "aufmerksam"
+              },
+              {
+                "ar": "نافع",
+                "de": "hilfreich"
+              },
+              {
+                "ar": "بالتأكيد",
+                "de": "selbstverständlich"
+              },
+              {
+                "ar": "دقيق",
+                "de": "präzise"
+              }
+            ],
+            "why": "aufmerksam منتبه (صفة! مع Aufmerksamkeit!) · hilfreich نافع (صفة!) · selbstverständlich بالتأكيد (ظرف!) · präzise دقيق (صفة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يُبهر",
+                "de": "beeindrucken"
+              },
+              {
+                "ar": "يجذب بشدة",
+                "de": "faszinieren"
+              },
+              {
+                "ar": "يُعمّق",
+                "de": "vertiefen"
+              }
+            ],
+            "why": "beeindrucken يُبهر (ضعيف!) · faszinieren يجذب (ضعيف!) · vertiefen يُعمّق (ضعيف! — الثلاثة بلا تغيير!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "جولة الأسئلة!"
+        ],
+        "interleavedWith": [
+          "sichtweise",
+          "schwerpunkt",
+          "wertschaetzung"
+        ],
+        "items": [
+          {
+            "q": "Die Antwort ist ___. (مفهوم!)",
+            "a": "verständlich",
+            "why": "verständlich مفهوم (صفة!) — die Antwort ist verständlich. (ars-fragerunde!)"
+          },
+          {
+            "q": "Er antwortet ___. (بالتفصيل!)",
+            "a": "ausführlich",
+            "why": "ausführlich بالتفصيل (ظرف!) — er antwortet ausführlich."
+          },
+          {
+            "q": "___ liest er Romane. (على سبيل المثال! الفعل ثانياً!)",
+            "a": "Beispielsweise",
+            "why": "الظرف في الصدر ← الفعل ثانياً! Beispielsweise LIEST er! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "Der ___ ist klar. (محور التركيز!)",
+            "a": "Schwerpunkt",
+            "why": "der Schwerpunkt محور التركيز (der!) — der Schwerpunkt ist klar."
+          },
+          {
+            "q": "Er ___ die Antwort. (يُعمّق!)",
+            "a": "vertieft",
+            "why": "vertiefen ضعيف! Er vertieft die Antwort. (hat vertieft!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "المرتبة الثانية! الأداة! الماضي!"
+        ],
+        "interleavedWith": [
+          "verstaendlich",
+          "ausfuehrlich",
+          "gespannt"
+        ],
+        "items": [
+          {
+            "q": "~~Beispielsweise er liest Romane.~~",
+            "a": "Beispielsweise liest er Romane.",
+            "why": "الظرف في الصدر ← الفعل ثانياً لا الضمير! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~der Wertschätzung ist groß~~",
+            "a": "die Wertschätzung ist groß",
+            "why": "die Wertschätzung التقدير (die! مؤنث — لا der!)"
+          },
+          {
+            "q": "~~Er hat die Frage beeindruckte.~~",
+            "a": "Er hat die Frage beeindruckt.",
+            "why": "beeindrucken ضعيف! hat beeindruckt (لا beeindruckte!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — الجولة كلام!",
+          "Frage! Antwort! Beispiel!"
+        ],
+        "interleavedWith": [
+          "geduldig",
+          "aufmerksam",
+          "hilfreich"
+        ],
+        "items": [
+          {
+            "q": "اسأل عن زاوية النظر! (جملتان!)",
+            "a": "Was meinen Sie? Die Sichtweise ist wichtig.",
+            "why": "السؤال ثم التعقيب! (ars-fragerunde!)"
+          },
+          {
+            "q": "أجب بالتفصيل مع مثال! (جملتان!)",
+            "a": "Er antwortet ausführlich. Beispielsweise liest er Romane.",
+            "why": "التوسّع ثم المثال! (ausführlich! beispielsweise!)"
+          },
+          {
+            "q": "اختم بالتركيز والتقدير! (جملتان!)",
+            "a": "Der Schwerpunkt ist klar. Die Wertschätzung ist groß.",
+            "why": "التركيز ثم التقدير! (Schwerpunkt! Wertschätzung!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«زاوية النظر»؟",
+            "a": "die Sichtweise"
+          },
+          {
+            "q": "«محور التركيز»؟",
+            "a": "der Schwerpunkt"
+          },
+          {
+            "q": "«التقدير»؟",
+            "a": "die Wertschätzung"
+          },
+          {
+            "q": "«مفهوم»؟",
+            "a": "verständlich"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يجيب بالتفصيل.»؟",
+            "a": "Er antwortet ausführlich."
+          },
+          {
+            "q": "«على سبيل المثال»؟",
+            "a": "beispielsweise"
+          },
+          {
+            "q": "«متشوّق»؟",
+            "a": "gespannt"
+          },
+          {
+            "q": "«صبور»؟",
+            "a": "geduldig"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يُبهر»؟",
+            "a": "beeindrucken"
+          },
+          {
+            "q": "«يجذب بشدة»؟",
+            "a": "faszinieren"
+          },
+          {
+            "q": "«يُعمّق الإجابة.»؟",
+            "a": "Er vertieft die Antwort."
+          },
+          {
+            "q": "«بالتأكيد»؟",
+            "a": "selbstverständlich"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Sichtweise ist wichtig und der Schwerpunkt ist klar. Die Wertschätzung ist groß und die Antwort ist verständlich. Er antwortet ausführlich und beispielsweise liest er Romane. Er ist gespannt und geduldig und aufmerksam. Der Tipp ist hilfreich und selbstverständlich hilft er. Er antwortet präzise. Die Frage beeindruckt ihn und das Hobby fasziniert ihn. Er vertieft die Antwort!",
+      "ar": "زاوية النظر مهمة ومحور التركيز واضح. التقدير كبير والإجابة مفهومة. هو يجيب بالتفصيل وعلى سبيل المثال يقرأ الروايات. هو متشوّق وصبور ومنتبه. النصيحة نافعة وبالتأكيد هو يساعد. يجيب بدقة. السؤال يُبهره والهواية تجذبه بشدة. هو يُعمّق الإجابة!"
+    },
+    "srsBundleWordIds": [
+      "sichtweise",
+      "schwerpunkt",
+      "wertschaetzung",
+      "verstaendlich",
+      "ausfuehrlich",
+      "beispielsweise",
+      "gespannt",
+      "geduldig",
+      "aufmerksam",
+      "hilfreich",
+      "selbstverstaendlich",
+      "praezise",
+      "beeindrucken",
+      "faszinieren",
+      "vertiefen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "الضمير قبل الفعل بعد الظرف!",
+          "de": "~~Beispielsweise er liest Romane.~~"
+        },
+        "correct": {
+          "ar": "الفعل ثانياً: Beispielsweise liest er!",
+          "de": "Beispielsweise liest er Romane."
+        },
+        "exercise": {
+          "q": "Beispielsweise ___ er Romane.",
+          "a": "liest"
+        },
+        "whyArabicSpeakerFails": "العربية: «مثلاً هو يقرأ» — الضمير بعد الظرف! والألمانية: الفعل في المرتبة الثانية بعد أول جزء (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Wertschätzung!",
+          "de": "~~der Wertschätzung ist groß~~"
+        },
+        "correct": {
+          "ar": "die Wertschätzung!",
+          "de": "die Wertschätzung ist groß"
+        },
+        "exercise": {
+          "q": "___ Wertschätzung ist groß.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التقدير كبير» — بلا أداة جنس! والألمانية: die Wertschätzung مؤنثة (die! لا der!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "hat beeindruckte!",
+          "de": "~~Er hat die Frage beeindruckte.~~"
+        },
+        "correct": {
+          "ar": "الضعيف: hat beeindruckt!",
+          "de": "Er hat die Frage beeindruckt."
+        },
+        "exercise": {
+          "q": "Er hat die Frage ___. (الماضي!)",
+          "a": "beeindruckt"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل الماضي بالجذر! والألمانية: beeindrucken ضعيف (beeindruckte! beeindruckt — بلا تغيير!) (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Sichtweise",
+      "https://www.duden.de/rechtschreibung/Schwerpunkt",
+      "https://www.duden.de/rechtschreibung/Wertschaetzung",
+      "https://www.duden.de/rechtschreibung/verstaendlich",
+      "https://www.duden.de/rechtschreibung/ausfuehrlich",
+      "https://www.duden.de/rechtschreibung/beispielsweise",
+      "https://www.duden.de/rechtschreibung/gespannt",
+      "https://www.duden.de/rechtschreibung/geduldig",
+      "https://www.duden.de/rechtschreibung/aufmerksam",
+      "https://www.duden.de/rechtschreibung/hilfreich",
+      "https://www.duden.de/rechtschreibung/selbstverstaendlich",
+      "https://www.duden.de/rechtschreibung/praezise",
+      "https://www.duden.de/rechtschreibung/beeindrucken",
+      "https://www.duden.de/rechtschreibung/faszinieren",
+      "https://www.duden.de/rechtschreibung/vertiefen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-sichtweise",
+    "word-schwerpunkt",
+    "word-wertschaetzung",
+    "word-verstaendlich",
+    "word-ausfuehrlich",
+    "word-beispielsweise",
+    "word-gespannt",
+    "word-geduldig",
+    "word-aufmerksam",
+    "word-hilfreich",
+    "word-selbstverstaendlich",
+    "word-praezise",
+    "word-beeindrucken",
+    "word-faszinieren",
+    "word-vertiefen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 11: الهوايات والمجتمع — أسئلة وأجوبة)",
+    "goetheWordListOverlap": [
+      "sichtweise",
+      "schwerpunkt",
+      "wertschaetzung",
+      "verstaendlich",
+      "ausfuehrlich",
+      "beispielsweise",
+      "gespannt",
+      "geduldig",
+      "aufmerksam",
+      "hilfreich",
+      "selbstverstaendlich",
+      "praezise",
+      "beeindrucken",
+      "faszinieren",
+      "vertiefen"
+    ]
+  }
+}

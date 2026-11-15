@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "constitutionSection": "10‑ي",
+ "id": "ars-moderation",
+ "kind": "shufra",
+ "title": {
+  "ar": "إدارة النقاش!",
+  "de": "Moderation — Runde · Redebeitrag · Abstimmung · Beschluss"
+ },
+ "levelIntroduced": "B1",
+ "riskLevel": "orange",
+ "payload": {
+  "topicAr": "قالب إدارة النقاش! (جولة! مشاركة! تصويت! قرار!)",
+  "sceneAr": "النقاش القصير يُدار كجولات! أفتح الجولة (Runde offen!)، أُدير المشاركة (Redebeitrag! mitreden!)، ثم أصوّت (Abstimmung! Mehrheit!) وأُنفّذ القرار (Beschluss umsetzen!) — دور المدير ثابت!",
+  "examples": [
+   {
+    "de": "Die Runde ist offen.",
+    "ar": "الجولة مفتوحة. (الافتتاح!)"
+   },
+   {
+    "de": "Mein Redebeitrag ist kurz.",
+    "ar": "مساهمتي قصيرة. (المشاركة!)"
+   },
+   {
+    "de": "Wir reden mit.",
+    "ar": "نشارك بالكلام. (الكلام للجميع!)"
+   },
+   {
+    "de": "Die Abstimmung kommt.",
+    "ar": "التصويت قادم. (القرار!)"
+   },
+   {
+    "de": "Die Mehrheit stimmt zu.",
+    "ar": "الأكثرية تُوافق. (النتيجة!)"
+   },
+   {
+    "de": "Wir setzen den Beschluss um.",
+    "ar": "نُنفّذ القرار. (التنفيذ!)"
+   }
+  ],
+  "inferencePromptAr": "لاحظ: النقاش مُدار كجولات لا فوضى! (Runde ← Redebeitrag ← Abstimmung ← Beschluss umsetzen!) — والمفردات ثابتة: sich beteiligen AN! umsetzen منفصل! Mehrheit تُوافق!",
+  "ruleDe": "Die Runde ist offen. · Mein Redebeitrag ist kurz. · Wir reden mit. · Die Abstimmung kommt. · Die Mehrheit stimmt zu. · Wir setzen den Beschluss um.",
+  "ruleAr": "قالب إدارة النقاش: (1) الافتتاح: Die Runde ist offen! (2) المشاركة: Mein Redebeitrag! mitreden! (3) التصويت: Die Abstimmung kommt! (4) النتيجة: Die Mehrheit stimmt zu! (5) التنفيذ: den Beschluss umsetzen!",
+  "contrastAr": "العربية: «أقول رأيي!» — مباشرة بلا جولات ولا أدوار! والألمانية: النقاش مُدار (Runde! Rolle! Moderation!) — والمفردات ثابتة: sich beteiligen AN der Runde! Wir stimmen überein! (الجزء ein آخر!) den Beschluss umsetzen (منفصل!) (خريطة التداخل 10‑ي).",
+  "limitsAr": [
+   "sich beteiligen يتعدّى بـ AN: an der Runde!",
+   "übereinstimmen: Wir stimmen überein! (الجزء ein آخر!)",
+   "umsetzen: den Beschluss umsetzen (منفصل: setzt … um!)",
+   "der Beschluss القرار (der! — الأسم من beschließen المُدرَّس!)"
+  ],
+  "beads": [
+   "Die Runde ist offen.",
+   "Mein Redebeitrag ist kurz.",
+   "Wir reden mit.",
+   "Die Abstimmung kommt.",
+   "Die Mehrheit stimmt zu.",
+   "Wir setzen den Beschluss um."
+  ],
+  "properNouns": []
+ },
+ "usedInLessons": [
+  "b1-u9-d5"
+ ]
+}

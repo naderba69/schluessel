@@ -1,0 +1,483 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u10-d4",
+  "level": "B1",
+  "unit": 10,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Auswertung ist klar — und die Prognose ist deutlich!",
+    "ar": "يوم التقرير الرقمي! (جمع! تحليل! نتيجة! توقّع!) — الوحدة 10: الأرقام والإحصاء!"
+  },
+  "canDoDaily": [
+    "يكتب تقريراً رقمياً بالبروتوكول! (Erhebung ← Stichprobe ← Auswertung ← Stand ← Prognose!)",
+    "يجمع ويحلّل بالمفردات الثابتة! (erheben! auswerten! verteilen! ergeben!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "grafik",
+      "verlauf",
+      "spitze"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«المسح مُمثِّل.»؟"
+        },
+        "choices": [
+          "Die Erhebung ist repräsentativ.",
+          "Die Erhebung ist fertig.",
+          "Die Erhebung ist groß."
+        ],
+        "answer": "Die Erhebung ist repräsentativ.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«hat ___» (جمع البيانات! الماضي!)"
+        },
+        "choices": [
+          "erhoben",
+          "erhebt",
+          "erhob"
+        ],
+        "answer": "erhoben",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "auswerten",
+      "auswertung",
+      "erheben",
+      "erhebung",
+      "stichprobe",
+      "repraesentativ",
+      "prognose",
+      "wachstum",
+      "niveau",
+      "verteilung",
+      "verteilen",
+      "spanne",
+      "ergeben",
+      "stand",
+      "anzahl"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-bericht"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Kein Problem — die Erhebung ist repräsentativ und die Prognose klar!",
+        "ar": "يكتب تقريراً رقمياً في 8 جمل!"
+      },
+      "situation": {
+        "de": "Eine Erhebung, eine Auswertung, eine Prognose.",
+        "ar": "مسح! تحليل! وتوقّع واضح!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في التقرير!",
+        "البروتوكول: Erhebung ← Stichprobe ← Auswertung ← Stand ← Prognose!",
+        "الماضي القويّ: hat erhoben! (لا erhebt!)",
+        "النتيجة: die Summe ergibt zwanzig!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Erhebung! Auswertung! Prognose!"
+        ],
+        "interleavedWith": [
+          "grafik",
+          "verlauf",
+          "spitze"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "يُحلّل (البيانات)",
+                "de": "auswerten"
+              },
+              {
+                "ar": "التحليل (الإحصائي)",
+                "de": "die Auswertung"
+              },
+              {
+                "ar": "يجمع (البيانات)",
+                "de": "erheben"
+              },
+              {
+                "ar": "جمع (البيانات)",
+                "de": "die Erhebung"
+              }
+            ],
+            "why": "auswerten يُحلّل (wertet aus! منفصل!) · die Auswertung التحليل (klar!) · erheben يجمع (hat erhoben! قويّ!) · die Erhebung الجمع (repräsentativ!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "العيّنة (الإحصائية)",
+                "de": "die Stichprobe"
+              },
+              {
+                "ar": "مُمثِّل",
+                "de": "repräsentativ"
+              },
+              {
+                "ar": "التوقّع (المستقبلي)",
+                "de": "die Prognose"
+              },
+              {
+                "ar": "النمو",
+                "de": "das Wachstum"
+              }
+            ],
+            "why": "die Stichprobe العيّنة (Stichproben!) · repräsentativ مُمثِّل (صفة!) · die Prognose التوقّع (stellen!) · das Wachstum النمو (das! stark!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المستوى",
+                "de": "das Niveau"
+              },
+              {
+                "ar": "التوزيع",
+                "de": "die Verteilung"
+              },
+              {
+                "ar": "المدى (الرقمي)",
+                "de": "die Spanne"
+              },
+              {
+                "ar": "يُعطي (نتيجة)",
+                "de": "ergeben"
+              }
+            ],
+            "why": "das Niveau المستوى (das! Niveaus!) · die Verteilung التوزيع (klar!) · die Spanne المدى (die!) · ergeben يُعطي (ergibt zwanzig!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "التقرير الرقمي!"
+        ],
+        "interleavedWith": [
+          "auswerten",
+          "erheben",
+          "verteilen"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist repräsentativ. (المسح!)",
+            "a": "Erhebung",
+            "why": "die Erhebung الجمع/المسح — repräsentativ! (ars-bericht!)"
+          },
+          {
+            "q": "Die ___ ist klein. (العيّنة!)",
+            "a": "Stichprobe",
+            "why": "die Stichprobe العيّنة (die Stichproben!) — die Stichprobe ist klein."
+          },
+          {
+            "q": "Er hat die Werte ___. (جمع! الماضي القويّ!)",
+            "a": "erhoben",
+            "why": "erheben قويّ! hat ERHOBEN (لا erhebt!)"
+          },
+          {
+            "q": "Das ___ ist hoch. (المستوى!)",
+            "a": "Niveau",
+            "why": "das Niveau المستوى (das! لا der!) — das Niveau ist hoch."
+          },
+          {
+            "q": "Die Summe ___ zwanzig. (تعطي!)",
+            "a": "ergibt",
+            "why": "يعطي = ergeben: Die Summe ergibt zwanzig. (ergibt = صيغة المضارع!)"
+          },
+          {
+            "q": "Die ___ ist deutlich. (التوقّع!)",
+            "a": "Prognose",
+            "why": "die Prognose التوقّع — eine Prognose stellen!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الماضي! الأداة!"
+        ],
+        "interleavedWith": [
+          "stichprobe",
+          "repraesentativ",
+          "anzahl"
+        ],
+        "items": [
+          {
+            "q": "~~der Niveau ist hoch~~",
+            "a": "das Niveau ist hoch",
+            "why": "das Niveau المستوى (das! محايد — لا der!)"
+          },
+          {
+            "q": "~~Er hat die Werte erhebt.~~",
+            "a": "Er hat die Werte erhoben.",
+            "why": "erheben قويّ! hat ERHOBEN (لا erhebt!) — شاذّ كـ geben/gaben!"
+          },
+          {
+            "q": "~~der Spanne ist groß~~",
+            "a": "die Spanne ist groß",
+            "why": "die Spanne المدى (die! مؤنث — لا der!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — التقرير كلام!",
+          "Erhebung! Auswertung! Prognose!"
+        ],
+        "interleavedWith": [
+          "auswertung",
+          "prognose",
+          "wachstum"
+        ],
+        "items": [
+          {
+            "q": "افتح التقرير! (جملتان!)",
+            "a": "Die Erhebung ist repräsentativ. Die Stichprobe ist klein.",
+            "why": "الافتتاح بالجمع والعيّنة! (ars-bericht!)"
+          },
+          {
+            "q": "اشرح التحليل! (جملتان!)",
+            "a": "Die Auswertung ist klar. Der Stand ist stabil.",
+            "why": "Auswertung! Stand stabil! (التحليل والوضع!)"
+          },
+          {
+            "q": "اختم بالنتيجة والتوقّع! (3 جمل!)",
+            "a": "Die Summe ergibt zwanzig. Das Wachstum ist stark. Die Prognose ist deutlich!",
+            "why": "ergibt! Wachstum! Prognose! (الخاتمة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المسح مُمثِّل.»؟",
+            "a": "Die Erhebung ist repräsentativ."
+          },
+          {
+            "q": "«العيّنة»؟",
+            "a": "die Stichprobe"
+          },
+          {
+            "q": "«التحليل واضح.»؟",
+            "a": "Die Auswertung ist klar."
+          },
+          {
+            "q": "«المستوى»؟",
+            "a": "das Niveau"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«hat ___» (جمع! الماضي!)",
+            "a": "erhoben"
+          },
+          {
+            "q": "«المجموع يعطي عشرين.»؟",
+            "a": "Die Summe ergibt zwanzig."
+          },
+          {
+            "q": "«التوقّع»؟",
+            "a": "die Prognose"
+          },
+          {
+            "q": "«النمو قويّ.»؟",
+            "a": "Das Wachstum ist stark."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التوزيع»؟",
+            "a": "die Verteilung"
+          },
+          {
+            "q": "«يوزّع القيم.»؟",
+            "a": "Er verteilt die Werte."
+          },
+          {
+            "q": "«المدى»؟",
+            "a": "die Spanne"
+          },
+          {
+            "q": "«المستوى مستقرّ.»؟",
+            "a": "Der Stand ist stabil."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Erhebung ist repräsentativ und die Stichprobe ist klein. Er erhebt die Werte und wir werten die Summe aus. Die Auswertung ist klar. Die Verteilung ist deutlich und er verteilt die Werte. Das Niveau ist hoch und der Stand ist stabil. Die Spanne ist groß und die Anzahl steigt. Die Summe ergibt zwanzig. Das Wachstum ist stark und die Prognose ist deutlich!",
+      "ar": "المسح مُمثِّل والعيّنة صغيرة. يجمع القيم ونُحلّل المجموع. التحليل واضح. التوزيع واضح وهو يوزّع القيم. المستوى عالٍ والوضع مستقرّ. المدى كبير والعدد يرتفع. المجموع يعطي عشرين. النمو قويّ والتوقّع واضح!"
+    },
+    "srsBundleWordIds": [
+      "auswerten",
+      "auswertung",
+      "erheben",
+      "erhebung",
+      "stichprobe",
+      "repraesentativ",
+      "prognose",
+      "wachstum",
+      "niveau",
+      "verteilung",
+      "verteilen",
+      "spanne",
+      "ergeben",
+      "stand",
+      "anzahl"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Niveau!",
+          "de": "~~der Niveau ist hoch~~"
+        },
+        "correct": {
+          "ar": "das Niveau (das! محايد!) — المستوى!",
+          "de": "das Niveau ist hoch"
+        },
+        "exercise": {
+          "q": "___ Niveau ist hoch. (الأداة!)",
+          "a": "Das"
+        },
+        "whyArabicSpeakerFails": "العربية: «المستوى» — مذكّر! والألمانية: das Niveau محايد (كلمة فرنسية!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "hat erhebt!",
+          "de": "~~Er hat die Werte erhebt.~~"
+        },
+        "correct": {
+          "ar": "القويّ الشاذّ: hat erhoben!",
+          "de": "Er hat die Werte erhoben."
+        },
+        "exercise": {
+          "q": "Er hat die Werte ___. (الماضي!)",
+          "a": "erhoben"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل الماضي بالجذر! والألمانية: erheben شاذّ (erhob! erhoben!) كـ geben (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Spanne!",
+          "de": "~~der Spanne ist groß~~"
+        },
+        "correct": {
+          "ar": "die Spanne (die!) — المدى!",
+          "de": "die Spanne ist groß"
+        },
+        "exercise": {
+          "q": "___ Spanne ist groß. (الأداة!)",
+          "a": "Die"
+        },
+        "whyArabicSpeakerFails": "العربية: «المدى» — مذكّر! والألمانية: die Spanne مؤنث (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/auswerten",
+      "https://www.duden.de/rechtschreibung/Auswertung",
+      "https://www.duden.de/rechtschreibung/erheben",
+      "https://www.duden.de/rechtschreibung/Erhebung",
+      "https://www.duden.de/rechtschreibung/Stichprobe",
+      "https://www.duden.de/rechtschreibung/repraesentativ",
+      "https://www.duden.de/rechtschreibung/Prognose",
+      "https://www.duden.de/rechtschreibung/Wachstum",
+      "https://www.duden.de/rechtschreibung/Niveau",
+      "https://www.duden.de/rechtschreibung/Verteilung",
+      "https://www.duden.de/rechtschreibung/verteilen",
+      "https://www.duden.de/rechtschreibung/Spanne",
+      "https://www.duden.de/rechtschreibung/ergeben",
+      "https://www.duden.de/rechtschreibung/Stand",
+      "https://www.duden.de/rechtschreibung/Anzahl"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-bericht",
+    "ars-grafik"
+  ],
+  "audioManifestRefs": [
+    "word-auswerten",
+    "word-auswertung",
+    "word-erheben",
+    "word-erhebung",
+    "word-stichprobe",
+    "word-repraesentativ",
+    "word-prognose",
+    "word-wachstum",
+    "word-niveau",
+    "word-verteilung",
+    "word-verteilen",
+    "word-spanne",
+    "word-ergeben",
+    "word-stand",
+    "word-anzahl"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 10: الأرقام والإحصاء — تقرير رقمي)",
+    "goetheWordListOverlap": [
+      "auswerten",
+      "auswertung",
+      "erheben",
+      "erhebung",
+      "stichprobe",
+      "repraesentativ",
+      "prognose",
+      "wachstum",
+      "niveau",
+      "verteilung",
+      "verteilen",
+      "spanne",
+      "ergeben",
+      "stand",
+      "anzahl"
+    ]
+  }
+}

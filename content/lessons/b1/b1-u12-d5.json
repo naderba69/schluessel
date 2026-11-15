@@ -1,0 +1,442 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u12-d5",
+  "level": "B1",
+  "unit": 12,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Anerkennung ist wichtig — und das Niveau B1 ist da!",
+    "ar": "يوم المراجعة الثالثة + الثقافة! (شهادة B1! جوته وأوسد!) — الوحدة 12: التكامل!"
+  },
+  "canDoDaily": [
+    "يتحدّث عن امتحان B1 وشهادته! (die Anerkennung! das Zertifikat nachweisen!)",
+    "يصف المستوى ويُقيّم! (die Prüfung benoten! das Niveau B1!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "rechtschreibung",
+      "stil",
+      "ueberarbeiten"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الاعتراف مهم.»؟"
+        },
+        "choices": [
+          "Die Anerkennung ist wichtig.",
+          "Der Anerkennung ist wichtig.",
+          "Das Anerkennung ist wichtig."
+        ],
+        "answer": "Die Anerkennung ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«هو يُثبت الشهادة.»؟ (الانفصال!)"
+        },
+        "choices": [
+          "Er weist das Zertifikat nach.",
+          "Er nachweist das Zertifikat.",
+          "Er weist nach das Zertifikat."
+        ],
+        "answer": "Er weist das Zertifikat nach.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "anerkennung",
+      "nachweisen",
+      "benoten"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-dass-satz",
+      "ars-koennten-sie"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "untrennbar"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Anerkennung ist wichtig und das Niveau B1 ist da!",
+        "ar": "يحكي عن رحلة B1: ثقافة + شهادة + تقييم!"
+      },
+      "situation": {
+        "de": "Prüfung, Zertifikat, Anerkennung — das Niveau B1.",
+        "ar": "امتحان! شهادة! اعتراف! — المستوى B1! (الثقافة!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في الحكي!",
+        "الانفصال: الفعل المُركَّب ينفصل والجزء الأخير يهرب آخر الجملة! والفعل ذو البادئة غير المنفصلة يُصرَّف بلا زيادة التمام!",
+        "المفردات الثابتة: die Anerkennung bekommen! das Zertifikat nachweisen! die Prüfung benoten!",
+        "الثقافة: معهد جوته وأوسد! (بطاقة الثقافة!)"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Anerkennung! nachweisen! benoten!"
+        ],
+        "interleavedWith": [
+          "rechtschreibung",
+          "stil",
+          "ueberarbeiten"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الاعتراف",
+                "de": "die Anerkennung"
+              },
+              {
+                "ar": "يُثبت",
+                "de": "nachweisen"
+              },
+              {
+                "ar": "يُقيّم بدرجة",
+                "de": "benoten"
+              }
+            ],
+            "why": "die Anerkennung الاعتراف (die!) · nachweisen يُثبت (منفصل: weist … nach!) · benoten يُقيّم (be- بلا ge-: hat benotet!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الشهادة",
+                "de": "das Zertifikat"
+              },
+              {
+                "ar": "الامتحان",
+                "de": "die Prüfung"
+              },
+              {
+                "ar": "المستوى",
+                "de": "das Niveau"
+              },
+              {
+                "ar": "الدرجة",
+                "de": "die Note"
+              }
+            ],
+            "why": "مراجعة الثقافة! das Zertifikat الشهادة · die Prüfung الامتحان · das Niveau المستوى (das!) · die Note الدرجة"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الثقافة",
+                "de": "die Kultur"
+              },
+              {
+                "ar": "التقليد",
+                "de": "die Tradition"
+              },
+              {
+                "ar": "دولي",
+                "de": "international"
+              },
+              {
+                "ar": "رسمي",
+                "de": "offiziell"
+              }
+            ],
+            "why": "مراجعة كلمات الثقافة! die Kultur · die Tradition · international · offiziell"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الخبرة",
+                "de": "die Erfahrung"
+              },
+              {
+                "ar": "يشارك",
+                "de": "teilen"
+              },
+              {
+                "ar": "يمرّ بـ",
+                "de": "erleben"
+              },
+              {
+                "ar": "معروف",
+                "de": "bekannt"
+              }
+            ],
+            "why": "مراجعة رحلة B1! die Erfahrung الخبرة · teilen يشارك · erleben يمرّ بـ · bekannt معروف"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الثقافة والشهادة!"
+        ],
+        "interleavedWith": [
+          "anerkennung",
+          "nachweisen",
+          "benoten"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (الاعتراف!)",
+            "a": "Anerkennung",
+            "why": "die Anerkennung الاعتراف (die!) — die Anerkennung ist wichtig."
+          },
+          {
+            "q": "Er ___ das Zertifikat ___. (يُثبت! منفصل!)",
+            "a": "weist … nach",
+            "why": "nachweisen منفصل! Er weist das Zertifikat nach. (الجزء nach آخر!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "Der Lehrer ___ die Prüfung. (يُقيّم بدرجة!)",
+            "a": "benotet",
+            "why": "benoten يُقيّم (be- غير منفصل!) — der Lehrer benotet die Prüfung."
+          },
+          {
+            "q": "Das ___ B1 ist wichtig. (المستوى!)",
+            "a": "Niveau",
+            "why": "das Niveau المستوى (das!) — das Niveau B1."
+          },
+          {
+            "q": "Die ___ ist offiziell. (الشهادة!)",
+            "a": "Prüfung",
+            "why": "die Prüfung الامتحان (die!) — مراجعة الثقافة (البطاقة b1-landeskunde-u12!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الانفصال! الـge-!"
+        ],
+        "interleavedWith": [
+          "pruefung",
+          "zertifikat",
+          "niveau"
+        ],
+        "items": [
+          {
+            "q": "~~das Anerkennung ist wichtig~~",
+            "a": "die Anerkennung ist wichtig",
+            "why": "die Anerkennung الاعتراف (die! مؤنث — لا das!)"
+          },
+          {
+            "q": "~~Er nachweist das Zertifikat.~~",
+            "a": "Er weist das Zertifikat nach.",
+            "why": "nachweisen منفصل! weist … nach (الجزء nach آخر!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "~~Er benotet die Prüfung auf.~~",
+            "a": "Er benotet die Prüfung.",
+            "why": "benoten بادئته be- غير منفصلة — لا ينفلت ولا زيادة تمام: hat benotet!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — ثقافة وشهادة!",
+          "Anerkennung! Zertifikat! Prüfung!"
+        ],
+        "interleavedWith": [
+          "kultur",
+          "tradition",
+          "erfahrung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالثقافة! (جملتان!)",
+            "a": "Die Kultur ist bekannt. Die Tradition ist international.",
+            "why": "الثقافة أولًا! (مراجعة كلمات الوحدة 6!)"
+          },
+          {
+            "q": "تكلّم عن الشهادة! (جملتان!)",
+            "a": "Die Anerkennung ist wichtig. Er weist das Zertifikat nach.",
+            "why": "الاعتراف ثم الإثبات! (das Zertifikat nachweisen!)"
+          },
+          {
+            "q": "تكلّم عن الامتحان! (جملتان!)",
+            "a": "Die Prüfung ist offiziell. Der Lehrer benotet die Prüfung.",
+            "why": "الامتحان ثم التقييم! (die Prüfung benoten!)"
+          },
+          {
+            "q": "اختم بتجربتك! (جملتان!)",
+            "a": "Die Erfahrung ist gut. Das Niveau B1 ist da.",
+            "why": "التجربة ثم المستوى! (b1-landeskunde-u12!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الاعتراف»؟",
+            "a": "die Anerkennung"
+          },
+          {
+            "q": "«يُثبت الشهادة.»؟ (الانفصال!)",
+            "a": "Er weist das Zertifikat nach."
+          },
+          {
+            "q": "«يُقيّم الامتحان بدرجة.»؟",
+            "a": "Er benotet die Prüfung."
+          },
+          {
+            "q": "«الشهادة»؟ (الثقافة!)",
+            "a": "das Zertifikat"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الامتحان»؟ (الثقافة!)",
+            "a": "die Prüfung"
+          },
+          {
+            "q": "«المستوى»؟ (الثقافة!)",
+            "a": "das Niveau"
+          },
+          {
+            "q": "«الدرجة»؟ (الثقافة!)",
+            "a": "die Note"
+          },
+          {
+            "q": "«رسمي»؟ (الثقافة!)",
+            "a": "offiziell"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الثقافة»؟ (مراجعة!)",
+            "a": "die Kultur"
+          },
+          {
+            "q": "«التقليد»؟ (مراجعة!)",
+            "a": "die Tradition"
+          },
+          {
+            "q": "«الخبرة»؟ (مراجعة!)",
+            "a": "die Erfahrung"
+          },
+          {
+            "q": "«يُثبت الشهادة»؟ (المفردة الثابتة!)",
+            "a": "das Zertifikat nachweisen"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Anerkennung ist wichtig und die Prüfung ist offiziell. Er weist das Zertifikat nach und der Lehrer benotet die Prüfung. Das Niveau B1 ist da und die Note ist gut. Die Kultur ist bekannt und die Tradition ist international. Die Erfahrung ist wichtig und die Prüfung hat eine Note. Die Anerkennung bekommt man mit dem Zertifikat!",
+      "ar": "الاعتراف مهم والامتحان رسمي. هو يُثبت الشهادة والمعلّم يُقيّم الامتحان بدرجة. المستوى B1 حاضر والدرجة جيدة. الثقافة معروفة والتقليد دولي. الخبرة مهمة والامتحان له درجة. الاعتراف يُنال بالشهادة!"
+    },
+    "srsBundleWordIds": [
+      "anerkennung",
+      "nachweisen",
+      "benoten"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das Anerkennung!",
+          "de": "~~das Anerkennung ist wichtig~~"
+        },
+        "correct": {
+          "ar": "die Anerkennung!",
+          "de": "die Anerkennung ist wichtig"
+        },
+        "exercise": {
+          "q": "___ Anerkennung ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الاعتراف» مذكّر! والألمانية: die Anerkennung مؤنثة (die!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "nachweisen ملتصق!",
+          "de": "~~Er nachweist das Zertifikat.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Er weist das Zertifikat nach!",
+          "de": "Er weist das Zertifikat nach."
+        },
+        "exercise": {
+          "q": "Er ___ das Zertifikat ___. (يُثبت!)",
+          "a": "weist … nach"
+        },
+        "whyArabicSpeakerFails": "العربية: «يُثبت» — كلمة واحدة! والألمانية: nachweisen منفصل والجزء nach يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "التمام مع be-!",
+          "de": "~~Er hat die Prüfung benoten.~~"
+        },
+        "correct": {
+          "ar": "hat benotet — بلا زيادة التمام!",
+          "de": "Er hat die Prüfung benotet."
+        },
+        "exercise": {
+          "q": "Er hat die Prüfung ___.",
+          "a": "benotet"
+        },
+        "whyArabicSpeakerFails": "العربية: لا تصريف للماضي! والألمانية: التمام hat benotet (benotet — لا benoten!) وبلا زيادة تمام لأن البادئة غير منفصلة (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Anerkennung",
+      "https://www.duden.de/rechtschreibung/nachweisen",
+      "https://www.duden.de/rechtschreibung/benoten"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-dass-satz",
+    "ars-koennten-sie"
+  ],
+  "audioManifestRefs": [
+    "word-anerkennung",
+    "word-nachweisen",
+    "word-benoten"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 12: التكامل — مراجعة 3 + ثقافة! البطاقة b1-landeskunde-u12!)",
+    "goetheWordListOverlap": [
+      "anerkennung",
+      "nachweisen",
+      "benoten"
+    ]
+  }
+}

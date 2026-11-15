@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u2-d1",
+  "level": "B2",
+  "unit": 2,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Luft nicht verschmutzen, Nachhaltigkeit leben und die Auswirkung verstehen!",
+    "ar": "الوحدة 2: الأرض والمناخ! (الاستدامة! الهواء! والتأثير!)"
+  },
+  "canDoDaily": [
+    "يتحدث عن الاستدامة والتأثير! (Nachhaltigkeit! Auswirkung!)",
+    "لا يلوّث الهواء! (die Luft nicht verschmutzen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "nachbarschaft",
+      "anteilnahme",
+      "vergeben"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الاستدامة مهمّة.»؟"
+        },
+        "choices": [
+          "Die Nachhaltigkeit ist wichtig.",
+          "Der Nachhaltigkeit ist wichtig.",
+          "Das Nachhaltigkeit ist wichtig."
+        ],
+        "answer": "Die Nachhaltigkeit ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نحن نلوّث الهواء.»؟"
+        },
+        "choices": [
+          "Wir verschmutzen die Luft.",
+          "Wir verschmutzen der Luft.",
+          "Wir verschmutzen den Luft."
+        ],
+        "answer": "Wir verschmutzen die Luft.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "nachhaltigkeit",
+      "auswirkung",
+      "verschmutzen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ach-laut",
+      "r-uvular"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Nachhaltigkeit leben, die Luft nicht verschmutzen und die Auswirkung verstehen!",
+        "ar": "الوحدة 2: الأرض والمناخ — الاستدامة والهواء والتأثير!"
+      },
+      "situation": {
+        "de": "Nachhaltigkeit, Auswirkung, verschmutzen — zusammen leben.",
+        "ar": "استدامة! تأثير! هواء! — نعيش معًا! (مع الأرض!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "في الماضي يذهب verschmutzt للنهاية! (Wir haben die Luft verschmutzt!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Nachhaltigkeit leben! große Auswirkung haben! die Luft verschmutzen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "nachbarschaft",
+          "anteilnahme",
+          "vergeben"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Nachhaltigkeit",
+                "ar": "الاستدامة (الدوام)"
+              },
+              {
+                "de": "die Auswirkung",
+                "ar": "التأثير (الأثر)"
+              },
+              {
+                "de": "verschmutzen",
+                "ar": "يلوّث (يُلوِّث)"
+              }
+            ],
+            "why": "die Nachhaltigkeit الاستدامة (die! die Nachhaltigkeiten!) · die Auswirkung التأثير (die! die Auswirkungen!) · verschmutzen يلوّث (ver- بلا ge-!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "Nachhaltigkeit leben",
+                "ar": "يعيش الاستدامة"
+              },
+              {
+                "de": "große Auswirkung haben",
+                "ar": "له تأثير كبير"
+              },
+              {
+                "de": "die Luft verschmutzen",
+                "ar": "يلوّث الهواء"
+              },
+              {
+                "de": "die Auswirkungen",
+                "ar": "التأثيرات (جمع -en)"
+              }
+            ],
+            "why": "Nachhaltigkeit leben! · große Auswirkung haben! · die Luft verschmutzen! · die Auswirkungen جمع -en"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gerechtigkeit",
+          "spenden",
+          "wuerde"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (الاستدامة!)",
+            "a": "Nachhaltigkeit",
+            "why": "die Nachhaltigkeit الاستدامة (die!) — Die Nachhaltigkeit ist wichtig."
+          },
+          {
+            "q": "Die ___ ist groß. (التأثير!)",
+            "a": "Auswirkung",
+            "why": "die Auswirkung التأثير (die!) — Die Auswirkung ist groß."
+          },
+          {
+            "q": "Wir ___ die Luft. (نلوّث!)",
+            "a": "verschmutzen",
+            "why": "verschmutzen يلوّث (Präsens wir: verschmutzen!) — Wir verschmutzen die Luft."
+          },
+          {
+            "q": "Die ___ auf die Menschen ist wichtig. (التأثير!)",
+            "a": "Auswirkung",
+            "why": "التأثير: Auswirkung auf die Menschen! — Die Auswirkung auf die Menschen ist wichtig."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "mensch",
+          "freundlich",
+          "ruhe"
+        ],
+        "items": [
+          {
+            "q": "~~Das Nachhaltigkeit ist wichtig.~~",
+            "a": "Die Nachhaltigkeit ist wichtig.",
+            "why": "die Nachhaltigkeit (die! لا das! — كل -keit مؤنثة!)"
+          },
+          {
+            "q": "~~Der Auswirkung ist groß.~~",
+            "a": "Die Auswirkung ist groß.",
+            "why": "die Auswirkung (die! لا der! — كل -ung مؤنثة!)"
+          },
+          {
+            "q": "~~Wir haben verschmutzt die Luft.~~",
+            "a": "Wir haben die Luft verschmutzt.",
+            "why": "في الماضي يذهب الفعل التام للنهاية! (Wir haben die Luft verschmutzt!)"
+          },
+          {
+            "q": "~~Nachhaltigkeit wir leben.~~",
+            "a": "Wir leben Nachhaltigkeit.",
+            "why": "الترتيب: الفعل في المرتبة الثانية! (Wir leben Nachhaltigkeit!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ermutigung",
+          "warnen",
+          "ablehnung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالاستدامة! (جملتان!)",
+            "a": "Nachhaltigkeit ist wichtig. Ich lebe Nachhaltigkeit.",
+            "why": "الاستدامة أولًا! (Nachhaltigkeit leben!)"
+          },
+          {
+            "q": "تحدث عن التأثير! (جملتان!)",
+            "a": "Die Auswirkung ist groß. Die Auswirkung auf die Menschen ist wichtig.",
+            "why": "التأثير! (Auswirkung auf die Menschen!)"
+          },
+          {
+            "q": "تحدث عن الهواء! (جملتان!)",
+            "a": "Die Luft ist wichtig. Wir verschmutzen die Luft nicht.",
+            "why": "الهواء! (die Luft nicht verschmutzen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الاستدامة (الدوام)»؟",
+            "a": "die Nachhaltigkeit"
+          },
+          {
+            "q": "«التأثير (الأثر)»؟",
+            "a": "die Auswirkung"
+          },
+          {
+            "q": "«يلوّث (يُلوِّث)»؟",
+            "a": "verschmutzen"
+          },
+          {
+            "q": "«نحن نلوّث الهواء.»؟",
+            "a": "Wir verschmutzen die Luft."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الاستدامة مهمّة.»؟",
+            "a": "Die Nachhaltigkeit ist wichtig."
+          },
+          {
+            "q": "die Auswirkung",
+            "a": "التأثير"
+          },
+          {
+            "q": "«التأثير على الناس كبير.»؟",
+            "a": "Die Auswirkung auf die Menschen ist groß."
+          },
+          {
+            "q": "verschmutzen",
+            "a": "يلوّث"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«هو يلوّث الهواء.»؟",
+            "a": "Er verschmutzt die Luft."
+          },
+          {
+            "q": "«التأثيرات كبيرة.»؟",
+            "a": "Die Auswirkungen sind groß."
+          },
+          {
+            "q": "die Nachhaltigkeit",
+            "a": "الاستدامة"
+          },
+          {
+            "q": "«أنا أعيش الاستدامة!»؟",
+            "a": "Ich lebe Nachhaltigkeit!"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Nachhaltigkeit ist wichtig und die Auswirkung ist da. Wir sollen die Luft nicht verschmutzen und der Tag ist schön. Er lebt Nachhaltigkeit und versteht die Auswirkung.",
+      "ar": "الاستدامة والتأثير يقوّيان الأرض — والهواء نظيف!"
+    },
+    "srsBundleWordIds": [
+      "nachhaltigkeit",
+      "auswirkung",
+      "verschmutzen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das Nachhaltigkeit!",
+          "de": "~~Das Nachhaltigkeit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Nachhaltigkeit!",
+          "de": "Die Nachhaltigkeit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Nachhaltigkeit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الاستدامة» مؤنثة ✓ — والألمانية: die Nachhaltigkeit (die!) — كل -keit مؤنثة دائماً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Auswirkung!",
+          "de": "~~Der Auswirkung ist groß.~~"
+        },
+        "correct": {
+          "ar": "die Auswirkung!",
+          "de": "Die Auswirkung ist groß."
+        },
+        "exercise": {
+          "q": "___ Auswirkung ist groß.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التأثير» مذكّر! والألمانية: die Auswirkung (die!) — كل -ung مؤنثة دائماً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "الفعل في الوسط!",
+          "de": "~~Wir haben verschmutzt die Luft.~~"
+        },
+        "correct": {
+          "ar": "الفعل في النهاية!",
+          "de": "Wir haben die Luft verschmutzt."
+        },
+        "exercise": {
+          "q": "Wir haben die Luft ___.",
+          "a": "verschmutzt"
+        },
+        "whyArabicSpeakerFails": "العربية: الترتيب حرّ! والألمانية: في الماضي يذهب الفعل التام للنهاية (verschmutzt آخر الجملة!) — والأفعال ببادئة ver تُكتب بلا ge أصلاً! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Nachhaltigkeit",
+      "https://www.duden.de/rechtschreibung/Auswirkung",
+      "https://www.duden.de/rechtschreibung/verschmutzen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-nachhaltigkeit",
+    "word-auswirkung",
+    "word-verschmutzen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 2 (الأرض والمناخ!)",
+    "goetheWordListOverlap": [
+      "nachhaltigkeit",
+      "auswirkung",
+      "verschmutzen"
+    ]
+  }
+}

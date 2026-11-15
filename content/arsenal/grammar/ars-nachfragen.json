@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "constitutionSection": "10‑ي",
+ "id": "ars-nachfragen",
+ "kind": "shufra",
+ "title": {
+  "ar": "الاستفسار والتوضيح!",
+  "de": "Nachfragen und Klärung — höflich nachfragen · Missverständnisse klären"
+ },
+ "levelIntroduced": "B1",
+ "riskLevel": "orange",
+ "payload": {
+  "topicAr": "لغة الاستفسار المهذّب وتوضيح سوء الفهم! (أسأل مجدداً! أستوضح! أصف ما حدث!)",
+  "sceneAr": "الحوار: لم أفهم! أسأل مجدداً وبأدب (Darf ich nachfragen؟) وأوضح سوء الفهم (Das war ein Missverständnis!) وأصف الموقف (Schildern Sie die Situation!) — صيغ ثابتة حرفياً!",
+  "examples": [
+   {
+    "de": "Darf ich nachfragen?",
+    "ar": "هل لي أن أسأل مجدداً؟ (الاستفسار المهذّب!)"
+   },
+   {
+    "de": "Das war ein Missverständnis.",
+    "ar": "كان ذلك سوء فهم. (التسمية الصريحة!)"
+   },
+   {
+    "de": "Wie genau meinen Sie das?",
+    "ar": "بأي معنى تقصد ذلك بالضبط؟ (طلب التحديد!)"
+   },
+   {
+    "de": "Können Sie das bitte wiederholen?",
+    "ar": "هل يمكنك إعادة ذلك من فضلك؟ (طلب الإعادة!)"
+   },
+   {
+    "de": "Ich habe eine Rückfrage.",
+    "ar": "لديّ استفسار . (السؤال اللاحق!)"
+   },
+   {
+    "de": "Danke für die Klärung!",
+    "ar": "شكراً على التوضيح! (الإغلاق المهذّب!)"
+   }
+  ],
+  "inferencePromptAr": "لاحظ: الاستفسار بالماضي المحبب (Darf ich …؟) والتصريف المجزوم أحياناً! وتسمية سوء الفهم صراحةً (Das war ein Missverständnis!) أهمّ من الصمت — والشكر يُغلق الحوار (Danke für die Klärung!)!",
+  "ruleDe": "Darf ich nachfragen? · Das war ein Missverständnis. · Wie genau meinen Sie das? · Können Sie das bitte wiederholen? · Ich habe eine Rückfrage. · Danke für die Klärung!",
+  "ruleAr": "صيغ الاستفسار والتوضيح: (1) الاستفسار المهذّب: Darf ich nachfragen? (2) تسمية سوء الفهم: Das war ein Missverständnis! (3) طلب التحديد: Wie genau meinen Sie das? (4) طلب الإعادة: Können Sie das bitte wiederholen? (5) السؤال اللاحق: Ich habe eine Rückfrage! (6) الشكر: Danke für die Klärung!",
+  "contrastAr": "العربية: «فهمت خطأ» و«سألت مجدداً» بجملة مفردة ممكنان! والألمانية: سوء الفهم يُسمّى صراحة (Das war ein Missverständnis!) والاستفسار بالصيغة المهذّبة الثابتة (Darf ich nachfragen?) — الصمت أسوأ من الخطأ (خريطة التداخل 10‑ي).",
+  "limitsAr": [
+   "الصيغ الثابتة تُحفظ حرفياً: Darf ich nachfragen? · Können Sie das bitte wiederholen?",
+   "nachfragen منفصل — الفعل في موضعه والجزء nach آخر الجملة!",
+   "Missverständnis = das دائماً! والجمع die Missverständnisse!",
+   "الأفعال القويّة: missverstehen → missverstand! verzeihen → verziehen!"
+  ],
+  "beads": [
+   "Darf ich nachfragen?",
+   "Das war ein Missverständnis.",
+   "Wie genau meinen Sie das?",
+   "Können Sie das bitte wiederholen?",
+   "Ich habe eine Rückfrage.",
+   "Danke für die Klärung!"
+  ],
+  "properNouns": []
+ },
+ "usedInLessons": [
+  "b1-u9-d1"
+ ]
+}

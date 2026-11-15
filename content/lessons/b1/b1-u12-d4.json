@@ -1,0 +1,433 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u12-d4",
+  "level": "B1",
+  "unit": 12,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Rechtschreibung ist richtig — und der Stil ist klar!",
+    "ar": "يوم محاكاة الكتابة! (إملاء! أسلوب! مراجعة!) — الوحدة 12: التكامل!"
+  },
+  "canDoDaily": [
+    "يكتب نصاً بإملاء صحيح وأسلوب واضح! (die Rechtschreibung üben! den Stil verbessern!)",
+    "يعيد العمل في نصه ويُراجِعه! (den Text überarbeiten!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "fliessend",
+      "aussprache",
+      "spontan"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الإملاء مهم.»؟"
+        },
+        "choices": [
+          "Die Rechtschreibung ist wichtig.",
+          "Der Rechtschreibung ist wichtig.",
+          "Das Rechtschreibung ist wichtig."
+        ],
+        "answer": "Die Rechtschreibung ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«هو يراجع النص.»؟ (الانفصال!)"
+        },
+        "choices": [
+          "Er arbeitet den Text über.",
+          "Er überarbeitet den Text.",
+          "Er arbeitet über den Text."
+        ],
+        "answer": "Er arbeitet den Text über.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "rechtschreibung",
+      "stil",
+      "ueberarbeiten"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-vortragstext",
+      "ars-konnektoren"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "adjektiv"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Rechtschreibung ist richtig und der Stil ist klar!",
+        "ar": "يجري محاكاة كتابة (نص ٨ جُمل!): مقدمة + جسم + خاتمة!"
+      },
+      "situation": {
+        "de": "Ein Thema, acht Sätze, ein Entwurf.",
+        "ar": "موضوع واحد! ثماني جُمل! مسودة واحدة! (محاكاة الكتابة!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في النص!",
+        "الانفصال: arbeitet … über! (الجزء über آخر!)",
+        "مراجعة بنية النص: Einleitung ← Hauptteil ← Schluss!",
+        "المفردات الثابتة: die Rechtschreibung üben! den Stil verbessern! den Text überarbeiten!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Rechtschreibung! Stil! überarbeiten!"
+        ],
+        "interleavedWith": [
+          "fliessend",
+          "aussprache",
+          "spontan"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الإملاء",
+                "de": "die Rechtschreibung"
+              },
+              {
+                "ar": "الأسلوب",
+                "de": "der Stil"
+              },
+              {
+                "ar": "يعيد العمل في",
+                "de": "überarbeiten"
+              }
+            ],
+            "why": "die Rechtschreibung الإملاء (die!) · der Stil الأسلوب (der! die Stile!) · überarbeiten يراجع (منفصل: arbeitet … über!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المسودة",
+                "de": "der Entwurf"
+              },
+              {
+                "ar": "المقدمة",
+                "de": "die Einleitung"
+              },
+              {
+                "ar": "الجزء الرئيسي",
+                "de": "der Hauptteil"
+              },
+              {
+                "ar": "الخاتمة",
+                "de": "der Schluss"
+              }
+            ],
+            "why": "مراجعة بنية النص! der Entwurf المسودة (d4-u11!) · die Einleitung المقدمة · der Hauptteil · der Schluss"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يُصيغ",
+                "de": "formulieren"
+              },
+              {
+                "ar": "يُصحّح",
+                "de": "korrigieren"
+              },
+              {
+                "ar": "يُحسّن",
+                "de": "verbessern"
+              },
+              {
+                "ar": "يكتب",
+                "de": "schreiben"
+              }
+            ],
+            "why": "مراجعة أفعال الكتابة! formulieren يُصيغ · korrigieren يُصحّح · verbessern يُحسّن · schreiben يكتب"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "صحيح",
+                "de": "richtig"
+              },
+              {
+                "ar": "خطأ",
+                "de": "falsch"
+              },
+              {
+                "ar": "الفاصلة",
+                "de": "das Komma"
+              }
+            ],
+            "why": "الإملاء! richtig صحيح · falsch خطأ · das Komma الفاصلة (das! die Kommas!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "محاكاة الكتابة!"
+        ],
+        "interleavedWith": [
+          "rechtschreibung",
+          "stil",
+          "ueberarbeiten"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (الإملاء!)",
+            "a": "Rechtschreibung",
+            "why": "die Rechtschreibung الإملاء (die!) — die Rechtschreibung ist wichtig."
+          },
+          {
+            "q": "Der ___ ist klar. (الأسلوب!)",
+            "a": "Stil",
+            "why": "der Stil الأسلوب (der!) — der Stil ist klar."
+          },
+          {
+            "q": "Er ___ den Text ___. (يعيد العمل! منفصل!)",
+            "a": "arbeitet … über",
+            "why": "überarbeiten منفصل! Er arbeitet den Text über. (الجزء über آخر!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "Die Einleitung ist kurz und der ___ ist klar. (الجزء الرئيسي!)",
+            "a": "Hauptteil",
+            "why": "der Hauptteil الجزء الرئيسي (der!) — مراجعة بنية النص!"
+          },
+          {
+            "q": "Er ___ den Stil. (يُحسّن!)",
+            "a": "verbessert",
+            "why": "verbessern يُحسّن (hat verbessert!) — er verbessert den Stil. (den Stil verbessern!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الانفصال! الصفة!"
+        ],
+        "interleavedWith": [
+          "entwurf",
+          "einleitung",
+          "schluss"
+        ],
+        "items": [
+          {
+            "q": "~~das Rechtschreibung ist wichtig~~",
+            "a": "die Rechtschreibung ist wichtig",
+            "why": "die Rechtschreibung الإملاء (die! مؤنث — لا das!)"
+          },
+          {
+            "q": "~~Er überarbeitet den Text.~~",
+            "a": "Er arbeitet den Text über.",
+            "why": "überarbeiten منفصل! arbeitet … über (الجزء über آخر!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "~~Die Rechtschreibung ist richtigen.~~",
+            "a": "Die Rechtschreibung ist richtig.",
+            "why": "الصفة بعد ist بلا تصريف! richtig (لا richtigen!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — الكتابة كلام!",
+          "Rechtschreibung! Stil! Text!"
+        ],
+        "interleavedWith": [
+          "schreiben",
+          "korrigieren",
+          "komma"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالمسودة! (جملتان!)",
+            "a": "Der Entwurf ist kurz. Die Einleitung ist klar.",
+            "why": "الكتابة تبدأ بمسودة! (ars-vortragstext!)"
+          },
+          {
+            "q": "تكلّم عن أسلوبك! (جملتان!)",
+            "a": "Der Stil ist klar. Er verbessert den Stil.",
+            "why": "الأسلوب ثم التحسين! (den Stil verbessern!)"
+          },
+          {
+            "q": "اختم بالمراجعة! (جملتان!)",
+            "a": "Er arbeitet den Text über. Die Rechtschreibung ist richtig.",
+            "why": "المراجعة ثم الصحة! (den Text überarbeiten!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الإملاء»؟",
+            "a": "die Rechtschreibung"
+          },
+          {
+            "q": "«الأسلوب»؟",
+            "a": "der Stil"
+          },
+          {
+            "q": "«يعيد العمل في النص.»؟ (الانفصال!)",
+            "a": "Er arbeitet den Text über."
+          },
+          {
+            "q": "«المسودة»؟ (مراجعة!)",
+            "a": "der Entwurf"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«المقدمة»؟ (مراجعة!)",
+            "a": "die Einleitung"
+          },
+          {
+            "q": "«الجزء الرئيسي»؟ (مراجعة!)",
+            "a": "der Hauptteil"
+          },
+          {
+            "q": "«الخاتمة»؟ (مراجعة!)",
+            "a": "der Schluss"
+          },
+          {
+            "q": "«يُصحّح»؟ (مراجعة!)",
+            "a": "korrigieren"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«صحيح»؟ (مراجعة!)",
+            "a": "richtig"
+          },
+          {
+            "q": "«خطأ»؟ (مراجعة!)",
+            "a": "falsch"
+          },
+          {
+            "q": "«الفاصلة»؟ (مراجعة!)",
+            "a": "das Komma"
+          },
+          {
+            "q": "«يُحسّن الأسلوب.»؟",
+            "a": "Er verbessert den Stil."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Rechtschreibung ist wichtig und der Stil ist klar. Er arbeitet den Text über. Der Entwurf ist kurz und die Einleitung ist klar. Der Hauptteil ist gut und der Schluss ist kurz. Er formuliert den Satz und korrigiert den Fehler. Er verbessert den Stil und schreibt einfach. Richtig ist richtig und falsch ist falsch. Das Komma ist wichtig!",
+      "ar": "الإملاء مهم والأسلوب واضح. هو يراجع النص. المسودة قصيرة والمقدمة واضحة. الجزء الرئيسي جيد والخاتمة قصيرة. يصيغ الجملة ويصحّح الخطأ. يحسّن الأسلوب ويكتب ببساطة. الصحيح صحيح والخطأ خطأ. الفاصلة مهمة!"
+    },
+    "srsBundleWordIds": [
+      "rechtschreibung",
+      "stil",
+      "ueberarbeiten"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das Rechtschreibung!",
+          "de": "~~das Rechtschreibung ist wichtig~~"
+        },
+        "correct": {
+          "ar": "die Rechtschreibung!",
+          "de": "die Rechtschreibung ist wichtig"
+        },
+        "exercise": {
+          "q": "___ Rechtschreibung ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الإملاء» مذكّر! والألمانية: die Rechtschreibung مؤنثة (die!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "überarbeiten ملتصق!",
+          "de": "~~Er überarbeitet den Text.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Er arbeitet den Text über!",
+          "de": "Er arbeitet den Text über."
+        },
+        "exercise": {
+          "q": "Er ___ den Text ___. (يعيد العمل!)",
+          "a": "arbeitet … über"
+        },
+        "whyArabicSpeakerFails": "العربية: «يعيد العمل» — كلمة واحدة! والألمانية: überarbeiten منفصل والجزء über يهرب آخر الجملة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الصفة مُصرَّفة بعد ist!",
+          "de": "~~Die Rechtschreibung ist richtigen.~~"
+        },
+        "correct": {
+          "ar": "بلا تصريف: ist richtig!",
+          "de": "Die Rechtschreibung ist richtig."
+        },
+        "exercise": {
+          "q": "Die Rechtschreibung ist ___.",
+          "a": "richtig"
+        },
+        "whyArabicSpeakerFails": "العربية: «الإملاء صحيحٌ» — علامة الإعراب! والألمانية: الصفة بعد ist مجرّدة (richtig — لا richtigen!) (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Rechtschreibung",
+      "https://www.duden.de/rechtschreibung/Stil",
+      "https://www.duden.de/rechtschreibung/ueberarbeiten"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-vortragstext",
+    "ars-konnektoren"
+  ],
+  "audioManifestRefs": [
+    "word-rechtschreibung",
+    "word-stil",
+    "word-ueberarbeiten"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 12: التكامل — محاكاة كتابة)",
+    "goetheWordListOverlap": [
+      "rechtschreibung",
+      "stil",
+      "ueberarbeiten"
+    ]
+  }
+}

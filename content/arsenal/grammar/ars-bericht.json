@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "constitutionSection": "10‑ي",
+ "id": "ars-bericht",
+ "kind": "shufra",
+ "title": {
+  "ar": "التقرير الرقمي!",
+  "de": "Bericht schreiben — Erhebung · Auswertung · Stand · Prognose"
+ },
+ "levelIntroduced": "B1",
+ "riskLevel": "orange",
+ "payload": {
+  "topicAr": "التقرير الرقمي! (جمع! تحليل! نتيجة! توقّع!)",
+  "sceneAr": "التقرير الرقمي بروتوكول: البيانات تُجمع (Erhebung! Stichprobe!) ← تُحلَّل (Auswertung!) ← المستوى يُقال (Stand! Niveau!) ← النتيجة (ergibt!) ← التوقّع (Prognose!)!",
+  "examples": [
+   {
+    "de": "Die Erhebung ist repräsentativ.",
+    "ar": "المسح مُمثِّل. (الجمع!)"
+   },
+   {
+    "de": "Die Stichprobe ist klein.",
+    "ar": "العيّنة صغيرة. (الأساس!)"
+   },
+   {
+    "de": "Die Auswertung ist klar.",
+    "ar": "التحليل واضح. (المرحلة!)"
+   },
+   {
+    "de": "Der Stand ist stabil.",
+    "ar": "المستوى مستقرّ. (الوضع!)"
+   },
+   {
+    "de": "Die Summe ergibt zwanzig.",
+    "ar": "المجموع يعطي عشرين. (النتيجة!)"
+   },
+   {
+    "de": "Die Prognose ist deutlich.",
+    "ar": "التوقّع واضح. (الخاتمة!)"
+   }
+  ],
+  "inferencePromptAr": "لاحظ: التقرير مراحل مسمّاة (Erhebung ← Stichprobe ← Auswertung ← Stand ← Prognose!) وكل مرحلة صفتها الثابتة (repräsentativ! klein! klar! stabil!) والنتيجة بـ ergibt!",
+  "ruleDe": "Die Erhebung ist repräsentativ. · Die Stichprobe ist klein. · Die Auswertung ist klar. · Der Stand ist stabil. · Die Summe ergibt zwanzig. · Die Prognose ist deutlich.",
+  "ruleAr": "بروتوكول التقرير الرقمي: (1) الجمع: die Erhebung (repräsentativ!) (2) العيّنة: die Stichprobe! (3) التحليل: die Auswertung! (4) المستوى: der Stand (stabil!) (5) النتيجة: ergibt zwanzig! (6) التوقّع: die Prognose!",
+  "contrastAr": "العربية: «النتائج كالتالي:» — مباشرة! والألمانية: كل مرحلة اسمها (Erhebung! Stichprobe! Auswertung!) وصفتها الثابتة والنتيجة بفعل ملازم (ergibt!) — والتوقّع Prognose لا تخمين! (خريطة التداخل 10‑ي).",
+  "limitsAr": [
+   "erheben قويّ: hebt erhub hat erhoben! (الجمع!)",
+   "das Niveau (das! Niveaus!)",
+   "die Spanne المدى (die! Spannen!)",
+   "ergeben: Die Summe ergibt zwanzig! (المفعول مباشرة!)"
+  ],
+  "beads": [
+   "Die Erhebung ist repräsentativ.",
+   "Die Stichprobe ist klein.",
+   "Die Auswertung ist klar.",
+   "Der Stand ist stabil.",
+   "Die Summe ergibt zwanzig.",
+   "Die Prognose ist deutlich."
+  ],
+  "properNouns": []
+ },
+ "usedInLessons": [
+  "b1-u10-d4"
+ ]
+}

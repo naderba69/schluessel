@@ -1,0 +1,431 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u11-d6",
+  "level": "B1",
+  "unit": 11,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Zusammenhalt ist groß — und die Erfüllung ist da!",
+    "ar": "يوم المراجعة والتوليف! (التماسك! الرضا! التحقيق!) — الوحدة 11: الهوايات والمجتمع!"
+  },
+  "canDoDaily": [
+    "يُلخّص الوحدة كلها في قصة واحدة! (استراتيجية ← قراءة ← عرض ← نص ← أسئلة!)",
+    "يُجرّد حصيلة الوحدة بالمفردات الثابتة! (Zusammenhalt zeigen! Erfüllung finden! einen Traum verwirklichen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hauptteil",
+      "entwurf",
+      "schwerpunkt"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التماسك مهم.»؟"
+        },
+        "choices": [
+          "Der Zusammenhalt ist wichtig.",
+          "Die Zusammenhalt ist wichtig.",
+          "Das Zusammenhalt ist wichtig."
+        ],
+        "answer": "Der Zusammenhalt ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«هو يحقّق الحلم.»؟ (المفعول به!)"
+        },
+        "choices": [
+          "Er verwirklicht den Traum.",
+          "Er verwirklicht nach dem Traum.",
+          "Er den Traum verwirklicht."
+        ],
+        "answer": "Er verwirklicht den Traum.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "zusammenhalt",
+      "erfuellung",
+      "verwirklichen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-lesestrategien",
+      "ars-lektuere",
+      "ars-praesentation",
+      "ars-vortragstext",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order",
+      "trennbar"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Zusammenhalt ist wichtig und die Erfüllung ist groß!",
+        "ar": "يُلخّص الوحدة كلها في فقرة (٨ جُمل)! (استراتيجيات ← قراءة ← عرض ← نص ← أسئلة!)"
+      },
+      "situation": {
+        "de": "Fünf Tage, ein Thema, ein Zusammenhalt.",
+        "ar": "وحدة واحدة! خمسة أيام! تماسك واحد! (التوليف!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التوليف!",
+        "مسار الوحدة: الاستراتيجية ← القراءة ← العرض ← النص ← الأسئلة!",
+        "المفردات الثابتة: Zusammenhalt zeigen! Erfüllung finden! einen Traum verwirklichen!",
+        "المراجعة: الانفصال والقوة والمرتبة الثانية!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Zusammenhalt! Erfüllung! verwirklichen!"
+        ],
+        "interleavedWith": [
+          "hauptteil",
+          "entwurf",
+          "schwerpunkt"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "التماسك",
+                "de": "der Zusammenhalt"
+              },
+              {
+                "ar": "الرضا",
+                "de": "die Erfüllung"
+              },
+              {
+                "ar": "يحقّق",
+                "de": "verwirklichen"
+              }
+            ],
+            "why": "der Zusammenhalt التماسك (der! بلا جمع شائع!) · die Erfüllung الرضا (die! die Erfüllungen!) · verwirklichen يحقّق (ضعيف! hat verwirklicht!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "استراتيجيات القراءة",
+                "de": "die Strategie"
+              },
+              {
+                "ar": "الفصل (في الكتاب)",
+                "de": "das Kapitel"
+              },
+              {
+                "ar": "الجزء الرئيسي",
+                "de": "der Hauptteil"
+              }
+            ],
+            "why": "مراجعة d1–d3! die Strategie الاستراتيجية · das Kapitel الفصل · der Hauptteil الجزء الرئيسي (der!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المسودة",
+                "de": "der Entwurf"
+              },
+              {
+                "ar": "محور التركيز",
+                "de": "der Schwerpunkt"
+              },
+              {
+                "ar": "زاوية النظر",
+                "de": "die Sichtweise"
+              }
+            ],
+            "why": "مراجعة d4–d5! der Entwurf المسودة · der Schwerpunkt المحور · die Sichtweise الزاوية (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الشغف",
+                "de": "die Leidenschaft"
+              },
+              {
+                "ar": "العمل التطوعي",
+                "de": "das Ehrenamt"
+              },
+              {
+                "ar": "التقدير",
+                "de": "die Wertschätzung"
+              }
+            ],
+            "why": "مراجعة المجتمع! die Leidenschaft الشغف · das Ehrenamt التطوع (die Ehrenämter!) · die Wertschätzung التقدير (die!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "توليف الوحدة!"
+        ],
+        "interleavedWith": [
+          "zusammenhalt",
+          "erfuellung",
+          "verwirklichen"
+        ],
+        "items": [
+          {
+            "q": "Der ___ ist wichtig. (التماسك!)",
+            "a": "Zusammenhalt",
+            "why": "der Zusammenhalt التماسك (der!) — der Zusammenhalt ist wichtig."
+          },
+          {
+            "q": "Die ___ ist groß. (الرضا!)",
+            "a": "Erfüllung",
+            "why": "die Erfüllung الرضا (die!) — die Erfüllung ist groß. (Erfüllung finden!)"
+          },
+          {
+            "q": "Er ___ den Traum. (يحقّق!)",
+            "a": "verwirklicht",
+            "why": "verwirklichen ضعيف! Er verwirklicht den Traum. (hat verwirklicht!)"
+          },
+          {
+            "q": "Er liest ___ Romane. (على سبيل المثال! مراجعة d5!)",
+            "a": "beispielsweise",
+            "why": "beispielsweise على سبيل المثال (مراجعة d5!) — er liest beispielsweise Romane."
+          },
+          {
+            "q": "Er führt das Modell ___. (يعرض! الانفصال! مراجعة d3!)",
+            "a": "vor",
+            "why": "vorführen منفصل! Er führt das Modell vor. (الجزء vor آخر! مراجعة d3!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! المفعول! الانفصال!"
+        ],
+        "interleavedWith": [
+          "strategie",
+          "roman",
+          "hauptteil"
+        ],
+        "items": [
+          {
+            "q": "~~die Zusammenhalt ist wichtig~~",
+            "a": "der Zusammenhalt ist wichtig",
+            "why": "der Zusammenhalt التماسك (der! لا die!)"
+          },
+          {
+            "q": "~~Er verwirklicht der Traum.~~",
+            "a": "Er verwirklicht den Traum.",
+            "why": "المفعول به akkusativ! den Traum (لا der!) — خريطة التداخل 10‑ي!"
+          },
+          {
+            "q": "~~Er ausleiht das Buch.~~",
+            "a": "Er leiht das Buch aus.",
+            "why": "ausleihen منفصل! leiht … aus (مراجعة d2! خريطة التداخل 10‑ي!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — التوليف كلام!",
+          "Zusammenhalt! Erfüllung! Traum!"
+        ],
+        "interleavedWith": [
+          "leidenschaft",
+          "ehrenamt",
+          "wertschaetzung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بتوليف القراءة! (جملتان!)",
+            "a": "Die Strategie ist wichtig. Das Kapitel ist spannend.",
+            "why": "مراجعة d1–d2! (الاستراتيجية والقراءة!)"
+          },
+          {
+            "q": "توليف العرض والنص! (جملتان!)",
+            "a": "Der Hauptteil ist klar. Der Entwurf ist kurz.",
+            "why": "مراجعة d3–d4! (Präsentation! Text!)"
+          },
+          {
+            "q": "اختم بحصيلة المجتمع! (جملتان!)",
+            "a": "Der Zusammenhalt ist wichtig. Die Erfüllung ist groß.",
+            "why": "حصيلة الوحدة! (Zusammenhalt zeigen! Erfüllung finden!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التماسك»؟",
+            "a": "der Zusammenhalt"
+          },
+          {
+            "q": "«الرضا»؟",
+            "a": "die Erfüllung"
+          },
+          {
+            "q": "«يحقّق الحلم.»؟",
+            "a": "Er verwirklicht den Traum."
+          },
+          {
+            "q": "«الشغف»؟ (مراجعة!)",
+            "a": "die Leidenschaft"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«المسودة»؟ (مراجعة!)",
+            "a": "der Entwurf"
+          },
+          {
+            "q": "«محور التركيز»؟ (مراجعة!)",
+            "a": "der Schwerpunkt"
+          },
+          {
+            "q": "«يعرض النموذج.»؟ (الانفصال! مراجعة!)",
+            "a": "Er führt das Modell vor."
+          },
+          {
+            "q": "«العمل التطوعي»؟ (مراجعة!)",
+            "a": "das Ehrenamt"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التقدير»؟ (مراجعة!)",
+            "a": "die Wertschätzung"
+          },
+          {
+            "q": "«زاوية النظر»؟ (مراجعة!)",
+            "a": "die Sichtweise"
+          },
+          {
+            "q": "«الجزء الرئيسي»؟ (مراجعة!)",
+            "a": "der Hauptteil"
+          },
+          {
+            "q": "«الاستراتيجية»؟ (مراجعة!)",
+            "a": "die Strategie"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Zusammenhalt ist wichtig und die Erfüllung ist groß. Er verwirklicht den Traum. Die Strategie ist wichtig und das Kapitel ist spannend. Der Hauptteil ist klar und der Entwurf ist kurz. Der Schwerpunkt ist deutlich und die Sichtweise ist wichtig. Die Leidenschaft ist groß und das Ehrenamt ist wichtig. Die Wertschätzung ist da!",
+      "ar": "التماسك مهم والرضا كبير. هو يحقّق الحلم. الاستراتيجية مهمة والفصل مثير. الجزء الرئيسي واضح والمسودة قصيرة. محور التركيز واضح وزاوية النظر مهمة. الشغف كبير والعمل التطوعي مهم. التقدير موجود!"
+    },
+    "srsBundleWordIds": [
+      "zusammenhalt",
+      "erfuellung",
+      "verwirklichen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Zusammenhalt!",
+          "de": "~~die Zusammenhalt ist wichtig~~"
+        },
+        "correct": {
+          "ar": "der Zusammenhalt!",
+          "de": "der Zusammenhalt ist wichtig"
+        },
+        "exercise": {
+          "q": "___ Zusammenhalt ist wichtig.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «التماسك» بلا أداة جنس! والألمانية: der Zusammenhalt مذكّر (der! لا die!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "المفعول بالرفع!",
+          "de": "~~Er verwirklicht der Traum.~~"
+        },
+        "correct": {
+          "ar": "المفعول akkusativ: den Traum!",
+          "de": "Er verwirklicht den Traum."
+        },
+        "exercise": {
+          "q": "Er verwirklicht ___ Traum.",
+          "a": "den"
+        },
+        "whyArabicSpeakerFails": "العربية: «يحقّق الحلم» — الحلم بلا علامة! والألمانية: المفعول به يأخذ den (لا der!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "ausleihen ملتصق!",
+          "de": "~~Er ausleiht das Buch.~~"
+        },
+        "correct": {
+          "ar": "منفصل: Er leiht das Buch aus!",
+          "de": "Er leiht das Buch aus."
+        },
+        "exercise": {
+          "q": "Er ___ das Buch ___. (مراجعة!)",
+          "a": "leiht … aus"
+        },
+        "whyArabicSpeakerFails": "العربية: «يستعير» — كلمة واحدة! والألمانية: الفعل المنفصل ينفصل (مراجعة d2! خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Zusammenhalt",
+      "https://www.duden.de/rechtschreibung/Erfuellung",
+      "https://www.duden.de/rechtschreibung/verwirklichen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-lesestrategien",
+    "ars-lektuere",
+    "ars-praesentation",
+    "ars-vortragstext",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-zusammenhalt",
+    "word-erfuellung",
+    "word-verwirklichen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 11: الهوايات والمجتمع — مراجعة + توليف)",
+    "goetheWordListOverlap": [
+      "zusammenhalt",
+      "erfuellung",
+      "verwirklichen"
+    ]
+  }
+}

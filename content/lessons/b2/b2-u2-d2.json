@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u2-d2",
+  "level": "B2",
+  "unit": 2,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Ressourcen schützen, erneuerbare Energie nutzen und nichts verbrennen!",
+    "ar": "الوحدة 2: الأرض والمناخ! (الموارد! المتجدّد! والحرق!)"
+  },
+  "canDoDaily": [
+    "يحمي الموارد ويستخدم الطاقة المتجدّدة! (schützen! nutzen!)",
+    "لا يحرق شيئاً! (nichts verbrennen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "nachhaltigkeit",
+      "auswirkung",
+      "verschmutzen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الموارد مهمّة.»؟"
+        },
+        "choices": [
+          "Die Ressourcen sind wichtig.",
+          "Der Ressourcen sind wichtig.",
+          "Das Ressourcen sind wichtig."
+        ],
+        "answer": "Die Ressourcen sind wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الطاقة متجدّدة.»؟"
+        },
+        "choices": [
+          "Die Energie ist erneuerbar.",
+          "Die Energie ist erneuerbare.",
+          "Die Energie sind erneuerbar."
+        ],
+        "answer": "Die Energie ist erneuerbar.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "ressource",
+      "erneuerbar",
+      "verbrennen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "r-uvular",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Ressourcen schützen, erneuerbare Energie nutzen und nichts verbrennen!",
+        "ar": "اليوم الثاني: الموارد والمتجدّد والحرق — مع الأرض!"
+      },
+      "situation": {
+        "de": "Ressource, erneuerbar, verbrennen — zusammen leben.",
+        "ar": "موارد! متجدّد! حرق! — نعيش معًا! (مع الأرض!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الصفة قبل الاسم تأخذ لاحقة (erneuerbare Energie) وبعده بلا لاحقة (ist erneuerbar)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Ressourcen schützen! erneuerbare Energie nutzen! nichts verbrennen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "nachhaltigkeit",
+          "auswirkung",
+          "verschmutzen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Ressource",
+                "ar": "المورد (الموارد)"
+              },
+              {
+                "de": "erneuerbar",
+                "ar": "متجدّد (قابل للتجديد)"
+              },
+              {
+                "de": "verbrennen",
+                "ar": "يحرق (يستحرق)"
+              }
+            ],
+            "why": "die Ressource المورد (die! die Ressourcen!) · erneuerbar متجدّد (الصفة!) · verbrennen يحرق (hat verbrannt!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Ressourcen schützen",
+                "ar": "يحمي الموارد"
+              },
+              {
+                "de": "erneuerbare Energie nutzen",
+                "ar": "يستخدم الطاقة المتجدّدة"
+              },
+              {
+                "de": "nichts verbrennen",
+                "ar": "لا يحرق شيئاً"
+              },
+              {
+                "de": "die Ressourcen",
+                "ar": "الموارد (جمع -n)"
+              }
+            ],
+            "why": "die Ressourcen schützen! · erneuerbare Energie nutzen (لاحقة -e قبل الاسم!) · nichts verbrennen! · die Ressourcen جمع -n"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gerechtigkeit",
+          "spenden",
+          "wuerde"
+        ],
+        "items": [
+          {
+            "q": "Die ___ sind wichtig. (الموارد!)",
+            "a": "Ressourcen",
+            "why": "die Ressource المورد (die!) والجمع die Ressourcen — Die Ressourcen sind wichtig."
+          },
+          {
+            "q": "Die Energie ist ___. (متجدّدة!)",
+            "a": "erneuerbar",
+            "why": "الصفة بعد sein بلا لاحقة! — Die Energie ist erneuerbar."
+          },
+          {
+            "q": "Er ___ die Bäume. (يحرق!)",
+            "a": "verbrennt",
+            "why": "verbrennen يحرق (Präsens er: verbrennt!) — Er verbrennt die Bäume."
+          },
+          {
+            "q": "Wir nutzen ___ Energie. (متجدّدة!)",
+            "a": "erneuerbare",
+            "why": "الصفة قبل الاسم تأخذ لاحقة! (erneuerbare Energie!) — Wir nutzen erneuerbare Energie."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "mensch",
+          "freundlich",
+          "ruhe"
+        ],
+        "items": [
+          {
+            "q": "~~Der Ressource sind wichtig.~~",
+            "a": "Die Ressourcen sind wichtig.",
+            "why": "die Ressource مؤنثة (die!) والجمع die Ressourcen!"
+          },
+          {
+            "q": "~~Die Energie ist erneuerbare.~~",
+            "a": "Die Energie ist erneuerbar.",
+            "why": "بعد sein: صفة بلا لاحقة! (ist erneuerbar!)"
+          },
+          {
+            "q": "~~Wir haben verbrannt die Bäume.~~",
+            "a": "Wir haben die Bäume verbrannt.",
+            "why": "الفعل التام يذهب للنهاية! (Wir haben die Bäume verbrannt!)"
+          },
+          {
+            "q": "~~Wir schützen die Ressourcen auf.~~",
+            "a": "Wir schützen die Ressourcen.",
+            "why": "schützen ليس فعلاً منفصلاً! (لا auf!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ermutigung",
+          "warnen",
+          "ablehnung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالموارد! (جملتان!)",
+            "a": "Die Ressourcen sind wichtig. Ich schütze die Ressourcen.",
+            "why": "الموارد أولًا! (die Ressourcen schützen!)"
+          },
+          {
+            "q": "تحدث عن الطاقة! (جملتان!)",
+            "a": "Energie ist wichtig. Ich nutze erneuerbare Energie.",
+            "why": "الطاقة المتجدّدة! (erneuerbare Energie nutzen!)"
+          },
+          {
+            "q": "تحدث عن الحرق! (جملتان!)",
+            "a": "Verbrennen ist nicht gut. Wir verbrennen nichts.",
+            "why": "الحرق! (nichts verbrennen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المورد (الموارد)»؟",
+            "a": "die Ressource"
+          },
+          {
+            "q": "«متجدّد (قابل للتجديد)»؟",
+            "a": "erneuerbar"
+          },
+          {
+            "q": "«يحرق (يستحرق)»؟",
+            "a": "verbrennen"
+          },
+          {
+            "q": "«الطاقة متجدّدة.»؟",
+            "a": "Die Energie ist erneuerbar."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الموارد مهمّة.»؟",
+            "a": "Die Ressourcen sind wichtig."
+          },
+          {
+            "q": "verbrennen",
+            "a": "يحرق"
+          },
+          {
+            "q": "«نستخدم الطاقة المتجدّدة.»؟",
+            "a": "Wir nutzen erneuerbare Energie."
+          },
+          {
+            "q": "die Ressource",
+            "a": "المورد"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«هو يحمي الموارد.»؟",
+            "a": "Er schützt die Ressourcen."
+          },
+          {
+            "q": "«لا نحرق شيئاً!»؟",
+            "a": "Wir verbrennen nichts!"
+          },
+          {
+            "q": "erneuerbar",
+            "a": "متجدّد"
+          },
+          {
+            "q": "«الموارد مهمّة.»؟",
+            "a": "Die Ressourcen sind wichtig."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Ressourcen sind wichtig und die Energie ist da. Wir sollen nichts verbrennen und der Tag ist schön. Er schützt die Ressourcen und nutzt erneuerbare Energie.",
+      "ar": "الموارد والطاقة المتجدّدة يقوّيان الأرض — ولا نحرق شيئاً!"
+    },
+    "srsBundleWordIds": [
+      "ressource",
+      "erneuerbar",
+      "verbrennen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Ressource!",
+          "de": "~~Der Ressource sind wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Ressource!",
+          "de": "Die Ressource ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Ressource ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «المورد» مذكّر! والألمانية: die Ressource (die!) — الكلمات الفرنسية على -e مؤنثة دائماً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "ist erneuerbare!",
+          "de": "~~Die Energie ist erneuerbare.~~"
+        },
+        "correct": {
+          "ar": "ist erneuerbar!",
+          "de": "Die Energie ist erneuerbar."
+        },
+        "exercise": {
+          "q": "Die Energie ist ___.",
+          "a": "erneuerbar"
+        },
+        "whyArabicSpeakerFails": "العربية: الصفة لا تتغيّر! والألمانية: بعد sein تبقى الصفة بلا لاحقة (ist erneuerbar!) — لكن قبل الاسم تأخذ لاحقة (erneuerbare Energie)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "الفعل في الوسط!",
+          "de": "~~Wir haben verbrannt die Bäume.~~"
+        },
+        "correct": {
+          "ar": "الفعل في النهاية!",
+          "de": "Wir haben die Bäume verbrannt."
+        },
+        "exercise": {
+          "q": "Wir haben die Bäume ___.",
+          "a": "verbrannt"
+        },
+        "whyArabicSpeakerFails": "العربية: الترتيب حرّ! والألمانية: الفعل التام يذهب للنهاية (verbrannt آخر الجملة!) — وبادئة ver تُكتب بلا ge أصلاً! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Ressource",
+      "https://www.duden.de/rechtschreibung/erneuerbar",
+      "https://www.duden.de/rechtschreibung/verbrennen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-ressource",
+    "word-erneuerbar",
+    "word-verbrennen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 2 (الأرض والمناخ!)",
+    "goetheWordListOverlap": [
+      "ressource",
+      "erneuerbar",
+      "verbrennen"
+    ]
+  }
+}

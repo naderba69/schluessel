@@ -1,0 +1,425 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u10-d6",
+  "level": "B1",
+  "unit": 10,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Bilanz ist klar — und das Fazit ist deutlich!",
+    "ar": "يوم المراجعة والتوليف! (الحصيلة! الخلاصة! الدقّة!) — الوحدة 10: الأرقام والإحصاء!"
+  },
+  "canDoDaily": [
+    "يُلخّص الوحدة كلها في قصة واحدة! (Prozent ← Grafik ← Vortrag ← Bericht ← Quantitäten ← Bilanz!)",
+    "يُجرّد الحصيلة بالمفردات الثابتة! (Bilanz ziehen! das Fazit! die Genauigkeit!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "drittel",
+      "handvoll",
+      "rate"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الحصيلة واضحة.»؟"
+        },
+        "choices": [
+          "Die Bilanz ist klar.",
+          "Das Bilanz ist klar.",
+          "Der Bilanz ist klar."
+        ],
+        "answer": "Die Bilanz ist klar.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«يُجرّد الحصيلة»؟ (الشريك!)"
+        },
+        "choices": [
+          "Bilanz ziehen",
+          "Bilanz machen",
+          "Bilanz geben"
+        ],
+        "answer": "Bilanz ziehen",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "bilanz",
+      "fazit",
+      "genauigkeit"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-quantitaet"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Am Ende: die Bilanz — und das Fazit ist klar!",
+        "ar": "يُلخّص الوحدة في 8 جمل وصولاً إلى الحصيلة!"
+      },
+      "situation": {
+        "de": "Eine Bilanz, ein Fazit, eine Genauigkeit.",
+        "ar": "حصيلة! خلاصة! ودقّة! (الوحدة كلها في خاتمة واحدة!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث + مراجعة كلمات الوحدة كلها!",
+        "الترتيب الكامل: Prozent ← Grafik ← Vortrag ← Bericht ← Drittel ← Bilanz!",
+        "الشريك الثابت: Bilanz ziehen! (لا machen!)",
+        "الخاتمة: das Fazit ist klar und die Genauigkeit ist wichtig!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم + مراجعة الوحدة!",
+          "Bilanz! Fazit! Genauigkeit!"
+        ],
+        "interleavedWith": [
+          "prozent",
+          "haelfte",
+          "anzahl"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الحصيلة",
+                "de": "die Bilanz"
+              },
+              {
+                "ar": "الخلاصة",
+                "de": "das Fazit"
+              },
+              {
+                "ar": "الدقّة",
+                "de": "die Genauigkeit"
+              },
+              {
+                "ar": "بالمئة",
+                "de": "das Prozent"
+              }
+            ],
+            "why": "die Bilanz الحصيلة (die! ziehen!) · das Fazit الخلاصة (das!) · die Genauigkeit الدقّة (die!) · das Prozent بالمئة (مراجعة d1!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الرسم (الإحصائي)",
+                "de": "die Grafik"
+              },
+              {
+                "ar": "المسار",
+                "de": "der Verlauf"
+              },
+              {
+                "ar": "القمة",
+                "de": "die Spitze"
+              },
+              {
+                "ar": "المدة (الزمنية)",
+                "de": "der Zeitraum"
+              }
+            ],
+            "why": "die Grafik الرسم (zeigen!) · der Verlauf المسار (مراجعة d2!) · die Spitze القمة (deutlich!) · der Zeitraum المدة (lang!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "العرض (الشفهي)",
+                "de": "der Vortrag"
+              },
+              {
+                "ar": "الشريحة (في العرض)",
+                "de": "die Folie"
+              },
+              {
+                "ar": "التحليل (الإحصائي)",
+                "de": "die Auswertung"
+              },
+              {
+                "ar": "التوقّع",
+                "de": "die Prognose"
+              }
+            ],
+            "why": "der Vortrag العرض (halten! مراجعة d3!) · die Folie الشريحة (die!) · die Auswertung التحليل (مراجعة d4!) · die Prognose التوقّع (stellen!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الحصيلة والخلاصة!"
+        ],
+        "interleavedWith": [
+          "bilanz",
+          "fazit",
+          "genauigkeit"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist klar. (الحصيلة!)",
+            "a": "Bilanz",
+            "why": "die Bilanz الحصيلة (die!) — die Bilanz ist klar. (ars-quantitaet!)"
+          },
+          {
+            "q": "Bilanz ___. (يُجرّد الحصيلة! الشريك!)",
+            "a": "ziehen",
+            "why": "Bilanz ziehen! (الشريك الثابت — لا machen!)"
+          },
+          {
+            "q": "Das ___ ist klar. (الخلاصة!)",
+            "a": "Fazit",
+            "why": "das Fazit الخلاصة (das! لا die!) — das Fazit ist klar."
+          },
+          {
+            "q": "Ein ___ ist genug. (الثلث! مراجعة!)",
+            "a": "Drittel",
+            "why": "das Drittel الثلث — ein Drittel ist genug. (مراجعة d5!)"
+          },
+          {
+            "q": "Die Grafik zeigt den ___. (المسار! مراجعة!)",
+            "a": "Verlauf",
+            "why": "der Verlauf المسار — die Grafik zeigt den Verlauf. (مراجعة d2!)"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الدقّة!)",
+            "a": "Genauigkeit",
+            "why": "die Genauigkeit الدقّة (die!) — die Genauigkeit ist wichtig."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الشريك! الأداة!"
+        ],
+        "interleavedWith": [
+          "prozent",
+          "drittel",
+          "handvoll"
+        ],
+        "items": [
+          {
+            "q": "~~das Bilanz ist klar~~",
+            "a": "die Bilanz ist klar",
+            "why": "die Bilanz الحصيلة (die! مؤنث — لا das!)"
+          },
+          {
+            "q": "~~die Bilanz machen~~",
+            "a": "Bilanz ziehen",
+            "why": "Bilanz ziehen! (الشريك الثابت — لا machen!)"
+          },
+          {
+            "q": "~~die Fazit ist klar~~",
+            "a": "das Fazit ist klar",
+            "why": "das Fazit الخلاصة (das! محايد — لا die!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — الخاتمة كلام!",
+          "Bilanz! Fazit! Genauigkeit!"
+        ],
+        "interleavedWith": [
+          "auswertung",
+          "prognose",
+          "stichprobe"
+        ],
+        "items": [
+          {
+            "q": "لخّص الأرقام! (جملتان! مراجعة d1+d5!)",
+            "a": "Fünfundachtzig Komma drei Prozent. Ein Drittel ist genug.",
+            "why": "النسبة بالفاصلة والكسور! (مراجعة d1+d5!)"
+          },
+          {
+            "q": "لخّص التحليل! (جملتان! مراجعة d2+d4!)",
+            "a": "Die Grafik zeigt den Verlauf. Die Auswertung ist klar.",
+            "why": "الرسم والتحليل! (مراجعة d2+d4!)"
+          },
+          {
+            "q": "اختم بالحصيلة والخلاصة! (3 جمل!)",
+            "a": "Die Bilanz ist klar: Die Rate ist hoch. Das Fazit ist klar. Die Genauigkeit ist wichtig!",
+            "why": "Bilanz ziehen! Fazit! Genauigkeit! (خاتمة الوحدة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الحصيلة واضحة.»؟",
+            "a": "Die Bilanz ist klar."
+          },
+          {
+            "q": "«يُجرّد الحصيلة»؟",
+            "a": "Bilanz ziehen"
+          },
+          {
+            "q": "«الخلاصة»؟",
+            "a": "das Fazit"
+          },
+          {
+            "q": "«الدقّة»؟",
+            "a": "die Genauigkeit"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«85,3%» تُقرأ؟ (مراجعة!)",
+            "a": "Fünfundachtzig Komma drei Prozent."
+          },
+          {
+            "q": "«الثلث يكفي.»؟ (مراجعة!)",
+            "a": "Ein Drittel ist genug."
+          },
+          {
+            "q": "«الرسم يُظهر المسار.»؟ (مراجعة!)",
+            "a": "Die Grafik zeigt den Verlauf."
+          },
+          {
+            "q": "«التوقّع»؟ (مراجعة!)",
+            "a": "die Prognose"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«العرض الشفهي»؟ (مراجعة!)",
+            "a": "der Vortrag"
+          },
+          {
+            "q": "«المسح مُمثِّل.»؟ (مراجعة!)",
+            "a": "Die Erhebung ist repräsentativ."
+          },
+          {
+            "q": "«القيم كثيرة.»؟ (مراجعة!)",
+            "a": "Die Werte sind zahlreich."
+          },
+          {
+            "q": "«المعدل عالٍ.»؟ (مراجعة!)",
+            "a": "Die Rate ist hoch."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Bilanz ist klar: Fünfundachtzig Komma drei Prozent. Ein Drittel ist genug und zwei Drittel sind hoch. Die Grafik zeigt den Verlauf und die Spitze ist deutlich. Die Erhebung ist repräsentativ und die Auswertung ist klar. Die Werte sind zahlreich und die Rate ist hoch. Das Fazit ist klar: Die Genauigkeit ist wichtig!",
+      "ar": "الحصيلة واضحة: خمسة وثمانون فاصلة ثلاثة بالمئة. الثلث يكفي والثلثان مرتفعان. الرسم يُظهر المسار والقمة واضحة. المسح مُمثِّل والتحليل واضح. القيم كثيرة والمعدل عالٍ. الخلاصة واضحة: الدقّة مهمّة!"
+    },
+    "srsBundleWordIds": [
+      "bilanz",
+      "fazit",
+      "genauigkeit"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das Bilanz!",
+          "de": "~~das Bilanz ist klar~~"
+        },
+        "correct": {
+          "ar": "die Bilanz (die! مؤنث!) — الحصيلة!",
+          "de": "die Bilanz ist klar"
+        },
+        "exercise": {
+          "q": "___ Bilanz ist klar. (الأداة!)",
+          "a": "Die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الحصيلة» — مؤنث! والألمانية: die Bilanz مؤنث لكن الكلمة فرنسية الأصل فتُخطئ الأداة (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "die Bilanz machen!",
+          "de": "~~die Bilanz machen~~"
+        },
+        "correct": {
+          "ar": "الشريك الثابت: Bilanz ziehen!",
+          "de": "Bilanz ziehen"
+        },
+        "exercise": {
+          "q": "Wir ___ Bilanz. (الشريك!)",
+          "a": "ziehen"
+        },
+        "whyArabicSpeakerFails": "العربية: «نُجري الحصيلة» — الفعل حرّ! والألمانية: لكل اسم فعله الملازم (Bilanz ZIEHEN لا machen!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "die Fazit!",
+          "de": "~~die Fazit ist klar~~"
+        },
+        "correct": {
+          "ar": "das Fazit (das! محايد!) — الخلاصة!",
+          "de": "das Fazit ist klar"
+        },
+        "exercise": {
+          "q": "___ Fazit ist klar. (الأداة!)",
+          "a": "Das"
+        },
+        "whyArabicSpeakerFails": "العربية: «الخلاصة» — مؤنث! والألمانية: das Fazit محايد (كلمة لاتينية!) (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Bilanz",
+      "https://www.duden.de/rechtschreibung/Fazit",
+      "https://www.duden.de/rechtschreibung/Genauigkeit"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-quantitaet",
+    "ars-prozent",
+    "ars-bericht",
+    "ars-grafik"
+  ],
+  "audioManifestRefs": [
+    "word-bilanz",
+    "word-fazit",
+    "word-genauigkeit"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 10: الأرقام والإحصاء — مراجعة وتوليف)",
+    "goetheWordListOverlap": [
+      "bilanz",
+      "fazit",
+      "genauigkeit"
+    ]
+  }
+}

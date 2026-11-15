@@ -1,0 +1,442 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u13-d4",
+  "level": "B1",
+  "unit": 13,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Er verfasst den Text — und hält die Frist ein!",
+    "ar": "الوحدة 13: التكثيف! محاكاة الكتابة بثلاثة أرباع الوقت! (ست دقائق بدل ثمان! صياغة! والتزام!)"
+  },
+  "canDoDaily": [
+    "يكتب نصاً قصيراً في الوقت المضغوط! (den Text verfassen! die Formulierung finden!)",
+    "يلتزم بالموعد النهائي! (die Frist einhalten!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "zeitdruck",
+      "fluessig",
+      "beschleunigen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الصياغة واضحة.»؟"
+        },
+        "choices": [
+          "Die Formulierung ist klar.",
+          "Der Formulierung ist klar.",
+          "Das Formulierung ist klar."
+        ],
+        "answer": "Die Formulierung ist klar.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«هو يلتزم بالموعد.»؟ (الانفصال!)"
+        },
+        "choices": [
+          "Er hält die Frist ein.",
+          "Er hält ein die Frist.",
+          "Er verfasst die Frist."
+        ],
+        "answer": "Er hält die Frist ein.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "formulierung",
+      "verfassen",
+      "einhalten"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-vortragstext",
+      "ars-konnektoren"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "trennbar",
+      "needs-ein"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Er verfasst den Text — und hält die Frist ein!",
+        "ar": "محاكاة الكتابة: نص من ست جمل في ست دقائق بدل ثمان! (ثلاثة أرباع الوقت!)"
+      },
+      "situation": {
+        "de": "Sechs Sätze, sechs Minuten, eine klare Formulierung.",
+        "ar": "ست جمل! ست دقائق! صياغة واحدة واضحة! (محاكاة السرعة!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في النص!",
+        "الانفصال: hält … ein! (الجزء ein آخر النص!)",
+        "البناء: مقدمة وجسم وخاتمة! (قاعدة بناء النص المُدرَّسة!)",
+        "المفردات الثابتة: die Formulierung finden! den Text verfassen! die Frist einhalten!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Formulierung! verfassen! einhalten!"
+        ],
+        "interleavedWith": [
+          "zeitdruck",
+          "fluessig",
+          "beschleunigen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الصياغة",
+                "de": "die Formulierung"
+              },
+              {
+                "ar": "يؤلّف",
+                "de": "verfassen"
+              },
+              {
+                "ar": "يلتزم بـ",
+                "de": "einhalten"
+              }
+            ],
+            "why": "die Formulierung الصياغة (die! die Formulierungen!) · verfassen يؤلّف (ver- لا ge-: hat verfasst!) · einhalten يلتزم (منفصل: hält … ein!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "النص",
+                "de": "der Text"
+              },
+              {
+                "ar": "المسودة",
+                "de": "der Entwurf"
+              },
+              {
+                "ar": "الفقرة",
+                "de": "der Absatz"
+              },
+              {
+                "ar": "العنوان",
+                "de": "die Überschrift"
+              }
+            ],
+            "why": "مراجعة أدوات الكتابة! der Text · der Entwurf · der Absatz · die Überschrift"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الموعد",
+                "de": "die Frist"
+              },
+              {
+                "ar": "في الوقت المناسب",
+                "de": "rechtzeitig"
+              },
+              {
+                "ar": "مختصر",
+                "de": "knapp"
+              },
+              {
+                "ar": "الوقت",
+                "de": "die Zeit"
+              }
+            ],
+            "why": "مراجعة أدوات الوقت! die Frist · rechtzeitig · knapp · die Zeit"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يكتب",
+                "de": "schreiben"
+              },
+              {
+                "ar": "يُصحّح",
+                "de": "korrigieren"
+              },
+              {
+                "ar": "يعيد العمل في",
+                "de": "überarbeiten"
+              },
+              {
+                "ar": "يوجّز",
+                "de": "skizzieren"
+              }
+            ],
+            "why": "مراجعة أفعال الكتابة! schreiben · korrigieren · überarbeiten · skizzieren"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الكتابة تحت الضغط!"
+        ],
+        "interleavedWith": [
+          "formulierung",
+          "verfassen",
+          "einhalten"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist klar. (الصياغة!)",
+            "a": "Formulierung",
+            "why": "die Formulierung الصياغة (die!) — die Formulierung ist klar."
+          },
+          {
+            "q": "Er ___ den Text. (يؤلّف!)",
+            "a": "verfasst",
+            "why": "verfassen يؤلّف (ver- غير منفصل!) — er verfasst den Text. (hat verfasst!)"
+          },
+          {
+            "q": "Er ___ die Frist ___. (يلتزم! منفصل!)",
+            "a": "hält … ein",
+            "why": "einhalten منفصل! er hält die Frist ein. (الجزء ein آخر!) — خريطة التداخل 10-ي!"
+          },
+          {
+            "q": "Die ___ ist kurz. (الموعد!)",
+            "a": "Frist",
+            "why": "die Frist الموعد (die!) — die Frist ist kurz. (rechtzeitig!)"
+          },
+          {
+            "q": "Er findet die ___. (يجد الصياغة!)",
+            "a": "Formulierung",
+            "why": "die Formulierung finden — المفردة الثابتة! (findet!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الانفصال! التصريف!"
+        ],
+        "interleavedWith": [
+          "text",
+          "entwurf",
+          "absatz"
+        ],
+        "items": [
+          {
+            "q": "~~Der Formulierung ist klar.~~",
+            "a": "Die Formulierung ist klar.",
+            "why": "die Formulierung الصياغة (die! مؤنث — لا der!)"
+          },
+          {
+            "q": "~~Er hält ein die Frist.~~",
+            "a": "Er hält die Frist ein.",
+            "why": "einhalten منفصل والجزء ein آخر! er hält die Frist EIN (لا hält ein die Frist!)"
+          },
+          {
+            "q": "~~Er verfassen den Text.~~",
+            "a": "Er verfasst den Text.",
+            "why": "المضارع لا المصدر! er verfasst (لا verfassen!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — الكتابة كلام!",
+          "Formulierung! Text! Frist!"
+        ],
+        "interleavedWith": [
+          "schreiben",
+          "korrigieren",
+          "rechtzeitig"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالمسودة! (جملتان!)",
+            "a": "Der Entwurf ist kurz. Die Überschrift ist klar.",
+            "why": "الكتابة تبدأ بمسودة! (ars-vortragstext!)"
+          },
+          {
+            "q": "تكلّم عن الصياغة! (جملتان!)",
+            "a": "Die Formulierung ist klar. Er findet die Formulierung.",
+            "why": "الصياغة ثم الإيجاد! (die Formulierung finden!)"
+          },
+          {
+            "q": "تكلّم عن النص! (جملتان!)",
+            "a": "Er verfasst den Text. Der Absatz ist kurz.",
+            "why": "التأليف ثم الفقرة! (den Text verfassen!)"
+          },
+          {
+            "q": "اختم بالموعد! (جملتان!)",
+            "a": "Er hält die Frist ein. Die Zeit ist knapp.",
+            "why": "الالتزام ثم الوقت! (die Frist einhalten!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الصياغة»؟",
+            "a": "die Formulierung"
+          },
+          {
+            "q": "«يؤلّف النص.»؟",
+            "a": "Er verfasst den Text."
+          },
+          {
+            "q": "«يلتزم بالموعد.»؟ (الانفصال!)",
+            "a": "Er hält die Frist ein."
+          },
+          {
+            "q": "«يجد الصياغة.»؟",
+            "a": "Er findet die Formulierung."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«المسودة»؟ (مراجعة!)",
+            "a": "der Entwurf"
+          },
+          {
+            "q": "«الفقرة»؟ (مراجعة!)",
+            "a": "der Absatz"
+          },
+          {
+            "q": "«العنوان»؟ (مراجعة!)",
+            "a": "die Überschrift"
+          },
+          {
+            "q": "«الموعد»؟ (مراجعة!)",
+            "a": "die Frist"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«في الوقت المناسب»؟ (مراجعة!)",
+            "a": "rechtzeitig"
+          },
+          {
+            "q": "«مختصر»؟ (مراجعة!)",
+            "a": "knapp"
+          },
+          {
+            "q": "«يُصحّح النص.»؟ (مراجعة!)",
+            "a": "Er korrigiert den Text."
+          },
+          {
+            "q": "«يلتزم بالموعد»؟ (المفردة الثابتة!)",
+            "a": "die Frist einhalten"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Formulierung ist klar und er verfasst den Text. Die Frist ist kurz, aber er hält die Frist ein. Der Entwurf ist knapp und der Absatz ist kurz. Die Überschrift ist einfach und die Zeit ist knapp. Er findet die Formulierung und korrigiert den Text. Rechtzeitig — geschafft!",
+      "ar": "الصياغة واضحة وهو يكتب النص. الموعد قصير لكنه يلتزم به. المسودة مختصرة والفقرة قصيرة. العنوان بسيط والوقت ضيق. يجد الصياغة ويصحّح النص. في الوقت المناسب — أُنجز!"
+    },
+    "srsBundleWordIds": [
+      "formulierung",
+      "verfassen",
+      "einhalten"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Formulierung!",
+          "de": "~~Der Formulierung ist klar.~~"
+        },
+        "correct": {
+          "ar": "die Formulierung!",
+          "de": "Die Formulierung ist klar."
+        },
+        "exercise": {
+          "q": "___ Formulierung ist klar.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الصياغة» مؤنثة لكن «التعبير» مذكّر فيختلط! والألمانية: die Formulierung مؤنثة (die!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الجزء ein في موضعه!",
+          "de": "~~Er hält ein die Frist.~~"
+        },
+        "correct": {
+          "ar": "الجزء ein آخر: hält die Frist ein!",
+          "de": "Er hält die Frist ein."
+        },
+        "exercise": {
+          "q": "Er hält die Frist ___.",
+          "a": "ein"
+        },
+        "whyArabicSpeakerFails": "العربية: «يلتزم بالموعد» — كلمة واحدة! والألمانية: einhalten منفصل والجزء ein يهرب آخر الجملة (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "المصدر بدل المضارع!",
+          "de": "~~Er verfassen den Text.~~"
+        },
+        "correct": {
+          "ar": "المضارع: verfasst!",
+          "de": "Er verfasst den Text."
+        },
+        "exercise": {
+          "q": "Er ___ den Text. (يؤلّف!)",
+          "a": "verfasst"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل لا يتغير بالفاعل! والألمانية: er verfasst (لا verfassen!) — التصريف إلزامي (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Formulierung",
+      "https://www.duden.de/rechtschreibung/verfassen",
+      "https://www.duden.de/rechtschreibung/einhalten"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-vortragstext",
+    "ars-konnektoren"
+  ],
+  "audioManifestRefs": [
+    "word-formulierung",
+    "word-verfassen",
+    "word-einhalten"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 13: التكثيف — محاكاة 75% وقت!)",
+    "goetheWordListOverlap": [
+      "formulierung",
+      "verfassen",
+      "einhalten"
+    ]
+  }
+}

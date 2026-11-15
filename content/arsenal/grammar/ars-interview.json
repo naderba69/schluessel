@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "constitutionSection": "10‑ي",
+  "id": "ars-interview",
+  "kind": "shufra",
+  "title": {
+    "ar": "مقابلة التوظيف — تمثيلية!",
+    "de": "Das Interview — Fragen und Antworten"
+  },
+  "levelIntroduced": "B1",
+  "riskLevel": "red",
+  "payload": {
+    "topicAr": "هيكل مقابلة التوظيف الألمانية! (التحية! التعريف بالنفس! العرض! السؤال عن الشروط! الجودات! الشكر!)",
+    "sceneAr": "المقابلة: المديرة تسأل! المتقدّم يُعرّف بنفسه ويعرض خبرته! يسأل عن الشروط! ويُنهي بالشكر! صيغ ثابتة حرفياً!",
+    "examples": [
+      {
+        "de": "Guten Tag! Ich bin für das Gespräch da.",
+        "ar": "طاب يومك! أنا هنا من أجل اللقاء. (التحية والافتتاح!)"
+      },
+      {
+        "de": "Ich möchte mich vorstellen.",
+        "ar": "أُريد أن أُعرّف بنفسي. (التعريف بالنفس!)"
+      },
+      {
+        "de": "Ich präsentiere mich und meine Erfahrung.",
+        "ar": "أُعرّض نفسي وخبرتي. (العرض!)"
+      },
+      {
+        "de": "Wie sind die Arbeitszeit und die Überstunden?",
+        "ar": "كيف هي ساعات العمل والساعات الإضافية؟ (السؤال عن الشروط!)"
+      },
+      {
+        "de": "Ich bin organisiert und zuverlässig.",
+        "ar": "أنا منظَّم وجدير بالثقة. (الجودات!)"
+      },
+      {
+        "de": "Für das Gespräch danke ich Ihnen.",
+        "ar": "أشكركم على اللقاء. (الشكر في النهاية!)"
+      }
+    ],
+    "inferencePromptAr": "لاحظ: التحية أولاً (Guten Tag!) والتعريف بالنفس (möchte mich vorstellen!) والعرض (präsentiere mich!) والسؤال عن الشروط (Wie sind …?) والجودات (bin organisiert!) والشكر آخراً (danke ich Ihnen!)! الصيغ ثابتة — تُحفظ كما هي!",
+    "ruleDe": "Guten Tag! Ich bin für das Gespräch da. · Ich möchte mich vorstellen. · Ich präsentiere mich und meine Erfahrung. · Wie sind die Arbeitszeit und die Überstunden? · Ich bin organisiert und zuverlässig. · Für das Gespräch danke ich Ihnen.",
+    "ruleAr": "قالب المقابلة: (1) التحية والافتتاح: Guten Tag! Ich bin für das Gespräch da. (2) التعريف بالنفس: Ich möchte mich vorstellen. (3) العرض: Ich präsentiere mich und meine Erfahrung. (4) السؤال عن الشروط: Wie sind die Arbeitszeit und die Überstunden? (5) الجودات: Ich bin organisiert und zuverlässig. (6) الشكر آخراً: Für das Gespräch danke ich Ihnen.",
+    "contrastAr": "العربية: «صباح الخير! أنا هنا بسبب الإعلان…» — افتتاح مرن وأسئلة حرة! والألمانية: صيغ ثابتة حرفياً — التحية والتعريف والشكر لا تتغيّر (خريطة التداخل 10‑ي).",
+    "limitsAr": [
+      "التعريف بالنفس بالصيغة الثابتة: Ich möchte mich vorstellen. (لا تغيير!)",
+      "السؤال عن الشروط مهذّب: Wie sind die Arbeitszeit und die Überstunden? (صيغة سؤال!)",
+      "الجودات بصفتين ثابتتين: organisiert und zuverlässig! (بالترتيب!)",
+      "الشكر آخراً دائماً: Für das Gespräch danke ich Ihnen. (قبل النهاية!)"
+    ],
+    "beads": [
+      "Guten Tag! Ich bin für das Gespräch da.",
+      "Ich möchte mich vorstellen.",
+      "Ich präsentiere mich und meine Erfahrung.",
+      "Wie sind die Arbeitszeit und die Überstunden?",
+      "Ich bin organisiert und zuverlässig.",
+      "Für das Gespräch danke ich Ihnen."
+    ],
+    "properNouns": []
+  },
+  "usedInLessons": ["b1-u8-d3"]
+}

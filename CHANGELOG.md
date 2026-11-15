@@ -3,6 +3,250 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-17 — الدفعة 483: D529 — **الوحدة 2 من B2 تكتمل!** — b2-u2-d6 (gleichgewicht/bewusst/emission · التوازن والوعي والانبعاثات!) — يوم بلا أخطاء محتوى (0/0/0 من أول مرة!) · الدفعة 483 · v7.75!
+اليوم السادس يُغلق الوحدة 2: التوازن (das Gleichgewicht — das Gewicht في آخره!) والوعي (bewusst — صفة بلا لاحقة بعد الفعل: leben bewusst!) والانبعاثات (die Emissionen — جمع -en!). ستة أيام × 3 كلمات = 18 كلمة في «الأرض والمناخ»! واليوم نظيف تماماً من أول مرة — عادات N-342/N-351 صارت غريزة!
+- **البوابة:** vitest **1939/1939 ✓ (145 ملفاً)** · tsc ✓ · validator **3048/0/0 ✓** · build ✓ · preflight 11/11
+
+## 2026-10-17 — الدفعة 482: D528 — **خمسة أيام في الأرض والمناخ!** — b2-u2-d5 (hitze/erderwaermung/bewahren · الحرارة وإحماء الأرض والصون!) — حارس الأعلام هو الفيصل (N-352) · الدفعة 482 · v7.74!
+اليوم الخامس: الحرارة (die Hitze — مجرّد على -e مؤنثة!) وإحماء الأرض (die Erderwärmung — المركّب يتبع die Erwärmung!) والصون (bewahren — ضعيف: hat bewahrt!). «نصون الأرض» بقيمة «نقذ الأرض» في اليوم الرابع — حفظٌ لا إنقاذ فقط!
+- **البوابة:** vitest **1939/1939 ✓ (145 ملفاً)** · tsc ✓ · validator **3044/0/0 ✓** · build ✓ · preflight 11/11
+
+## 2026-10-17 — الدفعة 481: D527 — **أربعة أيام في الأرض والمناخ!** — b2-u2-d4 (flut/trinkwasser/entdeckung · الفيضان وماء الشرب والاكتشاف!) — «الخوف من»: Angst haben vor + Dativ! · الدفعة 481 · v7.73!
+اليوم الرابع: الفيضان (die Flut — مؤنثة كأسماء الكوارث!) وماء الشرب (das Trinkwasser — المركّب يتبع das Wasser!) والاكتشاف (die Entdeckung — كل -ung مؤنثة مع الأداة النكرة: eine!). وتثبيت «الخوف من»: Angst haben vor + Dativ (vor der Flut!).
+- **البوابة:** vitest **1939/1939 ✓ (145 ملفاً)** · tsc ✓ · validator **3040/0/0 ✓** · build ✓ · preflight 11/11
+
+## 2026-10-17 — الدفعة 480: D526 — **ثلاثة أيام في الأرض والمناخ!** — b2-u2-d3 (klimawandel/recyceln/schonen · المناخ والتدوير والمحافظة!) — المركّب يتبع آخره! وكل نص = كلمات مُدرَّسة حصراً (N-350) · الدفعة 480 · v7.72!
+اليوم الثالث: التغيّر المناخي (der Klimawandel — der! المركّب يتبع آخر جزء لا das Klima!) والتدوير (recyceln — فعل مستعار منتظم!) والمحافظة (schonen — Akkusativ!). وقاعدة نظافة نصية صارمة: كل كلمة ألمانية في الدرس — حتى «Wandel» داخل شرح المركّب و«stoppen» في التثبيتات — يجب أن تكون مُدرَّسة بملفها (N-350).
+- **البوابة:** vitest **1939/1939 ✓ (145 ملفاً)** · tsc ✓ · validator **3036/0/0 ✓** · build ✓ · preflight 11/11
+
+## 2026-10-17 — الدفعة 479: D525 — **يومان في الأرض والمناخ!** — b2-u2-d2 (ressource/erneuerbar/verbrennen · الموارد والمتجدّد والحرق!) — الصفة: لاحقة قبل الاسم وبلا لاحقة بعد sein! · الدفعة 479 · v7.71!
+اليوم الثاني للوحدة 2: المورد (die Ressource — فرنسية على -e مؤنثة!) والمتجدّد (erneuerbar — الصفة تتغيّر موضعها!) والحرق (verbrennen — hat verbrannt!). درس نحوي مزدوج: erneuerbare Energie (لاحقة قبل الاسم) مقابل ist erneuerbar (بلا لاحقة بعد sein) — في التمرين والخطأ والإنذار معاً.
+- **البوابة:** vitest **1939/1939 ✓ (145 ملفاً)** · tsc ✓ · validator **3032/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 478: D524 — **الوحدة 2 من B2 تبدأ!** — b2-u2-d1 (nachhaltigkeit/auswirkung/verschmutzen · الأرض والمناخ!) — نقل nextId للمعركة (N-298!) وفخ الكلمات المزيّفة (N-348) · الدفعة 478 · v7.70!
+الوحدة 2: الأرض والمناخ! الاستدامة (die Nachhaltigkeit — كل -keit مؤنثة!) والتأثير (die Auswirkung — كل -ung مؤنثة!) والتلوّث (verschmutzen — الماضي: hat verschmutzt!). نُفّذ فخ N-298 كما هو موثوم: معركة الوحدة 1 نُقل nextId من null إلى b2-u2-d1! والكلمات المزيّفة في النصوص الخاطئة (geverschmutzt!) رفضها الجارس فخ الترتيب أوضح (N-348).
+- **البوابة:** vitest **1939/1939 ✓ (145 ملفاً — المعركة بال nextId الجديد!)** · tsc ✓ · validator **3028/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 477: D523 — **معركة الوحدة 1 من B2!** — battle-u1: برهان b2-u1-d1..d6 عبر 258 درساً سابقاً — **20/20 من أول مرة!** (المعركة الأولى بلا إصلاحات!) · الدفعة 477 · v7.69!
+المعركة الأولى التي تمر بلا أي إصلاح! دروس B2 الستة لُعبت آلياً عبر 258 درساً سابقاً — 20/20 فوراً. السبب: قاعدة الكثافة ≥12 بنداً (N-342) وأداة day-preflight طُبِّقتا من اليوم الأول للوحدة — فلا بنود ناقصة ولا أخطاء تركيب.
+- **البوابة:** vitest **1939/1939 ✓ (145 ملفاً — المعركة ضمنها!)** · tsc ✓ · validator **3024/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 476: D522 — **الوحدة 1 من B2 تكتمل!** — b2-u1-d6 (nachbarschaft/anteilnahme/vergeben · الحيّ والمواساة والمسامحة!) — kuemmern كان مأخوذًا فانتُظر Anteilnahme! · الدفعة 476 · v7.68!
+اليوم الأخير للوحدة 1: الحيّ (die Nachbarschaft — كل -schaft مؤنثة!) والمواساة (die Anteilnahme — كل -nahme مؤنثة!) والمسامحة (vergeben — يأخذ المجرور: jemandem/dir!). الفحص المزدوج منع تكرار kuemmern (مأخوذ من a1-u14-d5!) فجاءت Anteilnahme بدلاً منه — وcheck-lesson اجتاز من أول مرة (P11 صار عادة!).
+- **البوابة:** vitest **1919/1919 ✓ (144 ملفاً)** · tsc ✓ · validator **3024/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 475: D521 — **اليوم الخامس في B2!** — b2-u1-d5 (gerechtigkeit/spenden/wuerde · العدل والتبرّع والكرامة!) — الخطأ المتكرّر (why بلا عربية ×3) حُسم بفحص P11! · الدفعة 475 · v7.67!
+اليوم الخامس: العدل (die Gerechtigkeit — كل -keit مؤنثة!) والتبرّع (spenden — يأخذ المجرور: den Menschen!) والكرامة (die Würde — umlaut-u مع بطاقة صوت!). خطأ «why بلا عربية» تكرّر ثلاث مرات في البند الرابع فأُضيف فحص P11 لأداة day-preflight (11 فحوصاً الآن!) — والمثبتات حُسبت فعلياً قبل الكتابة (duden 1399).
+- **البوابة:** vitest **1919/1919 ✓ (144 ملفاً)** · tsc ✓ · validator **3020/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 474: D520 — **اليوم الرابع في B2!** — b2-u1-d4 (ermutigung/warnen/ablehnung · التشجيع والتحذير والرفض!) — warnen كانت مستهلكة من B1 بلا ملف كلمة! · الدفعة 474 · v7.66!
+اليوم الرابع: التشجيع (die Ermutigung — كل -ung مؤنثة!) والتحذير (warnen — vor + Dativ: vor der Gefahr!) والرفض (die Ablehnung — -ung أيضاً!). اكتُشف أن warnen كانت مستهلكة في b1-u5-d2 (إحالة قديمة + مقطع صوتي!) فوُحِد المقطع المكرر ودُمجت الإحالات (N-346) — وجرّاب النص منع «Dativ» (لاتيني!) و«Ermutigen» (غير مُدرَّس) من نص المتعلم.
+- **البوابة:** vitest **1919/1919 ✓ (144 ملفاً)** · tsc ✓ · validator **3016/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 473: D519 — **اليوم الثالث في B2!** — b2-u1-d3 (integration/gleichheit/beistehen · الاندماج والمساواة والمساندة!) — Integration في قائمة جوهه B1 الرسمية! · الدفعة 473 · v7.65!
+اليوم الثالث: الاندماج (die Integration — في قائمة جوهه الرسمية B1 ص52!) والمساواة (die Gleichheit — كل -heit مؤنثة!) والمساندة (beistehen — فعل منفصل مع Dativ: Wir stehen den Freunden bei!). جارس النص منع كلمة غير مُدرَّسة (kämpfen) من نص المتعلم فاستُبدلت بـ leben (N-345) — وقائمة جوهه مُلئت آلياً (D110).
+- **البوابة:** vitest **1919/1919 ✓ (144 ملفاً)** · tsc ✓ · validator **3013/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 472: D518 — **اليوم الثاني في B2!** — b2-u1-d2 (einsatz/hoeflichkeit/vermitteln · اللباقة والتفاني والوساطة) — وأداة day-preflight في خدمتها الثانية: 10/10! · الدفعة 472 · v7.64!
+اليوم الثاني من «مع الناس»: التفاني (der Einsatz — جمع قوي die Einsätze!) واللباقة (die Höflichkeit — كل -keit مؤنثة!) والوساطة (vermitteln!). الكلمات وُلدت بالمولّد الرسمي planWord فجاءت معايير كاملة (و audio تلقائياً للخطر الحرج!). أداة day-preflight اجتازت فحوصها العشرة في أول استخدام رسمي — وفحص الكلمات قبل الاختيار كشف أن كل مرشّحي اليوم الأول كانوا مأخوذين من B1!
+- **البوابة:** vitest **1919/1919 ✓ (144 ملفاً)** · tsc ✓ · validator **3009/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 471: D517 — **الإنتاج والتطوير!** — أول درس B2 (b2-u1-d1: vorbild/toleranz/begegnung) + أداة day-preflight (10 فحوصات لفخاخ اليوم!) · الأداة كشفت معرّفاً خاطئاً · وصحّحنا هدف B2 المستحيل (N-343) · الدفعة 471 · v7.63!
+إنتاج وتطوير معاً! نُشر أول درس B2: «الوحدة 1: مع الناس» (القدوة/التسامح/اللقاء — 13 بنداً) — وطورنا أداة day-preflight: عشر فحوصات تُشفّر فخاخ الأيام الحقيقية (N-333→N-342) وتُشغَّل قبل البوابة. الأداة كشفت أول خطأ فوراً (معرّف menschen الخاطئ) وأصلحناه. وصحّحنا خللاً في المدقّق: هدف بطاقات B2 كان مستحيلاً رياضياً فكان أي محتوى B2 سيُسقط البوابة!
+- **البوابة:** vitest **1919/1919 ✓ (144 ملفاً)** · tsc ✓ · validator **3005/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 470: D516 — **المعركة النهائية لـB1!** — battle-u14: برهان الوحدة 14 (b1-u14-d1..d6) عبر 252 درساً سابقاً + nextId = null (نهاية المسار!) · المعركة كشفت 10 بنود < 12 في دروس d2–d6 (N-342!) — أُضيفت فنجتاز 20/20 · الدفعة 470 · v7.62!
+المعركة النهائية! اختبر النظام الوحدة 14 كاملة آلياً: التخطيط والبنود والإغلاق — **20/20** · اكتشف أولًا أن دروس الأسبوع المبنية يدوياً أُعطيت 10 بنود تدريبية والحد 12 فأُضيفت (+2 لكل درس من d2 إلى d6) — ثم اجتازت كلها. **B1 كامل: 252 درساً + 6 معارك!**
+- **البوابة:** vitest **1919/1919 ✓ (144 ملفاً — برهان u14 ضمنها!)** · tsc ✓ · validator **3000/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 469: D515 — b1-u14-d6 «اليام الأخير!» — كلمتان: der Mut (بلا جمع! الشجاعة! — B1 في جوته!) · der Puffer (die Puffer! الاحتياطي!) + collocation + توليف أسبوع الامتحان كاملاً في الملخّص · الدفعة 469 · v7.61!
+الوحدة 14 (امتحان Niveauprüfung B1!) — اليوم الأخير: **كلمتان**: der Mut (الشجاعة! بلا جمع!) · der Puffer (die Puffer! الاحتياطي!) + المفردات الثابتة (Mut haben! den Puffer nutzen!). الملخّص يولّف كل أسبوع الامتحان (Urkunde! Punktzahl! Prüfungsteil! Sitzplatz! Handschrift! Selbstvertrauen!). المحطات 16 وcheck-lesson **0/0/0** (42 سطراً).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **3000/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 468: D514 — b1-u14-d5 «الكلام!» — كلمات اليوم: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen بلا تغيير! الثقة!) + collocations الثلاث + قاعدتا العرض والأسئلة · الدفعة 468 · v7.60!
+الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الكلام: **3 كلمات**: der Akzent (die Akzente! اللكنة!) · die Intonation (die Intonationen! النبرة!) · das Selbstvertrauen (die Selbstvertrauen! الثقة بالنفس!) + المفردات الثابتة (einen Akzent haben! die Intonation hören! das Selbstvertrauen zeigen!). المحطات 16 وcheck-lesson **0/0/0** (38 سطراً).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2997/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 467: D513 — b1-u14-d4 «الكتابة!» — كلمات اليوم: die Handschrift (die Handschriften! الخط اليدوي!) · die Schreibweise (die Schreibweisen! الإملاء!) · das Satzzeichen (die Satzzeichen بلا تغيير! الترقيم!) + collocations الثلاث + قاعدتا العرض والأسئلة · حكم النطق: artifact لا accept-reference (N-341!) · الدفعة 467 · v7.59!
+الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الكتابة: **3 كلمات**: die Handschrift (die Handschriften! الخط اليدوي!) · die Schreibweise (die Schreibweisen! طريقة الكتابة!) · das Satzzeichen (die Satzzeichen! علامة الترقيم!) + المفردات الثابتة (die Handschrift lesen! die Schreibweise kennen! die Satzzeichen schreiben!). المحطات 16 وcheck-lesson **0/0/0** (38 سطراً).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2993/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 466: D512 — b1-u14-d3 «القراءة!» — كلمات اليوم: der Prüfungsteil (die Prüfungsteile! — A1 في قائمة جوته!) · die Einzelheit (die Einzelheiten! B1!) · der Block (die Blöcke — umlaut!) + collocations الثلاث + قاعدتا العرض والأسئلة · فخ ü↔ue في المطابقات (N-340!) · الدفعة 466 · v7.58!
+الوحدة 14 (امتحان Niveauprüfung B1!) — يوم القراءة: **3 كلمات**: der Prüfungsteil (die Prüfungsteile! جزء الامتحان!) · die Einzelheit (die Einzelheiten! التفصيل!) · der Block (die Blöcke! كراس الأسئلة!) + المفردات الثابتة (den Prüfungsteil lesen! die Einzelheiten finden! den Block öffnen!). المحطات 16 وcheck-lesson **0/0/0** (39 سطراً).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2989/0/0 ✓** · build ✓
+
+## 2026-10-17 — الدفعة 465: D511 — b1-u14-d2 «الاستماع!» — كلمات اليوم: das Hilfsmittel (die Hilfsmittel بلا تغيير!) · der Zugang (die Zugänge!) · der Sitzplatz (die Sitzplätze!) + collocations الثلاث + قاعدتا العرض والأسئلة · خطّاف إعادة البناء الصوتي (N-339!) · الدفعة 465 · v7.57!
+الوحدة 14 (امتحان Niveauprüfung B1!) — يوم الاستماع: **3 كلمات**: das Hilfsmittel (die Hilfsmittel! الوسائل المساعدة!) · der Zugang (die Zugänge! المدخل!) · der Sitzplatz (die Sitzplätze! المقعد!) + المفردات الثابتة (den Zugang finden! am Sitzplatz sitzen! die Hilfsmittel nutzen!). المحطات 16 وcheck-lesson **0/0/0** (41 سطراً).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2985/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 464: D510 — b1-u14-d1 «الاستعداد للامتحان!» — الوحدة 14 (امتحان Niveauprüfung B1!) تبدأ! — 3 كلمات (Urkunde/Punktzahl/abschneiden-الانفصال!) + قاعدتا العرض والأسئلة! · كلمة عربية خاطئة في شرح (N-338!) · الدفعة 464 · v7.56!
+الوحدة 14 (امتحان Niveauprüfung B1!) تبدأ! — يوم الاستعداد: **3 كلمات**: die Urkunde (die Urkunden! الشهادة الرسمية!) · die Punktzahl (die Punktzahlen!) · **abschneiden** (schneidet ab/schnitt ab/hat abgeschnitten — منفصل!) + قاعدتا العرض وجولة الأسئلة. المحطات 16 وcheck-lesson **0/0/0** (54 سطراً).
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2981/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 463: D509 — b1-u13-d7 «معركة الوحدة 13!» — برهان D7 يُنهي التكثيف! · 252 درساً تُلعَب آلياً (20/20!) · الدفعة 463 · v7.55!
+يوم المعركة! — معركة الوحدة 13 (برهان D7!): tests/b1-unit13-proof.test.ts يلعب 246 درساً سابقاً + دروس الوحدة 13 الستة آلياً — **20/20 ✓**. الوحدة 13 (التكثيف!) تُختَم: نقطتا ضعف + محاكاتان بالسرعة + نماذج + توليف + معركة!
+- **البوابة:** vitest **1899/1899 ✓ (143 ملفاً)** · tsc ✓ · validator **2977/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 462: D508 — b1-u13-d6 «توليف التكثيف!» — كلمتان (verfestigen/der Übergang-umlaut!) + كل قواعد الوحدة التسع في نصٍّ واحد! · المطابقة ≥3 تكررت و«bereit» كشفتها الفحوصة المسبقة (N-337!) · الدفعة 462 · v7.54!
+يوم توليف التكثيف! — **كلمتان**: verfestigen (ver- لا ge-: hat verfestigt!) و der Übergang (die Übergänge!) + كل خيوط التكثيف الخمسة وكل قواعد الوحدة التسع في نص واحد. المحطات 16 وcheck-lesson **0/0/0** (49 سطراً).
+- **البوابة:** vitest **1879/1879 ✓ (142 ملفاً)** · tsc ✓ · validator **2977/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 461: D507 — b1-u13-d5 «نماذج الامتحان!» — 3 كلمات (Muster/Vorlage/Format!) + قاعدتا التهذيب والمضمون! · يوم نظيف من أول مرة! · الدفعة 461 · v7.53!
+يوم النماذج! — **3 كلمات**: das Muster (die Muster! سالم!) · die Vorlage (die Vorlagen!) · das Format (die Formate!) — ثلاثة أسماء! + قاعدتا التهذيب والمضمون + مراجعة أدوات الامتحان (Prüfung! Antwortbogen! Lösung! Aufgabe!). المحطات 16 وcheck-lesson **0/0/0** (52 سطراً) من أول مرة.
+- **البوابة:** vitest **1879/1879 ✓ (142 ملفاً)** · tsc ✓ · validator **2974/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 460: D506 — b1-u13-d4 «محاكاة 75% وقت — كتابة!» — 3 كلمات (Formulierung/verfassen/einhalten-الانفصال!) + قاعدتا النص والروابط! · ست دقائق بدل ثمان! · معرّف قاعدة في عربي (N-335 ثانية!) · الدفعة 460 · v7.52!
+محاكاة الكتابة بثلاثة أرباع الوقت! — **3 كلمات**: die Formulierung (die Formulierungen!) · verfassen (ver- لا ge-: hat verfasst!) · **einhalten** (hält ein/hielt ein/hat eingehalten — منفصل!) + قاعدتا بناء النص والروابط + التحدي: نص من ست جمل في ست دقائق بدل ثمان! المحطات 16 وcheck-lesson **0/0/0** (52 سطراً).
+- **البوابة:** vitest **1879/1879 ✓ (142 ملفاً)** · tsc ✓ · validator **2970/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 459: D505 — b1-u13-d3 «محاكاة 75% وقت — كلام!» — 3 كلمات (Zeitdruck/flüssig/beschleunigen-البادئة!) + قاعدتا العرض والأسئلة! · ثلاث دقائق بدل أربع! · كلمة ألمانية غير مُدرَّسة ثانية (Stopp — N-336!) · الدفعة 459 · v7.51!
+محاكاة الكلام بثلاثة أرباع الوقت! — **3 كلمات**: der Zeitdruck (die Zeitdrücke!) · flüssig (ظرف بلا تصريف!) · **beschleunigen** (be- لا ge-: hat beschleunigt!) + قاعدتا العرض وجولة الأسئلة + التحدي: ثلاث دقائق متواصلة بدل أربع! المحطات 16 وcheck-lesson **0/0/0** (48 سطراً).
+- **البوابة:** vitest **1879/1879 ✓ (142 ملفاً)** · tsc ✓ · validator **2966/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 458: D504 — b1-u13-d2 «التكثيف 2: الاتّساق والروابط!» — 3 كلمات (logisch/Zusammenhang-umlaut/Bedingung!) + قاعدتا التناقض والروابط! · شظايا لاتينية تكررت 3 مرات (N-335!) · الدفعة 458 · v7.50!
+اليوم الثاني من التكثيف! — **3 كلمات**: logisch (منطقي! صفة بعد ist بلا تصريف!) · der Zusammenhang (die Zusammenhänge! umlaut!) · die Bedingung (die Bedingungen!) + قاعدتا obwohl (verb-last!) والروابط + مراجعة الجمل الشرطية. المحطات 16 وcheck-lesson **0/0/0** (56 سطراً).
+- **البوابة:** vitest **1879/1879 ✓ (142 ملفاً)** · tsc ✓ · validator **2962/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 457: D503 — b1-u13-d1 «التكثيف 1: ميزان الأدوات والتصريف!» — الوحدة 13 تبدأ (نقاط الضعف!) — 3 كلمات (Merkmal/erkennen-er-لا-تنفصل/auswendig!) + قاعدتا الصف والترتيب! · جمع غير مُدرَّس (Korrekturen — N-334!) · الدفعة 457 · v7.49!
+الوحدة 13 (التكثيف!) تبدأ! — يوم نقاط الضعف الأول: **3 كلمات**: das Merkmal (die Merkmale!) · **erkennen** (erkennt/erkannte/hat erkannt — er- لا تنفصل!) · auswendig (ظرف بلا تصريف!) + قاعدتا الصف المُشبَع وترتيب الظرف + ميزان الأدوات (der/die/das ↔ السمة!). المحطات 16 وcheck-lesson **0/0/0** (53 سطراً).
+- **البوابة:** vitest **1879/1879 ✓ (142 ملفاً)** · tsc ✓ · validator **2958/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 456: D502 — b1-u12-d7 «المعركة B1 المصغّرة!» — معركة الوحدة 12 (برهان D7!) تُنهي التكامل وB1 كله! · 246 درساً تُلعَب آلياً (20/20!) · الدفعة 456 · v7.48!
+يوم المعركة! — معركة الوحدة 12 (المعركة B1 المصغّرة!): tests/b1-unit12-proof.test.ts يلعب 240 درساً سابقاً + دروس الوحدة 12 الستة آلياً (اختبارات 3×4 عتبة 75% + المحطات + الصوت!) — **20/20 ✓**. الوحدة 12 (التكامل + B1) تُختَم: مراجعة + محاكاتان + ثقافة + توليف + معركة!
+- **البوابة:** vitest **1879/1879 ✓ (142 ملفاً)** · tsc ✓ · validator **2954/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 455: D501 — b1-u12-d6 «توليف الرحلة!» — كلمتان (Rückblick/Ausblick!) + كل قواعد الرحلة التسع في نصٍّ واحد! · أزواج المطابقة ≥3 وشظية TEKAMOLO ثانية (N-333!) · الدفعة 455 · v7.47!
+يوم التوليف! — **كلمتان**: der Rückblick (die Rückblicke!) و der Ausblick (die Ausblicke!) — مركّبان من Blick! + كل خيوط الرحلة في نص واحد (الكلام والكتابة والثقافة والشهادة!) وكل قواعد الوحدة التسع (deshalb/trotzdem! obwohl! TEKAMOLO! dass! Konj II!). المحطات 16 وcheck-lesson **0/0/0** (52 سطراً).
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2954/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 454: D500 — b1-u12-d5 «مراجعة 3 + ثقافة!» — 3 كلمات (Anerkennung/nachweisen/benoten!) + بطاقة الثقافة b1-landeskunde-u12 (جوته وأوسد!) + قاعدتا das والتهذيب! · أخطاء اصطناعية في التنبيهات وأعلام خارج المخطط (N-329..N-332!) · الدفعة 454 · v7.46!
+يوم المراجعة الثالثة والثقافة! — **3 كلمات**: die Anerkennung (die!) · **nachweisen** (weist nach/wies nach/hat nachgewiesen — منفصل!) · **benoten** (be- بلا ge-: hat benotet!) + بطاقات الثقافة b1-landeskunde-u12 (معهد جوته وأوسد!) + مراجعة كلمات الثقافة والرحلة. المحطات 16 وcheck-lesson **0/0/0** (54 سطراً).
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2951/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 453: D499 — b1-u12-d4 «محاكاة كتابة!» — 3 كلمات (Rechtschreibung/Stil/ueberarbeiten-الانفصال!) + قاعدتا النص والروابط! · الصفة بعد ist بلا تصريف! · الدفعة 453 · v7.45!
+يوم محاكاة الكتابة! — **3 كلمات**: die Rechtschreibung (die!) · der Stil (die Stile!) · **überarbeiten** (arbeitet über/arbeitete über/hat überarbeitet — منفصل!) + مراجعة بنية النص (Entwurf! Einleitung! Hauptteil! Schluss!) وأفعال الكتابة (formulieren! korrigieren! verbessern!) وقاعدة ars-vortragstext + ars-konnektoren. المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2946/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 452: D498 — b1-u12-d3 «محاكاة كلام!» — 3 كلمات (fließend/Aussprache/spontan!) + قاعدتا العرض والأسئلة! · كلمات ادّعيت تعليمها (Mut/Sprecher/Klarheit!) وخطأ إملائي ANTORTET (N-328!) · الدفعة 452 · v7.44!
+يوم محاكاة الكلام! — **3 كلمات**: fließend (ببطولة!) · die Aussprache (die Aussprachen!) · spontan (عفوياً!) + مراجعة أفعال الكلام (sprechen/antworten/erzählen/beschreiben!) وجودته (Ausdruck/Betonung!) وقواعد العرض والأسئلة. المحطات 15 وcheck-lesson **0/0/0** (50 سطراً).
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2942/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 451: D497 — b1-u12-d2 «مراجعة 2 + إدارة وقت (٥٠٪)!» — 3 كلمات (Zeitplan/einteilen-الانفصال/Disziplin!) + قواعد الوحدة الأولى (TeKaMoLo/obwohl!) · error-hunt كان بطاقات مصيدة فصار أخطاء حقيقية (N-327!) · الدفعة 451 · v7.43!
+يوم المراجعة الثانية + إدارة الوقت! — **3 كلمات**: der Zeitplan (die Zeitpläne — بمدّة!) · **einteilen** (teilt ein/teilte ein/hat eingeteilt — منفصل!) · die Disziplin + مراجعة الكلمات الزمنية (pünktlich! rechtzeitig! Reihenfolge! Uhr/Minute/Stunde!) وقواعد الوحدة الأولى (TeKaMoLo! obwohl!). المحطات 15 وcheck-lesson **0/0/0** (49 سطراً).
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2938/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 450: D496 — b1-u12-d1 «مراجعة 1 — الكلمات المتراكمة!» — الوحدة 12 (الأخيرة!) تبدأ! + 3 كلمات (Wortschatz/Zertifikat/Konzentration!) + روابط الوحدة الأولى (deshalb/trotzdem!) · «Einheiten» تكرار N-324 (N-326!) · نقلة battle-u11: null ← b1-u12-d1! · الدفعة 450 · v7.42!
+يوم المراجعة الأولى! — **3 كلمات**: der Wortschatz (die Wortschätze — بمدّة!) · das Zertifikat · die Konzentration + مراجعة ١٥ كلمة متراكمة من وحدات سابقة (Weg/Arbeit/Schule/Zeit/Gesundheit/Wohnung/Reise/Geld/Sicherheit/Ergebnis/Niveau!) وروابط الوحدة الأولى (deshalb/trotzdem — المرتبة الثانية!). المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2934/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 449: D495 — b1-u11-d7 «المعركة battle-u11»! — 20 اختباراً (20/20!) · nextId null (u12 لم تبدأ!) · مهلة الاختبارات 30s (أصل «رعشة» D491 — N-325!) · الدفعة 449 · v7.41!
+يوم المعركة! — tests/b1-unit11-proof.test.ts (النمط N-300!) يلعب دروس الوحدة الستة آلياً (20 اختباراً!) · nextId = null حتى تبدأ b1-u12 (نمط D488!) · الوحدة 11 كاملة: d1 استراتيجيات ← d2 قراءة ممتدة ← d3 عرض أول ← d4 نص عرض ← d5 أسئلة ← d6 توليف ← d7 معركة!
+- **البوابة:** vitest **1859/1859 ✓ (141 ملفاً)** · tsc ✓ · validator **2930/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 448: D494 — b1-u11-d6 «مراجعة + توليف!» — الوحدة 11 كلها! + 3 كلمات (Zusammenhalt/Erfüllung/verwirklichen!) + القواعد الخمس معاد استخدامها! · «Einheit» وأسماء القواعد في النص العربي (N-324!) · الدفعة 448 · v7.40!
+يوم المراجعة والتوليف! — **3 كلمات**: der Zusammenhalt (بلا جمع!) · die Erfüllung (die Erfüllungen!) · **verwirklichen** (ضعيف! hat verwirklicht!) + مراجعة الوحدة كلها (Strategie ← Lektüre ← Präsentation ← Text ← Fragerunde!) والقواعد الخمس معاد استخدامها (usedInLessons + d6!). المحطات 15 وcheck-lesson **0/0/0** (50 سطراً).
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2930/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 447: D493 — b1-u11-d5 «أسئلة وأجوبة!» — ars-fragerunde! + 15 كلمة! (Sichtweise/Schwerpunkt/Wertschätzung! + verständlich/ausführlich/beispielsweise! + الأفعال الثلاثة الضعيفة!) · انتهاك واحد (Wertschätzung-المدّ! + regen 1390ms! + lexicon 318!) · الدفعة 447 · v7.39!
+يوم الأسئلة والأجوبة! — **15 كلمة**: die Sichtweise · der Schwerpunkt · die Wertschätzung · verständlich · ausführlich · beispielsweise · gespannt · geduldig · aufmerksam · hilfreich · selbstverständlich · präzise · **beeindrucken** (ضعيف!) · **faszinieren** (ضعيف!) · **vertiefen** (ضعيف!) + القاعدة ars-fragerunde (شُفرة 4: «Was meinen Sie?» — الركان الثلاثة!). المحطات 15 وcheck-lesson **0/0/0** (54 سطراً).
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2926/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 446: D492 — b1-u11-d4 «نص العرض!» — ars-vortragstext! + 15 كلمة! (Entwurf/formulieren/Überblick! + pflegen-البادئة! + Ehrenamt!) · 4 نُطُق (Darstellung/Kreativität/nachhaltig-المدّ والنبر! + Überblick-مركب-النبر-الأول!) · الدفعة 446 · v7.38!
+يوم نص العرض! — **15 كلمة**: der Entwurf · **formulieren** (ضعيف!) · der Überblick · die Darstellung · die Kreativität · das Handwerk · **musizieren** · **pflegen** (hat gepflegt — بالبادئة!) · wöchentlich · monatlich · selten · ziemlich · nachhaltig · das Ehrenamt (die Ehrenämter!) · die Vielfalt + القاعدة ars-vortragstext (شُفرة 4: «Der Entwurf ist kurz.» — الطبقات الثلاث!). المحطات 15 وcheck-lesson **0/0/0** (52 سطراً).
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2909/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 445: D491 — b1-u11-d3 «العرض الأول (٢–٣ دقائق)!» — ars-praesentation! + 15 كلمة! (Hauptteil/Karteikarte! + vorführen-الانفصال! + V2-بعد-الظرف!) · 3 نُطُق (Karteikarte/nebenbei/sozial-النبر-الثاني! + lexicon 311-313!) · الدفعة 445 · v7.37!
+يوم العرض التقديمي الأول! — **15 كلمة**: der Hauptteil · die Karteikarte · **vorführen** (führt vor/führte vor/hat vorgeführt — منفصل + قويّ!) · die Leidenschaft · die Motivation · sozial · der Mitmensch · nebenbei · hauptsächlich · insbesondere · bereits · häufig · die Aufmerksamkeit · **erwähnen** (ضعيف!) · gestalten + القاعدة ars-praesentation (شُفرة 4: «Hauptsächlich LIEST er!» — الأقسام الثلاثة!). المحطات 15 وcheck-lesson **0/0/0** (51 سطراً).
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2892/0/0 ✓** · build ✓
+
+## 2026-11-26 — الدفعة 444: D490 — b1-u11-d2 «قراءة ممتدة!» — ars-lektuere! + 15 كلمة! (رومان وتشويق! + erfinden-الماضي-المصدر! + ausleihen-الانفصال-القوي!) · انتهاك واحد (Kapitel-النبر-الثاني! + regen 972ms! + lexicon 310!) · تعديل pretest ×2 (besser→kürzer! + هل→كيف!) · الدفعة 444 · v7.36!
+يوم القراءة الممتدة! — **15 كلمة**: der Roman · das Märchen · das Kapitel · die Handlung · die Spannung · die Atmosphäre · **erfinden** (erfindet/erfand/hat erfunden!) · die Erfindung · der Genuss · neugierig · **begeistern** (begeisterte/hat begeistert!) · die Begeisterung · **ausleihen** (leiht aus/lieh aus/hat ausgeliehen — منفصل + قويّ!) · unterhaltsam · berührend + القاعدة ars-lektuere (شُفرة 4: «Er liest das Buch aus.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2875/0/0 ✓** · build ✓
+
+## 2026-11-25 — الدفعة 443: D489 — b1-u11-d1 «الهوايات والمجتمع — استراتيجيات القراءة الأربع!» — الوحدة 11 تبدأ! (الدفعة 443 · v7.35)
+يوم استراتيجيات القراءة الأربع! — **15 كلمة**: die Strategie · **überfliegen** (منفصل + قويّ!) · gezielt موجَّهاً · die Hauptaussage · der Schlüsselbegriff · der Kontext · die Vermutung · vermuten · die Fragestellung · **erschließen** (قويّ!) · der Absatz · die Gesellschaft · **sich engagieren** (sich + FÜR!) · ehrenamtlich · die Gemeinschaft + القاعدة ars-lesestrategien (شُفرة 6: «Er fliegt den Text über.» — المراحل الأربع!). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2858/0/0 ✓** · build ✓
+
+## 2026-11-24 — الدفعة 442: D488 — b1-u10-d7 «المعركة battle-u10» — الوحدة 10 أُغلقت! (الدفعة 442 · v7.34)
+معركة الوحدة 10 (الأرقام والإحصاء) خضراء! — **20 اختباراً**: دروسها الستة (d1-d6) تُلعَب 3 نسخ × علامة كاملة عبر proveUnit + حارس البنود الضعيفة! (الغلاف الرفيع b1-unit10-proof.test.ts — النمط نفسه من D426/D433/D440/D461/D474/D481.)
+- **البوابة:** vitest **1839/1839 ✓ (140 ملفاً)** · tsc ✓ · validator **2841/0/0 ✓** · build ✓
+
+## 2026-11-23 — الدفعة 441: D487 — b1-u10-d6 «الأرقام والإحصاء — مراجعة + توليف!» — قبل المعركة! (الدفعة 441 · v7.33)
+يوم التوليف والحصيلة! — **3 كلمات**: **die Bilanz** الحصيلة (die! **Bilanz ziehen**!) · **das Fazit** الخلاصة (das!) · **die Genauigkeit** الدقّة + مراجعة الوحدة كلها في الـ pairs والقصة (Prozent ← Grafik ← Vortrag ← Bericht ← Drittel ← Bilanz!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً).
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2841/0/0 ✓** · build ✓
+
+## 2026-11-22 — الدفعة 440: D486 — b1-u10-d5 «الأرقام والإحصاء — تعبيرات كمية!» — يوم الكمّيات! (الدفعة 440 · v7.32)
+يوم التعبيرات الكمية! — **15 كلمة**: **das Drittel** الثلث · das Zehntel العُشر · **die Handvoll** الحفنة (die!) · das Dutzend الدزينة · der Bruch الكسر · die Mehrzahl · **teilweise** جزئياً · **vollständig** كاملاً · **überwiegend** في الغالب · **knapp** بالكاد · **reichlich** وفير · **zahlreich** كثير · **genügend** كافٍ · die Million · die Rate المعدل + القاعدة ars-quantitaet (شُفرة 6: «Ein Drittel ist genug.» + «Zwei Drittel SIND!»). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً) من أول مرة!
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2837/0/0 ✓** · build ✓
+
+## 2026-11-21 — الدفعة 439: D485 — b1-u10-d4 «الأرقام والإحصاء — تقرير رقمي!» — يوم الكتابة! (الدفعة 439 · v7.31)
+يوم التقرير الرقمي! — **15 كلمة**: **auswerten** يُحلّل (منفصل!) · die Auswertung · **erheben** يجمع (**hat erhoben** — شاذّ!) · die Erhebung · **die Stichprobe** العيّنة · **repräsentativ** مُمثِّل · die Prognose التوقّع · das Wachstum النمو · das Niveau (das!) · die Verteilung · verteilen · die Spanne · **ergeben** يُعطي · der Stand · die Anzahl + القاعدة ars-bericht (شُفرة 6: «Die Erhebung ist repräsentativ.» — مراحل التقرير!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً).
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2820/0/0 ✓** · build ✓
+
+## 2026-11-20 — الدفعة 438: D484 — b1-u10-d3 «الأرقام والإحصاء — عرض معطيات شفوياً!» — يوم الكلام! (الدفعة 438 · v7.30)
+يوم العرض الشفهي! — **15 كلمة**: der Vortrag العرض (halten!) · die Gliederung الهيكل · das Stichwort المفتاحية · **die Folie** الشريحة (die!) · **erläutern** يشرح · die Erläuterung · **betonen** يُشدّد · die Betonung · **hervorheben** (منفصل!) · das Argument الحجة · die Argumentation · der Zuhörer المستمع · die Zuhörerschaft الجمهور · **ausführen** (منفصل!) · die Überleitung الانتقال + القاعدة ars-vortrag (شُفرة 6: «Mein Vortrag ist kurz.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (57 سطراً) من أول مرة!
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2803/0/0 ✓** · build ✓
+
+## 2026-11-19 — الدفعة 437: D483 — b1-u10-d2 «الأرقام والإحصاء — وصف رسوم!» — يوم الرسوم! (الدفعة 437 · v7.29)
+يوم وصف الرسوم الإحصائية! — **15 كلمة**: das Diagramm · die Grafik · die Tabelle · **die Achse** المحور (die!) · der Balken العمود · die Skala المقياس · **die Spitze** القمة · **der Tiefpunkt** القاع · der Zeitraum المدة · der Verlauf المسار · **stagnieren** يركد · **rückläufig** متراجع (صفة!) · **ansteigen** (منفصل + ist!) · **abfallen** (منفصل + ist!) · die Schwankung + القاعدة ars-grafik (شُفرة 6: «Die Grafik zeigt den Verlauf.» — البروتوكول!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2786/0/0 ✓** · build ✓
+
+## 2026-11-18 — الدفعة 436: D482 — b1-u10-d1 «الأرقام والإحصاء — النسب!» — الوحدة 10 تبدأ! (الدفعة 436 · v7.28)
+يوم النسب والإحصاء! — **16 كلمة**: das Prozent (das!) · der Anteil · die Statistik · der Durchschnitt · **sinken** (ist gesunken!) · der Anstieg · der Rückgang · die Tendenz · die Hälfte (die!) · die Zunahme · die Abnahme · **betragen** يبلغ · **schwanken** يتذبذب · stabil · die Kurve · **das Komma** الفاصلة! + القاعدة ars-prozent (شُفرة 6: «Fünfundachtzig Komma drei Prozent.» — الفاصلة لا النقطة!). المحطات 15 وcheck-lesson **0/0/0** (58 سطراً).
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2769/0/0 ✓** · build ✓
+
+## 2026-11-17 — الدفعة 435: D481 — b1-u9-d7 «المعركة battle-u9» — الوحدة 9 أُغلقت! (الدفعة 435 · v7.27)
+معركة الوحدة 9 (النزاعات والحلول) خضراء من أول تشغيل! — **20 اختباراً**: دروسها الستة (d1-d6) تُلعَب 3 نسخ × علامة كاملة عبر proveUnit + حارس البنود الضعيفة! (الغلاف الرفيع b1-unit9-proof.test.ts — النمط نفسه من D426/D433/D440/D461/D474.)
+- **البوابة:** vitest **1819/1819 ✓ (139 ملفاً)** · tsc ✓ · validator **2751/0/0 ✓** · build ✓
+
+## 2026-11-16 — الدفعة 434: D480 — b1-u9-d6 «النزاعات والحلول — مراجعة + توليف!» — قبل المعركة! (الدفعة 434 · v7.26)
+يوم التوليف والتصالح! — **3 كلمات**: die Versöhnung التصالح (finden!) · **sich versöhnen** يتصالح (انعكاسي — uns لازم!) · **der Frieden** السلام (der! schließen!) + مراجعة الوحدة كلها في الـ pairs والقصة (Nachfragen ← Klärung ← Bild ← Regelung ← Runde ← Versöhnung!). المحطات 15 وcheck-lesson **0/0/0** (59 سطراً).
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2751/0/0 ✓** · build ✓
+
+## 2026-11-15 — الدفعة 433: D479 — b1-u9-d5 «النزاعات والحلول — إدارة نقاش قصير!» — يوم الإدارة! (الدفعة 433 · v7.25)
+يوم إدارة النقاش بالجولات! — **15 كلمة**: **moderieren** يُدير · die Moderation · **die Runde** الجولة · der Redebeitrag المساهمة · **sich beteiligen** يشارك (AN!) · die Beteiligung · **mitreden** (منفصل!) · die Abstimmung التصويت · **die Mehrheit** الأكثرية · **die Minderheit** الأقلية · **der Beschluss** القرار (der!) · **umsetzen** يُنفّذ (منفصل!) · **übereinstimmen** (ينفصل!) · die Rolle · die These + القاعدة ars-moderation (شُفرة 6: «Die Runde ist offen.» — الترتيب الإداري!). المحطات 15 وcheck-lesson **0/0/0** (54 سطراً).
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2747/0/0 ✓** · build ✓
+
+## 2026-11-14 — الدفعة 432: D478 — b1-u9-d4 «النزاعات والحلول — رسالة التسوية!» — يوم الخطاب! (الدفعة 432 · v7.24)
+يوم قالب رسالة التسوية! — **15 كلمة**: die Entschädigung التعويض · **erstatten** يُعيد المصاريف (Kosten erstatten!) · die Erstattung · **die Kulanz** التفضّل (بلا ضمان!) · der Gutschein القسيمة · **reklamieren** يشتكي · die Reklamation · die Unannehmlichkeit الإزعاج · die Ausnahme · die Regelung التسوية · **schlichten** يسوّي · die Angelegenheit · das Anliegen · **beilegen** (منفصل!) · die Zufriedenheit الرضا + القاعدة ars-schlichtung (شُفرة 6: «Ich entschuldige mich für die Unannehmlichkeit.» — الاعتذار أولاً!). المحطات 15 وcheck-lesson **0/0/0** (53 سطراً).
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2730/0/0 ✓** · build ✓
+
+## 2026-11-13 — الدفعة 431: D477 — b1-u9-d3 «النزاعات والحلول — Bildbeschreibung بالبروتوكول!» — يوم الترتيب! (الدفعة 431 · v7.23)
+يوم وصف الصورة بالبروتوكول! — **15 كلمة**: الرباعي المكاني (**der Vordergrund** المقدمة! **der Hintergrund** الخلفية! **der Mittelpunkt** المركز! **der Rand** الحافة!) · die Szene المشهد · **das Protokoll** البروتوكول (das!) · die Uhrzeit التوقيت · die Absprache الاتفاق المسبق · das Gebäude (الجمع نفسه!) · die Geste الإيماءة · die Übersicht · skizzieren يوجز · beachten يراعي · bummeln يتجوّل · **auffallen** يلفت (قويّ + **ist** aufgefallen!) + القاعدة ars-bildbeschreibung (شُفرة 6: «Im Vordergrund steht ein Tisch.» — الفعل الثاني بعد الظرف!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً).
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2713/0/0 ✓** · build ✓
+
+## 2026-11-12 — الدفعة 430: D476 — b1-u9-d2 «النزاعات والحلول — أدوات الحوار!» — يوم الإدارة! (الدفعة 430 · v7.22)
+يوم أدوات إدارة الحوار! — **15 كلمة**: **unterbrechen** يقاطع (قويّ: unterbricht/unterbrach/unterbrochen!) · die Unterbrechung · **einwenden** يعترض (منفصل!) · der Einwand (die Einwände!) · die Unterhaltung المحادثة (B1-رسمية!) · die Zusammenfassung الخلاصة · **jedenfalls** على أي حال · **abschweifen** يشرد (منفصل + **ist** abgeschweift!) · entscheidend حاسم · bestimmt/vermutlich/halt/wohl/etwa أدوات التليين الخمس! · erwidern يردّ + القاعدة ars-dialog (شُفرة 6: «Darf ich Sie unterbrechen?» «Das ist ein Einwand!» «Das ist halt so!»). المحطات 15 وcheck-lesson **0/0/0** (56 سطراً).
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2696/0/0 ✓** · build ✓ · نطق **صفر مخالفات** (بلا مراجع جديدة!)
+
+## 2026-11-11 — الدفعة 429: D475 — b1-u9-d1 «النزاعات والحلول — Nachfragen/Klärung!» — بداية الوحدة 9! (الدفعة 429 · v7.21)
+الوحدة 9 «النزاعات والحلول» تبدأ بيوم الاستفسار والتوضيح! — **15 كلمة** (nachfragen يسأل مجدداً (منفصل!) · die Rückfrage الاستفسار · klären يوضّح · die Klärung · das Missverständnis سوء الفهم (das!) · missverstehen يفهم خطأً (فعل قويّ!) · konkret · der Hinweis · der Konflikt النزاع! · die Vereinbarung · die Einigung · verzeihen يسامح (verzieh! قويّ!) · die Behauptung · schildern · bezweifeln) + القاعدة ars-nachfragen (شُفرة 6 صيغ مهذّبة: Darf ich nachfragen? · Das war ein Missverständnis! · Danke für die Klärung!). المحطات 15 وcheck-lesson **0/0/0** (55 سطراً) — وbattle-u8 حُدِّث nextId ← b1-u9-d1!
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً)** · tsc ✓ · validator **2679/0/0 ✓** · build ✓
+
+## 2026-11-10 — الدفعة 428: D474 — معركة الوحدة 8 (D7) — b1-unit8-proof: 20/20 من أول محاولة! الوحدة كاملة!
+«معركة الوحدة 8» = برهان عمودي يلعب الوحدة كاملة عبر المحركات الحقيقية: تخطيط (4 محطات حيّة لكل درس!) · التدريب (كل بند يُنمَّط ويُصحَّح — ≥12 بنداً للدرس!) · الاختبار (3 نسخ × علامة كاملة!) · المسار (إكمال الوحدة يفتح u9) · الصوت (لا زر صامت!). **20/20 خضراء من أول تشغيل** — الوحدة 8 «العمل والترشيح» كلها سليمة رأسياً: **77 كلمة** (d1..d5 = 15×5! + d6 كلمتان!) + 6 دروس + 5 قواعد مرساة!
+- **البوابة:** vitest **1799/1799 ✓ (138 ملفاً — battle-u8 +20!)** · tsc ✓ · validate-content **2662 ملفاً 0 خطأ 0 تحذير ✓** · build ✓ · المعركة **20/20 ✓**.
+
+## 2026-11-09 — الدفعة 427: D473 — b1-u8-d6 «العمل والترشيح — توليف الوحدة الثامنة!» — يوم التكامل! (الدفعة 427 · v7.19)
+يوم التكامل (integration!) — **كلمتان** فقط تُغلقان قصة الوحدة: **die Zusage** القبول (zu- = نحو الهدف!) و **besetzen** يشغل الوظيفة (die Stelle besetzen — المفعول وظيفة لا شخص!). كل خيوط الوحدة الخمسة في نصٍّ واحد: الصفة المُشبَع (gute Chance!) + Bewerbung بالعناصر + Interview بالتهذيب + السيرة بالأقسام + الكولوكيشنات! المحطات 13 (مطابقة 3 + gap-fill 3 + error-hunt 3 + speaking 4) و check-lesson **0/0/0** من أول مرة (51 سطراً).
+- **البوابة:** vitest 1779/1779 · tsc ✓ · validator 2662/0/0 · build ✓
+
+## 2026-11-08 — الدفعة 426: D472 — b1-u8-d5 «العمل والترشيح — الكولوكيشنات المهنية!» — يوم الشُّفرة الثابتة! (الدفعة 426 · v7.18)
+يوم الشُّفرة الثابتة! كل اسم مهني بفعله الملازم: Anleitung **geben** · Betreuung **übernehmen** · Problem **lösen** · Termin **festlegen** · Arbeitsplatz **sichern** — **15 كلمة** (Auftrag/Anleitung/Betreuung/Leitung/Meister + **Azubi الشمالي** و**Lehrling الجنوبي**! + Verhältnis · betreuen · unterrichten · sichern · verhindern · lösen (hat gelöst!) · festlegen (trennbar!) · geschickt) مع القاعدة ars-kollokationen-beruf (شُفرة 6) وإثراء kollocation لثمانية أسماء (§10.7 — وبطاقاتها!).
+- **البوابة:** vitest 1779/1779 · tsc ✓ · validator 2659/0/0 · build ✓
+
+## 2026-11-08 — الدفعة 425: D471 — b1-u8-d4 «العمل والترشيح — السيرة والخطاب!» — يوم الكتابة! (الدفعة 425 · v7.17)
+يوم الكتابة (D4!) — **15 كلمة** (Geburtsdatum تاريخ الميلاد · persönlich شخصي · Daten البيانات (جمع فقط!) · Angaben المعلومات (جمع فقط!) · Wohnort مكان السكن · Grundschule الابتدائية · Einleitung المقدمة · Abschnitt القسم · Verweis الإشارة إلى الإعلان · darstellen يعرض · aufführen يورد (منفصلان!) · kopieren يُصوّر · senden يُرسل (sandte/gesandt!) · ansprechen يخاطب (Sprechen Sie mich an!) · unterschrieben موقَّع) + **ars-lebenslauf**: السيرة بالأقسام الستة الثابتة (بيانات ← تعليم ← خبرة ← مهارات ← لغات ← اهتمامات!).
+- **البوابة:** vitest ✓ 1779/1779 · tsc ✓ · validate-content ✓ 2642/0/0 · build ✓.
+
+## 2026-11-08 — الدفعة 424: D470 — b1-u8-d3 «العمل والترشيح — تمثيلية المقابلة!» — أول تمثيلية كلامية! (الدفعة 424 · v7.16)
+أول تمثيلية كلامية (D3 = يوم كلام!) — **15 كلمة** (Arbeitnehmer العامل · Arbeitszeit ساعات العمل · Überstunden الساعات الإضافية (جمع فقط!) · Kollegin الزميلة · Chefin المديرة · Präsentation العرض · präsentieren يعرض · auftreten يظهر (ist aufgetreten!) · beschäftigen يُوظّف · verlängern يُجدّد · bearbeiten يُنجز · ausstellen يُصدر (منفصل!) · organisiert منظَّم · Mobilität التنقّل · Weiterbildung التطوير المهني) + **ars-interview**: قالب المقابلة في 6 أسطر ثابتة (التحية ← التعريف بالنفس ← العرض ← السؤال عن الشروط ← الجودات ← الشكر آخراً!).
+- **البوابة:** vitest ✓ 1779/1779 · tsc ✓ · validate-content ✓ 2625/0/0 · build ✓.
+
+## 2026-11-08 — الدفعة 423: D469 — b1-u8-d2 «العمل والترشيح — قالب الترشح!» — أول قالب مكتوب! (الدفعة 423 · v7.15)
+أول نصّ مكتوب كامل في المنتج! — **15 كلمة** (Nachfrage الطلب · erhalten يحصل على · erwarten يتوقع · erstellen يُنشئ · erfüllen يُحقق · mündlich شفاهاً · Teilnahme المشاركة · Fortbildung التدريب المهني · Briefumschlag الظرف · Inhalt المحتوى · Beschreibung الوصف · annehmen يقبل · Praktikant المتدرّب · einstellen يوظّف · grüßen يُحيّي) + **ars-bewerbung**: قالب الترشح في 6 أسطر ثابتة (Betreff بلا فعل ← Anrede رسمية ← Einstieg ← Schluss ← Gruß ← المرفقات آخراً!).
+- **البوابة:** vitest ✓ 1779/1779 · tsc ✓ · validate-content ✓ 2608/0/0 · build ✓.
+
 ## 2026-11-07 — الدفعة 422: D468 — b1-u8-d1 «العمل والترشيح — الصفة المخلوطة!» — بداية الوحدة 8! (الدفعة 422 · v7.14)
 الوحدة 8 «العمل والترشيح» تبدأ! — **15 كلمة** (Tätigkeit النشاط · berufstätig على رأس العمل · beruflich مهنياً · Qualifikation التأهيل · Bewerber المتقدّم · Vollzeit/Teilzeit الدوامان · Lohn الأجر · leiten يدير · einsetzen يستخدم · anerkennen يعترف بـ · ausgebildet مدرَّب · Lehre التلمذة المهنية · Lehrstelle مكانها · Kopie النسخة) + **ars-adjektiv-gemischt**: الصفة بعد ein! («eine gutE Lehrstelle!» «ein neues Zeugnis!» «ein gutER Kollege!» «mit einem gutEN Lohn!»).
 - **البوابة:** vitest ✓ 1779/1779 · tsc ✓ · validate-content ✓ 2591/0/0 · build ✓.

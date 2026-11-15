@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u2-d4",
+  "level": "B2",
+  "unit": 2,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Nach der Flut machen wir eine Entdeckung: Das Trinkwasser ist wichtig!",
+    "ar": "الوحدة 2: الأرض والمناخ! (الفيضان! ماء الشرب! والاكتشاف!)"
+  },
+  "canDoDaily": [
+    "يتحدّث عن الفيضان! (die Flut!)",
+    "يحمي ماء الشرب ويقوم باكتشاف! (Trinkwasser schützen! eine Entdeckung machen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "klimawandel",
+      "recyceln",
+      "schonen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الفيضان خطِر.»؟"
+        },
+        "choices": [
+          "Die Flut ist gefährlich.",
+          "Der Flut ist gefährlich.",
+          "Das Flut ist gefährlich."
+        ],
+        "answer": "Die Flut ist gefährlich.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نقوم باكتشاف.»؟"
+        },
+        "choices": [
+          "Wir machen eine Entdeckung.",
+          "Wir machen Entdeckung.",
+          "Wir machen einen Entdeckung."
+        ],
+        "answer": "Wir machen eine Entdeckung.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "flut",
+      "trinkwasser",
+      "entdeckung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Nach der Flut machen wir eine Entdeckung: Das Trinkwasser ist wichtig!",
+        "ar": "اليوم الرابع: الفيضان وماء الشرب والاكتشاف — مع الأرض!"
+      },
+      "situation": {
+        "de": "Flut, Trinkwasser, Entdeckung — zusammen die Erde schützen.",
+        "ar": "فيضان! ماء! اكتشاف! — نحمي الأرض معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "كل -ung مؤنثة مع الأداة النكرة: eine Entdeckung!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Angst vor der Flut haben! Trinkwasser schützen! eine Entdeckung machen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ressource",
+          "erneuerbar",
+          "verbrennen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Flut",
+                "ar": "الفيضان (الطوفان)"
+              },
+              {
+                "de": "das Trinkwasser",
+                "ar": "ماء الشرب"
+              },
+              {
+                "de": "die Entdeckung",
+                "ar": "الاكتشاف"
+              }
+            ],
+            "why": "die Flut الفيضان (die!) · das Trinkwasser ماء الشرب (das! المركّب يتبع آخره!) · die Entdeckung الاكتشاف (كل -ung مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "Angst vor der Flut haben",
+                "ar": "يخاف من الفيضان"
+              },
+              {
+                "de": "Trinkwasser schützen",
+                "ar": "يحمي ماء الشرب"
+              },
+              {
+                "de": "eine Entdeckung machen",
+                "ar": "يقوم باكتشاف"
+              },
+              {
+                "de": "die Flut",
+                "ar": "الفيضان"
+              }
+            ],
+            "why": "Angst vor der Flut haben (vor + Dativ!) · Trinkwasser schützen! · eine Entdeckung machen (eine! الأداة النكرة لا تُحذف!) · die Flut (die!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "nachhaltigkeit",
+          "auswirkung",
+          "verschmutzen"
+        ],
+        "items": [
+          {
+            "q": "___ Flut ist gefährlich. (الفيضان!)",
+            "a": "Die",
+            "why": "die Flut الفيضان (die! مؤنثة!) — Die Flut ist gefährlich."
+          },
+          {
+            "q": "Das ___ ist wichtig. (ماء الشرب!)",
+            "a": "Trinkwasser",
+            "why": "das Trinkwasser ماء الشرب (das! المركّب يتبع das Wasser!) — Das Trinkwasser ist wichtig."
+          },
+          {
+            "q": "Wir machen eine ___. (اكتشافاً!)",
+            "a": "Entdeckung",
+            "why": "eine Entdeckung (كل -ung مؤنثة: eine!) — Wir machen eine Entdeckung."
+          },
+          {
+            "q": "Er hat Angst ___ der Flut. (من!)",
+            "a": "vor",
+            "why": "«الخوف من»: Angst haben vor + Dativ (vor der Flut!)!"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gerechtigkeit",
+          "warnen",
+          "konflikt"
+        ],
+        "items": [
+          {
+            "q": "~~Der Flut ist gefährlich.~~",
+            "a": "Die Flut ist gefährlich.",
+            "why": "die Flut مؤنثة (die!)!"
+          },
+          {
+            "q": "~~Der Trinkwasser ist wichtig.~~",
+            "a": "Das Trinkwasser ist wichtig.",
+            "why": "das Trinkwasser (das! المركّب يتبع das Wasser!)!"
+          },
+          {
+            "q": "~~Wir machen Entdeckung.~~",
+            "a": "Wir machen eine Entdeckung.",
+            "why": "eine Entdeckung — الأداة النكرة لا تُحذف! (كل -ung مؤنثة: eine!)!"
+          },
+          {
+            "q": "~~Wir haben Angst die Flut.~~",
+            "a": "Wir haben Angst vor der Flut.",
+            "why": "«الخوف من» يتبع vor + Dativ! (Wir haben Angst vor der Flut!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "klimawandel",
+          "recyceln",
+          "schonen"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالفيضان! (جملتان!)",
+            "a": "Die Flut ist gefährlich. Wir haben Angst vor der Flut.",
+            "why": "الفيضان أولًا! (die Flut!)"
+          },
+          {
+            "q": "تحدث عن الماء! (جملتان!)",
+            "a": "Das Trinkwasser ist wichtig. Wir schützen das Trinkwasser.",
+            "why": "الماء! (Trinkwasser schützen!)"
+          },
+          {
+            "q": "تحدث عن الاكتشاف! (جملتان!)",
+            "a": "Wir machen eine Entdeckung. Das ist wichtig.",
+            "why": "الاكتشاف! (eine Entdeckung machen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الفيضان (الطوفان)»؟",
+            "a": "die Flut"
+          },
+          {
+            "q": "«ماء الشرب»؟",
+            "a": "das Trinkwasser"
+          },
+          {
+            "q": "«الاكتشاف»؟",
+            "a": "die Entdeckung"
+          },
+          {
+            "q": "«الفيضان خطِر.»؟",
+            "a": "Die Flut ist gefährlich."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نقوم باكتشاف.»؟",
+            "a": "Wir machen eine Entdeckung."
+          },
+          {
+            "q": "das Trinkwasser",
+            "a": "ماء الشرب"
+          },
+          {
+            "q": "«نحمي ماء الشرب.»؟",
+            "a": "Wir schützen das Trinkwasser."
+          },
+          {
+            "q": "die Flut",
+            "a": "الفيضان"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«هو يخاف من الفيضان.»؟",
+            "a": "Er hat Angst vor der Flut."
+          },
+          {
+            "q": "«ماء الشرب مهمّ.»؟",
+            "a": "Das Trinkwasser ist wichtig."
+          },
+          {
+            "q": "die Entdeckung",
+            "a": "الاكتشاف"
+          },
+          {
+            "q": "«الفيضان خطِر.»؟",
+            "a": "Die Flut ist gefährlich."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Nach der Flut ist das Trinkwasser wichtig. Wir machen eine Entdeckung und schützen das Wasser. Der Tag ist gut und wir sind zusammen.",
+      "ar": "بعد الفيضان: نحمي ماء الشرب ونقوم باكتشاف!"
+    },
+    "srsBundleWordIds": [
+      "flut",
+      "trinkwasser",
+      "entdeckung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Flut!",
+          "de": "~~Der Flut ist gefährlich.~~"
+        },
+        "correct": {
+          "ar": "die Flut!",
+          "de": "Die Flut ist gefährlich."
+        },
+        "exercise": {
+          "q": "___ Flut ist gefährlich.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الفيضان» مذكّر! والألمانية: die Flut (die!) — أسماء الكوارث الطبيعية كثيراً مؤنثة! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Trinkwasser!",
+          "de": "~~Der Trinkwasser ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "das Trinkwasser!",
+          "de": "Das Trinkwasser ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Trinkwasser ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «الماء» مذكّر فتظنّ المركّب كذلك! والألمانية: المركّب يتبع آخر جزء — das Wasser ← das Trinkwasser (das!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "بلا أداة!",
+          "de": "~~Wir machen Entdeckung.~~"
+        },
+        "correct": {
+          "ar": "eine Entdeckung!",
+          "de": "Wir machen eine Entdeckung."
+        },
+        "exercise": {
+          "q": "Wir machen ___ Entdeckung.",
+          "a": "eine"
+        },
+        "whyArabicSpeakerFails": "العربية: النكرة أحياناً بلا أداة! والألمانية: الأداة النكرة لا تُحذف أبداً (eine Entdeckung! كل -ung مؤنثة: eine!)! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Flut",
+      "https://www.duden.de/rechtschreibung/Trinkwasser",
+      "https://www.duden.de/rechtschreibung/Entdeckung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-flut",
+    "word-trinkwasser",
+    "word-entdeckung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 2 (الأرض والمناخ!)",
+    "goetheWordListOverlap": [
+      "flut",
+      "trinkwasser",
+      "entdeckung"
+    ]
+  }
+}

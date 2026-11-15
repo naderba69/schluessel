@@ -1,0 +1,492 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b1-u8-d4",
+ "level": "B1",
+ "unit": 8,
+ "day": 4,
+ "kind": "content",
+ "ziel": {
+  "de": "Persönliche Daten: Name, Alter, Adresse.",
+  "ar": "السيرة الذاتية والخطاب! (البيانات! التعليم! الخبرة! المهارات! اللغات! الاهتمامات!) — الوحدة 8: العمل والترشيح!"
+ },
+ "canDoDaily": [
+  "يكتب سيرته الذاتية بالأقسام الستة! (Persönliche Daten! Ausbildung! Erfahrung!)",
+  "يُرسل خطابه موقَّعاً مع نسخ الشهادات! (Ich sende die Bewerbung! Die Bewerbung ist unterschrieben.)"
+ ],
+ "warmup": {
+  "cardIds": [
+   "auftreten",
+   "praesentation",
+   "kollegin"
+  ]
+ },
+ "einstieg": {
+  "pretestItems": [
+   {
+    "prompt": {
+     "ar": "«البيانات الشخصية» — كيف تبدأ السيرة؟"
+    },
+    "choices": [
+     "Persönliche Daten: Name, Alter, Adresse.",
+     "Persönliche Daten: Ich bin hier.",
+     "Persönliche Daten: Guten Tag."
+    ],
+    "answer": "Persönliche Daten: Name, Alter, Adresse.",
+    "revealNextSession": true
+   },
+   {
+    "prompt": {
+     "ar": "«تاريخ الميلاد»؟"
+    },
+    "choices": [
+     "das Geburtsdatum",
+     "der Wohnort",
+     "die Grundschule"
+    ],
+    "answer": "das Geburtsdatum",
+    "revealNextSession": true
+   }
+  ],
+  "guidedRetrieval": [
+   "من u8-d3: تمثيلية المقابلة! (Ich möchte mich vorstellen!) — اليوم: الكتابة! السيرة والخطاب!",
+   "من u8-d2: قالب الترشح! (Bewerbung um die Stelle!) — اليوم: نُكمله بالسيرة الذاتية!"
+  ]
+ },
+ "praesentation": {
+  "wordIds": [
+   "geburtsdatum",
+   "persoenlich",
+   "daten",
+   "angaben",
+   "wohnort",
+   "grundschule",
+   "einleitung",
+   "abschnitt",
+   "verweis",
+   "darstellen",
+   "auffuehren",
+   "kopieren",
+   "senden",
+   "ansprechen",
+   "unterschrieben"
+  ],
+  "borrowedWords": [],
+  "grammarArsenalIds": [
+   "ars-lebenslauf"
+  ],
+  "storySentenceIds": [],
+  "dualCodingRequired": true,
+  "riskFlagsShown": [
+   "trennbar",
+   "v2-order"
+  ]
+ },
+ "uebung": {
+  "communicativeTask": {
+   "goal": {
+    "de": "Persönliche Daten: Name, Alter, Adresse.",
+    "ar": "يكتب سيرته الذاتية كاملة + خطاب الترشح!"
+   },
+   "situation": {
+    "de": "Die Daten, die Erfahrung, die Unterschrift.",
+    "ar": "المكتب! البيانات! الخبرة! التوقيع!"
+   },
+   "successCriteria": [
+    "الكلمات الخمس عشرة + الأقسام الستة!",
+    "«البيانات أولاً!» (Persönliche Daten: Name, Alter, Adresse.)",
+    "«الخبرة بالتسمية!» (Erfahrung: Praktikum und Tätigkeit.)",
+    "«الخطاب موقَّع!» (Die Bewerbung ist unterschrieben.)"
+   ]
+  },
+  "stations": [
+   {
+    "type": "match",
+    "explanationRequired": true,
+    "hints": [
+     "كلمات السيرة!",
+     "die Daten! das Geburtsdatum!"
+    ],
+    "interleavedWith": [
+     "bewerber",
+     "lehrstelle",
+     "kopie"
+    ],
+    "items": [
+     {
+      "pairs": [
+       {
+        "ar": "تاريخ الميلاد",
+        "de": "das Geburtsdatum"
+       },
+       {
+        "ar": "شخصي",
+        "de": "persönlich"
+       },
+       {
+        "ar": "البيانات",
+        "de": "die Daten"
+       },
+       {
+        "ar": "المعلومات (في النموذج!)",
+        "de": "die Angaben"
+       }
+      ],
+      "why": "das Geburtsdatum تاريخ الميلاد (das! + Geburtsdaten!) · persönlich شخصي (بلا تغيير!) · die Daten البيانات (جمع فقط! بلا مفرد!) · die Angaben المعلومات (جمع فقط!)"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "مكان السكن",
+        "de": "der Wohnort"
+       },
+       {
+        "ar": "المدرسة الابتدائية",
+        "de": "die Grundschule"
+       },
+       {
+        "ar": "المقدمة (في الكتابة!)",
+        "de": "die Einleitung"
+       },
+       {
+        "ar": "القسم (في النص!)",
+        "de": "der Abschnitt"
+       }
+      ],
+      "why": "der Wohnort مكان السكن (der! + Wohnorte!) · die Grundschule المدرسة الابتدائية (die! + Grundschulen!) · die Einleitung المقدمة (die! + Einleitungen!) · der Abschnitt القسم (der! + Abschnitte!)"
+     },
+     {
+      "pairs": [
+       {
+        "ar": "الإشارة (إلى الإعلان!)",
+        "de": "der Verweis"
+       },
+       {
+        "ar": "يعرض (بتفصيل!)",
+        "de": "darstellen"
+       },
+       {
+        "ar": "يذكر (في قائمة!)",
+        "de": "aufführen"
+       },
+       {
+        "ar": "يُصوّر",
+        "de": "kopieren"
+       }
+      ],
+      "why": "der Verweis الإشارة (der! + Verweise!) · darstellen يعرض (stellt dar! stellte dar! hat dargestellt!) · aufführen يورد (führt auf! führte auf! hat aufgeführt!) · kopieren يُصوّر (kopiert/kopierte/hat kopiert!)"
+     }
+    ]
+   },
+   {
+    "type": "gap-fill",
+    "explanationRequired": true,
+    "hints": [
+     "كلمات السيرة!",
+     "الصيغ الثابتة!"
+    ],
+    "interleavedWith": [
+     "tisch",
+     "stuhl",
+     "lampe"
+    ],
+    "items": [
+     {
+      "q": "Ich ___ die Bewerbung. (أُرسل!)",
+      "a": "sende",
+      "why": "senden يُرسل (sendet! sandte! hat gesandt!)"
+     },
+     {
+      "q": "___ Verweis auf Ihre Anzeige schreibe ich Ihnen. (في إشارة إلى!)",
+      "a": "Mit",
+      "why": "Mit Verweis auf Ihre Anzeige — افتتاح الخطاب الثابت! (الإشارة إلى الإعلان!)"
+     },
+     {
+      "q": "Die Bewerbung ist ___. (موقَّعة!)",
+      "a": "unterschrieben",
+      "why": "unterschrieben موقَّع — التوقيع آخراً! (ist unterschrieben!)"
+     },
+     {
+      "q": "Die ___ ist kurz. (المقدمة!)",
+      "a": "Einleitung",
+      "why": "die Einleitung المقدمة (die! + Einleitungen!)"
+     },
+     {
+      "q": "Ich ___ die Tätigkeit auf. (أورد!)",
+      "a": "führe",
+      "why": "aufführen فعل منفصل! (führt … auf!)"
+     },
+     {
+      "q": "Sprechen Sie mich ___. (راسلوني!)",
+      "a": "an",
+      "why": "ansprechen فعل منفصل! (Sprechen Sie mich an!)"
+     }
+    ]
+   },
+   {
+    "type": "error-hunt",
+    "explanationRequired": true,
+    "hints": [
+     "الفعل المنفصل آخراً!",
+     "الجمع فقط!"
+    ],
+    "interleavedWith": [
+     "brot",
+     "milch",
+     "wasser"
+    ],
+    "items": [
+     {
+      "q": "~~Ich führe auf die Tätigkeit.~~",
+      "a": "Ich führe die Tätigkeit auf.",
+      "why": "الفعل المنفصل: المفعول قبله! (führt die Tätigkeit auf!)"
+     },
+     {
+      "q": "~~Die Daten ist wichtig.~~",
+      "a": "Die Daten sind wichtig.",
+      "why": "die Daten جمع فقط! (sind! لا ist!)"
+     },
+     {
+      "q": "~~Mit Verweis für Ihre Anzeige.~~",
+      "a": "Mit Verweis auf Ihre Anzeige.",
+      "why": "الصيغة الثابتة: Mit Verweis AUF Ihre Anzeige! (auf لا für!)"
+     }
+    ]
+   },
+   {
+    "type": "speaking",
+    "explanationRequired": true,
+    "hints": [
+     "توليف السيرة!",
+     "الصيغ الثابتة!"
+    ],
+    "interleavedWith": [
+     "frau",
+     "mann",
+     "kind"
+    ],
+    "items": [
+     {
+      "q": "قل بالألمانية: «البيانات الشخصية: الاسم! العمر! العنوان!» (القسم الأول!)",
+      "a": "Persönliche Daten: Name, Alter, Adresse.",
+      "why": "البيانات أولاً دائماً! (الصيغة الثابتة!)"
+     },
+     {
+      "q": "قل بالألمانية: «أعرض خبرتي.» (الخبرة!)",
+      "a": "Ich stelle meine Erfahrung dar.",
+      "why": "darstellen فعل منفصل! (stelle … dar!)"
+     },
+     {
+      "q": "قل بالألمانية: «الترشح موقَّع.» (التوقيع!)",
+      "a": "Die Bewerbung ist unterschrieben.",
+      "why": "التوقيع آخراً! (unterschrieben!)"
+     }
+    ]
+   }
+  ]
+ },
+ "slider": {
+  "questionDe": "Wie viel Prozent wirst du schreiben?",
+  "questionAr": "كم نسبة ما تتوقع كتابته اليوم؟",
+  "min": 0,
+  "max": 100
+ },
+ "quiz": {
+  "variants": [
+   {
+    "items": [
+     {
+      "q": "«تاريخ الميلاد»؟",
+      "a": "das Geburtsdatum"
+     },
+     {
+      "q": "«المقدمة (في الكتابة!)»؟",
+      "a": "die Einleitung"
+     },
+     {
+      "q": "«يُرسل»؟",
+      "a": "senden"
+     },
+     {
+      "q": "«البيانات الشخصية: الاسم! العمر! العنوان!»؟",
+      "a": "Persönliche Daten: Name, Alter, Adresse."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«مكان السكن»؟",
+      "a": "der Wohnort"
+     },
+     {
+      "q": "«القسم (في النص!)»؟",
+      "a": "der Abschnitt"
+     },
+     {
+      "q": "«يُصوّر»؟",
+      "a": "kopieren"
+     },
+     {
+      "q": "«المعرفة والمهارات.»؟",
+      "a": "Kenntnisse und Fähigkeiten."
+     }
+    ],
+    "passingScore": 0.75
+   },
+   {
+    "items": [
+     {
+      "q": "«المدرسة الابتدائية»؟",
+      "a": "die Grundschule"
+     },
+     {
+      "q": "«الإشارة (إلى الإعلان!)»؟",
+      "a": "der Verweis"
+     },
+     {
+      "q": "«يخاطب»؟",
+      "a": "ansprechen"
+     },
+     {
+      "q": "«اللغات: الألمانية والعربية.»؟",
+      "a": "Sprachen: Deutsch und Arabisch."
+     }
+    ],
+    "passingScore": 0.75
+   }
+  ]
+ },
+ "zusammenfassung": {
+  "srsBundleWordIds": [
+   "geburtsdatum",
+   "persoenlich",
+   "daten",
+   "angaben",
+   "wohnort",
+   "grundschule",
+   "einleitung",
+   "abschnitt",
+   "verweis",
+   "darstellen",
+   "auffuehren",
+   "kopieren",
+   "senden",
+   "ansprechen",
+   "unterschrieben"
+  ],
+  "warningCards": [
+   {
+    "commonError": {
+     "ar": "الفعل المنفصل مع المفعول!",
+     "de": "~~Ich führe auf die Tätigkeit.~~"
+    },
+    "correct": {
+     "ar": "المفعول قبل الفعل المنفصل: Ich führe die Tätigkeit auf!",
+     "de": "Ich führe die Tätigkeit auf."
+    },
+    "exercise": {
+     "q": "Ich führe die Tätigkeit ___. (آخراً!)",
+     "a": "auf"
+    },
+    "whyArabicSpeakerFails": "العربية: «أورد النشاط» — الفعل والمفعول معاً! والألمانية: الفعل المنفصل يُردَّم آخر الجملة (führt … auf!) (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "البيانات بالمفرد!",
+     "de": "~~Die Daten ist wichtig.~~"
+    },
+    "correct": {
+     "ar": "جمع فقط: Die Daten sind wichtig!",
+     "de": "Die Daten sind wichtig."
+    },
+    "exercise": {
+     "q": "Die Daten ___ wichtig. (الجمع!)",
+     "a": "sind"
+    },
+    "whyArabicSpeakerFails": "العربية: «البيانات» مفرد بالألف واللام! والألمانية: Daten جمع فقط — فعل جمع sind! (خريطة التداخل 10‑ي)."
+   },
+   {
+    "commonError": {
+     "ar": "für بدل auf!",
+     "de": "~~Mit Verweis für Ihre Anzeige.~~"
+    },
+    "correct": {
+     "ar": "الصيغة الثابتة: Mit Verweis auf Ihre Anzeige!",
+     "de": "Mit Verweis auf Ihre Anzeige."
+    },
+    "exercise": {
+     "q": "Mit Verweis ___ Ihre Anzeige! (auf!)",
+     "a": "auf"
+    },
+    "whyArabicSpeakerFails": "«في إشارة إلى» — إلى! والألمانية: Verweis AUF (auf لا für!) — صيغة ثابتة (خريطة التداخل 10‑ي)."
+   }
+  ],
+  "summary": {
+   "de": "Persönliche Daten: Name, Alter, Adresse. Das sind meine persönlichen Daten. Ich schreibe mein Geburtsdatum. Der Wohnort ist wichtig. Die Daten sind wichtig. Ich lese die Angaben. Ausbildung: Grundschule und Lehre. Die Grundschule ist klein. Erfahrung: Praktikum und Tätigkeit. Ich stelle meine Erfahrung dar. Ich führe die Tätigkeit auf. Kenntnisse und Fähigkeiten. Sprachen: Deutsch und Arabisch. Interessen: Musik und Sport. Die Einleitung ist kurz. Der Abschnitt über die Arbeit ist wichtig. Mit Verweis auf Ihre Anzeige schreibe ich Ihnen. Ich kopiere die Zeugnisse. Ich sende die Bewerbung. Sprechen Sie mich an! Die Bewerbung ist unterschrieben.",
+   "ar": "البيانات الشخصية: الاسم! العمر! العنوان! هذه بياناتي الشخصية. أكتب تاريخ ميلادي. مكان السكن مهمّ. البيانات مهمّة. أقرأ المعلومات. التعليم: المدرسة الابتدائية والتلمذة المهنية! المدرسة الابتدائية صغيرة. الخبرة: التدريب والنشاط! أعرض خبرتي. أذكر النشاط في القائمة. المعرفة والمهارات. اللغات: الألمانية والعربية. الاهتمامات: الموسيقى والرياضة. المقدمة قصيرة. القسم عن العمل مهمّ. في إشارة إلى إعلانكم أكتب إليكم. أُصوّر الشهادات. أُرسل الترشح. راسلوني! الترشح موقَّع."
+  }
+ },
+ "gReferences": {
+  "duden": [
+   "https://www.duden.de/rechtschreibung/Geburtsdatum",
+   "https://www.duden.de/rechtschreibung/persoenlich",
+   "https://www.duden.de/rechtschreibung/Daten",
+   "https://www.duden.de/rechtschreibung/Angaben",
+   "https://www.duden.de/rechtschreibung/Wohnort",
+   "https://www.duden.de/rechtschreibung/Grundschule",
+   "https://www.duden.de/rechtschreibung/Einleitung",
+   "https://www.duden.de/rechtschreibung/Abschnitt",
+   "https://www.duden.de/rechtschreibung/Verweis",
+   "https://www.duden.de/rechtschreibung/darstellen",
+   "https://www.duden.de/rechtschreibung/auffuehren",
+   "https://www.duden.de/rechtschreibung/kopieren",
+   "https://www.duden.de/rechtschreibung/senden",
+   "https://www.duden.de/rechtschreibung/ansprechen",
+   "https://www.duden.de/rechtschreibung/unterschrieben"
+  ]
+ },
+ "usedArsenalIds": [
+  "ars-lebenslauf",
+  "ars-bewerbung",
+  "ars-briefstil"
+ ],
+ "audioManifestRefs": [
+  "word-geburtsdatum",
+  "word-persoenlich",
+  "word-daten",
+  "word-angaben",
+  "word-wohnort",
+  "word-grundschule",
+  "word-einleitung",
+  "word-abschnitt",
+  "word-verweis",
+  "word-darstellen",
+  "word-auffuehren",
+  "word-kopieren",
+  "word-senden",
+  "word-ansprechen",
+  "word-unterschrieben"
+ ],
+ "imageManifestRefs": [],
+ "curriculumRef": {
+  "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (العمل والترشيح — خطاب ترشح + سيرة)",
+  "goetheWordListOverlap": [
+   "geburtsdatum",
+   "persoenlich",
+   "daten",
+   "angaben",
+   "wohnort",
+   "grundschule",
+   "einleitung",
+   "abschnitt",
+   "verweis",
+   "darstellen",
+   "auffuehren",
+   "kopieren",
+   "senden",
+   "ansprechen",
+   "unterschrieben"
+  ]
+ }
+}

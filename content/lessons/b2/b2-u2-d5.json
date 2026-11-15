@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u2-d5",
+  "level": "B2",
+  "unit": 2,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Hitze kommt — aber wir bewahren die Erde vor der Erderwärmung!",
+    "ar": "الوحدة 2: الأرض والمناخ! (الحرارة! إحماء الأرض! والصون!)"
+  },
+  "canDoDaily": [
+    "يصون الأرض! (die Erde bewahren!)",
+    "يتحدّث عن الحرارة وإحماء الأرض! (die Hitze! die Erderwärmung!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "flut",
+      "trinkwasser",
+      "entdeckung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الحرارة خطِرة.»؟"
+        },
+        "choices": [
+          "Die Hitze ist gefährlich.",
+          "Der Hitze ist gefährlich.",
+          "Das Hitze ist gefährlich."
+        ],
+        "answer": "Die Hitze ist gefährlich.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نصون الأرض.»؟"
+        },
+        "choices": [
+          "Wir bewahren die Erde.",
+          "Wir bewahren der Erde.",
+          "Wir bewahren das Erde."
+        ],
+        "answer": "Wir bewahren die Erde.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "hitze",
+      "erderwaermung",
+      "bewahren"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Hitze kommt — aber wir bewahren die Erde vor der Erderwärmung!",
+        "ar": "اليوم الخامس: الحرارة وإحماء الأرض والصون — مع الأرض!"
+      },
+      "situation": {
+        "de": "Hitze, Erderwärmung, bewahren — zusammen die Erde schützen.",
+        "ar": "حرارة! إحماء أرض! صون! — نحمي الأرض معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الفعل الضعيف: hat bewahrt (بالـ t! لا بالنهاية!)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Erde bewahren! Angst vor der Hitze haben! die Erderwärmung vermeiden!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "flut",
+          "trinkwasser",
+          "entdeckung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Hitze",
+                "ar": "الحرارة (الجوّ الحار)"
+              },
+              {
+                "de": "die Erderwärmung",
+                "ar": "إحماء الأرض (الاحتباس الحراري)"
+              },
+              {
+                "de": "bewahren",
+                "ar": "يصون (يحفظ)"
+              }
+            ],
+            "why": "die Hitze الحرارة (die! مجرّد على -e!) · die Erderwärmung إحماء الأرض (die! -ung! المركّب يتبع آخره!) · bewahren يصون (hat bewahrt!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Erde bewahren",
+                "ar": "يصون الأرض"
+              },
+              {
+                "de": "Angst vor der Hitze haben",
+                "ar": "يخاف من الحرارة"
+              },
+              {
+                "de": "die Erderwärmung vermeiden",
+                "ar": "يتفادى إحماء الأرض"
+              },
+              {
+                "de": "die Hitze",
+                "ar": "الحرارة"
+              }
+            ],
+            "why": "die Erde bewahren (يصون الأرض!) · Angst vor der Hitze haben (vor + Dativ!) · die Erderwärmung vermeiden (يتفادى!) · die Hitze (die!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ressource",
+          "erneuerbar",
+          "verbrennen"
+        ],
+        "items": [
+          {
+            "q": "___ Hitze kommt. (الحرارة!)",
+            "a": "Die",
+            "why": "die Hitze الحرارة (die!) — Die Hitze kommt."
+          },
+          {
+            "q": "Die ___ ist gefährlich. (إحماء الأرض!)",
+            "a": "Erderwärmung",
+            "why": "die Erderwärmung إحماء الأرض (die! -ung!) — Die Erderwärmung ist gefährlich."
+          },
+          {
+            "q": "Wir ___ die Erde. (نصون!)",
+            "a": "bewahren",
+            "why": "bewahren يصون (Präsens wir: bewahren!) — Wir bewahren die Erde."
+          },
+          {
+            "q": "Er hat die Erde ___. (صان!)",
+            "a": "bewahrt",
+            "why": "bewahren ضعيف: hat bewahrt (ge- + t!)! — Er hat die Erde bewahrt."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gerechtigkeit",
+          "warnen",
+          "konflikt"
+        ],
+        "items": [
+          {
+            "q": "~~Der Hitze kommt.~~",
+            "a": "Die Hitze kommt.",
+            "why": "die Hitze الحرارة (die! مجرّد على -e مؤنثة!)!"
+          },
+          {
+            "q": "~~Das Erderwärmung ist gefährlich.~~",
+            "a": "Die Erderwärmung ist gefährlich.",
+            "why": "die Erderwärmung (die! -ung مؤنثة! والمركّب يتبع آخره!)!"
+          },
+          {
+            "q": "~~Er hat die Erde bewahre.~~",
+            "a": "Er hat die Erde bewahrt.",
+            "why": "bewahren ضعيف: hat bewahrt (ge- + t!) — لا hat bewahre!"
+          },
+          {
+            "q": "~~Wir bewahren die Erde auf.~~",
+            "a": "Wir bewahren die Erde.",
+            "why": "bewahren ليس فعلاً منفصلاً! (لا auf!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "klimawandel",
+          "recyceln",
+          "schonen"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالحرارة! (جملتان!)",
+            "a": "Die Hitze kommt. Wir haben Angst vor der Hitze.",
+            "why": "الحرارة أولًا! (die Hitze!)"
+          },
+          {
+            "q": "تحدث عن الصون! (جملتان!)",
+            "a": "Wir bewahren die Erde. Die Erde ist wichtig.",
+            "why": "الصون! (die Erde bewahren!)"
+          },
+          {
+            "q": "تحدّث عن إحماء الأرض! (جملتان!)",
+            "a": "Die Erderwärmung ist gefährlich. Wir vermeiden die Erderwärmung.",
+            "why": "إحماء الأرض! (die Erderwärmung vermeiden!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الحرارة (الجوّ الحار)»؟",
+            "a": "die Hitze"
+          },
+          {
+            "q": "«إحماء الأرض (الاحتباس الحراري)»؟",
+            "a": "die Erderwärmung"
+          },
+          {
+            "q": "«يصون (يحفظ)»؟",
+            "a": "bewahren"
+          },
+          {
+            "q": "«الحرارة خطِرة.»؟",
+            "a": "Die Hitze ist gefährlich."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نصون الأرض.»؟",
+            "a": "Wir bewahren die Erde."
+          },
+          {
+            "q": "die Erderwärmung",
+            "a": "إحماء الأرض"
+          },
+          {
+            "q": "«نتفادى إحماء الأرض.»؟",
+            "a": "Wir vermeiden die Erderwärmung."
+          },
+          {
+            "q": "die Hitze",
+            "a": "الحرارة"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«هو يخاف من الحرارة.»؟",
+            "a": "Er hat Angst vor der Hitze."
+          },
+          {
+            "q": "«إحماء الأرض خطِر.»؟",
+            "a": "Die Erderwärmung ist gefährlich."
+          },
+          {
+            "q": "bewahren",
+            "a": "يصون"
+          },
+          {
+            "q": "«نصون الأرض.»؟",
+            "a": "Wir bewahren die Erde."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Hitze ist gefährlich und die Erderwärmung kommt. Wir bewahren die Erde und schützen das Wasser. Der Tag ist gut und wir sind zusammen.",
+      "ar": "الحرارة وإحماء الأرض يهدّدان الأرض — فنصونها!"
+    },
+    "srsBundleWordIds": [
+      "hitze",
+      "erderwaermung",
+      "bewahren"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Hitze!",
+          "de": "~~Der Hitze kommt.~~"
+        },
+        "correct": {
+          "ar": "die Hitze!",
+          "de": "Die Hitze kommt."
+        },
+        "exercise": {
+          "q": "___ Hitze kommt.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الحرارة» مؤنثة لكن الفخ في الأداة! والألمانية: كل مجرّد على -e مؤنثة — die Hitze (die!) لا das! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Erderwärmung!",
+          "de": "~~Das Erderwärmung ist gefährlich.~~"
+        },
+        "correct": {
+          "ar": "die Erderwärmung!",
+          "de": "Die Erderwärmung ist gefährlich."
+        },
+        "exercise": {
+          "q": "___ Erderwärmung ist gefährlich.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الأرض» مذكّر فتظنّ المركّب كذلك! والألمانية: المركّب يتبع آخر جزء — die Erwärmung ← die Erderwärmung (die! وكل -ung مؤنثة!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "hat bewahre!",
+          "de": "~~Er hat die Erde bewahre.~~"
+        },
+        "correct": {
+          "ar": "hat bewahrt!",
+          "de": "Er hat die Erde bewahrt."
+        },
+        "exercise": {
+          "q": "Er hat die Erde ___.",
+          "a": "bewahrt"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل لا يتغيّر! والألمانية: المضارع يبقى (bewahrt!) لكن الماضي التام ضعيف: hat bewahrt (ge- + t!)! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Hitze",
+      "https://www.duden.de/rechtschreibung/Erderwaermung",
+      "https://www.duden.de/rechtschreibung/bewahren"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-hitze",
+    "word-erderwaermung",
+    "word-bewahren"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 2 (الأرض والمناخ!)",
+    "goetheWordListOverlap": [
+      "hitze",
+      "erderwaermung",
+      "bewahren"
+    ]
+  }
+}

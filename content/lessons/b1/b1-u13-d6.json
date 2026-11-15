@@ -1,0 +1,451 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u13-d6",
+  "level": "B1",
+  "unit": 13,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Das Wissen ist fest — und der Übergang ist klar!",
+    "ar": "الوحدة 13: التكثيف! يوم التوليف! (الترسيخ والانتقال! الرحلة كلها في نص واحد!)"
+  },
+  "canDoDaily": [
+    "يُلخّص رحلة التكثيف كاملة! (das Wissen verfestigen!)",
+    "يصف الانتقال إلى الامتحان! (den Übergang schaffen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "muster",
+      "vorlage",
+      "format"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«هو يُرسّخ المعرفة.»؟"
+        },
+        "choices": [
+          "Er verfestigt das Wissen.",
+          "Er verfestigen das Wissen.",
+          "Er verfestigt die Wissen."
+        ],
+        "answer": "Er verfestigt das Wissen.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الانتقال واضح.»؟"
+        },
+        "choices": [
+          "Der Übergang ist klar.",
+          "Die Übergang ist klar.",
+          "Das Übergang ist klar."
+        ],
+        "answer": "Der Übergang ist klar.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "verfestigen",
+      "uebergang"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-adjektiv-gemischt",
+      "ars-tekamolo-voll",
+      "ars-obwohl",
+      "ars-konnektoren",
+      "ars-praesentation",
+      "ars-fragerunde",
+      "ars-vortragstext",
+      "ars-koennten-sie",
+      "ars-dass-satz"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "needs-ein",
+      "umlaut-u"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Das Wissen ist fest und der Übergang ist klar!",
+        "ar": "يُلخّص رحلة التكثيف كلها: الأدوات والاتّساق والسرعة والكتابة والنماذج!"
+      },
+      "situation": {
+        "de": "Fünf Tage, ein Text, der Übergang.",
+        "ar": "خمسة أيام! نص واحد! الانتقال! (توليف!)"
+      },
+      "successCriteria": [
+        "كلمتا اليوم كلتاهما في الختام!",
+        "كل خيوط التكثيف الخمسة في نص واحد!",
+        "قواعد الوحدة كلها تظهر في التركيب!",
+        "المفردات الثابتة: das Wissen verfestigen! den Übergang schaffen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمتا اليوم!",
+          "verfestigen! Übergang!"
+        ],
+        "interleavedWith": [
+          "muster",
+          "vorlage",
+          "format"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "يُرسّخ",
+                "de": "verfestigen"
+              },
+              {
+                "ar": "الانتقال",
+                "de": "der Übergang"
+              },
+              {
+                "ar": "المعرفة",
+                "de": "das Wissen"
+              }
+            ],
+            "why": "verfestigen يُرسّخ (ver- لا ge-: hat verfestigt!) · der Übergang الانتقال (der! die Übergänge!) · das Wissen المعرفة (das!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "السمة المميزة",
+                "de": "das Merkmal"
+              },
+              {
+                "ar": "الاتّساق",
+                "de": "der Zusammenhang"
+              },
+              {
+                "ar": "الشرط",
+                "de": "die Bedingung"
+              },
+              {
+                "ar": "منطقي",
+                "de": "logisch"
+              }
+            ],
+            "why": "استرجاع اليومين الأولين! das Merkmal · der Zusammenhang · die Bedingung · logisch"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "ضغط الوقت",
+                "de": "der Zeitdruck"
+              },
+              {
+                "ar": "الصياغة",
+                "de": "die Formulierung"
+              },
+              {
+                "ar": "الموعد",
+                "de": "die Frist"
+              },
+              {
+                "ar": "يلتزم بـ",
+                "de": "einhalten"
+              }
+            ],
+            "why": "استرجاع المحاكاتين! der Zeitdruck · die Formulierung · die Frist · einhalten"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "النموذج",
+                "de": "das Muster"
+              },
+              {
+                "ar": "القالب",
+                "de": "die Vorlage"
+              },
+              {
+                "ar": "التنسيق",
+                "de": "das Format"
+              },
+              {
+                "ar": "المعرفة",
+                "de": "das Wissen"
+              }
+            ],
+            "why": "استرجاع النماذج! das Muster · die Vorlage · das Format · das Wissen (das!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الترسيخ والانتقال!"
+        ],
+        "interleavedWith": [
+          "verfestigen",
+          "uebergang",
+          "wissen"
+        ],
+        "items": [
+          {
+            "q": "Er ___ das Wissen. (يُرسّخ!)",
+            "a": "verfestigt",
+            "why": "verfestigen يُرسّخ (ver- غير منفصل!) — er verfestigt das Wissen. (hat verfestigt!)"
+          },
+          {
+            "q": "Der ___ ist klar. (الانتقال!)",
+            "a": "Übergang",
+            "why": "der Übergang الانتقال (der! die Übergänge!) — der Übergang ist klar."
+          },
+          {
+            "q": "Das ___ ist fest. (المعرفة!)",
+            "a": "Wissen",
+            "why": "das Wissen المعرفة (das!) — das Wissen ist fest. (das Wissen verfestigen!)"
+          },
+          {
+            "q": "Das ___ zeigt das Muster. (النموذج! استرجاع!)",
+            "a": "Beispiel",
+            "why": "das Beispiel المثال (das!) — استرجاع يوم النماذج!"
+          },
+          {
+            "q": "Er ___ den Übergang. (يُتمّ الانتقال!)",
+            "a": "schafft",
+            "why": "schaffen يُتمّ (hat geschafft!) — er schafft den Übergang. (den Übergang schaffen!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الجمع! التصريف!"
+        ],
+        "interleavedWith": [
+          "merkmal",
+          "zusammenhang",
+          "bedingung"
+        ],
+        "items": [
+          {
+            "q": "~~Die Übergang ist klar.~~",
+            "a": "Der Übergang ist klar.",
+            "why": "der Übergang الانتقال (der! مذكّر — لا die!)"
+          },
+          {
+            "q": "~~Die Übergänge ist klar.~~",
+            "a": "Der Übergang ist klar.",
+            "why": "المفرد لا الجمع! der Übergang (die Übergänge جمع!) — الجملة عن انتقال واحد!"
+          },
+          {
+            "q": "~~Er verfestigen das Wissen.~~",
+            "a": "Er verfestigt das Wissen.",
+            "why": "المضارع لا المصدر! er verfestigt (لا verfestigen!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — التوليف!",
+          "verfestigen! Übergang! Wissen!"
+        ],
+        "interleavedWith": [
+          "zeitdruck",
+          "formulierung",
+          "muster"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالأدوات! (جملتان!)",
+            "a": "Das Merkmal ist wichtig. Das Muster ist klar.",
+            "why": "اليوم الأول والخامس! (das Merkmal erkennen! das Muster erkennen!)"
+          },
+          {
+            "q": "لخّص الاتّساق! (جملتان!)",
+            "a": "Der Zusammenhang ist logisch. Die Bedingung ist erfüllt.",
+            "why": "اليوم الثاني! (die Bedingung erfüllen!)"
+          },
+          {
+            "q": "لخّص السرعة والكتابة! (جملتان!)",
+            "a": "Unter Zeitdruck spricht er flüssig. Er verfasst die Formulierung.",
+            "why": "اليومان الثالث والرابع! (unter Zeitdruck sprechen! den Text verfassen!)"
+          },
+          {
+            "q": "اختم بالترسيخ والانتقال! (جملتان!)",
+            "a": "Er verfestigt das Wissen. Der Übergang ist klar.",
+            "why": "ختام التوليف! (das Wissen verfestigen! den Übergang schaffen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يُرسّخ المعرفة.»؟",
+            "a": "Er verfestigt das Wissen."
+          },
+          {
+            "q": "«الانتقال»؟",
+            "a": "der Übergang"
+          },
+          {
+            "q": "«المعرفة»؟",
+            "a": "das Wissen"
+          },
+          {
+            "q": "«يُتمّ الانتقال.»؟",
+            "a": "Er schafft den Übergang."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«السمة المميزة»؟ (استرجاع!)",
+            "a": "das Merkmal"
+          },
+          {
+            "q": "«الاتّساق»؟ (استرجاع!)",
+            "a": "der Zusammenhang"
+          },
+          {
+            "q": "«ضغط الوقت»؟ (استرجاع!)",
+            "a": "der Zeitdruck"
+          },
+          {
+            "q": "«الصياغة»؟ (استرجاع!)",
+            "a": "die Formulierung"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«النموذج»؟ (استرجاع!)",
+            "a": "das Muster"
+          },
+          {
+            "q": "«القالب»؟ (استرجاع!)",
+            "a": "die Vorlage"
+          },
+          {
+            "q": "«التنسيق»؟ (استرجاع!)",
+            "a": "das Format"
+          },
+          {
+            "q": "«يُرسّخ المعرفة»؟ (المفردة الثابتة!)",
+            "a": "das Wissen verfestigen"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Das Wissen ist fest und er verfestigt das Wissen. Der Übergang ist klar und er schafft den Übergang. Das Merkmal ist wichtig und der Zusammenhang ist logisch. Unter Zeitdruck verfasst er die Formulierung und hält die Frist ein. Das Muster ist klar und das Format stimmt. Verfestigt und sicher — der Übergang zur Prüfung!",
+      "ar": "المعرفة راسخة وهو يُرسّخها. الانتقال واضح وهو يُتمّه. السمة المميزة مهمة والاتّساق منطقي. تحت ضغط الوقت يكتب الصياغة ويلتزم بالموعد. النموذج واضح والتنسيق مضبوط. مُرسَّخ وواثق — الانتقال إلى الامتحان!"
+    },
+    "srsBundleWordIds": [
+      "verfestigen",
+      "uebergang"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Übergang!",
+          "de": "~~Die Übergang ist klar.~~"
+        },
+        "correct": {
+          "ar": "der Übergang!",
+          "de": "Der Übergang ist klar."
+        },
+        "exercise": {
+          "q": "___ Übergang ist klar.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الانتقال» مذكّر بلا أداة! والألمانية: der Übergang مذكّر بـ der (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الجمع بدل المفرد!",
+          "de": "~~Die Übergänge ist klar.~~"
+        },
+        "correct": {
+          "ar": "المفرد: der Übergang!",
+          "de": "Der Übergang ist klar."
+        },
+        "exercise": {
+          "q": "Der ___ ist klar. (المفرد!)",
+          "a": "Übergang"
+        },
+        "whyArabicSpeakerFails": "العربية: «الانتقالات» جمع شائع! والألمانية: الجملة عن انتقال واحد — der Übergang (die Übergänge جمع!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "المصدر بدل المضارع!",
+          "de": "~~Er verfestigen das Wissen.~~"
+        },
+        "correct": {
+          "ar": "المضارع: verfestigt!",
+          "de": "Er verfestigt das Wissen."
+        },
+        "exercise": {
+          "q": "Er ___ das Wissen. (يُرسّخ!)",
+          "a": "verfestigt"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل لا يتغير بالفاعل! والألمانية: er verfestigt (لا verfestigen!) — التصريف إلزامي (خريطة التداخل 10-ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/verfestigen",
+      "https://www.duden.de/rechtschreibung/Uebergang"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-adjektiv-gemischt",
+    "ars-tekamolo-voll",
+    "ars-obwohl",
+    "ars-konnektoren",
+    "ars-praesentation",
+    "ars-fragerunde",
+    "ars-vortragstext",
+    "ars-koennten-sie",
+    "ars-dass-satz"
+  ],
+  "audioManifestRefs": [
+    "word-verfestigen",
+    "word-uebergang"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 13: التكثيف — توليف!)",
+    "goetheWordListOverlap": [
+      "verfestigen",
+      "uebergang"
+    ]
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u13-d2",
+  "level": "B1",
+  "unit": 13,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Zusammenhang ist klar — und der Satz ist logisch!",
+    "ar": "الوحدة 13: التكثيف! اليوم الثاني — الاتّساق والروابط! (المنطق! والصلة! والشرط!)"
+  },
+  "canDoDaily": [
+    "يصف اتّساق النص ومنطقه! (der Zusammenhang! logisch denken!)",
+    "يذكر الشرط ويُحقّقه! (die Bedingung erfüllen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "merkmal",
+      "erkennen",
+      "auswendig"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الجملة منطقية.»؟"
+        },
+        "choices": [
+          "Der Satz ist logisch.",
+          "Die Satz ist logisch.",
+          "Das Satz ist logisch."
+        ],
+        "answer": "Der Satz ist logisch.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الشرط مهم.»؟"
+        },
+        "choices": [
+          "Die Bedingung ist wichtig.",
+          "Der Bedingung ist wichtig.",
+          "Das Bedingung ist wichtig."
+        ],
+        "answer": "Die Bedingung ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "logisch",
+      "zusammenhang",
+      "bedingung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-obwohl",
+      "ars-konnektoren"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "needs-ein"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Zusammenhang ist klar und der Satz ist logisch!",
+        "ar": "يكتب جملاً مترابطة بالروابط الصحيحة! (الاتّساق! والمنطق! والشرط!)"
+      },
+      "situation": {
+        "de": "Sätze, Verbindungen, Bedingungen — der Zusammenhang.",
+        "ar": "جمل! روابط! شروط! — الاتّساق! (تكثيف!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الروابط تُغيّر ترتيب الجملة: بعد obwohl يهرب الفعل آخرها!",
+        "الاتّساق: كل جملة تصل بما قبلها! (der Zusammenhang sehen!)",
+        "المفردات الثابتة: logisch denken! den Zusammenhang sehen! die Bedingung erfüllen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "logisch! Zusammenhang! Bedingung!"
+        ],
+        "interleavedWith": [
+          "merkmal",
+          "erkennen",
+          "auswendig"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "منطقي",
+                "de": "logisch"
+              },
+              {
+                "ar": "الاتّساق",
+                "de": "der Zusammenhang"
+              },
+              {
+                "ar": "الشرط",
+                "de": "die Bedingung"
+              }
+            ],
+            "why": "logisch منطقي (صفة بعد ist بلا تصريف!) · der Zusammenhang الاتّساق (der! die Zusammenhänge!) · die Bedingung الشرط (die! die Bedingungen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الجملة",
+                "de": "der Satz"
+              },
+              {
+                "ar": "القاعدة",
+                "de": "die Regel"
+              },
+              {
+                "ar": "المثال",
+                "de": "das Beispiel"
+              },
+              {
+                "ar": "واضح",
+                "de": "klar"
+              }
+            ],
+            "why": "مراجعة أدوات النحو! der Satz (der!) · die Regel (die!) · das Beispiel (das!) · klar"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "لأن",
+                "de": "weil"
+              },
+              {
+                "ar": "بالرغم من",
+                "de": "obwohl"
+              },
+              {
+                "ar": "لذلك",
+                "de": "deshalb"
+              },
+              {
+                "ar": "مع ذلك",
+                "de": "trotzdem"
+              }
+            ],
+            "why": "مراجعة الروابط! weil (verb-last!) · obwohl (verb-last!) · deshalb (V2!) · trotzdem (V2!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يفكّر",
+                "de": "denken"
+              },
+              {
+                "ar": "يرى",
+                "de": "sehen"
+              },
+              {
+                "ar": "يُحقّق",
+                "de": "erfüllen"
+              },
+              {
+                "ar": "يقول",
+                "de": "sagen"
+              }
+            ],
+            "why": "مراجعة الأفعال! denken يفكّر · sehen يرى · erfüllen يُحقّق · sagen يقول"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الاتّساق والروابط!"
+        ],
+        "interleavedWith": [
+          "logisch",
+          "zusammenhang",
+          "bedingung"
+        ],
+        "items": [
+          {
+            "q": "Der Satz ist ___. (منطقي!)",
+            "a": "logisch",
+            "why": "logisch منطقي (صفة بعد ist بلا تصريف!) — der Satz ist logisch."
+          },
+          {
+            "q": "Der ___ ist klar. (الاتّساق!)",
+            "a": "Zusammenhang",
+            "why": "der Zusammenhang الاتّساق (der!) — der Zusammenhang ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الشرط!)",
+            "a": "Bedingung",
+            "why": "die Bedingung الشرط (die!) — die Bedingung ist wichtig."
+          },
+          {
+            "q": "___ der Satz kurz ist, ist er klar. (بالرغم من! الفعل آخرًا!)",
+            "a": "Obwohl",
+            "why": "obwohl يطلب الفعل آخرًا! Obwohl der Satz kurz ist, … (ars-obwohl!)"
+          },
+          {
+            "q": "Er erfüllt die ___. (يُحقّق الشرط!)",
+            "a": "Bedingung",
+            "why": "die Bedingung erfüllen — المفردة الثابتة! (die Bedingung erfüllen!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الأداة! الجمع! الترتيب!"
+        ],
+        "interleavedWith": [
+          "satz",
+          "regel",
+          "beispiel"
+        ],
+        "items": [
+          {
+            "q": "~~Die Zusammenhang ist klar.~~",
+            "a": "Der Zusammenhang ist klar.",
+            "why": "der Zusammenhang الاتّساق (der! مذكّر — لا die!)"
+          },
+          {
+            "q": "~~Die Bedingungen ist wichtig.~~",
+            "a": "Die Bedingung ist wichtig.",
+            "why": "المفرد لا الجمع! die Bedingung (die Bedingungen جمع!) — الجملة عن شرط واحد!"
+          },
+          {
+            "q": "~~Obwohl der Satz ist logisch.~~",
+            "a": "Obwohl der Satz logisch ist.",
+            "why": "obwohl يطلب الفعل آخرًا! (verb-last!) — obwohl der Satz logisch IST (ars-obwohl!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تكلّم — الاتّساق!",
+          "Zusammenhang! logisch! Bedingung!"
+        ],
+        "interleavedWith": [
+          "weil",
+          "deshalb",
+          "trotzdem"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالمنطق! (جملتان!)",
+            "a": "Der Satz ist logisch. Er denkt logisch.",
+            "why": "المنطق أولًا! (logisch denken!)"
+          },
+          {
+            "q": "تكلّم عن الاتّساق! (جملتان!)",
+            "a": "Der Zusammenhang ist klar. Er sieht den Zusammenhang.",
+            "why": "الاتّساق ثم الرؤية! (den Zusammenhang sehen!)"
+          },
+          {
+            "q": "تكلّم عن الشرط! (جملتان!)",
+            "a": "Die Bedingung ist wichtig. Er erfüllt die Bedingung.",
+            "why": "الشرط ثم التحقيق! (die Bedingung erfüllen!)"
+          },
+          {
+            "q": "اختم بالرابط! (جملتان بـobwohl!)",
+            "a": "Obwohl die Bedingung lang ist, ist sie klar. Der Zusammenhang ist logisch.",
+            "why": "الرابط يطلب الفعل آخر الجملة! (قاعدة التناقض المُدرَّسة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«منطقي»؟",
+            "a": "logisch"
+          },
+          {
+            "q": "«الاتّساق»؟",
+            "a": "der Zusammenhang"
+          },
+          {
+            "q": "«الشرط»؟",
+            "a": "die Bedingung"
+          },
+          {
+            "q": "«يفكّر بمنطق.»؟",
+            "a": "Er denkt logisch."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الجملة»؟ (مراجعة!)",
+            "a": "der Satz"
+          },
+          {
+            "q": "«القاعدة»؟ (مراجعة!)",
+            "a": "die Regel"
+          },
+          {
+            "q": "«المثال»؟ (مراجعة!)",
+            "a": "das Beispiel"
+          },
+          {
+            "q": "«يرى الاتّساق.»؟",
+            "a": "Er sieht den Zusammenhang."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«بالرغم من»؟ (مراجعة!)",
+            "a": "obwohl"
+          },
+          {
+            "q": "«لذلك»؟ (مراجعة!)",
+            "a": "deshalb"
+          },
+          {
+            "q": "«مع ذلك»؟ (مراجعة!)",
+            "a": "trotzdem"
+          },
+          {
+            "q": "«يُحقّق الشرط.»؟ (المفردة الثابتة!)",
+            "a": "Er erfüllt die Bedingung."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Zusammenhang ist klar und der Satz ist logisch. Die Bedingung ist wichtig und er erfüllt die Bedingung. Er denkt logisch und sieht den Zusammenhang. Obwohl die Bedingung lang ist, ist sie klar. Deshalb ist der Satz wichtig und trotzdem ist er kurz. Der Zusammenhang zeigt das Beispiel!",
+      "ar": "الاتّساق واضح والجملة منطقية. الشرط مهم وهو يُحقّق الشرط. يفكّر بمنطق ويرى الاتّساق. بالرغم من أن الشرط طويل فهو واضح. لذلك فالجملة مهمة ومع ذلك فهي قصيرة. الاتّساق يُظهر المثال!"
+    },
+    "srsBundleWordIds": [
+      "logisch",
+      "zusammenhang",
+      "bedingung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Zusammenhang!",
+          "de": "~~Die Zusammenhang ist klar.~~"
+        },
+        "correct": {
+          "ar": "der Zusammenhang!",
+          "de": "Der Zusammenhang ist klar."
+        },
+        "exercise": {
+          "q": "___ Zusammenhang ist klar.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الاتّساق» مذكّر فيبقى بلا أداة! والألمانية: der Zusammenhang مذكّر بـ der (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الجمع بدل المفرد!",
+          "de": "~~Die Bedingungen ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "المفرد: die Bedingung!",
+          "de": "Die Bedingung ist wichtig."
+        },
+        "exercise": {
+          "q": "Die ___ ist wichtig. (المفرد!)",
+          "a": "Bedingung"
+        },
+        "whyArabicSpeakerFails": "العربية: «الشروط» جمع شائع! والألمانية: الجملة عن شرط واحد — die Bedingung (die Bedingungen جمع!) (خريطة التداخل 10-ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "الفعل في موضعه لا آخره!",
+          "de": "~~Obwohl der Satz ist logisch.~~"
+        },
+        "correct": {
+          "ar": "verb-last: obwohl … ist!",
+          "de": "Obwohl der Satz logisch ist."
+        },
+        "exercise": {
+          "q": "Obwohl der Satz logisch ___.",
+          "a": "ist"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل بعد المبتدأ أبداً! والألمانية: بعد obwohl يهرب الفعل آخر الجملة (خريطة التداخل 10-ي! ars-obwohl!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/logisch",
+      "https://www.duden.de/rechtschreibung/Zusammenhang",
+      "https://www.duden.de/rechtschreibung/Bedingung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-obwohl",
+    "ars-konnektoren"
+  ],
+  "audioManifestRefs": [
+    "word-logisch",
+    "word-zusammenhang",
+    "word-bedingung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 13: التكثيف — الاتّساق والروابط!)",
+    "goetheWordListOverlap": [
+      "logisch",
+      "zusammenhang",
+      "bedingung"
+    ]
+  }
+}

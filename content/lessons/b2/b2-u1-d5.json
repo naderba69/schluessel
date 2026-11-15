@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u1-d5",
+  "level": "B2",
+  "unit": 1,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Gerechtigkeit schaffen, Geld spenden und mit Würde leben!",
+    "ar": "الوحدة 1: مع الناس! (العدل! التبرّع! والكرامة!)"
+  },
+  "canDoDaily": [
+    "يتحدث عن العدل والتبرّع! (Gerechtigkeit! spenden!)",
+    "يعيش بكرامة! (mit Würde leben!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "ermutigung",
+      "warnen",
+      "ablehnung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«العدل مهم.»؟"
+        },
+        "choices": [
+          "Die Gerechtigkeit ist wichtig.",
+          "Der Gerechtigkeit ist wichtig.",
+          "Das Gerechtigkeit ist wichtig."
+        ],
+        "answer": "Die Gerechtigkeit ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نتبرّع بالمال.»؟"
+        },
+        "choices": [
+          "Wir spenden Geld.",
+          "Wir spendet Geld.",
+          "Wir sparen Geld."
+        ],
+        "answer": "Wir spenden Geld.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "gerechtigkeit",
+      "spenden",
+      "wuerde"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ich-laut",
+      "umlaut-u"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Gerechtigkeit schaffen, Geld spenden und mit Würde leben!",
+        "ar": "يوم خمسة في B2: العدل والتبرّع والكرامة — مع الناس!"
+      },
+      "situation": {
+        "de": "Gerechtigkeit, spenden, Würde — zusammen leben.",
+        "ar": "عدل! تبرّع! كرامة! — نعيش معًا! (مع الناس!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "spenden يأخذ المجرور (den Menschen!) — لا die Menschen!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Gerechtigkeit schaffen! Geld spenden! mit Würde leben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "integration",
+          "gleichheit",
+          "beistehen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Gerechtigkeit",
+                "ar": "العدل (الإنصاف)"
+              },
+              {
+                "de": "spenden",
+                "ar": "يتبرّع (يمنح)"
+              },
+              {
+                "de": "die Würde",
+                "ar": "الكرامة (الوقار)"
+              }
+            ],
+            "why": "die Gerechtigkeit العدل (die! die Gerechtigkeiten!) · spenden يتبرّع (Dativ! den Menschen!) · die Würde الكرامة (die! die Würden!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "Gerechtigkeit schaffen",
+                "ar": "يصنع العدل"
+              },
+              {
+                "de": "Geld spenden",
+                "ar": "يتبرّع بالمال"
+              },
+              {
+                "de": "mit Würde leben",
+                "ar": "يعيش بكرامة"
+              },
+              {
+                "de": "die Gerechtigkeiten",
+                "ar": "العدالات (جمع -en)"
+              }
+            ],
+            "why": "Gerechtigkeit schaffen! · Geld spenden! · mit Würde leben! · die Gerechtigkeiten جمع -en"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "einsatz",
+          "hoeflichkeit",
+          "vermitteln"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (العدل!)",
+            "a": "Gerechtigkeit",
+            "why": "die Gerechtigkeit العدل (die!) — Die Gerechtigkeit ist wichtig."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الكرامة!)",
+            "a": "Würde",
+            "why": "die Würde الكرامة (die!) — Die Würde ist wichtig."
+          },
+          {
+            "q": "Wir ___ Geld. (نتبرّع!)",
+            "a": "spenden",
+            "why": "spenden يتبرّع (Präsens wir: spenden!) — Wir spenden Geld."
+          },
+          {
+            "q": "Er schafft ___. (عدلاً!)",
+            "a": "Gerechtigkeit",
+            "why": "العدل: Gerechtigkeit schaffen! — Er schafft Gerechtigkeit."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "mensch",
+          "freundlich",
+          "ruhe"
+        ],
+        "items": [
+          {
+            "q": "~~Der Gerechtigkeit ist wichtig.~~",
+            "a": "Die Gerechtigkeit ist wichtig.",
+            "why": "die Gerechtigkeit (die! لا der! — كل -keit مؤنثة!)"
+          },
+          {
+            "q": "~~Das Würde ist wichtig.~~",
+            "a": "Die Würde ist wichtig.",
+            "why": "die Würde (die! لا das!)"
+          },
+          {
+            "q": "~~Wir spenden die Menschen.~~",
+            "a": "Wir spenden den Menschen.",
+            "why": "spenden يأخذ Dativ! (den Menschen — لا die Menschen!)"
+          },
+          {
+            "q": "~~Ich lebe mit die Würde.~~",
+            "a": "Ich lebe mit der Würde.",
+            "why": "mit دائماً مع Dativ (mit der Würde!) — لا تحويل حرفي!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ermutigung",
+          "warnen",
+          "ablehnung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالعدل! (جملتان!)",
+            "a": "Die Gerechtigkeit ist wichtig. Ich schaffe Gerechtigkeit.",
+            "why": "العدل أولًا! (Gerechtigkeit schaffen!)"
+          },
+          {
+            "q": "تحدث عن التبرّع! (جملتان!)",
+            "a": "Spenden ist gut. Ich spende Geld.",
+            "why": "التبرّع! (Geld spenden!)"
+          },
+          {
+            "q": "تحدث عن الكرامة! (جملتان!)",
+            "a": "Die Würde ist wichtig. Ich lebe mit Würde.",
+            "why": "الكرامة! (mit Würde leben!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«العدل (الإنصاف)»؟",
+            "a": "die Gerechtigkeit"
+          },
+          {
+            "q": "«يتبرّع (يمنح)»؟",
+            "a": "spenden"
+          },
+          {
+            "q": "«الكرامة (الوقار)»؟",
+            "a": "die Würde"
+          },
+          {
+            "q": "«نتبرّع بالمال.»؟",
+            "a": "Wir spenden Geld."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«العدل مهم.»؟",
+            "a": "Die Gerechtigkeit ist wichtig."
+          },
+          {
+            "q": "die Würde",
+            "a": "الكرامة"
+          },
+          {
+            "q": "«هو يصنع العدل.»؟",
+            "a": "Er schafft Gerechtigkeit."
+          },
+          {
+            "q": "spenden",
+            "a": "يتبرّع"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يعيش بكرامة.»؟",
+            "a": "Er lebt mit Würde."
+          },
+          {
+            "q": "«الكرامة مهمّة.»؟",
+            "a": "Die Würde ist wichtig."
+          },
+          {
+            "q": "die Gerechtigkeit",
+            "a": "العدل"
+          },
+          {
+            "q": "«نتبرّع للناس!»؟",
+            "a": "Wir spenden den Menschen!"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Gerechtigkeit ist wichtig und die Würde ist da. Wir sollen Geld spenden und der Tag ist schön. Er schafft Gerechtigkeit und lebt mit Würde.",
+      "ar": "العدل والكرامة يقوّيان المجتمع — ونتبرّع لبعضنا!"
+    },
+    "srsBundleWordIds": [
+      "gerechtigkeit",
+      "spenden",
+      "wuerde"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Gerechtigkeit!",
+          "de": "~~Der Gerechtigkeit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Gerechtigkeit!",
+          "de": "Die Gerechtigkeit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Gerechtigkeit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «العدل» مذكّر! والألمانية: die Gerechtigkeit (die!) — كل -keit مؤنثة دائماً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Würde!",
+          "de": "~~Das Würde ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Würde!",
+          "de": "Die Würde ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Würde ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الكرامة» مؤنثة ✓ — والألمانية: die Würde (die!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "wir spenden die Menschen!",
+          "de": "~~Wir spenden die Menschen.~~"
+        },
+        "correct": {
+          "ar": "wir spenden den Menschen!",
+          "de": "Wir spenden den Menschen."
+        },
+        "exercise": {
+          "q": "Wir spenden ___ Menschen.",
+          "a": "den"
+        },
+        "whyArabicSpeakerFails": "العربية: «نتبرّع للناس» تفهم بالنصب! والألمانية: spenden يأخذ Dativ (den Menschen!) — القاعدة الألمانية لا علاقة لها بالعربية! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Gerechtigkeit",
+      "https://www.duden.de/rechtschreibung/spenden",
+      "https://www.duden.de/rechtschreibung/W%C3%BCrde"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-gerechtigkeit",
+    "word-spenden",
+    "word-wuerde"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 1 (مع الناس!)",
+    "goetheWordListOverlap": [
+      "gerechtigkeit",
+      "spenden",
+      "wuerde"
+    ]
+  }
+}

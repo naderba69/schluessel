@@ -1,0 +1,483 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u10-d5",
+  "level": "B1",
+  "unit": 10,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Ein Drittel ist genug — und die Werte sind zahlreich!",
+    "ar": "يوم التعبيرات الكمية! (ثلث! حفنة! في الغالب!) — الوحدة 10: الأرقام والإحصاء!"
+  },
+  "canDoDaily": [
+    "يقول الكمّيات بالكسور والجمعيات! (ein Drittel! eine Handvoll! eine Million!)",
+    "يصف الكثافة بالمراتب الثابتة! (reichlich! knapp! teilweise! überwiegend! zahlreich!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "prozent",
+      "haelfte",
+      "anzahl"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الثلث يكفي.»؟"
+        },
+        "choices": [
+          "Ein Drittel ist genug.",
+          "Ein Drittel sind genug.",
+          "Ein Drittel ist wenig."
+        ],
+        "answer": "Ein Drittel ist genug.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الثلثان مرتفعان.»؟ (العدد!)"
+        },
+        "choices": [
+          "Zwei Drittel sind hoch.",
+          "Zwei Drittel ist hoch.",
+          "Zwei Drittel sind hoches."
+        ],
+        "answer": "Zwei Drittel sind hoch.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "drittel",
+      "zehntel",
+      "handvoll",
+      "dutzend",
+      "bruch",
+      "mehrzahl",
+      "teilweise",
+      "vollstaendig",
+      "ueberwiegend",
+      "knapp",
+      "reichlich",
+      "zahlreich",
+      "genuegend",
+      "million",
+      "rate"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-quantitaet"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Kein Problem — ein Drittel ist genug und die Menge ist reichlich!",
+        "ar": "يصف كمّيات في 8 جمل!"
+      },
+      "situation": {
+        "de": "Ein Drittel, eine Handvoll, eine Million.",
+        "ar": "ثلث! حفنة! ومليون! (الكمّيات بأسمائها!)"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في الوصف!",
+        "الكسور: das Drittel/das Zehntel/der Bruch (die Drittel!)",
+        "العدد + Drittel = جمع: Zwei Drittel sind!",
+        "الكثافة بالمراتب: reichlich! knapp! teilweise! überwiegend!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Drittel! Handvoll! Million!"
+        ],
+        "interleavedWith": [
+          "prozent",
+          "haelfte",
+          "anzahl"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "الثلث",
+                "de": "das Drittel"
+              },
+              {
+                "ar": "العُشر",
+                "de": "das Zehntel"
+              },
+              {
+                "ar": "حفنة",
+                "de": "die Handvoll"
+              },
+              {
+                "ar": "الدزينة (اثنا عشر)",
+                "de": "das Dutzend"
+              }
+            ],
+            "why": "das Drittel الثلث (das! die Drittel!) · das Zehntel العُشر (die Zehntel!) · die Handvoll الحفنة (die! Handvoll!) · das Dutzend الدزينة (die Dutzende!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الكسر (الرياضي)",
+                "de": "der Bruch"
+              },
+              {
+                "ar": "الأكثرية (العددية)",
+                "de": "die Mehrzahl"
+              },
+              {
+                "ar": "جزئياً",
+                "de": "teilweise"
+              },
+              {
+                "ar": "كامل",
+                "de": "vollständig"
+              }
+            ],
+            "why": "der Bruch الكسر (die Brüche!) · die Mehrzahl الأكثرية (klar!) · teilweise جزئياً (ظرف!) · vollständig كامل (صفة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "في الغالب",
+                "de": "überwiegend"
+              },
+              {
+                "ar": "بالكاد",
+                "de": "knapp"
+              },
+              {
+                "ar": "وفير",
+                "de": "reichlich"
+              },
+              {
+                "ar": "المليون",
+                "de": "die Million"
+              }
+            ],
+            "why": "überwiegend في الغالب (ظرف!) · knapp بالكاد/ضيّق (لا «قليل»!) · reichlich وفير (ظرف!) · die Million المليون (die Millionen!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "الكمّيات!"
+        ],
+        "interleavedWith": [
+          "drittel",
+          "handvoll",
+          "million"
+        ],
+        "items": [
+          {
+            "q": "Ein ___ ist genug. (الثلث!)",
+            "a": "Drittel",
+            "why": "das Drittel الثلث — Ein Drittel ist genug. (ars-quantitaet!)"
+          },
+          {
+            "q": "Zwei ___ sind hoch. (الثلثان! العدد جمع!)",
+            "a": "Drittel",
+            "why": "العدد + Drittel = جمع! Zwei Drittel SIND hoch. (لا ist!)"
+          },
+          {
+            "q": "Eine ___ ist klein. (حفنة!)",
+            "a": "Handvoll",
+            "why": "die Handvoll الحفنة (die! لا der!) — eine Handvoll ist klein."
+          },
+          {
+            "q": "Die Werte sind ___. (كثيرة!)",
+            "a": "zahlreich",
+            "why": "zahlreich كثير — Die Werte sind zahlreich."
+          },
+          {
+            "q": "Die Menge ist ___. (وفيرة!)",
+            "a": "reichlich",
+            "why": "reichlich وفير — Die Menge ist reichlich."
+          },
+          {
+            "q": "Die ___ ist hoch. (المعدل!)",
+            "a": "Rate",
+            "why": "die Rate المعدل (die Raten!) — die Rate ist hoch."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الجمع! الأداة! المعنى!"
+        ],
+        "interleavedWith": [
+          "zehntel",
+          "dutzend",
+          "bruch"
+        ],
+        "items": [
+          {
+            "q": "~~Zwei Drittel ist hoch.~~",
+            "a": "Zwei Drittel sind hoch.",
+            "why": "العدد + Drittel = جمع! SIND (لا ist!) — كما Prozent!"
+          },
+          {
+            "q": "~~der Handvoll ist klein~~",
+            "a": "die Handvoll ist klein",
+            "why": "die Handvoll الحفنة (die! مؤنث — لا der!)"
+          },
+          {
+            "q": "~~Die Menge ist knapp.~~ (بمعنى قليلة!)",
+            "a": "Die Menge ist klein.",
+            "why": "knapp = بالكاد تكفي/ضيّقة! (لا «قليل»!) — القليل = klein/wenig!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — الكمّيات كلام!",
+          "Drittel! Handvoll! Rate!"
+        ],
+        "interleavedWith": [
+          "teilweise",
+          "vollstaendig",
+          "ueberwiegend"
+        ],
+        "items": [
+          {
+            "q": "قل الكسور! (جملتان!)",
+            "a": "Ein Drittel ist genug. Ein Zehntel ist klein.",
+            "why": "الكسور بأسمائها! (ars-quantitaet!)"
+          },
+          {
+            "q": "صف الكثافة! (جملتان!)",
+            "a": "Die Werte sind zahlreich. Die Menge ist reichlich.",
+            "why": "zahlreich! reichlich! (الكثافة!)"
+          },
+          {
+            "q": "اختم بالتوزيع والمعدل! (3 جمل!)",
+            "a": "Die Werte sind überwiegend hoch. Die Summe ist vollständig. Die Rate ist hoch!",
+            "why": "überwiegend! vollständig! Rate! (الخاتمة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الثلث يكفي.»؟",
+            "a": "Ein Drittel ist genug."
+          },
+          {
+            "q": "«حفنة»؟",
+            "a": "die Handvoll"
+          },
+          {
+            "q": "«الثلثان مرتفعان.»؟",
+            "a": "Zwei Drittel sind hoch."
+          },
+          {
+            "q": "«العُشر»؟",
+            "a": "das Zehntel"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«القيم كثيرة.»؟",
+            "a": "Die Werte sind zahlreich."
+          },
+          {
+            "q": "«بالكاد»؟",
+            "a": "knapp"
+          },
+          {
+            "q": "«الكمية وفيرة.»؟",
+            "a": "Die Menge ist reichlich."
+          },
+          {
+            "q": "«المليون»؟",
+            "a": "die Million"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«في الغالب»؟",
+            "a": "überwiegend"
+          },
+          {
+            "q": "«الكسر (الرياضي)»؟",
+            "a": "der Bruch"
+          },
+          {
+            "q": "«المجموع كامل.»؟",
+            "a": "Die Summe ist vollständig."
+          },
+          {
+            "q": "«المعدل»؟",
+            "a": "die Rate"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Ein Drittel ist genug und ein Zehntel ist klein. Zwei Drittel sind hoch und der Bruch ist klar. Eine Handvoll ist klein und das Dutzend ist groß. Die Mehrzahl ist klar und die Werte sind zahlreich. Die Menge ist reichlich und die Anzahl ist knapp. Die Werte sind teilweise hoch und überwiegend stabil. Die Summe ist vollständig und die Hälfte ist genügend. Eine Million ist viel und die Rate ist hoch!",
+      "ar": "الثلث يكفي والعُشر صغير. الثلثان مرتفعان والكسر واضح. حفنة صغيرة والدزينة كبيرة. الأكثرية واضحة والقيم كثيرة. الكمية وفيرة والعدد بالكاد يكفي. القيم عالية جزئياً ومستقرّة في الغالب. المجموع كامل والنصف كافٍ. مليون كثير والمعدل عالٍ!"
+    },
+    "srsBundleWordIds": [
+      "drittel",
+      "zehntel",
+      "handvoll",
+      "dutzend",
+      "bruch",
+      "mehrzahl",
+      "teilweise",
+      "vollstaendig",
+      "ueberwiegend",
+      "knapp",
+      "reichlich",
+      "zahlreich",
+      "genuegend",
+      "million",
+      "rate"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "Zwei Drittel ist!",
+          "de": "~~Zwei Drittel ist hoch.~~"
+        },
+        "correct": {
+          "ar": "العدد = جمع: Zwei Drittel sind!",
+          "de": "Zwei Drittel sind hoch."
+        },
+        "exercise": {
+          "q": "Zwei Drittel ___ hoch. (الجمع!)",
+          "a": "sind"
+        },
+        "whyArabicSpeakerFails": "العربية: «الثلثان» — مثنى يعامل مفرداً أحياناً! والألمانية: العدد + Drittel جمع (SIND!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Handvoll!",
+          "de": "~~der Handvoll ist klein~~"
+        },
+        "correct": {
+          "ar": "die Handvoll (die!) — الحفنة!",
+          "de": "die Handvoll ist klein"
+        },
+        "exercise": {
+          "q": "___ Handvoll ist klein. (الأداة!)",
+          "a": "Die"
+        },
+        "whyArabicSpeakerFails": "العربية: «حفنة» — مؤنث بالطبيعة! والألمانية: die Handvoll مؤنث لكن الأداة تُنسى (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "knapp = قليل!",
+          "de": "~~Die Menge ist knapp.~~ (بمعنى قليلة!)"
+        },
+        "correct": {
+          "ar": "knapp = بالكاد تكفي! القليل = klein/wenig!",
+          "de": "Die Menge ist klein."
+        },
+        "exercise": {
+          "q": "القليل = Die Menge ist ___.",
+          "a": "klein"
+        },
+        "whyArabicSpeakerFails": "العربية: «بالكاد» و«قليل» يقتربان! والألمانية: knapp = الحدّ الضيّق (knapp genug!) لا القلة (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Drittel",
+      "https://www.duden.de/rechtschreibung/Zehntel",
+      "https://www.duden.de/rechtschreibung/Handvoll",
+      "https://www.duden.de/rechtschreibung/Dutzend",
+      "https://www.duden.de/rechtschreibung/Bruch",
+      "https://www.duden.de/rechtschreibung/Mehrzahl",
+      "https://www.duden.de/rechtschreibung/teilweise",
+      "https://www.duden.de/rechtschreibung/vollstaendig",
+      "https://www.duden.de/rechtschreibung/ueberwiegend",
+      "https://www.duden.de/rechtschreibung/knapp",
+      "https://www.duden.de/rechtschreibung/reichlich",
+      "https://www.duden.de/rechtschreibung/zahlreich",
+      "https://www.duden.de/rechtschreibung/genuegend",
+      "https://www.duden.de/rechtschreibung/Million",
+      "https://www.duden.de/rechtschreibung/Rate"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-quantitaet",
+    "ars-prozent"
+  ],
+  "audioManifestRefs": [
+    "word-drittel",
+    "word-zehntel",
+    "word-handvoll",
+    "word-dutzend",
+    "word-bruch",
+    "word-mehrzahl",
+    "word-teilweise",
+    "word-vollstaendig",
+    "word-ueberwiegend",
+    "word-knapp",
+    "word-reichlich",
+    "word-zahlreich",
+    "word-genuegend",
+    "word-million",
+    "word-rate"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 10: الأرقام والإحصاء — تعبيرات كمية)",
+    "goetheWordListOverlap": [
+      "drittel",
+      "zehntel",
+      "handvoll",
+      "dutzend",
+      "bruch",
+      "mehrzahl",
+      "teilweise",
+      "vollstaendig",
+      "ueberwiegend",
+      "knapp",
+      "reichlich",
+      "zahlreich",
+      "genuegend",
+      "million",
+      "rate"
+    ]
+  }
+}

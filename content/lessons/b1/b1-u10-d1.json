@@ -1,0 +1,487 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u10-d1",
+  "level": "B1",
+  "unit": 10,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Fünfundachtzig Komma drei Prozent — die Zahlen sprechen!",
+    "ar": "يوم النسب والإحصاء! (85,3%! المتوسط! الاتجاه!) — الوحدة 10: الأرقام والإحصاء!"
+  },
+  "canDoDaily": [
+    "يقرأ النسب والأرقام بالفاصلة الألمانية! (85,3% = Komma drei Prozent!)",
+    "يصف اتجاه الأرقام بالمفردات الثابتة! (Anstieg! Rückgang! sinken! schwanken! stabil!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "versoehnung",
+      "versoehnen",
+      "frieden"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«85,3%» تُقرأ: (الفاصلة!)"
+        },
+        "choices": [
+          "Fünfundachtzig Komma drei Prozent.",
+          "Fünfundachtzig Punkt drei Prozent.",
+          "Fünf Komma drei Prozent."
+        ],
+        "answer": "Fünfundachtzig Komma drei Prozent.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«عشرون بالمئة تكفي.»؟"
+        },
+        "choices": [
+          "Zwanzig Prozent sind genug.",
+          "Zwanzig Prozent ist genug.",
+          "Zwanzig Prozent sind viel."
+        ],
+        "answer": "Zwanzig Prozent sind genug.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "prozent",
+      "anteil",
+      "statistik",
+      "durchschnitt",
+      "sinken",
+      "anstieg",
+      "rueckgang",
+      "tendenz",
+      "haelfte",
+      "zunahme",
+      "abnahme",
+      "betragen",
+      "schwanken",
+      "stabil",
+      "kurve",
+      "komma"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-prozent"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v2-order"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Zahlen sprechen — und die Tendenz ist klar!",
+        "ar": "يقرأ ويصف إحصاءً في 8 جمل!"
+      },
+      "situation": {
+        "de": "Eine Statistik: Ein Anstieg, ein Rückgang, eine Tendenz.",
+        "ar": "إحصاء! ارتفاع! انخفاض! واتجاه واضح!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الخمس عشرة كلها في الوصف!",
+        "القراءة بالفاصلة: 85,3% = Komma drei Prozent!",
+        "الاتجاه بأفعاله: steigt! sinkt! schwankt! (الماضي ist!)",
+        "العدد + Prozent = جمع: Zwanzig Prozent sind!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "كلمات اليوم!",
+          "Prozent! Anteil! Tendenz!"
+        ],
+        "interleavedWith": [
+          "versoehnung",
+          "versoehnen",
+          "frieden"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "بالمئة",
+                "de": "das Prozent"
+              },
+              {
+                "ar": "الحصة",
+                "de": "der Anteil"
+              },
+              {
+                "ar": "الإحصاء",
+                "de": "die Statistik"
+              },
+              {
+                "ar": "المتوسط",
+                "de": "der Durchschnitt"
+              }
+            ],
+            "why": "das Prozent بالمئة (die Prozente!) · der Anteil الحصة (die Anteile! haben!) · die Statistik الإحصاء (die Statistiken!) · der Durchschnitt المتوسط (die Durchschnitte!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "ينخفض",
+                "de": "sinken"
+              },
+              {
+                "ar": "الارتفاع",
+                "de": "der Anstieg"
+              },
+              {
+                "ar": "الانخفاض",
+                "de": "der Rückgang"
+              },
+              {
+                "ar": "الاتجاه (العام)",
+                "de": "die Tendenz"
+              }
+            ],
+            "why": "sinken ينخفض (ist gesunken! — الحركة!) · der Anstieg الارتفاع (deutlich!) · der Rückgang الانخفاض (die Rückgänge!) · die Tendenz الاتجاه (zeigen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "النصف",
+                "de": "die Hälfte"
+              },
+              {
+                "ar": "الزيادة",
+                "de": "die Zunahme"
+              },
+              {
+                "ar": "النقصان",
+                "de": "die Abnahme"
+              },
+              {
+                "ar": "يتذبذب",
+                "de": "schwanken"
+              }
+            ],
+            "why": "die Hälfte النصف (die! Hälften!) · die Zunahme الزيادة (Zunahmen!) · die Abnahme النقصان (Abnahmen!) · schwanken يتذبذب (hat geschwankt!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "المكان الشاغر!",
+          "النسب والأرقام!"
+        ],
+        "interleavedWith": [
+          "prozent",
+          "anteil",
+          "tendenz"
+        ],
+        "items": [
+          {
+            "q": "Fünfundachtzig ___ drei Prozent. (الفاصلة! 85,3%!)",
+            "a": "Komma",
+            "why": "النسبة تُقرأ بالفاصلة: Komma drei Prozent! (لا Punkt!)"
+          },
+          {
+            "q": "Zwanzig Prozent ___ genug. (العدد = جمع!)",
+            "a": "sind",
+            "why": "العدد + Prozent = جمع! Zwanzig Prozent SIND genug. (لا ist!)"
+          },
+          {
+            "q": "Die ___ ist genug. (النصف!)",
+            "a": "Hälfte",
+            "why": "die Hälfte النصف (die! لا der!) — die Hälfte ist genug."
+          },
+          {
+            "q": "Die Summe ___ zwanzig. (يبلغ!)",
+            "a": "beträgt",
+            "why": "betragen يبلغ: Die Summe beträgt zwanzig. (beträgt = praesens3s!)"
+          },
+          {
+            "q": "Die Werte ___. (تتذبذب!)",
+            "a": "schwanken",
+            "why": "schwanken يتذبذب — Die Werte schwanken."
+          },
+          {
+            "q": "Die Zahl ist ___. (مستقرّ!)",
+            "a": "stabil",
+            "why": "stabil مستقرّ — Die Zahl ist stabil. (صفة!)"
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "ثلاثة أخطاء!",
+          "الجمع! الأداة! ist/hat!"
+        ],
+        "interleavedWith": [
+          "statistik",
+          "durchschnitt",
+          "kurve"
+        ],
+        "items": [
+          {
+            "q": "~~Zwanzig Prozent ist genug.~~",
+            "a": "Zwanzig Prozent sind genug.",
+            "why": "العدد + Prozent = جمع! SIND (لا ist!) — 20% ليست واحداً!"
+          },
+          {
+            "q": "~~der Hälfte ist genug~~",
+            "a": "die Hälfte ist genug",
+            "why": "die Hälfte النصف (die! مؤنث — لا der!)"
+          },
+          {
+            "q": "~~Die Zahl hat gesunken.~~",
+            "a": "Die Zahl ist gesunken.",
+            "why": "sinken بالماضي ist (الحركة!) — ist gesunken! (خريطة التداخل 10‑ي!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "تحدّث — الأرقام كلام!",
+          "Komma! Tendenz!"
+        ],
+        "interleavedWith": [
+          "sinken",
+          "betragen",
+          "stabil"
+        ],
+        "items": [
+          {
+            "q": "اقرأ النسبة! (جملتان!)",
+            "a": "Fünfundachtzig Komma drei Prozent. Zwanzig Prozent sind genug.",
+            "why": "القراءة بالفاصلة والعدد جمع! (ars-prozent!)"
+          },
+          {
+            "q": "صف الاتجاه! (جملتان!)",
+            "a": "Der Anstieg ist deutlich. Die Zahl sinkt.",
+            "why": "Anstieg! sinken! (الاتجاه!)"
+          },
+          {
+            "q": "لخّص الإحصاء! (3 جمل!)",
+            "a": "Der Durchschnitt ist hoch. Die Tendenz ist klar. Die Zahl ist stabil!",
+            "why": "Durchschnitt! Tendenz! stabil! (الخاتمة!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«85,3%» تُقرأ؟",
+            "a": "Fünfundachtzig Komma drei Prozent."
+          },
+          {
+            "q": "«الحصة»؟",
+            "a": "der Anteil"
+          },
+          {
+            "q": "«عشرون بالمئة تكفي.»؟",
+            "a": "Zwanzig Prozent sind genug."
+          },
+          {
+            "q": "«المتوسط»؟",
+            "a": "der Durchschnitt"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الرقم ينخفض.»؟",
+            "a": "Die Zahl sinkt."
+          },
+          {
+            "q": "«الارتفاع»؟",
+            "a": "der Anstieg"
+          },
+          {
+            "q": "«القيم تتذبذب.»؟",
+            "a": "Die Werte schwanken."
+          },
+          {
+            "q": "«الاتجاه واضح.»؟",
+            "a": "Die Tendenz ist klar."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«النصف»؟",
+            "a": "die Hälfte"
+          },
+          {
+            "q": "«المجموع يبلغ عشرين.»؟",
+            "a": "Die Summe beträgt zwanzig."
+          },
+          {
+            "q": "«الرقم مستقرّ.»؟",
+            "a": "Die Zahl ist stabil."
+          },
+          {
+            "q": "«المنحنى»؟",
+            "a": "die Kurve"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Statistik ist klar: Fünfundachtzig Komma drei Prozent. Zwanzig Prozent sind genug. Der Anteil ist hoch und der Durchschnitt ist hoch. Der Anstieg ist groß und die Zunahme ist deutlich. Aber die Werte schwanken und die Zahl sinkt. Der Rückgang und die Abnahme sind klein. Die Hälfte ist genug und die Summe beträgt zwanzig. Die Kurve zeigt: Die Tendenz ist klar und die Zahl ist stabil!",
+      "ar": "الإحصاء واضح: خمسة وثمانون فاصلة ثلاثة بالمئة. عشرون بالمئة تكفي. الحصة عالية والمتوسط عالٍ. الارتفاع كبير والزيادة واضحة. لكن القيم تتذبذب والرقم ينخفض. الانخفاض والنقصان صغيران. النصف يكفي والمجموع يبلغ عشرين. المنحنى يُظهر: الاتجاه واضح والرقم مستقرّ!"
+    },
+    "srsBundleWordIds": [
+      "prozent",
+      "anteil",
+      "statistik",
+      "durchschnitt",
+      "sinken",
+      "anstieg",
+      "rueckgang",
+      "tendenz",
+      "haelfte",
+      "zunahme",
+      "abnahme",
+      "betragen",
+      "schwanken",
+      "stabil",
+      "kurve",
+      "komma"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "العدد + Prozent بالمفرد!",
+          "de": "~~Zwanzig Prozent ist genug.~~"
+        },
+        "correct": {
+          "ar": "العدد = جمع: Zwanzig Prozent sind!",
+          "de": "Zwanzig Prozent sind genug."
+        },
+        "exercise": {
+          "q": "Zwanzig Prozent ___ genug. (الجمع!)",
+          "a": "sind"
+        },
+        "whyArabicSpeakerFails": "العربية: «عشرون بالمئة» — العدد يعامل مفرداً! والألمانية: العدد + Prozent جمع (SIND!) (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "der Hälfte!",
+          "de": "~~der Hälfte ist genug~~"
+        },
+        "correct": {
+          "ar": "die Hälfte (die! مؤنث!) — النصف!",
+          "de": "die Hälfte ist genug"
+        },
+        "exercise": {
+          "q": "___ Hälfte ist genug. (الأداة!)",
+          "a": "Die"
+        },
+        "whyArabicSpeakerFails": "العربية: «النصف» — بلا جنس! والألمانية: die Hälfte مؤنث رغم ما يُشاع من خطأ (خريطة التداخل 10‑ي!)."
+      },
+      {
+        "commonError": {
+          "ar": "sinken بالماضي hat!",
+          "de": "~~Die Zahl hat gesunken.~~"
+        },
+        "correct": {
+          "ar": "الحركة ist: Die Zahl ist gesunken!",
+          "de": "Die Zahl ist gesunken."
+        },
+        "exercise": {
+          "q": "Die Zahl ___ gesunken. (الماضي!)",
+          "a": "ist"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل الماضي بلا مساعد! والألمانية: أفعال الحركة بالماضي مع ist لا hat (خريطة التداخل 10‑ي!)."
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Prozent",
+      "https://www.duden.de/rechtschreibung/Anteil",
+      "https://www.duden.de/rechtschreibung/Statistik",
+      "https://www.duden.de/rechtschreibung/Durchschnitt",
+      "https://www.duden.de/rechtschreibung/sinken",
+      "https://www.duden.de/rechtschreibung/Anstieg",
+      "https://www.duden.de/rechtschreibung/Rueckgang",
+      "https://www.duden.de/rechtschreibung/Tendenz",
+      "https://www.duden.de/rechtschreibung/Haelfte",
+      "https://www.duden.de/rechtschreibung/Zunahme",
+      "https://www.duden.de/rechtschreibung/Abnahme",
+      "https://www.duden.de/rechtschreibung/betragen",
+      "https://www.duden.de/rechtschreibung/schwanken",
+      "https://www.duden.de/rechtschreibung/stabil",
+      "https://www.duden.de/rechtschreibung/Kurve"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-prozent",
+    "ars-zahlen-100"
+  ],
+  "audioManifestRefs": [
+    "word-prozent",
+    "word-anteil",
+    "word-statistik",
+    "word-durchschnitt",
+    "word-sinken",
+    "word-anstieg",
+    "word-rueckgang",
+    "word-tendenz",
+    "word-haelfte",
+    "word-zunahme",
+    "word-abnahme",
+    "word-betragen",
+    "word-schwanken",
+    "word-stabil",
+    "word-kurve",
+    "word-komma"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 10: الأرقام والإحصاء — النسب)",
+    "goetheWordListOverlap": [
+      "prozent",
+      "anteil",
+      "statistik",
+      "durchschnitt",
+      "sinken",
+      "anstieg",
+      "rueckgang",
+      "tendenz",
+      "haelfte",
+      "zunahme",
+      "abnahme",
+      "betragen",
+      "schwanken",
+      "stabil",
+      "kurve",
+      "komma"
+    ]
+  }
+}
