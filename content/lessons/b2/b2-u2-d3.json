@@ -1,0 +1,394 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u2-d3",
+  "level": "B2",
+  "unit": 2,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Klimawandel ist gefährlich — wir recyceln und schonen die Umwelt!",
+    "ar": "الوحدة 2: الأرض والمناخ! (التغيّر المناخي! التدوير! والمحافظة!)"
+  },
+  "canDoDaily": [
+    "يتحدّث عن التغيّر المناخي! (der Klimawandel!)",
+    "يعيد التدوير ويحافظ على البيئة! (recyceln! schonen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "ressource",
+      "erneuerbar",
+      "verbrennen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التغيّر المناخي خطِر.»؟"
+        },
+        "choices": [
+          "Der Klimawandel ist gefährlich.",
+          "Das Klimawandel ist gefährlich.",
+          "Die Klimawandel ist gefährlich."
+        ],
+        "answer": "Der Klimawandel ist gefährlich.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نحافظ على البيئة.»؟"
+        },
+        "choices": [
+          "Wir schonen die Umwelt.",
+          "Wir schonen der Umwelt.",
+          "Wir schont die Umwelt."
+        ],
+        "answer": "Wir schonen die Umwelt.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "klimawandel",
+      "recyceln",
+      "schonen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "w-v"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Der Klimawandel ist gefährlich — wir recyceln und schonen die Umwelt!",
+        "ar": "اليوم الثالث: المناخ والتدوير والمحافظة — مع الأرض!"
+      },
+      "situation": {
+        "de": "Klimawandel, recyceln, schonen — zusammen die Umwelt schützen.",
+        "ar": "مناخ! تدوير! محافظة! — نحمي البيئة معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "المركّب يتبع آخره: der Klimawandel (der! وليس das Klima!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: der Klimawandel! die Ressourcen recyceln! die Umwelt schonen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ressource",
+          "erneuerbar",
+          "verbrennen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "der Klimawandel",
+                "ar": "التغيّر المناخي"
+              },
+              {
+                "de": "recyceln",
+                "ar": "يعيد التدوير (يدوّر)"
+              },
+              {
+                "de": "schonen",
+                "ar": "يحافظ على البيئة"
+              }
+            ],
+            "why": "der Klimawandel التغيّر المناخي (der! المركّب يتبع آخره!) · recyceln يعيد التدوير (recycelte!) · schonen يحافظ على (hat geschont!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Ressourcen recyceln",
+                "ar": "يعيد تدوير الموارد"
+              },
+              {
+                "de": "die Umwelt schonen",
+                "ar": "يحافظ على البيئة"
+              },
+              {
+                "de": "die Umwelt schützen",
+                "ar": "يحمي البيئة"
+              },
+              {
+                "de": "der Klimawandel",
+                "ar": "التغيّر المناخي"
+              }
+            ],
+            "why": "die Ressourcen recyceln (يعيد تدوير الموارد!) · die Umwelt schonen (يحافظ على البيئة — Akkusativ: die!) · die Umwelt schützen (يحمي البيئة!) · der Klimawandel (der! المركّب يتبع آخره!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "nachhaltigkeit",
+          "auswirkung",
+          "verschmutzen"
+        ],
+        "items": [
+          {
+            "q": "___ Klimawandel ist gefährlich. (التغيّر المناخي!)",
+            "a": "Der",
+            "why": "der Klimawandel (der!) — المركّب يتبع آخره (der Wandel!) — Der Klimawandel ist gefährlich."
+          },
+          {
+            "q": "Wir ___ die Ressourcen. (نعيد التدوير!)",
+            "a": "recyceln",
+            "why": "recyceln يعيد التدوير (Präsens wir: recyceln!) — Wir recyceln die Ressourcen."
+          },
+          {
+            "q": "Er ___ die Umwelt. (يحافظ على!)",
+            "a": "schont",
+            "why": "schonen يحافظ على (Präsens er: schont!) — Er schont die Umwelt."
+          },
+          {
+            "q": "Der Klimawandel ist ___. (خطِر!)",
+            "a": "gefährlich",
+            "why": "gefährlich خطِر (الصفة!) — Der Klimawandel ist gefährlich."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gerechtigkeit",
+          "warnen",
+          "konflikt"
+        ],
+        "items": [
+          {
+            "q": "~~Das Klimawandel ist gefährlich.~~",
+            "a": "Der Klimawandel ist gefährlich.",
+            "why": "المركّب يتبع آخره: der Wandel ← der Klimawandel (der!)"
+          },
+          {
+            "q": "~~Er recyceln die Ressourcen.~~",
+            "a": "Er recycelt die Ressourcen.",
+            "why": "المضارع مع er: recycelt! (Er recycelt die Ressourcen.)"
+          },
+          {
+            "q": "~~Wir schonen der Umwelt.~~",
+            "a": "Wir schonen die Umwelt.",
+            "why": "schonen يتبع مفعوله مصدراً (Akkusativ: die Umwelt!) لا مجروراً — Wir schonen die Umwelt."
+          },
+          {
+            "q": "~~Wir haben die Ressourcen recycelt auf.~~",
+            "a": "Wir haben die Ressourcen recycelt.",
+            "why": "recyceln ليس فعلاً منفصلاً! (لا auf!)"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "mensch",
+          "freundlich",
+          "ruhe"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالمناخ! (جملتان!)",
+            "a": "Der Klimawandel ist gefährlich. Wir schützen die Umwelt.",
+            "why": "المناخ أولًا! (der Klimawandel!)"
+          },
+          {
+            "q": "تحدث عن التدوير! (جملتان!)",
+            "a": "Wir recyceln die Ressourcen. Das ist wichtig.",
+            "why": "التدوير! (die Ressourcen recyceln!)"
+          },
+          {
+            "q": "تحدث عن المحافظة! (جملتان!)",
+            "a": "Wir schonen die Umwelt. Die Umwelt ist wichtig.",
+            "why": "المحافظة! (die Umwelt schonen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التغيّر المناخي»؟",
+            "a": "der Klimawandel"
+          },
+          {
+            "q": "«يعيد التدوير (يدوّر)»؟",
+            "a": "recyceln"
+          },
+          {
+            "q": "«يحافظ على البيئة»؟",
+            "a": "schonen"
+          },
+          {
+            "q": "«التغيّر المناخي خطِر.»؟",
+            "a": "Der Klimawandel ist gefährlich."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نعيد تدوير الموارد.»؟",
+            "a": "Wir recyceln die Ressourcen."
+          },
+          {
+            "q": "schonen",
+            "a": "يحافظ على البيئة"
+          },
+          {
+            "q": "«نحافظ على البيئة.»؟",
+            "a": "Wir schonen die Umwelt."
+          },
+          {
+            "q": "der Klimawandel",
+            "a": "التغيّر المناخي"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«هو يعيد تدوير الموارد.»؟",
+            "a": "Er recycelt die Ressourcen."
+          },
+          {
+            "q": "«التغيّر المناخي خطِر.»؟",
+            "a": "Der Klimawandel ist gefährlich."
+          },
+          {
+            "q": "recyceln",
+            "a": "يعيد التدوير"
+          },
+          {
+            "q": "«نحافظ على البيئة.»؟",
+            "a": "Wir schonen die Umwelt."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Klimawandel ist gefährlich und die Ressourcen sind wichtig. Wir recyceln und schonen die Umwelt. Der Tag ist schön und wir sind zusammen.",
+      "ar": "المناخ خطِر — فنعيد التدوير ونحافظ على البيئة!"
+    },
+    "srsBundleWordIds": [
+      "klimawandel",
+      "recyceln",
+      "schonen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das Klimawandel!",
+          "de": "~~Das Klimawandel ist gefährlich.~~"
+        },
+        "correct": {
+          "ar": "der Klimawandel!",
+          "de": "Der Klimawandel ist gefährlich."
+        },
+        "exercise": {
+          "q": "___ Klimawandel ist gefährlich.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «المناخ» مذكّر فتظنّ المركّب كذلك أو تبع das Klima! والألمانية: المركّب يتبع آخر جزء فيه — der Klimawandel (der!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "er recyceln!",
+          "de": "~~Er recyceln die Ressourcen.~~"
+        },
+        "correct": {
+          "ar": "er recycelt!",
+          "de": "Er recycelt die Ressourcen."
+        },
+        "exercise": {
+          "q": "Er ___ die Ressourcen.",
+          "a": "recycelt"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل لا يتغيّر مع الفاعل! والألمانية: المضارع مع er تُضاف له تاء (recycelt!) — حتى الأفعال المستعارة! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Umwelt!",
+          "de": "~~Wir schonen der Umwelt.~~"
+        },
+        "correct": {
+          "ar": "die Umwelt!",
+          "de": "Wir schonen die Umwelt."
+        },
+        "exercise": {
+          "q": "Wir schonen ___ Umwelt.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: لا حالتَي نصب وجرّ! والألمانية: schonen يتبع مفعوله مصدراً (Akkusativ: die Umwelt!) لا مجروراً (der!)! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Klimawandel",
+      "https://www.duden.de/rechtschreibung/recyceln",
+      "https://www.duden.de/rechtschreibung/schonen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-klimawandel",
+    "word-recyceln",
+    "word-schonen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 2 (الأرض والمناخ!)",
+    "goetheWordListOverlap": [
+      "klimawandel",
+      "recyceln",
+      "schonen"
+    ]
+  }
+}

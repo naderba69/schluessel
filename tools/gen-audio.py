@@ -2702,6 +2702,9 @@ def build_all() -> None:
     ("word-ressource", "die Ressource.", "ressource", ["b2-u2-d2"]),
     ("word-erneuerbar", "erneuerbar.", "erneuerbar", ["b2-u2-d2"]),
     ("word-verbrennen", "verbrennen.", "verbrennen", ["b2-u2-d2"]),
+    ("word-klimawandel", "der Klimawandel.", "klimawandel", ["b2-u2-d3"]),
+    ("word-recyceln", "recyceln.", "recyceln", ["b2-u2-d3"]),
+    ("word-schonen", "schonen.", "schonen", ["b2-u2-d3"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
