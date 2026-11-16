@@ -2750,6 +2750,9 @@ def build_all() -> None:
     ("word-aufklaerung", "die Aufklärung.", "aufklaerung", ["b2-u4-d6"]),
     ("word-sachlich", "sachlich.", "sachlich", ["b2-u4-d6"]),
     ("word-gerecht", "gerecht.", "gerecht", ["b2-u4-d6"]),
+    ("word-wirtschaft", "die Wirtschaft.", "wirtschaft", ["b2-u5-d1"]),
+    ("word-verbraucher", "der Verbraucher.", "verbraucher", ["b2-u5-d1"]),
+    ("word-verschwendung", "die Verschwendung.", "verschwendung", ["b2-u5-d1"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]

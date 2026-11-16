@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u5-d1",
+  "level": "B2",
+  "unit": 5,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Wirtschaft ist wichtig und die Verschwendung ist schlimm!",
+    "ar": "الوحدة 5: الاقتصاد والاستهلاك! (الاقتصاد! المستهلك! والتبذير!)"
+  },
+  "canDoDaily": [
+    "يتحدّث عن الاقتصاد والمستهلك! (die Wirtschaft! der Verbraucher!)",
+    "يرفض التبذير! (die Verschwendung ist schlimm!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "aufklaerung",
+      "sachlich",
+      "gerecht"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الاقتصاد مهمّ.»؟"
+        },
+        "choices": [
+          "Die Wirtschaft ist wichtig.",
+          "Der Wirtschaft ist wichtig.",
+          "Das Wirtschaft ist wichtig."
+        ],
+        "answer": "Die Wirtschaft ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«المستهلك يشتري.»؟"
+        },
+        "choices": [
+          "Der Verbraucher kauft.",
+          "Die Verbraucher kauft.",
+          "Das Verbraucher kauft."
+        ],
+        "answer": "Der Verbraucher kauft.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "wirtschaft",
+      "verbraucher",
+      "verschwendung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "w-v",
+      "ng-velar"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Wirtschaft, Verbraucher, Verschwendung: Wir achten auf das Geld!",
+        "ar": "اليوم الأول في الاقتصاد! (الاقتصاد! المستهلك! التبذير!)"
+      },
+      "situation": {
+        "de": "Wirtschaft, Verbraucher, Verschwendung — zusammen lernen.",
+        "ar": "اقتصاد! مستهلك! تبذير! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "القوائم الثلاث: -schaft و-ung مؤنثتان و-er مذكّر!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: der Verbraucher kauft! die Verschwendung vermeiden!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "aufklaerung",
+          "sachlich",
+          "gerecht"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Wirtschaft",
+                "ar": "الاقتصاد"
+              },
+              {
+                "de": "der Verbraucher",
+                "ar": "المستهلك"
+              },
+              {
+                "de": "die Verschwendung",
+                "ar": "التبذير"
+              }
+            ],
+            "why": "die Wirtschaft الاقتصاد (die! -schaft!) · der Verbraucher المستهلك (der! -er!) · die Verschwendung التبذير (die! -ung!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Wirtschaft ist wichtig",
+                "ar": "الاقتصاد مهمّ"
+              },
+              {
+                "de": "der Verbraucher kauft",
+                "ar": "يشتري المستهلك"
+              },
+              {
+                "de": "die Verschwendung vermeiden",
+                "ar": "يتجنّب التبذير"
+              },
+              {
+                "de": "der Verbraucher",
+                "ar": "المستهلك"
+              }
+            ],
+            "why": "die Wirtschaft ist wichtig! · der Verbraucher kauft! · die Verschwendung vermeiden (يتجنّب!) · der Verbraucher (der!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "kommentieren",
+          "befragen",
+          "datenschutz"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (الاقتصاد!)",
+            "a": "Wirtschaft",
+            "why": "die Wirtschaft الاقتصاد (die! -schaft!) — Die Wirtschaft ist wichtig."
+          },
+          {
+            "q": "Der ___ kauft. (المستهلك!)",
+            "a": "Verbraucher",
+            "why": "der Verbraucher المستهلك (der! -er!) — Der Verbraucher kauft."
+          },
+          {
+            "q": "Die ___ ist schlimm. (التبذير!)",
+            "a": "Verschwendung",
+            "why": "die Verschwendung التبذير (die! -ung!) — Die Verschwendung ist schlimm."
+          },
+          {
+            "q": "Der Verbraucher ___. (يشتري!)",
+            "a": "kauft",
+            "why": "kaufen يشتري (Präsens er/sie: kauft!) — Der Verbraucher kauft."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "argumentieren",
+          "folgern",
+          "belegen"
+        ],
+        "items": [
+          {
+            "q": "~~der Wirtschaft ist wichtig.~~",
+            "a": "Die Wirtschaft ist wichtig.",
+            "why": "die Wirtschaft (die! -schaft مؤنثة!)!"
+          },
+          {
+            "q": "~~die Verbraucher kauft.~~",
+            "a": "Der Verbraucher kauft.",
+            "why": "der Verbraucher (der! -er مذكّر!)!"
+          },
+          {
+            "q": "~~der Verschwendung ist schlimm.~~",
+            "a": "Die Verschwendung ist schlimm.",
+            "why": "die Verschwendung (die! -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~Die Wirtschaft sind wichtig.~~",
+            "a": "Die Wirtschaft ist wichtig.",
+            "why": "المفرد die Wirtschaft مع ist (لا sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hinterfragen",
+          "misstrauisch",
+          "zensur"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالاقتصاد! (جملتان!)",
+            "a": "Die Wirtschaft ist wichtig. Das ist gut.",
+            "why": "الاقتصاد أولًا! (die Wirtschaft ist wichtig!)"
+          },
+          {
+            "q": "تحدّث عن المستهلك! (جملتان!)",
+            "a": "Der Verbraucher kauft. Der Verbraucher ist wichtig.",
+            "why": "المستهلك! (der Verbraucher kauft!)"
+          },
+          {
+            "q": "تحدّث عن التبذير! (جملتان!)",
+            "a": "Die Verschwendung ist schlimm. Wir vermeiden die Verschwendung.",
+            "why": "التبذير! (die Verschwendung vermeiden!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الاقتصاد»؟",
+            "a": "die Wirtschaft"
+          },
+          {
+            "q": "«المستهلك»؟",
+            "a": "der Verbraucher"
+          },
+          {
+            "q": "«التبذير»؟",
+            "a": "die Verschwendung"
+          },
+          {
+            "q": "«المستهلك يشتري.»؟",
+            "a": "Der Verbraucher kauft."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الاقتصاد مهمّ.»؟",
+            "a": "Die Wirtschaft ist wichtig."
+          },
+          {
+            "q": "die Verschwendung",
+            "a": "التبذير"
+          },
+          {
+            "q": "«التبذير سيّئ.»؟",
+            "a": "Die Verschwendung ist schlimm."
+          },
+          {
+            "q": "der Verbraucher",
+            "a": "المستهلك"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نتجنّب التبذير.»؟",
+            "a": "Wir vermeiden die Verschwendung."
+          },
+          {
+            "q": "«المستهلك يشتري.»؟",
+            "a": "Der Verbraucher kauft."
+          },
+          {
+            "q": "die Wirtschaft",
+            "a": "الاقتصاد"
+          },
+          {
+            "q": "«التبذير سيّئ.»؟",
+            "a": "Die Verschwendung ist schlimm."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Wirtschaft ist wichtig und der Verbraucher kauft. Die Verschwendung ist schlimm und wir vermeiden die Verschwendung. Der Tag ist gut und wir sind zusammen.",
+      "ar": "الاقتصاد يبدأ بالمستهلك الواعي: نشتري ونوقف التبذير!"
+    },
+    "srsBundleWordIds": [
+      "wirtschaft",
+      "verbraucher",
+      "verschwendung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Wirtschaft!",
+          "de": "~~der Wirtschaft ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Wirtschaft!",
+          "de": "Die Wirtschaft ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Wirtschaft ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الاقتصاد» مذكّر! والألمانية: كل كلمات -schaft مؤنثة (die Wirtschaft!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Verbraucher!",
+          "de": "~~die Verbraucher kauft.~~"
+        },
+        "correct": {
+          "ar": "der Verbraucher!",
+          "de": "Der Verbraucher kauft."
+        },
+        "exercise": {
+          "q": "___ Verbraucher kauft.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «المستهلك» مذكّر — والألمانية كذلك: كلمات الفاعل على -er مذكّرة (der Verbraucher!) — لكن الغالب مؤنث فلا تعمّم العكس! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Verschwendung!",
+          "de": "~~der Verschwendung ist schlimm.~~"
+        },
+        "correct": {
+          "ar": "die Verschwendung!",
+          "de": "Die Verschwendung ist schlimm."
+        },
+        "exercise": {
+          "q": "___ Verschwendung ist schlimm.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التبذير» مذكّر! والألمانية: كل كلمات -ung مؤنثة (die Verschwendung!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Wirtschaft",
+      "https://www.duden.de/rechtschreibung/Verbraucher",
+      "https://www.duden.de/rechtschreibung/Verschwendung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-wirtschaft",
+    "word-verbraucher",
+    "word-verschwendung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 5 (الاقتصاد والاستهلاك!)",
+    "goetheWordListOverlap": [
+      "wirtschaft",
+      "verbraucher",
+      "verschwendung"
+    ]
+  }
+}
