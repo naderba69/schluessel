@@ -13,7 +13,7 @@ await proveUnit({
     "b2-u3-d5",
     "b2-u3-d6",
   ],
-  nextId: null, // N-298! النقلة: عند بناء b2-u4-d1 (D538+) — الوحدة 3 اكتملت (D536)
+  nextId: "b2-u4-d1", // N-298! النقلة: الوحدة 4 بدأت (D538) — كان null في D537
   prefixIds: [
     "a1-u1-d1",
     "a1-u1-d2",
