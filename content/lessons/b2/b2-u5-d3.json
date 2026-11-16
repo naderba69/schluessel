@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u5-d3",
+  "level": "B2",
+  "unit": 5,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Wir finanzieren das Haus und bezahlen die Zinsen!",
+    "ar": "اليوم الثالث: التمويل والمالية والفوائد! (المال يتحرّك!)"
+  },
+  "canDoDaily": [
+    "يموّل ويدفع الفوائد! (das Haus finanzieren! die Zinsen bezahlen!)",
+    "يفحص ماليته! (die Finanzen prüfen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "produzieren",
+      "lieferung",
+      "sparsam"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«نفحص المالية.»؟"
+        },
+        "choices": [
+          "Wir prüfen die Finanzen.",
+          "Wir prüfen die Finanze.",
+          "Wir prüfen das Finanzen."
+        ],
+        "answer": "Wir prüfen die Finanzen.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الفوائد مرتفعة.»؟"
+        },
+        "choices": [
+          "Die Zinsen sind hoch.",
+          "Die Zinsen ist hoch.",
+          "Das Zinsen ist hoch."
+        ],
+        "answer": "Die Zinsen sind hoch.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "finanzieren",
+      "finanzen",
+      "zinsen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "z",
+      "vowel-long-short"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Finanzieren, Finanzen, Zinsen: Wir prüfen das Geld!",
+        "ar": "اليوم الثالث: المال يتحرّك! (التمويل! المالية! الفوائد!)"
+      },
+      "situation": {
+        "de": "Finanzieren, Finanzen, Zinsen — zusammen lernen.",
+        "ar": "تمويل! مالية! فوائد! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Finanzen وdie Zinsen جمع فقط (مثل Eltern!) — والفعل معهما جمع!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: das Haus finanzieren! die Finanzen prüfen! die Zinsen bezahlen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "produzieren",
+          "lieferung",
+          "sparsam"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "finanzieren",
+                "ar": "يموّل"
+              },
+              {
+                "de": "die Finanzen",
+                "ar": "المالية"
+              },
+              {
+                "de": "die Zinsen",
+                "ar": "الفوائد"
+              }
+            ],
+            "why": "تمويل بلا زيادة في الماضي (مثل programmieren!) · die Finanzen المالية (جمع فقط!) · die Zinsen الفوائد (جمع فقط!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "das Haus finanzieren",
+                "ar": "يموّل البيت"
+              },
+              {
+                "de": "die Finanzen prüfen",
+                "ar": "يفحص المالية"
+              },
+              {
+                "de": "die Zinsen bezahlen",
+                "ar": "يدفع الفوائد"
+              },
+              {
+                "de": "die Zinsen",
+                "ar": "الفوائد"
+              }
+            ],
+            "why": "يموّل البيت! · die Finanzen prüfen (يفحص!) · die Zinsen bezahlen (يدفع!) · die Zinsen (جمع فقط!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wirtschaft",
+          "verbraucher",
+          "verschwendung"
+        ],
+        "items": [
+          {
+            "q": "Wir ___ das Haus. (نموّل!)",
+            "a": "finanzieren",
+            "why": "finanzieren يموّل (-ieren بلا زيادة!) — Wir finanzieren das Haus."
+          },
+          {
+            "q": "Wir prüfen die ___. (المالية!)",
+            "a": "Finanzen",
+            "why": "die Finanzen المالية (جمع فقط!) — Wir prüfen die Finanzen."
+          },
+          {
+            "q": "Wir bezahlen die ___. (الفوائد!)",
+            "a": "Zinsen",
+            "why": "die Zinsen الفوائد (جمع فقط!) — Wir bezahlen die Zinsen."
+          },
+          {
+            "q": "Er ___ das Haus. (يموّل!)",
+            "a": "finanziert",
+            "why": "finanzieren يموّل (Präsens er/sie: finanziert!) — Er finanziert das Haus."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "aufklaerung",
+          "sachlich",
+          "gerecht"
+        ],
+        "items": [
+          {
+            "q": "~~Die Finanzen ist wichtig.~~",
+            "a": "Die Finanzen sind wichtig.",
+            "why": "die Finanzen جمع فقط! (الفعل معها جمع: sind!)!"
+          },
+          {
+            "q": "~~Sie finanzierte heute.~~",
+            "a": "Sie finanziert heute.",
+            "why": "مضارع اليوم: finanziert (لا finanzierte — ماضٍ!)!"
+          },
+          {
+            "q": "~~Wir finanzieren das Haus auf.~~",
+            "a": "Wir finanzieren das Haus.",
+            "why": "finanzieren ليس فعلاً منفصلاً! (لا auf!)!"
+          },
+          {
+            "q": "~~Die Zinsen ist hoch.~~",
+            "a": "Die Zinsen sind hoch.",
+            "why": "die Zinsen جمع فقط! (الفعل معها جمع: sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "kommentieren",
+          "befragen",
+          "datenschutz"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالتمويل! (جملتان!)",
+            "a": "Wir finanzieren das Haus. Das ist wichtig.",
+            "why": "التمويل أولًا! (das Haus finanzieren!)"
+          },
+          {
+            "q": "تحدّث عن المالية! (جملتان!)",
+            "a": "Wir prüfen die Finanzen. Das ist gut.",
+            "why": "المالية! (die Finanzen prüfen!)"
+          },
+          {
+            "q": "تحدّث عن الفوائد! (جملتان!)",
+            "a": "Die Zinsen sind hoch. Wir bezahlen die Zinsen.",
+            "why": "الفوائد! (die Zinsen bezahlen!) — hoch (مرتفعة!) من B1!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يموّل»؟",
+            "a": "finanzieren"
+          },
+          {
+            "q": "«المالية»؟",
+            "a": "die Finanzen"
+          },
+          {
+            "q": "«الفوائد»؟",
+            "a": "die Zinsen"
+          },
+          {
+            "q": "«نموّل البيت.»؟",
+            "a": "Wir finanzieren das Haus."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نفحص المالية.»؟",
+            "a": "Wir prüfen die Finanzen."
+          },
+          {
+            "q": "die Zinsen",
+            "a": "الفوائد"
+          },
+          {
+            "q": "«ندفع الفوائد.»؟",
+            "a": "Wir bezahlen die Zinsen."
+          },
+          {
+            "q": "finanzieren",
+            "a": "يموّل"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«يموّل اليوم.»؟",
+            "a": "Er finanziert heute."
+          },
+          {
+            "q": "«الفوائد مرتفعة.»؟",
+            "a": "Die Zinsen sind hoch."
+          },
+          {
+            "q": "die Finanzen",
+            "a": "المالية"
+          },
+          {
+            "q": "«نموّل البيت.»؟",
+            "a": "Wir finanzieren das Haus."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Wir finanzieren das Haus und bezahlen die Zinsen. Die Finanzen sind wichtig und wir prüfen die Finanzen. Der Tag ist gut und wir sind zusammen.",
+      "ar": "المال يتحرّك: نموّل وندفع الفوائد ونفحص المالية!"
+    },
+    "srsBundleWordIds": [
+      "finanzieren",
+      "finanzen",
+      "zinsen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "الفعل مفرد!",
+          "de": "~~Die Finanzen ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "sind!",
+          "de": "Die Finanzen sind wichtig."
+        },
+        "exercise": {
+          "q": "Die Finanzen ___ wichtig.",
+          "a": "sind"
+        },
+        "whyArabicSpeakerFails": "العربية: «المالية» مفرد مؤنث في الأذن! والألمانية: die Finanzen جمع فقط (مثل Eltern!) فيأخذ sind! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "المضارع بالماضي!",
+          "de": "~~Sie finanzierte heute.~~"
+        },
+        "correct": {
+          "ar": "finanziert!",
+          "de": "Sie finanziert heute."
+        },
+        "exercise": {
+          "q": "Sie ___ heute. (مضارع!)",
+          "a": "finanziert"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل المضارع واحد! والألمانية: -ieren بلا زيادة والمضارع/الماضي مختلفان (finanziert/finanzierte!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "الفعل مفرد!",
+          "de": "~~Die Zinsen ist hoch.~~"
+        },
+        "correct": {
+          "ar": "sind!",
+          "de": "Die Zinsen sind hoch."
+        },
+        "exercise": {
+          "q": "Die Zinsen ___ hoch.",
+          "a": "sind"
+        },
+        "whyArabicSpeakerFails": "العربية: «الفائدة» مفرد والجمع «فوائد»! والألمانية: die Zinsen جمع فقط (لا مفرد!) فيأخذ sind! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/finanzieren",
+      "https://www.duden.de/rechtschreibung/Finanzen",
+      "https://www.duden.de/rechtschreibung/Zinsen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-finanzieren",
+    "word-finanzen",
+    "word-zinsen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 5 (الاقتصاد والاستهلاك!)",
+    "goetheWordListOverlap": [
+      "finanzieren",
+      "finanzen",
+      "zinsen"
+    ]
+  }
+}
