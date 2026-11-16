@@ -2747,6 +2747,9 @@ def build_all() -> None:
     ("word-kommentieren", "kommentieren.", "kommentieren", ["b2-u4-d5"]),
     ("word-befragen", "befragen.", "befragen", ["b2-u4-d5"]),
     ("word-datenschutz", "der Datenschutz.", "datenschutz", ["b2-u4-d5"]),
+    ("word-aufklaerung", "die Aufklärung.", "aufklaerung", ["b2-u4-d6"]),
+    ("word-sachlich", "sachlich.", "sachlich", ["b2-u4-d6"]),
+    ("word-gerecht", "gerecht.", "gerecht", ["b2-u4-d6"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
