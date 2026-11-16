@@ -2753,6 +2753,9 @@ def build_all() -> None:
     ("word-wirtschaft", "die Wirtschaft.", "wirtschaft", ["b2-u5-d1"]),
     ("word-verbraucher", "der Verbraucher.", "verbraucher", ["b2-u5-d1"]),
     ("word-verschwendung", "die Verschwendung.", "verschwendung", ["b2-u5-d1"]),
+    ("word-produzieren", "produzieren.", "produzieren", ["b2-u5-d2"]),
+    ("word-lieferung", "die Lieferung.", "lieferung", ["b2-u5-d2"]),
+    ("word-sparsam", "sparsam.", "sparsam", ["b2-u5-d2"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
