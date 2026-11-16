@@ -2738,6 +2738,9 @@ def build_all() -> None:
     ("word-ereignis", "das Ereignis.", "ereignis", ["b2-u4-d2"]),
     ("word-medium", "das Medium.", "medium", ["b2-u4-d2"]),
     ("word-uebertragen", "übertragen.", "uebertragen", ["b2-u4-d2"]),
+    ("word-hinterfragen", "hinterfragen.", "hinterfragen", ["b2-u4-d3"]),
+    ("word-misstrauisch", "misstrauisch.", "misstrauisch", ["b2-u4-d3"]),
+    ("word-zensur", "die Zensur.", "zensur", ["b2-u4-d3"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
