@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-17 — الدفعة 503: D549 — b2-u5-d5 «المصنّع والمستعمل والإرجاع» — hersteller/gebraucht/rueckgabe! حقوق المستهلك · الدفعة 503 · v7.95!
+حقوق المستهلك! المصنّع (der Hersteller — -er مذكّر!) والمستعمل (gebraucht — ظرفاً بلا أداة! والقاعدة تكرّر: sachlich وsparsam وgebraucht!) والإرجاع (die Rückgabe — die Gabe في آخرها!). ومراجعة Hersteller (espeak يقصّر الحركة) + علَم ch-ach-laut في gebraucht.
+- **البوابة:** vitest **1999/1999 ✓ (148 ملفاً)** · tsc ✓ · validator **3116/0/0 ✓** · build ✓ · preflight 11/11
+
 ## 2026-10-17 — الدفعة 502: D548 — b2-u5-d4 «صاحب العمل والتوظيف والتقاعد» — arbeitgeber/anstellung/ruhestand! + جملة «in den Ruhestand gehen» · الدفعة 502 · v7.94!
 مسار العمل! صاحب العمل (der Arbeitgeber — der Geber في آخره!) والتوظيف (die Anstellung — -ung!) والتقاعد (der Ruhestand — جملة ثابتة: **in den Ruhestand gehen** بالنصب den!). ونفقتان صُحّحتا: علَم sp-st-initial زائد (حدّ المركّب!) + مراجعة Ruhestand (espeak بلا scht).
 - **البوابة:** vitest **1999/1999 ✓ (148 ملفاً)** · tsc ✓ · validator **3112/0/0 ✓** · build ✓ · preflight 11/11

@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 503 (2026-10-17) — D549: b2-u5-d5 «المصنّع والمستعمل والإرجاع» — hersteller/gebraucht/rueckgabe! حقوق المستهلك · الدفعة 503 · v7.95!
+- **الخلاصة:** حقوق المستهلك! المصنّع (der Hersteller — -er مذكّر!) والمستعمل (gebraucht — ظرفاً بلا أداة! والقاعدة تكرّر: sachlich وsparsam وgebraucht!) والإرجاع (die Rückgabe — die Gabe في آخرها!). ومراجعة Hersteller (espeak يقصّر الحركة) + علَم ch-ach-laut في gebraucht.
+- **التالي:** b2-u5-d6 (ختام الوحدة 5!) ثم معركة الوحدة 5. القرار للمالك.
+
 ## الدفعة 502 (2026-10-17) — D548: b2-u5-d4 «صاحب العمل والتوظيف والتقاعد» — arbeitgeber/anstellung/ruhestand! + جملة «in den Ruhestand gehen» · الدفعة 502 · v7.94!
 - **الخلاصة:** مسار العمل! صاحب العمل (der Arbeitgeber — der Geber في آخره!) والتوظيف (die Anstellung — -ung!) والتقاعد (der Ruhestand — جملة ثابتة: **in den Ruhestand gehen** بالنصب den!). ونفقتان صُحّحتا: علَم sp-st-initial زائد (حدّ المركّب!) + مراجعة Ruhestand (espeak بلا scht).
 - **التالي:** b2-u5-d5 (الاقتصاد: كلمات + خامس!). القرار للمالك.
