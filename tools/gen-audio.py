@@ -2759,6 +2759,9 @@ def build_all() -> None:
     ("word-finanzieren", "finanzieren.", "finanzieren", ["b2-u5-d3"]),
     ("word-finanzen", "die Finanzen.", "finanzen", ["b2-u5-d3"]),
     ("word-zinsen", "die Zinsen.", "zinsen", ["b2-u5-d3"]),
+    ("word-arbeitgeber", "der Arbeitgeber.", "arbeitgeber", ["b2-u5-d4"]),
+    ("word-anstellung", "die Anstellung.", "anstellung", ["b2-u5-d4"]),
+    ("word-ruhestand", "der Ruhestand.", "ruhestand", ["b2-u5-d4"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]

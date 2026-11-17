@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u5-d4",
+  "level": "B2",
+  "unit": 5,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Arbeitgeber bezahlt und wir gehen in den Ruhestand!",
+    "ar": "اليوم الرابع: صاحب العمل والتوظيف والتقاعد! (مسار العمل!)"
+  },
+  "canDoDaily": [
+    "يصف العمل والتوظيف! (der Arbeitgeber! die Anstellung!)",
+    "يقول إنه يتقاعد! (in den Ruhestand gehen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "finanzieren",
+      "finanzen",
+      "zinsen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«صاحب العمل يدفع.»؟"
+        },
+        "choices": [
+          "Der Arbeitgeber bezahlt.",
+          "Die Arbeitgeber bezahlt.",
+          "Das Arbeitgeber bezahlt."
+        ],
+        "answer": "Der Arbeitgeber bezahlt.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«يتقاعد.»؟"
+        },
+        "choices": [
+          "Er geht in den Ruhestand.",
+          "Er geht in das Ruhestand.",
+          "Er geht in der Ruhestand."
+        ],
+        "answer": "Er geht in den Ruhestand.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "arbeitgeber",
+      "anstellung",
+      "ruhestand"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "sp-st-initial"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Arbeitgeber, Anstellung, Ruhestand: Wir arbeiten zusammen!",
+        "ar": "اليوم الرابع: مسار العمل! (صاحب العمل! التوظيف! التقاعد!)"
+      },
+      "situation": {
+        "de": "Arbeitgeber, Anstellung, Ruhestand — zusammen lernen.",
+        "ar": "صاحب عمل! توظيف! تقاعد! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "جملة ثابتة: in den Ruhestand gehen (den — النصب!)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: der Arbeitgeber bezahlt! die Anstellung finden! in den Ruhestand gehen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "finanzieren",
+          "finanzen",
+          "zinsen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "der Arbeitgeber",
+                "ar": "صاحب العمل"
+              },
+              {
+                "de": "die Anstellung",
+                "ar": "التوظيف"
+              },
+              {
+                "de": "der Ruhestand",
+                "ar": "التقاعد"
+              }
+            ],
+            "why": "der Arbeitgeber صاحب العمل (der! der Geber في آخره!) · die Anstellung التوظيف (die! -ung!) · der Ruhestand التقاعد (der! der Stand في آخره!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Arbeitgeber bezahlt",
+                "ar": "يدفع صاحب العمل"
+              },
+              {
+                "de": "die Anstellung finden",
+                "ar": "يجد الوظيفة"
+              },
+              {
+                "de": "in den Ruhestand gehen",
+                "ar": "يتقاعد"
+              },
+              {
+                "de": "der Ruhestand",
+                "ar": "التقاعد"
+              }
+            ],
+            "why": "der Arbeitgeber bezahlt! · die Anstellung finden (يجد!) · in den Ruhestand gehen (den — النصب!) · der Ruhestand (der!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "produzieren",
+          "lieferung",
+          "sparsam"
+        ],
+        "items": [
+          {
+            "q": "Der ___ bezahlt. (صاحب العمل!)",
+            "a": "Arbeitgeber",
+            "why": "der Arbeitgeber صاحب العمل (der!) — Der Arbeitgeber bezahlt."
+          },
+          {
+            "q": "Die ___ ist gut. (التوظيف!)",
+            "a": "Anstellung",
+            "why": "die Anstellung التوظيف (die! -ung!) — Die Anstellung ist gut."
+          },
+          {
+            "q": "Er geht in den ___. (التقاعد!)",
+            "a": "Ruhestand",
+            "why": "der Ruhestand التقاعد (der!) — Er geht in den Ruhestand."
+          },
+          {
+            "q": "Wir ___ die Anstellung. (نجد!)",
+            "a": "finden",
+            "why": "finden يجد (Präsens wir: finden!) — Wir finden die Anstellung."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wirtschaft",
+          "verbraucher",
+          "verschwendung"
+        ],
+        "items": [
+          {
+            "q": "~~die Arbeitgeber bezahlt.~~",
+            "a": "Der Arbeitgeber bezahlt.",
+            "why": "der Arbeitgeber (der! der Geber في آخره!)!"
+          },
+          {
+            "q": "~~der Anstellung ist gut.~~",
+            "a": "Die Anstellung ist gut.",
+            "why": "die Anstellung (die! -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~Er geht in das Ruhestand.~~",
+            "a": "Er geht in den Ruhestand.",
+            "why": "in den Ruhestand gehen (den — النصب!) — جملة ثابتة!"
+          },
+          {
+            "q": "~~Der Arbeitgeber sind wichtig.~~",
+            "a": "Der Arbeitgeber ist wichtig.",
+            "why": "المفرد der Arbeitgeber مع ist (لا sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "aufklaerung",
+          "sachlich",
+          "gerecht"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بصاحب العمل! (جملتان!)",
+            "a": "Der Arbeitgeber bezahlt. Das ist wichtig.",
+            "why": "صاحب العمل أولًا! (der Arbeitgeber bezahlt!)"
+          },
+          {
+            "q": "تحدّث عن التوظيف! (جملتان!)",
+            "a": "Wir finden die Anstellung. Das ist gut.",
+            "why": "التوظيف! (die Anstellung finden!)"
+          },
+          {
+            "q": "تحدّث عن التقاعد! (جملتان!)",
+            "a": "Er geht in den Ruhestand. Der Ruhestand ist schön.",
+            "why": "التقاعد! (in den Ruhestand gehen!) — schön (جميل!) من A2!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«صاحب العمل»؟",
+            "a": "der Arbeitgeber"
+          },
+          {
+            "q": "«التوظيف»؟",
+            "a": "die Anstellung"
+          },
+          {
+            "q": "«التقاعد»؟",
+            "a": "der Ruhestand"
+          },
+          {
+            "q": "«صاحب العمل يدفع.»؟",
+            "a": "Der Arbeitgeber bezahlt."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نجد الوظيفة.»؟",
+            "a": "Wir finden die Anstellung."
+          },
+          {
+            "q": "der Ruhestand",
+            "a": "التقاعد"
+          },
+          {
+            "q": "«يتقاعد.»؟",
+            "a": "Er geht in den Ruhestand."
+          },
+          {
+            "q": "die Anstellung",
+            "a": "التوظيف"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«صاحب العمل مهمّ.»؟",
+            "a": "Der Arbeitgeber ist wichtig."
+          },
+          {
+            "q": "«الوظيفة مهمّة.»؟",
+            "a": "Die Anstellung ist wichtig."
+          },
+          {
+            "q": "in den Ruhestand gehen",
+            "a": "يتقاعد"
+          },
+          {
+            "q": "«صاحب العمل يدفع.»؟",
+            "a": "Der Arbeitgeber bezahlt."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Arbeitgeber bezahlt und wir finden die Anstellung. Dann gehen wir in den Ruhestand und das ist gut. Der Tag ist gut und wir sind zusammen.",
+      "ar": "مسار العمل: صاحب العمل يدفع ونجد الوظيفة ثم نتقاعد!"
+    },
+    "srsBundleWordIds": [
+      "arbeitgeber",
+      "anstellung",
+      "ruhestand"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Arbeitgeber!",
+          "de": "~~die Arbeitgeber bezahlt.~~"
+        },
+        "correct": {
+          "ar": "der Arbeitgeber!",
+          "de": "Der Arbeitgeber bezahlt."
+        },
+        "exercise": {
+          "q": "___ Arbeitgeber bezahlt.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «صاحب العمل» مركّب فيه «العمل» مذكّر! والألمانية: المركّب يتبع آخره — der Geber (يعطي!) مذكّر! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Anstellung!",
+          "de": "~~der Anstellung ist gut.~~"
+        },
+        "correct": {
+          "ar": "die Anstellung!",
+          "de": "Die Anstellung ist gut."
+        },
+        "exercise": {
+          "q": "___ Anstellung ist gut.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التوظيف» مذكّر (مصدر!)! والألمانية: كل كلمات -ung مؤنثة (die Anstellung!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "in das …!",
+          "de": "~~Er geht in das Ruhestand.~~"
+        },
+        "correct": {
+          "ar": "in den!",
+          "de": "Er geht in den Ruhestand."
+        },
+        "exercise": {
+          "q": "Er geht in ___ Ruhestand.",
+          "a": "den"
+        },
+        "whyArabicSpeakerFails": "العربية: «إلى» حرف واحد! والألمانية: in + النصب (den!) هنا — جملة ثابتة تُحفظ كاملة! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Arbeitgeber",
+      "https://www.duden.de/rechtschreibung/Anstellung",
+      "https://www.duden.de/rechtschreibung/Ruhestand"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-arbeitgeber",
+    "word-anstellung",
+    "word-ruhestand"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 5 (الاقتصاد والاستهلاك!)",
+    "goetheWordListOverlap": [
+      "arbeitgeber",
+      "anstellung",
+      "ruhestand"
+    ]
+  }
+}

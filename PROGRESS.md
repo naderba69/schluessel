@@ -1,6 +1,10 @@
 # PROGRESS.md — سجل الإنجاز (مختصر — التفاصيل في STATE.md)
 
 <!-- docs-sync:start -->
+## الدفعة 502 (2026-10-17) — D548: b2-u5-d4 «صاحب العمل والتوظيف والتقاعد» — arbeitgeber/anstellung/ruhestand! + جملة «in den Ruhestand gehen» · الدفعة 502 · v7.94!
+- **الخلاصة:** مسار العمل! صاحب العمل (der Arbeitgeber — der Geber في آخره!) والتوظيف (die Anstellung — -ung!) والتقاعد (der Ruhestand — جملة ثابتة: **in den Ruhestand gehen** بالنصب den!). ونفقتان صُحّحتا: علَم sp-st-initial زائد (حدّ المركّب!) + مراجعة Ruhestand (espeak بلا scht).
+- **التالي:** b2-u5-d5 (الاقتصاد: كلمات + خامس!). القرار للمالك.
+
 ## الدفعة 501 (2026-10-17) — D547: b2-u5-d3 «التمويل والمالية والفوائد» — finanzieren/finanzen/zinsen! جمعان فقطان + مراجعة Finanzen · الدفعة 501 · v7.93!
 - **الخلاصة:** المال يتحرّك! التمويل (finanzieren — -ieren بلا زيادة!) والمالية (die Finanzen — **جمع فقط** مثل Eltern!) والفوائد (die Zinsen — **جمع فقط**!). اثنان من ثلاثة كلمات «جمع فقط» في يوم واحد — والقاعدة تُعلَّم بالمثل. ومراجعة نطق Finanzen (espeak يزيح النبر — artifact).
 - **التالي:** b2-u5-d4 (الاقتصاد: كلمات + عمل ودخل!). القرار للمالك.
