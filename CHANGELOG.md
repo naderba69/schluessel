@@ -3,6 +3,10 @@
 <!-- docs-sync:start -->
 > يُولَّد هذا القسم من `DECISIONS.md` (D186+) بـ`tools/dev/docs-sync.py` — سطر «للقارئ» يكتبه الكاتب بيده في القرار؛ ما تحت القسم تاريخ مجمَّد كُتب يدوياً.
 
+## 2026-10-17 — الدفعة 504: D550 — **الوحدةة 5 من B2 تكتمل!** — b2-u5-d6 (armut/reichtum/spende · الفقر والغنى والتبرّع!) — استثناء der Reichtum · الدفعة 504 · v7.96!
+اليوم السادس يُغلق «الاقتصاد والاستهلاك»: الفقر (die Armut — -ut مؤنثة!) والغنى (der Reichtum — **استثناء** كلمات -tum المحايدة! القاعدة das Wachstum!) والتبرّع (die Spende!). **18 كلمة في ستة أيام** — والوحدة 5 كاملة.
+- **البوابة:** vitest **1999/1999 ✓ (148 ملفاً)** · tsc ✓ · validator **3120/0/0 ✓** · build ✓ · preflight 11/11
+
 ## 2026-10-17 — الدفعة 503: D549 — b2-u5-d5 «المصنّع والمستعمل والإرجاع» — hersteller/gebraucht/rueckgabe! حقوق المستهلك · الدفعة 503 · v7.95!
 حقوق المستهلك! المصنّع (der Hersteller — -er مذكّر!) والمستعمل (gebraucht — ظرفاً بلا أداة! والقاعدة تكرّر: sachlich وsparsam وgebraucht!) والإرجاع (die Rückgabe — die Gabe في آخرها!). ومراجعة Hersteller (espeak يقصّر الحركة) + علَم ch-ach-laut في gebraucht.
 - **البوابة:** vitest **1999/1999 ✓ (148 ملفاً)** · tsc ✓ · validator **3116/0/0 ✓** · build ✓ · preflight 11/11
