@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u5-d2",
+  "level": "B2",
+  "unit": 5,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Wir produzieren die Produkte und die Lieferung kommt!",
+    "ar": "اليوم الثاني: الإنتاج والتسليم والاقتصاد! (من المصنع إلى البيت!)"
+  },
+  "canDoDaily": [
+    "يتحدّث عن الإنتاج والتسليم! (produzieren! die Lieferung!)",
+    "يعيش بمقتصد! (sparsam leben!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "wirtschaft",
+      "verbraucher",
+      "verschwendung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«تصل الشحنة.»؟"
+        },
+        "choices": [
+          "Die Lieferung kommt.",
+          "Der Lieferung kommt.",
+          "Das Lieferung kommt."
+        ],
+        "answer": "Die Lieferung kommt.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نعيش بمقتصد.»؟"
+        },
+        "choices": [
+          "Wir leben sparsam.",
+          "Wir leben ein sparsam.",
+          "Wir leben sparsamen."
+        ],
+        "answer": "Wir leben sparsam.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "produzieren",
+      "lieferung",
+      "sparsam"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "sp-st-initial"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Produzieren, Lieferung, sparsam: Vom Produkt zum Haus!",
+        "ar": "اليوم الثاني: من المصنع إلى البيت! (الإنتاج! الشحنة! الاقتصاد!)"
+      },
+      "situation": {
+        "de": "Produzieren, Lieferung, sparsam — zusammen lernen.",
+        "ar": "إنتاج! شحنة! اقتصاد! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الصيغتان مختلفتان: produziert (اليوم) وproduzierte (الماضي)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Produkte produzieren! die Lieferung kommt! sparsam leben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wirtschaft",
+          "verbraucher",
+          "verschwendung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "produzieren",
+                "ar": "ينتج"
+              },
+              {
+                "de": "die Lieferung",
+                "ar": "الشحنة"
+              },
+              {
+                "de": "sparsam",
+                "ar": "مقتصد"
+              }
+            ],
+            "why": "ينتج بلا زيادة في الماضي (مثل programmieren!) · die Lieferung الشحنة (die! -ung!) · sparsam مقتصد (ظرفاً بلا أداة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Produkte produzieren",
+                "ar": "ينتج المنتجات"
+              },
+              {
+                "de": "die Lieferung kommt",
+                "ar": "تصل الشحنة"
+              },
+              {
+                "de": "sparsam leben",
+                "ar": "يعيش بمقتصد"
+              },
+              {
+                "de": "die Lieferung",
+                "ar": "الشحنة"
+              }
+            ],
+            "why": "ينتج المنتجات! · die Lieferung kommt (تصل!) · sparsam leben (يعيش!) · die Lieferung (die!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "aufklaerung",
+          "sachlich",
+          "gerecht"
+        ],
+        "items": [
+          {
+            "q": "Wir ___ die Produkte. (ننتج!)",
+            "a": "produzieren",
+            "why": "produzieren ينتج (-ieren بلا ge-!) — Wir produzieren die Produkte."
+          },
+          {
+            "q": "Die ___ kommt. (الشحنة!)",
+            "a": "Lieferung",
+            "why": "die Lieferung الشحنة (die! -ung!) — Die Lieferung kommt."
+          },
+          {
+            "q": "Wir leben ___. (بمقتصد!)",
+            "a": "sparsam",
+            "why": "sparsam مقتصد (ظرفاً بلا أداة!) — Wir leben sparsam."
+          },
+          {
+            "q": "Wir produzieren die ___. (المنتجات!)",
+            "a": "Produkte",
+            "why": "die Produkte المنتجات (جمع das Produkt!) — Wir produzieren die Produkte."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "kommentieren",
+          "befragen",
+          "datenschutz"
+        ],
+        "items": [
+          {
+            "q": "~~Sie produzierte heute.~~",
+            "a": "Sie produziert heute.",
+            "why": "مضارع اليوم: produziert (لا produzierte — ماضٍ!)!"
+          },
+          {
+            "q": "~~der Lieferung kommt.~~",
+            "a": "Die Lieferung kommt.",
+            "why": "die Lieferung (die! -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~Wir leben ein sparsam.~~",
+            "a": "Wir leben sparsam.",
+            "why": "الصفة ظرفاً بلا أداة (sparsam — لا ein!)!"
+          },
+          {
+            "q": "~~Die Lieferung sind wichtig.~~",
+            "a": "Die Lieferung ist wichtig.",
+            "why": "المفرد die Lieferung مع ist (لا sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "argumentieren",
+          "folgern",
+          "belegen"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالإنتاج! (جملتان!)",
+            "a": "Wir produzieren die Produkte. Das ist wichtig.",
+            "why": "الإنتاج أولًا! (die Produkte produzieren!)"
+          },
+          {
+            "q": "تحدّث عن الشحنة! (جملتان!)",
+            "a": "Die Lieferung kommt. Das ist gut.",
+            "why": "الشحنة! (die Lieferung kommt!)"
+          },
+          {
+            "q": "تحدّث عن الاقتصاد! (جملتان!)",
+            "a": "Wir leben sparsam. Wir vermeiden die Verschwendung.",
+            "why": "الاقتصاد! (sparsam leben!) — vermeiden من الوحدة 2 وd1!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«ينتج»؟",
+            "a": "produzieren"
+          },
+          {
+            "q": "«الشحنة»؟",
+            "a": "die Lieferung"
+          },
+          {
+            "q": "«مقتصد»؟",
+            "a": "sparsam"
+          },
+          {
+            "q": "«تصل الشحنة.»؟",
+            "a": "Die Lieferung kommt."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«ننتج المنتجات.»؟",
+            "a": "Wir produzieren die Produkte."
+          },
+          {
+            "q": "sparsam",
+            "a": "مقتصد"
+          },
+          {
+            "q": "«نعيش بمقتصد.»؟",
+            "a": "Wir leben sparsam."
+          },
+          {
+            "q": "die Lieferung",
+            "a": "الشحنة"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«ينتج اليوم.»؟",
+            "a": "Er produziert heute."
+          },
+          {
+            "q": "«الشحنة مهمّة.»؟",
+            "a": "Die Lieferung ist wichtig."
+          },
+          {
+            "q": "produzieren",
+            "a": "ينتج"
+          },
+          {
+            "q": "«نعيش بمقتصد.»؟",
+            "a": "Wir leben sparsam."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Wir produzieren die Produkte und die Lieferung kommt. Wir leben sparsam und vermeiden die Verschwendung. Der Tag ist gut und wir sind zusammen.",
+      "ar": "من المصنع إلى البيت: ننتج ونوصل ونعيش بمقتصد!"
+    },
+    "srsBundleWordIds": [
+      "produzieren",
+      "lieferung",
+      "sparsam"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "المضارع بالماضي!",
+          "de": "~~Sie produzierte heute.~~"
+        },
+        "correct": {
+          "ar": "produziert!",
+          "de": "Sie produziert heute."
+        },
+        "exercise": {
+          "q": "Sie ___ heute. (مضارع!)",
+          "a": "produziert"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل المضارع واحد! والألمانية: -ieren بلا ge- والمضارع/الماضي مختلفان (produziert/produzierte!) — «اليوم» تطلب المضارع! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Lieferung!",
+          "de": "~~der Lieferung kommt.~~"
+        },
+        "correct": {
+          "ar": "die Lieferung!",
+          "de": "Die Lieferung kommt."
+        },
+        "exercise": {
+          "q": "___ Lieferung kommt.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الإرسالية/التسليم» مذكّر! والألمانية: كل كلمات -ung مؤنثة (die Lieferung!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "ein sparsam!",
+          "de": "~~Wir leben ein sparsam.~~"
+        },
+        "correct": {
+          "ar": "بلا أداة!",
+          "de": "Wir leben sparsam."
+        },
+        "exercise": {
+          "q": "Wir leben ___ sparsam. (بلا أداة!)",
+          "a": "—"
+        },
+        "whyArabicSpeakerFails": "العربية: «بمقتصد» قد تأخذ تعريفاً! والألمانية: الصفة الظرفية بلا أداة إطلاقاً (مثل sachlich!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/produzieren",
+      "https://www.duden.de/rechtschreibung/Lieferung",
+      "https://www.duden.de/rechtschreibung/sparsam"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-produzieren",
+    "word-lieferung",
+    "word-sparsam"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 5 (الاقتصاد والاستهلاك!)",
+    "goetheWordListOverlap": [
+      "produzieren",
+      "lieferung",
+      "sparsam"
+    ]
+  }
+}

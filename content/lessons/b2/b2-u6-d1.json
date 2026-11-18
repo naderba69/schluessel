@@ -1,0 +1,391 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u6-d1",
+  "level": "B2",
+  "unit": 6,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Vorsorge ist wichtig, die Diagnose ist klar und die Behandlung hilft!",
+    "ar": "الوحدة 6 (الأخيرة في B2!): الصحّة والعافية! اليوم الأول: العلاج والوقاية والتشخيص!"
+  },
+  "canDoDaily": [
+    "يتكلّم عن العلاج والوقاية! (die Behandlung! die Vorsorge!)",
+    "يفهم التشخيص! (die Diagnose! die Diagnose stellen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "armut",
+      "reichtum",
+      "spende"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«العلاج مهم.»؟"
+        },
+        "choices": [
+          "Die Behandlung ist wichtig.",
+          "Der Behandlung ist wichtig.",
+          "Das Behandlung ist wichtig."
+        ],
+        "answer": "Die Behandlung ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التشخيص واضح.»؟"
+        },
+        "choices": [
+          "Die Diagnose ist klar.",
+          "Der Diagnose ist klar.",
+          "Das Diagnose ist klar."
+        ],
+        "answer": "Die Diagnose ist klar.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "behandlung",
+      "vorsorge",
+      "diagnose"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "v-f"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Vorsorge, Diagnose, Behandlung: Wir kümmern uns um die Gesundheit!",
+        "ar": "اليوم الأول من الوحدة 6 الأخيرة! (الوقاية! التشخيص! العلاج!)"
+      },
+      "situation": {
+        "de": "Vorsorge, Diagnose, Behandlung — zusammen lernen.",
+        "ar": "وقاية! تشخيص! علاج! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Vorsorge (die!) جمعها قليل (مفهوم جمعي!) وdie Diagnose أجنسي (die Diagnosen!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Diagnose stellen! die Vorsorge machen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "armut",
+          "reichtum",
+          "spende"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Behandlung",
+                "ar": "العلاج"
+              },
+              {
+                "de": "die Vorsorge",
+                "ar": "الوقاية"
+              },
+              {
+                "de": "die Diagnose",
+                "ar": "التشخيص"
+              }
+            ],
+            "why": "die Behandlung العلاج (die! -ung!) · die Vorsorge الوقاية (die! مفهوم جمعي!) · die Diagnose التشخيص (die! أجنسي!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Diagnose stellen",
+                "ar": "يُقيم التشخيص"
+              },
+              {
+                "de": "die Vorsorge machen",
+                "ar": "يفعل الوقاية"
+              },
+              {
+                "de": "die Behandlung ist wichtig",
+                "ar": "العلاج مهم"
+              }
+            ],
+            "why": "die Diagnose stellen (التثبيت!) · die Vorsorge machen (الوقاية!) · die Behandlung ist wichtig!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hersteller",
+          "gebraucht",
+          "rueckgabe"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (العلاج!)",
+            "a": "Behandlung",
+            "why": "die Behandlung العلاج (die! -ung!) — Die Behandlung ist wichtig."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الوقاية!)",
+            "a": "Vorsorge",
+            "why": "die Vorsorge الوقاية (die! مفهوم جمعي!) — Die Vorsorge ist wichtig."
+          },
+          {
+            "q": "Die ___ ist klar. (التشخيص!)",
+            "a": "Diagnose",
+            "why": "die Diagnose التشخيص (die! أجنسي!) — Die Diagnose ist klar."
+          },
+          {
+            "q": "Die Behandlung ist ___. (مهمة!)",
+            "a": "wichtig",
+            "why": "wichtig مهم — Die Behandlung ist wichtig."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "arbeitgeber",
+          "anstellung",
+          "ruhestand"
+        ],
+        "items": [
+          {
+            "q": "~~der Behandlung ist wichtig.~~",
+            "a": "Die Behandlung ist wichtig.",
+            "why": "die Behandlung (die! -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~das Diagnose ist klar.~~",
+            "a": "Die Diagnose ist klar.",
+            "why": "die Diagnose (die! أجنسي!)!"
+          },
+          {
+            "q": "~~die Diagnose legen.~~",
+            "a": "die Diagnose stellen.",
+            "why": "«يُقيم التشخيص» = die Diagnose stellen (لا legen!)!"
+          },
+          {
+            "q": "~~Die Behandlungen ist wichtig.~~",
+            "a": "Die Behandlung ist wichtig.",
+            "why": "المفرد die Behandlung مع ist (الجمع die Behandlungen مع sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "finanzieren",
+          "finanzen",
+          "zinsen"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالوقاية! (جملتان!)",
+            "a": "Die Vorsorge ist wichtig. Wir machen die Vorsorge.",
+            "why": "الوقاية أولًا! (die Vorsorge machen!)"
+          },
+          {
+            "q": "تحدّث عن التشخيص! (جملتان!)",
+            "a": "Die Diagnose ist klar. Das ist gut.",
+            "why": "التشخيص! (die Diagnose ist klar!)"
+          },
+          {
+            "q": "تحدّث عن العلاج! (جملتان!)",
+            "a": "Die Behandlung ist wichtig. Die Behandlung hilft.",
+            "why": "العلاج! (die Behandlung ist wichtig!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«العلاج»؟",
+            "a": "die Behandlung"
+          },
+          {
+            "q": "«الوقاية»؟",
+            "a": "die Vorsorge"
+          },
+          {
+            "q": "«التشخيص»؟",
+            "a": "die Diagnose"
+          },
+          {
+            "q": "«العلاج مهم.»؟",
+            "a": "Die Behandlung ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التشخيص واضح.»؟",
+            "a": "Die Diagnose ist klar."
+          },
+          {
+            "q": "die Vorsorge",
+            "a": "الوقاية"
+          },
+          {
+            "q": "«يُقيم التشخيص.»؟",
+            "a": "Er stellt die Diagnose."
+          },
+          {
+            "q": "die Behandlung",
+            "a": "العلاج"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نفعل الوقاية.»؟",
+            "a": "Wir machen die Vorsorge."
+          },
+          {
+            "q": "«الوقاية مهمة.»؟",
+            "a": "Die Vorsorge ist wichtig."
+          },
+          {
+            "q": "die Diagnose",
+            "a": "التشخيص"
+          },
+          {
+            "q": "«العلاج يساعد.»؟",
+            "a": "Die Behandlung hilft."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Vorsorge ist wichtig und die Diagnose ist klar. Wir machen die Vorsorge und die Behandlung hilft. Der Tag ist gut und wir sind zusammen.",
+      "ar": "الوحدة 6 (الصحّة والعافية!): نعرف الوقاية ونفهم التشخيص ونُقدّر العلاج!"
+    },
+    "srsBundleWordIds": [
+      "behandlung",
+      "vorsorge",
+      "diagnose"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Behandlung!",
+          "de": "~~der Behandlung ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Behandlung!",
+          "de": "Die Behandlung ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Behandlung ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «العلاج» مذكّر! والألمانية: die Behandlung (die! -ung مؤنثة دائماً!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Diagnose!",
+          "de": "~~das Diagnose ist klar.~~"
+        },
+        "correct": {
+          "ar": "die Diagnose!",
+          "de": "Die Diagnose ist klar."
+        },
+        "exercise": {
+          "q": "___ Diagnose ist klar.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التشخيص» مذكّر! والألمانية: die Diagnose (die! كلمات -se أجنسيّة!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Diagnose legen!",
+          "de": "~~die Diagnose legen.~~"
+        },
+        "correct": {
+          "ar": "die Diagnose stellen!",
+          "de": "die Diagnose stellen."
+        },
+        "exercise": {
+          "q": "Er ___ die Diagnose.",
+          "a": "stellt"
+        },
+        "whyArabicSpeakerFails": "العربية: «يُقيم/يضع التشخيص» — والألمانية: stellen (تثبيت!) لا legen! المفردة الثابتة die Diagnose stellen (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Behandlung",
+      "https://www.duden.de/rechtschreibung/Vorsorge",
+      "https://www.duden.de/rechtschreibung/Diagnose"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-behandlung",
+    "word-vorsorge",
+    "word-diagnose"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 6 (الصحّة والعافية!)",
+    "goetheWordListOverlap": [
+      "behandlung",
+      "vorsorge",
+      "diagnose"
+    ]
+  }
+}

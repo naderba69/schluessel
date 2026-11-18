@@ -1,0 +1,394 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u4-d2",
+  "level": "B2",
+  "unit": 4,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Sender überträgt das Ereignis und die Medien berichten!",
+    "ar": "اليوم الثاني في الإعلام! (الحدث! الوسيلة! والبثّ!)"
+  },
+  "canDoDaily": [
+    "يتحدّث عن الحدث والإعلام! (das Ereignis! die Medien!)",
+    "يفهم أن القناة تبثّ الحدث! (der Sender überträgt!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "redaktion",
+      "sender",
+      "werbung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الحدث مهمّ.»؟"
+        },
+        "choices": [
+          "Das Ereignis ist wichtig.",
+          "Die Ereignis ist wichtig.",
+          "Der Ereignis ist wichtig."
+        ],
+        "answer": "Das Ereignis ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الإعلام مهمّ.»؟"
+        },
+        "choices": [
+          "Die Medien sind wichtig.",
+          "Das Medium ist wichtig.",
+          "Die Medien ist wichtig."
+        ],
+        "answer": "Die Medien sind wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "ereignis",
+      "medium",
+      "uebertragen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-u"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Ereignis, Medium, übertragen: Die Medien berichten!",
+        "ar": "اليوم الثاني: الحدث والوسيلة والبثّ!"
+      },
+      "situation": {
+        "de": "Ereignis, Medium, übertragen — zusammen lernen.",
+        "ar": "حدث! وسيلة! بثّ! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "كلمات -nis محايدة عادة (das Ereignis!) — والقليل المؤنث يُحفظ (die Kenntnis!)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: das Ereignis erzählen! das Medium nutzen! das Ereignis übertragen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "redaktion",
+          "sender",
+          "werbung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "das Ereignis",
+                "ar": "الحدث"
+              },
+              {
+                "de": "das Medium",
+                "ar": "الوسيلة"
+              },
+              {
+                "de": "übertragen",
+                "ar": "يبثّ"
+              }
+            ],
+            "why": "das Ereignis الحدث (das! -nis محايدة عادة!) · das Medium الوسيلة (das! جمعه die Medien!) · übertragen يبثّ (ينقل!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "das Ereignis erzählen",
+                "ar": "يروي الحدث"
+              },
+              {
+                "de": "das Medium nutzen",
+                "ar": "يستخدم الوسيلة"
+              },
+              {
+                "de": "das Ereignis übertragen",
+                "ar": "يبثّ الحدث"
+              },
+              {
+                "de": "das Medium",
+                "ar": "الوسيلة"
+              }
+            ],
+            "why": "das Ereignis erzählen! · das Medium nutzen! · das Ereignis übertragen (يبثّ!) · das Medium (das!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wissenschaft",
+          "gedaechtnis",
+          "gehirn"
+        ],
+        "items": [
+          {
+            "q": "Das ___ ist wichtig. (الحدث!)",
+            "a": "Ereignis",
+            "why": "das Ereignis الحدث (das! -nis محايدة عادة!) — Das Ereignis ist wichtig."
+          },
+          {
+            "q": "Die ___ sind wichtig. (وسائل الإعلام!)",
+            "a": "Medien",
+            "why": "die Medien وسائل الإعلام (جمع das Medium!) — Die Medien sind wichtig."
+          },
+          {
+            "q": "Wir ___ den Artikel. (ننقل/نبثّ!)",
+            "a": "übertragen",
+            "why": "übertragen يبثّ (Präsens wir: übertragen!) — Wir übertragen den Artikel."
+          },
+          {
+            "q": "Das Medium ist ___. (مهمّ!)",
+            "a": "wichtig",
+            "why": "wichtig مهمّ — Das Medium ist wichtig."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "kenntnis",
+          "fachwissen",
+          "wandeln"
+        ],
+        "items": [
+          {
+            "q": "~~die Ereignis ist wichtig.~~",
+            "a": "Das Ereignis ist wichtig.",
+            "why": "das Ereignis (das! -nis محايدة عادة!)!"
+          },
+          {
+            "q": "~~das Medien sind wichtig.~~",
+            "a": "Die Medien sind wichtig.",
+            "why": "die Medien (جمع das Medium — غير منتظم!)!"
+          },
+          {
+            "q": "~~Wir übertragen über den Artikel.~~",
+            "a": "Wir übertragen den Artikel.",
+            "why": "übertragen ينقل الشيءَ مباشرة (Akkusativ بلا حرف!)!"
+          },
+          {
+            "q": "~~Das Ereignis sind wichtig.~~",
+            "a": "Das Ereignis ist wichtig.",
+            "why": "المفرد das Ereignis مع ist (لا sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "programmieren",
+          "automatisierung",
+          "technologie"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالحدث! (جملتان!)",
+            "a": "Das Ereignis ist wichtig. Wir erzählen das Ereignis.",
+            "why": "الحدث أولًا! (das Ereignis erzählen!)"
+          },
+          {
+            "q": "تحدّث عن الإعلام! (جملتان!)",
+            "a": "Die Medien sind wichtig. Wir nutzen die Medien.",
+            "why": "الإعلام! (die Medien nutzen!)"
+          },
+          {
+            "q": "تحدّث عن البثّ! (جملتان!)",
+            "a": "Der Sender überträgt das Ereignis. Das ist gut.",
+            "why": "البثّ! (der Sender überträgt das Ereignis!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الحدث»؟",
+            "a": "das Ereignis"
+          },
+          {
+            "q": "«الوسيلة»؟",
+            "a": "das Medium"
+          },
+          {
+            "q": "«يبثّ»؟",
+            "a": "übertragen"
+          },
+          {
+            "q": "«القناة تبثّ الحدث.»؟",
+            "a": "Der Sender überträgt das Ereignis."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الحدث مهمّ.»؟",
+            "a": "Das Ereignis ist wichtig."
+          },
+          {
+            "q": "das Medium",
+            "a": "الوسيلة"
+          },
+          {
+            "q": "«وسائل الإعلام مهمّة.»؟",
+            "a": "Die Medien sind wichtig."
+          },
+          {
+            "q": "übertragen",
+            "a": "يبثّ"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نستخدم الوسيلة.»؟",
+            "a": "Wir nutzen das Medium."
+          },
+          {
+            "q": "«يروي الحدث.»؟",
+            "a": "Wir erzählen das Ereignis."
+          },
+          {
+            "q": "die Medien",
+            "a": "وسائل الإعلام"
+          },
+          {
+            "q": "«القناة تبثّ الحدث.»؟",
+            "a": "Der Sender überträgt das Ereignis."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Das Ereignis ist wichtig und die Medien berichten. Wir übertragen das Ereignis und das ist gut. Der Tag ist gut und wir sind zusammen.",
+      "ar": "الحدث يبدأ والإعلام ينقل — والبثّ يصل!"
+    },
+    "srsBundleWordIds": [
+      "ereignis",
+      "medium",
+      "uebertragen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Ereignis!",
+          "de": "~~die Ereignis ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "das Ereignis!",
+          "de": "Das Ereignis ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Ereignis ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «الحدث/الواقعة» مؤنثة! والألمانية: كلمات -nis محايدة عادة (das Ereignis!) — والقليل المؤنث يُحفظ (die Kenntnis! die Erkenntnis!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Medien!",
+          "de": "~~das Medien sind wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Medien!",
+          "de": "Die Medien sind wichtig."
+        },
+        "exercise": {
+          "q": "___ Medien sind wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «وسائل الإعلام» جمع مؤنث سالم في الأذن! والألمانية: die Medien جمع das Medium (غير منتظم!) — والجمع يأخذ sind! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "über …!",
+          "de": "~~Wir übertragen über den Artikel.~~"
+        },
+        "correct": {
+          "ar": "مباشرةً!",
+          "de": "Wir übertragen den Artikel."
+        },
+        "exercise": {
+          "q": "Wir übertragen ___ Artikel. (مباشرة!)",
+          "a": "den"
+        },
+        "whyArabicSpeakerFails": "العربية: «ينقل عن/عن طريق» يأخذ حرف جرّ! والألمانية: übertragen ينقل الشيءَ نفسه (Akkusativ بلا حرف!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Ereignis",
+      "https://www.duden.de/rechtschreibung/Medium",
+      "https://www.duden.de/rechtschreibung/uebertragen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-ereignis",
+    "word-medium",
+    "word-uebertragen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 4 (الإعلام والأخبار!)",
+    "goetheWordListOverlap": [
+      "ereignis",
+      "medium",
+      "uebertragen"
+    ]
+  }
+}

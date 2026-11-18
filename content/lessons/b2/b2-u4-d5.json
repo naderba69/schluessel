@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u4-d5",
+  "level": "B2",
+  "unit": 4,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Wir kommentieren die Meldung und der Datenschutz ist wichtig!",
+    "ar": "اليوم الخامس: التعليق والاستطلاع والخصوصية! (نتفاعل مع الإعلام!)"
+  },
+  "canDoDaily": [
+    "يعلّق على الخبر ويستطلع الناس! (die Meldung kommentieren! die Menschen befragen!)",
+    "يصف حماية البيانات! (der Datenschutz ist wichtig!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "argumentieren",
+      "folgern",
+      "belegen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«نعلّق على الخبر.»؟"
+        },
+        "choices": [
+          "Wir kommentieren die Meldung.",
+          "Wir kommentieren über die Meldung.",
+          "Wir kommentieren auf die Meldung."
+        ],
+        "answer": "Wir kommentieren die Meldung.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«حماية البيانات مهمّة.»؟"
+        },
+        "choices": [
+          "Der Datenschutz ist wichtig.",
+          "Die Datenschutz ist wichtig.",
+          "Das Datenschutz ist wichtig."
+        ],
+        "answer": "Der Datenschutz ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "kommentieren",
+      "befragen",
+      "datenschutz"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "double-consonant",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Kommentieren, befragen, Datenschutz: Wir sind aktiv!",
+        "ar": "اليوم الخامس: نتفاعل! (التعليق! الاستطلاع! الخصوصية!)"
+      },
+      "situation": {
+        "de": "Kommentieren, befragen, Datenschutz — zusammen lernen.",
+        "ar": "تعليق! استطلاع! خصوصية! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "der Datenschutz (der!) يتبع آخره der Schutz — والمركب بلا جمع!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Meldung kommentieren! die Menschen befragen! der Datenschutz ist wichtig!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "argumentieren",
+          "folgern",
+          "belegen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "kommentieren",
+                "ar": "يعلّق على"
+              },
+              {
+                "de": "befragen",
+                "ar": "يستطلع"
+              },
+              {
+                "de": "der Datenschutz",
+                "ar": "حماية البيانات"
+              }
+            ],
+            "why": "kommentieren يعلّق على (مباشرة بلا حرف!) · befragen يستطلع (مباشرة!) · der Datenschutz حماية البيانات (der! der Schutz في آخره!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Meldung kommentieren",
+                "ar": "يعلّق على الخبر"
+              },
+              {
+                "de": "die Menschen befragen",
+                "ar": "يستطلع الناس"
+              },
+              {
+                "de": "der Datenschutz ist wichtig",
+                "ar": "حماية البيانات مهمّة"
+              },
+              {
+                "de": "der Datenschutz",
+                "ar": "حماية البيانات"
+              }
+            ],
+            "why": "die Meldung kommentieren! · die Menschen befragen (الناسَ مباشرة!) · der Datenschutz ist wichtig! · der Datenschutz (der!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hinterfragen",
+          "misstrauisch",
+          "zensur"
+        ],
+        "items": [
+          {
+            "q": "Wir ___ die Meldung. (نعلّق على!)",
+            "a": "kommentieren",
+            "why": "kommentieren يعلّق (-ieren بلا ge-!) — Wir kommentieren die Meldung."
+          },
+          {
+            "q": "Wir ___ die Menschen. (نستطلع!)",
+            "a": "befragen",
+            "why": "befragen يستطلع (Präsens wir: befragen!) — Wir befragen die Menschen."
+          },
+          {
+            "q": "Der ___ ist wichtig. (حماية البيانات!)",
+            "a": "Datenschutz",
+            "why": "der Datenschutz حماية البيانات (der! der Schutz في آخره!) — Der Datenschutz ist wichtig."
+          },
+          {
+            "q": "Wir kommentieren die ___. (الخبر!)",
+            "a": "Meldung",
+            "why": "die Meldung الخبر (die! مُدرَّسة!) — Wir kommentieren die Meldung."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ereignis",
+          "medium",
+          "uebertragen"
+        ],
+        "items": [
+          {
+            "q": "~~die Datenschutz ist wichtig.~~",
+            "a": "Der Datenschutz ist wichtig.",
+            "why": "der Datenschutz (der! der Schutz في آخره!)!"
+          },
+          {
+            "q": "~~Der Datenschutz sind wichtig.~~",
+            "a": "Der Datenschutz ist wichtig.",
+            "why": "المفرد der Datenschutz مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Wir kommentieren über die Meldung.~~",
+            "a": "Wir kommentieren die Meldung.",
+            "why": "kommentieren يعلّق مباشرة (بالنصب بلا حرف!)!"
+          },
+          {
+            "q": "~~Wir befragen über die Menschen.~~",
+            "a": "Wir befragen die Menschen.",
+            "why": "befragen يستطلع مباشرة (بالنصب بلا حرف!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "redaktion",
+          "sender",
+          "werbung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالتعليق! (جملتان!)",
+            "a": "Wir kommentieren die Meldung. Das ist wichtig.",
+            "why": "التعليق أولًا! (die Meldung kommentieren!)"
+          },
+          {
+            "q": "تحدّث عن الاستطلاع! (جملتان!)",
+            "a": "Wir befragen die Menschen. Das ist gut.",
+            "why": "الاستطلاع! (die Menschen befragen!)"
+          },
+          {
+            "q": "تحدّث عن الخصوصية! (جملتان!)",
+            "a": "Der Datenschutz ist wichtig. Wir schützen die Daten.",
+            "why": "الخصوصية! (die Daten schützen!) — schützen من الوحدة 1!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يعلّق على»؟",
+            "a": "kommentieren"
+          },
+          {
+            "q": "«يستطلع»؟",
+            "a": "befragen"
+          },
+          {
+            "q": "«حماية البيانات»؟",
+            "a": "der Datenschutz"
+          },
+          {
+            "q": "«نعلّق على الخبر.»؟",
+            "a": "Wir kommentieren die Meldung."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نستطلع الناس.»؟",
+            "a": "Wir befragen die Menschen."
+          },
+          {
+            "q": "der Datenschutz",
+            "a": "حماية البيانات"
+          },
+          {
+            "q": "«حماية البيانات مهمّة.»؟",
+            "a": "Der Datenschutz ist wichtig."
+          },
+          {
+            "q": "kommentieren",
+            "a": "يعلّق على"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نحمي البيانات.»؟",
+            "a": "Wir schützen die Daten."
+          },
+          {
+            "q": "«الخبر مهمّ.»؟",
+            "a": "Die Meldung ist wichtig."
+          },
+          {
+            "q": "befragen",
+            "a": "يستطلع"
+          },
+          {
+            "q": "«نعلّق على الخبر.»؟",
+            "a": "Wir kommentieren die Meldung."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Wir kommentieren die Meldung und befragen die Menschen. Der Datenschutz ist wichtig und wir schützen die Daten. Der Tag ist gut und wir sind zusammen.",
+      "ar": "نتفاعل مع الإعلام: نعلّق ونستطلع ونحمي بياناتنا!"
+    },
+    "srsBundleWordIds": [
+      "kommentieren",
+      "befragen",
+      "datenschutz"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Datenschutz!",
+          "de": "~~die Datenschutz ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "der Datenschutz!",
+          "de": "Der Datenschutz ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Datenschutz ist wichtig.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الحماية» مؤنثة! والألمانية: المركّب يتبع آخره — der Schutz (der!) في آخره! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "sind!",
+          "de": "~~Der Datenschutz sind wichtig.~~"
+        },
+        "correct": {
+          "ar": "ist!",
+          "de": "Der Datenschutz ist wichtig."
+        },
+        "exercise": {
+          "q": "Der Datenschutz ___ wichtig.",
+          "a": "ist"
+        },
+        "whyArabicSpeakerFails": "العربية: «البيانات» جمع فالفعل جمع! والألمانية: Datenschutz مفرد واحد (der!) فيأخذ ist! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "على …!",
+          "de": "~~Wir kommentieren über die Meldung.~~"
+        },
+        "correct": {
+          "ar": "مباشرةً!",
+          "de": "Wir kommentieren die Meldung."
+        },
+        "exercise": {
+          "q": "Wir kommentieren ___ Meldung. (مباشرة!)",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «يعلّق على» يأخذ حرف جرّ! والألمانية: kommentieren يعلّق على الشيءَ نفسه (بالنصب بلا حرف!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/kommentieren",
+      "https://www.duden.de/rechtschreibung/befragen",
+      "https://www.duden.de/rechtschreibung/Datenschutz"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-kommentieren",
+    "word-befragen",
+    "word-datenschutz"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 4 (الإعلام والأخبار!)",
+    "goetheWordListOverlap": [
+      "kommentieren",
+      "befragen",
+      "datenschutz"
+    ]
+  }
+}

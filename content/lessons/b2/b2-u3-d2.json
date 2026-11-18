@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u3-d2",
+  "level": "B2",
+  "unit": 3,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Innovation: Wir machen das Experiment und gewinnen die Erkenntnis!",
+    "ar": "الوحدة 3: العلم والتقنية! (التجربة! الابتكار! والمعرفة!)"
+  },
+  "canDoDaily": [
+    "يجري التجربة ويتوصل إلى المعرفة! (das Experiment machen! die Erkenntnis gewinnen!)",
+    "يتحدّث عن الابتكار! (die Innovation!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bildung",
+      "technik",
+      "digitalisierung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التجربة مهمّة.»؟"
+        },
+        "choices": [
+          "Das Experiment ist wichtig.",
+          "Der Experiment ist wichtig.",
+          "Die Experiment ist wichtig."
+        ],
+        "answer": "Das Experiment ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«عندنا معرفة.»؟"
+        },
+        "choices": [
+          "Wir haben eine Erkenntnis.",
+          "Wir haben Erkenntnis.",
+          "Wir haben einen Erkenntnis."
+        ],
+        "answer": "Wir haben eine Erkenntnis.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "experiment",
+      "innovation",
+      "erkenntnis"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "double-consonant",
+      "r-uvular"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Die Innovation: Wir machen das Experiment und gewinnen die Erkenntnis!",
+        "ar": "اليوم الثاني: التجربة والابتكار والمعرفة!"
+      },
+      "situation": {
+        "de": "Experiment, Innovation, Erkenntnis — zusammen lernen.",
+        "ar": "تجربة! ابتكار! معرفة! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "ثلاثة أنماط أسماء: das Experiment (محايد!) وdie Innovation وdie Erkenntnis (مؤنثتان!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: das Experiment machen! die Innovation nutzen! die Erkenntnis gewinnen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bildung",
+          "technik",
+          "digitalisierung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "das Experiment",
+                "ar": "التجربة (العلمية)"
+              },
+              {
+                "de": "die Innovation",
+                "ar": "الابتكار"
+              },
+              {
+                "de": "die Erkenntnis",
+                "ar": "المعرفة (الاستبانة)"
+              }
+            ],
+            "why": "das Experiment التجربة (das! -ment محايد!) · die Innovation الابتكار (die! -ion!) · die Erkenntnis المعرفة (die! -nis!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "das Experiment machen",
+                "ar": "يجري التجربة"
+              },
+              {
+                "de": "die Innovation nutzen",
+                "ar": "يستخدم الابتكار"
+              },
+              {
+                "de": "die Erkenntnis gewinnen",
+                "ar": "يتوصل إلى المعرفة"
+              },
+              {
+                "de": "das Experiment",
+                "ar": "التجربة"
+              }
+            ],
+            "why": "das Experiment machen (يجري!) · die Innovation nutzen! · die Erkenntnis gewinnen (يتوصل إلى!) · das Experiment (das!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gleichgewicht",
+          "bewusst",
+          "emission"
+        ],
+        "items": [
+          {
+            "q": "Das ___ ist wichtig. (التجربة!)",
+            "a": "Experiment",
+            "why": "das Experiment التجربة (das! -ment!) — Das Experiment ist wichtig."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الابتكار!)",
+            "a": "Innovation",
+            "why": "die Innovation الابتكار (die! -ion!) — Die Innovation ist wichtig."
+          },
+          {
+            "q": "Wir gewinnen die ___. (المعرفة!)",
+            "a": "Erkenntnis",
+            "why": "die Erkenntnis المعرفة (die! -nis!) — Wir gewinnen die Erkenntnis."
+          },
+          {
+            "q": "Er ___ das Experiment. (يجري!)",
+            "a": "macht",
+            "why": "machen يجري (Präsens er: macht!) — Er macht das Experiment."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gerechtigkeit",
+          "warnen",
+          "konflikt"
+        ],
+        "items": [
+          {
+            "q": "~~Der Experiment ist wichtig.~~",
+            "a": "Das Experiment ist wichtig.",
+            "why": "das Experiment (das! كلمات -ment محايدة!)!"
+          },
+          {
+            "q": "~~Die Innovation sind wichtig.~~",
+            "a": "Die Innovation ist wichtig.",
+            "why": "die Innovation مفردة (die!) — ist!"
+          },
+          {
+            "q": "~~Wir haben Erkenntnis.~~",
+            "a": "Wir haben eine Erkenntnis.",
+            "why": "eine Erkenntnis — الأداة النكرة لا تُحذف! (كل -nis مؤنثة!)!"
+          },
+          {
+            "q": "~~Wir machen das Experiment auf.~~",
+            "a": "Wir machen das Experiment.",
+            "why": "machen مع المفعول ليس فعلاً منفصلاً! (لا auf!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hitze",
+          "erderwaermung",
+          "bewahren"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالتجربة! (جملتان!)",
+            "a": "Das Experiment ist wichtig. Wir machen das Experiment.",
+            "why": "التجربة أولًا! (das Experiment machen!)"
+          },
+          {
+            "q": "تحدّث عن الابتكار! (جملتان!)",
+            "a": "Die Innovation ist wichtig. Wir nutzen die Innovation.",
+            "why": "الابتكار! (die Innovation nutzen!)"
+          },
+          {
+            "q": "تحدّث عن المعرفة! (جملتان!)",
+            "a": "Wir gewinnen die Erkenntnis. Das ist wichtig.",
+            "why": "المعرفة! (die Erkenntnis gewinnen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التجربة (العلمية)»؟",
+            "a": "das Experiment"
+          },
+          {
+            "q": "«الابتكار»؟",
+            "a": "die Innovation"
+          },
+          {
+            "q": "«المعرفة (الاستبانة)»؟",
+            "a": "die Erkenntnis"
+          },
+          {
+            "q": "«التجربة مهمّة.»؟",
+            "a": "Das Experiment ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نجري التجربة.»؟",
+            "a": "Wir machen das Experiment."
+          },
+          {
+            "q": "die Innovation",
+            "a": "الابتكار"
+          },
+          {
+            "q": "«نستخدم الابتكار.»؟",
+            "a": "Wir nutzen die Innovation."
+          },
+          {
+            "q": "das Experiment",
+            "a": "التجربة"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نحصل على المعرفة.»؟",
+            "a": "Wir gewinnen die Erkenntnis."
+          },
+          {
+            "q": "«الابتكار مهمّ.»؟",
+            "a": "Die Innovation ist wichtig."
+          },
+          {
+            "q": "die Erkenntnis",
+            "a": "المعرفة"
+          },
+          {
+            "q": "«نجري التجربة.»؟",
+            "a": "Wir machen das Experiment."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Das Experiment ist wichtig und die Innovation ist da. Wir gewinnen die Erkenntnis und nutzen die Technik. Der Tag ist gut und wir sind zusammen.",
+      "ar": "التجربة تصنع المعرفة والابتكار يقود التقنية!"
+    },
+    "srsBundleWordIds": [
+      "experiment",
+      "innovation",
+      "erkenntnis"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Experiment!",
+          "de": "~~Der Experiment ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "das Experiment!",
+          "de": "Das Experiment ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Experiment ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «التجربة» مؤنثة! والألمانية: كلمات -ment أجنبية محايدة — das Experiment (das!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Innovation!",
+          "de": "~~Der Innovation ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Innovation!",
+          "de": "Die Innovation ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Innovation ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الابتكار» مذكّر! والألمانية: كلمات -ion/-sion مؤنثة — die Innovation (die!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "بلا أداة!",
+          "de": "~~Wir haben Erkenntnis.~~"
+        },
+        "correct": {
+          "ar": "eine Erkenntnis!",
+          "de": "Wir haben eine Erkenntnis."
+        },
+        "exercise": {
+          "q": "Wir haben ___ Erkenntnis.",
+          "a": "eine"
+        },
+        "whyArabicSpeakerFails": "العربية: المعرفة أحياناً بلا أداة! والألمانية: الأداة النكرة لا تُحذف (eine Erkenntnis! وكل -nis مؤنثة!)! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Experiment",
+      "https://www.duden.de/rechtschreibung/Innovation",
+      "https://www.duden.de/rechtschreibung/Erkenntnis"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-experiment",
+    "word-innovation",
+    "word-erkenntnis"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 3 (العلم والتقنية!)",
+    "goetheWordListOverlap": [
+      "experiment",
+      "innovation",
+      "erkenntnis"
+    ]
+  }
+}

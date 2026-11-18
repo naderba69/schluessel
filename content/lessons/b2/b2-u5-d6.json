@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u5-d6",
+  "level": "B2",
+  "unit": 5,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Armut ist schlimm, der Reichtum ist groß und wir geben die Spende!",
+    "ar": "اليوم السادس: الفقر والغنى والتبرّع! (قيم الاقتصاد!)"
+  },
+  "canDoDaily": [
+    "يصف الفقر والغنى! (die Armut! der Reichtum!)",
+    "يُعطي التبرّع ويُساعد! (die Spende geben! den Menschen helfen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hersteller",
+      "gebraucht",
+      "rueckgabe"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الفقر سيّئ.»؟"
+        },
+        "choices": [
+          "Die Armut ist schlimm.",
+          "Der Armut ist schlimm.",
+          "Das Armut ist schlimm."
+        ],
+        "answer": "Die Armut ist schlimm.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الغنى كبير.»؟"
+        },
+        "choices": [
+          "Der Reichtum ist groß.",
+          "Das Reichtum ist groß.",
+          "Die Reichtum ist groß."
+        ],
+        "answer": "Der Reichtum ist groß.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "armut",
+      "reichtum",
+      "spende"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ich-laut",
+      "sp-st-initial"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Armut, Reichtum, Spende: Wir helfen den Menschen!",
+        "ar": "اليوم السادس: قيم الاقتصاد! (الفقر! الغنى! التبرّع!)"
+      },
+      "situation": {
+        "de": "Armut, Reichtum, Spende — zusammen lernen.",
+        "ar": "فقر! غنى! تبرّع! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "der Reichtum (der!) استثناء كلمات -tum المحايدة (مثل das Wachstum!)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Spende geben! den Menschen helfen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hersteller",
+          "gebraucht",
+          "rueckgabe"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Armut",
+                "ar": "الفقر"
+              },
+              {
+                "de": "der Reichtum",
+                "ar": "الغنى"
+              },
+              {
+                "de": "die Spende",
+                "ar": "التبرّع"
+              }
+            ],
+            "why": "die Armut الفقر (die! «الفقر» مذكّر بالعربية!) · der Reichtum الغنى (der! استثناء -tum!) · die Spende التبرّع (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Armut ist schlimm",
+                "ar": "الفقر سيّئ"
+              },
+              {
+                "de": "der Reichtum ist groß",
+                "ar": "الغنى كبير"
+              },
+              {
+                "de": "die Spende geben",
+                "ar": "يُعطي التبرّع"
+              },
+              {
+                "de": "die Spende",
+                "ar": "التبرّع"
+              }
+            ],
+            "why": "die Armut ist schlimm! · der Reichtum ist groß! · die Spende geben (بالنصب!) · die Spende (die!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "arbeitgeber",
+          "anstellung",
+          "ruhestand"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist schlimm. (الفقر!)",
+            "a": "Armut",
+            "why": "die Armut الفقر (die!) — Die Armut ist schlimm."
+          },
+          {
+            "q": "Der ___ ist groß. (الغنى!)",
+            "a": "Reichtum",
+            "why": "der Reichtum الغنى (der! استثناء -tum!) — Der Reichtum ist groß."
+          },
+          {
+            "q": "Wir geben die ___. (التبرّع!)",
+            "a": "Spende",
+            "why": "die Spende التبرّع (die!) — Wir geben die Spende."
+          },
+          {
+            "q": "Die Spende ist ___. (كبيرة!)",
+            "a": "groß",
+            "why": "groß كبير — Die Spende ist groß."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "finanzieren",
+          "finanzen",
+          "zinsen"
+        ],
+        "items": [
+          {
+            "q": "~~der Armut ist schlimm.~~",
+            "a": "Die Armut ist schlimm.",
+            "why": "die Armut (die! «الفقر» مذكّر بالعربية!)!"
+          },
+          {
+            "q": "~~das Reichtum ist groß.~~",
+            "a": "Der Reichtum ist groß.",
+            "why": "der Reichtum (der! استثناء كلمات -tum المحايدة!)!"
+          },
+          {
+            "q": "~~Wir geben der Spende.~~",
+            "a": "Wir geben die Spende.",
+            "why": "geben يُعطي المفعولَ بالنصب (die Spende — لا der!)!"
+          },
+          {
+            "q": "~~Die Armut sind schlimm.~~",
+            "a": "Die Armut ist schlimm.",
+            "why": "المفرد die Armut مع ist (لا sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "produzieren",
+          "lieferung",
+          "sparsam"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالفقر! (جملتان!)",
+            "a": "Die Armut ist schlimm. Das ist wichtig.",
+            "why": "الفقر أولًا! (die Armut ist schlimm!)"
+          },
+          {
+            "q": "تحدّث عن الغنى! (جملتان!)",
+            "a": "Der Reichtum ist groß. Das ist gut.",
+            "why": "الغنى! (der Reichtum ist groß!)"
+          },
+          {
+            "q": "تحدّث عن التبرّع! (جملتان!)",
+            "a": "Wir geben die Spende. Wir helfen den Menschen.",
+            "why": "التبرّع! (die Spende geben!) — helfen den Menschen (بالإعطاء!) من A1!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الفقر»؟",
+            "a": "die Armut"
+          },
+          {
+            "q": "«الغنى»؟",
+            "a": "der Reichtum"
+          },
+          {
+            "q": "«التبرّع»؟",
+            "a": "die Spende"
+          },
+          {
+            "q": "«الفقر سيّئ.»؟",
+            "a": "Die Armut ist schlimm."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الغنى كبير.»؟",
+            "a": "Der Reichtum ist groß."
+          },
+          {
+            "q": "die Spende",
+            "a": "التبرّع"
+          },
+          {
+            "q": "«نُعطي التبرّع.»؟",
+            "a": "Wir geben die Spende."
+          },
+          {
+            "q": "die Armut",
+            "a": "الفقر"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نُساعد الناس.»؟",
+            "a": "Wir helfen den Menschen."
+          },
+          {
+            "q": "«التبرّع كبير.»؟",
+            "a": "Die Spende ist groß."
+          },
+          {
+            "q": "der Reichtum",
+            "a": "الغنى"
+          },
+          {
+            "q": "«الفقر سيّئ.»؟",
+            "a": "Die Armut ist schlimm."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Armut ist schlimm und der Reichtum ist groß. Wir geben die Spende und helfen den Menschen. Der Tag ist gut und wir sind zusammen.",
+      "ar": "قيم الاقتصاد: نعرف الفقر ونفهم الغنى ونُعطي التبرّع!"
+    },
+    "srsBundleWordIds": [
+      "armut",
+      "reichtum",
+      "spende"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Armut!",
+          "de": "~~der Armut ist schlimm.~~"
+        },
+        "correct": {
+          "ar": "die Armut!",
+          "de": "Die Armut ist schlimm."
+        },
+        "exercise": {
+          "q": "___ Armut ist schlimm.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الفقر» مذكّر! والألمانية: die Armut (die!) — أسماء الحالة على -ut مؤنثة! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Reichtum!",
+          "de": "~~das Reichtum ist groß.~~"
+        },
+        "correct": {
+          "ar": "der Reichtum!",
+          "de": "Der Reichtum ist groß."
+        },
+        "exercise": {
+          "q": "___ Reichtum ist groß.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الغنى» مذكّر — والألمانية كذلك لكن باستثناء: كلمات -tum محايدة عادة (das Wachstum!) وder Reichtum مذكّر! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Spende!",
+          "de": "~~Wir geben der Spende.~~"
+        },
+        "correct": {
+          "ar": "die Spende!",
+          "de": "Wir geben die Spende."
+        },
+        "exercise": {
+          "q": "Wir geben ___ Spende.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «نُعطي التبرّعَ» نصب — والألمانية كذلك: geben يأخذ المفعولَ بالنصب (die Spende — لا der!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Armut",
+      "https://www.duden.de/rechtschreibung/Reichtum",
+      "https://www.duden.de/rechtschreibung/Spende"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-armut",
+    "word-reichtum",
+    "word-spende"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 5 (الاقتصاد والاستهلاك!)",
+    "goetheWordListOverlap": [
+      "armut",
+      "reichtum",
+      "spende"
+    ]
+  }
+}

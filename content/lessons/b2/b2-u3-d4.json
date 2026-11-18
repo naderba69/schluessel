@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u3-d4",
+  "level": "B2",
+  "unit": 3,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Wir programmieren den Roboter — die Automatisierung kommt mit der Technologie!",
+    "ar": "الوحدة 3: العلم والتقنية! (البرمجة! الأتمتة! والتكنولوجيا!)"
+  },
+  "canDoDaily": [
+    "يبرمج الآلي! (den Roboter programmieren!)",
+    "يتحدّث عن الأتمتة والتكنولوجيا! (die Automatisierung! die Technologie!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "roboter",
+      "algorithmus",
+      "vernetzung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«نبرمج الآلي.»؟"
+        },
+        "choices": [
+          "Wir programmieren den Roboter.",
+          "Wir programmieren der Roboter.",
+          "Wir programmieren das Roboter."
+        ],
+        "answer": "Wir programmieren den Roboter.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التكنولوجيا مهمّة.»؟"
+        },
+        "choices": [
+          "Die Technologie ist wichtig.",
+          "Der Technologie ist wichtig.",
+          "Das Technologie ist wichtig."
+        ],
+        "answer": "Die Technologie ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "programmieren",
+      "automatisierung",
+      "technologie"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "vowel-long-short",
+      "ng-velar"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Wir programmieren den Roboter — die Automatisierung kommt mit der Technologie!",
+        "ar": "اليوم الرابع: البرمجة والأتمتة والتكنولوجيا!"
+      },
+      "situation": {
+        "de": "programmieren, Automatisierung, Technologie — zusammen lernen.",
+        "ar": "برمجة! أتمتة! تكنولوجيا! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الفعل التام لـ -ieren يُكتب بلا البادئة الزائدة: hat programmiert!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: den Roboter programmieren! die Automatisierung nutzen! die Technologie entwickeln!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "roboter",
+          "algorithmus",
+          "vernetzung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "programmieren",
+                "ar": "يبرمج"
+              },
+              {
+                "de": "die Automatisierung",
+                "ar": "الأتمتة (التشغيل الآلي)"
+              },
+              {
+                "de": "die Technologie",
+                "ar": "التكنولوجيا (التقانة)"
+              }
+            ],
+            "why": "programmieren يبرمج (hat programmiert! بلا ge!) · die Automatisierung الأتمتة (die! -ung!) · die Technologie التكنولوجيا (die! -ie!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "den Roboter programmieren",
+                "ar": "يبرمج الآلي"
+              },
+              {
+                "de": "die Automatisierung nutzen",
+                "ar": "يستخدم الأتمتة"
+              },
+              {
+                "de": "die Technologie entwickeln",
+                "ar": "يطوّر التكنولوجيا"
+              },
+              {
+                "de": "die Automatisierung",
+                "ar": "الأتمتة"
+              }
+            ],
+            "why": "den Roboter programmieren (المذكّر في النصب: den!) · die Automatisierung nutzen! · die Technologie entwickeln (يطوّر!) · die Automatisierung (die!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "experiment",
+          "innovation",
+          "erkenntnis"
+        ],
+        "items": [
+          {
+            "q": "Wir ___ den Roboter. (نبرمج!)",
+            "a": "programmieren",
+            "why": "programmieren يبرمج (Präsens wir: programmieren!) — Wir programmieren den Roboter."
+          },
+          {
+            "q": "Die ___ kommt. (الأتمتة!)",
+            "a": "Automatisierung",
+            "why": "die Automatisierung الأتمتة (die! -ung!) — Die Automatisierung kommt."
+          },
+          {
+            "q": "Die ___ ist wichtig. (التكنولوجيا!)",
+            "a": "Technologie",
+            "why": "die Technologie التكنولوجيا (die! -ie!) — Die Technologie ist wichtig."
+          },
+          {
+            "q": "Er hat den Roboter ___. (برمج!)",
+            "a": "programmiert",
+            "why": "كلمات -ieren بلا ge في الفعل التام! (hat programmiert!) — Er hat den Roboter programmiert."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "gerechtigkeit",
+          "warnen",
+          "konflikt"
+        ],
+        "items": [
+          {
+            "q": "~~Er hat programmiert den Roboter.~~",
+            "a": "Er hat den Roboter programmiert.",
+            "why": "الفعل التام يذهب للنهاية! (Er hat den Roboter programmiert!) — وتذكّر: -ieren بلا البادئة الزائدة!"
+          },
+          {
+            "q": "~~Der Automatisierung kommt.~~",
+            "a": "Die Automatisierung kommt.",
+            "why": "die Automatisierung (die! كل -ung مؤنثة مهما طالت!)!"
+          },
+          {
+            "q": "~~Das Technologie ist wichtig.~~",
+            "a": "Die Technologie ist wichtig.",
+            "why": "die Technologie (die! كلمات -ie/-ogie مؤنثة!)!"
+          },
+          {
+            "q": "~~Wir programmieren den Roboter an.~~",
+            "a": "Wir programmieren den Roboter.",
+            "why": "programmieren ليس فعلاً منفصلاً! (لا an!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bildung",
+          "technik",
+          "digitalisierung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالبرمجة! (جملتان!)",
+            "a": "Wir programmieren den Roboter. Das ist wichtig.",
+            "why": "البرمجة أولًا! (den Roboter programmieren!)"
+          },
+          {
+            "q": "تحدّث عن الأتمتة! (جملتان!)",
+            "a": "Die Automatisierung kommt. Wir nutzen die Automatisierung.",
+            "why": "الأتمتة! (die Automatisierung nutzen!)"
+          },
+          {
+            "q": "تحدّث عن التكنولوجيا! (جملتان!)",
+            "a": "Die Technologie ist wichtig. Wir entwickeln die Technologie.",
+            "why": "التكنولوجيا! (die Technologie entwickeln!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يبرمج»؟",
+            "a": "programmieren"
+          },
+          {
+            "q": "«الأتمتة (التشغيل الآلي)»؟",
+            "a": "die Automatisierung"
+          },
+          {
+            "q": "«التكنولوجيا (التقانة)»؟",
+            "a": "die Technologie"
+          },
+          {
+            "q": "«نبرمج الآلي.»؟",
+            "a": "Wir programmieren den Roboter."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الأتمتة آتية.»؟",
+            "a": "Die Automatisierung kommt."
+          },
+          {
+            "q": "die Technologie",
+            "a": "التكنولوجيا"
+          },
+          {
+            "q": "«نطوّر التكنولوجيا.»؟",
+            "a": "Wir entwickeln die Technologie."
+          },
+          {
+            "q": "programmieren",
+            "a": "يبرمج"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«هو برمج الآلي.»؟",
+            "a": "Er hat den Roboter programmiert."
+          },
+          {
+            "q": "«التكنولوجيا مهمّة.»؟",
+            "a": "Die Technologie ist wichtig."
+          },
+          {
+            "q": "die Automatisierung",
+            "a": "الأتمتة"
+          },
+          {
+            "q": "«نبرمج الآلي.»؟",
+            "a": "Wir programmieren den Roboter."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Wir programmieren den Roboter und die Automatisierung kommt. Wir entwickeln die Technologie und nutzen die Technik. Der Tag ist gut und wir sind zusammen.",
+      "ar": "البرمجة تدير الآلي والأتمتة تأتي بالتكنولوجيا!"
+    },
+    "srsBundleWordIds": [
+      "programmieren",
+      "automatisierung",
+      "technologie"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "الماضي بدل الفعل التام!",
+          "de": "~~Er hat den Roboter programmierte.~~"
+        },
+        "correct": {
+          "ar": "hat programmiert!",
+          "de": "Er hat den Roboter programmiert."
+        },
+        "exercise": {
+          "q": "Er hat den Roboter ___.",
+          "a": "programmiert"
+        },
+        "whyArabicSpeakerFails": "العربية: صيغة واحدة للماضي! والألمانية: الفعل التام hat programmiert (بالـ t!) والماضي البسيط programmierte يبقى وحده — ولا ge مع كلمات -ieren! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Automatisierung!",
+          "de": "~~Der Automatisierung kommt.~~"
+        },
+        "correct": {
+          "ar": "die Automatisierung!",
+          "de": "Die Automatisierung kommt."
+        },
+        "exercise": {
+          "q": "___ Automatisierung kommt.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: الكلمة طويلة فتبدو محايدة! والألمانية: كل -ung مؤنثة مهما طالت — die Automatisierung (die!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Technologie!",
+          "de": "~~Das Technologie ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Technologie!",
+          "de": "Die Technologie ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Technologie ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التكنولوجيا» مؤنثة لكن الأداة تختلف! والألمانية: كلمات -ie/-ogie مؤنثة — die Technologie (die!)! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/programmieren",
+      "https://www.duden.de/rechtschreibung/Automatisierung",
+      "https://www.duden.de/rechtschreibung/Technologie"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-programmieren",
+    "word-automatisierung",
+    "word-technologie"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 3 (العلم والتقنية!)",
+    "goetheWordListOverlap": [
+      "programmieren",
+      "automatisierung",
+      "technologie"
+    ]
+  }
+}

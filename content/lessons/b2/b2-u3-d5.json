@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u3-d5",
+  "level": "B2",
+  "unit": 3,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Fachwissen und Kenntnisse: Die Technik wandelt die Arbeit!",
+    "ar": "الوحدة 3: العلم والتقنية! (الدراية! المعرفة التخصصية! والتحوّل!)"
+  },
+  "canDoDaily": [
+    "يحتاج معرفة تخصصية ويستخدم المعارف! (Fachwissen brauchen! die Kenntnisse nutzen!)",
+    "يتحدّث عن التحوّل! (die Arbeit wandeln!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "programmieren",
+      "automatisierung",
+      "technologie"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«نحتاج معرفة تخصصية.»؟"
+        },
+        "choices": [
+          "Wir brauchen Fachwissen.",
+          "Wir brauchen das Fachwissen auf.",
+          "Wir brauchen ein Fachwissen."
+        ],
+        "answer": "Wir brauchen Fachwissen.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التقنية تحوّل العمل.»؟"
+        },
+        "choices": [
+          "Die Technik wandelt die Arbeit.",
+          "Die Technik wandelt in die Arbeit.",
+          "Die Technik wandeln die Arbeit."
+        ],
+        "answer": "Die Technik wandelt die Arbeit.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "kenntnis",
+      "fachwissen",
+      "wandeln"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ach-laut",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Fachwissen und Kenntnisse: Die Technik wandelt die Arbeit!",
+        "ar": "اليوم الخامس: الدراية والمعرفة التخصصية والتحوّل!"
+      },
+      "situation": {
+        "de": "Kenntnisse, Fachwissen, wandeln — zusammen lernen.",
+        "ar": "دراية! معرفة تخصصية! تحوّل! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الجمع die Kenntnisse يأخذ sind لا ist!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Kenntnisse nutzen! Fachwissen brauchen! die Arbeit wandeln!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "programmieren",
+          "automatisierung",
+          "technologie"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Kenntnisse",
+                "ar": "المعارف (الدراية)"
+              },
+              {
+                "de": "das Fachwissen",
+                "ar": "المعرفة التخصصية"
+              },
+              {
+                "de": "wandeln",
+                "ar": "يحوّل (يغيّر)"
+              }
+            ],
+            "why": "die Kenntnisse المعارف (die! جمع -nisse!) · das Fachwissen المعرفة التخصصية (das! das Wissen!) · wandeln يحوّل (hat gewandelt!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Kenntnisse nutzen",
+                "ar": "يستخدم المعارف"
+              },
+              {
+                "de": "Fachwissen brauchen",
+                "ar": "يحتاج معرفة تخصصية"
+              },
+              {
+                "de": "die Arbeit wandeln",
+                "ar": "يحوّل العمل"
+              },
+              {
+                "de": "das Fachwissen",
+                "ar": "المعرفة التخصصية"
+              }
+            ],
+            "why": "die Kenntnisse nutzen! · Fachwissen brauchen (يحتاج!) · die Arbeit wandeln (يحوّل مباشرة — Akkusativ!) · das Fachwissen (das!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "roboter",
+          "algorithmus",
+          "vernetzung"
+        ],
+        "items": [
+          {
+            "q": "Wir nutzen die ___. (المعارف!)",
+            "a": "Kenntnisse",
+            "why": "die Kenntnisse المعارف (die! جمع -nisse!) — Wir nutzen die Kenntnisse."
+          },
+          {
+            "q": "Das ___ ist wichtig. (المعرفة التخصصية!)",
+            "a": "Fachwissen",
+            "why": "das Fachwissen المعرفة التخصصية (das! das Wissen!) — Das Fachwissen ist wichtig."
+          },
+          {
+            "q": "Die Technik ___ die Arbeit. (تحوّل!)",
+            "a": "wandelt",
+            "why": "wandeln يحوّل (Präsens es: wandelt!) — Die Technik wandelt die Arbeit."
+          },
+          {
+            "q": "Wir ___ Fachwissen. (نحتاج!)",
+            "a": "brauchen",
+            "why": "brauchen يحتاج (Präsens wir: brauchen!) — Wir brauchen Fachwissen."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "experiment",
+          "innovation",
+          "erkenntnis"
+        ],
+        "items": [
+          {
+            "q": "~~Die Kenntnisse ist wichtig.~~",
+            "a": "Die Kenntnisse sind wichtig.",
+            "why": "die Kenntnisse جمع (die! -nisse!) والمجمع يحتاج sind!"
+          },
+          {
+            "q": "~~Der Fachwissen ist wichtig.~~",
+            "a": "Das Fachwissen ist wichtig.",
+            "why": "das Fachwissen (das! das Wissen! والمركّب يتبع آخره!)!"
+          },
+          {
+            "q": "~~Die Technik wandelt in die Arbeit.~~",
+            "a": "Die Technik wandelt die Arbeit.",
+            "why": "wandeln يتبع مفعوله مباشرة (Akkusativ: die Arbeit!)! (لا in!)!"
+          },
+          {
+            "q": "~~Wir brauchen das Fachwissen auf.~~",
+            "a": "Wir brauchen das Fachwissen.",
+            "why": "brauchen ليس فعلاً منفصلاً! (لا auf!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bildung",
+          "technik",
+          "digitalisierung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالدراية! (جملتان!)",
+            "a": "Die Kenntnisse sind wichtig. Wir nutzen die Kenntnisse.",
+            "why": "الدراية أولًا! (die Kenntnisse nutzen!)"
+          },
+          {
+            "q": "تحدّث عن المعرفة التخصصية! (جملتان!)",
+            "a": "Das Fachwissen ist wichtig. Wir brauchen Fachwissen.",
+            "why": "المعرفة التخصصية! (Fachwissen brauchen!)"
+          },
+          {
+            "q": "تحدّث عن التحوّل! (جملتان!)",
+            "a": "Die Technik wandelt die Arbeit. Das ist wichtig.",
+            "why": "التحوّل! (die Arbeit wandeln!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المعارف (الدراية)»؟",
+            "a": "die Kenntnisse"
+          },
+          {
+            "q": "«المعرفة التخصصية»؟",
+            "a": "das Fachwissen"
+          },
+          {
+            "q": "«يحوّل (يغيّر)»؟",
+            "a": "wandeln"
+          },
+          {
+            "q": "«نحتاج معرفة تخصصية.»؟",
+            "a": "Wir brauchen Fachwissen."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نستخدم المعارف.»؟",
+            "a": "Wir nutzen die Kenntnisse."
+          },
+          {
+            "q": "das Fachwissen",
+            "a": "المعرفة التخصصية"
+          },
+          {
+            "q": "«التقنية تحوّل العمل.»؟",
+            "a": "Die Technik wandelt die Arbeit."
+          },
+          {
+            "q": "die Kenntnisse",
+            "a": "المعارف"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«المعرفة التخصصية مهمّة.»؟",
+            "a": "Das Fachwissen ist wichtig."
+          },
+          {
+            "q": "«نحتاج معرفة تخصصية.»؟",
+            "a": "Wir brauchen Fachwissen."
+          },
+          {
+            "q": "wandeln",
+            "a": "يحوّل"
+          },
+          {
+            "q": "«نستخدم المعارف.»؟",
+            "a": "Wir nutzen die Kenntnisse."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Kenntnisse sind wichtig und das Fachwissen ist da. Wir brauchen Fachwissen und die Technik wandelt die Arbeit. Der Tag ist gut und wir sind zusammen.",
+      "ar": "الدراية والمعرفة التخصصية يقودان التحوّل!"
+    },
+    "srsBundleWordIds": [
+      "kenntnis",
+      "fachwissen",
+      "wandeln"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "kenntnisse ist!",
+          "de": "~~Die Kenntnisse ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "kenntnisse sind!",
+          "de": "Die Kenntnisse sind wichtig."
+        },
+        "exercise": {
+          "q": "Die Kenntnisse ___ wichtig.",
+          "a": "sind"
+        },
+        "whyArabicSpeakerFails": "العربية: الجمع يعامل معاملة المفرد أحياناً! والألمانية: die Kenntnisse جمع (بالـ -nisse!) فيحتاج sind! والمفرد die Kenntnis يحتاج ist! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Fachwissen!",
+          "de": "~~Der Fachwissen ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "das Fachwissen!",
+          "de": "Das Fachwissen ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Fachwissen ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «المعرفة» مؤنثة! والألمانية: المركّب يتبع آخر جزء — das Wissen ← das Fachwissen (das!)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "in die Arbeit!",
+          "de": "~~Die Technik wandelt in die Arbeit.~~"
+        },
+        "correct": {
+          "ar": "die Arbeit!",
+          "de": "Die Technik wandelt die Arbeit."
+        },
+        "exercise": {
+          "q": "Die Technik wandelt ___ Arbeit.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «يحوّل في» أحياناً! والألمانية: wandeln يتبع مفعوله مباشرة بلا حرف جرّ (Akkusativ: die Arbeit!)! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Kenntnis",
+      "https://www.duden.de/rechtschreibung/Fachwissen",
+      "https://www.duden.de/rechtschreibung/wandeln"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-kenntnis",
+    "word-fachwissen",
+    "word-wandeln"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 3 (العلم والتقنية!)",
+    "goetheWordListOverlap": [
+      "kenntnis",
+      "fachwissen",
+      "wandeln"
+    ]
+  }
+}

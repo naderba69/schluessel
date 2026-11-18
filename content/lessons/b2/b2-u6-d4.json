@@ -1,0 +1,392 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u6-d4",
+  "level": "B2",
+  "unit": 6,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Hygiene ist wichtig, die Ansteckung ist schlimm und das Immunsystem ist stark!",
+    "ar": "اليوم الرابع: النظافة الصحية والعدوى والجهاز المناعي! (الوقاية والحماية!)"
+  },
+  "canDoDaily": [
+    "يتكلّم عن النظافة والعدوى! (die Hygiene! die Ansteckung!)",
+    "يصف المناعة! (das Immunsystem! das Immunsystem haben!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "operation",
+      "heilung",
+      "symptom"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«النظافة الصحية مهمة.»؟"
+        },
+        "choices": [
+          "Die Hygiene ist wichtig.",
+          "Der Hygiene ist wichtig.",
+          "Das Hygiene ist wichtig."
+        ],
+        "answer": "Die Hygiene ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الجهاز المناعي قويّ.»؟"
+        },
+        "choices": [
+          "Das Immunsystem ist stark.",
+          "Der Immunsystem ist stark.",
+          "Die Immunsystem ist stark."
+        ],
+        "answer": "Das Immunsystem ist stark.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "hygiene",
+      "ansteckung",
+      "immunsystem"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ie-short",
+      "sp-st-initial",
+      "double-consonant"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Hygiene, Ansteckung, Immunsystem: Wir schützen die Gesundheit!",
+        "ar": "اليوم الرابع: الوقاية والحماية! (النظافة! العدوى! المناعة!)"
+      },
+      "situation": {
+        "de": "Hygiene, Ansteckung, Immunsystem — zusammen lernen.",
+        "ar": "نظافة! عدوى! مناعة! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Hygiene (die! -ie!) · die Ansteckung (die! -ung!) · das Immunsystem (das! مركّب!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: das Immunsystem haben! die Hygiene ist wichtig!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "operation",
+          "heilung",
+          "symptom"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Hygiene",
+                "ar": "النظافة الصحية"
+              },
+              {
+                "de": "die Ansteckung",
+                "ar": "العدوى"
+              },
+              {
+                "de": "das Immunsystem",
+                "ar": "الجهاز المناعي"
+              }
+            ],
+            "why": "die Hygiene النظافة الصحية (die! -ie!) · die Ansteckung العدوى (die! -ung!) · das Immunsystem الجهاز المناعي (das! مركّب!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "das Immunsystem haben",
+                "ar": "يملك جهازاً مناعياً"
+              },
+              {
+                "de": "die Hygiene ist wichtig",
+                "ar": "النظافة الصحية مهمة"
+              },
+              {
+                "de": "die Ansteckung ist schlimm",
+                "ar": "العدوى سيّئة"
+              }
+            ],
+            "why": "das Immunsystem haben (الملكية!) · die Hygiene ist wichtig! · die Ansteckung ist schlimm!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ernaehrung",
+          "entspannung",
+          "pflege"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (النظافة الصحية!)",
+            "a": "Hygiene",
+            "why": "die Hygiene النظافة الصحية (die! -ie!) — Die Hygiene ist wichtig."
+          },
+          {
+            "q": "Die ___ ist schlimm. (العدوى!)",
+            "a": "Ansteckung",
+            "why": "die Ansteckung العدوى (die! -ung!) — Die Ansteckung ist schlimm."
+          },
+          {
+            "q": "Das ___ ist stark. (الجهاز المناعي!)",
+            "a": "Immunsystem",
+            "why": "das Immunsystem الجهاز المناعي (das! مركّب!) — Das Immunsystem ist stark."
+          },
+          {
+            "q": "Das Immunsystem ist ___. (قويّ!)",
+            "a": "stark",
+            "why": "stark قويّ — Das Immunsystem ist stark."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "q": "~~der Hygiene ist wichtig.~~",
+            "a": "Die Hygiene ist wichtig.",
+            "why": "die Hygiene (die! -ie مؤنثة!)!"
+          },
+          {
+            "q": "~~die Immunsystem ist stark.~~",
+            "a": "Das Immunsystem ist stark.",
+            "why": "das Immunsystem (das! System محايد والمركب كذلك!)!"
+          },
+          {
+            "q": "~~das Ansteckung ist schlimm.~~",
+            "a": "Die Ansteckung ist schlimm.",
+            "why": "die Ansteckung (die! -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~Die Hygiene sind wichtig.~~",
+            "a": "Die Hygiene ist wichtig.",
+            "why": "المفرد die Hygiene مع ist (لا sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "armut",
+          "reichtum",
+          "spende"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالنظافة! (جملتان!)",
+            "a": "Die Hygiene ist wichtig. Das ist richtig.",
+            "why": "النظافة أولًا! (die Hygiene ist wichtig!)"
+          },
+          {
+            "q": "تحدّث عن العدوى! (جملتان!)",
+            "a": "Die Ansteckung ist schlimm. Das ist nicht gut.",
+            "why": "العدوى! (die Ansteckung ist schlimm!)"
+          },
+          {
+            "q": "تحدّث عن المناعة! (جملتان!)",
+            "a": "Das Immunsystem ist stark. Wir haben ein gutes Immunsystem.",
+            "why": "المناعة! (das Immunsystem haben!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«النظافة الصحية»؟",
+            "a": "die Hygiene"
+          },
+          {
+            "q": "«العدوى»؟",
+            "a": "die Ansteckung"
+          },
+          {
+            "q": "«الجهاز المناعي»؟",
+            "a": "das Immunsystem"
+          },
+          {
+            "q": "«النظافة الصحية مهمة.»؟",
+            "a": "Die Hygiene ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الجهاز المناعي قويّ.»؟",
+            "a": "Das Immunsystem ist stark."
+          },
+          {
+            "q": "die Ansteckung",
+            "a": "العدوى"
+          },
+          {
+            "q": "«العدوى سيّئة.»؟",
+            "a": "Die Ansteckung ist schlimm."
+          },
+          {
+            "q": "die Hygiene",
+            "a": "النظافة الصحية"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نملك جهازاً مناعياً.»؟",
+            "a": "Wir haben ein Immunsystem."
+          },
+          {
+            "q": "«الجهاز المناعي مهم.»؟",
+            "a": "Das Immunsystem ist wichtig."
+          },
+          {
+            "q": "die Hygiene",
+            "a": "النظافة الصحية"
+          },
+          {
+            "q": "«العدوى سيّئة.»؟",
+            "a": "Die Ansteckung ist schlimm."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Hygiene ist wichtig und die Ansteckung ist schlimm. Das Immunsystem ist stark und wir haben ein gutes Immunsystem. Der Tag ist gut und wir sind zusammen.",
+      "ar": "الوقاية والحماية: نعرف النظافة ونتجنّب العدوى ونقوّي المناعة!"
+    },
+    "srsBundleWordIds": [
+      "hygiene",
+      "ansteckung",
+      "immunsystem"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Hygiene!",
+          "de": "~~der Hygiene ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Hygiene!",
+          "de": "Die Hygiene ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Hygiene ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «النظافة» مؤنثة — والألمانية كذلك! لكن كلمات -ie مؤنثة دائماً (die!) والصيغة الأجنبية تخدع (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Immunsystem!",
+          "de": "~~die Immunsystem ist stark.~~"
+        },
+        "correct": {
+          "ar": "das Immunsystem!",
+          "de": "Das Immunsystem ist stark."
+        },
+        "exercise": {
+          "q": "___ Immunsystem ist stark.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «الجهاز المناعي» مذكّر! والألمانية: das Immunsystem (das! System محايد والمركب يتبع آخر جزء!) — عكس المركّبات المؤنثة die Zeitung! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Ansteckung!",
+          "de": "~~das Ansteckung ist schlimm.~~"
+        },
+        "correct": {
+          "ar": "die Ansteckung!",
+          "de": "Die Ansteckung ist schlimm."
+        },
+        "exercise": {
+          "q": "___ Ansteckung ist schlimm.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «العدوى» مؤنثة — والألمانية كذلك (die Ansteckung — -ung مؤنثة!) لكنها قد تُذكَّر في بعض اللهجات (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Hygiene",
+      "https://www.duden.de/rechtschreibung/Ansteckung",
+      "https://www.duden.de/rechtschreibung/Immunsystem"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-hygiene",
+    "word-ansteckung",
+    "word-immunsystem"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 6 (الصحّة والعافية!)",
+    "goetheWordListOverlap": [
+      "hygiene",
+      "ansteckung",
+      "immunsystem"
+    ]
+  }
+}

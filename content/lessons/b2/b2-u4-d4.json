@@ -1,0 +1,394 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u4-d4",
+  "level": "B2",
+  "unit": 4,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Wir argumentieren für die Meinung und belegen die Behauptung!",
+    "ar": "اليوم الرابع: الحجة والاستنتاج والدليل! (الرأي المبني!)"
+  },
+  "canDoDaily": [
+    "يجادل من أجل رأيه! (für die Meinung argumentieren!)",
+    "يثبت ويستنتج! (die Behauptung belegen! die Antwort folgern!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hinterfragen",
+      "misstrauisch",
+      "zensur"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«نجادل من أجل الرأي.»؟"
+        },
+        "choices": [
+          "Wir argumentieren für die Meinung.",
+          "Wir argumentieren die Meinung.",
+          "Wir argumentieren über die Meinung."
+        ],
+        "answer": "Wir argumentieren für die Meinung.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نُثبت الادّعاء.»؟"
+        },
+        "choices": [
+          "Wir belegen die Behauptung.",
+          "Wir belegen über die Behauptung.",
+          "Wir belegen auf die Behauptung."
+        ],
+        "answer": "Wir belegen die Behauptung.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "argumentieren",
+      "folgern",
+      "belegen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "vowel-long-short"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Argumentieren, folgern, belegen: Die Meinung stärken!",
+        "ar": "اليوم الرابع: نبني رأياً! (الحجة! الاستنتاج! الدليل!)"
+      },
+      "situation": {
+        "de": "Argumentieren, folgern, belegen — zusammen lernen.",
+        "ar": "حجة! استنتاج! دليل! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "argumentieren يجادل **من أجل** (für!) — وbelegen يُثبت **مباشرة** (بالنصب!)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: für die Meinung argumentieren! die Antwort folgern! die Behauptung belegen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hinterfragen",
+          "misstrauisch",
+          "zensur"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "argumentieren",
+                "ar": "يجادل"
+              },
+              {
+                "de": "folgern",
+                "ar": "يستنتج"
+              },
+              {
+                "de": "belegen",
+                "ar": "يثبت"
+              }
+            ],
+            "why": "argumentieren يجادل (-ieren بلا ge-!) · folgern يستنتج (بالنصب مباشرة!) · belegen يُثبت (بالنصب مباشرة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "für die Meinung argumentieren",
+                "ar": "يجادل من أجل الرأي"
+              },
+              {
+                "de": "die Antwort folgern",
+                "ar": "يستنتج الجواب"
+              },
+              {
+                "de": "die Behauptung belegen",
+                "ar": "يثبت الادّعاء"
+              },
+              {
+                "de": "die Behauptung",
+                "ar": "الادّعاء"
+              }
+            ],
+            "why": "für die Meinung argumentieren (für + النصب!) · die Antwort folgern! · die Behauptung belegen! · die Behauptung (die! مُدرَّسة!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ereignis",
+          "medium",
+          "uebertragen"
+        ],
+        "items": [
+          {
+            "q": "Wir ___ für die Meinung. (نجادل!)",
+            "a": "argumentieren",
+            "why": "argumentieren يجادل (-ieren بلا ge-!) — Wir argumentieren für die Meinung."
+          },
+          {
+            "q": "Wir ___ die Antwort. (نستنتج!)",
+            "a": "folgern",
+            "why": "folgern يستنتج (Präsens wir: folgern!) — Wir folgern die Antwort."
+          },
+          {
+            "q": "Wir ___ die Behauptung. (نُثبت!)",
+            "a": "belegen",
+            "why": "belegen يُثبت (Präsens wir: belegen!) — Wir belegen die Behauptung."
+          },
+          {
+            "q": "Sie ___ heute gut. (تجادل!)",
+            "a": "argumentiert",
+            "why": "Präsens sie: argumentiert (-ieren بلا ge-!) — Sie argumentiert heute gut."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "redaktion",
+          "sender",
+          "werbung"
+        ],
+        "items": [
+          {
+            "q": "~~Sie argumentierte heute gut.~~",
+            "a": "Sie argumentiert heute gut.",
+            "why": "النهاردة مضارع: argumentiert (لا argumentierte — ماضٍ!)!"
+          },
+          {
+            "q": "~~Wir argumentieren die Meinung.~~",
+            "a": "Wir argumentieren für die Meinung.",
+            "why": "argumentieren يجادل **من أجل** الرأي (für + النصب!)!"
+          },
+          {
+            "q": "~~Wir belegen über die Behauptung.~~",
+            "a": "Wir belegen die Behauptung.",
+            "why": "belegen يُثبت مباشرة (بالنصب بلا حرف!)!"
+          },
+          {
+            "q": "~~Wir folgern auf die Antwort.~~",
+            "a": "Wir folgern die Antwort.",
+            "why": "folgern يستنتج مباشرة (بالنصب بلا حرف!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wissenschaft",
+          "gedaechtnis",
+          "gehirn"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالحجة! (جملتان!)",
+            "a": "Wir argumentieren für die Meinung. Das ist wichtig.",
+            "why": "الحجة أولًا! (für die Meinung argumentieren!)"
+          },
+          {
+            "q": "تحدّث عن الاستنتاج! (جملتان!)",
+            "a": "Wir folgern die Antwort. Das ist gut.",
+            "why": "الاستنتاج! (die Antwort folgern!)"
+          },
+          {
+            "q": "تحدّث عن الإثبات! (جملتان!)",
+            "a": "Wir belegen die Behauptung. Die Behauptung ist falsch.",
+            "why": "الإثبات! (die Behauptung belegen!) — falsch (خاطئة!) من الوحدة 2!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يجادل»؟",
+            "a": "argumentieren"
+          },
+          {
+            "q": "«يستنتج»؟",
+            "a": "folgern"
+          },
+          {
+            "q": "«يثبت»؟",
+            "a": "belegen"
+          },
+          {
+            "q": "«نجادل من أجل الرأي.»؟",
+            "a": "Wir argumentieren für die Meinung."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نستنتج الجواب.»؟",
+            "a": "Wir folgern die Antwort."
+          },
+          {
+            "q": "belegen",
+            "a": "يثبت"
+          },
+          {
+            "q": "«نُثبت الادّعاء.»؟",
+            "a": "Wir belegen die Behauptung."
+          },
+          {
+            "q": "argumentieren",
+            "a": "يجادل"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«تجادل اليوم جيداً.»؟",
+            "a": "Sie argumentiert heute gut."
+          },
+          {
+            "q": "«الادّعاء خاطئ.»؟",
+            "a": "Die Behauptung ist falsch."
+          },
+          {
+            "q": "folgern",
+            "a": "يستنتج"
+          },
+          {
+            "q": "«نجادل من أجل الرأي.»؟",
+            "a": "Wir argumentieren für die Meinung."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Wir argumentieren für die Meinung und folgern die Antwort. Wir belegen die Behauptung und das ist gut. Der Tag ist gut und wir sind zusammen.",
+      "ar": "رأي مبني: حجة واستنتاج ودليل!"
+    },
+    "srsBundleWordIds": [
+      "argumentieren",
+      "folgern",
+      "belegen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "المضارع بالماضي!",
+          "de": "~~Sie argumentierte heute gut.~~"
+        },
+        "correct": {
+          "ar": "argumentiert!",
+          "de": "Sie argumentiert heute gut."
+        },
+        "exercise": {
+          "q": "Sie ___ heute gut. (مضارع!)",
+          "a": "argumentiert"
+        },
+        "whyArabicSpeakerFails": "العربية: الفعل المضارع واحد! والألمانية: -ieren بلا ge- في الماضي **والمضارع مختلفان** (argumentiert/argumentierte!) — «اليوم» تطلب المضارع! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "مباشرة!",
+          "de": "~~Wir argumentieren die Meinung.~~"
+        },
+        "correct": {
+          "ar": "für!",
+          "de": "Wir argumentieren für die Meinung."
+        },
+        "exercise": {
+          "q": "Wir argumentieren ___ die Meinung.",
+          "a": "für"
+        },
+        "whyArabicSpeakerFails": "العربية: «يجادل الرأيَ» يتعدّى مباشرة! والألمانية: argumentieren يجادل **من أجل** الرأي (für + النصب!) — ليس كل الأفعال مباشرة! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "über …!",
+          "de": "~~Wir belegen über die Behauptung.~~"
+        },
+        "correct": {
+          "ar": "مباشرةً!",
+          "de": "Wir belegen die Behauptung."
+        },
+        "exercise": {
+          "q": "Wir belegen ___ Behauptung. (مباشرة!)",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «يدلّ على/يثبت بـ» يأخذ حرف جرّ! والألمانية: belegen يُثبت الشيءَ نفسه (بالنصب بلا حرف!) — والقاعدة معكوسة تماماً مع argumentieren! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/argumentieren",
+      "https://www.duden.de/rechtschreibung/folgern",
+      "https://www.duden.de/rechtschreibung/belegen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-argumentieren",
+    "word-folgern",
+    "word-belegen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 4 (الإعلام والأخبار!)",
+    "goetheWordListOverlap": [
+      "argumentieren",
+      "folgern",
+      "belegen"
+    ]
+  }
+}

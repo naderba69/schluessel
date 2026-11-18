@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u4-d6",
+  "level": "B2",
+  "unit": 4,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Aufklärung ist wichtig, wir schreiben sachlich und bleiben gerecht!",
+    "ar": "اليوم السادس: قيم الإعلام! (التوعية والموضوعية والعدالة!)"
+  },
+  "canDoDaily": [
+    "يصف قيم الإعلام! (die Aufklärung! sachlich! gerecht!)",
+    "يكتب بموضوعية ويبقى عادلاً! (sachlich schreiben! gerecht bleiben!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "kommentieren",
+      "befragen",
+      "datenschutz"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«نكتب بموضوعية.»؟"
+        },
+        "choices": [
+          "Wir schreiben sachlich.",
+          "Wir schreiben ein sachlich.",
+          "Wir schreiben sachlichen."
+        ],
+        "answer": "Wir schreiben sachlich.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التوعية مهمّة.»؟"
+        },
+        "choices": [
+          "Die Aufklärung ist wichtig.",
+          "Der Aufklärung ist wichtig.",
+          "Das Aufklärung ist wichtig."
+        ],
+        "answer": "Die Aufklärung ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "aufklaerung",
+      "sachlich",
+      "gerecht"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "ch-ich-laut"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Aufklärung, sachlich, gerecht: Die Medien helfen!",
+        "ar": "اليوم السادس: قيم الإعلام! (التوعية! الموضوعية! العدالة!)"
+      },
+      "situation": {
+        "de": "Aufklärung, sachlich, gerecht — zusammen lernen.",
+        "ar": "توعية! موضوعية! عدالة! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الصفة ظرفاً وبعد bleiben بلا أداة وبلا نهاية (sachlich! gerecht!)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Aufklärung bringen! sachlich schreiben! gerecht bleiben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "kommentieren",
+          "befragen",
+          "datenschutz"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Aufklärung",
+                "ar": "التوعية"
+              },
+              {
+                "de": "sachlich",
+                "ar": "موضوعي"
+              },
+              {
+                "de": "gerecht",
+                "ar": "عادل"
+              }
+            ],
+            "why": "die Aufklärung التوعية (die! -ung!) · sachlich موضوعي (ظرفاً بلا أداة!) · gerecht عادل (بعد bleiben بلا نهاية!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Aufklärung bringen",
+                "ar": "يجلب التوعية"
+              },
+              {
+                "de": "sachlich schreiben",
+                "ar": "يكتب بموضوعية"
+              },
+              {
+                "de": "gerecht bleiben",
+                "ar": "يبقى عادلاً"
+              },
+              {
+                "de": "die Aufklärung",
+                "ar": "التوعية"
+              }
+            ],
+            "why": "die Aufklärung bringen! · sachlich schreiben! · gerecht bleiben (يبقى!) · die Aufklärung (die!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "argumentieren",
+          "folgern",
+          "belegen"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (التوعية!)",
+            "a": "Aufklärung",
+            "why": "die Aufklärung التوعية (die! -ung!) — Die Aufklärung ist wichtig."
+          },
+          {
+            "q": "Wir schreiben ___. (بموضوعية!)",
+            "a": "sachlich",
+            "why": "sachlich موضوعي (ظرفاً بلا أداة!) — Wir schreiben sachlich."
+          },
+          {
+            "q": "Wir bleiben ___. (عادلين!)",
+            "a": "gerecht",
+            "why": "gerecht عادل (بعد bleiben بلا نهاية!) — Wir bleiben gerecht."
+          },
+          {
+            "q": "Wir ___ sachlich. (نكتب!)",
+            "a": "schreiben",
+            "why": "schreiben يكتب (Präsens wir: schreiben!) — Wir schreiben sachlich."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hinterfragen",
+          "misstrauisch",
+          "zensur"
+        ],
+        "items": [
+          {
+            "q": "~~der Aufklärung ist wichtig.~~",
+            "a": "Die Aufklärung ist wichtig.",
+            "why": "die Aufklärung (die! كل كلمات -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~Wir schreiben ein sachlich.~~",
+            "a": "Wir schreiben sachlich.",
+            "why": "الصفة ظرفاً بلا أداة (sachlich — لا ein!)!"
+          },
+          {
+            "q": "~~Wir bleiben gerechten.~~",
+            "a": "Wir bleiben gerecht.",
+            "why": "بعد bleiben: الصفة بلا نهاية صرف (gerecht — لا gerechten!)!"
+          },
+          {
+            "q": "~~Die Aufklärung sind wichtig.~~",
+            "a": "Die Aufklärung ist wichtig.",
+            "why": "المفرد die Aufklärung مع ist (لا sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ereignis",
+          "medium",
+          "uebertragen"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالتوعية! (جملتان!)",
+            "a": "Die Aufklärung ist wichtig. Wir bringen die Aufklärung.",
+            "why": "التوعية أولًا! (die Aufklärung bringen!)"
+          },
+          {
+            "q": "تحدّث عن الموضوعية! (جملتان!)",
+            "a": "Wir schreiben sachlich. Das ist wichtig.",
+            "why": "الموضوعية! (sachlich schreiben!)"
+          },
+          {
+            "q": "تحدّث عن العدالة! (جملتان!)",
+            "a": "Wir bleiben gerecht. Das ist gut.",
+            "why": "العدالة! (gerecht bleiben!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التوعية»؟",
+            "a": "die Aufklärung"
+          },
+          {
+            "q": "«موضوعي»؟",
+            "a": "sachlich"
+          },
+          {
+            "q": "«عادل»؟",
+            "a": "gerecht"
+          },
+          {
+            "q": "«نكتب بموضوعية.»؟",
+            "a": "Wir schreiben sachlich."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التوعية مهمّة.»؟",
+            "a": "Die Aufklärung ist wichtig."
+          },
+          {
+            "q": "gerecht",
+            "a": "عادل"
+          },
+          {
+            "q": "«نبقى عادلين.»؟",
+            "a": "Wir bleiben gerecht."
+          },
+          {
+            "q": "sachlich",
+            "a": "موضوعي"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نجلب التوعية.»؟",
+            "a": "Wir bringen die Aufklärung."
+          },
+          {
+            "q": "«الإعلام يساعد.»؟",
+            "a": "Die Medien helfen."
+          },
+          {
+            "q": "die Aufklärung",
+            "a": "التوعية"
+          },
+          {
+            "q": "«نكتب بموضوعية.»؟",
+            "a": "Wir schreiben sachlich."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Aufklärung ist wichtig und wir schreiben sachlich. Wir bleiben gerecht und das ist gut. Der Tag ist gut und wir sind zusammen.",
+      "ar": "قيم الإعلام: نُوعّي ونكتب بموضوعية ونبقى عادلين!"
+    },
+    "srsBundleWordIds": [
+      "aufklaerung",
+      "sachlich",
+      "gerecht"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Aufklärung!",
+          "de": "~~der Aufklärung ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Aufklärung!",
+          "de": "Die Aufklärung ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Aufklärung ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التنوير» مذكّر! والألمانية: كل كلمات -ung مؤنثة (die Aufklärung!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "ein sachlich!",
+          "de": "~~Wir schreiben ein sachlich.~~"
+        },
+        "correct": {
+          "ar": "بلا أداة!",
+          "de": "Wir schreiben sachlich."
+        },
+        "exercise": {
+          "q": "Wir schreiben ___ sachlich. (بلا أداة!)",
+          "a": "—"
+        },
+        "whyArabicSpeakerFails": "العربية: «بموضوعية» ظرف بلا أداة أحياناً وبها أحياناً! والألمانية: الصفة الظرفية بلا أداة إطلاقاً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "gerechten!",
+          "de": "~~Wir bleiben gerechten.~~"
+        },
+        "correct": {
+          "ar": "بلا نهاية!",
+          "de": "Wir bleiben gerecht."
+        },
+        "exercise": {
+          "q": "Wir bleiben ___. (بلا نهاية!)",
+          "a": "gerecht"
+        },
+        "whyArabicSpeakerFails": "العربية: الصفة تتغيّر بالحالة! والألمانية: بعد ist/bleiben الصفة بلا نهاية صرف إطلاقاً (gerecht — لا gerechten!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Aufklaerung",
+      "https://www.duden.de/rechtschreibung/sachlich",
+      "https://www.duden.de/rechtschreibung/gerecht"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-aufklaerung",
+    "word-sachlich",
+    "word-gerecht"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 4 (الإعلام والأخبار!)",
+    "goetheWordListOverlap": [
+      "aufklaerung",
+      "sachlich",
+      "gerecht"
+    ]
+  }
+}

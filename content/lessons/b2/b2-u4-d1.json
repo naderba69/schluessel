@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u4-d1",
+  "level": "B2",
+  "unit": 4,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Redaktion arbeitet, der Sender berichtet und die Werbung kommt!",
+    "ar": "الوحدة 4: الإعلام والأخبار! (التحرير! القناة! والدعاية!)"
+  },
+  "canDoDaily": [
+    "يتحدّث عن الإعلام! (die Redaktion! der Sender! die Werbung!)",
+    "يفهم أن القناة تنقل الأخبار! (der Sender berichtet!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "wissenschaft",
+      "gedaechtnis",
+      "gehirn"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«القناة تنقل الأخبار.»؟"
+        },
+        "choices": [
+          "Der Sender berichtet.",
+          "Die Sender berichtet.",
+          "Das Sender berichtet."
+        ],
+        "answer": "Der Sender berichtet.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التحرير يعمل.»؟"
+        },
+        "choices": [
+          "Die Redaktion arbeitet.",
+          "Der Redaktion arbeitet.",
+          "Das Redaktion arbeitet."
+        ],
+        "answer": "Die Redaktion arbeitet.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "redaktion",
+      "sender",
+      "werbung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "r-uvular"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Redaktion, Sender, Werbung: Die Medien arbeiten!",
+        "ar": "اليوم الأول في الإعلام: التحرير والقناة والدعاية!"
+      },
+      "situation": {
+        "de": "Redaktion, Sender, Werbung — zusammen lernen.",
+        "ar": "تحرير! قناة! دعاية! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "المصدر المؤنث بمعنى المذكر: die Redaktion (التحرير مذكّر بالعربية!)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Redaktion arbeitet! der Sender berichtet! die Werbung sehen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wissenschaft",
+          "gedaechtnis",
+          "gehirn"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Redaktion",
+                "ar": "التحرير"
+              },
+              {
+                "de": "der Sender",
+                "ar": "القناة"
+              },
+              {
+                "de": "die Werbung",
+                "ar": "الدعاية"
+              }
+            ],
+            "why": "die Redaktion التحرير (die! مصدر مؤنث بمعنى مذكر!) · der Sender القناة (der! مؤنثة بالعربية!) · die Werbung الدعاية (die! -ung!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Redaktion arbeitet",
+                "ar": "يعمل التحرير"
+              },
+              {
+                "de": "der Sender berichtet",
+                "ar": "تنقل القناة الأخبار"
+              },
+              {
+                "de": "die Werbung sehen",
+                "ar": "يرى الدعاية"
+              },
+              {
+                "de": "der Sender",
+                "ar": "القناة"
+              }
+            ],
+            "why": "die Redaktion arbeitet! · der Sender berichtet (تنقل الأخبار!) · die Werbung sehen! · der Sender (der!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "kenntnis",
+          "fachwissen",
+          "wandeln"
+        ],
+        "items": [
+          {
+            "q": "Die ___ arbeitet. (التحرير!)",
+            "a": "Redaktion",
+            "why": "die Redaktion التحرير (die!) — Die Redaktion arbeitet."
+          },
+          {
+            "q": "Der ___ berichtet. (القناة!)",
+            "a": "Sender",
+            "why": "der Sender القناة (der!) — Der Sender berichtet."
+          },
+          {
+            "q": "Die ___ kommt. (الدعاية!)",
+            "a": "Werbung",
+            "why": "die Werbung الدعاية (die! -ung!) — Die Werbung kommt."
+          },
+          {
+            "q": "Die Redaktion ___. (تعمل!)",
+            "a": "arbeitet",
+            "why": "arbeiten يعمل (Präsens er/sie: arbeitet!) — Die Redaktion arbeitet."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "programmieren",
+          "automatisierung",
+          "technologie"
+        ],
+        "items": [
+          {
+            "q": "~~der Redaktion arbeitet.~~",
+            "a": "Die Redaktion arbeitet.",
+            "why": "die Redaktion (die! مصدر مؤنث بمعنى مذكر!)!"
+          },
+          {
+            "q": "~~die Sender berichtet.~~",
+            "a": "Der Sender berichtet.",
+            "why": "der Sender (der! «القناة» مؤنثة بالعربية فقط!)!"
+          },
+          {
+            "q": "~~das Werbung kommt.~~",
+            "a": "Die Werbung kommt.",
+            "why": "die Werbung (die! كل كلمات -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~Die Redaktion arbeiten.~~",
+            "a": "Die Redaktion arbeitet.",
+            "why": "المفرد مع الفعل المفرد: Die Redaktion arbeitet (لا arbeiten!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "roboter",
+          "algorithmus",
+          "vernetzung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالتحرير! (جملتان!)",
+            "a": "Die Redaktion arbeitet. Das ist wichtig.",
+            "why": "التحرير أولًا! (die Redaktion arbeitet!)"
+          },
+          {
+            "q": "تحدّث عن القناة! (جملتان!)",
+            "a": "Der Sender berichtet. Das ist gut.",
+            "why": "القناة! (der Sender berichtet!)"
+          },
+          {
+            "q": "تحدّث عن الدعاية! (جملتان!)",
+            "a": "Die Werbung kommt. Die Werbung ist überall.",
+            "why": "الدعاية! (die Werbung kommt!) — überall (في كل مكان!) من الوحدة 2!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التحرير»؟",
+            "a": "die Redaktion"
+          },
+          {
+            "q": "«القناة»؟",
+            "a": "der Sender"
+          },
+          {
+            "q": "«الدعاية»؟",
+            "a": "die Werbung"
+          },
+          {
+            "q": "«القناة تنقل الأخبار.»؟",
+            "a": "Der Sender berichtet."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التحرير يعمل.»؟",
+            "a": "Die Redaktion arbeitet."
+          },
+          {
+            "q": "der Sender",
+            "a": "القناة"
+          },
+          {
+            "q": "«الدعاية تأتي.»؟",
+            "a": "Die Werbung kommt."
+          },
+          {
+            "q": "die Redaktion",
+            "a": "التحرير"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الدعاية»؟",
+            "a": "die Werbung"
+          },
+          {
+            "q": "«يرى الدعاية.»؟",
+            "a": "Wir sehen die Werbung."
+          },
+          {
+            "q": "der Sender",
+            "a": "القناة"
+          },
+          {
+            "q": "«التحرير يعمل.»؟",
+            "a": "Die Redaktion arbeitet."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Redaktion arbeitet und der Sender berichtet. Die Werbung kommt und das ist normal. Der Tag ist gut und wir sind zusammen.",
+      "ar": "الإعلام في جمل: التحرير يعمل والقناة تنقل والدعاية تأتي!"
+    },
+    "srsBundleWordIds": [
+      "redaktion",
+      "sender",
+      "werbung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Redaktion!",
+          "de": "~~der Redaktion arbeitet.~~"
+        },
+        "correct": {
+          "ar": "die Redaktion!",
+          "de": "Die Redaktion arbeitet."
+        },
+        "exercise": {
+          "q": "___ Redaktion arbeitet.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التحرير» مذكّر (مصدر!)! والألمانية: die Redaktion (die!) — المصدر المؤنث بمعنى المذكر سمة ألمانية (D243)! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Sender!",
+          "de": "~~die Sender berichtet.~~"
+        },
+        "correct": {
+          "ar": "der Sender!",
+          "de": "Der Sender berichtet."
+        },
+        "exercise": {
+          "q": "___ Sender berichtet.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «القناة/المحطة» مؤنثة! والألمانية: der Sender (der!) — المذكر بالعربية مؤنث بالألمانية والعكس! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Werbung!",
+          "de": "~~das Werbung kommt.~~"
+        },
+        "correct": {
+          "ar": "die Werbung!",
+          "de": "Die Werbung kommt."
+        },
+        "exercise": {
+          "q": "___ Werbung kommt.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الدعاية» مؤنثة — والألمانية كذلك: كل كلمات -ung مؤنثة (die Werbung!) — هذه المرة ألمانيتك في صفّك! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Redaktion",
+      "https://www.duden.de/rechtschreibung/Sender",
+      "https://www.duden.de/rechtschreibung/Werbung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-redaktion",
+    "word-sender",
+    "word-werbung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 4 (الإعلام والأخبار!)",
+    "goetheWordListOverlap": [
+      "redaktion",
+      "sender",
+      "werbung"
+    ]
+  }
+}

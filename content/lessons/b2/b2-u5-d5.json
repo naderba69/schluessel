@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u5-d5",
+  "level": "B2",
+  "unit": 5,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Hersteller produziert und die Rückgabe ist möglich!",
+    "ar": "اليوم الخامس: المصنّع والمستعمل والإرجاع! (حقوق المستهلك!)"
+  },
+  "canDoDaily": [
+    "يصف المصنّع والمستعمل! (der Hersteller! gebraucht!)",
+    "يقول إن الإرجاع ممكن! (die Rückgabe ist möglich!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "arbeitgeber",
+      "anstellung",
+      "ruhestand"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«نشتري مستعملاً.»؟"
+        },
+        "choices": [
+          "Wir kaufen gebraucht.",
+          "Wir kaufen ein gebraucht.",
+          "Wir kaufen gebrauchten."
+        ],
+        "answer": "Wir kaufen gebraucht.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الإرجاع ممكن.»؟"
+        },
+        "choices": [
+          "Die Rückgabe ist möglich.",
+          "Der Rückgabe ist möglich.",
+          "Das Rückgabe ist möglich."
+        ],
+        "answer": "Die Rückgabe ist möglich.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "hersteller",
+      "gebraucht",
+      "rueckgabe"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "sp-st-initial",
+      "umlaut-u"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Hersteller, gebraucht, Rückgabe: Die Rechte des Kunden!",
+        "ar": "اليوم الخامس: حقوق المستهلك! (المصنّع! المستعمل! الإرجاع!)"
+      },
+      "situation": {
+        "de": "Hersteller, gebraucht, Rückgabe — zusammen lernen.",
+        "ar": "مصنّع! مستعمل! إرجاع! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Rückgabe (die!) — die Gabe في آخرها مؤنثة!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: der Hersteller produziert! gebraucht kaufen! die Rückgabe ist möglich!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "arbeitgeber",
+          "anstellung",
+          "ruhestand"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "der Hersteller",
+                "ar": "المصنّع"
+              },
+              {
+                "de": "gebraucht",
+                "ar": "مستعمل"
+              },
+              {
+                "de": "die Rückgabe",
+                "ar": "الإرجاع"
+              }
+            ],
+            "why": "der Hersteller المصنّع (der! -er مذكّر!) · gebraucht مستعمل (ظرفاً بلا أداة!) · die Rückgabe الإرجاع (die! die Gabe في آخرها!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Hersteller produziert",
+                "ar": "ينتج المصنّع"
+              },
+              {
+                "de": "gebraucht kaufen",
+                "ar": "يشتري مستعملاً"
+              },
+              {
+                "de": "die Rückgabe ist möglich",
+                "ar": "الإرجاع ممكن"
+              },
+              {
+                "de": "die Rückgabe",
+                "ar": "الإرجاع"
+              }
+            ],
+            "why": "der Hersteller produziert (من d2!) · gebraucht kaufen! · die Rückgabe ist möglich! · die Rückgabe (die!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "finanzieren",
+          "finanzen",
+          "zinsen"
+        ],
+        "items": [
+          {
+            "q": "Der ___ produziert. (المصنّع!)",
+            "a": "Hersteller",
+            "why": "der Hersteller المصنّع (der! -er!) — Der Hersteller produziert."
+          },
+          {
+            "q": "Wir kaufen ___. (مستعملاً!)",
+            "a": "gebraucht",
+            "why": "gebraucht مستعمل (ظرفاً بلا أداة!) — Wir kaufen gebraucht."
+          },
+          {
+            "q": "Die ___ ist möglich. (الإرجاع!)",
+            "a": "Rückgabe",
+            "why": "die Rückgabe الإرجاع (die!) — Die Rückgabe ist möglich."
+          },
+          {
+            "q": "Der Hersteller ___ die Ware. (ينتج!)",
+            "a": "produziert",
+            "why": "produzieren ينتج (Präsens er/sie: produziert!) — Der Hersteller produziert die Ware."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "produzieren",
+          "lieferung",
+          "sparsam"
+        ],
+        "items": [
+          {
+            "q": "~~die Hersteller produziert.~~",
+            "a": "Der Hersteller produziert.",
+            "why": "der Hersteller (der! -er مذكّر!)!"
+          },
+          {
+            "q": "~~Wir kaufen ein gebraucht.~~",
+            "a": "Wir kaufen gebraucht.",
+            "why": "الصفة ظرفاً بلا أداة (gebraucht — لا ein!)!"
+          },
+          {
+            "q": "~~der Rückgabe ist möglich.~~",
+            "a": "Die Rückgabe ist möglich.",
+            "why": "die Rückgabe (die! die Gabe في آخرها!)!"
+          },
+          {
+            "q": "~~Die Rückgabe sind möglich.~~",
+            "a": "Die Rückgabe ist möglich.",
+            "why": "المفرد die Rückgabe مع ist (لا sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wirtschaft",
+          "verbraucher",
+          "verschwendung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالمصنّع! (جملتان!)",
+            "a": "Der Hersteller produziert. Das ist wichtig.",
+            "why": "المصنّع أولًا! (der Hersteller produziert!)"
+          },
+          {
+            "q": "تحدّث عن المستعمل! (جملتان!)",
+            "a": "Wir kaufen gebraucht. Die Ware ist gut.",
+            "why": "المستعمل! (gebraucht kaufen!)"
+          },
+          {
+            "q": "تحدّث عن الإرجاع! (جملتان!)",
+            "a": "Die Rückgabe ist möglich. Das ist wichtig.",
+            "why": "الإرجاع! (die Rückgabe ist möglich!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المصنّع»؟",
+            "a": "der Hersteller"
+          },
+          {
+            "q": "«مستعمل»؟",
+            "a": "gebraucht"
+          },
+          {
+            "q": "«الإرجاع»؟",
+            "a": "die Rückgabe"
+          },
+          {
+            "q": "«المصنّع ينتج.»؟",
+            "a": "Der Hersteller produziert."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نشتري مستعملاً.»؟",
+            "a": "Wir kaufen gebraucht."
+          },
+          {
+            "q": "die Rückgabe",
+            "a": "الإرجاع"
+          },
+          {
+            "q": "«الإرجاع ممكن.»؟",
+            "a": "Die Rückgabe ist möglich."
+          },
+          {
+            "q": "der Hersteller",
+            "a": "المصنّع"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«البضاعة جيدة.»؟",
+            "a": "Die Ware ist gut."
+          },
+          {
+            "q": "«المصنّع ينتج البضاعة.»؟",
+            "a": "Der Hersteller produziert die Ware."
+          },
+          {
+            "q": "gebraucht",
+            "a": "مستعمل"
+          },
+          {
+            "q": "«الإرجاع ممكن.»؟",
+            "a": "Die Rückgabe ist möglich."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Hersteller produziert und wir kaufen gebraucht. Die Rückgabe ist möglich und das ist gut. Der Tag ist gut und wir sind zusammen.",
+      "ar": "حقوق المستهلك: نعرف المصنّع ونشتري بوعي والإرجاع ممكن!"
+    },
+    "srsBundleWordIds": [
+      "hersteller",
+      "gebraucht",
+      "rueckgabe"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Hersteller!",
+          "de": "~~die Hersteller produziert.~~"
+        },
+        "correct": {
+          "ar": "der Hersteller!",
+          "de": "Der Hersteller produziert."
+        },
+        "exercise": {
+          "q": "___ Hersteller produziert.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «المصنّع» مذكّر — والألمانية كذلك: كلمات الفاعل على -er مذكّرة (der Hersteller!) — لكن الغالب مؤنث فلا تعمّم العكس! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "ein gebraucht!",
+          "de": "~~Wir kaufen ein gebraucht.~~"
+        },
+        "correct": {
+          "ar": "بلا أداة!",
+          "de": "Wir kaufen gebraucht."
+        },
+        "exercise": {
+          "q": "Wir kaufen ___ gebraucht. (بلا أداة!)",
+          "a": "—"
+        },
+        "whyArabicSpeakerFails": "العربية: «مستعملاً» نكرة قد تُعرَّف! والألمانية: الصفة الظرفية بلا أداة إطلاقاً (مثل sachlich وsparsam!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Rückgabe!",
+          "de": "~~der Rückgabe ist möglich.~~"
+        },
+        "correct": {
+          "ar": "die Rückgabe!",
+          "de": "Die Rückgabe ist möglich."
+        },
+        "exercise": {
+          "q": "___ Rückgabe ist möglich.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الإرجاع» مذكّر! والألمانية: die Rückgabe (die!) — die Gabe (العطاء!) في آخرها مؤنثة! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Hersteller",
+      "https://www.duden.de/rechtschreibung/gebraucht",
+      "https://www.duden.de/rechtschreibung/Rueckgabe"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-hersteller",
+    "word-gebraucht",
+    "word-rueckgabe"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 5 (الاقتصاد والاستهلاك!)",
+    "goetheWordListOverlap": [
+      "hersteller",
+      "gebraucht",
+      "rueckgabe"
+    ]
+  }
+}

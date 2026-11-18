@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u4-d3",
+  "level": "B2",
+  "unit": 4,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Wir hinterfragen die Meldung und die Zensur ist schlimm!",
+    "ar": "اليوم الثالث: التشكيك والريبة والرقابة! (نتميّز الأخبار!)"
+  },
+  "canDoDaily": [
+    "يتشكّك في الخبر! (die Meldung hinterfragen!)",
+    "يصف الرقابة والريبة! (die Zensur ist schlimm! Ich bin misstrauisch!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "ereignis",
+      "medium",
+      "uebertragen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«أنا غير واثق.»؟"
+        },
+        "choices": [
+          "Ich bin misstrauisch.",
+          "Ich bin ein misstrauisch.",
+          "Ich habe misstrauisch."
+        ],
+        "answer": "Ich bin misstrauisch.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الرقابة سيّئة.»؟"
+        },
+        "choices": [
+          "Die Zensur ist schlimm.",
+          "Der Zensur ist schlimm.",
+          "Das Zensur ist schlimm."
+        ],
+        "answer": "Die Zensur ist schlimm.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "hinterfragen",
+      "misstrauisch",
+      "zensur"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "double-consonant",
+      "r-uvular"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Hinterfragen, misstrauisch, Zensur: Wir prüfen die Medien!",
+        "ar": "اليوم الثالث: نتميّز الأخبار! (التشكّك! الريبة! الرقابة!)"
+      },
+      "situation": {
+        "de": "Hinterfragen, misstrauisch, Zensur — zusammen lernen.",
+        "ar": "تشكّك! ريبة! رقابة! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الصفة بعد ist بلا أداة (Ich bin misstrauisch — لا ein!)!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Meldung hinterfragen! misstrauisch sein! die Zensur nicht mögen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ereignis",
+          "medium",
+          "uebertragen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "hinterfragen",
+                "ar": "يتشكّك في"
+              },
+              {
+                "de": "misstrauisch",
+                "ar": "غير واثق"
+              },
+              {
+                "de": "die Zensur",
+                "ar": "الرقابة"
+              }
+            ],
+            "why": "hinterfragen يتشكّك في (Akkusativ مباشرة!) · misstrauisch غير واثق (صفة!) · die Zensur الرقابة (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Meldung hinterfragen",
+                "ar": "يتشكّك في الخبر"
+              },
+              {
+                "de": "misstrauisch sein",
+                "ar": "يكون غير واثق"
+              },
+              {
+                "de": "die Zensur nicht mögen",
+                "ar": "لا يحب الرقابة"
+              },
+              {
+                "de": "die Zensur",
+                "ar": "الرقابة"
+              }
+            ],
+            "why": "die Meldung hinterfragen! · misstrauisch sein! · die Zensur nicht mögen (لا يحب!) · die Zensur (die!)"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "redaktion",
+          "sender",
+          "werbung"
+        ],
+        "items": [
+          {
+            "q": "Wir ___ die Meldung. (نتشكّك في!)",
+            "a": "hinterfragen",
+            "why": "hinterfragen يتشكّك (Präsens wir: hinterfragen!) — Wir hinterfragen die Meldung."
+          },
+          {
+            "q": "Ich bin ___. (غير واثق!)",
+            "a": "misstrauisch",
+            "why": "misstrauisch غير واثق (صفة بعد ist بلا أداة!) — Ich bin misstrauisch."
+          },
+          {
+            "q": "Die ___ ist schlimm. (الرقابة!)",
+            "a": "Zensur",
+            "why": "die Zensur الرقابة (die!) — Die Zensur ist schlimm."
+          },
+          {
+            "q": "Wir hinterfragen die ___. (الخبر!)",
+            "a": "Meldung",
+            "why": "die Meldung الخبر (die! مُدرَّسة!) — Wir hinterfragen die Meldung."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wissenschaft",
+          "gedaechtnis",
+          "gehirn"
+        ],
+        "items": [
+          {
+            "q": "~~Ich bin ein misstrauisch.~~",
+            "a": "Ich bin misstrauisch.",
+            "why": "الصفة بعد ist بلا أداة! (لا ein!)!"
+          },
+          {
+            "q": "~~der Zensur ist schlimm.~~",
+            "a": "Die Zensur ist schlimm.",
+            "why": "die Zensur (die! مؤنثة!)!"
+          },
+          {
+            "q": "~~Wir hinterfragen über die Meldung.~~",
+            "a": "Wir hinterfragen die Meldung.",
+            "why": "hinterfragen يتشكّك في الشيءَ مباشرة (Akkusativ بلا حرف!)!"
+          },
+          {
+            "q": "~~Die Zensur sind schlimm.~~",
+            "a": "Die Zensur ist schlimm.",
+            "why": "المفرد die Zensur مع ist (لا sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "kenntnis",
+          "fachwissen",
+          "wandeln"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالتشكّك! (جملتان!)",
+            "a": "Wir hinterfragen die Meldung. Das ist wichtig.",
+            "why": "التشكّك أولًا! (die Meldung hinterfragen!)"
+          },
+          {
+            "q": "تحدّث عن الرقابة! (جملتان!)",
+            "a": "Die Zensur ist schlimm. Wir mögen die Zensur nicht.",
+            "why": "الرقابة! (die Zensur nicht mögen!)"
+          },
+          {
+            "q": "تحدّث عن الريبة! (جملتان!)",
+            "a": "Ich bin misstrauisch. Die Meldung ist komisch.",
+            "why": "الريبة! (misstrauisch sein!) — komisch (غريبة!) من الوحدة 2!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«يتشكّك في»؟",
+            "a": "hinterfragen"
+          },
+          {
+            "q": "«غير واثق»؟",
+            "a": "misstrauisch"
+          },
+          {
+            "q": "«الرقابة»؟",
+            "a": "die Zensur"
+          },
+          {
+            "q": "«نتشكّك في الخبر.»؟",
+            "a": "Wir hinterfragen die Meldung."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«أنا غير واثق.»؟",
+            "a": "Ich bin misstrauisch."
+          },
+          {
+            "q": "die Zensur",
+            "a": "الرقابة"
+          },
+          {
+            "q": "«الرقابة سيّئة.»؟",
+            "a": "Die Zensur ist schlimm."
+          },
+          {
+            "q": "hinterfragen",
+            "a": "يتشكّك في"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«لا نحب الرقابة.»؟",
+            "a": "Wir mögen die Zensur nicht."
+          },
+          {
+            "q": "«الخبر غريب.»؟",
+            "a": "Die Meldung ist komisch."
+          },
+          {
+            "q": "misstrauisch",
+            "a": "غير واثق"
+          },
+          {
+            "q": "«نتشكّك في الخبر.»؟",
+            "a": "Wir hinterfragen die Meldung."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Wir hinterfragen die Meldung und ich bin misstrauisch. Die Zensur ist schlimm und wir mögen die Zensur nicht. Der Tag ist gut und wir sind zusammen.",
+      "ar": "نتميّز الأخبار: نتشكّك وننتقد الرقابة!"
+    },
+    "srsBundleWordIds": [
+      "hinterfragen",
+      "misstrauisch",
+      "zensur"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "ein misstrauisch!",
+          "de": "~~Ich bin ein misstrauisch.~~"
+        },
+        "correct": {
+          "ar": "بلا أداة!",
+          "de": "Ich bin misstrauisch."
+        },
+        "exercise": {
+          "q": "Ich bin ___ misstrauisch. (بلا أداة!)",
+          "a": "—"
+        },
+        "whyArabicSpeakerFails": "العربية: «غير واثق» صفة تُعرَّف بالألف واللام! والألمانية: الصفة بعد ist بلا أداة إطلاقاً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Zensur!",
+          "de": "~~der Zensur ist schlimm.~~"
+        },
+        "correct": {
+          "ar": "die Zensur!",
+          "de": "Die Zensur ist schlimm."
+        },
+        "exercise": {
+          "q": "___ Zensur ist schlimm.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الرقابة» مؤنثة — والألمانية كذلك: die Zensur (die!) — لكن الغالب مذكّر فلا تعمّم العكس! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "über …!",
+          "de": "~~Wir hinterfragen über die Meldung.~~"
+        },
+        "correct": {
+          "ar": "مباشرةً!",
+          "de": "Wir hinterfragen die Meldung."
+        },
+        "exercise": {
+          "q": "Wir hinterfragen ___ Meldung. (مباشرة!)",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «يشكّك في» يأخذ حرف جرّ! والألمانية: hinterfragen يتشكّك في الشيءَ نفسه (Akkusativ بلا حرف!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/hinterfragen",
+      "https://www.duden.de/rechtschreibung/misstrauisch",
+      "https://www.duden.de/rechtschreibung/Zensur"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-hinterfragen",
+    "word-misstrauisch",
+    "word-zensur"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 4 (الإعلام والأخبار!)",
+    "goetheWordListOverlap": [
+      "hinterfragen",
+      "misstrauisch",
+      "zensur"
+    ]
+  }
+}
