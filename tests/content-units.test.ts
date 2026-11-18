@@ -1661,6 +1661,27 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     }
   });
 
+  it("الاختبارات الدورية: تغطية الجدول B1 (D560 — قصير 2..14 + شهرية 4/8/12) — تراكمية وبحدود الحجم", () => {
+    const kurz = ALL_PRUEFUNGEN.filter((t) => t.kind === "kurztest" && t.level === "B1");
+    const monat = ALL_PRUEFUNGEN.filter((t) => t.kind === "monatspruefung" && t.level === "B1");
+    expect(kurz.map((x) => x.week).sort((x, y) => x - y)).toEqual([2, 4, 6, 8, 10, 12, 14]);
+    expect(monat.map((x) => x.week).sort((x, y) => x - y)).toEqual([4, 8, 12]);
+    const sat = new Date(2026, 9, 17);
+    for (let w = 2; w <= 14; w += 2) expect(cyclicTestFor(ALL_PRUEFUNGEN, "B1", w, sat)?.id, `الأسبوع ${w}`).toBeTruthy();
+    for (const t of kurz) {
+      expect(t.items.length).toBeLessThanOrEqual(12);
+      expect(t.timeBudgetMin).toBe(15);
+    }
+    for (const t of monat) {
+      expect(t.items.length).toBeGreaterThanOrEqual(10);
+      expect(t.timeBudgetMin).toBe(45);
+    }
+    for (const t of [...kurz, ...monat]) {
+      expect(t.passingScore).toBe(0.75);
+      expect(Math.max(...t.coversUnits), t.id).toBe(t.week);
+    }
+  });
+
   it("الامتحان التجريبي: 4 مهارات كاملة + حدود الصدق", () => {
     expect(ALL_MODELLTESTS.length).toBeGreaterThanOrEqual(1);
     for (const t of ALL_MODELLTESTS) {
