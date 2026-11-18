@@ -1,0 +1,76 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b1-mt1-hoeren-teil3",
+ "kind": "dialogue",
+ "level": "B1",
+ "title": {
+  "de": "Hören Teil 3 — Telefonate: Wo ist die Person?",
+  "ar": "الاستماع — القسم 3: مكالمات هاتفية — أين الشخص؟"
+ },
+ "usedIn": [
+  "b1-modelltest-1#hoeren-teil3"
+ ],
+ "lengthScale": 1.1,
+ "lines": [
+  {
+   "id": "b1m1-h3-d1-l1",
+   "speaker": "frau-schmidt",
+   "text": "Hallo Thomas, ich bin gerade im Krankenhaus. Mein Vater ist krank.",
+   "direction": "الهاتف — جادة"
+  },
+  {
+   "id": "b1m1-h3-d1-l2",
+   "speaker": "thomas",
+   "text": "Das tut mir leid. Kann ich etwas bringen?",
+   "direction": "توماس — يهتم"
+  },
+  {
+   "id": "b1m1-h3-d2-l1",
+   "speaker": "thomas",
+   "text": "Ayse, ich bin noch im Büro. Ich komme in einer Stunde.",
+   "direction": "توماس — متأخر"
+  },
+  {
+   "id": "b1m1-h3-d2-l2",
+   "speaker": "ayse",
+   "text": "Kein Problem. Wir sehen uns dann zu Hause.",
+   "direction": "آيسي — متفهّمة"
+  },
+  {
+   "id": "b1m1-h3-d3-l1",
+   "speaker": "ayse",
+   "text": "Lena, ich stehe im Supermarkt. Brauchst du noch etwas?",
+   "direction": "آيسي — تتصل من المتجر"
+  },
+  {
+   "id": "b1m1-h3-d3-l2",
+   "speaker": "lena",
+   "text": "Ja, bitte kaufe Milch und Brot mit!",
+   "direction": "لينا — تطلب"
+  },
+  {
+   "id": "b1m1-h3-d4-l1",
+   "speaker": "lena",
+   "text": "Yusuf, ich bin zu Hause und koche gerade.",
+   "direction": "لينا — هادئة"
+  },
+  {
+   "id": "b1m1-h3-d4-l2",
+   "speaker": "yusuf",
+   "text": "Super, ich bin in zwanzig Minuten da.",
+   "direction": "يوسف — في الطريق"
+  },
+  {
+   "id": "b1m1-h3-d5-l1",
+   "speaker": "mueller",
+   "text": "Frau Weber, ich bin am Flughafen. Der Flieger kommt um Mitternacht.",
+   "direction": "الهاتف — من المطار"
+  },
+  {
+   "id": "b1m1-h3-d5-l2",
+   "speaker": "frau-berg",
+   "text": "Um Mitternacht? Dann fahre ich dich abholen.",
+   "direction": "الوالدة — قلقة"
+  }
+ ]
+}

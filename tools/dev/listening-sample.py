@@ -75,9 +75,12 @@ def main() -> int:
                        "text": r["textDe"], "wpm": r["wpm"], "lesson": (r["lessonRefs"] or ["—"])[0]})
 
     flagged = [r for r in rows.values() if r["wpm"] > 200.0 and r["words"] >= 3]
-    assert {f["id"] for f in flagged} == {"fc-11", "word-in-der-nacht"}, "المعلَّم تغيّر — راجع N-122/N-263"
+    # D559/N-364: +b1m1-h3-d1-l2 · +b1m1-h3-d2-l1 (b1-mt1 — سرعة نطق ناعمة D214: تُبلَّغ ولا تُعاد) — العينة 30→32
+    assert {f["id"] for f in flagged} == {"fc-11", "word-in-der-nacht", "b1m1-h3-d1-l2", "b1m1-h3-d2-l1"}, "المعلَّم تغيّر — راجع N-122/N-263/N-364"
     NREF = {"fc-11": ("N-122", "هل يُفهم من أول استماع؟ إن بدا سريعاً يُعاد بصياغة أطول لا بضبط السرعة."),
-            "word-in-der-nacht": ("N-263", "هل يُفهم من أول استماع؟ القطعة تُقال سريعة طبيعياً — «أعد» تعني قرار مالك.")}
+            "word-in-der-nacht": ("N-263", "هل يُفهم من أول استماع؟ القطعة تُقال سريعة طبيعياً — «أعد» تعني قرار مالك."),
+            "b1m1-h3-d1-l2": ("N-364", "هل يُفهم من أول استماع؟ «Das tut mir leid.» تُقال سريعة طبيعياً — لا ضبط ولا إعادة (D214)."),
+            "b1m1-h3-d2-l1": ("N-364", "هل يُفهم من أول استماع؟ جملة توماس الطويلة سريعة — إن لزم يُعاد بصياغة أطول لا بضبط السرعة.")}
     for f in sorted(flagged, key=lambda r: r["id"]):
         nref, q = NREF[f["id"]]
         sample.append({"id": f["id"], "word": "—", "why": f"فوق العتبة: {f['wpm']} كلمة/دقيقة ({nref})",
@@ -92,7 +95,7 @@ def main() -> int:
                        "q": "هل السرعة طبيعية والنطق واضح؟", "text": r["textDe"], "wpm": r["wpm"],
                        "lesson": (r["lessonRefs"] or ["—"])[0]})
 
-    assert len(sample) == 30, f"العينة = {len(sample)} لا 30"  # D408: +word-in-der-nacht // D319: +Erlaubnis // D318: +Projekt // D316: +Zeugnis
+    assert len(sample) == 32, f"العينة = {len(sample)} لا 32"  # D559: +b1m1-h3-d1-l2 · +b1m1-h3-d2-l1 (N-364) // D408: +word-in-der-nacht // D319: +Erlaubnis // D318: +Projekt // D316: +Zeugnis
     for i, s in enumerate(sample, 1):
         print(f"{i:>2}. {s['id']:<18} «{s['text']}» — {s['why']}")
 
