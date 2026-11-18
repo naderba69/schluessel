@@ -1,0 +1,392 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u6-d5",
+  "level": "B2",
+  "unit": 6,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Belastung ist schlimm, die Genesung ist gut und das Nahrungsmittel ist wichtig!",
+    "ar": "اليوم الخامس: الإجهاد والتعافي والغذاء! (ماذا يُجهدنا وما يُقوّينا!)"
+  },
+  "canDoDaily": [
+    "يصف الإجهاد والتعافي! (die Belastung! die Genesung!)",
+    "يتكلّم عن الغذاء! (das Nahrungsmittel! das Nahrungsmittel ist wichtig!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hygiene",
+      "ansteckung",
+      "immunsystem"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الإجهاد سيّئ.»؟"
+        },
+        "choices": [
+          "Die Belastung ist schlimm.",
+          "Der Belastung ist schlimm.",
+          "Das Belastung ist schlimm."
+        ],
+        "answer": "Die Belastung ist schlimm.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الغذاء مهم.»؟"
+        },
+        "choices": [
+          "Das Nahrungsmittel ist wichtig.",
+          "Der Nahrungsmittel ist wichtig.",
+          "Die Nahrungsmittel ist wichtig."
+        ],
+        "answer": "Das Nahrungsmittel ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "belastung",
+      "genesung",
+      "nahrungsmittel"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "double-consonant",
+      "vowel-long-short"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Belastung, Genesung, Nahrungsmittel: Wir leben gesund und essen gut!",
+        "ar": "اليوم الخامس: توازن الصحّة! (الإجهاد! التعافي! الغذاء!)"
+      },
+      "situation": {
+        "de": "Belastung, Genesung, Nahrungsmittel — zusammen lernen.",
+        "ar": "إجهاد! تعافٍ! غذاء! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Belastung (die! -ung!) · die Genesung (die! جمعية!) · das Nahrungsmittel (das! مركّب والجمع بلا تغيير!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Genesung brauchen! das Nahrungsmittel ist wichtig!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Belastung",
+                "ar": "الإجهاد (العبء!)"
+              },
+              {
+                "de": "die Genesung",
+                "ar": "التعافي"
+              },
+              {
+                "de": "das Nahrungsmittel",
+                "ar": "الغذاء (المادة الغذائية!)"
+              }
+            ],
+            "why": "die Belastung الإجهاد (die! -ung!) · die Genesung التعافي (die! جمعية!) · das Nahrungsmittel الغذاء (das! مركّب!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Genesung brauchen",
+                "ar": "يحتاج إلى التعافي"
+              },
+              {
+                "de": "die Belastung ist schlimm",
+                "ar": "الإجهاد سيّئ"
+              },
+              {
+                "de": "das Nahrungsmittel ist wichtig",
+                "ar": "الغذاء مهم"
+              }
+            ],
+            "why": "die Genesung brauchen (الحاجة!) · die Belastung ist schlimm! · das Nahrungsmittel ist wichtig!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "operation",
+          "heilung",
+          "symptom"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist schlimm. (الإجهاد!)",
+            "a": "Belastung",
+            "why": "die Belastung الإجهاد (die! -ung!) — Die Belastung ist schlimm."
+          },
+          {
+            "q": "Die ___ ist gut. (التعافي!)",
+            "a": "Genesung",
+            "why": "die Genesung التعافي (die! جمعية!) — Die Genesung ist gut."
+          },
+          {
+            "q": "Das ___ ist wichtig. (الغذاء!)",
+            "a": "Nahrungsmittel",
+            "why": "das Nahrungsmittel الغذاء (das! مركّب!) — Das Nahrungsmittel ist wichtig."
+          },
+          {
+            "q": "Die Genesung ist ___. (جيّدة!)",
+            "a": "gut",
+            "why": "gut جيّد — Die Genesung ist gut."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ernaehrung",
+          "entspannung",
+          "pflege"
+        ],
+        "items": [
+          {
+            "q": "~~der Belastung ist schlimm.~~",
+            "a": "Die Belastung ist schlimm.",
+            "why": "die Belastung (die! -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~die Nahrungsmittel ist wichtig.~~",
+            "a": "Das Nahrungsmittel ist wichtig.",
+            "why": "das Nahrungsmittel (das! مركّب محايد!) — الجمع die Nahrungsmittel مع sind!"
+          },
+          {
+            "q": "~~die Genesung machen.~~",
+            "a": "die Genesung brauchen.",
+            "why": "«يحتاج إلى التعافي» = die Genesung brauchen (لا machen!)!"
+          },
+          {
+            "q": "~~Die Belastungen ist schlimm.~~",
+            "a": "Die Belastung ist schlimm.",
+            "why": "المفرد die Belastung مع ist (الجمع die Belastungen مع sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالإجهاد! (جملتان!)",
+            "a": "Die Belastung ist schlimm. Das ist nicht gut.",
+            "why": "الإجهاد أولًا! (die Belastung ist schlimm!)"
+          },
+          {
+            "q": "تحدّث عن التعافي! (جملتان!)",
+            "a": "Die Genesung ist gut. Wir brauchen die Genesung.",
+            "why": "التعافي! (die Genesung brauchen!)"
+          },
+          {
+            "q": "تحدّث عن الغذاء! (جملتان!)",
+            "a": "Das Nahrungsmittel ist wichtig. Wir essen gute Nahrungsmittel.",
+            "why": "الغذاء! (das Nahrungsmittel ist wichtig!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الإجهاد»؟",
+            "a": "die Belastung"
+          },
+          {
+            "q": "«التعافي»؟",
+            "a": "die Genesung"
+          },
+          {
+            "q": "«الغذاء»؟",
+            "a": "das Nahrungsmittel"
+          },
+          {
+            "q": "«الإجهاد سيّئ.»؟",
+            "a": "Die Belastung ist schlimm."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الغذاء مهم.»؟",
+            "a": "Das Nahrungsmittel ist wichtig."
+          },
+          {
+            "q": "die Genesung",
+            "a": "التعافي"
+          },
+          {
+            "q": "«نحتاج إلى التعافي.»؟",
+            "a": "Wir brauchen die Genesung."
+          },
+          {
+            "q": "das Nahrungsmittel",
+            "a": "الغذاء (المادة الغذائية!)"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التعافي جيّد.»؟",
+            "a": "Die Genesung ist gut."
+          },
+          {
+            "q": "«نأكل غذاءً جيّداً.»؟",
+            "a": "Wir essen gutes Nahrungsmittel."
+          },
+          {
+            "q": "die Belastung",
+            "a": "الإجهاد (العبء!)"
+          },
+          {
+            "q": "«الإجهاد سيّئ.»؟",
+            "a": "Die Belastung ist schlimm."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Belastung ist schlimm und die Genesung ist gut. Das Nahrungsmittel ist wichtig und wir essen gut. Der Tag ist gut und wir sind zusammen.",
+      "ar": "توازن الصحّة: نفهم الإجهاد وننتظر التعافي ونختار الغذاء الجيّد!"
+    },
+    "srsBundleWordIds": [
+      "belastung",
+      "genesung",
+      "nahrungsmittel"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Belastung!",
+          "de": "~~der Belastung ist schlimm.~~"
+        },
+        "correct": {
+          "ar": "die Belastung!",
+          "de": "Die Belastung ist schlimm."
+        },
+        "exercise": {
+          "q": "___ Belastung ist schlimm.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الإجهاد/العبء» مذكّر! والألمانية: die Belastung (die! -ung مؤنثة!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Nahrungsmittel (مفرد)!",
+          "de": "~~die Nahrungsmittel ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "das Nahrungsmittel!",
+          "de": "Das Nahrungsmittel ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Nahrungsmittel ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "الصيغة نفسها للمفرد والجمع (die Nahrungsmittel)! المفرد das Nahrungsmittel (das! مركّب!) والجمع die Nahrungsmittel مع sind — التفريق بالفعل! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Genesung machen!",
+          "de": "~~die Genesung machen.~~"
+        },
+        "correct": {
+          "ar": "die Genesung brauchen!",
+          "de": "die Genesung brauchen."
+        },
+        "exercise": {
+          "q": "Wir ___ die Genesung.",
+          "a": "brauchen"
+        },
+        "whyArabicSpeakerFails": "«يحتاج إلى التعافي» = brauchen (لا machen!) — المفردة الثابتة die Genesung brauchen (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Belastung",
+      "https://www.duden.de/rechtschreibung/Genesung",
+      "https://www.duden.de/rechtschreibung/Nahrungsmittel"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-belastung",
+    "word-genesung",
+    "word-nahrungsmittel"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 6 (الصحّة والعافية!)",
+    "goetheWordListOverlap": [
+      "belastung",
+      "genesung",
+      "nahrungsmittel"
+    ]
+  }
+}
