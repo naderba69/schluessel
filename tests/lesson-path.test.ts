@@ -264,7 +264,8 @@ describe("D283: استحقاق الدوري", () => {
     expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 2, FRI2)).toBeUndefined();
     expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 3, new Date(2026, 9, 24))).toBeUndefined();
     expect(cyclicTestFor(ALL_PRUEFUNGEN, "A1", 16, new Date(2027, 0, 23))).toBeUndefined(); // فوق سقف المخطط (14)
-    expect(cyclicTestFor(ALL_PRUEFUNGEN, "B2", 2, SAT2)).toBeUndefined(); // D560: B1 صار له دوري — الخاطئ الآن B2 (يُحدَّث حين يُبنى دوري B2!)
+    const withoutB2 = ALL_PRUEFUNGEN.filter((t) => t.level !== "B2"); // D561: كل المستويات صار لها دوري — الخاطئ يُصنَع بقائمة بلا B2
+    expect(cyclicTestFor(withoutB2, "B2", 2, SAT2)).toBeUndefined();
   });
 
   it("المسجَّل لا يُستحَق ثانية", () => {
