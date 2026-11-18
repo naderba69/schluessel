@@ -1,0 +1,392 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u6-d2",
+  "level": "B2",
+  "unit": 6,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Ernährung ist wichtig, die Entspannung ist gut und die Pflege hilft!",
+    "ar": "اليوم الثاني: التغذية والاسترخاء والرعاية! (عادات الصحّة اليومية!)"
+  },
+  "canDoDaily": [
+    "يتكلّم عن التغذية والراحة! (die Ernährung! die Entspannung!)",
+    "يطلب الرعاية! (die Pflege bekommen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "behandlung",
+      "vorsorge",
+      "diagnose"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التغذية مهمة.»؟"
+        },
+        "choices": [
+          "Die Ernährung ist wichtig.",
+          "Der Ernährung ist wichtig.",
+          "Das Ernährung ist wichtig."
+        ],
+        "answer": "Die Ernährung ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الرعاية مهمة.»؟"
+        },
+        "choices": [
+          "Die Pflege ist wichtig.",
+          "Der Pflege ist wichtig.",
+          "Das Pflege ist wichtig."
+        ],
+        "answer": "Die Pflege ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "ernaehrung",
+      "entspannung",
+      "pflege"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "umlaut-a",
+      "sp-st-initial"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Ernährung, Entspannung, Pflege: Wir kümmern uns um die Gesundheit!",
+        "ar": "اليوم الثاني: عادات الصحّة! (التغذية! الاسترخاء! الرعاية!)"
+      },
+      "situation": {
+        "de": "Ernährung, Entspannung, Pflege — zusammen lernen.",
+        "ar": "تغذية! استرخاء! رعاية! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "الثلاث كلها جمعية (بلا جمع!) — Ernährung وEntspannung على -ung وPflege على -e!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Pflege bekommen! die Entspannung brauchen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Ernährung",
+                "ar": "التغذية"
+              },
+              {
+                "de": "die Entspannung",
+                "ar": "الاسترخاء"
+              },
+              {
+                "de": "die Pflege",
+                "ar": "الرعاية"
+              }
+            ],
+            "why": "die Ernährung التغذية (die! -ung!) · die Entspannung الاسترخاء (die! -ung!) · die Pflege الرعاية (die! -e!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Entspannung brauchen",
+                "ar": "يحتاج إلى الاسترخاء"
+              },
+              {
+                "de": "die Pflege bekommen",
+                "ar": "يحصل على الرعاية"
+              },
+              {
+                "de": "die Ernährung ist wichtig",
+                "ar": "التغذية مهمة"
+              }
+            ],
+            "why": "die Entspannung brauchen (الحاجة!) · die Pflege bekommen (الحصول!) · die Ernährung ist wichtig!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "armut",
+          "reichtum",
+          "spende"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (التغذية!)",
+            "a": "Ernährung",
+            "why": "die Ernährung التغذية (die! -ung!) — Die Ernährung ist wichtig."
+          },
+          {
+            "q": "Die ___ ist gut. (الاسترخاء!)",
+            "a": "Entspannung",
+            "why": "die Entspannung الاسترخاء (die! -ung!) — Die Entspannung ist gut."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الرعاية!)",
+            "a": "Pflege",
+            "why": "die Pflege الرعاية (die! -e!) — Die Pflege ist wichtig."
+          },
+          {
+            "q": "Die Entspannung ist ___. (جيّدة!)",
+            "a": "gut",
+            "why": "gut جيّد — Die Entspannung ist gut."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hersteller",
+          "gebraucht",
+          "rueckgabe"
+        ],
+        "items": [
+          {
+            "q": "~~der Ernährung ist wichtig.~~",
+            "a": "Die Ernährung ist wichtig.",
+            "why": "die Ernährung (die! -ung مؤنثة!)!"
+          },
+          {
+            "q": "~~das Pflege ist wichtig.~~",
+            "a": "Die Pflege ist wichtig.",
+            "why": "يحصل على الرعاية = bekommen (فصيح!) لا kriegen (عاميّة!) — die Pflege bekommen!"
+          },
+          {
+            "q": "~~die Pflege kriegen.~~",
+            "a": "die Pflege bekommen.",
+            "why": "«يحصل على» = bekommen (فصيح!) لا kriegen (عاميّة!) — die Pflege bekommen!"
+          },
+          {
+            "q": "~~Die Entspannung sind gut.~~",
+            "a": "Die Entspannung ist gut.",
+            "why": "المفرد die Entspannung مع ist (لا sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "arbeitgeber",
+          "anstellung",
+          "ruhestand"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالتغذية! (جملتان!)",
+            "a": "Die Ernährung ist wichtig. Wir essen gesund.",
+            "why": "التغذية أولًا! (die Ernährung ist wichtig!) — gesund من B1!"
+          },
+          {
+            "q": "تحدّث عن الاسترخاء! (جملتان!)",
+            "a": "Die Entspannung ist gut. Wir brauchen die Entspannung.",
+            "why": "الاسترخاء! (die Entspannung brauchen!)"
+          },
+          {
+            "q": "تحدّث عن الرعاية! (جملتان!)",
+            "a": "Die Pflege ist wichtig. Wir bekommen die Pflege.",
+            "why": "الرعاية! (die Pflege bekommen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التغذية»؟",
+            "a": "die Ernährung"
+          },
+          {
+            "q": "«الاسترخاء»؟",
+            "a": "die Entspannung"
+          },
+          {
+            "q": "«الرعاية»؟",
+            "a": "die Pflege"
+          },
+          {
+            "q": "«التغذية مهمة.»؟",
+            "a": "Die Ernährung ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الاسترخاء جيّد.»؟",
+            "a": "Die Entspannung ist gut."
+          },
+          {
+            "q": "die Pflege",
+            "a": "الرعاية"
+          },
+          {
+            "q": "«نحتاج إلى الاسترخاء.»؟",
+            "a": "Wir brauchen die Entspannung."
+          },
+          {
+            "q": "die Ernährung",
+            "a": "التغذية"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نحصل على الرعاية.»؟",
+            "a": "Wir bekommen die Pflege."
+          },
+          {
+            "q": "«الرعاية مهمة.»؟",
+            "a": "Die Pflege ist wichtig."
+          },
+          {
+            "q": "die Entspannung",
+            "a": "الاسترخاء"
+          },
+          {
+            "q": "«التغذية جيّدة.»؟",
+            "a": "Die Ernährung ist gut."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Ernährung ist wichtig und die Entspannung ist gut. Wir bekommen die Pflege und der Tag ist schön. Wir sind zusammen.",
+      "ar": "عادات الصحّة: نعرف التغذية ونفهم الاسترخاء ونحصل على الرعاية!"
+    },
+    "srsBundleWordIds": [
+      "ernaehrung",
+      "entspannung",
+      "pflege"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Ernährung!",
+          "de": "~~der Ernährung ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Ernährung!",
+          "de": "Die Ernährung ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Ernährung ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التغذية» مؤنثة — والألمانية كذلك! لكن -ung مؤنثة دائماً (die!) — أصل الاستثناء العربي أن الكلمة المُعرَّبة قد تُذكَّر (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Pflege!",
+          "de": "~~das Pflege ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Pflege!",
+          "de": "Die Pflege ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Pflege ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الرعاية» مؤنثة — والألمانية كذلك (die Pflege — كلمات -e مؤنثة!) لكن الـ ne الظاهرية (das?) تخدع المتعلّم (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Pflege kriegen!",
+          "de": "~~die Pflege kriegen.~~"
+        },
+        "correct": {
+          "ar": "die Pflege bekommen!",
+          "de": "die Pflege bekommen."
+        },
+        "exercise": {
+          "q": "Wir ___ die Pflege.",
+          "a": "bekommen"
+        },
+        "whyArabicSpeakerFails": "«يحصل» = bekommen (فصيح!) لا kriegen (عاميّة!) — المفردة الثابتة die Pflege bekommen (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Ernaehrung",
+      "https://www.duden.de/rechtschreibung/Entspannung",
+      "https://www.duden.de/rechtschreibung/Pflege"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-ernaehrung",
+    "word-entspannung",
+    "word-pflege"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 6 (الصحّة والعافية!)",
+    "goetheWordListOverlap": [
+      "ernaehrung",
+      "entspannung",
+      "pflege"
+    ]
+  }
+}
