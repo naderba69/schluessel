@@ -1,0 +1,390 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u6-d3",
+  "level": "B2",
+  "unit": 6,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Das Symptom ist klar, die Operation ist wichtig und die Heilung ist gut!",
+    "ar": "اليوم الثالث: العَرَض والعملية الجراحية والشفاء! (مسار العلاج!)"
+  },
+  "canDoDaily": [
+    "يصف العَرَض والعملية! (das Symptom! die Operation!)",
+    "يتكلّم عن الشفاء! (die Heilung! die Heilung brauchen!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "ernaehrung",
+      "entspannung",
+      "pflege"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«العملية الجراحية مهمة.»؟"
+        },
+        "choices": [
+          "Die Operation ist wichtig.",
+          "Der Operation ist wichtig.",
+          "Das Operation ist wichtig."
+        ],
+        "answer": "Die Operation ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«العَرَض واضح.»؟"
+        },
+        "choices": [
+          "Das Symptom ist klar.",
+          "Der Symptom ist klar.",
+          "Die Symptom ist klar."
+        ],
+        "answer": "Das Symptom ist klar.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "operation",
+      "heilung",
+      "symptom"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Symptom, Operation, Heilung: Wir verstehen den Weg der Behandlung!",
+        "ar": "اليوم الثالث: مسار العلاج! (العَرَض! العملية! الشفاء!)"
+      },
+      "situation": {
+        "de": "Symptom, Operation, Heilung — zusammen lernen.",
+        "ar": "عَرَض! عملية! شفاء! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "das Symptom (das! أجنسي!) · die Operation (die! -ion!) · die Heilung (die! -ung!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Heilung brauchen! das Symptom haben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ernaehrung",
+          "entspannung",
+          "pflege"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Operation",
+                "ar": "العملية الجراحية"
+              },
+              {
+                "de": "die Heilung",
+                "ar": "الشفاء"
+              },
+              {
+                "de": "das Symptom",
+                "ar": "العَرَض (المرض!)"
+              }
+            ],
+            "why": "die Operation العملية الجراحية (die! -ion!) · die Heilung الشفاء (die! -ung!) · das Symptom العَرَض (das! أجنسي!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Heilung brauchen",
+                "ar": "يحتاج إلى الشفاء"
+              },
+              {
+                "de": "das Symptom haben",
+                "ar": "يظهر لديه العَرَض"
+              },
+              {
+                "de": "die Operation ist wichtig",
+                "ar": "العملية الجراحية مهمة"
+              }
+            ],
+            "why": "die Heilung brauchen (الحاجة!) · das Symptom haben (الظهور!) · die Operation ist wichtig!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (العملية الجراحية!)",
+            "a": "Operation",
+            "why": "die Operation العملية الجراحية (die! -ion!) — Die Operation ist wichtig."
+          },
+          {
+            "q": "Die ___ ist gut. (الشفاء!)",
+            "a": "Heilung",
+            "why": "die Heilung الشفاء (die! -ung!) — Die Heilung ist gut."
+          },
+          {
+            "q": "Das ___ ist klar. (العَرَض!)",
+            "a": "Symptom",
+            "why": "das Symptom العَرَض (das! أجنسي!) — Das Symptom ist klar."
+          },
+          {
+            "q": "Die Heilung ist ___. (جيّدة!)",
+            "a": "gut",
+            "why": "gut جيّد — Die Heilung ist gut."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "armut",
+          "reichtum",
+          "spende"
+        ],
+        "items": [
+          {
+            "q": "~~der Operation ist wichtig.~~",
+            "a": "Die Operation ist wichtig.",
+            "why": "die Operation (die! -ion مؤنثة!)!"
+          },
+          {
+            "q": "~~die Symptom ist klar.~~",
+            "a": "Das Symptom ist klar.",
+            "why": "das Symptom (das! أجنسي محايد!)!"
+          },
+          {
+            "q": "~~die Heilung machen.~~",
+            "a": "die Heilung brauchen.",
+            "why": "«يحتاج إلى الشفاء» = die Heilung brauchen (لا machen!)!"
+          },
+          {
+            "q": "~~Die Operation sind wichtig.~~",
+            "a": "Die Operation ist wichtig.",
+            "why": "المفرد die Operation مع ist (لا sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hersteller",
+          "gebraucht",
+          "rueckgabe"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالعَرَض! (جملتان!)",
+            "a": "Das Symptom ist klar. Das ist wichtig.",
+            "why": "العَرَض أولًا! (das Symptom ist klar!)"
+          },
+          {
+            "q": "تحدّث عن العملية! (جملتان!)",
+            "a": "Die Operation ist wichtig. Die Operation hilft.",
+            "why": "العملية! (die Operation ist wichtig!)"
+          },
+          {
+            "q": "تحدّث عن الشفاء! (جملتان!)",
+            "a": "Die Heilung ist gut. Wir brauchen die Heilung.",
+            "why": "الشفاء! (die Heilung brauchen!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«العملية الجراحية»؟",
+            "a": "die Operation"
+          },
+          {
+            "q": "«الشفاء»؟",
+            "a": "die Heilung"
+          },
+          {
+            "q": "«العَرَض»؟",
+            "a": "das Symptom"
+          },
+          {
+            "q": "«العملية الجراحية مهمة.»؟",
+            "a": "Die Operation ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«العَرَض واضح.»؟",
+            "a": "Das Symptom ist klar."
+          },
+          {
+            "q": "die Heilung",
+            "a": "الشفاء"
+          },
+          {
+            "q": "«نحتاج إلى الشفاء.»؟",
+            "a": "Wir brauchen die Heilung."
+          },
+          {
+            "q": "das Symptom",
+            "a": "العَرَض (المرض!)"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الشفاء جيّد.»؟",
+            "a": "Die Heilung ist gut."
+          },
+          {
+            "q": "«يظهر لديه العَرَض.»؟",
+            "a": "Er hat das Symptom."
+          },
+          {
+            "q": "die Operation",
+            "a": "العملية الجراحية"
+          },
+          {
+            "q": "«العملية تساعد.»؟",
+            "a": "Die Operation hilft."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Das Symptom ist klar und die Operation ist wichtig. Die Heilung ist gut und wir brauchen die Heilung. Der Tag ist gut und wir sind zusammen.",
+      "ar": "مسار العلاج: نعرف العَرَض ونفهم العملية وننتظر الشفاء!"
+    },
+    "srsBundleWordIds": [
+      "operation",
+      "heilung",
+      "symptom"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Operation!",
+          "de": "~~der Operation ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Operation!",
+          "de": "Die Operation ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Operation ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «العملية» مؤنثة — والألمانية كذلك! لكن كلمات -ion مؤنثة دائماً (die!) وقد تُذكَّر بالعربية المحكية («عملية ناجح»!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Symptom!",
+          "de": "~~die Symptom ist klar.~~"
+        },
+        "correct": {
+          "ar": "das Symptom!",
+          "de": "Das Symptom ist klar."
+        },
+        "exercise": {
+          "q": "___ Symptom ist klar.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «العَرَض» مذكّر! والألمانية: das Symptom (das! كلمات -om أجنسيّة محايدة!) — قاعدة -nis/-tum نفسها (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Heilung machen!",
+          "de": "~~die Heilung machen.~~"
+        },
+        "correct": {
+          "ar": "die Heilung brauchen!",
+          "de": "die Heilung brauchen."
+        },
+        "exercise": {
+          "q": "Wir ___ die Heilung.",
+          "a": "brauchen"
+        },
+        "whyArabicSpeakerFails": "«يحتاج إلى الشفاء» = brauchen (لا machen!) — المفردة الثابتة die Heilung brauchen (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Operation",
+      "https://www.duden.de/rechtschreibung/Heilung",
+      "https://www.duden.de/rechtschreibung/Symptom"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-operation",
+    "word-heilung",
+    "word-symptom"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 6 (الصحّة والعافية!)",
+    "goetheWordListOverlap": [
+      "operation",
+      "heilung",
+      "symptom"
+    ]
+  }
+}

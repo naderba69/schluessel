@@ -2774,6 +2774,9 @@ def build_all() -> None:
     ("word-ernaehrung", "die Ernährung.", "ernaehrung", ["b2-u6-d2"]),
     ("word-entspannung", "die Entspannung.", "entspannung", ["b2-u6-d2"]),
     ("word-pflege", "die Pflege.", "pflege", ["b2-u6-d2"]),
+    ("word-operation", "die Operation.", "operation", ["b2-u6-d3"]),
+    ("word-heilung", "die Heilung.", "heilung", ["b2-u6-d3"]),
+    ("word-symptom", "das Symptom.", "symptom", ["b2-u6-d3"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
     ]
