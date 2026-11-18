@@ -1,0 +1,392 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u6-d6",
+  "level": "B2",
+  "unit": 6,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Aktivität ist wichtig, die Erschöpfung ist schlimm und das Gesundheitswesen hilft!",
+    "ar": "الختام الكبير لـB2! النشاط والإرهاق والنظام الصحي! (الوحدة 6 تكتمل!)"
+  },
+  "canDoDaily": [
+    "يصف النشاط والإرهاق! (die Aktivität! die Erschöpfung!)",
+    "يتحدّث عن نظام الصحّة! (das Gesundheitswesen! das Gesundheitswesen hilft!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "belastung",
+      "genesung",
+      "nahrungsmittel"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«النشاط مهم.»؟"
+        },
+        "choices": [
+          "Die Aktivität ist wichtig.",
+          "Der Aktivität ist wichtig.",
+          "Das Aktivität ist wichtig."
+        ],
+        "answer": "Die Aktivität ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نظام الصحّة مهم.»؟"
+        },
+        "choices": [
+          "Das Gesundheitswesen ist wichtig.",
+          "Der Gesundheitswesen ist wichtig.",
+          "Die Gesundheitswesen ist wichtig."
+        ],
+        "answer": "Das Gesundheitswesen ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "aktivitaet",
+      "erschoepfung",
+      "gesundheitswesen"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "umlaut-a",
+      "umlaut-o",
+      "w-v"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Aktivität, Erschöpfung, Gesundheitswesen: Wir leben gesund und kennen das System!",
+        "ar": "اليوم الأخير من B2! (النشاط! الإرهاق! النظام الصحي!)"
+      },
+      "situation": {
+        "de": "Aktivität, Erschöpfung, Gesundheitswesen — zusammen lernen.",
+        "ar": "نشاط! إرهاق! نظام صحي! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Aktivität (die! -tät!) · die Erschöpfung (die! -ung!) · das Gesundheitswesen (das! مركّب!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Erschöpfung haben! das Gesundheitswesen ist wichtig!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "belastung",
+          "genesung",
+          "nahrungsmittel"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Aktivität",
+                "ar": "النشاط"
+              },
+              {
+                "de": "die Erschöpfung",
+                "ar": "الإرهاق (الإنهاك!)"
+              },
+              {
+                "de": "das Gesundheitswesen",
+                "ar": "نظام الصحّة"
+              }
+            ],
+            "why": "die Aktivität النشاط (die! -tät!) · die Erschöpfung الإرهاق (die! -ung!) · das Gesundheitswesen نظام الصحّة (das! مركّب!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Erschöpfung haben",
+                "ar": "يكون لديه إرهاق"
+              },
+              {
+                "de": "die Aktivität ist wichtig",
+                "ar": "النشاط مهم"
+              },
+              {
+                "de": "das Gesundheitswesen ist wichtig",
+                "ar": "نظام الصحّة مهم"
+              }
+            ],
+            "why": "die Erschöpfung haben (الملكية!) · die Aktivität ist wichtig! · das Gesundheitswesen ist wichtig!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "q": "Die ___ ist wichtig. (النشاط!)",
+            "a": "Aktivität",
+            "why": "die Aktivität النشاط (die! -tät!) — Die Aktivität ist wichtig."
+          },
+          {
+            "q": "Die ___ ist schlimm. (الإرهاق!)",
+            "a": "Erschöpfung",
+            "why": "die Erschöpfung الإرهاق (die! -ung!) — Die Erschöpfung ist schlimm."
+          },
+          {
+            "q": "Das ___ ist wichtig. (نظام الصحّة!)",
+            "a": "Gesundheitswesen",
+            "why": "das Gesundheitswesen نظام الصحّة (das! مركّب!) — Das Gesundheitswesen ist wichtig."
+          },
+          {
+            "q": "Die Aktivität ist ___. (مهمة!)",
+            "a": "wichtig",
+            "why": "wichtig مهم — Die Aktivität ist wichtig."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "operation",
+          "heilung",
+          "symptom"
+        ],
+        "items": [
+          {
+            "q": "~~der Aktivität ist wichtig.~~",
+            "a": "Die Aktivität ist wichtig.",
+            "why": "die Aktivität (die! -tät مؤنثة!)!"
+          },
+          {
+            "q": "~~die Gesundheitswesen ist wichtig.~~",
+            "a": "Das Gesundheitswesen ist wichtig.",
+            "why": "das Gesundheitswesen (das! مركّب محايد يتبع Wesen!)!"
+          },
+          {
+            "q": "~~die Erschöpfung machen.~~",
+            "a": "die Erschöpfung haben.",
+            "why": "«يكون لديه إرهاق» = die Erschöpfung haben (لا machen!)!"
+          },
+          {
+            "q": "~~Die Aktivitäten ist wichtig.~~",
+            "a": "Die Aktivität ist wichtig.",
+            "why": "المفرد die Aktivität مع ist (الجمع die Aktivitäten مع sind!)!"
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ernaehrung",
+          "entspannung",
+          "pflege"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بالنشاط! (جملتان!)",
+            "a": "Die Aktivität ist wichtig. Wir machen viel Aktivität.",
+            "why": "النشاط أولًا! (die Aktivität ist wichtig!)"
+          },
+          {
+            "q": "تحدّث عن الإرهاق! (جملتان!)",
+            "a": "Die Erschöpfung ist schlimm. Wir haben die Erschöpfung.",
+            "why": "الإرهاق! (die Erschöpfung haben!)"
+          },
+          {
+            "q": "تحدّث عن النظام الصحي! (جملتان!)",
+            "a": "Das Gesundheitswesen ist wichtig. Das Gesundheitswesen hilft.",
+            "why": "النظام الصحي! (das Gesundheitswesen hilft!)"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«النشاط»؟",
+            "a": "die Aktivität"
+          },
+          {
+            "q": "«الإرهاق»؟",
+            "a": "die Erschöpfung"
+          },
+          {
+            "q": "«نظام الصحّة»؟",
+            "a": "das Gesundheitswesen"
+          },
+          {
+            "q": "«النشاط مهم.»؟",
+            "a": "Die Aktivität ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«نظام الصحّة مهم.»؟",
+            "a": "Das Gesundheitswesen ist wichtig."
+          },
+          {
+            "q": "die Erschöpfung",
+            "a": "الإرهاق (الإنهاك!)"
+          },
+          {
+            "q": "«لديه إرهاق.»؟",
+            "a": "Er hat die Erschöpfung."
+          },
+          {
+            "q": "die Aktivität",
+            "a": "النشاط"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الإرهاق سيّئ.»؟",
+            "a": "Die Erschöpfung ist schlimm."
+          },
+          {
+            "q": "«نظام الصحّة يساعد.»؟",
+            "a": "Das Gesundheitswesen hilft."
+          },
+          {
+            "q": "die Aktivität",
+            "a": "النشاط"
+          },
+          {
+            "q": "«النشاط مهم.»؟",
+            "a": "Die Aktivität ist wichtig."
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Aktivität ist wichtig und die Erschöpfung ist schlimm. Das Gesundheitswesen ist wichtig und es hilft. Der Tag ist gut und wir sind zusammen.",
+      "ar": "الختام: نعرف النشاط ونفهم الإرهاق ونثق بالنظام الصحي! الوحدة 6 تكتمل وB2 كاملاً يكتمل!"
+    },
+    "srsBundleWordIds": [
+      "aktivitaet",
+      "erschoepfung",
+      "gesundheitswesen"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Aktivität!",
+          "de": "~~der Aktivität ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Aktivität!",
+          "de": "Die Aktivität ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Aktivität ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «النشاط» مذكّر! والألمانية: die Aktivität (die! -tät مؤنثة دائماً!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Gesundheitswesen!",
+          "de": "~~die Gesundheitswesen ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "das Gesundheitswesen!",
+          "de": "Das Gesundheitswesen ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Gesundheitswesen ist wichtig.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «النظام الصحي» مذكّر! والألمانية: das Gesundheitswesen (das! مركّب يتبع Wesen المحايد!) — عكس die Zeitung المؤنثة! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Erschöpfung machen!",
+          "de": "~~die Erschöpfung machen.~~"
+        },
+        "correct": {
+          "ar": "die Erschöpfung haben!",
+          "de": "die Erschöpfung haben."
+        },
+        "exercise": {
+          "q": "Er ___ die Erschöpfung.",
+          "a": "hat"
+        },
+        "whyArabicSpeakerFails": "«يكون لديه إرهاق» = haben (ملكية الحالة!) لا machen — المفردة الثابتة die Erschöpfung haben (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Aktivitaet",
+      "https://www.duden.de/rechtschreibung/Erschoepfung",
+      "https://www.duden.de/rechtschreibung/Gesundheitswesen"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-aktivitaet",
+    "word-erschoepfung",
+    "word-gesundheitswesen"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 6 (الصحّة والعافية!) — الختام!",
+    "goetheWordListOverlap": [
+      "aktivitaet",
+      "erschoepfung",
+      "gesundheitswesen"
+    ]
+  }
+}
