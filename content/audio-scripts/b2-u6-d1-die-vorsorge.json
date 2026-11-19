@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u6-d1-die-vorsorge",
+  "kind": "dialogue",
+  "level": "B2",
+  "title": {
+    "de": "Die Vorsorge",
+    "ar": "الوقاية"
+  },
+  "usedIn": [
+    "b2-u6-d1"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b2u6d1-l1",
+      "speaker": "mueller",
+      "text": "Die Vorsorge ist wichtig, die Diagnose ist klar und die Behandlung hilft!",
+      "direction": "في العيادة"
+    },
+    {
+      "id": "b2u6d1-l2",
+      "speaker": "yusuf",
+      "text": "Ich möchte eine Vorsorge machen.",
+      "direction": "طلب"
+    },
+    {
+      "id": "b2u6d1-l3",
+      "speaker": "mueller",
+      "text": "Gut. Zuerst die Diagnose: alles untersuchen.",
+      "direction": "خطوات"
+    },
+    {
+      "id": "b2u6d1-l4",
+      "speaker": "yusuf",
+      "text": "Und dann?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u6d1-l5",
+      "speaker": "mueller",
+      "text": "Die Behandlung. Oder nur Vorsorge.",
+      "direction": "إجابة"
+    },
+    {
+      "id": "b2u6d1-l6",
+      "speaker": "yusuf",
+      "text": "Vorsorge ist besser als Behandlung.",
+      "direction": "حكمة"
+    },
+    {
+      "id": "b2u6d1-l7",
+      "speaker": "mueller",
+      "text": "Genau! Gesundheit zuerst.",
+      "direction": "تعزيز"
+    },
+    {
+      "id": "b2u6d1-l8",
+      "speaker": "yusuf",
+      "text": "Danke, Herr Doktor.",
+      "direction": "إغلاق"
+    }
+  ]
+}

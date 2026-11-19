@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u5-d5-die-rueckgabe",
+  "kind": "dialogue",
+  "level": "B2",
+  "title": {
+    "de": "Die Rückgabe",
+    "ar": "الإرجاع"
+  },
+  "usedIn": [
+    "b2-u5-d5"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b2u5d5-l1",
+      "speaker": "yusuf",
+      "text": "Der Hersteller produziert und die Rückgabe ist möglich!",
+      "direction": "حقوق المستهلك"
+    },
+    {
+      "id": "b2u5d5-l2",
+      "speaker": "lena",
+      "text": "Kann ich das gebrauchte Gerät zurückgeben?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u5d5-l3",
+      "speaker": "yusuf",
+      "text": "Ja. Die Rückgabe ist in einem Monat möglich.",
+      "direction": "إجابة"
+    },
+    {
+      "id": "b2u5d5-l4",
+      "speaker": "lena",
+      "text": "Und das Geld zurück?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u5d5-l5",
+      "speaker": "yusuf",
+      "text": "Natürlich. Der Hersteller muss das machen.",
+      "direction": "مبدأ"
+    },
+    {
+      "id": "b2u5d5-l6",
+      "speaker": "lena",
+      "text": "Gut zu wissen!",
+      "direction": "ارتياح"
+    },
+    {
+      "id": "b2u5d5-l7",
+      "speaker": "yusuf",
+      "text": "Immer die Bedingungen prüfen.",
+      "direction": "نصيحة"
+    },
+    {
+      "id": "b2u5d5-l8",
+      "speaker": "lena",
+      "text": "Danke! Das mache ich.",
+      "direction": "إغلاق"
+    }
+  ]
+}

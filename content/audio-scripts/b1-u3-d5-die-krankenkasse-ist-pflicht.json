@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u3-d5-die-krankenkasse-ist-pflicht",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Die Krankenkasse ist Pflicht",
+    "ar": "التأمين إلزامي"
+  },
+  "usedIn": [
+    "b1-u3-d5"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u3d5-l1",
+      "speaker": "mueller",
+      "text": "Das Gesetz ist wichtig: die Krankenkasse ist Pflicht!",
+      "direction": "استشارة إدارية"
+    },
+    {
+      "id": "b1u3d5-l2",
+      "speaker": "yusuf",
+      "text": "Auch für Studenten?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b1u3d5-l3",
+      "speaker": "mueller",
+      "text": "Ja. Die Versicherung ist Pflicht für alle.",
+      "direction": "تأكيد"
+    },
+    {
+      "id": "b1u3d5-l4",
+      "speaker": "yusuf",
+      "text": "Und wenn ich arbeite?",
+      "direction": "حالة أخرى"
+    },
+    {
+      "id": "b1u3d5-l5",
+      "speaker": "mueller",
+      "text": "Dann zahlt die Firma ein Prozent, Sie auch.",
+      "direction": "تفصيل"
+    },
+    {
+      "id": "b1u3d5-l6",
+      "speaker": "yusuf",
+      "text": "Und die Grenze für das Einkommen?",
+      "direction": "تفصيل ثانٍ"
+    },
+    {
+      "id": "b1u3d5-l7",
+      "speaker": "mueller",
+      "text": "Darüber sprechen wir später. Zuerst die Kasse!",
+      "direction": "ترتيب أولويات"
+    },
+    {
+      "id": "b1u3d5-l8",
+      "speaker": "yusuf",
+      "text": "Alles klar. Danke für die Information.",
+      "direction": "إغلاق"
+    }
+  ]
+}

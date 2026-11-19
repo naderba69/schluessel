@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u2-d1-aufgaben-im-buero",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Aufgaben im Büro",
+    "ar": "المهام في المكتب"
+  },
+  "usedIn": [
+    "a2-u2-d1"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u2d1-l1",
+      "speaker": "mueller",
+      "text": "Yusuf, du musst das Projekt organisieren.",
+      "direction": "مولر يعطي التعليمات"
+    },
+    {
+      "id": "a2u2d1-l2",
+      "speaker": "yusuf",
+      "text": "Gern! Muss ich auch am Samstag arbeiten?",
+      "direction": "يوسف يسأل عن التفاصيل"
+    },
+    {
+      "id": "a2u2d1-l3",
+      "speaker": "mueller",
+      "text": "Nein, aber du sollst den Chef fragen.",
+      "direction": "مولر ينصحه"
+    },
+    {
+      "id": "a2u2d1-l4",
+      "speaker": "yusuf",
+      "text": "Soll ich auch teilnehmen?",
+      "direction": "يوسف يسأل عن الاجتماع"
+    },
+    {
+      "id": "a2u2d1-l5",
+      "speaker": "mueller",
+      "text": "Ja, und du sollst deine Bewerbung mitbringen.",
+      "direction": "مولر يطلب ورقة"
+    },
+    {
+      "id": "a2u2d1-l6",
+      "speaker": "yusuf",
+      "text": "Meine Bewerbung? Ich habe sie schon geschrieben.",
+      "direction": "يوسف مطمئن"
+    },
+    {
+      "id": "a2u2d1-l7",
+      "speaker": "mueller",
+      "text": "Gut! Und über das Gehalt sprechen wir später.",
+      "direction": "مولر يختم الموضوع"
+    },
+    {
+      "id": "a2u2d1-l8",
+      "speaker": "yusuf",
+      "text": "Danke! Ich gebe mein Bestes.",
+      "direction": "يوسف يشكره"
+    }
+  ]
+}

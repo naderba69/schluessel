@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u1-d1-der-zug-faellt-aus",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Der Zug fällt aus",
+    "ar": "القطار يُلغى"
+  },
+  "usedIn": [
+    "b1-u1-d1"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u1d1-l1",
+      "speaker": "yusuf",
+      "text": "Der Zug fällt aus. Deshalb komme ich mit dem Bus.",
+      "direction": "إحباط، ثم حل عملي"
+    },
+    {
+      "id": "b1u1d1-l2",
+      "speaker": "lena",
+      "text": "Der Streik ist schlimm. Fahrst du trotzdem zur Arbeit?",
+      "direction": "تعاطف + استفسار"
+    },
+    {
+      "id": "b1u1d1-l3",
+      "speaker": "yusuf",
+      "text": "Ja! Ich muss rechtzeitig da sein.",
+      "direction": "حاسم"
+    },
+    {
+      "id": "b1u1d1-l4",
+      "speaker": "lena",
+      "text": "Wie lange dauert der Weg mit dem Bus?",
+      "direction": "فضول"
+    },
+    {
+      "id": "b1u1d1-l5",
+      "speaker": "yusuf",
+      "text": "Eine Stunde. Aber ich komme an.",
+      "direction": "واقعي"
+    },
+    {
+      "id": "b1u1d1-l6",
+      "speaker": "lena",
+      "text": "Das ist lang! Hörst du unterwegs Musik?",
+      "direction": "تعجب + اقتراح"
+    },
+    {
+      "id": "b1u1d1-l7",
+      "speaker": "yusuf",
+      "text": "Ja. Und ich lese die Nachrichten.",
+      "direction": "عادي"
+    },
+    {
+      "id": "b1u1d1-l8",
+      "speaker": "lena",
+      "text": "Gut! Dann ist die Zeit schnell vorbei.",
+      "direction": "مواساة"
+    }
+  ]
+}

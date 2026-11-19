@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u8-d5-der-meister-gibt-anleitung",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Der Meister gibt Anleitung",
+    "ar": "المعلّم يعطي التعليمات"
+  },
+  "usedIn": [
+    "b1-u8-d5"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u8d5-l1",
+      "speaker": "mueller",
+      "text": "Der Meister gibt eine Anleitung: der Auftrag ist klar!",
+      "direction": "في الورشة"
+    },
+    {
+      "id": "b1u8d5-l2",
+      "speaker": "yusuf",
+      "text": "Was ist mein Auftrag?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b1u8d5-l3",
+      "speaker": "mueller",
+      "text": "Dieses Auto prüfen. Ich gebe dir die Anleitung.",
+      "direction": "تكليف"
+    },
+    {
+      "id": "b1u8d5-l4",
+      "speaker": "yusuf",
+      "text": "Danke. Und wenn ich Hilfe brauche?",
+      "direction": "احتياط"
+    },
+    {
+      "id": "b1u8d5-l5",
+      "speaker": "mueller",
+      "text": "Die Betreuung ist da. Frag immer!",
+      "direction": "دعم"
+    },
+    {
+      "id": "b1u8d5-l6",
+      "speaker": "yusuf",
+      "text": "Gut. Ich beginne mit der Anleitung.",
+      "direction": "تنفيذ"
+    },
+    {
+      "id": "b1u8d5-l7",
+      "speaker": "mueller",
+      "text": "Sehr gut. Schritt für Schritt.",
+      "direction": "توجيه"
+    },
+    {
+      "id": "b1u8d5-l8",
+      "speaker": "yusuf",
+      "text": "Verstanden, Meister!",
+      "direction": "إغلاق"
+    }
+  ]
+}

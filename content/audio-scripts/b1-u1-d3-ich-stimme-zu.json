@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u1-d3-ich-stimme-zu",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Ich stimme zu",
+    "ar": "أوافق"
+  },
+  "usedIn": [
+    "b1-u1-d3"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u1d3-l1",
+      "speaker": "mueller",
+      "text": "Die Besprechung ist lang. Was denkst du?",
+      "direction": "استئناف نقاش"
+    },
+    {
+      "id": "b1u1d3-l2",
+      "speaker": "yusuf",
+      "text": "Ich stimme zu, obwohl die Besprechung lang ist.",
+      "direction": "رأي متوازن"
+    },
+    {
+      "id": "b1u1d3-l3",
+      "speaker": "mueller",
+      "text": "Sollen wir einen Plan machen?",
+      "direction": "اقتراح"
+    },
+    {
+      "id": "b1u1d3-l4",
+      "speaker": "yusuf",
+      "text": "Ja. Ich teile die Ideen mit: erst Arbeit, dann Freizeit.",
+      "direction": "تنظيم"
+    },
+    {
+      "id": "b1u1d3-l5",
+      "speaker": "mueller",
+      "text": "Ich lehne das ab. Erst Freizeit, dann Arbeit!",
+      "direction": "اعتراض مهذب"
+    },
+    {
+      "id": "b1u1d3-l6",
+      "speaker": "yusuf",
+      "text": "Gut. Dann: erst Freizeit, dann Arbeit?",
+      "direction": "تنازل"
+    },
+    {
+      "id": "b1u1d3-l7",
+      "speaker": "mueller",
+      "text": "Das ist besser. Ich stimme zu!",
+      "direction": "حل وسط"
+    },
+    {
+      "id": "b1u1d3-l8",
+      "speaker": "yusuf",
+      "text": "Gut! Dann beginnen wir.",
+      "direction": "إغلاق إيجابي"
+    }
+  ]
+}

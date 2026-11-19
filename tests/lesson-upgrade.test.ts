@@ -3167,7 +3167,7 @@ describe("D115 — أدوات القياس", () => {
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق (D165): nächsten [ɛ→ɛː] (كمّية الحركة — كـnächste القائم) — السطر st-19 أُعيد
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; regeneratedTracks: string[] }[] };
-    expect(lex.entries.find((x) => x.word === "nächsten")).toMatchObject({ forms: [{ espeak: "nˈɛçstən", ipa: "nˈɛːçstən" }], regeneratedTracks: ["st-19"] });
+    expect(lex.entries.find((x) => x.word === "nächsten")).toMatchObject({ forms: [{ espeak: "nˈɛçstən", ipa: "nˈɛːçstən" }], regeneratedTracks: expect.arrayContaining(["st-19"]) }); // lexicon-sync يلحق مسارات حوارات D566 الجديدة تلقائياً — القائمة احتواء لا تطابق (مثل Haltestelle)
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
     expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);
@@ -3363,7 +3363,7 @@ describe("D115 — أدوات القياس", () => {
     for (const i of dictation.items) expect(i.speakText).toBe(textDe.get(String(i.audioId)));
     // معجم النطق (D163): erklärt [ɛ→ɛː] (كمّية الحركة — espeak يقصّر ä في هذه الصيغة وحدها) — السطران wf-15/wf-16 أُعيدا
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; forms: { espeak: string; ipa: string }[]; regeneratedTracks: string[] }[] };
-    expect(lex.entries.find((x) => x.word === "erklärt")).toMatchObject({ forms: [{ espeak: "ɛɾklˈɛɾt", ipa: "ɛɾklˈɛːɾt" }], regeneratedTracks: ["wf-15", "wf-16"] });
+    expect(lex.entries.find((x) => x.word === "erklärt")).toMatchObject({ forms: [{ espeak: "ɛɾklˈɛɾt", ipa: "ɛɾklˈɛːɾt" }], regeneratedTracks: expect.arrayContaining(["wf-15", "wf-16"]) }); // lexicon-sync يلحق مسارات D566 الجديدة — احتواء لا تطابق
     // لا مهمة مكررة بين التدريب والـQuiz · ولا جملة إجابة مكررة (ولا من المصائد) · ولا جملة Quiz داخل فراغ مملوء · ولا مقطع كلمة = إجابة Quiz
     const trainingQuestions = new Set(l.uebung.stations.flatMap((s) => s.items.flatMap((i) => typeof i.q === "string" ? [i.q] : [])));
     expect(l.quiz.variants.flatMap((v) => v.items.map((i) => i.q)).some((q) => trainingQuestions.has(q))).toBe(false);

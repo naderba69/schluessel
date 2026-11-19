@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u6-d2-waeren-sie-so-freundlich",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Wären Sie so freundlich?",
+    "ar": "هل تفضّل؟"
+  },
+  "usedIn": [
+    "b1-u6-d2"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u6d2-l1",
+      "speaker": "yusuf",
+      "text": "Wären Sie so freundlich, mir zu helfen?",
+      "direction": "طلب مهذب جداً"
+    },
+    {
+      "id": "b1u6d2-l2",
+      "speaker": "lena",
+      "text": "Gern! Was kann ich tun?",
+      "direction": "استعداد"
+    },
+    {
+      "id": "b1u6d2-l3",
+      "speaker": "yusuf",
+      "text": "Ich suche den Bahnhof. Es ist angenehm, wenn Sie helfen.",
+      "direction": "شرح"
+    },
+    {
+      "id": "b1u6d2-l4",
+      "speaker": "lena",
+      "text": "Gehen Sie geradeaus. Und ich bin dankbar für Ihr Vertrauen!",
+      "direction": "إجابة + مزاح"
+    },
+    {
+      "id": "b1u6d2-l5",
+      "speaker": "yusuf",
+      "text": "Danke! Ihre Hilfe macht mir Freude.",
+      "direction": "امتنان"
+    },
+    {
+      "id": "b1u6d2-l6",
+      "speaker": "lena",
+      "text": "Das ist angenehm zu hören.",
+      "direction": "دفء"
+    },
+    {
+      "id": "b1u6d2-l7",
+      "speaker": "yusuf",
+      "text": "Auf Wiedersehen!",
+      "direction": "وداع"
+    },
+    {
+      "id": "b1u6d2-l8",
+      "speaker": "lena",
+      "text": "Gute Reise!",
+      "direction": "إغلاق"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u4-d3-die-meldung-hinterfragen",
+  "kind": "dialogue",
+  "level": "B2",
+  "title": {
+    "de": "Die Meldung hinterfragen",
+    "ar": "التشكيك في الخبر"
+  },
+  "usedIn": [
+    "b2-u4-d3"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b2u4d3-l1",
+      "speaker": "lena",
+      "text": "Wir hinterfragen die Meldung und die Zensur ist schlimm!",
+      "direction": "نقد إعلامي"
+    },
+    {
+      "id": "b2u4d3-l2",
+      "speaker": "yusuf",
+      "text": "Warum misstrauisch sein?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u4d3-l3",
+      "speaker": "lena",
+      "text": "Nicht jede Meldung ist wahr. Hinterfragen ist wichtig.",
+      "direction": "تفسير"
+    },
+    {
+      "id": "b2u4d3-l4",
+      "speaker": "yusuf",
+      "text": "Und die Zensur?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u4d3-l5",
+      "speaker": "lena",
+      "text": "Sie zeigt nicht die Wahrheit. Das ist schlimm.",
+      "direction": "رأي"
+    },
+    {
+      "id": "b2u4d3-l6",
+      "speaker": "yusuf",
+      "text": "Also: immer fragen: wer sagt das? Warum?",
+      "direction": "قاعدة"
+    },
+    {
+      "id": "b2u4d3-l7",
+      "speaker": "lena",
+      "text": "Genau. Misstrauisch sein ist gesund.",
+      "direction": "خلاصة"
+    },
+    {
+      "id": "b2u4d3-l8",
+      "speaker": "yusuf",
+      "text": "Das mache ich.",
+      "direction": "إغلاق"
+    }
+  ]
+}

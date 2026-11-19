@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u6-d3-die-operation",
+  "kind": "dialogue",
+  "level": "B2",
+  "title": {
+    "de": "Die Operation",
+    "ar": "العملية"
+  },
+  "usedIn": [
+    "b2-u6-d3"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b2u6d3-l1",
+      "speaker": "mueller",
+      "text": "Das Symptom ist klar, die Operation ist wichtig und die Heilung ist gut!",
+      "direction": "طبي"
+    },
+    {
+      "id": "b2u6d3-l2",
+      "speaker": "yusuf",
+      "text": "Ist die Operation nötig?",
+      "direction": "قلق"
+    },
+    {
+      "id": "b2u6d3-l3",
+      "speaker": "mueller",
+      "text": "Ja. Das Symptom zeigt: sofort handeln.",
+      "direction": "إجابة"
+    },
+    {
+      "id": "b2u6d3-l4",
+      "speaker": "yusuf",
+      "text": "Und die Heilung?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u6d3-l5",
+      "speaker": "mueller",
+      "text": "Drei Wochen. Dann sind Sie gesund.",
+      "direction": "تهدئة"
+    },
+    {
+      "id": "b2u6d3-l6",
+      "speaker": "yusuf",
+      "text": "Gut. Vertrauen ist wichtig.",
+      "direction": "مبدأ"
+    },
+    {
+      "id": "b2u6d3-l7",
+      "speaker": "mueller",
+      "text": "Die Heilung verläuft gut. Keine Angst.",
+      "direction": "تشجيع"
+    },
+    {
+      "id": "b2u6d3-l8",
+      "speaker": "yusuf",
+      "text": "Danke. Dann beginnen wir.",
+      "direction": "إغلاق"
+    }
+  ]
+}

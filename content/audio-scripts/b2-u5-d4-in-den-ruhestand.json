@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u5-d4-in-den-ruhestand",
+  "kind": "dialogue",
+  "level": "B2",
+  "title": {
+    "de": "In den Ruhestand",
+    "ar": "التقاعد"
+  },
+  "usedIn": [
+    "b2-u5-d4"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b2u5d4-l1",
+      "speaker": "mueller",
+      "text": "Der Arbeitgeber bezahlt und wir gehen in den Ruhestand!",
+      "direction": "حياة العمل"
+    },
+    {
+      "id": "b2u5d4-l2",
+      "speaker": "yusuf",
+      "text": "Wann gehen Sie in den Ruhestand?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u5d4-l3",
+      "speaker": "mueller",
+      "text": "Nächstes Jahr. Die Anstellung war lang.",
+      "direction": "إجابة"
+    },
+    {
+      "id": "b2u5d4-l4",
+      "speaker": "yusuf",
+      "text": "Und was machen Sie dann?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u5d4-l5",
+      "speaker": "mueller",
+      "text": "Reisen. Und im Garten arbeiten.",
+      "direction": "خطط"
+    },
+    {
+      "id": "b2u5d4-l6",
+      "speaker": "yusuf",
+      "text": "Das ist schön.",
+      "direction": "تفاؤل"
+    },
+    {
+      "id": "b2u5d4-l7",
+      "speaker": "mueller",
+      "text": "Ja. Der Ruhestand ist die Zeit für mich.",
+      "direction": "حكمة"
+    },
+    {
+      "id": "b2u5d4-l8",
+      "speaker": "yusuf",
+      "text": "Genießen Sie es!",
+      "direction": "إغلاق"
+    }
+  ]
+}

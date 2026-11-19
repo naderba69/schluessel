@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u10-d2-wegen-des-wetters",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Wegen des Wetters",
+    "ar": "بسبب الطقس"
+  },
+  "usedIn": [
+    "a2-u10-d2"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u10d2-l1",
+      "speaker": "lena",
+      "text": "Wegen des Wetters bleiben wir zu Hause.",
+      "direction": "لينا تقرر البقاء"
+    },
+    {
+      "id": "a2u10d2-l2",
+      "speaker": "yusuf",
+      "text": "Gut! Ich rufe den Bäcker an.",
+      "direction": "يوسف يتصل بالخباز"
+    },
+    {
+      "id": "a2u10d2-l3",
+      "speaker": "lena",
+      "text": "Und der Mechaniker?",
+      "direction": "لينا تسأل عن الميكانيكي"
+    },
+    {
+      "id": "a2u10d2-l4",
+      "speaker": "yusuf",
+      "text": "Der kommt morgen. Und der Direktor?",
+      "direction": "يوسف يسأل عن المدير"
+    },
+    {
+      "id": "a2u10d2-l5",
+      "speaker": "lena",
+      "text": "Der schreibt eine E-Mail.",
+      "direction": "لينا تجيب"
+    },
+    {
+      "id": "a2u10d2-l6",
+      "speaker": "yusuf",
+      "text": "Und der Kaufmann?",
+      "direction": "يوسف يسأل عن التاجر"
+    },
+    {
+      "id": "a2u10d2-l7",
+      "speaker": "lena",
+      "text": "Der ist außerhalb der Stadt.",
+      "direction": "لينا تخبره عن مكانه"
+    },
+    {
+      "id": "a2u10d2-l8",
+      "speaker": "yusuf",
+      "text": "Also: heute nur zu Hause!",
+      "direction": "يوسف يلخص القرار"
+    }
+  ]
+}

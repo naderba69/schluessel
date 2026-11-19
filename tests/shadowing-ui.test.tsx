@@ -105,9 +105,9 @@ describe("التطبيق — الشادوينغ اليومي", () => {
     expect(q("shadow-banner")).toBeNull();
   });
 
-  it("المكتمل بلا حوار مباشر ← بلا شارة", async () => {
+  it("المكتمل — لكل درس حوار الآن (D566) فيرى الشارة", async () => {
     await renderSeeded(FRI, ["a1-u1-d1"], 0);
-    expect(q("shadow-banner")).toBeNull();
+    expect(q("shadow-banner")).not.toBeNull(); // D566: a1-u1-d1 له حوار مباشر — لا حالة «بلا حوار» في المحتوى الحقيقي بعد الآن
   });
 
   it("تمّ اليوم (3 دقائق) ← سطر الإنجاز بلا زر", async () => {

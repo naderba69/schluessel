@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u2-d3-zu-teuer",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Das ist mir zu teuer",
+    "ar": "غالي جداً"
+  },
+  "usedIn": [
+    "b1-u2-d3"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u2d3-l1",
+      "speaker": "lena",
+      "text": "Wie viel kostet die Wohnung?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b1u2d3-l2",
+      "speaker": "yusuf",
+      "text": "Tausend Euro. Das ist mir zu teuer!",
+      "direction": "إحباط"
+    },
+    {
+      "id": "b1u2d3-l3",
+      "speaker": "lena",
+      "text": "Gut. Biete weniger! Neunhundert.",
+      "direction": "نصيحة تفاوض"
+    },
+    {
+      "id": "b1u2d3-l4",
+      "speaker": "yusuf",
+      "text": "Gute Idee. Ich hinterlasse eine Nachricht.",
+      "direction": "تنفيذ"
+    },
+    {
+      "id": "b1u2d3-l5",
+      "speaker": "lena",
+      "text": "Sag, dass du sehr interessiert bist.",
+      "direction": "تكتيك"
+    },
+    {
+      "id": "b1u2d3-l6",
+      "speaker": "yusuf",
+      "text": "Ja. Und dass ich sofort ziehen kann.",
+      "direction": "إضافة"
+    },
+    {
+      "id": "b1u2d3-l7",
+      "speaker": "lena",
+      "text": "Gut! Dann klappt es.",
+      "direction": "تفاؤل"
+    },
+    {
+      "id": "b1u2d3-l8",
+      "speaker": "yusuf",
+      "text": "Ich hoffe. Das Angebot ist gut.",
+      "direction": "أمل"
+    }
+  ]
+}

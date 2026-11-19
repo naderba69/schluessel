@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u6-d5-die-genesung",
+  "kind": "dialogue",
+  "level": "B2",
+  "title": {
+    "de": "Die Genesung",
+    "ar": "النقاهة"
+  },
+  "usedIn": [
+    "b2-u6-d5"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b2u6d5-l1",
+      "speaker": "yusuf",
+      "text": "Die Belastung ist schlimm, die Genesung ist gut und das Nahrungsmittel ist wichtig!",
+      "direction": "نقاهة"
+    },
+    {
+      "id": "b2u6d5-l2",
+      "speaker": "lena",
+      "text": "Wie geht es dir?",
+      "direction": "اهتمام"
+    },
+    {
+      "id": "b2u6d5-l3",
+      "speaker": "yusuf",
+      "text": "Besser. Die Genesung dauert, aber sie kommt.",
+      "direction": "إجابة"
+    },
+    {
+      "id": "b2u6d5-l4",
+      "speaker": "lena",
+      "text": "Und die Belastung?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u6d5-l5",
+      "speaker": "yusuf",
+      "text": "Wird weniger. Gutes Essen hilft.",
+      "direction": "تفصيل"
+    },
+    {
+      "id": "b2u6d5-l6",
+      "speaker": "lena",
+      "text": "Welches Nahrungsmittel ist am besten?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u6d5-l7",
+      "speaker": "yusuf",
+      "text": "Alles Frische. Nichts aus der Dose.",
+      "direction": "نصيحة"
+    },
+    {
+      "id": "b2u6d5-l8",
+      "speaker": "lena",
+      "text": "Gut! Erhol dich weiter.",
+      "direction": "دعم"
+    }
+  ]
+}

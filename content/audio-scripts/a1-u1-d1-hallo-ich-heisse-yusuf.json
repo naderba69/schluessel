@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u1-d1-hallo-ich-heisse-yusuf",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Hallo! Ich heiße Yusuf",
+    "ar": "مرحباً! اسمي يوسف"
+  },
+  "usedIn": [
+    "a1-u1-d1"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a1u1d1-l1",
+      "speaker": "yusuf",
+      "text": "Hallo! Ich heiße Yusuf.",
+      "direction": "تعريف أول — بسيط"
+    },
+    {
+      "id": "a1u1d1-l2",
+      "speaker": "lena",
+      "text": "Guten Tag, Yusuf! Ich heiße Lena.",
+      "direction": "ترحيب"
+    },
+    {
+      "id": "a1u1d1-l3",
+      "speaker": "yusuf",
+      "text": "Guten Morgen! Wie geht es dir?",
+      "direction": "تحية + حال"
+    },
+    {
+      "id": "a1u1d1-l4",
+      "speaker": "lena",
+      "text": "Danke, gut! Und dir?",
+      "direction": "رد"
+    },
+    {
+      "id": "a1u1d1-l5",
+      "speaker": "yusuf",
+      "text": "Auch gut, danke!",
+      "direction": "رد"
+    },
+    {
+      "id": "a1u1d1-l6",
+      "speaker": "lena",
+      "text": "Kommst du aus Tunesien?",
+      "direction": "سؤال أصل"
+    },
+    {
+      "id": "a1u1d1-l7",
+      "speaker": "yusuf",
+      "text": "Ja! Ich komme aus Tunesien.",
+      "direction": "إجابة + سؤال"
+    },
+    {
+      "id": "a1u1d1-l8",
+      "speaker": "lena",
+      "text": "Gut! Ich komme aus Deutschland.",
+      "direction": "إجابة + ترحيب"
+    }
+  ]
+}

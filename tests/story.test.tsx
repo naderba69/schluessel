@@ -62,10 +62,11 @@ describe("D193 — القصة المتصلة (N-003 · قرار المالك D18
     expect(html).toContain("Ist das Sofa schon da?");
     expect(html).toContain("القصة حتى الآن");
     expect(html).toContain("لينا");
-    // درس بلا حوار: لا صندوق فارغ
+    // D566: لا درس بلا حوار بعد الآن — a1-u1-d1 نفسه صار له سطر قصة (وليس صندوقاً فارغاً)
     const l1 = ALL_LESSONS.find((x) => x.id === "a1-u1-d1")!;
     const w1 = ALL_WORDS.filter((w) => l1.praesentation.wordIds.includes(w.id) || l1.warmup.cardIds.includes(w.id) || l1.zusammenfassung.srsBundleWordIds.includes(w.id));
     const html1 = renderToStaticMarkup(<CloseStation data={planLessonStations(l1, w1, ALL_GRAMMAR_RULES, ALL_STORY).close} report="r" preview="p" muellerLine="m" />);
-    expect(html1).not.toContain("story-line");
+    expect(html1).toContain("story-line");
+    expect(html1).toContain("Hallo! Ich heiße Yusuf.");
   });
 });

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u1-d4-koennen-sie-das-ueberpruefen",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Könnten Sie das überprüfen?",
+    "ar": "هل يمكنك التحقق؟"
+  },
+  "usedIn": [
+    "b1-u1-d4"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u1d4-l1",
+      "speaker": "yusuf",
+      "text": "Guten Tag! Könnten Sie das bitte überprüfen?",
+      "direction": "طلب مهذب في المكتب"
+    },
+    {
+      "id": "b1u1d4-l2",
+      "speaker": "mueller",
+      "text": "Gern. Was ist das Problem?",
+      "direction": "استعداد"
+    },
+    {
+      "id": "b1u1d4-l3",
+      "speaker": "yusuf",
+      "text": "Dieser Brief hat einen Fehler. Bitte korrigieren Sie ihn.",
+      "direction": "إظهار المشكلة"
+    },
+    {
+      "id": "b1u1d4-l4",
+      "speaker": "mueller",
+      "text": "Ich sehe. Ich ersetze die Seite.",
+      "direction": "حل عملي"
+    },
+    {
+      "id": "b1u1d4-l5",
+      "speaker": "yusuf",
+      "text": "Danke! Und ich hätte gern eine Antwort heute.",
+      "direction": "ضغط لطيف"
+    },
+    {
+      "id": "b1u1d4-l6",
+      "speaker": "mueller",
+      "text": "Heute? Das ist schwierig.",
+      "direction": "تردد"
+    },
+    {
+      "id": "b1u1d4-l7",
+      "speaker": "yusuf",
+      "text": "Morgen ist auch gut.",
+      "direction": "مرونة"
+    },
+    {
+      "id": "b1u1d4-l8",
+      "speaker": "mueller",
+      "text": "Gut. Morgen bekommen Sie die Antwort.",
+      "direction": "تأكيد"
+    }
+  ]
+}

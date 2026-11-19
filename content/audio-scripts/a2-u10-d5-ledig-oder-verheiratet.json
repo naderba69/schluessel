@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u10-d5-ledig-oder-verheiratet",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Ledig oder verheiratet?",
+    "ar": "أعزب أم متزوج؟"
+  },
+  "usedIn": [
+    "a2-u10-d5"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u10d5-l1",
+      "speaker": "frau-schmidt",
+      "text": "Sind Sie verheiratet?",
+      "direction": "السيدة تملأ الاستمارة"
+    },
+    {
+      "id": "a2u10d5-l2",
+      "speaker": "yusuf",
+      "text": "Nein, ich bin ledig.",
+      "direction": "يوسف يجيب"
+    },
+    {
+      "id": "a2u10d5-l3",
+      "speaker": "frau-schmidt",
+      "text": "Getrennt oder geschieden?",
+      "direction": "السيدة تسأل عن الحالة"
+    },
+    {
+      "id": "a2u10d5-l4",
+      "speaker": "yusuf",
+      "text": "Nein! Ledig, d. h. nicht verheiratet.",
+      "direction": "يوسف يوضح"
+    },
+    {
+      "id": "a2u10d5-l5",
+      "speaker": "frau-schmidt",
+      "text": "Und Ihre Arbeit?",
+      "direction": "السيدة تنتقل للعمل"
+    },
+    {
+      "id": "a2u10d5-l6",
+      "speaker": "yusuf",
+      "text": "Tagsüber arbeite ich viel, ca. acht Stunden.",
+      "direction": "يوسف يصف يومه"
+    },
+    {
+      "id": "a2u10d5-l7",
+      "speaker": "frau-schmidt",
+      "text": "Danke! Das Formular ist fertig.",
+      "direction": "السيدة تختم الاستمارة"
+    },
+    {
+      "id": "a2u10d5-l8",
+      "speaker": "yusuf",
+      "text": "Gern! Alles klar.",
+      "direction": "يوسف يؤكد"
+    }
+  ]
+}

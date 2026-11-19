@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u10-d3-das-sekretariat",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Das Sekretariat",
+    "ar": "السكرتارية"
+  },
+  "usedIn": [
+    "a2-u10-d3"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u10d3-l1",
+      "speaker": "yusuf",
+      "text": "Haben Sie freitags Zeit?",
+      "direction": "يوسف يسأل عن الموعد"
+    },
+    {
+      "id": "a2u10d3-l2",
+      "speaker": "frau-berg",
+      "text": "Freitags ja! Rufen Sie das Sekretariat an.",
+      "direction": "السيدة بيرغ تعطيه الإجابة"
+    },
+    {
+      "id": "a2u10d3-l3",
+      "speaker": "yusuf",
+      "text": "Und montags?",
+      "direction": "يوسف يسأل عن الاثنين"
+    },
+    {
+      "id": "a2u10d3-l4",
+      "speaker": "frau-berg",
+      "text": "Montags bin ich im Büro.",
+      "direction": "السيدة تحدد أوقاتها"
+    },
+    {
+      "id": "a2u10d3-l5",
+      "speaker": "yusuf",
+      "text": "Dienstags und mittwochs?",
+      "direction": "يوسف يسأل عن يومين"
+    },
+    {
+      "id": "a2u10d3-l6",
+      "speaker": "frau-berg",
+      "text": "Da arbeite ich viel. Aber donnerstags bin ich da.",
+      "direction": "السيدة توضح الجدول"
+    },
+    {
+      "id": "a2u10d3-l7",
+      "speaker": "yusuf",
+      "text": "Gut! Dann rufe ich Freitag an.",
+      "direction": "يوسف يحسم الموعد"
+    },
+    {
+      "id": "a2u10d3-l8",
+      "speaker": "frau-berg",
+      "text": "Gut! Bis Freitag.",
+      "direction": "السيدة تؤكد الموعد"
+    }
+  ]
+}
